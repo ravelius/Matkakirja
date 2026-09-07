@@ -14294,6 +14294,153 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Water Street', lat: 47.562581, lon: -52.708647 },
     ],
   },
+  /*
+   * KUMASI (Opus 7.9.2026, paketti O9). Ruutu on noin 2,4 × 3,3
+   * kilometriä ja kattaa Kumasin ytimen: pohjoisessa kulttuurikeskus,
+   * eläintarha ja Kejetian tori, keskellä Adumin linnake ja
+   * Ramseyerin kirkko, etelässä Rattrayn puisto ja Baba Yaran
+   * stadion. Piirtoperustelut tools/piirra-kaupunkikartta.mjs:n
+   * kumasi-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehden
+   * nostot kertovat nimen synnystä kum-puun alla, kultajakkarasta ja
+   * Asanten liitosta, vuodesta 1873 ja Wolseleyn retkestä,
+   * jälleenrakennuksesta ja Kumawoodista; teemasivu kertoo
+   * Bosumtwe-järvestä, kahdesta sadekaudesta, puutarhakaupungin
+   * kaavasta, Owabin lintusuosta ja metsätaloudesta. Kartan
+   * kahdeksan kohdetta ovat paikkoja, joista lehti ei kerro.
+   *
+   * MANHYIAN PALATSI (6,70348 / −1,61579) ON JÄTETTY TARKOITUKSELLA
+   * POIS, vaikka se mahtuu ruutuun ja on kaupungin tunnetuin
+   * rakennus: se on GHANAN MAALEHDEN nosto (maa-kategoriat.js GHA,
+   * "Palatsi, jossa oli Timesin numero vuodelta 1843") ja lisäksi
+   * africa-questions.js:n AFRICA_FACTS-sähkeen aihe (palautetut 32
+   * esinettä 2024). Kohdekartta ei toista maalehteä sen enempää kuin
+   * kaupunkilehteäkään — sama ratkaisu kuin Fèsissä, josta jätettiin
+   * pois al-Qarawiyyin ja Chouaran altaat.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN LÄHDESYYSTÄ (tarkistus-kumasi.md,
+   * kohta G): Wesleyn metodistikatedraali ja St Peterin
+   * katedraalibasilika ovat molemmat yhden virkkeen tynkiä
+   * en-Wikipediassa, eikä niistä saa nähtävyysjuttua ilman arvailua.
+   * Kansallinen kulttuurikeskus ja Prempeh II:n museo ovat sama
+   * piste — museo on keskuksen alueella — ja ne on siksi yhdistetty
+   * yhdeksi kohteeksi.
+   */
+  kumasi: {
+    polku: 'assets/kartat/kumasi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 6.7035, etela: 6.6755, lansi: -1.6345, ita: -1.6025 },
+    esittely: 'Kartta kattaa Kumasin keskustan harjanteen. Ylhäällä '
+      + 'kadut kiertävät kulttuurikeskuksen ja eläintarhan viheralaa, '
+      + 'keskellä kortteliverkko tiivistyy Adumin liikekeskustaksi, ja '
+      + 'alalaidassa erottuvat stadionin soikio ja puiston vihreä '
+      + 'kaistale. Kaupungin läpi mutkittelevat Subin ja Wiwi, joiden '
+      + 'vesiuomat näkyvät ohuina viivoina. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit 7.9.2026: ensisijaisesti artikkelin oma
+       * {{coord}} en-Wikipedian raakatekstistä, ja Wikidatan P625
+       * silloin kun artikkelissa ei ole koordinaattia (Prempeh II:n
+       * museo, Ramseyerin kirkko, Rattrayn puisto). Kaikki 28 väliä
+       * on mitattu haversinilla: pienin on 355 metriä (Prempeh II:n
+       * museo – eläintarha), seuraavat 422 ja 447 metriä.
+       */
+      { nimi: 'Prempeh II:n museo', lat: 6.700639, lon: -1.629194 },
+      { nimi: 'Kumasin eläintarha', lat: 6.701000, lon: -1.626000 },
+      { nimi: 'Kejetian tori', lat: 6.698639, lon: -1.619139 },
+      { nimi: 'Komfo Anokyen sairaala', lat: 6.697479, lon: -1.631690 },
+      /*
+       * LINNAKE KANTAA MYÖS KULTAJAKKARAN SODAN KARTTANOSTON
+       * (omistajan sääntö 2.9.2026: jokaisella karttanostolla on
+       * paikka joko pääkartalla tai kohdekartalla). GHA-skandaalin
+       * merkki (skandaalit.js, kultajakkaran-sota, 6,7 / −1,6258)
+       * osuu tämän kartan rajaukseen, joten se ei enää kuulu
+       * pääkartalle. Piste ei saa omaa numeroaan, koska se olisi 112
+       * metrin päässä eläintarhasta ja numeroympyrät menisivät
+       * päällekkäin; linkki on sen sijaan linnakkeessa, jossa sota
+       * oikeasti käytiin — kaksikymmentäyhdeksän brittiä pidettiin
+       * täällä vangittuina maaliskuussa 1900. Sama ratkaisu kuin
+       * Istanbulin Topkapılla, joka kantaa Kaşıkçı-timantin
+       * skandaalin oman juttunsa rinnalla.
+       */
+      {
+        nimi: 'Kumasin linnake', lat: 6.691367, lon: -1.624872,
+        nosto: 'skandaali-kultajakkaran-sota',
+      },
+      { nimi: 'Ramseyerin muistokirkko', lat: 6.689400, lon: -1.621600 },
+      { nimi: 'Baba Yaran stadion', lat: 6.682681, lon: -1.605111 },
+      { nimi: 'Rattrayn puisto', lat: 6.681781, lon: -1.626117 },
+    ],
+  },
+  /*
+   * KANO (Opus 7.9.2026, paketti O9). Ruutu on noin 3,3 × 4,0
+   * kilometriä eli pelin väljempiä kohdekarttoja, ja syy on
+   * kaupungin oma mittakaava: Heinrich Barth mittasi 1851 muurin
+   * noin kymmenen mailin pituiseksi, joten pelkkä vanhakaupunki on
+   * kilometrejä leveä. Ruutu kattaa Dala-kukkulan luoteessa,
+   * emiirin palatsin ja suurmoskeijan keskellä sekä Sabon Garin
+   * koillisessa. Piirtoperustelut tools/piirra-kaupunkikartta.mjs:n
+   * kano-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA. Lehden nostot kertovat
+   * Kanon kronikasta, islamin tulosta ja sultanaatista, Rumfan
+   * vuosisadasta, vuodesta 1873 Sokoton kalifaatin emiirikuntana ja
+   * durbar-ratsastuksesta; teemasivu kertoo Kurmin torista,
+   * marokkonahasta, maapähkinästä ja rautatiestä sekä hausasta
+   * kauppakielenä. Rajapinnat on selvitetty tarkistus-kano.md:n
+   * kohdassa G: Rumfa-nosto ei kerro palatsista eikä torista
+   * rakennuksina, kronikkanosto ei kerro Barbushea, ja teemasivun
+   * kauppanosto mainitsee indigokankaan vain kauppatavarana.
+   *
+   * KURMIN TORI JÄI POIS KOORDINAATTISYYSTÄ, ei aiheen
+   * (tarkistus-kano.md, kohta F). en-Wikipedian Kurmi Market
+   * -artikkelin {{coord}} on täsmälleen sama piste kuin Wikidatan
+   * Gidan Rumfa, Wikidatan oma Kurmi-arvo on kaupungin karkea
+   * keskipiste, jonka jakaa yhdeksän muuta kohdetta, eikä OSM:ssä
+   * ole nimettyä Kurmi-kohdetta koko vanhassa kaupungissa. Tori on
+   * siksi teemasivun nosto.
+   *
+   * KAHDEN ARTIKKELIN KOORDINAATIT OLIVAT IDENTTISET: Gidan Rumfa
+   * ja suurmoskeija antavat kumpikin 11,99472 / 8,51750. Kartalla
+   * on Wikidatan arvot, jotka ovat 335 metrin päässä toisistaan ja
+   * joista moskeijan vahvistaa OSM kahden metrin tarkkuudella.
+   * Kofar Nassarawan portin piste on Overpassista, koska portilla
+   * ei ole omaa artikkelia (ennakkotapaukset: Persepoliksen
+   * Kaikkien kansojen portti ja Kabulin Chihil Sutun).
+   */
+  kano: {
+    polku: 'assets/kartat/kano-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 12.0170, etela: 11.9870, lansi: 8.5050, ita: 8.5420 },
+    esittely: 'Vasemmassa yläkulmassa kohoaa Dala-kukkula, ja siitä '
+      + 'kaakkoon levittäytyy vanhankaupungin tiheä kujaverkko. '
+      + 'Kuvan keskellä isot korttelit ovat emiirin palatsin '
+      + 'muurien sisäpuolta, ja oikeassa yläkulmassa kadut '
+      + 'suoristuvat ruudukoksi — se on Sabon Gari. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit 7.9.2026: artikkelin oma {{coord}} (Sabon
+       * Garin tori, stadion), Wikidatan P625 (Dala, Kofar Mata,
+       * suurmoskeija, Gidan Rumfa, Gidan Makama) ja Overpass
+       * (Kofar Nassarawa). Kaikki 28 väliä on mitattu haversinilla:
+       * pienin on 335 metriä (suurmoskeija – Gidan Rumfa),
+       * toiseksi pienin 357 metriä (Kofar Mata – stadion).
+       */
+      { nimi: 'Sabon Garin tori', lat: 12.015400, lon: 8.539900 },
+      { nimi: 'Dala-kukkula', lat: 12.009280, lon: 8.506980 },
+      { nimi: 'Kofar Matan värjäämöt', lat: 12.000853, lon: 8.526099 },
+      { nimi: 'Sani Abachan stadion', lat: 11.999722, lon: 8.529167 },
+      { nimi: 'Kanon suurmoskeija', lat: 11.994855, lon: 8.517640 },
+      { nimi: 'Gidan Rumfa', lat: 11.992300, lon: 8.516000 },
+      { nimi: 'Kofar Nassarawan portti', lat: 11.990889, lon: 8.530678 },
+      { nimi: 'Gidan Makaman museo', lat: 11.988802, lon: 8.521058 },
+    ],
+  },
 };
 
 /*

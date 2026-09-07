@@ -5499,6 +5499,71 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 47.5745, etela: 47.5595, lansi: -52.7160, ita: -52.6770 },
     meri: 'maa',
   },
+  kumasi: {
+    /*
+     * KUMASIN YDIN KULTTUURIKESKUKSELTA STADIONILLE (7.9.2026).
+     * Ruutu on noin 2,4 × 3,3 kilometriä. Pohjoisessa ovat
+     * kulttuurikeskus, eläintarha ja Kejetian tori, keskellä Adumin
+     * liikekeskusta linnakkeineen ja Ramseyerin kirkkoineen,
+     * etelässä Rattrayn puisto ja Baba Yaran stadion.
+     *
+     * RUUTU ON LEVEÄMPI KUIN KORKEA JA SE ON TARKOITUKSELLISTA.
+     * Kumasi ei ole muurikaupunki vaan sademetsäharjanteelle
+     * levinnyt liikennekaupunki, jonka varallisuus tulee siitä, että
+     * se on maan pääteiden risteys (en-Wikipedia, "Kumasi",
+     * Economy). Kohteet asettuvat luode–kaakko-akselille, ja
+     * tiukempi neliöruutu jättäisi stadionin ulkopuolelle.
+     *
+     * EI MERI-LIPPUA: Kumasi on sisämaassa 250–300 metrin
+     * korkeudella, ja Subin ja Wiwi ovat OSM:ssä tavallisia
+     * vesiväyliä.
+     *
+     * MANHYIAN PALATSI EI OLE NUMEROITU KOHDE, vaikka se on ruudun
+     * koillisreunan tuntumassa (6,70348 / −1,61579). Se on Ghanan
+     * MAALEHDEN nosto ja AFRICA_FACTS-sähkeen aihe — kohdekartta ei
+     * toista maalehteä. Palatsi näkyy kartalla rakennuksena.
+     *
+     * KNUST JÄÄ RUUDUN ULKOPUOLELLE. Kampus on viisi kilometriä
+     * itään (6,678611 / −1,571111), ja sen mukaan ottaminen
+     * kaksinkertaistaisi ruudun leveyden. Yliopisto kerrotaan
+     * matkaoppaassa.
+     */
+    rajat: { pohjoinen: 6.7035, etela: 6.6755, lansi: -1.6345, ita: -1.6025 },
+  },
+  kano: {
+    /*
+     * VANHAKAUPUNKI JA SABON GARI (7.9.2026). Ruutu on noin
+     * 3,3 × 4,0 kilometriä eli pelin väljempiä — Berliinin ja
+     * Kööpenhaminan luokkaa mutta kaukana niiden koosta. Syy on
+     * mitattu eikä arvattu: Heinrich Barth mittasi 1851 Kanon
+     * muurin noin kymmenen mailin pituiseksi (en-Wikipedia,
+     * "Kano (city)", Kano under the Sokoto Caliphate), joten
+     * vanhakaupunki yksinään on kilometrejä leveä. Dala-kukkula on
+     * luoteessa, emiirin palatsi ja suurmoskeija keskellä ja
+     * Sabon Gari koillisessa; tiukempi ruutu pudottaisi joko
+     * kukkulan tai Sabon Garin.
+     *
+     * EI MERI-LIPPUA: Kano on Sudanin savannivyöhykkeessä 481
+     * metrin korkeudella, ja lähimmät vesistöt (Kano- ja
+     * Challawa-joki) ovat OSM:ssä tavallisia vesiväyliä.
+     *
+     * KURMIN TORI EI OLE NUMEROITU KOHDE, ja syy on koordinaatti
+     * eikä aihe: en-Wikipedian Kurmi Market -artikkelin {{coord}}
+     * on täsmälleen sama piste kuin Wikidatan Gidan Rumfa, ja
+     * Wikidatan oma Kurmi-arvo on kaupungin karkea keskipiste.
+     * OSM:ssä ei ole nimettyä Kurmi-kohdetta koko vanhassa
+     * kaupungissa. Perustelu on tarkistus-kano.md:n kohdassa F, ja
+     * tori kerrotaan lehden teemasivulla.
+     *
+     * JOS RUUTU NÄYTTÄÄ TYHJÄLTÄ, KOKEILE jalkakaydat: true JA
+     * palvelutiet: true. Kanon vanhankaupungin kujat ovat samaa
+     * tyyppiä kuin Fèsin medinassa, ja Fèsissä pelkkä vakiokysely
+     * piirsi vain muurin. Ensimmäinen ajo tehtiin tässä ilman
+     * lippuja, ja tulos katsottiin silmin ennen kuin rajaus
+     * hyväksyttiin.
+     */
+    rajat: { pohjoinen: 12.0170, etela: 11.9870, lansi: 8.5050, ita: 8.5420 },
+  },
 };
 
 /*

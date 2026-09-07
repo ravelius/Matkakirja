@@ -57516,4 +57516,462 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * KUMASIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026, paketti
+   * O9). Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.kumasi, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Centre for National Culture (Kumasi)", "Prempeh II
+   * Jubilee Museum", "Kumasi Zoo", "Kejetia Market", "Komfo Anokye
+   * Teaching Hospital", "Okomfo Anokye", "Armed Forces Museum
+   * (Ghana)", "Ramseyer Memorial Presbyterian Church", "Baba Yara
+   * Stadium", "Rattray Park", "Kumasi", "Anglo-Ashanti wars").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat nimen synty kum-puun alla, kultajakkaran synty ja
+   * Asanten liitto, vuosi 1873 ja Wolseleyn retki, jälleenrakennus
+   * ja väkilukukiista sekä Kumawood; teemasivu kertoo
+   * Bosumtwe-järvestä, kahdesta sadekaudesta, puutarhakaupungista,
+   * Owabin lintusuosta ja metsätaloudesta. Lähimmät kosketuskohdat
+   * on ratkaistu näin (tarkistus-kumasi.md, kohta G):
+   *  - Komfo Anokyen sairaala: lehti kertoo kultajakkarasta, juttu
+   *    miekasta ja sairaalasta.
+   *  - Ramseyerin kirkko: lehden 1873-nosto EI mainitse vangittuja
+   *    lähetyssaarnaajia lainkaan, jotta ne ovat tämän jutun aihe.
+   *  - Kumasin linnake: vuoden 1900 sota on GHA-skandaalin aihe
+   *    (skandaalit.js, kultajakkaran sota), ja juttu kertoo siitä
+   *    vain rakennuksen historiana yhdessä kappaleessa.
+   *
+   * MANHYIAN PALATSI EI OLE KOHDE: se on Ghanan maalehden nosto ja
+   * AFRICA_FACTS-sähkeen aihe. Perustelu maakartat.js:n
+   * kumasi-lohkossa.
+   */
+  kumasi: {
+    'Prempeh II:n museo': {
+      aika: '1954 ja 1956',
+      teksti: 'Ennen Ghanan itsenäisyyttä Alex A. Y. Kyerematen alkoi '
+          + 'asantehene Prempeh II:n ja Asantemanin neuvoston tuella '
+          + 'suunnitella Asanten kulttuurikeskusta, joka säilyttäisi '
+          + 'ja esittelisi kansan omaa kulttuuria. Suunnitelmaan '
+          + 'kuuluivat kirjasto, perinteinen kappeli, näyttelyhalli, '
+          + 'teatteri, tanssiareena ja museo — kokonaisuudesta piti '
+          + 'tulla yhtä aikaa ulkoilmamuseo ja kulttuurikeskus.'
+        + '\n\n'
+        + 'Keskus avattiin 1956. Avajaisissa Prempeh II laski '
+          + 'peruskiven sen pääkohteelle, jonka nimi oli '
+          + 'Traditional House for the Ashanti Museum and Art '
+          + 'Gallery. Alueella toimii myös Prempeh II Jubilee '
+          + 'Museum, joka perustettiin jo 1954 ja on nimetty saman '
+          + 'kuninkaan mukaan.'
+        + '\n\n'
+        + 'Nimi vaihtui politiikan takia. Keskus joutui ristiriitaan '
+          + 'presidentti Kwame Nkrumahin kansallisen linjan kanssa, '
+          + 'ja se nimettiin 1963 uudelleen kansalliseksi '
+          + 'kulttuurikeskukseksi. Kaksi nimeä kertovat samasta '
+          + 'kysymyksestä: kuuluuko asantien perintö Asantelle vai '
+          + 'koko maalle.',
+      lahde: 'Wikipedia',
+    },
+    'Kumasin eläintarha': {
+      aika: '1951',
+      teksti: 'Eläintarha perustettiin 1951, ja Asantemanin neuvosto '
+          + 'avasi sen virallisesti 1957 — samana vuonna, jona Ghana '
+          + 'itsenäistyi. Tarkoitus oli suojella luontoa ja näyttää '
+          + 'kävijöille maan omia villieläimiä.'
+        + '\n\n'
+        + 'Puolentoista neliökilometrin alue on aivan keskustassa: '
+          + 'se on Kejetian linja-autoaseman, vanhan laukkaradan ja '
+          + 'kansallisen kulttuurikeskuksen välissä. Lajeja on noin '
+          + 'neljäkymmentä ja yksilöitä yli sataviisikymmentä.'
+        + '\n\n'
+        + 'Vaikuttavin osa ei ole aidattu lainkaan. Tarhan puissa '
+          + 'lepää tuhansia lepakoita, ja ne ovat paikan tunnetuin '
+          + 'näky. Rakennusten kunto on toista maata: paikallisten '
+          + 'mukaan tarha kaipaa kipeästi korjausta, ja sama koskee '
+          + 'useimpia kaupungin puistoja.',
+      lahde: 'Wikipedia',
+    },
+    'Kejetian tori': {
+      aika: '1924',
+      teksti: 'Kumasin keskustori, jota sanotaan Kejetiaksi, on '
+          + 'Länsi-Afrikan suurin yksittäinen tori. Myymälöitä ja '
+          + 'kojuja on yli kahdeksantuhatta, myyjiä kaksikymmentä'
+          + 'tuhatta, ja kävijöitä lasketaan noin viisikymmentä'
+          + 'tuhatta päivässä.'
+        + '\n\n'
+        + 'Tori perustettiin 1924 yhtä aikaa Accran Makolan torin '
+          + 'kanssa. Malli tuli brittiläisistä toreista, ja tarkoitus '
+          + 'oli saada suuri määrä myyjiä saman järjestyksen alle; '
+          + 'samalla rakennettiin kuorma-autoasema. Investointeja ei '
+          + 'juuri tullut, joten rakenteet ja hygienia jäivät '
+          + 'huonoiksi. Siirtomaahallinto yritti hillitä myyjien '
+          + 'määrää edistämällä suurteollisuutta, mutta itsenäisyyden '
+          + 'jälkeenkin suuri osa työvoimasta jäi pienkauppaan.'
+        + '\n\n'
+        + 'Uudistus on kesken. Ensimmäinen vaihe rakennettiin '
+          + '2015–2018, ja siihen tuli noin 8 420 myymälää; toinen '
+          + 'vaihe aloitettiin toukokuussa 2019 eikä se ole '
+          + 'valmistunut. Tulipalot ovat torin toistuva vitsaus: '
+          + 'tammi- ja maaliskuussa 2016 paloi yli kaksisataa '
+          + 'myymälää, ja uusi palo syttyi tammikuussa 2025.',
+      lahde: 'Wikipedia',
+    },
+    'Komfo Anokyen sairaala': {
+      aika: '1954',
+      teksti: 'Sairaala rakennettiin 1954 urakoitsijoidensa mukaan '
+          + 'nimetyllä lisänimellä GEE, ja siitä tuli Ashantin, '
+          + 'Brong Ahafon ja pohjoisten alueiden pääsairaala. '
+          + 'Opetussairaalaksi se muutettiin 1975. Vuodepaikkoja on '
+          + 'nyt noin tuhat, kun niitä alussa oli viisisataa, ja '
+          + 'uusin rakennus on kansallinen tapaturma- ja '
+          + 'päivystyskeskus.'
+        + '\n\n'
+        + 'Nimi on vanhempi kuin talo. Okomfo Anokye oli Asanten '
+          + 'ensimmäinen pappi ja kuningas Osei Tutun neuvonantaja '
+          + '1600-luvun lopulla. Perimätiedon mukaan hän löi maahan '
+          + 'miekan, jota kukaan ei ole saanut irti, ja miekka on '
+          + 'sairaalan alueella; paikkaa sanotaan Komfo Anokyen '
+          + 'miekkamuseoksi.'
+        + '\n\n'
+        + 'Tarinaa kannattaa lukea niin kuin lähde sen kertoo. '
+          + 'Wikipedia käyttää sanaa "uskotaan" ja merkitsee saman '
+          + 'artikkelin toisen väitteen — että eurooppalaiset '
+          + 'olisivat yrittäneet irrottaa Anokyen tikaria '
+          + 'viidensadan vuoden ajan — lähteettömäksi. Miekka on '
+          + 'siis perimätietoa, ei mittaustulos, ja juuri siksi se '
+          + 'on yhä paikallaan.',
+      lahde: 'Wikipedia',
+    },
+    'Kumasin linnake': {
+      aika: '1896 ja 1897',
+      teksti: 'Kolmannessa brittiläis-asantilaisessa sodassa '
+          + 'kaupungin Aban-palatsi tuhottiin, ja britit käyttivät '
+          + 'raunioiden kiviaineksen linnakkeeseen, jonka he '
+          + 'rakensivat Kumasiin 1896. Linnake tuhoutui samana '
+          + 'vuonna aseellisessa kapinassa, ja tilalle pystytettiin '
+          + 'uusi 1897. Se seisoo yhä.'
+        + '\n\n'
+        + 'Maaliskuussa 1900 linnakkeessa pidettiin '
+          + 'kaksikymmentäyhdeksän brittiä vangittuina useiden '
+          + 'viikkojen ajan; piirittäjiä johti Ejisun kuningataräiti '
+          + 'Yaa Asantewaa. Naiset ja lapset päästettiin lopulta '
+          + 'vapaaksi, ja he hälyttivät siirtomaajoukot nykyisen '
+          + 'Nigerian alueelta hakemaan loput.'
+        + '\n\n'
+        + 'Vuosina 1952–1953 puolustusvoimat ottivat rakennuksen ja '
+          + 'muuttivat sen museoksi. Ensimmäisessä salissa ovat '
+          + 'Kultarannikon armeijan toisen maailmansodan aseet ja '
+          + 'mitalit, toinen sali on takatornissa, kolmannessa ovat '
+          + 'Royal West African Frontier Forcen muotokuvat. '
+          + 'Toiseksi viimeisessä salissa katsovat vastakkain '
+          + 'Prempeh I, Prempeh II ja Yaa Asantewaa; viimeisessä '
+          + 'ovat liput.',
+      lahde: 'Wikipedia',
+    },
+    'Ramseyerin muistokirkko': {
+      aika: '1869–1914',
+      teksti: 'Kesäkuussa 1869 Asanten armeija otti vangiksi Baselin '
+          + 'lähetyssaarnaajan Fritz Augustus Ramseyerin, hänen '
+          + 'vaimonsa Rosan, veljensä Johanneksen ja akan-kristityn '
+          + 'Thomas Owusun. Neuvottelut vapauttamisesta epäonnistuivat '
+          + 'puolen vuosikymmenen ajan; vasta kun britit valtasivat '
+          + 'Kumasin, neljä vankia pääsivät vapaaksi. Isoisän '
+          + 'matkavuonna 1873 he olivat siis yhä kaupungissa.'
+        + '\n\n'
+        + 'Ramseyer palasi Kumasiin lähetyssaarnaajana 1896, '
+          + 'kaksikymmentäkaksi vuotta vapautumisensa jälkeen, ja '
+          + 'osti Thomas Owusun avustuksella maata Bantamasta '
+          + 'nykyisen Komfo Anokyen sairaalan tienoilta. Vuodessa '
+          + 'syntyi kaksi lähetysasemaa ja kaksi koulua. Hanke ei '
+          + 'ollut suosittu: sotilaallisen valloituksen jälkeen '
+          + 'lähetystyötä pidettiin siirtomaavallan jatkeena ja '
+          + 'kristinuskoa "voittajan uskontona".'
+        + '\n\n'
+        + 'Vuoteen 1900 mennessä Baselin lähetyksellä oli Kumasissa '
+          + 'kuusitoista koulua ja niissä 311 oppilasta. Kappeli '
+          + 'rakennettiin 1907 seurakunnan talkootyönä ja nimettiin '
+          + 'Ebenezerin kirkoksi. Ramseyerin kuoltua 6. elokuuta '
+          + '1914 se sai hänen nimensä. Nykyisessä katedraalissa on '
+          + 'kolmetuhatta istumapaikkaa.',
+      lahde: 'Wikipedia',
+    },
+    'Baba Yaran stadion': {
+      aika: '1957',
+      teksti: 'United African Company rakensi stadionin 1957, ja '
+          + 'jalkapallokentäksi se vihittiin 1959. Ensimmäiset '
+          + 'katsomot tulivat 1971, ja koko paikka rakennettiin '
+          + 'uusiksi 1977. Nykyisin katsojia mahtuu 40 528 — enemmän '
+          + 'kuin mihinkään muuhun Ghanan stadioniin.'
+        + '\n\n'
+        + 'Nimi on kumasilaisen jalkapalloilijan. Baba Yara '
+          + '(1936–1969) pelasi Asante Kotokossa vuosina 1955–1961, '
+          + 'ja stadion nimettiin hänen mukaansa 2004. Kotoko on yhä '
+          + 'talon isäntä, ja sen rinnalla pelaa King Faisal.'
+        + '\n\n'
+        + 'Kolmas suuri remontti valmistui 2008: länsikatsomo '
+          + 'purettiin ja tilalle tuli kaksikerroksinen katsomo '
+          + 'lehdistö- ja vierastiloineen, muut katsomot uusittiin, '
+          + 'ja katsomon ja kentän väliin asennettiin läpinäkyvät '
+          + 'paneelit, jotta yleisö ei pääse kentälle. Stadion on '
+          + 'isännöinyt Afrikan cupin otteluita kolmesti: 1978 kuusi '
+          + 'alkulohko-ottelua ja välierän, 2000 seitsemän ottelua ja '
+          + '2008 uudestaan.',
+      lahde: 'Wikipedia',
+    },
+    'Rattrayn puisto': {
+      aika: '2015',
+      teksti: 'Kumasi Metropolitan Assembly rakensi puiston '
+          + 'palauttaakseen kaupungille sen vanhan lisänimen, '
+          + 'Länsi-Afrikan puutarhakaupungin. Se vihittiin '
+          + '20. kesäkuuta 2015, ja vihkijöinä olivat presidentti '
+          + 'John Dramani Mahama, asantehene Otumfuo Nana Osei Tutu '
+          + 'II ja kaupungin pormestari Kojo Bonsu.'
+        + '\n\n'
+        + 'Nimi tuli kapteeni Robert Sutherland Rattraylta, '
+          + 'skotlantilaiselta, joka toimi Kultarannikon '
+          + 'apulaissiirtomaasihteerinä ja Accran lakiasäätävän '
+          + 'kokouksen sihteerinä vuonna 1919.'
+        + '\n\n'
+        + 'Puistossa on tekojärvi, lasten leikkipaikka, kuntosali, '
+          + 'golfkärry ja langaton verkko sekä ravintoloita ja '
+          + 'kahviloita. Ylpeyden aihe on kuuden neliömetrin '
+          + 'tanssiva suihkulähde: se oli maansa ensimmäinen.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * KANON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026, paketti
+   * O9). Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.kano, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Sabon Gari Market", "Sabon Gari", "Dalla Hill",
+   * "Kofar Mata Dye Pits", "Sani Abacha Stadium", "Kano Pillars
+   * F.C.", "Great Mosque of Kano", "Gidan Rumfa", "Ancient Kano
+   * City Walls", "Gates of Hausa kingdoms", "Gidan Makama Museum
+   * Kano", "Kano (city)", "Kano Chronicle").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat Kanon kronikka, islamin tulo ja sultanaatti, Rumfan
+   * vuosisata, vuosi 1873 Sokoton kalifaatin emiirikuntana ja
+   * durbar; teemasivu kertoo Kurmin torista, marokkonahasta,
+   * maapähkinästä ja rautatiestä sekä hausasta kauppakielenä.
+   * Rajapinnat (tarkistus-kano.md, kohta G): kronikkanosto kertoo
+   * käsikirjoituksesta ja kuningasluettelosta, ja yhdentoista
+   * klaanin ennustus sekä Barbushe ovat Dala-kukkulan jutun aihe;
+   * Rumfa-nosto ei kerro palatsista eikä torista rakennuksina;
+   * durbar-nosto mainitsee Kofar Kudun vain reittinä.
+   *
+   * NYKYKONFLIKTIT JÄTETÄÄN POIS KOKONAAN (Raamattu: ei nykysotaa,
+   * ei nykypolitiikkaa). Suurmoskeijan juttu päättyy 1950-luvun
+   * jälleenrakennukseen, ja Sabon Garin juttu vuoden 1983
+   * uudisrakennukseen. Sama linjaus kuin Aleppossa ja Bagdadissa.
+   */
+  kano: {
+    'Sabon Garin tori': {
+      aika: '1914 ja 1915',
+      teksti: 'Sabon gari tarkoittaa hausaksi uutta kaupunkia. Jo '
+          + 'ennen kuin britit saapuivat Pohjois-Nigeriaan vuonna '
+          + '1900, kaupungeissa oli vakiintuneita uudisasukkaiden '
+          + 'yhteisöjä, jotka asuivat erillään vanhoista '
+          + 'asutuksista mutta emiirin vallan alaisina.'
+        + '\n\n'
+        + 'Uudet rautatiet toivat Etelä-Nigeriasta paljon työläisiä '
+          + 'ja kauppiaita, ja he asettuivat näihin uusiin '
+          + 'kaupunginosiin. Vuoden 1914 Cantonments Proclamation '
+          + 'vakiinnutti järjestelyn hallinnollisesti. Tyypillinen '
+          + 'pohjoisnigerialainen kaupunki koostui sen jälkeen '
+          + 'neljästä osasta: muurien sisäisestä vanhastakaupungista, '
+          + 'sabon garista, tudun wadasta niille pohjoisen väelle '
+          + 'joka ei ollut paikallista, sekä muutamasta '
+          + 'eurooppalaisten asuinalueesta.'
+        + '\n\n'
+        + 'Tori rakennettiin 1914, mutta se avattiin vasta 1915. '
+          + 'Kanon hallinto rakensi sen uudelleen nykyaikaisena 1983, '
+          + 'ja se on nykyään koko kaupungin suurin tori. Alue kuuluu '
+          + 'Faggen paikallishallintoon, jonka pinta-ala on 21 '
+          + 'neliökilometriä ja jonka päätoimiala on kauppa.',
+      lahde: 'Wikipedia',
+    },
+    'Dala-kukkula': {
+      aika: '600-luku',
+      teksti: 'Kaupunki tunnettiin alun perin nimellä Dala tämän '
+          + 'kukkulan mukaan, ja bornulaiset lähteet käyttivät sitä '
+          + 'nimeä 1400-luvun loppuun asti. Kukkula kohoaa 534 '
+          + 'metriin merenpinnasta, ja huipulle nousee 101 porrasta. '
+          + '(Wikipedia merkitsee korkeusluvun itse epäselväksi: '
+          + 'sadalla portaalla ei nousta puolta kilometriä.)'
+        + '\n\n'
+        + '600-luvulla kukkulalla asui metsästäjien ja keräilijöiden '
+          + 'yhteisö, joka teki rautatöitä. Perimätieto kertoo '
+          + 'Barbushesta, kookkaasta ja voimakkaasta miehestä, joka '
+          + 'metsästi norsuja kepillään ja kantoi ne selässään '
+          + 'kukkulalle. Hän rakensi sinne pyhäkön Tsumburbura-'
+          + 'nimiselle jumaluudelle, jota hausat palvoivat ennen '
+          + 'islamia. Vain Barbushe sai käydä pyhäkössä, ja hän '
+          + 'laskeutui kukkulalta vain kahtena juhlapäivänä; niiden '
+          + 'lähestyessä seudun väki toi uhrieläimiä.'
+        + '\n\n'
+        + 'Kanon kronikka jatkaa tarinan. Se kertoo yhdestätoista '
+          + 'klaanista — suolankeittäjistä, oluenpanijoista, sepistä '
+          + '— joita hengellinen johtaja varoitti, että tulee '
+          + 'muukalainen, joka kaataa heidän pyhän puunsa ja ottaa '
+          + 'vallan: ellei omana aikananne, niin lastenne aikana. '
+          + 'Pian saapui Bagauda, ja hänestä tuli kronikan mukaan '
+          + 'Kanon ensimmäinen kuningas.',
+      lahde: 'Wikipedia',
+    },
+    'Kofar Matan värjäämöt': {
+      aika: '1400-luku',
+      teksti: 'Kofar Matan portin vieressä maassa ammottaa rivi '
+          + 'syviä pyöreitä kuoppia, joissa käy indigoliuos. Paikkaa '
+          + 'pidetään yhtenä Länsi-Afrikan pitkäikäisimmistä '
+          + 'yhtäjaksoisesti toimivista värjäämöistä; alkua '
+          + 'jäljitetään yli viidensadan vuoden taakse, aikaan '
+          + 'jolloin Kano oli Saharan-kaupan suuria keskuksia.'
+        + '\n\n'
+        + 'Väri syntyy toistolla eikä keitolla. Kangas kastetaan '
+          + 'altaaseen kerta toisensa jälkeen ja nostetaan välillä '
+          + 'ilmaan hapettumaan — vasta hapettuminen tekee '
+          + 'kellertävästä liemestä syvän sinisen. Mitä useammin '
+          + 'kastetaan, sitä tummempi sävy. Työn tekevät pääosin '
+          + 'miesvärjärit, ja tieto liemen valmistuksesta ja '
+          + 'kankaan käsittelystä kulkee suvuissa; menetelmä on '
+          + 'muuttunut vähän sukupolvesta toiseen.'
+        + '\n\n'
+        + 'Kanossa värjättyä kangasta myytiin esikoloniaalisena '
+          + 'aikana laajalti nykyisen Pohjois-Nigerian alueella ja '
+          + 'sen ulkopuolellakin, ja kuopat kävivät läpi koko '
+          + 'siirtomaakauden. Ne ovat käytössä yhä, mutta '
+          + 'kaupunkirakentaminen, ympäristöpaine ja nuorempien '
+          + 'polvien vähenevä kiinnostus ovat saaneet monet '
+          + 'vaatimaan paikalle suojelua.',
+      lahde: 'Wikipedia',
+    },
+    'Sani Abachan stadion': {
+      aika: '2000 ja 2009',
+      teksti: 'Kanon monitoimistadion on Kano Pillarsin koti, ja '
+          + 'katsojia siihen mahtuu kuusitoistatuhatta. Se on '
+          + 'nimetty entisen valtionpäämiehen, kenraali Sani '
+          + 'Abachan mukaan.'
+        + '\n\n'
+        + 'Stadion on nähnyt enemmän kansainvälistä jalkapalloa kuin '
+          + 'moni suurempi areena. Se isännöi vuoden 1999 nuorten '
+          + 'maailmanmestaruuskisojen otteluita, vuoden 2000 Afrikan '
+          + 'cupia ja vuoden 2009 alle 17-vuotiaiden MM-kisoja.'
+        + '\n\n'
+        + 'Kotiyleisö on tehnyt oman ennätyksensä. Kaudella 2017 '
+          + 'Kano Pillarsin kotiotteluissa oli keskimäärin '
+          + 'kymmenentuhatta katsojaa — korkein keskiarvo, joka '
+          + 'Nigerian liigassa on koskaan kirjattu.',
+      lahde: 'Wikipedia',
+    },
+    'Kanon suurmoskeija': {
+      aika: '1400-luku',
+      teksti: 'Kanon perjantaimoskeija on Nigerian vanhin moskeija. '
+          + 'Se rakennettiin 1400-luvulla Muhammad Rumfalle, ja se '
+          + 'oli savesta ja soro- eli tornityyppinen. Moskeija on '
+          + 'kaupungin sydämessä.'
+        + '\n\n'
+        + 'Rakennus on siirtynyt ja noussut uudelleen useasti. '
+          + 'Muhammad Zaki siirsi sen uudelle paikalle 1582, ja '
+          + 'Abdullahi Dan Dabo rakensi sen uudelleen 1800-luvun '
+          + 'puolivälissä. Sokoton jihadin jälkeen emiiri Suleiman, '
+          + 'jota pidettiin Kanon imaamina, johti perjantairukoukset '
+          + 'itse; myöhemmät emiirit ovat antaneet tehtävän '
+          + 'nimitetylle imaamille.'
+        + '\n\n'
+        + 'Nykyinen talo on nuori mutta paikka vanha: moskeija '
+          + 'tuhoutui 1950-luvulla ja rakennettiin uudelleen '
+          + 'brittien tuella. Kaupunkilaiselle se on silti sama '
+          + 'moskeija, jonka Rumfa perusti — paikka ja tehtävä ovat '
+          + 'säilyneet, vaikka seinät ovat vaihtuneet.',
+      lahde: 'Wikipedia',
+    },
+    'Gidan Rumfa': {
+      aika: '1400-luvun loppu',
+      teksti: 'Emiirin palatsi, jota sanotaan myös Gidan Sarkiksi eli '
+          + 'emiirin taloksi, rakennettiin 1400-luvun lopulla ja sitä '
+          + 'on muutettu ja laajennettu 1900-luvulle asti. Rumfan '
+          + 'ajoista lähtien se on ollut yhtäjaksoisesti kaupungin '
+          + 'perinteisen hallitsijan asuinpaikka — myös fulanit, '
+          + 'jotka ottivat vallan 1800-luvun alussa, jättivät sen '
+          + 'ennalleen.'
+        + '\n\n'
+        + 'Palatsi rakennettiin alun perin kaupungin laidalle, ja se '
+          + 'veti kaupunkia mukanaan: uuden rakennuksen ympärille '
+          + 'syntyi Kurmin tori. Ala on noin 33 eekkeriä eli '
+          + 'kolmetoista hehtaaria, ja sitä ympäröivät jopa viiden '
+          + 'metrin korkuiset muurit. Sisäpuoli jakautuu kolmeen: '
+          + 'avoimiin tiloihin, puutarhoihin ja asuttuihin '
+          + 'rakennuksiin. Muurien sisällä ovat toimistot, moskeija, '
+          + 'oikeussalit, ala- ja yläkoulu, englantilaiseksi saliksi '
+          + 'kutsuttu Soron ingila sekä asuintilat.'
+        + '\n\n'
+        + 'Kuuluisin osa on eteläinen portti Kofar Kudu, jonka '
+          + 'rakennutti emiiri Abdullahi Maje Karofi 1800-luvun '
+          + 'jälkipuoliskolla — siis suunnilleen isoisän '
+          + 'matkavuosina. Portti ei ole koriste vaan käytössä: '
+          + 'durbar-kulkue palaa sen kautta palatsiin. Emiirin '
+          + 'yksityistiloissa asuu jopa kaksisataa henkeä ja koko '
+          + 'rakennuksessa yli tuhat.',
+      lahde: 'Wikipedia',
+    },
+    'Kofar Nassarawan portti': {
+      aika: '1095–1134',
+      teksti: 'Kanon muurin hausankielinen nimi on ganuwa. '
+          + 'Perustuksen laski Kanon kronikan mukaan Sarki Gijimasu, '
+          + 'kuningaskunnan kolmas hallitsija, joka hallitsi vuosina '
+          + '1095–1134. Valmistumisesta lähde kertoo kaksi eri '
+          + 'versiota: toisaalla sanotaan, että Gijimasun poika '
+          + 'Tsaraki sai muurin valmiiksi 1100-luvulla, toisaalla '
+          + 'että se valmistui vasta 1300-luvun puolivälissä '
+          + 'Zamnagawan aikana ja että sitä laajennettiin vielä '
+          + '1500-luvulla. Kumpaakaan versiota ei tässä valita.'
+        + '\n\n'
+        + 'Mitat ovat joka tapauksessa samat: muuri oli alkujaan '
+          + '30–50 jalkaa korkea ja tyveltään noin neljäkymmentä '
+          + 'jalkaa paksu, ja siinä oli viisitoista porttia. Kun '
+          + 'britit valtasivat kaupungin 1903, kuvernööri Frederick '
+          + 'Lugard kirjoitti raporttiinsa, ettei ollut koskaan '
+          + 'nähnyt Afrikassa mitään vastaavaa.'
+        + '\n\n'
+        + 'Jokaisella portilla on nimi ja vartija, sarkin kofa eli '
+          + 'portin kuningas. Ennen vanhaan yksi mies vastasi yhdestä '
+          + 'portista kaikkina aikoina, ja virka periytyi isältä '
+          + 'lapsille; nykyään kaikki portit on annettu yhden '
+          + 'henkilön huostaan. Portit rakennettiin savesta, '
+          + 'kuivatusta heinästä, puusta, metallista ja kivestä, ja '
+          + 'ne ovat keskimäärin viitisen metriä korkeita ja '
+          + 'kymmenen metriä pitkiä. Kaupunkiin sai tulla vain '
+          + 'porttien kautta, ja kun ne suljettiin yöksi, ne '
+          + 'avattiin vasta aamunkoitteessa.',
+      lahde: 'Wikipedia',
+    },
+    'Gidan Makaman museo': {
+      aika: '1400-luku',
+      teksti: 'Ennen kuin Gidan Rumfa rakennettiin, Kanon '
+          + 'hausakuninkaat asuivat tässä talossa. Se rakennettiin '
+          + '1400-luvulla nuorelle Muhammad Rumfalle, joka oli juuri '
+          + 'saanut perinteisen arvonimen makama. Kun Rumfasta tuli '
+          + 'kuningas ja hän muutti uuteen palatsiin, taloon jäivät '
+          + 'asumaan seuraavat makamat.'
+        + '\n\n'
+        + 'Brittien vallattua Kanon 1903 rakennus toimi lyhyen aikaa '
+          + 'siirtomaavirkamiesten toimistona. Sen jälkeen se '
+          + 'jaettiin kolmeen: museoksi, alakouluksi ja '
+          + 'asuinrakennukseksi. Seinät olivat alun perin savea, ja '
+          + 'talo on yhä yksi parhaista esimerkeistä perinteisestä '
+          + 'hausa-arkkitehtuurista, vaikka korjauksissa on käytetty '
+          + 'nykyaineita.'
+        + '\n\n'
+        + 'Museossa on yksitoista galleriaa, jotka ovat vanhojen '
+          + 'makamojen huoneita ja pihoja. Sisäänkäynnillä on Kofar '
+          + 'Kabugan portilta kaivettuja ruukkuja ja kaksi '
+          + 'siirtomaa-ajan tykkiä. Gallerioissa kulkevat vuorotellen '
+          + 'hausa-arkkitehtuuri, Kanon muurien kartta, Bagaudan '
+          + 'tarina, fulanien aika, kaupungin vanha talous ja '
+          + 'durbar, islamilainen perintö, elinkeinot ja soittimet, '
+          + 'ja viimeisenä on perinteinen morsiamen huone. Sisäpiha '
+          + 'toimii Koroso-tanssiryhmän näyttämönä.',
+      lahde: 'Wikipedia',
+    },
+  },
 };

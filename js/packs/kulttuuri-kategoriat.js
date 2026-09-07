@@ -95220,4 +95220,899 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KUMASI (Opus 7.9.2026, paketti O9) — Afrikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-kumasi.md ja sen riippumaton tarkistus
+   * tarkistus-kumasi.md (tuomio "kelpaa, kun kohtien A–G ratkaisut
+   * tehdään"; kaikki seitsemän on tehty). Väitteet on luettu
+   * en-Wikipedian raakatekstistä 7.9.2026: "Kumasi", "Asante
+   * Empire", "Golden Stool", "Okomfo Anokye", "Anglo-Ashanti wars",
+   * "Lake Bosumtwi", "Owabi Wildlife Sanctuary", "Kumawood".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti (africa-saapumiset.js), valokuvataulu ja litteä
+   * kulttuuritaulu olivat jo olemassa eikä niihin kosketa — sama
+   * ratkaisu kuin Lagosissa, Nairobissa ja Kapkaupungissa. Litteän
+   * taulun kente-kuva, adinkra- ja highlife-nostot jäävät siis
+   * peliin, ja kulttuurivisan vastaus (kente) näkyy matkaoppaan
+   * käsityöjaksossa.
+   *
+   * GHANAN MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js, GHA)
+   * kertoo Ghanan nimestä, BOWDICHIN 1817 NÄKEMÄSTÄ PALATSISTA JA
+   * SEN POLTOSTA 1874 SEKÄ MANHYIASTA 1925, Tetteh Quarshiesta ja
+   * kaakaosta, itsenäisyydestä 1957, jollofista ja kenkeystä,
+   * KENTESTÄ JA ANANSISTA, ADINKRASTA, KULTAPUNNUKSISTA,
+   * fantasia-arkuista, highlifesta, akan-päivänimistä, Homowosta ja
+   * äidin kautta kulkevasta perinnöstä. Yksikään näistä ei ole tämän
+   * lehden aihe.
+   *
+   * KULTAJAKKARAN SOTA 1900 EI OLE TÄMÄN LEHDEN AIHE. Se on
+   * GHA-skandaalin aihe kokonaisuudessaan (skandaalit.js,
+   * kultajakkaran-sota: Hodgson, Yaa Asantewaa, Prempeh I:n
+   * maanpako, Fomenan korvaus). Lehti kertoo jakkaran SYNNYN
+   * 1695–1701, jota skandaalikortti ei kerro lainkaan.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: perustamisvuodesta ei anneta yhtä lukua. 1680-luku
+   *    (perustaminen), 1695 (pääkaupunki) ja 1701 (Feyiase) ovat eri
+   *    asioita, ja kaikki kolme sanotaan auki.
+   *  - B: Butlerin halventavaa lausetta EI siteerata sanatarkasti,
+   *    mutta kerrotaan, että kuvaukset olivat vastakkaisia.
+   *    Brackenburyn 1873 lause siteerataan.
+   *  - C: väkiluvusta kerrotaan kaikki kolme arviota lähteineen.
+   *  - D: Anokyen miekka ja jakkaran laskeutuminen kerrotaan
+   *    perimätietona lähteen omin varauksin; lähteettömäksi
+   *    merkittyä tikariväitettä ei kerrota lainkaan.
+   *  - F: orjakauppa mainitaan kerran neutraalisti Feyiasen jälkeen
+   *    avautuneen rannikkokaupan yhteydessä.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
+   * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
+   * Climate-osioon ja sanoo sen ääneen.
+   */
+  kumasi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kumasi',
+      johdanto: 'Kumasi syntyi kum-puun alle sademetsäharjanteelle, '
+        + 'ja Asanten kuninkaat tekivät siitä pääkaupunkinsa. Isoisän '
+        + 'matkavuonna 1873 se oli yhä oman valtakuntansa keskus — '
+        + 'brittihallinto tuli vasta kaksikymmentä vuotta myöhemmin.',
+      nostot: [
+        {
+          otsikko: 'Kaksi siementä, yksi kum-puu',
+          teksti: 'Nimi tulee twin sanasta Kumase, "kum-puun alla": '
+            + 'kum on puu ja ase alla. Kaupungin perusti 1680-luvulla '
+            + 'asantehene Osei Kofi Tutu I. Siitä, kuka paikan valitsi, '
+            + 'kerrotaan monta versiota, ja lähde luettelee ne itse: '
+            + 'toisen mukaan Osei Tutu neuvotteli maasta kum-puun alla, '
+            + 'toisen mukaan Nana Oti Akenten teki kaupat Tafon '
+            + 'päällikön kanssa, kolmannen mukaan Oti rakensi Kwamanin '
+            + 'ja hänen poikansa Obiri Yeboa Kumasin. Useimmat '
+            + 'suulliset lähteet panevat valinnan papin nimiin: Okomfo '
+            + 'Anokye istutti kaksi kum-siementä, toisen Kwamaniin ja '
+            + 'toisen Kumawuun, ja julisti, että kummasta puu kasvaa, '
+            + 'sinne tulee pääkaupunki. Kaupunki nousi harjanteen '
+            + 'itärinteille Nsubenin jokien soilta.',
+          wiki: 'Kumasi',
+        },
+        {
+          otsikko: 'Jakkara, jota ei lasketa maahan',
+          teksti: 'Akaanien käsityksessä jokainen jakkara on '
+            + 'omistajansa sielun istuin. Kun sitä ei käytetä, se '
+            + 'nostetaan seinää vasten, jotta ohikulkevat sielut '
+            + 'voivat levätä sillä. Kaikkien yläpuolella on kultainen '
+            + 'jakkara Sika Dwa Kofi, "perjantaina syntynyt '
+            + 'kultajakkara" — se on koko kansan istuin, elävien, '
+            + 'kuolleiden ja vielä syntymättömien, eikä se saa koskaan '
+            + 'koskettaa maata, vaan asetetaan huovalle. Istuin on 46 '
+            + 'senttiä korkea ja alusta 61 senttiä leveä. Perimätiedon '
+            + 'mukaan pappi Okomfo Anokye kutsui sen taivaalta alas '
+            + 'kansankokouksessa, ja se laskeutui Osei Tutun syliin.',
+          wiki: 'Golden Stool',
+        },
+        {
+          otsikko: 'Liitto, jonka jakkara sitoi yhteen',
+          teksti: 'Anokye ei ollut vain tietäjä vaan poliitikko. Hän '
+            + 'muutti löyhän asantiliiton kansalliseksi liitoksi vuonna '
+            + '1695, nimesi Kumasin pääkaupungiksi yhdessä Osei Tutun '
+            + 'kanssa, perusti liittoon otettujen valtioiden '
+            + 'päälliköistä valtioneuvoston ja järjesti armeijan '
+            + 'uudelleen. Sota ylivaltaa pitänyttä Denkyiraa vastaan '
+            + 'ratkesi Feyiasen taistelussa 1701, ja saaliiksi tuli '
+            + 'hollantilaisten Elminan linnan vuokrakirja. Se avasi '
+            + 'tien rannikolle: valtakunnan talous nojasi kultaan, '
+            + 'maataloustuotteisiin, käsityöhön, pohjoisen '
+            + 'karavaanikauppaan ja orjakauppaan. Sodan jälkeen '
+            + 'liittolaiset tunnustivat Kumasin liiton keskukseksi ja '
+            + 'Osei Tutun asantehenenä.',
+          wiki: 'Asante Empire',
+        },
+        {
+          otsikko: 'Vuosi 1873: tie, jonka päässä oli Kumasi',
+          teksti: 'Britannia osti 1872 Alankomaiden Kultarannikon ja '
+            + 'sen mukana Elminan, jota asantit pitivät ominaan; '
+            + 'asantit hyökkäsivät uuteen protektoraattiin, ja kolmas '
+            + 'sota alkoi. Kenraali Garnet Wolseley nimitettiin '
+            + '13. elokuuta 1873, ja retkikunta rakensi rannikolta '
+            + 'sisämaahan tien ja 237 siltaa; Pra-joen yli tuotiin '
+            + 'valmisosat Chathamista asti. Ensimmäiset joukot '
+            + 'marssivat 1. tammikuuta 1874, Amoafulin taistelu '
+            + 'käytiin 31. tammikuuta, ja britit saapuivat tyhjään '
+            + 'Kumasiin 4. helmikuuta. Fomenan rauha heinäkuussa 1874 '
+            + 'vaati asanteilta 50 000 unssia kultaa. Isoisän '
+            + 'matkavuonna kaupunki oli siis vielä pystyssä — ja tie '
+            + 'sitä kohti oli juuri rakenteilla.',
+          wiki: 'Anglo-Ashanti wars',
+        },
+        {
+          otsikko: 'Kaupunki, josta ei ollut kahta samaa kuvausta',
+          teksti: 'Vuonna 1873 Brackenbury kirjoitti Kumasista, että '
+            + '"kadut ovat yleensä hyvin leveitä ja puhtaita ja '
+            + 'koristeltuja monilla kauniilla banyan-puilla, jotka '
+            + 'antavat kiitollista varjoa auringon voimakkailta '
+            + 'säteiltä". Vuotta myöhemmin F. Boyle huomautti, että '
+            + 'kaupungin hajut eivät koskaan ole viemärin hajuja. '
+            + 'Samasta kaupungista kirjoitettiin myös päinvastaista: '
+            + 'William Butlerin kuvaus on yhtä halventava kuin '
+            + 'toisten on ylistävä. Väkiluvustakaan ei päästy yksiin: '
+            + 'asantilaiset lähteet arvioivat 1800-luvun alussa '
+            + 'satatuhatta, eurooppalaiset kaksitoista- tai '
+            + 'viisitoistatuhatta, ja historioitsija Ivor Wilks '
+            + 'neljäkymmentätuhatta 1860-luvulla. Kaupunki oli sama; '
+            + 'katsojat eivät.',
+          wiki: 'Kumasi',
+        },
+        {
+          otsikko: 'Kumawood kuvaa twiksi',
+          teksti: 'Kumasilla on oma elokuvateollisuutensa, Kumawood, '
+            + 'joka vetää puoleensa niitä, joilla ei ole pääsyä '
+            + 'koulutukseen mutta on into näytellä. Elokuvat '
+            + 'sijoittuvat kyliin, ne puhutaan twiksi, ja budjetti on '
+            + 'noin 6 900–11 400 dollaria. Elokuva ei ole kaupungissa '
+            + 'uutta: ensimmäinen dokumentoitu elokuvateatteri Rex '
+            + 'Cinema rakennettiin 1938 Prempeh Assembly Halliin, joka '
+            + 'oli silloin kaupungin suurimpia kokoontumispaikkoja, ja '
+            + 'toinen valmistui 1951 tuhannelleviidellesadalle '
+            + 'katsojalle. Teatterit omisti libanonilainen West '
+            + 'African Picture Company, joka toimi Kultarannikolla, '
+            + 'Nigeriassa ja Lontoossa — ja hindielokuvat olivat '
+            + 'katsotuimpia.',
+          wiki: 'Kumawood',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Kumasi on Ghanan toiseksi suurin kaupunki ja '
+          + 'Ashantin alueen pääkaupunki, noin kahdensadan kilometrin '
+          + 'päässä Accrasta sademetsävyöhykkeellä 250–300 metrin '
+          + 'korkeudella. Kaupungissa asuu 443 981 ihmistä ja koko '
+          + 'metropolialueella lähes kolme ja puoli miljoonaa — ero on '
+          + 'iso, ja se kannattaa muistaa lukuja vertaillessa. '
+          + 'Suurimmat kansat ovat asante, mole-dagbon ja ewe, ja '
+          + 'suurin osa asukkaista on syntynyt kunnan ulkopuolella, '
+          + 'noin puolet koko alueen ulkopuolella. Kumasi on maan '
+          + 'liikenteen risteys, ja siitä tulee suuri osa sen '
+          + 'vauraudesta; Ashantin alue tuotti 2014 viidenneksen '
+          + 'Ghanan tuotannosta, ja siitä lähes puolet syntyi tässä '
+          + 'kaupungissa. Se on yhä asantehenen istuinkaupunki, ja '
+          + 'siksi sitä sanotaan myös nimellä Oseikrom.',
+        artikkeli: {
+          nimi: 'Matkailijan Kumasi',
+          taitto: 'opas',
+          teksti: 'Puutarhakaupunki, jossa puutarhat ovat vähissä, '
+            + 'kuningaskunta, jolla on yhä kuningas, ja tori, jolla '
+            + 'kengät loppuvat ja tomaatit alkavat.',
+          nosto: 'Kumasi on yksi harvoista Afrikan kaupungeista, jotka '
+            + 'omaksuivat puutarhakaupungin mallin: Maxwell Fry ja '
+            + 'Jane Drew laativat 1945 kaavan, jossa kaupungin '
+            + 'ympärille piirrettiin viherkehät. Lempinimi jäi, '
+            + 'vaikka viheralasta on suuri osa rakennettu umpeen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä on Prempeh I International '
+                + 'Airport, jonka laajennus valmistui lokakuussa '
+                + '2022; keväällä 2020 sieltä lensi säännöllisesti '
+                + 'kaksi yhtiötä Accraan. Kaupungissa liikutaan '
+                + 'tro-tro-pikkubusseilla, jotka ovat yksityisiä ja '
+                + 'kulkevat vakiintuneita, hyvin tunnettuja '
+                + 'reittejä; taksit ovat kalliimpia mutta mukavampia, '
+                + 'ja osa niistäkin ajaa vakioreittiä. Vuonna 2002 '
+                + 'aloitettiin MetroMass-pikabussit. Kaukoliikennettä '
+                + 'on Accraan, Tamaleen, Cape Coastiin, Takoradiin ja '
+                + 'Bolgatangaan asti. Junaa ei kannata odottaa: radat '
+                + 'Accraan ja Sekondi-Takoradiin ovat olemassa, mutta '
+                + 'liikenne on ollut vuosia poikki vaurioituneiden '
+                + 'ratojen, siltojen ja vetureiden takia.',
+            },
+            {
+              otsikko: 'Millaisissa taloissa täällä asutaan',
+              teksti: 'Yleisin talotyyppi on compound-talo: '
+                + 'yksikerroksinen rakennus, jossa yhden hengen '
+                + 'huoneet kiertävät neliömäistä sisäpihaa. Niissä '
+                + 'asuu keskimäärin kahdeksasta viiteentoista '
+                + 'taloutta, ja ne rakennetaan halvoista aineista '
+                + 'paikallisin voimin. Vuoden 2010 laskennassa '
+                + 'compound-talossa asui 54,9 prosenttia talouksista, '
+                + 'erillistalossa 16,4, kerrostalossa 12,9 ja '
+                + 'paritalossa 8,7. Kaupunkia ei koskaan kaavoitettu '
+                + 'muodollisesti, mutta sitä pidettiin hyvin '
+                + 'järjestettynä: rakennustapa noudatti paikallista '
+                + 'kulttuuria ja arkkitehtuuria. Metropoli jakautuu '
+                + 'kymmeneen alueeseen, joista tutuimmat nimet ovat '
+                + 'Manhyia, Adum, Bantama ja Asokwa.',
+            },
+            {
+              otsikko: 'Mitä täällä tehdään käsin',
+              teksti: 'Kumasi tunnetaan kentestä, ja kangas tehdään '
+                + 'lähes aina perinteisin menetelmin; kutojien kylä '
+                + 'on Bonwire. Kaupungin ympäristössä on myös '
+                + 'kymmenen asantilaista perinnerakennusta, jotka '
+                + 'ovat Unescon maailmanperintöluettelossa vuodesta '
+                + '1980. Ne olivat 1700- ja 1800-luvulla pyhäkköjä ja '
+                + 'ovat viimeiset laatuaan: rakennettu puusta, '
+                + 'bambusta ja savilaastista, huoneet sisäpihan '
+                + 'ympärillä, ja seinissä kohokuvioita — kierteitä, '
+                + 'arabeskeja, eläimiä, lintuja ja kasveja sekä '
+                + 'adinkra-merkkejä. Ne ovat säilyneet, koska niissä '
+                + 'yhä harjoitetaan perinteistä uskontoa; savi ja '
+                + 'olki eivät kestä ilman jatkuvaa hoitoa.',
+            },
+            {
+              otsikko: 'Koulut ja korkeakoulut',
+              teksti: 'Oppilaitoksia on kaupungissa 2 545, ja niistä '
+                + 'kymmenen on korkeakouluja. Suurin on Kwame Nkrumah '
+                + 'University of Science and Technology, joka on '
+                + 'Ashantin suurin ja koko Ghanan suurin yliopisto; '
+                + 'sen kasvatteihin kuuluu YK:n entinen pääsihteeri '
+                + 'Kofi Annan. Koulu avattiin 1952 nimellä College of '
+                + 'Technology, arkkitehtuurin osasto otti ensimmäiset '
+                + 'opiskelijansa 1958, ja yliopistoksi se muuttui '
+                + '1961. Toisen asteen kouluja on paljon ja osa '
+                + 'niistä on maan arvostetuimpia: Prempeh College, '
+                + 'Opoku Ware School, Yaa Asantewaa Girls’ Senior '
+                + 'High School ja St. Louis Senior High School.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Kumasi-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on trooppinen savanni-ilmasto, '
+                + 'jossa on kaksi sadekautta: suuri maaliskuusta '
+                + 'heinäkuuhun ja pieni syyskuusta marraskuuhun. '
+                + 'Sadetta tulee vuodessa noin 1 200 millimetriä, ja '
+                + 'ilman kosteus vaihtelee 53 ja 93 prosentin '
+                + 'välillä. Kuukausien ylimmät lämpötilat ovat noin '
+                + '31 astetta ja alimmat noin 22. Kuumin kuukausi on '
+                + 'helmikuu, viilein elokuu — ero on vain kuusi '
+                + 'astetta, joten vuodenaika valitaan sateen eikä '
+                + 'lämpötilan mukaan.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kejetian tori',
+                tahdet: 3,
+                selite: 'Länsi-Afrikan suurin yksittäinen tori: yli '
+                  + 'kahdeksantuhatta myymälää ja kojua.',
+              },
+              {
+                mita: 'Bosumtwe-järvi',
+                tahdet: 3,
+                selite: 'Miljoona vuotta vanha törmäyskraatteri '
+                  + 'sademetsässä, ja asanteille pyhä järvi.',
+              },
+              {
+                mita: 'Kumasin linnake ja sotamuseo',
+                tahdet: 3,
+                selite: 'Rakennettu 1897 tuhotun linnakkeen tilalle; '
+                  + 'museo vuodesta 1953.',
+              },
+              {
+                mita: 'Kansallinen kulttuurikeskus',
+                tahdet: 2,
+                selite: 'Avattiin 1956 asantien kulttuurikeskuksena; '
+                  + 'alueella on Prempeh II:n museo.',
+              },
+              {
+                mita: 'Owabin lintusuo',
+                tahdet: 2,
+                selite: 'Ghanan ainoa sisämaan Ramsar-kohde, jossa on '
+                  + 'noin 161 lintulajia.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin oppaan
+             * jaksoissa ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kaksi sadekautta, ei yhtä',
+                teksti: 'Suuri sadekausi kestää maaliskuusta '
+                  + 'heinäkuuhun ja pieni syyskuusta marraskuuhun — '
+                  + 'väliin jää lyhyt kuivempi jakso elokuussa.',
+              },
+              {
+                otsikko: 'Juna ei kulje',
+                teksti: 'Radat Accraan ja Sekondi-Takoradiin ovat '
+                  + 'olemassa, mutta liikenne on ollut poikki vuosia '
+                  + 'vaurioituneen radan ja kaluston takia.',
+              },
+              {
+                otsikko: 'Puutarhakaupunki on osin nimi vain',
+                teksti: 'Vuoteen 2003 mennessä suuri osa vuoden 1945 '
+                  + 'kaavan viheralasta oli rakennettu asuinkäyttöön; '
+                  + 'viheralaa on noin 4,7 neliömetriä asukasta '
+                  + 'kohti.',
+              },
+              {
+                otsikko: 'Tro-tro kulkee reittiä, ei aikataulua',
+                teksti: 'Pikkubussit ajavat vakiintuneita ja hyvin '
+                  + 'tunnettuja reittejä; taksi maksaa enemmän mutta '
+                  + 'on mukavampi, ja osa niistäkin ajaa reittiä.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Metsä ja järvi',
+      johdanto: 'Kumasi seisoo sademetsävyöhykkeellä kahden sadekauden '
+        + 'rytmissä, ja sen eteläpuolella on järvi, joka syntyi '
+        + 'miljoona vuotta sitten taivaalta pudonneesta kivestä.',
+      tehtava: {
+        kysymys: 'Miksi Bosumtwe-järvellä saa kalastaa vain '
+          + 'puulankuilta?',
+        vaihtoehdot: [
+          'Vesi on liian syvää veneelle',
+          'Vene häiritsisi kraatterin mittauksia',
+          'Järvi on pyhä ja kuolleiden sielut käyvät siellä',
+          'Puu kelluu paremmin kuin metalli',
+        ],
+        oikea: 2,
+        fakta: 'Asantien perinteisen uskomuksen mukaan kuolleiden '
+          + 'sielut tulevat Bosumtwelle jättämään jäähyväiset '
+          + 'jumalatar Asase Yalle, ja siksi järvellä on lupa '
+          + 'kalastaa vain puulankuilta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Järvi, jonne sielut tulevat hyvästelemään',
+          teksti: 'Kaupungin eteläpuolella on Bosumtwe, asanteille '
+            + 'pyhä järvi. Perinteisen uskomuksen mukaan kuolleiden '
+            + 'sielut tulevat sinne jättämään jäähyväiset jumalatar '
+            + 'Asase Yalle, ja siksi järvellä saa kalastaa vain '
+            + 'puulankuilta — ei veneellä. Vedessä elää kotoperäinen '
+            + 'kirjoahven Hemichromis frempongi ja kaksi lähes '
+            + 'kotoperäistä tilapiaa. Järvi on 8,6 kilometriä pitkä ja '
+            + '8,1 leveä, syvimmillään 81 metriä, eikä siitä laske '
+            + 'jokea mihinkään: vesi tulee sateesta ja lähtee '
+            + 'haihtumalla. Nimen kirjoitusasu vaihtelee lähteestä '
+            + 'toiseen, Bosumtwi ja Bosomtwe.',
+          wiki: 'Lake Bosumtwi',
+        },
+        {
+          otsikko: 'Kivi, joka putosi miljoona vuotta sitten',
+          teksti: 'Järvi on törmäyskraatterissa. Kraatteri on '
+            + 'halkaisijaltaan 10,5 kilometriä eli hieman järveä '
+            + 'suurempi, ja se on 1,07 miljoonaa vuotta vanha. '
+            + 'Syvyyttä on noin 380 metriä ja sedimenttien kanssa '
+            + '750. Todisteet ovat kaukana: Norsunluurannikolta '
+            + 'löytyy tektiittejä, joiden uskotaan syntyneen tästä '
+            + 'törmäyksestä, ja mikrotektiittejä on syvänmeren '
+            + 'sedimenteissä Afrikan länsipuolella. Ennen törmäystä '
+            + 'alue oli rehevää sademetsää. Vesi on käynyt matalalla '
+            + 'ja korkealla: kukkuloiden huipuilta on löytynyt '
+            + 'kalanfossiileja, ja vielä noin kolmesataa vuotta '
+            + 'sitten järvi oli kutistunut lammeksi.',
+          wiki: 'Lake Bosumtwi',
+        },
+        {
+          otsikko: 'Puutarhakaupunki, joka piti puolustaa',
+          teksti: 'Kumasi on yksi harvoista Afrikan kaupungeista, '
+            + 'jotka omaksuivat Ebenezer Howardin puutarhakaupungin '
+            + 'mallin. Vuonna 1945 Maxwell Fry ja Jane Drew laativat '
+            + 'kaupungin ensimmäisen kehityssuunnitelman sen '
+            + 'ihanteiden pohjalta: kaupungin ympärille piirrettiin '
+            + 'viherkehät, ja puistoja ja kaupunkivihreää lisättiin, '
+            + 'jotta rakentaminen ei leviäisi hallitsemattomasti ja '
+            + 'ilma pysyisi puhtaampana. Lempinimi Garden City tuli '
+            + 'Fryn samana vuonna julkaisemasta kirjoituksesta. '
+            + 'Kaava ei kuitenkaan pitänyt: vuoteen 2003 mennessä '
+            + 'suuri osa viheralasta oli rakennettu asuinkäyttöön, ja '
+            + 'sitä on nyt 4,7 neliömetriä asukasta kohti.',
+          wiki: 'Kumasi',
+        },
+        {
+          otsikko: 'Sadankuudenkymmenen linnun suo',
+          teksti: 'Owabin luonnonsuojelualue on Ghanan ainoa sisämaan '
+            + 'Ramsar-kohde; se merkittiin kansainvälisesti '
+            + 'arvokkaaksi kosteikoksi 22. helmikuuta 1988. Alueella '
+            + 'elää noin 161 lintulajia, sekä kotoperäisiä että '
+            + 'muuttajia, ja se sopii sekä retkeilyyn että lintujen '
+            + 'tarkkailuun. Kaupunkiin verrattuna se on hiljainen '
+            + 'paikka: Kumasin omat puistot ovat suureksi osaksi '
+            + 'huonossa kunnossa, ja vuoden 2014 tutkimuksen mukaan '
+            + 'kolmasosa asukkaista ei käy puistoissa lainkaan ja '
+            + 'lähes yhtä moni pitää niitä tarpeettomina. Lintusuolla '
+            + 'kävijä on siis harvinaisemmassa seurassa kuin luulisi.',
+          wiki: 'Owabi Wildlife Sanctuary',
+        },
+        {
+          otsikko: 'Puolet maan sahoista',
+          teksti: 'Metsä ei jää kaupungin ulkopuolelle vaan tulee '
+            + 'sisään: puolet koko Ghanan puunjalostuksesta tapahtuu '
+            + 'Kumasissa. Kaupungin varallisuus tulee kahdesta '
+            + 'asiasta, siitä että se on maan pääteiden risteys ja '
+            + 'siitä että sen takamaastossa viljellään kaakaota. '
+            + 'Ashantin alue tuotti 2014 viidenneksen Ghanan '
+            + 'tuotannosta, ja siitä lähes puolet syntyi tässä '
+            + 'kaupungissa. Kasvulla on hintansa. Wiwi ja Subin, '
+            + 'kaupungin läpi kulkevat joet, ovat uhattuina, ja 2024 '
+            + 'julkaistun raportin mukaan niiden rannoilla oli '
+            + 'enemmän teollisuutta, asumista ja liiketiloja kuin '
+            + 'viheralaa; tutkijat esittivät kolmenkymmenen metrin '
+            + 'suojavyöhykettä.',
+          wiki: 'Kumasi',
+        },
+      ],
+    },
+  ],
+  /*
+   * KANO (Opus 7.9.2026, paketti O9) — Afrikan laudan kaupunkilehti.
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-kano.md ja sen
+   * riippumaton tarkistus tarkistus-kano.md (tuomio "kelpaa, kun
+   * kohtien A–G ratkaisut tehdään"; kaikki seitsemän on tehty).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Kano (city)", "Kano Chronicle", "Kurmi Market", "Morocco
+   * leather", "Durbar festival", "Hausa architecture",
+   * "Trans-Saharan trade".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti, valokuvataulu ja litteä kulttuuritaulu olivat jo
+   * olemassa eikä niihin kosketa. Litteän taulun värjäämökuva,
+   * durbar- ja muurinostot jäävät siis peliin, eikä lehti käytä
+   * samaa kuvatiedostoa.
+   *
+   * NIGERIAN MAALEHTEÄ EI TOISTETA, EIKÄ LAGOSIN LEHTEÄ. Maalehti
+   * (maa-kategoriat.js, NGA) kertoo AMINASTA JA ZAZZAUN MUUREISTA,
+   * Oyon kalebassista, NANA ASMAʼUSTA JA SOKOTOSTA, vuoden 1929
+   * naisten sodasta, jollofista ja suyasta, puhuvasta rummusta ja
+   * afrobeatista, Ifen päistä ja ADIRESTA. Lagosin kaupunkilehti
+   * (v1670) kertoo aworeista, Beninistä, vuodesta 1861, saroista,
+   * Eyo-kulkueesta ja laguunista. Yksikään näistä ei ole tämän
+   * lehden aihe.
+   *
+   * INDIGO ESIINTYY MYÖS MAALEHDESSÄ, MUTTA ERI ASIANA. Maalehden
+   * "Sitoa ja liottaa" kertoo ADIRESTA, jorubanaisten sitomalla ja
+   * liottamalla värjäämästä kankaasta Abeokutassa ja Ibadanissa;
+   * Kanon Kofar Matan kuopat ovat hausalainen värjäämölaitos ja
+   * kohdekartan kohde. Tekniikkaa ei selosteta täällä uudestaan.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: muurin valmistumisvuodesta kerrotaan MOLEMMAT versiot
+   *    (Tsaraki 1100-luvulla / Zamnagawa 1300-luvun puolivälissä).
+   *    Nosto on kohdekartan Kofar Nassarawa -jutussa.
+   *  - B: Dala-kukkulan korkeus annetaan merenpinnasta, ei nousuna;
+   *    lähteen oma clarify-merkintä sanotaan ääneen.
+   *  - C: orjuus kerrotaan Barthin arviona lähteen varauksella,
+   *    ilman prosenttilukua.
+   *  - D: värjäämökuoppien iäksi sanotaan "yli viisisataa vuotta" ja
+   *    "1400-luvulta"; vuosilukua 1498 ei käytetä.
+   *  - F: Kurmin tori on teemasivun nosto eikä kartan kohde, koska
+   *    sille ei ole luotettavaa koordinaattia.
+   *
+   * NYKYKONFLIKTIT JA NYKYPOLITIIKKA JÄTETÄÄN POIS KOKONAAN. Sama
+   * linjaus kuin Aleppossa ja Bagdadissa: ei vuoden 1980
+   * mellakkaa, ei Boko Haramia, ei sharia-lain käyttöönottoa, ei
+   * emiirikunnan jakamista 2019.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
+   * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
+   * Climate-osioon ja sanoo sen ääneen.
+   */
+  kano: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kano',
+      johdanto: 'Kano kasvoi Dala-kukkulan juurelle savimuurien '
+        + 'sisään ja eli tuhat vuotta Saharan-kaupan eteläisenä '
+        + 'päänä. Isoisän matkavuonna 1873 se oli Sokoton kalifaatin '
+        + 'suurin ja vaurain emiirikunta — ja yksi nälkävuosi.',
+      nostot: [
+        {
+          otsikko: 'Kronikka, joka kirjoitettiin lopusta alkuun',
+          teksti: 'Kanon kronikka on arabiankielinen käsikirjoitus, '
+            + 'joka luettelee kaupungin hallitsijat 900-luvulle asti: '
+            + 'Bagauda 999–1063, Warisi, Gijimasu, Tsaraki, ja niin '
+            + 'edelleen Muhammad Rumfaan ja häntä myöhempiin. '
+            + 'Luettelo näyttää vanhalta, mutta teksti ei ole: '
+            + 'nykyinen kronikka on todennäköisesti kirjoitettu '
+            + '1880-luvulla, ja kirjoittajaksi arvellaan Malam '
+            + 'Barkaa, korkea-arvoista virkamiestä emiiri Muhammad '
+            + 'Bellon palveluksessa. Teos saattaa koota yhteen '
+            + 'vanhempia tekstejä. Alkuperäiskappale on yhä Kanossa, '
+            + 'Malam Idris al-Khilawiyn jälkeläisillä.',
+          wiki: 'Kano Chronicle',
+        },
+        {
+          otsikko: 'Kaksi käännöstä, kaksi eri tekstiä',
+          teksti: 'Kronikka tunnetaan maailmalla käännöksinä. Sir '
+            + 'Richmond Palmer käänsi sen englanniksi 1908, ja se on '
+            + 'yhä tunnetuin versio. Rupert M. East teki 1933 '
+            + 'hausannoksen nimellä Labarun Hausawa da Makwabtansu, '
+            + 'ja siinä on kohtia, jotka eivät ole Palmerin tekstissä '
+            + '— syy on yksinkertainen: East käytti eri '
+            + 'käsikirjoitusta. Kaksi käännöstä ovat siis kaksi '
+            + 'tekstiä eivätkä sama teksti kahdella kielellä. Kanon '
+            + 'oma nimi on sekin vaihtunut: kaupunkia sanottiin '
+            + 'alkujaan Dalaksi kukkulan mukaan, ja bornulaiset '
+            + 'lähteet käyttivät sitä nimeä vielä 1400-luvun '
+            + 'lopulla.',
+          wiki: 'Kano Chronicle',
+        },
+        {
+          otsikko: 'Kuningas, joka luopui pyhäköstä',
+          teksti: 'Islam saapui Kanoon 1000-luvulla tai aiemmin, '
+            + 'pääosin Saharan-kaupan mukana, ja kaupunki rikastui '
+            + 'sen myötä alueen kaupan hermokeskukseksi. Käänne '
+            + 'kirjattiin 1100-luvulle: Kudawa-suvun Ali Yaji luopui '
+            + 'Tsumburbura-kultin palvonnasta, kääntyi islamiin ja '
+            + 'julisti sultanaatin, joka kesti aina 1800-luvulle '
+            + 'asti. Hänen kaudellaan alkoi laajentuminen, joka teki '
+            + 'Kanosta hausalaisen valtapiirin pääkaupungin. '
+            + 'Kaupunki oli jo silloin monikansallinen: siellä asui '
+            + 'vakinaisesti arabeja, tuaregeja ja kanureita, ja niin '
+            + 'asuu yhä.',
+          wiki: 'Kano (city)',
+        },
+        {
+          otsikko: 'Strutsinsulkakengät ja kakaki',
+          teksti: 'Muhammad Rumfa nousi valtaistuimelle 1463 ja '
+            + 'hallitsi 1499 asti. Nousevan Songhain paine pakotti '
+            + 'hänet ottamaan vaimokseen Auwan, Askia Suuren '
+            + 'tyttären; Auwasta tuli myöhemmin Kanon ensimmäinen '
+            + 'naispuolinen madaki. Hovi oli komeileva: virkamiehillä '
+            + 'oli ylellisiä vaatteita ja kalliita '
+            + 'strutsinsulkakenkiä, ja kakaki-torvi otettiin käyttöön '
+            + 'hänen aikanaan. Rahat tulivat kaupasta, ja Kanon maine '
+            + 'Saharan-kaupan keskuksena oli keskiajalla korkeimmillaan '
+            + 'luultavasti juuri silloin. Leo Africanuksen kuvauksen '
+            + 'uskotaan olevan tältä ajalta: hän sanoi asukkaita '
+            + 'varakkaiksi kauppiaiksi ja taitaviksi käsityöläisiksi '
+            + 'ja pani merkille riisin, maissin, puuvillan ja '
+            + 'sitrushedelmien runsauden.',
+          wiki: 'Muhammad Rumfa',
+        },
+        {
+          otsikko: 'Vuosi 1873: emiirikunta ja nälkävuosi',
+          teksti: 'Usman dan Fodion jihadin jälkeen Kanon viimeinen '
+            + 'sultaani kukistettiin 1805, ja kaupungista tuli '
+            + 'Sokoton kalifaatin emiirikunta — jo silloin '
+            + 'valtakunnan suurin ja vaurain provinssi. Kudonta, '
+            + 'värjäys ja nahkatyö kulkivat kauppatavarana pohjoisessa '
+            + 'Marokkoon asti ja sieltä Eurooppaan, ja puuvillakangas '
+            + 'meni Tripoliin, Tšad-järvelle ja Timbuktuun. Heinrich '
+            + 'Barth kävi kaupungissa 1851 ja mittasi muurin noin '
+            + 'kymmenen mailin pituiseksi ja kolmenkymmenen jalan '
+            + 'korkuiseksi; asukkaita hän laski kolmekymmentätuhatta '
+            + 'ja kutsui Kanoa Keski-Afrikan suurimmaksi '
+            + 'kauppapaikaksi. Hän arvioi myös, että suuri osa '
+            + 'kaupungin väestä oli orjuutettuja; Wikipedia merkitsee '
+            + 'arvion lähteettömäksi. Isoisän matkavuosi oli '
+            + 'kaupungille raskas: 1873 on yksi sen nälkävuosista '
+            + '1847:n, 1855:n, 1863:n ja 1884:n rinnalla.',
+          wiki: 'Kano (city)',
+        },
+        {
+          otsikko: 'Neljä päivää hevosen selässä',
+          teksti: 'Kano on perinteisesti ratsastusyhteiskunta, ja se '
+            + 'näkyy durbarissa. Juhla alkaa rukouksilla '
+            + 'aamunkoitteessa, ja sitä seuraa emiirin sekä hänen '
+            + 'ratsastajiensa, muusikkojensa ja tykkimiestensä '
+            + 'kulkue; ylimykset saapuvat vahvistamaan uskollisuutensa. '
+            + 'Kanon durbar kestää neljä päivää, ja perinne on yli '
+            + 'kaksisataa vuotta vanha — se juontuu ajasta, jolloin '
+            + 'hevosia alettiin käyttää sodankäynnissä. Vaikuttavin '
+            + 'osa on Hawan Daushe, jonka lopussa on jahi: ratsastajat '
+            + 'kiitävät täyttä laukkaa kohti emiiriä, pysähtyvät '
+            + 'jyrkästi hänen eteensä, heiluttavat miekkaa tai lippua '
+            + 'ja poistuvat. Unesco otti juhlan aineettoman '
+            + 'kulttuuriperinnön luetteloon joulukuussa 2024.',
+          wiki: 'Durbar festival',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Kano on Pohjois-Nigerian suurin kaupunki, Kanon '
+          + 'osavaltion pääkaupunki ja koko maan toiseksi väkirikkain '
+          + 'kaupunki. Se on yksi seitsemästä keskiaikaisesta '
+          + 'hausakaupungista, ja pääasukkaat ovat hausat ja fulanit. '
+          + 'Kaupunki oli vahvasti kosmopoliittinen jo vuosisatoja '
+          + 'ennen brittihallintoa: siellä asui vakinaisesti arabeja, '
+          + 'tuaregeja ja kanureita, ja hausa on alueen kauppakieli, '
+          + 'jota puhuu yli seitsemänkymmentä miljoonaa ihmistä. Kano '
+          + 'on 481 metrin korkeudella Sudanin savannivyöhykkeessä '
+          + 'Saharan eteläpuolella, ja aivan sen lähellä yhtyvät '
+          + 'lounaasta tulevat Kano- ja Challawa-joki Hadejiaksi, '
+          + 'joka päätyy lopulta Tšad-järveen. Talouden ydin on yhä '
+          + 'sama kuin keskiajalla: kauppa.',
+        artikkeli: {
+          nimi: 'Matkailijan Kano',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa kadut päättyvät portteihin, savi '
+            + 'on rakennusaine ja väri, ja tori on ollut samassa '
+            + 'paikassa viisisataa vuotta.',
+          nosto: 'Kanon vanhankaupungin talot rakennetaan lateriitista '
+            + 'ja korjataan joka kuivan kauden alussa. Sade pyöristää '
+            + 'terävät muodot vuoden aikana, ja korjaus terävöittää ne '
+            + 'takaisin — juuri siksi hausalaisen talon muoto näyttää '
+            + 'orgaaniselta eikä veistetyltä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lähin lentokenttä on Mallam Aminu Kano '
+                + 'International Airport. Rautatieasemalta kulkee '
+                + 'junia Lagosiin Kadunan kautta; rata kunnostettiin '
+                + 'vuoteen 2013 mennessä, matka kestää '
+                + 'kolmekymmentä tuntia ja maksaa noin kaksitoista '
+                + 'dollaria eli neljänneksen bussilipun hinnasta. '
+                + 'Koska Kano on Kadunan risteyksen pohjoispuolella, '
+                + 'sillä on yhtä hyvä yhteys sekä Lagosin että Port '
+                + 'Harcourtin satamiin. Kaupungin läpi kulkee myös '
+                + 'kaksi Afrikan halki vedettyä autoreittiä, '
+                + 'Algiersista Lagosiin ja Dakarista Ndjamenaan. '
+                + 'Vuonna 2017 kaupungille suunniteltiin 74 '
+                + 'kilometrin ja neljän linjan pikaraitiotietä.',
+            },
+            {
+              otsikko: 'Vanhakaupunki ja Sabon Gari',
+              teksti: 'Kaupunki jakautuu yhä osiin, joiden nimet '
+                + 'kertovat historiaa. Muurien sisäpuolella on '
+                + 'vanhakaupunki portteineen; siellä ovat Kurmin '
+                + 'tori, emiirin palatsi, suurmoskeija ja Gidan '
+                + 'Makaman museo, ja lähistöllä vanhat '
+                + 'värjäämökuopat, jotka ovat yhä käytössä. Muurien '
+                + 'ulkopuolella on Sabon Gari, "uusi kaupunki", jonne '
+                + 'asettuivat rautateiden mukana tulleet kauppiaat ja '
+                + 'työläiset. Kolmas osa on tudun wada, joka '
+                + 'rakennettiin niille pohjoisen väelle, jotka eivät '
+                + 'olleet paikallisia. Neljäs oli eurooppalaisten '
+                + 'asuinalue. Jaon vahvisti hallinnollisesti vuoden '
+                + '1914 asetus.',
+            },
+            {
+              otsikko: 'Talot savesta',
+              teksti: 'Kano on sudanilais-sahelilaisen arkkitehtuurin '
+                + 'johtavia keskuksia, ja sen oma tyyli on nimeltään '
+                + 'tubali. Hausalaisen kaupungin pääosat ovat '
+                + 'puolustusmuuri, palatsi, moskeijat, tori ja '
+                + 'asuinrakennukset, ja rakennuksen pääosat kolme: '
+                + 'päähuone, sisäpiha ja muuri. Tärkein rakennusaine '
+                + 'on lateriitti. Uusi talo näyttää terävältä ja '
+                + 'täsmälliseltä, mutta sade pyöristää muodot vuoden '
+                + 'kuluessa, ja joka kuivalla kaudella talot '
+                + 'korjataan takaisin siisteiksi — siitä syntyy se '
+                + 'pehmeä muoto, josta tyyli tunnetaan. Julkisivujen '
+                + 'koristelu kertoo usein vauraudesta, ja se jakautuu '
+                + 'kolmeen lajiin: pintakuvioihin, ornamentteihin ja '
+                + 'kalligrafiaan.',
+            },
+            {
+              otsikko: 'Mitä täällä opiskellaan',
+              teksti: 'Kaupungin vanhin yliopisto on Bayero '
+                + 'University Kano. Sen siemen oli Isa Kaitan 1962 '
+                + 'perustama Ahmadu Bello College, joka nostettiin '
+                + 'University Collegeksi 1975 ja josta tuli '
+                + 'liittovaltion yliopisto 1977; se jakoi tutkintoja '
+                + 'Ahmadu Bello Universityn nimissä vuoteen 1980. '
+                + 'Muita korkeakouluja ovat Sa’adatu Rimi '
+                + 'University of Education, Yusuf Maitama Sule '
+                + 'University sekä 1975 perustettu Kano State '
+                + 'Polytechnic. Kaupungissa on myös Aminu Kano '
+                + 'College of Islamic Legal Studies ja Federal '
+                + 'College of Education.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Kano-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on trooppinen savanni-ilmasto. '
+                + 'Sadetta tulee vuodessa noin 980 millimetriä, ja '
+                + 'valtaosa siitä kesäkuun ja syyskuun välillä. '
+                + 'Kuuminta on huhtikuussa: kuukauden keskilämpö on '
+                + '32 astetta, ja korkein mitattu lukema on '
+                + 'toukokuun 44,8. Joulukuusta helmikuuhun on '
+                + 'viileämpää, ja aamut ovat keskimäärin 14–16 '
+                + 'asteessa; kylmin mitattu on tammikuun viisi '
+                + 'astetta. Samaan aikaan puhaltaa harmattan, joka '
+                + 'tuo Saharasta pölyä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kofar Matan värjäämökuopat',
+                tahdet: 3,
+                selite: 'Länsi-Afrikan pitkäikäisimpiä '
+                  + 'yhtäjaksoisesti toimivia värjäämöitä, yli '
+                  + 'viisisataa vuotta vanha.',
+              },
+              {
+                mita: 'Gidan Rumfa, emiirin palatsi',
+                tahdet: 3,
+                selite: '1400-luvun lopulta; kolmentoista hehtaarin '
+                  + 'alue viiden metrin muurien sisällä.',
+              },
+              {
+                mita: 'Kurmin tori',
+                tahdet: 3,
+                selite: 'Rumfan perustama kauppapaikka, joka on '
+                  + 'ollut samassa korttelissa 1400-luvulta.',
+              },
+              {
+                mita: 'Gidan Makaman museo',
+                tahdet: 2,
+                selite: 'Yksitoista galleriaa vanhan makaman talossa '
+                  + '— hausa-arkkitehtuuria sisältä nähtynä.',
+              },
+              {
+                mita: 'Dala-kukkula',
+                tahdet: 2,
+                selite: 'Kaupungin vanhin asuinpaikka; huipulle '
+                  + 'nousee 101 porrasta.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin oppaan
+             * sääjaksossa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Harmattan tulee joulukuussa',
+                teksti: 'Joulukuusta helmikuuhun Saharasta puhaltava '
+                  + 'harmattan tuo pölyä; samaan aikaan aamut ovat '
+                  + 'vuoden viileimmät, keskimäärin 14–16 astetta.',
+              },
+              {
+                otsikko: 'Huhtikuu on kuumin',
+                teksti: 'Kuukauden keskilämpö on 32 astetta ja '
+                  + 'korkein mitattu lukema toukokuun 44,8 — '
+                  + 'sadekausi alkaa vasta kesäkuussa.',
+              },
+              {
+                otsikko: 'Sade tulee neljässä kuukaudessa',
+                teksti: 'Vuoden 980 millimetristä valtaosa sataa '
+                  + 'kesäkuun ja syyskuun välillä; muina kuukausina '
+                  + 'on kuivaa.',
+              },
+              {
+                otsikko: 'Durbar ei ole kalenterissa',
+                teksti: 'Kulkue järjestetään islamilaisten '
+                  + 'juhlapäivien mukaan, joten päivämäärä siirtyy '
+                  + 'vuosittain eikä sitä voi lyödä lukkoon '
+                  + 'etukäteen.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kauppa',
+      nimi: 'Kauppa ja käsityö',
+      johdanto: 'Kano oli Saharan karavaanireittien eteläisin pää, ja '
+        + 'sen tavara oli omaa tekoa: indigolla värjättyä kangasta, '
+        + 'vuohennahkaa ja myöhemmin maapähkinää.',
+      tehtava: {
+        kysymys: 'Mistä paras kirjansidontaan käytetty marokkonahka '
+          + 'oikeasti tuli?',
+        vaihtoehdot: [
+          'Marokon Safista',
+          'Egyptin Kairosta',
+          'Espanjan Córdobasta',
+          'Pohjois-Nigerian hausakaupungeista',
+        ],
+        oikea: 3,
+        fakta: 'Nimi tulee marokkolaisesta Safin kaupungista, mutta '
+          + 'osa parhaasta kirjansidontanahasta — yleensä '
+          + 'vuohennahkaa — hankittiin hausakaupunkivaltioista '
+          + 'Kanosta, Katsinasta ja Zazzausta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tori, jonka kuningas perusti',
+          teksti: 'Muhammad Rumfa perusti Kurmin torin 1400-luvulla; '
+            + 'lähdeteoksen nimi ajoittaa alun vuoteen 1463. Tori '
+            + 'rakennettiin Jakaran kaupunginosaan kaupan ja '
+            + 'varastoinnin keskukseksi, kun alueellinen ja Saharan '
+            + 'yli kulkeva kauppa kasvoivat. Kanossa oli tuolloin jo '
+            + 'toimiva teollisuus: kudontaa, kankaanvärjäystä, '
+            + 'nahkatyötä ja savenvalantaa. Se veti kiertäviä '
+            + 'kauppiaita Länsi-Sudanista, Tripolista ja '
+            + 'Ghadamesista. Tori oli nelikulmio, jonka bambukojut '
+            + 'muodostivat epäsäännöllisiä katuja; eri kortteleissa '
+            + 'myytiin eri tavaraa, ja karjakauppa oli läntisimmässä '
+            + 'laidassa. Lähde toteaa myös, että tori toimi '
+            + 'aikanaan merkittävänä orjatorina.',
+          wiki: 'Kurmi Market',
+        },
+        {
+          otsikko: 'Torin toinen elämä savikojuissa',
+          teksti: 'Vuonna 1904 vanha tori purettiin, jotta Kanon '
+            + 'natiivihallinto saisi siitä enemmän verotuloja. Uusi '
+            + 'tori avattiin 1909, ja siinä oli 755 savikojua sekä '
+            + 'moskeija ja oikeustalo; katuja levennettiin ja osa '
+            + 'karjakauppiaista siirrettiin muualle. Samaan aikaan '
+            + 'kaupan suunta kääntyi: Saharan sijasta katsottiin '
+            + 'etelään, naapureihin ja eurooppalaisiin. Vuonna 1969 '
+            + 'hallinto siirtyi kaupungin paikallishallinnolle, ja '
+            + 'sen jälkeen erikoistuneet torit ovat vieneet osan '
+            + 'kaupasta — Yan Kaba vihannekset ja Kantin Kwari '
+            + 'tekstiilit. Kurmi palvelee nykyään enimmäkseen omia '
+            + 'kaupunkilaisiaan.',
+          wiki: 'Kurmi Market',
+        },
+        {
+          otsikko: 'Marokkonahka, joka ei ollut Marokosta',
+          teksti: 'Marokkonahka on kasviparkittua nahkaa, joka '
+            + 'tunnetaan pehmeydestään, taipuisuudestaan ja siitä, '
+            + 'että se ottaa värin hyvin. Siitä tehtiin käsineitä, '
+            + 'kengänpäällisiä, lompakoita, matkalaukkujen vuorauksia '
+            + 'ja ennen kaikkea kirjojen kansia. Nimi tulee Marokon '
+            + 'Safin kaupungista, mutta nahka ei yleensä tullut '
+            + 'sieltä: osa parhaasta kirjansidontanahasta, yleensä '
+            + 'vuohennahkaa, hankittiin Pohjois-Nigeriasta ja '
+            + 'nimenomaan hausakaupungeista Kanosta, Katsinasta ja '
+            + 'Zazzausta. Ensimmäinen marokkonahka liitetään ennen '
+            + '1000-lukua eläneisiin maureihin. Parhaat laadut ovat '
+            + 'vuohennahkaa, mutta 1800-luvun lopulla tilalle '
+            + 'pantiin usein lammasta tai halkaistua vasikkaa.',
+          wiki: 'Morocco leather',
+        },
+        {
+          otsikko: 'Maapähkinäpyramidit ja rautatie',
+          teksti: 'Kanon taloushistoria alkaa keskiajalta, jolloin '
+            + 'kaupunki oli Saharan kauppareittien eteläisin piste ja '
+            + 'yhteydessä moniin Pohjois-Afrikan ja joihinkin '
+            + 'Etelä-Euroopan kaupunkeihin. Suunta muuttui 1911, kun '
+            + 'rautatie ylsi Kanoon ja liitti sen Atlantin kauppaan. '
+            + 'Kaupungista tuli vuotien, nahkojen, maapähkinöiden ja '
+            + 'puuvillan vienti- ja tuotantokeskus. Vuosina 1913–1914 '
+            + 'maapähkinäkauppa laajeni ja säkeistä ladotut '
+            + 'maapähkinäpyramidit yleistyivät — samana vuonna '
+            + 'kaupunkia koetteli kuivuus ja nälänhätä. Kanosta on '
+            + 'lähtöisin myös Afrikan rikkain mies Aliko Dangote, '
+            + 'jonka isoisoisä Alhassan Dantata oli 1900-luvun '
+            + 'puolivälissä Länsi-Afrikan rikkain mies.',
+          wiki: 'Kano (city)',
+        },
+        {
+          otsikko: 'Kieli, jolla kauppa käydään',
+          teksti: 'Kanon kauppa kulki kielellä, joka on jäänyt: hausa '
+            + 'on alueen lingua franca, ja sitä puhuu yli '
+            + 'seitsemänkymmentä miljoonaa ihmistä. Kaupunki oli '
+            + 'vuosisatoja ennen brittihallintoa vahvasti '
+            + 'kosmopoliittinen, ja siellä asui vakinaisesti arabeja, '
+            + 'tuaregeja ja kanureita — kaupunki kasvoi juuri siitä, '
+            + 'että vieras jäi asumaan. Kanon oma tavaramerkki oli '
+            + 'indigolla värjätty kangas, ja se kulki Tripoliin, '
+            + 'Tšad-järvelle ja Timbuktuun asti. Vuoden 1903 '
+            + 'brittiläinen lehtikirjoitus kutsui kaupunkia Nigerian '
+            + 'Manchesteriksi juuri tekstiilinvalmistuksen ja '
+            + 'indigovärjäyksen takia.',
+          wiki: 'Kano (city)',
+        },
+      ],
+    },
+  ],
 };

@@ -547,11 +547,42 @@ export const OMAT_ARTIKKELIT = {
       + 'Savesta rakennetut moskeijat rapataan yhä joka vuosi talkoilla '
       + 'uuteen kuosiin — samalla tavalla kuin vuosisatoja sitten.',
   },
+  /*
+   * KUMASIN INTRO KIRJOITETTIIN UUSIKSI 7.9.2026 (Opus, paketti O9)
+   * kaupunkilehden yhteydessä. Vanha versio oli neljä virkettä; uusi
+   * tekstilinjaus (Raamattu, omistaja 20.8.2026) vaatii etusivun
+   * leipätekstiltä 7–10 virkettä ja 1873-kehyksen. Lähteinä
+   * en-Wikipedian "Kumasi", "Asante Empire", "Golden Stool" ja
+   * "Anglo-Ashanti wars" 7.9.2026; sama aineisto kuin
+   * kaupunkilehdellä (js/packs/kulttuuri-kategoriat.js, avain
+   * kumasi, sekä docs/mantereet-tyoaineisto/faktapohja-kumasi.md).
+   * artikkeli-kenttä on ennallaan (Kapkaupunki-malli 6.9.2026).
+   */
   Kumasi: {
-    intro: 'Kumasi on Asanten kuningaskunnan vanha pääkaupunki Ghanan '
-      + 'vihreällä ylängöllä. Kultainen valtaistuin, kente-kankaat ja '
-      + 'Länsi-Afrikan suurimpiin kuuluva tori pitävät perinteet '
-      + 'elävinä.',
+    intro: 'Kumasi on Ghanan toiseksi suurin kaupunki ja Ashantin '
+      + 'alueen pääkaupunki, noin kahdensadan kilometrin päässä '
+      + 'Accrasta sademetsävyöhykkeellä. Nimi tulee twin sanasta '
+      + '**Kumase**, "kum-puun alla", ja se viittaa puuhun, jonka '
+      + 'ympärille kaupunki 1680-luvulla perustettiin. Perustaja oli '
+      + 'asantehene Osei Kofi Tutu I.'
+      + '\n\n'
+      + 'Kaupunki nousi merkittäväksi 1695, kun siitä tuli Asanten '
+      + 'pääkaupunki, ja vuonna 1701 asantit kukistivat Denkyiran '
+      + 'Feyiasen taistelussa ja avasivat tien rannikolle. Liiton '
+      + 'vertauskuva oli **kultainen jakkara Sika Dwa Kofi**, jonka '
+      + 'perimätiedon mukaan pappi Okomfo Anokye kutsui taivaalta; se '
+      + 'ei saa koskaan koskettaa maata. Kumasi on yhä asantehenen '
+      + 'istuinkaupunki, ja siksi sitä sanotaan myös nimellä '
+      + 'Oseikrom.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Kumasi oli vielä **oman '
+      + 'valtakuntansa pääkaupunki**: kolmas brittiläis-asantilainen '
+      + 'sota alkoi juuri silloin, ja britit saapuivat kaupunkiin '
+      + 'vasta 4. helmikuuta 1874. Brittihallintoon Kumasi siirtyi '
+      + '1896 ja Ashantin alueen pääkaupungiksi 1957. Kaupunkia '
+      + 'sanotaan puutarhakaupungiksi Maxwell Fryn vuoden 1945 '
+      + 'kaavan mukaan, ja sen Kejetian tori on Länsi-Afrikan suurin '
+      + 'yksittäinen tori.',
     artikkeli: 'Kumasi on Ghanan toiseksi suurin kaupunki ja Asanten '
       + 'kansan sydän sademetsävyöhykkeen ylängöllä. Kaupunkia '
       + 'kutsutaan puutarhakaupungiksi, ja sen keskustassa toimii '
@@ -1333,10 +1364,42 @@ export const OMAT_ARTIKKELIT = {
       + 'tammikuussa tekevät siitä paikan, jonne tullaan muistamaan — '
       + 'ja juhlimaan sitä, että elämä jatkuu.',
   },
+  /*
+   * KANON INTRO KIRJOITETTIIN UUSIKSI 7.9.2026 (Opus, paketti O9)
+   * kaupunkilehden yhteydessä. Vanha versio oli kolme virkettä; uusi
+   * tekstilinjaus (Raamattu, omistaja 20.8.2026) vaatii etusivun
+   * leipätekstiltä 7–10 virkettä ja 1873-kehyksen. Lähteinä
+   * en-Wikipedian "Kano (city)", "Kano Chronicle" ja "Kurmi Market"
+   * 7.9.2026; sama aineisto kuin kaupunkilehdellä
+   * (js/packs/kulttuuri-kategoriat.js, avain kano, sekä
+   * docs/mantereet-tyoaineisto/faktapohja-kano.md).
+   * artikkeli-kenttä on ennallaan (Kapkaupunki-malli 6.9.2026).
+   */
   Kano: {
-    intro: 'Kano on hausakaupunkien kuningatar: tuhatvuotinen '
-      + 'kauppakaupunki, jonka värjäyskuopat, muurit ja basaarit '
-      + 'ovat palvelleet karavaaneja vuosisatojen ajan.',
+    intro: 'Kano on Pohjois-Nigerian suurin kaupunki ja yksi '
+      + 'seitsemästä keskiaikaisesta hausakaupungista. Se tunnettiin '
+      + 'alun perin nimellä **Dala** kukkulan mukaan, jonka juurella '
+      + 'asui jo 600-luvulla rautaa työstänyt yhteisö. Islam saapui '
+      + 'kaupunkiin 1000-luvulla tai aiemmin Saharan-kaupan mukana, '
+      + 'ja sen myötä Kanosta tuli koko alueen kaupan hermokeskus.'
+      + '\n\n'
+      + 'Kaupungin ympärille rakennettiin savimuuri, jonka '
+      + 'perustuksen laski kuningas Gijimasu 1100-luvun alussa, ja '
+      + 'muurissa oli viisitoista porttia. Muhammad Rumfa '
+      + '(1463–1499) laajensi emiirin palatsia ja perusti Kurmin '
+      + 'torin, ja hänen aikanaan Kanon maine Saharan-kaupan '
+      + 'keskuksena oli keskiajalla korkeimmillaan. Heinrich Barth '
+      + 'kutsui kaupunkia 1851 **Keski-Afrikan suurimmaksi '
+      + 'kauppapaikaksi**.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Kano oli **Sokoton kalifaatin '
+      + 'suurin ja vaurain emiirikunta**; viimeinen sultaani oli '
+      + 'kukistettu 1805. Sama vuosi oli kaupungille raskas, sillä '
+      + '1873 on yksi sen nälkävuosista. Kudonta, värjäys ja '
+      + 'nahkatyö kulkivat kauppatavarana Marokkoon ja sieltä '
+      + 'Eurooppaan asti. Britannia liitti kaupungin imperiumiinsa '
+      + '1903, rautatie ylsi Kanoon 1911, ja kaupungin talous nojaa '
+      + 'yhä kauppaan.',
     artikkeli: 'Kano on Pohjois-Nigerian suurin kaupunki ja yksi '
       + 'Länsi-Afrikan vanhimmista: sen historia kauppapaikkana '
       + 'ulottuu yli tuhannen vuoden taakse. Kaupunki oli Saharan '
