@@ -1772,9 +1772,29 @@ export const OMAT_ARTIKKELIT = {
       + 'ihmisten mukana.',
   },
   Somalia: {
+    // Pidennetty maalehden (MAA_KATEGORIAT.SOM) yhteydessä 7.9.2026:
+    // maalehden etusivun maaosasto näyttää tämän intron sellaisenaan,
+    // joten sen pitää kantaa yksin. Sama malli kuin Egyptillä.
     intro: 'Somalia on Afrikan sarven kärki: runoilijoiden, '
       + 'paimentolaisten ja merenkulkijoiden maa, jonka rannikko on '
-      + 'mantereen pisin.',
+      + 'mantereen pisin. Sisämaa on kuivaa ylänköä ja pensasaroa, '
+      + 'jossa kamelipaimenet liikkuvat laumojensa perässä — noin '
+      + 'kahdeksan kymmenestä somalialaisesta elää karjatalouden '
+      + 'varassa, ja Somaliassa ja Keniassa lypsetään yhdessä kaksi '
+      + 'kolmasosaa maailman kamelinmaidosta. Rannikon satamat ovat '
+      + 'olleet kaupan solmuja tuhansia vuosia: Zeilasta ja '
+      + 'Mogadishusta vietiin suitsuketta, kultaa ja hienoa kangasta '
+      + 'Egyptiin ja Syyriaan asti, ja Ibn Battuta kuvasi 1331 '
+      + 'Mogadishun tavattoman suureksi kaupungiksi, jossa vieras '
+      + 'majoitettiin kotiin. Runous on kansallistaito: alkusointu '
+      + 'kulkee koko runon läpi, parhaat runoilijat tunnetaan nimeltä, '
+      + 'ja oma latinalainen kirjaimisto saatiin vasta vuonna 1972. '
+      + 'Aamu alkaa ohuella canjeero-leivällä ja kardemummalla '
+      + 'maustetulla teellä, ja lounaslautasella voi olla sekä riisiä '
+      + 'että italialaisten jättämää spagettia. Rannikon edustalla '
+      + 'kulkee Somalian virta, maailman ainoa suuri kumpuamisalue '
+      + 'valtameren länsireunalla, ja se kääntyy monsuunin mukana '
+      + 'kahdesti vuodessa.',
     artikkeli: 'Somalia kaartuu Afrikan sarvena Intian valtamereen — '
       + 'sen rannikko on Afrikan pisin. Sisämaa on kuivaa ylänköä, '
       + 'jossa kamelipaimenet vaeltavat laumojensa kanssa; '

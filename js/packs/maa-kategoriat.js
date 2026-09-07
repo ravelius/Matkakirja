@@ -50672,4 +50672,390 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SOMALIA (Opus 7.9.2026, maalehtierä). Kartan maastokohteet
+   * (maastokohteet-som.js) kattavat jo Shimbirisin, Adeninlahden,
+   * Intian valtameren, Jubban, Laas Geelin, Dhambalinin, Amudin,
+   * Zeilan, Bosason, Hobyon, Hamar Weynen ja Barawan,
+   * js/packs/skandaalit.js Berberan sopimukset ja dervissiliikkeen,
+   * js/packs/elaintakyt.js beiran ja africa-kulttuuri.js:n Ras Hafunin
+   * litteät nostot suitsukkeen, Puntin maan ja monsuunikaupan — lehti
+   * täydentää niitä eikä toista yhtäkään. Siksi suitsuke, Punt ja
+   * Ajuranin kastelujärjestelmä on jätetty tästä pois kokonaan.
+   *
+   * NYKYTILA EI OLE AIHE (M3:n Myanmar-linja, sama kuin Somalian
+   * karttanostoissa): historia päättyy tässä lehdessä 1900-luvun
+   * kulttuuriin, eikä nykypolitiikkaa, käynnissä olevia selkkauksia
+   * tai vuoden 1991 jälkeisiä tapahtumia kerrota. Siksi myös
+   * runoilija Hadraawi jäi pois — hänen elämäkertansa on suurelta
+   * osin poliittista vainoa — ja Waaberi-nosto kertoo ryhmän
+   * kiertueista eikä sen ajan hallinnosta.
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Sultanate of Mogadishu", "Somali literature", "Elmi Boodhari",
+   * "Somali language", "Music of Somalia", "Abdi Sinimo",
+   * "Abdullahi Qarshe", "Waaberi", "Somali cuisine", "Somali Current",
+   * "Camel milk", "Economy of Somalia", "Somali ostrich" ja
+   * "Somali wild ass". Faktapohja:
+   * docs/mantereet-tyoaineisto/faktapohja-somalia.md.
+   */
+  SOM: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Somalian rannikon satamat olivat rikkaita jo silloin, kun '
+          + 'Eurooppa piirsi Afrikan kartalle arvaamalla — ja yhden niistä '
+          + 'nimi jäi elämään aivan toisen saaren kylkeen.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jonka kangas tunnettiin Kairossa',
+          aika: '1331',
+          teksti: 'Marokkolainen matkaaja Ibn Battuta saapui Mogadishuun '
+              + 'vuonna 1331 ja kutsui sitä tavattoman suureksi '
+              + 'kaupungiksi, jossa oli rikkaita kauppiaita ja joka '
+              + 'tunnettiin hienosta kankaastaan. Kudonta oli oma '
+              + 'teollisuutensa: toob benadir -kangasta tehtiin varta '
+              + 'vasten Egyptin ja Syyrian markkinoille. Battuta pani '
+              + 'merkille myös tavan, jolla vieras otettiin vastaan — '
+              + 'kaupunkilaiset majoittivat matkalaiset koteihinsa, ja '
+              + 'raha jäi omaan kaupunkiin. Sulttaani Abu Bakr ibn Shaikh '
+              + 'Umar puhui hänen mukaansa yhtä sujuvasti Mogadishun '
+              + 'somalia kuin arabiaa.',
+          wiki: 'Sultanate of Mogadishu',
+        },
+        {
+          otsikko: 'Lähettiläs, joka purjehti Kiinaan',
+          aika: '1400-luku',
+          teksti: 'Mogadishun sulttaanikunta lähetti lähettiläitä Kiinaan, '
+              + 'ja niin syntyi ensimmäinen tunnettu afrikkalaisyhteisö '
+              + 'kiinalaisessa kaupungissa. Tunnetuin heistä oli Sa\'id '
+              + 'Mogadishulainen, ensimmäinen afrikkalainen, jonka jalka '
+              + 'tiedetään astuneen Kiinan maaperälle. Vastavuoroisesti '
+              + 'Ming-keisari Yongle lähetti Mogadishuun yhden Kiinan '
+              + 'historian suurimmista laivastoista amiraali Zheng Hen '
+              + 'johdolla. Laivat veivät mukanaan kultaa, suitsuketta ja '
+              + 'kangasta — ja niiden mukana Kiinaan päätyivät ensimmäiset '
+              + 'afrikkalaiset eläimet, virtahevot ja kirahvit.',
+          wiki: 'Sultanate of Mogadishu',
+        },
+        {
+          otsikko: 'Nimi, joka eksyi väärään saareen',
+          aika: '1298',
+          teksti: 'Madagaskarin nimelle on tunnettu selitys, joka alkaa '
+              + 'Somaliasta: se olisi väännös Mogadishusta. Marco Polo '
+              + 'kirjoitti muistelmissaan Socotran eteläpuolella olevasta '
+              + 'Madagaskarista sekoittaen kaksi paikkaa toisiinsa, ja '
+              + 'nimi levisi renessanssin karttoihin eurooppalaisten '
+              + 'purjehtijoiden mukana. Jerome Megiser kertoi 1609 '
+              + 'toisenkin version: Mogadishun ja Adalin hallitsijat '
+              + 'lähtivät suurella laivastolla itään, myrsky heitti heidät '
+              + 'Madagaskarin rannikolle, ja he pystyttivät saarelle '
+              + 'kahdeksan pylvästä, joihin oli kaiverrettu Magadoxo.',
+          wiki: 'Sultanate of Mogadishu',
+        },
+        {
+          otsikko: 'Kultasatama, jonka kala paljasti',
+          aika: '1180-luku',
+          teksti: 'Mogadishun kauppiaat perustivat Sofalan Mosambikin '
+              + 'rannikolle päästäkseen käsiksi Suuren Zimbabwen '
+              + 'kultakenttiin, ja he pitivät sataman salassa Kilwan '
+              + 'kilpailijoiltaan, jotka purjehtivat harvoin Cabo '
+              + 'Delgadon eteläpuolelle. Salaisuuden paljasti kalastaja: '
+              + 'iso kala tarttui koukkuun Kilwan edustalla ja raahasi '
+              + 'veneen niemen ympäri aina Sofalan matalikoille asti. '
+              + 'Mies palasi kertomaan näkemästään sulttaani Suleiman '
+              + 'Hassanille, joka lastasi laivan kankailla, purjehti '
+              + 'paikalle ja tarjosi paremman kaupan — mogadishulaiset '
+              + 'saivat väistyä.',
+          wiki: 'Sultanate of Mogadishu',
+        },
+      ],
+    },
+    {
+      id: 'runous',
+      nimi: 'Runous',
+      johdanto: 'Runo on Somaliassa uutinen, oikeudenkäynti ja rakkauskirje '
+          + 'yhtä aikaa — ja vuosisatojen ajan se piti osata ulkoa, koska '
+          + 'kieltä ei kirjoitettu.',
+      nostot: [
+        {
+          otsikko: 'Maa, jossa päälliköllä oli oma runoilija',
+          aika: '1850-luku',
+          teksti: 'Britti Richard Francis Burton kirjoitti Somalian '
+              + 'niemimaalta 1850-luvulla, että maa kuhisee runoilijoita: '
+              + 'jokaisella miehellä on kirjallisuudessa tunnustettu '
+              + 'paikkansa, ja jokaisella päälliköllä pitää olla ylistysruno, '
+              + 'jonka hänen väkensä laulaa. Kanadalainen kirjailija '
+              + 'Margaret Laurence antoi seudulle nimen runoilijoiden '
+              + 'kansa. Parhaina runoseppinä pidettiin eidagalleja: jos '
+              + 'sata heidän miestään kokoontuisi yhteen, kertoi Hersi '
+              + 'Jama Laurencelle, yhdeksänkymmentäviisi osaisi laulaa '
+              + 'oman gabay-runonsa — loput opettelisivat vielä.',
+          wiki: 'Somali literature',
+        },
+        {
+          otsikko: 'Runo, jossa jokainen säe alkaa samalla äänteellä',
+          teksti: 'Somalialaisessa runossa alkusointu ei ole koriste vaan '
+              + 'pakko: sama äänne toistuu säkeestä säkeeseen läpi koko '
+              + 'runon, samaan tapaan kuin germaanisessa alkusointuisessa '
+              + 'runoudessa. Runolajit erottaa toisistaan säkeen tavuluku. '
+              + '1800-luvun Ali Bu\'ul tunnetaan geeraar-runoistaan, joissa '
+              + 'ylistetään hevosta — hevonen oli paimentolaiselle sekä '
+              + 'kulkuneuvo että arvoesine. Yhdessä niistä alkusointu '
+              + 'kaikuu hevosen omaa nimeä Guulside, ja runoilijalta jäi '
+              + 'kieleen sana guulwade, voitonkantaja.',
+          wiki: 'Somali literature',
+        },
+        {
+          otsikko: 'Runoilija, joka mainitsi rakastettunsa nimeltä',
+          teksti: 'Elmi Boodhari poikkesi sukupolvensa runoilijoista: kun '
+              + 'muut sepittivät sodasta ja verikostosta, hän kirjoitti '
+              + 'kaikki runonsa yhdelle naiselle, Hodan Abdullelle, joka '
+              + 'oli naitettu häntä varakkaammalle miehelle. Rakkaudesta '
+              + 'sai laulaa, mutta rakastetun nimeäminen oli tapojen '
+              + 'vastaista, ja kiitoksen sijaan Boodhari sai osakseen '
+              + 'julkista pilkkaa. Hänen runonsa jäivät silti elämään '
+              + 'nimellä Qaraami, intohimo, ja Margaret Laurence esitteli '
+              + 'niitä englanniksi kokoelmassaan A Tree for Poverty.',
+          wiki: 'Elmi Boodhari',
+        },
+        {
+          otsikko: 'Kirjaimet, jotka keksittiin kolmesti',
+          aika: '1972',
+          teksti: 'Somalia kirjoitettiin vuosisatoja arabialaisin kirjaimin '
+              + 'wadaad-kirjoituksena, mutta se oli lähinnä uskonoppineiden '
+              + 'taito. 1900-luvulla kolme miestä keksi kielelle oman '
+              + 'kirjaimiston: Osman Yusuf Kenadid osmanjan, Abdurahman '
+              + 'Sheikh Nuur boraman ja Hussein Sheikh Ahmed Kaddare '
+              + 'kaddaren. Viralliseksi tuli lopulta vuonna 1972 '
+              + 'latinalainen aakkosto, jonka kehittivät muun muassa Musa '
+              + 'Haji Ismail Galal, B. W. Andrzejewski ja Shire Jama '
+              + 'Ahmed. Se käyttää kaikkia englannin kirjaimia paitsi '
+              + 'p:tä, v:tä ja z:aa.',
+          wiki: 'Somali language',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Somalialainen laulu rakentuu viidelle sävelelle, ja sen '
+          + 'moderni muoto syntyi rikkoutuneen kuorma-auton vierellä '
+          + 'aavikkotien varressa.',
+      nostot: [
+        {
+          otsikko: 'Balwo syntyi rikkoutuneen auton vierellä',
+          aika: '1943',
+          teksti: 'Abdi Sinimo ajoi kuorma-autoa Djiboutin satamasta '
+              + 'Dire Dawan kautta Addis Abebaan. Vuonna 1943 auto hajosi '
+              + 'kesken matkan, ja korjatessaan sitä hän hyräili runon, '
+              + 'josta tuli uuden laulutyylin, balwon, ensimmäinen. Se '
+              + 'löi läpi niin, että Sinimo jätti rattiin vuonna 1944 ja '
+              + 'perusti Boramaan yhtyeen, jonka nimeksi tuli sekin '
+              + 'Balwo. Tyylistä kehittyi heello, ja niistä kahdesta '
+              + 'kasvoi koko moderni somalimusiikki — Abdi Sinimo eli '
+              + 'vuosina 1920–1967.',
+          wiki: 'Abdi Sinimo',
+        },
+        {
+          otsikko: 'Mies, joka osti luutun Adenissa',
+          aika: '1957',
+          teksti: 'Abdullahi Qarshe syntyi 1924 somaliperheeseen '
+              + 'Tansanian Moshissa ja hänet lähetettiin vuonna 1931 '
+              + 'kouluun Adeniin. Siellä hän kuuli ensi kertaa radiota ja '
+              + 'elokuvateatterin intialaista ja arabialaista musiikkia — '
+              + 'ja osti luutun päättäneenä tehdä samanlaista musiikkia '
+              + 'somaliksi. Kaban eli oud tuli hänen mukanaan somalilaulun '
+              + 'säestäjäksi, ja Qarshea kutsutaan somalimusiikin isäksi. '
+              + 'Vuonna 1957 hän kirjoitti ja sävelsi laulun Qolobaa '
+              + 'Calankeed, josta tuli Somalian kansallislaulu.',
+          wiki: 'Abdullahi Qarshe',
+        },
+        {
+          otsikko: 'Viisi säveltä ja kolme tekijää',
+          teksti: 'Somalialainen laulu on pentatoninen: oktaavissa on viisi '
+              + 'säveltä seitsemän sijaan, ja juuri se tekee siitä '
+              + 'tunnistettavan, vaikka korva erehtyisi ensin luulemaan '
+              + 'sitä naapuriseutujen musiikiksi. Laulu on tavallisesti '
+              + 'kolmen työ: sanoittaja on lahamiste, säveltäjä abwaan ja '
+              + 'laulaja odka eli ääni; tanssi on ciyaar. Pääsoitin on '
+              + 'kaban-luuttu, jonka taustalla soivat pienet rummut ja '
+              + 'ruokohuilu. Raskasta lyömäsoitinten jyskettä tai '
+              + 'metallista helinää kuulee harvoin.',
+          wiki: 'Music of Somalia',
+        },
+        {
+          otsikko: 'Aamunkoitto kiersi maailmaa',
+          aika: '1969',
+          teksti: 'Radion taiteilijayhdistyksen jäsenet perustivat ryhmän, '
+              + 'joka toimi kansallisteatterin yhteydessä ja sai vuonna '
+              + '1969 nimen Waaberi, aamunkoitto. Se kiersi Egyptissä ja '
+              + 'Sudanissa ja esiintyi Kiinassa, ja se jatkoi yksityisenä '
+              + 'ryhmänä 1990-luvulle asti. Laulajista tunnetuin on Maryam '
+              + 'Mursal, ensimmäinen nainen, joka soitti somalialaista '
+              + 'jazzia. Vuonna 1997 Waaberi esiintyi Englannin '
+              + 'WOMAD-festivaalilla, kiersi seuraavana vuonna '
+              + 'Pohjois-Amerikan ja levytti egyptiläisen Hossam Ramzyn '
+              + 'kanssa.',
+          wiki: 'Waaberi',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Aamu alkaa ohuella hapanleivällä ja lasilla teetä, ja '
+          + 'lounaslautaselta löytyy usein sekä riisiä että italialaista '
+          + 'spagettia — ja banaani.',
+      nostot: [
+        {
+          otsikko: 'Canjeero, aamun ohut leipä',
+          teksti: 'Aamiainen eli quraac on somalialaisen päivän tärkein '
+              + 'ateria, ja sen keskellä on canjeero eli laxoox: ohut, '
+              + 'hapatettu letun kaltainen leipä. Sen päälle tulee hunajaa '
+              + 'ja voisulaa, oliivi- tai seesamiöljyä, ja seuraksi lasi '
+              + 'teetä. Lapsille leipä revitään paloiksi ja sekoitetaan '
+              + 'teehen ja öljyyn puuroksi, jota sanotaan macsaroksi. '
+              + 'Etiopian injeraan verrattuna canjeero on pienempi, ohuempi '
+              + 'ja makeampi. Lisukkeeksi tulee usein maksaa, vuohenlihaa '
+              + 'tai muqmadia, voisulassa keitettyjä kuivatun lihan paloja.',
+          wiki: 'Somali cuisine',
+        },
+        {
+          otsikko: 'Federaatio on riisiä ja spagettia samalla lautasella',
+          teksti: 'Spagetti eli baasto jäi Somaliaan italialaisilta, mutta '
+              + 'se syödään paksun lihamuhennoksen kanssa eikä '
+              + 'pastakastikkeessa. Ravintolassa voi tilata annoksen, jonka '
+              + 'nimi on federaatio: soikealle vadille tulee yhtä suuri '
+              + 'kasa riisiä ja yhtä suuri kasa spagettia vierekkäin, '
+              + 'päälle haudutettua lihaa ja kasviksia, viereen salaattia '
+              + 'ja halutessa banaani. Nimen arvellaan tulevan kahden '
+              + 'ruokalajin liitosta ja annoksen koosta. Kotona sitä tehdään '
+              + 'harvoin — kukapa keittäisi samalle aterialle sekä riisin '
+              + 'että pastan.',
+          wiki: 'Somali cuisine',
+        },
+        {
+          otsikko: 'Xalwo kuuluu häihin ja juhlapäivään',
+          tiedosto: 'Halwo 003.jpg',
+          selite: 'Xalwo tarjoillaan yhtenä möhkäleenä, josta leikataan '
+            + 'paloja; maapähkinät antavat sitkeään makeiseen purtavaa.',
+          lahde: 'Middayexpress, Wikimedia Commons (CC BY-SA 3.0)',
+          teksti: 'Xalwo on benadirilainen makeinen, jota tarjotaan '
+              + 'juhlissa: id-päivinä ja hääjuhlissa. Se tehdään sokerista, '
+              + 'maissitärkkelyksestä, kardemummasta, muskottipähkinästä ja '
+              + 'voisulasta, ja joukkoon lisätään toisinaan maapähkinöitä '
+              + 'antamaan purtavaa. Arki-illan versio on rooti iyo xalwo eli '
+              + 'leipäviipaleita ja hyytelömäistä makeista. Sukua on koko '
+              + 'Lähi-idän ja Intian halva-perheelle, mutta somalialainen '
+              + 'xalwo on omansa: sitkeä, kirkas ja kardemumman tuoksuinen.',
+          wiki: 'Somali cuisine',
+        },
+        {
+          otsikko: 'Teehen maito vasta lopuksi',
+          teksti: 'Aamun juoma on shaah tai qahwa, tee tai kahvi. Shaah '
+              + 'keitetään mustasta teestä ja maustetaan '
+              + 'inkiväärillä, kardemummalla ja kanelilla — mutta '
+              + 'mustapippuria siihen ei panna, toisin kuin moneen muuhun '
+              + 'maustettuun teehen. Maito lisätään vasta keittämisen '
+              + 'jälkeen, ei sen aikana, ja silloin juoma on shaah cadeeys. '
+              + 'Illalla ennen nukkumaanmenoa juodaan lasi kardemummalla '
+              + 'maustettua maitoa. Lounaan janojuomia ovat balbeelmo eli '
+              + 'greippi, raqey eli tamarindi ja isbarmuunto eli limonadi.',
+          wiki: 'Somali cuisine',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä somalialaisessa ravintolassa tarkoittaa federaatio?',
+        vaihtoehdot: [
+          'Kolmen mausteseoksen yhdistelmää',
+          'Häävieraille tarjottavaa makeista',
+          'Riisiä ja spagettia samalla vadilla',
+          'Kolmesta teelaadusta keitettyä teetä',
+        ],
+        oikea: 2,
+        fakta: 'Nimen arvellaan tulevan kahden ruokalajin liitosta ja '
+            + 'annoksen koosta.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Rannikon edustalla merivirta kääntyy kaksi kertaa vuodessa, '
+          + 'ja sisämaassa laiduntaa kamelilaumoja: Somaliassa ja Keniassa '
+          + 'lypsetään yhdessä kaksi kolmasosaa maailman kamelinmaidosta.',
+      nostot: [
+        {
+          otsikko: 'Virta, joka kääntyy monsuunin mukana',
+          teksti: 'Somalian virta on kylmä rajavirta, joka kulkee Somalian '
+              + 'ja Omanin rannikoita pitkin ja vastaa Intian valtameressä '
+              + 'sitä, mitä Golfvirta on Atlantilla. Se on maailman ainoa '
+              + 'suuri kumpuamisalue valtameren länsireunalla. Kesä-'
+              + 'syyskuussa lounaismonsuuni työntää rannikkovettä koilliseen, '
+              + 'ja tilalle nousee syvyydestä kylmää ja ravinteikasta vettä. '
+              + 'Samaan aikaan puhaltaa Somalian suihkuvirtaus, kapea matala '
+              + 'ilmavirta, joka viistää valtameren yli. Yhdessä ne '
+              + 'synnyttävät yhden koko maailmanmeren tuotteliaimmista '
+              + 'ekosysteemeistä.',
+          wiki: 'Somali Current',
+        },
+        {
+          otsikko: 'Kameli on pankki ja maitokannu',
+          tiedosto: 'Somaliland (6790596624) (2).jpg',
+          selite: 'Kameleita lepäämässä Berberan rannalla Adeninlahden '
+            + 'äärellä — sama eläin kantaa paimentolaisperheen '
+            + 'omaisuuden ja ruokkii sen.',
+          lahde: 'YoTuT, Wikimedia Commons (CC BY 2.0)',
+          teksti: 'Somalian keskuspankin arvion mukaan noin 80 prosenttia '
+              + 'maan väestöstä on paimentolaisia tai puolipaimentolaisia, '
+              + 'jotka pitävät vuohia, lampaita, kameleita ja nautoja ja '
+              + 'täydentävät tulojaan keräämällä hartseja. Kamelinmaitoa '
+              + 'tuotettiin maailmassa vuonna 2017 noin 2,85 miljoonaa '
+              + 'tonnia, ja siitä 64 prosenttia lypsettiin Somaliassa ja '
+              + 'Keniassa. Paimen voi elää pitkiä jaksoja pelkällä '
+              + 'kamelinmaidolla: siitä syntyy helposti jogurttia, mutta '
+              + 'voita tai juustoa siitä ei juuri saa.',
+          wiki: 'Camel milk',
+        },
+        {
+          otsikko: 'Strutsi, jonka kaula on sininen',
+          aika: '2014',
+          tiedosto: 'Struthio molybdophanes 443006323.jpg',
+          selite: 'Somalianstrutsin koiras Etiopiassa: kaulan siniharmaa '
+            + 'iho ja valkoisen kaularenkaan puuttuminen erottavat lajin '
+            + 'afrikanstrutsista.',
+          lahde: 'Tommy Andriollo, Wikimedia Commons (CC BY 4.0)',
+          teksti: 'Somalianstrutsi tunnettiin pitkään afrikanstrutsin '
+              + 'alalajina, mutta vuonna 2014 se tunnustettiin omaksi '
+              + 'lajikseen — nyt maailmassa on kaksi strutsilajia. Sen '
+              + 'kaulan ja reisien iho on sinertävän harmaa, ja koiraalla '
+              + 'se hehkuu soidinaikaan kirkkaan siniseksi; kaulassa ei ole '
+              + 'valkoista rengasta niin kuin sukulaisellaan. '
+              + 'Perimäntutkimus kertoo lajien eronneen toisistaan 3,6–4,1 '
+              + 'miljoonaa vuotta sitten, ja Itä-Afrikan hautavajoama on '
+              + 'pitänyt ne erillään. Somalit ovat kesyttäneet strutseja '
+              + 'osittain jo kauan.',
+          wiki: 'Somali ostrich',
+        },
+        {
+          otsikko: 'Villiaasi, jonka jaloissa on seepran raidat',
+          tiedosto: 'Equus africanus somaliensis - Réserve africaine de Sigean 01.jpg',
+          selite: 'Somalianvilliaasin jalkojen raidat näkyvät parhaiten '
+            + 'sivusta; kuvan yksilö on Sigeanin eläinpuistossa Ranskassa, '
+            + 'jossa lajia on kasvatettu vuodesta 1987.',
+          lahde: 'H. Zell, Wikimedia Commons (CC BY-SA 3.0)',
+          teksti: 'Somalianvilliaasi on afrikanvilliaasin alalaji, ja sen '
+              + 'jalat ovat raidalliset kuin seepralla. Luonnossa niitä '
+              + 'arvioidaan olevan enää noin 600, ja laji on luokiteltu '
+              + 'äärimmäisen uhanalaiseksi. Aasit elävät niukalla maalla '
+              + 'yksin tai pieninä tammalaumoina ja kokoontuvat suuremmiksi '
+              + 'joukoiksi vain siellä, missä on satanut; ori voi pitää jopa '
+              + 'kahdenkymmenen neliökilometrin reviiriä ja merkitä sen '
+              + 'rajat lantakasoin. Roomalaisajoista asti Italian '
+              + 'kotiaasien on katsottu polveutuvan juuri tästä aasista.',
+          wiki: 'Somali wild ass',
+        },
+      ],
+    },
+  ],
 };

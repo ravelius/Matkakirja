@@ -518,6 +518,30 @@ export const UUTISLAHTEET = {
     syote: 'https://www.radiotamazuj.org/en/feed',
   },
   /*
+   * Shabelle Media Network on mogadishulainen mediatalo, joka
+   * julkaisee somaliksi. Testattu 7.9.2026: syötteessä kymmenen
+   * juttua, ja artikkelisivun <article>-lohkossa on neljä yli 60
+   * merkin kappaletta sekä og:image. Leipäteksti alkaa heti jutusta,
+   * ilman jakopalkkia. MyMemory kääntää somalista suomeen (so|fi
+   * kokeiltu samana päivänä).
+   *
+   * Testattu ja hylätty: Caasimada Online (www.caasimada.net/feed/,
+   * kymmenen juttua) läpäisi molemmat testit, mutta sen
+   * <article>-lohkon ensimmäinen pitkä kappale on jakopalkin ja
+   * kuvatekstin sekasotku, joka päätyisi popupin alkuun; Goobjoog
+   * (goobjoog.com/feed/) ja Puntland Post (puntlandpost.net/feed/)
+   * jäsentyvät hyvin mutta niiltä puuttuu og:image; Hiiraan Online
+   * (rss/news.aspx) vastaa 404:llä, Garowe Online 500:lla ja
+   * caasimada.net ilman www:tä 301:llä (worker ei seuraa
+   * uudelleenohjauksia); Radio Muqdisho, SONNA ja Somaliland Standard
+   * ohjaavat syöteosoitteensa muualle.
+   */
+  SOM: {
+    nimi: 'Shabelle Media',
+    kieli: 'so',
+    syote: 'https://shabellemedia.com/feed/',
+  },
+  /*
    * ETIOPIA (ETH) JÄI ILMAN LÄHDETTÄ (Opus 6.9.2026) — Addis Abeban ja
    * Lalibelan lehdissä ei siis näy uutisosiota, eikä mikään mene
    * rikki. Sama tilanne kuin Kuuballa ja Fidžillä.

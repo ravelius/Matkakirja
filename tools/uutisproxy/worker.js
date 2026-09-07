@@ -180,6 +180,9 @@ const SALLITUT = [
   // samalla isäntänimellä. Syöte on BLOX-julkaisujärjestelmän
   // hakuosoite (search/?f=rss), koska /rss/ ja /feed/ vastaavat 404:llä.
   'https://www.dailypost.vu/',
+  // Somalian uutislähde (maalehti SOM, 7.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä, ilman www-etuliitettä.
+  'https://shabellemedia.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

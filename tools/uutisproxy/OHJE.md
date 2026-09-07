@@ -286,6 +286,16 @@
 > js/packs/uutislahteet.js:n VUT-kommentissa. Julkaisu Git-
 > integraatiolla mainista.
 >
+> **Päivitys 7.9.2026 (Somalia):** sallittuihin lisättiin
+> shabellemedia.com (maalehti SOM, testattu 7.9.2026: somalinkielisessä
+> syötteessä kymmenen juttua, ja artikkelisivun `<article>`-lohkossa on
+> neljä yli 60 merkin kappaletta sekä `og:image`). Osoite on ilman
+> www-etuliitettä, koska worker ei seuraa uudelleenohjauksia. Caasimada
+> Online läpäisi testit mutta hylättiin, koska sen jutun ensimmäiseksi
+> kappaleeksi jäsentyy jakopalkki; Goobjoogilta ja Puntland Postilta
+> puuttuu `og:image`. Perustelut ovat js/packs/uutislahteet.js:n
+> SOM-kommentissa. Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,
