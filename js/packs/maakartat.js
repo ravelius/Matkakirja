@@ -14689,6 +14689,116 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Biete Amanuel', lat: 12.03182, lon: 39.04556 },
     ],
   },
+  /*
+   * TOWNSVILLEN KESKUSTA (Opus 7.9.2026, parvierä). Ruutu on noin
+   * 2,0 × 1,7 kilometriä: luoteessa Queens Gardens Castle Hillin
+   * juurella, pohjoisessa The Strandin uimala, keskellä Melton Hill ja
+   * Flinders Street, kaakossa Ross Creekin mutka. Cleveland Bay tulee
+   * kuvan koilliskulmaan.
+   *
+   * MERI-LIPPU PÄÄLLÄ, koska sekä lahti että Ross Creek ovat ruudussa.
+   *
+   * KAKSI KOHDETTA ON 201 METRIN PÄÄSSÄ TOISISTAAN (tullitalo ja
+   * museo), ja se on tietoinen valinta: molemmat seisovat saman Ross
+   * Creekin rannan päissä ja kummallakin on oma tarina. Kaikki muut
+   * 27 väliä ovat yli 300 metriä; suurin on 1 357 m.
+   *
+   * FLINDERS STREETIN TIHEYS RATKAISTIIN VALITSEMALLA YKSI.
+   * Perc Tucker Regional Gallery on 60 m postitalosta, Queensland
+   * National Bank 107 m ja Buchanan's Hotel alle 140 m — kaikki
+   * jäivät pois, koska numeroympyrät olisivat peittäneet toisensa.
+   * Postitalo valittiin, koska sen kellotornilla on oma tarina.
+   * Victoria Bridge on tasan 200 m postitalosta ja jäi siksi pois.
+   * Sacred Heart -katedraali jätettiin pois, jotta kartalla ei ole
+   * kahta katedraalia.
+   *
+   * CASTLE HILL ON RUUDUSSA MUTTA EI NUMEROITU: kukkula on lehden
+   * teemasivun nosto, eikä kohdekartta toista lehden juttuja
+   * (New Yorkin sääntö). Sama koskee Magnetic Islandia, joka on
+   * kahdeksan kilometrin päässä eikä mahdu ruutuun lainkaan.
+   *
+   * Koordinaatit en-Wikipedian list=geosearch-rajapinnasta 7.9.2026;
+   * etäisyydet laskettu haversinilla
+   * (docs/mantereet-tyoaineisto/tarkistus-townsville.md).
+   */
+  townsville: {
+    polku: 'assets/kartat/townsville-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -19.2505, etela: -19.266, lansi: 146.807, ita: 146.826 },
+    esittely: 'Townsvillen keskusta on Ross Creekin mutkan ja Castle '
+      + 'Hillin väliin puristettu ruutukaava, ja sen halki kulkee '
+      + 'Flinders Street, kaupungin vanhin katu. Pohjoisessa on The '
+      + 'Strandin ranta, koillisessa Cleveland Bay. Kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       */
+      { nimi: 'Queens Gardens', lat: -19.2531, lon: 146.81 },
+      { nimi: 'Tobruk Memorial Baths', lat: -19.2533, lon: 146.8198 },
+      { nimi: 'Vanha tullitalo', lat: -19.2556, lon: 146.8219 },
+      { nimi: 'St James -katedraali', lat: -19.2555, lon: 146.8167 },
+      { nimi: 'Tropiikin museo', lat: -19.2574, lon: 146.8221 },
+      { nimi: 'Vanha postitalo', lat: -19.2586, lon: 146.8183 },
+      { nimi: 'School of Arts', lat: -19.2603, lon: 146.8137 },
+      { nimi: 'Great Northern Hotel', lat: -19.263, lon: 146.8147 },
+    ],
+  },
+  /*
+   * IQUITOSIN MONUMENTTIVYÖHYKE (Opus 7.9.2026, parvierä). Ruutu on
+   * noin 1,44 × 1,44 kilometriä: pohjoisessa Casa Morey ja
+   * yliopistokortteli, keskellä Plaza de Armas ja katedraali, idässä
+   * Malecón Tarapacá Itaya-joen yllä, etelässä Plaza 28 de Julio.
+   *
+   * MERI-LIPPU PÄÄLLÄ, koska Itaya-joki kulkee ruudun itälaidassa.
+   *
+   * MONUMENTTIKORTTELIN TIHEYS RATKAISTIIN VALITSEMALLA YKSI.
+   * Plaza de Armas on 67 m katedraalista ja Obelisco de los Héroes
+   * 12 m aukiosta — kaikki kolme ovat sama paikka, ja kartalle
+   * valittiin katedraali, koska sillä on oma rakennushistoria. Casa
+   * Pinasco on 125 m katedraalista, Hotel de Turistas 80 m Hotel
+   * Palacesta, Museo de Culturas Indígenas Amazónicas 139 m
+   * Palacesta, Biblioteca Amazónica 121 m ja Casa Cohen 102 m
+   * Malecónista. Kaikki kuusi jäivät pois liian lähelle osuvina.
+   * Pienin käytetty väli on 210 m (katedraali—Hotel Palace).
+   *
+   * CASA DE FIERRO EI OLE KARTALLA KAHDESTA SYYSTÄ: se on lehden
+   * noston aihe (New Yorkin sääntö) ja lisäksi vain 126 metriä
+   * katedraalista. Sen sijaan kartalla on Mercado Central, joka on
+   * saman rautatalon toinen puolikas — mutta jutussa kerrotaan torin
+   * oma tarina eikä rautatalon lähderistiriitaa.
+   *
+   * BELÉN JÄÄ ULKOPUOLELLE (1,4 km etelään): se on lehden teemasivun
+   * noston aihe, ja mukaan otettuna puolet ruudusta olisi tulvamaata
+   * ilman katuverkkoa.
+   *
+   * Koordinaatit es-Wikipedian list=geosearch-rajapinnasta 7.9.2026;
+   * etäisyydet laskettu haversinilla
+   * (docs/mantereet-tyoaineisto/tarkistus-iquitos.md).
+   */
+  iquitos: {
+    polku: 'assets/kartat/iquitos-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -3.744, etela: -3.757, lansi: -73.253, ita: -73.238 },
+    esittely: 'Iquitosin monumenttivyöhyke on kymmenkunta korttelia '
+      + 'Plaza de Armasin ympärillä, ja se laskeutuu idässä Malecón '
+      + 'Tarapacálle Itaya-joen rantatörmälle. Kumikauden talot ovat '
+      + 'tässä ruudussa lähes kaikki. Kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       */
+      { nimi: 'Casa Morey', lat: -3.7468295, lon: -73.2420001 },
+      { nimi: 'Kuvataidekoulu', lat: -3.7477222, lon: -73.2510278 },
+      { nimi: 'Mercado Central', lat: -3.7488446, lon: -73.248452 },
+      { nimi: 'Iquitosin katedraali', lat: -3.749266, lon: -73.244968 },
+      { nimi: 'Hotel Palace', lat: -3.750688, lon: -73.243716 },
+      { nimi: 'Malecón Tarapacá', lat: -3.7525346, lon: -73.2464037 },
+      { nimi: 'Casa Strassberger', lat: -3.7528833, lon: -73.2444139 },
+      { nimi: 'Plaza 28 de Julio', lat: -3.7545969, lon: -73.2493161 },
+    ],
+  },
 };
 
 /*

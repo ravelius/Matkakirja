@@ -5755,22 +5755,31 @@ const KAUPUNGIT = {
   },
   iquitos: {
     /*
-     * IQUITOSIN MONUMENTTIVYOHYKE (7.9.2026). Ruutu on noin 1,44 x
+     * IQUITOSIN MONUMENTTIVYOHYKE (7.9.2026). Ruutu on noin 1,67 x
      * 1,44 kilometria: pohjoisessa Casa Morey ja yliopistokortteli,
      * keskella Plaza de Armas ja katedraali, idassa Malecon Tarapaca
      * Itaya-joen yllä, etelassa Plaza 28 de Julio.
      *
      * MERI-LIPPU PAALLA, koska Itaya-joki kulkee ruudun italaidassa.
      * Ilman lippua joki jaisi paperin variseksi, ja juuri se joki on
-     * syy siihen, etta kaupunki on olemassa.
+     * syy siihen, etta kaupunki on olemassa. ITAREUNA VIETIIN
+     * PIDEMMALLE ITAAN (-73,2380) kuin kohteet vaatisivat, koska
+     * Itayan uoma on Maleconin alapuolisen tulvatasangon takana:
+     * tiukempi rajaus jatti joesta nakyviin vain kielekkeen.
+     *
+     * jalkakaydat: true, koska ilman lippua kuva on pelkka ruudukko —
+     * aukioiden (Plaza de Armas, Plaza 28 de Julio) ja Maleconin omat
+     * kaytavat ovat OSM:ssa jalankulkuteita, ja juuri ne tekevat
+     * kartasta Iquitosin nakoisen.
      *
      * BELEN JAA ULKOPUOLELLE (1,4 km etelaan) ja se on tietoinen
      * valinta kahdesta syysta: kaupunginosa on lehden teemasivun
      * noston aihe, ja sen mukaan ottaminen tekisi ruudusta puolet
      * tulvamaata ilman katuverkkoa.
      */
-    rajat: { pohjoinen: -3.7440, etela: -3.7570, lansi: -73.2530, ita: -73.2400 },
+    rajat: { pohjoinen: -3.7440, etela: -3.7570, lansi: -73.2530, ita: -73.2380 },
     meri: true,
+    jalkakaydat: true,
   },
 };
 

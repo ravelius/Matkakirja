@@ -59330,4 +59330,467 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TOWNSVILLE (Opus 7.9.2026, Fablen parvi). Kahdeksan kohdetta
+   * kohdekartalta (js/packs/maakartat.js, KAUPUNKIKARTAT.townsville).
+   *
+   * LÄHDEKIELI. Kaikilla kahdeksalla on oma englanninkielinen
+   * artikkeli, useimmilla Queensland Heritage Register -kuvauksen
+   * pohjalta, joten toista kieliversiota ei tarvittu. Luetut
+   * artikkelit raakatekstinä 7.9.2026: "Queens Gardens, Townsville",
+   * "Tobruk Memorial Baths", "Townsville Customs House", "St James
+   * Cathedral, Townsville", "Queensland Museum Tropics", "SS
+   * Yongala", "Townsville Post Office", "Townsville School of Arts",
+   * "Great Northern Hotel, Townsville", "The Strand, Townsville",
+   * "Magnetic Island".
+   *
+   * YKSIKÄÄN JUTTU EI TOISTA LEHDEN NOSTOJA. Lehti kertoo kaupungin
+   * perustamisesta, James Morrillista, vuodesta 1873, Japanin
+   * konsulaatista, Eddie Mabosta, kuivasta tropiikista, Nooan yöstä,
+   * Castle Hillistä ja Magnetic Islandista; nämä kahdeksan kertovat
+   * kukin oman rakennuksensa tai puistonsa historian.
+   *
+   * KOLME TARKISTUKSEN RATKAISUA NÄKYY TÄSSÄ:
+   *  - Queens Gardensin lajilista on kohteen oman artikkelin
+   *    (kaakao, öljypalmu, mango), ei pääartikkelin;
+   *  - vanhan rautatieaseman vuosilukua ei anneta (1913 vai 1914);
+   *  - postitalon vaiheiden vuosia ei sidota toisiinsa, koska
+   *    lähdelause on kaksitulkintainen.
+   */
+  townsville: {
+    'Queens Gardens': {
+      aika: '1870',
+      teksti: 'Kesäkuun 14. päivänä 1870 julistettiin sadan eekkerin '
+          + 'kasvitieteellinen reservi, jollaisia perustettiin '
+          + 'siihen aikaan lähes joka kaupunkiin Queenslandissa. '
+          + 'Nimi Queens Park viittasi Viktoriaan, ja tarkoitus oli '
+          + 'yhtä lailla tieteellinen kuin taloudellinen.'
+        + '\n\n'
+        + 'Puutarha oli akklimatisaatiopuutarha: siellä kokeiltiin, '
+          + 'mitkä kaupalliset kasvit kestäisivät tropiikin. '
+          + 'Ensimmäisiä lajeja olivat kaakao, afrikkalainen '
+          + 'öljypalmu ja mango. Osa silloin istutetuista '
+          + 'hoop-männyistä ja mustapavuista kasvaa yhä, ja lähteen '
+          + 'mukaan ne saattavat olla Australian vanhimpia viljeltyjä '
+          + 'yksilöitä.'
+        + '\n\n'
+        + 'Vuosisadan lopulla puutarha alkoi muuttua muodolliseksi '
+          + 'virkistyspuistoksi. Toisen maailmansodan aikana se oli '
+          + 'sadantuhannen amerikkalaissotilaan tukikohta, ja 1959 '
+          + 'puistonhoidon esimies Alan Wilson suunnitteli sen '
+          + 'uudelleen. Kaupungin kasvu söi loput: nykyinen puisto on '
+          + 'kymmenesosa alkuperäisestä.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'Tobruk Memorial Baths': {
+      aika: '1941—1950',
+      teksti: 'Uimala aloitettiin loppuvuodesta 1941 kaupungin omana '
+          + 'hankkeena: Townsville halusi olympiamittaisen altaan. '
+          + 'Ajoitus oli hankala. Yleisö vastusti rahankäyttöä kesken '
+          + 'sodan, ja osavaltion hallitukselle tehtiin vetoomus '
+          + 'työn pysäyttämiseksi — mutta kaupunki oli noudattanut '
+          + 'sota-ajan rakennusmääräyksiä, ja vetoomus hylättiin.'
+        + '\n\n'
+        + 'Joulukuussa 1941, keskellä kiistaa, valtuusto päätti '
+          + 'nimetä uimalan Tobrukin piirityksessä taistelleiden '
+          + 'australialaisten muistoksi. Työ keskeytyi kuitenkin, kun '
+          + 'kaupungista tuli 1942 Tyynenmeren tukikohta, ja jatkui '
+          + 'vasta rauhan tultua työvoima- ja materiaalipulassa. '
+          + 'Allas avattiin yleisölle 14. lokakuuta 1950 ja vihittiin '
+          + 'virallisesti 26. marraskuuta 1951.'
+        + '\n\n'
+        + 'Kahdeksanratainen viidenkymmenen metrin allas osoittautui '
+          + 'poikkeukselliseksi harjoituspaikaksi: Australiassa ei '
+          + 'ollut sisäuimahalleja, ja lämpimässä ilmastossa '
+          + 'talviharjoittelu onnistui. Vuosien 1956 ja 1960 '
+          + 'olympiajoukkueet valmistautuivat täällä, ja yhtenä yönä '
+          + '1956 altaassa uitiin kuusi maailmanennätystä ja '
+          + 'kolmetoista Australian ennätystä.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'Vanha tullitalo': {
+      aika: '1900—1902',
+      teksti: 'Tämä on Townsvillen neljäs tullirakennus. Cleveland '
+          + 'Bay julistettiin tuontisatamaksi 17. kesäkuuta 1865, ja '
+          + 'ensimmäiset tullitilat olivat kolmihuoneinen puutalo, '
+          + 'jota laajennettiin pala kerrallaan. Vuoteen 1898 mennessä '
+          + 'tullilaitos oli kasvanut ulos jo kolmannesta talostaan.'
+        + '\n\n'
+        + 'Ajoitus ei ollut sattumaa. Queensland rakensi juuri silloin '
+          + 'uusia tullitaloja Rockhamptoniin, Bundabergiin ja '
+          + 'Mackayhin — lahjaksi tulevalle liittovaltiolle, joka '
+          + 'ottaisi ne haltuunsa. Piirustukset teki 1899 '
+          + 'lontoolaissyntyinen arkkitehti George Payne, joka oli '
+          + 'tullut osavaltion rakennusvirastoon 1890-luvun laman '
+          + 'ajaksi. Rakennus valmistui myöhäissyksyllä 1902 hintaan '
+          + '26 642 puntaa.'
+        + '\n\n'
+        + 'Payne suunnitteli tropiikkia varten: kolonnadillinen '
+          + 'romaaninen talo, korkeat katot ja leveät varjostavat '
+          + 'kuistit, keskellä brittiläisen tavan mukainen korkea '
+          + 'long room yleisöä varten. Jalusta on graniittia Magnetic '
+          + 'Islandin Cockle Baystä. Hirmumyrsky Leonta pudotti '
+          + 'maaliskuussa 1903 kaksi savupiippua katon läpi, ja '
+          + 'toisessa maailmansodassa kellari muutettiin '
+          + 'pommisuojaksi.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'St James -katedraali': {
+      aika: '1887—1960',
+      teksti: 'Melton Hillin päällä seisova punatiilinen katedraali '
+          + 'rakennettiin kahdessa erässä, ja niiden väliin jäi '
+          + 'kuusikymmentäseitsemän vuotta. Pohjois-Queenslandin '
+          + 'anglikaaninen hiippakunta perustettiin 1878 ja sen '
+          + 'ensimmäinen piispa George Henry Stanton saarnasi '
+          + 'Townsvillessä 21. toukokuuta 1879 — sitä ennen hän oli '
+          + 'kiertänyt Englannissa keräämässä rahaa ja pappeja.'
+        + '\n\n'
+        + 'Suunnitelman teki sydneyläinen Arthur Blacket, ja '
+          + 'peruskivi laskettiin Viktorian kultaisena riemuvuonna '
+          + '27. kesäkuuta 1887. Sitten raha loppui. Hiekkakivi '
+          + 'vaihdettiin punatiileen, marmori ja graniitti betoniin, '
+          + 'tornit jätettiin pois ja Blacketin toimeksianto '
+          + 'purettiin 1890; työn vei loppuun townsvilleläinen Walter '
+          + 'Morris Eyre.'
+        + '\n\n'
+        + 'Lopulta päätettiin rakentaa vain puolet. Kuori, kuoriosa, '
+          + 'ristivarret ja osa pääkäytävästä vihittiin väliaikaisen '
+          + 'katon alla 27. lokakuuta 1892. Toinen puoli rakennettiin '
+          + 'vasta 1959—1960. Hirmumyrsky Sigma pyyhkäisi Townsvillen '
+          + 'yli 26. tammikuuta 1896, mutta katedraali selvisi '
+          + 'siitä lähes vahingoitta.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'Tropiikin museo': {
+      aika: '1987—',
+      teksti: 'Museo avattiin 1987 Ross Creekin varrelle nimellä '
+          + 'Queensland Museum, North Queensland Branch, ja sai 1990 '
+          + 'nimen Museum of Tropical Queensland; nykyään se on '
+          + 'Queensland Museum Tropics. Uusi, varta vasten rakennettu '
+          + 'talo nousi vanhan paikalle, koska yhden hylyn löydöille '
+          + 'tarvittiin tila.'
+        + '\n\n'
+        + 'Se hylky on HMS Pandora, laiva, joka lähetettiin '
+          + 'nappaamaan Bountyn kapinalliset ja upposi itse '
+          + 'paluumatkalla. Museo hoitaa myös toista hylkypaikkaa: '
+          + 'SS Yongalaa, joka lähti Mackaysta 23. maaliskuuta 1911 '
+          + 'kello 13.40 kohti Townsvilleä. Pian lähdön jälkeen '
+          + 'merkinantoasema sai sähkeen hirmumyrskystä ja nosti '
+          + 'liput, mutta Yongala ei nähnyt niitä — ja sille '
+          + 'Englannista lähetetty langattoman lennättimen laitteisto '
+          + 'ei ollut vielä ehtinyt Australiaan.'
+        + '\n\n'
+        + 'Laiva upposi yöllä, eikä kukaan laivalla olleista 122:sta '
+          + 'selvinnyt. Hylkyä etsittiin vuosikymmeniä. Vuonna 1958 '
+          + 'paikallinen kalastaja Bill Kirkpatrick nosti pohjasta '
+          + 'kassakaapin, jossa oli vain mustaa liejua — mutta '
+          + 'sarjanumerosta erottui osa: 9825W. Kolme vuotta '
+          + 'myöhemmin Chubb tunnisti Englannissa numeron '
+          + 'kassakaapiksi, jonka se toimitti Yongalan purserin '
+          + 'hyttiin 1903.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'Vanha postitalo': {
+      aika: '1886—1964',
+      teksti: 'Flinders Mallin itäpäässä seisoo sementtirapattu '
+          + 'tiilitalo, jossa on renessanssin piirteitä: alakerrassa '
+          + 'varjostava pylväskäytävä ja yläkerran julkisivulla '
+          + 'kuisti. Suunnittelija oli John James Clark ja rakentaja '
+          + 'Dennis Kellcher. Talo tehtiin vaiheittain 1880-luvulla: '
+          + 'yksi vaihe oli kaksikerroksinen lennätinkonttori, toinen '
+          + 'postikonttori ja postimestarin asunto, ja laajennuksia '
+          + 'tehtiin vielä 1888.'
+        + '\n\n'
+        + 'Kellotornin rakensi Henry L Davis & Co. Kellopeli tilattiin '
+          + 'Englannista 1889 ja se oli asennettu 1891. Torni näkyi '
+          + 'Ross Creekin yli, ja postitalon portailta pidettiin '
+          + 'usein poliittisia puheita saippualaatikon päältä.'
+        + '\n\n'
+        + 'Vuonna 1942 torni purettiin ja koneisto pantiin '
+          + 'varastoon — Darwinin pommituksen jälkeen korkea '
+          + 'maamerkki oli enemmän riski kuin ylpeydenaihe. Uusi, '
+          + 'huomattavasti muutettu torni pystytettiin 1963—64 '
+          + 'hintaan 42 135 puntaa, ja samalla sisätilat '
+          + 'nykyaikaistettiin. Vuodesta 2001 talossa on toiminut '
+          + 'panimo.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'School of Arts': {
+      aika: '1866—1938',
+      teksti: 'Ensimmäinen School of Arts -komitea kokoontui '
+          + 'Townsvillessä 1866, ja siinä istuivat kaupungin '
+          + 'perustajat Robert Towns ja John Melton Black. '
+          + 'Schools of Arts oli brittiläinen keksintö: luentoja, '
+          + 'keskusteluja ja lainakirjasto niille, joilla ei ollut '
+          + 'varaa ostaa kirjoja. Townsvillen kokoelma alkoi '
+          + 'kolmestakymmenestä niteestä vuokramökissä.'
+        + '\n\n'
+        + 'Kun liike-elämä siirtyi länteen, Melton Hillin talo jäi '
+          + 'syrjään ja myytiin osavaltiolle oikeustaloksi. Uuden '
+          + 'talon suunnittelukilpailun voittivat townsvilleläiset '
+          + 'Eyre ja Munro, rakentajana oli James Smith, ja talo '
+          + 'avattiin toukokuussa 1891 debytanttitanssiaisilla. '
+          + 'Alakerrassa oli luokkia, yläkerrassa kirjasto ja '
+          + 'vieressä kuudensadan hengen teatteri Her Majesty\'s, '
+          + 'jossa Nellie Melba lauloi 1909 ja jossa nähtiin 1907 '
+          + 'Townsvillen ensimmäinen aboriginaalien näyttämöesitys.'
+        + '\n\n'
+        + 'Lamavuosina valtion tuet loppuivat ja Schools of Arts '
+          + 'kuihtui kaikkialla. Townsvillessä säätiön hoitajat '
+          + 'erosivat 1938 ja luovuttivat omaisuuden kaupungille — '
+          + 'ja artikkelin mukaan siitä syntyi Australian ensimmäinen '
+          + 'ilmainen lainakirjasto. Nykyään talossa toimii '
+          + 'tanssiteatteri Dancenorth.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'Great Northern Hotel': {
+      aika: '1900—1901',
+      teksti: 'Hotelli rakennettiin sen varaan, että rautatieasema '
+          + 'siirtyisi. Kun osavaltion hallitus ilmoitti 1900 uudesta '
+          + 'päätepysäkistä Blackwood Streetin varteen Ross Creekin '
+          + 'viereen, saman risteyksen kahdelle kulmalle jätettiin '
+          + 'heti kesäkuussa hakemukset ensiluokkaisesta hotellista. '
+          + 'Perustelu oli molemmissa sama: 1880-luvun buumihotellit '
+          + 'eivät enää vastanneet vuosisadan vaihteen matkustajan '
+          + 'vaatimuksia.'
+        + '\n\n'
+        + 'Vain toinen hanke toteutui. Great Northern nousi '
+          + 'townsvilleläisen puutavarafirman Wilson Hart & Companyn '
+          + 'tontille arkkitehtiveljesten Tunbridge ja Tunbridge '
+          + 'piirustusten mukaan: kaksikerroksinen tiili- ja '
+          + 'puurakennus, 36 makuuhuonetta, hinta-arvio 8 000—9 000 '
+          + 'puntaa. Nimi tuli Great Northern Railwaystä, jonka uutta '
+          + 'päätepysäkkiä se oli lähinnä.'
+        + '\n\n'
+        + 'Asema kuitenkin viivästyi yli vuosikymmenen — sen '
+          + 'valmistumisvuodesta lähteet eivät ole yksimielisiä — '
+          + 'eikä se haitannut hotellia lainkaan. Great Northern oli '
+          + 'suosittu heti avaamisestaan alkaen 1901, ja kuten '
+          + 'useimmat australialaiset hotellit se oli myös kaupungin '
+          + 'kokoontumispaikka. Isot parvekkeet ovat yhä Flinders '
+          + 'Streetin tunnistettavin julkisivu.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+  },
+  /*
+   * IQUITOS (Opus 7.9.2026, Fablen parvi). Kahdeksan kohdetta
+   * kohdekartalta (js/packs/maakartat.js, KAUPUNKIKARTAT.iquitos).
+   *
+   * LÄHDEKIELI. Yhdelläkään kahdeksasta kohteesta ei ole omaa
+   * englanninkielistä artikkelia, joten lähde on es-Wikipedia ja se
+   * sanotaan lähderivillä, koska lukijan on voitava löytää lähde
+   * (tarkistus-iquitos.md, kohta 0; ennakkotapaus guatemala ja
+   * salta). Luetut artikkelit raakatekstinä 7.9.2026: "Casa Morey",
+   * "Escuela Superior de Bellas Artes Víctor Morey Peña", "Mercado
+   * Central (Iquitos)", "Catedral de Iquitos", "Ex Hotel Palace",
+   * "Malecón Tarapacá", "Casa Strassberger", "Plaza Veintiocho de
+   * Julio", "Casa de Fierro", "Zona Monumental de Iquitos" sekä
+   * en-Wikipedian "Iquitos".
+   *
+   * YKSIKÄÄN JUTTU EI TOISTA LEHDEN NOSTOJA. Lehti kertoo
+   * tiettömyydestä, jesuiittalähetysasemista, vuodesta 1873,
+   * rautatalon lähderistiriidasta, kumibuumista, joen vuotuisesta
+   * vaihtelusta, Belénistä, Allpahuayo-Mishanasta ja härkähaista.
+   * Nämä kahdeksan kertovat kukin oman rakennuksensa tai aukionsa
+   * historian.
+   *
+   * MERCADO CENTRAL ON RAUTATALON TOINEN PUOLIKAS, mutta juttu
+   * kertoo torin oman tarinan — siirrot, uudistuksen ja
+   * myyntipaikat — eikä lähteiden erimielisyyttä Eiffelistä. Se on
+   * lehden noston aihe.
+   *
+   * CASA STRASSBERGERIN TAKAVARIKKO kerrotaan tapahtumana ilman
+   * osapuolikehystä (Raamattu: ei nykypolitiikkaa, väkivalta ja sota
+   * vain neutraalina historiana).
+   */
+  iquitos: {
+    'Casa Morey': {
+      aika: '1910—1913',
+      teksti: 'Kumiparoni Luis Felipe Morey rakennutti talon vuosina '
+          + '1910—1913, ja se päätyi hänen veljelleen, niin ikään '
+          + 'kumiparonille Adolfo Morey Ariasille. Adolfo asui siellä '
+          + 'vaimonsa Estefanía Peñan ja neljäntoista lapsensa kanssa; '
+          + 'useat lapsista lähetettiin kouluun Eurooppaan.'
+        + '\n\n'
+        + 'Talo on kaksikerroksinen, ja sen ikkunoita suojaavat hienot '
+          + 'takoraudasta tehdyt ristikot. Sitä pidetään yhtenä '
+          + 'kumikauden Iquitosin komeimmista rakennuskokonaisuuksista, '
+          + 'ja se seisoo Plaza Ramón Castilla y Marquesadoa '
+          + 'vastapäätä kaupungin pohjoisosassa lähellä satamaa.'
+        + '\n\n'
+        + 'Talo kertoo, mihin kumiraha meni. Kaupungissa oli vuonna '
+          + '1900 kaksikymmentäviisi kumikauppahuonetta, ja niiden '
+          + 'omistajat rakensivat itselleen taloja, joiden materiaalit '
+          + 'tuotiin Atlantin yli — samaan aikaan kun kaupunkiin ei '
+          + 'johtanut yhtään maantietä. Nykyään talo on hotelli.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Kuvataidekoulu': {
+      aika: '1960-luku',
+      teksti: 'Escuela Superior de Bellas Artes Víctor Morey Peña '
+          + 'perustettiin 1960-luvulla, ja perustajina olivat '
+          + 'taiteilijat, jotka olivat tehneet uransa Iquitosissa. '
+          + 'Alkuperäiseen hankkeeseen kuului myös musiikkikoulu, joka '
+          + 'ei toteutunut.'
+        + '\n\n'
+        + 'Nimi on iquitosilaisen maalarin ja runoilijan Víctor Morey '
+          + 'Peñan mukaan. Hänen tyttärensä Selva Morey oli koulun '
+          + 'ensimmäinen sihteeri ja johtajaksi tuli Ángel Chávez '
+          + 'López — jonka omia maalauksia ei kuitenkaan koskaan '
+          + 'ripustettu koulun galleriaan. Koulu toimii myös '
+          + 'lehtiarkistona, johon on koottu Amazonian maalaustaiteen '
+          + 'historia.'
+        + '\n\n'
+        + 'Kaupungilla on oma taidesuuntansa. Iquitos on Amazonian '
+          + 'pop-taiteen syntypaikka: itseoppinut tyyli, joka '
+          + 'tunnetaan kimaltavista väreistään ja viittauksistaan '
+          + 'ayahuasca-kokemuksiin. Alun perin se oli muraalitaidetta, '
+          + 'jossa sekoittuvat Amazonian kulttuuri, eurooppalaiset '
+          + 'aiheet ja mainoshahmot. Tunnettuja nimiä ovat muun muassa '
+          + 'Christian Bendayan ja Rember Yahuarcani.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Mercado Central': {
+      teksti: 'Sargento Loresin ja Mooren kulmassa seisoo '
+          + 'esivalmisteinen rautahalli, joka ei ole aina ollut '
+          + 'täällä. Se on osa samaa Euroopasta laivattua rautataloa '
+          + 'kuin Plaza de Armasin Casa de Fierro: talo oli liian iso '
+          + 'yhteen paikkaan ja jaettiin kahtia.'
+        + '\n\n'
+        + 'Toinen puolikas kulki pitkän kierroksen. Se asennettiin '
+          + 'ensin Malecón Tarapacán varteen silloisen Hotel Palacen '
+          + 'viereen, purettiin myöhemmin ja siirrettiin nykyiselle '
+          + 'paikalleen. Vuonna 1950 rakennus uudistettiin '
+          + 'toriksi.'
+        + '\n\n'
+        + 'Nyt hallissa on 164 kiinteää myyntipaikkaa, kaikki '
+          + 'jatkuvassa käytössä, sekä vesi, viemäri ja sähkö; '
+          + 'hallintoa hoitaa Maynasin provinssin kunta. Kaupungin '
+          + 'kuulu Belénin tori on aivan toinen asia — se on ulkona ja '
+          + 'moninkertaisesti suurempi — mutta Mercado Central on se '
+          + 'paikka, jossa keskustan asukas käy aamulla.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Iquitosin katedraali': {
+      aika: '1911—1925',
+      teksti: 'Aricán ja Putumayon kulmassa seisoo San Juan Bautistan '
+          + 'katedraali, jota kaupungissa sanotaan yksinkertaisesti '
+          + 'Iglesia Matriziksi. Se on uusgoottilainen ja kaupungin '
+          + 'korkein kirkko, ja se on samalla yksi parhaiten '
+          + 'säilyneistä perintörakennuksista. Alla on krypta.'
+        + '\n\n'
+        + 'Vanha temppeli purettiin, ja uuden rakentaminen alkoi '
+          + '1911. Kirkko vihittiin 16. maaliskuuta 1919, mutta torni '
+          + 'valmistui vasta 1924. Seuraavana vuonna paikallinen '
+          + 'edistysseura asensi kahdenkymmenen metrin torniin '
+          + 'Sveitsistä ostetun julkisen kellon, kellotapulin ja '
+          + 'metalliristin huipulle. Nykyisen muotonsa kirkko sai '
+          + 'laajennuksissa 1944—1949 isä Avencio Villarejon '
+          + 'johdolla.'
+        + '\n\n'
+        + 'Katedraali edustaa lähteen jaottelussa Iquitosin '
+          + 'arkkitehtuurin viidettä vaihetta, vuosia 1915—1940 — '
+          + 'sitä aikaa, jolloin kumiraha oli jo hiipumassa mutta '
+          + 'kaupunki rakensi yhä eurooppalaisittain. Se julistettiin '
+          + 'kansalliseksi historialliseksi kulttuuriperinnöksi 1996.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Hotel Palace': {
+      aika: '1908—1912',
+      teksti: 'Malecón Tarapacán ensimmäisessä korttelissa on '
+          + 'kolmikerroksinen art nouveau -talo kulmatorneineen, jonka '
+          + 'tyylissä on katalonialaisen modernismin ja Gaudín '
+          + 'koulukunnan vaikutteita. Sen rakennutti Otoniel Vela, ja '
+          + 'työtä johtivat perulainen rakennusinsinööri Samuel Young '
+          + 'Mass ja espanjalainen arkkitehti José Altamira y Motta '
+          + 'vuosina 1908—1912.'
+        + '\n\n'
+        + 'Kaikki rakennusosat kuljetettiin Atlantin yli: kaakelit '
+          + 'tuotiin Málagasta, ja parvekkeiden takoraudat on taivutettu '
+          + 'kasviaiheiksi. Rakennusta jouduttiin muuttamaan matkan '
+          + 'varrella, jotta se sopisi tropiikin ilmastoon. Sitä '
+          + 'pidetään Perun ensimmäisenä luksushotellina — '
+          + 'kaksitoista vuotta vanhempana kuin Liman Gran Hotel '
+          + 'Bolívar — ja Iquitosin arkkitehtuurin huippuna.'
+        + '\n\n'
+        + 'Kumibuumin aikaan täällä yöpyivät kumiherrat ja '
+          + 'eurooppalaiset kauppiaat. Vuodesta 1961 talossa on '
+          + 'toiminut Itäisen sotilasalueen esikunta. Rakennus on '
+          + 'kuvattu Perun yhden solin kolikossa nimellä "Antiguo '
+          + 'Hotel Palace, 1912".',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Malecón Tarapacá': {
+      aika: '1800-luvun loppu',
+      teksti: 'Malecón on viiden korttelin mittainen betonoitu ja '
+          + 'mayolikalla päällystetty rantakatu Itaya-joen '
+          + 'törmällä, kaupungin itäreunassa ja korttelin päässä '
+          + 'Plaza de Armasista. Se rakennettiin 1800-luvun lopulla, '
+          + 'kun kumi teki kaupungista rikkaan.'
+        + '\n\n'
+        + 'Alkuaan se oli kokoontumispaikka: kaupunkiin saapuneet '
+          + 'tutkimusmatkailijat tapasivat toisensa täällä ja '
+          + 'katselivat ulkomaisia aluksia, jotka menivät alas '
+          + 'Amazonille. Nimi tulee Tarapacán departementista, jonka '
+          + 'Peru menetti Tyynenmeren sodassa — muistoksi kaatuneille, '
+          + 'ei paikan omasta historiasta.'
+        + '\n\n'
+        + 'Varrella on kumikauden julkisivuja, Orlando Casanova '
+          + 'Hellerin pronssipatsas, vanha San Agustínin koulu ja '
+          + 'augustinolaisten luostari, Amazonian kirjasto ja museo '
+          + 'sekä entinen Kolumbian konsulaatti. Rannassa on Centro '
+          + 'Artesanal Anaconda parinkymmenen myyntipisteen kanssa. '
+          + 'Malecón jakautuu kolmeen osaan, ja alin niistä laskeutuu '
+          + 'Beléniin.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Casa Strassberger': {
+      aika: '1912—2018',
+      teksti: 'Talon rakennutti saksalainen Emilio Strassberger, '
+          + 'Banco Alemán Transatlánticon edustaja ja Iquitosin '
+          + 'pormestari kahtena kautena: 1912—1914 ja 1924—1925. '
+          + 'Kumikauden Iquitos oli kansainvälinen kaupunki, jossa '
+          + 'kauppahuoneiden johtajat istuivat myös kaupungin '
+          + 'luottamustoimissa.'
+        + '\n\n'
+        + 'Perun valtio takavarikoi talon 1940-luvulla omistajansa '
+          + 'toisen maailmansodan aikaisten Saksa-kytkösten takia ja '
+          + 'luovutti sen armeijan viidennelle sotilasalueelle '
+          + 'toimistokasarmiksi. Nimi säilyi silti virallisena. Vuonna '
+          + '1986 talo julistettiin kansalliseksi '
+          + 'kulttuuriperinnöksi.'
+        + '\n\n'
+        + 'Sen jälkeen tarina on rappiota. Armeija julisti talon '
+          + 'asuinkelvottomaksi 2008 kunnossapidon puutteen takia ja '
+          + 'lopetti toimistokäytön 2011, mutta jätti vartion '
+          + 'paikalle juuri perintöaseman vuoksi. Tammikuussa 2016 '
+          + 'tulipalo tuhosi talon osittain. Armeija ilmoitti '
+          + 'aikovansa korjata sen mutta vetosi varojen puutteeseen; '
+          + 'osittainen jälleenrakennus alkoi 2018.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Plaza 28 de Julio': {
+      aika: '2012',
+      teksti: 'Keskustan lounaiskulmassa on kaupungin suurin aukio, '
+          + 'toiseksi tärkein heti Plaza de Armasin jälkeen. Nimi '
+          + 'viittaa Perun itsenäisyyspäivään. Aukio on Iquitosin '
+          + 'mittapuulla väljä ja tavallisesti hiljainen; '
+          + 'en-Wikipedia mainitsee sen kesykyyhkyistä.'
+        + '\n\n'
+        + 'Yhtenä iltana se ei ollut hiljainen. 13. elokuuta 2012 '
+          + 'aukiolla pidettiin juhlan päätöstilaisuus, jossa '
+          + 'Amazonjoki ja sademetsä julistettiin yhdeksi maailman '
+          + 'seitsemästä luonnonihmeestä. Päivä oli alkanut Itayan ja '
+          + 'Nanayn yhtymäkohdassa ja jatkunut kulkueena Avenida '
+          + 'Quiñonezia pitkin.'
+        + '\n\n'
+        + 'Aukiolle asetettiin 120 kilon pronssinen muistolaatta, '
+          + 'joka oli taottu Münchenissä. Tunnustus jaetaan '
+          + 'seitsemän muun Amazonin maan ja alueen kanssa, mutta se '
+          + 'annettiin Perulle, koska Loreton aluehallinto Iquitosista '
+          + 'käsin oli asettanut joen ehdolle. Vuonna 2013 kunta '
+          + 'ilmoitti uusivansa koko aukion.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+  },
 };
