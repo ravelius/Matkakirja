@@ -46876,6 +46876,18 @@ export const NAHTAVYYSJUTUT = {
    * rahapaja seisoo vanhan linnoituksen paikalla: palot ovat lehden
    * historiasivun ensimmäinen nosto.
    *
+   * VIISI JUTTUA KAHDEKSASTA SAI KUVAN, ja kolme jäi tarkoituksella
+   * ilman. Kaikki viisi on tarkistettu Commonsin rajapinnasta
+   * 7.9.2026 (lisenssi ja tekijä extmetadatasta) ja katsottu silmin
+   * 760 pikselin esikatseluna; yksikään tiedosto ei ole sama kuin
+   * kaupunkilehden neworleans-lohkossa (kulttuuri-kategoriat.js) tai
+   * northamerica-valokuvat.js:ssä. Kuvatta jäivät Saenger-teatteri
+   * (parhaat vapaat kuvat ovat kaukaa harmaassa säässä ja täynnä
+   * ratajohtoja), tullitalo (Marmorisalin vapaat kuvat ovat Arnold
+   * Genthen negatiiviskannauksia numerolaattoineen) ja Gallier Hall
+   * (paras kuva on rakennustyömaan aitojen takaa). Nämä kolme on
+   * tilattu kuvaputkelta.
+   *
    * KAKSI KOHDETTA KANTAA SAMAA SUKUNIMEÄ, ja se on tarkoituksellista
    * eikä virhe: Gallier Hallin piirsi isä James Gallier Sr. ja
    * Gallier Housen poika James Gallier Jr. omaksi kodikseen. Jutut
@@ -46920,6 +46932,15 @@ export const NAHTAVYYSJUTUT = {
           + 'päätti sulkea kirkon, mutta seurakuntalaiset '
           + 'linnoittautuivat pappilaan kahdeksi viikoksi, ja maaliskuussa '
           + '2009 sulkemispäätös peruttiin.',
+      kuvat: [
+        {
+          tiedosto: 'TremeTombUnknownSlave.jpg',
+          selite: 'Tuntemattoman orjan hauta on raskaista ketjuista '
+            + 'taivutettu risti kirkon puutarhassa, lasimaalausikkunoiden '
+            + 'alla.',
+          lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Vanha rahapaja': {
@@ -46967,6 +46988,15 @@ export const NAHTAVYYSJUTUT = {
           + 'jazzmuseo soittimineen ja kolmannessa kerroksessa '
           + 'Louisianan historiakeskus. Talo on vanhin säilynyt '
           + 'rakennus, joka on toiminut Yhdysvaltain rahapajana.',
+      kuvat: [
+        {
+          tiedosto: 'United States Mint, New Orleans, La. LCCN93515339.jpg',
+          selite: 'Vuoden 1897 valokuvassa rahapaja seisoo puiden ja '
+            + 'rauta-aidan takana; kuvan alalaitaan on painettu sen oma '
+            + 'nimiö ja valokuvaajan tekijänoikeusmerkintä.',
+          lahde: 'Library of Congress, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Gallier House': {
@@ -46998,6 +47028,14 @@ export const NAHTAVYYSJUTUT = {
           + 'tuotantokaudella vampyyrien kotina, ja sen julkisivu '
           + 'esitti American Horror Story: Covenin avausjaksossa '
           + 'kaupungin pahamaineisinta kartanoa.',
+      kuvat: [
+        {
+          tiedosto: 'GallierHouseBelowA.jpg',
+          selite: 'Talon vihreä valurautagalleria työntyy Royal Streetin '
+            + 'ylle naapureiden tiiliseinien välissä.',
+          lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Hermann-Griman talo': {
@@ -47032,6 +47070,15 @@ export const NAHTAVYYSJUTUT = {
           + 'rakennussopimuksen ja perukirjojen perusteella, ja noin '
           + 'puolet esineistöstä on jäljitettävissä talon omiin '
           + 'sukuihin. Talo nimettiin kansalliseksi maamerkiksi 1974.',
+      kuvat: [
+        {
+          tiedosto: 'Hermann Grima house kitchen.jpg',
+          selite: '1830-luvun avotulikeittiö on Ranskan Korttelin ainoa '
+            + 'säilynyt: lautateline, kahvimylly ja muurattu uuni ovat '
+            + 'paikoillaan.',
+          lahde: 'MrBill3, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Saenger-teatteri': {
@@ -47105,6 +47152,15 @@ export const NAHTAVYYSJUTUT = {
           + 'puuvillakonttorin, jota usein luullaan pörssiksi — '
           + 'todellisuudessa maalauksen sali oli erään välittäjän '
           + 'konttori viereisessä Factors\' Row -korttelissa.',
+      kuvat: [
+        {
+          tiedosto: 'Cotton Exchange New Orleans 1881 Bldg.jpg',
+          selite: 'Vuonna 1881 valmistunut pörssitalo Gravier- ja '
+            + 'Carondelet-katujen kulmassa oli toisen keisarikunnan '
+            + 'tyyliä veistoksineen ja kaarineen.',
+          lahde: 'Detroit Publishing Company, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Tullitalo: {
@@ -47200,6 +47256,15 @@ export const NAHTAVYYSJUTUT = {
    * Tequendaman jutussa muiscat mainitaan vain hotellin nimen
    * alkuperänä — kansan oma tarina on lehden muisca-sivulla.
    *
+   * VIISI JUTTUA KAHDEKSASTA SAI KUVAN, ja kolme jäi tarkoituksella
+   * ilman. Kaikki viisi on tarkistettu Commonsin rajapinnasta
+   * 7.9.2026 ja katsottu silmin; yksikään tiedosto ei ole sama kuin
+   * kaupunkilehden bogota-lohkossa tai southamerica-valokuvat.js:ssä.
+   * Kuvatta jäivät Keskushautausmaa ja Casa de Nariño (parhaissa
+   * vapaissa kuvissa on etualalla tunnistettavia kasvoja) sekä Museo
+   * Botero (samasta syystä: ihmisiä oviaukossa). Nämä kolme on
+   * tilattu kuvaputkelta.
+   *
    * KAKSI JUTTUA VIITTAA SAMAAN TAITEILIJAAN ERI SUUNNASTA:
    * Keskushautausmaan mausoleumeja veisti Pietro Tenerani, joka teki
    * myös lehden nostossa H1 mainitun Bolívar-patsaan, ja Rogelio
@@ -47236,7 +47301,7 @@ export const NAHTAVYYSJUTUT = {
           + '20 000 peson setelissä, jonka toisella puolella oli Kuu ja '
           + 'toisella Maa Kuusta katsottuna. Setelin ja sen sinisen '
           + 'värin takia syntyi kansanusko, että sinisten kynttilöiden '
-          + 'ja sinisten kukkien vieminen Garavidon haudalle tuo '
+          + 'ja sinisten kukkien vieminen Garaviton haudalle tuo '
           + 'vaurautta.',
       lahde: 'Wikipedia',
     },
@@ -47270,6 +47335,15 @@ export const NAHTAVYYSJUTUT = {
           + 'annettu Bogotá-joen suurelle putoukselle ylätasangon '
           + 'reunalla. Hotellin aulassa on muiscojen jumalia esittävä '
           + 'seinämaalaus.',
+      kuvat: [
+        {
+          tiedosto: 'Bogotá carrera 10 Hotel Tequendama.JPG',
+          selite: 'Punatiilinen hotelli kaartuu kymmenennen valtakadun '
+            + 'kulmaan; takana näkyvät Centro Internacionalin '
+            + 'myöhemmät tornit.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Nykytaiteen museo': {
@@ -47302,6 +47376,15 @@ export const NAHTAVYYSJUTUT = {
           + 'del Parque (1964–70), jota moni pitää hänen '
           + 'pääteoksenaan ja jossa hän asui loppuelämänsä; 2003 hän '
           + 'sai Alvar Aalto -mitalin.',
+      kuvat: [
+        {
+          tiedosto: 'Bogotá exterior Museo de Arte Moderno MAMBO.JPG',
+          selite: 'Salmonan paljas tiili porrastuu ylöspäin, ja ikkunat '
+            + 'on upotettu syviin syvennyksiin; takana nousee '
+            + 'Itäkukkuloiden metsä.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Andesin yliopisto': {
@@ -47338,6 +47421,15 @@ export const NAHTAVYYSJUTUT = {
           + 'muassa John von Neumann, Arnold J. Toynbee, Hideki Yukawa '
           + 'ja Thornton Wilder. Naisten osasto perustettiin 1953, '
           + 'mutta sen ohjelmat eivät vielä antaneet ammattitutkintoa.',
+      kuvat: [
+        {
+          tiedosto: 'Uniandes Campus.jpg',
+          selite: 'Kampus alkaa keskustan korttelien reunasta ja päättyy '
+            + 'Itäkukkuloiden metsään; vanhat siirtomaatalot ja uudet '
+            + 'laboratoriorakennukset ovat samassa korttelissa.',
+          lahde: 'JS Rolón, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Oikeuspalatsi: {
@@ -47374,6 +47466,15 @@ export const NAHTAVYYSJUTUT = {
           + 'teille vapauden". Talo on nimetty Alfonso Reyes '
           + 'Echandían mukaan — hän oli korkeimman oikeuden '
           + 'presidentti ja kuoli piirityksessä.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio de Justicia de Colombia, Bogotá.jpg',
+          selite: 'Kolmas oikeuspalatsi rakennettiin samalle paikalle '
+            + 'Plaza de Bolívarin pohjoislaidalle; takana kohoaa '
+            + 'Itäkukkuloiden harjanne.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Museo Botero': {
@@ -47403,8 +47504,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kuukaudessa.'
         + '\n\n'
         + 'Kulttuuriministeriö julisti 2012 koko lahjoitetun '
-          + 'kokoelman kansallisesti merkittäväksi kulttuuriomaisuudeksi, '
-          + 'jota ei saa hajottaa. Kun Botero kuoli, hänen arkkunsa oli '
+          + 'kokoelman kansallisesti merkittäväksi '
+          + 'kulttuuriomaisuudeksi. Kun Botero kuoli, hänen arkkunsa oli '
           + 'hautajaisten ajan näytteillä juuri tämän museon '
           + 'sisäpihalla.',
       lahde: 'Wikipedia',
@@ -47416,8 +47517,7 @@ export const NAHTAVYYSJUTUT = {
           + 'koulutuksen rajoituksiin, joita La Regeneración eli '
           + 'konservatiivien hallintokausi asetti. Pinzón sai avukseen '
           + 'radikaaliliberaalin liikkeen professoreita ja muita '
-          + 'aikansa ajattelijoita. Nimi Externado viittasi kouluun, joka '
-          + 'ei ollut sisäoppilaitos eikä kirkon.'
+          + 'aikansa ajattelijoita.'
         + '\n\n'
         + 'Täyden yliopiston aseman laitos sai 1958. Nykyään siellä '
           + 'opiskelee yli 13 000 opiskelijaa, ja opetusaloja ovat '
@@ -47438,6 +47538,15 @@ export const NAHTAVYYSJUTUT = {
           + 'Gustavo Petro, Bogotán pormestarina toiminut Claudia '
           + 'López, oikeusministeri Rodrigo Lara ja toimittaja Daniel '
           + 'Coronell.',
+      kuvat: [
+        {
+          tiedosto: 'Universidad Externado de Colombia, La Candelaria.jpg',
+          selite: 'Yliopiston tiilirakennukset nousevat rinteeseen La '
+            + 'Candelarian eteläreunassa, ja pengerretyt puutarhat '
+            + 'laskevat kadulle asti.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Casa de Nariño': {

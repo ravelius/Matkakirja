@@ -12246,22 +12246,22 @@ export const KAUPUNKIKARTAT = {
    * Superdomesta. Yksikään kartan kahdeksasta kohteesta ei ole
    * niiden aihe.
    *
-   * KUUSI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS: Jackson
-   * Square, St. Louis -katedraali, Cabildo, Congo Square,
-   * Preservation Hall ja Superdome mahtuisivat kaikki ruutuun
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS: Jackson
+   * Square, St. Louis -katedraali, Cabildo, Congo Square ja
+   * Preservation Hall mahtuisivat kaikki ruutuun
    * (faktapohja-neworleans.md, osio 4 antaa niille koordinaatit),
    * mutta ne ovat lehden omien nostojen aihe. Samasta syystä kartalla
    * ei ole Ranskan Korttelin toria: Café du Monde sen laidalla on
-   * matkaoppaan ruokajakson aihe.
+   * matkaoppaan ruokajakson aihe. Superdome, Garden District ja
+   * Lower Ninth Ward ovat sekä lehden aihe että ruudun ulkopuolella.
    *
    * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Beauregard-Keyesin talo
    * on 61 metriä Gallier Housesta eli 200 metrin säännön alle.
    * Lafayette Square jätettiin pois aihesyistä eikä etäisyyden takia
    * (244 metriä): se on Gallier Hallin oma aukio ja siten saman
-   * kohteen tausta. Vanha ursuliiniluostari, Mississippin laakson
-   * vanhin rakennus, jäi pois kolmannesta syystä: sen en-Wikipedian
-   * artikkelilla ei ole coordinates-arvoa (haku 7.9.2026), eikä
-   * koordinaattia arvata.
+   * kohteen tausta. Vanha ursuliiniluostari jäi pois kolmannesta
+   * syystä: sen en-Wikipedian artikkelilla ei ole coordinates-arvoa
+   * (haku 7.9.2026), eikä koordinaattia arvata.
    */
   neworleans: {
     polku: 'assets/kartat/neworleans-keskusta.png',
@@ -12311,7 +12311,7 @@ export const KAUPUNKIKARTAT = {
    * laitaan (faktapohja-bogota.md, osio 4), mutta ne ovat lehden
    * omien nostojen ja kansikuvien aihe. Sama koskee Torre Colpatriaa:
    * se on lehden avauskuvan aihe, ja siksi se ei ole kartan kohde,
-   * vaikka torni näkyy kuvassa keskellä ruutua.
+   * vaikka torni seisoo keskellä ruudun yläosaa.
    *
    * KOLME KOHDETTA PUDOTETTIIN ETÄISYYDEN TAKIA: Luis Ángel Arangon
    * kirjasto on 81 metriä Museo Boterosta, San Bartolomén koulu 214
