@@ -10,8 +10,13 @@
  *   node tools/generoi-linssiluennat.mjs --pysakit esittely,valinaytos
  *   node tools/generoi-linssiluennat.mjs            (koko kaari)
  *   node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --kuiva
+ *   node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --kertomus --kuiva
  *
  *   --kuiva          tulostaa tekstit ja kohteet, ei kutsu APIa
+ *   --kertomus       KERTOMUSJAKSOT pysäkkien sijaan (ks. KERTOMUS
+ *                    YHTENÄ KAARENA alempana). Vain kaarella, jolla on
+ *                    `aikajana.kertomus`; `--pysakit` valitsee jaksot
+ *                    TUNNUKSELLA (esim. `--pysakit avaus,denisova`).
  *   --linssi <tunnus>  mikä aikajanakaari luetaan (oletus `keksinnot`;
  *                    ks. LINSSIT alempana). Kaari kertoo itse sekä
  *                    luettavan tekstin että ämpärin kansion.
@@ -48,6 +53,31 @@
  * lyhyt lause pysäkkiä kohti — luenta soi kortin vaihtuessa, ja
  * pidempi teksti jäisi seuraavan pysäkin alle. Kaaren omat puheet
  * (esittely, loppusanat) luetaan sen sijaan LYHENTÄMÄTTÄ.
+ *
+ * ------------------------------------------------------------------
+ * KERTOMUS YHTENÄ KAARENA (--kertomus)
+ * ------------------------------------------------------------------
+ *
+ * Raamattu IHMISEN MATKA ON YKSI KAARI, EI PYSAKKEJA (omistaja
+ * 7.9.2026): Ihmisen matkan kertoja ei lue pysäkkirivejä vaan JAKSOJA,
+ * jotka soivat peräkkäin ilman pysähdystä. Jaksot ovat kaanonissa
+ * (js/linssit/ihmisen-matka-kertomus.js, omistajan hyväksymä), ja
+ * kentät ovat valmiiksi kahtena: `teksti` on se, mikä ruudulla lukee,
+ * `luenta` sama teksti eleven_v3:n tageilla. TÄSSÄ EI LADOTA MITÄÄN —
+ * malli saa `luenta`-kentän sellaisenaan, koska tagit ovat kaanonia.
+ *
+ * Tiedostonimi on sama sääntö kuin muuallakin: js/linssipuhe.js
+ * kertomuksenRunko johtaa sen jakson tunnuksesta ja kaaren omasta
+ * etuliitteestä (`aikajana.kertomusRunko`), joten peli ja työkalu
+ * osuvat samaan tiedostoon ilman erillistä nimilistaa:
+ *
+ *   aikajana/ihmisen-matka/puhe/ihmisen-matka-kertomus-avaus.mp3
+ *
+ * MANIFESTI ÄMPÄRIIN samaan kansioon (kertomus-manifesti.json): yksi
+ * rivi per jakso — tunnus, tiedosto, merkkimäärä ja valmiin äänitteen
+ * kesto. Peli ei tarvitse sitä (se lukee keston soittimesta ja putoaa
+ * tarvittaessa merkkimäärään, 14 merkkiä/s), mutta manifestista näkee
+ * yhdellä silmäyksellä, mitä ämpärissä on ja kuinka pitkä esitys on.
  *
  * ------------------------------------------------------------------
  * TIEDOSTONIMI ON KYTKENTÄ
@@ -124,7 +154,8 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import {
-  KAAREN_AVAIMET, kaarenPuheet, luennanPuhe, luennanRunko, luennanTeksti, luennanTiedosto, puheeksi,
+  KAAREN_AVAIMET, KERTOMUKSEN_MERKKIA_SEKUNNISSA, kaarenPuheet, kertomuksenLuennat,
+  luennanPuhe, luennanRunko, luennanTeksti, luennanTiedosto, puheeksi,
 } from '../js/linssipuhe.js';
 import { leikkaaHiljaisuusSuodatin } from './generoi-tehosteet.mjs';
 import { julkinenJuuri, tulkitseEbur128, tulkitseLoudnorm } from './generoi-siirtymamusiikki.mjs';
@@ -231,7 +262,7 @@ const KAAREN_KESTO_MAX_S = 50.0;
 /** Komentoriviliput. Palauttaa `{ virhe }`, jos syöte ei kelpaa. */
 export function tulkitseArgumentit(argumentit) {
   const liput = {
-    linssi: OLETUSLINSSI, pysakit: [], kuiva: false, pakota: false, vienti: true,
+    linssi: OLETUSLINSSI, pysakit: [], kuiva: false, pakota: false, vienti: true, kertomus: false,
   };
   for (let i = 0; i < argumentit.length; i += 1) {
     const arg = argumentit[i];
@@ -282,6 +313,8 @@ export function tulkitseArgumentit(argumentit) {
          */
         liput.pysakit.push(valinta);
       }
+    } else if (arg === '--kertomus') {
+      liput.kertomus = true;
     } else if (arg === '--kuiva') {
       liput.kuiva = true;
     } else if (arg === '--pakota') {
@@ -353,6 +386,54 @@ export function valitsePysakit(kaari, valinta = []) {
       ...vuodet.filter((v) => !loydetyt.has(v)),
       ...avaimet.filter((a) => !avainLoydot.has(a)),
     ],
+  };
+}
+
+/**
+ * KERTOMUSJAKSOT valinnan mukaan. Tyhjä valinta = koko kertomus.
+ * Valitsin on jakson TUNNUS (`--pysakit avaus,denisova`); vuosiluvut
+ * eivät kelpaa, koska jaksoilla ei ole vuosilukua.
+ *
+ * @param {object} kaari linssin `aikajana`-lohko
+ * @param {Array<number|string>} valinta
+ */
+export function valitseKertomus(kaari, valinta = []) {
+  const avaimet = valinta.map((v) => String(v));
+  const kaikki = !valinta.length;
+  const tyot = kertomuksenLuennat(kaari)
+    .filter((rivi) => kaikki || avaimet.includes(rivi.avain))
+    .map((rivi) => ({ ...rivi, vuosi: null }));
+  const loydot = new Set(tyot.map((tyo) => tyo.avain));
+  return { tyot, tuntemattomat: avaimet.filter((a) => !loydot.has(a)) };
+}
+
+/** Kertomusmanifestin tiedostonimi ämpärissä (kaaren puhekansiossa). */
+export const KERTOMUS_MANIFESTI = 'kertomus-manifesti.json';
+
+/**
+ * MANIFESTIN MUOTO. Yksi rivi per jakso; `kesto` on valmiin äänitteen
+ * pituus sekunteina ja null, jos sitä ei tässä ajossa generoitu
+ * (ohitettu tai rajattu pois). Sama kaava kuin pulun manifestissa
+ * (tools/generoi-pulu.mjs kokoaManifesti).
+ *
+ * @param {object} kaari linssin `aikajana`-lohko
+ * @param {Map<string, number>} kestot avain → kesto sekunteina
+ */
+export function kokoaKertomusManifesti(kaari, kestot = new Map()) {
+  const rivit = kertomuksenLuennat(kaari);
+  return {
+    versio: 1,
+    kansio: ampariKansio(kaari),
+    paivitetty: new Date().toISOString().slice(0, 10),
+    merkkiaSekunnissa: KERTOMUKSEN_MERKKIA_SEKUNNISSA,
+    jaksoja: rivit.length,
+    jaksot: rivit.map((rivi) => ({
+      tunnus: rivi.avain,
+      nimi: rivi.nimi,
+      merkit: rivi.teksti.length,
+      arvioSekunteina: Number((rivi.teksti.length / KERTOMUKSEN_MERKKIA_SEKUNNISSA).toFixed(1)),
+      kesto: kestot.get(rivi.avain) ?? null,
+    })),
   };
 }
 
@@ -499,7 +580,7 @@ function tarkista(kohde, kestoMax = KESTO_MAX_S) {
 }
 
 /** Vie valmis luenta ämpäriin (sama komento kuin vie-aanet.yml). */
-function vieAmpariin(kohde, nimi, kansio) {
+function vieAmpariin(kohde, nimi, kansio, tyyppi = 'audio/mpeg') {
   const tili = process.env.R2_ACCOUNT_ID;
   const ampari = process.env.R2_BUCKET;
   const avain = process.env.AWS_ACCESS_KEY_ID ?? process.env.R2_ACCESS_KEY_ID;
@@ -515,7 +596,7 @@ function vieAmpariin(kohde, nimi, kansio) {
     's3', 'cp', kohde, `s3://${ampari}/${kansio}/${nimi}`,
     '--endpoint-url', `https://${tili}.r2.cloudflarestorage.com`,
     '--no-progress',
-    '--content-type', 'audio/mpeg',
+    '--content-type', tyyppi,
     '--cache-control', 'public, max-age=2592000',
   ]);
 }
@@ -528,7 +609,7 @@ async function main() {
     console.error(`${liput.virhe}.`);
     console.error('Käyttö: node tools/generoi-linssiluennat.mjs '
       + `[--linssi ${Object.keys(LINSSIT).join('|')}] `
-      + '[--pysakit 1769,1783] [--kuiva] [--pakota] [--ei-vientia]');
+      + '[--kertomus] [--pysakit 1769,1783] [--kuiva] [--pakota] [--ei-vientia]');
     process.exit(1);
   }
 
@@ -540,8 +621,14 @@ async function main() {
     process.exit(1);
   }
   const kansio = ampariKansio(kaari);
+  if (liput.kertomus && !kaari.kertomus?.length) {
+    console.error(`Linssillä ${liput.linssi} ei ole kertomusta (aikajana.kertomus).`);
+    process.exit(1);
+  }
 
-  const { tyot, tuntemattomat } = valitsePysakit(kaari, liput.pysakit);
+  const { tyot, tuntemattomat } = liput.kertomus
+    ? valitseKertomus(kaari, liput.pysakit)
+    : valitsePysakit(kaari, liput.pysakit);
   if (tuntemattomat.length) {
     console.error(`Näitä ei ole kaaressa: ${tuntemattomat.join(', ')} `
       + `— tarkista ${LINSSIT[liput.linssi].replace('../', '')}. Ei generoida mitään.`);
@@ -561,11 +648,31 @@ async function main() {
    */
   if (liput.kuiva) {
     console.log(`KUIVA AJO (--kuiva) — APIa ei kutsuta, ämpäriin ei viedä. `
-      + `Linssi ${liput.linssi}, ${tyot.length} luentaa, ääni Viisas Kertoja, malli ${MALLI}.`);
+      + `Linssi ${liput.linssi}${liput.kertomus ? ' KERTOMUS' : ''}, ${tyot.length} luentaa, `
+      + `ääni Viisas Kertoja, malli ${MALLI}.`);
     for (const tyo of tyot) {
       console.log(`${kansio}/${tyo.nimi}  ·  "${tyo.teksti}"`);
       // Mallille lähtevä muoto, jos se eroaa (vuodet sanoina, tauot).
       if (tyo.puhe && tyo.puhe !== tyo.teksti) console.log(`    mallille: "${tyo.puhe}"`);
+      /*
+       * KERTOMUKSEN TAHTI: jakson merkkimäärä ja siitä laskettu
+       * varakesto (14 merkkiä/s). Peli käyttää sitä silloin kun
+       * äänitettä ei ole tai sen kestoa ei ehditä lukea, joten sen
+       * pitää näkyä kuivassa ajossa — siitä näkee, kuinka pitkä esitys
+       * on ilman ääntä.
+       */
+      if (liput.kertomus) {
+        const merkit = tyo.teksti.length;
+        console.log(`    ${merkit} merkkiä · varakesto `
+          + `${(merkit / KERTOMUKSEN_MERKKIA_SEKUNNISSA).toFixed(1)} s`);
+      }
+    }
+    if (liput.kertomus) {
+      const merkit = tyot.reduce((summa, tyo) => summa + tyo.teksti.length, 0);
+      console.log(`Esityksen mitta ilman ääntä: `
+        + `${(merkit / KERTOMUKSEN_MERKKIA_SEKUNNISSA / 60).toFixed(1)} min `
+        + `(${merkit} merkkiä).`);
+      console.log(`Manifesti: ${kansio}/${KERTOMUS_MANIFESTI}`);
     }
     console.log(`Kuiva ajo valmis: ${tyot.length} kohdetta, `
       + `${new Set(tyot.map((t) => t.nimi)).size} eri tiedostonimeä.`);
@@ -597,6 +704,8 @@ async function main() {
 
   const tyokansio = mkdtempSync(join(tmpdir(), 'linssiluennat-'));
   const valmiit = [];
+  /** Kertomuksen manifestia varten: jakson tunnus → kesto sekunteina. */
+  const kestot = new Map();
   let ohitettuja = 0;
   let virheita = 0;
   try {
@@ -623,8 +732,10 @@ async function main() {
       console.log(`   leikkaus: ${kestoSekunteina(lahde).toFixed(2)} s → ${leikattu.toFixed(2)} s, `
         + `taso ${mitattu.taso.toFixed(1)} LUFS, korjaus ${korjaus.toFixed(2)} dB`);
 
-      // Kaaren oma puhe (esittely, välinäytös) saa oman kestokattonsa.
+      // Kaaren oma puhe (esittely, välinäytös) ja kertomusjakso ovat
+      // kokonaisia kappaleita: oma kestokatto.
       const tulos = tarkista(kohde, tyo.vuosi === null ? KAAREN_KESTO_MAX_S : KESTO_MAX_S);
+      kestot.set(tyo.avain, Number(tulos.pituus.toFixed(2)));
       console.log(`   valmis: ${tulos.pituus.toFixed(2)} s, `
         + `${tulos.taso === null ? '?' : tulos.taso.toFixed(1)} LUFS → ${kohde}`);
       if (tulos.virheet.length) {
@@ -639,6 +750,18 @@ async function main() {
 
     if (liput.vienti) {
       for (const nimi of valmiit) vieAmpariin(join(kohdekansio, nimi), nimi, kansio);
+      /*
+       * MANIFESTI ÄMPÄRIIN samaan kansioon kuin luennat. Se kirjoitetaan
+       * KOKO kertomuksesta eikä vain tämän ajon jaksoista, jotta
+       * osa-ajo ei tyhjennä muiden jaksojen rivejä; kesto on null
+       * niille, joita tässä ajossa ei generoitu.
+       */
+      if (liput.kertomus && valmiit.length) {
+        const manifesti = join(kohdekansio, KERTOMUS_MANIFESTI);
+        writeFileSync(manifesti, `${JSON.stringify(kokoaKertomusManifesti(kaari, kestot), null, 2)}\n`);
+        vieAmpariin(manifesti, KERTOMUS_MANIFESTI, kansio, 'application/json');
+        console.log(`Manifesti viety: ${kansio}/${KERTOMUS_MANIFESTI}`);
+      }
     }
   } finally {
     rmSync(tyokansio, { recursive: true, force: true });

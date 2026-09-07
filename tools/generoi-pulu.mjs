@@ -107,9 +107,10 @@ import {
 } from '../js/livia.js';
 import {
   LIVIAN_AANIJUURI, LIVIAN_AANITETTY_PALJASTUS, LIVIAN_AANITETYT,
-  LIVIAN_KAUPUNKILAHTEET, livianAanitykset, livianKaupunkiKentat,
+  LIVIAN_KAUPUNKILAHTEET, LIVIAN_LINSSILAHTEET, livianAanitykset, livianKaupunkiKentat,
   livianKentanKuplat, livianKenttaPinoutuu, livianTiiviste,
 } from '../js/liviapuhe.js';
+import { IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
 import { FOKUSVIRTA_HELSINKI } from '../js/packs/fokusvirta-helsinki.js';
 import { FOKUSVIRTA_KIOVA } from '../js/packs/fokusvirta-kiova.js';
@@ -491,6 +492,38 @@ const KAUPUNKIEN_PAKKAUKSET = {
 };
 
 /**
+ * LINSSIEN KERTOMUKSET, joista pulun välihuomiot luetaan. Avain on
+ * sama kuin LIVIAN_LINSSILAHTEET-taulussa (js/liviapuhe.js).
+ */
+const LINSSIEN_KERTOMUKSET = {
+  'ihmisen-matka': IHMISEN_MATKA_KERTOMUS,
+};
+
+/**
+ * LINSSIN VÄLIHUOMIOT KERTOMUKSESTA — sama kytkentä kuin kaupungeilla.
+ *
+ * Numerointi tulee LIVIAN_LINSSILAHTEET-taulusta ja tekstit kaanonista
+ * (js/linssit/ihmisen-matka-kertomus.js kenttä `pulu`). Jos ne
+ * eriytyvät, ajo maksaisi vääristä tiedostoista ja peli hakisi vääriä
+ * numeroita — siksi ero kaataa tässä eikä vasta ämpärissä.
+ *
+ * @param {string} linssi linssin tunnus
+ * @returns {string[]} välihuomiot taulun järjestyksessä
+ */
+export function linssinRepliikit(linssi) {
+  const kertomus = LINSSIEN_KERTOMUKSET[linssi];
+  if (!kertomus) return [];
+  const taulussa = LIVIAN_LINSSILAHTEET[linssi] ?? [];
+  const kaanonissa = kertomus.filter((jakso) => jakso?.pulu).map((jakso) => jakso.id);
+  if (taulussa.join(',') !== kaanonissa.join(',')) {
+    throw new Error(`${linssi}: js/liviapuhe.js LIVIAN_LINSSILAHTEET lupaa jaksot `
+      + `[${taulussa.join(', ')}], mutta kaanonissa on pulu-kenttä jaksoissa `
+      + `[${kaanonissa.join(', ')}] — korjaa taulu tai kertomus ennen ajoa.`);
+  }
+  return taulussa.map((tunnus) => String(kertomus.find((j) => j.id === tunnus)?.pulu ?? '').trim());
+}
+
+/**
  * Yhden kaupungin repliikkitekstit LIVIAN_KAUPUNKILAHTEET-järjestyksessä
  * — YKSI KUPLA = YKSI RIVI (omistaja 7.9.2026).
  *
@@ -557,6 +590,9 @@ export function aanitteenTila(rivi) {
 export function repliikit() {
   const kaupungit = Object.fromEntries(Object.keys(LIVIAN_KAUPUNKILAHTEET)
     .map((kaupunkiId) => [kaupunkiId, kaupunginRepliikit(kaupunkiId)]));
+  // Linssien välihuomiot (Ihmisen matkan kertomus, 7.9.2026).
+  const linssit = Object.fromEntries(Object.keys(LIVIAN_LINSSILAHTEET)
+    .map((linssi) => [linssi, linssinRepliikit(linssi)]));
   // Vakiot luetaan js/livia.js:stä kerran, ei rivi kerrallaan.
   const vakiot = kuplanVakiot();
   const pinoutuvat = pinoutuvatRepliikit();
@@ -566,6 +602,7 @@ export function repliikit() {
     mannerivihje: [MANNERIVIHJE],
     lehtivinkki: [LIVIAN_LEHTIVINKKI],
     ...kaupungit,
+    ...linssit,
   }).map((rivi) => ({
     ...rivi,
     pinoutuu: pinoutuvat.has(rivi.avain),

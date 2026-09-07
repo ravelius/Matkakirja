@@ -128,8 +128,16 @@ export function matkaHetkella(matka, aika, nyt) {
  * 0 vanhalla osalla. Sama kaava kuin ruudunTila kalvolla, joten vana
  * ja väri vanhenevat samaa tahtia.
  */
-export function karjenPaino(aika, nyt, rintama) {
+export function karjenPaino(aika, nyt, rintama, { pito = false } = {}) {
   if (!(aika > 0) || !(rintama > 0)) return 0;
+  /*
+   * PITOTILASSA MENNYT ON MENNYTTÄ (kertomusesitys, ks. paivita).
+   * Kun kello on kelattu taaksepäin, vanan jo piirretyssä osassa on
+   * kärkiä, joiden aika EI ole vielä tullut (aika < nyt). Ilman tätä
+   * ehtoa kaava antaisi niille painon yli yhden — koko vana leimahtaisi
+   * rintaman väriin. Pidetty osa on vanhaa väestöä, ei rintamaa.
+   */
+  if (pito && nyt > aika) return 0;
   return Math.max(0, Math.min(1, 1 - (aika - nyt) / rintama));
 }
 
@@ -466,8 +474,27 @@ export function luoVanat({
   /**
    * Kello siirtyi: katko (kasvu) ja kärkivärit. Kutsutaan enintään
    * VIRTOJEN_PAIVITYS_MS:n tahdissa; reduced motion askeltaa harvemmin.
+   *
+   * ── PITOTILA: RINTAMA EI KATOA ────────────────────────────────────
+   *
+   * Kertomusesitys (js/linssit/ihmisen-matka-esitys.js) ajaa kelloa
+   * kaanonin jaksojen mukaan, ja kaanoni palaa ajassa TAAKSEPÄIN kahdesti:
+   * Blombosista (75 ka) Karmelvuorelle (110 ka) ja Chilestä (14,5 ka)
+   * aikahypyllä takaisin Keski-Aasiaan (50 ka). Ilman pitoa vana
+   * kelautuisi kummallakin kerralla auki — koko Amerikkoihin asti
+   * piirretty selkäranka katoaisi ruudulta. Raamattu KERTOMUS SOLJUVAKSI
+   * ja omistajan ohje aikahypystä: *"rintama ei katoa, vaan Euroopan
+   * haara alkaa kasvaa tästä."*
+   *
+   * PITO ON YKSISUUNTAINEN MAKSIMI vanaa kohti: piirretty pituus ei
+   * koskaan lyhene, mutta kasvaa yhä normaalisti, kun kello ohittaa
+   * ennätyksen. Kotipesät jäävät samasta syystä palamaan.
+   *
+   * @param {number} nyt kellon lukema (vuosia sitten)
+   * @param {object} [asetukset]
+   * @param {boolean} [asetukset.pito] älä koskaan lyhennä piirrettyä vanaa
    */
-  function paivita(nyt) {
+  function paivita(nyt, { pito = false } = {}) {
     if (purettu || !oliot.length || !(nyt >= 0)) return false;
     if (nyt === viimeNyt) return false;
     if (reduced) {
@@ -482,10 +509,13 @@ export function luoVanat({
     for (const o of oliot) {
       if (o.kotipesa) {
         // Kotipesä syttyy pysäkkinsä hetkellä ja jää palamaan.
-        o.olio.visible = nyt <= o.kotipesa.aika;
+        // Pitotilassa myös kelauksen yli (ks. PITOTILA yllä).
+        o.olio.visible = (pito && o.olio.visible) || nyt <= o.kotipesa.aika;
         continue;
       }
-      const matka = matkaHetkella(o.matka, o.aika, nyt);
+      const kuljettu = matkaHetkella(o.matka, o.aika, nyt);
+      const matka = pito ? Math.max(o.pitomatka ?? 0, kuljettu) : kuljettu;
+      o.pitomatka = matka;
       o.mat.dashSize = matka;
       o.kaistaMat.dashSize = matka;
       const nakyy = matka > 0;
@@ -520,7 +550,7 @@ export function luoVanat({
        */
       const karjenVari = (k) => {
         const { v0, v1 } = savy(o.virrat?.[k] ?? o.virta);
-        const w = karjenPaino(o.aika[k], nyt, rintama);
+        const w = karjenPaino(o.aika[k], nyt, rintama, { pito });
         return [
           v0[0] + (v1[0] - v0[0]) * w,
           v0[1] + (v1[1] - v0[1]) * w,

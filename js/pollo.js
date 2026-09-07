@@ -2422,16 +2422,21 @@ class Pollo {
    *   paljastus); yksittäinen puheenvuoro jättää tämän pois.
    * @param {boolean} [asetukset.linssinOma] LINSSIN OMA KUPLA: ohittaa
    *   linssiportin (ks. LINSSIN OMA POIKKEUS alla).
+   * @param {string} [asetukset.luokka] LISÄLUOKKA kuplaan. Sama kupla,
+   *   eri mitta: Ihmisen matkan kertomuksessa pulun välihuomio on
+   *   VÄLIHUUTO eikä repliikki (js/linssit/ihmisen-matka-esitys.js),
+   *   joten se saa oman kapeamman asunsa css:stä täsmälleen kuten
+   *   fokusvirran huudahdus. Ilman luokkaa kupla on entisensä.
    * @returns {boolean} näkyikö kupla PINOSSA (chatin ollessa auki
    *   puheenvuoro menee pelkkään virtaan ja tästä palaa epätosi).
    */
-  naytaSaapumiskupla(teksti, { kuittaus = null, linssinOma = false } = {}) {
+  naytaSaapumiskupla(teksti, { kuittaus = null, linssinOma = false, luokka = '' } = {}) {
     if (!teksti || this.nappi.hidden) return false;
     // LINSSI PÄÄLLÄ: puheenvuoro odottaa vuoroaan (ks. lykkaaLinssiin).
     // Portti on ENNEN chattiin kirjaamista, jotta virran järjestys on
     // se, jossa repliikit lopulta sanotaan.
     if (!linssinOma && linssiEstaa(this.doc)) {
-      return this.lykkaaLinssiin(() => this.naytaSaapumiskupla(teksti, { kuittaus }));
+      return this.lykkaaLinssiin(() => this.naytaSaapumiskupla(teksti, { kuittaus, luokka }));
     }
     // Puhekupla kuuluu chattiin aina, myös silloin kun se ei ehdi
     // pinoon asti (ks. kirjaaKuplaViestiin).
@@ -2441,6 +2446,7 @@ class Pollo {
     this.kiinnita();
     const kupla = this.luoKupla('puhe');
     kupla.classList.add('pollo-vihje-maadoitus');
+    if (luokka) kupla.classList.add(luokka);
     for (const kappale of jaaKappaleiksi(teksti)) {
       kupla.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
     }
@@ -3490,7 +3496,7 @@ class Pollo {
    */
   naytaPuheenvuoro(osat, {
     kuittaus = null, jatkuuko = () => true, linssinOma = false, viive = null,
-    aani = null,
+    aani = null, luokka = '',
   } = {}) {
     const palat = (Array.isArray(osat) ? osat : [osat])
       .map((osa) => String(osa ?? '').trim()).filter(Boolean);
@@ -3500,7 +3506,7 @@ class Pollo {
     if (!linssinOma && linssiEstaa(this.doc)) {
       return this.lykkaaLinssiin(
         () => this.naytaPuheenvuoro(palat, {
-          kuittaus, jatkuuko, viive, aani,
+          kuittaus, jatkuuko, viive, aani, luokka,
         }),
       );
     }
@@ -3511,11 +3517,12 @@ class Pollo {
     const nakyi = this.naytaSaapumiskupla(palat[0], {
       kuittaus: yksi ? kuittaus : null,
       linssinOma,
+      luokka,
     });
     const aaniKahva = nakyi ? (aani?.(0, palat[0]) ?? null) : null;
     if (!nakyi || yksi) return nakyi;
     this.puheenvuoro = {
-      palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani, aaniKahva,
+      palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani, aaniKahva, luokka,
     };
     this.ajastaPuheenvuoro();
     return true;
@@ -3569,6 +3576,7 @@ class Pollo {
         // Jatko-osat kulkevat samasta portista kuin ensimmäinen: linssin
         // oma puheenvuoro puhutaan loppuun, vaikka linssi on yhä päällä.
         linssinOma: nyt.linssinOma,
+        luokka: nyt.luokka,
       });
       // Ääni kuplaa kohti: jokainen osa on oma äänitiedostonsa, ja sen
       // soitin kertoo seuraavalle ajastukselle puheen todellisen keston.

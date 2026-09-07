@@ -516,7 +516,10 @@ test('hionta 6.9.2026: laskenta työsäikeessä varapolulla, Käynnistä odottaa
    * perääntymistiellä `?virrat=kalvo`, ja silmukka kasvattaa vanoja.
    */
   assert.match(VIRRAT, /const kalvotila = new URLSearchParams\(globalThis\.location\?\.search \?\? ''\)\.get\('virrat'\) === 'kalvo';/);
-  assert.match(VIRRAT, /tila\.vanat\?\.paivita\(vuosia\);/);
+  // Pito kulkee mukana kertomusesitystä varten (7.9.2026): kelaus
+  // taaksepäin ei saa purkaa jo piirrettyä vanaa. Pysäkkiajossa lippu
+  // on epätosi, joten kasvu on entisensä.
+  assert.match(VIRRAT, /tila\.vanat\?\.paivita\(vuosia, \{ pito: tila\.pito \}\);/);
   assert.match(VIRRAT, /} else \{\n\s*const alku = performance\.now\(\);\n\s*maalaa\(vuosia\);/);
   assert.ok(!/nuoli/i.test(VIRRAT.replace(/\/\*[\s\S]*?\*\//g, '')), 'nuolen koodi poistui');
   // Moottori: Käynnistä odottaa laskennan; kuori on pinontayhteys linssin ajan.

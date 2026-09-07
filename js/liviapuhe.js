@@ -234,11 +234,60 @@ export function livianKaupunkiKuplia(kaupunkiId, kentta) {
   return livianKaupunkiKentat(kaupunkiId).find((k) => k.kentta === kentta)?.kuplat ?? 0;
 }
 
+/**
+ * LINSSIEN VÄLIHUOMIOT: linssin tunnus → ne jaksot, joissa pulu
+ * kommentoi, siinä järjestyksessä jossa ne saavat tiedostonumeronsa.
+ *
+ * Sama kirjanpito kuin kaupungeilla (LIVIAN_KAUPUNKILAHTEET), eri
+ * aineisto: kaupungin kentät asuvat pakkauksessa, linssin jaksot
+ * kertomuksen kaanonissa (js/linssit/ihmisen-matka-kertomus.js, kenttä
+ * `pulu`). Raamattu KAARI HYVAKSYTTY, TUTKIMUSVAIHE, VIISI NAPPIA
+ * kohta 5: *"kertomuksen keskelle 1–3 pulun lyhyttä välihuomiota omaan
+ * tyyliin, ettei kertoja ole monotoninen"* — ja lopun välihuomio on se,
+ * jolla pulu kertoo olevansa autettavissa (kohta 4).
+ *
+ * JÄRJESTYSTÄ EI SAA MUUTTAA jälkikäteen: numero on tiedostonimessä
+ * (`livia-ihmisen-matka-1.mp3`). Uusi jakso lisätään listan LOPPUUN.
+ * Listan on vastattava kertomuksen `pulu`-kenttiä; ristiriita kaataa
+ * tools/generoi-pulu.mjs:n eikä maksa yhtäkään kutsua
+ * (tests/ihmisen-matka-esitys.test.mjs vartioi saman koneellisesti).
+ *
+ * TEKSTIT ODOTTAVAT AJOA 7.9.2026: ämpärissä ei ole vielä yhtään
+ * `livia-ihmisen-matka-*.mp3`-tiedostoa, joten kupla näkyy ja pulu on
+ * hiljaa (LIVIAN_AANITETYT). Se on tila, ei vika.
+ */
+export const LIVIAN_LINSSILAHTEET = {
+  'ihmisen-matka': ['ranta', 'denisova', 'beringia', 'loppu'],
+};
+
+/**
+ * VÄLIHUOMION VAIMENNUS: pulu soi kertojan päälle hiljempaa eikä
+ * kertoja väisty. Sama luku kuin fokusvirran huudahduksella
+ * (js/fokusvirta.js HUUDAHDUKSEN_VAIMENNUS) — se on sama ilmiö.
+ */
+export const LIVIAN_VALIHUOMION_VAIMENNUS = 0.7;
+
 /** Repliikkilähteet siinä nimeämisjärjestyksessä, jota työkalu käyttää. */
 export const LIVIAN_AANILAHTEET = [
   'avaus', 'paljastus', 'mannerivihje', 'lehtivinkki',
   ...Object.keys(LIVIAN_KAUPUNKILAHTEET),
+  ...Object.keys(LIVIAN_LINSSILAHTEET),
 ];
+
+/**
+ * Linssin välihuomion järjestysnumero jakson tunnuksesta.
+ *
+ * Kutsupaikka sanoo "Ihmisen matka, jakso denisova" eikä numeroa:
+ * numeron omistaa LIVIAN_LINSSILAHTEET.
+ *
+ * @param {string} linssi linssin tunnus
+ * @param {string} jakso kertomusjakson tunnus
+ * @returns {number|null} indeksi tai null, jos jaksolla ei ole huomiota
+ */
+export function livianLinssiIndeksi(linssi, jakso) {
+  const i = (LIVIAN_LINSSILAHTEET[linssi] ?? []).indexOf(jakso);
+  return i < 0 ? null : i;
+}
 
 /**
  * Saapumisrepliikit lähteittäin: indeksit, joissa Livia tulee paikalle
@@ -519,9 +568,11 @@ export function livianKorostetutKaupungit() {
  * asuvat pakkauksissa ja muuttuvat siellä ilman että tiedostonimi
  * muuttuu, joten ilman tekstiä ei voi todeta, sanooko ämpärin äänite
  * saman kuin kupla — ja vaikeneminen on silloin ainoa oikea vastaus.
+ * SAMA KOSKEE LINSSILÄHTEITÄ (LIVIAN_LINSSILAHTEET): kertomuksen
+ * `pulu`-tekstit asuvat kaanonissa ja muuttuvat siellä.
  */
 export function livianAaniAjanTasalla(lahde, indeksi, teksti = null) {
-  if (teksti == null) return !LIVIAN_KAUPUNKILAHTEET[lahde];
+  if (teksti == null) return !LIVIAN_KAUPUNKILAHTEET[lahde] && !LIVIAN_LINSSILAHTEET[lahde];
   const avain = `${lahde}-${indeksi + 1}`;
   return LIVIAN_AANITETYT[avain] === livianTiiviste(teksti);
 }
@@ -861,4 +912,33 @@ export function soitaLivianKaupunkiAani(ui, kaupunkiId, kentta,
   const indeksi = livianKaupunkiIndeksi(kaupunkiId, kentta, kupla);
   if (indeksi === null) return null;
   return soitaLivianAani(ui, kaupunkiId, indeksi, { teksti, vaimennus, vaista });
+}
+
+/**
+ * LINSSIN VÄLIHUOMION ÄÄNI JAKSON TUNNUKSELLA (js/linssit/
+ * ihmisen-matka-esitys.js).
+ *
+ * Kutsupaikka sanoo linssin ja jakson — "ihmisen-matka, denisova" —
+ * eikä numeroa: numeron omistaa LIVIAN_LINSSILAHTEET. Jakso, jota ei
+ * ole taulussa, on hiljainen ilman että kutsupaikan tarvitsee tietää
+ * siitä mitään.
+ *
+ * VÄLIHUOMIO EI VÄISTÄ eikä huuda: oletuksena sama vaimennus ja sama
+ * `vaista: false` kuin fokusvirran huudahduksella (js/fokusvirta.js
+ * HUUDAHDUKSEN_VAIMENNUS) — kertoja jatkaa entisellä voimallaan.
+ *
+ * @param {object} ui pelin käyttöliittymä
+ * @param {string} linssi linssin tunnus
+ * @param {string} jakso kertomusjakson tunnus
+ * @param {object} [asetukset]
+ * @param {string|null} [asetukset.teksti] kuplan teksti tiivisteportille
+ * @param {number} [asetukset.vaimennus] voimakkuuden kerroin
+ * @param {boolean} [asetukset.vaista] väistääkö tausta
+ * @returns {HTMLAudioElement|null} soittimen kahva tai null
+ */
+export function soitaLivianLinssiAani(ui, linssi, jakso,
+  { teksti = null, vaimennus = LIVIAN_VALIHUOMION_VAIMENNUS, vaista = false } = {}) {
+  const indeksi = livianLinssiIndeksi(linssi, jakso);
+  if (indeksi === null) return null;
+  return soitaLivianAani(ui, linssi, indeksi, { teksti, vaimennus, vaista });
 }

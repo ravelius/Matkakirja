@@ -202,12 +202,14 @@ const SHELL = [
   // tulevat linssin mukana; piirto ja laskenta seuraavat js/aikajana.js:ää.
   './js/linssit/ihmisen-matka-virrat.js',
   './js/linssit/ihmisen-matka-maamaski.js',
-  // Kertomus yhtenä kaarena (7.9.2026), sen jaksojen äänimaisemat ja
-  // tutkimusvaihe (esityksen jälkeen kartta jää pelaajalle: nostot,
-  // viisi nappia, kysymykset pululle). Maisematiedostot tulevat
-  // ämpäristä, mutta soitin ja käsikirjoitus kuuluvat kuoreen — muuten
-  // linssi hajoaisi lentokoneessa.
+  // Kertomus yhtenä kaarena (7.9.2026): kaanoni, sen ohjaaja (esitys),
+  // jaksojen äänimaisemat ja tutkimusvaihe (esityksen jälkeen kartta
+  // jää pelaajalle: nostot, viisi nappia, kysymykset pululle).
+  // Maisematiedostot tulevat ämpäristä, mutta soitin ja käsikirjoitus
+  // kuuluvat kuoreen — muuten offline-peli avaisi linssin, jolla ei
+  // ole esitystä.
   './js/linssit/ihmisen-matka-kertomus.js',
+  './js/linssit/ihmisen-matka-esitys.js',
   './js/linssit/ihmisen-matka-aanimaisema.js',
   './js/linssit/ihmisen-matka-tutkimus.js',
   './css/ihmisen-tutkimus.css',

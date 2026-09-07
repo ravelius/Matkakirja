@@ -257,6 +257,13 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     kuvapysakkiAsti: 0,
     kuvapysakki: null,
     lopunAlku: 0,
+    /*
+     * PITO: vana ei koskaan lyhene (js/aikajana-vanat.js paivita).
+     * Kertomusesitys kääntää tämän päälle, koska sen kaanoni palaa
+     * ajassa taaksepäin (Karmelvuori, aikahyppy) eikä rintama saa
+     * kelautua auki. Pysäkkiajossa lippu on pois ja kaikki on ennallaan.
+     */
+    pito: false,
   };
   /*
    * Virtojen sävyt hetkellä nyt: [virta][vanha r,g,b, rintama r,g,b].
@@ -292,7 +299,7 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
       const aloita = () => {
         if (tila.purettu) return;
         paivitaKalvojenPeitto(lukema());
-        tila.vanat?.paivita(lukema());
+        tila.vanat?.paivita(lukema(), { pito: tila.pito });
         ilmoitaValmis?.();
         ilmoitaValmis = null;
       };
@@ -885,7 +892,7 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
       tila.viimeNyt = vuosia;
       if (vanatKaytossa) {
         // Vanan kasvu ja kärkivärit; kalvoista muuttuu vain peitto.
-        tila.vanat?.paivita(vuosia);
+        tila.vanat?.paivita(vuosia, { pito: tila.pito });
         paivitaKalvojenPeitto(vuosia);
       } else {
         const alku = performance.now();
@@ -944,6 +951,12 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     siirry,
     pura,
     valmis,
+    /**
+     * PITOTILA PÄÄLLE TAI POIS (js/linssit/ihmisen-matka-esitys.js).
+     * Päällä piirretty vana ei enää lyhene, vaikka kello kelaisi
+     * taaksepäin — ks. tila.pito.
+     */
+    asetaPito: (paalla) => { tila.pito = Boolean(paalla); },
     /** Seuraaminen heti takaisin (savukkeet ja kuvakaappaukset). */
     jatkaSeuranta: () => { tila.keskeytettyAsti = 0; tila.pov = null; },
     /**
@@ -977,6 +990,7 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
       kameranLeveys: tila.pov?.leveys ?? null,
       pisteita: tila.pisteet.size,
       vanat: vanatKaytossa,
+      pito: tila.pito,
       /** Viimeisen kankaan maalauksen kesto (ms) — puhelimen mittari. */
       maalausMs: tila.maalausMs ?? null,
       /** Missä laskenta ajettiin: 'tyosaie' tai 'paasaie'. */

@@ -102,5 +102,5 @@ test('kerrokset, jotka katoavat kesken kosketuksen, ilmoittavat siitä', () => {
   // Linssin purku vie paneelin, lamput ja loppulapun kerralla.
   const aikajana = lue('../js/aikajana.js');
   const pura = aikajana.slice(aikajana.indexOf('  pura() {'));
-  assert.match(pura.slice(0, 900), /vapautaKosketus\(\);/);
+  assert.match(pura.slice(0, 1600), /vapautaKosketus\(\);/);
 });

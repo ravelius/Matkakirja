@@ -74,6 +74,7 @@
 
 import { projisoiLaudalle } from '../fokusmitat.js';
 import * as data from './ihmisen-matka-data.js';
+import { IHMISEN_MATKA_KERTOMUS } from './ihmisen-matka-kertomus.js';
 import {
   IHMISEN_MATKA_VIRRAT, IHMISEN_MATKA_RETKI, IHMISEN_MATKA_VANHA, IHMISEN_MATKA_VANAT, VIRRAN_PEITTO,
 } from './ihmisen-matka-virrat.js';
@@ -327,6 +328,23 @@ export const LINSSI = {
      * maksullista kutsua.
      */
     loppupuhe: true,
+    /*
+     * KERTOMUS YHTENÄ KAARENA (Raamattu IHMISEN MATKA ON YKSI KAARI, EI
+     * PYSAKKEJA; kaanoni js/linssit/ihmisen-matka-kertomus.js, omistajan
+     * hyväksymä 7.9.2026). Kentän olemassaolo VAIHTAA AJON MALLIN:
+     * moottori ei aja pysäkkikelloa vaan antaa esityksen ohjaajalle
+     * (js/linssit/ihmisen-matka-esitys.js) kellon, kameran ja kuvat.
+     * Pysäkit (`tapahtumat`) jäävät paikoilleen — ne ovat kartan
+     * löytöpaikat, joiden lampuista ja kuvista esitys ja sen jälkeinen
+     * tutkimusvaihe ammentavat.
+     */
+    kertomus: IHMISEN_MATKA_KERTOMUS,
+    /*
+     * Jaksojen luentojen tiedostorungon etuliite ämpärissä
+     * (js/linssipuhe.js kertomuksenRunko):
+     * aikajana/ihmisen-matka/puhe/ihmisen-matka-kertomus-<jakso>.mp3.
+     */
+    kertomusRunko: 'ihmisen-matka-kertomus',
     lahikuva: IHMISEN_MATKAN_LAHIKUVA,
     hyppykamera: true,
     reitti: false,

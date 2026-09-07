@@ -720,7 +720,9 @@ test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa se
   assert.match(MOOTTORI, /this\.tila = tila;\n\s*this\.naytaVuosi\(tila\.vuosi\);/);
   // Lamput ovat napautettavia (omistaja 3.9.2026) ja paneeli raahattava.
   assert.match(MOOTTORI, /g\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); this\.napautaValoa\(i\); \}\)/);
-  assert.match(MOOTTORI, /napautaValoa\(i\) \{[\s\S]{0,200}this\.siirry\(i\);/);
+  // (Väli kasvoi kertomusportilla 7.9.2026: esityksen aikana lampun
+  // napautus ei siirry pysäkkiin, koska pysäkkejä ei ole — ks. alempaa.)
+  assert.match(MOOTTORI, /napautaValoa\(i\) \{[\s\S]{0,400}this\.siirry\(i\);/);
   assert.match(MOOTTORI, /kytkeRaahaus\(\) \{[\s\S]{0,6000}rajaaPaneelinSiirto\(paneeli, this\.juuri/);
   const CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
   assert.match(CSS, /\.aikajana-valo\.palaa \{ pointer-events: auto; cursor: pointer; \}/);
@@ -749,7 +751,9 @@ test('moottori käskee musiikkia käynnistyksessä, tauolla, jutussa ja purussa'
    * täysi linssitaso tulee vasta Käynnistä-napista. Loppuu purussa.
    */
   assert.ok(MOOTTORI.match(/\n  kaynnista\(\) \{[\s\S]*?\n  \}/)[0].includes('this.aloitaMusiikki(false)'), 'käynnistys ei aloita musiikkia hiljaa');
-  assert.match(MOOTTORI, /aloitaAjo\(\) \{[\s\S]{0,900}this\.aloitaMusiikki\(true\)/);
+  // Väli kasvoi kertomusportilla 7.9.2026: kertomuskaarella musiikki
+  // nousee vasta valojen syttyessä, ja portti on ennen näitä rivejä.
+  assert.match(MOOTTORI, /aloitaAjo\(\) \{[\s\S]{0,1500}this\.aloitaMusiikki\(true\)/);
   // Koko metodilohko eikä merkkilaskuri: purkuun tulee rivejä lisää
   // aina kun linssiin tulee uusi kerros (avausjakso, välinäytös).
   assert.ok(PURA.includes('this.lopetaMusiikki();'), 'purku ei lopeta musiikkia');

@@ -1322,3 +1322,242 @@ haluaa: Toba, Sunda, Sahul, Wallacea, Flores, Sulawesin luolataide,
 Ust'-Ishim, Kostenki, Sungir, Dolní Věstonice, Mal'tan poika, Lascaux,
 Bluefish, Paisley, Clovis, Doggerland, Teouma, Saqqaq, Madagaskar,
 Rapa Nui. Repoon ei viedä kuvia; ne kuuluvat ämpäriin kuten muutkin.
+## 12. Esitys yhtenä kaarena (toteutettu 7.9.2026)
+
+*(Raamattu: IHMISEN MATKA ON YKSI KAARI, EI PYSAKKEJA · KERTOMUS
+SOLJUVAKSI, EI VUOSILUKUJA ALKUUN, PALUU AASIAAN · ALKAA MUSTASTA
+RUUDUSTA · KAARI HYVAKSYTTY, TUTKIMUSVAIHE, VIISI NAPPIA. Luvut 1–10
+kuvaavat vanojen laskentaa ja piirtoa; ne ovat ennallaan. Tämä luku
+korvaa luvun 4 esitysmallin — "kuusi kuvapysäkkiä, kello pysähtyy
+kuudesti" — kokonaan: kello ei enää pysähdy kertaakaan.)*
+
+### 12.1 Mikä muuttui
+
+Pysäkkiajo teki Ihmisen matkasta keksintölinssin: kello pysähtyi
+kuvapysäkillä, kortti vaihtui, kertoja luki kolmen sanan rivin ja ajo
+jatkoi. Omistajan linjaus 7.9.2026 illalla kumosi mallin: *"Tässä on
+siis yksi pitkä tarinankaari … Ne pysäkit ovat vain meidän tekemiämme
+kaivauksia ja havaintoja, mutta se ei saisi rikkoa sitä virtaa."*
+
+Nyt linssillä on **kaksi rinnakkaista ajomallia** samassa moottorissa,
+ja kaaren kenttä `kertomus` valitsee kumpi:
+
+| | pysäkkiajo (keksinnöt) | kertomusesitys (Ihmisen matka) |
+| --- | --- | --- |
+| kellon lähde | `aikajanaAskel`, pysäkkiväli | kaanonin jaksot, luennan kesto |
+| kello pysähtyy | joka pysäkillä | ei koskaan |
+| kertoja | kolmen sanan rivi pysäkillä | jakson teksti, jaksot peräkkäin |
+| kamera | pysäkiltä pysäkille + virtojen kärkiseuranta | jakson kohde tai nimetty alue |
+| kuvat | kortti + havainnekuvapaneeli | pieni kuva kohteen vieressä |
+| esinerivi | näkyvissä | piilossa esityksen ajan |
+| loppu | loppusanat + Tiedeliite | `ui.aloitaTutkimusvaihe?.()` |
+
+Pysäkit (`tapahtumat`, 20 löytöpaikkaa) **jäivät paikoilleen**: ne ovat
+kartan lamput, kuvat ja tutkimusvaiheen nostokohdat. Esitys vain ei aja
+niitä kellona.
+
+### 12.2 Tiedostot
+
+- `js/linssit/ihmisen-matka-kertomus.js` — **kaanoni** (Fable, omistajan
+  hyväksymä). 22 jaksoa: `id`, `vaihe`, `kohde`, `alue`, `vuosia`,
+  `teksti`, `luenta`, `pulu`. Koodi ei muuta näiden sanoja.
+- `js/linssit/ihmisen-matka-esitys.js` — **ohjaaja**. Ei omista mitään
+  pintaa: se kertoo moottorille, mitä kaanoni kussakin jaksossa tahtoo.
+- `js/aikajana.js` — portit: `kaynnista` luo ohjaajan, `aloitaAjo`
+  antaa sille vuoron, `taukoTaiJatka` ja näppäimistö delegoivat sille,
+  `pura` purkaa sen. Lisäksi `vuosiaSittenPaikka` (kellon käännös).
+- `js/aikajana-vanat.js`, `js/aikajana-virrat.js` — pitotila.
+- `css/aikajana.css` — osio "KERTOMUSESITYS".
+- `js/linssipuhe.js` — `kertomuksenRunko`, `kertomuksenVarakesto`,
+  `kertomuksenLuennat`.
+- `js/liviapuhe.js` — `LIVIAN_LINSSILAHTEET`, `soitaLivianLinssiAani`.
+- `tools/generoi-linssiluennat.mjs --kertomus`, `tools/generoi-pulu.mjs`.
+- `tests/ihmisen-matka-esitys.test.mjs`,
+  `tools/savukkeet/savuke-ihmisen-esitys.mjs`.
+
+### 12.3 Viisi vaihetta
+
+1. **PIMEÄ** (`vaihe: 'pimea'`, jakso `avaus`). Käynnistä-napin jälkeen
+   ohjaaja panee mustan peitteen linssin juuren ensimmäiseksi lapseksi
+   ja lisää juureen luokan `esitys-pimea`: kello, otsikot, esinerivi,
+   ilmiöpaneeli, vinjetti ja Tauko-nappi väistyvät, **vain sulkunappi
+   jää käytettäväksi**. Kertojan `avaus`-luenta soi.
+   **Musiikki ja äänimaisema eivät vielä ala** — musta ruutu on
+   hiljainen (`aloitaMusiikki` jää tekemättä koko avausjaksossa).
+2. **VALOT** (`valot`, jakso `afrikka`). Kamera on ajettu koko Afrikan
+   rajaukseen jo pimeässä (kesto 0), joten musta vain häipyy pois
+   2,6 sekunnissa (`VALOJEN_MS`) valmiiseen näkymään. Musiikki nousee
+   sisään (`aloitaMusiikki(true)`, soittimen oma nousu) ja vanojen
+   **pito** kytkeytyy päälle lopuksi ajaksi.
+3. **MATKA** (`matka`). Jaksot peräkkäin ilman taukoa. Jokaisella:
+   luenta soi, kamera liukuu (`kohde` → lähikuva 1 200 lautayksikköä;
+   `alue` → nimetty bbox), kello etenee **lineaarisesti** jakson
+   `vuosia`-arvosta seuraavan jakson arvoon luennan keston mukaan, ja
+   vanat kasvavat kellon tahdissa entisellä moottorilla.
+4. **HYPPY** (`hyppy`, jakso `aikahyppy`). Kello kelaa taaksepäin
+   14 500 → 50 000 pehmennetyllä liu'ulla 2,4 sekunnissa
+   (`KELAUKSEN_MS`, `kelauksenPehmennys`), kamera siirtyy
+   Keski-Aasiaan, ja kelauksen jälkeen kello jatkaa normaalisti
+   50 000 → 45 000 loppujakson ajan. Rintama ei katoa (11.5).
+5. **LOPPU** (`loppu`). Kamera vetäytyy koko palloon (`alue: 'maailma'`),
+   pulun välihuomio, ja esitys PÄÄSTÄÄ IRTI esinerivistä (luokka
+   `esitys-kaynnissa` pois) — ja `ui.aloitaTutkimusvaihe?.()`.
+   **Tutkimusvaiheen sisältö on toisen moduulin työtä**; ilman koukkua
+   esitys päättyy siihen, että kartta jää pelaajalle.
+
+   Huomaa: esinerivi ei silti täyty korteista itsestään. Nauhalla on
+   moottorin oma `tyhja`-tila niin kauan kuin PYSÄKKIKELLO ei ole
+   käynyt (js/aikajana.js asettele), eikä kertomusesityksessä se käy
+   koskaan. Esitys poistaa vain OMAN pitonsa; mitä alarivillä lopulta
+   näkyy, päättää tutkimusvaihe.
+
+### 12.4 Kello: lukema sisään, paikka ulos
+
+Moottori, kellorullat ja värivirrat lukevat kaikki `tila.vuosi`-
+**paikkaa** (`js/aikajana-virrat.js lukema`), joka on paloittain
+logaritminen asteikko pysäkkien `vuosiaSitten`-luvuista. Esitys
+puhuu **lukemina** ("nyt ollaan 164 000 vuoden kohdalla"), joten
+`js/aikajana.js` sai käänteisfunktion `vuosiaSittenPaikka`. Se on
+`vuosiaSittenLukeman` tarkka käänteinen (yksikkötesti käy koko kaaren
+läpi 1,7 yksikön askelin), joten kello näyttää sitä, mitä esitys
+tarkoittaa, ja vanat kasvavat samaan tahtiin ilman erillistä kytkentää.
+
+Yksi poikkeus lineaarisuuteen: **aikahyppyä edeltävä jakso ei kelaa
+itse**. Chilen jakso (14 500) ja aikahyppy (50 000) ovat peräkkäin,
+joten suoraviivainen sääntö olisi kelannut takaisin Keski-Aasiaan jo
+kertojan puhuessa pisimmästä kävelymatkasta. Sääntö on siksi:
+`jaksonTahti` pitää jakson lukemassaan, jos SEURAAVA jakso on
+hyppyjakso — hyppy kuuluu hyppyjaksolle.
+
+Jakson kesto on **äänitteen kesto**, luettuna soittimen
+`loadedmetadata`-tapahtumasta heti kun se saapuu. Siihen asti — ja
+kokonaan ilman äänitettä (mykistys, kertojatila 'ei', puuttuva
+tiedosto) — kesto on tekstin pituus / 14 merkkiä sekunnissa
+(`kertomuksenVarakesto`). Koko kertomus on ilman ääntä noin **4,5
+minuuttia** (3 819 merkkiä). Kulunut aika mitataan **seinäkellosta**
+eikä kehysten summasta: luenta on reaaliaikaista ääntä, ja hitaasti
+piirtyvä pallo ei saa jättää kertojaa jälkeen kartasta.
+
+### 12.5 Pito: rintama ei katoa
+
+Kaanoni palaa ajassa taaksepäin **kahdesti**: Blombos (75 ka) →
+Karmelvuori (110 ka) ja Chile (14,5 ka) → aikahyppy (50 ka). Ilman
+suojaa vana kelautuisi kummallakin kerralla auki — koko Amerikkoihin
+piirretty selkäranka katoaisi ruudulta.
+
+`js/aikajana-vanat.js paivita(nyt, { pito })` pitää **yksisuuntaisen
+maksimin** vanaa kohti (`o.pitomatka`): piirretty pituus ei koskaan
+lyhene, mutta kasvaa yhä normaalisti kun kello ohittaa ennätyksen.
+Kotipesät jäävät samasta syystä palamaan. `karjenPaino(..., { pito })`
+antaa nollan kärjelle, jonka aika ei ole vielä tullut: pidetty osa on
+**vanhaa väestöä**, ei rintamaa — ilman ehtoa koko vana leimahtaisi
+rintamaväriin kelauksen jälkeen. Kytkin on
+`js/aikajana-virrat.js asetaPito(true)`, ja pysäkkiajossa se on pois
+päältä, joten keksintökaari ja Ihmisen matkan vanha ajo ovat ennallaan.
+
+### 12.6 Kuvat sivuosassa
+
+Kun jaksolla on kohde, sen havainnekuva nousee **pienenä** (22 % ruudun
+leveydestä, katto 260 px, pergamenttikehys) kohteen **viereen**
+luennan ajaksi ja häipyy jakson päättyessä. Kehys ripustetaan lampun
+CSS2D-elementtiin, joten se seuraa pistettä kameran liikkuessa eikä
+sitä tarvitse asemoida. Se ei pysäytä mitään: kello käy, kamera liukuu
+ja kertoja jatkaa.
+
+Kokeeksi pois: `IHMISEN_MATKA_KUVAT_ESITYKSESSA = false`
+(js/linssit/ihmisen-matka-esitys.js) tai osoiterivin
+`?esityskuvat=ei` — jälkimmäinen ei vaadi koodin muokkausta.
+Kohteen lamppu jää palamaan (`palaa`, ei `nykyinen`), jolloin kartalle
+kertyy esityksen aikana hiljaisia hehkuja tutkimusvaihetta varten.
+
+Esinerivi (alareunan karuselli) on **piilossa koko esityksen ajan**
+(`.aikajana.esitys-kaynnissa .aikajana-nauha`) ja palaa, kun ohjaaja
+poistaa luokan juuri ennen tutkimusvaiheen koukkua.
+
+### 12.7 Pulun välihuomiot
+
+Jakson `pulu` luetaan pulun äänellä jakson **luennan päätyttyä**, ennen
+seuraavaa jaksoa: jakson kesto on luenta + `PULUN_VARA_MS` (2,6 s), ja
+kupla nousee tuon hännän alussa. Kello ei pysähdy.
+
+Kupla on **linssin oma** (`polloLinssikupla`, ohittaa kuplaportin) ja
+saa lisäluokan `aikajana-kertomus-pulu`, joka tekee siitä kapean ja
+hieman kallellaan olevan välihuudon — sama asu kuin fokusvirran
+huudahduksella. Ääni soi 0,7 × tasolla kertojan **päälle** ilman
+kertojan väistöä (`soitaLivianLinssiAani`, `vaista: false`).
+
+Numerointi tulee taulusta `LIVIAN_LINSSILAHTEET` (js/liviapuhe.js):
+
+```js
+'ihmisen-matka': ['ranta', 'denisova', 'beringia', 'loppu'],
+```
+
+Järjestystä ei saa muuttaa jälkikäteen — numero on tiedostonimessä
+(`livia-ihmisen-matka-1.mp3`). Ristiriita taulun ja kaanonin
+`pulu`-kenttien välillä kaataa `tools/generoi-pulu.mjs`:n ennen
+ensimmäistäkään maksullista kutsua, ja yksikkötesti vartioi saman.
+
+### 12.8 Äänet: mitä on ja mitä puuttuu
+
+**Mitään ei ole vielä generoitu** (7.9.2026). Fable ajaa työnkulun.
+
+Kertojan jaksot:
+
+```
+node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --kertomus --kuiva
+node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --kertomus
+```
+
+- Tiedostonimi: `kertomuksenRunko` → `ihmisen-matka-kertomus-<jakso>.mp3`
+  kansiossa `aikajana/ihmisen-matka/puhe/`. Sama funktio pelissä ja
+  työkalussa, joten nimi ei voi eriytyä.
+- Mallille lähtee kaanonin `luenta`-kenttä **sellaisenaan** (tagit ovat
+  kaanonia, työkalu ei lado niitä).
+- Ajo vie samalla manifestin `kertomus-manifesti.json` samaan kansioon:
+  jakso, tiedosto, merkkimäärä, arvio ja valmiin äänitteen kesto. Peli
+  ei tarvitse sitä (kesto tulee soittimesta), mutta siitä näkee
+  yhdellä silmäyksellä, mitä ämpärissä on.
+- `--pysakit avaus,denisova` valitsee yksittäisiä jaksoja tunnuksella.
+
+Pulun välihuomiot: `node tools/generoi-pulu.mjs --kuiva` listaa neljä
+uutta riviä (`ihmisen-matka-1…4`). Generoinnin jälkeen niiden
+tiivisteet on liitettävä `LIVIAN_AANITETYT`-tauluun, tai peli vaikenee
+(kupla toimii silti).
+
+Äänimaisemat (Raamattu LINSSIEN AIDOT AANIMAISEMAT) eivät ole vielä
+olemassa; kun ne tulevat, ne nousevat sisään samasta kohdasta kuin
+musiikki (`sytytaValot`).
+
+### 12.9 Tauko, näppäimistö ja vähennetty liike
+
+Tauko-nappi (ja väli/Enter) pysäyttää **luennan ja kellon** samasta
+kohdasta: ääni pausetetaan (ei pysäytetä), silmukka pysähtyy, musiikki
+puolittuu. Jatko siirtää lähtöhetkeä kuluneen verran taaksepäin ja
+jatkaa ääntä siitä mihin se jäi. Esc sulkee linssin. Nuolet eivät selaa
+— esityksessä ei ole pysäkkejä selattavaksi — eikä lampun napautus
+siirry pysäkkiin.
+
+`prefers-reduced-motion`: kaikki kamera-ajot ovat hyppyjä (kesto 0),
+CSS-liu'ut poissa (peite, teksti, kuva, esinerivi) ja kello asetetaan
+`heti`. Esitys kulkee silti jakso jaksolta samassa tahdissa.
+
+### 12.10 Portit
+
+- `node --test tests/*.test.mjs` — mukana
+  `tests/ihmisen-matka-esitys.test.mjs` (16 väitettä: kaanonin muoto,
+  kellon käännös, luennan nimi ja kesto, pulun taulu, vanojen pito,
+  esityksen pinnat).
+- `node tools/savukkeet/savuke-ihmisen-esitys.mjs` — koko esitys
+  selaimessa 834 × 1100, äänitteet mockattuina 3 s hiljaisuudella:
+  pimeä alku, tauko ja jatko, valot Afrikkaan, jaksot loppuun ilman
+  käyttäjän toimia, kuva kohteen vieressä, kello ja aikahypyn kelaus,
+  pulun välihuomiot, tutkimusvaiheen koukku, purku. Kuvakaappaukset
+  viidestä hetkestä, kukin esitys pysäytettynä.
+
+  MITATTU 7.9.2026 (kontti, ohjelmisto-WebGL): 22 jaksoa läpi, 17
+  löytökuvaa, 4 pulun kuplaa, kello 289 423 → 0, Chile pysyy 14 500:ssa,
+  aikahyppy käy 49 949:ssä, Eurooppa jatkaa 42 447:stä, koukku kutsutaan
+  tasan kerran, purku puhdas, ei sivuvirheitä. Ajo kestää kontissa
+  10–20 min: jokainen kuvakaappaus odottaa kehystä, ja kehys on siellä
+  noin sekunnin mittainen.
+- `node tools/tarkista-niputus.mjs`, `node tools/tarkista-savukkeet.mjs`.

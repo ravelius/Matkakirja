@@ -28,6 +28,7 @@ import {
   livianKentanKuplat, livianKenttaPinoutuu, livianKorostetutKaupungit, livianKuplanAika,
   livianKuplanAjastin, livianKuplat, livianSaapumisrepliikki,
   livianSoitettava, livianTiiviste, LIVIAN_KOROSTUS_KAYTOSSA, LIVIAN_PUHEEN_HANTA_MS,
+  LIVIAN_LINSSILAHTEET,
 } from '../js/liviapuhe.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
@@ -49,6 +50,12 @@ const LIVIA_LAHTEET = ['avaus', 'paljastus', 'mannerivihje', 'lehtivinkki'];
 const KAUPUNKIREPLIIKKEJA = Object.keys(LIVIAN_KAUPUNKILAHTEET)
   .flatMap((id) => livianKaupunkiKentat(id))
   .reduce((summa, { kuplat }) => summa + kuplat, 0);
+/**
+ * Linssien välihuomiot (Ihmisen matkan kertomus, 7.9.2026): yksi
+ * äänite jokaista kaanonin `pulu`-kenttää kohti.
+ */
+const LINSSIREPLIIKKEJA = Object.values(LIVIAN_LINSSILAHTEET)
+  .reduce((summa, jaksot) => summa + jaksot.length, 0);
 
 const lue = (polku) => readFileSync(new URL(polku, import.meta.url), 'utf8');
 
@@ -58,7 +65,8 @@ test('jokaisella repliikillä on oma tiedostonimi', () => {
   const rivit = repliikit();
   // Viisi avausta, KOLME paljastusta (uusi rytmi 7.9.2026), yksi
   // mannerivihje, yksi lehtivinkki + kaupungit.
-  assert.equal(rivit.length, LIVIAN_AVAUS.length + 3 + 1 + 1 + KAUPUNKIREPLIIKKEJA);
+  assert.equal(rivit.length,
+    LIVIAN_AVAUS.length + 3 + 1 + 1 + KAUPUNKIREPLIIKKEJA + LINSSIREPLIIKKEJA);
   const lahteet = LIVIAN_AANILAHTEET.join('|');
   for (const rivi of rivit) {
     assert.match(rivi.nimi, new RegExp(`^livia-(${lahteet})-\\d+\\.mp3$`),
@@ -83,8 +91,12 @@ test('nimi johdetaan lähteestä ja indeksistä samalla funktiolla', () => {
   assert.equal(livianAaniNimi('lehtivinkki', 0), 'livia-lehtivinkki-1.mp3');
   assert.deepEqual(LIVIAN_AANILAHTEET.slice(0, 6),
     ['avaus', 'paljastus', 'mannerivihje', 'lehtivinkki', 'ateena', 'sofia']);
-  // Kahdeksantoista Euroopan kaupunkia + Ateena (uusi kulku 7.9.2026).
-  assert.equal(LIVIAN_AANILAHTEET.length, 4 + 19);
+  // Kahdeksantoista Euroopan kaupunkia + Ateena (uusi kulku 7.9.2026)
+  // ja linssien välihuomiot (Ihmisen matkan kertomus, 7.9.2026).
+  assert.equal(LIVIAN_AANILAHTEET.length,
+    4 + 19 + Object.keys(LIVIAN_LINSSILAHTEET).length);
+  assert.equal(LIVIAN_AANILAHTEET.at(-1), 'ihmisen-matka');
+  assert.equal(livianAaniNimi('ihmisen-matka', 0), 'livia-ihmisen-matka-1.mp3');
 });
 
 /* ---------- kaupunkikohtaiset lähteet (Ateena ja Sofia ensin) ---------- */
