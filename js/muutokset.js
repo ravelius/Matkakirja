@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1661, teksti: 'Lehdet: saarivien lahteet, GRL kl, Aasian tekstit' },
   { v: 1660, teksti: '24 maalehtea, tunnusluvut, saarivit, 2 kohdekarttaa' },
   { v: 1659, teksti: 'Pallo: laattasarja 2026-09-07a ilman rantaviivaa' },
   { v: 1658, teksti: 'Ihmisen matka vanoina: paareitti, haarat ja galleria' },
