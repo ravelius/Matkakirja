@@ -1,0 +1,408 @@
+{
+  "createdAt": "2026-09-07T08:20:21.052797+00:00",
+  "message": "13 miniatyyriä ja kolme maalehtikuvaa, root- ja lähdetarkistettu.",
+  "items": [
+    {
+      "id": "maalehti-lka-musiikki-0-r20260907-v1",
+      "canonicalId": "maalehti-lka-musiikki-0",
+      "fileName": "maalehti-lka-musiikki-0-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Sri Lankan bailan innoittama kuvitus rannikkokylän soittajista kitaran, viulun ja kehärummun äärellä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-lka-musiikki-0-r20260907-v1.jpg",
+      "sha256": "272828c9e4668ade20db825484c3a50229e58e4e99a062d8210e4de64aadb3c5",
+      "bytes": 545156,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Completely new photorealistic editorial documentary scene of an anonymous Sri Lankan baila ensemble in a coastal village: guitar, violin and rabana frame drum, musicians at medium-long distance with unobtrusive faces, relaxed dancing neighbors, tropical evening light, full bodies and instruments central 60%, 20% margins, no text, 4:3 crop safe.",
+      "sources": [
+        "https://asia-archive.si.edu/podcast/baila-music-from-sri-lanka-the-gypsies/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read Smithsonian artist programme: baila has Portuguese and African roots and varied guitar, violin and percussion ensembles. This exact trio and gathering is invented; source does not explicitly establish rabana as a necessary instrument."
+    },
+    {
+      "id": "maalehti-nam-historia-1-r20260907-v2",
+      "canonicalId": "maalehti-nam-historia-1",
+      "fileName": "maalehti-nam-historia-1-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Ambomaan suomalaisen lähetystyön innoittama historiallinen kuvitus 1800-luvun lopun kohtaamisesta lähetysasemalla.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nam-historia-1-r20260907-v2.jpg",
+      "sha256": "45b8487bce3f9c009867bc4bb283ed36508c8a6ecbdb09b4b0b505d8fc0744b4",
+      "bytes": 519828,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new sharp photorealistic 1536x1024 historical reconstruction of a late-19th-century Finnish mission station in Ovamboland, Namibia. Show low mud-and-thatch mission buildings in a dry palm-dotted landscape and a small local congregation. The named missionary is only a small distant figure viewed fully from behind, face invisible. Absolutely no signs, plaques, flags, letters, words, numbers, captions, logos or readable text anywhere. Wide restrained documentary framing, all figures and buildings central 60%, generous 20% margins, 4:3 crop safe.",
+      "sources": [
+        "https://www.museums.com.na/museums/north/nakambale-museum"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read Museums Association of Namibia record identifying Rautanen family residence and mission context. Pictured thatched architecture and gathering are illustrative, not an exact reconstruction of the actual Nakambale house or a documented meeting. Missionary face not identifiable."
+    },
+    {
+      "id": "maalehti-nam-tiede-2-r20260907-v1",
+      "canonicalId": "maalehti-nam-tiede-2",
+      "fileName": "maalehti-nam-tiede-2-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "NamibRandin pimeän taivaan suojelun innoittama yömaisemakuva Linnunradasta aavikon yllä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nam-tiede-2-r20260907-v1.jpg",
+      "sha256": "684757d850f61b1009040684684968e84d65584c4a83d92cf80bb14b13366e8f",
+      "bytes": 499756,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Completely new ultra-realistic astrophotograph of NamibRand desert reserve at night: Milky Way arching above one low dune ridge and sparse desert vegetation, no people, buildings, vehicles or artificial lights, scientifically plausible stars, natural dark sky and subtle sand detail, wide calm composition, 4:3 crop safe.",
+      "sources": [
+        "https://www.namibrand.com/dark-sky.html"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read reserve primary page confirming its dark-sky designation in2012. Generated landscape and stars are illustrative, not an astronomically exact sky chart or dated exposure."
+    },
+    {
+      "id": "halifax-julkinen-puutarha",
+      "canonicalId": "halifax-julkinen-puutarha",
+      "fileName": "halifax-julkinen-puutarha.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Halifax Public Gardensin soittopaviljonki ja kukkaistutuksia miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/halifax-julkinen-puutarha.png",
+      "sha256": "1254c86513f58ccb8e25125412ddda3a07870772d71149b7c38fc297b7d649cf",
+      "bytes": 1031476,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja M3 map miniature. Create an entirely new isolated miniature of the ACTUAL Halifax Public Gardens bandstand seen in the supplied photograph: compact octagonal Victorian wooden bandstand, pale green-white slender posts and cross-braced railings, ornate fretwork, broad dark green octagonal roof with a small low finial, surrounded only by a compact oval of geometric red, white and yellow flowerbeds. Finely drawn sepia ink with restrained light watercolor, crisp illustrative detail. True transparent RGBA background, alpha zero outside the object; no sky, backdrop, shadow rectangle, checkerboard, text, signs, logos, letters, numbers, flags or people. Complete silhouette centered in the middle 60 percent with generous clear padding; do not crop roof, flowers or base.",
+      "sources": [
+        "https://images.squarespace-cdn.com/content/v1/5ad54fdc5417fc775f6ab365/1532683023952-3GSLW3GJNQ73O767M89O/bandstand-1.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Bandstand silhouette, two-stage low roof and pale cross-braced railings match the viewed photograph; simplified garden composition."
+    },
+    {
+      "id": "halifax-vanha-hautausmaa",
+      "canonicalId": "halifax-vanha-hautausmaa",
+      "fileName": "halifax-vanha-hautausmaa.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Halifaxin Old Burying Groundin hautakivien ja puiden innoittama miniatyyrikatkelma.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/halifax-vanha-hautausmaa.png",
+      "sha256": "b4b4d5533c985080d1afa1c6d17edc59653ab68c280f6810ca027c61283fe782",
+      "bytes": 1201087,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja M3 map miniature. Create an entirely new isolated miniature of the ACTUAL Old Burying Ground in Halifax as seen in the supplied photograph: a compact irregular group of old dark grey slate gravestones, mostly narrow round-shouldered 18th-century tablets leaning at varied angles, beneath two mature linden trunks with sparse arching branches. Include a small patch of grass rather than snow and omit the church building. Finely drawn sepia ink with restrained grey-green watercolor, crisp illustrative detail. True transparent RGBA background, alpha zero outside the object; no sky, backdrop, shadow rectangle, checkerboard, readable inscriptions, text, signs, logos, letters, numbers or people. Complete silhouette centered in the middle 60 percent with generous clear padding; do not crop branches, stones or base.\n\nDELIVERY FORMAT IS THE HIGHEST PRIORITY: draw a wholly new version as a single isolated sticker-like object floating in empty space. Output a PNG with REAL TRANSPARENT PIXELS outside the silhouette (RGBA alpha=0). NO reference-photo background. NO checkerboard pattern. NO white, grey, black, paper or colored rectangle. NO canvas texture. The image must remain transparent when composited over both black and white.\n",
+      "sources": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/f6/Old_Burying_Ground%2C_Halifax_%2832761979808%29.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Thematic cemetery fragment with gravestones and mature deciduous trees; no exact inscriptions or site-plan claim."
+    },
+    {
+      "id": "halifax-pier-21",
+      "canonicalId": "halifax-pier-21",
+      "fileName": "halifax-pier-21.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Halifaxin Pier 21:n tiilijulkisivu ja kaareva sisäänkäyntikatos miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/halifax-pier-21.png",
+      "sha256": "9b1be5212876a3e14ae37be563df791e445054f3d33f894b06a05d7083392fee",
+      "bytes": 529850,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja M3 map miniature. Create an entirely new isolated miniature of the ACTUAL Pier 21 immigration terminal in Halifax seen in the supplied photograph: long low two-storey red-brick industrial facade, flat parapet, pale concrete horizontal bands and window surrounds, repeated tall multi-pane windows, with the modern curved grey entrance canopy centered. Omit the railway car and every sign; the parapet must be blank. Finely drawn sepia ink with restrained brick-red and grey watercolor, crisp illustrative detail. True transparent RGBA background, alpha zero outside the object; no sky, street, backdrop, shadow rectangle, checkerboard, text, logos, letters, numbers, flags, vehicles or people. Complete building centered in the middle 60 percent with generous clear padding; do not crop ends, roof or base.\n\nDELIVERY FORMAT IS THE HIGHEST PRIORITY: draw a wholly new version as a single isolated sticker-like object floating in empty space. Output a PNG with REAL TRANSPARENT PIXELS outside the silhouette (RGBA alpha=0). NO reference-photo background. NO checkerboard pattern. NO white, grey, black, paper or colored rectangle. NO canvas texture. The image must remain transparent when composited over both black and white.\n",
+      "sources": [
+        "https://upload.wikimedia.org/wikipedia/commons/1/16/Pier_21_2010_1.JPG"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Long two-storey brick entrance and curved metal canopy match the reference, with simplified facade."
+    },
+    {
+      "id": "halifax-point-pleasant-park",
+      "canonicalId": "halifax-point-pleasant-park",
+      "fileName": "halifax-point-pleasant-park.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Prince of Wales Tower Point Pleasant Parkissa miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/halifax-point-pleasant-park.png",
+      "sha256": "d096cf155f3c1bf7d34efc1f2b6cb8d69db274135ac61b8e560619b56d97b662",
+      "bytes": 1026887,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja M3 map miniature. Create an entirely new isolated miniature of the ACTUAL Prince of Wales Martello Tower in Halifax Point Pleasant Park seen in the supplied photograph: low massive circular grey rubble-stone tower, subtly battered walls, smooth projecting stone belt course, low parapet rim and exactly three blocky projecting gun-platform supports visible, with a few tiny square openings. Place it on a compact grass oval with two restrained pine silhouettes behind. No invented castle turrets or crenellations. Finely drawn sepia ink with restrained grey-green watercolor, crisp illustrative detail. True transparent RGBA background, alpha zero outside the object; no sky, backdrop, shadow rectangle, checkerboard, text, signs, logos, letters, numbers, flags or people. Complete silhouette centered in the middle 60 percent with generous clear padding; do not crop trees, tower or base.\n\nDELIVERY FORMAT IS THE HIGHEST PRIORITY: draw a wholly new version as a single isolated sticker-like object floating in empty space. Output a PNG with REAL TRANSPARENT PIXELS outside the silhouette (RGBA alpha=0). NO reference-photo background. NO checkerboard pattern. NO white, grey, black, paper or colored rectangle. NO canvas texture. The image must remain transparent when composited over both black and white.\n",
+      "sources": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/ae/Halifax_Prince_of_Wales_Tower.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Squat cylindrical Prince of Wales Martello tower and projecting parapet brackets match the actual reference."
+    },
+    {
+      "id": "kapkaupunki-hyvantoivonlinnoitus",
+      "canonicalId": "kapkaupunki-hyvantoivonlinnoitus",
+      "fileName": "kapkaupunki-hyvantoivonlinnoitus.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Hyväntoivonlinnoituksen viisi bastionia ja sisäpihat yksinkertaistettuna miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/kapkaupunki-hyvantoivonlinnoitus.png",
+      "sha256": "5e9b96b91efd5578038efdbfe3e48f47bc670a8baed9b81c6957dec92bde877b",
+      "bytes": 820377,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja M3 map miniature. Create an entirely new isolated oblique-aerial miniature of the ACTUAL Castle of Good Hope in Cape Town from the supplied aerial photograph: exact five-bastion pentagonal star-fort footprint, five angular projecting bastions, low dark stone outer walls and partial moat, yellow-white inner barracks with red tile roofs around a large open green courtyard, plus the long straight central dividing building. Preserve the real irregular pentagonal geometry; do not turn it into a symmetric fantasy star and add no towers. Finely drawn sepia ink with restrained yellow, brick-red and green watercolor, crisp illustrative detail. True transparent RGBA background, alpha zero outside the fort; no city, roads, sky, backdrop, shadow rectangle, checkerboard, text, signs, logos, letters, numbers, flags, vehicles or people. Entire fort centered in the middle 60 percent with generous clear padding; do not crop any bastion or moat.\n\nDELIVERY FORMAT IS THE HIGHEST PRIORITY: draw a wholly new version as a single isolated sticker-like object floating in empty space. Output a PNG with REAL TRANSPARENT PIXELS outside the silhouette (RGBA alpha=0). NO reference-photo background. NO checkerboard pattern. NO white, grey, black, paper or colored rectangle. NO canvas texture. The image must remain transparent when composited over both black and white.\n",
+      "sources": [
+        "https://cdn.thecollector.com/wp-content/uploads/2023/09/castle-good-hope.jpg?quality=85&width=1600"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Five-bastion plan and divided courtyard are recognisable; label as simplified miniature rather than exact architectural plan."
+    },
+    {
+      "id": "nairobi-arboretum",
+      "canonicalId": "nairobi-arboretum",
+      "fileName": "nairobi-arboretum.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Nairobin arboretumin polun ja kasvillisuuden innoittama miniatyyrikatkelma.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/nairobi-arboretum.png",
+      "sha256": "97068ab1277726af92140a6ac35b17a1d04e6e3eb1d42d8db45432dff5d708c6",
+      "bytes": 1618416,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja M3 map miniature. Create an entirely new isolated miniature of the ACTUAL Nairobi Arboretum character seen in the supplied photograph: a compact red-earth path receding beneath an arching canopy of tall mature tropical and eucalyptus trees, with dark bamboo and palm foliage forming a natural tunnel, low clipped green hedges along the path and exposed reddish soil at the edges. Keep it as a small self-contained landscape island with a clear irregular silhouette. Finely drawn sepia ink with restrained deep green and red-earth watercolor, crisp illustrative detail. True transparent RGBA background, alpha zero outside the island; no sky panel, buildings, backdrop, shadow rectangle, checkerboard, text, signs, logos, letters, numbers, fences or people. Complete silhouette centered in the middle 60 percent with generous clear padding; do not crop tree crowns or path base.\n\nDELIVERY FORMAT IS THE HIGHEST PRIORITY: draw a wholly new version as a single isolated sticker-like object floating in empty space. Output a PNG with REAL TRANSPARENT PIXELS outside the silhouette (RGBA alpha=0). NO reference-photo background. NO checkerboard pattern. NO white, grey, black, paper or colored rectangle. NO canvas texture. The image must remain transparent when composited over both black and white.\n",
+      "sources": [
+        "https://antonytrivet.co.ke/wp-content/uploads/2021/07/Tembea-Tujenge-Kenya-By-Antony-Trivet-Travels-Safaris-27.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Thematic arboretum path and tropical vegetation; generalized park fragment rather than exact layout."
+    },
+    {
+      "id": "nairobi-kenian-kansallisarkisto",
+      "canonicalId": "nairobi-kenian-kansallisarkisto",
+      "fileName": "nairobi-kenian-kansallisarkisto.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Kenian kansallisarkiston kuusipylväinen sisäänkäynti miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/nairobi-kenian-kansallisarkisto.png",
+      "sha256": "a120972a70b49cb96e06e064e8770b826fa95a2ec5dc4eceed7f7f30c44f4b77",
+      "bytes": 822961,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja M3 map miniature. Create an entirely new isolated miniature of the ACTUAL Kenya National Archives building in Nairobi seen in the supplied photograph: broad cream three-storey civic block, high plain parapet with subtle horizontal relief band, symmetrical facade, central deeply recessed entrance behind six tall pale stone columns, regular dark metal windows, and strongly rusticated end bays. Keep the entablature completely blank. Finely drawn sepia ink with restrained cream-grey watercolor, crisp illustrative detail. True transparent RGBA background, alpha zero outside the object; no street, palm tree, railings, backdrop, shadow rectangle, checkerboard, carved name, text, signs, logos, letters, numbers, flags, vehicles or people. Complete silhouette centered in the middle 60 percent with generous clear padding; do not crop ends, parapet or base.",
+      "sources": [
+        "https://a4.pbase.com/u19/bmcmorrow/upload/36323999.nairobi102.JPG"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Six-column National Archives portico and flat attic massing match the viewed photo."
+    },
+    {
+      "id": "nairobi-rautatiemuseo",
+      "canonicalId": "nairobi-rautatiemuseo",
+      "fileName": "nairobi-rautatiemuseo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Nairobin rautatiemuseon sisäänkäynti ja höyryveturi miniatyyrikatkelmana.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/nairobi-rautatiemuseo.png",
+      "sha256": "c1c91d130ffe788c98493fe44bfdc8b24f7a3b3d3fa628f95fb38d9689664ed9",
+      "bytes": 1052629,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja M3 map miniature. Create an entirely new isolated miniature of the ACTUAL Nairobi Railway Museum entrance scene seen in the supplied photograph: compact black early steam locomotive on a short rail section at left, round smokebox front, cylindrical boiler, red buffer beam and visible driving wheels, under a simple corrugated metal canopy, with the low grey stone museum building and red corrugated gabled roof behind. Every number and building sign must be removed and left blank. Finely drawn sepia ink with restrained black, iron-red and stone watercolor, crisp illustrative detail. True transparent RGBA background, alpha zero outside the object; no sky, city, backdrop, shadow rectangle, checkerboard, text, signs, logos, letters, numbers, flags or people. Complete silhouette centered in the middle 60 percent with generous clear padding; do not crop locomotive, canopy, roof or rails.",
+      "sources": [
+        "https://www.freetour.com/images/tours/39923/nairobi-railway-museum-02.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Railway museum entrance, canopy and steam locomotive match the reference as a simplified museum fragment."
+    },
+    {
+      "id": "halifax-atlantin-merimuseo",
+      "canonicalId": "halifax-atlantin-merimuseo",
+      "fileName": "halifax-atlantin-merimuseo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Halifaxin Maritime Museum of the Atlantic ja sen merkkilippurivi miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/halifax-atlantin-merimuseo.png",
+      "sha256": "a96084b49724ba9bda03fa541544dac0fd8873a151cd3698381bc2109c6bf6b7",
+      "bytes": 662146,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: illustration-story. Asset type: Matkakirja M3 location miniature. Use the supplied real Maritime Museum of the Atlantic photograph as strict architecture reference. Entire low wide horizontally clad beige-grey museum, shallow roof masses, dark window band, red ground supports, horizontal nautical signal-flag row; no futuristic prow or glass wedge. Restrained black ink and warm watercolor. Isolate the whole building and tiny dock reflection against one perfectly flat uniform pure chroma-green background #00FF00, with no gradient, texture, cast glow, halo, green reflected light, scenery or border. Subject occupies at most 76% width and height with safe margins. No people, text or logos.\n",
+      "sources": [
+        "https://maritimemuseum.novascotia.ca/sites/default/files/styles/feature_image/public/2025-04/A4950.jpg?itok=e8haiXeK"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual source photographs and new black composites. Shape matches reference; full transparent margin. Maritime Museum bright green spill corrected technically, Bayfront low tiered truncated-cone fountain correct."
+    },
+    {
+      "id": "miami-bayfront-park",
+      "canonicalId": "miami-bayfront-park",
+      "fileName": "miami-bayfront-park.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Bayfront Parkin leveä, porrastettu suihkulähde miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/miami-bayfront-park.png",
+      "sha256": "b554e514280187705f8c7cb9e1425bb0b00adb29b52ebf0528e7d7df3c147c81",
+      "bytes": 459949,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: illustration-story. Asset type: Matkakirja M3 location miniature. Use the supplied real Bayfront Park fountain photograph as the strict structural reference. Render exactly one complete large low and very wide truncated-cone Noguchi fountain: broad circular top basin, four stepped sloping terracotta-brown concrete tiers, thin water sheets descending each angled tier, shallow circular catch basin at ground level, and one modest central water jet. The fountain is a massive ground-based truncated cone, never a bowl, cup, stem, column or pedestal. Restrained black ink line with warm transparent watercolor. Isolate it against a perfectly uniform flat pure chroma-green #00FF00 background. No gradient, darkness, vignette, glow, halo, reflected green, checkerboard, scenery, skyline, people, lettering, ground plate or shadow rectangle. Whole fountain and water remain inside 72 percent of canvas width and height, with generous empty green margin on all four edges.\n",
+      "sources": [
+        "https://lp-cms-production.imgix.net/2021-03/GettyRF_186839791.jpg?auto=format%2Ccompress&crop=faces%2Cedges&fit=crop&h=821&q=72&w=1095"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual source photographs and new black composites. Shape matches reference; full transparent margin. Maritime Museum bright green spill corrected technically, Bayfront low tiered truncated-cone fountain correct."
+    },
+    {
+      "id": "halifax-vanha-kellotorni",
+      "canonicalId": "halifax-vanha-kellotorni",
+      "fileName": "halifax-vanha-kellotorni.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Halifaxin Old Town Clock pylväineen, kellotauluineen ja kupolikattoineen miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/halifax-vanha-kellotorni.png",
+      "sha256": "3d085ab300a70753abddb0187169dd7f21c887248ff01ba79da0c0ce6d29d5a1",
+      "bytes": 756890,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new isolated Matkakirja M3 architectural miniature, using the attached actual Parks Canada photograph as the controlling visual reference. Depict the real Halifax Town Clock on Citadel Hill: a broad low symmetrical rectangular white clapboard Palladian base building with a shallow green roof edge, several evenly spaced sash windows and a centered entrance; directly above it a three-stage tower consisting of a wide circular open Doric colonnade, an octagonal clock storey with a large dark blue clock face, then an octagonal arcaded bell stage crowned by a low rounded oxidized-copper dome and small ball finial. Preserve the building's true wide-base-to-tower proportions. Do not turn it into a narrow freestanding clock tower, church steeple, lighthouse or fantasy cupola. Full object visible and centered, occupying no more than about 75–78% of either canvas dimension, with every architectural edge and any soft grounding shadow safely inside at least 64 transparent pixels. Style: restrained warm sepia ink linework with light watercolor washes, crisp architectural detail, subtle handmade paper texture inside the painted object only. No people, cars, landscape, sky, background plate, frame, glow, labels or added text. Render on a perfectly flat uniform pure chroma green #00FF00 background with no checkerboard, gradient, texture or green cast on the object, for technical alpha extraction. Square 1024×1024.\n",
+      "sources": [
+        "https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=10277"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Four-window base, front stair, column drum, clock stage and open domed belfry match actual Parks Canada photograph."
+    },
+    {
+      "id": "miami-esittavan-taiteen-keskus",
+      "canonicalId": "miami-esittavan-taiteen-keskus",
+      "fileName": "miami-esittavan-taiteen-keskus.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Adrienne Arsht Centerin porrastettu rakennus ja vanha Sears-torni miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/miami-esittavan-taiteen-keskus.png",
+      "sha256": "9e6579ddc175d42446655260a252232590902a61f918d95b70c91cc3e48d339f",
+      "bytes": 561747,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new isolated Matkakirja M3 architectural miniature, using the attached actual exterior photograph of the Adrienne Arsht Center as the controlling visual reference. Depict the real low, broad stepped opera-house mass: layered pale rectangular volumes, long horizontal bands, the tall slanted gridded glass entrance wedge at center, and the actual short cylindrical historic Sears tower at the left with a crenellated-looking rim. Preserve the photographed asymmetrical stepped massing and low horizontal scale. Absolutely do not add Miami Freedom Tower, a tall Mediterranean tower, spire, skyscraper, palace, invented dome or a second landmark. The entire Arsht building complex must be visible and centered, occupying no more than about 75–78% of either canvas dimension, with all roofs, side wings and soft grounding shadow safely inside at least 64 transparent pixels. Style: restrained warm sepia ink linework with light watercolor washes, crisp architectural detail, subtle handmade paper texture inside the painted object only. Omit people, cars, roadway light trails, palms, sky, signs, logos and readable lettering. No background plate, frame or glow. Render on a perfectly flat uniform pure chroma green #00FF00 background with no checkerboard, gradient, texture or green cast on the building, for technical alpha extraction. Square 1024×1024.\n",
+      "sources": [
+        "https://miamiinfocus.com/images/miami-mb/miami/attractions/arsht%20center/theater/01ac_ead_0475f.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Stepped stage-house mass, tapering glazed atrium and retained historic Sears tower match actual photo; simplified map-scale rendering."
+    },
+    {
+      "id": "miami-lyric-teatteri",
+      "canonicalId": "miami-lyric-teatteri",
+      "fileName": "miami-lyric-teatteri.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Miamin Lyric-teatterin kaaripääty ja lasinen lisäosa miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/miami-lyric-teatteri.png",
+      "sha256": "739a53805c98c0351d065cf4fc252f246aebc3ae76e0667cdc238dc03e2c6203",
+      "bytes": 705588,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new isolated Matkakirja M3 architectural miniature, using the attached actual photograph of Miami's Historic Lyric Theater as the controlling visual reference. Depict the real modest broad two-storey white stucco facade: one large recessed central arch rising through both floors beneath a gently curved parapet crest; dark balcony/opening inside the arch; narrow classical pilasters and small arched side details; plain broad side wall plus the restrained modern glass addition visible at the left. Preserve the photographed low, simple neighborhood-theater scale and exact front proportions. Do not make it a glass palace, grand opera house, cinema marquee palace, domed building or ornate fantasy theater. The whole building must be visible and centered, occupying no more than about 75–78% of either canvas dimension, with all edges and any soft grounding shadow safely inside at least 64 transparent pixels. Style: restrained warm sepia ink linework with light watercolor washes, crisp architectural detail, subtle handmade paper texture inside the painted object only. No people, cars, utility wires, street, sky, signs, logos or readable lettering. No background plate, frame or glow. Render on a perfectly flat uniform pure chroma green #00FF00 background with no checkerboard, gradient, texture or green cast on the object, for technical alpha extraction. Square 1024×1024.\n",
+      "sources": [
+        "https://media.timeout.com/images/103433873/image.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Curved parapet, recessed balcony, paired flanking window bays and modern glass wing match actual photo."
+    }
+  ],
+  "reviewPublished": false,
+  "gameIntegrationClaimed": false
+}

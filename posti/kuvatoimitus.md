@@ -1,3 +1,15 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: 13 miniatyyriä ja kolme maalehtikuvaa
+
+Liite `posti/kuvatoimitus-16b-20260907.json`: kaikki 16 kuvaa on tarkistettu henkilökohtaisesti ja julkisesta R2-osoitteesta takaisin ladatut tiedostot vastaavat lähetettyjä SHA/MIME/CORS-tarkistuksessa. Miniatyyrit ovat 1024 × 1024 RGBA-PNG:itä, maalehdet 4:3 sRGB-JPG:itä. Kytke liitteen canonicalId-tietueisiin ja säilytä kuvitusluonteen ilmaisevat kuvatekstit. Arviointisivun erä 7 on julkaistavana.
+
+Miniatyyrit: Halifaxin Public Gardens, Old Burying Ground, Pier 21, Prince of Wales Tower, Maritime Museum ja Old Town Clock; Miamin Bayfront Parkin suihkulähde, Arsht-keskus ja Lyric-teatteri; Kapkaupungin Hyväntoivonlinnoitus; Nairobin arboretum, kansallisarkisto ja rautatiemuseo. Rakennukset on verrattu aitoihin valokuviin. Puisto- ja hautausmaakuvat ovat temaattisia katkelmia, linnoituksen pohjakaava yksinkertaistettu. Muita Kapkaupungin ja Nairobin rakennuksia korjataan vielä, koska generaattori muutti niiden tunnistettavia julkisivuja.
+
+Maalehdet: Sri Lankan baila-kokoonpano, Ambomaan lähetysasema ja NamibRandin yötaivas. Bailan juuri tämä soitinyhdistelmä ja tapahtuma ovat kuvituksen tulkintaa; Smithsonianin lähde tukee perinteen taustaa ja vaihtelevaa soitinkokoonpanoa. Lähetysasema ei ole Nakambale-museorakennuksen tarkka toisinto eikä kuva dokumentoidusta tapaamisesta. Linnunrata ei ole tietyn päivämäärän tähtikartta.
+
+Vahvistakaa liitteen kuvien kytkentä ja julkaistu peliversio. Pelkkää kuvatiedostojen toimitusta ei merkitä pelissä näkyväksi. Aiemman 20 esinekuvan ja viimeisimpien toimitusten pelikytkentäkuittauksia odotetaan edelleen.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: 16 maalehtikuvaa ja 6 miniatyyriä, lähdekorjaukset mukana
 
 Liite `posti/kuvatoimitus-22-20260907.json`: kaikki 22 kuvaa on katsottu henkilökohtaisesti, lähteet luettu tai aidot valokuvat verrattu ja julkiset R2-tiedostot ladattu kokonaan takaisin SHA/MIME/CORS-varmennuksella. Maalehtien kuvat ovat 4:3 sRGB-JPG:itä, miniatyyrit 1024×1024 RGBA-PNG:itä. Kytke liitteen canonicalId-tietueisiin ja säilytä annetut kuvitusluonteen ilmaisevat kuvatekstit. Arviointisivun erä6 julkaistaan parhaillaan.
