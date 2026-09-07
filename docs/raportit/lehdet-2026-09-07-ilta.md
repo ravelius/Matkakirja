@@ -58,6 +58,37 @@ voi soida yhtä aikaa ("Xylophone", Mbila). (3) Niassan yhtiö laski liikkeelle
 141 postimerkkiä, 158 miljoonan reisin edestä ("Postage stamps and postal
 history of the Niassa Company"). Portit: fail 0, kaikki tarkistukset vihreät.
 
+### Kaupunkilehdet Salta + Antofagasta — fb2b3ef (tekstit), f7761f6 (kuvat)
+Tiedostot: faktapohja-/tarkistus-salta.md ja -antofagasta.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, southamerica-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/salta-keskusta.png, antofagasta-keskusta.png. Salta: kansi
+(perustaminen 1582, Milagro, 1873, La Linda, Cerro San Bernardo), teemasivu
+musiikki "Peña ja pohjoisen laulu". Antofagasta: kansi (kaupunki ilman
+perustamiskirjaa, nimen selitykset, 1873, maanvaihto 1879–1904, Huanchaca),
+teemasivu luonto "Sumu ja aavikko". 37 kuvaa Commonsista, ennen–nyt-parit
+molemmille. Pistokokeet: (1) zamba syntyi Saltan maakunnassa 1824 perulaisesta
+zamacuecasta (en-Wikipedia "Zamba (artform)", Name and origin); (2) Antofagasta
+saa alle 0,1 mm sadetta vuodessa ("Antofagasta", Geography → Climate); (3)
+Saltan katedraalin työt käynnistettiin uudelleen 1873 (es-Wikipedia "Catedral de
+Salta", Historia). Portit: fail 0, karttapisteet ok. tarkista-tekijat: 0 poikkeamaa
+uusissa kuvissa.
+
+### Kaupunkilehdet Nuuk + Anchorage — 0c9b58f (tekstit), d1ada18 (kuvat)
+Tiedostot: faktapohja-/tarkistus-nuuk.md ja -anchorage.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, northamerica-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/nuuk-keskusta.png, anchorage-keskusta.png. Nuuk: kansi (niemen
+neljä asuttajaa, siirto Kangeqista, 1873 kaksi lähetysasemaa, 80 km katua ilman
+tietä ulos), teemasivu tiede (jääkairaukset, Isua, Ameralik, Ilisimatusarfik).
+Anchorage: kansi (dena'inat, Cook 1778, 1873 = 2 senttiä eekkeriltä, 1964),
+teemasivu luonto "Eläimet kaupungissa". 43 kuvaa Commonsista, 5 hylätty
+(kasvot, logo, pikselit). Pistokokeet: (1) Kalaaliaraq-tori n. 150 m katedraalista
+kaakkoon ("Kalaaliaraq Market", johdanto; haversini 148 m); (2) 1964 järistyksessä
+kuoli 139, 15 tärinässä ja 124 tsunameissa ("1964 Alaska earthquake", Death toll);
+(3) Ameralikin jänneväli 5 376 m ("Ameralik Span"). Portit: fail 0, karttapisteet
+ok (Nuukin viisi väliä 98–172 m, tiivis rajaus kuten Fesissä; ympyrät eivät
+mene päällekkäin). Poiminnassa lisäyskonfliktit 4 tiedostossa liitetty
+liita-lisays.py:llä.
+
 ## Kuvaputken tilaukset (kuvattomat nostot ja miniatyyrit)
 
 **MOZ, kuvattomat nostot (8):**
@@ -69,6 +100,60 @@ history of the Niassa Company"). Portit: fail 0, kaikki tarkistukset vihreät.
 - musiikki "Rytmi, joka ei ole Mosambikista" — kuubalainen comparsa-soittimisto (congat, bombo, lehmänkello, pasuuna)
 - kuvataide "Tennisklubin pallopoika" — Malangatanan maalaus (tekijänoikeus, ei Commonsista)
 - kuvataide "Savi, joka on vihreää grafiitista" — Reinata Sadimban keramiikkaa (sama varaus)
+
+**Salta, kuvattomat nostot:** K1 perustaminen — Lerman ruudukko 1582 mitattuna;
+K2 Milagro — kaksi laatikkoa Tyynellämerellä; K3 vuosi 1873 — muulikaravaani
+tienvarsikaupungissa; K4 La Linda — siirtomaakadun julkisivurivi; K5 vuori —
+trilobiitti kivessä; T1 peña — kitara ja pöydät peñassa; T2 zamba — pari
+valkoisin nenäliinoin; T3 bombo legüero — puurunkoinen rumpu nuijineen; T4
+runoilijat — nuottivihko ja kitara; T5 chacarera — bombo ja viulu.
+**Salta, miniatyyrit (8):** Saltan kuvataidemuseo — ranskalaistyylinen kartano,
+mansardikatto; La Merced -kirkko — kaksi tummaa tornihuippua; Korkean vuoriston
+arkeologian museo — uusgoottilainen suippokaarijulkisivu; Saltan katedraali —
+kaksi kellotornia, vaaleanpunainen barokkijulkisivu; Saltan cabildo — kaksi
+kerrosta holvikaaria, kellotorni; San Franciscon basilika — punakeltainen
+julkisivu, 54 m kellotorni; San Bernardon luostari — valkoinen muuri, veistetty
+algarrobo-ovi; Güemesin muistomerkki — ratsastajapatsas kivikasan päällä.
+**Antofagasta, kuvattomat nostot:** A1 — Juan López La Chimban rannalla; A2 nimi —
+suolatasanko ja kuparimalmi; A3 1873 — allekirjoitettava sopimus; A4 — vuoden
+1904 rajakartta; B1 kuivuus — sadeasteikko ilman sadetta; B4 — perunsuula ja
+inkatiira kalliolla; kohdekartan Gibbsin talo — eklektinen 1915 talo Plaza del
+Salitren laidalla; kaupunginteatteri — betonijulkisivu ja 1 200 m² muraali.
+**Antofagasta, miniatyyrit (8):** Salpietarilaituri — kulunut puukansi, ruostuneet
+nosturit; Antofagastan museo — valkoinen puinen tullitalo ulkoportaikkoineen;
+Bolivian kauppapankin talo — viktoriaaninen erkkeri, kaksi kulmakupolia; Colónin
+aukio — kellotorni ja katedraali palmujen takana; Gibbsin talo — ks. yllä;
+Kaupunginteatteri — ks. yllä; Antofagastan katedraali — valkoinen
+uusgoottilainen julkisivu; Giménezin talo — uusmauriainen kulmatalo
+sevillalaisin laatoin.
+**Nuuk, kuvattomat nostot:** Niemi, jolla on ollut neljä asukasta — Qoornoqin tai
+Kangeqin rantatörmä turvemajan pohjineen; Kolme liikennevaloa eikä yhtään
+tietä ulos — Nuukin katu liikennevaloineen, taustalla kallio ja meri; Kivi,
+jossa saattaa olla vanhin elämä — Isuan raidallinen viherkivipaljastuma;
+Sähkölinja, joka hyppää vuonon yli — Ameralikin vuono ja yksi johdin ilman
+pylväitä; etusivukuva (PYSTY 0,60–0,85) — punainen katedraali tyhjää taivasta
+vasten; opasjakso Torilla ja hallissa — Kalaaliaraq-tori ilman kasvoja.
+**Nuuk, miniatyyrit (8):** Grönlannin kansallismuseo — punainen
+siirtomaasataman varastorakennus vuonon rannalla; Hans Egeden talo — keltainen
+puutalo vihrein listoin; Nuukin katedraali — punainen puukirkko
+kellotorneineen; Kalaaliaraq-tori — torikatos, pöydillä tuoretta kalaa;
+Inatsisartut — matala parlamenttitalo luodolla; Katuaq — aaltoileva
+kullanvärinen puujulkisivu; Grönlannin kansalliskirjasto — vihreä julkisivu
+nimikilvellä; Nuukin taidemuseo — vihreä puutalo pikkutornilla.
+**Anchorage, kuvattomat nostot:** Kymmenen päivää väärässä vuonossa — Cook
+Inletin suu ja Knik Arm ylhäältä; 1873: kaksi senttiä eekkeriltä — 1860-luvun
+Alaskan kartta; Karhuja, joita ei osata laskea — mustakarhu pihatiellä; Puro,
+jossa nousee kuningaslohi — Ship Creek tornien alla; etusivukuva (PYSTY) —
+hirvi kaupungin kadulla; opasjakso Perille ja liikkeelle — Ted Stevensin
+rahtiterminaali; opasjakso Talven suurin juhla — Fur Rondyn lumiveistos.
+**Anchorage, miniatyyrit (8):** Anchoragen rautatieasema — valkoinen
+Moderne-asema raiteiden vieressä; A.E.C.:n mökki 23 — 1910-luvun
+rautatiemökki kuistilla (Commonsin kuva esittää mökkiä 25); Wendlerin talo —
+valkoinen kulmatalo punaisine tornikattoineen; Alaska Center for the
+Performing Arts — lasipäätyinen teatteritalo; Anchorage Museum — peilaava
+lasijulkisivu; Anchoragen vanha hautausmaa — hautakiviä lehtipuiden alla;
+Oscar Andersonin talo — pieni keltainen puutalo; Delaney Park Strip — leveä
+nurmikaistale tornien edessä.
 
 ## Päätöstä vaativat asiat
 
@@ -89,6 +174,17 @@ history of the Niassa Company"). Portit: fail 0, kaikki tarkistukset vihreät.
   (käynnissä oleva selkkaus); uutissyötteessä näkyy ajoittain Cabo Delgadon
   otsikoita. Marrabenta on jo africa-kulttuuri.js:n nostona; maalehdessä vain
   maininta Fany Pfumon nostossa.
+
+- Salta/Antofagasta: salpietarilaiturin piste siirretty es-Wikipedian
+  koordinaatista (100 % vettä) laiturin alkupäähän rannalle; Antofagastan
+  ennen–nyt-pari on sama kaupunki, ei sama katu (vanhassa kirjapainon
+  kehysviiva) — voi jättää pois Lagosin tapaan; es-Wikipedia lähteenä 14/16
+  nähtävyysjutussa; Llullaillacon lasten sävy (tarkistus-salta.md kohta G)
+  vahvistettavaksi. Viereinen havainto: southamerica-artikkelit.js:n
+  Bolivia-merkintä kertoo saman kymmenen sentin veron.
+- Nuuk/Anchorage: molempien oppaiden etusivukuva puuttuu (Commonsissa ei
+  ≥ 1200 px pystykuvaa) → kuvaputki. Viereinen havainto: tools/tarkista-tekijat.mjs
+  ei odota 429:ää parvikuormassa.
 
 ## Keskeneräiset
 
