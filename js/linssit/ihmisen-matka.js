@@ -53,13 +53,15 @@
  * tässä yhtenä puhtaana funktiona (ihmisenMatkanPysakit) — moottori ei
  * tiedä kummastakaan kaaresta mitään.
  *
- * LÖYTÖKUVIA EI VIELÄ OLE ämpärissä (tarkistettu 6.9.2026: kansio
- * `esine/` vastaa 404), ja kortissa luki siksi pysäkin nimikirjaimet
- * — "EI", "SY". Siksi kortin kuvatieto kantaa mukanaan VARAKUVAN
- * (`vara`), joka on saman pysäkin havainnekuva: moottori kokeilee
- * ensin löytökuvaa ja putoaa varakuvaan vasta, kun pyyntö kaatuu
- * (js/aikajana.js VARAKUVA). Kun kuvaputki tuo löydöt, tämä tiedosto
- * ei muutu — ensimmäinen pyyntö vain alkaa vastata 200.
+ * LÖYTÖKUVAT OVAT ÄMPÄRISSÄ 7.9.2026: kuvaputki toimitti kaikki
+ * kaksikymmentä (js/linssit/ihmisen-matka-data.js
+ * IHMISEN_MATKA_ESINEJUURI), ja tämä tiedosto ei muuttunut siitä —
+ * ensimmäinen pyyntö vain alkoi vastata 200. Sitä ennen kansio vastasi
+ * 404 ja kortissa luki pysäkin nimikirjaimet ("EI", "SY"); siksi kortin
+ * kuvatieto kantaa yhä mukanaan VARAKUVAN (`vara`), joka on saman
+ * pysäkin havainnekuva. Moottori kokeilee ensin löytökuvaa ja putoaa
+ * varakuvaan vasta, kun pyyntö kaatuu (js/aikajana.js VARAKUVA) — se on
+ * nyt turvaverkko yhden kuvan pettämisen varalle, ei arjen reitti.
  *
  * ── AINEISTO LUETAAN NIMIAVARUUTENA ───────────────────────────────
  *

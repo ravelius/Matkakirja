@@ -3702,6 +3702,129 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: -34.9110, etela: -34.9310, lansi: 138.5930, ita: 138.6145 },
   },
+  havanna: {
+    /*
+     * VANHAKAUPUNKI JA PRADON REUNA (7.9.2026). Ruutu on
+     * 2,3 × 1,8 kilometriä eli Christchurchin ja Dubrovnikin
+     * kokoluokkaa. Se riittää, koska Havannan kahdeksan kohdetta
+     * mahtuvat kaikki muurien entiselle alalle: pohjoisin on Plaza de
+     * la Catedral (23,1409) ja eteläisin Pyhän Hengen kirkko
+     * (23,1325), itäisin San Franciscon basilika (-82,3483) ja
+     * läntisin El Capitolio (-82,3594).
+     *
+     * ITÄREUNA -82,3430 ON VEDETTY LAHDEN PUOLELLE, ja se on ruudun
+     * ainoa varsinainen valinta. Satamalaituri on -82,345 kohdalla,
+     * joten ilman tätä kaistaa kuvasta puuttuisi se vesi, jonka takia
+     * koko kaupunki on olemassa. Reuna on silti vedetty niin, ettei
+     * se yllä lahden itärannalle: siellä ovat La Cabaña ja Regla,
+     * jotka ovat kaupunkilehden oman linnoitussivun aihe.
+     *
+     * POHJOISREUNA 23,1450 JÄTTÄÄ MORRON JA LA CABAÑAN ULKOPUOLELLE
+     * (23,1502 ja 23,1472). Se on tarkoituksellista eikä tilanpuute:
+     * molemmat ovat lehden nostojen L2 ja L3 aihe, eikä kohdekartta
+     * toista lehden juttuja (New Yorkin sääntö). Puntan linna
+     * (23,1463) jää samasta syystä juuri reunan ulkopuolelle.
+     *
+     * meri: true. Havannan lahti on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kuvan oikea reuna olisi paperin värinen.
+     */
+    rajat: { pohjoinen: 23.1450, etela: 23.1290, lansi: -82.3645, ita: -82.3430 },
+    meri: true,
+  },
+  mexico: {
+    /*
+     * HISTORIALLISEN KESKUSTAN POHJOISPUOLISKO (7.9.2026). Ruutu on
+     * 2,2 × 2,2 kilometriä eli lähes neliö, ja se kattaa sen osan
+     * ruutukaavasta, jossa kaikki kahdeksan kohdetta ovat: ylhäällä
+     * Plaza Garibaldi (19,4410), alhaalla Vizcaínas-koulu (19,4284),
+     * idässä Museo Nacional de las Culturas (-99,1305) ja lännessä
+     * San Franciscon luostarikirkko (-99,1402).
+     *
+     * KOKO CENTRO HISTÓRICO EI MAHDU EIKÄ SEN PIDÄ. Unescon rajaama
+     * historiallinen keskusta on noin 9 neliökilometriä; sen
+     * piirtäminen yhteen ruutuun tekisi juuri sitä katupuuroa, josta
+     * tiedoston alussa varoitetaan. Ruutu on rajattu kohteiden eikä
+     * hallinnollisen rajan mukaan.
+     *
+     * ZÓCALO JÄÄ RUUDUN SISÄÄN MUTTA ILMAN MERKKIÄ. Aukio, katedraali,
+     * kansallispalatsi ja Templo Mayor ovat kaikki kaupunkilehden
+     * omien nostojen aihe, joten ne näkyvät kartalla katuverkkona
+     * eivätkä numeroituina kohteina. Sama koskee Alameda Centralia,
+     * jonka itäpää osuu ruudun vasempaan reunaan.
+     *
+     * meri: ei. Mexico City on 2 240 metrin korkeudessa kuivatun
+     * Texcoco-järven pohjalla, eikä ruudun alueella ole avovettä.
+     */
+    rajat: { pohjoinen: 19.4450, etela: 19.4250, lansi: -99.1475, ita: -99.1265 },
+  },
+  hobart: {
+    /*
+     * VANHA RUUTUKAAVA RINTEEN JA SATAMAN VÄLISSÄ (7.9.2026). Ruutu on
+     * 1,8 × 1,8 kilometriä eli Christchurchin ja Dubrovnikin
+     * kokoluokkaa, selvästi tiiviimpi kuin Wellingtonin 3,3 km. Syy
+     * on kaupungin muodossa: Hobartin siirtomaa-ajan keskusta on
+     * kapea kaistale kunanyin rinteen ja Sullivans Coven välissä, ja
+     * kaikki kahdeksan kohdetta mahtuvat siihen Campbell Streetin
+     * vankilalta (-42,8774) Anglesean kasarmille (-42,8887).
+     *
+     * ITÄREUNA 147,3385 ON VEDETTY SULLIVANS COVEN YLI, jotta ruutuun
+     * tulee sataman kaari ja Queens Domainin kumpare, jolla
+     * sotamuistomerkki seisoo. Ilman niitä rajaus olisi 1,4 km leveä
+     * ja kaikki kohteet olisivat samassa katunauhassa.
+     *
+     * LÄNSIREUNA 147,3165 ON ST MARYN KATEDRAALIN MUKAAN. Rinne
+     * jatkuu siitä vielä ylöspäin West Hobartiin, mutta kunanyi
+     * (147,237) on kymmenen kilometriä lännessä ja kaupunkilehden
+     * noston L1 aihe, joten rinnettä ei ollut syytä ottaa
+     * leveämmältä.
+     *
+     * BATTERY POINT JA CASCADEN PANIMO JÄÄVÄT POIS. Kellyn portaat
+     * (lehden nosto K4) ja Salamanca Placen makasiinit (nostot K4 ja
+     * T3) ovat aivan eteläreunan ulkopuolella, ja Cascaden panimo
+     * (nosto H3) on 2,5 kilometriä lounaassa. Cascades Female Factory
+     * olisi ollut kartan paras yksittäinen kohde, mutta se on 2,5 km
+     * lännessä ja venyttäisi ruudun kaksinkertaiseksi.
+     *
+     * meri: true. Derwentin suisto on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kuvan oikea reuna olisi paperin värinen.
+     */
+    rajat: { pohjoinen: -42.8750, etela: -42.8910, lansi: 147.3165, ita: 147.3385 },
+    meri: true,
+  },
+  darwin: {
+    /*
+     * NIEMEN KÄRKI KAHDEN VEDEN VÄLISSÄ (7.9.2026). Ruutu on
+     * 1,6 × 1,6 kilometriä eli pelin tiiviimpiä, ja se riittää:
+     * Darwinin keskusta on matalan törmän päällä niemen kärjessä,
+     * eikä yksikään kartan kohteista ole kilometriä kauempana Smith
+     * Streetin ruutukaavasta.
+     *
+     * LÄNSIREUNA 130,8337 ON MEREN PUOLELLA ja itäreuna 130,8480
+     * Darwin Harbourin puolella, eli ruutu näyttää koko kannaksen
+     * kapeuden. Se on kartan tärkein yksittäinen asia: kaupunki on
+     * rakennettu kaistaleelle, jonka yli kävelee vartissa.
+     *
+     * ETELÄREUNA 12,4705 ON MUTAMAJAN MUKAAN. Kauempana etelässä
+     * ovat Fort Hill, Stokes Hillin laituri ja Waterfrontin
+     * satamakortteli; Fort Hill on kaupunkilehden noston K1 aihe eikä
+     * siis kartan kohde, eikä laiturialue tuo ruutuun mitään, mitä
+     * sataman ranta ei jo näytä.
+     *
+     * MINDIL BEACH, KASVITIETEELLINEN PUUTARHA JA FANNIE BAYN
+     * VANKILA JÄÄVÄT POIS. Kaikki kolme ovat 2–3 kilometriä
+     * pohjoisessa ja kaikki kolme ovat kaupunkilehden omien nostojen
+     * aihe (opas, L3, T1), joten ruutua ei ollut syytä venyttää
+     * niiden takia.
+     *
+     * meri: true. Sekä avomeri että Darwin Harbour ovat OSM:ssä
+     * rantaviivaa, joten ilman lippua kuvan molemmat reunat olisivat
+     * paperin värisiä ja niemi katoaisi.
+     */
+    rajat: { pohjoinen: -12.4565, etela: -12.4705, lansi: 130.8337, ita: 130.8480 },
+    meri: true,
+  },
   suva: {
     /*
      * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).
@@ -4512,6 +4635,168 @@ const KAUPUNGIT = {
      * vesiväyliä.
      */
     rajat: { pohjoinen: 43.6705, etela: 43.6415, lansi: -79.4045, ita: -79.3735 },
+  },
+  lima: {
+    /*
+     * SIIRTOMAA-AJAN RUUTUKAAVA RÍMACIN ETELÄPUOLELLA (7.9.2026).
+     * Ruutu on 1,9 x 1,8 kilometriä eli pelin tiiviimpiä —
+     * Christchurchin (2,4 x 1,9) ja Dubrovnikin kokoluokkaa. Syy on
+     * kaupungin omassa historiassa: Pizarron 1535 mittaama ruutukaava
+     * mahtui muurien sisään, ja kaikki kahdeksan kohdetta ovat yhä
+     * sen sisällä alle puolentoista kilometrin laatikossa
+     * (docs/mantereet-tyoaineisto/faktapohja-lima.md, osio 4 mittasi
+     * kuuden ensimmäisen kohteensa välit alle kilometriksi).
+     *
+     * LAAJEMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Faktapohjan osio 4
+     * ehdottaa mukaan myös Huaca Pucllanaa (7,3 km), Barrancoa
+     * (10,7 km) ja Callaon Real Felipeä (13,0 km). Kolmen kilometrin
+     * ruutu ei riitä yhteenkään niistä, ja kolmentoista kilometrin
+     * ruudussa koko vanhakaupunki olisi yksi kortteli kuvan
+     * yläkulmassa. Kaikki kolme ovat sitä paitsi lehden omaa aihetta:
+     * Huaca Pucllana on kaupunkisivun noston K4 otsikko, Barranco
+     * matkaoppaan jakson "kallionreunan iltapäivä" ja Callao jakson
+     * "Callao 1866".
+     *
+     * MIRAFLORES JA COSTA VERDE JÄÄVÄT SIIS KOKONAAN POIS, ja se on
+     * tietoinen valinta: lehti kertoo rannikosta neljässä eri
+     * kohdassa, kohdekartta kertoo vanhastakaupungista.
+     *
+     * ITÄREUNA 77,0235 ON INKVISITION MUSEON MUKAAN ja länsireuna
+     * 77,0400 Las Nazarenasin. Leveämpi ruutu toisi mukaan vain
+     * 1900-luvun liikekortteleita lännessä ja Barrio Chinon idässä —
+     * ja Barrio Chino on lehden ruokasivun noston aihe.
+     *
+     * Ei meri-lippua: vanhakaupunki on kolmentoista kilometrin
+     * päässä rannasta, ja Rímac on OSM:ssä tavallinen vesiväylä.
+     * Joki kulkee ruudun yläreunassa idästä länteen.
+     */
+    rajat: { pohjoinen: -12.0400, etela: -12.0570, lansi: -77.0400, ita: -77.0235 },
+  },
+  quito: {
+    /*
+     * VANHAKAUPUNKI JA PANECILLON KUKKULA (7.9.2026). Ruutu on
+     * 2,4 kilometriä korkea ja 2,1 leveä, eli se on pystysuunnassa
+     * venytetty tarkoituksella: Quito on rakennettu kapeaan laaksoon
+     * kahden vuorenrinteen väliin, ja sen vanhakaupunki on pitkä
+     * pohjois–eteläsuuntainen nauha. Vaakasuuntaan ei ole mitään
+     * otettavaa — molemmilla puolilla nousee rinne.
+     *
+     * POHJOISREUNA 0,2120 ON BASÍLICA DEL VOTO NACIONALIN MUKAAN ja
+     * eteläreuna 0,2340 vuoden 1909 näyttelypalatsin. Ruutu ulottuu
+     * siis juuri sen verran etelään, että Panecillon kukkula ja
+     * Recoletan näyttelyalue mahtuvat mukaan; niiden välissä on
+     * vanhankaupungin eteläpää.
+     *
+     * PANECILLO EI SAA JÄÄDÄ VASEMPAAN ALAKULMAAN. Ensimmäinen
+     * rajaus (länsi 78,5215) jätti kukkulan kohtaan x 17 %, y 76 %,
+     * ja siellä on lehden mittakaavajana (ui.js). Länsireuna vedettiin
+     * siksi 78,5230:een, jolloin piste siirtyy kohtaan x 24 %.
+     *
+     * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN POIS LEHDEN TAKIA. San
+     * Franciscon luostari ja aukio, La Compañían kirkko, Quiton
+     * observatorio ja Mitad del Mundo mahtuisivat joko ruutuun tai
+     * lähelle sitä (faktapohja-quito.md, osio 4 antaa niille
+     * koordinaatit), mutta ne ovat lehden omien nostojen aihe. Sama
+     * koskee Pichinchan taistelun muistopaikkaa Cima de la Libertadia
+     * lännessä.
+     *
+     * ITCHIMBÍAN KUKKULA JÄTETTIIN POIS MUUSTA SYYSTÄ: se on
+     * 78,50002:ssa eli 1,4 kilometriä ruudun keskilinjasta itään, ja
+     * mukaan ottaminen olisi vetänyt itäreunan Machángara-joen yli
+     * alueelle, jossa ei ole yhtään muuta kohdetta.
+     *
+     * Ei meri-lippua: Quito on Andeilla 2 850 metrissä, eikä ruudussa
+     * ole vesialueita lainkaan.
+     */
+    rajat: { pohjoinen: -0.2120, etela: -0.2340, lansi: -78.5230, ita: -78.5045 },
+  },
+  portmoresby: {
+    /*
+     * KOLME KAUPUNGINOSAA YHDESSÄ RUUDUSSA (7.9.2026). Ruutu on
+     * 7,5 × 7,4 kilometriä eli paketin väljimpiä — Christchurchin
+     * 2,4 kilometrin vastakohta. Rajaus on iso tahallaan, koska Port
+     * Moresby on hajallaan tahallaan: kaupunkilehden oma matkaopas
+     * sanoo sen ääneen (*"Kaupunki jakautuu kolmeen osaan"*), ja nuo
+     * kolme — Town sataman äärellä, Boroko välissä ja Waigani
+     * hallintokaupunkina — ovat kuuden ja seitsemän kilometrin
+     * päässä toisistaan.
+     *
+     * TIIVIS TOWN-RUUTU KOKEILTIIN JA HYLÄTTIIN. Vanhassa keskustassa
+     * on en-Wikipedian koordinaattirajapinnassa vain yksi kelvollinen
+     * kohde (katedraali) sen jälkeen, kun lehden omat aiheet on
+     * karsittu pois; kaikki muut seitsemän ovat pohjoisessa tai
+     * idässä. Kahden kilometrin ruutu olisi ollut kaunis ja tyhjä.
+     *
+     * POHJOISREUNA -9,4235 ON PARLAMENTTITALON MUKAAN ja eteläreuna
+     * -9,4905 kulkee Ela Beachin ja Kila Kilan rannan alapuolelta.
+     * Väliin jää koko se nauha, jota pitkin kaupunki kasvoi
+     * satamasta sisämaahan.
+     *
+     * RUUTU ON NELIÖ TAHALLAAN, samasta syystä kuin Varanasissa:
+     * kohteet ovat 5,9 × 6,0 kilometrin ryhmä, ja reunat vedettiin
+     * niin, että kuvasuhde on 1,00. Länsireuna 147,1429 ei ole
+     * hukkaan heitetty — se ottaa mukaan Fairfax Harbourin, ja ilman
+     * satamaa kartalta ei näkisi, minkä ympärille kaupunki
+     * rakennettiin.
+     *
+     * NELJÄ KOHDETTA JÄTETTIIN POIS AIHESYISTÄ, eivät rajauksen
+     * takia. Kansallismuseo ja -galleria (-9,4256 / 147,1901), Kokin
+     * tori, Hanuabada ja Jacksonsin lentoasema ovat kaikki
+     * kaupunkilehden omien nostojen aihe, eikä kohdekartta toista
+     * lehden juttuja (New Yorkin sääntö). Museo on kolmensadan
+     * metrin päässä parlamenttitalosta ja mahtuisi ruutuun vaivatta.
+     *
+     * BISININ URHEILUPUISTO ON KARTALLA VAIN KERRAN. PMRL Stadium ja
+     * PNG Football Stadium ovat 93 metrin päässä toisistaan saman
+     * puiston sisällä, ja puiston neljästä kentästä kartalle valittiin
+     * Amini Park: se on maan krikettiliiton kotikenttä ja ainoa, jonka
+     * tarina ei ole toisen kentän tarina.
+     *
+     * meri: true. Fairfax Harbour ja Papuanlahti ovat OSM:ssä
+     * rantaviivaa (natural=coastline) eivätkä vesimonikulmioita,
+     * joten ilman lippua kuvan lounaisnurkka olisi paperin värinen.
+     */
+    rajat: { pohjoinen: -9.4235, etela: -9.4905, lansi: 147.1429, ita: 147.2109 },
+    meri: true,
+  },
+  manaus: {
+    /*
+     * KESKUSTASTA FLORESIIN JA PETRÓPOLISIIN (7.9.2026). Ruutu on
+     * 7,5 × 7,4 kilometriä eli Port Moresbyn kokoluokkaa. Manausin
+     * vanha keskusta on tiivis — neljä kohdetta mahtuisi puolentoista
+     * kilometrin ruutuun — mutta jalkapallostadion ja osavaltion
+     * parlamentti ovat viisi ja puoli kilometriä pohjoisessa
+     * Floresissa ja Amazonin tutkimuslaitos viisi kilometriä idässä
+     * Petrópolisissa. Ilman niitä kohteita ei olisi kahdeksaa:
+     * en-Wikipedian koordinaattirajapinta tuntee keskustasta vain
+     * viisi kelvollista kohdetta, kun lehden omat aiheet on karsittu.
+     *
+     * RUUTU ON NELIÖ TAHALLAAN (Varanasin ratkaisu). Kohteet ovat
+     * 5,3 × 5,8 kilometrin ryhmä, ja reunat vedettiin niin, että
+     * kuvasuhde on 1,00.
+     *
+     * ETELÄREUNA -3,1450 PYSÄHTYY RIO NEGROON. Joki näkyy kuvan
+     * lounaisnurkassa ja sen Educandosin lahti työntyy kuvaan asti;
+     * ilman jokea Manausin sijainti jäisi arvoitukseksi. Syvemmälle
+     * veteen ei mennä, koska siellä ei ole yhtään kohdetta.
+     *
+     * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN POIS AIHESYISTÄ. Teatro
+     * Amazonas (-3,1303 / -60,0233), tullitalo, Palácio Rio Negro
+     * (-3,1351 / -60,0168) ja armeijan eläintarha ovat kaikki
+     * kaupunkilehden omien nostojen aihe (New Yorkin sääntö).
+     * Kolme ensimmäistä ovat tämän ruudun sisällä, ja oopperatalo
+     * olisi kartan keskeisin kohde jos sen saisi ottaa.
+     *
+     * AMADEU TEIXEIRAN HALLI PUDOTETTIIN 245 METRIN PÄÄSTÄ
+     * Amazonas-areenasta. Se ylittäisi 200 metrin säännön, mutta
+     * kaksi urheiluhallia vierekkäin olisi kartalla sama piste
+     * kahdesti; en-Wikipedian artikkeli siitä on lisäksi yhden
+     * kappaleen tynkä.
+     *
+     * meri: ei. Rio Negro on OSM:ssä vesimonikulmio, ja meri on
+     * 1 500 kilometriä itään.
+     */
+    rajat: { pohjoinen: -3.0780, etela: -3.1450, lansi: -60.0473, ita: -59.9802 },
   },
 };
 

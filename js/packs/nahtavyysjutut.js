@@ -48301,4 +48301,2695 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * HAVANNAN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026). Kartta on
+   * js/packs/maakartat.js: KAUPUNKIKARTAT.havanna, ja jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "Plaza de
+   * la Catedral", "Havana Cathedral", "Plaza de Armas (Havana)", "El
+   * Templete", "Palacio de los Capitanes Generales", "Bacardi Building
+   * (Havana)", "Basilica of San Francisco de Asís, Havana", "Plaza
+   * Vieja, Havana", "National Capitol of Cuba", "Fuente de la India" ja
+   * "Church del Espíritu Santo, Havana").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kaupungin kaksi siirtoa, Uuden maailman avain, kaupunginmuuri,
+   * Havanna–Bejucal-rata, de Soresin hyökkäys ja Real Fuerza,
+   * 1700-luvun väkiluku, vuoden 1762 brittivalloitus, USS Maine,
+   * vaakuna, Morro, La Cabaña ja maailmanperintö; opas kertoo
+   * amerikanautoista, Malecónista, sonista ja ilmastosta. Yksikään
+   * kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. San Franciscon
+   * basilikan jutussa EI kerrota vuoden 1762 piirityksestä, vaikka
+   * britit käyttivät kirkkoa jumalanpalveluksiinsa hallintovuotenaan:
+   * piiritys on lehden noston H3 aihe. Plaza Viejan jutussa
+   * maailmanperintöpäätöstä EI selitetä, vaikka entistäminen alkoi sen
+   * jälkeen — päätös on lehden noston L4 aihe. Plaza de Armasin
+   * jutussa ei mainita aukion pohjoislaidan Real Fuerzaa, joka on
+   * noston H1 aihe.
+   *
+   * KUVAT: seitsemän juttua kahdeksasta sai kuvan, ja jokainen on
+   * tarkistettu Commonsin rajapinnasta 7.9.2026 (lisenssi ja tekijä
+   * extmetadatasta) ja katsottu silmin 640 px esikatseluna. Yksikään
+   * tiedosto ei ole sama kuin kaupunkilehden havanna-lohkossa
+   * (kulttuuri-kategoriat.js) — sama kohde saa esiintyä molemmissa,
+   * tiedosto ei.
+   *
+   * PYHÄN HENGEN KIRKKO JÄI ILMAN KUVAA. Commonsissa on siitä vain
+   * neljä tiedostoa, joista kolme on alle 1 000 pikseliä ja neljäs on
+   * pohjapiirros. Kuvaton juttu on parempi kuin huono kuva; kohde on
+   * raportin miniatyyritilauksessa.
+   *
+   * KUVAHYLKÄYKSET (syyt): "Catedral de La Habana ... Agosto de 2016
+   * 08" — etualalla rivi turisteja kasvot näkyvissä; "SaintFrancis-
+   * Havana.JPG" ja "Basilica Menor de San Francisco de Asis in Havana
+   * 2016" — alareuna täynnä ihmisiä lähietäisyydellä; "La Iglesia-
+   * Convento de San Francisco se eleva ante nosotros - panoramio" —
+   * kuvaajan vesileima "dan 2010 copyright"; "Cuba plaza-de-armas
+   * PiXi.jpg" — orkesteri poseeraa kameralle ja kuvassa on
+   * kuvaajamerkintä; "Cuba L'Habana palazzo del governatore" —
+   * tekijätietoa ei ole rajapinnassa.
+   *
+   * KUVAPOIKKEUS: kahdessa vanhassa painotuotteessa on niiden OMA
+   * litera, joka selitetään kuvatekstissä — Plaza de Armasin
+   * postikortin otsikkorivi ja vuoden 1928 työmaakuvan alle painettu
+   * julkisten töiden viraston kuvateksti. Sama poikkeus kuin
+   * kaupunkilehden 1671 kuparipiirroksessa ja 1896 lehtikuvassa.
+   */
+  havanna: {
+    Katedraaliaukio: {
+      aika: '1748–1777',
+      teksti: 'Aukio oli alun perin suo, ja sen nimi oli Plaza de la '
+          + 'Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston '
+          + 'telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado '
+          + 'de Compostela osti aukion laidalta tontin, ja vuonna 1727 '
+          + 'hyväksyttiin suunnitelma kirkosta, luostarista ja '
+          + 'kollegiosta. Kun katedraali valmistui, aukion ympärille '
+          + 'nousivat kaupungin komeimmat kartanot; niistä yhdessä, '
+          + 'kreivi Lombillon palatsissa, toimii nykyään '
+          + 'siirtomaataiteen museo.'
+          + '\n\n'
+          + 'Jesuiitat aloittivat katedraalin rakentamisen 1748 '
+          + 'vanhemman kirkon paikalle, ja työ valmistui 1777 — siis '
+          + 'kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli '
+          + 'karkottanut jesuiitat saarelta 1767. Kirkko vihittiin '
+          + '1782. Se on 30 metriä leveä ja 49 pitkä, pohjaltaan '
+          + 'latinalainen risti: keskilaiva on 15 metriä leveä, '
+          + 'sivulaivoja on kaksi ja sivukappeleita kahdeksan. '
+          + 'Barokkijulkisivun kellotornit ovat eri kokoiset. '
+          + 'Rakennuskivi on korallia, ja seinistä erottuu paljain '
+          + 'silmin merieläinten ja -kasvien fossiileja.'
+          + '\n\n'
+          + 'Kristoffer Kolumbuksen jäännökset lepäsivät täällä sata '
+          + 'vuotta. Kun Espanja luovutti Baselin rauhassa 1795 suuren '
+          + 'osan Hispaniolaa Ranskalle, jäännökset siirrettiin 1796 '
+          + 'Havannan katedraalin evankeliumialttarin alle. '
+          + 'Hautakiveen kaiverrettiin kehotus säilyttää ne uurnassa '
+          + 'tuhat vuotta; ne palautettiin Espanjaan 1898 ja ovat nyt '
+          + 'Sevillan katedraalissa. Piispa Espada, innokas '
+          + 'uusklassismin ihailija, vaihdatti 1800-luvun alussa '
+          + 'barokkialttarit uusklassisiin ja rapautti puukatot '
+          + 'umpeen. Alttarin yläpuolella on kolme haalistunutta '
+          + 'freskoa italialaiselta Giuseppe Perovanilta, ja kirkossa '
+          + 'on vuonna 1632 Sevillassa veistetty pyhän Kristoforoksen '
+          + 'kuva, kaupungin suojeluspyhimys.',
+      kuvat: [
+        {
+          tiedosto: 'Plaza de la Catedral, Habana.jpg',
+          selite: 'Katedraalin epäsymmetriset kellotornit ja aukiota '
+            + 'reunustavat kaarikäytävät.',
+          lahde: 'Bgabel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Plaza de Armas': {
+      aika: '1520-luku',
+      teksti: 'Kun espanjalaiset perustivat kaupungin 1519, tapaan '
+          + 'kuului varata heti tilaa julkiselle aukiolle. Plaza de '
+          + 'Armas syntyi 1520-luvun alussa vanhankaupungin '
+          + 'ensimmäiseksi aukioksi, ja se oli sotilaiden ja '
+          + 'hallinnon paikka — nimi tarkoittaa aseiden aukiota. '
+          + '1580-luvulle tultaessa se oli otettu kokonaan '
+          + 'sotilaskäyttöön. Vuonna 1896 aukiota kuvattiin neljäksi '
+          + 'ceibapuiden varjostamaksi puistoksi, joiden keskellä '
+          + 'seisoi Ferdinand VII:n marmoripatsas.'
+          + '\n\n'
+          + 'Aukion itälaidalla on kuvernöörien palatsi. Kuvernööri '
+          + 'Felipe de Fondesviela, markiisi de la Torre, esitti '
+          + 'kaupunginvaltuustolle 28. tammikuuta 1773, että vanha '
+          + 'pääkirkko puretaan ja tilalle rakennetaan palatsi. Työ '
+          + 'alkoi 1776 kuubalaisen insinöörin Antonio Fernández de '
+          + 'Trebejos y Zaldívarin piirustusten mukaan. Aineet '
+          + 'tuotiin kaukaa laadun takaamiseksi: tiilet Málagasta, '
+          + 'takorautaristikot Bilbaosta, marmori Genovasta. Työ tehtiin '
+          + 'orjatyövoimalla ja edistyi hitaasti, ja vasta kuudes '
+          + 'kuvernööri Luis de las Casas pääsi muuttamaan sisään '
+          + '1791; talo valmistui 1792. Siinä oli kuvernöörin asunto, '
+          + 'kaupunginvaltuuston kokoushuone ja länsisiivessä vankila, '
+          + 'joka suljettiin 1834.'
+          + '\n\n'
+          + 'Palatsin vaiheet ovat kaupungin vaiheita. Viimeinen '
+          + 'siirtomaakuvernööri lähti 1898, yhdysvaltalaiset '
+          + 'sotilaskuvernöörit käyttivät taloa 1899–1902, tasavallan '
+          + 'presidentti asui siinä 1902–1920, ja sen jälkeen se '
+          + 'palasi kaupunginvaltuustolle; museona se on ollut 1968 '
+          + 'lähtien. Aukion koillisnurkassa seisoo El Templete, pieni '
+          + 'uusklassinen muistomerkki 16. marraskuuta 1519 pidetylle '
+          + 'ensimmäiselle messulle. Sen sisäseinät maalasi '
+          + 'ranskalainen Jean Baptiste Vermay, San Alejandron '
+          + 'taideakatemian perustaja ja ensimmäinen johtaja.',
+      kuvat: [
+        {
+          tiedosto: 'Habana - Plaza de Armas y Ayuntamiento 03.jpg',
+          selite: 'Aukio ja kuvernöörien palatsin kaarikäytävä 1900-luvun alun '
+            + 'postikortissa; kortin oma teksti on painettu kuvaan.',
+          lahde: 'Edicion Jordi, Havanna, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bacardí-talo': {
+      aika: '1930',
+      teksti: 'Bacardí-rommiyhtiö halusi pääkonttorin ja järjesti '
+          + 'suunnittelukilpailun: se kutsui joukon arkkitehteja ja '
+          + 'lupasi voittajalle tuhat pesoa. Tuomaristossa istuivat '
+          + 'yhtiön johtaja Henri Schueg Chassin sekä arkkitehdit '
+          + 'Leonardo Morales y Pedroso, Enrique Gil, Emilio de Soto '
+          + 'ja Pedro Martínez Inclán. Voiton veivät Esteban '
+          + 'Rodríguez-Castells ja Rafael Fernández Ruenes. Tontti on '
+          + '1 320 neliömetriä Monserraten ja San Juan de Diosin '
+          + 'kulmassa Las Murallasin kaupunginosassa — sillä kaistalla, '
+          + 'jonka purettu kaupunginmuuri jätti jälkeensä.'
+          + '\n\n'
+          + 'Työ alkoi 6. tammikuuta 1930, ja yhtiö oli asettanut sille '
+          + '300 päivän määräajan; talo valmistui joulukuussa saman '
+          + 'vuoden puolella. Maaperä oli huono, joten perustukset '
+          + 'tehtiin kovapuupaaluille — jiquí ja júcaro negro — ja '
+          + 'lujabetonille. Marmori ja graniitti tuotiin Euroopasta: '
+          + 'Saksasta, Ruotsista, Norjasta, Italiasta, Ranskasta, '
+          + 'Belgiasta ja Unkarista. Ensimmäisen kerroksen seinät, '
+          + 'lattia ja katto ovat baijerilaista vaaleanpunaista '
+          + 'graniittia ja kaksi salia vihreää marmoria lattiasta '
+          + 'kattoon; kivityön teki baijerilainen Grasyma-yhtiö.'
+          + '\n\n'
+          + 'Talo oli valmistuessaan Havannan korkein. Huipulla, 47 '
+          + 'metrissä, on pronssinen lepakko eli yhtiön tunnus, ja '
+          + 'räystäslinjassa kiertää litteitä seireenireliefejä. '
+          + 'Hissejä on neljä: kaksi kymmenen hengen matkustajahissiä, '
+          + 'jotka nousevat 110 metriä minuutissa, 1 800 kilon '
+          + 'tavarahissi ja neljäs pelkästään kellarin ja ensimmäisen '
+          + 'kerroksen väliin. Talo siirtyi valtiolle 1960-luvun '
+          + 'alussa, ja italialainen rakennusliike entisti sen 2001; '
+          + 'marmori- ja graniittisisustus on tallella. Sitä pidetään '
+          + 'yhtenä Latinalaisen Amerikan hienoimmista art deco '
+          + '-rakennuksista.',
+      kuvat: [
+        {
+          tiedosto: 'Havana Art Deco (8954145059).jpg',
+          selite: 'Tornin huipulla oleva pronssilepakko on yhtiön tunnus; '
+            + 'taustalla näkyy satama.',
+          lahde: 'Sandra Cohen-Rose ja Colin Rose, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'San Franciscon basilika': {
+      aika: '1548–1591',
+      teksti: 'Fransiskaanien luostarikirkon rakentaminen alkoi 1548 '
+          + 'ja kesti vuoteen 1591, vaikka kirkko vihittiin käyttöön jo '
+          + '1575. Myrskyt vaurioittivat sitä 1680 ja 1692, ja '
+          + 'hirmumyrsky katkaisi tornin 1694. Nykyinen muoto on '
+          + 'aloitettu 1716, ja rakenteita uusittiin 1731–1738. '
+          + 'Pikkubasilikan arvon kirkko sai 1739. Julkisivu on '
+          + 'Oficios-kadun puolella, ja siinä on kolme kivipatsasta: '
+          + 'Neitsyt Marian tahraton sikiäminen, Franciscus '
+          + 'Assisilainen ja pyhä Dominicus.'
+          + '\n\n'
+          + 'Kirkon edessä oleva Plaza de San Francisco perustettiin 2. '
+          + 'kesäkuuta 1628, ja se on Havannan vanhimpia aukioita. '
+          + 'Vuonna 1761 kaupungin pormestari José Martín Félix de '
+          + 'Arrate piti sitä kaupungin parhaana paikkana, ja siihen '
+          + 'aikaan aukiolle avautuivat sekä raatihuone, poliisitalo, '
+          + 'vankila että tullikamari. Aukion Leijonain lähde on '
+          + 'italialaisen Giuseppe Gagginin työtä ja pystytettiin '
+          + '1836.'
+          + '\n\n'
+          + 'Kirkollinen käyttö loppui, ja rakennus sai maallisia '
+          + 'tehtäviä: 1842 siihen muutti Kuuban pääpostikonttori, ja '
+          + 'myöhemmin siinä toimi muitakin hallinnon virastoja. '
+          + 'Kellotorni on noin 42 metriä korkea. Sen huipulla seisoi '
+          + 'alun perin Franciscus Assisilaisen patsas, mutta pyörremyrsky '
+          + 'tuhosi sen 1846. Nykyään kirkkosali on konserttisali ja '
+          + 'vuoden 1739 ristikäytävässä on kirkkotaiteen museo. '
+          + 'Kirkon edessä jalkakäytävällä seisoo José Villa Soberónin '
+          + 'veistämä luonnollisen kokoinen pronssipatsas José María '
+          + 'López Lledínistä, jota kaupunki kutsui Pariisin '
+          + 'ritariksi; hänet on haudattu kirkon sisään.',
+      kuvat: [
+        {
+          tiedosto: 'La havane couvent san francisco de assis nef.JPG',
+          selite: 'Kirkkosali, jossa ei enää pidetä messuja vaan konsertteja.',
+          lahde: 'Velvet, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Plaza Vieja': {
+      aika: '1559',
+      teksti: 'Aukio avattiin 1559 kolmantena Plaza de Armasin ja San '
+          + 'Franciscon jälkeen, ja sen nimi oli aluksi Plaza Nueva '
+          + 'eli Uusi aukio: se oli kansanomainen vaihtoehto '
+          + 'sotilaiden ja hallinnon aukiolle. Nimi vaihtui vasta, kun '
+          + 'kaupunkiin syntyi vielä uudempi aukio, Plaza del Santo '
+          + 'Cristo. Siirtomaa-aikana korttelit aukion ympärillä olivat '
+          + 'kreoliylimystön asuinaluetta, ja aukiolla nähtiin '
+          + 'teloituksia, kulkueita, härkätaisteluja ja juhlia — '
+          + 'kaupungin varakkaimmat katselivat niitä parvekkeiltaan.'
+          + '\n\n'
+          + '1700-luvulla aukiosta tuli tori ja sen nimi oli Plaza del '
+          + 'Mercado, kaupungin kaupallinen keskus. Kun Santo Criston '
+          + 'aukiolle avattiin 1814 uusi tori, Mercado Nuevo, vanha '
+          + 'sai nimekseen Plaza Vieja erotukseksi. Nimiä on kertynyt '
+          + 'muitakin: Plaza Real, Mayor, Mercado, Fernando VII, '
+          + 'Perustuslain aukio sekä Juan Bruno Zayasin ja Julián '
+          + 'Grimaun puisto.'
+          + '\n\n'
+          + 'Aukiota reunustavat 1600-, 1700- ja 1800-luvun '
+          + 'siirtomaatalot ja muutama 1900-luvun alun rakennus. '
+          + 'Alkuperäinen Carraran marmorista tehty suihkulähde, jota '
+          + 'ympäröi neljä delfiiniä, purettiin 1930-luvulla, kun '
+          + 'presidentti Gerardo Machado rakennutti aukion alle '
+          + 'pysäköintihallin. Entistäminen alkoi 1980-luvun alussa. '
+          + 'Aukio ja sen ympäristö ovat samalla yksi vanhankaupungin '
+          + 'seitsemästä kaupunginosasta, ja siinä asuu noin 17 400 '
+          + 'ihmistä.',
+      kuvat: [
+        {
+          tiedosto: 'Old Square, Havana.jpg',
+          selite: 'Aukio ylhäältä: keskellä suihkulähde, ympärillä '
+            + 'kaarikäytäviä ja parvekkeita kolmelta vuosisadalta.',
+          lahde: 'Brian Snelson, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'El Capitolio': {
+      aika: '1926–1929',
+      teksti: 'Capitolio nousi paikalle, jolla oli ollut Villanuevan '
+          + 'rautatieaseman pääteasema; aivan sen vastapäätä olivat '
+          + 'seisoneet kaupunginmuurit, jotka purettiin 1863. Hanke '
+          + 'alkoi huhtikuussa 1926 presidentti Gerardo Machadon '
+          + 'kaudella, työtä johti Eugenio Rayneri Piedra ja '
+          + 'rakentamista valvoi yhdysvaltalainen Purdy and Henderson. '
+          + 'Talo on 207 metriä pitkä ja 91 leveä. Sen tekemiseen '
+          + 'tarvittiin yli 5 000 työntekijää, kolme vuotta, kolme '
+          + 'kuukautta ja kaksikymmentä päivää sekä noin 17 miljoonaa '
+          + 'dollaria.'
+          + '\n\n'
+          + 'Kupoli on teräsrungon päälle kivetty, ja teräs tehtiin '
+          + 'Yhdysvalloissa. Se on sijoitettu muuta rakennusta '
+          + 'edemmäs, jotta alle mahtuu apsis. Lähes 92-metrinen '
+          + 'kupoli oli Havannan korkein kohta vuoteen 1956, jolloin '
+          + '121-metrinen FOCSA-talo valmistui, ja rakennusaikanaan '
+          + 'maailman kolmanneksi korkein kupoli. Rayneri Piedran '
+          + 'mukaan esikuva oli Pariisin Panthéon ja sen kautta '
+          + 'Bramanten Tempietto. Pääsisäänkäynnin 55 porrasta '
+          + 'reunustavat italialaisen Angelo Zanellin 6,5-metriset '
+          + 'veistokset Työ ja Suojeleva hyve, ja pylväikkö on 36 '
+          + 'metriä leveä ja yli 16 korkea; sen kaksitoista '
+          + 'graniittipylvästä ovat kukin yli 14 metriä.'
+          + '\n\n'
+          + 'Kupolin alla seisoo Zanellin Tasavallan patsas. Se '
+          + 'valettiin pronssiin Roomassa kolmena kappaleena ja '
+          + 'koottiin vasta Kuubassa; se painaa 49 tonnia, on '
+          + 'päällystetty 22 karaatin kultalehdellä ja on 15 metriä '
+          + 'korkea, jalustoineen 17,54 — aikanaan maailman toiseksi '
+          + 'korkein sisätilassa oleva patsas heti Naran suuren '
+          + 'Buddhan jälkeen. Salin keskellä lattiassa on 25 karaatin '
+          + 'timantin jäljennös, Kuuban nollakilometri. Alkuperäinen '
+          + 'varastettiin 25. maaliskuuta 1946 ja palautettiin '
+          + 'arvoituksellisesti presidentti Ramón Grau San Martínille '
+          + '2. kesäkuuta 1947. Kaupunginhistorioitsija Eusebio Leal '
+          + 'julisti entistämisen päättyneeksi 30. elokuuta 2019, kun '
+          + 'kupoli paljastettiin.',
+      kuvat: [
+        {
+          tiedosto: 'Photo of The Statue of The Republic in Dec. 2019.jpg',
+          selite: 'Kupolin alla seisova Tasavallan patsas on kullattu ja '
+            + 'painaa 49 tonnia.',
+          lahde: 'Wekezolin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Intiaanittaren lähde': {
+      aika: '1837',
+      teksti: 'Suihkulähde syntyi Villanuevan kreivin Claudio Martínez '
+          + 'de Pinillosin aloitteesta. Se tuotiin Italiasta 1837, ja '
+          + 'sen muotoili Carraran marmorista italialainen Giuseppe '
+          + 'Gaggini. Kolmimetrinen valkoinen marmoriveistos seisoo '
+          + 'suorakulmaisella jalustalla, jonka joka kulmassa on '
+          + 'delfiini; delfiinien kielistä valuu vesi suuriin simpukan '
+          + 'kuoriin, jotka muodostavat lähteen altaan. Hahmo esittää '
+          + 'intiaaninaista nimeltä Habana, jonka mukaan kaupunki on '
+          + 'nimetty.'
+          + '\n\n'
+          + 'Nainen istuu kalliolla ja katsoo itään. Kasvot ovat '
+          + 'intiaanin, mutta profiili on kreikkalainen — juuri se on '
+          + 'ollut voimakkain kritiikki veistäjää kohtaan, sillä '
+          + 'kreikkalainen profiili oli aikansa käsitys naisellisesta '
+          + 'täydellisyydestä. Vasemmalla olkapäällä on '
+          + 'sulkakruunu ja nuoliviini, oikea käsi pitelee soikean '
+          + 'kilven ylälaitaa, jossa on kaupungin alkuperäiset '
+          + 'tunnukset, ja vasemmassa on Amaltheian runsaudensarvi. '
+          + 'Siihen italialainen taiteilija vaihtoi eurooppalaisten '
+          + 'hedelmien tilalle kuubalaiset ja pani huipulle ananaksen. '
+          + 'Jalustaa koristavat laakerit ja seppeleet.'
+          + '\n\n'
+          + 'Lähde on muuttanut useammin kuin useimmat patsaat. Se '
+          + 'pystytettiin ensin muurien ulkopuolelle Alamedan päähän '
+          + 'eli nykyisen Pradon kohdalle, jossa oli vuodesta 1803 '
+          + 'seisonut Kaarle III:n patsas. Vuonna 1863 valtuusto '
+          + 'siirsi sen Parque Centralille, ja 1875 se palautettiin '
+          + 'alkuperäiselle paikalleen mutta käännettynä kohti Campo '
+          + 'de Marten kenttää. Vuonna 1928, kun viereinen alue '
+          + 'muuttui Veljeyden aukioksi, veistos käännettiin vielä 90 '
+          + 'astetta uutta Capitoliota kohti. Nyt se katsoo suoraan '
+          + 'pohjoiseen, joten kasvot ovat aina varjossa.',
+      kuvat: [
+        {
+          tiedosto: 'Fuente de la India (Havana).jpg',
+          selite: 'Lähdettä käännetään paikoilleen toukokuussa 1928; kuvan '
+            + 'alalaidassa on julkisten töiden viraston oma kuvateksti.',
+          lahde: 'Secretaría de Obras Públicas, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Hengen kirkko': {
+      aika: '1635',
+      teksti: 'Kirkko rakennettiin 1635 Cuba- ja Acosta-katujen '
+          + 'kulmaan, ja se uusittiin ja laajennettiin 1648, jolloin '
+          + 'siitä tuli seurakuntakirkko. Sen kiinnostavuus on '
+          + 'koruttomuudessa: seinät ovat korallikiveä ja koristelu on '
+          + 'niukkaa. Kuubalainen arkkitehti ja historioitsija Joaquín '
+          + 'Weiss luki sen 1600-luvun kuubalaiseen yksilaivaiseen '
+          + 'tyyliin, jossa kirkossa on vain yksi keskilaiva. '
+          + 'Kellotorni rakennettiin 1700-luvun ensi vuosina, '
+          + 'kuorin holvi noin 1720 ja sivulaiva — kahdeksan kertaa 29 '
+          + 'metriä — vuonna 1760 piispa Pedro Morell de Santa Cruzin '
+          + 'käskystä.'
+          + '\n\n'
+          + 'Kirkolla oli siirtomaa-aikana poikkeuksellinen asema. '
+          + 'Paavin bulla 1772 ja Kaarle III:n kuninkaallinen kirje '
+          + '1773 julistivat sen kaupungin ainoaksi turvakirkoksi: '
+          + 'kuka tahansa vainottu sai siellä suojan viranomaisilta ja '
+          + 'oikeudelta. Asiasta kertoo yhä metallilaatta kellotornin '
+          + 'juurella.'
+          + '\n\n'
+          + 'Kirkon alla on hautaholveja, jotka löydettiin 1953. '
+          + 'Niihin mennään alttarin vasemmalta puolelta, ja ne ovat '
+          + 'vanhempia kuin Vedadon Colón-hautausmaa, joka avattiin '
+          + '1876. Maalauksista osa on José Nicolás de la Escaleran, '
+          + 'jota kutsutaan Kuuban ensimmäiseksi maalariksi, ja osa '
+          + '1900-luvun Arístides Fernándezin — hänen suuri '
+          + 'öljymaalauksensa esittää Kristuksen hautaamista. Oikealla '
+          + 'seinällä on istuva ristiltäotettu Kristus.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * MEXICO CITYN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.mexico, ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit
+   * "Plaza Garibaldi", "Santo Domingo (Mexico City)", "Teatro de la
+   * Ciudad", "Colegio de San Ildefonso", "Palacio de Correos de
+   * México", "Convent of San Francisco, Madero Street, Mexico City",
+   * "Museo Nacional de las Culturas" ja "Colegio de San Ignacio de
+   * Loyola Vizcaínas").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kotka ja kaktus, vuoden 1521 piiritys, vajoava kaupunki,
+   * Zócalon nimi, palatsien kaupunki, Chapultepecin linna, Reforman
+   * bulevardi, Alameda Central, Templo Mayor, nahuatl, chinampat ja
+   * nykyinen atsteekkiperintö. Yksikään kartan kohteista ei ole niiden
+   * aihe.
+   *
+   * VAJOAMINEN MAINITAAN KAHDESSA JUTUSSA MUTTA VAIN YHDEN RAKENNUKSEN
+   * MITTAISENA. San Franciscon luostarikirkon kaksi edeltäjää vajosivat
+   * ja purettiin, ja Vizcaínas-koulun Aldaco-kadun kivipalkeissa näkyy
+   * aaltoja. Kaupungin mittainen tarina — yhdeksän metriä, puoli
+   * metriä vuodessa, kanavat ja tunnelit — on lehden noston aihe, eikä
+   * sitä toisteta täällä.
+   *
+   * PALACIO DE BELLAS ARTES JÄTETTIIN POIS SAMASTA SYYSTÄ. Se on
+   * lehden vajoamisnostossa nimeltä mainittu esimerkki, joten kartalla
+   * se on rakennus muiden joukossa eikä numeroitu kohde.
+   *
+   * KUVAT: kuusi juttua kahdeksasta sai kuvan, ja jokainen on
+   * tarkistettu Commonsin rajapinnasta 7.9.2026 (lisenssi ja tekijä
+   * extmetadatasta) ja katsottu silmin 640 px esikatseluna. Yksikään
+   * tiedosto ei ole sama kuin kaupunkilehden mexico-lohkossa
+   * (kulttuuri-kategoriat.js).
+   *
+   * KAUPUNGINTEATTERI JÄI ILMAN KUVAA. Ainoa Commonsin kuva
+   * teatterista on 768 × 1024 pikseliä eli alle vaaditun 1 200:n, eikä
+   * omaa kategoriaa ole. Kohde on raportin miniatyyritilauksessa.
+   *
+   * PLAZA GARIBALDIN KUVAKSI VALITTIIN MUISTOMERKKI EIKÄ SALÓN
+   * TENAMPA. Tenampan sisäkuvat ovat teknisesti hyviä, mutta niissä on
+   * kymmeniä tunnistettavia kasvoja ja anniskelutiskin tuotemerkkejä;
+   * mariachi-muistomerkki kertoo saman asian ilman kumpaakaan.
+   */
+  mexico: {
+    'Plaza Garibaldi': {
+      aika: '1920',
+      teksti: 'Aukio on Eje Centralin varrella Hondurasin ja Perun '
+          + 'tasavallan katujen välissä, muutaman korttelin '
+          + 'pohjoispuolella Palacio de Bellas Artesia. Sen '
+          + 'alkuperäinen nimi oli Plaza Santa Cecilia. Nykyisen '
+          + 'nimensä se sai 1920 Meksikon vallankumouksen päätyttyä '
+          + 'everstiluutnantti Peppino Garibaldin mukaan, joka liittyi '
+          + 'maderistien joukkoihin Casas Grandesin hyökkäyksessä '
+          + 'Chihuahuassa.'
+          + '\n\n'
+          + 'Aukio on Mexico Cityn mariachi-musiikin koti. Aukion '
+          + 'pohjoislaidalla toimii yhä Salón Tenampa, josta tuli '
+          + 'mariachin päänäyttämö 1920-luvulla, kun Cirilo Marmolejo '
+          + 'orkestereineen alkoi soittaa siellä säännöllisesti. Muut '
+          + 'soittajat seurasivat perässä, ja aukiolla alettiin maksaa '
+          + 'muusikoille siitä, että he lauloivat tilaajan '
+          + 'kumppanille.'
+          + '\n\n'
+          + 'Meksikolaisen elokuvan kulta-aika 1930-luvulta '
+          + '1950-luvulle teki musiikista koko maan omaisuutta. '
+          + 'Charro-elokuvien tähdet Tito Guízar, Jorge Negrete, José '
+          + 'Alfredo Jiménez ja Pedro Infante lauloivat mariachia '
+          + 'vastanäyttelijättärilleen. Charro-elokuva on '
+          + 'sittemmin vaihtunut muuhun, mutta mariachi-yhtyeet '
+          + 'soittavat aukiolla yötä päivää, ja niiden rinnalle ovat '
+          + 'tulleet triot ja Veracruzin jarocho-yhtyeet; osa '
+          + 'soittajista asettuu riviin Eje Centralin varteen '
+          + 'kysymään keikkoja ohiajavilta. Kaupunki nimesi alueen '
+          + 'vuonna 2011 taikakortteliksi eli Barrio Mágicoksi.',
+      kuvat: [
+        {
+          tiedosto: 'MONUMENTO AL MARIACHI EN LA PLAZA GARIBALDI.jpg',
+          selite: 'Aukion mariachi-muistomerkki: pronssinen soittaja hattuineen '
+            + 'ja kitaroineen.',
+          lahde: 'JEDIKNIGHT1970, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Santo Domingon aukio': {
+      aika: '1590',
+      teksti: 'Kolme korttelia katedraalista pohjoiseen on aukio ja '
+          + 'sen kirkko, ja kirkko on kaikki mitä on jäljellä yhdestä '
+          + 'Uuden Espanjan ensimmäisistä luostareista. Dominikaanit '
+          + 'saapuivat 1526 ja muuttivat Guerreron suvun lahjoittamiin '
+          + 'taloihin — samalle tontille, jolle myöhemmin rakennettiin '
+          + 'inkvisition palatsi. Talojen tilalle tuli kirkko, '
+          + 'asuintilat ja vankila. Paikan ensimmäinen kirkko '
+          + 'vihittiin 1590, ja Filip II rahoitti sen ympärille '
+          + 'luostarin, jossa oli neljä sisäpihaa, sali, ruokala, '
+          + 'kirjasto ja sairastupa. Huono rakennustyö, pehmeä maa ja '
+          + 'maanjäristykset pakottivat rakentamaan uudelleen.'
+          + '\n\n'
+          + 'Nykyinen kirkko luetaan tyylinsä perusteella Pedro de '
+          + 'Arrietan työksi. Julkisivu on verhoiltu tezontlella, '
+          + 'verenpunaisella vulkaanisella kivellä, ja portaali on '
+          + 'enimmäkseen harmaanvalkoista canteraa. Pääoven ympärillä '
+          + 'on kaksitoista pylvästä, ja kivireliefissä pyhä Dominicus '
+          + 'polvistuu ottamaan vastaan taivaan avaimet pyhältä '
+          + 'Pietarilta ja kirjeet pyhältä Paavalilta. Pääalttari on '
+          + 'Manuel Tolsán uusklassinen työ, joka korvasi Pedro Patiño '
+          + 'Ixtolinquen barokkialttarin. Kuoripenkit muodostavat '
+          + 'hevosenkengän: 32 setripuista istuinta, joiden '
+          + 'selkänojaan on veistetty kuhunkin eri pyhimys. Kirkkoon '
+          + 'on haudattu valloittaja ja tutkimusmatkailija Francisco '
+          + 'Vázquez de Coronado.'
+          + '\n\n'
+          + 'Aukion länsilaitaa kiertää Portal de los Evangelistas, '
+          + 'toscanalainen pylväskäytävä pyöreine kaarineen. Sen alla '
+          + 'istuvat yhä kirjurit kirjoituskoneineen ja vanhoine '
+          + 'painokoneineen ja kirjoittavat asiakkaille, jotka eivät '
+          + 'itse kirjoita; palvelu on lähellä sitä, mitä asianajaja '
+          + 'tai neuvonantaja tekee. Aukion keskellä olevassa '
+          + 'suihkulähteessä seisoo Meksikon itsenäisyyssodan '
+          + 'sankarittaren Josefa Ortiz de Domínguezin patsas.',
+      kuvat: [
+        {
+          tiedosto: 'Plaza de Santo Domingo 1880-1900.tif',
+          selite: 'Aukio 1800-luvun lopulla: kirkko perällä, vasemmalla '
+            + 'kirjurien pylväskäytävä ja edessä härkävankkureita.',
+          lahde: 'Abel Briquet, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupunginteatteri: {
+      aika: '1918',
+      teksti: 'Teatteri rakennettiin 1918 Donceles-kadun numeroon 36 '
+          + 'vanhan Teatro Xicoténcatlin paikalle, ja se nimettiin '
+          + 'primadonna Esperanza Iriksen mukaan. Iris — oikealta '
+          + 'nimeltään María Esperanza Bonfil — oli Tabascon '
+          + 'osavaltiosta kotoisin oleva operettilaulaja, jonka ura '
+          + 'kukoisti Mexico Cityssä, Havannassa ja Madridissa ja joka '
+          + 'kiersi laajalti Amerikoissa. Tunnetuimpia rooleja olivat '
+          + 'Iloinen leski, Luxemburgin kreivi ja La princesa del '
+          + 'dólar; 1930-luvulla hän näytteli myös elokuvissa.'
+          + '\n\n'
+          + 'Iris rahoitti teatteria itse edellisen kiertueensa '
+          + 'tuotoilla. Arkkitehdit Capetillo Servín ja Federico '
+          + 'Mariscal ottivat esikuvaksi Milanon La Scalan. Teatteri '
+          + 'avattiin 25. toukokuuta 1918 kaksi päivää sen jälkeen, '
+          + 'kun laulajatar oli palannut Etelä-Amerikasta; paikalla '
+          + 'olivat presidentti Venustiano Carranza ja hänen '
+          + 'hallituksensa. Avausnäytäntö oli La Duquesa del '
+          + 'Bal-Tabarín, ja Iris lauloi osan numeroista itse. '
+          + 'Sodasta huolimatta hän sai lavalle Enrico Caruson ja Anna '
+          + 'Pavlovan. Palacio de Bellas Artesin avautumiseen 1930-luvulla '
+          + 'asti tämä oli kaupungin tärkein kulttuurinäyttämö.'
+          + '\n\n'
+          + 'Iris asui aikanaan teatterin lämpiössä ja piti omaa '
+          + 'aitiota niitä esityksiä varten, joissa ei itse esiintynyt. '
+          + 'Hänen kuollessaan 1962 talo oli käytännössä hylätty. '
+          + 'Kaupunki otti sen 1976 kulttuurikäyttöön ja antoi sille '
+          + 'nimen Teatro de la Ciudad. Ensimmäisessä korjauksessa '
+          + 'sähkökipinä sytytti tulipalon, joka tuhosi suuren osan '
+          + 'rakennuksesta, ja talo oli kiinni, kunnes entistäminen '
+          + 'aloitettiin uudelleen 1999 ja saatiin päätökseen 2002. '
+          + 'Vuonna 2008 kaupunki palautti Esperanza Iriksen nimen '
+          + 'teatterin nimeen.',
+      lahde: 'Wikipedia',
+    },
+    'San Ildefonson kollegio': {
+      aika: '1588',
+      teksti: 'Jesuiitat saapuivat Meksikoon 1572, ja kun Keski-Meksikon '
+          + 'lähetystyö oli enimmäkseen tehty, he ryhtyivät '
+          + 'perustamaan kouluja. Niistä tärkein oli San Ildefonso, '
+          + 'joka perustettiin 1588. Vuonna 1618 se yhdistettiin '
+          + 'lähes raunioituneeseen San Pedro y San Pablon kollegioon '
+          + 'ja sai kuninkaallisen sinetin Filip III:lta. Kollegio ei '
+          + 'ollut korkeakoulu nykyisessä mielessä vaan asuntola ja '
+          + 'koulu: nuorukaiset asuivat ja opiskelivat täällä mutta '
+          + 'olivat samalla kirjoilla kuninkaallisessa ja '
+          + 'paavillisessa yliopistossa.'
+          + '\n\n'
+          + 'Talo kasvoi koulun mukana. Laajennus aloitettiin 1712 ja '
+          + 'saatiin valmiiksi 1749; vanhempaa osaa kutsutaan siitä '
+          + 'lähtien nimellä Colegio Grande ja uutta nimellä Colegio '
+          + 'Chico, ja San Ildefonso -kadun julkisivu on samalta '
+          + 'ajalta. Kokonaisuus jakautuu kuuteen osaan: viisi on '
+          + 'siirtomaa-ajan barokkia — kaksi kollegiota, kappeli, El '
+          + 'Generalito ja Pasantesin pihamaa, kaikki valmiina 1749 — '
+          + 'ja yksi uusbarokkia, vuoden 1911 Bolívar-amfiteatteri. '
+          + 'Jesuiitat karkotettiin Espanjan alueilta 1767, ja koulu '
+          + 'rappeutui; rakennuksessa majoitettiin Flanderin '
+          + 'rykmentin sotilaita ja lääketieteellisen tiedekunnan '
+          + 'osastoja, ja sotien aikana se oli yhdysvaltalaisten ja '
+          + 'ranskalaisten joukkojen kasarmi.'
+          + '\n\n'
+          + 'Vuonna 1867 Benito Juárez siirsi opetuksen pois '
+          + 'kirkolta, ja San Ildefonsosta tuli Escuela Nacional '
+          + 'Preparatoria. Sitä johti Gabino Barreda, joka järjesti '
+          + 'koulun Auguste Comten positivistisen mallin mukaan; '
+          + 'tarkoitus oli tuottaa opiskelijat pian '
+          + 'uudelleenperustettavalle kansallisyliopistolle. Taloa '
+          + 'pidetään meksikolaisen muraaliliikkeen syntypaikkana, ja '
+          + 'sen seinillä on José Clemente Orozcon, Fernando Lealin, '
+          + 'Diego Riveran ja muiden seinämaalauksia. Koulu suljettiin '
+          + '1978, ja rakennus avattiin 1992 uudelleen museona ja '
+          + 'kulttuurikeskuksena.',
+      kuvat: [
+        {
+          tiedosto: 'Patio Principal del Colegio de San Ildefonso.JPG',
+          selite: 'Pääpiha, jota kiertää kaksi kerrosta kaarikäytävää.',
+          lahde: 'Patricia Alzuarte Díaz, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Postipalatsi: {
+      aika: '1902–1907',
+      teksti: 'Vuonna 1901 postilaitoksesta tehtiin oma virastonsa, ja '
+          + 'kun se käsitteli noin 130 miljoonaa lähetystä vuodessa, '
+          + 'päätettiin että sillä pitää olla oma talo. Suunnittelijaksi '
+          + 'valittiin italialainen arkkitehti Adamo Boari ja '
+          + 'rakennustöiden valvojaksi sotilasinsinööri Gonzalo Garita '
+          + 'y Frontera. Tontilla oli ollut fransiskaanien '
+          + 'kolmannen sääntökunnan sairaala, joka purettiin 1902. '
+          + 'Peruskivi laskettiin 14. syyskuuta 1902, ja työ kesti '
+          + 'siitä viisi vuotta. Presidentti Porfirio Díaz vihki talon '
+          + '1907 pudottamalla laatikkoon kaksi postikorttia: toinen '
+          + 'oli osoitettu Mexico Cityyn, toinen muualle maahan.'
+          + '\n\n'
+          + 'Perustus tehtiin uudella menetelmällä, jota kutsuttiin '
+          + 'Chicagoksi: 70 senttiä paksu betonilaatta terästen '
+          + 'vahvistamana. Teräsristikko valmistettiin pääosin New '
+          + 'Yorkissa Milliken Brothersilla ja tuotiin Meksikoon 1903. '
+          + 'Juuri se on syy siihen, että palatsi on kestänyt '
+          + 'maanjäristykset eikä ole painunut naapuriensa tavoin.'
+          + '\n\n'
+          + 'Tyyli on tarkoituksella sekoitus. Siinä on art nouveauta, '
+          + 'espanjalaista renessanssia, platereskia, rokokoota, '
+          + 'elisabetiaanista ja venetsialaista gotiikkaa, mauripiirteitä, '
+          + 'uusklassista, barokkia ja art decoa; jokaisen kerroksen '
+          + 'ikkunat ovat eri tyyliä, ja julkisivun pitää koossa '
+          + 'toistuva kaari. Kivi on chilucaa, lähes läpikuultavan '
+          + 'vaaleaa lajiketta, ja marmori, stukko ja valkoinen '
+          + 'cantera ovat Pueblasta; ikkunoiden kiillotettu messinki '
+          + 'tehtiin Italiassa, ja valaisimia kannattelevat '
+          + 'rautalohikäärmeet. 1950-luvulla naapurin Meksikon '
+          + 'keskuspankki otti talosta suuren osan ja rakennusten '
+          + 'väliin tehtiin kaksi siltaa; muutokset tuhosivat paljon '
+          + 'koristelua ja ylikuormittivat teräsrungon, ja vuoden 1985 '
+          + 'maanjäristys vaurioitti taloa pahoin. Entistäminen '
+          + '1990-luvulla palautti sen alkuperäiseen asuunsa.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio Postal, México D.F., México, 2013-10-16, DD 66.JPG',
+          selite: 'Postisali lasiholvin alla; messinki ja marmori tuotiin '
+            + 'Euroopasta.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'San Franciscon luostarikirkko': {
+      aika: '1710–1716',
+      teksti: 'Luostari oli niiden kahdentoista ensimmäisen '
+          + 'fransiskaanin päämaja, jotka tulivat Martín de Valencian '
+          + 'johdolla Meksikoon ensimmäisellä paavin luvalla tehdä '
+          + 'lähetystyötä Uudessa Espanjassa. Se rakennettiin sinne, '
+          + 'missä oli ollut Moctezuma II:n eläintarha. Laajimmillaan '
+          + 'kirkko ja luostari peittivät korttelit, joita nykyään '
+          + 'rajaavat Bolívar, Madero, Eje Central ja Venustiano '
+          + 'Carranza — noin 32 000 neliömetriä. Ensimmäisen '
+          + 'ristikäytävän pihalla seisoi risti, jonka sanottiin '
+          + 'olevan korkeampi kuin kaupungin korkein torni; se oli '
+          + 'veistetty Chapultepecin metsän sypressistä.'
+          + '\n\n'
+          + 'Nykyinen kirkko on paikan kolmas: kaksi ensimmäistä '
+          + 'vajosivat pehmeään maahan ja jouduttiin purkamaan. Tämä '
+          + 'rakennettiin 1710–1716. Madero-kadun puoleinen ovi on '
+          + 'itse asiassa Balvaneran kappelin ovi, jonka julkisivu on '
+          + 'vuodelta 1766 ja jonka tekijäksi arvellaan yleensä '
+          + 'Lorenzo Rodríguezia. Oven edessä on atrium, josta laskee '
+          + 'useita porrasjaksoja alas kirkkoon, sillä tämäkin talo '
+          + 'painuu. Vuoden 1710 pääjulkisivu on jäänyt muurien '
+          + 'sisään, eikä sitä näe.'
+          + '\n\n'
+          + 'Talossa on nähty isoja hetkiä. Hernán Cortésille '
+          + 'pidettiin täällä sielunmessu, kun luultiin että hän oli '
+          + 'kuollut Keski-Amerikassa. Vuonna 1629 Gelvesin markiisi '
+          + 'saapui valepuvussa piiloon riitaannuttuaan arkkipiispan '
+          + 'kanssa, ja 1692 Galven kreivi puolisoineen sai luostarista '
+          + 'turvapaikan. Itsenäisyyssodan päättymistä juhlittiin '
+          + 'Te Deumilla, kun Agustín de Iturbiden 16 000 miehen '
+          + 'Trigarante-armeija marssi Madero-katua ohi. Reformisodan '
+          + 'jälkeen luostari lakkautettiin ja omaisuus takavarikoitiin, '
+          + 'ja suuri osa purettiin uusien katujen tieltä. Vanha '
+          + 'ristikäytävä Gante-kadun varrella on nyt metodistikirkko '
+          + 'ja entinen De Profundis -sali leipomo; ne ovat jäljellä '
+          + 'siksi, että purkaminen olisi tullut kalliimmaksi kuin '
+          + 'seisottaminen.',
+      kuvat: [
+        {
+          tiedosto: 'FacadeSanFranDF.JPG',
+          selite: 'Balvaneran kappelin julkisivu vuodelta 1766; atriumista '
+            + 'laskee portaita alas kirkkoon.',
+          lahde: 'Thelmadatter, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansojen museo': {
+      aika: '1731',
+      teksti: 'Museo seisoo Casa Denegridan eli Mustan talon paikalla. '
+          + 'Se kuului Moctezuma II:n uusiin palatseihin, ja '
+          + 'espanjalaiset kuvasivat sen ikkunattomaksi, mustaksi '
+          + 'maalatuksi huoneeksi, jossa hallitsija mietti sitä, mitä '
+          + 'ennustajat ja shamaanit olivat hänelle kertoneet. '
+          + 'Palatsit tuhoutuivat lähes kokonaan valloituksessa. Maa '
+          + 'annettiin Hernán Cortésille, joka rakensi palatsit '
+          + 'uudelleen espanjalaiseen tapaan käyttäen vanhojen '
+          + 'rakennusten kiviä; hänen poikansa myi tontin myöhemmin '
+          + 'takaisin Filip V:lle. Kaivauksissa tästä ja naapurista on '
+          + 'löytynyt muurin osia ja basalttilattia, joiden uskotaan '
+          + 'kuuluneen Mustaan taloon.'
+          + '\n\n'
+          + 'Rahaa oli lyöty raatihuoneella, mutta siirtomaan '
+          + 'vaurastuessa kolikoita tarvittiin enemmän, ja rahapaja '
+          + 'muutti tänne 1731. Sen johtaja Nicolás Peinado oli itse '
+          + 'arkkitehti ja teki ensimmäiset piirustukset; työn tekivät '
+          + 'Pedro de Arrieta ja Lorenzo Rodríguez. Muutostyö meni '
+          + 'kuitenkin niin pahasti pieleen, että varakuningas nimitti '
+          + 'José Eduardo Herreran tilalle ja Peinado päätyi '
+          + 'vankilaan. Luis Diez Navarro sai talon valmiiksi, ja sitä '
+          + 'laajennettiin vielä 1772–1779. Rahapajasta katu sai '
+          + 'nimensä: Moneda tarkoittaa kolikkoa.'
+          + '\n\n'
+          + 'Rahanlyönti siirtyi 1850 Apartado-kadulle, ja talossa '
+          + 'toimivat vuorollaan kaiverruskoulu, korkein oikeus ja '
+          + 'ministeriön virastoja. Vuonna 1865 keisari Maximilian '
+          + 'sijoitti tänne luonnonhistorian, arkeologian ja historian '
+          + 'julkisen museon; alkukokoelma tuli kuninkaallisesta ja '
+          + 'paavillisesta yliopistosta sekä siitä kansallismuseosta, '
+          + 'jonka presidentti Guadalupe Victoria oli perustanut 1825. '
+          + 'Kokoelmat hajautettiin muihin laitoksiin vuosina '
+          + '1909–1964, ja talo avattiin 5. joulukuuta 1965 maailman '
+          + 'kulttuurien museona — ainoana lajissaan Latinalaisessa '
+          + 'Amerikassa. Siinä on kuusitoista pysyvää salia ja yli '
+          + '12 000 esinettä.',
+      kuvat: [
+        {
+          tiedosto: 'Museo Nacional de las Culturas.JPG',
+          selite: 'Entisen rahapajan päätykolmio ja museon nimi kiveen '
+            + 'hakattuna.',
+          lahde: 'Betoqa, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vizcaínas-koulu': {
+      aika: '1734',
+      teksti: 'Koulun perusti baskien veljeskunta Nuestra Señora de '
+          + 'Aránzazu, johon kuului Vizcayasta, Álavasta, '
+          + 'Guipúzcoasta ja Navarrasta tulleita pappeja, kauppiaita '
+          + 'ja aatelisia. Vuonna 1732 veljeskunta päätti perustaa '
+          + 'koulun orpotyttöjen ja leskien suojaksi ja opetukseksi; '
+          + 'hanketta johti kolme jäsentä, Francisco de Echeveste, '
+          + 'Manuel de Aldaco ja Ambrosio de Meave. Ensin pyydettiin '
+          + 'tonttia sieltä, missä nykyään kulkee Avenida Juárez, '
+          + 'mutta pyyntö evättiin. Tilalle tarjottiin San Juanin '
+          + 'kaupunginosan entistä toripaikkaa, josta oli tullut '
+          + 'kaatopaikka ja jota pidettiin hyvin huonona seutuna. '
+          + 'Tontti otettiin vastaan, vaikka se piti kuivattaa.'
+          + '\n\n'
+          + 'Työ aloitettiin juhlallisesti 31. heinäkuuta 1734, '
+          + 'baskien suojeluspyhimyksen Ignatius Loyolalaisen '
+          + 'päivänä, kun varakuningas Juan Antonio de Vizarrón y '
+          + 'Eguiarreta laski peruskiven. Kiven alle haudattiin '
+          + 'laatikko kulta- ja hopearahoja sekä hopeoitu laatta; '
+          + 'kukaan ei tiedä, missä ne nyt ovat. Hankkeen aloitti '
+          + 'Pedro Bueno Bazori, joka kuoli kauan ennen valmistumista, '
+          + 'ja työtä jatkoivat Miguel José de Quiera ja Miguel de '
+          + 'Rivera. Talo maksoi kaksi miljoonaa pesoa ja valmistui '
+          + '1750-luvulla. Se täyttää kokonaisen korttelin, ja idän, '
+          + 'lännen ja etelän puolella pohjakerros oli rivi koppeja, '
+          + 'jotka avautuivat vain kadulle: ne tuottivat vuokratuloa '
+          + 'ja pitivät samalla kadun erossa sisällä asuvista.'
+          + '\n\n'
+          + 'Koulu ei ollut luostari eikä vaatinut lupauksia, ja se '
+          + 'oli aikaansa edellä sillä tavoin, että avaaminen '
+          + 'viivästyi: Espanjan kruunu antoi lopullisen hyväksynnän '
+          + 'vasta 1767, kun paavi Klemens XIII oli puoltanut ja '
+          + 'Kaarle III noussut valtaistuimelle. Vuodesta 1878 opetus '
+          + 'on painottunut teknisiin ja ammatillisiin aineisiin, ja '
+          + 'nykyään koulu on yhteiskoulu esikoulusta lukioon. Se on '
+          + 'Meksikon ainoa siirtomaa-ajan oppilaitos, joka on '
+          + 'toiminut keskeytyksettä perustamisestaan asti; '
+          + 'oppilaisiin kuului itsenäisyyssodan sankaritar Josefa '
+          + 'Ortiz de Domínguez. Talo on painunut alusta asti — '
+          + 'pehmeä maa, tulvat, järistykset ja pohjaveden pumppaus — '
+          + 'ja Aldaco-kadun kivipalkeissa näkyvät aallot kertovat '
+          + 'sen, mutta silti sitä pidetään kaupungin parhaiten '
+          + 'säilyneenä barokkirakennuksena.',
+      kuvat: [
+        {
+          tiedosto: 'VizcainasMexico.JPG',
+          selite: 'Korttelin mittainen tezontle-julkisivu, jonka pilastereita '
+            + 'kruunaavat huiput.',
+          lahde: 'AlejandroLinaresGarcia, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * HOBARTIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026). Kartta on
+   * js/packs/maakartat.js: KAUPUNKIKARTAT.hobart, ja jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "Campbell
+   * Street Gaol", "Hobart Cenotaph", "Hobart Synagogue", "St Mary's
+   * Cathedral, Hobart", "Tasmanian Museum and Art Gallery", "St
+   * David's Cathedral, Hobart", "Parliament House, Hobart" ja
+   * "Anglesea Barracks").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Sullivans Coven siirtokunta, valaanpyynti, palawa-kansa,
+   * Kellyn portaat, Musta linja, Theatre Royal, Cascaden panimo, Port
+   * Arthur, kunanyi, valaat, Etelämanner-portti, Hobart Rivulet, MONA,
+   * Dark Mofo, Salamanca Arts Centre ja Sidney Nolanin Käärme.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Campbell
+   * Streetin vankilan jutussa EI kerrota Theatre Royalista, vaikka
+   * teatteri seisoo samalla kadulla — se on lehden noston H2 aihe.
+   * Vankilan jutussa ei myöskään kerrota Port Arthurista (lehden nosto
+   * H4) eikä vankikuljetusten lopettamisesta muuten kuin vuosilukuna,
+   * ja parlamenttitalon jutussa Salamanca Placen louhos mainitaan vain
+   * kivien lähteenä — makasiinit ovat lehden nostojen K4 ja T3 aihe.
+   *
+   * PARLAMENTTITALON KOORDINAATIT ovat artikkelista "Parliament of
+   * Tasmania" (rakennuksen omassa artikkelissa ei ole
+   * coordinates-lohkoa), mutta juttu on kirjoitettu rakennuksen
+   * artikkelista. Perustelu on maakartat.js:n hobart-lohkossa.
+   *
+   * KUVAT: kaikki kahdeksan tarkistettu Commonsin rajapinnasta
+   * 7.9.2026 (lisenssi, tekijä ja Restrictions extmetadatasta) ja
+   * katsottu silmin 760 pikselin esikatseluna. Yksikään tiedosto ei
+   * esiinny muualla repossa (grep js-puusta) eikä siis myöskään
+   * kaupunkilehden hobart-lohkossa — sama kohde saa esiintyä
+   * molemmissa, tiedosto ei.
+   *
+   * KUVAHYLKÄYKSET SYINEEN. Tunnistettavia kasvoja etualalla:
+   * "Hobart-Tasmania-Australia04.JPG" (nurmella istuva seurue
+   * parlamenttitalon edessä) ja "Hobart TasMuseum&Surrounds 004 TMAG
+   * 2020.jpg" (lapsia sisäpihalla). Mainos kuvassa: "St Mary's
+   * Cathedral, Hobart 1.jpg" (pakettiauton kylkeen teipattu
+   * yritysbanneri telineiden edessä) — samasta kohteesta valittiin
+   * saman kuvaajan kuva 2. Aihe ei vastannut käyttöä: "Tasmania
+   * Parliament House.JPG" ja "Lascar Parliament House (Hobart)" ovat
+   * molemmat iltakuvia, ja niistä valittiin jälkimmäinen, koska
+   * ensimmäisessä talo on lähes musta.
+   */
+  hobart: {
+    'Campbell Streetin vankila': {
+      aika: '1821',
+      teksti: 'Vankila alkoi vuonna 1821 vankityönä rakennettuna '
+          + 'Hobart Townin vankikasarmina, johon mahtui 640 miestä. '
+          + 'Vankeja saapui tuhansittain joka vuosi, ja kasarmi '
+          + 'osoittautui liian pieneksi lähes heti: sitä laajennettiin '
+          + 'seuraavan vuosikymmenen ajan vaiheittain, kunnes se veti '
+          + 'yli 1 200 miestä. Tilaa otettiin joka tuumasta, myös '
+          + 'kattoonteloista. Vuodesta 1846 laitos toimi vähitellen '
+          + 'siviilivankilana, ja kun vankikuljetukset päättyivät '
+          + '1853, siitä tuli Hobartin vankila Murray Streetin vanhan '
+          + 'ja rakenteiltaan pettäneen talon tilalle.'
+          + '\n\n'
+          + 'Campbell Street oli yksi Tasmanian kolmesta vankilasta, '
+          + 'joissa kuolemantuomiot pantiin täytäntöön. Vuosina '
+          + '1857–1946 täällä teloitettiin 32 ihmistä, joukossa yksi '
+          + 'nainen; vuoden 1946 teloitus jäi Tasmanian viimeiseksi. '
+          + 'Selleihin ei koskaan asennettu käymälöitä, vain '
+          + 'sankoja. Vuosisadan alkupuoliskolla laitosta tutkittiin '
+          + 'kuudesti, ja joka kerta päädyttiin samaan: se pitäisi '
+          + 'uudistaa. Vuoden 1916 töissä talo liitettiin viemäriin '
+          + 'mutta sellit eivät, ja kaasuvalot vaihdettiin sähköön.'
+          + '\n\n'
+          + 'Vangit siirrettiin uuteen Risdonin vankilaan marraskuusta '
+          + '1960 alkaen, ja Campbell Street suljettiin 1963. Kaikki '
+          + 'muut rakennukset purettiin paitsi oikeussalit, jotka '
+          + 'toimivat tuomioistuimena vuoteen 1983. Jäljellä on '
+          + 'John Lee Archerin johdolla suunniteltu ryhmä Campbell- ja '
+          + 'Brisbane-katujen kulmassa: vuosina 1831–1833 '
+          + 'eristysselien päälle rakennettu kirkko, joka muutettiin '
+          + '1850-luvun lopulla vankilankappeliksi ja oikeussaleiksi. '
+          + 'Hirsipuu kunnostettiin 1980-luvulla alkuperäisin osin. '
+          + 'Muusta vankilasta on jäljellä vain pätkiä hiekkakivimuuria '
+          + 'kadun varressa.',
+      kuvat: [
+        {
+          tiedosto: 'Penitentiary Chapel Hobart 20171119-006.jpg',
+          selite: 'Vankilan kappeli rakennettiin 1831–1833 eristysselien '
+            + 'päälle, ja 1850-luvun lopulla siitä tehtiin oikeussalit.',
+          lahde: 'Gary Houston, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Sotamuistomerkki: {
+      aika: '1925',
+      teksti: 'Tasmanian tärkein sotamuistomerkki seisoo Queens '
+          + 'Domainin kumpareella, josta näkyy sekä kaupunki että '
+          + 'Derwent. Paikalla oli vuosina 1838–1923 Queens Battery '
+          + '-patteri, ja sijainti valittiin nimenomaan sen '
+          + 'näkyvyyden ja oman sotilashistorian takia. Muistomerkki '
+          + 'on art déco -tulkinta egyptiläisestä obeliskista: '
+          + 'sinikivinen porrastettu jalusta, harmaasta graniitista '
+          + 'tehty kapeneva vartalo ja pyramidin muotoinen huippu. '
+          + 'Huipun alla on joka sivulla punaisesta läpikuultamattomasta '
+          + 'lasista tehty risti, jota valaistaan takaa lakkaamatta.'
+          + '\n\n'
+          + 'Suunnittelukilpailu pidettiin 1923, ja sen voitti '
+          + 'hobartilainen toimisto Hutchinson and Walker. '
+          + 'Alkuperäinen ehdotus oli 65 jalkaa korkea, mutta '
+          + 'korkeutta nostettiin 75 jalkaan eli 23 metriin, jotta '
+          + 'huipulle mahtuisi risti. Anzac-päivänä 1925 kesken '
+          + 'rakennustöiden vartalon perustaan muurattiin umpisinkkinen '
+          + 'lipas, jossa on 522 ensimmäisessä maailmansodassa '
+          + 'kaatuneen tasmanialaisen nimet. Muistomerkki paljastettiin '
+          + '13. joulukuuta 1925. Itse kivessä ei ole nimiä, vain '
+          + '"Lest We Forget" ja vuosiluvut 1914–1919 — jälkimmäinen '
+          + 'viittaa Versaillesin rauhaan eikä aselepoon.'
+          + '\n\n'
+          + 'Muistomerkkiä vanhempi on sen alapuolella kulkeva '
+          + 'Soldiers Memorial Avenue. Puukuja ehdotettiin loppuvuonna '
+          + '1917, ja ensimmäiset puut vihittiin 3. elokuuta 1918 '
+          + 'kahdeksan–kymmenentuhannen ihmisen edessä, vaikka '
+          + 'Hobartissa asui tuolloin vain 29 000. Ensimmäisessä '
+          + 'vaiheessa istutettiin lähes 390 setriä ja helmikuussa '
+          + '1919 vielä 110. Sinkkiset nimikilvet katosivat aikanaan '
+          + 'lähes kokonaan, mutta vuodesta 2002 alkaneessa '
+          + 'kunnostuksessa puiden juurelle on tuotu yli 480 '
+          + 'pronssitaulua, joissa on nimi, joukko-osasto, kuolinpaikka '
+          + 'ja siviiliammatti.',
+      kuvat: [
+        {
+          tiedosto: 'Hobart Cenotaph, April 2021.jpg',
+          selite: 'Obeliskin huipun alla palaa joka sivulla takaa valaistu '
+            + 'punainen lasiristi.',
+          lahde: 'Thomas & Olivia Williams, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hobartin synagoga': {
+      aika: '1845',
+      teksti: 'Argyle Streetin synagoga vihittiin 4. heinäkuuta 1845, '
+          + 'ja se on Australian vanhin synagogarakennus. Tyyli on '
+          + 'harvinainen: egyptiläinen kertaustyyli, jota tunnistaa '
+          + 'ikkunoiden puolisuunnikkaan muodosta ja pylväiden '
+          + 'lootuskapiteeleista. Piirustukset teki hobartilainen '
+          + 'arkkitehti James Thomson, skotlantilainen vanki, joka oli '
+          + 'saanut armahduksen 1829. Tontti oli osa entisen vangin '
+          + 'Judah Solomonin puutarhaa.'
+          + '\n\n'
+          + 'Salissa on 150 istumapaikkaa, ja takaosassa on kovat '
+          + 'penkit juutalaisille vangeille, jotka marssitettiin '
+          + 'alkuaikoina jumalanpalvelukseen aseellisen vartion '
+          + 'saattamina. Uskotaan, ettei maailmassa ole toista '
+          + 'juutalaista rukoushuonetta, jossa olisi vangeille varatut '
+          + 'paikat. Rakennus on Tasmanian rakennusperintörekisterissä.'
+          + '\n\n'
+          + 'Egyptiläistä kertaustyyliä käytettiin 1800-luvun alussa '
+          + 'muutamissa synagogissa ja kirkoissa, mutta säilyneitä on '
+          + 'vähän: Nashvillen ja New Yorkin presbyteerikirkot, '
+          + 'Canterburyn vanha synagoga ja Launcestonin synagoga. '
+          + 'Hobartin seurakunta kävi pohjalukemissa 1970-luvun alussa, '
+          + 'kun väestönlaskenta löysi kaupungista alle sata '
+          + 'juutalaista; vuoden 2021 laskennassa Tasmaniassa oli 376. '
+          + 'Talossa pidetään sekä ortodoksisia että liberaaleja '
+          + 'jumalanpalveluksia.',
+      kuvat: [
+        {
+          tiedosto: 'Hobart Synagogue3.jpg',
+          selite: 'Sisäänkäynnin pylväiden lootuskapiteelit ovat egyptiläisen '
+            + 'kertaustyylin tunnusmerkki.',
+          lahde: 'CutOffTies, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'St Maryn katedraali': {
+      aika: '1866',
+      teksti: 'Katolisen arkkihiippakunnan pääkirkon juuret ovat '
+          + 'vuodessa 1822, jolloin Tasmanian ensimmäinen vakinainen '
+          + 'pappi Philip Conolly rakensi nykyisen paikan lähelle '
+          + 'väliaikaisen puukappelin. Varsinaisen katedraalin '
+          + 'peruskivi laskettiin 1860. Piirustukset teki William '
+          + 'Wardell, Augustus Puginin oppilas, ja kirkko vihittiin '
+          + '1866 uusgoottilaisena.'
+          + '\n\n'
+          + 'Rakennusvirheet aiheuttivat rakenteellisia ongelmia, ja '
+          + 'katedraali purettiin lopulta lähes kokonaan. Se '
+          + 'rakennettiin uudelleen Wardellin alkuperäisiin '
+          + 'suunnitelmiin pohjautuvan uuden piirustuksen mukaan, ja '
+          + 'työstä vastasi hobartilainen Henry Hunter — sama '
+          + 'arkkitehti, joka oli voittanut Tasmanian museon '
+          + 'suunnittelukilpailun. Hunter laski uuden peruskiven 1878.'
+          + '\n\n'
+          + 'Kirkossa on normannikautinen kastemalja, jonka '
+          + 'koristeaiheiden on arvioitu edustavan siirtymäkauden '
+          + 'työtä noin vuosilta 1170–1200. Lasimaalauksista '
+          + 'huomattavin on Hardmanin verstaan vuoden 1869 ikkuna, '
+          + 'jonka viisi kapeaa kenttää kertovat evankeliumien '
+          + 'kohtauksia. Urut rakensi 1893 Fincham & Hobday Queens '
+          + 'Domainilla 1894 pidettyä teollisuuden, tieteen ja taiteen '
+          + 'suurnäyttelyä varten, jossa ne voittivat ensimmäisen '
+          + 'palkinnon; kirkkoon ne asennettiin kesäkuussa 1895.',
+      kuvat: [
+        {
+          tiedosto: 'St Mary\'s Cathedral, Hobart 2.jpg',
+          selite: 'Katedraali purettiin rakennusvirheiden takia ja muurattiin '
+            + 'uudelleen vuodesta 1878 alkaen.',
+          lahde: 'Mx. Granger, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tasmanian museo': {
+      aika: '1848',
+      teksti: 'Museon perusti 1846 Tasmanian kuninkaallinen seura, '
+          + 'Englannin ulkopuolen vanhin kuninkaallinen seura, ja '
+          + 'virallisesti se syntyi 1848. Aiempia yrityksiä oli ollut '
+          + 'kolme, ja pisimmälle pääsi käsityöläisten opisto, joka '
+          + 'sai 1838 hallitukselta luvan rakentaa museohuoneen '
+          + 'tullitaloon. Tullitalo otettiin myöhemmin lakiasäätävän '
+          + 'neuvoston käyttöön ja siitä tuli parlamenttitalo — '
+          + 'kuninkaallinen seura perusti museon parlamentin '
+          + 'valiokuntahuoneessa, mahdollisesti samassa huoneessa.'
+          + '\n\n'
+          + 'Kokoelma muutti 1852 Harrington Streetille, jossa salin '
+          + 'vuokra oli 60 puntaa vuodessa. Vuonna 1854 kävijöitä oli '
+          + 'ensi kerran yli tuhat, ja 1855 Lady Franklinin museo myi '
+          + 'kalusteensa ja kokoelmansa seuralle. Vuonna 1861 '
+          + 'osavaltion rahoitus vihdoin järjestyi, ja seuran '
+          + 'arkkitehtuurikilpailun voitti Henry Hunter. Talo valmistui '
+          + '1862, mutta rahat olivat riittäneet vain seiniin: sisustus '
+          + 'kustannettiin taidenäyttelyllä, joka järjestettiin '
+          + 'nimenomaan sitä varten.'
+          + '\n\n'
+          + 'Vuonna 1885 museo siirtyi kuninkaalliselta seuralta '
+          + 'osavaltion asettamalle hallitukselle, joka sai 500 punnan '
+          + 'vuosiavustuksen; siihen asti laitoksen virallinen nimi oli '
+          + 'ollut Kuninkaallisen seuran museo. Museo on sittemmin '
+          + 'levinnyt koko korttelin rakennuksiin, joihin kuuluvat '
+          + 'vuoden 1810 muonavarasto ja Davey Streetin puoleinen '
+          + 'vuoden 1902 tullitalo. Kasvitieteellisen puutarhan ja '
+          + 'museon hallitukset erotettiin toisistaan 1952 eduskunnan '
+          + 'lailla, ja silloin talo sai nykyisen nimensä. Kävijöitä on '
+          + 'nykyisin 400 000 vuodessa.',
+      kuvat: [
+        {
+          tiedosto: 'Commissariat Store Hobart 20171119-025.jpg',
+          selite: 'Vuoden 1810 muonavarasto on museon korttelin vanhin '
+            + 'rakennus.',
+          lahde: 'Gary Houston, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'St Davidin katedraali': {
+      aika: '1874',
+      teksti: 'Hobart julistettiin kaupungiksi 1842, ja silloin '
+          + 'olemassa olevasta St Davidin kirkosta tuli katedraali. '
+          + 'Ensimmäiseksi Tasmanian piispaksi nimitettiin Francis '
+          + 'Russell Nixon. Uuden katedraalin peruskiven laski '
+          + 'tammikuussa 1868 kuningatar Viktorian poika prinssi '
+          + 'Alfred, Edinburghin herttua, ja rakennustyö jatkui siitä '
+          + 'vuoteen 1936. Piirustukset teki englantilainen arkkitehti '
+          + 'George Frederick Bodley uusgoottilaiseen tyyliin, ja '
+          + 'kirkko vihittiin 1874.'
+          + '\n\n'
+          + 'Talo seisoo Macquarie- ja Murray-katujen kulmassa ja '
+          + 'muodostaa yhden neljänneksen siitä, mitä pidetään '
+          + 'Australian parhaana yhtenäisenä georgiaanisena '
+          + 'katunäkymänä. Tunnusomaisia ovat holvikäytävällinen '
+          + 'sisäänkäynti suurine länsi-ikkunoineen, tukipilarein '
+          + 'vahvistetut tornit ja Oatlandsin kivestä muurattu '
+          + 'neliötorni. Sisällä riippuu lippuja siltä ajalta, kun '
+          + 'Tasmania lakkasi olemasta vankisiirtola.'
+          + '\n\n'
+          + 'Urut ovat peräisin vanhasta katedraalista: lontoolaisen '
+          + 'Bishop & Starrin kaksisormioinen soitin, joka laajennettiin '
+          + '1916 kolmisormioiseksi, rakennettiin uudelleen 1958 ja '
+          + 'kunnostettiin 1999–2005. Tornissa on kymmenen kellon '
+          + 'sarja, jonka suurin painaa noin 1 100 kiloa; useimmat '
+          + 'valettiin 1935 John Taylor & Co:n pajassa, ja niitä '
+          + 'soitetaan täyden kierron tekniikalla. Salissa on 650 '
+          + 'istumapaikkaa, ja se on Hobartin käytetyimpiä '
+          + 'konserttitiloja.',
+      kuvat: [
+        {
+          tiedosto: 'Hobart St David\'s Cathedral - panoramio.jpg',
+          selite: 'Neliötorni on muurattu Oatlandsin kivestä, ja siinä on '
+            + 'kymmenen kellon sarja.',
+          lahde: 'Annette Teng, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Parlamenttitalo: {
+      aika: '1840',
+      teksti: 'Tasmanian parlamenttitaloa ei rakennettu parlamentille '
+          + 'vaan tullille. John Lee Archer piirsi sen 1830 '
+          + 'siirtomaa-ajan georgiaaniseen tyyliin. Tontti oli ollut '
+          + 'ensin tori ja 1820-luvulla puutavarapiha, ja se varattiin '
+          + '1832 tullitalolle, koska se oli lähellä Sullivans Coven '
+          + 'laitureita — talo oli silloin nykyistä lähempänä '
+          + 'vesirajaa. Hunajankeltainen hiekkakivi louhittiin '
+          + '1832–1840 Queens Domainilta ja Salamanca Placelta, ja '
+          + 'lohkareita varten rakennettiin pieni rautatie. Työ alkoi '
+          + '5. tammikuuta 1835 enimmäkseen vankityönä, ja tullin väki '
+          + 'muutti sisään 1. syyskuuta 1840.'
+          + '\n\n'
+          + 'Vuonna 1825 perustettu lakiasäätävä neuvosto kokoontui '
+          + 'aluksi vanhan kuvernöörintalon viereisessä huoneessa. '
+          + 'Tullitalon tilava Pitkä sali oli parempi, ja siellä '
+          + 'pidettiin ensimmäinen kokous 19. kesäkuuta 1841. Vuoden '
+          + '1854 perustuslakilaki toi kaksikamarisen parlamentin, '
+          + 'kuningatar Viktoria vahvisti sen 1855, ja uuden '
+          + 'parlamentin ensimmäisiä tekoja 1856 oli vaihtaa siirtokunnan '
+          + 'nimi Van Diemenin maasta Tasmaniaksi. Ensimmäiset '
+          + 'istunnot pidettiin 2. joulukuuta 1856: edustajainhuone '
+          + 'Pitkässä salissa ja lakiasäätävä neuvosto talon toiseen '
+          + 'päähän tehdyssä uudessa salissa.'
+          + '\n\n'
+          + 'Tulli muutti pois vasta 1904 Davey Streetille, ja talo jäi '
+          + 'yksin parlamentille. Vuosina 1938–1940 edustajainhuoneelle '
+          + 'rakennettiin oma sali, ja Pitkästä salista tuli jäsenten '
+          + 'lukusali 82 istuntovuoden jälkeen; uusi sali avattiin 14. '
+          + 'toukokuuta 1940. Yhdistyneen kuningaskunnan kuninkaallinen '
+          + 'vaakuna toistuu talon lasimaalauksissa ja kaiverruksissa. '
+          + 'Tasmania käytti kuninkaallista vaakunaa virallisissa '
+          + 'asiakirjoissaan vuoteen 1953 asti, vaikka se oli ottanut '
+          + 'oman vaakunansa jo 1919.',
+      kuvat: [
+        {
+          tiedosto: 'Lascar Parliament House (Hobart) (4551936219).jpg',
+          selite: 'Talo rakennettiin 1835–1840 tullitaloksi, ja parlamentti '
+            + 'muutti siihen 1841.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Anglesean kasarmi': {
+      aika: '1814',
+      teksti: 'Paikan valitsi joulukuussa 1811 Uuden Etelä-Walesin '
+          + 'kuvernööri Lachlan Macquarie, ja ensimmäisten '
+          + 'rakennusten työ alkoi 1814. Anglesea on Australian '
+          + 'armeijan vanhin yhä käytössä oleva kasarmi, ja se vietti '
+          + 'kaksisataavuotisjuhlaansa joulukuussa 2011. Nimi tulee '
+          + 'Henry Pagetista, Anglesean ensimmäisestä markiisista, '
+          + 'joka istui asehallituksessa; kasarmin kirjoitusasu '
+          + 'poikkeaa markiisin arvonimestä yhdellä kirjaimella.'
+          + '\n\n'
+          + 'Kasarmi on nykyään koko Tasmanian puolustusvoimien '
+          + 'hallinnollinen keskus. Sen alueella toimivat muun muassa '
+          + 'Royal Tasmania Regimentin 12./40. pataljoonan esikunta, '
+          + 'Adelaiden yliopistorykmentin Tasmanian komppania, '
+          + 'Australian armeijan Tasmanian soittokunta, ilmavoimien 29. '
+          + 'laivue, laivaston Tasmanian esikunta ja useita '
+          + 'kadettiyksiköitä. Alueen vanhassa vankilassa on Tasmanian '
+          + 'armeijamuseo.',
+      kuvat: [
+        {
+          tiedosto: 'Soldiers Barracks Anglesea Barracks.JPG',
+          selite: 'Kasarmi on ollut käytössä vuodesta 1814 eli pidempään kuin '
+            + 'yksikään toinen Australian armeijan kasarmi.',
+          lahde: 'Nick-D, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * DARWININ KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026). Kartta on
+   * js/packs/maakartat.js: KAUPUNKIKARTAT.darwin, ja jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "St
+   * Mary's Star of the Sea Cathedral, Darwin", "Bicentennial Park
+   * (Darwin)", "Victoria Hotel, Darwin", "Star Theatre, Darwin",
+   * "Lameroo Beach", "Hotel Darwin", "Parliament House, Darwin" ja
+   * "Mud Hut (Knight's Folly)").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Palmerstonin nimenvaihto, yleislennätin, larrakia-kansa,
+   * neljä jälleenrakennusta, Mindil Beachin markkinat, vuoden 1918
+   * kapina, vuoden 1942 pommitus, hirmumyrsky Tracy, Pine Creekin
+   * rata, Government House, sademäärä, krokotiilit, kasvitieteellinen
+   * puutarha, Charles Darwinin kansallispuisto, Fannie Bayn vankila,
+   * MAGNT, katutaidefestivaali ja Christ Church -katedraali. Yksikään
+   * kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Vic-hotellin
+   * jutussa EI kerrota vuoden 1915 valtion hotellihaltuunotosta eikä
+   * vuoden 1918 kapinasta, vaikka hotelli oli molempien näyttämö —
+   * kapina on lehden matkailijasivun oma nosto. Parlamenttitalon
+   * jutussa vanhan postitalon kohtalo mainitaan vain tontin
+   * historiana, koska pommitusaamu on lehden nosto H1. Lameroon rannan
+   * jutussa larrakia-kansasta kerrotaan vain paikannimen verran
+   * (nosto K3).
+   *
+   * HOTEL DARWININ AVAJAISVUOSI 1940 ON LUETTU ARTIKKELIN OMISTA
+   * LÄHDEVIITTEISTÄ (Northern Standard 9.7.1940 -avajaisliite ja The
+   * West Australian 10.7.1940 "DARWIN LUXURY HOTEL OPENED"), koska
+   * leipäteksti kertoo vain avajaiset ja purkamisen 1999. Tämä on
+   * kirjattu tähän, jotta lukija tietää, mistä luku on peräisin.
+   *
+   * BICENTENNIAL-PUISTON JUTUSSA EI OLE aika-kenttää. Puiston
+   * artikkeli ei anna perustamisvuotta, eikä nimen ilmeistä
+   * yhteyttä vuoden 1988 kaksisataavuotisjuhlaan sanota siinä
+   * ääneen — arvattua vuosilukua ei panna peliin.
+   *
+   * KAKSI JUTTUA ON KUVATON, ja se on valinta eikä puute.
+   * Star-teatterista ei ole Commonsissa yhtään kuvaa (haut
+   * "Star Theatre Darwin cinema" ja "Star Village Smith Street
+   * Darwin" 7.9.2026 palauttivat vain samannimisiä teattereita
+   * muualta maailmasta), ja Mutamajasta on jäljellä vain
+   * betoniportaat, joista ei ole kuvaa. Molemmat on kirjattu
+   * kuvaputken miniatyyritilaukseen.
+   *
+   * KUVAT: kuusi tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi, tekijä ja Restrictions extmetadatasta) ja katsottu
+   * silmin 760 pikselin esikatseluna. Yksikään tiedosto ei esiinny
+   * muualla repossa; erityisesti parlamenttitalon kuva EI ole sama
+   * kuin kaupunkilehden matkailijasivun kuvituskuva
+   * "Northern Territory Legislative Assembly, Darwin, 2021, 01.jpg".
+   *
+   * KUVAHYLKÄYKSET SYINEEN. Tunnistettavia kasvoja: "Darwin's
+   * Victoria Hotel in May 2011.jpg" (ostoskadulla ihmisiä
+   * keskietäisyydellä) ja koko Bicentennial-puiston
+   * muistomerkkisarja, jonka ainoat osumat olivat Yhdysvaltain
+   * puolustusministeriön kuvia nimetyistä poliitikoista seppeleen
+   * laskussa. Mainos kuvassa: "Parliament House, Darwin, 2023
+   * (01).jpg" (rakennusliikkeen aitabanneri etualalla). Väärä
+   * kohde: "Hotel Victoria - November 2010.jpg" ei ole Darwinissa.
+   */
+  darwin: {
+    'Meren tähden katedraali': {
+      aika: '1962',
+      teksti: 'Darwinin hiippakunnan piispankirkko on kaupungin '
+          + 'katolisen seurakuntaelämän keskus. Sen edeltäjä, '
+          + 'ensimmäinen St Maryn kirkko, toimi toisen maailmansodan '
+          + 'aikana kaupunkiin sijoitettujen australialaisten '
+          + 'joukkojen sotilaspappien tukikohtana. Sodan jälkeen '
+          + 'seurakunta oli kasvanut niin, että tarvittiin isompi talo.'
+          + '\n\n'
+          + 'Kirkon piirsi brisbanelainen arkkitehti Ian Ferrier, joka '
+          + 'työskenteli tuolloin toimistossa Donoghue Cusick & '
+          + 'Edwards; toimisto vei työn loppuun hänen lähdettyään '
+          + '1957. Ensimmäinen kivi louhittiin Rum Junglesta eli '
+          + 'territorion ensimmäisen uraanikaivoksen paikalta, ja '
+          + 'piispa O\'Loughlin siunasi sen 13. heinäkuuta 1958. '
+          + 'Rakennustyötä johti Carl Johansson vuoteen 1962, jolloin '
+          + 'hänen tilalleen tuli John D\'Arcy. Kirkko siunattiin ja '
+          + 'avattiin jumalanpalveluskäyttöön 19. elokuuta 1962 ja '
+          + 'vihittiin kymmenen vuotta myöhemmin, 20. elokuuta 1972.',
+      kuvat: [
+        {
+          tiedosto: 'St Mary\'s Star of the Sea Cathedral, Darwin.jpg',
+          selite: 'Kirkon ensimmäinen kivi louhittiin Rum Junglesta, '
+            + 'territorion ensimmäisen uraanikaivoksen paikalta.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bicentennial-puisto': {
+      teksti: 'Puisto on Darwinin rantatörmän vihreä kaistale: se '
+          + 'kulkee koko keskustan rantaviivan pituudelta '
+          + 'parlamenttitalolta Doctors Gullyyn, ja sen reunalta '
+          + 'katsotaan alas Darwin Harbouriin.'
+          + '\n\n'
+          + 'Puistossa on kolme muistomerkkiä kaupungin pommituksissa '
+          + 'kuolleille: Darwinin sotamuistomerkki, joka pystytettiin '
+          + '1921 ja siirrettiin nykyiselle paikalleen 1992, '
+          + 'siviiliuhrien muistomerkki ja upotetun USS Pearyn '
+          + 'muistomerkki.'
+          + '\n\n'
+          + 'Samat nurmikot ovat myös kaupungin juhlapaikka. Täällä '
+          + 'kokoontuvat vappumarssi, Darwinin festivaali ja Greek '
+          + 'Glenti, jossa kaupungin kreikkalainen yhteisö juhlii '
+          + 'kulttuuriaan ja ruokaansa.',
+      kuvat: [
+        {
+          tiedosto: 'Bicentennial Park - Darwin.jpg',
+          selite: 'Puisto kulkee Esplanadin törmää pitkin parlamenttitalolta '
+            + 'Doctors Gullyyn.',
+          lahde: 'kenhodge13, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vic-hotelli': {
+      aika: '1890',
+      teksti: 'Hotellin rakennutti Ellen Ryan, yksi territorion '
+          + 'varakkaimmista naisista, joka omisti maata ja useita '
+          + 'kaivosvaltauksia. Vuonna 1888 hän haki lupaviranomaisilta '
+          + 'lupaa arvokkaalle hotellille Smith Streetin numeroon 27 '
+          + 'keskellä kaupunkia, joka tunnettiin silloin '
+          + 'Palmerstonina. H. C. Debross rakensi talon 4 000 punnalla, '
+          + 'ja siitä tuli Darwinin ensimmäinen kivirakennus: '
+          + 'kaksikerroksinen, paikallista monivärista porselaniittia, '
+          + 'julkisivussa päätykolmio ja kuistit. Ovet avattiin 8. '
+          + 'syyskuuta 1890. Nimi vaihtui kahdesti: ensin Royal Hotel, '
+          + 'muutamaa päivää myöhemmin North Australian Hotel ja 1896 '
+          + 'Victoria Hotel.'
+          + '\n\n'
+          + 'Talo menetti kattonsa kolmesti alle sadassa vuodessa. '
+          + 'Ensimmäinen kerta oli 6. tammikuuta 1897, kun "suureksi '
+          + 'hirmumyrskyksi" kutsuttu myrsky tappoi 28 ihmistä ja '
+          + 'upotti satamaan 19 alusta, koko helmenkalastuslaivueen '
+          + 'mukaan lukien; hotelli oli niitä harvoja taloja, joiden '
+          + 'rakenteet kestivät. Toinen kerta oli maaliskuussa 1937 ja '
+          + 'kolmas jouluna 1974. Joka kerta katto rakennettiin '
+          + 'uudelleen.'
+          + '\n\n'
+          + 'Vuonna 1908 hotellissa yöpyivät Henry Dutton ja Murray '
+          + 'Aunger, ensimmäiset autoilijat, jotka ylittivät mantereen '
+          + 'Adelaidesta Darwiniin. Joulukuussa 1919 taloon majoittui '
+          + 'Ross ja Keith Smithin joukko eli Englannista Australiaan '
+          + 'lennetyn kilpalennon lentäjiä, ja 1920- ja 1930-lukujen '
+          + 'lentäjien nimikirjoituksia on säilytetty muuratussa '
+          + 'seinänpätkässä. Vuosina 1946–1965 hotelli oli Lim-perheen '
+          + 'omistuksessa ja tunnettu krokotiilinmetsästäjien, '
+          + 'puhvelinampujien ja malminetsijöiden kapakkana. Vic '
+          + 'suljettiin lokakuussa 2014.',
+      kuvat: [
+        {
+          tiedosto: 'Victoria Hotel Smith St Darwin 1960.jpg',
+          selite: 'Hotelli avattiin 1890 Darwinin ensimmäisenä kivitalona; '
+            + 'kuva on vuodelta 1960.',
+          lahde: 'Travellights, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Star-teatteri': {
+      aika: '1929',
+      teksti: 'Star oli Darwinin ensimmäinen varta vasten rakennettu '
+          + 'elokuvateatteri, ja sen rakensi 1920-luvulla '
+          + 'darwinilaisen Harold Snellin yhtiö Snell and Gordon. Sali '
+          + 'oli osittain ulkoilmateatteri: katto ulottui vain '
+          + 'takarivien ja parven yli, ja Snell oli käynyt '
+          + 'opiskelemassa kattorakennetta Englannissa. Näyttämö oli '
+          + 'pyörien päällä, jotta sen sai siirtää nyrkkeilyotteluiden '
+          + 'tieltä, ja lattia valettiin betonista rullaluistelua ja '
+          + 'tansseja varten. Paikkoja oli 860. Talo avattiin 14. '
+          + 'syyskuuta 1929 elokuvalla The Cat and the Canary.'
+          + '\n\n'
+          + 'Sali oli jaettu. Parvi kuului kaupungin hienostolle, ja '
+          + 'työväki ja aboriginaalit istuivat alakerrassa; '
+          + 'aboriginaalit tarvitsivat lisäksi suojeluviranomaisen '
+          + 'luvan rikkoa öinen ulkonaliikkumiskielto päästäkseen '
+          + 'näytökseen lainkaan. Parvipaikka maksoi kaksi shillinkiä '
+          + 'kuusi penniä, alakerta shillingin.'
+          + '\n\n'
+          + 'Australialaisen Jedda-elokuvan maailmanensi-ilta '
+          + 'pidettiin täällä 3. tammikuuta 1955. Teatterinjohtaja Tom '
+          + 'Harris koristeli salin pandanuksella, ruohomatoilla ja '
+          + 'esineillä, ja Smith Streetille kerääntyi väkeä katsomaan '
+          + 'pääosien esittäjiä Ngarla Kunothia ja Robert Tudawalia. '
+          + 'Heille oli varattu paikat parvelta territorion '
+          + 'hallintopäällikön seurasta, mutta Tudawali istuutui '
+          + 'alakertaan. Osa kutsutuista aboriginaaleista meloi '
+          + 'paikalle Bathurstinsaarelta asti. Tracy tuhosi teatterin '
+          + '1974 eikä sitä avattu enää uudelleen: talosta tuli pieni '
+          + 'kauppakuja Star Village, jonka sisäänkäynnin luona '
+          + 'alkuperäinen projektori on yhä esillä.',
+      lahde: 'Wikipedia',
+    },
+    'Lameroon ranta': {
+      aika: '1922',
+      teksti: 'Esplanadin alla oleva pieni ranta on saanut nimensä '
+          + 'väännöksenä läheisen paikan larrakiankielisestä nimestä '
+          + 'Damoe-Ra, joka tarkoittaa silmää tai lähdettä.'
+          + '\n\n'
+          + 'Rannalle rakennettiin kaupungin toiset merikylpylät. '
+          + 'Ensimmäiset olivat olleet Fort Hillin luona vuodesta 1880, '
+          + 'ja hirmumyrsky vaurioitti ne. Uimisen suosio Lameroossa '
+          + 'teki paikasta ilmeisen valinnan, ja kylpylät avasi 14. '
+          + 'toukokuuta 1922 pormestari J. F. Burton. Rakennustyö '
+          + 'maksoi 2 000 puntaa, mitä pidettiin aikanaan valtavana '
+          + 'summana. Kylpylä oli Darwinin ainoa uima-allas 1900-luvun '
+          + 'alkupuoliskolla — ensimmäinen yksityinen allas rakennettiin '
+          + 'kaupunkiin vasta 1955. Rantaa kutsuttiin "pieneksi '
+          + 'Manlyksi", ja haita ja krokotiileja nähtiin usein, mutta '
+          + 'se ei vähentänyt suosiota.'
+          + '\n\n'
+          + 'Vuosina 1969–1974 rannalla asui jopa 400 telttailijaa, ja '
+          + 'lehdistö kuvasi heitä hipeiksi ja riesaksi. Helmikuussa '
+          + '1974 poliisi ajoi noin kaksikymmentä leiriytyjää pois ja '
+          + 'kaupungin tarkastajat polttivat kolmetoista puumajaa. '
+          + 'Saman vuoden joulun myrsky tuhosi sekä kylpylät että '
+          + 'leirin, ja jälleenrakennuksen yhteydessä kaupunki kielsi '
+          + 'telttailun rannoillaan myrskyaallon vaaran takia.',
+      kuvat: [
+        {
+          tiedosto: 'Lameroo Beach, below Bicenntenial Park, Darwin, Australia 03.jpg',
+          selite: 'Rannalla toimivat 1922–1974 kaupungin ainoat merikylpylät.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hotel Darwin': {
+      aika: '1940',
+      teksti: 'Esplanadin hotelli tunnettiin lempinimellä "Grand Old '
+          + 'Duchess". Sen piirsi D. K. Turner toimistosta Stephenson '
+          + 'and Turner, ja se rakennettiin vanhan Club Hotelin '
+          + 'paikalle 50 000 – 85 000 punnan hinnalla. Avajaisiin '
+          + 'heinäkuussa 1940 tuli kaksisataa vierasta, ja tilaisuutta '
+          + 'johti territorion hallintopäällikkö Charles Aubrey '
+          + 'Abbott. Hänen vaimonsa Hilda Abbott avasi ovet '
+          + 'kultaisella avaimella, joka on nykyään esillä Darwinin '
+          + 'puolustusta esittelevässä näyttelyssä. Kutsuluettelosta '
+          + 'nousi riita: useat kaupungin vaikutusvaltaiset henkilöt '
+          + 'jäivät ilman kutsua, ja lehdistö piti asiaa vakavana.'
+          + '\n\n'
+          + 'Talossa oli piano-baari nimeltä Pickled Parrot ja '
+          + 'hienostoravintola Green Room. Vuonna 1947 kommunistinen '
+          + 'puolue keräsi yli kolmesataa nimeä vetoomukseen, jolla '
+          + 'hotelli olisi muutettu yhteisön hotelliksi; tarjouskilpailun '
+          + 'voittivat kuitenkin Paspalis ja Stanley Thomas Laurance. '
+          + 'Seuraavana vuonna Laurance sai syytteen hinnaston '
+          + 'puuttumisesta, ja ravintoloitsija lopetti oluen '
+          + 'myymisen oikeudenkäynnin ajaksi — jaksoa on kutsuttu '
+          + 'hotellin "oluettomiksi, ilottomiksi päiviksi".'
+          + '\n\n'
+          + 'Hotelli kesti sekä pommitukset että hirmumyrsky Tracyn, '
+          + 'mutta ei 1990-lukua. Omistajat ilmoittivat 9. syyskuuta '
+          + '1999 purkavansa talon kahden rakenteiden kuntoa koskevan '
+          + 'raportin jälkeen. Kansallinen rakennusperintöjärjestö '
+          + 'vaati ministeriä puuttumaan asiaan, ja korkeimman '
+          + 'oikeuden kieltohakemus kaatui 10. syyskuuta; purkaminen '
+          + 'alkoi lähes välittömästi päätöksen jälkeen, ja aamuun 11. '
+          + 'syyskuuta mennessä talo oli poissa. Moni piti tapahtunutta '
+          + 'ilkivaltana. Alkuperäisen tontin takana toimiva baari '
+          + 'kantaa nykyään nimeä Hotel Darwin.',
+      kuvat: [
+        {
+          tiedosto: 'Hotel Darwin Hot and Cold Bar 1959.jpg',
+          selite: 'Hotelli purettiin 1999; kuvassa sen Hot & Cold -baari '
+            + 'vuonna 1959.',
+          lahde: 'kenhodge13, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Parlamenttitalo: {
+      aika: '1994',
+      teksti: 'Pohjoisterritorion parlamenttitalo on Australian '
+          + 'nuorin parlamenttirakennus. Se seisoo State Squarella, '
+          + 'joka on samalla territorion hallinnon ja oikeuslaitoksen '
+          + 'keskus. Tontilla on pitkä virkahistoria: siinä oli ennen '
+          + 'Palmerstonin postitalo, ja kun paikka rakennettiin 1955 '
+          + 'uudelleen, siihen sijoitettiin vuonna 1948 perustettu '
+          + 'lakiasäätävä neuvosto, joka oli siihen asti kokoontunut '
+          + 'kaupungin väliaikaisissa tiloissa.'
+          + '\n\n'
+          + 'Vuonna 1988 territorion hallitus ilmoitti State Squaren '
+          + 'rakentamisesta: aukiolle tulisivat sekä uusi '
+          + 'parlamenttitalo että korkein oikeus. Vanhat rakennukset '
+          + 'purettiin 1990, ja siitä vuoden 1994 loppuun '
+          + 'lakiasäätävä kokous istui väliaikaisesti viereisessä Chan '
+          + '-talossa. Talon suunnittelivat arkkitehdit Steven Ehrlich '
+          + 'ja Peter Doig, tyyli on postmodernismia, ja koko State '
+          + 'Squaren hanke maksoi noin 170 miljoonaa dollaria. '
+          + 'Maaliskuussa 1991 nosturi kaatui työmaalla ja kaksi '
+          + 'työntekijää kuoli; heidän muistolleen on omistettu '
+          + 'puhemiehen puutarhan suihkulähde.'
+          + '\n\n'
+          + 'Rakennus avattiin virallisesti 18. elokuuta 1994. Se on '
+          + 'suunniteltu kestämään hirmumyrskyjä ja trooppista '
+          + 'aurinkoa: päivänvarjoksi kutsuttu kattorakenne ja '
+          + 'julkisivun säleiköt hajottavat noin 80 prosenttia '
+          + 'suorasta auringonvalosta. Istuntosalin väri on vihreä ja '
+          + 'seinillä on eukalyptusaiheita — sama vihreys kuin '
+          + 'Australian edustajainhuoneessa, joka puolestaan muistuttaa '
+          + 'Britannian alahuoneen kirkkaampaa vihreää. Talossa toimii '
+          + 'myös Pohjoisterritorion kirjasto, ja se sai 2023 '
+          + 'territorion pitkäikäisen arkkitehtuurin palkinnon.',
+      kuvat: [
+        {
+          tiedosto: 'Darwin (AU), Parliament House -- 2019 -- 4343.jpg',
+          selite: 'Talo avattiin 1994, ja se on Australian nuorin '
+            + 'parlamenttirakennus.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Mutamaja: {
+      aika: '1883',
+      teksti: 'Rinteessä Hughes Avenuen ja Kitchener Driven välissä '
+          + 'seisoi talo, jota kutsuttiin Mutamajaksi. Virallinen nimi '
+          + 'oli Aspendale, ja pilkkanimi kuului Knightin hulluus. '
+          + 'Sen rakensi 1883 arkkitehti John George Knight, joka '
+          + 'toimi 1890–1892 Pohjoisterritorion hallintomiehenä. Talo '
+          + 'oli kaksikerroksinen ja vain yhden huoneen levyinen, ja '
+          + 'sen ympäri kiersivät leveät kuistit. Seinät muurattiin '
+          + 'tiilistä, joita lähde kutsuu egyptiläisiksi.'
+          + '\n\n'
+          + 'Ivanimestä huolimatta talosta on tullut trooppisen '
+          + 'rakentamisen kekseliäisyyden vertauskuva. Se paloi '
+          + 'uudenvuodenaattona 1933 tyhjillään ollessaan — asukkaat '
+          + 'olivat lomamatkalla. Tutkinnassa ei saatu selville '
+          + 'varmaa syytä, mutta lopulta syy pantiin sähkövalojen '
+          + 'puutteellisen kunnon niskoille. Paikalla on nykyään '
+          + 'jäljellä vain betoniportaat ja opastaulu.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * LIMAN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.lima, ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit
+   * "Sanctuary of Saint Rose of Lima", "Rose of Lima", "Casa de
+   * Osambela", "Basilica and Convent of San Francisco, Lima",
+   * "Sanctuary and Monastery of Las Nazarenas", "Lord of Miracles",
+   * "Museum of Congress and the Inquisition", "Palacio de Torre
+   * Tagle", "Plaza San Martín, Lima", "Casona of the National
+   * University of San Marcos" ja "National University of San
+   * Marcos").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Pizarron perustama Plaza Mayor, kaupunginmuurin purkaminen,
+   * sateeton aavikkoilmasto, Huaca Pucllana, Ichman laakso, vuoden
+   * 1746 maanjäristys, guanotalous, Andien rautatie, gastronomian
+   * pääkaupunki, ceviche, Barrio Chinon chifa-keittiö ja Mistura;
+   * matkaopas kertoo lentokentästä, alueen rakenteesta, Mirafloresin
+   * kallionreunasta ja Callaon taistelusta 1866. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Las
+   * Nazarenasin jutussa vuoden 1746 maanjäristys mainitaan vain siltä
+   * osin kuin se teki seinämaalauksesta kaupungin suojelijan —
+   * järistyksen oma tarina on lehden historiasivun nosto H2. Casa de
+   * Osambelan jutussa ei kerrota, mistä tontin omistanut Santo Domingo
+   * sai varansa, koska guano ja siirtomaatalous ovat lehden noston H3
+   * aihe.
+   *
+   * SAN FRANCISCO ESIINTYY LEHDESSÄ VAIN KUVATEKSTISSÄ. Kaupunkilehden
+   * aamu-avauskuvan selite nimeää luostarin, mutta yksikään lehden
+   * juttu ei kerro sen tarinaa, joten kohdekartta ei toista mitään.
+   * Kuvateksti on selite, ei juttu — sama sääntö kuin valokuvatauluissa
+   * (sama kohde saa esiintyä molemmissa, sama tiedosto ei).
+   */
+  lima: {
+    'Santa Rosan pyhäkkö': {
+      aika: '1728',
+      teksti: 'Isabel Flores de Oliva syntyi Limassa 20. huhtikuuta '
+          + '1586 yhdentoista lapsen perheeseen. Isä Gaspar Flores oli '
+          + 'espanjalainen jalkaväen musketööri, äiti María de Oliva '
+          + 'Limassa syntynyt kreoli. Tytär liittyi Pyhän Dominicuksen '
+          + 'kolmanteen sääntökuntaan ja tuli tunnetuksi kahdesta '
+          + 'asiasta: ankarasta itsekurista ja siitä, että hän hoiti '
+          + 'kaupungin köyhiä omin varoin ja omassa kodissaan. Hän '
+          + 'kuoli 24. elokuuta 1617 kolmenkymmenenyhden vuoden '
+          + 'ikäisenä pitkän sairauden jälkeen, ja hautajaisiin '
+          + 'tuomiokirkkoon tulivat kaikki kaupungin viranomaiset.'
+          + '\n\n'
+          + 'Paavi Clemens IX autuaaksijulisti hänet 1667, ja Clemens '
+          + 'X julisti hänet pyhäksi 12. huhtikuuta 1671. Rosa de Lima '
+          + 'oli ensimmäinen Amerikassa syntynyt ihminen, joka '
+          + 'pyhitettiin. Hänestä tuli Perun, Liman ja koko '
+          + 'Latinalaisen Amerikan suojeluspyhimys, ja hänen kuvansa '
+          + 'oli pitkään Perun suurimman setelin aiheena.'
+          + '\n\n'
+          + 'Pyhäkkö on rakennettu 1728 perheen talon jäännösten '
+          + 'päälle, ja kävijöiden suosikki on talon oma kaivo. '
+          + 'Nykyisen asunsa rakennus sai 24. elokuuta 1992 tehdyssä '
+          + 'kunnostuksessa; kansallisen kulttuuriperinnön asema on '
+          + 'vuodelta 1972. Seinällä on pyhimystä esittävä maalaus, '
+          + 'jota amiraali Miguel Grau piti mukanaan Huáscar-aluksella. '
+          + 'Pyhäkön tontilla toimi aikoinaan myös Espíritu Santon '
+          + 'sairaala, jossa Rosa hoiti sairaita; sen sisäänkäynnin '
+          + 'jäänteet kaivettiin esiin ja vihittiin uudelleen 25. '
+          + 'elokuuta 2026.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia Santa Rosa, Lima, Perú, 2015-07-28, DD 08.JPG',
+          selite: 'Punainen julkisivu kahden kellotornin välissä; pyhäkkö on '
+            + 'rakennettu Isabel Flores de Olivan kotitalon jäännösten päälle.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Casa de Osambela': {
+      aika: '1803–1805',
+      teksti: 'Tontti kuului Santo Domingon luostarille, ja sillä oli '
+          + 'seissyt dominikaanien noviisitalo, kunnes vuoden 1746 '
+          + 'maanjäristys kaatoi sen. Luostari myi raunioituneen osan '
+          + 'espanjalaiselle laivanrakentajalle, pankkiirille ja '
+          + 'kauppiaalle Martín de Osambelalle saadakseen omat '
+          + 'keskeneräiset työnsä maksetuiksi. Talo valmistui vuosina '
+          + '1803–1805, ja se on yhä keskustan laajimpia asuintaloja.'
+          + '\n\n'
+          + 'Kaksi asiaa erottaa sen kaikista muista ajan '
+          + 'limalaistaloista. Huoneet on ladottu kadun suuntaisesti '
+          + 'eikä syvyyssuunnassa, joten julkisivuun mahtui viisi '
+          + 'Ludvig XVI:n tyylistä parveketta ja niiden lisäksi kolme '
+          + 'kaidetta. Ja talossa on neljä kerrosta kahden sijaan: '
+          + 'ylimpänä on kahdeksankulmainen näköalatorni, jollainen '
+          + 'oli tuolloin maanjäristysten takia kielletty. Tornin '
+          + 'päällä on pieni kupoli, jonka siluetti on mudéjar-tyylinen. '
+          + 'Arkkitehti Héctor Velarden mukaan juuri sieltä talon '
+          + 'ensimmäinen omistaja katseli kaukoputkella Callaoon '
+          + 'saapuvia laivoja.'
+          + '\n\n'
+          + 'Kun José de San Martín saapui Limaan, Osambela antoi '
+          + 'talonsa hänen käyttöönsä, ja vapauttaja piti siellä '
+          + 'suuret tanssiaiset kaupungin seurapiireille sekä asui '
+          + 'talossa itsenäisyyden julistamisen jälkeen. Vuonna 1854 '
+          + 'talo siirtyi José de la Asunción Oquendolle, ja siitä '
+          + 'juontuu toinen nimi Casa de Oquendo. Kansallismonumentti '
+          + '1963, kunnostettu 1982–1985 takaisin alkuperäiseen '
+          + 'indigonsiniseen väriinsä. Nykyään talossa toimii Perun '
+          + 'kieliakatemia.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio de Osambela, Casa Oquendo - Lima.jpg',
+          selite: 'Umpinaiset puiset parvekkeet työntyvät indigonsinisestä '
+            + 'seinästä kadun päälle koko julkisivun leveydeltä.',
+          lahde: 'Art DiNo from Lima, Perú, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'San Franciscon luostari': {
+      aika: '1672',
+      teksti: 'Franciskaanit saivat tonttinsa jo silloin, kun Liman '
+          + 'ruutukaava jaettiin 1535, mutta ensimmäinen kappeli '
+          + 'jäätyi autioksi, kun laaksosta loppuivat munkit. Vasta '
+          + '1546 saapunut Francisco de Santa Ana sai maan takaisin ja '
+          + 'rakensi vaatimattoman kirkon. Seuraavan vuosisadan aikana '
+          + 'luostarista kasvoi taideaarre — ja 4. helmikuuta 1655 '
+          + 'maanjäristys kaatoi sen kokonaan ja vei mennessään koko '
+          + 'vuosisadan työn.'
+          + '\n\n'
+          + 'Uuden luostarin piirsi portugalilainen arkkitehti '
+          + 'Constantino de Vasconcellos, ja rakennusmestarina toimi '
+          + 'limalainen Manuel Escobar. Peruskiven laski varakuningas, '
+          + 'Alba de Listen kreivi, 8. toukokuuta 1657, ja valmis talo '
+          + 'vihittiin suurin menoin 3. lokakuuta 1672; sisätöitä '
+          + 'jatkettiin vuoteen 1729. Pääristikäytävän sevillalaiset '
+          + 'kaakelit ovat vuodelta 1642. Kun käytävän 39 maalausta '
+          + 'vuodelta 1671 otettiin 1974 alas restauroitaviksi, niiden '
+          + 'alta löytyi sattumalta 1600-luvun alkupuolen '
+          + 'seinämaalauksia, joista kukaan ei ollut tiennyt mitään.'
+          + '\n\n'
+          + 'Kirjastossa on noin 25 000 nidettä, joista osa on '
+          + '1500-luvulta, sekä yli kuusituhatta pergamenttia. '
+          + 'Ruokasalissa riippuu Francisco de Zurbaránin viidentoista '
+          + 'maalauksen sarja. Kapitulisalissa sääntökuntien papisto '
+          + 'allekirjoitti Perun itsenäisyysjulistuksen — maallinen '
+          + 'papisto allekirjoitti omansa tuomiokirkossa. Kirkon alla '
+          + 'ovat katakombit, jotka olivat kaupungin hautausmaa '
+          + 'vuoteen 1810 asti; arvion mukaan sinne haudattiin '
+          + 'kaikkiaan 70 000 ihmistä, ja käytävät löydettiin '
+          + 'uudelleen vasta 1951. Paavi Johannes XXIII korotti kirkon '
+          + 'basilikaksi 11. tammikuuta 1963.',
+      kuvat: [
+        {
+          tiedosto: 'Monastery of San Francisco, Lima, Peru.jpg',
+          selite: 'Keltainen barokkijulkisivu kahden kellotornin välissä; kirkon '
+            + 'alla ovat katakombit, jotka olivat kaupungin hautausmaa.',
+          lahde: 'Avodrocc, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Las Nazarenasin pyhäkkö': {
+      aika: '1771',
+      teksti: 'Pyhäkössä on seinämaalaus ristiinnaulitusta Kristuksesta, '
+          + 'ja se on Liman tunnetuin kuva. Nimi Señor de los Milagros, '
+          + 'Ihmeiden Herra, syntyi 1600- ja 1700-luvuilla: vuosien '
+          + '1655, 1687 ja 1746 maanjäristykset kaatoivat suurimman '
+          + 'osan kaupungista, mutta maalauksen seinä jäi joka kerta '
+          + 'pystyyn. Kunnioitus alkoi afroperulaisena, ja kolmannen '
+          + 'järistyksen jälkeen 1700-luvulla myös kreolikeskiluokka '
+          + 'omaksui sen.'
+          + '\n\n'
+          + 'Kaupunginvaltuusto julisti Ihmeiden Herran Liman '
+          + 'suojelijaksi jo 1715. Kirkko rakennettiin Nazarenasin '
+          + 'luostarin yhteyteen, ja se valmistui suuren '
+          + 'maanjäristyksen jälkeen 1771. Vuonna 2005 Perun valtio '
+          + 'julisti juhlan kansalliseksi kulttuuriperinnöksi ja '
+          + 'Vatikaani antoi kuvalle Perun kansan suojelijan aseman.'
+          + '\n\n'
+          + 'Lokakuun 18., 19. ja 28. päivänä sekä pyhäinpäivänä täältä '
+          + 'lähtee kulkue, joka kiertää koko vanhankaupungin ja kestää '
+          + 'noin kaksikymmentä tuntia. Kannettava kuva on jäljennös, '
+          + 'ja sitä kantavat veljeskunnan kaksikymmentä vuororyhmää; '
+          + 'edellä kävelevät suitsuttajanaiset selkä menosuuntaan, '
+          + 'violetissa asussa ja mantilja päässä. Violetti on koko '
+          + 'kuukauden väri — lokakuuta sanotaan Perussa violetiksi '
+          + 'kuukaudeksi — ja sen ajan herkkuja ovat violetti '
+          + 'maissivanukas mazamorra morada ja Doña Pepan turrón.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia y monasterio de las Nazarenas de Lima 05.jpg',
+          selite: 'Kupolin lyhty päästää valon alas pyhäkköön, jonka seinällä '
+            + 'Ihmeiden Herran maalaus on säilynyt kolmen järistyksen läpi.',
+          lahde: 'Rodolfo pimentel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Inkvisition museo': {
+      aika: '1968',
+      teksti: 'Talo Jirón Junínin varrella Plaza Bolívarin kulmassa oli '
+          + 'varakuningaskunnan aikana pyhän inkvisition tuomioistuimen '
+          + 'päämaja. Ennen lakkauttamistaan — vuosi ennen kuin José '
+          + 'de San Martín julisti Perun itsenäiseksi — tuomioistuin '
+          + 'oli käsitellyt kaikkiaan 1 474 ihmisen asian, ja heistä '
+          + '32 teloitettiin.'
+          + '\n\n'
+          + 'Itsenäisyyden jälkeen samaan taloon asettui Perun '
+          + 'ensimmäinen perustuslakia säätävä kongressi, ja sen '
+          + 'jälkeen senaatti istui siellä aina vuoteen 1939, jolloin '
+          + 'se muutti uuteen lakiasäätävään palatsiin. Vuoden 1909 '
+          + 'vallankaappausyrityksessä sotaväki hajotti väkijoukon '
+          + 'ampumalla, rakennus vaurioitui ja osa salaliittolaisista '
+          + 'pakeni sen sisään.'
+          + '\n\n'
+          + 'Vuodesta 1943 talossa toimi edustajainhuoneen yleinen '
+          + 'kirjasto, kunnes museo avattiin 26. heinäkuuta 1968. Se '
+          + 'kertoo kahden aivan eri laitoksen historian samassa '
+          + 'talossa: tuomioistuimen ja Perun kongressin. Museo on '
+          + 'ollut toukokuusta 2016 suljettuna kunnostustöiden vuoksi.',
+      kuvat: [
+        {
+          tiedosto: 'Puerta del museo de la inquisicion catolica en lima.jpg',
+          selite: 'Veistetty pääovi kultauksineen; saman oven takana istui ensin '
+            + 'tuomioistuin ja itsenäisyyden jälkeen Perun senaatti.',
+          lahde: 'Quilicho, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Torre Taglen palatsi': {
+      aika: '1735',
+      teksti: 'Palatsi valmistui 1735 José Bernardo de Tagle Brachon '
+          + 'kodiksi. Kuningas Filip V oli antanut hänelle 26. '
+          + 'marraskuuta 1730 Torre Taglen markiisin arvon, ja rakennus '
+          + 'tehtiin sen mukaisesti: kiviaineet tuotiin Espanjasta, '
+          + 'Panamasta ja Keski-Amerikasta, ja kerrosala on 1 699 '
+          + 'neliömetriä.'
+          + '\n\n'
+          + 'Julkisivu on andalusialaista barokkia ja tarkoituksella '
+          + 'epäsymmetrinen. Toisessa kerroksessa on kaksi umpinaista '
+          + 'setri- ja mahonkipuusta veistettyä parveketta, ja niiden '
+          + 'jaotus on eri: oikeanpuoleisessa on kolme osaa ja '
+          + 'vasemmanpuoleisessa seitsemän. Portaalin päällä on suvun '
+          + 'vaakuna ja teksti "Tagle se llamó el que la sierpe mató y '
+          + 'con la infanta casó" — Tagleksi kutsuttiin sitä, joka '
+          + 'tappoi käärmeen ja nai prinsessan. Eteisholvin seinät '
+          + 'ovat sevillalaista kaakelia ja katto veistettyä puuta; '
+          + 'sivuilla on matalat astinkivet, joilta talon naiset '
+          + 'nousivat ratsun tai vaunun rappuselle. Ovensuussa oli '
+          + 'ketju, joka merkitsi turvapaikkaoikeutta — sama etuoikeus '
+          + 'oli aikanaan muutamalla Liman kirkolla.'
+          + '\n\n'
+          + 'Sisällä on neljätoista huonetta, ruokasali, keittiö ja '
+          + 'pieni kappeli, ja kaakelit ovat samalta vuodelta 1735 kuin '
+          + 'talo. Toisessa pihassa oli talli ja vaunuvaja, ja siellä '
+          + 'seisoo yhä markiisin sini-punainen 1700-luvun vaunu. '
+          + 'Perun valtio osti talon 27. kesäkuuta 1918 neljännen '
+          + 'markiisin perillisiltä 320 000 solilla. Vuodesta 1918 '
+          + 'vuoteen 2023 se oli ulkoministeriön päämaja, ja nykyään '
+          + 'siellä toimii valtion seremonia- ja protokollaosasto.',
+      kuvat: [
+        {
+          tiedosto: 'Jr Ucayali, centro de Lima 02.jpg',
+          selite: 'Portaalin päällä oleva vaakuna kantaa tekstiä "Tagle se llamó '
+            + 'el que la sierpe mató y con la infanta casó".',
+          lahde: 'Ibrehaut, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Plaza San Martín': {
+      aika: '1921',
+      teksti: 'Aukion paikalla oli ensin San Juan de Diosin sairaala, '
+          + 'joka purettiin 1850. Tilalle tuli rautatieasema, ja sekin '
+          + 'purettiin vuosina 1911–1918. Vasta sitten alue vapautui '
+          + 'aukioksi.'
+          + '\n\n'
+          + 'Plaza San Martín vihittiin 27. heinäkuuta 1921, kun Perun '
+          + 'itsenäisyydestä tuli sata vuotta. Sen suunnitteli '
+          + 'espanjalainen arkkitehti Manuel Piqueras Cotolí: penkit ja '
+          + 'kaiteet marmorista, päällyste graniitista, neljä '
+          + 'suihkulähdettä, pronssiset katulyhdyt ja kukkaistutukset. '
+          + 'Keskellä seisova José de San Martínin muistomerkki '
+          + 'ratkaistiin kilpailulla, jonka voitti espanjalainen '
+          + 'kuvanveistäjä Mariano Benlliure; patsas esittää '
+          + 'vapauttajaa Andien-ylityksellään.'
+          + '\n\n'
+          + 'Aukiota reunustavat talot nousivat vähitellen ja siksi '
+          + 'yhtenäisinä. Colón-teatteri ja Giacoletti-talo olivat '
+          + 'paikallaan jo 1914 eli ennen aukiota, Hotel Bolívar '
+          + 'valmistui 1924, Zelan ja Pumacahuan pylväskäytävät 1926 ja '
+          + 'Club Nacional 1929; viimeinen vaihe 1935–1945 täytti '
+          + 'loput sivut uuskolonialistisilla taloilla. Kolmen sulottaren '
+          + 'lyhty, 1800-luvun kaupunkikaluste, siirrettiin aukiolle '
+          + '1915. Aukio liitettiin 1991 Liman historiallisen keskustan '
+          + 'maailmanperintökohteeseen omana monumenttinaan.',
+      kuvat: [
+        {
+          tiedosto: '2017 Lima - Monumento ecuestre - Plaza San Martín.jpg',
+          selite: 'Mariano Benlliuren ratsastajapatsas esittää San Martínia Andien '
+            + 'ylityksellä; ympärillä olevat talot nousivat vasta aukion jälkeen.',
+          lahde: 'Felipe Restrpo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Casona de San Marcos': {
+      aika: '1605',
+      teksti: 'San Marcosin yliopisto sai alkunsa yleisopinnoista, '
+          + 'joita pidettiin dominikaanien Rosarion luostarissa 1. '
+          + 'heinäkuuta 1548. Liman kaupunginvaltuusto lähetti '
+          + 'munkki Tomás de San Martínin ja kapteeni Juan Jerónimo de '
+          + 'Aliagan Espanjaan hakemaan perustamiskirjaa, ja kuningas '
+          + 'Kaarle I ja kuningatar Juana myönsivät sen: yliopisto '
+          + 'perustettiin virallisesti 12. toukokuuta 1551. Se on '
+          + 'Amerikan ensimmäinen virallisesti perustettu ja yhä '
+          + 'yhtäjaksoisesti toimiva yliopisto. Paavi Pius V antoi '
+          + 'sille 1571 paavillisen aseman, ja samalla vaakunan '
+          + 'Ruusukon Neitsyt vaihtui evankelista Markukseksi ja tämän '
+          + 'leijonaksi.'
+          + '\n\n'
+          + 'Tämä talo on vanhempi kuin yliopiston oleskelu siinä. Sen '
+          + 'historia alkaa 1605, kun varakas espanjalainen Antonio '
+          + 'Correa Ureña lahjoitti varat jesuiittojen San Antonio '
+          + 'Abadin noviisitaloon. Silloin rakennus oli viisi tai kuusi '
+          + 'kertaa nykyistä suurempi. Yliopisto muutti taloon 1875 ja '
+          + 'pysyi siinä vuoteen 1966, jolloin vuoden 1966 '
+          + 'maanjäristyksen vauriot siirsivät sen uuteen '
+          + 'yliopistokaupunkiin.'
+          + '\n\n'
+          + 'Nykyään talo on yliopiston kulttuurikeskus. Loreton '
+          + 'kappelin holvissa on kolmetoista 1700-luvun puolivälin '
+          + 'maalausta, ja Salón Generalin puiset katsomoparvet ovat '
+          + '1700-luvun lopulta. Talossa on yliopiston teatteri sekä '
+          + 'kaksi museota: taidemuseo ja 21. lokakuuta 1919 '
+          + 'perustettu arkeologian ja antropologian museo, jonka '
+          + 'ensimmäinen johtaja oli Julio C. Tello. Mestarien pihan '
+          + 'veistos oli aikanaan kahdenkymmenen solin setelin aiheena.',
+      kuvat: [
+        {
+          tiedosto: 'Casona de San Marcos.jpg',
+          selite: 'Okrankeltainen siipi yliopistopuiston laidalla; talo oli '
+            + 'yliopiston päärakennus vuosina 1875–1966.',
+          lahde: 'Ovruni, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * QUITON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.quito, ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit
+   * "Basílica del Voto Nacional", "Basilica of La Merced, Quito",
+   * "Church and convent of San Agustín, Quito", "Iglesia de El
+   * Sagrario, Quito", "Casa del Alabado Museum of Pre-Columbian Art",
+   * "City Museum (Quito, Ecuador)", "El Panecillo" ja "National
+   * Ecuadorian Exposition").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat inkojen ja espanjalaisten Quito, korkeus ja päiväntasaaja,
+   * vanhankaupungin maailmanperintöasema, Pichinchan tulivuori, San
+   * Franciscon luostari, La Compañían julkisivu, Pichinchan taistelu
+   * 1822, García Morenon observatorio, ranskalainen astemittausretki,
+   * heilurikoe, Cotopaxi ja observatorion perintö; matkaopas kertoo
+   * korkeuteen tottumisesta, alueen rakenteesta, käsityötorista ja
+   * Mitad del Mundosta. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * SAN AGUSTÍNIN JUTTU EI KERRO VUODEN 1809 KAPINAA. Luostarin
+   * kapitulisali on paikka, jossa hallintoneuvoston asiakirja
+   * allekirjoitettiin, ja se mainitaan yhtenä salin tietona — mutta
+   * kapinan kohtalo ja Pichinchan taistelu ovat lehden noston H3 aihe,
+   * eikä juttu kerro niistä sanaakaan.
+   *
+   * PANECILLON JUTTU MAINITSEE LEGARDAN VEISTOKSEN, joka on San
+   * Franciscon pääalttarilla. Se on tässä vain patsaan esikuvana:
+   * lehden nosto H1 kertoo San Franciscon luostarista rakennuksena
+   * eikä sen alttarista, joten aihe ei toistu.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Sucren
+   * talomuseo on 111 metriä El Sagrariosta, Alberto Mena Caamañon
+   * museo 99 metriä samasta kirkosta ja Teatro Bolívar 164 metriä San
+   * Agustínista. Kaikki kolme mainitaan matkaoppaassa.
+   */
+  quito: {
+    'Voto Nacionalin basilika': {
+      aika: '1892–',
+      teksti: 'Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää '
+          + 'rakentaa monumentti, joka muistuttaa ikuisesti maan '
+          + 'vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti '
+          + 'Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja '
+          + 'kongressi varasi työhön 12 000 pesoa eli tuhat pesoa '
+          + 'kuukaudessa. Kun rahat loppuivat, keinoja keksittiin '
+          + 'lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa '
+          + 'niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä '
+          + 'varten suolaveron.'
+          + '\n\n'
+          + 'Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti '
+          + 'esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli '
+          + '40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. '
+          + 'Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa '
+          + 'korkeimmillaan 83 metriin. Paavi Johannes Paavali II '
+          + 'siunasi sen 30. tammikuuta 1985, ja vihkiminen tapahtui '
+          + '12. heinäkuuta 1988 — mutta virallisesti basilika on yhä '
+          + 'keskeneräinen.'
+          + '\n\n'
+          + 'Kryptassa on Ecuadorin kansallispantheon, jonne on '
+          + 'haudattu useita maan presidenttejä. Kellotorneihin pääsee '
+          + 'pientä maksua vastaan kiipeämään, ja ylhäältä näkee koko '
+          + 'kaupungin laakson.',
+      kuvat: [
+        {
+          tiedosto: 'Basilika in Quito.jpg',
+          selite: 'Uusgoottilainen kivikirkko kellotorneineen; piirustusten '
+            + 'esikuvana oli Bourgesin katedraali Ranskassa.',
+          lahde: 'Hannelore Hopfe, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'La Mercedin basilika': {
+      aika: '1701–1737',
+      teksti: 'La Merced on armonsääntökunnan ensimmäinen kirkko ja '
+          + 'pääpaikka Ecuadorissa, ja juuri siitä se sai '
+          + 'basilika-arvonsa. Rakentaminen alkoi 1701, torni valmistui '
+          + '1736 ja kirkko vihittiin 1737. Arkkitehti oli José Jaime '
+          + 'Ortiz, sama alicantelainen mestari, joka piirsi myös '
+          + 'vanhankaupungin El Sagrarion. Valkoisessa rakennuksessa on '
+          + 'viisi kupolia ja neliömäinen torni, ja sen koristeissa on '
+          + 'sekä inkalaisia että arabialaisia kirjoitusmerkkejä.'
+          + '\n\n'
+          + 'Pääalttarin veisti ja rakensi Bernardo de Legarda vuosina '
+          + '1748–1751. Kuoriosan takana oleva sakaristo on '
+          + '1800-luvun alusta, ja sekä siellä että kirkkosalissa on '
+          + 'useita Víctor Miderosin teoksia.'
+          + '\n\n'
+          + 'Luostarin pohjoissiivessä on kaupungin merkittävimpiä '
+          + 'historiallisia kirjastoja. Se ulottuu kahteen kerrokseen, '
+          + 'joita yhdistää veistetty puinen kierreportaikko, ja '
+          + 'kirjahyllyt peittävät molempien kerrosten seinät. Vuosina '
+          + '1994–1997 tehdyssä luetteloinnissa laskettiin 22 000 '
+          + 'nidettä ja yli 40 000 kirjastotietuetta. Holveihin on '
+          + 'haudattu muun muassa 1600-luvun maalari Isabel de '
+          + 'Santiago.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de La Merced, Quito, Ecuador, 2015-07-22, DD 184.JPG',
+          selite: 'Kullattu keskilaiva ja perällä Bernardo de Legardan vuosina '
+            + '1748–1751 veistämä pääalttari.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'San Agustínin luostari': {
+      aika: '1606–1617',
+      teksti: 'Augustinolaiset saivat tonttinsa 1573 ja aloittivat '
+          + 'luostarista; kirkko rakennettiin vasta vuosina 1606–1617. '
+          + 'Sen teki Juan del Corral piirustuksilla, jotka arkkitehti '
+          + 'Francisco Becerra oli laatinut jo 1581 — sama mies '
+          + 'suunnitteli myös Quiton Santo Domingon kirkon. Pääportaali '
+          + 'on Diego de Escarzan uusklassista työtä, ja sen '
+          + 'koristeissa on rinnakkain espanjalaisia ja '
+          + 'alkuperäiskansojen aiheita.'
+          + '\n\n'
+          + 'Kellotorni on 37 metriä korkea, ja siinä soivat yhä samat '
+          + 'kellot, jotka sinne asetettiin 1600-luvulla. Luostarilla '
+          + 'on oma sisäänkäyntinsä julkisivun itäpäässä, ja '
+          + 'ristikäytävä valmistui 1600-luvun puolivälissä. Sen '
+          + 'sisäpihoilla on puutarhat, ja kulmassa vastapäätä kirkon '
+          + 'ovea seisoo pieni atrium kiviristeineen.'
+          + '\n\n'
+          + 'Ristikäytävien keskellä on suuri kokoussali, kapitulisali, '
+          + 'joka suunniteltiin vasta 1700-luvulla. Siellä '
+          + 'allekirjoitettiin vuoden 1809 hallintoneuvoston asiakirja. '
+          + 'Pääalttarilla riippuu Miguel de Santiagon 1600-luvulla '
+          + 'maalaama valtava teos "Pyhän Augustinuksen riemuvoitto"; '
+          + 'saman maalarin töitä on muuallakin talossa.',
+      kuvat: [
+        {
+          tiedosto: '(Iglesia de San Agustin), Quito S. XVI pic a02.JPG',
+          selite: 'Diego de Escarzan veistämä pääportaali; koristeissa on '
+            + 'rinnakkain espanjalaisia ja alkuperäiskansojen aiheita.',
+          lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'El Sagrarion kirkko': {
+      aika: '1617–1715',
+      teksti: 'Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot '
+          + 'rakennettiin katedraalin kylkeen sen sakramenttikappeliksi '
+          + '— ja samalla ympäröivän kaupunginosan omaksi '
+          + 'seurakuntakirkoksi. Malli on peräisin Sevillan '
+          + 'katedraalista, ja sieltä espanjalaiset veivät sen '
+          + 'kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää '
+          + 'kokonsa ja taiteellisen painoarvonsa takia enemmän '
+          + 'itsenäiseltä kirkolta kuin katedraalin sivukappelilta.'
+          + '\n\n'
+          + 'Perustustyöt aloitettiin 1617 Pyhän Sakramentin '
+          + 'veljeskunnan varoilla, ja ne olivat vaativat: kirkko '
+          + 'seisoo holvirakenteella, joka sulkee vanhan Zanguñan '
+          + 'rotkon. Perustukset ulottuvat eteläsivulla neljäntoista '
+          + 'metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko '
+          + 'viettää sen verran. Töitä johti napolilaissyntyinen '
+          + 'jesuiitta Marcos Guerra. Arkkitehti José Jaime Ortiz '
+          + 'saapui Alicantesta Quitoon 4. marraskuuta 1694 ja '
+          + 'allekirjoitti rakennussopimuksen; hän piirsi kirkon ajan '
+          + 'muodin mukaan italialaiseen renessanssityyliin. '
+          + 'Keskilaivan päättää tynnyriholvi, ja sivulaivat on '
+          + 'katettu pienillä kupoleilla.'
+          + '\n\n'
+          + 'Sisäänkäynnin puinen väliportaali on Bernardo de Legardan '
+          + 'työtä ja quitolaisen barokin komeimpia näytteitä: pylväät '
+          + 'ovat vaihtuneet kasviaiheiksi, jotka päättyvät '
+          + 'oikukkaisiin kapiteeleihin. Legarda sai 1742 tehtäväkseen '
+          + 'myös keskiholvin kupolin, ja hän antoi maalaustyön '
+          + 'Francisco Albánille. Alttarikaapit ovat Legardan tekemiä '
+          + 'ja Cristóbal Gualoton kullattuja; Gualotolla oli apunaan '
+          + 'viiden miehen ryhmä.',
+      kuvat: [
+        {
+          tiedosto: 'Quito Iglesia de El Sagrario interior 2.jpg',
+          selite: 'Sivulaivan pieni kupoli alhaalta katsottuna; keskilaivan '
+            + 'päättää sen sijaan tynnyriholvi.',
+          lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Casa del Alabado': {
+      aika: '1600-luku',
+      teksti: 'Talo on 1600-luvulla rakennettu siirtomaa-ajan '
+          + 'asuinrakennus vanhankaupungin sisällä, ja siinä on '
+          + 'toiminut vuoden 2010 huhtikuusta lähtien Ecuadorin '
+          + 'esikolumbiaanisen taiteen museo. Kokoelmassa on yli 5 000 '
+          + 'arkeologista esinettä, joista viisisataa on esillä.'
+          + '\n\n'
+          + 'Museon oma valinta on esitystapa. Esineitä ei ole '
+          + 'järjestetty aikajärjestykseen vaan aiheittain kahdeksaan '
+          + 'saliin, ja kukin sali käsittelee yhtä puolta muinaisten '
+          + 'ecuadorilaisten kulttuurien maailmankuvasta: '
+          + 'maailmankaikkeutta, suhdetta esi-isiin, uskonnollisia '
+          + 'käsityksiä ja rituaaleja sekä suhdetta ympäristöön. '
+          + 'Tarkoitus on näyttää esineet taideteoksina eikä '
+          + 'kaivauslöytöinä.'
+          + '\n\n'
+          + 'Talossa on kahdeksan näyttelysalin lisäksi vaihtuvien '
+          + 'näyttelyiden sali, kaksi työpajatilaa, museokauppa ja '
+          + 'kaksi sisäpihaa. Rakennus kuuluu Quiton vanhankaupungin '
+          + 'maailmanperintöalueeseen.',
+      kuvat: [
+        {
+          tiedosto: 'Quito Museo Casa del Alabado Statue of Jama-Coaque culture 1.jpg',
+          selite: 'Jama-Coaque-kulttuurin istuva hahmo omalla jalustallaan — '
+            + 'museo asettaa esineet esille taideteoksina.',
+          lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupunkimuseo: {
+      aika: '1998',
+      teksti: 'Museo asuu rakennuksissa, joissa toimi aikoinaan San '
+          + 'Juan de Diosin sairaala. Talot kunnostettiin 1995 '
+          + 'käyttäen samoja materiaaleja kuin alun perin, ja '
+          + 'vaurioituneet kohdat korjattiin niillä. Vanhat kivistä '
+          + 'veistetyt doorilaiset pylväät, kiviportaalit ja '
+          + 'sisäpihojen kivipinnat ovat rakennuksen parasta antia.'
+          + '\n\n'
+          + 'Museo perustettiin 1998, ja se kertoo kaksi tarinaa '
+          + 'rinnakkain: Quiton historian ja sairaalan neljänsadan '
+          + 'vuoden historian. Yksi pysyvistä näyttelyistä kulkee '
+          + 'kaupungin tapojen, ihmisten ja perinteiden läpi '
+          + '1500-luvulta 1800-luvulle, toinen kertoo sairaalasta ja '
+          + 'esittelee erään sen lääkärin kokoelman, ja kolmannen nimi '
+          + 'on "uusi yhteiskuntajärjestys murtautuu esiin: Quito '
+          + '1800-luvulla".'
+          + '\n\n'
+          + 'Heinäkuussa 2020 museo sai 69 esinettä takaisin '
+          + 'Ecuadoriin. Ne oli vienyt maasta 1960-luvulla '
+          + 'lontoolainen diplomaatti, joka keräsi taidetta ja '
+          + 'arkeologiaa; kokoelmassa on sekä valloituksen ajan '
+          + 'katolisia esineitä että esikolumbiaanisiksi arvioituja '
+          + 'löytöjä.',
+      kuvat: [
+        {
+          tiedosto: 'Museo de la Ciudad, Quito (interior) pic c.JPG',
+          selite: 'Kaarikäytävien reunustama sisäpiha; talo oli San Juan de '
+            + 'Diosin sairaala ennen kuin siitä tuli museo.',
+          lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'El Panecillo': {
+      aika: '1975',
+      teksti: 'Kukkula on tulivuoriperäinen ja kohoaa kaupungin '
+          + 'kattojen yli kaksisataa metriä; sen laki on 3 016 metriä '
+          + 'merenpinnasta. Espanjalaiset antoivat sille nimen '
+          + 'Panecillo, "pieni leipä", muodon mukaan. Vanha nimi oli '
+          + 'Yavirac, ja jesuiittahistorioitsija Juan de Velascon '
+          + 'mukaan sen laella oli temppeli, jossa palvottiin '
+          + 'aurinkoa, kunnes valloittajat hävittivät sen. Kukkulalle '
+          + 'nouseva katu on nimetty Melchor Aymerichin mukaan.'
+          + '\n\n'
+          + 'Laella seisoo 45 metriä korkea Neitsyt Marian patsas. '
+          + 'Oblaattien sääntökunta tilasi sen espanjalaiselta '
+          + 'taiteilijalta Agustín de la Herrán Matorrasilta, ja se on '
+          + 'koottu seitsemästätuhannesta alumiiniosasta; pystytyksen '
+          + 'suunnitteli quitolainen Aníbal López. Patsas paljastettiin '
+          + '28. maaliskuuta 1975.'
+          + '\n\n'
+          + 'Neitsyt seisoo maapallon päällä ja polkee käärmettä, mikä '
+          + 'on tavanomaista kuvastoa — mutta hänellä on siivet, ja '
+          + 'quitolaisten mukaan hän on maailman ainoa siivekäs '
+          + 'Madonna. Esikuva on Bernardo de Legardan vuonna 1734 '
+          + 'veistämä "Quiton Neitsyt", jota sanotaan tanssijattareksi, '
+          + 'koska se esittää liikkeessä olevaa hahmoa aikansa '
+          + 'liikkumattomien madonnien sijaan. Patsaan pronssikilven '
+          + 'mukaan kuvattu nainen on Ilmestyskirjan luvun 12 vaimo.',
+      kuvat: [
+        {
+          tiedosto: 'Virgen del Panecillo.jpg',
+          selite: 'Alumiininen Neitsyt seisoo kukkulan laella, ja rinne on '
+            + 'rakennettu täyteen taloja lakea myöten.',
+          lahde: 'Josuadaniel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vuoden 1909 näyttelypalatsi': {
+      aika: '1909',
+      teksti: 'Quito järjesti 1909 oman maailmannäyttelynsä. Syy oli '
+          + 'sata vuotta täyttänyt itsenäisyystaistelu, ja '
+          + 'näyttelypalatsi avattiin juhlallisesti 10. elokuuta 1909 '
+          + '— päivälleen sata vuotta "ensimmäisen vapaudenhuudon" '
+          + 'jälkeen. Itse näyttely aukesi 8. syyskuuta. Suojelijana '
+          + 'toimi presidentti Eloy Alfaro, ja palkinnot jaettiin 28. '
+          + 'syyskuuta.'
+          + '\n\n'
+          + 'Ecuadorin oma paviljonki oli teräsbetonia, kaksikerroksinen '
+          + 'ja sen kupoli kolmenkymmenen metrin levyinen; kupolin '
+          + 'päällä siivet levällään seisoi andienkondori. Japanin '
+          + 'paviljonki tehtiin guayaquililaisesta puusta ja maalattiin '
+          + 'puna-valkoiseksi, ja Yhdysvaltain paviljonki rakennettiin '
+          + 'Valkoisen talon mukaiseksi. Näytteilleasettajia tuli '
+          + 'Chilestä, Kolumbiasta, Ranskasta, Japanista, Espanjasta, '
+          + 'Italiasta, Perusta ja Yhdysvalloista.'
+          + '\n\n'
+          + 'Näyttelyn jälkeen rakennukset jaettiin edelleen: Chilen '
+          + 'paviljonki musiikkikonservatoriolle, Kolumbian kaupungille, '
+          + 'Yhdysvaltain sotilaskomitealle ja Italian naiskomitealle. '
+          + 'Japanin paviljongin Alfaro antoi juuri perustetulle Quiton '
+          + 'maantieteelliselle seuralle, ja alueen jugendtyylinen '
+          + 'kahvila muuttui 1937 puolustusministeriön taloksi.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * PORT MORESBYN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.portmoresby, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "National Parliament House, Port Moresby", "National
+   * Parliament of Papua New Guinea", "National Library of Papua New
+   * Guinea", "Sir John Guise Stadium", "Hohola Mosque", "Islam in
+   * Papua New Guinea", "Sir Hubert Murray Stadium", "St Joseph's
+   * International Catholic College", "Amini Park", "Bisini Parade
+   * Sports Complex", "St. Mary's Cathedral, Port Moresby" ja
+   * "Archdiocese of Port Moresby").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat sataman nimi 1873, motut ja koitat, Hanuabada, pääkaupungiksi
+   * tulo, Jacksonsin lentoasema, kaupungin kolme osaa, Kokin tori,
+   * sadevarjo, HMS Basilisk, lähetysseuran neljä opettajaa, tulematta
+   * jäänyt kultaryntäys, kahdesti nostettu lippu, hiri-purjehdukset ja
+   * kansallismuseo. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Parlamenttitalon
+   * jutussa EI kerrota itsenäistymisestä 1975 — se on lehden
+   * historiasivun noston "Lippu joka nostettiin kahdesti" aihe — vaan
+   * talosta, joka rakennettiin yhdeksän vuotta myöhemmin.
+   * Kansalliskirjaston jutussa ei kerrota Waiganin synnystä, joka on
+   * matkaoppaan jakson "Alueen rakenne" aihe.
+   */
+  portmoresby: {
+    Parlamenttitalo: {
+      aika: '1984',
+      teksti: 'Maan lainsäätäjä sai oman talon vasta yhdeksän vuotta '
+          + 'itsenäistymisen jälkeen. Papuan ja Uuden-Guinean '
+          + 'edustajakokous istui vuosina 1964–1975 vanhassa '
+          + 'keskustassa talossa, joka oli sitä ennen ollut sairaala. '
+          + 'Uusi parlamenttitalo nousi Waiganiin, ja Walesin prinssi '
+          + 'Charles avasi sen 8. elokuuta 1984.'
+          + '\n\n'
+          + 'Talon tyylilajiksi on merkitty melanesialainen — se on '
+          + 'harvinaista, sillä siirtomaavallan jälkeen rakennetut '
+          + 'parlamenttitalot noudattavat useimmiten Westminsterin '
+          + 'omaa arkkitehtuuria. Naapurissa ovat korkeimman oikeuden '
+          + 'rakennukset. Sisällä istuu yksikamarinen parlamentti, '
+          + 'jossa on 118 jäsentä: yhdeksänkymmentäkuusi avointa '
+          + 'vaalipiiriä ja kaksikymmentäkaksi maakuntavaalipiiriä.'
+          + '\n\n'
+          + 'Vanha talo purettiin, ja sen paikalle on kaavailtu '
+          + 'poliittisen historian museota ja kirjastoa. Vuonna 2025 '
+          + 'Australian hallitus tarjoutui rahoittamaan taloon uuden '
+          + 'ministerisiiven Papua-Uuden-Guinean viisikymmenvuotisen '
+          + 'itsenäisyyden kunniaksi.',
+      lahde: 'Wikipedia',
+    },
+    Kansalliskirjasto: {
+      aika: '1978',
+      teksti: 'Papua-Uuden-Guinean kansalliskirjasto perustettiin '
+          + '1978, kolme vuotta itsenäistymisen jälkeen. Se ei ollut '
+          + 'maan oma hanke vaan Australian lahja: kirjasto '
+          + 'perustettiin sanoin "lahjana Papua-Uuden-Guinean '
+          + 'hallitukselle ja kansalle", ja tehtäväksi annettiin '
+          + '"auttaa kokoamaan kansallisesti merkittävien aineistojen '
+          + 'kokoelma".'
+          + '\n\n'
+          + 'Kokoelmassa on noin 56 000 nimikettä. Se ei ole pelkkä '
+          + 'kirjavarasto: mukana on kirjojen lisäksi elokuvia ja '
+          + 'videokuvaa sekä karttoja, merikarttoja, valokuvia ja '
+          + 'mikrofilmiä. Maassa, jossa puhutaan noin 840 kieltä ja '
+          + 'jossa suurin osa perinteestä on siirtynyt suullisesti, '
+          + 'juuri kuva- ja ääniaineisto on kansallisen kokoelman '
+          + 'ydintä.'
+          + '\n\n'
+          + 'Talo on Waiganissa parlamenttitalon lähinaapurissa. '
+          + 'Kirjasto on siis kaupungin muihin kohteisiin nähden '
+          + 'nuori: se on rakennettu samaan aikaan kuin koko '
+          + 'hallintokaupunginosa sen ympärillä.',
+      lahde: 'Wikipedia',
+    },
+    'Sir John Guisen stadion': {
+      aika: '1991',
+      teksti: 'Stadion avattiin 1991 Etelä-Tyynenmeren kisoja varten, '
+          + 'ja se nimettiin Sir John Guisen mukaan — hän oli '
+          + 'Papua-Uuden-Guinean ensimmäinen kenraalikuvernööri. '
+          + 'Katsomoon mahtui alun perin noin viisituhatta katsojaa. '
+          + 'Stadion on osa laajempaa urheilupuistoa, jossa on lisäksi '
+          + 'sisähalli, beachvolley- ja maahockeykenttä sekä '
+          + 'uimahalli.'
+          + '\n\n'
+          + 'Kun Papua-Uusi-Guinea valittiin 27. syyskuuta 2009 vuoden '
+          + '2015 Tyynenmeren kisojen isännäksi, tämä stadion valittiin '
+          + 'kisojen pääareenaksi. Remontissa vanha katsomo '
+          + 'kunnostettiin ja laajennettiin, ja paikkaluku nousi '
+          + 'viidestätuhannesta viiteentoistatuhanteen. Taloon tuli '
+          + 'pelaajatilat, toimistot, pukuhuoneet, mediakeskus ja '
+          + 'lääkintäpisteet, ja kentälle televisiokelpoinen valaistus, '
+          + 'kuulutusjärjestelmä, tulostaulu ja kansainvälisen '
+          + 'yleisurheiluliiton hyväksymä juoksurata.'
+          + '\n\n'
+          + 'Uusi stadion koeponnistettiin 12. kesäkuuta 2015 rugby '
+          + 'league -ottelulla, jossa PNG Hunters kohtasi Souths Logan '
+          + 'Magpiesin. Samana kesänä siellä pidettiin kisojen '
+          + 'avajaiset ja päättäjäiset. Sen jälkeen stadionilla on '
+          + 'pelattu vuoden 2016 Oseanian mestaruusturnauksen kaikki '
+          + 'ottelut — turnauksen, joka oli samalla karsinta vuoden '
+          + '2018 jalkapallon MM-kisoihin — ja osa saman vuoden alle '
+          + '20-vuotiaiden naisten MM-kisoista.',
+      lahde: 'Wikipedia',
+    },
+    'Hoholan moskeija': {
+      aika: '2007',
+      teksti: 'Hoholan moskeija on Papua-Uuden-Guinean ensimmäinen '
+          + 'moskeija. Hanke alkoi 2001, kun valtio lahjoitti tontin '
+          + 'paikalliselle islamilaiselle yhteisölle; rakennustyöt '
+          + 'alkoivat 2004 ja talo valmistui 2007. Suuri osa '
+          + 'rahoituksesta tuli Malesiasta ja Saudi-Arabiasta. '
+          + 'Moskeija on sunnalainen.'
+          + '\n\n'
+          + 'Islam on maassa pieni vähemmistö. Seuraajia oli vuonna '
+          + '2021 noin kymmenentuhatta, ja he ovat keskittyneet Port '
+          + 'Moresbyyn ja ylängön kyliin. Valtaosa maan muslimeista on '
+          + 'papualaisia itse eikä maahanmuuttajia. 1970-luvulla '
+          + 'muslimeja arvioitiin olevan vain sata kaksikymmentä, '
+          + 'lähinnä afrikkalaisia ja eteläaasialaisia siirtotyöläisiä; '
+          + 'valtio tunnusti islamin virallisesti 1982, ja ensimmäinen '
+          + 'islamilainen keskus perustettiin 1988.'
+          + '\n\n'
+          + 'Vuonna 2018 Malesian pääministeri Mahathir Mohamad kävi '
+          + 'moskeijassa APEC-kokouksen jälkeen. Kontakti islamiin on '
+          + 'alueella paljon vanhempi kuin moskeija: muslimikauppiaita '
+          + 'liikkui Uuden-Guinean rannikoilla 1500-luvulta '
+          + '1800-luvulle, ja raudan työstön taito tuli saarelle '
+          + '1500-luvun puolivälissä Molukeilta.',
+      lahde: 'Wikipedia',
+    },
+    'Sir Hubert Murrayn stadion': {
+      aika: '1969',
+      teksti: 'Stadion rakennettiin vuoden 1969 Etelä-Tyynenmeren '
+          + 'kisoja varten Konedobuun täytemaalle, joka oli sitä ennen '
+          + 'ollut mangroverantaa. Siellä juostiin kisojen '
+          + 'yleisurheilu ja pidettiin avajaiset ja päättäjäiset. Nimi '
+          + 'tulee Sir Hubert Murraysta, siirtomaan entisestä '
+          + 'varakuvernööristä. Katsomoon mahtui noin viisitoistatuhatta '
+          + 'katsojaa, ja kisojen jälkeen kentällä pelattiin '
+          + 'australialaista jalkapalloa ja jalkapalloa sekä juostiin '
+          + 'koulujen kisoja.'
+          + '\n\n'
+          + 'Vuoden 2003 lopulla alkoi kolmivaiheinen uudistus, jonka '
+          + 'hinnaksi arvioitiin 120 miljoonaa kinaa ja jonka piti '
+          + 'nostaa paikkaluku 25 000:een. Suunnitelmissa oli '
+          + 'FIFA-kelpoinen luonnonnurmikenttä ja kuusikerroksinen '
+          + 'pääkatsomo, jossa olisi kahdeksan ravintolaa ja kuntosali; '
+          + 'kuntosalilla oli tarkoitus järjestää vuoden 2015 '
+          + 'Tyynenmeren kisojen painonnosto.'
+          + '\n\n'
+          + 'Niin ei käynyt. Stadion ei valmistunut kisoihin, jotka '
+          + 'siirtyivät Sir John Guisen stadionille, ja työmaa seisoi '
+          + 'vuosia. Suorakaiteen muotoiseksi muutettu kenttä avattiin '
+          + 'lopulta 2022 — lähes kaksi vuosikymmentä aloituksen '
+          + 'jälkeen. Nyt siellä pelaa rugby league -joukkue Port '
+          + 'Moresby Vipers, ja vuonna 2023 katsomoon mahtui '
+          + 'kaksikymmentätuhatta.',
+      lahde: 'Wikipedia',
+    },
+    'St Josephin koulu': {
+      aika: '1917',
+      teksti: 'Koulu perustettiin 1917 Port Moresbyn eurooppalaisten '
+          + 'perheiden lapsille, ja se aloitti viidellätoista '
+          + 'oppilaalla Pyhän Sydämen Neitsyt Marian tyttärien '
+          + 'luostarissa Pyhän Marian katedraalin takana. Ensimmäinen '
+          + 'johtaja oli sisar Mary Carthage. Koulu on maan '
+          + 'vanhimpia.'
+          + '\n\n'
+          + 'Sota sulki koulun vuosiksi 1941–1946. Sen jälkeen '
+          + 'oppilasmäärä kasvoi tasaisesti, ja 1950-luvun lopulla '
+          + 'tilat kävivät ahtaiksi. Samaan aikaan väki lisääntyi '
+          + 'Borokossa, jossa katolista koulua ei ollut, joten koulu '
+          + 'päätettiin siirtää sinne. Muutto tehtiin luokka '
+          + 'kerrallaan ja se kesti vuosia: ensimmäinen luokka siirtyi '
+          + '1957 Borokon seurakuntasaliin, ja sisaret opettivat '
+          + 'salissa niin kauan kuin uutta koulua rakennettiin.'
+          + '\n\n'
+          + 'Nykyinen nimi tuli 2004, kun kouluun perustettiin '
+          + 'lukioluokat. Ensimmäiset kymmenennen luokan oppilaat '
+          + 'suorittivat päättötodistuksen 2007 ja ensimmäiset '
+          + 'kahdennentoista luokan oppilaat ylioppilastodistuksen '
+          + '2009 — kummassakin sekä Papua-Uuden-Guinean että Uuden '
+          + 'Etelä-Walesin tutkinnon. Opetusta annetaan esikoulusta '
+          + 'kahdenteentoista luokkaan.',
+      lahde: 'Wikipedia',
+    },
+    'Amini Park': {
+      aika: '1956',
+      teksti: 'Amini Park on Papua-Uuden-Guinean tärkein '
+          + 'krikettikenttä ja maan krikettiliiton kotipaikka. Kenttä '
+          + 'perustettiin 1956, ja se sai nimensä 1983 Aminin perheen '
+          + 'mukaan: perheen jäseniä on pelannut maajoukkueessa sekä '
+          + 'krikettiä että muita lajeja, ja sekä miesten että naisten '
+          + 'maajoukkue pelaa täällä kotiottelunsa.'
+          + '\n\n'
+          + 'Kentällä on pelattu Australiaa, Länsi-Intiaa ja Victorian '
+          + 'osavaltiota vastaan, ja naisten maajoukkue pelasi täällä '
+          + 'Japania vastaan kolmen ottelun sarjan syyskuussa 2006. '
+          + 'Kansainvälisen tason ottelut alkoivat vasta 2010-luvulla: '
+          + 'ensimmäinen List A -ottelu pelattiin toukokuussa 2016, '
+          + 'kun Papua-Uusi-Guinea voitti Kenian, ja ensimmäinen '
+          + 'first-class-ottelu lokakuussa 2016, kun se voitti '
+          + 'Namibian. Maaliskuussa 2019 täällä pelattiin '
+          + 'Itä-Aasian ja Tyynenmeren alueen T20-karsinnan '
+          + 'loppuottelut.'
+          + '\n\n'
+          + 'Kenttä on osa Bisini Paraden urheilupuistoa, jota '
+          + 'rajaavat neljä katua ja jossa on lisäksi kansallinen '
+          + 'jalkapallostadion, Rita Flynnin verkkopallokeskus ja '
+          + 'Bava Parkin rugbykenttä. Koko puisto uudistettiin vuoden '
+          + '2015 Tyynenmeren kisoja varten, ja Amini Park sai '
+          + 'vuosina 2020–2021 uuden nurmisyöttöalueen ja '
+          + 'harjoituskeskuksen.',
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Marian katedraali': {
+      aika: '1889 alkaen',
+      teksti: 'Pyhän Marian katedraali on Port Moresbyn '
+          + 'arkkihiippakunnan pääkirkko ja omistettu Neitsyt '
+          + 'Marialle. Ulkoseinät ovat vaaleansiniset, ja '
+          + 'pääsisäänkäynnin toisella puolen kohoaa valkoinen torni.'
+          + '\n\n'
+          + 'Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut '
+          + 'kolmesti. Se perustettiin 10. toukokuuta 1889 '
+          + 'Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen '
+          + 'Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; '
+          + 'arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. '
+          + 'Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 '
+          + 'katolista eli 29 prosenttia väestöstä.'
+          + '\n\n'
+          + 'Paavi Johannes Paavali II vieraili katedraalissa '
+          + 'toukokuussa 1984 ja palasi hiippakuntaan tammikuussa '
+          + '1995. Paavi Franciscus vieraili Port Moresbyssä 4.–6. '
+          + 'syyskuuta 2024.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * MANAUSIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.manaus, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Arena da Amazônia", "Legislative Assembly of
+   * Amazonas", "National Institute of Amazonian Research", "Estádio
+   * Ismael Benigno", "Beit Yaacov/Rabi Meyr Synagogue", "Geographic
+   * and Historic Institute of Amazonas", "Amazonas Public Library" ja
+   * "Metropolitan Cathedral of Our Lady of the Conception, Manaus").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kaupungin kolme nimeä, vetten kohtaaminen, kaupunki ennen
+   * kumibuumia, vapaakauppa-alue, jokiliikenne, Mindú-puisto, armeijan
+   * eläintarha, Palácio Rio Negro, oopperatalo, sähkö, tullitalo,
+   * Wickhamin siemenet, alueen alkuperäiskansat, Ajuricaba, baré ja
+   * kabanaokapina. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Synagogan
+   * jutussa kumibuumi mainitaan vain siltä osin kuin se toi juutalaiset
+   * kauppiaat jokivarteen — buumin oma tarina on lehden omalla
+   * sivullaan. Osavaltion kirjaston jutussa ei kerrota kumin hinnan
+   * romahduksesta muuten kuin syynä sille, ettei kirjasto voinut ostaa
+   * uusia kirjoja.
+   */
+  manaus: {
+    'Amazonas-areena': {
+      aika: '2014',
+      teksti: 'Areena rakennettiin vuosina 2010–2014 jalkapallon '
+          + 'MM-kisoja varten vanhan Vivaldão-stadionin paikalle. '
+          + 'Istumapaikkoja on 42 924, mutta kisojen aikana suurin '
+          + 'sallittu yleisömäärä oli 40 549. Rakentamisesta maksoi '
+          + 'osavaltio neljänneksen ja Brasilian kehityspankki loput.'
+          + '\n\n'
+          + 'Suunnittelija oli saksalainen arkkitehtitoimisto Gerkan, '
+          + 'Marg and Partners, ja metallinen ulkokuori on tehty '
+          + 'muistuttamaan alueen olkikoreja. Päiväntasaajan '
+          + 'läheisyyden takia talo on rakennettu viilentämään itse '
+          + 'itseään: ulkopinta on valkoinen ja heijastava, katsomon '
+          + 'päällä on runsaasti varjoa ja julkisivussa paljon '
+          + 'tuuletusaukkoja. Sadevesi kerätään talteen, ja yli 95 '
+          + 'prosenttia vanhan stadionin purkuaineksesta käytettiin '
+          + 'uudelleen.'
+          + '\n\n'
+          + 'Stadion avattiin 9. maaliskuuta 2014, ja kisoissa siellä '
+          + 'pelattiin neljä ottelua. Englannin valmentaja Roy Hodgson '
+          + 'oli arvostellut paikkaa etukäteen kuumuuden takia, ja '
+          + 'Englanti hävisi täällä avausottelunsa Italialle 1–2. '
+          + 'Manausin neljässä ottelussa tehtiin keskimäärin 3,5 '
+          + 'maalia, koko turnauksessa 2,7. Stadionia on arvosteltu '
+          + 'liian suureksi kaupungille, jonka omat sarjaottelut '
+          + 'vetävät vähän väkeä: kisojen jälkeen käyttö on ollut '
+          + 'harvaa, muutamia ammattilaisotteluita, uskonnollisia '
+          + 'tilaisuuksia ja yksi Guns N’ Rosesin konsertti. '
+          + 'Vuoden 2016 olympialaisten jalkapalloa täällä silti '
+          + 'pelattiin.',
+      kuvat: [
+        {
+          tiedosto: 'Arena Amazônia Manaus.jpg',
+          selite: 'Ilmasta katsottuna valkoinen kuori näyttää '
+            + 'punotulta korilta, ja katsomo on tyhjä.',
+          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Osavaltion parlamentti': {
+      aika: '1852',
+      teksti: 'Amazonasin osavaltion lakia säätävä kokous on kaupungin '
+          + 'vanhimpia laitoksia, vaikka sen talo on uusi. Kokous '
+          + 'perustettiin 1852 provinssin lainsäädäntökokoukseksi, ja '
+          + 'se on yksikamarinen: siihen valitaan suhteellisella '
+          + 'vaalitavalla kaksikymmentäneljä edustajaa.'
+          + '\n\n'
+          + 'Kokous on istunut neljässä eri talossa. Nykyinen päämaja '
+          + 'avattiin 28. heinäkuuta 2006, ja se on kartan pohjoisin '
+          + 'kohde yhdessä jalkapalloareenan kanssa — kaupunki kasvoi '
+          + '1900-luvun jälkipuoliskolla vanhasta keskustasta '
+          + 'pohjoiseen, ja hallinto seurasi perässä.',
+      kuvat: [
+        {
+          tiedosto: 'Assembleia Legislativa do Estado do Amazonas (ALEAM).jpg',
+          selite: 'Istuntosalin matala kolmiokatto on kiinni '
+            + 'toimistotornissa, ja salin seinään on maalattu '
+            + 'kokouksen nimi.',
+          lahde: 'Assembleia Legislativa do Amazonas, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Amazonin tutkimuslaitos': {
+      aika: '1952',
+      teksti: 'Amazonin tutkimuslaitos on julkinen tutkimus- ja '
+          + 'opetuslaitos, joka perustettiin 1952 lisäämään tieteen '
+          + 'tietoa Brasilian Amazonista. Se on yksi harvoista '
+          + 'paikoista, joissa sademetsää tutkitaan sademetsän '
+          + 'keskeltä eikä kaukaa.'
+          + '\n\n'
+          + 'Tutkimus koskee etenkin trooppisen metsän hoitoa, '
+          + 'ekologiaa, molekyyliekologiaa, eläin- ja kasvitiedettä '
+          + 'sekä trooppista maataloutta ja kalankasvatusta. '
+          + 'Laitoksella on merkittävät selkärankaisten, '
+          + 'selkärangattomien ja putkilokasvien tutkimuskokoelmat, ja '
+          + 'se julkaisee omaa tieteellistä aikakauslehteä nimeltä '
+          + 'Acta Amazônica.'
+          + '\n\n'
+          + 'Laitos ei ole pelkkä tutkimusasema vaan myös korkeakoulu: '
+          + 'se antaa jatko-opetusta muun muassa kosteiden tropiikin '
+          + 'maatalouden alalla maisteri- ja tohtoritasolla. Osoite on '
+          + 'Avenida André Araújo Petrópolisin kaupunginosassa, viisi '
+          + 'kilometriä vanhasta keskustasta itään.',
+      kuvat: [
+        {
+          tiedosto: 'Instituto Nacional de Pesquisas da Amazônia - INPA (52129481536).jpg',
+          selite: 'Tiilinen ja lasinen laboratoriotalo seisoo '
+            + 'palmujen ja sademetsäkasvillisuuden keskellä.',
+          lahde: 'Ministério da Ciência, Tecnologia e Inovação, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Colinan stadion': {
+      aika: '1961',
+      teksti: 'Estádio Ismael Benigno, jota kutsutaan yleisesti '
+          + 'Colinan stadioniksi, valmistui 1961. Se on São Raimundo '
+          + '-seuran oma stadion, ja siihen mahtuu 10 400 katsojaa. '
+          + 'Nimi tulee Ismael Benignosta, joka johti seuraa 1950- ja '
+          + '1960-luvuilla ja osti tontin, jolle stadion rakennettiin '
+          + '— stadion on siis nimetty ostajansa eikä pelaajan mukaan.'
+          + '\n\n'
+          + 'Avausottelu pelattiin 19. helmikuuta 1961, ja se meni '
+          + 'kotijoukkueelta pahasti pieleen: Recifen Sport voitti São '
+          + 'Raimundon 8–1, ja ensimmäisen maalin stadionin historiassa '
+          + 'teki vieraiden Mário. Valot vihittiin käyttöön 18. '
+          + 'helmikuuta 1967 ottelussa, jonka Nacional voitti 3–1.'
+          + '\n\n'
+          + 'Yleisöennätys on 16 000 ja se on 4. elokuuta 2000: '
+          + 'stadion avattiin silloin uudelleen remontin jälkeen, ja '
+          + 'São Raimundo voitti Surinamen maajoukkueen 5–0.',
+      kuvat: [
+        {
+          tiedosto: 'Ismaelbenigno.jpg',
+          selite: 'Kulmalippu etualalla, nurmi ja tyhjä betonikatsomo '
+            + 'sen takana matalan pilvikannen alla.',
+          lahde: 'Marcospaulobg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Beit Yaacovin synagoga': {
+      aika: '1962',
+      teksti: 'Amazonin juutalaisyhteisö on vanha ja sen synagoga '
+          + 'nuori. Manausin seurakunta syntyi kahdesta aiemmasta, '
+          + 'joiden juuret ovat 1920-luvulla; nykyinen talo valmistui '
+          + '1962, kun seurakunnat yhdistyivät. Se on yksi Pohjois-'
+          + 'Brasilian suurimmista ja vaikutusvaltaisimmista '
+          + 'amazonianjuutalaisten seurakunnista.'
+          + '\n\n'
+          + 'Yhteisö tuli jokea pitkin kaupan mukana. Marokon '
+          + 'juutalaiset alkoivat 1800-luvun alussa muuttaa Brasiliaan, '
+          + 'ja moni päätyi Amazonille: he perustivat kauppaverkostoja, '
+          + 'jotka ulottuivat Belémistä ja Manausista jokivarren '
+          + 'takamaille asti, ja toimivat välikäsinä kumin tuottajien '
+          + 'ja vientisatamien välillä. Manaus on tässä poikkeus, sillä '
+          + 'sinne saapuivat ensin elsassilaiset juutalaiset '
+          + 'Ranskan–Preussin sodan 1870–1871 jälkeen — he eivät '
+          + 'halunneet jäädä Saksan alaisuuteen.'
+          + '\n\n'
+          + 'Yhteisö järjestäytyi vasta myöhään. Belémissä oli kaksi '
+          + 'synagogaa ja hautausmaa jo 1820-luvulla, mutta Manausissa '
+          + 'ensimmäinen synagoga vihittiin 1925, hautausmaa 1928 ja '
+          + 'yhteisön liitto 1929. Sitten tulivat heprealainen koulu '
+          + '1973, yhteisötalo 1976 ja rituaalikylpy 2012. Vuoden 1967 '
+          + 'vapaakauppa-alue toi kaupunkiin uuden aallon, '
+          + 'aškenasijuutalaisia muualta Brasiliasta. Nykyään '
+          + 'Manausissa arvioidaan olevan noin kahdeksansataa '
+          + 'juutalaista.',
+      lahde: 'Wikipedia',
+    },
+    'Maantieteen ja historian instituutti': {
+      aika: '1917',
+      teksti: 'Amazonasin maantieteellis-historiallinen instituutti on '
+          + 'arkistoja säilyttävä ja tutkiva kulttuurilaitos, joka '
+          + 'tunnetaan myös nimellä Bernardo Ramosin talo. Sen '
+          + 'perustaminen alkoi 11. maaliskuuta 1917 kokouksesta, '
+          + 'jossa valittiin toimikunta laatimaan säännöt; kuvernööri '
+          + 'Pedro de Alcântara Bacellar allekirjoitti ne saman kevään '
+          + 'asetuksilla. Ensimmäiseksi puheenjohtajaksi tuli Bernardo '
+          + 'Ramos.'
+          + '\n\n'
+          + 'Perustamissääntöjen mukaan instituutti sai tutkia hyvin '
+          + 'laajaa alaa: historiaa, antropologiaa, filosofiaa, '
+          + 'tähtitiedettä, kasvitiedettä, aluerajoja, geologiaa, '
+          + 'maataloutta, kauppaa ja merenkulkua. Se oli tiiviisti '
+          + 'kiinni osavaltion hallinnossa, ja sen kertoma historia '
+          + 'oli käytännössä virallinen versio — mutta samalla se '
+          + 'täytti aukkoa, sillä Amazonista ei juuri kirjoitettu '
+          + 'muualla.'
+          + '\n\n'
+          + 'Instituutti on asunut perustamisestaan asti samassa '
+          + 'kaksikerroksisessa talossa Frei José dos Inocentesin '
+          + 'kadulla vanhassa keskustassa. Kokoelmassa on '
+          + 'oikeudellisia asiakirjoja, pamfletteja, aikakauslehtiä ja '
+          + 'sanomalehtiä provinssin ajoilta ja Brasilian ensimmäisen '
+          + 'tasavallan alkuvuosilta; valtaosa siitä on luetteloitu ja '
+          + 'säilötty. Osavaltion suojeluneuvosto määräsi talon '
+          + 'suojelluksi 1980.',
+      lahde: 'Wikipedia',
+    },
+    'Osavaltion kirjasto': {
+      aika: '1871',
+      teksti: 'Amazonasin osavaltion kirjasto on osavaltion vanhin '
+          + 'yleinen kirjasto ja kokoelmaltaan sen suurin. Se '
+          + 'perustettiin 19. maaliskuuta 1871, ja alku oli vaatimaton: '
+          + 'lukusali lukion tiloissa ja 1 200 nidettä. Kirjasto '
+          + 'muutti 1883 emäkirkon tiloihin ja 1887 Dom Pedro II '
+          + '-kouluun, sai 1895 vuokratalon Guilherme Moreiran kadulta '
+          + 'ja lakkautettiin kaksi vuotta myöhemmin kokonaan.'
+          + '\n\n'
+          + 'Nykyinen talo Barroso-kadun ja Sete de Setembron '
+          + 'kulmassa rakennettiin uusklassiseen tyyliin ja vihittiin '
+          + '5. lokakuuta 1910. Portaat ja pylväät tulivat Skotlannista '
+          + 'sekä marmorikatto, kristallikruunut ja laatoitettu '
+          + 'kattoikkuna Englannista. Alkuvuosina kävijät olivat '
+          + 'kaupungin sivistyneistöä: opettajia, lakimiehiä, '
+          + 'lääkäreitä, tuomareita, pappeja ja kauppiaita. Kun kumin '
+          + 'hinta romahti, kirjasto ei enää pystynyt uusimaan '
+          + 'kokoelmaansa.'
+          + '\n\n'
+          + 'Aamuyöllä 22. elokuuta 1945 tulipalo tuhosi kirjaston '
+          + 'omaisuuden. Pelastui kuusikymmentä kirjaa, jotka sattuivat '
+          + 'olemaan näyttelyssä talon ulkopuolella. Kuvernööri Álvaro '
+          + 'Botelho Maia avasi talon uudelleen 45 000 niteen '
+          + 'kokoelmalla, josta hän lahjoitti itse 2 500 ja loput tuli '
+          + 'lahjoituksina. Toisessa kerroksessa on yli 30 000 '
+          + 'sanomalehteä vuodesta 1886 alkaen sekä sarjakuvakokoelma '
+          + 'ja tietokonesali. Talo suojeltiin kansallisesti 12. '
+          + 'huhtikuuta 1988, ja se peruskorjattiin 2013.',
+      kuvat: [
+        {
+          tiedosto: 'BibliotecaPublicaAmazonas 02.JPG',
+          selite: 'Punakeltainen uusklassinen talo kadunkulmassa, '
+            + 'kaarevat ikkunat ja valkoiset kaidekoristeet.',
+          lahde: 'Joehawkins, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Katedraali: {
+      aika: '1878',
+      teksti: 'Manausin katedraali on kaupungin emäkirkko. Sen tarina '
+          + 'alkaa karmeliittalähetystyöntekijöistä, jotka rakensivat '
+          + 'paikalle Neitsyt Marian kirkon 1695. Provinssin '
+          + 'presidentti Manoel da Gama Lobo D’Almada rakennutti '
+          + 'sen uudestaan ja laajensi sitä, mutta tuo talo tuhoutui '
+          + 'tulipalossa 1850.'
+          + '\n\n'
+          + 'Nykyinen kirkko on kreikkalaistyylinen, ja suuri osa '
+          + 'rakennusaineesta tuotiin Euroopasta ja etenkin '
+          + 'Portugalista. Kuusi kelloa valettiin portugalilaisessa '
+          + 'valimossa, ja kappeli, kastekappeli ja kolme alttaria '
+          + 'ovat lissabonilaista kalkkikiveä. Laatat tulivat '
+          + 'lähempää: Nova Rainhasta, joka on nykyään Parintins.'
+          + '\n\n'
+          + 'Kirkko vihittiin virallisesti 1878. Amazonasin hiippakunta '
+          + 'perustettiin vasta 1892, ja kirkko korotettiin '
+          + 'katedraaliksi 1946 — se oli siis emäkirkko lähes '
+          + 'seitsemänkymmentä vuotta ennen kuin sai katedraalin '
+          + 'arvon.',
+      kuvat: [
+        {
+          tiedosto: 'Igreja da Matriz - Manaus - AM - panoramio.jpg',
+          selite: 'Valkoinen julkisivu ja kaksi kellotornia '
+            + 'sipulikupoleineen kohoavat aukion laidalla.',
+          lahde: 'Paulo JC Nogueira, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

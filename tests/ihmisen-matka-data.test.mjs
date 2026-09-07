@@ -14,7 +14,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  IHMISEN_MATKA, IHMISEN_MATKA_KUVAJUURI,
+  IHMISEN_MATKA, IHMISEN_MATKA_KUVAJUURI, IHMISEN_MATKA_ESINEJUURI,
   IHMISEN_MATKA_ESITTELY, IHMISEN_MATKA_ALOITUS, IHMISEN_MATKA_LOPPU,
 } from '../js/linssit/ihmisen-matka-data.js';
 
@@ -53,6 +53,46 @@ const KUVATEKSTIT = {
   lapita: 'Lapita, Tonga ja Samoa, noin 3 000 vuotta sitten',
   aotearoa: 'Aotearoa, noin 1250–1300 jaa.',
 };
+
+/*
+ * Kuvaputken löytökuvatoimitus 7.9.2026 (posti/kuvatoimitus-valmiit-35).
+ * Nämä ovat toimituksen `caption`-kentät sanasta sanaan, ja ne ovat se
+ * teksti, jonka pelaaja näkee Tiedeliitteen löytökuvan alla. Ne kertovat
+ * mitä KUVASSA on, eivät mitä pysäkistä muuten tiedetään: kuva ja teksti
+ * eivät saa sanoa eri asiaa. Siksi niitä ei "siistitä" täällä eikä
+ * datassa — muutos tulee kuvaputkelta uuden erän mukana.
+ */
+const ESINETEKSTIT = {
+  'jebel-irhoud': 'Kallon kasvo-osa, Jebel Irhoud',
+  'omo-kibish': 'Kallon fragmentit, Omo Kibish',
+  'pinnacle-point': 'Simpukankuoret ja kivityökalut, Pinnacle Point',
+  'skhul-qafzeh': 'Sarvi ja okra, Qafzeh',
+  'al-wusta': 'AW-1-välinivel, Al Wusta',
+  blombos: 'Kaiverrettu okra ja simpukkahelmet, Blombos',
+  'lida-ajer': 'Hampaat, Lida Ajer',
+  madjedbebe: 'Hiottu kivikirves ja okra, Madjedbebe',
+  denisova: 'Denisova 3:n kaksi sormiluufragmenttia ja erillinen vihreä rannerengas, '
+    + 'Denisovan luola',
+  'bacho-kiro': 'Karhunhammasriipukset, Bacho Kiro',
+  'lake-mungo': 'Tuhka, okra ja simpukat, Lake Mungo',
+  tianyuan: 'Reisiluu, Tianyuan',
+  niah: 'Deep Skullin säilyneet kallon osat, Niah',
+  chauvet: 'Todellinen Panel of the Horses ympäröivine eläinhahmoineen, Chauvet',
+  yana: 'Luusta ja norsunluusta tehdyt työkalut, Yana',
+  'white-sands': 'Fossiloitunut jalanjälki, White Sands',
+  beringia: 'Norsunluuaihio ja kivikärki, Beringia',
+  'monte-verde': 'Puuesine ja solmittu kuitunaru, Monte Verde',
+  lapita: 'Hammastettu ruukunpala, Lapita',
+  aotearoa: 'Moa-luu ja luinen kalakoukku, Aotearoa',
+};
+
+/*
+ * Löytökuvan lähderivi. Kaksi asiaa samassa rivissä, ja kumpaakin
+ * vartioidaan: alkuosa on talon sanamuoto, jonka js/havainnekuva.js
+ * (HAVAINNEKUVA_RE) muuttaa napautettavaksi selitteeksi, ja loppu sanoo
+ * pelaajalle suoraan, ettei kuva ole museovalokuva.
+ */
+const ESINEEN_LAHDE = 'Matkakirjan havainnekuva: lähdeperustainen kuvitus, ei museovalokuva.';
 
 test('kaaressa on kaksikymmentä pysäkkiä, tunnukset Fablen listasta', () => {
   assert.equal(IHMISEN_MATKA.length, 20);
@@ -141,14 +181,24 @@ test('jokaisella pysäkillä on kaikki kentät ja lähde', () => {
 test('kuvakentät osoittavat kuvajuureen ja kantavat kuvaputken tekstit', () => {
   for (const p of IHMISEN_MATKA) {
     assert.equal(p.kuva.osoite, `${IHMISEN_MATKA_KUVAJUURI}/${p.tunnus}.jpg`);
-    assert.equal(p.esine.osoite, `${IHMISEN_MATKA_KUVAJUURI}/esine/${p.tunnus}.jpg`);
+    // Löytökuvat ovat kuvaputken omassa erähakemistossa, eivät kuvajuuressa.
+    assert.equal(p.esine.osoite,
+      `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-${p.tunnus}-r20260907.jpg`,
+      `${p.tunnus}: löytökuvan osoite ei osoita 7.9.2026 toimitettuun erään`);
     assert.equal(p.kuva.lahde, 'Matkakirjan havainnekuva');
-    assert.equal(p.esine.lahde, 'Matkakirjan havainnekuva');
+    assert.equal(p.esine.lahde, ESINEEN_LAHDE, `${p.tunnus}: löytökuvan lähderivi muuttunut`);
     // Havainnekuvan selite on pysäkin selite — yksi teksti, ei kaksi.
     assert.equal(p.kuva.selite, p.selite, `${p.tunnus}: kuvan selite on erkaantunut`);
-    // Kuvaputken kuvarivi sanasta sanaan.
+    // Kuvaputken kuvarivit sanasta sanaan, kummallakin kuvalajilla.
     assert.equal(p.kuva.kuvateksti, KUVATEKSTIT[p.tunnus], `${p.tunnus}: kuvateksti muuttunut`);
-    assert.ok(p.esine.selite.trim().length > 0, `${p.tunnus}: esineen selite puuttuu`);
+    assert.equal(p.esine.selite, ESINETEKSTIT[p.tunnus],
+      `${p.tunnus}: löytökuvan kuvateksti ei ole kuvaputken caption sanasta sanaan`);
+    // Kuvituksen viitteet: toimituksen sources, vähintään yksi ja aina https.
+    assert.ok(Array.isArray(p.esine.viitteet) && p.esine.viitteet.length > 0,
+      `${p.tunnus}: löytökuvalta puuttuvat viitteet`);
+    for (const url of p.esine.viitteet) {
+      assert.ok(/^https:\/\/\S+$/.test(url), `${p.tunnus}: viite "${url}" ei ole https-osoite`);
+    }
     // Commons-kuva on joko tarkistettu tiedosto tai rehellisesti null.
     assert.ok(p.esineAito === null || typeof p.esineAito.tiedosto === 'string',
       `${p.tunnus}: esineAito on jotain muuta kuin null tai { tiedosto, selite }`);

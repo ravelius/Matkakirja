@@ -105,6 +105,19 @@ export function luennanRunko(t) {
    * luentaa uudelleen: paalun runko on aina vuosi ja otsikko.
    */
   if (!t?.paalu) {
+    /*
+     * PYSÄKIN TUNNUS ENNEN KUVAA (7.9.2026). Runko luettiin ennen vain
+     * kortin kuvan tiedostonimestä, ja niin kauan kuin Ihmisen matkan
+     * löytökuva oli `esine/<tunnus>.jpg`, se osui tunnukseen. Kuvaputken
+     * toimitus 7.9.2026 vei löytökuvat omaan erähakemistoonsa nimillä
+     * `ihmisen-matka-esine-<tunnus>-r20260907.jpg`, jolloin luennan nimi
+     * olisi vaihtunut kuvan mukana ja ämpärissä jo olevat kaksikymmentä
+     * mp3:a olisivat jääneet soimatta — kuvan vaihtuminen ei saa nimetä
+     * ääntä uudelleen. Tunnus on pysäkin pysyvä nimi, joten se on
+     * ensisijainen; keksintökaaren pysäkeillä tunnusta ei ole, joten
+     * niiden rungot tulevat yhä kuvasta eivätkä muutu.
+     */
+    if (typeof t?.tunnus === 'string' && t.tunnus) return t.tunnus;
     const osoite = t?.kuva?.osoite;
     if (typeof osoite === 'string' && osoite) {
       const nimi = osoite.split(/[?#]/)[0].split('/').pop() ?? '';

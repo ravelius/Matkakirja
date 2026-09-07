@@ -12485,6 +12485,480 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kaupungintalo', lat: -34.9261, lon: 138.60018333 },
     ],
   },
+  /*
+   * HAVANNA (7.9.2026). Rajaus on 2,3 × 1,8 kilometriä vanhan
+   * kaupunginmuurin alalta Pradon reunaan — perustelu ja itäreunan
+   * valinta ovat tools/piirra-kaupunkikartta.mjs:n havanna-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin kaksi siirtoa, Uuden maailman avain, kaupunginmuurin
+   * purkaminen ja Havanna–Bejucal-rata; historiasivu kertoo de Soresin
+   * hyökkäyksestä ja Real Fuerzasta, 1700-luvun väkiluvusta, vuoden
+   * 1762 brittivalloituksesta ja USS Mainen tuhosta; linnoitussivu
+   * vaakunasta, Morrosta, La Cabañasta ja maailmanperinnöstä; opas
+   * amerikanautoista, Malecónista, sonista ja ilmastosta. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Castillo de
+   * la Real Fuerza (23,1414 / -82,3487), Morro, La Cabaña ja Punta
+   * mahtuisivat kolmea jälkimmäistä lukuun ottamatta ruutuun, mutta ne
+   * ovat lehden linnoitussivun neljän noston aihe. Malecón jätettiin
+   * pois samasta syystä: se on matkaoppaan jakson 2 aihe.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Gran Teatro on
+   * 181 metriä Capitoliosta ja Museo Nacional de Bellas Artes 147
+   * metriä Bacardí-talosta. Kummastakin parista valittiin se, jonka
+   * juttu kertoo enemmän kaupungin omasta historiasta.
+   *
+   * EL TEMPLETE EI OLE OMA KOHTEENSA VAAN OSA PLAZA DE ARMASIA. Se on
+   * 140 metriä kuvernöörin palatsista eli säännön alle, ja se on
+   * kirjoitettu Plaza de Armasin juttuun.
+   */
+  havanna: {
+    polku: 'assets/kartat/havanna-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 23.1450, etela: 23.1290, lansi: -82.3645, ita: -82.3430 },
+    esittely: 'Kartan alue on se, jonka sisällä Havanna eli kolmesataa '
+      + 'vuotta muurien takana: oikeassa reunassa on satamalahti, '
+      + 'keskellä vanhankaupungin ahdas ruudukko neljine aukioineen ja '
+      + 'vasemmalla se leveä kaari, jonka muurien purkaminen jätti '
+      + 'jälkeensä — Prado ja Capitolion aukio. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Halifaxissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 201 metriä
+       * (San Franciscon basilika – Plaza Vieja), toiseksi pienin 249
+       * metriä (El Capitolio – Intiaanittaren lähde).
+       */
+      { nimi: 'Katedraaliaukio', lat: 23.140892, lon: -82.351628 },
+      { nimi: 'Plaza de Armas', lat: 23.14, lon: -82.349167 },
+      { nimi: 'Bacardí-talo', lat: 23.1389, lon: -82.3571 },
+      { nimi: 'San Franciscon basilika', lat: 23.136944, lon: -82.348333 },
+      { nimi: 'Plaza Vieja', lat: 23.136078, lon: -82.350061 },
+      { nimi: 'El Capitolio', lat: 23.135278, lon: -82.359444 },
+      { nimi: 'Intiaanittaren lähde', lat: 23.133272, lon: -82.358361 },
+      { nimi: 'Pyhän Hengen kirkko', lat: 23.1325, lon: -82.3504 },
+    ],
+  },
+  /*
+   * MEXICO CITY (7.9.2026). Rajaus on 2,2 × 2,2 kilometriä eli lähes
+   * neliö historiallisen keskustan pohjoispuoliskosta — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n mexico-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kotka ja
+   * kaktus, vuoden 1521 piiritys, vajoava kaupunki ja Zócalon nimi;
+   * historiasivu kertoo palatsien kaupungista, Chapultepecin linnasta,
+   * Reforman bulevardista ja Alameda Centralista; atsteekkisivu Templo
+   * Mayorista, nahuatlista, chinampoista ja nykyisestä perinnöstä.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS, ja kaikki
+   * viisi ovat ruudun sisällä: Zócalo, katedraali, kansallispalatsi,
+   * Templo Mayor ja Alameda Centralin itäpää. Ne näkyvät kartalla
+   * katuverkkona ja puistona mutta ilman numeroa, koska niiden tarina
+   * on jo lehdessä.
+   *
+   * PALACIO DE BELLAS ARTES ON KUUDES POISJÄTETTY. Sitä ei jätetty
+   * etäisyyden takia vaan siksi, että lehden vajoamisnostossa
+   * marmoripalatsi on nimenomaisena esimerkkinä; kartan piste kertoisi
+   * saman rakennuksen uudelleen.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Casa de los
+   * Azulejos on 86 metriä San Franciscon luostarikirkosta,
+   * Iturbiden palatsi 144 metriä samasta, ja Museo Nacional de Arte
+   * 127 metriä Palacio de Correosista.
+   */
+  mexico: {
+    polku: 'assets/kartat/mexico-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 19.445, etela: 19.425, lansi: -99.1475, ita: -99.1265 },
+    esittely: 'Kartta näyttää sen ruutukaavan, jonka espanjalaiset '
+      + 'piirsivät Tenochtitlanin raunioiden päälle: kadut kohtaavat '
+      + 'suorassa kulmassa, ja korttelit ovat lähes samankokoisia. '
+      + 'Oikeassa alakulmassa on Zócalon aukea, keskellä kulkee Madero '
+      + 'ja vasemmassa reunassa alkaa Alameda Centralin puisto. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 250 metriä (Palacio de Correos – San Franciscon
+       * luostarikirkko), toiseksi pienin 310 metriä (San Ildefonso –
+       * Kansojen museo).
+       */
+      { nimi: 'Plaza Garibaldi', lat: 19.441, lon: -99.139 },
+      { nimi: 'Santo Domingon aukio', lat: 19.438378, lon: -99.133717 },
+      { nimi: 'Kaupunginteatteri', lat: 19.436561, lon: -99.137267 },
+      { nimi: 'San Ildefonson kollegio', lat: 19.43605, lon: -99.130658 },
+      { nimi: 'Postipalatsi', lat: 19.435686, lon: -99.1404 },
+      { nimi: 'San Franciscon luostarikirkko', lat: 19.43345, lon: -99.140197 },
+      { nimi: 'Kansojen museo', lat: 19.433269, lon: -99.130464 },
+      { nimi: 'Vizcaínas-koulu', lat: 19.428433, lon: -99.140711 },
+    ],
+  },
+  /*
+   * HOBART (7.9.2026). Rajaus on 1,8 × 1,8 kilometriä eli pelin
+   * tiiviimpiä: Hobartin vanha ruutukaava mahtuu kokonaan Campbell
+   * Streetin vankilalta Anglesean kasarmille, ja perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n hobart-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * siirtokunnan siirto Sullivans Coveen, valaanpyynnin satama,
+   * palawa-kansan jatkuvuus ja Kellyn portaat; historiasivu kertoo
+   * Mustasta linjasta, Theatre Royalista, Cascaden panimosta ja Port
+   * Arthurista, luontosivu kunanyista, valaista, Etelämanner-portista
+   * ja Hobart Rivuletin vesinokkaeläimistä, nykytaidesivu MONAsta,
+   * Dark Mofosta, Salamanca Arts Centrestä ja Sidney Nolanin
+   * Käärmeestä. Yksikään kartan kahdeksasta kohteesta ei ole niiden
+   * aihe.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ. Macquarie- ja
+   * Argyle-katujen kulmassa seisoo viisi kohdetta sadan metrin
+   * säteellä: kaupungintalo on 105 metriä Tasmanian museosta,
+   * merimuseo 84 metriä kaupungintalosta, Ingle Hall 53 metriä ja
+   * vanhan kuvernöörintalon paikka 56 metriä samasta. Kartalle jäi
+   * museo, koska sen tarina alkaa 1846 ja kantaa mukanaan sekä vuoden
+   * 1810 muonavaraston että vuoden 1902 tullitalon.
+   *
+   * PARLAMENTTITALON KOORDINAATIT LUETTIIN ARTIKKELISTA "Parliament of
+   * Tasmania", koska rakennuksen omassa artikkelissa "Parliament
+   * House, Hobart" ei ole coordinates-lohkoa (haku 7.9.2026). Sama
+   * talo, sama piste; juttu on kirjoitettu rakennuksen artikkelista.
+   *
+   * KAKSI KATEDRAALIA ON TARKOITUKSELLINEN PARI eikä toistoa: St Mary
+   * on katolinen ja purettiin kerran kokonaan rakennusvirheiden takia,
+   * St David on anglikaaninen ja rakentui 1868–1936. Molemmat ovat
+   * Henry Hunterin ja George Frederick Bodleyn kaupunkia, ja
+   * jälkimmäinen antaa kartan länsireunalle ainoan kohteen.
+   */
+  hobart: {
+    polku: 'assets/kartat/hobart-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -42.8750, etela: -42.8910, lansi: 147.3165, ita: 147.3385 },
+    esittely: 'Kartta näyttää Hobartin vanhan ruutukaavan sellaisena '
+      + 'kuin se piirrettiin rinteeseen: kadut laskevat lännen mäiltä '
+      + 'itään satamaan, ja oikeassa reunassa avautuu Sullivans Coven '
+      + 'poukama. Yläreunassa on Queens Domainin nurmi, alareunassa '
+      + 'Battery Pointin niemi. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Christchurchissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 245 metriä
+       * (St Davidin katedraali – parlamenttitalo), toiseksi pienin
+       * 259 metriä (Campbell Streetin vankila – synagoga).
+       */
+      { nimi: 'Campbell Streetin vankila', lat: -42.8774, lon: 147.3270 },
+      { nimi: 'Sotamuistomerkki', lat: -42.8775, lon: 147.33611111 },
+      { nimi: 'Hobartin synagoga', lat: -42.879628, lon: 147.327939 },
+      { nimi: 'St Maryn katedraali', lat: -42.88111, lon: 147.31926 },
+      { nimi: 'Tasmanian museo', lat: -42.8819, lon: 147.3319 },
+      { nimi: 'St Davidin katedraali', lat: -42.8835, lon: 147.3285 },
+      { nimi: 'Parlamenttitalo', lat: -42.88527778, lon: 147.33027778 },
+      { nimi: 'Anglesean kasarmi', lat: -42.888745, lon: 147.325496 },
+    ],
+  },
+  /*
+   * DARWIN (7.9.2026). Rajaus on 1,6 × 1,6 kilometriä ja kattaa koko
+   * sen törmän, jolle keskusta mahtuu — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n darwin-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Palmerstonin nimenvaihto, yleislennätin, larrakia-kansa, neljä
+   * jälleenrakennusta, Mindil Beachin markkinat, vuoden 1918 kapina,
+   * vuoden 1942 pommitus, hirmumyrsky Tracy, Pine Creekin rata,
+   * Government House, sademäärä, suolavesikrokotiilit, kasvitieteel-
+   * linen puutarha, Charles Darwinin kansallispuisto, Fannie Bayn
+   * vankila, MAGNT, katutaidefestivaali ja Christ Church -katedraali.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * FORT HILL JÄTETTIIN POIS, vaikka se olisi ruudun paras itäkohde:
+   * lehden nosto K4 kantaa jo kuvan "Fort Hill 1870.jpg" ja
+   * wiki-otsikon "Fort Hill (Darwin)", eli kartta toistaisi lehden
+   * oman linkin. Samasta syystä pois jäivät vanhan kaupungintalon
+   * rauniot (lehden nosto K4:n kuva) ja Government House (nosto H4).
+   *
+   * BROWN'S MART PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: se on 182 metriä
+   * Star-teatterista, ja parista jäi teatteri, koska sen tarina
+   * (Jeddan ensi-ilta 1955 ja parven jako) ei ole missään muualla
+   * pelissä. Supreme Court on 167 metriä Brown's Martista ja 126
+   * metriä parlamenttitalosta, joten State Squarelta mahtui kartalle
+   * vain yksi talo. Esplanadin kolmikosta (Lyons Cottage, Lameroon
+   * ranta, Hotel Darwin) mahtui kaksi: Lyons Cottage on 144 metriä
+   * rannasta ja 194 metriä Hotel Darwinista.
+   *
+   * PARLAMENTTITALO ON LEHDESSÄ VAIN KUVANA (matkailijan sivun
+   * kuvituskuva), ei jutun aiheena, joten se saa olla kartalla —
+   * Wellingtonin sääntö: sama kohde saa esiintyä molemmissa, sama
+   * tiedosto ei.
+   */
+  darwin: {
+    polku: 'assets/kartat/darwin-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -12.4565, etela: -12.4705, lansi: 130.8337, ita: 130.8480 },
+    esittely: 'Kartta kattaa Darwinin niemen kärjen: vasemmalla ja '
+      + 'ylhäällä on avomeri, oikealla Darwin Harbour ja niiden '
+      + 'välissä kapea törmä, jolle koko keskusta mahtuu. Vasenta '
+      + 'reunaa kulkee Esplanadin puistokaista, keskellä on Smith '
+      + 'Streetin ruutukaava ja alhaalla State Squaren hallintokortteli. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 216 metriä (Hotel Darwin – parlamenttitalo),
+       * toiseksi pienin 237 metriä (Meren tähden katedraali –
+       * Bicentennial-puisto).
+       */
+      { nimi: 'Meren tähden katedraali', lat: -12.45913, lon: 130.838199 },
+      { nimi: 'Bicentennial-puisto', lat: -12.460945, lon: 130.837061 },
+      { nimi: 'Vic-hotelli', lat: -12.46199444, lon: 130.84261944 },
+      { nimi: 'Star-teatteri', lat: -12.46409, lon: 130.84306 },
+      { nimi: 'Lameroon ranta', lat: -12.4652, lon: 130.8386 },
+      { nimi: 'Hotel Darwin', lat: -12.465814, lon: 130.840987 },
+      { nimi: 'Parlamenttitalo', lat: -12.46666667, lon: 130.84277778 },
+      { nimi: 'Mutamaja', lat: -12.46776, lon: 130.844704 },
+    ],
+  },
+  /*
+   * LIMA (7.9.2026). Rajaus on 1,9 × 1,8 kilometriä eli pelin
+   * tiiviimpiä — Christchurchia pienempi. Perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n lima-lohkossa: Pizarron 1535
+   * mittaama ruutukaava mahtui muurien sisään, ja kaikki kahdeksan
+   * kohdetta ovat yhä sen sisällä.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin perustaminen ja Plaza Mayor, kaupunginmuurin
+   * purkaminen, sateeton ilmasto ja Huaca Pucllana; historiasivu
+   * kertoo Ichman laaksosta, vuoden 1746 järistyksestä, guanosta ja
+   * Andien radasta, ruokasivu gastronomiasta, cevichestä, Barrio
+   * Chinon chifasta ja Misturasta. Matkaopas käsittelee lentokentän,
+   * alueen rakenteen, Mirafloresin kallionreunan ja Callaon 1866.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME FAKTAPOHJAN EHDOTUSTA JÄTETTIIN POIS. Plaza Mayor,
+   * hallituksen palatsi ja Desamparadosin rautatieasema ovat kaikki
+   * ruudun sisällä (faktapohja-lima.md, osio 4 antaa niille
+   * koordinaatit). Kaksi ensimmäistä ovat lehden noston K1 aihe;
+   * kolmas jätettiin pois, koska Andien rata on noston H4 aihe eikä
+   * lukija erottaisi asemaa radasta.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Santo Domingon
+   * luostari on 77 metriä Casa de Osambelasta ja Teatro Segura 152
+   * metriä San Agustínin kirkosta. Molemmat mainitaan matkaoppaassa.
+   */
+  lima: {
+    polku: 'assets/kartat/lima-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -12.0400, etela: -12.0570, lansi: -77.0400, ita: -77.0235 },
+    esittely: 'Kartta näyttää Liman vanhankaupungin ruutukaavan '
+      + 'kokonaisuudessaan: yläreunassa mutkittelee Rímac-joki, '
+      + 'keskellä kadut leikkaavat toisensa suorassa kulmassa niin '
+      + 'kuin ne mitattiin 1535, ja alaoikealla kaartaa leveä '
+      + 'valtaväylä, joka kulkee vanhan kaupunginmuurin linjaa. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Wellingtonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 309 metriä
+       * (San Franciscon luostari – Inkvisition museo), toiseksi
+       * pienin 327 metriä (Santa Rosan pyhäkkö – Casa de Osambela).
+       */
+      { nimi: 'Santa Rosan pyhäkkö', lat: -12.0426, lon: -77.0353 },
+      { nimi: 'Casa de Osambela', lat: -12.0439, lon: -77.0326 },
+      { nimi: 'San Franciscon luostari', lat: -12.04549722, lon: -77.02739444 },
+      { nimi: 'Las Nazarenasin pyhäkkö', lat: -12.04556389, lon: -77.03736694 },
+      { nimi: 'Inkvisition museo', lat: -12.04808, lon: -77.02634 },
+      { nimi: 'Torre Taglen palatsi', lat: -12.04884, lon: -77.02931 },
+      { nimi: 'Plaza San Martín', lat: -12.0515, lon: -77.0345 },
+      { nimi: 'Casona de San Marcos', lat: -12.0545, lon: -77.0322 },
+    ],
+  },
+  /*
+   * QUITO (7.9.2026). Rajaus on 2,4 kilometriä korkea ja 2,1 leveä,
+   * ja pystysuuntainen venytys on tahallinen: Quiton vanhakaupunki on
+   * pitkä pohjois–eteläsuuntainen nauha kahden rinteen välissä.
+   * Perustelu on tools/piirra-kaupunkikartta.mjs:n quito-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat inkojen
+   * ja espanjalaisten Quito, korkeus ja päiväntasaaja, vanhankaupungin
+   * maailmanperintöasema ja Pichinchan tulivuori; historiasivu kertoo
+   * San Franciscosta, La Compañíasta, Pichinchan taistelusta ja
+   * observatoriosta, tiedesivu astemittausretkestä, heilurikokeesta,
+   * Cotopaxista ja observatorion perinnöstä. Yksikään kartan
+   * kohteista ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. San
+   * Franciscon luostari, La Compañían kirkko, Quiton observatorio ja
+   * Mitad del Mundo ovat kaikki faktapohja-quito.md:n osion 4
+   * ehdotuksia, ja kolme ensimmäistä mahtuisi tähän ruutuun — mutta
+   * ne ovat lehden omien nostojen aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Sucren
+   * talomuseo on 111 metriä El Sagrariosta, Alberto Mena Caamañon
+   * museo 99 metriä samasta kirkosta ja Teatro Bolívar 164 metriä San
+   * Agustínista.
+   */
+  quito: {
+    polku: 'assets/kartat/quito-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -0.2120, etela: -0.2340, lansi: -78.5230, ita: -78.5045 },
+    esittely: 'Kartan yläosassa on Quiton vanhankaupungin tiheä '
+      + 'ruutukaava, joka kallistuu vinoon laakson suunnan mukana. '
+      + 'Alavasemmalla kohoaa Panecillon kukkula omine '
+      + 'korkeuskäyrineen, oikeassa reunassa laskee Machángara-joen '
+      + 'uoma, ja niiden välissä kaupunki loppuu rinteeseen. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 220 metriä (Casa del Alabado – Kaupunkimuseo),
+       * toiseksi pienin 262 metriä (San Agustínin luostari – El
+       * Sagrarion kirkko).
+       */
+      { nimi: 'Voto Nacionalin basilika', lat: -0.2150, lon: -78.5074 },
+      { nimi: 'La Mercedin basilika', lat: -0.2182, lon: -78.5137 },
+      { nimi: 'San Agustínin luostari', lat: -0.22033325, lon: -78.51047644 },
+      { nimi: 'El Sagrarion kirkko', lat: -0.2207, lon: -78.5128 },
+      { nimi: 'Casa del Alabado', lat: -0.221258, lon: -78.515822 },
+      { nimi: 'Kaupunkimuseo', lat: -0.22305556, lon: -78.515 },
+      { nimi: 'El Panecillo', lat: -0.22861111, lon: -78.51861111 },
+      { nimi: 'Vuoden 1909 näyttelypalatsi', lat: -0.2310, lon: -78.5123 },
+    ],
+  },
+  /*
+   * PORT MORESBY (7.9.2026). Rajaus on 7,5 × 7,4 kilometriä eli
+   * paketin väljimpiä — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * portmoresby-lohkossa: kaupunki jakautuu kolmeen osaan, jotka ovat
+   * kuuden ja seitsemän kilometrin päässä toisistaan, ja vanhassa
+   * keskustassa on en-Wikipedian koordinaattirajapinnassa vain yksi
+   * kelvollinen kohde.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat sataman
+   * nimi 1873, motut ja koitat, Hanuabada ja pääkaupungiksi tulo;
+   * matkaopas kertoo Jacksonsin lentoasemasta, kaupungin kolmesta
+   * osasta, Kokin torista ja sadevarjosta; historiasivu Basiliskista,
+   * lähetysseuran neljästä opettajasta, tulematta jääneestä
+   * kultaryntäyksestä ja kahdesti nostetusta lipusta; hirisivu
+   * lakatoi-purjehduksista; taidesivu kansallismuseosta ja
+   * palautetuista esineistä. Yksikään kartan kahdeksasta kohteesta ei
+   * ole niiden aihe.
+   *
+   * KANSALLISMUSEO JÄTETTIIN TARKOITUKSELLA POIS, vaikka se on
+   * kolmensadan metrin päässä parlamenttitalosta ja mahtuisi ruutuun
+   * vaivatta: sille on lehden taidesivulla neljä nostoa. Samasta
+   * syystä kartalla ei ole Kokin toria eikä Hanuabadaa.
+   *
+   * PARLAMENTTITALO JA KANSALLISKIRJASTO OVAT KARTALLA, vaikka
+   * matkaoppaan jakso "Alueen rakenne" mainitsee ne nimeltä. Maininta
+   * on luettelo siitä, mitä Waiganissa on ("siellä ovat parlamentti,
+   * kansallismuseo ja kansalliskirjasto"); kummankaan tarinaa lehti ei
+   * kerro, ja New Yorkin sääntö koskee lehden juttujen aiheita, ei
+   * jokaista siinä esiintyvää nimeä. Museon kohdalla raja ylittyisi,
+   * ja siksi museo jäi pois.
+   *
+   * BISININ URHEILUPUISTO ON KARTALLA VAIN KERRAN. Puiston neljästä
+   * kentästä PMRL Stadium ja PNG Football Stadium ovat 93 metrin
+   * päässä toisistaan eli 200 metrin säännön alla; kartalle valittiin
+   * Amini Park, koska se on krikettiliiton kotikenttä ja ainoa, jonka
+   * tarina ei ole toisen kentän tarina.
+   */
+  portmoresby: {
+    polku: 'assets/kartat/portmoresby-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -9.4235, etela: -9.4905, lansi: 147.1429, ita: 147.2109 },
+    esittely: 'Kartan alue kattaa kaupungin kaikki kolme osaa. '
+      + 'Vasemmassa alanurkassa on Townin niemi, vanha keskusta, jonka '
+      + 'toisella puolella on Fairfax Harbourin satamavesi ja toisella '
+      + 'Papuanlahti; keskellä ovat kuivat kukkulat, joiden yli päätiet '
+      + 'kaartavat; oikealla on Boroko ja oikeassa ylänurkassa Waigani, '
+      + 'itsenäistymisen jälkeen rakennettu hallintokaupunki. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Wellingtonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta ja geosearchista 7.9.2026. Pienin
+       * väli on 472 metriä (parlamenttitalo – kansalliskirjasto),
+       * toiseksi pienin 762 metriä (St Josephin koulu – Amini Park).
+       */
+      { nimi: 'Parlamenttitalo', lat: -9.42805556, lon: 147.19166667 },
+      { nimi: 'Kansalliskirjasto', lat: -9.43222, lon: 147.19083 },
+      { nimi: 'Sir John Guisen stadion', lat: -9.44089, lon: 147.18535 },
+      { nimi: 'Hoholan moskeija', lat: -9.4585, lon: 147.17725 },
+      { nimi: 'Sir Hubert Murrayn stadion', lat: -9.46632, lon: 147.15667 },
+      { nimi: 'St Josephin koulu', lat: -9.46694, lon: 147.20417 },
+      { nimi: 'Amini Park', lat: -9.47333333, lon: 147.20166667 },
+      { nimi: 'Pyhän Marian katedraali', lat: -9.48081, lon: 147.14963 },
+    ],
+  },
+  /*
+   * MANAUS (7.9.2026). Rajaus on 7,5 × 7,4 kilometriä — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n manaus-lohkossa: vanha keskusta
+   * on tiivis, mutta kaksi kohdetta on viisi ja puoli kilometriä
+   * pohjoisessa ja yksi viisi kilometriä idässä, eikä keskustasta saa
+   * kahdeksaa kohdetta sen jälkeen kun lehden omat aiheet on karsittu.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kaupungin
+   * kolme nimeä, vetten kohtaaminen, kaupunki ennen kumibuumia ja
+   * vapaakauppa-alue; matkaopas kertoo jokiliikenteestä, Mindú-puistosta,
+   * armeijan eläintarhasta, Palácio Rio Negrosta ja Ponta Negrasta;
+   * kumibuumisivu oopperatalosta, sähköstä, tullitalosta ja Wickhamin
+   * siemenistä; alkuperäiskansasivu alueen kansoista, Ajuricabasta,
+   * barésta ja kabanaosta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   *
+   * OOPPERATALO JA TULLITALO OVAT RUUDUN SISÄLLÄ MUTTA EIVÄT KARTALLA.
+   * Teatro Amazonas olisi kartan keskeisin kohde, ja se on lehden
+   * kumibuumisivun ensimmäinen nosto; tullitalo on saman sivun kolmas
+   * ja Palácio Rio Negro matkaoppaan neljäs jakso. New Yorkin sääntö
+   * pitää ne kaikki pois kartalta.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Amadeu Teixeiran halli
+   * on 245 metriä Amazonas-areenasta eli sääntöjen mukaan kelpaisi,
+   * mutta kaksi urheilupaikkaa vierekkäin olisi kartalla sama piste
+   * kahdesti. Rakentamaton yksiraiteinen rata (-3,1260 / -60,0207) on
+   * en-Wikipedian koordinaattirajapinnassa, ja sen tarina olisi ollut
+   * kartan kiinnostavin — mutta kohde on suunnitellun linjan piste
+   * eikä paikka, ja numeroympyrä olisi seissyt tyhjän kadun päällä.
+   * Manausin Brasilia-temppeli ja Rio Negron silta ovat kahdeksan ja
+   * kuuden kilometrin päässä lännessä ruudun ulkopuolella.
+   */
+  manaus: {
+    polku: 'assets/kartat/manaus-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -3.078, etela: -3.145, lansi: -60.0473, ita: -59.9802 },
+    esittely: 'Kartta ulottuu Rio Negron rannasta pohjoiseen. '
+      + 'Vasemmassa alanurkassa on joki ja siitä kaupunkiin työntyvä '
+      + 'kapea lahti; sen yläpuolella on vanhan keskustan tiivis '
+      + 'ruutukaava, ja siitä nousee suoraan ylös se valtaväylä, jonka '
+      + 'varrelle kaupunki kasvoi 1900-luvulla. Oikealle levittäytyvät '
+      + 'uudemmat kaupunginosat, ja ylhäällä on Floresin urheilu- ja '
+      + 'hallintokortteli. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * geosearchista 7.9.2026. Pienin väli on 259 metriä
+       * (osavaltion kirjasto – katedraali), toiseksi pienin 416
+       * metriä (instituutti – katedraali).
+       */
+      { nimi: 'Amazonas-areena', lat: -3.08305556, lon: -60.02805556 },
+      { nimi: 'Osavaltion parlamentti', lat: -3.08361111, lon: -60.02194444 },
+      { nimi: 'Amazonin tutkimuslaitos', lat: -3.09577, lon: -59.98975 },
+      { nimi: 'Colinan stadion', lat: -3.12194444, lon: -60.03777778 },
+      { nimi: 'Beit Yaacovin synagoga', lat: -3.12598, lon: -60.02592 },
+      { nimi: 'Maantieteen ja historian instituutti', lat: -3.13361, lon: -60.02889 },
+      { nimi: 'Osavaltion kirjasto', lat: -3.13433333, lon: -60.02333333 },
+      { nimi: 'Katedraali', lat: -3.1352, lon: -60.0255 },
+    ],
+  },
 };
 
 /*
