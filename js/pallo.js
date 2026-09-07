@@ -106,7 +106,7 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * tarkkuuskatto poistuu. Yksi z4-tekstuuri jää VARAKSI: jos laattojen
  * luetteloa (laatat.json) ei saada, pallo piirtyy kuten ennen.
  */
-export const PALLO_LAATTAVERSIO = '2026-09-03a';
+export const PALLO_LAATTAVERSIO = '2026-09-07a';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -119,7 +119,16 @@ export const PALLO_LAATTAVERSIO = '2026-09-03a';
  * 84° N:ään asti (tools/tee-pallolaatat.mjs --tunniste b). Muuttunut
  * piirto saa aina uuden kansion, koska laatat ovat vuoden välimuistissa.
  */
-export const PALLO_LAATTATUNNISTE = 'c';
+/*
+ * TUNNISTE e, versio 2026-09-07a (7.9.2026 klo 05.46 Suomen aikaa, Macin
+ * uusintapoltto; Raamattu POHJA ILMAN RANTAVIIVAA): pohja poltettu ILMAN
+ * rantaviivaa, koska rantaviiva piirtyy pallolla vektorina
+ * (js/pallovektorit.js) eikä poltettu muste saa jäädä sen alle varjoksi.
+ * Sama versio kuin pyramidilla (viivat 2026-09-07a-viivat, nostot
+ * 2026-09-07a-nostot), joten laattakerroksen versiovahti
+ * (js/pallolaatat.js lepokerroksenKerrokset) päästää kerroksen piirtämään.
+ */
+export const PALLO_LAATTATUNNISTE = 'e';
 export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot-${PALLO_LAATTATUNNISTE}`;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
