@@ -215,10 +215,14 @@
 > artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy kuusi yli
 > 60 merkin kappaletta sekä `og:image`). Osoitteessa **ei ole
 > www-etuliitettä**, ja sama etuliite kattaa sekä tanskan- että
-> grönlanninkielisen osaston. Taulussa on tanskankielinen syöte
-> `https://knr.gl/da/rss`, vaikka grönlanninkielinen `/kl/rss` toimisi
-> yhtä hyvin: MyMemory ei tunne kalaallisutia, joten Käännä-nappi jäisi
-> pysyvästi tyhjäksi. Grönlannin toinen valtakunnallinen lehti
+> grönlanninkielisen osaston. **Päivitys 7.9.2026:** taulussa on nyt
+> grönlanninkielinen syöte `https://knr.gl/kl/rss` (päätoimittajan
+> päätös: paikalliskieli ensin). Se testattiin samalla kaavalla —
+> 25 juttua, artikkelisivulla yhdeksän yli 60 merkin kappaletta ja
+> `og:image` — eikä sallittujen lista muutu, koska etuliite on sama.
+> Hinta on käännös: MyMemory ei tunne kalaallisutia, joten
+> Käännä-nappi jää tyhjäksi ja uutinen näkyy alkukielisenä.
+> Grönlannin toinen valtakunnallinen lehti
 > Sermitsiaq.AG hylättiin, koska sivustolla ei ole RSS-syötettä
 > lainkaan; perustelut ovat js/packs/uutislahteet.js:n GRL-kommentissa.
 > Julkaisu Git-integraatiolla mainista.

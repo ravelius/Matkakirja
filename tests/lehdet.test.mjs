@@ -199,3 +199,49 @@ test('tehtäväkohtainen juliste voittaa kaupungin oletuksen', async () => {
   assert.match(tehtavat, /naytaJuliste\(julisteAvain\)/,
     'lunastus näyttää yhä kaupungin oletusjulisteen');
 });
+
+/*
+ * SÄÄRIVIN LÄHDE (7.9.2026).
+ *
+ * Vuosigraafin alle kirjoitettiin ennen kaikille kaupungeille sama
+ * lause "Open-Meteo (ERA5), 1991–2020". Neljällätoista kaupungilla se
+ * ei pitänyt paikkaansa: niiden rivit
+ * laskettiin 6.9.2026 en-Wikipedian ilmastotaulukoista, koska
+ * Open-Meteon vuorokausikiintiö oli täynnä, eivätkä ne ole kaikki
+ * edes samalta normaalikaudelta (Port Vila 1961–1990, Halifax
+ * 1981–2010). Nyt rivi voi kertoa oman lähteensä lahde-kentässä.
+ *
+ * Testi vartioi kahta asiaa, joita silmä ei diffistä huomaa:
+ * kenttä ei saa olla vajaa, eikä se saa kadota näiltä neljältätoista
+ * riviltä (esimerkiksi kun rivi joskus uusitaan Open-Meteolla —
+ * silloin poistetaan sekä kenttä että kaupunki tästä listasta).
+ */
+test('säärivin lähde on joko Open-Meteo-oletus tai kunnollinen lahde-kenttä', async () => {
+  const { SAATIEDOT } = await import('../js/packs/saatiedot.js');
+  const { vuosiSaaSelite } = await import('../js/saa.js');
+  const WIKI_RIVIT = [
+    'dunedin', 'suva', 'portoalegre', 'asuncion', 'cairns', 'panama',
+    'honiara', 'portvila', 'denver', 'houston', 'miami', 'halifax',
+    'kapkaupunki', 'nairobi',
+  ];
+  for (const [kaupunki, tiedot] of Object.entries(SAATIEDOT)) {
+    const selite = vuosiSaaSelite(tiedot);
+    if (tiedot.lahde === undefined) {
+      assert.match(selite, /Open-Meteo \(ERA5\), 1991–2020$/,
+        `${kaupunki}: ilman lahde-kenttää lähderivin on oltava Open-Meteon oletus`);
+      continue;
+    }
+    assert.ok(typeof tiedot.lahde.nimi === 'string' && tiedot.lahde.nimi.length > 0,
+      `${kaupunki}: lahde.nimi puuttuu`);
+    assert.match(tiedot.lahde.kausi ?? '', /^\d{4}–\d{4}$/,
+      `${kaupunki}: lahde.kausi ei ole muotoa 1991–2020`);
+    assert.ok(selite.endsWith(`${tiedot.lahde.nimi}, ${tiedot.lahde.kausi}`),
+      `${kaupunki}: graafin lähderivi ei kerro rivin omaa lähdettä`);
+    assert.doesNotMatch(selite, /Open-Meteo/,
+      `${kaupunki}: lähderivi väittää yhä Open-Meteota`);
+  }
+  for (const kaupunki of WIKI_RIVIT) {
+    assert.ok(SAATIEDOT[kaupunki]?.lahde?.nimi,
+      `${kaupunki}: en-Wikipedian ilmastotaulukosta laskettu rivi ilman lahde-kenttää`);
+  }
+});

@@ -46,6 +46,22 @@
 // Nepalin demokratialuku sama kuin Dominikaanisen tasavallan, joten
 // näissä kahdessa sija olisi yhtä hyvin yhtä pienempi.
 //
+// Rivi TLS on lisätty 7.9.2026 samalla menetelmällä ja samasta
+// aineistosta (väkiluku 2024, pinta-ala 2023, keskitulo 2024,
+// demokratia 2025). Menetelmä tarkistettiin toistamalla LKA:n, MMR:n,
+// SGP:n, NPL:n, BOL:n, GTM:n, PAN:n, URY:n, FJI:n, SLB:n ja PNG:n
+// valmiit luvut: kaikki 44 sijoitusta osuivat kohdalleen.
+// Demokratiaselityksen faktat ovat en-Wikipedian artikkelista
+// "Politics of Timor-Leste" (luettu 7.9.2026).
+//
+// ITÄ-TIMORIN TERVEHDYS EI TULE WIKTIONARYSTA (päätoimittajan päätös
+// 7.9.2026): en-Wiktionarysta ei löydy tetumin tervehdystä, joten
+// "Bondia" on en-Wikipedian artikkelin "Tetun language" osiosta "Basic
+// phrases", jossa se on käännetty muotoon 'Good morning'. Sama päätös
+// koski Vanuatua, mutta bislaman tervehdystä ei ole en-Wikipedian
+// artikkelissa "Bislama" lainkaan (ei myöskään Wiktionaryssa), joten
+// VUT jäi yhä ilman riviä — ks. tests/maatiedot.test.mjs.
+//
 // Jokainen tervehdyksen lippu on tarkistettu Commonsista: puuttuva
 // tiedostonimi jättäisi kortin puolityhjäksi ilman virhettä.
 //
@@ -832,6 +848,41 @@ export const ASIA_MAATIEDOT = {
       { teksti: 'ສະບາຍດີ', kieli: 'isan (lao)', lippu: 'Flag of Laos.svg', osuus: '25 %' },
       { teksti: 'ជំរាបសួរ', kieli: 'khmer (Kambodžan rajaseutu)', lippu: 'Flag of Cambodia.svg', osuus: '1 %' },
       { teksti: 'Selamat pagi', kieli: 'malaiji (Etelä-Thaimaa)', lippu: 'Flag of Malaysia.svg', osuus: '3 %' },
+    ],
+  },
+  TLS: {
+    vakiluku: '1,4 milj.',
+    vakilukuSija: '150./195',
+    pintaAla: '14 900 km²',
+    pintaAlaSija: '154./195',
+    demokratia: {
+      arvo: '0,55',
+      sija: '53./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~TLS',
+      selitys: 'Itä-Timor on yhtenäisvaltio ja puolipresidentillinen tasavalta, '
+        + 'jossa presidentti on valtionpäämies ja pääministeri hallituksen '
+        + 'päämies. Perustuslaki on kirjoitettu Portugalin mallin mukaan, mutta '
+        + 'presidentille jäi vähemmän valtaa: hänet valitaan suoralla vaalilla '
+        + 'viideksi vuodeksi, ja hän voi panna lain veto-oikeudella jäihin, '
+        + 'mutta parlamentti voi kumota veton. Vaalien jälkeen presidentti '
+        + 'nimittää pääministeriksi tavallisesti suurimman puolueen tai '
+        + 'koalition johtajan. Yksikamarisen kansalliskokouksen jäsenet '
+        + 'valitaan suhteellisella vaalitavalla viideksi vuodeksi: paikkoja on '
+        + '65, ja määrä voi vaihdella 52:n ja 65:n välillä. Maa rakentaa yhä '
+        + 'hallintoaan ja instituutioitaan, ja V-Demin mittauksissa sen vaali- '
+        + 'ja liberaalidemokratialuvut olivat vuonna 2024 Kaakkois-Aasian '
+        + 'korkeimmat.',
+    },
+    keskitulo: {
+      arvo: '1 650 $/v',
+      sija: '154./190',
+    },
+    tervehdykset: [
+      // Tetumin osuus on äidinkielenä: vuoden 2010 väestönlaskennassa
+      // tetum-dili 36,6 % ja tetum-terik 6,0 % (en-Wikipedia "Languages
+      // of Timor-Leste", osio "Languages by speakers"). Lingua francana
+      // tetumia osaa selvästi useampi.
+      { teksti: 'Bondia', kieli: 'tetum', lippu: 'Flag of East Timor.svg', osuus: '43 %' },
     ],
   },
   TWN: {

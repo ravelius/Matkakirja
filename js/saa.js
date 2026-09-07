@@ -116,13 +116,26 @@ function kelpaaKaista(ylin, alin) {
  * avaavat (18.8.2026 lähtien sama kortti molemmissa) — rivi asuu
  * täällä graafin vierellä, koska sanamuoto seuraa kaistan olemassa-
  * oloa eli piirtimen omaa dataa.
+ *
+ * RIVIKOHTAINEN LÄHDE (7.9.2026). Suurin osa normaaleista on laskettu
+ * Open-Meteon ERA5-arkistosta jaksolta 1991–2020, ja se on yhä oletus.
+ * Neljätoista kaupunkia sai rivinsä 6.9.2026 en-Wikipedian
+ * ilmastotaulukoista, koska Open-Meteon vuorokausikiintiö oli täynnä,
+ * eikä niiden kausikaan ole aina 1991–2020 (Port Vila 1961–1990,
+ * Halifax 1981–2010). Sellainen rivi kertoo oman lähteensä
+ * lahde-kentässä { nimi, kausi }, ja tämä lause käyttää sitä. Ilman
+ * kenttää lause on entinen — vanhat rivit eivät siis tarvinneet
+ * mitään.
  */
 export function vuosiSaaSelite(tiedot) {
   const kaista = kelpaaKaista(tiedot?.ylin, tiedot?.alin);
+  const nimi = tiedot?.lahde?.nimi;
+  const kausi = tiedot?.lahde?.kausi;
+  const lahde = nimi ? `${nimi}${kausi ? `, ${kausi}` : ''}` : 'Open-Meteo (ERA5), 1991–2020';
   return kaista
     ? 'Käyrä keskilämpö, kaista tyypillinen vaihteluväli °C · palkit sademäärä mm '
-      + '· Open-Meteo (ERA5), 1991–2020'
-    : 'Käyrä keskilämpö °C · palkit sademäärä mm · Open-Meteo (ERA5), 1991–2020';
+      + `· ${lahde}`
+    : `Käyrä keskilämpö °C · palkit sademäärä mm · ${lahde}`;
 }
 
 /**

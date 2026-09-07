@@ -757,9 +757,15 @@ export const AFRICA_KULTTUURI = {
           + 'alle vapautetut orjat kokoontuivat kiittämään saavuttuaan '
           + 'vapauteen 1792. Puusta tuli koko maan symboli — kaupunki '
           + 'kasvoi kirjaimellisesti sen ympärille.',
+        // Taimiväite poistettu 7.9.2026: en-Wikipedian artikkeli
+        // "Cotton Tree (Sierra Leone)" ei tunne taimia. Se kertoo, että
+        // myrsky kaatoi suuren osan puusta 24.5.2023, että osa rungosta
+        // jäi paikalleen elämään (maaliskuun 2024 raportti) ja että
+        // kaatunut osa vietiin museoon.
         selite: 'Cotton Tree Freetownin keskustassa: satoja vuosia vanha '
           + 'kapokkipuu, jonka juurella kaupungin historia alkoi. Myrsky '
-          + 'kaatoi puun 2023, mutta sen taimia kasvatetaan jatkoksi.',
+          + 'kaatoi siitä suurimman osan 2023, mutta osa rungosta jäi '
+          + 'paikalleen elämään.',
         lahde: 'Christian Trede, Wikimedia Commons (CC BY-SA 2.0)',
       },
       {

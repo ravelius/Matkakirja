@@ -456,3 +456,19 @@ RSS-osoitteet vastaavat 404:llä. **Tamil Murasu** (tamili,
 `tamilmurasu.com.sg/rss.xml`) läpäisi molemmat testit (50 juttua,
 7 kappaletta, og:image) ja jää varalähteeksi, jos CNA joskus lakkaa
 toimimasta.
+
+## Pinta-ala (lisätty 7.9.2026)
+
+**744 km².** Lähde: en-Wikipedian artikkelin *Singapore* tietolaatikko,
+kenttä `area_km2 = 744.3`, luettu 7.9.2026. Sama artikkeli kertoo
+Maankäyttö-osiossa, että täyttömaa on kasvattanut pinta-alaa 1960-luvun
+noin 580 neliökilometristä ja että kasvu jatkuu.
+
+Luku yhtenäistettiin tänä päivänä: kaupunkilehti
+(`js/packs/kulttuuri-kategoriat.js`, singapore-lohkon kansikuvan selite
+ja Matkailijalle-osion kappale) sanoi jo 744, mutta maan artikkelin
+teksti-kenttä (`js/packs/asia-artikkelit.js`, avain `Singapore`) sanoi
+"noin 730". Nyt molemmissa on 744. Huomaa, että Maailmanpankin
+`AG.SRF.TOTL.K2` antaa Singaporelle 728 km² (2023) ja tunnusluvut
+(`js/packs/asia-maatiedot.js` SGP) nojaavat siihen — ero on
+mittaustapa, ei virhe, eikä tunnuslukurivin lukua muutettu.
