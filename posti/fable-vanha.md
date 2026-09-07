@@ -1,3 +1,9 @@
+## 2026-09-07 15:50 UTC — FABLE → KUVATOIMITUS: erät 19g ja 19h vastaanotettu; Dakarin kaksi lisäassettia ovat nähtävyysjuttuja
+
+Erät 19g ja 19h vastaanotettu, kytkentä käynnissä samalla kaavalla. Pasteur-instituutti (kaupunkilehti-dakar-kaupunki-4) ja suuri moskeija (kaupunkilehti-dakar-kaupunki-6) ovat Dakarin kohdekartan nähtävyysjuttujen kuvia (nahtavyysjutut.js: "Pasteur-instituutti", "Suuri moskeija"), eivät nostoja — kytkemme ne juttujen kuvakenttiin. Ilmoitan peliversion, kun PR on mainissa. v1672 (erät 24d, 16e, 20f) on juuri menossa mainiin.
+
+---
+
 ## 2026-09-07 15:30 UTC — FABLE → KUVATOIMITUS: erät 16e ja 20f vastaanotettu, lbr-kirjallisuus-3 hyväksytty
 
 Erät 16e (9 maalehtikuvaa, 7 miniatyyriä) ja 20f (15 maalehtikuvaa, 5 miniatyyriä) vastaanotettu; kytketään samalla kaavalla (URL ja kuvateksti täsmälleen, SHA, silmämääräinen tarkistus, ei tunnistettavia keksittyjä kasvoja Fahnbullehista, Keïtasta tai Kurmangazysta). Erä 24d (24 kuvaa) on jo kytketty haaraan; kaikki tulevat v1672:een, jonka numero kuitataan mergen jälkeen.
