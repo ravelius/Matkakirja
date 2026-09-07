@@ -96180,6 +96180,41 @@ export const KULTTUURI_KATEGORIAT = {
    * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
    * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
    * Climate-osioon ja sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Kumasi Market.jpg" ja "Kumasi Kejetia and its
+   * busiest road. 01.jpg" (kuva-alaa hallitsevat mainostaulut:
+   * Goodyear, itel, ENA PA), "Kumasi900.JPG" ja "Kumasi924.JPG"
+   * (Afrikan cupin laitamainokset), "Ramseyer Memorial Presbyterian
+   * Church 01–03.jpg" (kuvan päällä vesileima "KhoPhi Photography",
+   * ja kirkko on lisäksi Abetifin eikä Kumasin seurakunta),
+   * "Chimpazee at the Kumasi Zoo.jpg" (paljas häkki, ei kohteen
+   * arvoinen), "A busy monday in Kumasi.jpg" (tyhjä mainoskehikko
+   * hallitsee harmaata kuvaa), "KUMASI.jpg" (vinoon rajattu, harmaat
+   * reunapalkit), "Kumasi Adum.jpg" ja "Adum inside.jpg"
+   * (etualan täyttää auto).
+   *
+   * EI AVAUSKUVIA EIKÄ ENNEN JA NYT -PARIA, ja se on valinta.
+   * Kumasista ei ole Commonsissa kuutta sääntöjen mukaista laajaa
+   * yleiskuvaa: kaupunki on matala ja vehreä, eikä siitä ole
+   * siluettikuvaa. Kolme kansikuvaa löytyi, ja loput ehdokkaat
+   * kaatuivat mainoksiin tai autoihin (ks. hylkäykset). Ennen ja nyt
+   * -pariin ei löytynyt paria, joka olisi sama paikka kahtena
+   * aikana: valokuvataulun vanha puoli (africa-valokuvat.js,
+   * "Kumasi 28-03-1900 sx.jpg") on rasteroitu kirjapainokuva vuoden
+   * 1900 kokouksesta eikä paikkakuva, ja sen uusi puoli
+   * ("Modern market hall of Kejetia market.jpg") on täynnä
+   * mainoslakanoita. Lehti taittuu siis ilman paria kuten Lagos ja
+   * Dubai. Kirjattu kuvaputken tilaukseksi.
+   *
+   * MATKAOPPAAN ETUSIVUKUVA PUUTTUU. Kaava vaatii tuoreen ja
+   * MALTILLISEN PYSTYN (w/h 0,60–0,85) kuvan kaupungin omasta
+   * erikoisuudesta. Kumasin parhaat kente-kuvat (Kwameghana,
+   * 6034 × 4012) ovat kaikki vaakoja, ja pystyt ehdokkaat ovat joko
+   * mainostäyteisiä katukuvia tai lähikuvia ihmisistä. Tilattu
+   * kuvaputkelta.
    */
   kumasi: [
     {
@@ -96189,6 +96224,27 @@ export const KULTTUURI_KATEGORIAT = {
         + 'ja Asanten kuninkaat tekivät siitä pääkaupunkinsa. Isoisän '
         + 'matkavuonna 1873 se oli yhä oman valtakuntansa keskus — '
         + 'brittihallinto tuli vasta kaksikymmentä vuotta myöhemmin.',
+      kansikuvat: [
+        {
+          tiedosto: 'Kejetia-Markt.jpg',
+          selite: 'Iltavalossa torikadun päivänvarjot, pikkubussit ja '
+            + 'uuden kauppahallin runko jatkuvat horisonttiin asti.',
+          lahde: 'Afus199620, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'View over Kejetia Market - Largest in West Africa - Kumasi - Ghana - 01 (4755555789).jpg',
+          selite: 'Torin peltikatot peittävät koko näkymän, ja '
+            + 'kaukana kohoavat katedraalin kaksi tornia.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Luftbild Kumasi 2012 B004.jpg',
+          selite: 'Lentokoneen ikkunasta kaupunki näkyy matalana ja '
+            + 'vehreänä, ja punainen tie halkaisee sen kulmasta '
+            + 'kulmaan.',
+          lahde: 'Max Froumentin, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kaksi siementä, yksi kum-puu',
@@ -96506,6 +96562,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jokea mihinkään: vesi tulee sateesta ja lähtee '
             + 'haihtumalla. Nimen kirjoitusasu vaihtelee lähteestä '
             + 'toiseen, Bosumtwi ja Bosomtwe.',
+          tiedosto: 'Lake Bosumtwi, Ghana.jpg',
+          selite: 'Rannalla palmunlehvät kaartuvat veden ylle, ja '
+            + 'takana nousee kraatterin metsäinen reunavuori.',
+          lahde: 'Stig Nygaard from Copenhagen, Denmark, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Lake Bosumtwi',
         },
         {
@@ -96522,6 +96582,13 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja korkealla: kukkuloiden huipuilta on löytynyt '
             + 'kalanfossiileja, ja vielä noin kolmesataa vuotta '
             + 'sitten järvi oli kutistunut lammeksi.',
+          tiedosto: 'An Explosive Beginning for Lake Bosumtwi (154739 - 151229 lrg).jpg',
+          selite: 'Satelliittikuvassa järvi on lähes pyöreä tumma '
+            + 'kiekko keskellä metsäistä kraatterirengasta, ja '
+            + 'vasemmassa yläkulmassa levittäytyy Kumasi.',
+          lahde: 'NASA Earth Observatory images by Michala Garrison, '
+            + 'using Landsat data from the U.S. Geological Survey. '
+            + 'Story by Adam Voiland., Wikimedia Commons (PD)',
           wiki: 'Lake Bosumtwi',
         },
         {
@@ -96627,6 +96694,34 @@ export const KULTTUURI_KATEGORIAT = {
    * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
    * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
    * Climate-osioon ja sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Kofar Mata Dye Pit Entrance.jpg" ja "Kofar Mata Dye
+   * Pit since 1498.jpg" (kuvan päällä vesileima "©SOLASLY", lisäksi
+   * seinällä vaalijulisteita), "Circular dye pits.jpg" ja
+   * "Turning textiles in dye pit.jpg" (vesileima "@BLAQQYO"),
+   * "Kofar Mata Dye pit workers beating dye clothes.jpg" ja
+   * "Workers at a Kano Dye pit 01.jpg" (tunnistettavia kasvoja
+   * lähikuvassa; jälkimmäinen on lisäksi pyykkipaikka eikä
+   * indigovärjäämö), "Sabon Gari Market Kano.jpg" (kuvan keskellä
+   * iso LUMINOUS-mainostaulu), "Sandalwood and incense materials at
+   * Kurmi Market Kano.jpg" (etualalla tunnistettava lapsen kasvo),
+   * "View-Kano city-1911.jpg" (vain 760 × 425 pikseliä, eli alle
+   * kuvasäännön 1200 px — sama tiedosto jää valokuvatauluun, jossa
+   * kokovaatimusta ei ole).
+   *
+   * SUURMOSKEIJAN KUVA ON ENNEN JA NYT -PARISSA, EI JUTUSSA.
+   * Nykykuva "The Kano Central Mosque.jpg" on parin uusi puoli, ja
+   * kohdekartan moskeijajuttu jää siksi kuvattomaksi: sama rakennus
+   * kahdesti samassa lehdessä olisi aihetoistoa.
+   *
+   * KOFAR MATAN VÄRJÄÄMÖT JÄÄVÄT KUVATTOMIKSI, ja se on valinta.
+   * Commonsin värjäämökuvat ovat joko vesileimattuja tai
+   * lähikuvia tunnistettavista ihmisistä (ks. hylkäykset). Litteän
+   * taulun kuvaa (africa-kulttuuri.js, "Kofar Mata Dye Pit,
+   * Kano.jpg") ei käytetä uudestaan lehdessä. Tilattu kuvaputkelta.
    */
   kano: [
     {
@@ -96636,6 +96731,87 @@ export const KULTTUURI_KATEGORIAT = {
         + 'sisään ja eli tuhat vuotta Saharan-kaupan eteläisenä '
         + 'päänä. Isoisän matkavuonna 1873 se oli Sokoton kalifaatin '
         + 'suurin ja vaurain emiirikunta — ja yksi nälkävuosi.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: vanhakaupunki
+       * kukkulalta, portti muureineen ja Dala-kukkula kaupungin yllä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'KanofromDalaHill.jpg',
+          selite: 'Dala-kukkulan kalliolta katsoen vanhankaupungin '
+            + 'tasakatot jatkuvat horisonttiin palmujen ja '
+            + 'minareettien lomassa.',
+          lahde: 'Shiraz Chakera, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Sabuwar Kofa - Kano City Gate.jpg',
+          selite: 'Kolmikaarinen kaupunginportti kohoaa keskellä '
+            + 'katua, ja hammastettu muuri jatkuu sen molemmin '
+            + 'puolin.',
+          lahde: 'Suleiman Umar, Aminu Abdullahi, Abubakar Yusuf, '
+            + 'www.kanostreetsonosm.org.ng, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Dalla Hill from Kano City.jpg',
+          selite: 'Kaupungin takaa nousee Dala-kukkulan tasapäinen '
+            + 'kallio, ja etualalla lammen rannassa on savimuurin '
+            + 'jäänteitä.',
+          lahde: 'DipoTayo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Kanolle ei ole generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa (vertaa Lagosiin ja
+       * Fèsiin): vanha savimuuri, muuri ja sen kunnostettu osa sekä
+       * Kofar Naisan portti.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'A part of the Kano City Wall from Medieval times.jpg',
+          selite: 'Keskiaikaisen savimuurin pätkä ampuma-aukkoineen '
+            + 'seisoo yhä keskellä kaupunkia torikojujen takana.',
+          lahde: 'Solasly, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kano Wall 1.jpg',
+          selite: 'Vasemmalla on kulunut savimuuri, oikealla sama '
+            + 'muuri kunnostettuna ja maalattuna.',
+          lahde: 'Cepit, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kofar Naisa - Kano City Gate.jpg',
+          selite: 'Kofar Naisan portin läpi näkyy kadun jatkuvan '
+            + 'vanhaankaupunkiin, ja muurin vieressä käydään '
+            + 'karjakauppaa.',
+          lahde: 'Suleiman Umar, Aminu Abdullahi, Abubakar Yusuf, '
+            + 'www.kanostreetsonosm.org.ng, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: sama moskeija, sama kuvakulma, kuusi
+       * vuosikymmentä. Vanha puoli on Dr Mary Gillham Archive
+       * Projectin värikuva vuodelta 1960, uusi puoli nykyvalokuva
+       * samasta suunnasta. Molemmissa näkyvät samat kaksi minareettia
+       * ja vihreä kupoli; erot ovat puiden koossa ja aidassa.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Kano Mosque in 1960.jpg',
+          vuosi: '1960',
+          selite: 'Vuonna 1960 moskeija oli vielä uusi ja hohtavan '
+            + 'valkoinen, ja edessä kasvoi vain nuoria puita.',
+          lahde: 'Dr Mary Gillham Archive Project, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'The Kano Central Mosque.jpg',
+          selite: 'Sama moskeija nykyään: kupoli on yhä vihreä, mutta '
+            + 'puut ovat kasvaneet minareettien juurelle.',
+          lahde: 'Usmanmaifada, Wikimedia Commons (CC0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kronikka, joka kirjoitettiin lopusta alkuun',
@@ -96736,10 +96912,21 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jyrkästi hänen eteensä, heiluttavat miekkaa tai lippua '
             + 'ja poistuvat. Unesco otti juhlan aineettoman '
             + 'kulttuuriperinnön luetteloon joulukuussa 2024.',
+          tiedosto: 'Horsemen during the September 2016 Durbar in Kano - 1.jpg',
+          selite: 'Kuvioiduissa kaavuissa ratsastavat miehet ohjaavat '
+            + 'koristeltuja hevosiaan hiekkakentän poikki '
+            + 'iltavalossa.',
+          lahde: 'DonCamillo, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Durbar festival',
         },
       ],
       matkailijalle: {
+        kuva: {
+          tiedosto: 'Kano state emirs palace kofar kudu.jpg',
+          selite: 'Puna-kelta-vihreään puettu ratsastaja lähestyy '
+            + 'emiirin palatsin Kofar Kudun porttia.',
+          lahde: 'Bappancey, Wikimedia Commons (CC BY-SA 4.0)',
+        },
         kappale: 'Kano on Pohjois-Nigerian suurin kaupunki, Kanon '
           + 'osavaltion pääkaupunki ja koko maan toiseksi väkirikkain '
           + 'kaupunki. Se on yksi seitsemästä keskiaikaisesta '
@@ -96954,6 +97141,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'myytiin eri tavaraa, ja karjakauppa oli läntisimmässä '
             + 'laidassa. Lähde toteaa myös, että tori toimi '
             + 'aikanaan merkittävänä orjatorina.',
+          tiedosto: 'Medicinal herbs at Kurmi Market Kano.jpg',
+          selite: 'Kurmin torilla kuivatut yrtit, juuret ja kaarnat '
+            + 'odottavat ostajaa suurissa peltivadeissa.',
+          lahde: 'Fatima Bukar, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kurmi Market',
         },
         {

@@ -57639,6 +57639,14 @@ export const NAHTAVYYSJUTUT = {
           + 'viidensadan vuoden ajan — lähteettömäksi. Miekka on '
           + 'siis perimätietoa, ei mittaustulos, ja juuri siksi se '
           + 'on yhä paikallaan.',
+      kuvat: [
+        {
+          tiedosto: 'Komfo Anokye Teaching Hospital, Kumasi.jpg',
+          selite: 'Sairaalan pitkä siipi nousee leikattujen '
+            + 'pensasaitojen ja nurmen takaa neljään kerrokseen.',
+          lahde: 'OER Africa, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Kumasin linnake': {
@@ -57665,6 +57673,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Toiseksi viimeisessä salissa katsovat vastakkain '
           + 'Prempeh I, Prempeh II ja Yaa Asantewaa; viimeisessä '
           + 'ovat liput.',
+      kuvat: [
+        {
+          tiedosto: 'Fort Kumasi and Millitary Museum (2).jpg',
+          selite: 'Linnakkeen punaisen sisäpihan keskeltä kohoaa '
+            + 'kahdeksankulmainen torni peltikattoineen.',
+          lahde: 'Noahalorwu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Ramseyerin muistokirkko': {
@@ -57715,6 +57731,14 @@ export const NAHTAVYYSJUTUT = {
           + 'isännöinyt Afrikan cupin otteluita kolmesti: 1978 kuusi '
           + 'alkulohko-ottelua ja välierän, 2000 seitsemän ottelua ja '
           + '2008 uudestaan.',
+      kuvat: [
+        {
+          tiedosto: 'Baba Yara Sports Stadium in Kumasi.jpg',
+          selite: 'Iltaottelussa valonheittimet valaisevat kentän ja '
+            + 'keltaiset katsomot täyttyvät reunoja myöten.',
+          lahde: 'Michael Schubert, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Rattrayn puisto': {
@@ -57816,6 +57840,15 @@ export const NAHTAVYYSJUTUT = {
           + 'vallan: ellei omana aikananne, niin lastenne aikana. '
           + 'Pian saapui Bagauda, ja hänestä tuli kronikan mukaan '
           + 'Kanon ensimmäinen kuningas.',
+      kuvat: [
+        {
+          tiedosto: 'Dala Hill, Kano.jpg',
+          selite: 'Ilmasta katsottuna kukkulan kylkeen on hakattu '
+            + 'porrastie, ja tasainen laki nousee tiheän '
+            + 'vanhankaupungin yläpuolelle.',
+          lahde: 'Solasly, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Kofar Matan värjäämöt': {
@@ -57912,6 +57945,14 @@ export const NAHTAVYYSJUTUT = {
           + 'durbar-kulkue palaa sen kautta palatsiin. Emiirin '
           + 'yksityistiloissa asuu jopa kaksisataa henkeä ja koko '
           + 'rakennuksessa yli tuhat.',
+      kuvat: [
+        {
+          tiedosto: 'Kano Emir Palace Entrance Kano State Nigeria.jpg',
+          selite: 'Kofar Kudun portti kohoaa tummanpunaisena ja '
+            + 'vaaleana kaarena palatsin muurin keskellä.',
+          lahde: 'Sani Ahmad Usman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Kofar Nassarawan portti': {
@@ -57943,6 +57984,16 @@ export const NAHTAVYYSJUTUT = {
           + 'kymmenen metriä pitkiä. Kaupunkiin sai tulla vain '
           + 'porttien kautta, ja kun ne suljettiin yöksi, ne '
           + 'avattiin vasta aamunkoitteessa.',
+      kuvat: [
+        {
+          tiedosto: 'Kofar Nasarawa - Kano City Gate.jpg',
+          selite: 'Kofar Nassarawan valkoinen kaari ylittää '
+            + 'nelikaistaisen tien, ja otsassa lukee vuosiluku '
+            + '2014.',
+          lahde: 'Suleiman Umar, Aminu Abdullahi, Abubakar Yusuf, '
+            + 'www.kanostreetsonosm.org.ng, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Gidan Makaman museo': {
