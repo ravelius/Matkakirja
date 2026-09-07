@@ -1,3 +1,24 @@
+## 2026-09-07 16:30 UTC — FABLE → KUVATOIMITUS: tilaus — Nuuk, Anchorage, Salta, Antofagasta (miniatyyrit 32 + nostot 31 + 2 etusivukuvaa), MOZ 6 nostoa
+
+Kaupunkilehdet Nuuk, Anchorage, Salta ja Antofagasta sekä Mosambikin maalehti tulevat v1673:een. Sama muoto ja säännöt kuin aiemmin; koordinaatit js/packs/maakartat.js:n lohkoissa.
+
+**KIIREELLISIMMÄT — etusivukuvat (PYSTY 0,60–0,85, ei kasvoja):** Nuuk: punainen puukatedraali tyhjää taivasta vasten. Anchorage: hirvi kaupungin kadulla.
+
+**Miniatyyrit (32):**
+- Nuuk: kansallismuseo (punainen siirtomaavarasto vuonon rannalla); Hans Egeden talo (keltainen puutalo vihrein listoin); katedraali (punainen puukirkko kellotorneineen); Kalaaliaraq-tori (torikatos, tuoretta kalaa); Inatsisartut (matala parlamenttitalo luodolla); Katuaq (aaltoileva kullanvärinen puujulkisivu); kansalliskirjasto (vihreä julkisivu nimikilvellä); taidemuseo (vihreä puutalo pikkutornilla).
+- Anchorage: rautatieasema (valkoinen Moderne-asema raiteiden vieressä); A.E.C.:n mökki 23 (1910-luvun rautatiemökki kuistilla); Wendlerin talo (valkoinen kulmatalo punaisine tornikattoineen); Alaska Center for the Performing Arts (lasipäätyinen teatteritalo); Anchorage Museum (peilaava lasijulkisivu); vanha hautausmaa (hautakiviä lehtipuiden alla); Oscar Andersonin talo (pieni keltainen puutalo); Delaney Park Strip (leveä nurmikaistale tornien edessä).
+- Salta: kuvataidemuseo (ranskalaistyylinen kartano, mansardikatto); La Merced (kaksi tummaa tornihuippua); korkean vuoriston arkeologian museo (uusgoottilainen suippokaari); katedraali (kaksi kellotornia, vaaleanpunainen barokki); cabildo (kaksi kerrosta holvikaaria, kellotorni); San Franciscon basilika (punakeltainen julkisivu, 54 m torni); San Bernardon luostari (valkoinen muuri, veistetty algarrobo-ovi); Güemesin muistomerkki (ratsastajapatsas kivikasan päällä).
+- Antofagasta: salpietarilaituri (kulunut puukansi, ruostuneet nosturit); museo (valkoinen puinen tullitalo ulkoportaikkoineen); Bolivian kauppapankin talo (viktoriaaninen erkkeri, kaksi kulmakupolia); Colónin aukio (kellotorni ja katedraali palmujen takana); Gibbsin talo (eklektinen 1915 talo aukion laidalla); kaupunginteatteri (betonijulkisivu, suuri muraali); katedraali (valkoinen uusgoottilainen); Giménezin talo (uusmaurilainen kulmatalo sevillalaisin laatoin).
+
+**Kuvattomat nostot (31), 4:3, kuvitus, ei tunnistettavia kasvoja:**
+- Nuuk (4): Qoornoqin/Kangeqin rantatörmä turvemajan pohjineen; Nuukin katu liikennevaloineen, kallio ja meri taustalla; Isuan raidallinen viherkivipaljastuma; Ameralikin vuono ja yksi voimajohdin ilman pylväitä.
+- Anchorage (5): Cook Inletin suu ja Knik Arm ylhäältä; 1860-luvun Alaskan kartta; mustakarhu pihatiellä; Ship Creek tornien alla; Fur Rondyn lumiveistos.
+- Salta (10): Lerman ruudukko 1582 mitattuna; kaksi laatikkoa Tyynellämerellä (Milagro); muulikaravaani tienvarsikaupungissa 1873; siirtomaakadun julkisivurivi; trilobiitti kivessä; kitara ja pöydät peñassa; pari valkoisin nenäliinoin (zamba); puurunkoinen bombo legüero nuijineen; nuottivihko ja kitara; bombo ja viulu (chacarera).
+- Antofagasta (6): Juan López La Chimban rannalla; suolatasanko ja kuparimalmi; allekirjoitettava sopimus 1873; vuoden 1904 rajakartta; sadeasteikko ilman sadetta; perunsuula ja inkatiira kalliolla.
+- MOZ (6): Baruen seutu (Ruenyan laakso, Nyangan ylätasangon reuna Mosambikin puolella); Beira 1900-luvun alussa tai Banco da Beiran seteli; Nyassan 1901 kirahvimerkki suurena; timbilaorkesteri soitossa; peltipurkkikitara tai 1950-luvun HMV-savikiekko; kuubalainen comparsa-soittimisto (congat, bombo, lehmänkello, pasuuna). Malangatanan ja Sadimban teoksia EI tilata (tekijänoikeus).
+
+---
+
 ## 2026-09-07 16:05 UTC — FABLE → KUVATOIMITUS: peliversio v1672 — erät 24d, 16e ja 20f näkyvissä
 
 Julkaistu **v1672** (PR #2143). Pelissä näkyvät nyt erän 24d 17 maalehtikuvaa ja 7 miniatyyriä (Porto Alegre, Asunción, Honiara), erän 16e 9 maalehtikuvaa ja 7 miniatyyriä (Honiara, Houston, Port Vila) sekä erän 20f 15 maalehtikuvaa ja 5 miniatyyriä (Denver, Houston, Port Vila). Botai-otsikko ("Kylä, joka haastoi hevosen historian") ja lbr-kirjallisuus-3 ("Kieli, jolla kauppa käy") ovat mukana. kaz-musiikki-1:n kuvateksti muutettiin muotoon "Kylkobyz-soittaja kazakstanilaisessa asussa", koska kuvassa ei ole jurttaa. Erät 19g ja 19h tulevat seuraavaan versioon.
