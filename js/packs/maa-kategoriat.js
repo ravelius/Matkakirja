@@ -52788,6 +52788,25 @@ export const MAA_KATEGORIAT = {
    * rajauksena, ei nykytilana; Niassan luonnonpuisto jätettiin
    * luonto-osiosta pois, koska sen artikkelin tuorein osio kertoo
    * käynnissä olevasta selkkauksesta.
+   *
+   * KUVAT: 12 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * KAHDEKSAN NOSTOA JÄI KUVATTOMAKSI: Barue, Mosambikin yhtiö,
+   * Niassan postimerkit, mgodo, Fany Pfumo, mozambique-rytmi,
+   * Malangatana ja Reinata Sadimba — Commonsissa ei ole näistä
+   * yhtään kelvollista tiedostoa. HYLÄTYT: "Nyassa 1901 stamp",
+   * "Nyassa 1898 stamp" ja "Stamp Nyassa 300 Reis invert" (kaikki
+   * alle 450 px leveitä), Companhia de Moçambiquen arkistokuvat
+   * Beirasta (koko sarja on 700 px korkeaa), "Festival de Timbila -
+   * Quissico" (tunnistettavat kasvot ja paitalogot), "Peixe Vermelha
+   * com Xima" (muovikelmuun käärittyä kalaa eikä ximaa), "Typical
+   * lunch in Mozambique" (banaanipata, ei ximaa), "Caril de amendoim"
+   * (niin tiukka lähikuva, ettei ruokalajia erota) ja "Chiuanga
+   * (beach)" (pölyinen diaskannaus).
+   *
+   * TUNNISTETTAVAT KASVOT: yhdessäkään valitussa kuvassa ei ole
+   * ihmiskasvoja. Xima-nostossa näkyy kädet mutta ei kasvoja, ja
+   * makondenaamio on veistetty esine.
    */
   MOZ: [
     {
@@ -52801,6 +52820,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Tila, joka periytyi tyttäreltä tyttärelle',
           aika: '1677–1900-luku',
+          tiedosto: '1770 Bonne Map of East Africa, Madagascar, Isle Bourbon and Mauritius (Mozambique) - Geographicus - AfricaEast-bonne-1770.jpg',
           teksti: 'Prazo da coroa oli suuri maatila, jonka Portugalin kruunu vuokrasi '
               + 'kiinteää vuosimaksua vastaan, ja niitä oli tiheimmin Sambesin '
               + 'laaksossa. Haltijan piti asua tilallaan eikä myydä tai vuokrata sitä '
@@ -52811,6 +52831,10 @@ export const MAA_KATEGORIAT = {
               + 'ehdolla, että tämä nai portugalilaisen. Haltija sai käydä kauppaa '
               + 'kaikella, pitää järjestystä ja koota oman armeijan. Teten maakunnassa '
               + '1800-luvulla 32 tilanherraa hallitsi 57:ää prazoa.',
+          selite: 'Rigobert Bonnen vuoden 1770 kartta Itä-Afrikan rannikosta nimeää '
+            + 'Monomotapan, Sofalan, Manican ja Inhambanen valtakunnat sekä Mosambikin '
+            + 'kanaalin.',
+          lahde: 'Rigobert Bonne, Wikimedia Commons (PD)',
         },
         {
           otsikko: 'Vesi, joka sitoo',
@@ -52866,6 +52890,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Metsä, joka löytyi satelliittikuvasta',
+          tiedosto: 'Mount Mabu, Mozambique (ASTER).jpg',
           teksti: 'Mabu-vuori Pohjois-Mosambikissa on noin 1 700 metriä korkea, ja sen '
               + 'ikimetsä peittää seitsemäntuhatta hehtaaria. Paikallisesti se '
               + 'tunnettiin hyvin, mutta tieteelle se oli käytännössä tuntematon '
@@ -52876,9 +52901,13 @@ export const MAA_KATEGORIAT = {
               + 'mahdollisia tuntemattomia luonnon keskittymiä — siksi Mabua sanotaan '
               + 'yhä Googlen metsäksi. Metsästä on kuvattu 126 lintulajia sekä oma '
               + 'kameleontti, hevosenkenkäyökkö, pensaskyy ja kolme perhoslajia.',
+          selite: 'ASTER-instrumentin satelliittikuva Mabu-vuoresta lokakuulta 2023; kuva '
+            + 'kattaa 26,7 kertaa 28,8 kilometrin alan.',
+          lahde: 'NASA/METI/AIST/Japan Space Systems ja U.S./Japan ASTER Science Team, Wikimedia Commons (PD)',
         },
         {
           otsikko: 'Kraatteri, jonka seinät ovat seitsemänsataa metriä',
+          tiedosto: 'Mount Lico, Mozambique, March 15, 2020 SkySat.jpg',
           teksti: 'Lico-vuori Zambezian maakunnassa on vain 1 100 metriä korkea, mutta '
               + 'sitä ympäröivät pystysuorat kallioseinät, jotka nousevat paikoin '
               + 'seitsemänsataa metriä ympäröivästä maasta. Ne ovat estäneet ihmisten '
@@ -52889,9 +52918,13 @@ export const MAA_KATEGORIAT = {
               + 'retkikunta kiipesi seinämät. Metsän arveltiin olevan koskematon, '
               + 'mutta huipun puronsilmäkkeeltä löytyi useita ruukkuja, jotka joku oli '
               + 'asettanut sinne ennen heitä.',
+          selite: 'Planet Labsin SkySat-satelliitti kuvasi Lico-vuoren 15. maaliskuuta 2020; '
+            + 'kraatterin metsä on maan viimeisiä koskemattomia.',
+          lahde: 'Planet Labs, Wikimedia Commons (CC BY 4.0)',
         },
         {
           otsikko: 'Vuori, jonne palattiin 66 vuoden jälkeen',
+          tiedosto: 'Gurué Moçambique.jpg',
           teksti: 'Namuli on maan toiseksi korkein vuori, 2 419 metriä: tasangon '
               + 'päältä kohoava graniittikupoli. Britannian konsuli Henry Edward '
               + 'O\'Neill mittasi ja kuvasi sen 1886, ja lintutieteessä sen tekivät '
@@ -52903,9 +52936,13 @@ export const MAA_KATEGORIAT = {
               + 'teeviljelmiä — lähin kaupunki Gurué on maan suurin teetila — ja '
               + 'alkuperäismetsä on jäljellä vain ylimpänä ja purolaaksojen '
               + 'käytävissä.',
+          selite: 'Gurué’n seudun vuoristoa Zambezian maakunnassa; Namulin '
+            + 'graniittikupoli kohoaa kaupungista koilliseen.',
+          lahde: 'Armindo Pascoal Timóteo Culeco, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Järvi, jossa on enemmän kalalajeja kuin missään',
+          tiedosto: 'Sun over the Lake Niassa Reserve (5888437856).jpg',
           teksti: 'Sama järvi on Mosambikissa Lago Niassa, Malawissa Lake Malawi ja '
               + 'Tansaniassa Lake Nyasa. Se on tilavuudeltaan maailman neljänneksi '
               + 'suurin makean veden järvi, ja siinä elää enemmän kalalajeja kuin '
@@ -52915,6 +52952,9 @@ export const MAA_KATEGORIAT = {
               + 'jäävät sen yläpuolelle, vaikka syvin kohta on 706 metriä. David '
               + 'Livingstone antoi järvelle 1859 kaksi lisänimeä: tähtien järvi, koska '
               + 'kalastajien lyhdyt näyttivät kaukaa tähdiltä, ja myrskyjen järvi.',
+          selite: 'Niassajärven suojelualue Mosambikin puolella kattaa noin kuusisataa '
+            + 'neliökilometriä järveä ja kahdenkymmenen kylän rannat.',
+          lahde: 'USAID Africa Bureau, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -52927,6 +52967,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Kansallisruoka jauhetaan huhmaressa',
+          tiedosto: 'Matapa.jpg',
           teksti: 'Matapa on maan tunnetuin ruokalaji, ja se alkaa puisesta '
               + 'huhmaresta. Nuoret maniokinlehdet — joskus kurpitsan tai pinaatin — '
               + 'jauhetaan survimella hienoksi ennen kuin ne kypsennetään '
@@ -52937,9 +52978,13 @@ export const MAA_KATEGORIAT = {
               + 'chilihiutaleet ovat tavallinen mauste, mutta itse lehtien maku on '
               + 'mieto ja hieman maanläheinen — kookos ja maapähkinä kantavat '
               + 'kastikkeen.',
+          selite: 'Matapa tarjoillaan tavallisesti riisin kanssa, ja kastikkeen vihreä väri '
+            + 'tulee jauhetuista maniokinlehdistä.',
+          lahde: 'PrestigiousSwazi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Perusruoka, joka ei ole kotoisin täältä',
+          tiedosto: 'Yawo food staples - ugali and usipa.jpg',
           teksti: 'Ennen portugalilaisia maan pääviljat olivat hirssi ja durra. '
               + 'Molempia syödään yhä, mutta viime vuosikymmeninä maissi on '
               + 'syrjäyttänyt ne, ja arjen perusruoka on nyt xima, paksu '
@@ -52950,9 +52995,13 @@ export const MAA_KATEGORIAT = {
               + 'tulokkaita, joista tuli ruokavalion ydin. Portugalista tuli myös '
               + 'refogado, monen padan pohja, jossa tomaattia, sipulia, valkosipulia '
               + 'ja piripiriä kuullotetaan öljyssä.',
+          selite: 'Xima eli maissijauhopuuro ja kuivattua usipa-kalaa, yaokansan arkiateria '
+            + 'Pohjois-Mosambikissa.',
+          lahde: 'TimCowley, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Curry, joka ei tarvitse curryjauhetta',
+          tiedosto: 'Caril de camarão com quiabos.jpg',
           teksti: 'Curryä pidetään Mosambikin kansallisruokana, mutta sana on täällä '
               + 'väljä: se tarkoittaa mitä tahansa katkaravun, kalan, lihan tai '
               + 'kasvisten yhdistelmää kastikkeessa, eikä siinä välttämättä ole '
@@ -52963,9 +53012,13 @@ export const MAA_KATEGORIAT = {
               + 'Chamussa on samosan mosambikilainen serkku, caril de camarão '
               + 'katkarapucurry ja frango à Zambeziana kookosmaidossa haudutettu '
               + 'tulinen kanapata.',
+          selite: 'Caril de camarão com quiabos eli katkarapucurry okran kanssa tunnetaan '
+            + 'sekä Goassa että Mosambikissa.',
+          lahde: 'Adriao, Wikimedia Commons (CC BY 3.0)',
         },
         {
           otsikko: 'Pähkinä, jonka kuori polttaa',
+          tiedosto: 'Ripe Cashew apple with Nuts Anacardium occidentale Goa IMG 7907 (1).JPG',
           teksti: 'Cashew on kotoisin trooppisesta Etelä-Amerikasta. Portugalilaiset '
               + 'kohtasivat sen 1500-luvulla, veivät sen Goaan vuosina 1560–1565 ja '
               + 'sieltä se levisi lopulta Afrikkaan. Kasvi on omituinen: mehukas '
@@ -52976,6 +53029,9 @@ export const MAA_KATEGORIAT = {
               + 'kuluttajille kuorineen. Mosambikissa jauhetusta cashewsta ja '
               + 'perunamuusista leivotaan bolo polana, ja chopit käyttävät sekä '
               + 'cashewta että mandariineja väkijuomiin.',
+          selite: 'Kypsä cashewomena ja sen päässä kasvava luumarja, jonka sisällä on yksi '
+            + 'siemen; kuva on Goasta, jonne portugalilaiset veivät kasvin 1500-luvulla.',
+          lahde: 'Dr. Raju Kasambe, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       tehtava: {
@@ -53001,6 +53057,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Orkesteri, jossa on kymmenen ksylofonia',
+          tiedosto: 'Le Timbila, xylophone du Mozambique (Biennale de Venise 2015) (20192901852).jpg',
           teksti: 'Chopien ksylofoni on mbila, monikossa timbila, ja sitä soitetaan '
               + 'Inhambanen maakunnan Zavalassa kokonaisena orkesterina. Soittimia on '
               + 'noin kymmenen kolmea tai neljää kokoa: kaksi bassoa nimeltä gulu '
@@ -53011,6 +53068,9 @@ export const MAA_KATEGORIAT = {
               + 'kehittyneimpänä, mitä kirjoitustaidottomien kansojen parista on '
               + 'löydetty, ja Unesco julisti timbilan 2005 ihmiskunnan aineettoman '
               + 'perinnön mestariteokseksi.',
+          selite: 'Chopien mbila ja sen kumipäiset kapulat olivat esillä Mosambikin '
+            + 'paviljongissa Venetsian biennaalissa 2015.',
+          lahde: 'Jean-Pierre Dalbéra, Wikimedia Commons (CC BY 2.0)',
         },
         {
           otsikko: 'Sävellys, jossa pilkataan naapuria',
@@ -53061,6 +53121,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Yksi puunkappale, kolme tyyliä',
+          tiedosto: 'Helmet mask, Mozambique, Makonde people, early 20th century, wood, beeswax, hair - De Young Museum - DSC01108.JPG',
           teksti: 'Makondet asuvat Mueda-ylätasangolla maan pohjoisosassa, ja heidän '
               + 'yhteisössään lapset ja perintö kuuluvat naisille: aviomies muuttaa '
               + 'vaimonsa kylään. Puu ei ole heille elotonta ainetta vaan elävä aine, '
@@ -53071,6 +53132,9 @@ export const MAA_KATEGORIAT = {
               + 'muotoon eikä poisteta. Puuna on mustapuu, mpingo. Tyylejä on kolme: '
               + 'binadamu esittää arjen ihmisiä, ujamaa on elämänpuu, jossa hahmot '
               + 'kiipeävät toistensa yli, ja shetani ovat henkiolentoja.',
+          selite: 'Makondelainen kypäränaamio Mosambikista 1900-luvun alusta: puuta, '
+            + 'mehiläisvahaa ja hiuksia.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
         {
           otsikko: 'Tennisklubin pallopoika',
@@ -53100,6 +53164,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Valtaistuin, jonka termiitit allekirjoittivat',
+          tiedosto: 'Throne of Weapons, British Museum 1.jpg',
           teksti: 'Cristóvão Estevão Canhavato, taiteilijanimeltään Kester, kokosi '
               + '2002 valtaistuimen käytöstä poistetuista aseista, jotka hän sai '
               + '"aseista työkaluiksi" -hankkeelta. Osat ovat monesta maasta: '
@@ -53110,6 +53175,8 @@ export const MAA_KATEGORIAT = {
               + 'se on jälki, johon kantohihna oli kiinnitetty. Teoksen on '
               + 'allekirjoittanut hänen lisäkseen termiitti. British Museum osti sen '
               + 'samana vuonna.',
+          selite: 'Trono de Armas on ollut British Museumin kokoelmissa vuodesta 2002.',
+          lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
