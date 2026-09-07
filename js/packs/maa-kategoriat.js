@@ -42133,6 +42133,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Laulu, joka teki kantonista popkielen',
           aika: '1971–1978',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-hkg-musiikki-2-r20260907-v2.jpg',
           teksti: '1960-luvulla kantoninkielistä musiikkia pidettiin Hongkongissa '
               + 'vanhanaikaisena tai kouluttamattomana, kun taas brittiläinen ja '
               + 'amerikkalainen musiikki merkitsi sivistystä. Noin 1971 Sandra Lang, '
@@ -42142,8 +42143,10 @@ export const MAA_KATEGORIAT = {
               + 'listojen kärkeen. Sam Huin ensimmäinen kantoninkielinen albumi Games '
               + 'Gamblers Play myi 1974 kaksisataatuhatta kappaletta. Sanan Cantopop '
               + 'otti käyttöön 1978 Billboardin kirjeenvaihtaja Hans Ebert.',
-          selite: 'Sam Hui lauloi puhuttua kantonia ja arjen aiheista — yksi hänen '
-            + 'tunnetuimmista lauluistaan kertoo 1960-luvun vedensäännöstelystä.',
+          selite: '1970-luvun hongkongilaisen televisiostudion kuvitettu Cantopop-esitys: koko '
+              + 'yhtye, kaksi studiokameraa ja ohjauspöytä näkyvät.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: M+ Magazine — Imaging Cantopop: '
+              + 'Design and Performativity (Side A)',
           wiki: 'Cantopop',
         },
         {
@@ -42211,6 +42214,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kowloonin keisari kirjoitti sukupuunsa lyhtypylväisiin',
           aika: '1956–2007',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-hkg-kuvataide-2-r20260907-v3.jpg',
           teksti: 'Tsang Tsou-choi tuli Guangdongista Hongkongiin kuusitoistavuotiaana '
               + 'työmiehenä, köyhänä ja tuskin lukutaitoisena. Kolmenkymmenenviiden '
               + 'ikäisenä hän alkoi kirjoittaa katuja täyteen: lyhtypylväisiin, '
@@ -42220,15 +42224,16 @@ export const MAA_KATEGORIAT = {
               + 'Kowloonista oli kuulunut hänen esi-isilleen; asiakirjoja väitteelle '
               + 'ei ole. Kun työ maalattiin yli, hän palasi kirjoittamaan heti maalin '
               + 'kuivuttua.',
-          selite: 'Eräs lehti nimesi hänet kaupungin kymmenen vähiten vaikutusvaltaisen '
-            + 'ihmisen joukkoon, mutta hänen käsialansa päätyi Venetsian biennaaliin '
-            + '2003, Sotheby\'sin huutokauppaan 2004 ja lopulta M+ -museon '
-            + 'kokoelmiin.',
+          selite: 'Anonyymi työvälineasetelma, jonka viisi bambusivellintä ja muste viittaavat '
+              + 'Hongkongin mustekirjoituksen materiaaliseen perinteeseen.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: M+ — Tsang Tsou-choin siveltimet, '
+              + 'kokoelmavalokuva',
           wiki: 'Tsang Tsou-choi',
         },
         {
           otsikko: 'Sarjakuva, joka on ilmestynyt vuodesta 1962',
           aika: '1962–',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-hkg-kuvataide-3-r20260907-v2.jpg',
           teksti: 'Alfonso Wongin luoma Old Master Q ilmestyi hongkongilaisissa '
               + 'lehdissä ensimmäisen kerran 3. helmikuuta 1962 ja jatkosarjana 1964. '
               + 'Se ilmestyy yhä ja on Aasian vanhin yhtäjaksoisesti julkaistava '
@@ -42238,9 +42243,10 @@ export const MAA_KATEGORIAT = {
               + 'laiha vanha mies Qing-kauden vanhanaikaisessa asussa, ja hänen '
               + 'seurassaan kulkevat lyhyt Big Potato, kirjaviisas herra Chin ja '
               + 'kilpailija herra Chiu.',
-          selite: 'Sarja kuvasi 1960–1980-luvuilla kaupunkiarjen ilmiöitä köyhyydestä '
-            + 'näpistelyyn ja pilaili muodille, nykytaiteelle ja rockmusiikille; '
-            + 'toistuva vitsi on kielimuuri kiinan ja englannin välillä.',
+          selite: 'Anonyymi 1960-luvun hongkongilainen sarjakuvalehtikioski, kuvitteellisin '
+              + 'kansikuvin.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Old Master Q -virallinen sivusto '
+              + '— sarjan historia',
           wiki: 'Old Master Q',
         },
       ],
@@ -42293,6 +42299,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Cheung Chaun tyttö ja neljänkymmenenneljän vuoden odotus',
           aika: '1996',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-hkg-urheilu-2-r20260907-v3.jpg',
           teksti: 'Lee Lai Shan syntyi 1970 Cheung Chaun saarella, nousi purjelaudalle '
               + 'kaksitoistavuotiaana, aloitti kilpailut seitsemäntoista ja pääsi '
               + 'maajoukkueeseen yhdeksäntoista vanhana. Maailmanmestariksi hän tuli '
@@ -42302,9 +42309,9 @@ export const MAA_KATEGORIAT = {
               + 'sanoi toimittajille lauseen, joka jäi elämään: hongkongilaiset '
               + 'urheilijat eivät ole roskaa. Cheung Chaun rannan lähelle on '
               + 'pystytetty purjelautaa ja mastoa muistuttava muistomerkki.',
-          selite: 'Lee oli ensimmäinen hongkongilainen urheilija, jolle Kiinalainen '
-            + 'yliopisto myönsi kunniatohtorin arvon, ja hän kantoi 2008 ensimmäisenä '
-            + 'olympiatulta Hongkongin osuudella.',
+          selite: 'Purjelautailija valmistautuu vesille Hongkongin rannalla.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Hongkongin vapaa-aika- ja '
+              + 'kulttuuripalvelujen virasto (LCSD) — purjelautailukuvasto',
           wiki: 'Lee Lai Shan',
         },
         {
@@ -42418,6 +42425,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Puu, joka tylsyttää veitset',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mmr-luonto-3-r20260907-v3.jpg',
           teksti: 'Myanmarin tiikkimetsissä kasvaa lähes puolet maailman luonnonvaraisesta '
               + 'tiikistä, ja geneettisesti lajilla on kaksi alkukotia: toinen Intiassa, '
               + 'toinen Myanmarissa ja Laosissa. Tiikki on jopa neljäkymmentä metriä korkea '
@@ -42428,6 +42436,10 @@ export const MAA_KATEGORIAT = {
               + 'terät nopeasti, joten helposti työstettävä puu on nikkarille samalla '
               + 'kiusa. Sukua on vain kaksi muuta lajia, joista toinen kasvaa vain '
               + 'Myanmarissa.',
+          selite: 'Tiikkipuun runko, lämmin sydänpuu ja suuret lehdet havainnollistavat Tectona '
+              + 'grandiksen tunnusomaisia piirteitä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: World Agroforestry (ICRAF) — '
+              + 'Tectona grandis, lajikuvaus',
           wiki: 'Teak',
         },
       ],
@@ -42568,6 +42580,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Maalari, joka pelasti kuninkaan sukulaisen',
           aika: '1897–1945',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mmr-kuvataide-3-r20260907-v2.jpg',
           teksti: 'Konbaung-kaudella eurooppalainen tekniikka tuli hoviin: burmalaiseen '
               + 'maalaukseen ilmestyivät viivaperspektiivi, valon ja varjon vastakohta ja '
               + 'sumea etäisyys. Modernin maalauksen isänä pidetään Ba Nyania, joka syntyi '
@@ -42577,6 +42590,10 @@ export const MAA_KATEGORIAT = {
               + 'matkallaan hän pelasti hukkumasta kuningas Yrjö V:n sukulaisen ja tapasi '
               + 'kuninkaan henkilökohtaisesti. Kotiin palattuaan 1930 hän piti maan '
               + 'ensimmäisiä yksityisnäyttelyitä.',
+          selite: 'Anonyymi selin kuvattu taidemaalari työhuoneessa; ympäristökuvitus viittaa '
+              + 'Myanmarin modernin maalaustaiteen murroskauteen.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: National Heritage Board (Roots) — '
+              + 'kokoelmakohde 1395370',
           wiki: 'Ba Nyan',
         },
       ],
@@ -45936,6 +45953,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kansallisruoka survotaan huhmareessa',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-ruoka-1-r20260907-v3.jpg',
           teksti: 'Kassavanlehtiä on sanottu Sierra Leonen kansallisruoaksi, ja sen '
               + 'valmistus alkaa kärsivällisyydellä: nuorimmat lehdet pestään, '
               + 'survotaan huhmareessa hyvin hienoksi ja silputaan vielä ennen '
@@ -45945,9 +45963,14 @@ export const MAA_KATEGORIAT = {
               + 'riisin päälle tulevia kastikkeita ovat bataatinlehdet, crain crain, '
               + 'okra ja maapähkinäpata. Kassavasta käytetään koko kasvi: juuresta '
               + 'survotaan fufua, lehdistä tulee kastike.',
+          selite: 'Kassavanlehtien survomista ja riisin kanssa tarjottavaa lehtikastiketta '
+              + 'Sierra Leonessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Travel Food Guide — Sierra Leone, '
+              + 'kansallisruoat',
         },
         {
           otsikko: 'Se joka tuo poyon, tuo elämän',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-ruoka-2-r20260907-v3.jpg',
           teksti: 'Palmuviini valutetaan puun katkaistusta kukinnosta astiaan, joka '
               + 'sidotaan tyngän alle. Ensimmäinen valkoinen neste on makeaa ja '
               + 'alkoholitonta, mutta ilmassa olevat hiivat aloittavat käymisen '
@@ -45956,6 +45979,9 @@ export const MAA_KATEGORIAT = {
               + 'Sierra Leonessa juoma on nimeltään poyo, ja sitä tarjotaan häissä, '
               + 'syntymäjuhlissa ja hautajaisvalvojaisissa. Limbojen sanonta kertoo '
               + 'juoman asemasta lyhyesti: se joka tuo poyon, tuo elämän.',
+          selite: 'Palmuviinin keruuta Sierra Leonen rannikolla.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Joshua Berman — valokuvasarja '
+              + 'Sierra Leonesta, palmuviinin keruu',
         },
         {
           otsikko: 'Kassavan toinen puoli',
@@ -46005,6 +46031,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Painokone, jonka ranskalaiset ehtivät ensin',
           aika: '1794–1934',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-kirjallisuus-1-r20260907-v4.jpg',
           teksti: 'Afrikan ensimmäinen moderni painokone tuotiin Freetowniin 1794, mutta '
               + 'ranskalainen hyökkäysosasto tuhosi sen ennen kuin sillä ehdittiin '
               + 'painaa riviäkään. Seuraava saatiin käyntiin 1800, ja siitä syntyivät '
@@ -46015,6 +46042,11 @@ export const MAA_KATEGORIAT = {
               + 'siirtomaavallasta ja afrikkalaisten oikeuksista. Vuonna 1934 '
               + 'perustettiin Länsi-Afrikan ensimmäinen englanninkielinen '
               + 'radiopalvelu.',
+          selite: 'Freetownin 1800-luvun alun kirjapainotoiminnan havainnekuva. Puinen '
+              + 'painokone perustuu aikakauden museoesineeseen.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Science Museum Group — puinen '
+              + 'painokone, kokoelmakohde co37944; Sierra Leonen tiedotusministeriö — valtion '
+              + 'kirjapainon historia',
         },
         {
           otsikko: 'Shakespeare krioksi, koska kieli ei ole murre',
@@ -46039,6 +46071,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Lääkäri, joka otti nimekseen Africanus',
           aika: '1835–1883',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-kirjallisuus-3-r20260907-v2.jpg',
           teksti: 'James Beale Horton syntyi Gloucesterin kylässä Freetownin lähellä '
               + 'igbo-perheeseen, jonka laivasto oli vapauttanut orjalaivasta. Hän kävi '
               + 'Sierra Leone Grammar Schoolin ja Fourah Bay Collegen, sai stipendin ja '
@@ -46048,6 +46081,11 @@ export const MAA_KATEGORIAT = {
               + 'West African Countries and Peoples vuodelta 1868 kumosi eurooppalaisia '
               + 'rotuoppeja ja vaati itsehallintoa Länsi-Afrikan siirtomaille. '
               + 'Merkuriuksen kraatteri on nimetty hänen mukaansa.',
+          selite: '1800-luvun lääkärin työpöytä, kirjoja ja puinen stetoskooppi James Africanus '
+              + 'Hortonin ajan innoittamassa kuvituksessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Birminghamin yliopiston arkisto — '
+              + 'CMS-kokoelma, kohde XCMS/B/1803-1880/A1/O/26-235/118; Smithsonian National '
+              + 'Museum of American History — puinen stetoskooppi, kokoelmakohde 1073629',
         },
       ],
       tehtava: {
@@ -46109,17 +46147,39 @@ export const MAA_KATEGORIAT = {
           + 'hajosivat sen mukaan, kuka pystyi liikkumaan nopeimmin.',
       nostot: [
         {
-          otsikko: 'Kylä, jossa hevonen sai ensimmäiset kuolaimensa',
+          /*
+           * KIISTA ON NOSTON AIHE (päätoimittajan päätös 7.9.2026,
+           * kuvaputken tarkennusehdotus posti/kuvatoimitus.md). Vanha
+           * otsikko "Kylä, jossa hevonen sai ensimmäiset kuolaimensa"
+           * esitti kiistellyn tulkinnan varmana: hampaiden kulumaa,
+           * aitauksia ja lantakerroksia on sittemmin selitetty myös
+           * ilman kesytystä, ratsastusta ja kuolaimia. Varmaa on
+           * botailaisten läheinen hevossuhde noin 3500 eaa. ja se,
+           * ettei Botain hevonen ole DOM2-kotihevosen kantamuoto.
+           *
+           * LÄHDE TÄLLE NOSTOLLE on Frontiers in Environmental
+           * Archaeology 2023, DOI 10.3389/fearc.2023.1134068. Se on
+           * tässä kommentissa eikä lahde-kentässä, koska lahde piirtyy
+           * vain kuvakehykseen (js/maalehti.js piirraNosto) — nostolla
+           * ei ole kuvaa, eikä pakan 189 kuvattomasta nostosta
+           * yhdelläkään ole lahde-kenttää. Kuvaputki ei toimittanut
+           * Botai-kuvaa tässä erässä; kun kuva tulee, DOI kuuluu sen
+           * "Tekoälyllä tuotettu havainnekuva. Viitteet: …" -riville.
+           */
+          otsikko: 'Kylä, joka haastoi hevosen historian',
           aika: '3700–3100 eaa.',
           teksti: 'Pohjois-Kazakstanissa Imanburlyq-joen rannalla asuttiin kuoppataloissa, '
               + 'joiden pohjia on kaivettu esiin yli sataviisikymmentä. Kylän ympäriltä '
               + 'löytyi aitauksia sekä hevosenluuta ja -lantaa niin suunnattomat määrät, '
-              + 'ettei metsästys enää selittänyt niitä. Vuonna 2009 luissa havaittiin '
-              + 'jalostuksen merkkejä ja hampaissa kolmenlaista kulumaa, jollaista syntyy '
-              + 'vain kuolaimista: hevonen oli valjastettu jo noin 3500 eaa., lähes tuhat '
-              + 'vuotta aiemmin kuin oli luultu. Osalla eläimistä oli myös '
-              + 'leopardikuvioisen turkin geeni, jonka kaksi kopiota sokeuttavat '
-              + 'hämärässä — villinä sellainen hevonen ei olisi selvinnyt.',
+              + 'ettei metsästys enää selittänyt niitä: noin 3500 eaa. botailaisten koko '
+              + 'elämä pyöri hevosen ympärillä. Siitä eteenpäin tutkijat ovat eri mieltä. '
+              + 'Vuonna 2009 luista luettiin jalostuksen merkkejä ja hampaista '
+              + 'kolmenlaista kulumaa, jollaisen sanottiin syntyvän vain kuolaimista — '
+              + 'siis kesytys ja ratsastus lähes tuhat vuotta luultua aiemmin. Myöhemmin '
+              + 'sama kuluma on selitetty luonnollisena, aitaukset pyyntiaitoina ja '
+              + 'lantakerrokset metsästyssaaliin jäljinä. Yksi asia on ratkennut: geenit '
+              + 'osoittavat, etteivät Botain hevoset ole nykyisten kotihevosten eli '
+              + 'DOM2-kannan esi-isiä vaan Przewalskinhevosen sukua.',
         },
         {
           otsikko: 'Karavaani, joka maksoi kaupungin',
@@ -46432,6 +46492,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Eepos, josta tunnetaan kuusitoista toisintoa',
           aika: '1894',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-kirjallisuus-2-r20260907-v4.jpg',
           teksti: 'Kyz-Zhibek on runoeepos, jonka tapahtumat sijoittuvat 1500-luvulle, '
               + 'aikaan jolloin kazakinkaanikunta oli vasta muodostumassa aron heimoista. '
               + 'Soturi Tölegen ja kaunis Žibek rakastuvat, mutta kilpakosija Bekežan '
@@ -46440,10 +46501,15 @@ export const MAA_KATEGORIAT = {
               + '1800-luvulla; ensimmäisen painetun laitoksen toimitti etnografi '
               + 'Jüsipbek Šaihislamuly Kazanissa 1894. Toisintoja tunnetaan kuusitoista. '
               + 'Eepoksesta tehtiin ooppera 1934 ja elokuva 1970.',
+          selite: 'Kaksikielinen dombra ja käsikirjoitus kazakkien kertovan lauluperinteen '
+              + 'kuvituksena.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Kazakstanin e-museum.kz — '
+              + 'dombra-kokoelmakohteet',
         },
         {
           otsikko: 'Toinen opettaja, jonka syntymäkaupungista kiistellään',
           aika: 'n. 870–950',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-kirjallisuus-3-r20260907-v2.jpg',
           teksti: 'Al-Farabi oli filosofi ja musiikinteoreetikko, jota myöhemmät '
               + 'kirjoittajat kutsuivat toiseksi opettajaksi — ensimmäinen oli '
               + 'Aristoteles. Suurimman osan tutkijanelämästään hän vietti Bagdadissa '
@@ -46454,6 +46520,10 @@ export const MAA_KATEGORIAT = {
               + 'kirjoitettiin vasta kauan hänen kuolemansa jälkeen kuulopuheiden '
               + 'varassa. Musiikin suurkirjassaan hän kuvasi kaksikielisen luutun, '
               + 'jollainen dombra on.',
+          selite: 'Musiikin mittasuhteita tutkiva oppinut al-Farabin ajan innoittamassa '
+              + 'kuvituksessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: British Library — Or. 2361, ff. '
+              + '238v–240r, al-Farabin musiikintutkielma',
         },
       ],
     },
@@ -47187,6 +47257,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Koululaiset tekivät oman laulutyylinsä',
           aika: '1982–1985',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sgp-musiikki-1-r20260907-v2.jpg',
           teksti: 'Xinyao tarkoittaa singaporelaisten nuorten itse tekemiä lauluja: nimi '
               + 'on lyhenne, jonka alkuosa on Singapore ja loppuosa laulu. Aiheet olivat '
               + 'ystävyys, koulu ja nuoruuden rakkaus, ja esikuvana oli Taiwanin '
@@ -47196,9 +47267,9 @@ export const MAA_KATEGORIAT = {
               + 'Syyskuussa 1985 pidettiin kaksipäiväinen festivaali, jossa esiintyi sata '
               + 'nuorta lauluntekijää; liput loppuivat viikkoa aiemmin. Vuoden lopussa '
               + 'rekisteröityjä ryhmiä oli neljätoista.',
-          selite: 'Genre hiipui 1990-luvulla, kun tekijät siirtyivät muualle ja '
-            + 'kotimarkkina osoittautui liian pieneksi. Opetusministeriöllä on ollut '
-            + 'vuodesta 2015 oma koulujen xinyao-ohjelmansa.',
+          selite: 'Nuorten xinyao-yhtyeen kouluharjoitus Singaporessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: National Heritage Board (Roots) — '
+              + 'Xinyao, aineeton kulttuuriperintö',
         },
         {
           otsikko: 'Etupenkki on varattu hengille',
@@ -47220,6 +47291,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Peranakaanipojasta kansallispäivän säveltäjä',
           aika: '1974–2005',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sgp-musiikki-3-r20260907-v2.jpg',
           teksti: 'Dick Lee aloitti viisitoistavuotiaana pianistina, perusti veljiensä '
               + 'kanssa oman yhtyeen ja julkaisi esikoisalbuminsa 1974. Hän oli '
               + 'ensimmäisiä, jotka toivat aasialaisia aineksia paikalliseen '
@@ -47229,8 +47301,10 @@ export const MAA_KATEGORIAT = {
               + 'Rice Paradise 1991. Kansallispäivän tunnuslauluja hän on tehnyt kaksi: '
               + 'Home vuonna 1998 ja We Will Get There 2002, ja jälkimmäisenä vuonna hän '
               + 'oli myös paraatin luova johtaja.',
-          selite: 'Leen isä oli peranakaani ja kirjoitti The Straits Timesiin. Poika sai '
-            + 'maan korkeimman taidepalkinnon Cultural Medallionin vuonna 2005.',
+          selite: 'Yhteislaulua Singaporen kansallispäivän juhlassa nykyajan '
+              + 'kaupunkimaisemassa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: BiblioAsia, Singaporen '
+              + 'kansalliskirjasto — Sing Singapore: National Day Songs, vol. 21 nro 1',
         },
       ],
     },
@@ -47244,6 +47318,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Neljä maalaria ja kuukausi Balilla',
           aika: '1952–1953',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sgp-kuvataide-0-r20260907-v2.jpg',
           teksti: 'Nanyang-tyyli sai nimensä sanasta, jolla Kaakkois-Aasiaa kutsuttiin '
               + 'Kiinasta katsoen: eteläinen meri. Sen tekivät maahan muuttaneet '
               + 'kiinalaissyntyiset maalarit 1940-luvun lopulta 1960-luvulle, ja he '
@@ -47254,8 +47329,10 @@ export const MAA_KATEGORIAT = {
               + 'kuvittelemaan saaren. Seuraavan vuoden näyttelyssä oli yli sata matkalla '
               + 'syntynyttä työtä, ja yhdessä niistä ääriviivat on vedetty valkoisella '
               + 'kuin batiikissa.',
-          selite: 'Retki oli suuntauksen käännekohta ja innoitti myöhemmin muitakin '
-            + 'ryhmiä lähtemään maalausmatkoille eri puolille Kaakkois-Aasiaa.',
+          selite: 'Balilla maalaavia taiteilijoita Nanyang-taiteen matkojen innoittamassa '
+              + 'kuvituksessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: National Gallery Singapore — '
+              + 'Siapa Nama Kamu -näyttelyjulkaisu, Nanyang Reverie',
         },
         {
           otsikko: 'Kaksisataa maalausta, jotka jäivät kouluun',
@@ -47278,6 +47355,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Gibbonit, joilla oli aluksi häntä',
           aika: '1948–1991',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sgp-kuvataide-2-r20260907-v5.jpg',
           teksti: 'Chen Wen Hsi saapui Singaporeen 1948 aikoen viipyä enintään kolme '
               + 'kuukautta, mutta kollegat ja siirtomaahallinnon ylikomissaari '
               + 'suostuttelivat hänet jäämään. Hän opetti koulussa ja taideakatemiassa ja '
@@ -47288,8 +47366,10 @@ export const MAA_KATEGORIAT = {
               + 'niitä hännällisinä, kunnes eräs ulkomaalainen korjasi virheen. Sen '
               + 'jälkeen hän osti lemmikkikaupasta gibbonin kolmellasadalla dollarilla ja '
               + 'kasvatti niitä lopulta kuusi.',
-          selite: 'Chen oli saanut jo Kiinassa tunnustusta maalari Xu Beihongilta. '
-            + 'Singaporessa hän kokeili tussin rinnalla fauvismia ja kubismia.',
+          selite: 'Gibboni taiteilijan työtilassa: Chen Wen Hsin kotipuutarhan ja '
+              + 'maalausaiheiden innoittama kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: National Gallery Singapore — Chen '
+              + 'Wen Hsi, Gibbons (kokoelmakohde 2015-00455) ja Home to Heart -elokuvaesittely',
         },
         {
           otsikko: 'Pariisista Siglapiin, nimeksi santelipuu',
@@ -47534,6 +47614,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Peitto, jota ommeltiin 25 vuotta',
           aika: '1892',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-lbr-kuvataide-0-r20260907-v1.jpg',
           teksti: 'Martha Ann Ricks syntyi orjaksi Tennesseessä noin 1817. Hänen isänsä '
               + 'George Erskine osti perheensä vapaaksi, ja 13-vuotias tytär muutti 1830 '
               + 'Clay-Ashlandiin. Perhe viljeli maata ja kasvatti kalkkunoita, ankkoja ja '
@@ -47543,8 +47624,11 @@ export const MAA_KATEGORIAT = {
               + 'punaiset marjat ja keskellä elämänpuun runko. Lähettiläs Edward Blyden '
               + 'järjesti 76-vuotiaalle audienssin, ja Ricks luovutti työnsä kuningatar '
               + 'Victorialle Windsorin linnassa 16. heinäkuuta 1892. Peitto on kadoksissa.',
-          selite: 'Ricksin peiton aiheena on Liberian kahvipuu: yli kolmesataa lehteä '
-            + 'ja punaiset marjat valkealla satiinilla.',
+          selite: 'Kuvitteellinen tulkinta Martha Ann Ricksin vuonna 1892 lahjoittamasta '
+              + 'kahvipuupeitteestä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: National Park Service — Great '
+              + 'Smoky Mountains, the Erskine Family and the Emigration of Freed Black People '
+              + 'to Liberia',
         },
         {
           otsikko: 'Maakunnan lippu on tilkkutyötä',

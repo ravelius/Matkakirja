@@ -1615,4 +1615,34 @@ export const MINIATYYRIT = {
     Taidegalleria: 'christchurch-taidegalleria',
     'Canterburyn museo': 'christchurch-canterburyn-museo',
   },
+  portoalegre: {
+    // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-24d-20260907.json).
+    // Tiedosto on pelin lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png;
+    // osoite tarkistettu 200.
+    'Joaquim Felizardon museo': 'portoalegre-joaquim-felizardon-museo',
+  },
+  asuncion: {
+    // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-24d-20260907.json).
+    // Tiedosto on pelin lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png;
+    // osoite tarkistettu 200.
+    Kaupunginteatteri: 'asuncion-kaupunginteatteri',
+    'Ateneo Paraguayo': 'asuncion-ateneo-paraguayo',
+  },
+  honiara: {
+    // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-24d-20260907.json).
+    // Tiedosto on pelin lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png;
+    // osoite tarkistettu 200.
+    //
+    // KAKSI TUNNUSTA EI OLE NIMEN SLUG. Kuvaputki toimitti museon
+    // nimellä honiara-kansallismuseo (ei -salomonsaarten-kansallismuseo)
+    // ja katedraalin nimellä honiara-holy-cross-katedraali (ei
+    // -holy-crossin-katedraali). Tunnus on ämpärin tiedostonimi, ja
+    // kuva on ämpärissä VAIN näillä nimillä — slugia noudattava tunnus
+    // pudottaisi merkin täpläksi. Nimi on silti kartan kohteen nimi,
+    // joten kytkentä ja tests/miniatyyrit.test.mjs pysyvät ehjinä.
+    'Salomonsaarten kansallismuseo': 'honiara-kansallismuseo',
+    'Point Cruz': 'honiara-point-cruz',
+    'Holy Crossin katedraali': 'honiara-holy-cross-katedraali',
+    'Guadalcanalin muistomerkki': 'honiara-guadalcanalin-muistomerkki',
+  },
 };
