@@ -17,6 +17,23 @@
 # äänistudion kautta ("Tuo valinnat"), ei automaattisesti: äänen
 # valinta on kuuntelupäätös, jota kone ei voi tehdä.
 #
+# ── TILA 3: ihmisen-matka-maisemat ────────────────────────────────────
+#
+# Omistajan tilaus 7.9.2026 ilta, sanatarkasti: *"olisi todella makeaa,
+# jos saataisiin myös joitain ääniefektejä, siis aitoja, jossain
+# nauhoitettuja, missä voisi olla eri paikkojen äänimaisemaa … jos
+# saadaan joitain pieniä eroja, niin se tekisi todella ison
+# säväytyksen."*
+#
+# Sama koneisto kuin pulun tehosteilla, eri mitat: lista
+# tools/tehosteet/ihmisen-matka-maisemat.json, kesto 30–120 s, taso
+# −30 LUFS (kertojan alla), hiljaisuuden leikkaus POIS päältä ja
+# tageilla `-tag:music -tag:speech` pois musiikki ja puhe. Vienti
+# ämpärin kansioon aanet/tehosteet/ihmisen-matka/ manifestin kanssa.
+#
+# KUUNTELE MYÖS NÄMÄ AJON JÄLKEEN — ja erityisesti: kone ei kuule,
+# onko nauhassa lentokoneen jyrinää tai nauhoittajan yskäisyä.
+#
 # ── TILA 2: pulu-tehosteet ────────────────────────────────────────────
 #
 # Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti: *"Pululle ja
@@ -56,11 +73,11 @@ on:
   workflow_dispatch:
     inputs:
       tila:
-        description: 'ehdokkaat = kuunneltavia ehdokkaita; pulu-tehosteet = ajaa tehostelistan ja vie ämpäriin'
+        description: 'ehdokkaat = kuunneltavia ehdokkaita; pulu-tehosteet ja ihmisen-matka-maisemat = ajaa listan ja vie ämpäriin'
         required: true
         type: choice
         default: 'ehdokkaat'
-        options: ['ehdokkaat', 'pulu-tehosteet']
+        options: ['ehdokkaat', 'pulu-tehosteet', 'ihmisen-matka-maisemat']
       kori:
         description: '[ehdokkaat] Valmis kori (meri, basaari, aavikko, sademetsä…) — jätä tyhjäksi jos käytät omaa hakua'
         required: false
@@ -82,11 +99,11 @@ on:
         required: false
         default: '600'
       tunnus:
-        description: '[pulu-tehosteet] Vain tämä tunnus (esim. siivet-lento). Tyhjä = koko lista.'
+        description: '[listat] Vain tämä tunnus (esim. siivet-lento tai savanni). Tyhjä = koko lista.'
         required: false
         default: ''
       kuiva:
-        description: '[pulu-tehosteet] Kuiva ajo: hae ja valitse, älä lataa äläkä vie ämpäriin'
+        description: '[listat] Kuiva ajo: hae ja valitse, älä lataa äläkä vie ämpäriin'
         required: false
         type: boolean
         default: false
@@ -143,7 +160,7 @@ jobs:
       # kaksitoista ääntä on jo haettu ja normalisoitu. Arvoja ei
       # tulosteta, vain onko ne asetettu.
       - name: Tarkista vientisalaisuudet
-        if: inputs.tila == 'pulu-tehosteet' && !inputs.kuiva
+        if: inputs.tila != 'ehdokkaat' && !inputs.kuiva
         run: |
           set -euo pipefail
           puuttuu=""
@@ -161,7 +178,7 @@ jobs:
       # ffmpeg puuttuu ubuntu-latest-ajurista, ja hiljaisuuden leikkaus,
       # häivytykset ja tason mittaus ovat sen varassa.
       - name: Asenna ffmpeg
-        if: inputs.tila == 'pulu-tehosteet' && !inputs.kuiva
+        if: inputs.tila != 'ehdokkaat' && !inputs.kuiva
         run: |
           set -euo pipefail
           sudo apt-get update -qq
@@ -185,6 +202,20 @@ jobs:
         if: inputs.tila == 'pulu-tehosteet'
         run: |
           args="--pulu --ulos ehdokkaat.json"
+          if [ -n "${{ inputs.tunnus }}" ]; then
+            args="$args --tunnus ${{ inputs.tunnus }}"
+          fi
+          if [ "${{ inputs.kuiva }}" = "true" ]; then
+            args="$args --kuiva"
+          fi
+          eval node tools/hae-freesound.mjs $args
+
+      # Sama työkalu, toinen lista: erot (kesto, taso, hiljaisuuden
+      # leikkaus, poissuljetut tagit) asuvat listassa eivätkä täällä.
+      - name: Aja Ihmisen matkan äänimaisemat
+        if: inputs.tila == 'ihmisen-matka-maisemat'
+        run: |
+          args="--maisemat --ulos ehdokkaat.json"
           if [ -n "${{ inputs.tunnus }}" ]; then
             args="$args --tunnus ${{ inputs.tunnus }}"
           fi

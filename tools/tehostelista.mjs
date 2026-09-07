@@ -36,6 +36,31 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const PULULISTA = resolve(JUURI, 'tools/tehosteet/pulu-tehosteet.json');
 
 /**
+ * Ihmisen matka -linssin äänimaisemalista (omistajan tilaus 7.9.2026
+ * ilta, Raamattu: LINSSIEN AIDOT AANIMAISEMAT). Sama koneisto kuin
+ * pulun tehosteilla — eri mitat: taustaääni eikä isku, joten kesto on
+ * 30–120 s, taso −30 LUFS ja hiljaisuuden leikkaus pois päältä.
+ */
+export const MAISEMALISTA = resolve(JUURI, 'tools/tehosteet/ihmisen-matka-maisemat.json');
+
+/**
+ * Listan levykansiot johdetaan ämpärin kansiosta eikä kirjoiteta
+ * käsin: kaksi listaa tarkoittaisi muuten kaksi paria vakioita, jotka
+ * voivat eriytyä. `aanet/tehosteet/pulu` → `media/tehosteet-pulu` ja
+ * `media/tehosteet-pulu-raaka` (täsmälleen entiset polut), `aanet/
+ * tehosteet/ihmisen-matka` → `media/tehosteet-ihmisen-matka`. Molemmat
+ * ovat media/-puolella, joka on .gitignoressa — media kuuluu ämpäriin.
+ */
+export function listanKansiot(lista) {
+  const nimi = String(lista?.amparinKansio ?? '').split('/').filter(Boolean).pop();
+  if (!nimi) throw new Error('listalta puuttuu amparinKansio');
+  return {
+    kohdekansio: `media/tehosteet-${nimi}`,
+    raakakansio: `media/tehosteet-${nimi}-raaka`,
+  };
+}
+
+/**
  * Freesoundin lisenssiosoitteet luettavaan muotoon. Sama taulukko kuin
  * hae-freesound.mjs:ssä; tuntematon osoite palautuu sellaisenaan, jottei
  * manifestiin päädy tyhjää lisenssikenttää.
@@ -67,9 +92,21 @@ export function lisenssisuodatin(tehoste) {
   return `license:(${nimet.map((n) => `"${n}"`).join(' OR ')})`;
 }
 
-/** Koko hakusuodatin: lisenssit ja kestorajat yhdessä. */
+/**
+ * Koko hakusuodatin: lisenssit, kestorajat ja poissuljetut tagit.
+ *
+ * POISSULJETUT TAGIT (`poisTagit`) ovat äänimaisemien takia: omistaja
+ * tilasi *nauhoitettuja paikkoja*, ja Freesoundin haku "ocean waves
+ * ambience" palauttaa myös meditaatiomusiikkia ja podcast-pätkiä, joissa
+ * aallot ovat taustalla. Rajaus tehdään palvelimen puolella samasta
+ * syystä kuin lisenssirajaus: jälkikäteen suodattava haku näyttäisi
+ * siltä, ettei kelvollista aineistoa ole. Ilman kenttää suodatin on
+ * kirjaimelleen entinen (pulun tehosteet).
+ */
 export function hakusuodatin(tehoste) {
-  return `${lisenssisuodatin(tehoste)} duration:[${tehoste.kestoMin} TO ${tehoste.kestoMax}]`;
+  const perus = `${lisenssisuodatin(tehoste)} duration:[${tehoste.kestoMin} TO ${tehoste.kestoMax}]`;
+  const pois = (tehoste?.poisTagit ?? []).map((t) => `-tag:${t}`).join(' ');
+  return pois ? `${perus} ${pois}` : perus;
 }
 
 /**
@@ -92,6 +129,23 @@ export function tarkistaTehostelista(data) {
     virheet.push('tehosteet puuttuu tai on tyhjä');
     return virheet;
   }
+  /*
+   * Poissuljetut tagit ovat valinnaisia ja pienaakkosia: ne menevät
+   * Freesoundin filter-parametriin sellaisenaan (`-tag:music`), joten
+   * väli tai iso kirjain rikkoisi hiljaa koko haun.
+   */
+  const tarkistaTagit = (arvo, nimi) => {
+    if (arvo === undefined) return;
+    if (!Array.isArray(arvo) || arvo.some((x) => typeof x !== 'string' || !/^[a-z0-9-]+$/.test(x))) {
+      virheet.push(`${nimi}: poisTagit pitää olla lista pienaakkosia tageja`);
+    }
+  };
+  tarkistaTagit(data.poisTagit, 'lista');
+  const etuliite = typeof data.peliavainEtuliite === 'string' && data.peliavainEtuliite
+    ? data.peliavainEtuliite : 'pulu';
+  if (!/^[a-z-]+$/.test(etuliite)) virheet.push('peliavainEtuliite ei ole pienaakkosia');
+  const avainMuoto = new RegExp(`^${etuliite}\\.[a-z0-9-]+$`);
+
   const nahdyt = new Set();
   for (const t of data.tehosteet) {
     const nimi = t?.tunnus ?? '(nimetön)';
@@ -105,11 +159,15 @@ export function tarkistaTehostelista(data) {
     if (typeof t?.kuvaus !== 'string' || !t.kuvaus.trim()) {
       virheet.push(`${nimi}: kuvaus puuttuu`);
     }
-    // Peliavain on kytkentä js/sound.js:ään. Ilman sitä tiedosto
-    // päätyisi ämpäriin eikä koskaan peliin — ja se huomattaisiin vasta
-    // kun joku ihmettelee, miksi ääni ei soi.
-    if (typeof t?.peliavain !== 'string' || !/^pulu\.[a-z0-9-]+$/.test(t.peliavain)) {
-      virheet.push(`${nimi}: peliavain puuttuu tai ei ole muotoa pulu.<nimi>`);
+    /*
+     * Peliavain on kytkentä peliin. Ilman sitä tiedosto päätyisi
+     * ämpäriin eikä koskaan peliin — ja se huomattaisiin vasta kun joku
+     * ihmettelee, miksi ääni ei soi. Etuliite kertoo, mihin kytkentä
+     * menee: `pulu.` js/sound.js:n PULUN_TEHOSTEET-taulukkoon, `maisema.`
+     * kertomuksen `maisema`-kenttiin (js/linssit/ihmisen-matka-kertomus.js).
+     */
+    if (typeof t?.peliavain !== 'string' || !avainMuoto.test(t.peliavain)) {
+      virheet.push(`${nimi}: peliavain puuttuu tai ei ole muotoa ${etuliite}.<nimi>`);
     }
     if (!Array.isArray(t?.hakusanat) || !t.hakusanat.length
       || t.hakusanat.some((s) => typeof s !== 'string' || !s.trim())) {
@@ -123,6 +181,7 @@ export function tarkistaTehostelista(data) {
       || t.kestoMin <= 0 || t.kestoMax <= t.kestoMin) {
       virheet.push(`${nimi}: kestoMin ja kestoMax puuttuvat tai ovat väärin päin`);
     }
+    tarkistaTagit(t?.poisTagit, nimi);
     if (!Array.isArray(t?.lisenssit) || !t.lisenssit.length) {
       virheet.push(`${nimi}: lisenssit puuttuvat`);
     } else {
@@ -139,14 +198,25 @@ export function tarkistaTehostelista(data) {
   return virheet;
 }
 
-/** Lukee ja tarkistaa tehostelistan. Kaatuu, jos muoto ei kelpaa. */
+/**
+ * Lukee ja tarkistaa tehostelistan. Kaatuu, jos muoto ei kelpaa.
+ *
+ * Listan tason `poisTagit` valuu jokaiselle tehosteelle, joka ei
+ * määrittele omiaan: viisitoista äänimaisemaa kirjoittaisi muuten saman
+ * neljän tagin listan viisitoista kertaa, ja yhden unohtaminen olisi
+ * yksi hiljainen musiikkiosuma.
+ */
 export function lueTehostelista(polku = PULULISTA) {
   const data = JSON.parse(readFileSync(polku, 'utf8'));
   const virheet = tarkistaTehostelista(data);
   if (virheet.length) {
     throw new Error(`${polku} ei kelpaa:\n  ${virheet.join('\n  ')}`);
   }
-  return data;
+  if (!Array.isArray(data.poisTagit) || !data.poisTagit.length) return data;
+  return {
+    ...data,
+    tehosteet: data.tehosteet.map((t) => (t.poisTagit ? t : { ...t, poisTagit: data.poisTagit })),
+  };
 }
 
 /**

@@ -782,3 +782,91 @@ soitaLivianTehoste`) ja kolmessa yhden rivin kutsussa:
   pelaaja valitsee kaupungin
 
 Vartija: `tests/pulu-tehosteet.test.mjs`.
+
+## Linssien äänimaisemat: Ihmisen matka (omistaja 7.9.2026 ilta)
+
+Omistajan tilaus, sanatarkasti: *"olisi todella makeaa, jos saataisiin
+myös joitain ääniefektejä, siis aitoja, jossain nauhoitettuja, missä
+voisi olla eri paikkojen äänimaisemaa. Lähinnähän ne ovat varmaan
+jotain tuulta ja sademetsän sirkutusta, mutta jos saadaan joitain
+pieniä eroja, niin se tekisi todella ison säväytyksen."* (Raamattu:
+**LINSSIEN AIDOT AANIMAISEMAT**.)
+
+Nämä **haetaan valmiina äänitteinä Freesoundista, ei generoida** —
+sama linjaus ja sama putki kuin pulun tehosteilla, eri mitat.
+
+| ominaisuus | vaatimus |
+|---|---|
+| tiedostot | `aanet/tehosteet/ihmisen-matka/<tyyppi>.mp3` + `manifesti.json` |
+| kesto | 30–120 s (silmukka kestää minuutteja; lyhyempi kuuluisi kierroksena) |
+| taso ja formaatti | **−30 LUFS**; mp3, mono, 128 kbps, 44,1 kHz |
+| lisenssit | CC0 ensisijaisesti, CC BY attribuutiolla — ei mitään muuta |
+| rajaus | `-tag:music -tag:song -tag:speech -tag:voice`: nauhoitettu paikka, ei musiikkia eikä puhetta |
+| hiljaisuuden leikkaus | **pois päältä** — tuulen hiljaisin kohta on osa tuulta |
+| häivytykset päissä | 0,25 s (jäävät soittimen ristihäivytyksen sisään) |
+
+**Lista** on `tools/tehosteet/ihmisen-matka-maisemat.json`: 15
+maisematyyppiä, kolme englanninkielistä hakua kummallekin, kestorajat
+ja lisenssit. Sama muototarkistus kuin pulun listalla
+(`tools/tehostelista.mjs`); ero on `peliavainEtuliite: "maisema"`,
+listan tason `poisTagit` ja `leikkaaHiljaisuus: false`.
+
+**Kytkentä peliin** ei ole `js/sound.js`:ssä vaan kertomuksessa:
+jokaisella jaksolla (`js/linssit/ihmisen-matka-kertomus.js`) on tekninen
+kenttä `maisema`, jonka arvo on listan tunnus tai `null` (avausjakso on
+musta ruutu ja pelkkä kertojan ääni). `tests/ihmisen-matka-aanimaisemat.test.mjs`
+vartioi molempiin suuntiin: yksikään jakso ei saa pyytää tuntematonta
+tunnusta, eikä yhtäkään tunnusta saa hakea ämpäriin ilman käyttäjää.
+
+### Soitin
+
+`js/linssit/ihmisen-matka-aanimaisema.js`, kaksi käskyä:
+
+```js
+asetaAanimaisema(jakso.maisema);   // jokaisen jakson alussa
+lopetaAanimaisema();               // kun linssi suljetaan
+```
+
+Sama tyyppi peräkkäin ei tee mitään — kolme savannijaksoa on YKSI
+katkeamaton savanni. Vaihto on 2,5 sekunnin ristihäivytys (omistajan
+mitta 2–3 s), ja **sama koneisto tekee myös silmukan sauman**:
+kenttä-äänitteen alku ja loppu eivät osu yhteen, joten `audio.loop`
+kuuluisi kuoppana joka kierroksella; sen sijaan kierroksesta
+ristihäivytyksen verran ennen loppua aloitetaan uusi kierros samasta
+tiedostosta ja vanha häivytetään sen alta.
+
+Taso on `MAISEMAN_VOIMA` = 0,10 — **kuulokokeen nuppi**, omistaja
+säätää sen omalla laitteellaan. Soitin väistää kertojan, pöllön ja
+lukunäkymien alta (`lisaaVaistaja`), vaikenee taustalle mennessä
+(`lisaaTaustaVaimennus`), tottelee äänivalikon mykistystä
+(`matkakirja-aanivalinta`) ja kehittäjän `tausta`-kerrointa. **Linssin
+oman `linssi`-hiljennyksen se ohittaa** — muuten maisema väistyisi omaa
+hiljennystään ja jäisi puoleen tasoon koko esityksen ajaksi (sama
+poikkeus kuin linssin musiikkiraidalla, `js/siirtymamusiikki.js`).
+
+Puuttuva manifesti ja puuttuva tiedosto ovat **hiljaisuutta eivätkä
+virhe**: ennen hakuajoa esitys kulkee täsmälleen samoin, vain ilman
+maisemaa.
+
+### Ajo
+
+```
+node tools/hae-freesound.mjs --maisemat --kuiva
+node tools/hae-freesound.mjs --maisemat
+node tools/hae-freesound.mjs --maisemat --tunnus savanni
+```
+
+Avain on repon salaisuuksissa, joten oikea ajo tehdään työnkulusta:
+`.github/workflows/aanihaku.yml`, `tila: ihmisen-matka-maisemat`
+(`tunnus` yhden korjaukseen, `kuiva` pelkkään valintaan). Ajo ei
+committoi mitään: tiedostot menevät `media/tehosteet-ihmisen-matka/`
+-kansioon, joka on .gitignoressa, ja sieltä ämpäriin.
+
+**KUUNTELE AJON JÄLKEEN.** Kone valitsee arvosanasta, latauksista ja
+kestosta; se ei kuule lentokoneen jyrinää tai nauhoittajan yskäisyä.
+CC BY -tekijät kirjataan manifestista `js/lahteet.js`:n Äänet-osastoon
+ja README.md:n samaan lukuun.
+
+Ehdokaslista ja omistajan hyväksyntä:
+`docs/raportit/ihmisen-matka-aanimaisemat-ehdokkaat.md`.
+Vartija: `tests/ihmisen-matka-aanimaisemat.test.mjs`.

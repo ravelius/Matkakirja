@@ -397,6 +397,7 @@ pakettien otsikkokommentit).
 | --- | --- | --- |
 | radio aporee ::: maps — kenttä-äänitykset (äänimaisemat, "Kuuntele kieltä") | Äänittäjät kohteittain, jakelu archive.org | PD, CC BY, CC BY-SA, CC BY-NC kohteittain |
 | Freesound — äänimaisemat ja tehosteet | Äänittäjät kohteittain (mm. LoafDV, brktkrgll, Hoscalegeek, AardsReal) | CC0, CC BY, CC BY-NC kohteittain |
+| Freesound — Livian ääniefektit ja linssien nauhoitetut äänimaisemat (Ihmisen matka) | Äänittäjät kohteittain; tekijä, lisenssi ja Freesoundin id manifestissa äänen vieressä (aanet/tehosteet/pulu/, aanet/tehosteet/ihmisen-matka/) | CC0 ja CC BY kohteittain |
 | Lyhytaaltoäänitteet — maailmanradion viritysäänet | archive.orgin arkistot, mm. samnewton94 | Public Domain Mark 1.0, CC0 |
 | "Pocket camera start and shut down" — zoomausääni | stephan, pdsounds.org Wikimedia Commonsin kautta | Public domain |
 | Musiikkinäytteet kulttuurinostoissa | Wikimedia Commons, archive.org (vain lisenssiosoitteella merkityt) | Kohteittain |

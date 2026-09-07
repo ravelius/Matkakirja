@@ -19,6 +19,15 @@
  *             kuva näytetään sivuosassa jakson ajan (null = ei kohdetta)
  *   alue      kameran rajaus, kun kohdetta ei ole: { lat, lon, korkeus }
  *             tai nimetty alue ('afrikka', 'beringia', 'tyynimeri')
+ *   maisema   TEKNINEN KENTTÄ (ei tekstiä): jakson äänimaisematyyppi,
+ *             joka soi kertojan alla nauhoitettuna kenttä-äänitteenä
+ *             (js/linssit/ihmisen-matka-aanimaisema.js, tiedostot
+ *             ämpärissä aanet/tehosteet/ihmisen-matka/<tyyppi>.mp3).
+ *             null = hiljaisuus; avausjakso on pimeä ruutu ja pelkkä
+ *             ääni, eikä siinä ole vielä paikkaa. Tunnukset ovat
+ *             tools/tehosteet/ihmisen-matka-maisemat.json:ssa, ja
+ *             tests/ihmisen-matka-aanimaisemat.test.mjs vartioi, että
+ *             kentät ja lista vastaavat toisiaan.
  *   vuosia    kartan kellon lukema jakson alussa (vuosia sitten;
  *             negatiivinen = jaa.), josta kello etenee seuraavaan
  *   teksti    ruudulla näytettävä teksti (sanasta sanaan kaanon)
@@ -32,6 +41,7 @@
 export const IHMISEN_MATKA_KERTOMUS = [
   {
     id: 'avaus', vaihe: 'pimea', kohde: null, alue: null, vuosia: 300000,
+    maisema: null,
     teksti: 'Tiedätkö, mistä ihmiset lähtivät liikkeelle? Ei kukaan heistäkään '
       + 'tiennyt. He vain lähtivät. Afrikasta. Kaikki meistä.',
     luenta: '[curious] Tiedätkö, mistä ihmiset lähtivät liikkeelle? [softly] Ei '
@@ -41,6 +51,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'afrikka', vaihe: 'valot', kohde: null, alue: 'afrikka', vuosia: 300000,
+    maisema: 'savanni',
     teksti: 'Tämä on se maanosa, jossa ihminen oppi kävelemään, puhumaan ja '
       + 'tekemään tulta. Ja täältä, Marokon kukkulalta…',
     luenta: 'Tämä on se maanosa, jossa ihminen oppi kävelemään, puhumaan ja '
@@ -49,6 +60,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'jebel-irhoud', vaihe: 'matka', kohde: 'jebel-irhoud', alue: null, vuosia: 300000,
+    maisema: 'savanni',
     teksti: '…on löydetty vanhimmat luut ihmisistä, joilla oli jo samanlaiset '
       + 'kasvot kuin meillä. Jos yksi heistä kävelisi vastaan kadulla, et '
       + 'kääntyisi katsomaan. Kukaan täällä ei tiennyt olevansa ensimmäinen '
@@ -61,6 +73,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'siirtyma-afrikka', vaihe: 'matka', kohde: null, alue: 'afrikka-ita', vuosia: 240000,
+    maisema: 'savanni',
     teksti: 'Mutta mennäänpä toiselle puolelle Afrikkaa. Sieltä varsinainen matka '
       + 'alkaa, vaikka kukaan ei ollut sitä suunnitellut.',
     luenta: '[curious] Mutta mennäänpä toiselle puolelle Afrikkaa. Sieltä '
@@ -69,6 +82,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'omo', vaihe: 'matka', kohde: 'omo-kibish', alue: null, vuosia: 230000,
+    maisema: 'jokilaakso',
     teksti: 'Etiopian jokilaaksossa ihmisiä asui sukupolvi sukupolven perään. '
       + 'Kaksisataatuhatta vuotta samassa laaksossa. Meidän mittapuullamme se on '
       + 'ikuisuus, heidän mittapuullaan kotiseutu.',
@@ -79,6 +93,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'ranta', vaihe: 'matka', kohde: 'pinnacle-point', alue: null, vuosia: 164000,
+    maisema: 'meren-ranta',
     teksti: 'Kului pitkä aika, ennen kuin joku käveli rantaan asti. Ja rannasta '
       + 'löytyi ruokaa, joka ei juokse karkuun: simpukoita. Siitä lähtien meri '
       + 'on ollut ihmisen tie eikä este.',
@@ -89,6 +104,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'blombos', vaihe: 'matka', kohde: 'blombos', alue: null, vuosia: 75000,
+    maisema: 'meren-ranta',
     teksti: 'Samalla rannikolla joku hioi okraa punaiseksi ja pujotteli '
       + 'simpukankuoria helmiksi. Kukaan ei tiedä, kenelle. Mutta se, joka tekee '
       + 'helmiä, ajattelee jo niin kuin me.',
@@ -99,6 +115,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'levantti', vaihe: 'matka', kohde: 'skhul-qafzeh', alue: null, vuosia: 110000,
+    maisema: 'vuoristotuuli',
     teksti: 'Ensimmäinen retki Afrikan ulkopuolelle ulottui Karmelvuorelle asti. '
       + 'Se ei jäänyt. Ehkä ilmasto kääntyi, ehkä naapurit. Historia ei kerro, ja '
       + 'luut vaikenevat.',
@@ -109,6 +126,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'arabia', vaihe: 'matka', kohde: 'al-wusta', alue: null, vuosia: 90000,
+    maisema: 'ruohikko-jarvi',
     teksti: 'Sitten Arabia vihertyi. Autiomaan paikalla oli järviä ja ruohoa, ja '
       + 'yhden järven rannalta on löydetty yksi ainoa sormiluu. Se riittää: tästä '
       + 'kohdin ihmiset lähtivät kohti Aasiaa, eivätkä enää palanneet.',
@@ -120,6 +138,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'intian-rannat', vaihe: 'matka', kohde: 'lida-ajer', alue: null, vuosia: 70000,
+    maisema: 'sademetsa',
     teksti: 'Reitti kulki rantoja pitkin itään, sukupolvi kerrallaan, kukaan ei '
       + 'kiirehtinyt. Sumatran sademetsästä on löydetty kaksi hammasta. Enemmän '
       + 'ei tarvita, kun tietää mitä etsii.',
@@ -130,6 +149,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'australia', vaihe: 'matka', kohde: 'madjedbebe', alue: null, vuosia: 65000,
+    maisema: 'rannikkomeri',
     teksti: 'Ja sitten jotain, mitä kukaan ei ollut ennen tehnyt: meren yli, kun '
       + 'toista rantaa ei näy. Sahul, nykyinen Australia. Ensimmäinen merimatka '
       + 'tuntemattomaan, ja se onnistui.',
@@ -140,6 +160,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'denisova', vaihe: 'matka', kohde: 'denisova', alue: null, vuosia: 50000,
+    maisema: 'luola',
     teksti: 'Pohjoisessa, Altain vuorilla, on luola, jossa asui kolme erilaista '
       + 'ihmisryhmää: denisovalaiset, neandertalilaiset ja niiden yhteinen lapsi. '
       + 'Meidän esineemme tulivat sinne jo melkein heti perään. Luola on pieni. '
@@ -153,6 +174,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'napapiiri', vaihe: 'matka', kohde: 'yana', alue: null, vuosia: 32000,
+    maisema: 'arktinen-tuuli',
     teksti: 'Kylmä ei pysäyttänyt, se vain hidasti. Kun mammutit vielä kävelivät, '
       + 'ihmisiä asui jo napapiirin takana Janajoella. Talvi oli yhdeksän '
       + 'kuukautta pitkä, ja silti he jäivät.',
@@ -163,6 +185,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'beringia', vaihe: 'matka', kohde: 'beringia', alue: null, vuosia: 22000,
+    maisema: 'tundratuuli',
     teksti: 'Ja nyt ylitetään meri, jota ei enää ole. Jääkausi imi meret '
       + 'mataliksi, ja Beringinsalmen tilalla oli kuivaa ruohomaata. Sitä pitkin '
       + 'käveltiin Amerikkaan. Kukaan ei huomannut vaihtavansa mannerta.',
@@ -173,6 +196,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'white-sands', vaihe: 'matka', kohde: 'white-sands', alue: null, vuosia: 22000,
+    maisema: 'tundratuuli',
     teksti: 'Uudessa-Meksikossa on jalanjälkiä järven mutaan, lapsen ja aikuisen. '
       + 'Ne ovat vanhempia kuin kukaan uskoi, ja ne sotkivat siistin kartan '
       + 'kokonaan. Hyvä niin.',
@@ -183,6 +207,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'chile', vaihe: 'matka', kohde: 'monte-verde', alue: null, vuosia: 14500,
+    maisema: 'metsasade',
     teksti: 'Rannikkoa pitkin päästiin Etelä-Amerikan kärkeen asti, vain reilussa '
       + 'parissa tuhannessa vuodessa. Monte Verden leiri jäi turpeen alle: '
       + 'nuotio, majat, ja yksi lapsen jalanjälki. Siihen päättyi pisin '
@@ -195,6 +220,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'aikahyppy', vaihe: 'hyppy', kohde: null, alue: 'keski-aasia', vuosia: 50000,
+    maisema: 'kylma-tuuli',
     teksti: 'Mutta palataan takaisin Aasiaan. Sillä samaan aikaan, kun pääjoukko '
       + 'kulki itään, yksi haara kääntyi vastavirtaan, länteen.',
     luenta: '[curious] Mutta palataan takaisin Aasiaan. Sillä samaan aikaan, kun '
@@ -203,6 +229,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'eurooppa', vaihe: 'matka', kohde: 'bacho-kiro', alue: null, vuosia: 45000,
+    maisema: 'kylma-tuuli',
     teksti: 'Bulgarian luolasta on löydetty ensimmäiset merkit meikäläisistä '
       + 'Euroopassa. Manner oli kylmä ja täynnä neandertalilaisia. Silti he '
       + 'jäivät, ja neandertalilaiset eivät. Miksi? Siitä kiistellään yhä, ja hyvä '
@@ -215,6 +242,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'chauvet', vaihe: 'matka', kohde: 'chauvet', alue: null, vuosia: 36000,
+    maisema: 'luola',
     teksti: 'Ranskassa joku laskeutui luolan pimeyteen ja maalasi seinään '
       + 'hevosia, sarvikuonoja ja leijonia. Ne ovat siellä vieläkin, samassa '
       + 'asennossa. Kuka hän oli? Emme tiedä. Mutta hän oli taiteilija, ja se '
@@ -227,6 +255,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'meri', vaihe: 'matka', kohde: 'lapita', alue: null, vuosia: 3000,
+    maisema: 'avomeri',
     teksti: 'Viimeisenä oli meri. Tyynellämerellä oli saaria, joille ei kävellyt '
       + 'kukaan. Sinne purjehdittiin kanooteilla, ja saviastiat kulkivat mukana. '
       + 'Tongalle asti, tähtien perässä.',
@@ -237,6 +266,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'uusi-seelanti', vaihe: 'matka', kohde: 'aotearoa', alue: null, vuosia: 750,
+    maisema: 'rantalinnut',
     teksti: 'Viimeinen suuri maa odotti pisimpään. Uuteen-Seelantiin tultiin '
       + 'vasta, kun Euroopassa rakennettiin jo katedraaleja. Silloin ihminen oli '
       + 'kiertänyt koko maapallon, eikä kukaan ollut huomannut lähteneensä.',
@@ -248,6 +278,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   },
   {
     id: 'loppu', vaihe: 'loppu', kohde: null, alue: 'maailma', vuosia: 0,
+    maisema: 'hiljainen-tuuli',
     teksti: 'Kukaan matkalla ei tiennyt olevansa matkalla. Jokainen vain siirsi '
       + 'leirinsä seuraavan rannan taakse. Kolmesataatuhatta vuotta, ja tässä me '
       + 'olemme.',

@@ -250,6 +250,28 @@ export const LAHTEET = [
         tekija: 'Äänittäjät kohteittain, mm. LoafDV, brktkrgll, Hoscalegeek, AardsReal',
         lisenssi: 'CC0, CC BY ja CC BY-NC kohteittain',
       },
+      /*
+       * Kaksi hakuajoa, jotka valitsevat äänensä koneellisesti ja
+       * kirjaavat tekijän manifestiin äänen viereen ämpäriin: pulun
+       * ääniefektit (tools/hae-freesound.mjs --pulu) ja Ihmisen matka
+       * -linssin äänimaisemat (--maisemat). Nimeltä ei voi luetella
+       * tässä, koska huonon osuman vaihtaminen paremmaksi vaihtaa
+       * tekijän eikä peli saa odottaa julkaisua sen takia — mutta
+       * KOKOELMA ja LISENSSIRAJAUS ovat pysyviä, ja juuri ne lisenssi
+       * vaatii näytettäväksi. Yksittäiset CC BY -nimet ovat manifestissa
+       * ja ajon lokissa; ne lisätään tähän riviin, kun lista on ajettu
+       * ja omistaja on hyväksynyt äänet.
+       */
+      {
+        nimi: 'Freesound — Livian ääniefektit ja linssien nauhoitetut '
+          + 'äänimaisemat (Ihmisen matka: savanni, sademetsä, luola, '
+          + 'arktinen tuuli, meren ranta…)',
+        tekija: 'Äänittäjät kohteittain; tekijä, lisenssi ja Freesoundin id '
+          + 'kulkevat äänen mukana manifestissa (aanet/tehosteet/pulu/ ja '
+          + 'aanet/tehosteet/ihmisen-matka/)',
+        lisenssi: 'CC0 ja CC BY kohteittain (haku rajaa vain näihin kahteen)',
+        huom: 'Haku tools/hae-freesound.mjs, ajo .github/workflows/aanihaku.yml',
+      },
       {
         nimi: 'Lyhytaaltoäänitteet — maailmanradion viritysäänet',
         tekija: 'archive.orgin arkistot, mm. samnewton94',
