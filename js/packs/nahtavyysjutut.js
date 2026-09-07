@@ -53040,4 +53040,533 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * ADDIS ABEBA (Opus, Fablen parvi 7.9.2026). Kahdeksan kohdetta
+   * kohdekartalta (js/packs/maakartat.js, KAUPUNKIKARTAT.addisabeba).
+   * Lähteet luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Ethnological Museum, Addis Ababa", "National Museum of
+   * Ethiopia", "Hager Fikir Theatre", "St. George's Cathedral, Addis
+   * Ababa", "Menelik II School", "Taitu Hotel", "Holy Trinity
+   * Cathedral, Addis Ababa", "Abrehot Library" sekä "Addis Ababa" ja
+   * "Timeline of Addis Ababa" ristiriitojen tarkistamiseen.
+   *
+   * YKSIKÄÄN JUTTU EI TOISTA LEHDEN NOSTOJA (docs/mantereet-
+   * tyoaineisto/tarkistus-addisabeba.md, kohta I). Miehitys 1936–1941
+   * kerrotaan rakennusten historian osana ilman julmuuksien
+   * yksityiskohtia, ja nykypolitiikka on jätetty pois.
+   */
+  addisabeba: {
+    'Etnologinen museo': {
+      aika: '1950',
+      teksti: 'Etiopian ensimmäinen yliopistomuseo perustettiin 1950. '
+          + 'Kokoelmien pohjana olivat vanhat italialaiset '
+          + 'eläintieteelliset näytteet ja ensimmäisten valmistuneiden '
+          + 'keräämät esineet, ja ajatuksen isä oli yliopiston '
+          + 'pääkirjastonhoitaja Stanisław Chojnacki.'
+          + '\n\n'
+          + 'Museo on Addis Abeban yliopiston päakampuksella, samassa '
+          + 'talossa kuin Institute of Ethiopian Studies. Rakennus on '
+          + 'Guenete Leul -palatsi, joka valmistui aikajanan mukaan '
+          + '1930 ja oli keisari Haile Selassien asuinpalatsi. '
+          + 'Kävijä kulkee siis makuuhuoneiden ja juhlasalien läpi.'
+          + '\n\n'
+          + 'Kokoelmat on jaettu viiteen: antropologia, '
+          + 'etnomusikologia, taidegalleria, postimerkit ja rahat. '
+          + 'Soitinkokoelma on maan laajimpia, ja antropologian osasto '
+          + 'esittelee Etiopian kansojen elämää syntymästä kuolemaan.',
+      lahde: 'Wikipedia',
+    },
+    'Etiopian kansallismuseo': {
+      aika: '1958',
+      teksti: 'Ajatus museosta esiteltiin Etiopiassa ensimmäisen '
+          + 'kerran 1936, kun avattiin näyttely Salomonin dynastian '
+          + 'lahjoittamista seremonia-asuista. Nykyinen museo kasvoi '
+          + '1958 perustetusta arkeologian instituutista, jonka '
+          + 'ranskalaiset arkeologit perustivat pohjoisen Etiopian '
+          + 'tutkimusta varten; museo aloitti näyttämällä esineitä '
+          + 'noilta kaivauksilta.'
+          + '\n\n'
+          + 'Vuonna 1976 perustettu kulttuuriperintöhallinto teki '
+          + 'siitä kansallismuseon, jolla on lakiin perustuva vastuu '
+          + 'koko maan muinaisjäännöksistä. Taiteilijat Afewerk Tekle '
+          + 'ja Mamo Tessema olivat mukana perustamassa museota, ja '
+          + 'jälkimmäinen toimi sen intendenttinä.'
+          + '\n\n'
+          + 'Kuuluisin näyttelyesine on kellarissa: Lucy, '
+          + 'etiopialaisittain Dinkinesh, Australopithecus afarensiksen '
+          + 'osittainen luuranko. Samassa kerroksessa on Selam, noin '
+          + '3,3 miljoonaa vuotta vanha fossiili, joka löydettiin '
+          + 'vuosien 2000 ja 2004 välillä. Muualla talossa on '
+          + 'etiopialaista taidetta, muun muassa Afewerk Teklen töitä.',
+      kuvat: [
+        {
+          tiedosto: 'Restos de Lucy (Australopithecus afarensis), museo nacional de Etiopía, Adís Abeba, Etiopía, 2024-01-19, DD 23.jpg',
+          selite: 'Lucyn luut on aseteltu vitriiniin siihen '
+            + 'järjestykseen, jossa ne olivat elävässä ruumiissa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hager Fikir -teatteri': {
+      aika: '1935',
+      teksti: 'Talo oli ensin yökerho. Teatteriksi se muuttui 1935, '
+          + 'kun yhdistys nimeltä Ye-hager Fikir Mahber otti sen '
+          + 'haltuunsa — tarkoituksena oli koota kansaa ja kulttuuria '
+          + 'yhteen juuri ennen Italian hyökkäystä. Ensimmäinen esitys '
+          + 'oli ulkoilmanäytös Menelikin aukiolla, ja ohjelmassa oli '
+          + 'fukeraa ja shilelaa, perinteisiä lauluja ja runoutta. '
+          + 'Mukana oli etiopialaisen draaman uranuurtaja Yoftahe '
+          + 'Negussie.'
+          + '\n\n'
+          + 'Miehityksen aikana yhdistys jatkoi työtä maan alla ja '
+          + 'tuotti musiikkia, näytelmiä ja tanssia; toiminta päättyi '
+          + 'vasta maan vapautumiseen 1941. Sen jälkeen teatteri '
+          + 'siirtyi Piazzan varastorakennukseen, joka uudistettiin '
+          + '1942.'
+          + '\n\n'
+          + 'Lavalla ovat esiintyneet monet maan tunnetuimmista '
+          + 'taiteilijoista, muun muassa laulajat Tilahun Gessesse ja '
+          + 'Aster Aweke. Ohjelmistossa on sekä etiopialaisia '
+          + 'näytelmiä että Shakespearea, Schilleriä, Ibseniä ja '
+          + 'Molièrea, ja pyhinä salissa on näytetty myös elokuvia. '
+          + 'Se on yhä yksi Etiopian vanhimmista teattereista.',
+      kuvat: [
+        {
+          tiedosto: 'HagerFikirTheatre.jpg',
+          selite: 'Teatterin julkisivua kiertää sakarareunus, ja '
+            + 'sisäänkäynnin molemmin puolin on lasimaalauksia.',
+          lahde: 'Steffen Wurzel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Yrjön katedraali': {
+      aika: '1896',
+      teksti: 'Kirkko on kahdeksankulmainen, mikä erottaa sen kaikesta '
+          + 'muusta kaupungissa. Se rakennettiin vanhemman, '
+          + '1400-luvulta peräisin olevan kirkon raunioille, ja nimi '
+          + 'tulee siitä, että kirkon tabot eli arkku kannettiin Adwan '
+          + 'taisteluun. Aikajana ajoittaa kirkon vuoteen 1896; '
+          + 'nykyisen rakennuksen suunnitteli ja rakensi italialainen '
+          + 'insinööri Sebastiano Castagna 1911. Molemmat luvut ovat '
+          + 'oikein, koska ne kertovat eri asiasta.'
+          + '\n\n'
+          + 'Katedraali seisoo Churchill Roadin pohjoispäässä ja on '
+          + 'ollut kruunajaiskirkko: keisarinna Zewditu kruunattiin '
+          + 'täällä 1917 ja keisari Haile Selassie 1930. Jälkimmäisen '
+          + 'kruunajaisten takia kirkosta tuli myöhemmin myös '
+          + 'rastafarien pyhiinvaelluskohde.'
+          + '\n\n'
+          + 'Kirkon yhteydessä on museo. Siellä on keisarillinen '
+          + 'valtaistuin ja taiteilija Afewerk Teklen lasimaalauksia '
+          + 'sekä aseita sodista italialaisia vastaan: kaarevia '
+          + 'miekkoja, kolmikärkiä ja kypäriä, jotka on tehty '
+          + 'leijonan harjasta. Italialaishallinto sytytti rakennuksen '
+          + 'tuleen 1937, ja Haile Selassie kunnosti sen vapautuksen '
+          + 'jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'St. George Cathedral, Addis Ababa.jpg',
+          selite: 'Kahdeksankulmainen kivikirkko hopeisen kupolin '
+            + 'alla aukion laidalla.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Menelik II:n koulu': {
+      aika: '1908',
+      teksti: 'Etiopian ensimmäinen moderni koulu perustettiin '
+          + 'lokakuussa 1908 keisari Menelik II:n käskystä. Opetusta '
+          + 'ohjasi egyptiläinen kasvattaja Hana Salib '
+          + 'koptiopettajien kanssa, ja rakennuksen suunnittelivat '
+          + 'kreikkalaiset insinöörit ja arkkitehdit. Aikajana merkitsee '
+          + 'koulun perustamisvuodeksi 1906; se on vuosi, jona Menelik '
+          + 'antoi julistuksen, joka teki modernista koulutuksesta '
+          + 'luvallista.'
+          + '\n\n'
+          + 'Aluksi oppilaita oli parikymmentä ja pian noin sata, '
+          + 'enimmäkseen aatelisten poikia. Osa aatelisista ei halunnut '
+          + 'luopua perinteisestä opetuksesta ja lähetti kouluun '
+          + 'palvelijoidensa tai sukulaistensa lapsia — ja kannusti '
+          + 'silti oppineita viemään maata eteenpäin. Menelik kohtasi '
+          + 'vastustusta myös kirkon suunnalta, koska koulu keskittyi '
+          + 'maallisiin aineisiin.'
+          + '\n\n'
+          + 'Koulu suljettiin miehityksen ajaksi 1935–1941 ja jatkoi '
+          + 'sen jälkeen: 1942 opetus ulottui viidenteen luokkaan. '
+          + 'Nykyään Arat Kilossa toimivat ala- ja yläkoulu, joissa on '
+          + 'yhteensä yli yhdeksäntuhatta oppilasta. Luokkakoko on '
+          + 'keskimäärin neljäkymmentä, ja moni aloittaa koulun '
+          + 'myöhään — viidesluokkalaisten ikä vaihtelee '
+          + 'yhdestätoista kolmeenkymmeneen.',
+      lahde: 'Wikipedia',
+    },
+    'Taitu-hotelli': {
+      aika: '1905',
+      teksti: 'Etiopian vanhin hotelli seisoo Piazzassa. Sen perusti '
+          + 'keisarinna Taytu Betul, Menelik II:n puoliso, jotta '
+          + 'ulkomaisilla vierailla olisi paikka levätä ja ruokailla. '
+          + 'Rakennusvuosi on 1905, mutta kaupungin oma artikkeli '
+          + 'antaa vuoden 1898 Etiopian kalenterin mukaan ja aikajana '
+          + 'merkitsee hotellin olleen toiminnassa 1907 — luvut sopivat '
+          + 'yhteen, koska etiopialainen vuosiluku on noin seitsemän '
+          + 'vuotta länsimaista jäljessä.'
+          + '\n\n'
+          + 'Hotelli kuului palatsialueeseen, josta modernin '
+          + 'kaupungin ydin kasvoi, ja se oli osa Menelikin '
+          + 'uudistuksia Adwan taistelun jälkeen. Läntinen siipi '
+          + 'rakennettiin 1902 muistoksi sopimuksesta, joka liitti '
+          + 'Baro Salientin Etiopiaan.'
+          + '\n\n'
+          + 'Talo oli diplomaattien, toimittajien ja matkailijoiden '
+          + 'kokoontumispaikka. Brittikirjailija Evelyn Waugh teki '
+          + 'siitä romaaniinsa Scoop hotellin nimeltä Liberty. '
+          + 'Miehityksen aikana italialaiskomentajat asuivat '
+          + 'läntisessä siivessä, eikä hotellia palautettu sen '
+          + 'jälkeen alkuperäiseen kokoonsa. Tammikuussa 2015 '
+          + 'tulipalo vaurioitti rakennusta pahoin, mutta se on '
+          + 'kunnostettu lähelle entistä asuaan, ja ravintolassa '
+          + 'soitetaan jazzia joka ilta.',
+      kuvat: [
+        {
+          tiedosto: 'Ethiopia IMG 4514 (28144290099).jpg',
+          selite: 'Hotellin puiset portaat nousevat kaariaukon '
+            + 'kehystämään saliin, jonka seinillä on maalauksia.',
+          lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kolminaisuuden katedraali': {
+      aika: '1931',
+      teksti: 'Kidist Selassie eli Kolminaisuuden katedraali on '
+          + 'Etiopian ortodoksisen tewahedo-kirkon arvokkain '
+          + 'katedraali. Se perustettiin 22. joulukuuta 1931 keisari '
+          + 'Haile Selassien johdolla, mutta rakentaminen keskeytyi '
+          + 'miehityksen ajaksi ja valmistui vasta 1942. Kirkko '
+          + 'pystytettiin muistoksi vastarinnasta miehitystä vastaan.'
+          + '\n\n'
+          + 'Rakennus on nelikulmainen, mikä on Etiopiassa harvinaista '
+          + '— useimmat kirkot ovat ympyränmuotoisia. Sisätila '
+          + 'noudattaa Salomonin temppelin kolmijakoa: ulkokehällä '
+          + 'seurakunta laulaa hymnit, keskimmäisellä jaetaan '
+          + 'ehtoollinen, ja sisimpään pääsevät vain papit. Siellä '
+          + 'säilytetään tabotia, liitonarkin jäljennöstä, jonka '
+          + 'siunaamisesta rakennustyö aloitettiin.'
+          + '\n\n'
+          + 'Kirkko on maan merkittävimpiä hautapaikkoja. Sinne on '
+          + 'haudattu keisari Haile Selassie ja keisarinna Menen '
+          + 'Asfaw, patriarkat Abuna Tekle Haymanot ja Abune Paulos '
+          + 'sekä brittiläinen etiopiantutkija ja suffragetti Sylvia '
+          + 'Pankhurst, joka omisti elämänsä loppuvuodet Etiopialle.',
+      kuvat: [
+        {
+          tiedosto: 'Catedral de la Santísima Trinidad (Adís Abeba) - exterior - 6.jpg',
+          selite: 'Marmorinen hautakivi kirkon puutarhassa kantaa '
+            + 'Sylvia ja Richard Pankhurstin nimet ja vuosiluvut.',
+          lahde: 'ProtoplasmaKid, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Abrehot-kirjasto': {
+      aika: '2022',
+      teksti: 'Etiopian suurin kirjasto avattiin tammikuussa 2022. '
+          + 'Nimi Abrehot tarkoittaa amharaksi valistusta. Talo on '
+          + '19 000 neliömetriä ja neljä kerrosta, hyllyä on puolitoista '
+          + 'kilometriä, ja tilaa on 1,4 miljoonalle kirjalle ja yli '
+          + 'kahdelle tuhannelle kävijälle kerralla. Rakentaminen '
+          + 'kesti lähes kaksi vuotta ja maksoi yli 1,1 miljardia '
+          + 'birriä.'
+          + '\n\n'
+          + 'Talo on suunniteltu kolmen alueen varaan. Knowledge '
+          + 'Garden on ulkotila, jota reunustavat oliivipuurivit ja '
+          + 'jonka keskellä neljä sessa-puuta muodostavat luonnollisen '
+          + 'esiintymislavan. Knowledge Springs on verkko-oppimisen '
+          + 'alue, ja Knowledge Centre on itse kirjasto. Lisäksi '
+          + 'talossa on kahdeksan kirjakauppaa, kokoushuone, kahvila '
+          + 'ja lasten lukusali.'
+          + '\n\n'
+          + 'Kirjasto on auki ympäri vuorokauden, myös viikonloppuisin '
+          + 'ja pyhinä, ja sulkee vain aamuyön siivouksen ajaksi. '
+          + 'Kokoelmaan on saatu lahjoituksia sekä järjestöiltä että '
+          + 'yksityisiltä, ja siellä on yli 300 000 kotimaista ja '
+          + '120 000 kansainvälistä tutkimusartikkelia. Rakennus '
+          + 'seisoo parlamenttitalon edessä.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * GUATEMALA CITY (Opus, Fablen parvi 7.9.2026). Kahdeksan kohdetta
+   * kohdekartalta (js/packs/maakartat.js, KAUPUNKIKARTAT.guatemala).
+   * Kansallispalatsin lähde on en-Wikipedia "National Palace
+   * (Guatemala)"; muiden seitsemän lähde on es-Wikipedia, koska
+   * englanninkielistä artikkelia ei ole lainkaan
+   * (tarkistus-guatemalacity.md, kohta C): "Cerrito del Carmen",
+   * "Iglesia la Recolección", "Iglesia de Santo Domingo (Ciudad de
+   * Guatemala)", "Edificio de Correos de Guatemala", "Biblioteca
+   * Nacional de Guatemala", "Hospital San Juan de Dios (Guatemala)",
+   * "Instituto Nacional Central para Varones". Kaikki luettu
+   * raakatekstistä 7.9.2026. Lähderivi kertoo kieliversion, koska
+   * lukijan on voitava löytää lähde.
+   *
+   * ANTIGUAN JA PÄÄKAUPUNGIN SAMANNIMISET KIRKOT ON EROTETTU
+   * TOISISTAAN juttu kerrallaan: molemmissa kaupungeissa on Santo
+   * Domingo, San Francisco ja La Merced.
+   *
+   * YKSIKÄÄN JUTTU EI TOISTA LEHDEN NOSTOJA, eikä sisällissotaa
+   * 1960–1996, vuoden 1982 vallankaappausta tai katedraalin edustan
+   * muistopilareita käsitellä (spec-mantereet.md, Keski-Amerikan
+   * linjaus).
+   */
+  guatemala: {
+    'La Recolecciónin kirkko': {
+      aika: '1776',
+      teksti: 'Kirkko on yksi uuden pääkaupungin suurista temppeleistä '
+          + 'ja syntyi kaupungin siirron mukana 1776. Se peri osan '
+          + 'vanhan pääkaupungin Colegio de Cristo Crucificado de '
+          + 'Propaganda Fide -oppilaitoksen omaisuudesta; veljekset '
+          + 'Jorge de la Torre ja Antonio Margil de Jesús olivat '
+          + 'perustaneet sen 1701, ja heinäkuun 1773 Santa Martan '
+          + 'järistys vaurioitti sitä pahoin.'
+          + '\n\n'
+          + 'Rakennuttajana toimi luostarin syndikko Juan Fermín de '
+          + 'Aycinena, aikansa vaikutusvaltaisimman suvun patriarkka. '
+          + 'Kirkon virallinen nimi on Jeesuksen pyhimmän nimen '
+          + 'seurakunta, mutta kaupunkilaiset kutsuvat sitä ja koko '
+          + 'kaupunginosaa La Recolecciónin nimellä.'
+          + '\n\n'
+          + 'Sisällä on barokkiveistoksia, joista tunnetuin on ryhmä '
+          + 'nimeltä Los Justos, vanhurskaat: Joakim, Anna ja Neitsyt '
+          + 'Maria lapsena. Kirkon kulkueveistokset Cristo de la '
+          + 'Penitencia ja Cristo Nazareno kuuluvat yhä kaupungin '
+          + 'pääsiäisviikkoon. Fransiskaanit hoitivat kirkkoa maaliskuun '
+          + '2016 alkuun asti; sen jälkeen se on kuulunut '
+          + 'arkkihiippakunnalle.',
+      kuvat: [
+        {
+          tiedosto: 'LaRecoleccionGuatemalaCity2015 01.jpeg',
+          selite: 'Keltavalkoinen kirkko kellotorneineen ja sen '
+            + 'edessä muistokivi vanhalle sotakoululle.',
+          lahde: 'Nerdoguate, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Cerrito del Carmen': {
+      aika: '1620',
+      teksti: 'Kukkulan laella oleva erakkomaja on vähintään sata '
+          + 'vuotta vanhempi kuin kaupunki sen ympärillä. Laaksoa '
+          + 'kutsuttiin Vacas-laaksoksi eli lehmien laaksoksi, koska '
+          + 'valloittaja Héctor de la Barreda toi sinne Kuubasta '
+          + 'karjaa, joka lisääntyi rehevillä laitumilla nopeasti.'
+          + '\n\n'
+          + 'Genovalaisesta Toiranosta kotoisin ollut maallikkoveli '
+          + 'Juan Corz saapui laaksoon noin 35-vuotiaana ja asettui '
+          + 'kahteen luolaan: toiseen hän sijoitti Neitsyt Marian '
+          + 'kuvan, toisessa asui itse. Luolasta hän lähti vain kaksi '
+          + 'kertaa vuodessa kerjäämään. Kun naapurit löysivät kuvan, '
+          + 'he alkoivat käydä sen luona, ja lopulta kukkulalle '
+          + 'rakennettiin kappeli — Corz oli nähnyt Pyhällä maalla '
+          + 'Karmelin vuoren ja piti kukkulaa sen kaltaisena. Tulipalo '
+          + 'tuhosi ensimmäisen majan, ja uusi temppeli valmistui '
+          + '1620; vuosiluku näkyy yhä sakaristossa.'
+          + '\n\n'
+          + 'Kirkko oli laakson seurakunnan kotikirkko 76 vuotta, '
+          + '1647–1723. Corz itse katosi jäljettömiin sen jälkeen, kun '
+          + 'Mixcon pappi ilmiantoi hänet inkvisitiolle kesäkuussa '
+          + '1620; asiakirjat eivät kerro, mitä hänelle tapahtui. '
+          + 'Rakennus on kunnostettu sekä vuosien 1917 että 1976 '
+          + 'järistysten jälkeen, ja se on julistettu kansalliseksi '
+          + 'kulttuuriperinnöksi.',
+      kuvat: [
+        {
+          tiedosto: 'Cerrito del Carmen.JPG',
+          selite: 'Erakkomajan valkoinen seinä ja sen edessä oleva '
+            + 'kivinen risti kukkulan laella.',
+          lahde: 'Arielaasturias, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    Kansallispalatsi: {
+      aika: '1943',
+      teksti: 'Vihreää palatsia pidetään kaupungin tunnuksena, ja se '
+          + 'on maan tieverkon lähtöpiste: pihalla on kilometri nolla, '
+          + 'josta kaikki etäisyydet lasketaan. Nykyään talo on museo '
+          + 'ja valtion juhlatila.'
+          + '\n\n'
+          + 'Palatsin historia on sarja yrityksiä. Vuonna 1919 '
+          + 'presidentti Estrada Cabrera laski peruskiven ja italialainen '
+          + 'arkkitehti Guido Albani sai suunnittelutehtävän, mutta '
+          + 'hanke raukesi hallituksen kaaduttua. Vuonna 1921 '
+          + 'presidentti Carlos Herrera rakennutti satavuotisjuhliin '
+          + 'palatsin kolmessa kuukaudessa pienellä budjetilla; sitä '
+          + 'kutsuttiin pahvipalatsiksi, ja se paloi 1925. Vuoden 1927 '
+          + 'suunnittelukilpailun voittanut työ jäi sekin '
+          + 'toteuttamatta.'
+          + '\n\n'
+          + 'Vasta 1932 julkaistiin nykyisen rakennuksen perusteet. '
+          + 'Peruskivi laskettiin 4. heinäkuuta 1937, ja palatsi '
+          + 'rakennettiin tammikuun 1939 ja vuoden 1943 välillä; se '
+          + 'vihittiin 10. marraskuuta 1943. Rakennus kesti helmikuun '
+          + '4. päivän 1976 järistyksen, joka oli voimakkuudeltaan '
+          + '7,5 ja tuhosi kaupungista suuren osan.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio Nacional de la Cultura.jpg',
+          selite: 'Palatsin vihertävä kivijulkisivu kaartuvine '
+            + 'parvekkeineen ja vaakunoineen.',
+          lahde: 'K21edgo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kansalliskirjasto: {
+      aika: '1879',
+      teksti: 'Guatemalan kansalliskirjasto perustettiin asetuksella '
+          + '18. lokakuuta 1879 ja avattiin yleisölle 24. kesäkuuta '
+          + '1880 Sociedad Económican rakennuksessa. Ensimmäinen '
+          + 'johtaja oli Dámaso Micheo. Perustelu oli yksinkertainen: '
+          + 'pääkaupungissa ei ollut kirjastoa, vaikka kaupunki oli '
+          + 'muuten maan keskus.'
+          + '\n\n'
+          + 'Peruskokoelma koottiin lakkautetuista laitoksista: '
+          + 'Sociedad Económican omat kirjat, vanhan paavillisen San '
+          + 'Carlos Borromeon yliopiston kokoelma, teknillisen koulun '
+          + 'ja taide- ja käsityökoulun kirjat sekä lakkautettujen '
+          + 'luostarien kirjastot. Vuonna 1897 niteitä oli jo '
+          + '19 400, enimmäkseen uskonnollista kirjallisuutta; '
+          + 'ostettuihin kokoelmiin kuului arkkipiispa Ramón Casaus y '
+          + 'Torresin kirjasto ja erään Savage-nimisen '
+          + 'yhdysvaltalaisen Amerikan historian kokoelma.'
+          + '\n\n'
+          + 'Vuosien 1917–18 järistysten jälkeen kirjasto siirtyi San '
+          + 'Carlosin yliopiston juhlasaliin ja muutti sen jälkeen '
+          + 'useaan otteeseen, kunnes sai oman talon syyskuussa 1957. '
+          + 'Johtajina on ollut kirjailijoita, muun muassa José '
+          + 'Joaquín Palma ja Rafael Arévalo Martínez; nykyinen nimi '
+          + 'kunnioittaa kirjailija Luis Cardoza y Aragónia.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'San Juan de Diosin sairaala': {
+      aika: '1667',
+      teksti: 'Sairaalaveljeskunnan munkit saapuivat Meksikosta '
+          + 'vanhaan pääkaupunkiin 1630 isä Carlos Cívico de la Cerdan '
+          + 'johdolla ja perustivat luostarinsa 1636. Sen jälkeen he '
+          + 'hoitivat kenraalikapteenikunnan sairaaloita.'
+          + '\n\n'
+          + 'Sairaalat oli jaettu potilaiden mukaan: San Alejo '
+          + 'alkuperäisväestölle, San Pedro papistolle, Santiago '
+          + 'espanjalaisille ja mulateille sekä San Lázaro omanaan. '
+          + 'Vuonna 1667 dominikaanit luovuttivat San Alejon '
+          + 'veljeskunnalle, ja 1685 San Alejo ja Santiago '
+          + 'yhdistettiin San Juan de Diosin sairaalaksi. Se on siis '
+          + 'syntynyt kahdesta eriytetystä sairaalasta yhdeksi.'
+          + '\n\n'
+          + 'Vuoden 1773 järistysten jälkeen sairaala muutti muun '
+          + 'kaupungin mukana uuteen pääkaupunkiin ja sijoittui '
+          + 'kaupungin länsilaidalle. Se selvisi sekä vuosien 1917–18 '
+          + 'että vuoden 1976 järistyksistä, ja nykyiseen '
+          + 'rakennukseensa se muutti 1981. Sairaala on yhä maan '
+          + 'suurimpia julkisia sairaaloita.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Instituto Nacional Central': {
+      aika: '1875',
+      teksti: 'Poikien keskusoppikoulu syntyi 1875, kun Colegio '
+          + 'Tridentino siirtyi kirkolta valtiolle. Koulusta tuli '
+          + 'nopeasti maan arvostetuin poikien oppilaitos, ja sen '
+          + 'kautta kulki suuri osa maan virkamiehistä ja '
+          + 'taiteilijoista.'
+          + '\n\n'
+          + 'Ensimmäinen rehtori oli kuubalainen Hildebrando Martí, '
+          + 'runoilija ja kansallissankari José Martín veli; '
+          + 'seuraavana vuonna johtoon tuli tohtori Santos Toruño. '
+          + 'Opettajakuntaan kuului fysiikan ja matematiikan opettaja '
+          + 'Darío González, filosofian ja historian Valero Pujol '
+          + 'sekä kemian Francisco Abella.'
+          + '\n\n'
+          + 'Erikoisin heistä oli saksalainen matematiikan ja '
+          + 'tähtitieteen opettaja Edwin Rockstroh. Hän järjesti '
+          + 'kouluun observatorion, julkaisi siellä tehdyt '
+          + 'säähavainnot ja lahjoitti matkoiltaan täytettyjä eläimiä '
+          + 'koulun luonnontieteelliseen museoon. Koulu on yhä '
+          + 'toiminnassa historiallisessa keskustassa.',
+      kuvat: [
+        {
+          tiedosto: 'Institutocentralparavarones1910.jpg',
+          selite: 'Koulun pitkä julkisivu ja kellotorni vuonna 1910; '
+            + 'kadulla kulkee raitiovaunu.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Santo Domingon kirkko': {
+      aika: '1808',
+      teksti: 'Kirkko tunnetaan nykyään nimellä Nuestra Señora del '
+          + 'Rosarion basilika. Tyyli on klassista barokkia ja '
+          + 'niin sanottua seismistä uusklassismia — matalaa, paksua '
+          + 'ja järistyksiä kestäväksi suunniteltua.'
+          + '\n\n'
+          + 'Dominikaanien vanha kirkko ja luostari sortuivat vanhassa '
+          + 'pääkaupungissa 1773, ja veljet siirtyivät uuteen kaupunkiin '
+          + '1776 mukanaan Ruusukon Neitsyen kuva ja osa '
+          + 'kulkueveistoksista. Rakentaminen alkoi samana vuonna '
+          + 'arkkitehti Pedro Garci-Aguirren johdolla, ja kirkko '
+          + 'vihittiin 8. marraskuuta 1808 osana Ferdinand VII:n '
+          + 'kruunajaisjuhlia. Perustuksiin käytettiin Las Vacasin '
+          + 'louhosten kiveä, vanhasta kaupungista pelastettua '
+          + 'rakennusainetta sekä sokeriruokosiirappia ja lehmänmaitoa '
+          + 'veljeskunnan omilta maatiloilta.'
+          + '\n\n'
+          + 'Kirkko on rakennettu uudelleen kahdesti: vuosien 1917–18 '
+          + 'järistysten jälkeen jälleenrakennuskomitean ja fray Pablo '
+          + 'Sánchezin johdolla, ja uudestaan helmikuun 4. päivän 1976 '
+          + 'järistyksen jälkeen, joka tuhosi luostarin viimeisenkin '
+          + 'säilyneen osan. Raunioihin sijoitettiin lopulta '
+          + 'antropologian ja historian instituutti.',
+      kuvat: [
+        {
+          tiedosto: 'Santo Domingo Church in Guatemala City, 2024. 11.jpg',
+          selite: 'Basilikan vaaleanpunainen julkisivu, jonka '
+            + 'harjalla seisoo kolme kivipatsasta.',
+          lahde: 'Nerdoguate, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    Postipalatsi: {
+      aika: '1940',
+      teksti: 'Postin ja lennätinlaitoksen palatsi rakennettiin '
+          + '1937–1940, ja sen suunnittelivat Rafael Pérez de León ja '
+          + 'Enrique Riera. Tyyli on uussiirtomaatyylinen: paksut '
+          + 'seinät, kaaret ja koristeltu julkisivu.'
+          + '\n\n'
+          + 'Rakennuksen tunnusmerkki on 12. kadun yli kaartuva '
+          + 'holvikaari, joka yhdistää kaksi rakennusosaa toisiinsa. '
+          + 'Sen esikuva on Antigua Guatemalan Santa Catalinan kaari, '
+          + 'joka rakennettiin aikanaan siksi, että nunnat pääsivät '
+          + 'kadun yli näkymättä. Ensimmäinen vaihe vihittiin 10. '
+          + 'marraskuuta 1940 kello neljä iltapäivällä, ja loput '
+          + 'valmistuivat seuraavina vuosina.'
+          + '\n\n'
+          + 'Palatsi julistettiin kansallismonumentiksi marraskuussa '
+          + '1981 ja kansalliseksi kulttuuriperinnöksi elokuussa 1998. '
+          + 'Talossa toimii yhä maan posti, ja siellä on posti-, '
+          + 'lennätin- ja filateliamuseo.',
+      kuvat: [
+        {
+          tiedosto: 'PalacioCorreosGuatemala2015 01.jpeg',
+          selite: 'Postipalatsin sisäpiha kaarikäytävineen, '
+            + 'pylväineen ja rautakaiteineen.',
+          lahde: 'Nerdoguate, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+  },
 };

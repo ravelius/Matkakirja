@@ -13400,6 +13400,113 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  /*
+   * ADDIS ABEBA (7.9.2026). Rajaus on 2,5 x 2,5 kilometriä
+   * yliopistokampukselta Kolminaisuuden katedraalille — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n addisabeba-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin perustaminen ja Taytu Betulin valinta, eukalyptus ja
+   * Entoton metsä, rata Djiboutiin sekä ethio-jazz; teemasivu kertoo
+   * kahviseremoniasta, injerasta, Merkatosta ja Piazzasta. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe. Lähimpänä on
+   * Taitu-hotelli, joka seisoo Piazzassa — juttu kertoo kuitenkin
+   * hotellista ja sen perustajasta, ei korttelista.
+   *
+   * MERKATO EI OLE NUMEROITU KOHDE: se on teemasivun noston aihe ja
+   * jää myös ruudun länsipuolelle (9,0306 / 38,7389, noin 1,7 km
+   * lännempänä kuin ruudun länsireuna).
+   *
+   * AFRICA HALL JA MESKEL-AUKIO JÄTETTIIN POIS RAJAUKSEN TAKIA: ne
+   * ovat 9,0147 ja 9,0103 eli 1,8 ja 2,2 kilometriä eteläreunan
+   * alapuolella, ja mukaan ottaminen olisi venyttänyt ruudun 4,5
+   * kilometriä korkeaksi mutta alle kolmen kilometrin levyiseksi.
+   * Molemmat kerrotaan matkaoppaassa (jakso 4).
+   */
+  addisabeba: {
+    polku: 'assets/kartat/addisabeba-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 9.0500, etela: 9.0270, lansi: 38.7460, ita: 38.7690 },
+    esittely: 'Kartan alue ulottuu yliopiston kampukselta pohjoisessa '
+      + 'Kolminaisuuden katedraalille etelässä. Keskellä kulkee '
+      + 'Churchill Road, jonka pohjoispäässä on Piazzan tiheä '
+      + 'kortteliverkko, ja idässä levittäytyy Arat Kilon aukioiden '
+      + 'seutu. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 360
+       * metriä (Hager Fikir -teatteri – Pyhän Yrjön katedraali),
+       * toiseksi pienin 388 metriä (kansallismuseo – Menelik II:n
+       * koulu).
+       */
+      { nimi: 'Etnologinen museo', lat: 9.0467, lon: 38.7578 },
+      { nimi: 'Etiopian kansallismuseo', lat: 9.03833333, lon: 38.76194444 },
+      { nimi: 'Hager Fikir -teatteri', lat: 9.03769167, lon: 38.75453611 },
+      { nimi: 'Pyhän Yrjön katedraali', lat: 9.036691, lon: 38.751415 },
+      { nimi: 'Menelik II:n koulu', lat: 9.0352, lon: 38.7635 },
+      { nimi: 'Taitu-hotelli', lat: 9.030649, lon: 38.7542562 },
+      { nimi: 'Kolminaisuuden katedraali', lat: 9.030799, lon: 38.766562 },
+      { nimi: 'Abrehot-kirjasto', lat: 9.0303, lon: 38.7624 },
+    ],
+  },
+  /*
+   * GUATEMALA CITY (7.9.2026). Rajaus on 2,6 x 1,9 kilometriä koko
+   * historiallisen keskustan yli — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n guatemala-lohkossa. AVAIN ON
+   * guatemala, koska laudan kaupunki-id on se (js/packs/
+   * northamerica.js); wiki-nimi 'Guatemala (kaupunki)' ei kelpaa
+   * avaimeksi (Aleppo/halab-ennakkotapaus tämän tiedoston alussa).
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Kaminaljuyú, pääkaupungin siirto 1776, vyöhykejärjestelmä ja
+   * järistykset; teemasivu kertoo Mapa en Relievestä, Carlos
+   * Méridasta, kansallisteatterista ja Popol Vuh -museosta. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KATEDRAALI JÄTETTIIN POIS 200 METRIN SÄÄNNÖLLÄ: se on 191 metrin
+   * päässä kansallispalatsista (14,641686 / −90,512029). Kirkko näkyy
+   * kartalla rakennuksena, ja sen tarina kerrotaan kansisivun
+   * nostossa kaksi.
+   *
+   * MAPA EN RELIEVE JA TORRE DEL REFORMADOR OVAT RUUDUN ULKOPUOLELLA:
+   * edellinen on 2,1 km pohjoiseen (ja teemasivun noston aihe),
+   * jälkimmäinen 3,3 km etelään. Molemmat mainitaan matkaoppaassa.
+   *
+   * VIIDEN KOHTEEN LÄHDE ON ES-WIKIPEDIA, koska englanninkielistä
+   * artikkelia ei ole lainkaan; se sanotaan jokaisen jutun
+   * lähderivillä (tarkistus-guatemalacity.md, kohta C).
+   */
+  guatemala: {
+    polku: 'assets/kartat/guatemala-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 14.6505, etela: 14.6330, lansi: -90.5250, ita: -90.5010 },
+    esittely: 'Kartan alue kattaa vyöhykkeen 1 eli historiallisen '
+      + 'keskustan: pohjoisessa Carmenin kukkula, keskellä Plaza de '
+      + 'la Constitución ja etelässä 12. kadun postipalatsi. '
+      + 'Ruutukaava on tiheä ja säännöllinen, ja idässä maasto '
+      + 'putoaa rotkoon. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en- ja es-Wikipedian coordinates-rajapinnasta
+       * 7.9.2026, ja kaikki 28 väliä on mitattu haversinilla: pienin
+       * on 219 metriä (kansallispalatsi – kansalliskirjasto), toiseksi
+       * pienin 372 metriä (Instituto Central – postipalatsi). Nairobin
+       * 216 metrin ennakkotapaus tukee tätä.
+       */
+      { nimi: 'La Recolecciónin kirkko', lat: 14.64689, lon: -90.5171 },
+      { nimi: 'Cerrito del Carmen', lat: 14.64681, lon: -90.50583 },
+      { nimi: 'Kansallispalatsi', lat: 14.64294167, lon: -90.51322778 },
+      { nimi: 'Kansalliskirjasto', lat: 14.641974, lon: -90.514997 },
+      { nimi: 'San Juan de Diosin sairaala', lat: 14.639523, lon: -90.520740 },
+      { nimi: 'Instituto Nacional Central', lat: 14.639512, lon: -90.510715 },
+      { nimi: 'Santo Domingon kirkko', lat: 14.637526, lon: -90.506576 },
+      { nimi: 'Postipalatsi', lat: 14.637, lon: -90.513 },
+    ],
+  },
 };
 
 /*

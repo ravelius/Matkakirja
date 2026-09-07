@@ -106,15 +106,18 @@ jobs:
             || { echo "::error::ladattu tiedosto ei ole GeoJSON-kokoelma"; exit 1; }
           ls -la ne-data
 
+      # NODE tulee Mac-valmistelusta (tools/mac-ajovalmis.sh kiinnittää
+      # node@22:n); Actionsissa muuttujaa ei ole ja polun node kelpaa.
       - name: Kuiva ajo (mittaustaulukko)
         if: inputs.kuiva == 'kylla'
-        run: node tools/tee-pallovektorit.mjs --ne=ne-data --kuiva ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
+        run: |
+          "${NODE:-node}" tools/tee-pallovektorit.mjs --ne=ne-data --kuiva ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
 
       - name: Laske vektorit
         if: inputs.kuiva != 'kylla'
         run: |
           set -euo pipefail
-          node tools/tee-pallovektorit.mjs --ne=ne-data --ulos=pallovektorit-ulos ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
+          "${NODE:-node}" tools/tee-pallovektorit.mjs --ne=ne-data --ulos=pallovektorit-ulos ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
           echo "Tiedostoja: $(find pallovektorit-ulos -name '*.bin' | wc -l), koko: $(du -sh pallovektorit-ulos | cut -f1)"
 
       - name: Vie vektorit ämpäriin

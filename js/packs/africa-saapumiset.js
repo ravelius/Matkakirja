@@ -379,7 +379,9 @@ export const AFRICA_SAAPUMISET = {
       + 'portaissa kuin vanhus, kunnes muistin seisovani lähes kahden ja '
       + 'puolen kilometrin korkeudessa. Ilma on viileää ja kirkasta, '
       + 'eukalyptus tuoksuu — ja kahviseremonian tunti meni kuin '
-      + 'siivillä.',
+      + 'siivillä. Isoisän kartalla tässä ei ollut kaupunkia '
+      + 'lainkaan: se perustettiin vasta kolmetoista vuotta hänen '
+      + 'matkansa jälkeen, 1886.',
     nosto: 'Isoisä kirjoitti keisarikunnasta, joka säilytti '
       + 'itsenäisyytensä: "Se hämmentää klubissani suuresti; minua se '
       + 'ei enää hämmennä." Minua ei hämmentänyt hetkeäkään.',

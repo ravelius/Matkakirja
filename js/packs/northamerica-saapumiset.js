@@ -368,7 +368,9 @@ export const NORTHAMERICA_SAAPUMISET = {
       + 'yksi niistä savuaa aina: Fuego puhahtaa tuhkapilven muutaman '
       + 'tunnin välein kuin valtava hengitys. Naapurissa lepää Antigua, '
       + 'jonka raunioituneet kirkot jäivät maanjäristysten muistoksi '
-      + 'barokkiasuunsa.',
+      + 'barokkiasuunsa. Isoisän matkavuonna kaupunki oli 97-vuotias '
+      + 'ja katedraali oli juuri saatu valmiiksi — yhdeksänkymmentä '
+      + 'vuotta rakennettuaan.',
     nosto: 'Isoisä kirjoitti: "Pääkaupunki on muuttanut kolmesti '
       + 'tulivuorten ja järistysten tieltä — tämä on neljäs yritys." '
       + 'Neljäs piti. Tulivuoret hyväksyivät naapurin, kunhan niitä '

@@ -192,9 +192,12 @@ jobs:
 
       # Zip ladataan ja puretaan KERRAN. Ilman tätä jokainen kaista
       # aloittaisi omalla 322 Mt:n latauksellaan samaan välimuistiin.
+      # NODE tulee Mac-valmistelusta (tools/mac-ajovalmis.sh kiinnittää
+      # node@22:n); Actionsissa muuttujaa ei ole ja polun node kelpaa.
       - name: Nouda lähdeaineisto kerran
         if: inputs.lahde == 'ncei'
-        run: node tools/tee-korkeuspalat.mjs --lahde ncei --nouda
+        run: |
+          "${NODE:-node}" tools/tee-korkeuspalat.mjs --lahde ncei --nouda
 
       - name: Pilko palat kaistoina
         env:
@@ -212,7 +215,7 @@ jobs:
           pidit=()
           for k in $(seq 0 $((KAISTOJA - 1))); do
             # shellcheck disable=SC2086
-            node tools/tee-korkeuspalat.mjs --lahde "$LAHDE" --ulos korkeus/1min \
+            "${NODE:-node}" tools/tee-korkeuspalat.mjs --lahde "$LAHDE" --ulos korkeus/1min \
               $rajaus --osa "$k/${KAISTOJA}" > "lokit/kaista-$k.log" 2>&1 &
             pidit+=($!)
           done
@@ -226,7 +229,8 @@ jobs:
           if [ "$tila" -ne 0 ]; then echo "::error::kaista kaatui"; exit 1; fi
           # Luettelo kaistojen omista luetteloista: sama järjestys kuin
           # peräkkäisajossa, ja tarkistaa että jokainen pala on levyllä.
-          node tools/tee-korkeuspalat.mjs --lahde "$LAHDE" --ulos korkeus/1min \
+          # shellcheck disable=SC2086
+          "${NODE:-node}" tools/tee-korkeuspalat.mjs --lahde "$LAHDE" --ulos korkeus/1min \
             $rajaus --kokoa "$KAISTOJA"
           # EI `ls | head` pipefail-tilassa: head sulkee putken ennen kuin
           # ls on kirjoittanut 648 riviä, ls saa SIGPIPEn ja koko vaihe

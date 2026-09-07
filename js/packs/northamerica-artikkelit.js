@@ -1008,4 +1008,56 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'kalastus on tärkein elinkeino ja viennin pääosa. Ruoka tulee '
       + 'mereltä: hylkeestä, valaasta, kalasta ja linnusta.',
   },
+  /*
+   * GUATEMALA CITY (Opus, Fablen parvi 7.9.2026). Avain on laudan
+   * wiki-nimi 'Guatemala (kaupunki)' (js/packs/northamerica.js).
+   * Väitteet ovat samasta erästä kuin lehden tekstit
+   * (kulttuuri-kategoriat.js, avain guatemala) ja ne on tarkistettu
+   * en-Wikipedian raakatekstistä 7.9.2026 ("Guatemala City",
+   * "Kaminaljuyu", "Cathedral of Guatemala City"). Sisältölinjaus on
+   * spec-mantereet.md:n Keski-Amerikan kohta: arkeologia, kulttuuri ja
+   * historia kantavat, nykyväkivaltaa ei käsitellä.
+   */
+  'Guatemala (kaupunki)': {
+    intro: 'Guatemala City on Guatemalan pääkaupunki ja Väli-Amerikan '
+      + 'suurin kaupunki. Se on noin 1 500 metrin korkeudessa Ermitan '
+      + 'laaksossa vuorten välissä, ja korkeus tekee ilmastosta lähes '
+      + 'kevätmäisen ympäri vuoden. Kaupunki on **neljäs yritys**: '
+      + 'vuoden 1773 järistykset jättivät edellisen pääkaupungin '
+      + 'raunioiksi, ja hallinnon istuin siirrettiin tänne 1776 '
+      + 'nimellä Nueva Guatemala de la Asunción.'
+      + '\n\n'
+      + 'Uuden kaupungin alta löytyi vanha: nykyisen kaupungin '
+      + 'länsiosassa on **Kaminaljuyú**, suurin mayakeskus Yucatánin '
+      + 'alankojen ulkopuolella, joka nousi noin 300 eKr. obsidiaanin '
+      + 'kaupan varassa. Espanjalaiskaupunki rakennettiin ruutukaavaan '
+      + 'ja jaettiin myöhemmin vyöhykkeisiin, joiden numero kuuluu '
+      + 'osoitteeseen. Järistykset ovat palanneet kerta toisensa '
+      + 'jälkeen: 1917–1918 tuhoutui suuri osa vanhasta kaupungista ja '
+      + '1976 Motaguan siirros liikahti 7,5 magnitudin voimalla.'
+      + '\n\n'
+      + 'Kaupungista näkyy neljä kerrostulivuorta, joista kaksi on '
+      + 'aktiivisia. Vyöhyke 1 on historiallinen keskusta, ja '
+      + 'vyöhykkeellä 2 on koko maa pienoiskoossa: 1 800 neliömetrin '
+      + 'maastokartta vuodelta 1905.',
+    teksti: 'Guatemala City on maan keskiylängöllä, Tyynenmeren '
+      + 'rannikkotasangon ja pohjoisen Peténin alankojen välissä. '
+      + 'Kaupunki täyttää Ermitan laakson, jota halkovat '
+      + 'jyrkkäreunaiset rotkot, ja sen ympärille on kasvanut '
+      + 'metropolialue naapurikunnista.'
+      + '\n\n'
+      + 'Paikalla on asuttu kolme ja puoli vuosituhatta: Kaminaljuyún '
+      + 'kummuista laskettiin ensimmäisissä kartoituksissa noin '
+      + 'kaksisataa. Espanjalainen kaupunki siirtyi tänne 1776, '
+      + 'katedraali 1779, ja itsenäistymisen jälkeen kaupungista tuli '
+      + '1821 Keski-Amerikan yhdistyneiden provinssien pääkaupunki. '
+      + '1800-luvulla rakennettiin teatteri ja presidentinpalatsi, ja '
+      + 'kaupunki levittäytyi uusille bulevardeille.'
+      + '\n\n'
+      + 'Nykyään kaupunki on maan talouden, hallinnon ja liikenteen '
+      + 'keskus, jonka osoitejärjestelmä kertoo etäisyyden metreinä '
+      + 'lähimmästä risteyksestä. Museot ovat kaupungin ylpeys: '
+      + 'mayataiteen kokoelmat, alkuperäiskansojen pukujen museo ja '
+      + 'ulkoilmassa oleva maastokartta koko maasta.',
+  },
 };
