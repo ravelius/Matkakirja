@@ -4080,6 +4080,17 @@ export const RAAMATTU = {
           + 'pelaamalla ja antaa palautteen, minka jalkeen korostus kytketaan '
           + 'pois. Seuraava era: Pietari, Moskova, Kiova, Odessa, Helsinki, '
           + 'Tampere, Tallinna, Riika, Vilna.',
+        'VIKA v1671: TERMINAALI JA KABIINI EIVAT KUULU (omistaja 7.9.2026 ilta, '
+          + 'sanatarkasti: "Lentoterminaalin aani ei kuulu etusivulla, vaikka '
+          + 'pitaisi. Myoskaan lentokoneen kabiinin aani ei kuulu ensimmaisessa '
+          + 'lentokohtauksessa."): etusivun aanimaisema (cityId etusivu) ja '
+          + 'avauslennon kabiini (lentomatka) ovat vaienneet - todennakoisesti '
+          + 'v1671:n avauksen aani -muutoksen (portissa odottava soitin, '
+          + 'aloitaAvauksenAani) tai tiedostopolun regressio. Kiireellinen: '
+          + 'juurisyy mitataan Playwrightilla (soittimen tila, gain, '
+          + 'verkkopyynnon vastaus) ja korjataan; savuke vartioi jatkossa, etta '
+          + 'etusivun aanimaisema soi portin painalluksen jalkeen ja kabiini '
+          + 'avauslennon aikana.',
         'KAUPUNGIN NIMI NOSTOJEN PAALLA (omistaja 7.9.2026 iltapaiva, '
           + 'kuvakaappaus Bukarestista, sanatarkasti: "kaupungin nimi menee '
           + 'nostojen paalle"): pallolla kaupungin nimi ja nostojen nimilaput '
