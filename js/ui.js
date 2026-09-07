@@ -208,6 +208,9 @@ import {
   playPlaceAmbience, stopPlaceStream, stopQuizMusic,
   vaimennaTausta, palautaTausta,
   hiljennaAmbienssi, palautaAmbienssi,
+  // Avauksen oma sekoitus: portin painalluksesta musiikki alas ja
+  // terminaali ylös (js/ambience-stream.js "AVAUKSEN ÄÄNI").
+  aloitaAvauksenAani, lopetaAvauksenAani,
 } from './ambience-stream.js';
 /*
  * Pohjaraidan valitsin (omistaja 5.9.2026 yö: "generoi musiikkeja
@@ -1520,10 +1523,27 @@ const INTRO_TYPE_MS = 190;
  *                                (paikkarivi naputetaan ensin, luenta
  *                                alkaa rungon kanssa).
  *
+ * ÄÄNI KULKEE SAMASSA AIKATAULUSSA (omistajan tilaus 7.9.2026:
+ * *"musiikki saisi hiljentyä hieman ja mukaan saisi tulla se terminaalin
+ * äänimaisema voimakkaasti mukaan ja siitä lähtisi omalla ajallaan
+ * kertojan luenta myös käyntiin"*). Painalluksen hetkellä (0 ms)
+ * musiikki alkaa liukua alas ja terminaalin äänimaisema ylös; sekoitus
+ * on valmis 1,3 sekunnissa ja maisema täydessä nousussaan 1,8
+ * sekunnissa (js/ambience-stream.js "AVAUKSEN ÄÄNI", AVAUKSEN_LIUKU_MS
+ * ja HAIVYTYS_MS).
+ *
+ * KERTOMUKSEN AIKA EI SIIS LYHENE EIKÄ SITÄ TARVITSE PIDENTÄÄ: 2850 ms
+ * on jo yli sekunnin äänimaiseman nousun jälkeen, ja itse LUENTA alkaa
+ * vielä myöhemmin — paikkarivi naputetaan ensin, ja kertoja aloittaa
+ * vasta sen valmistuttua (aloitaKertomus → aloitaRunko). Luku pysyy
+ * siksi ennallaan; jos avauksen liukua joskus pidennetään, tämän on
+ * pysyttävä sen jäljessä.
+ *
  * Vähennetyllä liikkeellä (prefers-reduced-motion) järjestys ja ajat
  * ovat samat, mutta salamaa ei oteta: pelkät häivytykset (Raamattu,
  * arkkikirjasto: *"prefers-reduced-motion kunnioitetaan (pelkkä
- * häivytys)"*).
+ * häivytys)"*). Äänet eivät ole liikettä eivätkä siis muutu: musiikin
+ * lasku ja maiseman nousu ajetaan samoin kummallakin asetuksella.
  */
 const AVAUS_YLAVIIVA_MS = 600;
 const AVAUS_OTSIKKO_MS = 1050;
@@ -15740,6 +15760,10 @@ export class UI {
    */
   aloitaKartalta() {
     if (this.aloitusvalintaAuki() || this.game.phase !== 'pickstart') return;
+    // Avauksen sekoitus purkautuu viimeistään tässä: pelaaja etenee,
+    // eikä terminaalin nosto saa jäädä päälle kartalle (sama purku kuin
+    // luennan päättyessä, js/luenta.js playIntroVoice).
+    lopetaAvauksenAani();
     // Naksahdus: sama puinen naksu kuin nappulan kolauksessa
     // (efekti-naksu.mp3). Kevyt eikä juhlava — matka ei ole vielä
     // alkanut, kartta vain avautuu.
@@ -15874,6 +15898,18 @@ export class UI {
     const nappi = html('button', 'start-btn primary', 'Aloita seikkailu');
     nappi.addEventListener('click', () => {
       this.aloitettu = true;
+      /*
+       * AVAUKSEN ÄÄNI ENSIMMÄISENÄ (omistajan tilaus 7.9.2026:
+       * *"musiikki saisi hiljentyä hieman ja mukaan saisi tulla se
+       * terminaalin äänimaisema voimakkaasti mukaan"*). Kutsu on ENNEN
+       * render()iä, koska juuri tämä painallus on se ele, jolla etusivun
+       * maisema pääsee vihdoin soimaan: kun lippu on jo päällä, alkava
+       * soitin nousee suoraan avauksen tasoon eikä ensin tavalliseen ja
+       * sitten uudelleen (js/ambience-stream.js aloitaAvauksenAani).
+       * Nosto purkautuu, kun kertojan luenta päättyy (js/luenta.js
+       * playIntroVoice) tai pelaaja etenee (aloitaKartalta).
+       */
+      aloitaAvauksenAani();
       this.suljeAloitusportti();
       /*
        * Lauta kutistuu keskeltä ylälohkoon tekstin tieltä heti portin

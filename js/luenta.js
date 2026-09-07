@@ -10,7 +10,7 @@
 
 import { asetaKertojaTila, kertojaTila, puheVoima } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
-import { puheAlkoi, puheLoppui } from './ambience-stream.js';
+import { lopetaAvauksenAani, puheAlkoi, puheLoppui } from './ambience-stream.js';
 import {
   lueAaneen, lukijaLukee, lukijaTuettu, pysaytaLukija,
 } from './lukija.js';
@@ -134,6 +134,43 @@ export function playIntroVoice(ui) {
   audio.volume = puheVoima();
   pehmeaLoppu(ui, audio);
   ui.introVoice = audio;
+  /*
+   * AVAUSTEKSTIN LUENNAN LOPPU ON PAUSE, EI 'ended'.
+   *
+   * pehmeaLoppu pysäyttää tämän nauhoituksen 25 millisekuntia ennen
+   * tiedoston reunaa, jottei loppu napsahda — ja pysäytetty soitin ei
+   * enää lähetä 'ended'-tapahtumaa. Siihen tapahtumaan nojaa kaksi
+   * asiaa, ja siksi molemmat hoidetaan tässä:
+   *
+   *  1. AVAUKSEN SEKOITUS purkautuu luennan mukana (omistajan tilaus
+   *     7.9.2026): musiikki nousee takaisin ja terminaalin nosto
+   *     laskee, kun kertoja on lukenut avaustekstin
+   *     (js/ambience-stream.js "AVAUKSEN ÄÄNI").
+   *  2. PUHUJAN ROOLI vapautuu, jotta taustan väistö (0,25) purkautuu.
+   *     Ilman tätä etusivun tausta jäi luennan jälkeen pysyvästi
+   *     neljäsosaan siihen asti, kunnes pelaaja eteni ja
+   *     stopIntroVoice ehti vapauttaa roolin (mitattu savukkeella
+   *     tools/savukkeet/savuke-etusivun-aani.mjs 7.9.2026). Sama vika
+   *     ja sama korjaus kuin haivytaLuennassa: pysäytetty luenta ei
+   *     laukaise enää 'ended'- eikä 'error'-tapahtumaa.
+   *
+   * Kuuntelu kattaa myös katkaisun (stopIntroVoice → haivytaJaSiivoa)
+   * ja taustalle menon; kumpikin vapauttaa roolin jo itse, ja
+   * vapautaPuhuja on tarkoituksella idempotentti. Avausteksti on
+   * kertaluontoinen luenta ilman jatkonappia, joten sen pysähdys on
+   * aina loppu — toisin kuin matkakirjamerkinnän, jonka voi jatkaa
+   * kaiuttimesta (ks. ui.luentaTauolla).
+   *
+   * JÄRJESTYS: nosto pois ensin, väistö vasta perään, jotta väistön
+   * purku laskee tason kerralla oikeaan lukemaan eikä tausta käy
+   * välillä nostetussa.
+   */
+  const luentaOhi = () => {
+    lopetaAvauksenAani();
+    vapautaPuhuja(ui, audio);
+  };
+  audio.addEventListener('ended', luentaOhi);
+  audio.addEventListener('pause', luentaOhi);
   merkitsePuhuja(ui, audio);
   audio.play().catch(() => {
     const aloita = () => {
