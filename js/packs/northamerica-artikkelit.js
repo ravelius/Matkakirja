@@ -1449,4 +1449,56 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'kilometrin päässä keskustasta. Ilmasto lämpenee mitattavasti: '
       + 'vuoden keskilämpötila oli 1979 −9,0 astetta ja 2023 −6,8.',
   },
+  /*
+   * SANTA FE (7.9.2026): faktat ovat samasta erästä kuin lehden
+   * tekstit (js/packs/kulttuuri-kategoriat.js, avain santafe) ja
+   * tarkistettu en-Wikipedian raakateksteistä 7.9.2026 ("Santa Fe,
+   * New Mexico", "Pueblo Revolt", "Santa Fe Trail").
+   *
+   * AVAIN ON WIKI-NIMI, ei näyttönimi: js/packs/northamerica.js antaa
+   * kaupungille wiki-nimeksi 'Santa Fe (New Mexico)' ja näyttönimeksi
+   * 'Santa Fe', ja ui.js hakee artikkelin avaimella
+   * `city.wiki ?? city.name`.
+   */
+  'Santa Fe (New Mexico)': {
+    intro: 'Santa Fe on New Mexicon pääkaupunki Sangre de Cristo '
+      + '-vuorten juurella, runsaan kahden kilometrin korkeudessa. Se '
+      + 'on **Yhdysvaltain vanhin osavaltion pääkaupunki ja sen '
+      + 'korkeimmalla sijaitseva**. Ennen espanjalaisia paikalla oli '
+      + 'tewojen kylä, jonka nimi Kháˀ Pʼoegeh tarkoittaa valkoisen '
+      + 'simpukan vesipaikkaa.'
+      + '\n\n'
+      + 'Espanjalainen kuvernööri Pedro de Peralta perusti kaupungin '
+      + '1607 ja teki siitä provinssin pääkaupungin 1610. Vuonna 1680 '
+      + 'pueblo-kansat ajoivat espanjalaiset pois ja hallitsivat '
+      + 'New Mexicoa kuvernöörien palatsista kahdentoista vuoden ajan, '
+      + 'kunnes Diego de Vargas valtasi alueen takaisin 1692. Meksikon '
+      + 'itsenäistyttyä kaupunki oli sen pohjoisen provinssin '
+      + 'pääkaupunki, ja 1846 Yhdysvallat otti sen haltuunsa.'
+      + '\n\n'
+      + 'Vuodesta 1912 kaupunki on rakentanut itsensä yhtenäisen '
+      + 'rakennustyylin mukaan, ja **keskustassa vaaditaan yhä '
+      + 'pueblo- tai territoriaalityyliä**. Taide elättää: yli 250 '
+      + 'galleriaa, iso museokeskittymä ja joka kymmenes työpaikka '
+      + 'taiteen ja kulttuurin aloilla.',
+    teksti: 'Santa Fe on Santa Fe -joen laaksossa Rio Granden '
+      + 'itäpuolella, ja kaupungin takana nousevat Sangre de Cristo '
+      + '-vuoret. Ilmasto on kylmä puolikuiva: kuivaa, aurinkoista ja '
+      + 'niin korkealla, että vuorokauden lämpötilaero ylittää '
+      + 'kaksikymmentäviisi Fahrenheit-astetta joka kuukausi.'
+      + '\n\n'
+      + '1820-luvulta alkaen Santa Fe Trail toi vaunuilla tavaraa '
+      + 'Missourista, ja kaupunki oli Mississippin länsipuolen '
+      + 'keskeinen kauppasolmu. Rautatie tuli vasta 1880 — ja meni '
+      + 'ohi: pääratalinja vedettiin Lamyn kylän kautta, ja Santa Fe '
+      + 'jäi haararadan päähän ja taantui vuosikymmeniksi.'
+      + '\n\n'
+      + 'Taantuma käännettiin matkailulla ja arkkitehtuurilla. '
+      + 'Kaupunki loi Pueblo Revival -tyylin, teki siitä pakollisen ja '
+      + 'sai yhtenäisen katukuvan, jossa matalat rapatut talot ja '
+      + 'näkyvät kattopalkit toistuvat korttelista toiseen. Nykyään '
+      + 'Santa Fe on Yhdysvaltain lounaisosan kulttuuripääkaupunki ja '
+      + 'vuodesta 2005 Unescon luovien kaupunkien verkoston jäsen '
+      + 'käsityön ja kansantaiteen alalla.',
+  },
 };

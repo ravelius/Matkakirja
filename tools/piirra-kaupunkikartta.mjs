@@ -5894,6 +5894,29 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 63.7610, etela: 63.7250, lansi: -68.5720, ita: -68.4390 },
   },
+  santafe: {
+    /*
+     * AUKIOLTA MUSEOKUKKULALLE (7.9.2026). Ruutu on noin 4,5 x 3,7
+     * kilometria: pohjoisessa aukio ja sen museokortteli, etelassa
+     * Santa Fe -joen takana Barrio de Analco ja osavaltiotalo, ja
+     * kaakossa Museum Hill.
+     *
+     * RUUTUA EI KESKITETA WIKIPEDIAN KAUPUNKIPISTEESEEN. Artikkelin
+     * koordinaatti (35,66722 / -105,96444) on noin kolme kilometria
+     * aukiolta lounaaseen eli nykyisen hallintoalueen painopisteessa;
+     * kartta ankkuroidaan historialliseen ytimeen San Franciscon
+     * ennakkotapauksen mukaan (spec-mantereet.md, linjaus 4).
+     *
+     * MUSEUM HILL VENYTTAA RUUTUA JA SE ON TARKOITUS. Kansantaiteen
+     * museo on 2,4 kilometria aukiolta kaakkoon, ja ilman sita ruutu
+     * olisi pelkka vanhakaupunki. Venytys tuo mukaan myos Canyon
+     * Roadin, joka kulkee aukiolta samaan suuntaan.
+     *
+     * Ei meri-lippua: Santa Fe on 2 130 metrin korkeudessa
+     * sisamaassa, ja Santa Fe -joki on OSM:ssa tavallinen vesivayla.
+     */
+    rajat: { pohjoinen: 35.6930, etela: 35.6600, lansi: -105.9620, ita: -105.9120 },
+  },
 };
 
 /*

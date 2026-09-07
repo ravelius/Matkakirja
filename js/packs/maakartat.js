@@ -14955,6 +14955,63 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Apex eli Niaqunngut', lat: 63.73, lon: -68.44583 },
     ],
   },
+  /*
+   * SANTA FE (7.9.2026). Rajaus on 4,5 x 3,7 kilometria aukiolta
+   * Museum Hillille — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * santafe-lohkossa. Ruutua EI keskitetty en-Wikipedian
+   * kaupunkipisteeseen (35,66722 / -105,96444), joka on noin kolme
+   * kilometria aukiolta lounaaseen: kartta ankkuroidaan
+   * historialliseen ytimeen (spec-mantereet.md linjaus 4, San
+   * Franciscon ennakkotapaus).
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat tewojen
+   * kyla ja nimi, kaupungin perustaminen ja aukiokaava, pueblokapina
+   * 1680 ja vuoden 1873 vaunureitti; teemasivu kertoo Pueblo Revival
+   * -rakennussaannosta, sen hinnasta, Indian Marketista ja
+   * Zozobrasta. Siksi POIS kartalta jaivat kuvernoorien palatsi
+   * (nostot K3 ja T1 seka matkakirjan valokuvataulu), Santa Fen aukio
+   * (nostot K2 ja T3), Canyon Road (nosto T2) ja Fort Marcy
+   * (nosto T4).
+   *
+   * KAHDEN KOHTEEN VALI ALITTAA 200 METRIA: katedraali ja Loreton
+   * kappeli ovat noin 170 metrin paassa toisistaan saman korttelin
+   * kulmissa. Molemmat pidetaan Nuukin ja Iqaluitin
+   * ennakkotapauksen mukaisesti — tools/tarkista-karttapisteet.mjs
+   * ei ilmoita numeroympyroiden paallekkaisyydesta, ja kuva on
+   * katsottu silmin. Mittaukset ovat tarkistus-santafe.md:n
+   * kohdassa C.
+   */
+  santafe: {
+    polku: 'assets/kartat/santafe-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 35.6930, etela: 35.6600, lansi: -105.9620, ita: -105.9120 },
+    esittely: 'Kartan pohjoisosassa on vanha keskusta aukioineen: '
+      + 'kadut lähtevät siitä säteittäin, kuten vuoden 1573 '
+      + 'kaavoitussäännöt vaativat. Alempana kaartaa Santa Fe -joki, '
+      + 'ja sen eteläpuolelta alkaa Barrio de Analco. Kaakkoiskulmaan '
+      + 'jää Museum Hill. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään ja
+       * pohjoisesta etelään. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026; taidemuseon ja
+       * O'Keeffe-museon luvut luettiin artikkelien tietolaatikoiden
+       * coord-merkinnöistä, koska niissä on display=inline eivätkä ne
+       * siksi näy rajapinnassa. Välit on mitattu uudelleen: pienin on
+       * noin 170 metriä (katedraali – Loreton kappeli), seuraavat
+       * 204 ja 223 metriä.
+       */
+      { nimi: 'Guadalupen pyhäkkö', lat: 35.68694, lon: -105.945 },
+      { nimi: 'Georgia O\'Keeffen museo', lat: 35.688961, lon: -105.94119 },
+      { nimi: 'New Mexicon taidemuseo', lat: 35.6881, lon: -105.9392 },
+      { nimi: 'Pyhän Franciscuksen katedraali', lat: 35.6865, lon: -105.9363 },
+      { nimi: 'Loreton kappeli', lat: 35.68556, lon: -105.93778 },
+      { nimi: 'San Miguelin kirkko', lat: 35.68343, lon: -105.93767 },
+      { nimi: 'New Mexicon osavaltiotalo', lat: 35.6823, lon: -105.9397 },
+      { nimi: 'Kansantaiteen museo', lat: 35.66406, lon: -105.92618 },
+    ],
+  },
 };
 
 /*

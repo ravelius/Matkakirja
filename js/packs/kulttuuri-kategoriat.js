@@ -100736,6 +100736,52 @@ export const KULTTUURI_KATEGORIAT = {
         + 'pohjoispuolella, ilman tietä tai rataa muualle. Isoisän '
         + 'matkavuonna 1873 rannalla ei ollut kaupunkia lainkaan — '
         + 'vain kalapaikka, jonka nimi kertoo miksi.',
+      kansikuvat: [
+        {
+          tiedosto: 'City of Iqaluit.jpg',
+          selite: 'Ilta-aurinko osuu kaupunkiin, ja sen takana '
+            + 'Frobisherinlahti on täynnä ajojäätä.',
+          lahde: 'ADialla, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Bayview Iqaluit.JPG',
+          selite: 'Kesällä tundra on vihreä ja talot värikkäitä, ja '
+            + 'lahden takana näkyy vastaranta.',
+          lahde: 'Sebastian, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Iqaluit outskirts2.jpg',
+          selite: 'Talvella kaupunki nousee lumiselta rannalta ja meri '
+            + 'jäätyy sen edessä.',
+          lahde: 'Saffron Blaze, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Iqaluitille ei ole generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa (vertaa Lagosiin ja
+       * Denveriin): merijää, kivimerkki ja Apexin niemi.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Iqaluit 2020.jpg',
+          selite: 'Merijää työntyy röykkiöiksi lahden pohjukassa, ja '
+            + 'kaukana keskellä kulkee moottorikelkka.',
+          lahde: 'Hbmtl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Inuksuk (7697388930).jpg',
+          selite: 'Kivistä ladottu inuksuk seisoo kalliolla taivasta '
+            + 'vasten kaupungin laidalla.',
+          lahde: 'Sebastian Kasten, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Apex Nunavut.JPG',
+          selite: 'Apexin niemi keväthämärässä: värikkäät talot '
+            + 'rivissä ja jäätynyt lahti niiden takana.',
+          lahde: 'Aaron M Lloyd, Wikimedia Commons (PD)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Paikka, jossa on paljon kalaa',
@@ -101063,6 +101109,378 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vain kelkalla, valjakolla tai jalan ja kesällä '
             + 'veneellä.',
           wiki: 'Iqaluit',
+        },
+      ],
+    },
+  ],
+  /*
+   * SANTA FE (7.9.2026). Faktapohja ja tarkistus:
+   * docs/mantereet-tyoaineisto/faktapohja-santafe.md ja
+   * tarkistus-santafe.md. Kaikki väitteet en-Wikipedian
+   * raakateksteistä 7.9.2026.
+   *
+   * SISÄLTÖLINJAUKSET (spec-mantereet.md, USA ja linjaus 1):
+   * pueblo-kansat ovat eläviä toimijoita — kylä oli olemassa ennen
+   * espanjalaisia, kapina 1680 onnistui, ja Indian Market on
+   * nykypäivän taiteilijoiden markkina. Oñaten karkotus ja de
+   * Vargasin "veretön takaisinvaltaus" kerrotaan lähteen omalla
+   * sanamuodolla ilman yksityiskohtia. Sisällissota on perushistoriaa
+   * ilman osapuolinostalgiaa. Katedraalin vuoden 2022 kiinnitys ja
+   * sovintosumma jätetään pois (ei nykypolitiikkaa).
+   *
+   * MITÄ TÄSSÄ EI OLE JA MIKSI. Mesa Verde ja Chacon kanjoni ovat
+   * karttanostoja (maastokohteet-usa.js), ja USA:n maalehden aiheet
+   * ovat historia, luonto, musiikki, tiede ja ruoka — lehti ei toista
+   * niitä. Kohdekartan kahdeksan kohdetta ovat omia juttujaan
+   * (nahtavyysjutut.js) eikä yksikään niistä ole näiden nostojen
+   * aihe: kuvernöörien palatsi, aukio, Canyon Road ja Fort Marcy ovat
+   * lehden juttuja ja siksi POIS kartalta, ja kartan kohteet ovat
+   * kirkkoja ja museoita, joita lehti ei käsittele.
+   */
+  santafe: [
+    {
+      id: 'kaupunki',
+      nimi: 'Santa Fe',
+      johdanto: 'Santa Fe on Yhdysvaltain vanhin osavaltion pääkaupunki '
+        + 'ja sen korkeimmalla sijaitseva, runsaan kahden kilometrin '
+        + 'korkeudessa Sangre de Cristo -vuorten juurella. Isoisän '
+        + 'matkavuonna 1873 se oli territorion pääkaupunki ja '
+        + 'vaunureitin pääte, jonne rata ei vielä ylettynyt.',
+      /*
+       * ENNEN JA NYT: valmis pari matkakirjan valokuvataulusta
+       * (northamerica-valokuvat.js, santafe). Sama aukio 1866 ja
+       * nykyään. Kuvakentät täydennetään kuvacommitissa.
+       */
+      nostot: [
+        {
+          otsikko: 'Valkoisen simpukan vesipaikka',
+          teksti: 'Ennen espanjalaisia paikalla oli kylä. Noin vuosien '
+            + '900 ja 1500 välillä seutu tunnettiin tewojen kielellä '
+            + 'nimellä Kháˀ Pʼoegeh, valkoisen simpukan vesipaikka — '
+            + 'yksi monista nimistä, jotka kertovat vedestä. Navajoksi '
+            + 'paikka on Yootó. Joskus vuoden 900 jälkeen joukko tewoja '
+            + 'rakensi taloryhmän nykyisen aukion kohdalle ja puolen '
+            + 'mailin verran siitä etelään ja länteen; kylän nimi oli '
+            + 'Oghá Pʼoʼoge. Tanoankieliset ja muut pueblo-kansat '
+            + 'asuivat Santa Fe -joen varrella 1000- ja 1100-luvuilla, '
+            + 'mutta paikka oli ollut hylättynä ainakin kaksisataa '
+            + 'vuotta, kun espanjalaiset tulivat. Pueblo-kansat elävät '
+            + 'yhä omissa kylissään pitkin Rio Granden laaksoa.',
+          wiki: 'Santa Fe, New Mexico',
+        },
+        {
+          otsikko: 'Kaupunki, joka perustettiin kahdesti',
+          teksti: 'Juan de Oñate johti 1598 ensimmäisen espanjalaisen '
+            + 'siirtokuntayrityksen ja perusti Santa Fe de Nuevo '
+            + 'Méxicon provinssin, mutta hänet karkotettiin ja '
+            + 'lähetettiin maanpakoon, koska hänen hallintonsa '
+            + 'katsottiin julmaksi alkuperäisväestöä kohtaan. Provinssin '
+            + 'toinen kuvernööri Pedro de Peralta perusti 1607 uuden '
+            + 'kaupungin vuorten juurelle nimellä La Villa Real de la '
+            + 'Santa Fé de San Francisco de Asís ja määräsi sen 1610 '
+            + 'pääkaupungiksi — sitä se on lähes yhtäjaksoisesti '
+            + 'pysynyt, ja siksi se on Yhdysvaltain vanhin osavaltion '
+            + 'pääkaupunki. Kaava noudatti Intian lakeja, jotka Filip '
+            + 'II oli antanut 1573: kaupunki rakennetaan keskusaukion '
+            + 'ympärille, ja kadut lähtevät siitä säteittäin.',
+          wiki: 'Santa Fe de Nuevo México',
+        },
+        {
+          otsikko: 'Vuosi 1680: kaksitoista vuotta pueblojen hallintoa',
+          teksti: 'Alkuperäiskansoilla ei ollut edustusta provinssin '
+            + 'hallinnossa, ja se johti vuonna 1680 pueblokapinaan: eri '
+            + 'pueblo-kansojen ryhmät ajoivat espanjalaiset ulos '
+            + 'New Mexicosta El Pasoon asti. Sen jälkeen pueblo-kansat '
+            + 'hallitsivat New Mexicoa kuvernöörien palatsista Santa '
+            + 'Fessä kahdentoista vuoden ajan, 1680–1692. Alue '
+            + 'vallattiin takaisin 1692, kun Diego de Vargas johti niin '
+            + 'kutsutun verettömän takaisinvaltauksen — nimitystä '
+            + 'arvosteltiin väkivaltaiseksi jo omana aikanaan. Seuraava '
+            + 'kuvernööri Francisco Cuervo y Valdez alkoi rakentaa '
+            + 'rauhaa, ja siihen kuului Albuquerquen perustaminen, jotta '
+            + 'pueblot saisivat paremman edustuksen ja kauppayhteydet.',
+          wiki: 'Pueblo Revolt',
+        },
+        {
+          otsikko: 'Vuosi 1873: vaunureitin viimeiset vuodet',
+          teksti: '1820-luvulta alkaen Santa Fe Trail toi vaunuilla '
+            + 'tavaraa Missourista preerian halki, ja kauppa houkutteli '
+            + 'sekä alkuperäiskansojen että euroamerikkalaisia '
+            + 'kauppiaita; kaupunki oli Mississippin länsipuolen '
+            + 'keskeinen kauppa- ja liikennesolmu. Yhdysvallat julisti '
+            + '1846 sodan Meksikolle, ja kenraali Stephen W. Kearny '
+            + 'marssi noin 1 700 sotilaan kanssa Santa Feen; 1848 '
+            + 'Guadalupe Hidalgon sopimus vahvisti vallanvaihdon. '
+            + 'Maaliskuussa 1862 kaupungin yllä liehui muutaman päivän '
+            + 'etelävaltioiden lippu, kunnes Glorieta Passin taistelu '
+            + 'pakotti vetäytymään. Isoisän matkavuonna vaunut kulkivat '
+            + 'yhä: rata vedettiin 1880 Lamyn kautta kaupungin ohi, ja '
+            + 'Santa Fe jäi haararadan päähän.',
+          wiki: 'Santa Fe Trail',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Santa Fe on New Mexicon pääkaupunki ja Yhdysvaltain '
+          + 'lounaisosan kulttuuripääkaupunkina pidetty kaupunki. Se on '
+          + 'maan korkeimmalla sijaitseva osavaltion pääkaupunki: '
+          + 'Geography-osion mukaan 7 199 jalkaa eli noin 2 190 metriä '
+          + 'merenpinnan yläpuolella. Kaupunkikuva on adobea ja '
+          + 'rappausta, ja se on sitä sääntömääräisesti — '
+          + 'rakennusmääräykset vaativat keskustassa pueblo- tai '
+          + 'espanjalais-territoriaalista tyyliä tasakattoineen. '
+          + 'Taidetta on paljon: yli 250 galleriaa, iso museokeskittymä '
+          + 'ja kolme vuotuista taidetapahtumaa. Joka kymmenes '
+          + 'työpaikka liittyy taiteen ja kulttuurin aloihin, ja '
+          + 'kirjailijoiden osuus työvoimasta on suurin kaikista '
+          + 'Yhdysvaltain kaupungeista. Vuonna 2005 Santa Festä tuli '
+          + 'ensimmäinen yhdysvaltalainen kaupunki Unescon luovien '
+          + 'kaupunkien verkostossa, käsityön ja kansantaiteen alalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Santa Fe',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka päätti miltä sen pitää näyttää ja '
+            + 'rakensi itsensä uudelleen sen näköiseksi — ja jossa '
+            + 'kaikki tärkeä on kävelymatkan päässä yhdestä aukiosta.',
+          nosto: 'Santa Fe on Yhdysvaltain korkeimmalla sijaitseva '
+            + 'osavaltion pääkaupunki, runsaat kaksi kilometriä '
+            + 'merenpinnan yläpuolella. Korkeus ja kuivuus tekevät '
+            + 'vuorokauden lämpötilaerosta yli 25 asteen (Fahrenheit) '
+            + 'joka kuukausi ja suuren osan vuodesta yli 30.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Santa Fe Regional Airportista lennetään '
+                + 'Dallas/Fort Worthiin ja Phoenixiin, kausiluonteisesti '
+                + 'Denveriin ja Houstoniin. Kaupunki on moottoritie '
+                + 'I-25:n varrella, ja US 84 ja US 285 kulkevat sen '
+                + 'läpi St. Francis Drivea pitkin; NM-599 kiertää '
+                + 'luoteesta. Vuosina 1926–1937 valtatie 66 kulki '
+                + 'Santa Fen kautta. Kaupungin oma bussiyhtiö on Santa '
+                + 'Fe Trails, ja lähijuna New Mexico Rail Runner '
+                + 'Express vie Albuquerquen suuntaan neljältä asemalta. '
+                + 'Santa Fe Southern Railway ajaa museojunia 15 mailin '
+                + 'päähän Lamyyn, jossa pysähtyy Amtrakin Southwest '
+                + 'Chief — rata kulkee siis yhä kylän kautta eikä '
+                + 'kaupungin.',
+            },
+            {
+              otsikko: 'Aukio ja museot',
+              teksti: 'Suuri osa matkailusta on vanhassa keskustassa ja '
+                + 'etenkin aukiolla, joka on yhden korttelin kokoinen ja '
+                + 'kuvernöörien palatsin vieressä. Palatsin '
+                + 'pylväskäytävässä alkuperäiskansojen käsityöläiset '
+                + 'myyvät omaa työtään. Museum Hill parin kilometrin '
+                + 'päässä kaakossa kokoaa useita museoita, ja siellä '
+                + 'järjestetään Santa Fe International Folk Art Market. '
+                + 'Kolmas museokeskittymä on Railyardin kaupunginosassa. '
+                + 'Kaikki keskustan kohteet ovat kävelymatkan päässä '
+                + 'toisistaan, mikä on korkealla ilmalla oma '
+                + 'huomionsa — hengästyy nopeammin kuin luulisi.',
+            },
+            {
+              otsikko: 'Päiväretket',
+              teksti: 'Taos on noin 70 mailia pohjoiseen. Bandelier '
+                + 'National Monument ja Valles Caldera ovat noin 30 '
+                + 'mailin päässä, ja Ski Santa Fe kuudentoista mailin '
+                + 'päässä koillisessa. Chimayó on lähellä, ja monet '
+                + 'paikalliset tekevät vuosittaisen pyhiinvaelluksen '
+                + 'Santuario de Chimayóon. Syyskuun toisella viikolla '
+                + 'Sangre de Cristo -vuorten haavat muuttuvat '
+                + 'keltaisiksi, ja samaan aikaan osuvat Fiestas de '
+                + 'Santa Fe.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Santa Fe tunnetaan panoksestaan New Mexicon '
+                + 'keittiöön. Chile on osavaltion tunnusomaisin '
+                + 'viljelykasvi, ja syksyllä vihreä sato paahdetaan '
+                + 'pyörivissä rummuissa torin laidalla — tuoksun '
+                + 'tunnistaa kadulle asti. Ruokakaupungin maine on '
+                + 'kaupungille tärkeä osa samaa kulttuurituotetta kuin '
+                + 'galleriat ja museot. en-Wikipedia nostaa '
+                + 'ravintoloista esiin Alkemēn ja Bobcat Biten; '
+                + 'muuten kannattaa mennä sinne, missä chiliä '
+                + 'paahdetaan.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Santa '
+                + 'Fe -artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on kylmä puolikuiva. Vuorokauden '
+                + 'keskilämpötila liikkuu joulukuun 30,3 asteesta '
+                + 'heinäkuun 70,1 asteeseen Fahrenheitia eli noin '
+                + 'miinus yhdestä kahteenkymmeneenyhteen celsiukseen. '
+                + 'Lunta sataa tavallisesti kuudesta kahdeksaan kertaa '
+                + 'vuodessa marras–huhtikuussa, eniten joulukuussa. '
+                + 'Rankimmat sateet tulevat heinä–elokuussa '
+                + 'Pohjois-Amerikan monsuunin myötä; kuivin kuukausi on '
+                + 'helmikuu. Indian Market on elokuun kolmatta torstaita '
+                + 'seuraavana viikonloppuna ja Zozobra Labor Day '
+                + '-viikonlopun perjantaina.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Aukio ja kuvernöörien palatsi',
+                tahdet: 3,
+                selite: 'Kaupungin keskus vuodesta 1610; palatsin '
+                  + 'pylväskäytävässä myydään vain itse tehtyä työtä.',
+              },
+              {
+                mita: 'Canyon Road',
+                tahdet: 3,
+                selite: 'Kaupungin tihein galleriakeskittymä; '
+                  + 'gallerioita on koko kaupungissa yli 250.',
+              },
+              {
+                mita: 'Museum Hill',
+                tahdet: 3,
+                selite: 'Neljä museota samalla kukkulalla, mukana '
+                  + 'maailman suurin kansantaiteen kokoelma.',
+              },
+              {
+                mita: 'Indian Market',
+                tahdet: 3,
+                selite: 'Elokuussa noin tuhat alkuperäiskansojen '
+                  + 'taiteilijaa myy töitään aukion ympärillä.',
+              },
+              {
+                mita: 'Zozobran poltto',
+                tahdet: 2,
+                selite: 'Yli viisitoistametrinen marionetti palaa Fort '
+                  + 'Marcyn puistossa Labor Day -viikonloppuna.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksoissa ja
+             * teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Korkeus tuntuu',
+                teksti: 'Kaupunki on runsaan kahden kilometrin '
+                  + 'korkeudessa, ja kuiva ilma tekee vuorokauden '
+                  + 'lämpötilaerosta suuren — vettä mukaan ja '
+                  + 'ensimmäinen päivä rauhallisesti.',
+              },
+              {
+                otsikko: 'Rata pysähtyy Lamyyn',
+                teksti: 'Amtrakin Southwest Chief pysähtyy 15 mailin '
+                  + 'päässä Lamyssa, ei Santa Fessä; sama ohitus, '
+                  + 'joka teki kaupungista sivukylän 1880.',
+              },
+              {
+                otsikko: 'Adobe voi olla rappausta',
+                teksti: 'Rakennusmääräys vaatii tyylin, ei '
+                  + 'materiaalia: monet uudet talot ovat puuta ja '
+                  + 'harkkoa rapattuna, ja sitä sanotaan faux-dobeksi.',
+              },
+              {
+                otsikko: 'Elokuu on täynnä',
+                teksti: 'Indian Market tuo kaupunkiin arviolta '
+                  + '150 000 kävijää yhdeksi viikonlopuksi — majoitus '
+                  + 'kannattaa varata hyvissä ajoin.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Taiteen kaupunki',
+      johdanto: 'Kaupunki päätti 1912, miltä sen pitää näyttää — ja '
+        + 'rakensi itsensä uudelleen sen näköiseksi. Nykyään joka '
+        + 'kymmenes työpaikka on taiteessa ja kulttuurissa, ja '
+        + 'elokuussa aukio täyttyy myyntipöydistä.',
+      tehtava: {
+        kysymys: 'Mikä Zozobra on?',
+        vaihtoehdot: [
+          'Vuoristosolan nimi',
+          'Jättimäinen marionetti, joka poltetaan joka syksy',
+          'Pueblokylän vanhin talo',
+          'Chilikastikkeen nimi',
+        ],
+        oikea: 1,
+        fakta: 'Nimi tulee espanjan ahdistusta tarkoittavasta sanasta. '
+          + 'Kuka tahansa voi kirjoittaa murheensa lapulle ja jättää '
+          + 'sen "murhelaatikkoon" poltettavaksi nuken mukana.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sääntö, joka teki kaupungista yhtenäisen',
+          teksti: 'Kun Santa Fe kasvoi 1800-luvulla, rakennustyylit '
+            + 'sekoittuivat niin, että osavaltioaseman aikaan 1912 '
+            + 'kaupunki näytti kirjoittajien sanoin "Anywhere '
+            + 'USA":lta. Taantuma oli alkanut jo kaksikymmentä vuotta '
+            + 'aiemmin radan siirryttyä länteen ja liittovaltion '
+            + 'suljettua Fort Marcyn, ja hallinto arveli matkailun '
+            + 'voivan kääntää sen. Ratkaisu oli keksiä yhtenäinen '
+            + 'tyyli: Santa Fe Pueblo Revival, joka pohjautui '
+            + 'kuvernöörien palatsin entistämiseen. Ainekset olivat '
+            + 'paikallisia: vigat eli seinien läpi työntyvät karkeat '
+            + 'palkit, canales eli tasakattojen vesikourut ja '
+            + 'adobetalojen maanvärinen ilme rappauksella toistettuna. '
+            + 'Vuoden 1912 jälkeen tyyli oli pakollinen.',
+          wiki: 'Pueblo Revival architecture',
+        },
+        {
+          otsikko: 'Hinta maksettiin historialla',
+          teksti: 'Vuoteen 1930 mennessä sallittuun kirjoon lisättiin '
+            + 'territoriaalityyli, osavaltioasemaa edeltävä tapa, johon '
+            + 'kuuluvat portales eli suuret katetut kuistit ja '
+            + 'valkoiseksi maalatut ikkuna- ja oviotsat. Vuoden 1957 '
+            + 'asetus teki siitä lain: uusien ja uudelleen '
+            + 'rakennettujen talojen on etenkin historiallisilla '
+            + 'alueilla noudatettava pueblo- tai '
+            + 'espanjalais-territoriaalista tyyliä tasakattoineen. '
+            + 'Kaupungista tuli "erilainen", kuten matkailumainos '
+            + 'lupasi — mutta hinta maksettiin historialla: '
+            + 'puebloittamisen kiireessä revittiin pois valurautaiset '
+            + 'liikejulkisivut ja viktoriaaniset koristeet, ja suuri osa '
+            + 'kaupungin omaa rakennushistoriaa katosi. Tyylin '
+            + 'keskeisiä arkkitehteja olivat T. Charles Gaastra ja John '
+            + 'Gaw Meem.',
+          wiki: 'Santa Fe, New Mexico',
+        },
+        {
+          otsikko: 'Elokuun aukio',
+          teksti: 'Santa Fe Indian Market pidetään elokuun kolmatta '
+            + 'torstaita seuraavana viikonloppuna, ja se tuo kaupunkiin '
+            + 'arviolta 150 000 ihmistä. Järjestäjä on Southwestern '
+            + 'Association for Indian Arts, ja myyjinä on noin tuhat '
+            + 'alkuperäiskansojen taiteilijaa Yhdysvalloista ja '
+            + 'Kanadasta. Kojut ovat aukion ympärillä ja viereisillä '
+            + 'kaduilla, ja myynti tapahtuu suoraan tekijältä '
+            + 'ostajalle; osallistuakseen taiteilijan on todistettava '
+            + 'kuuluvansa liittovaltion tunnustamaan kansaan, ja työn '
+            + 'on täytettävä tiukat laatu- ja materiaalivaatimukset. '
+            + 'Idean esitti 1922 taiteen puolestapuhuja Rose Dougan. '
+            + 'Ensimmäinen alkuperäiskansaan kuuluva johtaja oli '
+            + 'hopi-tekstiilitaiteilija Ramona Sakiestewa 1980.',
+          wiki: 'Santa Fe Indian Market',
+        },
+        {
+          otsikko: 'Zozobra, viisikymmentä jalkaa murhetta',
+          teksti: 'Zozobra eli Old Man Gloom on puusta, rautalangasta '
+            + 'ja puuvillakankaasta tehty marionetti, joka poltetaan '
+            + 'Labor Day -viikonlopun perjantaina Fort Marcyn '
+            + 'puistossa. Korkeutta on 50 jalkaa ja 6 tuumaa. Nimi '
+            + 'tulee espanjan sanasta, joka tarkoittaa ahdistusta: '
+            + 'nukke ruumiillistaa synkkyyden, ja polttamalla se '
+            + 'hävitetään edellisen vuoden murheet. Murheensa voi '
+            + 'kirjoittaa lapulle ja jättää kaupungin matkailuneuvonnan '
+            + '"murhelaatikkoon" — nukkeen on päätynyt avioeropapereita, '
+            + 'pysäköintisakkoja, maksettuja asuntolainoja ja hääpuku. '
+            + 'Taiteilija Will Shuster poltti ensimmäisen Zozobran '
+            + 'takapihallaan 1924; nykyään katsojia on yli 60 000. '
+            + 'Vuoden 2007 nukke oli Guinnessin mukaan maailman suurin '
+            + 'marionetti, 15,21 metriä.',
+          wiki: 'Zozobra',
         },
       ],
     },

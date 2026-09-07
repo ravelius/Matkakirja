@@ -60291,6 +60291,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Kiitotie oli pitkään yhteinen Kanadan ilmavoimien kanssa, '
           + 'ja parakit ja hävittäjähallit on pidetty kunnossa. Vuonna '
           + '2019 matkustajia oli noin 172 000.',
+      kuvat: [
+        {
+          tiedosto: 'Taxiing towards new Iqaluit airport terminal.jpg',
+          selite: 'Punainen terminaali kaartuu kiitotien laidalla, ja '
+            + 'takana nousee paljas tunturi.',
+          lahde: 'OhanaUnited, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Sylvia Grinnellin puisto': {
@@ -60317,6 +60325,14 @@ export const NAHTAVYYSJUTUT = {
           + 'lintulajeja on noin neljäkymmentä, muun muassa tunturihaukka, '
           + 'kiiruna ja pulmunen. Yleisimpiä kasveja on '
           + 'sinirikko, Nunavutin virallinen kukka.',
+      kuvat: [
+        {
+          tiedosto: 'River at Sylvia Grinnell Territorial Park.JPG',
+          selite: 'Joki levittäytyy kallioiden väliin, ja rannoilla '
+            + 'kasvaa matalaa tundraa.',
+          lahde: 'Sebastian Kasten, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Nunavutin parlamenttitalo': {
@@ -60345,6 +60361,14 @@ export const NAHTAVYYSJUTUT = {
           + 'pöytäkirja julkaistaan sekä inuktitutin tavumerkein että '
           + 'englanniksi. Ennen talon valmistumista edustajat '
           + 'kokoontuivat Inuksuk-lukion liikuntasalissa.',
+      kuvat: [
+        {
+          tiedosto: 'Leg Building Iqaluit 2000-08-27.jpg',
+          selite: 'Tummaksi verhoiltu talo kaartuu loivasti, ja sen '
+            + 'edessä liehuu Nunavutin lippu.',
+          lahde: 'Ansgar Walk, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Inuksuk-lukio': {
@@ -60369,6 +60393,14 @@ export const NAHTAVYYSJUTUT = {
           + 'reittiä, kalapaikkaa, ruokakätköä tai leiripaikkaa siellä, '
           + 'missä maastossa ei ole muita kiintopisteitä. Inuksuk on myös '
           + 'Nunavutin lipun tunnus.',
+      kuvat: [
+        {
+          tiedosto: 'Inuksuk High School.jpg',
+          selite: 'Vaaleansininen koulu on kaksi pyöreäkulmaista siipeä, '
+            + 'joiden seinissä on pyöreitä ikkunoita.',
+          lahde: 'OhanaUnited, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Pyhän Juudaksen katedraali': {
@@ -60398,6 +60430,14 @@ export const NAHTAVYYSJUTUT = {
           + 'sisään sarvivalaanhampainen alttariristi ja kuningattaren '
           + 'vuoden 1970 peruskivenmuurauksessa lahjoittama hopeamalja. '
           + 'Rakentamisen velat oli maksettu vuoteen 2017 mennessä.',
+      kuvat: [
+        {
+          tiedosto: 'Iqaluit St. Jude\'s Anglican Cathedral 2012.JPG',
+          selite: 'Valkoinen kupoli on iglun muotoinen, ja sen huipulla '
+            + 'on lasinen lyhty ja risti.',
+          lahde: 'Cwk36, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Astro Hill': {
@@ -60423,6 +60463,14 @@ export const NAHTAVYYSJUTUT = {
           + 'on noussut Creekside Village, jossa on 144 rivitalo- ja '
           + 'kerrostaloasuntoa. Vuonna 2012 halkeamat sulkivat '
           + 'kaupungin uimahallin.',
+      kuvat: [
+        {
+          tiedosto: 'Astro Hill Complex, Iqaluit.JPG',
+          selite: 'Kukkulalla seisoo neljä isoa taloa vierekkäin, ja '
+            + 'niiden takana avautuu lahti.',
+          lahde: 'Sebastian Kasten, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Nunatta Sunakkutaangit -museo': {
@@ -60444,6 +60492,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Iqaluitissa sitä näkee muuallakin kuin museossa: '
           + 'parlamenttitalon sisustus on koottu saman perinteen '
           + 'parhaimmistosta.',
+      kuvat: [
+        {
+          tiedosto: 'Nunatta Sunakkutaangit Museum (September 2025).jpg',
+          selite: 'Punakattoisen valkoisen puutalon kyljessä on kyltti '
+            + 'inuktitutin tavumerkein ja englanniksi.',
+          lahde: 'OhanaUnited, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Apex eli Niaqunngut': {
@@ -60474,6 +60530,260 @@ export const NAHTAVYYSJUTUT = {
           + 'jotka lähtivät etelään tuberkuloosihoitoon eivätkä '
           + 'palanneet. Kivessä on pieniä reikiä: niihin voi jättää '
           + 'viestin poismenneelle.',
+      kuvat: [
+        {
+          tiedosto: 'Former Hudson\'s Bay Company store in Apex 1.jpg',
+          selite: 'Vanhan kauppahuoneen päätyyn on maalattu yhtiön nimi '
+            + 'ja perustamisvuosi.',
+          lahde: 'OhanaUnited, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * SANTA FE (7.9.2026). Kahdeksan kohdetta, samat kuin
+   * js/packs/maakartat.js:n KAUPUNKIKARTAT.santafe-lohkossa ja
+   * samassa järjestyksessä (lännestä itään ja pohjoisesta etelään).
+   * Kaikki tiedot en-Wikipedian raakateksteistä 7.9.2026;
+   * tarkistusraportti on
+   * docs/mantereet-tyoaineisto/tarkistus-santafe.md.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehden
+   * nostot ovat tewojen kylä ja nimi, kaupungin perustaminen ja
+   * aukiokaava, pueblokapina 1680 ja vuoden 1873 vaunureitti;
+   * teemasivu kertoo Pueblo Revival -rakennussäännöstä, Canyon
+   * Roadista, Indian Marketista ja Zozobrasta. Kuvernöörien palatsi,
+   * aukio, Canyon Road ja Fort Marcy jäivät siksi pois kartalta.
+   *
+   * KAHDEN KOHTEEN VÄLI ALITTAA 200 METRIÄ (katedraali – Loreton
+   * kappeli, noin 170 m). Molemmat pidetään Nuukin ja Iqaluitin
+   * ennakkotapauksen mukaisesti; perustelu ja mittaukset ovat
+   * maakartat.js:n lohkokommentissa.
+   *
+   * LORETON PORTAIKKO JA KATEDRAALIN TETRAGRAMMATON ovat lähteessä
+   * nimenomaan kertomuksia, joita ei ole vahvistettu
+   * (tarkistus-santafe.md, kohdat A ja B). Ne kerrotaan siksi
+   * kertomuksina, ja mitat ja vuodet faktoina.
+   */
+  santafe: {
+    'Guadalupen pyhäkkö': {
+      aika: 'noin 1795',
+      teksti: 'Santuario de Nuestra Señora de Guadalupe on '
+          + 'Yhdysvaltain vanhin Guadalupen Neitsyelle omistettu '
+          + 'kirkko. Se on yksinkertainen ristinmuotoinen rakennus, '
+          + 'jonka adobeseinät ovat paksut, ja sitä on muutettu monta '
+          + 'kertaa — viimeksi 1970-luvulla.'
+          + '\n\n'
+          + 'Tarkkaa rakennusvuotta ei tiedetä. Santa Fen '
+          + 'arkkihiippakunnan arkistot viittaavat vuoteen 1795, koska '
+          + 'rakennuslupa myönnettiin silloin, mutta varmasti kirkon '
+          + 'olemassaolo on dokumentoitu vasta 1821. Kuuluisa '
+          + 'alttaritaulu, joka esittää Guadalupen Neitsyttä, tuotiin '
+          + 'osissa Mexico Citystä Camino Realia pitkin; se on José de '
+          + 'Alcíbarin signeeraama ja vuodelta 1783.'
+          + '\n\n'
+          + 'Kirkko oli käytössä 1830-luvulle asti, ja kun Yhdysvaltain '
+          + 'armeija miehitti kaupungin 1846, se oli jo vähällä '
+          + 'käytöllä ja huonossa kunnossa. Vuonna 1881 kävijä kuvasi '
+          + 'ulkopuolen rapistuneeksi mutta sisätilat siisteiksi ja '
+          + 'suunnilleen sellaisiksi kuin ne olivat olleet sukupolvia '
+          + 'aiemmin; kattopalkit oli veistetty kirveellä. Silloin '
+          + 'kirkkoa käytettiin vain kerran vuodessa, Guadalupen '
+          + 'Neitsyen juhlana 12. joulukuuta.',
+      lahde: 'Wikipedia',
+    },
+    'Georgia O\'Keeffen museo': {
+      aika: '1997',
+      teksti: 'Museo avattiin 17. heinäkuuta 1997, yksitoista vuotta '
+          + 'Georgia O\'Keeffen kuoleman jälkeen, ja se on omistettu '
+          + 'hänen taiteelliselle perinnölleen ja amerikkalaiselle '
+          + 'modernismille. Päärakennuksen suunnitteli arkkitehti '
+          + 'Richard Gluckman yhdessä santafelaisen Allegretti '
+          + 'Architectsin kanssa; Gluckmanin muita töitä ovat Whitney-'
+          + 'museon kokoelmasiipi New Yorkissa ja Andy Warhol -museo '
+          + 'Pittsburghissa.'
+          + '\n\n'
+          + 'Museo on itse asiassa monta paikkaa kahdessa kaupungissa. '
+          + 'Santa Fessä ovat näyttelygalleriat, tutkimuskeskuksen '
+          + 'kirjasto ja arkisto historiallisessa A. M. Bergeren '
+          + 'talossa sekä opetustilat; Abiquiússa taiteilijan oma koti '
+          + 'ja ateljee sekä vierailukeskus. Abiquiún talo oli '
+          + 'O\'Keeffen päävakinainen koti 1940-luvun lopulta hänen '
+          + 'elämänsä loppuun, ja sen puutarhaa hoitavat ja korjaavat '
+          + 'yhä paikalliset koululaiset.'
+          + '\n\n'
+          + 'Kokoelmat ovat maailman suurin O\'Keeffen töiden ja '
+          + 'henkilökohtaisen aineiston kokonaisuus, ja mukana on '
+          + 'esineistöä hänen taloistaan. Teokset vaihtuvat gallerioissa '
+          + 'pitkin vuotta, joten sama näyttely ei odota kahta kertaa.',
+      lahde: 'Wikipedia',
+    },
+    'New Mexicon taidemuseo': {
+      aika: '1917',
+      teksti: 'New Mexicon taidemuseo on korttelin päässä aukiolta, ja '
+          + 'se on yksi neljästä osavaltion ylläpitämästä museosta, '
+          + 'jotka kuuluvat Museum of New Mexico -kokonaisuuteen. '
+          + 'Nykyinen nimi on vuodelta 2007; sitä ennen se oli '
+          + 'Museum of Fine Arts.'
+          + '\n\n'
+          + 'Rakennus itse on kaupungin kuuluisin esimerkki siitä '
+          + 'tyylistä, jonka Santa Fe keksi itselleen. Isaac Rappin '
+          + 'suunnittelema talo valmistui 1917, ja se on Pueblo '
+          + 'Revival -arkkitehtuuria: julkisivun esikuvina olivat '
+          + 'Acoman, San Felipen, Cochitin, Lagunan, Santa Anan ja '
+          + 'Pecosin lähetyskirkot. Talo yhdistää alkuperäiskansojen '
+          + 'ja espanjalaisen siirtomaa-ajan muotokieltä.'
+          + '\n\n'
+          + 'Kokoelmassa on yli 20 000 maalausta, valokuvaa, '
+          + 'veistosta, grafiikanlehteä ja piirustusta. Nimiin kuuluvat '
+          + 'muun muassa Ansel Adams, Gustave Baumann, Georgia '
+          + 'O\'Keeffe, Fritz Scholder, T. C. Cannon, Bruce Nauman ja '
+          + 'keramiikastaan tunnettu Maria Martinez sekä ryhmät Los '
+          + 'Cinco Pintores ja Taos Society of Artists. Syyskuussa 2023 '
+          + 'museo avasi Railyardin kaupunginosaan Vladem Contemporary '
+          + '-tilan nykytaiteelle.',
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Franciscuksen katedraali': {
+      aika: '1869',
+      teksti: 'Paavi Pius IX perusti Santa Fen hiippakunnan 1853 ja '
+          + 'nimitti ensimmäiseksi piispaksi ranskalaisen Jean '
+          + 'Baptiste Lamyn. Lamy piti messuja La Parroquiassa, '
+          + 'adobekirkossa, jonka espanjalaiset lähetyssaarnaajat olivat '
+          + 'rakentaneet 1714–1717; se oli korvannut samalla paikalla '
+          + 'olleen vuoden 1626 kirkon, joka tuhoutui pueblokapinassa '
+          + '1680.'
+          + '\n\n'
+          + 'Lamy aloitti uuden katedraalin rakentamisen 1869 ja toi '
+          + 'paikalle ranskalaisia arkkitehteja ja italialaisia '
+          + 'kivimiehiä. Työtapa oli poikkeuksellinen: uusi katedraali '
+          + 'rakennettiin vanhan kirkon YMPÄRILLE, ja La Parroquia '
+          + 'purettiin ja kannettiin ulos vasta sitten, kun uusi oli '
+          + 'valmis. Vanhasta jäi jäljelle vain pieni kappeli '
+          + 'pohjoissivulla.'
+          + '\n\n'
+          + 'Tulos on jyrkässä ristiriidassa ympäröivien adobetalojen '
+          + 'kanssa: romaanista uusrenessanssia, keltaista kalkkikiveä, '
+          + 'joka louhittiin nykyisen Lamyn kylän läheltä, pyöreitä '
+          + 'kaaria ja korinttilaisia pylväitä. Ruusuikkuna ja '
+          + 'sivulaivan apostoli-ikkunat tuotiin Clermont-Ferrandista '
+          + 'Ranskasta. Kummallekin tornille oli suunniteltu 160 jalan '
+          + 'huippu, mutta rahat loppuivat — ja pohjoistorni jäi '
+          + 'tasan yhden tiilirivin eteläistä korkeammaksi.',
+      lahde: 'Wikipedia',
+    },
+    'Loreton kappeli': {
+      aika: '1878',
+      teksti: 'Loreton sisaret tilasivat kappelin tyttökoulunsa '
+          + 'Loretto Academyn viereen 1873. Arkkipiispa Lamy oli '
+          + 'tuonut kaupunkiin ranskalaisarkkitehdit Antoine Moulyn ja '
+          + 'tämän pojan Projectuksen katedraalityötä varten ja ehdotti, '
+          + 'että sisaret voisivat käyttää heitä sivutyönä. Projectus '
+          + 'suunnitteli uusgoottilaisen kappelin Pariisin '
+          + 'Sainte-Chapellen mukaan, ja lasimaalaukset tuotiin '
+          + 'Ranskasta Santa Fe Trailia pitkin. Rakentaminen kesti '
+          + 'viisi vuotta, ja kappeli vihittiin 1878.'
+          + '\n\n'
+          + 'Kuuluisa on portaikko. Se kiertää kuoriparvelle noin '
+          + 'kuuden metrin korkeuteen kaksi täyttä kierrosta ilman '
+          + 'keskipylvästä tai tolppaa, ja se on koottu puusta ja '
+          + 'puutapeista — ei liimaa, ei nauloja. Sisempi jalas on '
+          + 'seitsemästä osasta, ulompi yhdeksästä, ja puulaji on '
+          + 'kuusi, joka ei todennäköisesti ole New Mexicon omaa. '
+          + 'Askelmia on 33. Kaiteet lisättiin vasta 1887.'
+          + '\n\n'
+          + 'Sisarten perimätiedon mukaan useat rakentajat totesivat '
+          + 'tehtävän mahdottomaksi ahtaissa tiloissa, minkä jälkeen '
+          + 'nunnat rukoilivat yhdeksän päivää puuseppien suojeluspyhimystä '
+          + 'Joosefia; viimeisenä päivänä ilmestyi tuntematon mies, '
+          + 'joka rakensi portaikon yksin muutamin käsityökaluin ja '
+          + 'katosi palkkaa perimättä. Kertomuksen versiot vaihtelevat '
+          + 'yhdestä yöstä kahdeksaan kuukauteen. Ammattikirvesmiehet '
+          + 'ovat kuvanneet työtä poikkeukselliseksi puusepäntaidoksi. '
+          + 'Koulu suljettiin 1968, ja kappeli on nykyään yksityinen '
+          + 'museo ja vihkikappeli.',
+      lahde: 'Wikipedia',
+    },
+    'San Miguelin kirkko': {
+      aika: 'noin 1610',
+      teksti: 'San Miguelin kappeli on espanjalaisen siirtomaa-ajan '
+          + 'lähetyskirkko, joka rakennettiin alun perin noin 1610, ja '
+          + 'sitä sanotaan usein Yhdysvaltain mantereen vanhimmaksi '
+          + 'kirkkorakennukseksi. Se pystytettiin Santa Fe -joen '
+          + 'toiselle puolelle varsinaisesta villasta, alueelle nimeltä '
+          + 'Barrio de Analco, jossa asui pääosin alkuperäisväestöä ja '
+          + 'espanjalaisten mukana Meksikosta tulleita tlaxcalteekkeja. '
+          + 'Lähetystyö oli etusijalla, joten tämä kirkko rakennettiin '
+          + 'ennen aukion viereistä omaa seurakuntakirkkoa.'
+          + '\n\n'
+          + 'Kirjallisesti kappeli mainitaan ensimmäisen kerran 1628. '
+          + 'Vuonna 1640 kuvernöörin ja fransiskaanien välinen kiista '
+          + 'johti siihen, että kaikki fransiskaanit karkotettiin Santa '
+          + 'Festä ja lähetysasema purettiin osittain tai kokonaan; '
+          + 'kuvernööri joutui myöhemmin vankilaan ja veljet palasivat '
+          + 'rakentamaan sen uudelleen. Kirkko vaurioitui jälleen '
+          + 'pueblokapinassa 1680.'
+          + '\n\n'
+          + 'Kun Diego de Vargas palasi Santa Feen 1692, hän löysi '
+          + 'lähetysaseman palaneena mutta korjattavissa; 18. joulukuuta '
+          + '1693 päivätyssä raportissaan hän määräsi seinät katettaviksi '
+          + 'ja ikkunat korjattaviksi. Kirkko rakennettiin uudelleen '
+          + '1710. Puinen alttarikaappi lisättiin 1798, ja siinä oleva '
+          + 'puinen Mikael-veistos on vähintään vuodelta 1709. Kirkko '
+          + 'kuuluu Barrio de Analcon historialliseen alueeseen, joka on '
+          + 'kansallinen historiallinen maamerkki, ja messu pidetään yhä '
+          + 'kuukauden ensimmäisenä sunnuntaina.',
+      lahde: 'Wikipedia',
+    },
+    'New Mexicon osavaltiotalo': {
+      aika: '1966',
+      teksti: 'New Mexicon osavaltiotalo on yksi vain yhdestätoista '
+          + 'osavaltiotalosta ilman kupolia — ja ainoa pyöreä '
+          + 'osavaltiotalo koko Yhdysvalloissa. Siksi sitä sanotaan '
+          + 'Roundhouseksi. Ylhäältä katsottuna rakennus muistuttaa '
+          + 'osavaltion Zia-aurinkosymbolia: neljä sisäänkäyntisiipeä '
+          + 'työntyy ulos lieriömäisestä rungosta.'
+          + '\n\n'
+          + 'Talo rakennettiin 1964–1966 ja vihittiin 8. joulukuuta '
+          + '1966. Suunnittelija oli paikallinen arkkitehti W. C. '
+          + 'Kruger ja rakentaja Robert E. McKee. Tyyli yhdistää New '
+          + 'Mexicon territoriaalityyliä ja klassisismia, ja jokaisen '
+          + 'sisäänkäynnin yläpuolella on kiveen veistetty osavaltion '
+          + 'sinetti. Pinta-alaa on 232 346 neliöjalkaa ja hinta oli '
+          + '4 676 860 dollaria eli 20 dollaria neliöjalalta.'
+          + '\n\n'
+          + 'Kerroksia on neljä, joista yksi on maan alla; siellä ovat '
+          + 'edustajainhuoneen ja senaatin puoliympyrän muotoiset salit. '
+          + 'Katutasolta yleisö pääsee lehtereille seuraamaan istuntoja. '
+          + 'Uusin osavaltiotalo Yhdysvalloissa on tämä, jos ei lasketa '
+          + 'Havaijia ja Floridaa — ja vanhin on samassa kaupungissa '
+          + 'muutaman korttelin päässä.',
+      lahde: 'Wikipedia',
+    },
+    'Kansantaiteen museo': {
+      aika: '1953',
+      teksti: 'Kansainvälisen kansantaiteen museo eli MOIFA on '
+          + 'Museum Hillillä, parin kilometrin päässä aukiolta '
+          + 'kaakkoon. Sen kokoelmissa on yli 130 000 esinettä yli '
+          + 'sadasta maasta, ja sitä kuvataan yleisesti maailman '
+          + 'suurimmaksi kansainvälisen kansantaiteen kokoelmaksi.'
+          + '\n\n'
+          + 'Museon perusti Florence Dibell Bartlett, ja se avattiin '
+          + 'yleisölle 1953. Alkuperäinen rakennus oli Bartlettin '
+          + 'lahja osavaltiolle, ja sen suunnitteli newmexicolainen '
+          + 'arkkitehti John Gaw Meem — sama mies, joka on yksi Santa '
+          + 'Fen oman rakennustyylin keskeisistä nimistä.'
+          + '\n\n'
+          + 'Kokoelma jakautuu neljään siipeen. Girardin siiven näyttely '
+          + '"Multiple Visions: A Common Bond" avattiin 1982 ja esittää '
+          + 'leluja, nukkeja, pukuja, naamioita, tekstiilejä ja '
+          + 'uskonnollista kansantaidetta yli sadasta maasta; sen '
+          + 'suunnitteli lahjoittaja itse, arkkitehti ja muotoilija '
+          + 'Alexander Girard, ja siinä on näytillä vain noin kymmenen '
+          + 'prosenttia kokoelmasta. Neutrogena-kokoelma tuli lahjana '
+          + '1995, ja espanjalaisperäisen kulttuurin siipi avattiin '
+          + '1988.',
       lahde: 'Wikipedia',
     },
   },
