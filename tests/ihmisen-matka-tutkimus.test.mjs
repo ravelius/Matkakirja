@@ -257,7 +257,16 @@ test('kertomuskaari saa yhden palkin yläpalkin tilalle eikä karusellia', () =>
   // Purku palauttaa yläpalkin.
   assert.match(aikajana, /document\.body\.classList\.remove\('aikajana-palkki-auki'\);/);
   // CSS: yläpalkki piiloon, palkki yläpalkin korkuinen, karuselli pois.
-  assert.match(AIKAJANA_CSS, /body\.aikajana-palkki-auki \.topbar \{ display: none; \}/);
+  /*
+   * EI display: none (mitattu 7.9.2026): sovellus on ruudukko
+   * (css/styles.css .app grid-template-rows: auto minmax(0, 1fr)), ja
+   * ruudukosta kadonnut yläpalkki pudotti kartta-alueen riville 1 ja
+   * auto-korkeuteen — kartta kutistui neliöksi (834 × 814). Yläpalkki
+   * jää ruudukkoon nollan korkuisena ja näkymättömänä.
+   */
+  assert.match(AIKAJANA_CSS, /body\.aikajana-palkki-auki \.topbar \{[\s\S]{0,200}visibility: hidden;[\s\S]{0,200}height: 0;/);
+  assert.ok(!/body\.aikajana-palkki-auki \.topbar \{ display: none/.test(AIKAJANA_CSS),
+    'display: none pudottaisi kartan ruudukosta');
   assert.match(AIKAJANA_CSS, /\.aikajana\.kertomus \.aikajana-ylarivi \{[\s\S]{0,400}height: var\(--aikajana-palkki-korkeus, 3\.4rem\);/);
   assert.match(AIKAJANA_CSS, /\.aikajana\.kertomus \.aikajana-nauha \{ display: none; \}/);
   assert.match(AIKAJANA_CSS, /\.aikajana\.kertomus \.aikajana-sulje \{\n\s*position: static;/);
@@ -339,7 +348,16 @@ test('tutkimusvaihe kytketään aikajanan avaukseen ja sulkuun', () => {
   assert.match(aikajana, /avaaNostonJuttu\(i\) \{[\s\S]{0,600}sisallys: \{\n\s*lista: true,/);
   const tiedeliite = lue('../js/tiedeliite.js');
   assert.match(tiedeliite, /if \(sisallysAsetus\?\.lista\) sisallys\.classList\.add\('lista'\);/);
-  assert.match(AIKAJANA_CSS, /\.tiedeliite-sisallys\.lista \{ column-count: 1;/);
+  /*
+   * PALSTOITUS PURETAAN, EI RAJATA YHTEEN. Korkeudeltaan rajattu
+   * palstalaatikko luo ylivuotopalstoja myös arvolla `column-count: 1`:
+   * mitattu 7.9.2026, kaksikymmentä riviä katkesi yhdennentoista
+   * kohdalta ja loput piirtyivät laatikon oikealle puolelle ruudun
+   * ulkopuolelle. `columns: auto` tekee listasta tavallisen pystyvirran.
+   */
+  assert.match(AIKAJANA_CSS, /\.tiedeliite-sisallys\.lista \{ columns: auto;/);
+  assert.ok(!/\.tiedeliite-sisallys\.lista \{ column-count: 1/.test(AIKAJANA_CSS),
+    'column-count: 1 jättäisi ylivuotopalstat');
   // Merkit ovat oma laudan osansa, jottei aikajanan purku vie niitä.
   assert.match(MODUULI, /TUTKIMUKSEN_OSA = 'ihmisen-tutkimus'/);
 });

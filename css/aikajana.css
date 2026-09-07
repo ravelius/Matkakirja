@@ -2401,8 +2401,16 @@
  * ("230 000 v.") ja otsikko. Kaksipalstainen levy meni pitkillä
  * ajoituksilla päällekkäin; lyhyt ajoitus tulee kaarelta
  * (js/tiedeliite.js sisallys-asetus), palsta tästä.
+ *
+ * `column-count: 1` EI RIITÄ (mitattu 834 × 1100 ja 390 × 844,
+ * 7.9.2026): palstoitettu laatikko, jonka korkeus on rajattu, luo
+ * ylivuotopalstoja — kaksikymmentä riviä katkesi yhdennentoista
+ * kohdalta, ja loput yhdeksän piirtyivät LAATIKON OIKEALLE PUOLELLE
+ * ruudun ulkopuolelle (rivi 12 alkoi x = 729, kun laatikko päättyi
+ * 728:aan). `columns: auto` purkaa palstoituksen kokonaan, jolloin
+ * lista on tavallinen pystyvirta ja max-height rullaa sen.
  */
-.tiedeliite-sisallys.lista { column-count: 1; max-height: min(70vh, 30rem); }
+.tiedeliite-sisallys.lista { columns: auto; max-height: min(70vh, 30rem); }
 .tiedeliite-sisallys.lista .tiedeliite-sisallysrivi { align-items: center; padding: 0.3rem 0.45rem; }
 .tiedeliite-sisallys.lista .tiedeliite-sisallysvuosi { min-width: 5.2rem; white-space: nowrap; }
 .tiedeliite-sisallys.lista .tiedeliite-sisallysnimi { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

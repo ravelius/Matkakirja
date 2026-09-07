@@ -102,5 +102,7 @@ test('kerrokset, jotka katoavat kesken kosketuksen, ilmoittavat siitä', () => {
   // Linssin purku vie paneelin, lamput ja loppulapun kerralla.
   const aikajana = lue('../js/aikajana.js');
   const pura = aikajana.slice(aikajana.indexOf('  pura() {'));
-  assert.match(pura.slice(0, 1600), /vapautaKosketus\(\);/);
+  // Muistin tallennus ja nostokortin purku tulivat väliin (7.9.2026),
+  // joten ikkuna on hieman leveämpi — mutta yhä ennen kelluvia kortteja.
+  assert.match(pura.slice(0, 2200), /vapautaKosketus\(\);/);
 });
