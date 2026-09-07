@@ -33,6 +33,19 @@
 // osuudet "Languages of ..."- ja "Demographics of ..." -artikkeleista
 // ja sanamuodot en-Wiktionarysta.
 //
+// Rivit LKA, MMR, NPL ja SGP on lisätty 6.9.2026 illalla samalla
+// menetelmällä ja samasta aineistosta; niissäkin demokratian
+// nimittäjä on 172. Demokratiaselitysten faktat ovat en-Wikipedian
+// artikkeleista "Politics of Sri Lanka", "Politics of Myanmar",
+// "Politics of Nepal" ja "Politics of Singapore" ja tervehdykset
+// artikkeleista "Languages of Sri Lanka", "Languages of Myanmar",
+// "Nepal" ja "Languages of Singapore". Nepalille jäi vain yksi
+// tervehdys: maithilille ja muille suurille kielille ei löytynyt
+// en-Wiktionaryn katetta, ja arvattu sana olisi huonompi kuin puuttuva
+// rivi. Myanmarin keskitulo (1 210 $) on tasan sama kuin Tansanian ja
+// Nepalin demokratialuku sama kuin Dominikaanisen tasavallan, joten
+// näissä kahdessa sija olisi yhtä hyvin yhtä pienempi.
+//
 // Jokainen tervehdyksen lippu on tarkistettu Commonsista: puuttuva
 // tiedostonimi jättäisi kortin puolityhjäksi ilman virhettä.
 //
@@ -436,6 +449,68 @@ export const ASIA_MAATIEDOT = {
       { teksti: 'Magandang araw', kieli: 'tagalog', lippu: 'Flag of the Philippines.svg', osuus: '5 %' },
     ],
   },
+  LKA: {
+    vakiluku: '22 milj.',
+    vakilukuSija: '60./195',
+    pintaAla: '65 600 km²',
+    pintaAlaSija: '122./195',
+    demokratia: {
+      arvo: '0,61',
+      sija: '43./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~LKA',
+      selitys: 'Sri Lanka on yhtenäisvaltio ja puolipresidentillinen tasavalta, '
+        + 'jossa presidentti on sekä valtion- että hallituksen päämies ja '
+        + 'käyttää toimeenpanovaltaa pääministerin ja ministerineuvoston '
+        + 'esityksestä. Presidentti valitaan viideksi vuodeksi suoralla '
+        + 'vaalilla, ja parlamentti voi erottaa hänet kahden kolmasosan '
+        + 'enemmistöllä korkeimman oikeuden puoltaessa. Parlamentin 225 '
+        + 'jäsentä valitaan viideksi vuodeksi: 196 monen edustajan '
+        + 'vaalipiireistä ja 29 suhteellisella vaalitavalla. 1950-luvulta '
+        + 'lähtien politiikkaa hallitsivat vuosikymmeniä kaksi suurta '
+        + 'puoluetta, mutta niiden asema on kutistunut, ja nykyään suurimmat '
+        + 'ovat vasemmistoliittouma National People\'s Power ja United '
+        + 'National Partysta 2020 irtaantunut Samagi Jana Balawegaya.',
+    },
+    keskitulo: {
+      arvo: '3 870 $/v',
+      sija: '123./190',
+    },
+    tervehdykset: [
+      { teksti: 'ආයුබෝවන්', kieli: 'sinhala', lippu: 'Flag of Sri Lanka.svg', osuus: '92 %' },
+      { teksti: 'வணக்கம்', kieli: 'tamili', lippu: 'Flag of India.svg', osuus: '19 %' },
+    ],
+  },
+  MMR: {
+    vakiluku: '55 milj.',
+    vakilukuSija: '27./195',
+    pintaAla: '677 000 km²',
+    pintaAlaSija: '39./195',
+    demokratia: {
+      arvo: '0,01',
+      sija: '170./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~MMR',
+      selitys: 'Myanmar on vuoden 2008 perustuslain mukaan muodollisesti '
+        + 'yhtenäinen tasavalta, mutta 1. helmikuuta 2021 armeija kaappasi '
+        + 'vallan ja syrjäytti demokraattisesti valitun hallituksen, mistä '
+        + 'seurasivat pitkään jatkuneet vallankaappauksen vastaiset '
+        + 'mielenosoitukset. Kesäkuusta 2026 maata on johtanut '
+        + 'liittovaltiohallitus sen jälkeen, kun Min Aung Hlaing nimitettiin '
+        + 'vuoden 2026 presidentinvaalissa. Maan tuhatvuotinen kuningaskunta '
+        + 'päättyi kolmanteen Britannian ja Burman sotaan 1885, ja aluetta '
+        + 'hallittiin osana Brittiläistä Intiaa vuoteen 1937; itsenäisyys '
+        + 'tuli 1948. Siirtomaaraja vedettiin yli sadan etnisen ryhmän ylitse '
+        + 'ja maa nimettiin väestön enemmistön eli bamarien mukaan, mikä on '
+        + 'ruokkinut etnisiä konflikteja itsenäistymisestä asti.',
+    },
+    keskitulo: {
+      arvo: '1 210 $/v',
+      sija: '162./190',
+    },
+    tervehdykset: [
+      { teksti: 'မင်္ဂလာပါ', kieli: 'burma', lippu: 'Flag of Myanmar.svg', osuus: '67 %' },
+      { teksti: 'வணக்கம்', kieli: 'tamili', lippu: 'Flag of India.svg', osuus: '2 %' },
+    ],
+  },
   MNG: {
     vakiluku: '3,6 milj.',
     vakilukuSija: '131./195',
@@ -495,6 +570,37 @@ export const ASIA_MAATIEDOT = {
       { teksti: 'Good morning', kieli: 'englanti', lippu: 'Flag of the United Kingdom.svg', osuus: '60 %' },
       { teksti: '你好', kieli: 'mandariinikiina', lippu: 'Flag of the People\'s Republic of China.svg', osuus: '23 %' },
       { teksti: 'வணக்கம்', kieli: 'tamili', lippu: 'Flag of India.svg', osuus: '7 %' },
+    ],
+  },
+  NPL: {
+    vakiluku: '30 milj.',
+    vakilukuSija: '51./195',
+    pintaAla: '147 000 km²',
+    pintaAlaSija: '93./195',
+    demokratia: {
+      arvo: '0,51',
+      sija: '64./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~NPL',
+      selitys: 'Nepal on parlamentaarinen tasavalta ja monipuoluejärjestelmä, '
+        + 'jossa pääministeri ja hänen hallituksensa käyttävät '
+        + 'toimeenpanovaltaa ja presidentin tehtävä on seremoniallinen. '
+        + 'Presidentin valitsee valitsijakokous, johon kuuluvat '
+        + 'liittoparlamentti ja seitsemän maakunnan suoraan valitut '
+        + 'maakuntakokoukset. Maa oli kuningaskunta 1768–2008: vuoden 1846 '
+        + 'Kotin verilöylyn jälkeen valtaa piti yli sadan vuoden ajan Ranan '
+        + 'suku, vuoden 1990 vallankumouksen jälkeen maasta tuli '
+        + 'perustuslaillinen monarkia, ja monarkia lakkautettiin 2008 '
+        + 'sisällissodan ja vuoden 2001 kuningasperheen surmien jälkeen. Uusi '
+        + 'perustuslaki hyväksyttiin 2015. Vuoden 2025 mielenosoitusten '
+        + 'jälkeen väliaikaiseksi pääministeriksi valittiin Sushila Karki, '
+        + 'maan ensimmäinen nainen tehtävässä.',
+    },
+    keskitulo: {
+      arvo: '1 480 $/v',
+      sija: '156./190',
+    },
+    tervehdykset: [
+      { teksti: 'नमस्ते', kieli: 'nepali', lippu: 'Flag of Nepal.svg', osuus: '45 %' },
     ],
   },
   OMN: {
@@ -631,6 +737,38 @@ export const ASIA_MAATIEDOT = {
       { teksti: 'আসসালামু আলাইকুম', kieli: 'bengali (siirtotyöläiset)', lippu: 'Flag of Bangladesh.svg', osuus: '7 %' },
       { teksti: 'السلام علیکم', kieli: 'urdu (siirtotyöläiset)', lippu: 'Flag of Pakistan.svg', osuus: '6 %' },
       { teksti: 'Magandang araw', kieli: 'tagalog (siirtotyöläiset)', lippu: 'Flag of the Philippines.svg', osuus: '2 %' },
+    ],
+  },
+  SGP: {
+    vakiluku: '6,0 milj.',
+    vakilukuSija: '112./195',
+    pintaAla: '728 km²',
+    pintaAlaSija: '175./195',
+    demokratia: {
+      arvo: '0,36',
+      sija: '85./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~SGP',
+      selitys: 'Singapore on parlamentaarinen tasavalta, jossa presidentti on '
+        + 'valtionpäämies ja pääministeri hallituksen päämies. '
+        + 'Toimeenpanovaltaa käyttää pääosin kansanedustajista koottu '
+        + 'hallitus, joka on vastuussa parlamentille, ja järjestelmä '
+        + 'muistuttaa Westminsterin mallia. Presidentin tehtävä oli pitkään '
+        + 'lähinnä seremoniallinen, mutta vuoden 1991 perustuslakimuutos '
+        + 'antoi hänelle rajatun veto-oikeuden muutamissa avainasioissa, '
+        + 'kuten valtion rahastojen käytössä ja tuomioistuinten, virkakunnan '
+        + 'ja puolustusvoimien avainnimityksissä. Maata kuvataan '
+        + 'tosiasialliseksi yksipuoluevaltioksi: People\'s Action Party on '
+        + 'hallinnut vuodesta 1959, ja vuoden 2025 vaaleissa se sai 65,6 '
+        + 'prosenttia äänistä ja 87 paikkaa 97:stä.',
+    },
+    keskitulo: {
+      arvo: '75 820 $/v',
+      sija: '8./190',
+    },
+    tervehdykset: [
+      { teksti: 'Good morning', kieli: 'englanti (yleisin kotikieli)', lippu: 'Flag of Singapore.svg', osuus: '50 %' },
+      { teksti: '你好', kieli: 'kiina (mandariini ja murteet)', lippu: 'Flag of the People\'s Republic of China.svg', osuus: '39 %' },
+      { teksti: 'Selamat pagi', kieli: 'malaiji (kansalliskieli)', lippu: 'Flag of Malaysia.svg', osuus: '13 %' },
     ],
   },
   SYR: {

@@ -11623,6 +11623,116 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Point Pleasant Park', lat: 44.62277778, lon: -63.56916667 },
     ],
   },
+  /*
+   * WELLINGTON (6.9.2026). Rajaus on 3,3 × 3,4 kilometriä Thorndonin
+   * rautatieasemalta Basin Reservelle — perustelu ja itäreunan valinta
+   * ovat tools/piirra-kaupunkikartta.mjs:n wellington-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * pääkaupungin siirto, Lambton Quay vanhan meren päällä, köysirata
+   * ja satavuotisnäyttely; historiasivu kertoo Te Papasta, Old
+   * St Paul'sista, parlamentista ja kuvernöörin residenssistä ja
+   * luontosivu Zealandiasta, vihervyöhykkeestä, maanjäristyksistä ja
+   * sataman saarista. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Te Papa,
+   * parlamentti, Old St Paul's ja köysiradan alaasema mahtuisivat
+   * kaikki ruutuun (faktapohja-wellington.md, osio 4 antaa niille
+   * koordinaatit), mutta ne ovat lehden omien nostojen aihe. Samasta
+   * syystä kartalla ei ole kasvitieteellistä puutarhaa: se on
+   * köysiradan noston määränpää.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN MUISTA SYISTÄ: City Gallery on 102
+   * metriä kaupungintalosta eli 200 metrin säännön alle, ja
+   * Wellingtonin nykyinen katedraali menisi lukijalta sekaisin lehden
+   * Old St Paul's -noston kanssa. Molemmat mainitaan matkaoppaassa.
+   */
+  wellington: {
+    polku: 'assets/kartat/wellington-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -41.2740, etela: -41.3050, lansi: 174.7620, ita: 174.8010 },
+    esittely: 'Kartan alue kattaa koko sen kapean kannaksen, jolle '
+      + 'Wellingtonin keskusta mahtuu: yläreunassa on Thorndon ja '
+      + 'rautatieasema, oikealla satama ja Oriental Bayn kaari, '
+      + 'vasemmalla nousevat Kelburnin ja Mount Cookin rinteet ja '
+      + 'alareunassa on Basin Reserven pyöreä aukio. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Miamissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026. Pienin väli on 524 metriä
+       * (Circa-teatteri – Embassy-teatteri), toiseksi pienin 602
+       * metriä (Wellingtonin museo – Circa-teatteri).
+       */
+      { nimi: 'Rautatieasema', lat: -41.27861111, lon: 174.78083333 },
+      { nimi: 'Bolton Streetin hautausmaa', lat: -41.27888889, lon: 174.77305556 },
+      { nimi: 'Wellingtonin museo', lat: -41.2853, lon: 174.7781 },
+      { nimi: 'Circa-teatteri', lat: -41.29041, lon: 174.78048 },
+      { nimi: 'Oriental Bay', lat: -41.29166667, lon: 174.79444444 },
+      { nimi: 'Embassy-teatteri', lat: -41.294277, lon: 174.784066 },
+      { nimi: 'Nairn Streetin mökki', lat: -41.2993, lon: 174.7699 },
+      { nimi: 'Basin Reserve', lat: -41.30027778, lon: 174.78027778 },
+    ],
+  },
+  /*
+   * CHRISTCHURCH (6.9.2026). Rajaus on 2,4 × 1,9 kilometriä eli pelin
+   * tiiviimpiä — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * christchurch-lohkossa: kaupungin ruutukaava on neljän puistokadun
+   * sisällä, ja kaikki kahdeksan kohdetta mahtuvat sen pohjoisosaan.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Canterbury Associationin etukäteen piirretty kaupunki, kolme
+   * kansaa ennen ensimmäistä laivaa, pyöräilykaupunki ja vuoden 1998
+   * anteeksipyyntö; järistyssivu kertoo vuosien 2010 ja 2011
+   * järistyksistä, katedraalista ja pahvikatedraalista, luontosivu
+   * kasvitieteellisestä puutarhasta, Avon-joesta, Riccarton Bushista
+   * ja punaisesta vyöhykkeestä. Yksikään kartan kohteista ei ole
+   * niiden aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Victoria Square
+   * on 94 metriä kaupungintalosta, Isaac-teatteri 64 metriä New
+   * Regent Streetistä ja Tūrangan kirjasto 110 metriä
+   * Isaac-teatterista. Latimer Square jätettiin pois aihesyistä eikä
+   * etäisyyden takia — se on pahvikatedraalin naapuri ja siten lehden
+   * noston tausta.
+   *
+   * MUISTOSILTA ON SILTA, JA SE NÄKYY TARKISTIMESSA. Kohde on Avonin
+   * yli kulkevan Cashel Streetin sillan muistoholvi, ja
+   * tools/tarkista-karttapisteet.mjs raportoi sille 15 prosentin
+   * vesiosuuden pisteen ympäriltä — itse piste on maalla holvin
+   * kohdalla, ja vesi ympärillä on oikein samalla perusteella kuin
+   * Rialtolla ja Ha'pennyllä.
+   */
+  christchurch: {
+    polku: 'assets/kartat/christchurch-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -43.5200, etela: -43.5375, lansi: 172.6215, ita: 172.6510 },
+    esittely: 'Kartta näyttää Christchurchin ruutukaavan pohjoisosan: '
+      + 'suorat kadut leikkaavat toisensa suorassa kulmassa, ja niiden '
+      + 'lomassa mutkittelee Avon-joki. Vasemmassa reunassa alkaa '
+      + 'Hagley Parkin nurmi, keskellä on Katedraalitori ja oikeassa '
+      + 'reunassa vanha hautausmaa. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 6.9.2026.
+       * Pienin väli on 278 metriä, ja se toistuu kahdesti
+       * (kaupungintalo – provinssineuvoston talo ja
+       * provinssineuvoston talo – taidegalleria).
+       */
+      { nimi: 'Barbadoes Streetin hautausmaa', lat: -43.5243, lon: 172.6455 },
+      { nimi: 'Victorian kellotorni', lat: -43.52473611, lon: 172.63075 },
+      { nimi: 'Kaupungintalo', lat: -43.52695, lon: 172.63549444 },
+      { nimi: 'Provinssineuvoston talo', lat: -43.5292, lon: 172.634 },
+      { nimi: 'New Regent Street', lat: -43.52926389, lon: 172.63871944 },
+      { nimi: 'Taidegalleria', lat: -43.53055556, lon: 172.63111111 },
+      { nimi: 'Canterburyn museo', lat: -43.5309, lon: 172.6271 },
+      { nimi: 'Muistosilta', lat: -43.5331, lon: 172.6334 },
+    ],
+  },
 };
 
 /*

@@ -43138,4 +43138,636 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * WELLINGTONIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 6.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.wellington, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "Wellington railway station", "Bolton Street
+   * Cemetery", "Wellington Museum", "Circa Theatre", "Oriental Bay",
+   * "Embassy Theatre, Wellington", "Nairn Street Cottage" ja "Basin
+   * Reserve").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat pääkaupungin siirto, Lambton Quay vanhan meren päällä,
+   * köysirata, satavuotisnäyttely, Te Papa, Old St Paul's,
+   * parlamentti, kuvernöörin residenssi, Zealandia, vihervyöhyke,
+   * maanjäristykset ja sataman saaret. Yksikään kartan kohteista ei
+   * ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Wellingtonin
+   * museon jutussa EI kerrota Wahine-lautan haaksirikosta, vaikka
+   * museossa on sille oma teatteritila: haaksirikko on lehden noston
+   * L4 aihe (Barrettin riutta). Basin Reserven jutussa vuoden 1855
+   * maanjäristys mainitaan vain siltä osin kuin se nosti suon
+   * kuivalle maalle — järistysten oma tarina on lehden luontosivulla.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 480 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * wellington-lohkossa (kulttuuri-kategoriat.js) eikä
+   * oceania-valokuvat.js:n wellington-lohkossa — sama kohde saa
+   * esiintyä molemmissa, tiedosto ei.
+   */
+  wellington: {
+    Rautatieasema: {
+      aika: '1937',
+      teksti: 'Ennen nykyistä asemaa Wellingtonissa oli kaksi eri '
+          + 'päätepysäkkiä ja niitä ennen sarja väliaikaisia. '
+          + 'Ensimmäinen asema oli 1874 Pipitea Pointissa: joukko '
+          + 'pieniä rakennuksia maanjäristyksen nostamalla '
+          + 'satamanpohjalla, Hutt-laakson radan päätepiste. Vuoden '
+          + '1880 asemarakennus vedettiin 1885 telojen päällä '
+          + 'pohjoisemmaksi väljemmälle tontille. Kun valtio osti '
+          + 'Manawatun radan 1908, kaupungissa oli kaksi '
+          + 'valtionrautateiden päätepysäkkiä — Lambton ja Thorndon — '
+          + 'ja paine yhdestä terminaalista alkoi kasvaa.'
+          + '\n\n'
+          + 'Uuden aseman piirsi arkkitehti W. Gray Young, joka '
+          + 'valittiin tehtävään 1929 ilman suunnittelukilpailua. '
+          + 'Tontti oli täyttömaata, joten talo seisoo 1 615 '
+          + 'teräsbetonipaalun varassa; ne lyötiin maahan '
+          + 'höyryvasaralla. Paalujen päälle nousi teräsrunko, joka '
+          + 'valettiin betoniin ja verhoiltiin 1,75 miljoonalla '
+          + 'tiilellä. Asema oli ensimmäinen suuri uusiseelantilainen '
+          + 'rakennus, johon suunniteltiin merkittävä '
+          + 'maanjäristyskestävyys. Urakan sai Fletcher 339 000 punnan '
+          + 'tarjouksella, ja se oli aikansa suurin yhden rakennuksen '
+          + 'urakka maassa; peruskiven laski joulukuussa 1934 '
+          + 'Gloucesterin herttua viidentuhannen katsojan edessä.'
+          + '\n\n'
+          + 'Asema avattiin 19. kesäkuuta 1937. Rakennus on U:n '
+          + 'muotoinen, pisin siipi 105,5 metriä pitkä ja 23,5 metriä '
+          + 'korkea. Pääsisäänkäynnin edessä on kahdeksan '
+          + 'kolmentoista metrin doorilaista pylvästä, ja niiden '
+          + 'takana avautuu holvikattoinen lipunmyyntihalli. Talo '
+          + 'rakennettiin rautatiehallinnon pääkonttoriksi; nykyään '
+          + 'länsisiivessä on osa Victorian yliopistoa ja itäsiivessä '
+          + 'KiwiRailin toimisto.',
+      kuvat: [
+        {
+          tiedosto: 'Wellington Railway Station 101530.jpg',
+          selite: 'Kahdeksan doorilaista pylvästä ja tiiliverhottu '
+            + 'siipi: pääsisäänkäynti aukiolta katsottuna.',
+          lahde: 'Panamitsu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bolton Streetin hautausmaa': {
+      aika: '1840',
+      teksti: 'Hautausmaa perustettiin 1840, samana vuonna kuin '
+          + 'kaupunki. Uuden-Seelannin Yhtiön kapteeni Mein Smith '
+          + 'varasi Bolton Streetin varrelta kahdeksantoista eekkeriä '
+          + 'julkiseksi hautausmaaksi kaikille tunnustuksille — '
+          + 'ajalleen uusi ja vapaamielinen ajatus. Vuonna 1851 alue '
+          + 'kuitenkin jaettiin kolmeen: anglikaaniseen osaan, '
+          + 'juutalaiseen osaan ja muiden tunnustusten Sydney Streetin '
+          + 'hautausmaahan. Vuoteen 1892 mennessä tänne oli haudattu '
+          + 'noin kahdeksantuhatta ihmistä.'
+          + '\n\n'
+          + 'Mäen laella toimi 1868–1906 Uuden-Seelannin ensimmäinen '
+          + 'tähtitorni, valtion aikapalvelun observatorio. Se '
+          + 'purettiin, jotta tilalle saatiin pääministeri Richard '
+          + 'Seddonin muistomerkki, ja uusi observatorio rakennettiin '
+          + 'kasvitieteelliseen puutarhaan. Hautausmaa suljettiin '
+          + 'uusilta hautauksilta 1892, kun Karorin hautausmaa '
+          + 'avattiin.'
+          + '\n\n'
+          + '1960-luvun moottoritiesuunnitelma vei tien suoraan '
+          + 'hautausmaan halki. Suojeluyhdistys perustettiin 1964 '
+          + 'mutta ei saanut tietä siirretyksi. Noin 3 700 vainajaa '
+          + 'kaivettiin ylös, ja valtaosa haudattiin uudelleen holviin '
+          + 'muistonurmen alle; holvin ääriviivat on merkitty nurmeen '
+          + 'tiilillä ja ympärille rakennettu amfiteatteri. Hautakiviä '
+          + 'on jäljellä noin 1 300, ja niistä vain kuusisataa on '
+          + 'alkuperäisellä paikallaan. Vuoden 1866 ruumiskappeli '
+          + 'purettiin tien tieltä 1969, ja sen tilalle tehtiin '
+          + 'alkuperäisten piirustusten mukainen jäljennös, joka '
+          + 'toimii nyt opastuskeskuksena.',
+      kuvat: [
+        {
+          tiedosto: 'Bolton Street Cemetery 2026-07-04 TA 06.jpg',
+          selite: 'Viktoriaanisia hautakiviä rinteessä vanhojen '
+            + 'puiden alla, aivan keskustan yläpuolella.',
+          lahde: 'Tom Ackroyd, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Wellingtonin museo': {
+      aika: '1892',
+      teksti: 'Museo asuu vuonna 1892 valmistuneessa Bond Store '
+          + '-makasiinissa Queens Wharfilla. Talo rakennettiin '
+          + 'tullivarastoksi: siellä säilytettiin tavaraa, josta '
+          + 'tullia ei ollut vielä maksettu. Museon oma historia '
+          + 'alkaa vasta 1972, jolloin sataman hallintoneuvosto '
+          + 'perusti kaupunkiin merenkulkumuseon.'
+          + '\n\n'
+          + 'Vuonna 1989 museo siirtyi kaupungille ja sen aihepiiri '
+          + 'laajeni koko seudun yhteiskuntahistoriaan. Talo avattiin '
+          + '1999 nimellä Museum of Wellington City & Sea, ja '
+          + 'heinäkuussa 2015 nimi lyheni Wellingtonin museoksi. '
+          + 'Neljä kerrosta käyvät läpi kaupungin historian, ja '
+          + 'kolmen alimman kerroksen läpi nousee jättimäinen '
+          + 'elokuvakangas.'
+          + '\n\n'
+          + 'Yhdessä kolmesta teatteritilasta māorien tarinat '
+          + 'esitetään Pepperin haamu -illuusiolla, ylimmässä '
+          + 'kerroksessa on "Wellington Time Machine", ja vuoden 2015 '
+          + 'lopussa avattiin ullakkonäyttely. The Times valitsi '
+          + 'museon 2013 maailman viidenkymmenen parhaan joukkoon. '
+          + 'Talon vanha kokoushuone on säilynyt sellaisenaan: siinä '
+          + 'istui aikoinaan sataman hallintoneuvosto.',
+      lahde: 'Wikipedia',
+    },
+    'Circa-teatteri': {
+      aika: '1976',
+      teksti: 'Circa syntyi 1976, kun joukko näyttelijöitä kyllästyi '
+          + 'siihen, että uusiseelantilaista ammattiteatteria '
+          + 'pyöritettiin heidän mielestään hallinto edellä. He '
+          + 'perustivat osuuskuntamaisen teatterin, jossa kaikki '
+          + 'panivat oman työnsä likoon ja tuotto jaettiin '
+          + 'esityskohtaisesti. Circa oli osa aaltoa, joka alkoi '
+          + 'Downstagesta 1964 ja jatkui Aucklandin Mercuryyn 1968, '
+          + 'Christchurchin Court Theatreen 1971 ja Dunedinin '
+          + 'Fortuneen 1973.'
+          + '\n\n'
+          + 'Ensimmäinen koti löytyi 1975 Harris Streetiltä '
+          + 'mainostoimiston vanhasta talosta, joka oli menossa '
+          + 'purkuun. Kaupunki lykkäsi purkua, ja perustajat '
+          + 'rakensivat pohjakerrokseen sadan paikan katsomon, '
+          + 'ylemmäs pukuhuoneet ja harjoitussalin.'
+          + '\n\n'
+          + 'Nykyinen talo rantabulevardilla valmistui 1994, ja sen '
+          + 'suunnittelivat Ampersand-arkkitehdit yhdessä '
+          + 'perustajajäsen Grant Tillyn kanssa. Julkisivu ei ole '
+          + 'uusi: se on vuoden 1916 Westport Coal Companyn talon '
+          + 'julkisivu, joka siirrettiin paikalle kadun toiselta '
+          + 'puolelta. Arkkitehtipiirit eivät ihastuneet — eräässä '
+          + 'kilpailussa talo päätyi Wellingtonin kymmenen rumimman '
+          + 'rakennuksen listalle. Salit ovat Circa One (noin 250 '
+          + 'paikkaa) ja Circa Two (noin sata), ja esitys pyörii '
+          + 'tavallisesti neljä viikkoa kerrallaan.',
+      kuvat: [
+        {
+          tiedosto: 'Circa Theatre.jpg',
+          selite: 'Vuoden 1916 hiiliyhtiön julkisivu siirrettiin '
+            + 'kadun toiselta puolelta uuden teatteritalon eteen.',
+          lahde: 'Tom Ackroyd, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Oriental Bay': {
+      aika: '1843',
+      teksti: 'Lahti oli aluksi Duppa Bay ainoan asukkaansa George '
+          + 'Duppan mukaan. Duppa nimesi sen 1843 uudelleen '
+          + 'Oriental-laivan mukaan, joka oli tuonut Wellingtoniin '
+          + 'ensimmäisiä uudisasukkaita. Paikka ei ollut houkutteleva: '
+          + 'rantaa käytettiin karanteeniasemana, jossa oli teltta ja '
+          + 'hoitaja, ja valaanpyytäjät keittivät siellä traania.'
+          + '\n\n'
+          + 'Skotlantilainen puutarhuri David Wilkinson avasi lahdelle '
+          + '1850 teepuutarhan, jonne käveltiin rantaa pitkin '
+          + 'kuuntelemaan musiikkia ja ostamaan kukkakimppu; se pysyi '
+          + 'muodissa vuosikymmeniä. Ensimmäinen kylpylaitos avattiin '
+          + '1864 avoimena merivesialtaana. Vuoden 1897 esittelyn '
+          + 'mukaan altaat oli "turvallisesti suojattu merihirviöiden '
+          + 'vierailuilta", ja niiden ympärillä oli 34 pukukoppia. '
+          + 'Kaupunki rakensi 1901 uudet Te Aron kylpylät, ja niiden '
+          + 'tilalle tuli 1963 Freybergin uimahalli. Raitiovaunut '
+          + 'alkoivat kulkea Oriental Paradea pitkin syyskuussa 1904 '
+          + 'ja väistyivät bussien tieltä 1950.'
+          + '\n\n'
+          + 'Itse ranta on tuotu muualta. Merimuuria alettiin '
+          + 'rakentaa 1911, ja se kavensi kivikkorantaa entisestään. '
+          + 'Toisessa maailmansodassa Englannista tulleet laivat '
+          + 'toivat painolastina hiekkaa, jota kipattiin lahdelle: '
+          + 'vuosina 1944–1945 lähes 20 000 tonnia. Vuonna 2004 ranta '
+          + 'rakennettiin uudelleen 22 000 tonnilla Golden Baystä '
+          + 'laivattua hiekkaa.',
+      kuvat: [
+        {
+          tiedosto: 'Oriental Bay, Wellington.jpg',
+          selite: 'Ennen hiekkaa: paljas rinne, muutama talo ja '
+            + 'kivikkoinen ranta varhaisessa valokuvassa.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Embassy-teatteri': {
+      aika: '1924',
+      teksti: 'Elokuvateatteri avattiin 31. lokakuuta 1924 nimellä De '
+          + 'Luxe. Sen suunnitteli Llewelyn Williams, ja katsomoon '
+          + 'mahtui 1 749 ihmistä. Nimi vaihtui Embassyksi 1945. '
+          + '1960-luvun remontit toivat 70 millimetrin valkokankaan ja '
+          + 'alaslasketut katot ja pudottivat paikkaluvun 852:een. '
+          + 'Talo on Uuden-Seelannin ainoa yhä käytössä oleva '
+          + '1920-luvulla varta vasten elokuvateatteriksi rakennettu '
+          + 'talo.'
+          + '\n\n'
+          + '2000-luvun alussa rakennus remontoitiin perusteellisesti. '
+          + 'Kaupunki maksoi työstä 4,5 miljoonaa dollaria sillä '
+          + 'ehdolla, että talo siirtyy kaupungin omistukseen. Samalla '
+          + 'se vahvistettiin maanjäristyksiä vastaan ja sisustus '
+          + 'palautettiin lähemmäs alkuperäistä. Sisällä on '
+          + 'marmoriportaikko messinkihelluineen sekä laatoitetut '
+          + 'seinät ja lattiat.'
+          + '\n\n'
+          + 'Kiireellä oli syy. Taru sormusten herrasta -trilogian '
+          + 'päätösosan maailmanensi-ilta pidettiin täällä 1. '
+          + 'joulukuuta 2003, ja punaisen maton varrella Courtenay '
+          + 'Placella seisoi lähes 120 000 ihmistä. Talossa on kolme '
+          + 'salia, ja niistä suurimman valkokangasta pidetään yhtenä '
+          + 'eteläisen pallonpuoliskon suurimmista.',
+      kuvat: [
+        {
+          tiedosto: 'Embassy Theatre, Wellington.jpg',
+          selite: 'Klassistinen julkisivu Courtenay Placen itäpäässä; '
+            + 'nimikyltti on markiisin päällä.',
+          lahde: 'russellstreet, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nairn Streetin mökki': {
+      aika: '1858',
+      teksti: 'Wellingtonin vanhin alkuperäinen mökki rakennettiin '
+          + '1858 Mount Cookin rinteeseen. Rakentaja oli kirvesmies '
+          + 'William Wallis, joka oli tullut Uuteen-Seelantiin '
+          + 'syyskuussa 1857 vaimonsa Catherinen kanssa '
+          + 'seitsemäntoista viikon merimatkan jälkeen. Wallis oli '
+          + 'oppipoikana ollut mukana rakentamassa Lontoon '
+          + 'Kristallipalatsia ja tehnyt sairaaloita Krimin sodassa; '
+          + 'taidot ja säästöt riittivät muuttoon.'
+          + '\n\n'
+          + 'Toisin kuin useimmat tulijat, Wallis osti tonttinsa '
+          + 'vasta nähtyään sen. Hän valitsi paikan, jonka alalaidassa '
+          + 'virtasi puro: vuoden 1855 maanjäristys oli synnyttänyt '
+          + 'hyökyaallon, joka pilasi kaupungin vesihuollon, ja '
+          + 'lavantauti oli tappanut ihmisiä. Mökki tehtiin käsin ja '
+          + 'lähes kokonaan kotimaisesta puusta, ja Wallisin oma '
+          + 'työkalulaatikko on yhä talon kokoelmassa. Lapsia tuli '
+          + 'kymmenen; seitsemännen jälkeen perhe muutti viereiseen '
+          + 'isompaan taloon, jonka isä niin ikään rakensi.'
+          + '\n\n'
+          + 'Suku asui mökissä 1970-luvun lopulle asti. Kaupunki otti '
+          + 'talon 1974 pakkolunastuslain nojalla Winifred Turnerilta, '
+          + 'Wallisien pojantyttäreltä ja mökin viimeiseltä '
+          + 'asukkaalta, ja aikoi purkaa sen kaupungin vuokratalojen '
+          + 'tieltä. Turnerin sitkeys pelasti rakennuksen, ja 1980 '
+          + 'siitä tuli museo. Esineet ovat pääosin vuosilta '
+          + '1850–1880. Vuoden 2018 uudistus laajensi kerronnan '
+          + 'yhdestä pariskunnasta koko suvun vaiheisiin 1830-luvulta '
+          + '1970-luvulle.',
+      kuvat: [
+        {
+          tiedosto: 'Colonial Cottage Museum.JPG',
+          selite: 'Kaksi kattoikkunaa, valkoinen säleaita ja ruusut — '
+            + 'mökki on seisonut paikallaan vuodesta 1858.',
+          lahde: 'Musuems Wellington, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Basin Reserve': {
+      aika: '1868',
+      teksti: 'Pyöreä kenttä oli alun perin suo ja lampare, jota '
+          + 'ruokki Waitangi-puro. William Mein Smith mittasi paikan '
+          + '1840 ja suunnitteli, että allas syvennettäisiin ja '
+          + 'siitä kaivettaisiin kanava merelle; vuoden 1841 kartassa '
+          + 'alue on nimeltään "Proposed Basin and Canal". Kanavaa ei '
+          + 'tullut. Vuoden 1855 Wairarapan maanjäristys nosti aluetta '
+          + 'lähes 1,8 metriä ja kuivatti suon osittain.'
+          + '\n\n'
+          + 'Urheilu oli kaupungin englantilaisille asukkaille '
+          + 'tärkeää, mutta kaavassa ei ollut varattu sille tasaista '
+          + 'maata — ja mäkisessä Wellingtonissa tasainen maa oli '
+          + 'loppumassa. Vuonna 1857 vaikutusvaltaiset kaupunkilaiset '
+          + 'ehdottivat, että järistyksen nostama pohja kuivataan '
+          + 'virkistysalueeksi. Provinssineuvosto suostui, ja 3. '
+          + 'helmikuuta 1863 Mount Cookin vankilan vangit alkoivat '
+          + 'tasoittaa ja kuivata kenttää. Virallisesti kaupungin '
+          + 'krikettikentäksi alue julistettiin 11. joulukuuta 1866.'
+          + '\n\n'
+          + 'Ensimmäinen ottelu pelattiin 11. tammikuuta 1868. Kenttä '
+          + 'oli yhä kivinen ja ohdakkeinen, ja erotuomari pyysi '
+          + 'jälkeenpäin anteeksi, koska osa pelaajista loukkaantui; '
+          + 'avajaisia ei juhlittu musiikilla eikä lipuilla. Vielä '
+          + '1871 kentällä lainehti suoveden lammikoita, ja vasta '
+          + 'loppuvuodesta 1872 se tasoitettiin hevosilla. Basin '
+          + 'Reserve on maan vanhin ensiluokan krikettikenttä ja '
+          + 'ainoa krikettikenttä, jolla on Heritage New Zealandin '
+          + 'suojelumerkintä. Museokatsomossa toimii 1987 avattu '
+          + 'krikettimuseo, ja kenttä on samalla iso liikenneympyrä.',
+      kuvat: [
+        {
+          tiedosto: 'Basin Reserve - grandstands.JPG',
+          selite: 'Kaksi katsomoa ja tyhjä nurmi: kenttä on '
+            + 'kuivatun suon pohjalla.',
+          lahde: 'Gruyere, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * CHRISTCHURCHIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 6.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.christchurch, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "Barbadoes Street Cemetery", "Victoria Clock Tower",
+   * "Christchurch Town Hall", "Canterbury Provincial Council
+   * Buildings", "New Regent Street", "Christchurch Art Gallery",
+   * "Canterbury Museum, Christchurch" ja "Bridge of Remembrance").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat etukäteen piirretty kaupunki, kolme kansaa ennen ensimmäistä
+   * laivaa, pyöräily, vuoden 1998 anteeksipyyntö, vuosien 2010 ja
+   * 2011 järistykset, katedraali, pahvikatedraali, kasvitieteellinen
+   * puutarha, Avon-joki, Riccarton Bush ja punainen vyöhyke.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * JÄRISTYS ON MUKANA MUTTA ERI KULMASTA. Kaikki kahdeksan kohdetta
+   * vaurioituivat helmikuussa 2011, ja se kerrotaan — mutta jutut
+   * pysyvät rakennuksissa: kellotornin jalat purettiin ja koottiin,
+   * taidegalleria toimi väestönsuojelun johtokeskuksena, museon
+   * varhainen vahvistaminen kannatti. Järistyksen kellonaikaa ei
+   * toisteta yhdessäkään jutussa, koska se on lehden noston H2 oma
+   * yksityiskohta.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 480 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * christchurch-lohkossa (kulttuuri-kategoriat.js) eikä
+   * oceania-valokuvat.js:n christchurch-lohkossa.
+   */
+  christchurch: {
+    'Barbadoes Streetin hautausmaa': {
+      aika: '1850',
+      teksti: 'Christchurchin vanhin hautausmaa oli mukana jo '
+          + 'kaupungin alkuperäisessä, vuonna 1850 tehdyssä '
+          + 'mittauksessa. Se jaettiin kolmeen erilliseen osaan '
+          + 'tunnustuksen mukaan: anglikaanien alue jäi Barbadoes '
+          + 'Streetin itäpuolelle, katolisten sen länsipuolelle ja '
+          + 'vapaakirkollisten vielä katolisten alueen eteläpuolelle.'
+          + '\n\n'
+          + 'Canterburyn provinssineuvosto sääti 1870 hautausmaiden '
+          + 'hallintoa koskevan asetuksen, ja elokuussa 1871 '
+          + 'vapaakirkolliselle osalle nimettiin oma hallitus. Sen '
+          + 'jäseninä olivat muun muassa Christchurchin silloinen '
+          + 'pormestari James Jameson ja taimitarhuri Thomas Abbott.'
+          + '\n\n'
+          + 'Hautausmaalla lepää suuri osa siirtokunnan ensimmäistä '
+          + 'sukupolvea: uudisasukkaat Jane ja John Deans, arkkitehti '
+          + 'William Armson, maanmittari Thomas Cass, piispa Henry '
+          + 'Harper ja lääkäri-valokuvaaja Alfred Barker, joka kuoli '
+          + '1873. Tänne on haudattu ainakin kuusi kansanedustajaa ja '
+          + 'kuusi entistä pormestaria. Helmikuun 2011 järistys kaatoi '
+          + 'obeliskeja ja hautakiviä, ja maan nesteytyminen työnsi '
+          + 'lietettä osan hautausmaasta päälle.',
+      kuvat: [
+        {
+          tiedosto: 'Barbadoes Street Cemetery, Christchurch, New Zealand 05.jpg',
+          selite: 'Matalia hautakiviä nurmella; kaalipuu kertoo, '
+            + 'ettei tämä ole englantilainen kirkkomaa.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Victorian kellotorni': {
+      aika: '1897',
+      teksti: 'Kellotornilla on pisin ja mutkikkain matka mistään '
+          + 'Christchurchin rakennuksesta. Benjamin Mountfort piirsi '
+          + 'sen noin 1858 provinssineuvoston ensimmäisen, puisen '
+          + 'siiven katolle. Rautatorni ja kello tehtiin Coventryssä '
+          + 'ja saapuivat joulukuussa 1860 sadassaneljässäkymmenessä'
+          + 'seitsemässä laatikossa — ja silloin selvisi, ettei '
+          + 'puurakennus kestäisi niiden painoa.'
+          + '\n\n'
+          + 'Kello sijoitettiin provinssineuvoston kivitorniin Armagh '
+          + 'Streetille. Sen taulua ei sieltä nähnyt, mutta lyönnit '
+          + 'kuuluivat kahden mailin päähän. Merimatka oli '
+          + 'vahingoittanut koneistoa, joten kello pysyi tornissa '
+          + 'vain vähän aikaa, ja rautatorni seisoi vuosia neuvoston '
+          + 'pihalla. Kun provinssihallinto lakkautettiin 1876, torni '
+          + 'siirtyi valtiolle ja sieltä kaupungille, joka varastoi '
+          + 'sitä kolmekymmentä vuotta Worcester Streetin varikolla.'
+          + '\n\n'
+          + 'Vasta kuningatar Viktorian timanttijuhlavuosi 1897 antoi '
+          + 'tornille tehtävän. Kivijalustasta järjestettiin kilpailu, '
+          + 'jonka voitti paikallinen Strouts and Ballantyne, ja kello '
+          + 'lähetettiin Britanniaan kunnostettavaksi ja kellopelillä '
+          + 'varustettavaksi. Torni nousi Manchester Streetin '
+          + 'risteykseen ja siirrettiin sieltä 1930 nykyiselle '
+          + 'paikalleen liikenteen tieltä. Vuoden 2011 järistys '
+          + 'vaurioitti sitä pahoin: jokainen jalka purettiin, sisään '
+          + 'valettiin uusi teräsbetonirunko, vanhat kivet '
+          + 'palautettiin verhoukseksi samoille paikoilleen ja tornin '
+          + 'alta löytynyt lähdevesikaivo johdettiin muualle. '
+          + 'Kunnostettu torni paljastettiin 22. lokakuuta 2014.',
+      lahde: 'Wikipedia',
+    },
+    Kaupungintalo: {
+      aika: '1972',
+      teksti: 'Christchurchin kaupungintalo ei ole hallintorakennus '
+          + 'vaan konserttitalo. Paikasta kiisteltiin 1920-luvulta '
+          + 'asti, ja lopullinen tontti Avonin rannalla Victoria '
+          + 'Squarea vastapäätä valittiin kaupungin johtavien '
+          + 'arkkitehtien yksimielisellä suosituksella. Talo avattiin '
+          + '30. syyskuuta 1972, ja sen suunnittelivat '
+          + 'christchurchilaiset Miles Warren ja Maurice Mahoney.'
+          + '\n\n'
+          + 'Kuuluisimmaksi talon tekee akustiikka. Professori Harold '
+          + 'Marshall oli mukana suunnittelussa, ja kun yksikään '
+          + 'kilpailuehdotus ei ollut sitä pitkänomaista '
+          + 'suorakaidetta, jota konserttisalilta siihen aikaan '
+          + 'odotettiin, hän otti mallia Lontoon Royal Festival '
+          + 'Hallista ja ripusti soikean salin seinille '
+          + 'heijastuslevyt, jotka ohjaavat äänen katsomoon. '
+          + 'Ratkaisusta tuli nykyaikaisen konserttisalisuunnittelun '
+          + 'perusta, ja Marshall neuvoi myöhemmin Pariisin '
+          + 'Philharmoniessa ja Guangzhoun oopperatalossa.'
+          + '\n\n'
+          + 'Talossa pidettiin vuoden 1974 Kansainyhteisön kisojen '
+          + 'painonnosto- ja painikilpailut. Helmikuun 2011 järistys '
+          + 'sulki sen: virkamiehet ehdottivat, että kaikki muu paitsi '
+          + 'pääsali puretaan, mutta valtuusto äänesti marraskuussa '
+          + '2012 koko talon korjaamisen puolesta. Ovet avautuivat '
+          + 'uudelleen 2019, ja 2020 rakennus merkittiin ensimmäisen '
+          + 'luokan suojelukohteeksi.',
+      kuvat: [
+        {
+          tiedosto: 'Christchurch Town Hall of the Performing Arts, New Zealand.jpg',
+          selite: 'Betonipilarit ja lasiseinä sinisenä hetkenä; '
+            + 'aulan väriteos näkyy kadulle asti.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Provinssineuvoston talo': {
+      aika: '1858–1865',
+      teksti: 'Canterburyn provinssineuvosto hallitsi maakuntaa '
+          + '1853–1876, ja tämä on ainoa säilynyt uusiseelantilainen '
+          + 'rakennus, joka on rakennettu varta vasten '
+          + 'provinssihallinnolle. Ensimmäisen osan peruskivi '
+          + 'laskettiin tammikuussa 1858: kaksikerroksinen puutalo '
+          + 'Durham Streetin varrella, ja sen sisällä puinen '
+          + 'istuntosali, jonka esikuvina olivat 1300- ja 1500-luvun '
+          + 'englantilaiset kartanosalit. Pohjoinen laajennus '
+          + 'valmistui 1861 ja sulki korttelin sisäpihan.'
+          + '\n\n'
+          + 'Viimeinen osa rakennettiin 1864–1865. Kivisali oli '
+          + 'edeltäjäänsä suurempi, koska neuvosto oli kasvanut, ja '
+          + 'sen sisustusta pidetään provinssiarkkitehti Benjamin '
+          + 'Mountfortin vaikuttavimpana työnä. Puisen salin taakse '
+          + 'lisättiin Bellamy\'s, neuvoston ravintolatilat. Talot '
+          + 'täyttävät korttelin Armagh-, Durham- ja Gloucester-'
+          + 'katujen ja Avon-joen välissä.'
+          + '\n\n'
+          + 'Helmikuun 2011 järistyksessä Armagh Streetin kivitorni — '
+          + 'sama, jossa Victorian kello aikanaan roikkui — romahti. '
+          + 'Taidehistorioitsija Ian Lochhead sanoi kivisalin '
+          + 'menetystä monelle koko järistyksen suurimmaksi '
+          + 'kulttuuriperintötappioksi. Korjausta on lykätty '
+          + 'toistuvasti: arvio koko työn hinnasta on 204 miljoonaa '
+          + 'dollaria, ja ensimmäisen vaiheen rahoitusta aikaistettiin '
+          + 'vasta 2023.',
+      kuvat: [
+        {
+          tiedosto: 'Canterbury Provincial Council Buildings from Armagh Street, Christchurch, New Zealand 03.jpg',
+          selite: 'Puisen siiven suippokaari-ikkunat ja päätykolmiot '
+            + 'Armagh Streetin puolelta.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'New Regent Street': {
+      aika: '1932',
+      teksti: 'Kadun paikalla oli ennen "sirkuslaidun", jolla '
+          + 'kiertävät sirkukset pystyttivät telttansa. Vuodesta 1888 '
+          + 'siinä seisoi Colosseum-niminen halli, joka oli vuoron '
+          + 'perään luistinrata, saapastehdas, taksiasema ja 1908 '
+          + 'Christchurchin ensimmäinen elokuvateatteri. Halli '
+          + 'purettiin tammikuussa 1931.'
+          + '\n\n'
+          + 'Uusi katu oli yksityinen hanke. Liikemies Arthur Francis '
+          + 'Staceyn ryhmä esitti kaupungille 1929 espanjalaishenkistä '
+          + 'katua; piirustukset teki Francis Willis, ja kaupunki '
+          + 'hyväksyi suunnitelman helmikuussa 1930. Neljäkymmentä '
+          + 'liikettä rakennettiin yhtenä kokonaisuutena Spanish '
+          + 'Mission -tyyliin, mikä oli aikanaan uutta — katua '
+          + 'pidetäänkin nykyisten kauppakeskusten edeltäjänä. Katu on '
+          + 'kaksitoista metriä leveä ja sata metriä pitkä, ja '
+          + 'veistäjä William Trethewey teki osan sisätilojen '
+          + 'koristeista.'
+          + '\n\n'
+          + 'Katu valmistui maaliskuun lopussa 1932. Sen neljäsataa '
+          + 'lamppua sytytettiin kokeeksi 24. maaliskuuta, ja sadat '
+          + 'kaupunkilaiset tulivat kävelemään valaistua katua. '
+          + 'Avajaiset pidettiin illalla 1. huhtikuuta 1932, keskellä '
+          + 'lamaa: pormestari Dan Sullivan piti puheen, ja vaikka '
+          + 'rakennuttaja väitti puolet liikkeistä vuokratuiksi, auki '
+          + 'oli kolme. Katu muutettiin kävelykaduksi 1994, ja '
+          + 'helmikuusta 1995 sen läpi on kulkenut museoraitiovaunu. '
+          + 'Vuoden 2011 järistys sulki kadun; se avattiin uudelleen '
+          + 'huhtikuussa 2013 ja raitiovaunu palasi saman vuoden '
+          + 'marraskuussa.',
+      kuvat: [
+        {
+          tiedosto: 'New Regent Street during the COVID-19 pandemic, Christchurch, New Zealand.jpg',
+          selite: 'Pastellinsävyiset julkisivut molemmin puolin ja '
+            + 'raitiotien kiskot keskellä sadan metrin katua.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Taidegalleria: {
+      aika: '2003',
+      teksti: 'Kaupungin taidemuseo oli vuodesta 1932 Robert '
+          + 'McDougall Art Gallery kasvitieteellisen puutarhan '
+          + 'laidalla Canterburyn museon takana. Se suljettiin 16. '
+          + 'kesäkuuta 2002 — päivälleen seitsemänkymmentä vuotta '
+          + 'avajaisistaan — ja vanha talo seisoo yhä tyhjillään. '
+          + 'Kaupunki osti uuden tontin 1996 ja järjesti '
+          + 'suunnittelukilpailun 1998; Buchan Groupin piirtämä '
+          + 'Christchurch Art Gallery Te Puna o Waiwhetū avattiin 10. '
+          + 'toukokuuta 2003. Etupihalla on Graham Bennettin ja '
+          + 'arkkitehti David Colen yhdessä tekemä veistos Reason for '
+          + 'Voyaging.'
+          + '\n\n'
+          + 'Talo rakennettiin kestämään maanjäristyksiä: perustus on '
+          + 'maan pinnalla lepäävä betonilautta, joka jakaa '
+          + 'järistyksen voimat tasaisesti koko rakennukselle.'
+          + '\n\n'
+          + 'Ratkaisu koeteltiin pian. Vuoden 2010 järistyksen jälkeen '
+          + 'taloon siirtyi väestönsuojelun johtokeskus, ja helmikuun '
+          + '2011 järistyksen jälkeen se toimi siellä seitsemän '
+          + 'kuukautta. Galleria itse vaurioitui, ja yleisö pääsi '
+          + 'sisään vasta 19. joulukuuta 2015. Vuonna 2022 tutkija '
+          + 'Karen Stevenson lahjoitti kokoelmalle 77 teosta '
+          + 'kolmeltakymmeneltäkahdelta taiteilijalta, pääosin '
+          + 'Tyynenmeren saarten taidetta.',
+      lahde: 'Wikipedia',
+    },
+    'Canterburyn museo': {
+      aika: '1870',
+      teksti: 'Museo perustettiin 1867, ja sen ensimmäinen johtaja oli '
+          + 'geologi Julius von Haast, jonka oma kokoelma muodosti '
+          + 'museon perustan. Benjamin Mountfortin piirtämä '
+          + 'uusgoottilainen rakennus avattiin 1870 yksikerroksisena; '
+          + 'kaksi vuotta myöhemmin sen päälle nostettiin toinen '
+          + 'kerros, 1876 tuli lisäsiipi ja 1882 sisäpiha katettiin.'
+          + '\n\n'
+          + 'Rakennusta vahvistettiin ja korjattiin järjestelmällisesti '
+          + '1987–1995, ja se näkyi helmikuussa 2011: talo sai vain '
+          + 'pieniä julkisivuvaurioita, arviolta 95 prosenttia '
+          + 'kokoelmista säilyi vahingoittumattomana ja museo avattiin '
+          + 'uudelleen jo 2. syyskuuta 2011. Sisäänkäynnin edessä '
+          + 'ollut William Rollestonin patsas kaatui jalustaltaan.'
+          + '\n\n'
+          + 'Nyt talo on kiinni toisesta syystä. Museon 2,3 miljoonaa '
+          + 'esinettä — joista alle prosentti oli kerrallaan esillä — '
+          + 'pakattiin ja siirrettiin varastoon perusteellisen '
+          + 'peruskorjauksen ajaksi. Suunnitelmaan kuuluu suuri '
+          + 'valokatteinen halli, jonka kattoon ripustetaan museon '
+          + 'sinivalaan luuranko; sitä pidetään maailman suurimpana '
+          + 'luurankona. Korjauksen ajan museo toimii pienemmissä '
+          + 'tiloissa CoCA-rakennuksessa.',
+      lahde: 'Wikipedia',
+    },
+    Muistosilta: {
+      aika: '1924',
+      teksti: 'Silta itse on paljon vanhempi kuin muistomerkki. '
+          + 'Insinööri ja urakoitsija Edward George Wright rakensi '
+          + 'Cashel Streetin sillan Avonin yli ja sai sen valmiiksi '
+          + 'toukokuussa 1873; työstä maksettiin 509 puntaa. Sillan '
+          + 'itäpäästä alkaa keskustan kävelykatu.'
+          + '\n\n'
+          + 'Ajatus muistoholvista sillan päälle esitettiin '
+          + 'ensimmäisen kerran 24. heinäkuuta 1919 The Pressissä '
+          + 'julkaistussa yleisönosastokirjeessä, jonka kirjoitti '
+          + 'rouva Wyn Irwin. Ajatus sai kannatusta, rakennustyö alkoi '
+          + 'tammikuussa 1923, ja peruskiven laski Anzac-päivänä 25. '
+          + 'huhtikuuta 1923 kenraalikuvernööri, amiraali lordi '
+          + 'Jellicoe. Hän myös paljasti valmiin holvin aselepopäivänä '
+          + '11. marraskuuta 1924. Suunnittelukilpailun voitti '
+          + 'toimisto Prouse and Gummer, ja piirustukset teki William '
+          + 'Gummer. Holvin keskellä lukee "Quid non pro patria".'
+          + '\n\n'
+          + 'Paikka ei ole sattuma. Kuningas Edvardin kasarmilta '
+          + 'Cashel Streetin länsipäästä sotilaat marssivat juuri '
+          + 'tästä joen yli kohti Moorhouse Avenuen rautatieasemaa ja '
+          + 'sieltä kolmeen sotaan. Silta suljettiin autoilta 1976. '
+          + 'Helmikuun 2011 järistys vaurioitti holvia; korjaus ja '
+          + 'vahvistaminen maksoivat 6,7 miljoonaa dollaria ja '
+          + 'valmistuivat joulukuussa 2015, ja silta vihittiin '
+          + 'uudelleen Anzac-päivänä 25. huhtikuuta 2016.',
+      lahde: 'Wikipedia',
+    },
+  },
 };

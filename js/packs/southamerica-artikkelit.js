@@ -979,4 +979,35 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'rantapuisto, joka yhdistää vanhan keskustan rakennukset '
       + 'veteen.',
   },
+  /*
+   * BOLIVIA (6.9.2026). Maalehden maaosasto (MAA_KATEGORIAT BOL)
+   * nojaa tähän introon yksin, sama malli kuin Kenialla ja Egyptillä.
+   * Avain on maailmankartan countryShapes.BOL.wiki eli 'Bolivia'.
+   * Väitteet on tarkistettu en-Wikipedian raakateksteistä 6.9.2026
+   * (docs/mantereet-tyoaineisto/faktapohja-bolivia.md).
+   */
+  Bolivia: {
+    intro: 'Bolivia on Etelä-Amerikan toinen sisämaavaltio, ja siihen '
+      + 'mahtuu neljä eri maailmaa: läntinen Altiplano kahden Andien '
+      + 'jonon välissä, itärinteen kosteat Yungas-laaksot, pohjoisen '
+      + 'Amazonin tulvatasangot ja etelän kuiva Gran Chaco. Korkeusero '
+      + 'maan sisällä on yli kuusi kilometriä. Hallitus istuu La '
+      + 'Pazissa, mutta perustuslaillinen pääkaupunki ja korkeimman '
+      + 'oikeuden kotipaikka on Sucre, ja suurin kaupunki on itäisen '
+      + 'alangon **Santa Cruz de la Sierra**. Espanjan rinnalla '
+      + 'virallisia kieliä on 36; puhutuimmat niistä ovat ketšua, '
+      + 'aymara ja guaraní.'
+      + '\n\n'
+      + '**Maan nimi tulee Simón Bolívarista, ja se päätettiin vasta '
+      + 'kokouksessa 1825: Bolívarin tasavallasta tuli Bolivia, koska '
+      + 'Romuluksesta oli tullut Rooma.** Isoisän matkavuonna 1873 '
+      + 'Bolivialla oli vielä oma merenranta. Se menetettiin '
+      + 'Tyynenmeren sodassa, joka alkoi riidasta kymmenen sentin '
+      + 'verosta, ja vuoden 1904 rauhansopimus vahvisti rajan — '
+      + 'merivoimat purjehtivat siitä huolimatta yhä Titicacajärvellä '
+      + 'ja Amazonin sivujoilla. Vuoden 1952 vallankumous toi yleisen '
+      + 'äänioikeuden: äänestäjiä oli 1951 noin 205 000 ja viisi '
+      + 'vuotta myöhemmin yli miljoona, kun luku- ja kirjoitustaidon '
+      + 'vaatimus poistui ja naiset saivat äänen.',
+  },
 };
