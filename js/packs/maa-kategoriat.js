@@ -41161,6 +41161,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Perjantain rumpu ei ole esitys vaan rukous',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-musiikki-3-r20260907-v4.jpg',
           teksti: 'Sudanissa on lukuisia sufilaisia veljeskuntia, ja '
               + 'jokaisella on oma zikrinsä eli muistamisen menonsa: '
               + 'lausuntaa, rumpuja, tanssia, pukuja ja suitsuketta, '
@@ -41171,6 +41172,10 @@ export const MAA_KATEGORIAT = {
               + 'eivät pidä zikriä musiikkiesityksenä lainkaan vaan '
               + 'rukouksen muotona — vaikka ulkopuoliselle se kuulostaa '
               + 'ja näyttää konsertilta.',
+          selite: 'Sufilainen zikr-piiri Hamed el-Nilin hautarakennusta mukailevassa '
+              + 'Omdurmanin rekonstruktiossa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Wikimapia — valokuva Hamed '
+              + 'el-Nilin hautarakennuksesta Omdurmanissa',
           wiki: 'Suufilaisuus',
         },
       ],
@@ -41305,6 +41310,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Riutta keskellä merta, kaukana rannasta',
           aika: '2016',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-luonto-1-r20260907-v3.jpg',
           teksti: 'Sanganeb on erillinen korallirakennelma keskellä '
               + 'Punaistamerta, kaukana rannikon riutoista. Sadan '
               + 'kolmenkymmenen kilometrin päässä Port Sudanista '
@@ -41316,6 +41322,11 @@ export const MAA_KATEGORIAT = {
               + 'mangrovet ja pikkusaaret ovat merkittävä lintualue: '
               + 'siellä elävät muun muassa valkosilmälokki ja '
               + 'nokihaukka.',
+          selite: 'Sanganebin majakka, laiturit ja epäsäännöllinen koralliriutta '
+              + 'lähdepohjaisessa ilmakuvassa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Unescon '
+              + 'maailmanperintöluettelo 262 — Sanganeb Marine National Park ja Dungonab Bay '
+              + '– Mukkawar Island Marine National Park',
           wiki: 'Dungonab Bay',
         },
         {
@@ -41771,6 +41782,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kieli, joka syntyi varuskunnassa',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-kielet-1-r20260907-v4.jpg',
           teksti: 'Juba-arabia syntyi 1800-luvulla sotilaiden '
               + 'jälkeläisten keskuudessa: väki oli koottu eri kansoista, '
               + 'ja yhteiseksi kieleksi muodostui sudaninarabiaan '
@@ -41781,6 +41793,10 @@ export const MAA_KATEGORIAT = {
               + 'sitä kuulee etenkin Ekvatorian maakunnassa ja Juban '
               + 'kaduilla. Vasta 1970-luvulla se tunnustettiin omaksi '
               + 'kielimuodokseen eikä pelkäksi huonoksi arabiaksi.',
+          selite: '1900-luvun alkupuolen Juban kaupunkiympäristöä ja kielikontaktia '
+              + 'havainnollistava rekonstruktio.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Juba in the Making — To the '
+              + 'Juba Wharf',
           wiki: 'Juba Arabic',
         },
         {
@@ -42638,6 +42654,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Rumpali istuu rumpujen sisällä',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mmr-musiikki-2-r20260907-v8.jpg',
           teksti: 'Hsaing waing on burmalainen perinneorkesteri, ja sen pääsoitin pat waing '
               + 'on rumpukehä: kahdeksastatoista kahteenkymmeneenyhteen viritettyä rumpua '
               + 'ympyrässä, joiden ala ylittää kolme oktaavia, ja soittaja istuu kehän '
@@ -42647,6 +42664,11 @@ export const MAA_KATEGORIAT = {
               + 'Kokoonpanoja on viisi: juhlien, näytelmien, nukketeatterin, nat-menojen '
               + 'ja anyeint-esitysten omat. Soittaja Sein Beda toi telineisiin '
               + 'lasimosaiikin, näyttämölle valonheittimet ja soittajille univormut.',
+          selite: 'Pat waing -soiton harjoitus Myanmarissa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Smithsonian Folkways — UNESCO '
+              + 'Collection, Week 58: Lyric, Epic and Everyday Life in Myanmar and Ethiopia; '
+              + 'Smithsonian Folkways — Myanmar: Music by the Hsaing Waing Orchestra / The '
+              + 'Burmese Harp',
           wiki: 'Hsaing waing',
         },
         {
@@ -42741,6 +42763,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Ensimmäinen romaani oli Monte-Criston sukua',
           aika: '1724–1904',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mmr-kirjallisuus-3-r20260907-v4.jpg',
           teksti: 'Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: '
               + 'nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä '
               + 'kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen '
@@ -42749,6 +42772,10 @@ export const MAA_KATEGORIAT = {
               + '1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan '
               + 'Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, '
               + 'ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.',
+          selite: '1900-luvun alun burmalaisen kirjapajan rekonstruktio Albion-tyyppisine '
+              + 'käsipainokoneineen.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Museums Victoria — '
+              + 'kokoelmaesine 367721, Albion-käsipainokone',
           wiki: 'Burmese literature',
         },
       ],
@@ -43064,6 +43091,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Yksi sävel, kaksi kieltä',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-lka-musiikki-3-r20260907-v2.jpg',
           teksti: 'Ananda Samarakoon lähti opiskelemaan taidetta ja musiikkia '
               + 'Santiniketaniin Rabindranath Tagoren yliopistoon, palasi puolen vuoden '
               + 'jälkeen ja opetti musiikkia Mahinda Collegessa Gallessa 1938–1942. '
@@ -43074,6 +43102,10 @@ export const MAA_KATEGORIAT = {
               + '1951. M. Nallathamby käänsi sen tamiliksi, ja molemmilla kielillä '
               + 'lauletaan sama sävel — kuten Suomessa. Vuonna 1961 hallitus muutti '
               + 'ensimmäistä riviä säveltäjän vastustuksesta huolimatta.',
+          selite: 'Sri Lankan kansallislaulun harjoittelua havainnollistava nimetön kuoro ja '
+              + 'suljettu, tekstitön musiikkikansio.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Sri Lankan hallituksen '
+              + 'portaali GOV.LK — Country Overview',
         },
       ],
     },
@@ -45901,6 +45933,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Bambupillit ja auton osat',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-musiikki-2-r20260907-v3.jpg',
           teksti: 'Bubu on temnejen musiikkia. Alun perin sitä soitettiin animistisissa '
               + 'seremonioissa, mutta siitä tuli ramadanin kulkuemusiikkia: soittimina '
               + 'ovat bambusta tehdyt pillit ja metalliputket, usein auton osista '
@@ -45909,6 +45942,9 @@ export const MAA_KATEGORIAT = {
               + 'oli rauha, hyvä hallinto ja naisten aseman vahvistaminen. Nabay joutui '
               + 'lähtemään maasta sodan aikana ja kokosi Brooklynissa yhtyeen, joka toi '
               + 'bubun maailmalle 2010 — se oli tyylin ensimmäinen kansainvälinen levy.',
+          selite: 'Bubu-muusikoiden iltaesitys Sierra Leonessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Afropop Worldwide — Photo '
+              + 'Essay: Chasing Bubu Music in Sierra Leone',
         },
         {
           otsikko: 'Laulu, joka löytyi kahdelta mantereelta',
@@ -45940,6 +45976,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Riisi, joka kesytettiin Länsi-Afrikassa',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-ruoka-0-r20260907-v5.jpg',
           teksti: 'Aasialaisen riisin rinnalla maailmassa on toinenkin kesytetty laji: '
               + 'Oryza glaberrima, afrikkalainen riisi, joka otettiin viljelyyn '
               + 'Länsi-Afrikassa noin kolmetuhatta vuotta sitten. Se kestää kuivuutta, '
@@ -45950,6 +45987,9 @@ export const MAA_KATEGORIAT = {
               + 'riisirannaksi, ja juuri viljelytaidon takia Carolinan ja Georgian '
               + 'istutusten omistajat maksoivat täältä viedyistä orjuutetuista '
               + 'korkeampaa hintaa kuin muualta tuoduista.',
+          selite: 'Afrikkalaisen riisin sadonkorjuuta Sierra Leonessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: AfricaRice — Birthplace of '
+              + 'African rice domestication identified in Mali',
         },
         {
           otsikko: 'Kansallisruoka survotaan huhmareessa',
@@ -46202,6 +46242,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Sana, joka tarkoitti karkuria ennen kansaa',
           aika: '1465–1520',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-historia-2-r20260907-v2.jpg',
           teksti: 'Kaksi ruhtinasta, Kerei ja Janibek, kieltäytyivät tunnustamasta '
               + 'Abu al-Khayr -kaanin valtaa ja siirtyivät heimoineen Moghulistaniin. '
               + 'Siellä he elivät tavalla, jota sanottiin qazaqliqiksi: valtaistuinkilvassa '
@@ -46210,6 +46251,9 @@ export const MAA_KATEGORIAT = {
               + 'tuli kansan oma nimi. Perustamisvuodesta kiistellään yhä: kazakstanilainen '
               + 'perinne sanoo 1465, venäläinen laskee vuodesta 1470. Kasym-kaanin aikana '
               + '1511 alkaen valtakunnassa oli miljoona asukasta.',
+          selite: 'Kuvitteellinen karavaani 1400-luvun kazakkien muuttoliikkeen yhteydessä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Kazakstanin e-history.kz — '
+              + 'kazakkien kaanikunnan synnyn lähdejulkaisu, s. 33',
         },
         {
           otsikko: 'Katto, joka peritään isältä pojalle',
@@ -46411,6 +46455,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Soitin, jolla karkotettiin kuolema',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-musiikki-1-r20260907-v6.jpg',
           teksti: 'Kobyz on jousisoitin, jossa on kaksi hevosenjouhista kieltä ja '
               + 'vuohennahkainen kaikukoppa. Se ei ollut kenen tahansa soitin: sitä '
               + 'pitivät hallussaan šamaanit ja baksyt, ja tarinoiden mukaan sen ääni '
@@ -46420,10 +46465,14 @@ export const MAA_KATEGORIAT = {
               + 'pantiin neljä metallikieltä, ja samalla soittimella alettiin esittää '
               + 'myös viulukirjallisuutta. Karakalpakkien eepikot säestävät sillä yhä '
               + 'kertomuslauluja karhealla kurkkuäänellä.',
+          selite: 'Kylkobyz-soittaja kazakstanilaisessa asussa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Kazakstanin e-museum — '
+              + 'Kilkobyz, kokoelmaesine',
         },
         {
           otsikko: 'Kahleet auki ja muita vankilasta saatuja sävelmiä',
           aika: '1823–1896',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-musiikki-2-r20260907-v1.jpg',
           teksti: 'Kurmangazy Sagyrbaiuly syntyi Bukein ordassa köyhään perheeseen: isä '
               + 'oli työmies vailla taipumusta taiteisiin, äiti tunnettiin rohkeudestaan '
               + 'ja esiintymisestään juhlissa. Poika oppi küyt kiertävältä soittajalta ja '
@@ -46433,9 +46482,13 @@ export const MAA_KATEGORIAT = {
               + 'Vankeus jäi kappaleiden nimiin — Kisen Ashkan on kahleet auki ja '
               + 'Turmeden Kashkan paennut vankilasta. Vanhoilla päivillään hän opetti '
               + 'oppilaita, joista tunnetuin oli Dina Nurpeisova.',
+          selite: 'Nimetön dombra-soittaja jurtan edessä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Kazakstanin e-museum — Dombra, '
+              + 'kokoelmaesine',
         },
         {
           otsikko: 'Kilpalaulanta, jossa vastaus pitää keksiä heti',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-musiikki-3-r20260907-v3.jpg',
           teksti: 'Aitys on kahden akynin eli laulajarunoilijan kilpa. He istuvat '
               + 'vierekkäin, näppäilevät vuorotellen dombraansa ja vastaavat toisilleen '
               + 'riimitetyin säkein. Osa säkeistä on etukäteen mietittyjä, mutta yleisö '
@@ -46445,6 +46498,9 @@ export const MAA_KATEGORIAT = {
               + 'vasta 1800-luvulla, ja ensimmäisiä talteen saatuja ovat Birzhanin ja '
               + 'Saran sekä Ulbiken ja Kuderin laulukiistat. Unescon luetteloon aitys '
               + 'pääsi vuonna 2015.',
+          selite: 'Kaksi akynia kohtaa aitys-kilpalaulannassa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Unescon aineettoman '
+              + 'kulttuuriperinnön luettelo — Aitysh/Aitys, art of improvisation',
         },
       ],
     },
@@ -46640,6 +46696,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Junan nimi, joka ei tarkoita mitä luulee',
           aika: '1860–1930-luvut',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-afg-historia-3-r20260907-v1.jpg',
           teksti: 'Australian sisämaassa hevonen ei kestänyt kuumuutta, joten sinne tuotiin '
               + 'kamelit ja kamelinajajat. Kesäkuussa 1860 Melbourneen saapui Karachista '
               + 'laiva Chinsurah, mukanaan 24 kamelia ja kourallinen ajajia Burken ja '
@@ -46650,8 +46707,10 @@ export const MAA_KATEGORIAT = {
               + 'moskeijan Marreehen 1861. Kuuluisan Ghan-junan nimen keksi 1923 '
               + 'rautatieläinen, joka näki matkustajan juoksevan rukoilemaan pysähdyksen '
               + 'aikana.',
-          selite: 'Ajajien mukana kulkeneet taatelipalmut kasvavat yhä niillä paikoilla, '
-            + 'joissa karavaanit pysähtyivät yöksi.',
+          selite: 'Kamelinkuljettajia Australian sisämaassa kuvaava historiallinen '
+              + 'rekonstruktio.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: National Archives of Australia '
+              + '— Last camel train used to deliver mail in outback Australia',
         },
       ],
     },
@@ -46784,6 +46843,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kaksi riviä ja kaksikymmentäkaksi tavua',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-afg-kirjallisuus-2-r20260907-v2.jpg',
           teksti: 'Landay on pashtunkielinen kansanruno, jossa on täsmälleen kaksi riviä: '
               + 'ensimmäisessä yhdeksän tavua, toisessa kolmetoista. Rivit eivät riimity, '
               + 'ja pashtuksi runo päättyy ma- tai na-tavuun. Sana landay tarkoittaa lyhyttä '
@@ -46792,8 +46852,10 @@ export const MAA_KATEGORIAT = {
               + 'naisten kesken. Aiheet toistuvat: rakkaus, ero, koti-ikävä, suru ja sota. '
               + 'Moni landay arvostelee suoraan tapoja ja sitä, mitä naiselta odotetaan — '
               + 'nimettömyys tekee siitä mahdollista.',
-          selite: 'Landayn muoto on niin vanha, että sen arvellaan tulleen alueelle '
-            + 'paimentolaisten mukana tuhansia vuosia sitten.',
+          selite: 'Naiset jakavat landay-runoutta kuvitteellisessa kotipiirin '
+              + 'kokoontumisessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Pulitzer Center — Poetry of '
+              + 'Afghanistan’s Women',
         },
         {
           otsikko: 'Runoilija, jonka kastelusuunnitelmia yhä käytetään',
@@ -46868,6 +46930,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Radioasema, joka teki laulajista tähtiä',
           aika: '1925–1977',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-afg-musiikki-3-r20260907-v4.jpg',
           teksti: 'Afganistanin ensimmäiset radiolähetykset alkoivat 1925, mutta asema '
               + 'tuhoutui 1929 eikä lähetystoiminta jatkunut ennen kuin Radio Kabul avattiin '
               + '1940. Vasta 1950-luvulla radiovastaanotin yleistyi koteihin, ja samalla '
@@ -46877,8 +46940,9 @@ export const MAA_KATEGORIAT = {
               + 'afganistanilaisena naisena suorassa lähetyksessä. Farida Mahwash sai '
               + 'mestarin arvonimen ustad, ja hänen kappaleensa O bacheh oli vuoden 1977 '
               + 'suurin hitti.',
-          selite: 'Radio Kabulin studioissa muotoutui tyyli, jossa vanhat dari- ja '
-            + 'pashtunkieliset runot laulettiin uusilla sovituksilla.',
+          selite: 'Rubab-yhtyeen harjoitus Afganistanissa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Metropolitan Museum of Art '
+              + '— kokoelmaesine 504148, rubab',
         },
       ],
     },
@@ -47725,6 +47789,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Laulaja, joka lähti saadakseen laulaa',
           aika: '1968–',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-lbr-musiikki-2-r20260907-v1.jpg',
           teksti: 'Miatta Fahnbulleh kasvoi Monroviassa diplomaattiperheessä ja halusi '
               + 'laulajaksi aikana, jolloin naisen esiintymistä julkisilla lavoilla '
               + 'paheksuttiin kotimaassa. Hän kävi lukion Sierra Leonessa, opiskeli '
@@ -47735,8 +47800,10 @@ export const MAA_KATEGORIAT = {
               + 'Masekelan kanssa ja esiintyi 1977 Lagosin FESTAC-festivaalilla. Levyt '
               + 'In Kokolioko ja Miatta ilmestyivät 1979. Vuonna 2005 hän perusti '
               + 'tyttökoulun, joka jakaa yli 180 stipendiä.',
-          selite: 'Miatta Fahnbulleh lauloi Harlemin Apollo-teatterissa ja kiersi '
-            + 'Yhdysvaltoja Hugh Masekelan kanssa 1976.',
+          selite: 'Kuvitus nimettömän liberialaisen laulajan 1970-luvun '
+              + 'teatteriharjoituksesta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Miatta Fahnbullehin oma '
+              + 'elämäkertasivu',
         },
         {
           otsikko: 'Rap, joka puhuu kolokwaa',
@@ -47767,6 +47834,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kirjaimisto, joka keksittiin kylässä',
           aika: '1830-luku',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-lbr-kirjallisuus-0-r20260907-v2.jpg',
           teksti: 'Momolu Duwalu Bukele Jondun kylästä nykyisessä Grand Cape Mountin '
               + 'maakunnassa kehitti 1830-luvun alussa vai-kielelle oman '
               + 'tavukirjaimiston: yksi merkki on konsonantti ja vokaali yhdessä, ja '
@@ -47777,8 +47845,11 @@ export const MAA_KATEGORIAT = {
               + 'Merkit ovat yksinkertaistuneet sukupolvi sukupolvelta, ja Liberian '
               + 'yliopisto täydensi merkistön 1960-luvulla kattamaan kaikki kielen '
               + 'tavut. Unicode-standardiin vai päätyi 2008.',
-          selite: 'Vai-kirjaimiston merkki vastaa aina yhtä tavua, ja merkistössä on '
-            + 'satoja merkkejä yhden aakkoston sijaan.',
+          selite: 'Vai-tavukirjoituksen opetus 1830-luvun Liberian innoittamassa '
+              + 'kuvituksessa. Paperin merkit ovat tulkinnallisia.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Smithsonian National Museum of '
+              + 'African Art — Inscribing Meaning: Writing and Graphic Systems in African '
+              + 'Art',
         },
         {
           otsikko: 'Pienoisromaani, jota luetaan yhä kouluissa',
@@ -47799,6 +47870,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kolme seminaaria sanoi ei',
           aika: '1850–1912',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-lbr-kirjallisuus-2-r20260907-v4.jpg',
           teksti: 'Edward Wilmot Blyden syntyi 1832 Saint Thomasilla Tanskan '
               + 'Länsi-Intiassa ja purjehti keväällä 1850 Yhdysvaltoihin opiskelemaan '
               + 'papiksi. Kolme teologista oppilaitosta kieltäytyi ottamasta häntä '
@@ -47809,11 +47881,28 @@ export const MAA_KATEGORIAT = {
               + 'edusti maataan lähettiläänä Britanniassa ja Ranskassa, ja hänen '
               + 'panafrikkalaisia kirjoituksiaan lukivat Marcus Garvey, George Padmore '
               + 'ja Kwame Nkrumah. Padmore antoi tyttärelleen nimen Blyden.',
-          selite: 'Blyden opetti kreikkaa ja latinaa Liberia Collegessa ja johti '
-            + 'oppilaitosta neljä vuotta.',
+          selite: 'Liberia Collegen alkuvaiheiden opetusta havainnollistava luokkahuone.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Edward Wilmot Blyden — Liberia '
+              + 'Collegen avajaispuhe 1862 (University of Detroit Mercy Libraries, Black '
+              + 'Abolitionist Archive)',
         },
+        /*
+         * PÄÄTOIMITTAJAN PÄÄTÖS 7.9.2026 (kuvaputken tarkennusehdotus,
+         * erä 20f). Otsikko oli 'Kieli, jolla ei ole yhtään kirjaa'.
+         * Absoluuttinen väite "sillä ei ole julkaistu yhtään kokonaista
+         * kirjaa" ei kestänyt lähdetarkistusta, joten se on poistettu ja
+         * painopiste siirretty siihen, missä kolokwaa oikeasti tarvitaan:
+         * torilla ja kaupanteossa. Lähde on Yhdysvaltain kauppahallinnon
+         * Liberia-kauppaopas (Selling Factors & Techniques, 6.6.2024),
+         * joka sanoo colloquial-englannin olevan laajalti puhuttua ja
+         * kaupankäynnin useimpien liberialaisten kanssa voivan olla
+         * hankalaa ilman sen tuntemusta; sama opas kertoo mainonnan
+         * tapahtuvan yleiskielen ja paikalliskielten ohella sillä. Osoite
+         * on lahde-kentän Viitteet-rivillä, joka piirtyy kuvakehykseen.
+         */
         {
-          otsikko: 'Kieli, jolla ei ole yhtään kirjaa',
+          otsikko: 'Kieli, jolla kauppa käy',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-lbr-kirjallisuus-3-r20260907-v2.jpg',
           teksti: 'Liberiassa puhutaan englantia neljällä eri tavalla. Koulujen ja '
               + 'uutistenlukijoiden yleiskielen rinnalla elävät siirtolaisten '
               + 'jälkeläisten oma englanti, merimiesten kru-pidgin ja kaikkein '
@@ -47821,11 +47910,16 @@ export const MAA_KATEGORIAT = {
               + 'polveutuu 1700-luvun rannikkopidginistä, ja sen äänteet tulevat '
               + 'kru-kielistä, bassasta, klaosta ja vaista. Lauseen loppuun liitetään '
               + 'usein pieni o, joka korostaa asian merkitystä tai oikaisee '
-              + 'väärinkäsityksen. Washington Postin mukaan kolokwa on lähes kokonaan '
-              + 'puhuttu kieli: sillä ei ole julkaistu yhtään kokonaista kirjaa. '
-              + 'Merimiesten pidgin on sammumassa, koska se eli laivatyön mukana.',
-          selite: 'Kolokwaa puhutaan Monrovian kaduilla ja markkinoilla, mutta koulussa '
-            + 'ja uutisissa käytetään yleiskieltä.',
+              + 'väärinkäsityksen. Kolokwa on ennen muuta puhuttu kieli, ja juuri sillä '
+              + 'kauppa käy: Yhdysvaltain kauppahallinnon Liberia-opas varoittaa, että '
+              + 'kaupankäynti useimpien liberialaisten kanssa voi olla hankalaa ilman '
+              + 'jonkinlaista kolokwan tuntemusta, ja mainonta tehdään yleiskielen ja '
+              + 'paikalliskielten ohella juuri sillä. Merimiesten pidgin on sammumassa, '
+              + 'koska se eli laivatyön mukana.',
+          selite: 'Liberialaista torikeskustelua ja kaupankäynnin puhekieltä '
+              + 'havainnollistava kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Trade.gov — Liberia: Selling '
+              + 'Factors & Techniques',
         },
       ],
     },
@@ -47895,6 +47989,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Perustuslaki, joka opeteltiin ulkoa',
           aika: 'n. 1236',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mli-historia-1-r20260907-v1.jpg',
           teksti: 'Kirinan jälkeen klaanien johtajat kokoontuivat Kurukan Fugan '
               + 'tasangolle sopimaan, miten uutta valtakuntaa hallitaan. Sopimusta '
               + 'ei kirjoitettu vaan opeteltiin ulkoa: jelit kantoivat sitä '
@@ -47905,9 +48000,10 @@ export const MAA_KATEGORIAT = {
               + 'sukulaisuudesta kansalaisvelvollisuuden: tietyt sukunimet saavat '
               + 'aina piikitellä toisiaan eikä siitä loukkaannuta. Nykyinen 44 '
               + 'pykälän teksti koottiin vasta 1998 kymmenen jelin muistista.',
-          selite: 'Manden peruskirja on Unescon aineettoman kulttuuriperinnön '
-            + 'luettelossa vuodesta 2009. Kokouspaikaksi esitetään Kangabaa tai '
-            + 'sen naapurissa olevaa Dakajalania.',
+          selite: 'Mandenin suullista peruskirjaperinnettä havainnollistava kuvitteellinen '
+              + 'kokoontuminen.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Unescon aineettoman '
+              + 'kulttuuriperinnön luettelo — Manden Charter, proclaimed in Kurukan Fuga',
         },
         {
           otsikko: 'Pyhiinvaellus, joka painoi kullan hinnan alas',
@@ -48083,6 +48179,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Studioon tultiin parhaissa vaatteissa',
           aika: '1948–1963',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mli-kuvataide-2-r20260907-v1.jpg',
           teksti: 'Seydou Keïta sai 1935 sedältään Kodak Brownien, jossa oli filmi '
               + 'kahdeksalle kuvalle. Vuonna 1948 hän avasi Bamako-Kouraan '
               + 'vankilan taakse studion, josta tuli kaupungin muotokuvien tehdas. '
@@ -48093,9 +48190,9 @@ export const MAA_KATEGORIAT = {
               + 'järjestys on voitu päätellä jälkeenpäin. Negatiiveja säilyi '
               + 'tuhansia, mutta asiakkaiden nimiä hän ei kirjannut. Vasta 1991 '
               + 'kuvat päätyivät New Yorkiin — aluksi ilman tekijän nimeä.',
-          selite: 'Keïta lopetti valokuvauksen 1977, kun värikuvasta tuli '
-            + 'yleistä. Hän kuoli Pariisissa 2001, kymmenen vuotta sen jälkeen kun '
-            + 'hänen työnsä oli löydetty maailmalla.',
+          selite: 'Bamakon 1950-luvun muotokuvastudioiden innoittama kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Metropolitan Museum of Art '
+              + '— kokoelmaesine 508077, Bamakon studiovalokuva',
         },
         {
           otsikko: 'Bamakon silmä',
@@ -48244,6 +48341,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Maailmanmestaruus oli lähempänä juniorina',
           aika: '2015–2017',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mli-urheilu-2-r20260907-v1.jpg',
           teksti: 'Malin nuorten jalkapallo on maailman kärkeä. Alle 17-vuotiaiden '
               + 'joukkue on pelannut neljä MM-turnausta, ja Chilessä 2015 se ylsi '
               + 'finaaliin asti. Samana vuonna Mali voitti ikäluokkansa Afrikan '
@@ -48253,9 +48351,10 @@ export const MAA_KATEGORIAT = {
               + 'aikuisissa. Vuonna 2002 maa isännöi Afrikan mestaruusturnausta '
               + 'ensimmäistä kertaa; järjestäjäksi se valittiin 1998 äänestyksessä, '
               + 'jossa vastassa olivat Algeria, Botswana, Egypti ja Etiopia.',
-          selite: 'Alle 17-vuotiaiden MM-turnauksissa menestyvät harvoin samat '
-            + 'maat kuin aikuisten kisoissa. Mali on pelannut niitä neljä ja '
-            + 'yltänyt kerran finaaliin.',
+          selite: 'Malin nuorten jalkapallomenestyksen innoittama kuvitteellinen '
+              + 'joukkuekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: FIFA — Finales de torneos FIFA '
+              + 'en Chile',
         },
         {
           otsikko: 'Kultaa Dakarissa, matka Pekingiin',
@@ -48600,6 +48699,7 @@ export const MAA_KATEGORIAT = {
           // Kuvaton (Opus 6.9.2026): Commonsin >= 1200 px:n kurkkulaulukuvat
           // ovat joko tunnistettavien yksityishenkilöiden lähikuvia tai
           // vesileimattuja kurssikuvia. Kuva tilataan kuvaputkelta.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mng-musiikki-1-r20260907-v1.jpg',
           teksti: 'Khöömei on laulutapa, jossa laulaja pitää yllä yhtä perussäveltä ja '
               + 'muokkaa samalla huulillaan, kielellään ja kurkullaan sen yläsäveliä '
               + 'niin, että niistä syntyy oma melodiansa: kuulija erottaa kaksi ääntä '
@@ -48609,14 +48709,16 @@ export const MAA_KATEGORIAT = {
               + 'valehuulet. Avoin maisema on osa lajia: laulajat hakeutuvat joen '
               + 'rantaan tai vuoren rinteelle, jossa ääni kantaa. Sama laulutapa elää '
               + 'Tuvassa, Mongoliassa, Sisä-Mongoliassa ja Altailla.',
-          selite: 'Kurkkulaulussa laulaja tuottaa perussävelen ja sen yläsävelistä '
-            + 'oman melodiansa yhtä aikaa.',
+          selite: 'Nimetön khöömei-laulaja Mongolian jokimaisemassa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Unescon aineettoman '
+              + 'kulttuuriperinnön luettelo — Mongolian traditional art of Khöömei',
         },
         {
           otsikko: 'Neljä minuuttia, kymmenen sanaa',
           // Kuvaton (Opus 6.9.2026): Commonsin urtiin duu -kuvat ovat
           // levynkansia ja seremoniakuvia, kaikki alle 1 200 px leveitä.
           // Kuva tilataan kuvaputkelta.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mng-musiikki-2-r20260907-v1.jpg',
           teksti: 'Urtiin duu, pitkä laulu, ei ole pitkä vain kestoltaan: jokainen tavu '
               + 'venytetään pitkäksi, ja neljän minuutin laulussa voi olla kymmenen '
               + 'sanaa. Kuuluisin niistä, Vanhus ja lintu, kestää täysimittaisena '
@@ -48626,8 +48728,9 @@ export const MAA_KATEGORIAT = {
               + 'lauletaan usein ilman säestystä. Unesco julisti pitkän laulun '
               + 'mestariteokseksi 2005. Sosialismin aikana lavalla sai laulaa vain '
               + 'kolmesta viiteen minuuttia.',
-          selite: 'Pitkän laulun aiheena on usein hevonen, ja sen sanotaan kuvaavan '
-            + 'avaria vuorilaaksoja ja mongolialaista mielenlaatua.',
+          selite: 'Nimetön urtiin duu -laulaja avoimella arolla.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Unescon aineettoman '
+              + 'kulttuuriperinnön luettelo — Urtiin Duu, traditional folk long song',
         },
         {
           otsikko: 'Konservatorion oppilaista festivaalilavoille',
