@@ -21,6 +21,15 @@
 # seitsemästä ja puolesta — nyt se on shardattu kuten pyramidi
 # (tools/polta-paikallisesti.sh --pallo-osia, oletus ytimet × 3).
 #
+# VÄLIAIKARAPORTIT (omistaja 7.9.2026 aamu: *"jotta se antaisi
+# väliaikaraportteja, missä mennään […] varsinkin pidempien ajojen
+# aikana"*). Skripti kirjoittaa viiden minuutin välein yhteenvedon
+# lokiin (::notice::) ja ämpäriin polkuun
+# julisteet/poltto/<GITHUB_RUN_ID>/edistyminen.json, ja ajon lopussa
+# saman valmis.json-nimellä. Ajoa ei siis tarvitse jäädä katsomaan:
+#
+#   curl -s https://media.matkakirja.app/julisteet/poltto/<run-id>/edistyminen.json
+#
 # Mac-runnerilla pitää olla: node 22 polussa (Homebrew node@22),
 # awscli, Playwright-Chromium (skripti asentaa puuttuvan). Työkansio
 # on runnerin _work-hakemistossa; pyramidi-poltto/ jää sinne ajojen
@@ -93,6 +102,16 @@ jobs:
           [ -n "${{ inputs.versio }}" ] && VERSIO="--versio ${{ inputs.versio }}"
           tools/polta-paikallisesti.sh --sarjat "${{ inputs.sarjat }}" $VERSIO ${{ inputs.lisaargumentit }}
 
+      - name: Loppuraportti nakyviin
+        if: always()
+        run: |
+          set +e
+          [ -f pyramidi-poltto/lokit/valmis.json ] || exit 0
+          echo "::group::valmis.json (sama kuin julisteet/poltto/<ajo-id>/valmis.json)"
+          cat pyramidi-poltto/lokit/valmis.json
+          echo "::endgroup::"
+          exit 0
+
       - name: Kaatuneiden shardien lokit nakyviin
         if: always()
         run: |
@@ -100,7 +119,11 @@ jobs:
           cd pyramidi-poltto/lokit 2>/dev/null || exit 0
           for l in *.log; do
             n="${l%.log}"
-            [ -f "$n.valmis" ] && continue
+            # Uusinnan loki on <shardi>.uusinta.log, ja valmiiksi
+            # merkitty shardi on <shardi>.valmis kummassakin
+            # tapauksessa: ilman tätä kerran kaatunut mutta uusinnassa
+            # onnistunut shardi näkyisi tässä kaatuneena.
+            [ -f "${n%.uusinta}.valmis" ] && continue
             echo "::group::KESKEN/KAATUNUT: $n (viimeiset 60 rivia)"
             tail -n 60 "$l"
             echo "::endgroup::"
