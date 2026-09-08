@@ -1646,9 +1646,27 @@ export const KARUSELLIN_MITAT = [1.45, 0.62, 0.52, 0.44];
 /** Korttien väli: peräkkäisten korttien keskimitta + 5 % rakoa. */
 export const KARUSELLIN_VALI = 1.05;
 
+/**
+ * Montako pikseliä sormen on liikuttava, ennen kuin napautuksesta
+ * tulee veto (sormiveto 8.9.2026). Sama kynnys kuin pallolaudan omalla
+ * vetotunnistuksella (js/pallolauta/lauta.js): kosketusnäytöllä sormi
+ * liikahtaa napautuksessakin muutaman pikselin.
+ */
+export const KARUSELLIN_VEDON_KYNNYS = 8;
+
+/*
+ * MITTA ON JATKUVA, EI PORTAINEN (sormiveto 8.9.2026). Kokonaisluvuilla
+ * arvot ovat entiset (0 → 1,45, 1 → 0,62 …), mutta väliarvot
+ * interpoloidaan: kun sormi vetää karusellia, keskimmäisen ja naapurin
+ * välissä oleva kortti kasvaa tasaisesti eikä loikkaa mitasta toiseen.
+ * Taulukon ulkopuolella mitta on vakio (kauimmaiset eivät enää kutistu).
+ */
 export function karusellinMitta(etaisyys) {
-  const d = Math.min(Math.abs(Math.trunc(etaisyys)), KARUSELLIN_MITAT.length - 1);
-  return KARUSELLIN_MITAT[d];
+  const d = Math.abs(Number(etaisyys) || 0);
+  const viimeinen = KARUSELLIN_MITAT.length - 1;
+  if (d >= viimeinen) return KARUSELLIN_MITAT[viimeinen];
+  const k = Math.floor(d);
+  return KARUSELLIN_MITAT[k] + (KARUSELLIN_MITAT[k + 1] - KARUSELLIN_MITAT[k]) * (d - k);
 }
 
 /**
@@ -1658,20 +1676,113 @@ export function karusellinMitta(etaisyys) {
  * vakioaskel jättäisi reunoille ammottavat raot. Kahden vierekkäisen
  * kortin väli on niiden mittojen keskiarvo, joten karuselli pakkautuu
  * tasaisesti reunaa kohti.
+ *
+ * MURTOLUKU KELPAA (sormiveto 8.9.2026): kokonaisosa summataan kuten
+ * ennen ja jäännös kuljetaan seuraavan askeleen osuutena, jolloin
+ * funktio on jatkuva ja kääntyvä (karusellinEtaisyysKaanteinen).
  */
 export function karusellinEtaisyys(d) {
+  const matka = Math.abs(Number(d) || 0);
+  const kokonaiset = Math.floor(matka);
   let x = 0;
-  for (let k = 1; k <= Math.abs(d); k += 1) {
+  for (let k = 1; k <= kokonaiset; k += 1) {
     x += ((karusellinMitta(k - 1) + karusellinMitta(k)) / 2) * KARUSELLIN_VALI;
   }
+  const jaannos = matka - kokonaiset;
+  if (jaannos > 0) {
+    x += ((karusellinMitta(kokonaiset) + karusellinMitta(kokonaiset + 1)) / 2)
+      * KARUSELLIN_VALI * jaannos;
+  }
   return x;
+}
+
+/**
+ * KARUSELLIN ETÄISYYDEN KÄÄNTEISFUNKTIO: montako korttia keskeltä on
+ * kuljettu, kun matka on `x` KORTIN LEVEYKSINÄ.
+ *
+ * Tämä on sormivedon koko matematiikka (Raamattu "KEKSINTOLINSSIN
+ * KARUSELLI ON SEN AIKASELAIN, JA SE VIERITETAAN SORMELLA", omistaja
+ * 8.9.2026). Sormi tarttuu nauhaan ja vetää sitä PIKSELEINÄ; karuselli
+ * elää KORTTINUMEROINA. Koska kortit kutistuvat ulospäin, muunnos ei
+ * ole vakiokerroin: naapurin tuominen keskelle vaatii 1,09 kortin
+ * leveyden matkan, mutta kaukaisemmat askeleet ovat 0,46. Käänteis-
+ * funktio antaa juuri sen murtoluvun, jolla veto vastaa sormea 1:1 —
+ * kortti seuraa sormea, ei toisin päin.
+ *
+ * PUHDAS FUNKTIO (tests/aikajana.test.mjs: pyöröajo
+ * karusellinEtaisyys → käänteinen palauttaa saman luvun).
+ */
+export function karusellinEtaisyysKaanteinen(x) {
+  const matka = Math.abs(Number(x) || 0);
+  if (!(matka > 0)) return 0;
+  let kertyma = 0;
+  const viimeinen = KARUSELLIN_MITAT.length - 1;
+  for (let k = 1; k <= viimeinen; k += 1) {
+    const askel = ((karusellinMitta(k - 1) + karusellinMitta(k)) / 2) * KARUSELLIN_VALI;
+    if (kertyma + askel >= matka) return (k - 1) + (matka - kertyma) / askel;
+    kertyma += askel;
+  }
+  // Taulukon ulkopuolella askel on vakio: pohjamitta kertaa väli.
+  const askel = KARUSELLIN_MITAT[viimeinen] * KARUSELLIN_VALI;
+  return viimeinen + (matka - kertyma) / askel;
+}
+
+/*
+ * PYYHKÄISYN LIIKEMÄÄRÄ (omistaja 8.9.2026: *"saa kuljettaa muutaman
+ * keksijän verran hidastuen — ei loputonta rullausta"*). Heitto on
+ * nopeus (korttia sekunnissa) kertaa lyhyt aika, ja se katkaistaan
+ * kolmeen korttiin: karuselli ei rullaa läpi koko kaaren, vaan
+ * pyyhkäisy kuljettaa muutaman keksijän ja pysähtyy.
+ */
+export const KARUSELLIN_HEITON_AIKA_S = 0.18;
+export const KARUSELLIN_HEITON_KATTO = 3;
+
+/**
+ * Pyyhkäisyn jatke KORTTEINA nopeudesta (korttia/s).
+ *
+ * PUHDAS FUNKTIO (tests/aikajana.test.mjs).
+ */
+export function karusellinHeitto(nopeus, katto = KARUSELLIN_HEITON_KATTO) {
+  const v = Number(nopeus);
+  if (!Number.isFinite(v)) return 0;
+  const matka = v * KARUSELLIN_HEITON_AIKA_S;
+  return Math.max(-katto, Math.min(katto, matka));
+}
+
+/**
+ * Irrotuksen asettumiskohta: lähin kortti heiton jälkeen, rajattuna
+ * nauhan päihin.
+ *
+ * PUHDAS FUNKTIO (tests/aikajana.test.mjs).
+ */
+export function karusellinKohde(nyt, heitto = 0, maara = 0) {
+  if (!(maara > 0)) return -1;
+  const t = (Number(nyt) || 0) + (Number(heitto) || 0);
+  return Math.max(0, Math.min(maara - 1, Math.round(t)));
+}
+
+/**
+ * Sormen paikka KORTTINUMEROINA: mistä veto alkoi (`alku`), kuinka
+ * monta pikseliä sormi on liikkunut (`dx`, oikealle positiivinen) ja
+ * kuinka leveä kortti on (`korttiLeveys`). Vasemmalle vetäminen vie
+ * eteenpäin (suurempi numero), kuten nauha liukuu vuoden vaihtuessa.
+ *
+ * PUHDAS FUNKTIO (tests/aikajana.test.mjs).
+ */
+export function karusellinVedonPaikka(alku, dx, korttiLeveys, maara) {
+  const a = Number(alku) || 0;
+  if (!(korttiLeveys > 0) || !(maara > 0)) return a;
+  const siirto = Math.sign(dx) * karusellinEtaisyysKaanteinen(Math.abs(dx) / korttiLeveys);
+  return Math.max(0, Math.min(maara - 1, a - siirto));
 }
 
 /**
  * Yhden kortin paikka karusellissa.
  *
  * @param {number} i kortin järjestysnumero (kronologinen)
- * @param {number} nyt nykyisen pysäkin numero (-1 ennen ensimmäistä)
+ * @param {number} nyt keskimmäisen kortin numero (-1 ennen ensimmäistä).
+ *   MURTOLUKU KELPAA: sormiveto antaa tähän sormen paikan korttien
+ *   välissä, jolloin kortit liukuvat ja kasvavat vedon mukana.
  * @param {number} leveysKortteina nauhan leveys kortin leveyksinä
  * @returns {{paikka:number, mitta:number, luokka:string,
  *   himmeys:number, sumennus:number, jarjestys:number}}
@@ -1686,9 +1797,16 @@ export function karusellinPaikat(i, nyt, leveysKortteina) {
   // Mahtuuko kortti kokonaan ruudulle? Nykyinen mahtuu aina — se on
   // keskellä, ja ilman sitä nauha olisi tyhjä kapeimmalla puhelimella.
   const puolikas = Math.max(1, leveysKortteina || 0) / 2;
-  const mahtuu = ero === 0 || Math.abs(paikka) + mitta / 2 <= puolikas;
+  /*
+   * KESKIMMÄINEN ON LÄHIN, EI TASAN NOLLA. Vedon aikana `nyt` on
+   * murtoluku, eikä yksikään kortti osu tasan keskelle; "nykyinen"
+   * on silloin se, johon karuselli asettuisi, jos sormi irrotettaisiin
+   * tässä. Kokonaisluvuilla tämä on entinen ehto (ero === 0).
+   */
+  const keski = Math.round(Number(nyt) || 0);
+  const mahtuu = i === keski || Math.abs(paikka) + mitta / 2 <= puolikas;
   let luokka = 'piilossa';
-  if (ero === 0) luokka = 'nykyinen';
+  if (i === keski) luokka = 'nykyinen';
   else if (mahtuu) luokka = ero < 0 ? 'mennyt' : 'tuleva';
   /*
    * TULEVAT SUMENTUVAT, MENNEET EIVÄT (omistajan oikaisu 3.9.2026:
@@ -1697,11 +1815,17 @@ export function karusellinPaikat(i, nyt, leveysKortteina) {
    * keksinnöt on vasta tulossa, pitäisi olla blurrattuna"*). Sumennus
    * on kevyt — 1,5–2 px — jotta kasvot yhä erottuvat: kyse on siitä,
    * ettei tulevaa vielä tiedä. Menneet erottuvat koolla ja vaimeudella.
+   *
+   * Alle yhden kortin etäisyydellä arvot INTERPOLOIDAAN keskikohdan
+   * arvoista (sumennus 0, himmeys 1): sormivedossa kortti kulkee
+   * keskeltä naapuriksi jatkuvasti eikä välähdä.
    */
-  const sumennus = ero > 0 ? Math.min(2, 1.5 + (d - 1) * 0.25) : 0;
+  const sumennus = ero > 0
+    ? (d < 1 ? 1.5 * d : Math.min(2, 1.5 + (d - 1) * 0.25))
+    : 0;
   let himmeys = 1;
-  if (ero < 0) himmeys = Math.max(0.4, 0.82 - (d - 1) * 0.14);
-  else if (ero > 0) himmeys = Math.max(0.5, 0.9 - (d - 1) * 0.12);
+  if (ero < 0) himmeys = d < 1 ? 1 - 0.18 * d : Math.max(0.4, 0.82 - (d - 1) * 0.14);
+  else if (ero > 0) himmeys = d < 1 ? 1 - 0.1 * d : Math.max(0.5, 0.9 - (d - 1) * 0.12);
   if (luokka === 'piilossa') himmeys = 0;
   return {
     paikka,
@@ -1710,7 +1834,7 @@ export function karusellinPaikat(i, nyt, leveysKortteina) {
     himmeys,
     sumennus,
     // Lähempänä keskustaa oleva kortti peittää kauempana olevan.
-    jarjestys: 100 - d,
+    jarjestys: Math.round(100 - d),
   };
 }
 
@@ -2347,6 +2471,17 @@ class Aikajana {
     this.ennakkoKohde = null;
     this.teravoitus = null;
     /*
+     * SORMIVEDON TILA (Raamattu "KEKSINTOLINSSIN KARUSELLI ON SEN
+     * AIKASELAIN, JA SE VIERITETAAN SORMELLA", omistaja 8.9.2026).
+     * `vetoNyt` on karusellin keskikohta MURTOLUKUNA vedon aikana ja
+     * null muulloin; `veto` on vedon oma kirjanpito (osoitin, aloitus-
+     * paikka, nopeus) ja `vedettiin` estää irrotusta laukaisemasta
+     * kortin napautusta.
+     */
+    this.vetoNyt = null;
+    this.veto = null;
+    this.vedettiin = false;
+    /*
      * KAMERAN ENNAKKO (omistaja 5.9.2026 ilta). `kameraKohde` on se
      * pysäkki, jota kohti pallo on jo matkalla — sama kirjanpito kuin
      * karusellin ennakolla, mutta oma luku, koska kamera lähtee eri
@@ -2384,6 +2519,8 @@ class Aikajana {
     this.lappuPiilossa = false;
     this.lapunNimi = null;
     this.irrotaKartanKosketus = null;
+    /** Karusellin sormivedon kuuntelijoiden irrotus (kytkeKarusellinVeto). */
+    this.irrotaKarusellinVeto = null;
     /*
      * VÄLINÄYTÖKSEN TILA. `valinaytos` on laatikon juuri sen ollessa
      * ruudulla, `valinaytosNahty` estää saman hengähdystauon toistumisen
@@ -2553,7 +2690,12 @@ class Aikajana {
       teksti.append(solmu('div', 'aikajana-kortti-henkilo', t.henkilo ?? paikka(t)));
       kortti.appendChild(teksti);
       kortti.setAttribute('aria-label', `${ajoitus(t)}: ${t.otsikko}${t.henkilo ? `, ${t.henkilo}` : ''}`);
-      kortti.addEventListener('click', () => this.napautaKorttia(i));
+      /*
+       * NAPAUTUS SÄILYY VEDON RINNALLA: irrotus, jota edelsi veto,
+       * ei ole napautus (this.vedettiin), vaan karuselli asettuu
+       * sinne, mihin sormi sen jätti (kytkeKarusellinVeto).
+       */
+      kortti.addEventListener('click', () => { if (!this.vedettiin) this.napautaKorttia(i); });
       this.nauha.appendChild(kortti);
       this.korttiPysakki.push(i);
       this.kortit.push(kortti);
@@ -2581,6 +2723,7 @@ class Aikajana {
     this.nappainkuuntelija = (e) => this.nappain(e);
     document.addEventListener?.('keydown', this.nappainkuuntelija);
     this.kytkeKartanKosketus();
+    this.kytkeKarusellinVeto();
 
     // 2. Valot kartalle
     this.rakennaValot();
@@ -3566,6 +3709,183 @@ class Aikajana {
       pane.removeEventListener('pointerdown', this.kartanKosketus, { capture: true });
       pane.removeEventListener('wheel', this.kartanKosketus, { capture: true });
     };
+  }
+
+  /**
+   * KARUSELLI VIERITETÄÄN SORMELLA (Raamattu "KEKSINTOLINSSIN KARUSELLI
+   * ON SEN AIKASELAIN, JA SE VIERITETAAN SORMELLA", omistaja 8.9.2026).
+   *
+   * Alarivi ei ole enää pelkkä näyttö, jota nuolet ja napautukset
+   * askeltavat: sormi tarttuu keksijäriviin ja SELAA sitä liukuen —
+   * sama ele kuin Ihmisen matkan aikaselaimessa (js/linssit/
+   * aikaselain.js), mutta viivojen sijaan kasvot.
+   *
+   * ── MITEN VETO TOIMII ─────────────────────────────────────────────
+   *
+   *  1. ALKU. Osoitin painuu KORTIN päällä (nauha itse on
+   *     `pointer-events: none`, joten tapahtumat tulevat korteilta ja
+   *     kuplivat nauhaan — yksi kuuntelijasarja riittää). Osoitin
+   *     OTETAAN KIINNI kortilta (setPointerCapture), jotta veto pysyy
+   *     karusellilla, vaikka sormi lipsahtaisi kartan päälle.
+   *  2. LIIKE. Sormen pikselimatka muunnetaan korttinumeroiksi
+   *     (karusellinVedonPaikka → karusellinEtaisyysKaanteinen), ja
+   *     murtoluku menee `vetoNyt`:iin: `asettele()` piirtää kortit
+   *     sen mukaan, joten rivi liukuu ja kortit kasvavat SORMEN
+   *     MUKANA — ei askelina. Nauha saa luokan `vedossa`, joka
+   *     katkaisee CSS-siirtymän: siirtymä laahaisi sormesta jäljessä.
+   *  3. ESIKATSELU. Kello näyttää lähimmän keksijän vuoden ja
+   *     paikkarivi hänen tietonsa, mutta VAIN kun lähin vaihtuu —
+   *     ajo ei hyppää joka kehyksellä (omistajan ehto).
+   *  4. IRROTUS. Karuselli asettuu pehmeästi lähimpään keksijään
+   *     (karusellinKohde) ja linssi siirtyy sen pysäkille MOOTTORIN
+   *     OMALLA POLULLA (`siirry`) — sama kuin kortin napautuksessa ja
+   *     nuolinäppäimissä. Pyyhkäisyn liikemäärä (karusellinHeitto)
+   *     kuljettaa enintään kolme keksijää hidastuen; loputonta
+   *     rullausta ei ole.
+   *
+   * ── KUKA OMISTAA KOSKETUKSEN ──────────────────────────────────────
+   *
+   * Sama rajaus kuin aikaselaimella: tapahtumat pysäytetään
+   * (stopPropagation) ja `touch-action: none` (css .aikajana-kortti)
+   * estää selainta tulkitsemasta vetoa vieritykseksi, joten PALLO EI
+   * PANOROI karusellin vedosta. Kuuntelijat ovat vain nauhassa, joten
+   * PALLON KOSKETUS EI VEDÄ KARUSELLIA. Kertomuskaarella (Ihmisen
+   * matka) nauhaa ei ole lainkaan (css: `display: none`), ja veto
+   * kieltäytyy esityksen, avausjakson ja välinäytöksen aikana.
+   */
+  kytkeKarusellinVeto() {
+    const nauha = this.nauha;
+    if (!nauha || !this.kortit.length) return;
+    /** Sallitaanko veto juuri nyt: kertomusesitys ja väliruudut omivat ruudun. */
+    const sallittu = () => Boolean(this.juuri?.isConnected)
+      && !this.esitys && !this.avausKesken && !this.valinaytos && this.kortit.length > 1;
+    const korttiLeveys = () => this.kortit[0]?.offsetWidth ?? 0;
+
+    const alku = (e) => {
+      if (this.veto || !sallittu()) return;
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      const kortti = e.target?.closest?.('.aikajana-kortti');
+      if (!kortti) return;
+      // Pallo ei saa panoroida karusellin alta.
+      e.stopPropagation();
+      const hetki = Number.isFinite(e.timeStamp) ? e.timeStamp : performance.now();
+      this.veto = {
+        id: e.pointerId,
+        kortti,
+        x: e.clientX,
+        y: e.clientY,
+        alku: this.korttinumero(this.ennakkoKohde ?? this.tila.i),
+        liikkui: false,
+        kaynnissa: this.kaynnissa,
+        paikka: null,
+        edellinenPaikka: null,
+        hetki,
+        nopeus: 0,
+        esikatseltu: -1,
+      };
+      try { kortti.setPointerCapture?.(e.pointerId); } catch { /* veto toimii ilman kaappausta */ }
+    };
+
+    const liike = (e) => {
+      const veto = this.veto;
+      if (!veto || veto.id !== e.pointerId) return;
+      const dx = e.clientX - veto.x;
+      if (!veto.liikkui) {
+        /*
+         * KYNNYS EROTTAA NAPAUTUKSEN VEDOSTA. Alle kynnyksen jäävä
+         * liike on napautus (kortti avaa Tiedeliitteen tai siirtää
+         * pysäkin), ja pystysuora liike jätetään rauhaan: karuselli
+         * on vaakasuora ohjain.
+         */
+        if (Math.abs(dx) < KARUSELLIN_VEDON_KYNNYS) return;
+        if (Math.abs(e.clientY - veto.y) > Math.abs(dx)) return;
+        veto.liikkui = true;
+        // Kello ei saa juosta sormen alla; jatko päätetään irrotuksessa.
+        this.pysayta();
+        nauha.classList.add('vedossa');
+      }
+      e.preventDefault?.();
+      e.stopPropagation();
+      const paikka = karusellinVedonPaikka(veto.alku, dx, korttiLeveys(), this.kortit.length);
+      const hetki = Number.isFinite(e.timeStamp) ? e.timeStamp : performance.now();
+      const dt = (hetki - veto.hetki) / 1000;
+      if (dt > 0 && veto.paikka !== null) {
+        // Tasoitettu nopeus (korttia/s): yksi nykäisy ei saa heittää.
+        const uusi = (paikka - veto.paikka) / dt;
+        veto.nopeus = veto.nopeus * 0.6 + uusi * 0.4;
+      }
+      veto.paikka = paikka;
+      veto.hetki = hetki;
+      this.vetoNyt = paikka;
+      this.asettele();
+      /*
+       * ESIKATSELU VAIN KUN LÄHIN VAIHTUU. Kello ja paikkarivi
+       * näyttävät sen keksijän, johon karuselli asettuisi — mutta
+       * paneelia, lamppuja eikä kameraa ei liikuteta kesken vedon.
+       */
+      const lahin = karusellinKohde(paikka, 0, this.kortit.length);
+      if (lahin !== veto.esikatseltu) {
+        veto.esikatseltu = lahin;
+        this.esikatseleKarusellista(lahin);
+      }
+    };
+
+    const loppu = (e) => {
+      const veto = this.veto;
+      if (!veto || veto.id !== e.pointerId) return;
+      try { veto.kortti.releasePointerCapture?.(e.pointerId); } catch { /* osoitin oli jo poissa */ }
+      this.veto = null;
+      if (!veto.liikkui) return;
+      e.preventDefault?.();
+      e.stopPropagation();
+      nauha.classList.remove('vedossa');
+      /*
+       * IRROTUS EI OLE NAPAUTUS. Selain lähettää `click`in vielä
+       * vedon jälkeen samalle kortille; lippu estää sen yhden
+       * tapahtumakierroksen ajan (sama kaava kuin paneelin raahauksen
+       * `raahattiin`).
+       */
+      this.vedettiin = true;
+      setTimeout(() => { this.vedettiin = false; }, 0);
+      // Vähennetty liike asettuu suoraan: ei heittoa, ei liukua.
+      const heitto = this.reducedMotion ? 0 : karusellinHeitto(veto.nopeus);
+      const kohde = karusellinKohde(this.vetoNyt ?? veto.alku, heitto, this.kortit.length);
+      this.vetoNyt = null;
+      const pysakki = this.korttiPysakki[kohde];
+      if (pysakki === undefined) { this.asettele(); return; }
+      // Moottorin oma siirry-polku: kello, lamput, paneeli, kamera.
+      this.siirry(pysakki);
+      // Tauolla ollut jää tauolle; käynnissä ollut jatkaa entiseen tapaan.
+      if (veto.kaynnissa) this.jatka();
+    };
+
+    nauha.addEventListener('pointerdown', alku);
+    nauha.addEventListener('pointermove', liike);
+    nauha.addEventListener('pointerup', loppu);
+    nauha.addEventListener('pointercancel', loppu);
+    this.irrotaKarusellinVeto = () => {
+      nauha.removeEventListener('pointerdown', alku);
+      nauha.removeEventListener('pointermove', liike);
+      nauha.removeEventListener('pointerup', loppu);
+      nauha.removeEventListener('pointercancel', loppu);
+      this.irrotaKarusellinVeto = null;
+    };
+  }
+
+  /**
+   * VEDON ESIKATSELU: kello ja paikkarivi näyttävät sen keksijän,
+   * johon karuselli asettuisi, jos sormi irrotettaisiin nyt. Kello
+   * saa vuoden HETI (ei rullausta): rullaus on ajon liikettä, ja
+   * sormen alla se laahaisi jäljessä.
+   */
+  esikatseleKarusellista(korttinumero) {
+    const i = this.korttiPysakki[korttinumero];
+    const t = this.tapahtumat[i];
+    if (!t) return;
+    this.naytaVuosi(t.vuosi, true);
+    if (this.paikkarivi) {
+      this.paikkarivi.textContent = [ajoitus(t), paikka(t)].filter(Boolean).join(' · ');
+    }
   }
 
   /**
@@ -5143,7 +5463,13 @@ class Aikajana {
      * aloitaEnnakko. Ilman tätä eroa ikkunan koon muutos (koonMuutos)
      * nykäisisi karusellin takaisin kesken siirtymän.
      */
-    const nyt = this.korttinumero(this.ennakkoKohde ?? this.tila.i);
+    /*
+     * SORMI VOITTAA KELLON. Vedon aikana keskikohta on sormen paikka
+     * korttien välissä (murtoluku, ks. kytkeKarusellinVeto); silloin
+     * kortit liukuvat ja kasvavat vedon mukana eikä ajo saa nykäistä
+     * nauhaa alta pois.
+     */
+    const nyt = this.vetoNyt ?? this.korttinumero(this.ennakkoKohde ?? this.tila.i);
     const ennakossa = this.ennakkoKohde !== null;
     const leveys = this.nauhanLeveysKortteina();
     this.kortit.forEach((kortti, k) => {
@@ -5162,9 +5488,18 @@ class Aikajana {
        * on kevyt skaalata, ja terävä tulee vasta täydessä mitassa
        * (odotaTaysikokoista) — omistajan tilaus 4.9.2026.
        */
+      /*
+       * VEDON AIKANA KUVAA EI VAIHDETA. Sormi ajaa asettelun jokaisella
+       * osoitintapahtumalla, ja kuvanvaihto (dekoodaus + uusi src)
+       * maksaa moninkerroin sen, mitä transformin päivitys — se yksin
+       * teki vedosta tökkivän. Terävä/sumea ratkeaa irrotuksessa,
+       * jolloin asettelu ajetaan uudestaan siirry():n kautta.
+       */
       const sumeana = luokka === 'tuleva' || (ennakossa && luokka === 'nykyinen');
-      for (const img of kortti.querySelectorAll('img[data-terava]')) {
-        vaihdaKorttikuva(img, sumeana ? img.dataset.sumea : img.dataset.terava);
+      if (this.vetoNyt === null) {
+        for (const img of kortti.querySelectorAll('img[data-terava]')) {
+          vaihdaKorttikuva(img, sumeana ? img.dataset.sumea : img.dataset.terava);
+        }
       }
       const piilossa = luokka === 'piilossa';
       kortti.setAttribute('aria-hidden', piilossa ? 'true' : 'false');
@@ -5540,6 +5875,9 @@ class Aikajana {
     this.nappainkuuntelija = null;
     this.irrotaKartanKosketus?.();
     this.irrotaKartanKosketus = null;
+    this.irrotaKarusellinVeto?.();
+    this.veto = null;
+    this.vetoNyt = null;
     this.kartanKosketus = null;
     this.juuri?.remove();
     this.valokerros?.remove();
