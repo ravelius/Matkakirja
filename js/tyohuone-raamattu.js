@@ -4216,6 +4216,15 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'KEKSINTOLINSSIN KARUSELLI ON SEN AIKASELAIN, JA SE VIERITETAAN SORMELLA '
+          + '(omistaja 8.9.2026 aamu, sanatarkasti: "Eikos keksintolinssissa jo '
+          + 'ole aika selain? Tarvitseeko toista?" ja "Mutta sen nykyisen voisi '
+          + 'tehda scrollattavaksi"): keksintolinssiin EI tehda toista '
+          + 'aikaselainta - alarivin keksijakaruselli on sen aikaselain. '
+          + 'Karuselli tehdaan sormella vieritettavaksi: veto selaa keksijoita '
+          + 'liukuen (ei vain nuolinapeilla askel kerrallaan), irrotuksessa '
+          + 'karuselli asettuu lahimpaan keksijaan ja linssi siirtyy sen '
+          + 'pysakille; nuolinapit ja napautus sailyvat. Kaikki liike pehmeaa.',
         'LINSSIEN AIKASELAIN ALAREUNAAN (omistaja 7.9.2026 ilta klo 20.55 Suomen '
           + 'aikaa, sanatarkasti: "Onko alas mahdollista tehda yksinkertaista '
           + 'aika selainta, mika olisi taynna pysty viivoja ja valittu aika olisi '
