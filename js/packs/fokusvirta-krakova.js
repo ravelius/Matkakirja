@@ -278,6 +278,8 @@ export const FOKUSVIRTA_KRAKOVA = {
     kommentti: [
       'Se torvi soi yhä joka tunti neljään ilmansuuntaan, ja sävelmä katkeaa samalla tavalla.',
       'Syyn saat selvittää itse. Tarinoita on yhä useampi kuin yksi.',
+      'Kangashalli on yhä täynnä kauppiaita. Nyt ne myyvät meripihkaa ja puuleluja.',
+      'Ja torilla on kyyhkysiä enemmän kuin missään. Sukulaisia.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

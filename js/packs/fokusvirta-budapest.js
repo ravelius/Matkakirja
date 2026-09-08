@@ -175,8 +175,10 @@ export const FOKUSVIRTA_BUDAPEST = {
       teksti: 'Ja postille!',
     },
     kommentti: [
-      'Kolme kaupunkia yhdeksi yhdessä päivässä, 17. marraskuuta 1873.',
-      'Kirjeeseen valittiin ennen Buda tai Pest. Nyt osoite on yksi, eikä kukaan kysy kumpi ranta.',
+      'Kolme kaupunkia yhdeksi yhdessä päivässä. Postille se oli painajainen.',
+      'Nykyään nimi on itsestäänselvyys. Joen yli kulkee monta siltaa.',
+      'Vanhin niistä oli isoisän aikana vasta parikymmentä vuotta vanha.',
+      'Ja se vanha mies oli oikeassa. Kylpylät ovat samoja kuumia lähteitä kuin roomalaisilla.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (parlamenttitalo). Faktat

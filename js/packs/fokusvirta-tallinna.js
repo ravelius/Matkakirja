@@ -167,8 +167,10 @@ export const FOKUSVIRTA_TALLINNA = {
       teksti: 'Ilman minua.',
     },
     kommentti: [
-      'Rata avattiin 1870. Ennen sitä nopein viesti oli minun sukuni.',
-      'Viro äänesti verkossa ensimmäisenä maailmassa 2005. Meiltä vietiin ensin työ, sitten ammatti.',
+      'Rata avattiin muutamaa vuotta ennen isoisää. Sitä ennen nopein viesti oli minun sukuni.',
+      'Nyt Viro hoitaa melkein kaiken verkossa: äänestämisen, verot ja lääkärin reseptit.',
+      'Meiltä vietiin ensin työ, sitten ammatti.',
+      'Yläkaupungin muurit ovat yhä paikoillaan. Niiden alla kävelee nyt turisteja, ei kauppiaita.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuuri). Faktat ovat

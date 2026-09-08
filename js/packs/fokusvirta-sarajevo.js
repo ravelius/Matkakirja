@@ -274,13 +274,12 @@ export const FOKUSVIRTA_SARAJEVO = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'joen, joka ei kuulu kenellekään',
-      teksti: 'Kääk, neljä.',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Kaunis lause. Mut postinkantajalle monta uskoa tarkoitti montaa kalenteria.',
-      'Ikuista laskemista, minä päivänä mikäkin luukku on auki. Herätä sai silti kun halus.',
+      'Kaunis lause. Postinkantajalle monta uskoa tarkoitti montaa kalenteria.',
+      'Ne neljä ääntä kuuluvat yhä samalta sillalta. Kirkot, moskeija ja synagoga ovat lähekkäin.',
+      'Kaupunki koki sen jälkeen sodan ja pitkän piirityksen. Kaduilla on yhä jälkiä.',
+      'Mutta kahvi keitetään samalla tavalla kuin isoisän aikana.',
     ],
     /*
      * Commons 25.8.2026: 5184×3456, CC BY 2.0, Fred Romero, kuvattu

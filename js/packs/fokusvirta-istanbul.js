@@ -312,14 +312,11 @@ export const FOKUSVIRTA_ISTANBUL = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'kaupunki ottaa mitä haluaa',
-      teksti: 'No johan.',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Vartija sanoo ton jokaiselle, joka pysähtyy pylvään kohdalle.',
-      'Meidän sukua on otettu ja pidetty kaksituhatta vuotta, eikä siitä ole aforismia.',
-      'Niin. Se pylväs. Seisoo yhä siinä, mihin se siirrettiin. Se oli tän pointti.',
+      'Vartija sanoo tuon jokaiselle, joka pysähtyy pylvään kohdalle.',
+      'Pylväs seisoo yhä samassa paikassa. Nyt sen ohi kulkee raitiovaunu ja miljoonia turisteja.',
+      'Kaupunki on kasvanut kahteen maanosaan. Salmen yli pääsee nyt myös junalla, meren alta.',
     ],
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):

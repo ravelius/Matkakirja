@@ -275,13 +275,12 @@ export const FOKUSVIRTA_VARSOVA = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'sisar toi kotiin salaa',
-      teksti: 'Salaa. Hyvä sisar.',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
       'Sen pianistin nimen arvaat itsekin. Sydän on yhä muurattuna kirkon pylvääseen.',
-      'Vanhakaupunki tuhoutui sodassa ja rakennettiin uusiksi niin tarkasti, että se on perintöä.',
+      'Vanhakaupunki tuhoutui sodassa melkein kokonaan.',
+      'Se rakennettiin uudelleen vanhojen maalausten mukaan, tiili tiileltä.',
+      'Nyt siellä puhutaan taas puolaa myös virastoissa. Ja kapakoissa laulut lauletaan loppuun.',
     ],
     /* KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. */
     /*

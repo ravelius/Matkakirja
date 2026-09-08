@@ -34,6 +34,7 @@ import {
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
 import { FOKUSVIRTA_ISTANBUL } from '../js/packs/fokusvirta-istanbul.js';
+import { FOKUSVIRTA_RIIKA } from '../js/packs/fokusvirta-riika.js';
 import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
 import { FOKUSVIRTA_VILNA } from '../js/packs/fokusvirta-vilna.js';
 import {
@@ -134,9 +135,16 @@ test('kaupunkirepliikki nimetään kaupungista, kentästä ja kuplan numerosta',
    * numeron on pysyttävä varattuna, jottei huudahdus ala hakea
    * poistetun alustuksen tiedostoa (livia-<kaupunki>-1.mp3).
    */
+  /*
+   * HUUDAHDUS POISTUI PUOLESTA KAUPUNGEISTA (8.9.2026): myös sen paikka
+   * on varattu, jotta kommenttien numerot (3…) eivät siirry.
+   */
   assert.deepEqual(livianKaupunkiKentat('istanbul').map((k) => [k.kentta, k.kuplat, k.alku]),
-    [[LIVIAN_VARATTU, 1, 0], ['huudahdus', 1, 1], ['kommentti', 3, 2]]);
-  assert.equal(livianKaupunkiIndeksi('istanbul', 'huudahdus'), 1);
+    [[LIVIAN_VARATTU, 1, 0], [LIVIAN_VARATTU, 1, 1], ['kommentti', 3, 2]]);
+  assert.deepEqual(livianKaupunkiKentat('riika').map((k) => [k.kentta, k.kuplat, k.alku]),
+    [[LIVIAN_VARATTU, 1, 0], ['huudahdus', 1, 1], ['kommentti', 4, 2]]);
+  assert.equal(livianKaupunkiIndeksi('riika', 'huudahdus'), 1);
+  assert.equal(livianKaupunkiIndeksi('istanbul', 'huudahdus'), null);
   assert.equal(livianKaupunkiIndeksi('istanbul', 'alustus'), null);
   assert.equal(livianKaupunkiIndeksi('riika', 'kommentti', 1), 3);
   assert.equal(livianKaupunkiKuplia('vilna', 'kommentti'), 3);
@@ -213,8 +221,9 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
     ...FOKUSVIRTA_SOFIA.pollo.kommentti, ...sofia.johdanto, ...sofia.vinkki,
     sofia.linkkiSaate, ...sofia.oikein, sofia.odotus, ...sofia.paluu,
   ]);
+  // Vilnan huudahdus poistui 8.9.2026: paikka on tyhjä rivi.
   assert.deepEqual(kaupunginRepliikit('vilna'), [
-    '', FOKUSVIRTA_VILNA.pollo.huudahdus.teksti,
+    '', '',
     ...FOKUSVIRTA_VILNA.pollo.kommentti,
   ]);
   assert.deepEqual(kaupunginRepliikit('venetsia'), []);
@@ -228,8 +237,10 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
   // Teksti on pakkauksen teksti merkilleen — kaanonia ei muotoilla.
   assert.equal(rivit.find((rivi) => rivi.avain === 'sofia-14').teksti, sofia.paluu[1].trim());
   assert.equal(rivit.find((rivi) => rivi.avain === 'istanbul-1'), undefined);
-  assert.equal(rivit.find((rivi) => rivi.avain === 'istanbul-2').teksti,
-    FOKUSVIRTA_ISTANBUL.pollo.huudahdus.teksti.trim());
+  // Istanbulin huudahdus poistui 8.9.2026: myös sen paikka on varattu.
+  assert.equal(rivit.find((rivi) => rivi.avain === 'istanbul-2'), undefined);
+  assert.equal(rivit.find((rivi) => rivi.avain === 'riika-2').teksti,
+    FOKUSVIRTA_RIIKA.pollo.huudahdus.teksti.trim());
 });
 
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
@@ -341,9 +352,17 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
    * generoitiin 7.9.2026 illalla, joten ne ovat ajan tasalla.
    */
   assert.equal(tila('ateena-1'), 'ajan tasalla');
-  assert.equal(tila('istanbul-2'), 'ajan tasalla');
-  assert.equal(tila('vilna-3'), 'ajan tasalla');
   assert.equal(tila('sofia-2'), 'ajan tasalla');
+  assert.equal(tila('riika-2'), 'ajan tasalla');
+  /*
+   * PULUN KAUPUNKITEKSTIT KIRJOITETTIIN UUSIKSI 8.9.2026 (Fable, omistajan
+   * linjaus): kommentit, jotka muuttuivat, ovat MUUTTUNEITA ja vaikenevat
+   * kunnes ääni on generoitu; muuttumattomat (esim. Riian kaksi
+   * ensimmäistä, Krakovan kaksi ensimmäistä) ovat yhä ajan tasalla.
+   */
+  assert.equal(tila('riika-3'), 'ajan tasalla');
+  assert.equal(tila('krakova-3'), 'ajan tasalla');
+  assert.equal(tila('istanbul-4'), 'muuttunut');
   /*
    * SOFIAN KOMMENTIN ALUSTA POISTUI TOISTUVA "Kääk." (omistaja
    * 8.9.2026), joten ämpärin sofia-3 sanoo eri asian kuin kupla — se on

@@ -249,13 +249,12 @@ export const FOKUSVIRTA_KIOVA = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'kynttilä kädessä',
-      teksti: 'Pimeää.',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
       'Ne käytävät ovat yhä olemassa, ja niissä kävellään yhä kynttilä kädessä.',
-      'Ja se musta antelias maa ruokkii yhä ison osan maailmaa. Hunajaa myydään toreilla.',
+      'Kultaiset kupolit näkyvät joelle kuten ennenkin.',
+      'Kaupungin alla on nyt toinenkin kerros: yksi maailman syvimmistä metroista.',
+      'Ja se musta maa ruokkii yhä ison osan maailmaa. Hunajaa myydään toreilla samalla tavalla.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/

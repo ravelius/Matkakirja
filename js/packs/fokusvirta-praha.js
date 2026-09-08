@@ -193,7 +193,8 @@ export const FOKUSVIRTA_PRAHA = {
     },
     kommentti: [
       'Kello, joka näyttää auringon ja kuun mutta ei kiirettä. Sellaisen minä hyväksyn.',
-      'Vanhin osa on vuodelta 1410, ja se erehtyy päivän viidessä vuodessa.',
+      'Se käy yhä torin laidalla. Joka tasatunti sen edessä seisoo väkijoukko puhelimet pystyssä.',
+      'Ja keisarin sali on linnassa vieläkin. Ihmeet ovat hajallaan, mutta sali on täynnä turisteja.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Kaarlensilta ja linna).

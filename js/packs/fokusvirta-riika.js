@@ -207,6 +207,7 @@ export const FOKUSVIRTA_RIIKA = {
     kommentti: [
       'Sitä mustaa juomaa myydään Riiassa yhä savipulloissa.',
       'Paikalliset vannovat sen nimeen edelleen. Turistit katuvat edelleen.',
+      'Vanhakaupunki on nyt maailmanperintöä, ja sen vieressä on kokonainen kaupunginosa jugendtaloja.',
       'Keskiaika tulee täällä vastaan kulman takaa.',
     ],
     /*

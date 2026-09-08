@@ -166,13 +166,12 @@ export const FOKUSVIRTA_WIEN = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'pörssi kaatui',
-      teksti: 'Kääk.',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Hattu kädessä kupolin alla, ja kahdeksan päivää myöhemmin itkeviä miehiä kadulla.',
-      'Kupoli paloi 1937. Raha kaatui Wienissä, sitten Berliinissä ja New Yorkissa asti.',
+      'Hattu kädessä kupolin alla, ja pian itkeviä miehiä kadulla. Sellainen kevät.',
+      'Kupoli paloi myöhemmin poroksi. Puisto on yhä olemassa.',
+      'Siellä pyörii maailmanpyörä, joka on isoisän maailmannäyttelyä vain vähän nuorempi.',
+      'Wieniläiset istuvat kahviloissa tunteja yhden kupin ääressä. Se tapa kesti romahduksenkin.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (valtionooppera). Faktat

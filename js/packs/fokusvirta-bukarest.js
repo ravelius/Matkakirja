@@ -282,8 +282,10 @@ export const FOKUSVIRTA_BUKAREST = {
       teksti: 'Maalattua?',
     },
     kommentti: [
-      'Maanjäristys oli pudottanut tornin huipun jo seitsemänkymmentä vuotta aiemmin.',
-      'Hän kiipesi siis tynkään. Ja torni purettiin 1888. Loput on lehdessä.',
+      'Maanjäristys oli pudottanut tornin huipun jo kauan ennen isoisää. Hän kiipesi siis tynkään.',
+      'Torni purettiin myöhemmin kokonaan. Paikalla on nyt sairaala ja kirkko.',
+      'Kaupunkia sanottiin pieneksi Pariisiksi. Bulevardit ovat yhä leveät.',
+      'Ja niiden päässä seisoo yksi maailman suurimmista rakennuksista.',
     ],
     /*
      * Commons 25.8.2026: 2397×3339, public domain, kuvaus "Photo of

@@ -279,8 +279,10 @@ export const FOKUSVIRTA_PIETARI = {
       teksti: 'Vesi ei.',
     },
     kommentti: [
-      'Suoran käskeminen onnistui, veden ei: 1824 vesi nousi yli neljä metriä.',
-      'Suojapato valmistui vasta 2011. Kadut ovat suorat, kuivia ne ovat olleet vähän aikaa.',
+      'Suoran käskeminen onnistui, veden ei. Vesi on noussut kaduille monta kertaa isoisän jälkeen.',
+      'Nyt kaupungin edessä on pitkä pato, joka pitää meren ulkona.',
+      'Kadut ovat suorat, ja kuivia ne ovat olleet vasta vähän aikaa.',
+      'Palatsin taidesalit ovat nyt museo, johon kolme päivääkään ei riitä. Sillat avataan öisin yhä.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

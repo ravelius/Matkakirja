@@ -415,8 +415,8 @@ export const FOKUSVIRTA_SOFIA = {
      * uudestaan. Kupla näkyy ja etenee kuten ennen.
      */
     kommentti: [
-      'Hurja juttu, luin sen kahdesti.',
-      'Helmikuu 1873, siitä on yli sataviisikymmentä vuotta. Ei se juttua pienennä.',
+      'Hurja juttu. Luin sen kahdesti.',
+      'Sen miehen nimi on nyt kadulla ja stadionilla. Patsas seisoo siinä, missä hirsipuu oli.',
     ],
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,

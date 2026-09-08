@@ -276,13 +276,13 @@ export const FOKUSVIRTA_MOSKOVA = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'kesti neljä tuntia',
-      teksti: 'Neljä tuntia!',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Sellaisissa taloissa istui väkeä kuin Tretjakov, joka osti tauluja ja antoi ne kaupungille.',
-      'Pää ja sydän vaihtoivat paikkaa: pääkaupunki palasi tänne 1918. Kellot soivat yhä.',
+      'Neljän tunnin päivällinen. Teetä juotiin kuin vettä lähteestä.',
+      'Sellaisissa taloissa istui myös Tretjakov. Hän osti tauluja ja antoi ne kaupungille.',
+      'Se museo on yhä auki.',
+      'Pääkaupunki muutti takaisin tänne isoisän jälkeen. Renkaat ovat nyt moottoriteitä.',
+      'Ja kellot soivat yhä.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

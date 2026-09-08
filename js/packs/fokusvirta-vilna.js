@@ -216,13 +216,10 @@ export const FOKUSVIRTA_VILNA = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'metsää joka suuntaan',
-      teksti: 'Vieläkin.',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
       'Vanhakaupunki on nyt maailmanperintöä juuri niiden kirkkojen takia.',
-      'Ja se metsä joka suuntaan pitää yhä paikkansa.',
+      'Ja se metsä joka suuntaan pitää yhä paikkansa. Katedraalin torniin pääsee kiipeämään.',
       'Katedraalin alla on jotain, mistä isoisäsi ei tiennyt. Se on lehdessä.',
     ],
     /*
