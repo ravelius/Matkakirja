@@ -1640,6 +1640,26 @@
 .aikajana-valo.nykyinen .aikajana-valo-kajo { opacity: 0.95; }
 
 /*
+ * KELAUS SYTYTTÄÄ KAIKKI VALOT (omistaja 8.9.2026, sanatarkasti: *"jos
+ * keksintölinssissä kelaa alhaalta eri keksintöjä niin silloin kaikki
+ * valot kartalla saisi syttyä, jotta pelaaja voi klikkailla kohtia myös
+ * kartalla. tällöin esitys menee automaattisesti tauko tilaan. jos
+ * pelaaja painaa uudestaan jatka, niin tulevat pisteet häviävät
+ * kartalta ja esitys jatkuu normaalisti."*).
+ *
+ * TULEVA LAMPPU on selauksen aikana syttynyt pysäkki, jota kello ei ole
+ * vielä ohittanut (js/aikajana.js lampunTila). Se on pienempi ja
+ * himmeämpi kuin ohitettu jälki — nykyinen pysäkki erottuu yhä
+ * kirkkaimpana — mutta se OTTAA NAPAUTUKSIA kuten palava: napautus
+ * siirtää linssin sille pysäkille (napautaValoa → siirry).
+ */
+.aikajana-valo.tuleva { pointer-events: auto; cursor: pointer; }
+.aikajana-valo.tuleva .aikajana-valo-sisus { transform: scale(0.56); opacity: 0.62; }
+.aikajana-valo.tuleva .aikajana-valo-pallo { opacity: 0.5; }
+.aikajana-valo.tuleva .aikajana-valo-hehku { opacity: 0.14; }
+.aikajana-valo.tuleva .aikajana-valo-kajo { opacity: 0.1; }
+
+/*
  * VINJETTI PELI-IKKUNAN REUNOILLA (omistaja 3.9.2026 ilta: *"kartta voisi
  * olla vielä asteen tummempi ja vinjetoitua reunoille. vinjetti pitää
  * vain tehdä niin, että jos karttaa liikuttaa, niin vinjetti pysyy
@@ -2539,7 +2559,8 @@
   transform: translate(-50%, -50%);
 }
 .aikajana-valo-pallolla,
-.aikajana-valo-pallolla.palaa { pointer-events: none; cursor: default; }
+.aikajana-valo-pallolla.palaa,
+.aikajana-valo-pallolla.tuleva { pointer-events: none; cursor: default; }
 .aikajana-valo-pallolla svg { display: block; overflow: visible; }
 /*
  * ELÄVÄ LIEKKI (js/aikajana-valo.js, omistaja 5.9.2026 klo 00.45:
@@ -2558,6 +2579,16 @@
   /* mix-blend-mode ei ole tässä: kalvo on merkkien ALLA (kalvoRuudulle
      `alle`), joten valo hehkuu jo valmiiksi tummennuksen päällä. */
 }
+/*
+ * KELAUKSEN TULEVA LAMPPU PALLOLLA (docs/moduulit/linssit.md luku 9.2).
+ * Liekki on canvas, jolla EI SAA OLLA OMAA LIIKETTÄ (koko liike
+ * piirretään js/aikajana-valo.js:ssä), joten ero nykyiseen tehdään
+ * kahdella staattisella arvolla: KEHYS kutistetaan merkin keskipisteen
+ * ympäri — sen translate(-50 %) on siksi toistettava — ja canvas
+ * himmennetään. Elementti ei liiku: skaalaus on keskipisteen ympäri.
+ */
+.aikajana-valo-pallolla.tuleva { transform: translate(-50%, -50%) scale(0.62); }
+.aikajana-valo.tuleva .aikajana-valo-liekki { opacity: 0.42; }
 
 /* ===========================================================================
    IHMISEN MATKA VÄRIVIRTOINA (js/aikajana-virrat.js; Raamattu 6.9.2026)

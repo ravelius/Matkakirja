@@ -1078,8 +1078,8 @@ pysyy karusellilla, vaikka sormi lipsahtaisi kartan päälle.
    linssi siirtyy sen pysäkille **moottorin omalla `siirry`-polulla** —
    sama kuin kortin napautuksessa ja nuolinäppäimissä. Pyyhkäisyn
    liikemäärä kuljettaa enintään kolme keksijää hidastuen; loputonta
-   rullausta ei ole. **Tauolla ollut jää tauolle, käynnissä ollut
-   jatkaa** (`veto.kaynnissa`).
+   rullausta ei ole. **Esitys jää aina tauolle** — kelaus on tauko
+   (luku 9.2; 8.9.2026 asti käynnissä ollut ajo jatkoi irrotuksesta).
 
 **Hiiri tarvitsi oman lukkonsa.** Ensimmäisessä savukeajossa (8.9.2026)
 kosketus veti karusellia moitteetta, mutta **hiirellä rivi ei liikkunut
@@ -1111,8 +1111,80 @@ välinäytöksen aikana. Välinäytös ja Tiedeliite ovat ennallaan.
 näkymässä — tabletti 834 × 1100 hiirellä ja puhelin 390 × 844
 CDP-kosketuksella — ja mittaa, että rivi liukuu sormen mukana, ajo ei
 hyppää kesken vedon, pallon `pointOfView` on vedon aikana muuttumaton,
-irrotus vaihtaa pysäkin ja kellon, tauon muisti säilyy ja napautus
-toimii yhä.
+irrotus vaihtaa pysäkin ja kellon, kelaus jättää esityksen tauolle ja
+napautus toimii yhä.
+
+---
+
+### 9.2 Kelaus sytyttää kaikki valot ja pysäyttää esityksen (8.9.2026)
+
+Omistaja 8.9.2026, sanatarkasti:
+
+> *"jos keksintölinssissä kelaa alhaalta eri keksintöjä niin silloin
+> kaikki valot kartalla saisi syttyä, jotta pelaaja voi klikkailla
+> kohtia myös kartalla. tällöin esitys menee automaattisesti tauko
+> tilaan. jos pelaaja painaa uudestaan jatka, niin tulevat pisteet
+> häviävät kartalta ja esitys jatkuu normaalisti."*
+
+**Kelaus on oma tilansa: SELAUS.** Karuselli on linssin aikaselain
+(luku 9.1), ja kun pelaaja tarttuu siihen, hän lakkaa katsomasta
+esitystä ja alkaa etsiä. Silloin kartta ei saa olla puoliksi pimeä:
+koko kaari syttyy, ja pelaaja voi valita seuraavan kohteen yhtä hyvin
+kartalta kuin alariviltä.
+
+| mikä aloittaa selauksen | mikä ei |
+|---|---|
+| karusellin veto (kynnyksen ylitys) | Tauko-nappi (`pysayta`) |
+| toisen keksijän kortin napautus | nykyisen kortin napautus (avaa Tiedeliitteen) |
+| kartan lampun napautus | nykyisen lampun napautus (pelkkä tauko) |
+| nuolinäppäimet ← → | avausjakso, välinäytös, kertomuskaari |
+
+**Yksi sääntö, yksi paikka.** Lampun tila lasketaan puhtaassa
+funktiossa `lampunTila(k, i, selaus)` (js/aikajana.js), ja moottorin
+`asetaValot(i)` ajaa sen koko kaarelle. `siirry` ei enää laske
+lamppuja itse.
+
+| tila | esitys (`selaus` epätosi) | selaus (`selaus` tosi) |
+|---|---|---|
+| `k < i` | palaa (jälki) | palaa (jälki) |
+| `k === i` | palaa + `nykyinen` | palaa + `nykyinen` |
+| `k > i` | sammuksissa | palaa + **`tuleva`** |
+
+**Tuleva lamppu erottuu nykyisestä.** Luokka `tuleva`
+(css/aikajana.css) kutistaa merkin 0,56-kokoiseksi ja himmentää sen
+(pallolla sama tehdään canvas-liekille), joten nykyinen pysäkki on yhä
+kirkkain ja sykkii yksin. Tummennuksen maskireikää tuleva **ei** saa:
+kartta pysyy tummana, vaikka koko kaari hehkuu. Napautuksia tuleva
+ottaa kuten palava (`.aikajana-valo.tuleva { pointer-events: auto }`,
+napautus → `napautaValoa` → `siirry`); pallolla osumat lasketaan
+pallon omasta napautuksesta lähimpään merkkiin (`lahinLinssimerkki`),
+joka ei ole koskaan katsonut lampun tilaa.
+
+**Selaus pysyy päällä koko tauon ajan.** Lampusta toiseen hyppiminen
+kartalla tai karusellilla ei sammuta valoja välissä: `siirry` pitää
+lipun ja piirtää lamput uudelleen uuden pysäkin ympärille.
+
+**Jatka sammuttaa tulevat** (`jatka` → `paataSelaus`): kartalle jäävät
+vain nykyiseen pysäkkiin asti syttyneet, ja loput syttyvät taas
+vuorollaan kellon mukana. Sama koskee näppäimistön väliä ja Enteriä,
+jotka kulkevat saman `taukoTaiJatka`-napin kautta. **Aloita alusta**
+(↺, `alusta`) ja linssin sulku palauttavat normaalitilan.
+
+**Kelaus pysäyttää aina.** Ennen tätä (v1687) käynnissä ollut ajo
+jatkoi irrotuksen jälkeen; nyt omistajan sääntö on toinen — vedon
+jälkeen nappi on **Jatka**, ja pelaaja päättää itse, milloin esitys
+jatkuu.
+
+**Ihmisen matka ei muutu.** `aloitaSelaus` kieltäytyy, kun kaarella on
+kertomusesitys (`this.esitys`): siellä ei ole selattavia pysäkkejä,
+karusellin nauhaa ei ole lainkaan ja tutkimusvaihe hoitaa omat
+hehkunsa (js/linssit/ihmisen-matka-tutkimus.js).
+
+**Vartiot:** puhtaan funktion ja moottorin kytkennät
+tests/aikajana.test.mjs (kolme testiä: `lampunTila`, kelauksen
+kytkennät, tulevan lampun tyyli), ja selaimessa
+`tools/savukkeet/savuke-aikajana.mjs` osio K.7 (kelaus → kaikki lamput
+palavat ja ottavat osumia, Jatka → tulevat sammuvat ja kello jatkaa).
 
 ---
 
