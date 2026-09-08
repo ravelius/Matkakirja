@@ -4216,6 +4216,15 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'KEKSINTOLINSSIN YLAPALKKI IHMISEN MATKAN TYYLIIN, JA ALOITA ALUSTA '
+          + '(omistaja 8.9.2026 aamu, sanatarkasti: "Ja siina voi kylla sen '
+          + 'ylapalkin siirtaa ihmislinssin tyyliin" ja "Tehdaan reset"): '
+          + 'keksintolinssi saa saman yhden palkin kuin Ihmisen matka - '
+          + 'Matkakirjan ylapalkki piiloon linssin ajaksi, palkissa linssin nimi '
+          + 'ja kello vasemmalla, oikealla samankorkuiset napit ja X sulkee. '
+          + 'Palkkiin tulee myos Aloita alusta (reset), joka palauttaa linssin '
+          + 'ensimmaiselle pysakille. Karuselli sailyy alarivissa aikaselaimena. '
+          + 'Kumoaa aiemman rajauksen "vain kertomuskaarelle".',
         'KEKSINTOLINSSIN KARUSELLI ON SEN AIKASELAIN, JA SE VIERITETAAN SORMELLA '
           + '(omistaja 8.9.2026 aamu, sanatarkasti: "Eikos keksintolinssissa jo '
           + 'ole aika selain? Tarvitseeko toista?" ja "Mutta sen nykyisen voisi '
