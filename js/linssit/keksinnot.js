@@ -711,11 +711,28 @@ export const KEKSINNOT = [
      * luennanRunko), joten valmis 1873-matkakirjan-vuosi.mp3 pysyy
      * paikallaan vaikka paalu sai kasvot.
      */
+    /*
+     * ISOISÄÄ EI TUNNISTA (omistaja 8.9.2026 klo 11.03 Suomen aikaa,
+     * iPad-kaappaus tästä pysäkistä, sanatarkasti: *"Tähän pitää vaihtaa
+     * havainne- sekä muotokuva mistä isoisää ei tunnista. Muotokuvassa
+     * voi käyttää kaukaa otettua kuvaa myös"*). Raamatun sääntö ISOISÄ
+     * JÄÄ ARVOITUKSEKSI (5.9.2026) koskee siis myös tätä korttia ja
+     * havainnekuvaa. Hassutteleva studiomuotokuva (4.9.2026) ja
+     * Charing Crossin vilkutuskuva poistuivat: kummassakin kasvot olivat
+     * tunnistettavat. VÄLIAIKAISESTI kortissa on pakin Lontoon
+     * laiturikuva (js/packs/etusivun-isoisakuvat.js, sääntöä
+     * noudattava sarja r20260905): isoisä selin arkun vieressä. Kuva on
+     * vaaka, joten `asento` siirtää 4:5-rajauksen hahmon kohdalle.
+     * Kuvatoimitukselta on tilattu (posti/fable-vanha.md 8.9.2026)
+     * pystymuotokuva kaukaa ja uusi lähtöhavainnekuva ilman kasvoja;
+     * ne korvaavat nämä osoitteet.
+     */
     kuva: {
-      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1873-isoisa.jpg`,
-      selite: 'Isoisä kallistaa hattunsa vinoon ja puristaa matkakirjaa '
-        + 'rintaansa — seikkailu näyttää olevan hänelle vakava asia vain '
-        + 'hetken kerrallaan.',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-departure-aged-r20260905-v1.jpg',
+      ulkoinen: true,
+      asento: '30% top',
+      selite: 'Isoisä viivähtää arkun vieressä. Vaunun ikkunassa näkyvä '
+        + 'saattaja vastaa hänen pieneen hyvästieleeseensä.',
       lahde: 'Kuvaputken generoitu valokuva',
     },
     /*
@@ -731,10 +748,13 @@ export const KEKSINNOT = [
     ilmio: {
       // Pohjukkeeton versio (omistaja hyväksyi 4.9.2026, kuvaputki R2 15:09 UTC):
       // pelkkä kuva, jotta paneelin häivytys näkyy oikein — ei rajausta.
-      osoite: 'https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-kanton-1873-kuva-v1.jpg',
+      // Sääntöä noudattava versio 8.9.2026 (kasvot varjossa, sarja r20260905);
+      // pohjukkeeton kasvokuva isoisa-kanton-1873-kuva-v1 poistui.
+      osoite: 'https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-kanton-aged-r20260905-v1.jpg',
       ulkoinen: true,
-      selite: 'Isoisä teehuoneen pöydässä Kantonissa 1873. Kulunut cabinet card '
-        + 'isoisän matkalaukusta.',
+      selite: 'Isoisä istuu teehuoneen hämärässä ja seuraa, kuinka '
+        + 'teeammattilainen näyttää lehtiä tarjottimelta. Käytössä taittunut '
+        + 'vedos säilyttää yhteisen hetken mutta kadottaa isoisän kasvot varjoon.',
       lahde: 'Kuvaputken generoitu valokuva',
     },
     /*
@@ -750,12 +770,12 @@ export const KEKSINNOT = [
      */
     ilmioSarja: [
       {
-        osoite: 'https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg',
+        // Vilkutuskuva (kasvot) poistui 8.9.2026; tilalla pakin Bombayn
+        // kuva, jossa isoisä kättelee lautturia selin kameraan.
+        osoite: 'https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-bombay-aged-r20260905-v1.jpg',
         ulkoinen: true,
-        // Kuvaputken kuvateksti sanasta sanaan (toimitus 4.9.2026 08:48 UTC).
-        selite: 'Isoisä nousee Charing Crossilla maailmanympärimatkansa ensimmäiseen '
-          + 'junaan ja vilkuttaa vielä kameralle, ennen kuin tuttu laituri jää '
-          + 'höyryn taakse.',
+        selite: 'Isoisä kättelee lautturia Bombayn laiturilla. Kuva on hänen '
+          + 'matka-arkustaan; kasvot jäävät katoksen varjoon.',
         lahde: 'Kuvaputken generoitu valokuva',
       },
     ],

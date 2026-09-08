@@ -1106,14 +1106,19 @@ test('hyväksytyt generoidut ilmiökuvat ovat kytketty (Watt, Montgolfier, Jenne
 test('jokaisella pysäkillä on generoitu muotokuva omassa kansiossaan', () => {
   for (const t of KEKSINNOT) {
     if (t.paalu) {
-      // Merkkipaalu sai 4.9.2026 isoisän hassuttelevan muotokuvan
-      // (kuvaputki, kuvateksti sanasta sanaan) — ei ilmiökuvaa.
-      assert.equal(t.kuva?.osoite, `${KEKSINTO_KUVAJUURI}/muotokuva/1873-isoisa.jpg`,
-        'merkkipaalun muotokuva on isoisä');
+      // ISOISÄÄ EI TUNNISTA (omistaja 8.9.2026): merkkipaalun kortti ja
+      // havainnekuvat ovat sääntöä noudattavasta sarjasta r20260905
+      // (js/packs/etusivun-isoisakuvat.js) — ei studiomuotokuvaa, ei
+      // vilkutuskuvaa, ei pohjukkeetonta kasvokuvaa.
+      const sarja = /kohtaamiset\/isoisa\/isoisa-[a-z]+-aged-r20260905-v\d\.jpg$/;
+      assert.ok(t.kuva?.ulkoinen && sarja.test(t.kuva.osoite), 'merkkipaalun muotokuva on isoisä kaukaa (sarja r20260905)');
+      assert.equal(t.kuva.asento, '30% top', 'vaakakuvan 4:5-rajaus osuu hahmoon');
       assert.equal(t.kuva.lahde, 'Kuvaputken generoitu valokuva');
-      // Ilmiökuva on isoisän Kantonin teehuonekuva oman kansion ulkopuolelta (4.9.2026).
-      assert.ok(t.ilmio?.ulkoinen && /kohtaamiset\/isoisa\/isoisa-kanton-1873-kuva-v1\.jpg$/.test(t.ilmio.osoite),
-        'merkkipaalun ilmiökuva on isoisän pohjukkeeton Kantonin kuva');
+      assert.ok(t.ilmio?.ulkoinen && sarja.test(t.ilmio.osoite), 'merkkipaalun ilmiökuva on sarjasta r20260905');
+      for (const k of t.ilmioSarja ?? []) assert.ok(sarja.test(k.osoite), 'kuvakierron kuvat ovat sarjasta r20260905');
+      for (const k of [t.kuva, t.ilmio, ...(t.ilmioSarja ?? [])]) {
+        assert.ok(!/1873-isoisa|isoisa-lahto-1873|isoisa-kanton-1873-kuva/.test(k.osoite), `tunnistettava isoisäkuva palasi: ${k.osoite}`);
+      }
       assert.equal(t.ilmio.rajaus, undefined, 'pohjukkeeton kuva ei tarvitse rajausta');
       continue;
     }
