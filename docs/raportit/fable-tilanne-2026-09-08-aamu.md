@@ -44,7 +44,7 @@ tuntien ajo Macilla — kysyn kortilla, milloin se ajetaan.
 1. Kuvaputken toimitukset (16 kaupungin miniatyyrit ja nostot, Nuuk/Anchorage etusivut, Ihmisen matkan kuvituskuvat) → kytkentä.
 2. Pulun Euroopan seuraava erä (Lontoo, Pariisi, Berliini …) omistajan palautteen jälkeen; Keksintölinssin välihuomiot.
 3. Sessio 2:n jäljet: Puerto Montt+João Pessoa, São Luís+Ouro Preto, Kimberley+Managua; kuvitus Dili, Alice Springs, Iqaluit, Santa Fe.
-4. Aikaselain keksintölinssiin (jos ei vielä; katso docs/moduulit/ihmisen-matka-vanat.md luku 15).
+4. ~~Aikaselain keksintölinssiin~~ — ei tarvita (omistaja 8.9.2026: keksijäkaruselli on jo aikaselain).
 5. Ihmisen matkan avoimet: leveyskertoimien selittävä teksti pelaajalle (Fable), Tiedeliitteen alanappien pitkät ajoitukset.
 
 ## Postilaatikko
