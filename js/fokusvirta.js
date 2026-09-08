@@ -774,20 +774,23 @@ function livianSarjanKesto(kuplat) {
   return kuplat.reduce((summa, teksti) => summa + livianKuplanLukuaika(teksti), 0);
 }
 
-/* ============ KAUPUNGIN KULKU: PULU — LUENTA — PULU ================
+/* ============ KAUPUNGIN KULKU: LUENTA — PULU =======================
  *
  * Raamattu, KAUPUNGIN KULKU: EI KUVIA, PULU - LUENTA - PULU (omistaja
- * 7.9.2026). Saapuminen on kolme hetkeä, ja kaikki kolme lukee
- * pakkauksen `pollo`-lohkosta:
+ * 7.9.2026) — ja sen kavennus 8.9.2026, sanatarkasti: *"ota kaikki
+ * pulun alustukset pois."* Saapuminen on nyt kaksi pulun hetkeä, ja
+ * kumpikin lukee pakkauksen `pollo`-lohkosta:
  *
- *   1. ALUSTUS (`pollo.alustus`) — yksi kupla ENNEN isoisän luentaa.
- *      Luenta on lykätty (js/ui.js asetaMerkinnanLuenta,
- *      luennanLykkays) ja päästetään liikkeelle vasta alustuksen
- *      lukuajan jälkeen, täsmälleen kuten Ateenan paljastussarjassa
- *      (js/livia.js odotaLuenta) — sitä sarjaa ei muuteta.
- *   2. HUUDAHDUS (`pollo.huudahdus`) — enintään yksi lyhyt välihuuto
+ *   1. HUUDAHDUS (`pollo.huudahdus`) — enintään yksi lyhyt välihuuto
  *      LUENNAN AIKANA siinä kohdassa, jonka `kohta` nimeää.
- *   3. KOMMENTTI (`pollo.kommentti`) — 1-2 kuplaa luennan jälkeen.
+ *   2. KOMMENTTI (`pollo.kommentti`) — 1-2 kuplaa luennan jälkeen.
+ *
+ * ISOISÄ ALOITTAA. Alustuskupla ennen luentaa on poistettu joka
+ * kaupungista, eikä luentaa siksi enää lykätä pulun takia: se lähtee
+ * liikkeelle heti merkinnän piirrosta (js/ui.js renderFact →
+ * asetaMerkinnanLuenta). Ainoa lykkäys on yhä Ateenan ensisaapumisen
+ * tuurauspaljastus (js/livia.js odotaLuenta), ja välihuuto odottaa
+ * senkin (fokusvirtaHuudahdus).
  *
  * VARAPOLKU: kaupunki, jota ei ole vielä kirjoitettu uusiksi, käyttää
  * yhä `pollo.maadoitus`-kenttää, ja se piirtyy kommenttina eli
@@ -800,7 +803,7 @@ function livianSarjanKesto(kuplat) {
  * sanatarkasti: *"pulun ja kertojan äänet menevät päällekkäin ja pulu
  * selittää ensin jotain ihan väärää juttua"*).
  *
- * Kaupungin kulku on ketju ajastimia (alustus → luenta → huudahdus →
+ * Kaupungin kulku on ketju ajastimia (luenta → huudahdus →
  * kommentti), ja jokainen niistä kysyy kaupunkia vasta lauetessaan.
  * Kesken jäänyt ÄÄNITE ei kysy mitään: se soi loppuun, vaikka pelaaja
  * on jo toisessa kaupungissa. Kehittäjän hyppy (js/ui.js
@@ -818,7 +821,7 @@ function livianSarjanKesto(kuplat) {
 export function vaiennaLivianKaupunkipuhe(ui) {
   if (!ui) return;
   for (const ajastin of [
-    'alustuksenAjastin', 'saapumiskuplaAjastin', 'huudahdusAjastin',
+    'saapumiskuplaAjastin', 'huudahdusAjastin', 'huudahdusLykkaysAjastin',
     'huudahdusVaraAjastin', 'huudahdusPoisAjastin', 'polloKuplasarjaAjastin',
     'livianKorttiSarja', 'fokusvinkkiAjastin',
   ]) {
@@ -834,7 +837,6 @@ function kulunKuplat(ui, city) {
   const kommentti = livianKentanKuplat(data, 'kommentti');
   const maadoitus = livianKentanKuplat(data, 'maadoitus');
   return {
-    alustus: livianKentanKuplat(data, 'alustus'),
     huudahdus: data?.pollo?.huudahdus ?? null,
     // Uusi kenttä voittaa; vanha maadoitus on varapolku samassa paikassa.
     jalkeen: kommentti.length ? kommentti : maadoitus,
@@ -851,94 +853,57 @@ function kulunKuplat(ui, city) {
  */
 export function fokusvirtaUusiKulku(ui, city) {
   if (FOKUSVIRTA_KORTIT || !city) return false;
-  const kuplat = kulunKuplat(ui, city);
-  return kuplat.alustus.length > 0 || kuplat.jalkeenKentta === 'kommentti';
+  return kulunKuplat(ui, city).jalkeenKentta === 'kommentti';
 }
 
 /**
- * ODOTTAAKO ISOISÄN LUENTA PULUN ALUSTUSTA? (js/ui.js renderFact.)
+ * VÄLIHUUTO LIIKKEELLE (js/ui.js renderFact).
  *
- * Kutsutaan ENNEN kuin luenta pannaan käyntiin: tosi arvo nostaa
- * `ui.luennanLykkays`-lipun, jolloin asetaMerkinnanLuenta rekisteröi
- * luennan mutta ei aloita sitä. Alustuksen kupla päästää sen
- * liikkeelle (aloitaLykattyLuenta) — ja jos kuplaa ei jostain syystä
- * tule, sama vapautus tehdään joka tapauksessa, jottei luenta jää
- * odottamaan kuplaa, jota ei tule.
+ * Kutsutaan HETI luennan rekisteröinnin jälkeen: huudahduksen ajoitus
+ * lasketaan luennan kestosta ja se lasketaan siitä hetkestä, jona
+ * kertoja aloittaa — sama hetki, jona tämä kutsutaan.
  *
- * @returns {boolean} lykätäänkö luentaa
+ * KERRAN PER SAAPUMINEN. Kortti voi piirtyä uudelleen samassa
+ * kaupungissa (aikataulurivi, laatan ratkeaminen), eikä välihuutoa saa
+ * ajastaa kahdesti; muisti on sama avain kuin saapumiskuplalla.
+ *
+ * LYKÄTTY LUENTA ODOTETAAN. Ensisaapumisen tuurauspaljastus (js/livia.js)
+ * pitää luentaa lykkäyksessä, ja ilman odotusta välihuuto ajastettaisiin
+ * luennasta, joka ei ole vielä alkanut. Katto on varoventtiili, jottei
+ * välihuuto jää roikkumaan, jos luenta ei koskaan lähde.
+ *
+ * @returns {boolean} ajastettiinko välihuuto tässä saapumisessa
  */
-export function fokusvirtaAlustusOdottaa(ui, city) {
+export function fokusvirtaHuudahdus(ui, city) {
   if (FOKUSVIRTA_KORTIT || !city || !ui?.game?.pack) return false;
   if (SAAPUMISKUPLA_VAITI.has(city.id)) return false;
-  if (ui.alustusNaytetty?.has(`${ui.game.pack.id}:${city.id}`)) return false;
-  return kulunKuplat(ui, city).alustus.length > 0;
-}
-
-/**
- * ALUSTUS RUUDULLE JA LUENTA LIIKKEELLE (js/ui.js renderFact).
- *
- * Kutsutaan HETI merkinnän piirron jälkeen — ei kirjoituskoneen
- * lopusta. Kirjoituskone kirjoittaa merkinnän noin 50 ms merkiltä eli
- * pitkän merkinnän yli kymmenessä sekunnissa, ja jos luenta odottaisi
- * sitä, isoisä alkaisi puhua vasta kun teksti on jo luettu. Kulku on
- * siis: alustus heti, luenta alustuksen lukuajan jälkeen, huudahdus
- * luennan sisällä — ja kommentti tulee omaa tietään kirjoituskoneen
- * lopusta (fokusvirtaSaapumiskupla) luennan päätyttyä.
- *
- * @returns {boolean} sanottiinko alustus tässä saapumisessa
- */
-export function fokusvirtaAlustus(ui, city) {
-  if (!fokusvirtaAlustusOdottaa(ui, city)) return false;
-  const avain = `${ui.game.pack.id}:${city.id}`;
-  ui.alustusNaytetty ??= new Set();
-  ui.alustusNaytetty.add(avain);
   const kulku = kulunKuplat(ui, city);
+  if (!livianKuplat(kulku.huudahdus)[0]) return false;
+  const avain = `${ui.game.pack.id}:${city.id}`;
+  ui.huudahdusNaytetty ??= new Set();
+  if (ui.huudahdusNaytetty.has(avain)) return false;
+  ui.huudahdusNaytetty.add(avain);
   const merkinta = fokusvirtaSisalto(ui, city)?.matkakirja?.teksti ?? '';
-  /*
-   * ENSISAAPUMISEN TUURAUSPALJASTUS VOITTAA (js/livia.js): se esittelee
-   * kaupungin itse, joten alustus jää siltä käynniltä pois — mutta
-   * lykätty luenta on silti päästettävä liikkeelle, muuten se jäisi
-   * odottamaan kuplaa, jota ei tule.
-   */
-  if (livianPaljastusKesken(ui)) {
-    ui.aloitaLykattyLuenta?.();
-    return false;
-  }
-  clearTimeout(ui.alustuksenAjastin);
-  const { osat, aani } = livianOsatJaAani(ui, city.id, 'alustus', kulku.alustus);
-  const nakyi = polloPuheenvuoro(osat, {
-    jatkuuko: () => !ui.dead && ui.game?.cityOf?.()?.id === city.id,
-    aani,
-    ...livianPuherytmi(city.id, 'alustus'),
-  });
-  if (!nakyi) {
-    // Kupla ei mahtunut ruudulle: luenta ei saa jäädä odottamaan sitä.
-    ui.aloitaLykattyLuenta?.();
-    return false;
-  }
-  /*
-   * LUENTA ODOTTAA ALUSTUKSEN PUHEEN LOPPUUN (7.9.2026). Sarjan kesto
-   * on kuplien lukuaikojen summa, mutta viimeinen äänite voi olla omaa
-   * lukuaikaansa pidempi — silloin isoisä aloittaisi pulun lauseen
-   * päälle. Ajastin kysyy siksi vielä soivalta äänitteeltä
-   * (ui.liviaAani, luettuna vasta laukaisuhetkellä), onko puhetta
-   * jäljellä. Ilman ääntä tahti on tasan entinen.
-   */
-  ui.alustuksenAjastin = livianKuplanAjastin(
-    livianSarjanKesto(kulku.alustus), () => ui.liviaAani,
-    () => {
-      // Pelaaja on voinut lähteä kaupungista kesken alustuksen
-      // (kehittäjän hyppy): silloin tämä ajastin päästäisi liikkeelle
-      // TOISEN kaupungin luennan kesken sen oman alustuksen — kaksi
-      // ääntä päällekkäin (omistaja 8.9.2026).
-      if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
-      ui.aloitaLykattyLuenta?.();
-      ajastaHuudahdus(ui, city, kulku.huudahdus, merkinta);
-    },
-    (id) => { ui.alustuksenAjastin = id; },
-  );
+  const kaynnista = (jaljella = HUUDAHDUKSEN_LYKKAYSKATTO_MS) => {
+    if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
+    if (ui.luennanLykkays && jaljella > 0) {
+      clearTimeout(ui.huudahdusLykkaysAjastin);
+      ui.huudahdusLykkaysAjastin = setTimeout(
+        () => kaynnista(jaljella - HUUDAHDUKSEN_LYKKAYSVALI_MS),
+        HUUDAHDUKSEN_LYKKAYSVALI_MS,
+      );
+      return;
+    }
+    ajastaHuudahdus(ui, city, kulku.huudahdus, merkinta);
+  };
+  kaynnista();
   return true;
 }
+
+/** Kuinka usein kysytään, onko lykätty luenta jo lähtenyt. */
+const HUUDAHDUKSEN_LYKKAYSVALI_MS = 500;
+/** Kuinka kauan lykättyä luentaa enintään odotetaan. */
+const HUUDAHDUKSEN_LYKKAYSKATTO_MS = 90000;
 
 /** Huudahduskuplan elinaika: se on välihuuto, ei repliikki. */
 const HUUDAHDUS_NAKYY_MS = 2000;
@@ -1157,10 +1122,10 @@ export function fokusvirtaSaapumiskupla(ui, city) {
   /*
    * LUENTA VOI OLLA VASTA LÄHDÖSSÄ (omistaja 8.9.2026).
    *
-   * Tämä kutsu tulee kirjoituskoneen lopusta, ja kone ehtii maaliin
-   * ennen kertojaa aina kun merkintä on lyhyt ja pulun alustusäänite
-   * pitkä (esim. Tallinna, Helsinki: kone ~9,4 s, alustus venyy puheen
-   * mittaan). Silloin `ui.diaryVoice` on vielä tyhjä, luennanLoppuun
+   * Tämä kutsu tulee kirjoituskoneen lopusta, ja kone voi ehtiä maaliin
+   * ennen kertojaa — ensisaapumisessa luenta odottaa vielä
+   * tuurauspaljastuksen kuplia (js/livia.js odotaLuenta). Silloin
+   * `ui.diaryVoice` on vielä tyhjä, luennanLoppuun
    * vastaa "ei luentaa" — ja kommentti tulisi juuri alkavan kertojan
    * päälle. Lykkäyslippu kertoo, että luenta on tulossa: sitä
    * odotetaan, ei ohiteta. Katto on varoventtiili, jottei kommentti
@@ -1184,10 +1149,10 @@ export function fokusvirtaSaapumiskupla(ui, city) {
   };
 
   /*
-   * ALUSTUS ON JO SANOTTU (fokusvirtaAlustus, kutsuttu renderFactista):
-   * tämä kutsu tulee kirjoituskoneen lopusta ja hoitaa vain luennan
-   * JÄLKEISEN kommentin. Ilman luentaa kommentti tulee heti tauon
-   * jälkeen kuten ennenkin.
+   * VÄLIHUUTO ON JO AJASTETTU (fokusvirtaHuudahdus, kutsuttu
+   * renderFactista): tämä kutsu tulee kirjoituskoneen lopusta ja hoitaa
+   * vain luennan JÄLKEISEN kommentin. Ilman luentaa kommentti tulee
+   * heti tauon jälkeen kuten ennenkin.
    */
   kommenttiLuennanJalkeen();
   return true;

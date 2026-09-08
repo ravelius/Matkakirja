@@ -177,8 +177,9 @@ export const FOKUSVIRTA_MARSEILLE = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Marseille, syyskuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Marseille, syyskuussa 1873. Mistral puhaltaa; taivas sininen.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Vanha satama haisee kalalta, tervalta ja saippualta — täällä '
       + 'keitetään saippuaa, jota myydään koko maailmalle vihreinä '

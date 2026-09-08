@@ -160,8 +160,9 @@ export const FOKUSVIRTA_OSLO = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan. */
-    paikkarivi: 'Kristiania, heinäkuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Kristiania, heinäkuussa 1873. Valoisaa myöhään; vuono tyyni.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Kaupungin nimi on Kristiania, ja se on nuori pääkaupunki '
       + 'vanhassa maassa: katuja vedetään suoriksi, yliopisto on täynnä ja '

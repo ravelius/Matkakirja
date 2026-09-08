@@ -4423,6 +4423,49 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 }
 
 /*
+ * PAIKKA JA AIKA OTSIKKONA, TUNNELMA SEN ALLA (omistaja 8.9.2026,
+ * sanatarkasti: *"matkakirjan tekstiotsikon voisi vaihtaa suoraan
+ * muotoon «Sarajevo, syyskuussa 1873». Se olisi yhtä paksulla kuin
+ * «Matkapäiväkirja» teksti jonka se korvaa. Sen alapuolella olisi
+ * kursiivilla ja pienemmällä «Kirkas ilta; vuoret lähellä»."*).
+ *
+ * Sama paino, sama kirjasin ja sama väri kuin entisellä otsakkeella —
+ * vain versaalit ja niiden harva kirjainväli väistyvät, koska
+ * "SARAJEVO, SYYSKUUSSA 1873" olisi huutoa eikä päiväkirjan käsialaa.
+ * Kirjasinkoko nousee hitusen: pienaakkoset näyttävät samalla koolla
+ * kevyemmiltä kuin versaalit.
+ *
+ * RIVILAATIKKO EI OLE ENÄÄ VAKIO. Otsake mahtui aina yhdelle riville,
+ * joten sen rivimitta sai olla kaiuttimen korkuinen (ks. .fact-card h2).
+ * Paikka ja aika on pidempi ja kiertyy puhelimella kahdelle riville:
+ * rivimitta tulee siis tekstistä ja kaiuttimen tilanvaraus jää
+ * vähimmäiskorkeudeksi.
+ */
+.fact-card h2.paikka-aika {
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 0.86rem;
+  line-height: 1.25;
+  min-height: var(--kaiutin-koko);
+}
+
+/*
+ * Tunnelmarivi: sään ja tunnelman virke otsikon alla — pienempi,
+ * kursiivi ja himmeämpi kuin muut paikkarivit, jotta se lukee
+ * alaotsikkona eikä toisena otsikkona.
+ */
+.fact-place.tunnelma {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.74rem;
+  letter-spacing: 0.01em;
+  opacity: 0.85;
+}
+
+/* Tyhjä paikkarivi ei varaa väliä otsikon ja merkinnän välistä. */
+.fact-place:empty { display: none; }
+
+/*
  * YHDEN RIVIN LAPUN OMA PAIKKARIVI (omistajan pelitestipalaute v1119:
  * *"kun laatikko pienenee yhdelle riville, rivillä saa näkyä VAIN
  * otsikko ja kaupungin nimi — ei päivämäärää, säätä eikä tekstin
@@ -9632,7 +9675,11 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * isolla fontilla kortti peitti kartasta liian ison kaistan. Koko
    * merkinnän saa auki napauttamalla, joten pieni ikkuna riittää. */
   .fact-card h2 { font-size: 0.68rem; margin-bottom: 0.2rem; }
+  /* Paikka ja aika seuraa samaa pienennystä (ks. .fact-card
+     h2.paikka-aika): luokka voittaa muuten koon kapeallakin ruudulla. */
+  .fact-card h2.paikka-aika { font-size: 0.76rem; }
   .fact-place { font-size: 0.7rem; margin-bottom: 0.15rem; }
+  .fact-place.tunnelma { font-size: 0.66rem; }
   /* Yhden rivin lapun korkeus seuraa samaa pienennystä. */
   .fact-card { --pieni-rivi: 0.7rem; }
   .fact-text { font-size: 0.78rem; line-height: 1.35; }

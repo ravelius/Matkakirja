@@ -141,12 +141,13 @@ export const FOKUSVIRTA_LISSABON = {
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
     /*
-     * PAIKKARIVI ON KAANONIA SELLAISENAAN. Aallon 3 kaupungeissa
-     * paikkariviin on kirjoitettu jatkoksi sään tai tunnelman lause,
-     * mutta siellä rivi oli kirjoittajan omaa; tässä aallossa Fable on
-     * antanut paikkarivin osana kaanonia, joten siihen ei lisätä mitään.
+     * PAIKKARIVI ON KAANONIA SELLAISENAAN. Ensimmäinen virke (paikka ja
+     * aika) on Fablen kaanonia alusta asti; toinen virke on hänen
+     * 8.9.2026 kirjoittamansa tunnelmarivi, joka näkyy kortilla otsikon
+     * alla kursiivilla (js/ui-apurit.js matkakirjanOtsikko). Kumpaakaan
+     * ei muotoilla uusiksi.
      */
-    paikkarivi: 'Lissabon, lokakuussa 1873',
+    paikkarivi: 'Lissabon, lokakuussa 1873. Tuulista; Tejolla valkoisia harjoja.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Tämä kaupunki tuntee maan vihan: sata vuotta sitten se kaatui '
       + 'järistykseen, paloi ja hukkui samana aamuna, ja rakennettiin '

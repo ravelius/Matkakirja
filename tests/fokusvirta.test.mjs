@@ -318,8 +318,9 @@ test('jokaisella fokuskaupungilla on Livian puheenvuoro isoisän merkintään', 
 });
 
 /*
- * UUDEN KULUN KAUPUNGIT: alustus ennen luentaa, yksi välihuuto luennan
- * aikana ja kommentti sen jälkeen (Raamattu, KAUPUNGIN KULKU).
+ * UUDEN KULUN KAUPUNGIT: yksi välihuuto luennan aikana ja kommentti sen
+ * jälkeen (Raamattu, KAUPUNGIN KULKU — ja sen kavennus 8.9.2026, jolla
+ * alustus poistui joka kaupungista).
  * Huudahduksen `kohta` on ajoituksen ankkuri, ja sen on esiinnyttävä
  * matkakirjan tekstissä TASAN KERRAN — muuten välihuuto tulisi väärään
  * kohtaan tai ei lainkaan, eikä mikään kaatuisi.
@@ -330,8 +331,14 @@ test('uuden kulun huudahdus osuu matkakirjan tekstiin tasan kerran', () => {
     const huudahdus = virta.pollo?.huudahdus;
     if (!huudahdus) continue;
     uusia += 1;
-    assert.ok(livianKuplat(virta.pollo?.alustus).length === 1,
-      `${kaupunki}: alustus on tasan yksi kupla`);
+    /*
+     * ALUSTUSTA EI OLE (omistaja 8.9.2026: *"ota kaikki pulun
+     * alustukset pois."*). Kenttä ei saa palata takaovesta: peli ei enää
+     * lue sitä (js/fokusvirta.js kulunKuplat), joten pakkaukseen jäänyt
+     * teksti olisi kuollutta kaanonia.
+     */
+    assert.equal(virta.pollo?.alustus, undefined,
+      `${kaupunki}: alustus on poistettu kaikista kaupungeista`);
     const teksti = virta.matkakirja?.teksti ?? '';
     assert.ok(huudahdus.kohta, `${kaupunki}: huudahduksen kohta puuttuu`);
     assert.equal(teksti.split(huudahdus.kohta).length - 1, 1,
@@ -1179,4 +1186,72 @@ test('lehtivinkin kupla on ruksiton ja puhuu pulun äänellä', async () => {
   // Avainsana ympyröidään ja repliikki luetaan pulun äänellä.
   assert.match(virta, /LIVIAN_LEHTIVINKIN_SANA, \{ tyyppi: 'circle'/);
   assert.match(virta, /soitaLivianAani\(ui, 'lehtivinkki', 0, \{ teksti: LIVIAN_LEHTIVINKKI \}\);/);
+});
+
+/* ---------- matkakirjakortin otsikko (omistaja 8.9.2026) ---------- */
+
+/*
+ * OTSIKKONA PAIKKA JA AIKA, ALLA TUNNELMA, sanatarkasti: *"matkakirjan
+ * tekstiotsikon voisi vaihtaa suoraan muotoon «Sarajevo, syyskuussa
+ * 1873» … Sen alapuolella olisi kursiivilla ja pienemmällä «Kirkas
+ * ilta; vuoret lähellä»."*
+ *
+ * Jako tehdään koodissa eikä datassa (kohtausrivi on yksi kaanonin
+ * kenttä), joten juuri se jako on se kohta, joka voi hiljaa mennä
+ * rikki: väärä katkaisu näkyisi vasta pelaajalle.
+ */
+test('matkakirjan otsikko on paikka ja aika, tunnelma sen alla', async () => {
+  const { matkakirjanOtsikko } = await import('../js/ui-apurit.js');
+  assert.deepEqual(
+    matkakirjanOtsikko('Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä.', 'Sarajevo'),
+    { otsikko: 'Sarajevo, syyskuussa 1873', tunnelma: 'Kirkas ilta; vuoret lähellä' },
+  );
+  // Pitkä toinen virke kelpaa tunnelmaksi sellaisenaan (css rivittää).
+  assert.deepEqual(
+    matkakirjanOtsikko('Helsingfors, kesällä 1873. Tulin mereltä, ja kaupunki oli iso.'),
+    { otsikko: 'Helsingfors, kesällä 1873', tunnelma: 'Tulin mereltä, ja kaupunki oli iso' },
+  );
+  // Kohtausrivi ilman toista virkettä: pelkkä otsikko.
+  assert.deepEqual(matkakirjanOtsikko('Riika, heinäkuussa 1873'),
+    { otsikko: 'Riika, heinäkuussa 1873', tunnelma: '' });
+  // Kaupunki ilman kirjoitettua kohtausriviä saa matkan vuoden.
+  assert.deepEqual(matkakirjanOtsikko('Kreeta', 'Kreeta'),
+    { otsikko: 'Kreeta, 1873', tunnelma: '' });
+  assert.deepEqual(matkakirjanOtsikko('', 'Kreeta'), { otsikko: 'Kreeta, 1873', tunnelma: '' });
+  // Muu rivi ilman vuosilukua jää omaksi otsikokseen (aarremerkintä).
+  assert.deepEqual(matkakirjanOtsikko('Isoisän merkintä · Ateena', 'Ateena'),
+    { otsikko: 'Isoisän merkintä · Ateena', tunnelma: '' });
+});
+
+test('jokaisen kohtausrivin otsikko ja tunnelma ovat luettavia', async () => {
+  const { matkakirjanOtsikko } = await import('../js/ui-apurit.js');
+  for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT)) {
+    const rivi = virta.matkakirja?.paikkarivi;
+    if (!rivi) continue;
+    const { otsikko, tunnelma } = matkakirjanOtsikko(rivi, kaupunki);
+    // Otsikossa on paikka ja aika — ja aina matkan vuosi.
+    assert.match(otsikko, /,/, `${kaupunki}: otsikossa ei ole paikkaa ja aikaa`);
+    assert.match(otsikko, /18\d\d$/, `${kaupunki}: otsikko ei pääty vuosilukuun: ${otsikko}`);
+    assert.ok(!otsikko.endsWith('.'), `${kaupunki}: otsikossa on loppupiste`);
+    // Tunnelmarivi on kirjoitettu jokaiselle (Fablen kaanon 8.9.2026).
+    assert.ok(tunnelma.length > 0, `${kaupunki}: tunnelmarivi puuttuu`);
+    assert.ok(!tunnelma.endsWith('.'), `${kaupunki}: tunnelmarivissä on loppupiste`);
+  }
+});
+
+test('matkakirjakortti näyttää otsikon ja tunnelman omina riveinään', async () => {
+  const { readFileSync } = await import('node:fs');
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  // Otsakkeen tilalla on kohtausrivin paikka ja aika.
+  assert.doesNotMatch(ui, /factVoiceEl\.textContent = 'Matkapäiväkirja'/);
+  assert.match(ui, /this\.asetaMatkakirjanOtsikko\(merkinta\.paikkarivi, virtaKaupunki\.name\);/);
+  // Tunnelmarivi on paikkarivin elementissä omalla luokallaan, ja
+  // lyhyt muoto jää tyhjäksi: otsikossa on jo kaupungin nimi.
+  assert.match(ui, /this\.asetaPaikkarivi\(tunnelma, '', \{ tunnelma: true \}\);/);
+  // Muut kortin haarat purkavat tyylin (asetaOtsake).
+  assert.match(ui, /this\.asetaOtsake\('Isoisän aikataulusta'\);/);
+  // Kursiivi, pienempi ja himmeämpi — ja otsikko ilman versaaleja.
+  assert.match(css, /\.fact-card h2\.paikka-aika \{[^}]*text-transform: none;/);
+  assert.match(css, /\.fact-place\.tunnelma \{[^}]*font-style: italic;/);
 });

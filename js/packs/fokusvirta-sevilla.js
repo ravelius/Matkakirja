@@ -164,8 +164,9 @@ export const FOKUSVIRTA_SEVILLA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Sevilla, huhtikuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Sevilla, huhtikuussa 1873. Appelsiinipuut kukassa; ilma raskas tuoksusta.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Guadalquivir tuo meren hajun kolmekymmentä peninkulmaa '
       + 'sisämaahan, ja sen rannalla seisoo kultainen torni, jonka nimi '

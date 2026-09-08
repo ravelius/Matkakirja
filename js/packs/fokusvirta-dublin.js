@@ -185,7 +185,7 @@ export const FOKUSVIRTA_DUBLIN = {
   /* ---------- 1. Matkakirja (isoisän ääni, ei kuvaa) ---------- */
   matkakirja: {
     /* KAANON (Fable 29.8.2026) — paikkarivi sellaisenaan. */
-    paikkarivi: 'Dublin, syyskuussa 1873',
+    paikkarivi: 'Dublin, syyskuussa 1873. Tihkusadetta; kadut kiiltävät.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Liffeyn rannalla tuoksuu mallas: panimo on täällä kokonainen '
       + 'kaupunginosa, ja sen tummaa juomaa lastataan proomuihin kuin '

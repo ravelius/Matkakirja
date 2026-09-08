@@ -107,8 +107,8 @@ import {
 } from '../js/livia.js';
 import {
   LIVIAN_AANIJUURI, LIVIAN_AANITETTY_PALJASTUS, LIVIAN_AANITETYT,
-  LIVIAN_KAUPUNKILAHTEET, LIVIAN_LINSSILAHTEET, livianAanitykset, livianKaupunkiKentat,
-  livianKentanKuplat, livianKenttaPinoutuu, livianTiiviste,
+  LIVIAN_KAUPUNKILAHTEET, LIVIAN_LINSSILAHTEET, LIVIAN_VARATTU, livianAanitykset,
+  livianKaupunkiKentat, livianKentanKuplat, livianKenttaPinoutuu, livianTiiviste,
 } from '../js/liviapuhe.js';
 import { IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
@@ -269,6 +269,8 @@ export function pinoutuvatRepliikit() {
   const avaimet = new Set();
   for (const kaupunkiId of Object.keys(LIVIAN_KAUPUNKILAHTEET)) {
     for (const { kentta, kuplat, alku } of livianKaupunkiKentat(kaupunkiId)) {
+      // Varattu paikka ei ole kupla eikä siis pinoudu (LIVIAN_VARATTU).
+      if (kentta === LIVIAN_VARATTU) continue;
       if (livianKenttaPinoutuu(kentta, kuplat)) avaimet.add(`${kaupunkiId}-${alku + 1}`);
     }
   }
@@ -335,14 +337,20 @@ export const TAGIT = {
   /*
    * EUROOPAN KAUPUNKIREPLIIKIT (omistajan hyväksymät tekstit 7.9.2026,
    * erät 1 ja 2). Yksi rivi per KUPLA, koska jokainen kupla on oma
-   * äänitiedostonsa. Alkutagi antaa kulun hetkelle sävyn — alustus on
-   * utelias, huudahdus on välihuuto, kommentti reipas — ja kaikutagia ei
-   * ole yhdessäkään, koska kaiku otettiin pois pulun alusta
-   * (js/liviapuhe.js LIVIAN_KAIKU).
+   * äänitiedostonsa. Alkutagi antaa kulun hetkelle sävyn — huudahdus on
+   * välihuuto, kommentti reipas — ja kaikutagia ei ole yhdessäkään,
+   * koska kaiku otettiin pois pulun alusta (js/liviapuhe.js
+   * LIVIAN_KAIKU).
+   *
+   * NUMERO 1 PUUTTUU JOKA KAUPUNGILTA (8.9.2026): siinä oli alustus,
+   * joka poistettiin pelistä (omistaja: *"ota kaikki pulun alustukset
+   * pois."*). Numero on varattu (js/liviapuhe.js LIVIAN_VARATTU) eikä
+   * sillä ole enää tekstiä, joten sillä ei ole tagejakaan.
    */
-  'sofia-1': { alku: '[curious]', kohdat: [['Helteistä, tomu', '[warmly]']] },
   'sofia-2': { alku: '[squawks]' },
-  'sofia-3': { alku: '[brightly]', kohdat: [['Hurja juttu,', '[quickly]']] },
+  // Teksti muuttui 8.9.2026: alusta poistui toistuva "Kääk.", joten
+  // korostus on nyt lauseen lopussa eikä sen alussa.
+  'sofia-3': { alku: '[brightly]', kohdat: [['luin sen', '[quickly]']] },
   'sofia-4': { alku: '[brightly]', kohdat: [['Ei se', '[quickly]']] },
   'sofia-5': { alku: '[helpfully]' },
   'sofia-6': { alku: '[helpfully]' },
@@ -354,73 +362,56 @@ export const TAGIT = {
   'sofia-12': { alku: '[casually]', kohdat: [['Se palaa', '[amused]']] },
   'sofia-13': { alku: '[breathless]', kohdat: [['Pöllö oli', '[amused]']] },
   'sofia-14': { alku: '[breathless]', kohdat: [['Katso alas.', '[amused]']] },
-  'istanbul-1': { alku: '[curious]', kohdat: [['Sumua salmella,', '[warmly]']] },
   'istanbul-2': { alku: '[squawks]' },
   'istanbul-3': { alku: '[brightly]' },
   'istanbul-4': { alku: '[brightly]' },
   'istanbul-5': { alku: '[brightly]', kohdat: [['Se pylväs.', '[quickly]']] },
-  'bukarest-1': { alku: '[curious]', kohdat: [['Ensimmäinen halla,', '[warmly]']] },
   'bukarest-2': { alku: '[squawks]' },
   'bukarest-3': { alku: '[brightly]' },
   'bukarest-4': { alku: '[brightly]', kohdat: [['Ja torni', '[quickly]']] },
-  'sarajevo-1': { alku: '[curious]', kohdat: [['Kirkas ilta,', '[warmly]']] },
   'sarajevo-2': { alku: '[squawks]' },
   'sarajevo-3': { alku: '[brightly]', kohdat: [['Mut postinkantajalle', '[quickly]']] },
   'sarajevo-4': { alku: '[brightly]', kohdat: [['Herätä sai', '[quickly]']] },
-  'budapest-1': { alku: '[curious]', kohdat: [['Harmaata, joelta', '[warmly]']] },
   'budapest-2': { alku: '[squawks]' },
   'budapest-3': { alku: '[brightly]', kohdat: [['marraskuuta 1873.', '[quickly]']] },
   'budapest-4': { alku: '[brightly]', kohdat: [['Nyt osoite', '[quickly]']] },
-  'wien-1': { alku: '[curious]', kohdat: [['Sadekuuroja, ilmanpuntari', '[warmly]']] },
   'wien-2': { alku: '[squawks]' },
   'wien-3': { alku: '[brightly]' },
   'wien-4': { alku: '[brightly]', kohdat: [['Raha kaatui', '[quickly]']] },
-  'praha-1': { alku: '[curious]', kohdat: [['Kirkasta, yöllä', '[warmly]']] },
   'praha-2': { alku: '[squawks]' },
   'praha-3': { alku: '[brightly]', kohdat: [['Sellaisen minä', '[quickly]']] },
   'praha-4': { alku: '[brightly]' },
-  'krakova-1': { alku: '[curious]', kohdat: [['Kuuntele tarkkaan,', '[warmly]']] },
   'krakova-2': { alku: '[squawks]' },
   'krakova-3': { alku: '[brightly]' },
   'krakova-4': { alku: '[brightly]', kohdat: [['Tarinoita on', '[quickly]']] },
-  'varsova-1': { alku: '[curious]', kohdat: [['Kaduilla puhutaan', '[warmly]']] },
   'varsova-2': { alku: '[squawks]', kohdat: [['Hyvä sisar.', '[quickly]']] },
   'varsova-3': { alku: '[brightly]', kohdat: [['Sydän on', '[quickly]']] },
   'varsova-4': { alku: '[brightly]' },
-  'pietari-1': { alku: '[curious]', kohdat: [['Aurinko ei', '[warmly]']] },
   'pietari-2': { alku: '[squawks]' },
   'pietari-3': { alku: '[brightly]' },
   'pietari-4': { alku: '[brightly]', kohdat: [['Kadut ovat', '[quickly]']] },
-  'moskova-1': { alku: '[curious]', kohdat: [['Kuuntele kelloja,', '[warmly]']] },
   'moskova-2': { alku: '[squawks]' },
   'moskova-3': { alku: '[brightly]' },
   'moskova-4': { alku: '[brightly]', kohdat: [['Kellot soivat', '[quickly]']] },
-  'kiova-1': { alku: '[curious]', kohdat: [['Kaupunki on', '[warmly]']] },
   'kiova-2': { alku: '[squawks]' },
   'kiova-3': { alku: '[brightly]' },
   'kiova-4': { alku: '[brightly]', kohdat: [['Hunajaa myydään', '[quickly]']] },
-  'odessa-1': { alku: '[curious]', kohdat: [['Satamassa puhutaan', '[warmly]']] },
   'odessa-2': { alku: '[squawks]' },
   'odessa-3': { alku: '[brightly]' },
   'odessa-4': { alku: '[brightly]', kohdat: [['Portaat kuuluisiksi', '[quickly]']] },
-  'helsinki-1': { alku: '[curious]', kohdat: [['Isoisä tuli', '[warmly]']] },
   'helsinki-2': { alku: '[squawks]' },
   'helsinki-3': { alku: '[brightly]', kohdat: [['Siinä hän', '[quickly]']] },
   'helsinki-4': { alku: '[brightly]', kohdat: [['Sama torni', '[quickly]']] },
-  'tampere-1': { alku: '[curious]', kohdat: [['Kahden järven', '[warmly]']] },
   'tampere-2': { alku: '[squawks]' },
   'tampere-3': { alku: '[brightly]' },
   'tampere-4': { alku: '[brightly]' },
-  'tallinna-1': { alku: '[curious]', kohdat: [['Satamasta on', '[warmly]']] },
   'tallinna-2': { alku: '[squawks]' },
   'tallinna-3': { alku: '[brightly]', kohdat: [['Ennen sitä', '[quickly]']] },
   'tallinna-4': { alku: '[brightly]', kohdat: [['Meiltä vietiin', '[quickly]']] },
-  'riika-1': { alku: '[curious]', kohdat: [['Apteekkari tarjosi', '[warmly]']] },
   'riika-2': { alku: '[squawks]' },
   'riika-3': { alku: '[brightly]' },
   'riika-4': { alku: '[brightly]', kohdat: [['Turistit katuvat', '[quickly]']] },
   'riika-5': { alku: '[brightly]' },
-  'vilna-1': { alku: '[curious]', kohdat: [['Isoisä laski', '[warmly]']] },
   'vilna-2': { alku: '[squawks]' },
   'vilna-3': { alku: '[brightly]' },
   'vilna-4': { alku: '[brightly]' },
@@ -527,7 +518,7 @@ export function linssinRepliikit(linssi) {
  * Yhden kaupungin repliikkitekstit LIVIAN_KAUPUNKILAHTEET-järjestyksessä
  * — YKSI KUPLA = YKSI RIVI (omistaja 7.9.2026).
  *
- * `alustus`, `huudahdus`, `kommentti` (ja varapolun `maadoitus`) ovat
+ * `huudahdus` ja `kommentti` (ja varapolun `maadoitus`) ovat
  * pöllökuplan kenttiä (pollo.<kenttä>) ja loput sähketehtävän vaiheita
  * (sahketehtava.<kenttä>, js/fokusvirta.js); livianKentanKuplat tuntee
  * kummankin lohkon ja normalisoi yhden merkkijonon — ja huudahduksen
@@ -546,6 +537,16 @@ export function kaupunginRepliikit(kaupunkiId) {
   if (!pakkaus) return [];
   const rivit = [];
   for (const { kentta, kuplat } of livianKaupunkiKentat(kaupunkiId)) {
+    /*
+     * VARATTU PAIKKA ON TYHJÄ RIVI (8.9.2026). Poistetun alustuksen
+     * numero pysyy varattuna, jotta seuraavat kuplat pitävät omat
+     * tiedostonsa — tyhjä teksti karsiutuu äänitettävien listalta
+     * (js/liviapuhe.js livianAanitykset) mutta pitää järjestysnumeron.
+     */
+    if (kentta === LIVIAN_VARATTU) {
+      rivit.push(...Array.from({ length: kuplat }, () => ''));
+      continue;
+    }
     const tekstit = livianKentanKuplat(pakkaus, kentta);
     if (tekstit.length !== kuplat) {
       throw new Error(`${kaupunkiId}.${kentta}: pakkauksessa on ${tekstit.length} kuplaa, `

@@ -135,8 +135,9 @@ export const FOKUSVIRTA_AMSTERDAM = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, vain piste lisätty. */
-    paikkarivi: 'Amsterdam, toukokuussa 1873.',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Amsterdam, toukokuussa 1873. Tuulista; kanavat väreilevät.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Tämä kaupunki on rakennettu veteen lyötyjen paalujen '
       + 'varaan, ja minusta tuntuu, että myös sen omaisuus seisoo '

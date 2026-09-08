@@ -557,6 +557,55 @@ export function ekaLause(teksti) {
   return { eka: m[0], loput: teksti.slice(m[0].length).trimStart() };
 }
 
+/**
+ * MATKAKIRJAKORTIN OTSIKKO JA TUNNELMARIVI (omistaja 8.9.2026,
+ * sanatarkasti: *"matkakirjan tekstiotsikon voisi vaihtaa suoraan
+ * muotoon «Sarajevo, syyskuussa 1873». Se olisi yhtä paksulla kuin
+ * «Matkapäiväkirja» teksti jonka se korvaa. Sen alapuolella olisi
+ * kursiivilla ja pienemmällä «Kirkas ilta; vuoret lähellä»."*).
+ *
+ * Kortin otsikko oli ennen sama sana joka kaupungissa
+ * (MATKAPÄIVÄKIRJA) ja merkinnän kohtausrivi luki sen alla kokonaan.
+ * Nyt sama rivi jaetaan kahtia: PAIKKA JA AIKA nousee otsikoksi ja SÄÄ
+ * JA TUNNELMA jää sen alle omalla, kursiivilla ladotulla rivillään.
+ *
+ * JAKO TEHDÄÄN TÄSSÄ EIKÄ DATASSA. Kohtausrivi on kaanonia
+ * (js/packs/fokusvirta-<id>.js `matkakirja.paikkarivi`) ja sen muoto on
+ * vakio — *"Paikka, kuussa 1873. Sää; tunnelma."* — joten kahdeksi
+ * kentäksi paloittelu tarkoittaisi 38 pakkauksen muokkausta ilman että
+ * yksikään sana muuttuisi. Yksi kenttä pysyy myös luettavana
+ * kaanoninlukijalle, joka kirjoittaa rivin yhtenä ajatuksena.
+ *
+ * VUOSILUKU RATKAISEE. Vain kohtausrivi sisältää vuosiluvun, ja sen
+ * puuttuminen kertoo, että kutsupaikka antoi jotain muuta — pelkän
+ * kaupungin nimen (kaupunki, jolle kohtausriviä ei ole vielä
+ * kirjoitettu) tai aarremerkinnän oman rivin. Ensimmäinen saa
+ * otsikokseen *"Kaupunki, 1873"*, jälkimmäinen kulkee läpi
+ * sellaisenaan.
+ *
+ * @param {string} paikkarivi merkinnän kohtausrivi
+ * @param {string} [kaupunki] kaupungin nimi varamuotoa varten
+ * @returns {{otsikko: string, tunnelma: string}} kumpikin ilman
+ *   loppupistettä; tyhjä tunnelma tarkoittaa, ettei riviä piirretä.
+ */
+export function matkakirjanOtsikko(paikkarivi, kaupunki = '') {
+  const rivi = String(paikkarivi ?? '').trim();
+  const nimi = String(kaupunki ?? '').trim();
+  const ilmanPistetta = (teksti) => teksti.trim().replace(/\s*\.$/, '');
+  if (/\b1\d{3}\b/.test(rivi)) {
+    const raja = rivi.search(/\.\s/);
+    if (raja < 0) return { otsikko: ilmanPistetta(rivi), tunnelma: '' };
+    return {
+      otsikko: ilmanPistetta(rivi.slice(0, raja)),
+      tunnelma: ilmanPistetta(rivi.slice(raja + 1)),
+    };
+  }
+  // Ilman vuosilukua: kaupungin oma nimi saa vuoden, muu rivi jää omaksi
+  // otsikokseen (esim. aarremerkinnän "Isoisän merkintä · Ateena").
+  if (!rivi || rivi === nimi) return { otsikko: nimi ? `${nimi}, 1873` : '', tunnelma: '' };
+  return { otsikko: ilmanPistetta(rivi), tunnelma: '' };
+}
+
 /*
  * Lehden etusivun leipäteksti kappaleina ja maltillisin lihavoinnein
  * (omistaja 20.8.2026: "Kokeile jakaa pariin kappaleeseen ja lisäksi

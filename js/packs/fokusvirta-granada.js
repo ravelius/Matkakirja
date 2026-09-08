@@ -215,8 +215,9 @@ export const FOKUSVIRTA_GRANADA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Granada, huhtikuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Granada, huhtikuussa 1873. Kirkasta; Sierra Nevadalla vielä lunta.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Linna kukkulalla on kaunein raunio jonka olen '
       + 'nähnyt — paitsi ettei se ole raunio: sen saleissa asuu köyhiä '

@@ -26,9 +26,11 @@
  *       äänessä. Mitta on PÄÄTÖSHETKI eikä kuultu ääni: kontissa
  *       tiedosto lähtee soimaan sekuntien päästä kutsusta, ja se
  *       peittäisi juuri sen ilmiön, jota mitataan.
- *   R3  JÄRJESTYS SÄILYY: ensimmäisessä kaupungissa pulun alustus soi
- *       ENNEN isoisän luentaa (Raamattu: KAUPUNGIN KULKU — PULU,
- *       LUENTA, PULU).
+ *   R3  JÄRJESTYS SÄILYY: ensimmäisessä kaupungissa ISOISÄ ALOITTAA —
+ *       kertojan luenta lähtee ennen pulun ensimmäistä repliikkiä
+ *       (Raamattu: KAUPUNGIN KULKU, ja sen kavennus 8.9.2026, jolla
+ *       alustuskupla poistui: pulu puhuu vasta luennan aikana ja sen
+ *       jälkeen).
  *
  * VERKKO: äänet tulevat ämpäristä Noden kautta (CLAUDE.md:
  * NODE_USE_ENV_PROXY=1), kuten savuke-pulu-ateenassa.
@@ -274,12 +276,18 @@ for (const kertoja of aanet.filter((r) => /puhe-/.test(r.src))) {
 vaadi('R2 kertoja ei aloita pulun repliikin päälle',
   paallekkaiset.length === 0, paallekkaiset.join('; '));
 
-/* R3: alustus ennen luentaa ensimmäisessä kaupungissa. */
+/*
+ * R3: isoisä aloittaa ensimmäisessä kaupungissa.
+ *
+ * Alustuskupla ennen luentaa on poistettu (omistaja 8.9.2026: *"ota
+ * kaikki pulun alustukset pois."*), joten ensimmäinen pulun repliikki on
+ * välihuuto KESKEN luennan — sen on siis alettava luennan jälkeen.
+ */
 const ekaPulu = puluJaksot[0]?.a ?? null;
 const ekaLuenta = aanet.find((r) => /puhe-/.test(r.src))?.kutsuttu ?? null;
-vaadi('R3 pulun alustus soi ennen isoisän luentaa',
-  ekaPulu !== null && ekaLuenta !== null && ekaPulu < ekaLuenta,
-  `pulu ${ekaPulu}, luenta ${ekaLuenta}`);
+vaadi('R3 isoisän luenta alkaa ennen pulun ensimmäistä repliikkiä',
+  ekaPulu !== null && ekaLuenta !== null && ekaLuenta < ekaPulu,
+  `luenta ${ekaLuenta}, pulu ${ekaPulu}`);
 
 vaadi('sivu ei kaatunut', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 

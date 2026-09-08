@@ -40,6 +40,9 @@
  *      (laitteen loki 'matkakirja-livia-loki').
  *   7. Laajennettu pino nostaa saman lokin aiemmat puheenvuorot kartan
  *      päälle kelattaviksi — oletustilassa historiaa EI haeta.
+ *   8. UUSI KAUPUNKI TYHJENTÄÄ PINON (omistaja 8.9.2026, sanatarkasti:
+ *      *"Pulun puhekuplat pitää tyhjentyä kun tullaan uuteen
+ *      kaupunkiin"*): Riiassa sanottu ei saa jäädä Vilnan kuplien alle.
  *
  * Aja:  node tools/savukkeet/savuke-pulun-kuplat.mjs [kuvakansio]
  */
@@ -388,6 +391,51 @@ vaadi('laajennus nostaa lokin vanhat kuplat pinoon',
 vaadi('vanhat kuplat ovat samaa lokia kuin chatissa',
   historiaPinossa.teksti.includes('kesäkuussa 1873'), historiaPinossa.teksti.slice(0, 160));
 if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '6-pinon-historia.png') });
+
+/*
+ * 8. UUSI KAUPUNKI TYHJENTÄÄ PINON (omistaja 8.9.2026).
+ *
+ * Riika → Vilna kehittäjän hypyllä: lähtö vaientaa pulun ja häivyttää
+ * pinon (js/ui.js vaiennaPaikanPuhe), joten Vilnassa pinossa on vain
+ * Vilnan omat kuplat. Merkkiteksti on tahallaan sellainen, jota
+ * kaanonissa ei ole — silloin osuma kertoo varmasti edellisen kaupungin
+ * kuplasta eikä uuden kaupungin omasta puheesta.
+ */
+const RIIAN_MERKKI = 'Riiassa sanottu jää Riikaan, sanoi pulu.';
+const hyppaa = async (id) => {
+  await sivu.evaluate((kaupunki) => {
+    const { ui, game } = window.matkakirja;
+    ui.doKehittajaSiirto(game.board.cityById.get(kaupunki));
+  }, id);
+  await sivu.waitForTimeout(1500);
+};
+await hyppaa('riika');
+await puhu(RIIAN_MERKKI);
+const riiassa = await sivu.evaluate((merkki) => ({
+  kuplia: document.querySelectorAll('.pollo-kuplapino > *').length,
+  merkkiPinossa: [...document.querySelectorAll('.pollo-kuplapino > *')]
+    .some((k) => k.textContent.includes(merkki)),
+}), RIIAN_MERKKI);
+tieto('pino Riiassa', JSON.stringify(riiassa));
+vaadi('Riian kupla on pinossa ennen lähtöä', riiassa.merkkiPinossa, JSON.stringify(riiassa));
+
+await hyppaa('vilna');
+const vilnassa = await sivu.evaluate((merkki) => ({
+  kuplia: document.querySelectorAll('.pollo-kuplapino > *').length,
+  merkkiPinossa: [...document.querySelectorAll('.pollo-kuplapino > *')]
+    .some((k) => k.textContent.includes(merkki)),
+  lokissa: (() => {
+    try {
+      return JSON.parse(localStorage.getItem('matkakirja-livia-loki') ?? '[]')
+        .some((m) => String(m.t ?? '').includes(merkki));
+    } catch { return false; }
+  })(),
+}), RIIAN_MERKKI);
+tieto('pino Vilnassa', JSON.stringify(vilnassa));
+vaadi('Vilnassa pinossa on vain Vilnan kuplat',
+  vilnassa.merkkiPinossa === false, JSON.stringify(vilnassa));
+vaadi('Riian kupla säilyy chatin historiassa', vilnassa.lokissa, JSON.stringify(vilnassa));
+if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '7-uusi-kaupunki.png') });
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
 
