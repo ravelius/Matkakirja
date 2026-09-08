@@ -24,35 +24,34 @@ export const FOKUSVIRTA_ISLANTI = {
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
-    paikkarivi: 'Reykjavik, elokuussa 1873. Tuulista; ei yhtään puuta.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 390 merkkiä (yläraja 400). */
+    paikkarivi: 'Reykjavik, elokuussa 1873. Tuulista; ei yhtään puuta; '
+      + 'puntari matalalla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 392 merkkiä (yläraja 400). */
     teksti: 'Maasta nousee höyryä, vaikka mikään ei pala. Ratsastin päivän '
       + 'Thingvellirin rotkoon, jossa kansa on kokoontunut käräjille ennen '
-      + 'kuin Euroopassa oli yhtäkään kuningasta nykyisistä suvuista. Mittasin '
-      + 'kuuman lähteen, kunnes lämpömittarini suuttui. Saari, jossa on '
-      + 'tulivuoria ja parlamentti. Parlamentti on niistä vanhempi. '
-      + 'Kaupungissa on pari sataa taloa ja satama, joka tuo puun ja vie '
-      + 'kalan.',
+      + 'kuin Euroopassa oli kuninkaita. Mittasin kuuman lähteen, ja '
+      + 'lämpömittari halkesi kädessäni. Opas nauroi: edellinen '
+      + 'englantilainen keitti siinä munan ja hattunsa. Kartassani saaren '
+      + 'keskellä on tyhjää. Kartta ei valehtele, se vaikenee. Painolasti: '
+      + 'haljennut mittari.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
     luenta: '[curious] Maasta nousee höyryä, vaikka mikään ei pala. Ratsastin '
       + 'päivän Thingvellirin rotkoon, jossa kansa on kokoontunut käräjille '
-      + 'ennen kuin Euroopassa oli yhtäkään kuningasta nykyisistä suvuista. '
-      + 'Mittasin kuuman lähteen, kunnes lämpömittarini suuttui. Saari, jossa '
-      + 'on tulivuoria ja parlamentti. Parlamentti on niistä vanhempi. '
-      + '[softly] Kaupungissa on pari sataa taloa ja satama, joka tuo puun ja '
-      + 'vie kalan.',
+      + 'ennen kuin Euroopassa oli kuninkaita. Mittasin kuuman lähteen, ja '
+      + 'lämpömittari halkesi kädessäni. Opas nauroi: edellinen '
+      + 'englantilainen keitti siinä munan ja hattunsa. Kartassani saaren '
+      + 'keskellä on tyhjää. Kartta ei valehtele, se vaikenee. [softly] '
+      + 'Painolasti: haljennut mittari.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-islanti.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kaupunki kasvoi, ja puitakin on istutettu. Geysirin naapuri purkautuu yhä tasaisin välein. Puu on harvinaisempi kuin pulu.',
-      // kuittaus isoisälle
-      'Lämpömittari suuttui. Minä olisin sanonut sen ilmankin: kuumaa.',
+      'Kartta vaikenee, ja se on kartanpiirtäjälle pahempi kuin valhe. Kaupunki kasvoi, puita istutettiin. Puu on yhä harvinaisuus.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

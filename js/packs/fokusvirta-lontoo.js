@@ -128,33 +128,32 @@ export const FOKUSVIRTA_LONTOO = {
      * Wienissä (js/packs/fokusvirta-wien.js paikkarivi).
      */
     paikkarivi: 'Lontoo, joulukuussa 1873. Sumu niin sakea, ettei kadun '
-      + 'toista puolta erota.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 399 merkkiä (yläraja 400). */
-    teksti: 'Sumu on niin sakeaa, että karja kuoli näyttelyssä Islingtonissa, '
-      + 'ja pojat myyvät kadulla tietä soihtu kädessä. Se maistuu hiileltä. '
-      + 'Ajoin maan alla junalla. Vaunu oli täynnä savua ja herroja, jotka '
-      + 'lukivat lehteä kuin mitään ei tapahtuisi. Kirjoitin ensimmäiselle '
-      + 'sivulle säännön: älä usko ketään, joka väittää, ettei aarteita ole. '
-      + 'Piirsin viereen ristin liidulla, jotta muistan tarkoittaneeni sitä.',
+      + 'toista puolta erota; puntari matalalla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 396 merkkiä (yläraja 400). */
+    teksti: 'Ajuri talutti hevosta lyhty kädessä, ja minä kävelin perässä, '
+      + 'kaukana hevosesta, siis ojassa. Kaupunki loppui kymmenen askeleen '
+      + 'päähän. Kuulin kaiken enkä nähnyt mitään: kellot, kärryt, laulun '
+      + 'jostain kellarista. Hotellissa odotti sähke: G. on Doverissa. '
+      + 'Kirjoitin ensimmäiselle sivulle säännön: älä usko ketään, joka '
+      + 'väittää, ettei aarteita ole. Painolasti: ajurin lyhty. Hän möi sen '
+      + 'mielellään.',
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Sumu on niin sakeaa, että karja kuoli näyttelyssä '
-      + 'Islingtonissa, ja pojat myyvät kadulla tietä soihtu kädessä. Se '
-      + 'maistuu hiileltä. Ajoin maan alla junalla. Vaunu oli täynnä savua ja '
-      + 'herroja, jotka lukivat lehteä kuin mitään ei tapahtuisi. Kirjoitin '
-      + 'ensimmäiselle sivulle säännön: älä usko ketään, joka väittää, ettei '
-      + 'aarteita ole. [softly] Piirsin viereen ristin liidulla, jotta muistan '
-      + 'tarkoittaneeni sitä.',
+    luenta: '[curious] Ajuri talutti hevosta lyhty kädessä, ja minä kävelin '
+      + 'perässä, kaukana hevosesta, siis ojassa. Kaupunki loppui kymmenen '
+      + 'askeleen päähän. Kuulin kaiken enkä nähnyt mitään: kellot, kärryt, '
+      + 'laulun jostain kellarista. Hotellissa odotti sähke: G. on Doverissa. '
+      + 'Kirjoitin ensimmäiselle sivulle säännön: älä usko ketään, joka '
+      + 'väittää, ettei aarteita ole. Painolasti: ajurin lyhty. [softly] Hän '
+      + 'möi sen mielellään.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lontoo.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Isoisäsi oli oikeassa, sumu oli savua, ja se on poissa. Juna kulkee yhä maan alla. Torilla ei saa enää ruokkia meikäläisiä.',
-      // kuittaus isoisälle
-      'Risti liidulla, jotta muistaa. Minä muistan ilman ristiäkin. Se on sukuvika.',
+      'Hevosia hän kiertää kaukaa, ja sumussa se on oja. Sumu oli savua, isoisäsi oli oikeassa. Nyt se on poissa.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Westminsterin palatsi).

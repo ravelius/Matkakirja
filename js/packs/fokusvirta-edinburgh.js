@@ -157,38 +157,38 @@ export const FOKUSVIRTA_EDINBURGH = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Edinburgh, elokuussa 1873. Viileää; linna sumun yllä.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 389 merkkiä (yläraja 400). */
-    teksti: 'Kaupunki kiipeää kalliolle, ja sen yllä istuu linna, jota ei ole '
-      + 'vallattu rynnäköllä, nälällä kyllä. Vanhassa kaupungissa talot ovat '
-      + 'kymmenkerroksisia, ja köyhät asuvat ylhäällä ja rikkaat alhaalla. '
-      + 'Nurinkurisin järjestys, jonka olen nähnyt. Kirkkomaan portilla makasi '
-      + 'vuosia pieni koira, joka vartioi isäntänsä hautaa. Se kuoli viime '
-      + 'vuonna, ja kaupunki pystyttää sille nyt muistomerkkiä.',
+    paikkarivi: 'Edinburgh, elokuussa 1873. Viileää; linna sumun yllä; '
+      + 'puntari putoaa.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 400 merkkiä (yläraja 400). */
+    teksti: 'Jokainen, jolta kysyin tietä, vastasi aye ja osoitti ylämäkeen. '
+      + 'Luulin päivän, että aye on kaupunginosa. Se tarkoittaa kyllä. '
+      + 'Vanhassa kaupungissa talot ovat kymmenkerroksisia, köyhät ylhäällä '
+      + 'ja rikkaat alhaalla. Kirkkomaan portilla makasi vuosia koira, joka '
+      + 'vartioi isäntänsä hautaa. Se kuoli viime vuonna. Otin peilauksen sen '
+      + 'haudalta portille: neljätoista askelta. Koiralle pitkä matka joka '
+      + 'ilta.',
     /*
      * LUENTA: sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi: ruututeksti = luentateksti sanasta sanaan).
      * Kolme tagia, alku ja loppu eri sävyssä.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki kiipeää kalliolle, ja sen yllä istuu linna, '
-      + 'jota ei ole vallattu rynnäköllä, nälällä kyllä. Vanhassa kaupungissa '
-      + 'talot ovat kymmenkerroksisia, ja köyhät asuvat ylhäällä ja rikkaat '
-      + 'alhaalla. Nurinkurisin järjestys, jonka olen nähnyt. Kirkkomaan '
-      + 'portilla makasi vuosia pieni koira, joka vartioi isäntänsä hautaa. '
-      + '[softly] Se kuoli viime vuonna, ja kaupunki pystyttää sille nyt '
-      + 'muistomerkkiä.',
+    luenta: '[curious] Jokainen, jolta kysyin tietä, vastasi aye ja osoitti '
+      + 'ylämäkeen. Luulin päivän, että aye on kaupunginosa. Se tarkoittaa '
+      + 'kyllä. Vanhassa kaupungissa talot ovat kymmenkerroksisia, köyhät '
+      + 'ylhäällä ja rikkaat alhaalla. Kirkkomaan portilla makasi vuosia '
+      + 'koira, joka vartioi isäntänsä hautaa. Se kuoli viime vuonna. Otin '
+      + 'peilauksen sen haudalta portille: neljätoista askelta. [softly] '
+      + 'Koiralle pitkä matka joka ilta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-edinburgh.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Koiran patsas seisoo portilla, ja sen kuonoa hierotaan onneksi. Linnaa ei ole vallattu. Tuuli kalliolla on yhä yhtä paha.',
-      // kuittaus isoisälle
-      'Köyhät ylhäällä, rikkaat alhaalla. Meillä se on aina ollut ainoa oikea järjestys.',
+      'Peilaus on hänen mittauksensa askelin. Koira ei mitannut. Patsas seisoo portilla, kuonoa hierotaan onneksi. Minäkin, kerran.',
     ],
     teksti: 'Ja se isoisäsi ihmettelemä järjestys — köyhät ylhäällä — '
       + 'johtui savusta: mitä alempana asuit, sitä vähemmän piippuja '

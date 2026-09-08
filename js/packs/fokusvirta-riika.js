@@ -137,27 +137,27 @@ export const FOKUSVIRTA_RIIKA = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Riika, heinäkuussa 1873. Lämmintä; joella pellavan haju.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 395 merkkiä (yläraja 400). */
-    teksti: 'Väinäjoen rannassa lastataan pellavaa ja lankkuja niin pitkälle '
-      + 'kuin silmä kantaa. Tämä on keisarikunnan kolmas satama, vaikka '
-      + 'kaupunki puhuu saksaa, käy kauppaa kuin hansa ja rukoilee kuin '
-      + 'luterilainen. Apteekkari kaatoi minulle ryypyn mustaa juomaa, joka '
-      + 'maistui tervalta, yrteiltä ja erehdykseltä. Hän vannoi sen parantavan '
-      + 'kaiken. Kirjoitan tämän ylös siltä varalta, että se pitää paikkansa.',
+    paikkarivi: 'Riika, heinäkuussa 1873. Lämmintä; joella pellavan haju; '
+      + 'puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 337 merkkiä (yläraja 400). */
+    teksti: 'Apteekkari kaatoi ryypyn mustaa juomaa, joka maistui tervalta, '
+      + 'yrteiltä ja erehdykseltä, ja vannoi sen parantavan kaiken. Tein '
+      + 'K3:n: laivuri sanoi että vatsan, pappi sanoi että sielun, pesijätär '
+      + 'nauroi ja sanoi että miehen. Uskoin pesijätärtä ja join toisen. '
+      + 'Aamulla puntari oli pudonnut ja minä sen mukana. Painolasti: '
+      + 'savipullo, tyhjä.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Väinäjoen rannassa lastataan pellavaa ja lankkuja niin '
-      + 'pitkälle kuin silmä kantaa. Tämä on keisarikunnan kolmas satama, '
-      + 'vaikka kaupunki puhuu saksaa, käy kauppaa kuin hansa ja rukoilee kuin '
-      + 'luterilainen. Apteekkari kaatoi minulle ryypyn mustaa juomaa, joka '
-      + 'maistui tervalta, yrteiltä ja erehdykseltä. Hän vannoi sen parantavan '
-      + 'kaiken. [softly] Kirjoitan tämän ylös siltä varalta, että se pitää '
-      + 'paikkansa.',
+    luenta: '[curious] Apteekkari kaatoi ryypyn mustaa juomaa, joka maistui '
+      + 'tervalta, yrteiltä ja erehdykseltä, ja vannoi sen parantavan kaiken. '
+      + 'Tein K3:n: laivuri sanoi että vatsan, pappi sanoi että sielun, '
+      + 'pesijätär nauroi ja sanoi että miehen. Uskoin pesijätärtä ja join '
+      + 'toisen. Aamulla puntari oli pudonnut ja minä sen mukana. [softly] '
+      + 'Painolasti: savipullo, tyhjä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-riika.mp3',
   },
 
@@ -200,9 +200,9 @@ export const FOKUSVIRTA_RIIKA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Sitä mustaa juomaa myydään yhä savipulloissa. Paikalliset vannovat, turistit katuvat. Minä maistoin kerran. Kerran riitti.',
+      'K3 on kolmiomittaus: kolme vastausta, usko naurajaa. Mustaa juomaa myydään yhä savipulloissa. Maistoin kerran. Kerran riitti.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

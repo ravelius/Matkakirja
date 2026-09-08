@@ -124,24 +124,23 @@ export const FOKUSVIRTA_PRAHA = {
      * eteen aallon 2 sisällä. Sääkommentti on isoisän havainto eikä
      * mitattu väite.
      */
-    paikkarivi: 'Praha, lokakuussa 1873. Kirkasta; yön aikana '
-      + 'ensimmäinen halla.',
+    paikkarivi: 'Praha, lokakuussa 1873. Kirkasta; yön aikana ensimmäinen '
+      + 'halla; puntari korkealla.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    /* KAANON UUSIKSI (Fable, omistaja hyväksyi 8.9.2026 ilta): keisarin
-       kokoelma nimettynä, loppu selkeä. 383 merkkiä (yläraja 400). */
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 350 merkkiä (yläraja 400). */
     teksti: 'Prahassa on kello, joka näyttää auringon ja kuun paikan mutta ei '
-      + 'kiirettä. Jäin katsomaan sen kulkua ja myöhästyin ajurin kyydistä, '
-      + 'enkä kadu. Linnan mäellä opas kertoi keisarista, joka keräsi '
-      + 'saliinsa kaiken maailman ihmeet: sarvikuonon sarven, kellokoneita ja '
-      + 'tähtitieteilijän mittalaitteet. Sali on yhä olemassa, mutta ihmeet '
-      + 'vietiin sodissa pitkin Eurooppaa.',
+      + 'kiirettä. Tein K3:n siitä, mitä kellon nuket tekevät tasatunnein: '
+      + 'yksi sanoi että apostolit kävelevät, toinen että kuolema soittaa '
+      + 'kelloa, kolmas nauroi ja sanoi että väki katsoo ylös ja taskut '
+      + 'tyhjenevät. Uskoin kolmatta ja pidin kädet taskuissa. Myöhästyin '
+      + 'ajurin kyydistä enkä kadu.',
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Prahassa on kello, joka näyttää auringon ja kuun paikan '
-      + 'mutta ei kiirettä. Jäin katsomaan sen kulkua ja myöhästyin ajurin '
-      + 'kyydistä, enkä kadu. [warmly] Linnan mäellä opas kertoi keisarista, '
-      + 'joka keräsi saliinsa kaiken maailman ihmeet: sarvikuonon sarven, '
-      + 'kellokoneita ja tähtitieteilijän mittalaitteet. [softly] Sali on yhä '
-      + 'olemassa, mutta ihmeet vietiin sodissa pitkin Eurooppaa.',
+    luenta: '[curious] Prahassa on kello, joka näyttää auringon ja kuun '
+      + 'paikan mutta ei kiirettä. Tein K3:n siitä, mitä kellon nuket tekevät '
+      + 'tasatunnein: yksi sanoi että apostolit kävelevät, toinen että '
+      + 'kuolema soittaa kelloa, kolmas nauroi ja sanoi että väki katsoo ylös '
+      + 'ja taskut tyhjenevät. Uskoin kolmatta ja pidin kädet taskuissa. '
+      + '[softly] Myöhästyin ajurin kyydistä enkä kadu.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-praha.mp3',
   },
 
@@ -192,9 +191,9 @@ export const FOKUSVIRTA_PRAHA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: ei tuo lisähyötyä).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kello käy yhä torin laidalla. Joka tasatunti sen edessä seisoo väkijoukko puhelimet pystyssä. Sen päällä istuu joku meistä.',
+      'K3 on kolmiomittaus: kolme vastausta, usko naurajaa. Kello käy yhä torilla, ja väki seisoo puhelimet pystyssä. Minä päällä.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Kaarlensilta ja linna).

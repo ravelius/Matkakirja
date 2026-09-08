@@ -144,37 +144,37 @@ export const FOKUSVIRTA_BERGEN = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Bergen, kesäkuussa 1873. Sadetta aamusta iltaan; vuoret pilvessä.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 383 merkkiä (yläraja 400). */
-    teksti: 'Sataa. Kirjoitan tämän kapakan ikkunapöydässä, koska laiturilla '
-      + 'ei pysy paperi kuivana. Saksalaisten vanha kauppalaituri seisoo yhä, '
-      + 'puutalot kylki kyljessä kuin sillit tynnyrissä, ja silliltä täällä '
-      + 'myös tuoksuu. Kapakala on tämän kaupungin kulta. Sitä riippuu '
-      + 'telineillä tuhansittain, kuivana ja kovana kuin lauta, ja sillä on '
-      + 'ostettu nämä talot, kirkot ja puolet Norjan purjeista.',
+    paikkarivi: 'Bergen, kesäkuussa 1873. Sadetta aamusta iltaan; puntari '
+      + 'matalalla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 390 merkkiä (yläraja 400). */
+    teksti: 'Sataa. Kirjoitan kapakan ikkunapöydässä, koska laiturilla ei '
+      + 'pysy paperi kuivana. Kartassani Bergenin kohdalla on aurinko, '
+      + 'piirretty Lontoossa. Kartta valehtelee. Saksalaisten vanha '
+      + 'kauppalaituri seisoo yhä, puutalot kylki kyljessä kuin sillit '
+      + 'tynnyrissä, ja kapakala riippuu telineillä kuivana ja kovana kuin '
+      + 'lauta. Isäntä sanoi, että eilen paistoi. Painolasti: kuivattu kala. '
+      + 'Se ei kastu.',
     /*
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Sataa. Kirjoitan tämän kapakan ikkunapöydässä, koska '
-      + 'laiturilla ei pysy paperi kuivana. Saksalaisten vanha kauppalaituri '
-      + 'seisoo yhä, puutalot kylki kyljessä kuin sillit tynnyrissä, ja '
-      + 'silliltä täällä myös tuoksuu. Kapakala on tämän kaupungin kulta. '
-      + '[softly] Sitä riippuu telineillä tuhansittain, kuivana ja kovana kuin '
-      + 'lauta, ja sillä on ostettu nämä talot, kirkot ja puolet Norjan '
-      + 'purjeista.',
+    luenta: '[curious] Sataa. Kirjoitan kapakan ikkunapöydässä, koska '
+      + 'laiturilla ei pysy paperi kuivana. Kartassani Bergenin kohdalla on '
+      + 'aurinko, piirretty Lontoossa. Kartta valehtelee. Saksalaisten vanha '
+      + 'kauppalaituri seisoo yhä, puutalot kylki kyljessä kuin sillit '
+      + 'tynnyrissä, ja kapakala riippuu telineillä kuivana ja kovana kuin '
+      + 'lauta. Isäntä sanoi, että eilen paistoi. Painolasti: kuivattu kala. '
+      + '[softly] Se ei kastu.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-bergen.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kauppalaituri on nyt maailmanperintöä ja kallellaan. Täällä sataa yhä useammin kuin ei. Kalatelineiden alla pysyy kuivana.',
-      // kuittaus isoisälle
-      'Kirjoitti kapakassa, koska paperi kastui. Minä odotin räystäällä, ja se sade oli aitoa.',
+      'Kartta valehtelee, ja Bergenissä aina. Laituri on kallellaan ja maailmanperintöä. Kalatelineen alla on kuivaa.',
     ],
     /* KAANON (Fable) — kuplateksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Bergenissä sataa noin puolet vuoden päivistä, joten isoisäsi '

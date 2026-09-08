@@ -137,35 +137,37 @@ export const FOKUSVIRTA_AMSTERDAM = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Amsterdam, toukokuussa 1873. Tuulista; kanavat väreilevät.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 388 merkkiä (yläraja 400). */
-    teksti: 'Kaupunki seisoo veteen lyötyjen paalujen varassa, ja minusta sen '
-      + 'omaisuus seisoo samalla tavalla, ilmaan luotetun arvon päällä. '
-      + 'Kanavat kiertävät kehinä kuin puun vuosirenkaat. Timanttihiomoissa '
-      + 'halkotaan Kapmaan kaivosten kiviä, jotka kulkevat täältä kruunupäiden '
-      + 'sormiin. Vanhat miehet puhuvat yhä Kompaniasta, jonka laivat toivat '
-      + 'idän rikkaudet ja veivät miehiä, jotka eivät palanneet.',
+    paikkarivi: 'Amsterdam, toukokuussa 1873. Tuulista; kanavat väreilevät; '
+      + 'puntari putoaa.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 399 merkkiä (yläraja 400). */
+    teksti: 'Isäntä sanoi, että hänen kapakkansa on gezellig, ja kysyin, onko '
+      + 'se lämmin. Hän sanoi ei. Kysyin, onko se halpa. Hän sanoi ei, kaatoi '
+      + 'lasin, ja sitten ymmärsin. Kaupunki seisoo veteen lyötyjen paalujen '
+      + 'varassa, ja moni talo nojaa naapuriin kuin humalainen. '
+      + 'Timanttihiomossa mies halkaisi kiven yhdellä iskulla ja katsoi minua '
+      + 'kuin pyytäisi aplodeja. Yövahti: vesi, köydet, yksi harmonikka. '
+      + 'Gezellig.',
     /*
      * LUENTA = sama teksti tunnetagein (Raamattu, luentaprosessi):
      * neljä tagia, alku ja loppu eri sävyssä, yksikään sana ei vaihdu.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki seisoo veteen lyötyjen paalujen varassa, ja '
-      + 'minusta sen omaisuus seisoo samalla tavalla, ilmaan luotetun arvon '
-      + 'päällä. Kanavat kiertävät kehinä kuin puun vuosirenkaat. '
-      + 'Timanttihiomoissa halkotaan Kapmaan kaivosten kiviä, jotka kulkevat '
-      + 'täältä kruunupäiden sormiin. [softly] Vanhat miehet puhuvat yhä '
-      + 'Kompaniasta, jonka laivat toivat idän rikkaudet ja veivät miehiä, '
-      + 'jotka eivät palanneet.',
+    luenta: '[curious] Isäntä sanoi, että hänen kapakkansa on gezellig, ja '
+      + 'kysyin, onko se lämmin. Hän sanoi ei. Kysyin, onko se halpa. Hän '
+      + 'sanoi ei, kaatoi lasin, ja sitten ymmärsin. Kaupunki seisoo veteen '
+      + 'lyötyjen paalujen varassa, ja moni talo nojaa naapuriin kuin '
+      + 'humalainen. Timanttihiomossa mies halkaisi kiven yhdellä iskulla ja '
+      + 'katsoi minua kuin pyytäisi aplodeja. Yövahti: vesi, köydet, yksi '
+      + 'harmonikka. [softly] Gezellig.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-amsterdam.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Talot seisovat yhä paaluilla, ja moni on vinossa. Kanavilla on enemmän pyöriä kuin veneitä, eikä pyörä väistä pulua.',
+      'Gezellig on lämmin ilman lämpöä. Talot nojaavat yhä, ja kanavilla on enemmän pyöriä kuin veneitä. Pyörä ei väistä. Kokeiltu.',
     ],
     /* KAANON (Fable) — Livian huomio sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Amsterdamissa on enemmän siltoja kuin Venetsiassa, mut '

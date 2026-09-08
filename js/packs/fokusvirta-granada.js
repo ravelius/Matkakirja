@@ -217,14 +217,16 @@ export const FOKUSVIRTA_GRANADA = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Granada, huhtikuussa 1873. Kirkasta; Sierra Nevadalla vielä lunta.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 376 merkkiä (yläraja 400). */
+    paikkarivi: 'Granada, huhtikuussa 1873. Kirkasta; Sierra Nevadalla lunta; '
+      + 'puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 384 merkkiä (yläraja 400). */
     teksti: 'Linna kukkulalla on kaunein raunio, jonka olen nähnyt, paitsi '
-      + 'ettei se ole raunio. Sen saleissa asuu köyhiä perheitä, ja seinien '
-      + 'kirjoitukset kulkevat heidän arkensa yllä kuin toisen maailman posti. '
-      + 'Vuorilla on lunta, vaikka laaksossa kypsyvät appelsiinit. Illalla '
-      + 'kukkulan luolissa laulettiin ja tanssittiin tavalla, joka ei pyydä '
-      + 'yleisöä. Se vain sietää sitä. Maksoin silti.',
+      + 'ettei se ole raunio: saleissa asuu perheitä, ja lapset juoksivat '
+      + 'pihalla, jossa leijonat kantavat suihkulähdettä. Vesi juoksee '
+      + 'kaikkialla, seinissä, lattioissa, portaissa, ja sen ääni on ainoa, '
+      + 'mikä salissa puhuu. Otin hatun päästä ennen kuin huomasin. '
+      + 'Lakkipiste. Illalla luolissa laulettiin ilman yleisöä. Maksoin '
+      + 'silti.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -232,23 +234,21 @@ export const FOKUSVIRTA_GRANADA = {
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
     luenta: '[curious] Linna kukkulalla on kaunein raunio, jonka olen nähnyt, '
-      + 'paitsi ettei se ole raunio. Sen saleissa asuu köyhiä perheitä, ja '
-      + 'seinien kirjoitukset kulkevat heidän arkensa yllä kuin toisen '
-      + 'maailman posti. Vuorilla on lunta, vaikka laaksossa kypsyvät '
-      + 'appelsiinit. Illalla kukkulan luolissa laulettiin ja tanssittiin '
-      + 'tavalla, joka ei pyydä yleisöä. Se vain sietää sitä. [softly] Maksoin '
-      + 'silti.',
+      + 'paitsi ettei se ole raunio: saleissa asuu perheitä, ja lapset '
+      + 'juoksivat pihalla, jossa leijonat kantavat suihkulähdettä. Vesi '
+      + 'juoksee kaikkialla, seinissä, lattioissa, portaissa, ja sen ääni on '
+      + 'ainoa, mikä salissa puhuu. Otin hatun päästä ennen kuin huomasin. '
+      + 'Lakkipiste. Illalla luolissa laulettiin ilman yleisöä. [softly] '
+      + 'Maksoin silti.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-granada.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Linnassa ei enää asuta, ja lippua jonotetaan kuukausia. Vuorilla on yhä lunta keväällä. Linnan pihoilla on maan paras vesi.',
-      // kuittaus isoisälle
-      'Maksoi silti. Minä olisin lähtenyt ensimmäisen laulun jälkeen.',
+      'Lakkipiste on hetki, jolloin hattu lähtee itsestään. Linnassa ei enää asuta, lippua jonotetaan. Vesi juoksee yhä. Join siitä.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

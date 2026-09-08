@@ -105,31 +105,32 @@ export const FOKUSVIRTA_DUBROVNIK = {
      * merkintä. Sääkommentti on isoisän havainto eikä mitattu väite.
      */
     paikkarivi: 'Dubrovnik, syyskuussa 1873. Poutaa; muurilla käy tuuli '
-      + 'mereltä.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 383 merkkiä (yläraja 400). */
-    teksti: 'Ragusa osti rauhansa joka vuosi uudestaan: se maksoi sulttaanille '
-      + 'ja kumarsi kaikille, ja säilyi vapaana kauemmin kuin Venetsia. '
-      + 'Kävelin muurin koko kierroksen ja laskin torneja. Kaupunki on kuin '
-      + 'laiva, joka päätti jäädä satamaan ja kivettyä. Pääkadun päässä vesi '
-      + 'juoksee vanhaan kaivoon vuorilta asti, ja jokainen ohikulkija juo '
-      + 'siitä kupin. Virkamies puhui italiaa, kansa kroatiaa.',
+      + 'mereltä; puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 398 merkkiä (yläraja 400). */
+    teksti: 'Otin peilauksen muurista: koko kierros, tuhat kaksisataa '
+      + 'askelta, tuulen puolella vähemmän, koska siellä kävelin nojaten. '
+      + 'Yhdessä kohdassa harja on kapeampi kuin hattuni lieri, ja alhaalla '
+      + 'meri on niin kirkas, että näin pohjan kivet. Seisoin siinä kauemmin '
+      + 'kuin oli tarpeen. Ragusa osti rauhansa joka vuosi uudestaan ja '
+      + 'säilyi vapaana kauemmin kuin Venetsia. Painolasti: ei mitään. Tänään '
+      + 'ei ollut.',
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Ragusa osti rauhansa joka vuosi uudestaan: se maksoi '
-      + 'sulttaanille ja kumarsi kaikille, ja säilyi vapaana kauemmin kuin '
-      + 'Venetsia. Kävelin muurin koko kierroksen ja laskin torneja. Kaupunki '
-      + 'on kuin laiva, joka päätti jäädä satamaan ja kivettyä. Pääkadun '
-      + 'päässä vesi juoksee vanhaan kaivoon vuorilta asti, ja jokainen '
-      + 'ohikulkija juo siitä kupin. [softly] Virkamies puhui italiaa, kansa '
-      + 'kroatiaa.',
+    luenta: '[curious] Otin peilauksen muurista: koko kierros, tuhat '
+      + 'kaksisataa askelta, tuulen puolella vähemmän, koska siellä kävelin '
+      + 'nojaten. Yhdessä kohdassa harja on kapeampi kuin hattuni lieri, ja '
+      + 'alhaalla meri on niin kirkas, että näin pohjan kivet. Seisoin siinä '
+      + 'kauemmin kuin oli tarpeen. Ragusa osti rauhansa joka vuosi uudestaan '
+      + 'ja säilyi vapaana kauemmin kuin Venetsia. Painolasti: ei mitään. '
+      + '[softly] Tänään ei ollut.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-dubrovnik.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Muurilla kävellään yhä ympäri, mutta nyt jonossa. Kaivosta juodaan edelleen. Muurin harjalta katsoo lokkeja alaspäin.',
+      'Peilaus on merimiehen suuntima, hänellä askelmittaus. Muurilla kävellään yhä ympäri, nyt jonossa. Kapean kohdan lensin.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuurit). Faktat

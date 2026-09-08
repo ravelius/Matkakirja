@@ -107,22 +107,23 @@ export const FOKUSVIRTA_HELSINKI = {
      * jossa tervaa lastataan.
      */
     paikkarivi: 'Helsingfors, heinäkuussa 1873. Kirkasta; mereltä käy viileä '
-      + 'tuuli.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 395 merkkiä (yläraja 400). */
-    teksti: 'Kaupunki näyttää mereltä suuremmalta kuin maalta, ja valkoinen '
-      + 'kirkko seisoo kukkulallaan kuin keisarin allekirjoitus. Satamassa '
-      + 'tuoksui terva, jota lastattiin laivoihin kuin kultaa, ja tavallaan se '
-      + 'sitä onkin. Torilla kauppa käy ruotsiksi, suomeksi ja venäjäksi, ja '
-      + 'hinta vaihtuu kielen mukaan. Kylpylän puistossa soitti torvikunta, ja '
-      + 'kesävieraat Pietarista kävelivät kuin omistaisivat rannan.',
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki näyttää mereltä suuremmalta kuin maalta, ja '
+      + 'tuuli; puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 393 merkkiä (yläraja 400). */
+    teksti: 'Torilla jokainen kauppias sanoi lopuksi saman miehen nimen: '
+      + 'Kiitos. Kuulin sen kalasta, marjoista ja tervasta, ja päättelin, '
+      + 'että Kiitos omistaa koko torin. Illalla isäntä nauroi niin, että '
+      + 'lasi kaatui. Kaupunki näyttää mereltä suuremmalta kuin maalta, ja '
       + 'valkoinen kirkko seisoo kukkulallaan kuin keisarin allekirjoitus. '
-      + 'Satamassa tuoksui terva, jota lastattiin laivoihin kuin kultaa, ja '
-      + 'tavallaan se sitä onkin. Torilla kauppa käy ruotsiksi, suomeksi ja '
-      + 'venäjäksi, ja hinta vaihtuu kielen mukaan. [softly] Kylpylän '
-      + 'puistossa soitti torvikunta, ja kesävieraat Pietarista kävelivät kuin '
-      + 'omistaisivat rannan.',
+      + 'Satamassa tuoksui terva, jota lastattiin laivoihin kuin kultaa. '
+      + 'Kiitos.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Torilla jokainen kauppias sanoi lopuksi saman miehen '
+      + 'nimen: Kiitos. Kuulin sen kalasta, marjoista ja tervasta, ja '
+      + 'päättelin, että Kiitos omistaa koko torin. Illalla isäntä nauroi '
+      + 'niin, että lasi kaatui. Kaupunki näyttää mereltä suuremmalta kuin '
+      + 'maalta, ja valkoinen kirkko seisoo kukkulallaan kuin keisarin '
+      + 'allekirjoitus. Satamassa tuoksui terva, jota lastattiin laivoihin '
+      + 'kuin kultaa. [softly] Kiitos.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-helsinki.mp3',
   },
 
@@ -176,9 +177,9 @@ export const FOKUSVIRTA_HELSINKI = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kirkko on nyt tuomiokirkko, ja sama torni näkyy mereltä ensimmäisenä. Terva ei enää tuoksu. Torilla lokit vievät kaiken.',
+      'Kiitos ei ole mies. Isoisäsi kiitti koko torin väärään suuntaan. Torni näkyy mereltä ensimmäisenä. Pullakojut ovat minun.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (tuomiokirkko Senaatintorilla)

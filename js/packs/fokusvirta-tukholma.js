@@ -286,33 +286,32 @@ export const FOKUSVIRTA_TUKHOLMA = {
      * "Oscar II av Sverige", osio Kröningen; ks. oppitunti).
      */
     paikkarivi: 'Tukholma, toukokuussa 1873. Liputus joka ikkunassa; kaduilla '
-      + 'tungos.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 394 merkkiä (yläraja 400). */
-    teksti: 'Osuin keskelle kruunajaisia. Oscar sai kruununsa kirkossa, ja '
-      + 'tungos vei minulta kaksi nappia ja tästä kirjasta sivun, jolla oli '
-      + 'puolikas kartta. Kirjoitan sen muistiin siltä varalta, että joku '
-      + 'vielä kysyy. Kaupunki on rakennettu saarille, ja joka toinen katu '
-      + 'päättyy laituriin. Höyryvene vie saaristoon halvemmalla kuin ajuri '
-      + 'kadun päähän. Satamassa myytiin silliä ja lippuja samalta kärryltä.',
+      + 'tungos; puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 398 merkkiä (yläraja 400). */
+    teksti: 'Osuin keskelle kruunajaisia. Löin vetoa itseni kanssa, että '
+      + 'pääsen kirkon portaille asti, ja pääsin. Hinta oli kaksi nappia ja '
+      + 'tästä kirjasta sivu, jolla oli puolikas kartta. Tein K3:n: poliisi '
+      + 'sanoi taskuvaras, kauppias sanoi tuuli, pikkupoika nauroi ja sanoi '
+      + 'että hänen setänsä. Uskoin poikaa. Kirjoitin sivun uudestaan niin '
+      + 'tarkasti kuin muistan. Se ei ole tarkasti. Painolasti: '
+      + 'kruunajaislippu.',
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Osuin keskelle kruunajaisia. Oscar sai kruununsa '
-      + 'kirkossa, ja tungos vei minulta kaksi nappia ja tästä kirjasta sivun, '
-      + 'jolla oli puolikas kartta. Kirjoitan sen muistiin siltä varalta, että '
-      + 'joku vielä kysyy. Kaupunki on rakennettu saarille, ja joka toinen '
-      + 'katu päättyy laituriin. Höyryvene vie saaristoon halvemmalla kuin '
-      + 'ajuri kadun päähän. [softly] Satamassa myytiin silliä ja lippuja '
-      + 'samalta kärryltä.',
+    luenta: '[curious] Osuin keskelle kruunajaisia. Löin vetoa itseni kanssa, '
+      + 'että pääsen kirkon portaille asti, ja pääsin. Hinta oli kaksi nappia '
+      + 'ja tästä kirjasta sivu, jolla oli puolikas kartta. Tein K3:n: '
+      + 'poliisi sanoi taskuvaras, kauppias sanoi tuuli, pikkupoika nauroi ja '
+      + 'sanoi että hänen setänsä. Uskoin poikaa. Kirjoitin sivun uudestaan '
+      + 'niin tarkasti kuin muistan. Se ei ole tarkasti. [softly] Painolasti: '
+      + 'kruunajaislippu.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tukholma.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kuningas on yhä, mutta kruunajaisia ei pidetä. Höyryveneet vievät saaristoon edelleen, ja lokit omistavat kannen.',
-      // kuittaus isoisälle
-      'Kaksi nappia ja yksi sivu. Minulta ei tungoksessa ole viety mitään, koska en mene tungokseen.',
+      'K3 on kolmiomittaus: kolme vastausta ja yksi nauru. Kruunajaisia ei enää pidetä. En mene tungokseen. Sivuni ovat tallella.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen. Faktat ovat lehden oman

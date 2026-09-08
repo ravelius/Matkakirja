@@ -105,16 +105,15 @@ export const FOKUSVIRTA_WIEN = {
      * faktoja: näyttely avattiin 1.5.1873 ja pörssi kaatui kahdeksan
      * päivää myöhemmin, joten isoisä oli Wienissä toukokuussa.
      */
-    paikkarivi: 'Wien, toukokuussa 1873. Sadekuuroja; ilmanpuntari '
-      + 'laskee aamusta.',
-    /* KAANON UUSIKSI (Fable, omistaja hyväksyi 8.9.2026 ilta): kupolin
-       koko, pörssi ja kahvila; ei ajatusviivaa. 367 merkkiä (yläraja 400). */
-    teksti: 'Wien on rakentanut maailmannäyttelyn ja sen ylle kupolin, '
-      + 'jota sanotaan maailman suurimmaksi. Kävelin Rotunden alla hattu '
-      + 'kädessä, ja katto oli niin korkealla, että sen alle mahtuisi '
-      + 'kokonainen kirkko torneineen. Kahdeksan päivää avajaisten jälkeen '
-      + 'pörssi kaatui. Näin rikkaita miehiä itkemässä kadulla, enkä unohda '
-      + 'sitä koskaan. Kahvilassa kukaan ei puhunut rahasta.',
+    paikkarivi: 'Wien, toukokuussa 1873. Sadekuuroja; puntari laskee aamusta.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 391 merkkiä (yläraja 400). */
+    teksti: 'Wien on rakentanut maailmannäyttelyn ja sen ylle kupolin, jota '
+      + 'sanotaan maailman suurimmaksi. Otin peilauksen Rotunden alla hattu '
+      + 'kädessä: sata askelta laidasta laitaan, ja katto niin korkealla, '
+      + 'että sen alle mahtuisi kirkko torneineen. Kahdeksan päivää '
+      + 'avajaisten jälkeen pörssi kaatui. Näin rikkaita miehiä itkemässä '
+      + 'kadulla, enkä unohda sitä koskaan. Kahvilassa kukaan ei puhunut '
+      + 'rahasta.',
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -125,11 +124,12 @@ export const FOKUSVIRTA_WIEN = {
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
     luenta: '[curious] Wien on rakentanut maailmannäyttelyn ja sen ylle '
-      + 'kupolin, jota sanotaan maailman suurimmaksi. Kävelin Rotunden alla '
-      + 'hattu kädessä, ja katto oli niin korkealla, että sen alle mahtuisi '
-      + 'kokonainen kirkko torneineen. [softly] Kahdeksan päivää avajaisten '
-      + 'jälkeen pörssi kaatui. Näin rikkaita miehiä itkemässä kadulla, enkä '
-      + 'unohda sitä koskaan. [whispers] Kahvilassa kukaan ei puhunut rahasta.',
+      + 'kupolin, jota sanotaan maailman suurimmaksi. Otin peilauksen '
+      + 'Rotunden alla hattu kädessä: sata askelta laidasta laitaan, ja katto '
+      + 'niin korkealla, että sen alle mahtuisi kirkko torneineen. Kahdeksan '
+      + 'päivää avajaisten jälkeen pörssi kaatui. Näin rikkaita miehiä '
+      + 'itkemässä kadulla, enkä unohda sitä koskaan. [softly] Kahvilassa '
+      + 'kukaan ei puhunut rahasta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-wien.mp3',
   },
 
@@ -171,9 +171,9 @@ export const FOKUSVIRTA_WIEN = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kupoli paloi, mutta puisto on yhä olemassa. Ja kahvilassa istutaan tunteja yhden kupin ääressä. Terassin alla on hyvät murut.',
+      'Peilaus on merimiehen suuntima, hänellä askelmittaus. Kupoli paloi, puisto on yhä. Kahvilassa istutaan tunteja kupilla.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (valtionooppera). Faktat

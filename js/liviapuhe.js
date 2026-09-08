@@ -160,10 +160,12 @@ export const LIVIAN_VARATTU = '(varattu)';
  * taulussa — Venetsia kuudella kuplalla, muut yhdellä. Tampereen ja Riian
  * huudahdus poistui, ja sen paikka jäi varatuksi kuten Prahassa.
  *
- * KUITTAUS ISOISÄLLE (Fablen erä 8.9.2026 ilta, Raamattu: PULUN KUPLASSA
- * PULUN NAKOKULMA, RAJA 125). Kymmenen kaupunkia sai kommentin perään
- * toisen kuplan — pulun kuiva kuittaus isoisän merkintään — joten niiden
- * rivi kertoo määrän: `['kommentti', 2]`, tiedostot livia-<id>-3 ja -4.
+ * KUITTAUS ISOISÄLLE ON POISTETTU (Fablen erä v6 8.9.2026 ilta, Raamattu:
+ * pululle pääsääntöisesti yksi kupla). Kymmenellä kaupungilla oli hetken
+ * kommentin perässä toinen kupla, ja niiden rivi kertoi määrän
+ * (`['kommentti', 2]`). Nyt jokaisella on yksi kupla kuten muillakin, ja
+ * numero 4 jää varatuksi: vanhat livia-<id>-4-äänitteet jäävät ämpäriin
+ * orvoiksi eikä niille ole enää tekstiä.
  *
  * KUUSI KEVYTTÄ KOHDETTA JA ATEENA MUKAAN (omistaja 8.9.2026). Kreeta,
  * Sisilia, Islanti, Alpit, Rovaniemi (tunnus `lappi`) ja Tromssa saivat
@@ -212,8 +214,8 @@ export const LIVIAN_KAUPUNKILAHTEET = {
    */
   kreeta: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   sisilia: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
-  islanti: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
-  alpit: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  islanti: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  alpit: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   lappi: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   tromssa: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   /*
@@ -224,15 +226,15 @@ export const LIVIAN_KAUPUNKILAHTEET = {
    * Vanhat maadoitusäänitteet eivät kuulu näille numeroille: niitä ei ole
    * koskaan generoitu, koska nämä kaupungit eivät olleet taulussa.
    */
-  lontoo: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  lontoo: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   dublin: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
-  edinburgh: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  edinburgh: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   pariisi: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
-  marseille: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  marseille: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   lissabon: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
-  madrid: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  madrid: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   barcelona: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
-  granada: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  granada: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   sevilla: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   amsterdam: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   berliini: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
@@ -242,12 +244,12 @@ export const LIVIAN_KAUPUNKILAHTEET = {
    * livia-venetsia-3…8.mp3.
    */
   venetsia: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 6]],
-  firenze: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  firenze: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   rooma: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   dubrovnik: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
-  tukholma: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  tukholma: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   oslo: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
-  bergen: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 2]],
+  bergen: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   kobenhavn: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
 };
 

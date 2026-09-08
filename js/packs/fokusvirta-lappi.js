@@ -31,32 +31,33 @@ export const FOKUSVIRTA_LAPPI = {
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
-    paikkarivi: 'Rovaniemi, syyskuussa 1873. Ensimmäinen ruska; yöllä revontulet.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 398 merkkiä (yläraja 400). */
-    teksti: 'Ajoimme päivän jokea ylös, ja metsä madaltui tunturiksi. Kaupan '
-      + 'ovella puhuttiin kolmea kieltä, ja kaikki puhuivat kullasta. '
-      + 'Ivalojoen kultakaivannoilla yö on niin valoisa, ettei kukaan muista '
-      + 'lopettaa. Niin kertoi mies, joka oli tullut sieltä tyhjin käsin ja '
-      + 'aikoi palata. Poroja kulki tien yli kuin tie ei kuuluisi kenellekään. '
-      + 'Yöllä taivas syttyi vihreänä, eikä kukaan paikallinen katsonut ylös.',
+    paikkarivi: 'Rovaniemi, syyskuussa 1873. Ensimmäinen ruska; yöllä '
+      + 'revontulet; puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 392 merkkiä (yläraja 400). */
+    teksti: 'Kaupan ovella puhuttiin kolmea kieltä, ja kaikki puhuivat '
+      + 'kullasta. Mies, joka oli tullut Ivalojoelta tyhjin käsin, tarjosi '
+      + 'minulle vaskoolin ja osuuden, jos maksan matkan. Tein K3:n: kauppias '
+      + 'sanoi hullu, pappi sanoi rehellinen, poromies nauroi ja sanoi että '
+      + 'molemmat. Kieltäydyin ja kaduin heti. Yöllä taivas syttyi vihreänä, '
+      + 'eikä kukaan paikallinen katsonut ylös. Minä katsoin. Lakkipiste.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain neljä tunnetagia. */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Ajoimme päivän jokea ylös, ja metsä madaltui '
-      + 'tunturiksi. Kaupan ovella puhuttiin kolmea kieltä, ja kaikki puhuivat '
-      + 'kullasta. Ivalojoen kultakaivannoilla yö on niin valoisa, ettei '
-      + 'kukaan muista lopettaa. Niin kertoi mies, joka oli tullut sieltä '
-      + 'tyhjin käsin ja aikoi palata. Poroja kulki tien yli kuin tie ei '
-      + 'kuuluisi kenellekään. [softly] Yöllä taivas syttyi vihreänä, eikä '
-      + 'kukaan paikallinen katsonut ylös.',
+    luenta: '[curious] Kaupan ovella puhuttiin kolmea kieltä, ja kaikki '
+      + 'puhuivat kullasta. Mies, joka oli tullut Ivalojoelta tyhjin käsin, '
+      + 'tarjosi minulle vaskoolin ja osuuden, jos maksan matkan. Tein K3:n: '
+      + 'kauppias sanoi hullu, pappi sanoi rehellinen, poromies nauroi ja '
+      + 'sanoi että molemmat. Kieltäydyin ja kaduin heti. Yöllä taivas syttyi '
+      + 'vihreänä, eikä kukaan paikallinen katsonut ylös. Minä katsoin. '
+      + '[softly] Lakkipiste.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lappi.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Porot kulkevat yhä samoja reittejä. Revontulia tullaan nyt katsomaan kaukaa. Minä en lennä yöllä, mutta silloin katsoin ylös.',
+      'K3 on kolmiomittaus: kolme vastausta, usko naurajaa. Porot kulkevat yhä samoja reittejä. Revontulia tullaan katsomaan kaukaa.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

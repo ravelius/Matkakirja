@@ -166,37 +166,38 @@ export const FOKUSVIRTA_SEVILLA = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Sevilla, huhtikuussa 1873. Appelsiinipuut kukassa; ilma raskas tuoksusta.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 390 merkkiä (yläraja 400). */
-    teksti: 'Joki tuo meren hajun kauas sisämaahan, ja sen rannalla seisoo '
-      + 'kultainen torni, jonka nimi on suurempi kuin sen kunto. '
-      + 'Tupakkatehtaassa työskentelee tuhansia naisia, ja heidän sormensa '
-      + 'kääntävät lehtiä nopeammin kuin pankkiirin sormet seteleitä. Espanja '
-      + 'on tänä keväänä tasavalta, eikä kukaan osaa sanoa, kuinka kauan. '
-      + 'Appelsiinipuut kukkivat siitä huolimatta, ja tuoksu seuraa hattuun '
-      + 'asti.',
+    paikkarivi: 'Sevilla, huhtikuussa 1873. Appelsiinipuut kukassa; puntari '
+      + 'korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 400 merkkiä (yläraja 400). */
+    teksti: 'Söin kadulta appelsiinin, koska niitä on joka puussa, ja se oli '
+      + 'niin karvas, että sylkäisin sen viemäriin ja kaksi naista nauroi '
+      + 'parvekkeelta. Marmeladia varten, sanoi toinen. Tupakkatehtaassa '
+      + 'työskentelee tuhansia naisia, ja heidän sormensa kääntävät lehtiä '
+      + 'nopeammin kuin pankkiirin seteleitä. Portilla vahtimestari ei '
+      + 'päästänyt minua sisään. Olin kiitollinen. Painolasti: appelsiini. '
+      + 'Marmeladiksi.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Joki tuo meren hajun kauas sisämaahan, ja sen rannalla '
-      + 'seisoo kultainen torni, jonka nimi on suurempi kuin sen kunto. '
+    luenta: '[curious] Söin kadulta appelsiinin, koska niitä on joka puussa, '
+      + 'ja se oli niin karvas, että sylkäisin sen viemäriin ja kaksi naista '
+      + 'nauroi parvekkeelta. Marmeladia varten, sanoi toinen. '
       + 'Tupakkatehtaassa työskentelee tuhansia naisia, ja heidän sormensa '
-      + 'kääntävät lehtiä nopeammin kuin pankkiirin sormet seteleitä. Espanja '
-      + 'on tänä keväänä tasavalta, eikä kukaan osaa sanoa, kuinka kauan. '
-      + '[softly] Appelsiinipuut kukkivat siitä huolimatta, ja tuoksu seuraa '
-      + 'hattuun asti.',
+      + 'kääntävät lehtiä nopeammin kuin pankkiirin seteleitä. Portilla '
+      + 'vahtimestari ei päästänyt minua sisään. Olin kiitollinen. '
+      + 'Painolasti: appelsiini. [softly] Marmeladiksi.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sevilla.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Tupakkatehdas on nyt yliopisto. Appelsiinipuut kukkivat yhä joka kadulla. Appelsiinit ovat karvaita; älä usko turisteja.',
+      'Painolasti on turha esine. Appelsiini oli sentään syötävä, marmeladina. Tehdas on nyt yliopisto. Puut kukkivat yhä.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

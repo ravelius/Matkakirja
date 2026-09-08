@@ -106,21 +106,23 @@ export const FOKUSVIRTA_TALLINNA = {
      * Tallinna–Pietari-rata avattiin 1870, kolme vuotta ennen isoisän
      * käyntiä (päätoimittajan historia-ankkuri tähän erään).
      */
-    paikkarivi: 'Reval, syyskuussa 1873. Tuulista; satamassa lokit huutavat.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 382 merkkiä (yläraja 400). */
-    teksti: 'Laiva purki lastinsa aamulla, ja juna vei sen Pietariin ennen '
-      + 'iltaa. Uusi rata on tehnyt vanhasta hansakaupungista taas portin. '
-      + 'Yläkaupungissa asuvat saksalaiset paronit ja alhaalla kaikki muut, ja '
-      + 'portti niiden välissä suljetaan yöksi kuin ennenkin. Torin apteekki '
-      + 'on ollut samassa talossa niin kauan, ettei kukaan muista alkua. Ostin '
-      + 'sieltä marsipaania, joka on kuulemma lääkettä.',
+    paikkarivi: 'Reval, syyskuussa 1873. Tuulista; satamassa lokit huutavat; '
+      + 'puntari putoaa.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 376 merkkiä (yläraja 400). */
+    teksti: 'Portilla sanottiin tere, torilla tere, apteekissa tere. Luulin, '
+      + 'että minulle tarjotaan teetä, ja kiitin joka kerta. Apteekkari toi '
+      + 'lopulta teetä, koska olin kiittänyt kolmesti, ja siihen meni tunti. '
+      + 'Laiva purki lastinsa aamulla, ja juna vei sen Pietariin ennen iltaa. '
+      + 'Yläkaupungissa asuvat paronit ja alhaalla kaikki muut. Painolasti: '
+      + 'marsipaanisydän. Kuulemma lääkettä. Tere.',
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Laiva purki lastinsa aamulla, ja juna vei sen Pietariin '
-      + 'ennen iltaa. Uusi rata on tehnyt vanhasta hansakaupungista taas '
-      + 'portin. Yläkaupungissa asuvat saksalaiset paronit ja alhaalla kaikki '
-      + 'muut, ja portti niiden välissä suljetaan yöksi kuin ennenkin. Torin '
-      + 'apteekki on ollut samassa talossa niin kauan, ettei kukaan muista '
-      + 'alkua. [softly] Ostin sieltä marsipaania, joka on kuulemma lääkettä.',
+    luenta: '[curious] Portilla sanottiin tere, torilla tere, apteekissa '
+      + 'tere. Luulin, että minulle tarjotaan teetä, ja kiitin joka kerta. '
+      + 'Apteekkari toi lopulta teetä, koska olin kiittänyt kolmesti, ja '
+      + 'siihen meni tunti. Laiva purki lastinsa aamulla, ja juna vei sen '
+      + 'Pietariin ennen iltaa. Yläkaupungissa asuvat paronit ja alhaalla '
+      + 'kaikki muut. Painolasti: marsipaanisydän. Kuulemma lääkettä. '
+      + '[softly] Tere.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tallinna.mp3',
   },
 
@@ -170,9 +172,9 @@ export const FOKUSVIRTA_TALLINNA = {
       kohta: 'ennen iltaa',
       teksti: 'Ilman minua.',
     },
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Viro hoitaa nyt melkein kaiken verkossa. Yläkaupungin muurit ovat yhä paikoillaan. Tornien välissä tuuli kääntyy; sen oppii.',
+      'Tere on päivää, ei teetä. Minä tiesin ja annoin hänen juoda. Muurit ovat paikoillaan. Verkossa hoituu kaikki, ei marsipaani.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuuri). Faktat ovat

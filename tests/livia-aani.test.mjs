@@ -271,9 +271,9 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
   // Sofian kommentti tiivistyi yhteen kuplaan).
   assert.deepEqual(avaimet.slice(0, 4), ['ateena-3', 'sofia-2', 'sofia-3', 'sofia-5']);
   // Lännen kaksikymmentä kaupunkia ovat taulun lopussa (Fablen erä
-  // 8.9.2026 ilta), yksi kupla kussakin — Venetsiassa kuusi ja
-  // kymmenessä kaupungissa toinen kupla, kuittaus isoisälle (numero 4).
-  assert.deepEqual(avaimet.slice(-4), ['oslo-3', 'bergen-3', 'bergen-4', 'kobenhavn-3']);
+  // 8.9.2026 ilta), yksi kupla kussakin — Venetsiassa kuusi. Kuittaus
+  // isoisälle (numero 4) poistui v6:ssa: pululla on yksi kupla.
+  assert.deepEqual(avaimet.slice(-4), ['tukholma-3', 'oslo-3', 'bergen-3', 'kobenhavn-3']);
   // Teksti on pakkauksen teksti merkilleen — kaanonia ei muotoilla.
   assert.equal(rivit.find((rivi) => rivi.avain === 'sofia-14').teksti, sofia.paluu[1].trim());
   assert.equal(rivit.find((rivi) => rivi.avain === 'istanbul-1'), undefined);
@@ -401,7 +401,14 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   assert.equal(tila('ateena-3'), 'uusi');
   assert.equal(tila('kreeta-3'), 'uusi');
   assert.equal(tila('sofia-2'), 'ajan tasalla');
-  assert.equal(tila('pietari-2'), 'ajan tasalla');
+  /*
+   * PIETARIN HUUDAHDUS VAIHTUI (Fablen erä v6 8.9.2026 ilta): teksti on
+   * nyt "Sanoin sen." ja kohta "Hattu jäi jokeen", joten ämpärin
+   * pietari-2 sanoo eri asian kuin kupla. Rivi jää LIVIAN_AANITETYT-
+   * tauluun, koska vanha äänite on yhä ämpärissä — tila on MUUTTUNUT ja
+   * peli vaikenee kunnes ääni generoidaan uudelleen.
+   */
+  assert.equal(tila('pietari-2'), 'muuttunut');
   /*
    * PULUN KAUPUNKITEKSTIT KIRJOITETTIIN UUSIKSI 8.9.2026 (Fable, omistajan
    * linjaus): kommentit, jotka muuttuivat, ovat MUUTTUNEITA ja vaikenevat

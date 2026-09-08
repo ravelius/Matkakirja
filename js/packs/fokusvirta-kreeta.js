@@ -43,14 +43,16 @@ export const FOKUSVIRTA_KREETA = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi. */
-    paikkarivi: 'Kreeta, huhtikuussa 1873. Lämmintä; vuorilla vielä lunta.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 357 merkkiä (yläraja 400). */
-    teksti: 'Hanian satamassa venetsialainen majakka vartioi turkkilaista '
-      + 'kaupunkia, ja kummankin liput ovat haalistuneet samaan väriin. '
-      + 'Ratsastin sisämaahan kukkulalle, jonka alla sanotaan olevan vanhan '
-      + 'kuninkaan palatsi ja labyrintti hirviöineen. Minä näin vain kukkulan, '
-      + 'josta pilkotti kiviä. Paimen sanoi, että koko kukkula on onttoa. '
-      + 'Uskon häntä enemmän kuin tarua.',
+    paikkarivi: 'Kreeta, huhtikuussa 1873. Lämmintä; vuorilla vielä lunta; '
+      + 'puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 382 merkkiä (yläraja 400). */
+    teksti: 'Kysyin paimenelta, onko kukkulan alla vanhan kuninkaan palatsi. '
+      + 'Hän sanoi ne. Kysyin, onko siellä labyrintti. Ne. Kysyin, asuiko '
+      + 'siellä hirviö. Ne, ja hän hymyili. Ratsastin takaisin Haniaan '
+      + 'varmana, ettei mitään ole, ja majatalossa isäntä nauroi: ne '
+      + 'tarkoittaa kyllä. Satamassa venetsialainen majakka vartioi '
+      + 'turkkilaista kaupunkia. Paimen sanoi, että kukkula on onttoa. Nyt '
+      + 'uskon.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, sama maltillinen
@@ -58,12 +60,13 @@ export const FOKUSVIRTA_KREETA = {
      * sanajärjestys ei muutu.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Hanian satamassa venetsialainen majakka vartioi '
-      + 'turkkilaista kaupunkia, ja kummankin liput ovat haalistuneet samaan '
-      + 'väriin. Ratsastin sisämaahan kukkulalle, jonka alla sanotaan olevan '
-      + 'vanhan kuninkaan palatsi ja labyrintti hirviöineen. Minä näin vain '
-      + 'kukkulan, josta pilkotti kiviä. Paimen sanoi, että koko kukkula on '
-      + 'onttoa. [softly] Uskon häntä enemmän kuin tarua.',
+    luenta: '[curious] Kysyin paimenelta, onko kukkulan alla vanhan kuninkaan '
+      + 'palatsi. Hän sanoi ne. Kysyin, onko siellä labyrintti. Ne. Kysyin, '
+      + 'asuiko siellä hirviö. Ne, ja hän hymyili. Ratsastin takaisin Haniaan '
+      + 'varmana, ettei mitään ole, ja majatalossa isäntä nauroi: ne '
+      + 'tarkoittaa kyllä. Satamassa venetsialainen majakka vartioi '
+      + 'turkkilaista kaupunkia. Paimen sanoi, että kukkula on onttoa. '
+      + '[softly] Nyt uskon.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kreeta.mp3',
   },
 
@@ -78,9 +81,9 @@ export const FOKUSVIRTA_KREETA = {
      * on Fablen kaanonteksti sellaisenaan: se on puheen mittainen (alle
      * 95 merkkiä), joten sitä ei jaeta kahdeksi.
      */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Se palatsi kaivettiin esiin isoisän jälkeen. Vuorilla on yhä lunta keväällä. Paimen oli oikeassa. Minä sanoin sen jo silloin.',
+      'Ne on kyllä, ja isoisäsi kuuli sen kolmesti väärin. Palatsi kaivettiin esiin hänen jälkeensä. Vuorilla on yhä lunta keväällä.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

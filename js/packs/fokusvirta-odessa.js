@@ -232,26 +232,26 @@ export const FOKUSVIRTA_ODESSA = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Odessa, elokuussa 1873. Kuumaa; merituuli vasta illalla.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 369 merkkiä (yläraja 400). */
-    teksti: 'Satama on täynnä vehnää ja kieliä: kreikkalainen laskee lastia '
-      + 'italiaksi, juutalainen kirjuri kääntää sen venäjäksi ja ranskaksi, ja '
-      + 'kaikki ymmärtävät toisiaan rahasta puhuttaessa. Rannasta kaupunkiin '
-      + 'nousevat portaat, joiden päästä ei näe alas satamaan, vain meren. '
-      + 'Oopperatalo paloi talvella, ja siitä puhutaan kuin kuolleesta '
-      + 'sukulaisesta: joka päivä, ja aina hyvää.',
+    paikkarivi: 'Odessa, elokuussa 1873. Kuumaa; merituuli vasta illalla; '
+      + 'puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 330 merkkiä (yläraja 400). */
+    teksti: 'Satama on täynnä vehnää ja kieliä, ja kaikki ymmärtävät toisiaan '
+      + 'rahasta puhuttaessa. Kysyin kolmelta, mikä laiva lähtee huomenna '
+      + 'Konstantinopoliin. Ensimmäinen sanoi ei mikään, toinen sanoi kaikki, '
+      + 'kolmas nauroi ja sanoi, että herra prässihousuissa kysyi samaa '
+      + 'aamulla. Ostin lipun tänään lähtevään. Painolasti: vehnänjyvä. Yksi.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
      * loppu eri sävyssä.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Satama on täynnä vehnää ja kieliä: kreikkalainen laskee '
-      + 'lastia italiaksi, juutalainen kirjuri kääntää sen venäjäksi ja '
-      + 'ranskaksi, ja kaikki ymmärtävät toisiaan rahasta puhuttaessa. '
-      + 'Rannasta kaupunkiin nousevat portaat, joiden päästä ei näe alas '
-      + 'satamaan, vain meren. [softly] Oopperatalo paloi talvella, ja siitä '
-      + 'puhutaan kuin kuolleesta sukulaisesta: joka päivä, ja aina hyvää.',
+    luenta: '[curious] Satama on täynnä vehnää ja kieliä, ja kaikki '
+      + 'ymmärtävät toisiaan rahasta puhuttaessa. Kysyin kolmelta, mikä laiva '
+      + 'lähtee huomenna Konstantinopoliin. Ensimmäinen sanoi ei mikään, '
+      + 'toinen sanoi kaikki, kolmas nauroi ja sanoi, että herra '
+      + 'prässihousuissa kysyi samaa aamulla. Ostin lipun tänään lähtevään. '
+      + 'Painolasti: vehnänjyvä. [softly] Yksi.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-odessa.mp3',
   },
 
@@ -314,9 +314,9 @@ export const FOKUSVIRTA_ODESSA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Ooppera rakennettiin uudelleen, ja se on kaupungin kaunein talo. Satama on yhä täynnä vehnää. Meille meren paras satama.',
+      'K3 on kolmiomittaus: kolme vastausta, usko naurajaa. G. jäi taas laivasta. Ooppera rakennettiin uudelleen. Jyvä on vähän.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi

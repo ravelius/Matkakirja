@@ -25,35 +25,32 @@ export const FOKUSVIRTA_ALPIT = {
   matkakirja: {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Grindelwald, heinäkuussa 1873. Kylmää keskellä kesää; '
-      + 'ilmanpuntari korkealla.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 396 merkkiä (yläraja 400). */
-    teksti: 'Vaunut kiipesivät laaksoa ylös niin jyrkästi, että laukkuni '
-      + 'liukui lattialle, ja vastarinteeltä kuului alppitorvi. Hotellin '
-      + 'portaille asti ulottuu jäätikkö, jonka reunalta lapset myyvät '
-      + 'jääpaloja englantilaisille. Opas sanoo sen liikkuvan; en nähnyt. '
-      + 'Toisella puolen vuoria porataan tunnelia suoraan vuoren läpi, ja '
-      + 'miehet sanovat, että juna kulkee siitä ennen kuin heidän lapsensa '
-      + 'ovat aikuisia.',
+      + 'puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 395 merkkiä (yläraja 400). */
+    teksti: 'Vaunut kiipesivät niin jyrkästi, että laukkuni liukui lattialle, '
+      + 'ja kiersin hevoset kaukaa heti ulos päästyäni. Hotellin portaille '
+      + 'asti ulottuu jäätikkö. Opas sanoi sen liikkuvan. Istuin sen reunalla '
+      + 'kaksi tuntia ja näin vain englantilaisia ostamassa jääpaloja. Sitten '
+      + 'jää paukahti kuin tykki, ja talon kokoinen lohkare irtosi kyynärän '
+      + 'päästä jalastani. Hattu lähti päästä itsestään. Lakkipiste.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Vaunut kiipesivät laaksoa ylös niin jyrkästi, että '
-      + 'laukkuni liukui lattialle, ja vastarinteeltä kuului alppitorvi. '
-      + 'Hotellin portaille asti ulottuu jäätikkö, jonka reunalta lapset '
-      + 'myyvät jääpaloja englantilaisille. Opas sanoo sen liikkuvan; en '
-      + 'nähnyt. [softly] Toisella puolen vuoria porataan tunnelia suoraan '
-      + 'vuoren läpi, ja miehet sanovat, että juna kulkee siitä ennen kuin '
-      + 'heidän lapsensa ovat aikuisia.',
+    luenta: '[curious] Vaunut kiipesivät niin jyrkästi, että laukkuni liukui '
+      + 'lattialle, ja kiersin hevoset kaukaa heti ulos päästyäni. Hotellin '
+      + 'portaille asti ulottuu jäätikkö. Opas sanoi sen liikkuvan. Istuin '
+      + 'sen reunalla kaksi tuntia ja näin vain englantilaisia ostamassa '
+      + 'jääpaloja. Sitten jää paukahti kuin tykki, ja talon kokoinen lohkare '
+      + 'irtosi kyynärän päästä jalastani. Hattu lähti päästä itsestään. '
+      + '[softly] Lakkipiste.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-alpit.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Jäätikkö on vetäytynyt kauas portailta. Tunneli valmistui, ja sen alla on vielä pidempi. Vuoren yli minä lensin jo silloin.',
-      // kuittaus isoisälle
-      'Opas sanoi sen liikkuvan. Se liikkui. Isoisäsi ei vain katsonut tarpeeksi kauan.',
+      'Lakkipiste on paikka, jossa hattu lähtee päästä itsestään. Jäätikkö on nyt kaukana portailta. Minä olin katolla.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

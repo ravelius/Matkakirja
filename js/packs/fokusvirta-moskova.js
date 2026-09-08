@@ -196,28 +196,28 @@ export const FOKUSVIRTA_MOSKOVA = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Moskova, heinäkuussa 1873. Helteistä; kupolit häikäisevät.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 395 merkkiä (yläraja 400). */
-    teksti: 'Kaupunki on rakennettu renkaiksi kuin puun vuosilustot, ja sen '
-      + 'sydämessä linnoituksen muurit sulkevat sisäänsä kirkkoja kuin '
-      + 'lippaan. Kelloja on niin monta, että kun ne soivat yhtä aikaa, '
-      + 'kauppias lopettaa tinkimisen ja odottaa. Söin kauppiastalossa '
-      + 'päivällisen, joka kesti neljä tuntia. Teetä juotiin samovaarista kuin '
-      + 'vettä. Täällä sanotaan: Pietari on Venäjän pää, mutta Moskova on sen '
-      + 'sydän.',
+    paikkarivi: 'Moskova, heinäkuussa 1873. Helteistä; kupolit häikäisevät; '
+      + 'puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 395 merkkiä (yläraja 400). */
+    teksti: 'Kauppiastalon päivällinen kesti neljä tuntia, ja kun kaadoin '
+      + 'teetä pöytäliinalle, isäntä sanoi ničevo. Kun ajuri ajoi kiveen, hän '
+      + 'sanoi ničevo. Kun kysyin, milloin kellot lopettavat, vartija sanoi '
+      + 'ničevo. Se tarkoittaa ei mitään, ja se tarkoittaa kaikkea. Kelloja '
+      + 'on niin monta, että kun ne soivat yhtä aikaa, kauppias lopettaa '
+      + 'tinkimisen ja odottaa. Kiersin hevoset koko kaupungin läpi. Ničevo.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki on rakennettu renkaiksi kuin puun vuosilustot, '
-      + 'ja sen sydämessä linnoituksen muurit sulkevat sisäänsä kirkkoja kuin '
-      + 'lippaan. Kelloja on niin monta, että kun ne soivat yhtä aikaa, '
-      + 'kauppias lopettaa tinkimisen ja odottaa. Söin kauppiastalossa '
-      + 'päivällisen, joka kesti neljä tuntia. Teetä juotiin samovaarista kuin '
-      + 'vettä. [softly] Täällä sanotaan: Pietari on Venäjän pää, mutta '
-      + 'Moskova on sen sydän.',
+    luenta: '[curious] Kauppiastalon päivällinen kesti neljä tuntia, ja kun '
+      + 'kaadoin teetä pöytäliinalle, isäntä sanoi ničevo. Kun ajuri ajoi '
+      + 'kiveen, hän sanoi ničevo. Kun kysyin, milloin kellot lopettavat, '
+      + 'vartija sanoi ničevo. Se tarkoittaa ei mitään, ja se tarkoittaa '
+      + 'kaikkea. Kelloja on niin monta, että kun ne soivat yhtä aikaa, '
+      + 'kauppias lopettaa tinkimisen ja odottaa. Kiersin hevoset koko '
+      + 'kaupungin läpi. [softly] Ničevo.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-moskova.mp3',
   },
 
@@ -277,9 +277,9 @@ export const FOKUSVIRTA_MOSKOVA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Pääkaupunki muutti takaisin tänne isoisän jälkeen. Kellot soivat yhä yhtä aikaa. Silloin kannattaa olla poissa tornista.',
+      'Ničevo on ei mitään, ja sillä pärjää koko maan. Hevosia hän kiertää, kaupungin läpikin. Pääkaupunki palasi. Kellot soivat.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
