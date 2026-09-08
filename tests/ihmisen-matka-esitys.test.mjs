@@ -308,8 +308,10 @@ test('aikaselain seuraa esitystä ja ohjaa sitä (7.9.2026)', () => {
   assert.match(OHJAAJA, /vanat\?\.\(\)\?\.paivita\?\.\(arvo, \{ pito: false \}\)/,
     'kelaus ei päivitä vanoja suoraan (tutkimusvaiheessa silmukka ei lue kelloa)');
   // Tauko/Jatka, ↺ ja ✕ jäävät palkkiin: nauha ei korvaa niitä.
-  assert.match(CSS, /\.aikajana\.kertomus \.aikajana-alusta \{/);
-  assert.match(CSS, /\.aikajana\.kertomus \.aikajana-sulje \{/);
+  // (Palkin yhteiset tyylit ovat 8.9.2026 alkaen `.aikajana.palkki`:ssa —
+  // sama palkki on nyt myös keksintölinssillä.)
+  assert.match(CSS, /\.aikajana\.palkki \.aikajana-alusta \{/);
+  assert.match(CSS, /\.aikajana\.palkki \.aikajana-sulje \{/);
 });
 
 test('loppunäkymä asemoidaan erikseen, ei jätetä kesken jääneen ajon varaan', () => {

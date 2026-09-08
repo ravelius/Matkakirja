@@ -1615,11 +1615,20 @@ kortti on kolmas moduuli. Muu luvuista 11–12 on ennallaan.)*
 | Tiedeliitteen sisällys yhtenä listana | `js/tiedeliite.js` (`sisallys`-asetus), `css/aikajana.css .tiedeliite-sisallys.lista` |
 | Kärki ei saa poistua kuvasta | `js/linssit/ihmisen-matka-esitys.js jaksonRajaus` |
 
-Kaikki palkkiin ja karuselliin liittyvä on rajattu **kertomuskaareen**
-(`kaari.kertomus`). Keksintölinssin pysäkkiajo — kello, lapun kahva,
-ilmiöpaneeli, esinerivi, Tiedeliitteen kaksipalstainen sisällys — on
-kirjaimelleen entinen, koska sen mitat ja savukkeet on tehty omaan
-otsikkoriviinsä eikä linjaus koskenut sitä.
+Karuselli, nostokortti ja muisti ovat **kertomuskaaren** omia
+(`kaari.kertomus`). **PALKKI EI ENÄÄ OLE** (omistaja 8.9.2026,
+Raamattu "KEKSINTOLINSSIN YLAPALKKI IHMISEN MATKAN TYYLIIN, JA ALOITA
+ALUSTA": *"Ja siinä voi kyllä sen yläpalkin siirtää ihmislinssin
+tyyliin"*): sama palkki tulee nyt myös keksintölinssin pysäkkiajoon.
+Jako on `js/aikajana.js`:ssä kahtena metodina — `rakennaPalkki`
+(yhteinen: luokka `palkki`, yläpalkin piilotus, korkeuden mittaus, ↺ ja
+✕) ja `rakennaKertomuksenPalkki` (virtanapit, nostokortti, aikaselain)
+— ja `css/aikajana.css`:ssä kahtena luokkana: `.aikajana.palkki` on
+palkin yhteinen asu, `.aikajana.kertomus` vain kertomuskaaren omat.
+Keksintölinssin muut pinnat (kello, lapun kahva, ilmiöpaneeli,
+esinerivi, Tiedeliitteen kaksipalstainen sisällys) ovat entiset;
+palkin alla ilmiöpaneeli alkaa mitatun korkeuden alta ja esinerivi on
+yhä alareunassa.
 
 ### 13.2 Palkki: mitattu korkeus, ei arvattu
 
