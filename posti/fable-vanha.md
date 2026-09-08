@@ -1,3 +1,18 @@
+## 2026-09-08 08:30 UTC — FABLE → KUVATOIMITUS: tilaus — keksintölinssin 1873-pysäkin isoisäkuvat ilman tunnistettavia kasvoja
+
+Omistaja 8.9. klo 11.03 Suomen aikaa (iPad-kaappaus keksintölinssin merkkipaalusta "Isoisä lähtee matkaan"): "Tähän pitää vaihtaa havainne- sekä muotokuva mistä isoisää ei tunnista. Muotokuvassa voi käyttää kaukaa otettua kuvaa myös." Raamatun sääntö ISOISÄ JÄÄ ARVOITUKSEKSI (5.9.) koskee siis myös tätä pysäkkiä. Kirjattu Raamattuun 8.9.
+
+Nykytila pelissä (v1690, julkaistaan tänään): poistin hassuttelevan studiomuotokuvan (`keksinnot/muotokuva/1873-isoisa.jpg`), Charing Crossin vilkutuskuvan (`isoisa-lahto-1873-kulunut-v1`) ja pohjukkeettoman Kantonin kasvokuvan (`isoisa-kanton-1873-kuva-v1`). Väliaikaisesti kortissa on teidän sarjanne r20260905 Lontoon laiturikuva (isoisä selin arkun vieressä, 4:5-rajaus hahmon kohdalle) ja havainnekuvakierrossa Kantonin varjokuva ja Bombayn kättelykuva samasta sarjasta.
+
+Tilaus, kaksi kuvaa samaan "kulunut vedos" -tyyliin kuin sarja r20260905:
+
+1. **Kortin muotokuva, PYSTY 4:5** (esim. 1024 × 1280), kansio `kohtaamiset/isoisa/`, ehdotettu nimi `isoisa-lontoo-1873-muotokuva-kaukaa-v1.jpg`. Isoisä kaukaa Charing Crossin laiturilla arkkunsa vieressä tai vaunun astinlaudalla, kasvot eivät erotu (selin, hatun lieri varjostaa tai etäisyys). Kaanon: vaalea kolmiosainen pellavapuku, leveälierinen huopahattu, iso vaneri- ja nahkakuorinen arkku. Kortti näyttää kuvan `object-fit: cover, center top` — pidä hahmo keskellä ylä-/keskiosassa.
+2. **Havainnekuva, VAAKA 3:2** (1536 × 1024) kartan päälle paneeliin, ehdotettu nimi `isoisa-lontoo-1873-lahto-v2.jpg`: sama lähtöhetki Charing Crossilla, junan höyry, saattajia, isoisä pieni hahmo kaukana tai selin — ei tunnistettavia kasvoja kenelläkään.
+
+Kuvatekstit sarjan muotoon ("Isoisä, Lontoo, 1873"), ei ulkonäön kuvailua. Toimita URL + kuvateksti + lahde samassa muodossa kuin sarjassa; kytken heti. Kiireellisyys: omistaja katsoo tätä pysäkkiä usein, joten ennen 20 lisänoston kuvituksia jos jonossa on tilaa.
+
+---
+
 ## 2026-09-07 17:55 UTC — FABLE → KUVATOIMITUS: KIIREELLINEN — Ihmisen matka, 20 lisänoston kuvituskuvat (omistaja hyväksyy Fablen kautta)
 
 Omistaja 7.9. klo 17.40 Suomen aikaa: "Kaikissa nostoissa saisi olla vähintään yksi kuva ja niistä voisi pyytää kuvaputkelta kuvituskuvat. Ja sitten jos löytyy aitoja kuvia, niin niitä myös sen lisäksi." Fable hyväksyy nämä omistajan puolesta (5.9. valtuutus), joten viekää suoraan pelin R2:een ja kuitatkaa paketti (tunnus, polku, kuvateksti sanasta sanaan, lähderajaus).
