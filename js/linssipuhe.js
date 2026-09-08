@@ -475,11 +475,19 @@ export function pysaytaLinssiluenta(ui) {
  * välinäytös) soitetaan samalla soittimella samasta kansiosta, ja vain
  * tiedostonimi tulee muualta (ks. kaarenPuheet).
  *
+ * `valmistele` saa soittimen heti sen synnyttyä ja ENNEN soittoa.
+ * Ihmisen matkan yhtenäinen luenta kelaa siinä jakson alkuun
+ * (js/linssit/ihmisen-matka-luenta.js): koko kertomus on yhtenä
+ * tiedostona, ja jakso on sen yksi väli. Kelaus ennen soittoa on
+ * HTML-määritelmän mukaan toiston oletusaloituskohta, joten se pätee
+ * myös ennen metatietoja — pysäyttäminen soiton jälkeen sen sijaan
+ * keskeyttäisi play()-lupauksen ja purkaisi taustan väistön.
+ *
  * @returns {HTMLAudioElement|null} soittimen kahva, tai null jos
  *   luentaa ei aloitettu
  */
 export function soitaLinssiluenta(ui, t, {
-  viive = LUENNAN_VIIVE_MS, runko = null, juuri = LINSSILUENTA_JUURI,
+  viive = LUENNAN_VIIVE_MS, runko = null, juuri = LINSSILUENTA_JUURI, valmistele = null,
 } = {}) {
   pysaytaLinssiluenta(ui);
   if (!ui || (!t && !runko) || typeof Audio === 'undefined') return null;
@@ -508,6 +516,8 @@ export function soitaLinssiluenta(ui, t, {
   };
   audio.addEventListener('ended', vapaaksi);
   audio.addEventListener('error', vapaaksi);
+  // Kutsujan valmistelu (esim. kelaus jakson alkuun) ennen soittoa.
+  if (typeof valmistele === 'function') valmistele(audio);
 
   const aloita = () => {
     ui.linssiluentaAjastin = null;

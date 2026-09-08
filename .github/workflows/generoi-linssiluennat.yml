@@ -40,6 +40,25 @@
 # ole tässä syötteenä tahallaan: yhden vahingossa jätetyn valintaruudun
 # hinta olisi koko kaari uudelleen).
 #
+# YKSI YHTENÄINEN LUENTA (8.9.2026, syöte `yhtena`). Omistaja: *"nyt
+# jokainen kohtaus on generoitu erillisenä kohtana, niin kertojan
+# äänensävy hyppii liikaa"* ja *"muista generoida teksti yhtenä pätkänä,
+# jossa on luonnolliset lauseet ja kappaleet"*. Silloin koko kertomus
+# menee YHTENÄ pyyntönä (jaksot ovat kappaleita, ei taukomerkkejä
+# väliin), ja vastaus haetaan aikaleimapäätteestä
+# (/v1/text-to-speech/{voice}/with-timestamps). Tulokset ovat
+# aikajana/ihmisen-matka/puhe/ihmisen-matka-kertomus.mp3 ja
+# kertomus-manifesti.json, jossa on jokaisen jakson, lauseen ja sanan
+# aikaleima; peli soittaa jakson tiedoston väliltä. ÄÄNI ON YHÄ
+# eleven_v3 TAGIT MUKANA (omistajan valinta: kertoja äänitetään v3:lla
+# juuri ilmaisutagien takia), ja aikaleimat haetaan jälkikäteen
+# PAKOTETULLA KOHDISTUKSELLA (POST /v1/forced-alignment: valmis mp3 +
+# sama teksti tagit karsittuina → merkkien ja sanojen ajat). Jos
+# kohdistus ei onnistu, ajo putoaa aikaleimapäätteeseen
+# (/v1/text-to-speech/{voice}/with-timestamps, eleven_multilingual_v2),
+# joka generoi äänen uudelleen ilman v3:n ilmaisua — se näkyy lokissa ja
+# manifestin kentissä `aikaleimalahde` ja `malli`.
+#
 # KÄSIAJETTAVA (workflow_dispatch), sama syy kuin
 # generoi-tehosteet.yml:llä ja generoi-luennat.yml:llä: generointi
 # maksaa rahaa, ja luenta on sanasta sanaan sidottu pelidataan — se
@@ -115,10 +134,27 @@ on:
         description: >-
           "kyllä" generoi KERTOMUSJAKSOT pysäkkien sijaan (työkalun
           --kertomus; vain kaarilla, joilla on aikajana.kertomus — nyt
-          ihmisen-matka, 22 jaksoa kansioon aikajana/ihmisen-matka/puhe/
+          ihmisen-matka, 21 jaksoa kansioon aikajana/ihmisen-matka/puhe/
           ihmisen-matka-kertomus-<jakso>.mp3 ja kertomus-manifesti.json).
           Tällöin pysakit-lista valitsee jaksot TUNNUKSELLA (esim.
           "avaus,denisova"). "ei" = pysäkit kuten ennen.
+        required: true
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kyllä']
+      yhtena:
+        description: >-
+          "kyllä" lukee KOKO KERTOMUKSEN YHTENÄ ÄÄNITTEENÄ (työkalun
+          --yhtena; vaatii kertomus = kyllä). Yksi kutsu, yksi tiedosto
+          ihmisen-matka-kertomus.mp3 ja kertomus-manifesti.json, jossa on
+          jokaisen jakson, lauseen ja sanan aikaleima — peli soittaa
+          jakson tiedoston väliltä. Kertojan sävy ei hyppää jaksosta
+          toiseen (omistaja 8.9.2026). Ääni on eleven_v3 tagit mukana
+          kuten ennenkin, ja aikaleimat haetaan jälkikäteen pakotetulla
+          kohdistuksella (/v1/forced-alignment); jos se ei onnistu, ajo
+          putoaa aikaleimapäätteeseen (eleven_multilingual_v2) ja kirjaa
+          sen manifestiin. Pysakit-lista EI käy yhteen tämän kanssa,
+          mutta pakota käy (uusinta maksaa yhden kutsun).
         required: true
         type: choice
         default: 'ei'
@@ -202,12 +238,26 @@ jobs:
           PYSAKIT: ${{ inputs.pysakit }}
           LINSSI: ${{ inputs.linssi }}
           KERTOMUS: ${{ inputs.kertomus }}
+          YHTENA: ${{ inputs.yhtena }}
         run: |
           set -euo pipefail
           # Tyhjä muuttuja katoaa lainausmerkittömänä argumenttilistasta;
           # "kyllä" tuo --kertomus-lipun mukaan.
-          LIPPU=""; [ "$KERTOMUS" = "kyllä" ] && LIPPU="--kertomus"
-          if [ -n "$PYSAKIT" ]; then
+          # `|| true` pitää `set -e`:n tyytyväisenä, kun ehto ei täyty.
+          LIPPU=""; [ "$KERTOMUS" = "kyllä" ] && LIPPU="--kertomus" || true
+          if [ "$YHTENA" = "kyllä" ]; then
+            # Yhtenäinen luenta on koko kertomus: se ei käy yhteen
+            # jaksovalinnan kanssa eikä ilman kertomus-lippua.
+            if [ "$KERTOMUS" != "kyllä" ]; then
+              echo "::error::yhtena vaatii kertomus = kyllä." >&2
+              exit 1
+            fi
+            if [ -n "$PYSAKIT" ]; then
+              echo "::error::yhtena lukee koko kertomuksen — jätä pysakit tyhjäksi." >&2
+              exit 1
+            fi
+            node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" $LIPPU --yhtena --kuiva
+          elif [ -n "$PYSAKIT" ]; then
             node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" $LIPPU --kuiva --pysakit $PYSAKIT
           else
             node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" $LIPPU --kuiva
@@ -221,10 +271,17 @@ jobs:
           PAKOTA: ${{ inputs.pakota }}
           LINSSI: ${{ inputs.linssi }}
           KERTOMUS: ${{ inputs.kertomus }}
+          YHTENA: ${{ inputs.yhtena }}
         run: |
           set -euo pipefail
-          LIPPU=""; [ "$KERTOMUS" = "kyllä" ] && LIPPU="--kertomus"
-          if [ -n "$PYSAKIT" ]; then
+          # `|| true` pitää `set -e`:n tyytyväisenä, kun ehto ei täyty.
+          LIPPU=""; [ "$KERTOMUS" = "kyllä" ] && LIPPU="--kertomus" || true
+          if [ "$YHTENA" = "kyllä" ]; then
+            # Yksi kutsu, yksi tiedosto: pakota käy ilman pysakit-listaa,
+            # koska uusinta maksaa tasan yhden kutsun.
+            PAKOTALIPPU=""; [ "$PAKOTA" = "kyllä" ] && PAKOTALIPPU="--pakota" || true
+            node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" $LIPPU --yhtena $PAKOTALIPPU
+          elif [ -n "$PYSAKIT" ]; then
             if [ "$PAKOTA" = "kyllä" ]; then
               node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" $LIPPU --pakota --pysakit $PYSAKIT
             else
