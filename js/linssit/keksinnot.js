@@ -48,12 +48,31 @@
  *                 pienempinä — ei koskaan päällekkäin.
  *   `kuvaAito`    AITO Commons-kuva (PD, tarkistettu 2.9.2026):
  *                 maalaus, kaiverrus tai valokuva henkilöstä. Se ei
- *                 enää näy kortissa vaan odottaa datassa keksijän
- *                 omaa Tiedeliite-sivua; lisenssitiedot pysyvät
- *                 tallessa täällä. Kolme viimeistä puuttunutta (Otto,
- *                 Siemens, Benz) tarkistettiin Commonsista 3.9.2026,
- *                 joten kaikilla 25 pysäkillä on nyt aito kuva.
+ *                 näy kartan kortissa vaan Tiedeliitteen kasvorivillä;
+ *                 lisenssitiedot pysyvät tallessa täällä. Kolme
+ *                 viimeistä puuttunutta (Otto, Siemens, Benz)
+ *                 tarkistettiin Commonsista 3.9.2026, joten kaikilla
+ *                 25 pysäkillä on nyt aito kuva. SAMA KAKSI PITUUTTA
+ *                 KUIN MUOTOKUVALLA (omistaja 8.9.2026): `lyhyt` on
+ *                 kortin yhden rivin kuvateksti, `selite` avatun
+ *                 kuvan pitkä versio muodossa "Nimi (syntymä–kuolema)"
+ *                 + kuvan ajoitus SILLOIN KUN se on Commonsin
+ *                 tiedostosivulla, ja `lahde` on aina
+ *                 'Wikimedia Commons, "<tiedostonimi>"'. Ajoitusta ei
+ *                 arvata: jos tiedostosivulla ei ole päiväystä
+ *                 (Bessemer, Zeppelin, Diesel, Stephenson, Hertz,
+ *                 Nobel), pitkässä tekstissä on vain nimi ja vuodet.
  *   `ilmio`       keksintöä selittävä generoitu kuva ilmiöpaneelissa.
+ *                 Myös sillä on kaksi pituutta (omistaja 8.9.2026):
+ *                 `lyhyt` on Tiedeliitteen kortin kuvateksti — paikka
+ *                 + vuosi + yksi virke siitä, mitä kuvassa tapahtuu,
+ *                 enintään 80 merkkiä ja ilman uutta asiatietoa —
+ *                 ja pitkä `selite` lähteineen näkyy vasta avatussa
+ *                 kuvassa. Sama pari on `ilmioLisa`-kuvalla ja
+ *                 merkkipaalun kuvakierrolla (`ilmioSarja`), jonka
+ *                 lyhyet tekstit noudattavat isoisäkuvien sarjan
+ *                 muotoa "Isoisä, Kanton, 1873"
+ *                 (js/packs/etusivun-isoisakuvat.js `kuvateksti`).
  *
  * Kaikki 25 pysäkkiä on kytketty sekä generoituun muotokuvaan (28
  * kuvaa, kaksoispysäkit mukaan lukien) että generoituun ilmiökuvaan;
@@ -171,6 +190,17 @@ export const KEKSINNOT = [
      * tiivistys, ei uusi fakta. Sama pari on jokaisella 25 pysäkillä,
      * kaksoispysäkkien toisella kasvolla (`kuvaToinen`) ja
      * merkkipaalulla 1873.
+     *
+     * SAMA PARI MYÖS KAHDELLE MUULLE KUVALLE (omistaja 8.9.2026
+     * hyväksyi 1897 Dieselin esimerkkinä: *"joo, tee noin
+     * kaikille"*). Havainnekuvassa (`ilmio`, `ilmioLisa`,
+     * `ilmioSarja`) lyhyt on muotoa PAIKKA + VUOSI + yksi virke
+     * tapahtumasta, enintään 80 merkkiä — esimerkki 1897:
+     * "Augsburgin konetehdas 1897: ensimmäinen toimiva
+     * dieselmoottori käy." Aidossa Commons-kuvassa (`kuvaAito`)
+     * lyhyt on entinen yhden rivin teksti ja pitkä lisää siihen
+     * elinvuodet sekä ajoituksen, kun Commons sen kertoo; lähde on
+     * aina 'Wikimedia Commons, "<tiedostonimi>"'.
      */
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1769-james-watt.jpg`,
@@ -180,9 +210,15 @@ export const KEKSINNOT = [
         + 'pitänyt itseään keksijänä vaan parantelijana.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Watt James von Breda.jpg', selite: 'James Watt, Carl Frederik von Bredan maalaus 1792.' },
+    kuvaAito: {
+      tiedosto: 'Watt James von Breda.jpg',
+      lyhyt: 'James Watt, Carl Frederik von Bredan maalaus 1792.',
+      selite: 'James Watt (1736–1819), Carl Frederik von Bredan maalaus 1792.',
+      lahde: 'Wikimedia Commons, "Watt James von Breda.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1769-watt.jpg`,
+      lyhyt: 'Glasgow\'n työpaja 1769: erillinen lauhdutin pitää sylinterin kuumana.',
       selite: 'Wattin työpajan käsityöläinen kuuntelee, lakkaako sylinteri '
         + 'vihdoin jäähtymästä jokaisella iskulla — pieni muutos voisi '
         + 'tarkoittaa, ettei hiiltä enää lapioida hukkaan. Erillinen '
@@ -243,9 +279,15 @@ export const KEKSINNOT = [
         + 'hoiti pallokokeiden esittelyt hovissa.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Joseph-montgolfier.jpg', selite: 'Joseph Montgolfier, tuntemattoman taiteilijan maalaus 1700-luvulta.' },
+    kuvaAito: {
+      tiedosto: 'Joseph-montgolfier.jpg',
+      lyhyt: 'Joseph Montgolfier, tuntemattoman taiteilijan maalaus 1700-luvulta.',
+      selite: 'Joseph Montgolfier (1740–1810), tuntemattoman taiteilijan maalaus 1700-luvulta.',
+      lahde: 'Wikimedia Commons, "Joseph-montgolfier.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1783-montgolfier.jpg`,
+      lyhyt: 'La Muette, Pariisi 1783: kaksi miestä nousee ilmaan paperisella pallolla.',
       selite: 'Pilâtre de Rozier ja markiisi d\'Arlandes seisovat avonaisella '
         + 'parvekkeella suoraan paperisen pallon tulen yläpuolella; mukana '
         + 'on märkiä sieniä, jos kipinät sytyttävät kuoren. Kun köydet '
@@ -296,9 +338,15 @@ export const KEKSINNOT = [
         + 'rokotustavan vaarat.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Portrait of Edward Jenner M.D (4672926).jpg', selite: 'Edward Jenner, William Ridleyn kaiverrus 1804.' },
+    kuvaAito: {
+      tiedosto: 'Portrait of Edward Jenner M.D (4672926).jpg',
+      lyhyt: 'Edward Jenner, William Ridleyn kaiverrus 1804.',
+      selite: 'Edward Jenner (1749–1823), William Ridleyn kaiverrus 1804.',
+      lahde: 'Wikimedia Commons, "Portrait of Edward Jenner M.D (4672926).jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1796-jenner.jpg`,
+      lyhyt: 'Berkeley 1796: James Phipps saa lehmärokon sidottuun käsivarteensa.',
       selite: 'Kahdeksanvuotias puutarhurin poika James Phipps tutkii sidottua '
         + 'käsivarttaan tietämättä, että heinäkuussa Jenner altistaa hänet '
         + 'vielä isorokolle kokeen varmistamiseksi. Poika selviää, mutta '
@@ -349,9 +397,15 @@ export const KEKSINNOT = [
         + 'vasta 49-vuotiaana.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Alessandro Volta. Gaetano Bonatti inc.jpg', selite: 'Alessandro Volta, Gaetano Bonattin kaiverrus 1837.' },
+    kuvaAito: {
+      tiedosto: 'Alessandro Volta. Gaetano Bonatti inc.jpg',
+      lyhyt: 'Alessandro Volta, Gaetano Bonattin kaiverrus 1837.',
+      selite: 'Alessandro Volta (1745–1827), Gaetano Bonattin kaiverrus 1837.',
+      lahde: 'Wikimedia Commons, "Alessandro Volta. Gaetano Bonatti inc.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1800-volta.jpg`,
+      lyhyt: 'Pavian laboratorio 1800: metallikiekkojen pino antaa tasaisen virran.',
       selite: 'Pavian laboratoriossa avustaja säpsähtää, kun metallikiekkojen '
         + 'pino antaa tasaisen sähköärsykkeen eikä vain yhtä staattista '
         + 'kipinää. Volta käyttää omaa kehoaan mittalaitteena ja avaa tien '
@@ -399,9 +453,15 @@ export const KEKSINNOT = [
         + 'lähes viisikymppisenä hän löysi taitonsa: koneiden rakentamisen.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Joseph Marie Jacquard.jpg', selite: 'Joseph Marie Jacquard, kaiverrus 1800-luvulta.' },
+    kuvaAito: {
+      tiedosto: 'Joseph Marie Jacquard.jpg',
+      lyhyt: 'Joseph Marie Jacquard, kaiverrus 1800-luvulta.',
+      selite: 'Joseph Marie Jacquard (1752–1834), kaiverrus 1800-luvulta.',
+      lahde: 'Wikimedia Commons, "Joseph Marie Jacquard.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1804-jacquard.jpg`,
+      lyhyt: 'Lyonin työpaja 1804: rei\'itetty kortti nostaa juuri oikeat loimilangat.',
       selite: 'Lyonin nuori apulainen lukee rei\'itettyä korttia kuin käskyä: '
         + 'yksi aukko voi nostaa juuri ne loimilangat, joista kukka syntyy. '
         + 'Korttiketju vapauttaa kuvion piirtäjän käsistä, mutta työpajan '
@@ -451,9 +511,15 @@ export const KEKSINNOT = [
         + 'oppineita kohtaan, jotka pitivät häntä sivistymättömänä.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'George Stephenson.jpg', selite: 'George Stephenson, John Lucasin maalaus.' },
+    kuvaAito: {
+      tiedosto: 'George Stephenson.jpg',
+      lyhyt: 'George Stephenson, John Lucasin maalaus.',
+      selite: 'George Stephenson (1781–1848), John Lucasin maalaus.',
+      lahde: 'Wikimedia Commons, "George Stephenson.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1825-stephenson.jpg`,
+      lyhyt: 'Stockton–Darlington 1825: Locomotion vetää ensimmäistä yleisöjunaa.',
       selite: 'Avovaunuun ahtautunut kaivosmies puristaa laitaa, kun '
         + 'Locomotion No. 1 alkaa vetää väkijoukkoa nopeammin kuin '
         + 'tuttu hevonen. Stockton–Darlingtonin avajaisjunan '
@@ -515,9 +581,15 @@ export const KEKSINNOT = [
         + 'päin, mutta laboratoriossa hän oli kotonaan.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Wheatstone Charles drawing 1868.jpg', selite: 'Charles Wheatstone, Samuel Laurencen piirros 1868.' },
+    kuvaAito: {
+      tiedosto: 'Wheatstone Charles drawing 1868.jpg',
+      lyhyt: 'Charles Wheatstone, Samuel Laurencen piirros 1868.',
+      selite: 'Charles Wheatstone (1802–1875), Samuel Laurencen piirros 1868.',
+      lahde: 'Wikimedia Commons, "Wheatstone Charles drawing 1868.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1837-wheatstone.jpg`,
+      lyhyt: 'Euston, Lontoo 1837: lennättimen neulat kääntyvät ja osoittavat kirjaimen.',
       selite: 'Eustonin nuori virkailija ei kuule Camden Townista '
         + 'ääntäkään: kaksi neulaa vain kääntyy ja osoittaa kirjaimen. '
         + 'Vuoden 1837 kokeessa sähköinen viesti ehtii perille ennen '
@@ -565,9 +637,15 @@ export const KEKSINNOT = [
         + 'Keksinnöstäänkin hän puhui kuin näyttämöltä.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Louis Daguerre 2.jpg', selite: 'Louis Daguerre dagerrotypiassa 1844.' },
+    kuvaAito: {
+      tiedosto: 'Louis Daguerre 2.jpg',
+      lyhyt: 'Louis Daguerre dagerrotypiassa 1844.',
+      selite: 'Louis Daguerre (1787–1851) dagerrotypiassa 1844.',
+      lahde: 'Wikimedia Commons, "Louis Daguerre 2.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1839-daguerre.jpg`,
+      lyhyt: 'Pariisin ateljee 1839: hopeoidulle levylle syntyy ainutkertainen kuva.',
       selite: 'Hopeoitu kuparilevy on peili, josta ateljeeapulainen etsii '
         + 'pienintäkin virhettä tietäen, ettei valotusta voi kopioida. '
         + 'Vuonna 1839 dagerrotypia tekee jokaisesta kuvasta '
@@ -616,9 +694,15 @@ export const KEKSINNOT = [
         + 'Kieltäytyville teollisuusmiehille hän vastasi hinnalla.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Henry Bessemer.jpg', selite: 'Henry Bessemer.' },
+    kuvaAito: {
+      tiedosto: 'Henry Bessemer.jpg',
+      lyhyt: 'Henry Bessemer.',
+      selite: 'Henry Bessemer (1813–1898).',
+      lahde: 'Wikimedia Commons, "Henry Bessemer.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1856-bessemer.jpg`,
+      lyhyt: 'Sheffieldin terästehdas 1856: konvertterin valkea virta täyttää kauhan.',
       selite: 'Sheffieldin terästyöläinen kääntää kasvonsa, mutta ei voi '
         + 'irrottaa kättään vivusta, kun konvertterin valkea virta '
         + 'täyttää kauhan. Bessemerin prosessi lupaa halvempaa terästä; '
@@ -666,9 +750,15 @@ export const KEKSINNOT = [
         + 'Nuoremman veljensä hän menetti räjähdyksessä 1864.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'AlfredNobel adjusted.jpg', selite: 'Alfred Nobel, Gösta Flormanin valokuva.' },
+    kuvaAito: {
+      tiedosto: 'AlfredNobel adjusted.jpg',
+      lyhyt: 'Alfred Nobel, Gösta Flormanin valokuva.',
+      selite: 'Alfred Nobel (1833–1896), Gösta Flormanin valokuva.',
+      lahde: 'Wikimedia Commons, "AlfredNobel adjusted.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1867-nobel.jpg`,
+      lyhyt: 'Vinterviken, Tukholma 1867: nitroglyseriini kulkee paperipatruunoissa.',
       selite: 'Vintervikenin työntekijä katsoo paperipatruunoita '
         + 'muistamatta unohtaa Heleneborgin räjähdyksessä kuolleita — '
         + 'yksi heistä oli Alfred Nobelin veli Emil. Kiselguuri tekee '
@@ -718,9 +808,15 @@ export const KEKSINNOT = [
         + 'jälkeen hänet vietiin opiskelemaan tuhansien kilometrien päähän.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'DIMendeleevCab.jpg', selite: 'Dmitri Mendelejev työhuoneessaan 1897.' },
+    kuvaAito: {
+      tiedosto: 'DIMendeleevCab.jpg',
+      lyhyt: 'Dmitri Mendelejev työhuoneessaan 1897.',
+      selite: 'Dmitri Mendelejev (1834–1907) työhuoneessaan 1897.',
+      lahde: 'Wikimedia Commons, "DIMendeleevCab.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1869-mendelejev.jpg`,
+      lyhyt: 'Pietari 1869: Mendelejev jättää taulukkoonsa aukot tuntemattomille aineille.',
       selite: 'Taulukkoon jäävä tyhjä kohta vaivaa Mendelejeviä enemmän '
         + 'kuin väärä vastaus: jos järjestys on oikea, tuntemattoman '
         + 'alkuaineen pitäisi vielä ilmestyä siihen. Vuonna 1869 hän '
@@ -788,6 +884,7 @@ export const KEKSINNOT = [
       // Sääntöä noudattava versio 8.9.2026 (kasvot varjossa, sarja r20260905);
       // pohjukkeeton kasvokuva isoisa-kanton-1873-kuva-v1 poistui.
       osoite: 'https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-kanton-aged-r20260905-v1.jpg',
+      lyhyt: 'Isoisä, Kanton, 1873',
       ulkoinen: true,
       selite: 'Isoisä istuu teehuoneen hämärässä ja seuraa, kuinka '
         + 'teeammattilainen näyttää lehtiä tarjottimelta. Käytössä taittunut '
@@ -810,6 +907,7 @@ export const KEKSINNOT = [
         // Vilkutuskuva (kasvot) poistui 8.9.2026; tilalla pakin Bombayn
         // kuva, jossa isoisä kättelee lautturia selin kameraan.
         osoite: 'https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-bombay-aged-r20260905-v1.jpg',
+        lyhyt: 'Isoisä, Bombay, 1873',
         ulkoinen: true,
         selite: 'Isoisä kättelee lautturia Bombayn laiturilla. Kuva on hänen '
           + 'matka-arkustaan; kasvot jäävät katoksen varjoon.',
@@ -893,9 +991,15 @@ export const KEKSINNOT = [
         + 'koskaan insinööriksi eikä lakannut parantelemasta samaa konetta.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Nikolaus August Otto.png', selite: 'Nikolaus August Otto, tuntemattoman kuvaajan muotokuva noin 1868.' },
+    kuvaAito: {
+      tiedosto: 'Nikolaus August Otto.png',
+      lyhyt: 'Nikolaus August Otto, tuntemattoman kuvaajan muotokuva noin 1868.',
+      selite: 'Nikolaus August Otto (1832–1891), tuntemattoman kuvaajan muotokuva noin 1868.',
+      lahde: 'Wikimedia Commons, "Nikolaus August Otto.png"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1876-otto.jpg`,
+      lyhyt: 'Köln 1876: uusi moottori käy neljässä tahdissa eikä vauhtipyörä pysähdy.',
       selite: 'Kun suuri vauhtipyörä ei pysähdy, Otton vieressä seisova '
         + 'mekaanikko uskaltaa viimein hellittää otettaan säätövivusta. '
         + 'Toukokuussa 1876 Kölnissä uusi moottori puristaa '
@@ -944,9 +1048,15 @@ export const KEKSINNOT = [
         + 'tehtaista, joissa raatavat "työn orjat".',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Wvs 1885.jpg', selite: 'Werner von Siemens, valokuva noin 1885.' },
+    kuvaAito: {
+      tiedosto: 'Wvs 1885.jpg',
+      lyhyt: 'Werner von Siemens, valokuva noin 1885.',
+      selite: 'Werner von Siemens (1816–1892), valokuva noin 1885.',
+      lahde: 'Wikimedia Commons, "Wvs 1885.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1879-siemens.jpg`,
+      lyhyt: 'Berliinin teollisuusnäyttely 1879: pieni sähköveturi vetää avovaunua.',
       selite: 'Kuusipaikkaisen avovaunun poika kuuntelee, mistä veturin '
         + 'ääni tulee: savupiippua, hevosta tai höyryä ei ole. '
         + 'Berliinin teollisuusnäyttelyn pieni Siemens & Halsken rata '
@@ -994,9 +1104,15 @@ export const KEKSINNOT = [
         + 'työn mutta ei työtä.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg', selite: 'Louis Pasteur laboratoriossaan, Albert Edelfeltin maalaus 1885.' },
+    kuvaAito: {
+      tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg',
+      lyhyt: 'Louis Pasteur laboratoriossaan, Albert Edelfeltin maalaus 1885.',
+      selite: 'Louis Pasteur (1822–1895) laboratoriossaan, Albert Edelfeltin maalaus 1885.',
+      lahde: 'Wikimedia Commons, "Albert Edelfelt - Louis Pasteur - 1885.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1885-pasteur.jpg`,
+      lyhyt: 'Pariisi 1885: heikennetty raivotautinäyte annetaan Joseph Meisterille.',
       selite: 'Avustaja merkitsee pullon päivämäärän tietäen, että '
         + 'kuivumisaika ratkaisee näytteen voiman: liian virulentti voi '
         + 'tappaa, liian heikko ei suojaa. Pasteurin ryhmä heikentää '
@@ -1047,9 +1163,15 @@ export const KEKSINNOT = [
         + 'auton.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Carl Benz circa 1920.jpg', selite: 'Carl Benz noin 1920.' },
+    kuvaAito: {
+      tiedosto: 'Carl Benz circa 1920.jpg',
+      lyhyt: 'Carl Benz noin 1920.',
+      selite: 'Carl Benz (1844–1929), valokuva noin 1920.',
+      lahde: 'Wikimedia Commons, "Carl Benz circa 1920.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1886-benz.jpg`,
+      lyhyt: 'Mannheim 1886: kolmipyöräinen kulkee moottorin voimalla ilman hevosta.',
       selite: 'Kadun poika odottaa hevosen ilmestyvän, mutta ääni tulee '
         + 'penkin takana tärisevästä yksisylinterisestä moottorista. '
         + 'Carl Benzin vuonna 1886 patentoitu kolmipyöräinen kulkee '
@@ -1097,9 +1219,15 @@ export const KEKSINNOT = [
         + 'oleviksi hän sanoi, ettei niistä ole mitään hyötyä.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Heinrich Rudolf Hertz.jpg', selite: 'Heinrich Hertz, Robert Krewaldtin valokuva.' },
+    kuvaAito: {
+      tiedosto: 'Heinrich Rudolf Hertz.jpg',
+      lyhyt: 'Heinrich Hertz, Robert Krewaldtin valokuva.',
+      selite: 'Heinrich Hertz (1857–1894), Robert Krewaldtin valokuva.',
+      lahde: 'Wikimedia Commons, "Heinrich Rudolf Hertz.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1888-hertz.jpg`,
+      lyhyt: 'Karlsruhen laboratorio 1888: renkaan kipinä vastaa lähettimen kipinään.',
       selite: 'Avustaja peittää kädellään lampun hajavalon ja odottaa '
         + 'kipinää, jota tuskin näkee. Kun renkaan pieni kipinä vastaa '
         + 'lähettimen kipinään ilman johtoa, sähkömagneettinen aalto '
@@ -1147,9 +1275,15 @@ export const KEKSINNOT = [
         + 'keksijä — ja liittyi 1923 Italian fasistiseen puolueeseen.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Guglielmo Marconi.jpg', selite: 'Guglielmo Marconi 1908, Pach Brothers.' },
+    kuvaAito: {
+      tiedosto: 'Guglielmo Marconi.jpg',
+      lyhyt: 'Guglielmo Marconi 1908, Pach Brothers.',
+      selite: 'Guglielmo Marconi (1874–1937), Pach Brothersin valokuva 1908.',
+      lahde: 'Wikimedia Commons, "Guglielmo Marconi.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1895-marconi.jpg`,
+      lyhyt: 'Villa Griffone, Bologna 1895: näkymätön viesti kulkee mäen yli.',
       selite: 'Villa Griffonen ullakolla nuori apulainen tuijottaa '
         + 'paperinauhaa ja odottaa mäen takaa kiväärinlaukausta. Ääni '
         + 'tarkoittaisi, että näkymätön viesti on kulkenut ensimmäisen '
@@ -1197,9 +1331,15 @@ export const KEKSINNOT = [
         + 'patenttia ja määräsi kirjeenvaihtonsa hävitettäväksi.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Roentgen2.jpg', selite: 'Wilhelm Röntgen noin 1900.' },
+    kuvaAito: {
+      tiedosto: 'Roentgen2.jpg',
+      lyhyt: 'Wilhelm Röntgen noin 1900.',
+      selite: 'Wilhelm Röntgen (1845–1923), valokuva noin 1900.',
+      lahde: 'Wikimedia Commons, "Roentgen2.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1895-rontgen.jpg`,
+      lyhyt: 'Würzburg 1895: käden luinen varjo näkyy hohtavalla levyllä.',
       selite: 'Avustaja pitää oikean kätensä liikkumatta ja vertaa sitä '
         + 'erillisellä hohtavalla levyllä näkyvään luiseen varjoon. '
         + 'Sormus vahvistaa, että kuva kuuluu hänelle; säteilyn '
@@ -1259,9 +1399,15 @@ export const KEKSINNOT = [
         + 'tulevaisuutta.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Fratelli Lumiere.jpg', selite: 'Auguste ja Louis Lumière noin 1895.' },
+    kuvaAito: {
+      tiedosto: 'Fratelli Lumiere.jpg',
+      lyhyt: 'Auguste ja Louis Lumière noin 1895.',
+      selite: 'Auguste (1862–1954) ja Louis (1864–1948) Lumière, valokuva noin 1895.',
+      lahde: 'Wikimedia Commons, "Fratelli Lumiere.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1895-lumiere.jpg`,
+      lyhyt: 'Salon indien, Pariisi 1895: maksava yleisö näkee kuvien liikkuvan.',
       selite: 'Eturivin katsoja kääntyy hetkeksi katsomaan vierustoveriaan: '
         + 'liikkuivatko tehtaan portista todella ihmiset vai huijasiko '
         + 'silmä? Salon indienin 33 maksavaa vierasta joutuvat '
@@ -1309,9 +1455,15 @@ export const KEKSINNOT = [
         + 'räjähdystä oli vähällä tappaa hänet työn ääressä.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Rudolf Diesel.jpg', selite: 'Rudolf Diesel.' },
+    kuvaAito: {
+      tiedosto: 'Rudolf Diesel.jpg',
+      lyhyt: 'Rudolf Diesel.',
+      selite: 'Rudolf Diesel (1858–1913).',
+      lahde: 'Wikimedia Commons, "Rudolf Diesel.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1897-diesel.jpg`,
+      lyhyt: 'Augsburgin konetehdas 1897: ensimmäinen toimiva dieselmoottori käy.',
       selite: 'Mekaanikko hellittää säätövivusta vasta, kun vauhtipyörän '
         + 'rytmi ei enää horju. Neljän vuoden rikkoutumisten jälkeen '
         + 'vuoden 1897 moottori käy, mutta mies kuuntelee yhä jokaista '
@@ -1361,9 +1513,15 @@ export const KEKSINNOT = [
         + 'ullakollaan ja unohti syödä.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Marie Curie c. 1898.jpg', selite: 'Marie Curie noin 1898.' },
+    kuvaAito: {
+      tiedosto: 'Marie Curie c. 1898.jpg',
+      lyhyt: 'Marie Curie noin 1898.',
+      selite: 'Marie Curie (1867–1934), valokuva noin 1898.',
+      lahde: 'Wikimedia Commons, "Marie Curie c. 1898.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1898-curie.jpg`,
+      lyhyt: 'Pariisi 1898: Marie Curie hämmentää pataa, josta nousee happamia höyryjä.',
       selite: 'Marie Curie kiertää raskasta rautatankoa padassa, josta '
         + 'nousevat happamat höyryt tarttuvat vaatteisiin ja ihoon. '
         + 'Tuhansien kilojen jäännöksestä tavoitellaan jotakin, jota '
@@ -1412,9 +1570,15 @@ export const KEKSINNOT = [
         + 'ilmalaivojensa vuoksi.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Ferdinand von Zeppelin.jpg', selite: 'Ferdinand von Zeppelin.' },
+    kuvaAito: {
+      tiedosto: 'Ferdinand von Zeppelin.jpg',
+      lyhyt: 'Ferdinand von Zeppelin.',
+      selite: 'Ferdinand von Zeppelin (1838–1917).',
+      lahde: 'Wikimedia Commons, "Ferdinand von Zeppelin.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1900-zeppelin.jpg`,
+      lyhyt: 'Bodenjärvi 1900: 128-metrinen LZ 1 kohoaa kelluvan hallin edessä.',
       selite: 'Köydestä vetävä palomies tuntee 128-metrisen rungon nosteen '
         + 'käsivarsissaan ennen kuin ilmalaiva on kunnolla irti '
         + 'vedestä. Kun LZ 1 kohoaa kelluvan hallin edessä, hänen '
@@ -1462,9 +1626,15 @@ export const KEKSINNOT = [
         + 'hän lensi lentonsa loppuun kenkä palaen jalassa.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Louis Bleriot.jpg', selite: 'Louis Blériot.' },
+    kuvaAito: {
+      tiedosto: 'Louis Bleriot.jpg',
+      lyhyt: 'Louis Blériot.',
+      selite: 'Louis Blériot (1872–1936), valokuva vuosilta 1909–1916.',
+      lahde: 'Wikimedia Commons, "Louis Bleriot.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1909-bleriot.jpg`,
+      lyhyt: 'Kanaali 1909: Blériot lentää ilman kompassia kohti Doverin kallioita.',
       selite: 'Kolme alusta jää pieniksi pisteiksi Kanaalille, eikä '
         + 'Blériot\'lla ole kompassia kertomassa, kuinka kauas tuuli on '
         + 'vienyt. Kun Doverin valkoiset kalliot viimein erottuvat '
@@ -1474,6 +1644,7 @@ export const KEKSINNOT = [
     },
     ilmioLisa: {
       osoite: `${KEKSINTO_KUVAJUURI}/1909-bleriot-close.jpg`,
+      lyhyt: 'Kanaali 1909: öljy ja kylmä ilmavirta kirvelevät, ote pysyy ohjaimessa.',
       selite: 'Kylmä ilmavirta on kastellut Blériot\'n silmät ja moottorin '
         + 'öljy tarttuu kasvoihin, mutta hän ei uskalla irrottaa otetta '
         + 'ohjaimesta. Kallioiden löytyminen sumusta ei vielä ole '
@@ -1523,9 +1694,15 @@ export const KEKSINNOT = [
         + 'televisionsa hän kokosi hatturasiasta ja parsinneuloista.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'John Logie Baird in 1917.jpg', selite: 'John Logie Baird 1917.' },
+    kuvaAito: {
+      tiedosto: 'John Logie Baird in 1917.jpg',
+      lyhyt: 'John Logie Baird 1917.',
+      selite: 'John Logie Baird (1888–1946), valokuva 1917.',
+      lahde: 'Wikimedia Commons, "John Logie Baird in 1917.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1926-baird.jpg`,
+      lyhyt: 'Sohon ullakko, Lontoo 1926: pieni vastaanotin näyttää liikkuvat kasvot.',
       selite: 'Skeptinen todistaja kumartuu niin lähelle pientä '
         + 'vastaanotinta, että näkee kuvan hajoavan valopisteiksi. Kun '
         + 'kasvojen suu kuitenkin liikkuu samassa hetkessä kuin '
@@ -1575,9 +1752,15 @@ export const KEKSINNOT = [
         + 'Tutkijaksi hänet houkutteli ampumaseuran kapteeni.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: { tiedosto: 'Synthetic Production of Penicillin TR1468.jpg', selite: 'Alexander Fleming laboratoriossaan 1943.' },
+    kuvaAito: {
+      tiedosto: 'Synthetic Production of Penicillin TR1468.jpg',
+      lyhyt: 'Alexander Fleming laboratoriossaan 1943.',
+      selite: 'Alexander Fleming (1881–1955) laboratoriossaan 1943.',
+      lahde: 'Wikimedia Commons, "Synthetic Production of Penicillin TR1468.jpg"',
+    },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1928-fleming.jpg`,
+      lyhyt: 'Lontoon laboratorio 1928: homepesäkkeen ympärillä on kirkas kehä.',
       selite: 'Fleming on vähällä siirtää sotkuisen viljelymaljan syrjään, '
         + 'kun homepesäkkeen ympärillä oleva kirkas kehä pysäyttää '
         + 'hänet. Kukaan ei hurraa: hänen edessään ei ole vielä lääke '

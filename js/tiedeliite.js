@@ -57,7 +57,13 @@
  *      js/linssit/keksinnot.js) ILMAN lähderiviä; suurennos näyttää
  *      pitkän `selite`-tekstin ja lähteen ("Matkakirjan
  *      havainnekuva"), koska se piirtyy avaaKohdeSuurennoksessa
- *      kuvatiedon omista kentistä.
+ *      kuvatiedon omista kentistä. SAMA PARI KAIKILLA SIVUN KUVILLA
+ *      (omistaja 8.9.2026 hyväksyi 1897 Dieselin esimerkkinä: *"joo,
+ *      tee noin kaikille"*): havainnekuvan lyhyt on paikka + vuosi +
+ *      yksi virke ja pitkä entinen kertova teksti; aidon Commons-
+ *      kuvan lyhyt on entinen yhden rivin teksti ja pitkä lisää
+ *      elinvuodet ja ajoituksen, lähderivinään Commons-tiedostonimi.
+ *      Koodi on kaikille sama — pituudet ovat datassa.
  *   3. HAVAINNEKUVA REUNASTA REUNAAN. Yhden kuvan kehys piirretään
  *      täällä (piirraIlmiokuva) eikä yhteisellä piirraNostonKuvalla:
  *      yhteinen sääntö `.fokusnosto-kuva { width: fit-content }` ja
@@ -142,9 +148,14 @@ const onKuva = (kuva) => Boolean(kuva?.tiedosto || kuva?.osoite);
  * Datassa on kaksi pituutta: `lyhyt` on yhden virkkeen versio ja
  * `selite` entinen pitkä. Kortti näyttää lyhyen, suurennos pitkän —
  * ja kuvatiedot menevät suurennokseen sellaisenaan, joten pitkä
- * teksti ja lähderivi tulevat sinne ilman eri sääntöä. Ilman
- * `lyhyt`-kenttää (esim. aito Commons-kuva, jonka selite on jo
- * yhden rivin mittainen) kortissa on entinen selite.
+ * teksti ja lähderivi tulevat sinne ilman eri sääntöä.
+ *
+ * SAMA SÄÄNTÖ KAIKILLE KOLMELLE KUVALAJILLE (omistaja 8.9.2026:
+ * *"joo, tee noin kaikille"*): generoitu muotokuva, havainnekuva ja
+ * aito Commons-kuva kantavat kukin oman parinsa keksintölinssin
+ * datassa. Varapolku jää silti voimaan: ilman `lyhyt`-kenttää
+ * kortissa on entinen selite, joten Ihmisen matkan nostot (joilla
+ * paria ei ole) piirtyvät kuten ennenkin.
  */
 export const lyhytKuvateksti = (kuva) => kuva?.lyhyt ?? kuva?.selite ?? '';
 
