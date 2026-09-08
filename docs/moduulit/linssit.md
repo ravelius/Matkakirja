@@ -1559,6 +1559,23 @@ keksintölinssin havainnekuvissa, koska ne ovat sama paneeli
   (css/styles.css `body.aikajana-paalla`), ja maakyltti elää vain
   maaselaimessa (js/ui.js `paivitaMaaPilleri`). Savuke mittaa
   päällekkäisyyden joka ajolla ja ohittaa vain näkymättömät.
+  **Päivitys 8.9.2026 (omistaja, Raamattu "KEKSINTOLINSSIN YLAPALKKI
+  IHMISEN MATKAN TYYLIIN, JA ALOITA ALUSTA"):** kun linssi saa palkin
+  Matkakirjan yläpalkin tilalle — nyt kumpikin kaari, sekä Ihmisen
+  matka että keksinnöt — ✕ siirtyy palkin oikeaan laitaan
+  (`.aikajana.palkki .aikajana-sulje { position: static }`) Tauko/Jatka-
+  ja ↺-nappien viereen, kaikki samankorkuisina (`--palkin-nappi`).
+  Kulman paikka jää perusasuksi eikä sitä poisteta: se on voimassa
+  aina, kun palkkia ei rakenneta.
+- **Aloita alusta (↺) palkissa.** Sama nappi kummallakin kaarella,
+  kaksi haaraa (`js/aikajana.js aloitaAlusta`): kertomuskaarella se
+  tyhjentää linssin muistin ja käynnistää linssin uudestaan
+  avausjaksosta, pysäkkiajossa (keksinnöt, ei muistia) se ajaa
+  `alusta()`:n eli palauttaa kaaren alkuun paikan päällä — kello
+  alkuvuoteen, valot sammuksiin, ilmiöpaneeli kiinni, keksijäkaruselli
+  ja kamera kaaren alkuun. Vartiot: `tests/aikajanamerkit.test.mjs`
+  ("keksintölinssin pysäkkiajo saa saman palkin ja Aloita alusta
+  -napin") ja `tests/ihmisen-matka-tutkimus.test.mjs`.
 - **Kapea ruutu (alle 600 px).** Kulma varataan napille: palkin
   keskitys lasketaan ✕:n vasemmalle puolelle jäävästä tilasta
   (`left: calc(50% - 1.8rem)`, `max-width: calc(100% - 4.8rem)`).

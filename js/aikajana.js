@@ -2560,8 +2560,12 @@ class Aikajana {
     });
 
     this.juuri.append(ylarivi, this.suljeNappi, this.paneeli, this.nauha);
-    // Kertomuskaari saa YHDEN PALKIN Matkakirjan yläpalkin tilalle.
-    if (this.kaari.kertomus?.length) this.rakennaPalkki(ylarivi, ohjaimet);
+    /*
+     * KUMPIKIN KAARI SAA YHDEN PALKIN Matkakirjan yläpalkin tilalle
+     * (omistaja 8.9.2026); kertomuskaaren omat lisät tulevat päälle.
+     */
+    this.rakennaPalkki(ylarivi, ohjaimet);
+    if (this.kaari.kertomus?.length) this.rakennaKertomuksenPalkki(ylarivi, ohjaimet);
     koti.appendChild(this.juuri);
     document.body.classList.add('aikajana-paalla');
 
@@ -2603,33 +2607,26 @@ class Aikajana {
    * SEN MITATUN korkeuden (--aikajana-palkki-korkeus), jotta kartta ei
    * hyppää ja palkki istuu samaan paikkaan.
    *
-   * VAIN KERTOMUSKAARELLE (Fablemaxin rajaus 7.9.2026): keksintölinssin
-   * pysäkkiajo (kello, kahva, ilmiöpaneeli, karuselli) on mitoitettu
-   * omaan otsikkoriviinsä ja savukkeisiinsa, eikä linjaus koskenut sitä.
-   *
-   * LAMPPU AVAA KORTIN (napautaValoa; omistaja 7.9.2026: *"jos klikkaa
-   * valopalloa kartalla, niin tällä hetkellä ei tapahdu mitään"*).
-   * Juurisyy: lamppu ja tutkimusvaiheen hehku ovat samassa pisteessä,
-   * ja laudan osumatestissä (js/pallolauta/lauta.js lahinLinssimerkki,
-   * tiukka "lähempi voittaa") lamppu voitti ensimmäisenä rekisteröitynä
-   * osana — ja sen napautus palasi kertomuskaarella tyhjänä. Nyt
-   * lamppu, kuva ja hehku avaavat saman kortin; esityksen aikana kortti
-   * pysäyttää esityksen tauolle ja jatko tulee sulusta.
+   * MYÖS KEKSINTÖLINSSI (omistaja 8.9.2026, Raamattu "KEKSINTOLINSSIN
+   * YLAPALKKI IHMISEN MATKAN TYYLIIN, JA ALOITA ALUSTA", sanatarkasti:
+   * *"Ja siinä voi kyllä sen yläpalkin siirtää ihmislinssin tyyliin"* ja
+   * *"Tehdään reset"*). Tämä metodi on siksi PELKKÄ PALKKI, jonka
+   * kumpikin kaari saa: luokka, Matkakirjan yläpalkin piilotus,
+   * korkeuden mittaus, Aloita alusta -nappi ja ✕:n siirto palkkiin.
+   * Kertomuskaaren omat asiat (virtanapit, nostokortti, aikaselain)
+   * ovat rakennaKertomuksenPalkki-metodissa, ja css/aikajana.css jakaa
+   * saman rajan: `.aikajana.palkki` on yhteinen asu, `.aikajana.kertomus`
+   * vain kertomuskaaren lisät. Keksintölinssin pysäkkiajo pitää siis
+   * omat pintansa (kello, kahva, ilmiöpaneeli, keksijäkaruselli) ja
+   * saa niiden lisäksi tämän palkin.
    */
   rakennaPalkki(ylarivi, ohjaimet) {
-    const { ui } = this;
-    this.juuri.classList.add('kertomus');
+    this.juuri.classList.add('palkki');
     ylarivi.classList.add('aikajana-palkki');
-    // Palkin tyylit (viisi nappia, kortti) tulevat tutkimusvaiheen
-    // tiedostosta, ja ne tarvitaan jo linssin auetessa.
-    lataaTutkimuksenTyyli();
-    const virrat = this.kaari.virrat?.virrat ?? [];
-    this.virtanapit = virrat.length ? luoVirtanapit(virrat, { legenda: true }) : null;
-    if (this.virtanapit) ylarivi.insertBefore(this.virtanapit.el, ohjaimet);
     /*
      * ALOITA ALUSTA (omistaja: *"Hän voisi tietenkin halutessaan
-     * käynnistää koko linssin alusta"*): tyhjentää muistin ja
-     * käynnistää linssin uudestaan avausjaksosta.
+     * käynnistää koko linssin alusta"*; keksintölinssille 8.9.2026:
+     * *"Tehdään reset"*). Haarat ovat aloitaAlusta-metodissa.
      */
     this.alustaNappi = solmu('button', 'aikajana-nappi aikajana-alusta', '↺');
     this.alustaNappi.type = 'button';
@@ -2647,6 +2644,31 @@ class Aikajana {
     const korkeus = topbar?.getBoundingClientRect?.().height ?? 0;
     if (korkeus > 0) document.body.style.setProperty('--aikajana-palkki-korkeus', `${Math.round(korkeus)}px`);
     document.body.classList.add('aikajana-palkki-auki');
+  }
+
+  /**
+   * KERTOMUSKAAREN LISÄT PALKKIIN (Ihmisen matka). Erotettu palkista
+   * 8.9.2026, kun keksintölinssi sai saman palkin: nämä ovat sen kaaren
+   * omia pintoja, joita pysäkkiajo ei tunne.
+   *
+   * LAMPPU AVAA KORTIN (napautaValoa; omistaja 7.9.2026: *"jos klikkaa
+   * valopalloa kartalla, niin tällä hetkellä ei tapahdu mitään"*).
+   * Juurisyy: lamppu ja tutkimusvaiheen hehku ovat samassa pisteessä,
+   * ja laudan osumatestissä (js/pallolauta/lauta.js lahinLinssimerkki,
+   * tiukka "lähempi voittaa") lamppu voitti ensimmäisenä rekisteröitynä
+   * osana — ja sen napautus palasi kertomuskaarella tyhjänä. Nyt
+   * lamppu, kuva ja hehku avaavat saman kortin; esityksen aikana kortti
+   * pysäyttää esityksen tauolle ja jatko tulee sulusta.
+   */
+  rakennaKertomuksenPalkki(ylarivi, ohjaimet) {
+    const { ui } = this;
+    this.juuri.classList.add('kertomus');
+    // Palkin tyylit (viisi nappia, kortti) tulevat tutkimusvaiheen
+    // tiedostosta, ja ne tarvitaan jo linssin auetessa.
+    lataaTutkimuksenTyyli();
+    const virrat = this.kaari.virrat?.virrat ?? [];
+    this.virtanapit = virrat.length ? luoVirtanapit(virrat, { legenda: true }) : null;
+    if (this.virtanapit) ylarivi.insertBefore(this.virtanapit.el, ohjaimet);
     /*
      * NOSTOKORTTI koko linssin ajaksi (js/linssit/ihmisen-matka-kortti.js):
      * lamppu, kuva ja tutkimusvaiheen hehku avaavat kaikki saman kortin.
@@ -2783,8 +2805,20 @@ class Aikajana {
     (virrat?.valmis ?? Promise.resolve()).then(jatka);
   }
 
-  /** Aloita alusta: muisti pois ja linssi uudestaan avausjaksosta. */
+  /**
+   * Aloita alusta: muisti pois ja linssi uudestaan avausjaksosta.
+   *
+   * PYSÄKKIAJOLLA (keksinnöt) EI OLE MUISTIA eikä kertomusesitystä,
+   * joten ↺ ei pura koko linssiä vaan palauttaa ajon ensimmäiselle
+   * pysäkille paikan päällä (omistaja 8.9.2026: *"Tehdään reset"*):
+   * kello alkuun, valot sammuksiin, ilmiöpaneeli kiinni, karuselli
+   * alkuun ja kamera kaaren alkukuvaan — sama alusta(), jonka
+   * näppäimistö ja savukkeet jo ajavat. Avausjakson mustan aikana
+   * palkki on peitteen alla, joten nappiin ei pääse käsiksi ennen
+   * Käynnistä-nappia.
+   */
   aloitaAlusta() {
+    if (!this.kaari.kertomus?.length) { this.alusta(); return; }
     this.muistiLukittu = true;
     tyhjennaMuisti(this.linssi.tunnus);
     const tunnus = this.linssi.tunnus;
@@ -5472,7 +5506,7 @@ class Aikajana {
     this.ui.tutkimusvaihe?.pura?.();
     this.ui.tutkimusvaihe = null;
     this.ui.aloitaTutkimusvaihe = null;
-    // Nostokortti ja yksi palkki (kertomuskaari): yläpalkki palaa.
+    // Nostokortti (kertomuskaari) ja palkki (kumpikin): yläpalkki palaa.
     this.ui.nostokortti?.pura?.();
     this.ui.nostokortti = null;
     this.virtanapit = null;

@@ -243,11 +243,19 @@ test('tyylit kattavat hehkun, napit, lapun ja kortin', () => {
 
 test('kertomuskaari saa yhden palkin yläpalkin tilalle eikä karusellia', () => {
   const aikajana = lue('../js/aikajana.js');
-  // Palkki rakennetaan vain kertomuskaarelle (keksinnöt ennallaan).
-  assert.match(aikajana, /if \(this\.kaari\.kertomus\?\.length\) this\.rakennaPalkki\(ylarivi, ohjaimet\);/);
-  const palkki = aikajana.match(/rakennaPalkki\(ylarivi, ohjaimet\) \{[\s\S]*?\n  \}/)[0];
-  assert.match(palkki, /this\.juuri\.classList\.add\('kertomus'\);/);
-  assert.match(palkki, /luoVirtanapit\(virrat, \{ legenda: true \}\)/);
+  /*
+   * PALKKI ON KUMMANKIN KAAREN (omistaja 8.9.2026, Raamattu
+   * "KEKSINTOLINSSIN YLAPALKKI IHMISEN MATKAN TYYLIIN, JA ALOITA
+   * ALUSTA"): rakennaPalkki ajetaan aina, ja vain kertomuskaaren omat
+   * lisät (virtanapit, nostokortti, aikaselain) tulevat sen päälle.
+   * Keksintölinssin oma vartio on tests/aikajanamerkit.test.mjs.
+   */
+  assert.match(aikajana, /\n    this\.rakennaPalkki\(ylarivi, ohjaimet\);\n\s*if \(this\.kaari\.kertomus\?\.length\) this\.rakennaKertomuksenPalkki\(ylarivi, ohjaimet\);/);
+  const palkki = aikajana.match(/\n  rakennaPalkki\(ylarivi, ohjaimet\) \{[\s\S]*?\n  \}/)[0];
+  const lisat = aikajana.match(/\n  rakennaKertomuksenPalkki\(ylarivi, ohjaimet\) \{[\s\S]*?\n  \}/)[0];
+  assert.match(palkki, /this\.juuri\.classList\.add\('palkki'\);/);
+  assert.match(lisat, /this\.juuri\.classList\.add\('kertomus'\);/);
+  assert.match(lisat, /luoVirtanapit\(virrat, \{ legenda: true \}\)/);
   // ✕ siirtyy palkkiin, Aloita alusta sen viereen.
   assert.match(palkki, /ohjaimet\.append\(this\.alustaNappi, this\.suljeNappi\);/);
   // Yläpalkin korkeus mitataan ennen piilotusta ja annetaan muuttujana.
@@ -267,9 +275,18 @@ test('kertomuskaari saa yhden palkin yläpalkin tilalle eikä karusellia', () =>
   assert.match(AIKAJANA_CSS, /body\.aikajana-palkki-auki \.topbar \{[\s\S]{0,200}visibility: hidden;[\s\S]{0,200}height: 0;/);
   assert.ok(!/body\.aikajana-palkki-auki \.topbar \{ display: none/.test(AIKAJANA_CSS),
     'display: none pudottaisi kartan ruudukosta');
-  assert.match(AIKAJANA_CSS, /\.aikajana\.kertomus \.aikajana-ylarivi \{[\s\S]{0,400}height: var\(--aikajana-palkki-korkeus, 3\.4rem\);/);
+  assert.match(AIKAJANA_CSS, /\.aikajana\.palkki \.aikajana-ylarivi \{[\s\S]{0,400}height: var\(--aikajana-palkki-korkeus, 3\.4rem\);/);
   assert.match(AIKAJANA_CSS, /\.aikajana\.kertomus \.aikajana-nauha \{ display: none; \}/);
-  assert.match(AIKAJANA_CSS, /\.aikajana\.kertomus \.aikajana-sulje \{\n\s*position: static;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana\.palkki \.aikajana-sulje \{\n\s*position: static;/);
+  /*
+   * PALKIN TYYLIT VAIN KERRAN (8.9.2026): yhteinen asu asuu
+   * `.aikajana.palkki`-luokassa, eikä `.kertomus` saa kopiota samoista
+   * säännöistä — kopio erkanisi hiljaa, kun toista palkkia hiotaan.
+   */
+  assert.ok(!/\.aikajana\.kertomus \.aikajana-ylarivi \{/.test(AIKAJANA_CSS),
+    'palkin geometria on kopioitu myös .kertomus-luokkaan');
+  assert.ok(!/\.aikajana\.kertomus \.aikajana-ohjaimet \{/.test(AIKAJANA_CSS),
+    'palkin ohjainrivi on kopioitu myös .kertomus-luokkaan');
   // Tutkimusvaihe ei enää käsittele nauhaa lainkaan.
   assert.ok(!/nauha/.test(koodi(MODUULI)), 'tutkimusvaihe viittaa yhä karuselliin');
   assert.ok(!/--tutkimus-nauha/.test(CSS), 'lapun korkeus laskettiin karusellista');

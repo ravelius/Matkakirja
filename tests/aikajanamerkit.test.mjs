@@ -822,3 +822,75 @@ test('linssin avaus esilataa koko kaaren kuvat pieninä, ei ainuttakaan isoa', (
     'kaaren loppupää jäi esilataamatta');
   pysaytaAikajana(ui);
 });
+
+/* ══════════════════════════════════════════════════════════════════
+ * 6. YKSI PALKKI MYÖS PYSÄKKIAJOSSA
+ * ══════════════════════════════════════════════════════════════════ */
+
+/*
+ * Omistajan linjaus 8.9.2026 (Raamattu "KEKSINTOLINSSIN YLAPALKKI
+ * IHMISEN MATKAN TYYLIIN, JA ALOITA ALUSTA", sanatarkasti: *"Ja siinä
+ * voi kyllä sen yläpalkin siirtää ihmislinssin tyyliin"* ja *"Tehdään
+ * reset"*): keksintölinssi saa saman palkin kuin Ihmisen matka.
+ *
+ * Tämä rikkoutuisi hiljaa kahdella tavalla, eikä kumpikaan kaataisi
+ * mitään: palkki jäisi rakentumatta (juuri ilman luokkaa, Matkakirjan
+ * yläpalkki näkyviin, ✕ takaisin kartan kulmaan), tai ↺ ajaisi
+ * kertomuskaaren haaran, joka purkaa koko linssin ja rakentaa sen
+ * uudestaan avausjaksosta — pysäkkiajossa se olisi musta ruutu joka
+ * painalluksella.
+ */
+test('keksintölinssin pysäkkiajo saa saman palkin ja Aloita alusta -napin', () => {
+  const ui = tynkaUi();
+  kaynnistaAikajana(ui, LINSSI);
+  ajaKehykset();
+  const ajo = ui.aikajana;
+
+  // 1. PALKKI. Juuri saa yhteisen luokan, mutta ei kertomuskaaren omaa.
+  assert.ok(ajo.juuri.classList.contains('palkki'), 'pysäkkiajo jäi ilman palkkia');
+  assert.ok(!ajo.juuri.classList.contains('kertomus'), 'pysäkkiajo sai kertomuskaaren luokan');
+  const ylarivi = ajo.kello.parent;
+  assert.ok(ylarivi.classList.contains('aikajana-palkki'), 'otsikkorivi ei muuttunut palkiksi');
+  assert.ok(document.body.classList.contains('aikajana-palkki-auki'),
+    'Matkakirjan yläpalkki jäi näkyviin');
+  // Kertomuskaaren omat pinnat eivät seuraa mukana.
+  assert.equal(ajo.virtanapit, null, 'pysäkkiajo sai virtanapit');
+  assert.equal(ajo.aikaselain, null, 'pysäkkiajo sai aikaselaimen');
+
+  // 2. NAPIT SAMASSA LAIDASSA: ↺ ja ✕ ovat ohjainrivin lapsia, ✕ viimeisenä.
+  assert.ok(ajo.alustaNappi, 'Aloita alusta -nappia ei rakennettu');
+  const ohjaimet = ajo.alustaNappi.parent;
+  assert.equal(ajo.suljeNappi.parent, ohjaimet, '✕ jäi kartan kulmaan');
+  assert.equal(ohjaimet.children.at(-1), ajo.suljeNappi, '✕ ei ole palkin oikea laita');
+  assert.equal(ajo.alustaNappi.getAttribute('aria-label'), 'Aloita alusta');
+
+  // 3. RESET. ↺ palauttaa ensimmäiselle pysäkille PAIKAN PÄÄLLÄ: kello
+  //    alkuun, valot sammuksiin, ilmiöpaneeli kiinni — linssiä ei
+  //    pureta eikä avausjaksoa ajeta uudestaan.
+  // Kilahdus mykäksi: äänisyntikka tarvitsisi oikean AudioContextin,
+  // eikä tämä testi mittaa ääntä (ks. kohta 4 kohahduksista).
+  sfx.enabled = false;
+  ajo.sytyta(0);
+  ajo.sytyta(1);
+  sfx.enabled = true;
+  ajaKehykset();
+  assert.ok(etsi(ui.svg, 'palaa').length > 0, 'testi ei ehtinyt sytyttää mitään');
+  ajo.alustaNappi.click();
+  ajaKehykset();
+  assert.equal(etsi(ui.svg, 'palaa').length, 0, '↺ jätti valot palamaan');
+  assert.equal(ajo.tila.i, -1, '↺ ei palauttanut kelloa kaaren alkuun');
+  // Kello lähtee kaaren alusta ja käy heti eteenpäin (alusta → jatka),
+  // joten muutama kehys on jo kulunut: lukema on alkuvuoden tuntumassa.
+  assert.ok(Math.abs(ajo.tila.vuosi - ajo.alku) < 1, '↺ jätti vuosiluvun paikalleen');
+  assert.equal(ajo.paneeli.hidden, true, '↺ jätti ilmiöpaneelin auki');
+  assert.equal(ui.aikajana, ajo, '↺ vaihtoi ajon toiseen pysäkkiajossa');
+  assert.ok(ajo.juuri.isConnected, '↺ purki koko linssin pysäkkiajossa');
+  // Kertomuskaaren haara lukitsisi muistin ja käynnistäisi linssin
+  // uudestaan avausjaksosta — pysäkkiajolla ei ole muistia lainkaan.
+  assert.ok(!ajo.muistiLukittu, '↺ ajoi kertomuskaaren haaran');
+
+  // 4. SULKU PALAUTTAA MATKAKIRJAN YLÄPALKIN.
+  pysaytaAikajana(ui);
+  assert.ok(!document.body.classList.contains('aikajana-palkki-auki'),
+    'yläpalkki jäi piiloon linssin sulun jälkeen');
+});
