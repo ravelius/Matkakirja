@@ -4216,6 +4216,18 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'KEKSINTOLINSSIN KARUSELLIN KELAUS SYTYTTAA KAIKKI VALOT JA PYSAYTTAA '
+          + 'ESITYKSEN (omistaja 8.9.2026 aamu, sanatarkasti: "jos '
+          + 'keksintolinssissa kelaa alhaalta eri keksintoja niin silloin kaikki '
+          + 'valot kartalla saisi syttya, jotta pelaaja voi klikkailla kohtia '
+          + 'myos kartalla. talloin esitys menee automaattisesti tauko tilaan. '
+          + 'jos pelaaja painaa uudestaan jatka, niin tulevat pisteet haviavat '
+          + 'kartalta ja esitys jatkuu normaalisti."): kun pelaaja vierittaa '
+          + 'alarivin karusellia, esitys menee tauolle ja KAIKKI kaaren lamput '
+          + 'syttyvat kartalle - myos tulevat - jotta pelaaja voi napauttaa '
+          + 'mita tahansa pysakkia myos kartalta. Jatka-napista tulevat pisteet '
+          + 'sammuvat (palavat vain nykyiseen pysakkiin asti) ja esitys jatkuu '
+          + 'normaalisti nykyisesta pysakista.',
         'KEKSINTOLINSSIN YLAPALKKI IHMISEN MATKAN TYYLIIN, JA ALOITA ALUSTA '
           + '(omistaja 8.9.2026 aamu, sanatarkasti: "Ja siina voi kylla sen '
           + 'ylapalkin siirtaa ihmislinssin tyyliin" ja "Tehdaan reset"): '
