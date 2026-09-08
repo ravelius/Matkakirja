@@ -4216,6 +4216,18 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'PULUN HUUDAHDUS EI KESKEYTA LUKIJAA, JA KUPLAPINO NAKYY KAHDEKSAAN RIVIIN '
+          + 'ASTI KUNNES KARTTA LIIKKUU (omistaja 8.9.2026 klo 15.10, sanatarkasti: '
+          + '"pulun huuhdahdukset luennan valiin ei tarvitse keskeyttaa lukijan '
+          + 'aanta. lisaksi pulun puhekuplat voivat nakya sittenkin 8 riviin asti, '
+          + 'mutta kun karttaa liikutetaan ne saavat pienentya nykyisella '
+          + 'tavalla."): 1) Pulun valihuuto (huudahdus) kesken kertojan luennan '
+          + 'soi kertojan paalle hiljempaa eika pysayta, viivyta tai vaimenna '
+          + 'lukijaa - se on tietoinen poikkeus puhevuoron porttiin. 2) Pulun '
+          + 'kuplapino on oletuksena auki kahdeksan rivin kattoon asti (uudet '
+          + 'kuplat nakyvat pinona), ja se supistuu yhteen kuplaan vasta kun '
+          + 'pelaaja liikuttaa karttaa (tai Escape). Tarkentaa linjausta '
+          + '7.9.2026 "vain viimeisin kupla": oletus on nyt auki, liike supistaa.',
         'PULU JA KERTOJA EIVAT PUHU PAALLEKKAIN, JA PULUN AANISSA EI NUMEROITA '
           + '(omistaja 8.9.2026 klo 12.55, sanatarkasti: "jos minulla on maailma '
           + 'tila paalla kehittajana ja menen kuuntelemaan kaupunkeja joissa '
