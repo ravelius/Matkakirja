@@ -36,15 +36,12 @@ Mitä tämä tarkoittaa käytännössä:
   teksteissä. Hiekkamyrsky saa nielaista karavaanin jäljet, kaivo
   saa olla kuiva, yö saa yllättää väärässä paikassa, ja Horatio saa
   pelätä henkensä edestä — ja kirjoittaa siitä.
-- **Jännitteen lähteet:** luonto ja sen mittakaava, jano ja aika,
-  pimeys, korkeus, syvyys, eksyminen, kilpajuoksu, se että joku on
-  ehtinyt ensin. EI väkivaltaa, ei graafista kärsimystä, ei
-  ihmisryhmien välistä uhkaa — jännite tulee maailmasta ja
-  kilpajuoksusta, ei ihmisten pahuudesta.
-- **Kunnioitussäännöt eivät hellitä:** piikki osoittaa yhä Foggiin
-  ja hänen vanhaan maailmaansa; paikalliset ovat edelleen niitä,
-  jotka pelastavat, tietävät ja osaavat. Ei sotasisältöä -linja
-  pysyy (ml. Lähi-idän erityisherkkyydet).
+- **Rajaus jännitteen lähteistä POISTETTU 8.9.2026** (omistaja,
+  sanatarkasti: *"tuon kaanonin rajauksen pahuudesta yms. voi poistaa
+  myös kokonaan"*). Vanha rajaus ("ei ihmisten pahuutta, jännite vain
+  maailmasta ja kilpajuoksusta") ei ole enää voimassa: vieras ihminen
+  saa olla uhkaava, vaara saa tulla ihmisistä. Kunnioitussääntö
+  paikallisia kohtaan (tarina.md) pysyy.
 - **Euroopan valmiita merkintöjä ei kirjoiteta uusiksi** tämän
   linjauksen takia ilman omistajan erillistä tilausta — linjaus
   koskee uusia lautoja ja uusia tekstejä.
@@ -72,39 +69,17 @@ tunnistetaan:
 - **Rakastaa arvoituksia, ei ratkaisuja.** "Hyvä kysymys on parempi
   matkatoveri kuin vastaus." Hän jättää lukijalle langanpäitä, ei
   selityksiä.
-- **Kirjoittaa aina jollekulle.** Merkinnöissä toistuu puhuttelu
-  *"sinä, joka tätä luet"*. Horatio ei tiennyt kenelle kirjoitti —
-  perillinen tajuaa matkalla, että se tarkoittaa häntä. Tämä on koko
-  tarinan tunneydin, ja luennoissa juuri nämä kohdat luetaan
-  lämpimimmin.
-
-### Varallisuus ja jälkien mittakaava (kaanon 10.8.2026, omistajan linjaus)
-
-Horatio **ei ollut rikas**. Kartanpiirtäjän palkka ja pieni eroraha —
-matka tehtiin säästöillä, ja moni yösija maksettiin taidolla: kartta
-kylänvanhimmalle, oikaistu rajariita, korjattu vesiränni. Tästä
-seuraa sitova mittakaavasääntö uusiin teksteihin (Euroopan valmiita
-korjataan vain omistajan tilauksesta):
-
-- Horation jäljet ovat **pieniä tekoja ja ihmissuhteita**: rivi
-  vieraan vihkoon, korjattu juotos, nimi viimeisellä sivulla. Ne
-  kestävät, koska joku piti niistä kiinni — ei siksi, että niistä
-  olisi maksettu.
-- Horatio **ei perusta eikä rahoita mitään**: ei tilattuja
-  kirjaussarjoja, ei säätiöitä, ei palkattuja vartijoita. Jos suku
-  jatkaa jotain vuosikymmeniä, syy on suvun oma tapa — Horatio
-  enintään aloitti rivin tai jätti kysymyksen.
-- Mahtipontisuus on motiivibudjetin kallein rivi: "vuosisadan
-  mittainen järjestely" rahalla ostettuna on kielletty; perittynä
-  tapana sitä käytetään korkeintaan kerran laudalla.
-
-**Horation jälki maailmassa: tähtäinristi.** Horatio merkitsi
-kulkemiaan paikkoja pienellä liidulla piirretyllä tähtäinristillä
-(ympyrä ja risti) — *"että löytäisin takaisin, tai että joku löytäisi
-minun jälkeensä"*. Sama merkki on matkalaukun kyljessä ja siellä
-täällä matkakirjan marginaaleissa. Teksteissä merkistä puhutaan
-sanoilla ("tähtäinristi", "liituristi") — ei erikoismerkillä, jonka
-kirjasin voisi hukata.
+- **Ei kirjoita kenellekään.** POISTETTU 8.9.2026 (omistaja, sanatarkasti:
+  *"Tuo kirjoitan sinulle on vanha ja piinallinen jäänne joka pitää
+  poistaa. Isoisä ei koskaan Kirjoita kenellekkään."*). Vanha
+  "sinä, joka tätä luet" -puhuttelu on poistettu kaanonista: Horatio
+  kirjoittaa itselleen, ei oleta lukijaa eikä selitä kenellekään.
+  Tunneydin tulee siitä, että perillinen lukee yksityistä kirjaa,
+  jota ei ollut tarkoitettu hänelle.
+- **Oma kieli (omistaja 8.9.2026).** Horatiolla on omia sanoja ja
+  lyhenteitä tavoilleen, jotka toistuvat kaupungista toiseen ja jotka
+  vain Livia osaa tulkata (pulun kupla). Sanasto ja käyttö: Raamattu
+  "HORATION OMA KIELI" (kun hyväksytty).
 
 ## Vastavoima: herra Grimshaw
 
