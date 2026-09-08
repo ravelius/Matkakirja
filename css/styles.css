@@ -20078,6 +20078,22 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
  * (js/pollo.js asetaPinonPaikka), joten pino kasvaa ylöspäin. Kuplat
  * ovat oikeaan reunaan tasattuja, koska kärki on kuplan oikeassa
  * alanurkassa ja osoittaa pöllöön.
+ *
+ * ── OLETUS ON AUKI KAHDEKSAAN RIVIIN (omistaja 8.9.2026) ────────────
+ * Raamattu "PULUN HUUDAHDUS EI KESKEYTA LUKIJAA, JA KUPLAPINO NAKYY
+ * KAHDEKSAAN RIVIIN ASTI KUNNES KARTTA LIIKKUU", sanatarkasti:
+ * *"pulun huuhdahdukset luennan väliin ei tarvitse keskeyttää lukijan
+ * ääntä. lisäksi pulun puhekuplat voivat näkyä sittenkin 8 riviin asti,
+ * mutta kun karttaa liikutetaan ne saavat pienentyä nykyisellä
+ * tavalla."*
+ *
+ * Pino on siis heti alusta tämän osion katossa (max-height alla), ja
+ * yli jäävä häipyy yläreunasta vieritettäväksi. Vasta kartan liike tai
+ * Escape supistaa sen viimeisimpään kuplaan (js/pollo.js pinoTila
+ * 'supistettu'), ja seuraava kupla avaa sen taas. Luokka
+ * .pollo-kuplapino-laaja tarkoittaa siksi 8.9.2026 alkaen "pino on
+ * auki kattoon asti" — sen saavat sekä oletus ('auki') että pelaajan
+ * oma laajennus ('laaja', jossa lokin historia on haettu mukaan).
  */
 .pollo-kuplapino-kehys {
   position: fixed;
@@ -20130,15 +20146,14 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
    */
   max-height: min(60vh, 14rem);
   /*
-   * KATON MUUTOS LIUKUU (omistajan linjaus 7.9.2026: *"ruudulla näkyvät
-   * kuplat voisi vaihtaa niin, että siinä näkyisi kerrallaan vain
-   * viimeisin kupla … näkymä laajenee ylöspäin 10 riiviin … Nämä kaikki
-   * pehmeästi animoiden."*).
+   * KATON MUUTOS LIUKUU (omistajan linjaus 7.9.2026: *"Nämä kaikki
+   * pehmeästi animoiden."*, ja 8.9.2026: *"kun karttaa liikutetaan ne
+   * saavat pienentyä nykyisellä tavalla"*).
    *
-   * Supistettuna js/pollo.js paivitaPinonKorkeus asettaa katoksi
-   * viimeisimmän kuplan mitan pikseleinä; laajennettuna inline-arvo
-   * poistuu ja tämä sääntö on taas voimassa. Kumpikin pää on
-   * pikselimitta, joten siirtymä osaa liu'uttaa niiden välillä.
+   * Auki (oletus ja pelaajan laajennus) inline-arvoa ei ole ja tämä
+   * sääntö on voimassa; supistettuna js/pollo.js paivitaPinonKorkeus
+   * asettaa katoksi viimeisimmän kuplan mitan pikseleinä. Kumpikin pää
+   * on pikselimitta, joten siirtymä osaa liu'uttaa niiden välillä.
    */
   transition: max-height 300ms var(--liike-pehmea),
               --kuplapino-haive 300ms var(--liike-pehmea);
@@ -20177,7 +20192,9 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
 /*
  * Ylivuoto: pino on täynnä, joten yläreuna häivytetään ja loput jäävät
  * vieritettäviksi. Luokan asettaa js/pollo.js paivitaYlivuoto, koska
- * CSS ei osaa kysyä onko sisältöä enemmän kuin tilaa.
+ * CSS ei osaa kysyä onko sisältöä enemmän kuin tilaa. Tämä on
+ * 8.9.2026 alkaen myös OLETUKSEN häivytys: pino on auki kattoon asti,
+ * ja kahdeksan rivin yli menevä osa hiipuu yläreunasta.
  */
 .pollo-kuplapino-yli .pollo-kuplapino.pollo-kuplapino-laaja {
   --kuplapino-haive: 2.6rem;
@@ -20205,7 +20222,8 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
  * läpinäkyviä; napautus niihin avaisi chatin vahingossa. Ele menee
  * pinolle itselleen, joka ei tee mitään eikä myöskään päästä sitä
  * kartalle asti (kehys on "sisäpuolta", ks. js/pollo.js
- * seuraaSulkemista). Laajennettuna kaikki kuplat ovat taas napautettavia.
+ * seuraaSulkemista). Auki olevassa pinossa (oletus ja laajennus)
+ * kaikki kuplat ovat kokonaan näkyvissä ja siksi napautettavia.
  */
 .pollo-kuplapino:not(.pollo-kuplapino-laaja) .pollo-vihje:not(:last-child) {
   pointer-events: none;

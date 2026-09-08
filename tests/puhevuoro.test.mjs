@@ -170,6 +170,74 @@ test('pulu ei ala kertojan päälle — mutta välihuuto saa', () => {
   vapautaPuhuja(ui, jalkeen);
 });
 
+/*
+ * VÄLIHUUTO EI KESKEYTÄ LUKIJAA (omistaja 8.9.2026, Raamattu "PULUN
+ * HUUDAHDUS EI KESKEYTA LUKIJAA, JA KUPLAPINO NAKYY KAHDEKSAAN RIVIIN
+ * ASTI KUNNES KARTTA LIIKKUU", sanatarkasti: *"pulun huuhdahdukset
+ * luennan väliin ei tarvitse keskeyttää lukijan ääntä."*).
+ *
+ * Kolme ehtoa yhdessä testissä, koska ne ovat sama sopimus:
+ *   (a) huudahdus soi kertojan PÄÄLLE hiljempaa (vaimennus),
+ *   (b) se ei merkitse puhujaa eikä saa kertojaa odottamaan,
+ *   (c) se ei vaimenna eikä pysäytä kertojan omaa ääntä.
+ */
+test('välihuuto soi kertojan päällä hiljempaa eikä keskeytä lukijaa', async () => {
+  const ui = uusiUi();
+  const teksti = LIVIAN_AVAUS[0];
+  // Kertoja on äänessä ja pitää vuoroa (saapumismerkinnän luenta).
+  const kertoja = new TynkaAudio('puhe-fokus-matkakirja-riika.mp3');
+  merkitsePuhuja(ui, kertoja, PUHUJA_KERTOJA);
+  kertoja.play();
+  const kertojanVoima = kertoja.volume;
+
+  // Vertailukohta: sama repliikki täydellä voimalla.
+  const taysi = soitaLivianAani(ui, 'avaus', 0, { teksti, vaista: false });
+  assert.ok(taysi, 'vertailuääni ei syntynyt');
+  const taysiVoima = taysi.volume;
+
+  // (a) HILJEMPAA: sama kerroin kuin js/fokusvirta.js
+  // HUUDAHDUKSEN_VAIMENNUS antaa huudahdukselle.
+  const huuto = soitaLivianAani(ui, 'avaus', 0, { teksti, vaimennus: 0.7, vaista: false });
+  assert.ok(huuto, 'välihuuto ei soinut kertojan päällä');
+  assert.ok(huuto.volume < taysiVoima, `välihuuto ei ole hiljaisempi: ${huuto.volume}`);
+  assert.ok(Math.abs(huuto.volume - taysiVoima * 0.7) < 1e-9,
+    `vaimennus ei mene läpi: ${huuto.volume} vs ${taysiVoima * 0.7}`);
+
+  // (b) EI VUOROA: välihuutoa ei merkitä puhujaksi…
+  assert.equal(puhujaAanessa(PUHUJA_KERTOJA), null, 'välihuuto varasi puhevuoron');
+  // …eikä kertoja siksi jää odottamaan sitä (js/luenta.js playDiaryVoice).
+  const luenta = playDiaryVoice(ui, 'assets/audio/puhe-fokus-matkakirja-riika.mp3');
+  assert.ok(luenta, 'luentaa ei luotu');
+  await odota(120);
+  assert.equal(luenta.paused, false, 'kertoja jäi odottamaan välihuudon loppumista');
+
+  // (c) KERTOJA JATKAA: välihuuto ei pysäytä eikä vaimenna sitä.
+  assert.equal(kertoja.paused, false, 'välihuuto pysäytti kertojan');
+  assert.equal(kertoja.volume, kertojanVoima, 'välihuuto vaimensi kertojaa');
+
+  vapautaPuhuja(ui, kertoja);
+  vapautaPuhuja(ui, luenta);
+  vapautaPuhuja(ui, huuto);
+});
+
+test('huudahduksen kutsupaikka pysyy vaimennettuna ja väistämättömänä', () => {
+  const virta = lue('../js/fokusvirta.js');
+  // Kutsu: hiljempaa (vaimennus) ja ilman väistöä (vaista: false).
+  assert.match(virta, /vaimennus: HUUDAHDUKSEN_VAIMENNUS,\n\s*vaista: false,/,
+    'huudahdus ei enää soi kertojan päälle vaimennettuna ilman väistöä');
+  const kerroin = Number(virta.match(/const HUUDAHDUKSEN_VAIMENNUS = ([\d.]+);/)?.[1]);
+  assert.ok(kerroin > 0 && kerroin < 1, `vaimennus ${kerroin} — ei hiljempaa kuin kertoja`);
+  /*
+   * EIKÄ HUUDAHDUS KOSKE KERTOJAN ÄÄNEEN. Vartio lukee funktion rungon
+   * ja vaatii, ettei siellä ole yhtään häivytystä, pysäytystä tai
+   * diaryVoicen soittimeen kajoamista — vain kupla ja oma äänite.
+   */
+  const runko = virta.match(/function ajastaHuudahdus\(ui, city, huudahdus, merkinta\) \{[\s\S]*?\n\}/)?.[0] ?? '';
+  assert.ok(runko.includes('naytaPolloKupla'), 'ajastaHuudahduksen runkoa ei löytynyt');
+  assert.doesNotMatch(runko, /haivyt[aä]|pysayt[aä]|stopDiaryVoice|diaryVoice[^)]*\.pause/,
+    'huudahdus vaimentaa tai pysäyttää kertojan');
+});
+
 test('kertoja odottaa pulun lauseen loppuun eikä aloita sen päälle', async () => {
   const ui = uusiUi();
   const pulu = new TynkaAudio('livia-riika-1.mp3');

@@ -395,9 +395,18 @@ supistaa sen takaisin yhteen — kaikki pehmeästi animoiden. Repliikkien
 sanoja, paljastussarjan ajoitusta tai lehtivinkin logiikkaa tämä ei
 kosketa; kyse on pelkästä näkymästä.
 
+**Päivitys 8.9.2026** (Raamattu, *"PULUN HUUDAHDUS EI KESKEYTA LUKIJAA,
+JA KUPLAPINO NAKYY KAHDEKSAAN RIVIIN ASTI KUNNES KARTTA LIIKKUU"*):
+oletus kääntyi päinvastoin. Pino on **auki kahdeksaan riviin asti** heti
+(ilman lokin historiaa), kartan liike ja Escape supistavat sen yhteen
+kuplaan entisellä liu'ulla ja kurkistuksella, ja seuraava uusi kupla
+avaa pinon taas. Tila on siksi kolmiarvoinen `pinoTila`
+(`'auki' | 'laaja' | 'supistettu'`), jossa `'laaja'` on pelaajan oma
+laajennus — vain se hakee lokin aiemmat puheenvuorot pinoon.
+
 | Osa | Missä |
 | --- | --- |
-| Pinon laajuus (`pinoLaaja`, `laajennaPino`, `supistaPino`, `paivitaPinonKorkeus`) | `js/pollo.js` |
+| Pinon tila (`pinoTila`, `laajennaPino`, `supistaPino`, `paivitaPinonKorkeus`) | `js/pollo.js` |
 | Kelauksen tunnistus (rulla, sormen veto, nuoli ylös, Escape) | `js/pollo.js varmistaPino` |
 | Supistus kartan vedosta (dokumentin `pointerdown`) | `js/pollo.js seuraaSulkemista` |
 | Korkeuden liuku, häivytys ja puhelimen katto | `css/styles.css .pollo-kuplapino` |

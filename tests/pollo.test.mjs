@@ -2231,6 +2231,14 @@ test('vanha varateksti "En osaa vastata" ei ole enää missään', () => {
  * 10 riiviin. Mutta sitten kun käyttäjä liikuttaa karttaa niin näkymä
  * palaa taas siihen yhteen kuplaan. Nämä kaikki pehmeästi animoiden."*
  *
+ * TÄYDENNYS 8.9.2026 (Raamattu, "PULUN HUUDAHDUS EI KESKEYTA LUKIJAA,
+ * JA KUPLAPINO NAKYY KAHDEKSAAN RIVIIN ASTI KUNNES KARTTA LIIKKUU"),
+ * sanatarkasti: *"pulun puhekuplat voivat näkyä sittenkin 8 riviin
+ * asti, mutta kun karttaa liikutetaan ne saavat pienentyä nykyisellä
+ * tavalla."* Oletus kääntyi siis päinvastoin: pino on AUKI kattoon asti
+ * (ilman lokin historiaa), kartan liike ja Escape supistavat sen
+ * entiseen tapaan, ja seuraava kupla avaa sen taas.
+ *
  * Näkymän mitat ja liikkeet mitataan selaimessa
  * (tools/savukkeet/savuke-pulun-kuplat.mjs); täällä vartioidaan ne
  * kohdat, jotka voi hukata hiljaa: lokin katto, supistuksen kutsupaikat
@@ -2257,11 +2265,58 @@ test('kartan kosketus, Escape ja nuoli ylös ohjaavat kuplanäkymää', () => {
   const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
   // Supistus tulee dokumentin pointerdownista (kartan vedon alku), ja
   // pinon oma alue on rajattu pois — muuten kelaus supistaisi itsensä.
-  assert.match(lahde, /this\.pinoLaaja && !e\.target\?\.closest\?\.\('\.pollo-kuplapino-kehys'\)/);
-  assert.match(lahde, /if \(!this\.auki && this\.pinoLaaja\) \{/);
+  // Ehto koskee KAIKKEA muuta kuin supistettua tilaa, koska oletus on
+  // 8.9.2026 alkaen auki (ennen: vain pelaajan laajentama pino).
+  assert.match(
+    lahde,
+    /this\.pinoTila !== 'supistettu' && !e\.target\?\.closest\?\.\('\.pollo-kuplapino-kehys'\)/,
+  );
+  assert.match(lahde, /if \(!this\.auki && this\.pinoTila !== 'supistettu'\) \{/);
   // Näppäimistöllä laajennus: nuoli ylös kuplassa.
   assert.match(lahde, /tapahtuma\.key === 'ArrowUp'/);
   assert.match(lahde, /this\.laajennaPino\(\);/);
+  // …ja Escape pinon omasta kohdistuksesta supistaa saman ehdon mukaan.
+  assert.match(lahde, /tapahtuma\.key === 'Escape' && this\.pinoTila !== 'supistettu'/);
+});
+
+/*
+ * KUPLAPINO ON OLETUKSENA AUKI KAHDEKSAAN RIVIIN (omistaja 8.9.2026).
+ *
+ * Tila on kolmiarvoinen, koska ruudulla samalta näyttävät 'auki' ja
+ * 'laaja' eroavat yhdessä asiassa: pelaajan oma laajennus hakee lokin
+ * historian pinoon, oletus ei. Näitä vartioita ei voi mitata Nodessa
+ * (ei DOMia), joten ne luetaan lähteestä; mitat mittaa savuke.
+ */
+test('pino on oletuksena auki, ja vain pelaajan laajennus hakee historian', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  // Oletus: 'auki'. Sama arvo palautuu, kun pino tyhjenee kokonaan.
+  assert.match(lahde, /this\.pinoTila = 'auki';/);
+  assert.equal([...lahde.matchAll(/this\.pinoTila = 'auki';/g)].length, 3,
+    'oletustilan asetuspaikkoja pitäisi olla kolme: uusi pollo, tyhjä pino ja avautuminen');
+  // Laajennus = pelaajan ele: tila 'laaja' JA lokin historia.
+  assert.match(lahde,
+    /laajennaPino\(\) \{\n\s*if \(this\.pinoTila === 'laaja' \|\| !this\.pino\) return;\n\s*this\.pinoTila = 'laaja';\n\s*this\.taytaPinoHistorialla\(\);/);
+  // Historiaa EI haeta mistään muualta: oletustilassa kartan päällä
+  // näkyy vain tämän saapumisen omat kuplat.
+  const historiakutsut = [...lahde.matchAll(/this\.taytaPinoHistorialla\(/g)];
+  assert.equal(historiakutsut.length, 1,
+    `taytaPinoHistorialla-kutsuja on ${historiakutsut.length} — historia vuotaa oletukseen`);
+  // Supistus on oma tilansa, ja siitä noustaan uudella kuplalla.
+  assert.match(lahde,
+    /supistaPino\(\) \{\n\s*if \(this\.pinoTila === 'supistettu'\) return;\n\s*this\.pinoTila = 'supistettu';/);
+  assert.match(lahde,
+    /const avautui = this\.pinoTila === 'supistettu';\n\s*if \(avautui\) this\.pinoTila = 'auki';/);
+  // Katto tulee css:stä aina kun pino ei ole supistettu (sekä 'auki'
+  // että 'laaja'), ja luokka .pollo-kuplapino-laaja kertoo sen css:lle.
+  assert.match(lahde, /const kattoon = this\.pinoTila !== 'supistettu';/);
+  assert.match(lahde, /pino\.classList\.toggle\('pollo-kuplapino-laaja', kattoon\);/);
+  assert.match(lahde, /if \(kattoon\) pino\.style\.maxHeight = '';/);
+  // Pohjaan pinnaaminen kuuluu VAIN supistukseen: auki olevaa pinoa ei
+  // napata pelaajan käsistä kesken kelauksen.
+  assert.match(lahde, /if \(!ilman && !kattoon\) this\.pidaPinoPohjassa\(\);/);
+  assert.match(lahde, /if \(!this\.pino \|\| this\.pinoTila !== 'supistettu'\) \{/);
+  // Vanha kaksitilainen lippu on kokonaan poissa.
+  assert.doesNotMatch(lahde, /pinoLaaja/, 'pinoLaaja elää yhä — tiloja on nyt kolme');
 });
 
 test('supistettu pino ei häivytä ainoaa kuplaansa, ja katto liukuu', () => {
@@ -2286,8 +2341,18 @@ test('supistettu pino ei häivytä ainoaa kuplaansa, ja katto liukuu', () => {
     /\.pollo-kuplapino:not\(\.pollo-kuplapino-laaja\) \.pollo-vihje:not\(:last-child\) \{\s*pointer-events: none;/,
   );
   // Puhelimen katto on enintään 45 % ruudusta (omistajan linjaus).
-  const kapea = css.match(/\.pollo-kuplapino \{ max-height: min\((\d+)vh, [\d.]+rem\); \}/);
+  const kapea = css.match(/\.pollo-kuplapino \{ max-height: min\((\d+)vh, ([\d.]+)rem\); \}/);
   assert.ok(kapea && Number(kapea[1]) <= 45, `puhelimen katto ${kapea?.[1]}vh`);
+  /*
+   * KAHDEKSAN RIVIN KATTO ON NYT OLETUS (omistaja 8.9.2026: *"pulun
+   * puhekuplat voivat näkyä sittenkin 8 riviin asti"*). Rivi on
+   * 0.92 rem × 1.35 ≈ 1.24 rem, joten kahdeksan riviä pehmusteineen on
+   * noin 14 rem — sama luku molemmilla ruutukoilla.
+   */
+  const katto = css.match(/max-height: min\(60vh, ([\d.]+)rem\);/);
+  assert.ok(katto && Math.abs(Number(katto[1]) - 14) < 0.6,
+    `työpöydän katto ${katto?.[1]}rem — ei kahdeksaa tekstiriviä`);
+  assert.equal(kapea[2], katto[1], 'puhelimen ja työpöydän rem-katto ovat eri mittaa');
 });
 
 /*
