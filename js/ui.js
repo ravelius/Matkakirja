@@ -8316,6 +8316,24 @@ export class UI {
    * KATTAMATTOMASTA skaalasta (paivitaFokusLaatta, sormen 44 px:n
    * sääntö), aivan kuten typografiakaton kanssa.
    */
+  /*
+   * OMISTAJA 8.9.2026, iPad-kaappaus Riiasta, sanatarkasti: *"Miksi
+   * kohdekaupunki näkyy noin pienenä pallona? Se saisi olla selvästi
+   * suurempi."* — ja klo 15.45: *"tee samoin myös kohdekaupungin
+   * tekstille joka jää lähellä liian pieneksi."*
+   *
+   * KORJAUS EI OLE TÄSSÄ, JA SE ON MITTAUKSEN TULOS. Kaappauksen
+   * kohdekaupunki mitattiin pikselitasolla 14 laitepikseliksi eli
+   * 7,0 css-pikseliksi — se on PALLOLAUDAN kaupunkipiste
+   * (js/pallolauta/lauta.js KAUPUNKIPISTEEN_HALKAISIJA_PX), ei tämän
+   * kerroksen laatta: vanha kartta on 7.9.2026 alkaen pois käytöstä
+   * (js/ui-apurit.js VANHA_KARTTA_KAYTOSSA) ja elää enää linssin alla.
+   * Lattia — piste vähintään 1,5 x kohdemerkki ja nimi vähintään
+   * 1,3 x kohdenimiö — on siksi pallolaudalla
+   * (kohdekaupunginMitat, docs/moduulit/karttapallo.md luku 19), ja
+   * TÄMÄ katto jää koskemattomaksi: sen mitat on viritetty linssin
+   * tasokartalle, eikä omistajan havainto koske sitä näkymää.
+   */
   fokusKasvukatto() {
     if (!this.fokusmoodi || this.katselu) return 1;
     const s = this.fokusMerkkiSkaala();

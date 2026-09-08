@@ -79,13 +79,17 @@ import {
   PALLON_TURVATILAN_UNOHDUS_MS, kehittajaMaailmaPaalla, kehittajaTilaPaalla,
   nollaaPallonKaatumiset, palloKaatui, valikkoSulkeutuiNapautuksesta,
 } from '../ui-apurit.js';
+import { KARTTANIMI_KOOT } from '../karttanimet.js';
+import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
+import { LEHDEN_VAHIN_OSUUS } from '../fokuskohteet.js';
 import {
-  PALLOKAMERAN_AJO_MS, PALLO_FOV, PALLO_KORKEUS_MAX, luoPallokamera,
+  PALLOKAMERAN_AJO_MS, PALLO_FOV, PALLO_KORKEUS_MAX, PALLON_SALLITTU_VENYTYS,
+  laattojenVenytys, luoPallokamera,
 } from './kamera.js';
 import { MERKIN_KORKEUS, luoMerkit } from './merkit.js';
 import { NIMIEN_KATTO, luoNimet } from './nimet.js';
 import {
-  NOSTOJEN_KATTO, VALON_KORKEUS, VALON_SADE, luoNostot,
+  KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, VALON_KORKEUS, VALON_SADE, luoNostot,
 } from './nostot.js';
 import {
   HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_KORKEUS, REITTIHELMEN_SADE, luoReitit,
@@ -144,6 +148,134 @@ export const PALLOLAUDAN_KERROKSET = [
  * 30 pikseliin.
  */
 export const KAUPUNKIPISTEEN_HALKAISIJA_PX = 7;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KOHDEKAUPUNKI ON SELVÄSTI SUUREMPI KUIN KOHDEMERKIT (omistaja
+ * 8.9.2026, iPad-kaappaus Riiasta)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJA, SANATARKASTI: *"Miksi kohdekaupunki näkyy noin pienenä
+ * pallona? Se saisi olla selvästi suurempi."* Ja saman päivän lisäys
+ * klo 15.45: *"tee samoin myös kohdekaupungin tekstille joka jää
+ * lähellä liian pieneksi."*
+ *
+ * ── MIKÄ VIKA OLI, MITATTUNA ──────────────────────────────────────
+ *
+ * Kaappauksessa (Riika, iPad 834 x 1210 css, dpr 2) RIIKA oli pieni
+ * keltainen täplä ja sen ympärillä olevat karttanostot selvästi
+ * suurempia palloja. Mitattuna omistajan kuvasta pikselitasolla:
+ *
+ *     kaupunkipiste (RIIKA)      14 laitepikseliä =  7,0 css-px
+ *     kohdemerkki (Alberta iela) 22 laitepikseliä = 11,0 css-px
+ *     kohteen nimi (poltettu)    33 laitepikseliä = 16,4 css-px
+ *     kaupungin nimi (elävä)     27 laitepikseliä = 13,5 css-px
+ *
+ * Kaksi eri juurisyytä samassa kuvassa:
+ *
+ *   1. PISTE ON PIENEMPI KUIN KOHDEMERKKI JOKA ZOOMILLA. 7 px valittiin
+ *      7.9.2026 yleisnäkymän ehdolla (*"Tampereen kohdalla iso musta
+ *      ympyrä"*) eikä sitä koskaan verrattu kohdemerkkiin, joka on
+ *      ruutuvakiona 11,44 px (KOHDEMERKIN_RUUTU_PX). Kaupunki — se,
+ *      johon matkustetaan — oli siis kartan PIENIN merkki.
+ *   2. NIMI EI SEURAA POLTETTUA MUSTETTA LÄHIKUVASSA. Kaupungin nimi
+ *      on paperivakio (13,5 css-px, js/karttanimet.js KOKO.kaupunki),
+ *      mutta kohteiden nimet ovat laatoissa POLTETTUINA: kun kamera
+ *      menee syvimmän laattatason (z8) sisään, laattaa venytetään
+ *      (js/pallolauta/kamera.js laattojenVenytys, iPadilla lähimmässä
+ *      näkymässä 1,93x) ja poltettu 8,5 px:n nimiö on ruudulla 16,4 px.
+ *      Maanäkymässä suhde on tilattu 13,5 : 8,5, lähikuvassa se oli
+ *      kääntynyt ympäri.
+ *
+ * ── SÄÄNTÖ: LATTIA, EI UUTTA VAKIOTA ──────────────────────────────
+ *
+ * Kaupungin piste ja nimi saavat LATTIAN, joka mitataan siitä, mitä
+ * kartalla juuri nyt on:
+ *
+ *     piste >= KOHDEKAUPUNGIN_PISTE_SUHDE x kohdemerkin halkaisija
+ *     nimi  >= KOHDEKAUPUNGIN_NIMI_SUHDE  x kohdenimiön ruutukoko
+ *
+ * LATTIA EI KOSKAAN PIENENNÄ MITÄÄN (Math.max): yleisnäkymässä piste
+ * on tavulleen entinen 7 px ja nimi entinen 13,5 px.
+ *
+ * PISTEEN LATTIA KOSKEE VAIN LÄHIKUVAA, jossa kohdemerkkejä oikeasti
+ * on. Portti on sama luku kuin merkeillä itsellään (js/pallolauta/
+ * nostot.js lehdenOsuus >= LEHDEN_VAHIN_OSUUS) — vertailua ei ole
+ * olemassa siellä, missä verrattavaa ei ole, eikä yleisnäkymän 7 px
+ * siis muutu pikseliäkään (omistajan 7.9. korjaus säilyy). Liu'utus
+ * KOHDEKAUPUNGIN_TAYSI_OSUUS:een asti tekee muutoksesta jatkuvan:
+ * piste kasvaa portin auetessa asteittain eikä hyppää.
+ *
+ * NIMEN LATTIA EI TARVITSE PORTTIA. Se puree vasta kun poltettu muste
+ * on venytettyä (suurennus > 1,59), eli täsmälleen siinä lähikuvassa,
+ * josta omistaja kirjoitti; kaukonäkymässä kerroin on 1.
+ *
+ * OSUMA-ALUEET EIVÄT MUUTU: napautus on 44 px:n säde ruudulla
+ * (NAPAUTUKSEN_SADE_PX) eikä se ole koskaan lukenut pisteen kokoa.
+ * NAPPULA EI OLE SIDOTTU PISTEESEEN pallolla (se on oma H-merkkinsä,
+ * js/pallolauta/merkit.js), joten sen koko ei muutu; 17,2 px:n piste
+ * jää yhä nappulan (32 px) alle, mutta reunaa jää nyt näkyviin — sama
+ * suhde kuin tasokartan laatalla, jonka alta omistaja halusi laatan
+ * näkyvän (js/ui.js FOKUS_NAPPULA_PX).
+ */
+/** Piste lähikuvassa vähintään tämän verran kohdemerkin halkaisijasta. */
+export const KOHDEKAUPUNGIN_PISTE_SUHDE = 1.5;
+/** Nimi vähintään tämän verran kohdenimiön ruutukoosta. */
+export const KOHDEKAUPUNGIN_NIMI_SUHDE = 1.3;
+/**
+ * Osuus, jolla pisteen lattia on täydessä mitassaan. Portti aukeaa
+ * LEHDEN_VAHIN_OSUUS:ssa (0,5) ja tämä on liu'un yläpää: siihen asti
+ * piste kasvaa 7 pikselistä lattiaansa, eikä koko hyppää portilla.
+ */
+export const KOHDEKAUPUNGIN_TAYSI_OSUUS = 0.75;
+/**
+ * POLTETUN MUSTEEN SUURENNUS RUUDULLA — montako kertaa suurempana
+ * laattaan poltettu merkintä näkyy kuin se poltettiin.
+ *
+ * Poltto olettaa dpr 2:n (js/nostoladonta.js NOSTOLADONTA_POLTON_TIHEYS),
+ * joten poltettu 8,5 css-px:n nimiö on laatassa 17 pikseliä korkea.
+ * `laattojenVenytys` kertoo, montako LAITEpikseliä on yksi laatan
+ * pikseli, joten ruudulla nimiö on 17 x venytys laitepikseliä eli
+ * 8,5 x venytys x 2 / dpr css-pikseliä — ja juuri se kerroin on tässä.
+ *
+ * Tarkistettu omistajan kaappauksesta: iPad 834 css, dpr 2, lähin
+ * näkymä → venytys 1,93 (tests/pallo.test.mjs) → suurennus 1,93 →
+ * poltettu nimiö 16,4 css-px. Mitattu kuvasta 16,4.
+ *
+ * KATTO ON LAATTOJEN OMA SALLITTU VENYTYS (PALLON_SALLITTU_VENYTYS):
+ * sitä syvemmällä laatta on jo pelkkää sumua, eikä kaupungin merkin
+ * pidä kasvaa sumun mukana rajatta. Lattia on 1 — suurennus ei koskaan
+ * pienennä mitään.
+ */
+export function poltetunMusteenSuurennus({
+  leveysPx, dpr = 1, leveysYks, katto = PALLON_SALLITTU_VENYTYS,
+} = {}) {
+  if (!(leveysPx > 0) || !(leveysYks > 0)) return 1;
+  const venytys = laattojenVenytys({ leveysPx, dpr, leveysYks });
+  const suurennus = venytys * (NOSTOLADONTA_POLTON_TIHEYS / Math.max(1, dpr));
+  return Math.min(katto, Math.max(1, suurennus));
+}
+/**
+ * KOHDEKAUPUNGIN MITAT RUUDULLA: pisteen halkaisija ja nimen kerroin.
+ *
+ * @param {number} osuus     maan lehden osuus näkymästä (nostot.js
+ *   lehdenOsuus) — portti ja liuku, ks. lohko yllä
+ * @param {number} suurennus poltetun musteen suurennus
+ *   (poltetunMusteenSuurennus)
+ * @returns {{halkaisijaPx: number, nimiKerroin: number}}
+ */
+export function kohdekaupunginMitat({ osuus = 0, suurennus = 1 } = {}) {
+  const vali = KOHDEKAUPUNGIN_TAYSI_OSUUS - LEHDEN_VAHIN_OSUUS;
+  const lahella = vali > 0
+    ? Math.min(1, Math.max(0, (osuus - LEHDEN_VAHIN_OSUUS) / vali))
+    : Number(osuus >= LEHDEN_VAHIN_OSUUS);
+  const lattia = KOHDEKAUPUNGIN_PISTE_SUHDE * KOHDEMERKIN_RUUTU_PX;
+  const halkaisijaPx = KAUPUNKIPISTEEN_HALKAISIJA_PX
+    + lahella * Math.max(0, lattia - KAUPUNKIPISTEEN_HALKAISIJA_PX);
+  const nimiLattia = KOHDEKAUPUNGIN_NIMI_SUHDE * KARTTANIMI_KOOT.kohde
+    * Math.max(1, suurennus);
+  const nimiKerroin = Math.max(1, nimiLattia / KARTTANIMI_KOOT.kaupunki);
+  return { halkaisijaPx, nimiKerroin };
+}
 /**
  * Kirjaston pistemitta: `pointRadius` → olion skaala pallon yksiköissä.
  * Globe.gl 2.46: `scale.x = scale.y = min(30, r) · 2π · R / 360`, missä
@@ -1373,9 +1505,43 @@ export async function avaaPallolauta(ui) {
   const linssiPaalla = () => document.body.classList.contains('aikajana-paalla');
   let asetettuSade = 0;
   let asetettuLinssi = false;
+  /*
+   * KOHDEKAUPUNGIN MITAT JUURI NYT (ks. KOHDEKAUPUNKI ON SELVÄSTI
+   * SUUREMPI KUIN KOHDEMERKIT): pisteen halkaisija ruudulla ja nimen
+   * kerroin. Luku lasketaan kameran tilasta, joten se on tuore
+   * jokaisessa zoomissa — sama kutsu palvelee sekä pistettä
+   * (pisteenSade) että ladontaa (ladoLevossa).
+   *
+   * VÄLIMUISTI: sama vastaus samasta näkymästä. `pointRadius`-luenta
+   * ajetaan kerran JOKAISELLE 261 pisteelle datan päivittyessä, eikä
+   * yksikään niistä muuta kameraa — ilman avainta sama jakolasku (ja
+   * `clientWidth`-asettelunluku) tehtäisiin 261 kertaa peräkkäin.
+   * Avaimessa on kaikki, mistä mitat riippuvat: kameran korkeus,
+   * ruudun leveys ja pelaajan kaupunki (maa, jonka lehteä verrataan).
+   */
+  let kaupunkiAvain = null;
+  let kaupunkiMitat = kohdekaupunginMitat({});
+  const kohdekaupunki = () => {
+    const korkeus = pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX;
+    const leveysPx = kotelo.clientWidth;
+    const avain = `${korkeus.toFixed(5)}:${leveysPx}:${ui.game?.player?.pos?.city ?? ''}`;
+    if (avain === kaupunkiAvain) return kaupunkiMitat;
+    const nakyva = kamera.nakyvaAlue();
+    kaupunkiAvain = avain;
+    kaupunkiMitat = kohdekaupunginMitat({
+      osuus: nostot.lehdenOsuus(nakyva),
+      suurennus: poltetunMusteenSuurennus({
+        leveysPx,
+        dpr: globalThis.devicePixelRatio || 1,
+        leveysYks: nakyva?.w ?? 0,
+      }),
+    });
+    return kaupunkiMitat;
+  };
   const pisteenSade = () => {
     asetettuSade = kaupunkipisteenSade(
       pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX, kotelo.clientHeight,
+      { halkaisijaPx: kohdekaupunki().halkaisijaPx },
     );
     return asetettuSade;
   };
@@ -1504,11 +1670,21 @@ export async function avaaPallolauta(ui) {
     const katto = vain
       ? vain.size
       : Math.min(NIMIEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos.maara));
+    /*
+     * KOHDEKAUPUNGIN LATTIA LADONTAAN (omistaja 8.9.2026): nimen koko
+     * ja pisteen säde tulevat samasta laskusta kuin itse piste
+     * (kohdekaupunki), jotta ladonta varaa nimelle ja pisteelle sen
+     * tilan, joka niillä ruudulla oikeasti on — muuten suurempi piste
+     * jäisi oman nimensä alle.
+     */
+    const kaupunginMitat = kohdekaupunki();
     const nimiTulos = nimet.lado({
       varaukset: nostoTulos.laatikot,
       pinot: merkit.laatikot('peli'),
       katto,
       vain,
+      kokoKerroin: kaupunginMitat.nimiKerroin,
+      pisteSade: kaupunginMitat.halkaisijaPx / 2,
     });
     const sovittelu = nostot.sovittele({ nimet: nimet.laatikot() });
     paivitaPisteet();

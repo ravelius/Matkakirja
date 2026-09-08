@@ -1416,10 +1416,20 @@ function varausruudukko() {
  *   pakotettu: boolean}} `asetettu` on { kx, ky, ank, r } tai null
  */
 function sijoitaKaupunginNimi({
-  c, x, y, pino = null, este, varaa, pakota = true,
+  c, x, y, pino = null, este, varaa, pakota = true, kokoKerroin = 1, pisteSade = 0,
 }) {
   let pakotettu = false;
-  const koko = c.iso ? KOKO.isoKaupunki : KOKO.kaupunki;
+  /*
+   * KOKO ON PAPERIVAKIO, MUTTA SILLÄ ON LATTIA (omistaja 8.9.2026:
+   * *"tee samoin myös kohdekaupungin tekstille joka jää lähellä liian
+   * pieneksi"*). Kerroin on 1 kaikkialla paitsi pallolaudan
+   * lähikuvassa, jossa laattaan poltetut kohdenimiöt ovat venyneet
+   * ruudulla suuremmiksi kuin tämä paperivakio — ks. js/pallolauta/
+   * lauta.js kohdekaupunginMitat. Yksi kerroin koko ladontaan: nimen
+   * mitta, harvennus ja väistökehä lasketaan siitä samasta luvusta,
+   * jolla nimi piirretään.
+   */
+  const koko = (c.iso ? KOKO.isoKaupunki : KOKO.kaupunki) * (kokoKerroin > 0 ? kokoKerroin : 1);
   /*
    * Jokainen kohdekaupunki saa harvennetun kapiteelin (ks.
    * KOHDEKAUPUNGIN_ASU) — asu ei riipu pelitilasta eikä lipuista,
@@ -1443,7 +1453,13 @@ function sijoitaKaupunginNimi({
    * suhteutetaan samalla luvulla kuin laatoilla, jotta käsin hiottu
    * suunta säilyy.
    */
-  const d = c.iso ? 7 : 5;
+  /*
+   * Sivuehdokkaiden etäisyys pisteestä: laudan oma mitta (5 / 7 px) tai
+   * pisteen säde rakoineen, kumpi on suurempi. Ilman jälkimmäistä
+   * suurennettu kaupunkipiste (js/pallolauta/lauta.js) jäisi oman
+   * nimensä alle — piste ja nimi ovat sama merkintä.
+   */
+  const d = Math.max(c.iso ? 7 : 5, pisteSade > 0 ? pisteSade + 2 : 0);
   const ehdokkaat = [
     { dx: c.lx * (11 / 13), dy: c.ly * (11 / 13), ank: c.la },
   ];
@@ -2723,16 +2739,22 @@ export function karttanimienKaupungit(pack) {
  *   `dx`/`dy` on nimen ankkurin siirtymä pisteestä ruutupikseleinä,
  *   `r` nimen laatikko ruudulla
  */
-export function ladoRuutunimet(ehdokkaat, { varaukset = [], pinot = [], katto = 40 } = {}) {
+export function ladoRuutunimet(ehdokkaat, {
+  varaukset = [], pinot = [], katto = 40, kokoKerroin = 1, pisteSade = 0,
+} = {}) {
   const { este, varaa } = varausruudukko();
   const kelpo = (r) => Number.isFinite(r?.x0) && Number.isFinite(r?.y0)
     && Number.isFinite(r?.x1) && Number.isFinite(r?.y1) && r.x1 > r.x0 && r.y1 > r.y0;
   const pinoLaatikot = pinot.filter(kelpo);
   for (const r of varaukset.filter(kelpo)) varaa(r);
   for (const r of pinoLaatikot) varaa(r);
-  /* Pisteet varataan ensin, samat säteet kuin laudalla (5,2 / 2,6). */
+  /*
+   * Pisteet varataan ensin, samat säteet kuin laudalla (5,2 / 2,6) —
+   * tai `pisteSade`, jos kutsuja piirtää pisteen suurempana (pallolauta
+   * lähikuvassa, js/pallolauta/lauta.js kohdekaupunginMitat).
+   */
   for (const { c, x, y } of ehdokkaat) {
-    const r = c.iso ? 5.2 : 2.6;
+    const r = Math.max(c.iso ? 5.2 : 2.6, pisteSade);
     varaa({
       x0: x - r, y0: y - r, x1: x + r, y1: y + r,
     });
@@ -2756,7 +2778,7 @@ export function ladoRuutunimet(ehdokkaat, { varaukset = [], pinot = [], katto = 
   for (const { c, x, y } of ehdokkaat) {
     if (nimiot.length >= katto) { pudotettu += 1; continue; }
     const s = sijoitaKaupunginNimi({
-      c, x, y, pino: pino(x, y), este, varaa, pakota: false,
+      c, x, y, pino: pino(x, y), este, varaa, pakota: false, kokoKerroin, pisteSade,
     });
     if (!s.asetettu) { pudotettu += 1; continue; }
     nimiot.push({
