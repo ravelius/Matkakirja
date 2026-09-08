@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 1684, teksti: 'Tilannetaulu ja aamuraportti 8.9.' },
+  { v: 1684, teksti: 'Tilannetaulu ja aamuraportti 8.9.2026' },
   { v: 1683, teksti: 'Ihmisen matka: aikaselain ja avaruusalku' },
   { v: 1682, teksti: 'Pallolauta: reittien päät kaupunkipisteisiin, 4 pistettä' },
   { v: 1681, teksti: 'Pallolauta: noston nimilapun teksti ottaa napautuksen' },
