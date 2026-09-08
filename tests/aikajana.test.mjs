@@ -816,9 +816,10 @@ test('moottori vetää karusellia sormella: kynnys, kaappaus, snap ja tauon muis
   // Veto ei saa laukaista kortin napautusta.
   assert.match(veto, /this\.vedettiin = true;/);
   assert.match(MOOTTORI, /addEventListener\('click', \(\) => \{ if \(!this\.vedettiin\) this\.napautaKorttia\(i\); \}\)/);
-  // Esikatselu näyttää vuoden heti eikä liikuta paneelia, lamppuja tai kameraa.
+  // Esikatselu rullaa vuoden kuten selailu, muttei liikuta paneelia,
+  // lamppuja eikä kameraa.
   const esikatselu = metodi('esikatseleKarusellista');
-  assert.match(esikatselu, /this\.naytaVuosi\(t\.vuosi, true\)/);
+  assert.match(esikatselu, /this\.naytaVuosi\(t\.vuosi\);/);
   for (const kielletty of ['vaihdaPaneeli', 'asetaValonTila', 'ajaPysakille', 'siirry(']) {
     assert.ok(!esikatselu.includes(kielletty), `esikatselu ei saa koskea: ${kielletty}`);
   }
@@ -832,6 +833,14 @@ test('vedon aikana kortit seuraavat sormea ilman CSS-siirtymää', () => {
   assert.match(TYYLI, /\.aikajana-nauha\.vedossa \.aikajana-kortti \{ transition: none; \}/);
   // Kosketus kuuluu karusellille, ei selaimen vieritykselle.
   assert.match(TYYLI, /\.aikajana-kortti \{[\s\S]{0,1400}touch-action: none;/);
+  /*
+   * NATIIVI RAAHAUS POIS (mitattu 8.9.2026: kosketus veti, hiiri ei —
+   * Chromium aloitti kortin kuvasta oman raahauksensa ja perui
+   * osoittimen). Kaksi lukkoa: tyyli ja dragstart.
+   */
+  assert.match(TYYLI, /\.aikajana-kortti img \{ -webkit-user-drag: none; pointer-events: none; \}/);
+  assert.match(TYYLI, /\.aikajana-kortti \{ user-select: none; -webkit-user-select: none; \}/);
+  assert.match(MOOTTORI, /nauha\.addEventListener\('dragstart', raahausPois\)/);
   // Kertomuskaarella nauhaa ei ole lainkaan — Ihmisen matka ei muutu.
   assert.match(TYYLI, /\.aikajana\.kertomus \.aikajana-nauha \{ display: none; \}/);
 });

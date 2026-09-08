@@ -3800,9 +3800,14 @@ class Aikajana {
         if (Math.abs(dx) < KARUSELLIN_VEDON_KYNNYS) return;
         if (Math.abs(e.clientY - veto.y) > Math.abs(dx)) return;
         veto.liikkui = true;
+        /*
+         * LUOKKA ENNEN PYSÄYTYSTÄ: `pysayta` peruu ennakon ja asettelee
+         * karusellin uudelleen, ja siirtymä olisi vielä päällä — rivi
+         * nykäisisi takaisin kellon kohdalle juuri kun sormi tarttuu.
+         */
+        nauha.classList.add('vedossa');
         // Kello ei saa juosta sormen alla; jatko päätetään irrotuksessa.
         this.pysayta();
-        nauha.classList.add('vedossa');
       }
       e.preventDefault?.();
       e.stopPropagation();
@@ -3859,11 +3864,21 @@ class Aikajana {
       if (veto.kaynnissa) this.jatka();
     };
 
+    /*
+     * NATIIVI RAAHAUS POIS. Hiirellä kortin kuva ja nimi ovat selaimen
+     * silmissä raahattavaa sisältöä, ja `dragstart` PERUISI osoittimen
+     * heti ensimmäisestä liikkeestä (mitattu 8.9.2026: kosketus veti,
+     * hiiri ei). Tyylipuoli hoitaa saman (css: user-select ja
+     * -webkit-user-drag); tämä on toinen lukko.
+     */
+    const raahausPois = (e) => e.preventDefault();
+    nauha.addEventListener('dragstart', raahausPois);
     nauha.addEventListener('pointerdown', alku);
     nauha.addEventListener('pointermove', liike);
     nauha.addEventListener('pointerup', loppu);
     nauha.addEventListener('pointercancel', loppu);
     this.irrotaKarusellinVeto = () => {
+      nauha.removeEventListener('dragstart', raahausPois);
       nauha.removeEventListener('pointerdown', alku);
       nauha.removeEventListener('pointermove', liike);
       nauha.removeEventListener('pointerup', loppu);
@@ -3874,15 +3889,18 @@ class Aikajana {
 
   /**
    * VEDON ESIKATSELU: kello ja paikkarivi näyttävät sen keksijän,
-   * johon karuselli asettuisi, jos sormi irrotettaisiin nyt. Kello
-   * saa vuoden HETI (ei rullausta): rullaus on ajon liikettä, ja
-   * sormen alla se laahaisi jäljessä.
+   * johon karuselli asettuisi, jos sormi irrotettaisiin nyt.
+   *
+   * Kello RULLAA kuten selailussa (`siirry`, nuolinäppäimet): kello ei
+   * käy, joten matkamittari liu'uttaa lukeman yhdellä siirtymällä —
+   * Raamatun animaatiosääntö koskee myös vedon esikatselua. Naksahdus
+   * jää tulematta, koska se kuuluu vain käyvälle kellolle.
    */
   esikatseleKarusellista(korttinumero) {
     const i = this.korttiPysakki[korttinumero];
     const t = this.tapahtumat[i];
     if (!t) return;
-    this.naytaVuosi(t.vuosi, true);
+    this.naytaVuosi(t.vuosi);
     if (this.paikkarivi) {
       this.paikkarivi.textContent = [ajoitus(t), paikka(t)].filter(Boolean).join(' · ');
     }
