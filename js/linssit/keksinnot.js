@@ -36,7 +36,11 @@
  *                 Kansio `muotokuva/` ämpärissä. Kuvateksti (`selite`)
  *                 on LYHYT LUONNEKUVA henkilöstä eikä saa nimetä
  *                 kuvaputkea; `lahde` on 'Matkakirjan havainnekuva'
- *                 kuten ilmiökuvissa.
+ *                 kuten ilmiökuvissa. Kentässä `lyhyt` on saman
+ *                 kuvatekstin YHDEN VIRKKEEN versio (≤ 90 merkkiä),
+ *                 joka näkyy Tiedeliitteen kortissa; pitkä `selite`
+ *                 ja lähde näkyvät vasta avatussa kuvassa (omistaja
+ *                 8.9.2026, ks. Wattin kohdalla oleva lohko).
  *   `kuvaToinen`  saman pysäkin toinen keksijä samassa muodossa.
  *                 Kolmella pysäkillä on kaksi tekijää (Montgolfier'n
  *                 veljekset, Cooke ja Wheatstone, Lumière'n
@@ -148,9 +152,29 @@ export const KEKSINNOT = [
      * 'matkakirjan havainnekuva'"): selite on lyhyt luonnekuva, lähde
      * sama alleviivattu maininta kuin ilmiökuvissa (avaa havainnekuvan
      * selityksen). Fable kirjoittaa henkilojuttu-tekstin pohjalta.
+     *
+     * KAKSI PITUUTTA (omistaja 8.9.2026, Raamattu "TIEDELIITTEEN
+     * ULKOASU", sanatarkasti: *"kuvateksti voisi olla lyhyempi, ja
+     * sitten voisi näkyä pidempi versio, kun sen kuvan avaa
+     * näkyviin"*, ja tarkennus samana päivänä: *"Riittää myös, että
+     * havainnekuva mainitaan vasta kun kuvan klikkaa isommaksi siinä
+     * pidemmässä kuvatekstissä"*):
+     *
+     *   `lyhyt`   yksi virke, enintään 90 merkkiä, muotoa NIMI +
+     *             yksi luonnehdinta. Tämä näkyy Tiedeliitteen
+     *             kortissa kuvan alla — ILMAN lähderiviä.
+     *   `selite`  entinen pitkä luonnekuva. Se näkyy vasta, kun
+     *             kuva avataan suurennokseen, ja sen perässä on
+     *             `lahde` ("Matkakirjan havainnekuva").
+     *
+     * Lyhyt teksti ei saa kertoa mitään, mitä pitkässä ei ole: se on
+     * tiivistys, ei uusi fakta. Sama pari on jokaisella 25 pysäkillä,
+     * kaksoispysäkkien toisella kasvolla (`kuvaToinen`) ja
+     * merkkipaalulla 1873.
      */
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1769-james-watt.jpg`,
+      lyhyt: 'James Watt, hiljainen ja perusteellinen mies, joka piti itseään parantelijana.',
       selite: 'James Watt oli hiljainen ja perusteellinen mies, joka pelkäsi '
         + 'epäonnistumista ja hioi jokaista yksityiskohtaa vuosikausia. Hän ei '
         + 'pitänyt itseään keksijänä vaan parantelijana.',
@@ -204,6 +228,7 @@ export const KEKSINNOT = [
       + 'linjojen yli.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1783-joseph-montgolfier.jpg`,
+      lyhyt: 'Joseph Montgolfier, haaveilija, joka hyppäsi katolta omatekoisella laskuvarjolla.',
       selite: 'Joseph Montgolfier oli haaveilija, joka hyppäsi kotitalon '
         + 'katolta omatekoisella laskuvarjolla mutta ei osannut hoitaa '
         + 'liikeasioita. Ujoutensa vuoksi hän jätti Pariisin näytökset '
@@ -212,6 +237,7 @@ export const KEKSINNOT = [
     },
     kuvaToinen: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1783-etienne-montgolfier.jpg`,
+      lyhyt: 'Étienne Montgolfier, tyyni arkkitehti, joka esitteli pallokokeet hovissa.',
       selite: 'Étienne Montgolfier oli veljeksistä tyyni ja järjestelmällinen: '
         + 'koulutettu arkkitehti, joka johti perheen paperitehdasta ja '
         + 'hoiti pallokokeiden esittelyt hovissa.',
@@ -263,6 +289,7 @@ export const KEKSINNOT = [
       + 'vastustusliikkeen.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1796-edward-jenner.jpg`,
+      lyhyt: 'Edward Jenner, maaseudun lääkäri, jonka ohje oli "älä arvaile, kokeile".',
       selite: 'Edward Jenner pysyi koko ikänsä maaseudun lääkärinä ja '
         + 'innokkaana luonnontutkijana. Opettajaltaan hän oli oppinut '
         + 'ohjeen "älä arvaile, kokeile" — ja tunsi lapsena itse vanhan '
@@ -315,6 +342,7 @@ export const KEKSINNOT = [
       + 'sähköä koneellisesti.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1800-alessandro-volta.jpg`,
+      lyhyt: 'Alessandro Volta, itsepäinen kiistakumppani ja suosittu luennoitsija.',
       selite: 'Alessandro Volta oli kiistakumppanina itsepäinen ja '
         + 'luennoitsijana niin suosittu, että hänelle rakennettiin oma '
         + 'sali. Yksityiselämässään hän vetäytyi kotiinsa ja meni naimisiin '
@@ -365,6 +393,7 @@ export const KEKSINNOT = [
       + 'patsas kotikaupunkiin jo 1840.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1804-joseph-marie-jacquard.jpg`,
+      lyhyt: 'Joseph Marie Jacquard, lukutaidoton 13-vuotiaaksi, löysi taitonsa viisikymppisenä.',
       selite: 'Joseph Marie Jacquard oli lukutaidoton 13-vuotiaaksi ja '
         + 'epäonnistui sekä kauppiaana että perintönsä hoitajana. Vasta '
         + 'lähes viisikymppisenä hän löysi taitonsa: koneiden rakentamisen.',
@@ -416,6 +445,7 @@ export const KEKSINNOT = [
       + 'valitsemansa raideleveys oli tulossa maailman standardiksi.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1825-george-stephenson.jpg`,
+      lyhyt: 'George Stephenson, lukutaidoton 18-vuotiaaksi, maksoi itse iltakoulunsa.',
       selite: 'George Stephenson oli lukutaidoton 18-vuotiaaksi ja maksoi itse '
         + 'iltakoulunsa. Hän ei koskaan päässyt eroon epäluulostaan Lontoon '
         + 'oppineita kohtaan, jotka pitivät häntä sivistymättömänä.',
@@ -470,6 +500,7 @@ export const KEKSINNOT = [
       + 'menneet.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1837-william-fothergill-cooke.jpg`,
+      lyhyt: 'William Fothergill Cooke, upseeri, joka vaihtoi alaa yhden luennon jälkeen.',
       selite: 'William Fothergill Cooke oli entinen upseeri ja lääketieteen '
         + 'opiskelija, joka näki lennättimen luennolla ja vaihtoi alaa '
         + 'saman tien. Hän hoiti parivaljakon liikeasiat ja kiisti loppuun '
@@ -478,6 +509,7 @@ export const KEKSINNOT = [
     },
     kuvaToinen: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1837-charles-wheatstone.jpg`,
+      lyhyt: 'Charles Wheatstone, ujo mies, joka oli kotonaan vain laboratoriossaan.',
       selite: 'Charles Wheatstone oli lapsena niin ujo, että pakeni ullakolle '
         + 'omien ajatustensa seuraan. Yleisön edessä hän mumisi seinälle '
         + 'päin, mutta laboratoriossa hän oli kotonaan.',
@@ -527,6 +559,7 @@ export const KEKSINNOT = [
       + 'käytti enää Daguerren hopealevyjä.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1839-louis-daguerre.jpg`,
+      lyhyt: 'Louis Daguerre, teatterimaalari ja illuusioiden mestari.',
       selite: 'Louis Daguerre oli ammatiltaan teatterimaalari ja illuusioiden '
         + 'mestari, joka rakensi Pariisiin muuttuvien maisemien dioraaman. '
         + 'Keksinnöstäänkin hän puhui kuin näyttämöltä.',
@@ -577,6 +610,7 @@ export const KEKSINNOT = [
       + 'oli Iron and Steel Instituten puheenjohtaja, virassa 1871–1873.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1856-henry-bessemer.jpg`,
+      lyhyt: 'Henry Bessemer, sarjakeksijä ja kylmä liikemies, joka rikastui patenteillaan.',
       selite: 'Henry Bessemer oli sarjakeksijä ja kylmä liikemies, joka toisin '
         + 'kuin useimmat keksijät rikastui omilla patenteillaan. '
         + 'Kieltäytyville teollisuusmiehille hän vastasi hinnalla.',
@@ -626,6 +660,7 @@ export const KEKSINNOT = [
       + 'hän määräsi vasta testamentissaan 1895.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1867-alfred-nobel.jpg`,
+      lyhyt: 'Alfred Nobel, yksinäinen mies, joka kirjoitti runoja ja johti tehtaitaan kirjeitse.',
       selite: 'Alfred Nobel oli yksinäinen ja masennukseen taipuvainen mies, '
         + 'joka kirjoitti runoja englanniksi ja johti tehtaitaan kirjeitse. '
         + 'Nuoremman veljensä hän menetti räjähdyksessä 1864.',
@@ -677,6 +712,7 @@ export const KEKSINNOT = [
       + 'germanium sen jälkeen.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1869-dmitri-mendeleev.jpg`,
+      lyhyt: 'Dmitri Mendelejev, äkkipikainen mies, joka ajoi asiansa läpi hinnalla millä hyvänsä.',
       selite: 'Dmitri Mendelejev oli äkkipikainen ja riitaisa mies, joka ajoi '
         + 'asiansa läpi hinnalla millä hyvänsä. Siperialaisen lapsuutensa '
         + 'jälkeen hänet vietiin opiskelemaan tuhansien kilometrien päähän.',
@@ -729,6 +765,7 @@ export const KEKSINNOT = [
      */
     kuva: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-departure-aged-r20260905-v1.jpg',
+      lyhyt: 'Isoisä viivähtää arkun vieressä ja vastaa saattajan hyvästiin.',
       ulkoinen: true,
       asento: '30% top',
       selite: 'Isoisä viivähtää arkun vieressä. Vaunun ikkunassa näkyvä '
@@ -850,6 +887,7 @@ export const KEKSINNOT = [
       + 'ilmakehämoottori, ja nelitahtiseen oli kolme vuotta.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1876-nikolaus-otto.jpg`,
+      lyhyt: 'Nikolaus Otto, kauppamies, joka myi kahvia ennen kuin ryhtyi moottoreihin.',
       selite: 'Nikolaus Otto oli koulutukseltaan kauppamies, joka myi kahvia ja '
         + 'sokeria ennen kuin ryhtyi moottoreihin. Hän ei opiskellut '
         + 'koskaan insinööriksi eikä lakannut parantelemasta samaa konetta.',
@@ -900,6 +938,7 @@ export const KEKSINNOT = [
       + 'kuusi vuotta ja aatelisarvoonsa viisitoista.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1879-werner-von-siemens.jpg`,
+      lyhyt: 'Werner von Siemens, upseeri ja yritysjohtaja, joka puolusti työväen asemaa.',
       selite: 'Werner von Siemens oli upseeri ja yritysjohtaja yhtä paljon kuin '
         + 'keksijä. Hän puolusti avoimesti työväen asemaa ja varoitti '
         + 'tehtaista, joissa raatavat "työn orjat".',
@@ -949,6 +988,7 @@ export const KEKSINNOT = [
       + 'raivotautirokotteeseen oli vielä kaksitoista vuotta.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1885-louis-pasteur.jpg`,
+      lyhyt: 'Louis Pasteur, armoton esimies, jolta halvaus vei kätten työn mutta ei työtä.',
       selite: 'Louis Pasteur oli keskinkertainen koulupoika ja armoton esimies, '
         + 'joka ei antanut kiistoissa periksi. Halvaus vei häneltä kätten '
         + 'työn mutta ei työtä.',
@@ -1001,6 +1041,7 @@ export const KEKSINNOT = [
       + 'kolmetoista vuotta.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1886-carl-benz.jpg`,
+      lyhyt: 'Carl Benz, joka menetti kaksi yritystä ennen kuin vaimo Bertha pelasti pajan.',
       selite: 'Carl Benz ei sopeutunut yhteenkään palkkatyöhön ja menetti kaksi '
         + 'yritystä ennen menestystä. Vaimo Bertha pelasti sekä pajan että '
         + 'auton.',
@@ -1050,6 +1091,7 @@ export const KEKSINNOT = [
       + 'ennustuksen Hertz viisitoista vuotta myöhemmin todisti todeksi.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1888-heinrich-hertz.jpg`,
+      lyhyt: 'Heinrich Hertz, kielinero, joka piti radioaaltojaan hyödyttöminä.',
       selite: 'Heinrich Hertz oli lahjakas myös kielissä ja opetteli '
         + 'koululaisena arabiaa. Todistettuaan radioaallot olemassa '
         + 'oleviksi hän sanoi, ettei niistä ole mitään hyötyä.',
@@ -1099,6 +1141,7 @@ export const KEKSINNOT = [
       + 'olemassa.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-guglielmo-marconi.jpg`,
+      lyhyt: 'Guglielmo Marconi, kotiopettajien kasvatti ja yhtä paljon liikemies kuin keksijä.',
       selite: 'Guglielmo Marconi ei käynyt päivääkään koulua vaan opiskeli '
         + 'kotiopettajien johdolla. Hän oli yhtä paljon liikemies kuin '
         + 'keksijä — ja liittyi 1923 Italian fasistiseen puolueeseen.',
@@ -1148,6 +1191,7 @@ export const KEKSINNOT = [
       + 'ollut.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-wilhelm-rontgen.jpg`,
+      lyhyt: 'Wilhelm Röntgen, julkisuutta kaihtava mies, joka ei ottanut löydöstään patenttia.',
       selite: 'Wilhelm Röntgen oli sulkeutunut ja julkisuutta kaihtava mies: '
         + 'hän kieltäytyi pitämästä Nobel-luentoa, ei ottanut löydöstään '
         + 'patenttia ja määräsi kirjeenvaihtonsa hävitettäväksi.',
@@ -1200,6 +1244,7 @@ export const KEKSINNOT = [
       + 'lasilevyille.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-auguste-lumiere.jpg`,
+      lyhyt: 'Auguste Lumière, vanhempi veljeksistä ja perheen valokuvatehtaan johtaja.',
       selite: 'Auguste Lumière oli veljeksistä vanhempi ja johti perheen '
         + 'valokuvatehdasta yhdessä veljensä kanssa. Elokuva oli heille '
         + 'uutuustuote, josta he luopuivat jo 1905.',
@@ -1207,6 +1252,7 @@ export const KEKSINNOT = [
     },
     kuvaToinen: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-louis-lumiere.jpg`,
+      lyhyt: 'Louis Lumière, joka piti elokuvaa keksintönä ilman tulevaisuutta.',
       selite: 'Louis Lumière tuli Pariisiin esittelemään värivalokuvausta ja '
         + 'hämmästyi, että liikkuvat mustavalkokuvat kiinnostivat yleisöä '
         + 'enemmän. Veljekset pitivät elokuvaa keksintönä ilman '
@@ -1257,6 +1303,7 @@ export const KEKSINNOT = [
       + 'kirjoittautui Augsburgin vasta perustettuun teollisuuskouluun.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1897-rudolf-diesel.jpg`,
+      lyhyt: 'Rudolf Diesel, pakolaislapsi, joka ilmoitti 14-vuotiaana ryhtyvänsä insinööriksi.',
       selite: 'Rudolf Diesel oli pakolaislapsi, joka ilmoitti 14-vuotiaana '
         + 'kirjeellä vanhemmilleen ryhtyvänsä insinööriksi. Kaksi '
         + 'räjähdystä oli vähällä tappaa hänet työn ääressä.',
@@ -1308,6 +1355,7 @@ export const KEKSINNOT = [
       + 'neljännesvuosisataa myöhemmin.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1898-marie-curie.jpg`,
+      lyhyt: 'Marie Curie, salaisen "lentävän yliopiston" opiskelija, joka paleli ullakollaan.',
       selite: 'Marie Curie opiskeli salaisessa "lentävässä yliopistossa", koska '
         + 'naisia ei otettu Varsovan yliopistoon. Pariisissa hän paleli '
         + 'ullakollaan ja unohti syödä.',
@@ -1358,6 +1406,7 @@ export const KEKSINNOT = [
       + 'ilmalaivasta, jonka sisällä olisi useita erillisiä kaasusäkkejä.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1900-ferdinand-von-zeppelin.jpg`,
+      lyhyt: 'Ferdinand von Zeppelin, itsepäinen upseeri, joka pani vaimonsa maat pantiksi.',
       selite: 'Ferdinand von Zeppelin oli itsepäinen upseeri, joka pakotettiin '
         + 'eroamaan armeijasta ja pani lopulta vaimonsa maat pantiksi '
         + 'ilmalaivojensa vuoksi.',
@@ -1407,6 +1456,7 @@ export const KEKSINNOT = [
       + 'vielä lentänyt moottorikoneella.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1909-louis-bleriot.jpg`,
+      lyhyt: 'Louis Blériot, joka rikkoi koneen toisensa jälkeen ja lensi kerran kenkä palaen.',
       selite: 'Louis Blériot rahoitti lentokoneensa myymällä '
         + 'autonvalonheittimiä ja rikkoi konetta toisensa jälkeen. Kerran '
         + 'hän lensi lentonsa loppuun kenkä palaen jalassa.',
@@ -1467,6 +1517,7 @@ export const KEKSINNOT = [
       + 'sähkönjohtavuutta. Siitä havainnosta alkoi tie televisioon.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1926-john-logie-baird.jpg`,
+      lyhyt: 'John Logie Baird, sinnikäs epäonnistuja, joka kokosi televisionsa hatturasiasta.',
       selite: 'John Logie Baird oli sinnikäs epäonnistuja: lasinen partaveitsi, '
         + 'ilmatäytteiset kengät, timantit grafiitista. Ensimmäisen '
         + 'televisionsa hän kokosi hatturasiasta ja parsinneuloista.',
@@ -1518,6 +1569,7 @@ export const KEKSINNOT = [
       + 'lääkkeitä ollut olemassa.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1928-alexander-fleming.jpg`,
+      lyhyt: 'Alexander Fleming, epäjärjestelmällinen tutkija, jonka sotkua pidettiin syynä.',
       selite: 'Alexander Fleming oli tunnetusti epäjärjestelmällinen tutkija, '
         + 'ja hänen apulaisensa piti juuri sitä hänen löytöjensä syynä. '
         + 'Tutkijaksi hänet houkutteli ampumaseuran kapteeni.',

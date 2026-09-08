@@ -7,7 +7,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  KARUSELLIN_KYNNYS, karusellinKohta, karusellinPyyhkaisy,
+  KARUSELLIN_KYNNYS, karusellinKohta, karusellinPyyhkaisy, lyhytKuvateksti,
   onTiedeliitteenSivu, tiedeliitteenKuvat, tiedeliitteenNaapurit,
 } from '../js/tiedeliite.js';
 import { KEKSINNOT } from '../js/linssit/keksinnot.js';
@@ -98,10 +98,10 @@ test('pyyhkäisy vaatii kynnyksen ja tulkitsee suunnan oikein', () => {
 test('sivu piirtää karusellin vain useammasta havainnekuvasta', () => {
   assert.match(JS, /if \(ilmiot\.length > 1\) \{\s*\n\s*piirraIlmiokaruselli\(/,
     'useampi kuva menee karuselliin');
-  assert.match(JS, /\} else \{[\s\S]{0,240}piirraNostonKuva\(/,
-    'yksi kuva latoutuu entiseen tapaan lehden kuvana');
-  // Kuvateksti ja lähderivi ovat kuvan omat ja vaihtuvat sen mukana.
-  assert.match(JS, /taytaLahderivi\(lahde, kuva\.lahde \?\? '', kuva\)/);
+  assert.match(JS, /\} else \{[\s\S]{0,240}piirraIlmiokuva\(/,
+    'yksi kuva latoutuu Tiedeliitteen omana lehden kuvana');
+  // Kuvateksti on kuvan oma ja vaihtuu sen mukana.
+  assert.match(JS, /selite\.textContent = lyhytKuvateksti\(kuva\)/);
   // Nuolinäppäimet: karuselli saa ne, kun kohdistus on siinä.
   assert.match(JS, /activeElement\?\.closest\?\.\('\.tiedeliite-karuselli'\)/);
 });
@@ -187,4 +187,127 @@ test('kohdekortin raahausele puretaan aina ennen uutta kosketusta ja kuunnellaan
   assert.match(L, /tapahtuma\.stopPropagation\(\);\s*\/\/[^\n]*\n\s*\/\/[^\n]*\n\s*popup\.puraEle\?\.\(\);\s*if \(tapahtuma\.target\?\.closest\?\.\('button, a'\)\) return;/);
   assert.match(L, /if \(tapahtuma\.pointerType === 'mouse' && !tapahtuma\.buttons\) \{ puru\(\); return; \}/);
   assert.doesNotMatch(L, /popup\.addEventListener\('pointermove', siirry\)/);
+});
+
+/* ===========================================================================
+   YLÄREUNA, KUVATEKSTIT, PALSTA JA ALANAPIT (omistaja 8.9.2026)
+   ---------------------------------------------------------------------------
+   Omistajan iPad-kaappaus 1897 Augsburg, sanatarkasti: *"Korjaa tuo yläreuna.
+   Siinä on useampikin asetteluvirhe ja kuvateksti voisi olla lyhyempi, ja
+   sitten voisi näkyä pidempi versio, kun sen kuvan avaa näkyviin. Myös jos
+   sivua vierittää, niin silloin kuuluu turha klikkaus ääni ja ehkä teksti
+   voisi olla yhdessä palstassa ja kuva hieman isompa. Myös alareunan linkit
+   seuraaviin juttuihin vois jolla päälle hyppäävällä värillä. Ja myös tuo
+   havainnekuva saisi mennä reunasta reunaan. Nyt siihen jää oudot palkit
+   sivuille."*
+
+   Nämä vartiot pitävät korjaukset paikallaan. Kolme niistä on
+   JÄRJESTYSKILPAILUJA kahden tyylitiedoston välillä (css/fokusnosto.css
+   vs. css/aikajana.css): yhtä tarkat valitsimet ratkesivat sen mukaan,
+   kumpi tiedosto sattui latautumaan viimeisenä, ja juuri siksi omistajan
+   iPadilla näkyi kaksi palstaa ja kuvan sivupalkit. Testit vaativat
+   kolmatta luokkaa (.tiedeliite-kortti), joka ratkaisee kilpailun.
+   =========================================================================== */
+
+test('kortissa lyhyt kuvateksti ilman lähderiviä, suurennoksessa pitkä', () => {
+  assert.equal(lyhytKuvateksti({ lyhyt: 'L', selite: 'P' }), 'L');
+  assert.equal(lyhytKuvateksti({ selite: 'P' }), 'P', 'ilman lyhyttä entinen selite');
+  assert.equal(lyhytKuvateksti(null), '');
+  // Kortin kuvatekstit tulevat lyhyestä versiosta...
+  assert.match(JS, /html\('span', 'fokusnosto-kuvaselite', lyhytKuvateksti\(kuva\)\)/);
+  // ...eikä yksikään kortin kuvateksti saa enää lähderiviä: "Matkakirjan
+  // havainnekuva" mainitaan vasta avatussa kuvassa (omistaja 8.9.2026).
+  assert.doesNotMatch(JS, /fokusnosto-kuvalahde/,
+    'kortin kuvatekstiin ei kirjoiteta lähderiviä');
+  // Pitkä selite ja lähde kulkevat kuvatiedossa suurennokseen asti.
+  assert.match(JS, /avaaKohdeSuurennos\(ui, kuva, \(\) => nappi, ZOOM_AVAIN\)/);
+});
+
+test('jokaisella keksinnön muotokuvalla on lyhyt kuvateksti', () => {
+  const kuvat = [];
+  for (const t of KEKSINNOT) {
+    for (const kentta of ['kuva', 'kuvaToinen']) {
+      if (t[kentta]) kuvat.push([`${t.vuosi} ${t.henkilo} ${kentta}`, t[kentta]]);
+    }
+  }
+  // 25 pysäkkiä + merkkipaalu 1873 + kolme kaksoispysäkin toista kasvoa.
+  assert.equal(kuvat.length, 29);
+  for (const [nimi, kuva] of kuvat) {
+    assert.ok(kuva.lyhyt, `${nimi}: lyhyt kuvateksti puuttuu`);
+    assert.ok(kuva.lyhyt.length <= 90, `${nimi}: lyhyt teksti on ${kuva.lyhyt.length} merkkiä (max 90)`);
+    assert.match(kuva.lyhyt, /\.$/, `${nimi}: lyhyt teksti on yksi virke`);
+    assert.ok(!/\.\s+[A-ZÅÄÖ]/.test(kuva.lyhyt), `${nimi}: lyhyt teksti on yksi virke, ei kaksi`);
+    assert.ok(kuva.selite && kuva.selite.length > kuva.lyhyt.length,
+      `${nimi}: pitkä selite puuttuu tai ei ole lyhyttä pidempi`);
+  }
+});
+
+test('nimiörivi on yksi rivi kortin sisällä, ei kolme aseteltua palaa', () => {
+  // Hampurilainen, nimiö + paikkarivi ja kaiutin/sulku samassa rivissä.
+  assert.match(JS, /ylarivi\.append\(hampurilainen, nimiot, ylanapit\)/);
+  assert.match(JS, /nimiot\.append\(html\('p', 'looppi-nimio', 'Tiedeliite'\), paikkarivi\)/);
+  assert.match(JS, /lisaaLukijanappi\(uusi, \{ otsikko: 'Kuuntele tiedeliite', rivi: ylanapit \}\)/,
+    'kaiutin menee nimiöriville eikä sivun sisään');
+  // Sivu ei enää lado omaa nimiötään: masto ei saa vieriä jutun mukana.
+  const sivu = JS.match(/function piirraTiedeliitteenSivu[\s\S]*?\n\}/)[0];
+  assert.doesNotMatch(sivu, /html\('p', 'looppi-nimio'/);
+  assert.doesNotMatch(sivu, /html\('p', 'looppi-paivays'/);
+  const rivi = CSS.match(/\.tiedeliite-ylarivi \{[^}]*\}/)[0];
+  assert.match(rivi, /display: grid/);
+  assert.match(rivi, /grid-template-columns: 1fr auto 1fr/, 'nimiö on kortin keskellä');
+  assert.match(rivi, /border-bottom: 3px double/, 'kaksoisviiva on rivin ALLA');
+  // Kaiutin ja sulku ovat rivin lapsia, eivät kortin kulmaan asemoituja.
+  assert.match(CSS, /\.tiedeliite-kortti \.tiedeliite-ylanapit > button\.lukija-nappi \{[^}]*position: static/);
+  assert.match(CSS, /\.tiedeliite-kortti \.fokusnosto-kortti-sulje \{[^}]*position: static/);
+  assert.match(CSS, /\.tiedeliite-hampurilainen \{[^}]*justify-self: start/);
+});
+
+test('leipäteksti on yhdessä palstassa ja muotokuva entistä isompi', () => {
+  // Kolme luokkaa: lööpin kaksipalstainen sääntö on yhtä tarkka kahdella.
+  assert.match(
+    CSS,
+    /\.tiedeliite-kortti \.tiedeliite-palsta \.tiedeliite-leipa \{[^}]*column-count: 1/,
+    'yksi palsta on varmistettava kortin luokalla',
+  );
+  const palsta = CSS.match(/\.tiedeliite-palsta \{[^}]*\}/)[0];
+  assert.match(palsta, /grid-template-columns: minmax\(0, 1fr\) 15rem/,
+    'muotokuva on 15 rem (ennen 9,5)');
+  assert.match(CSS, /\.tiedeliite-keksija \.tiedeliite-palsta \{ grid-template-columns: minmax\(0, 1fr\) 15rem; \}/);
+});
+
+test('havainnekuva täyttää palstan reunasta reunaan', () => {
+  const kehys = CSS.match(/\.tiedeliite-kortti \.tiedeliite-ilmiokuva \{[^}]*\}/)[0];
+  assert.match(kehys, /width: auto/, 'kehys ei kutistu kuvan levyiseksi');
+  assert.match(kehys, /max-width: none/);
+  const kuva = CSS.match(/\.tiedeliite-kortti \.tiedeliite-ilmiokuva img \{[^}]*\}/)[0];
+  assert.match(kuva, /width: 100%/);
+  assert.match(kuva, /object-fit: cover/, 'contain jätti sivuille vaaleat palkit');
+  assert.match(kuva, /aspect-ratio: 16 \/ 10/);
+  assert.match(kuva, /max-height: none/);
+  // Sama kilpailu karusellin ruuduilla.
+  assert.match(CSS, /\.tiedeliite-kortti \.tiedeliite-karuselli-ruutu img \{[^}]*max-height: none/);
+});
+
+test('alanapeilla on päälle hyppäävä väri myös kosketuksessa', () => {
+  const korostus = CSS.match(
+    /\.tiedeliite-navinappi:hover:not\(:disabled\),\n\.tiedeliite-navinappi:focus-visible,\n\.tiedeliite-navinappi:active:not\(:disabled\) \{[^}]*\}/,
+  )?.[0];
+  assert.ok(korostus, 'hover/focus/active-korostus puuttuu alanapeilta');
+  assert.match(korostus, /background: #7a5514/, 'kullanruskea tausta, ei vaalea vaalealla');
+  assert.match(korostus, /color: #fbf3d9/);
+});
+
+test('vieritys ei soita napsautusääntä (omistaja 8.9.2026)', () => {
+  const main = lue('js/main.js');
+  // Sormella ääni tulee vasta napautuksen varmistuttua; hiirellä heti.
+  assert.match(main, /if \(event\.pointerType === 'mouse'\) \{ soitaNapinAani\(button\); return; \}/);
+  assert.match(main, /addEventListener\('pointerup'[\s\S]{0,700}NAPAUTUKSEN_LIIKE/);
+  assert.match(main, /kosketus\.nappi\.contains\?\.\(event\.target\)/);
+  assert.match(main, /addEventListener\('pointercancel', \(\) => \{ napinKosketus = null; \}, true\)/);
+  // Vanha ehdoton pointerdown-ääni ei saa palata.
+  assert.doesNotMatch(
+    main,
+    /pointerdown', \(event\) => \{\n  const button = event\.target\.closest\?\.\('button'\);\n  if \(button/,
+    'ääni ei saa lähteä pelkästä painalluksesta',
+  );
 });

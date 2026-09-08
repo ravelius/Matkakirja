@@ -84,7 +84,7 @@
 
 import {
   fokusmoodiPaalla, html, jaaKappaleiksi, jaaPuheenvuoroksi,
-  linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu,
+  linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu, suurennoksenMitat,
 } from './ui-apurit.js';
 import {
   asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu,
@@ -1675,20 +1675,15 @@ function piirraJalkikuva(ui, kohde, kuva) {
 
 /** Suurennoksen kasvun ja kutistuksen kesto. */
 const SUURENNOS_MS = 320;
-/**
- * Suuren kuvan osuus ruudun PIENEMMÄSTÄ sivusta.
- *
- * ALKUPERÄINEN MITTA OLI 0,82 (*"~80 % ruudun pienemmästä sivusta"*),
- * mutta omistajan pelitesti iPadilla 24.8.2026 osoitti sen liian
- * vaatimattomaksi: *"KUVA ISOMMAKSI … kasvata niin että kuva täyttää
- * ruudun selvästi"*. Kartta jää yhä joka reunalta näkyviin — juuri se
- * on pienemmän sivun mittaamisen syy — mutta marginaalit ovat nyt
- * kapeat.
+/*
+ * SUUREN KUVAN KOKO TULEE YHTEISESTÄ LINJAUKSESTA (js/ui-apurit.js
+ * suurennoksenMitat, omistaja 8.9.2026): kuvan suuntaa verrataan
+ * ruudun suuntaan, ja vastakkainen suunta täyttää ruudun lyhyemmän
+ * sivun, sama suunta jättää laidoista jotain näkyviin. Tämän
+ * moduulin omat osuudet (0,94 pienemmästä sivusta, 0,88 korkeudesta)
+ * poistuivat: kohdekortilla oli oma kaavansa, ja ero näkyi
+ * pelaajalle.
  */
-const SUURENNOS_OSUUS = 0.94;
-/** Katot leveydelle ja korkeudelle, ettei kuva puske reunaan asti. */
-const SUURENNOS_LEVEIN = 0.94;
-const SUURENNOS_KORKEIN = 0.88;
 /**
  * Kuvatekstipalkille varattava pystytila pikseleinä.
  *
@@ -1707,8 +1702,14 @@ const SUURENNOS_TEKSTIPALKKI = 120;
  * kutistettu kortti antaisi FLIP-animaatiolle väärän maalilaatikon.
  */
 const SUURENNOS_KEHYS_PX = 26;
-/** Kuvasuhde, jota käytetään ennen kuin kuvan omat mitat tiedetään. */
-const SUURENNOS_OLETUSSUHDE = 4 / 3;
+/**
+ * Kerroksen oma reunus pikseleinä (css .fokuszoom padding 0,5 rem
+ * molemmilla puolilla). Se on vähennettävä samalla tavalla kuin
+ * kehyksen tila: muuten flex kutistaisi kortin ja FLIP-animaatio
+ * saisi väärän maalilaatikon juuri silloin, kun kuva täyttää ruudun
+ * lyhyemmän sivun (omistajan linjaus 8.9.2026).
+ */
+const SUURENNOS_KERROS_PX = 16;
 /** Kiihtyy alussa, jarruttaa lopussa — kartan kamera-ajon sukulainen. */
 const SUURENNOS_PEHMENNYS = 'cubic-bezier(0.22, 0.9, 0.24, 1)';
 /** Pyyhkäisyn vähimmäismatka, jotta se erottuu napautuksesta. */
@@ -1791,39 +1792,29 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
    * vaihtuminen isoksi ei liikuta mitään.
    */
   const mitoita = () => {
-    const leveys = globalThis.innerWidth || 0;
-    const korkeus = globalThis.innerHeight || 0;
-    if (!leveys || !korkeus) return;
-    const pienempi = Math.min(leveys, korkeus);
-    const enintaanW = Math.min(leveys * SUURENNOS_LEVEIN, pienempi * SUURENNOS_OSUUS)
-      - SUURENNOS_KEHYS_PX;
+    const ruutuLeveys = globalThis.innerWidth || 0;
+    const ruutuKorkeus = globalThis.innerHeight || 0;
+    if (!ruutuLeveys || !ruutuKorkeus) return;
     /*
-     * KORKEUS MITATAAN RUUDUN KORKEUDESTA, EI PIENEMMÄSTÄ SIVUSTA.
-     * Ennen molemmat sivut rajattiin pienempään sivuun, jolloin PYSTY
-     * kuva jäi puhelimella ja tabletilla puolityhjäksi: leveyttä olisi
-     * ollut, mutta korkeuskatto tuli lyhyemmästä sivusta. Omistajan
-     * pelitesti 24.8.2026 osoitti juuri tämän (*"KUVA ISOMMAKSI"*).
-     * Leveys pysyy pienemmän sivun mitassa, joten kartta erottuu yhä
-     * kuvan sivuilta.
-     *
-     * Kuvatekstipalkki on kehyksen sisällä: sen tila varataan ennen kuin
-     * kuvalle jaetaan korkeutta. Alaraja pitää huolen siitä, ettei
-     * hyvin matalalla ruudulla jää pelkkää palkkia.
+     * Kehyksen oma tila (reunus ja sisennys) sekä kuvatekstipalkki
+     * varataan ennen kuin kuvalle jaetaan mittoja — muuten kortti
+     * kasvaisi ruutua isommaksi ja teksti jäisi laidan taakse.
+     * Loppu on yhteistä linjausta (ks. SUURENNOS_MS:n yllä oleva
+     * lohko ja js/ui-apurit.js suurennoksenMitat).
      */
-    const enintaanH = Math.max(
-      korkeus * SUURENNOS_KORKEIN - SUURENNOS_TEKSTIPALKKI,
-      korkeus * 0.3,
-    );
-    const suhde = (img.naturalWidth && img.naturalHeight)
-      ? img.naturalWidth / img.naturalHeight : SUURENNOS_OLETUSSUHDE;
-    let w = enintaanW;
-    let h = w / suhde;
-    if (h > enintaanH) { h = enintaanH; w = h * suhde; }
-    img.style.width = `${Math.round(w)}px`;
-    img.style.height = `${Math.round(h)}px`;
+    const { leveys, korkeus } = suurennoksenMitat({
+      kuvaLeveys: img.naturalWidth,
+      kuvaKorkeus: img.naturalHeight,
+      ruutuLeveys,
+      ruutuKorkeus,
+      vaakaVara: SUURENNOS_KEHYS_PX + SUURENNOS_KERROS_PX,
+      pystyVara: SUURENNOS_TEKSTIPALKKI + SUURENNOS_KERROS_PX,
+    });
+    img.style.width = `${leveys}px`;
+    img.style.height = `${korkeus}px`;
     // Palkki on täsmälleen kuvan levyinen: kehys kutistuu kuvan
     // mittoihin, ja teksti taittuu sen sisään eikä kartan päälle.
-    kehys.style.width = `${Math.round(w)}px`;
+    kehys.style.width = `${leveys}px`;
   };
 
   /**

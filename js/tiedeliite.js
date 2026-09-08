@@ -19,17 +19,53 @@
  * jokainen korttiperhe siivoaa omat kerroksensa valitsimella.
  * Rakenne ylhäältä alas:
  *
- *   ☰ (hampurilainen)                    nimiö "Tiedeliite"          ✕
- *   päiväysrivi kaksoisviivoin           vuosi · paikka
+ *   NIMIÖRIVI (kortin oma, ei vieri)     ☰ · Tiedeliite / vuosi ·
+ *                                        paikka · kaiutin ✕
+ *   ───── kaksoisviiva rivin ALLE ─────
  *   PÄÄOTSIKKO                           keksintö
  *   ingressi                             linssin lyhyt selite
- *   KASVOT vierekkäin                    generoitu muotokuva (+ toinen
- *                                        keksijä) JA aito Commons-kuva
+ *   leipäteksti YHTENÄ palstana          juttu, muotokuva oikealla
  *   ilmiökuva(t) kuvateksteineen         ilmio, ilmioLisa — kaksi tai
  *                                        useampi selataan karusellina
- *   leipäteksti palstoina                juttu
+ *   KEKSIJÄ ITSE                         henkilojuttu ja aito kuva
  *   lähderivi                            lahde
  *   ‹ edellinen keksijä | seuraava ›     alanapit
+ *
+ * ── YLÄREUNA JA KUVATEKSTIT (omistaja 8.9.2026) ───────────────────
+ *
+ * Raamattu "TIEDELIITTEEN ULKOASU", omistajan iPad-kaappaus 1897
+ * Augsburg, sanatarkasti: *"Korjaa tuo yläreuna. Siinä on useampikin
+ * asetteluvirhe ja kuvateksti voisi olla lyhyempi, ja sitten voisi
+ * näkyä pidempi versio, kun sen kuvan avaa näkyviin. Myös jos sivua
+ * vierittää, niin silloin kuuluu turha klikkaus ääni ja ehkä teksti
+ * voisi olla yhdessä palstassa ja kuva hieman isompa. Myös alareunan
+ * linkit seuraaviin juttuihin vois jolla päälle hyppäävällä värillä.
+ * Ja myös tuo havainnekuva saisi mennä reunasta reunaan. Nyt siihen
+ * jää oudot palkit sivuille."*
+ *
+ * Kolme näistä ratkeaa täällä, loput tyyleissä ja datassa:
+ *
+ *   1. NIMIÖRIVI ON YKSI RIVI. Hampurilainen, nimiö + paikkarivi ja
+ *      kaiutin/sulku ovat SAMASSA ristikkorivissä kortin sisällä
+ *      (.tiedeliite-ylarivi), eivät kolmena päällekkäin asemoituna
+ *      palana. Kaksoisviiva on rivin alareunassa, ei tekstin päällä.
+ *      Rivi asuu kortissa eikä sivussa, joten se pysyy paikallaan
+ *      kun juttu vierii — ja sivunvaihdossa vaihtuu vain paikkarivin
+ *      teksti.
+ *   2. LYHYT KUVATEKSTI KORTISSA, PITKÄ AVATUSSA KUVASSA. Kortin
+ *      kuvateksti on `kuva.lyhyt` (yksi virke, ks.
+ *      js/linssit/keksinnot.js) ILMAN lähderiviä; suurennos näyttää
+ *      pitkän `selite`-tekstin ja lähteen ("Matkakirjan
+ *      havainnekuva"), koska se piirtyy avaaKohdeSuurennoksessa
+ *      kuvatiedon omista kentistä.
+ *   3. HAVAINNEKUVA REUNASTA REUNAAN. Yhden kuvan kehys piirretään
+ *      täällä (piirraIlmiokuva) eikä yhteisellä piirraNostonKuvalla:
+ *      yhteinen sääntö `.fokusnosto-kuva { width: fit-content }` ja
+ *      `object-fit: contain` jättivät kuvan sivuille vaaleat palkit
+ *      aina kun css/fokusnosto.css sattui latautumaan aikajanan
+ *      tyylien JÄLKEEN (kaksi yhtä tarkkaa valitsinta, järjestys
+ *      ratkaisi). Oma kehys ja oma kuvateksti tekevät myös kohdan 2
+ *      mahdolliseksi.
  *
  * Kaikki kuvat ovat samalla sivulla, kuten omistaja tilasi: generoitu
  * ja aito muotokuva rinnakkain (aito on todiste, generoitu on
@@ -54,7 +90,7 @@
  */
 
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus } from './ui-apurit.js';
-import { asetaNostonKuva, piirraNostonKuva } from './fokusnosto.js';
+import { asetaNostonKuva } from './fokusnosto.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import { avaaKohdeSuurennos, suljeKohdeSuurennos } from './fokuskohteet.js';
 import { sfx } from './sound.js';
@@ -97,6 +133,20 @@ function tiedeliiteLataaTyyli() {
 
 /** Onko kuvatiedolla lähde: Commons-tiedosto tai valmis ämpäriosoite. */
 const onKuva = (kuva) => Boolean(kuva?.tiedosto || kuva?.osoite);
+
+/**
+ * KORTIN KUVATEKSTI ON LYHYT (omistaja 8.9.2026: *"kuvateksti voisi
+ * olla lyhyempi, ja sitten voisi näkyä pidempi versio, kun sen kuvan
+ * avaa näkyviin"*).
+ *
+ * Datassa on kaksi pituutta: `lyhyt` on yhden virkkeen versio ja
+ * `selite` entinen pitkä. Kortti näyttää lyhyen, suurennos pitkän —
+ * ja kuvatiedot menevät suurennokseen sellaisenaan, joten pitkä
+ * teksti ja lähderivi tulevat sinne ilman eri sääntöä. Ilman
+ * `lyhyt`-kenttää (esim. aito Commons-kuva, jonka selite on jo
+ * yhden rivin mittainen) kortissa on entinen selite.
+ */
+export const lyhytKuvateksti = (kuva) => kuva?.lyhyt ?? kuva?.selite ?? '';
 
 /** Sivullinen pysäkki: keksijä, jolla on juttu — merkkipaalu ei ole. */
 export function onTiedeliitteenSivu(t) {
@@ -162,9 +212,9 @@ function piirraKasvot(ui, sailio, kuvat, henkilo, luokka = '') {
     // Ei title-vihjettä: hiiren tooltip jäi kuvan päälle (ks.
     // piirraTiedeliitteenSivu, vihjeiden siivous). Lukuohjelma saa
     // saman tiedon aria-labelista.
-    nappi.setAttribute('aria-label', `${kuva.selite ?? henkilo ?? 'Kuva'} — avaa suurena`);
+    nappi.setAttribute('aria-label', `${lyhytKuvateksti(kuva) || henkilo || 'Kuva'} — avaa suurena`);
     const img = document.createElement('img');
-    img.alt = kuva.selite ?? henkilo ?? '';
+    img.alt = lyhytKuvateksti(kuva) || henkilo || '';
     img.decoding = 'async';
     img.draggable = false;
     asetaNostonKuva(img, kuva, TIEDELIITE_KASVO_PX, () => { kehys.hidden = true; });
@@ -174,15 +224,54 @@ function piirraKasvot(ui, sailio, kuvat, henkilo, luokka = '') {
       avaaKohdeSuurennos(ui, kuva, () => nappi, ZOOM_AVAIN);
     });
     kehys.appendChild(nappi);
+    /*
+     * KORTISSA VAIN LYHYT TEKSTI, EI LÄHDERIVIÄ (omistaja 8.9.2026:
+     * *"Riittää myös, että havainnekuva mainitaan vasta kun kuvan
+     * klikkaa isommaksi siinä pidemmässä kuvatekstissä"*). Lähde ja
+     * pitkä selite kulkevat kuvatiedossa suurennokseen asti.
+     */
     const teksti = html('figcaption', 'fokusnosto-kuvateksti');
-    teksti.append(
-      html('span', 'fokusnosto-kuvaselite', kuva.selite ?? ''),
-      taytaLahderivi(html('span', 'fokusnosto-kuvalahde'), kuva.lahde ?? '', kuva),
-    );
+    teksti.appendChild(html('span', 'fokusnosto-kuvaselite', lyhytKuvateksti(kuva)));
     kehys.appendChild(teksti);
     rivi.appendChild(kehys);
   }
   sailio.appendChild(rivi);
+}
+
+/**
+ * YKSI HAVAINNEKUVA REUNASTA REUNAAN (omistaja 8.9.2026: *"tuo
+ * havainnekuva saisi mennä reunasta reunaan. Nyt siihen jää oudot
+ * palkit sivuille"*).
+ *
+ * Kuva piirretään täällä eikä yhteisellä piirraNostonKuvalla, koska
+ * yhteinen kehys on tarkoituksella kuvan levyinen (`width:
+ * fit-content`, `object-fit: contain`) — pystykuvan sääntö, joka
+ * jättää vaakakuvalle vaaleat palkit heti kun css/fokusnosto.css
+ * latautuu aikajanan tyylien jälkeen. Tiedeliitteen havainnekuva on
+ * lehden kuva: se täyttää palstan reunasta reunaan samassa
+ * 16/10-kehyksessä kuin karuselli, ja kuvateksti on lyhyt versio
+ * ilman lähderiviä (ks. piirraKasvot).
+ */
+function piirraIlmiokuva(ui, sailio, kuva, henkilo) {
+  const kehys = html('figure', 'fokusnosto-kuva tiedeliite-ilmiokuva');
+  const nappi = html('button', 'fokusnosto-kuvanappi');
+  nappi.type = 'button';
+  nappi.setAttribute('aria-label', `${lyhytKuvateksti(kuva) || henkilo || 'Kuva'} — avaa suurena`);
+  const img = document.createElement('img');
+  img.alt = lyhytKuvateksti(kuva) || henkilo || '';
+  img.decoding = 'async';
+  img.draggable = false;
+  asetaNostonKuva(img, kuva, TIEDELIITE_KUVA_PX, () => { kehys.hidden = true; });
+  nappi.appendChild(img);
+  nappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    avaaKohdeSuurennos(ui, kuva, () => nappi, ZOOM_AVAIN);
+  });
+  kehys.appendChild(nappi);
+  const teksti = html('figcaption', 'fokusnosto-kuvateksti');
+  teksti.appendChild(html('span', 'fokusnosto-kuvaselite', lyhytKuvateksti(kuva)));
+  kehys.appendChild(teksti);
+  sailio.appendChild(kehys);
 }
 
 /* ==================== HAVAINNEKUVIEN KARUSELLI ==================== */
@@ -231,8 +320,8 @@ export function karusellinPyyhkaisy(dx, kynnys = KARUSELLIN_KYNNYS) {
  * suurennoksen (avaaKohdeSuurennos) — paitsi jos sormi oikeasti
  * liikkui, jolloin kyse oli pyyhkäisystä eikä napautuksesta.
  *
- * YKSI KUVA ei ole karuselli: silloin sivu piirtyy entiseen tapaan
- * (piirraNostonKuva), eikä nuolia tai pisteitä synny lainkaan.
+ * YKSI KUVA ei ole karuselli: silloin sivu piirtyy yhtenä kehyksenä
+ * (piirraIlmiokuva), eikä nuolia tai pisteitä synny lainkaan.
  */
 function piirraIlmiokaruselli(ui, sailio, kuvat, henkilo) {
   const kehys = html('figure', 'fokusnosto-kuva tiedeliite-karuselli');
@@ -250,15 +339,15 @@ function piirraIlmiokaruselli(ui, sailio, kuvat, henkilo) {
   for (const kuva of kuvat) {
     const nappi = html('button', 'fokusnosto-kuvanappi tiedeliite-karuselli-ruutu');
     nappi.type = 'button';
-    nappi.setAttribute('aria-label', `${kuva.selite ?? henkilo ?? 'Kuva'} — avaa suurena`);
+    nappi.setAttribute('aria-label', `${lyhytKuvateksti(kuva) || henkilo || 'Kuva'} — avaa suurena`);
     const img = document.createElement('img');
-    img.alt = kuva.selite ?? henkilo ?? '';
+    img.alt = lyhytKuvateksti(kuva) || henkilo || '';
     img.decoding = 'async';
     img.draggable = false;
     /*
      * Rikkinäinen kuva jättää ruudun tyhjäksi paperiksi, ja vasta kun
      * KAIKKI kuvat pettävät, koko kehys katoaa — sama sääntö kuin
-     * yhdellä kuvalla (piirraNostonKuva): teksti kantaa sivun yksinkin.
+     * yhdellä kuvalla (piirraIlmiokuva): teksti kantaa sivun yksinkin.
      */
     asetaNostonKuva(img, kuva, TIEDELIITE_KUVA_PX, () => {
       img.hidden = true;
@@ -277,8 +366,7 @@ function piirraIlmiokaruselli(ui, sailio, kuvat, henkilo) {
 
   const teksti = html('figcaption', 'fokusnosto-kuvateksti tiedeliite-karuselli-teksti');
   const selite = html('span', 'fokusnosto-kuvaselite');
-  const lahde = html('span', 'fokusnosto-kuvalahde');
-  teksti.append(selite, lahde);
+  teksti.append(selite);
 
   const edellinen = html('button', 'tiedeliite-karuselli-nuoli edellinen', '‹');
   const seuraava = html('button', 'tiedeliite-karuselli-nuoli seuraava', '›');
@@ -311,11 +399,10 @@ function piirraIlmiokaruselli(ui, sailio, kuvat, henkilo) {
   /** Kuvateksti, lähderivi, nuolet, pisteet ja kohdistus kuvan mukaan. */
   const nayta = () => {
     const kuva = kuvat[kohdalla];
-    selite.textContent = kuva.selite ?? '';
-    // Lähderivi kulkee taytaLahderivin läpi, jotta "Matkakirjan
-    // havainnekuva" saa painettavan selitteensä joka kuvalla
-    // (js/havainnekuva.js) — myös karusellin toisella kuvalla.
-    taytaLahderivi(lahde, kuva.lahde ?? '', kuva);
+    // Kortissa lyhyt teksti ilman lähderiviä; pitkä selite ja
+    // "Matkakirjan havainnekuva" näkyvät avatussa kuvassa (omistaja
+    // 8.9.2026, ks. tiedoston alun lohko).
+    selite.textContent = lyhytKuvateksti(kuva);
     // Uusi kuvateksti tulee esiin pehmeästi: luokka irrotetaan ja
     // kiinnitetään uudestaan, jotta CSS-animaatio alkaa alusta.
     teksti.classList.remove('vaihtui');
@@ -430,9 +517,12 @@ function piirraIlmiokaruselli(ui, sailio, kuvat, henkilo) {
  * vierekkäin.
  */
 function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
-  sailio.appendChild(html('p', 'looppi-nimio', 'Tiedeliite'));
-  const paivays = [ajoitus(t), paikka(t)].filter(Boolean).join(' · ');
-  if (paivays) sailio.appendChild(html('p', 'looppi-paivays', paivays));
+  /*
+   * Nimiö ja paikkarivi EIVÄT ole enää sivulla vaan kortin omassa
+   * nimiörivissä (avaaTiedeliite, .tiedeliite-ylarivi): yläreunan
+   * kolme palaa kuuluvat samaan riviin, eikä masto saa vieriä pois
+   * jutun mukana (omistaja 8.9.2026, ks. tiedoston alun lohko).
+   */
   sailio.appendChild(html('h3', 'fokusnosto-kortti-otsikko looppi-otsikko', t.otsikko));
   if (t.henkilo) sailio.appendChild(html('p', 'tiedeliite-henkilo', t.henkilo));
   for (const kappale of jaaKappaleiksi(t.selite ?? '')) {
@@ -442,7 +532,12 @@ function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
   const generoidut = kasvot.filter((k) => k !== t.kuvaAito);
   const aito = kasvot.find((k) => k === t.kuvaAito) ?? null;
 
-  // 1. Leipäteksti ja pieni generoitu muotokuva oikealla.
+  /*
+   * 1. Leipäteksti YHTENÄ palstana ja generoitu muotokuva oikealla
+   * entistä isompana (omistaja 8.9.2026: *"ehkä teksti voisi olla
+   * yhdessä palstassa ja kuva hieman isompa"*). Mitat ovat tyyleissä
+   * (.tiedeliite-palsta, css/aikajana.css).
+   */
   const palsta = html('div', 'tiedeliite-palsta');
   const teksti = html('div', 'fokusnosto-teksti looppi-leipa tiedeliite-leipa');
   for (const kappale of jaaKappaleiksi(t.juttu ?? '')) {
@@ -459,17 +554,13 @@ function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
    * Molemmilla on sama 16/10-kehys ja sama reunus kuin henkilökuvalla
    * (omistaja 3.9.2026: *"havainnekuvalla voisi olla samanlaiset
    * kehykset kuin henkilökuvalla"*), joten sivun kuvat ovat samaa
-   * perhettä olipa niitä yksi tai kaksi.
+   * perhettä olipa niitä yksi tai kaksi — ja kumpikin täyttää palstan
+   * reunasta reunaan (omistaja 8.9.2026, ks. piirraIlmiokuva).
    */
   if (ilmiot.length > 1) {
     piirraIlmiokaruselli(ui, sailio, ilmiot, t.henkilo);
   } else {
-    for (const kuva of ilmiot) {
-      piirraNostonKuva(
-        ui, sailio, kuva, 'fokusnosto-kuva tiedeliite-ilmiokuva',
-        TIEDELIITE_KUVA_PX, ZOOM_AVAIN,
-      );
-    }
+    for (const kuva of ilmiot) piirraIlmiokuva(ui, sailio, kuva, t.henkilo);
   }
 
   // 3. Keksijä itse: henkilöteksti ja aito kuva oikealla.
@@ -493,7 +584,7 @@ function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
    * 1886): hiiren tooltip *"Katso kuva suurempana"* jäi leijumaan
    * kuvan päälle ja peitti sivua. Lehtisivulla kuva on kuva, ei
    * työkalu, joten title otetaan pois kaikilta kuvanapeilta — myös
-   * yhteiseltä piirraNostonKuvalta perityiltä; aria-label kertoo
+   * mahdollisilta yhteisiltä piirtäjiltä perityiltä; aria-label kertoo
    * saman apuvälineelle.
    */
   for (const nappi of sailio.querySelectorAll('.fokusnosto-kuvanappi[title]')) {
@@ -535,13 +626,13 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
   sulje.type = 'button';
   sulje.title = 'Sulje';
   sulje.setAttribute('aria-label', 'Sulje');
-  kortti.appendChild(sulje);
 
   /*
    * HAMPURILAINEN JA SISÄLLYS: sama mustepiirros kuin lehden nimiössä
-   * (css/styles.css .lehti-hampurilainen), tässä kortin vasemmassa
-   * yläkulmassa. Levy listaa kaikki keksijät vuosineen; nykyinen on
-   * lihavoitu. Napautus levyn ulkopuolelle sulkee levyn, ei korttia.
+   * (css/styles.css .lehti-hampurilainen), tässä kortin nimiörivin
+   * vasemmassa laidassa. Levy listaa kaikki keksijät vuosineen;
+   * nykyinen on lihavoitu. Napautus levyn ulkopuolelle sulkee levyn,
+   * ei korttia.
    */
   const hampurilainen = html('button', 'tiedeliite-hampurilainen');
   hampurilainen.type = 'button';
@@ -549,7 +640,26 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
   hampurilainen.setAttribute('aria-label', 'Sisällys: kaikki keksijät');
   hampurilainen.setAttribute('aria-expanded', 'false');
   hampurilainen.append(html('span'), html('span'), html('span'));
-  kortti.appendChild(hampurilainen);
+
+  /*
+   * NIMIÖRIVI YHTENÄ RIVINÄ (omistaja 8.9.2026: *"Korjaa tuo yläreuna.
+   * Siinä on useampikin asetteluvirhe"*). Kolme palaa samassa
+   * ristikkorivissä kortin sisällä: vasemmalla hampurilainen, keskellä
+   * nimiö ja sen alla paikkarivi, oikealla kaiutin ja sulku. Kaikki
+   * mahtuvat kortin sisään eikä mikään asetu toisen päälle; kaksoisviiva
+   * on rivin ALAREUNASSA (css .tiedeliite-ylarivi), ei tekstin päällä.
+   *
+   * Rivi on KORTISSA eikä sivussa, joten se pysyy paikallaan, kun juttu
+   * vierii — sivunvaihdossa vaihtuu vain paikkarivin teksti.
+   */
+  const ylarivi = html('div', 'tiedeliite-ylarivi');
+  const nimiot = html('div', 'tiedeliite-nimiot');
+  const paikkarivi = html('p', 'looppi-paivays tiedeliite-paikkarivi');
+  nimiot.append(html('p', 'looppi-nimio', 'Tiedeliite'), paikkarivi);
+  const ylanapit = html('div', 'tiedeliite-ylanapit');
+  ylanapit.appendChild(sulje);
+  ylarivi.append(hampurilainen, nimiot, ylanapit);
+  kortti.appendChild(ylarivi);
 
   const sisallys = html('nav', 'tiedeliite-sisallys');
   /*
@@ -653,6 +763,8 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
     if (!onTiedeliitteenSivu(t) || j === nykyinen) return;
     nykyinen = j;
     kortti.setAttribute('aria-label', `Tiedeliite: ${t.otsikko}`);
+    // Paikkarivi on kortin nimiörivissä: vain sen teksti vaihtuu.
+    paikkarivi.textContent = [ajoitus(t), paikka(t)].filter(Boolean).join(' · ');
     const uusi = html('div', 'tiedeliite-sivu');
     piirraTiedeliitteenSivu(ui, uusi, t, lahdeVara);
     /*
@@ -665,9 +777,15 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
       const kappale = html('p', 'tiedeliite-alkusanat', String(alkusanat));
       uusi.insertBefore(kappale, uusi.firstChild);
     }
-    // Kaiutin sivun nimiöriville (js/lukija.js lisaaLukijanappi):
-    // jokainen keksijäsivu on oma juttunsa ja saa oman luentansa.
-    lisaaLukijanappi(uusi, { otsikko: 'Kuuntele tiedeliite' });
+    /*
+     * Kaiutin kortin nimiöriville (js/lukija.js lisaaLukijanappi):
+     * jokainen keksijäsivu on oma juttunsa ja saa oman luentansa.
+     * Nimiö ei ole enää sivussa, joten rivi annetaan suoraan — ja
+     * vanha nappi puretaan ensin, jotta uusi sivu pysäyttää edellisen
+     * luennan kuten ennenkin (lisaaLukijanappi vertaa nappia).
+     */
+    ylanapit.querySelector('.lukija-nappi')?.remove();
+    lisaaLukijanappi(uusi, { otsikko: 'Kuuntele tiedeliite', rivi: ylanapit });
     const vanha = sivu;
     sivu = uusi;
     const { edellinen, seuraava } = tiedeliitteenNaapurit(tapahtumat, j);

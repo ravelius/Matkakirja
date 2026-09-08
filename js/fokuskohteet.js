@@ -111,6 +111,7 @@ import { karttavaloKarkisymboli, piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva, assetOsoite } from './media.js';
 import {
   html, jaaKappaleiksi, linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu,
+  suurennoksenMitat,
 } from './ui-apurit.js';
 import { piirraReaktiot } from './reaktiot.js';
 import { lisaaLukijanappi } from './lukija.js';
@@ -4989,13 +4990,21 @@ const KOHDE_ZOOM_MS = 320;
 /*
  * Omistajan palaute 25.8.2026 v1103:sta: "Kuvat isommalla" — katot
  * nostettu lähes koko ruutuun ja reunus puolitettu.
+ *
+ * KATOT SIIRTYIVÄT YHTEISEEN LINJAUKSEEN 8.9.2026 (js/ui-apurit.js
+ * suurennoksenMitat): kuvan suuntaa verrataan ruudun suuntaan, ja
+ * vastakkainen suunta täyttää lyhyemmän sivun, sama suunta jättää
+ * reunan näkyviin. Tänne jäi vain se, mikä on tämän kortin omaa:
+ * reunus, kapein sallittu mitta ja venymäkatto.
  */
-const KOHDE_ZOOM_LEVEIN = 0.99;
-const KOHDE_ZOOM_KORKEIN = 0.97;
-/** Vähimmäisreunus pikseleinä, ettei paperi puske ruudun reunaan asti. */
-const KOHDE_ZOOM_REUNA = 10;
-/** Kuvalle jäävä vähimmäisosuus ruudun korkeudesta, jos kuvateksti on pitkä. */
-const KOHDE_ZOOM_VAHIN_OSUUS = 0.28;
+/**
+ * Vähimmäisreunus pikseleinä, ettei paperi puske ruudun reunaan asti.
+ * Sisältää kerroksen oman pehmusteen (css .fokuskohde-zoom padding
+ * 0,5 rem molemmilla puolilla = 16 px): ilman sitä flex kutistaisi
+ * kortin kapealla puhelimella, kun kuva täyttää ruudun lyhyemmän
+ * sivun (yhteinen linjaus 8.9.2026).
+ */
+const KOHDE_ZOOM_REUNA = 16;
 /** Kehyksen kapein sallittu ulkomitta pikseleinä. */
 const KOHDE_ZOOM_KAPEIN = 140;
 /**
@@ -5169,7 +5178,7 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
      * (omistajan pelitestipalaute v1119: *"suurennos jää iPadilla
      * pieneksi keskelle ruutua … kuvat saisi näkyä isommalla"*).
      *
-     * Katot ovat jo lähes koko ruutu (KOHDE_ZOOM_LEVEIN 0,99), joten
+     * Katot ovat jo lähes koko ruutu (suurennoksenMitat), joten
      * vika ei ollut mitoituksessa vaan mitassa: WKWebView voi pitää
      * asetteluviewportin vanhassa kapeassa lukemassa, ja `innerWidth`
      * kertoo silloin kapeamman ruudun kuin laitteessa oikeasti on.
@@ -5201,22 +5210,35 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
      */
     const luonnollinen = isoValmis && img.naturalWidth
       ? img.naturalWidth * KOHDE_ZOOM_VENYMA : Infinity;
-    const enintaanW = Math.min(
-      leveys * KOHDE_ZOOM_LEVEIN, leveys - KOHDE_ZOOM_REUNA, luonnollinen,
-    );
-    const enintaanH = Math.min(korkeus * KOHDE_ZOOM_KORKEIN, korkeus - KOHDE_ZOOM_REUNA);
-    const vahinH = korkeus * KOHDE_ZOOM_VAHIN_OSUUS;
-    let ulko = Math.round(enintaanW);
+    /*
+     * KATOT TULEVAT YHTEISESTÄ LINJAUKSESTA (js/ui-apurit.js
+     * suurennoksenMitat, omistaja 8.9.2026): vastakkainen suunta
+     * täyttää ruudun lyhyemmän sivun, sama suunta jättää reunan
+     * näkyviin. Ennen tässä oli oma kaavansa ja fokusvirralla toinen,
+     * ja juuri se ero näkyi pelaajalle.
+     *
+     * Kierros mitataan yhä: kehyksen reunus ja kuvatekstipalkki vievät
+     * osan, ja teksti taittuu eri tavalla eri leveydellä.
+     */
+    const mitat = (vaakaVara, pystyVara) => suurennoksenMitat({
+      kuvaLeveys: suhde,
+      kuvaKorkeus: 1,
+      ruutuLeveys: leveys,
+      ruutuKorkeus: korkeus,
+      vaakaVara,
+      pystyVara,
+      enintaanLeveys: luonnollinen,
+      vahintaanLeveys: KOHDE_ZOOM_KAPEIN,
+    });
+    let ulko = mitat(KOHDE_ZOOM_REUNA, KOHDE_ZOOM_REUNA).leveys;
     for (let kierros = 0; kierros < 3; kierros += 1) {
       kehys.style.width = `${ulko}px`;
       const kuvaLeveys = img.offsetWidth;
       if (!kuvaLeveys) break;
       const vaakaTila = kehys.offsetWidth - kuvaLeveys;
       const pystyTila = kehys.offsetHeight - img.offsetHeight;
-      // Kuinka leveä kuva mahtuu pystysuunnassa jäljelle jäävään tilaan.
-      const korkeudesta = Math.max(enintaanH - pystyTila, vahinH) * suhde;
       const uusi = Math.round(
-        Math.max(Math.min(enintaanW - vaakaTila, korkeudesta), KOHDE_ZOOM_KAPEIN) + vaakaTila,
+        mitat(vaakaTila + KOHDE_ZOOM_REUNA, pystyTila + KOHDE_ZOOM_REUNA).leveys + vaakaTila,
       );
       if (Math.abs(uusi - ulko) <= 1) { ulko = uusi; break; }
       ulko = uusi;

@@ -138,7 +138,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1695';
+const APP_VERSION = '2026-08-09.1696';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -853,11 +853,61 @@ document.addEventListener('keydown', (event) => {
  */
 asennaValikonSulkuvartija();
 
-// Napsautusääni kaikille napeille; vastausvaihtoehdoilla on omat äänensä.
+/*
+ * NAPSAUTUSÄÄNI KAIKILLE NAPEILLE — MUTTA EI VIERITYKSESTÄ.
+ *
+ * Omistaja 8.9.2026 (Tiedeliite iPadilla, Raamattu "TIEDELIITTEEN
+ * ULKOASU", sanatarkasti): *"Myös jos sivua vierittää, niin silloin
+ * kuuluu turha klikkaus ääni"*.
+ *
+ * Syy oli tässä kuuntelijassa: ääni soi jokaisesta pointerdownista,
+ * joka osui nappiin. Korttien pinta on täynnä nappeja — lehtisivun
+ * kuvat ovat kuvanappeja (js/tiedeliite.js piirraKasvot,
+ * piirraIlmiokuva) — joten sormi laskeutui vierittäessä lähes aina
+ * napille ja jokainen veto alkoi klikkauksella.
+ *
+ * Sääntö on nyt osoitinlajikohtainen:
+ *
+ *   hiiri  → ääni heti painalluksesta, kuten ennenkin (hiirellä ei
+ *            vieritetä painamalla, joten väärää ääntä ei synny)
+ *   sormi  → ääni vasta kun kosketus osoittautuu NAPAUTUKSEKSI: sormi
+ *            nousee saman napin päältä liikuttuaan enintään
+ *            NAPAUTUKSEN_LIIKE pikseliä. Vieritys, pyyhkäisy ja
+ *            peruuntunut kosketus jäävät hiljaisiksi.
+ *
+ * Vastausvaihtoehdoilla on omat äänensä, joten ne ohitetaan yhä.
+ */
+const NAPAUTUKSEN_LIIKE = 10;
+let napinKosketus = null;
+
+function soitaNapinAani(nappi) {
+  if (nappi && !nappi.classList.contains('quiz-option')) sfx.play('click');
+}
+
 document.addEventListener('pointerdown', (event) => {
   const button = event.target.closest?.('button');
-  if (button && !button.classList.contains('quiz-option')) sfx.play('click');
+  napinKosketus = null;
+  if (!button) return;
+  if (event.pointerType === 'mouse') { soitaNapinAani(button); return; }
+  napinKosketus = {
+    id: event.pointerId, nappi: button, x: event.clientX, y: event.clientY,
+  };
 });
+/*
+ * Kaappausvaiheessa: sormen nosto voi jäädä matkalle, jos jokin kortti
+ * pysäyttää tapahtuman kuplinnan — ääni ei saa kadota siihen.
+ */
+document.addEventListener('pointerup', (event) => {
+  const kosketus = napinKosketus;
+  napinKosketus = null;
+  if (!kosketus || event.pointerId !== kosketus.id) return;
+  if (Math.abs(event.clientX - kosketus.x) > NAPAUTUKSEN_LIIKE
+    || Math.abs(event.clientY - kosketus.y) > NAPAUTUKSEN_LIIKE) return;
+  // Sormi nousi napin ulkopuolella: napautusta ei synny, ei siis ääntäkään.
+  if (!kosketus.nappi.contains?.(event.target)) return;
+  soitaNapinAani(kosketus.nappi);
+}, true);
+document.addEventListener('pointercancel', () => { napinKosketus = null; }, true);
 
 // --- päivitys ----------------------------------------------------------------
 
