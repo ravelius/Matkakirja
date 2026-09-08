@@ -130,7 +130,15 @@ export const PALLO_LAATTAVERSIO = '2026-09-07a';
  * 2026-09-07a-nostot), joten laattakerroksen versiovahti
  * (js/pallolaatat.js lepokerroksenKerrokset) päästää kerroksen piirtämään.
  */
-export const PALLO_LAATTATUNNISTE = 'e';
+/*
+ * TUNNISTE f, versio 2026-09-07a (8.9.2026 klo 08.30 Suomen aikaa, Macin
+ * pallopoltto ajo 34189623074): sama pohja kuin e, mutta viivataso
+ * 2026-09-08a-viivat ja nostotaso 2026-09-08a-nostot — Helsingin reitin
+ * pään korjaus (pallonKorjattuPoly generaattorissa) ja 16 uuden
+ * kaupungin nostot. Pyramidi on samoilla versioilla, joten versiovahti
+ * päästää lepokerroksen piirtämään; e-sarjalla se ei enää päässyt.
+ */
+export const PALLO_LAATTATUNNISTE = 'f';
 export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot-${PALLO_LAATTATUNNISTE}`;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
