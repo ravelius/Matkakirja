@@ -154,6 +154,12 @@ export const LIVIAN_VARATTU = '(varattu)';
  * 7.9.2026 kahdessa erässä. Muut kaupungit ovat hiljaisia kunnes niiden
  * tekstit on hyväksytty.
  *
+ * KOKO EUROOPPA TAULUSSA (Fablen erä 8.9.2026 ilta, omistaja katsoo
+ * koosteesta 9.9.2026). Lännen kaksikymmentä kaupunkia saivat vanhan
+ * `maadoitus`-kentän tilalle yhden kommenttikuplan, joten nekin ovat nyt
+ * taulussa — Venetsia kuudella kuplalla, muut yhdellä. Tampereen ja Riian
+ * huudahdus poistui, ja sen paikka jäi varatuksi kuten Prahassa.
+ *
  * KUUSI KEVYTTÄ KOHDETTA JA ATEENA MUKAAN (omistaja 8.9.2026). Kreeta,
  * Sisilia, Islanti, Alpit, Rovaniemi (tunnus `lappi`) ja Tromssa saivat
  * omat fokusvirtapakkinsa, kun vanha saapumistaulu arkistoitiin pois
@@ -190,9 +196,9 @@ export const LIVIAN_KAUPUNKILAHTEET = {
   kiova: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   odessa: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   helsinki: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
-  tampere: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
+  tampere: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   tallinna: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
-  riika: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
+  riika: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   vilna: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   /*
    * KEVYET PAKIT (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT): yksi
@@ -205,6 +211,39 @@ export const LIVIAN_KAUPUNKILAHTEET = {
   alpit: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   lappi: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   tromssa: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  /*
+   * LÄNNEN KAKSIKYMMENTÄ KAUPUNKIA (Fablen erä 8.9.2026 ilta, omistaja
+   * katsoo koosteesta 9.9.2026). Vanha `maadoitus` korvattiin yhdellä
+   * kommenttikuplalla kuten Ateenassa, ja kaksi ensimmäistä numeroa ovat
+   * varattuja, jotta kupla on numero 3 kuten muissakin kaupungeissa.
+   * Vanhat maadoitusäänitteet eivät kuulu näille numeroille: niitä ei ole
+   * koskaan generoitu, koska nämä kaupungit eivät olleet taulussa.
+   */
+  lontoo: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  dublin: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  edinburgh: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  pariisi: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  marseille: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  lissabon: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  madrid: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  barcelona: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  granada: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  sevilla: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  amsterdam: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  berliini: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  /*
+   * VENETSIA ON POIKKEUS (Fablen ehdotus omistajalle 8.9.2026): kuusi
+   * kuplaa yhden sijaan, joten rivi kertoo määrän — tiedostot ovat
+   * livia-venetsia-3…8.mp3.
+   */
+  venetsia: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 6]],
+  firenze: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  rooma: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  dubrovnik: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  tukholma: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  oslo: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  bergen: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  kobenhavn: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
 };
 
 /**
@@ -477,6 +516,12 @@ export function livianTiiviste(teksti) {
  * enää täsmää ja kupla on hiljainen — rivi kertoo generointityökalulle,
  * että äänite on muuttunut eikä uusi (tools/generoi-pulu.mjs
  * aanitteenTila).
+ *
+ * TAMPERE-2 JA RIIKA-2 ON POISTETTU (8.9.2026 ilta): niiden huudahdus
+ * poistui pakista kuten Prahassa, joten kuplaa ei enää ole eikä avain saa
+ * jäädä tauluun. Kommenttien tiivisteet jäävät, vaikka teksti muuttui:
+ * vanha äänite on yhä ämpärissä, ja rivi kertoo työkalulle, että repliikki
+ * on MUUTTUNUT eikä uusi (peli vaikenee tiivisteen erotessa).
  */
 export const LIVIAN_AANITETYT = {
   'avaus-1': '62c6bcbd',
@@ -528,11 +573,9 @@ export const LIVIAN_AANITETYT = {
   'kiova-3': '46b284b5',
   'odessa-3': '2678dada',
   'helsinki-3': '517dea08',
-  'tampere-2': 'fca8a7fe',
   'tampere-3': 'a9036aa1',
   'tallinna-2': '081ec104',
   'tallinna-3': 'ed338f86',
-  'riika-2': '3eae9de7',
   'riika-3': 'aa3997d2',
   'vilna-3': 'b5b7ea25',
   // Ihmisen matkan neljä välihuomiota generoitu 7.9.2026 illalla

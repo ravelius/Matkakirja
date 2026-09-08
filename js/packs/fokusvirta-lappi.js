@@ -32,23 +32,22 @@ export const FOKUSVIRTA_LAPPI = {
   matkakirja: {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Rovaniemi, syyskuussa 1873. Ensimmäinen ruska; yöllä revontulet.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Ajoimme päivän jokea ylös, ja jossain kohtaa metsä madaltui '
-      + 'tunturiksi. Kaupan ovella puhuttiin kolmea kieltä, ja kaikki '
-      + 'puhuivat kullasta. Ivalojoen kultakaivannoilla yö on niin valoisa, '
-      + 'ettei kukaan muista lopettaa — niin kertoi mies, joka oli tullut '
-      + 'sieltä tyhjin käsin ja aikoi palata. Poroja kulki tien yli kuin tie '
-      + 'ei kuuluisi kenellekään. Yöllä taivas syttyi vihreänä, eikä kukaan '
-      + 'paikallinen edes katsonut ylös.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 398 merkkiä (yläraja 400). */
+    teksti: 'Ajoimme päivän jokea ylös, ja metsä madaltui tunturiksi. Kaupan '
+      + 'ovella puhuttiin kolmea kieltä, ja kaikki puhuivat kullasta. '
+      + 'Ivalojoen kultakaivannoilla yö on niin valoisa, ettei kukaan muista '
+      + 'lopettaa. Niin kertoi mies, joka oli tullut sieltä tyhjin käsin ja '
+      + 'aikoi palata. Poroja kulki tien yli kuin tie ei kuuluisi kenellekään. '
+      + 'Yöllä taivas syttyi vihreänä, eikä kukaan paikallinen katsonut ylös.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain neljä tunnetagia. */
-    luenta: '[curious] Ajoimme päivän jokea ylös, ja jossain kohtaa metsä '
-      + 'madaltui tunturiksi. Kaupan ovella puhuttiin kolmea kieltä, ja '
-      + 'kaikki puhuivat kullasta. [excited] Ivalojoen kultakaivannoilla yö '
-      + 'on niin valoisa, ettei kukaan muista lopettaa — niin kertoi mies, '
-      + 'joka oli tullut sieltä tyhjin käsin ja aikoi palata. [softly] '
-      + 'Poroja kulki tien yli kuin tie ei kuuluisi kenellekään. [whispers] '
-      + 'Yöllä taivas syttyi vihreänä, eikä kukaan paikallinen edes katsonut '
-      + 'ylös.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Ajoimme päivän jokea ylös, ja metsä madaltui '
+      + 'tunturiksi. Kaupan ovella puhuttiin kolmea kieltä, ja kaikki puhuivat '
+      + 'kullasta. Ivalojoen kultakaivannoilla yö on niin valoisa, ettei '
+      + 'kukaan muista lopettaa. Niin kertoi mies, joka oli tullut sieltä '
+      + 'tyhjin käsin ja aikoi palata. Poroja kulki tien yli kuin tie ei '
+      + 'kuuluisi kenellekään. [softly] Yöllä taivas syttyi vihreänä, eikä '
+      + 'kukaan paikallinen katsonut ylös.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lappi.mp3',
   },
 

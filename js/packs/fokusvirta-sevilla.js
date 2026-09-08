@@ -167,63 +167,36 @@ export const FOKUSVIRTA_SEVILLA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Sevilla, huhtikuussa 1873. Appelsiinipuut kukassa; ilma raskas tuoksusta.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Guadalquivir tuo meren hajun kolmekymmentä peninkulmaa '
-      + 'sisämaahan, ja sen rannalla seisoo kultainen torni, jonka nimi '
-      + 'on suurempi kuin sen kunto. Tupakkatehtaassa työskentelee '
-      + 'tuhansia naisia — heidän sormensa kääntävät lehtiä nopeammin '
-      + 'kuin pankkiirin sormet seteleitä. Espanja on tänä keväänä '
-      + 'tasavalta, eikä kukaan osaa sanoa, kuinka kauan. Appelsiinipuut '
-      + 'kukkivat siitä huolimatta.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 390 merkkiä (yläraja 400). */
+    teksti: 'Joki tuo meren hajun kauas sisämaahan, ja sen rannalla seisoo '
+      + 'kultainen torni, jonka nimi on suurempi kuin sen kunto. '
+      + 'Tupakkatehtaassa työskentelee tuhansia naisia, ja heidän sormensa '
+      + 'kääntävät lehtiä nopeammin kuin pankkiirin sormet seteleitä. Espanja '
+      + 'on tänä keväänä tasavalta, eikä kukaan osaa sanoa, kuinka kauan. '
+      + 'Appelsiinipuut kukkivat siitä huolimatta, ja tuoksu seuraa hattuun '
+      + 'asti.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Guadalquivir tuo meren hajun kolmekymmentä '
-      + 'peninkulmaa sisämaahan, ja sen rannalla seisoo kultainen torni, '
-      + 'jonka nimi on suurempi kuin sen kunto. [excited] '
-      + 'Tupakkatehtaassa työskentelee tuhansia naisia — heidän sormensa '
-      + 'kääntävät lehtiä nopeammin kuin pankkiirin sormet seteleitä. '
-      + '[softly] Espanja on tänä keväänä tasavalta, eikä kukaan osaa '
-      + 'sanoa, kuinka kauan. [whispers] Appelsiinipuut kukkivat siitä '
-      + 'huolimatta.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Joki tuo meren hajun kauas sisämaahan, ja sen rannalla '
+      + 'seisoo kultainen torni, jonka nimi on suurempi kuin sen kunto. '
+      + 'Tupakkatehtaassa työskentelee tuhansia naisia, ja heidän sormensa '
+      + 'kääntävät lehtiä nopeammin kuin pankkiirin sormet seteleitä. Espanja '
+      + 'on tänä keväänä tasavalta, eikä kukaan osaa sanoa, kuinka kauan. '
+      + '[softly] Appelsiinipuut kukkivat siitä huolimatta, ja tuoksu seuraa '
+      + 'hattuun asti.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sevilla.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa
-     * sen jälkeen.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1 PAINOPISTE
-     * REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja lopussa
-     * ("mut"), keskellä sanat ovat auki; pronominit kokonaisina; ei
-     * huutomerkkejä.
-     *
-     * MIKSI TEHDAS EIKÄ TASAVALTA: Madridin Livia laskee jo tasavallan
-     * neljä johtajaa yhdentoista kuukauden sisään (js/packs/
-     * fokusvirta-madrid.js), ja sama havainto kahdessa saman maan
-     * kaupungissa olisi kaava. Tämä maadoitus vastaa siihen isoisän
-     * lauseeseen, jota Madrid ei koske: naisten sormiin.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki pelin omasta jo hyväksytystä
-     * Sevilla-aineistosta (js/packs/kulttuuri-kategoriat.js, nosto
-     * "Tehdas, jossa vauvat nukkuivat työpöytien vieressä" ja sen
-     * selite). (1) Rakennus oli Espanjan toiseksi suurin El Escorialin
-     * jälkeen. (2) Sikarintyö siirtyi naisille vuoden 1811 sulkemisen
-     * jälkeen, ja 1880-luvun huipussaan siellä työskenteli noin 6 000
-     * naista. (3) Talossa toimii nykyään Sevillan yliopisto.
-     */
-    maadoitus: 'Kääk. Isoisäsi katsoi oikeaan suuntaan: se tehdas oli '
-      + 'niin iso, että Espanjassa vain Escorial voitti sen, ja '
-      + 'sikarintyö oli siellä kokonaan naisten. Parhaimmillaan '
-      + '1880-luvulla samassa talossa käänsi lehtiä noin kuusituhatta '
-      + 'naista yhtä aikaa. Nyt siinä on yliopisto, eli riveissä '
-      + 'istutaan yhä — mut nykyään kaikki katsovat samaan suuntaan.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Tupakkatehdas on nyt yliopisto. Appelsiinipuut kukkivat yhä joka kadulla, ja tuoksu on sama.',
+    ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *

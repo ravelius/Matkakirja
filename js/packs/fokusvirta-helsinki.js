@@ -106,17 +106,23 @@ export const FOKUSVIRTA_HELSINKI = {
      * havaintopaikkaa — laivan kannelta katsottu kaupunki ja satama,
      * jossa tervaa lastataan.
      */
-    paikkarivi: 'Helsingfors, kesällä 1873. Tulin mereltä, ja kaupunki '
-      + 'näytti isommalta kuin se maalta katsottuna on.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Helsingfors näyttää mereltä suuremmalta kuin maalta, ja '
+    paikkarivi: 'Helsingfors, heinäkuussa 1873. Kirkasta; mereltä käy viileä '
+      + 'tuuli.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 395 merkkiä (yläraja 400). */
+    teksti: 'Kaupunki näyttää mereltä suuremmalta kuin maalta, ja valkoinen '
+      + 'kirkko seisoo kukkulallaan kuin keisarin allekirjoitus. Satamassa '
+      + 'tuoksui terva, jota lastattiin laivoihin kuin kultaa, ja tavallaan se '
+      + 'sitä onkin. Torilla kauppa käy ruotsiksi, suomeksi ja venäjäksi, ja '
+      + 'hinta vaihtuu kielen mukaan. Kylpylän puistossa soitti torvikunta, ja '
+      + 'kesävieraat Pietarista kävelivät kuin omistaisivat rannan.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kaupunki näyttää mereltä suuremmalta kuin maalta, ja '
       + 'valkoinen kirkko seisoo kukkulallaan kuin keisarin allekirjoitus. '
-      + 'Satamassa tuoksui terva — sitä lastattiin laivoihin kuin kultaa, '
-      + 'ja tavallaan se sitä olikin.',
-    luenta: '[curious] Helsingfors näyttää mereltä suuremmalta kuin maalta, '
-      + 'ja valkoinen kirkko seisoo kukkulallaan kuin keisarin '
-      + 'allekirjoitus. [softly] Satamassa tuoksui terva — sitä lastattiin '
-      + 'laivoihin kuin kultaa, [whispers] ja tavallaan se sitä olikin.',
+      + 'Satamassa tuoksui terva, jota lastattiin laivoihin kuin kultaa, ja '
+      + 'tavallaan se sitä onkin. Torilla kauppa käy ruotsiksi, suomeksi ja '
+      + 'venäjäksi, ja hinta vaihtuu kielen mukaan. [softly] Kylpylän '
+      + 'puistossa soitti torvikunta, ja kesävieraat Pietarista kävelivät kuin '
+      + 'omistaisivat rannan.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-helsinki.mp3',
   },
 

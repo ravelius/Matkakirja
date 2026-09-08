@@ -129,51 +129,30 @@ export const FOKUSVIRTA_LONTOO = {
      */
     paikkarivi: 'Lontoo, joulukuussa 1873. Sumu niin sakea, ettei kadun '
       + 'toista puolta erota.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Lontoossa sumu syö äänet ja kaupunki puhuu silti. Kirjasin '
-      + 'ensimmäiselle sivulle säännön, jonka annan sinullekin: älä usko '
-      + 'ketään, joka väittää, ettei aarteita ole. Piirsin kulmaan pienen '
-      + 'ristin liidulla — merkiksi itselleni, että tarkoitan sitä.',
-    luenta: '[curious] Lontoossa sumu syö äänet ja kaupunki puhuu silti. '
-      + '[softly] Kirjasin ensimmäiselle sivulle säännön, jonka annan '
-      + 'sinullekin: älä usko ketään, joka väittää, ettei aarteita ole. '
-      + '[whispers] Piirsin kulmaan pienen ristin liidulla — merkiksi '
-      + 'itselleni, että tarkoitan sitä.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 399 merkkiä (yläraja 400). */
+    teksti: 'Sumu on niin sakeaa, että karja kuoli näyttelyssä Islingtonissa, '
+      + 'ja pojat myyvät kadulla tietä soihtu kädessä. Se maistuu hiileltä. '
+      + 'Ajoin maan alla junalla. Vaunu oli täynnä savua ja herroja, jotka '
+      + 'lukivat lehteä kuin mitään ei tapahtuisi. Kirjoitin ensimmäiselle '
+      + 'sivulle säännön: älä usko ketään, joka väittää, ettei aarteita ole. '
+      + 'Piirsin viereen ristin liidulla, jotta muistan tarkoittaneeni sitä.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Sumu on niin sakeaa, että karja kuoli näyttelyssä '
+      + 'Islingtonissa, ja pojat myyvät kadulla tietä soihtu kädessä. Se '
+      + 'maistuu hiileltä. Ajoin maan alla junalla. Vaunu oli täynnä savua ja '
+      + 'herroja, jotka lukivat lehteä kuin mitään ei tapahtuisi. Kirjoitin '
+      + 'ensimmäiselle sivulle säännön: älä usko ketään, joka väittää, ettei '
+      + 'aarteita ole. [softly] Piirsin viereen ristin liidulla, jotta muistan '
+      + 'tarkoittaneeni sitä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lontoo.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS — VÄLITTÄJÄOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä ei ole synkkä vaan luja:
-     * isoisä antaa säännön ja vannoo sen liidulla. Livia ei siis
-     * pehmennä vaan asettuu säännön puolelle — ja ottaa aikaeron
-     * hoitaakseen faktalla.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki tarkistettavia. (1) Lontoon
-     * sumu oli kivihiilen savua (js/packs/maa-kategoriat.js, GBR/
-     * luonto, "Sumu, joka ei ollutkaan sumua"). (2) Pahin savusumu
-     * alkoi 5.12.1952 ja neljä vuotta myöhemmin säädettiin laki, jonka
-     * nojalla kaupunginosia voitiin määrätä savuttomiksi (sama nosto).
-     * (3) Joulukuusta 1873 on yli sataviisikymmentä vuotta.
-     *
-     * ISOISÄ OSOITTAUTUU OIKEAKSI, ja se on tässä tarkoitus:
-     * tests/fokusvirta.test.mjs vaatii, että ainakin yhdessä
-     * kaupungissa Livia myöntää isoisän olleen oikeassa — Lontoo on
-     * paras paikka siihen, koska merkintä on nimenomaan uskomisesta.
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
-     * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
-     */
-    maadoitus: 'Kääk. Sumu, joka syö äänet — meidän suku ei sellaisesta '
-      + 'pidä, kirjettä ei kanneta korva edellä. Ja isoisäsi oli '
-      + 'oikeassa siinä, mitä hän nenällään haistoi: se ei ollut säätä '
-      + 'vaan kivihiilen savua. Siitä joulukuusta on yli '
-      + 'sataviisikymmentä vuotta. Pahin savusumu tuli vasta 1952, ja '
-      + 'neljä vuotta myöhemmin säädettiin laki, jolla kaupunginosia '
-      + 'voitiin määrätä savuttomiksi. Siitä liiturististä ei ole '
-      + 'jäljellä mitään. Mut sen säännön minä kyllä pidän.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Isoisäsi oli oikeassa, sumu oli savua, ja se on poissa. Se maanalainen juna kulkee yhä täynnä.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Westminsterin palatsi).
      * Faktat ovat lehden oman avauskuvan selitteestä (js/packs/

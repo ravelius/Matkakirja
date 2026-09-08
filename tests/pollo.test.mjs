@@ -1605,7 +1605,10 @@ test('kuplapinon katto on kahdeksan tekstiriviä', () => {
  * ja kelpaa siksi jaon mitaksi.
  */
 test('puheenvuoro jakautuu osiin sanoja hukkaamatta', () => {
-  const teksti = FOKUSVIRTA_LONTOO.pollo.maadoitus;
+  // Lontoon maadoitus korvattiin kommenttikuplalla 8.9.2026 illalla, joten
+  // jaon mittana on nyt vaiheen huomio `pollo.teksti` — se on yhä yksi
+  // pitkä merkkijono, jonka peli pilkkoo ruudulla.
+  const teksti = FOKUSVIRTA_LONTOO.pollo.teksti;
   const osat = jaaPuheenvuoroksi(teksti);
   assert.ok(osat.length >= 2, `osia ${osat.length}`);
   assert.equal(osat.join(' '), teksti, 'sanat muuttuivat jaossa');

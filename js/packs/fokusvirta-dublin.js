@@ -186,13 +186,14 @@ export const FOKUSVIRTA_DUBLIN = {
   matkakirja: {
     /* KAANON (Fable 29.8.2026) — paikkarivi sellaisenaan. */
     paikkarivi: 'Dublin, syyskuussa 1873. Tihkusadetta; kadut kiiltävät.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Liffeyn rannalla tuoksuu mallas: panimo on täällä kokonainen '
-      + 'kaupunginosa, ja sen tummaa juomaa lastataan proomuihin kuin '
-      + 'kivihiiltä. Collegen kirjastossa näytettiin minulle kirjaa, jonka '
-      + 'munkit maalasivat tuhat vuotta sitten — sen sivuilla kiemurtelevat '
-      + 'kuviot ovat hienommat kuin yhdenkään kultasepän työ. Vahtimestari '
-      + 'käänsi sivua valkoisin käsinein ja katsoi minua kuin varasta.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 391 merkkiä (yläraja 400). */
+    teksti: 'Liffeyn rannalla tuoksuu mallas. Panimo on kokonainen '
+      + 'kaupunginosa, ja sen tummaa olutta lastataan proomuihin kuin '
+      + 'kivihiiltä. Collegen kirjastossa näytettiin kirjaa, jonka munkit '
+      + 'maalasivat tuhat vuotta sitten. Sen kuviot ovat hienommat kuin '
+      + 'yhdenkään kultasepän työ. Vahtimestari käänsi sivua valkoisin '
+      + 'käsinein ja katsoi minua kuin varasta. Kadulla lapset pyysivät pennin '
+      + 'ja saivat kaksi.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md
      * luku 7). Vain tunnetagit on lisätty, neljä kappaletta, alku ja
@@ -200,47 +201,23 @@ export const FOKUSVIRTA_DUBLIN = {
      * Viimeinen tagi on kohdassa, jossa merkintä kääntyy epäilyksi —
      * juuri se lause kantaa koko kaupungin sävyn.
      */
-    luenta: '[curious] Liffeyn rannalla tuoksuu mallas: panimo on täällä '
-      + 'kokonainen kaupunginosa, ja sen tummaa juomaa lastataan proomuihin '
-      + 'kuin kivihiiltä. [warmly] Collegen kirjastossa näytettiin minulle '
-      + 'kirjaa, jonka munkit maalasivat tuhat vuotta sitten — sen sivuilla '
-      + 'kiemurtelevat kuviot ovat hienommat kuin yhdenkään kultasepän työ. '
-      + '[softly] Vahtimestari käänsi sivua valkoisin käsinein [whispers] ja '
-      + 'katsoi minua kuin varasta.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Liffeyn rannalla tuoksuu mallas. Panimo on kokonainen '
+      + 'kaupunginosa, ja sen tummaa olutta lastataan proomuihin kuin '
+      + 'kivihiiltä. Collegen kirjastossa näytettiin kirjaa, jonka munkit '
+      + 'maalasivat tuhat vuotta sitten. Sen kuviot ovat hienommat kuin '
+      + 'yhdenkään kultasepän työ. Vahtimestari käänsi sivua valkoisin '
+      + 'käsinein ja katsoi minua kuin varasta. [softly] Kadulla lapset '
+      + 'pyysivät pennin ja saivat kaksi.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-dublin.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * KAANON (Fable) — Livian kuplateksti sellaisenaan. Aallon 4A
-     * kaanonissa Livialle on kirjoitettu YKSI teksti, joka tekee sekä
-     * maadoituksen että huomion: se vastaa isoisän merkintään kohta
-     * kohdalta (panimo, kirja, vahtimestari) ja kääntyy lopussa
-     * eteenpäin.
-     *
-     * INTEGROINNISSA TEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
-     * Kortti lukee kaksi kenttää (js/fokusvirta.js piirraPollo):
-     * `maadoitus` piirtyy kuplan ensimmäiseksi kappaleeksi heti isoisän
-     * merkinnän perään ja `teksti` sen jälkeen. Lisäksi
-     * tests/fokusvirta.test.mjs vaatii jokaiselta fokuskaupungilta oman
-     * maadoituksen, joka ei ole sama merkkijono kuin huomio. Jako
-     * kulkee VIRKKEEN RAJAA pitkin (Edinburghin kaava): ensimmäinen
-     * virke kuittaa merkinnän panimon ja kirjan, jälkimmäinen ottaa
-     * vahtimestarit ja vie eteenpäin. Yhtäkään sanaa, välimerkkiä tai
-     * järjestystä ei ole muutettu — peräkkäin luettuna teksti on
-     * sanasta sanaan Fablen kaanonteksti.
-     *
-     * VIIMEINEN LAUSE ON AARTEEN LUPAUS EIKÄ SEN PALJASTUS. Livia
-     * sanoo, että vartijan epäluulo ei ole tässä maassa väärä vaisto —
-     * muttei sano mitään siitä, mitä Dublinin linnasta vietiin eikä
-     * milloin. Vastaus on aarteen omassa faktarivissä
-     * (js/packs/paikallisaarteet.js, IRL isoAarre), ja se on tarkoitus:
-     * lupaus ensin, palkinto vasta löydön yhteydessä.
-     */
-    maadoitus: 'Dublinissa se panimo toimii edelleen, ja se tuhatvuotinen '
-      + 'kirja on edelleen näytillä — sivu käännetään nykyään harvemmin kuin '
-      + 'isoisäsi aikaan, se kuluu..',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Panimo tekee yhä olutta samassa paikassa. Ja se kirja on yhä kirjastossa, lasin alla.',
+    ],
     teksti: 'Vahtimestarit katsovat kaikkia edelleen kuin varkaita, ja kohta '
       + 'ymmärrät miksi se ei ole ihan väärä vaisto tässä maassa..',
     /*

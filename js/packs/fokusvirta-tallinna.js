@@ -106,17 +106,21 @@ export const FOKUSVIRTA_TALLINNA = {
      * Tallinna–Pietari-rata avattiin 1870, kolme vuotta ennen isoisän
      * käyntiä (päätoimittajan historia-ankkuri tähän erään).
      */
-    paikkarivi: 'Reval, syksyllä 1873. Satamasta asemalle on lyhyempi matka '
-      + 'kuin kolme vuotta sitten uskoi kukaan.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Revalissa laiva purki lastinsa aamulla, ja juna vei sen '
-      + 'Pietariin ennen iltaa — uusi rata on tehnyt vanhasta '
-      + 'hansakaupungista taas portin. Yläkaupungin muurit muistavat '
-      + 'vanhemmat kauppiaat.',
-    luenta: '[curious] Revalissa laiva purki lastinsa aamulla, ja juna vei '
-      + 'sen Pietariin ennen iltaa — [softly] uusi rata on tehnyt vanhasta '
-      + 'hansakaupungista taas portin. [whispers] Yläkaupungin muurit '
-      + 'muistavat vanhemmat kauppiaat.',
+    paikkarivi: 'Reval, syyskuussa 1873. Tuulista; satamassa lokit huutavat.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 382 merkkiä (yläraja 400). */
+    teksti: 'Laiva purki lastinsa aamulla, ja juna vei sen Pietariin ennen '
+      + 'iltaa. Uusi rata on tehnyt vanhasta hansakaupungista taas portin. '
+      + 'Yläkaupungissa asuvat saksalaiset paronit ja alhaalla kaikki muut, ja '
+      + 'portti niiden välissä suljetaan yöksi kuin ennenkin. Torin apteekki '
+      + 'on ollut samassa talossa niin kauan, ettei kukaan muista alkua. Ostin '
+      + 'sieltä marsipaania, joka on kuulemma lääkettä.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Laiva purki lastinsa aamulla, ja juna vei sen Pietariin '
+      + 'ennen iltaa. Uusi rata on tehnyt vanhasta hansakaupungista taas '
+      + 'portin. Yläkaupungissa asuvat saksalaiset paronit ja alhaalla kaikki '
+      + 'muut, ja portti niiden välissä suljetaan yöksi kuin ennenkin. Torin '
+      + 'apteekki on ollut samassa talossa niin kauan, ettei kukaan muista '
+      + 'alkua. [softly] Ostin sieltä marsipaania, joka on kuulemma lääkettä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tallinna.mp3',
   },
 

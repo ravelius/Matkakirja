@@ -136,6 +136,26 @@ import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
 import { FOKUSVIRTA_VARSOVA } from '../js/packs/fokusvirta-varsova.js';
 import { FOKUSVIRTA_VILNA } from '../js/packs/fokusvirta-vilna.js';
 import { FOKUSVIRTA_WIEN } from '../js/packs/fokusvirta-wien.js';
+import { FOKUSVIRTA_AMSTERDAM } from '../js/packs/fokusvirta-amsterdam.js';
+import { FOKUSVIRTA_BARCELONA } from '../js/packs/fokusvirta-barcelona.js';
+import { FOKUSVIRTA_BERGEN } from '../js/packs/fokusvirta-bergen.js';
+import { FOKUSVIRTA_BERLIINI } from '../js/packs/fokusvirta-berliini.js';
+import { FOKUSVIRTA_DUBLIN } from '../js/packs/fokusvirta-dublin.js';
+import { FOKUSVIRTA_DUBROVNIK } from '../js/packs/fokusvirta-dubrovnik.js';
+import { FOKUSVIRTA_EDINBURGH } from '../js/packs/fokusvirta-edinburgh.js';
+import { FOKUSVIRTA_FIRENZE } from '../js/packs/fokusvirta-firenze.js';
+import { FOKUSVIRTA_GRANADA } from '../js/packs/fokusvirta-granada.js';
+import { FOKUSVIRTA_KOBENHAVN } from '../js/packs/fokusvirta-kobenhavn.js';
+import { FOKUSVIRTA_LISSABON } from '../js/packs/fokusvirta-lissabon.js';
+import { FOKUSVIRTA_LONTOO } from '../js/packs/fokusvirta-lontoo.js';
+import { FOKUSVIRTA_MADRID } from '../js/packs/fokusvirta-madrid.js';
+import { FOKUSVIRTA_MARSEILLE } from '../js/packs/fokusvirta-marseille.js';
+import { FOKUSVIRTA_OSLO } from '../js/packs/fokusvirta-oslo.js';
+import { FOKUSVIRTA_PARIISI } from '../js/packs/fokusvirta-pariisi.js';
+import { FOKUSVIRTA_ROOMA } from '../js/packs/fokusvirta-rooma.js';
+import { FOKUSVIRTA_SEVILLA } from '../js/packs/fokusvirta-sevilla.js';
+import { FOKUSVIRTA_TUKHOLMA } from '../js/packs/fokusvirta-tukholma.js';
+import { FOKUSVIRTA_VENETSIA } from '../js/packs/fokusvirta-venetsia.js';
 import { leikkaaHiljaisuusSuodatin } from './generoi-tehosteet.mjs';
 import { julkinenJuuri, tulkitseEbur128, tulkitseLoudnorm } from './generoi-siirtymamusiikki.mjs';
 
@@ -371,11 +391,9 @@ export const TAGIT = {
   'kiova-3': { alku: '[brightly]' },
   'odessa-3': { alku: '[brightly]' },
   'helsinki-3': { alku: '[brightly]' },
-  'tampere-2': { alku: '[squawks]' },
   'tampere-3': { alku: '[brightly]' },
   'tallinna-2': { alku: '[squawks]' },
   'tallinna-3': { alku: '[brightly]' },
-  'riika-2': { alku: '[squawks]' },
   'riika-3': { alku: '[brightly]' },
   'vilna-3': { alku: '[brightly]' },
   // Teksti muuttui 8.9.2026: alusta poistui toistuva "Kääk.", joten
@@ -405,6 +423,37 @@ export const TAGIT = {
   'alpit-3': { alku: '[brightly]' },
   'lappi-3': { alku: '[brightly]' },
   'tromssa-3': { alku: '[brightly]' },
+  /*
+   * LÄNNEN KAKSIKYMMENTÄ KAUPUNKIA (Fablen erä 8.9.2026 ilta). Yksi kupla
+   * kussakin numerolla 3 — paitsi Venetsiassa, jossa kuplia on kuusi
+   * (numerot 3…8, omistajan ehdotus). Sama reipas alkutagi kuin muilla
+   * kommenteilla; kaikutagia ei ole yhdessäkään.
+   */
+  'lontoo-3': { alku: '[brightly]' },
+  'dublin-3': { alku: '[brightly]' },
+  'edinburgh-3': { alku: '[brightly]' },
+  'pariisi-3': { alku: '[brightly]' },
+  'marseille-3': { alku: '[brightly]' },
+  'lissabon-3': { alku: '[brightly]' },
+  'madrid-3': { alku: '[brightly]' },
+  'barcelona-3': { alku: '[brightly]' },
+  'granada-3': { alku: '[brightly]' },
+  'sevilla-3': { alku: '[brightly]' },
+  'amsterdam-3': { alku: '[brightly]' },
+  'berliini-3': { alku: '[brightly]' },
+  'venetsia-3': { alku: '[brightly]' },
+  'venetsia-4': { alku: '[brightly]' },
+  'venetsia-5': { alku: '[brightly]' },
+  'venetsia-6': { alku: '[brightly]' },
+  'venetsia-7': { alku: '[brightly]' },
+  'venetsia-8': { alku: '[brightly]' },
+  'firenze-3': { alku: '[brightly]' },
+  'rooma-3': { alku: '[brightly]' },
+  'dubrovnik-3': { alku: '[brightly]' },
+  'tukholma-3': { alku: '[brightly]' },
+  'oslo-3': { alku: '[brightly]' },
+  'bergen-3': { alku: '[brightly]' },
+  'kobenhavn-3': { alku: '[brightly]' },
 };
 
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
@@ -477,6 +526,28 @@ const KAUPUNKIEN_PAKKAUKSET = {
   alpit: FOKUSVIRTA_ALPIT,
   lappi: FOKUSVIRTA_LAPPI,
   tromssa: FOKUSVIRTA_TROMSSA,
+  // Lännen kaksikymmentä kaupunkia (Fablen erä 8.9.2026 ilta): vanha
+  // maadoitus korvattiin yhdellä kommenttikuplalla, Venetsiassa kuudella.
+  lontoo: FOKUSVIRTA_LONTOO,
+  dublin: FOKUSVIRTA_DUBLIN,
+  edinburgh: FOKUSVIRTA_EDINBURGH,
+  pariisi: FOKUSVIRTA_PARIISI,
+  marseille: FOKUSVIRTA_MARSEILLE,
+  lissabon: FOKUSVIRTA_LISSABON,
+  madrid: FOKUSVIRTA_MADRID,
+  barcelona: FOKUSVIRTA_BARCELONA,
+  granada: FOKUSVIRTA_GRANADA,
+  sevilla: FOKUSVIRTA_SEVILLA,
+  amsterdam: FOKUSVIRTA_AMSTERDAM,
+  berliini: FOKUSVIRTA_BERLIINI,
+  venetsia: FOKUSVIRTA_VENETSIA,
+  firenze: FOKUSVIRTA_FIRENZE,
+  rooma: FOKUSVIRTA_ROOMA,
+  dubrovnik: FOKUSVIRTA_DUBROVNIK,
+  tukholma: FOKUSVIRTA_TUKHOLMA,
+  oslo: FOKUSVIRTA_OSLO,
+  bergen: FOKUSVIRTA_BERGEN,
+  kobenhavn: FOKUSVIRTA_KOBENHAVN,
 };
 
 /**

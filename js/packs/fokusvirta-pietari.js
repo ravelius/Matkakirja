@@ -195,27 +195,26 @@ export const FOKUSVIRTA_PIETARI = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Pietari, kesäkuussa 1873. Valkeat yöt; ei tule pimeää.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Keisari rakennutti kaupunkinsa suolle ja käski sen olla '
-      + 'suora, ja suo totteli — kadut ovat leveitä kuin joet ja joki '
-      + 'leveä kuin meri. Kesäyönä aurinko ei mene mailleen kunnolla, ja '
-      + 'ihmiset kävelevät rantakatua keskiyöllä kuin iltapäivällä. '
-      + 'Palatsin taidesaleissa kävelin kolme tuntia enkä nähnyt '
-      + 'puoliakaan. Sillat avataan öisin laivoille; myöhästyjä saa '
-      + 'odottaa aamuun, ja moni odottaa mielellään.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 397 merkkiä (yläraja 400). */
+    teksti: 'Keisari rakennutti kaupunkinsa suolle ja käski sen olla suora, ja '
+      + 'suo totteli. Kadut ovat leveitä kuin joet ja joki leveä kuin meri. '
+      + 'Kesäyönä aurinko ei mene mailleen kunnolla, ja ihmiset kävelevät '
+      + 'rantakatua keskiyöllä kuin iltapäivällä. Palatsin taidesaleissa '
+      + 'kävelin kolme tuntia enkä nähnyt puoliakaan. Sillat avataan öisin '
+      + 'laivoille. Myöhästyjä saa odottaa aamuun, ja moni odottaa mielellään.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Keisari rakennutti kaupunkinsa suolle ja käski '
-      + 'sen olla suora, ja suo totteli — kadut ovat leveitä kuin joet ja '
-      + 'joki leveä kuin meri. [softly] Kesäyönä aurinko ei mene '
-      + 'mailleen kunnolla, ja ihmiset kävelevät rantakatua keskiyöllä '
-      + 'kuin iltapäivällä. [excited] Palatsin taidesaleissa kävelin '
-      + 'kolme tuntia enkä nähnyt puoliakaan. [whispers] Sillat avataan '
-      + 'öisin laivoille; myöhästyjä saa odottaa aamuun, ja moni odottaa '
-      + 'mielellään.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Keisari rakennutti kaupunkinsa suolle ja käski sen olla '
+      + 'suora, ja suo totteli. Kadut ovat leveitä kuin joet ja joki leveä '
+      + 'kuin meri. Kesäyönä aurinko ei mene mailleen kunnolla, ja ihmiset '
+      + 'kävelevät rantakatua keskiyöllä kuin iltapäivällä. Palatsin '
+      + 'taidesaleissa kävelin kolme tuntia enkä nähnyt puoliakaan. Sillat '
+      + 'avataan öisin laivoille. [softly] Myöhästyjä saa odottaa aamuun, ja '
+      + 'moni odottaa mielellään.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-pietari.mp3',
   },
 

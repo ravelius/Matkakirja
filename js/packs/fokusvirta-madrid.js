@@ -119,11 +119,14 @@ export const FOKUSVIRTA_MADRID = {
      */
     paikkarivi: 'Madrid, maaliskuussa 1873. Kirkasta; ylätasangon tuuli '
       + 'kylmä.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Madrid kiehuu: tasavalta on nuori ja kahvilat täynnä '
-      + 'huutoa. Minä kuuntelin ja kirjoitin. Prado oli tyhjä kuin '
-      + 'kirkko arkiaamuna — seisoin Velázquezin edessä yksin, ja se '
-      + 'oli matkani hiljaisin tunti.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 395 merkkiä (yläraja 400). */
+    teksti: 'Tasavalta on kuukauden vanha, ja kahvilat ovat täynnä huutoa. '
+      + 'Minä kuuntelin ja kirjoitin. Puerta del Solilla myydään lehtiä, '
+      + 'joissa jokainen tietää paremmin kuin hallitus. Prado oli tyhjä kuin '
+      + 'kirkko arkiaamuna. Seisoin Velázquezin edessä yksin, ja se oli '
+      + 'matkani hiljaisin tunti. Ylätasangon tuuli puree, vaikka aurinko '
+      + 'paistaa. Täällä sanotaan, ettei se sammuta kynttilää mutta tappaa '
+      + 'miehen.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu. Äänite
      * generoidaan tästä kentästä työnkulussa .github/workflows/
@@ -137,37 +140,23 @@ export const FOKUSVIRTA_MADRID = {
      * jälkeen repon polun ja vaikenee siististi (audion 'error' →
      * varareitti → catch), eikä mikään muu hajoa.
      */
-    luenta: '[curious] Madrid kiehuu: tasavalta on nuori ja kahvilat '
-      + 'täynnä huutoa. Minä kuuntelin ja kirjoitin. [softly] Prado oli '
-      + 'tyhjä kuin kirkko arkiaamuna — [whispers] seisoin Velázquezin '
-      + 'edessä yksin, ja se oli matkani hiljaisin tunti.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Tasavalta on kuukauden vanha, ja kahvilat ovat täynnä '
+      + 'huutoa. Minä kuuntelin ja kirjoitin. Puerta del Solilla myydään '
+      + 'lehtiä, joissa jokainen tietää paremmin kuin hallitus. Prado oli '
+      + 'tyhjä kuin kirkko arkiaamuna. Seisoin Velázquezin edessä yksin, ja se '
+      + 'oli matkani hiljaisin tunti. Ylätasangon tuuli puree, vaikka aurinko '
+      + 'paistaa. [softly] Täällä sanotaan, ettei se sammuta kynttilää mutta '
+      + 'tappaa miehen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-madrid.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS — VÄLITTÄJÄOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ"). Yksi kupla per saapuminen, isoisän merkinnän
-     * perään.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1
-     * PAINOPISTE REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja
-     * lopussa ("Mut"), keskellä sanat ovat auki — yhdessätoista,
-     * neljä, muutaman.
-     *
-     * FAKTAKURI: kaksi väitettä, molemmat tarkistettavia.
-     * (1) Tasavalta julistettiin 11.2.1873, joten maaliskuussa se oli
-     * muutaman viikon vanha. (2) Valtionpäämiehiä vaihtui neljä
-     * yhdentoista kuukauden sisään (takyt-madrid.md, täky 5; kukaan
-     * heistä ei ollut virallisesti presidentti, joten sanaa ei käytetä).
-     */
-    maadoitus: 'Kääk. Isoisäsi kuunteli huutoa ja käveli sitten '
-      + 'museoon, se on hänen tapansa. Sitten minä katson vuosilukua: '
-      + 'tuo tasavalta oli maaliskuussa muutaman viikon vanha, ja sen '
-      + 'johdossa ehti vaihtua yhdentoista kuukauden sisään neljä '
-      + 'miestä. Ei ihme että kahviloissa huudettiin. Mut kyllä minä '
-      + 'ymmärrän sitä, joka etsii yhden hiljaisen tunnin.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Tasavalta kaatui pian, ja maassa on taas kuningas. Velázquezin edessä ei enää seisota yksin.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Kuninkaanlinna). Faktat:
      * linnan valmistumisvuosi, maurilinnan palo ja yli 3 400 huonetta

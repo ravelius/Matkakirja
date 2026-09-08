@@ -180,68 +180,36 @@ export const FOKUSVIRTA_MARSEILLE = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Marseille, syyskuussa 1873. Mistral puhaltaa; taivas sininen.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Vanha satama haisee kalalta, tervalta ja saippualta — täällä '
-      + 'keitetään saippuaa, jota myydään koko maailmalle vihreinä '
-      + 'harkkoina kuin kultaa. Laivoja tulee Afrikasta ja idästä; kanava '
-      + 'Suezissa on tehnyt tästä kaupungista Ranskan portin itään. '
-      + 'Kalliolla lahden suulla on linnoitussaari, josta eräs kirjailija '
-      + 'teki vankilan kuuluisammaksi kuin yksikään vanginvartija. Söin '
-      + 'illalla kalakeittoa, johon pantiin kaloja joiden nimiä en oppinut.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 396 merkkiä (yläraja 400). */
+    teksti: 'Vanha satama haisee kalalta, tervalta ja saippualta. Täällä '
+      + 'keitetään saippuaa, jota myydään koko maailmalle vihreinä harkkoina. '
+      + 'Laivoja tulee Afrikasta ja idästä, sillä Suezin kanava on tehnyt '
+      + 'tästä Ranskan portin itään. Lahden suulla on linnoitussaari, josta '
+      + 'kirjailija teki vankilan kuuluisammaksi kuin yksikään vartija. '
+      + 'Illalla söin kalakeittoa, johon pantiin kaloja, joiden nimiä en '
+      + 'oppinut.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Vanha satama haisee kalalta, tervalta ja saippualta '
-      + '— täällä keitetään saippuaa, jota myydään koko maailmalle '
-      + 'vihreinä harkkoina kuin kultaa. [excited] Laivoja tulee Afrikasta '
-      + 'ja idästä; kanava Suezissa on tehnyt tästä kaupungista Ranskan '
-      + 'portin itään. [softly] Kalliolla lahden suulla on linnoitussaari, '
-      + 'josta eräs kirjailija teki vankilan kuuluisammaksi kuin yksikään '
-      + 'vanginvartija. [warmly] Söin illalla kalakeittoa, johon pantiin '
-      + 'kaloja joiden nimiä en oppinut.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Vanha satama haisee kalalta, tervalta ja saippualta. '
+      + 'Täällä keitetään saippuaa, jota myydään koko maailmalle vihreinä '
+      + 'harkkoina. Laivoja tulee Afrikasta ja idästä, sillä Suezin kanava on '
+      + 'tehnyt tästä Ranskan portin itään. Lahden suulla on linnoitussaari, '
+      + 'josta kirjailija teki vankilan kuuluisammaksi kuin yksikään vartija. '
+      + '[softly] Illalla söin kalakeittoa, johon pantiin kaloja, joiden nimiä '
+      + 'en oppinut.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa
-     * sen jälkeen.
-     *
-     * MIKSI SAIPPUA EIKÄ KEITTO, SATAMA TAI SAARI: kaanoninen `teksti`
-     * ottaa heti perään kaikki kolme muuta (kalakeitto nimeämättä,
-     * saippuan nykytila yhdellä lauseella, saari ja kirja nimeämättä),
-     * ja oppitunti ottaa
-     * Suezin. Merkinnän ensimmäinen virke — se haju ja ne vihreät harkot
-     * — jää muuten kokonaan vastaamatta. Maadoitus vastaa siihen ja
-     * luovuttaa vuoron keitolle viimeisellä virkkeellään, jotta kaanonin
-     * avaus jatkaa suoraan siitä.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1 PAINOPISTE
-     * REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja lopussa
-     * ("mut", "tainnut"), keskellä sanat ovat auki; pronominit
-     * kokonaisina; ei huutomerkkejä.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki pelin omasta jo hyväksytystä
-     * Ranska-aineistosta (js/packs/maa-kategoriat.js, FRA/arki, nosto
-     * "Saippuassa lukee 72"). (1) Lokakuun 5. päivänä 1688 kuninkaan
-     * asetus kielsi käyttämästä marseillelaiseen saippuaan rasvaa tai
-     * voita. (2) Perinteinen kuutio painaa 600 grammaa. (3) Kylkeen
-     * leimataan valmistajan nimi ja luku 72, joka kertoo öljyn osuuden
-     * prosentteina.
-     */
-    maadoitus: 'Kääk. Se haju on yhä tallella, tosin nykyään enemmän '
-      + 'saippuan kuin tervan puolella. Ja tässä isoisäsi osui: ne vihreät '
-      + 'harkot olivat ihan oikeasti säädeltyä tavaraa. Kuninkaan asetus '
-      + 'viideltä lokakuuta 1688 kielsi panemasta marseillelaiseen '
-      + 'saippuaan rasvaa tai voita, ja kuution kylkeen leimataan vieläkin '
-      + 'valmistajan nimi ja luku 72 — se kertoo öljyn osuuden '
-      + 'prosentteina. Kuusisataa grammaa ja yksi luku, siinä koko takuu. '
-      + 'Mut siitä keitosta hän ei tainnut ymmärtää puoliakaan.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Satamassa myydään yhä saippuaa ja kalakeittoa. Linnoitussaarelle mennään nyt lautalla huviksi.',
+    ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi
      * pistettä ensimmäisen virkkeen lopussa on kaanonin oma kirjoitusasu.

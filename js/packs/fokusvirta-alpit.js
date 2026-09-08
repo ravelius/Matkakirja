@@ -26,22 +26,23 @@ export const FOKUSVIRTA_ALPIT = {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Grindelwald, heinäkuussa 1873. Kylmää keskellä kesää; '
       + 'ilmanpuntari korkealla.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 396 merkkiä (yläraja 400). */
     teksti: 'Vaunut kiipesivät laaksoa ylös niin jyrkästi, että laukkuni '
-      + 'liukui lattialle, ja vastarinteeltä alppitorven ääni ylitti koko '
-      + 'laakson. Hotellin portaille asti ulottuu jäätikkö, jonka reunalta '
-      + 'lapset myyvät jääpaloja englantilaisille. Opas sanoo sen liikkuvan; '
-      + 'en nähnyt. Toisella puolen vuoria porataan tunnelia suoraan vuoren '
-      + 'läpi, ja miehet sanovat, että juna kulkee siitä ennen kuin heidän '
-      + 'lapsensa ovat aikuisia.',
+      + 'liukui lattialle, ja vastarinteeltä kuului alppitorvi. Hotellin '
+      + 'portaille asti ulottuu jäätikkö, jonka reunalta lapset myyvät '
+      + 'jääpaloja englantilaisille. Opas sanoo sen liikkuvan; en nähnyt. '
+      + 'Toisella puolen vuoria porataan tunnelia suoraan vuoren läpi, ja '
+      + 'miehet sanovat, että juna kulkee siitä ennen kuin heidän lapsensa '
+      + 'ovat aikuisia.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
     luenta: '[curious] Vaunut kiipesivät laaksoa ylös niin jyrkästi, että '
-      + 'laukkuni liukui lattialle, ja vastarinteeltä alppitorven ääni '
-      + 'ylitti koko laakson. [warmly] Hotellin portaille asti ulottuu '
-      + 'jäätikkö, jonka reunalta lapset myyvät jääpaloja englantilaisille. '
-      + 'Opas sanoo sen liikkuvan; en nähnyt. [softly] Toisella puolen '
-      + 'vuoria porataan tunnelia suoraan vuoren läpi, ja miehet sanovat, '
-      + 'että juna kulkee siitä ennen kuin heidän lapsensa ovat aikuisia.',
+      + 'laukkuni liukui lattialle, ja vastarinteeltä kuului alppitorvi. '
+      + 'Hotellin portaille asti ulottuu jäätikkö, jonka reunalta lapset '
+      + 'myyvät jääpaloja englantilaisille. Opas sanoo sen liikkuvan; en '
+      + 'nähnyt. [softly] Toisella puolen vuoria porataan tunnelia suoraan '
+      + 'vuoren läpi, ja miehet sanovat, että juna kulkee siitä ennen kuin '
+      + 'heidän lapsensa ovat aikuisia.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-alpit.mp3',
   },
 

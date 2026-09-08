@@ -158,58 +158,35 @@ export const FOKUSVIRTA_EDINBURGH = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Edinburgh, elokuussa 1873. Viileää; linna sumun yllä.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki kiipeää kalliolle kuin sammal, ja sen yllä istuu '
-      + 'linna, jota ei ole koskaan vallattu rynnäköllä — nälällä '
-      + 'kylläkin. Vanhassa kaupungissa talot ovat kymmenkerroksisia, '
-      + 'köyhät ylhäällä ja rikkaat alhaalla, mikä on nurinkurisin '
-      + 'järjestys minkä olen nähnyt. Kirkkomaan portilla makasi pieni '
-      + 'koira, jonka sanotaan vartioineen isäntänsä hautaa neljätoista '
-      + 'vuotta. Se kuoli viime vuonna. Kaupunki aikoo pystyttää sille '
-      + 'muistomerkin — ennen kuin pystyttää sellaisen monelle ihmiselle.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 389 merkkiä (yläraja 400). */
+    teksti: 'Kaupunki kiipeää kalliolle, ja sen yllä istuu linna, jota ei ole '
+      + 'vallattu rynnäköllä, nälällä kyllä. Vanhassa kaupungissa talot ovat '
+      + 'kymmenkerroksisia, ja köyhät asuvat ylhäällä ja rikkaat alhaalla. '
+      + 'Nurinkurisin järjestys, jonka olen nähnyt. Kirkkomaan portilla makasi '
+      + 'vuosia pieni koira, joka vartioi isäntänsä hautaa. Se kuoli viime '
+      + 'vuonna, ja kaupunki pystyttää sille nyt muistomerkkiä.',
     /*
      * LUENTA: sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi: ruututeksti = luentateksti sanasta sanaan).
      * Kolme tagia, alku ja loppu eri sävyssä.
      */
-    luenta: '[curious] Kaupunki kiipeää kalliolle kuin sammal, ja sen '
-      + 'yllä istuu linna, jota ei ole koskaan vallattu rynnäköllä — '
-      + 'nälällä kylläkin. Vanhassa kaupungissa talot ovat '
-      + 'kymmenkerroksisia, köyhät ylhäällä ja rikkaat alhaalla, '
-      + 'mikä on nurinkurisin järjestys minkä olen nähnyt. '
-      + '[softly] Kirkkomaan portilla makasi pieni koira, jonka sanotaan '
-      + 'vartioineen isäntänsä hautaa neljätoista vuotta. Se kuoli viime '
-      + 'vuonna. [whispers] Kaupunki aikoo pystyttää sille muistomerkin — '
-      + 'ennen kuin pystyttää sellaisen monelle ihmiselle.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kaupunki kiipeää kalliolle, ja sen yllä istuu linna, '
+      + 'jota ei ole vallattu rynnäköllä, nälällä kyllä. Vanhassa kaupungissa '
+      + 'talot ovat kymmenkerroksisia, ja köyhät asuvat ylhäällä ja rikkaat '
+      + 'alhaalla. Nurinkurisin järjestys, jonka olen nähnyt. Kirkkomaan '
+      + 'portilla makasi vuosia pieni koira, joka vartioi isäntänsä hautaa. '
+      + '[softly] Se kuoli viime vuonna, ja kaupunki pystyttää sille nyt '
+      + 'muistomerkkiä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-edinburgh.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU. Aallon 4A
-     * kaanonpaketti antaa Livialle YHDEN tekstin, mutta kortti lukee
-     * kaksi kenttää: `maadoitus` piirtyy kuplan ensimmäiseksi
-     * kappaleeksi heti isoisän merkinnän perään ja `teksti` sen jälkeen
-     * (js/fokusvirta.js piirraPollo). Lisäksi tests/fokusvirta.test.mjs
-     * vaatii jokaiselta fokuskaupungilta oman maadoituksen, joka ei ole
-     * sama merkkijono kuin huomio.
-     *
-     * JAKO KULKEE VIRKKEEN RAJAA PITKIN, eikä yhtäkään sanaa,
-     * välimerkkiä tai järjestystä ole muutettu: ensimmäiset kaksi
-     * virkettä kuittaavat isoisän merkinnän (patsas, valtaamaton
-     * linna), loput selittävät nurinkurisen järjestyksen ja vievät
-     * eteenpäin. Luettuna peräkkäin teksti on sanasta sanaan
-     * kaanonpaketin teksti.
-     *
-     * PÄÄTOIMITTAJALLE: jos kupla halutaan yhtenä kappaleena,
-     * maadoitukseen kirjoitetaan oma repliikkinsä ja koko kaanonteksti
-     * palautetaan `teksti`-kenttään yhtenä pötkönä. Kumpikin muoto
-     * kelpaa moottorille.
-     */
-    maadoitus: 'Se pikkukoiran patsas on Edinburghissa edelleen, ja sen '
-      + 'kuonoa hierotaan onnen takia niin että se kiiltää.. Linna on '
-      + 'yhä valtaamaton, paitsi turistien toimesta.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Koiran patsas seisoo portilla, ja sen kuonoa hierotaan onneksi. Linnaa ei ole yhä vallattu.',
+    ],
     teksti: 'Ja se isoisäsi ihmettelemä järjestys — köyhät ylhäällä — '
       + 'johtui savusta: mitä alempana asuit, sitä vähemmän piippuja '
       + 'savusi sun ikkunan alla. Mennään vanhaan kaupunkiin.',

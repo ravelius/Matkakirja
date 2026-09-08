@@ -34,7 +34,8 @@ import {
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
 import { FOKUSVIRTA_ISTANBUL } from '../js/packs/fokusvirta-istanbul.js';
-import { FOKUSVIRTA_RIIKA } from '../js/packs/fokusvirta-riika.js';
+import { FOKUSVIRTA_PIETARI } from '../js/packs/fokusvirta-pietari.js';
+import { FOKUSVIRTA_VENETSIA } from '../js/packs/fokusvirta-venetsia.js';
 import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
 import { FOKUSVIRTA_VILNA } from '../js/packs/fokusvirta-vilna.js';
 import {
@@ -98,12 +99,13 @@ test('nimi johdetaan lähteestä ja indeksistä samalla funktiolla', () => {
   assert.equal(livianAaniNimi('lehtivinkki', 0), 'livia-lehtivinkki-1.mp3');
   assert.deepEqual(LIVIAN_AANILAHTEET.slice(0, 6),
     ['avaus', 'paljastus', 'mannerivihje', 'lehtivinkki', 'ateena', 'sofia']);
-  // Kahdeksantoista Euroopan kaupunkia + Ateena (uusi kulku 7.9.2026),
-  // kuusi kevyttä kohdetta (8.9.2026: Kreeta, Sisilia, Islanti, Alpit,
-  // Rovaniemi/`lappi`, Tromssa) ja linssien välihuomiot (Ihmisen matkan
-  // kertomus, 7.9.2026).
+  // KOKO EUROOPPA ON NYT TAULUSSA (Fablen erä 8.9.2026 ilta): aiempien
+  // 25 lähteen lisäksi lännen kaksikymmentä kaupunkia, joiden vanha
+  // maadoitus korvattiin yhdellä kommenttikuplalla — yhteensä 45
+  // kaupunkia. Lisäksi neljä js/livia.js:n lähdettä ja linssien
+  // välihuomiot (Ihmisen matkan kertomus, 7.9.2026).
   assert.equal(LIVIAN_AANILAHTEET.length,
-    4 + 25 + Object.keys(LIVIAN_LINSSILAHTEET).length);
+    4 + 45 + Object.keys(LIVIAN_LINSSILAHTEET).length);
   assert.equal(LIVIAN_AANILAHTEET.at(-1), 'ihmisen-matka');
   assert.equal(livianAaniNimi('ihmisen-matka', 0), 'livia-ihmisen-matka-1.mp3');
 });
@@ -150,9 +152,14 @@ test('kaupunkirepliikki nimetään kaupungista, kentästä ja kuplan numerosta',
    */
   assert.deepEqual(livianKaupunkiKentat('istanbul').map((k) => [k.kentta, k.kuplat, k.alku]),
     [[LIVIAN_VARATTU, 1, 0], [LIVIAN_VARATTU, 1, 1], ['kommentti', 1, 2]]);
+  // Riian huudahdus poistui 8.9.2026 illalla: paikka jäi varatuksi kuten
+  // Prahassa. Välihuuto on yhä esimerkiksi Pietarissa.
   assert.deepEqual(livianKaupunkiKentat('riika').map((k) => [k.kentta, k.kuplat, k.alku]),
+    [[LIVIAN_VARATTU, 1, 0], [LIVIAN_VARATTU, 1, 1], ['kommentti', 1, 2]]);
+  assert.deepEqual(livianKaupunkiKentat('pietari').map((k) => [k.kentta, k.kuplat, k.alku]),
     [[LIVIAN_VARATTU, 1, 0], ['huudahdus', 1, 1], ['kommentti', 1, 2]]);
-  assert.equal(livianKaupunkiIndeksi('riika', 'huudahdus'), 1);
+  assert.equal(livianKaupunkiIndeksi('pietari', 'huudahdus'), 1);
+  assert.equal(livianKaupunkiIndeksi('riika', 'huudahdus'), null);
   assert.equal(livianKaupunkiIndeksi('istanbul', 'huudahdus'), null);
   assert.equal(livianKaupunkiIndeksi('istanbul', 'alustus'), null);
   // Yksi kupla per kaupunki (omistaja 8.9.2026): toista kuplaa ei nimetä.
@@ -162,6 +169,13 @@ test('kaupunkirepliikki nimetään kaupungista, kentästä ja kuplan numerosta',
   assert.equal(livianKaupunkiKuplia('vilna', 'paluu'), 0);
   // Äänittämätön kaupunki tai kenttä on hiljainen, ei arvattu nimi.
   assert.equal(livianKaupunkiIndeksi('venetsia', 'maadoitus'), null);
+  // VENETSIA ON POIKKEUS (Fablen ehdotus 8.9.2026): kuusi kuplaa, numerot
+  // 3…8 — kaksi ensimmäistä paikkaa ovat varattuja kuten muillakin.
+  assert.deepEqual(livianKaupunkiKentat('venetsia').map((k) => [k.kentta, k.kuplat, k.alku]),
+    [[LIVIAN_VARATTU, 1, 0], [LIVIAN_VARATTU, 1, 1], ['kommentti', 6, 2]]);
+  assert.equal(livianKaupunkiIndeksi('venetsia', 'kommentti', 5), 7);
+  assert.equal(livianKaupunkiIndeksi('venetsia', 'kommentti', 6), null);
+  assert.equal(livianAaniNimi('venetsia', 7), 'livia-venetsia-8.mp3');
   // Kevyt pakki: yksi kupla, kaksi varattua paikkaa sen edessä.
   assert.deepEqual(livianKaupunkiKentat('kreeta').map((k) => [k.kentta, k.kuplat, k.alku]),
     [[LIVIAN_VARATTU, 1, 0], [LIVIAN_VARATTU, 1, 1], ['kommentti', 1, 2]]);
@@ -169,7 +183,8 @@ test('kaupunkirepliikki nimetään kaupungista, kentästä ja kuplan numerosta',
   assert.equal(livianKaupunkiIndeksi('ateena', 'paluu'), null);
   assert.equal(livianKaupunkiAanitetty('sofia', 'vinkki'), LIVIAN_KAUPUNKIAANET_KAYTOSSA);
   assert.equal(livianKaupunkiAanitetty('sofia', ''), false);
-  assert.equal(livianAaniNimi('venetsia', 0), null);
+  // Taulun ulkopuolinen lähde on hiljainen, ei arvattu nimi.
+  assert.equal(livianAaniNimi('tuntematon-kaupunki', 0), null);
 });
 
 /*
@@ -244,7 +259,9 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
     '', '',
     ...FOKUSVIRTA_VILNA.pollo.kommentti,
   ]);
-  assert.deepEqual(kaupunginRepliikit('venetsia'), []);
+  // Venetsian kuusi kuplaa (Fablen ehdotus 8.9.2026) kahden varatun jälkeen.
+  assert.deepEqual(kaupunginRepliikit('venetsia'),
+    ['', '', ...FOKUSVIRTA_VENETSIA.pollo.kommentti]);
   const rivit = repliikit();
   const avaimet = rivit.filter((rivi) => LIVIAN_KAUPUNKILAHTEET[rivi.lahde])
     .map((rivi) => rivi.avain);
@@ -253,15 +270,18 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
   // ilman tekstiä (8.9.2026 Ateenan maadoitus korvattiin kommenttikuplalla,
   // Sofian kommentti tiivistyi yhteen kuplaan).
   assert.deepEqual(avaimet.slice(0, 4), ['ateena-3', 'sofia-2', 'sofia-3', 'sofia-5']);
-  // Kevyen erän kuusi kohdetta ovat taulun lopussa, yksi kupla kussakin.
-  assert.deepEqual(avaimet.slice(-3), ['alpit-3', 'lappi-3', 'tromssa-3']);
+  // Lännen kaksikymmentä kaupunkia ovat taulun lopussa (Fablen erä
+  // 8.9.2026 ilta), yksi kupla kussakin — Venetsiassa kuusi.
+  assert.deepEqual(avaimet.slice(-3), ['oslo-3', 'bergen-3', 'kobenhavn-3']);
   // Teksti on pakkauksen teksti merkilleen — kaanonia ei muotoilla.
   assert.equal(rivit.find((rivi) => rivi.avain === 'sofia-14').teksti, sofia.paluu[1].trim());
   assert.equal(rivit.find((rivi) => rivi.avain === 'istanbul-1'), undefined);
   // Istanbulin huudahdus poistui 8.9.2026: myös sen paikka on varattu.
   assert.equal(rivit.find((rivi) => rivi.avain === 'istanbul-2'), undefined);
-  assert.equal(rivit.find((rivi) => rivi.avain === 'riika-2').teksti,
-    FOKUSVIRTA_RIIKA.pollo.huudahdus.teksti.trim());
+  // Riian huudahdus poistui 8.9.2026 illalla: myös sen paikka on varattu.
+  assert.equal(rivit.find((rivi) => rivi.avain === 'riika-2'), undefined);
+  assert.equal(rivit.find((rivi) => rivi.avain === 'pietari-2').teksti,
+    FOKUSVIRTA_PIETARI.pollo.huudahdus.teksti.trim());
 });
 
 test('kaupunkirepliikki mahtuu kuplaansa', () => {
@@ -379,7 +399,7 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   assert.equal(tila('ateena-3'), 'uusi');
   assert.equal(tila('kreeta-3'), 'uusi');
   assert.equal(tila('sofia-2'), 'ajan tasalla');
-  assert.equal(tila('riika-2'), 'ajan tasalla');
+  assert.equal(tila('pietari-2'), 'ajan tasalla');
   /*
    * PULUN KAUPUNKITEKSTIT KIRJOITETTIIN UUSIKSI 8.9.2026 (Fable, omistajan
    * linjaus): kommentit, jotka muuttuivat, ovat MUUTTUNEITA ja vaikenevat

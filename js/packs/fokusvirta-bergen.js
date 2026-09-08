@@ -145,58 +145,34 @@ export const FOKUSVIRTA_BERGEN = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Bergen, kesäkuussa 1873. Sadetta aamusta iltaan; vuoret pilvessä.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 383 merkkiä (yläraja 400). */
     teksti: 'Sataa. Kirjoitan tämän kapakan ikkunapöydässä, koska laiturilla '
       + 'ei pysy paperi kuivana. Saksalaisten vanha kauppalaituri seisoo yhä, '
-      + 'puutalot kylki kyljessä kuin sillit tynnyrissä — ja silliltä täällä '
-      + 'myös tuoksuu, sillä kapakala on tämän kaupungin kulta. Sitä riippuu '
+      + 'puutalot kylki kyljessä kuin sillit tynnyrissä, ja silliltä täällä '
+      + 'myös tuoksuu. Kapakala on tämän kaupungin kulta. Sitä riippuu '
       + 'telineillä tuhansittain, kuivana ja kovana kuin lauta, ja sillä on '
       + 'ostettu nämä talot, kirkot ja puolet Norjan purjeista.',
     /*
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
      */
-    luenta: '[softly] Sataa. Kirjoitan tämän kapakan ikkunapöydässä, koska '
-      + 'laiturilla ei pysy paperi kuivana. [curious] Saksalaisten vanha '
-      + 'kauppalaituri seisoo yhä, puutalot kylki kyljessä kuin sillit '
-      + 'tynnyrissä — ja silliltä täällä myös tuoksuu, sillä kapakala on '
-      + 'tämän kaupungin kulta. [warmly] Sitä riippuu telineillä '
-      + 'tuhansittain, kuivana ja kovana kuin lauta, ja sillä on ostettu '
-      + 'nämä talot, kirkot ja puolet Norjan purjeista.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Sataa. Kirjoitan tämän kapakan ikkunapöydässä, koska '
+      + 'laiturilla ei pysy paperi kuivana. Saksalaisten vanha kauppalaituri '
+      + 'seisoo yhä, puutalot kylki kyljessä kuin sillit tynnyrissä, ja '
+      + 'silliltä täällä myös tuoksuu. Kapakala on tämän kaupungin kulta. '
+      + '[softly] Sitä riippuu telineillä tuhansittain, kuivana ja kovana kuin '
+      + 'lauta, ja sillä on ostettu nämä talot, kirkot ja puolet Norjan '
+      + 'purjeista.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-bergen.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS — NALJAILUOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä on kevyt ja arkinen — sade,
-     * kapakan ikkunapöytä, märkä paperi — joten pariperiaate sallii
-     * naljailun eikä vaadi pehmennystä. Piikki osoittaa isoisään, kuten
-     * kuuluu: hän haistoi sillin siellä, missä telineillä riippui turskaa.
-     *
-     * FAKTAKURI: yksi väite, kaksi lähdettä. Sana "torsk" tulee
-     * muinaisnorjan muodosta turskr, joka on lyhentymä sanasta turrfiskr,
-     * "kuiva kala" — no-Wikipedia "Tørrfisk", johdanto (*"ordet «torsk»
-     * kommer av det gammelnorske turskr som betyr turrfiskr «tørrfisk»"*),
-     * ja sama etymologia en-Wikipedian "Stockfish"-artikkelin
-     * Etymology-osiossa, joka johtaa myös sanan stockfish kuivaustelineen
-     * puihin. Tarkistettu 29.8.2026. Kapakala tehdään turskasta —
-     * en-Wikipedia "Stockfish", johdanto; fi-Wikipedia "Kapakala".
-     *
-     * MIKSI ETYMOLOGIA EIKÄ KAUPPA: oppitunti kertoo kapakalan kaupan ja
-     * kuivauksen, eikä maadoitus saa syödä sitä etukäteen. Tähän jää siis
-     * vain se, mikä on isoisän oman virheen vastaus.
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("No niin", "Mut"),
-     * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
-     */
-    maadoitus: 'No niin, sataa. Siitä yhdestä asiasta täällä ollaan aina '
-      + 'oltu samaa mieltä.. Mut se haju ei ollut silliä. Telineillä '
-      + 'riippuva kala on turskaa, ja koko kala on nimetty sen mukaan mitä '
-      + 'sille tehdään: sana torsk tulee muinaisnorjan sanasta turskr, joka '
-      + 'on lyhentynyt sanasta turrfiskr, kuiva kala. Isoisäsi haistoi siis '
-      + 'oikean rikkauden ja väärän kalan. Se on hänelle aika hyvä tulos.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Kauppalaituri on nyt maailmanperintöä ja kallellaan. Ja täällä sataa yhä useammin kuin ei.',
+    ],
     /* KAANON (Fable) — kuplateksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Bergenissä sataa noin puolet vuoden päivistä, joten isoisäsi '
       + 'osui tavalliseen päivään.. Se kauppalaituri on yhä pystyssä, '

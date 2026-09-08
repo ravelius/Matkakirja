@@ -218,71 +218,35 @@ export const FOKUSVIRTA_GRANADA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Granada, huhtikuussa 1873. Kirkasta; Sierra Nevadalla vielä lunta.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Linna kukkulalla on kaunein raunio jonka olen '
-      + 'nähnyt — paitsi ettei se ole raunio: sen saleissa asuu köyhiä '
-      + 'perheitä, ja seinien kirjoitukset kulkevat heidän arkensa yllä '
-      + 'kuin toisen maailman posti. Vuorilla on lunta vaikka laaksossa '
-      + 'kypsyvät appelsiinit. Illalla kukkulan luolissa laulettiin ja '
-      + 'tanssittiin tavalla, joka ei pyydä yleisöä — se vain sietää '
-      + 'sitä.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 376 merkkiä (yläraja 400). */
+    teksti: 'Linna kukkulalla on kaunein raunio, jonka olen nähnyt, paitsi '
+      + 'ettei se ole raunio. Sen saleissa asuu köyhiä perheitä, ja seinien '
+      + 'kirjoitukset kulkevat heidän arkensa yllä kuin toisen maailman posti. '
+      + 'Vuorilla on lunta, vaikka laaksossa kypsyvät appelsiinit. Illalla '
+      + 'kukkulan luolissa laulettiin ja tanssittiin tavalla, joka ei pyydä '
+      + 'yleisöä. Se vain sietää sitä. Maksoin silti.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Linna kukkulalla on kaunein raunio jonka '
-      + 'olen nähnyt — paitsi ettei se ole raunio: [softly] sen saleissa '
-      + 'asuu köyhiä perheitä, ja seinien kirjoitukset kulkevat heidän '
-      + 'arkensa yllä kuin toisen maailman posti. [warmly] Vuorilla on '
-      + 'lunta vaikka laaksossa kypsyvät appelsiinit. [whispers] Illalla '
-      + 'kukkulan luolissa laulettiin ja tanssittiin tavalla, joka ei '
-      + 'pyydä yleisöä — se vain sietää sitä.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Linna kukkulalla on kaunein raunio, jonka olen nähnyt, '
+      + 'paitsi ettei se ole raunio. Sen saleissa asuu köyhiä perheitä, ja '
+      + 'seinien kirjoitukset kulkevat heidän arkensa yllä kuin toisen '
+      + 'maailman posti. Vuorilla on lunta, vaikka laaksossa kypsyvät '
+      + 'appelsiinit. Illalla kukkulan luolissa laulettiin ja tanssittiin '
+      + 'tavalla, joka ei pyydä yleisöä. Se vain sietää sitä. [softly] Maksoin '
+      + 'silti.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-granada.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa
-     * sen jälkeen.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1 PAINOPISTE
-     * REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja lopussa
-     * ("mut"), keskellä sanat ovat auki; pronominit kokonaisina; ei
-     * huutomerkkejä.
-     *
-     * MIKSI LUMI JA APPELSIINIT: kanoninen `teksti` alla hoitaa jo
-     * palatsin asukkaat, kirjailijan ja luolat, eikä sama asia saa
-     * tulla kahdesti samassa kuplassa. Merkinnän ainoa virke, johon
-     * kukaan muu ei vastaa, on se lyhyt lumi- ja appelsiinihavainto —
-     * ja se on niitä isoisän huomioita, jotka pitävät yhä.
-     *
-     * VUORISTOA EI NIMETÄ. Sen nimi on js/packs/europe-questions.js:n
-     * `granada`-lohkon toisen laattakysymyksen vastaus, joten tässä
-     * puhutaan vuorista ja hiihtokeskuksesta ilman nimeä. Kaikki muu on
-     * kaupunkilehden omaa nostoa "Aamulla hiihtoa, iltapäivällä merta"
-     * (js/packs/kulttuuri-kategoriat.js, granada): (1) keskustasta on
-     * vajaat 30 km Euroopan eteläisimpään hiihtokeskukseen ja noin 70
-     * km Välimeren rannalle, (2) hissit nousevat yli kolmen kilometrin
-     * korkeuteen, (3) vieressä kohoaa Iberian niemimaan korkein huippu
-     * 3 479 metriä, (4) alppihiihdon MM-kisat piti pitää täällä 1995,
-     * mutta ne siirrettiin vuodella, koska rinteet olivat paljaat.
-     * Yksikään luku ei muutu.
-     */
-    maadoitus: 'Kääk. Se lumen ja appelsiinin yhdistelmä piti '
-      + 'paikkansa, ja pitää yhä: keskustasta on vajaat kolmekymmentä '
-      + 'kilometriä Euroopan eteläisimpään hiihtokeskukseen ja noin '
-      + 'seitsemänkymmentä Välimeren rannalle, joten saman päivän '
-      + 'aikana ehtii sekä rinteeseen että uimaan. Hissit nousevat yli '
-      + 'kolmen kilometrin korkeuteen, ja vieressä kohoaa Iberian '
-      + 'niemimaan korkein huippu, kolmetuhatta neljäsataa '
-      + 'seitsemänkymmentäyhdeksän metriä. Lunta ei silti ole taattu: '
-      + 'alppihiihdon maailmanmestaruuskisat oli määrä pitää täällä '
-      + 'vuonna 1995, mut ne siirrettiin vuodella, koska rinteet olivat '
-      + 'paljaat.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Linnassa ei enää asuta, ja sinne jonotetaan lippua kuukausia. Vuorilla on yhä lunta keväällä.',
+    ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      */

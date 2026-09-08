@@ -25,22 +25,23 @@ export const FOKUSVIRTA_ISLANTI = {
   matkakirja: {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Reykjavik, elokuussa 1873. Tuulista; ei yhtään puuta.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 390 merkkiä (yläraja 400). */
     teksti: 'Maasta nousee höyryä, vaikka mikään ei pala. Ratsastin päivän '
       + 'Thingvellirin rotkoon, jossa kansa on kokoontunut käräjille ennen '
-      + 'kuin Euroopassa oli yhtäkään kuningasta nykyisistä suvuista. '
-      + 'Mittasin kuuman lähteen, kunnes lämpömittarini suuttui. Saari, '
-      + 'jossa on tulivuoria ja parlamentti. Parlamentti on niistä vanhempi. '
-      + 'Kaupungissa on pari sataa taloa ja satama, jonka laivat tuovat '
-      + 'puutavaran ja viemät kalan.',
+      + 'kuin Euroopassa oli yhtäkään kuningasta nykyisistä suvuista. Mittasin '
+      + 'kuuman lähteen, kunnes lämpömittarini suuttui. Saari, jossa on '
+      + 'tulivuoria ja parlamentti. Parlamentti on niistä vanhempi. '
+      + 'Kaupungissa on pari sataa taloa ja satama, joka tuo puun ja vie '
+      + 'kalan.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
-    luenta: '[curious] Maasta nousee höyryä, vaikka mikään ei pala. '
-      + 'Ratsastin päivän Thingvellirin rotkoon, jossa kansa on kokoontunut '
-      + 'käräjille ennen kuin Euroopassa oli yhtäkään kuningasta nykyisistä '
-      + 'suvuista. [warmly] Mittasin kuuman lähteen, kunnes lämpömittarini '
-      + 'suuttui. Saari, jossa on tulivuoria ja parlamentti. Parlamentti on '
-      + 'niistä vanhempi. [softly] Kaupungissa on pari sataa taloa ja '
-      + 'satama, jonka laivat tuovat puutavaran ja viemät kalan.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Maasta nousee höyryä, vaikka mikään ei pala. Ratsastin '
+      + 'päivän Thingvellirin rotkoon, jossa kansa on kokoontunut käräjille '
+      + 'ennen kuin Euroopassa oli yhtäkään kuningasta nykyisistä suvuista. '
+      + 'Mittasin kuuman lähteen, kunnes lämpömittarini suuttui. Saari, jossa '
+      + 'on tulivuoria ja parlamentti. Parlamentti on niistä vanhempi. '
+      + '[softly] Kaupungissa on pari sataa taloa ja satama, joka tuo puun ja '
+      + 'vie kalan.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-islanti.mp3',
   },
 

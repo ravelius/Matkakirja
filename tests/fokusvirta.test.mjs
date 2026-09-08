@@ -359,8 +359,9 @@ test('uuden kulun huudahdus osuu matkakirjan tekstiin tasan kerran', () => {
       `${kaupunki}: välihuuto on liian pitkä`);
   }
   // Huudahdus jäi 8.9.2026 vain noin puoleen kaupungeista (omistaja:
-  // "puolet välihuomautuksista pois"): yhdeksän kahdeksastatoista.
-  assert.equal(uusia, 8, `huudahduksen kaupunkeja pitäisi olla 8, on ${uusia}`);
+  // "puolet välihuomautuksista pois"), ja illan erässä se poistui vielä
+  // Prahasta, Tampereelta ja Riiasta: kuusi kaupunkia.
+  assert.equal(uusia, 6, `huudahduksen kaupunkeja pitäisi olla 6, on ${uusia}`);
 });
 
 test('vähintään yhdessä puheenvuorossa isoisä osoittautuu oikeaksi', () => {

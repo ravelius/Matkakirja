@@ -176,81 +176,35 @@ export const FOKUSVIRTA_FIRENZE = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Firenze, toukokuussa 1873. Lämmintä; joki matalalla.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Tämä kaupunki oli vielä äsken kuningaskunnan pääkaupunki, '
-      + 'ja nyt hovi on muuttanut Roomaan ja jättänyt jälkeensä '
-      + 'hiljaisuuden, joka sopii sille paremmin. Sillalla, jonka päälle '
-      + 'on rakennettu puoteja, on käyty samaa kimaltavaa kauppaa '
-      + 'neljäsataa vuotta. Signorian '
-      + 'aukiolla seisoin Davidin edessä niin kauan, että kyyhkyset '
-      + 'ehtivät vaihtaa vahtivuoroa — mutta patsas seisoi kauemmin. '
-      + 'Sitä aiotaan kuulemma siirtää sisälle sateilta suojaan; toivon '
-      + 'että se ehtii nähdä vielä yhden kesän. '
-      + 'Joki on ruskea ja kärsimätön; '
-      + 'sanotaan että se on ennenkin noussut kaduille ja nousee vielä.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 379 merkkiä (yläraja 400). */
+    teksti: 'Vielä äsken tämä oli kuningaskunnan pääkaupunki. Nyt hovi on '
+      + 'muuttanut Roomaan ja jättänyt jälkeensä hiljaisuuden, joka sopii '
+      + 'kaupungille paremmin. Sillalla, jonka päälle on rakennettu puoteja, '
+      + 'myydään kultaa kuin neljäsataa vuotta sitten. Aukiolla seisoin '
+      + 'Davidin edessä niin kauan, että kyyhkyset vaihtoivat vahtivuoroa. '
+      + 'Patsas aiotaan siirtää kesällä sisälle sateilta suojaan.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[softly] Tämä kaupunki oli vielä äsken kuningaskunnan '
-      + 'pääkaupunki, ja nyt hovi on muuttanut Roomaan ja jättänyt '
-      + 'jälkeensä hiljaisuuden, joka sopii sille paremmin. [curious] '
-      + 'Sillalla, jonka päälle on rakennettu puoteja, on käyty samaa '
-      + 'kimaltavaa kauppaa neljäsataa vuotta. '
-      + '[warmly] Signorian aukiolla seisoin Davidin edessä niin '
-      + 'kauan, että kyyhkyset ehtivät vaihtaa vahtivuoroa — mutta '
-      + 'patsas seisoi kauemmin. Sitä aiotaan kuulemma siirtää sisälle '
-      + 'sateilta suojaan; toivon että se ehtii nähdä vielä yhden '
-      + 'kesän. [whispers] Joki on ruskea ja kärsimätön; sanotaan '
-      + 'että se on ennenkin noussut kaduille ja nousee vielä.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Vielä äsken tämä oli kuningaskunnan pääkaupunki. Nyt '
+      + 'hovi on muuttanut Roomaan ja jättänyt jälkeensä hiljaisuuden, joka '
+      + 'sopii kaupungille paremmin. Sillalla, jonka päälle on rakennettu '
+      + 'puoteja, myydään kultaa kuin neljäsataa vuotta sitten. Aukiolla '
+      + 'seisoin Davidin edessä niin kauan, että kyyhkyset vaihtoivat '
+      + 'vahtivuoroa. [softly] Patsas aiotaan siirtää kesällä sisälle sateilta '
+      + 'suojaan.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-firenze.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa
-     * sen jälkeen.
-     *
-     * PARIPERIAATE: merkintä on haikea muttei synkkä — kaupunki, josta
-     * juhla lähti pois. Livia ei naljaile isoisälle vaan tekee sen,
-     * minkä välittäjä tekee: antaa hiljaisuudelle mitan ja päivämäärän.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1 PAINOPISTE
-     * REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja lopussa
-     * ("mut"), keskellä sanat ovat auki; pronominit kokonaisina; ei
-     * huutomerkkejä.
-     *
-     * MIKSI PÄÄKAUPUNKIVUODET EIKÄ JOKI TAI DAVID: kanoninen `teksti`
-     * alla hoitaa jo joen (1966) ja Davidin, eikä sama asia saa tulla
-     * kahdesti samassa kuplassa. Merkinnän ensimmäinen virke — se, joka
-     * peliruudulla lihavoidaan — on hovin lähdöstä, eikä siihen vastaa
-     * kukaan muu.
-     *
-     * FAKTAKURI: viisi väitettä, kaikki it-Wikipedian artikkelista
-     * "Firenze capitale" (johdanto ja osio "Storia"; haettu 29.8.2026).
-     * (1) Firenze oli Italian pääkaupunki 3.2.1865–3.2.1871. (2) Kuningas
-     * Vittorio Emanuele II matkusti Torinosta junalla ja saapui
-     * Firenzeen 3.2.1865. (3) Palazzo Vecchion Cinquecenton sali oli
-     * edustajainhuone, (4) Uffizin Teatro Mediceo senaatti ja Palazzo
-     * Medici Riccardi pääministerin ja sisäministeriön talo. (5) Vuoden
-     * 1865 alkukuukausina kaupunkiin muutti 30 000 uutta asukasta, kun
-     * asukkaita oli 118 000.
-     */
-    maadoitus: 'Kääk. Se hovi oli täällä tasan kuusi vuotta: kolmantena '
-      + 'helmikuuta 1865 kuningas tuli junalla Torinosta, ja kolmantena '
-      + 'helmikuuta 1871 hallitus oli jo Roomassa. Ne vuodet asuivat '
-      + 'vanhoissa taloissa niin kuin osasivat — kansanedustajat '
-      + 'istuivat Palazzo Vecchion isossa salissa, senaatti Uffizin '
-      + 'teatterissa ja pääministeri Medicien palatsissa. Pelkästään '
-      + 'alkuvuonna 1865 tänne muutti kolmekymmentätuhatta ihmistä '
-      + 'satakahdeksantoistatuhannen päälle, ja kuuden vuoden kuluttua '
-      + 'sama väki pakkasi laukkunsa. Isoisäsi kuuli oikean '
-      + 'hiljaisuuden — mut se oli vasta muuton jälkeinen hiljaisuus, '
-      + 'ei vanha.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'David siirrettiin sisälle, ja aukiolla seisoo kopio. Sillan puodit myyvät yhä kultaa.',
+    ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      */
