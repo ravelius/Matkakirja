@@ -740,7 +740,7 @@ async function vedaKarusellia(kohde, { cdp, kosketus, kuva }) {
     await kohde.waitForTimeout(18);
     if (n === Math.round(askeleet * 0.6)) {
       kesken = await kohde.evaluate(KARUSELLIN_TILA);
-      await kohde.screenshot({ path: kuva('kesken') });
+      if (kuva) await kohde.screenshot({ path: kuva('kesken') });
     }
   }
   await ylos();
@@ -753,7 +753,7 @@ async function vedaKarusellia(kohde, { cdp, kosketus, kuva }) {
   const heti = await kohde.evaluate(KARUSELLIN_TILA);
   await odotaKarusellinRauha(kohde);
   const jalkeen = await kohde.evaluate(KARUSELLIN_TILA);
-  await kohde.screenshot({ path: kuva('irrotus') });
+  if (kuva) await kohde.screenshot({ path: kuva('irrotus') });
   return { alkuTila, kesken, heti, jalkeen };
 }
 
@@ -826,11 +826,9 @@ async function ajaKarusellinVeto() {
 
     await s.evaluate(() => window.matkakirja.ui.aikajana.jatka());
     await s.waitForTimeout(200);
-    const jatkuva = await vedaKarusellia(s, {
-      cdp,
-      kosketus,
-      kuva: (t) => join(ULOS, `savuke-aikajana-veto-${nakyma}-jatkuu-${t}.png`),
-    });
+    // Jatkon vedosta ei oteta kuvia: kontissa yksi pallokaappaus maksaa
+    // lähes minuutin, ja omistajan kuvat ovat ensimmäisestä vedosta.
+    const jatkuva = await vedaKarusellia(s, { cdp, kosketus, kuva: null });
     vaadi(nimessa('käynnissä ollut jatkaa vedon jälkeen (kello ei jää tauolle)'),
       jatkuva.kesken?.kaynnissa === false && jatkuva.heti.kaynnissa === true,
       JSON.stringify({ kesken: jatkuva.kesken?.kaynnissa, heti: jatkuva.heti.kaynnissa }));
@@ -1140,7 +1138,21 @@ const juttu = await sivu.evaluate(async () => {
     dialogi: Boolean(document.getElementById('nahtavyys-dialog')?.open),
   };
   kortti?.querySelector('.tiedeliite-navinappi.edellinen')?.click();
-  await new Promise((r) => setTimeout(r, 600));
+  /*
+   * PANEELIN RISTIHÄIVYTYS ODOTETAAN LOPPUUN, EI KIINTEÄLLÄ AJALLA.
+   * Uusi ilmiösivu saa `esilla`-luokkansa vasta kuvan dekoodauksen
+   * (katto 250 ms) JÄLKEISESSÄ requestAnimationFramessa
+   * (js/aikajana.js vaihdaPaneeli), ja kontin ohjelmisto-WebGL piirtää
+   * pallolla noin kehyksen sekunnissa: 600 ms:n odotus osui väliin ja
+   * luki vielä vanhaa loppusanasivua (mitattu 8.9.2026). Odotus on
+   * SAMA EHTO kuin väite — jos paneeli ei seuraa lainkaan, silmukka
+   * käy loppuun ja väite kaatuu kuten ennenkin.
+   */
+  for (let i = 0; i < 60; i += 1) {
+    const sivut = [...document.querySelectorAll('.aikajana-ilmio-sivu')];
+    if (sivut.length && sivut.at(-1).classList.contains('esilla')) break;
+    await new Promise((r) => setTimeout(r, 100));
+  }
   tila.edellinen = document.querySelector('.tiedeliite-kortti .looppi-otsikko')?.textContent ?? '';
   // Paneeli on v1637:ssä havainnekuva kuvatekstillä (vuosi ◈ otsikko),
   // ei enää henkilörivi: seuraaminen näkyy kuvatekstin otsikosta.
