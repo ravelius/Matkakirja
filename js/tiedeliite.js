@@ -518,6 +518,7 @@ function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
  */
 export function avaaTiedeliite(ui, tapahtumat, i, {
   lahdeVara = null, kunVaihtuu = null, kunSuljetaan = null, sisallys: sisallysAsetus = null,
+  alkusanat = null,
 } = {}) {
   if (typeof document === 'undefined') return null;
   if (!onTiedeliitteenSivu(tapahtumat?.[i])) return null;
@@ -654,6 +655,16 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
     kortti.setAttribute('aria-label', `Tiedeliite: ${t.otsikko}`);
     const uusi = html('div', 'tiedeliite-sivu');
     piirraTiedeliitteenSivu(ui, uusi, t, lahdeVara);
+    /*
+     * ALKUSANAT ENSIMMÄISELLE SIVULLE (omistaja 8.9.2026: kaistan selite
+     * Tiedeliitteen alkuun): kaari voi antaa yhden kappaleen, joka
+     * piirtyy vain kaaren ensimmäisen Tiedeliite-sivun kärkeen. Muut
+     * sivut ja muut kaaret ovat ennallaan.
+     */
+    if (alkusanat && j === tapahtumat.findIndex((x) => onTiedeliitteenSivu(x))) {
+      const kappale = html('p', 'tiedeliite-alkusanat', String(alkusanat));
+      uusi.insertBefore(kappale, uusi.firstChild);
+    }
     // Kaiutin sivun nimiöriville (js/lukija.js lisaaLukijanappi):
     // jokainen keksijäsivu on oma juttunsa ja saa oman luentansa.
     lisaaLukijanappi(uusi, { otsikko: 'Kuuntele tiedeliite' });

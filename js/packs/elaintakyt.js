@@ -2166,7 +2166,11 @@ export const ELAINTAKYT = {
    * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
    * Erä M16 (TUN, SYR, YEM, SHN) toi kolme uutta eläintäkyä.
    *
-   * SAINT HELENA JÄI ILMAN TÄKYÄ. Saaren tikkuri (Saint Helena plover,
+   * SAINT HELENA JÄI TÄSSÄ ERÄSSÄ ILMAN TÄKYÄ — este purettiin vasta
+   * erässä M21 8.9.2026, ks. tämän tiedoston loppu (SHN). Alkuperäinen
+   * perustelu on jätetty näkyviin, koska se kertoo mitä mitattiin:
+   *
+   * Saaren tikkuri (Saint Helena plover,
    * wirebird) olisi luonteva valinta, mutta tämän tiedoston paikka
    * tarkistetaan testissä laudan MAA-ALUETTA vasten (js/mapart.js
    * isOnLand, map.outlines) eikä maan countryShapes-rengasta vasten.
@@ -2506,6 +2510,65 @@ export const ELAINTAKYT = {
     // tests/elaintakyt.test.mjs MAATESTIN_POIKKEUS.
     lon: 166.6,
     lat: -14.65,
+  },
+  /* ================================================================
+   * ERÄ M21, 8.9.2026 — SAINT HELENAN TIKKURI (omistajan päätös).
+   *
+   * Omistaja 8.9.2026: *"Pudota yksi merkki, tikkuri mukaan."* Saaren
+   * tikkuri (wirebird, Saint Helena plover) oli kirjattu kahdesti
+   * mahdottomaksi — erässä M16 laudan maamuodon takia ja erässä M20
+   * nimiölimityksen takia — ja molemmat esteet purettiin nyt, kumpikin
+   * omalla tavallaan.
+   *
+   * ESTE 1, LAUDAN MAAMUOTO: sama kuin Fidžillä, Salomonsaarilla ja
+   * Vanuatulla. Maailmankartan `map.outlines` ei tunne Saint Helenan
+   * saarta lainkaan — se on laudalla vain countryShapes-renkaana —
+   * joten yksikään saaren piste ei läpäise isOnLand-vartiota. Ratkaisu
+   * on sama kuin niillä kolmella: merkki pannaan lajin todelliseen
+   * paikkaan ja tyylitelty rantaviiva saa dokumentoidun poikkeuksen
+   * (tests/elaintakyt.test.mjs MAATESTIN_POIKKEUS). Piste on SHN:n
+   * oman monikulmion SISÄLLÄ, joten rajatestiin ei tarvita mitään.
+   *
+   * ESTE 2, NIMIÖLIMITYS: saarelle mahtuu seitsemän merkkiä, ei
+   * kahdeksaa (mitattu erissä M16 ja M20). Täky mahtuu siksi vain
+   * jonkin nykyisen merkin tilalle, ja päätoimittaja pudotti Sandy Bayn
+   * (js/packs/maastokohteet-shn.js) — meri-tyyppinen kohde saarella,
+   * jonka rannikkoa kerrotaan muutenkin. Poiston jälkeen
+   * `node tools/tarkista-nimiolimitys.mjs SHN` sanoo
+   * "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+   *
+   * PAIKKA ON HARAVOITU, EI ARVATTU. Saaren monikulmion sisään osuvat
+   * pisteet käytiin läpi 0,01 asteen ruudukolla (88 pistettä) ja
+   * jokaiselle ajettiin sama ladonta kuin portille; nolla limitystä
+   * antoi 12 pistettä, kaikki saaren eteläosassa eli juuri siellä,
+   * mistä Sandy Bay väistyi. Valituksi tuli 5,72 W / 15,99 S — sama
+   * piste, jonka erä M20 kokeili ja joka silloin tuotti limityksen.
+   * Se on 84,3 lautayksikköä St. Helena -kaupunkilaatasta
+   * (vähimmäisetäisyys 35), 688,4 yksikköä lähimmästä toisesta
+   * eläintäystä (Namibia, vähimmäisetäisyys 30), SHN:n oman
+   * monikulmion sisällä ja SHN-lehden rajauksen sisällä, joten merkki
+   * näkyy myös maalehden kartalla.
+   *
+   * KUVATON TIETUE: `kuva`-kentässä on kuvaputken ämpäritunnus ilman
+   * kansiota (js/media.js assetOsoite), ja kortti latoo siihen asti
+   * tekstin ja lähteen ilman kuvakehystä.
+   * ============================================================== */
+  SHN: {
+    elain: 'tikkuri',
+    otsikko: 'Lintu, jota metsänhakkuu auttoi',
+    teksti: 'Tikkuri eli wirebird on noin 15 senttimetrin mittainen kahlaaja, joka elää vain Saint Helenan saarella keskellä Atlanttia, ja paikallinen nimi tulee sen ohuista jaloista. Lintu mainittiin ensi kerran vuonna 1638, ja se on saaren kansallislintu: se on kuvattuna vaakunassa ja lipussa sekä ennen vuotta 1998 lyötyjen viiden pennin kolikoiden kääntöpuolella. Tikkuri pysyttelee ympäri vuoden saaren avoimilla alueilla, ja saarta muuten runnellut laaja metsänhakkuu on itse asiassa hyödyttänyt juuri tätä lajia, koska se elää metsän aukoissa. Kanta on vaihdellut ja ainakin 1970-luvulta lähtien laskenut: laskennassa 1988–89 lintuja oli noin 450, vuosien 2005–06 kartoituksissa enää 200–220, ja laji luokiteltiin 2007 äärimmäisen uhanalaiseksi; vuoteen 2021 mennessä kanta oli toipunut noin 545 aikuiseen yksilöön ja luokitus laskettu vaarantuneeksi. Uhkina ovat villiintyneet kissat, vahingossa tuodut rotat, tuotu kettumaina, maastoajoneuvojen käyttö, Prosperous Bay Plainille rakennettu lentoasema ja suunniteltu tuulipuisto, ja RSPB:n hankkeet seuraavat lintuja ja yrittävät pysäyttää laskun.',
+    lahde: 'en-Wikipedia "Saint Helena plover", johdanto sekä osiot "Description" '
+      + 'ja "Status and conservation". Tarkistettu 8.9.2026.',
+    kuva: 'elain-shn',
+    // Piste on saaren eteläosassa (5,72 W / 15,99 S), 84,3
+    // lautayksikköä St. Helena -kaupunkilaatasta (vähimmäisetäisyys 35)
+    // ja SHN:n monikulmion sisällä. Laji on lähteen mukaan ympäri
+    // vuoden saaren avoimilla alueilla, joten merkkiä ei ole sidottu
+    // mihinkään yksittäiseen paikannimeen. Laudan rantaviiva ei tunne
+    // saarta — ks. erän otsikkokommentti ja tests/elaintakyt.test.mjs
+    // MAATESTIN_POIKKEUS.
+    lon: -5.72,
+    lat: -15.99,
   },
 };
 

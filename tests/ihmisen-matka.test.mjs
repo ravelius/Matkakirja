@@ -849,3 +849,14 @@ test('työkalu ja työnkulut osaavat molemmat kaaret', () => {
   assert.match(LUENTATYONKULKU, /--linssi "\$LINSSI"/);
   assert.match(MUSIIKKITYONKULKU, /'keksinnot', 'ihmisen-matka'\]/);
 });
+
+/* Kaistan selite Tiedeliitteen alkuun (omistaja 8.9.2026). */
+test('kaari antaa kaistan selitteen Tiedeliitteen alkusanoiksi', async () => {
+  const { LINSSI } = await import('../js/linssit/ihmisen-matka.js');
+  const { IHMISEN_MATKA_KAISTASELITE } = await import('../js/linssit/ihmisen-matka-data.js');
+  assert.equal(LINSSI.aikajana.tiedeliiteAlkusanat, IHMISEN_MATKA_KAISTASELITE);
+  assert.match(IHMISEN_MATKA_KAISTASELITE, /kaista/i);
+  assert.match(IHMISEN_MATKA_KAISTASELITE, /kuvitus/i);
+  const tiedeliite = readFileSync(new URL('../js/tiedeliite.js', import.meta.url), 'utf8');
+  assert.match(tiedeliite, /tiedeliite-alkusanat/);
+});

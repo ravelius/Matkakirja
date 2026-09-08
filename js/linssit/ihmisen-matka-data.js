@@ -210,6 +210,17 @@ export const IHMISEN_MATKA_ALOITUS = 'Tulet seuraavaksi näkemään, miten yksi 
   + 'sukupolvi siirtyi vain vähän kauemmas kuin edellinen, ja tuhat sukupolvea '
   + 'myöhemmin oltiin toisella puolella maapalloa.';
 
+/*
+ * KAISTAN SELITE TIEDELIITTEEN ALKUUN (omistaja 8.9.2026 kortilla: "Kyllä,
+ * Tiedeliitteeseen"; Raamattu VANAT RANNIKKOA MAALAAVINA KAISTOINA: leveys
+ * on kuvituksellinen, ei tiedeväite). Näytetään Tiedeliitteen ensimmäisen
+ * sivun alussa (js/tiedeliite.js alkusanat).
+ */
+export const IHMISEN_MATKA_KAISTASELITE = 'Kartan värikaista näyttää, minne ihmiset '
+  + 'olivat levinneet: se on leveä siellä, missä asuttiin pitkään, ja kapea siellä, '
+  + 'missä vain kuljettiin läpi. Leveys on kuvitusta, ei mittaus — löytöpaikat ovat '
+  + 'todisteita, kaista on tulkinta.';
+
 /** Loppusanat, kun vanat ulottuvat koko maailmaan. */
 export const IHMISEN_MATKA_LOPPU = 'Vanat ulottuvat nyt Marokon kukkulalta '
   + 'Tyynenmeren yli Uuteen-Seelantiin, ja pisteet merkitsevät kaksikymmentä paikkaa, '

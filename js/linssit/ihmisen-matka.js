@@ -303,6 +303,8 @@ export const LINSSI = {
      * css/aikajana.css `.on-kuva`).
      */
     esittely: avauslaatikko(),
+    // Kaistan selite Tiedeliitteen ensimmäiselle sivulle (omistaja 8.9.2026).
+    tiedeliiteAlkusanat: data.IHMISEN_MATKA_KAISTASELITE,
     // Kello alkaa ja päättyy asteikon mukaan; alue on koko maapallo.
     alue: MAAILMA,
     /*
