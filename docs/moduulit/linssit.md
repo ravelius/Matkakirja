@@ -1025,6 +1025,95 @@ kultarenkaalle ja varjolle). Savuke mittaa tämän
 että nykyinen kortti on nauhan keskellä, menneet vasemmalla sumeina ja
 tulevat oikealla tarkkoina.
 
+### 9.1 Karuselli vieritetään sormella (8.9.2026)
+
+Raamattu **"KEKSINTOLINSSIN KARUSELLI ON SEN AIKASELAIN, JA SE
+VIERITETAAN SORMELLA"** (omistaja 8.9.2026). Alarivi ei ole enää pelkkä
+näyttö, jota nuolinäppäimet ja napautukset askeltavat: **sormi tarttuu
+keksijäriviin ja selaa sitä liukuen** — sama ele kuin Ihmisen matkan
+aikaselaimessa (js/linssit/aikaselain.js, docs/moduulit/ihmisen-matka-
+vanat.md luku 15), mutta viivojen sijaan kasvot.
+
+**Sormi vetää pikseleitä, karuselli elää korttinumeroina.** Muunnos ei
+ole vakiokerroin, koska kortit kutistuvat ulospäin: naapurin tuominen
+keskelle vaatii 1,09 kortin leveyden matkan, mutta kaukaisemmat
+askeleet ovat 0,46. Muunnos on siksi `karusellinEtaisyys`-funktion
+**käänteisfunktio**:
+
+| funktio (js/aikajana.js) | tehtävä |
+|---|---|
+| `karusellinMitta(d)` | kortin mitta, nyt **jatkuva** — kokonaisluvuilla entiset arvot, väliarvot interpoloituina |
+| `karusellinEtaisyys(d)` | kortin etäisyys keskeltä kortin leveyksinä, murtoluvuilla |
+| `karusellinEtaisyysKaanteinen(x)` | pikselimatka → korttinumeroita (vedon koko matematiikka) |
+| `karusellinVedonPaikka(alku, dx, w, maara)` | sormen paikka korttinumeroina, rajattuna nauhan päihin |
+| `karusellinHeitto(nopeus)` | pyyhkäisyn jatke kortteina, katto `KARUSELLIN_HEITON_KATTO` = 3 |
+| `karusellinKohde(nyt, heitto, maara)` | irrotuksen asettumiskohta (lähin kortti) |
+| `karusellinPaikat(i, nyt, leveys)` | ottaa keskikohdan **murtolukuna**; "nykyinen" on lähin kortti |
+
+Kaikki ovat puhtaita funktioita, koska veto rikkoutuu hiljaa: väärä
+muunnos veisi karusellin sormen alta pois eikä mikään kaatuisi
+(tests/aikajana.test.mjs, kuusi uutta testiä).
+
+**Kytkentä on `kytkeKarusellinVeto()`.** Kuuntelijat ovat NAUHASSA:
+nauha on `pointer-events: none`, joten tapahtumat tulevat korteilta ja
+kuplivat sinne, ja yksi kuuntelijasarja riittää kaikille korteille.
+Osoitin otetaan kiinni **kortilta** (`setPointerCapture`), jotta veto
+pysyy karusellilla, vaikka sormi lipsahtaisi kartan päälle.
+
+1. **Alku.** Painallus kortin päällä. Alle `KARUSELLIN_VEDON_KYNNYS`
+   (8 px) jäävä liike on napautus, ja pystysuora liike jätetään
+   kartalle — karuselli on vaakasuora ohjain.
+2. **Liike.** Sormen paikka menee `vetoNyt`-kenttään murtolukuna, ja
+   `asettele()` lukee sen kellon tilan sijaan. Nauha saa luokan
+   `vedossa`, joka katkaisee CSS-siirtymän: 0,6 s:n siirtymä laahaisi
+   sormesta jäljessä eikä rivi tuntuisi tarttuvan. Korttikuvia **ei
+   vaihdeta** vedon aikana (dekoodaus maksaa moninkerroin sen, mitä
+   transformin päivitys).
+3. **Esikatselu.** Kello rullaa lähimmän keksijän vuoteen ja paikkarivi
+   näyttää hänen tietonsa, mutta **vain kun lähin vaihtuu** — ajo ei
+   hyppää joka kehyksellä (omistajan ehto). Rullaus on sama kuin
+   selailussa (`siirry`, nuolinäppäimet), joten esikatselukin liikkuu
+   pehmeästi. Paneeli, lamput ja kamera eivät liiku kesken vedon.
+4. **Irrotus.** Karuselli asettuu pehmeästi lähimpään keksijään ja
+   linssi siirtyy sen pysäkille **moottorin omalla `siirry`-polulla** —
+   sama kuin kortin napautuksessa ja nuolinäppäimissä. Pyyhkäisyn
+   liikemäärä kuljettaa enintään kolme keksijää hidastuen; loputonta
+   rullausta ei ole. **Tauolla ollut jää tauolle, käynnissä ollut
+   jatkaa** (`veto.kaynnissa`).
+
+**Hiiri tarvitsi oman lukkonsa.** Ensimmäisessä savukeajossa (8.9.2026)
+kosketus veti karusellia moitteetta, mutta **hiirellä rivi ei liikkunut
+lainkaan**: kortin muotokuva on selaimelle raahattava kuva ja nimi
+valittavaa tekstiä, joten Chromium aloitti niistä oman natiivin
+raahauksensa heti ensimmäisestä liikkeestä ja **perui osoittimen**
+kesken vedon. Lukkoja on nyt kaksi: tyylissä `user-select: none`
+kortille ja `-webkit-user-drag: none; pointer-events: none` sen
+kuvalle (jolloin vedon kohde on aina itse kortti), ja moottorissa
+`dragstart`-kuuntelija, joka peruu raahauksen.
+
+**Kuka omistaa kosketuksen.** Sama rajaus kuin aikaselaimella:
+tapahtumat pysäytetään (`stopPropagation`) ja `touch-action: none`
+(css `.aikajana-kortti`) estää selainta tulkitsemasta vetoa
+vieritykseksi — **pallo ei panoroi karusellin vedosta**. Kuuntelijat
+ovat vain nauhassa, joten **pallon kosketus ei vedä karusellia**.
+
+**Mikä ei muutu.** Nuolinäppäimet ja korttien napautus säilyvät
+(`vedettiin`-lippu estää irrotusta laukaisemasta napautusta yhden
+tapahtumakierroksen ajan, sama kaava kuin paneelin raahauksen
+`raahattiin`). Kertomuskaari (Ihmisen matka) ei saa vetoa lainkaan: sen
+nauha on `display: none`, ja veto kieltäytyy myös avausjakson ja
+välinäytöksen aikana. Välinäytös ja Tiedeliite ovat ennallaan.
+`prefers-reduced-motion` nollaa heiton ja `--aikajana-kesto` on jo
+0,01 s, joten asettuminen on suora.
+
+**Vartio:** `tools/savukkeet/savuke-aikajana.mjs` osio K
+(`ajaKarusellinVeto`) vetää karusellia ruutukoordinaateilla kahdessa
+näkymässä — tabletti 834 × 1100 hiirellä ja puhelin 390 × 844
+CDP-kosketuksella — ja mittaa, että rivi liukuu sormen mukana, ajo ei
+hyppää kesken vedon, pallon `pointOfView` on vedon aikana muuttumaton,
+irrotus vaihtaa pysäkin ja kellon, tauon muisti säilyy ja napautus
+toimii yhä.
+
 ---
 
 ## 10. Tiedeliite — keksijän oma lehtisivu (3.9.2026)

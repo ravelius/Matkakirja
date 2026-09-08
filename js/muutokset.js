@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1687, teksti: 'Keksintölinssin karuselli vieritetään sormella' },
   { v: 1686, teksti: 'Keksintölinssin yläpalkki ja Aloita alusta, pallon sarja f' },
   { v: 1685, teksti: 'Lalibelan merkintä, kaistan selite, Saint Helenan tikkuri' },
   { v: 1684, teksti: 'Tilannetaulu ja aamuraportti 8.9.2026' },

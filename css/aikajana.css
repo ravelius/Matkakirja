@@ -1377,6 +1377,26 @@
   transition: opacity var(--aikajana-kesto) var(--aikajana-kaari);
 }
 .aikajana-nauha.tyhja { opacity: 0; }
+/*
+ * VEDON AIKANA EI SIIRTYMÄÄ (Raamattu "KEKSINTOLINSSIN KARUSELLI ON SEN
+ * AIKASELAIN, JA SE VIERITETAAN SORMELLA", omistaja 8.9.2026). Sormi
+ * asettaa kortin paikan suoraan joka osoitintapahtumassa; jos siirtymä
+ * olisi päällä, rivi laahaisi 0,6 s sormesta jäljessä eikä tuntuisi
+ * tarttuvan. Irrotuksessa luokka poistuu, ja sama siirtymä hoitaa
+ * pehmeän asettumisen (snap) lähimpään keksijään.
+ */
+.aikajana-nauha.vedossa .aikajana-kortti { transition: none; }
+.aikajana-nauha.vedossa .aikajana-kortti { cursor: grabbing; }
+/*
+ * SORMI VETÄÄ KORTTIA, EI KUVAA. Kortin muotokuva on selaimelle
+ * RAAHATTAVA KUVA ja nimi VALITTAVAA TEKSTIÄ: hiirellä Chromium
+ * aloitti niistä oman natiivin raahauksensa heti ensimmäisestä
+ * liikkeestä ja PERUI osoittimen kesken vedon — kosketus toimi,
+ * hiiri ei (mitattu savukkeella 8.9.2026). Kuva ei ota osoitinta
+ * lainkaan, jolloin vedon kohde on aina itse kortti.
+ */
+.aikajana-kortti { user-select: none; -webkit-user-select: none; }
+.aikajana-kortti img { -webkit-user-drag: none; pointer-events: none; }
 
 .aikajana-kortti {
   --paikka: 0;
@@ -1403,8 +1423,16 @@
   color: inherit;
   font: inherit;
   text-align: left;
-  cursor: pointer;
+  cursor: grab;
   pointer-events: auto;
+  /*
+   * KARUSELLI OMII KOSKETUKSEN (sormiveto 8.9.2026, sama rajaus kuin
+   * aikaselaimella js/linssit/aikaselain.js): ilman tätä selain
+   * tulkitsisi vaakavedon sivun vieritykseksi ja peruisi osoittimen
+   * kesken eleen. Pystysuunnan ele jää kartalle, koska kuuntelija
+   * hylkää sen itse (kytkeKarusellinVeto).
+   */
+  touch-action: none;
   transform-origin: bottom center;
   /*
    * --paikka on etäisyys keskeltä KORTIN LEVEYKSINÄ (neg. = menneet).

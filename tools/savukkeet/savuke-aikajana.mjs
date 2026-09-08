@@ -81,6 +81,14 @@
  *        7.9.2026 (omistaja); lapun rullaus ja kulman ✕ ovat oman
  *        savukkeensa vartiossa (savuke-linssin-lappu.mjs).
  *
+ * KARUSELLIN SORMIVETO (K.1–K.6, 8.9.2026, keksintökaari): oma
+ * vartionsa tiedoston lopussa (ajaKarusellinVeto). Se vetää
+ * karusellia RUUTUKOORDINAATEILLA kahdessa näkymässä — tabletti
+ * 834 × 1100 hiirellä ja puhelin 390 × 844 CDP-kosketuksella — ja
+ * mittaa, että rivi liukuu sormen mukana, ajo ei hyppää kesken vedon,
+ * PALLO EI PYÖRI vedon alla, irrotus vaihtaa pysäkin ja kellon, tauon
+ * muisti säilyy ja napautus toimii yhä.
+ *
  * KUVAKAAPPAUKSET (KAAPPAUKSET-kansio): hetkiltä 300 / 88 / 50 / 20 /
  * 15 ka, loppu koko pallon näkymässä, loppusanat ja galleria. Kello
  * pysäytetään hetkessä SIVUN SISÄLLÄ (yhden kehyksen tarkkuudella) ja
@@ -163,7 +171,9 @@ const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '
 /** Näkymät: työpöytä on savukkeen vakio, puhelin Ihmisen matkan kuvia varten. */
 const NAKYMAT = {
   tyopoyta: { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 },
-  puhelin: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 },
+  puhelin: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true },
+  /* Tabletti pystyssä: omistajan toinen kuvakoko karusellin sormivedolle. */
+  tabletti: { viewport: { width: 834, height: 1100 }, deviceScaleFactor: 1 },
 };
 
 /** Uusi konteksti ja sivu reitteineen; sivuvirheet kertyvät annettuun listaan. */
@@ -605,6 +615,243 @@ async function ajaIhmisenMatka() {
   }
 }
 
+
+/* ==================== KARUSELLIN SORMIVETO (8.9.2026) ====================
+ *
+ * Raamattu "KEKSINTOLINSSIN KARUSELLI ON SEN AIKASELAIN, JA SE
+ * VIERITETAAN SORMELLA". Yksikkötestit näkevät vedon matematiikan
+ * (tests/aikajana.test.mjs), mutta eivät sitä, tarttuuko sormi
+ * oikeasti riviin oikeassa selaimessa — ja mikä pahinta, ne eivät näe,
+ * pyöriikö PALLO vedon alla. Tämä vartio vetää karusellia
+ * RUUTUKOORDINAATEILLA kahdessa näkymässä:
+ *
+ *   tabletti 834 × 1100  hiirellä (page.mouse)
+ *   puhelin  390 × 844   kosketuksella (CDP Input.dispatchTouchEvent)
+ *
+ * VÄITTEET:
+ *   K.1  Veto liu'uttaa riviä: nykyinen kortti siirtyy vasemmalle ja
+ *        kutistuu, ja karusellin keskikohta (vetoNyt) on MURTOLUKU —
+ *        eli rivi on sormen mukana eikä askeleissa.
+ *   K.2  Ajo ei hyppää kesken vedon: pysäkki (tila.i) on entinen,
+ *        vaikka kello esikatselee lähimmän keksijän vuotta.
+ *   K.3  PALLO EI PYÖRI vedon aikana: kameran pointOfView on sama kuin
+ *        ennen vetoa (omistajan ehto: karusellin veto ei saa panoroida).
+ *   K.4  Irrotus vaihtaa pysäkin eteenpäin ja kellon vuosiluvun, ja
+ *        vetoNyt palaa nulliksi.
+ *   K.5  Tauolla ollut jää tauolle; käynnissä ollut jatkaa.
+ *   K.6  Napautus (ilman vetoa) toimii yhä: se ei ole veto.
+ *
+ * KUVAT: veto keskeltä ja irrotuksen jälkeen kummastakin näkymästä.
+ */
+
+/** Odota, että karusellin liuku on pysähtynyt (kaksi samaa lukemaa). */
+async function odotaKarusellinRauha(kohde) {
+  await kohde.evaluate(async () => {
+    let edellinen = null;
+    for (let k = 0; k < 40; k += 1) {
+      await new Promise((r) => setTimeout(r, 200));
+      const r = document.querySelector('.aikajana-kortti.nykyinen')?.getBoundingClientRect();
+      const x = r ? Math.round(r.left + r.width / 2) : null;
+      if (x !== null && x === edellinen && k >= 2) break;
+      edellinen = x;
+    }
+  });
+}
+
+/** Karusellin ja pallon tila yhtenä lukemana (ajetaan sivun sisällä). */
+const KARUSELLIN_TILA = () => {
+  const { ui } = window.matkakirja;
+  const ajo = ui.aikajana;
+  const kortit = [...document.querySelectorAll('.aikajana-kortti')].map((k) => {
+    const r = k.getBoundingClientRect();
+    return {
+      nimi: k.textContent.trim(),
+      x: Math.round(r.left + r.width / 2),
+      w: Math.round(r.width),
+      luokka: k.className,
+    };
+  });
+  const pov = ui.pallonInstanssi?.pointOfView?.() ?? null;
+  return {
+    i: ajo?.tila?.i ?? null,
+    vetoNyt: ajo?.vetoNyt ?? null,
+    kaynnissa: Boolean(ajo?.kaynnissa),
+    tauolla: Boolean(document.querySelector('.aikajana')?.classList.contains('tauolla')),
+    kello: document.querySelector('.aikajana-kello')?.getAttribute('aria-label') ?? null,
+    nykyinen: kortit.find((k) => /(^| )nykyinen( |$)/.test(k.luokka)) ?? null,
+    kortit,
+    pallo: pov ? `${pov.lat.toFixed(3)},${pov.lng.toFixed(3)},${pov.altitude.toFixed(4)}` : null,
+  };
+};
+
+/**
+ * Yksi veto ruutukoordinaateilla. `kosketus` valitsee CDP-kosketuksen
+ * hiiren sijaan. Palauttaa lukemat ennen vetoa, vedon keskeltä ja
+ * irrotuksen jälkeen; kuvat otetaan samoista hetkistä.
+ */
+async function vedaKarusellia(kohde, { cdp, kosketus, kuva }) {
+  const alkuTila = await kohde.evaluate(KARUSELLIN_TILA);
+  const mitat = await kohde.evaluate(() => {
+    const r = document.querySelector('.aikajana-kortti.nykyinen').getBoundingClientRect();
+    return {
+      x: r.left + r.width / 2,
+      y: r.top + r.height / 2,
+      w: document.querySelector('.aikajana-kortti').offsetWidth,
+    };
+  });
+  /*
+   * MATKA KAHDEN KEKSIJÄN VERRAN. karusellinEtaisyys(2) on 1,685
+   * kortin leveyttä (js/aikajana.js): sen verran sormi kuljettaa rivin
+   * kaksi askelta eteenpäin. Vasemmalle = eteenpäin ajassa.
+   */
+  const matka = Math.round(1.685 * mitat.w);
+  const askeleet = 14;
+  const x0 = Math.round(mitat.x);
+  const y0 = Math.round(mitat.y);
+  const piste = (n) => ({ x: x0 - Math.round((matka * n) / askeleet), y: y0 });
+
+  const alas = async () => {
+    if (kosketus) {
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: x0, y: y0, id: 1 }] });
+      return;
+    }
+    await kohde.mouse.move(x0, y0);
+    await kohde.mouse.down();
+  };
+  const liiku = async (p) => {
+    if (kosketus) {
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: p.x, y: p.y, id: 1 }] });
+      return;
+    }
+    await kohde.mouse.move(p.x, p.y);
+  };
+  const ylos = async () => {
+    if (kosketus) {
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+      return;
+    }
+    await kohde.mouse.up();
+  };
+
+  await alas();
+  let kesken = null;
+  for (let n = 1; n <= askeleet; n += 1) {
+    await liiku(piste(n));
+    await kohde.waitForTimeout(18);
+    if (n === Math.round(askeleet * 0.6)) {
+      kesken = await kohde.evaluate(KARUSELLIN_TILA);
+      if (kuva) await kohde.screenshot({ path: kuva('kesken') });
+    }
+  }
+  await ylos();
+  /*
+   * JATKON MUISTI LUETAAN HETI. Nopeutetussa savukkeessa vuosi kestää
+   * 6 ms, ja jos jatkanut kello ehtii asettumisen ajan käydä, se osuu
+   * seuraavaan pysäkkiin tai välinäytökseen ja on taas pysähtynyt —
+   * mittaus kertoisi silloin tahdista eikä tauon muistista.
+   */
+  const heti = await kohde.evaluate(KARUSELLIN_TILA);
+  await odotaKarusellinRauha(kohde);
+  const jalkeen = await kohde.evaluate(KARUSELLIN_TILA);
+  if (kuva) await kohde.screenshot({ path: kuva('irrotus') });
+  return { alkuTila, kesken, heti, jalkeen };
+}
+
+/** Sormiveto kahdessa näkymässä: tabletti hiirellä, puhelin kosketuksella. */
+async function ajaKarusellinVeto() {
+  for (const nakyma of ['tabletti', 'puhelin']) {
+    const kosketus = nakyma === 'puhelin';
+    const virhelista = [];
+    const { konteksti, sivu: s } = await avaaSivu(NAKYMAT[nakyma], virhelista);
+    const cdp = kosketus ? await konteksti.newCDPSession(s) : null;
+    const nimessa = (teksti) => `${teksti} (${nakyma}, ${kosketus ? 'kosketus' : 'hiiri'})`;
+    const kuva = (tunnus) => join(ULOS, `savuke-aikajana-veto-${nakyma}-${tunnus}.png`);
+
+    await avaaPeli(s);
+    const auki = await s.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      ui.busy = false;
+      if (!ui.game.player.linssit.includes('keksinnot')) ui.game.player.linssit.push('keksinnot');
+      ui.valitseLinssi('keksinnot');
+      for (let i = 0; i < 400; i += 1) {
+        if (ui.aikajana) break;
+        await new Promise((r) => setTimeout(r, 25));
+      }
+      document.querySelector('.aikajana-avaus-nappi')?.click();
+      // Keskelle kaarta ja tauolle: veto mitataan tunnetusta kohdasta.
+      for (let i = 0; i < 400; i += 1) {
+        if (ui.aikajana?.tila.i >= 0) break;
+        await new Promise((r) => setTimeout(r, 15));
+      }
+      ui.aikajana.napautaKorttia(8);
+      ui.aikajana.pysayta();
+      return { kortteja: document.querySelectorAll('.aikajana-kortti').length, i: ui.aikajana.tila.i };
+    });
+    vaadi(nimessa('keksintölinssi auki ja karuselli pysäkillä 8'),
+      auki.kortteja === 26 && auki.i === 8, JSON.stringify(auki));
+    await odotaKarusellinRauha(s);
+    // Kamera saa asettua ennen vetoa, jotta pallon liike on mitattavissa.
+    await s.waitForTimeout(1500);
+
+    const { alkuTila, kesken, jalkeen } = await vedaKarusellia(s, { cdp, kosketus, kuva });
+
+    /* K.1 Rivi liukuu sormen mukana ja keskikohta on murtoluku. */
+    const alkuKortti = alkuTila.nykyinen;
+    const keskenSama = kesken?.kortit.find((k) => k.nimi === alkuKortti?.nimi) ?? null;
+    const liuku = alkuKortti && keskenSama ? alkuKortti.x - keskenSama.x : 0;
+    const kutistui = Boolean(alkuKortti && keskenSama && keskenSama.w < alkuKortti.w);
+    const murtoluku = Number.isFinite(kesken?.vetoNyt)
+      && Math.abs(kesken.vetoNyt - Math.round(kesken.vetoNyt)) > 0.01;
+    vaadi(nimessa('veto liu\'uttaa riviä: kortti siirtyy vasemmalle, kutistuu ja keskikohta on murtoluku'),
+      liuku > 30 && kutistui && murtoluku,
+      JSON.stringify({ liuku, kutistui, vetoNyt: kesken?.vetoNyt, nimi: alkuKortti?.nimi }));
+
+    /* K.2 Ajo ei hyppää kesken vedon, mutta kello esikatselee. */
+    vaadi(nimessa('ajo ei hyppää kesken vedon: pysäkki entinen, kello esikatselee lähintä'),
+      kesken?.i === alkuTila.i && kesken?.kello !== alkuTila.kello,
+      JSON.stringify({ i: kesken?.i, alkuI: alkuTila.i, kello: kesken?.kello, alkuKello: alkuTila.kello }));
+
+    /* K.3 Pallo ei pyöri vedon aikana. */
+    vaadi(nimessa('pallo ei pyöri karusellin vedosta'), kesken?.pallo === alkuTila.pallo,
+      JSON.stringify({ ennen: alkuTila.pallo, kesken: kesken?.pallo }));
+
+    /* K.4 Irrotus asettuu ja siirtää pysäkin eteenpäin. */
+    vaadi(nimessa('irrotus vaihtaa pysäkin eteenpäin ja kellon vuoden, veto päättyy'),
+      jalkeen.vetoNyt === null && jalkeen.i > alkuTila.i && jalkeen.kello !== alkuTila.kello,
+      JSON.stringify({ i: jalkeen.i, alkuI: alkuTila.i, kello: jalkeen.kello, vetoNyt: jalkeen.vetoNyt }));
+
+    /* K.5 Tauolla ollut jää tauolle; käynnissä ollut jatkaa. */
+    vaadi(nimessa('tauolla ollut jää tauolle'), !jalkeen.kaynnissa && jalkeen.tauolla,
+      JSON.stringify({ kaynnissa: jalkeen.kaynnissa, tauolla: jalkeen.tauolla }));
+
+    await s.evaluate(() => window.matkakirja.ui.aikajana.jatka());
+    await s.waitForTimeout(200);
+    // Jatkon vedosta ei oteta kuvia: kontissa yksi pallokaappaus maksaa
+    // lähes minuutin, ja omistajan kuvat ovat ensimmäisestä vedosta.
+    const jatkuva = await vedaKarusellia(s, { cdp, kosketus, kuva: null });
+    vaadi(nimessa('käynnissä ollut jatkaa vedon jälkeen (kello ei jää tauolle)'),
+      jatkuva.kesken?.kaynnissa === false && jatkuva.heti.kaynnissa === true,
+      JSON.stringify({ kesken: jatkuva.kesken?.kaynnissa, heti: jatkuva.heti.kaynnissa }));
+
+    /* K.6 Napautus säilyy: pelkkä painallus ilman liikettä siirtää pysäkin. */
+    const napautus = await s.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      ui.aikajana.pysayta();
+      const ennen = ui.aikajana.tila.i;
+      const kortti = [...document.querySelectorAll('.aikajana-kortti.tuleva')][0];
+      const nimi = kortti?.textContent.trim() ?? '';
+      kortti?.click();
+      await new Promise((r) => setTimeout(r, 500));
+      return { ennen, jalkeen: ui.aikajana.tila.i, nimi };
+    });
+    vaadi(nimessa('napautus säilyy vedon rinnalla'), napautus.jalkeen > napautus.ennen,
+      JSON.stringify(napautus));
+
+    vaadi(nimessa('ei sivuvirheitä'), virhelista.length === 0, virhelista.join(' | ').slice(0, 300));
+    await konteksti.close();
+  }
+}
+
 if (IHMISEN_MATKA) {
   await ajaIhmisenMatka();
   await lopetaAjo();
@@ -891,7 +1138,21 @@ const juttu = await sivu.evaluate(async () => {
     dialogi: Boolean(document.getElementById('nahtavyys-dialog')?.open),
   };
   kortti?.querySelector('.tiedeliite-navinappi.edellinen')?.click();
-  await new Promise((r) => setTimeout(r, 600));
+  /*
+   * PANEELIN RISTIHÄIVYTYS ODOTETAAN LOPPUUN, EI KIINTEÄLLÄ AJALLA.
+   * Uusi ilmiösivu saa `esilla`-luokkansa vasta kuvan dekoodauksen
+   * (katto 250 ms) JÄLKEISESSÄ requestAnimationFramessa
+   * (js/aikajana.js vaihdaPaneeli), ja kontin ohjelmisto-WebGL piirtää
+   * pallolla noin kehyksen sekunnissa: 600 ms:n odotus osui väliin ja
+   * luki vielä vanhaa loppusanasivua (mitattu 8.9.2026). Odotus on
+   * SAMA EHTO kuin väite — jos paneeli ei seuraa lainkaan, silmukka
+   * käy loppuun ja väite kaatuu kuten ennenkin.
+   */
+  for (let i = 0; i < 60; i += 1) {
+    const sivut = [...document.querySelectorAll('.aikajana-ilmio-sivu')];
+    if (sivut.length && sivut.at(-1).classList.contains('esilla')) break;
+    await new Promise((r) => setTimeout(r, 100));
+  }
   tila.edellinen = document.querySelector('.tiedeliite-kortti .looppi-otsikko')?.textContent ?? '';
   // Paneeli on v1637:ssä havainnekuva kuvatekstillä (vuosi ◈ otsikko),
   // ei enää henkilörivi: seuraaminen näkyy kuvatekstin otsikosta.
@@ -972,5 +1233,8 @@ if (PALLOLLA) {
 }
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.join(' | ').slice(0, 300));
+
+/* K. Karusellin sormiveto kahdessa näkymässä (834 × 1100 ja 390 × 844). */
+await ajaKarusellinVeto();
 
 await lopetaAjo();

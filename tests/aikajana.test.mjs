@@ -20,6 +20,9 @@ import {
   AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS, AIKAJANA_VUOSI_MS,
   aikajananNopeus, AIKAJANA_POHJANOPEUS, AIKAJANA_KIIHTYMISMATKA, AIKAJANA_ALIASKEL_MS,
   pieniOsoite, PIENEN_KATTO, karusellinPaikat, karusellinMitta, KARUSELLIN_MITAT,
+  karusellinEtaisyys, karusellinEtaisyysKaanteinen, karusellinVedonPaikka,
+  karusellinHeitto, karusellinKohde, KARUSELLIN_VALI, KARUSELLIN_VEDON_KYNNYS,
+  KARUSELLIN_HEITON_KATTO,
   karuselliOsoite, sumeaOsoite, KARUSELLIN_KATTO,
   aikaSeuraavaan, ennakonKesto, KARUSELLIN_ENNAKKO_MS, KARUSELLIN_ENNAKKO_POHJA_MS,
   AIKAJANAN_LAHIKUVA_LEVEYS, AIKAJANAN_KAMERAN_ENNAKKO_OSUUS, AIKAJANAN_KAMERAN_ENNAKKO_MS,
@@ -38,6 +41,8 @@ import { tarkistaLinssi } from '../js/linssit/kerros.js';
 // Moottorin lähde tekstinä: kytkennät, joita puhdas funktio ei näytä.
 const MOOTTORI = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
 const TIEDELIITE = readFileSync(new URL('../js/tiedeliite.js', import.meta.url), 'utf8');
+// Tyylitiedosto tekstinä: karusellin liike on CSS:ssä, ei JS-ajastimissa.
+const TYYLI = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
 
 /** Yhden metodin lohko lähteestä (sisennys erottaa metodin lopun). */
 function metodi(nimi) {
@@ -682,6 +687,164 @@ test('reunan taakse jäävä kortti on piilossa, ja kapea ruutu näyttää vähe
   assert.equal(karusellinPaikat(12, 12, 0.4).luokka, 'nykyinen');
 });
 
+/* ==================== KARUSELLI VIERITETÄÄN SORMELLA ==================== */
+
+/*
+ * Raamattu "KEKSINTOLINSSIN KARUSELLI ON SEN AIKASELAIN, JA SE
+ * VIERITETAAN SORMELLA" (omistaja 8.9.2026). Vedon koko matematiikka on
+ * puhtaita funktioita, koska se rikkoutuu hiljaa: väärä muunnos veisi
+ * karusellin sormen alta pois eikä mikään kaatuisi.
+ */
+
+test('karusellin etäisyys on jatkuva ja kääntyvä (sormi vetää pikseleitä, karuselli kortteja)', () => {
+  // Kokonaisluvuilla mitat ovat entiset — jatkuvuus ei siirtänyt korttia.
+  for (let d = 0; d < KARUSELLIN_MITAT.length; d += 1) {
+    assert.equal(karusellinMitta(d), KARUSELLIN_MITAT[d], `mitta d=${d}`);
+  }
+  assert.equal(karusellinMitta(9), KARUSELLIN_MITAT.at(-1));
+  // Väliarvo on väliltä eikä porras.
+  const puoli = karusellinMitta(0.5);
+  assert.ok(puoli < KARUSELLIN_MITAT[0] && puoli > KARUSELLIN_MITAT[1], `mitta 0,5 = ${puoli}`);
+  // Etäisyys kasvaa aidosti ja käänteisfunktio palauttaa saman luvun.
+  for (const d of [0, 0.37, 1, 1.5, 2, 3, 4.25, 7]) {
+    const x = karusellinEtaisyys(d);
+    assert.ok(Math.abs(karusellinEtaisyysKaanteinen(x) - d) < 1e-9, `pyöröajo d=${d} → ${x}`);
+  }
+  assert.equal(karusellinEtaisyysKaanteinen(0), 0);
+  // Naapurin tuominen keskelle on pisin askel: kortit kutistuvat ulospäin.
+  const ekaAskel = karusellinEtaisyys(1);
+  const kaukaisin = karusellinEtaisyys(6) - karusellinEtaisyys(5);
+  assert.ok(ekaAskel > kaukaisin, `ensimmäinen askel ${ekaAskel} ei ole pisin`);
+  assert.ok(Math.abs(ekaAskel - ((KARUSELLIN_MITAT[0] + KARUSELLIN_MITAT[1]) / 2) * KARUSELLIN_VALI) < 1e-9);
+});
+
+test('sormen pikselimatka muuttuu korttinumeroiksi ja rajautuu nauhan päihin', () => {
+  const W = 100;
+  const MAARA = 26;
+  // Vasemmalle vetäminen vie ETEENPÄIN (nauha liukuu vasemmalle kuten
+  // vuoden vaihtuessa), oikealle taaksepäin.
+  const eteen = karusellinVedonPaikka(5, -karusellinEtaisyys(1) * W, W, MAARA);
+  const taakse = karusellinVedonPaikka(5, karusellinEtaisyys(1) * W, W, MAARA);
+  assert.ok(Math.abs(eteen - 6) < 1e-9, `eteen ${eteen}`);
+  assert.ok(Math.abs(taakse - 4) < 1e-9, `taakse ${taakse}`);
+  // Puolen askeleen veto jättää sormen korttien väliin — ei askella.
+  const puoli = karusellinVedonPaikka(5, -karusellinEtaisyys(0.5) * W, W, MAARA);
+  assert.ok(puoli > 5.4 && puoli < 5.6, `puoli ${puoli}`);
+  // Päät pitävät: karusellia ei voi vetää kaaren ulkopuolelle.
+  assert.equal(karusellinVedonPaikka(0, 4000, W, MAARA), 0);
+  assert.equal(karusellinVedonPaikka(25, -4000, W, MAARA), MAARA - 1);
+  // Ilman mittaa veto ei liiku (kortin leveyttä ei ole vielä mitattu).
+  assert.equal(karusellinVedonPaikka(5, -300, 0, MAARA), 5);
+  assert.ok(KARUSELLIN_VEDON_KYNNYS >= 4 && KARUSELLIN_VEDON_KYNNYS <= 12,
+    `napautuksen ja vedon kynnys ${KARUSELLIN_VEDON_KYNNYS} px`);
+});
+
+test('pyyhkäisy kuljettaa muutaman keksijän hidastuen — ei loputonta rullausta', () => {
+  assert.equal(karusellinHeitto(0), 0);
+  assert.ok(karusellinHeitto(4) > 0.5, 'reipas pyyhkäisy jatkaa matkaa');
+  assert.ok(karusellinHeitto(-4) < -0.5, 'toiseen suuntaan sama');
+  // Katto: rajaton pyyhkäisy ei vie kuin muutaman keksijän.
+  assert.equal(karusellinHeitto(1e6), KARUSELLIN_HEITON_KATTO);
+  assert.equal(karusellinHeitto(-1e6), -KARUSELLIN_HEITON_KATTO);
+  assert.ok(KARUSELLIN_HEITON_KATTO <= 4, `heiton katto ${KARUSELLIN_HEITON_KATTO} korttia`);
+  assert.equal(karusellinHeitto(Number.NaN), 0);
+  // Hidas veto ei heitä lainkaan yli puolen kortin.
+  assert.ok(Math.abs(karusellinHeitto(1)) < 0.5);
+});
+
+test('irrotus asettuu lähimpään keksijään ja pysyy kaaren sisällä', () => {
+  assert.equal(karusellinKohde(5.4, 0, 26), 5);
+  assert.equal(karusellinKohde(5.6, 0, 26), 6);
+  // Heitto siirtää kohdetta, mutta lopputulos on aina kortti.
+  assert.equal(karusellinKohde(5.1, 2.4, 26), 8);
+  assert.equal(karusellinKohde(1, -9, 26), 0);
+  assert.equal(karusellinKohde(24, 9, 26), 25);
+  assert.equal(karusellinKohde(3, 0, 0), -1, 'tyhjä nauha ei anna kohdetta');
+});
+
+test('vedon aikana kortit kasvavat ja liukuvat jatkuvasti, eikä lähin välähdä', () => {
+  // Murtoluku keskikohtana: lähin kortti on "nykyinen", vaikkei osu tasan.
+  assert.equal(karusellinPaikat(5, 5.4, LEVEA).luokka, 'nykyinen');
+  assert.equal(karusellinPaikat(6, 5.4, LEVEA).luokka, 'tuleva');
+  assert.equal(karusellinPaikat(6, 5.6, LEVEA).luokka, 'nykyinen');
+  // Mitta ja himmeys kulkevat tasaisesti keskeltä naapuriin: yhdenkään
+  // askeleen ei saa loikata (tökkivä karuselli oli omistajan valitus).
+  let edellinenMitta = karusellinPaikat(6, 6, LEVEA).mitta;
+  let edellinenHimmeys = karusellinPaikat(6, 6, LEVEA).himmeys;
+  for (let n = 1; n <= 20; n += 1) {
+    const k = karusellinPaikat(6, 6 - n / 20, LEVEA);
+    assert.ok(k.mitta <= edellinenMitta + 1e-9, `mitta kasvoi askeleella ${n}`);
+    assert.ok(edellinenMitta - k.mitta < 0.1, `mitta loikkasi askeleella ${n}`);
+    assert.ok(edellinenHimmeys - k.himmeys < 0.05, `himmeys loikkasi askeleella ${n}`);
+    edellinenMitta = k.mitta;
+    edellinenHimmeys = k.himmeys;
+  }
+  // Naapurin arvot ovat entiset, kun veto päättyy kokonaislukuun.
+  assert.equal(karusellinPaikat(6, 5, LEVEA).mitta, KARUSELLIN_MITAT[1]);
+  assert.equal(karusellinPaikat(6, 5, LEVEA).himmeys, 0.9);
+  assert.equal(karusellinPaikat(4, 5, LEVEA).himmeys, 0.82);
+  // Kerrosnumero pysyy kokonaislukuna myös murtoluvulla.
+  assert.ok(Number.isInteger(karusellinPaikat(7, 5.37, LEVEA).jarjestys));
+});
+
+test('moottori vetää karusellia sormella: kynnys, kaappaus, snap ja tauon muisti', () => {
+  const veto = metodi('kytkeKarusellinVeto');
+  // Kuuntelijat ovat NAUHASSA (pallon kosketus ei vedä karusellia) ja
+  // osoitin otetaan kiinni kortilta (veto ei karkaa kartalle).
+  assert.match(veto, /nauha\.addEventListener\('pointerdown', alku\)/);
+  assert.match(veto, /nauha\.addEventListener\('pointermove', liike\)/);
+  assert.match(veto, /nauha\.addEventListener\('pointerup', loppu\)/);
+  assert.match(veto, /nauha\.addEventListener\('pointercancel', loppu\)/);
+  assert.match(veto, /kortti\.setPointerCapture\?\.\(e\.pointerId\)/);
+  // Pallo ei saa panoroida karusellin vedosta.
+  assert.ok(veto.includes('e.stopPropagation()'), 'veto ei pysäytä kuplintaa');
+  // Kynnys erottaa napautuksen vedosta, ja pystyveto jää kartalle.
+  assert.match(veto, /if \(Math\.abs\(dx\) < KARUSELLIN_VEDON_KYNNYS\) return;/);
+  assert.match(veto, /if \(Math\.abs\(e\.clientY - veto\.y\) > Math\.abs\(dx\)\) return;/);
+  // Kertomuskaari (Ihmisen matka) ja väliruudut eivät saa vetoa.
+  assert.match(veto, /!this\.esitys && !this\.avausKesken && !this\.valinaytos/);
+  // Liike menee vetoNyt:iin ja asetteluun, ei siirry():hyn.
+  assert.match(veto, /this\.vetoNyt = paikka;\s*\n\s*this\.asettele\(\);/);
+  // Esikatselu vain kun lähin vaihtuu — ajo ei hyppää joka kehyksellä.
+  assert.match(veto, /if \(lahin !== veto\.esikatseltu\) \{/);
+  // Irrotus: heitto (reduced motion nollaa), snap ja moottorin oma polku.
+  assert.match(veto, /const heitto = this\.reducedMotion \? 0 : karusellinHeitto\(veto\.nopeus\);/);
+  assert.match(veto, /karusellinKohde\(this\.vetoNyt \?\? veto\.alku, heitto, this\.kortit\.length\)/);
+  assert.match(veto, /this\.siirry\(pysakki\);/);
+  // Tauolla ollut jää tauolle, käynnissä ollut jatkaa.
+  assert.match(veto, /if \(veto\.kaynnissa\) this\.jatka\(\);/);
+  // Veto ei saa laukaista kortin napautusta.
+  assert.match(veto, /this\.vedettiin = true;/);
+  assert.match(MOOTTORI, /addEventListener\('click', \(\) => \{ if \(!this\.vedettiin\) this\.napautaKorttia\(i\); \}\)/);
+  // Esikatselu rullaa vuoden kuten selailu, muttei liikuta paneelia,
+  // lamppuja eikä kameraa.
+  const esikatselu = metodi('esikatseleKarusellista');
+  assert.match(esikatselu, /this\.naytaVuosi\(t\.vuosi\);/);
+  for (const kielletty of ['vaihdaPaneeli', 'asetaValonTila', 'ajaPysakille', 'siirry(']) {
+    assert.ok(!esikatselu.includes(kielletty), `esikatselu ei saa koskea: ${kielletty}`);
+  }
+  // Purku irrottaa kuuntelijat.
+  assert.ok(metodi('pura').includes('this.irrotaKarusellinVeto?.();'), 'purku ei irrota vetoa');
+  // Vedon aikana kuvia ei vaihdeta (dekoodaus tekisi vedosta tökkivän).
+  assert.match(MOOTTORI, /if \(this\.vetoNyt === null\) \{\s*\n\s*for \(const img of kortti\.querySelectorAll/);
+});
+
+test('vedon aikana kortit seuraavat sormea ilman CSS-siirtymää', () => {
+  assert.match(TYYLI, /\.aikajana-nauha\.vedossa \.aikajana-kortti \{ transition: none; \}/);
+  // Kosketus kuuluu karusellille, ei selaimen vieritykselle.
+  assert.match(TYYLI, /\.aikajana-kortti \{[\s\S]{0,1400}touch-action: none;/);
+  /*
+   * NATIIVI RAAHAUS POIS (mitattu 8.9.2026: kosketus veti, hiiri ei —
+   * Chromium aloitti kortin kuvasta oman raahauksensa ja perui
+   * osoittimen). Kaksi lukkoa: tyyli ja dragstart.
+   */
+  assert.match(TYYLI, /\.aikajana-kortti img \{ -webkit-user-drag: none; pointer-events: none; \}/);
+  assert.match(TYYLI, /\.aikajana-kortti \{ user-select: none; -webkit-user-select: none; \}/);
+  assert.match(MOOTTORI, /nauha\.addEventListener\('dragstart', raahausPois\)/);
+  // Kertomuskaarella nauhaa ei ole lainkaan — Ihmisen matka ei muutu.
+  assert.match(TYYLI, /\.aikajana\.kertomus \.aikajana-nauha \{ display: none; \}/);
+});
+
 test('lähempi kortti peittää kauemman', () => {
   assert.ok(karusellinPaikat(5, 5, LEVEA).jarjestys > karusellinPaikat(6, 5, LEVEA).jarjestys);
   assert.ok(karusellinPaikat(6, 5, LEVEA).jarjestys > karusellinPaikat(8, 5, LEVEA).jarjestys);
@@ -1229,8 +1392,9 @@ test('ennakko liikuttaa vain kortteja; lamput, kello ja paneeli vaihtuvat syttym
   assert.match(MOOTTORI, /this\.paattaEnnakko\(\);\s*\n\s*this\.asettele\(\);\s*\n\s*\}/);
   assert.match(MOOTTORI, /pysayta\(\) \{[\s\S]{0,300}this\.peruEnnakko\(\);/);
   assert.ok(metodi('alusta').includes('this.paattaEnnakko();'), 'Alusta ei päätä ennakkoa');
-  // Karuselli saa olla kelloa edellä: asettelu lukee ennakon kohteen.
-  assert.match(MOOTTORI, /const nyt = this\.korttinumero\(this\.ennakkoKohde \?\? this\.tila\.i\);/);
+  // Karuselli saa olla kelloa edellä: asettelu lukee ennakon kohteen —
+  // ja sormiveto voittaa kummankin (vetoNyt, 8.9.2026).
+  assert.match(MOOTTORI, /const nyt = this\.vetoNyt \?\? this\.korttinumero\(this\.ennakkoKohde \?\? this\.tila\.i\);/);
 });
 
 test('sumea muotokuva vaihtuu terävään vasta kortin ollessa täysikokoinen', () => {
