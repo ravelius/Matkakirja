@@ -242,6 +242,76 @@ test('jokaisella keksinnön muotokuvalla on lyhyt kuvateksti', () => {
   }
 });
 
+/*
+ * SAMA KAKSI PITUUTTA MYÖS HAVAINNEKUVALLE JA AIDOLLE KUVALLE
+ * (omistaja 8.9.2026 hyväksyi 1897 Dieselin esimerkkinä: *"joo, tee
+ * noin kaikille"*). Muotokuvan pari sai vartionsa jo v1696:ssa; nämä
+ * kaksi vartioivat kahta muuta kuvaa, jotta yhdenkin pysäkin
+ * unohtunut kenttä näkyy testissä eikä vasta omistajan iPadilla.
+ *
+ * Merkkipaalu 1873 ei ole keksintöpysäkki: sen kuvakierron lyhyet
+ * tekstit ovat isoisäkuvien sarjan muotoa "Isoisä, Kanton, 1873"
+ * (js/packs/etusivun-isoisakuvat.js), joten virkesääntö ei koske sitä.
+ */
+
+test('jokaisella havainnekuvalla on lyhyt kuvateksti: paikka, vuosi ja yksi virke', () => {
+  const kuvat = [];
+  for (const t of KEKSINNOT.filter(onTiedeliitteenSivu)) {
+    for (const kuva of tiedeliitteenKuvat(t).ilmiot) {
+      kuvat.push([`${t.vuosi} ${t.henkilo}`, kuva]);
+    }
+  }
+  // 25 pysäkkiä ja Blériot'n toinen havainnekuva.
+  assert.equal(kuvat.length, 26);
+  for (const [nimi, kuva] of kuvat) {
+    assert.ok(kuva.lyhyt, `${nimi}: havainnekuvan lyhyt kuvateksti puuttuu`);
+    assert.ok([...kuva.lyhyt].length <= 80,
+      `${nimi}: lyhyt teksti on ${[...kuva.lyhyt].length} merkkiä (max 80)`);
+    assert.match(kuva.lyhyt, /\.$/, `${nimi}: lyhyt teksti päättyy pisteeseen`);
+    assert.ok(!/\.\s+[A-ZÅÄÖ]/.test(kuva.lyhyt), `${nimi}: lyhyt teksti on yksi virke, ei kaksi`);
+    // Paikka ja vuosi edellä, kertova teksti perässä (Dieselin malli).
+    assert.match(kuva.lyhyt, /^[^:]+ \d{4}: /, `${nimi}: lyhyt teksti ei ala paikalla ja vuodella`);
+    assert.ok(kuva.selite.length > kuva.lyhyt.length,
+      `${nimi}: pitkä selite ei ole lyhyttä pidempi`);
+    assert.ok(kuva.lahde, `${nimi}: havainnekuvan lähderivi puuttuu suurennoksesta`);
+  }
+  // Merkkipaalun kuvakierto käyttää isoisäkuvien sarjan kuvatekstiä.
+  const paalu = KEKSINNOT.find((t) => t.paalu);
+  for (const kuva of [paalu.ilmio, ...(paalu.ilmioSarja ?? [])]) {
+    assert.match(kuva.lyhyt, /^Isoisä, .+, 1873$/, 'merkkipaalun lyhyt teksti on sarjan muotoa');
+  }
+});
+
+test('aidolla Commons-kuvalla on pitkä kuvateksti vuosineen ja lähderiveineen', () => {
+  const aidot = KEKSINNOT.filter((t) => t.kuvaAito);
+  assert.equal(aidot.length, 25);
+  for (const t of aidot) {
+    const nimi = `${t.vuosi} ${t.henkilo}`;
+    const kuva = t.kuvaAito;
+    assert.ok(kuva.lyhyt, `${nimi}: aidon kuvan lyhyt kuvateksti puuttuu`);
+    assert.ok(kuva.selite.length > kuva.lyhyt.length,
+      `${nimi}: aidon kuvan pitkä teksti ei ole lyhyttä pidempi`);
+    // Elinvuodet sulkeissa: ajattelevalla lukijalla on heti aikataju.
+    assert.match(kuva.selite, /\(\d{4}–\d{4}\)/,
+      `${nimi}: aidon kuvan pitkästä tekstistä puuttuvat vuodet sulkeissa`);
+    // Lähde nimeää Commonsin tiedoston sanatarkasti (CC/PD-vaatimus).
+    assert.equal(kuva.lahde, `Wikimedia Commons, "${kuva.tiedosto}"`,
+      `${nimi}: aidon kuvan lähderivi ei nimeä Commons-tiedostoa`);
+  }
+});
+
+test('kortti lataa lyhyen, suurennos pitkän ja lähderivin', () => {
+  // Kaikki kolme kuvalajia ottavat kortin tekstin samasta apurista.
+  assert.equal((JS.match(/html\('span', 'fokusnosto-kuvaselite', lyhytKuvateksti\(kuva\)\)/g) ?? []).length, 2,
+    'kasvorivi ja yhden kuvan havainnekuva latovat lyhyen tekstin');
+  assert.match(JS, /selite\.textContent = lyhytKuvateksti\(kuva\)/, 'karuselli latoo lyhyen tekstin');
+  // Suurennos saa kuvatiedon sellaisenaan, ja piirtää siitä pitkän
+  // selitteen ja lähderivin (js/fokuskohteet.js avaaKohdeSuurennos).
+  const F = lue('js/fokuskohteet.js');
+  assert.match(F, /html\('span', 'fokuskohde-zoomselite', kuva\.selite \?\? ''\)/);
+  assert.match(F, /taytaLahderivi\(html\('span', 'fokuskohde-zoomlahde'\), kuva\.lahde \?\? '', kuva\)/);
+});
+
 test('nimiörivi on yksi rivi kortin sisällä, ei kolme aseteltua palaa', () => {
   // Hampurilainen, nimiö + paikkarivi ja kaiutin/sulku samassa rivissä.
   assert.match(JS, /ylarivi\.append\(hampurilainen, nimiot, ylanapit\)/);
