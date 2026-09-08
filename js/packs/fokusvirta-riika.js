@@ -200,8 +200,9 @@ export const FOKUSVIRTA_RIIKA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Sitä mustaa juomaa myydään yhä savipulloissa. Paikalliset vannovat, turistit katuvat.',
+      'Sitä mustaa juomaa myydään yhä savipulloissa. Paikalliset vannovat, turistit katuvat. Minä maistoin kerran. Kerran riitti.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

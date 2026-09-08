@@ -184,8 +184,11 @@ export const FOKUSVIRTA_EDINBURGH = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Koiran patsas seisoo portilla, ja sen kuonoa hierotaan onneksi. Linnaa ei ole yhä vallattu.',
+      'Koiran patsas seisoo portilla, ja sen kuonoa hierotaan onneksi. Linnaa ei ole vallattu. Tuuli kalliolla on yhä yhtä paha.',
+      // kuittaus isoisälle
+      'Köyhät ylhäällä, rikkaat alhaalla. Meillä se on aina ollut ainoa oikea järjestys.',
     ],
     teksti: 'Ja se isoisäsi ihmettelemä järjestys — köyhät ylhäällä — '
       + 'johtui savusta: mitä alempana asuit, sitä vähemmän piippuja '

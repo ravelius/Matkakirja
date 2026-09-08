@@ -318,8 +318,9 @@ export const FOKUSVIRTA_ISTANBUL = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Pylväs seisoo yhä samassa paikassa. Tunneli valmistui, ja pieni juna kulkee mäen sisällä yhä.',
+      'Pylväs seisoo yhä samassa paikassa, ja tunnelin pieni juna kulkee. Salmen yli lentää yhä joka päivä joku meidän suvusta.',
     ],
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):

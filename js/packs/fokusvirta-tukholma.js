@@ -308,8 +308,11 @@ export const FOKUSVIRTA_TUKHOLMA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kuningas on yhä, mutta kruunajaisia ei enää pidetä. Höyryveneet vievät saaristoon edelleen.',
+      'Kuningas on yhä, mutta kruunajaisia ei pidetä. Höyryveneet vievät saaristoon edelleen, ja lokit omistavat kannen.',
+      // kuittaus isoisälle
+      'Kaksi nappia ja yksi sivu. Minulta ei tungoksessa ole viety mitään, koska en mene tungokseen.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen. Faktat ovat lehden oman

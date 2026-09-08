@@ -244,8 +244,11 @@ export const FOKUSVIRTA_GRANADA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Linnassa ei enää asuta, ja sinne jonotetaan lippua kuukausia. Vuorilla on yhä lunta keväällä.',
+      'Linnassa ei enää asuta, ja lippua jonotetaan kuukausia. Vuorilla on yhä lunta keväällä. Linnan pihoilla on maan paras vesi.',
+      // kuittaus isoisälle
+      'Maksoi silti. Minä olisin lähtenyt ensimmäisen laulun jälkeen.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

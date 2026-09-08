@@ -276,8 +276,9 @@ export const FOKUSVIRTA_KRAKOVA = {
       kohta: 'kolme eri tarinaa',
       teksti: 'Neljäs on minulla.',
     },
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Torvi soi yhä joka tunti, ja sävelmä katkeaa samalla tavalla. Syyn saat selvittää itse.',
+      'Torvi soi yhä joka tunti, ja sävelmä katkeaa samalla tavalla. Syyn saat selvittää itse. Tornin laudalta sen kuulee parhaiten.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

@@ -218,8 +218,9 @@ export const FOKUSVIRTA_VILNA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Vanhakaupunki on nyt maailmanperintöä. Ja se metsä joka suuntaan pitää yhä paikkansa.',
+      'Vanhakaupunki on nyt maailmanperintöä. Ja se metsä joka suuntaan pitää yhä paikkansa. Sen yli lentäminen on pitkä ja tylsä.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

@@ -47,8 +47,9 @@ export const FOKUSVIRTA_SISILIA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Etna savuaa yhä, ja sen rinteillä asutaan silti. Torilla lauletaan edelleen.',
+      'Etna savuaa yhä, ja sen rinteillä asutaan silti. Torilla lauletaan edelleen. Kalatiskin alla on paras paikka koko saarella.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

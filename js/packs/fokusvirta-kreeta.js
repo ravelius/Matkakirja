@@ -78,8 +78,9 @@ export const FOKUSVIRTA_KREETA = {
      * on Fablen kaanonteksti sellaisenaan: se on puheen mittainen (alle
      * 95 merkkiä), joten sitä ei jaeta kahdeksi.
      */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Se palatsi kaivettiin esiin isoisän jälkeen. Ja vuorilla on yhä lunta keväällä.',
+      'Se palatsi kaivettiin esiin isoisän jälkeen. Vuorilla on yhä lunta keväällä. Paimen oli oikeassa. Minä sanoin sen jo silloin.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

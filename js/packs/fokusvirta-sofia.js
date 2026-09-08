@@ -430,8 +430,9 @@ export const FOKUSVIRTA_SOFIA = {
      * livianAaniAjanTasalla) vaientaa sen kunnes ääni generoidaan
      * uudestaan. Kupla näkyy ja etenee kuten ennen.
      */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Sitä nimeä ei enää kuiskata: hän on koko maan sankari. Ja lähde torin laidalla höyryää yhä.',
+      'Sitä nimeä ei enää kuiskata: hän on koko maan sankari. Ja lähde torin laidalla höyryää yhä. Talvella istumme sen reunalla.',
     ],
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,

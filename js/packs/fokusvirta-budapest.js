@@ -181,8 +181,9 @@ export const FOKUSVIRTA_BUDAPEST = {
       kohta: 'Kartantekijöille riittää töitä',
       teksti: 'Ja postille!',
     },
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Nimi on nyt itsestäänselvyys. Ja samassa kuumassa vedessä istutaan yhä kupolin alla.',
+      'Nimi on nyt itsestäänselvyys. Ja samassa kuumassa vedessä istutaan yhä kupolin alla. Kupolin katolla on talvellakin lämmin.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (parlamenttitalo). Faktat

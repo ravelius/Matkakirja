@@ -420,7 +420,9 @@ export const TAGIT = {
   'kreeta-3': { alku: '[brightly]' },
   'sisilia-3': { alku: '[brightly]' },
   'islanti-3': { alku: '[brightly]' },
+  'islanti-4': { alku: '[brightly]' },
   'alpit-3': { alku: '[brightly]' },
+  'alpit-4': { alku: '[brightly]' },
   'lappi-3': { alku: '[brightly]' },
   'tromssa-3': { alku: '[brightly]' },
   /*
@@ -428,16 +430,26 @@ export const TAGIT = {
    * kussakin numerolla 3 — paitsi Venetsiassa, jossa kuplia on kuusi
    * (numerot 3…8, omistajan ehdotus). Sama reipas alkutagi kuin muilla
    * kommenteilla; kaikutagia ei ole yhdessäkään.
+   *
+   * KUITTAUS ISOISÄLLE on numero 4 (Fablen erä 8.9.2026 ilta): kymmenen
+   * kaupunkia sai kommentin perään toisen kuplan, ja se saa saman
+   * alkutagin kuin kommentti — kuivalle sävylle ei ole omaa tagia
+   * tässä taulussa.
    */
   'lontoo-3': { alku: '[brightly]' },
+  'lontoo-4': { alku: '[brightly]' },
   'dublin-3': { alku: '[brightly]' },
   'edinburgh-3': { alku: '[brightly]' },
+  'edinburgh-4': { alku: '[brightly]' },
   'pariisi-3': { alku: '[brightly]' },
   'marseille-3': { alku: '[brightly]' },
+  'marseille-4': { alku: '[brightly]' },
   'lissabon-3': { alku: '[brightly]' },
   'madrid-3': { alku: '[brightly]' },
+  'madrid-4': { alku: '[brightly]' },
   'barcelona-3': { alku: '[brightly]' },
   'granada-3': { alku: '[brightly]' },
+  'granada-4': { alku: '[brightly]' },
   'sevilla-3': { alku: '[brightly]' },
   'amsterdam-3': { alku: '[brightly]' },
   'berliini-3': { alku: '[brightly]' },
@@ -448,11 +460,14 @@ export const TAGIT = {
   'venetsia-7': { alku: '[brightly]' },
   'venetsia-8': { alku: '[brightly]' },
   'firenze-3': { alku: '[brightly]' },
+  'firenze-4': { alku: '[brightly]' },
   'rooma-3': { alku: '[brightly]' },
   'dubrovnik-3': { alku: '[brightly]' },
   'tukholma-3': { alku: '[brightly]' },
+  'tukholma-4': { alku: '[brightly]' },
   'oslo-3': { alku: '[brightly]' },
   'bergen-3': { alku: '[brightly]' },
+  'bergen-4': { alku: '[brightly]' },
   'kobenhavn-3': { alku: '[brightly]' },
 };
 

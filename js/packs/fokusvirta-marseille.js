@@ -207,8 +207,11 @@ export const FOKUSVIRTA_MARSEILLE = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Satamassa myydään yhä saippuaa ja kalakeittoa. Linnoitussaarelle mennään nyt lautalla huviksi.',
+      'Satamassa myydään yhä saippuaa ja kalakeittoa. Linnoitussaarelle mennään lautalla huviksi. Lokit pitävät laiturin omanaan.',
+      // kuittaus isoisälle
+      'Kalojen nimiä ei tarvitse oppia. Ruodot tuntee ilmankin.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi

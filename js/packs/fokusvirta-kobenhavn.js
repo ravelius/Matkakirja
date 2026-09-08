@@ -130,8 +130,9 @@ export const FOKUSVIRTA_KOBENHAVN = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Tivoli on yhä auki joka ilta. Vallien paikalla on puistoja, ja niissä ajetaan polkupyörällä.',
+      'Tivoli on yhä auki joka ilta. Vallien paikalla on puistoja, ja niissä ajetaan pyörällä. Valot näkyvät ylhäältä koko yön.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Nyhavn). Faktat ovat lehden

@@ -150,8 +150,11 @@ export const FOKUSVIRTA_LONTOO = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Isoisäsi oli oikeassa, sumu oli savua, ja se on poissa. Se maanalainen juna kulkee yhä täynnä.',
+      'Isoisäsi oli oikeassa, sumu oli savua, ja se on poissa. Juna kulkee yhä maan alla. Torilla ei saa enää ruokkia meikäläisiä.',
+      // kuittaus isoisälle
+      'Risti liidulla, jotta muistaa. Minä muistan ilman ristiäkin. Se on sukuvika.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Westminsterin palatsi).

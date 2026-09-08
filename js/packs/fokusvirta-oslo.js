@@ -188,8 +188,9 @@ export const FOKUSVIRTA_OSLO = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Nimi on taas Oslo, ja Norja on oma valtionsa. Vuonolla kulkee yhä laivoja, ilman purjeita.',
+      'Nimi on taas Oslo, ja Norja on oma valtionsa. Vuonolla kulkee yhä laivoja, ilman purjeita. Purjeissa oli parempi istua.',
     ],
     /* KAANON (Fable) — kuplateksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Ylioppilaat olivat oikeassa — Norja itsenäistyi 1905, ja '

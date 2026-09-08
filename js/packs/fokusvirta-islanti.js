@@ -48,8 +48,11 @@ export const FOKUSVIRTA_ISLANTI = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kaupunki kasvoi, ja puitakin on istutettu. Geysirin naapuri purkautuu yhä tasaisin välein.',
+      'Kaupunki kasvoi, ja puitakin on istutettu. Geysirin naapuri purkautuu yhä tasaisin välein. Puu on harvinaisempi kuin pulu.',
+      // kuittaus isoisälle
+      'Lämpömittari suuttui. Minä olisin sanonut sen ilmankin: kuumaa.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

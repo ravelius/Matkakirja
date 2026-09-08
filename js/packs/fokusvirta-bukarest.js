@@ -292,8 +292,9 @@ export const FOKUSVIRTA_BUKAREST = {
       kohta: 'kaksi maalattua ruotsalaista',
       teksti: 'Maalattua?',
     },
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Ei kauan: torni purettiin. Mutta sairaala sen juurella hoitaa yhä.',
+      'Ei kauan: torni purettiin. Mutta sairaala sen juurella hoitaa yhä. Kallellaan olevalla tornilla oli huono istua.',
     ],
     /*
      * Commons 25.8.2026: 2397×3339, public domain, kuvaus "Photo of

@@ -28,6 +28,28 @@ kuuluu vanhaan sessioon — poista se ja luo uusi: fetch claude/postilaatikko,
 lue posti/kuvatoimitus.md kärjestä, vastaa posti/fable-vanha.md:n kärkeen,
 poimi valmiit agenttityöt ja julkaise, ei salaisuuksia eikä sähköpostia).
 
+## 0. Päivitys 8.9.2026 klo 21.40 Suomen aikaa (kolmas sessio, session_01Qpkrpg8NhoBUGTFjQf42f5)
+
+- **main = v1703.** v1702 (PR #2174): pallon kaupunkipisteet (lattia vain
+  pelaajan kaupungille, parallaksi pois) + Sofia–Varsova + Raamattu-
+  merkinnät (yläraja 400 ja kooste-erä; pisteiden lattia; parallaksi).
+  v1703 (PR #2175): osion 4 toimeksianto TEHTY — 35 kaupungin matkakirjat
+  ja kuplat uusiksi, 20 läntistä kaupunkia sai ensimmäisen kuplansa
+  (maadoitus pois), Venetsia romanssi kuudella kuplalla EHDOTUKSENA,
+  Tampereen ja Riian huudahdukset pois (jäljellä 6). Testit 2339/0.
+- **Kooste toimitettu omistajalle** (SendUserFile,
+  eurooppa-matkakirja-ja-pulu-v4.md; sama syntyy `node
+  tools/dumppaa-eurooppa.mjs`). SEURAAVAKSI: omistajan korjaukset
+  koosteesta kaupungin nimellä → pakkeihin → julkaisu. Äänet (pulu +
+  luennat) generoimatta, odottaa lupaa.
+- Postikierros-rutiini: trig_014arWFjZrfk92tXBNbpauNT (tunneittain :56 UTC).
+- Havainto (Opus-agentti): js/liviapuhe.js livianKorostetutKaupungit
+  katsoo vain avaimen olemassaoloa, ei tiivistettä → kaupungit, joiden
+  kupla on muuttunut ja siksi hiljainen, näkyvät kartalla yhä "valmis
+  kuunneltavaksi". Korjaantuu, kun äänet generoidaan; ei kosketa ennen.
+- Vanhojen läntisten kaupunkien `pollo.teksti` (vaiheen huomio) jäi
+  ennalleen; jos sama linjaus kuin Ateenassa (poistettiin), erillinen työ.
+
 ## 1. Tila (päivitetty 8.9.2026 klo 20.50 Suomen aikaa, toinen reset)
 
 - **main = v1701** (PR #2173): musiikki hiljemmalle ja rattaan säädin

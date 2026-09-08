@@ -277,8 +277,9 @@ export const FOKUSVIRTA_PIETARI = {
       kohta: 'suo totteli',
       teksti: 'Vesi ei.',
     },
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Nyt kaupungin edessä on pato, joka pitää meren ulkona. Ja sillat avataan öisin yhä.',
+      'Nyt kaupungin edessä on pato, joka pitää meren ulkona. Ja sillat avataan öisin yhä. Minulle silloilla ei ole ollut väliä.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

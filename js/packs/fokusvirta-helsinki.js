@@ -176,8 +176,9 @@ export const FOKUSVIRTA_HELSINKI = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kirkko on nyt tuomiokirkko, ja sama torni näkyy mereltä ensimmäisenä. Terva ei enää tuoksu.',
+      'Kirkko on nyt tuomiokirkko, ja sama torni näkyy mereltä ensimmäisenä. Terva ei enää tuoksu. Torilla lokit vievät kaiken.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (tuomiokirkko Senaatintorilla)

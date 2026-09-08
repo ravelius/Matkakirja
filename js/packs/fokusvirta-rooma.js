@@ -226,8 +226,9 @@ export const FOKUSVIRTA_ROOMA = {
    */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Paavi tulee nyt ulos, ja Vatikaani on oma valtionsa. Forumilla ei laidunneta, mutta kaivetaan.',
+      'Paavi tulee nyt ulos, ja Vatikaani on oma valtionsa. Forumilla ei laidunneta, mutta kaivetaan. Pylväänpäät ovat hyvä istuin.',
     ],
     teksti: 'Muurin sisällä pysyttiin viisikymmentäyhdeksän vuotta — vasta '
       + '1929 paavi astui taas Rooman puolelle. Ikkunat on yhä ihan '

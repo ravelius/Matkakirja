@@ -170,8 +170,11 @@ export const FOKUSVIRTA_BERGEN = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kauppalaituri on nyt maailmanperintöä ja kallellaan. Ja täällä sataa yhä useammin kuin ei.',
+      'Kauppalaituri on nyt maailmanperintöä ja kallellaan. Täällä sataa yhä useammin kuin ei. Kalatelineiden alla pysyy kuivana.',
+      // kuittaus isoisälle
+      'Kirjoitti kapakassa, koska paperi kastui. Minä odotin räystäällä, ja se sade oli aitoa.',
     ],
     /* KAANON (Fable) — kuplateksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Bergenissä sataa noin puolet vuoden päivistä, joten isoisäsi '

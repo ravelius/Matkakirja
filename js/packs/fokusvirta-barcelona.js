@@ -221,8 +221,9 @@ export const FOKUSVIRTA_BARCELONA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Ruudukko on valmis, ja kaupunki kasvoi sen yli. Ramblalla ei enää myydä lintuja, vain kukkia.',
+      'Ruudukko on valmis, ja kaupunki kasvoi sen yli. Ramblalla ei enää myydä lintuja häkeissä, vain kukkia. Sen katson mielelläni.',
     ],
     /*
      * KAANON (Fable) — repliikin loput kolme virkettä sellaisenaan.

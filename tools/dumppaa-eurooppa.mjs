@@ -10,10 +10,18 @@ for (const c of cities) {
   if (!v) { console.log(`## ${c.id} — EI PAKKIA\n`); continue; }
   const m = v.matkakirja ?? {};
   const p = v.pollo ?? {};
-  const kupla = Array.isArray(p.kommentti) ? p.kommentti.join(' | ') : (p.kommentti ?? '');
+  // Jokainen kupla erikseen omine pituuksineen (yläraja 125, Raamattu:
+  // PULUN KUPLASSA PULUN NAKOKULMA, RAJA 125). Toinen kupla on kuittaus
+  // isoisälle niissä kaupungeissa, joissa se on.
+  const kuplat = Array.isArray(p.kommentti) ? p.kommentti : [p.kommentti ?? ''];
   console.log(`## ${c.id} — ${c.name ?? ''}`);
   console.log(`Paikkarivi: ${m.paikkarivi ?? '(puuttuu)'}`);
   console.log(`Teksti (${(m.teksti ?? '').length} merkkiä, yläraja 400): ${m.teksti ?? '(puuttuu)'}`);
   if (p.huudahdus) console.log(`Huudahdus: "${p.huudahdus.teksti}" kohdassa "${p.huudahdus.kohta}"`);
-  console.log(`Pulu (${kupla.length} merkkiä): ${kupla}\n`);
+  kuplat.forEach((kupla, i) => {
+    // Venetsia on kuuden kuplan poikkeus eikä sen kakkonen ole kuittaus.
+    const nimi = (i === 1 && kuplat.length === 2) ? 'Pulu 2, kuittaus' : `Pulu ${i + 1}`;
+    console.log(`${nimi} (${kupla.length} merkkiä): ${kupla}`);
+  });
+  console.log('');
 }

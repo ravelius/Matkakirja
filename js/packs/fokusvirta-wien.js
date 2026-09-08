@@ -171,8 +171,9 @@ export const FOKUSVIRTA_WIEN = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kupoli paloi, mutta puisto on yhä olemassa. Ja kahvilassa istutaan tunteja yhden kupin ääressä.',
+      'Kupoli paloi, mutta puisto on yhä olemassa. Ja kahvilassa istutaan tunteja yhden kupin ääressä. Terassin alla on hyvät murut.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (valtionooppera). Faktat
