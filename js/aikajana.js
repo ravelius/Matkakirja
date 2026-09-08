@@ -2804,6 +2804,7 @@ class Aikajana {
     if (!t) return false;
     const auki = avaaTiedeliite(this.ui, this.tapahtumat, i, {
       lahdeVara: this.linssi.lahde?.aineisto ?? 'Wikipedia',
+      alkusanat: this.kaari.tiedeliiteAlkusanat ?? null,
       kunSuljetaan: () => this.palautaJutunJalkeen(),
       sisallys: {
         lista: true,
@@ -4320,6 +4321,7 @@ class Aikajana {
   avaaLoydot() {
     const auki = avaaTiedeliite(this.ui, this.tapahtumat, 0, {
       lahdeVara: this.linssi.lahde?.aineisto ?? 'Wikipedia',
+      alkusanat: this.kaari.tiedeliiteAlkusanat ?? null,
       kunSuljetaan: () => this.palautaJutunJalkeen(),
     });
     if (auki) this.vaimennaJutunAjaksi();
@@ -5432,6 +5434,7 @@ class Aikajana {
     if (i < 0) return;
     const auki = avaaTiedeliite(this.ui, this.tapahtumat, i, {
       lahdeVara: this.linssi.lahde?.aineisto ?? 'Wikipedia',
+      alkusanat: this.kaari.tiedeliiteAlkusanat ?? null,
       kunVaihtuu: (j) => {
         const kohde = this.tapahtumat[j];
         if (!kohde || !this.juuri?.isConnected || j === this.tila.i) return;

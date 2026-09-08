@@ -828,11 +828,9 @@ export const OMAT_ARTIKKELIT = {
    * Rohan nimi, kuningas Lalibela, Lastan asema ja nykyinen
    * pikkukaupunki.
    *
-   * SAAPUMISTEKSTIÄ EI KIRJOITETTU: lalibela on
-   * tests/vanha-maailma.test.mjs:n KAARETTOMAT-listalla, ja testi
-   * kaatuu, jos listalla olevalle kaupungille kirjoitetaan merkintä
-   * africa-saapumiset.js:ään. Artikkeli sen sijaan sallitaan (sama
-   * ratkaisu kuin Fesissä v1670).
+   * SAAPUMISTEKSTI KIRJOITETTIIN 8.9.2026 (Fable, omistajan päätös):
+   * lalibela poistui tests/vanha-maailma.test.mjs:n KAARETTOMAT-
+   * listalta, merkintä on africa-saapumiset.js:ssä.
    */
   Lalibela: {
     intro: 'Lalibela on pieni kaupunki Etiopian ylängöllä Amharan '

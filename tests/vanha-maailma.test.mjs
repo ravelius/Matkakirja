@@ -240,7 +240,7 @@ test('nimi ei jää kaupunkiympyrän alle', async () => {
 const KAARETTOMAT = new Set([
   'kioto', 'varanasi', 'mandalay', 'kanton', // asia
   'sevilla', 'bergen', // europe
-  'fes', 'lalibela', // africa
+  'fes', // africa (lalibela sai saapumistekstin 8.9.2026)
 ]);
 
 async function vanhanMaailmanKaupungit() {

@@ -2921,3 +2921,15 @@ body.aikaselain-auki .aikajana.kertomus .aikajana-kertomusteksti {
     left: clamp(3.6rem, var(--paikka, 50%), calc(100% - 3.6rem));
   }
 }
+
+/* Tiedeliitteen alkusanat (kaistan selite, omistaja 8.9.2026): kursiivi
+   kappale ensimmäisen sivun kärjessä, erottuu jutusta ohuella viivalla. */
+.tiedeliite-alkusanat {
+  margin: 0 0 0.9rem;
+  padding: 0 0 0.7rem;
+  border-bottom: 1px solid rgba(90, 60, 20, 0.25);
+  font-style: italic;
+  font-size: 0.95em;
+  line-height: 1.45;
+  color: #4a3a22;
+}
