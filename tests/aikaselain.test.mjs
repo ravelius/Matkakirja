@@ -370,15 +370,23 @@ test('kelauksen lukema kulkee viivojen välissä geometrisesti', () => {
 
 test('kaanonin taaksepäin kulkevat välit eivät riko kelausta', () => {
   const k = IHMISEN_MATKA_KERTOMUS;
-  // Blombos (75 000) → Levantti (110 000): lukema kasvaa välissä.
-  const i = k.findIndex((j) => j.id === 'blombos');
-  assert.ok(i > 0, 'kaanonista ei löydy blombos-jaksoa');
+  // Ainoa taaksepäin kulkeva väli on tarkoituksellinen aikahyppy
+  // (v1679: Levantti kerrotaan ennen Blombosta, kello ei muuten kulje
+  // taaksepäin): Chile (14 500) → aikahyppy (50 000): lukema kasvaa välissä.
+  const i = k.findIndex((j) => j.id === 'chile');
+  assert.ok(i > 0, 'kaanonista ei löydy chile-jaksoa');
+  assert.equal(k[i + 1]?.id, 'aikahyppy', 'chilen jälkeen pitää tulla aikahyppy');
   const a = kelauksenLukema(k, i / (k.length - 1));
   const puoli = kelauksenLukema(k, (i + 0.5) / (k.length - 1));
   const b = kelauksenLukema(k, (i + 1) / (k.length - 1));
-  assert.equal(a, 75000);
-  assert.equal(b, 110000);
-  assert.ok(puoli > a && puoli < b, `välilukema ${puoli} ei ole 75 000:n ja 110 000:n välissä`);
+  assert.equal(a, 14500);
+  assert.equal(b, 50000);
+  assert.ok(puoli > a && puoli < b, `välilukema ${puoli} ei ole 14 500:n ja 50 000:n välissä`);
+  // Muualla kello ei kulje taaksepäin (aikahyppyä lukuun ottamatta).
+  for (let j = 1; j < k.length; j += 1) {
+    if (k[j].id === 'aikahyppy') continue;
+    assert.ok(k[j].vuosia <= k[j - 1].vuosia, `${k[j - 1].id} → ${k[j].id} kulkee taaksepäin`);
+  }
 });
 
 /* ==================== 6. kytkentä ja mitat ==================== */
