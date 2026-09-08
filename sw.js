@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1691';
+const CACHE = 'matkakirja-2026-08-09.1692';
 const SHELL = [
   './',
   './index.html',
@@ -152,6 +152,9 @@ const SHELL = [
   // Aikajanan elävä liekkivalo (canvas-kerros, 5.9.2026): vain
   // js/aikajana.js tuo tämän, joten se seuraa samaa polkua.
   './js/aikajana-valo.js',
+  // Linssin hampurilaisvalikko (8.9.2026): js/aikajana.js tuo tämän
+  // staattisesti, joten se seuraa samaa polkua offline-käyttöön.
+  './js/aikajana-valikko.js',
   './js/linssipuhe.js',
   './js/tiedeliite.js',
   './js/lyhty.js',

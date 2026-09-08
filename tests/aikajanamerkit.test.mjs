@@ -165,7 +165,18 @@ globalThis.document = {
   removeEventListener() {},
   dispatchEvent() {},
 };
-globalThis.localStorage = { getItem: () => null, setItem() {}, removeItem() {} };
+/*
+ * Muistiin kirjoittava localStorage: kertojan kytkin (js/luenta.js →
+ * js/aani-ehdokkaat.js kertojaTila) LUKEE tallennetun arvon joka
+ * kerta, joten pelkkä null-tynkä ei näyttäisi valikon kytkintä
+ * lainkaan kääntyvän.
+ */
+const muisti = new Map();
+globalThis.localStorage = {
+  getItem: (avain) => (muisti.has(avain) ? muisti.get(avain) : null),
+  setItem: (avain, arvo) => { muisti.set(avain, String(arvo)); },
+  removeItem: (avain) => { muisti.delete(avain); },
+};
 globalThis.fetch = () => Promise.reject(new Error('ei verkkoa testissä'));
 globalThis.window = { AudioContext: function Ctx() { return {}; } };
 
@@ -261,6 +272,8 @@ const {
 } = await import('../js/aikajana.js');
 const { pallonLaatuPakotettu } = await import('../js/pallo.js');
 const { LINSSI } = await import('../js/linssit/keksinnot.js');
+const { luentaKytkinPaalla } = await import('../js/luenta.js');
+const { musiikkiPaalla } = await import('../js/musiikkivalitsin.js');
 const { lisaaVaistaja, nollaaHiljennykset } = await import('../js/ambience-stream.js');
 const { LINSSIN_HILJENNYS } = await import('../js/siirtymamusiikki.js');
 const tehosteet = await import('../js/tehosteet.js');
@@ -857,12 +870,21 @@ test('keksintölinssin pysäkkiajo saa saman palkin ja Aloita alusta -napin', ()
   assert.equal(ajo.virtanapit, null, 'pysäkkiajo sai virtanapit');
   assert.equal(ajo.aikaselain, null, 'pysäkkiajo sai aikaselaimen');
 
-  // 2. NAPIT SAMASSA LAIDASSA: ↺ ja ✕ ovat ohjainrivin lapsia, ✕ viimeisenä.
-  assert.ok(ajo.alustaNappi, 'Aloita alusta -nappia ei rakennettu');
-  const ohjaimet = ajo.alustaNappi.parent;
-  assert.equal(ajo.suljeNappi.parent, ohjaimet, '✕ jäi kartan kulmaan');
-  assert.equal(ohjaimet.children.at(-1), ajo.suljeNappi, '✕ ei ole palkin oikea laita');
-  assert.equal(ajo.alustaNappi.getAttribute('aria-label'), 'Aloita alusta');
+  /*
+   * 2. HAMPURILAINEN PALKIN OIKEASSA LAIDASSA (omistaja 8.9.2026):
+   *    erillisiä ✕- ja ↺-nappeja ei ole, vaan Poistu ja Aloita alusta
+   *    ovat valikon kaksi ensimmäistä riviä. `suljeNappi` ja
+   *    `alustaNappi` osoittavat niihin, jotta moottorin muut polut
+   *    (ja tämän testin kohta 3) pysyvät ennallaan.
+   */
+  assert.ok(ajo.valikko, 'palkki jäi ilman hampurilaisvalikkoa');
+  const ohjaimet = ajo.valikko.kotelo.parent;
+  assert.ok(ohjaimet.classList.contains('aikajana-ohjaimet'), 'valikko ei ole ohjainrivissä');
+  assert.equal(ohjaimet.children.at(-1), ajo.valikko.kotelo, 'valikko ei ole palkin oikea laita');
+  assert.equal(ajo.valikko.nappi.getAttribute('aria-label'), 'Valikko');
+  assert.equal(ajo.suljeNappi, ajo.valikko.poistuNappi, 'Poistu ei ole sulkeva kahva');
+  assert.equal(ajo.alustaNappi, ajo.valikko.alustaNappi, 'Aloita alusta ei ole valikon rivi');
+  assert.equal(ajo.alustaNappi.textContent, 'Aloita alusta');
 
   // 3. RESET. ↺ palauttaa ensimmäiselle pysäkille PAIKAN PÄÄLLÄ: kello
   //    alkuun, valot sammuksiin, ilmiöpaneeli kiinni — linssiä ei
@@ -893,4 +915,95 @@ test('keksintölinssin pysäkkiajo saa saman palkin ja Aloita alusta -napin', ()
   pysaytaAikajana(ui);
   assert.ok(!document.body.classList.contains('aikajana-palkki-auki'),
     'yläpalkki jäi piiloon linssin sulun jälkeen');
+});
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LINSSIN HAMPURILAISVALIKKO (omistaja 8.9.2026, Raamattu "LINSSIEN
+ * HAMPURILAINEN OIKEASSA YLAKULMASSA", sanatarkasti: *"Kummankin
+ * linssin ja myös tulevien linssien oikeaan yläreunaan voisi laittaa
+ * hampurilaisen, mistä löytyisi järjestyksessä ylhäältä alas: poistu,
+ * aloita alusta, kertoja (on/off) ja taustamusiikki (on/off). Poistu ja
+ * aloita alusta napit voi ottaa yläpalkista siten pois näkyvistä."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Neljä asiaa rikkoutuu HILJAA: rivien järjestys (omistajan lista on
+ * sanatarkka), kytkinten kytkeytyminen PELIN omiin kytkimiin (linssin
+ * paikallinen kopio olisi vika eikä ominaisuus), Escin etuoikeus
+ * (valikko ennen linssiä) ja Poistun sama teko kuin entisellä ✕:llä.
+ * Valikko rakennetaan MOOTTORISSA (rakennaPalkki), joten tämä vartio
+ * koskee myös tulevia linssejä.
+ */
+test('hampurilaisvalikossa neljä kohtaa oikeassa järjestyksessä, kytkimet ja Esc', () => {
+  const ui = tynkaUi();
+  kaynnistaAikajana(ui, LINSSI);
+  ajaKehykset();
+  const ajo = ui.aikajana;
+  const valikko = ajo.valikko;
+  assert.ok(valikko, 'linssi jäi ilman valikkoa');
+
+  // 1. JÄRJESTYS YLHÄÄLTÄ ALAS ja roolit (kaksi komentoa, kaksi kytkintä).
+  const rivit = valikko.valikko.children;
+  assert.deepEqual(
+    rivit.map((r) => r.getAttribute('class').split(' ')
+      .find((l) => /^aikajana-valikko-(poistu|alusta|kertoja|musiikki)$/.test(l))),
+    [
+      'aikajana-valikko-poistu',
+      'aikajana-valikko-alusta',
+      'aikajana-valikko-kertoja',
+      'aikajana-valikko-musiikki',
+    ],
+    'valikon kohdat eivät ole omistajan järjestyksessä',
+  );
+  assert.deepEqual(rivit.map((r) => r.getAttribute('role')),
+    ['menuitem', 'menuitem', 'menuitemcheckbox', 'menuitemcheckbox']);
+  assert.equal(valikko.valikko.getAttribute('role'), 'menu');
+  assert.equal(valikko.nappi.getAttribute('aria-haspopup'), 'true');
+
+  // 2. NAPPI AVAA JA SULKEE; aria-expanded seuraa.
+  assert.equal(valikko.auki(), false, 'valikko oli auki heti');
+  valikko.nappi.click();
+  assert.equal(valikko.auki(), true, 'nappi ei avannut valikkoa');
+  assert.equal(valikko.nappi.getAttribute('aria-expanded'), 'true');
+  valikko.nappi.click();
+  assert.equal(valikko.auki(), false, 'toinen napautus ei sulkenut');
+  assert.equal(valikko.nappi.getAttribute('aria-expanded'), 'false');
+
+  // 3. ESC SULKEE ENSIN VALIKON, EI LINSSIÄ.
+  valikko.nappi.click();
+  let estetty = false;
+  ajo.nappain({ key: 'Escape', preventDefault: () => { estetty = true; } });
+  assert.equal(valikko.auki(), false, 'Esc ei sulkenut valikkoa');
+  assert.ok(estetty, 'Esc ei kuluttanut näppäintä valikolle');
+  assert.ok(ajo.juuri.isConnected, 'Esc sulki linssin, vaikka valikko oli auki');
+
+  // 4. KERTOJA on PELIN kytkin (js/luenta.js), ei linssin oma.
+  assert.equal(luentaKytkinPaalla(), true, 'kertoja ei ollut oletuksena päällä');
+  valikko.nappi.click();
+  valikko.kertojaNappi.click();
+  assert.equal(luentaKytkinPaalla(), false, 'Kertoja-rivi ei kääntänyt kytkintä');
+  assert.equal(valikko.kertojaNappi.getAttribute('aria-checked'), 'false');
+  assert.equal(valikko.auki(), false, 'valinta ei sulkenut valikkoa');
+  valikko.nappi.click();
+  valikko.kertojaNappi.click();
+  assert.equal(luentaKytkinPaalla(), true, 'kytkin ei palannut päälle');
+  assert.equal(valikko.kertojaNappi.getAttribute('aria-checked'), 'true');
+
+  // 5. TAUSTAMUSIIKKI on samoin pelin oma kytkin (js/musiikkivalitsin.js).
+  assert.equal(musiikkiPaalla(), true, 'musiikki ei ollut oletuksena päällä');
+  valikko.nappi.click();
+  valikko.musiikkiNappi.click();
+  assert.equal(musiikkiPaalla(), false, 'Taustamusiikki-rivi ei kääntänyt kytkintä');
+  assert.equal(valikko.musiikkiNappi.getAttribute('aria-checked'), 'false');
+  valikko.nappi.click();
+  valikko.musiikkiNappi.click();
+  assert.equal(musiikkiPaalla(), true, 'musiikkikytkin ei palannut päälle');
+
+  // 6. POISTU tekee sen, minkä ✕ teki: linssi puretaan ja yläpalkki palaa.
+  valikko.nappi.click();
+  valikko.poistuNappi.click();
+  ajaKehykset();
+  assert.equal(ui.aikajana, null, 'Poistu ei purkanut linssiä');
+  assert.ok(!document.body.classList.contains('aikajana-palkki-auki'),
+    'Poistu jätti Matkakirjan yläpalkin piiloon');
 });

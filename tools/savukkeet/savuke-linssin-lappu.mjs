@@ -12,7 +12,8 @@
  * MIKSI OMA SAVUKE: yksikkötestit näkevät lähteen (tests/aikajana.mjs
  * lukee luokat ja css:n tekstinä), mutta eivät sitä, TULEEKO pallon
  * veto perille kaappausvaiheeseen, KUTISTUUKO lappu oikeasti ruudulta
- * pois ja jääkö sulkeva ✕ jonkin toisen napin alle puhelimella. Ne
+ * pois ja jääkö palkin hampurilainen jonkin toisen napin alle
+ * puhelimella (ennen 8.9.2026 iltaa sama vartio koski sulkevaa ✕:ää). Ne
  * mitataan tässä oikealla moottorilla kahdessa näkymässä — tabletti
  * 834 × 1100 (omistajan iPad-kaappauksen kokoluokka) ja puhelin
  * 390 × 844 (talon ahtain ruutu).
@@ -320,13 +321,17 @@ for (const nakyma of AJETTAVAT) {
     JSON.stringify(rullanJalkeen));
 
   /*
-   * 6. ✕ kartan oikeassa yläkulmassa: kartta-alueen oikeassa
-   * neljänneksessä ylhäällä, 44 px osumapinta, eikä osu yhteenkään
+   * 6. HAMPURILAINEN palkin oikeassa laidassa: kartta-alueen oikeassa
+   * neljänneksessä ylhäällä, palkin napin kokoinen osumapinta
+   * (--palkin-nappi: 36 px, puhelimella 32 px), eikä osu yhteenkään
    * toiseen kartan päällä olevaan nappiin (päällekkäisyys on juuri se,
-   * mitä omistaja ei näe ennen kuin sormi osuu väärään).
+   * mitä omistaja ei näe ennen kuin sormi osuu väärään). Nappi oli
+   * 7.9.2026 kartan kulman ✕ (44 px) ja 8.9. aamulla palkin ✕; illalla
+   * omistaja korvasi sen hampurilaisella, jonka valikossa ovat Poistu,
+   * Aloita alusta, Kertoja ja Taustamusiikki.
    */
   const kulma = await s.evaluate(() => {
-    const x = document.querySelector('.aikajana-sulje');
+    const x = document.querySelector('.aikajana-valikko-nappi');
     const pane = document.querySelector('.map-pane');
     if (!x || !pane) return null;
     const r = x.getBoundingClientRect();
@@ -368,16 +373,17 @@ for (const nakyma of AJETTAVAT) {
     x: Math.max(0, NAKYMAT[nakyma].viewport.width - 200), y: 0, width: 200, height: 200,
   } : null;
   if (kulmakuva) await kaappaa(s, kuva('oikea-ylakulma'), kulmakuva);
-  vaadi(nimessa('sulkeva ✕ on kartan oikeassa yläkulmassa, 44 px ala, ei päällekkäin muiden nappien kanssa'),
-    Boolean(kulma) && kulma.leveys >= 44 && kulma.korkeus >= 44
+  vaadi(nimessa('hampurilainen on palkin oikeassa laidassa, palkin napin ala, ei päällekkäin muiden nappien kanssa'),
+    Boolean(kulma) && kulma.leveys >= 32 && kulma.korkeus >= 32
       && kulma.oikealla > 0.7 && kulma.ylhaalla < 0.12 && kulma.marginaaliOikealta >= 0
       && kulma.osuu.length === 0,
     JSON.stringify(kulma));
 
-  /* 7. ✕ sulkee linssin milloin vain (myös lappu rullattuna). */
+  /* 7. Valikon Poistu sulkee linssin milloin vain (myös lappu rullattuna). */
   const sulku = await s.evaluate(async () => {
     const { ui } = window.matkakirja;
-    document.querySelector('.aikajana-sulje')?.click();
+    document.querySelector('.aikajana-valikko-nappi')?.click();
+    document.querySelector('.aikajana-valikko-poistu')?.click();
     for (let i = 0; i < 80; i += 1) {
       if (!ui.aikajana && !document.querySelectorAll('.aikajana-valo').length) break;
       await new Promise((r) => setTimeout(r, 100));
@@ -390,7 +396,7 @@ for (const nakyma of AJETTAVAT) {
       pallolinssi: ui.pallolinssi?.tunnus ?? null,
     };
   });
-  vaadi(nimessa('✕ sulkee linssin: kello, valot ja pallolinssi pois'),
+  vaadi(nimessa('valikon Poistu sulkee linssin: kello, valot ja pallolinssi pois'),
     !sulku.aikajana && sulku.kello === 0 && sulku.valot === 0 && !sulku.luokka
       && sulku.pallolinssi === null,
     JSON.stringify(sulku));

@@ -275,8 +275,9 @@ test('esityksen pinnat ovat olemassa: pimeä, teksti, kuva ja koukku', () => {
   // Musta ruutu ja sen purku (Raamattu ALKAA MUSTASTA RUUDUSTA).
   assert.match(CSS, /\.aikajana-esitys-peite \{/);
   assert.match(CSS, /\.aikajana-esitys-peite\.pois \{[\s\S]{0,120}2600ms/);
-  // Pimeässä vain sulkunappi.
-  assert.match(CSS, /\.aikajana\.esitys-pimea \.aikajana-nappi:not\(\.aikajana-sulje\)/);
+  // Pimeässä vain hampurilainen (omistaja 8.9.2026: ✕ ja ↺ korvattiin
+  // valikolla, joten palkin ainoa näkyvä nappi on valikon nappi).
+  assert.match(CSS, /\.aikajana\.esitys-pimea \.aikajana-nappi:not\(\.aikajana-valikko-nappi\)/);
   // Esinerivi pois esityksen ajaksi ja takaisin lopuksi.
   assert.match(CSS, /\.aikajana\.esitys-kaynnissa \.aikajana-nauha \{/);
   assert.match(OHJAAJA, /ajo\.juuri\?\.classList\.remove\('esitys-kaynnissa'\);/);
@@ -307,11 +308,12 @@ test('aikaselain seuraa esitystä ja ohjaa sitä (7.9.2026)', () => {
   assert.match(OHJAAJA, /const kelaaKello = \(vuosia\) => \{/);
   assert.match(OHJAAJA, /vanat\?\.\(\)\?\.paivita\?\.\(arvo, \{ pito: false \}\)/,
     'kelaus ei päivitä vanoja suoraan (tutkimusvaiheessa silmukka ei lue kelloa)');
-  // Tauko/Jatka, ↺ ja ✕ jäävät palkkiin: nauha ei korvaa niitä.
+  // Tauko/Jatka ja hampurilainen jäävät palkkiin: nauha ei korvaa niitä.
   // (Palkin yhteiset tyylit ovat 8.9.2026 alkaen `.aikajana.palkki`:ssa —
-  // sama palkki on nyt myös keksintölinssillä.)
-  assert.match(CSS, /\.aikajana\.palkki \.aikajana-alusta \{/);
-  assert.match(CSS, /\.aikajana\.palkki \.aikajana-sulje \{/);
+  // sama palkki on nyt myös keksintölinssillä; ✕ ja ↺ muuttuivat saman
+  // päivän iltana valikon riveiksi.)
+  assert.match(CSS, /\.aikajana\.palkki \.aikajana-ohjaimet \.aikajana-valikko-nappi \{/);
+  assert.match(CSS, /\.aikajana\.palkki \.aikajana-ohjaimet > \.aikajana-nappi \{/);
 });
 
 test('loppunäkymä asemoidaan erikseen, ei jätetä kesken jääneen ajon varaan', () => {

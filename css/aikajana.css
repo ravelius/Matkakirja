@@ -885,39 +885,102 @@
 .aikajana-nappi:hover { background: rgba(217, 161, 59, 0.22); }
 .aikajana-nappi:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 /*
- * SULKEVA ✕ KARTAN OIKEASSA YLÄKULMASSA (omistaja 7.9.2026 ilta,
- * sanatarkasti: *"otetaan pois tuo suljen nappi siitä ja siirretään se
- * kartan oikeaan yläkulmaan, mistä tämän linssin voi sitten sulkea
- * milloin vain"*). Nappi ei ole enää otsikkorivin osa vaan linssin
- * juuren (`.aikajana`, inset 0 kartta-alueessa) suora lapsi, joten se
- * pysyy samassa kulmassa vaikka palkki venyisi tai kutistuisi.
+ * ══════════════════════════════════════════════════════════════════
+ * LINSSIN HAMPURILAISVALIKKO (omistaja 8.9.2026, Raamattu "LINSSIEN
+ * HAMPURILAINEN OIKEASSA YLAKULMASSA", sanatarkasti: *"Kummankin
+ * linssin ja myös tulevien linssien oikeaan yläreunaan voisi laittaa
+ * hampurilaisen, mistä löytyisi järjestyksessä ylhäältä alas: poistu,
+ * aloita alusta, kertoja (on/off) ja taustamusiikki (on/off). Poistu ja
+ * aloita alusta napit voi ottaa yläpalkista siten pois näkyvistä."*)
+ * ══════════════════════════════════════════════════════════════════
  *
- * PAIKKA: sama pystyvara kuin ylärivillä (0,6rem) ja sama sivuvara
- * kuin palkin vasemmalla laidalla (1,25rem) — kulma näyttää samalta
- * kuin vastakkainen. Kartta-alueen oikeassa yläkulmassa ei ole muuta
- * linssin aikana (maakyltti elää vain maaselaimessa, js/ui.js
- * paivitaMaaPilleri; pöllö on alanurkassa), joten mikään ei mene
- * päällekkäin — tarkistettu kuvakaappauksella 390 × 844 ja 834 × 1100.
+ * Nappi korvasi entiset ✕- ja ↺-napit (kumpikin poistettu 8.9.2026;
+ * ✕ ehti asua kartan oikeassa yläkulmassa 7.9. ja palkissa 8.9.).
+ * Pinta on js/aikajana-valikko.js, ja se rakennetaan moottorissa
+ * (rakennaPalkki), joten jokainen tuleva linssi saa saman valikon.
  *
- * KOSKETUSALA 44 px molempiin suuntiin (talon kosketusohje). Merkki
- * pysyy pienenä, ala kasvaa napin omilla mitoilla; tyyli (katkoviiva-
- * reunus, kullan sävy) on entinen.
+ * ASU: ikoni ja pudotus ovat Matkakirjan päävalikon (css/styles.css
+ * .paavalikko) kaava tummalle palkille sovitettuna — sama ruskea
+ * liukuväri kuin palkilla, kullanväriset rivit, pudotus napin alle
+ * oikeaan reunaan. Kotelo on suhteellinen, jotta pudotus asemoituu
+ * nappiin eikä palkkiin.
  */
-.aikajana-sulje {
-  position: absolute;
-  top: 0.6rem;
-  right: 1.25rem;
-  z-index: 8;
-  display: flex;
+.aikajana-valikko-kotelo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+/*
+ * Hampurilainen on palkin muiden nappien korkuinen ja neliö. Sääntö on
+ * `.aikajana-ohjaimet`-tasolla eikä sen suorana lapsena, koska nappi on
+ * kotelonsa sisällä (ks. `> .aikajana-nappi` alempana).
+ */
+.aikajana.palkki .aikajana-ohjaimet .aikajana-valikko-nappi {
+  min-height: var(--palkin-nappi);
+  height: var(--palkin-nappi);
+  min-width: var(--palkin-nappi);
+  width: var(--palkin-nappi);
+  box-sizing: border-box;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 44px;
-  min-height: 44px;
   padding: 0;
-  border-style: dashed;
-  font-size: 1.05rem;
-  line-height: 1;
 }
+.aikajana-valikko-nappi .viiva-ikoni svg { width: 20px; height: 20px; }
+.aikajana-valikko {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 12.5rem;
+  padding: 0.35rem;
+  border: 1px solid rgba(217, 161, 59, 0.38);
+  border-radius: 10px;
+  /* Sama ruskea kuin palkilla ja Matkakirjan yläpalkilla. */
+  background: linear-gradient(180deg, #3a2a1c, #251b12);
+  box-shadow: 0 10px 28px rgba(15, 10, 5, 0.5);
+  /* Neljä riviä mahtuu aina, mutta katto ja vieritys ovat halpoja:
+     puhelin vaakatasossa on matala (sama sääntö kuin päävalikolla). */
+  max-height: calc(100dvh - 4.5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.aikajana-valikko-kohta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  width: 100%;
+  /* Kosketusala 40 px: valikko on pudotus eikä kartan kulman nappi,
+     ja rivit ovat leveitä — korkeus riittää sormelle. */
+  min-height: 40px;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: none;
+  font-family: var(--font-type);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-align: left;
+  white-space: nowrap;
+  color: #d9a13b;
+  cursor: pointer;
+}
+.aikajana-valikko-kohta:hover { background: rgba(234, 184, 78, 0.12); }
+.aikajana-valikko-kohta:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* Kytkimen tila ("päällä"/"pois") pergamentin vaalealla kuten palkin
+   paikkarivi: nimi on komento, tila on tieto. */
+.aikajana-valikko-tila {
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  color: #e6d7bb;
+  opacity: 0.75;
+}
+.aikajana-valikko-kytkin.valittu .aikajana-valikko-tila { opacity: 1; color: #f1e6d0; }
+
 /*
  * LAPUN KAHVA otsikkorivissä (ks. js/aikajana.js LAPPU VÄISTYY KARTAN
  * KOSKETUKSESTA): näkyy vain kun lappu on rullattu ylös. Nimi voi olla
@@ -1766,7 +1829,6 @@
     transform: translateX(-50%);
     max-width: calc(100% - 4.8rem);
   }
-  .aikajana-sulje { right: 0.6rem; }
   /*
    * KAPEALLA RUUDULLA KAHVA ON PELKKÄ ▾. Mitattu 390 × 844: kello vie
    * 170 px ja Jatka 50 px, joten nimelle jäisi noin 60 px eli "Mat…▾"
@@ -1903,19 +1965,20 @@
 }
 
 /*
- * PIMEÄSSÄ VAIN SULKUNAPPI. Kello, otsikot, esinerivi, lapun kahva ja
- * Tauko/Jatka väistyvät mustan alle. Sulkunappi jää: se on juuren suora
- * lapsi omalla pinollaan (css .aikajana-sulje, z-index 8), joten se on
- * peitteen päällä ilman että tässä tarvitsee nostaa mitään — ohjainrivi
- * sai aiemmin oman z-indexin juuri sitä varten, ja se poistui, kun ✕
- * siirtyi kartan oikeaan yläkulmaan (7.9.2026).
+ * PIMEÄSSÄ VAIN HAMPURILAINEN. Kello, otsikot, esinerivi, lapun kahva ja
+ * Tauko/Jatka väistyvät mustan alle. Valikon nappi jää — se on ainoa
+ * tie ulos linssistä ja alusta-komentoon (omistaja 8.9.2026: ✕ ja ↺
+ * korvattiin hampurilaisella, ks. LINSSIN HAMPURILAISVALIKKO). Ennen
+ * poikkeus oli `.aikajana-sulje`, joka asui omalla pinollaan kartan
+ * kulmassa; nyt nappi on palkissa muiden mukana, ja pudotusvalikko
+ * nousee sen alle omalla z-indexillään (12) peitteen päälle.
  */
 .aikajana.esitys-pimea .aikajana-otsikot,
 .aikajana.esitys-pimea .aikajana-kello,
 .aikajana.esitys-pimea .aikajana-nauha,
 .aikajana.esitys-pimea .aikajana-ilmio,
 .aikajana.esitys-pimea .aikajana-vinjetti,
-.aikajana.esitys-pimea .aikajana-nappi:not(.aikajana-sulje) {
+.aikajana.esitys-pimea .aikajana-nappi:not(.aikajana-valikko-nappi) {
   opacity: 0;
   pointer-events: none;
   transition: opacity 500ms ease;
@@ -1925,8 +1988,8 @@
  * leijumaan tyhjä pergamenttikehys — palkin oma tausta ja reunus —
  * jonka sisällä ei näy mitään: kello ja otsikot ovat läpinäkyviä
  * mutta vievät yhä tilansa. Nyt palkin runko häviää ja jäljelle jää
- * vain ✕ omalla kehyksellään (omistaja: *"vain kertojan ääni ja
- * kysymys"*).
+ * vain hampurilainen omalla kehyksellään (omistaja: *"vain kertojan
+ * ääni ja kysymys"*).
  */
 .aikajana.esitys-pimea .aikajana-ylarivi {
   border-color: transparent;
@@ -2709,8 +2772,10 @@ body.aikajana-paalla .pallolauta-nappula { display: none; }
                  ja kello
      keskellä    kertomuskaarella viisi virtaa
                  (css/ihmisen-tutkimus.css .ihmisen-vananapit)
-     oikealla    Tauko/Jatka (pysäkkiajolla myös lapun kahva),
-                 Aloita alusta (↺) ja ✕
+     oikealla    Tauko/Jatka (pysäkkiajolla myös lapun kahva) ja
+                 hampurilainen, jonka valikossa ovat Poistu, Aloita
+                 alusta, Kertoja ja Taustamusiikki (8.9.2026; ✕ ja ↺
+                 poistuivat palkista omistajan linjauksella)
 
    KAKSI LUOKKAA, EI KAHTA KOPIOTA. `.aikajana.palkki` on palkin yhteinen
    asu — kumpikin kaari saa sen samanlaisena. `.aikajana.kertomus` on vain
@@ -2787,11 +2852,14 @@ body.aikajana-palkki-auki .topbar {
   flex: 0 0 auto;
 }
 /*
- * ✕ on palkin oikea laita, ei enää kartan kulmassa erikseen.
+ * HAMPURILAINEN ON PALKIN OIKEA LAITA (omistaja 8.9.2026); ✕ ja ↺ ovat
+ * poissa, ja niiden teot ovat valikon kaksi ensimmäistä riviä.
  * KAIKKI OIKEAN LAIDAN NAPIT SAMANKORKUISIA (omistaja 7.9.2026 ilta:
- * "Oik yläkulman napit pitää olla yhtäkorkeita"): Tauko, ↺ ja ✕ — ja
- * pysäkkiajolla lapun kahva — jakavat yhden korkeuden (--palkin-nappi);
- * ↺ ja ✕ ovat neliöitä.
+ * "Oik yläkulman napit pitää olla yhtäkorkeita"): Tauko ja hampurilainen
+ * — ja pysäkkiajolla lapun kahva — jakavat yhden korkeuden
+ * (--palkin-nappi); hampurilainen on neliö. Valikon oma asu on tiedoston
+ * alkupuolella (LINSSIN HAMPURILAISVALIKKO), koska se ei ole palkin
+ * geometriaa vaan pudotusvalikon oma.
  */
 .aikajana.palkki .aikajana-ohjaimet { --palkin-nappi: 36px; }
 .aikajana.palkki .aikajana-ohjaimet > .aikajana-nappi {
@@ -2802,22 +2870,10 @@ body.aikajana-palkki-auki .topbar {
   align-items: center;
   justify-content: center;
 }
-.aikajana.palkki .aikajana-sulje {
-  position: static;
-  min-width: var(--palkin-nappi);
-  width: var(--palkin-nappi);
-  padding: 0;
-}
-.aikajana.palkki .aikajana-alusta {
-  min-width: var(--palkin-nappi);
-  width: var(--palkin-nappi);
-  padding: 0;
-  font-size: 1.05rem;
-  line-height: 1;
-}
-/* Pimeässä palkista jää vain ✕ (ks. .aikajana.esitys-pimea yllä). */
+/* Pimeässä palkista jää vain hampurilainen (ks. .aikajana.esitys-pimea
+   yllä): sen napin poikkeus riittää, koska ✕ ja ↺ eivät ole enää
+   palkissa vaan valikon riveinä. */
 .aikajana.kertomus.esitys-pimea .aikajana-ylarivi { background: none; box-shadow: none; }
-.aikajana.kertomus.esitys-pimea .aikajana-alusta { opacity: 0; pointer-events: none; }
 
 /*
  * ALAREUNAN KARUSELLI POIS (omistaja: *"Tuon alareunan kuvakallerian voi
@@ -2842,10 +2898,16 @@ body.aikajana-palkki-auki .topbar {
   .aikajana.palkki .aikajana-ohjaimet { gap: 0.2rem; }
   .aikajana.palkki .aikajana-ohjaimet { --palkin-nappi: 32px; }
   /*
+   * VALIKKO MAHTUU PUHELIMEN RUUTUUN. Pudotus on ankkuroitu napin
+   * oikeaan reunaan, joten se kasvaa vasemmalle; katto on ruudun leveys
+   * miinus palkin omat varat, jottei se työnny laidan yli 390 px:llä.
+   */
+  .aikajana-valikko { min-width: 11.5rem; max-width: calc(100vw - 1.4rem); }
+  /*
    * PAIKKARIVI MAHTUU PUHELIMEENKIN. Mitattu 390 × 844 (kaappaus
    * 8.9.2026): koko palkki 374 px, siitä kello 95 px ja oikean laidan
-   * napit (Jatka + ↺ + ✕, kahvan kanssa neljä) 165 px — paikkariville
-   * jää yli 100 px, eli sen oma katto 7rem. Se pysyy siis näkyvissä
+   * napit (Jatka + hampurilainen, kahvan kanssa kolme) noin 130 px —
+   * paikkariville jää yli 100 px, eli sen oma katto 7rem. Se pysyy siis näkyvissä
    * kuten ennen palkkia (omistaja 5.9.2026: paikka kuuluu
    * kelloriville); vain linssin nimi väistyy, ja sen tekee kapean
    * ruudun oma sääntö (.aikajana-otsikko display: none) kuten

@@ -311,7 +311,9 @@ await s.waitForTimeout(1800);
 const pimea = await s.evaluate(() => {
   const juuri = document.querySelector('.aikajana');
   const peite = document.querySelector('.aikajana-esitys-peite');
-  const sulje = document.querySelector('.aikajana-sulje');
+  // Pimeässä palkista jää näkyviin vain hampurilainen (8.9.2026: ✕ ja ↺
+  // korvautuivat sen valikolla).
+  const sulje = document.querySelector('.aikajana-valikko-nappi');
   const kello = document.querySelector('.aikajana-kello');
   const tyyli = (el) => (el ? Number(getComputedStyle(el).opacity) : null);
   return {
@@ -480,7 +482,7 @@ vaadi('TAUKO: kello ja luenta pysähtyvät samasta kohdasta, jatko jatkaa siitä
     && jatkui.kaynnissa === true
     && (jatkui.jalkeen > jatkui.ennen || jatkui.jakso !== jatkui.ennenJakso),
   JSON.stringify({ tauolla: { tauolla: tauolla.tauolla, nappi: tauolla.nappi }, jatkui }));
-vaadi('PIMEÄ: pohja musta, kartta ja käyttöliittymä piilossa, sulkunappi käytettävissä',
+vaadi('PIMEÄ: pohja musta, kartta ja käyttöliittymä piilossa, hampurilainen käytettävissä',
   pimea.peite && pimea.mustaLevy === 1 && pimea.pimeaLuokka
     && pimea.kelloNakyy === 0 && pimea.suljeNakyy === 1 && pimea.jakso === 'avaus',
   JSON.stringify(pimea));
@@ -842,7 +844,10 @@ try {
 
   /* ------------------------------------------------------- 9. purku */
 
-  await s.evaluate(() => document.querySelector('.aikajana-sulje')?.click());
+  await s.evaluate(() => {
+    document.querySelector('.aikajana-valikko-nappi')?.click();
+    document.querySelector('.aikajana-valikko-poistu')?.click();
+  });
   await s.waitForTimeout(1600);
   const purku = await s.evaluate(() => ({
     kello: Boolean(document.querySelector('.aikajana-kello')),

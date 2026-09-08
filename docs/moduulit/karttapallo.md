@@ -3654,8 +3654,11 @@ jostain syystä ehdi.
   valikon ollessa auki; valikko sulkeutuu silti omaa reittiään. Sama
   rajaus kuin pöllön kuplan `omaHallinta`ssa.
 - **Kartoitetut valikot** ovat `#paavalikko` (hampurilainen — sen
-  sisällä myös äänirivit, lautakytkimet ja työhuoneen napit) ja
-  `#kehittaja-valikko` (ratas). Muut eivät tarvitse vartijaa:
+  sisällä myös äänirivit, lautakytkimet ja työhuoneen napit),
+  `#kehittaja-valikko` (ratas) ja 8.9.2026 alkaen `#aikajana-valikko`
+  (linssin oma hampurilainen palkin oikeassa laidassa,
+  js/aikajana-valikko.js): se elää kartta-alueen sisällä, joten sen
+  sulkeva napautus on juuri tämän vartijan tapaus. Muut eivät tarvitse vartijaa:
   `#nahtavyys-valikko` ja `#linssi-valikko` asuvat modaalin dialogin
   sisällä, jolloin kartta ei ota napautuksia lainkaan; pöllön ja pulun
   kuplat nielaisevat sulkevan napautuksensa itse (js/pollo.js

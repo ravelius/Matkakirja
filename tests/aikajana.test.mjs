@@ -299,9 +299,11 @@ test('lappu rullautuu ylös kartan kosketuksesta ja palaa otsikkorivin kahvasta'
   // Loppusanat aukeavat aina, ja alustus palauttaa lapun esiin.
   assert.match(metodi('lopeta'), /this\.naytaLappu\(\);/);
   assert.match(metodi('alusta'), /this\.paneeli\.classList\.remove\('piilossa'\);/);
-  // ✕ ei ole enää otsikkorivin ohjaimissa vaan juuren lapsi kulmassa.
+  // ✕ ei ole enää missään: sulkeminen on hampurilaisvalikon Poistu-rivi
+  // (omistaja 8.9.2026), joten juureen ei jää omaa nappia.
   assert.match(rakenna, /ohjaimet\.append\(this\.lappuKahva, this\.taukoNappi\);/);
-  assert.match(rakenna, /this\.juuri\.append\(ylarivi, this\.suljeNappi, this\.paneeli, this\.nauha\);/);
+  assert.match(rakenna, /this\.juuri\.append\(ylarivi, this\.paneeli, this\.nauha\);/);
+  assert.ok(!rakenna.includes('aikajana-sulje'), '✕ rakennetaan yhä palkkiin tai kulmaan');
   // Css: rullaus kutistaa yläreunaansa, ei korkeutta (js omistaa height).
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio\.piilossa \{[\s\S]{0,400}scaleY\(0\.02\)/);
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio\.piilossa \{[\s\S]{0,600}visibility: hidden;/);
@@ -309,10 +311,14 @@ test('lappu rullautuu ylös kartan kosketuksesta ja palaa otsikkorivin kahvasta'
   assert.match(AIKAJANA_CSS, /--aikajana-lappu-kesto: 300ms;/);
   // Reduced motion: sama vaihdos ilman liukua.
   assert.match(AIKAJANA_CSS, /--aikajana-kesto: 0\.01s; --aikajana-lappu-kesto: 0\.01s;/);
-  // ✕ kartan oikeassa yläkulmassa, 44 px kosketusala.
-  assert.match(AIKAJANA_CSS, /\.aikajana-sulje \{[\s\S]{0,400}position: absolute;/);
-  assert.match(AIKAJANA_CSS, /\.aikajana-sulje \{[\s\S]{0,400}right: 1\.25rem;/);
-  assert.match(AIKAJANA_CSS, /\.aikajana-sulje \{[\s\S]{0,400}min-width: 44px;[\s\S]{0,60}min-height: 44px;/);
+  /*
+   * HAMPURILAINEN PALKIN OIKEASSA LAIDASSA (omistaja 8.9.2026): ✕:n ja
+   * ↺:n tyylit ovat poissa, ja tilalla on valikon nappi ja pudotus.
+   */
+  assert.ok(!AIKAJANA_CSS.includes('.aikajana-sulje {'), '✕:n tyyli jäi css:ään');
+  assert.ok(!AIKAJANA_CSS.includes('.aikajana-alusta {'), '↺:n tyyli jäi css:ään');
+  assert.match(AIKAJANA_CSS, /\.aikajana-valikko-kotelo \{[\s\S]{0,200}position: relative;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-valikko \{[\s\S]{0,400}right: 0;/);
   /*
    * KAPEA RUUTU: palkki on keskellä (omistajan päätös 5.9.2026), mutta
    * keskitys lasketaan kulman napin vasemmalle puolelle jäävästä
@@ -2119,8 +2125,10 @@ test('välinäytös on tekstiä kartan päällä, ei korttia; Jatka hehkuu yläp
 
 test('yksi Tauko/Jatka-nappi ja (x): välinäytöksessä nappi on Jatka, kuvakierto paneelissa', () => {
   const rakenna = metodi('rakenna');
-  assert.match(rakenna, /solmu\('button', 'aikajana-nappi aikajana-sulje', '✕'\)/);
-  assert.match(rakenna, /this\.suljeNappi\.setAttribute\('aria-label', 'Sulje'\)/);
+  // ✕ poistui kokonaan 8.9.2026 (hampurilaisvalikko); Poistu on valikon
+  // ensimmäinen rivi, ja `suljeNappi` osoittaa siihen (rakennaPalkki).
+  assert.ok(!rakenna.includes("'aikajana-nappi aikajana-sulje'"), '✕ rakennetaan yhä');
+  assert.match(metodi('rakennaPalkki'), /this\.suljeNappi = this\.valikko\.poistuNappi;/);
   assert.ok(!rakenna.includes("'Alusta'"), 'Alusta-nappi poistui palkista (omistaja 4.9.2026)');
   assert.match(metodi('taukoTaiJatka'), /if \(this\.valinaytos\) \{ this\.jatkaValinaytoksesta\(\); return; \}/);
   assert.match(metodi('jatka'), /if \(this\.valinaytos\) this\.suljeValinaytos\(\);/);

@@ -256,8 +256,10 @@ test('kertomuskaari saa yhden palkin yläpalkin tilalle eikä karusellia', () =>
   assert.match(palkki, /this\.juuri\.classList\.add\('palkki'\);/);
   assert.match(lisat, /this\.juuri\.classList\.add\('kertomus'\);/);
   assert.match(lisat, /luoVirtanapit\(virrat, \{ legenda: true \}\)/);
-  // ✕ siirtyy palkkiin, Aloita alusta sen viereen.
-  assert.match(palkki, /ohjaimet\.append\(this\.alustaNappi, this\.suljeNappi\);/);
+  // Palkin oikeaan laitaan hampurilainen; ✕ ja ↺ ovat sen kaksi
+  // ensimmäistä riviä (omistaja 8.9.2026, js/aikajana-valikko.js).
+  assert.match(palkki, /this\.valikko = luoLinssivalikko\(\{/);
+  assert.match(palkki, /ohjaimet\.append\(this\.valikko\.kotelo\);/);
   // Yläpalkin korkeus mitataan ennen piilotusta ja annetaan muuttujana.
   assert.match(palkki, /document\.querySelector\('\.topbar'\)/);
   assert.match(palkki, /--aikajana-palkki-korkeus/);
@@ -277,7 +279,7 @@ test('kertomuskaari saa yhden palkin yläpalkin tilalle eikä karusellia', () =>
     'display: none pudottaisi kartan ruudukosta');
   assert.match(AIKAJANA_CSS, /\.aikajana\.palkki \.aikajana-ylarivi \{[\s\S]{0,400}height: var\(--aikajana-palkki-korkeus, 3\.4rem\);/);
   assert.match(AIKAJANA_CSS, /\.aikajana\.kertomus \.aikajana-nauha \{ display: none; \}/);
-  assert.match(AIKAJANA_CSS, /\.aikajana\.palkki \.aikajana-sulje \{\n\s*position: static;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana\.palkki \.aikajana-ohjaimet \.aikajana-valikko-nappi \{/);
   /*
    * PALKIN TYYLIT VAIN KERRAN (8.9.2026): yhteinen asu asuu
    * `.aikajana.palkki`-luokassa, eikä `.kertomus` saa kopiota samoista

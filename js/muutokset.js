@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1692, teksti: 'Linssien hampurilaisvalikko korvaa sulje- ja alusta-napit' },
   { v: 1691, teksti: 'Pulu ja kertoja eivät puhu päällekkäin' },
   { v: 1690, teksti: 'Isoisää ei tunnista keksintölinssin 1873-pysäkillä' },
   { v: 1689, teksti: 'Keksintölinssin kelaus sytyttää kaikki kartan valot' },
