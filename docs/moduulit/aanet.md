@@ -590,6 +590,78 @@ Ennen kytkimen kääntämistä vanhat ElevenLabs-raidat soivat. Näin
 paletti ei ehdi olla hetkeäkään hiljainen: puuttuva mp3 ei riko
 äänipolkua, mutta hiljainen peli näyttää rikkinäiseltä.
 
+## Musiikin taso ja säädin (omistaja 8.9.2026)
+
+Omistajan vika 8.9.2026 klo 18.39 (iPhone, Vilnan kaupunkikartta,
+maailma-pakki, kehittäjätila päällä): *"Taustamusiikki on aivan liian
+kovalla, eikä rattaan säädin vaikuta sen tasoon ollenkaan."*
+
+### Miksi musiikki oli liian kovalla
+
+Musiikkipaletin soittotasot kalibroitiin ElevenLabsin raitoihin.
+Paletti vaihdettiin Lyriaan (`js/media.js` `MUSIIKIN_PAATE`, v1628),
+**tiedostot vaihtuivat mutta kertoimet eivät** — ja Lyria-masterit ovat
+selvästi kovempia. Mitattuna (`node tools/mittaa-musiikin-tasot.mjs`,
+dekoodaus selaimessa, RMS koko raidasta):
+
+| raita | ennen | nyt | ero |
+| --- | --- | --- | --- |
+| pohjavire | `musa-pohja.mp3` −31,3 dBFS | `musa-pohja-lyria.mp3` −14,7 dBFS | +16,6 dB |
+| kaupunki/alue | — | `musa-kaupunki-*-lyria.mp3` −14,1…−14,5 dBFS | |
+| visa | `musa-visa-2.mp3` −28,7 dBFS | `musa-visa-2-lyria.mp3` −14,4 dBFS | +14,3 dB |
+| aarre | `musa-aarre.mp3` −26,4 dBFS | `musa-aarre-lyria.mp3` −14,6 dBFS | +11,8 dB |
+
+Siirtymä- ja linssiraidat eivät kärsineet: ne on masteroitu tähän
+dokumenttiin kirjattuun tavoitteeseen (−33 dBFS), ja mittaus vahvistaa
+sen (−32,5…−33,5 dBFS). Vika koskee siis juuri musiikkipalettia.
+
+**Uusi perustaso on YKSI vakio:** `js/musiikkivalitsin.js`
+`MUSIIKIN_PERUSTASO` (0,034). Sen kertoimina lausuvat tasonsa
+pohjaraita ja kaupunkiraidat (`js/ambience-stream.js` `POHJA_VOIMA`),
+visamusiikki (`MUSIIKKI_VOIMA`, ×1,3) ja aarreaihe (`js/ui.js`
+`AARRE_MUSIIKIN_VOIMA`, ×3,8). Luku on omistajan 5.9. hyväksymä taso
+miinus se kaksinkertaistus, joka 8.9. purettiin — eli 6 dB alaspäin.
+Mitattuna Vilnassa musiikki soi lukemalla −43,9 dBFS ja kertoja
+lukemalla −18,0 dBFS, joten musiikki on noin 26 dB kertojan (ja pulun)
+alla. Paletin seuraavassa vaihdossa korjataan yksi luku, ei kolmea.
+
+### Miksi säädin ei vaikuttanut
+
+Kaksi syytä, molemmat korjattu:
+
+1. **Reitit lukivat eri kerrointa.** Pohjaraita ja siirtymäraidat
+   lukivat kehittäjän kerrointa, visamusiikki, aarreaihe ja kehittäjän
+   varakuvio eivät lukeneet sitä lainkaan. Nyt kaikki kysyvät samaa
+   funktiota `musiikinKerroin()` ja ilmoittautuvat kuuntelijaksi
+   `kuunteleMusiikinKerrointa()`-funktiolla, jolloin SOIVA raita seuraa
+   säätöä 200 ms:n liu'ulla. Vartija: `tests/musiikin-kerroin.test.mjs`
+   (lähdekoodivartio + toimintatesti); kehittäjän kerrointa ei saa enää
+   lukea suoraan musiikin nimissä missään muualla kuin valitsimessa.
+2. **Taso ei mennyt perille puhelimessa.** Musiikkisoitin oli pelkkä
+   `<audio>`-elementti, jonka ainoa säätökahva on `element.volume`.
+   Työpöytäselaimessa se toimii (mitattu Chromiumissa), mutta iPhonen
+   WebKit ei anna JavaScriptin asettaa `volumea` — kirjoitus menee läpi
+   ilman virhettä ja lukema palaa ykköseksi. Silloin perustaso, väistö,
+   avauksen sekoitus JA säädin katoavat kaikki, ja raita soi tiedoston
+   omalla tasollaan eli kertojan yläpuolella. Pohjaraita reititetään nyt
+   äänimaiseman tapaan **vahvistinsolmun** läpi
+   (`js/ambience-stream.js` `liitaMusiikinVahvistin`), jolloin taso
+   säädetään gainilla eikä volumella. Kompressoria ketjussa ei ole
+   (paletti on jo masteroitu), joten musiikilla ei ole myöskään
+   `VOLUME_POLUN_KORVAUS`-kerrointa: sama luku tarkoittaa samaa kuuluvaa
+   tasoa kummallakin reitillä. Jos reititys ei onnistu tai ketju jää
+   WebKitissä mykäksi, `vartioiMusiikinHiljaisuutta` palauttaa soittimen
+   entiselle volume-polulle.
+
+Väistö (kertoja, pöllö, lukunäkymä) **kertautuu kertoimen kanssa** eikä
+ylikirjoita sitä: taso lasketaan aina samasta kaavasta
+`perustaso × väistö × kerroin × avaus`, joten luennan aikana tehty säätö
+jää väistön alle ja luennan jälkeen taso palaa säädettyyn lukemaan.
+
+Mittaustyökalut: `node tools/mittaa-musiikin-tasot.mjs` (raitojen omat
+tasot) ja `node tools/savukkeet/savuke-musiikin-taso.mjs` (mitä pelissä
+oikeasti soi, millä tasolla ja seuraako se säädintä).
+
 ## Kehittäjän voimakkuussäätimet (omistaja 3.9.2026)
 
 Omistaja: *"kehittäjätilaan saisi hammasrattaan alle laittaa
@@ -597,16 +669,23 @@ Omistaja: *"kehittäjätilaan saisi hammasrattaan alle laittaa
 (+/- arvot nykyisille arvoille)"*.
 
 `js/kehittajan-voimat.js` pitää kahta kerrointa (`tausta`, `musiikki`),
-oletus 1,0 = pelin nykyinen taso, askel 0,1, rajat 0,25–3,0, tallennus
-localStorageen (`matkakirja-dev-voima-<laji>`). Hammasratasvalikon
-(`#kehittaja-valikko`) kaksi riviä näyttävät arvon (`×1,0`) ja
-säätävät sitä miinus- ja plusnapeilla. Kerroin kerrotaan päälle
-ambienssin tasoon (`js/ambience-stream.js taso`), siirtymä- ja
-linssiraitojen tasoon (`js/siirtymamusiikki.js raidanTaso`) sekä
-pohjavireen ja kaupunkiraitojen tasoon (`js/ambience-stream.js
-pohjaMusiikinTaso`, 5.9.2026: kaupunkiraidat soivat samassa soittimessa);
-kaikki kuuntelevat muutosta ja liu'uttavat soivan äänen uuteen tasoon
-200 ms:ssa.
+oletus **1,0 molemmilla** = pelin nykyinen taso, askel 0,1, rajat
+0,25–3,0, tallennus localStorageen (`matkakirja-dev-voima-<laji>`).
+Hammasratasvalikon (`#kehittaja-valikko`) kaksi riviä näyttävät arvon
+(`×1,0`) ja säätävät sitä miinus- ja plusnapeilla.
+
+`tausta` kerrotaan ambienssin tasoon (`js/ambience-stream.js taso`) ja
+linssien äänimaisemiin. `musiikki` luetaan **vain** valitsimen kautta
+(`js/musiikkivalitsin.js musiikinKerroin`), ja sitä kautta se koskee
+kaikkea musiikkia: pohjaraita ja kaupunkiraidat, tila- ja paikkaraidat,
+siirtymä- ja linssiraidat, visamusiikki, aarreaihe ja kehittäjän
+varakuvio. Kaikki kuuntelevat muutosta ja liu'uttavat soivan äänen
+uuteen tasoon 200 ms:ssa — ks. edellinen luku.
+
+Musiikin oletus oli 5.9.–8.9.2026 välillä 2,0 (omistajan linjaus vanhaan
+hiljaiseen palettiin). Palettivaihdon jälkeen se kaksinkertaisti jo
+valmiiksi liian kovan raidan, joten hyväksytty kuuluva taso asuu nyt
+perustasossa ja kerroin on jälleen pelkkä säädin.
 Tavallisella pelaajalla kerroin on aina 1,0.
 
 ## Sarajevon äänimaisema (omistaja 3.9.2026)

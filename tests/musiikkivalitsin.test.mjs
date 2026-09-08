@@ -313,7 +313,7 @@ test('ohje kertoo pohjaraidan valitsimesta omassa osiossaan', () => {
 function tekoAudio(rekisteri) {
   return class {
     constructor(src) {
-      this.src = src;
+      this._src = src ?? null;
       this.alkuSrc = src ?? '';
       this.volume = 1;
       this.paused = true;
@@ -325,14 +325,21 @@ function tekoAudio(rekisteri) {
       rekisteri.push(this);
     }
 
+    get src() { return this._src; }
+
+    /* Musiikkisoitin saa srcinsä vasta konstruktorin jälkeen (crossOrigin
+     * on asetettava ensin), joten alkuperäinen osoite otetaan talteen
+     * ensimmäisestä asetuksesta riippumatta siitä, kumpaa tietä se tuli. */
+    set src(v) { this._src = v; if (!this.alkuSrc) this.alkuSrc = v ?? ''; }
+
     addEventListener(nimi, fn) {
       if (!this.kuuntelijat.has(nimi)) this.kuuntelijat.set(nimi, []);
       this.kuuntelijat.get(nimi).push(fn);
     }
 
     removeEventListener() {}
-    getAttribute() { return this.src; }
-    removeAttribute() { this.src = null; }
+    getAttribute() { return this._src; }
+    removeAttribute() { this._src = null; }
     load() {}
     pause() { this.paused = true; }
     play() { this.paused = false; return Promise.resolve(); }

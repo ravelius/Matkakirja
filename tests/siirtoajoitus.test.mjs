@@ -294,7 +294,7 @@ test('feidit ovat tilauksen mukaiset: sisään 300, ulos 500', () => {
 test('musiikki kunnioittaa kumpaakin äänikytkintä ja väistöä', () => {
   assert.match(MUSA, /!sfx\.enabled \|\| !musiikkiPaalla\(\) \|\| puuttuvatRaidat\.has\(laji\)\) return;/,
     'aloitus ei tarkista äänimaiseman ja musiikin kytkimiä');
-  assert.match(MUSA, /import \{ musiikkiPaalla \} from '\.\/musiikkivalitsin\.js';/,
+  assert.match(MUSA, /musiikkiPaalla \} from '\.\/musiikkivalitsin\.js';/,
     'siirtymämusiikki ei tunne musiikin omaa kytkintä');
   assert.match(MUSA, /lisaaVaistaja\(/, 'musiikki ei väisty puheen alta');
 });

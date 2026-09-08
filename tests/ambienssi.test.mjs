@@ -203,7 +203,10 @@ class TynkaAudio {
 
   get src() { return this._src; }
 
-  set src(v) { this._src = v; this.readyState = 0; }
+  /* Musiikkisoitin saa srcinsä vasta konstruktorin jälkeen (crossOrigin
+   * on asetettava ensin), joten alkuperäinen osoite otetaan talteen
+   * ensimmäisestä asetuksesta riippumatta siitä, kumpaa tietä se tuli. */
+  set src(v) { this._src = v; if (!this.alkuSrc) this.alkuSrc = v ?? ''; this.readyState = 0; }
 
   getAttribute(nimi) { return nimi === 'src' ? (this._src || null) : null; }
 

@@ -134,11 +134,13 @@
  *                  syntetisoitu ajossa eikä tiedosto.
  */
 import { AANI_JUURI, aaniUrl } from './media.js';
-import { kehittajanKerroin, kuunteleKehittajanKerrointa } from './kehittajan-voimat.js';
 import { sfx } from './sound.js';
 // Musiikin oma kytkin (Raamattu, VIAT v1672): matkan ja linssin raidat
-// ovat musiikkia, joten ne vaikenevat siitä — äänimaisema ei.
-import { musiikkiPaalla } from './musiikkivalitsin.js';
+// ovat musiikkia, joten ne vaikenevat siitä — äänimaisema ei. Samasta
+// moduulista tulee myös KAIKEN musiikin yhteinen kerroin: matkan ja
+// linssin raidat eivät saa kuunnella omaa säädintään (omistaja
+// 8.9.2026: "eikä rattaan säädin vaikuta sen tasoon ollenkaan").
+import { kuunteleMusiikinKerrointa, musiikinKerroin, musiikkiPaalla } from './musiikkivalitsin.js';
 import { lisaaVaistaja } from './ambience-stream.js';
 
 /*
@@ -320,10 +322,12 @@ function lajinVaisto(laji) {
 
 /** Lajin tavoitetaso juuri nyt: oma kerroin kertaa väistö kertaa himmennys. */
 const raidanTaso = (laji) => (RAIDAT[laji]?.voima ?? 0) * lajinVaisto(laji) * ajonHimmennys
-  * kehittajanKerroin('musiikki');
+  * musiikinKerroin();
 
-// Kehittäjän säädin (js/kehittajan-voimat.js): soiva raita seuraa heti.
-kuunteleKehittajanKerrointa('musiikki', () => {
+// Musiikin säädin (js/musiikkivalitsin.js): soiva raita seuraa heti.
+// Väistö ja himmennys ovat kaavassa mukana, joten säätö ei ylikirjoita
+// luennan väistöä eikä linssin taukohimmennystä.
+kuunteleMusiikinKerrointa(() => {
   if (soiva?.audio) siirtymanLiuku(soiva.audio, raidanTaso(soiva.laji), 200);
 });
 
@@ -614,7 +618,13 @@ export function aloitaVaramusiikki(laji) {
   gain.gain.value = 0;
   gain.connect(sfx.bus);
   gain.gain.setValueAtTime(0, ctx.currentTime);
-  gain.gain.linearRampToValueAtTime(kuvio.taso * siirtymanVaisto, ctx.currentTime + NOUSU_MS / 1000);
+  // Kehittäjän kuvio on musiikkia siinä missä oikea raita: sama kerroin
+  // (js/musiikkivalitsin.js musiikinKerroin), jottei säädin jätä yhtä
+  // ainoaa musiikkireittiä oman tasonsa varaan.
+  gain.gain.linearRampToValueAtTime(
+    kuvio.taso * siirtymanVaisto * musiikinKerroin(),
+    ctx.currentTime + NOUSU_MS / 1000,
+  );
   let i = 0;
   const soita = () => {
     const nyt = ctx.currentTime;
