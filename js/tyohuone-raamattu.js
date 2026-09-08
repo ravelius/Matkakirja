@@ -4216,6 +4216,15 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'FOKUSKARTAN KOHDEKAUPUNKI ON SELVASTI SUUREMPI KUIN KOHDEMERKIT (omistaja '
+          + '8.9.2026 klo 14.56, iPad-kaappaus Riian fokuskartasta, sanatarkasti: '
+          + '"Miksi kohdekaupunki nakyy noin pienena pallona? Se saisi olla '
+          + 'selvasti suurempi."): kaupungin laatta (pelaajan oma kaupunki ja '
+          + 'valittava kohdekaupunki) on fokuskartalla selvasti suurempi kuin '
+          + 'kohteiden merkit - vahintaan noin puolitoistakertainen kohdemerkkiin '
+          + 'nahden - eika koskaan kutistu kohdemerkkia pienemmaksi. Kasvukatto '
+          + '(31.8.2026 "hervottoman isoina") sailyy ylarajana, mutta se ei saa '
+          + 'painaa laattaa kohdemerkkien alle syvassa zoomissa.',
         'KUVAN SUURENNOS: VASTAKKAINEN SUUNTA TAYTTAA, SAMA SUUNTA JATTAA REUNAN '
           + '(omistaja 8.9.2026 klo 15.30, sanatarkasti: "Riittaa myos, etta '
           + 'havainnekuva mainitaan vasta kun kuvan klikkaa isommaksi siina '
