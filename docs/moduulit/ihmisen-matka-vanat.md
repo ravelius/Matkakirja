@@ -1563,8 +1563,11 @@ sellaisenaan.
 
 Sivutuote: `.aikajana.esitys-pimea .aikajana-ohjaimet { z-index: 2 }`
 poistui. Se nosti sulkunapin mustan peitteen päälle silloin, kun ✕ oli
-ohjainrivin osa; nyt ✕ on juuren suora lapsi omalla pinollaan
-(`.aikajana-sulje`, z-index 8) eikä tarvitse apua.
+ohjainrivin osa; sitten ✕ oli juuren suora lapsi omalla pinollaan
+(`.aikajana-sulje`, z-index 8) eikä tarvinnut apua. **8.9.2026 illasta
+alkaen** ✕:ää ei ole lainkaan: pimeässä näkyvä nappi on palkin
+hampurilainen, ja sen pudotusvalikko nousee peitteen päälle omalla
+z-indexillään (docs/moduulit/linssit.md, "Linssin valikko").
 
 ### 12.10 Portit
 

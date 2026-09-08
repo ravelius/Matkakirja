@@ -797,6 +797,13 @@ export function nielaiseSulkevaNapautus(tapahtuma, {
 export const VALIKKOKERROKSET = [
   { valikko: '#paavalikko', nappi: '#menu-btn' },
   { valikko: '#kehittaja-valikko', nappi: '#kehittaja-valikko-btn' },
+  /*
+   * LINSSIN HAMPURILAINEN (8.9.2026, js/aikajana-valikko.js) elää vain
+   * linssin ajan ja on kartta-alueen sisällä — juuri se tapaus, jota
+   * tämä vartija koskee: valikon sulkeva napautus ei saa avata kohdetta
+   * sen alta. Puuttuva valikko on null eikä haittaa (avoimetValikot).
+   */
+  { valikko: '#aikajana-valikko', nappi: '.aikajana-valikko-nappi' },
 ];
 
 /** Kartan alue: napautus TÄÄLLÄ sulkee valikon eikä tee muuta. */

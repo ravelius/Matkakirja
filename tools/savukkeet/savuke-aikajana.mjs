@@ -76,10 +76,11 @@
  *        pisteitä neljätoista.
  *   V.6  Loppusanojen "Katso löydöt" avaa Tiedeliitteen, jonka
  *        sisällyksessä on 20 riviä ja niistä 6 merkittyä (◈).
- *   V.7  Kartan oikean yläkulman ✕ (.aikajana-sulje) purkaa kaiken
- *        kuten keksintökaarella. Lapun oma Sulje-nappi poistui
- *        7.9.2026 (omistaja); lapun rullaus ja kulman ✕ ovat oman
- *        savukkeensa vartiossa (savuke-linssin-lappu.mjs).
+ *   V.7  Palkin hampurilaisvalikon Poistu purkaa kaiken kuten
+ *        keksintökaarella (.aikajana-valikko-nappi →
+ *        .aikajana-valikko-poistu). Lapun oma Sulje-nappi poistui
+ *        7.9.2026 ja kulman ✕ 8.9.2026 (omistaja); lapun rullaus on
+ *        oman savukkeensa vartiossa (savuke-linssin-lappu.mjs).
  *
  * KARUSELLIN SORMIVETO (K.1–K.6, 8.9.2026, keksintökaari): oma
  * vartionsa tiedoston lopussa (ajaKarusellinVeto). Se vetää
@@ -575,15 +576,17 @@ async function ajaIhmisenMatka() {
       JSON.stringify(galleria));
 
     /*
-     * V.7 Kartan oikean yläkulman ✕ purkaa kaiken (pallolla purku on
-     * siirtymän mittainen). Nappi on `.aikajana-sulje` eikä enää lapun
-     * nappirivissä (omistaja 7.9.2026 ilta).
+     * V.7 Palkin hampurilaisvalikon Poistu purkaa kaiken (pallolla purku
+     * on siirtymän mittainen). Erillistä ✕:ää ei enää ole: sulkeminen on
+     * valikon ensimmäinen rivi (omistaja 8.9.2026), joten savuke avaa
+     * ensin valikon ja valitsee sitten Poistun.
      */
     const sulku = await s.evaluate(async () => {
       const { ui } = window.matkakirja;
       document.querySelector('.tiedeliite-kortti .fokusnosto-kortti-sulje')?.click();
       await new Promise((r) => setTimeout(r, 700));
-      const sulkija = document.querySelector('.aikajana-sulje');
+      document.querySelector('.aikajana-valikko-nappi')?.click();
+      const sulkija = document.querySelector('.aikajana-valikko-poistu');
       sulkija?.click();
       const merkit = () => (ui.pallonInstanssi?.htmlElementsData?.() ?? [])
         .filter((d) => String(d.avain ?? '').startsWith('aikajana:')).length;

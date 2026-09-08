@@ -274,8 +274,15 @@ for (const nakyma of ['tabletti', 'puhelin']) {
       otsikko: palkki?.querySelector('.aikajana-otsikko')?.textContent ?? null,
       kello: Boolean(palkki?.querySelector('.aikajana-kello')),
       pilkkuja: palkki?.querySelectorAll('.ihmisen-vananappi-pilkku').length ?? 0,
-      sulje: Boolean(palkki?.querySelector('.aikajana-sulje')),
-      alusta: Boolean(palkki?.querySelector('.aikajana-alusta')),
+      /*
+       * ✕ ja ↺ poistuivat palkista 8.9.2026 (omistaja): oikeassa
+       * laidassa on hampurilainen, jonka valikossa Poistu, Aloita
+       * alusta, Kertoja ja Taustamusiikki.
+       */
+      valikkoNappi: Boolean(palkki?.querySelector('.aikajana-valikko-nappi')),
+      valikonKohdat: [...(palkki?.querySelectorAll('.aikajana-valikko-kohta') ?? [])]
+        .map((n) => n.querySelector('.aikajana-valikko-nimi')?.textContent ?? n.textContent),
+      poistettuja: palkki?.querySelectorAll('.aikajana-sulje, .aikajana-alusta').length ?? 0,
       topbarNakyvyys: topbar ? getComputedStyle(topbar).visibility : null,
       topbarKorkeus: Math.round(topbar?.getBoundingClientRect().height ?? -1),
       karuselli: nauha ? getComputedStyle(nauha).display : 'ei-nauhaa',
@@ -297,11 +304,18 @@ for (const nakyma of ['tabletti', 'puhelin']) {
       && esitykseen.karuselli === 'none' && esitykseen.karttaKorkeus > esitykseen.ikkuna * 0.9
       && !esitykseen.peite,
     JSON.stringify(esitykseen));
-  vaadi(nimessa('palkissa nimi, kello, viisi väripilkkua ja ✕'),
+  vaadi(nimessa('palkissa nimi, kello, viisi väripilkkua ja hampurilainen (4 kohtaa)'),
     /IHMISEN MATKA/i.test(esitykseen.otsikko ?? '') && esitykseen.kello
-      && esitykseen.pilkkuja === 5 && esitykseen.sulje && esitykseen.alusta
+      && esitykseen.pilkkuja === 5 && esitykseen.valikkoNappi
+      && esitykseen.poistettuja === 0
+      && esitykseen.valikonKohdat.join('|') === 'Poistu|Aloita alusta|Kertoja|Taustamusiikki'
       && avaus.avausnappi,
-    JSON.stringify({ otsikko: esitykseen.otsikko, pilkkuja: esitykseen.pilkkuja, avausnappi: avaus.avausnappi }));
+    JSON.stringify({
+      otsikko: esitykseen.otsikko,
+      pilkkuja: esitykseen.pilkkuja,
+      valikko: esitykseen.valikonKohdat,
+      avausnappi: avaus.avausnappi,
+    }));
   await s.screenshot({ path: kuva('palkki') });
 
   /* --- 2. AITO NAPAUTUS: lamppu esityksen aikana --------------------- */
@@ -432,7 +446,9 @@ for (const nakyma of ['tabletti', 'puhelin']) {
     () => window.matkakirja.ui.aikajana?.esitys?.tila?.().jakso ?? null,
   );
   await s.evaluate(async () => {
-    document.querySelector('.aikajana-sulje')?.click();
+    // Sulkeminen on hampurilaisvalikon Poistu-rivi (8.9.2026).
+    document.querySelector('.aikajana-valikko-nappi')?.click();
+    document.querySelector('.aikajana-valikko-poistu')?.click();
     await new Promise((r) => setTimeout(r, 1200));
   });
   const muistiEsitys = await s.evaluate(() => {
@@ -468,7 +484,8 @@ for (const nakyma of ['tabletti', 'puhelin']) {
     const aloita = ui.aloitaTutkimusvaihe;
     if (typeof aloita === 'function') aloita();
     await new Promise((r) => setTimeout(r, 800));
-    document.querySelector('.aikajana-sulje')?.click();
+    document.querySelector('.aikajana-valikko-nappi')?.click();
+    document.querySelector('.aikajana-valikko-poistu')?.click();
     await new Promise((r) => setTimeout(r, 1200));
   });
   const muistiTutkimus = await s.evaluate(() => {
@@ -724,7 +741,8 @@ for (const nakyma of ['tabletti', 'puhelin']) {
   /* --- 9. Aloita alusta (↺) ----------------------------------------- */
   const alusta = await s.evaluate(async () => {
     const { ui } = window.matkakirja;
-    document.querySelector('.aikajana-alusta')?.click();
+    document.querySelector('.aikajana-valikko-nappi')?.click();
+    document.querySelector('.aikajana-valikko-alusta')?.click();
     for (let i = 0; i < 200; i += 1) {
       if (document.querySelector('.aikajana-avaus-nappi')) break;
       await new Promise((r) => setTimeout(r, 50));
@@ -744,7 +762,8 @@ for (const nakyma of ['tabletti', 'puhelin']) {
   /* --- 10. Sulku purkaa kaiken -------------------------------------- */
   const sulku = await s.evaluate(async () => {
     const { ui } = window.matkakirja;
-    document.querySelector('.aikajana-sulje')?.click();
+    document.querySelector('.aikajana-valikko-nappi')?.click();
+    document.querySelector('.aikajana-valikko-poistu')?.click();
     /*
      * PURKU ON SIIRTYMÄN MITTAINEN JA PALLO SAA NUKKUA (sama odotus
      * kuin savuke-aikajana.mjs:n Sulje-vartiossa): merkit poistuvat

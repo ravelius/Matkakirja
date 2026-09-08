@@ -1726,8 +1726,12 @@ keksintölinssin havainnekuvissa, koska ne ovat sama paneeli
   matka että keksinnöt — ✕ siirtyy palkin oikeaan laitaan
   (`.aikajana.palkki .aikajana-sulje { position: static }`) Tauko/Jatka-
   ja ↺-nappien viereen, kaikki samankorkuisina (`--palkin-nappi`).
-  Kulman paikka jää perusasuksi eikä sitä poisteta: se on voimassa
-  aina, kun palkkia ei rakenneta.
+  Kulman paikka jäi hetkeksi perusasuksi.
+  **Päivitys 8.9.2026 ilta (omistaja, Raamattu "LINSSIEN HAMPURILAINEN
+  OIKEASSA YLAKULMASSA"):** ✕ ja ↺ POISTETTIIN kokonaan — myös
+  `.aikajana-sulje`-tyyli kulmineen — ja niiden teot ovat nyt palkin
+  hampurilaisvalikon kaksi ensimmäistä riviä (Poistu, Aloita alusta).
+  Ks. luku "Linssin valikko" tämän tiedoston lopussa.
 - **Aloita alusta (↺) palkissa.** Sama nappi kummallakin kaarella,
   kaksi haaraa (`js/aikajana.js aloitaAlusta`): kertomuskaarella se
   tyhjentää linssin muistin ja käynnistää linssin uudestaan
@@ -1736,7 +1740,9 @@ keksintölinssin havainnekuvissa, koska ne ovat sama paneeli
   alkuvuoteen, valot sammuksiin, ilmiöpaneeli kiinni, keksijäkaruselli
   ja kamera kaaren alkuun. Vartiot: `tests/aikajanamerkit.test.mjs`
   ("keksintölinssin pysäkkiajo saa saman palkin ja Aloita alusta
-  -napin") ja `tests/ihmisen-matka-tutkimus.test.mjs`.
+  -napin") ja `tests/ihmisen-matka-tutkimus.test.mjs`. Nappi itse
+  siirtyi 8.9.2026 illalla valikon riviksi (ks. "Linssin valikko");
+  teko ja sen kaksi haaraa ovat ennallaan.
 - **Kapea ruutu (alle 600 px).** Kulma varataan napille: palkin
   keskitys lasketaan ✕:n vasemmalle puolelle jäävästä tilasta
   (`left: calc(50% - 1.8rem)`, `max-width: calc(100% - 4.8rem)`).
@@ -1845,3 +1851,83 @@ kontrasti on pieni (ulkona himmeä kajo, sisällä tumma reunavyö) ja
 jyrkimmän muutoksen haku löytää sisäreunan kellastuman rinteen. Kajolle
 on nyt myös YLÄRAJA (keskimäärin ≤ 45/255 reunan vieressä), joka
 vartioi juuri sitä liekkiä, jonka omistaja hylkäsi.
+
+
+## Linssin valikko — hampurilainen palkin oikeassa laidassa (omistaja 8.9.2026)
+
+Omistajan linjaus (Raamattu "LINSSIEN HAMPURILAINEN OIKEASSA
+YLAKULMASSA"), sanatarkasti: *"Kummankin linssin ja myös tulevien
+linssien oikeaan yläreunaan voisi laittaa hampurilaisen, mistä löytyisi
+järjestyksessä ylhäältä alas: poistu, aloita alusta, kertoja (on/off) ja
+taustamusiikki (on/off). Poistu ja aloita alusta napit voi ottaa
+yläpalkista siten pois näkyvistä."*
+
+**Kaikki linssit saavat valikon ilman omaa työtä.** Se rakennetaan
+moottorissa — `js/aikajana.js rakennaPalkki`, sama metodi, joka antaa
+kummallekin kaarelle yhden palkin — eikä linssikohtaisesti. Uusi linssi
+saa siis valikon samalla hetkellä kun se saa palkin, eikä sen datassa
+tai moduulissa tarvitse olla siitä mitään.
+
+**Pinta on `js/aikajana-valikko.js`** (`luoLinssivalikko`). Se ei tiedä
+kaaresta mitään: moottori antaa sille kaksi tekoa (Poistu, Aloita
+alusta) ja yhden koukun (musiikkikytkimen uusi tila), ja loput valikko
+hoitaa itse. Ikoni ja pudotuksen kaava ovat Matkakirjan päävalikosta
+(`#menu-btn`, `.viiva-ikoni`, `.paavalikko`), mutta toteutus on oma,
+koska Matkakirjan yläpalkki on linssin ajan piilossa
+(`body.aikajana-palkki-auki .topbar`).
+
+### Neljä riviä, yksi järjestys
+
+| # | Rivi | Rooli | Teko |
+| --- | --- | --- | --- |
+| 1 | Poistu | `menuitem` | `ui.pysaytaAikajana()` — entinen ✕, sama purku ja sama muistin tallennus kertomuskaarella |
+| 2 | Aloita alusta | `menuitem` | `ajo.aloitaAlusta()` — entinen ↺, kaksi haaraa (muistin tyhjennys + uusi ajo / `alusta()` paikan päällä) |
+| 3 | Kertoja | `menuitemcheckbox` | `js/luenta.js luentaKytkinPaalla` / `asetaLuentaKytkin`; pois kytkettäessä `pysaytaLinssiluenta` + `pysaytaLukija` vaientavat kesken olevan luennan heti |
+| 4 | Taustamusiikki | `menuitemcheckbox` | `js/musiikkivalitsin.js musiikkiPaalla` / `asetaMusiikkiPaalla`; koukku ajaa linssin oman raidan (`aloitaMusiikki` / `lopetaMusiikki`) samaan tilaan |
+
+**Kytkimet ovat PELIN kytkimiä, eivät linssin omia.** Sama kertoja
+vaikenee matkakirjan merkinnöissä ja sama musiikki hiljenee kartalla —
+valikko on vain toinen kahva samaan asiaan, kuten matkakirjakortin
+kaiutin on kertojan toinen kahva. Tila luetaan uudestaan joka avauksella
+(`paivita`), joten muualta käännetty kytkin näkyy oikein. Rivillä lukee
+nimi ja tila ("päällä" / "pois"), ja `aria-checked` seuraa perässä.
+
+**Kaikki rivit sulkevat valikon valinnasta** — myös kytkimet, joiden
+tila kirjoitetaan riville ennen sulkua. Muut sulkutiet: napautus
+valikon ulkopuolelle (moduulin oma dokumenttikuuntelija) ja **Esc**,
+jonka moottori antaa valikolle ENNEN linssiä (`js/aikajana.js nappain`:
+avoin valikko syö Escin, ilman valikkoa Esc käyttäytyy kuten ennen).
+
+**Kartan napautus sulkee valikon avaamatta kohdetta.** Valikko on
+kartoitettu yhteiseen sulkuvartijaan (`js/ui-apurit.js`
+`VALIKKOKERROKSET`: `#aikajana-valikko` / `.aikajana-valikko-nappi`),
+joten sama napautus, joka sulkee valikon, nielaistaan eikä valu laudan
+osumatestiin — sama sopimus kuin päävalikolla ja kehittäjän rattaalla
+(docs/moduulit/karttapallo.md luku 13).
+
+### Mitä poistui
+
+`✕` (`.aikajana-sulje`) ja `↺` (`.aikajana-alusta`) **poistettiin
+kokonaan** — sekä palkista että kartan oikeasta yläkulmasta, jossa ✕
+ehti asua 7.–8.9.2026. Niiden teot elävät valikon kahtena ensimmäisenä
+rivinä, ja moottorin omat kahvat (`ajo.suljeNappi`, `ajo.alustaNappi`)
+osoittavat nyt niihin riveihin. Pimeässä avausjaksossa
+(`.aikajana.esitys-pimea`) palkista jää näkyviin **vain hampurilainen**
+— ennen poikkeus oli ✕.
+
+**Mitat.** Nappi on palkin muiden nappien korkuinen neliö
+(`--palkin-nappi`: 36 px, alle 600 px:n ruudulla 32 px). Pudotus
+ankkuroituu napin oikeaan reunaan ja kasvaa vasemmalle; puhelimella sen
+katto on `calc(100vw - 1.4rem)`, joten se ei työnny ruudun laidan yli.
+
+**Vartijat.** `tests/aikajanamerkit.test.mjs` ("hampurilaisvalikossa
+neljä kohtaa oikeassa järjestyksessä, kytkimet ja Esc": järjestys,
+roolit, avaus/sulku, Escin etuoikeus, kummankin kytkimen kytkeytyminen
+pelin omaan kytkimeen, Poistun purku) ja tekstitason vartiot
+`tests/aikajana.test.mjs`, `tests/ihmisen-matka-esitys.test.mjs` ja
+`tests/ihmisen-matka-tutkimus.test.mjs`. Selaimessa: `savuke-aikajana`
+(V.7 sulkee linssin valikosta), `savuke-ihmisen-tutkimus` (palkissa
+hampurilainen ja neljä kohtaa oikeassa järjestyksessä; Aloita alusta ja
+Poistu valikosta), `savuke-ihmisen-esitys` (pimeässä valikon nappi on
+ainoa näkyvä) ja `savuke-linssin-lappu` (napin paikka ja
+päällekkäisyydet kartan oikeassa yläkulmassa).

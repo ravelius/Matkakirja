@@ -152,6 +152,9 @@ const SHELL = [
   // Aikajanan elävä liekkivalo (canvas-kerros, 5.9.2026): vain
   // js/aikajana.js tuo tämän, joten se seuraa samaa polkua.
   './js/aikajana-valo.js',
+  // Linssin hampurilaisvalikko (8.9.2026): js/aikajana.js tuo tämän
+  // staattisesti, joten se seuraa samaa polkua offline-käyttöön.
+  './js/aikajana-valikko.js',
   './js/linssipuhe.js',
   './js/tiedeliite.js',
   './js/lyhty.js',

@@ -166,6 +166,15 @@ import { pakotaPallonLaatu } from './pallo.js';
 // lampun, kertoo sen tilan ja purkaa kerroksen.
 import { luoLiekkivalot } from './aikajana-valo.js';
 /*
+ * LINSSIN HAMPURILAISVALIKKO (omistaja 8.9.2026): palkin oikean laidan
+ * nappi ja sen pudotusvalikko — Poistu, Aloita alusta, Kertoja ja
+ * Taustamusiikki. Oma moduulinsa (js/aikajana-valikko.js), koska se on
+ * yhtä lailla tulevien linssien osa; tämä tiedosto kertoo sille vain,
+ * mitä Poistu ja Aloita alusta tekevät ja miten linssin oma raita
+ * tottelee musiikkikytkintä.
+ */
+import { luoLinssivalikko } from './aikajana-valikko.js';
+/*
  * Ihmisen matka värivirtoina (js/aikajana-virrat.js): kaari, jolla on
  * `virrat`, saa pallolla värikentän, seuraavan kameran ja kuvakehykset
  * (Raamattu 6.9.2026: IHMISEN MATKA ON VARIVIRTOJA, EI PISTEITA).
@@ -825,9 +834,10 @@ export const PANEELIN_ENNAKKOHAIVYTYS_MS = 600;
  *      ("Matka päättyy ▾"); se on olemassa vain lapun ollessa
  *      piilossa. Sama koskee KAIKKIA linssin lappuja — loppusanoja ja
  *      matkan varren kortteja — koska ne ovat sama paneeli.
- *   3. SULJE-NAPPI POIS LAPUSTA. Linssin sulkeva ✕ on kartan oikeassa
- *      yläkulmassa koko ajon (`.aikajana-sulje`), ei enää otsikko-
- *      rivissä; loppusanoihin jää pelkkä "Katso löydöt".
+ *   3. SULJE-NAPPI POIS LAPUSTA. Linssin sulkeminen on palkin oikean
+ *      laidan hampurilaisvalikon ensimmäinen rivi ("Poistu",
+ *      js/aikajana-valikko.js), ei enää otsikkorivin ✕ eikä kartan
+ *      kulman nappi; loppusanoihin jää pelkkä "Katso löydöt".
  *
  * Kesto (300 ms molempiin suuntiin) asuu KOKONAAN css:ssä
  * (`--aikajana-lappu-kesto`), koska js ei odota liukua eikä ajasta
@@ -2589,6 +2599,13 @@ class Aikajana {
      */
     this.virtanapit = null;
     this.alustaNappi = null;
+    /*
+     * HAMPURILAISVALIKKO palkin oikeassa laidassa (js/aikajana-valikko.js,
+     * omistaja 8.9.2026). Sen kaksi ensimmäistä riviä ovat entiset ✕ ja
+     * ↺, joten `suljeNappi` ja `alustaNappi` osoittavat nyt niihin.
+     */
+    this.valikko = null;
+    this.suljeNappi = null;
     this.muisti = null;
     this.muistiLukittu = false;
     /*
@@ -2692,18 +2709,12 @@ class Aikajana {
     ohjaimet.append(this.lappuKahva, this.taukoNappi);
     ylarivi.append(otsikot, this.kello, ohjaimet);
     /*
-     * SULKEVA ✕ KARTAN OIKEAAN YLÄKULMAAN (omistaja 7.9.2026 ilta).
-     * Nappi on juuren suora lapsi eikä otsikkorivin osa: se pysyy
-     * samassa kulmassa koko ajon riippumatta siitä, mitä palkissa
-     * lukee tai kuinka leveäksi otsikko venyy, ja siitä linssin voi
-     * sulkea milloin vain. Osumapinta on 44 px (kosketusohje), tyyli
-     * sama kuin ennen (`.aikajana-nappi.aikajana-sulje`).
+     * SULKEMINEN ON VALIKON ENSIMMÄINEN RIVI (omistaja 8.9.2026:
+     * *"Poistu ja aloita alusta napit voi ottaa yläpalkista siten pois
+     * näkyvistä."*). Erillistä ✕:ää ei enää ole — ei palkissa eikä
+     * kartan kulmassa; `this.suljeNappi` on rakennaPalkin luoman
+     * hampurilaisvalikon Poistu-rivi, ja sen teko on sama kuin ✕:n oli.
      */
-    this.suljeNappi = solmu('button', 'aikajana-nappi aikajana-sulje', '✕');
-    this.suljeNappi.type = 'button';
-    this.suljeNappi.setAttribute('aria-label', 'Sulje');
-    this.suljeNappi.title = 'Sulje';
-    this.suljeNappi.addEventListener('click', () => ui.pysaytaAikajana?.());
 
     // 4. Ilmiöpaneeli
     this.paneeli = solmu('div', 'aikajana-ilmio');
@@ -2741,7 +2752,7 @@ class Aikajana {
       this.kortit.push(kortti);
     });
 
-    this.juuri.append(ylarivi, this.suljeNappi, this.paneeli, this.nauha);
+    this.juuri.append(ylarivi, this.paneeli, this.nauha);
     /*
      * KUMPIKIN KAARI SAA YHDEN PALKIN Matkakirjan yläpalkin tilalle
      * (omistaja 8.9.2026); kertomuskaaren omat lisät tulevat päälle.
@@ -2785,7 +2796,8 @@ class Aikajana {
    * Otsikkorivi (`.aikajana-ylarivi`) muuttuu palkiksi: vasemmalla
    * linssin nimi ja kello, keskellä viisi virtaa (legendana esityksen
    * ajan, nappeina tutkimusvaiheessa — js/linssit/ihmisen-matka-
-   * tutkimus.js luoVirtanapit), oikealla Tauko, Aloita alusta ja ✕.
+   * tutkimus.js luoVirtanapit), oikealla Tauko ja hampurilainen, jonka
+   * valikossa Poistu, Aloita alusta, Kertoja ja Taustamusiikki.
    * Matkakirjan oma yläpalkki piilotetaan body-luokalla, ja palkki saa
    * SEN MITATUN korkeuden (--aikajana-palkki-korkeus), jotta kartta ei
    * hyppää ja palkki istuu samaan paikkaan.
@@ -2795,7 +2807,8 @@ class Aikajana {
    * *"Ja siinä voi kyllä sen yläpalkin siirtää ihmislinssin tyyliin"* ja
    * *"Tehdään reset"*). Tämä metodi on siksi PELKKÄ PALKKI, jonka
    * kumpikin kaari saa: luokka, Matkakirjan yläpalkin piilotus,
-   * korkeuden mittaus, Aloita alusta -nappi ja ✕:n siirto palkkiin.
+   * korkeuden mittaus ja hampurilaisvalikko (Poistu, Aloita alusta,
+   * Kertoja, Taustamusiikki).
    * Kertomuskaaren omat asiat (virtanapit, nostokortti, aikaselain)
    * ovat rakennaKertomuksenPalkki-metodissa, ja css/aikajana.css jakaa
    * saman rajan: `.aikajana.palkki` on yhteinen asu, `.aikajana.kertomus`
@@ -2804,19 +2817,39 @@ class Aikajana {
    * saa niiden lisäksi tämän palkin.
    */
   rakennaPalkki(ylarivi, ohjaimet) {
+    const { ui } = this;
     this.juuri.classList.add('palkki');
     ylarivi.classList.add('aikajana-palkki');
     /*
-     * ALOITA ALUSTA (omistaja: *"Hän voisi tietenkin halutessaan
-     * käynnistää koko linssin alusta"*; keksintölinssille 8.9.2026:
-     * *"Tehdään reset"*). Haarat ovat aloitaAlusta-metodissa.
+     * HAMPURILAINEN PALKIN OIKEAAN LAITAAN (omistaja 8.9.2026, Raamattu
+     * "LINSSIEN HAMPURILAINEN OIKEASSA YLAKULMASSA", sanatarkasti:
+     * *"Kummankin linssin ja myös tulevien linssien oikeaan yläreunaan
+     * voisi laittaa hampurilaisen, mistä löytyisi järjestyksessä
+     * ylhäältä alas: poistu, aloita alusta, kertoja (on/off) ja
+     * taustamusiikki (on/off). Poistu ja aloita alusta napit voi ottaa
+     * yläpalkista siten pois näkyvistä."*).
+     *
+     * Valikko rakennetaan TÄSSÄ eikä linssikohtaisesti, joten jokainen
+     * tuleva linssi saa sen samalla kun se saa palkin. Kaksi ensimmäistä
+     * riviä ovat entiset napit: Poistu tekee sen mitä ✕ teki
+     * (ui.pysaytaAikajana → pura, joka tallentaa muistin kertomuskaarella)
+     * ja Aloita alusta sen mitä ↺ teki (aloitaAlusta, kaksi haaraa).
+     * Kaksi jälkimmäistä ovat pelin omat kytkimet, ja niistä musiikin
+     * kytkin kertoo myös linssin omalle raidalle (saadaMusiikki-perhe),
+     * joka ei ole musiikkivalitsimen kuuntelijoiden joukossa.
      */
-    this.alustaNappi = solmu('button', 'aikajana-nappi aikajana-alusta', '↺');
-    this.alustaNappi.type = 'button';
-    this.alustaNappi.title = 'Aloita alusta';
-    this.alustaNappi.setAttribute('aria-label', 'Aloita alusta');
-    this.alustaNappi.addEventListener('click', () => this.aloitaAlusta());
-    ohjaimet.append(this.alustaNappi, this.suljeNappi);
+    this.valikko = luoLinssivalikko({
+      ui,
+      onPoistu: () => ui.pysaytaAikajana?.(),
+      onAlusta: () => this.aloitaAlusta(),
+      onMusiikki: (paalla) => {
+        if (!this.juuri?.isConnected) return;
+        if (paalla) this.aloitaMusiikki(); else this.lopetaMusiikki();
+      },
+    });
+    this.suljeNappi = this.valikko.poistuNappi;
+    this.alustaNappi = this.valikko.alustaNappi;
+    ohjaimet.append(this.valikko.kotelo);
     /*
      * YLÄPALKIN KORKEUS MITATAAN ENNEN PIILOTUSTA. Body-luokka
      * piilottaa Matkakirjan yläpalkin (css/aikajana.css), ja kartta-
@@ -2872,7 +2905,7 @@ class Aikajana {
    * Nauha korvaa kertomuskaarella jaksojen selaamisen kokonaan: viivat
    * ovat kaanonin jaksot järjestyksessä, veto esikatselee hetken (kello
    * ja vanat seuraavat sormea, kertoja vaikenee) ja irrotus valitsee
-   * jakson. Tauko, ↺ ja ✕ jäävät palkkiin.
+   * jakson. Tauko ja hampurilainen jäävät palkkiin.
    *
    * MODUULI EI TIEDÄ KAARESTA MITÄÄN (js/linssit/aikaselain.js) — se saa
    * pisteet ja kaksi takaisinkutsua, ja tämä metodi on ainoa paikka,
@@ -5866,6 +5899,17 @@ class Aikajana {
   nappain(e) {
     if (!this.juuri?.isConnected || this.ui.dead) return;
     /*
+     * ESC SULKEE ENSIN VALIKON (omistaja 8.9.2026, hampurilainen).
+     * Avoin pudotusvalikko on päällimmäinen kerros, joten se saa Escin
+     * ensin; ilman valikkoa Esc käyttäytyy kuten ennen (sulkee linssin
+     * avausjaksossa, välinäytöksessä ja kertomusesityksessä).
+     */
+    if ((e.key === 'Escape' || e.key === 'Esc') && this.valikko?.auki?.()) {
+      e.preventDefault();
+      this.valikko.sulje();
+      return;
+    }
+    /*
      * AVAUSJAKSO OMII NÄPPÄIMISTÖN: Enter tai välilyönti käynnistää
      * esityksen, Esc sulkee linssin. Nuolet eivät selaa pysäkkejä
      * ennen kuin ajo on alkanut. preventDefault estää myös fokusoidun
@@ -6005,6 +6049,15 @@ class Aikajana {
     this.koonMuutos = null;
     if (this.nappainkuuntelija) document.removeEventListener?.('keydown', this.nappainkuuntelija);
     this.nappainkuuntelija = null;
+    /*
+     * VALIKKO IRROTTAA OMAN DOKUMENTTIKUUNTELIJANSA (ulkopuolinen
+     * napautus sulkee pudotuksen). Kotelo katoaa juuren mukana, mutta
+     * kuuntelija ei — purettu linssi ei saa jäädä kuuntelemaan ruutua.
+     */
+    this.valikko?.pura?.();
+    this.valikko = null;
+    this.suljeNappi = null;
+    this.alustaNappi = null;
     this.irrotaKartanKosketus?.();
     this.irrotaKartanKosketus = null;
     this.irrotaKarusellinVeto?.();

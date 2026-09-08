@@ -396,7 +396,9 @@ test('moottori antaa nauhan kertomuskaarelle, ei keksintölinssille', () => {
   assert.match(puhdas, /rakennaAikaselain\(\)/, 'moottorista puuttuu rakennaAikaselain');
   // Nauha syntyy vain palkin (kertomuskaaren) mukana.
   const palkki = puhdas.slice(puhdas.indexOf('rakennaPalkki(ylarivi, ohjaimet)'));
-  assert.match(palkki.slice(0, 2000), /this\.rakennaAikaselain\(\)/,
+  // Ikkuna levisi 8.9.2026, kun palkkiin tuli hampurilaisvalikko
+  // (js/aikajana-valikko.js) rakennaPalkin ja kertomuslisien väliin.
+  assert.match(palkki.slice(0, 2800), /this\.rakennaAikaselain\(\)/,
     'aikaselain ei synny rakennaPalkin mukana (kertomuskaari)');
   assert.match(puhdas, /if \(!kertomus\.length \|\| !this\.juuri\) return false;/,
     'rakennaAikaselain ei tarkista kertomusta');
