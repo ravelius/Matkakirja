@@ -206,6 +206,11 @@ test('pallolla vain pelin merkit: sallitut kerrokset lueteltu, kartan kerrokset 
   const alun = kaupunkipisteenVari({ kayty: false, alku: true });
   const muun = kaupunkipisteenVari({ kayty: false, alku: false });
   assert.ok(kaydyn !== muun && alun !== muun && kaydyn !== alun);
+  // Käymätön piste on vaalea ruskea, ei musta (omistaja 8.9.2026:
+  // "mustat pisteet saisivat näkyä selvästi vaaleampina").
+  const luma = (hex) => { const n = parseInt(hex.slice(1), 16); return (0.2126 * (n >> 16) + 0.7152 * ((n >> 8) & 255) + 0.0722 * (n & 255)); };
+  assert.ok(luma(muun) >= 100, `käymättömän pisteen luminanssi ${luma(muun).toFixed(0)} — musta täplä palasi`);
+  assert.ok(luma(muun) < luma(alun) && luma(alun) < luma(kaydyn), 'käymätön on kolmesta tummin');
   // Kaikki liike animoitua, reduced motion kunnioitetaan.
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /const siirtyma = ui\.reducedMotion \? 0 : MERKKIEN_SIIRTYMA_MS;/);

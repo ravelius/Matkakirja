@@ -563,12 +563,23 @@ export const OSOITTIMEN_JALKIVIIVE_MS = 400;
  */
 const TARKISTUSVARI = '#f7c948';
 
+/*
+ * KÄYMÄTTÖMÄN KAUPUNGIN PISTE ON VAALEA RUSKEA, EI MUSTA (omistaja
+ * 8.9.2026 klo 16.40, sanatarkasti: *"kaupunkien mustat pisteet saisivat
+ * näkyä selvästi vaaleampina, nyt hyppäävät liikaa kartalta"*). Entinen
+ * #3a2716 luki paperilla mustana täplänä; nyt piste on kartan omaa
+ * seepiaa (#8c6d4e), joka erottuu pohjasta mutta ei huuda. Käyty (kulta)
+ * ja alku (vaalea kulta) pysyvät sitä vaaleampina ja lämpimämpinä, joten
+ * kolme tilaa erottuvat yhä toisistaan.
+ */
+export const KAUPUNKIPISTEEN_VARI = '#8c6d4e';
+
 /** Pisteen väri: tarkistettava kirkasta kultaa, käyty kultaa, alku vaaleaa. */
 export function kaupunkipisteenVari(kaupunki) {
   if (livianKorostetutKaupungit().has(kaupunki.id)) return TARKISTUSVARI;
   if (kaupunki.kayty) return '#d9a13b';
   if (kaupunki.alku) return '#b28a4a';
-  return '#3a2716';
+  return KAUPUNKIPISTEEN_VARI;
 }
 
 /**

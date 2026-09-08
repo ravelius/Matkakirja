@@ -4216,6 +4216,11 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'PALLON KAUPUNKIPISTEET VAALEAMMIKSI (omistaja 8.9.2026 klo 16.40, '
+          + 'sanatarkasti: "kaupunkien mustat pisteet saisivat nakya selvasti '
+          + 'vaaleampina, nyt hyppaavat liikaa kartalta"): kaymattoman kaupungin '
+          + 'piste on kartan omaa seepiaa, ei mustaa; kayty ja alku pysyvat sita '
+          + 'vaaleampina kultina, joten kolme tilaa erottuvat.',
         'PULUN AANI HIEMAN HILJAISEMMAKSI JA KUPLAT TYHJIKSI UUDESSA KAUPUNGISSA '
           + '(omistaja 8.9.2026 klo 16.25, sanatarkasti: "Pulun aani on vahan '
           + 'voimakkaampi kuin kertojan, sita voisi laskea koko pelissa hieman" ja '
