@@ -108,8 +108,9 @@ test('lampun napautus kulkee laudan osumatestin kautta, ei elementin', () => {
   assert.match(LAUTA, /const linssimerkki = lahinLinssimerkki\(lat, lng\);\n\s*if \(linssimerkki\) \{ heraa\(\); linssimerkki\.napautus\(linssimerkki\); return; \}/);
   // Myös kaupunkipisteen napautus antaa vuoron lampulle.
   assert.match(LAUTA, /else if \(lahinLinssimerkki\(d\.lat, d\.lon\)\) napautaPintaan\(d\.lat, d\.lon\);/);
-  // Elementti itse ei ota osumia (kajo on 98 px leveä).
-  assert.match(CSS, /\.aikajana-valo-pallolla,\n\.aikajana-valo-pallolla\.palaa \{ pointer-events: none;/);
+  // Elementti itse ei ota osumia (kajo on 98 px leveä) — ei myöskään
+  // kelauksen `tuleva`, joka kartalla on napautettava (linssit.md 9.2).
+  assert.match(CSS, /\.aikajana-valo-pallolla,\n\.aikajana-valo-pallolla\.palaa,\n\.aikajana-valo-pallolla\.tuleva \{ pointer-events: none;/);
 });
 
 test('ruutukalvo jää merkkien alle ja reikä on pehmeäreunainen', () => {

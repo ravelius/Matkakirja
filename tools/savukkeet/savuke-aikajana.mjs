@@ -86,8 +86,9 @@
  * karusellia RUUTUKOORDINAATEILLA kahdessa näkymässä — tabletti
  * 834 × 1100 hiirellä ja puhelin 390 × 844 CDP-kosketuksella — ja
  * mittaa, että rivi liukuu sormen mukana, ajo ei hyppää kesken vedon,
- * PALLO EI PYÖRI vedon alla, irrotus vaihtaa pysäkin ja kellon, tauon
- * muisti säilyy ja napautus toimii yhä.
+ * PALLO EI PYÖRI vedon alla, irrotus vaihtaa pysäkin ja kellon, kelaus
+ * sytyttää kaikki lamput ja jättää esityksen tauolle (K.7) ja napautus
+ * toimii yhä.
  *
  * KUVAKAAPPAUKSET (KAAPPAUKSET-kansio): hetkiltä 300 / 88 / 50 / 20 /
  * 15 ka, loppu koko pallon näkymässä, loppusanat ja galleria. Kello
@@ -638,10 +639,17 @@ async function ajaIhmisenMatka() {
  *        ennen vetoa (omistajan ehto: karusellin veto ei saa panoroida).
  *   K.4  Irrotus vaihtaa pysäkin eteenpäin ja kellon vuosiluvun, ja
  *        vetoNyt palaa nulliksi.
- *   K.5  Tauolla ollut jää tauolle; käynnissä ollut jatkaa.
+ *   K.5  KELAUS PYSÄYTTÄÄ: myös käynnissä ollut ajo jää tauolle.
  *   K.6  Napautus (ilman vetoa) toimii yhä: se ei ole veto.
+ *   K.7  KELAUS SYTYTTÄÄ KAIKKI VALOT (omistaja 8.9.2026): kesken vedon
+ *        ja irrotuksen jälkeen kaikki kaaren lamput palavat, nykyisen
+ *        jälkeiset `tuleva`-luokalla, nappi on Jatka — ja tulevan lampun
+ *        napautus siirtää pysäkin (samaa polkua kuin pallon osumatesti)
+ *        valojen sammumatta välissä. Jatka sammuttaa tulevat ja kello
+ *        lähtee käyntiin.
  *
- * KUVAT: veto keskeltä ja irrotuksen jälkeen kummastakin näkymästä.
+ * KUVAT: veto keskeltä ja irrotuksen jälkeen kummastakin näkymästä sekä
+ * Jatkan jälkeen (kelaus-jatka).
  */
 
 /** Odota, että karusellin liuku on pysähtynyt (kaksi samaa lukemaa). */
@@ -672,8 +680,19 @@ const KARUSELLIN_TILA = () => {
     };
   });
   const pov = ui.pallonInstanssi?.pointOfView?.() ?? null;
+  // Lamput luokkina: sama tila, jonka moottori kirjoittaa (asetaValot).
+  const valot = [...document.querySelectorAll('.aikajana-valo')];
+  const lamput = {
+    kaikki: valot.length,
+    palaa: valot.filter((v) => v.classList.contains('palaa')).length,
+    tuleva: valot.filter((v) => v.classList.contains('tuleva')).length,
+    nykyinen: valot.filter((v) => v.classList.contains('nykyinen')).length,
+  };
   return {
     i: ajo?.tila?.i ?? null,
+    selaus: Boolean(ajo?.selaus),
+    lamput,
+    nappi: ajo?.taukoNappi?.textContent ?? null,
     vetoNyt: ajo?.vetoNyt ?? null,
     kaynnissa: Boolean(ajo?.kaynnissa),
     tauolla: Boolean(document.querySelector('.aikajana')?.classList.contains('tauolla')),
@@ -820,18 +839,70 @@ async function ajaKarusellinVeto() {
       jalkeen.vetoNyt === null && jalkeen.i > alkuTila.i && jalkeen.kello !== alkuTila.kello,
       JSON.stringify({ i: jalkeen.i, alkuI: alkuTila.i, kello: jalkeen.kello, vetoNyt: jalkeen.vetoNyt }));
 
-    /* K.5 Tauolla ollut jää tauolle; käynnissä ollut jatkaa. */
+    /* K.5 Tauolla ollut jää tauolle. */
     vaadi(nimessa('tauolla ollut jää tauolle'), !jalkeen.kaynnissa && jalkeen.tauolla,
       JSON.stringify({ kaynnissa: jalkeen.kaynnissa, tauolla: jalkeen.tauolla }));
 
+    /*
+     * K.7 KELAUS SYTYTTÄÄ KAIKKI VALOT (omistaja 8.9.2026, sanatarkasti:
+     * *"jos keksintölinssissä kelaa alhaalta eri keksintöjä niin silloin
+     * kaikki valot kartalla saisi syttyä, jotta pelaaja voi klikkailla
+     * kohtia myös kartalla. tällöin esitys menee automaattisesti tauko
+     * tilaan. jos pelaaja painaa uudestaan jatka, niin tulevat pisteet
+     * häviävät kartalta ja esitys jatkuu normaalisti."*).
+     */
+    vaadi(nimessa('kelaus sytyttää kaikki lamput jo kesken vedon'),
+      kesken?.lamput.kaikki > 0 && kesken.lamput.palaa === kesken.lamput.kaikki
+        && kesken.lamput.tuleva > 0 && kesken.selaus === true,
+      JSON.stringify(kesken?.lamput ?? null));
+    vaadi(nimessa('irrotuksen jälkeen kaikki palavat, tulevat merkittyinä, nappi on Jatka'),
+      jalkeen.lamput.palaa === jalkeen.lamput.kaikki && jalkeen.lamput.tuleva > 0
+        && jalkeen.lamput.nykyinen === 1 && jalkeen.nappi === 'Jatka',
+      JSON.stringify({ lamput: jalkeen.lamput, nappi: jalkeen.nappi }));
+
+    /*
+     * Tuleva lamppu ottaa napautuksen. Pallolla osuma lasketaan pallon
+     * omasta napautuksesta lähimpään merkkiin (js/pallolauta/lauta.js
+     * lahinLinssimerkki → datum.napautus), joten savuke kutsuu juuri
+     * sitä polkua eikä elementin klikkiä. Valot eivät saa sammua
+     * välissä: selaus jatkuu pysäkistä toiseen.
+     */
+    const osuma = await s.evaluate(async () => {
+      const ajo = window.matkakirja.ui.aikajana;
+      const tuleva = ajo.valot.findIndex((v, k) => v && k > ajo.tila.i
+        && v.g.classList.contains('tuleva'));
+      const datum = ajo.valot[tuleva]?.datum ?? null;
+      if (datum) datum.napautus(datum); else ajo.napautaValoa(tuleva);
+      await new Promise((r) => setTimeout(r, 300));
+      const valot = [...document.querySelectorAll('.aikajana-valo')];
+      return {
+        tuleva,
+        i: ajo.tila.i,
+        selaus: Boolean(ajo.selaus),
+        palaa: valot.filter((v) => v.classList.contains('palaa')).length,
+        kaikki: valot.length,
+      };
+    });
+    vaadi(nimessa('tulevan lampun napautus siirtää pysäkin eivätkä valot sammu'),
+      osuma.i === osuma.tuleva && osuma.selaus && osuma.palaa === osuma.kaikki,
+      JSON.stringify(osuma));
+
+    /* Jatka: tulevat sammuvat ja kello lähtee käyntiin. */
     await s.evaluate(() => window.matkakirja.ui.aikajana.jatka());
-    await s.waitForTimeout(200);
+    await s.waitForTimeout(300);
+    const jatkettu = await s.evaluate(KARUSELLIN_TILA);
+    if (nakyma === 'puhelin') await s.screenshot({ path: kuva('kelaus-jatka') });
+    vaadi(nimessa('Jatka sammuttaa tulevat ja kello jatkaa'),
+      jatkettu.lamput.tuleva === 0 && jatkettu.selaus === false
+        && jatkettu.lamput.palaa < jatkettu.lamput.kaikki && jatkettu.kaynnissa,
+      JSON.stringify({ lamput: jatkettu.lamput, selaus: jatkettu.selaus, kaynnissa: jatkettu.kaynnissa }));
+
     // Jatkon vedosta ei oteta kuvia: kontissa yksi pallokaappaus maksaa
     // lähes minuutin, ja omistajan kuvat ovat ensimmäisestä vedosta.
     const jatkuva = await vedaKarusellia(s, { cdp, kosketus, kuva: null });
-    vaadi(nimessa('käynnissä ollut jatkaa vedon jälkeen (kello ei jää tauolle)'),
-      jatkuva.kesken?.kaynnissa === false && jatkuva.heti.kaynnissa === true,
-      JSON.stringify({ kesken: jatkuva.kesken?.kaynnissa, heti: jatkuva.heti.kaynnissa }));
+    vaadi(nimessa('kelaus pysäyttää myös käynnissä olleen ajon'),
+      jatkuva.heti.kaynnissa === false && jatkuva.heti.lamput.palaa === jatkuva.heti.lamput.kaikki,
+      JSON.stringify({ heti: jatkuva.heti.kaynnissa, lamput: jatkuva.heti.lamput }));
 
     /* K.6 Napautus säilyy: pelkkä painallus ilman liikettä siirtää pysäkin. */
     const napautus = await s.evaluate(async () => {

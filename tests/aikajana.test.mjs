@@ -22,6 +22,7 @@ import {
   pieniOsoite, PIENEN_KATTO, karusellinPaikat, karusellinMitta, KARUSELLIN_MITAT,
   karusellinEtaisyys, karusellinEtaisyysKaanteinen, karusellinVedonPaikka,
   karusellinHeitto, karusellinKohde, KARUSELLIN_VALI, KARUSELLIN_VEDON_KYNNYS,
+  lampunTila,
   KARUSELLIN_HEITON_KATTO,
   karuselliOsoite, sumeaOsoite, KARUSELLIN_KATTO,
   aikaSeuraavaan, ennakonKesto, KARUSELLIN_ENNAKKO_MS, KARUSELLIN_ENNAKKO_POHJA_MS,
@@ -811,8 +812,15 @@ test('moottori vetää karusellia sormella: kynnys, kaappaus, snap ja tauon muis
   assert.match(veto, /const heitto = this\.reducedMotion \? 0 : karusellinHeitto\(veto\.nopeus\);/);
   assert.match(veto, /karusellinKohde\(this\.vetoNyt \?\? veto\.alku, heitto, this\.kortit\.length\)/);
   assert.match(veto, /this\.siirry\(pysakki\);/);
-  // Tauolla ollut jää tauolle, käynnissä ollut jatkaa.
-  assert.match(veto, /if \(veto\.kaynnissa\) this\.jatka\(\);/);
+  /*
+   * KELAUS PYSÄYTTÄÄ (omistaja 8.9.2026): irrotus ei enää käynnistä
+   * kelloa, vaikka se olisi käynyt ennen tarttumista — esitys jää
+   * tauolle, ja pelaaja jatkaa Jatka-napista.
+   */
+  assert.ok(!veto.includes('this.jatka()'), 'irrotus ei saa jatkaa ajoa');
+  assert.ok(!veto.includes('veto.kaynnissa'), 'vedon jatkomuistia ei enää ole');
+  // Kynnyksen ylitys sytyttää kaikki lamput kartalle (selaustila).
+  assert.match(veto, /this\.pysayta\(\);[\s\S]{0,400}this\.aloitaSelaus\(\);/);
   // Veto ei saa laukaista kortin napautusta.
   assert.match(veto, /this\.vedettiin = true;/);
   assert.match(MOOTTORI, /addEventListener\('click', \(\) => \{ if \(!this\.vedettiin\) this\.napautaKorttia\(i\); \}\)/);
@@ -827,6 +835,75 @@ test('moottori vetää karusellia sormella: kynnys, kaappaus, snap ja tauon muis
   assert.ok(metodi('pura').includes('this.irrotaKarusellinVeto?.();'), 'purku ei irrota vetoa');
   // Vedon aikana kuvia ei vaihdeta (dekoodaus tekisi vedosta tökkivän).
   assert.match(MOOTTORI, /if \(this\.vetoNyt === null\) \{\s*\n\s*for \(const img of kortti\.querySelectorAll/);
+});
+
+/*
+ * KELAUS SYTYTTÄÄ KAIKKI VALOT JA PYSÄYTTÄÄ ESITYKSEN (omistaja
+ * 8.9.2026, sanatarkasti: *"jos keksintölinssissä kelaa alhaalta eri
+ * keksintöjä niin silloin kaikki valot kartalla saisi syttyä, jotta
+ * pelaaja voi klikkailla kohtia myös kartalla. tällöin esitys menee
+ * automaattisesti tauko tilaan. jos pelaaja painaa uudestaan jatka,
+ * niin tulevat pisteet häviävät kartalta ja esitys jatkuu
+ * normaalisti."*).
+ */
+test('selauksessa palavat kaikki lamput, esityksessä vain ohitetut', () => {
+  // Esitys: kello on ohittanut pysäkit 0–3, tulevat ovat sammuksissa.
+  assert.deepEqual(lampunTila(2, 3, false), { palaa: true, nykyinen: false, tuleva: false });
+  assert.deepEqual(lampunTila(3, 3, false), { palaa: true, nykyinen: true, tuleva: false });
+  assert.deepEqual(lampunTila(4, 3, false), { palaa: false, nykyinen: false, tuleva: false });
+  // Selaus: koko kaari palaa, ja nykyisen jälkeiset ovat `tuleva`.
+  assert.deepEqual(lampunTila(2, 3, true), { palaa: true, nykyinen: false, tuleva: false });
+  assert.deepEqual(lampunTila(3, 3, true), { palaa: true, nykyinen: true, tuleva: false });
+  assert.deepEqual(lampunTila(4, 3, true), { palaa: true, nykyinen: false, tuleva: true });
+  assert.deepEqual(lampunTila(25, 3, true), { palaa: true, nykyinen: false, tuleva: true });
+  // Ennen ensimmäistä pysäkkiä (i = -1) selaus sytyttää kaiken tulevana.
+  assert.deepEqual(lampunTila(0, -1, true), { palaa: true, nykyinen: false, tuleva: true });
+  assert.deepEqual(lampunTila(0, -1, false), { palaa: false, nykyinen: false, tuleva: false });
+});
+
+test('kelaus sytyttää kaikki valot, Jatka sammuttaa tulevat', () => {
+  // Yksi sääntö, yksi paikka: siirry ei enää laske lamppuja itse.
+  const siirry = metodi('siirry');
+  assert.match(siirry, /this\.asetaValot\(i\);/);
+  assert.ok(!siirry.includes('k <= i'), 'siirry ei saa laskea lamppuja ohi lampunTilan');
+  const asetaValot = metodi('asetaValot');
+  assert.match(asetaValot, /lampunTila\(k, i, this\.selaus\)/);
+  // Selaus alkaa kelauksesta: veto, kortti, lamppu ja nuolinäppäimet.
+  for (const nimi of ['napautaKorttia', 'napautaValoa', 'nappain']) {
+    assert.match(metodi(nimi), /this\.aloitaSelaus\(\);/, `${nimi} ei aloita selausta`);
+  }
+  // Tauko-nappi EI sytytä: se on pysähdys, ei selausta.
+  assert.ok(!metodi('pysayta').includes('aloitaSelaus'), 'Tauko ei saa sytyttää kaikkia');
+  assert.ok(!metodi('taukoTaiJatka').includes('aloitaSelaus'), 'Tauko/Jatka ei saa sytyttää kaikkia');
+  // Nykyisen lampun ja kortin napautus vain pysäyttää (ei selausta).
+  assert.match(metodi('napautaValoa'), /if \(i === this\.tila\.i\) \{ this\.pysayta\(\); return; \}/);
+  // Kertomuskaari (Ihmisen matka) ei selaa: esitys omistaa hehkut.
+  assert.match(metodi('aloitaSelaus'), /if \(this\.selaus \|\| this\.esitys\) return;/);
+  // Jatka sammuttaa tulevat ja Aloita alusta palauttaa normaalitilan.
+  assert.match(metodi('jatka'), /this\.paataSelaus\(\);/);
+  assert.match(metodi('paataSelaus'), /this\.selaus = false;[\s\S]{0,120}this\.asetaValot\(this\.tila\.i\);/);
+  assert.match(metodi('alusta'), /this\.selaus = false;/);
+  // Näppäimistön väli/Enter kulkee saman jatkan kautta (oma nappi).
+  assert.match(metodi('taukoTaiJatka'), /if \(this\.kaynnissa\) this\.pysayta\(\); else this\.jatka\(\);/);
+});
+
+test('tuleva lamppu erottuu nykyisestä ja ottaa napautuksia', () => {
+  // Osumat: myös tuleva lamppu on napautettava (kartalla pointer-events).
+  assert.match(TYYLI, /\.aikajana-valo\.tuleva \{ pointer-events: auto; cursor: pointer; \}/);
+  // Oma ulkoasu: pienempi ja himmeämpi kuin ohitettu jälki.
+  assert.match(TYYLI, /\.aikajana-valo\.tuleva \.aikajana-valo-sisus \{ transform: scale\(0\.56\); opacity: 0\.62; \}/);
+  // Sääntö tulee .palaa-sääntöjen JÄLKEEN, muuten se ei voittaisi niitä.
+  assert.ok(TYYLI.indexOf('.aikajana-valo.tuleva .aikajana-valo-sisus')
+    > TYYLI.indexOf('.aikajana-valo.palaa .aikajana-valo-sisus'), 'tuleva-sääntö jää palaa-säännön alle');
+  /*
+   * Pallolla lamppu on canvas-liekki, jolla ei saa olla omaa liikettä
+   * (tests/aikajana-valo.test.mjs): ero tehdään kehyksen staattisella
+   * kutistuksella ja canvasin peittävyydellä.
+   */
+  assert.match(TYYLI, /\.aikajana-valo-pallolla\.tuleva \{ transform: translate\(-50%, -50%\) scale\(0\.62\); \}/);
+  assert.match(TYYLI, /\.aikajana-valo\.tuleva \.aikajana-valo-liekki \{ opacity: 0\.42; \}/);
+  // Tummennuksen reikä jää tulevalta tekemättä: kartta pysyy tummana.
+  assert.match(metodi('asetaValonTila'), /'reika-palaa', palaa && !tuleva/);
 });
 
 test('vedon aikana kortit seuraavat sormea ilman CSS-siirtymää', () => {
@@ -884,8 +961,10 @@ test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa se
   // Lamput ovat napautettavia (omistaja 3.9.2026) ja paneeli raahattava.
   assert.match(MOOTTORI, /g\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); this\.napautaValoa\(i\); \}\)/);
   // (Väli kasvoi kertomusportilla 7.9.2026: esityksen aikana lampun
-  // napautus ei siirry pysäkkiin, koska pysäkkejä ei ole — ks. alempaa.)
-  assert.match(MOOTTORI, /napautaValoa\(i\) \{[\s\S]{0,400}this\.siirry\(i\);/);
+  // napautus ei siirry pysäkkiin, koska pysäkkejä ei ole — ks. alempaa.
+  // Ja uudelleen 8.9.2026: napautus aloittaa selauksen, joka sytyttää
+  // kaikki lamput kartalle ennen siirtymää.)
+  assert.match(MOOTTORI, /napautaValoa\(i\) \{[\s\S]{0,560}this\.siirry\(i\);/);
   assert.match(MOOTTORI, /kytkeRaahaus\(\) \{[\s\S]{0,6000}rajaaPaneelinSiirto\(paneeli, this\.juuri/);
   const CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
   assert.match(CSS, /\.aikajana-valo\.palaa \{ pointer-events: auto; cursor: pointer; \}/);

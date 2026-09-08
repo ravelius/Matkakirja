@@ -1762,6 +1762,31 @@ export function karusellinKohde(nyt, heitto = 0, maara = 0) {
 }
 
 /**
+ * KELAUS SYTYTTÄÄ KAIKKI VALOT (omistaja 8.9.2026, sanatarkasti:
+ * *"jos keksintölinssissä kelaa alhaalta eri keksintöjä niin silloin
+ * kaikki valot kartalla saisi syttyä, jotta pelaaja voi klikkailla
+ * kohtia myös kartalla. tällöin esitys menee automaattisesti tauko
+ * tilaan. jos pelaaja painaa uudestaan jatka, niin tulevat pisteet
+ * häviävät kartalta ja esitys jatkuu normaalisti."*).
+ *
+ * Yhden lampun tila pysäkillä `k`, kun nykyinen pysäkki on `i`:
+ *
+ *   ESITYS (`selaus` epätosi) — vanha sääntö: palavat ne, jotka kello
+ *   on jo ohittanut (`k <= i`), ja tulevat ovat sammuksissa.
+ *   SELAUS (`selaus` tosi) — kaari on kartalla kokonaan: KAIKKI
+ *   lamput palavat, ja nykyisen jälkeiset merkitään `tuleva`ksi.
+ *   Tuleva on himmeämpi ja pienempi (css .aikajana-valo.tuleva), jotta
+ *   nykyinen pysäkki erottuu, mutta se ottaa napautuksia kuten muutkin.
+ *
+ * PUHDAS FUNKTIO (tests/aikajana.test.mjs).
+ */
+export function lampunTila(k, i, selaus = false) {
+  const nykyinen = k === i;
+  if (!selaus) return { palaa: k <= i, nykyinen, tuleva: false };
+  return { palaa: true, nykyinen, tuleva: k > i };
+}
+
+/**
  * Sormen paikka KORTTINUMEROINA: mistä veto alkoi (`alku`), kuinka
  * monta pikseliä sormi on liikkunut (`dx`, oikealle positiivinen) ja
  * kuinka leveä kortti on (`korttiLeveys`). Vasemmalle vetäminen vie
@@ -2521,6 +2546,14 @@ class Aikajana {
     this.irrotaKartanKosketus = null;
     /** Karusellin sormivedon kuuntelijoiden irrotus (kytkeKarusellinVeto). */
     this.irrotaKarusellinVeto = null;
+    /*
+     * SELAUSTILA (ks. lampunTila): tosi siitä hetkestä, kun pelaaja
+     * alkaa kelata kaarta (karusellin veto, kortin tai lampun napautus,
+     * nuolinäppäimet), siihen asti kun Jatka jatkaa esitystä. Sen ajan
+     * KAIKKI kaaren lamput palavat kartalla. Pelkkä Tauko ei sytytä
+     * mitään — se on pysähdys, ei selausta.
+     */
+    this.selaus = false;
     /*
      * VÄLINÄYTÖKSEN TILA. `valinaytos` on laatikon juuri sen ollessa
      * ruudulla, `valinaytosNahty` estää saman hengähdystauon toistumisen
@@ -3354,17 +3387,63 @@ class Aikajana {
    * Reiän luokat ovat omat, jotta merkkien laskenta (`palaa`,
    * `nykyinen`) ei sekoitu maskiin.
    */
-  asetaValonTila(valo, palaa, nykyinen) {
+  asetaValonTila(valo, palaa, nykyinen, tuleva = false) {
     if (!valo) return;
     valo.g.classList.toggle('palaa', palaa);
     valo.g.classList.toggle('nykyinen', nykyinen);
+    // Selauksen aikana syttynyt TULEVA pysäkki (ks. lampunTila).
+    valo.g.classList.toggle('tuleva', tuleva);
     // Liekkikerros piirtää saman tilan canvasiin (js/aikajana-valo.js);
     // luokat jäävät, koska moottori lukee niistä lampun tilan.
     this.liekit?.tila(valo.i, palaa, nykyinen);
-    valo.reika?.classList.toggle('reika-palaa', palaa);
+    // Tulevan lampun reikä jää tekemättä: kartta ei saa vaaleta koko
+    // kaaren mitalta, kun pelaaja vain selaa (tummennus on linssin idea).
+    valo.reika?.classList.toggle('reika-palaa', palaa && !tuleva);
     valo.reika?.classList.toggle('reika-nykyinen', nykyinen);
     // Pallolla reikiä on yksi ja se on nykyisen lampun kohdalla.
     if (nykyinen) this.siirraReika(valo);
+  }
+
+  /**
+   * Koko kaaren lamput yhdellä säännöllä (lampunTila): esityksessä
+   * palavat ohitetut, selauksessa kaikki. Kaikki lamppujen tilanvaihdot
+   * pysäkin vaihtuessa kulkevat tästä, jottei sääntöä ole kahdessa
+   * paikassa.
+   */
+  asetaValot(i = this.tila.i) {
+    this.valot.forEach((valo, k) => {
+      if (!valo) return;
+      const { palaa, nykyinen, tuleva } = lampunTila(k, i, this.selaus);
+      this.asetaValonTila(valo, palaa, nykyinen, tuleva);
+    });
+  }
+
+  /**
+   * KELAUS SYTYTTÄÄ KAIKKI VALOT JA PYSÄYTTÄÄ ESITYKSEN (omistaja
+   * 8.9.2026, sanatarkasti: *"jos keksintölinssissä kelaa alhaalta eri
+   * keksintöjä niin silloin kaikki valot kartalla saisi syttyä, jotta
+   * pelaaja voi klikkailla kohtia myös kartalla. tällöin esitys menee
+   * automaattisesti tauko tilaan. jos pelaaja painaa uudestaan jatka,
+   * niin tulevat pisteet häviävät kartalta ja esitys jatkuu
+   * normaalisti."*).
+   *
+   * Selaus alkaa vedon kynnyksestä, kortin napautuksesta, lampun
+   * napautuksesta ja nuolinäppäimistä — ei Tauko-napista. Se pysyy
+   * päällä koko tauon ajan, myös kun pelaaja hyppii lampusta toiseen:
+   * valot eivät sammu välissä. Kertomuskaarella (Ihmisen matka) ei
+   * selata: siellä esitys omistaa kellon ja hehkut.
+   */
+  aloitaSelaus() {
+    if (this.selaus || this.esitys) return;
+    this.selaus = true;
+    this.asetaValot(this.tila.i);
+  }
+
+  /** Selaus päättyy (Jatka, Aloita alusta): tulevat sammuvat. */
+  paataSelaus() {
+    if (!this.selaus) return;
+    this.selaus = false;
+    this.asetaValot(this.tila.i);
   }
 
   /**
@@ -3741,7 +3820,7 @@ class Aikajana {
    *     OMALLA POLULLA (`siirry`) — sama kuin kortin napautuksessa ja
    *     nuolinäppäimissä. Pyyhkäisyn liikemäärä (karusellinHeitto)
    *     kuljettaa enintään kolme keksijää hidastuen; loputonta
-   *     rullausta ei ole.
+   *     rullausta ei ole. Esitys JÄÄ TAUOLLE (kelaus, ks. aloitaSelaus).
    *
    * ── KUKA OMISTAA KOSKETUKSEN ──────────────────────────────────────
    *
@@ -3776,7 +3855,6 @@ class Aikajana {
         y: e.clientY,
         alku: this.korttinumero(this.ennakkoKohde ?? this.tila.i),
         liikkui: false,
-        kaynnissa: this.kaynnissa,
         paikka: null,
         edellinenPaikka: null,
         hetki,
@@ -3806,8 +3884,14 @@ class Aikajana {
          * nykäisisi takaisin kellon kohdalle juuri kun sormi tarttuu.
          */
         nauha.classList.add('vedossa');
-        // Kello ei saa juosta sormen alla; jatko päätetään irrotuksessa.
+        // Kello ei saa juosta sormen alla.
         this.pysayta();
+        /*
+         * KELAUS SYTYTTÄÄ KAIKKI VALOT (omistaja 8.9.2026): kynnyksen
+         * ylitys on kelausta, joten koko kaari syttyy kartalle ja
+         * pelaaja voi klikkailla kohtia myös sieltä (aloitaSelaus).
+         */
+        this.aloitaSelaus();
       }
       e.preventDefault?.();
       e.stopPropagation();
@@ -3860,8 +3944,14 @@ class Aikajana {
       if (pysakki === undefined) { this.asettele(); return; }
       // Moottorin oma siirry-polku: kello, lamput, paneeli, kamera.
       this.siirry(pysakki);
-      // Tauolla ollut jää tauolle; käynnissä ollut jatkaa entiseen tapaan.
-      if (veto.kaynnissa) this.jatka();
+      /*
+       * KELAUS JÄTTÄÄ ESITYKSEN TAUOLLE (omistaja 8.9.2026: *"tällöin
+       * esitys menee automaattisesti tauko tilaan"*). Aiemmin (v1687)
+       * käynnissä ollut ajo jatkoi irrotuksesta; nyt kelaus pysäyttää
+       * aina, ja pelaaja jatkaa Jatka-napista — silloin myös tulevat
+       * lamput sammuvat (jatka → paataSelaus). Siksi vedosta ei enää
+       * oteta talteen sitä, kävikö kello ennen tarttumista.
+       */
     };
 
     /*
@@ -4380,6 +4470,14 @@ class Aikajana {
     if (this.valinaytos) this.suljeValinaytos();
     this.kaynnissa = true;
     this.saadaMusiikki();
+    /*
+     * JATKA SAMMUTTAA TULEVAT (omistaja 8.9.2026: *"jos pelaaja painaa
+     * uudestaan jatka, niin tulevat pisteet häviävät kartalta ja esitys
+     * jatkuu normaalisti."*). Kartalle jäävät vain nykyiseen pysäkkiin
+     * asti syttyneet, ja loput syttyvät taas vuorollaan (sytyta).
+     * Ennen ensimmäistä kehystä, joten mitään ei ehdi vilkkua.
+     */
+    this.paataSelaus();
     this.viime = performance.now();
     this.taukoNappi.textContent = 'Tauko';
     this.juuri.classList.remove('tauolla');
@@ -4415,6 +4513,8 @@ class Aikajana {
     this.paattaEnnakko();
     this.loppu = false;
     this.tila = { vuosi: this.alku, i: -1, viive: 0 };
+    // Aloita alusta (↺) palauttaa myös normaalitilan: ei selausta.
+    this.selaus = false;
     for (const valo of this.valot) this.asetaValonTila(valo, false, false);
     // Pallolla tummennus palaa tasaiseksi: yksikään lamppu ei ole nykyinen.
     this.siirraReika(null);
@@ -5701,6 +5801,8 @@ class Aikajana {
       if (t.juttu) this.avaaJuttu(t);
       return;
     }
+    // Toisen keksijän napautus on kelausta: koko kaari syttyy kartalle.
+    this.aloitaSelaus();
     this.siirry(i);
   }
 
@@ -5715,6 +5817,7 @@ class Aikajana {
     }
     if (!this.tapahtumat[i]) return;
     if (i === this.tila.i) { this.pysayta(); return; }
+    this.aloitaSelaus(); // kartan lampun napautus on kelausta (kaikki valot)
     this.siirry(i);
   }
 
@@ -5733,7 +5836,9 @@ class Aikajana {
     const viive = t.paalu ? AIKAJANA_PAALU_MS : AIKAJANA_VIIVE_MS;
     this.tila = { vuosi: t.vuosi, i, viive, viiveTaysi: viive };
     this.naytaVuosi(t.vuosi);
-    this.valot.forEach((valo, k) => { if (valo) this.asetaValonTila(valo, k <= i, k === i); });
+    // Lamput yhdellä säännöllä: esityksessä pysäkkiin asti, selauksessa
+    // koko kaari (asetaValot → lampunTila).
+    this.asetaValot(i);
     this.paivitaReitti(i);
     // Värivirrat: kehykset pysäkkiin asti, kamera hetkeksi pelaajalle.
     this.virrat?.siirry(i);
@@ -5803,6 +5908,8 @@ class Aikajana {
     const kohde = this.tila.i + (e.key === 'ArrowRight' ? 1 : -1);
     if (kohde < 0 || kohde >= this.tapahtumat.length) return;
     e.preventDefault();
+    // Nuolet selaavat kaarta kuten karuselli: kaikki lamput syttyvät.
+    this.aloitaSelaus();
     this.siirry(kohde);
   }
 
