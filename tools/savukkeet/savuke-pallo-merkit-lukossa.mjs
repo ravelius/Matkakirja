@@ -39,6 +39,13 @@
  *      `pointRadius` on astemitta, joten piste kasvoi lähennettäessä
  *      iPadin ruudulla noin 30 pikseliin).
  *
+ *      MOLEMMAT MITATUT KORKEUDET OVAT LÄHIKUVAA (8.9.2026, luku 19):
+ *      maan lehti täyttää niissä yli puolet näkymästä, joten pisteen
+ *      lattia (1,5 x kohdemerkki, js/pallolauta/lauta.js
+ *      kohdekaupunginMitat) on kummassakin täydessä mitassaan ja
+ *      vartio mittaa yhä samaa vakiota — vain luku on 7 px:n sijaan
+ *      17,2 px. Yleisnäkymän 7 px on ennallaan (tests/kohdekaupunki).
+ *
  *   RAPORTIN TIETOJA (ei ehtoja): kaupunkipisteen (pointsData) oma
  *   säteittäinen siirtymä, joka jää tästä korjauksesta jäljelle.
  *

@@ -63,6 +63,34 @@ export const NOSTOJEN_KATTO = 40;
  * joka on myös poltetun nimiön katto) — sama koko kuin laatassa 1:1.
  */
 export const NOSTON_MITTA = KARTTANIMI_KOOT.kohde / NOSTOSYM_NIMIO_KOKO;
+/**
+ * KOHDEMERKIN HALKAISIJA RUUDULLA (px) — se mitta, jota vasten
+ * kohdekaupungin piste mitoitetaan (js/pallolauta/lauta.js
+ * KOHDEKAUPUNGIN_PISTE_SUHDE).
+ *
+ * Merkin oma ruutu on NOSTOSYM_MINI_RUUTU kirjaston yksikköä säteenä
+ * (js/fokusnosto-symbolit.js: piirroksen laatikko, hitunen musteen
+ * ympärillä), ja NOSTON_MITTA vie sen ruudun pikseleiksi. Sama luku
+ * mittaa nostojen laatikot (nostonLaatikko) — yksi mitta, ei kopiota.
+ */
+export const KOHDEMERKIN_RUUTU_PX = 2 * NOSTOSYM_MINI_RUUTU * NOSTON_MITTA;
+
+/**
+ * MAAN LEHDEN OSUUS NÄKYMÄN LEVEYDESTÄ — kohdemerkkien portin oma luku.
+ *
+ * Merkit piirretään vasta kun maan lehti täyttää vähintään puolet
+ * näkymästä (LEHDEN_VAHIN_OSUUS). Sama luku kertoo myös, milloin
+ * kartalla ON kohdemerkkejä, joita vasten kohdekaupunki mitataan
+ * (js/pallolauta/lauta.js kohdekaupunginMitat) — siksi se lasketaan
+ * yhdessä paikassa ja luovutetaan sieltä molemmille.
+ *
+ * @returns {number} 0, jos lehteä ei ole; muuten bbox.w / nakyva.w
+ */
+export function lehdenOsuus(pohja, nakyva, packId = null) {
+  if (!(pohja?.bbox?.w > 0) || !(nakyva?.w > 0)) return 0;
+  if (packId && pohja.lauta && pohja.lauta !== packId) return 0;
+  return pohja.bbox.w / nakyva.w;
+}
 /** Aihevalon säde (Globe.gl pointRadius-yksikköä) ja korkeus kaupunkipisteen alla. */
 export const VALON_SADE = 0.06;
 export const VALON_KORKEUS = 0.0015;
@@ -230,8 +258,7 @@ export function luoNostot({
     const liikkuu = ui.movingPlayerId != null;
     const iso = kohteidenNykyinenIso(ui);
     const pohja = iso ? FOKUS_POHJAT[iso] : null;
-    const lehtiNakyy = Boolean(pohja?.bbox && pohja.lauta === pack.id && nakyva?.w > 0
-      && pohja.bbox.w / nakyva.w >= LEHDEN_VAHIN_OSUUS);
+    const lehtiNakyy = lehdenOsuus(pohja, nakyva, pack.id) >= LEHDEN_VAHIN_OSUUS;
     if (lehtiNakyy && !liikkuu) {
       const tiedot = maanKohdetiedot(ui, iso);
       for (const m of maanKohdemerkit(pack, iso, pohja, onPoltettu)) {
@@ -522,6 +549,17 @@ export function luoNostot({
     osumat: () => osumat,
     /** Kiinteän musteen laatikot nimiladonnan varauksiksi (ks. paivita). */
     laatikot: () => laatikot,
+    /**
+     * Kohdemerkkien portin luku juuri nyt (ks. lehdenOsuus): sama maa,
+     * sama lehti ja sama jakolasku kuin merkkien keräyksessä. Laudan
+     * kaupunkipiste lukee tästä, onko kartalla kohdemerkkejä, joita
+     * vasten kohdekaupunki mitoitetaan (js/pallolauta/lauta.js).
+     */
+    lehdenOsuus: (nakyva) => {
+      const pack = ui.game?.pack;
+      const iso = pack ? kohteidenNykyinenIso(ui) : null;
+      return lehdenOsuus(iso ? FOKUS_POHJAT[iso] : null, nakyva, pack?.id ?? null);
+    },
     /** Viimeisimmän sovittelun luvut (savukkeet ja vartijat). */
     sovittelunTulos: () => sovittelu,
     /**

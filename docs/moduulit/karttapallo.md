@@ -4554,3 +4554,95 @@ sormivedon ajan.
 Sivuvaikutus, joka on parannus: nimiladonta lukee pelin merkkien
 laatikot elementeistä (`merkit.laatikot('peli')`), ja nappulan laatikko
 on nyt siellä, missä hahmo oikeasti on.
+
+
+## 19. Kohdekaupunki on selvästi suurempi kuin kohdemerkit (8.9.2026)
+
+**Omistaja, sanatarkasti** (iPad-kaappaus Riiasta): *"Miksi kohdekaupunki
+näkyy noin pienenä pallona? Se saisi olla selvästi suurempi."* — ja
+saman päivän lisäys klo 15.45: *"tee samoin myös kohdekaupungin
+tekstille joka jää lähellä liian pieneksi."*
+
+### 19.1 Mitattu ennen
+
+Kaappaus toistettiin Chromiumilla (`?lauta=pallo`, Riika, iPad
+834 × 1210 css, dpr 2, korkeus 0,05) ja mitattiin sekä omistajan
+kuvasta pikselitasolla että pelistä:
+
+| mitta | css-px | mistä |
+| --- | --- | --- |
+| kaupunkipiste (RIIKA) | 7,0 | `KAUPUNKIPISTEEN_HALKAISIJA_PX` (luku 12.5) |
+| kohdemerkki (karttanosto) | 11,0…11,4 | `KOHDEMERKIN_RUUTU_PX` = 2 · 7,4 · `NOSTON_MITTA` |
+| kohteen nimi (laattaan poltettu) | 16,4 | 8,5 px poltettuna, laatta venytettynä 1,93× |
+| kaupungin nimi (elävä) | 13,5 | `KARTTANIMI_KOOT.kaupunki`, paperivakio |
+
+Kaksi juurisyytä samassa kuvassa:
+
+1. **Piste on pienempi kuin kohdemerkki joka zoomilla.** Luvun 12.5
+   seitsemän pikseliä valittiin yleisnäkymän ehdolla (*"Tampereen
+   kohdalla iso musta ympyrä"*) eikä sitä koskaan verrattu
+   kohdemerkkiin. Kaupunki — se, johon matkustetaan — oli kartan pienin
+   merkki.
+2. **Nimi ei seuraa poltettua mustetta lähikuvassa.** Kaupungin nimi on
+   paperivakio, mutta kohteiden nimet ovat laatoissa poltettuina: kun
+   kamera menee syvimmän tason (z8) sisään, laattaa venytetään
+   (`laattojenVenytys`, iPadin lähimmässä näkymässä 1,93×), ja poltto
+   olettaa dpr 2:n (`NOSTOLADONTA_POLTON_TIHEYS`), joten 8,5 px:n nimiö
+   on ruudulla 8,5 · venytys · 2/dpr = 16,4 px. Maanäkymässä suhde on
+   tilattu 13,5 : 8,5, lähikuvassa se oli kääntynyt ympäri.
+
+### 19.2 Sääntö: lattia, ei uutta vakiota
+
+`js/pallolauta/lauta.js kohdekaupunginMitat` antaa kaupungin pisteelle
+ja nimelle LATTIAN, joka mitataan siitä, mitä kartalla juuri nyt on:
+
+> piste ≥ `KOHDEKAUPUNGIN_PISTE_SUHDE` (1,5) × kohdemerkin halkaisija
+> nimi ≥ `KOHDEKAUPUNGIN_NIMI_SUHDE` (1,3) × kohdenimiön ruutukoko
+
+**Lattia ei koskaan pienennä mitään** (`Math.max`): yleisnäkymässä piste
+on tavulleen entinen 7 px ja nimi entinen 13,5 px.
+
+**Pisteen lattia koskee vain lähikuvaa, jossa kohdemerkkejä on.** Portti
+on sama luku kuin merkeillä itsellään (`js/pallolauta/nostot.js
+lehdenOsuus ≥ LEHDEN_VAHIN_OSUUS`) — vertailua ei ole siellä, missä
+verrattavaa ei ole, eikä yleisnäkymän 7 px siis muutu pikseliäkään
+(luvun 12.5 korjaus säilyy). Liu'utus `KOHDEKAUPUNGIN_TAYSI_OSUUS`:een
+(0,75) tekee muutoksesta jatkuvan: piste kasvaa portin auetessa
+asteittain eikä hyppää.
+
+**Nimen lattia ei tarvitse porttia.** Se puree vasta kun poltettu muste
+on venytettyä (suurennus > 1,59), eli täsmälleen siinä lähikuvassa,
+josta omistaja kirjoitti. Suurennuksen katto on laattojen oma sallittu
+venytys (`PALLON_SALLITTU_VENYTYS` = 2): sitä syvemmällä laatta on
+pelkkää sumua, eikä merkin pidä kasvaa sumun mukana rajatta.
+
+**Ladonta tietää molemmat.** `nimet.lado` saa samasta laskusta
+`kokoKerroin`-luvun ja `pisteSade`-mitan, ja `ladoRuutunimet` varaa
+pisteelle sen säteen, joka sillä ruudulla oikeasti on — muuten suurempi
+piste jäisi oman nimensä alle. Sivuehdokkaiden etäisyys kasvaa samasta
+luvusta (`sijoitaKaupunginNimi`).
+
+### 19.3 Mitattu jälkeen
+
+Sama näkymä (Riika, iPad 834 × 1210, dpr 2, korkeus 0,05): piste
+7,0 → 17,2 px eli 1,5 × kohdemerkki, ja kaupungin nimi 13,5 → 21,3 px
+eli 1,3 × poltettu kohdenimiö (16,4 px). Puhelimella (390 css, dpr 3)
+poltettu muste ei ole venytettyä (suurennus 1), joten nimi pysyy
+13,5 pikselissä ja vain piste kasvaa. Yleisnäkymässä kumpikaan ei
+muutu: iPadilla korkeudella 0,8 piste on mitattuna 7,0 px, koska maan
+lehti ei enää täytä puolta näkymästä. Kapealla puhelinruudulla sama
+korkeus on vielä lehden näkymä (osuus 0,5…0,75), ja liuku antaa siellä
+8,8 px — kohdemerkit ovat kuvassa, joten vertailukin on.
+
+**Mitä EI muutu:** napautus on yhä 44 px:n säde ruudulla
+(`NAPAUTUKSEN_SADE_PX`) eikä se ole koskaan lukenut pisteen kokoa.
+Nappula ei ole pallolla sidottu pisteeseen (se on oma H-merkkinsä,
+32 px), joten sen koko on ennallaan; 17,2 px:n piste jää yhä nappulan
+alle, mutta reunaa jää nyt näkyviin — sama suhde kuin tasokartan
+laatalla, jonka alta omistaja halusi laatan näkyvän (`js/ui.js`
+`FOKUS_NAPPULA_PX`).
+
+**Vartijat:** `tests/kohdekaupunki.test.mjs` (lattia on olemassa ja
+≥ 1,5 × kohdemerkki, nimi ≥ 1,3 × kohdenimiö joka suurennuksella,
+yleisnäkymä muuttumaton, lattia jatkuva eikä hyppää portilla, ladonta
+varaa suuremman pisteen).

@@ -131,8 +131,17 @@ export function luoNimet({
    * tarvita"* — sama sääntö kuin tasokartan lentotilassa
    * (js/karttanimet.js), vain eri kerroksessa.
    */
+  /*
+   * `kokoKerroin` ja `pisteSade` tulevat laudalta (js/pallolauta/lauta.js
+   * kohdekaupunginMitat, omistaja 8.9.2026: *"tee samoin myös
+   * kohdekaupungin tekstille joka jää lähellä liian pieneksi"*).
+   * Lähikuvassa nimi on suurempi ja piste leveämpi, ja ladonnan on
+   * tiedettävä molemmat: sama laatikko mittaa nimen, väistön ja
+   * nostolappujen sovittelun.
+   */
   const lado = ({
     varaukset = [], pinot = [], katto = NIMIEN_KATTO, vain = null,
+    kokoKerroin = 1, pisteSade = 0,
   } = {}) => {
     const w = kotelo.clientWidth;
     const h = kotelo.clientHeight;
@@ -157,7 +166,9 @@ export function luoNimet({
     ehdokkaat.sort((a, b) => (b.tarkeys - a.tarkeys)
       || (a.etaisyys - b.etaisyys)
       || (a.c.nimi < b.c.nimi ? -1 : 1));
-    const ladottu = ladoRuutunimet(ehdokkaat, { varaukset, pinot, katto });
+    const ladottu = ladoRuutunimet(ehdokkaat, {
+      varaukset, pinot, katto, kokoKerroin, pisteSade,
+    });
     const datumit = ladottu.nimiot.map((n) => {
       const e = ehdokkaat.find((k) => k.c === n.c);
       return {
