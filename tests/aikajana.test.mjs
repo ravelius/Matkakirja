@@ -13,7 +13,7 @@ import { jaaVirkkeiksi } from '../js/aikajana.js';
 import { readFileSync } from 'node:fs';
 
 import {
-  aikajanaAskel, nakyvaJarjestys, asetaMatkamittari, rajaaPaneelinSiirto, PANEELIN_RAAHAUSKYNNYS,
+  aikajanaAskel, nakyvaJarjestys, asetaMatkamittari, rajaaPaneelinSiirto, PANEELIN_RAAHAUSKYNNYS, LAPUN_PALUU_MS,
   rullanSumu, tasoitaSumu, sumennaRullat, RULLAN_VALOTUS_S, RULLAN_SUMU_MAX, RULLAN_SUMUN_KYNNYS,
   rajaaPaneelinKoko, PANEELIN_KOKO_MIN, PANEELIN_KOKO_MAX,
   AIKAJANA_TAUON_OSUUS, VUOSI_RULLAUS_MS, AIKAJANA_NAKSU_VALI_MS,
@@ -340,6 +340,26 @@ test('lappu rullautuu ylös kartan kosketuksesta ja palaa otsikkorivin kahvasta'
   assert.match(AIKAJANA_CSS, /\.aikajana-ylarivi:has\(\.aikajana-kahva:not\(\[hidden\]\)\) \.aikajana-otsikot \{ display: none; \}/);
   assert.match(AIKAJANA_CSS, /\.aikajana-kahva \{ max-width: none; min-width: 2\.6rem; justify-content: center; \}/);
   assert.match(AIKAJANA_CSS, /\.aikajana-kahva-nimi \{ display: none; \}/);
+});
+
+test('lappu palaa itsestään, kun kartan liike loppuu (omistaja 8.9.2026)', () => {
+  // "Tekniikkalinssin havainnikuva voisi tulla takaisin näkyviin … kun
+  // kartan liike loppuu": kosketus piilottaa ja merkitsee syyn, liike
+  // siirtää paluuta, ja ajastin avaa lapun vasta sormien irrottua.
+  const kosketus = metodi('kytkeKartanKosketus');
+  assert.match(kosketus, /this\.lappuPiilossaKartasta = true;/);
+  assert.match(kosketus, /this\.ajastaLapunPaluu\(e\);/);
+  assert.match(kosketus, /if \(e\.type === 'pointermove' && !e\.buttons\) return;/);
+  for (const tyyppi of ['pointermove', 'pointerup', 'pointercancel']) assert.ok(kosketus.includes(`'${tyyppi}'`), tyyppi);
+  assert.match(kosketus, /clearTimeout\(this\.lapunPaluuAjastin\);/, 'purku pysäyttää ajastimen');
+  const paluu = metodi('ajastaLapunPaluu');
+  assert.match(paluu, /if \(this\.kaari\?\.kertomus\?\.length\) return;/, 'Ihmisen matkan kortti ei palaa itsestään');
+  assert.match(paluu, /if \(this\.sormetKartalla > 0\) return;/);
+  assert.match(paluu, /\}, LAPUN_PALUU_MS\);/);
+  assert.match(paluu, /this\.naytaLappu\(\);/);
+  assert.ok(LAPUN_PALUU_MS >= 600 && LAPUN_PALUU_MS <= 1500, 'paluu odottaa pallon jälkiliu\'un, muttei jää roikkumaan');
+  // Kahvasta avattu lappu ei odota enää kartan paluuta.
+  assert.match(metodi('naytaLappu'), /this\.lappuPiilossaKartasta = false;/);
 });
 
 test('viimeisen tapahtuman jälkeen askel ilmoittaa lopun', () => {

@@ -4216,6 +4216,14 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'KEKSINTOLINSSIN HAVAINNEKUVA PALAA ITSESTAAN, KUN KARTAN LIIKE LOPPUU '
+          + '(omistaja 8.9.2026 klo 15.20, sanatarkasti: "Tekniikkalinssin '
+          + 'havainnikuva voisi tulla takaisin nakyviin, kun se nyt haviaa, jos '
+          + 'karttaa liikuttaa, mutta se voisi automaattisesti tulla nakyviin, '
+          + 'kun kartan liike loppuu."): kartan kosketus rullaa lapun ylos kuten '
+          + 'ennen, mutta pysakkiajolla lappu aukeaa itsestaan, kun sormet ovat '
+          + 'irronneet ja kartta ollut koskematta vajaan sekunnin. Ihmisen matkan '
+          + 'kortti ei palaa itsestaan (kartan tutkiminen on siella oma vaihe).',
         'PULUN HUUDAHDUS EI KESKEYTA LUKIJAA, JA KUPLAPINO NAKYY KAHDEKSAAN RIVIIN '
           + 'ASTI KUNNES KARTTA LIIKKUU (omistaja 8.9.2026 klo 15.10, sanatarkasti: '
           + '"pulun huuhdahdukset luennan valiin ei tarvitse keskeyttaa lukijan '

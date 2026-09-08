@@ -847,6 +847,23 @@ export const PANEELIN_ENNAKKOHAIVYTYS_MS = 600;
  */
 /** Raahaus alkaa vasta tämän liikkeen jälkeen; sitä lyhyempi on napautus. */
 export const PANEELIN_RAAHAUSKYNNYS = 6;
+/*
+ * LAPPU PALAA ITSESTÄÄN, KUN KARTAN LIIKE LOPPUU (omistaja 8.9.2026 klo
+ * 15.20, sanatarkasti: *"Tekniikkalinssin havainnikuva voisi tulla
+ * takaisin näkyviin, kun se nyt häviää, jos karttaa liikuttaa, mutta se
+ * voisi automaattisesti tulla näkyviin, kun kartan liike loppuu."*).
+ *
+ * Kartan kosketus rullaa lapun ylös kuten ennen (päätös 1 yllä), mutta
+ * pysäkkiajolla (keksintölinssi) lappu aukeaa itsestään, kun kartta
+ * on ollut koskematta LAPUN_PALUU_MS ja yksikään sormi ei ole enää
+ * pohjassa. Ajastin nollautuu jokaisesta kartan tapahtumasta
+ * (pointerdown, pointermove sormi pohjassa, pointerup, wheel), joten
+ * lappu ei pilkahda kesken vedon — ja pallon jälkiliuku (vaimennus
+ * irrotuksen jälkeen) ehtii tyyntyä ennen paluuta. Kertomuskaarella
+ * (Ihmisen matka) lappu ei palaa itsestään: siellä kartan tutkiminen
+ * on oma vaiheensa, ja kortti palaa kahvasta.
+ */
+export const LAPUN_PALUU_MS = 900;
 /**
  * Paneelin siirto ja koko muistetaan laitteella (kytkeRaahaus):
  * omistaja 3.9.2026 ilta: "eri kokoisilla näytöillä pelaaja voi itse
@@ -3821,13 +3838,61 @@ class Aikajana {
       if (!this.juuri?.isConnected) return false;
       return !(kohde instanceof Node) || !this.juuri.contains(kohde);
     };
-    this.kartanKosketus = (e) => { if (kartalla(e)) this.piilotaLappu(); };
+    this.kartanKosketus = (e) => {
+      if (!kartalla(e)) return;
+      this.piilotaLappu();
+      this.lappuPiilossaKartasta = true;
+      this.ajastaLapunPaluu(e);
+    };
+    /*
+     * KARTAN LIIKE LOPPUU (LAPUN_PALUU_MS): sormi pohjassa liikkuu,
+     * irtoaa tai rulla pyörii — jokainen siirtää paluuta. Vain kartalta
+     * tulevat tapahtumat lasketaan, kuten piilotuksessakin.
+     */
+    this.kartanLiike = (e) => {
+      if (!this.lappuPiilossaKartasta || !kartalla(e)) return;
+      if (e.type === 'pointermove' && !e.buttons) return;
+      this.ajastaLapunPaluu(e);
+    };
     pane.addEventListener('pointerdown', this.kartanKosketus, { capture: true, passive: true });
     pane.addEventListener('wheel', this.kartanKosketus, { capture: true, passive: true });
+    for (const tyyppi of ['pointermove', 'pointerup', 'pointercancel']) {
+      pane.addEventListener(tyyppi, this.kartanLiike, { capture: true, passive: true });
+    }
     this.irrotaKartanKosketus = () => {
       pane.removeEventListener('pointerdown', this.kartanKosketus, { capture: true });
       pane.removeEventListener('wheel', this.kartanKosketus, { capture: true });
+      for (const tyyppi of ['pointermove', 'pointerup', 'pointercancel']) {
+        pane.removeEventListener(tyyppi, this.kartanLiike, { capture: true });
+      }
+      clearTimeout(this.lapunPaluuAjastin);
+      this.lapunPaluuAjastin = null;
+      this.sormetKartalla = 0;
     };
+  }
+
+  /**
+   * Lapun paluun ajastus (ks. LAPUN_PALUU_MS). Pohjassa olevat sormet
+   * lasketaan, jotta nipistyksen toinen sormi tai pitkä veto ei tuo
+   * lappua esiin ennen kuin kaikki ovat irronneet.
+   */
+  ajastaLapunPaluu(e) {
+    if (e?.type === 'pointerdown') this.sormetKartalla = (this.sormetKartalla ?? 0) + 1;
+    else if (e?.type === 'pointerup' || e?.type === 'pointercancel') {
+      this.sormetKartalla = Math.max(0, (this.sormetKartalla ?? 0) - 1);
+    }
+    clearTimeout(this.lapunPaluuAjastin);
+    this.lapunPaluuAjastin = null;
+    // Kertomuskaarella kartan tutkiminen on oma vaiheensa: ei paluuta.
+    if (this.kaari?.kertomus?.length) return;
+    if (this.sormetKartalla > 0) return;
+    this.lapunPaluuAjastin = setTimeout(() => {
+      this.lapunPaluuAjastin = null;
+      if (!this.juuri?.isConnected || this.sormetKartalla > 0) return;
+      if (!this.lappuPiilossaKartasta) return;
+      this.lappuPiilossaKartasta = false;
+      this.naytaLappu();
+    }, LAPUN_PALUU_MS);
   }
 
   /**
@@ -4051,6 +4116,10 @@ class Aikajana {
 
   /** Lappu takaisin kahvasta: rullaus auki ja kahva pois palkista. */
   naytaLappu() {
+    // Kahvasta tai loppusanoista avattu lappu ei enää odota kartan paluuta.
+    this.lappuPiilossaKartasta = false;
+    clearTimeout(this.lapunPaluuAjastin);
+    this.lapunPaluuAjastin = null;
     if (!this.paneeli || !this.lappuPiilossa) return;
     this.lappuPiilossa = false;
     this.paneeli.classList.remove('piilossa');
