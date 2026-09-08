@@ -71,24 +71,13 @@ poimi valmiit agenttityöt ja julkaise, ei salaisuuksia eikä sähköpostia).
 
 ## 2. Kesken / odottaa omistajaa
 
-- **Tekstien perkaus jatkuu kaupunki kerrallaan omistajan kanssa.**
-  Tehty: Sofia, Bukarest, Budapest, Wien, Praha, Krakova, Varsova.
-  Sääntö: matkakirja ≤400 merkkiä, näytä aina pituus; isoisä ei oleta
-  lukijaa; ei "hienoja lauseita"; pulun välikommentti (huudahdus) vain
-  osassa kaupunkeja (nyt 8: Sofia, Bukarest, Budapest, Krakova, Pietari,
-  Tampere, Tallinna, Riika). Kupla ≤95 merkkiä, kaksi asiaa, "nyt
-  toisin / yhä ennallaan", ei numeroita. Yli 400 merkin tekstit vielä:
-  amsterdam, marseille, oslo, lissabon, edinburgh, venetsia, firenze
-  (576), kuusi uutta pakkia (408–423); rooma (234) laajennettava.
-- **Venetsian romanssi (omistajan idea):** pulu lennähtää paikalle vielä
-  ihastuksen pauloissa, puhuu ensin mitä sattuu kuin toiselle pululle,
-  tajuaa sitten tilanteen. Poikkeus yhden kuplan sääntöön: useampi
-  kupla. Fablen ehdotus lähetetty omistajalle 8.9. klo ~20.45 (kuusi
-  kuplaa + matkakirja 396 merkkiä, jossa Markuksen torin pulut ruokitaan
-  kello kahdelta) — odottaa omistajan sanaa; tekstit tämän tiedoston
-  liitteen lopussa.
-- Kun perkaus on valmis: toimita omistajalle MD (matkakirja + pulu)
-  dumppaustyökalulla; omistaja liittää loput Euroopan tekstit perään.
+- **TEKSTIEN PERKAUS — ALOITA HETI RESETIN JÄLKEEN ILMAN ERI KOMENTOA**
+  (omistaja 8.9. klo 21.00: *"kun tehdään reset niin osaat sitten heti
+  lähteä kirjoittamaan kaikki loput uusiksi euroopassa ilman eri komentoa
+  … ja toimitat sitten lopuksi koosteen teksteistä md tiedostona"*).
+  Koko toimeksianto vaatimuksineen on osiossa 4 alla. Ennen tekstityötä
+  poimi ja julkaise vain osion 1 agenttityö (v1702); tekstit julkaistaan
+  omana versiona koosteen toimituksen yhteydessä.
 - **Pulun äänet generoimatta** (omistaja: ei ennen lupaa): muuttuneet
   kuplat hiljaisia (LIVIAN_AANITETYT-tiiviste). Lupa tullessa: workflow
   generoi-pulu.yml (ääni yjJ45q8TVCrtMhEKurxY), tekstit ilman numeroita.
@@ -136,3 +125,102 @@ Pulun kuplat (kuusi, poikkeus yhden kuplan sääntöön):
 4. …hetkinen. Fogg. Sinä olet siinä. Tämä on Venetsia. Minä olen töissä.
 5. Selvennys: Markuksen torilla on tuhansia puluja, eikä niitä saa enää ruokkia.
 6. Yksi niistä on aivan tavallinen. Aivan tavallinen. Mennään.
+
+## 4. Toimeksianto: Euroopan matkakirja- ja pulutekstit uusiksi (omistajan vaatimukset 8.9.2026)
+
+Tee tämä heti resetin jälkeen ilman eri komentoa. Omistaja on käynyt
+seitsemän kaupunkia läpi kanssani yksi kerrallaan ja hyväksynyt ne;
+loput kirjoitetaan nyt yhtenä eränä samoilla säännöillä, ja omistaja
+katsoo ne koosteesta. Kysymyksiä ei tarvitse esittää kaupunki
+kerrallaan.
+
+### Mitä kirjoitetaan
+
+Kaikki 45 Euroopan kaupunkia (js/packs/europe.js; pakit
+js/packs/fokusvirta-<id>.js). VALMIIT, ÄLÄ KOSKE: sofia, bukarest,
+budapest, wien, praha, krakova, varsova (omistaja hyväksyi 8.9.),
+vilna (kupla omistajan valinta; teksti 401 → lyhennä yhdellä merkillä),
+ateena (uusi kulku v1701). Venetsia: romanssi (osio 3:n loppu) odottaa
+omistajan sanaa — jos sanaa ei ole tullut, vie ehdotus sellaisenaan
+peliin ja merkitse koosteeseen "ehdotus". Kaikki muut 35 kaupunkia
+kirjoitetaan uusiksi: matkakirjan teksti JA pulun kupla. Kaupungit,
+joilla ei ole pulun kuplaa lainkaan (lontoo, istanbul-kommentti on,
+dublin, edinburgh, pariisi, marseille, lissabon, madrid, barcelona,
+granada, sevilla, amsterdam, berliini, venetsia, firenze, rooma,
+dubrovnik, tukholma, oslo, bergen, kobenhavn), SAAVAT yhden kuplan —
+omistajan periaate "yksi kupla per kaupunki" (Raamattu PULULLA YKSI
+KUPLA PER KAUPUNKI); jos omistaja ei halua niitä, hän karsii
+koosteesta. Nykytila: `node tools/dumppaa-eurooppa.mjs` (kaikki) tai
+`node tools/dumppaa-eurooppa.mjs wien praha` (esimerkit hyväksytyistä).
+
+### Matkakirjan teksti (isoisän päiväkirja 1873)
+
+- **Yläraja 400 merkkiä** (omistaja 8.9.: *"mikä on yläraja
+  matkakirjan tekstille? … näytä aina myös matkakirjan pituus
+  merkkeinä"*). Hyväksytyt ovat 362–392 merkkiä; alle 300:n tekstit
+  (lontoo 246, pariisi 216, madrid 199, berliini 212, rooma 234,
+  dubrovnik 193, sarajevo 232, helsinki 215, tallinna 189, tukholma 212,
+  kobenhavn 173, istanbul 250) LAAJENNETAAN samaan mittaan.
+- Paikkarivi muodossa "Kaupunki, kuukaudessa 1873. Tunnelmalause."
+  (otsikko = ensimmäinen virke, tunnelmarivi kursiivilla = toinen; js/ui.js
+  matkakirjanOtsikko). Kuukausi reitin mukaan, säilytä nykyinen.
+- Isoisä kirjoittaa itselleen, EI oleta lukijaa (Bukarest-korjaus:
+  ei "sinä"-puhuttelua, ei selittelyä lukijalle).
+- Konkreettista, nähtyä ja kuultua: hinnat, ihmiset, sää, ruoka, äänet,
+  yksi historiallinen havainto jonka voi tarkistaa (1873-tilanne, ei
+  anakronismeja). Ei "liian vaikeita tai hienoja lauseita" (omistaja);
+  epäselvä kielikuva jätetään pois (Wien: *"yksi kuppi, sanomalehti ja
+  koko ilta"* oli omistajasta epäselvä → pois).
+- Lyhyitä päälauseita, kuiva huumori sallittu, ei paatosta. Ei
+  aarrevihjeitä eikä lehden kohteiden nimeämistä. Ei numeroita, joita
+  lukija ei tarvitse; vuosiluvut sanoina jos tarpeen.
+- Kaanon: docs/tarina.md, docs/isoisan-raamattu.md (isoisä jää
+  arvoitukseksi; vaalea pellavapuku, hattu, arkku; kirjekyyhky Livia
+  mukana). Älä riko muiden pakkien mainintoja.
+
+### Pulun (Livia) kupla — yksi per kaupunki
+
+- `pollo.kommentti: ['<kupla>']`, **≤95 merkkiä**, testi
+  tests/fokusvirta.test.mjs vartioi. Huudahdus (`pollo.huudahdus`)
+  säilyy vain 8 kaupungissa (sofia, bukarest, budapest, krakova,
+  pietari, tampere, tallinna, riika) — ei lisätä uusiin; omistaja:
+  välikommentti *"ei kannata olla kuin osassa kaupungeista"*; pietari,
+  tampere, tallinna, riika: pidä jos se tuo jotain, muuten poista kuten
+  Praha (silloin LIVIAN_KAUPUNKILAHTEET-rivi [VARATTU, VARATTU,
+  'kommentti'], generoi-pulu.mjs TAGIT ilman '-2', LIVIAN_AANITETYT-avain
+  '<id>-2' pois, tests/fokusvirta.test.mjs huudahdusten määrä).
+- Sapluuna (omistaja valitsi Vilnan: *"tämä tiivis kahden asian juttu
+  oli paras: Vanhakaupunki on nyt maailmanperintöä. Ja se metsä joka
+  suuntaan pitää yhä paikkansa."*): KAKSI virkettä, kaksi asiaa —
+  mikä kaupungissa on NYT TOISIN kuin isoisän aikana ja mikä on YHÄ
+  ENNALLAAN; avaa kaupungin nykytilaa. Yksinkertainen kieli, ei
+  numeroita eikä vuosilukuja (ääni lukee ne väärin), ei vihjeitä
+  lehden kohteisiin, ei "kääk"-täytettä, ei alustusta (alustus vain
+  Ateenassa). Livian ääni: kuiva, kiireinen, rehellinen, ylpeä
+  kirjekyyhkysuvustaan, isoisälle uskollinen.
+- Muuttunut kupla on hiljainen kunnes ääni generoidaan
+  (js/liviapuhe.js LIVIAN_AANITETYT-tiiviste) — ÄLÄ generoi ilman
+  omistajan lupaa. Uuden kuplan kaupungille lisää LIVIAN_KAUPUNKILAHTEET-
+  rivi ja TAGIT-rivi mallin mukaan (katso Wien/Praha), ja päivitä
+  tests/livia-aani.test.mjs ja tests/pollo.test.mjs jos ne laskevat
+  rivejä.
+
+### Merkinnät koodiin ja työtapa
+
+- Jokaiseen muutettuun pakkiin tekstin eteen `/* KAANON UUSIKSI (Fable,
+  omistaja katsoo koosteesta 9.9.2026). N merkkiä (yläraja 400). */` ja
+  luenta-kentän kohdalle `/* ÄÄNITE VANHENTUNUT (pvm): generoitava
+  uudelleen tästä. */` (malli: js/packs/fokusvirta-wien.js).
+- Kirjoita tekstit itse (Fable = tarina); tekninen liitos (liviapuhe,
+  TAGIT, testit) voi mennä Opus-agentille yhtenä eränä. Testit:
+  `NODE_USE_ENV_PROXY=1 node --test tests/fokusvirta.test.mjs
+  tests/livia-aani.test.mjs tests/pollo.test.mjs` ja lopuksi kaikki.
+- Commitit wip-tyyliin haaraan, julkaisu julkaisukaavalla omana
+  versiona ("Euroopan matkakirjat ja pulun kuplat uusiksi").
+- **Kooste omistajalle:** `node tools/dumppaa-eurooppa.mjs >
+  <scratchpad>/eurooppa-matkakirja-ja-pulu-v4.md` — jokaisesta
+  kaupungista paikkarivi, teksti pituuksineen, pulun kupla (ja
+  huudahdus jos on); Venetsia merkitty ehdotukseksi. Toimita
+  SendUserFile-työkalulla md-tiedostona (ei saapumistekstejä eikä
+  nostoja — omistaja: *"voit jättää Saapumisteksti ja Nosto pois"*).
+  Omistaja liittää loput itse ja antaa korjaukset koosteesta.
