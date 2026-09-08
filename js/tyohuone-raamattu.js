@@ -4222,7 +4222,7 @@ export const RAAMATTU = {
           + 'KAYTOSSA tms tai miten vain parhaiten saadaan pelista pois etta ei '
           + 'vahingossa palaa"): Kreeta, Sisilia, Islanti, Alpit, Rovaniemi (lappi) '
           + 'ja Tromssa saavat omat fokusvirtapakit (Fablen matkakirjatekstit, '
-          + 'tunnelmarivi, pulun yksi kupla). Vanha EUROPE_SAAPUMISET-taulu '
+          + 'tunnelmarivi, pulun yksi kupla). Vanha europe-saapumiset-taulu '
           + 'poistetaan pelin koodista ja siirretaan arkistoon EI ENAA KAYTOSSA '
           + '-otsikolla; vartiotesti estaa sen paluun. Afrikan ja Aasian '
           + 'saapumistaulut jaavat, kunnes niillakin on pakit.',
