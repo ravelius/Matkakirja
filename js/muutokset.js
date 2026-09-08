@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1695, teksti: 'Kohdekaupunki ja sen nimi suuremmiksi pallon lähikuvassa' },
   { v: 1694, teksti: 'Kuplapino auki kahdeksaan riviin, kartan liike supistaa' },
   { v: 1693, teksti: 'Keksintölinssin havainnekuva palaa kartan liikkeen loputtua' },
   { v: 1692, teksti: 'Linssien hampurilaisvalikko korvaa sulje- ja alusta-napit' },
