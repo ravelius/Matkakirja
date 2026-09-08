@@ -4216,6 +4216,16 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'TAUSTAMUSIIKKI HILJEMMALLE JA RATTAAN SAADIN OHJAA KAIKKEA MUSIIKKIA '
+          + '(omistaja 8.9.2026 klo 18.39, iPhone-kaappaus Vilnasta, sanatarkasti: '
+          + '"Taustamusiikki on aivan liian kovalla, eika rattaan saadin vaikuta '
+          + 'sen tasoon ollenkaan."): 1) Taustamusiikin perustaso koko pelissa '
+          + 'selvasti kertojan ja pulun alle (musiikki on taustaa, ei paaaania). '
+          + '2) Hammasrattaan musiikkisaadin ohjaa KAIKKEA pelin musiikkia '
+          + '(pohjaraita, kaupunkimusiikki, siirtymamusiikki, linssien musiikki) '
+          + 'yhden kertoimen kautta ja vaikuttaa heti soivaan raitaan. Sama '
+          + 'koskee pulun kuplia: kolme kuplaa samasta aiheesta on liikaa - '
+          + 'kommentit puhuvat eri asioista (Vilnan katedraali vain kerran).',
         'IHMISEN MATKA: ETELA-AFRIKKA VAIN KERRAN, SELKEAT LAUSEET, YKSI '
           + 'YHTENAINEN LUENTA, JA AVAUS MUSTASTA TAHTIIN JA AFRIKKAAN SANAN KOHDALLA '
           + '(omistaja 8.9.2026 klo 17.10, sanatarkasti: "ihmislinssissa kaydaan '

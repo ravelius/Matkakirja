@@ -219,7 +219,7 @@ export const FOKUSVIRTA_VILNA = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
       'Vanhakaupunki on nyt maailmanperintöä juuri niiden kirkkojen takia.',
-      'Ja se metsä joka suuntaan pitää yhä paikkansa. Katedraalin torniin pääsee kiipeämään.',
+      'Kujilla myydään yhä meripihkaa. Ja se metsä joka suuntaan pitää yhä paikkansa.',
       'Katedraalin alla on jotain, mistä isoisäsi ei tiennyt. Se on lehdessä.',
     ],
     /*
