@@ -415,8 +415,7 @@ export const FOKUSVIRTA_SOFIA = {
      * uudestaan. Kupla näkyy ja etenee kuten ennen.
      */
     kommentti: [
-      'Hurja juttu. Luin sen kahdesti.',
-      'Sen miehen nimi on nyt kadulla ja stadionilla. Patsas seisoo siinä, missä hirsipuu oli.',
+      'Sen miehen nimi on nyt kadulla ja stadionilla. Ja lähteistä haetaan yhä vettä.',
     ],
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,

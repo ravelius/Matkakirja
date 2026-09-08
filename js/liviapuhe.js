@@ -154,34 +154,57 @@ export const LIVIAN_VARATTU = '(varattu)';
  * 7.9.2026 kahdessa erässä. Muut kaupungit ovat hiljaisia kunnes niiden
  * tekstit on hyväksytty.
  *
+ * KUUSI KEVYTTÄ KOHDETTA JA ATEENA MUKAAN (omistaja 8.9.2026). Kreeta,
+ * Sisilia, Islanti, Alpit, Rovaniemi (tunnus `lappi`) ja Tromssa saivat
+ * omat fokusvirtapakkinsa, kun vanha saapumistaulu arkistoitiin pois
+ * pelistä, ja Ateena kirjoitettiin samaan kulkuun kuin muut. Kullakin on
+ * yksi kupla: kaksi ensimmäistä numeroa ovat varattuja, joten kupla on
+ * numero 3 kuten muissakin kaupungeissa, joilla ei ole välihuutoa.
+ *
  * ENSIMMÄINEN PAIKKA ON VARATTU (8.9.2026). Siinä oli alustuskupla,
- * joka poistettiin joka kaupungista (LIVIAN_VARATTU) — Ateena on ainoa
- * kaupunki, jossa pulu puhuu ennen isoisän luentaa, ja se puhuu omalla
- * vanhalla kentällään `maadoitus`.
+ * joka poistettiin joka kaupungista (LIVIAN_VARATTU).
  */
 export const LIVIAN_KAUPUNKILAHTEET = {
-  ateena: ['maadoitus'],
+  /*
+   * ATEENAN VANHA `maadoitus` ON POISTUNUT (omistaja 8.9.2026 klo
+   * 19.10): pakkauksessa on nyt `kommentti` kuten muissa kaupungeissa.
+   * Vanha ateena-1 oli maadoituksen äänite, ja se jää ämpäriin orvoksi
+   * — numerot ovat siksi varattuja aivan kuten poistetuilla
+   * alustuksilla, eikä uusi kupla peri vanhaa tiedostoa.
+   */
+  ateena: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   sofia: [
-    LIVIAN_VARATTU, 'huudahdus', ['kommentti', 2], ['johdanto', 2], ['vinkki', 2],
+    LIVIAN_VARATTU, 'huudahdus', 'kommentti', LIVIAN_VARATTU, ['johdanto', 2], ['vinkki', 2],
     'linkkiSaate', ['oikein', 2], 'odotus', ['paluu', 2],
   ],
-  istanbul: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 3]],
-  bukarest: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
-  sarajevo: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
-  budapest: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
-  wien: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
-  praha: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 3]],
-  krakova: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
-  varsova: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
-  pietari: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
-  moskova: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 5]],
-  kiova: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
-  odessa: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
-  helsinki: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
-  tampere: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 3]],
-  tallinna: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
-  riika: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
-  vilna: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 3]],
+  istanbul: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  bukarest: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
+  sarajevo: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  budapest: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
+  wien: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  praha: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
+  krakova: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
+  varsova: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  pietari: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
+  moskova: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  kiova: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  odessa: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  helsinki: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  tampere: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
+  tallinna: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
+  riika: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
+  vilna: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  /*
+   * KEVYET PAKIT (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT): yksi
+   * kupla, ei välihuutoa — sama numerointi kuin muilla uuden kulun
+   * kaupungeilla, jotta tiedostonimi on ennustettava.
+   */
+  kreeta: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  sisilia: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  islanti: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  alpit: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  lappi: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  tromssa: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
 };
 
 /**
@@ -469,14 +492,15 @@ export const LIVIAN_AANITETYT = {
   'lehtivinkki-1': '676644e9',
   'mannerivihje-1': '9b1a96f3',
   // Euroopan 18 kaupunkia generoitu 7.9.2026 (erät 1 ja 2), "Kääk."-huudahdukset
-  // (sofia-2, wien-2) uusinta-ajossa. Ateenan maadoitus on generoitu
-  // 6.9.2026 eikä sen teksti ole muuttunut.
+  // (sofia-2, wien-2) uusinta-ajossa.
   // NUMERO 1 PUUTTUU JOKA KAUPUNGILTA (8.9.2026): siinä oli alustus,
   // joka poistettiin — numero on varattu eikä sillä ole enää kuplaa.
-  'ateena-1': '3f39d123',
+  // ATEENA-1 ON POISTETTU (omistaja 8.9.2026 klo 19.10): se oli
+  // maadoituksen äänite, ja maadoitus korvattiin kommenttikuplalla.
+  // Ämpärin tiedosto jää orvoksi kuten alustuksetkin; uusi kupla
+  // (ateena-3) odottaa generointia eikä siksi ole tässä taulussa.
   // Teksti muuttui 8.9.2026 (toinen "Kääk." pois) — äänite odottaa ajoa.
   'sofia-3': '82771368',
-  'sofia-4': '179d0591',
   'sofia-5': '1e64f9d0',
   'sofia-6': '2618c9dd',
   'sofia-7': '9118b3f7',
@@ -488,50 +512,30 @@ export const LIVIAN_AANITETYT = {
   'sofia-13': 'bc7f04ef',
   'sofia-14': 'ced3fd34',
   'istanbul-3': '97b8ba5a',
-  'istanbul-4': 'ae40ccd7',
-  'istanbul-5': '180c037b',
   'bukarest-2': '1a1c72e4',
   'bukarest-3': 'aee2c92a',
-  'bukarest-4': '2a4c0a1a',
   'sarajevo-3': '4ec98aa1',
-  'sarajevo-4': '4133a86b',
   'budapest-2': '93b5b31b',
   'budapest-3': '979edb25',
-  'budapest-4': 'e80ad81d',
   'wien-3': 'd2399e33',
-  'wien-4': 'f4a7f68b',
   'praha-2': 'eb978aac',
   'praha-3': '614f7f30',
-  'praha-4': '6517ff2c',
   'krakova-2': '858824f0',
   'krakova-3': 'ce7224cd',
-  'krakova-4': '8f1350d9',
   'varsova-3': '5c732ab7',
-  'varsova-4': '250213c7',
   'pietari-2': 'a3cd7368',
   'pietari-3': '5845dc3f',
-  'pietari-4': '00b07b33',
   'moskova-3': '246d4a35',
-  'moskova-4': '05552091',
   'kiova-3': '46b284b5',
-  'kiova-4': 'b1417379',
   'odessa-3': '2678dada',
-  'odessa-4': 'e1ab4cec',
   'helsinki-3': '517dea08',
-  'helsinki-4': 'e19cf727',
   'tampere-2': 'fca8a7fe',
   'tampere-3': 'a9036aa1',
-  'tampere-4': 'cf9e3cbc',
   'tallinna-2': '081ec104',
   'tallinna-3': 'ed338f86',
-  'tallinna-4': 'c1ec3087',
   'riika-2': '3eae9de7',
   'riika-3': 'aa3997d2',
-  'riika-4': '8f8ca699',
-  'riika-5': '0bab2ae3',
   'vilna-3': 'b5b7ea25',
-  'vilna-4': '1bfc8e0c',
-  'vilna-5': 'ba380765',
   // Ihmisen matkan neljä välihuomiota generoitu 7.9.2026 illalla
   // (generoi-pulu, ääni Dr. Von, pakota; omistaja: "laita ihmislinssin
   // puheet generoitumaan"). Tiivisteet ajon manifestista.

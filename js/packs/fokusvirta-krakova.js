@@ -276,10 +276,7 @@ export const FOKUSVIRTA_KRAKOVA = {
       teksti: 'Neljäs on minulla.',
     },
     kommentti: [
-      'Se torvi soi yhä joka tunti neljään ilmansuuntaan, ja sävelmä katkeaa samalla tavalla.',
-      'Syyn saat selvittää itse. Tarinoita on yhä useampi kuin yksi.',
-      'Kangashalli on yhä täynnä kauppiaita. Nyt ne myyvät meripihkaa ja puuleluja.',
-      'Ja torilla on kyyhkysiä enemmän kuin missään. Sukulaisia.',
+      'Torvi soi yhä joka tunti, ja sävelmä katkeaa samalla tavalla. Syyn saat selvittää itse.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

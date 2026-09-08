@@ -54,6 +54,7 @@
  */
 import { musaPolku } from './media.js';
 import { kaupunginRaidat } from './kaupunkimusiikki.js';
+import { kehittajanKerroin, kuunteleKehittajanKerrointa } from './kehittajan-voimat.js';
 
 /** Pohjavire: viimeinen taso, joka soi kun mikään muu ei sovi. */
 export const POHJARAITA = 'musa-pohja';
@@ -214,6 +215,82 @@ export function asetaMusiikkiPaalla(paalla) {
   }
   for (const fn of musiikkiKuuntelijat) fn();
   return uusi;
+}
+
+/* ── musiikin taso: yksi perustaso, yksi kerroin ─────────────────── */
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * TAUSTAMUSIIKKI HILJEMMALLE JA YKSI KERROIN KAIKELLE MUSIIKILLE
+ * (omistajan vika 8.9.2026 klo 18.39, iPhone, Vilnan kaupunkikartta,
+ * maailma-pakki, kehittäjätila päällä, sanatarkasti: *"Taustamusiikki
+ * on aivan liian kovalla, eikä rattaan säädin vaikuta sen tasoon
+ * ollenkaan."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MIKSI MUSIIKKI OLI LIIAN KOVALLA. Pohjaraidan taso (ennen
+ * js/ambience-stream.js POHJA_VOIMA 0,019) laskettiin aikanaan
+ * ElevenLabsin raidasta `musa-pohja.mp3`, jonka mitattu taso on
+ * RMS −31,3 dBFS. Kun paletti vaihdettiin Lyriaan (js/media.js
+ * MUSIIKIN_PAATE '-lyria', v1628), TIEDOSTOT VAIHTUIVAT MUTTA
+ * KERTOIMET EIVÄT: jokainen `musa-*-lyria.mp3` on masteroitu tasolle
+ * RMS −14,5 dBFS eli 16,8 dB kovemmaksi (mitattu:
+ * `node tools/mittaa-musiikin-tasot.mjs`). Sama raita samalla
+ * kertoimella siis soi yhtäkkiä 16,8 dB kovempaa kuin se taso, jonka
+ * omistaja oli 5.9. kuullut ja hyväksynyt. Siirtymä- ja linssiraidat
+ * eivät kärsineet: ne on masteroitu dokumentoituun tavoitteeseen
+ * (−33 dBFS, docs/moduulit/aanet.md), joten vika koskee juuri
+ * musiikkipalettia.
+ *
+ * PERUSTASO ON SIKSI YKSI VAKIO JA SE ON TÄSSÄ. Aiemmin sama luku oli
+ * kirjoitettu auki kolmeen paikkaan (pohjavire, visamusiikki,
+ * aarreaihe), ja juuri siksi paletin vaihto ehti muuttaa kaikkien
+ * kuuluvan tason kenenkään huomaamatta. Nyt jokainen musiikkireitti
+ * lausuu tasonsa TÄMÄN kertoimena, joten palettia vaihdettaessa
+ * korjataan yksi luku.
+ *
+ * LUKU. 0,034 on se taso, jonka omistaja itse hyväksyi 5.9. kuultuaan
+ * Lyria-raidat (POHJA_VOIMA 0,019 × VOLUME_POLUN_KORVAUS 1,8), MIINUS
+ * se kaksinkertaistus, jonka Fable käski 8.9. purkaa. Kaksi asiaa
+ * korjautuu yhdellä luvulla: hyväksytty taso on nyt kirjoitettu
+ * perustasoon eikä säätimen oletukseen, ja kuuluva taso laskee 6 dB.
+ *
+ * MITATTU (musa-kaupunki-ita-eurooppa-lyria.mp3, Vilna, Chromium):
+ * 0,034 × −14,5 dBFS ≈ −43,9 dBFS. Kertoja soi samassa hetkessä
+ * lukemalla −18,0 dBFS (puhe-fokus-matkakirja-vilna.mp3 −17,1 dBFS ×
+ * puheVoima 0,9), joten musiikki on noin 26 dB kertojan alla — ja pulu
+ * on kertojan tasolla kertoimella 0,8, joten senkin alle jäädään
+ * selvästi. LOPULLINEN LUKEMA ON KUULOKOKEEN NUPPI kuten kaikki muutkin
+ * äänitasot; rattaan säädin liikuttaa sitä askelittain (0,25–3,0) ilman
+ * koodimuutosta.
+ */
+export const MUSIIKIN_PERUSTASO = 0.034;
+
+/**
+ * KAIKEN MUSIIKIN KERROIN — pohjaraita, kaupunki- ja aluekappaleet,
+ * tila- ja paikkaraidat, siirtymä- ja linssiraidat, visamusiikki ja
+ * aarreaihe. Tähän tulee aikanaan myös pelaajan oma säädin; siihen
+ * asti se on kehittäjän hammasratasvalikon 'musiikki'-säädin
+ * (js/kehittajan-voimat.js), jonka oletus on 1,0 eli pelin oma taso.
+ *
+ * YKSI FUNKTIO, EI RINNAKKAISIA KERTOIMIA. Ennen tätä osa reiteistä
+ * luki kertoimen suoraan ja osa ei lukenut sitä lainkaan
+ * (visamusiikki, aarreaihe, kehittäjän varakuvio) — säädin näytti
+ * silloin toimivan sattumanvaraisesti sen mukaan, mikä raita sattui
+ * soimaan. Vartiotesti tests/musiikin-kerroin.test.mjs pitää huolen,
+ * ettei uusi soitin ohita tätä.
+ */
+export function musiikinKerroin() {
+  return kehittajanKerroin('musiikki');
+}
+
+/**
+ * Ilmoita minulle heti, kun musiikin kerroin muuttuu. Soittimen on
+ * ajettava SOIVAN raidan taso uudestaan — säädön pitää kuulua ilman
+ * että raita vaihtuu tai peli etenee.
+ */
+export function kuunteleMusiikinKerrointa(fn) {
+  return kuunteleKehittajanKerrointa('musiikki', fn);
 }
 
 /* ── ketju ───────────────────────────────────────────────────────── */

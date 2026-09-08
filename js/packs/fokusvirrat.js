@@ -15,6 +15,7 @@
  * uusi kaupunki oli yksi tuonti ja yksi rivi tähän tauluun. Sofia on
  * Ateenasta yksi askel jalan pelin maantieteessä.
  */
+import { FOKUSVIRTA_ALPIT } from './fokusvirta-alpit.js';
 import { FOKUSVIRTA_ATEENA } from './fokusvirta-ateena.js';
 import { FOKUSVIRTA_BERLIINI } from './fokusvirta-berliini.js';
 import { FOKUSVIRTA_BUDAPEST } from './fokusvirta-budapest.js';
@@ -54,6 +55,35 @@ import { FOKUSVIRTA_MOSKOVA } from './fokusvirta-moskova.js';
 import { FOKUSVIRTA_ODESSA } from './fokusvirta-odessa.js';
 import { FOKUSVIRTA_PIETARI } from './fokusvirta-pietari.js';
 import { FOKUSVIRTA_VARSOVA } from './fokusvirta-varsova.js';
+import { FOKUSVIRTA_ISLANTI } from './fokusvirta-islanti.js';
+import { FOKUSVIRTA_KREETA } from './fokusvirta-kreeta.js';
+import { FOKUSVIRTA_LAPPI } from './fokusvirta-lappi.js';
+import { FOKUSVIRTA_SISILIA } from './fokusvirta-sisilia.js';
+import { FOKUSVIRTA_TROMSSA } from './fokusvirta-tromssa.js';
+
+/**
+ * KEVYET PAKIT — vain matkakirja ja pulun kupla (omistaja 8.9.2026).
+ *
+ * Nämä kuusi kohdetta olivat Euroopan viimeiset, joiden merkintä
+ * luettiin vanhasta saapumistaulusta (js/packs/europe-saapumiset.js,
+ * arkistoitu docs/arkisto/europe-saapumiset-2026-09-08.js.txt).
+ * Omistajan linjaus 8.9.2026 (Raamattu: KOKO EUROOPPA KULKEE
+ * FOKUSVIRTAPAKKIEN KAUTTA) siirsi ne fokusvirtapakkeihin, mutta VAIN
+ * siltä osin kuin peli lukee: kortit ovat pois käytöstä
+ * (js/fokusvirta.js FOKUSVIRTA_KORTIT === false), joten täkyjä,
+ * oppituntia, kohtaamista ja lehtitehtäviä ei ole kirjoitettu.
+ *
+ * MIKSI JOUKKO ON NIMETTY EIKÄ PÄÄTELTY. Testit vaativat täydeltä
+ * pakilta neljä kuvaa, aarrevaiheen ja kolme täkyä
+ * (tests/fokusvirta.test.mjs). Jos kevyt pakki tunnistettaisiin siitä,
+ * että kentät puuttuvat, sama sääntö vaientaisi vartion myös silloin
+ * kun kentät katoavat TÄYDESTÄ pakista vahingossa. Nimetty joukko
+ * pitää poikkeuksen luettelona: uusi kevyt pakki on yksi rivi tässä,
+ * ja täyden pakin rapautuminen kaataa testin kuten ennenkin.
+ */
+export const KEVYET_FOKUSVIRRAT = new Set([
+  'alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa',
+]);
 
 export const FOKUSVIRRAT = {
   ateena: FOKUSVIRTA_ATEENA,
@@ -200,6 +230,26 @@ export const FOKUSVIRRAT = {
   odessa: FOKUSVIRTA_ODESSA,
   pietari: FOKUSVIRTA_PIETARI,
   varsova: FOKUSVIRTA_VARSOVA,
+  /*
+   * KEVYT ERÄ (omistaja 8.9.2026, Raamattu: KOKO EUROOPPA KULKEE
+   * FOKUSVIRTAPAKKIEN KAUTTA): Euroopan laudan kuusi viimeistä kohdetta
+   * — Kreeta, Sisilia, Islanti, Alpit, Rovaniemi (tunnus `lappi`) ja
+   * Tromssa. Näiden merkintä luettiin siihen asti vanhasta
+   * saapumistaulusta, joka on nyt arkistoitu pois pelistä
+   * (docs/arkisto/europe-saapumiset-2026-09-08.js.txt). Tämän erän
+   * jälkeen JOKAISELLA Euroopan laudan kaupungilla on fokusvirtapakki —
+   * vartiona tests/fokusvirta.test.mjs.
+   *
+   * PAKIT OVAT KEVYITÄ (KEVYET_FOKUSVIRRAT yllä): matkakirja ja pulun
+   * kupla, ei täkyjä eikä kortteja. Rekisteri ei huomaa siitä mitään —
+   * ero on paketin sisällössä, ei täällä.
+   */
+  kreeta: FOKUSVIRTA_KREETA,
+  sisilia: FOKUSVIRTA_SISILIA,
+  islanti: FOKUSVIRTA_ISLANTI,
+  alpit: FOKUSVIRTA_ALPIT,
+  lappi: FOKUSVIRTA_LAPPI,
+  tromssa: FOKUSVIRTA_TROMSSA,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */

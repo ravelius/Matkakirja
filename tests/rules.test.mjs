@@ -4329,11 +4329,26 @@ test('yhdistetyt laudat ovat kaikissa sisältötauluissa', () => {
     assert.ok(osuma, `${nimi} ei löydy`);
     return new Set([...osuma[1].matchAll(/^\s{2}([a-z]+):/gm)].map((m) => m[1]));
   };
-  const perus = laudat('SAAPUMISTEKSTIT');
-  for (const nimi of ['KULTTUURIT', 'VALOKUVAT', 'MAATIEDOT']) {
+  const perus = laudat('KULTTUURIT');
+  for (const nimi of ['VALOKUVAT', 'MAATIEDOT']) {
     assert.deepEqual([...laudat(nimi)].sort(), [...perus].sort(),
-      `${nimi} ja SAAPUMISTEKSTIT eivät kata samoja lautoja`);
+      `${nimi} ja KULTTUURIT eivät kata samoja lautoja`);
   }
+  /*
+   * SAAPUMISTEKSTIT ON SAMA JOUKKO MIINUS EUROOPPA (8.9.2026).
+   *
+   * Omistajan linjaus (Raamattu: KOKO EUROOPPA KULKEE
+   * FOKUSVIRTAPAKKIEN KAUTTA) arkistoi Euroopan saapumistaulun pois
+   * pelistä, joten `europe`-rivi POISTETTIIN tästä yhdestä taulusta
+   * tarkoituksella — muissa se on yhä. Poikkeus on kirjattu tähän
+   * nimeltä, jottei se peitä alkuperäistä ansaa: uusi yhdistetty lauta
+   * on yhä lisättävä jokaiseen tauluun, ja tämä testi kaatuu jos se
+   * unohtuu.
+   */
+  const saapumiset = laudat('SAAPUMISTEKSTIT');
+  assert.deepEqual([...saapumiset].sort(), [...perus].filter((l) => l !== 'europe').sort(),
+    'SAAPUMISTEKSTIT kattaa muut laudat paitsi arkistoidun Euroopan');
+  assert.ok(saapumiset.has('maailmankartta'), 'maailmankartta puuttuu sisältötauluista');
   assert.ok(perus.has('maailmankartta'), 'maailmankartta puuttuu sisältötauluista');
 });
 

@@ -192,9 +192,7 @@ export const FOKUSVIRTA_PRAHA = {
       teksti: 'Samat sanat.',
     },
     kommentti: [
-      'Kello, joka näyttää auringon ja kuun mutta ei kiirettä. Sellaisen minä hyväksyn.',
-      'Se käy yhä torin laidalla. Joka tasatunti sen edessä seisoo väkijoukko puhelimet pystyssä.',
-      'Ja keisarin sali on linnassa vieläkin. Ihmeet ovat hajallaan, mutta sali on täynnä turisteja.',
+      'Kello käy yhä torin laidalla. Joka tasatunti sen edessä seisoo väkijoukko puhelimet pystyssä.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Kaarlensilta ja linna).

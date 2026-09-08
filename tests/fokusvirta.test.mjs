@@ -41,8 +41,7 @@ import { SAHKE_VASTAUKSET } from '../tools/pollo/rajat.js';
  * se, joka ratkaisee kannattaako arvata.
  */
 import '../js/fokuskohteet.js';
-import { EUROPE_SAAPUMISET } from '../js/packs/europe-saapumiset.js';
-import { FOKUSVIRRAT, fokusvirtaKaupungille } from '../js/packs/fokusvirrat.js';
+import { FOKUSVIRRAT, KEVYET_FOKUSVIRRAT, fokusvirtaKaupungille } from '../js/packs/fokusvirrat.js';
 // Livian kentät voivat olla kuplien taulukoita (7.9.2026): sama
 // normalisointi kuin pelissä ja generointityökalussa.
 import { livianKuplat } from '../js/liviapuhe.js';
@@ -197,9 +196,22 @@ test('Ateenan fokusvirta on rakenteeltaan ehjä', () => {
   assert.ok(VIRRATON, 'laudalta pitää löytyä ainakin yksi kaupunki ilman virtaa');
   assert.equal(fokusvirtaKaupungille(VIRRATON), null, 'muut kaupungit jäävät ennalleen');
 
-  for (const kohta of ['matkakirja', 'pollo', 'oppitunti']) {
+  for (const kohta of ['matkakirja', 'oppitunti']) {
     assert.ok(ATEENA[kohta]?.teksti?.length > 80, `${kohta}: teksti puuttuu tai on liian lyhyt`);
   }
+  /*
+   * PULUN KENTTÄ VAIHTUI (omistaja 8.9.2026 klo 19.10): Ateenan
+   * `pollo.maadoitus` ja `pollo.teksti` korvattiin yhdellä
+   * kommenttikuplalla, joka tulee luennan jälkeen kuten muissa
+   * kaupungeissa. Kupla on lyhyempi kuin vanha korttiteksti — mitta on
+   * siksi kuplan mitta (js/liviapuhe.js, alle 95 merkkiä), ja
+   * puheenvuoron olemassaolo vartioidaan samalla silmukalla kuin
+   * muissa kaupungeissa ("jokaisella fokuskaupungilla on Livian
+   * puheenvuoro isoisän merkintään").
+   */
+  assert.equal(ATEENA.pollo.maadoitus, undefined, 'pollo: maadoitus on korvattu kommentilla');
+  assert.equal(ATEENA.pollo.teksti, undefined, 'pollo: vaiheen huomio on korvattu kommentilla');
+  assert.equal(livianKuplat(ATEENA.pollo.kommentti).length, 1, 'pollo: yksi kupla');
   // Henkilö vaihtui 5.9.2026: vartija Nikos → konservaattori Dafni.
   assert.ok(ATEENA.kohtaaminen.nappi.includes('Dafni'), 'kohtaamisnappi nimeää henkilön');
 
@@ -388,7 +400,17 @@ test('jokaisella fokusvirran kuvalla on selite ja lähde', () => {
       ...(virta.takynostot ?? []).flatMap((t) => [t.kuva, t.valokuva]),
       ...(virta.kohteet ?? []).map((k) => k.kuva),
     ].filter(Boolean);
-    assert.ok(kuvat.length >= 4, `${kaupunki}: kuvia on liian vähän`);
+    /*
+     * KEVYELLÄ PAKILLA ON YKSI KUVA, TÄYDELLÄ NELJÄ (8.9.2026).
+     *
+     * Kevyt pakki (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT) kantaa
+     * vain matkakirjan ja pulun kuplan, koska kortit ovat pois käytöstä
+     * — sen ainoa kuva on lehden herokuva `pollo.kuva`. Vaatimus
+     * kuitenkin pätee jokaiseen kuvaan, joka pakissa on: selite ja
+     * lähde tarkistetaan alla samalla silmukalla.
+     */
+    const vahintaan = KEVYET_FOKUSVIRRAT.has(kaupunki) ? 1 : 4;
+    assert.ok(kuvat.length >= vahintaan, `${kaupunki}: kuvia on liian vähän`);
     for (const kuva of kuvat) {
       assert.ok(kuva.tiedosto || kuva.ampari || kuva.osoite,
         `${kaupunki}: kuvalla ei ole tiedostoa, ämpäripolkua eikä osoitetta`);
@@ -513,6 +535,15 @@ const SAHKE_JA_KOHTAAMINEN = new Set(['sofia']);
 
 test('aarrevaiheelle on sisältö, ja kaksoiskirjoitus on tietoinen', () => {
   for (const [cityId, virta] of Object.entries(FOKUSVIRRAT)) {
+    /*
+     * KEVYT PAKKI EI KANNA AARREVAIHETTA (8.9.2026). Kortit ovat pois
+     * käytöstä (js/fokusvirta.js FOKUSVIRTA_KORTIT === false), ja kevyen
+     * kulun aarrevaihe alkaa lehden kysymyksestä (fokusAarreAvattu) eikä
+     * paketin kohtaamisesta — kirjoitettu kohtaaminen olisi näissä
+     * kuudessa kohteessa dataa, jota mikään ei piirrä. Täydeltä pakilta
+     * vaaditaan yhä sisältö kummallakin tavalla.
+     */
+    if (KEVYET_FOKUSVIRRAT.has(cityId)) continue;
     assert.ok(
       virta.kohtaaminen || virta.sahketehtava,
       `${cityId}: aarrevaiheelle ei ole sisältöä kummallakaan tavalla`,
@@ -733,12 +764,15 @@ test('fokusvirtakaupungin matkakirjateksti ei vaihdu laatan ratkettua', () => {
     assert.deepEqual(jalkeen, ennen,
       `${cityId}: matkakirjakortti vaihtui laatan ratkettua`);
 
-    // Ja nimenomaan: vanha saapumisteksti ei saa kummitella kortissa.
-    const vanha = EUROPE_SAAPUMISET[cityId];
-    if (vanha) {
-      assert.notEqual(jalkeen.teksti, vanha.kuvaus,
-        `${cityId}: kortissa on vanha saapumismerkintä`);
-    }
+    /*
+     * VANHA SAAPUMISTEKSTI EI VOI ENÄÄ KUMMITELLA KORTISSA: Euroopan
+     * saapumistaulu on arkistoitu pois pelistä (omistaja 8.9.2026,
+     * docs/arkisto/europe-saapumiset-2026-09-08.js.txt), ja sitä
+     * vartioi nyt lähdekoodivartio alempana ("yksikään js/-moduuli ei
+     * tuo arkistoitua saapumistaulua"). Aiempi tekstivertailu tähän
+     * tauluun poistettiin samalla — se olisi vaatinut arkiston
+     * lukemista testistä.
+     */
   }
 });
 
@@ -1256,4 +1290,70 @@ test('matkakirjakortti näyttää otsikon ja tunnelman omina riveinään', async
   // Kursiivi, pienempi ja himmeämpi — ja otsikko ilman versaaleja.
   assert.match(css, /\.fact-card h2\.paikka-aika \{[^}]*text-transform: none;/);
   assert.match(css, /\.fact-place\.tunnelma \{[^}]*font-style: italic;/);
+});
+
+
+/* ---------- Euroopan kattavuus ja arkistoitu saapumistaulu ---------- */
+
+/*
+ * KOKO EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA (omistaja 8.9.2026,
+ * Raamattu; sanatarkasti: *"joo kirjoita niille omat ja arkistoi
+ * europe-saapumiset tiedosto ja kirjoita sen alkuun EI ENÄÄ KÄYTÖSSÄ
+ * tms tai miten vain parhaiten saadaan pelistä pois että ei vahingossa
+ * palaa"*).
+ *
+ * Vanha saapumistaulu oli Euroopan kuuden viimeisen kohteen ainoa
+ * merkintä, ja se on nyt arkistoitu pelin ulkopuolelle
+ * (docs/arkisto/europe-saapumiset-2026-09-08.js.txt). Jos yksikin
+ * Euroopan kaupunki jäisi ilman pakkia, sen matkakirjakortti olisi
+ * TYHJÄ — mikään ei kaadu, teksti vain katoaa. Siksi kattavuus
+ * luetaan laudalta eikä listasta.
+ */
+test('jokaisella Euroopan laudan kaupungilla on fokusvirtapakki', async () => {
+  const { EUROPE } = await import('../js/packs/europe.js');
+  const ilman = EUROPE.cities.filter((city) => !FOKUSVIRRAT[city.id]).map((city) => city.id);
+  assert.deepEqual(ilman, [], 'näiltä Euroopan kohteilta puuttuu fokusvirtapakki');
+  for (const city of EUROPE.cities) {
+    const virta = FOKUSVIRRAT[city.id];
+    assert.ok(virta.matkakirja?.teksti?.length > 80,
+      `${city.id}: matkakirjamerkintä puuttuu tai on liian lyhyt`);
+    assert.ok(livianKuplat(virta.pollo?.kommentti).length
+      || livianKuplat(virta.pollo?.maadoitus).length,
+    `${city.id}: pulun puheenvuoro puuttuu`);
+  }
+  // Ja pakki on samalla laudan kohteen oma: tunnus ei saa liukua.
+  for (const [cityId, virta] of Object.entries(FOKUSVIRRAT)) {
+    assert.equal(virta.kaupunki, cityId, `${cityId}: pakin kaupunkitunnus ei täsmää rekisteriin`);
+  }
+});
+
+/*
+ * ARKISTOITU TAULU EI SAA PALATA TAKAOVESTA. Tiedostonimi on
+ * arkistossa .js.txt tasan siksi, ettei sitä voi tuoda moduulina —
+ * mutta kopio js/packs/-kansioon olisi yhtä helppo tehdä kuin
+ * huomaamatta jättää. Tämä vartio lukee lähdekoodin: yksikään
+ * js/-moduuli ei tuo saapumistaulua, eikä sitä ole pakkien joukossa.
+ */
+test('yksikään js/-moduuli ei tuo arkistoitua saapumistaulua', async () => {
+  const { readdirSync, readFileSync, existsSync } = await import('node:fs');
+  const juuri = new URL('../js/', import.meta.url);
+  assert.ok(!existsSync(new URL('packs/europe-saapumiset.js', juuri)),
+    'js/packs/europe-saapumiset.js on palannut — taulu on arkistoitu 8.9.2026');
+  const tiedostot = [
+    ...readdirSync(juuri).filter((n) => n.endsWith('.js')).map((n) => n),
+    ...readdirSync(new URL('packs/', juuri)).filter((n) => n.endsWith('.js'))
+      .map((n) => `packs/${n}`),
+  ];
+  const tuovat = tiedostot.filter((nimi) => {
+    const koodi = readFileSync(new URL(nimi, juuri), 'utf8');
+    return /(from|import)\s*['"][^'"]*europe-saapumiset/.test(koodi)
+      || /\bEUROPE_SAAPUMISET\b/.test(koodi);
+  });
+  assert.deepEqual(tuovat, [], 'nämä moduulit tuovat yhä arkistoidun saapumistaulun');
+  // Arkistokappale on olemassa ja kantaa otsikkohuomautuksen.
+  const arkisto = new URL('../docs/arkisto/europe-saapumiset-2026-09-08.js.txt',
+    import.meta.url);
+  assert.ok(existsSync(arkisto), 'arkistokappale puuttuu');
+  assert.match(readFileSync(arkisto, 'utf8').slice(0, 400), /EI ENÄÄ KÄYTÖSSÄ/,
+    'arkistokappaleen alusta puuttuu "EI ENÄÄ KÄYTÖSSÄ" -huomautus');
 });

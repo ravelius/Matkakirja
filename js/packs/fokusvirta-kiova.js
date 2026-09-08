@@ -251,10 +251,7 @@ export const FOKUSVIRTA_KIOVA = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Ne käytävät ovat yhä olemassa, ja niissä kävellään yhä kynttilä kädessä.',
-      'Kultaiset kupolit näkyvät joelle kuten ennenkin.',
-      'Kaupungin alla on nyt toinenkin kerros: yksi maailman syvimmistä metroista.',
-      'Ja se musta maa ruokkii yhä ison osan maailmaa. Hunajaa myydään toreilla samalla tavalla.',
+      'Käytävissä kävellään yhä kynttilä kädessä. Ja se musta maa ruokkii yhä ison osan maailmaa.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/

@@ -52,14 +52,18 @@ import { writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { EUROPE_SAAPUMISET } from '../js/packs/europe-saapumiset.js';
 import { AFRICA_SAAPUMISET } from '../js/packs/africa-saapumiset.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 
 // Kaupunki etsitään laudoilta tässä järjestyksessä — tiedostonimeen
 // tulee laudan tunnus (puhe-<lauta>-saapuminen-<id>.mp3).
+//
+// EUROOPPA EI OLE ENÄÄ LISTALLA (omistaja 8.9.2026): vanha
+// saapumistaulu arkistoitiin pois pelistä (Raamattu: KOKO EUROOPPA
+// KULKEE FOKUSVIRTAPAKKIEN KAUTTA), ja Euroopan kaupungit luetaan nyt
+// fokusvirtapakeista — ne löytyvät tästä työkalusta ylempää
+// (FOKUSVIRRAT, tiedosto puhe-fokus-matkakirja-<id>.mp3).
 const LAUDAT = [
-  ['europe', EUROPE_SAAPUMISET],
   ['africa', AFRICA_SAAPUMISET],
 ];
 

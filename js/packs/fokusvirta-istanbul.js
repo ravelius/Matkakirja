@@ -314,9 +314,7 @@ export const FOKUSVIRTA_ISTANBUL = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Vartija sanoo tuon jokaiselle, joka pysähtyy pylvään kohdalle.',
       'Pylväs seisoo yhä samassa paikassa. Nyt sen ohi kulkee raitiovaunu ja miljoonia turisteja.',
-      'Kaupunki on kasvanut kahteen maanosaan. Salmen yli pääsee nyt myös junalla, meren alta.',
     ],
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):

@@ -34,7 +34,6 @@ const MODULES = [
   'js/packs/africa-countries.js',
   'js/packs/omat-tiivistelmat.js',
   'js/packs/europe-countries.js',
-  'js/packs/europe-saapumiset.js',
   'js/packs/asia-saapumiset.js',
   'js/packs/northamerica-saapumiset.js',
   'js/packs/southamerica-saapumiset.js',
@@ -148,6 +147,14 @@ const MODULES = [
   'js/packs/fokusvirta-odessa.js',
   'js/packs/fokusvirta-pietari.js',
   'js/packs/fokusvirta-varsova.js',
+  // Kevyt erä 8.9.2026: Euroopan kuusi viimeistä kohdetta omissa
+  // pakeissaan (vanha europe-saapumiset.js arkistoitiin pois pelistä).
+  'js/packs/fokusvirta-kreeta.js',
+  'js/packs/fokusvirta-sisilia.js',
+  'js/packs/fokusvirta-islanti.js',
+  'js/packs/fokusvirta-alpit.js',
+  'js/packs/fokusvirta-lappi.js',
+  'js/packs/fokusvirta-tromssa.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan

@@ -111,14 +111,20 @@ import {
   livianKaupunkiKentat, livianKentanKuplat, livianKenttaPinoutuu, livianTiiviste,
 } from '../js/liviapuhe.js';
 import { IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
+import { FOKUSVIRTA_ALPIT } from '../js/packs/fokusvirta-alpit.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
 import { FOKUSVIRTA_HELSINKI } from '../js/packs/fokusvirta-helsinki.js';
+import { FOKUSVIRTA_ISLANTI } from '../js/packs/fokusvirta-islanti.js';
 import { FOKUSVIRTA_KIOVA } from '../js/packs/fokusvirta-kiova.js';
+import { FOKUSVIRTA_KREETA } from '../js/packs/fokusvirta-kreeta.js';
+import { FOKUSVIRTA_LAPPI } from '../js/packs/fokusvirta-lappi.js';
 import { FOKUSVIRTA_MOSKOVA } from '../js/packs/fokusvirta-moskova.js';
 import { FOKUSVIRTA_ODESSA } from '../js/packs/fokusvirta-odessa.js';
+import { FOKUSVIRTA_SISILIA } from '../js/packs/fokusvirta-sisilia.js';
 import { FOKUSVIRTA_PIETARI } from '../js/packs/fokusvirta-pietari.js';
 import { FOKUSVIRTA_TALLINNA } from '../js/packs/fokusvirta-tallinna.js';
 import { FOKUSVIRTA_TAMPERE } from '../js/packs/fokusvirta-tampere.js';
+import { FOKUSVIRTA_TROMSSA } from '../js/packs/fokusvirta-tromssa.js';
 import { FOKUSVIRTA_BUDAPEST } from '../js/packs/fokusvirta-budapest.js';
 import { FOKUSVIRTA_BUKAREST } from '../js/packs/fokusvirta-bukarest.js';
 import { FOKUSVIRTA_ISTANBUL } from '../js/packs/fokusvirta-istanbul.js';
@@ -288,8 +294,7 @@ export function pinoutuvatRepliikit() {
  * kaatuu (ks. TAGIT EIVÄT SAA MUUTTAA KAANONIA).
  *
  * TAULU KATTAA js/livia.js:n LÄHTEET JA EUROOPAN HYVÄKSYTYT
- * KAUPUNKIREPLIIKIT. Ateenan maadoitus syntyi v2-mallin aikaan eikä
- * sillä ole riviä — tagiton repliikki menee läpi kaanonisena tekstinä.
+ * KAUPUNKIREPLIIKIT. Tagiton repliikki menee läpi kaanonisena tekstinä.
  * Sofian, Istanbulin, Riian ja Vilnan kuplat kirjoitettiin 7.9.2026, ja
  * ne saivat samalla eleven_v3-tagit: ELÄVÄ JA NOPEA, EI KAIKUA ALUSSA
  * (Raamattu, PULU PUHUU + KAIKU POIS ALUSTA). Malli on toistaiseksi v2
@@ -349,80 +354,31 @@ export const TAGIT = {
    */
   'sofia-2': { alku: '[squawks]' },
   'sofia-3': { alku: '[brightly]' },
-  'sofia-4': { alku: '[brightly]' },
   'istanbul-3': { alku: '[brightly]' },
-  'istanbul-4': { alku: '[brightly]' },
-  'istanbul-5': { alku: '[brightly]' },
   'bukarest-2': { alku: '[squawks]' },
   'bukarest-3': { alku: '[brightly]' },
-  'bukarest-4': { alku: '[brightly]' },
-  'bukarest-5': { alku: '[brightly]' },
-  'bukarest-6': { alku: '[brightly]' },
   'sarajevo-3': { alku: '[brightly]' },
-  'sarajevo-4': { alku: '[brightly]' },
-  'sarajevo-5': { alku: '[brightly]' },
-  'sarajevo-6': { alku: '[brightly]' },
   'budapest-2': { alku: '[squawks]' },
   'budapest-3': { alku: '[brightly]' },
-  'budapest-4': { alku: '[brightly]' },
-  'budapest-5': { alku: '[brightly]' },
-  'budapest-6': { alku: '[brightly]' },
   'wien-3': { alku: '[brightly]' },
-  'wien-4': { alku: '[brightly]' },
-  'wien-5': { alku: '[brightly]' },
-  'wien-6': { alku: '[brightly]' },
   'praha-2': { alku: '[squawks]' },
   'praha-3': { alku: '[brightly]' },
-  'praha-4': { alku: '[brightly]' },
-  'praha-5': { alku: '[brightly]' },
   'krakova-2': { alku: '[squawks]' },
   'krakova-3': { alku: '[brightly]' },
-  'krakova-4': { alku: '[brightly]' },
-  'krakova-5': { alku: '[brightly]' },
-  'krakova-6': { alku: '[brightly]' },
   'varsova-3': { alku: '[brightly]' },
-  'varsova-4': { alku: '[brightly]' },
-  'varsova-5': { alku: '[brightly]' },
-  'varsova-6': { alku: '[brightly]' },
   'pietari-2': { alku: '[squawks]' },
   'pietari-3': { alku: '[brightly]' },
-  'pietari-4': { alku: '[brightly]' },
-  'pietari-5': { alku: '[brightly]' },
-  'pietari-6': { alku: '[brightly]' },
   'moskova-3': { alku: '[brightly]' },
-  'moskova-4': { alku: '[brightly]' },
-  'moskova-5': { alku: '[brightly]' },
-  'moskova-6': { alku: '[brightly]' },
-  'moskova-7': { alku: '[brightly]' },
   'kiova-3': { alku: '[brightly]' },
-  'kiova-4': { alku: '[brightly]' },
-  'kiova-5': { alku: '[brightly]' },
-  'kiova-6': { alku: '[brightly]' },
   'odessa-3': { alku: '[brightly]' },
-  'odessa-4': { alku: '[brightly]' },
-  'odessa-5': { alku: '[brightly]' },
-  'odessa-6': { alku: '[brightly]' },
   'helsinki-3': { alku: '[brightly]' },
-  'helsinki-4': { alku: '[brightly]' },
-  'helsinki-5': { alku: '[brightly]' },
-  'helsinki-6': { alku: '[brightly]' },
   'tampere-2': { alku: '[squawks]' },
   'tampere-3': { alku: '[brightly]' },
-  'tampere-4': { alku: '[brightly]' },
-  'tampere-5': { alku: '[brightly]' },
   'tallinna-2': { alku: '[squawks]' },
   'tallinna-3': { alku: '[brightly]' },
-  'tallinna-4': { alku: '[brightly]' },
-  'tallinna-5': { alku: '[brightly]' },
-  'tallinna-6': { alku: '[brightly]' },
   'riika-2': { alku: '[squawks]' },
   'riika-3': { alku: '[brightly]' },
-  'riika-4': { alku: '[brightly]' },
-  'riika-5': { alku: '[brightly]' },
-  'riika-6': { alku: '[brightly]' },
   'vilna-3': { alku: '[brightly]' },
-  'vilna-4': { alku: '[brightly]' },
-  'vilna-5': { alku: '[brightly]' },
   // Teksti muuttui 8.9.2026: alusta poistui toistuva "Kääk.", joten
   // korostus on nyt lauseen lopussa eikä sen alussa.
   'sofia-5': { alku: '[helpfully]' },
@@ -435,6 +391,21 @@ export const TAGIT = {
   'sofia-12': { alku: '[casually]', kohdat: [['Se palaa', '[amused]']] },
   'sofia-13': { alku: '[breathless]', kohdat: [['Pöllö oli', '[amused]']] },
   'sofia-14': { alku: '[breathless]', kohdat: [['Katso alas.', '[amused]']] },
+  /*
+   * KEVYET PAKIT JA ATEENA (omistaja 8.9.2026): Kreeta, Sisilia,
+   * Islanti, Alpit, Rovaniemi (tunnus `lappi`) ja Tromssa saivat omat
+   * fokusvirtapakkinsa, ja Ateenan maadoitus korvattiin samanlaisella
+   * kommenttikuplalla. Jokaisella on yksi kupla numerolla 3 (kaksi
+   * ensimmäistä paikkaa ovat varattuja), ja se on luennan jälkeinen
+   * reipas huomio — sama alkutagi kuin muiden kaupunkien kommenteilla.
+   */
+  'ateena-3': { alku: '[brightly]' },
+  'kreeta-3': { alku: '[brightly]' },
+  'sisilia-3': { alku: '[brightly]' },
+  'islanti-3': { alku: '[brightly]' },
+  'alpit-3': { alku: '[brightly]' },
+  'lappi-3': { alku: '[brightly]' },
+  'tromssa-3': { alku: '[brightly]' },
 };
 
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
@@ -499,6 +470,14 @@ const KAUPUNKIEN_PAKKAUKSET = {
   tallinna: FOKUSVIRTA_TALLINNA,
   riika: FOKUSVIRTA_RIIKA,
   vilna: FOKUSVIRTA_VILNA,
+  // Kevyet pakit (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT), yksi
+  // kupla kussakin — omistajan erä 8.9.2026.
+  kreeta: FOKUSVIRTA_KREETA,
+  sisilia: FOKUSVIRTA_SISILIA,
+  islanti: FOKUSVIRTA_ISLANTI,
+  alpit: FOKUSVIRTA_ALPIT,
+  lappi: FOKUSVIRTA_LAPPI,
+  tromssa: FOKUSVIRTA_TROMSSA,
 };
 
 /**

@@ -277,10 +277,7 @@ export const FOKUSVIRTA_VARSOVA = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Sen pianistin nimen arvaat itsekin. Sydän on yhä muurattuna kirkon pylvääseen.',
-      'Vanhakaupunki tuhoutui sodassa melkein kokonaan.',
-      'Se rakennettiin uudelleen vanhojen maalausten mukaan, tiili tiileltä.',
-      'Nyt siellä puhutaan taas puolaa myös virastoissa. Ja kapakoissa laulut lauletaan loppuun.',
+      'Vanhakaupunki rakennettiin sodan jälkeen uudelleen tiili tiileltä. Sydän on yhä pylväässä.',
     ],
     /* KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. */
     /*

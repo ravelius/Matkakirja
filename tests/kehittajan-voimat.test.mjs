@@ -11,11 +11,16 @@ const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
 test('kerroin on oletuksena 1 ja pysyy rajoissa', () => {
   assert.equal(kehittajanKerroin('tausta'), 1);
-  // Musiikki soi oletuksena ×2,0 (omistaja 5.9.2026: "taustamusiikki saa
-  // olla x2.0 arvossa oletuksena"); tavallinen pelaaja kuulee tämän.
-  assert.deepEqual(KEHITTAJAN_VOIMA_OLETUS, { tausta: 1, musiikki: 2 });
-  assert.equal(kehittajanKerroin('musiikki'), 2);
-  assert.equal(kehittajanKerroinTeksti('musiikki'), '×2,0');
+  /*
+   * MOLEMPIEN OLETUS ON 1,0 (omistajan vika 8.9.2026: *"Taustamusiikki
+   * on aivan liian kovalla"*). Musiikin oletus oli 2,0 niin kauan kuin
+   * paletti oli vanha ja hiljainen; hyväksytty kuuluva taso asuu nyt
+   * perustasossa (js/musiikkivalitsin.js MUSIIKIN_PERUSTASO) ja kerroin
+   * on jälleen pelkkä säädin.
+   */
+  assert.deepEqual(KEHITTAJAN_VOIMA_OLETUS, { tausta: 1, musiikki: 1 });
+  assert.equal(kehittajanKerroin('musiikki'), 1);
+  assert.equal(kehittajanKerroinTeksti('musiikki'), '×1,0');
   assert.equal(kehittajanKerroin('olematon'), 1);
   assert.equal(asetaKehittajanKerroin('tausta', 99), KEHITTAJAN_VOIMA_MAX);
   assert.equal(asetaKehittajanKerroin('tausta', 0), KEHITTAJAN_VOIMA_MIN);
@@ -43,7 +48,10 @@ test('ambienssi ja siirtymämusiikki kertovat tasonsa kehittäjän kertoimella',
   const virta = lue('../js/ambience-stream.js');
   assert.match(virta, /oma\.tavoite \* avauksenMaisemanKerroin\(oma\) \* kehittajanKerroin\('tausta'\)/);
   assert.match(virta, /avauksenMaisemanKerroin = \(oma\) =>[\s\S]{0,200}oma\?\.vaimennus \?\? 1/);
-  assert.match(lue('../js/siirtymamusiikki.js'), /raidanTaso = [\s\S]{0,160}kehittajanKerroin\('musiikki'\)/);
+  // Musiikkireitit eivät lue kehittäjän kerrointa suoraan vaan
+  // js/musiikkivalitsin.js:n musiikinKerroin()-funktion kautta; sitä
+  // vartioi tests/musiikin-kerroin.test.mjs.
+  assert.match(lue('../js/siirtymamusiikki.js'), /raidanTaso = [\s\S]{0,160}musiikinKerroin\(\)/);
   const html = lue('../index.html');
   assert.match(html, /kehittaja-saadin" data-laji="tausta"/);
   assert.match(html, /kehittaja-saadin" data-laji="musiikki"/);

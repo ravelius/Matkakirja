@@ -173,6 +173,7 @@ import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 import { livianKorostetutKaupungit } from './liviapuhe.js';
 // Fokusmoodin annosteluvirta (js/fokusvirta.js). Kytkentä on kaksi
 // kutsua: saapumisen laukaisin renderissä ja lehtilukko openArrivalissa.
+import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
@@ -225,7 +226,10 @@ import {
  * js/ambience-stream.js:ssä. Lehti kulkee ambienssin hiljennyssyystä,
  * joten täältä kerrotaan vain matkalaukku.
  */
-import { asetaMusiikkitila, musiikkiPaalla } from './musiikkivalitsin.js';
+import {
+  MUSIIKIN_PERUSTASO, asetaMusiikkitila, kuunteleMusiikinKerrointa, musiikinKerroin,
+  musiikkiPaalla,
+} from './musiikkivalitsin.js';
 /*
  * Siirtymän oma musiikki (omistajan tilaus 2.9.2026). Oma moduulinsa,
  * koska se ei ole paikan ääni vaan matkan: ks. js/siirtymamusiikki.js.
@@ -922,8 +926,18 @@ const AARRE_MUSIIKKI = {
  * Aihe soi paljastuskortin päällä eikä taustalla, joten sen taso on
  * lähempänä hihkaisua kuin ambienssia. Kuulokokeen nuppi kuten muutkin
  * äänitasot: omistaja kuulee sen ensimmäisenä oikeasta laitteesta.
+ *
+ * 0,5 → perustaso × 3,8 ≈ 0,13 (omistajan vika 8.9.2026: musiikki
+ * liian kovalla). Sama syy kuin pohjaraidalla: luku kalibroitiin
+ * ElevenLabsin aarreaiheeseen (musa-aarre.mp3, RMS −26,4 dBFS), ja
+ * Lyria-paletin aihe on RMS −14,6 dBFS eli 11,8 dB kovempi. 0,13
+ * palauttaa täsmälleen sen kuuluvan tason, jolla aihe soi ennen
+ * palettivaihtoa, ja koska se lausutaan musiikin yhteisen perustason
+ * kertoimena (js/musiikkivalitsin.js MUSIIKIN_PERUSTASO), paletin
+ * seuraava vaihto korjataan yhdestä paikasta.
+ * Mittaus: `node tools/mittaa-musiikin-tasot.mjs`.
  */
-const AARRE_MUSIIKIN_VOIMA = 0.5;
+const AARRE_MUSIIKIN_VOIMA = MUSIIKIN_PERUSTASO * 3.8;
 /*
  * Hiljennyksen syy on merkkijono, koska js/ambience-stream.js pitää
  * syistä JOUKKOA: sama syy kahdesti ei kerry, ja toisen syyn
@@ -12686,12 +12700,22 @@ export class UI {
          * kirjoitetaan kaanoniin myöhemmin.
          *
          * MITTA ON KAUPUNKI, EI LAUTA: Euroopan kaupungit ovat myös
-         * maailmankartalla (SAAPUMISTEKSTIT.maailmankartta), joten laudan
-         * tunnus kertoisi väärin. Euroopan oma saapumistaulu kertoo
-         * oikein — muiden mantereiden merkinnät pitävät entisen
-         * otsakkeensa.
+         * maailmankartalla, joten laudan tunnus kertoisi väärin.
+         *
+         * MITTA VAIHTUI FOKUSVIRTAAN (8.9.2026). Ennen tässä kysyttiin
+         * Euroopan omalta saapumistaululta (SAAPUMISTEKSTIT.europe),
+         * mutta se taulu on arkistoitu pois pelistä (omistaja: KOKO
+         * EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA) — ehto olisi jäänyt
+         * ikuisesti epätodeksi ja otsake putoaisi jokaisessa Euroopan
+         * kaupungissa vanhaan "Matkakirjasta"-muotoon. Fokusvirtapakki
+         * kertoo saman asian ja kertoo sen suoraan: se on olemassa
+         * jokaiselle Euroopan laudan kohteelle eikä yhdellekään muulle.
+         *
+         * Kysely on tahallaan pakkarekisteristä eikä fokusvirtaSisällön
+         * kautta: tämä varapolku on juuri se haara, jolla fokusmoodi voi
+         * olla POIS päältä, eikä otsakkeen muodon pidä riippua siitä.
          */
-        if (Object.hasOwn(SAAPUMISTEKSTIT.europe ?? {}, saapuminen.cityId)) {
+        if (fokusvirtaKaupungille(saapuminen.cityId)) {
           this.asetaMatkakirjanOtsikko(kaupunki.name, kaupunki.name);
         } else {
           this.asetaOtsake('Matkakirjasta');
@@ -18312,7 +18336,10 @@ export class UI {
     // kaksi fanfaaria päällekkäin ei ole juhla vaan sotku.
     this.pysaytaAarreMusiikki();
     const audio = new Audio(aaniUrl(lahde));
-    audio.volume = AARRE_MUSIIKIN_VOIMA;
+    // Paljastusaihe on musiikkia: sama kerroin kuin kaikella muulla
+    // musiikilla (js/musiikkivalitsin.js musiikinKerroin), jotta rattaan
+    // säädin koskee myös sitä.
+    audio.volume = Math.min(1, AARRE_MUSIIKIN_VOIMA * musiikinKerroin());
     /*
      * Tausta madaltuu aiheen ajaksi. Hiljennys (syyjoukko) eikä väistö
      * (laskuri): pääaarteella soi samaan aikaan luettu huudahdus, joka
@@ -18322,14 +18349,20 @@ export class UI {
      */
     hiljennaAmbienssi(AARRE_MUSIIKIN_SYY);
     this.aarreMusiikki = audio;
+    // Säädin koskee myös kesken soivaa aihetta: kuuntelija irtoaa, kun
+    // aihe päättyy tai seuraava ottaa sen paikan.
+    const irtiSaatimesta = kuunteleMusiikinKerrointa(() => {
+      audio.volume = Math.min(1, AARRE_MUSIIKIN_VOIMA * musiikinKerroin());
+    });
     /*
      * Purku VAIN jos tämä aihe on yhä se soiva. Pysäytys asettaa
      * `aarreMusiikki`-kentän nolliin ja purkaa hiljennyksen jo itse, ja
      * sen jälkeen elementin `src`:n irrotus laukaisee vielä virheen —
      * ilman tätä ehtoa se purkaisi seuraavan aiheen hiljennyksen, joka
-     * ehti jo alkaa.
+     * ehti jo alkaa. Säätimen kuuntelija irrotetaan silti aina.
      */
     const ohi = () => {
+      irtiSaatimesta();
       if (this.aarreMusiikki !== audio) return;
       this.aarreMusiikki = null;
       palautaAmbienssi(AARRE_MUSIIKIN_SYY);
