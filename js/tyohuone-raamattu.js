@@ -4216,6 +4216,14 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'PULUN AANI HIEMAN HILJAISEMMAKSI JA KUPLAT TYHJIKSI UUDESSA KAUPUNGISSA '
+          + '(omistaja 8.9.2026 klo 16.25, sanatarkasti: "Pulun aani on vahan '
+          + 'voimakkaampi kuin kertojan, sita voisi laskea koko pelissa hieman" ja '
+          + '"Pulun puhekuplat pitaa tyhjentya kun tullaan uuteen kaupunkiin"): '
+          + '1) Pulun aanitteiden perustaso lasketaan koko pelissa hieman kertojan '
+          + 'alapuolelle (yksi vakio, ei kaupunkikohtaisia saatoja). 2) Saapuminen '
+          + 'uuteen kaupunkiin tyhjentaa pulun kuplapinon: edellisen kaupungin '
+          + 'kuplat eivat jaa nakyviin uuden kaupungin kuplien alle.',
         'PULUN ALUSTUKSET POIS, JA MATKAKIRJAN OTSIKKO ON PAIKKA JA AIKA, ALLA '
           + 'KURSIIVILLA SAAN JA TUNNELMAN RIVI (omistaja 8.9.2026 klo 16.20, '
           + 'sanatarkasti: "ota kaikki pulun alustukset pois. Sitten matkakirjan '
