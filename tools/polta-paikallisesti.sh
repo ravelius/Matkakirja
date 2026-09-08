@@ -1290,7 +1290,10 @@ polta_pallo () {
   done
   local maara
   maara="$(wc -l < "$lista" | tr -d ' ')"
-  echo "· pallon sarja $kansio (tasot $PALLO_MIN–$PALLO_MAX)"
+  # Aaltosulkeet ovat pakolliset: Macin bash 3.2 luki ajatusviivan (–)
+  # muuttujan nimeen ja kaatui "PALLO_MIN?: unbound variable" (ajo
+  # 34187497222, 8.9.2026) juuri ennen pallon shardien polttoa.
+  echo "· pallon sarja $kansio (tasot ${PALLO_MIN}–${PALLO_MAX})"
   echo "· pallon shardeja ajossa $maara / $PALLO_OSIA (rinnakkain $rinnakkain,"
   echo "  noutovali $NOUTOVALI ms, ranta ${rantalippu:-mukaan})"
   local alkoi virhe=0
