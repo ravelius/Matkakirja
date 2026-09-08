@@ -4224,7 +4224,11 @@ export const RAAMATTU = {
           + 'kohteiden merkit - vahintaan noin puolitoistakertainen kohdemerkkiin '
           + 'nahden - eika koskaan kutistu kohdemerkkia pienemmaksi. Kasvukatto '
           + '(31.8.2026 "hervottoman isoina") sailyy ylarajana, mutta se ei saa '
-          + 'painaa laattaa kohdemerkkien alle syvassa zoomissa.',
+          + 'painaa laattaa kohdemerkkien alle syvassa zoomissa. Lisays klo 15.45, '
+          + 'sanatarkasti: "tee samoin myos kohdekaupungin tekstille joka jaa '
+          + 'lahella liian pieneksi" - sama lattia kohdekaupungin nimelle: '
+          + 'lahinakymassa nimi on vahintaan noin 1,3-kertainen kohdemerkin '
+          + 'nimeen nahden.',
         'KUVAN SUURENNOS: VASTAKKAINEN SUUNTA TAYTTAA, SAMA SUUNTA JATTAA REUNAN '
           + '(omistaja 8.9.2026 klo 15.30, sanatarkasti: "Riittaa myos, etta '
           + 'havainnekuva mainitaan vasta kun kuvan klikkaa isommaksi siina '
