@@ -180,14 +180,25 @@ export const FOKUSVIRTA_BUKAREST = {
     /* Kaanon, kohta 1 — paikkarivi, teksti ja luenta sellaisinaan. */
     paikkarivi: 'Bukarest, lokakuussa 1873. Ensimmäinen halla; savu nousee '
       + 'suoraan.',
-    teksti: 'Nousin tornin huipulle, jonka Kaarle XII:n sotilaat rakensivat '
-      + 'paettuaan Poltavasta — ovensuussa vartioi yhä kaksi maalattua '
-      + 'ruotsalaista. Koko kaupunki levittäytyi allani. Toivon, että tämä '
-      + 'torni seisoo vielä, kun sinä tulet.',
-    luenta: '[curious] Nousin tornin huipulle, jonka Kaarle XII:n sotilaat '
-      + 'rakensivat paettuaan Poltavasta — ovensuussa vartioi yhä kaksi '
-      + 'maalattua ruotsalaista. [warmly] Koko kaupunki levittäytyi allani. '
-      + '[softly] Toivon, että tämä torni seisoo vielä, kun sinä tulet.',
+    /*
+     * KAANON UUSIKSI (Fable, omistaja 8.9.2026): isoisä ei koskaan oleta
+     * lukijaa eikä seuraajaa ("kun sinä tulet" oli vanha jäänne), ei
+     * roomalaista numeroa, ei ajatusviivaa. Vanha versio on korvattu.
+     */
+    teksti: 'Nousin tornin huipulle, jonka ruotsalaisen kuninkaan sotilaiden '
+      + 'sanotaan rakentaneen paettuaan Poltavasta. Ovensuussa vartioi yhä '
+      + 'kaksi maalattua ruotsalaista. Koko kaupunki levittäytyi allani, ja '
+      + 'jokaisesta piipusta nousi savu suoraan ylös. Vartija sanoi, että '
+      + 'torni on maanjäristyksen jäljiltä kallellaan ja että sitä paikataan '
+      + 'joka vuosi. Ihmettelen, kauanko se vielä seisoo.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Nousin tornin huipulle, jonka ruotsalaisen kuninkaan '
+      + 'sotilaiden sanotaan rakentaneen paettuaan Poltavasta. Ovensuussa '
+      + 'vartioi yhä kaksi maalattua ruotsalaista. [warmly] Koko kaupunki '
+      + 'levittäytyi allani, ja jokaisesta piipusta nousi savu suoraan ylös. '
+      + '[softly] Vartija sanoi, että torni on maanjäristyksen jäljiltä '
+      + 'kallellaan ja että sitä paikataan joka vuosi. Ihmettelen, kauanko '
+      + 'se vielä seisoo.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-bukarest.mp3',
     /*
      * KUVA: Carol Szathmarin valokuva Colțean tornista (kaanon, kohta 1).
@@ -282,7 +293,7 @@ export const FOKUSVIRTA_BUKAREST = {
       teksti: 'Maalattua?',
     },
     kommentti: [
-      'Torni purettiin, paikalla on nyt sairaala. Kaupunkia sanottiin myöhemmin pieneksi Pariisiksi.',
+      'Ei kauan: torni purettiin. Mutta sairaala sen juurella hoitaa yhä.',
     ],
     /*
      * Commons 25.8.2026: 2397×3339, public domain, kuvaus "Photo of
