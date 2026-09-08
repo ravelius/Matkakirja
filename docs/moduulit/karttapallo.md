@@ -4646,3 +4646,119 @@ laatalla, jonka alta omistaja halusi laatan näkyvän (`js/ui.js`
 ≥ 1,5 × kohdemerkki, nimi ≥ 1,3 × kohdenimiö joka suurennuksella,
 yleisnäkymä muuttumaton, lattia jatkuva eikä hyppää portilla, ladonta
 varaa suuremman pisteen).
+
+### 19.4 Illan korjaus: lattia on yhden pisteen sääntö (8.9.2026 ilta)
+
+**Omistaja, sanatarkasti** (Mac, koko Eurooppa ruudulla, Fogg
+Kiovassa): *"tällä zoom tasolla kaupunki pallot jäävät liian isoiksi"*.
+
+Luvun 19.2 lattia laskettiin kerran näkymästä ja kirjoitettiin
+**kaikille 261 pisteelle** (`pisteenSade`, `tahdistaPisteidenKoko`).
+Portti on maan lehden osuus näkymästä, ja Ukrainan levyinen lehti
+täyttää puolet ruudusta jo koko Euroopan zoomilla: mitattu omistajan
+näkymästä (Chromium 1419 × 821 css, korkeus 0,42) `lehdenOsuus` 0,82 —
+yli `KOHDEKAUPUNGIN_TAYSI_OSUUS`:n, eli jokainen kaupunki oli kasvanut
+17,2 pikseliin. Omistajan kuvasta mitattu 14 laitepikseliä = 7,0 css-px
+on se, mitä muiden kaupunkien piti olla.
+
+**Sääntö on pistekohtainen** (`kaupunkipisteenHalkaisijaPx`): lattia
+koskee vain pelaajan nykyistä kaupunkia (`ui.game.cityOf`) — sitä yhtä,
+jonka lehteä kartalla luetaan ja jonka kohdemerkkejä vasten mitta
+otetaan. Kaikki muut ovat `KAUPUNKIPISTEEN_HALKAISIJA_PX` joka
+zoomilla, myös osuudella 1. Mitta lasketaan yhä kerran näkymästä
+(välimuisti `kaupunkiAvain`, jossa on nyt myös pelaajan kaupunki ja
+kesken oleva siirto), mutta se luetaan pisteelle vasta kun piste ON se
+kaupunki: kun pelaaja siirtyy, vanhan kaupungin piste palaa 7 px:ään ja
+uusi kasvaa.
+
+**Portti on myös pelitilan portti.** `nostot.lehdenOsuus` palauttaa 0
+samoissa tiloissa, joissa keräys ei tuota yhtään merkkiä (katselutila,
+lähtövalinta, avauslento, kesken oleva siirto) — sama ehto kuin
+`keraa`:n `lehtiNakyy`. Lattia ei siis ala ennen kuin kohdemerkkejä
+oikeasti piirretään.
+
+**Mitattu jälkeen** (sama näkymä, Chromium 1419 × 821 css, korkeus
+0,42): Kiova 16,3…17,0 px (lattia) ja Venetsia, Lontoo, Ateena,
+Berliini 5,8…7,0 px — perspektiivi syö pallon reunalla vajaan
+kymmenyksen 7 pikselistä, kuten ennenkin. Yleisnäkymän 7 px ja
+lähikuvan lattia (luku 19.3) ovat ennallaan.
+
+**Vartijat:** `tests/kohdekaupunki.test.mjs` osio 5 (lattia vain
+pelaajan kaupungille, muut 7 px myös osuudella 1, lattia siirtyy
+pelaajan mukana).
+
+## 20. Kaupunkipiste pysyy kaupunkinsa päällä (8.9.2026 ilta)
+
+**Omistaja, sanatarkasti** (Mac, kaappaus Venetsiasta lähizoomista):
+*"kaupunkien pisteet eivät myöskään pysy paikallaan, vaan liikkuvat
+panoroitaessa. minusta tuo korjattiin jo aiemmin mutta on ilmeisesti
+taas palannut."*
+
+### 20.1 Eri vika kuin 6.9. venyminen
+
+Luvun 12.6 korjaus (lieriö → levy) poisti **venymisen**. Tämä on
+**parallaksi**: kirjasto asettaa pisteen olion pinnan pisteeseen ja
+kääntää sen +z:n pallon keskustaan, joten levy (paikallinen z = −1,
+skaalattuna `scale.z`:lla) on 0,3 yksikköä pinnan yläpuolella
+**pintanormaalin** suuntaan. Lähikuvassa kamera on vain
+korkeus × 100 yksikön päässä pinnasta, joten kohotettu piste
+projisoituu ruudun keskipisteestä ulospäin — sama ilmiö, joka luvussa
+12 vaivasi CSS2D-merkkejä, mutta pistekerroksessa.
+
+Mitattu (Chromium 1440 × 900 css, dpr 2, Venetsia; levyn keskipiste
+projisoituna vs. `getScreenCoords(lat, lon, 0)`):
+
+| näkymä | etäisyys keskustasta | levy sivussa |
+| --- | --- | --- |
+| korkeus 0,08 | 16 px | 0,7 px (4,21 %) |
+| korkeus 0,08 | 197 px | 8,3 px (4,20 %) |
+| korkeus 0,08 | 294 px | 12,3 px (4,19 %) |
+| korkeus 0,60 | 130 px | 1,0 px (0,80 %) |
+
+Virhe on siis vakio-osuus etäisyydestä ruudun keskustaan (4,2 %
+lähikuvassa): ruudun keskellä nolla, laidalla Macin leveällä ruudulla
+kymmeniä pikseleitä — juuri siksi vika näkyy vasta panoroitaessa.
+
+### 20.2 Korjaus: levy katsesäteelle
+
+`js/pallolauta/lauta.js katsesateenPaikka` siirtää olion paikkaa niin,
+että levy ei nouse pinnasta **ulos** vaan **kameraa kohti**: paikasta
+vähennetään sama matka pintanormaalia pitkin, joka siihen lisätään
+katsesäteen suuntaan. Levy on silloin täsmälleen sillä säteellä, joka
+kulkee kaupungin pinnan pisteen läpi, ja projisoituu tarkalleen siihen.
+**Mitattu jälkeen: 0,00 px kaikissa neljässä näkymässä yllä.**
+
+Korkeus (`scale.z`) säilyy, ja sen kanssa piirtojärjestys: piste on yhä
+laattojen (pinta), aihevalojen (0,15), reittien (0,2) ja askelhelmien
+(0,25) päällä — nyt jopa varmemmin, koska 0,3 yksikköä mitataan suoraan
+kameran suuntaan eikä normaalia pitkin. Napautus (raycast levyyn) ja
+siirtymät ovat ennallaan. Sama korjaus koskee kaikkia pistekerroksen
+olioita: kaupunkeja, askelhelmiä ja aihevaloja.
+
+**Olion asentoon ei kosketa.** Levyn kääntäminen kameraa kohti
+(`lookAt`) olisi yhtä helppoa, mutta pisteen materiaali on kirjaston
+`MeshLambert` ja suuntavalo on kiinteästi pohjoisnavan suunnassa
+(mitattu scenestä: `DirectionalLight` kohdassa 0, 1, 0), joten
+normaalista riippuva sävy on nyt kaupungin leveysasteen vakio. Kameraa
+katsova levy vaihtaisi sävyään panoroitaessa.
+
+**Pienempi korkeus ei riitä:** kirjaston lattia `scale.z`:lle on 0,1
+yksikköä (`max(alt · R, 0,1)`), ja sekin jättäisi samalla korkeudella
+1,3 %:n virheen — Macin laidalla toistakymmentä pikseliä. Levy
+täsmälleen pinnalla (paikallinen z = 0) taas jäisi laattakerroksen
+syvyyssiirron (`LAATTAKERROS_SYVYYSSIIRTO` −8) alle.
+
+**Paikka kirjoitetaan** jokaisesta kameran liikkeestä
+(`tahdistaPisteidenKoko`), ladonnassa, ruudun koon muuttuessa ja vielä
+kerran kirjaston oman siirtymän jälkeen (`tahdistaSiirtymanJalkeen`):
+`pointsTransitionDuration` kirjoittaa olion paikan takaisin pinnalle
+joka kehyksellä 250 ms:n ajan, ja nukkuvalla silmukalla vasta
+herätyksen jälkeen. Laskenta lähtee aina datumin lat/lonista
+(`pallonPiste`), ei olion nykyisestä paikasta, joten toistuva kirjoitus
+ei kasaa siirtoa siirron päälle.
+
+**Vartijat:** `tests/kohdekaupunki.test.mjs` osio 6 (levy on
+katsesäteellä, projektio osuu pinnan pisteeseen, ennen/jälkeen-laskenta
+samalla kameralla) ja selainsavuke
+`tools/savukkeet/savuke-pallo-merkit-lukossa.mjs` vartio 3b (levyn oma
+ruutupaikka on pinnan pisteessä ±1 px myös ruudun laidalla).

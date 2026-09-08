@@ -554,11 +554,21 @@ export function luoNostot({
      * sama lehti ja sama jakolasku kuin merkkien keräyksessä. Laudan
      * kaupunkipiste lukee tästä, onko kartalla kohdemerkkejä, joita
      * vasten kohdekaupunki mitoitetaan (js/pallolauta/lauta.js).
+     *
+     * MYÖS PELITILAN PORTTI (8.9.2026 ilta): zoom ei riitä, jos merkkejä
+     * ei ylipäätään piirretä. Vastaus on 0 samoissa tiloissa, joissa
+     * keraa palauttaa tyhjän listan tai ohittaa merkit — katselutila,
+     * lähtövalinta, avauslento ja kesken oleva siirto. Ilman tätä
+     * kaupunkipisteen lattia olisi voimassa siellä, missä verrattavaa
+     * ei ole (ks. lauta.js LATTIA ON YHDEN PISTEEN SÄÄNTÖ).
      */
     lehdenOsuus: (nakyva) => {
-      const pack = ui.game?.pack;
-      const iso = pack ? kohteidenNykyinenIso(ui) : null;
-      return lehdenOsuus(iso ? FOKUS_POHJAT[iso] : null, nakyva, pack?.id ?? null);
+      const { game } = ui;
+      const pack = game?.pack;
+      if (!pack || ui.katselu || game.phase === 'pickstart' || ui.aloituslentoKesken) return 0;
+      if (ui.movingPlayerId != null) return 0;
+      const iso = kohteidenNykyinenIso(ui);
+      return lehdenOsuus(iso ? FOKUS_POHJAT[iso] : null, nakyva, pack.id ?? null);
     },
     /** Viimeisimmän sovittelun luvut (savukkeet ja vartijat). */
     sovittelunTulos: () => sovittelu,

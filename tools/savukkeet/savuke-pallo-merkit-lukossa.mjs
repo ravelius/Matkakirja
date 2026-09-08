@@ -39,15 +39,19 @@
  *      `pointRadius` on astemitta, joten piste kasvoi lähennettäessä
  *      iPadin ruudulla noin 30 pikseliin).
  *
- *      MOLEMMAT MITATUT KORKEUDET OVAT LÄHIKUVAA (8.9.2026, luku 19):
- *      maan lehti täyttää niissä yli puolet näkymästä, joten pisteen
+ *      LATTIA ON YHDEN PISTEEN SÄÄNTÖ (8.9.2026 ilta, luku 19): pisteen
  *      lattia (1,5 x kohdemerkki, js/pallolauta/lauta.js
- *      kohdekaupunginMitat) on kummassakin täydessä mitassaan ja
- *      vartio mittaa yhä samaa vakiota — vain luku on 7 px:n sijaan
- *      17,2 px. Yleisnäkymän 7 px on ennallaan (tests/kohdekaupunki).
+ *      kohdekaupunginMitat) koskee vain pelaajan omaa kaupunkia, joten
+ *      vartio mittaa ruudun keskimmäisintä pistettä vasten 7 px:n
+ *      vakiota — ellei se piste satu olemaan pelaajan kaupunki, jolloin
+ *      luku on 17,2 px molemmilla korkeuksilla. Kumpikin kelpaa: ehto
+ *      on, että luku on SAMA kaukana ja lähellä.
  *
- *   RAPORTIN TIETOJA (ei ehtoja): kaupunkipisteen (pointsData) oma
- *   säteittäinen siirtymä, joka jää tästä korjauksesta jäljelle.
+ *   3b. KAUPUNKIPISTE ON KAUPUNKINSA PÄÄLLÄ (omistaja 8.9.2026 ilta:
+ *      *"kaupunkien pisteet eivät myöskään pysy paikallaan, vaan
+ *      liikkuvat panoroitaessa"*). Levyn oma ruutupaikka on pinnan
+ *      pisteessä ±1 px myös ruudun laidalla — parallaksi oli 4,2 %
+ *      etäisyydestä keskustaan ennen katsesädekorjausta.
  *
  * ÄMPÄRI KULKEE NODEN KAUTTA (CLAUDE.md: NODE_USE_ENV_PROXY=1): kontin
  * selain ei osaa välityspalvelinta, Noden fetch osaa. Ilman ämpäriä
@@ -328,29 +332,65 @@ if (auki) {
     JSON.stringify(kohteet));
 
   /*
-   * RAPORTTI: mitä korjauksesta jää jäljelle. Kaupunkipiste on
-   * pointsData korkeudella 0,003 eikä CSS2D-merkki, joten sillä on yhä
-   * oma säteittäinen siirtymänsä — ja sen säde on karttavakio, joten
-   * ruutuhalkaisija kasvaa lähennettäessä (omistajan kuvassa Tampereen
-   * iso musta ympyrä). Molemmat ovat luvun 12 jatkotyötä.
+   * ── 3b. KAUPUNKIPISTE ON KAUPUNKINSA PÄÄLLÄ ───────────────────────
+   *
+   * Omistaja 8.9.2026 ilta (Mac, Venetsia): *"kaupunkien pisteet eivät
+   * myöskään pysy paikallaan, vaan liikkuvat panoroitaessa. minusta tuo
+   * korjattiin jo aiemmin mutta on ilmeisesti taas palannut."*
+   *
+   * Kaupunkipiste on pointsData eikä CSS2D-merkki, joten vartiot 1–4
+   * eivät sitä näe. Sen levy oli 0,3 yksikköä pinnan yläpuolella
+   * PINTANORMAALIN suuntaan, ja parallaksi siirsi sitä ruudulla
+   * ulospäin 4,2 % etäisyydestä keskustaan (mitattu 8.9.2026 ilta).
+   * Korjaus vie levyn KATSESÄTEELLE (js/pallolauta/lauta.js
+   * katsesateenPaikka), jolloin se projisoituu tarkalleen kaupunkinsa
+   * pinnan pisteeseen.
+   *
+   * MITTA ON LEVYN OMA PAIKKA, EI KIRJASTON KAAVA: levyn keskipiste
+   * (paikallinen z = −1) projisoidaan kameralla ja verrataan pinnan
+   * pisteeseen (getScreenCoords 0). Kirjaston oma
+   * getScreenCoords(lat, lon, 0,003) kertoisi yhä vanhan noston
+   * ruudulla, ei sitä missä levy on.
    */
   const jaannos = await sivu.evaluate(() => {
     const l = window.matkakirja.ui.pallolauta;
     const p = l.pallo;
-    const kotelo = l.kotelo;
+    const kam = p.camera();
+    const { kotelo } = l;
+    const W = kotelo.clientWidth;
+    const H = kotelo.clientHeight;
     const pisteet = p.pointsData().filter((d) => !d.laji || d.laji === 'kaupunki');
     let suurin = 0;
+    let mitattuja = 0;
+    let kaukaisin = 0;
     for (const d of pisteet) {
+      const o = d.__threeObjPoint;
       const pinta = p.getScreenCoords(d.lat, d.lon, 0);
-      const nostettu = p.getScreenCoords(d.lat, d.lon, 0.003);
-      if (!pinta || !nostettu || !Number.isFinite(pinta.x) || !Number.isFinite(nostettu.x)) continue;
-      if (pinta.x < 0 || pinta.y < 0 || pinta.x > kotelo.clientWidth || pinta.y > kotelo.clientHeight) continue;
-      suurin = Math.max(suurin, Math.hypot(nostettu.x - pinta.x, nostettu.y - pinta.y));
+      if (!o || !pinta || !Number.isFinite(pinta.x)) continue;
+      if (pinta.x < 0 || pinta.y < 0 || pinta.x > W || pinta.y > H) continue;
+      o.updateMatrixWorld(true);
+      const Vektori = o.position.constructor;
+      const v = o.localToWorld(new Vektori(0, 0, -1)).project(kam);
+      const levy = { x: ((v.x + 1) / 2) * W, y: ((1 - v.y) / 2) * H };
+      mitattuja += 1;
+      kaukaisin = Math.max(kaukaisin, Math.hypot(pinta.x - W / 2, pinta.y - H / 2));
+      suurin = Math.max(suurin, Math.hypot(levy.x - pinta.x, levy.y - pinta.y));
     }
-    return { pisteita: pisteet.length, suurin: Number(suurin.toFixed(2)), korkeus: p.pointOfView().altitude };
+    return {
+      pisteita: pisteet.length,
+      mitattuja,
+      kaukaisin: Number(kaukaisin.toFixed(0)),
+      suurin: Number(suurin.toFixed(2)),
+      korkeus: p.pointOfView().altitude,
+    };
   });
-  tieto('kaupunkipisteen jäljelle jäävä siirtymä ruudulla (px, korkeus '
-    + `${jaannos.korkeus.toFixed(3)})`, `${jaannos.suurin} (${jaannos.pisteita} pistettä)`);
+  vaadi(`3b. kaupunkipisteen levy on kaupunkinsa pinnan pisteessä (≤ ${SALLITTU_PX} px)`,
+    jaannos.mitattuja > 0 && jaannos.suurin <= SALLITTU_PX,
+    JSON.stringify(jaannos));
+  tieto('kaupunkipisteen levyn ero pinnan pisteestä (px, korkeus '
+    + `${jaannos.korkeus.toFixed(3)})`,
+  `${jaannos.suurin} (${jaannos.mitattuja} pistettä ruudulla, kaukaisin `
+    + `${jaannos.kaukaisin} px keskustasta)`);
 
   /*
    * ── 4. KAUPUNKIPISTE ON RUUDUN VAKIO ──────────────────────────────
