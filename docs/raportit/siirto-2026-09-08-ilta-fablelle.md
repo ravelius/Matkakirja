@@ -48,16 +48,14 @@ poimi valmiit agenttityöt ja julkaise, ei salaisuuksia eikä sähköpostia).
   tools/dumppaa-eurooppa.mjs [kaupunki-id …]` tulostaa paikkarivin,
   tekstin pituuden ja pulun kuplan). Julkaise v1702:na alla olevan
   agenttityön kanssa.
-- **Opus-agentti kesken resetissä** (worktree, ei pushia): pallon
-  kaupunkipisteet — (1) omistaja: *"tällä zoom tasolla kaupunki pallot
+- **Opus-agentin työ VALMIS ja poimittu tähän haaraan** (cherry-pick
+  418d3696, testit 2352/0): pallon kaupunkipisteet — (1) omistaja: *"tällä zoom tasolla kaupunki pallot
   jäävät liian isoiksi"* → lattia vain pelaajan kaupungin pisteelle,
   muut 7 px joka zoomilla (js/pallolauta/lauta.js kohdekaupunginMitat,
   pisteenSade, tahdistaPisteidenKoko); (2) omistaja: *"kaupunkien
   pisteet eivät myöskään pysy paikallaan, vaan liikkuvat panoroitaessa"*
   → parallaksi, pointAltitude 0.003 = 0,3 yksikköä; levy alemmas +
-  mittaus Chromiumilla. `git worktree list`, `git log <haara> -1`;
-  poimi cherry-pickillä, poista worktree; jos commit puuttuu, tee
-  uudestaan Opus-agentilla tällä kuvauksella. Kirjaa molemmat Raamattuun
+  mittaus Chromiumilla. Julkaise v1702:na heti (ei enää worktreetä). Kirjaa molemmat Raamattuun
   (omistajan sanat yllä sanatarkasti, 8.9.2026 ilta).
 - Julkaisukaava: `git fetch origin main`; `node tools/uusi-versio.mjs
   "<≤60 merkkiä, ei loppupistettä, ei tähti-sanaa>"`; rules+sw-testit;
