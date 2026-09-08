@@ -431,8 +431,16 @@ test('nauha on ruudun alalaidassa ja muut väistävät sitä', () => {
     'nauha ei omi vetoa (selain tulkitsisi sen vieritykseksi)');
   assert.match(CSS, /\.aikajana\.esitys-pimea \.aikaselain \{[^}]*opacity: 0/s,
     'nauha näkyy pimeässä alussa');
-  assert.match(CSS, /\.aikaselain-kertomusteksti|aikajana-kertomusteksti \{\s*\n\s*bottom: calc\(var\(--aikaselain-korkeus/,
+  /*
+   * KERTOJAN TEKSTI VÄISTÄÄ MUUTTUJALLA (8.9.2026): rivi asemoidaan
+   * ylhäältä, jotta se voi liukua ruudun keskeltä alalaitaan
+   * (js/linssit/ihmisen-matka-esitys.js, avauksen lauseet), ja nauha
+   * vain vaihtaa alalaidan etäisyyden `--kertomusteksti-ala`.
+   */
+  assert.match(CSS, /aikajana-kertomusteksti \{\s*\n\s*--kertomusteksti-ala: calc\(var\(--aikaselain-korkeus/,
     'kertojan teksti ei väistä nauhaa');
+  assert.match(CSS, /\.aikajana-kertomusteksti \{[^}]*top: calc\(100% - var\(--kertomusteksti-ala\)\)/s,
+    'kertojan tekstin paikka ei tule muuttujasta');
   assert.match(TUTKIMUS_CSS, /body\.aikaselain-auki \.ihmisen-vanalappu/,
     'pergamenttilappu ei väistä nauhaa');
   assert.match(TUTKIMUS_CSS, /body\.aikaselain-auki \.ihmisen-nostokortti/,

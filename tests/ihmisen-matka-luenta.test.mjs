@@ -372,7 +372,9 @@ test('manifestin jaksot luetaan hakurakenteeksi ja suhteutetaan jakson alkuun', 
   // Aikaleimat esitykselle: nolla on jakson ensimmäinen ääni.
   const afrikka = jaksonAikaleimat(kartta.get('afrikka'));
   assert.deepEqual(afrikka.lauseet, [0, 3500]);
-  assert.deepEqual(afrikka.sanat, [{ sana: 'Tämä', alku: 0 }]);
+  // Sanat ovat avauksen koukun muodossa: pelkkiä ms-lukuja, nimet rinnalla.
+  assert.deepEqual(afrikka.sanat, [0]);
+  assert.deepEqual(afrikka.sanatiedot, [{ sana: 'Tämä', alku: 0 }]);
   // Jakso kerrallaan -manifesti (versio 1) ei ole yhtenäinen luenta.
   assert.equal(jaksojenAikaleimat({ jaksot: TEKOMANIFESTI.jaksot }).size, 0);
   assert.equal(tiedostonRunko('ihmisen-matka-kertomus.mp3'), 'ihmisen-matka-kertomus');
@@ -402,7 +404,8 @@ test('soitin lukee manifestin ja antaa jaksolle aikaleimat', async () => {
   luenta.aloita(jakso, { onKesto: (ms) => { kesto = ms; } });
   assert.equal(kesto, 6500);
   assert.deepEqual(jakso.aikaleimat.lauseet, [0, 3500]);
-  assert.deepEqual(jakso.aikaleimat.sanat, [{ sana: 'Tämä', alku: 0 }]);
+  assert.deepEqual(jakso.aikaleimat.sanat, [0]);
+  assert.deepEqual(jakso.aikaleimat.sanatiedot, [{ sana: 'Tämä', alku: 0 }]);
   luenta.pura();
 });
 

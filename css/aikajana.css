@@ -2016,22 +2016,56 @@
  * peli seuraa samaa kertomusta lukemalla. Ei nappaa napautuksia:
  * kartta on koko ajan pelaajan alla.
  */
+/*
+ * PAIKKA TULEE MUUTTUJASTA, EI `bottom`-ARVOSTA (8.9.2026). Rivi
+ * asemoidaan ylhäältä (`top` + translate −100 %), jotta se voi LIUKUA
+ * ruudun keskeltä alalaitaan samalla siirtymällä (ks. `.keskella`);
+ * `bottom` ei liu'u `top: 50%`:iin. Alalaidan etäisyys on
+ * `--kertomusteksti-ala`, jonka nauha ja kertomuskaari vain vaihtavat —
+ * niin ne eivät ylikirjoita keskitystä tarkemmalla valitsimella.
+ */
 .aikajana-kertomusteksti {
+  --kertomusteksti-ala: 3.2rem;
   position: absolute;
   left: 50%;
-  bottom: 3.2rem;
-  transform: translateX(-50%);
+  top: calc(100% - var(--kertomusteksti-ala));
+  transform: translate(-50%, -100%);
   width: min(34rem, calc(100vw - 2rem));
   pointer-events: none;
   opacity: 0;
-  transition: opacity 500ms ease;
+  transition: opacity 500ms ease,
+    top 900ms cubic-bezier(0.33, 0, 0.2, 1),
+    transform 900ms cubic-bezier(0.33, 0, 0.2, 1),
+    width 900ms ease;
 }
 .aikajana-kertomusteksti.esilla { opacity: 1; }
+/*
+ * AVAUS: LAUSE KERRALLAAN KESKELLE (Raamattu AVAUS MUSTASTA TAHTIIN JA
+ * AFRIKKAAN SANAN KOHDALLA, omistaja 8.9.2026, sanatarkasti: *"Jokainen
+ * lause voisi tulla tämän kappaleen loppuun asti yksitellen keskelle
+ * ruutua. Vasta kun siirrytään ensimmäiseen kohteeseen tekstit
+ * hyppäävät alas nykyiselle paikalleen."*). Keskellä ei ole
+ * pergamenttilaatikkoa: mustaa avaruutta vasten lause on pelkkää
+ * valoa, isolla ja keskitettynä. Laatikko palaa liu'un mukana, kun
+ * rivi laskeutuu alas — kaikki neljä ominaisuutta ovat siirtyviä,
+ * joten mikään ei räpsähdä.
+ */
+/*
+ * HIEMAN KESKIVIIVAN ALAPUOLELLE. Pallo tulee esiin täsmälleen ruudun
+ * keskeltä (Afrikka keskellä), ja tasan 50 %:iin ladottu lause meni sen
+ * pisteen päälle — mitattu savukkeella 8.9.2026 kuvasta 1-tahdet.
+ * 61 % on yhä "keskellä ruutua" mutta jättää pisteelle oman tilansa.
+ */
+.aikajana-kertomusteksti.keskella {
+  top: 61%;
+  transform: translate(-50%, -50%);
+  width: min(40rem, calc(100vw - 3rem));
+}
 .aikajana-kertomusteksti-sisus {
   margin: 0;
   padding: 0.6rem 0.9rem;
   border-radius: 4px;
-  background: rgba(16, 12, 8, 0.72);
+  background-color: rgba(16, 12, 8, 0.72);
   border: 1px solid var(--aikajana-reuna);
   box-shadow: var(--aikajana-varjo);
   color: #f1e6d0;
@@ -2039,6 +2073,31 @@
   line-height: 1.45;
   text-align: center;
   text-wrap: balance;
+  /*
+   * LAUSE HÄIPYY JA NOUSEE OMANA ELEMENTTINÄÄN. Rivin oma `opacity` on
+   * "onko tekstiä lainkaan"; tämä on "onko TÄMÄ lause nyt vuorossa" —
+   * ohjaaja vaihtaa tekstin vasta kun se on häipynyt, joten lukija ei
+   * koskaan näe kirjainten vaihtuvan.
+   */
+  opacity: 0;
+  transition: opacity 380ms ease,
+    background-color 900ms ease, border-color 900ms ease, box-shadow 900ms ease,
+    font-size 900ms ease, padding 900ms ease;
+}
+.aikajana-kertomusteksti-sisus.nakyy { opacity: 1; }
+.aikajana-kertomusteksti.keskella .aikajana-kertomusteksti-sisus {
+  padding: 0.4rem 0.6rem;
+  background-color: rgba(16, 12, 8, 0);
+  border-color: transparent;
+  box-shadow: 0 0 0 0 rgba(20, 12, 4, 0);
+  color: #f7eeda;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 0 4px rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 600px) {
+  /* Puhelin (390 × 844): iso mutta ei ylileveä — lause kahdelle riville. */
+  .aikajana-kertomusteksti.keskella .aikajana-kertomusteksti-sisus { font-size: 1.25rem; }
 }
 
 /*
@@ -2111,6 +2170,7 @@
   .aikajana-esitys-peite,
   .aikajana-esitys-peite.pois,
   .aikajana-kertomusteksti,
+  .aikajana-kertomusteksti-sisus,
   .aikajana-kertomuskuva,
   .aikajana.esitys-pimea .aikajana-otsikot,
   .aikajana.esitys-pimea .aikajana-kello,
@@ -3011,7 +3071,7 @@ body.aikajana-palkki-auki .topbar {
  */
 .aikajana.kertomus .aikajana-nauha { display: none; }
 /* Kertojan teksti laskeutuu alalaitaan, kun nauhaa ei ole. */
-.aikajana.kertomus .aikajana-kertomusteksti { bottom: 1.4rem; }
+.aikajana.kertomus .aikajana-kertomusteksti { --kertomusteksti-ala: 1.4rem; }
 /*
  * Ilmiöpaneeli alkaa palkin alta. Kertomuskaarella sen avaa harvoin
  * mikään; pysäkkiajolla se on koko ajan esillä, ja tämä sääntö voittaa
@@ -3180,21 +3240,31 @@ body.aikaselain-auki { --aikaselain-korkeus: 62px; }
 }
 .aikajana-avaruus.pois { opacity: 0; }
 /*
- * PEITE ON AVAUKSESSA HARSO JA ESTE. Ennen se oli läpinäkymätön musta
- * koko ruudun päällä; avaruusavauksessa musta on pallon ALLA, ja peite
- * jää eteen kahdesta syystä: pallo ei saa pyörähtää sormesta kesken
- * ajon, ja kaukana oleva Maa on TUMMA (omistaja: *"aluksi pieni ja
- * tumma"*). Harso häipyy zoomin tahdissa — kesto on sama kuin
+ * PEITE ON AVAUKSESSA ENSIN MUSTA, SITTEN HARSO JA AINA ESTE.
+ *
+ * Raamattu "IHMISEN MATKA: … AVAUS MUSTASTA TAHTIIN JA AFRIKKAAN SANAN
+ * KOHDALLA" (omistaja 8.9.2026, sanatarkasti: *"Linssin aloitus voisi
+ * olla kokonaan musta ruutu ja sitten siihen feidautuisi ensin
+ * tähtiä"*): aloitus on läpinäkymätön #000 koko ruudun päällä (luokka
+ * `musta`), jolloin ruudulla ei ole palloa eikä tähtiä. Kun kertoja
+ * alkaa, musta laskee harsoksi (js MUSTAN_HETKI_MS:n viiveellä,
+ * TAHTIEN_FEIDI_MS:ssä) ja tähdet nousevat esiin sen alta. Harso jää
+ * eteen kahdesta syystä: pallo ei saa pyörähtää sormesta kesken ajon,
+ * ja kaukana oleva Maa on TUMMA (omistaja: *"aluksi pieni ja tumma"*).
+ * Harso häipyy zoomin tahdissa — kesto on sama kuin
  * js/linssit/ihmisen-matka-esitys.js AVARUUDEN_MS.
  */
 .aikajana-esitys-peite.avaruus {
   background-color: #000;
-  opacity: 0.55;
-  transition: opacity 5200ms ease;
+  opacity: 0.35;
+  transition: opacity 1800ms ease 300ms;
 }
-.aikajana-esitys-peite.avaruus.kirkastuu { opacity: 0; }
+.aikajana-esitys-peite.avaruus.musta { opacity: 1; transition: none; }
+.aikajana-esitys-peite.avaruus.kirkastuu { opacity: 0; transition: opacity 7000ms ease; }
 @media (prefers-reduced-motion: reduce) {
-  .aikajana-esitys-peite.avaruus { opacity: 0; transition: none; }
+  .aikajana-esitys-peite.avaruus,
+  .aikajana-esitys-peite.avaruus.musta,
+  .aikajana-esitys-peite.avaruus.kirkastuu { opacity: 0; transition: none; }
 }
 
 /*
@@ -3204,7 +3274,7 @@ body.aikaselain-auki { --aikaselain-korkeus: 62px; }
  * tekevät saman omilla säännöillään.
  */
 body.aikaselain-auki .aikajana.kertomus .aikajana-kertomusteksti {
-  bottom: calc(var(--aikaselain-korkeus, 62px) + 0.7rem);
+  --kertomusteksti-ala: calc(var(--aikaselain-korkeus, 62px) + 0.7rem);
 }
 
 @media (max-width: 600px) {

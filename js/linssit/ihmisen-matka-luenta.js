@@ -30,7 +30,7 @@
  * sanojen alkuhetket (ms tiedoston alusta). Tämä moduuli antaa ne
  * jaksolle SUHTEESSA JAKSON ALKUUN kenttään
  *
- *   jakso.aikaleimat = { lauseet: [ms…], sanat: [{ sana, alku }…] }
+ *   jakso.aikaleimat = { lauseet: [ms…], sanat: [ms…], sanatiedot: [{ sana, alku }…] }
  *
  * jotta avausta ja tekstin rytmitystä rakentava koodi voi lukea ne
  * suoraan (0 = jakson ensimmäinen ääni). Ilman aikaleimoja kenttää ei
@@ -89,14 +89,21 @@ export function jaksojenAikaleimat(manifesti) {
  * Jakson aikaleimat SUHTEESSA JAKSON ALKUUN (ks. otsikko). Puhdas
  * funktio; negatiiviset (mittausvirhe) leikataan nollaan.
  *
+ * MUOTO ON AVAUKSEN KOUKUN MUOTO (js/linssit/ihmisen-matka-esitys.js
+ * lauseidenHetket / sananHetki): `lauseet` ja `sanat` ovat PELKKIÄ
+ * ms-lukuja, yksi per lause ja yksi per sana. Sanojen nimet jäävät
+ * rinnalle kenttään `sanatiedot`, jos joku haluaa tarkistaa kohdistuksen.
+ *
  * @param {{alku:number, lauseet:number[], sanat:object[]}} rivi
- * @returns {{lauseet:number[], sanat:Array<{sana:string, alku:number}>}}
+ * @returns {{lauseet:number[], sanat:number[], sanatiedot:Array<{sana:string, alku:number}>}}
  */
 export function jaksonAikaleimat(rivi) {
   const nollaan = (ms) => Math.max(0, Math.round(ms - rivi.alku));
+  const sanatiedot = rivi.sanat.map((s) => ({ sana: s.sana, alku: nollaan(s.alku) }));
   return {
     lauseet: rivi.lauseet.map(nollaan),
-    sanat: rivi.sanat.map((s) => ({ sana: s.sana, alku: nollaan(s.alku) })),
+    sanat: sanatiedot.map((s) => s.alku),
+    sanatiedot,
   };
 }
 
