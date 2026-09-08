@@ -4216,6 +4216,18 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'HORATION SANASTO KARSITTU VIITEEN JA JUURRUTETTU MEREEN JA MITTAUKSEEN '
+          + '(omistaja 9.9.2026 klo 00.15, sanatarkasti: "Tuossakin on jo aika '
+          + 'monta. Ja voisi niilla olla jokin pohja meri tai mittaus sanastoon '
+          + 'osin"): sanasto on nyt PEILAUS (merimiehen suuntima; Horatiolla '
+          + 'askelmittaus mista tahansa, entinen zop), PAINOLASTI (tarpeeton '
+          + 'esine, jonka han ostaa joka kaupungissa, entinen tiplo), K3 '
+          + '(kolmiomittaus ihmisilla: kysy kolmelta, usko naurajaa), YOVAHTI '
+          + '(yon aanten luettelo, entinen yoikkuna) ja LAKKIPISTE (hattu lahtee '
+          + 'paasta itsestaan; ainoa ei-merisana). G. on nimi (Grimshaw), ei '
+          + 'sana. H-reitti ja K.V. poistettu; hevosten kiertaminen ja "kartta '
+          + 'valehtelee" jaavat tavoiksi ilman lyhennetta. Korvaa osion HORATION '
+          + 'OMA KIELI sanaston.',
         'HORATIO YMMARTAA PAIKALLISEN KIELEN VAARIN, LIVIA OSAA KAIKKI KIELET, JA '
           + 'OUDOT SANAT OPITAAN KONTEKSTISTA (omistaja 8.9.2026 ilta klo 23.50, '
           + 'sanatarkasti: "voisiko isoisa tavata jotain paikallista kielta ja '
