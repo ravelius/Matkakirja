@@ -116,15 +116,22 @@ export const FOKUSVIRTA_BUDAPEST = {
     paikkarivi: 'Budapest, marraskuussa 1873. Harmaata; joelta nousee '
       + 'kylmä tuuli.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Saavuin kaupunkiin, jota ei vielä eilen ollut: Buda, Óbuda '
-      + 'ja Pest liitettiin yhteen, ja nimi on nyt Budapest. '
-      + 'Kartantekijöille riittää töitä. Tonavan rannalla vanha mies '
-      + 'sanoi, että uusi nimi tai ei — joki muistaa kaiken.',
-    luenta: '[curious] Saavuin kaupunkiin, jota ei vielä eilen ollut: '
-      + 'Buda, Óbuda ja Pest liitettiin yhteen, ja nimi on nyt Budapest. '
-      + '[laughs] Kartantekijöille riittää töitä. [softly] Tonavan '
-      + 'rannalla vanha mies sanoi, että uusi nimi tai ei — [whispers] '
-      + 'joki muistaa kaiken.',
+    /* KAANON UUSIKSI (Fable, omistaja 8.9.2026): kylpylä isoisän tekstiin,
+       ei ajatusviivaa. Vanha versio korvattu. */
+    teksti: 'Saavuin kaupunkiin, jota ei vielä eilen ollut: Buda, Óbuda ja Pest '
+      + 'liitettiin yhteen, ja nimi on nyt Budapest. Kartantekijöille riittää '
+      + 'töitä. Kävin turkkilaisessa kylpylässä, jonka kupolin alla vesi on '
+      + 'kuumaa suoraan maasta, ja vanhat miehet väittivät istuneensa siinä '
+      + 'ennen kuin kaupungilla oli mitään nimeä. Tonavan rannalla toinen '
+      + 'vanhus sanoi, että uusi nimi tai ei, joki muistaa kaiken.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Saavuin kaupunkiin, jota ei vielä eilen ollut: Buda, '
+      + 'Óbuda ja Pest liitettiin yhteen, ja nimi on nyt Budapest. '
+      + 'Kartantekijöille riittää töitä. [warmly] Kävin turkkilaisessa '
+      + 'kylpylässä, jonka kupolin alla vesi on kuumaa suoraan maasta, ja '
+      + 'vanhat miehet väittivät istuneensa siinä ennen kuin kaupungilla oli '
+      + 'mitään nimeä. [softly] Tonavan rannalla toinen vanhus sanoi, että '
+      + 'uusi nimi tai ei, joki muistaa kaiken.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-budapest.mp3',
   },
 
@@ -175,7 +182,7 @@ export const FOKUSVIRTA_BUDAPEST = {
       teksti: 'Ja postille!',
     },
     kommentti: [
-      'Nimi on nyt itsestäänselvyys. Kylpylöissä istutaan yhä samoissa kuumissa lähteissä.',
+      'Nimi on nyt itsestäänselvyys. Ja samassa kuumassa vedessä istutaan yhä kupolin alla.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (parlamenttitalo). Faktat
