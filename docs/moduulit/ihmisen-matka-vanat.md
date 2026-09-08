@@ -1377,6 +1377,10 @@ niitä kellona.
 
 ### 12.3 Viisi vaihetta
 
+> **Kohdat 1–2 korvattu 8.9.2026 (luku 17):** avaus on musta ruutu →
+> tähdet → piste → zoomi Afrikka-sanan kohdalla, ja valot syttyvät
+> vasta kun pallo on perillä.
+
 1. **PIMEÄ** (`vaihe: 'pimea'`, jakso `avaus`). Käynnistä-napin jälkeen
    ohjaaja panee mustan peitteen linssin juuren ensimmäiseksi lapseksi
    ja lisää juureen luokan `esitys-pimea`: kello, otsikot, esinerivi,
@@ -2321,6 +2325,10 @@ täyteen kokoon Afrikka keskellä. Kolme osaa:
 
 ### 16.2 Musta menee pallon alle, ei sen päälle
 
+> **Täydennetty 8.9.2026 (luku 17):** ruutu on ENSIN kokonaan musta
+> (peite läpinäkymätön) ja laskee vasta sitten harsoksi 0,35 — tähdet
+> feidautuvat esiin sen alta.
+
 Pallon oma piirtoalusta on läpinäkyvä (`js/pallo.js rakennaPallo`
 `backgroundColor('rgba(0,0,0,0)')`), joten pallon ympärillä näkyy
 karttaruudun nahka. Musta levy pannaan siksi **karttaruudun
@@ -2370,6 +2378,11 @@ avauksen jälkeen, eikä sitä luoda lainkaan muistista jatkettaessa.
 ei mittaa tätä kerrosta — mitta on rakenteellinen (ks. avoimet asiat).
 
 ### 16.4 Zoomi: laudan oma kamera, katto hetkeksi auki
+
+> **Korvattu 8.9.2026 (luku 17):** lähtökorkeus on 50 (ei 7,5), kesto
+> 7 s (ei 5,2 s), tähtitaivas venytetään kymmenkertaiseksi, ja zoomi
+> lähtee vasta kun kertoja sanoo "Afrikasta". Kappaleen periaate —
+> laudan oma kamera, katto hetkeksi auki — pätee ennallaan.
 
 Lähtökorkeus on **7,5 pallonsädettä**. MITATTU 7.9.2026: laudan oma
 katto (`js/pallolauta/kamera.js PALLO_KORKEUS_MAX` = 2,5, ja
@@ -2444,3 +2457,170 @@ MITATTU 7.9.2026 (kontti, ohjelmisto-WebGL, äänitteet mockattuina):
    piirtää neliön; koossa 1,35 se ei erotu, mutta suuremmassa koossa
    erottuisi. Pyöreä tähti vaatisi `particlesTexture`-kuvan tai
    canvas-tekstuurin.
+
+## 17. Avaus mustasta tähtiin ja Afrikkaan sanan kohdalla (8.9.2026)
+
+*(Raamattu "IHMISEN MATKA: ETELA-AFRIKKA VAIN KERRAN … JA AVAUS
+MUSTASTA TAHTIIN JA AFRIKKAAN SANAN KOHDALLA", omistaja 8.9.2026,
+sanatarkasti:*
+
+> "Linssin aloitus voisi olla kokonaan musta ruutu ja sitten siihen
+> feidautuisi ensin tähtiä ja sitten ihan pienestä pisteestä
+> zoomautuisi afrikka esiin juuri sillä hetkellä kun kertoja mainitsee
+> sanan afrikka. Jokainen lause voisi tulla tämän kappaleen loppuun
+> asti yksitellen keskelle ruutua. Vasta kun siirrytään ensimmäiseen
+> kohteeseen tekstit hyppäävät alas nykyiselle paikalleen."
+
+*Tämä luku korvaa luvut 16.2 ja 16.4 sekä luvun 12.3 kohdat 1–2.)*
+
+### 17.1 Neljä hetkeä
+
+| # | Hetki | Mitä ruudulla | Kesto |
+| --- | --- | --- | --- |
+| 1 | MUSTA | Kokonaan musta: ei palloa, ei tähtiä. Kertoja alkaa. | `MUSTAN_HETKI_MS` 300 ms |
+| 2 | TÄHDET | Musta laskee harsoksi, tähdet nousevat esiin, Maa on niiden keskellä pisteenä. | `TAHTIEN_FEIDI_MS` 1 800 ms |
+| 3 | AFRIKKA-SANA | Zoomi lähtee neljännen lauseen ("Afrikasta.") kohdalla ja pallo kasvaa ruudun täyttäväksi. | `AVARUUDEN_MS` 7 000 ms |
+| 4 | TEKSTI ALAS | Ensimmäisen kohteen alkaessa lauserivi laskeutuu keskeltä alalaitaan. | `TEKSTIN_LASKU_MS` 900 ms |
+
+Ero entiseen (luku 16): ennen zoomi lähti heti Käynnistä-napista ja
+valot syttyivät `afrikka`-jakson alkaessa. Nyt zoomi on sidottu
+KERTOJAN SANAAN, ja valot odottavat pallon perille tuloa.
+
+### 17.2 Musta ensin, harso sitten
+
+Peite (`.aikajana-esitys-peite`) saa avauksessa kaksi luokkaa:
+`avaruus musta` = läpinäkymätön #000 koko ruudun päällä. Musta levy
+pallon alla (luku 16.2) ja tähdet ovat jo olemassa, mutta niitä ei näy.
+Ensimmäisellä kehyksellä luokka `musta` poistetaan, ja css hoitaa
+ajoituksen: `transition: opacity 1800ms ease 300ms` vie peitteen arvoon
+`AVARUUDEN_HARSO` = 0,35 (ennen 0,55 — kevyempi harso, koska pallo on
+nyt piste eikä kirkas kiekko, ja tähdet saavat näkyä).
+
+Tähtien nousu ajetaan JS:stä (`tahtienEsiinTulo`) samasta kellosta kuin
+lauseet — `tila.kulunut` — jotta **tauko pysäyttää senkin**. Luku ei
+koskaan laske, jottei taivas välkähdä jakson vaihtuessa.
+
+### 17.3 Piste: korkeus 50 ja kymmenkertainen taivas
+
+| | ennen | nyt |
+| --- | --- | --- |
+| `AVARUUDEN_KORKEUS` | 7,5 | **50** |
+| pallon halkaisija ruudun korkeudesta | 27 % | **4,5 %** (n. 36 px / 800 px) |
+| `TAHTIEN_KERROIN` | — | **10** |
+| tähtikerrokset (pallonsädettä) | 2,6–6,5 | 26–65 |
+| `AVARUUDEN_MS` | 5 200 | **7 000** |
+
+Pallon kulmahalkaisija on `2·asin(1/(1+h))` ja ruudun korkeus fov 50°,
+mistä `pallonOsuusRuudusta` (puhdas funktio, yksikkötesti). Pelkkä
+kameran vetäminen kauas ei riitä: tähtitaivas on pallon näyttämöllä ja
+skaalautuu sen mukana, joten korkeudella 50 vanha taivas olisi kutistunut
+pieneksi ryppääksi pisteen viereen. `js/pallolauta/tahdet.js` sai siksi
+`kerroin`-asetuksen, joka venyttää sekä kerrosten korkeudet että pisteiden
+koon (koko kutistuu etäisyyden mukana, `particlesSizeAttenuation`).
+Kymmenkertaisena kirkkaat kerrokset (48–65) jäävät kameran (51) TAAKSE →
+tähtiä on joka suunnassa kuten yötaivaalla, ja pölykerros (26–34) jää
+eteen antamaan parallaksin zoomin aikana.
+
+MITATTU (kontti, 1280 × 800): kameran far-taso on 125 000 yksikköä eli
+1 250 pallonsädettä, joten mikään ei leikkaudu. Korkeus 50 vaatii
+OrbitControlsin `maxDistancen` avaamisen kuten ennenkin
+(`avaaKaukaisuus` → `palautaKaukaisuus`).
+
+### 17.4 Ajoitus: lauseet, sana ja aikaleimakoukku
+
+Kolme puhdasta funktiota (`js/linssit/ihmisen-matka-esitys.js`,
+yksikkötestit `tests/ihmisen-matka-esitys.test.mjs`):
+
+- `jaaLauseiksi(teksti)` → `[{ teksti, alku }]`. Lause päättyy vain, jos
+  päätemerkin (`.`, `!`, `?`, `…`) jälkeen tulee välilyönti tai teksti
+  loppuu — niin "…on löydetty" ei tuota tyhjää lausetta eikä "Marokon
+  kukkulalta…" katkea kesken.
+- `lauseidenHetket(lauseet, kesto, aikaleimat)` → ms-taulukko.
+- `sananHetki(teksti, hakusana, kesto, aikaleimat)` → ms tai null.
+
+**Arvio** on merkkiosuus: lause (tai sana) alkaa siinä kohdassa
+luentaa, jossa sitä edeltävät merkit on luettu. Sama mitta kuin
+`kertomuksenVarakesto` (14 merkkiä/s), joten arvio ja jakson kesto
+puhuvat samaa kieltä. Kesto on `tila.luenta`, joka tarkentuu äänitteen
+metatiedoista kesken jakson — hetket lasketaan joka kehyksellä
+uudestaan, joten loputkin lauseet siirtyvät oikeaan kohtaan itsestään.
+
+**AIKALEIMAKOUKKU.** Kun Fable generoi luennan aikaleimoineen, kaanonin
+jaksoon (`js/linssit/ihmisen-matka-kertomus.js`) lisätään kenttä:
+
+```js
+aikaleimat: {
+  lauseet: [0, 3120, 5040, 6980, 7910],
+  sanat: [0, 480, 980, 1520, 2010, /* … yksi per sana … */],
+}
+```
+
+- millisekunteja **jakson luennan alusta**;
+- `lauseet` yhtä monta alkiota kuin `jaaLauseiksi` antaa lauseita;
+- `sanat` yhtä monta kuin tekstissä on välilyönnillä erotettuja sanoja
+  (`teksti.replace(/\s+/g,' ').trim().split(' ')`);
+- oikean mittainen ja äärellisistä luvuista koostuva taulukko VOITTAA
+  arvion, muuten arvio jää voimaan eikä mikään rikkoudu.
+
+Zoomin lähtösana on vakio `AVAUKSEN_SANA = 'Afrik'` (alkuosa riittää,
+joten taivutus saa vaihtua). Kaanonin nykyisellä tekstillä sana osuu
+78,8 %:n kohdalle avausjakson luentaa (ilman äänitettä 6 643 ms /
+8 429 ms) eli täsmälleen neljännen lauseen alkuun.
+
+### 17.5 Lause kerrallaan keskelle, sitten alas
+
+Rivi `.aikajana-kertomusteksti` asemoidaan nyt **ylhäältä**
+(`top: calc(100% - var(--kertomusteksti-ala))` + `translate(-50%,-100%)`),
+koska `bottom` ei liu'u arvoon `top: 50%`. Alalaidan etäisyyden vaihtavat
+kertomuskaari ja aikaselain pelkällä muuttujalla, jolloin ne eivät
+ylikirjoita keskitystä tarkemmalla valitsimella. Luokka `keskella`
+nostaa rivin ruudun keskelle, leventää sen ja vaihtaa pergamenttilaatikon
+pelkäksi valoksi (1,5 rem, ei taustaa, ei kehystä; puhelimella 1,25 rem).
+Kaikki neljä ominaisuutta ovat siirtyviä, joten lasku on pehmeä.
+
+Lauseen oma näkyvyys on **sisuksessa** (`.aikajana-kertomusteksti-sisus
+.nakyy`), rivin näkyvyys rivissä (`.esilla`): ohjaaja häivyttää lauseen
+`LAUSEEN_HAIVE_MS` = 340 ms ennen seuraavan alkua ja vaihtaa tekstin
+vasta pimeässä, joten lukija ei näe kirjainten vaihtuvan.
+
+Keskitys koskee kaanonin kahta ensimmäistä jaksoa (`pimea`, `valot`)
+ja päättyy **yksisuuntaisesti** (`tila.avausOhi`) ensimmäiseen
+kohteeseen: aikaselaimella taakse kelaava pelaaja ei saa tekstiä enää
+keskelle, eikä muistista jatkettaessa avausta ole lainkaan.
+
+### 17.6 Valot vasta perillä, ja tauko pysäyttää zoomin
+
+`sytytaValot` ei enää lähde `afrikka`-jakson alkaessa vaan silloin, kun
+avausajoa ei ole jäljellä (`tila.valotOdottaa` + kehyssilmukka):
+käyttöliittymä, musiikki ja vanojen pito tulevat sillä hetkellä, kun
+Afrikka täyttää ruudun. Varaportit: zoomi lähtee viimeistään
+`valot`-jakson alkaessa ja valot syttyvät viimeistään seuraavan jakson
+alkaessa, joten lyhyt äänite ei jätä avausta roikkumaan.
+
+Kamera-ajo elää laudan omassa silmukassa, joten **tauko pysäyttää sen
+erikseen**: `pysaytaAvaruusajo` jäädyttää zoomin kelloon kuluneen ajan
+ja kutsuu `kamera().pysaytaKameraAjo()`, ja `jatkaAvaruusajo` ajaa
+saman rajauksen jäljellä olevalla ajalla (ajo lähtee aina siitä
+näkymästä, jossa kamera nyt on). Aikaselaimella eteenpäin hypännyt
+pelaaja ei herätä keskeytynyttä avausajoa (`avausOhi`).
+
+### 17.7 Mittarit ja mitatut luvut
+
+`esitys.tila()` sai avauksen mittarit: `avausOdottaa`, `avausOhi`,
+`zoominHetki`, `zoomLahti` (`{ jakso, kulunut, hetki, luenta }`),
+`tahtiEsiin`, `keskella`, `lause`, `lauseita`, `teksti`, `tekstiNakyy`.
+
+`zoomLahti` on savuketta varten: kontin ohjelmisto-WebGL piirtää pallon
+noin kehyksen sekunnissa, eikä näytteenotto mahdu siihen 1,8 sekuntiin,
+joka jää sanasta jakson loppuun — ohjaaja kirjaa hetken silloin kun se
+tapahtuu. Samasta syystä savuke **pysäyttää esityksen samalla
+silmukkakierroksella**, jolla ehto täyttyy (`odotaJaPysayta`); erillinen
+odotus ja erillinen mittaus mittasivat eri hetkiä.
+
+Savuke `tools/savukkeet/savuke-ihmisen-esitys.mjs`:
+
+- `VAIN_AVAUS=1` ajaa vain avausosan (musta → ensimmäinen kohde).
+- Avausjaksot saavat 9 sekunnin mock-hiljaisuuden (muut 3 s), koska
+  7 sekunnin zoomi ei mahtuisi kolmen sekunnin luentaan.
+- Kuvat: `0-musta`, `1-tahdet`, `2-afrikka-pisteena`, `3-tauko-avauksessa`,
+  `4-afrikka-puolivalissa`, `5-valot-afrikkaan`, `6-teksti-alhaalla`.

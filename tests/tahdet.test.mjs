@@ -219,8 +219,8 @@ test('avaus lähtee laudan katon takaa ja palauttaa katon', () => {
   assert.ok(TAHTIEN_HAIVE > 0 && TAHTIEN_HAIVE < 1, `${TAHTIEN_HAIVE}`);
   assert.ok(AVARUUDEN_HARSO > 0 && AVARUUDEN_HARSO < 1, `${AVARUUDEN_HARSO}`);
   const puhdas = koodi(OHJAAJA);
-  const avaus = puhdas.slice(puhdas.indexOf('const avaruusavaus = ()'), puhdas.indexOf('const avaruuttaJaljella'));
-  assert.match(avaus, /avaaKaukaisuus\(keski\)/, 'avaus ei avaa etäisyyskattoa');
+  const avaus = puhdas.slice(puhdas.indexOf('const avaruusavaus = ()'), puhdas.indexOf('const avaruudenKulunut'));
+  assert.match(avaus, /avaaKaukaisuus\(alueenKeskus\('afrikka'\)\)/, 'avaus ei avaa etäisyyskattoa');
   assert.match(avaus, /ajaAlueeseen\('afrikka', AVARUUDEN_MS\)/,
     'zoomi ei aja Afrikkaan laudan omalla ajolla');
   assert.match(avaus, /if \(reduced\) \{[\s\S]*?ajaAlueeseen\('afrikka', 0\)/,
@@ -233,13 +233,13 @@ test('avaus lähtee laudan katon takaa ja palauttaa katon', () => {
   assert.match(kaukaisuus, /pallo\.pointOfView\(\{ \.\.\.keski, altitude: AVARUUDEN_KORKEUS \}, 0\)/,
     'lähtönäkymä ei tule laudan omasta pointOfView-kutsusta');
   /*
-   * UUTTA KAMERAMOOTTORIA EI TEHDÄ. Avauksen ainoa kehyskutsu on
-   * harson luokanvaihto (css hoitaa liu'un); kameraa liikuttavat vain
-   * laudan omat `pointOfView` (lähtönäkymä) ja `ajaKamera` (zoomi).
+   * UUTTA KAMERAMOOTTORIA EI TEHDÄ. Avauksen ainoa kehyskutsu on mustan
+   * luokanvaihto (css hoitaa liu'un); kameraa liikuttavat vain laudan
+   * omat `pointOfView` (lähtönäkymä) ja `ajaKamera` (zoomi).
    */
   const kehyskutsut = (avaus.match(/requestAnimationFrame/g) ?? []);
   assert.equal(kehyskutsut.length, 1, `avauksessa ${kehyskutsut.length} kehyskutsua`);
-  assert.match(avaus, /requestAnimationFrame\(\(\) => peite\.classList\.add\('kirkastuu'\)\);/);
+  assert.match(avaus, /requestAnimationFrame\(\(\) => peite\.classList\.remove\('musta'\)\);/);
   assert.ok(!/pointOfView/.test(avaus), 'zoomi ohittaa laudan kameran');
 });
 
@@ -264,18 +264,31 @@ test('kertoja alkaa jo pimeydestä eikä muistista jatkettaessa ole avaruutta', 
     'muistista jatkettaessa luodaan avaruus');
 });
 
-test('musta on pallon ALLA eikä linssin peitteessä', () => {
+test('musta on ensin peitteessä ja sitten pallon ALLA', () => {
+  /*
+   * KOLME TILAA, TÄSSÄ JÄRJESTYKSESSÄ (Raamattu AVAUS MUSTASTA TAHTIIN
+   * JA AFRIKKAAN SANAN KOHDALLA, omistaja 8.9.2026: *"kokonaan musta
+   * ruutu ja sitten siihen feidautuisi ensin tähtiä"*):
+   *
+   *   1. `avaruus musta` — peite läpinäkymätön: ei palloa, ei tähtiä.
+   *   2. `avaruus`       — harso (AVARUUDEN_HARSO): tähdet ja pallon
+   *                        alla oleva musta levy tulevat näkyviin.
+   *   3. `kirkastuu`     — harso pois zoomin tahdissa.
+   */
   const puhdas = koodi(OHJAAJA);
   assert.match(puhdas, /koti\.prepend\(levy\);/,
     'musta levy ei mene karttaruudun ensimmäiseksi lapseksi (jäisi pallon päälle)');
-  assert.ok(!/peite\.classList\.add\('musta'\)/.test(puhdas),
-    'peite on yhä läpinäkymätön musta — pallo ei näkyisi pimeydestä');
-  assert.match(puhdas, /peite\.classList\.add\('avaruus'\)/);
+  assert.match(puhdas, /peite\.classList\.add\('avaruus', 'musta'\)/,
+    'avaus ei ala kokonaan mustasta ruudusta');
+  assert.match(puhdas, /requestAnimationFrame\(\(\) => peite\.classList\.remove\('musta'\)\)/,
+    'musta ei väisty tähtien tieltä');
   assert.match(CSS, /\.aikajana-avaruus \{[\s\S]{0,300}position: absolute;/);
   assert.match(CSS, /\.aikajana-avaruus\.pois \{ opacity: 0; \}/);
-  assert.match(CSS, /\.aikajana-esitys-peite\.avaruus \{[\s\S]{0,160}opacity: 0\.55;/,
+  assert.match(CSS, /\.aikajana-esitys-peite\.avaruus \{[\s\S]{0,160}opacity: 0\.35;/,
     'harso puuttuu: kaukainen pallo ei ole tumma');
-  assert.match(CSS, /\.aikajana-esitys-peite\.avaruus\.kirkastuu \{ opacity: 0; \}/);
+  assert.match(CSS, /\.aikajana-esitys-peite\.avaruus\.musta \{ opacity: 1;/,
+    'musta ruutu ei ole läpinäkymätön');
+  assert.match(CSS, /\.aikajana-esitys-peite\.avaruus\.kirkastuu \{ opacity: 0;/);
 });
 
 test('tähtimoduuli ei tiedä linssistä eikä kertomuksesta', () => {

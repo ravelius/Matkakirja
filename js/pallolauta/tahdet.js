@@ -89,14 +89,31 @@ export function tahtipisteet({
   return ulos;
 }
 
-/** Kerrokset valmiina joukkoina kirjaston hiukkaskerrokselle. */
-export function tahtijoukot(kerrokset = TAHTIKERROKSET, siemen = 20260907) {
+/**
+ * Kerrokset valmiina joukkoina kirjaston hiukkaskerrokselle.
+ *
+ * `kerroin` VENYTTÄÄ TAIVAAN KAUEMMAS (avausjakso, 8.9.2026). Kerroin 1
+ * on laudan oma taivas pallon lähellä; avauksessa kamera on kymmenien
+ * pallonsäteiden päässä (js/linssit/ihmisen-matka-esitys.js
+ * AVARUUDEN_KORKEUS), ja ilman venytystä koko taivas kutistuisi pieneksi
+ * ryppääksi ruudun keskelle pallon viereen. Kerroin siirtää kirkkaat
+ * kerrokset kameran TAAKSE (säde > kameran etäisyys), jolloin tähtiä on
+ * joka suunnassa kuten yötaivaalla, ja pölykerros jää eteen antamaan
+ * parallaksin zoomin aikana.
+ */
+export function tahtijoukot(kerrokset = TAHTIKERROKSET, siemen = 20260907, kerroin = 1) {
+  const k0 = Number.isFinite(kerroin) && kerroin > 0 ? kerroin : 1;
   return kerrokset.map((k, i) => ({
     tunnus: k.tunnus,
-    koko: k.koko,
+    // KOKO KASVAA SAMASSA SUHTEESSA: pisteen koko pienenee etäisyyden
+    // mukaan (particlesSizeAttenuation), joten venytetty taivas olisi
+    // muuten yhtä paljon himmeämpi kuin se on kauempana.
+    koko: k.koko * k0,
     vari: k.vari,
     ajautuu: Boolean(k.ajautuu),
-    pisteet: tahtipisteet({ maara: k.maara, korkeus: k.korkeus, siemen: siemen + i * 7919 }),
+    pisteet: tahtipisteet({
+      maara: k.maara, korkeus: [k.korkeus[0] * k0, k.korkeus[1] * k0], siemen: siemen + i * 7919,
+    }),
   }));
 }
 
@@ -104,13 +121,13 @@ export function tahtijoukot(kerrokset = TAHTIKERROKSET, siemen = 20260907) {
  * Tähtitaivas pallon näyttämölle.
  *
  * @param {object} pallo Globe.gl-instanssi (ui.pallonInstanssi)
- * @param {{ reducedMotion?: boolean, ikkuna?: object }} asetukset
+ * @param {{ reducedMotion?: boolean, ikkuna?: object, kerroin?: number }} asetukset
  * @returns {{ paivita: (dt: number, peitto: number) => void,
  *   tila: () => object, pura: () => void }|null}
  */
-export function luoTahtitaivas(pallo, { reducedMotion = false, ikkuna = globalThis } = {}) {
+export function luoTahtitaivas(pallo, { reducedMotion = false, ikkuna = globalThis, kerroin = 1 } = {}) {
   if (!pallo?.particlesData || !pallo.scene) return null;
-  const joukot = tahtijoukot();
+  const joukot = tahtijoukot(TAHTIKERROKSET, undefined, kerroin);
   const sade = pallo.getGlobeRadius?.() ?? 100;
   const mittakaava = sade / 100;
   try {
