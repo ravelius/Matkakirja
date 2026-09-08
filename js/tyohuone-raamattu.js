@@ -4216,6 +4216,16 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'KOKO EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA, EUROPE-SAAPUMISET ARKISTOON '
+          + '(omistaja 8.9.2026 klo 19.00, sanatarkasti: "joo kirjoita niille omat ja '
+          + 'arkistoi europe-saapumiset tiedosto ja kirjoita sen alkuun EI ENAA '
+          + 'KAYTOSSA tms tai miten vain parhaiten saadaan pelista pois etta ei '
+          + 'vahingossa palaa"): Kreeta, Sisilia, Islanti, Alpit, Rovaniemi (lappi) '
+          + 'ja Tromssa saavat omat fokusvirtapakit (Fablen matkakirjatekstit, '
+          + 'tunnelmarivi, pulun yksi kupla). Vanha EUROPE_SAAPUMISET-taulu '
+          + 'poistetaan pelin koodista ja siirretaan arkistoon EI ENAA KAYTOSSA '
+          + '-otsikolla; vartiotesti estaa sen paluun. Afrikan ja Aasian '
+          + 'saapumistaulut jaavat, kunnes niillakin on pakit.',
         'PULULLA YKSI KUPLA PER KAUPUNKI (omistaja 8.9.2026 klo 18.50, sanatarkasti: '
           + '"olisiko parempi jos pululla olisi vain yksi kupla per kaupunki. ja '
           + 'taytyy olla tarkkana sen mitan kanssa" ja "tama tiivis kahden asian '
