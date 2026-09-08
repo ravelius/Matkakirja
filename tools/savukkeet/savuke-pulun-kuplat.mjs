@@ -13,21 +13,33 @@
  * että puhekupla ja chattihistoria tallentuisi ja olisi kelattavissa
  * taaksepäin."*
  *
+ * PÄIVITYS 8.9.2026 (Raamattu, "PULUN HUUDAHDUS EI KESKEYTA LUKIJAA,
+ * JA KUPLAPINO NAKYY KAHDEKSAAN RIVIIN ASTI KUNNES KARTTA LIIKKUU"),
+ * sanatarkasti: *"pulun puhekuplat voivat näkyä sittenkin 8 riviin
+ * asti, mutta kun karttaa liikutetaan ne saavat pienentyä nykyisellä
+ * tavalla."* Oletus on siis AUKI kattoon asti; supistus on kartan
+ * eleen (tai Escapen) mittainen tila, ja seuraava kupla avaa pinon taas.
+ *
  * VARTIOT (puhelinkoko 390 × 844):
- *   1. Kaksi peräkkäistä kuplaa: molemmat ovat pinossa, mutta ruudulla
- *      näkyy vain viimeisin — ja sen yläpuolella edellisen kuplan
- *      ALAOSA noin 2.2 rem:n verran, yläreunasta häivyttäen (omistaja
- *      7.9.2026 ilta). Yhden kuplan pinossa ei lisäkorkeutta.
- *   2. Rullaus kuplan päällä laajentaa: näkyvä korkeus kasvaa, useampi
- *      kupla näkyy, eikä katto ylitä 45 % ruudun korkeudesta.
- *   3. Kartan kosketus (pointerdown kartalla) supistaa takaisin yhteen.
- *   4. Chat auki: tervehdys on lyhyt ja sen ydin lihavoitu, ja pulun
+ *   1. Kaksi peräkkäistä kuplaa: molemmat ovat pinossa JA näkyvät
+ *      kokonaan — oletus on auki css:n kahdeksan rivin kattoon asti,
+ *      eikä mitään kurkisteta tai häivytetä. Yhden kuplan pinossa ei
+ *      lisäkorkeutta.
+ *   2. Kartan kosketus (pointerdown kartalla) supistaa yhteen kuplaan
+ *      nykyisellä tavalla: ruudulla on viimeisin kupla ja sen yllä
+ *      edellisen ALAOSA noin 2.2 rem:n verran, yläreunasta häivyttäen
+ *      (omistaja 7.9.2026 ilta).
+ *   3. Uusi kupla avaa supistetun pinon takaisin auki: uusi puheenvuoro
+ *      näkyy kokonaisena.
+ *   4. Escape supistaa myös oletustilan, ja rullaus kuplan päällä avaa
+ *      pinon taas (pelaajan oma laajennus).
+ *   5. Chat auki: tervehdys on lyhyt ja sen ydin lihavoitu, ja pulun
  *      omat repliikit näkyvät .pollo-kuplaviesti-kuplina (oma pohja ja
  *      kärki, ei tavallisen rivin taustaa).
- *   5. Sivun uudelleenlataus: kuplat ovat yhä luettavissa chatissa
+ *   6. Sivun uudelleenlataus: kuplat ovat yhä luettavissa chatissa
  *      (laitteen loki 'matkakirja-livia-loki').
- *   6. Laajennettu pino nostaa saman lokin aiemmat puheenvuorot kartan
- *      päälle kelattaviksi.
+ *   7. Laajennettu pino nostaa saman lokin aiemmat puheenvuorot kartan
+ *      päälle kelattaviksi — oletustilassa historiaa EI haeta.
  *
  * Aja:  node tools/savukkeet/savuke-pulun-kuplat.mjs [kuvakansio]
  */
@@ -159,6 +171,7 @@ const KUPLA_1 = 'Kaak. Ateena on vanha kaupunki, ja isoisäsi käveli täällä 
   + 'kesäkuussa 1873 aivan liian ohuissa kengissä.';
 const KUPLA_2 = 'Ja sitten: torilla myytiin jäätä, jota oli kannettu vuorilta. '
   + 'Sitä minä en olisi uskonut.';
+const KUPLA_3 = 'Ja tuolla ylhäällä on se temppeli, josta isoisäsi ei kirjoittanut sanaakaan.';
 
 await puhu(KUPLA_1);
 
@@ -177,9 +190,42 @@ vaadi('yhden kuplan pinoa ei häivytetä',
 
 await puhu(KUPLA_2);
 
+/*
+ * 1. OLETUS ON AUKI KATTOON ASTI (omistaja 8.9.2026): kaksi kuplaa
+ * mahtuu kahdeksaan riviin, joten molemmat näkyvät kokonaan — mitään ei
+ * ole leikattu, joten kurkistusta eikä häivytystä ei ole.
+ */
+const auki = await lueP1no();
+tieto('pino oletuksena', JSON.stringify(auki));
+vaadi('molemmat kuplat ovat pinossa', auki?.kuplia === 2, JSON.stringify(auki));
+vaadi('oletuksena molemmat kuplat näkyvät kokonaan', auki?.nakyvia === 2, JSON.stringify(auki));
+vaadi('oletuksena pino on auki kattoon asti', auki?.laaja === true, JSON.stringify(auki));
+vaadi('auki olevaa pinoa ei kurkisteta eikä häivytetä',
+  auki?.kurkistus === false && haivePx(auki?.haive, auki?.rem ?? 16) === 0,
+  `${auki?.kurkistus} / ${auki?.haive}`);
+vaadi('auki olevan pinon kuplat ovat napautettavia',
+  await sivu.evaluate(() => {
+    const kupla = [...document.querySelectorAll('.pollo-kuplapino > *')].at(-2);
+    return kupla ? getComputedStyle(kupla).pointerEvents !== 'none' : false;
+  }), 'kokonaan näkyvä kupla ei ota napautusta vastaan');
+vaadi('pino ei ylitä 45 % ruudun korkeudesta',
+  Boolean(auki) && auki.korkeus <= RUUTU.height * 0.45,
+  `${auki?.korkeus} px / ${RUUTU.height} px`);
+if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '1-auki.png') });
+
+/* 2. Kartan kosketus supistaa yhteen kuplaan — nykyisellä tavalla. */
+const vedaKarttaa = async () => {
+  await sivu.mouse.move(Math.round(RUUTU.width / 2), Math.round(RUUTU.height / 3));
+  await sivu.mouse.down();
+  await sivu.mouse.move(Math.round(RUUTU.width / 2) + 30, Math.round(RUUTU.height / 3) + 20);
+  await sivu.mouse.up();
+  await sivu.waitForTimeout(700);
+};
+await vedaKarttaa();
+
 const supistettu = await lueP1no();
-tieto('pino supistettuna', JSON.stringify(supistettu));
-vaadi('molemmat kuplat ovat pinossa', supistettu?.kuplia === 2, JSON.stringify(supistettu));
+tieto('pino kartan vedon jälkeen', JSON.stringify(supistettu));
+vaadi('kartan liike supistaa pinon', supistettu?.laaja === false, JSON.stringify(supistettu));
 vaadi('ruudulla näkyy kokonaan vain viimeisin kupla', supistettu?.nakyvia === 1,
   JSON.stringify(supistettu));
 /*
@@ -209,9 +255,27 @@ vaadi('häipyvä sliveri ei ota napautusta vastaan',
     const kupla = [...document.querySelectorAll('.pollo-kuplapino > *')].at(-2);
     return kupla ? getComputedStyle(kupla).pointerEvents === 'none' : false;
   }), 'edellinen kupla on napautettavissa supistetussa pinossa');
-if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '1-supistettu.png') });
+if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '2-supistettu.png') });
 
-/* 2. Rullaus kuplan päällä laajentaa näkymän. */
+/* 3. Uusi kupla avaa supistetun pinon takaisin auki. */
+await puhu(KUPLA_3);
+const avautunut = await lueP1no();
+tieto('pino uuden kuplan jälkeen', JSON.stringify(avautunut));
+vaadi('uusi kupla avaa supistetun pinon', avautunut?.laaja === true, JSON.stringify(avautunut));
+vaadi('avautuneessa pinossa näkyy useampi kupla', Boolean(avautunut) && avautunut.nakyvia >= 2,
+  JSON.stringify(avautunut));
+vaadi('avautunutta pinoa ei kurkisteta', avautunut?.kurkistus === false,
+  JSON.stringify(avautunut));
+if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '3-uusi-kupla.png') });
+
+/* 4. Escape supistaa myös oletustilan, ja rullaus avaa pinon taas. */
+await sivu.keyboard.press('Escape');
+await sivu.waitForTimeout(700);
+const escapella = await lueP1no();
+tieto('pino Escapen jälkeen', JSON.stringify(escapella));
+vaadi('Escape supistaa pinon',
+  escapella?.laaja === false && escapella?.nakyvia === 1, JSON.stringify(escapella));
+
 const kohta = await sivu.evaluate(() => {
   const r = document.querySelector('.pollo-kuplapino')?.getBoundingClientRect();
   return r ? { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) } : null;
@@ -219,43 +283,15 @@ const kohta = await sivu.evaluate(() => {
 await sivu.mouse.move(kohta.x, kohta.y);
 await sivu.mouse.wheel(0, -120);
 await sivu.waitForTimeout(700);
-
-const laaja = await lueP1no();
-tieto('pino laajennettuna', JSON.stringify(laaja));
-vaadi('rullaus laajentaa pinon', Boolean(laaja?.laaja), JSON.stringify(laaja));
-vaadi('laajennettuna korkeus kasvaa', Boolean(laaja) && laaja.korkeus > supistettu.korkeus + 20,
-  `${supistettu?.korkeus} → ${laaja?.korkeus}`);
-vaadi('laajennettuna näkyy useampi kupla', Boolean(laaja) && laaja.nakyvia >= 2,
-  JSON.stringify(laaja));
+const rullattu = await lueP1no();
+tieto('pino rullauksen jälkeen', JSON.stringify(rullattu));
+vaadi('rullaus laajentaa supistetun pinon',
+  rullattu?.laaja === true && rullattu?.nakyvia >= 2, JSON.stringify(rullattu));
 vaadi('laajennettu pino ei ylitä 45 % ruudun korkeudesta',
-  Boolean(laaja) && laaja.korkeus <= RUUTU.height * 0.45,
-  `${laaja?.korkeus} px / ${RUUTU.height} px`);
-if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '2-laajennettu.png') });
+  Boolean(rullattu) && rullattu.korkeus <= RUUTU.height * 0.45,
+  `${rullattu?.korkeus} px / ${RUUTU.height} px`);
 
-/* 3. Kartan kosketus supistaa takaisin yhteen kuplaan. */
-await sivu.mouse.move(Math.round(RUUTU.width / 2), Math.round(RUUTU.height / 3));
-await sivu.mouse.down();
-await sivu.mouse.move(Math.round(RUUTU.width / 2) + 30, Math.round(RUUTU.height / 3) + 20);
-await sivu.mouse.up();
-await sivu.waitForTimeout(700);
-
-const uudelleen = await lueP1no();
-tieto('pino kartan vedon jälkeen', JSON.stringify(uudelleen));
-vaadi('kartan liike supistaa pinon', uudelleen?.laaja === false, JSON.stringify(uudelleen));
-vaadi('supistuttuaan näkyy kokonaan taas vain viimeisin', uudelleen?.nakyvia === 1,
-  JSON.stringify(uudelleen));
-/*
- * Supistuksen jälkeen pohja on POHJA: liu'un aikana pino pidetään
- * pohjassa (js/pollo.js pidaPinoPohjassa), joten ruudulle jää uusin
- * kupla ja sen yllä edellisen ALAOSA — ei koko edellistä kuplaa.
- */
-vaadi('supistuttuaan edellinen kupla pilkottaa taas',
-  uudelleen?.kurkistus === true && uudelleen.edellisenSiivu > 8
-  && uudelleen.edellisenYlaOhi
-  && uudelleen.edellisenSiivu <= supistettu.edellisenSiivu + 2
-  && haivePx(uudelleen?.haive, uudelleen?.rem ?? 16) > 8, JSON.stringify(uudelleen));
-
-/* 4. Chat: lyhyt tervehdys lihavoidulla ytimellä ja kupla-viestit. */
+/* 5. Chat: lyhyt tervehdys lihavoidulla ytimellä ja kupla-viestit. */
 await sivu.evaluate(() => document.querySelector('.pollo-nappi')?.click());
 await sivu.waitForTimeout(900);
 
@@ -281,7 +317,7 @@ tieto('tervehdyksen pituus', `${chat.tervehdys.length} merkkiä`);
 vaadi('tervehdys on lyhyt (alle 200 merkkiä)', chat.tervehdys.length > 0 && chat.tervehdys.length < 200,
   `${chat.tervehdys.length}: ${chat.tervehdys}`);
 vaadi('tervehdyksen ydin on lihavoitu', /Kysy mitä vain/.test(chat.lihavoitu), chat.lihavoitu);
-vaadi('pulun repliikit ovat chatissa kuplaviesteinä', chat.kuplia === 2,
+vaadi('pulun repliikit ovat chatissa kuplaviesteinä', chat.kuplia === 3,
   JSON.stringify(chat.kuplienTekstit));
 vaadi('kuplaviestillä on oma pohja ja ohut reuna',
   chat.kuplanTausta !== 'rgba(0, 0, 0, 0)' && chat.kuplanTausta !== chat.tavallisenTausta
@@ -291,9 +327,9 @@ vaadi('kupla on kevyt: ei varjoa', chat.kuplanVarjo === 'none' || chat.kuplanVar
   chat.kuplanVarjo);
 vaadi('kuplalla on kärki (::after)', chat.karjenSisalto === '""' || chat.karjenSisalto === 'none' ? chat.karjenSisalto === '""' : false,
   chat.karjenSisalto);
-if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '3-chat.png') });
+if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '4-chat.png') });
 
-/* 5. Uudelleenlataus: historia palaa laitteen lokista. */
+/* 6. Uudelleenlataus: historia palaa laitteen lokista. */
 const loki = await sivu.evaluate(() => {
   try { return JSON.parse(localStorage.getItem('matkakirja-livia-loki') ?? '[]'); } catch { return []; }
 });
@@ -321,9 +357,13 @@ vaadi('kuplat ovat luettavissa uudelleenlatauksen jälkeen',
   && paluu.teksti.includes('torilla myytiin jäätä'), paluu.teksti.slice(0, 200));
 vaadi('ladatut rivit näkyvät kuplina', paluu.kuplina >= 2, String(paluu.kuplina));
 vaadi('tervehdys tulee silti', paluu.tervehdys, 'tervehdys puuttuu historian alta');
-if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '4-historia.png') });
+if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '5-historia.png') });
 
-/* 6. Laajennettu pino hakee saman lokin aiemmat puheenvuorot esiin. */
+/*
+ * 7. Laajennettu pino hakee saman lokin aiemmat puheenvuorot esiin —
+ *    oletustilassa niitä EI haeta (omistaja 8.9.2026: kartan päällä
+ *    näkyy vain se, mitä pulu on juuri nyt sanonut).
+ */
 await sivu.evaluate(() => document.querySelector('.pollo-nappi')?.click());
 await sivu.waitForTimeout(600);
 await puhu('Kuule, minä muistan tämän kadun. Tai luin siitä.');
@@ -341,12 +381,13 @@ const historiaPinossa = await sivu.evaluate(() => ({
   teksti: [...document.querySelectorAll('.pollo-vihje-vanha')].map((k) => k.textContent).join(' | '),
 }));
 tieto('pino laajennettuna lokin kanssa', JSON.stringify(historiaPinossa));
+vaadi('oletustilassa pinossa on vain tämän saapumisen kupla',
+  ennenKelausta?.kuplia === 1, `${ennenKelausta?.kuplia} kuplaa ennen kelausta`);
 vaadi('laajennus nostaa lokin vanhat kuplat pinoon',
-  ennenKelausta?.kuplia === 1 && historiaPinossa.vanhoja >= 2,
-  `${ennenKelausta?.kuplia} → ${historiaPinossa.kuplia}`);
+  historiaPinossa.vanhoja >= 2, `${ennenKelausta?.kuplia} → ${historiaPinossa.kuplia}`);
 vaadi('vanhat kuplat ovat samaa lokia kuin chatissa',
   historiaPinossa.teksti.includes('kesäkuussa 1873'), historiaPinossa.teksti.slice(0, 160));
-if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '5-pinon-historia.png') });
+if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '6-pinon-historia.png') });
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
 

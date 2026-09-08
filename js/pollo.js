@@ -837,9 +837,24 @@ const KELLUVAN_NAPIN_VARAPAIKKA = { reuna: 18, koko: 46, pohja: 85 };
  *
  * Pino EI muutu: kuplat ovat yhä omia elementtejään ja pino on
  * vieritettävä. Muutos on pinon KORKEUDESSA — supistettuna sen katto on
- * viimeisimmän kuplan mitta (js/pollo.js paivitaPinonKorkeus), ja
- * laajennettuna css:n oma katto (noin kymmenen tekstiriviä). Molemmat
- * ovat pikselimittoja, joten selain osaa liu'uttaa niiden välillä.
+ * viimeisimmän kuplan mitta (js/pollo.js paivitaPinonKorkeus), ja auki
+ * css:n oma katto (kahdeksan tekstiriviä). Molemmat ovat pikselimittoja,
+ * joten selain osaa liu'uttaa niiden välillä.
+ *
+ * ── OLETUS ON AUKI, KARTAN LIIKE SUPISTAA (omistaja 8.9.2026) ───────
+ * Raamattu "PULUN HUUDAHDUS EI KESKEYTA LUKIJAA, JA KUPLAPINO NAKYY
+ * KAHDEKSAAN RIVIIN ASTI KUNNES KARTTA LIIKKUU", sanatarkasti:
+ * *"pulun huuhdahdukset luennan väliin ei tarvitse keskeyttää lukijan
+ * ääntä. lisäksi pulun puhekuplat voivat näkyä sittenkin 8 riviin asti,
+ * mutta kun karttaa liikutetaan ne saavat pienentyä nykyisellä
+ * tavalla."*
+ *
+ * Kuplat näkyvät siis pinona heti kattoon asti (yli jäävä häipyy
+ * yläreunasta ja on vieritettävissä), ja vasta kartan liike tai Escape
+ * supistaa pinon yhteen kuplaan — nykyisellä liu'ulla ja kurkistuksella.
+ * Seuraava uusi kupla avaa pinon taas: uusi puheenvuoro näkyy
+ * kokonaisena (ks. lisaaPinoon). Tiloja on siksi kolme eikä kaksi,
+ * ks. Pollo-luokan `pinoTila`.
  */
 const PINON_LAAJENNUS_MS = 300;
 
@@ -1574,11 +1589,23 @@ class Pollo {
     this.kesken = false;
     this.historia = [];
     /*
-     * KUPLAPINON LAAJUUS (omistaja 7.9.2026): kartan päällä näkyy vain
-     * viimeisin kupla, kunnes pelaaja kelaa historiaa. Kartan liike
-     * supistaa näkymän takaisin (ks. paivitaPinonKorkeus).
+     * KUPLAPINON KOLME TILAA (omistaja 8.9.2026, ks. moduulin lohko
+     * OLETUS ON AUKI, KARTAN LIIKE SUPISTAA):
+     *
+     *   'auki'       OLETUS: kuplat näkyvät pinona css:n kattoon
+     *                (kahdeksan riviä) asti, ilman lokin historiaa.
+     *   'laaja'      pelaajan oma laajennus (napautus, rulla, nuoli
+     *                ylös): sama katto, mutta lokin aiemmat
+     *                puheenvuorot haetaan kelattaviksi
+     *                (taytaPinoHistorialla).
+     *   'supistettu' kartan liike tai Escape: vain viimeisin kupla ja
+     *                edellisen kurkistus (ks. paivitaPinonKorkeus).
+     *
+     * Ruudulla 'auki' ja 'laaja' näyttävät samalta — ero on vain siinä,
+     * onko historia haettu. Supistuksesta noustaan takaisin auki heti
+     * seuraavasta kuplasta (ks. lisaaPinoon).
      */
-    this.pinoLaaja = false;
+    this.pinoTila = 'auki';
     this.pinonHistoriaLisatty = false;
     /*
      * AIEMMAT PUHEENVUOROT luetaan KERRAN, tässä: istunnon omat kuplat
@@ -2633,7 +2660,7 @@ class Pollo {
       if (tapahtuma.key === 'ArrowUp') {
         tapahtuma.preventDefault();
         this.laajennaPino();
-      } else if (tapahtuma.key === 'Escape' && this.pinoLaaja) {
+      } else if (tapahtuma.key === 'Escape' && this.pinoTila !== 'supistettu') {
         tapahtuma.preventDefault();
         tapahtuma.stopPropagation();
         this.supistaPino();
@@ -2651,33 +2678,46 @@ class Pollo {
   /* --- pinon laajuus: viimeisin kupla vai koko historia ------------ */
 
   /**
-   * PINO LAAJENEE YLÖSPÄIN (omistaja 7.9.2026).
+   * PELAAJAN OMA LAAJENNUS: 'auki' tai 'supistettu' → 'laaja'
+   * (napautus, rulla, nuoli ylös).
    *
-   * Laajennus tuo kuplien yläpuolelle myös lokin aiemmat puheenvuorot
+   * KORKEUS ON JO OLETUKSENA KATOSSA (omistaja 8.9.2026), joten tämä ei
+   * ole enää ruudulla näkyvä loikka vaan HISTORIAN haku: laajennus tuo
+   * kuplien yläpuolelle myös lokin aiemmat puheenvuorot
    * (taytaPinoHistorialla), jotta kelattavaa on silloinkin kun tämän
-   * saapumisen kuplia on vain yksi.
+   * saapumisen kuplia on vain yksi. Oletustilassa historiaa EI haeta —
+   * kartan päällä näkyy vain se, mitä pulu on juuri nyt sanonut.
+   *
+   * Supistetusta pinosta laajennus nostaa suoraan 'laajaan': pelaaja
+   * pyysi nimenomaan vanhoja sanoja näkyviin.
    */
   laajennaPino() {
-    if (this.pinoLaaja || !this.pino) return;
-    this.pinoLaaja = true;
+    if (this.pinoTila === 'laaja' || !this.pino) return;
+    this.pinoTila = 'laaja';
     this.taytaPinoHistorialla();
     this.paivitaPinonKorkeus();
   }
 
   /**
    * PINO SUPISTUU TAKAISIN YHTEEN KUPLAAN: kartan liike, Escape tai
-   * napautus muualle (ks. seuraaSulkemista).
+   * napautus muualle (ks. seuraaSulkemista). Sama liuku ja sama
+   * kurkistus kuin ennen (omistaja 8.9.2026: *"kun karttaa liikutetaan
+   * ne saavat pienentyä nykyisellä tavalla"*) — nyt myös oletustilasta
+   * 'auki', ei vain pelaajan omasta laajennuksesta.
    */
   supistaPino() {
-    if (!this.pinoLaaja) return;
-    this.pinoLaaja = false;
+    if (this.pinoTila === 'supistettu') return;
+    this.pinoTila = 'supistettu';
     this.paivitaPinonKorkeus();
   }
 
   /**
-   * Pinon katto: supistettuna viimeisimmän kuplan mitta, laajennettuna
-   * css:n oma katto (noin kymmenen tekstiriviä, puhelimella enintään
-   * 45 % ruudusta).
+   * Pinon katto: supistettuna viimeisimmän kuplan mitta, auki css:n oma
+   * katto (kahdeksan tekstiriviä, puhelimella enintään 45 % ruudusta).
+   *
+   * KATTO ON OLETUS (omistaja 8.9.2026): sekä 'auki' että 'laaja'
+   * piirtyvät kattoon asti ja saavat luokan .pollo-kuplapino-laaja —
+   * vain 'supistettu' mitoitetaan viimeisimmän kuplan mukaan.
    *
    * Molemmat ovat pikselimittoja — myös css:n `min(45vh, 14rem)` on
    * laskettuna pikseleitä — joten selain liu'uttaa niiden välillä
@@ -2691,9 +2731,12 @@ class Pollo {
     const pino = this.pino;
     if (!pino) return;
     const ilman = heti || this.vahaLiiketta();
-    pino.classList.toggle('pollo-kuplapino-laaja', this.pinoLaaja);
-    this.pinoKehys?.classList.toggle('pollo-kuplapino-laaja', this.pinoLaaja);
-    this.pinoKehys?.setAttribute('aria-expanded', this.pinoLaaja ? 'true' : 'false');
+    // 'auki' ja 'laaja' ovat ruudulla sama asia: katto on css:n
+    // kahdeksan riviä. Vain supistettu mitataan viimeisimmästä kuplasta.
+    const kattoon = this.pinoTila !== 'supistettu';
+    pino.classList.toggle('pollo-kuplapino-laaja', kattoon);
+    this.pinoKehys?.classList.toggle('pollo-kuplapino-laaja', kattoon);
+    this.pinoKehys?.setAttribute('aria-expanded', kattoon ? 'true' : 'false');
     if (ilman) pino.classList.add('pollo-kuplapino-hyppy');
     /*
      * EDELLINEN KUPLA PILKOTTAA (omistaja 7.9.2026 ilta): supistetun
@@ -2705,7 +2748,7 @@ class Pollo {
      * ensimmäisen rivin.
      */
     let kurkistaa = false;
-    if (this.pinoLaaja) pino.style.maxHeight = '';
+    if (kattoon) pino.style.maxHeight = '';
     else {
       const kuplat = this.pinonKuplat();
       const viimeinen = kuplat.at(-1) ?? null;
@@ -2736,7 +2779,7 @@ class Pollo {
      * mutta ruudulla oli koko edellinen kupla. Siksi pohja pidetään
      * pohjassa jokaisessa kehyksessä liu'un loppuun asti.
      */
-    if (!ilman && !this.pinoLaaja) this.pidaPinoPohjassa();
+    if (!ilman && !kattoon) this.pidaPinoPohjassa();
     this.paivitaYlivuoto();
     /*
      * Ylivuoto mitataan uudelleen, kun korkeuden liuku on ohi: kesken
@@ -2748,7 +2791,7 @@ class Pollo {
     this.pinonKorkeusAjastin = setTimeout(() => {
       this.pinonKorkeusAjastin = null;
       // Varmistin ympäristöille joissa rAF:ää ei ole (ks. pidaPinoPohjassa).
-      if (!this.pinoLaaja) pino.scrollTop = pino.scrollHeight;
+      if (!kattoon) pino.scrollTop = pino.scrollHeight;
       this.paivitaYlivuoto();
     }, PINON_LAAJENNUS_MS + 60);
     if (ilman) {
@@ -2765,8 +2808,9 @@ class Pollo {
   /**
    * Pino pohjassa liu'un loppuun asti: joka kehyksessä uudestaan, koska
    * kutistuva katto siirtää vierityksen ylärajaa vasta sitä mukaa kuin
-   * korkeus muuttuu. Laajennuksessa tätä ei tehdä — silloin pelaaja on
-   * juuri kelaamassa, eikä pinoa saa napata hänen käsistään.
+   * korkeus muuttuu. VAIN SUPISTUKSESSA: auki olevassa pinossa
+   * vieritystä ei napata pelaajan käsistä, ja uuden kuplan pohja
+   * mitataan siellä ilman animaatiota (ks. lisaaPinoon).
    *
    * @param {number} [kesto] kuinka pitkään pohjaa pidetään (ms).
    */
@@ -2778,7 +2822,10 @@ class Pollo {
     if (this.pinonPohjaKaynnissa) return;
     this.pinonPohjaKaynnissa = true;
     const askel = () => {
-      if (!this.pino || this.pinoLaaja) { this.pinonPohjaKaynnissa = false; return; }
+      if (!this.pino || this.pinoTila !== 'supistettu') {
+        this.pinonPohjaKaynnissa = false;
+        return;
+      }
       this.pino.scrollTop = this.pino.scrollHeight;
       if (Date.now() >= (this.pinonPohjaanSaakka ?? 0)) {
         this.pinonPohjaKaynnissa = false;
@@ -2886,13 +2933,23 @@ class Pollo {
     const vanhat = this.pinonKuplat();
     const vaha = this.vahaLiiketta();
     /*
-     * SUPISTETUSSA PINOSSA EI OLE FLIPPIÄ (omistaja 7.9.2026: ruudulla
-     * näkyy vain viimeisin kupla). Vanhat ovat silloin pinon leikkauksen
-     * takana, joten niiden nousu olisi liikettä jota kukaan ei näe — ja
-     * se kilpailisi korkeuden liu'un kanssa. Laajennetussa pinossa
-     * vanhat liukuvat ylös kuten ennenkin.
+     * UUSI PUHEENVUORO AVAA SUPISTETUN PINON (omistaja 8.9.2026:
+     * *"pulun puhekuplat voivat näkyä sittenkin 8 riviin asti, mutta kun
+     * karttaa liikutetaan ne saavat pienentyä nykyisellä tavalla"*).
+     * Supistus on siis kartan eleen mittainen tila eikä pysyvä asetus:
+     * seuraava kupla näkyy taas kokonaisena pinona. Historiaa ei haeta —
+     * se on yhä pelaajan oman laajennuksen asia (laajennaPino).
      */
-    const ennen = vaha || !this.pinoLaaja
+    const avautui = this.pinoTila === 'supistettu';
+    if (avautui) this.pinoTila = 'auki';
+    /*
+     * AVAUTUVASSA PINOSSA EI OLE FLIPPIÄ (omistaja 7.9.2026: supistettu
+     * pino näyttää vain viimeisimmän kuplan). Vanhat ovat silloin vielä
+     * pinon leikkauksen takana, ja niiden nousu kilpailisi katon liu'un
+     * kanssa — kaksi liikettä samaan aikaan näytti räpsähdykseltä. Auki
+     * olevassa pinossa vanhat liukuvat ylös kuten ennenkin.
+     */
+    const ennen = vaha || avautui
       ? null : vanhat.map((k) => k.getBoundingClientRect().top);
     this.pinoKehys.hidden = false;
     pino.appendChild(kupla);
@@ -3026,13 +3083,14 @@ class Pollo {
     const tyhja = this.pinonKuplat().length === 0;
     this.pinoKehys.hidden = tyhja;
     /*
-     * TYHJÄ PINO ALOITTAA SUPISTETTUNA (omistaja 7.9.2026). Laajuus on
+     * TYHJÄ PINO ALOITTAA OLETUKSESTA (omistaja 8.9.2026). Laajuus on
      * pelaajan sen hetkinen valinta, ei pysyvä asetus: kun kaikki
-     * kuplat ovat poistuneet, seuraava puheenvuoro tulee taas yhtenä
-     * kuplana — ja historia haetaan uudelleen, kun sitä taas kelataan.
+     * kuplat ovat poistuneet, seuraava puheenvuoro alkaa taas
+     * oletustilasta 'auki' — kuplat kattoon asti, historia vasta
+     * pyydettäessä.
      */
     if (tyhja) {
-      this.pinoLaaja = false;
+      this.pinoTila = 'auki';
       this.pinonHistoriaLisatty = false;
       this.pino?.style?.removeProperty?.('max-height');
       // Kurkistus kuuluu pinoon jossa on kuplia: tyhjä ei häivytä mitään.
@@ -3726,13 +3784,16 @@ class Pollo {
       /*
        * KARTAN LIIKE SUPISTAA KUPLANÄKYMÄN (omistaja 7.9.2026: *"kun
        * käyttäjä liikuttaa karttaa niin näkymä palaa taas siihen yhteen
-       * kuplaan"*). Vedon alku on pointerdown kartalla — pallolaudalla
+       * kuplaan"*, ja 8.9.2026: *"kun karttaa liikutetaan ne saavat
+       * pienentyä nykyisellä tavalla"* — nyt myös oletustilasta 'auki',
+       * ei vain pelaajan omasta laajennuksesta). Vedon alku on
+       * pointerdown kartalla — pallolaudalla
        * (js/pallo.js) ja tasokartalla sama tapahtuma — ja se kulkee
        * tänne asti, joten kuplat eivät tarvitse omaa kytköstä laudan
        * sisälle. Pinon oma alue on rajattu pois: sen päällä
        * pointerdown on kelausta tai napautus kuplaan.
        */
-      if (this.pinoLaaja && !e.target?.closest?.('.pollo-kuplapino-kehys')) {
+      if (this.pinoTila !== 'supistettu' && !e.target?.closest?.('.pollo-kuplapino-kehys')) {
         this.supistaPino();
       }
       if (!this.auki) return;
@@ -3768,12 +3829,12 @@ class Pollo {
         return;
       }
       /*
-       * ESCAPE SUPISTAA LAAJENNETUN KUPLANÄKYMÄN (saavutettavuus,
-       * omistajan linjaus 7.9.2026). Chatin ollessa auki pinossa ei ole
-       * kuplia, joten järjestys ei voi mennä ristiin: laajennettu pino
-       * on aina chatin sijasta, ei sen päällä.
+       * ESCAPE SUPISTAA KUPLANÄKYMÄN (saavutettavuus, omistajan linjaus
+       * 7.9.2026; 8.9.2026 alkaen myös oletustilasta 'auki'). Chatin
+       * ollessa auki pinossa ei ole kuplia, joten järjestys ei voi mennä
+       * ristiin: pino on aina chatin sijasta, ei sen päällä.
        */
-      if (!this.auki && this.pinoLaaja) {
+      if (!this.auki && this.pinoTila !== 'supistettu') {
         e.preventDefault();
         e.stopPropagation();
         this.supistaPino();
