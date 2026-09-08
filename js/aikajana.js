@@ -1544,6 +1544,13 @@ function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka, varasto = null, pienet =
     } else if (kuvatieto.osoite) {
       asetaAmpariKuva(kuva, kuvatieto.osoite, leveys, { pienet, vara: kuvatieto.vara ?? null });
     } else asetaKuva(kuva, valokuvaUrl(kuvatieto.tiedosto, leveys), valokuvaVara(kuvatieto.tiedosto, leveys));
+    /*
+     * RAJAUKSEN KOHTA (`asento`, 8.9.2026): vaakakuva 4:5-kehyksessä
+     * rajautuu oletuksena keskeltä ylhäältä (css .aikajana-muotokuva),
+     * ja isoisän laiturikuvassa hahmo on vasemmassa kolmanneksessa.
+     * Data saa sanoa, mihin kohtaan kehys osuu (object-position).
+     */
+    if (kuvatieto.asento) kuva.style.objectPosition = kuvatieto.asento;
     // Cabinet cardin valkoinen reunus pois (js/isoisan-valokuvat.js rajausTyyli, css .isoisa-rajattu).
     const rajaus = rajausTyyli(kuvatieto);
     if (rajaus) { kuva.style.cssText += rajaus; kuva.classList.add('isoisa-rajattu'); }

@@ -4216,6 +4216,15 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'ISOISAA EI TUNNISTA MYOSKAAN KEKSINTOLINSSIN 1873-PYSAKILLA (omistaja '
+          + '8.9.2026 klo 11.03, iPad-kaappaus, sanatarkasti: "Tahan pitaa '
+          + 'vaihtaa havainne- seka muotokuva mista isoisaa ei tunnista. '
+          + 'Muotokuvassa voi kayttaa kaukaa otettua kuvaa myos"): saanto '
+          + 'ISOISA JAA ARVOITUKSEKSI koskee kaikkia isoisan kuvia pelissa, myos '
+          + 'keksintolinssin merkkipaalun korttia ja havainnekuvia. Kortin '
+          + 'muotokuva saa olla kaukaa otettu kuva. Valiaikaisesti kaytetaan '
+          + 'saantoa noudattavan sarjan r20260905 kuvia; kuvatoimitukselta on '
+          + 'tilattu pystymuotokuva kaukaa ja lahtohavainnekuva ilman kasvoja.',
         'KEKSINTOLINSSIN KARUSELLIN KELAUS SYTYTTAA KAIKKI VALOT JA PYSAYTTAA '
           + 'ESITYKSEN (omistaja 8.9.2026 aamu, sanatarkasti: "jos '
           + 'keksintolinssissa kelaa alhaalta eri keksintoja niin silloin kaikki '
