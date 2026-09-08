@@ -173,14 +173,15 @@ export const FOKUSVIRTA_ROOMA = {
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
-    paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 400 merkkiä (yläraja 400). */
-    teksti: 'Koko kaupunki puhuu miehestä, joka ei suostu tulemaan ulos: paavi '
-      + 'ei ole kolmeen vuoteen ylittänyt Vatikaanin muuria, ja kuningas asuu '
-      + 'hänen vanhassa palatsissaan kukkulalla. Kadulla sanotaan, että paavi '
-      + 'katselee Roomaansa vain ikkunoista. Forumilla lehmät laidunsivat '
-      + 'pylväiden välissä, ja kaivajat kantoivat pois maata keisarien katujen '
-      + 'päältä. Seisoin muurin alla ja mietin, kumpi meistä on vanki.',
+    paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät; '
+      + 'puntari matalalla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 399 merkkiä (yläraja 400). */
+    teksti: 'Seisoin Vatikaanin muurin alla sateessa. Sen takana on mies, '
+      + 'joka ei ole kolmeen vuoteen tullut ulos: paavi katselee kaupunkiaan '
+      + 'ikkunasta, koska kuningas otti sen häneltä. Vartija käski siirtyä. '
+      + 'Siirryin kolme askelta ja jäin katsomaan ikkunaa, jossa paloi valo. '
+      + 'Minulla on koko maailma edessäni ja hänellä yksi ikkuna. En osannut '
+      + 'sanoa, kumpi meistä oli onnellisempi. Yövahti: sade, kellot, askel.',
     /*
      * Luenta ja äänite: kaanon, kohta 1. Teksti on sama kuin yllä —
      * vain tunnetagit on lisätty, samoin kuin Ateenassa ja Sofiassa.
@@ -194,13 +195,13 @@ export const FOKUSVIRTA_ROOMA = {
      * kytkintä varten).
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Koko kaupunki puhuu miehestä, joka ei suostu tulemaan '
-      + 'ulos: paavi ei ole kolmeen vuoteen ylittänyt Vatikaanin muuria, ja '
-      + 'kuningas asuu hänen vanhassa palatsissaan kukkulalla. Kadulla '
-      + 'sanotaan, että paavi katselee Roomaansa vain ikkunoista. Forumilla '
-      + 'lehmät laidunsivat pylväiden välissä, ja kaivajat kantoivat pois '
-      + 'maata keisarien katujen päältä. [softly] Seisoin muurin alla ja '
-      + 'mietin, kumpi meistä on vanki.',
+    luenta: '[curious] Seisoin Vatikaanin muurin alla sateessa. Sen takana on '
+      + 'mies, joka ei ole kolmeen vuoteen tullut ulos: paavi katselee '
+      + 'kaupunkiaan ikkunasta, koska kuningas otti sen häneltä. Vartija '
+      + 'käski siirtyä. Siirryin kolme askelta ja jäin katsomaan ikkunaa, '
+      + 'jossa paloi valo. Minulla on koko maailma edessäni ja hänellä yksi '
+      + 'ikkuna. En osannut sanoa, kumpi meistä oli onnellisempi. [softly] '
+      + 'Yövahti: sade, kellot, askel.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-rooma.mp3',
     /*
      * KUVA: kaanonin ensisijainen valinta — Ludovico Tuminellon
@@ -226,9 +227,9 @@ export const FOKUSVIRTA_ROOMA = {
    */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Paavi tulee nyt ulos, ja Vatikaani on oma valtionsa. Forumilla ei laidunneta, mutta kaivetaan. Pylväänpäät ovat hyvä istuin.',
+      'Paavi tulee nyt ulos, ja Vatikaani on oma valtio. Forumilla ei laidunneta, mutta kaivetaan. Pullaa saa kirkon portailta.',
     ],
     teksti: 'Muurin sisällä pysyttiin viisikymmentäyhdeksän vuotta — vasta '
       + '1929 paavi astui taas Rooman puolelle. Ikkunat on yhä ihan '

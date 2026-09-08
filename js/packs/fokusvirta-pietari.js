@@ -194,27 +194,27 @@ export const FOKUSVIRTA_PIETARI = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Pietari, kesäkuussa 1873. Valkeat yöt; ei tule pimeää.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 397 merkkiä (yläraja 400). */
-    teksti: 'Keisari rakennutti kaupunkinsa suolle ja käski sen olla suora, ja '
-      + 'suo totteli. Kadut ovat leveitä kuin joet ja joki leveä kuin meri. '
-      + 'Kesäyönä aurinko ei mene mailleen kunnolla, ja ihmiset kävelevät '
-      + 'rantakatua keskiyöllä kuin iltapäivällä. Palatsin taidesaleissa '
-      + 'kävelin kolme tuntia enkä nähnyt puoliakaan. Sillat avataan öisin '
-      + 'laivoille. Myöhästyjä saa odottaa aamuun, ja moni odottaa mielellään.',
+    paikkarivi: 'Pietari, kesäkuussa 1873. Valkeat yöt; ei tule pimeää; '
+      + 'puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 365 merkkiä (yläraja 400). */
+    teksti: 'Kello oli kaksi yöllä ja valoisaa. Päätin ottaa peilauksen Nevan '
+      + 'sillasta. Keskellä siltaa se alkoi nousta. Juoksin, ja silta juoksi '
+      + 'kovempaa. Hyppäsin laiturille ja kaaduin tervatynnyreihin. Ajuri '
+      + 'nauroi niin, ettei ottanut maksua. Hattu jäi jokeen, ja peilaus jäi '
+      + 'kesken: sata kaksikymmentä askelta ja ilmaa. Painolasti tänään: uusi '
+      + 'hattu. Sitä en laske turhaksi.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Keisari rakennutti kaupunkinsa suolle ja käski sen olla '
-      + 'suora, ja suo totteli. Kadut ovat leveitä kuin joet ja joki leveä '
-      + 'kuin meri. Kesäyönä aurinko ei mene mailleen kunnolla, ja ihmiset '
-      + 'kävelevät rantakatua keskiyöllä kuin iltapäivällä. Palatsin '
-      + 'taidesaleissa kävelin kolme tuntia enkä nähnyt puoliakaan. Sillat '
-      + 'avataan öisin laivoille. [softly] Myöhästyjä saa odottaa aamuun, ja '
-      + 'moni odottaa mielellään.',
+    luenta: '[curious] Kello oli kaksi yöllä ja valoisaa. Päätin ottaa '
+      + 'peilauksen Nevan sillasta. Keskellä siltaa se alkoi nousta. Juoksin, '
+      + 'ja silta juoksi kovempaa. Hyppäsin laiturille ja kaaduin '
+      + 'tervatynnyreihin. Ajuri nauroi niin, ettei ottanut maksua. Hattu jäi '
+      + 'jokeen, ja peilaus jäi kesken: sata kaksikymmentä askelta ja ilmaa. '
+      + 'Painolasti tänään: uusi hattu. [softly] Sitä en laske turhaksi.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-pietari.mp3',
   },
 
@@ -274,12 +274,12 @@ export const FOKUSVIRTA_PIETARI = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     huudahdus: {
-      kohta: 'suo totteli',
-      teksti: 'Vesi ei.',
+      kohta: 'Hattu jäi jokeen',
+      teksti: 'Sanoin sen.',
     },
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Nyt kaupungin edessä on pato, joka pitää meren ulkona. Ja sillat avataan öisin yhä. Minulle silloilla ei ole ollut väliä.',
+      'Peilaus on merellä suuntima, hänellä askelmittaus. Sillat avataan öisin yhä, ja minä ylitin ilman. Hattu on yhä joessa.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

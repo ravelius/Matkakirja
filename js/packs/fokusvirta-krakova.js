@@ -204,14 +204,14 @@ export const FOKUSVIRTA_KRAKOVA = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Krakova, kesäkuussa 1873. Poutaa; torilla pölyää.',
-    /* KAANON UUSIKSI (Fable, omistaja hyväksyi 8.9.2026 ilta). 377 merkkiä (yläraja 400). */
-    teksti: 'Torin laidalla kangashalli on täynnä kauppiaita kuin '
-      + 'neljäsataa vuotta sitten, ja tasatunnein tornista soi torvi, '
-      + 'jonka sävelmä loppuu kesken. Kysyin syytä kolmelta mieheltä '
-      + 'ja sain kolme eri tarinaa. Wawelin kukkulalla kuninkaat '
-      + 'nukkuvat kirkon lattian alla. Kaupunki kuuluu nyt keisarille '
-      + 'Wienissä, mutta se muistaa olleensa kuningasten kaupunki, '
+    paikkarivi: 'Krakova, kesäkuussa 1873. Poutaa; torilla pölyää; puntari '
+      + 'korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 358 merkkiä (yläraja 400). */
+    teksti: 'Torin laidalla kangashalli on täynnä kauppiaita kuin neljäsataa '
+      + 'vuotta sitten, ja tasatunnein tornista soi torvi, jonka sävelmä '
+      + 'loppuu kesken. Tein K3:n: vahtimestari sanoi nuoli, kauppias sanoi '
+      + 'tulipalo, poika nauroi ja sanoi, ettei soittaja osaa loppua. Uskoin '
+      + 'poikaa. Wawelin kukkulalla kuninkaat nukkuvat kirkon lattian alla, '
       + 'eikä muisti täällä haalistu.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
@@ -219,13 +219,12 @@ export const FOKUSVIRTA_KRAKOVA = {
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Torin laidalla kangashalli on täynnä kauppiaita '
-      + 'kuin neljäsataa vuotta sitten, ja tasatunnein tornista soi '
-      + 'torvi, jonka sävelmä loppuu kesken. Kysyin syytä kolmelta '
-      + 'mieheltä ja sain kolme eri tarinaa. [softly] Wawelin '
-      + 'kukkulalla kuninkaat nukkuvat kirkon lattian alla. Kaupunki '
-      + 'kuuluu nyt keisarille Wienissä, mutta se muistaa olleensa '
-      + 'kuningasten kaupunki, eikä muisti täällä haalistu.',
+    luenta: '[curious] Torin laidalla kangashalli on täynnä kauppiaita kuin '
+      + 'neljäsataa vuotta sitten, ja tasatunnein tornista soi torvi, jonka '
+      + 'sävelmä loppuu kesken. Tein K3:n: vahtimestari sanoi nuoli, kauppias '
+      + 'sanoi tulipalo, poika nauroi ja sanoi, ettei soittaja osaa loppua. '
+      + 'Uskoin poikaa. [softly] Wawelin kukkulalla kuninkaat nukkuvat kirkon '
+      + 'lattian alla, eikä muisti täällä haalistu.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-krakova.mp3',
   },
 
@@ -273,10 +272,10 @@ export const FOKUSVIRTA_KRAKOVA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     huudahdus: {
-      kohta: 'kolme eri tarinaa',
+      kohta: 'Uskoin poikaa',
       teksti: 'Neljäs on minulla.',
     },
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
       'Torvi soi yhä joka tunti, ja sävelmä katkeaa samalla tavalla. Syyn saat selvittää itse. Tornin laudalta sen kuulee parhaiten.',
     ],

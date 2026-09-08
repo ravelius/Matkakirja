@@ -147,36 +147,38 @@ export const FOKUSVIRTA_LISSABON = {
      * alla kursiivilla (js/ui-apurit.js matkakirjanOtsikko). Kumpaakaan
      * ei muotoilla uusiksi.
      */
-    paikkarivi: 'Lissabon, lokakuussa 1873. Tuulista; Tejolla valkoisia harjoja.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 387 merkkiä (yläraja 400). */
-    teksti: 'Yli sata vuotta sitten tämä kaupunki kaatui järistykseen, paloi '
-      + 'ja hukkui samana aamuna. Se rakennettiin uusiksi suoriin kortteleihin '
-      + 'kuin ruutupaperille. Belémin torni seisoo joessa kuin norsunluinen '
-      + 'shakkinappula. Talojen seinät on verhottu sinivalkoisiin kaakeleihin. '
-      + 'Köyhän miehen freskoja, sanoi isäntäni. Torilla naiset kantavat '
-      + 'kalakoreja päänsä päällä ja huutavat hinnat laulaen.',
+    paikkarivi: 'Lissabon, lokakuussa 1873. Tuulista; Tejolla valkoisia '
+      + 'harjoja; puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 398 merkkiä (yläraja 400). */
+    teksti: 'Kalastajan vaimo lauloi torilla, ja kysyin isännältä, mistä '
+      + 'laulu kertoo. Hän sanoi: saudade. Kysyin, mikä se on. Hän mietti '
+      + 'kauan, sanoi ettei sitä voi sanoa englanniksi, ja kaatoi lisää '
+      + 'viiniä. Yli sata vuotta sitten tämä kaupunki kaatui järistykseen, '
+      + 'paloi ja hukkui samana aamuna, ja rakennettiin uusiksi '
+      + 'viivoittimella. Lakkipiste: joen suu auringonlaskussa, hattu käteen '
+      + 'ilman lupaa. Saudade.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain tunnetagit lisätty
      * (docs/moduulit/tarinakaari.md, luku 7). Neljä tagia, alku ja loppu
      * eri sävyssä.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Yli sata vuotta sitten tämä kaupunki kaatui '
-      + 'järistykseen, paloi ja hukkui samana aamuna. Se rakennettiin uusiksi '
-      + 'suoriin kortteleihin kuin ruutupaperille. Belémin torni seisoo joessa '
-      + 'kuin norsunluinen shakkinappula. Talojen seinät on verhottu '
-      + 'sinivalkoisiin kaakeleihin. Köyhän miehen freskoja, sanoi isäntäni. '
-      + '[softly] Torilla naiset kantavat kalakoreja päänsä päällä ja huutavat '
-      + 'hinnat laulaen.',
+    luenta: '[curious] Kalastajan vaimo lauloi torilla, ja kysyin isännältä, '
+      + 'mistä laulu kertoo. Hän sanoi: saudade. Kysyin, mikä se on. Hän '
+      + 'mietti kauan, sanoi ettei sitä voi sanoa englanniksi, ja kaatoi '
+      + 'lisää viiniä. Yli sata vuotta sitten tämä kaupunki kaatui '
+      + 'järistykseen, paloi ja hukkui samana aamuna, ja rakennettiin uusiksi '
+      + 'viivoittimella. Lakkipiste: joen suu auringonlaskussa, hattu käteen '
+      + 'ilman lupaa. [softly] Saudade.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lissabon.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kaakelit ovat yhä seinissä, ja niitä myydään muistoksi. Joki on vetäytynyt tornin ympäriltä. Kalakorien alla on hyvä sato.',
+      'Saudade on ikävä johonkin, jota ei ehkä ollut. Osaan kaikki kielet, ja sen sanan liiankin hyvin. Torni seisoo, joki vetäytyi.',
     ],
     teksti: 'Se järistys, josta isoisäsi kirjoitti, muutti muuten koko '
       + 'Euroopan ajattelua — sen jälkeen alettiin ensimmäistä kertaa '

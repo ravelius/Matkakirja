@@ -109,30 +109,32 @@ export const FOKUSVIRTA_KOBENHAVN = {
      * Gardens"; ks. täky).
      */
     paikkarivi: 'Kööpenhamina, kesäkuussa 1873. Valoisaa iltamyöhään; koko '
-      + 'kaupunki ulkona.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 384 merkkiä (yläraja 400). */
+      + 'kaupunki ulkona; puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 399 merkkiä (yläraja 400). */
     teksti: 'Tanska menetti sodassa kolmanneksen maastaan, ja silti täällä '
       + 'käydään illat huvipuistossa. Kävelin Tivolin portista sisään ja '
-      + 'ymmärsin, että tämä kansa päätti surra valot päällä. Kaupungin vallit '
-      + 'on juuri purettu, ja niiden paikalle rakennetaan puistoja ja '
-      + 'kortteleita. Pyöreässä tornissa nousee luiska, jota tsaari kuulemma '
-      + 'ajoi hevosella ylös. Olut on halpaa, ja kaikki juovat sitä.',
+      + 'ymmärsin, että tämä kansa päätti surra valot päällä. Lakkipiste, '
+      + 'vaikka en tiedä miksi: ilotulitus, torvisoitto ja vanha mies, joka '
+      + 'tanssi yksin. Pyöreässä tornissa nousee luiska, jota tsaari ajoi '
+      + 'hevosella ylös. Kiipesin jalan. Painolasti: Tivolin lippu '
+      + 'huomiselle. Menen.',
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
     luenta: '[curious] Tanska menetti sodassa kolmanneksen maastaan, ja silti '
       + 'täällä käydään illat huvipuistossa. Kävelin Tivolin portista sisään '
-      + 'ja ymmärsin, että tämä kansa päätti surra valot päällä. Kaupungin '
-      + 'vallit on juuri purettu, ja niiden paikalle rakennetaan puistoja ja '
-      + 'kortteleita. Pyöreässä tornissa nousee luiska, jota tsaari kuulemma '
-      + 'ajoi hevosella ylös. [softly] Olut on halpaa, ja kaikki juovat sitä.',
+      + 'ja ymmärsin, että tämä kansa päätti surra valot päällä. Lakkipiste, '
+      + 'vaikka en tiedä miksi: ilotulitus, torvisoitto ja vanha mies, joka '
+      + 'tanssi yksin. Pyöreässä tornissa nousee luiska, jota tsaari ajoi '
+      + 'hevosella ylös. Kiipesin jalan. Painolasti: Tivolin lippu '
+      + 'huomiselle. [softly] Menen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kobenhavn.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Tivoli on yhä auki joka ilta. Vallien paikalla on puistoja, ja niissä ajetaan pyörällä. Valot näkyvät ylhäältä koko yön.',
+      'Lakkipiste on paikka, jossa hattu lähtee itsestään. Tivoli on yhä auki joka ilta, valot näkyvät ylhäältä. Ne pullat portilla.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Nyhavn). Faktat ovat lehden

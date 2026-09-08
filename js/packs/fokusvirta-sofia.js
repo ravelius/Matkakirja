@@ -283,19 +283,16 @@ export const FOKUSVIRTA_SOFIA = {
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
-    paikkarivi: 'Sofia, elokuussa 1873. Helteistä; tomu ei laskeudu.',
-    /*
-     * KAANON UUSIKSI (Fable 8.9.2026, samaan kulkuun kuin Ateena):
-     * ei ajatusviivaa, ei kuukautta, kaupungin kuuma lähde nousee
-     * mukaan, ja loppuvirke kytkee merkinnän kuvaan (nimi on kuvassa,
-     * ei kirjassa). Vanha versio on kokonaan korvattu, ei muokattu.
-     */
-    teksti: 'Sofiassa kukaan ei sano ääneen sen miehen nimeä, joka '
-      + 'hirtettiin täällä viime talvena. Majatalon isäntä jätti silti '
-      + 'ikkunalaudalle kynttilän palamaan. Kysyin kenelle. Hän sanoi: '
-      + 'sille, jonka hautaa ei kukaan tunne. Torin laidalla kuuma lähde '
-      + 'höyryää, ja naiset kantavat sieltä vettä kuin mitään ei olisi '
-      + 'tapahtunut. Kirjoitin nimen muistiin, mutta en tähän kirjaan.',
+    paikkarivi: 'Sofia, elokuussa 1873. Helteistä; tomu ei laskeudu; puntari '
+      + 'korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 400 merkkiä (yläraja 400). */
+    teksti: 'Sofiassa kukaan ei sano ääneen sen miehen nimeä, joka hirtettiin '
+      + 'täällä viime talvena. Majatalon isäntä jätti silti ikkunalaudalle '
+      + 'kynttilän palamaan. Kysyin kenelle. Hän sanoi: sille, jonka hautaa '
+      + 'ei kukaan tunne. Torin laidalla kuuma lähde höyryää, ja naiset '
+      + 'kantavat sieltä vettä kuin mitään ei olisi tapahtunut. Kirjoitin '
+      + 'nimen muistiin, mutta en tähän kirjaan. Painolasti: kynttilä. '
+      + 'Samanlainen.',
     /*
      * Luenta generoitu 25.8.2026 samalla reseptillä kuin muut
      * matkakirjaluennat (Viisas Kertoja, eleven_v3, stability 0.5).
@@ -313,12 +310,14 @@ export const FOKUSVIRTA_SOFIA = {
      * ja on generoitava uudelleen tästä luennasta (sama tilanne kuin
      * Ateenassa) ennen kuin kertoja lukee saman kuin ruudulla lukee.
      */
-    luenta: '[curious] Sofiassa kukaan ei sano ääneen sen miehen nimeä, '
-      + 'joka hirtettiin täällä viime talvena. Majatalon isäntä jätti silti '
-      + 'ikkunalaudalle kynttilän palamaan. [whispers] Kysyin kenelle. Hän '
-      + 'sanoi: sille, jonka hautaa ei kukaan tunne. [softly] Torin laidalla '
-      + 'kuuma lähde höyryää, ja naiset kantavat sieltä vettä kuin mitään ei '
-      + 'olisi tapahtunut. Kirjoitin nimen muistiin, mutta en tähän kirjaan.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Sofiassa kukaan ei sano ääneen sen miehen nimeä, joka '
+      + 'hirtettiin täällä viime talvena. Majatalon isäntä jätti silti '
+      + 'ikkunalaudalle kynttilän palamaan. Kysyin kenelle. Hän sanoi: sille, '
+      + 'jonka hautaa ei kukaan tunne. Torin laidalla kuuma lähde höyryää, ja '
+      + 'naiset kantavat sieltä vettä kuin mitään ei olisi tapahtunut. '
+      + 'Kirjoitin nimen muistiin, mutta en tähän kirjaan. Painolasti: '
+      + 'kynttilä. [softly] Samanlainen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sofia.mp3',
     kuva: {
       tiedosto: 'BASA-713K-1-52-4-Vasil Levski.JPG',
@@ -430,7 +429,7 @@ export const FOKUSVIRTA_SOFIA = {
      * livianAaniAjanTasalla) vaientaa sen kunnes ääni generoidaan
      * uudestaan. Kupla näkyy ja etenee kuten ennen.
      */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
       'Sitä nimeä ei enää kuiskata: hän on koko maan sankari. Ja lähde torin laidalla höyryää yhä. Talvella istumme sen reunalla.',
     ],

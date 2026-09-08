@@ -185,22 +185,24 @@ export const FOKUSVIRTA_SARAJEVO = {
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
-    paikkarivi: 'Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 379 merkkiä (yläraja 400). */
-    teksti: 'Laskin sillalta neljän uskon äänet: kirkonkellot idästä ja '
-      + 'lännestä, minareetin kutsun ja sapatin hiljaisuuden. Joki ei kuulu '
-      + 'kenellekään. Majatalon isäntä sanoi, ettei kaupungissa tarvitse '
-      + 'valita, minkä kellon mukaan herää. Basaarin kujilla takotaan kuparia, '
-      + 'ja kahvi keitetään pienessä pannussa niin sakeaksi, että lusikka '
-      + 'seisoo. Illalla vuoret tulivat lähemmäs kuin päivällä.',
+    paikkarivi: 'Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä; '
+      + 'puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 377 merkkiä (yläraja 400). */
+    teksti: 'Kahvilassa sanoin, että minulla on kiire, ja isäntä sanoi polako '
+      + 'ja toi kahvin, kun se oli valmis. Sepälle sanoin, että on kiire, ja '
+      + 'hän sanoi polako ja takoi loppuun. Polako on tämän kaupungin vastaus '
+      + 'kiireeseen. Laskin sillalta neljän uskon äänet: kirkonkellot idästä '
+      + 'ja lännestä, minareetin kutsun ja sapatin hiljaisuuden. Kahvi oli '
+      + 'niin sakeaa, että lusikka seisoi. Polako.',
     /* Kaanon, kohta 1 — luenta ja äänitteen polku sellaisinaan. */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Laskin sillalta neljän uskon äänet: kirkonkellot idästä '
-      + 'ja lännestä, minareetin kutsun ja sapatin hiljaisuuden. Joki ei kuulu '
-      + 'kenellekään. Majatalon isäntä sanoi, ettei kaupungissa tarvitse '
-      + 'valita, minkä kellon mukaan herää. Basaarin kujilla takotaan kuparia, '
-      + 'ja kahvi keitetään pienessä pannussa niin sakeaksi, että lusikka '
-      + 'seisoo. [softly] Illalla vuoret tulivat lähemmäs kuin päivällä.',
+    luenta: '[curious] Kahvilassa sanoin, että minulla on kiire, ja isäntä '
+      + 'sanoi polako ja toi kahvin, kun se oli valmis. Sepälle sanoin, että '
+      + 'on kiire, ja hän sanoi polako ja takoi loppuun. Polako on tämän '
+      + 'kaupungin vastaus kiireeseen. Laskin sillalta neljän uskon äänet: '
+      + 'kirkonkellot idästä ja lännestä, minareetin kutsun ja sapatin '
+      + 'hiljaisuuden. Kahvi oli niin sakeaa, että lusikka seisoi. [softly] '
+      + 'Polako.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sarajevo.mp3',
     /*
      * KUVA: Alois Schönnin maalaus Latinalaissillalta, Österreichische
@@ -281,9 +283,9 @@ export const FOKUSVIRTA_SARAJEVO = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Ne neljä ääntä kuuluvat yhä samalta sillalta. Ja kahvi keitetään kuten isoisän aikana. Minareetista kuulee ne kaikki.',
+      'Polako on hitaasti, ja minulle sanottiin sitä joka päivä. Ne neljä ääntä kuuluvat yhä sillalta. Kahvi on sakeaa. En juo.',
     ],
     /*
      * Commons 25.8.2026: 5184×3456, CC BY 2.0, Fred Romero, kuvattu

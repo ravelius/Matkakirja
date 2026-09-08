@@ -179,26 +179,22 @@ export const FOKUSVIRTA_BUKAREST = {
   matkakirja: {
     /* Kaanon, kohta 1 — paikkarivi, teksti ja luenta sellaisinaan. */
     paikkarivi: 'Bukarest, lokakuussa 1873. Ensimmäinen halla; savu nousee '
-      + 'suoraan.',
-    /*
-     * KAANON UUSIKSI (Fable, omistaja 8.9.2026): isoisä ei koskaan oleta
-     * lukijaa eikä seuraajaa ("kun sinä tulet" oli vanha jäänne), ei
-     * roomalaista numeroa, ei ajatusviivaa. Vanha versio on korvattu.
-     */
+      + 'suoraan; puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 397 merkkiä (yläraja 400). */
     teksti: 'Nousin tornin huipulle, jonka ruotsalaisen kuninkaan sotilaiden '
       + 'sanotaan rakentaneen paettuaan Poltavasta. Ovensuussa vartioi yhä '
-      + 'kaksi maalattua ruotsalaista. Koko kaupunki levittäytyi allani, ja '
-      + 'jokaisesta piipusta nousi savu suoraan ylös. Vartija sanoi, että '
-      + 'torni on maanjäristyksen jäljiltä kallellaan ja että sitä paikataan '
-      + 'joka vuosi. Ihmettelen, kauanko se vielä seisoo.',
+      + 'kaksi maalattua ruotsalaista. Peilaus portaista: sata kuusikymmentä '
+      + 'askelta ylös, ja koko kaupunki levittäytyi allani, savu suoraan ylös '
+      + 'joka piipusta. Vartija sanoi, että torni on järistyksen jäljiltä '
+      + 'kallellaan ja sitä paikataan joka vuosi. Kauanko se vielä seisoo?',
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
     luenta: '[curious] Nousin tornin huipulle, jonka ruotsalaisen kuninkaan '
       + 'sotilaiden sanotaan rakentaneen paettuaan Poltavasta. Ovensuussa '
-      + 'vartioi yhä kaksi maalattua ruotsalaista. [warmly] Koko kaupunki '
-      + 'levittäytyi allani, ja jokaisesta piipusta nousi savu suoraan ylös. '
-      + '[softly] Vartija sanoi, että torni on maanjäristyksen jäljiltä '
-      + 'kallellaan ja että sitä paikataan joka vuosi. Ihmettelen, kauanko '
-      + 'se vielä seisoo.',
+      + 'vartioi yhä kaksi maalattua ruotsalaista. Peilaus portaista: sata '
+      + 'kuusikymmentä askelta ylös, ja koko kaupunki levittäytyi allani, '
+      + 'savu suoraan ylös joka piipusta. Vartija sanoi, että torni on '
+      + 'järistyksen jäljiltä kallellaan ja sitä paikataan joka vuosi. '
+      + '[softly] Kauanko se vielä seisoo?',
     aanite: 'assets/audio/puhe-fokus-matkakirja-bukarest.mp3',
     /*
      * KUVA: Carol Szathmarin valokuva Colțean tornista (kaanon, kohta 1).
@@ -292,9 +288,9 @@ export const FOKUSVIRTA_BUKAREST = {
       kohta: 'kaksi maalattua ruotsalaista',
       teksti: 'Maalattua?',
     },
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Ei kauan: torni purettiin. Mutta sairaala sen juurella hoitaa yhä. Kallellaan olevalla tornilla oli huono istua.',
+      'Peilaus on merimiehen suuntima, hänellä askelmittaus. Torni purettiin, sairaala hoitaa yhä. Vinolla tornilla oli paha istua.',
     ],
     /*
      * Commons 25.8.2026: 2397×3339, public domain, kuvaus "Photo of

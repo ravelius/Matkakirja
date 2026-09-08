@@ -195,29 +195,28 @@ export const FOKUSVIRTA_VARSOVA = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Varsova, syyskuussa 1873. Kirkasta; Veikselillä usvaa aamulla.',
-    /* KAANON UUSIKSI (Fable, omistaja hyväksyi 8.9.2026 ilta). 373 merkkiä (yläraja 400). */
+    paikkarivi: 'Varsova, syyskuussa 1873. Kirkasta; Veikselillä usvaa '
+      + 'aamulla; puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 385 merkkiä (yläraja 400). */
     teksti: 'Kaupunki elää kahta elämää: kaduilla puhutaan puolaa ja '
       + 'virastoissa venäjää, eikä kumpikaan puoli teeskentele, ettei '
-      + 'huomaisi. Vanhankaupungin torilla värit ovat kirkkaat ja '
-      + 'kapakat täynnä, mutta laulut loppuvat kesken, kun univormu '
-      + 'kävelee ohi. Kuulin pianistista, joka kuoli nuorena '
-      + 'Pariisissa. Hänen sisarensa toi sydämen salaa kotiin ja '
-      + 'muurautti sen kirkon pylvääseen.',
+      + 'huomaisi. Torilla kapakat ovat täynnä, mutta laulut loppuvat kesken, '
+      + 'kun univormu kävelee ohi. Kuulin pianistista, joka kuoli nuorena '
+      + 'Pariisissa. Hänen sisarensa toi sydämen salaa kotiin ja muurautti '
+      + 'sen kirkon pylvääseen. Yövahti: laulu, joka loppui kesken, kahdesti.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki elää kahta elämää: kaduilla puhutaan '
-      + 'puolaa ja virastoissa venäjää, eikä kumpikaan puoli '
-      + 'teeskentele, ettei huomaisi. Vanhankaupungin torilla värit '
-      + 'ovat kirkkaat ja kapakat täynnä, mutta laulut loppuvat '
-      + 'kesken, kun univormu kävelee ohi. [softly] Kuulin '
-      + 'pianistista, joka kuoli nuorena Pariisissa. [whispers] Hänen '
-      + 'sisarensa toi sydämen salaa kotiin ja muurautti sen kirkon '
-      + 'pylvääseen.',
+    luenta: '[curious] Kaupunki elää kahta elämää: kaduilla puhutaan puolaa '
+      + 'ja virastoissa venäjää, eikä kumpikaan puoli teeskentele, ettei '
+      + 'huomaisi. Torilla kapakat ovat täynnä, mutta laulut loppuvat kesken, '
+      + 'kun univormu kävelee ohi. Kuulin pianistista, joka kuoli nuorena '
+      + 'Pariisissa. Hänen sisarensa toi sydämen salaa kotiin ja muurautti '
+      + 'sen kirkon pylvääseen. [softly] Yövahti: laulu, joka loppui kesken, '
+      + 'kahdesti.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-varsova.mp3',
   },
 
@@ -278,7 +277,7 @@ export const FOKUSVIRTA_VARSOVA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
       'Vanhakaupunki rakennettiin sodan jälkeen uudelleen tiili tiileltä. Sydän on yhä pylväässä. Ylhäältä ei erota, mikä on vanhaa.',
     ],

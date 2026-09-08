@@ -179,39 +179,38 @@ export const FOKUSVIRTA_MARSEILLE = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Marseille, syyskuussa 1873. Mistral puhaltaa; taivas sininen.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 396 merkkiä (yläraja 400). */
-    teksti: 'Vanha satama haisee kalalta, tervalta ja saippualta. Täällä '
-      + 'keitetään saippuaa, jota myydään koko maailmalle vihreinä harkkoina. '
-      + 'Laivoja tulee Afrikasta ja idästä, sillä Suezin kanava on tehnyt '
-      + 'tästä Ranskan portin itään. Lahden suulla on linnoitussaari, josta '
-      + 'kirjailija teki vankilan kuuluisammaksi kuin yksikään vartija. '
-      + 'Illalla söin kalakeittoa, johon pantiin kaloja, joiden nimiä en '
-      + 'oppinut.',
+    paikkarivi: 'Marseille, syyskuussa 1873. Mistral puhaltaa; puntari '
+      + 'putoaa.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 399 merkkiä (yläraja 400). */
+    teksti: 'Söin satamassa kalakeittoa ja sen perään jotain, jota isäntä ei '
+      + 'suostunut nimeämään. Yöllä huone kääntyi ympäri. Aamulla tein K3:n: '
+      + 'lääkäri sanoi simpukka, isäntä sanoi mistral, siivooja nauroi ja '
+      + 'sanoi että molemmat. Uskoin siivoojaa. Makasin kolme päivää '
+      + 'yövahdissa ja kuuntelin, kuinka satama huusi hintoja. Neljäntenä '
+      + 'päivänä nousin ja söin saman keiton loppuun. Painolasti: se nimetön '
+      + 'lautanen.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Vanha satama haisee kalalta, tervalta ja saippualta. '
-      + 'Täällä keitetään saippuaa, jota myydään koko maailmalle vihreinä '
-      + 'harkkoina. Laivoja tulee Afrikasta ja idästä, sillä Suezin kanava on '
-      + 'tehnyt tästä Ranskan portin itään. Lahden suulla on linnoitussaari, '
-      + 'josta kirjailija teki vankilan kuuluisammaksi kuin yksikään vartija. '
-      + '[softly] Illalla söin kalakeittoa, johon pantiin kaloja, joiden nimiä '
-      + 'en oppinut.',
+    luenta: '[curious] Söin satamassa kalakeittoa ja sen perään jotain, jota '
+      + 'isäntä ei suostunut nimeämään. Yöllä huone kääntyi ympäri. Aamulla '
+      + 'tein K3:n: lääkäri sanoi simpukka, isäntä sanoi mistral, siivooja '
+      + 'nauroi ja sanoi että molemmat. Uskoin siivoojaa. Makasin kolme '
+      + 'päivää yövahdissa ja kuuntelin, kuinka satama huusi hintoja. '
+      + 'Neljäntenä päivänä nousin ja söin saman keiton loppuun. [softly] '
+      + 'Painolasti: se nimetön lautanen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Satamassa myydään yhä saippuaa ja kalakeittoa. Linnoitussaarelle mennään lautalla huviksi. Lokit pitävät laiturin omanaan.',
-      // kuittaus isoisälle
-      'Kalojen nimiä ei tarvitse oppia. Ruodot tuntee ilmankin.',
+      'K3 on kolmiomittaus ihmisillä: kysy kolmelta, usko naurajaa. Keittoa myydään yhä samassa satamassa. Lokit omistavat laiturin.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi

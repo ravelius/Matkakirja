@@ -183,28 +183,28 @@ export const FOKUSVIRTA_ISTANBUL = {
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
-    paikkarivi: 'Konstantinopoli, syyskuussa 1873. Sumua salmella; '
-      + 'sarvet soivat.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 379 merkkiä (yläraja 400). */
-    teksti: 'Hippodromin laidalla seisoo pronssipylväs, jonka näin '
-      + 'piirroksissa Delfoista. Keisari toi sen tänne puolitoista '
-      + 'vuosituhatta sitten, ja kolmen käärmeen päät ovat poissa. Vartija '
-      + 'kohautti olkiaan: kaupunki ottaa mitä haluaa ja pitää minkä ottaa. '
-      + 'Galatan mäkeen porataan tunnelia, jotta kauppiaiden ei tarvitsisi '
-      + 'kiivetä. Söin illalla kalaa, joka oli aamulla vielä Mustassameressä.',
+    paikkarivi: 'Konstantinopoli, syyskuussa 1873. Sumua salmella; puntari '
+      + 'korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 389 merkkiä (yläraja 400). */
+    teksti: 'Kysyin kahvilassa, onko tämä tie basaariin. Mies sanoi yok. '
+      + 'Kiitin ja kävelin puoli tuntia väärään suuntaan, kunnes toinen mies '
+      + 'sanoi saman ja käänsi minut hartioista. Yok tarkoittaa ei. '
+      + 'Basaarissa kolmas mies tarttui hihaani ja sanoi nimeni, jota en ole '
+      + 'sanonut kenellekään. Hän sanoi, ettei minun kannata jatkaa itään, ja '
+      + 'katosi. Yövahti: koirat, kellot, askeleet ovelleni. Jatkan itään.',
     /*
      * Luenta on kaanonin oma (kohta 1), tunnetageineen. Äänite on
      * generoitu samalla reseptillä kuin Ateenalle
      * (tools/generoi-luennat.mjs), ja kaanon nimeää tiedoston.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Hippodromin laidalla seisoo pronssipylväs, jonka näin '
-      + 'piirroksissa Delfoista. Keisari toi sen tänne puolitoista '
-      + 'vuosituhatta sitten, ja kolmen käärmeen päät ovat poissa. Vartija '
-      + 'kohautti olkiaan: kaupunki ottaa mitä haluaa ja pitää minkä ottaa. '
-      + 'Galatan mäkeen porataan tunnelia, jotta kauppiaiden ei tarvitsisi '
-      + 'kiivetä. [softly] Söin illalla kalaa, joka oli aamulla vielä '
-      + 'Mustassameressä.',
+    luenta: '[curious] Kysyin kahvilassa, onko tämä tie basaariin. Mies sanoi '
+      + 'yok. Kiitin ja kävelin puoli tuntia väärään suuntaan, kunnes toinen '
+      + 'mies sanoi saman ja käänsi minut hartioista. Yok tarkoittaa ei. '
+      + 'Basaarissa kolmas mies tarttui hihaani ja sanoi nimeni, jota en ole '
+      + 'sanonut kenellekään. Hän sanoi, ettei minun kannata jatkaa itään, ja '
+      + 'katosi. Yövahti: koirat, kellot, askeleet ovelleni. [softly] Jatkan '
+      + 'itään.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-istanbul.mp3',
     /*
      * AIKALAISPIIRROS, HAETTU JA VARMENNETTU ERIKSEEN (ks. tiedoston
@@ -318,9 +318,9 @@ export const FOKUSVIRTA_ISTANBUL = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Pylväs seisoo yhä samassa paikassa, ja tunnelin pieni juna kulkee. Salmen yli lentää yhä joka päivä joku meidän suvusta.',
+      'Yok on ei, ja sen olisin sanonut, jos joku kysyisi minulta. Askeleet olivat G:n miehen. Nimen hän luki minun jalastani.',
     ],
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):

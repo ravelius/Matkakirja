@@ -194,36 +194,38 @@ export const FOKUSVIRTA_BARCELONA = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Barcelona, maaliskuussa 1873. Lämmintä jo; satamassa tervan haju.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 387 merkkiä (yläraja 400). */
-    teksti: 'Kaupunki purkaa muurejaan ja rakentaa itseään uusiksi ruutuihin, '
-      + 'joilla on insinöörin nimi ja suunnitelma suurempi kuin yhdenkään '
-      + 'kuninkaan. Ramblalla myydään lintuja häkeissä ja vettä laseittain. '
-      + 'Satamassa lastataan korkkia ja viiniä, ja jokainen puhuu kahta '
-      + 'kieltä: toista minulle, toista toisilleen. Espanja on tasavalta tänä '
-      + 'keväänä, mutta täällä sanotaan, että Katalonia tekee työt.',
+    paikkarivi: 'Barcelona, maaliskuussa 1873. Lämmintä jo; satamassa tervan '
+      + 'haju; puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 400 merkkiä (yläraja 400). */
+    teksti: 'Kaupunki purkaa muurejaan ja rakentaa itseään ruutuihin. Otin '
+      + 'peilauksen uudesta korttelista ja pääsin sadan askeleen päähän, kun '
+      + 'katu loppui kuoppaan ja kuoppa oli täynnä vettä. Insinöörin kartassa '
+      + 'siinä oli katu. Kartta valehtelee. Ramblalla myydään lintuja '
+      + 'häkeissä, ja jokainen puhuu kahta kieltä: toista minulle, toista '
+      + 'toisilleen. Housut kuivuvat ikkunassa. Painolasti: häkkilintu. '
+      + 'Päästin sen.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki purkaa muurejaan ja rakentaa itseään uusiksi '
-      + 'ruutuihin, joilla on insinöörin nimi ja suunnitelma suurempi kuin '
-      + 'yhdenkään kuninkaan. Ramblalla myydään lintuja häkeissä ja vettä '
-      + 'laseittain. Satamassa lastataan korkkia ja viiniä, ja jokainen puhuu '
-      + 'kahta kieltä: toista minulle, toista toisilleen. [softly] Espanja on '
-      + 'tasavalta tänä keväänä, mutta täällä sanotaan, että Katalonia tekee '
-      + 'työt.',
+    luenta: '[curious] Kaupunki purkaa muurejaan ja rakentaa itseään '
+      + 'ruutuihin. Otin peilauksen uudesta korttelista ja pääsin sadan '
+      + 'askeleen päähän, kun katu loppui kuoppaan ja kuoppa oli täynnä '
+      + 'vettä. Insinöörin kartassa siinä oli katu. Kartta valehtelee. '
+      + 'Ramblalla myydään lintuja häkeissä, ja jokainen puhuu kahta kieltä: '
+      + 'toista minulle, toista toisilleen. Housut kuivuvat ikkunassa. '
+      + 'Painolasti: häkkilintu. [softly] Päästin sen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-barcelona.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Ruudukko on valmis, ja kaupunki kasvoi sen yli. Ramblalla ei enää myydä lintuja häkeissä, vain kukkia. Sen katson mielelläni.',
+      'Kartta valehtelee, sanoo kartanpiirtäjä. Ruudukko on valmis, kuoppa on katu. Se lintu ei kiittänyt. Meikäläiset eivät kiitä.',
     ],
     /*
      * KAANON (Fable) — repliikin loput kolme virkettä sellaisenaan.

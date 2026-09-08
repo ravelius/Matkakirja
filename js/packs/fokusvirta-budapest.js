@@ -113,25 +113,24 @@ export const FOKUSVIRTA_BUDAPEST = {
      * voimaan 17. marraskuuta 1873 (ks. oppitunti). Sääkommentti on
      * isoisän havainto, ei mitattu väite.
      */
-    paikkarivi: 'Budapest, marraskuussa 1873. Harmaata; joelta nousee '
-      + 'kylmä tuuli.',
+    paikkarivi: 'Budapest, marraskuussa 1873. Harmaata; joelta nousee kylmä '
+      + 'tuuli; puntari putoaa.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    /* KAANON UUSIKSI (Fable, omistaja 8.9.2026): kylpylä isoisän tekstiin,
-       ei ajatusviivaa. Vanha versio korvattu. */
-    teksti: 'Saavuin kaupunkiin, jota ei vielä eilen ollut: Buda, Óbuda ja Pest '
-      + 'liitettiin yhteen, ja nimi on nyt Budapest. Kartantekijöille riittää '
-      + 'töitä. Kävin turkkilaisessa kylpylässä, jonka kupolin alla vesi on '
-      + 'kuumaa suoraan maasta, ja vanhat miehet väittivät istuneensa siinä '
-      + 'ennen kuin kaupungilla oli mitään nimeä. Tonavan rannalla toinen '
-      + 'vanhus sanoi, että uusi nimi tai ei, joki muistaa kaiken.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 374 merkkiä (yläraja 400). */
+    teksti: 'Saavuin kaupunkiin, jota ei vielä eilen ollut: Buda, Óbuda ja '
+      + 'Pest liitettiin yhteen, ja nimi on nyt Budapest. Kartantekijöille '
+      + 'riittää töitä. Kävin turkkilaisessa kylpylässä, jonka kupolin alla '
+      + 'vesi on kuumaa suoraan maasta, ja vanhat miehet väittivät istuneensa '
+      + 'siinä ennen kuin kaupungilla oli mitään nimeä. Yövahti: joki, yksi '
+      + 'viulu, kellot kahdelta rannalta eri aikaan.',
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
     luenta: '[curious] Saavuin kaupunkiin, jota ei vielä eilen ollut: Buda, '
       + 'Óbuda ja Pest liitettiin yhteen, ja nimi on nyt Budapest. '
-      + 'Kartantekijöille riittää töitä. [warmly] Kävin turkkilaisessa '
-      + 'kylpylässä, jonka kupolin alla vesi on kuumaa suoraan maasta, ja '
-      + 'vanhat miehet väittivät istuneensa siinä ennen kuin kaupungilla oli '
-      + 'mitään nimeä. [softly] Tonavan rannalla toinen vanhus sanoi, että '
-      + 'uusi nimi tai ei, joki muistaa kaiken.',
+      + 'Kartantekijöille riittää töitä. Kävin turkkilaisessa kylpylässä, '
+      + 'jonka kupolin alla vesi on kuumaa suoraan maasta, ja vanhat miehet '
+      + 'väittivät istuneensa siinä ennen kuin kaupungilla oli mitään nimeä. '
+      + '[softly] Yövahti: joki, yksi viulu, kellot kahdelta rannalta eri '
+      + 'aikaan.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-budapest.mp3',
   },
 
@@ -181,9 +180,9 @@ export const FOKUSVIRTA_BUDAPEST = {
       kohta: 'Kartantekijöille riittää töitä',
       teksti: 'Ja postille!',
     },
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Nimi on nyt itsestäänselvyys. Ja samassa kuumassa vedessä istutaan yhä kupolin alla. Kupolin katolla on talvellakin lämmin.',
+      'Yövahti on yön äänten lista, ja kellot soivat yhä eri aikaan. Nimi on itsestäänselvyys. Vedessä istutaan. Minä katolla.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (parlamenttitalo). Faktat

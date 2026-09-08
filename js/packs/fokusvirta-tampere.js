@@ -216,14 +216,15 @@ export const FOKUSVIRTA_TAMPERE = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Tampere, elokuussa 1873. Viileä aamu; koski kohisee yöllä.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 387 merkkiä (yläraja 400). */
-    teksti: 'Kahden järven välissä kohisee koski, ja kosken partaalla seisoo '
-      + 'tehdas toisensa vieressä: puuvillaa, paperia, rautaa. Isäntäni '
-      + 'vertasi kaupunkiaan ylpeänä Manchesteriin, ja piiput tosiaan savuavat '
-      + 'samaan tapaan. Tehtaansaleissa on enemmän naisia kuin miehiä, ja '
-      + 'lauantaina koko kaupunki kävelee koskenrantaa parhaissaan. Vesi tekee '
-      + 'täällä työn, jonka muualla tekee hiili, eikä vesi lopu.',
+    paikkarivi: 'Tampere, elokuussa 1873. Viileä aamu; koski kohisee yöllä; '
+      + 'puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 373 merkkiä (yläraja 400). */
+    teksti: 'Isäntä vertasi kaupunkiaan Manchesteriin ja löi vetoa, etten '
+      + 'löydä koko kaupungista paikkaa, jossa koskea ei kuule. Otin vedon. '
+      + 'Kävelin tehtaiden ohi, kirkon taakse, järven rantaan ja '
+      + 'hautausmaalle, ja koski kuului kaikkialle. Illalla istuin sillalla '
+      + 'ja hävisin vedon mielelläni. Vesi tekee täällä työn, jonka muualla '
+      + 'tekee hiili, eikä vesi lopu. Painolasti: puuvillarulla.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -231,13 +232,12 @@ export const FOKUSVIRTA_TAMPERE = {
      * kirjoitusasun sovituksia ei tarvita.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kahden järven välissä kohisee koski, ja kosken '
-      + 'partaalla seisoo tehdas toisensa vieressä: puuvillaa, paperia, '
-      + 'rautaa. Isäntäni vertasi kaupunkiaan ylpeänä Manchesteriin, ja piiput '
-      + 'tosiaan savuavat samaan tapaan. Tehtaansaleissa on enemmän naisia '
-      + 'kuin miehiä, ja lauantaina koko kaupunki kävelee koskenrantaa '
-      + 'parhaissaan. [softly] Vesi tekee täällä työn, jonka muualla tekee '
-      + 'hiili, eikä vesi lopu.',
+    luenta: '[curious] Isäntä vertasi kaupunkiaan Manchesteriin ja löi vetoa, '
+      + 'etten löydä koko kaupungista paikkaa, jossa koskea ei kuule. Otin '
+      + 'vedon. Kävelin tehtaiden ohi, kirkon taakse, järven rantaan ja '
+      + 'hautausmaalle, ja koski kuului kaikkialle. Illalla istuin sillalla '
+      + 'ja hävisin vedon mielelläni. Vesi tekee täällä työn, jonka muualla '
+      + 'tekee hiili, eikä vesi lopu. [softly] Painolasti: puuvillarulla.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tampere.mp3',
   },
 
@@ -303,9 +303,9 @@ export const FOKUSVIRTA_TAMPERE = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Tehtaat ovat nyt museoita ja ravintoloita. Mutta sama koski pyörittää yhä voimaloita. Kosken yllä ilma nostaa siiven alta.',
+      'Tehtaat ovat museoita ja ravintoloita, ja koski pyörittää yhä voimaloita. Kosken yllä ilma nostaa siiven alta.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

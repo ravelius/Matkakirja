@@ -148,28 +148,28 @@ export const FOKUSVIRTA_VILNA = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Vilna, kesäkuussa 1873. Poutaa; kirkonkellot kuuluvat kukkulalle.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 400 merkkiä (yläraja 400). */
-    teksti: 'Kaupunki on täynnä kirkkoja kuin lipas helmiä: barokkia joka '
-      + 'kadunkulmassa, ja niiden välissä kapeita kujia, joilla myydään '
-      + 'meripihkaa ja pyhäinkuvia. Keisarikunnan raja kulkee lännempänä, '
-      + 'mutta täällä rukoillaan monella kielellä: puolaksi, liettuaksi, '
-      + 'hepreaksi, venäjäksi — ja jokainen pitää kaupunkia omanaan. '
-      + 'Katedraalin tornista näin metsää joka suuntaan: tämä maa on metsän '
-      + 'sydämeen rakennettu.',
+    paikkarivi: 'Vilna, kesäkuussa 1873. Poutaa; kirkonkellot kuuluvat '
+      + 'kukkulalle; puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 373 merkkiä (yläraja 400). */
+    teksti: 'Kaupunki on täynnä kirkkoja kuin lipas helmiä. Kiipesin '
+      + 'katedraalin torniin ottamaan peilauksen ylhäältä ja näin metsää joka '
+      + 'suuntaan: tämä maa on metsän sydämeen rakennettu. Torniin tuli '
+      + 'perässäni mies, joka kysyi englanniksi, olenko minä herra Fogg. '
+      + 'Sanoin, että en, ja hän pyysi anteeksi ja meni. Painolasti: '
+      + 'meripihka, jonka sisällä on hyttynen. Vanhempi kuin kaupunki.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki on täynnä kirkkoja kuin lipas helmiä: barokkia '
-      + 'joka kadunkulmassa, ja niiden välissä kapeita kujia, joilla myydään '
-      + 'meripihkaa ja pyhäinkuvia. Keisarikunnan raja kulkee lännempänä, '
-      + 'mutta täällä rukoillaan monella kielellä: puolaksi, liettuaksi, '
-      + 'hepreaksi, venäjäksi — ja jokainen pitää kaupunkia omanaan. [softly] '
-      + 'Katedraalin tornista näin metsää joka suuntaan: tämä maa on metsän '
-      + 'sydämeen rakennettu.',
+    luenta: '[curious] Kaupunki on täynnä kirkkoja kuin lipas helmiä. '
+      + 'Kiipesin katedraalin torniin ottamaan peilauksen ylhäältä ja näin '
+      + 'metsää joka suuntaan: tämä maa on metsän sydämeen rakennettu. '
+      + 'Torniin tuli perässäni mies, joka kysyi englanniksi, olenko minä '
+      + 'herra Fogg. Sanoin, että en, ja hän pyysi anteeksi ja meni. '
+      + 'Painolasti: meripihka, jonka sisällä on hyttynen. [softly] Vanhempi '
+      + 'kuin kaupunki.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-vilna.mp3',
   },
 
@@ -218,9 +218,9 @@ export const FOKUSVIRTA_VILNA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Vanhakaupunki on nyt maailmanperintöä. Ja se metsä joka suuntaan pitää yhä paikkansa. Sen yli lentäminen on pitkä ja tylsä.',
+      'Peilaus on mittaus askelin, tornistakin. Se mies oli G:n, tunnistin housut. Vanhakaupunki on maailmanperintöä, metsä pitää.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

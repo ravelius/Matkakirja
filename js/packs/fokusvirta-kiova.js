@@ -183,26 +183,27 @@ export const FOKUSVIRTA_KIOVA = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Kiova, toukokuussa 1873. Lämmintä; kastanjat kukkivat.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 373 merkkiä (yläraja 400). */
-    teksti: 'Kaupunki nousee joen törmältä kultaisina kupoleina, ja sen alla '
-      + 'on toinen kaupunki: munkit ovat kaivaneet käytäviä maan sisään '
-      + 'kahdeksansataa vuotta, ja kynttilä kädessä siellä kulkee '
-      + 'pyhiinvaeltajia enemmän kuin kaduilla väkeä. Ostin torilta hunajaa '
-      + 'miehiltä, jotka tulivat myymään sitä veneellä satojen virstojen '
-      + 'päästä. Tämä maa on musta ja antelias. Sen näkee leivästä.',
+    paikkarivi: 'Kiova, toukokuussa 1873. Lämmintä; kastanjat kukkivat; '
+      + 'puntari korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 385 merkkiä (yläraja 400). */
+    teksti: 'Munkki antoi kynttilän ja käski pysyä pyhiinvaeltajien perässä. '
+      + 'Käytävät kulkevat maan alla kahdeksansataa vuotta, ja katto on niin '
+      + 'matala, että hattu jäi kolmesti seinään. Kynttilä sammui. Pimeys oli '
+      + 'sellaista, jota ei ole merellä koskaan, ja seisoin siinä, kunnes '
+      + 'edelläni joku alkoi laulaa ja kävelin ääntä kohti. Ylhäällä kupolit '
+      + 'kiilsivät. Yövahti: se laulu. Painolasti: kynttilä.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki nousee joen törmältä kultaisina kupoleina, ja '
-      + 'sen alla on toinen kaupunki: munkit ovat kaivaneet käytäviä maan '
-      + 'sisään kahdeksansataa vuotta, ja kynttilä kädessä siellä kulkee '
-      + 'pyhiinvaeltajia enemmän kuin kaduilla väkeä. Ostin torilta hunajaa '
-      + 'miehiltä, jotka tulivat myymään sitä veneellä satojen virstojen '
-      + 'päästä. Tämä maa on musta ja antelias. [softly] Sen näkee leivästä.',
+    luenta: '[curious] Munkki antoi kynttilän ja käski pysyä pyhiinvaeltajien '
+      + 'perässä. Käytävät kulkevat maan alla kahdeksansataa vuotta, ja katto '
+      + 'on niin matala, että hattu jäi kolmesti seinään. Kynttilä sammui. '
+      + 'Pimeys oli sellaista, jota ei ole merellä koskaan, ja seisoin siinä, '
+      + 'kunnes edelläni joku alkoi laulaa ja kävelin ääntä kohti. Ylhäällä '
+      + 'kupolit kiilsivät. Yövahti: se laulu. [softly] Painolasti: kynttilä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kiova.mp3',
   },
 
@@ -249,9 +250,9 @@ export const FOKUSVIRTA_KIOVA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Käytävissä kävellään yhä kynttilä kädessä. Se musta maa ruokkii yhä ison osan maailmaa. Meitäkin: laitureilla putoaa vehnää.',
+      'Yövahti on hänen luettelonsa yön äänistä. Minä en mene maan alle. Käytävissä kävellään yhä kynttilä kädessä.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/

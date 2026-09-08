@@ -185,15 +185,15 @@ export const FOKUSVIRTA_DUBLIN = {
   /* ---------- 1. Matkakirja (isoisän ääni, ei kuvaa) ---------- */
   matkakirja: {
     /* KAANON (Fable 29.8.2026) — paikkarivi sellaisenaan. */
-    paikkarivi: 'Dublin, syyskuussa 1873. Tihkusadetta; kadut kiiltävät.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 391 merkkiä (yläraja 400). */
-    teksti: 'Liffeyn rannalla tuoksuu mallas. Panimo on kokonainen '
-      + 'kaupunginosa, ja sen tummaa olutta lastataan proomuihin kuin '
-      + 'kivihiiltä. Collegen kirjastossa näytettiin kirjaa, jonka munkit '
-      + 'maalasivat tuhat vuotta sitten. Sen kuviot ovat hienommat kuin '
-      + 'yhdenkään kultasepän työ. Vahtimestari käänsi sivua valkoisin '
-      + 'käsinein ja katsoi minua kuin varasta. Kadulla lapset pyysivät pennin '
-      + 'ja saivat kaksi.',
+    paikkarivi: 'Dublin, syyskuussa 1873. Tihkusadetta; puntari putoaa.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 398 merkkiä (yläraja 400). */
+    teksti: 'Panimon portilla lyötiin vetoa, jaksaako mies kantaa tynnyrin '
+      + 'proomuun asti. Löin vetoa itseni kanssa, että jaksaa. Hän kaatui '
+      + 'portaissa, ja tynnyri vieri jokeen. Puoli laituria hyppäsi perään, '
+      + 'ja kolme miestä toi sen ylös laulaen. Kukaan ei ollut vihainen. '
+      + 'Kirjastossa vahtimestari näytti tuhat vuotta vanhaa kirjaa ja katsoi '
+      + 'minua kuin varasta. Hävisin vedon. Painolasti: puinen tappi '
+      + 'tynnyristä.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md
      * luku 7). Vain tunnetagit on lisätty, neljä kappaletta, alku ja
@@ -202,22 +202,22 @@ export const FOKUSVIRTA_DUBLIN = {
      * juuri se lause kantaa koko kaupungin sävyn.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Liffeyn rannalla tuoksuu mallas. Panimo on kokonainen '
-      + 'kaupunginosa, ja sen tummaa olutta lastataan proomuihin kuin '
-      + 'kivihiiltä. Collegen kirjastossa näytettiin kirjaa, jonka munkit '
-      + 'maalasivat tuhat vuotta sitten. Sen kuviot ovat hienommat kuin '
-      + 'yhdenkään kultasepän työ. Vahtimestari käänsi sivua valkoisin '
-      + 'käsinein ja katsoi minua kuin varasta. [softly] Kadulla lapset '
-      + 'pyysivät pennin ja saivat kaksi.',
+    luenta: '[curious] Panimon portilla lyötiin vetoa, jaksaako mies kantaa '
+      + 'tynnyrin proomuun asti. Löin vetoa itseni kanssa, että jaksaa. Hän '
+      + 'kaatui portaissa, ja tynnyri vieri jokeen. Puoli laituria hyppäsi '
+      + 'perään, ja kolme miestä toi sen ylös laulaen. Kukaan ei ollut '
+      + 'vihainen. Kirjastossa vahtimestari näytti tuhat vuotta vanhaa kirjaa '
+      + 'ja katsoi minua kuin varasta. Hävisin vedon. [softly] Painolasti: '
+      + 'puinen tappi tynnyristä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-dublin.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'Panimo tekee yhä olutta, ja se kirja on kirjastossa lasin alla. Lokit vievät täällä murut ennen kuin ehtii laskeutua.',
+      'Painolasti on turha esine, jonka hän ostaa joka kaupungissa. Panimo tekee yhä olutta. Kirjan edessä jonotetaan.',
     ],
     teksti: 'Vahtimestarit katsovat kaikkia edelleen kuin varkaita, ja kohta '
       + 'ymmärrät miksi se ei ole ihan väärä vaisto tässä maassa..',

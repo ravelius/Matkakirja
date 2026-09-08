@@ -175,38 +175,38 @@ export const FOKUSVIRTA_FIRENZE = {
   matkakirja: {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Firenze, toukokuussa 1873. Lämmintä; joki matalalla.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 379 merkkiä (yläraja 400). */
-    teksti: 'Vielä äsken tämä oli kuningaskunnan pääkaupunki. Nyt hovi on '
-      + 'muuttanut Roomaan ja jättänyt jälkeensä hiljaisuuden, joka sopii '
-      + 'kaupungille paremmin. Sillalla, jonka päälle on rakennettu puoteja, '
-      + 'myydään kultaa kuin neljäsataa vuotta sitten. Aukiolla seisoin '
-      + 'Davidin edessä niin kauan, että kyyhkyset vaihtoivat vahtivuoroa. '
-      + 'Patsas aiotaan siirtää kesällä sisälle sateilta suojaan.',
+    paikkarivi: 'Firenze, toukokuussa 1873. Lämmintä; joki matalalla; puntari '
+      + 'korkealla.',
+    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 394 merkkiä (yläraja 400). */
+    teksti: 'Aukiolla seisoin Davidin edessä niin kauan, että kyyhkyset '
+      + 'vaihtoivat vahtivuoroa, ja yksi niistä laskeutui hattuuni kuin '
+      + 'tilattuna. Vartija sanoi, että patsas siirretään kesällä sisälle '
+      + 'sateilta suojaan ja sitä varten rakennetaan kiskot. Sillan puodissa '
+      + 'kultaseppä punnitsi sormukseni ja sanoi hinnan, joka oli enemmän '
+      + 'kuin maksoin siitä. En myynyt. Painolasti: kynttilä. Vaakaa hän ei '
+      + 'myynyt.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
     /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Vielä äsken tämä oli kuningaskunnan pääkaupunki. Nyt '
-      + 'hovi on muuttanut Roomaan ja jättänyt jälkeensä hiljaisuuden, joka '
-      + 'sopii kaupungille paremmin. Sillalla, jonka päälle on rakennettu '
-      + 'puoteja, myydään kultaa kuin neljäsataa vuotta sitten. Aukiolla '
-      + 'seisoin Davidin edessä niin kauan, että kyyhkyset vaihtoivat '
-      + 'vahtivuoroa. [softly] Patsas aiotaan siirtää kesällä sisälle sateilta '
-      + 'suojaan.',
+    luenta: '[curious] Aukiolla seisoin Davidin edessä niin kauan, että '
+      + 'kyyhkyset vaihtoivat vahtivuoroa, ja yksi niistä laskeutui hattuuni '
+      + 'kuin tilattuna. Vartija sanoi, että patsas siirretään kesällä '
+      + 'sisälle sateilta suojaan ja sitä varten rakennetaan kiskot. Sillan '
+      + 'puodissa kultaseppä punnitsi sormukseni ja sanoi hinnan, joka oli '
+      + 'enemmän kuin maksoin siitä. En myynyt. Painolasti: kynttilä. '
+      + '[softly] Vaakaa hän ei myynyt.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-firenze.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
+    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
     kommentti: [
-      'David siirrettiin sisälle, ja aukiolla seisoo kopio. Sillan puodit myyvät yhä kultaa. Päälaella ei saa istua. Kokeilin.',
-      // kuittaus isoisälle
-      'Kyyhkyset vaihtoivat vahtivuoroa. Se olin minä, molemmilla kerroilla.',
+      'Se kyyhkynen olin minä. Hattu on paras paikka, kun haluaa nähdä saman kuin isäntä. David on sisällä, aukiolla on kopio.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
