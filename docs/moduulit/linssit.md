@@ -1199,16 +1199,19 @@ linssin oma lehti, joka elää aikajanan päällä ja katoaa sen mukana.
 
 | rivi | luokka | sisältö |
 |---|---|---|
-| nimiö | `looppi-nimio` | "Tiedeliite" |
-| päiväys | `looppi-paivays` | vuosi · paikka |
+| nimiörivi | `tiedeliite-ylarivi` | ☰ · nimiö `looppi-nimio` ja paikkarivi `looppi-paivays` · kaiutin ja ✕ (`tiedeliite-ylanapit`); kaksoisviiva rivin alla |
 | pääotsikko | `looppi-otsikko` | keksintö (`otsikko`) |
 | keksijä | `tiedeliite-henkilo` | `henkilo` harvennettuna versaalina |
 | ingressi | `looppi-ingressi` | `selite` |
-| kasvorivi | `tiedeliite-kasvot` | `kuva`, `kuvaToinen`, `kuvaAito` vierekkäin kuvateksteineen |
-| ilmiökuvat | `fokusnosto-kuva` | `ilmio`, `ilmioLisa` (Blériot'n lähikuva näkyy nyt) |
-| leipäteksti | `looppi-leipa` | `juttu` kappaleittain, anfangi ja kaksi palstaa |
+| leipäteksti | `looppi-leipa` | `juttu` kappaleittain, anfangi, YKSI palsta |
+| muotokuva | `tiedeliite-kasvot` | `kuva`, `kuvaToinen` leipätekstin oikealla (15 rem) |
+| ilmiökuvat | `tiedeliite-ilmiokuva` | `ilmio`, `ilmioLisa` — palstan levyisenä reunasta reunaan, useampi karusellina |
+| keksijä itse | `tiedeliite-keksija` | `henkilojuttu` ja aito Commons-kuva `kuvaAito` |
 | lähderivi | `fokusnosto-lahde` | `lahde` |
 | alanapit | `tiedeliite-navi` | ‹ edellinen keksijä · seuraava keksijä › |
+
+Nimiörivi asuu KORTISSA eikä vierivässä sivussa: masto pysyy paikallaan,
+kun juttu vierii, ja sivunvaihdossa vaihtuu vain paikkarivin teksti.
 
 Liikkuminen: alanapit ja nuolinäppäimet vievät edelliseen ja
 seuraavaan keksijään, hampurilainen (kortin vasen yläkulma) avaa
@@ -1227,8 +1230,50 @@ lukunäkymä, jossa kuvaa katsotaan isona ja napautus suurentaa sen
 Latautumaton kuva pudotetaan riviltä, jottei paperille jää tyhjää
 laatikkoa.
 
-Testit: tests/tiedeliite.test.mjs (puhtaat apurit ja datan
-sopivuus), tests/aikajana.test.mjs (kytkentä moottoriin).
+### Yläreunan ja kuvatekstien remontti (omistaja 8.9.2026)
+
+Omistajan iPad-kaappauksesta (1897 Augsburg) tuli kuusi korjausta,
+Raamattu "TIEDELIITTEEN ULKOASU":
+
+1. **Nimiörivi on yksi rivi** (`tiedeliite-ylarivi`, ristikko
+   `1fr auto 1fr`): hampurilainen vasemmalla, nimiö ja paikkarivi
+   keskellä, kaiutin ja ✕ oikealla. Kaksoisviiva on rivin alareuna,
+   ei päiväysrivin yläreuna — mikään teksti ei jää viivan alle eikä
+   nappi valu kortin pyöristetyn kulman yli.
+2. **Kortissa lyhyt kuvateksti, avatussa kuvassa pitkä.** Datassa on
+   `kuva.lyhyt` (yksi virke, ≤ 90 merkkiä, muotoa NIMI + luonnehdinta)
+   ja entinen pitkä `selite`. Kortti näyttää lyhyen ILMAN lähderiviä;
+   suurennos näyttää pitkän ja sen perässä "Matkakirjan havainnekuva"
+   pisteviivalinkkinä (omistaja: *"Riittää myös, että havainnekuva
+   mainitaan vasta kun kuvan klikkaa isommaksi"*). Ilman `lyhyt`-kenttää
+   kortissa on entinen selite (esim. Ihmisen matka).
+3. **Yksi palsta, isompi muotokuva**: leipäteksti yhtenä virtana,
+   muotokuva 9,5 rem → 15 rem (puhelimella tekstin yllä 13,5 rem).
+4. **Vieritys ei soita napsautusta**: js/main.js soittaa `click`-äänen
+   sormella vasta, kun kosketus osoittautuu napautukseksi (nousu saman
+   napin päältä alle 10 px:n liikkeellä). Kortin kuvat ovat nappeja,
+   joten jokainen vieritys alkoi ennen klikkauksella.
+5. **Alanapeille päälle hyppäävä väri**: hover, focus ja **:active**
+   kääntävät napin kullanruskeaksi (#7a5514) ja tekstin vaaleaksi.
+6. **Havainnekuva reunasta reunaan**: `.tiedeliite-kortti
+   .tiedeliite-ilmiokuva img` täyttää palstan (`width: 100%`,
+   `object-fit: cover`, 16/10).
+
+Kolme näistä oli TYYLIEN JÄRJESTYSKILPAILU: css/fokusnosto.css ja
+css/aikajana.css sisälsivät yhtä tarkat valitsimet (`.fokusnosto-kuva
+img` vs. `.tiedeliite-ilmiokuva img`, `.fokusnosto-looppi .looppi-leipa`
+vs. `.tiedeliite-palsta .tiedeliite-leipa`), joten voittaja riippui
+latausjärjestyksestä — omistajan laitteessa contain ja kaksi palstaa.
+Nyt Tiedeliitteen omat säännöt käyttävät kolmatta luokkaa
+(`.tiedeliite-kortti`), joka ratkaisee kilpailun aina. Sama koskee
+yhden kuvan kehystä: se piirretään `piirraIlmiokuva`-funktiolla eikä
+yhteisellä `piirraNostonKuvalla`.
+
+Testit: tests/tiedeliite.test.mjs (puhtaat apurit, datan sopivuus,
+yläreuna, lyhyet kuvatekstit, yksi palsta, täysleveä havainnekuva,
+alanapin väri, vierityksen äänettömyys), tests/kuvasuurennos.test.mjs
+(suurennoksen yleinen linjaus) ja tests/aikajana.test.mjs (kytkentä
+moottoriin).
 
 ---
 
@@ -1280,14 +1325,16 @@ sopivuus), tests/aikajana.test.mjs (kytkentä moottoriin).
   Jatka-napista. Nähdyt keksijät ovat tarkkoja, tulevat sumeita;
   valittu kortti on 1,45-kertainen (`KARUSELLIN_MITAT[0]`).
 
-## Tiedeliitteen taitto (omistaja 3.9.2026, pilotti Watt, v1508)
+## Tiedeliitteen taitto (omistaja 3.9.2026, pilotti Watt, v1508; yläreuna ja palsta uusittu 8.9.2026)
 
-Järjestys: nimiö, päiväys, otsikko, keksijä, ingressi → `.tiedeliite-palsta`
-(leipäteksti vasemmalla, pieni generoitu muotokuva oikealla, kaksoispysäkillä
-kaksi) → havainnekuva(t) → `.tiedeliite-keksija` (väliotsikko = nimi,
-henkilöteksti kentästä `henkilojuttu`, aito Commons-kuva `kuvaAito`
-oikealla) → lähderivi. Ilman `henkilojuttu`-kenttää henkilöosio ja aito
-kuva jäävät pois. Kapealla ruudulla (≤560 px) kuva siirtyy tekstin ylle.
+Järjestys: nimiörivi (☰ · nimiö ja paikkarivi · kaiutin ja ✕, kortin oma
+rivi joka ei vieri) → otsikko, keksijä, ingressi → `.tiedeliite-palsta`
+(leipäteksti YHTENÄ palstana vasemmalla, generoitu muotokuva 15 rem
+oikealla, kaksoispysäkillä kaksi) → havainnekuva(t) palstan levyisenä →
+`.tiedeliite-keksija` (väliotsikko = nimi, henkilöteksti kentästä
+`henkilojuttu`, aito Commons-kuva `kuvaAito` oikealla) → lähderivi. Ilman
+`henkilojuttu`-kenttää henkilöosio ja aito kuva jäävät pois. Kapealla
+ruudulla (≤560 px) kuva siirtyy tekstin ylle (13,5 rem).
 
 ## Matkamittari, napautettavat lamput ja raahattava paneeli (omistaja 3.9.2026 ilta, v1512)
 

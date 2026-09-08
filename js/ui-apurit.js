@@ -2371,3 +2371,118 @@ export function asetaPallovektorit(paalla, win = globalThis) {
     /* yksityinen tila */
   }
 }
+
+
+/* ==================== KUVAN SUURENNOKSEN MITAT ==================== */
+
+/*
+ * YKSI SÄÄNTÖ KAIKILLE SUURENNOKSILLE: VASTAKKAINEN SUUNTA TÄYTTÄÄ,
+ * SAMA SUUNTA JÄTTÄÄ REUNAN.
+ *
+ * Omistaja 8.9.2026, sanatarkasti: *"pystykuvat saisivat aueta hieman
+ * pienemmäksi. Nyt ne täyttävät ihan koko ruudun. Vaakakuva saa aueta
+ * koko ruudun leveydelle, ainakin jos pelaajalla on pystyruutuinen
+ * näyttö. Tilanne on tietenkin toinen, jos on vaakaruutuinen näyttö,
+ * niin silloin vaakakuva saa jäädä hieman pienemmäksi, että sivuista
+ * näkyy jotain. Ja taas pystykuva voi tullakin koko ruudun
+ * korkeudelle. Tästä kannattaa tehdä jokin yleinen linjaus, jotta
+ * toimii kaikissa tilanteissa samalla tavalla."*
+ *
+ * Linjaus on siis KUVAN suunnan ja RUUDUN suunnan vertailu:
+ *
+ *   vastakkainen suunta  kuva täyttää ruudun lyhyemmän sivun
+ *                        (pystyruutu + vaakakuva → koko leveys;
+ *                        vaakaruutu + pystykuva → koko korkeus)
+ *   sama suunta          kuva jää hieman pienemmäksi, jotta ruudun
+ *                        laidoista näkyy jotain: pystyruudulla enintään
+ *                        78 % korkeudesta, vaakaruudulla enintään 82 %
+ *                        leveydestä
+ *   neliömäinen kuva     (suhde 0,9–1,1) käsitellään ruudun suuntaisena
+ *
+ * Toinen suunta saa aina 94 %:n katon, jottei paperi puske reunaan
+ * kiinni. Mitoitus on TÄSSÄ yhtenä puhtaana funktiona, ja sekä
+ * fokusvirran (js/fokusvirta.js avaaSuurennos) että kohdekortin
+ * (js/fokuskohteet.js avaaKohdeSuurennos) suurennos kutsuu sitä —
+ * kaksi eri kaavaa oli juuri se, mistä omistaja huomautti.
+ */
+
+/** Kuva täyttää ruudun lyhyemmän sivun, kun suunnat ovat vastakkaiset. */
+export const SUURENNOS_VASTAKKAINEN = 0.99;
+/** Sama suunta, pystyruutu: osuus ruudun korkeudesta. */
+export const SUURENNOS_SAMA_PYSTY = 0.78;
+/** Sama suunta, vaakaruutu: osuus ruudun leveydestä. */
+export const SUURENNOS_SAMA_VAAKA = 0.82;
+/** Vapaan suunnan katto: paperi ei puske ruudun reunaan. */
+export const SUURENNOS_TOINEN_SUUNTA = 0.94;
+/** Neliömäisen kuvan haarukka: tämän sisällä kuva on ruudun suuntainen. */
+export const SUURENNOS_NELIO_ALA = 0.9;
+export const SUURENNOS_NELIO_YLA = 1.1;
+/** Kuvalle jäävä vähimmäisosuus korkeudesta, kun kuvateksti on pitkä. */
+export const SUURENNOS_VAHIN_KORKEUS = 0.28;
+/** Kuvasuhde, jota käytetään ennen kuin kuvan omat mitat tiedetään. */
+export const SUURENNOS_OLETUSSUHDE = 4 / 3;
+
+/**
+ * Suurennetun kuvan mitat yllä kuvatulla säännöllä.
+ *
+ * @param {object} p
+ * @param {number} p.kuvaLeveys kuvan luonnollinen leveys (tai suhdeluvun osoittaja)
+ * @param {number} p.kuvaKorkeus kuvan luonnollinen korkeus
+ * @param {number} p.ruutuLeveys näkymän leveys pikseleinä
+ * @param {number} p.ruutuKorkeus näkymän korkeus pikseleinä
+ * @param {number} [p.vaakaVara] kehyksen oma tila vaakasuunnassa (reunus, sisennys)
+ * @param {number} [p.pystyVara] kehyksen oma tila pystysuunnassa (kuvatekstipalkki)
+ * @param {number} [p.enintaanLeveys] katto kuvan omasta koosta (ei venytetä puuroksi)
+ * @param {number} [p.vahintaanLeveys] kapein sallittu kuva
+ * @returns {{leveys: number, korkeus: number, vastakkainen: boolean}}
+ */
+export function suurennoksenMitat({
+  kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus,
+  vaakaVara = 0, pystyVara = 0, enintaanLeveys = Infinity, vahintaanLeveys = 0,
+} = {}) {
+  const rl = Number.isFinite(ruutuLeveys) && ruutuLeveys > 0 ? ruutuLeveys : 0;
+  const rk = Number.isFinite(ruutuKorkeus) && ruutuKorkeus > 0 ? ruutuKorkeus : 0;
+  if (!rl || !rk) return { leveys: 0, korkeus: 0, vastakkainen: false };
+  const kelpo = Number.isFinite(kuvaLeveys) && kuvaLeveys > 0
+    && Number.isFinite(kuvaKorkeus) && kuvaKorkeus > 0;
+  const suhde = kelpo ? kuvaLeveys / kuvaKorkeus : SUURENNOS_OLETUSSUHDE;
+  const ruutuPysty = rk >= rl;
+  // Neliömäinen kuva kulkee ruudun mukana: se ei ole kummankaan suunnan
+  // kuva, eikä sitä siis kannata venyttää reunaan asti.
+  const nelio = suhde >= SUURENNOS_NELIO_ALA && suhde <= SUURENNOS_NELIO_YLA;
+  const kuvaPysty = nelio ? ruutuPysty : suhde < 1;
+  const vastakkainen = kuvaPysty !== ruutuPysty;
+  let leveysKatto;
+  let korkeusKatto;
+  if (vastakkainen && ruutuPysty) {
+    leveysKatto = rl * SUURENNOS_VASTAKKAINEN;
+    korkeusKatto = rk * SUURENNOS_TOINEN_SUUNTA;
+  } else if (vastakkainen) {
+    korkeusKatto = rk * SUURENNOS_VASTAKKAINEN;
+    leveysKatto = rl * SUURENNOS_TOINEN_SUUNTA;
+  } else if (ruutuPysty) {
+    korkeusKatto = rk * SUURENNOS_SAMA_PYSTY;
+    leveysKatto = rl * SUURENNOS_TOINEN_SUUNTA;
+  } else {
+    leveysKatto = rl * SUURENNOS_SAMA_VAAKA;
+    korkeusKatto = rk * SUURENNOS_TOINEN_SUUNTA;
+  }
+  leveysKatto = Math.min(leveysKatto - vaakaVara, enintaanLeveys);
+  // Pitkä kuvateksti ei saa syödä kuvaa olemattomiin.
+  korkeusKatto = Math.max(korkeusKatto - pystyVara, rk * SUURENNOS_VAHIN_KORKEUS);
+  let leveys = leveysKatto;
+  let korkeus = leveys / suhde;
+  if (korkeus > korkeusKatto) {
+    korkeus = korkeusKatto;
+    leveys = korkeus * suhde;
+  }
+  if (leveys < vahintaanLeveys) {
+    leveys = vahintaanLeveys;
+    korkeus = leveys / suhde;
+  }
+  return {
+    leveys: Math.max(0, Math.round(leveys)),
+    korkeus: Math.max(0, Math.round(korkeus)),
+    vastakkainen,
+  };
+}
