@@ -177,7 +177,7 @@ import {
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
   fokusvirtaLehtivinkki, fokusvirtaSisalto,
   fokusvirtaAlustus, fokusvirtaAlustusOdottaa, fokusvirtaUusiKulku,
-  fokusvirtaSaapumiskupla, nollaaFokuskuvat,
+  fokusvirtaSaapumiskupla, nollaaFokuskuvat, vaiennaLivianKaupunkipuhe,
 } from './fokusvirta.js';
 
 const wikiGalleryCache = new Map();
@@ -11875,9 +11875,22 @@ export class UI {
       return;
     }
     // Nappula siirtyy ilman animaatiota: oikotie saa näyttää oikotieltä.
-    haivytaLuenta(this);
+    this.vaiennaPaikanPuhe();
     this.suljeMatkavalikko();
     this.doAction(() => game.actionKehittajaSiirto(city.id));
+  }
+
+  /**
+   * PAIKASTA LÄHTEMINEN VAIENTAA MOLEMMAT ÄÄNET (omistaja 8.9.2026).
+   *
+   * Kertojan luenta häipyi lähdössä jo ennen, mutta pulun repliikki jäi
+   * soimaan — ja kuului seuraavassa kaupungissa sen oman kertojan alla
+   * väärää kaupunkia selittäen. Sama kutsu hoitaa nyt molemmat, jotta
+   * lähtö ei voi jättää toista puhujaa päälle.
+   */
+  vaiennaPaikanPuhe() {
+    haivytaLuenta(this);
+    vaiennaLivianKaupunkipuhe(this);
   }
 
   /** Jalan: matkustustapa ja nopanheitto samalla painalluksella. */
@@ -11886,7 +11899,7 @@ export class UI {
     if (this.radioPaalla()) return;
     const { game } = this;
     // Nopanheitto keskeyttää tarinan: luenta häipyy pehmeästi pois.
-    haivytaLuenta(this);
+    this.vaiennaPaikanPuhe();
     // Sama jälkinäytös kuin doRollissa: noppa ensin, sitten sovitus.
     this.heitaJaSovita(() => {
       const chosen = game.actionTravel('land');
@@ -18904,7 +18917,7 @@ export class UI {
     // Radiotilassa kartalla ei liikuta.
     if (this.radioPaalla()) return;
     // Nopanheitto keskeyttää tarinan: luenta häipyy pehmeästi pois.
-    haivytaLuenta(this);
+    this.vaiennaPaikanPuhe();
     this.heitaJaSovita(() => this.game.actionRoll());
   }
 
@@ -18983,6 +18996,9 @@ export class UI {
     // Radiotilassa kartalla ei liikuta.
     if (this.radioPaalla()) return;
     const { game } = this;
+    // Lento vie pois paikasta: edellisen kaupungin puhe päättyy tähän
+    // (ks. vaiennaPaikanPuhe) eikä jatku kohdekaupungin luennan alla.
+    this.vaiennaPaikanPuhe();
     // Matkavalinnan välivaihe ei saa jäädä päälle seuraavaan vuoroon.
     this.suljeMatkavalikko();
     const player = game.player;

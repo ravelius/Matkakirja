@@ -487,7 +487,7 @@ test('mannerivihje ja avaus käyttävät samoja repliikkejä kuin äänitteet', 
 test('js/fokusvirta.js soittaa Euroopan kaupunkien repliikit kupla kerrallaan', () => {
   const virta = lue('../js/fokusvirta.js');
   assert.match(virta,
-    /livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu, livianKuplanAika,\n\s*livianKuplanAjastin, livianKuplat,\n\s*soitaLivianAani, soitaLivianKaupunkiAani,\n\} from '\.\/liviapuhe\.js';/);
+    /livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu, livianKuplanAika,\n\s*livianKuplanAjastin, livianKuplat, pysaytaLivianAani,\n\s*soitaLivianAani, soitaLivianKaupunkiAani,\n\} from '\.\/liviapuhe\.js';/);
   /*
    * YKSI KUPLA = YKSI ÄÄNITIEDOSTO (omistaja 7.9.2026). Kutsupaikat
    * eivät enää soita kenttää kerran, vaan antavat puheenvuorolle

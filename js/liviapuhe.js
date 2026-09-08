@@ -93,7 +93,10 @@
  */
 
 import { puheVoima } from './aani-ehdokkaat.js';
-import { luentaKytkinPaalla, merkitsePuhuja, vapautaPuhuja } from './luenta.js';
+import {
+  luentaKytkinPaalla, luovutaPuhevuoro, merkitsePuhuja, PUHUJA_PULU, puhujaAanessa,
+  vapautaPuhuja,
+} from './luenta.js';
 import { AANI_JUURI } from './media.js';
 
 /**
@@ -781,6 +784,10 @@ export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
   const audio = ui.liviaAani;
   ui.liviaAani = null;
   if (!audio) return false;
+  // Häivytys on hyvästely: puhevuoro vapautuu heti, jotta kertoja tai
+  // seuraava kupla ei jää odottamaan häipyvää lausetta (js/luenta.js
+  // luovutaPuhevuoro).
+  luovutaPuhevuoro(audio);
   const lopeta = () => {
     try {
       audio.pause();
@@ -798,11 +805,25 @@ export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
     lopeta();
     return true;
   }
-  const askel = audio.volume / 4;
+  /*
+   * HÄIVYTYS KELLOSTA, EI ASKELMÄÄRÄSTÄ (8.9.2026).
+   *
+   * Ennen häivytys otti tasan neljä askelta ja päättyi vasta
+   * neljännellä. Ajastimia kuristavassa selaimessa (taustalle mennyt
+   * välilehti, hidas laite) askelväli venyy moninkertaiseksi, ja
+   * neljä askelta tarkoitti sekunnin verran ääntä sen jälkeen kun peli
+   * jo käski vaieta — juuri sen mittainen häntä, jonka omistaja kuulee
+   * seuraavassa kaupungissa. Nyt voimakkuus lasketaan KULUNEESTA
+   * AJASTA, joten venynyt askel ei pidennä häivytystä vaan lyhentää
+   * sen: ensimmäinen myöhässä herännyt tikki toteaa ajan täyteen ja
+   * pysäyttää äänen.
+   */
+  const perus = audio.volume;
+  const t0 = performance.now();
   const kello = setInterval(() => {
-    const jaljella = audio.volume - askel;
-    if (jaljella > 0.01) {
-      audio.volume = jaljella;
+    const osuus = (performance.now() - t0) / LIVIAN_HAIVYTYS_MS;
+    if (osuus < 1) {
+      audio.volume = Math.max(0, perus * (1 - osuus));
       return;
     }
     clearInterval(kello);
@@ -847,6 +868,26 @@ export function soitaLivianAani(ui, lahde, indeksi,
   // Radiotilassa ei kaksi ääntä päällekkäin (sama ehto kuin
   // matkakirja- ja linssiluennalla).
   if (ui.radioModuuli && !ui.radioModuuli.luentaSallittu()) return null;
+  /*
+   * PULU EI ALA KERTOJAN PÄÄLLE (omistaja 8.9.2026, sanatarkasti:
+   * *"pulun ja kertojan äänet menevät päällekkäin ja pulu selittää
+   * ensin jotain ihan väärää juttua"*).
+   *
+   * Vuoro kysytään siitä samasta kirjanpidosta, johon puhujat itse
+   * merkitään (js/luenta.js puhujaAanessa) — ei toisesta rinnakkaisesta
+   * taulusta. Pulun oma edellinen repliikki ei laske: se on juuri
+   * pysäytetty yllä ja häipyy hetkessä pois.
+   *
+   * VÄLIHUUTO KULKEE OHI. `vaista: false` on se huudahdus, joka
+   * omistajan päätöksellä SAA soida kertojan päälle hiljempaa
+   * (js/fokusvirta.js ajastaHuudahdus) — sen vuoroa ei kysytä eikä
+   * varata.
+   *
+   * KUPLA JÄÄ RUUDULLE. Portti vaientaa vain äänitteen; teksti näkyy ja
+   * etenee täsmälleen kuten ennen — sama sopimus kuin puuttuvalla tai
+   * vanhentuneella äänitteellä.
+   */
+  if (vaista && puhujaAanessa(PUHUJA_PULU)) return null;
   if (lahde === 'paljastus'
     && (paikkaan !== LIVIAN_AANITETTY_PALJASTUS.paikkaan
       || paikkaa !== LIVIAN_AANITETTY_PALJASTUS.paikkaa)) {
@@ -869,8 +910,8 @@ export function soitaLivianAani(ui, lahde, indeksi,
   // Tausta väistyy puheen ajaksi. Merkintä ennen soittoa, jotta se
   // pariutuu vapautuksen kanssa myös silloin kun soitto ei käynnisty.
   // Välihuuto (vaista: false) ei merkitse puhujaa, joten kertoja jatkaa
-  // entisellä voimallaan sen alla.
-  if (vaista) merkitsePuhuja(ui, audio);
+  // entisellä voimallaan sen alla — eikä se myöskään varaa puhevuoroa.
+  if (vaista) merkitsePuhuja(ui, audio, PUHUJA_PULU);
   const vapaaksi = () => {
     ui.luennat?.delete(audio);
     if (ui.liviaAani === audio) ui.liviaAani = null;
