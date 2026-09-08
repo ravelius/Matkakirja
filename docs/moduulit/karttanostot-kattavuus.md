@@ -264,7 +264,7 @@ osiossa tuoreina.
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Saint Helena (SHN) | 3 | 2 | 0 | 2 | 0 | 0 | 7 | 0 | kohteita −5, maastoa −1, eläintäky puuttuu |
+| Saint Helena (SHN) | 3 | 1 | 1 | 2 | 0 | 0 | 6 | 0 | kohteita −5, maastoa −2 |
 | Angola (AGO) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Kamerun (CMR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Kongo (COD) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
@@ -1939,3 +1939,62 @@ M1–M19. Faktat on luettu en-Wikipedian raakatekstistä kohde kerrallaan,
 ja jokainen lähderivi nimeää artikkelin ja sen osan sekä
 tarkistuspäivän 7.9.2026. Taulukoita ei ole päivitetty käsin — ne
 ajetaan `node tools/laske-karttanostot.mjs --md` -työkalulla.
+
+
+## Erä M21 (tehty 8.9.2026): Saint Helenan tikkuri, Sandy Bay pois
+
+Omistajan päätös 8.9.2026: *"Pudota yksi merkki, tikkuri mukaan."* Erät
+M16 ja M20 olivat kirjanneet Saint Helenan eläintäyn puuttuvaksi ja
+mitanneet syyn kahdesti: saarelle mahtuu seitsemän merkkiä, ei
+kahdeksaa. M20 jätti ratkaisun sisältöpäätökseksi — mikä nykyisistä
+merkeistä väistää — ja päätoimittaja teki sen nyt.
+
+**Pudotettu merkki on Sandy Bay** (`js/packs/maastokohteet-shn.js`,
+id `sandy-bay-shn`, tyyppi *meri*). Perustelu: viidestä saaren
+kohteesta ja maastokohteesta se kantaa vähiten omaa — lahti, sen rannat
+ja Lot's Wife's Ponds ovat saaren maantiedettä, jota kerrotaan muutenkin,
+kun taas High Knoll Fort, Plantation House kilpikonnineen, lentoasema ja
+Diana's Peak ovat kukin saaren ainoita laatuaan. Laudan kaupunkimerkkiä
+`sthelena` ei kosketa: se on pelimerkki eikä nosto.
+
+**Saaren seitsemän merkkiä ennen erää:** High Knoll Fort, Plantation
+House ja Saint Helenan lentoasema (kohteet); Diana's Peak ja Sandy Bay
+(maastokohteet); Longwood House 1815–1858 ja Deadwood 1900–1902
+(skandaalit). Erän jälkeen niitä on yhä seitsemän, mutta Sandy Bayn
+tilalla on tikkurin eläintäky.
+
+**Mittaus.** Saaren monikulmion sisäpuoli haravoitiin 0,01 asteen
+ruudukolla (88 pistettä) ja jokaiselle ajettiin sama ladonta kuin
+portille (`laskeNimiolimitykset`). Nolla nimiö–nimiö-limitystä antoi 12
+pistettä, kaikki saaren eteläosassa — siis juuri siltä alueelta, jonka
+Sandy Bay vapautti. Täky vietiin pisteeseen **5,72 W / 15,99 S**, joka
+on sama piste, jonka erä M20 kokeili ja joka silloin tuotti limityksen.
+`node tools/tarkista-nimiolimitys.mjs SHN` sanoo nyt
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Muut vartiot ilman helpotusta.** Piste on SHN:n oman monikulmion
+sisällä, 84,3 lautayksikköä St. Helena -kaupunkilaatasta
+(vähimmäisetäisyys 35), 688,4 yksikköä lähimmästä toisesta
+eläintäystä (Namibia, vähimmäisetäisyys 30) ja SHN-lehden rajauksen
+sisällä, joten merkki näkyy myös maalehden kartalla.
+
+**Maatestin poikkeus.** Maailmankartan `map.outlines` ei tunne Saint
+Helenan saarta lainkaan — saari on laudalla vain countryShapes-renkaana
+—, joten yksikään saaren piste ei läpäise `isOnLand`-vartiota. SHN
+lisättiin siksi `tests/elaintakyt.test.mjs`:n
+`MAATESTIN_POIKKEUS`-listaan samalla perusteella kuin FJI, SLB ja VUT:
+tyylitelty rantaviiva on piirros eikä mittaustulos, ja poikkeus poistuu,
+kun `map.outlines` joskus päivitetään. Poikkeus ei koske mitään muuta
+vartiota.
+
+**Kuvaton tietue.** Tikkurin `kuva`-kentässä on kuvaputken ämpäritunnus
+`elain-shn` ilman kansiota; kortti latoo siihen asti tekstin ja lähteen
+ilman kuvakehystä. Faktat on luettu en-Wikipedian raakatekstistä
+("Saint Helena plover", johdanto sekä osiot "Description" ja "Status and
+conservation") 8.9.2026.
+
+**Vaje päivittyi**: Saint Helena on nyt *kohteita −5, maastoa −2*, ja
+eläintäky ei enää puutu. Laskurin lukema pysyy ennallaan (maita 112,
+tavoitteessa 108, vajaita 4), koska saari on yhä vajaa kohteiden osalta.
+Taulukon SHN-rivi on ajettu `node tools/laske-karttanostot.mjs --md`
+-työkalulla.

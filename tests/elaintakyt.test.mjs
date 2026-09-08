@@ -84,7 +84,27 @@ const RAJATESTIN_POIKKEUS = new Set(['ISL', 'FJI']);
  * SISÄLLÄ — rajatestiin ei siis tarvita poikkeusta — ja 118,7
  * lautayksikön päässä Port Vilasta ilman mitään helpotusta.
  */
-const MAATESTIN_POIKKEUS = new Set(['FJI', 'SLB', 'VUT']);
+/*
+ * SAINT HELENA LIITTYI MAATESTIN POIKKEUKSEEN 8.9.2026 (erä M21).
+ *
+ * Peruste on täsmälleen sama kuin Fidžillä, Salomonsaarilla ja
+ * Vanuatulla: `map.outlines` on tyylitelty piirros, eikä siinä ole
+ * Saint Helenan saarta lainkaan — saari on laudalla vain
+ * countryShapes-renkaana, joten yksikään saaren piste ei voi läpäistä
+ * isOnLand-vartiota. Maan monikulmion sisään osuu 350 ruudukkopistettä
+ * (0,005°), ja isOnLand on niissä kaikissa epätosi.
+ *
+ * POIKKEUS EI KOSKE MITÄÄN MUUTA VARTIOTA. Tikkurin piste (−5,72 /
+ * −15,99) on SHN:n oman monikulmion SISÄLLÄ (rajatestiin ei tarvita
+ * poikkeusta) ja 84,3 lautayksikön päässä St. Helena -kaupunkilaatasta
+ * ilman helpotusta — laudan kaupunkilaatta on tyylitellyllä paikalla
+ * saaren koillispuolella, joten yksikään saaren piste ei ole edes
+ * lähellä 35:n rajaa. Lähin toinen eläintäky on 688,4 yksikön päässä.
+ *
+ * Kun `map.outlines` joskus päivitetään, poikkeus poistetaan — sama
+ * työ kuin Islannin siirtyneellä muodolla.
+ */
+const MAATESTIN_POIKKEUS = new Set(['FJI', 'SLB', 'VUT', 'SHN']);
 
 /** Lyhin sallittu etäisyys kaupunkimerkkiin maailmankartan yksikköinä. */
 const VAHIN_ETAISYYS_KAUPUNKIIN = 35;
@@ -108,7 +128,7 @@ const paikat = new Map(ELAINTAKY_MAAT.map((iso) => {
 }));
 
 test('jokaisella eläintäyllä on kaanoniteksti, kuva ja paikka', () => {
-  assert.equal(ELAINTAKY_MAAT.length, 108, 'eläintäkyjä on 108 maassa');
+  assert.equal(ELAINTAKY_MAAT.length, 109, 'eläintäkyjä on 109 maassa');
   for (const iso of ELAINTAKY_MAAT) {
     const taky = ELAINTAKYT[iso];
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);

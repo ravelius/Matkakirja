@@ -89,6 +89,34 @@
  * ladontaan, ja vaje jää. Ratkaisu olisi pudottaa jokin nykyinen
  * merkki sen tieltä — se on sisältöpäätös eikä integroijan tehtävä.
  */
+/*
+ * ── ERÄ M21, 8.9.2026: SANDY BAY PUDOTETTIIN, TIKKURI TULI TILALLE ──
+ *
+ * Omistajan päätös 8.9.2026: *"Pudota yksi merkki, tikkuri mukaan."*
+ * M20 jätti sisältöpäätöksen auki; päätoimittaja teki sen, ja
+ * pudotettavaksi valittiin **Sandy Bay** (id `sandy-bay-shn`,
+ * tyyppi `meri`). Perustelu: se oli viidestä maastokohteesta ja
+ * kohteesta se, joka kantaa vähiten omaa — lahti ja sen rannat
+ * kerrotaan jo saaren muissa aineistoissa, kun taas High Knoll Fort,
+ * Plantation House, lentoasema ja Diana's Peak ovat kukin saaren
+ * ainoita laatuaan. Kaupunkia `sthelena` ei kosketa: se on laudan
+ * pelimerkki eikä nosto.
+ *
+ * MITTAUS: poiston jälkeen saarella on kuusi vanhaa merkkiä (kolme
+ * kohdetta, yksi maastokohde, kaksi skandaalia) ja tikkurin eläintäky
+ * eli edelleen seitsemän. Saaren monikulmion sisäpuoli haravoitiin
+ * 0,01 asteen ruudukolla (88 pistettä) ja jokaiselle ajettiin
+ * `laskeNimiolimitykset`; nolla limitystä antoi 12 pistettä, kaikki
+ * saaren eteläosassa — siis juuri siltä alueelta, jonka Sandy Bay
+ * vapautti. Täky vietiin pisteeseen 5,72 W / 15,99 S, ja
+ * `node tools/tarkista-nimiolimitys.mjs SHN` sanoo
+ * "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+ *
+ * VAJE PÄIVITTYY: kohteita −5, maastoa −2, eläintäky ei enää puutu.
+ * Täyn oma perustelu ja maatestin poikkeus ovat
+ * js/packs/elaintakyt.js:n SHN-lohkossa ja
+ * tests/elaintakyt.test.mjs:n MAATESTIN_POIKKEUS-kommentissa.
+ */
 export const MAASTOKOHTEET_SHN = [
   /* ─────────────────────────── KOHTEET (3) ─────────────────────── */
   {
@@ -183,7 +211,7 @@ export const MAASTOKOHTEET_SHN = [
     lahde: 'en-Wikipedia "Saint Helena Airport", johdanto sekä osiot "Background" ja "Airport '
       + 'design and construction" (tarkistettu 6.9.2026).',
   },
-  /* ────────────────────── MAASTOKOHTEET (2) ─────────────────────── */
+  /* ────────────────────── MAASTOKOHTEET (1) ─────────────────────── */
   {
     id: 'dianas-peak',
     nimi: "Diana's Peak",
@@ -209,33 +237,5 @@ export const MAASTOKOHTEET_SHN = [
       + 'lajien taimitarha. Huippu on kolmen piirikunnan — Sandy Bayn, Levelwoodin ja '
       + 'Longwoodin — rajapiste.',
     lahde: 'en-Wikipedia "Diana\'s Peak", johdanto-osa (tarkistettu 6.9.2026).',
-  },
-  {
-    id: 'sandy-bay-shn',
-    nimi: 'Sandy Bay',
-    tyyppi: 'meri',
-    kysymykset: [
-      'Miksi rannikkopatteri jouduttiin rakentamaan uudelleen?',
-      'Mitä ovat Lot\'s Wife\'s Ponds?',
-    ],
-    korostukset: ['merikeko|merikekojen'],
-    nappi: 'Saaren suurimmat rannat',
-    // 5.718 W / 15.983 S — en-Wikipedia "Sandy Bay, Saint Helena".
-    // Lähin kaupunki St. Helena 84,0 lautayksikköä (raja 7).
-    laudat: {
-      maailmankartta: { x: 5642.7, y: 3748.7 },
-    },
-    teksti: 'Sandy Bay on Saint Helenan kaakkoisrannikon lahti ja yksi saaren kahdeksasta '
-      + 'piirikunnasta. Maasto on tulivuorisaarelle tyypillisen vaihtelevaa: jyrkkiä '
-      + 'harjanteita ja vähän tasamaata, alaosa kuivaa ja yläosa rehevää, ja siellä kasvaa '
-      + 'suurin osa saaren kahvista ja banaaneista. Rannat ovat saaren suurimmat, mutta ne '
-      + 'ovat auki kaakkoispasaatille ja kuluvat kovassa merenkäynnissä. Ensimmäiset '
-      + 'linnoitukset rakennettiin vuoden 1708 jälkeen, kun läheltä löytyi kalkkikiveä ja '
-      + 'paikalle tehtiin uuni laastin polttoa varten; patteri rakennettiin liian lähelle '
-      + 'merta ja myrsky vei sen mennessään vuonna 1734. Lahden länsipuolelle vievä '
-      + 'postilaatikkopolku päättyy merikekojen ja vuorovesialtaiden ryhmään, jonka nimi on '
-      + 'Lot\'s Wife\'s Ponds ja jossa käydään uimassa ja kalassa.',
-    lahde: 'en-Wikipedia "Sandy Bay, Saint Helena", johdanto sekä osiot "Description" ja '
-      + '"History" (tarkistettu 6.9.2026).',
   },
 ];
