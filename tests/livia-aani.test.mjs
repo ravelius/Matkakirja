@@ -271,8 +271,9 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
   // Sofian kommentti tiivistyi yhteen kuplaan).
   assert.deepEqual(avaimet.slice(0, 4), ['ateena-3', 'sofia-2', 'sofia-3', 'sofia-5']);
   // Lännen kaksikymmentä kaupunkia ovat taulun lopussa (Fablen erä
-  // 8.9.2026 ilta), yksi kupla kussakin — Venetsiassa kuusi.
-  assert.deepEqual(avaimet.slice(-3), ['oslo-3', 'bergen-3', 'kobenhavn-3']);
+  // 8.9.2026 ilta), yksi kupla kussakin — Venetsiassa kuusi ja
+  // kymmenessä kaupungissa toinen kupla, kuittaus isoisälle (numero 4).
+  assert.deepEqual(avaimet.slice(-4), ['oslo-3', 'bergen-3', 'bergen-4', 'kobenhavn-3']);
   // Teksti on pakkauksen teksti merkilleen — kaanonia ei muotoilla.
   assert.equal(rivit.find((rivi) => rivi.avain === 'sofia-14').teksti, sofia.paluu[1].trim());
   assert.equal(rivit.find((rivi) => rivi.avain === 'istanbul-1'), undefined);
@@ -298,9 +299,10 @@ test('kaupunkirepliikki mahtuu kuplaansa', () => {
     assert.ok(rivi.kuplaSekunteina >= rivi.arvioSekunteina,
       `${rivi.avain}: puhe (${rivi.arvioSekunteina} s) ei mahdu kuplan `
       + `näkyvään aikaan (${rivi.kuplaSekunteina} s)`);
-    // Omistajan nyrkkisääntö: enintään noin 85 merkkiä kuplaa kohti.
+    // Omistajan raja 8.9.2026 ilta: enintään 125 merkkiä kuplaa kohti
+    // (Raamattu, PULUN KUPLASSA PULUN NAKOKULMA, RAJA 125).
     if (!rivi.pinoutuu) {
-      assert.ok(rivi.merkit <= 95, `${rivi.avain}: kupla on ${rivi.merkit} merkkiä`);
+      assert.ok(rivi.merkit <= 125, `${rivi.avain}: kupla on ${rivi.merkit} merkkiä`);
     }
   }
 });

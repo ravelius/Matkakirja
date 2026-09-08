@@ -170,8 +170,9 @@ export const FOKUSVIRTA_TALLINNA = {
       kohta: 'ennen iltaa',
       teksti: 'Ilman minua.',
     },
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Viro hoitaa nyt melkein kaiken verkossa. Yläkaupungin muurit ovat yhä paikoillaan.',
+      'Viro hoitaa nyt melkein kaiken verkossa. Yläkaupungin muurit ovat yhä paikoillaan. Tornien välissä tuuli kääntyy; sen oppii.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuuri). Faktat ovat

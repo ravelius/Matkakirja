@@ -281,8 +281,9 @@ export const FOKUSVIRTA_SARAJEVO = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Ne neljä ääntä kuuluvat yhä samalta sillalta. Ja kahvi keitetään kuten isoisän aikana.',
+      'Ne neljä ääntä kuuluvat yhä samalta sillalta. Ja kahvi keitetään kuten isoisän aikana. Minareetista kuulee ne kaikki.',
     ],
     /*
      * Commons 25.8.2026: 5184×3456, CC BY 2.0, Fred Romero, kuvattu

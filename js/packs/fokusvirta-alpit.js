@@ -49,8 +49,11 @@ export const FOKUSVIRTA_ALPIT = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Jäätikkö on vetäytynyt kauas portailta. Tunneli valmistui, ja sen alla on nyt vielä pidempi.',
+      'Jäätikkö on vetäytynyt kauas portailta. Tunneli valmistui, ja sen alla on vielä pidempi. Vuoren yli minä lensin jo silloin.',
+      // kuittaus isoisälle
+      'Opas sanoi sen liikkuvan. Se liikkui. Isoisäsi ei vain katsonut tarpeeksi kauan.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

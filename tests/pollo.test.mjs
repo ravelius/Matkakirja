@@ -1629,7 +1629,9 @@ test('kupliksi kirjoitettu kommentti on valmiiksi osissa', () => {
   assert.doesNotMatch(kuplat[0], /^Kääk/);
   assert.equal(FOKUSVIRTA_SOFIA.pollo.huudahdus.teksti, 'Kääk.');
   for (const kupla of kuplat) {
-    assert.ok(kupla.length <= 95, `kupla on liian pitkä ääneen luettavaksi: ${kupla.length}`);
+    // Raja 125 (Raamattu, PULUN KUPLASSA PULUN NAKOKULMA, RAJA 125 —
+    // omistaja 8.9.2026 ilta; ennen 95).
+    assert.ok(kupla.length <= 125, `kupla on liian pitkä ääneen luettavaksi: ${kupla.length}`);
   }
   // Alustus on poistettu joka kaupungista (omistaja 8.9.2026).
   assert.equal(FOKUSVIRTA_SOFIA.pollo.alustus, undefined);

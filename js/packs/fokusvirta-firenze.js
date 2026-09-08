@@ -202,8 +202,11 @@ export const FOKUSVIRTA_FIRENZE = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'David siirrettiin sisälle, ja aukiolla seisoo kopio. Sillan puodit myyvät yhä kultaa.',
+      'David siirrettiin sisälle, ja aukiolla seisoo kopio. Sillan puodit myyvät yhä kultaa. Päälaella ei saa istua. Kokeilin.',
+      // kuittaus isoisälle
+      'Kyyhkyset vaihtoivat vahtivuoroa. Se olin minä, molemmilla kerroilla.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

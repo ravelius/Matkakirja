@@ -278,8 +278,9 @@ export const FOKUSVIRTA_VARSOVA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Vanhakaupunki rakennettiin sodan jälkeen uudelleen tiili tiileltä. Sydän on yhä pylväässä.',
+      'Vanhakaupunki rakennettiin sodan jälkeen uudelleen tiili tiileltä. Sydän on yhä pylväässä. Ylhäältä ei erota, mikä on vanhaa.',
     ],
     /* KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. */
     /*

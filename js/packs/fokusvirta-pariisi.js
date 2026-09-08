@@ -122,8 +122,9 @@ export const FOKUSVIRTA_PARIISI = {
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Ooppera valmistui, ja kukkulan kirkko on valkoinen. Raunioiden paikalla on nyt puutarha.',
+      'Ooppera valmistui, ja kukkulan kirkko on valkoinen. Raunioiden paikalla on puutarha, jossa meitä ruokitaan, vaikka ei saisi.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Eiffel-torni). Faktat:

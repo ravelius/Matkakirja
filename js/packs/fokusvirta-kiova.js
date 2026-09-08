@@ -249,8 +249,9 @@ export const FOKUSVIRTA_KIOVA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Käytävissä kävellään yhä kynttilä kädessä. Ja se musta maa ruokkii yhä ison osan maailmaa.',
+      'Käytävissä kävellään yhä kynttilä kädessä. Se musta maa ruokkii yhä ison osan maailmaa. Meitäkin: laitureilla putoaa vehnää.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/

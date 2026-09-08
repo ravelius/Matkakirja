@@ -314,8 +314,9 @@ export const FOKUSVIRTA_ODESSA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Ooppera rakennettiin uudelleen, ja se on kaupungin kaunein talo. Satama on yhä täynnä vehnää.',
+      'Ooppera rakennettiin uudelleen, ja se on kaupungin kaunein talo. Satama on yhä täynnä vehnää. Meille meren paras satama.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi

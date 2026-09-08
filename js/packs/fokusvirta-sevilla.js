@@ -194,8 +194,9 @@ export const FOKUSVIRTA_SEVILLA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Tupakkatehdas on nyt yliopisto. Appelsiinipuut kukkivat yhä joka kadulla, ja tuoksu on sama.',
+      'Tupakkatehdas on nyt yliopisto. Appelsiinipuut kukkivat yhä joka kadulla. Appelsiinit ovat karvaita; älä usko turisteja.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

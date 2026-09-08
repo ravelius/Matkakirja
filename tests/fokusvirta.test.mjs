@@ -204,7 +204,7 @@ test('Ateenan fokusvirta on rakenteeltaan ehjä', () => {
    * `pollo.maadoitus` ja `pollo.teksti` korvattiin yhdellä
    * kommenttikuplalla, joka tulee luennan jälkeen kuten muissa
    * kaupungeissa. Kupla on lyhyempi kuin vanha korttiteksti — mitta on
-   * siksi kuplan mitta (js/liviapuhe.js, alle 95 merkkiä), ja
+   * siksi kuplan mitta (js/liviapuhe.js, enintään 125 merkkiä), ja
    * puheenvuoron olemassaolo vartioidaan samalla silmukalla kuin
    * muissa kaupungeissa ("jokaisella fokuskaupungilla on Livian
    * puheenvuoro isoisän merkintään").
@@ -314,11 +314,12 @@ test('jokaisella fokuskaupungilla on Livian puheenvuoro isoisän merkintään', 
       `${kaupunki}: Livian puheenvuoro puuttuu tai on liian lyhyt`);
     assert.notEqual(puhe, livianKuplat(virta.pollo?.teksti).join(' '),
       `${kaupunki}: puheenvuoro ei saa olla sama teksti kuin vaiheen huomio`);
-    // Kupla on puheen mittainen: enintään noin 85 merkkiä (Raamattu,
+    // Kupla on puheen mittainen: enintään 125 merkkiä (Raamattu,
+    // PULUN KUPLASSA PULUN NAKOKULMA, RAJA 125 — omistaja 8.9.2026 ilta;
     // KAUPUNGIN KULKU). Vanha yhden merkkijonon maadoitus on pidempi,
     // koska peli pilkkoo sen ruudulla itse.
     for (const kupla of kommentti) {
-      assert.ok(kupla.length <= 95, `${kaupunki}: kupla on liian pitkä luettavaksi ääneen`);
+      assert.ok(kupla.length <= 125, `${kaupunki}: kupla on liian pitkä luettavaksi ääneen`);
     }
     if (!kommentti.length) {
       // Huutomerkkejä Livia ei käytä vanhassa maadoituksessa

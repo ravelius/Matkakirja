@@ -215,8 +215,9 @@ export const FOKUSVIRTA_DUBLIN = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Panimo tekee yhä olutta samassa paikassa. Ja se kirja on yhä kirjastossa, lasin alla.',
+      'Panimo tekee yhä olutta, ja se kirja on kirjastossa lasin alla. Lokit vievät täällä murut ennen kuin ehtii laskeutua.',
     ],
     teksti: 'Vahtimestarit katsovat kaikkia edelleen kuin varkaita, ja kohta '
       + 'ymmärrät miksi se ei ole ihan väärä vaisto tässä maassa..',

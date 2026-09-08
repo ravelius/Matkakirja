@@ -135,8 +135,9 @@ export const FOKUSVIRTA_BERLIINI = {
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Voitonpatsas siirrettiin keskelle puistoa. Kaupunki jaettiin muurilla kahtia; sauma näkyy yhä.',
+      'Voitonpatsas siirrettiin keskelle puistoa. Kaupunki jaettiin muurilla kahtia; sauma näkyy yhä. Ylhäältä se näkyi koko ajan.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (valtiopäivätalo). Faktat

@@ -127,8 +127,9 @@ export const FOKUSVIRTA_DUBROVNIK = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Muurilla kävellään yhä ympäri, mutta nyt jonossa. Kaivosta juodaan edelleen.',
+      'Muurilla kävellään yhä ympäri, mutta nyt jonossa. Kaivosta juodaan edelleen. Muurin harjalta katsoo lokkeja alaspäin.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuurit). Faktat

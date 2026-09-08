@@ -154,8 +154,11 @@ export const FOKUSVIRTA_MADRID = {
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Tasavalta kaatui pian, ja maassa on taas kuningas. Velázquezin edessä ei enää seisota yksin.',
+      'Tasavalta kaatui pian, ja maassa on taas kuningas. Velázquezin edessä ei enää seisota yksin. Tuuli torilla on yhä sama.',
+      // kuittaus isoisälle
+      'Matkan hiljaisin tunti. Minä odotin sen räystäällä tuulessa.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Kuninkaanlinna). Faktat:

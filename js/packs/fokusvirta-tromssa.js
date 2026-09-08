@@ -48,8 +48,9 @@ export const FOKUSVIRTA_TROMSSA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Aurinko ei laske vieläkään kesällä. Ja lempinimi Pohjolan Pariisi on yhä käytössä.',
+      'Aurinko ei laske vieläkään kesällä. Ja lempinimi Pohjolan Pariisi on yhä käytössä. Valoisa yö on lentäjälle lahja.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

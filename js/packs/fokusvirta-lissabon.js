@@ -174,8 +174,9 @@ export const FOKUSVIRTA_LISSABON = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLAT UUSIKSI (Fable 8.9.2026 ilta, pulun näkökulma, raja 125; omistaja katsoo koosteesta). */
     kommentti: [
-      'Kaakelit ovat yhä seinissä, ja niitä myydään muistoksi. Joki on vetäytynyt tornin ympäriltä.',
+      'Kaakelit ovat yhä seinissä, ja niitä myydään muistoksi. Joki on vetäytynyt tornin ympäriltä. Kalakorien alla on hyvä sato.',
     ],
     teksti: 'Se järistys, josta isoisäsi kirjoitti, muutti muuten koko '
       + 'Euroopan ajattelua — sen jälkeen alettiin ensimmäistä kertaa '
