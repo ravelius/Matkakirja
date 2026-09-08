@@ -13,7 +13,7 @@ for (const c of cities) {
   const kupla = Array.isArray(p.kommentti) ? p.kommentti.join(' | ') : (p.kommentti ?? '');
   console.log(`## ${c.id} — ${c.name ?? ''}`);
   console.log(`Paikkarivi: ${m.paikkarivi ?? '(puuttuu)'}`);
-  console.log(`Teksti: ${m.teksti ?? '(puuttuu)'}`);
+  console.log(`Teksti (${(m.teksti ?? '').length} merkkiä, yläraja 400): ${m.teksti ?? '(puuttuu)'}`);
   if (p.huudahdus) console.log(`Huudahdus: "${p.huudahdus.teksti}" kohdassa "${p.huudahdus.kohta}"`);
   console.log(`Pulu (${kupla.length} merkkiä): ${kupla}\n`);
 }
