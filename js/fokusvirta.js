@@ -121,7 +121,7 @@ import {
  */
 import {
   livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu, livianKuplanAika,
-  livianKuplanAjastin, livianKuplat,
+  livianKuplanAjastin, livianKuplat, pysaytaLivianAani,
   soitaLivianAani, soitaLivianKaupunkiAani,
 } from './liviapuhe.js';
 import { luennanLoppuun } from './luenta.js';
@@ -692,6 +692,10 @@ const SAAPUMISKUPLAN_TAUKO_MS = 900;
 const SAAPUMISKUPLAN_PALJASTUSVALI_MS = 500;
 /** Enimmäisodotus paljastukselle; sen jälkeen kommentti tulee joka tapauksessa. */
 const SAAPUMISKUPLAN_PALJASTUSKATTO_MS = 90_000;
+/** Kuinka usein kommentti kysyy, onko lykätty luenta jo lähtenyt. */
+const SAAPUMISKUPLAN_LUENTAVALI_MS = 400;
+/** Enimmäisodotus lykätylle luennalle (varoventtiili). */
+const SAAPUMISKUPLAN_LUENTAKATTO_MS = 30_000;
 
 /**
  * ÄÄNITETYN REPLIIKIN KUPLARYTMI.
@@ -790,6 +794,39 @@ function livianSarjanKesto(kuplat) {
  * luennan jälkeen kuten ennenkin. Kulku ei siis vaadi kaikkien
  * kaupunkien uudelleenkirjoitusta yhdellä kertaa.
  */
+
+/**
+ * EDELLISEN KAUPUNGIN PUHEENVUORO PÄÄTTYY LÄHTÖÖN (omistaja 8.9.2026,
+ * sanatarkasti: *"pulun ja kertojan äänet menevät päällekkäin ja pulu
+ * selittää ensin jotain ihan väärää juttua"*).
+ *
+ * Kaupungin kulku on ketju ajastimia (alustus → luenta → huudahdus →
+ * kommentti), ja jokainen niistä kysyy kaupunkia vasta lauetessaan.
+ * Kesken jäänyt ÄÄNITE ei kysy mitään: se soi loppuun, vaikka pelaaja
+ * on jo toisessa kaupungissa. Kehittäjän hyppy (js/ui.js
+ * doKehittajaSiirto) tekee juuri sen — ja silloin uuden kaupungin
+ * kertoja alkaa edellisen kaupungin repliikin päälle.
+ *
+ * Tämä on se yksi paikka, joka katkaisee ketjun lähdettäessä: kaikki
+ * pulun kaupunkiajastimet ja soiva repliikki. Kuplat jäävät ruudulle
+ * kuten ennenkin — ne ovat tekstiä, eivät ääntä, ja pelaaja saa lukea
+ * ne loppuun.
+ *
+ * Paljastussarjaa (js/livia.js) EI tarvitse listata: se vartioi
+ * kaupunkiaan itse jokaisessa repliikissä (paljastusRepliikki cityId).
+ */
+export function vaiennaLivianKaupunkipuhe(ui) {
+  if (!ui) return;
+  for (const ajastin of [
+    'alustuksenAjastin', 'saapumiskuplaAjastin', 'huudahdusAjastin',
+    'huudahdusVaraAjastin', 'huudahdusPoisAjastin', 'polloKuplasarjaAjastin',
+    'livianKorttiSarja', 'fokusvinkkiAjastin',
+  ]) {
+    clearTimeout(ui[ajastin]);
+    ui[ajastin] = null;
+  }
+  pysaytaLivianAani(ui);
+}
 
 /** Kaupungin uuden kulun kentät yhtenä oliona (tyhjät listat, jos ei ole). */
 function kulunKuplat(ui, city) {
@@ -890,7 +927,11 @@ export function fokusvirtaAlustus(ui, city) {
   ui.alustuksenAjastin = livianKuplanAjastin(
     livianSarjanKesto(kulku.alustus), () => ui.liviaAani,
     () => {
-      if (ui.dead) return;
+      // Pelaaja on voinut lähteä kaupungista kesken alustuksen
+      // (kehittäjän hyppy): silloin tämä ajastin päästäisi liikkeelle
+      // TOISEN kaupungin luennan kesken sen oman alustuksen — kaksi
+      // ääntä päällekkäin (omistaja 8.9.2026).
+      if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
       ui.aloitaLykattyLuenta?.();
       ajastaHuudahdus(ui, city, kulku.huudahdus, merkinta);
     },
@@ -980,6 +1021,9 @@ function ajastaHuudahdus(ui, city, huudahdus, merkinta) {
 function soitaLivianKaupunkiSarja(ui, kaupunkiId, kentta, kuplat, i = 0) {
   const teksti = kuplat[i];
   if (!teksti) return;
+  // Sarjan loppu kuuluu vain siihen kaupunkiin, jossa se alkoi — sama
+  // vahti kuin kuplasarjoilla (omistaja 8.9.2026).
+  if (ui?.game?.cityOf?.()?.id !== kaupunkiId) return;
   const aani = soitaLivianKaupunkiAani(ui, kaupunkiId, kentta, { kupla: i, teksti });
   if (i + 1 >= kuplat.length) return;
   clearTimeout(ui.livianKorttiSarja);
@@ -1110,10 +1154,30 @@ export function fokusvirtaSaapumiskupla(ui, city) {
    * KOMMENTTI VASTA LUENNAN JÄLKEEN. Ilman luentaa (mykistys,
    * kertojatila 'ei', puuttuva äänite) kupla tulee heti tauon jälkeen.
    */
-  const kommenttiLuennanJalkeen = () => {
+  /*
+   * LUENTA VOI OLLA VASTA LÄHDÖSSÄ (omistaja 8.9.2026).
+   *
+   * Tämä kutsu tulee kirjoituskoneen lopusta, ja kone ehtii maaliin
+   * ennen kertojaa aina kun merkintä on lyhyt ja pulun alustusäänite
+   * pitkä (esim. Tallinna, Helsinki: kone ~9,4 s, alustus venyy puheen
+   * mittaan). Silloin `ui.diaryVoice` on vielä tyhjä, luennanLoppuun
+   * vastaa "ei luentaa" — ja kommentti tulisi juuri alkavan kertojan
+   * päälle. Lykkäyslippu kertoo, että luenta on tulossa: sitä
+   * odotetaan, ei ohiteta. Katto on varoventtiili, jottei kommentti
+   * jää roikkumaan, jos luenta ei koskaan lähde.
+   */
+  const kommenttiLuennanJalkeen = (jaljella = SAAPUMISKUPLAN_LUENTAKATTO_MS) => {
     const luenta = luennanLoppuun(ui);
     if (luenta) {
       void luenta.then(() => { if (!ui.dead) nayta(); });
+      return;
+    }
+    if (ui.luennanLykkays && jaljella > 0 && !ui.dead) {
+      clearTimeout(ui.saapumiskuplaAjastin);
+      ui.saapumiskuplaAjastin = setTimeout(
+        () => kommenttiLuennanJalkeen(jaljella - SAAPUMISKUPLAN_LUENTAVALI_MS),
+        SAAPUMISKUPLAN_LUENTAVALI_MS,
+      );
       return;
     }
     nayta();

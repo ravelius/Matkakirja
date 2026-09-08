@@ -209,6 +209,76 @@ Lehtivinkki on oma lähteensä (`lehtivinkki`, yksi repliikki
 kuin paljastuksella — eikä siinä ole enää "Älä näytä jatkossa"
 -ruksia (vanha avain `matkakirja-lehtivinkki-pois` on poistettu).
 
+## Pulu ja kertoja eivät puhu päällekkäin (omistaja 8.9.2026)
+
+Omistajan vikailmoitus 8.9.2026 klo 12.55, sanatarkasti: *"jos minulla
+on maailma tila päällä kehittäjänä ja menen kuuntelemaan kaupunkeja
+joissa pululla äänet, niin pulun ja kertojan äänet menevät päällekkäin
+ja pulu selittää ensin jotain ihan väärää juttua."*
+
+**Juurisyy: kaksi rinnakkaista kirjanpitoa.** Kertojan luenta eli
+`ui.diaryVoice`-kentässä ja pulun repliikki `ui.liviaAani`-kentässä,
+eikä kumpikaan tiennyt toisesta mitään — järjestys syntyi pelkistä
+ajastimista (alustus → luenta → huudahdus → kommentti). Ajastimet
+kysyvät kaupunkia vasta lauetessaan, mutta **kesken jäänyt äänite ei
+kysy mitään**: se soi loppuun. Kehittäjän maailmatilassa kaupunkia
+vaihdetaan napauttamalla (`js/ui.js doKehittajaSiirto`), jolloin lähtö
+osuu keskelle pulun lausetta — edellinen kaupungin repliikki jää soimaan
+uuden kaupungin luennan alle. Juuri se on omistajan kuulema *"ihan väärä
+juttu"*: se on **toisen kaupungin** lause, ei väärä äänite. (Mitattu
+selaimella: hyppy Riiasta Vilnaan → `livia-riika-2.mp3` soi Vilnan kuplan
+päällä; hyppy takaisin jo käytyyn kaupunkiin aloittaa sen luennan heti,
+koska alustus on jo nähty eikä luentaa enää lykätä.)
+
+**Korjaus on yksi vuorokirjanpito, ei kahta.** Sama taulu, joka jo tiesi
+kaikki soivat luennat taustan väistöä varten (`js/luenta.js
+soivatLuennat`), tietää nyt myös **kuka** puhuu:
+
+| Missä | Mikä |
+| --- | --- |
+| `js/luenta.js` | `PUHUJA_KERTOJA` / `PUHUJA_PULU`, `merkitsePuhuja(ui, audio, rooli)`, `puhujaAanessa(paitsi)`, `luovutaPuhevuoro(audio)` |
+| `js/liviapuhe.js` | `soitaLivianAani` ei aloita, jos kertoja on äänessä (`vaista` päällä); merkintä roolilla `PUHUJA_PULU` |
+| `js/luenta.js playDiaryVoice` | kertoja odottaa pulun lauseen loppuun (250 ms välein, katto 15 s) |
+| `js/fokusvirta.js` | `vaiennaLivianKaupunkipuhe(ui)` katkaisee kaupungin kaikki pulun ajastimet ja soivan repliikin |
+| `js/ui.js` | `vaiennaPaikanPuhe()` = kertojan häivytys + edellinen kutsu; sitä käyttävät noppa, jalan, lento ja kehittäjän hyppy |
+
+Samalla korjattiin kaksi kohtaa, joissa järjestys nojasi kelloon:
+
+- **Alustuksen ajastin vartioi kaupunkiaan** (`fokusvirtaAlustus`). Se
+  päästää lykätyn luennan liikkeelle; väärässä kaupungissa lauetessaan
+  se aloitti TOISEN kaupungin luennan kesken sen omaa alustusta.
+- **Kommentti odottaa myös vasta lähdössä olevaa luentaa.** Kutsu tulee
+  kirjoituskoneen lopusta, ja kone ehtii maaliin ennen kertojaa aina
+  kun merkintä on lyhyt ja alustusäänite pitkä (Tallinna ~9,4 s vs.
+  ~9 s, Helsinki ja Sofia yhtä lähellä). Silloin `ui.diaryVoice` on
+  vielä tyhjä eikä `luennanLoppuun` tiedä luennasta mitään — nyt
+  `ui.luennanLykkays` kertoo sen, ja kommentti odottaa (400 ms välein,
+  katto 30 s).
+- **Pulun loppuhäivytys lasketaan kellosta eikä askelmäärästä**
+  (`pysaytaLivianAani`). Neljä kiinteää askelta venyi ajastimia
+  kuristavassa selaimessa sekunniksi ääntä sen jälkeen kun peli jo
+  käski vaieta.
+
+Kolme sääntöä, jotka on helppo rikkoa vahingossa:
+
+1. **Välihuuto on tietoinen poikkeus.** `huudahdus` soi kertojan päälle
+   hiljempaa (`vaista: false`) eikä varaa vuoroa lainkaan — omistajan
+   päätös 7.9.2026, ja portti ohittaa sen.
+2. **Häivytys luovuttaa vuoron heti** (`luovutaPuhevuoro`). Lähdön
+   0,7 sekunnin loppuhäivytys on hyvästely, ei puheenvuoro; ilman tätä
+   se olisi vaientanut seuraavan kaupungin ensimmäisen repliikin.
+3. **Portti vaientaa vain äänen.** Kupla näkyy ja etenee kuten ennen —
+   sama sopimus kuin puuttuvalla tai vanhentuneella äänitteellä.
+
+Vartiot: `tests/puhevuoro.test.mjs` (vuorokirjanpito, molemmat portit,
+välihuudon poikkeus, lähdön vaiennus) ja
+`tools/savukkeet/savuke-pulun-vuoro.mjs` (selain: hyppy kaupungista
+toiseen kesken pulun lauseen).
+
+**Raja:** striimattu lukija (`js/lukija.js`) ei kulje tämän taulun
+kautta, koska se ei ole `<audio>`-elementti. Kaupunkien saapumisluennat
+ovat äänitteitä, joten vuoro on niissä aina tiedossa.
+
 ## Vanhentunut äänite on hiljainen
 
 Tiedostonimi johdetaan lähteestä ja indeksistä, joten repliikin tekstin

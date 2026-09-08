@@ -210,6 +210,8 @@ export function stopIntroVoice(ui) {
  * puhujan rooli jäi vapauttamatta ja tausta jäi väistöön.
  */
 export function haivytaJaSiivoa(ui, audio, kesto = 600) {
+  // Häivytys on hyvästely: vuoro on vapaa jo nyt (ks. luovutaPuhevuoro).
+  luovutaPuhevuoro(audio);
   const alkuVoima = audio.volume;
   const t0 = performance.now();
   const askel = () => {
@@ -233,22 +235,110 @@ export function haivytaJaSiivoa(ui, audio, kesto = 600) {
  * olla käynnissä ilman että se on enää `ui.diaryVoice`. Elinkaari
  * seuraa puhujan roolia: merkitsePuhuja lisää, vapautaPuhuja poistaa.
  */
-const soivatLuennat = new Map(); // audio → ui
+const soivatLuennat = new Map(); // audio → { ui, rooli }
+
+/*
+ * ── PULU JA KERTOJA EIVÄT PUHU PÄÄLLEKKÄIN ─────────────────────────
+ *
+ * Omistajan vikailmoitus 8.9.2026 klo 12.55, sanatarkasti: *"jos
+ * minulla on maailma tila päällä kehittäjänä ja menen kuuntelemaan
+ * kaupunkeja joissa pululla äänet, niin pulun ja kertojan äänet menevät
+ * päällekkäin ja pulu selittää ensin jotain ihan väärää juttua."*
+ *
+ * JUURISYY oli KAKSI RINNAKKAISTA KIRJANPITOA. Kertojan luenta eli
+ * `ui.diaryVoice`-kentässä ja pulun repliikki `ui.liviaAani`-kentässä,
+ * eikä kumpikaan tiennyt toisesta mitään: järjestys syntyi pelkistä
+ * ajastimista (js/fokusvirta.js alustus → luenta → kommentti). Kun
+ * kehittäjä hyppää kaupungista toiseen (js/ui.js doKehittajaSiirto),
+ * ajastimet eivät ehdi loppuun — edellisen kaupungin repliikki jää
+ * soimaan uuden kaupungin luennan alle, ja juuri se on omistajan
+ * kuulema *"ihan väärä juttu"*: se on toisen kaupungin lause.
+ *
+ * NYT VUOROKIRJANPITO ON YKSI JA TÄSSÄ. Sama taulu, joka jo tiesi
+ * kaikki soivat luennat (taustan väistöä varten), tietää nyt myös
+ * KUKA puhuu. Molemmat puolet kysyvät samasta paikasta:
+ * js/liviapuhe.js ei aloita pulun repliikkiä kertojan päälle, ja
+ * playDiaryVoice odottaa pulun lauseen loppuun ennen kuin kertoja
+ * aloittaa.
+ *
+ * VÄLIHUUTO ON TIETOINEN POIKKEUS (omistaja 7.9.2026): huudahdus soi
+ * kertojan päälle hiljempaa eikä varaa vuoroa lainkaan
+ * (js/liviapuhe.js `vaista: false`) — se ei siis kulje tästä portista.
+ *
+ * RAJA: striimattu lukija (js/lukija.js) ei kulje tämän taulun kautta,
+ * koska se ei ole <audio>-elementti. Kaupunkien saapumisluennat ovat
+ * äänitteitä, joten vuoro on niissä aina tiedossa.
+ */
+/** Isoisän lukija: matkakirjamerkinnät, avausteksti ja linssiluennat. */
+export const PUHUJA_KERTOJA = 'kertoja';
+/** Livia eli pulu: kuplien repliikit. */
+export const PUHUJA_PULU = 'pulu';
+/** Kuinka usein kertoja kysyy, onko pulun lause jo loppunut. */
+const PULUN_ODOTUSVALI_MS = 250;
+/** Kauanko kertoja korkeintaan odottaa pulua ennen kuin aloittaa silti. */
+const PULUN_ODOTUKSEN_KATTO_MS = 15000;
 
 /**
  * Merkitsee äänen puhujaksi: tausta väistyy niin kauan kuin yksikin
  * puhuu. Vapautus tapahtuu kerran ja vain kerran — 'ended' ja
  * 'error' voivat molemmat laueta, ja kaksinkertainen vapautus
  * nostaisi taustan kesken toisen luennan.
+ *
+ * @param {string} [rooli] kumpi ääni tämä on (PUHUJA_KERTOJA tai
+ *   PUHUJA_PULU) — sama merkintä varaa myös PUHEVUORON.
  */
-export function merkitsePuhuja(ui, audio) {
+export function merkitsePuhuja(ui, audio, rooli = PUHUJA_KERTOJA) {
   if (!audio || audio.puhujaMerkitty) return;
   audio.puhujaMerkitty = true;
-  soivatLuennat.set(audio, ui);
+  soivatLuennat.set(audio, { ui, rooli });
   puheAlkoi();
   const lopeta = () => vapautaPuhuja(ui, audio);
   audio.addEventListener('ended', lopeta);
   audio.addEventListener('error', lopeta);
+}
+
+/**
+ * KUKA ON ÄÄNESSÄ JUURI NYT — tai null, jos vuoro on vapaa.
+ *
+ * "Äänessä" tarkoittaa varattua vuoroa, ei pelkkää soivaa signaalia:
+ * juuri luotu soitin odottaa vielä hengähdystään (playDiaryVoice
+ * `viive`) ja on silti vuorossa. Kaksi tilaa EI ole äänessä:
+ *
+ *   1. loppuun soinut äänite (`ended`)
+ *   2. pysäytetty soitin, joka on jo ehtinyt soida — lauserajahäivytys,
+ *      pehmeaLopun viimeinen hetki ja Tutki-näkymän tauko
+ *      (`ui.luentaTauolla`). Nämä eivät laukaise 'ended'-tapahtumaa,
+ *      joten pelkkä taulun jäsenyys jäisi tänne roikkumaan.
+ *
+ * @param {string|null} [paitsi] rooli, jota ei lasketa — kysyjä itse.
+ * @returns {string|null} PUHUJA_KERTOJA, PUHUJA_PULU tai null.
+ */
+export function puhujaAanessa(paitsi = null) {
+  for (const [audio, tieto] of soivatLuennat) {
+    if (paitsi && tieto.rooli === paitsi) continue;
+    if (audio.puhevuoroPaattyi) continue;
+    if (audio.ended) continue;
+    if (audio.paused && audio.currentTime > 0) continue;
+    return tieto.rooli;
+  }
+  return null;
+}
+
+/**
+ * LOPPUHÄIVYTYS LUOVUTTAA VUORON HETI (omistaja 8.9.2026).
+ *
+ * Häivytys on hyvästely, ei puheenvuoro: pelaaja on jo lähtenyt
+ * paikasta, ja seuraava puhuja saa aloittaa saman tien. Ilman tätä
+ * lähtevän kaupungin kertoja (haivytaLuenta, 0,7 s) tai edellinen
+ * pulun repliikki (js/liviapuhe.js pysaytaLivianAani, 0,16 s) veisi
+ * vuoron vielä hetkeksi mukanaan — ja juuri se hetki on se, jolloin
+ * uuden kaupungin ensimmäinen repliikki alkaisi.
+ *
+ * Taustan väistö EI pura tästä: se seuraa yhä vapautaPuhujaa, joka
+ * tulee häivytyksen lopussa.
+ */
+export function luovutaPuhevuoro(audio) {
+  if (audio) audio.puhevuoroPaattyi = true;
 }
 
 /** Vapauttaa äänen puhujan roolista; turvallista kutsua monta kertaa. */
@@ -277,7 +367,7 @@ export function vapautaPuhuja(ui, audio) {
  * haivytaLuennasta (ks. sen kommentti).
  */
 export function taustaHiljennaLuennat() {
-  for (const [audio, isanta] of [...soivatLuennat]) {
+  for (const [audio, { ui: isanta }] of [...soivatLuennat]) {
     try {
       audio.pause();
       audio.removeAttribute('src');
@@ -460,7 +550,30 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
       audio.addEventListener('timeupdate', vahti);
     });
   }
+  /*
+   * KERTOJA EI ALA PULUN PÄÄLLE (omistaja 8.9.2026, ks. osio PULU JA
+   * KERTOJA EIVÄT PUHU PÄÄLLEKKÄIN).
+   *
+   * Järjestys on muuten ajastimien varassa: pulun alustus saa
+   * lukuaikansa ja päästää luennan liikkeelle vasta perään
+   * (js/fokusvirta.js fokusvirtaAlustus). Kehittäjän hyppy kaupungista
+   * toiseen ohittaa ne ajastimet, ja silloin edellisen kaupungin
+   * repliikki on yhä äänessä kun uuden kaupungin luenta alkaisi. Tämä
+   * on se yksi portti, jonka läpi kertoja kulkee — se odottaa pulun
+   * lauseen loppuun eikä puhu sen päälle.
+   *
+   * KATTO ON PAKOLLINEN: pulun äänite voi jäädä myös jumiin (verkko
+   * poikki, purettu soitin), eikä luenta saa hävitä sen mukana.
+   */
+  let odotettu = 0;
   const aloita = () => {
+    if (odotettu < PULUN_ODOTUKSEN_KATTO_MS && puhujaAanessa(PUHUJA_KERTOJA) === PUHUJA_PULU) {
+      odotettu += PULUN_ODOTUSVALI_MS;
+      setTimeout(() => {
+        if (ui.diaryVoice === audio) aloita();
+      }, PULUN_ODOTUSVALI_MS);
+      return;
+    }
     audio.play().then(() => {
       // play() on asynkroninen: jos luenta ehti vaihtua tai pysähtyä
       // käynnistyksen aikana, myöhässä herännyt ääni pysäytetään heti —
@@ -723,6 +836,9 @@ export function haivytaLuenta(ui, kestoMs = 700) {
   // Irrotetaan heti, jotta seuraava luenta saa alkaa puhtaalta pöydältä.
   ui.diaryVoice = null;
   ui.luentaTauolla = null;
+  // Puhevuoro samassa hetkessä: häivytys on hyvästely eikä saa estää
+  // seuraavan paikan ensimmäistä repliikkiä (ks. luovutaPuhevuoro).
+  luovutaPuhevuoro(audio);
   const alku = audio.volume;
   const t0 = performance.now();
   const askel = (nyt) => {
