@@ -113,9 +113,9 @@ test('kaupunkirepliikki nimetään kaupungista, kentästä ja kuplan numerosta',
   // kuusi sähkevaihetta, joista neljä on kirjoitettu kahdeksi kuplaksi.
   assert.deepEqual(LIVIAN_KAUPUNKILAHTEET.ateena, ['maadoitus']);
   assert.deepEqual(livianKaupunkiKentat('sofia').map((k) => [k.kentta, k.kuplat, k.alku]), [
-    [LIVIAN_VARATTU, 1, 0], ['huudahdus', 1, 1], ['kommentti', 2, 2], ['johdanto', 2, 4],
-    ['vinkki', 2, 6], ['linkkiSaate', 1, 8], ['oikein', 2, 9], ['odotus', 1, 11],
-    ['paluu', 2, 12],
+    [LIVIAN_VARATTU, 1, 0], ['huudahdus', 1, 1], ['kommentti', 1, 2], [LIVIAN_VARATTU, 1, 3],
+    ['johdanto', 2, 4], ['vinkki', 2, 6], ['linkkiSaate', 1, 8], ['oikein', 2, 9],
+    ['odotus', 1, 11], ['paluu', 2, 12],
   ]);
   assert.equal(livianKaupunkiIndeksi('ateena', 'maadoitus'), 0);
   assert.equal(livianKaupunkiIndeksi('sofia', 'paluu'), 12);
@@ -140,14 +140,16 @@ test('kaupunkirepliikki nimetään kaupungista, kentästä ja kuplan numerosta',
    * on varattu, jotta kommenttien numerot (3…) eivät siirry.
    */
   assert.deepEqual(livianKaupunkiKentat('istanbul').map((k) => [k.kentta, k.kuplat, k.alku]),
-    [[LIVIAN_VARATTU, 1, 0], [LIVIAN_VARATTU, 1, 1], ['kommentti', 3, 2]]);
+    [[LIVIAN_VARATTU, 1, 0], [LIVIAN_VARATTU, 1, 1], ['kommentti', 1, 2]]);
   assert.deepEqual(livianKaupunkiKentat('riika').map((k) => [k.kentta, k.kuplat, k.alku]),
-    [[LIVIAN_VARATTU, 1, 0], ['huudahdus', 1, 1], ['kommentti', 4, 2]]);
+    [[LIVIAN_VARATTU, 1, 0], ['huudahdus', 1, 1], ['kommentti', 1, 2]]);
   assert.equal(livianKaupunkiIndeksi('riika', 'huudahdus'), 1);
   assert.equal(livianKaupunkiIndeksi('istanbul', 'huudahdus'), null);
   assert.equal(livianKaupunkiIndeksi('istanbul', 'alustus'), null);
-  assert.equal(livianKaupunkiIndeksi('riika', 'kommentti', 1), 3);
-  assert.equal(livianKaupunkiKuplia('vilna', 'kommentti'), 3);
+  // Yksi kupla per kaupunki (omistaja 8.9.2026): toista kuplaa ei nimetä.
+  assert.equal(livianKaupunkiIndeksi('riika', 'kommentti', 1), null);
+  assert.equal(livianKaupunkiIndeksi('riika', 'kommentti'), 2);
+  assert.equal(livianKaupunkiKuplia('vilna', 'kommentti'), 1);
   assert.equal(livianKaupunkiKuplia('vilna', 'paluu'), 0);
   // Äänittämätön kaupunki tai kenttä on hiljainen, ei arvattu nimi.
   assert.equal(livianKaupunkiIndeksi('venetsia', 'maadoitus'), null);
@@ -218,7 +220,7 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
   // Varattu paikka on tyhjä rivi: se pitää numeron eikä saa äänitettä.
   assert.deepEqual(kaupunginRepliikit('sofia'), [
     '', FOKUSVIRTA_SOFIA.pollo.huudahdus.teksti,
-    ...FOKUSVIRTA_SOFIA.pollo.kommentti, ...sofia.johdanto, ...sofia.vinkki,
+    ...FOKUSVIRTA_SOFIA.pollo.kommentti, '', ...sofia.johdanto, ...sofia.vinkki,
     sofia.linkkiSaate, ...sofia.oikein, sofia.odotus, ...sofia.paluu,
   ]);
   // Vilnan huudahdus poistui 8.9.2026: paikka on tyhjä rivi.
@@ -232,8 +234,8 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
     .map((rivi) => rivi.avain);
   assert.equal(avaimet.length, KAUPUNKIREPLIIKKEJA);
   // sofia-1 puuttuu: se on varattu paikka ilman tekstiä.
-  assert.deepEqual(avaimet.slice(0, 4), ['ateena-1', 'sofia-2', 'sofia-3', 'sofia-4']);
-  assert.deepEqual(avaimet.slice(-3), ['vilna-3', 'vilna-4', 'vilna-5']);
+  assert.deepEqual(avaimet.slice(0, 4), ['ateena-1', 'sofia-2', 'sofia-3', 'sofia-5']);
+  assert.deepEqual(avaimet.slice(-2), ['riika-3', 'vilna-3']);
   // Teksti on pakkauksen teksti merkilleen — kaanonia ei muotoilla.
   assert.equal(rivit.find((rivi) => rivi.avain === 'sofia-14').teksti, sofia.paluu[1].trim());
   assert.equal(rivit.find((rivi) => rivi.avain === 'istanbul-1'), undefined);
@@ -360,9 +362,10 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
    * kunnes ääni on generoitu; muuttumattomat (esim. Riian kaksi
    * ensimmäistä, Krakovan kaksi ensimmäistä) ovat yhä ajan tasalla.
    */
-  assert.equal(tila('riika-3'), 'ajan tasalla');
-  assert.equal(tila('krakova-3'), 'ajan tasalla');
-  assert.equal(tila('istanbul-4'), 'muuttunut');
+  // Yhden kuplan tekstit (8.9.2026 ilta) ovat kaikki uusia: muuttuneita
+  // kunnes ääni generoidaan.
+  assert.equal(tila('riika-3'), 'muuttunut');
+  assert.equal(tila('istanbul-3'), 'muuttunut');
   /*
    * SOFIAN KOMMENTIN ALUSTA POISTUI TOISTUVA "Kääk." (omistaja
    * 8.9.2026), joten ämpärin sofia-3 sanoo eri asian kuin kupla — se on

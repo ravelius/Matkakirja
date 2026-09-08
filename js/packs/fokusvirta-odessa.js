@@ -315,10 +315,7 @@ export const FOKUSVIRTA_ODESSA = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Ne kielet siirtyivät katukilpiin. Kartalla on yhä Kreikan tori ja Ranskan bulevardi.',
-      'Ooppera rakennettiin uudelleen, ja se on kaupungin kaunein talo.',
-      'Portaat tulivat kuuluisiksi elokuvasta, jossa lastenvaunut vierivät niitä alas.',
-      'Satama on yhä täynnä vehnää. Siitä riippuu edelleen, mitä monessa maassa syödään.',
+      'Ooppera rakennettiin uudelleen, ja se on kaupungin kaunein talo. Satama on yhä täynnä vehnää.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi

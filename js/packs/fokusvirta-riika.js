@@ -205,10 +205,7 @@ export const FOKUSVIRTA_RIIKA = {
       teksti: 'Kääk.',
     },
     kommentti: [
-      'Sitä mustaa juomaa myydään Riiassa yhä savipulloissa.',
-      'Paikalliset vannovat sen nimeen edelleen. Turistit katuvat edelleen.',
-      'Vanhakaupunki on nyt maailmanperintöä, ja sen vieressä on kokonainen kaupunginosa jugendtaloja.',
-      'Keskiaika tulee täällä vastaan kulman takaa.',
+      'Sitä mustaa juomaa myydään yhä savipulloissa. Paikalliset vannovat, turistit katuvat.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

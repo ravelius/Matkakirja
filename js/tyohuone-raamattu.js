@@ -4216,6 +4216,16 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'PULULLA YKSI KUPLA PER KAUPUNKI (omistaja 8.9.2026 klo 18.50, sanatarkasti: '
+          + '"olisiko parempi jos pululla olisi vain yksi kupla per kaupunki. ja '
+          + 'taytyy olla tarkkana sen mitan kanssa" ja "tama tiivis kahden asian '
+          + 'juttu oli paras: Vanhakaupunki on nyt maailmanperintoa. Ja se metsa '
+          + 'joka suuntaan pitaa yha paikkansa. kirjoita tuolla sapluunalla '
+          + 'kaikki"): pulun loppukommentti on yksi kupla, enintaan 95 merkkia, '
+          + 'kaksi lyhytta virketta: mika on nyt toisin ja mika on ennallaan. Ei '
+          + 'vihjeita lehteen ("se on lehdessa") eika kolmea asiaa. Huudahdus '
+          + 'luennan aikana sailyy niissa kaupungeissa, joissa se on. Ateena '
+          + 'ennallaan.',
         'TAUSTAMUSIIKKI HILJEMMALLE JA RATTAAN SAADIN OHJAA KAIKKEA MUSIIKKIA '
           + '(omistaja 8.9.2026 klo 18.39, iPhone-kaappaus Vilnasta, sanatarkasti: '
           + '"Taustamusiikki on aivan liian kovalla, eika rattaan saadin vaikuta '

@@ -167,10 +167,7 @@ export const FOKUSVIRTA_TALLINNA = {
       teksti: 'Ilman minua.',
     },
     kommentti: [
-      'Rata avattiin muutamaa vuotta ennen isoisää. Sitä ennen nopein viesti oli minun sukuni.',
-      'Nyt Viro hoitaa melkein kaiken verkossa: äänestämisen, verot ja lääkärin reseptit.',
-      'Meiltä vietiin ensin työ, sitten ammatti.',
-      'Yläkaupungin muurit ovat yhä paikoillaan. Niiden alla kävelee nyt turisteja, ei kauppiaita.',
+      'Viro hoitaa nyt melkein kaiken verkossa. Yläkaupungin muurit ovat yhä paikoillaan.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuuri). Faktat ovat

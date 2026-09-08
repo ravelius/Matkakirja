@@ -276,10 +276,7 @@ export const FOKUSVIRTA_SARAJEVO = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Kaunis lause. Postinkantajalle monta uskoa tarkoitti montaa kalenteria.',
-      'Ne neljä ääntä kuuluvat yhä samalta sillalta. Kirkot, moskeija ja synagoga ovat lähekkäin.',
-      'Kaupunki koki sen jälkeen sodan ja pitkän piirityksen. Kaduilla on yhä jälkiä.',
-      'Mutta kahvi keitetään samalla tavalla kuin isoisän aikana.',
+      'Ne neljä ääntä kuuluvat yhä samalta sillalta. Ja kahvi keitetään kuten isoisän aikana.',
     ],
     /*
      * Commons 25.8.2026: 5184×3456, CC BY 2.0, Fred Romero, kuvattu

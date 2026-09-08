@@ -278,11 +278,7 @@ export const FOKUSVIRTA_MOSKOVA = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Neljän tunnin päivällinen. Teetä juotiin kuin vettä lähteestä.',
-      'Sellaisissa taloissa istui myös Tretjakov. Hän osti tauluja ja antoi ne kaupungille.',
-      'Se museo on yhä auki.',
-      'Pääkaupunki muutti takaisin tänne isoisän jälkeen. Renkaat ovat nyt moottoriteitä.',
-      'Ja kellot soivat yhä.',
+      'Pääkaupunki muutti takaisin tänne isoisän jälkeen. Kellot soivat yhä yhtä aikaa.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

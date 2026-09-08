@@ -307,9 +307,7 @@ export const FOKUSVIRTA_TAMPERE = {
       teksti: 'Manchester!',
     },
     kommentti: [
-      'Vesi ei loppunut. Samassa koskessa pyörii yhä voimaloita keskellä kaupunkia.',
-      'Tehtaat ovat nyt museoita, kouluja ja ravintoloita. Piiput seisovat, mutta ne eivät savua.',
-      'Ja Manchesteriin vertaaminen jäi tavaksi. Täällä on myös maailman ainoa muumimuseo.',
+      'Tehtaat ovat nyt museoita ja ravintoloita. Mutta sama koski pyörittää yhä voimaloita.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

@@ -171,10 +171,7 @@ export const FOKUSVIRTA_HELSINKI = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Terva oli pitkään Suomen tärkein vientitavara. Siinä hän oli oikeassa.',
-      'Kirkko on nyt tuomiokirkko, ja sama torni näkyy mereltä ensimmäisenä.',
-      'Portailla istuu kesäisin puoli kaupunkia.',
-      'Satamassa ei enää tuoksu terva. Sieltä lähtee laivoja Tallinnaan ja Tukholmaan joka päivä.',
+      'Kirkko on nyt tuomiokirkko, ja sama torni näkyy mereltä ensimmäisenä. Terva ei enää tuoksu.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (tuomiokirkko Senaatintorilla)

@@ -168,10 +168,7 @@ export const FOKUSVIRTA_WIEN = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Hattu kädessä kupolin alla, ja pian itkeviä miehiä kadulla. Sellainen kevät.',
-      'Kupoli paloi myöhemmin poroksi. Puisto on yhä olemassa.',
-      'Siellä pyörii maailmanpyörä, joka on isoisän maailmannäyttelyä vain vähän nuorempi.',
-      'Wieniläiset istuvat kahviloissa tunteja yhden kupin ääressä. Se tapa kesti romahduksenkin.',
+      'Kupoli paloi, mutta puisto on yhä olemassa. Ja kahvilassa istutaan tunteja yhden kupin ääressä.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (valtionooppera). Faktat

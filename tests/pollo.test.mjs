@@ -1619,13 +1619,11 @@ test('puheenvuoro jakautuu osiin sanoja hukkaamatta', () => {
  */
 test('kupliksi kirjoitettu kommentti on valmiiksi osissa', () => {
   const kuplat = FOKUSVIRTA_SOFIA.pollo.kommentti;
-  assert.ok(Array.isArray(kuplat) && kuplat.length === 2, 'Sofian kommentti on kaksi kuplaa');
-  /*
-   * KOMMENTTI EI ALA "Kääk."-SANALLA (omistaja 8.9.2026: *"ota
-   * jälkimmäinen kääk pois pulun sofian tekstissä, muuten se tulee kaksi
-   * kertaa peräkkäin"*) — huudahdus luennan aikana on jo "Kääk.".
-   */
-  assert.match(kuplat[0], /^Hurja juttu/);
+  // YKSI KUPLA PER KAUPUNKI (omistaja 8.9.2026 ilta: "olisiko parempi jos
+  // pululla olisi vain yksi kupla per kaupunki") — kaksi lyhyttä virkettä.
+  assert.ok(Array.isArray(kuplat) && kuplat.length === 1, 'Sofian kommentti on yksi kupla');
+  // Kommentti ei ala "Kääk."-sanalla: huudahdus luennan aikana on jo "Kääk.".
+  assert.doesNotMatch(kuplat[0], /^Kääk/);
   assert.equal(FOKUSVIRTA_SOFIA.pollo.huudahdus.teksti, 'Kääk.');
   for (const kupla of kuplat) {
     assert.ok(kupla.length <= 95, `kupla on liian pitkä ääneen luettavaksi: ${kupla.length}`);
