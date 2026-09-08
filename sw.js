@@ -260,7 +260,6 @@ const SHELL = [
   './js/packs/europe-questions.js',
   './js/packs/europe-puzzles.js',
   './js/packs/europe-countries.js',
-  './js/packs/europe-saapumiset.js',
   './js/packs/tarinakaari.js',
   './js/tyohuone-kehitys-data.js',
   // Kehittäjän liitteet (Raamattu, Tilanne, Tilastot ja sen
@@ -388,6 +387,18 @@ const SHELL = [
   './js/packs/fokusvirta-odessa.js',
   './js/packs/fokusvirta-pietari.js',
   './js/packs/fokusvirta-varsova.js',
+  // KEVYT ERÄ 8.9.2026 (omistaja): Euroopan laudan kuusi viimeistä
+  // kohdetta saivat omat fokusvirtapakkinsa, kun vanha saapumistaulu
+  // (europe-saapumiset.js) arkistoitiin pois pelistä. Pakit ovat
+  // kevyitä — matkakirja ja pulun kupla — mutta ne ovat NIIDEN
+  // kaupunkien ainoa merkintä, joten ilman esilatausta kortti jäisi
+  // offline-pelissä tyhjäksi.
+  './js/packs/fokusvirta-kreeta.js',
+  './js/packs/fokusvirta-sisilia.js',
+  './js/packs/fokusvirta-islanti.js',
+  './js/packs/fokusvirta-alpit.js',
+  './js/packs/fokusvirta-lappi.js',
+  './js/packs/fokusvirta-tromssa.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',

@@ -256,16 +256,31 @@ async function vanhanMaailmanKaupungit() {
 test('jokaisella vanhan maailman kaupungilla on saapumisteksti', async () => {
   const { PACKS } = await import('../js/pack.js');
   const { AFRICA_SAAPUMISET } = await import('../js/packs/africa-saapumiset.js');
-  const { EUROPE_SAAPUMISET } = await import('../js/packs/europe-saapumiset.js');
   const { ASIA_SAAPUMISET } = await import('../js/packs/asia-saapumiset.js');
-  const tekstit = { ...AFRICA_SAAPUMISET, ...EUROPE_SAAPUMISET, ...ASIA_SAAPUMISET };
+  const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+  /*
+   * EUROOPPA TULEE NYT FOKUSVIRTAPAKEISTA (omistaja 8.9.2026, Raamattu:
+   * KOKO EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA). Vanha
+   * europe-saapumiset.js on arkistoitu pois pelistä
+   * (docs/arkisto/europe-saapumiset-2026-09-08.js.txt), ja jokaisen
+   * Euroopan kaupungin merkintä asuu sen omassa pakissa. Vaatimus on
+   * sama kuin ennen — jokaisella kaupungilla on merkintä — vain lähde
+   * vaihtui. Afrikan ja Aasian taulut ovat ennallaan.
+   */
+  const tekstit = { ...AFRICA_SAAPUMISET, ...ASIA_SAAPUMISET };
+  const merkinta = (id) => Boolean(tekstit[id] || FOKUSVIRRAT[id]?.matkakirja?.teksti);
   const { kaupungit } = await vanhanMaailmanKaupungit();
   const ilman = kaupungit
     .filter((c) => !KAARETTOMAT.has(c.id))
-    .filter((c) => !tekstit[c.id]).map((c) => c.id);
+    .filter((c) => !merkinta(c.id)).map((c) => c.id);
   assert.deepEqual(ilman, [], 'näiltä kaupungeilta puuttuu matkakirjan merkintä');
-  // Kaarettomalle EI myöskään saa kirjoittaa merkintää listaa
-  // purkamatta: teksti ilman listan siivousta ohittaisi vartioinnin.
+  /*
+   * Kaarettomalle EI myöskään saa kirjoittaa VANHAN MALLIN merkintää
+   * listaa purkamatta: teksti ilman listan siivousta ohittaisi
+   * vartioinnin. Fokusvirtapakki ei ole kaari eikä vanha merkintä vaan
+   * oma sisältölajinsa (Sevillalla ja Bergenillä on pakki mutta ei
+   * kaarta), joten se ei laukaise tätä vartiota.
+   */
   const salaa = kaupungit.filter((c) => KAARETTOMAT.has(c.id) && tekstit[c.id]).map((c) => c.id);
   assert.deepEqual(salaa, [], 'kaupungilla on merkintä mutta se on yhä KAARETTOMAT-listalla');
 });

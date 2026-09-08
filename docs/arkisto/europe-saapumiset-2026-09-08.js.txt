@@ -1,3 +1,41 @@
+================================================================================
+  EI ENÄÄ KÄYTÖSSÄ — arkistoitu 8.9.2026 (omistaja): Euroopan kaupungit
+  kulkevat fokusvirtapakkien kautta. Älä tuo takaisin peliin.
+================================================================================
+
+TÄMÄ TIEDOSTO EI OLE MODUULI. Se oli js/packs/europe-saapumiset.js, ja
+sen pääte on nyt .js.txt tasan siksi, ettei sitä voi tuoda import-
+lauseella takaisin peliin vahingossa. Jos etsit Euroopan kaupungin
+matkakirjamerkintää, se on kaupungin omassa fokusvirtapakissa
+(js/packs/fokusvirta-<kaupunki>.js, rekisteri js/packs/fokusvirrat.js).
+
+OMISTAJAN LINJAUS 8.9.2026, SANATARKASTI: *"joo kirjoita niille omat ja
+arkistoi europe-saapumiset tiedosto ja kirjoita sen alkuun EI ENÄÄ
+KÄYTÖSSÄ tms tai miten vain parhaiten saadaan pelistä pois että ei
+vahingossa palaa"*. (Raamattu, osio KOKO EUROOPPA KULKEE
+FOKUSVIRTAPAKKIEN KAUTTA, EUROPE-SAAPUMISET ARKISTOON.)
+
+MIKÄ MUUTTUI SAMALLA KERTAA:
+  - Euroopan laudan kuusi viimeistä kohdetta (Kreeta, Sisilia, Islanti,
+    Alpit, Rovaniemi/`lappi`, Tromssa) saivat omat fokusvirtapakkinsa.
+    Nyt jokaisella Euroopan laudan 45 kohteella on pakki — vartiona
+    tests/fokusvirta.test.mjs.
+  - js/sisaltotaulut.js: tuonti, SAAPUMISTEKSTIT.europe ja
+    KAIKKI_SAAPUMISET:n Euroopan osuus poistettiin, samoin
+    SAAPUMISLUENNAT-joukon 41 'europe:'-riviä (ne osoittivat tämän
+    tiedoston tekstien luentoihin, jotka jäivät orvoiksi).
+  - js/ui.js, js/tyohuone-tilastot.js, tools/generoi-luennat.mjs,
+    tools/build-standalone.mjs ja sw.js eivät enää tunne tätä taulua.
+  - Afrikan, Aasian, Amerikoiden ja Oseanian saapumistaulut jäivät
+    ennalleen: tämä arkistointi koskee VAIN Eurooppaa.
+
+ÄÄNITTEET (assets/audio/puhe-europe-saapuminen-*.mp3 ja ämpärin samat
+tiedostot) jäävät paikoilleen — ne on kerran maksettu — mutta peli ei
+enää hae niitä. Ne lukevat alla olevia, käytöstä poistettuja tekstejä.
+
+Alkuperäinen sisältö sellaisenaan seuraa tästä eteenpäin.
+--------------------------------------------------------------------------------
+
 // Euroopan matkakirjamerkinnät: nuoren Foggin tunnepitoinen kuvaus ja
 // isoisän nosto, samaan malliin kuin Afrikassa. Rakentuu kaupunki
 // kerrallaan. Luennat: puhe-europe-saapuminen-<id>.mp3 (ks.

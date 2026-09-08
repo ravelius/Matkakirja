@@ -93,25 +93,42 @@ export const FOKUSVIRTA_ATEENA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
-    paikkarivi: 'Ateena, heinäkuussa 1873. Seesteistä; ilmanpuntari 762 mmHg.',
-    teksti: 'Torilla ei tänään tingitty oliiveista — siellä puhuttiin '
-      + 'miehestä, joka löysi kesäkuussa Troijan kullan. Puoli toria piti '
-      + 'häntä valehtelijana, toinen puoli nerona, eikä yksikään ollut '
-      + 'nähnyt kultaa omin silmin. Kirjoitan tämän muistiin siksi, että '
-      + 'molemmat puolet saattavat olla oikeassa yhtä aikaa.',
     /*
-     * Luenta generoitu 25.8.2026 samalla reseptillä kuin
-     * tools/generoi-luennat.mjs (Viisas Kertoja, eleven_v3,
-     * stability 0.5, lopputauko). Teksti on sama kuin yllä —
-     * vain tunnetagit lisätty. Äänite:
-     * assets/audio/puhe-fokus-matkakirja-ateena.mp3 (~23 s).
+     * KAANON UUSIKSI (Fable, omistajan hyväksyntä 8.9.2026 klo 19.10):
+     * Ateena siirtyy samaan kulkuun kuin muut Euroopan kaupungit —
+     * paikkarivi, jonka toinen virke on kortin tunnelmarivi
+     * (js/ui-apurit.js matkakirjanOtsikko), ja merkintä, jossa
+     * Akropolis nousee mukaan. Teksti on sanatarkasti Fablen; vanha
+     * versio ("ilmanpuntari 762 mmHg", "löysi kesäkuussa Troijan
+     * kullan") on kokonaan korvattu, ei muokattu.
      */
-    luenta: '[curious] Torilla ei tänään tingitty oliiveista — siellä '
-      + 'puhuttiin miehestä, joka löysi kesäkuussa Troijan kullan. '
-      + 'Puoli toria piti häntä valehtelijana, toinen puoli nerona, '
-      + '[whispers] eikä yksikään ollut nähnyt kultaa omin silmin. '
-      + '[softly] Kirjoitan tämän muistiin siksi, että molemmat puolet '
-      + 'saattavat olla oikeassa yhtä aikaa.',
+    paikkarivi: 'Ateena, heinäkuussa 1873. Seesteistä; ilmanpuntari korkealla.',
+    teksti: 'Torilla ei tänään tingitty oliiveista. Siellä puhuttiin '
+      + 'miehestä, joka oli löytänyt Troijan kullan. Puoli toria piti häntä '
+      + 'valehtelijana, toinen puoli nerona, eikä kukaan ollut nähnyt kultaa '
+      + 'omin silmin. Akropolis seisoi kaiken yllä niin kuin olisi kuullut '
+      + 'saman jutun ennenkin. Kirjoitan tämän muistiin, koska molemmat '
+      + 'puolet voivat olla oikeassa yhtä aikaa.',
+    /*
+     * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia.
+     *
+     * ÄÄNITE ON VANHENTUNUT (8.9.2026). Ämpärissä ja repossa oleva
+     * assets/audio/puhe-fokus-matkakirja-ateena.mp3 on generoitu
+     * 25.8.2026 EDELLISESTÄ tekstistä, eikä fokusvirran matkakirjalla
+     * ole tekstin ja äänitteen vertailua (js/ui.js renderFact soittaa
+     * `aanite`-kentän sellaisenaan; vertailu luentaVastaaTekstia koskee
+     * vain vanhaa saapumistaulua). Polku on jätetty ennalleen omistajan
+     * ohjeen mukaan — se on siis GENEROITAVA UUDELLEEN tästä luennasta
+     * ennen seuraavaa julkaisua, tai kertoja lukee eri tekstin kuin
+     * ruudulla lukee.
+     */
+    luenta: '[curious] Torilla ei tänään tingitty oliiveista. Siellä '
+      + 'puhuttiin miehestä, joka oli löytänyt Troijan kullan. [whispers] '
+      + 'Puoli toria piti häntä valehtelijana, toinen puoli nerona, eikä '
+      + 'kukaan ollut nähnyt kultaa omin silmin. [softly] Akropolis seisoi '
+      + 'kaiken yllä niin kuin olisi kuullut saman jutun ennenkin. '
+      + 'Kirjoitan tämän muistiin, koska molemmat puolet voivat olla '
+      + 'oikeassa yhtä aikaa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-ateena.mp3',
     /*
      * Fablen päätös 4: Sophia Schliemann koruineen. Commonsin
@@ -141,32 +158,31 @@ export const FOKUSVIRTA_ATEENA = {
    */
   pollo: {
     /*
-     * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
+     * ATEENA SAMAAN KULKUUN KUIN MUUT (omistaja 8.9.2026 klo 19.10).
      *
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo). Ateena on se kaupunki,
-     * jossa ISOISÄ OSOITTAUTUU OIKEAKSI ja Livia myöntää sen
-     * vastahakoisen kunnioittavasti — kaanon vaatii vähintään yhden
-     * tällaisen kuudesta, ettei hahmosta tule besserwisseriä.
+     * Ennen tätä Ateena oli ainoa kaupunki, jossa pulun teksti asui
+     * kentissä `maadoitus` (puheenvuoro merkinnän perään) ja `teksti`
+     * (vaiheen huomio korttivirrassa). Molemmat on korvattu yhdellä
+     * kuplalla, joka tulee luennan jälkeen täsmälleen kuten muissa
+     * kaupungeissa (js/fokusvirta.js kulunKuplat). Kupla on Fablen
+     * kaanontekstiä sanatarkasti, eikä alustusta tai välihuutoa ole —
+     * alustukset poistettiin joka kaupungista 8.9.2026.
      *
-     * EI FAKTAVÄITTEITÄ: maadoitus koskee vain merkinnän SÄVYÄ
-     * (toriuutisesta tehty elämänohje), eikä se paljasta kullan
-     * kohtaloa — se on seuraavan kappaleen asia, ja järjestys on
-     * tarkoituksellinen: myönnytys ensin, palkinto perässä.
+     * ÄÄNITE: vanha ateena-1 oli maadoituksen luenta, ja se jää
+     * ämpäriin orvoksi (poistettu taulusta js/liviapuhe.js
+     * LIVIAN_AANITETYT). Uuden kuplan numero on 3 — kaksi ensimmäistä
+     * paikkaa ovat varattuja (LIVIAN_VARATTU), jotta numerointi on sama
+     * kuin muissa kaupungeissa.
+     *
+     * SAAPUMISKUPLA VAIKENEE YHÄ ATEENASSA (js/fokusvirta.js
+     * SAAPUMISKUPLA_VAITI): aloituskaupungin saapumisessa on jo kaksi
+     * ohjekuplaa, eikä kolmas saa peittää niitä. Kupla odottaa siis
+     * omistajan päätöstä siitä, sallitaanko se aloituskaupungissa —
+     * teksti on kirjoitettu ja äänite voidaan generoida jo nyt.
      */
-    /*
-     * LYHENNETTY PUHETTA VARTEN (omistaja 6.9.2026: Ateenan ja Sofian
-     * repliikit lyhennetään ennen äänen generointia). Myönnytys ja
-     * vastahakoinen kunnioitus säilyvät, selittävä keskiosa tiivistyi.
-     */
-    maadoitus: '"Molemmat puolet saattavat olla oikeassa yhtä aikaa." No, '
-      + 'isoisälläsi oli tapana tehdä toriuutisesta elämänohje, ja yleensä '
-      + 'minä kutistan sen torin kokoiseksi. Mut en tällä kertaa. Hän osui, '
-      + 'ja se harmittaa just sen verran kun kohtuullista on.',
-    teksti: 'Isoisäsi ei koskaan saanut tietää, miten sen kullan kävi. '
-      + 'Aitoa se oli — mut ei Priamoksen. Ja löytäjä rakensi palatsinsa '
-      + 'tuonne kadun varteen; sen friisissä se kaivaa vieläkin. Katso '
-      + 'ensin tonne ylös.',
+    kommentti: [
+      'Kulta oli aitoa, mutta ei Troijan kuninkaan. Löytäjän talo Ateenassa on nyt museo.',
+    ],
     kuva: {
       ampari: 'herokoe/hero-ateena-aamu.png',
       selite: 'Parthenon aamuvalossa. Temppeli rakennettiin Athena '

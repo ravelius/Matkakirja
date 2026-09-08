@@ -154,13 +154,25 @@ export const LIVIAN_VARATTU = '(varattu)';
  * 7.9.2026 kahdessa erässä. Muut kaupungit ovat hiljaisia kunnes niiden
  * tekstit on hyväksytty.
  *
+ * KUUSI KEVYTTÄ KOHDETTA JA ATEENA MUKAAN (omistaja 8.9.2026). Kreeta,
+ * Sisilia, Islanti, Alpit, Rovaniemi (tunnus `lappi`) ja Tromssa saivat
+ * omat fokusvirtapakkinsa, kun vanha saapumistaulu arkistoitiin pois
+ * pelistä, ja Ateena kirjoitettiin samaan kulkuun kuin muut. Kullakin on
+ * yksi kupla: kaksi ensimmäistä numeroa ovat varattuja, joten kupla on
+ * numero 3 kuten muissakin kaupungeissa, joilla ei ole välihuutoa.
+ *
  * ENSIMMÄINEN PAIKKA ON VARATTU (8.9.2026). Siinä oli alustuskupla,
- * joka poistettiin joka kaupungista (LIVIAN_VARATTU) — Ateena on ainoa
- * kaupunki, jossa pulu puhuu ennen isoisän luentaa, ja se puhuu omalla
- * vanhalla kentällään `maadoitus`.
+ * joka poistettiin joka kaupungista (LIVIAN_VARATTU).
  */
 export const LIVIAN_KAUPUNKILAHTEET = {
-  ateena: ['maadoitus'],
+  /*
+   * ATEENAN VANHA `maadoitus` ON POISTUNUT (omistaja 8.9.2026 klo
+   * 19.10): pakkauksessa on nyt `kommentti` kuten muissa kaupungeissa.
+   * Vanha ateena-1 oli maadoituksen äänite, ja se jää ämpäriin orvoksi
+   * — numerot ovat siksi varattuja aivan kuten poistetuilla
+   * alustuksilla, eikä uusi kupla peri vanhaa tiedostoa.
+   */
+  ateena: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
   sofia: [
     LIVIAN_VARATTU, 'huudahdus', 'kommentti', LIVIAN_VARATTU, ['johdanto', 2], ['vinkki', 2],
     'linkkiSaate', ['oikein', 2], 'odotus', ['paluu', 2],
@@ -182,6 +194,17 @@ export const LIVIAN_KAUPUNKILAHTEET = {
   tallinna: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
   riika: [LIVIAN_VARATTU, 'huudahdus', 'kommentti'],
   vilna: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  /*
+   * KEVYET PAKIT (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT): yksi
+   * kupla, ei välihuutoa — sama numerointi kuin muilla uuden kulun
+   * kaupungeilla, jotta tiedostonimi on ennustettava.
+   */
+  kreeta: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  sisilia: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  islanti: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  alpit: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  lappi: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  tromssa: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
 };
 
 /**
@@ -469,11 +492,13 @@ export const LIVIAN_AANITETYT = {
   'lehtivinkki-1': '676644e9',
   'mannerivihje-1': '9b1a96f3',
   // Euroopan 18 kaupunkia generoitu 7.9.2026 (erät 1 ja 2), "Kääk."-huudahdukset
-  // (sofia-2, wien-2) uusinta-ajossa. Ateenan maadoitus on generoitu
-  // 6.9.2026 eikä sen teksti ole muuttunut.
+  // (sofia-2, wien-2) uusinta-ajossa.
   // NUMERO 1 PUUTTUU JOKA KAUPUNGILTA (8.9.2026): siinä oli alustus,
   // joka poistettiin — numero on varattu eikä sillä ole enää kuplaa.
-  'ateena-1': '3f39d123',
+  // ATEENA-1 ON POISTETTU (omistaja 8.9.2026 klo 19.10): se oli
+  // maadoituksen äänite, ja maadoitus korvattiin kommenttikuplalla.
+  // Ämpärin tiedosto jää orvoksi kuten alustuksetkin; uusi kupla
+  // (ateena-3) odottaa generointia eikä siksi ole tässä taulussa.
   // Teksti muuttui 8.9.2026 (toinen "Kääk." pois) — äänite odottaa ajoa.
   'sofia-3': '82771368',
   'sofia-5': '1e64f9d0',

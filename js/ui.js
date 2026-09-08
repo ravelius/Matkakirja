@@ -173,6 +173,7 @@ import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 import { livianKorostetutKaupungit } from './liviapuhe.js';
 // Fokusmoodin annosteluvirta (js/fokusvirta.js). Kytkentä on kaksi
 // kutsua: saapumisen laukaisin renderissä ja lehtilukko openArrivalissa.
+import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
@@ -12699,12 +12700,22 @@ export class UI {
          * kirjoitetaan kaanoniin myöhemmin.
          *
          * MITTA ON KAUPUNKI, EI LAUTA: Euroopan kaupungit ovat myös
-         * maailmankartalla (SAAPUMISTEKSTIT.maailmankartta), joten laudan
-         * tunnus kertoisi väärin. Euroopan oma saapumistaulu kertoo
-         * oikein — muiden mantereiden merkinnät pitävät entisen
-         * otsakkeensa.
+         * maailmankartalla, joten laudan tunnus kertoisi väärin.
+         *
+         * MITTA VAIHTUI FOKUSVIRTAAN (8.9.2026). Ennen tässä kysyttiin
+         * Euroopan omalta saapumistaululta (SAAPUMISTEKSTIT.europe),
+         * mutta se taulu on arkistoitu pois pelistä (omistaja: KOKO
+         * EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA) — ehto olisi jäänyt
+         * ikuisesti epätodeksi ja otsake putoaisi jokaisessa Euroopan
+         * kaupungissa vanhaan "Matkakirjasta"-muotoon. Fokusvirtapakki
+         * kertoo saman asian ja kertoo sen suoraan: se on olemassa
+         * jokaiselle Euroopan laudan kohteelle eikä yhdellekään muulle.
+         *
+         * Kysely on tahallaan pakkarekisteristä eikä fokusvirtaSisällön
+         * kautta: tämä varapolku on juuri se haara, jolla fokusmoodi voi
+         * olla POIS päältä, eikä otsakkeen muodon pidä riippua siitä.
          */
-        if (Object.hasOwn(SAAPUMISTEKSTIT.europe ?? {}, saapuminen.cityId)) {
+        if (fokusvirtaKaupungille(saapuminen.cityId)) {
           this.asetaMatkakirjanOtsikko(kaupunki.name, kaupunki.name);
         } else {
           this.asetaOtsake('Matkakirjasta');

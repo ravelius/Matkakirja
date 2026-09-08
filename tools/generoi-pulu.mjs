@@ -111,14 +111,20 @@ import {
   livianKaupunkiKentat, livianKentanKuplat, livianKenttaPinoutuu, livianTiiviste,
 } from '../js/liviapuhe.js';
 import { IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
+import { FOKUSVIRTA_ALPIT } from '../js/packs/fokusvirta-alpit.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
 import { FOKUSVIRTA_HELSINKI } from '../js/packs/fokusvirta-helsinki.js';
+import { FOKUSVIRTA_ISLANTI } from '../js/packs/fokusvirta-islanti.js';
 import { FOKUSVIRTA_KIOVA } from '../js/packs/fokusvirta-kiova.js';
+import { FOKUSVIRTA_KREETA } from '../js/packs/fokusvirta-kreeta.js';
+import { FOKUSVIRTA_LAPPI } from '../js/packs/fokusvirta-lappi.js';
 import { FOKUSVIRTA_MOSKOVA } from '../js/packs/fokusvirta-moskova.js';
 import { FOKUSVIRTA_ODESSA } from '../js/packs/fokusvirta-odessa.js';
+import { FOKUSVIRTA_SISILIA } from '../js/packs/fokusvirta-sisilia.js';
 import { FOKUSVIRTA_PIETARI } from '../js/packs/fokusvirta-pietari.js';
 import { FOKUSVIRTA_TALLINNA } from '../js/packs/fokusvirta-tallinna.js';
 import { FOKUSVIRTA_TAMPERE } from '../js/packs/fokusvirta-tampere.js';
+import { FOKUSVIRTA_TROMSSA } from '../js/packs/fokusvirta-tromssa.js';
 import { FOKUSVIRTA_BUDAPEST } from '../js/packs/fokusvirta-budapest.js';
 import { FOKUSVIRTA_BUKAREST } from '../js/packs/fokusvirta-bukarest.js';
 import { FOKUSVIRTA_ISTANBUL } from '../js/packs/fokusvirta-istanbul.js';
@@ -288,8 +294,7 @@ export function pinoutuvatRepliikit() {
  * kaatuu (ks. TAGIT EIVÄT SAA MUUTTAA KAANONIA).
  *
  * TAULU KATTAA js/livia.js:n LÄHTEET JA EUROOPAN HYVÄKSYTYT
- * KAUPUNKIREPLIIKIT. Ateenan maadoitus syntyi v2-mallin aikaan eikä
- * sillä ole riviä — tagiton repliikki menee läpi kaanonisena tekstinä.
+ * KAUPUNKIREPLIIKIT. Tagiton repliikki menee läpi kaanonisena tekstinä.
  * Sofian, Istanbulin, Riian ja Vilnan kuplat kirjoitettiin 7.9.2026, ja
  * ne saivat samalla eleven_v3-tagit: ELÄVÄ JA NOPEA, EI KAIKUA ALUSSA
  * (Raamattu, PULU PUHUU + KAIKU POIS ALUSTA). Malli on toistaiseksi v2
@@ -386,6 +391,21 @@ export const TAGIT = {
   'sofia-12': { alku: '[casually]', kohdat: [['Se palaa', '[amused]']] },
   'sofia-13': { alku: '[breathless]', kohdat: [['Pöllö oli', '[amused]']] },
   'sofia-14': { alku: '[breathless]', kohdat: [['Katso alas.', '[amused]']] },
+  /*
+   * KEVYET PAKIT JA ATEENA (omistaja 8.9.2026): Kreeta, Sisilia,
+   * Islanti, Alpit, Rovaniemi (tunnus `lappi`) ja Tromssa saivat omat
+   * fokusvirtapakkinsa, ja Ateenan maadoitus korvattiin samanlaisella
+   * kommenttikuplalla. Jokaisella on yksi kupla numerolla 3 (kaksi
+   * ensimmäistä paikkaa ovat varattuja), ja se on luennan jälkeinen
+   * reipas huomio — sama alkutagi kuin muiden kaupunkien kommenteilla.
+   */
+  'ateena-3': { alku: '[brightly]' },
+  'kreeta-3': { alku: '[brightly]' },
+  'sisilia-3': { alku: '[brightly]' },
+  'islanti-3': { alku: '[brightly]' },
+  'alpit-3': { alku: '[brightly]' },
+  'lappi-3': { alku: '[brightly]' },
+  'tromssa-3': { alku: '[brightly]' },
 };
 
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
@@ -450,6 +470,14 @@ const KAUPUNKIEN_PAKKAUKSET = {
   tallinna: FOKUSVIRTA_TALLINNA,
   riika: FOKUSVIRTA_RIIKA,
   vilna: FOKUSVIRTA_VILNA,
+  // Kevyet pakit (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT), yksi
+  // kupla kussakin — omistajan erä 8.9.2026.
+  kreeta: FOKUSVIRTA_KREETA,
+  sisilia: FOKUSVIRTA_SISILIA,
+  islanti: FOKUSVIRTA_ISLANTI,
+  alpit: FOKUSVIRTA_ALPIT,
+  lappi: FOKUSVIRTA_LAPPI,
+  tromssa: FOKUSVIRTA_TROMSSA,
 };
 
 /**

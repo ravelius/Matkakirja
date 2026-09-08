@@ -26,8 +26,10 @@
  *   Kartta       KAUPUNKIKARTAT[kaupunki]
  *   Jutut        NAHTAVYYSJUTUT[kaupunki][kohde].teksti tai kohteen oma
  *   Miniat.      MINIATYYRIT[kaupunki][kohde]
- *   Merkintä     TARINAKAARI (kaari) tai SAAPUMISTEKSTIT (vanha)
- *   Luenta       SAAPUMISLUENNAT ('lauta:kaupunki')
+ *   Merkintä     FOKUSVIRRAT (virta), TARINAKAARI (kaari) tai
+ *                SAAPUMISTEKSTIT (vanha)
+ *   Luenta       SAAPUMISLUENNAT ('lauta:kaupunki') tai fokusvirran
+ *                oma matkakirja.aanite
  *   Sää          SAATIEDOT[kaupunki]
  *   Kohtaam.     KOHTAAMISET[kaupunki]
  *   Ääni         kaupungin oma ambience-kenttä laudalla
@@ -63,6 +65,7 @@ import { SAATIEDOT } from './packs/saatiedot.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { RADIOT } from './packs/radiot.js';
 import { TARINAKAARI } from './packs/tarinakaari.js';
+import { FOKUSVIRRAT } from './packs/fokusvirrat.js';
 import { PELIT as KATKOPELIT } from './tyohuone-pelit.js';
 import { TUOREET } from './tyohuone-tilanne.js';
 import { viitekuvaTila } from './viitekuva-herot.js';
@@ -270,22 +273,46 @@ const KAUPUNGIN_OSAT = [
     selite: 'aikakausjuliste JULISTEET-taulussa (kuva täydentyy ämpäristä)',
     arvo: (c) => Boolean(JULISTEET[c.id]),
   },
+  /*
+   * MERKINNÄN LÄHTEITÄ ON KOLME (8.9.2026).
+   *
+   * Fokusvirtapakki voittaa: se on se teksti, jonka pelaaja näkee
+   * kortissa (js/fokusvirta.js fokusvirtaMatkakirja). Euroopan vanha
+   * saapumistaulu arkistoitiin pois pelistä samana päivänä (omistaja:
+   * KOKO EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA), joten ilman tätä
+   * riviä koko manner olisi näyttänyt "kaari" — eli lähdettä, jota
+   * kortti ei enää lue.
+   */
   {
     avain: 'merkinta',
     otsikko: 'Merkintä',
-    selite: 'matkakirjamerkintä: "kaari" on uudistettu teksti, "vanha" vanhan mallin saapuminen',
-    arvo: (c) => Boolean(TARINAKAARI[c.id] || SAAPUMISTEKSTIT.maailmankartta[c.id]),
+    selite: 'matkakirjamerkintä: "virta" on fokusvirtapakki, "kaari" kaariteksti, '
+      + '"vanha" vanhan mallin saapuminen',
+    arvo: (c) => Boolean(FOKUSVIRRAT[c.id]?.matkakirja?.teksti
+      || TARINAKAARI[c.id] || SAAPUMISTEKSTIT.maailmankartta[c.id]),
     teksti: (c) => {
+      if (FOKUSVIRRAT[c.id]?.matkakirja?.teksti) return 'virta';
       if (TARINAKAARI[c.id]) return 'kaari';
       if (SAAPUMISTEKSTIT.maailmankartta[c.id]) return 'vanha';
       return null;
     },
   },
+  /*
+   * LUENTA: fokusvirtakaupungilla mitta on pakkauksen oma
+   * `matkakirja.aanite`, muilla vanha luentajoukko. Euroopan rivit
+   * poistettiin SAAPUMISLUENNAT-joukosta arkistoinnin yhteydessä, ja
+   * ilman tätä haaraa sarake olisi tyhjentynyt koko mantereelta.
+   *
+   * HUOM: kenttä kertoo, että ÄÄNITE ON TILATTU — ei sitä, että
+   * tiedosto on jo ämpärissä. Kevyet pakit (Kreeta, Sisilia, Islanti,
+   * Alpit, Rovaniemi, Tromssa) odottavat vielä generointia.
+   */
   {
     avain: 'luenta',
     otsikko: 'Luenta',
-    selite: 'merkinnän ääniluenta on generoitu',
-    arvo: (c, p) => Boolean(luentaLauta(SAAPUMISLUENNAT, p.id, c.id)),
+    selite: 'merkinnän ääniluenta on generoitu (fokusvirralla: äänite on tilattu)',
+    arvo: (c, p) => Boolean(FOKUSVIRRAT[c.id]?.matkakirja?.aanite
+      || luentaLauta(SAAPUMISLUENNAT, p.id, c.id)),
   },
   {
     avain: 'saa',

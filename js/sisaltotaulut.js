@@ -7,7 +7,6 @@
  */
 
 import { AFRICA_SAAPUMISET } from './packs/africa-saapumiset.js';
-import { EUROPE_SAAPUMISET } from './packs/europe-saapumiset.js';
 import { ASIA_SAAPUMISET } from './packs/asia-saapumiset.js';
 import { NORTHAMERICA_SAAPUMISET } from './packs/northamerica-saapumiset.js';
 import { SOUTHAMERICA_SAAPUMISET } from './packs/southamerica-saapumiset.js';
@@ -68,8 +67,23 @@ import { OCEANIA_ARTIKKELIT } from './packs/oceania-artikkelit.js';
  * Nimetty yhdistelmä ei estä ansaa mutta tekee siitä yhden rivin
  * kokoisen: uusi lauta lisätään yhteen paikkaan taulua kohti.
  */
+/*
+ * EUROOPPA EI OLE TÄSSÄ TAULUSSA (omistaja 8.9.2026, Raamattu: KOKO
+ * EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA, sanatarkasti: *"joo
+ * kirjoita niille omat ja arkistoi europe-saapumiset tiedosto ja
+ * kirjoita sen alkuun EI ENÄÄ KÄYTÖSSÄ tms tai miten vain parhaiten
+ * saadaan pelistä pois että ei vahingossa palaa"*).
+ *
+ * Euroopan laudan jokaisella 45 kohteella on nyt oma fokusvirtapakki
+ * (js/packs/fokusvirrat.js), josta matkakirjakortti lukee merkintänsä
+ * (js/fokusvirta.js fokusvirtaMatkakirja). Vanha taulu on arkistoitu
+ * pelin ulkopuolelle tekstitiedostoksi
+ * (docs/arkisto/europe-saapumiset-2026-09-08.js.txt), jottei se palaa
+ * vahingossa tuontina. Afrikan, Aasian, Amerikoiden ja Oseanian taulut
+ * jäävät ennalleen.
+ */
 const KAIKKI_SAAPUMISET = {
-  ...AFRICA_SAAPUMISET, ...EUROPE_SAAPUMISET, ...ASIA_SAAPUMISET,
+  ...AFRICA_SAAPUMISET, ...ASIA_SAAPUMISET,
   ...NORTHAMERICA_SAAPUMISET, ...SOUTHAMERICA_SAAPUMISET, ...OCEANIA_SAAPUMISET,
 };
 const KAIKKI_KULTTUURI = { ...AFRICA_KULTTUURI, ...EUROPE_KULTTUURI };
@@ -126,7 +140,9 @@ const KAIKKI_MAATIEDOT = {
  */
 export const SAAPUMISTEKSTIT = {
   africa: AFRICA_SAAPUMISET,
-  europe: EUROPE_SAAPUMISET,
+  // `europe`-riviä EI ole (8.9.2026, ks. KAIKKI_SAAPUMISET yllä):
+  // Euroopan merkinnät tulevat fokusvirtapakeista. Rivin palauttaminen
+  // toisi vanhat tekstit takaisin varapolulle (js/ui.js renderFact).
   // Aasian teksteillä ei ole omaa lautaa: kaupungit ovat vain
   // yhdistetyillä laudoilla, joten ne tulevat mukaan vain tänne.
   maailmankartta: KAIKKI_SAAPUMISET,
@@ -211,6 +227,19 @@ export function luentaLauta(joukko, packId, cityId) {
   return null;
 }
 
+/*
+ * EUROOPAN RIVIT ON POISTETTU (omistaja 8.9.2026, Raamattu: KOKO
+ * EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA).
+ *
+ * Nämä 41 riviä kertoivat, että vanhalle saapumistekstille on generoitu
+ * luenta (assets/audio/puhe-europe-saapuminen-<kaupunki>.mp3). Kun
+ * vanha taulu arkistoitiin pois pelistä, myös sen luennat jäivät
+ * orvoiksi: teksti, jota ne lukevat, ei ole enää missään kortissa.
+ * Euroopan merkinnät luetaan nyt fokusvirtapakkien omista
+ * `matkakirja.aanite`-kentistä (js/ui.js renderFact). Ämpärin vanhat
+ * tiedostot jäävät paikoilleen — ne on kerran maksettu — mutta peli ei
+ * enää hae niitä.
+ */
 export const SAAPUMISLUENNAT = new Set([
   'africa:addisabeba',
   'africa:ahaggar',
@@ -251,47 +280,6 @@ export const SAAPUMISLUENNAT = new Set([
   'africa:tshadjarvi',
   'africa:viktoria',
   'africa:viktorianputoukset',
-  'europe:alpit',
-  'europe:amsterdam',
-  'europe:ateena',
-  'europe:barcelona',
-  'europe:berliini',
-  'europe:budapest',
-  'europe:bukarest',
-  'europe:dublin',
-  'europe:dubrovnik',
-  'europe:edinburgh',
-  'europe:granada',
-  'europe:helsinki',
-  'europe:islanti',
-  'europe:istanbul',
-  'europe:kiova',
-  'europe:kobenhavn',
-  'europe:krakova',
-  'europe:kreeta',
-  'europe:lappi',
-  'europe:lissabon',
-  'europe:lontoo',
-  'europe:madrid',
-  'europe:marseille',
-  'europe:moskova',
-  'europe:odessa',
-  'europe:oslo',
-  'europe:pariisi',
-  'europe:pietari',
-  'europe:praha',
-  'europe:riika',
-  'europe:rooma',
-  'europe:sarajevo',
-  'europe:sisilia',
-  'europe:sofia',
-  'europe:tallinna',
-  'europe:tromssa',
-  'europe:tukholma',
-  'europe:varsova',
-  'europe:venetsia',
-  'europe:vilna',
-  'europe:wien',
   'middleeast:aden',
   'middleeast:ankara',
   'middleeast:bagdad',
