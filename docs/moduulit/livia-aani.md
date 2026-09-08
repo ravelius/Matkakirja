@@ -56,16 +56,26 @@ kaanonista tekstiä. Kaanonin sanajärjestys ei siis voi muuttua
 [squawks] [breathless] [sighs] [flatly] [mutters] [casually]
 [helpfully]`.
 
-## Kaupungin kulku: pulu — luenta — pulu (omistaja 7.9.2026)
+## Kaupungin kulku: luenta — pulu (omistaja 7.9. ja 8.9.2026)
 
-Raamattu, KAUPUNGIN KULKU: EI KUVIA, PULU - LUENTA - PULU. Saapuminen on
-kolme hetkeä, ja kaikki kolme lukee pakkauksen `pollo`-lohkosta:
+Raamattu, KAUPUNGIN KULKU: EI KUVIA, PULU - LUENTA - PULU — ja sen
+kavennus 8.9.2026, sanatarkasti: *"ota kaikki pulun alustukset pois."*
+Saapuminen on kaksi pulun hetkeä, ja kumpikin lukee pakkauksen
+`pollo`-lohkosta:
 
 | Kenttä | Milloin | Mitta |
 | --- | --- | --- |
-| `alustus` | **ennen** isoisän luentaa, yksi kupla | luenta odottaa sen lukuajan |
 | `huudahdus` | luennan **aikana**, `{ kohta, teksti }` | kupla häipyy 2 s:ssa |
 | `kommentti` | luennan **jälkeen**, 1–2 kuplaa | kuplan lukuaika kumpikin |
+
+**Isoisä aloittaa.** Alustuskupla ennen luentaa on poistettu joka
+kaupungista (`pollo.alustus`, 18 pakkausta), eikä luentaa siksi enää
+lykätä pulun takia: se lähtee heti merkinnän piirrosta (`js/ui.js
+renderFact` → `asetaMerkinnanLuenta`), ja välihuuto ajastetaan samasta
+kohdasta (`fokusvirtaHuudahdus`). Ainoa lykkäys on yhä Ateenan
+ensisaapumisen tuurauspaljastus, ja välihuuto odottaa senkin.
+**Ateena on ainoa kaupunki, jossa pulu puhuu ennen isoisää** — siellä
+puheenvuoro on vanha `pollo.maadoitus`.
 
 Huudahduksen ajoitus tulee luennan äänitteen kestosta kerrottuna
 kohdan merkkipaikalla (`kohta` esiintyy `matkakirja.teksti`-kentässä
@@ -89,35 +99,45 @@ tunnus**, ja indeksi tulee kenttälistan ja sen KUPLIEN järjestyksestä
 (`js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET`). Rivi on joko kentän nimi
 (yksi kupla) tai `[nimi, kuplien määrä]`.
 
-Uuden kulun kaupungeissa kentät ovat aina `alustus`, `huudahdus`,
-`kommentti` tässä järjestyksessä; Sofiassa niiden perässä ovat vielä
-sähketehtävän vaiheet `johdanto`, `vinkki`, `linkkiSaate`, `oikein`,
-`odotus`, `paluu`.
+Uuden kulun kaupungeissa kenttälista alkaa **varatulla paikalla**
+(`LIVIAN_VARATTU`) ja jatkuu kentillä `huudahdus`, `kommentti`;
+Sofiassa niiden perässä ovat vielä sähketehtävän vaiheet `johdanto`,
+`vinkki`, `linkkiSaate`, `oikein`, `odotus`, `paluu`.
+
+**Miksi paikka on varattu eikä poistettu.** Numero on tiedostonimessä,
+joten poistetun alustuksen rivin poistaminen taulusta siirtäisi
+huudahduksen ykköseksi ja kommentin kakkoseksi — peli hakisi jokaisessa
+kaupungissa alustuksen äänen kommentin kuplan alle, ja ainoa korjaus
+olisi generoida 18 kaupunkia uudelleen. Varattu paikka ei ole minkään
+pakkauksen kenttä, joten sillä ei ole tekstiä eikä siihen osu yksikään
+haku; ämpärin `livia-<kaupunki>-1.mp3` jää sinne orvoksi.
 
 | Lähde | Kuplia | Merkkejä | Tiedostot |
 | --- | --- | --- | --- |
 | `ateena` | 1 | 243 | `livia-ateena-1.mp3` (vanha maadoitus, yhä yksi merkkijono) |
-| `sofia` | 14 | 5–85 | `livia-sofia-1.mp3` … `livia-sofia-14.mp3` |
-| `istanbul` | 5 | 9–83 | `livia-istanbul-1.mp3` … `-5.mp3` |
-| `bukarest` | 4 | 10–80 | `livia-bukarest-1.mp3` … `-4.mp3` |
-| `sarajevo` | 4 | 12–84 | `livia-sarajevo-1.mp3` … `-4.mp3` |
-| `budapest` | 4 | 12–91 | `livia-budapest-1.mp3` … `-4.mp3` |
-| `wien` | 4 | 5–81 | `livia-wien-1.mp3` … `-4.mp3` |
-| `praha` | 4 | 12–80 | `livia-praha-1.mp3` … `-4.mp3` |
-| `krakova` | 4 | 18–86 | `livia-krakova-1.mp3` … `-4.mp3` |
-| `varsova` | 4 | 18–90 | `livia-varsova-1.mp3` … `-4.mp3` |
-| `pietari` | 4 | 8–85 | `livia-pietari-1.mp3` … `-4.mp3` |
-| `moskova` | 4 | 13–91 | `livia-moskova-1.mp3` … `-4.mp3` |
-| `kiova` | 4 | 7–85 | `livia-kiova-1.mp3` … `-4.mp3` |
-| `odessa` | 4 | 12–90 | `livia-odessa-1.mp3` … `-4.mp3` |
-| `helsinki` | 4 | 13–91 | `livia-helsinki-1.mp3` … `-4.mp3` |
-| `tampere` | 4 | 11–80 | `livia-tampere-1.mp3` … `-4.mp3` |
-| `tallinna` | 4 | 12–93 | `livia-tallinna-1.mp3` … `-4.mp3` |
-| `riika` | 5 | 5–68 | `livia-riika-1.mp3` … `-5.mp3` |
-| `vilna` | 5 | 9–76 | `livia-vilna-1.mp3` … `-5.mp3` |
+| `sofia` | 13 | 5–85 | `livia-sofia-2.mp3` … `livia-sofia-14.mp3` |
+| `istanbul` | 4 | 9–83 | `livia-istanbul-2.mp3` … `-5.mp3` |
+| `bukarest` | 3 | 10–80 | `livia-bukarest-2.mp3` … `-4.mp3` |
+| `sarajevo` | 3 | 12–84 | `livia-sarajevo-2.mp3` … `-4.mp3` |
+| `budapest` | 3 | 12–91 | `livia-budapest-2.mp3` … `-4.mp3` |
+| `wien` | 3 | 5–81 | `livia-wien-2.mp3` … `-4.mp3` |
+| `praha` | 3 | 12–80 | `livia-praha-2.mp3` … `-4.mp3` |
+| `krakova` | 3 | 18–86 | `livia-krakova-2.mp3` … `-4.mp3` |
+| `varsova` | 3 | 18–90 | `livia-varsova-2.mp3` … `-4.mp3` |
+| `pietari` | 3 | 8–85 | `livia-pietari-2.mp3` … `-4.mp3` |
+| `moskova` | 3 | 13–91 | `livia-moskova-2.mp3` … `-4.mp3` |
+| `kiova` | 3 | 7–85 | `livia-kiova-2.mp3` … `-4.mp3` |
+| `odessa` | 3 | 12–90 | `livia-odessa-2.mp3` … `-4.mp3` |
+| `helsinki` | 3 | 13–91 | `livia-helsinki-2.mp3` … `-4.mp3` |
+| `tampere` | 3 | 11–80 | `livia-tampere-2.mp3` … `-4.mp3` |
+| `tallinna` | 3 | 12–93 | `livia-tallinna-2.mp3` … `-4.mp3` |
+| `riika` | 4 | 5–68 | `livia-riika-2.mp3` … `-5.mp3` |
+| `vilna` | 4 | 9–76 | `livia-vilna-2.mp3` … `-5.mp3` |
 
-Tekstit luetaan pakkauksista (`js/packs/fokusvirta-<id>.js`) — niitä ei
-kopioida työkaluun eikä peliin. Järjestystä ei saa muuttaa jälkikäteen:
+Numero 1 puuttuu joka kaupungilta paitsi Ateenalta: se on poistetun
+alustuksen varattu paikka (yllä). Tekstit luetaan pakkauksista
+(`js/packs/fokusvirta-<id>.js`) — niitä ei kopioida työkaluun eikä
+peliin. Järjestystä ei saa muuttaa jälkikäteen:
 numero on tiedostonimessä. Uusi kenttä lisätään listan LOPPUUN, ja
 kuplien määrän on vastattava pakkausta (ero kaataa
 `tools/generoi-pulu.mjs`:n `kaupunginRepliikit`-funktion).
@@ -126,7 +146,7 @@ Peli soittaa nämä kutsulla `soitaLivianKaupunkiAani(ui, city.id,
 '<kenttä>', { kupla, teksti })`, joka on hiljainen jokaiselle
 kaupungille, jota ei ole taulussa. Kutsupaikat ovat `js/fokusvirta.js`:
 ssä siellä, missä teksti oikeasti tulee ruudulle (kevyt kulku,
-`FOKUSVIRTA_KORTIT = false`): alustus, huudahdus ja kommentti
+`FOKUSVIRTA_KORTIT = false`): huudahdus `ajastaHuudahdus` ja kommentti
 `fokusvirtaSaapumiskupla`, johdanto ja odotus `sahkeSaateKuplaan`,
 vinkki ja linkkiSaate pullanapeista, oikein kuittauskortista ja paluu
 `aloitaSahkelento`:n kuplasta.
@@ -158,7 +178,7 @@ napautus jatkaa yhä heti.
 | `js/liviapuhe.js` | `LIVIAN_PUHEEN_HANTA_MS`, `livianAanenKesto`, `livianKuplanAika`, `livianKuplanAjastin` |
 | `js/livia.js` | avaussarja (`naytaRepliikki`) ja paljastussarja (`paljastusRepliikki`) |
 | `js/pollo.js` | `ajastaPuheenvuoro` kysyy `viive`-funktiolta uudestaan, kun metatiedot ovat tulleet (`aaniKahva`) |
-| `js/fokusvirta.js` | `livianPuherytmi` (alustus, kommentti, sähkevaiheet), `soitaLivianKaupunkiSarja`, `polloKuplasarja`, `fokusvirtaAlustus` (luenta ei ala pulun puheen päälle) |
+| `js/fokusvirta.js` | `livianPuherytmi` (kommentti, sähkevaiheet), `soitaLivianKaupunkiSarja`, `polloKuplasarja`, `fokusvirtaHuudahdus` (välihuuto ajastetaan luennan kestosta) |
 
 Huudahduksen 2 sekunnin kupla EI odota: se on välihuuto kertojan
 päällä, ei repliikki omassa vuorossaan. Vartiot:
@@ -219,7 +239,7 @@ ja pulu selittää ensin jotain ihan väärää juttua."*
 **Juurisyy: kaksi rinnakkaista kirjanpitoa.** Kertojan luenta eli
 `ui.diaryVoice`-kentässä ja pulun repliikki `ui.liviaAani`-kentässä,
 eikä kumpikaan tiennyt toisesta mitään — järjestys syntyi pelkistä
-ajastimista (alustus → luenta → huudahdus → kommentti). Ajastimet
+ajastimista (luenta → huudahdus → kommentti). Ajastimet
 kysyvät kaupunkia vasta lauetessaan, mutta **kesken jäänyt äänite ei
 kysy mitään**: se soi loppuun. Kehittäjän maailmatilassa kaupunkia
 vaihdetaan napauttamalla (`js/ui.js doKehittajaSiirto`), jolloin lähtö
@@ -227,8 +247,7 @@ osuu keskelle pulun lausetta — edellinen kaupungin repliikki jää soimaan
 uuden kaupungin luennan alle. Juuri se on omistajan kuulema *"ihan väärä
 juttu"*: se on **toisen kaupungin** lause, ei väärä äänite. (Mitattu
 selaimella: hyppy Riiasta Vilnaan → `livia-riika-2.mp3` soi Vilnan kuplan
-päällä; hyppy takaisin jo käytyyn kaupunkiin aloittaa sen luennan heti,
-koska alustus on jo nähty eikä luentaa enää lykätä.)
+päällä.)
 
 **Korjaus on yksi vuorokirjanpito, ei kahta.** Sama taulu, joka jo tiesi
 kaikki soivat luennat taustan väistöä varten (`js/luenta.js
@@ -244,16 +263,15 @@ soivatLuennat`), tietää nyt myös **kuka** puhuu:
 
 Samalla korjattiin kaksi kohtaa, joissa järjestys nojasi kelloon:
 
-- **Alustuksen ajastin vartioi kaupunkiaan** (`fokusvirtaAlustus`). Se
-  päästää lykätyn luennan liikkeelle; väärässä kaupungissa lauetessaan
-  se aloitti TOISEN kaupungin luennan kesken sen omaa alustusta.
+- **Välihuudon odotus vartioi kaupunkiaan** (`fokusvirtaHuudahdus`).
+  Se odottaa lykättyä luentaa; väärässä kaupungissa lauetessaan se
+  ajastaisi edellisen kaupungin välihuudon uuden luennan päälle.
 - **Kommentti odottaa myös vasta lähdössä olevaa luentaa.** Kutsu tulee
-  kirjoituskoneen lopusta, ja kone ehtii maaliin ennen kertojaa aina
-  kun merkintä on lyhyt ja alustusäänite pitkä (Tallinna ~9,4 s vs.
-  ~9 s, Helsinki ja Sofia yhtä lähellä). Silloin `ui.diaryVoice` on
-  vielä tyhjä eikä `luennanLoppuun` tiedä luennasta mitään — nyt
-  `ui.luennanLykkays` kertoo sen, ja kommentti odottaa (400 ms välein,
-  katto 30 s).
+  kirjoituskoneen lopusta, ja kone voi ehtiä maaliin ennen kertojaa —
+  ensisaapumisessa luenta odottaa vielä tuurauspaljastuksen kuplia.
+  Silloin `ui.diaryVoice` on vielä tyhjä eikä `luennanLoppuun` tiedä
+  luennasta mitään — nyt `ui.luennanLykkays` kertoo sen, ja kommentti
+  odottaa (400 ms välein, katto 30 s).
 - **Pulun loppuhäivytys lasketaan kellosta eikä askelmäärästä**
   (`pysaytaLivianAani`). Neljä kiinteää askelta venyi ajastimia
   kuristavassa selaimessa sekunniksi ääntä sen jälkeen kun peli jo
@@ -465,3 +483,45 @@ Muistettavaa:
   `clientHeightiin` — ja supistuttuaan ruudulle jäi VANHIN kupla
   uusimman sijaan. Kurkistus teki vian näkyväksi. Laajennuksessa
   pohjaan ei pakoteta: silloin pelaaja on itse kelaamassa.
+
+## Pulun äänitaso on kertojan alapuolella (omistaja 8.9.2026)
+
+Omistaja, sanatarkasti: *"Pulun ääni on vähän voimakkaampi kuin
+kertojan, sitä voisi laskea koko pelissä hieman."*
+
+Kertoja soi pelin yleisellä puhevoimalla sellaisenaan (`js/luenta.js
+playDiaryVoice`: `audio.volume = puheVoima()`), ja pulu soi samalla
+luvulla — mutta käheä, nopea ja tagitettu ääni kuulostaa
+voimakkaammalta kuin kertojan tasainen luenta. Nyt kaikki pulun
+äänitteet kulkevat yhden kertoimen kautta:
+
+`js/liviapuhe.js` → `LIVIAN_PERUSTASO = 0.8`, ja `soitaLivianAani`
+laskee voimakkuuden `puheVoima() × LIVIAN_PERUSTASO × vaimennus`.
+
+Kutsupaikkojen vaimennukset (`HUUDAHDUKSEN_VAIMENNUS`,
+`LIVIAN_VALIHUOMION_VAIMENNUS`, kumpikin 0,7) **kertovat** tähän lukuun
+eivätkä korvaa sitä, joten välihuuto on yhä suhteessa yhtä paljon
+hiljaisempi kuin ennen. Yksi luku kattaa kaikki pulun äänet:
+kaupunkirepliikit, välihuomiot linsseissä, avauksen, paljastuksen ja
+lehtivinkin.
+
+## Kuplat tyhjenevät uudessa kaupungissa (omistaja 8.9.2026)
+
+Omistaja, sanatarkasti: *"Pulun puhekuplat pitää tyhjentyä kun tullaan
+uuteen kaupunkiin."*
+
+Kuplapino jäi ennen ruudulle kaupungin vaihtuessa, ja uuden kaupungin
+kuplat kasautuivat edellisen kaupungin puheiden päälle — pinossa oli
+kahden kaupungin keskustelu yhtä aikaa. Tyhjennys tehdään
+LÄHTÖHETKELLÄ, samassa paikassa jossa lähtö jo vaientaa molemmat äänet:
+
+`js/ui.js vaiennaPaikanPuhe()` = `haivytaLuenta` +
+`vaiennaLivianKaupunkipuhe` + `polloKuplatPois()`.
+
+Sitä kutsuvat kaikki neljä lähtötapaa (noppa, jalan, lento, kehittäjän
+hyppy). Pino häipyy pehmeästi (`js/pollo.js poistaKuplat`, 200 ms) eikä
+räpsähdä pois, ja kaikki sanottu jää chatin historiaan
+(`kirjaaKuplaViestiin`) — kelattavaksi kuten ennenkin. Vartiot:
+`tests/puhevuoro.test.mjs` (kutsu on yhdessä paikassa) ja
+`tools/savukkeet/savuke-pulun-kuplat.mjs` vartio 8 (Riika → Vilna:
+Riiassa sanottu ei ole Vilnan pinossa mutta on yhä lokissa).

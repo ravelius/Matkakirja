@@ -168,30 +168,33 @@ export const FOKUSVIRTA_PRAHA = {
     /*
      * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
      *
-     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
      * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
      *
-     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
-     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
-     *              lukuajan (js/ui.js aloitaLykattyLuenta).
      *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
      *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
      *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
      *              soi kertojan päälle hiljempaa eikä kertoja väisty.
      *   kommentti  1-2 kuplaa luennan jälkeen.
      *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
      * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    alustus: 'Praha. Kirkasta, yöllä ensimmäinen halla. Isoisä myöhästyi täällä kyydistä.',
     huudahdus: {
       kohta: 'enkä kadu',
       teksti: 'Samat sanat.',
     },
     kommentti: [
       'Kello, joka näyttää auringon ja kuun mutta ei kiirettä. Sellaisen minä hyväksyn.',
-      'Vanhin osa on vuodelta 1410, ja se erehtyy päivän viidessä vuodessa.',
+      'Se käy yhä torin laidalla. Joka tasatunti sen edessä seisoo väkijoukko puhelimet pystyssä.',
+      'Ja keisarin sali on linnassa vieläkin. Ihmeet ovat hajallaan, mutta sali on täynnä turisteja.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Kaarlensilta ja linna).

@@ -194,8 +194,9 @@ export const FOKUSVIRTA_MOSKOVA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Moskova, heinäkuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Moskova, heinäkuussa 1873. Helteistä; kupolit häikäisevät.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Kaupunki on rakennettu renkaiksi kuin puun vuosilustot, ja '
       + 'sen sydämessä linnoituksen muurit sulkevat sisäänsä kirkkoja '
@@ -256,30 +257,32 @@ export const FOKUSVIRTA_MOSKOVA = {
     /*
      * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
      *
-     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
      * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
      *
-     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
-     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
-     *              lukuajan (js/ui.js aloitaLykattyLuenta).
      *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
      *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
      *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
      *              soi kertojan päälle hiljempaa eikä kertoja väisty.
      *   kommentti  1-2 kuplaa luennan jälkeen.
      *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
      * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    alustus: 'Moskova, heinäkuussa 1873. Kuuntele kelloja, niitä on monta.',
-    huudahdus: {
-      kohta: 'kesti neljä tuntia',
-      teksti: 'Neljä tuntia!',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Sellaisissa taloissa istui väkeä kuin Tretjakov, joka osti tauluja ja antoi ne kaupungille.',
-      'Pää ja sydän vaihtoivat paikkaa: pääkaupunki palasi tänne 1918. Kellot soivat yhä.',
+      'Neljän tunnin päivällinen. Teetä juotiin kuin vettä lähteestä.',
+      'Sellaisissa taloissa istui myös Tretjakov. Hän osti tauluja ja antoi ne kaupungille.',
+      'Se museo on yhä auki.',
+      'Pääkaupunki muutti takaisin tänne isoisän jälkeen. Renkaat ovat nyt moottoriteitä.',
+      'Ja kellot soivat yhä.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

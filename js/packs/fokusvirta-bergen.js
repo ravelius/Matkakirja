@@ -142,8 +142,9 @@ export const FOKUSVIRTA_BERGEN = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan. */
-    paikkarivi: 'Bergen, kesäkuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Bergen, kesäkuussa 1873. Sadetta aamusta iltaan; vuoret pilvessä.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Sataa. Kirjoitan tämän kapakan ikkunapöydässä, koska laiturilla '
       + 'ei pysy paperi kuivana. Saksalaisten vanha kauppalaituri seisoo yhä, '

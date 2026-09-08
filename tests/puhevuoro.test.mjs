@@ -266,24 +266,24 @@ test('kaupungista lähtö katkaisee pulun ajastimet ja repliikin', async () => {
   const repliikki = soitaLivianAani(ui, 'avaus', 0, { teksti });
   assert.ok(repliikki);
   let laukesi = false;
-  ui.alustuksenAjastin = setTimeout(() => { laukesi = true; }, 20);
   ui.saapumiskuplaAjastin = setTimeout(() => { laukesi = true; }, 20);
   ui.huudahdusAjastin = setTimeout(() => { laukesi = true; }, 20);
+  ui.huudahdusLykkaysAjastin = setTimeout(() => { laukesi = true; }, 20);
   ui.polloKuplasarjaAjastin = setTimeout(() => { laukesi = true; }, 20);
 
   vaiennaLivianKaupunkipuhe(ui);
   assert.equal(ui.liviaAani, null, 'soiva repliikki päättyy lähtöön');
   await odota(80);
   assert.equal(laukesi, false, 'edellisen kaupungin ajastimet eivät laukea perillä');
-  assert.equal(ui.alustuksenAjastin, null);
+  assert.equal(ui.huudahdusAjastin, null);
 });
 
 /* ---------- kytkentä peliin (lähdetekstin vartiot) ---------- */
 
 test('jokainen lähtö kulkee saman vaiennuksen kautta', () => {
   const ui = lue('../js/ui.js');
-  assert.match(ui, /vaiennaPaikanPuhe\(\) \{\n\s*haivytaLuenta\(this\);\n\s*vaiennaLivianKaupunkipuhe\(this\);\n\s*\}/,
-    'vaiennaPaikanPuhe hoitaa molemmat äänet yhdessä paikassa');
+  assert.match(ui, /vaiennaPaikanPuhe\(\) \{\n\s*haivytaLuenta\(this\);\n\s*vaiennaLivianKaupunkipuhe\(this\);\n\s*polloKuplatPois\(\);\n\s*\}/,
+    'vaiennaPaikanPuhe hoitaa äänet ja kuplat yhdessä paikassa');
   // Kaikki neljä lähtötapaa: noppa, jalan, lento ja kehittäjän hyppy.
   const kutsut = [...ui.matchAll(/this\.vaiennaPaikanPuhe\(\);/g)];
   assert.ok(kutsut.length >= 4,
@@ -294,8 +294,8 @@ test('jokainen lähtö kulkee saman vaiennuksen kautta', () => {
 
 test('kommentti odottaa myös vasta lähdössä olevaa luentaa', () => {
   const virta = lue('../js/fokusvirta.js');
-  // Kirjoituskone ehtii maaliin ennen kertojaa, kun merkintä on lyhyt ja
-  // pulun alustusäänite pitkä (Tallinna, Helsinki). Silloin diaryVoice
+  // Kirjoituskone voi ehtiä maaliin ennen kertojaa: ensisaapumisessa
+  // luenta odottaa vielä tuurauspaljastuksen kuplia. Silloin diaryVoice
   // on vielä tyhjä eikä luennanLoppuun tiedä luennasta — lykkäyslippu
   // tietää.
   assert.match(virta, /if \(ui\.luennanLykkays && jaljella > 0 && !ui\.dead\) \{/);
@@ -304,11 +304,10 @@ test('kommentti odottaa myös vasta lähdössä olevaa luentaa', () => {
 
 test('pulun kaupunkisarjat vartioivat kaupunkiaan', () => {
   const virta = lue('../js/fokusvirta.js');
-  // Alustuksen ajastin päästää luennan liikkeelle: väärässä kaupungissa
-  // lauetessaan se aloittaisi toisen kaupungin luennan kesken pulun
-  // alustusta.
+  // Välihuudon odotus vartioi kaupunkia: väärässä kaupungissa lauetessaan
+  // se ajastaisi edellisen kaupungin välihuudon uuden luennan päälle.
   assert.match(virta,
-    /if \(ui\.dead \|\| ui\.game\?\.cityOf\?\.\(\)\?\.id !== city\.id\) return;\n\s*ui\.aloitaLykattyLuenta/);
+    /const kaynnista = \(jaljella = HUUDAHDUKSEN_LYKKAYSKATTO_MS\) => \{\n\s*if \(ui\.dead \|\| ui\.game\?\.cityOf\?\.\(\)\?\.id !== city\.id\) return;/);
   assert.match(virta,
     /function soitaLivianKaupunkiSarja[\s\S]{0,400}?cityOf\?\.\(\)\?\.id !== kaupunkiId\) return;/);
   assert.match(virta, /export function vaiennaLivianKaupunkipuhe\(ui\)/);

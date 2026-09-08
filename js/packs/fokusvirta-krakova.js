@@ -202,8 +202,9 @@ export const FOKUSVIRTA_KRAKOVA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ilman lisäystä. */
-    paikkarivi: 'Krakova, kesäkuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Krakova, kesäkuussa 1873. Poutaa; torilla pölyää.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Torin laidalla kangashalli on täynnä kauppiaita kuin '
       + 'neljäsataa vuotta sitten, ja tasatunnein tornista soi torvi, '
@@ -251,23 +252,25 @@ export const FOKUSVIRTA_KRAKOVA = {
     /*
      * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
      *
-     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
      * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
      *
-     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
-     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
-     *              lukuajan (js/ui.js aloitaLykattyLuenta).
      *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
      *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
      *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
      *              soi kertojan päälle hiljempaa eikä kertoja väisty.
      *   kommentti  1-2 kuplaa luennan jälkeen.
      *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
      * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    alustus: 'Krakova, kesäkuussa 1873. Kuuntele tarkkaan, täällä soi torvi.',
     huudahdus: {
       kohta: 'kolme eri tarinaa',
       teksti: 'Neljäs on minulla.',
@@ -275,6 +278,8 @@ export const FOKUSVIRTA_KRAKOVA = {
     kommentti: [
       'Se torvi soi yhä joka tunti neljään ilmansuuntaan, ja sävelmä katkeaa samalla tavalla.',
       'Syyn saat selvittää itse. Tarinoita on yhä useampi kuin yksi.',
+      'Kangashalli on yhä täynnä kauppiaita. Nyt ne myyvät meripihkaa ja puuleluja.',
+      'Ja torilla on kyyhkysiä enemmän kuin missään. Sukulaisia.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

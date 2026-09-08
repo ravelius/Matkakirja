@@ -109,6 +109,26 @@ import { AANI_JUURI } from './media.js';
 export const LIVIAN_AANIJUURI = `${AANI_JUURI}aanet/pulu/`;
 
 /**
+ * VARATTU NUMERO — POISTETUN REPLIIKIN PAIKKA (omistaja 8.9.2026,
+ * sanatarkasti: *"ota kaikki pulun alustukset pois."*).
+ *
+ * Alustuskupla poistui joka kaupungista, mutta sen JÄRJESTYSNUMERO ei
+ * saa poistua: numero on tiedostonimessä (livia-sarajevo-1.mp3), ja
+ * rivin poistaminen taulusta siirtäisi huudahduksen ykköseksi ja
+ * kommentin kakkoseksi. Peli hakisi silloin jokaisessa kaupungissa
+ * väärän tiedoston — poistetun alustuksen äänen kommentin kuplan alle —
+ * ja koska tiiviste on tekstin eikä numeron tarkistus, ainoa vaihtoehto
+ * olisi generoida 18 kaupunkia uudelleen.
+ *
+ * Varattu paikka pitää numeroinnin ennallaan: kenttää ei ole
+ * missään pakkauksessa, joten sillä ei ole tekstiä eikä sen numeroon
+ * osu yksikään haku (livianKaupunkiIndeksi kysyy kentän nimellä).
+ * Ämpärin alustustiedostot jäävät sinne orvoiksi — ne on kerran
+ * maksettu, eikä niiden poistaminen muuttaisi mitään pelissä.
+ */
+export const LIVIAN_VARATTU = '(varattu)';
+
+/**
  * KAUPUNKIKOHTAISET LÄHTEET: kaupungin tunnus → äänitetyt kentät
  * siinä järjestyksessä, jossa ne saavat tiedostonumeronsa.
  *
@@ -133,30 +153,35 @@ export const LIVIAN_AANIJUURI = `${AANI_JUURI}aanet/pulu/`;
  * Euroopan kaupunkia, joiden uuden kulun tekstit omistaja hyväksyi
  * 7.9.2026 kahdessa erässä. Muut kaupungit ovat hiljaisia kunnes niiden
  * tekstit on hyväksytty.
+ *
+ * ENSIMMÄINEN PAIKKA ON VARATTU (8.9.2026). Siinä oli alustuskupla,
+ * joka poistettiin joka kaupungista (LIVIAN_VARATTU) — Ateena on ainoa
+ * kaupunki, jossa pulu puhuu ennen isoisän luentaa, ja se puhuu omalla
+ * vanhalla kentällään `maadoitus`.
  */
 export const LIVIAN_KAUPUNKILAHTEET = {
   ateena: ['maadoitus'],
   sofia: [
-    'alustus', 'huudahdus', ['kommentti', 2], ['johdanto', 2], ['vinkki', 2],
+    LIVIAN_VARATTU, 'huudahdus', ['kommentti', 2], ['johdanto', 2], ['vinkki', 2],
     'linkkiSaate', ['oikein', 2], 'odotus', ['paluu', 2],
   ],
-  istanbul: ['alustus', 'huudahdus', ['kommentti', 3]],
-  bukarest: ['alustus', 'huudahdus', ['kommentti', 2]],
-  sarajevo: ['alustus', 'huudahdus', ['kommentti', 2]],
-  budapest: ['alustus', 'huudahdus', ['kommentti', 2]],
-  wien: ['alustus', 'huudahdus', ['kommentti', 2]],
-  praha: ['alustus', 'huudahdus', ['kommentti', 2]],
-  krakova: ['alustus', 'huudahdus', ['kommentti', 2]],
-  varsova: ['alustus', 'huudahdus', ['kommentti', 2]],
-  pietari: ['alustus', 'huudahdus', ['kommentti', 2]],
-  moskova: ['alustus', 'huudahdus', ['kommentti', 2]],
-  kiova: ['alustus', 'huudahdus', ['kommentti', 2]],
-  odessa: ['alustus', 'huudahdus', ['kommentti', 2]],
-  helsinki: ['alustus', 'huudahdus', ['kommentti', 2]],
-  tampere: ['alustus', 'huudahdus', ['kommentti', 2]],
-  tallinna: ['alustus', 'huudahdus', ['kommentti', 2]],
-  riika: ['alustus', 'huudahdus', ['kommentti', 3]],
-  vilna: ['alustus', 'huudahdus', ['kommentti', 3]],
+  istanbul: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 3]],
+  bukarest: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
+  sarajevo: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
+  budapest: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
+  wien: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
+  praha: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 3]],
+  krakova: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
+  varsova: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
+  pietari: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
+  moskova: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 5]],
+  kiova: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
+  odessa: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
+  helsinki: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 4]],
+  tampere: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 3]],
+  tallinna: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
+  riika: [LIVIAN_VARATTU, 'huudahdus', ['kommentti', 4]],
+  vilna: [LIVIAN_VARATTU, LIVIAN_VARATTU, ['kommentti', 3]],
 };
 
 /**
@@ -213,13 +238,14 @@ export function livianKaupunkiKentat(kaupunkiId) {
  * KIRJOITETUT KUPLAKENTÄT (omistaja 7.9.2026).
  *
  * Näiden kenttien teksti on kirjoitettu KUPLAKSI: yhden merkkijonon
- * alustus on yksi kupla, ei kahdeksi virkkeeksi pilkottava puheenvuoro.
+ * huudahdus on yksi kupla, ei kahdeksi virkkeeksi pilkottava
+ * puheenvuoro.
  * Vanhat kentät (maadoitus ja sähketehtävän vaiheet) ovat yhä pitkiä
  * merkkijonoja, jotka peli pilkkoo ruudulla (js/ui-apurit.js
  * jaaPuheenvuoroksi) — ja juuri se ero ratkaisee, mitataanko repliikin
  * näkyvä aika yhtenä kuplana vai osien summana.
  */
-export const LIVIAN_KUPLAKENTAT = new Set(['alustus', 'huudahdus', 'kommentti']);
+export const LIVIAN_KUPLAKENTAT = new Set(['huudahdus', 'kommentti']);
 
 /**
  * Pilkotaanko tämä kenttä ruudulla osiin (pinoutuva puheenvuoro)?
@@ -262,6 +288,24 @@ export function livianKaupunkiKuplia(kaupunkiId, kentta) {
 export const LIVIAN_LINSSILAHTEET = {
   'ihmisen-matka': ['ranta', 'denisova', 'beringia', 'loppu'],
 };
+
+/**
+ * PULUN PERUSTASO — HIEMAN KERTOJAN ALLE (omistaja 8.9.2026,
+ * sanatarkasti: *"Pulun ääni on vähän voimakkaampi kuin kertojan, sitä
+ * voisi laskea koko pelissä hieman"*).
+ *
+ * Kertoja soi pelin yleisellä puhevoimalla sellaisenaan (js/luenta.js
+ * playDiaryVoice: `audio.volume = puheVoima()`), ja pulu soi samalla
+ * luvulla — mutta sen käheä, nopea ja tagitettu ääni kuulostaa
+ * voimakkaammalta kuin kertojan tasainen luenta. Tämä kerroin laskee
+ * KAIKKI pulun äänitteet saman verran kertojan alle: yksi luku, ei
+ * kutsupaikkakohtaisia säätöjä.
+ *
+ * Vaimennukset (huudahdus, linssin välihuomio) kertovat TÄHÄN lukuun,
+ * eivät korvaa sitä — välihuuto on siis yhä suhteessa yhtä paljon
+ * hiljaisempi kuin ennenkin.
+ */
+export const LIVIAN_PERUSTASO = 0.8;
 
 /**
  * VÄLIHUOMION VAIMENNUS: pulu soi kertojan päälle hiljempaa eikä
@@ -402,10 +446,14 @@ export function livianTiiviste(teksti) {
  * portista kuin paljastus ja lehtivinkki, ja kutsupaikka antaa aina
  * kuplan tekstin (soitaLivianKaupunkiAani).
  *
- * TILANNE 7.9.2026 ilta: Sofian uudet kuplat sekä Istanbulin, Riian ja
- * Vilnan repliikit ODOTTAVAT AJOA — niiden rivit puuttuvat, joten pulu
- * on niissä hiljaa kunnes ääni on generoitu ja taulu päivitetty.
- * Ateenan maadoitus on ennallaan ja ajan tasalla.
+ * TILANNE 8.9.2026: alustusten rivit (jokaisen kaupungin numero 1) on
+ * poistettu tästä taulusta, koska kuplaa ei enää ole — numero on silti
+ * varattu (LIVIAN_VARATTU), joten seuraavat kuplat pitävät omat
+ * tiedostonsa. `sofia-3` on jätetty tauluun MUUTTUNEENA: kuplasta
+ * poistettiin toistuva "Kääk." (omistaja 8.9.2026), joten tiiviste ei
+ * enää täsmää ja kupla on hiljainen — rivi kertoo generointityökalulle,
+ * että äänite on muuttunut eikä uusi (tools/generoi-pulu.mjs
+ * aanitteenTila).
  */
 export const LIVIAN_AANITETYT = {
   'avaus-1': '62c6bcbd',
@@ -421,14 +469,12 @@ export const LIVIAN_AANITETYT = {
   'lehtivinkki-1': '676644e9',
   'mannerivihje-1': '9b1a96f3',
   // Euroopan 18 kaupunkia generoitu 7.9.2026 (erät 1 ja 2), "Kääk."-huudahdukset
-  // (sofia-2, wien-2) uusinta-ajossa.
-  // Kaupunkirepliikit: Ateenan maadoitus on generoitu 6.9.2026 eikä sen
-  // teksti ole muuttunut. Uuden kulun kaupungit (Sofia, Istanbul,
-  // Bukarest, Sarajevo, Budapest, Wien, Praha, Krakova, Varsova, Riika,
-  // Vilna) odottavat ajoa — rivit lisätään kuivan ajon tulostamasta
-  // taulusta, ja pulu on niissä siihen asti hiljaa.
+  // (sofia-2, wien-2) uusinta-ajossa. Ateenan maadoitus on generoitu
+  // 6.9.2026 eikä sen teksti ole muuttunut.
+  // NUMERO 1 PUUTTUU JOKA KAUPUNGILTA (8.9.2026): siinä oli alustus,
+  // joka poistettiin — numero on varattu eikä sillä ole enää kuplaa.
   'ateena-1': '3f39d123',
-  'sofia-1': 'eecfb26c',
+  // Teksti muuttui 8.9.2026 (toinen "Kääk." pois) — äänite odottaa ajoa.
   'sofia-3': '82771368',
   'sofia-4': '179d0591',
   'sofia-5': '1e64f9d0',
@@ -441,73 +487,48 @@ export const LIVIAN_AANITETYT = {
   'sofia-12': '75c13aff',
   'sofia-13': 'bc7f04ef',
   'sofia-14': 'ced3fd34',
-  'istanbul-1': 'aa460185',
-  'istanbul-2': '8b0409a2',
   'istanbul-3': '97b8ba5a',
   'istanbul-4': 'ae40ccd7',
   'istanbul-5': '180c037b',
-  'bukarest-1': '252e181c',
   'bukarest-2': '1a1c72e4',
   'bukarest-3': 'aee2c92a',
   'bukarest-4': '2a4c0a1a',
-  'sarajevo-1': '09ad5616',
-  'sarajevo-2': 'afce962e',
   'sarajevo-3': '4ec98aa1',
   'sarajevo-4': '4133a86b',
-  'budapest-1': '6af968e0',
   'budapest-2': '93b5b31b',
   'budapest-3': '979edb25',
   'budapest-4': 'e80ad81d',
-  'wien-1': '495f2c8b',
   'wien-3': 'd2399e33',
   'wien-4': 'f4a7f68b',
-  'praha-1': 'e97c4ae2',
   'praha-2': 'eb978aac',
   'praha-3': '614f7f30',
   'praha-4': '6517ff2c',
-  'krakova-1': '4457b03f',
   'krakova-2': '858824f0',
   'krakova-3': 'ce7224cd',
   'krakova-4': '8f1350d9',
-  'varsova-1': 'bc9cde76',
-  'varsova-2': '0cb21b42',
   'varsova-3': '5c732ab7',
   'varsova-4': '250213c7',
-  'pietari-1': '960dedeb',
   'pietari-2': 'a3cd7368',
   'pietari-3': '5845dc3f',
   'pietari-4': '00b07b33',
-  'moskova-1': 'bb36cfeb',
-  'moskova-2': 'c6f397c0',
   'moskova-3': '246d4a35',
   'moskova-4': '05552091',
-  'kiova-1': '8a817819',
-  'kiova-2': 'c5a4c07a',
   'kiova-3': '46b284b5',
   'kiova-4': 'b1417379',
-  'odessa-1': 'ce0c53d0',
-  'odessa-2': 'c40bb6fa',
   'odessa-3': '2678dada',
   'odessa-4': 'e1ab4cec',
-  'helsinki-1': 'de7f17ff',
-  'helsinki-2': '7ab40e12',
   'helsinki-3': '517dea08',
   'helsinki-4': 'e19cf727',
-  'tampere-1': '4d3595f2',
   'tampere-2': 'fca8a7fe',
   'tampere-3': 'a9036aa1',
   'tampere-4': 'cf9e3cbc',
-  'tallinna-1': 'd258c3e5',
   'tallinna-2': '081ec104',
   'tallinna-3': 'ed338f86',
   'tallinna-4': 'c1ec3087',
-  'riika-1': 'cb5606bd',
   'riika-2': '3eae9de7',
   'riika-3': 'aa3997d2',
   'riika-4': '8f8ca699',
   'riika-5': '0bab2ae3',
-  'vilna-1': 'c4c9a5d5',
-  'vilna-2': '0f49e6bf',
   'vilna-3': 'b5b7ea25',
   'vilna-4': '1bfc8e0c',
   'vilna-5': 'ba380765',
@@ -519,7 +540,6 @@ export const LIVIAN_AANITETYT = {
   'ihmisen-matka-3': '77366164',
   'ihmisen-matka-4': 'dbfd92fe',
   'sofia-2': '3eae9de7',
-  'wien-2': '3eae9de7',
 };
 
 /* ------------------------------------------------------------------ *
@@ -541,8 +561,9 @@ export const LIVIAN_KOROSTUS_KAYTOSSA = true;
 
 /**
  * Ne kaupungit, joissa uusi kulku on VALMIS KUUNNELTAVAKSI: kaupungilla
- * on uuden kulun repliikit (alustus tai kommentti) JA jokaiselle sen
- * kuplalle on generoitu äänite (LIVIAN_AANITETYT).
+ * on uuden kulun kommenttikuplat JA jokaiselle sen kuplalle on
+ * generoitu äänite (LIVIAN_AANITETYT). Varattu paikka
+ * (LIVIAN_VARATTU) ei ole kupla eikä siltä siis odoteta äänitettä.
  *
  * Lista JOHDETAAN eikä ylläpidetä käsin: käsin kirjoitettu lista
  * jäisi jälkeen heti ensimmäisestä ajosta, ja kartta lupaisi ääntä,
@@ -556,14 +577,17 @@ export function livianKorostetutKaupungit() {
   if (!LIVIAN_KOROSTUS_KAYTOSSA) return joukko;
   for (const kaupunkiId of Object.keys(LIVIAN_KAUPUNKILAHTEET)) {
     const kentat = livianKaupunkiKentat(kaupunkiId);
-    const uusiKulku = kentat.some((k) => k.kentta === 'alustus' || k.kentta === 'kommentti');
-    if (!uusiKulku) continue;
-    const kuplia = kentat.reduce((summa, k) => summa + k.kuplat, 0);
+    if (!kentat.some((k) => k.kentta === 'kommentti')) continue;
+    let kuplia = 0;
     let valmiita = 0;
-    for (let i = 0; i < kuplia; i += 1) {
-      if (LIVIAN_AANITETYT[`${kaupunkiId}-${i + 1}`]) valmiita += 1;
+    for (const { kentta, kuplat, alku } of kentat) {
+      if (kentta === LIVIAN_VARATTU) continue;
+      kuplia += kuplat;
+      for (let i = 0; i < kuplat; i += 1) {
+        if (LIVIAN_AANITETYT[`${kaupunkiId}-${alku + i + 1}`]) valmiita += 1;
+      }
     }
-    if (valmiita === kuplia) joukko.add(kaupunkiId);
+    if (kuplia > 0 && valmiita === kuplia) joukko.add(kaupunkiId);
   }
   return joukko;
 }
@@ -852,7 +876,8 @@ export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
  * @param {string|null} [asetukset.teksti] kuplan teksti: jos annettu,
  *   äänite soi vain kun se vastaa ämpärissä olevaa (LIVIAN_AANITETYT).
  * @param {number} [asetukset.vaimennus] äänenvoimakkuuden kerroin
- *   (1 = normaali). Välihuuto luennan päällä soi hiljempaa.
+ *   (1 = pulun perustaso, LIVIAN_PERUSTASO — joka on jo hieman kertojan
+ *   alapuolella). Välihuuto luennan päällä soi tätäkin hiljempaa.
  * @param {boolean} [asetukset.vaista] väistääkö tausta puheen ajaksi.
  *   VÄLIHUUTO EI VÄISTÄ (omistaja 7.9.2026): se soi kertojan PÄÄLLE,
  *   eikä kertoja saa hiljetä sen tieltä.
@@ -902,7 +927,9 @@ export function soitaLivianAani(ui, lahde, indeksi,
 
   const audio = new Audio(url);
   audio.preload = 'auto';
-  audio.volume = Math.max(0, Math.min(1, puheVoima() * vaimennus));
+  // Perustaso on kertojan alapuolella (LIVIAN_PERUSTASO); kutsupaikan
+  // vaimennus kertoo siihen eikä korvaa sitä.
+  audio.volume = Math.max(0, Math.min(1, puheVoima() * LIVIAN_PERUSTASO * vaimennus));
   ui.liviaAani = audio;
   // Kirjanpito kaikkiin luentoihin: taustalle menevä peli hiljentää
   // myös tämän (js/luenta.js taustaHiljennaLuennat).

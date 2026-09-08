@@ -192,8 +192,9 @@ export const FOKUSVIRTA_BARCELONA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Barcelona, maaliskuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Barcelona, maaliskuussa 1873. Lämmintä jo; satamassa tervan haju.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Kaupunki purkaa muurejaan ja rakentaa itseään uusiksi '
       + 'ruutuihin, joilla on insinöörin nimi ja suunnitelma suurempi '

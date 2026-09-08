@@ -1,12 +1,13 @@
 /*
- * Savuke: KAUPUNGIN KULKU — PULU, LUENTA, PULU (ei kuvia).
+ * Savuke: KAUPUNGIN KULKU — LUENTA, PULU (ei kuvia).
  *
  * Omistajan linjaus 7.9.2026 (Raamattu, "KAUPUNGIN KULKU: EI KUVIA,
- * PULU - LUENTA - PULU"): saapuminen on kolme hetkeä. Ensin pulun
- * ALUSTUS yhtenä kuplana, sitten isoisän LUENTA — jonka aikana pulu
- * huutaa enintään yhden lyhyen välihuudon tarkasti nimettyyn kohtaan —
- * ja lopuksi pulun KOMMENTTI yhtenä tai kahtena kuplana. Kuvia ei
- * näytetä: ne kuuluvat kaupunkilehteen.
+ * PULU - LUENTA - PULU") ja sen kavennus 8.9.2026, sanatarkasti: *"ota
+ * kaikki pulun alustukset pois."* Saapuminen on nyt kaksi pulun
+ * hetkeä: isoisän LUENTA alkaa heti — sen aikana pulu huutaa enintään
+ * yhden lyhyen välihuudon tarkasti nimettyyn kohtaan — ja sen jälkeen
+ * tulee pulun KOMMENTTI yhtenä tai kahtena kuplana. Kuvia ei näytetä:
+ * ne kuuluvat kaupunkilehteen.
  *
  * MITTAKAUPUNKI ON BUDAPEST. Se on uuden kulun kaupunki, jonka
  * matkakirjamerkinnässä huudahduksen kohta ("Kartantekijöille riittää
@@ -14,10 +15,10 @@
  * vahingossa heti alussa tai lopussa.
  *
  * VARTIOT:
- *   1. ALUSTUS ENNEN LUENTAA: kuplassa lukee alustusteksti, eikä
- *      matkakirjan luenta ole vielä alkanut (ui.diaryVoice on tyhjä tai
- *      soittamatta).
- *   2. LUENTA LÄHTEE ALUSTUKSEN JÄLKEEN: ui.diaryVoice on olemassa.
+ *   1. EI ALUSTUSTA: saapumishetkellä kuplapinossa ei ole pulun
+ *      puheenvuoroa ennen luentaa.
+ *   2. LUENTA LÄHTEE HETI: ui.diaryVoice on olemassa ilman että pulu on
+ *      ehtinyt puhua.
  *   3. VÄLIHUUTO LUENNAN AIKANA: .fokusvirta-huudahdus ilmestyy ja
  *      siinä lukee pakkauksen huudahdusteksti.
  *   4. KOMMENTTI LUENNAN JÄLKEEN: molemmat kommenttikuplat ovat
@@ -72,7 +73,6 @@ const vaadi = (nimi, ehto, lisa = '') => {
 };
 const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
 
-const ALUSTUS = FOKUSVIRTA_BUDAPEST.pollo.alustus;
 const HUUDAHDUS = FOKUSVIRTA_BUDAPEST.pollo.huudahdus.teksti;
 const KOMMENTIT = FOKUSVIRTA_BUDAPEST.pollo.kommentti;
 
@@ -164,27 +164,26 @@ const lue = () => sivu.evaluate(() => ({
   kuva: Boolean(document.querySelector('.fact-valokuva:not([hidden])')),
 }));
 
-/* 1. Alustus ennen luentaa. */
-let tila = null;
-for (let i = 0; i < 40; i += 1) {
-  tila = await lue();
-  if (tila.pino.includes(ALUSTUS.slice(0, 24))) break;
-  await sivu.waitForTimeout(300);
-}
-tieto('alustuksen hetki', JSON.stringify(tila));
-vaadi('alustus tulee kuplaan ennen luentaa',
-  tila.pino.includes(ALUSTUS.slice(0, 24)) && tila.luennanAika === 0,
+/*
+ * 1. EI ALUSTUSTA. Saapumishetkellä kuplapino on tyhjä: pulu ei enää
+ *    puhu ennen isoisää (omistaja 8.9.2026).
+ */
+let tila = await lue();
+tieto('saapumisen hetki', JSON.stringify(tila));
+vaadi('pulu ei puhu ennen luentaa', tila.pino.trim() === '',
   JSON.stringify(tila).slice(0, 200));
 vaadi('matkakirjakortilla ei ole kuvaa', tila.kuva === false, JSON.stringify(tila.kuva));
-if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '1-alustus.png') });
+if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '1-saapuminen.png') });
 
-/* 2. Luenta lähtee alustuksen jälkeen. */
+/* 2. Luenta lähtee heti eikä odota pulua. */
 for (let i = 0; i < 60; i += 1) {
   tila = await lue();
   if (tila.luenta) break;
   await sivu.waitForTimeout(300);
 }
-vaadi('isoisän luenta lähtee alustuksen jälkeen', tila.luenta === true, JSON.stringify(tila));
+vaadi('isoisän luenta lähtee heti', tila.luenta === true, JSON.stringify(tila));
+vaadi('pulu ei ehtinyt puhua ennen luentaa', tila.pino.trim() === '',
+  JSON.stringify(tila).slice(0, 200));
 
 /* 3. Välihuuto luennan aikana. */
 let huuto = '';

@@ -554,13 +554,13 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
    * KERTOJA EI ALA PULUN PÄÄLLE (omistaja 8.9.2026, ks. osio PULU JA
    * KERTOJA EIVÄT PUHU PÄÄLLEKKÄIN).
    *
-   * Järjestys on muuten ajastimien varassa: pulun alustus saa
-   * lukuaikansa ja päästää luennan liikkeelle vasta perään
-   * (js/fokusvirta.js fokusvirtaAlustus). Kehittäjän hyppy kaupungista
-   * toiseen ohittaa ne ajastimet, ja silloin edellisen kaupungin
-   * repliikki on yhä äänessä kun uuden kaupungin luenta alkaisi. Tämä
-   * on se yksi portti, jonka läpi kertoja kulkee — se odottaa pulun
-   * lauseen loppuun eikä puhu sen päälle.
+   * Järjestys on muuten ajastimien varassa: pulun kuplat saavat
+   * lukuaikansa ja luenta alkaa omalla vuorollaan (js/fokusvirta.js
+   * kaupungin kulku, js/livia.js paljastussarja). Kehittäjän hyppy
+   * kaupungista toiseen ohittaa ne ajastimet, ja silloin edellisen
+   * kaupungin repliikki on yhä äänessä kun uuden kaupungin luenta
+   * alkaisi. Tämä on se yksi portti, jonka läpi kertoja kulkee — se
+   * odottaa pulun lauseen loppuun eikä puhu sen päälle.
    *
    * KATTO ON PAKOLLINEN: pulun äänite voi jäädä myös jumiin (verkko
    * poikki, purettu soitin), eikä luenta saa hävitä sen mukana.

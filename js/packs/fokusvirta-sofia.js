@@ -380,30 +380,43 @@ export const FOKUSVIRTA_SOFIA = {
     /*
      * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
      *
-     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
      * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
      *
-     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
-     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
-     *              lukuajan (js/ui.js aloitaLykattyLuenta).
      *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
      *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
      *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
      *              soi kertojan päälle hiljempaa eikä kertoja väisty.
      *   kommentti  1-2 kuplaa luennan jälkeen.
      *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
      * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    alustus: 'Sofia. Helteistä, tomu ei laskeudu. Isoisä kirjoitti täällä miehestä, jota ei nimetä.',
     huudahdus: {
       kohta: 'joka hirtettiin täällä helmikuussa',
       teksti: 'Kääk.',
     },
+    /*
+     * TOINEN "Kääk." POIS (omistaja 8.9.2026, sanatarkasti: *"ota
+     * jälkimmäinen kääk pois pulun sofian tekstissä, muuten se tulee
+     * kaksi kertaa peräkkäin"*). Välihuuto luennan aikana on jo "Kääk.",
+     * ja kommentti tuli heti sen perään samalla sanalla.
+     *
+     * ÄÄNITE ODOTTAA AJOA: ämpärin `livia-sofia-3.mp3` on generoitu
+     * vanhalla tekstillä, joten tiivistevartio (js/liviapuhe.js
+     * livianAaniAjanTasalla) vaientaa sen kunnes ääni generoidaan
+     * uudestaan. Kupla näkyy ja etenee kuten ennen.
+     */
     kommentti: [
-      'Kääk. Hurja juttu, luin sen kahdesti.',
-      'Helmikuu 1873, siitä on yli sataviisikymmentä vuotta. Ei se juttua pienennä.',
+      'Hurja juttu. Luin sen kahdesti.',
+      'Sen miehen nimi on nyt kadulla ja stadionilla. Patsas seisoo siinä, missä hirsipuu oli.',
     ],
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,

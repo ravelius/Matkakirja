@@ -293,31 +293,30 @@ export const FOKUSVIRTA_ISTANBUL = {
     /*
      * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
      *
-     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
      * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
      *
-     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
-     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
-     *              lukuajan (js/ui.js aloitaLykattyLuenta).
      *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
      *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
      *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
      *              soi kertojan päälle hiljempaa eikä kertoja väisty.
      *   kommentti  1-2 kuplaa luennan jälkeen.
      *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
      * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    alustus: 'Konstantinopoli. Sumua salmella, sarvet soivat. Isoisä löysi Hippodromilta pylvään.',
-    huudahdus: {
-      kohta: 'kaupunki ottaa mitä haluaa',
-      teksti: 'No johan.',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Vartija sanoo ton jokaiselle, joka pysähtyy pylvään kohdalle.',
-      'Meidän sukua on otettu ja pidetty kaksituhatta vuotta, eikä siitä ole aforismia.',
-      'Niin. Se pylväs. Seisoo yhä siinä, mihin se siirrettiin. Se oli tän pointti.',
+      'Vartija sanoo tuon jokaiselle, joka pysähtyy pylvään kohdalle.',
+      'Pylväs seisoo yhä samassa paikassa. Nyt sen ohi kulkee raitiovaunu ja miljoonia turisteja.',
+      'Kaupunki on kasvanut kahteen maanosaan. Salmen yli pääsee nyt myös junalla, meren alta.',
     ],
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):

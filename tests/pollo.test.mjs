@@ -1620,12 +1620,18 @@ test('puheenvuoro jakautuu osiin sanoja hukkaamatta', () => {
 test('kupliksi kirjoitettu kommentti on valmiiksi osissa', () => {
   const kuplat = FOKUSVIRTA_SOFIA.pollo.kommentti;
   assert.ok(Array.isArray(kuplat) && kuplat.length === 2, 'Sofian kommentti on kaksi kuplaa');
-  assert.match(kuplat[0], /^Kääk\. Hurja juttu/);
+  /*
+   * KOMMENTTI EI ALA "Kääk."-SANALLA (omistaja 8.9.2026: *"ota
+   * jälkimmäinen kääk pois pulun sofian tekstissä, muuten se tulee kaksi
+   * kertaa peräkkäin"*) — huudahdus luennan aikana on jo "Kääk.".
+   */
+  assert.match(kuplat[0], /^Hurja juttu/);
+  assert.equal(FOKUSVIRTA_SOFIA.pollo.huudahdus.teksti, 'Kääk.');
   for (const kupla of kuplat) {
     assert.ok(kupla.length <= 95, `kupla on liian pitkä ääneen luettavaksi: ${kupla.length}`);
   }
-  // Alustus on YKSI kupla, vaikka siinä on kaksi virkettä (7.9.2026).
-  assert.equal(typeof FOKUSVIRTA_SOFIA.pollo.alustus, 'string');
+  // Alustus on poistettu joka kaupungista (omistaja 8.9.2026).
+  assert.equal(FOKUSVIRTA_SOFIA.pollo.alustus, undefined);
 });
 
 test('kirjoittajan kappalerajat voittavat puheenvuoron jaossa', () => {

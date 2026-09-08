@@ -155,8 +155,9 @@ export const FOKUSVIRTA_EDINBURGH = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, loppupiste lisätty. */
-    paikkarivi: 'Edinburgh, elokuussa 1873.',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Edinburgh, elokuussa 1873. Viileää; linna sumun yllä.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Kaupunki kiipeää kalliolle kuin sammal, ja sen yllä istuu '
       + 'linna, jota ei ole koskaan vallattu rynnäköllä — nälällä '

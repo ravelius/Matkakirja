@@ -193,8 +193,9 @@ export const FOKUSVIRTA_VARSOVA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ilman lisäystä. */
-    paikkarivi: 'Varsova, syyskuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Varsova, syyskuussa 1873. Kirkasta; Veikselillä usvaa aamulla.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Kaupunki elää kahta elämää: kaduilla puhutaan puolaa ja '
       + 'virastoissa venäjää, eikä kumpikaan puoli teeskentele, ettei '
@@ -255,30 +256,31 @@ export const FOKUSVIRTA_VARSOVA = {
     /*
      * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
      *
-     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
      * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
      *
-     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
-     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
-     *              lukuajan (js/ui.js aloitaLykattyLuenta).
      *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
      *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
      *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
      *              soi kertojan päälle hiljempaa eikä kertoja väisty.
      *   kommentti  1-2 kuplaa luennan jälkeen.
      *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
      * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    alustus: 'Varsova, syyskuussa 1873. Kaduilla puhutaan puolaa, virastoissa venäjää.',
-    huudahdus: {
-      kohta: 'sisar toi kotiin salaa',
-      teksti: 'Salaa. Hyvä sisar.',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
       'Sen pianistin nimen arvaat itsekin. Sydän on yhä muurattuna kirkon pylvääseen.',
-      'Vanhakaupunki tuhoutui sodassa ja rakennettiin uusiksi niin tarkasti, että se on perintöä.',
+      'Vanhakaupunki tuhoutui sodassa melkein kokonaan.',
+      'Se rakennettiin uudelleen vanhojen maalausten mukaan, tiili tiileltä.',
+      'Nyt siellä puhutaan taas puolaa myös virastoissa. Ja kapakoissa laulut lauletaan loppuun.',
     ],
     /* KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. */
     /*

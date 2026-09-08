@@ -275,8 +275,8 @@ const sofianKupla = await sivu.evaluate(async () => {
    * livianKuplanLukuaika, enintään 9,5 s per osa) eikä vanhalla
    * 1,8–4,2 sekunnin perusrytmillä — muuten viimeinen kupla olisi
    * ruudulla kauan ennen kuin pulu ehtii puhua sen. Uudessa kulussa
-   * (7.9.2026) sarjaan tuli vielä alustuskupla ENNEN luentaa, joten
-   * odotus kattaa alustuksen, luennan ja kaksi kommenttikuplaa.
+   * (7.9.2026, kavennus 8.9.2026) pulu puhuu vasta luennan aikana ja
+   * sen jälkeen, joten odotus kattaa luennan ja kaksi kommenttikuplaa.
    *
    * PELKÄT PUHEKUPLAT (omistajan tarkennus 3.9.2026): kuplissa ei saa
    * olla nimilappuriviä eikä pöllökuvaketta, joten mittari laskee
@@ -311,20 +311,20 @@ const sofianKupla = await sivu.evaluate(async () => {
  * Jos joku kirjoittaa kontekstin pois ja jättää pelkän säikähdyksen,
  * savuke kaatuu tähän.
  *
- * UUSI KULKU (omistaja 7.9.2026, Raamattu KAUPUNGIN KULKU): pinossa on
- * nyt ENSIN alustus ("Sofia. Helteistä…") ennen isoisän luentaa ja
- * VASTA SEN JÄLKEEN kommentti kahtena kuplana. Väite mittaa siis
- * molemmat hetket samasta pinosta: kuplia on vähintään kolme, alustus
- * aloittaa ja kommentti päättää. Tekstit ovat omistajan sanatarkasti
- * hyväksymiä, eivätkä puhekielisäännöt koske niitä — aiemmin vartioitua
- * loppulyhentymää ei enää ole.
+ * UUSI KULKU (omistaja 7.9.2026, Raamattu KAUPUNGIN KULKU — kavennus
+ * 8.9.2026: *"ota kaikki pulun alustukset pois."*): pinossa on isoisän
+ * luennan JÄLKEEN kommentti kahtena kuplana, eikä alustusta enää ole.
+ * Kommentti alkaa nyt suoraan asiasta ("Hurja juttu…"): sen edestä
+ * poistui toistuva "Kääk.", joka tuli heti luennan aikaisen välihuudon
+ * perään (omistaja 8.9.2026). Tekstit ovat omistajan sanatarkasti
+ * hyväksymiä, eivätkä puhekielisäännöt koske niitä.
  */
-vaadi('Sofiassa pulun alustus ja kommentti tulevat kuplasarjaan',
-  /^Sofia\./.test(sofianKupla.teksti)
-    // Alustus + kaksi kommenttikuplaa: yksi tai kaksi ei riitä.
-    && sofianKupla.kuplia >= 3
-    && /Helteistä, tomu ei laskeudu/.test(sofianKupla.teksti)
-    && /Kääk\. Hurja juttu/.test(sofianKupla.teksti)
+vaadi('Sofiassa pulun kommentti tulee kuplasarjaan luennan jälkeen',
+  /^Hurja juttu/.test(sofianKupla.teksti)
+    // Kaksi kommenttikuplaa; alustusta ei enää ole.
+    && sofianKupla.kuplia >= 2
+    && !/Helteistä, tomu ei laskeudu/.test(sofianKupla.teksti)
+    && !/Kääk\. Hurja juttu/.test(sofianKupla.teksti)
     && /1873/.test(sofianKupla.teksti)
     && /sataviisikymmentä vuotta/.test(sofianKupla.teksti)
     && /Ei se juttua pienennä/.test(sofianKupla.teksti)

@@ -173,8 +173,9 @@ export const FOKUSVIRTA_FIRENZE = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Firenze, toukokuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Firenze, toukokuussa 1873. Lämmintä; joki matalalla.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Tämä kaupunki oli vielä äsken kuningaskunnan pääkaupunki, '
       + 'ja nyt hovi on muuttanut Roomaan ja jättänyt jälkeensä '

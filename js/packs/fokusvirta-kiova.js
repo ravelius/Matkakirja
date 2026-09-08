@@ -181,8 +181,9 @@ export const FOKUSVIRTA_KIOVA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ilman lisäystä. */
-    paikkarivi: 'Kiova, toukokuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Kiova, toukokuussa 1873. Lämmintä; kastanjat kukkivat.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Kaupunki nousee joen törmältä kultaisina kupoleina, ja sen '
       + 'alla on toinen kaupunki: munkit ovat kaivaneet käytäviä maan '
@@ -229,30 +230,31 @@ export const FOKUSVIRTA_KIOVA = {
     /*
      * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
      *
-     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
      * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
      *
-     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
-     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
-     *              lukuajan (js/ui.js aloitaLykattyLuenta).
      *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
      *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
      *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
      *              soi kertojan päälle hiljempaa eikä kertoja väisty.
      *   kommentti  1-2 kuplaa luennan jälkeen.
      *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
      * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    alustus: 'Kiova, toukokuussa 1873. Kaupunki on kahdessa kerroksessa, ja isoisä kävi molemmissa.',
-    huudahdus: {
-      kohta: 'kynttilä kädessä',
-      teksti: 'Pimeää.',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
       'Ne käytävät ovat yhä olemassa, ja niissä kävellään yhä kynttilä kädessä.',
-      'Ja se musta antelias maa ruokkii yhä ison osan maailmaa. Hunajaa myydään toreilla.',
+      'Kultaiset kupolit näkyvät joelle kuten ennenkin.',
+      'Kaupungin alla on nyt toinenkin kerros: yksi maailman syvimmistä metroista.',
+      'Ja se musta maa ruokkii yhä ison osan maailmaa. Hunajaa myydään toreilla samalla tavalla.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/

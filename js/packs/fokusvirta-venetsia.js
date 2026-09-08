@@ -182,8 +182,9 @@ export const FOKUSVIRTA_VENETSIA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Venetsia, kesäkuussa 1873',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Venetsia, kesäkuussa 1873. Kosteaa; laguuni haisee laskuveden aikaan.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Kaupunki, jossa kadut ovat vettä ja portaat päättyvät '
       + 'mereen. Gondolieeri lauloi minulle hinnan päälle, ja torilla '

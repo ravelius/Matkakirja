@@ -258,30 +258,34 @@ export const FOKUSVIRTA_BUKAREST = {
     /*
      * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
      *
-     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
      * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
      *
-     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
-     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
-     *              lukuajan (js/ui.js aloitaLykattyLuenta).
      *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
      *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
      *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
      *              soi kertojan päälle hiljempaa eikä kertoja väisty.
      *   kommentti  1-2 kuplaa luennan jälkeen.
      *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
      * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    alustus: 'Bukarest. Ensimmäinen halla, savu nousee suoraan. Isoisä kiipesi täällä torniin.',
     huudahdus: {
       kohta: 'kaksi maalattua ruotsalaista',
       teksti: 'Maalattua?',
     },
     kommentti: [
-      'Maanjäristys oli pudottanut tornin huipun jo seitsemänkymmentä vuotta aiemmin.',
-      'Hän kiipesi siis tynkään. Ja torni purettiin 1888. Loput on lehdessä.',
+      'Maanjäristys oli pudottanut tornin huipun jo kauan ennen isoisää. Hän kiipesi siis tynkään.',
+      'Torni purettiin myöhemmin kokonaan. Paikalla on nyt sairaala ja kirkko.',
+      'Kaupunkia sanottiin pieneksi Pariisiksi. Bulevardit ovat yhä leveät.',
+      'Ja niiden päässä seisoo yksi maailman suurimmista rakennuksista.',
     ],
     /*
      * Commons 25.8.2026: 2397×3339, public domain, kuvaus "Photo of

@@ -31,7 +31,8 @@ import {
   MERKKI_SOITA, REVEAL_SUB, VIIVA_IKONIT, aarreIkoni, aarrekuvanOsoitteet,
   alkuKehykset, arvoHuudahdus, ekaLause, esilataaKuvat, html, jaaKappaleiksi,
   jaljenKehykset, kierraKehykset, kuvitukseton, lahdemerkinta, liuskaIkoniSvg,
-  maahanMuoto, onVanhaKuva, paikassaMuoto, paikkaaMuoto, pehmeaPolku, piirraLeipateksti,
+  maahanMuoto, matkakirjanOtsikko, onVanhaKuva, paikassaMuoto, paikkaaMuoto, pehmeaPolku,
+  piirraLeipateksti,
   pisteMonikulmiossa, polloNimilappu, polunPituus,
   cachedImage, cachedSummary, fokusmoodiPaalla,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
@@ -132,8 +133,8 @@ import { MINIATYYRIT } from './packs/miniatyyrit.js';
 // kehittäjäkartan vihreä merkintä lukevat kaikki tämän saman taulun.
 import { JULISTEET, JULISTE_LAHDE, kaupunginJuliste } from './packs/julisteet.js';
 import {
-  POLLO_AARRE, polloAnkkuri, polloAuki, polloLisavihje, polloOnnittelu, polloPaivitaNakyvyys,
-  polloSulje, polloVihje, polloVihjePois,
+  POLLO_AARRE, polloAnkkuri, polloAuki, polloKuplatPois, polloLisavihje, polloOnnittelu,
+  polloPaivitaNakyvyys, polloSulje, polloVihje, polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
 import { kuvavinkkiOsio } from './kuvavinkki.js';
@@ -176,7 +177,7 @@ import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
   fokusvirtaLehtivinkki, fokusvirtaSisalto,
-  fokusvirtaAlustus, fokusvirtaAlustusOdottaa, fokusvirtaUusiKulku,
+  fokusvirtaHuudahdus, fokusvirtaUusiKulku,
   fokusvirtaSaapumiskupla, nollaaFokuskuvat, vaiennaLivianKaupunkipuhe,
 } from './fokusvirta.js';
 
@@ -11905,10 +11906,20 @@ export class UI {
    * soimaan — ja kuului seuraavassa kaupungissa sen oman kertojan alla
    * väärää kaupunkia selittäen. Sama kutsu hoitaa nyt molemmat, jotta
    * lähtö ei voi jättää toista puhujaa päälle.
+   *
+   * KUPLAT LÄHTEVÄT MUKANA (omistaja 8.9.2026, sanatarkasti: *"Pulun
+   * puhekuplat pitää tyhjentyä kun tullaan uuteen kaupunkiin"*).
+   * Kuplapino jäi ennen ruudulle, ja uuden kaupungin kuplat kasautuivat
+   * edellisen kaupungin puheiden päälle — pinossa oli siis kahden
+   * kaupungin keskustelu yhtä aikaa. Tyhjennys tehdään täällä eli
+   * LÄHTÖHETKELLÄ, koska juuri tässä kaupunki vaihtuu; pino häipyy
+   * pehmeästi (js/pollo.js poistaKuplat) eikä räpsähdä pois, ja kaikki
+   * sanottu jää chatin historiaan (kirjaaKuplaViestiin).
    */
   vaiennaPaikanPuhe() {
     haivytaLuenta(this);
     vaiennaLivianKaupunkipuhe(this);
+    polloKuplatPois();
   }
 
   /** Jalan: matkustustapa ja nopanheitto samalla painalluksella. */
@@ -12351,20 +12362,64 @@ export class UI {
    * otsikko ja kaupungin nimi — ei päivämäärää, säätä eikä tekstin
    * alkua"*).
    *
-   * Auki kortissa paikkarivi on merkinnän oma kohtausrivi: *"Ateena,
+   * Auki kortissa paikkarivi oli merkinnän koko kohtausrivi: *"Ateena,
    * heinäkuussa 1873. Seesteistä; ilmanpuntari 762 mmHg."* Yhden rivin
    * lapussa se venyi katkeavaksi litaniaksi, josta ei erottunut mitään
    * — ja juuri se lappu on se, jonka pelaaja näkee karttaa liikuttaessa.
+   *
+   * MATKAKIRJAKORTILLA RIVI ON NYT PELKKÄ TUNNELMA (omistaja 8.9.2026):
+   * paikka ja aika nousivat otsikoksi (asetaMatkakirjanOtsikko), ja
+   * lyhyt muoto jää siellä tyhjäksi — otsikossa on jo kaupungin nimi,
+   * eikä lapulle saa tulla samaa nimeä kahdesti. Muut kortin haarat
+   * (aikataulu, havainnot) käyttävät riviä ja lyhyttä muotoa entiseen
+   * tapaan.
    *
    * Lyhyt muoto on oma elementtinsä eikä leikattu teksti: leikkaus
    * kolmella pisteellä olisi jättänyt riville puolikkaan päivämäärän.
    * Ilman erillistä lyhyttä muotoa käytetään pitkää — useimmissa
    * haaroissa se on jo pelkkä kaupungin nimi.
    */
-  asetaPaikkarivi(teksti, lyhyt = null) {
+  asetaPaikkarivi(teksti, lyhyt = null, { tunnelma = false } = {}) {
     const rivi = String(teksti ?? '');
-    if (this.factPlace) this.factPlace.textContent = rivi;
+    if (this.factPlace) {
+      this.factPlace.textContent = rivi;
+      /*
+       * TUNNELMARIVI ON ALAOTSIKKO (omistaja 8.9.2026): matkakirjan
+       * kortilla tämä rivi on sään ja tunnelman virke otsikkona olevan
+       * paikan ja ajan alla, ja se ladotaan kursiivilla ja pienemmällä
+       * (css .fact-place.tunnelma). Muissa haaroissa rivi on entisensä.
+       */
+      this.factPlace.classList.toggle('tunnelma', Boolean(tunnelma));
+    }
     if (this.factPlaceLyhyt) this.factPlaceLyhyt.textContent = String(lyhyt ?? rivi);
+  }
+
+  /**
+   * MATKAKIRJAKORTIN OTSIKKO: PAIKKA JA AIKA, ALLA TUNNELMA.
+   *
+   * Yksi paikka, kaksi elementtiä: otsikoksi merkinnän kohtausrivin
+   * paikka ja aika, sen alle sään ja tunnelman virke (js/ui-apurit.js
+   * matkakirjanOtsikko). Yhden rivin lapussa otsikko riittää yksin —
+   * siinä lukee jo kaupungin nimi, joten lyhyt paikkarivi jää tyhjäksi
+   * eikä kaupunki toistu kahdesti samalla kaistaleella.
+   */
+  asetaMatkakirjanOtsikko(paikkarivi, kaupunki = '') {
+    const { otsikko, tunnelma } = matkakirjanOtsikko(paikkarivi, kaupunki);
+    this.factVoiceEl.textContent = otsikko;
+    this.factVoiceEl.classList.add('paikka-aika');
+    this.asetaPaikkarivi(tunnelma, '', { tunnelma: true });
+  }
+
+  /**
+   * Otsake takaisin entiseen muotoonsa (muut kortin haarat).
+   *
+   * Otsikko on sama elementti kaikilla haaroilla, joten matkakirjan
+   * paikka-aika-tyyli on purettava, kun korttiin kirjoitetaan jotain
+   * muuta — muuten "Isoisän aikataulusta" perisi sen tyylin.
+   */
+  asetaOtsake(teksti) {
+    this.factVoiceEl.textContent = String(teksti ?? '');
+    this.factVoiceEl.classList.remove('paikka-aika');
   }
 
   renderFact() {
@@ -12389,7 +12444,7 @@ export class UI {
       // Piilotuksen lisäksi sisältö tyhjennetään: muuten edellisen pelin
       // teksti voi välähtää ruudulla ennen kuin kortti ehtii piiloon.
       this.uusiFactKey(null);
-      this.factVoiceEl.textContent = '';
+      this.asetaOtsake('');
       this.asetaPaikkarivi('');
       this.factText.textContent = '';
       this.factImage.hidden = true;
@@ -12461,14 +12516,14 @@ export class UI {
         this.factCard.hidden = false;
         if (this.factKey === merkinta.avain) return;
         this.uusiFactKey(merkinta.avain);
-        // Otsikko lyheni v1119:ssä (omistajan pelitestipalaute):
-        // MATKAPÄIVÄKIRJASTA → MATKAPÄIVÄKIRJA. Yhden rivin lapussa
-        // otsikko ja kaupungin nimi ovat vierekkäin, ja partitiivi
-        // teki rivistä pitkän ilman että se kertoi enempää.
-        this.factVoiceEl.textContent = 'Matkapäiväkirja';
-        // Lyhyt muoto on kaupungin nimi: kohtausrivin päivämäärä ja
-        // sää eivät mahdu yhden rivin lappuun (ks. asetaPaikkarivi).
-        this.asetaPaikkarivi(merkinta.paikkarivi, virtaKaupunki.name);
+        /*
+         * OTSIKKONA PAIKKA JA AIKA (omistaja 8.9.2026). Ennen tässä luki
+         * joka kaupungissa sama sana MATKAPÄIVÄKIRJA (v1119: aiemmin
+         * MATKAPÄIVÄKIRJASTA) ja koko kohtausrivi sen alla. Nyt rivi
+         * jaetaan: paikka ja aika otsikoksi, sää ja tunnelma sen alle
+         * (asetaMatkakirjanOtsikko).
+         */
+        this.asetaMatkakirjanOtsikko(merkinta.paikkarivi, virtaKaupunki.name);
         this.factImageTitle = null;
         this.factImage.hidden = true;
         stopDiaryVoice(this);
@@ -12521,16 +12576,6 @@ export class UI {
         } else {
           this.factKuuntele.hidden = true;
         }
-        /*
-         * PULUN ALUSTUS ENNEN ISOISÄN LUENTAA (omistaja 7.9.2026).
-         * Uuden kulun kaupungissa luenta EI ala tässä piirrossa vaan jää
-         * odottamaan alustuskuplaa; lippu on nostettava ENNEN
-         * asetaMerkinnanLuenta-kutsua, koska luenta lähtee juuri siitä.
-         * Kuplasarja päästää sen liikkeelle (js/fokusvirta.js
-         * fokusvirtaSaapumiskupla → aloitaLykattyLuenta) — myös silloin,
-         * kun kupla ei jostain syystä tule.
-         */
-        if (fokusvirtaAlustusOdottaa(this, virtaKaupunki)) this.luennanLykkays = true;
         // Kertoja lukee koko merkinnän tai ei mitään ('lyhyt' poistettu
         // 3.9.2026, ks. js/aani-ehdokkaat.js kertojaTila).
         this.asetaMerkinnanLuenta(virtaAanite ? () => {
@@ -12538,19 +12583,20 @@ export class UI {
           else playDiaryVoice(this, virtaAanite, { viive: 1000 });
         } : null);
         /*
-         * ALUSTUS HETI, EI KIRJOITUSKONEEN LOPUSTA. Lykätty luenta
-         * odottaa alustuskuplaa, ja kirjoituskone kirjoittaa merkinnän
-         * kymmenessä sekunnissa — jos alustus odottaisi sitä, isoisä
-         * alkaisi puhua vasta luetun tekstin päälle. Kommentti tulee yhä
-         * kirjoituskoneen lopusta (fokusvirtaMerkintaLuettu).
+         * ISOISÄ ALOITTAA, PULU HUUTAA VÄLIIN (omistaja 8.9.2026: *"ota
+         * kaikki pulun alustukset pois."*). Luenta lähtee siis heti
+         * ylläolevasta kutsusta, ja välihuudon ajoitus lasketaan sen
+         * kestosta — siksi tämä kutsu on tässä eikä kirjoituskoneen
+         * lopussa. Kommentti tulee yhä kirjoituskoneen lopusta
+         * (fokusvirtaMerkintaLuettu).
          */
-        fokusvirtaAlustus(this, virtaKaupunki);
+        fokusvirtaHuudahdus(this, virtaKaupunki);
         return;
       }
       if (virtaKaupunki && fokusvirtaLukitseeLehden(this, virtaKaupunki)) {
         this.factCard.hidden = true;
         this.uusiFactKey(null);
-        this.factVoiceEl.textContent = '';
+        this.asetaOtsake('');
         this.asetaPaikkarivi('');
         this.factText.textContent = '';
         this.factImage.hidden = true;
@@ -12577,7 +12623,7 @@ export class UI {
       const key = `schedule:${aikataulu.packId}:${aikataulu.day}`;
       if (this.factKey === key) return;
       this.uusiFactKey(key);
-      this.factVoiceEl.textContent = 'Isoisän aikataulusta';
+      this.asetaOtsake('Isoisän aikataulusta');
       this.asetaPaikkarivi(`Päivä ${aikataulu.day}`);
       this.factImage.hidden = true;
       this.factKuuntele.hidden = true;
@@ -12631,8 +12677,26 @@ export class UI {
         const key = luentaAvain + aikatauluLisa;
         if (this.factKey === key) return;
         this.uusiFactKey(key);
-        this.factVoiceEl.textContent = 'Matkakirjasta';
-        this.asetaPaikkarivi(kaupunki.name);
+        /*
+         * EUROOPASSA SAMA OTSIKKO KUIN FOKUSVIRRAN KORTILLA (omistaja
+         * 8.9.2026): *"Nämä voisi muuttaa kaikkiin euroopan
+         * kaupunkeihin."* Näillä kaupungeilla ei ole vielä kirjoitettua
+         * kohtausriviä, joten otsikoksi tulee kaupunki ja matkan vuosi
+         * ("Kreeta, 1873") ilman tunnelmariviä — sää ja tunnelma
+         * kirjoitetaan kaanoniin myöhemmin.
+         *
+         * MITTA ON KAUPUNKI, EI LAUTA: Euroopan kaupungit ovat myös
+         * maailmankartalla (SAAPUMISTEKSTIT.maailmankartta), joten laudan
+         * tunnus kertoisi väärin. Euroopan oma saapumistaulu kertoo
+         * oikein — muiden mantereiden merkinnät pitävät entisen
+         * otsakkeensa.
+         */
+        if (Object.hasOwn(SAAPUMISTEKSTIT.europe ?? {}, saapuminen.cityId)) {
+          this.asetaMatkakirjanOtsikko(kaupunki.name, kaupunki.name);
+        } else {
+          this.asetaOtsake('Matkakirjasta');
+          this.asetaPaikkarivi(kaupunki.name);
+        }
         this.factImageTitle = null;
         this.factImage.hidden = true;
         this.naytaFactValokuva(saapuminen.cityId, kaupunki.name);
@@ -12742,7 +12806,7 @@ export class UI {
         const key = luentaAvain + aikatauluLisa;
         if (this.factKey === key) return;
         this.uusiFactKey(key);
-        this.factVoiceEl.textContent = voiceTitle(factVoice(fakta));
+        this.asetaOtsake(voiceTitle(factVoice(fakta)));
         this.asetaPaikkarivi(kaupunki.name);
         this.factImageTitle = typeof fakta === 'string' ? null : fakta.wiki ?? null;
         this.factImage.hidden = !this.factImageTitle;
@@ -12835,7 +12899,7 @@ export class UI {
 
     // Otsikko kertoo kumpi ääni puhuu, alarivi paikan.
     const onRoute = player.pos.type === 'edge';
-    this.factVoiceEl.textContent = voiceTitle(factVoice(fact));
+    this.asetaOtsake(voiceTitle(factVoice(fact)));
     this.asetaPaikkarivi(onRoute ? `Matkalla — ${city.name}` : city.name, city.name);
     // Havaintoon voi liittyä kuva: pieni linkki avaa ilmiön Wikipedia-kuvan.
     this.factImageTitle = typeof fact === 'string' ? null : fact.wiki ?? null;
