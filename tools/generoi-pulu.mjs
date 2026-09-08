@@ -361,7 +361,6 @@ export const TAGIT = {
   'budapest-2': { alku: '[squawks]' },
   'budapest-3': { alku: '[brightly]' },
   'wien-3': { alku: '[brightly]' },
-  'praha-2': { alku: '[squawks]' },
   'praha-3': { alku: '[brightly]' },
   'krakova-2': { alku: '[squawks]' },
   'krakova-3': { alku: '[brightly]' },

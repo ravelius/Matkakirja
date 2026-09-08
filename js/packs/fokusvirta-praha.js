@@ -127,17 +127,21 @@ export const FOKUSVIRTA_PRAHA = {
     paikkarivi: 'Praha, lokakuussa 1873. Kirkasta; yön aikana '
       + 'ensimmäinen halla.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Prahassa on kello, joka näyttää auringon ja kuun paikan '
-      + 'mutta ei kiirettä. Myöhästyin sen takia ajurin kyydistä enkä '
-      + 'kadu. Tässä kaupungissa keisari keräsi aikoinaan kaiken '
-      + 'maailman ihmeet yhteen saliin — ja sali on yhä olemassa, vaikka '
-      + 'ihmeet ovat hajallaan.',
-    luenta: '[curious] Prahassa on kello, joka näyttää auringon ja kuun '
-      + 'paikan mutta ei kiirettä. [laughs] Myöhästyin sen takia '
-      + 'ajurin kyydistä enkä kadu. [softly] Tässä kaupungissa keisari '
-      + 'keräsi aikoinaan kaiken maailman ihmeet yhteen saliin — '
-      + '[whispers] ja sali on yhä olemassa, vaikka ihmeet ovat '
-      + 'hajallaan.',
+    /* KAANON UUSIKSI (Fable, omistaja hyväksyi 8.9.2026 ilta): keisarin
+       kokoelma nimettynä, loppu selkeä. 383 merkkiä (yläraja 400). */
+    teksti: 'Prahassa on kello, joka näyttää auringon ja kuun paikan mutta ei '
+      + 'kiirettä. Jäin katsomaan sen kulkua ja myöhästyin ajurin kyydistä, '
+      + 'enkä kadu. Linnan mäellä opas kertoi keisarista, joka keräsi '
+      + 'saliinsa kaiken maailman ihmeet: sarvikuonon sarven, kellokoneita ja '
+      + 'tähtitieteilijän mittalaitteet. Sali on yhä olemassa, mutta ihmeet '
+      + 'vietiin sodissa pitkin Eurooppaa.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Prahassa on kello, joka näyttää auringon ja kuun paikan '
+      + 'mutta ei kiirettä. Jäin katsomaan sen kulkua ja myöhästyin ajurin '
+      + 'kyydistä, enkä kadu. [warmly] Linnan mäellä opas kertoi keisarista, '
+      + 'joka keräsi saliinsa kaiken maailman ihmeet: sarvikuonon sarven, '
+      + 'kellokoneita ja tähtitieteilijän mittalaitteet. [softly] Sali on yhä '
+      + 'olemassa, mutta ihmeet vietiin sodissa pitkin Eurooppaa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-praha.mp3',
   },
 
@@ -187,10 +191,7 @@ export const FOKUSVIRTA_PRAHA = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'enkä kadu',
-      teksti: 'Samat sanat.',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: ei tuo lisähyötyä).
     kommentti: [
       'Kello käy yhä torin laidalla. Joka tasatunti sen edessä seisoo väkijoukko puhelimet pystyssä.',
     ],
