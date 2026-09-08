@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1702, teksti: 'Sofia uuteen kulkuun; Ateenan saapumiskupla palautettu' },
   { v: 1701, teksti: 'Musiikki hiljemmalle ja säätimeen; 6 pakkia; yksi kupla' },
   { v: 1700, teksti: 'Ihmisen matkan avaus pimeästä avaruudesta Afrikkaan' },
   { v: 1699, teksti: 'Ihmisen matkan uusi tarina ja yhtenäinen luenta' },

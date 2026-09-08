@@ -571,17 +571,20 @@ export function fokusvirtaMerkintaLuettu(ui, city) {
  * saapumisrepliikki ovat sama puheenvuoro eri sisällöllä, ja muisti
  * (ui.saapumiskuplaNaytetty) on niille yhteinen.
  *
- * ATEENA VAIKENEE YHÄ. Aloituskaupungin saapumissekvenssillä on jo
- * kaksi ohjekuplaa ("Tervetuloa Kreikkaan…" ja "Klikkaa kaupungin
- * kultaista merkkiä", js/ui.js saapumisenKuplat), ja ne opettavat
- * pelin — kolmas kupla veisi tilaa juuri siltä ohjeelta, jota pelaaja
- * siinä hetkessä eniten tarvitsee. Sama kuplaperhe kun on kyseessä,
- * kolmas kupla myös KORVAISI ohjeen ruudulla. Ateenan maadoitusteksti
- * jää odottamaan fokusvirran kytkintä eikä sitä poisteta.
+ * ATEENAN VAIENNUS PURETTU (omistaja 8.9.2026: "ateena on ainut
+ * kaupunki jossa on saapumiskupla eli sen voi palauttaa"). Ateena
+ * vaikeni 28.8.–8.9.2026 aloituskaupungin kahden ohjekuplan tieltä
+ * ("Tervetuloa Kreikkaan…", "Klikkaa kaupungin kultaista merkkiä",
+ * js/ui.js saapumisenKuplat). Kun Ateena siirtyi 8.9.2026 samaan
+ * kulkuun kuin muut kaupungit (yksi kommenttikupla luennan jälkeen,
+ * js/packs/fokusvirta-ateena.js), kupla palautettiin: se tulee vasta
+ * isoisän luennan päätyttyä, ei ohjekuplien päälle. Joukko on jätetty
+ * paikoilleen tyhjänä, jotta vaiennus on yksi rivi, jos sitä joskus
+ * taas tarvitaan.
  */
 
-/** Kaupungit, joissa saapumiskupla vaikenee (ks. yllä). */
-const SAAPUMISKUPLA_VAITI = new Set(['ateena']);
+/** Kaupungit, joissa saapumiskupla vaikenee (ks. yllä). Nyt tyhjä. */
+const SAAPUMISKUPLA_VAITI = new Set();
 
 /*
  * ------------------------------------------------------------------

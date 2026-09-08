@@ -431,7 +431,7 @@ export const FOKUSVIRTA_SOFIA = {
      * uudestaan. Kupla näkyy ja etenee kuten ennen.
      */
     kommentti: [
-      'Hänen patsaansa seisoo nyt hirsipuun paikalla. Ja kuumista lähteistä haetaan yhä vettä.',
+      'Valtakunta, joka hänet hirtti, lähti pian. Nyt hän on koko maan sankari, ja lähde höyryää yhä.',
     ],
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,
