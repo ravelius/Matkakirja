@@ -174,11 +174,13 @@ export const FOKUSVIRTA_ROOMA = {
   matkakirja: {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät.',
-    teksti: 'Koko kaupunki puhuu miehestä, joka ei suostu tulemaan '
-      + 'ulos: paavi ei ole kolmeen vuoteen ylittänyt Vatikaanin '
-      + 'muuria. Kadulla sanotaan, että hän katselee Roomaansa vain '
-      + 'ikkunoista. Seisoin muurin alla ja mietin, kumpi meistä on '
-      + 'vanki.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 400 merkkiä (yläraja 400). */
+    teksti: 'Koko kaupunki puhuu miehestä, joka ei suostu tulemaan ulos: paavi '
+      + 'ei ole kolmeen vuoteen ylittänyt Vatikaanin muuria, ja kuningas asuu '
+      + 'hänen vanhassa palatsissaan kukkulalla. Kadulla sanotaan, että paavi '
+      + 'katselee Roomaansa vain ikkunoista. Forumilla lehmät laidunsivat '
+      + 'pylväiden välissä, ja kaivajat kantoivat pois maata keisarien katujen '
+      + 'päältä. Seisoin muurin alla ja mietin, kumpi meistä on vanki.',
     /*
      * Luenta ja äänite: kaanon, kohta 1. Teksti on sama kuin yllä —
      * vain tunnetagit on lisätty, samoin kuin Ateenassa ja Sofiassa.
@@ -191,11 +193,14 @@ export const FOKUSVIRTA_ROOMA = {
      * eikä mikään muu hajoa (js/fokusvirta.js lukee kentän vain
      * kytkintä varten).
      */
-    luenta: '[curious] Koko kaupunki puhuu miehestä, joka ei suostu '
-      + 'tulemaan ulos: paavi ei ole kolmeen vuoteen ylittänyt '
-      + 'Vatikaanin muuria. [whispers] Kadulla sanotaan, että hän '
-      + 'katselee Roomaansa vain ikkunoista. [softly] Seisoin muurin '
-      + 'alla ja mietin, kumpi meistä on vanki.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Koko kaupunki puhuu miehestä, joka ei suostu tulemaan '
+      + 'ulos: paavi ei ole kolmeen vuoteen ylittänyt Vatikaanin muuria, ja '
+      + 'kuningas asuu hänen vanhassa palatsissaan kukkulalla. Kadulla '
+      + 'sanotaan, että paavi katselee Roomaansa vain ikkunoista. Forumilla '
+      + 'lehmät laidunsivat pylväiden välissä, ja kaivajat kantoivat pois '
+      + 'maata keisarien katujen päältä. [softly] Seisoin muurin alla ja '
+      + 'mietin, kumpi meistä on vanki.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-rooma.mp3',
     /*
      * KUVA: kaanonin ensisijainen valinta — Ludovico Tuminellon
@@ -220,30 +225,10 @@ export const FOKUSVIRTA_ROOMA = {
    * kaanonin oma korvaava muoto, ks. tiedoston alku, rajaus 2.
    */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
-     *
-     * Rooman merkintä päättyy koko kuuden kaupungin ylevimpään
-     * lauseeseen ("mietin, kumpi meistä on vanki"), joten maadoitus on
-     * täällä suorin: nuori matkaaja tekee itsestään vertaisen paaville
-     * seisomalla sateessa muurin alla. Livia purkaa vertauksen — ja
-     * vain vertauksen.
-     *
-     * FAKTAKURI: paavin vetäytymiseen, vuoteen 1929 tai muurin
-     * tapahtumiin ei kosketa; ne ovat seuraavassa kappaleessa ja
-     * täyissä. Muurin sisäpuolen elämä on Livian omaa postiperimätietoa
-     * ("meikäläisillä on siitä muistiinpanoja") eikä nimeä yhtäkään
-     * laitosta, vuosilukua tai postijärjestelmää — kaanonin sääntö 2
-     * on tässä nimenomaan siksi, ettei Vatikaanin postista väitetä
-     * mitään tarkistamatonta.
-     */
-    maadoitus: '"Kumpi meistä on vanki." Kaunis kysymys, ja siihen on tylsä '
-      + 'vastaus: ei kumpikaan. Isoisäsi käveli muurin alta pois heti kun '
-      + 'sade yltyi. Ja muurin sisäpuolella oli puutarha, palvelusväkeä ja '
-      + 'posti, joka kulki portista niin kuin ennenkin — meikäläisillä on '
-      + 'siitä muistiinpanoja, koska sitäkin postia kannettiin. Sellanen '
-      + 'vankeus, jonka voi itse valita ja jonka ohi kulkee kirjeposti, on '
-      + 'kyl vähän eri sana kun vankeus.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Paavi tulee nyt ulos, ja Vatikaani on oma valtionsa. Forumilla ei laidunneta, mutta kaivetaan.',
+    ],
     teksti: 'Muurin sisällä pysyttiin viisikymmentäyhdeksän vuotta — vasta '
       + '1929 paavi astui taas Rooman puolelle. Ikkunat on yhä ihan '
       + 'samat.',

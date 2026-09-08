@@ -106,11 +106,13 @@ export const FOKUSVIRTA_BERLIINI = {
      */
     paikkarivi: 'Berliini, syyskuussa 1873. Pilvistä; laastin ja '
       + 'kivipölyn haju.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Berliini on nuoren keisarikunnan työmaa: joka kadulla '
-      + 'lyödään perustuksia ja puhutaan rahasta. Vanha kirjastonhoitaja '
-      + 'luki minulle Nibelungein laulua ja sanoi: aarre on Reinissä, '
-      + 'herra, mutta Rein ei kerro missä.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 392 merkkiä (yläraja 400). */
+    teksti: 'Nuoren keisarikunnan työmaa: joka kadulla lyödään perustuksia ja '
+      + 'puhutaan rahasta. Puistoon pystytettiin juuri voitonpatsas, jonka '
+      + 'pylväässä on ranskalaisilta otettuja tykinputkia. Wienin pörssin '
+      + 'romahdus on tullut tänne perässä, ja rakennusmestarit puhuvat '
+      + 'hiljempaa kuin keväällä. Kirjastonhoitaja luki minulle Nibelungein '
+      + 'laulua ja sanoi, että aarre on Reinissä, mutta Rein ei kerro missä.',
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -119,36 +121,23 @@ export const FOKUSVIRTA_BERLIINI = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
-    luenta: '[curious] Berliini on nuoren keisarikunnan työmaa: joka '
-      + 'kadulla lyödään perustuksia ja puhutaan rahasta. [softly] '
-      + 'Vanha kirjastonhoitaja luki minulle Nibelungein laulua ja '
-      + 'sanoi: [whispers] aarre on Reinissä, herra, mutta Rein ei '
-      + 'kerro missä.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Nuoren keisarikunnan työmaa: joka kadulla lyödään '
+      + 'perustuksia ja puhutaan rahasta. Puistoon pystytettiin juuri '
+      + 'voitonpatsas, jonka pylväässä on ranskalaisilta otettuja tykinputkia. '
+      + 'Wienin pörssin romahdus on tullut tänne perässä, ja rakennusmestarit '
+      + 'puhuvat hiljempaa kuin keväällä. [softly] Kirjastonhoitaja luki '
+      + 'minulle Nibelungein laulua ja sanoi, että aarre on Reinissä, mutta '
+      + 'Rein ei kerro missä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-berliini.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS — VÄLITTÄJÄOTE. Yksi kupla per saapuminen.
-     *
-     * FAKTAKURI: kaksi väitettä, molemmat tarkistettavia.
-     * (1) Wienin toukokuinen romahdus levisi Berliiniin
-     * (docs/mantereet-tyoaineisto/takynostot-itavalta.md, ehdokas 1;
-     * sama tapaus on takyt-berliini.md:n täkynä 2).
-     * (2) Viemärien pääputkien rakentaminen alkoi 1873 ja viimeinen
-     * valmistui 1893 (takyt-berliini.md, täky 5).
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
-     * keskellä sanat auki — kaivettiin, kaksikymmentä, kirjastonhoitaja.
-     */
-    maadoitus: 'Kääk. Isoisäsi kuuli puhuttavan rahasta, ja siinä hän '
-      + 'oli oikeaan aikaan: raha oli kaatunut keväällä Wienissä ja '
-      + 'romahdus tuli Berliiniin perässä. Silti kaupunki kaivoi. '
-      + 'Viemärien pääputkia alettiin rakentaa juuri sinä vuonna, ja '
-      + 'viimeinen niistä valmistui vasta kahdenkymmenen vuoden '
-      + 'päästä. Siitä aarteesta minä en tiedä mitään. Mut se joki on '
-      + 'kyllä yhä siellä.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Voitonpatsas siirrettiin keskelle puistoa. Kaupunki jaettiin muurilla kahtia; sauma näkyy yhä.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen (valtiopäivätalo). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/

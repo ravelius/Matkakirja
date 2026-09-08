@@ -185,21 +185,26 @@ export const FOKUSVIRTA_ISTANBUL = {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Konstantinopoli, syyskuussa 1873. Sumua salmella; '
       + 'sarvet soivat.',
-    teksti: 'Hippodromin laidalla seisoo pronssipylväs, jollaisen näin '
-      + 'piirroksissa Delfoissa — keisari siirsi sen tänne puolitoista '
-      + 'vuosituhatta sitten. Kolmen käärmeen päät ovat poissa. Vartija '
-      + 'kohautti olkiaan: kaupunki ottaa mitä haluaa, ja pitää minkä '
-      + 'ottaa.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 379 merkkiä (yläraja 400). */
+    teksti: 'Hippodromin laidalla seisoo pronssipylväs, jonka näin '
+      + 'piirroksissa Delfoista. Keisari toi sen tänne puolitoista '
+      + 'vuosituhatta sitten, ja kolmen käärmeen päät ovat poissa. Vartija '
+      + 'kohautti olkiaan: kaupunki ottaa mitä haluaa ja pitää minkä ottaa. '
+      + 'Galatan mäkeen porataan tunnelia, jotta kauppiaiden ei tarvitsisi '
+      + 'kiivetä. Söin illalla kalaa, joka oli aamulla vielä Mustassameressä.',
     /*
      * Luenta on kaanonin oma (kohta 1), tunnetageineen. Äänite on
      * generoitu samalla reseptillä kuin Ateenalle
      * (tools/generoi-luennat.mjs), ja kaanon nimeää tiedoston.
      */
-    luenta: '[curious] Hippodromin laidalla seisoo pronssipylväs, '
-      + 'jollaisen näin piirroksissa Delfoissa — keisari siirsi sen tänne '
-      + 'puolitoista vuosituhatta sitten. [whispers] Kolmen käärmeen päät '
-      + 'ovat poissa. [softly] Vartija kohautti olkiaan: kaupunki ottaa '
-      + 'mitä haluaa, ja pitää minkä ottaa.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Hippodromin laidalla seisoo pronssipylväs, jonka näin '
+      + 'piirroksissa Delfoista. Keisari toi sen tänne puolitoista '
+      + 'vuosituhatta sitten, ja kolmen käärmeen päät ovat poissa. Vartija '
+      + 'kohautti olkiaan: kaupunki ottaa mitä haluaa ja pitää minkä ottaa. '
+      + 'Galatan mäkeen porataan tunnelia, jotta kauppiaiden ei tarvitsisi '
+      + 'kiivetä. [softly] Söin illalla kalaa, joka oli aamulla vielä '
+      + 'Mustassameressä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-istanbul.mp3',
     /*
      * AIKALAISPIIRROS, HAETTU JA VARMENNETTU ERIKSEEN (ks. tiedoston
@@ -314,7 +319,7 @@ export const FOKUSVIRTA_ISTANBUL = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
-      'Pylväs seisoo yhä samassa paikassa. Nyt sen ohi kulkee raitiovaunu ja miljoonia turisteja.',
+      'Pylväs seisoo yhä samassa paikassa. Tunneli valmistui, ja pieni juna kulkee mäen sisällä yhä.',
     ],
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):

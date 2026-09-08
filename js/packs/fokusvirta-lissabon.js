@@ -148,50 +148,35 @@ export const FOKUSVIRTA_LISSABON = {
      * ei muotoilla uusiksi.
      */
     paikkarivi: 'Lissabon, lokakuussa 1873. Tuulista; Tejolla valkoisia harjoja.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Tämä kaupunki tuntee maan vihan: sata vuotta sitten se kaatui '
-      + 'järistykseen, paloi ja hukkui samana aamuna, ja rakennettiin '
-      + 'uusiksi suoriin kortteleihin kuin ruutupaperille. Belémin torni '
-      + 'seisoo joessa kuin norsunluinen shakkinappula. Räätälin ikkunassa '
-      + 'näin kaakeleita, sinivalkoisia, joilla täällä verhotaan kokonaiset '
-      + 'talonseinät — köyhän miehen freskot, sanoi isäntäni, mutta minusta '
-      + 'ne ovat kauniimpia kuin moni palatsi.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 387 merkkiä (yläraja 400). */
+    teksti: 'Yli sata vuotta sitten tämä kaupunki kaatui järistykseen, paloi '
+      + 'ja hukkui samana aamuna. Se rakennettiin uusiksi suoriin kortteleihin '
+      + 'kuin ruutupaperille. Belémin torni seisoo joessa kuin norsunluinen '
+      + 'shakkinappula. Talojen seinät on verhottu sinivalkoisiin kaakeleihin. '
+      + 'Köyhän miehen freskoja, sanoi isäntäni. Torilla naiset kantavat '
+      + 'kalakoreja päänsä päällä ja huutavat hinnat laulaen.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain tunnetagit lisätty
      * (docs/moduulit/tarinakaari.md, luku 7). Neljä tagia, alku ja loppu
      * eri sävyssä.
      */
-    luenta: '[curious] Tämä kaupunki tuntee maan vihan: sata vuotta sitten '
-      + 'se kaatui järistykseen, paloi ja hukkui samana aamuna, ja '
-      + 'rakennettiin uusiksi suoriin kortteleihin kuin ruutupaperille. '
-      + '[softly] Belémin torni seisoo joessa kuin norsunluinen '
-      + 'shakkinappula. [curious] Räätälin ikkunassa näin kaakeleita, '
-      + 'sinivalkoisia, joilla täällä verhotaan kokonaiset talonseinät — '
-      + 'köyhän miehen freskot, sanoi isäntäni, [warmly] mutta minusta ne '
-      + 'ovat kauniimpia kuin moni palatsi.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Yli sata vuotta sitten tämä kaupunki kaatui '
+      + 'järistykseen, paloi ja hukkui samana aamuna. Se rakennettiin uusiksi '
+      + 'suoriin kortteleihin kuin ruutupaperille. Belémin torni seisoo joessa '
+      + 'kuin norsunluinen shakkinappula. Talojen seinät on verhottu '
+      + 'sinivalkoisiin kaakeleihin. Köyhän miehen freskoja, sanoi isäntäni. '
+      + '[softly] Torilla naiset kantavat kalakoreja päänsä päällä ja huutavat '
+      + 'hinnat laulaen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lissabon.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
-     *
-     * Livian puheenvuoro on kortilla kahdessa kentässä: `maadoitus`
-     * vastaa isoisän merkintään ja piirtyy kuplan ensimmäiseksi
-     * kappaleeksi, `teksti` jatkaa siitä ja kääntää katseen herokuvaan
-     * (js/fokusvirta.js piirraPollo). Fablen kaanonteksti tekee
-     * molemmat yhtenä puheenvuorona, ja tests/fokusvirta.test.mjs
-     * vaatii jokaiselta fokuskaupungilta oman maadoituksen, joten
-     * teksti on integroinnissa jaettu VIRKKEEN RAJAA pitkin
-     * (Edinburghin kaava): ensimmäinen virke on merkinnän kaakelit,
-     * loput järistys ja "Torni odottaa joessa" eli herokuvan osoitus.
-     * Yhtäkään sanaa, välimerkkiä tai järjestystä ei ole muutettu —
-     * peräkkäin luettuna teksti on sanasta sanaan kaanonteksti.
-     */
-    maadoitus: 'Lissabonissa ne kaakelit ovat edelleen joka seinällä, ja '
-      + 'niitä varastetaan nykyään seiniltä niin että osa kaduista on '
-      + 'aidattu..',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Kaakelit ovat yhä seinissä, ja niitä myydään muistoksi. Joki on vetäytynyt tornin ympäriltä.',
+    ],
     teksti: 'Se järistys, josta isoisäsi kirjoitti, muutti muuten koko '
       + 'Euroopan ajattelua — sen jälkeen alettiin ensimmäistä kertaa '
       + 'tutkia, miksi maa järisee, eikä vain ketä sillä rangaistiin. '

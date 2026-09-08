@@ -138,27 +138,26 @@ export const FOKUSVIRTA_RIIKA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Riika, heinäkuussa 1873. Lämmintä; joella pellavan haju.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Väinäjoen rannassa lastataan pellavaa ja lankkuja niin '
-      + 'pitkälle kuin silmä kantaa — tämä on keisarikunnan kolmas satama, '
-      + 'vaikka kaupunki puhuu saksaa, käy kauppaa kuin hansa ja rukoilee '
-      + 'kuin luterilainen. Apteekkari kaatoi minulle ryypyn mustaa juomaa, '
-      + 'joka maistui tervalta, yrteiltä ja erehdykseltä. Hän vannoi sen '
-      + 'parantavan kaiken. Kirjoitan tämän varmuuden vuoksi ylös, jos se '
-      + 'paikkansa pitää.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 395 merkkiä (yläraja 400). */
+    teksti: 'Väinäjoen rannassa lastataan pellavaa ja lankkuja niin pitkälle '
+      + 'kuin silmä kantaa. Tämä on keisarikunnan kolmas satama, vaikka '
+      + 'kaupunki puhuu saksaa, käy kauppaa kuin hansa ja rukoilee kuin '
+      + 'luterilainen. Apteekkari kaatoi minulle ryypyn mustaa juomaa, joka '
+      + 'maistui tervalta, yrteiltä ja erehdykseltä. Hän vannoi sen parantavan '
+      + 'kaiken. Kirjoitan tämän ylös siltä varalta, että se pitää paikkansa.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    luenta: '[curious] Väinäjoen rannassa lastataan pellavaa ja lankkuja '
-      + 'niin pitkälle kuin silmä kantaa — tämä on keisarikunnan kolmas '
-      + 'satama, vaikka kaupunki puhuu saksaa, käy kauppaa kuin hansa ja '
-      + 'rukoilee kuin luterilainen. [excited] Apteekkari kaatoi minulle '
-      + 'ryypyn mustaa juomaa, joka maistui tervalta, yrteiltä ja '
-      + 'erehdykseltä. [softly] Hän vannoi sen parantavan kaiken. '
-      + '[whispers] Kirjoitan tämän varmuuden vuoksi ylös, jos se '
-      + 'paikkansa pitää.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Väinäjoen rannassa lastataan pellavaa ja lankkuja niin '
+      + 'pitkälle kuin silmä kantaa. Tämä on keisarikunnan kolmas satama, '
+      + 'vaikka kaupunki puhuu saksaa, käy kauppaa kuin hansa ja rukoilee kuin '
+      + 'luterilainen. Apteekkari kaatoi minulle ryypyn mustaa juomaa, joka '
+      + 'maistui tervalta, yrteiltä ja erehdykseltä. Hän vannoi sen parantavan '
+      + 'kaiken. [softly] Kirjoitan tämän ylös siltä varalta, että se pitää '
+      + 'paikkansa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-riika.mp3',
   },
 
@@ -200,10 +199,7 @@ export const FOKUSVIRTA_RIIKA = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'ja erehdykseltä',
-      teksti: 'Kääk.',
-    },
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     kommentti: [
       'Sitä mustaa juomaa myydään yhä savipulloissa. Paikalliset vannovat, turistit katuvat.',
     ],

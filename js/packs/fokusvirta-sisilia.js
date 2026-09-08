@@ -25,23 +25,22 @@ export const FOKUSVIRTA_SISILIA = {
   matkakirja: {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Palermo, toukokuussa 1873. Kuumaa; Etna savuaa horisontissa.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Torilla kala myydään laulaen, ja kauppias suuttui, kun en '
-      + 'osannut laulaa vastaan. Tähän saareen ovat tulleet kreikkalaiset, '
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 378 merkkiä (yläraja 400). */
+    teksti: 'Torilla kala myydään laulaen, ja kauppias suuttui, kun en osannut '
+      + 'laulaa vastaan. Tähän saareen ovat tulleet kreikkalaiset, '
       + 'roomalaiset, arabit, normannit ja espanjalaiset, ja jokainen on '
       + 'jättänyt jotain lautaselle. Sisilia on ollut kaikkien maa eikä '
       + 'kenenkään. Siksi sen keittiö on paras Välimerellä. Sitruunatarhat '
-      + 'kasvavat mustassa laavamullassa, ja vuori savuaa niiden yllä kuin '
-      + 'ei olisi vielä päättänyt.',
+      + 'kasvavat mustassa laavamullassa, ja vuori savuaa niiden yllä.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
-    luenta: '[curious] Torilla kala myydään laulaen, ja kauppias suuttui, '
-      + 'kun en osannut laulaa vastaan. Tähän saareen ovat tulleet '
-      + 'kreikkalaiset, roomalaiset, arabit, normannit ja espanjalaiset, ja '
-      + 'jokainen on jättänyt jotain lautaselle. [warmly] Sisilia on ollut '
-      + 'kaikkien maa eikä kenenkään. Siksi sen keittiö on paras '
-      + 'Välimerellä. [softly] Sitruunatarhat kasvavat mustassa '
-      + 'laavamullassa, ja vuori savuaa niiden yllä kuin ei olisi vielä '
-      + 'päättänyt.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Torilla kala myydään laulaen, ja kauppias suuttui, kun '
+      + 'en osannut laulaa vastaan. Tähän saareen ovat tulleet kreikkalaiset, '
+      + 'roomalaiset, arabit, normannit ja espanjalaiset, ja jokainen on '
+      + 'jättänyt jotain lautaselle. Sisilia on ollut kaikkien maa eikä '
+      + 'kenenkään. Siksi sen keittiö on paras Välimerellä. [softly] '
+      + 'Sitruunatarhat kasvavat mustassa laavamullassa, ja vuori savuaa '
+      + 'niiden yllä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sisilia.mp3',
   },
 

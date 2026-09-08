@@ -93,11 +93,13 @@ export const FOKUSVIRTA_PARIISI = {
      */
     paikkarivi: 'Pariisi, lokakuussa 1873. Sateen jälkeen kirkasta; '
       + 'kastanjat pudonneet.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Pariisi paikkaa vielä haavojaan: Tuileriat ovat mustana '
-      + 'raunioina, mutta bulevardeilla nauretaan jo. Tämä kaupunki '
-      + 'nousee aina. Louvren vartija vannoi, että kruununjalokivet '
-      + 'ovat tallessa — hänen äänensä sanoi muuta.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 394 merkkiä (yläraja 400). */
+    teksti: 'Tuileriat ovat yhä mustana raunioina, mutta bulevardeilla '
+      + 'nauretaan jo, ja kahvilat ovat täynnä. Uutta oopperataloa rakennetaan '
+      + 'niin koristeelliseksi, ettei sitä kai koskaan saada valmiiksi. '
+      + 'Montmartren kukkulalle aiotaan kirkko sovitukseksi sodasta, ja siitä '
+      + 'kiistellään joka pöydässä. Söin sipulikeittoa hallien laidalla kello '
+      + 'viisi aamulla kuormamiesten seassa. Kukaan ei kysynyt, kuka olen.',
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -106,37 +108,23 @@ export const FOKUSVIRTA_PARIISI = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
-    luenta: '[curious] Pariisi paikkaa vielä haavojaan: Tuileriat ovat '
-      + 'mustana raunioina, mutta bulevardeilla nauretaan jo. [warmly] '
-      + 'Tämä kaupunki nousee aina. [whispers] Louvren vartija vannoi, '
-      + 'että kruununjalokivet ovat tallessa — [softly] hänen äänensä '
-      + 'sanoi muuta.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Tuileriat ovat yhä mustana raunioina, mutta '
+      + 'bulevardeilla nauretaan jo, ja kahvilat ovat täynnä. Uutta '
+      + 'oopperataloa rakennetaan niin koristeelliseksi, ettei sitä kai '
+      + 'koskaan saada valmiiksi. Montmartren kukkulalle aiotaan kirkko '
+      + 'sovitukseksi sodasta, ja siitä kiistellään joka pöydässä. Söin '
+      + 'sipulikeittoa hallien laidalla kello viisi aamulla kuormamiesten '
+      + 'seassa. [softly] Kukaan ei kysynyt, kuka olen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS — MYÖNNYTYS (Raamattu, TUURAAJA-KEHYS: kaanon
-     * vaatii vähintään yhden kaupungin, jossa isoisä osoittautuu
-     * oikeaksi eikä Livia kutista sitä). Pariisi on toinen sellainen
-     * Ateenan rinnalle, ja syy on merkinnässä itsessään: *"Tämä
-     * kaupunki nousee aina"* on ennuste, jonka historia lunasti.
-     *
-     * FAKTAKURI: kaksi väitettä, molemmat tarkistettavia ja pelin omaa
-     * aineistoa. (1) Eiffel-torni rakennettiin vuoden 1889
-     * maailmannäyttelyyn, siis kuusitoista vuotta merkinnän jälkeen.
-     * (2) Se oli maailman korkein rakennelma neljän vuosikymmenen ajan
-     * (js/packs/kulttuuri-kategoriat.js, pariisin avauskuvan selite).
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla, keskellä sanat auki.
-     */
-    maadoitus: 'Kääk. Nyt minä myönnän jotain, ja tämä sattuu: hän oli '
-      + 'oikeassa. Kaupungin keskellä seisoi poltettu palatsi, ja hän '
-      + 'kirjoitti silti, että tämä paikka nousee aina. Kuusitoista '
-      + 'vuotta myöhemmin samaan kaupunkiin nousi maailman korkein '
-      + 'rakennelma, ja se pysyi korkeimpana neljäkymmentä vuotta. Mut '
-      + 'älä kerro hänelle, että sanoin näin.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Ooppera valmistui, ja kukkulan kirkko on valkoinen. Raunioiden paikalla on nyt puutarha.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Eiffel-torni). Faktat:
      * torni rakennettiin vuoden 1889 maailmannäyttelyyn väliaikaiseksi

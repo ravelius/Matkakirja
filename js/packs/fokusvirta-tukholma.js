@@ -285,49 +285,32 @@ export const FOKUSVIRTA_TUKHOLMA = {
      * Oscar II kruunattiin Storkyrkanissa 12. toukokuuta 1873 (sv-Wikipedia
      * "Oscar II av Sverige", osio Kröningen; ks. oppitunti).
      */
-    paikkarivi: 'Tukholma, toukokuussa 1873. Liputus joka ikkunassa ja '
-      + 'tungos, jossa taskuun ylettyy kuka tahansa.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Osuin Tukholmaan keskelle kruunajaisia: Oscar II sai kruununsa, '
-      + 'ja tungos vei minulta kaksi nappia ja sivun neljätoista. Sivulla oli '
-      + 'puolikas kartta. Kirjoitan tämän muistiin siltä varalta, että joku '
-      + 'vielä kysyy.',
-    luenta: '[curious] Osuin Tukholmaan keskelle kruunajaisia: Oscar II sai '
-      + 'kruununsa, ja tungos vei minulta kaksi nappia ja sivun neljätoista. '
-      + '[softly] Sivulla oli puolikas kartta. [whispers] Kirjoitan tämän '
-      + 'muistiin siltä varalta, että joku vielä kysyy.',
+    paikkarivi: 'Tukholma, toukokuussa 1873. Liputus joka ikkunassa; kaduilla '
+      + 'tungos.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 394 merkkiä (yläraja 400). */
+    teksti: 'Osuin keskelle kruunajaisia. Oscar sai kruununsa kirkossa, ja '
+      + 'tungos vei minulta kaksi nappia ja tästä kirjasta sivun, jolla oli '
+      + 'puolikas kartta. Kirjoitan sen muistiin siltä varalta, että joku '
+      + 'vielä kysyy. Kaupunki on rakennettu saarille, ja joka toinen katu '
+      + 'päättyy laituriin. Höyryvene vie saaristoon halvemmalla kuin ajuri '
+      + 'kadun päähän. Satamassa myytiin silliä ja lippuja samalta kärryltä.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Osuin keskelle kruunajaisia. Oscar sai kruununsa '
+      + 'kirkossa, ja tungos vei minulta kaksi nappia ja tästä kirjasta sivun, '
+      + 'jolla oli puolikas kartta. Kirjoitan sen muistiin siltä varalta, että '
+      + 'joku vielä kysyy. Kaupunki on rakennettu saarille, ja joka toinen '
+      + 'katu päättyy laituriin. Höyryvene vie saaristoon halvemmalla kuin '
+      + 'ajuri kadun päähän. [softly] Satamassa myytiin silliä ja lippuja '
+      + 'samalta kärryltä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tukholma.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS — NALJAILUOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä on kevyt ja arkinen —
-     * taskuvaras kruunajaisissa — joten pariperiaate sallii naljailun
-     * eikä vaadi pehmennystä. Livia asettuu isoisän puolelle ja tekee
-     * saman havainnon toisin päin: samana päivänä yksi menetti puolikkaan
-     * kartan ja toinen sai kokonaisen kruunun.
-     *
-     * FAKTAKURI: kaksi väitettä, molemmat tarkistettavia. (1) Oscar II
-     * kruunattiin Storkyrkanissa 12. toukokuuta 1873. (2) Hän jäi Ruotsin
-     * viimeiseksi kruunatuksi kuninkaaksi. Molemmat: sv-Wikipedia "Oscar II
-     * av Sverige", osio "Kröningen" (*"Den 12 maj 1873 kröntes Oscar II i
-     * Storkyrkan i Stockholm. Han skulle komma att bli den sista kungen som
-     * kröntes i Sverige."*), ja sama tieto en-Wikipedian "Oscar II"
-     * -artikkelin kruunajaisosiossa; tarkistettu 29.8.2026.
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "mut"), keskellä
-     * sanat auki; pronominit kokonaisina; ei huutomerkkejä.
-     */
-    maadoitus: 'Kääk. Kaksi nappia ja sivu neljätoista — meidän suvussa '
-      + 'sanotaan, että väkijoukko on ainoa paikka, jossa kirje katoaa ilman '
-      + 'että kukaan varastaa sitä. Se päivä oli kyllä iso: Oscar II '
-      + 'kruunattiin Storkyrkanissa kahdentenatoista toukokuuta, ja hän jäi '
-      + 'Ruotsin viimeiseksi kruunatuksi kuninkaaksi. Kukaan ei ole sen '
-      + 'jälkeen nostanut sitä kruunua päähänsä. Saman päivän aikana yksi '
-      + 'sai kokonaisen kruunun ja toinen menetti puolikkaan kartan. Mut '
-      + 'kuule, se puolikas on yhä jossain.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Kuningas on yhä, mutta kruunajaisia ei enää pidetä. Höyryveneet vievät saaristoon edelleen.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen. Faktat ovat lehden oman
      * avauskuvan selitteestä (js/packs/kulttuuri-kategoriat.js,

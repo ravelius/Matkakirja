@@ -186,15 +186,21 @@ export const FOKUSVIRTA_SARAJEVO = {
   matkakirja: {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 379 merkkiä (yläraja 400). */
     teksti: 'Laskin sillalta neljän uskon äänet: kirkonkellot idästä ja '
-      + 'lännestä, minareetin kutsun, sapatin hiljaisuuden — ja joen, joka '
-      + 'ei kuulu kenellekään. Majatalon isäntä sanoi, ettei kaupungissa '
-      + 'tarvitse valita, minkä kellon mukaan herää.',
+      + 'lännestä, minareetin kutsun ja sapatin hiljaisuuden. Joki ei kuulu '
+      + 'kenellekään. Majatalon isäntä sanoi, ettei kaupungissa tarvitse '
+      + 'valita, minkä kellon mukaan herää. Basaarin kujilla takotaan kuparia, '
+      + 'ja kahvi keitetään pienessä pannussa niin sakeaksi, että lusikka '
+      + 'seisoo. Illalla vuoret tulivat lähemmäs kuin päivällä.',
     /* Kaanon, kohta 1 — luenta ja äänitteen polku sellaisinaan. */
-    luenta: '[curious] Laskin sillalta neljän uskon äänet: kirkonkellot '
-      + 'idästä ja lännestä, minareetin kutsun, sapatin hiljaisuuden — ja '
-      + 'joen, joka ei kuulu kenellekään. [warmly] Majatalon isäntä sanoi, '
-      + 'ettei kaupungissa tarvitse valita, minkä kellon mukaan herää.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Laskin sillalta neljän uskon äänet: kirkonkellot idästä '
+      + 'ja lännestä, minareetin kutsun ja sapatin hiljaisuuden. Joki ei kuulu '
+      + 'kenellekään. Majatalon isäntä sanoi, ettei kaupungissa tarvitse '
+      + 'valita, minkä kellon mukaan herää. Basaarin kujilla takotaan kuparia, '
+      + 'ja kahvi keitetään pienessä pannussa niin sakeaksi, että lusikka '
+      + 'seisoo. [softly] Illalla vuoret tulivat lähemmäs kuin päivällä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sarajevo.mp3',
     /*
      * KUVA: Alois Schönnin maalaus Latinalaissillalta, Österreichische

@@ -106,49 +106,30 @@ export const FOKUSVIRTA_DUBROVNIK = {
      */
     paikkarivi: 'Dubrovnik, syyskuussa 1873. Poutaa; muurilla käy tuuli '
       + 'mereltä.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Ragusa osti rauhansa joka vuosi uudestaan — halvempaa kuin '
-      + 'sota, ja kauniimpaa. Kävelin muurin koko kierroksen ja laskin '
-      + 'torneja; kaupunki on kuin laiva, joka päätti jäädä satamaan ja '
-      + 'kivettyä.',
-    luenta: '[curious] Ragusa osti rauhansa joka vuosi uudestaan — '
-      + '[softly] halvempaa kuin sota, ja kauniimpaa. Kävelin muurin koko '
-      + 'kierroksen ja laskin torneja; [whispers] kaupunki on kuin laiva, '
-      + 'joka päätti jäädä satamaan ja kivettyä.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 383 merkkiä (yläraja 400). */
+    teksti: 'Ragusa osti rauhansa joka vuosi uudestaan: se maksoi sulttaanille '
+      + 'ja kumarsi kaikille, ja säilyi vapaana kauemmin kuin Venetsia. '
+      + 'Kävelin muurin koko kierroksen ja laskin torneja. Kaupunki on kuin '
+      + 'laiva, joka päätti jäädä satamaan ja kivettyä. Pääkadun päässä vesi '
+      + 'juoksee vanhaan kaivoon vuorilta asti, ja jokainen ohikulkija juo '
+      + 'siitä kupin. Virkamies puhui italiaa, kansa kroatiaa.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Ragusa osti rauhansa joka vuosi uudestaan: se maksoi '
+      + 'sulttaanille ja kumarsi kaikille, ja säilyi vapaana kauemmin kuin '
+      + 'Venetsia. Kävelin muurin koko kierroksen ja laskin torneja. Kaupunki '
+      + 'on kuin laiva, joka päätti jäädä satamaan ja kivettyä. Pääkadun '
+      + 'päässä vesi juoksee vanhaan kaivoon vuorilta asti, ja jokainen '
+      + 'ohikulkija juo siitä kupin. [softly] Virkamies puhui italiaa, kansa '
+      + 'kroatiaa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-dubrovnik.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS — PARIPERIAATE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ"): merkintä on rauhallinen ja viisas, ei synkkä,
-     * joten Livia saa naljailla. Nalja ei osu isoisän ajatukseen vaan
-     * yhteen puuttuvaan tietoon, ja tieto on tarkistettavissa.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki tarkistettavia. (1) Ragusan
-     * tasavalta lakkasi olemasta 1808, kuusikymmentäviisi vuotta ennen
-     * isoisän käyntiä (js/packs/nahtavyysjutut.js, "Pilen portti", jo
-     * hyväksyttyä pelidataa; en-Wikipedia "Republic of Ragusa",
-     * tietolaatikko: 1358–1808). (2) Muurikierros on noin 1 940 metriä
-     * (js/packs/kulttuuri-kategoriat.js, dubrovnik/avauskuvat).
-     * (3) Muureilla kävi vuonna 2019 yli 1,2 miljoonaa kävijää
-     * (en-Wikipedia "Walls of Dubrovnik", johdanto). Fritulet ovat
-     * pelin omaa Livia-aineistoa (js/fokusvirta.js LIVIAN_SAAPUMISET).
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
-     * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
-     */
-    maadoitus: 'Kääk. Laiva, joka päätti jäädä satamaan ja kivettyä — '
-      + 'kauniisti sanottu, ja minä sanon sen mieluummin kuin keksin '
-      + 'itse. Yksi asia isoisältäsi vain jäi huomaamatta: se tasavalta, '
-      + 'jonka rauhaa hän ihaili, oli lakannut olemasta jo 1808, '
-      + 'kuusikymmentäviisi vuotta ennen kuin hän nousi muurille. Hän '
-      + 'laski siis torneja, joilla ei ollut enää yhtään vartijaa. Muuri '
-      + 'seisoo silti: kierros on lähes kaksituhatta metriä, ja vuonna '
-      + '2019 sen käveli yli miljoona kaksisataatuhatta ihmistä. Mut '
-      + 'fritulet on yhä pieniä ja paistettuja, eikä niitä laske kukaan '
-      + 'muu kuin minä.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Muurilla kävellään yhä ympäri, mutta nyt jonossa. Kaivosta juodaan edelleen.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuurit). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/

@@ -197,27 +197,27 @@ export const FOKUSVIRTA_MOSKOVA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Moskova, heinäkuussa 1873. Helteistä; kupolit häikäisevät.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki on rakennettu renkaiksi kuin puun vuosilustot, ja '
-      + 'sen sydämessä linnoituksen muurit sulkevat sisäänsä kirkkoja '
-      + 'kuin lippaan. Kelloja on niin monta, että kun ne soivat yhtä '
-      + 'aikaa, kauppias lopettaa tinkimisen ja odottaa. Söin '
-      + 'kauppiastalossa päivällisen, joka kesti neljä tuntia ja jossa '
-      + 'teetä juotiin samovaarista kuin vettä lähteestä. Täällä '
-      + 'sanotaan: Pietari on Venäjän pää, mutta Moskova on sen sydän.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 395 merkkiä (yläraja 400). */
+    teksti: 'Kaupunki on rakennettu renkaiksi kuin puun vuosilustot, ja sen '
+      + 'sydämessä linnoituksen muurit sulkevat sisäänsä kirkkoja kuin '
+      + 'lippaan. Kelloja on niin monta, että kun ne soivat yhtä aikaa, '
+      + 'kauppias lopettaa tinkimisen ja odottaa. Söin kauppiastalossa '
+      + 'päivällisen, joka kesti neljä tuntia. Teetä juotiin samovaarista kuin '
+      + 'vettä. Täällä sanotaan: Pietari on Venäjän pää, mutta Moskova on sen '
+      + 'sydän.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Kaupunki on rakennettu renkaiksi kuin puun '
-      + 'vuosilustot, ja sen sydämessä linnoituksen muurit sulkevat '
-      + 'sisäänsä kirkkoja kuin lippaan. [excited] Kelloja on niin monta, '
-      + 'että kun ne soivat yhtä aikaa, kauppias lopettaa tinkimisen ja '
-      + 'odottaa. [warmly] Söin kauppiastalossa päivällisen, joka kesti '
-      + 'neljä tuntia ja jossa teetä juotiin samovaarista kuin vettä '
-      + 'lähteestä. [whispers] Täällä sanotaan: Pietari on Venäjän pää, '
-      + 'mutta Moskova on sen sydän.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kaupunki on rakennettu renkaiksi kuin puun vuosilustot, '
+      + 'ja sen sydämessä linnoituksen muurit sulkevat sisäänsä kirkkoja kuin '
+      + 'lippaan. Kelloja on niin monta, että kun ne soivat yhtä aikaa, '
+      + 'kauppias lopettaa tinkimisen ja odottaa. Söin kauppiastalossa '
+      + 'päivällisen, joka kesti neljä tuntia. Teetä juotiin samovaarista kuin '
+      + 'vettä. [softly] Täällä sanotaan: Pietari on Venäjän pää, mutta '
+      + 'Moskova on sen sydän.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-moskova.mp3',
   },
 

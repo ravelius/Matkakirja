@@ -195,47 +195,35 @@ export const FOKUSVIRTA_BARCELONA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Barcelona, maaliskuussa 1873. Lämmintä jo; satamassa tervan haju.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki purkaa muurejaan ja rakentaa itseään uusiksi '
-      + 'ruutuihin, joilla on insinöörin nimi ja suunnitelma suurempi '
-      + 'kuin yhdenkään kuninkaan. Ramblalla myydään lintuja häkeissä ja '
-      + 'vettä laseittain. Satamassa lastataan korkkia ja viiniä, ja '
-      + 'jokainen jonka tapaan puhuu kahta kieltä — toista minulle, '
-      + 'toista toisilleen. Espanja on tasavalta tänä keväänä, mutta '
-      + 'täällä sanotaan: Katalonia tekee työt.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 387 merkkiä (yläraja 400). */
+    teksti: 'Kaupunki purkaa muurejaan ja rakentaa itseään uusiksi ruutuihin, '
+      + 'joilla on insinöörin nimi ja suunnitelma suurempi kuin yhdenkään '
+      + 'kuninkaan. Ramblalla myydään lintuja häkeissä ja vettä laseittain. '
+      + 'Satamassa lastataan korkkia ja viiniä, ja jokainen puhuu kahta '
+      + 'kieltä: toista minulle, toista toisilleen. Espanja on tasavalta tänä '
+      + 'keväänä, mutta täällä sanotaan, että Katalonia tekee työt.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Kaupunki purkaa muurejaan ja rakentaa itseään '
-      + 'uusiksi ruutuihin, joilla on insinöörin nimi ja suunnitelma '
-      + 'suurempi kuin yhdenkään kuninkaan. [excited] Ramblalla myydään '
-      + 'lintuja häkeissä ja vettä laseittain. Satamassa lastataan '
-      + 'korkkia ja viiniä, ja jokainen jonka tapaan puhuu kahta kieltä '
-      + '— toista minulle, toista toisilleen. [softly] Espanja on '
-      + 'tasavalta tänä keväänä, mutta täällä sanotaan: [whispers] '
-      + 'Katalonia tekee työt.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kaupunki purkaa muurejaan ja rakentaa itseään uusiksi '
+      + 'ruutuihin, joilla on insinöörin nimi ja suunnitelma suurempi kuin '
+      + 'yhdenkään kuninkaan. Ramblalla myydään lintuja häkeissä ja vettä '
+      + 'laseittain. Satamassa lastataan korkkia ja viiniä, ja jokainen puhuu '
+      + 'kahta kieltä: toista minulle, toista toisilleen. [softly] Espanja on '
+      + 'tasavalta tänä keväänä, mutta täällä sanotaan, että Katalonia tekee '
+      + 'työt.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-barcelona.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); `teksti` seuraa sen
-     * jälkeen.
-     *
-     * TÄMÄ ON KAANONIA, EI OMAA TEKSTIÄ. Kanoninen repliikki on jaettu
-     * virkerajalta kahtia (ks. tiedoston alun perustelu): tässä on sen
-     * ensimmäinen virke sellaisenaan, kaksoispisteineen ja kahden
-     * pisteen taukoineen. Yhtään sanaa ei ole lisätty eikä poistettu.
-     */
-    maadoitus: 'Se insinöörin ruudukko on nykyään nimeltään Eixample, ja '
-      + 'sen kulmissa on erikoisuus, jonka syyn annan sun päätellä ihan '
-      + 'kohta itse — sen verran vihjaan, että nykyään niissä viisteissä '
-      + 'parkkeeraa skoottereita..',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Ruudukko on valmis, ja kaupunki kasvoi sen yli. Ramblalla ei enää myydä lintuja, vain kukkia.',
+    ],
     /*
      * KAANON (Fable) — repliikin loput kolme virkettä sellaisenaan.
      */

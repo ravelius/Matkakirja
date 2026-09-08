@@ -44,13 +44,12 @@ export const FOKUSVIRTA_KREETA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi. */
     paikkarivi: 'Kreeta, huhtikuussa 1873. Lämmintä; vuorilla vielä lunta.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 357 merkkiä (yläraja 400). */
     teksti: 'Hanian satamassa venetsialainen majakka vartioi turkkilaista '
       + 'kaupunkia, ja kummankin liput ovat haalistuneet samaan väriin. '
       + 'Ratsastin sisämaahan kukkulalle, jonka alla sanotaan olevan vanhan '
-      + 'kuninkaan palatsi. Sanotaan, että täällä asui hirviö labyrintissa. '
-      + 'Minä näin vain palatsin, jossa on liikaa käytäviä — sen verran kuin '
-      + 'kiviä maasta pilkotti. Paimen sanoi, että koko kukkula on onttoa. '
+      + 'kuninkaan palatsi ja labyrintti hirviöineen. Minä näin vain kukkulan, '
+      + 'josta pilkotti kiviä. Paimen sanoi, että koko kukkula on onttoa. '
       + 'Uskon häntä enemmän kuin tarua.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
@@ -58,13 +57,13 @@ export const FOKUSVIRTA_KREETA = {
      * tyyli kuin muissa paketeissa. Yksikään sana, välimerkki tai
      * sanajärjestys ei muutu.
      */
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
     luenta: '[curious] Hanian satamassa venetsialainen majakka vartioi '
       + 'turkkilaista kaupunkia, ja kummankin liput ovat haalistuneet samaan '
       + 'väriin. Ratsastin sisämaahan kukkulalle, jonka alla sanotaan olevan '
-      + 'vanhan kuninkaan palatsi. [whispers] Sanotaan, että täällä asui '
-      + 'hirviö labyrintissa. Minä näin vain palatsin, jossa on liikaa '
-      + 'käytäviä — sen verran kuin kiviä maasta pilkotti. [softly] Paimen '
-      + 'sanoi, että koko kukkula on onttoa. Uskon häntä enemmän kuin tarua.',
+      + 'vanhan kuninkaan palatsi ja labyrintti hirviöineen. Minä näin vain '
+      + 'kukkulan, josta pilkotti kiviä. Paimen sanoi, että koko kukkula on '
+      + 'onttoa. [softly] Uskon häntä enemmän kuin tarua.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kreeta.mp3',
   },
 

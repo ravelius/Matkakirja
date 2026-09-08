@@ -138,65 +138,34 @@ export const FOKUSVIRTA_AMSTERDAM = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Amsterdam, toukokuussa 1873. Tuulista; kanavat väreilevät.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Tämä kaupunki on rakennettu veteen lyötyjen paalujen '
-      + 'varaan, ja minusta tuntuu, että myös sen omaisuus seisoo '
-      + 'samalla tavalla — ilmaan luotetun arvon päällä. Kanavat '
-      + 'kiertävät kehinä kuin puun vuosirenkaat. Timanttihiomoissa '
-      + 'juutalaiset mestarit halkovat kiviä, jotka kulkevat täältä '
-      + 'kaikkien kruunupäiden sormiin. Vanhat miehet puhuvat yhä '
-      + 'Kompaniasta, jonka laivat toivat idän rikkaudet — ja veivät '
-      + 'monta miestä, jotka eivät palanneet.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 388 merkkiä (yläraja 400). */
+    teksti: 'Kaupunki seisoo veteen lyötyjen paalujen varassa, ja minusta sen '
+      + 'omaisuus seisoo samalla tavalla, ilmaan luotetun arvon päällä. '
+      + 'Kanavat kiertävät kehinä kuin puun vuosirenkaat. Timanttihiomoissa '
+      + 'halkotaan Kapmaan kaivosten kiviä, jotka kulkevat täältä kruunupäiden '
+      + 'sormiin. Vanhat miehet puhuvat yhä Kompaniasta, jonka laivat toivat '
+      + 'idän rikkaudet ja veivät miehiä, jotka eivät palanneet.',
     /*
      * LUENTA = sama teksti tunnetagein (Raamattu, luentaprosessi):
      * neljä tagia, alku ja loppu eri sävyssä, yksikään sana ei vaihdu.
      */
-    luenta: '[curious] Tämä kaupunki on rakennettu veteen lyötyjen '
-      + 'paalujen varaan, ja minusta tuntuu, että myös sen omaisuus '
-      + 'seisoo samalla tavalla — ilmaan luotetun arvon päällä. '
-      + '[softly] Kanavat kiertävät kehinä kuin puun vuosirenkaat. '
-      + 'Timanttihiomoissa juutalaiset mestarit halkovat kiviä, jotka '
-      + 'kulkevat täältä kaikkien kruunupäiden sormiin. [curious] '
-      + 'Vanhat miehet puhuvat yhä Kompaniasta, jonka laivat toivat '
-      + 'idän rikkaudet — [whispers] ja veivät monta miestä, jotka '
-      + 'eivät palanneet.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kaupunki seisoo veteen lyötyjen paalujen varassa, ja '
+      + 'minusta sen omaisuus seisoo samalla tavalla, ilmaan luotetun arvon '
+      + 'päällä. Kanavat kiertävät kehinä kuin puun vuosirenkaat. '
+      + 'Timanttihiomoissa halkotaan Kapmaan kaivosten kiviä, jotka kulkevat '
+      + 'täältä kruunupäiden sormiin. [softly] Vanhat miehet puhuvat yhä '
+      + 'Kompaniasta, jonka laivat toivat idän rikkaudet ja veivät miehiä, '
+      + 'jotka eivät palanneet.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-amsterdam.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS — TÄMÄN PAKETIN OMA TEKSTI (ei kaanonia).
-     * Piirtyy kuplan ensimmäiseksi kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo).
-     *
-     * PARIPERIAATE (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ"):
-     * merkintä on tyyni ja pohtiva, joten Livia saa tarttua sen
-     * vertaukseen — eikä nalja osu isoisään vaan siihen, että hänen
-     * kielikuvansa on kirjaimellisesti totta.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki pelin omasta, jo hyväksytystä
-     * aineistosta (js/packs/kulttuuri-kategoriat.js, amsterdam-osion
-     * nosto "Koko kaupunki seisoo puutukkien päällä"): maaperä on
-     * suota ja löysää hiekkaa, Damin palatsi lepää 13 659 paalun
-     * päällä, ja paalu kestää vain veden alla — pohjaveden laskiessa
-     * puu lahoaa. EI YHTÄÄN UUTTA FAKTAVÄITETTÄ.
-     *
-     * PUHEKIELIPASSI (Raamattu, LIVIAN PUHEKIELI): lyhentymät vain
-     * reunoilla ("Kääk", "mut"), keskellä sanat auki, pronominit
-     * kokonaisina, ei huutomerkkejä.
-     */
-    maadoitus: 'Kääk. Se vertaus ilmaan luotetusta arvosta on paljon '
-      + 'kirjaimellisempi kuin isoisäsi ehti tietää: tämän kaupungin '
-      + 'alla ei ole kalliota vaan suota ja löysää hiekkaa, ja jokainen '
-      + 'talo seisoo maahan lyötyjen puupaalujen varassa. Damin aukion '
-      + 'palatsin alla niitä on kolmetoistatuhatta kuusisataa'
-      + 'viisikymmentäyhdeksän. Ja paalu kestää täsmälleen niin kauan '
-      + 'kuin se pysyy veden alla — jos pohjavesi laskee, puu lahoaa ja '
-      + 'talo alkaa nojata naapuriinsa. Koko kaupunki on siis sopimus '
-      + 'siitä, että vesi jätetään paikalleen. Mut se sopimus on '
-      + 'pitänyt neljäsataa vuotta, eikä sitä voi sanoa kovin monesta '
-      + 'sopimuksesta.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Talot seisovat yhä paaluilla, ja moni on vinossa. Kanavilla on nyt enemmän pyöriä kuin veneitä.',
+    ],
     /* KAANON (Fable) — Livian huomio sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Amsterdamissa on enemmän siltoja kuin Venetsiassa, mut '
       + 'siitä ei pidetä täällä isoa ääntä.. Ne kanavakehät näkyvät '

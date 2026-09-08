@@ -163,68 +163,34 @@ export const FOKUSVIRTA_OSLO = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Kristiania, heinäkuussa 1873. Valoisaa myöhään; vuono tyyni.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupungin nimi on Kristiania, ja se on nuori pääkaupunki '
-      + 'vanhassa maassa: katuja vedetään suoriksi, yliopisto on täynnä ja '
-      + 'vuonolla höyrylaiva ohittaa purjeet kuin ohimennen. Täällä '
-      + 'puhutaan kansallishengestä joka toisessa lauseessa — omasta '
-      + 'kielestä, omista saduista, omista vuorista. Illalla söin lohta ja '
-      + 'kuuntelin ylioppilaita, jotka väittelivät siitä, kenen Norja '
-      + 'oikeastaan on. Ruotsin kuninkaan, sanoi laki. Ei kauan, sanoivat '
-      + 'he.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 398 merkkiä (yläraja 400). */
+    teksti: 'Nimi on Kristiania, ja se on nuori pääkaupunki vanhassa maassa: '
+      + 'katuja vedetään suoriksi, ja vuonolla höyrylaiva ohittaa purjeet kuin '
+      + 'ohimennen. Kuningas kruunattiin toissa viikolla Trondheimissa toiseen '
+      + 'kertaan, koska norjalaiset vaativat oman kruunauksen. Illalla söin '
+      + 'lohta ja kuuntelin ylioppilaita, jotka väittelivät siitä, kenen Norja '
+      + 'on. Ruotsin kuninkaan, sanoi laki. Ei kauan, sanoivat he.',
     /*
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
      */
-    luenta: '[curious] Kaupungin nimi on Kristiania, ja se on nuori '
-      + 'pääkaupunki vanhassa maassa: katuja vedetään suoriksi, yliopisto '
-      + 'on täynnä ja vuonolla höyrylaiva ohittaa purjeet kuin ohimennen. '
-      + '[warmly] Täällä puhutaan kansallishengestä joka toisessa '
-      + 'lauseessa — omasta kielestä, omista saduista, omista vuorista. '
-      + 'Illalla söin lohta ja kuuntelin ylioppilaita, jotka väittelivät '
-      + 'siitä, kenen Norja oikeastaan on. [softly] Ruotsin kuninkaan, '
-      + 'sanoi laki. Ei kauan, sanoivat he.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Nimi on Kristiania, ja se on nuori pääkaupunki vanhassa '
+      + 'maassa: katuja vedetään suoriksi, ja vuonolla höyrylaiva ohittaa '
+      + 'purjeet kuin ohimennen. Kuningas kruunattiin toissa viikolla '
+      + 'Trondheimissa toiseen kertaan, koska norjalaiset vaativat oman '
+      + 'kruunauksen. Illalla söin lohta ja kuuntelin ylioppilaita, jotka '
+      + 'väittelivät siitä, kenen Norja on. Ruotsin kuninkaan, sanoi laki. '
+      + '[softly] Ei kauan, sanoivat he.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-oslo.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS — TARKENNUSOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä päättyy lakiin ja
-     * vastaväitteeseen, joten maadoitus ei naljaile vaan tarkentaa:
-     * isoisä kuuli lain oikein, mutta laki oli vain puolet asiasta.
-     * Piikkiä ei osoiteta paikallisiin missään kohdassa.
-     *
-     * FAKTAKURI: yksi väite, kaksi lähdettä. Norjalla oli unionissa oma
-     * perustuslaki, oma suurkäräjät, omat lait ja oma valtiokirstu;
-     * yhteistä olivat kuningas ja ulkopolitiikka, ja ulkopolitiikka
-     * päätettiin Ruotsin hallituksessa ja hoidettiin Ruotsin
-     * ulkoministeriössä — en-Wikipedia "Union between Sweden and Norway"
-     * (johdanto: *"separate constitutions, laws, legislatures,
-     * administrations, state churches, armed forces, and currencies"*;
-     * *"a common monarch and common foreign policy"*; *"Foreign policy
-     * was decided in the Swedish cabinet and conducted by the Swedish
-     * ministry of foreign affairs"*), ja sama asetelma no-Wikipedian
-     * "Norges flagg" -artikkelin unioniosiossa, jossa lippukiista
-     * kulkee juuri siitä, kumpi maa on toisen alainen. Perustuslain
-     * päiväys 17.5.1814 on lisäksi pelin omassa artikkelissa
-     * (js/packs/europe-artikkelit.js, Oslo). Tarkistettu 29.8.2026.
-     *
-     * MIKSI EI 1905: kaanonin kuplateksti kertoo itsenäistymisvuoden
-     * heti perään, eikä maadoitus saa syödä sitä etukäteen.
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Mut"), keskellä sanat
-     * auki; pronominit kokonaisina; ei huutomerkkejä.
-     */
-    maadoitus: 'Isoisäsi kuuli lain oikein, mut laki oli vain puolet '
-      + 'asiasta.. Norjalla oli unionissakin oma perustuslaki vuodesta '
-      + '1814, omat suurkäräjät, omat lakinsa ja oma valtiokirstunsa. '
-      + 'Yhteistä olivat kuningas ja ulkopolitiikka, ja se ulkopolitiikka '
-      + 'päätettiin Ruotsin hallituksessa ja hoidettiin Ruotsin '
-      + 'ulkoministeriössä. Ne ylioppilaat eivät siis väitelleet tyhjästä: '
-      + 'puolet vastauksesta oli heillä jo kädessä, ja he väittelivät '
-      + 'toisesta puolesta.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Nimi on taas Oslo, ja Norja on oma valtionsa. Vuonolla kulkee yhä laivoja, ilman purjeita.',
+    ],
     /* KAANON (Fable) — kuplateksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Ylioppilaat olivat oikeassa — Norja itsenäistyi 1905, ja '
       + 'Kristiania sai takaisin vanhan nimensä Oslo 1925.. Ne omat sadut '

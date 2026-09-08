@@ -184,26 +184,25 @@ export const FOKUSVIRTA_KIOVA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Kiova, toukokuussa 1873. Lämmintä; kastanjat kukkivat.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki nousee joen törmältä kultaisina kupoleina, ja sen '
-      + 'alla on toinen kaupunki: munkit ovat kaivaneet käytäviä maan '
-      + 'sisään kahdeksansataa vuotta, ja kynttilä kädessä siellä kulkee '
-      + 'pyhiinvaeltajia enemmän kuin kaduilla väkeä. Ostin torilta '
-      + 'hunajaa miehiltä, jotka tulivat myymään sitä veneellä satojen '
-      + 'virstojen päästä. Tämä maa on musta ja antelias — sen näkee '
-      + 'leivästä.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 373 merkkiä (yläraja 400). */
+    teksti: 'Kaupunki nousee joen törmältä kultaisina kupoleina, ja sen alla '
+      + 'on toinen kaupunki: munkit ovat kaivaneet käytäviä maan sisään '
+      + 'kahdeksansataa vuotta, ja kynttilä kädessä siellä kulkee '
+      + 'pyhiinvaeltajia enemmän kuin kaduilla väkeä. Ostin torilta hunajaa '
+      + 'miehiltä, jotka tulivat myymään sitä veneellä satojen virstojen '
+      + 'päästä. Tämä maa on musta ja antelias. Sen näkee leivästä.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    luenta: '[curious] Kaupunki nousee joen törmältä kultaisina kupoleina, '
-      + 'ja sen alla on toinen kaupunki: [whispers] munkit ovat kaivaneet '
-      + 'käytäviä maan sisään kahdeksansataa vuotta, ja kynttilä kädessä '
-      + 'siellä kulkee pyhiinvaeltajia enemmän kuin kaduilla väkeä. '
-      + '[warmly] Ostin torilta hunajaa miehiltä, jotka tulivat myymään '
-      + 'sitä veneellä satojen virstojen päästä. [softly] Tämä maa on '
-      + 'musta ja antelias — sen näkee leivästä.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kaupunki nousee joen törmältä kultaisina kupoleina, ja '
+      + 'sen alla on toinen kaupunki: munkit ovat kaivaneet käytäviä maan '
+      + 'sisään kahdeksansataa vuotta, ja kynttilä kädessä siellä kulkee '
+      + 'pyhiinvaeltajia enemmän kuin kaduilla väkeä. Ostin torilta hunajaa '
+      + 'miehiltä, jotka tulivat myymään sitä veneellä satojen virstojen '
+      + 'päästä. Tämä maa on musta ja antelias. [softly] Sen näkee leivästä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kiova.mp3',
   },
 

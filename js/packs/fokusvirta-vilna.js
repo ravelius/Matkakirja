@@ -149,11 +149,11 @@ export const FOKUSVIRTA_VILNA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Vilna, kesäkuussa 1873. Poutaa; kirkonkellot kuuluvat kukkulalle.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 400 merkkiä (yläraja 400). */
     teksti: 'Kaupunki on täynnä kirkkoja kuin lipas helmiä: barokkia joka '
       + 'kadunkulmassa, ja niiden välissä kapeita kujia, joilla myydään '
       + 'meripihkaa ja pyhäinkuvia. Keisarikunnan raja kulkee lännempänä, '
-      + 'mutta täällä rukoillaan monella kielellä — puolaksi, liettuaksi, '
+      + 'mutta täällä rukoillaan monella kielellä: puolaksi, liettuaksi, '
       + 'hepreaksi, venäjäksi — ja jokainen pitää kaupunkia omanaan. '
       + 'Katedraalin tornista näin metsää joka suuntaan: tämä maa on metsän '
       + 'sydämeen rakennettu.',
@@ -162,13 +162,14 @@ export const FOKUSVIRTA_VILNA = {
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    luenta: '[curious] Kaupunki on täynnä kirkkoja kuin lipas helmiä: '
-      + 'barokkia joka kadunkulmassa, ja niiden välissä kapeita kujia, '
-      + 'joilla myydään meripihkaa ja pyhäinkuvia. [warmly] Keisarikunnan '
-      + 'raja kulkee lännempänä, mutta täällä rukoillaan monella kielellä — '
-      + 'puolaksi, liettuaksi, hepreaksi, venäjäksi — ja jokainen pitää '
-      + 'kaupunkia omanaan. [softly] Katedraalin tornista näin metsää joka '
-      + 'suuntaan: tämä maa on metsän sydämeen rakennettu.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kaupunki on täynnä kirkkoja kuin lipas helmiä: barokkia '
+      + 'joka kadunkulmassa, ja niiden välissä kapeita kujia, joilla myydään '
+      + 'meripihkaa ja pyhäinkuvia. Keisarikunnan raja kulkee lännempänä, '
+      + 'mutta täällä rukoillaan monella kielellä: puolaksi, liettuaksi, '
+      + 'hepreaksi, venäjäksi — ja jokainen pitää kaupunkia omanaan. [softly] '
+      + 'Katedraalin tornista näin metsää joka suuntaan: tämä maa on metsän '
+      + 'sydämeen rakennettu.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-vilna.mp3',
   },
 

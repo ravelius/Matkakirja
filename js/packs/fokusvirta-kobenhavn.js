@@ -108,46 +108,31 @@ export const FOKUSVIRTA_KOBENHAVN = {
      * on ollut kesäpuisto avaamisestaan asti (en-Wikipedia "Tivoli
      * Gardens"; ks. täky).
      */
-    paikkarivi: 'Kööpenhamina, kesällä 1873. Illat ovat valoisat kello '
-      + 'yhteentoista, ja koko kaupunki on ulkona.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
+    paikkarivi: 'Kööpenhamina, kesäkuussa 1873. Valoisaa iltamyöhään; koko '
+      + 'kaupunki ulkona.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 384 merkkiä (yläraja 400). */
     teksti: 'Tanska menetti sodassa kolmanneksen maastaan, ja silti täällä '
       + 'käydään illat huvipuistossa. Kävelin Tivolin portista sisään ja '
-      + 'ymmärsin: tämä kansa päätti surra valot päällä.',
-    luenta: '[curious] Tanska menetti sodassa kolmanneksen maastaan, ja '
-      + 'silti täällä käydään illat huvipuistossa. [softly] Kävelin Tivolin '
-      + 'portista sisään ja ymmärsin: [whispers] tämä kansa päätti surra '
-      + 'valot päällä.',
+      + 'ymmärsin, että tämä kansa päätti surra valot päällä. Kaupungin vallit '
+      + 'on juuri purettu, ja niiden paikalle rakennetaan puistoja ja '
+      + 'kortteleita. Pyöreässä tornissa nousee luiska, jota tsaari kuulemma '
+      + 'ajoi hevosella ylös. Olut on halpaa, ja kaikki juovat sitä.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Tanska menetti sodassa kolmanneksen maastaan, ja silti '
+      + 'täällä käydään illat huvipuistossa. Kävelin Tivolin portista sisään '
+      + 'ja ymmärsin, että tämä kansa päätti surra valot päällä. Kaupungin '
+      + 'vallit on juuri purettu, ja niiden paikalle rakennetaan puistoja ja '
+      + 'kortteleita. Pyöreässä tornissa nousee luiska, jota tsaari kuulemma '
+      + 'ajoi hevosella ylös. [softly] Olut on halpaa, ja kaikki juovat sitä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kobenhavn.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS — VÄLITTÄJÄOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä koskee sotatappiota ja
-     * surua, joten pariperiaate kieltää naljailun: Livia avaa
-     * historiakontekstin ja antaa isoisän havainnon seistä.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki tarkistettavia. (1) Tanska
-     * menetti Slesvigin vuonna 1864 (päätoimittajan historia-ankkuri
-     * tähän erään). (2) Tivoli avattiin 1843 — siis kaksikymmentäyksi
-     * vuotta ENNEN tappiota (pelidata: js/packs/kulttuuri-kategoriat.js,
-     * kobenhavn/sadut, "Huvipuisto avattiin vuonna 1843"; sama päivämäärä
-     * 15.8.1843 en-Wikipedian "Tivoli Gardens" -artikkelissa).
-     * (3) Isoisän käynnistä on yli sataviisikymmentä vuotta.
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kuule", "mut"),
-     * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
-     */
-    maadoitus: 'Kuule, tuo on kyllä tarkka havainto, ja siihen kannattaa '
-      + 'lisätä yksi luku. Se sota, jossa maa kutistui, käytiin vuonna '
-      + '1864 — ja se huvipuisto oli avattu jo 1843, kaksikymmentäyksi '
-      + 'vuotta ennen tappiota. Valot olivat siis päällä ensin, ja niitä '
-      + 'ei vain sammutettu. Isoisäsi käynnistä on yli sataviisikymmentä '
-      + 'vuotta, eikä niitä ole sammutettu vieläkään. Mä pidän tästä '
-      + 'kaupungista, ja mä pidän tästä leivonnaisesta, jota täällä '
-      + 'sanotaan wienerleiväksi vaikka se ei ole Wienistä.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    kommentti: [
+      'Tivoli on yhä auki joka ilta. Vallien paikalla on puistoja, ja niissä ajetaan polkupyörällä.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Nyhavn). Faktat ovat lehden
      * oman avauskuvan selitteestä (js/packs/kulttuuri-kategoriat.js,

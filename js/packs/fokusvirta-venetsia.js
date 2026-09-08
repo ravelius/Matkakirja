@@ -185,84 +185,42 @@ export const FOKUSVIRTA_VENETSIA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Venetsia, kesäkuussa 1873. Kosteaa; laguuni haisee laskuveden aikaan.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki, jossa kadut ovat vettä ja portaat päättyvät '
-      + 'mereen. Gondolieeri lauloi minulle hinnan päälle, ja torilla '
-      + 'vaihdettiin kalaa, lasia ja huhuja samalla tiskillä. Markuksen '
-      + 'kirkon hevoset ovat ryöstösaalista Konstantinopolista — täällä '
-      + 'sanotaan suoraan, että puoli kaupunkia on tuotu jostain '
-      + 'muualta, ja sanotaan se ylpeänä. Iltapäivällä vesi nousi '
-      + 'torille ja kauppiaat nostivat tavaransa penkeille kiroamatta: '
-      + 'näin täällä on aina ollut.',
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 396 merkkiä (yläraja 400). */
+    teksti: 'Kaupunki, jossa kadut ovat vettä ja portaat päättyvät mereen. '
+      + 'Markuksen torilla pulut ruokitaan kaupungin viljalla kello kahdelta, '
+      + 'ja ne tietävät sen kelloa paremmin. Kirkon hevoset ovat '
+      + 'ryöstösaalista Konstantinopolista; täällä sanotaan suoraan, että '
+      + 'puoli kaupunkia on tuotu muualta, ja sanotaan se ylpeänä. '
+      + 'Iltapäivällä vesi nousi torille, ja kauppiaat nostivat tavaransa '
+      + 'penkeille kiroamatta.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Kaupunki, jossa kadut ovat vettä ja portaat '
-      + 'päättyvät mereen. Gondolieeri lauloi minulle hinnan päälle, ja '
-      + 'torilla vaihdettiin kalaa, lasia ja huhuja samalla tiskillä. '
-      + '[softly] Markuksen kirkon hevoset ovat ryöstösaalista '
-      + 'Konstantinopolista — täällä sanotaan suoraan, että puoli '
-      + 'kaupunkia on tuotu jostain muualta, ja sanotaan se ylpeänä. '
-      + '[warmly] Iltapäivällä vesi nousi torille ja kauppiaat nostivat '
-      + 'tavaransa penkeille kiroamatta: näin täällä on aina ollut.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kaupunki, jossa kadut ovat vettä ja portaat päättyvät '
+      + 'mereen. Markuksen torilla pulut ruokitaan kaupungin viljalla kello '
+      + 'kahdelta, ja ne tietävät sen kelloa paremmin. Kirkon hevoset ovat '
+      + 'ryöstösaalista Konstantinopolista; täällä sanotaan suoraan, että '
+      + 'puoli kaupunkia on tuotu muualta, ja sanotaan se ylpeänä. [softly] '
+      + 'Iltapäivällä vesi nousi torille, ja kauppiaat nostivat tavaransa '
+      + 'penkeille kiroamatta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-venetsia.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
-    /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa
-     * sen jälkeen.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1 PAINOPISTE
-     * REUNOILLA): lyhentymät ovat vain alussa ("Jep") ja lopussa
-     * ("mut"), keskellä sanat ovat auki; pronominit kokonaisina; ei
-     * huutomerkkejä.
-     *
-     * MIKSI PORTAAT EIKÄ VESI: kanoninen repliikki alla vastaa jo
-     * nousevaan veteen, hevosiin ja gondolieereihin. Merkinnän
-     * ensimmäinen lause — portaat päättyvät mereen — jää muuten
-     * kokonaan vastaamatta, ja juuri siihen tämä maadoitus tarttuu.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki pelin omasta jo hyväksytystä
-     * Venetsia-aineistosta (js/packs/kulttuuri-kategoriat.js, nosto
-     * "Kaupunki seisoo puunrunkojen päällä"). (1) Talot seisovat
-     * tiheinä riveinä alas lyötyjen puupaalujen päällä. (2) Paalujen
-     * päälle ladottiin istrialaiset kalkkikivilaatat ja vasta niiden
-     * päälle tiilet. (3) Ilman happea puu ei lahoa vaan kovettuu, ja
-     * Santa Maria della Saluten alle lyötiin yli miljoona paalua.
-     *
-     * ── SPOILERIKORJAUS (Fable hyväksyi 29.8.2026) ────────────────────
-     *
-     * Maadoituksen ensimmäinen väite kuului aallon 4B integrointiin asti
-     * *"Tämä kaupunki ei seiso kalliolla vaan puussa: laguunin mutaan
-     * lyötiin tiheät rivit lepänrunkoja, kunnes ne ylsivät kovaan
-     * savikerrokseen asti"*, ja kolmas alkoi sanoilla *"Hapettomassa
-     * mudassa"*. Yhdessä ne antoivat js/packs/europe-questions.js:n
-     * `venetsia`-lohkon viidennen laattakysymyksen vastauksen — *"Miksi
-     * Venetsia vajoaa hitaasti?"* → *"se on rakennettu laguunin
-     * pehmeälle pohjalle"* — ennen kysymystä.
-     *
-     * Tämä kenttä EI OLE KAANONIA vaan paketin omaa Livia-tekstiä, joten
-     * päätoimittaja antoi luvan kirjoittaa paljastavan kohdan uusiksi.
-     * Paalufakta on jäljellä sellaisenaan, mutta MAAPERÄ ei enää esiinny
-     * missään muodossa: ei laguunia, ei mutaa, ei savikerrosta eikä
-     * vastakohtaa kalliolle. Livian puhekielisäännöt pitävät: lyhentymät
-     * vain reunoilla ("Jep", "mut"), pronominit kokonaisina, ei
-     * huutomerkkejä.
-     */
-    /* FABLE HYVAKSYI: maadoituskorjaus */
-    maadoitus: 'Jep, ne portaat päättyvät mereen ihan oikeasti. Tämän '
-      + 'kaupungin talot seisovat puupaalujen päällä: paaluja lyötiin '
-      + 'tiheinä riveinä alas, ja niiden päälle ladottiin ensin '
-      + 'kalkkikivilaatat ja vasta sitten tiilet. Ilman happea '
-      + 'puu ei lahoa vaan kovettuu, ja Santa Maria della Saluten alle '
-      + 'niitä paaluja lyötiin yli miljoona. Se alin askelma ei siis ole '
-      + 'vahinko — mut se on vasta kaupungin pintaa.',
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* EHDOTUS omistajalle 8.9.2026: romanssi, kuusi kuplaa — poikkeus yhden kuplan sääntöön. */
+    kommentti: [
+      'Niin, niin. Ja sinä sanoit, että laguunin yllä ilma kantaa paremmin. Sanoitko? Sanoit.',
+      'Minä en tavallisesti istu kenenkään kanssa lyijykatolla. Minulla on suku, tehtävä ja aikataulu.',
+      'Mutta se, miten sinä käännät päätä kun kellot lyövät…',
+      '…hetkinen. Fogg. Sinä olet siinä. Tämä on Venetsia. Minä olen töissä.',
+      'Selvennys: Markuksen torilla on tuhansia puluja, eikä niitä saa enää ruokkia.',
+      'Yksi niistä on aivan tavallinen. Aivan tavallinen. Mennään.',
+    ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      */

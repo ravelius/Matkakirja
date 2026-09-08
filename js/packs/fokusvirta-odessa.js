@@ -233,25 +233,25 @@ export const FOKUSVIRTA_ODESSA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Odessa, elokuussa 1873. Kuumaa; merituuli vasta illalla.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
+    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 369 merkkiä (yläraja 400). */
     teksti: 'Satama on täynnä vehnää ja kieliä: kreikkalainen laskee lastia '
-      + 'italiaksi, juutalainen kirjuri kääntää sen venäjäksi ja ranskaksi, '
-      + 'ja kaikki ymmärtävät toisiaan rahasta puhuttaessa. Rannasta '
-      + 'kaupunkiin nousevat portaat, joiden päästä ei näe alas satamaan — '
-      + 'vain meren. Oopperatalo paloi talvella, ja siitä puhutaan kuin '
-      + 'kuolleesta sukulaisesta: joka päivä, ja aina hyvää.',
+      + 'italiaksi, juutalainen kirjuri kääntää sen venäjäksi ja ranskaksi, ja '
+      + 'kaikki ymmärtävät toisiaan rahasta puhuttaessa. Rannasta kaupunkiin '
+      + 'nousevat portaat, joiden päästä ei näe alas satamaan, vain meren. '
+      + 'Oopperatalo paloi talvella, ja siitä puhutaan kuin kuolleesta '
+      + 'sukulaisesta: joka päivä, ja aina hyvää.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[excited] Satama on täynnä vehnää ja kieliä: kreikkalainen '
-      + 'laskee lastia italiaksi, juutalainen kirjuri kääntää sen venäjäksi '
-      + 'ja ranskaksi, ja kaikki ymmärtävät toisiaan rahasta puhuttaessa. '
-      + '[curious] Rannasta kaupunkiin nousevat portaat, joiden päästä ei '
-      + 'näe alas satamaan — vain meren. [softly] Oopperatalo paloi '
-      + 'talvella, ja siitä puhutaan kuin kuolleesta sukulaisesta: joka '
-      + 'päivä, ja aina hyvää.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Satama on täynnä vehnää ja kieliä: kreikkalainen laskee '
+      + 'lastia italiaksi, juutalainen kirjuri kääntää sen venäjäksi ja '
+      + 'ranskaksi, ja kaikki ymmärtävät toisiaan rahasta puhuttaessa. '
+      + 'Rannasta kaupunkiin nousevat portaat, joiden päästä ei näe alas '
+      + 'satamaan, vain meren. [softly] Oopperatalo paloi talvella, ja siitä '
+      + 'puhutaan kuin kuolleesta sukulaisesta: joka päivä, ja aina hyvää.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-odessa.mp3',
   },
 
