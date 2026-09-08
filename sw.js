@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1698';
+const CACHE = 'matkakirja-2026-08-09.1699';
 const SHELL = [
   './',
   './index.html',
@@ -217,6 +217,9 @@ const SHELL = [
   // ole esitystä.
   './js/linssit/ihmisen-matka-kertomus.js',
   './js/linssit/ihmisen-matka-esitys.js',
+  // Kertojan soitin (8.9.2026): yksi yhtenäinen luenta ämpäristä tai
+  // jakso kerrallaan — esitys tuo tämän suoraan, joten se kuuluu kuoreen.
+  './js/linssit/ihmisen-matka-luenta.js',
   './js/linssit/ihmisen-matka-aanimaisema.js',
   './js/linssit/ihmisen-matka-tutkimus.js',
   // Yksi nostomalli ja muisti (7.9.2026 ilta): kortti, jonka lamppu,

@@ -407,8 +407,10 @@ test('kärkisääntö: ilman kulkevaa vanaa rajaus on pelkkä kohde (entinen lä
 });
 
 test('kärkisääntö: taaksepäin kulkeva jakso pitää nykyisen rintaman kuvassa', () => {
-  // Blombos: kello 75 000 → 110 000, pito on jo 75 000:ssa. Uutta ei
-  // piirry, mutta rintama (Arabia, 24° N 58° I) pysyy kuvassa.
+  // Sääntö on voimassa, vaikka kaanonissa ei enää ole taaksepäin
+  // kulkevaa kohteellista jaksoa (Blombos poistui 8.9.2026): kello
+  // 75 000 → 110 000, pito on jo 75 000:ssa. Uutta ei piirry, mutta
+  // rintama (Arabia, 24° N 58° I) pysyy kuvassa.
   const { karjet } = jaksonRajaus({
     kohde: { lat: -34.4, lon: 21.2 }, vanat: [SELKARANKA], alku: 75000, loppu: 110000, pitoMin: 75000,
   });

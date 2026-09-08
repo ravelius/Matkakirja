@@ -11,12 +11,18 @@
  *   node tools/generoi-linssiluennat.mjs            (koko kaari)
  *   node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --kuiva
  *   node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --kertomus --kuiva
+ *   node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --kertomus --yhtena --kuiva
  *
  *   --kuiva          tulostaa tekstit ja kohteet, ei kutsu APIa
  *   --kertomus       KERTOMUSJAKSOT pysäkkien sijaan (ks. KERTOMUS
  *                    YHTENÄ KAARENA alempana). Vain kaarella, jolla on
  *                    `aikajana.kertomus`; `--pysakit` valitsee jaksot
  *                    TUNNUKSELLA (esim. `--pysakit avaus,denisova`).
+ *   --yhtena         KOKO KERTOMUS YHTENÄ ÄÄNITTEENÄ ja aikaleimoina
+ *                    (vain --kertomus-tilassa; ks. YKSI YHTENÄINEN
+ *                    LUENTA alempana). Ei käy yhteen --pysakkien kanssa.
+ *   --malli <id>     äänen malli yhtenäisessä luennassa (vain --yhtena;
+ *                    oletus eleven_v3, jonka tagit kaanoni kirjoittaa).
  *   --linssi <tunnus>  mikä aikajanakaari luetaan (oletus `keksinnot`;
  *                    ks. LINSSIT alempana). Kaari kertoo itse sekä
  *                    luettavan tekstin että ämpärin kansion.
@@ -147,7 +153,7 @@
 
 import { spawnSync } from 'node:child_process';
 import {
-  mkdirSync, mkdtempSync, rmSync, writeFileSync,
+  mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
@@ -182,7 +188,7 @@ if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
 
 const OSOITE = 'https://api.elevenlabs.io/v1/text-to-dialogue?output_format=mp3_44100_128';
 const AANI = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
-const MALLI = 'eleven_v3';
+export const MALLI = 'eleven_v3';
 /*
  * Stability kävi arvossa 0,4, mutta palautettiin 0,5:een omistajan
  * palautteesta 7.8.2026: *"äänen vaihteluarvoa kannattaa ottaa
@@ -256,13 +262,28 @@ const KESTO_MAX_S = 14.0;
  * malli on jäänyt jauhamaan.
  */
 const KAAREN_KESTO_MAX_S = 50.0;
+/**
+ * YHTENÄINEN LUENTA on koko kertomus yhtenä äänitteenä: kaanonin mitta
+ * on noin viisi minuuttia, ja katto erottaa siitä sen, että malli on
+ * jäänyt jauhamaan tai vastaus on katkennut kesken.
+ */
+export const YHTENAN_KESTO_MAX_S = 900.0;
 
 // ── argumentit ─────────────────────────────────────────────────────
 
 /** Komentoriviliput. Palauttaa `{ virhe }`, jos syöte ei kelpaa. */
 export function tulkitseArgumentit(argumentit) {
   const liput = {
-    linssi: OLETUSLINSSI, pysakit: [], kuiva: false, pakota: false, vienti: true, kertomus: false,
+    linssi: OLETUSLINSSI,
+    pysakit: [],
+    kuiva: false,
+    pakota: false,
+    vienti: true,
+    kertomus: false,
+    /** Koko kertomus yhtenä äänitteenä ja aikaleimoina (ks. --yhtena). */
+    yhtena: false,
+    /** Aikaleimojen malli; oletus vasta valinnan jälkeen (ks. alempaa). */
+    malli: null,
   };
   for (let i = 0; i < argumentit.length; i += 1) {
     const arg = argumentit[i];
@@ -315,6 +336,13 @@ export function tulkitseArgumentit(argumentit) {
       }
     } else if (arg === '--kertomus') {
       liput.kertomus = true;
+    } else if (arg === '--yhtena') {
+      liput.yhtena = true;
+    } else if (arg === '--malli') {
+      const nimi = argumentit[i + 1];
+      if (!nimi || String(nimi).startsWith('--')) return { ...liput, virhe: '--malli ilman tunnusta' };
+      liput.malli = nimi;
+      i += 1;
     } else if (arg === '--kuiva') {
       liput.kuiva = true;
     } else if (arg === '--pakota') {
@@ -325,6 +353,18 @@ export function tulkitseArgumentit(argumentit) {
       return { ...liput, virhe: `tuntematon argumentti: ${arg}` };
     }
   }
+  /*
+   * YHTENÄINEN LUENTA ON KERTOMUKSEN TILA. Se kokoaa KOKO kertomuksen
+   * yhdeksi tekstiksi, joten jaksojen rajaaminen --pysakeilla olisi
+   * ristiriita: puolikas kertomus ei ole yksi yhtenäinen luenta.
+   */
+  if (liput.yhtena && !liput.kertomus) return { ...liput, virhe: '--yhtena vaatii --kertomus' };
+  if (liput.yhtena && liput.pysakit.length) {
+    return { ...liput, virhe: '--yhtena lukee koko kertomuksen — --pysakit ei käy siihen' };
+  }
+  if (liput.malli && !liput.yhtena) return { ...liput, virhe: '--malli koskee vain --yhtena-tilaa' };
+  // Ääni on kertojan ääni: sama malli kuin jakso kerrallaan -tilassa.
+  if (liput.yhtena) liput.malli ??= MALLI;
   return liput;
 }
 
@@ -437,6 +477,335 @@ export function kokoaKertomusManifesti(kaari, kestot = new Map()) {
   };
 }
 
+/*
+ * ------------------------------------------------------------------
+ * YKSI YHTENÄINEN LUENTA (--yhtena)
+ * ------------------------------------------------------------------
+ *
+ * Omistaja 8.9.2026, sanatarkasti: *"nyt jokainen kohtaus on generoitu
+ * erillisenä kohtana, niin kertojan äänensävy hyppii liikaa"* ja
+ * *"muista generoida teksti yhtenä pätkänä, jossa on luonnolliset
+ * lauseet ja kappaleet. mukautetaan visuaalisuus sen mukaan."*
+ *
+ * KOKO KERTOMUS YHTENÄ PYYNTÖNÄ. Jaksojen `luenta`-kentät ladotaan
+ * KAPPALEIKSI (tyhjä rivi väliin) yhdeksi tekstiksi, ja malli lukee sen
+ * kerralla. Jaksojen väliin EI kirjoiteta break-tageja eikä muita
+ * keinotekoisia taukomerkkejä — teksti on luonnollista proosaa, ja
+ * tauko jaksojen väliin tehdään tarvittaessa pelissä. Vain koko
+ * luennan LOPPUUN jää sama lyhyt tauko kuin muillakin luennoilla
+ * (LOPPUTAUKO), jottei viimeinen sana katkea naksahdukseen.
+ *
+ * AIKALEIMAT KERTOVAT, MISTÄ JAKSO ALKAA. Vastaus haetaan
+ * aikaleimapäätteestä (POST /v1/text-to-speech/{voice}/with-timestamps),
+ * joka palauttaa äänen lisäksi `alignment`-lohkon: jokaiselle
+ * lähetetyn tekstin merkille alku- ja loppuaika sekunteina. Niistä
+ * lasketaan manifestiin jokaisen JAKSON, LAUSEEN ja SANAN alkuhetki
+ * millisekunteina, ja peli soittaa jakson yhden tiedoston väliltä
+ * (js/linssit/ihmisen-matka-luenta.js).
+ *
+ * MALLI PYSYY ELEVEN_V3:NA (omistajan valinta 8.9.2026: kertoja
+ * äänitetään v3:lla juuri sen ilmaisutagien takia). Ääni generoidaan
+ * siis samalla päätteellä, mallilla ja asetuksilla kuin jakso kerrallaan
+ * -tilassa, TAGIT MUKANA — vain yhtenä pyyntönä.
+ *
+ * AIKALEIMAT HAETAAN JÄLKIKÄTEEN (`POST /v1/forced-alignment`,
+ * elevenlabs.io/docs/api-reference/forced-alignment/create, tarkistettu
+ * 8.9.2026). Pääte saa valmiin mp3:n (`file`) ja saman tekstin TAGIT
+ * KARSITTUINA (`text`) ja palauttaa `characters`- ja `words`-listat,
+ * joissa on `start` ja `end` sekunteina. Näin kertojan ääni on v3:n
+ * ilmaisua ja aikaleimat silti tarkat.
+ *
+ * VARAREITTI, JOS KOHDISTUS EI ONNISTU: aikaleimapääte
+ * (`/v1/text-to-speech/{voice}/with-timestamps`), joka vastaa
+ * `eleven_multilingual_v2`:lla — se generoi äänen ITSE ja korvaa v3:n
+ * luennan, joten se on nimenomaan varareitti eikä oletus. Manifestiin
+ * kirjataan kumpi reitti kulki (`aikaleimalahde`) ja millä mallilla ääni
+ * syntyi (`malli`), jottei vaihto koskaan tapahdu hiljaa. `--malli`
+ * vaihtaa äänen mallin käsin; jos se ei ole v3-perhettä, tagit
+ * karsitaan myös lähetettävästä tekstistä (muuten malli lukisi ne).
+ */
+
+/** Aikaleimojen varareitti: aikaleimapääte omalla mallillaan (ks. yllä). */
+export const AIKALEIMOJEN_MALLI = 'eleven_multilingual_v2';
+
+/** Mistä aikaleimat tulivat — kirjataan manifestiin. */
+export const AIKALEIMAN_LAHTEET = {
+  pakotettu: 'forced-alignment',
+  leimattu: 'with-timestamps',
+};
+
+/** Pakotettu kohdistus: valmis ääni + sama teksti → merkkien ajat. */
+export const PAKOTETUN_OSOITE = 'https://api.elevenlabs.io/v1/forced-alignment';
+
+/** Aikaleimapäätteen osoite (ääni polussa, muoto samana kuin muualla). */
+export function aikaleimojenOsoite(aani = AANI) {
+  return `https://api.elevenlabs.io/v1/text-to-speech/${aani}`
+    + '/with-timestamps?output_format=mp3_44100_128';
+}
+
+/** Tunteeko malli eleven_v3:n tagit ([curious], [pause] …). */
+export function tunteeTagit(malli) {
+  return String(malli ?? '').startsWith('eleven_v3');
+}
+
+/** Kappaleiden väli: tyhjä rivi, ei taukomerkkiä (omistaja 8.9.2026). */
+export const KAPPALEEN_VALI = '\n\n';
+
+/** Jakson häntä: viimeisen äänteen jälkeen jätetään tämän verran ilmaa. */
+export const JAKSON_HANTA_MS = 250;
+
+/** Tagit ja break-merkinnät: eivät ole puhetta eivätkä saa aikaleimaa. */
+const TAGI = /\[[^\]]*\]|<break[^>]*\/?>/g;
+
+/** Sanan merkit (kirjaimet, numerot, väliviiva ja heittomerkki). */
+const SANA = /[\p{L}\p{N}][\p{L}\p{N}'’-]*/gu;
+
+/** Lauseen loppu: piste, huuto, kysymys tai kolme pistettä + väli. */
+const LAUSEEN_LOPPU = /[.!?…]["'»”)]*\s/;
+
+/** Tagit pois ja välit siistiksi (malli, joka ei tunne tageja). */
+export function karsiTagit(teksti) {
+  return String(teksti ?? '').replace(TAGI, ' ').replace(/[ \t]+/g, ' ')
+    .replace(/ ([,.!?;:…])/g, '$1')
+    .replace(/ *\n */g, '\n')
+    .trim();
+}
+
+/** Tagien merkkivälit [alku, loppu) tekstissä (ei puhetta). */
+export function tagienValit(teksti) {
+  const valit = [];
+  const haku = new RegExp(TAGI.source, 'g');
+  let osuma = haku.exec(teksti);
+  while (osuma) {
+    valit.push([osuma.index, osuma.index + osuma[0].length]);
+    osuma = haku.exec(teksti);
+  }
+  return valit;
+}
+
+/** Onko merkki-indeksi tagin sisällä. */
+function tagissa(valit, i) {
+  return valit.some(([a, b]) => i >= a && i < b);
+}
+
+/**
+ * KOKO KERTOMUS YHTENÄ TEKSTINÄ. Puhdas funktio: sama työkalussa ja
+ * testissä. Jaksot ovat kappaleita (tyhjä rivi väliin), eikä väliin
+ * lisätä mitään muuta.
+ *
+ * @param {Array<{avain:string, puhe:string, teksti:string}>} rivit kertomuksenLuennat
+ * @param {object} [asetukset]
+ * @param {boolean} [asetukset.tagit] jätetäänkö eleven_v3:n tagit tekstiin
+ * @returns {{teksti:string, jaksot:Array<{tunnus:string, alku:number, loppu:number}>}}
+ */
+export function kokoaYhtenainenTeksti(rivit, { tagit = false } = {}) {
+  const palat = [];
+  const jaksot = [];
+  let paikka = 0;
+  for (const rivi of rivit) {
+    const puhe = tagit ? String(rivi.puhe ?? '').trim() : karsiTagit(rivi.puhe ?? rivi.teksti);
+    if (!puhe) continue;
+    if (palat.length) paikka += KAPPALEEN_VALI.length;
+    jaksot.push({ tunnus: rivi.avain, alku: paikka, loppu: paikka + puhe.length });
+    paikka += puhe.length;
+    palat.push(puhe);
+  }
+  return { teksti: palat.join(KAPPALEEN_VALI), jaksot };
+}
+
+/**
+ * JAKSON LAUSEET JA SANAT MERKKI-INDEKSEINÄ. Tagit ohitetaan: ne eivät
+ * ole puhetta, joten niiden kohdalta ei oteta aikaleimaa eikä niistä
+ * synny sanoja. Puhdas funktio.
+ *
+ * @param {string} teksti koko kertomus yhtenä tekstinä
+ * @param {{alku:number, loppu:number}} jakso merkkiväli tekstissä
+ * @returns {{lauseet:number[], sanat:Array<{sana:string, merkki:number}>}}
+ */
+export function jaksonJasennys(teksti, { alku, loppu }) {
+  const pala = teksti.slice(alku, loppu);
+  const valit = tagienValit(pala);
+  const sanat = [];
+  const haku = new RegExp(SANA.source, 'gu');
+  let osuma = haku.exec(pala);
+  while (osuma) {
+    if (!tagissa(valit, osuma.index)) sanat.push({ sana: osuma[0], merkki: alku + osuma.index });
+    osuma = haku.exec(pala);
+  }
+  /*
+   * LAUSEEN ALKU on ensimmäinen puhuttu merkki jakson alussa ja
+   * jokaisen lauseenlopun jälkeen. Sanalistasta poimiminen on
+   * varmempaa kuin oma silmukka: se ohittaa jo valmiiksi tagit,
+   * lainausmerkit ja rivinvaihdot.
+   */
+  const lauseet = [];
+  let uusi = true;
+  for (let i = 0; i < sanat.length; i += 1) {
+    const { merkki } = sanat[i];
+    if (uusi) lauseet.push(merkki);
+    // Päättyykö lause ENNEN seuraavaa sanaa: silloin seuraava aloittaa.
+    const seuraava = sanat[i + 1]?.merkki ?? loppu;
+    uusi = LAUSEEN_LOPPU.test(`${teksti.slice(merkki, seuraava)} `);
+  }
+  return { lauseet, sanat };
+}
+
+/**
+ * Koko kertomuksen jäsennys: teksti, jaksojen merkkivälit sekä niiden
+ * lauseiden ja sanojen merkki-indeksit. Puhdas funktio.
+ */
+export function kertomuksenJasennys(rivit, { tagit = false } = {}) {
+  const { teksti, jaksot } = kokoaYhtenainenTeksti(rivit, { tagit });
+  return {
+    teksti,
+    jaksot: jaksot.map((jakso) => ({ ...jakso, ...jaksonJasennys(teksti, jakso) })),
+  };
+}
+
+/**
+ * MERKKI-INDEKSI → AIKALEIMAN INDEKSI. ElevenLabsin `alignment` on
+ * merkkijono merkkinä kerrallaan, ja normaalisti se on tasan sama
+ * teksti kuin lähetetty. Sovitus tehdään silti merkeittäin, jotta
+ * yksikin ylimääräinen merkki (mallin oma normalisointi) ei siirrä
+ * koko kertomusta pieleen: vastaava merkki haetaan enintään
+ * IKKUNA:n päästä, ja löytymätön jää nulliksi.
+ *
+ * @param {string} teksti lähetetty teksti
+ * @param {string[]} merkit alignment.characters
+ * @returns {Array<number|null>} teksti-indeksi → alignment-indeksi
+ */
+export function sovitaMerkit(teksti, merkit) {
+  const IKKUNA = 40;
+  const paikat = new Array(teksti.length).fill(null);
+  let j = 0;
+  for (let i = 0; i < teksti.length; i += 1) {
+    let k = j;
+    const raja = Math.min(merkit.length, j + IKKUNA);
+    while (k < raja && merkit[k] !== teksti[i]) k += 1;
+    if (k < raja) {
+      paikat[i] = k;
+      j = k + 1;
+    }
+  }
+  return paikat;
+}
+
+/**
+ * KAKSI VASTAUSMUOTOA, YKSI LASKENTA. Aikaleimapääte antaa merkit ja
+ * ajat kolmena rinnakkaisena listana, pakotettu kohdistus taas
+ * olioina (`{ text, start, end }`). Puhdas funktio: palauttaa
+ * aikaleimapäätteen muodon tai nullin, jos vastaus ei kelpaa.
+ *
+ * @param {object} vastaus kummankin päätteen runko
+ * @returns {{characters:string[], character_start_times_seconds:number[],
+ *   character_end_times_seconds:number[]}|null}
+ */
+export function normalisoiAlignment(vastaus) {
+  const lohko = vastaus?.alignment ?? vastaus;
+  const merkit = lohko?.characters;
+  if (!Array.isArray(merkit) || !merkit.length) return null;
+  // Pakotettu kohdistus: lista olioita, joissa teksti ja ajat yhdessä.
+  if (typeof merkit[0] === 'object') {
+    return {
+      characters: merkit.map((m) => String(m?.text ?? '')),
+      character_start_times_seconds: merkit.map((m) => Number(m?.start)),
+      character_end_times_seconds: merkit.map((m) => Number(m?.end)),
+    };
+  }
+  const alut = lohko.character_start_times_seconds;
+  const loput = lohko.character_end_times_seconds;
+  if (!Array.isArray(alut) || !Array.isArray(loput)) return null;
+  return {
+    characters: merkit.map((m) => String(m)),
+    character_start_times_seconds: alut.map(Number),
+    character_end_times_seconds: loput.map(Number),
+  };
+}
+
+/**
+ * AIKALEIMAT MANIFESTIIN. Laskee jokaiselle jaksolle alun ja lopun
+ * sekä lauseiden ja sanojen alkuhetket millisekunteina. Puhdas
+ * funktio: syötteenä jäsennys ja kumman tahansa päätteen vastaus.
+ *
+ * @param {object} jasennys kertomuksenJasennys
+ * @param {object} alignment aikaleimapäätteen tai kohdistuksen vastaus
+ * @param {object} [asetukset]
+ * @param {number} [asetukset.kesto] koko äänitteen kesto sekunteina (lopun raja)
+ * @returns {Array<object>} manifestin jaksorivit
+ */
+export function aikaleimoiksi(jasennys, alignment, { kesto = null } = {}) {
+  const kohdistus = normalisoiAlignment(alignment);
+  const merkit = kohdistus?.characters ?? [];
+  const alut = kohdistus?.character_start_times_seconds ?? [];
+  const loput = kohdistus?.character_end_times_seconds ?? [];
+  if (!merkit.length || merkit.length !== alut.length || merkit.length !== loput.length) {
+    throw new Error('alignment puuttuu tai on eri mittainen kuin merkkilista');
+  }
+  const paikat = sovitaMerkit(jasennys.teksti, merkit);
+  const ms = (sekunnit) => Math.round(sekunnit * 1000);
+  const alkuMs = (i) => (paikat[i] === null ? null : ms(alut[paikat[i]]));
+  const loppuMs = (i) => (paikat[i] === null ? null : ms(loput[paikat[i]]));
+
+  const rivit = jasennys.jaksot.map((jakso) => {
+    const puhutut = jakso.sanat.map((s) => s.merkki);
+    if (!puhutut.length) throw new Error(`jaksossa ${jakso.tunnus} ei ole sanoja`);
+    const alku = alkuMs(puhutut[0]);
+    // Viimeisen sanan viimeinen merkki: sen loppuaika päättää jakson.
+    const viimeinen = jakso.sanat[jakso.sanat.length - 1];
+    const viimeMerkki = viimeinen.merkki + viimeinen.sana.length - 1;
+    const loppu = loppuMs(viimeMerkki);
+    if (alku === null || loppu === null) {
+      throw new Error(`jakson ${jakso.tunnus} aikaleimoja ei löytynyt aineistosta`);
+    }
+    return {
+      tunnus: jakso.tunnus,
+      alku,
+      loppu,
+      lauseet: jakso.lauseet.map(alkuMs).filter((v) => v !== null),
+      sanat: jakso.sanat
+        .map((s) => ({ sana: s.sana, alku: alkuMs(s.merkki) }))
+        .filter((s) => s.alku !== null),
+    };
+  });
+
+  /*
+   * HÄNTÄ JOKAISEEN JAKSOON, MUTTA EI SEURAAVAN PÄÄLLE. Viimeinen
+   * äänne katkeaisi, jos jakso päättyisi tasan sen loppuaikaan.
+   */
+  const raja = Number.isFinite(kesto) ? ms(kesto) : null;
+  return rivit.map((rivi, i) => {
+    const seuraava = rivit[i + 1]?.alku ?? raja ?? rivi.loppu + JAKSON_HANTA_MS;
+    return { ...rivi, loppu: Math.min(rivi.loppu + JAKSON_HANTA_MS, seuraava) };
+  });
+}
+
+/**
+ * MANIFESTI YHTENÄISELLE LUENNALLE. Peli lukee tämän
+ * (js/linssit/ihmisen-matka-luenta.js): `yhtena: true` kertoo, että
+ * kertomus on yhtenä tiedostona ja jakso soitetaan sen väliltä.
+ */
+export function kokoaYhtenaManifesti({
+  kaari, jasennys, jaksot, tiedosto, kesto, malli = MALLI, tagit = false,
+  aikaleimalahde = AIKALEIMAN_LAHTEET.pakotettu,
+}) {
+  return {
+    versio: 2,
+    yhtena: true,
+    kansio: ampariKansio(kaari),
+    paivitetty: new Date().toISOString().slice(0, 10),
+    malli,
+    /** 'forced-alignment' (oletus) tai 'with-timestamps' (varareitti). */
+    aikaleimalahde,
+    tagit,
+    tiedosto,
+    kesto: Number(Number(kesto).toFixed(2)),
+    merkkeja: jasennys.teksti.length,
+    merkkiaSekunnissa: KERTOMUKSEN_MERKKIA_SEKUNNISSA,
+    jaksoja: jaksot.length,
+    jaksot,
+  };
+}
+
 // ── apurit ─────────────────────────────────────────────────────────
 
 function aja(komento, argumentit, { salliVirhe = false } = {}) {
@@ -492,13 +861,13 @@ function ampariHead(nimi, kansio) {
 // ── ketjun vaiheet ─────────────────────────────────────────────────
 
 /** Yksi maksullinen kutsu: yksi luenta levylle. */
-async function haeApista(puhe, avain, kohde) {
+async function haeApista(puhe, avain, kohde, { malli = MALLI } = {}) {
   const vastaus = await fetch(OSOITE, {
     method: 'POST',
     headers: { 'xi-api-key': avain, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       inputs: [{ text: puhe + LOPPUTAUKO, voice_id: AANI }],
-      model_id: MALLI,
+      model_id: malli,
       settings: { stability: STABILITY },
     }),
     signal: AbortSignal.timeout(180000),
@@ -510,6 +879,57 @@ async function haeApista(puhe, avain, kohde) {
   const data = Buffer.from(await vastaus.arrayBuffer());
   writeFileSync(kohde, data);
   return data.length;
+}
+
+/**
+ * PAKOTETTU KOHDISTUS: valmis äänite ja sama teksti tagit karsittuina
+ * sisään, merkkien ja sanojen ajat ulos. Ääni on jo generoitu (v3), eikä
+ * tämä kutsu tuota uutta ääntä — se vain kohdistaa tekstin siihen.
+ *
+ * @returns {object} vastausrunko (characters, words, loss)
+ */
+async function haeKohdistus(mp3polku, teksti, avain) {
+  const lomake = new FormData();
+  lomake.append('file', new Blob([readFileSync(mp3polku)], { type: 'audio/mpeg' }), 'kertomus.mp3');
+  lomake.append('text', teksti);
+  const vastaus = await fetch(PAKOTETUN_OSOITE, {
+    method: 'POST',
+    headers: { 'xi-api-key': avain },
+    body: lomake,
+    signal: AbortSignal.timeout(600000),
+  });
+  if (!vastaus.ok) {
+    throw new Error(`HTTP ${vastaus.status}: ${(await vastaus.text()).slice(0, 400)}`);
+  }
+  return vastaus.json();
+}
+
+/**
+ * YKSI KUTSU, KOKO KERTOMUS JA AIKALEIMAT. Aikaleimapääte palauttaa
+ * JSONin, jossa on `audio_base64` ja `alignment` (merkit sekä niiden
+ * alku- ja loppuajat sekunteina).
+ *
+ * @returns {{tavut:number, alignment:object}}
+ */
+async function haeAikaleimoilla(teksti, avain, kohde, { malli = AIKALEIMOJEN_MALLI } = {}) {
+  const vastaus = await fetch(aikaleimojenOsoite(), {
+    method: 'POST',
+    headers: { 'xi-api-key': avain, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      text: teksti + LOPPUTAUKO,
+      model_id: malli,
+      voice_settings: { stability: STABILITY },
+    }),
+    signal: AbortSignal.timeout(600000),
+  });
+  if (!vastaus.ok) {
+    throw new Error(`HTTP ${vastaus.status}: ${(await vastaus.text()).slice(0, 400)}`);
+  }
+  const runko = await vastaus.json();
+  if (!runko?.audio_base64) throw new Error('vastauksessa ei ollut audio_base64-kenttää');
+  const data = Buffer.from(runko.audio_base64, 'base64');
+  writeFileSync(kohde, data);
+  return { tavut: data.length, alignment: runko.alignment ?? runko.normalized_alignment };
 }
 
 /**
@@ -530,13 +950,29 @@ export function viimeistelySuodatin({
   ].join(',');
 }
 
-/** Leikkaa hiljaisuus, normalisoi taso, palauta 150 ms häntä ja koodaa mp3. */
-function viimeistele(lahde, kohde, tyokansio) {
+/**
+ * Hiljaisuuden leikkaus VAIN LOPUSTA. Yhtenäisen luennan aikaleimat
+ * lasketaan mallin palauttamasta alignmentista, joka alkaa raa'an
+ * äänitteen nollasta: jos alusta leikattaisiin hiljaisuutta, jokainen
+ * jakso soisi väärästä kohdasta. Loppu saa yhä lähteä (sama temppu kuin
+ * generoi-tehosteet.mjs:ssä: käännä, leikkaa alku, käännä takaisin).
+ */
+export function leikkaaVainLoppuSuodatin() {
+  const koko = leikkaaHiljaisuusSuodatin();
+  return `areverse,${koko.split(',')[0]},areverse`;
+}
+
+/**
+ * Leikkaa hiljaisuus, normalisoi taso, palauta 150 ms häntä ja koodaa
+ * mp3. `sailytaAlku` jättää alun hiljaisuuden paikalleen (yhtenäinen
+ * luenta, ks. leikkaaVainLoppuSuodatin).
+ */
+function viimeistele(lahde, kohde, tyokansio, { sailytaAlku = false } = {}) {
   const wav = join(tyokansio, 'leikattu.wav');
   aja('ffmpeg', [
     '-y', '-v', 'error', '-i', lahde,
     '-af', `aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=mono,${
-      leikkaaHiljaisuusSuodatin()}`,
+      sailytaAlku ? leikkaaVainLoppuSuodatin() : leikkaaHiljaisuusSuodatin()}`,
     '-c:a', 'pcm_s16le', wav,
   ]);
   const leikattu = kestoSekunteina(wav);
@@ -603,13 +1039,213 @@ function vieAmpariin(kohde, nimi, kansio, tyyppi = 'audio/mpeg') {
 
 // ── pääohjelma ─────────────────────────────────────────────────────
 
+/** ffmpeg ja ffprobe polusta; ilman niitä viimeistely ei onnistu. */
+function vaadiTyokalut() {
+  for (const komento of ['ffmpeg', 'ffprobe']) {
+    if (!onOlemassa(komento)) {
+      console.error(`${komento} puuttuu polusta — viimeistely tarvitsee sen.`);
+      console.error('Asennus: apt-get install -y ffmpeg (ajossa tämä tehdään automaattisesti).');
+      process.exit(1);
+    }
+  }
+}
+
+/** API-avain ympäristöstä; sitä ei tulosteta koskaan. */
+function vaadiAvain() {
+  const avain = process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY;
+  if (!avain) {
+    console.error('ELEVEN_API_KEY puuttuu ympäristöstä — luentoja ei voi generoida.');
+    console.error('Kuivan ajon saa ilman avainta: node tools/generoi-linssiluennat.mjs --kuiva');
+    process.exit(1);
+  }
+  return avain;
+}
+
+/** Media ei saa mennä repoon: kansiot ovat .gitignoressa. */
+function valmisteleKansiot() {
+  const kohdekansio = resolve(JUURI, KOHDE_KANSIO);
+  const raakakansio = resolve(JUURI, RAAKA_KANSIO);
+  vaadiGitignore(kohdekansio);
+  vaadiGitignore(raakakansio);
+  mkdirSync(kohdekansio, { recursive: true });
+  mkdirSync(raakakansio, { recursive: true });
+  return { kohdekansio, raakakansio };
+}
+
+/**
+ * KOKO KERTOMUS YHTENÄ LUENTANA (--kertomus --yhtena). Palauttaa
+ * prosessin paluukoodin.
+ */
+async function ajaYhtenainen({ kaari, kansio, liput }) {
+  const rivit = kertomuksenLuennat(kaari);
+  if (!rivit.length) {
+    console.error('Kertomuksessa ei ole jaksoja.');
+    return 1;
+  }
+  const malli = liput.malli ?? MALLI;
+  const tagit = tunteeTagit(malli);
+  /*
+   * KAKSI JÄSENNYSTÄ SAMASTA KAANONISTA. `lahetetty` menee mallille
+   * (v3:lla tagit mukana), `puhuttu` on tagiton — juuri se, mitä
+   * äänessä kuuluu, ja siksi se annetaan pakotetulle kohdistukselle ja
+   * siitä lasketaan jaksojen, lauseiden ja sanojen merkki-indeksit.
+   */
+  const lahetetty = kertomuksenJasennys(rivit, { tagit });
+  const puhuttu = tagit ? kertomuksenJasennys(rivit, { tagit: false }) : lahetetty;
+  const nimi = `${kaari.kertomusRunko ?? 'kertomus'}.mp3`;
+  const merkit = lahetetty.teksti.length;
+
+  console.log(`YKSI YHTENÄINEN LUENTA — ${rivit.length} jaksoa yhtenä pyyntönä.`);
+  console.log(`   ääni Viisas Kertoja, malli ${malli}, `
+    + `tagit ${tagit ? 'mukana' : 'karsittu (malli ei tunne niitä)'}.`);
+  console.log(`   aikaleimat: ${AIKALEIMAN_LAHTEET.pakotettu} (${PAKOTETUN_OSOITE}) — `
+    + `varareitti ${AIKALEIMAN_LAHTEET.leimattu} + ${AIKALEIMOJEN_MALLI} `
+    + '(generoi äänen uudelleen, kirjataan manifestiin).');
+  console.log(`   ${merkit} merkkiä · varakesto `
+    + `${(merkit / KERTOMUKSEN_MERKKIA_SEKUNNISSA / 60).toFixed(1)} min`);
+  console.log(`   ääni     ${kansio}/${nimi}`);
+  console.log(`   manifesti ${kansio}/${KERTOMUS_MANIFESTI}`);
+  console.log('');
+  console.log('── JAKSORAJAT (merkkeinä puhuttuun tekstiin) ──');
+  for (const jakso of puhuttu.jaksot) {
+    console.log(`   ${jakso.tunnus.padEnd(18)} ${String(jakso.alku).padStart(6)}–`
+      + `${String(jakso.loppu).padStart(6)}  ${jakso.lauseet.length} lausetta, `
+      + `${jakso.sanat.length} sanaa`);
+  }
+
+  if (liput.kuiva) {
+    console.log('');
+    console.log('── KOOTTU TEKSTI (juuri tämä lähtisi mallille) ──');
+    console.log(lahetetty.teksti);
+    if (tagit) {
+      console.log('');
+      console.log('── SAMA TEKSTI KOHDISTUKSELLE (tagit karsittuina) ──');
+      console.log(puhuttu.teksti);
+    }
+    console.log('');
+    console.log('KUIVA AJO (--kuiva) — APIa ei kutsuttu, ämpäriin ei viety.');
+    return 0;
+  }
+
+  vaadiTyokalut();
+  const avain = vaadiAvain();
+  const { kohdekansio, raakakansio } = valmisteleKansiot();
+
+  if (!liput.pakota) {
+    const { url, koodi } = ampariHead(nimi, kansio);
+    if (koodi === '200') {
+      console.log(`\n${url} on jo ämpärissä — ohitetaan. --pakota kirjoittaa yli.`);
+      return 0;
+    }
+  }
+
+  const tyokansio = mkdtempSync(join(tmpdir(), 'linssiluennat-'));
+  try {
+    const kohde = join(kohdekansio, nimi);
+    const lahde = join(raakakansio, `raaka-${nimi}`);
+
+    /*
+     * ALUN HILJAISUUS JÄÄ PAIKALLEEN kummallakin reitillä: aikaleimat
+     * ovat äänitteen nollasta, joten alun leikkaus siirtäisi jaksot.
+     */
+    const viimeisteleJaMittaa = () => {
+      const { leikattu, mitattu, korjaus } = viimeistele(lahde, kohde, tyokansio, {
+        sailytaAlku: true,
+      });
+      console.log(`leikkaus (vain loppu): ${kestoSekunteina(lahde).toFixed(2)} s → `
+        + `${leikattu.toFixed(2)} s, taso ${mitattu.taso.toFixed(1)} LUFS, `
+        + `korjaus ${korjaus.toFixed(2)} dB`);
+      return tarkista(kohde, YHTENAN_KESTO_MAX_S);
+    };
+
+    // 1) ÄÄNI: sama pääte, malli ja asetukset kuin jakso kerrallaan
+    // -tilassa (omistaja valitsi v3:n sen ilmaisutagien takia).
+    const tavut = await haeApista(lahetetty.teksti, avain, lahde, { malli });
+    console.log(`\nAPI (${malli}): ${(tavut / 1024).toFixed(0)} kt → ${lahde}`);
+    let tulos = viimeisteleJaMittaa();
+
+    // 2) AIKALEIMAT: pakotettu kohdistus valmiiseen äänitteeseen.
+    let aikaleimalahde = AIKALEIMAN_LAHTEET.pakotettu;
+    let aaniMalli = malli;
+    let kohdistus = null;
+    try {
+      kohdistus = await haeKohdistus(kohde, puhuttu.teksti, avain);
+      const merkkeja = normalisoiAlignment(kohdistus)?.characters?.length ?? 0;
+      if (!merkkeja) throw new Error('vastauksessa ei ollut merkkejä');
+      console.log(`kohdistus: ${merkkeja} merkkiä, loss ${Number(kohdistus.loss ?? NaN).toFixed(3)}`);
+    } catch (virhe) {
+      /*
+       * VARAREITTI KIRJATAAN, EI VAIHDETA HILJAA. Aikaleimapääte
+       * generoi äänen ITSE omalla mallillaan, joten v3:n ilmaisu jää
+       * pois — siksi tämä on hätävara ja se näkyy sekä lokissa että
+       * manifestissa (aikaleimalahde, malli).
+       */
+      console.error(`   VIRHE: pakotettu kohdistus ei onnistunut: ${virhe.message}`);
+      console.error(`   VARAREITTI: ${AIKALEIMAN_LAHTEET.leimattu} + ${AIKALEIMOJEN_MALLI} — `
+        + 'ääni generoidaan uudelleen tällä mallilla, eikä siinä ole v3:n tageja.');
+      const uusi = await haeAikaleimoilla(puhuttu.teksti, avain, lahde, {
+        malli: AIKALEIMOJEN_MALLI,
+      });
+      console.log(`API (${AIKALEIMOJEN_MALLI}): ${(uusi.tavut / 1024).toFixed(0)} kt → ${lahde}`);
+      kohdistus = uusi.alignment;
+      aikaleimalahde = AIKALEIMAN_LAHTEET.leimattu;
+      aaniMalli = AIKALEIMOJEN_MALLI;
+      tulos = viimeisteleJaMittaa();
+    }
+
+    console.log(`valmis: ${tulos.pituus.toFixed(2)} s, `
+      + `${tulos.taso === null ? '?' : tulos.taso.toFixed(1)} LUFS → ${kohde}`);
+    if (tulos.virheet.length) {
+      for (const virhe of tulos.virheet) console.error(`   VIRHE: ${virhe}`);
+      return 1;
+    }
+
+    const jaksot = aikaleimoiksi(puhuttu, kohdistus, { kesto: tulos.pituus });
+    const manifesti = kokoaYhtenaManifesti({
+      kaari,
+      jasennys: puhuttu,
+      jaksot,
+      tiedosto: nimi,
+      kesto: tulos.pituus,
+      malli: aaniMalli,
+      tagit: aikaleimalahde === AIKALEIMAN_LAHTEET.pakotettu ? tagit : false,
+      aikaleimalahde,
+    });
+    console.log(`aikaleimat: ${aikaleimalahde} (malli ${aaniMalli})`);
+    const manifestiPolku = join(kohdekansio, KERTOMUS_MANIFESTI);
+    writeFileSync(manifestiPolku, `${JSON.stringify(manifesti, null, 2)}\n`);
+    console.log('');
+    for (const jakso of jaksot) {
+      console.log(`   ${jakso.tunnus.padEnd(18)} ${(jakso.alku / 1000).toFixed(2)}–`
+        + `${(jakso.loppu / 1000).toFixed(2)} s`);
+    }
+
+    if (!liput.vienti) {
+      console.log(`\nVienti ohitettiin (--ei-vientia): ${kohde} ja ${manifestiPolku}`);
+      return 0;
+    }
+    vieAmpariin(kohde, nimi, kansio);
+    vieAmpariin(manifestiPolku, KERTOMUS_MANIFESTI, kansio, 'application/json');
+    const { url, koodi } = ampariHead(nimi, kansio);
+    console.log(`\nViety ämpäriin: ${url} → HTTP ${koodi ?? '?'}`);
+    console.log(`Manifesti viety: ${kansio}/${KERTOMUS_MANIFESTI}`);
+    console.log('');
+    console.log('KUUNTELE luenta ennen kuin se jää peliin: kertojan sävyn pitää '
+      + 'pysyä samana jaksosta toiseen, ja jaksojen rajojen osua puheen taukoihin.');
+    return koodi === '200' ? 0 : 1;
+  } finally {
+    rmSync(tyokansio, { recursive: true, force: true });
+  }
+}
+
 async function main() {
   const liput = tulkitseArgumentit(process.argv.slice(2));
   if (liput.virhe) {
     console.error(`${liput.virhe}.`);
     console.error('Käyttö: node tools/generoi-linssiluennat.mjs '
       + `[--linssi ${Object.keys(LINSSIT).join('|')}] `
-      + '[--kertomus] [--pysakit 1769,1783] [--kuiva] [--pakota] [--ei-vientia]');
+      + '[--kertomus [--yhtena [--malli <id>]]] [--pysakit 1769,1783] '
+      + '[--kuiva] [--pakota] [--ei-vientia]');
     process.exit(1);
   }
 
@@ -625,6 +1261,10 @@ async function main() {
     console.error(`Linssillä ${liput.linssi} ei ole kertomusta (aikajana.kertomus).`);
     process.exit(1);
   }
+
+  // Yhtenäinen luenta on oma ketjunsa: yksi kutsu, yksi tiedosto,
+  // aikaleimat manifestiin (ks. YKSI YHTENÄINEN LUENTA).
+  if (liput.yhtena) process.exit(await ajaYhtenainen({ kaari, kansio, liput }));
 
   const { tyot, tuntemattomat } = liput.kertomus
     ? valitseKertomus(kaari, liput.pysakit)
@@ -679,28 +1319,10 @@ async function main() {
     process.exit(0);
   }
 
-  for (const komento of ['ffmpeg', 'ffprobe']) {
-    if (!onOlemassa(komento)) {
-      console.error(`${komento} puuttuu polusta — viimeistely tarvitsee sen.`);
-      console.error('Asennus: apt-get install -y ffmpeg (ajossa tämä tehdään automaattisesti).');
-      process.exit(1);
-    }
-  }
-
-  const avain = process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY;
-  if (!avain) {
-    console.error('ELEVEN_API_KEY puuttuu ympäristöstä — luentoja ei voi generoida.');
-    console.error('Kuivan ajon saa ilman avainta: node tools/generoi-linssiluennat.mjs --kuiva');
-    process.exit(1);
-  }
-
+  vaadiTyokalut();
+  const avain = vaadiAvain();
   // Ennen ensimmäistäkään maksullista kutsua: kohde ei saa olla repossa.
-  const kohdekansio = resolve(JUURI, KOHDE_KANSIO);
-  const raakakansio = resolve(JUURI, RAAKA_KANSIO);
-  vaadiGitignore(kohdekansio);
-  vaadiGitignore(raakakansio);
-  mkdirSync(kohdekansio, { recursive: true });
-  mkdirSync(raakakansio, { recursive: true });
+  const { kohdekansio, raakakansio } = valmisteleKansiot();
 
   const tyokansio = mkdtempSync(join(tmpdir(), 'linssiluennat-'));
   const valmiit = [];

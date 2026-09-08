@@ -4444,7 +4444,7 @@ export const RAAMATTU = {
           + 'tarinan alkupaikkeella, kun kaydaan Etela-Afrikan kohdalla, niin '
           + 'kartta voisi zoomautua ulospain, jotta ei hukattaisi sita viivaa, '
           + 'jossa oltiin menossa niin pahasti"): esityksen alkujaksoissa '
-          + '(ranta, blombos) kamera pysyy niin kaukana, etta kulkeva vana ja '
+          + '(ranta) kamera pysyy niin kaukana, etta kulkeva vana ja '
           + 'sen karki nakyvat koko ajan; kameran saanto (vanat.md 3.2) '
           + 'tasmennetaan: karki ei saa poistua kuvasta lahennettaessa.',
         'IHMISEN MATKA: VANAT RANNIKKOA MAALAAVINA KAISTOINA, EI VIIVA JA HALO '

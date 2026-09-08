@@ -40,9 +40,9 @@
  *
  * ── PITO: RINTAMA EI KATOA ────────────────────────────────────────
  *
- * Kaanoni palaa ajassa taaksepäin kahdesti (Blombos 75 ka →
- * Karmelvuori 110 ka ja Chile 14,5 ka → aikahyppy 50 ka). Ilman
- * pitoa vana kelautuisi kummallakin kerralla auki. Pito kytketään
+ * Kaanoni palaa ajassa taaksepäin kerran (Chile 14,5 ka → aikahyppy
+ * 50 ka; Blombosin toinen paluu poistui 8.9.2026, kun Etelä-Afrikassa
+ * käydään enää kerran). Ilman pitoa vana kelautuisi auki. Pito kytketään
  * päälle KOKO ESITYKSEN AJAKSI heti valojen syttyessä
  * (js/aikajana-virrat.js asetaPito, js/aikajana-vanat.js paivita):
  * piirretty vana ei enää lyhene, mutta kasvaa yhä normaalisti.
@@ -60,14 +60,22 @@
  *
  * ── LUENTA JA KESTO ───────────────────────────────────────────────
  *
- * Jakson luenta on ämpärissä kaaren omassa puhekansiossa nimellä, jonka
- * antaa js/linssipuhe.js kertomuksenRunko — sama funktio kuin
+ * Luenta on omassa moduulissaan (js/linssit/ihmisen-matka-luenta.js),
+ * ja sillä on kaksi tilaa. YKSI YHTENÄINEN LUENTA (omistaja 8.9.2026:
+ * *"kertojan äänensävy hyppii liikaa"*): koko kertomus on ämpärissä
+ * yhtenä äänitteenä, ja jakso soitetaan sen väliltä, jonka
+ * kertomus-manifesti.json antaa (`alku`–`loppu`, ms). JAKSO KERRALLAAN
+ * on entinen käytös: oma mp3 per jakso nimellä, jonka antaa
+ * js/linssipuhe.js kertomuksenRunko — sama funktio kuin
  * generointityökalulla (tools/generoi-linssiluennat.mjs --kertomus),
- * joten nimi ei voi eriytyä. Jakson kesto luetaan ÄÄNITTEESTÄ heti kun
- * sen metatiedot saapuvat; siihen asti (ja kokonaan ilman äänitettä)
- * kesto on tekstin pituus jaettuna 14 merkillä sekunnissa
- * (kertomuksenVarakesto). Esitys ei siis pysähdy siihen, ettei ääntä
- * ole — mykistetty peli kulkee luetun mittaisena.
+ * joten nimi ei voi eriytyä. Kesto tulee manifestista (yhtenäinen) tai
+ * ÄÄNITTEESTÄ heti kun sen metatiedot saapuvat; siihen asti (ja
+ * kokonaan ilman äänitettä) kesto on tekstin pituus jaettuna 14
+ * merkillä sekunnissa (kertomuksenVarakesto). Esitys ei siis pysähdy
+ * siihen, ettei ääntä ole — mykistetty peli kulkee luetun mittaisena.
+ * Manifestin lauseiden ja sanojen aikaleimat välittyvät jaksolle
+ * kenttään `jakso.aikaleimat` (ms jakson alusta), josta avaus ja
+ * tekstin rytmitys voivat lukea ne.
  *
  * ── PULUN VÄLIHUOMIOT ─────────────────────────────────────────────
  *
@@ -88,7 +96,8 @@
  */
 
 import { projisoiLaudalle } from '../fokusmitat.js';
-import { kertomuksenRunko, kertomuksenVarakesto, soitaLinssiluenta } from '../linssipuhe.js';
+import { kertomuksenVarakesto } from '../linssipuhe.js';
+import { luoKertomusluenta } from './ihmisen-matka-luenta.js';
 import { soitaLivianLinssiAani } from '../liviapuhe.js';
 import { polloLinssikupla } from '../pollo.js';
 import { karkiHetkella } from '../aikajana-vanat.js';
@@ -210,10 +219,11 @@ export const LOPUN_ASETUS_MS = 1200;
  * SÄÄNTÖ (jaksonRajaus): kohteellisen jakson kamera rajataan
  * laatikkoon, jossa ovat KOHDE ja jakson aikana LIIKKUVIEN vanojen
  * kärkipolut (viisi näytettä jakson kellovälillä). Vain UUTTA piirtävä
- * osuus lasketaan — pito (kello käy kaanonissa kahdesti taaksepäin)
- * pitää jo piirretyn paikallaan, eikä sen "kärki" ole rintama. Kun
- * jakso ei piirrä mitään uutta (kello palaa taaksepäin: 'blombos'),
- * mukaan otetaan nykyinen rintama, jotta se ei katoa kuvasta.
+ * osuus lasketaan — pito (kello palaa kaanonissa taaksepäin
+ * aikahypyssä) pitää jo piirretyn paikallaan, eikä sen "kärki" ole
+ * rintama. Kun jakso ei piirrä mitään uutta (kello palaa taaksepäin
+ * tai seisoo pidon pohjalla), mukaan otetaan nykyinen rintama, jotta se
+ * ei katoa kuvasta.
  *
  * KAKSI ETÄISYYSKATTOA, koska koko maailma ei ole yksi näyttämö:
  * selkäranka (kertomuksen päälinja) otetaan mukaan KARJEN_ETAISYYS_MAX_AST
@@ -400,6 +410,11 @@ export function luoEsitys({ ajo }) {
   /** Jakson tunnus → moottorin pysäkin indeksi (kuva ja lamppu). */
   const pysakit = new Map();
   ajo.tapahtumat.forEach((t, i) => { if (t?.tunnus) pysakit.set(t.tunnus, i); });
+  /*
+   * Kertojan soitin. Syntyy jo linssiä avattaessa, joten se ehtii hakea
+   * kertomus-manifestin ämpäristä ennen kuin pelaaja painaa Käynnistä.
+   */
+  const luenta = luoKertomusluenta({ ajo, etuliite });
 
   const tila = {
     i: -1,
@@ -761,44 +776,27 @@ export function luoEsitys({ ajo }) {
 
   /* ------------------------------------------------------------ luenta */
 
+  /*
+   * LUENTA ON OMASSA MODUULISSAAN (js/linssit/ihmisen-matka-luenta.js).
+   * Se tietää, onko ämpärissä yksi yhtenäinen luenta (kertomus-
+   * manifesti.json `yhtena: true`, jakso soitetaan sen väliltä) vai
+   * jakso kerrallaan omina tiedostoinaan, ja se antaa jakson lauseiden
+   * ja sanojen aikaleimat kenttään `jakso.aikaleimat`. Ohjaaja saa
+   * siltä vain kaksi asiaa: soittimen kahvan ja jakson keston.
+   */
   const aloitaLuenta = (jakso, { alkukohta = 0 } = {}) => {
-    const runko = kertomuksenRunko(jakso, etuliite);
-    tila.aani = runko
-      ? soitaLinssiluenta(ajo.ui, null, { runko, juuri: ajo.luentajuuri, viive: 0 })
-      : null;
-    const aani = tila.aani;
-    if (!aani) return;
-    /*
-     * JATKO KESKELTÄ JAKSOA (muisti): äänite kelataan samaan kohtaan
-     * kuin kello, heti kun sen kesto tiedetään. Kelaus ennen
-     * metatietoja ei ole luotettava kaikissa selaimissa.
-     */
-    if (alkukohta > 0) {
-      const kelaa = () => {
-        if (tila.aani !== aani || tila.purettu) return;
-        const kesto = Number(aani.duration);
-        if (Number.isFinite(kesto) && kesto > 0 && alkukohta / 1000 < kesto - 0.5) {
-          try { aani.currentTime = alkukohta / 1000; } catch { /* ei kelattavissa */ }
-        }
-      };
-      aani.addEventListener('loadedmetadata', kelaa, { once: true });
-      if (Number.isFinite(aani.duration) && aani.duration > 0) kelaa();
-    }
-    /*
-     * KESTO ÄÄNITTEESTÄ HETI KUN SE TIEDETÄÄN. Varakesto on jo
-     * käytössä, joten metatietojen viive ei pysäytä mitään: jakson
-     * kesto vain tarkentuu kesken jakson. Vanha äänite (edellinen
-     * jakso) ei saa muuttaa nykyistä — siksi tunnistus kahvasta.
-     */
-    const tarkenna = () => {
-      if (tila.aani !== aani || tila.purettu) return;
-      const kesto = Number(aani.duration);
-      if (!Number.isFinite(kesto) || kesto <= 0) return;
-      tila.luenta = Math.round(kesto * 1000);
-      tila.kesto = tila.luenta + (jakso.pulu ? PULUN_VARA_MS : 0);
-    };
-    aani.addEventListener('loadedmetadata', tarkenna, { once: true });
-    tarkenna();
+    tila.aani = luenta.aloita(jakso, {
+      alkukohta,
+      onAani: (aani) => { tila.aani = aani; },
+      // Vanha äänite (edellinen jakso) ei saa muuttaa nykyistä.
+      ajankohtainen: () => !tila.purettu && kertomus[tila.i] === jakso,
+      voiSoida: () => !tila.purettu && !tila.tauolla,
+      onKesto: (ms) => {
+        if (!Number.isFinite(ms) || ms <= 0) return;
+        tila.luenta = Math.round(ms);
+        tila.kesto = tila.luenta + (jakso.pulu ? PULUN_VARA_MS : 0);
+      },
+    });
   };
 
   /* ------------------------------------------------------------- pulu */
@@ -864,6 +862,14 @@ export function luoEsitys({ ajo }) {
       KAMERAN_POHJA_MS,
       Math.min(KAMERAN_KATTO_MS, Math.round(tila.luenta * KAMERAN_OSUUS)),
     );
+    /*
+     * HILJAISET NOSTOT (kaanonin `hiljaiset`): löytöpaikka, jolla ei ole
+     * omaa jaksoa, syttyy kartalle jakson alkaessa — mutta kamera ei aja
+     * sinne eikä kuvaa nosteta. Blombos on tällainen: kertoja mainitsee
+     * etelän okran ja helmet Arabian jaksossa (omistaja 8.9.2026,
+     * "Etelä-Afrikka vain kerran").
+     */
+    for (const hiljainen of jakso.hiljaiset ?? []) sytytaKohde(hiljainen);
     if (jakso.kohde) {
       sytytaKohde(jakso.kohde);
       naytaKuva(jakso.kohde);
@@ -1171,6 +1177,7 @@ export function luoEsitys({ ajo }) {
       if (tila.purettu) return;
       tila.purettu = true;
       seis();
+      luenta.pura();
       suljeKuva();
       // Avaruus pois heti: musta levy ja pistepilvi eivät saa jäädä
       // roikkumaan, jos linssi suljetaan kesken avauksen.
@@ -1209,6 +1216,10 @@ export function luoEsitys({ ajo }) {
       koukku: tila.koukkuKutsuttu,
       kesto: Math.round(tila.kesto),
       luenta: Math.round(tila.luenta),
+      /** Soiko kertoja yhtenä tiedostona (manifesti) vai jakso kerrallaan. */
+      yhtenainenLuenta: luenta.yhtena(),
+      /** Jakson aikaleimat esityksen käyttöön (lauseiden määrä riittää mittariksi). */
+      lauseita: kertomus[tila.i]?.aikaleimat?.lauseet?.length ?? null,
       kulunut: Math.round(tila.kulunut),
       pitoMin: Number.isFinite(tila.pitoMin) ? Math.round(tila.pitoMin) : null,
       karjet: tila.karjet,

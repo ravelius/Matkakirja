@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1699, teksti: 'Ihmisen matkan uusi tarina ja yhtenäinen luenta' },
   { v: 1698, teksti: 'Pulun alustukset pois, uudet kommentit, matkakirjan otsikko' },
   { v: 1697, teksti: 'Kuvatekstit kaikille kuville, kaupunkipisteet vaaleammiksi' },
   { v: 1696, teksti: 'Tiedeliitteen yläreuna, kuvatekstit ja suurennoksen sääntö' },

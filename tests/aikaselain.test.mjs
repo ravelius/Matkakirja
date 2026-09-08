@@ -371,8 +371,9 @@ test('kelauksen lukema kulkee viivojen välissä geometrisesti', () => {
 test('kaanonin taaksepäin kulkevat välit eivät riko kelausta', () => {
   const k = IHMISEN_MATKA_KERTOMUS;
   // Ainoa taaksepäin kulkeva väli on tarkoituksellinen aikahyppy
-  // (v1679: Levantti kerrotaan ennen Blombosta, kello ei muuten kulje
-  // taaksepäin): Chile (14 500) → aikahyppy (50 000): lukema kasvaa välissä.
+  // (8.9.2026: Blombosin jakso poistui, joten Etelä-Afrikassa käydään
+  // kerran eikä kello käänny siellä): Chile (14 500) → aikahyppy
+  // (50 000): lukema kasvaa välissä.
   const i = k.findIndex((j) => j.id === 'chile');
   assert.ok(i > 0, 'kaanonista ei löydy chile-jaksoa');
   assert.equal(k[i + 1]?.id, 'aikahyppy', 'chilen jälkeen pitää tulla aikahyppy');
@@ -441,12 +442,12 @@ test('nauha on ruudun alalaidassa ja muut väistävät sitä', () => {
   assert.match(CSS, /prefers-reduced-motion: reduce\) \{\s*\n\s*\.aikaselain,/);
 });
 
-test('puhelimella 22 viivaa mahtuu nauhalle', () => {
-  // 390 px:n ruutu, kaanonin 22 jaksoa: väli on noin 15 px eli sormen
+test('puhelimella kaikki viivat mahtuvat nauhalle', () => {
+  // 390 px:n ruutu, kaanonin 21 jaksoa: väli on noin 19 px eli sormen
   // erottama (omistajan mitta tehtävänannossa).
   const maara = IHMISEN_MATKA_KERTOMUS.length;
   const vali = 390 / maara;
-  assert.ok(maara >= 20 && maara <= 30, `jaksoja ${maara} — nauhan mitat on laskettu 22:lle`);
+  assert.ok(maara >= 20 && maara <= 30, `jaksoja ${maara} — nauhan mitat on laskettu 21:lle`);
   assert.ok(vali >= 12 && vali <= 20, `viivaväli puhelimella ${vali.toFixed(1)} px`);
   // Viivan leveys on 2–3 px, joten väliin jää tyhjää.
   assert.match(CSS, /\.aikaselain-viiva \{[^}]*width: 2px;/s);
