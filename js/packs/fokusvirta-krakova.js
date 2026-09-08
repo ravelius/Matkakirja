@@ -205,26 +205,27 @@ export const FOKUSVIRTA_KRAKOVA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Krakova, kesäkuussa 1873. Poutaa; torilla pölyää.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
+    /* KAANON UUSIKSI (Fable, omistaja hyväksyi 8.9.2026 ilta). 377 merkkiä (yläraja 400). */
     teksti: 'Torin laidalla kangashalli on täynnä kauppiaita kuin '
       + 'neljäsataa vuotta sitten, ja tasatunnein tornista soi torvi, '
-      + 'jonka sävelmä loppuu kesken — kysyin syytä kolmelta mieheltä ja '
-      + 'sain kolme eri tarinaa. Wawelin kukkulalla kuninkaat nukkuvat '
-      + 'kirkon lattian alla. Tämä kaupunki kuuluu nyt keisarille Wienissä, '
-      + 'mutta se muistaa olleensa kuningasten kaupunki, ja muisti on '
-      + 'täällä pitkävihaisempi kuin missään.',
+      + 'jonka sävelmä loppuu kesken. Kysyin syytä kolmelta mieheltä '
+      + 'ja sain kolme eri tarinaa. Wawelin kukkulalla kuninkaat '
+      + 'nukkuvat kirkon lattian alla. Kaupunki kuuluu nyt keisarille '
+      + 'Wienissä, mutta se muistaa olleensa kuningasten kaupunki, '
+      + 'eikä muisti täällä haalistu.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    luenta: '[curious] Torin laidalla kangashalli on täynnä kauppiaita kuin '
-      + 'neljäsataa vuotta sitten, ja tasatunnein tornista soi torvi, '
-      + 'jonka sävelmä loppuu kesken — kysyin syytä kolmelta mieheltä ja '
-      + 'sain kolme eri tarinaa. [softly] Wawelin kukkulalla kuninkaat '
-      + 'nukkuvat kirkon lattian alla. [whispers] Tämä kaupunki kuuluu nyt '
-      + 'keisarille Wienissä, mutta se muistaa olleensa kuningasten '
-      + 'kaupunki, ja muisti on täällä pitkävihaisempi kuin missään.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Torin laidalla kangashalli on täynnä kauppiaita '
+      + 'kuin neljäsataa vuotta sitten, ja tasatunnein tornista soi '
+      + 'torvi, jonka sävelmä loppuu kesken. Kysyin syytä kolmelta '
+      + 'mieheltä ja sain kolme eri tarinaa. [softly] Wawelin '
+      + 'kukkulalla kuninkaat nukkuvat kirkon lattian alla. Kaupunki '
+      + 'kuuluu nyt keisarille Wienissä, mutta se muistaa olleensa '
+      + 'kuningasten kaupunki, eikä muisti täällä haalistu.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-krakova.mp3',
   },
 

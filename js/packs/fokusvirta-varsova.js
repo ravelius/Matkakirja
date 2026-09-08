@@ -196,26 +196,28 @@ export const FOKUSVIRTA_VARSOVA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Varsova, syyskuussa 1873. Kirkasta; Veikselillä usvaa aamulla.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
+    /* KAANON UUSIKSI (Fable, omistaja hyväksyi 8.9.2026 ilta). 373 merkkiä (yläraja 400). */
     teksti: 'Kaupunki elää kahta elämää: kaduilla puhutaan puolaa ja '
       + 'virastoissa venäjää, eikä kumpikaan puoli teeskentele, ettei '
-      + 'huomaisi. Vanhankaupungin torilla värit ovat kirkkaat ja kapakat '
-      + 'täynnä, mutta laulut loppuvat kesken, kun univormu kävelee ohi. '
-      + 'Kuulin pianistista, joka kuoli nuorena kaukana täältä ja jonka '
-      + 'sydämen sisar toi kotiin salaa — tämä kaupunki säilyttää '
-      + 'rakkaimpansa sinne, minne keisari ei näe.',
+      + 'huomaisi. Vanhankaupungin torilla värit ovat kirkkaat ja '
+      + 'kapakat täynnä, mutta laulut loppuvat kesken, kun univormu '
+      + 'kävelee ohi. Kuulin pianistista, joka kuoli nuorena '
+      + 'Pariisissa. Hänen sisarensa toi sydämen salaa kotiin ja '
+      + 'muurautti sen kirkon pylvääseen.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    luenta: '[curious] Kaupunki elää kahta elämää: kaduilla puhutaan puolaa '
-      + 'ja virastoissa venäjää, eikä kumpikaan puoli teeskentele, ettei '
-      + 'huomaisi. [softly] Vanhankaupungin torilla värit ovat kirkkaat ja '
-      + 'kapakat täynnä, mutta laulut loppuvat kesken, kun univormu kävelee '
-      + 'ohi. [whispers] Kuulin pianistista, joka kuoli nuorena kaukana '
-      + 'täältä ja jonka sydämen sisar toi kotiin salaa — tämä kaupunki '
-      + 'säilyttää rakkaimpansa sinne, minne keisari ei näe.',
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kaupunki elää kahta elämää: kaduilla puhutaan '
+      + 'puolaa ja virastoissa venäjää, eikä kumpikaan puoli '
+      + 'teeskentele, ettei huomaisi. Vanhankaupungin torilla värit '
+      + 'ovat kirkkaat ja kapakat täynnä, mutta laulut loppuvat '
+      + 'kesken, kun univormu kävelee ohi. [softly] Kuulin '
+      + 'pianistista, joka kuoli nuorena Pariisissa. [whispers] Hänen '
+      + 'sisarensa toi sydämen salaa kotiin ja muurautti sen kirkon '
+      + 'pylvääseen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-varsova.mp3',
   },
 
