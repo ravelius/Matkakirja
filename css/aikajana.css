@@ -2743,3 +2743,181 @@ body.aikajana-palkki-auki .topbar {
   .aikajana.kertomus .aikajana-ohjaimet { gap: 0.2rem; }
   .aikajana.kertomus .aikajana-ohjaimet { --palkin-nappi: 32px; }
 }
+
+/* ===========================================================================
+   AIKASELAIN — LINSSIEN YHTEINEN AIKANAUHA ALAREUNAAN
+   ---------------------------------------------------------------------------
+   Raamattu "LINSSIEN AIKASELAIN ALAREUNAAN" (omistaja 7.9.2026 klo 20.55,
+   sanatarkasti: *"Onko alas mahdollista tehdä yksinkertaista aikaselainta,
+   mikä olisi täynnä pystyviivoja ja valittu aika olisi pidempi viiva? …
+   Vuosiluku saa säilyä ylhäällä mutta se voisi toistua pienellä sen
+   korkeamman viivan päällä. … Korkean viivan viereiset viivat voisivat olla
+   vähän koholla. … Sama elementti toimisi tulevissakin linsseissä."*).
+
+   Pinta on js/linssit/aikaselain.js — se ei tiedä kaaresta mitään. Tämä
+   tiedosto antaa sille asun: koko ruudun levyinen nauha alareunassa, sama
+   tumma lasi kuin palkilla, ja viivat, joiden korkeus tulee js:n
+   asettamasta --taso-muuttujasta (aallonTaso).
+
+   KORKEUS ON YKSI LUKU (--aikaselain-korkeus, body). Kertojan teksti,
+   noston kortti ja pergamenttilappu väistävät nauhaa sen verran — sama
+   kuvio kuin palkin mitatulla korkeudella, mutta tämä on vakio, koska
+   nauhan mitat ovat tämän tiedoston omia.
+   =========================================================================== */
+
+body.aikaselain-auki { --aikaselain-korkeus: 62px; }
+
+.aikaselain {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--aikaselain-korkeus, 62px);
+  box-sizing: border-box;
+  /* Yksi kosketuspinta: selain ei saa tulkita vetoa vieritykseksi. */
+  touch-action: none;
+  pointer-events: auto;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  /* Sama tumma lasi kuin palkilla, mutta pergamentin päällä kelluvana. */
+  background: linear-gradient(180deg, rgba(37, 27, 18, 0.28), rgba(37, 27, 18, 0.9) 45%);
+  border-top: 1px solid var(--aikajana-reuna, rgba(217, 161, 59, 0.38));
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.35);
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+.aikaselain:focus-visible { outline: 2px solid rgba(217, 161, 59, 0.75); outline-offset: -3px; }
+
+/*
+ * VIIVAT. Rivi on nauhan alaosa; jokainen viiva seisoo omalla
+ * prosenttipaikallaan (js viivanPaikka) ja kasvaa --tasosta. Viivat eivät
+ * ota napautuksia itse (pointer-events: none): koko nauha on yksi pinta,
+ * eikä sormen tarvitse osua kahden pikselin levyiseen viivaan.
+ */
+.aikaselain-viivat {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.55rem;
+  height: 30px;
+  pointer-events: none;
+}
+.aikaselain-viiva {
+  position: absolute;
+  bottom: 0;
+  width: 2px;
+  border-radius: 1px;
+  transform: translateX(-50%);
+  background: rgba(233, 214, 176, 0.62);
+  /* Pohja 9 px, valittu 30 px: aalto tulee js:n --taso-arvosta. */
+  height: calc(9px + var(--taso, 0) * 21px);
+  opacity: calc(0.62 + var(--taso, 0) * 0.38);
+  transition: height 240ms ease, opacity 240ms ease, background-color 240ms ease;
+}
+.aikaselain-viiva.valittu {
+  width: 3px;
+  background: var(--aikajana-kulta, #d9a13b);
+  box-shadow: 0 0 7px rgba(217, 161, 59, 0.55);
+}
+
+/* Vuosiluku pienellä valitun viivan päällä (omistajan sanat). */
+.aikaselain-vuosi {
+  position: absolute;
+  bottom: calc(0.55rem + 32px);
+  /* Paikka tulee js:stä (--paikka) ja rajataan laidoista, jottei
+     "300 000 v. sitten" valu ensimmäisen viivan kohdalla ruudun yli. */
+  left: clamp(4.2rem, var(--paikka, 50%), calc(100% - 4.2rem));
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font-type, inherit);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: #f1e6d0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+  pointer-events: none;
+  transition: left 240ms ease;
+}
+
+/* Veto: nauha kirkastuu hieman, jotta sormi tuntee tarttuneensa. */
+.aikaselain.vedossa {
+  background: linear-gradient(180deg, rgba(37, 27, 18, 0), rgba(45, 33, 22, 0.9) 42%);
+}
+
+/* Vähennetty liike: sama nauha, ei liukuja (Raamattu, saavutettavuus). */
+.aikaselain.ei-liiketta .aikaselain-viiva,
+.aikaselain.ei-liiketta .aikaselain-vuosi { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  .aikaselain,
+  .aikaselain-viiva,
+  .aikaselain-vuosi { transition: none; }
+}
+
+/*
+ * PIMEÄSSÄ NAUHA ON PIILOSSA kuten kello, otsikot ja Tauko-nappi: musta
+ * ruutu on vain kertojan ääni (Raamattu ALKAA MUSTASTA RUUDUSTA).
+ */
+.aikajana.esitys-pimea .aikaselain { opacity: 0; pointer-events: none; }
+
+/* ===========================================================================
+   AVARUUS — kertomusesityksen musta alku
+   ---------------------------------------------------------------------------
+   Raamattu "IHMISEN MATKA: MUSTA ALKU ON AVARUUS, PALLO ZOOMAUTUU
+   PIMEYDESTA AFRIKKA EDELLA" (omistaja 7.9.2026 ilta: *"Ja se pimeys on
+   avaruus"*, *"Kertoja alkaa jo pimeydestä"*).
+
+   Musta EI OLE linssin peitteessä vaan PALLON ALLA: levy pannaan
+   karttaruudun ensimmäiseksi lapseksi (js/linssit/ihmisen-matka-esitys.js
+   asennaAvaruus), jolloin pallo ja sen tähdet piirtyvät sen päälle.
+   Tähdet ovat pallon omalla näyttämöllä pistepilvenä
+   (js/pallolauta/tahdet.js) — ei kuvatiedostoja eikä DOM-pisteitä.
+   =========================================================================== */
+.aikajana-avaruus {
+  position: absolute;
+  inset: 0;
+  /* Yön syvyys keskeltä laitoihin: pallo nousee tästä esiin. */
+  background: radial-gradient(ellipse at 50% 50%, #05070f 0%, #000 72%);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 2600ms ease;
+}
+.aikajana-avaruus.pois { opacity: 0; }
+/*
+ * PEITE ON AVAUKSESSA HARSO JA ESTE. Ennen se oli läpinäkymätön musta
+ * koko ruudun päällä; avaruusavauksessa musta on pallon ALLA, ja peite
+ * jää eteen kahdesta syystä: pallo ei saa pyörähtää sormesta kesken
+ * ajon, ja kaukana oleva Maa on TUMMA (omistaja: *"aluksi pieni ja
+ * tumma"*). Harso häipyy zoomin tahdissa — kesto on sama kuin
+ * js/linssit/ihmisen-matka-esitys.js AVARUUDEN_MS.
+ */
+.aikajana-esitys-peite.avaruus {
+  background-color: #000;
+  opacity: 0.55;
+  transition: opacity 5200ms ease;
+}
+.aikajana-esitys-peite.avaruus.kirkastuu { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .aikajana-esitys-peite.avaruus { opacity: 0; transition: none; }
+}
+
+/*
+ * MUUT VÄISTÄVÄT NAUHAA. Kertojan teksti nousi karusellin kadottua
+ * alalaitaan (1,4 rem); nyt sen alla on nauha, ja teksti nousee sen
+ * yläpuolelle. Noston kortti ja pergamenttilappu (css/ihmisen-tutkimus.css)
+ * tekevät saman omilla säännöillään.
+ */
+body.aikaselain-auki .aikajana.kertomus .aikajana-kertomusteksti {
+  bottom: calc(var(--aikaselain-korkeus, 62px) + 0.7rem);
+}
+
+@media (max-width: 600px) {
+  /* Puhelin (390 × 844): 22 viivaa noin 15 px:n välein, matalampi nauha. */
+  body.aikaselain-auki { --aikaselain-korkeus: 54px; }
+  .aikaselain-viivat { bottom: 0.4rem; height: 26px; }
+  .aikaselain-viiva { height: calc(8px + var(--taso, 0) * 18px); }
+  .aikaselain-vuosi {
+    bottom: calc(0.4rem + 28px);
+    font-size: 0.62rem;
+    left: clamp(3.6rem, var(--paikka, 50%), calc(100% - 3.6rem));
+  }
+}

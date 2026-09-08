@@ -92,6 +92,7 @@ import { kertomuksenRunko, kertomuksenVarakesto, soitaLinssiluenta } from '../li
 import { soitaLivianLinssiAani } from '../liviapuhe.js';
 import { polloLinssikupla } from '../pollo.js';
 import { karkiHetkella } from '../aikajana-vanat.js';
+import { luoTahtitaivas } from '../pallolauta/tahdet.js';
 import { kulmaEro } from './ihmisen-matka-kortti.js';
 import { rajauksenLeveys, vananRajaus } from './ihmisen-matka-tutkimus.js';
 
@@ -150,6 +151,33 @@ export const ESITYKSEN_ALUEET = {
 
 /** Mustan häivytys valojen syttyessä (omistaja: "2–3 s"). */
 export const VALOJEN_MS = 2600;
+/*
+ * AVARUUSAVAUS (Raamattu "IHMISEN MATKA: MUSTA ALKU ON AVARUUS, PALLO
+ * ZOOMAUTUU PIMEYDESTA AFRIKKA EDELLA", omistaja 7.9.2026 ilta:
+ * *"Ja se pimeys on avaruus"*, ja tarkennus *"Kertoja alkaa jo
+ * pimeydestä"*). Ruutu alkaa mustana, tähdet ovat pallon ympärillä
+ * (js/pallolauta/tahdet.js) ja Maa on kaukana korkeudella 2,5 — koko
+ * pallo ruudulla, pieni ja tumma mustaa vasten. KERTOJA ALKAA HETI, ja
+ * pallo kasvaa luennan aikana täyteen kokoon Afrikka keskellä.
+ *
+ * KORKEUS 7,5 ON KAUEMPANA KUIN LAUDAN OMA KATTO (js/pallolauta/kamera.js
+ * PALLO_KORKEUS_MAX = 2,5, ja js/pallolauta/lauta.js sitoo
+ * OrbitControlsin maxDistancen samaan). MITATTU 7.9.2026: korkeudella
+ * 2,5 pallo täyttää jo ruudun leveyden, mustaa jää vain kapea kaistale
+ * ylle ja alle — tähdet eivät mahtuisi kuvaan lainkaan eikä pallo olisi
+ * "pieni". Avaus siis LEVENTÄÄ ohjaimen kattoa hetkeksi ja asettaa
+ * lähtönäkymän laudan omalla `pointOfView`-kutsulla; katto palautetaan
+ * ajon jälkeen (palautaKaukaisuus), eikä pelaaja pääse sillä välin
+ * pallon ohjaimiin (peite on edessä). Zoomi itse ajetaan laudan omalla
+ * ajaKameralla, joka rajaa MAALIN normaaliin 2,5:een.
+ */
+export const AVARUUDEN_KORKEUS = 7.5;
+/** Zoomin kesto: kertoja ehtii puhua pitkälle ennen kuin pallo on perillä. */
+export const AVARUUDEN_MS = 5200;
+/** Osuus zoomista, jonka jälkeen tähdet alkavat häipyä. */
+export const TAHTIEN_HAIVE = 0.45;
+/** Avauksen tumma harso pallon päällä (0 = ei harsoa). */
+export const AVARUUDEN_HARSO = 0.55;
 /** Aikahypyn kelaus: nopea mutta pehmeä liuku taaksepäin. */
 export const KELAUKSEN_MS = 2400;
 /** Jakson häntä, jonka aikana pulun välihuomio ehtii kuulua. */
@@ -305,6 +333,37 @@ export function jaksonTahti(kertomus, i) {
   return { alku: perus, loppu: Number.isFinite(loppu) ? loppu : perus };
 }
 
+/**
+ * AIKASELAIMEN KELATTU LUKEMA nauhan jatkuvasta osuudesta (0…1).
+ *
+ * PUHDAS FUNKTIO (tests/aikaselain.test.mjs). Nauhan viivat ovat
+ * jaksojärjestyksessä tasavälein (js/linssit/aikaselain.js), joten
+ * osuus 0 on ensimmäinen jakso ja 1 viimeinen; viivojen VÄLISSÄ lukema
+ * interpoloidaan GEOMETRISESTI, samalla kaavalla kuin kellon oma
+ * asteikko (js/aikajana.js vuosiaSittenLukema) — muuten sormi hyppäisi
+ * 300 000:sta 240 000:een lineaarisesti ja kello näyttäisi eri lukua
+ * kuin sama kohta esityksen kuluessa. Nolla tai negatiivinen pää
+ * (viimeinen jakso on 0) menee suoraan, koska logaritmi ei kestä sitä.
+ *
+ * @param {Array<{vuosia:number}>} kertomus kaanonin jaksot
+ * @param {number} osuus 0…1
+ * @returns {number} vuosia sitten
+ */
+export function kelauksenLukema(kertomus, osuus) {
+  const n = kertomus?.length ?? 0;
+  if (!n) return 0;
+  const t = Math.max(0, Math.min(1, Number(osuus) || 0)) * (n - 1);
+  const i = Math.min(n - 2, Math.floor(t));
+  if (i < 0) return Number(kertomus[0]?.vuosia) || 0;
+  const f = Math.max(0, Math.min(1, t - i));
+  const a = Number(kertomus[i]?.vuosia);
+  const b = Number(kertomus[i + 1]?.vuosia);
+  if (!Number.isFinite(a)) return 0;
+  if (!Number.isFinite(b)) return a;
+  if (!(a > 0) || !(b > 0)) return a + (b - a) * f;
+  return a * ((b / a) ** f);
+}
+
 /** Pehmennys kelaukselle: hidas lähtö, hidas pysähdys (ei ylitystä). */
 export function kelauksenPehmennys(t) {
   const x = Math.max(0, Math.min(1, t));
@@ -366,6 +425,8 @@ export function luoEsitys({ ajo }) {
     purettu: false,
     paattynyt: false,
     raf: 0,
+    /** Edellisen kehyksen aikaleima (tähtien ajautuman dt). */
+    viimeKehys: 0,
     aani: null,
     kuva: null,
     /** Mittarit savukkeelle. */
@@ -380,6 +441,26 @@ export function luoEsitys({ ajo }) {
     karjet: [],
     /** Jatkettiinko muistista (ei pimeää, ei avausta). */
     muistista: false,
+    /*
+     * AVARUUSAVAUS: musta pohja pallon alla, tähtitaivas ja zoomin
+     * lähtöhetki. Muistista jatkettaessa nämä jäävät nulliksi — pelaaja
+     * on jo ollut matkalla, eikä avaruutta näytetä uudestaan.
+     */
+    avaruus: null,
+    tahdet: null,
+    avaruusAlku: 0,
+    /** OrbitControlsin oma etäisyyskatto ennen avausta (palautetaan). */
+    kattoEnnen: null,
+    kattoAjastin: 0,
+    /*
+     * AIKASELAIMEN VETO KESKEN (js/linssit/aikaselain.js). Null, kun
+     * sormi ei ole nauhalla; vedon ajaksi tähän jää tieto siitä, oliko
+     * pelaaja itse tauolla — irrotus jatkaa esitystä vain, jos ei ollut
+     * (Raamattu LINSSIEN AIKASELAIN ALAREUNAAN).
+     */
+    selaus: null,
+    /** Mittari savukkeelle: montako kertaa nauhasta on valittu jakso. */
+    selauksia: 0,
   };
 
   /* ---------------------------------------------------------- pinnat */
@@ -391,6 +472,44 @@ export function luoEsitys({ ajo }) {
   tekstirivi.setAttribute('aria-live', 'polite');
   const tekstilaatikko = solmu('p', 'aikajana-kertomusteksti-sisus');
   tekstirivi.appendChild(tekstilaatikko);
+
+  /**
+   * AVARUUDEN MUSTA POHJA. Pallon oma piirtoalusta on läpinäkyvä
+   * (js/pallo.js rakennaPallo backgroundColor 'rgba(0,0,0,0)'), joten
+   * pallon ympärillä näkyy karttaruudun nahka. Avausta varten
+   * karttaruutuun pannaan ENSIMMÄISEKSI LAPSEKSI musta levy: se on
+   * DOM-järjestyksessä pallon kuoren alla, joten tähdet ja pallo
+   * piirtyvät sen päälle. Linssin oma juuri (z-index 7) ei kelpaa
+   * tähän — siellä levy peittäisi pallon.
+   */
+  const asennaAvaruus = () => {
+    const koti = ajo.ui?.mapPane;
+    if (!koti || tila.avaruus) return null;
+    const levy = solmu('div', 'aikajana-avaruus');
+    levy.setAttribute('aria-hidden', 'true');
+    koti.prepend(levy);
+    tila.avaruus = levy;
+    return levy;
+  };
+
+  /** Avaruus pois: musta häipyy ja pistepilvi poistetaan näyttämöltä. */
+  const suljeAvaruus = () => {
+    const levy = tila.avaruus;
+    tila.avaruus = null;
+    if (levy) {
+      levy.classList.add('pois');
+      if (reduced) levy.remove();
+      else setTimeout(() => levy.remove(), VALOJEN_MS);
+    }
+    const taivas = tila.tahdet;
+    tila.tahdet = null;
+    if (taivas) {
+      // Pistepilvi häipyy ruudulta ja poistetaan näyttämöltä vasta sen
+      // jälkeen: kolme piirtokutsua ei saa jäädä roikkumaan koko ajoksi.
+      taivas.paivita(0, 0);
+      setTimeout(() => taivas.pura(), reduced ? 0 : VALOJEN_MS);
+    }
+  };
 
   const asennaPinnat = ({ pimea = true } = {}) => {
     const juuri = ajo.juuri;
@@ -452,6 +571,94 @@ export function luoEsitys({ ajo }) {
       },
       { kesto: reduced ? 0 : kesto },
     );
+  };
+
+  /* -------------------------------------------------------- avaruus */
+
+  /** Nimetyn alueen keskipiste asteina (avausnäkymän katsesuunta). */
+  const alueenKeskus = (tunnus) => {
+    const a = ESITYKSEN_ALUEET[tunnus];
+    if (!a) return { lat: 0, lng: 0 };
+    return { lat: (a.lat[0] + a.lat[1]) / 2, lng: (a.lon[0] + a.lon[1]) / 2 };
+  };
+
+  /**
+   * PALLO TULEE PIMEYDESTÄ (Raamattu MUSTA ALKU ON AVARUUS, PALLO
+   * ZOOMAUTUU PIMEYDESTA AFRIKKA EDELLA).
+   *
+   * Kamera asetetaan ensin KAUKAISIMPAAN näkymään, jonka lauta antaa
+   * (AVARUUDEN_KORKEUS = js/pallolauta/kamera.js PALLO_KORKEUS_MAX):
+   * koko pallo ruudulla, Afrikka jo keskellä. Sitten SAMA laudan
+   * kamerarajapinta ajaa Afrikan rajaukseen AVARUUDEN_MS:ssä omalla
+   * pehmennyksellään — uutta kameramoottoria ei tehdä. Tähdet syntyvät
+   * pallon näyttämölle (js/pallolauta/tahdet.js) ja häipyvät pallon
+   * kasvaessa (kehys → paivita).
+   *
+   * `prefers-reduced-motion`: suora leikkaus valmiiseen rajaukseen,
+   * tähdet paikallaan ilman ajautumista.
+   */
+  /**
+   * Ohjaimen etäisyyskatto hetkeksi auki, jotta pallo mahtuu kauas.
+   * Palautetaan aina (palautaKaukaisuus): ilman sitä pelaaja voisi
+   * nipistää itsensä avaruuteen kesken kertomuksen.
+   */
+  const avaaKaukaisuus = (keski) => {
+    const pallo = ajo.ui?.pallonInstanssi ?? null;
+    const ohjaimet = pallo?.controls?.();
+    if (!pallo?.pointOfView || !ohjaimet) return false;
+    const sade = pallo.getGlobeRadius?.() ?? 100;
+    tila.kattoEnnen = ohjaimet.maxDistance;
+    ohjaimet.maxDistance = sade * (1 + AVARUUDEN_KORKEUS);
+    pallo.pointOfView({ ...keski, altitude: AVARUUDEN_KORKEUS }, 0);
+    return true;
+  };
+
+  const palautaKaukaisuus = () => {
+    const ohjaimet = ajo.ui?.pallonInstanssi?.controls?.();
+    if (ohjaimet && tila.kattoEnnen != null) ohjaimet.maxDistance = tila.kattoEnnen;
+    tila.kattoEnnen = null;
+  };
+
+  const avaruusavaus = () => {
+    const k = kamera();
+    tila.tahdet = ajo.ui?.pallonInstanssi
+      ? luoTahtitaivas(ajo.ui.pallonInstanssi, { reducedMotion: reduced })
+      : null;
+    if (!k?.ajaKamera) return false;
+    if (reduced) {
+      ajaAlueeseen('afrikka', 0);
+      tila.tahdet?.paivita(0, 1);
+      return true;
+    }
+    const keski = alueenKeskus('afrikka');
+    avaaKaukaisuus(keski);
+    tila.tahdet?.paivita(0, 1);
+    tila.avaruusAlku = performance.now();
+    /*
+     * KATTO PALAUTETAAN AJASTIMELLA EIKÄ AJON LUPAUKSELLA: 'afrikka'-
+     * jakso ajaa saman rajauksen uudestaan jäljellä olevalla ajalla
+     * (aloitaJakso), jolloin ensimmäisen ajon lupaus jää ratkeamatta.
+     * Ajastin on siksi ainoa varma polku takaisin — ja purku hoitaa
+     * saman, jos linssi suljetaan kesken avauksen.
+     */
+    tila.kattoAjastin = setTimeout(palautaKaukaisuus, AVARUUDEN_MS + 400);
+    // Harso pois zoomin tahdissa: pallo kirkastuu tullessaan lähemmäs.
+    peite.classList.add('avaruus');
+    requestAnimationFrame(() => peite.classList.add('kirkastuu'));
+    ajaAlueeseen('afrikka', AVARUUDEN_MS);
+    return true;
+  };
+
+  /** Avausajosta jäljellä (ms); 0 kun pallo on perillä tai ajoa ei ollut. */
+  const avaruuttaJaljella = () => {
+    if (!tila.avaruusAlku) return 0;
+    return Math.max(0, AVARUUDEN_MS - (performance.now() - tila.avaruusAlku));
+  };
+
+  /** Avausajon eteneminen 0…1 (tähtien häivytys seuraa tätä). */
+  const avaruudenOsuus = () => {
+    if (!tila.avaruusAlku) return 1;
+    return Math.max(0, Math.min(1, (performance.now() - tila.avaruusAlku) / AVARUUDEN_MS));
   };
 
   /* ------------------------------------------------------------ kuva */
@@ -528,6 +735,28 @@ export function luoEsitys({ ajo }) {
     const paikka = ajo.asteikko.paikka?.(arvo) ?? arvo;
     ajo.tila = { ...ajo.tila, vuosi: paikka };
     ajo.naytaVuosi(paikka, reduced);
+  };
+
+  /**
+   * KELLO JA VANAT KELATTUUN HETKEEN (aikaselaimen veto). Ero
+   * `kirjoitaKello`-funktioon on kaksi:
+   *
+   *   1. PITOA EI KASVATETA (`tila.pitoMin`): kelaus taaksepäin on
+   *      pelaajan oma ele, ja pidon pohja asetetaan vasta valinnassa.
+   *   2. VANAT PÄIVITETÄÄN SUORAAN. Esityksen aikana virtojen oma
+   *      silmukka lukisi kellon 80 ms:n välein, mutta TUTKIMUSVAIHEESSA
+   *      se ei lue sitä lainkaan (js/aikajana-virrat.js silmukka: lukema
+   *      on siellä vakio 0) — ilman suoraa kutsua nauha ei kelaisi
+   *      levinneisyyttä lopussa mihinkään. Sama kutsu antaa esityksen
+   *      aikana vasteen heti sormen liikkeeseen.
+   */
+  const kelaaKello = (vuosia) => {
+    const arvo = Math.max(0, Number(vuosia) || 0);
+    tila.vuosia = arvo;
+    const paikka = ajo.asteikko.paikka?.(arvo) ?? arvo;
+    ajo.tila = { ...ajo.tila, vuosi: paikka };
+    ajo.naytaVuosi(paikka, reduced);
+    ajo.virrat?.vanat?.()?.paivita?.(arvo, { pito: false });
   };
 
   /* ------------------------------------------------------------ luenta */
@@ -642,8 +871,20 @@ export function luoEsitys({ ajo }) {
     } else {
       tila.karjet = [];
       suljeKuva();
-      if (jakso.alue) ajaAlueeseen(jakso.alue, jakso.vaihe === 'valot' ? 0 : kesto);
+      /*
+       * VALOT EI SAA KATKAISTA AVAUSAJOA. Ennen 'afrikka'-jakso asetti
+       * kameran kestolla 0 — kamera oli jo perillä, joten se oli tyhjä
+       * käsky. Avaruusavauksen jälkeen pallo voi olla yhä matkalla
+       * (kertoja ehtii lopettaa avausjakson ennen kuin zoomi on
+       * perillä), ja silloin ajo jatkuu jäljellä olevan ajan.
+       */
+      const alueenKesto = jakso.vaihe === 'valot' ? avaruuttaJaljella() : kesto;
+      if (jakso.alue) ajaAlueeseen(jakso.alue, alueenKesto);
     }
+    // Aikaselaimen valittu viiva seuraa esitystä (Raamattu LINSSIEN
+    // AIKASELAIN ALAREUNAAN: "vuosiluku … voisi toistua pienellä sen
+    // korkeamman viivan päällä").
+    ajo.aikaselain?.aseta?.(jakso.id);
     // Muisti seuraa jaksoa: sulku tai virkistys jatkaa tästä jaksosta.
     ajo.tallennaMuisti?.();
   };
@@ -654,10 +895,12 @@ export function luoEsitys({ ajo }) {
    * kytkeytyy päälle koko lopun esityksen ajaksi.
    */
   const sytytaValot = () => {
-    ajo.juuri?.classList.remove('esitys-pimea');
+    ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus');
     peite.classList.add('pois');
     if (reduced) peite.remove();
     else setTimeout(() => peite.remove(), VALOJEN_MS);
+    // Avaruus väistyy: musta pohja häipyy ja tähdet poistuvat näyttämöltä.
+    suljeAvaruus();
     ajo.virrat?.asetaPito?.(true);
     ajo.aloitaMusiikki?.(true);
   };
@@ -688,6 +931,17 @@ export function luoEsitys({ ajo }) {
     if (!tila.kaynnissa || tila.purettu) return;
     tila.raf = requestAnimationFrame(kehys);
     tila.kulunut = nyt - tila.alkuHetki;
+    /*
+     * TÄHDET HÄIPYVÄT PALLON KASVAESSA (Raamattu MUSTA ALKU ON
+     * AVARUUS). Pistepilvi ei laske mitään uudestaan: tässä muuttuu
+     * vain materiaalien peittävyys ja pölykerroksen kierto.
+     */
+    if (tila.tahdet) {
+      const dt = Math.min(0.5, Math.max(0, (nyt - (tila.viimeKehys || nyt)) / 1000));
+      const osuus = avaruudenOsuus();
+      tila.tahdet.paivita(dt, 1 - Math.max(0, (osuus - TAHTIEN_HAIVE) / (1 - TAHTIEN_HAIVE)));
+    }
+    tila.viimeKehys = nyt;
     paivitaKello();
     if (!tila.puluSanottu && tila.kulunut >= tila.luenta) sanoPulu(kertomus[tila.i]);
     if (tila.kulunut >= tila.kesto) {
@@ -732,6 +986,8 @@ export function luoEsitys({ ajo }) {
      * "ajo, joka ei liikuta mitään, on turha").
      */
     const viimeinen = kertomus[tila.i];
+    // Nauhan valinta jää loppuun; tutkimusvaiheessa siitä jatketaan.
+    if (viimeinen?.id) ajo.aikaselain?.aseta?.(viimeinen.id);
     if (kamera && viimeinen?.alue) ajaAlueeseen(viimeinen.alue, reduced ? 0 : LOPUN_ASETUS_MS);
     suljeKuva();
     tekstirivi.classList.remove('esilla');
@@ -746,6 +1002,75 @@ export function luoEsitys({ ajo }) {
     // Koukku viimeisenä: tutkimusvaihe on toisen moduulin työtä, ja se
     // saa ottaa ruudun haltuunsa vasta kun esitys on siivonnut jälkensä.
     ajo.ui?.aloitaTutkimusvaihe?.();
+  }
+
+  /* ---------------------------------------------------------- aikaselain */
+
+  /**
+   * NAUHAN VETO (esikatselu). Esitys menee HILJAA tauolle — kertoja
+   * vaikenee, silmukka pysähtyy — ja kello sekä vanat seuraavat sormea.
+   * Nappien tekstiin ei kosketa: veto ei ole Tauko-napin painallus, ja
+   * irrotus joko jatkaa esitystä tai jättää sen tauolle sen mukaan,
+   * kummassa tilassa pelaaja oli (Raamattu LINSSIEN AIKASELAIN
+   * ALAREUNAAN: *"irrotus jatkaa esitystä siitä"*).
+   *
+   * Pito katkaistaan vedon ajaksi: pito on yksisuuntainen maksimi
+   * (luku 12.5), eikä taaksepäin kelattu kartta saa jäädä näyttämään
+   * Amerikkoja Afrikan jakson kohdalla.
+   *
+   * @param {number} osuus nauhan jatkuva sijainti 0…1
+   */
+  function esikatsele(osuus) {
+    if (tila.purettu) return false;
+    if (!tila.selaus) {
+      tila.selaus = { oliTauolla: !tila.kaynnissa };
+      if (tila.kaynnissa) seis();
+      tila.tauolla = true;
+      try { tila.aani?.pause(); } catch { /* soitin oli jo purettu */ }
+      ajo.virrat?.asetaPito?.(false);
+    }
+    kelaaKello(kelauksenLukema(kertomus, osuus));
+    return true;
+  }
+
+  /**
+   * NAUHAN VALINTA (sormi irtosi tai napautus). Esitys jatkaa valitusta
+   * jaksosta SEN ALUSTA — luenta alkaa, kamera ajaa ja kello lähtee
+   * jakson lukemasta. Tutkimusvaiheessa (esityksen jälkeen) sama
+   * valinta on pelkkä kelaus: kello ja vanat siirtyvät hetkeen, kertoja
+   * on vaiti.
+   */
+  function valitse(id) {
+    if (tila.purettu) return false;
+    const i = kertomus.findIndex((j) => j.id === id);
+    if (i < 0) return false;
+    const selaus = tila.selaus;
+    tila.selaus = null;
+    tila.selauksia += 1;
+    const vuosia = Number(kertomus[i]?.vuosia) || 0;
+    // Pidon pohja alkaa valitusta hetkestä (ks. esikatsele).
+    tila.pitoMin = vuosia;
+    ajo.virrat?.asetaPito?.(true);
+    ajo.aikaselain?.aseta?.(kertomus[i].id);
+    if (tila.paattynyt) {
+      tila.i = i;
+      kelaaKello(vuosia);
+      ajo.virrat?.vanat?.()?.paivita?.(vuosia, { pito: true });
+      ajo.tallennaMuisti?.();
+      return true;
+    }
+    suljeKuva();
+    aloitaJakso(i);
+    if (selaus?.oliTauolla) {
+      // Pelaaja oli itse tauolla: jakso vaihtuu, mutta esitys ei lähde.
+      seis();
+      tila.tauolla = true;
+      try { tila.aani?.pause(); } catch { /* soitin oli jo purettu */ }
+      ajo.saadaMusiikki?.(false);
+      if (ajo.taukoNappi) ajo.taukoNappi.textContent = 'Jatka';
+      ajo.juuri?.classList.add('tauolla');
+    } else kaynnista();
+    return true;
   }
 
   /* ------------------------------------------------------------- muisti */
@@ -795,19 +1120,30 @@ export function luoEsitys({ ajo }) {
       if (tila.purettu || tila.i >= 0) return false;
       if (muisti) return jatkaMuistista(muisti);
       asennaPinnat();
-      ajo.juuri?.classList.add('esitys-pimea');
-      // Peite on musta HETI: avauslaatikon oma peite häipyy sen päältä,
-      // eikä ruudulla välähdä karttaa.
-      peite.classList.add('musta');
-      // Kamera Afrikkaan jo pimeässä, jotta valot syttyvät valmiiseen
-      // näkymään (omistaja: *"sitten voisi syttyä valot ja ruudulla
-      // näkyä Afrikka kokonaisuudessaan"*).
-      ajaAlueeseen('afrikka', 0);
+      ajo.juuri?.classList.add('esitys-pimea', 'esitys-avaruus');
+      /*
+       * PEITE ON NYT PELKKÄ ESTE, EI MUSTA (Raamattu MUSTA ALKU ON
+       * AVARUUS). Ennen se oli läpinäkymätön #000 koko ruudun päällä;
+       * nyt musta on PALLON ALLA (asennaAvaruus), jotta Maa näkyy
+       * kaukana tähtien keskellä. Peite jää paikalleen läpinäkyvänä,
+       * koska avausajon aikana pallo ei saa pyörähtää sormesta.
+       */
+      asennaAvaruus();
+      avaruusavaus();
       kirjoitaKello(Number(kertomus[0]?.vuosia) || 0);
+      // KERTOJA ALKAA JO PIMEYDESTÄ (omistaja 7.9.2026): avausjakson
+      // luenta lähtee heti, ja pallo kasvaa esiin sen aikana.
       aloitaJakso(0);
       kaynnista();
       return true;
     },
+    /**
+     * AIKASELAIN (js/linssit/aikaselain.js) kutsuu näitä kahta: veto
+     * esikatselee hetken, irrotus valitsee jakson. Moottori välittää
+     * kutsut sellaisenaan (js/aikajana.js rakennaAikaselain).
+     */
+    esikatsele,
+    valitse,
     /** Yläpalkin yksi nappi. */
     taukoTaiJatka() {
       if (tila.paattynyt) return;
@@ -836,9 +1172,17 @@ export function luoEsitys({ ajo }) {
       tila.purettu = true;
       seis();
       suljeKuva();
+      // Avaruus pois heti: musta levy ja pistepilvi eivät saa jäädä
+      // roikkumaan, jos linssi suljetaan kesken avauksen.
+      tila.avaruus?.remove();
+      tila.avaruus = null;
+      tila.tahdet?.pura();
+      tila.tahdet = null;
+      clearTimeout(tila.kattoAjastin);
+      palautaKaukaisuus();
       peite.remove();
       tekstirivi.remove();
-      ajo.juuri?.classList.remove('esitys-pimea', 'esitys-kaynnissa');
+      ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus', 'esitys-kaynnissa');
     },
     /** Mittarit savukkeelle ja testeille. */
     tila: () => ({
@@ -869,6 +1213,13 @@ export function luoEsitys({ ajo }) {
       pitoMin: Number.isFinite(tila.pitoMin) ? Math.round(tila.pitoMin) : null,
       karjet: tila.karjet,
       muistista: tila.muistista,
+      /** Avausajo kesken: pallo on yhä matkalla pimeydestä. */
+      avaruus: Boolean(tila.avaruus),
+      avaruusOsuus: tila.avaruusAlku ? Math.round(avaruudenOsuus() * 100) / 100 : null,
+      tahdet: tila.tahdet?.tila?.() ?? null,
+      /** Aikaselaimen veto kesken (kertoja vaiti, kello sormen alla). */
+      selaus: Boolean(tila.selaus),
+      selauksia: tila.selauksia,
     }),
   };
 }

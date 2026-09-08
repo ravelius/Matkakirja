@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1682';
+const CACHE = 'matkakirja-2026-08-09.1683';
 const SHELL = [
   './',
   './index.html',
@@ -176,6 +176,8 @@ const SHELL = [
   './js/pallolauta/linssikartta.js',
   './js/pallolauta/linssit.js',
   './js/pallolauta/merkit.js',
+  // Avaruuden tähdet ja pöly (7.9.2026): kertomusesityksen musta alku.
+  './js/pallolauta/tahdet.js',
   './js/pallolauta/nimet.js',
   './js/pallolauta/nostot.js',
   './js/pallolauta/reitit.js',
@@ -218,6 +220,10 @@ const SHELL = [
   // kuva ja hehku avaavat, sekä sulun yli tallennettu tila.
   './js/linssit/ihmisen-matka-kortti.js',
   './js/linssit/ihmisen-matka-muisti.js',
+  // Linssien yhteinen aikaselain (7.9.2026): alareunan aikanauha, jota
+  // kertomuskaari käyttää jaksojen selaamiseen — ja tulevat linssit
+  // omiensa. Kuuluu kuoreen, koska aikajanamoottori tuo sen suoraan.
+  './js/linssit/aikaselain.js',
   './css/ihmisen-tutkimus.css',
   './js/aikajana-virrat.js',
   './js/aikajana-vanat.js',

@@ -2077,3 +2077,358 @@ tasainen kaista, joka päättyy rantaviivaan.
    ei syvyyskirjoitusta), mutta ne ovat eri kieltä kuin kaista; jos
    omistaja haluaa niistäkin kaistan, mekanismi on sama varjostin
    ilman janaa (säde pisteestä).
+
+## 15. Aikaselain (7.9.2026)
+
+*(Raamattu "LINSSIEN AIKASELAIN ALAREUNAAN", omistaja 7.9.2026 klo
+20.55 Suomen aikaa, sanatarkasti: "Onko alas mahdollista tehdä
+yksinkertaista aikaselainta, mikä olisi täynnä pystyviivoja ja valittu
+aika olisi pidempi viiva? Siitä olisi nopea sormella valita aikapiste ja
+kelata esityksen eri vaiheita ja projisoida levinneisyyttä maapallolla.
+Vuosiluku saa säilyä ylhäällä mutta se voisi toistua pienellä sen
+korkeamman viivan päällä. … Korkean viivan viereiset viivat voisivat
+olla vähän koholla. … Sama elementti toimisi tulevissakin linsseissä.")*
+
+### 15.1 Linjaus ja rajaus
+
+Nauha on **yhteinen linssiosa**, ei Ihmisen matkan oma. Siksi
+`js/linssit/aikaselain.js` ei tunne kelloa, vanoja, kameraa eikä
+kertomusta: se saa listan pisteitä ja kertoo kutsujalle, mihin sormi
+osoittaa. Yksikkötesti vartioi tämän sanahaulla (`tests/aikaselain.test.mjs`:
+lähdekoodissa ei saa esiintyä sanoja kertomus, jakso, vana, kello,
+kamera, pito) — ilman vartiota moduuli olisi kolmessa kuukaudessa
+Ihmisen matkan toinen ohjaaja.
+
+**Keksintölinssi jäi tältä erältä pois.** Sen alalaidassa ovat esinerivi
+(karuselli) ja loppulappu, joiden mitat ja savukkeet (savuke-aikajana,
+13 väitettä) on tehty ilman nauhaa: nauha peittäisi karusellin alareunan
+ja siirtäisi lapun. Moduuli on valmis kytkettäväksi (pisteet =
+pysäkit, valinta = `ajo.siirry(i)`), mutta kytkentä vaatii karusellin
+uudelleensijoituksen ja oman mittauskierroksensa. Kirjattu avoimeksi
+(15.7).
+
+**Jaksovalikkoa ei ollut olemassa.** Raamatun linjaus sanoo "Korvaa
+jaksovalikon ja Jatka-napin"; palkissa ei kuitenkaan ole eikä ole ollut
+pudotusvalikkoa, ja Jatka on saman Tauko-napin toinen teksti (luku
+13.2). Palkki on siis ennallaan: **Tauko/Jatka, ↺ ja ✕** samankorkuisina
+kuten v1678:ssa. Nauha korvaa sen, mitä valikko olisi tehnyt — jaksojen
+selaamisen.
+
+### 15.2 Rajapinta
+
+```js
+luoAikaselain({
+  pisteet,       // [{ id, otsikko, vuosia }] JAKSOJÄRJESTYKSESSÄ
+  nykyinen,      // valitun pisteen id (tai null)
+  onEsikatselu,  // (id, osuus) sormen liikkuessa
+  onValinta,     // (id) sormen irrotessa tai napautuksesta
+  teksti,        // (vuosia) → vuosiluvun muoto viivan päällä
+  nimi,          // aria-label
+  reducedMotion,
+}) → { el, aseta(id), tila(), pura() } | null
+```
+
+`osuus` on **jatkuva sijainti nauhalla 0…1** (0 = ensimmäinen viiva,
+1 = viimeinen), ei viivan indeksi: viivojen VÄLISSÄ kello saa liikkua,
+ja moduulin ei kuulu tietää, mitä välisijainti tarkoittaa vuosina.
+Kertomuskaarella tulkinnan tekee `kelauksenLukema` (js/linssit/
+ihmisen-matka-esitys.js): geometrinen interpolointi naapurijaksojen
+`vuosia`-arvojen välillä, samalla kaavalla kuin kellon oma asteikko
+(`vuosiaSittenLukema`) — muuten sormen alla oleva luku eroaisi siitä,
+minkä kello näyttää samassa kohdassa esityksen kuluessa. Nollapää
+(viimeinen jakso on 0) menee suoraan, koska logaritmi ei kestä nollaa.
+
+Puhtaat funktiot (kaikki testattu): `aallonTaso(d)` (kosinipehmennys,
+1 → 0,85 → 0,50 → 0,15 → 0), `viivanPaikka(i, maara)` (prosenttia,
+laitaan jää puoli väliä), `osuusPaikasta(x, leveys, maara)`,
+`lahinIndeksi(osuus, maara)`.
+
+### 15.3 Viivat ovat jaksojärjestyksessä, eivät ajassa
+
+Välit ovat tasan yhtä suuret. Aika on epälineaarinen — kaari kulkee
+300 000 vuodesta nollaan ja kelaa kahdesti taaksepäin (luku 12.5) — ja
+ajan mukaan sijoitettuna kaksikymmentä ensimmäistä jaksoa kasautuisi
+vasempaan laitaan. Nauha on siis kertomuksen **sisällysluettelo**, ei
+mittatikku. Vuosiluku valitun viivan päällä on kellon omassa muodossa
+(`ajo.selaimenVuositeksti` lukee sen `asteikko.teksti`- ja
+`asteikko.yksikko`-kentistä): "300 000 v. sitten", loppupäässä
+"n. 1250 jaa.".
+
+### 15.4 Yksi kosketuspinta
+
+Koko nauha on yksi pinta, ei kahtakymmentä nappia. `pointerdown` ottaa
+osoittimen kiinni (`setPointerCapture`), joten veto pysyy nauhalla
+vaikka sormi lipsahtaisi kartalle; `touch-action: none` estää selainta
+tulkitsemasta vetoa vieritykseksi, ja tapahtumat pysäytetään
+(`stopPropagation`), jottei pallo saa niitä panorointina. Nauhan
+ULKOPUOLELLA selain ei kuuntele mitään — pallon oma panorointi on siis
+kirjaimelleen ennallaan.
+
+**Irrotuskohta ratkaisee.** Valinta luetaan `pointerup`-tapahtumasta
+eikä viimeisestä `pointermove`-esikatselusta: nopeassa napautuksessa
+liikettä ei tule lainkaan, ja hitaassa vedossa sormi ehtii liikahtaa
+vielä viimeisen liikkeen jälkeen (löytyi yksikkötestistä ennen
+selainta).
+
+Nuolinäppäimet siirtävät valintaa yhden viivan. Se ei vie mitään pois:
+kertomusesityksessä nuolet eivät selaa mitään (js/aikajana.js `nappain`
+palaa esityksessä heti), ja nauha on ainoa ohjain, jolla ilman tätä ei
+pärjäisi näppäimistöllä.
+
+### 15.5 Kytkentä kertomusesitykseen
+
+Moottori rakentaa nauhan palkin mukana (`js/aikajana.js
+rakennaAikaselain`, kutsu `rakennaPalkki`in lopussa) ja välittää
+takaisinkutsut sellaisenaan ohjaajalle:
+
+| Nauha | Ohjaaja (ihmisen-matka-esitys.js) |
+| --- | --- |
+| `onEsikatselu(id, osuus)` | `esikatsele(osuus)` |
+| `onValinta(id)` | `valitse(id)` |
+| `aseta(id)` | kutsutaan `aloitaJakso`ssa ja `paata`ssa |
+
+**Veto (`esikatsele`).** Esitys menee HILJAA tauolle: silmukka
+pysähtyy, kertojan äänite pausetetaan, nappien teksteihin ei kosketa
+(veto ei ole Tauko-napin painallus). Kello ja vanat seuraavat sormea
+`kelaaKello`-funktiolla, joka eroaa tavallisesta `kirjoitaKello`sta
+kahdesti: **pitoa ei kasvateta** (pidon pohja asetetaan vasta
+valinnassa) ja **vanat päivitetään suoraan** (`vanat().paivita(t,
+{ pito: false })`). Suora kutsu on pakollinen: tutkimusvaiheessa
+virtamoduulin oma silmukka ei lue kelloa lainkaan (js/aikajana-virrat.js
+`silmukka`: lukema on siellä vakio 0), joten ilman sitä nauha ei kelaisi
+levinneisyyttä esityksen jälkeen mihinkään.
+
+**Pito katkeaa vedon ajaksi.** Pito on yksisuuntainen maksimi (luku
+12.5): ilman katkaisua taaksepäin kelattu kartta jäisi näyttämään
+Amerikkoja Afrikan jakson kohdalla. Valinnassa pidon pohja asetetaan
+valitun jakson lukemaan ja pito kytketään takaisin päälle.
+
+**Irrotus (`valitse`).** Esitys jatkaa valitusta jaksosta **sen
+alusta**: luenta alkaa, kamera ajaa, kello lähtee jakson lukemasta. Jos
+pelaaja oli ITSE tauolla ennen vetoa, jakso vaihtuu mutta esitys jää
+tauolle (`selaus.oliTauolla`). Tutkimusvaiheessa (`tila.paattynyt`) sama
+valinta on pelkkä kelaus: kello ja vanat siirtyvät hetkeen, kertoja on
+vaiti, muisti tallennetaan.
+
+Pimeässä alussa nauha on piilossa kuten kello ja Tauko-nappi
+(`.aikajana.esitys-pimea .aikaselain { opacity: 0 }`), mutta se on jo
+rakennettu — muuten se pompahtaisi esiin valojen syttyessä.
+
+### 15.6 Mitatut luvut
+
+MITATTU 7.9.2026 (kontti, ohjelmisto-WebGL):
+
+| | 834 × 1100 | 390 × 844 |
+| --- | --- | --- |
+| nauhan mitat | x 11, y 1027, 813 × 62 px | x 8, y 782, 374 × 54 px |
+| viivoja | 22 | 22 |
+| viivaväli | 37 px | 17 px |
+| korkeudet aallossa | 30 · 27 · 20 · 12 · 9 px | 26 · 23 · 17 · 11 · 8 px |
+| kertojan tekstin alareuna | 1 016 px (nauha alkaa 1 027) | 771 px (nauha alkaa 782) |
+
+Kertojan teksti, noston kortti ja pergamenttilappu väistävät nauhaa
+yhden luvun varassa (`--aikaselain-korkeus`, body-luokka
+`aikaselain-auki`) — sama kuvio kuin aikoinaan karusellin kanssa, mutta
+vakiona, koska nauhan mitat ovat css:n omia.
+
+Veto ruutukoordinaateilla (`page.mouse`, tabletti ja puhelin): kello
+kelautui 287 645 → 22 000 vuoteen, vanat piirtyivät siihen hetkeen
+(Euroopan ja Pohjois-Afrikan reitit näkyvissä), esikatselu seurasi
+sormea viivalta viivalle ja irrotus vaihtoi jakson valittuun
+(`beringia`). Kun veto alkoi pelaajan omalla tauolla, esitys jäi
+tauolle; muuten se jatkoi.
+
+### 15.7 Avoimet asiat
+
+1. **Keksintölinssi** (28 pysäkkiä) ei saanut nauhaa (15.1). Kytkentä
+   vaatii karusellin ja loppulapun uudelleensijoituksen sekä
+   savuke-aikajanan mittojen tarkistuksen.
+2. **Vuosiluvun rajaus laidoissa** on css:n `clamp(4,2rem …)` eli arvio
+   pisimmästä tekstistä ("300 000 v. sitten"). Jos kaari joskus saa
+   pidemmän yksikön, luku voi valua laidan yli — mitta on css:ssä
+   yhdessä kohdassa.
+3. **Nauhan leveys on kartta-alueen leveys** (11 px kehys kummallakin
+   laidalla, sama kuin palkilla), ei ikkunan. Omistajan sanamuoto oli
+   "alas" eikä "reunasta reunaan"; jos halutaan kirjaimellisesti koko
+   ruudun levyinen, se vaatii kehyksen ohittamisen.
+
+### 15.8 Portit ja ajetut savukkeet
+
+- `node --test tests/*.test.mjs` — `tests/aikaselain.test.mjs`
+  (19 väitettä, oma pieni DOM: asettelu, aalto, veto, napautus,
+  näppäimistö, purku, kelauksen lukema, kytkentä ja mitat) sekä
+  lisäykset esitys- ja tutkimustesteihin.
+- `node tools/savukkeet/savuke-ihmisen-tutkimus.mjs` — väite 2b (aito
+  veto ruutukoordinaateilla esityksen aikana) ja 5a (kelaus
+  tutkimusvaiheessa), kuvakaappaukset `aikaselain-vedossa` ja
+  `aikaselain-tutkimus` kummastakin näkymästä.
+- `node tools/savukkeet/savuke-ihmisen-esitys.mjs` — nauha on pimeässä
+  piilossa mutta rakennettu, ja sen valinta seuraa esitystä viimeiseen
+  jaksoon asti.
+- `node tools/savukkeet/savuke-aikajana.mjs` — keksintölinssi ennallaan
+  (nauhaa ei ole).
+
+AJETTU 7.9.2026 (kontti, ohjelmisto-WebGL):
+
+| Savuke | Tulos |
+| --- | --- |
+| `node --test tests/*.test.mjs` | 2 231 läpi, 0 kaatunutta, 13 ohitettua |
+| `savuke-ihmisen-tutkimus` | **44/44** (tabletti ja puhelin) |
+| `savuke-ihmisen-esitys` | **17/17** |
+| `savuke-aikajana` (regressio) | **13/13** |
+
+Savukkeissa korjattiin ajojen aikana neljä MITTAUSVIRHETTÄ, joissa
+väite kaatui vaikka koodi toimi (kaikki kirjattu commit-viesteihin):
+muistiväitteen jakso luettiin vanhasta muuttujasta, avaruusmittaus oli
+eri `evaluate`-kutsussa kuin pimeän mittaus, nauhan häivytystä
+verrattiin tasan nollaan, ja kellon kelaus vaadittiin osumaan harvaan
+otokseen. Yhtään tuotantokoodin väitettä ei löysätty.
+
+## 16. Avaruus: musta alku on avaruus (7.9.2026)
+
+*(Raamattu "IHMISEN MATKA: MUSTA ALKU ON AVARUUS, PALLO ZOOMAUTUU
+PIMEYDESTA AFRIKKA EDELLA", omistaja 7.9.2026 ilta: "Ja se pimeys on
+avaruus" ja tarkennus "Kertoja alkaa jo pimeydestä". Tämä luku korvaa
+luvun 12.3 kohdan 1 (PIMEÄ) ja täydentää kohtaa 2 (VALOT).)*
+
+### 16.1 Mikä muuttui
+
+Ennen: linssin juuressa oli läpinäkymätön musta peite koko ruudun
+päällä, ja kamera oli ajettu Afrikkaan sen alla — pelaaja näki mustan
+ruudun ja kuuli kertojan.
+
+Nyt: **musta on pallon ALLA**, ja Maa näkyy kaukana pienenä ja tummana
+tähtien keskellä. Kertoja alkaa heti, ja pallo kasvaa luennan aikana
+täyteen kokoon Afrikka keskellä. Kolme osaa:
+
+| Osa | Missä |
+| --- | --- |
+| Musta pohja pallon alla | `js/linssit/ihmisen-matka-esitys.js asennaAvaruus`, css `.aikajana-avaruus` |
+| Tähdet ja pöly pallon näyttämöllä | `js/pallolauta/tahdet.js` |
+| Zoomi kaukaa Afrikkaan | `js/linssit/ihmisen-matka-esitys.js avaruusavaus` |
+
+### 16.2 Musta menee pallon alle, ei sen päälle
+
+Pallon oma piirtoalusta on läpinäkyvä (`js/pallo.js rakennaPallo`
+`backgroundColor('rgba(0,0,0,0)')`), joten pallon ympärillä näkyy
+karttaruudun nahka. Musta levy pannaan siksi **karttaruudun
+ensimmäiseksi lapseksi** (`koti.prepend`): DOM-järjestyksessä se jää
+pallon kuoren alle, ja pallo tähtineen piirtyy sen päälle. Linssin oma
+juuri (z-index 7) ei kelpaa tähän — siellä levy peittäisi pallon.
+
+Vanha peite jää paikalleen kahdesta syystä: pallo ei saa pyörähtää
+sormesta kesken ajon, ja kaukainen Maa on **tumma** (harso
+`opacity: 0,55` → 0 zoomin tahdissa, `.aikajana-esitys-peite.avaruus`).
+
+### 16.3 Tähdet: kirjaston oma hiukkaskerros
+
+Globe.gl 2.46 kantaa three.js:n sisällään eikä vie sitä ulos (sama
+havainto kuin `js/pallo.js kolmiulotteinen`): `THREE.Points` ja
+`THREE.PointsMaterial` eivät ole saatavilla globaalista eikä niitä voi
+lukea pallon omista verkoista (ne ovat Meshejä). Kirjastossa on
+kuitenkin **valmis hiukkaskerros** (`particlesData`), joka rakentaa
+täsmälleen `new Points(new BufferGeometry, new PointsMaterial)`
+jokaiselle joukolle ja merkitsee ne kentällä `__globeObjType`. Moduuli
+käyttää sitä kerrosta ja hakee syntyneet Points-oliot näyttämöltä, jotta
+materiaaliin voi asettaa additiivisen sekoituksen (`blending = 2`),
+läpinäkyvyyden ja `depthWrite: false`.
+
+Kolme kerrosta kahdella etäisyydellä (yhteensä **2 190 pistettä**):
+
+| Kerros | Pisteitä | Korkeus (pallonsädettä) | Koko | Ajautuu |
+| --- | --- | --- | --- | --- |
+| kaukaiset | 1 200 | 5,4–6,5 | 0,90 | ei |
+| kirkkaat | 260 | 4,8–5,8 | 1,35 | ei |
+| pöly | 730 | 2,6–3,4 | 1,30 | kyllä, 0,0016 kierrosta/s |
+
+Kaikkien on oltava kameran kaukaisimman etäisyyden **ulkopuolella**,
+muuten pilvi olisi pallon edessä (yksikkötesti vartioi). Parallaksi
+tulee perspektiivistä ilmaiseksi: kun kamera tulee sisään, lähempi pöly
+liikkuu ruudulla enemmän kuin kaukaiset tähdet.
+
+Leveysaste arvotaan **sinistä** eikä tasaisesti asteista: tasainen
+arvonta kasaisi pisteet napoihin. Mitta testissä: |lat| > 60° kattaa
+13,4 % pallon pinnasta, ja osuuden on oltava lähellä sitä.
+
+**Kehystahti.** Kolme piirtokutsua. Geometria lasketaan kerran; joka
+kehyksellä muuttuu vain yhden olion `rotation.y` ja materiaalien
+`opacity`. Pilvi poistetaan näyttämöltä (`particlesData([])`) heti
+avauksen jälkeen, eikä sitä luoda lainkaan muistista jatkettaessa.
+`tools/savukkeet/savuke-pallo-kehystahti.mjs` ei avaa linssiä, joten se
+ei mittaa tätä kerrosta — mitta on rakenteellinen (ks. avoimet asiat).
+
+### 16.4 Zoomi: laudan oma kamera, katto hetkeksi auki
+
+Lähtökorkeus on **7,5 pallonsädettä**. MITATTU 7.9.2026: laudan oma
+katto (`js/pallolauta/kamera.js PALLO_KORKEUS_MAX` = 2,5, ja
+`js/pallolauta/lauta.js` sitoo OrbitControlsin `maxDistancen` samaan) on
+liian lähellä — korkeudella 2,5 pallo täyttää jo ruudun leveyden ja
+mustaa jää vain kapea kaistale ylle ja alle. Tähdille ei jäisi taivasta
+eikä pallo olisi "pieni".
+
+Avaus siis **leventää ohjaimen kattoa hetkeksi** ja asettaa lähtönäkymän
+laudan omalla `pointOfView`-kutsulla; zoomi ajetaan laudan omalla
+`ajaKameralla` (`ajaAlueeseen('afrikka', AVARUUDEN_MS)`), joka rajaa
+MAALIN normaaliin 2,5:een ja tekee pehmennyksen. Uutta kameramoottoria
+ei tehdä — avauksen ainoa oma kehyskutsu on harson luokanvaihto.
+
+**Katto palautetaan ajastimella** (`AVARUUDEN_MS + 400`) eikä ajon
+lupauksella: 'afrikka'-jakso ajaa saman rajauksen uudestaan jäljellä
+olevalla ajalla, jolloin ensimmäisen ajon lupaus jää ratkeamatta.
+Purku palauttaa katon myös, jos linssi suljetaan kesken avauksen. Ilman
+palautusta pelaaja voisi nipistää itsensä avaruuteen kesken kertomuksen.
+
+Kesto on **5,2 s** ja tähdet häipyvät zoomin viimeisen 55 %:n aikana
+(`TAHTIEN_HAIVE`). Kertoja alkaa heti napista: avausjakson luenta on
+noin 9 s (ilman äänitettä varakesto), joten pallo on perillä kertojan
+puhuessa. Jos luenta on lyhyempi kuin zoomi, 'afrikka'-jakso EI katkaise
+ajoa vaan jatkaa sitä jäljellä olevan ajan (`avaruuttaJaljella`).
+
+`prefers-reduced-motion`: suora leikkaus Afrikkaan, tähdet paikallaan
+ilman ajautumista, harso pois.
+
+**Muistista jatkettaessa avaruutta ei luoda.** Pelaaja on jo ollut
+matkalla, eikä avausta näytetä uudestaan (sama sääntö kuin mustalla
+alulla, luku 13.5).
+
+### 16.5 Sallittujen kerrosten lista kasvoi
+
+`js/pallolauta/lauta.js PALLOLAUDAN_KERROKSET` sai kuudennen jäsenen,
+`particlesData`. Sääntö "ei mitään pinnoitteen päälle" (Raamattu
+5.9.2026) ei rikkoudu: pisteet ovat 2,6–6,5 pallonsädettä pinnan
+YLÄPUOLELLA, ne eivät ole karttaa, ja kerros on tyhjä aina kun
+kertomusesityksen avaus ei ole käynnissä. Kaksi yksikkötestiä
+(`tests/pallolauta.test.mjs`, `tests/pallonimet.test.mjs`) vartioivat
+listaa, ja kumpaankin on kirjattu peruste.
+
+### 16.6 Mitatut luvut
+
+MITATTU 7.9.2026 (kontti, ohjelmisto-WebGL, äänitteet mockattuina):
+
+- Korkeus 7,5 → 1,878 (834 × 1100), Afrikka keskellä koko ajon:
+  lat 1,0 → 1,1, lng 17,0.
+- Tähtiä 2 190 kolmessa kerroksessa; musta levy on karttaruudun
+  ensimmäinen lapsi ja peittävyys 1 koko pimeän ajan.
+- Avausjakson luenta on käynnissä (`kaynnissa: true`) jo ensimmäisellä
+  mittauksella, kun korkeus on vielä 7,5 — kertoja alkaa pimeydestä.
+- Ei sivuvirheitä kummassakaan näkymässä.
+- Hidas laite: jos kehykset nälkiintyvät, ajo voi jäädä kesken ja
+  ohjaimen katon palautus rajaa korkeuden 2,5:een. Seuraava jakso ajaa
+  Afrikan rajauksen kestolla 0, joten näkymä korjautuu itsestään
+  (mitattu puhelinnäkymässä).
+
+### 16.7 Avoimet asiat
+
+1. **Kehystahtia ei mitattu avauksen aikana.** `savuke-pallo-kehystahti`
+   mittaa pallon panorointia ja zoomia ILMAN linssiä, joten tähtikerros
+   ei näy siinä lainkaan. Peruste on rakenteellinen (kolme piirtokutsua,
+   ei kehyskohtaista laskentaa) ja pilvi elää vain viisi sekuntia. Jos
+   mittaus halutaan, savukkeeseen tarvitaan linssin avaava vaihe.
+2. **Valon reuna** on pallon oma ilmakehä (`atmosphereColor #d9a13b`),
+   ei erillinen terminaattori. Omistajan sanoissa "valon reuna näkyy"
+   voi tarkoittaa myös aitoa päivän ja yön rajaa — se olisi oma työnsä
+   (valon suunta ja varjopuoli laattamateriaalissa).
+3. **Kirkkaat pisteet ovat neliöitä.** PointsMaterial ilman tekstuuria
+   piirtää neliön; koossa 1,35 se ei erotu, mutta suuremmassa koossa
+   erottuisi. Pyöreä tähti vaatisi `particlesTexture`-kuvan tai
+   canvas-tekstuurin.

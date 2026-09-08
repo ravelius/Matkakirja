@@ -531,3 +531,30 @@
   .ihmisen-vanalappu { transform: translateX(-50%); }
   .ihmisen-vanalappu.esilla { transform: translateX(-50%); }
 }
+
+/* ==================== AIKASELAIN VIE ALALAIDAN ==================== */
+
+/*
+ * Raamattu "LINSSIEN AIKASELAIN ALAREUNAAN" (7.9.2026): nauha on ruudun
+ * alalaidassa (css/aikajana.css, korkeus --aikaselain-korkeus), ja kaikki
+ * alalaitaan kelluva väistää sitä — sama kuvio kuin aikoinaan karusellin
+ * kanssa. Sääntö on body-luokan takana, joten ilman nauhaa mitat ovat
+ * kirjaimelleen entiset.
+ */
+body.aikaselain-auki .ihmisen-vanalappu {
+  bottom: calc(var(--aikaselain-korkeus, 62px) + 0.7rem);
+}
+body.aikaselain-auki .ihmisen-nostokortti {
+  max-height: calc(100% - var(--aikajana-palkki-korkeus, 3.4rem)
+    - var(--aikaselain-korkeus, 62px) - 1.6rem);
+}
+
+@media (max-width: 700px) {
+  body.aikaselain-auki .ihmisen-vanalappu {
+    bottom: calc(var(--aikaselain-korkeus, 54px) + 0.5rem);
+  }
+  body.aikaselain-auki .ihmisen-nostokortti {
+    max-height: calc(100% - var(--aikajana-palkki-korkeus, 3.4rem)
+      - var(--aikaselain-korkeus, 54px) - 4rem);
+  }
+}

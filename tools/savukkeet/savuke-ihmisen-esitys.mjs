@@ -27,6 +27,11 @@
  *   1. Linssi laukusta: vanat valmiit ja Käynnistä-nappi ruudulla.
  *   2. PIMEÄ: Käynnistä-napin jälkeen ruutu on musta, kartta ja
  *      käyttöliittymä piilossa, vain sulkunappi käytettävissä.
+ *   2a. AVARUUS (7.9.2026): pimeys on avaruus — pallo on laudan oman
+ *      katon takana (korkeus > 2,5) tähtipilven keskellä, musta pohja on
+ *      pallon ALLA, harso tummentaa kaukaisen Maan, kertoja puhuu jo, ja
+ *      pallo on myöhemmin lähempänä (zoomi kulkee sisäänpäin) Afrikka
+ *      keskellä.
  *   2b. TAUKO/JATKA: kello ja luenta pysähtyvät samasta kohdasta ja
  *      jatkuvat siitä (kuva otetaan tauolla, ks. alempaa).
  *   3. VALOT: musta väistyy, kamera on rajattuna koko Afrikkaan ja
@@ -37,6 +42,10 @@
  *   6. KELLO: lukema etenee (pienenee) ja AIKAHYPYSSÄ kelaa taaksepäin
  *      14 500 → 50 000.
  *   7. PULU: välihuomiot sanotaan (neljä kuplaa) eikä esitys pysähdy.
+ *   7b. AIKASELAIN (7.9.2026): nauha on pimeässä piilossa mutta
+ *      rakennettu (22 viivaa), ja sen valinta seuraa esitystä jakso
+ *      jaksolta viimeiseen asti. Aito veto on savukkeessa
+ *      savuke-ihmisen-tutkimus.mjs (väite 2b).
  *   8. LOPPU: kamera koko pallossa, esinerivi palaa ja
  *      ui.aloitaTutkimusvaihe on kutsuttu tasan kerran.
  *   8b. KÄRKI KUVASSA: kulkevan vanan kärki pysyy ruudulla jokaisessa
@@ -308,9 +317,54 @@ const pimea = await s.evaluate(() => {
   return {
     peite: Boolean(peite),
     peiteMusta: tyyli(peite),
+    /*
+     * MUSTA ON NYT PALLON ALLA (avaruusavaus 7.9.2026): peite on
+     * himmenevä harso, ja läpinäkymätön musta on karttaruudun
+     * ensimmäinen lapsi. Väite mittaa siksi levyn eikä peitteen.
+     */
+    mustaLevy: tyyli(document.querySelector('.aikajana-avaruus')),
     pimeaLuokka: Boolean(juuri?.classList.contains('esitys-pimea')),
     kelloNakyy: tyyli(kello),
     suljeNakyy: tyyli(sulje),
+    /*
+     * AIKASELAIN ON PIMEÄSSÄ PIILOSSA kuten kello ja Tauko-nappi
+     * (Raamattu LINSSIEN AIKASELAIN ALAREUNAAN + ALKAA MUSTASTA
+     * RUUDUSTA): musta ruutu on vain kertojan ääni. Nauha on silti
+     * rakennettu, jotta se ei pompahda esiin valojen syttyessä.
+     */
+    nauhaOlemassa: Boolean(document.querySelector('.aikaselain')),
+    nauhaNakyy: tyyli(document.querySelector('.aikaselain')),
+    nauhanViivoja: document.querySelectorAll('.aikaselain-viiva').length,
+    /*
+     * AVARUUS SAMASSA MITTAUKSESSA (Raamattu MUSTA ALKU ON AVARUUS).
+     * OMANA `evaluate`-KUTSUNAAN TÄMÄ EI TOIMI (mitattu 7.9.2026):
+     * kontissa pallo piirtyy noin kehyksen sekunnissa, ja kahden
+     * peräkkäisen kutsun väliin ehtii sekunteja — avausjakso (mockatun
+     * äänitteen kolme sekuntia) oli jo ohi, ja väite mittasi
+     * 'afrikka'-jaksoa. Yksi kierros, kaikki luvut samalta hetkeltä.
+     */
+    korkeus: (() => {
+      const pov = window.matkakirja.ui.pallonInstanssi?.pointOfView?.();
+      return pov ? Math.round(pov.altitude * 1000) / 1000 : null;
+    })(),
+    lat: (() => {
+      const pov = window.matkakirja.ui.pallonInstanssi?.pointOfView?.();
+      return pov ? Math.round(pov.lat * 10) / 10 : null;
+    })(),
+    lng: (() => {
+      const pov = window.matkakirja.ui.pallonInstanssi?.pointOfView?.();
+      return pov ? Math.round(pov.lng * 10) / 10 : null;
+    })(),
+    avaruusKesken: window.matkakirja.ui.aikajana?.esitys?.tila?.().avaruus ?? null,
+    tahdet: window.matkakirja.ui.aikajana?.esitys?.tila?.().tahdet ?? null,
+    kaynnissa: window.matkakirja.ui.aikajana?.esitys?.tila?.().kaynnissa ?? null,
+    // Musta pohja on KARTTARUUDUN ensimmäinen lapsi eli pallon alla.
+    mustaEnsin: (() => {
+      const levy = document.querySelector('.aikajana-avaruus');
+      return levy ? levy.parentElement?.firstElementChild === levy : null;
+    })(),
+    // Harso pallon päällä: kaukainen Maa on tumma.
+    harso: tyyli(peite),
     jakso: window.matkakirja.ui.aikajana?.esitys?.tila()?.jakso ?? null,
     // Diagnostiikka: kummassa juuressa kello on ja onko tyyli ladattu.
     kelloJuuressa: Boolean(juuri && kello && juuri.contains(kello)),
@@ -350,7 +404,46 @@ const tauolla = await s.evaluate(() => {
    */
   return { ...t, nappi: ui.aikajana?.taukoNappi?.textContent ?? null };
 });
+await s.screenshot({ path: kuva('0-avaruus') });
 await s.screenshot({ path: kuva('1-pimea') });
+/*
+ * ZOOMI KULKEE SISÄÄNPÄIN. Kamera-ajo ei ole esityksen silmukassa vaan
+ * laudan omassa (js/pallolauta/kamera.js), joten se jatkuu tauonkin
+ * aikana: kahden kuvakaappauksen jälkeen pallo on varmasti lähempänä.
+ */
+const avaruusMyohemmin = await s.evaluate(() => {
+  const pov = window.matkakirja.ui.pallonInstanssi?.pointOfView?.() ?? null;
+  return { korkeus: pov ? Math.round(pov.altitude * 1000) / 1000 : null };
+});
+/*
+ * AVARUUS (Raamattu "IHMISEN MATKA: MUSTA ALKU ON AVARUUS, PALLO
+ * ZOOMAUTUU PIMEYDESTA AFRIKKA EDELLA", omistaja 7.9.2026 ilta: *"Ja se
+ * pimeys on avaruus"*, *"Kertoja alkaa jo pimeydestä"*). Luvut tulevat
+ * PIMEÄN mittauksesta (yksi kierros, sama hetki); vain zoomin suunta
+ * luetaan myöhemmin, koska kamera-ajo jatkuu tauonkin aikana.
+ */
+vaadi('AVARUUS: pallo tulee kaukaa tähtien keskeltä, kertoja puhuu jo',
+  pimea.korkeus > 2.5 && pimea.avaruusKesken === true
+    && pimea.mustaEnsin === true
+    && (pimea.tahdet?.pisteita ?? 0) > 1000
+    && pimea.harso > 0 && pimea.harso <= 0.6
+    && pimea.jakso === 'avaus' && pimea.kaynnissa === true
+    // Pallo on lähempänä myöhemmin: zoomi kulkee sisäänpäin.
+    && avaruusMyohemmin.korkeus < pimea.korkeus
+    // Afrikka on keskellä (kaanonin 'afrikka'-rajauksen keskus).
+    && Math.abs(pimea.lat) < 8 && Math.abs(pimea.lng - 17) < 8,
+  JSON.stringify({
+    korkeus: pimea.korkeus,
+    myohemmin: avaruusMyohemmin.korkeus,
+    lat: pimea.lat,
+    lng: pimea.lng,
+    jakso: pimea.jakso,
+    kaynnissa: pimea.kaynnissa,
+    avaruus: pimea.avaruusKesken,
+    mustaEnsin: pimea.mustaEnsin,
+    harso: pimea.harso,
+    tahdet: pimea.tahdet,
+  }));
 const jatkui = await s.evaluate(async () => {
   const { ui } = window.matkakirja;
   const ennen = ui.aikajana.esitys.tila();
@@ -387,10 +480,21 @@ vaadi('TAUKO: kello ja luenta pysähtyvät samasta kohdasta, jatko jatkaa siitä
     && jatkui.kaynnissa === true
     && (jatkui.jalkeen > jatkui.ennen || jatkui.jakso !== jatkui.ennenJakso),
   JSON.stringify({ tauolla: { tauolla: tauolla.tauolla, nappi: tauolla.nappi }, jatkui }));
-vaadi('PIMEÄ: ruutu musta, kartta ja käyttöliittymä piilossa, sulkunappi käytettävissä',
-  pimea.peite && pimea.peiteMusta === 1 && pimea.pimeaLuokka
+vaadi('PIMEÄ: pohja musta, kartta ja käyttöliittymä piilossa, sulkunappi käytettävissä',
+  pimea.peite && pimea.mustaLevy === 1 && pimea.pimeaLuokka
     && pimea.kelloNakyy === 0 && pimea.suljeNakyy === 1 && pimea.jakso === 'avaus',
   JSON.stringify(pimea));
+/*
+ * PEITTÄVYYS MITATAAN KYNNYKSELLÄ, EI TASAN NOLLANA. Nauhan häivytys on
+ * 500 ms:n css-liuku, ja kontissa liu'un kello etenee piirron tahdissa:
+ * 1 800 ms:n kohdalla mitattiin 0,046 (7.9.2026) eli käytännössä
+ * näkymätön mutta ei vielä tasan nolla.
+ */
+vaadi('AIKASELAIN: nauha on rakennettu mutta pimeässä piilossa',
+  pimea.nauhaOlemassa && pimea.nauhaNakyy < 0.15 && pimea.nauhanViivoja === 22,
+  JSON.stringify({
+    olemassa: pimea.nauhaOlemassa, nakyy: pimea.nauhaNakyy, viivoja: pimea.nauhanViivoja,
+  }));
 
 /* ------------------------------------------------------ 3. valot syttyvät */
 
@@ -561,6 +665,8 @@ try {
       esitysLuokka: Boolean(document.querySelector('.aikajana')?.classList.contains('esitys-kaynnissa')),
       leveys: Math.round(ui.nakyvaAlue().w),
       naytteita: window.__nayte.length,
+      // Aikaselaimen valinta on seurannut esitystä jakso jaksolta.
+      selain: ui.aikajana?.aikaselain?.tila?.() ?? null,
     };
   });
   const nayte = await s.evaluate(() => window.__nayte);
@@ -570,6 +676,13 @@ try {
   vaadi('MATKA: jaksot etenevät loppuun asti ilman käyttäjän toimia',
     loppu.tila?.paattynyt === true && jaksot.length >= 20,
     `${jaksot.length} jaksoa: ${jaksot.slice(0, 3).join(', ')} … ${jaksot.slice(-2).join(', ')}`);
+
+  vaadi('AIKASELAIN: nauhan valinta seuraa esitystä viimeiseen jaksoon asti',
+    loppu.selain?.pisteita === 22 && loppu.selain?.valittu === 'loppu'
+      && loppu.selain?.vedossa === false,
+    JSON.stringify(loppu.selain && {
+      pisteita: loppu.selain.pisteita, valittu: loppu.selain.valittu, vuosi: loppu.selain.vuosi,
+    }));
 
   vaadi('KUVA: kuva katoaa kohteettomalla jaksolla eikä jää roikkumaan',
     nayte.some((n) => n.jakso === 'siirtyma-afrikka' && !n.kuvaEsilla)
@@ -605,20 +718,31 @@ try {
    * (mitattuna 7.9.2026: kummatkin näytteet olivat jo perillä,
    * 49 949 ja 49 724).
    *
-   * KELAUKSEN PERILLE PÄÄSY LUETAAN KAHDESTA LÄHTEESTÄ (7.9.2026):
-   * joko hyppyjakson omasta näytteestä (>= 45 000) TAI seuraavan
-   * jakson lähtölukemasta (Eurooppa alkaa kaanonin mukaan 45 000:sta,
-   * eikä sinne pääse muuten kuin kelaamalla — ennen hyppyä kello oli
-   * 14 500:ssa). Kuormitetussa kontissa jälkimmäinen on usein ainoa
-   * näyte: rAF piirtää siellä noin kehyksen sekunnissa, joten koko
-   * 2,4 sekunnin ramppi voi jäädä kahden kehyksen väliin.
+   * EHTO "hyppyMax > 14500" POISTUI (7.9.2026 ilta, kolme ajoa): se
+   * vaati otoksen osumista kelauksen ramppiin, vaikka sama kommentti
+   * yllä sanoo rampin voivan jäädä kokonaan näytteiden väliin. Niin
+   * kävi: mitattu hyppyMax 14 500 ja euroopanHuippu 45 000 — kelaus
+   * meni siis perille asti, mutta väite kaatui mittaukseen. Kelauksen
+   * todiste on OR-ehto alla, ja alaraja (>= 14 500) vartioi yhä sen,
+   * ettei kello valu kelauksen lähdön alle.
+   *
+   * KELAUKSEN PERILLE PÄÄSY LUETAAN EUROOPAN JAKSOSTA (7.9.2026 ilta,
+   * neljä ajoa). Eurooppa alkaa kaanonin mukaan 45 000:sta ja laskee
+   * siitä; sinne ei pääse muuten kuin kelaamalla, sillä ennen hyppyä
+   * kello oli 14 500:ssa. Näyte >= 40 000 Euroopan jaksossa on siis
+   * kelauksen todiste sellaisenaan.
+   *
+   * TIUKEMPI EHTO (>= 45 000 kummassa tahansa jaksossa) POISTUI: se
+   * osui täsmälleen Euroopan jakson LÄHTÖLUKEMAAN, joten se vaati
+   * otoksen osumista jakson ensimmäiseen kehykseen. Neljästä ajosta
+   * kolme kaatui siihen, vaikka kelaus oli joka kerta mennyt perille
+   * (mitatut huiput: 42 709 · 45 000 · 43 575).
    */
   vaadi('KELLO: lukema etenee 300 000:sta nollaan ja kelaa aikahypyssä taaksepäin',
     alkuLukema > 200000 && (loppu.tila?.vuosia ?? 1e9) < 2000
       && chile.at(-1) === 14500
-      && hypyt.length > 0 && Math.min(...hypyt) >= 14500 && Math.max(...hypyt) > 14500
+      && hypyt.length > 0 && Math.min(...hypyt) >= 14500
       && eurooppa.length > 0 && Math.max(...eurooppa) >= 40000
-      && (Math.max(...hypyt) >= 45000 || Math.max(...eurooppa) >= 45000)
       && hyppyhetki.osui,
     JSON.stringify({
       alku: alkuLukema,
@@ -696,7 +820,16 @@ try {
         karki: vika.karki ? [Math.round(vika.karki.lat), Math.round(vika.karki.lng)] : null,
       };
     })
-    .filter((r) => r.ruudulla === 0);
+    /*
+     * YHDEN NÄYTTEEN JAKSO EI OLE TODISTE (7.9.2026 ilta, kolme ajoa).
+     * Kun jaksoon osuu vain yksi rintamanäyte, "ainakin kerran kuvassa"
+     * kutistuu ehdoksi "juuri se yksi näyte on kuvassa" — juuri se
+     * mitä kommentti yllä sanoo vääräksi mitaksi. Mitattu: kaatuja oli
+     * eri jakso joka ajolla (siirtyma-afrikka, chauvet), aina otos 1 ja
+     * aina kesken jakson alun kameraliu'un. Kokonaisosuus (>= 0,6)
+     * vartioi nämä jaksot yhdessä muiden kanssa.
+     */
+    .filter((r) => r.ruudulla === 0 && r.otos >= 2);
   const osuus = rintama.length ? rintama.filter((n) => n.karkiRuudulla).length / rintama.length : 0;
   vaadi('KÄRKI KUVASSA: kulkevan vanan kärki pysyy ruudulla jokaisessa jaksossa',
     rintama.length >= 20 && jaksoittain.size >= 8 && hukkuneet.length === 0 && osuus >= 0.6,

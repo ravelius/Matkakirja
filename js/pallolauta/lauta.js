@@ -107,8 +107,18 @@ import { luoAloituslennonKohtaus } from './avaus.js';
  * järvet (js/pallolauta/linssit.js polygonit). Se on LINSSIN kerros eikä
  * kartan: peli ei piirrä sinne mitään, ja kerros on tyhjä aina kun
  * linssiä ei ole päällä.
+ *
+ * AVARUUS 7.9.2026 (Raamattu "IHMISEN MATKA: MUSTA ALKU ON AVARUUS,
+ * PALLO ZOOMAUTUU PIMEYDESTA AFRIKKA EDELLA"): hiukkaset
+ * (particlesData) tulivat listalle tähtitaivasta varten
+ * (js/pallolauta/tahdet.js). Se ei ole kartta EIKÄ pinnoitteen päällä:
+ * pisteet ovat pallon YLÄPUOLELLA, korkeudella 2,6–6,5 pallonsädettä,
+ * eli kaukana avaruudessa. Kerros elää vain kertomusesityksen avauksen
+ * ajan ja tyhjennetään heti sen jälkeen.
  */
-export const PALLOLAUDAN_KERROKSET = ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData'];
+export const PALLOLAUDAN_KERROKSET = [
+  'pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData', 'particlesData',
+];
 /*
  * ══════════════════════════════════════════════════════════════════
  * KAUPUNKIPISTE ON RUUDUN VAKIO, EI KARTAN (omistaja 7.9.2026, iPad:

@@ -275,6 +275,27 @@ test('kertomuskaari saa yhden palkin yläpalkin tilalle eikä karusellia', () =>
   assert.ok(!/--tutkimus-nauha/.test(CSS), 'lapun korkeus laskettiin karusellista');
 });
 
+test('aikaselain vie alalaidan: kortti ja pergamenttilappu väistävät (7.9.2026)', () => {
+  /*
+   * Raamattu "LINSSIEN AIKASELAIN ALAREUNAAN": nauha on ruudun
+   * alalaidassa koko linssin ajan, myös tutkimusvaiheessa. Kaikki
+   * alalaitaan kelluva nousee sen yläpuolelle — sama kuvio kuin
+   * aikoinaan karusellin kanssa, mutta yhden luvun
+   * (--aikaselain-korkeus) varassa.
+   */
+  assert.match(AIKAJANA_CSS, /body\.aikaselain-auki \{ --aikaselain-korkeus: \d+px; \}/);
+  assert.match(CSS, /body\.aikaselain-auki \.ihmisen-vanalappu \{\n\s*bottom: calc\(var\(--aikaselain-korkeus/,
+    'pergamenttilappu jää nauhan alle');
+  assert.match(CSS, /body\.aikaselain-auki \.ihmisen-nostokortti \{\n\s*max-height: calc\([\s\S]{0,160}--aikaselain-korkeus/,
+    'noston kortti ulottuu nauhan alle');
+  // Sääntö on body-luokan takana: ilman nauhaa mitat ovat entiset.
+  assert.match(CSS, /\.ihmisen-vanalappu \{[\s\S]{0,200}bottom: 1rem;/,
+    'lapun oma perusmitta on kadonnut');
+  // Tutkimusvaiheen moduuli ei tunne nauhaa: kytkentä on moottorissa.
+  assert.ok(!/aikaselain/.test(koodi(MODUULI)),
+    'tutkimusvaihe kytkee nauhan itse — kytkentä kuuluu moottoriin (js/aikajana.js)');
+});
+
 /* ==================== muisti ==================== */
 
 test('muisti tarkistetaan puhtaasti: vaihe, jakso, kamera, kortti ja virta', () => {

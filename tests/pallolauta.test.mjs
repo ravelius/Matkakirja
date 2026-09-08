@@ -182,7 +182,15 @@ test('pallolla vain pelin merkit: sallitut kerrokset lueteltu, kartan kerrokset 
   // LINSSIT 5.9.2026 (karttapallo.md luku 10, aalto 1A): monikulmiot
   // (polygonsData) tulivat listalle LINSSIN kerroksena — peli ei piirrä
   // sinne mitään, ja kerros on tyhjä aina kun linssiä ei ole päällä.
-  assert.deepEqual(PALLOLAUDAN_KERROKSET, ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData']);
+  /*
+   * AVARUUS 7.9.2026: particlesData tuli listalle tähtitaivaalle
+   * (js/pallolauta/tahdet.js). Se ei riko sääntöä "ei mitään pinnoitteen
+   * päälle": pisteet ovat 2,6–6,5 pallonsädettä pinnan YLÄPUOLELLA, ja
+   * kerros on tyhjä aina kun kertomusesityksen avaus ei ole käynnissä.
+   */
+  assert.deepEqual(PALLOLAUDAN_KERROKSET, [
+    'pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData', 'particlesData',
+  ]);
   const kansio = new URL('../js/pallolauta/', import.meta.url);
   const kielletyt = ['labelsData', 'ringsData', 'hexBinPointsData', 'tilesData', 'customLayerData', 'objectsData', 'heatmapsData'];
   for (const nimi of readdirSync(kansio)) {
