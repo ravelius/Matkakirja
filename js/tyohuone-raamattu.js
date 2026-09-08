@@ -4216,6 +4216,17 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'LINSSIEN HAMPURILAINEN OIKEASSA YLAKULMASSA: POISTU, ALOITA ALUSTA, '
+          + 'KERTOJA, TAUSTAMUSIIKKI (omistaja 8.9.2026 klo 12.40, sanatarkasti: '
+          + '"Kummankin linssin ja myos tulevien linssien oikeaan ylareunaan '
+          + 'voisi laittaa hampurilaisen, mista loytyisi jarjestyksessa ylhaalta '
+          + 'alas: poistu, aloita alusta, kertoja (on/off) ja taustamusiikki '
+          + '(on/off). Poistu ja aloita alusta napit voi ottaa ylapalkista siten '
+          + 'pois nakyvista."): jokaisen linssin palkin oikeassa laidassa on '
+          + 'yksi hampurilaisnappi, jonka valikossa ovat tassa jarjestyksessa '
+          + 'Poistu, Aloita alusta, Kertoja (paalla/pois) ja Taustamusiikki '
+          + '(paalla/pois). X- ja alusta-napit poistuvat palkista. Tauko/Jatka '
+          + 'jaa palkkiin. Sama valikko kaikkiin tuleviin linsseihin.',
         'ISOISAA EI TUNNISTA MYOSKAAN KEKSINTOLINSSIN 1873-PYSAKILLA (omistaja '
           + '8.9.2026 klo 11.03, iPad-kaappaus, sanatarkasti: "Tahan pitaa '
           + 'vaihtaa havainne- seka muotokuva mista isoisaa ei tunnista. '
