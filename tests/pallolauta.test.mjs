@@ -981,8 +981,10 @@ test('kaupunkipisteen ruutuhalkaisija on sama joka zoomilla ja joka ruudulla', (
 
 test('kaupunkipisteen koko seuraa kameraa ilman uutta pistedataa', () => {
   const lauta = lue('../js/pallolauta/lauta.js');
-  // Luenta antaa kameran mukaisen säteen (ei enää karttavakiota).
-  assert.match(lauta, /return pisteenSade\(\);/);
+  // Luenta antaa kameran mukaisen säteen (ei enää karttavakiota) — ja
+  // PISTEKOHTAISESTI (8.9.2026 ilta): lattia vain pelaajan kaupungille.
+  assert.match(lauta, /return pisteenSade\(d\);/);
+  assert.match(lauta, /const pisteenSade = \(d\) => sadeRuudulta\(/);
   assert.doesNotMatch(lauta, /KAUPUNKIPISTEEN_SADE/);
   // Zoomin muuttuessa skaala kirjoitetaan olioon: ei pointsData-kutsua,
   // joten 261 pistettä ei synny uudestaan eikä siirtymä nykäise.

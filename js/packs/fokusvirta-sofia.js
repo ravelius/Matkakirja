@@ -284,10 +284,18 @@ export const FOKUSVIRTA_SOFIA = {
   matkakirja: {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Sofia, elokuussa 1873. Helteistä; tomu ei laskeudu.',
+    /*
+     * KAANON UUSIKSI (Fable 8.9.2026, samaan kulkuun kuin Ateena):
+     * ei ajatusviivaa, ei kuukautta, kaupungin kuuma lähde nousee
+     * mukaan, ja loppuvirke kytkee merkinnän kuvaan (nimi on kuvassa,
+     * ei kirjassa). Vanha versio on kokonaan korvattu, ei muokattu.
+     */
     teksti: 'Sofiassa kukaan ei sano ääneen sen miehen nimeä, joka '
-      + 'hirtettiin täällä helmikuussa — mutta majatalon isäntä jätti '
+      + 'hirtettiin täällä viime talvena. Majatalon isäntä jätti silti '
       + 'ikkunalaudalle kynttilän palamaan. Kysyin kenelle. Hän sanoi: '
-      + '"Sille, jonka hautaa ei kukaan tunne."',
+      + 'sille, jonka hautaa ei kukaan tunne. Torin laidalla kuuma lähde '
+      + 'höyryää, ja naiset kantavat sieltä vettä kuin mitään ei olisi '
+      + 'tapahtunut. Kirjoitin nimen muistiin, mutta en tähän kirjaan.',
     /*
      * Luenta generoitu 25.8.2026 samalla reseptillä kuin muut
      * matkakirjaluennat (Viisas Kertoja, eleven_v3, stability 0.5).
@@ -298,11 +306,19 @@ export const FOKUSVIRTA_SOFIA = {
      * tuntematon, Category:Vasil Levski. Merkintä ei mainitse nimeä —
      * kuva mainitsee, ja juuri siitä syntyy vaiheen 2 jatko.
      */
+    /*
+     * LUENTA = RUUTUTEKSTI SANASTA SANAAN, kolme tunnetagia.
+     * ÄÄNITE ON VANHENTUNUT (8.9.2026): assets/audio/puhe-fokus-
+     * matkakirja-sofia.mp3 on generoitu 25.8.2026 edellisestä tekstistä
+     * ja on generoitava uudelleen tästä luennasta (sama tilanne kuin
+     * Ateenassa) ennen kuin kertoja lukee saman kuin ruudulla lukee.
+     */
     luenta: '[curious] Sofiassa kukaan ei sano ääneen sen miehen nimeä, '
-      + 'joka hirtettiin täällä helmikuussa — mutta majatalon isäntä '
-      + 'jätti ikkunalaudalle kynttilän palamaan. [whispers] Kysyin '
-      + 'kenelle. [softly] Hän sanoi: Sille, jonka hautaa ei kukaan '
-      + 'tunne.',
+      + 'joka hirtettiin täällä viime talvena. Majatalon isäntä jätti silti '
+      + 'ikkunalaudalle kynttilän palamaan. [whispers] Kysyin kenelle. Hän '
+      + 'sanoi: sille, jonka hautaa ei kukaan tunne. [softly] Torin laidalla '
+      + 'kuuma lähde höyryää, ja naiset kantavat sieltä vettä kuin mitään ei '
+      + 'olisi tapahtunut. Kirjoitin nimen muistiin, mutta en tähän kirjaan.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sofia.mp3',
     kuva: {
       tiedosto: 'BASA-713K-1-52-4-Vasil Levski.JPG',
@@ -400,7 +416,7 @@ export const FOKUSVIRTA_SOFIA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     huudahdus: {
-      kohta: 'joka hirtettiin täällä helmikuussa',
+      kohta: 'joka hirtettiin täällä viime talvena',
       teksti: 'Kääk.',
     },
     /*
@@ -415,7 +431,7 @@ export const FOKUSVIRTA_SOFIA = {
      * uudestaan. Kupla näkyy ja etenee kuten ennen.
      */
     kommentti: [
-      'Sen miehen nimi on nyt kadulla ja stadionilla. Ja lähteistä haetaan yhä vettä.',
+      'Sitä nimeä ei enää kuiskata: hän on koko maan sankari. Ja lähde torin laidalla höyryää yhä.',
     ],
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,

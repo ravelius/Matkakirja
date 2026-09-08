@@ -24,12 +24,33 @@ import { readFileSync } from 'node:fs';
  *
  * Nämä vartijat pitävät molemmat päät kiinni: lattia on olemassa ja
  * riittävän korkea, EIKÄ kaukonäkymä muutu.
+ *
+ * ── ILLAN KAKSI KORJAUSTA 8.9.2026 (Mac-kaappaukset) ──────────────
+ *
+ * 1. *"tällä zoom tasolla kaupunki pallot jäävät liian isoiksi"*
+ *    (koko Eurooppa ruudulla, Fogg Kiovassa). Lattia oli laskettu
+ *    kerran näkymästä ja kirjoitettu kaikille 261 pisteelle; Ukrainan
+ *    levyinen lehti avasi portin jo koko Euroopan zoomilla (mitattu
+ *    Chromium 1419 x 821 css, korkeus 0,42: lehdenOsuus 0,82, jokainen
+ *    piste 17,2 px, kun 7,0 px oli oikea). Nyt lattia koskee VAIN
+ *    pelaajan kaupunkia (kaupunkipisteenHalkaisijaPx); mitattu jälkeen
+ *    Kiova 16,3–17,0 px ja muut 6,8 px (perspektiivi syö vajaan
+ *    kymmenyksen 7 px:stä).
+ * 2. *"kaupunkien pisteet eivät myöskään pysy paikallaan, vaan
+ *    liikkuvat panoroitaessa."* Levy oli 0,3 yksikköä pinnan
+ *    yläpuolella pintanormaalin suuntaan, ja parallaksi siirsi sitä
+ *    ruudulla ulospäin 4,2 % etäisyydestä keskustaan (mitattu Chromium
+ *    1440 x 900 css dpr 2, korkeus 0,08: 197 px keskustasta -> 8,3 px,
+ *    294 px -> 12,3 px). Nyt levy siirretään KATSESÄTEELLE
+ *    (katsesateenPaikka); mitattu jälkeen 0,00 px kaikissa neljässä
+ *    näkymässä.
  */
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const {
   KAUPUNKIPISTEEN_HALKAISIJA_PX, KOHDEKAUPUNGIN_NIMI_SUHDE,
-  KOHDEKAUPUNGIN_PISTE_SUHDE, KOHDEKAUPUNGIN_TAYSI_OSUUS, kaupunkipisteenSade,
+  KOHDEKAUPUNGIN_PISTE_SUHDE, KOHDEKAUPUNGIN_TAYSI_OSUUS, katsesateenPaikka,
+  kaupunkipisteenHalkaisijaPx, kaupunkipisteenSade,
   kohdekaupunginMitat, poltetunMusteenSuurennus,
 } = await import('../js/pallolauta/lauta.js');
 const { KOHDEMERKIN_RUUTU_PX } = await import('../js/pallolauta/nostot.js');
@@ -141,13 +162,21 @@ test('ladonta latoo nimen ja varaa pisteen lattian mitassa', () => {
 test('piste ja ladonta lukevat saman lattian', () => {
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /const kohdekaupunki = \(\) => \{/);
-  assert.match(lauta, /halkaisijaPx: kohdekaupunki\(\)\.halkaisijaPx/);
+  // Piste lukee lattian PISTEKOHTAISESTI (8.9.2026 ilta): sama funktio
+  // sekä pointRadius-luennassa että skaalan tahdistuksessa.
+  assert.match(lauta, /kaupunkipisteenHalkaisijaPx\(d, pelaajanKaupunki\(\), kohdekaupunki\(\)\)/);
+  assert.match(lauta, /kaupunkipisteenHalkaisijaPx\(d, oma, mitat\)/);
+  assert.match(lauta, /return pisteenSade\(d\);/);
+  assert.match(lauta, /const pelaajanKaupunki = \(\) => ui\.game\?\.cityOf\?\.\(\)\?\.id \?\? null;/);
   assert.match(lauta, /kokoKerroin: kaupunginMitat\.nimiKerroin/);
   assert.match(lauta, /pisteSade: kaupunginMitat\.halkaisijaPx \/ 2/);
   // Portti on sama luku kuin kohdemerkeillä itsellään.
   assert.match(lauta, /nostot\.lehdenOsuus\(nakyva\)/);
   const nostot = lue('../js/pallolauta/nostot.js');
   assert.match(nostot, /lehdenOsuus\(pohja, nakyva, pack\.id\) >= LEHDEN_VAHIN_OSUUS/);
+  // …ja portti on myös pelitilan portti: ei merkkejä, ei lattiaa.
+  assert.match(nostot, /if \(!pack \|\| ui\.katselu \|\| game\.phase === 'pickstart' \|\| ui\.aloituslentoKesken\) return 0;/);
+  assert.match(nostot, /if \(ui\.movingPlayerId != null\) return 0;/);
   // Osuma-alue ei ole sidottu pisteen kokoon (sormen 44 px).
   assert.match(lauta, /NAPAUTUKSEN_SADE_PX = 44/);
 });
@@ -156,4 +185,137 @@ test('pisteen säde noudattaa annettua ruutuhalkaisijaa', () => {
   const perus = kaupunkipisteenSade(0.08, 1210);
   const iso = kaupunkipisteenSade(0.08, 1210, { halkaisijaPx: 17.16 });
   assert.ok(Math.abs(iso / perus - 17.16 / KAUPUNKIPISTEEN_HALKAISIJA_PX) < 1e-6);
+});
+
+/* ================================================================== *
+ * 5. LATTIA ON YHDEN PISTEEN SÄÄNTÖ (omistaja 8.9.2026 ilta)
+ * ================================================================== */
+
+test('lattia koskee vain pelaajan kaupunkia — muut 7 px myös osuudella 1', () => {
+  const mitat = kohdekaupunginMitat({ osuus: 1, suurennus: 1 });
+  assert.ok(mitat.halkaisijaPx > KAUPUNKIPISTEEN_HALKAISIJA_PX, 'lattia on olemassa');
+  // Pelaajan oma kaupunki saa lattian…
+  assert.equal(kaupunkipisteenHalkaisijaPx({ id: 'kiova' }, 'kiova', mitat), mitat.halkaisijaPx);
+  // …ja jokainen muu on 7 px, vaikka lehti täyttäisi koko ruudun.
+  for (const id of ['venetsia', 'lontoo', 'ateena', 'berliini']) {
+    assert.equal(kaupunkipisteenHalkaisijaPx({ id }, 'kiova', mitat),
+      KAUPUNKIPISTEEN_HALKAISIJA_PX, `${id} kasvoi lattiaan`);
+  }
+  // Pelaaja reitillä (ei kaupunkia): kaikki ovat 7 px.
+  assert.equal(kaupunkipisteenHalkaisijaPx({ id: 'kiova' }, null, mitat),
+    KAUPUNKIPISTEEN_HALKAISIJA_PX);
+  // Piste ilman tunnusta (helmi, valo) ei koskaan lue lattiaa.
+  assert.equal(kaupunkipisteenHalkaisijaPx({ laji: 'helmi' }, 'kiova', mitat),
+    KAUPUNKIPISTEEN_HALKAISIJA_PX);
+  // Yleisnäkymässä lattia on 7 px, joten oma kaupunkikin on 7 px.
+  const kaukaa = kohdekaupunginMitat({ osuus: 0, suurennus: 1 });
+  assert.equal(kaupunkipisteenHalkaisijaPx({ id: 'kiova' }, 'kiova', kaukaa),
+    KAUPUNKIPISTEEN_HALKAISIJA_PX);
+});
+
+test('pelaajan siirtyessä lattia siirtyy uuteen kaupunkiin', () => {
+  const mitat = kohdekaupunginMitat({ osuus: 1, suurennus: 1 });
+  const kiova = { id: 'kiova' };
+  const venetsia = { id: 'venetsia' };
+  assert.equal(kaupunkipisteenHalkaisijaPx(kiova, 'kiova', mitat), mitat.halkaisijaPx);
+  assert.equal(kaupunkipisteenHalkaisijaPx(venetsia, 'kiova', mitat), KAUPUNKIPISTEEN_HALKAISIJA_PX);
+  // Sama piste, uusi pelaajan kaupunki: vanha palaa 7 px:ään, uusi kasvaa.
+  assert.equal(kaupunkipisteenHalkaisijaPx(kiova, 'venetsia', mitat), KAUPUNKIPISTEEN_HALKAISIJA_PX);
+  assert.equal(kaupunkipisteenHalkaisijaPx(venetsia, 'venetsia', mitat), mitat.halkaisijaPx);
+});
+
+/* ================================================================== *
+ * 6. LEVY KATSESÄTEELLE: PISTE PYSYY KAUPUNKINSA PÄÄLLÄ
+ * ================================================================== */
+
+const yks = (v) => {
+  const p = Math.hypot(v.x, v.y, v.z);
+  return { x: v.x / p, y: v.y / p, z: v.z / p };
+};
+/** Levyn keskipiste maailmassa: olion paikka + korkeus pintanormaalia. */
+const levynPaikka = (paikka, pinta, korkeus) => {
+  const n = yks(pinta);
+  return { x: paikka.x + korkeus * n.x, y: paikka.y + korkeus * n.y, z: paikka.z + korkeus * n.z };
+};
+
+test('levy asettuu katsesäteelle: projektio osuu pinnan pisteeseen', () => {
+  const R = 100;
+  const pinta = { x: 12.3, y: 45.6, z: Math.sqrt(R * R - 12.3 ** 2 - 45.6 ** 2) };
+  const korkeus = 0.3;
+  // Kamera lähikuvassa (korkeus 0,08) hieman sivussa kaupungista.
+  for (const kamera of [
+    { x: 0, y: 0, z: 108 },
+    { x: 20, y: 50, z: 92 },
+    { x: -30, y: 60, z: 80 },
+    { x: 0, y: 250, z: 0 },
+  ]) {
+    const paikka = katsesateenPaikka(pinta, kamera, korkeus);
+    const levy = levynPaikka(paikka, pinta, korkeus);
+    // Levy on kameran ja pinnan pisteen välisellä janalla…
+    const suunta = yks({ x: kamera.x - pinta.x, y: kamera.y - pinta.y, z: kamera.z - pinta.z });
+    const ero = { x: levy.x - pinta.x, y: levy.y - pinta.y, z: levy.z - pinta.z };
+    const matka = Math.hypot(ero.x, ero.y, ero.z);
+    assert.ok(Math.abs(matka - korkeus) < 1e-9, `levy ${matka} yksikköä pinnasta`);
+    // …eli täsmälleen katsesäteen suunnassa: ristitulo on nolla.
+    const risti = Math.hypot(
+      ero.y * suunta.z - ero.z * suunta.y,
+      ero.z * suunta.x - ero.x * suunta.z,
+      ero.x * suunta.y - ero.y * suunta.x,
+    );
+    assert.ok(risti < 1e-9, `levy ei ole katsesäteellä (ristitulo ${risti})`);
+  }
+});
+
+test('katsesäde ei kasaa siirtoa eikä kaadu vajailla arvoilla', () => {
+  const pinta = { x: 0, y: 0, z: 100 };
+  const kamera = { x: 8, y: 0, z: 106 };
+  // Sama lasku samasta pinnan pisteestä antaa aina saman paikan
+  // (lauta laskee aina datumin asteista, ei olion nykyisestä paikasta).
+  const a = katsesateenPaikka(pinta, kamera, 0.3);
+  const b = katsesateenPaikka(pinta, kamera, 0.3);
+  assert.deepEqual(a, b);
+  // Vajaat arvot palauttavat pinnan pisteen sellaisenaan.
+  assert.equal(katsesateenPaikka(pinta, kamera, 0), pinta);
+  assert.equal(katsesateenPaikka(pinta, null, 0.3), pinta);
+  assert.equal(katsesateenPaikka(null, kamera, 0.3), null);
+});
+
+test('parallaksi on poissa: mitattu 4,2 % -> 0,00 px (Chromium 1440 x 900)', () => {
+  /*
+   * Sama laskenta kuin selainmittauksessa: pinnan piste ja levyn
+   * keskipiste projisoituna samalla kameralla. Kamera on korkeudella
+   * 0,08 (R = 100) ja kaupunki 197 px ruudun keskustasta, jolloin
+   * ennen korjausta siirto oli 8,3 px (4,2 %).
+   */
+  const R = 100;
+  const korkeus = 0.3;
+  const kamera = { x: 0, y: 0, z: R * 1.08 };
+  const f = 900 / (2 * Math.tan((50 / 2) * (Math.PI / 180)));
+  const ruudulle = (p) => ({ x: (f * p.x) / (kamera.z - p.z), y: (f * p.y) / (kamera.z - p.z) });
+  const theta = 0.0376; // ~197 px keskustasta tällä ruudulla
+  const pinta = { x: R * Math.sin(theta), y: 0, z: R * Math.cos(theta) };
+  const pintaRuudulla = ruudulle(pinta);
+  // ENNEN: levy pintanormaalin suunnassa.
+  const n = yks(pinta);
+  const ennen = ruudulle({ x: pinta.x + korkeus * n.x, y: 0, z: pinta.z + korkeus * n.z });
+  const siirtoEnnen = Math.abs(ennen.x - pintaRuudulla.x);
+  assert.ok(siirtoEnnen / Math.abs(pintaRuudulla.x) > 0.03,
+    `ennen-parallaksi ${(100 * siirtoEnnen) / Math.abs(pintaRuudulla.x)} % — vika ei toistu`);
+  // JÄLKEEN: levy katsesäteellä.
+  const levy = levynPaikka(katsesateenPaikka(pinta, kamera, korkeus), pinta, korkeus);
+  const jalkeen = ruudulle(levy);
+  assert.ok(Math.abs(jalkeen.x - pintaRuudulla.x) < 1e-9,
+    `jäännösparallaksi ${Math.abs(jalkeen.x - pintaRuudulla.x)} px`);
+});
+
+test('katsesäde kirjoitetaan kameran liikkeestä, ladonnasta ja siirtymän jälkeen', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // Paikka lasketaan datumin asteista, ei olion nykyisestä paikasta.
+  assert.match(lauta, /katsesateenPaikka\(\s*\n?\s*pallonPiste\(d\.lat, d\.lon, pallonSade\), kameranPaikka, o\.scale\.z,/);
+  // Kamera-tapahtuma ja ladonta ajavat saman tahdistuksen kuin ennen.
+  assert.match(lauta, /ohjaimet\.addEventListener\('change', tahdistaPisteidenKoko\)/);
+  // Kirjaston siirtymä ja herätys korjataan jälkikäteen.
+  assert.match(lauta, /tahdistaSiirtymanJalkeen = \(\) => \{/);
+  assert.match(lauta, /siirtymaAjastin = setTimeout\(tahdistaPisteidenKoko, siirtyma \+ 50\);/);
+  assert.match(lauta, /clearTimeout\(siirtymaAjastin\);/);
 });

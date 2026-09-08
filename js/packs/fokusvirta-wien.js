@@ -107,12 +107,14 @@ export const FOKUSVIRTA_WIEN = {
      */
     paikkarivi: 'Wien, toukokuussa 1873. Sadekuuroja; ilmanpuntari '
       + 'laskee aamusta.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
+    /* KAANON UUSIKSI (Fable, omistaja hyväksyi 8.9.2026 ilta): kupolin
+       koko, pörssi ja kahvila; ei ajatusviivaa. 367 merkkiä (yläraja 400). */
     teksti: 'Wien on rakentanut maailmannäyttelyn ja sen ylle kupolin, '
-      + 'jota sanotaan maailman suurimmaksi. Kävelin Rotunden alla '
-      + 'hattu kädessä. Kahdeksan päivää avajaisten jälkeen pörssi '
-      + 'kaatui — näin rikkaita miehiä itkemässä kadulla, enkä unohda '
-      + 'sitä koskaan.',
+      + 'jota sanotaan maailman suurimmaksi. Kävelin Rotunden alla hattu '
+      + 'kädessä, ja katto oli niin korkealla, että sen alle mahtuisi '
+      + 'kokonainen kirkko torneineen. Kahdeksan päivää avajaisten jälkeen '
+      + 'pörssi kaatui. Näin rikkaita miehiä itkemässä kadulla, enkä unohda '
+      + 'sitä koskaan. Kahvilassa kukaan ei puhunut rahasta.',
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -121,11 +123,13 @@ export const FOKUSVIRTA_WIEN = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
+    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
     luenta: '[curious] Wien on rakentanut maailmannäyttelyn ja sen ylle '
-      + 'kupolin, jota sanotaan maailman suurimmaksi. Kävelin Rotunden '
-      + 'alla hattu kädessä. [softly] Kahdeksan päivää avajaisten '
-      + 'jälkeen pörssi kaatui — [whispers] näin rikkaita miehiä '
-      + 'itkemässä kadulla, enkä unohda sitä koskaan.',
+      + 'kupolin, jota sanotaan maailman suurimmaksi. Kävelin Rotunden alla '
+      + 'hattu kädessä, ja katto oli niin korkealla, että sen alle mahtuisi '
+      + 'kokonainen kirkko torneineen. [softly] Kahdeksan päivää avajaisten '
+      + 'jälkeen pörssi kaatui. Näin rikkaita miehiä itkemässä kadulla, enkä '
+      + 'unohda sitä koskaan. [whispers] Kahvilassa kukaan ei puhunut rahasta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-wien.mp3',
   },
 

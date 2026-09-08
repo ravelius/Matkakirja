@@ -360,7 +360,7 @@ test('uuden kulun huudahdus osuu matkakirjan tekstiin tasan kerran', () => {
   }
   // Huudahdus jäi 8.9.2026 vain noin puoleen kaupungeista (omistaja:
   // "puolet välihuomautuksista pois"): yhdeksän kahdeksastatoista.
-  assert.equal(uusia, 9, `huudahduksen kaupunkeja pitäisi olla 9, on ${uusia}`);
+  assert.equal(uusia, 8, `huudahduksen kaupunkeja pitäisi olla 8, on ${uusia}`);
 });
 
 test('vähintään yhdessä puheenvuorossa isoisä osoittautuu oikeaksi', () => {

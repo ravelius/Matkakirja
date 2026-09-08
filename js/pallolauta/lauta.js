@@ -66,7 +66,7 @@ import {
   LAATU_LEPOVIIVE_MS, PALLO_LAATTATASO_MAX, PALLO_LAUTA, asennaPallonEleet, esilataaPallolaatat,
   laatatSaatavilla, laattatasoMax, lataaPallokirjasto, pakotaPallonLaatu,
   laudanPisteenAvain, pallonKaupungit, pallonLepokerros, pallonNostoOnPoltettu,
-  pallonOmatPisteet, rakennaPallo, webglTuettu,
+  pallonOmatPisteet, pallonPiste, rakennaPallo, webglTuettu,
 } from '../pallo.js';
 import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
@@ -205,6 +205,36 @@ export const KAUPUNKIPISTEEN_HALKAISIJA_PX = 7;
  * KOHDEKAUPUNGIN_TAYSI_OSUUS:een asti tekee muutoksesta jatkuvan:
  * piste kasvaa portin auetessa asteittain eikä hyppää.
  *
+ * ── KORJAUS 8.9.2026 ILLALLA: LATTIA ON YHDEN PISTEEN SÄÄNTÖ ──────
+ *
+ * OMISTAJA, SANATARKASTI (Mac, koko Eurooppa ruudulla, Fogg Kiovassa):
+ * *"tällä zoom tasolla kaupunki pallot jäävät liian isoiksi"*.
+ *
+ * Ensimmäinen toteutus laski lattian kerran näkymästä ja kirjoitti
+ * SAMAN säteen kaikille 261 pisteelle (pisteenSade,
+ * tahdistaPisteidenKoko). Portti on maan lehden osuus näkymästä, ja
+ * Ukrainan levyinen lehti täyttää puolet ruudusta jo koko Euroopan
+ * zoomilla: mitattu omistajan näkymästä (Chromium 1419 × 821 css,
+ * korkeus 0,42) lehdenOsuus 0,82 — siis yli KOHDEKAUPUNGIN_TAYSI_OSUUS,
+ * ja JOKAINEN kaupunki oli kasvanut lattiaansa 17,2 pikseliin. Omistajan
+ * kuvasta mitattu 14 laitepikseliä = 7,0 css-px on se, mitä muiden
+ * kaupunkien piti olla.
+ *
+ * SÄÄNTÖ ON PISTEKOHTAINEN. Lattia koskee VAIN pelaajan nykyistä
+ * kaupunkia (ui.game.cityOf) — sitä yhtä, jonka lehteä kartalla juuri
+ * nyt luetaan ja jonka kohdemerkkejä vasten mitta otetaan. Kaikki muut
+ * kaupungit ovat KAUPUNKIPISTEEN_HALKAISIJA_PX joka zoomilla, myös
+ * osuudella 1. Mitta lasketaan yhä kerran näkymästä (välimuisti
+ * kaupunkiAvain), mutta se luetaan pisteelle vasta, kun piste ON se
+ * kaupunki; kun pelaaja siirtyy, vanhan kaupungin piste palaa 7 px:ään
+ * ja uusi kasvaa (avaimessa on pelaajan kaupunki).
+ *
+ * PORTTI ON MYÖS PELITILAN PORTTI. Lattia ei ala ennen kuin
+ * kohdemerkkejä oikeasti piirretään: nostot.lehdenOsuus palauttaa 0
+ * niissä tiloissa, joissa keräys ei tuota yhtään merkkiä (katselutila,
+ * lähtövalinta, avauslento, siirto kesken) — sama ehto kuin nostot.js:n
+ * lehtiNakyy. Yleisnäkymän 7 px ja lähikuvan lattia eivät muutu.
+ *
  * NIMEN LATTIA EI TARVITSE PORTTIA. Se puree vasta kun poltettu muste
  * on venytettyä (suurennus > 1,59), eli täsmälleen siinä lähikuvassa,
  * josta omistaja kirjoitti; kaukonäkymässä kerroin on 1.
@@ -275,6 +305,20 @@ export function kohdekaupunginMitat({ osuus = 0, suurennus = 1 } = {}) {
     * Math.max(1, suurennus);
   const nimiKerroin = Math.max(1, nimiLattia / KARTTANIMI_KOOT.kaupunki);
   return { halkaisijaPx, nimiKerroin };
+}
+/**
+ * YHDEN pisteen ruutuhalkaisija: lattia vain pelaajan omalle
+ * kaupungille, kaikille muille KAUPUNKIPISTEEN_HALKAISIJA_PX joka
+ * zoomilla (ks. LATTIA ON YHDEN PISTEEN SÄÄNTÖ yllä).
+ *
+ * @param {object} d      pistedatum (kaupungilla on id)
+ * @param {string|null} oma  pelaajan nykyisen kaupungin id
+ * @param {{halkaisijaPx: number}} mitat kohdekaupungin mitat juuri nyt
+ * @returns {number} halkaisija ruudun pikseleinä
+ */
+export function kaupunkipisteenHalkaisijaPx(d, oma, mitat) {
+  if (!d?.id || !oma || d.id !== oma) return KAUPUNKIPISTEEN_HALKAISIJA_PX;
+  return Math.max(KAUPUNKIPISTEEN_HALKAISIJA_PX, mitat?.halkaisijaPx ?? 0);
 }
 /**
  * Kirjaston pistemitta: `pointRadius` → olion skaala pallon yksiköissä.
@@ -629,6 +673,101 @@ export function pistelevyGeometria(malli) {
   return levy;
 }
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LEVY KATSESÄTEELLE — PISTE PYSYY KAUPUNKINSA PÄÄLLÄ (omistaja
+ * 8.9.2026 ilta, Mac-kaappaus Venetsiasta)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJA, SANATARKASTI: *"kaupunkien pisteet eivät myöskään pysy
+ * paikallaan, vaan liikkuvat panoroitaessa. minusta tuo korjattiin jo
+ * aiemmin mutta on ilmeisesti taas palannut."*
+ *
+ * 6.9.2026 korjattiin VENYMINEN (lieriö → levy, ks. PISTE ON LEVY).
+ * Tämä on eri vika samassa paikassa: PARALLAKSI. Kirjasto asettaa olion
+ * PINNAN pisteeseen ja kääntää sen +z:n pallon keskustaan, joten levy
+ * (paikallinen z = −1, skaalattuna scale.z:lla) jää 0,3 yksikköä pinnan
+ * yläpuolelle PINTANORMAALIN suuntaan. Lähikuvassa kamera on vain
+ * korkeus × 100 yksikön päässä pinnasta, jolloin normaalin suuntainen
+ * nosto siirtää levyä ruudulla ULOSPÄIN keskustasta — juuri kuten
+ * omistajan kuvassa, jossa piste on Venetsian ja sen nimen
+ * luoteispuolella ruudun laidalla.
+ *
+ * MITATTU ENNEN (Chromium 1440 × 900 css, dpr 2, Venetsia; levyn
+ * keskipiste projisoituna vs. pinnan piste getScreenCoords):
+ *
+ *     korkeus 0,08,  16 px keskustasta →  0,7 px sivuun (4,21 %)
+ *     korkeus 0,08, 197 px keskustasta →  8,3 px sivuun (4,20 %)
+ *     korkeus 0,08, 294 px keskustasta → 12,3 px sivuun (4,19 %)
+ *     korkeus 0,60, 130 px keskustasta →  1,0 px sivuun (0,80 %)
+ *
+ * Virhe on siis VAKIO-OSUUS etäisyydestä ruudun keskustaan (4,2 %
+ * lähikuvassa), eli Macin leveällä ruudulla laidalla kymmeniä
+ * pikseleitä — ruudun keskellä nolla, ja siksi vika näkyy vasta kun
+ * karttaa panoroi.
+ *
+ * KORJAUS: levy ei nouse pinnasta ULOS vaan siirtyy KATSESÄTEELLE.
+ * Olion paikasta vähennetään sama matka normaalia pitkin, joka siihen
+ * lisätään kameran suuntaan (katsesateenPaikka), jolloin levy on
+ * täsmälleen sillä säteellä, joka kulkee kaupungin pinnan pisteen läpi:
+ * projektio osuu pinnan pisteeseen tarkalleen, joka zoomilla ja ruudun
+ * joka kohdassa. MITATTU JÄLKEEN: 0,00 px sivuun kaikissa neljässä
+ * mittauksessa yllä.
+ *
+ * KORKEUS SÄILYY, JA SEN KANSSA PIIRTOJÄRJESTYS. Levy on yhä scale.z
+ * yksikköä pinnasta, nyt vain kameran suuntaan: se on kameraa kohti
+ * täydet 0,3 yksikköä siellä missä ennen oli 0,3 × cos(kulma), joten
+ * piste on yhä laattojen (pinta), aihevalojen (0,15), reittien (0,2) ja
+ * askelhelmien (0,25) päällä — nyt jopa varmemmin. Napautus osuu
+ * (raycast käy levyyn, joka on katsesäteellä), ja siirtymät toimivat
+ * kuten ennen (kirjasto skaalaa z:aa).
+ *
+ * OLION ASENTOON EI KOSKETA. Levy jää pintanormaalin suuntaiseksi eikä
+ * käänny kameraa kohti, vaikka se olisi yhtä helppo tehdä (lookAt).
+ * Syy on VALO: pisteen materiaali on kirjaston MeshLambert ja
+ * suuntavalo on kiinteästi pohjoisnavan suunnassa (mitattu scenestä:
+ * DirectionalLight kohdassa 0, 1, 0), joten normaalista riippuva sävy
+ * on nyt kaupungin leveysasteen vakio. Kameraa katsova levy vaihtaisi
+ * sävyään panoroitaessa — uusi vika vanhan tilalle.
+ *
+ * MIKSI EI PIENEMPI KORKEUS: kirjaston lattia scale.z:lle on 0,1
+ * yksikköä (Globe.gl 2.46: scale.z = max(alt · R, 0,1)) eikä sekään
+ * riitä — sama kaava antaa samalla korkeudella 1,3 %:n virheen, ja
+ * Macin laidalla se on yhä toistakymmentä pikseliä. Sitä paitsi 0,1
+ * yksikön levy painuisi aihevalon (0,15) ja reitin (0,2) alle.
+ *
+ * MIKSI EI LEVYÄ PINNALLE (paikallinen z = 0): silloin levy olisi
+ * täsmälleen laattakerroksen tasossa, ja kerroksen syvyyssiirto
+ * (js/pallo.js PIIRTOJÄRJESTYS, LAATTAKERROS_SYVYYSSIIRTO −8) vetäisi
+ * kartan sen päälle.
+ *
+ * PAIKKA KIRJOITETAAN JOKAISESTA KAMERAN LIIKKEESTÄ
+ * (tahdistaPisteidenKoko), ladonnasta ja ruudun koon muutoksesta — ja
+ * vielä kerran kirjaston oman siirtymän jälkeen
+ * (tahdistaSiirtymanJalkeen, jonka kutsuvat pistedatan vaihto ja pallon
+ * herätys): siirtymä kirjoittaa olion paikan takaisin pinnalle joka
+ * kehyksellä 250 ms:n ajan, ja nukkuvalla silmukalla vasta herätyksen
+ * jälkeen. Laskenta lähtee AINA datumin lat/lonista (pallonPiste), ei
+ * olion nykyisestä paikasta, joten toistuva kirjoitus ei kasaa siirtoa
+ * siirron päälle.
+ */
+export function katsesateenPaikka(pinta, kameranPaikka, korkeus) {
+  if (!pinta || !kameranPaikka || !(korkeus > 0)) return pinta ?? null;
+  const sade = Math.hypot(pinta.x, pinta.y, pinta.z);
+  const dx = kameranPaikka.x - pinta.x;
+  const dy = kameranPaikka.y - pinta.y;
+  const dz = kameranPaikka.z - pinta.z;
+  const matka = Math.hypot(dx, dy, dz);
+  if (!(sade > 0) || !(matka > 0)) return pinta;
+  // Pois normaalin suuntaan (kirjasto lisää sen takaisin levyn
+  // korkeutena), tilalle sama matka kameraa kohti.
+  return {
+    x: pinta.x + korkeus * (dx / matka - pinta.x / sade),
+    y: pinta.y + korkeus * (dy / matka - pinta.y / sade),
+    z: pinta.z + korkeus * (dz / matka - pinta.z / sade),
+  };
+}
+
 /**
  * Pisteiden litistäjä yhdelle pallolle: vaihtaa datumin olion lieriön
  * yhteiseen levyyn kerran per olio (ks. PISTE ON LEVY). Levy rakennetaan
@@ -742,10 +881,21 @@ export async function avaaPallolauta(ui) {
 
   /* ---- render-silmukan lepo ---------------------------------------- */
   let tauolla = false;
+  /**
+   * Pisteiden paikan tahdistus kirjaston siirtymän jälkeen (asetetaan
+   * alempana, kun tahdistaPisteidenKoko on olemassa). Nukkuvalla
+   * silmukalla siirtymä JÄÄTYY ja kirjoittaa pisteiden paikat takaisin
+   * pinnalle vasta ensimmäisellä kehyksellä herätyksen jälkeen — siksi
+   * katsesäde (ks. LEVY KATSESÄTEELLE) asetetaan uudestaan aina, kun
+   * pallo herää tai pistedata vaihtuu.
+   */
+  let siirtymaAjastin = 0;
+  let tahdistaSiirtymanJalkeen = () => {};
   const heraa = () => {
     if (!tauolla) return;
     tauolla = false;
     pallo.resumeAnimation?.();
+    tahdistaSiirtymanJalkeen();
   };
   const lepaa = () => {
     if (tauolla) return;
@@ -1515,7 +1665,14 @@ export async function avaaPallolauta(ui) {
    */
   const linssiPaalla = () => document.body.classList.contains('aikajana-paalla');
   let asetettuSade = 0;
+  let asetettuKohdeSade = 0;
   let asetettuLinssi = false;
+  /**
+   * Pelaajan nykyinen kaupunki (id) tai null — se yksi piste, jota
+   * lattia koskee (ks. LATTIA ON YHDEN PISTEEN SÄÄNTÖ). Sama lähde kuin
+   * pisteen näkyvyydellä (pisteNakyy): ui.game.cityOf.
+   */
+  const pelaajanKaupunki = () => ui.game?.cityOf?.()?.id ?? null;
   /*
    * KOHDEKAUPUNGIN MITAT JUURI NYT (ks. KOHDEKAUPUNKI ON SELVÄSTI
    * SUUREMPI KUIN KOHDEMERKIT): pisteen halkaisija ruudulla ja nimen
@@ -1535,7 +1692,9 @@ export async function avaaPallolauta(ui) {
   const kohdekaupunki = () => {
     const korkeus = pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX;
     const leveysPx = kotelo.clientWidth;
-    const avain = `${korkeus.toFixed(5)}:${leveysPx}:${ui.game?.player?.pos?.city ?? ''}`;
+    // Avaimessa on kaikki, mistä mitat riippuvat — myös kesken oleva
+    // siirto, joka sulkee kohdemerkkien portin (nostot.lehdenOsuus).
+    const avain = `${korkeus.toFixed(5)}:${leveysPx}:${pelaajanKaupunki() ?? ''}:${ui.movingPlayerId ?? ''}`;
     if (avain === kaupunkiAvain) return kaupunkiMitat;
     const nakyva = kamera.nakyvaAlue();
     kaupunkiAvain = avain;
@@ -1549,36 +1708,70 @@ export async function avaaPallolauta(ui) {
     });
     return kaupunkiMitat;
   };
-  const pisteenSade = () => {
-    asetettuSade = kaupunkipisteenSade(
-      pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX, kotelo.clientHeight,
-      { halkaisijaPx: kohdekaupunki().halkaisijaPx },
-    );
-    return asetettuSade;
-  };
+  /** Säde (pointRadius-yksikköä), joka antaa halutun ruutuhalkaisijan nyt. */
+  const sadeRuudulta = (halkaisijaPx) => kaupunkipisteenSade(
+    pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX, kotelo.clientHeight,
+    { halkaisijaPx },
+  );
+  /**
+   * YHDEN pisteen säde: lattia vain pelaajan kaupungille, kaikille
+   * muille KAUPUNKIPISTEEN_HALKAISIJA_PX joka zoomilla (ks. LATTIA ON
+   * YHDEN PISTEEN SÄÄNTÖ).
+   */
+  const pisteenSade = (d) => sadeRuudulta(
+    kaupunkipisteenHalkaisijaPx(d, pelaajanKaupunki(), kohdekaupunki()),
+  );
   const tahdistaPisteidenKoko = () => {
     const edellinen = asetettuSade;
+    const edellinenKohde = asetettuKohdeSade;
     const edellinenLinssi = asetettuLinssi;
-    const sade = pisteenSade();
+    const mitat = kohdekaupunki();
+    const sade = sadeRuudulta(KAUPUNKIPISTEEN_HALKAISIJA_PX);
+    const kohdeSade = sadeRuudulta(mitat.halkaisijaPx);
     if (!sade) return;
+    asetettuSade = sade;
+    asetettuKohdeSade = kohdeSade;
     asetettuLinssi = linssiPaalla();
     /*
      * KIRJOITETAAN AINA, HERÄTETÄÄN VAIN MUUTOKSESTA. Kirjaston oma
      * siirtymä (pointsTransitionDuration) kirjoittaa uuden pisteen
-     * skaalan kehys kerrallaan 250 ms:n ajan siitä säteestä, joka luvun
-     * hetkellä oli voimassa; jos zoomi osuu siihen ikkunaan, tämä
-     * kirjoitus jäisi sen alle. Ehdoton kirjoitus jokaisella
+     * skaalan JA paikan kehys kerrallaan 250 ms:n ajan siitä arvosta,
+     * joka luvun hetkellä oli voimassa; jos zoomi osuu siihen ikkunaan,
+     * tämä kirjoitus jäisi sen alle. Ehdoton kirjoitus jokaisella
      * kamera-tapahtumalla ja ladonnalla korjaa senkin.
      */
     const skaala = asetettuLinssi ? 0 : sade * PISTEEN_SKAALA;
+    const kohdeSkaala = asetettuLinssi ? 0 : kohdeSade * PISTEEN_SKAALA;
+    const oma = pelaajanKaupunki();
+    const kameranPaikka = pallo.camera()?.position ?? null;
+    const pallonSade = pallo.getGlobeRadius?.() ?? 100;
     for (const d of pallo.pointsData()) {
-      if (d.laji === 'helmi' || d.laji === 'valo') continue;
       const o = d.__threeObjPoint;
       if (!o) continue;
-      o.scale.x = skaala;
-      o.scale.y = skaala;
+      /*
+       * Parallaksi pois JOKAISELTA pisteeltä — kaupungeilta, helmiltä ja
+       * aihevaloilta (ks. LEVY KATSESÄTEELLE). Paikka lasketaan aina
+       * datumin asteista, ei olion nykyisestä paikasta.
+       */
+      const paikka = katsesateenPaikka(
+        pallonPiste(d.lat, d.lon, pallonSade), kameranPaikka, o.scale.z,
+      );
+      if (paikka) o.position.set(paikka.x, paikka.y, paikka.z);
+      // Koko on kaupunkipisteen asia: helmellä ja valolla on omansa.
+      if (d.laji === 'helmi' || d.laji === 'valo') continue;
+      // Sama sääntö kuin pointRadius-luennassa, yhdestä paikasta: kaksi
+      // valmista skaalaa, joista lattia kuuluu vain pelaajan kaupungille.
+      const s = kaupunkipisteenHalkaisijaPx(d, oma, mitat) > KAUPUNKIPISTEEN_HALKAISIJA_PX
+        ? kohdeSkaala : skaala;
+      o.scale.x = s;
+      o.scale.y = s;
     }
-    if (Math.abs(sade - edellinen) >= 1e-6 || asetettuLinssi !== edellinenLinssi) heraa();
+    if (Math.abs(sade - edellinen) >= 1e-6 || Math.abs(kohdeSade - edellinenKohde) >= 1e-6
+      || asetettuLinssi !== edellinenLinssi) heraa();
+  };
+  tahdistaSiirtymanJalkeen = () => {
+    clearTimeout(siirtymaAjastin);
+    siirtymaAjastin = setTimeout(tahdistaPisteidenKoko, siirtyma + 50);
   };
 
   const litistaja = luoPisteidenLitistaja();
@@ -1602,8 +1795,9 @@ export async function avaaPallolauta(ui) {
       if (d.laji === 'helmi') return REITTIHELMEN_SADE;
       if (d.laji === 'valo') return VALON_SADE;
       // Kaupunkipiste on ruudun vakio: säde luetaan kameran korkeudesta
-      // (tahdistaPisteidenKoko pitää sen samana zoomin muuttuessa).
-      return pisteenSade();
+      // (tahdistaPisteidenKoko pitää sen samana zoomin muuttuessa) ja
+      // lattia vain pelaajan omalle kaupungille.
+      return pisteenSade(d);
     })
     .pointResolution(16)
     .pointsMerge(false)
@@ -1643,6 +1837,13 @@ export async function avaaPallolauta(ui) {
     pisteAvain = avain;
     heraa();
     pallo.pointsData([...valot, ...nakyvat, ...helmet]);
+    /*
+     * Kirjaston siirtymä kirjoittaa olion paikan takaisin pinnalle joka
+     * kehyksellä siirtymän ajan (ks. LEVY KATSESÄTEELLE), joten
+     * katsesäde asetetaan vielä kerran siirtymän mentyä — muuten uusi
+     * piste jäisi parallaksiin seuraavaan kameran liikkeeseen asti.
+     */
+    tahdistaSiirtymanJalkeen();
   };
 
   /* ---- ladonta levossa ---------------------------------------------- */
@@ -1942,6 +2143,7 @@ export async function avaaPallolauta(ui) {
       // puretun laudan jälkeen.
       paataAloitusvalinta();
       clearTimeout(lepoAjastin);
+      clearTimeout(siirtymaAjastin);
       clearTimeout(esilatausAjastin);
       clearTimeout(vakausAjastin);
       clearTimeout(osoitinAjastin);
