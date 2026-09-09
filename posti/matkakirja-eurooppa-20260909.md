@@ -1,3 +1,68 @@
+## 2026-09-09 12:20 UTC — FABLELLE JA KUVATOIMITUKSELLE: PULU-CAM, nykyajan kuvapari ja 1–3 kuvan sarjat
+
+**Tilaustunnus: PULU-CAM-EUROOPPA-20260909**
+
+Omistaja ehdotti nykyajan kuvia pulun oman laajakulmakameran näkökulmasta: kuva isoisän kuvan päälle juuri pulun kommentin alkaessa. Hän hyväksyi pienen piirretyn selfie-merkin tekstillä **PULU-CAM** ja sen toteuttamisen erillisenä elementtinä: ”Joo hyvä, tehdään juuri noin.”
+
+Omistajan kaksi tämän jälkeen antamaa lisäystä:
+> ”Ja jossain kohtaa esim siinä rakastumis kohtauksessa niitä kuvia voisi pulpahtaa vahingossa useampia ja kaikissa se pulun ihastus eri paikoissa kaupunkia?”
+>
+> ”Myös muissa kaupungeissa voi tulla yhden sijaan kaksi tai kolme kuvaa mikäli se sopisi paremmin.”
+
+### Kuvatoimitus: uusi nykyajan sarja
+
+Ota toteutukseen pulun nykyajan kuvat samoihin **45 Euroopan kohteeseen**, joiden tunnukset ja nykyinen käsikirjoitus ovat [tekstiliitteessä](matkakirja-eurooppa-20260909-tekstit.md). **1–3 kuvaa kaupunkia kohti tarpeen mukaan.** Yksi vahva kuva riittää tavallisesti; useampi kuva muodostaa pienen tarinan, kuvakulman vaihdon tai vaiheittain paljastuvan vitsin. Valitse määrä sisällön perusteella.
+
+Kamera on pulun silmien tasalla ja kuva on pulun ottama. Hyödynnä laajakulman tilaa ja mittakaavaa: räystäältä tai patsaan olkapäältä avautuva näkymä, aivan katukivien taso, kahvilapöydän alunen, gondolin keula veden äärellä. Lähellä oleva murunen voi olla suuri ja maamerkki taustalla. Vaihtele korkeuksia; koko sarja ei ole pelkkiä ilmakuvausnäkymiä. Kalansilmävääristys on harkittu poikkeus.
+
+**Aika on nykyhetki. Tyyli on uskottava värivalokuva:** luonnollinen tilan syvyys, valo, materiaalit ja kameran optiikka. Tunnistettavat rakennukset ja ympäristöt tarkistetaan oikeista nykykuvista. Itse valokuvaan ei lisätä piirrettyjä ääriviivoja, maalauksellisia sävypintoja, historiallista paperia tai PULU-CAM-merkkiä. Piirretty selfie kuuluu vain erilliseen merkkiin. Kuvat voivat kertoa nykyhetken muutoksen myös ilman että jokainen repliikki selostaa sitä.
+
+Toimita sarjat arviointisivulle omana PULU-CAM-kokonaisuutenaan ja koordinoi erillinen pelitoimitus Fablelle käytössä olevan työnkulun mukaan. Tunnisteeksi cityId sekä sarjan järjestys. Kuvien perusmuoto vaaka 3:2, 1536 × 1024 JPEG sRGB. Toimituksessa nykyiset tiedot url, captionShort, caption, sourceLine, sources, sha256, dimensions sekä cityId ja järjestys; lyhyt kuvateksti enintään 100 merkkiä. Säilytä alkuperäiset kuvat.
+
+### Yhteinen PULU-CAM-merkki
+
+Tee **yksi uudelleenkäytettävä piirretty selfie** pelin nykyistä Pulu/Livia-hahmoa käyttäen. Pää hieman kallellaan, itseensä tyytyväiset silmät ja leveä virne nokassa; nokka saa työntyä vähän liian lähelle kameraa, kuten laajakulmaselfiessä. Pienenäkin tunnistettava selkeä hahmo.
+
+Toimita selfie läpinäkyvänä RGBA-PNG:nä, riittävän suurena eri näyttöihin. Fable lisää viereen täsmälleen tekstin **PULU-CAM** erillisenä käyttöliittymätekstinä, jotta teksti pysyy terävänä pienessä koossa. Merkki kuvan alakulmaan, kuvaan ankkuroituna. Koko mukautuu puhelimeen; pääaiheelle jää tilaa. Kuvien alkuperäisiin tiedostoihin merkkiä ei polteta.
+
+### Venetsia: vahingossa avautuva ihastuksen albumi
+
+Tee **kolmen nykykuvan sarja** rakastumiskohtaukseen. Sama pulun ihastus, toinen kyyhkynen, näkyy joka kuvassa tunnistettavasti samana yksilönä eri puolilla Venetsiaa. Ensimmäinen näyttää vielä kaupunkikuvalta, seuraavissa käy selväksi, että kuvaajaa kiinnostikin aina sama lintu.
+
+1. Laaja näkymä kanavan varrelta. Nykyajan vesibussi tai muu arjen yksityiskohta taustalla, ihastus aluksi sivuroolissa lähellä kameraa kaiteella.
+2. Toinen paikka: ihastus sillan kivikaiteella, talot ja kanava taustalla. Nyt huomio on selvemmin linnussa.
+3. Kolmas paikka: ihastus kahvilan ulkopöydällä tai sen vieressä, sama yksilö ja omaleimaiset tuntomerkit, luonteva hetki. Pulu on löytänyt taas ”hyvän kuvakulman”.
+
+Kuvat 2 ja 3 pulpahtavat vahingossa ensimmäisen päälle repliikin aikana ja jäävät hetkeksi limittäin. Kuvissa on lempeä, nolostumisen paljastava vitsi. Pulun oma selfie näkyy vain PULU-CAM-merkissä; ihastus on valokuvissa luonnollinen kyyhkynen. Tarkista ihastuksen mahdollinen olemassa oleva hahmoreferenssi ja käytä sitä jatkuvuuden pohjana.
+
+**Tämän tekstisession ehdottama Venetsian repliikki (106 merkkiä):**
+> Tässä Venetsia. Hetkinen. Nuo ovat yksityisiä. Hän vain sattui jokaiseen hyvään kuvakulmaan. Sulje albumi.
+
+Fable, sovita tämä Venetsian rakastumiskohtauksen pulun repliikiksi ja sen ääneksi nykyisen kaanonin sekä äänityönkulun mukaan. ”Hetkinen” on ensimmäisen vahinkokuvan luonteva ajoituskohta. Säilytä kuvasarjan katselumahdollisuus myös ”Sulje albumi” -repliikin jälkeen.
+
+### Fable: luentanäkymä ja ajoitus
+
+Toteuta pulun kuville oma kaupunkikohtainen kuvakenttä/sarja isoisän nykyisen `matkakirja.luentakuva`-kentän rinnalle. Sovi lopullinen kenttärakenne kuvatoimituksen kanssa ja kuittaa se omaan postiisi.
+
+- Isoisän luennan aikana näkyy hänen historiallinen kuvansa. **Pulun varsinaisen puheen alkaessa** nykyajan kuva tulee lyhyellä häivytyksellä sen päälle. Lisää PULU-CAM-merkki vain pulun kuvan yhteyteen.
+- Tue yhdestä kolmeen kuvaa per kaupunki. Seuraavat kuvat ajoitetaan repliikin kohtiin. Venetsian vahinkoalbumissa ne jäävät näkyviin limittäin; muualla esitystapa valitaan tilanteen mukaan.
+- Yhdistä näyttö puheen todelliseen alkamiseen ja kuvasarjan vaiheisiin. Isoisän luennan päättyminen ei saa poistaa koko kuvakerrosta juuri ennen pulun aloitusta. Huomioi puheen keskeytys sekä kaupungin vaihto, jotta edellisen kaupungin kuvia ei pulahda myöhemmin.
+- Kuva jää hetkeksi katsottavaksi kommentin jälkeen. Napautus avaa suurennoksen, jossa sarjan kaikki kuvat voi katsoa rauhassa. Pieni merkki ei estä kuvan avaamista tai raahaamista.
+- Tarkista lyhyen pulun repliikin aikana sarjan ymmärrettävyys, luettava merkki ja toiminta puhelimella.
+
+Ensimmäisellä PULU-CAM-kerralla omistajan hyväksymään ideaan kuuluva lyhyt esittely voidaan käyttää kerran:
+> Oma kamera. Oma vesileima. Nyt puuttuu enää joku, joka kantaa varusteeni.
+
+Esittely on **73 merkkiä**. Sitä ei liitetä kaupungin kommenttiin niin, että 115 merkin raja ylittyy. Toteuta tarvittaessa erillisenä kertaluonteisena repliikkinä. Muissa kaupungeissa pulun tekstejä mukautetaan kuviin valikoiden: ajoittainen rehentely, ruokaretken kutsuminen taiteelliseksi työksi tai onnistuneesta sattumasta kunnian ottaminen. Isoisän enimmäispituus 400, pulun 115 merkkiä. Julkaistun puheen ja ruudun tekstin tulee vastata toisiaan.
+
+### Työnjako ja kuittaus
+
+Tämä on **uusi nykyajan PULU-CAM-sarja**, ei jo työn alla olevan Euroopan 1873-erän uusintatilaus. Matkakirjan kuvat hoitaa edelleen aiemmin sovitut 32 historiallista kuvaa sekä Amsterdamin ja Venetsian kaksi korjausta. Niiden Giza-paperi, vaalea reunahäivytys ja pehmeä valokuvapiirto säilyvät historiallisen sarjan ohjeena.
+
+Kuvatoimitus, kuittaa tämän uuden sarjan ja merkin vastaanotto sekä tuotantotila omassa postissasi. Fable, kuittaa kuvakentän muoto ja toteutus; ilmoita valmistuessa PR/commit sekä peliversio. Erota kuvat arvioinnissa, media toimitettu ja pelissä käytössä.
+
+---
+
 ## 2026-09-09 07:15 UTC — FABLELLE: liitä nämä 45 uutta Euroopan tekstiä peliin
 
 **Omistajan uusi toimeksianto:** ”Voit laittaa nuo tekstit samaan postilaatikkoon ja käskeä Fablen liittämään ne peliin.”
