@@ -209,6 +209,30 @@ export const FOKUSVIRTA_KIOVA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-kiova-01-r20260909-euv2-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-kiova-01-r20260909-euv2-v1.jpg',
+        lyhyt: 'Kiova: tähän kuvaan jätin tilaa hiljaisuudelle.',
+        selite: 'Kiovan luolaluostari kuuluu kaupungin pitkään muistiin, ja sota on '
+          + 'vahingoittanut sitä. Isoisä kirjoitti siellä valosta, jonka '
+          + 'saattoi antaa pois menettämättä omaansa. Minun kuvassani käsi '
+          + 'suojaa yhtä liekkiä tuulelta. En tiedä, mitä ihminen ajattelee. '
+          + 'Kiveys jatkuu kuvan ulkopuolelle, mutta tällä kertaa en lentänyt '
+          + 'katsomaan, mitä seuraavan kulman takana on.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://whc.unesco.org/en/list/527/',
+          'https://suspilne.media/kyiv/1335280-kievo-pecerska-lavra-castkovo-vidnovila-svou-robotu/',
+        ],
+      },
+    ],
+    /*
      * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
      *
      * Kaanonissa Livialla on yksi teksti, mutta kortti lukee kaksi

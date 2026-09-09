@@ -129,6 +129,29 @@ export const FOKUSVIRTA_KOBENHAVN = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-kobenhavn-01-r20260909-euv1-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-kobenhavn-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Kööpenhamina: tanssin ajaksi vapautui hyvä tarkkailupaikka.',
+        selite: 'Tivolin puutarhassa musiikki saa osan ihmisistä nousemaan pöydästä '
+          + 'ja osan jäämään kuuntelemaan. Minä valitsin jälkimmäisen tavan. '
+          + 'Hitaasti liikkuva pari mahtui kuvaan pöydänjalkojen välistä, ja '
+          + 'veden pinnassa syttyivät iltavalot. Isoisä piti kiireettömästä '
+          + 'tanssista. Täytyy myöntää, että katsoin tällä kertaa itsekin '
+          + 'hetken muualle kuin tyhjälle lautaselle.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.tivoli.dk/en/',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

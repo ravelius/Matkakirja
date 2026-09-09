@@ -243,6 +243,29 @@ export const FOKUSVIRTA_SARAJEVO = {
    */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-sarajevo-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sarajevo-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Sarajevo: pannun kylki kertoo, kuka teki aamukahvin mahdolliseksi.',
+        selite: 'Kazandžilukin kujalla kupariastiat heijastavat kapean kadun valoa. '
+          + 'Yhden pannun pinta on sileä, toiseen kasvaa tekijän naputtama '
+          + 'kuvio. Näin läheltä ero näyttää kokonaiselta maisemalta. Isoisä '
+          + 'huomasi käsityön vasta juotuaan kahvinsa. Minä tulin katsomaan '
+          + 'ensin. Seppä laski vasaran hetkeksi alas, ja työpöytä hiljeni. '
+          + 'Siinä oli hyvä hetki ottaa kuva ja pitää oma nokka kiinni.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://visitbih.ba/en/one-of-the-oldest-streets-of-sarajevo-kazandziluk-500-years-long-tradition/',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
      *
      * Merkinnän loppulause ("ei tarvitse valita, minkä kellon mukaan

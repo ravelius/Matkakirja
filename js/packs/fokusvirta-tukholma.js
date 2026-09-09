@@ -306,6 +306,30 @@ export const FOKUSVIRTA_TUKHOLMA = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-tukholma-01-r20260909-euv1-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tukholma-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Tukholma: hyvä näköalapaikka ei vaadi kruunua.',
+        selite: 'Monteliusvägenin kävelyreitiltä avautuu vettä, kattoja ja '
+          + 'Tukholman tuttuja siluetteja. Lapsi nousi aikuisen hartioille ja '
+          + 'osoitti jotakin kuvan laidassa. Aikuinen käänsi päätään vähän '
+          + 'hitaammin. Isoisä sai kruunajaisissa parhaat selostukset juuri '
+          + 'tästä katsomosta. Minä valitsin kaiteen vierestä oman paikkani. '
+          + 'Molemmissa menetelmissä on etunsa, mutta minun ei tarvitse '
+          + 'neuvotella kyydistä.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.visitstockholm.com/o/monteliusvagen/',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

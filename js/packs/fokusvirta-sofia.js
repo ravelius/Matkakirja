@@ -342,6 +342,30 @@ export const FOKUSVIRTA_SOFIA = {
    */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-sofia-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sofia-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Sofia: kuuma vesi, viileä harkinta.',
+        selite: 'Sofian lähteillä vesi lasketaan nykyäänkin mukana tuotuihin '
+          + 'astioihin. Muovipulloja on enemmän kuin isoisän kannuja, mutta '
+          + 'odottamisen asento näyttää tutulta. Seisoin viileällä kivellä '
+          + 'veden sivussa. En aikonut kokeilla lämpötilaa varpaalla, vaikka '
+          + 'eräs ihminen teki juuri niin sormellaan. Vitosan kaupungissa on '
+          + 'paljon nähtävää. Tällä kertaa katsoin, kuinka tavallinen päivä '
+          + 'alkaa maan antamasta vedestä.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.sofiacityguide.com/visit-the-sofia-mineral-springs/',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS — VÄLITTÄJÄOTE (Raamattu v1262 "LIVIA
      * AIKASIIRTYMÄN VÄLITTÄJÄNÄ — PARIPERIAATE", omistaja 28.8.2026
      * ilta).

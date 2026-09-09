@@ -244,6 +244,31 @@ export const FOKUSVIRTA_BUKAREST = {
    */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-bukarest-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bukarest-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Bukarest: parvelta löytyi suora yhteys lounaaseen.',
+        selite: 'Manucin majatalon pihalla pöydät ovat nykyään ravintolan käytössä. '
+          + 'Puiset parvet kehystävät aterioita kuten ennen matkustajien '
+          + 'kohtaamisia. Minä laskeuduin kaiteelle ja löysin tarjoilijan '
+          + 'reitin yhdellä silmäyksellä. Isoisä tunnisti huoneensa '
+          + 'kuorsauksesta. Täällä on edelleen monta ääntä päällekkäin, mutta '
+          + 'lautasen kevyt kilahdus erottuu yllättävän hyvin. Ammattitaito '
+          + 'auttaa myös ravintolassa.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://hanumanucrestaurant.ro/en/',
+          'https://www.hanulluimanuc.ro/en/',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
      *
      * Maadoitus koskee KIIPEÄMISEN SÄVYÄ ("Nousin tornin huipulle…

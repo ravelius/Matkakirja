@@ -167,6 +167,45 @@ export const FOKUSVIRTA_BERGEN = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-bergen-01-r20260909-euv1-v1.jpg, pulu-cam-bergen-02-r20260909-euv1-v4.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Bergen: varastotalot saivat suojan, minä etsin oman.',
+        selite: 'Bryggenin vanhojen puutalojen väliset käytävät ovat kapeita, ja '
+          + 'sade tekee niiden pinnoista oman karttansa. Kauppiaiden '
+          + 'varastoissa toimii nyt myös pieniä liikkeitä ja työtiloja. Minä '
+          + 'pysähdyin ulkoneman alle. Isoisä huomasi, että kala pidettiin '
+          + 'kuivana ennen matkustajaa. Tämän kuvan perusteella kuiva paikka on '
+          + 'edelleen arvokas löytö, vaikka siitä ei tarvitsisi tehdä '
+          + 'maailmankauppaa.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://en.visitbergen.com/things-to-do/bryggen-in-bergen-p878553',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-02-r20260909-euv1-v4.jpg',
+        lyhyt: 'Bergen: ulkona satoi aivan samaa sadetta.',
+        selite: 'Käytävän suulta näkyy, kuinka Bryggenin talot seisovat sataman '
+          + 'reunassa rinnakkain. Sisäpuolella löysin puun hajun ja suojan, '
+          + 'ulkopuolella veden ja julkisivujen tutun rivin. Otin tämän toisen '
+          + 'kuvan nopeasti. Se todistaa, että kävin myös ulkona, mikä on '
+          + 'sateisena päivänä huomattavasti suurempi ansio kuin valmiista '
+          + 'kuvasta voisi päätellä. Palasin saman tien puolen siivenmitan '
+          + 'verran kuivemmalle.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://en.visitbergen.com/things-to-do/bryggen-in-bergen-p878553',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
