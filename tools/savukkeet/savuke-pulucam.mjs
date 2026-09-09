@@ -4,18 +4,27 @@
  * Omistaja 9.9.2026 klo 15.20–15.30 (Raamattu, PULU-CAM: PULUN
  * NYKYAJAN KUVAT PAKKANA ISOISAN KUVAN PAALLE, YHTEINEN KARUSELLI).
  *
+ * TARKENNUS 9.9.2026 klo 18.50 (Raamattu, PULU-CAM: RAKKAUSKOHTAUS
+ * 3-5 KUVAA, KAKSI KUVATEKSTIA MOLEMMILLE, HAVAINNEKUVA-LINKKI PITKAN
+ * LOPUSSA, TARRA YHTENA PNG:NA OMISTAJAN VALINNASTA).
+ *
  * VARTIOT:
  *   1. EI PAKKAA ENNEN KOMMENTTIA: luennan aikana kartalla on vain
  *      isoisän luentakuva.
- *   2. KOMMENTIN JÄLKEEN PAKKA: kolme kuvaa pulpahtaa yksitellen,
- *      kukin omaan kulmaansa ja paikkaansa isoisän kuvan päälle.
+ *   2. KOMMENTIN JÄLKEEN PAKKA: VIISI kuvaa pulpahtaa yksitellen,
+ *      kukin omaan kulmaansa ja paikkaansa isoisän kuvan päälle
+ *      (rakkauskohtauksen katto).
  *   3. LIMITYS NÄKYY: kortit ovat oikeasti eri kohdissa ruudulla, ja
- *      jokaisessa on PULU-CAM-merkki erillisenä tekstinä.
+ *      kuvat ovat PUHTAITA — ennen omistajan tarravalintaa niissä ei
+ *      ole merkkiä eikä HTML-tekstiä.
  *   4. KARUSELLI: napautus avaa suurennoksen, jossa isoisän kuva on
- *      ENSIN (laskuri 1 / 4) ja pulun kuvissa merkki näkyy.
- *   5. RAAHAUS SIIRTÄÄ KOKO PAKKAA: kortit liikkuvat täsmälleen yhtä
+ *      ENSIN (laskuri 1 / 6) ja pitkä kuvateksti vaihtuu kuvan mukana.
+ *   5. HAVAINNEKUVA-LINKKI on isoisän pitkän kuvatekstin perässä ja
+ *      avaa selitteen; kartan lyhyessä tekstissä sitä ei ole.
+ *   6. LYHYT KUVATEKSTI KERTOO PÄÄLLIMMÄISESTÄ KUVASTA.
+ *   7. RAAHAUS SIIRTÄÄ KOKO PAKKAA: kortit liikkuvat täsmälleen yhtä
  *      paljon kuin paneeli.
- *   6. PUHELIN: sama pakka omalla ajolla 430 × 930 -ruudulla.
+ *   8. PUHELIN: sama pakka omalla ajolla 430 × 930 -ruudulla.
  *
  * KOEKUVAT OVAT REPON OMIA (assets/kartat/ihmeet/*.webp): selaimessa
  * ei ole ulkoverkkoa, eikä tuotantodatassa ole vielä yhtään pulun
@@ -46,7 +55,17 @@ const KAUPUNKI = 'lontoo';
 const TYOPOYTA = { width: 1280, height: 860 };
 const PUHELIN = { width: 430, height: 930 };
 
-/** Koekuvat: pohjakuva (isoisä) ja kolme pulun kuvaa. */
+/**
+ * Koekuvat: pohjakuva (isoisä) ja VIISI pulun kuvaa.
+ *
+ * Viisi siksi, että rakkauskohtauksen katto on viisi (omistaja
+ * 9.9.2026 klo 18.50) — pakka on siis kaappauksessa täydessä
+ * mitassaan, isoisän kuvan kanssa kuusi kuvaa.
+ *
+ * NELJÄNNEN LÄHDE ON HAVAINNEKUVA tarkoituksella: omistajan sääntö on,
+ * että pulun kuva saa Havainnekuva-linkin vain jos lähde sen sanoo,
+ * ja savukkeen pitää nähdä sekä linkillinen että linkitön pulun kuva.
+ */
 const KOEKUVAT = {
   luentakuva: {
     osoite: '/assets/kartat/ihmeet/ihme-crystal-palace.webp',
@@ -71,6 +90,18 @@ const KOEKUVAT = {
       osoite: '/assets/kartat/ihmeet/ihme-delfoi.webp',
       lyhyt: 'Pulu portailla.',
       selite: 'PULU-CAM: pulu portailla, ihastus jo toisaalla.',
+      lahde: 'Pulun kamera',
+    },
+    {
+      osoite: '/assets/kartat/ihmeet/ihme-karnak.webp',
+      lyhyt: 'Pulu pylväiköllä.',
+      selite: 'PULU-CAM: pulu pylväiköllä, ihastus varjossa.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
+    {
+      osoite: '/assets/kartat/ihmeet/ihme-knossos.webp',
+      lyhyt: 'Pulu portilla.',
+      selite: 'PULU-CAM: pulu portilla, ihastus katoaa kujalle.',
       lahde: 'Pulun kamera',
     },
   ],
@@ -209,7 +240,14 @@ async function avaaAjo(viewport) {
       pieni: Boolean(paneeli?.classList.contains('pieni')),
       kortteja: kortit.length,
       laatikot: kortit.map(laatikko),
-      merkit: kortit.map((k) => k.querySelector('.pulucam-teksti')?.textContent ?? null),
+      // Ennen omistajan tarravalintaa kuvissa EI saa olla merkkiä.
+      merkkeja: document.querySelectorAll('.pulucam-merkki').length,
+      // Kartan lyhyt kuvateksti: sen pitää kertoa päällimmäisestä kuvasta.
+      lyhyt: document.querySelector('.fokusvirta-luentakuva .fokusvirta-kuvaselite')
+        ?.textContent ?? null,
+      lyhyenLinkkeja: document.querySelectorAll(
+        '.fokusvirta-luentakuva .havainnekuva-selite, .fokusvirta-luentakuva .havainnekuva-linkki',
+      ).length,
       pino: [...document.querySelectorAll('.pollo-kuplapino .pollo-vihje')]
         .map((k) => k.textContent ?? '').join(' ').trim(),
     };
@@ -232,7 +270,7 @@ async function avaaAjo(viewport) {
 async function odotaPakka(sivu, lue) {
   await sivu.evaluate(() => { window.matkakirja.ui.diaryVoice?.pause(); });
   let tila = await lue();
-  for (let i = 0; i < 250 && tila.kortteja < 3; i += 1) {
+  for (let i = 0; i < 250 && tila.kortteja < KOEKUVAT.kuvat.length; i += 1) {
     await sivu.waitForTimeout(200);
     tila = await lue();
   }
@@ -292,20 +330,34 @@ tila = await keskitaPakka(tyopoyta.sivu, tyopoyta.lue, 0.46);
 tieto('kuplapino', tila.pino.slice(-140) || '(tyhjä)');
 tieto('korttien laatikot', JSON.stringify(tila.laatikot));
 vaadi('pulun kommentti tuli ruudulle', tila.pino.length > 0, '(pino jäi tyhjäksi)');
-vaadi('kolme kuvaa pulpahti pakkaan', tila.kortteja === 3, String(tila.kortteja));
-vaadi('jokaisessa kuvassa on PULU-CAM-merkki',
-  tila.merkit.length === 3 && tila.merkit.every((m) => m === 'PULU-CAM'),
-  JSON.stringify(tila.merkit));
+vaadi('viisi kuvaa pulpahti pakkaan', tila.kortteja === KOEKUVAT.kuvat.length,
+  String(tila.kortteja));
+/*
+ * TARRA ON OMISTAJAN VALINNASSA (A–F), eikä sitä ole vielä valittu:
+ * kuvien pitää näkyä PUHTAINA. Kun PULU_CAM_TARRA_OSOITE saa arvon,
+ * tämä vartio käännetään toisin päin (tarra jokaisessa pulun kuvassa).
+ */
+vaadi('pulun kuvat ovat puhtaita ilman tarraa', tila.merkkeja === 0, String(tila.merkkeja));
 
 /* 3. Limitys: kortit ovat oikeasti eri kohdissa. */
-if (tila.laatikot.length === 3) {
+if (tila.laatikot.length === KOEKUVAT.kuvat.length) {
   const paikat = new Set(tila.laatikot.map((l) => `${l.x},${l.y}`));
-  vaadi('kortit ovat eri kohdissa (limitys näkyy)', paikat.size === 3,
+  vaadi('kortit ovat eri kohdissa (limitys näkyy)', paikat.size === KOEKUVAT.kuvat.length,
     JSON.stringify(tila.laatikot));
   const siirto = Math.max(...tila.laatikot.map((l) => Math.abs(l.x - tila.laatikot[0].x)));
   tieto('suurin vaakasiirtymä', `${siirto} px (kortin leveys ${tila.laatikot[0].w} px)`);
 }
-await tyopoyta.kaappaa('pulucam-pakka.png');
+
+/*
+ * 3 b. LYHYT KUVATEKSTI KERTOO PÄÄLLIMMÄISESTÄ KUVASTA, ja kartalla ei
+ * ole Havainnekuva-linkkiä (omistaja 9.9.2026 klo 18.50).
+ */
+tieto('kartan lyhyt kuvateksti', String(tila.lyhyt));
+vaadi('lyhyt kuvateksti on päällimmäisen kuvan teksti',
+  tila.lyhyt === KOEKUVAT.kuvat[KOEKUVAT.kuvat.length - 1].lyhyt, String(tila.lyhyt));
+vaadi('kartan lyhyessä tekstissä ei ole havainnekuvalinkkiä',
+  tila.lyhyenLinkkeja === 0, String(tila.lyhyenLinkkeja));
+await tyopoyta.kaappaa('pulucam-5-pakka.png');
 
 /* 4. Karuselli: päällimmäinen kortti auki, isoisä ensin. */
 /*
@@ -323,45 +375,107 @@ await napautaPaallimmaista();
 await tyopoyta.sivu.waitForTimeout(400);
 if (!(await tyopoyta.sivu.$('.fokuszoom'))) await napautaPaallimmaista();
 await tyopoyta.sivu.waitForTimeout(1200);
-const zoom = await tyopoyta.sivu.evaluate(() => ({
-  auki: Boolean(document.querySelector('.fokuszoom')),
-  laskuri: document.querySelector('.fokuszoom-laskuri')?.textContent ?? null,
-  selite: document.querySelector('.fokuszoom-selite')?.textContent ?? null,
-  lahde: document.querySelector('.fokuszoom-lahde')?.textContent ?? null,
-  nuolia: document.querySelectorAll('.fokuszoom-nuoli').length,
-  merkkiPiilossa: document.querySelector('.pulucam-suuri')?.hidden ?? null,
-}));
+/** Karusellin nykyisen kuvan tila yhdellä lukemalla. */
+const lueZoom = () => tyopoyta.sivu.evaluate(() => {
+  const selite = document.querySelector('.fokuszoom-selite');
+  const linkki = selite?.querySelector('.havainnekuva-linkki') ?? null;
+  return {
+    auki: Boolean(document.querySelector('.fokuszoom')),
+    laskuri: document.querySelector('.fokuszoom-laskuri')?.textContent ?? null,
+    // Pitkä teksti ilman perään ladottua linkkiä.
+    selite: [...(selite?.childNodes ?? [])]
+      .filter((n) => n.nodeType === 3).map((n) => n.nodeValue).join('').trim(),
+    lahde: document.querySelector('.fokuszoom-lahde')?.textContent ?? null,
+    nuolia: document.querySelectorAll('.fokuszoom-nuoli').length,
+    merkkeja: document.querySelectorAll('.fokuszoom .pulucam-merkki').length,
+    linkki: linkki?.textContent ?? null,
+    // Linkin on oltava PITKÄN TEKSTIN PERÄSSÄ, ei sen keskellä.
+    linkkiViimeisena: Boolean(linkki)
+      && selite.childNodes[selite.childNodes.length - 1] === linkki,
+  };
+});
+
+const zoom = await lueZoom();
 tieto('karuselli', JSON.stringify(zoom));
 vaadi('karuselli aukesi', zoom.auki === true, JSON.stringify(zoom));
-vaadi('isoisän kuva on ensin', zoom.laskuri === '1 / 4', String(zoom.laskuri));
+vaadi('isoisän kuva on ensin', zoom.laskuri === '1 / 6', String(zoom.laskuri));
 vaadi('nuolinapit ovat molempiin suuntiin', zoom.nuolia === 2, String(zoom.nuolia));
-vaadi('isoisän kuvassa ei ole PULU-CAM-merkkiä', zoom.merkkiPiilossa === true,
-  String(zoom.merkkiPiilossa));
+vaadi('isoisän pitkä kuvateksti on karusellissa',
+  zoom.selite === KOEKUVAT.luentakuva.selite, String(zoom.selite));
+vaadi('karusellissa ei ole tarraa ennen omistajan valintaa', zoom.merkkeja === 0,
+  String(zoom.merkkeja));
 vaadi('lähderivi on mukana', Boolean(zoom.lahde), String(zoom.lahde));
+/* 5. Havainnekuva-linkki isoisän pitkän kuvatekstin perässä. */
+vaadi('isoisän pitkän tekstin perässä on Havainnekuva-linkki',
+  zoom.linkki === 'Havainnekuva' && zoom.linkkiViimeisena === true, JSON.stringify(zoom));
 await tyopoyta.kaappaa('pulucam-karuselli-isoisa.png');
 
-/* Nuolella eteenpäin: ensimmäinen pulun kuva merkkeineen. */
+/* Linkki avaa oikeasti pelin havainnekuvaselityksen. */
+await tyopoyta.sivu.click('.fokuszoom-selite .havainnekuva-linkki');
+await tyopoyta.sivu.waitForTimeout(700);
+const selitys = await tyopoyta.sivu.evaluate(() => {
+  const popup = document.querySelector('.havainnekuva-selite-popup');
+  return {
+    auki: Boolean(popup),
+    otsikko: popup?.querySelector('h2, .minipopup-otsikko')?.textContent ?? null,
+    kappaleita: popup?.querySelectorAll('.minipopup-teksti').length ?? 0,
+    zoomYha: Boolean(document.querySelector('.fokuszoom')),
+  };
+});
+tieto('havainnekuvaselitys', JSON.stringify(selitys));
+vaadi('Havainnekuva-linkki avaa selityksen', selitys.auki === true, JSON.stringify(selitys));
+vaadi('selityksessä on omistajan hyväksymät kappaleet', selitys.kappaleita >= 3,
+  String(selitys.kappaleita));
+vaadi('linkki ei sulje suurennosta altaan', selitys.zoomYha === true, String(selitys.zoomYha));
+await tyopoyta.kaappaa('pulucam-havainnekuva-linkki.png');
+/*
+ * ESC SULKEE SEKÄ SELITTEEN ETTÄ SUURENNOKSEN: selite on <dialog>,
+ * jonka natiivi Esc sulkee, ja sama näppäinpainallus kulkee myös
+ * suurennoksen omalle kuuntelijalle. Se ei ole vika vaan odotettua —
+ * mutta savukkeen on jatkettava karusellista, joten se avataan
+ * tarvittaessa uudestaan.
+ */
+await tyopoyta.sivu.keyboard.press('Escape');
+await tyopoyta.sivu.waitForTimeout(600);
+if (!(await tyopoyta.sivu.$('.fokuszoom'))) {
+  await napautaPaallimmaista();
+  await tyopoyta.sivu.waitForTimeout(1000);
+}
+vaadi('karuselli on jälleen auki selitteen jälkeen',
+  Boolean(await tyopoyta.sivu.$('.fokuszoom')), '(karuselli ei auennut uudestaan)');
+
+/*
+ * Nuolella eteenpäin: pitkä kuvateksti vaihtuu kuvan mukana, ja
+ * Havainnekuva-linkki seuraa LÄHDETTÄ eikä kuvan omistajaa.
+ */
 await tyopoyta.sivu.click('.fokuszoom-nuoli.oikea');
 await tyopoyta.sivu.waitForTimeout(700);
-const pulunKuva = await tyopoyta.sivu.evaluate(() => ({
-  laskuri: document.querySelector('.fokuszoom-laskuri')?.textContent ?? null,
-  selite: document.querySelector('.fokuszoom-selite')?.textContent ?? null,
-  merkkiPiilossa: document.querySelector('.pulucam-suuri')?.hidden ?? null,
-  merkinTeksti: document.querySelector('.pulucam-suuri .pulucam-teksti')?.textContent ?? null,
-}));
+const pulunKuva = await lueZoom();
 tieto('karusellin toinen kuva', JSON.stringify(pulunKuva));
-vaadi('toinen kuva on pulun kuva', pulunKuva.laskuri === '2 / 4', String(pulunKuva.laskuri));
-vaadi('pulun kuvassa on PULU-CAM-merkki',
-  pulunKuva.merkkiPiilossa === false && pulunKuva.merkinTeksti === 'PULU-CAM',
-  JSON.stringify(pulunKuva));
+vaadi('toinen kuva on pulun kuva', pulunKuva.laskuri === '2 / 6', String(pulunKuva.laskuri));
+vaadi('pitkä kuvateksti vaihtui kuvan mukana',
+  pulunKuva.selite === KOEKUVAT.kuvat[0].selite, String(pulunKuva.selite));
+vaadi('"Pulun kamera" ei saa Havainnekuva-linkkiä', pulunKuva.linkki === null,
+  String(pulunKuva.linkki));
 await tyopoyta.kaappaa('pulucam-karuselli.png');
+
+/* Neljäs pulun kuva on havainnekuva: se saa linkin. */
+await tyopoyta.sivu.click('.fokuszoom-nuoli.oikea');
+await tyopoyta.sivu.click('.fokuszoom-nuoli.oikea');
+await tyopoyta.sivu.click('.fokuszoom-nuoli.oikea');
+await tyopoyta.sivu.waitForTimeout(700);
+const havainnekuva = await lueZoom();
+tieto('karusellin viides kuva', JSON.stringify(havainnekuva));
+vaadi('havainnekuvalähteinen pulun kuva saa linkin',
+  havainnekuva.laskuri === '5 / 6' && havainnekuva.linkki === 'Havainnekuva',
+  JSON.stringify(havainnekuva));
 
 /* Sulkeminen palauttaa kartan pakkaan. */
 await tyopoyta.sivu.keyboard.press('Escape');
 await tyopoyta.sivu.waitForTimeout(900);
 const suljettu = await tyopoyta.lue();
 vaadi('sulkeminen palauttaa pakan kartalle',
-  suljettu.kortteja === 3 && !(await tyopoyta.sivu.$('.fokuszoom')),
+  suljettu.kortteja === KOEKUVAT.kuvat.length && !(await tyopoyta.sivu.$('.fokuszoom')),
   String(suljettu.kortteja));
 
 /*
@@ -388,7 +502,8 @@ await tyopoyta.sivu.mouse.move(keskus.x - 90, keskus.y - 60, { steps: 8 });
 await tyopoyta.sivu.mouse.up();
 await tyopoyta.sivu.waitForTimeout(700);
 const jalkeen = await tyopoyta.lue();
-if (ennen.laatikot.length === 3 && jalkeen.laatikot.length === 3) {
+if (ennen.laatikot.length === KOEKUVAT.kuvat.length
+  && jalkeen.laatikot.length === KOEKUVAT.kuvat.length) {
   const paneelinSiirto = {
     dx: jalkeen.paneeli.x - ennen.paneeli.x, dy: jalkeen.paneeli.y - ennen.paneeli.y,
   };
@@ -414,14 +529,14 @@ let puhelimessa = await odotaPakka(puhelin.sivu, puhelin.lue);
 tieto('puhelin', JSON.stringify({
   kortteja: puhelimessa.kortteja, paneeli: puhelimessa.paneeli, laatikot: puhelimessa.laatikot,
 }));
-vaadi('pakka on kartalla myös puhelimella', puhelimessa.kortteja === 3,
+vaadi('pakka on kartalla myös puhelimella', puhelimessa.kortteja === KOEKUVAT.kuvat.length,
   String(puhelimessa.kortteja));
 
 puhelimessa = await keskitaPakka(puhelin.sivu, puhelin.lue, 0.52);
 tieto('puhelin raahauksen jälkeen', JSON.stringify({
   paneeli: puhelimessa.paneeli, laatikot: puhelimessa.laatikot,
 }));
-if (puhelimessa.laatikot.length === 3) {
+if (puhelimessa.laatikot.length === KOEKUVAT.kuvat.length) {
   vaadi('kortit mahtuvat puhelimen ruudulle',
     puhelimessa.laatikot.every((l) => l.x > -40 && l.x + l.w < PUHELIN.width + 40),
     JSON.stringify(puhelimessa.laatikot));

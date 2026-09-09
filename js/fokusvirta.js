@@ -165,6 +165,12 @@ import {
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
 import { taytaLahderivi } from './tekijakortti.js';
+/*
+ * HAVAINNEKUVA-LINKKI PITKÄN KUVATEKSTIN PERÄÄN (omistaja 9.9.2026 klo
+ * 18.50). Lähderivin oma maininta säilyy ennallaan; tämä on sen rinnalle
+ * tuleva erillinen linkki, joka avaa saman selitteen (js/havainnekuva.js).
+ */
+import { havainnekuvaLinkki } from './havainnekuva.js';
 
 /*
  * MINIVISAN PALKKIO. Raamatun osio "Aarteet ja eteneminen" antaa pienen
@@ -1893,14 +1899,22 @@ function rakennaLuentakuvanPaneeli(ui, city, kuva) {
 
   /*
    * POHJATON PAKKA: paneelissa on vain läpinäkyvä laatikko, johon
-   * pakka ladotaan. Ei nappia, ei kuvaa, ei kuvatekstiä — ja siksi
-   * myöskään ei luennan jälkeistä pienennystä, joka on isoisän kuvan
-   * oma kello.
+   * pakka ladotaan. Ei nappia eikä isoisän kuvaa — ja siksi myöskään
+   * ei luennan jälkeistä pienennystä, joka on isoisän kuvan oma kello.
+   *
+   * KUVATEKSTILAATIKKO ON SILTI MUKANA, TYHJÄNÄ (omistaja 9.9.2026 klo
+   * 18.50: lyhyt kuvateksti kuuluu PÄÄLLIMMÄISEN kuvan alle). Ilman
+   * sitä pohjattoman pakan kuvilla ei olisi kartalla kuvatekstiä
+   * lainkaan, vaikka kuvat ovat samanlaisia kuvia kuin isoisän
+   * kuvan päällä. Pakka täyttää sen ensimmäisen pulpahduksen yhteydessä
+   * (naytaPuluCamPakka → kuvateksti); tyhjä kappale ei näy (css :empty).
    */
   if (!kuva) {
     const kuvatila = html('div', 'fokusvirta-kuvatila');
     kuvatila.appendChild(html('div', 'fokusvirta-kuva pulucam-pohja'));
-    paneeli.appendChild(kuvatila);
+    const tyhjaTeksti = html('p', 'fokusvirta-kuvateksti fokusvirta-luentateksti');
+    tyhjaTeksti.appendChild(html('span', 'fokusvirta-kuvaselite'));
+    paneeli.append(kuvatila, tyhjaTeksti);
     koti.appendChild(paneeli);
     ui.luentakuva = paneeli;
     const naytaPohja = () => { if (paneeli.parentNode) paneeli.classList.add('nakyy'); };
@@ -2095,6 +2109,20 @@ export function naytaPulunKuvapakka(ui, city) {
      */
     avaa: (i) => avaaSuurennos(ui, lista, 0, () => ui.pulucamPakka?.kortit?.[i] ?? pohja,
       { pulunKuvasta: pulusta }),
+    /*
+     * LYHYT KUVATEKSTI KERTOO PÄÄLLIMMÄISESTÄ KUVASTA (omistaja
+     * 9.9.2026 klo 18.50). Isoisän kuvan teksti jää pakan alle yhdessä
+     * kuvansa kanssa, joten kartalla luetaan aina sen kuvan lyhyt
+     * teksti, joka on ruudulla päällimmäisenä. LINKKIÄ EI TÄNNE TULE:
+     * havainnekuvaselitys kuuluu vain avattuun kuvaan.
+     */
+    kuvateksti: (k) => {
+      // Paneelissa on täsmälleen yksi kuvaselite (kuvallinen ja
+      // pohjaton paneeli rakennetaan samasta kohdasta), joten yhden
+      // luokan valitsin riittää eikä tarvitse jälkeläisketjua.
+      const selite = paneeli.querySelector?.('.fokusvirta-kuvaselite');
+      if (selite) selite.textContent = kuvatekstiLyhyt(k);
+    },
     raahattu: () => {
       const naytto = ui.luentakuvaAnkkuri;
       if (naytto?.paneeli !== paneeli || !naytto.raahattu) return false;
@@ -2711,12 +2739,14 @@ function avaaSuurennos(ui, lista, alku, ankkuri, { pulunKuvasta = -1 } = {}) {
   const laskuri = html('span', 'fokuszoom-laskuri');
   teksti.append(selite, lahde, laskuri);
   /*
-   * PULU-CAM-MERKKI MYÖS SUURENNOKSESSA (Raamattu kohta 3): merkki on
-   * käyttöliittymätekstiä kuvan päällä eikä kuvaan poltettu, joten sen
-   * on seurattava kuvaa myös isona. Kuva saa siksi ohuen kuoren, jonka
-   * mitat ovat täsmälleen kuvan mitat — merkki asettuu sen oikeaan
-   * alakulmaan. KUORI SYNTYY VAIN KARUSELLISSA: yhden kuvan suurennos
-   * (kaikki muut kutsupaikat) pysyy rakenteeltaan ennallaan.
+   * PULU-CAM-TARRA MYÖS SUURENNOKSESSA (Raamattu kohta 3): tarraa ei
+   * ole poltettu kuvaan, joten sen on seurattava kuvaa myös isona.
+   * Kuva saa siksi ohuen kuoren, jonka mitat ovat täsmälleen kuvan
+   * mitat — tarra asettuu sen oikeaan alakulmaan. KUORI SYNTYY VAIN
+   * KARUSELLISSA JA VAIN JOS TARRA ON OLEMASSA: yhden kuvan suurennos
+   * (kaikki muut kutsupaikat) pysyy rakenteeltaan ennallaan, ja ennen
+   * omistajan tarravalintaa (js/pulucam.js PULU_CAM_TARRA_OSOITE) niin
+   * pysyy karusellikin — kuvat näkyvät puhtaina.
    */
   const puluCam = pulunKuvasta >= 0 ? puluCamMerkki({ luokka: 'pulucam-suuri' }) : null;
   if (puluCam) {
@@ -2749,6 +2779,24 @@ function avaaSuurennos(ui, lista, alku, ankkuri, { pulunKuvasta = -1 } = {}) {
     }, { once: true });
     iso.src = kuvanSuurennos(kuva);
     selite.textContent = kuvatekstiPitka(kuva);
+    /*
+     * HAVAINNEKUVA-LINKKI PITKÄN TEKSTIN PERÄÄN (omistaja 9.9.2026 klo
+     * 18.50, Raamattu PULU-CAM: … HAVAINNEKUVA-LINKKI PITKAN LOPUSSA).
+     * Linkki syntyy tässä eikä kuvan rakennuksessa, koska KARUSELLISSA
+     * PITKÄ TEKSTI VAIHTUU KUVAN MUKANA: seuraavan kuvan lähde voi olla
+     * eri, ja edellisen kuvan linkki jäisi selittämään väärää kuvaa.
+     * `selite.textContent`-sijoitus yllä tyhjentää elementin, joten
+     * vanha linkki katoaa samalla eikä niitä kerry kahta.
+     *
+     * KARTALLA NÄKYVÄ LYHYT TEKSTI EI SAA LINKKIÄ. Se ladotaan aivan
+     * toisaalla (rakennaLuentakuvanPaneeli, pakan kuvateksti-kutsu), ja
+     * omistajan sääntö on nimenomaan: linkki vain avatussa kuvassa.
+     */
+    const linkki = havainnekuvaLinkki(kuva.lahde ?? '', kuva);
+    if (linkki) {
+      selite.appendChild(document.createTextNode(' '));
+      selite.appendChild(linkki);
+    }
     // Lähderivi kirjoitetaan uudestaan joka kuvanvaihdossa, joten
     // havainnekuvaselite on rakennettava samalla — taytaLahderivi
     // tyhjentää elementin ja kokoaa sen uudelleen.

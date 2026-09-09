@@ -5,18 +5,24 @@
  * Omistaja 9.9.2026 klo 15.20–15.30 (Raamattu, "PULU-CAM: PULUN
  * NYKYAJAN KUVAT PAKKANA ISOISAN KUVAN PAALLE, YHTEINEN KARUSELLI").
  *
- * SEITSEMÄN ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ EIVÄTKÄ KAAPPAUKSESTA:
+ * TARKENNUS 9.9.2026 klo 18.50 (Raamattu, "PULU-CAM: RAKKAUSKOHTAUS
+ * 3-5 KUVAA, KAKSI KUVATEKSTIA MOLEMMILLE, HAVAINNEKUVA-LINKKI PITKAN
+ * LOPUSSA, TARRA YHTENA PNG:NA OMISTAJAN VALINNASTA").
+ *
+ * KYMMENEN ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ EIVÄTKÄ KAAPPAUKSESTA:
  *
  *   1. PAKKA EI NOUSE ENNEN KOMMENTTIA. Kuvat kuuluvat siihen hetkeen,
  *      jossa pulu alkaa puhua — ei luennan alkuun. Sama koukku kuin
  *      Etsi aarre -napilla, ja juuri sellainen ajoitus lipsahtaa
  *      hiljaa väärään paikkaan, kun paneelia joskus muokataan.
- *   2. YKSI, KAKSI TAI KOLME KUVAA, JOKAINEN OMASSA KULMASSAAN JA
- *      OMASSA PAIKASSAAN. Ilman erillisiä asentoja pakka näyttäisi
- *      yhdeltä kuvalta — omistajan sana oli, että "siinä hahmottaa,
- *      että pakassa on useampi kuva".
- *   3. MERKKI ON HTML:ÄÄ, EI KUVAAN POLTETTU. Teksti PULU-CAM on oma
- *      elementtinsä jokaisessa pulun kuvassa, myös suurennoksessa.
+ *   2. YHDESTÄ VIITEEN KUVAA, JOKAINEN OMASSA KULMASSAAN JA OMASSA
+ *      PAIKASSAAN. Ilman erillisiä asentoja pakka näyttäisi yhdeltä
+ *      kuvalta — omistajan sana oli, että "siinä hahmottaa, että
+ *      pakassa on useampi kuva". Rakkauskohtaus saa viisi, joten
+ *      asentoja on oltava viisi eikä kolmea kierrätettynä.
+ *   3. TARRA ON YKSI PNG, EI KUVAAN POLTETTU EIKÄ HTML-TEKSTI. Ennen
+ *      omistajan valintaa (PULU_CAM_TARRA_OSOITE null) pulun kuvissa
+ *      EI ole mitään merkkiä — ei varakuvaketta, ei tekstiä.
  *   4. KARUSELLIN JÄRJESTYS ON ISOISÄ ENSIN. Se on omistajan sanoma
  *      järjestys eikä napautuskohdan mukainen — ja se on juuri se,
  *      mikä kääntyisi vahingossa "avaa se kuva, jota painoit"
@@ -28,6 +34,14 @@
  *      jotka muuten herättäisivät pakan seuraavassa kaupungissa.
  *   7. ILMAN KENTTÄÄ MIKÄÄN EI MUUTU. Kuvaton kaupunki on täsmälleen
  *      ennallaan, eikä suurennos saa kasvattaa rakennettaan.
+ *   8. LYHYT KUVATEKSTI KERTOO PÄÄLLIMMÄISESTÄ KUVASTA. Pakan noustessa
+ *      isoisän kuva jää alle; kartalla lukeva teksti seuraa sitä kuvaa,
+ *      joka on ruudulla.
+ *   9. PITKÄ KUVATEKSTI VAIHTUU KARUSELLISSA KUVAN MUKANA, sekä isoisän
+ *      että pulun kuvilla.
+ *  10. HAVAINNEKUVA-LINKKI ON PITKÄN TEKSTIN PERÄSSÄ JA VAIN SIELLÄ.
+ *      Lyhyeen tekstiin ei koskaan tule linkkiä, ja lähderivi säilyy
+ *      omanaan.
  *
  * DOM-osuus ajetaan samalla pienellä puumallilla kuin
  * tests/luentakuva.test.mjs: Nodessa ei ole selainta, eikä repoon oteta
@@ -42,8 +56,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  PULUCAM_ASENNOT, PULUCAM_KATTO, PULUCAM_VALIT_MS, PULU_CAM_SELFIE_OSOITE,
-  PULU_CAM_TEKSTI, pulucamAsento, pulucamViive, pulunKuvat,
+  PULUCAM_ASENNOT, PULUCAM_KATTO, PULUCAM_TARRA_KATTO_PX, PULUCAM_TARRA_OSUUS,
+  PULUCAM_VALIT_MS, PULU_CAM_TARRA_OSOITE, puluCamMerkki, pulucamAsento, pulucamViive,
+  pulunKuvat,
 } from '../js/pulucam.js';
 
 /* ---------------------------------------------------------------- */
@@ -85,7 +100,7 @@ class Elementti {
     this.type = '';
     this.decoding = '';
     this.draggable = true;
-    /* Merkin varakuvake ladotaan innerHTML:llä (POLLO_IKONI). */
+    /* Talon muut piirtäjät latovat kuvakkeita innerHTML:llä. */
     this.innerHTML = '';
     this.style = { setProperty(nimi, arvo) { this[nimi] = String(arvo); } };
   }
@@ -276,6 +291,7 @@ const {
 } = await import('../js/fokusvirta.js');
 const { fokusvirtaKaupungille } = await import('../js/packs/fokusvirrat.js');
 const { julisteUrl } = await import('../js/media.js');
+const { HAVAINNEKUVA_LINKKI_TEKSTI } = await import('../js/havainnekuva.js');
 
 /* ---------------------------------------------------------------- */
 /* Koekaupunki ja koekuvat                                           */
@@ -292,7 +308,13 @@ const POHJAKUVA = {
   lahde: 'Matkakirjan havainnekuva',
 };
 
-/** Kolme pulun kuvaa toimituksen järjestyksessä. */
+/**
+ * Kolme pulun kuvaa toimituksen järjestyksessä (tavallinen kohde).
+ *
+ * KOLMANNEN LÄHDE ON HAVAINNEKUVA tarkoituksella: omistajan sääntö on,
+ * että pulun kuva saa Havainnekuva-linkin *jos lähde sen sanoo* —
+ * kahdella ensimmäisellä sitä ei siis saa olla.
+ */
 const PULUN_KUVAT = [
   {
     ampari: 'pulucam/koe-sofia-1.jpg',
@@ -310,6 +332,23 @@ const PULUN_KUVAT = [
     osoite: 'https://media.matkakirja.app/pulucam/koe-sofia-3.jpg',
     lyhyt: 'Pulu sillalla.',
     selite: 'PULU-CAM: pulu sillalla, ihastus jo toisella rannalla.',
+    lahde: 'Matkakirjan havainnekuva',
+  },
+];
+
+/** Rakkauskohtauksen viisi kuvaa (omistaja 9.9.2026 klo 18.50). */
+const VIISI_KUVAA = [
+  ...PULUN_KUVAT,
+  {
+    ampari: 'pulucam/koe-sofia-4.jpg',
+    lyhyt: 'Pulu portilla.',
+    selite: 'PULU-CAM: pulu portilla, ihastus katoaa kujalle.',
+    lahde: 'Pulun kamera',
+  },
+  {
+    ampari: 'pulucam/koe-sofia-5.jpg',
+    lyhyt: 'Pulu kirkon räystäällä.',
+    selite: 'PULU-CAM: pulu kirkon räystäällä, ihastus kaukana torilla.',
     lahde: 'Pulun kamera',
   },
 ];
@@ -342,10 +381,10 @@ function pakanKortit() {
 }
 
 /* ---------------------------------------------------------------- */
-/* 1. Kentän luku: 1–3 kuvaa, osoitteeton karsiutuu                  */
+/* 1. Kentän luku: 1–5 kuvaa, osoitteeton karsiutuu                  */
 /* ---------------------------------------------------------------- */
 
-test('pollo.kuvat luetaan toimituksen järjestyksessä, enintään kolme', () => {
+test('pollo.kuvat luetaan toimituksen järjestyksessä, enintään viisi', () => {
   assert.equal(pulunKuvat(null).length, 0);
   assert.equal(pulunKuvat({ pollo: {} }).length, 0);
   assert.equal(pulunKuvat({ pollo: { kuvat: 'ei lista' } }).length, 0);
@@ -357,10 +396,15 @@ test('pollo.kuvat luetaan toimituksen järjestyksessä, enintään kolme', () =>
   const kolme = pulunKuvat({ pollo: { kuvat: PULUN_KUVAT } });
   assert.deepEqual(kolme, PULUN_KUVAT, 'järjestys on toimituksen järjestys');
 
-  // Neljäs jää pois: katto on kolme (omistaja: "kaksi tai kolme").
-  assert.equal(PULUCAM_KATTO, 3);
-  const nelja = pulunKuvat({ pollo: { kuvat: [...PULUN_KUVAT, { ...PULUN_KUVAT[0] }] } });
-  assert.equal(nelja.length, 3);
+  /*
+   * KATTO ON VIISI (omistaja 9.9.2026 klo 18.50: tavallinen kohde 1–3,
+   * rakkauskohtaus 3–5) — pakassa on isoisän kanssa enintään kuusi
+   * kuvaa. Kuudes pulun kuva jää pois.
+   */
+  assert.equal(PULUCAM_KATTO, 5);
+  assert.deepEqual(pulunKuvat({ pollo: { kuvat: VIISI_KUVAA } }), VIISI_KUVAA);
+  const kuusi = pulunKuvat({ pollo: { kuvat: [...VIISI_KUVAA, { ...PULUN_KUVAT[0] }] } });
+  assert.equal(kuusi.length, 5);
 
   // Osoitteeton kuva karsiutuu — sama ehto kuin luentakuvalla.
   const vajaa = pulunKuvat({ pollo: { kuvat: [{ selite: 'ei kuvaa' }, PULUN_KUVAT[1]] } });
@@ -368,12 +412,17 @@ test('pollo.kuvat luetaan toimituksen järjestyksessä, enintään kolme', () =>
 });
 
 test('asennot ja pulpahdusvälit ovat deterministisiä ja haarukassa', () => {
-  assert.equal(PULUCAM_ASENNOT.length, 3);
+  // Viisi asentoa viidelle kuvalle: neljäs ja viides eivät ole kolmen
+  // ensimmäisen kierrätystä, vaan omia kulmiaan ja neljänneksiään.
+  assert.equal(PULUCAM_ASENNOT.length, PULUCAM_KATTO);
   // Eri suuntiin: kulmat eivät saa olla samat eivätkä nollia.
   const kulmat = PULUCAM_ASENNOT.map((a) => a.kulma);
-  assert.deepEqual(kulmat, [4, -3, 2]);
-  assert.equal(new Set(kulmat).size, 3);
+  assert.deepEqual(kulmat, [4, -3, 2, -6, 7]);
+  assert.equal(new Set(kulmat).size, PULUCAM_KATTO);
+  const paikat = new Set(PULUCAM_ASENNOT.map((a) => `${a.x},${a.y}`));
+  assert.equal(paikat.size, PULUCAM_KATTO, 'kaksi kuvaa asettuisi päällekkäin');
   for (const asento of PULUCAM_ASENNOT) {
+    assert.notEqual(asento.kulma, 0, 'suora kortti ei erotu pakasta');
     // Siirtymä 6–10 % kuvan koosta kummassakin suunnassa.
     assert.ok(Math.abs(asento.x) >= 6 && Math.abs(asento.x) <= 10, `x ${asento.x}`);
     assert.ok(Math.abs(asento.y) >= 6 && Math.abs(asento.y) <= 10, `y ${asento.y}`);
@@ -381,8 +430,11 @@ test('asennot ja pulpahdusvälit ovat deterministisiä ja haarukassa', () => {
   // Sama sija, sama asento joka ajolla.
   assert.deepEqual(pulucamAsento(1), pulucamAsento(1));
   assert.deepEqual(pulucamAsento(0), PULUCAM_ASENNOT[0]);
+  assert.deepEqual(pulucamAsento(4), PULUCAM_ASENNOT[4]);
 
-  // Ensimmäinen heti, seuraavat 0,9–1,2 s välein.
+  // Ensimmäinen heti, seuraavat 0,9–1,2 s välein — yksi väli kuvaa
+  // kohti, myös rakkauskohtauksen neljännelle ja viidennelle.
+  assert.equal(PULUCAM_VALIT_MS.length, PULUCAM_KATTO);
   assert.equal(pulucamViive(0), 0);
   for (let i = 1; i < PULUCAM_VALIT_MS.length; i += 1) {
     const vali = PULUCAM_VALIT_MS[i];
@@ -427,19 +479,19 @@ test('ilman pollo.kuvat-kenttää pakkaa ei synny lainkaan', () => {
 /* 3. Pakka: kulmat, paikat ja PULU-CAM-merkki                       */
 /* ---------------------------------------------------------------- */
 
-test('kolme kuvaa pulpahtaa yksitellen, kukin omaan kulmaansa ja paikkaansa', async () => {
-  await pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, async () => {
+test('viisi kuvaa pulpahtaa yksitellen, kukin omaan kulmaansa ja paikkaansa', async () => {
+  await pakinKanssa({ luentakuva: POHJAKUVA, kuvat: VIISI_KUVAA }, async () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
 
     // Ensimmäinen nousee heti, seuraavat vasta viiveellä.
     assert.equal(pakanKortit().length, 1, 'ensimmäisen kuvan pitää nousta heti');
-    assert.equal(ui.pulucamPakka.kortit.length, 3);
+    assert.equal(ui.pulucamPakka.kortit.length, 5);
 
-    await odota(pulucamViive(2) + 120);
+    await odota(pulucamViive(4) + 120);
     const kortit = pakanKortit();
-    assert.equal(kortit.length, 3, 'kaikkien kolmen kuvan pitää pulpahtaa');
+    assert.equal(kortit.length, 5, 'kaikkien viiden kuvan pitää pulpahtaa');
 
     kortit.forEach((kortti, i) => {
       const asento = pulucamAsento(i);
@@ -453,33 +505,34 @@ test('kolme kuvaa pulpahtaa yksitellen, kukin omaan kulmaansa ja paikkaansa', as
 
     // Kulmat ja paikat ovat oikeasti eri: pakan pitää näyttää pakalta.
     const kulmat = new Set(kortit.map((k) => k.style['--pulucam-kulma']));
-    assert.equal(kulmat.size, 3, 'kaikilla kuvilla on sama kulma');
+    assert.equal(kulmat.size, 5, 'kahdella kuvalla on sama kulma');
+    const paikat = new Set(kortit.map((k) => `${k.style['--pulucam-x']},${k.style['--pulucam-y']}`));
+    assert.equal(paikat.size, 5, 'kaksi kuvaa asettui täsmälleen päällekkäin');
 
     piilotaLuentakuva(ui, { heti: true });
   });
 });
 
-test('jokaisessa pulun kuvassa on PULU-CAM-merkki: selfie ja erillinen teksti', () => {
+test('ilman omistajan valitsemaa tarraa pulun kuvat näkyvät puhtaina', () => {
   pakinKanssa({ luentakuva: POHJAKUVA, kuvat: [PULUN_KUVAT[0]] }, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
 
+    /*
+     * OMISTAJA EI OLE VIELÄ VALINNUT TARRAA (A–F), joten kuvissa ei saa
+     * olla mitään merkkiä: ei tarraa, ei varakuvaketta eikä
+     * HTML-tekstiä "PULU-CAM". Kun tarra valitaan, tämä testi
+     * päivitetään yhdessä vakion kanssa.
+     */
+    assert.equal(PULU_CAM_TARRA_OSOITE, null,
+      'kun omistaja valitsee tarran, päivitä myös tämä testi');
     const kortti = pakanKortit()[0];
-    const merkki = kortti.querySelector('.pulucam-merkki');
-    assert.ok(merkki, 'PULU-CAM-merkki puuttuu');
-    // Teksti on OMA elementtinsä, ei kuvaan poltettu pikseli.
-    const teksti = merkki.querySelector('.pulucam-teksti');
-    assert.equal(teksti.textContent, PULU_CAM_TEKSTI);
-    assert.equal(PULU_CAM_TEKSTI, 'PULU-CAM');
-
-    // Selfie: kuvatoimituksen PNG puuttuu vielä, joten varakuvake on
-    // pelin nykyinen pulun kuvake (js/pollo.js POLLO_IKONI).
-    const selfie = merkki.querySelector('.pulucam-selfie');
-    assert.ok(selfie, 'selfie-merkki puuttuu');
-    assert.equal(PULU_CAM_SELFIE_OSOITE, null,
-      'kun kuvatoimitus toimittaa selfien, päivitä myös tämä testi');
-    assert.match(selfie.innerHTML, /<svg/, 'varakuvake ei ole pelin oma pulun kuvake');
+    assert.equal(kortti.querySelectorAll('.pulucam-merkki').length, 0);
+    assert.equal(kortti.querySelectorAll('.pulucam-tarra').length, 0);
+    assert.equal(kortti.querySelectorAll('.pulucam-teksti').length, 0);
+    assert.equal(puluCamMerkki(), null, 'ilman osoitetta merkkiä ei synny');
+    assert.equal(kortti.textContent, '', 'kuvan päälle jäi tekstiä');
 
     // Kuvassa itsessään on lyhyt kuvateksti alt-tekstinä (kartalla lyhyt).
     assert.equal(kortti.querySelector('img').alt, PULUN_KUVAT[0].lyhyt);
@@ -490,12 +543,66 @@ test('jokaisessa pulun kuvassa on PULU-CAM-merkki: selfie ja erillinen teksti', 
   });
 });
 
+test('tarran kanssa merkki on yksi kuva ilman HTML-tekstiä', () => {
+  const osoite = 'https://media.matkakirja.app/pulucam/tarra-koe.png';
+  const merkki = puluCamMerkki({ osoite });
+  assert.ok(merkki, 'tarra-osoitteella merkin pitää syntyä');
+  assert.ok(merkki.luokat.includes('pulucam-merkki'));
+
+  // Yksi ainoa lapsi: kuva. Teksti on tarrassa, ei HTML:ssä.
+  assert.equal(merkki.childNodes.length, 1);
+  const tarra = merkki.querySelector('.pulucam-tarra');
+  assert.ok(tarra, 'tarrakuva puuttuu');
+  assert.equal(tarra.nodeName, 'IMG');
+  assert.equal(tarra.getAttribute('src'), osoite);
+  assert.equal(merkki.textContent, '', 'merkissä ei saa olla HTML-tekstiä');
+  assert.equal(merkki.getAttribute('aria-hidden'), 'true');
+
+  // Suurennoksen lisäluokka kulkee mukana.
+  assert.ok(puluCamMerkki({ osoite, luokka: 'pulucam-suuri' }).luokat.includes('pulucam-suuri'));
+
+  // Koko on kuvan leveydestä: 22 %, katto 160 px — ja SAMAT LUVUT
+  // css:ssä, koska mitta lasketaan siellä (--pulucam-mitta).
+  assert.equal(PULUCAM_TARRA_OSUUS, 0.22);
+  assert.equal(PULUCAM_TARRA_KATTO_PX, 160);
+});
+
+test('tarran mitta on css:ssä sama sopimus kuin js:ssä', async () => {
+  const { readFileSync } = await import('node:fs');
+  const css = readFileSync(new URL('../css/fokusvirta.css', import.meta.url), 'utf8');
+  const sailio = css.match(/\.pulucam-merkki \{[^}]*\}/);
+  assert.ok(sailio, '.pulucam-merkki puuttuu css:stä');
+  assert.match(sailio[0],
+    new RegExp(`\\* ${PULUCAM_TARRA_OSUUS}\\)`.replace('.', '\\.')),
+    'tarran osuus kuvan leveydestä ei vastaa js:n vakiota');
+  assert.match(sailio[0], new RegExp(`${PULUCAM_TARRA_KATTO_PX}px`),
+    'tarran kattoleveys ei vastaa js:n vakiota');
+  // Poistetut elementit eivät saa jäädä css:ään elämään omaa elämäänsä.
+  assert.doesNotMatch(css, /\.pulucam-teksti/, 'HTML-tekstin tyyli jäi css:ään');
+  assert.doesNotMatch(css, /\.pulucam-selfie/, 'varakuvakkeen tyyli jäi css:ään');
+});
+
 /* ---------------------------------------------------------------- */
 /* 4. Yhteinen karuselli: isoisä ensin                               */
 /* ---------------------------------------------------------------- */
 
+/** Pitkä teksti ilman perään ladottua Havainnekuva-linkkiä. */
+function pitkaTeksti(kerros) {
+  const selite = kerros.querySelector('.fokuszoom-selite');
+  return selite.childNodes
+    .filter((n) => n.nodeType === 3)
+    .map((n) => n.nodeValue)
+    .join('')
+    .trim();
+}
+
+/** Karusellin pitkän tekstin perässä oleva Havainnekuva-linkki. */
+function havainnekuvanLinkki(kerros) {
+  return kerros.querySelector('.fokuszoom-selite')?.querySelector('.havainnekuva-linkki') ?? null;
+}
+
 test('päällimmäisen kuvan napautus avaa karusellin isoisän kuvasta', () => {
-  pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, () => {
+  pakinKanssa({ luentakuva: POHJAKUVA, kuvat: VIISI_KUVAA }, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
@@ -504,34 +611,29 @@ test('päällimmäisen kuvan napautus avaa karusellin isoisän kuvasta', () => {
     const kerros = asiakirja.querySelectorAll('.fokuszoom')[0];
     assert.ok(kerros, 'karuselli ei auennut');
 
-    // 1 isoisän kuva + 3 pulun kuvaa, ja ISOISÄ ENSIN.
-    assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '1 / 4');
-    assert.equal(kerros.querySelector('.fokuszoom-selite').textContent, POHJAKUVA.selite);
-    // Lähderivi kulkee jokaisella kuvalla (CC BY).
+    // 1 isoisän kuva + 5 pulun kuvaa, ja ISOISÄ ENSIN.
+    assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '1 / 6');
+    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite);
+    // Lähderivi kulkee jokaisella kuvalla (CC BY) ja säilyy omanaan.
     assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, POHJAKUVA.lahde);
     // Nuolinapit kumpaankin suuntaan.
     assert.equal(kerros.querySelectorAll('.fokuszoom-nuoli').length, 2);
 
-    // Merkki on olemassa mutta piilossa isoisän kuvassa.
-    const merkki = kerros.querySelector('.pulucam-suuri');
-    assert.ok(merkki, 'suurennoksesta puuttuu PULU-CAM-merkki');
-    assert.equal(merkki.hidden, true, 'isoisän kuvassa ei saa olla PULU-CAM-merkkiä');
+    // Ilman omistajan tarravalintaa merkkiä ei ole lainkaan.
+    assert.equal(PULU_CAM_TARRA_OSOITE, null);
+    assert.equal(kerros.querySelectorAll('.pulucam-merkki').length, 0);
 
-    // Seuraava kuva on ensimmäinen PULUN kuva, merkkeineen.
-    nappain('ArrowRight');
-    assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '2 / 4');
-    assert.equal(kerros.querySelector('.fokuszoom-selite').textContent, PULUN_KUVAT[0].selite);
-    assert.equal(merkki.hidden, false, 'pulun kuvasta puuttuu PULU-CAM-merkki');
-    assert.equal(merkki.querySelector('.pulucam-teksti').textContent, PULU_CAM_TEKSTI);
-
-    // Loput järjestyksessä.
-    nappain('ArrowRight');
-    assert.equal(kerros.querySelector('.fokuszoom-selite').textContent, PULUN_KUVAT[1].selite);
-    nappain('ArrowRight');
-    assert.equal(kerros.querySelector('.fokuszoom-selite').textContent, PULUN_KUVAT[2].selite);
+    // Seuraavat kuvat ovat PULUN kuvia toimituksen järjestyksessä, ja
+    // PITKÄ KUVATEKSTI VAIHTUU KUVAN MUKANA.
+    for (let i = 0; i < VIISI_KUVAA.length; i += 1) {
+      nappain('ArrowRight');
+      assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, `${i + 2} / 6`);
+      assert.equal(pitkaTeksti(kerros), VIISI_KUVAA[i].selite, `pitkä teksti ${i}`);
+      assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, VIISI_KUVAA[i].lahde);
+    }
     // Pyörii ympäri takaisin isoisään.
     nappain('ArrowRight');
-    assert.equal(kerros.querySelector('.fokuszoom-selite').textContent, POHJAKUVA.selite);
+    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite);
 
     suljeSuurennos(ui);
     assert.equal(asiakirja.querySelectorAll('.fokuszoom').length, 0);
@@ -551,7 +653,7 @@ test('isoisän kuvan napautus avaa saman karusellin, kun pakka on päällä', ()
     ui.luentakuva.querySelector('.fokusvirta-kuva').dispatch('click');
     const kerros = asiakirja.querySelectorAll('.fokuszoom')[0];
     assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '1 / 4');
-    assert.equal(kerros.querySelector('.fokuszoom-selite').textContent, POHJAKUVA.selite);
+    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite);
 
     suljeSuurennos(ui);
     piilotaLuentakuva(ui, { heti: true });
@@ -572,7 +674,82 @@ test('ilman pulun kuvia suurennos on täsmälleen ennallaan', () => {
     assert.equal(kerros.querySelectorAll('.pulucam-merkki').length, 0);
     assert.equal(kerros.querySelectorAll('.fokuszoom-kuvatila').length, 0,
       'kuvatilan kuori syntyy vain karusellissa');
-    assert.equal(kerros.querySelector('.fokuszoom-selite').textContent, POHJAKUVA.selite);
+    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite);
+
+    suljeSuurennos(ui);
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+/* ---------------------------------------------------------------- */
+/* 4 b. Kaksi kuvatekstiä ja Havainnekuva-linkki                     */
+/* ---------------------------------------------------------------- */
+
+test('lyhyt kuvateksti kertoo päällimmäisestä kuvasta, ei alle jääneestä', async () => {
+  await pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, async () => {
+    const ui = tekoUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI);
+
+    // Ennen pakkaa kartalla lukee isoisän kuvan LYHYT teksti (ei pitkä).
+    const selite = () => ui.luentakuva.querySelector('.fokusvirta-kuvaselite').textContent;
+    assert.equal(selite(), POHJAKUVA.lyhyt);
+    assert.notEqual(selite(), POHJAKUVA.selite);
+
+    // Pakan noustessa isoisän kuva jää alle: teksti seuraa päällimmäistä.
+    naytaPulunKuvapakka(ui, KOEKAUPUNKI);
+    assert.equal(selite(), PULUN_KUVAT[0].lyhyt);
+    await odota(pulucamViive(2) + 120);
+    assert.equal(selite(), PULUN_KUVAT[2].lyhyt, 'teksti ei seurannut päällimmäistä kuvaa');
+
+    // KARTALLA EI KOSKAAN OLE HAVAINNEKUVA-LINKKIÄ, vaikka päällimmäisen
+    // kuvan lähde on havainnekuva (PULUN_KUVAT[2]).
+    assert.equal(ui.luentakuva.querySelectorAll('.havainnekuva-linkki').length, 0);
+    assert.equal(ui.luentakuva.querySelectorAll('.havainnekuva-selite').length, 0);
+
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+test('Havainnekuva-linkki on pitkän tekstin perässä vain havainnekuvilla', () => {
+  pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, () => {
+    const ui = tekoUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI);
+    naytaPulunKuvapakka(ui, KOEKAUPUNKI);
+    pakanKortit()[0].dispatch('click');
+    const kerros = asiakirja.querySelectorAll('.fokuszoom')[0];
+
+    /*
+     * ISOISÄN KUVASSA LINKKI ON AINA (lähde "Matkakirjan havainnekuva"),
+     * ja se on nimenomaan PITKÄN TEKSTIN PERÄSSÄ — ei lähderivillä, joka
+     * säilyy omanaan.
+     */
+    const linkki = havainnekuvanLinkki(kerros);
+    assert.ok(linkki, 'isoisän pitkästä kuvatekstistä puuttuu Havainnekuva-linkki');
+    assert.equal(linkki.textContent, HAVAINNEKUVA_LINKKI_TEKSTI);
+    assert.equal(linkki.nodeName, 'BUTTON');
+    // Perässä: linkki on selitteen viimeinen elementti.
+    const selite = kerros.querySelector('.fokuszoom-selite');
+    assert.equal(selite.childNodes[selite.childNodes.length - 1], linkki);
+    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite, 'linkki söi pitkän tekstin');
+    // Lähderivi säilyy ennallaan omanaan.
+    assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, POHJAKUVA.lahde);
+
+    // PULUN KUVA ILMAN HAVAINNEKUVALÄHDETTÄ EI SAA LINKKIÄ.
+    nappain('ArrowRight');
+    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[0].selite);
+    assert.equal(havainnekuvanLinkki(kerros), null,
+      '"Pulun kamera" ei ole havainnekuva — linkkiä ei saa olla');
+
+    // PULUN KUVA, JONKA LÄHDE SEN SANOO, SAA LINKIN.
+    nappain('ArrowRight');
+    nappain('ArrowRight');
+    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[2].selite);
+    assert.ok(havainnekuvanLinkki(kerros),
+      'havainnekuvalähteinen pulun kuva jäi ilman linkkiä');
+
+    // Takaisin: vanha linkki ei saa jäädä roikkumaan väärän kuvan perään.
+    nappain('ArrowLeft');
+    assert.equal(havainnekuvanLinkki(kerros), null, 'linkki jäi edellisestä kuvasta');
 
     suljeSuurennos(ui);
     piilotaLuentakuva(ui, { heti: true });
@@ -751,18 +928,24 @@ test('ilman luentakuvaa pakka nousee samaan paikkaan ilman pohjakuvaa', () => {
     assert.ok(paneeli, 'pohjaton pakka tarvitsee saman paneelin kuin luentakuva');
     assert.ok(paneeli.classList.contains('pulucam-pohjaton'));
     assert.ok(paneeli.querySelector('.pulucam-pohja'), 'pohjalaatikko puuttuu');
-    // Isoisän kuvaa ei ole: ei kuvaa, ei kuvatekstilaatikkoa.
+    // Isoisän kuvaa ei ole: paneelissa on vain pakan oma kuva.
     assert.equal(paneeli.querySelectorAll('img').length, 1,
       'pohjattomassa paneelissa saa olla vain pakan oma kuva');
-    assert.equal(paneeli.querySelectorAll('.fokusvirta-luentateksti').length, 0);
     assert.equal(pakanKortit().length, 1);
+    /*
+     * KUVATEKSTILAATIKKO ON MUKANA MYÖS POHJATTOMASSA PANEELISSA, ja
+     * siinä lukee PÄÄLLIMMÄISEN pulun kuvan lyhyt teksti — muuten
+     * pohjattoman pakan kuvilla ei olisi kartalla kuvatekstiä lainkaan.
+     */
+    assert.equal(paneeli.querySelectorAll('.fokusvirta-luentateksti').length, 1);
+    assert.equal(paneeli.querySelector('.fokusvirta-kuvaselite').textContent,
+      PULUN_KUVAT[0].lyhyt);
 
     // Karuselli alkaa suoraan pulun kuvista.
     pakanKortit()[0].dispatch('click');
     const kerros = asiakirja.querySelectorAll('.fokuszoom')[0];
     assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '1 / 3');
-    assert.equal(kerros.querySelector('.fokuszoom-selite').textContent, PULUN_KUVAT[0].selite);
-    assert.equal(kerros.querySelector('.pulucam-suuri').hidden, false);
+    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[0].selite);
 
     suljeSuurennos(ui);
     piilotaLuentakuva(ui, { heti: true });
@@ -784,7 +967,10 @@ test('jokaisella pakin pulun kuvalla on osoite, selite ja lähde', async () => {
       `${id}: pulun kuvia saa olla 1–${PULUCAM_KATTO}, on ${kuvat.length}`);
     for (const kuva of kuvat) {
       assert.ok(kuva.osoite || kuva.ampari || kuva.tiedosto, `${id}: pulun kuvalta puuttuu osoite`);
-      assert.ok(String(kuva.selite ?? '').trim(), `${id}: pulun kuvalta puuttuu selite`);
+      // KAKSI KUVATEKSTIÄ (omistaja 9.9.2026 klo 18.50): lyhyt kartalle
+      // päällimmäisen kuvan alle, pitkä koko ruudun näkymään.
+      assert.ok(String(kuva.selite ?? '').trim(), `${id}: pulun kuvalta puuttuu pitkä kuvateksti`);
+      assert.ok(String(kuva.lyhyt ?? '').trim(), `${id}: pulun kuvalta puuttuu lyhyt kuvateksti`);
       // CC BY vaatii tekijän maininnan; lähde on siksi pakollinen.
       assert.ok(String(kuva.lahde ?? '').trim(), `${id}: pulun kuvalta puuttuu lähde`);
     }

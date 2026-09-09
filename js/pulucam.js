@@ -20,6 +20,14 @@
  *   *"Sitten kun päällimmäistä kuvaa klikkaa, niin pääsee karuselliin,
  *   missä näkyy isoisän kuva isona sekä kaikki muut pulun kuvat."*
  *
+ * TARKENNUS 9.9.2026 klo 18.50 (Raamattu, "PULU-CAM: RAKKAUSKOHTAUS
+ * 3-5 KUVAA, KAKSI KUVATEKSTIA MOLEMMILLE, HAVAINNEKUVA-LINKKI PITKAN
+ * LOPUSSA, TARRA YHTENA PNG:NA OMISTAJAN VALINNASTA"): tavallinen
+ * kohde saa 1–3 kuvaa ja rakkauskohtaus 3–5, eli pakassa on isoisän
+ * kanssa enintään kuusi kuvaa (PULUCAM_KATTO). PULU-CAM-merkki on nyt
+ * YKSI tarra-PNG, jossa teksti on jo mukana — erillistä HTML-tekstiä
+ * ei enää ole, ja ennen omistajan valintaa kuvat näkyvät puhtaina.
+ *
  * ── MITÄ TÄMÄ MODUULI ON JA MITÄ SE EI OLE ────────────────────────
  *
  * TÄMÄ ON PAKAN PIIRTÄJÄ JA SEN AJASTIN — ei mitään muuta. Pakka
@@ -55,37 +63,73 @@
 import { html } from './ui-apurit.js';
 import { asetaKuva } from './media.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
-// Selfie-merkin varakuvake on pelin oma pulun kuvake (js/pollo.js
-// POLLO_IKONI, sama viivapiirros kuin kelluvassa napissa) — kunnes
-// kuvatoimitus toimittaa piirretyn selfien.
-import { POLLO_IKONI } from './pollo.js';
 
 /**
- * PULU-CAM-MERKIN PIIRRETTY SELFIE (kuvatoimitus toimittaa RGBA-PNG:n).
+ * PULU-CAM-TARRA: YKSI RGBA-PNG, JOSSA TEKSTI ON JO MUKANA.
  *
- * Kenttä on tässä yhtenä vakiona, jotta kuvan liittäminen on yhden
- * rivin työ eikä etsintäretki: kun tiedosto on ämpärissä, tähän
- * kirjoitetaan sen osoite. NULL on tarkoituksellinen tila eikä
- * puute — silloin merkissä näkyy pelin nykyinen pulun kuvake
- * (POLLO_IKONI), ja kaikki muu toimii sellaisenaan.
+ * Omistaja 9.9.2026 klo 18.50 (Raamattu, PULU-CAM: RAKKAUSKOHTAUS 3-5
+ * KUVAA…, kohta 4): *"PuluCam-tarra on yksi erillinen RGBA-PNG
+ * (valkoinen pohja piirroksen ja PuluCam-tekstin siluetin sisalla,
+ * ulkopuoli lapinakyva); se korvaa selfie-PNG + HTML-teksti
+ * -rakenteen. Vaihtoehdot A-F ovat omistajan valintaan; ennen valintaa
+ * kuvat nakyvat puhtaina ilman tarraa."*
+ *
+ * KAKSI ASIAA, JOTKA TÄSTÄ SEURAAVAT:
+ *
+ *   1. HTML-TEKSTIÄ EI ENÄÄ OLE. Aiemmin merkki oli kaksi elementtiä
+ *      (selfie + `PULU-CAM`-teksti); nyt teksti on tarran sisällä, ja
+ *      kaksi lähdettä samalle sanalle olisi kaksi totuutta.
+ *   2. NULL EI OLE VARAKUVAKE VAAN PUHDAS KUVA. Kun omistaja ei ole
+ *      vielä valinnut vaihtoehtoa A–F, pulun kuvissa EI näy mitään
+ *      merkkiä — ei pakassa eikä karusellissa. Väliaikainen sijainen
+ *      (entinen POLLO_IKONI) näyttäisi valinnalta, jota ei ole tehty.
+ *
+ * Osoitteen liittäminen on yhden rivin työ: kun tarra on ämpärissä,
+ * tähän kirjoitetaan sen osoite.
  *
  * @type {?string}
  */
-export const PULU_CAM_SELFIE_OSOITE = null;
+export const PULU_CAM_TARRA_OSOITE = null;
 
-/** Merkin teksti. Erillinen HTML-teksti, EI kuvaan poltettu. */
-export const PULU_CAM_TEKSTI = 'PULU-CAM';
+/**
+ * TARRAN LEVEYS: 22 % KUVAN LEVEYDESTÄ, KATTO 160 px.
+ *
+ * Osuus on css:n `--pulucam-mitta`-muuttujan (kartalla luentakuvan
+ * leveys, suurennoksessa js:n laskema kuvan leveys) kerroin, ja katto
+ * estää tarraa kasvamasta koko ruudun suurennoksessa julisteeksi.
+ * Luvut ovat täällä eivätkä vain css:ssä, jotta testit valvovat samaa
+ * sopimusta kuin ulkoasu.
+ */
+export const PULUCAM_TARRA_OSUUS = 0.22;
+export const PULUCAM_TARRA_KATTO_PX = 160;
 
-/** Enintään kolme kuvaa kaupunkia kohti (omistaja: "kaksi tai kolme"). */
-export const PULUCAM_KATTO = 3;
+/**
+ * Enintään viisi pulun kuvaa kaupunkia kohti.
+ *
+ * Omistaja 9.9.2026 klo 18.50: *"Tavallinen kohde saa 1-3 pulun kuvaa,
+ * rakkauskohtaus 3-5, jos tarina tarvitsee — pakassa siis enintaan
+ * kuusi kuvaa isoisan kuvan kanssa."* Katto on siis rakkauskohtauksen
+ * katto; tavallisen kohteen 1–3 on toimituksen ohje eikä koodin
+ * rajoite, koska sama pakka piirtää molemmat.
+ */
+export const PULUCAM_KATTO = 5;
 
 /**
  * PAKAN ASENNOT — DETERMINISTISET, EIVÄT SATUNNAISIA.
  *
  * Satunnaisluku vaihtaisi pakan asentoa kesken pelin ja tekisi
  * ruutukaappauksista vertailukelvottomia. Kulmat ovat omistajan
- * kuvauksen mukaan "eri suuntiin" (+4°, −3°, +2°) ja siirtymä 6–10 %
- * KUVAN KOOSTA, jotta alempien kuvien reunat jäävät näkyviin.
+ * kuvauksen mukaan "eri suuntiin" (+4°, −3°, +2°, −6°, +7°) ja
+ * siirtymä 6–10 % KUVAN KOOSTA, jotta alempien kuvien reunat jäävät
+ * näkyviin.
+ *
+ * VIISI ASENTOA, KOSKA RAKKAUSKOHTAUS SAA VIISI KUVAA (omistaja
+ * 9.9.2026 klo 18.50). Neljäs ja viides eivät ole kolmen ensimmäisen
+ * toistoa: niiden kulmat ovat jyrkempiä ja siirtymät eri neljänneksiin
+ * (alas-vasen, ylös-oikea), jotta viidenkin kuvan pakassa jokaisen
+ * ALEMMAN kuvan reuna jää näkyviin eikä pakka sulkeudu yhdeksi
+ * suorakaiteeksi. Kierto (pulucamAsento) ei siis koskaan osu peliin
+ * käytännössä, mutta se säilyy varmuuden vuoksi.
  *
  * Siirtymä on prosenttia, ei pikseleitä: pakka pienenee kartan
  * liikkeestä paneelin mukana, ja pikselisiirtymä kasvaisi silloin
@@ -95,6 +139,8 @@ export const PULUCAM_ASENNOT = [
   { kulma: 4, x: 6, y: -6 },
   { kulma: -3, x: -7, y: 7 },
   { kulma: 2, x: 9, y: -9 },
+  { kulma: -6, x: -9, y: -8 },
+  { kulma: 7, x: 8, y: 10 },
 ];
 
 /**
@@ -102,8 +148,13 @@ export const PULUCAM_ASENNOT = [
  * 0,9–1,2 s välein. Omistaja: kuvia *"voisi pulpahtaa vahingossa
  * useampia"* — vahinko on sitä, että ne tulevat yksitellen ja hieman
  * eri tahtiin, ei kerralla riviin.
+ *
+ * VIISI VÄLIÄ VIIDELLE KUVALLE, eivätkä ne ole samat: tasavälinen
+ * jono kuulostaisi ajastimelta, ja rakkauskohtauksen viisi kuvaa
+ * tulevat "vahingossa". Koko pakka on kasassa noin 4,3 sekunnissa,
+ * eli pulun repliikin aikana.
  */
-export const PULUCAM_VALIT_MS = [0, 950, 1150];
+export const PULUCAM_VALIT_MS = [0, 950, 1150, 1050, 1100];
 
 /** Monennenko millisekunnin kohdalla kuva `i` pulpahtaa. */
 export function pulucamViive(i) {
@@ -119,7 +170,7 @@ export function pulucamAsento(i) {
 }
 
 /**
- * Kaupungin pulun kuvat pakin sisällöstä, enintään kolme.
+ * Kaupungin pulun kuvat pakin sisällöstä, enintään PULUCAM_KATTO.
  *
  * SAMA EHTO KUIN LUENTAKUVALLA: kuva kelpaa vain, jos sillä on jokin
  * kolmesta osoitelähteestä. Pelkkä selite ilman kuvaa jättäisi
@@ -138,39 +189,48 @@ export function pulunKuvat(sisalto) {
 }
 
 /**
- * PULU-CAM-MERKKI: pieni piirretty selfie ja teksti kuvan oikeassa
- * alakulmassa.
+ * PULU-CAM-TARRA KUVAN OIKEAAN ALAKULMAAN — TAI EI MITÄÄN.
  *
- * MERKKIÄ EI POLTETA KUVAAN (Raamattu, kohta 3). Se on kaksi HTML-
- * elementtiä kuvan päällä: selfie (kuva tai varakuvake) ja teksti
- * omanaan, jolloin teksti on terävä joka näytöllä ja skaalautuu kuvan
- * leveyden mukana (css `--pulucam-mitta`).
+ * TARRAA EI POLTETA KUVAAN (Raamattu, kohta 3 säilyy): se on yksi
+ * HTML-elementti kuvan päällä, joten sama valokuva kelpaa
+ * sellaisenaan pakkaan, karuselliin ja mahdolliseen myöhempään
+ * käyttöön ilman merkkiä.
+ *
+ * TEKSTI ON TARRASSA, EI HTML:SSÄ (omistaja 9.9.2026 klo 18.50):
+ * kuvassa on jo sana PuluCam piirroksen kanssa samassa siluetissa,
+ * eikä sen viereen ladota toista tekstiä.
+ *
+ * ILMAN OSOITETTA PALAUTUU NULL. Se on tarkoituksellinen tila: ennen
+ * omistajan valintaa (A–F) pulun kuvat näkyvät PUHTAINA. Kutsujan on
+ * siis kestettävä null — pakan kortti jää ilman tarraa ja suurennos
+ * ilman kuorta, eli täsmälleen samaan asuun kuin ennen tätä koko
+ * ominaisuutta.
  *
  * @param {object} [asetukset]
  * @param {string} [asetukset.luokka] lisäluokka (suurennoksessa oma).
- * @returns {Element} `.pulucam-merkki`
+ * @param {?string} [asetukset.osoite] tarran osoite; oletus on
+ *   `PULU_CAM_TARRA_OSOITE`. Parametri on testejä varten — vakiota ei
+ *   voi vaihtaa ajon aikana, ja tarrallinen asu on silti valvottava.
+ * @returns {?Element} `.pulucam-merkki`, tai null jos tarraa ei ole
  */
-export function puluCamMerkki({ luokka = '' } = {}) {
+export function puluCamMerkki({ luokka = '', osoite = PULU_CAM_TARRA_OSOITE } = {}) {
+  if (!osoite || typeof document === 'undefined') return null;
   const merkki = html('span', luokka ? `pulucam-merkki ${luokka}` : 'pulucam-merkki');
   merkki.setAttribute('aria-hidden', 'true');
-  const selfie = html('span', 'pulucam-selfie');
-  if (PULU_CAM_SELFIE_OSOITE) {
-    const img = document.createElement('img');
-    img.alt = '';
-    img.decoding = 'async';
-    img.draggable = false;
-    asetaKuva(img, PULU_CAM_SELFIE_OSOITE, null, () => { selfie.innerHTML = POLLO_IKONI; });
-    selfie.appendChild(img);
-  } else {
-    // Kuvatoimituksen selfie puuttuu: pelin nykyinen pulun kuvake.
-    selfie.innerHTML = POLLO_IKONI;
-  }
-  merkki.append(selfie, html('span', 'pulucam-teksti', PULU_CAM_TEKSTI));
+  const img = document.createElement('img');
+  img.className = 'pulucam-tarra';
+  img.alt = '';
+  img.decoding = 'async';
+  img.draggable = false;
+  // Rikkinäinen tarra vie oman elementtinsä, ei kuvaa: puhdas kuva on
+  // parempi kuin tyhjä laatikko kulmassa.
+  asetaKuva(img, osoite, null, () => merkki.remove());
+  merkki.appendChild(img);
   return merkki;
 }
 
 /**
- * Yksi pakan kortti: nappi, kuva ja PULU-CAM-merkki.
+ * Yksi pakan kortti: nappi, kuva ja (jos tarra on valittu) PULU-CAM-tarra.
  *
  * @param {object} kuva pakin kuvaolio
  * @param {number} i sijaluku pakassa (asento ja pulpahdusvuoro)
@@ -199,7 +259,10 @@ function pakanKortti(kuva, i, osoite, vara) {
    * paperin isoisän kuvan päälle.
    */
   asetaKuva(img, osoite(kuva), vara(kuva), () => kortti.remove());
-  kortti.append(img, puluCamMerkki());
+  kortti.appendChild(img);
+  // Ilman omistajan valitsemaa tarraa kuva näkyy puhtaana.
+  const tarra = puluCamMerkki();
+  if (tarra) kortti.appendChild(tarra);
   return kortti;
 }
 
@@ -219,10 +282,14 @@ function pakanKortti(kuva, i, osoite, vara) {
  * @param {(kuva:object)=>?string} asetukset.vara
  * @param {(i:number)=>void} asetukset.avaa karusellin avaus
  * @param {()=>boolean} [asetukset.raahattu] tosi, jos ele oli raahaus
+ * @param {(kuva:object)=>void} [asetukset.kuvateksti] kutsutaan joka
+ *   pulpahduksessa PÄÄLLIMMÄISEKSI nousseella kuvalla, jotta kuvan
+ *   alla oleva lyhyt kuvateksti kertoo siitä kuvasta, joka on
+ *   päällimmäisenä (omistaja 9.9.2026 klo 18.50).
  * @returns {boolean} nousiko pakka
  */
 export function naytaPuluCamPakka(ui, {
-  pohja, kuvat, osoite, vara, avaa, raahattu = () => false,
+  pohja, kuvat, osoite, vara, avaa, raahattu = () => false, kuvateksti = null,
 } = {}) {
   if (!ui || !pohja || !kuvat?.length) return false;
   piilotaPuluCamPakka(ui);
@@ -252,6 +319,15 @@ export function naytaPuluCamPakka(ui, {
     const nosta = () => {
       if (ui.pulucamPakka !== tila) return;
       pakka.appendChild(kortti);
+      /*
+       * LYHYT KUVATEKSTI SEURAA PÄÄLLIMMÄISTÄ KUVAA (omistaja 9.9.2026
+       * klo 18.50: *"lyhyt suoraan kuvan alle"*). Pakan noustessa
+       * isoisän kuva jää alle, joten sen kuvateksti selittäisi kuvaa,
+       * jota ei enää näy. Kutsu on tässä eikä silmukan alussa, koska
+       * juuri tämä on se hetki, jolloin kortti oikeasti nousee
+       * päällimmäiseksi.
+       */
+      kuvateksti?.(kuva);
       // Pulpahdus on luokanvaihto: css hoitaa pomppuanimaation.
       const nayta = () => { if (kortti.parentNode) kortti.classList.add('nakyy'); };
       globalThis.requestAnimationFrame?.(nayta);
