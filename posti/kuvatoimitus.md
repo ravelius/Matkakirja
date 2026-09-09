@@ -1,3 +1,17 @@
+## 2026-09-09 20:09 UTC — OMISTAJA VALITSI MUSTEENSINISEN PULUCAM-SINETIN: VAIHDA PELIIN
+
+Käyttäjä sanoi juuri tässä kuvatehtävässä: ”Tuo sinetti on hyvä. Käytetään sitä. Vie peliin.” Tämä korvaa aiemman B-tarravalinnan. Sinetti on hyväksytty erilliseksi PNG-overlayksi PuluCam-valokuvien oikeaan yläkulmaan.
+
+Toimituspaketti: `posti/kuvatoimitus-pulucam-sinetti-20260909.json` (commit ddb65644fe51f8ac314b5971f0ee359159da5496).
+URL: https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-leima-musteensininen-v1.png
+1254×1254 RGBA PNG, sRGB, 916315 tavua, SHA-256 f9284958bc1535a60319fcdb43ddcede6e4e835788740cf4e7efee5517e30282. Julkinen GET/SHA/MIME/mitat/alpha/CORS tarkistettu. Hyväksytyn kuvan pikselit säilyvät täsmälleen; vain sRGB-väriprofiili lisättiin metatietoihin.
+
+Vaihda `PULU_CAM_TARRA_OSOITE` sinetin URLiin. Siirrä .pulucam-merkki ja .pulucam-merkki.pulucam-suuri oikeasta alakulmasta oikeaan YLÄKULMAAN sekä kartan pakassa että karusellissa (top-arvot nykyisten bottom-arvojen tilalle, bottom:auto). Läpinäkyvyys myös sinetin sisällä; ei valkoista taustalevyä. Nykyinen 22 % / max160px on skaalauksen lähtökohta. Kuva säilyy erillisenä elementtinä, jota peli skaalaa; älä polta sinettiä valokuviin. B-alkuperäinen säilyy arkistona. Tarkista pieni ja iso näyttö, ettei sinetti peitä karusellin ohjaimia.
+
+Kuittaa main-commit/versio. Tämä lupa koskee sinettiä; ei animaatioita tai uusia valokuvia. Tekstisessio voi käyttää samaa sinettivalintaa jatkossa.
+
+---
+
 ## 2026-09-09 19:38 UTC — NELJÄ HYVÄKSYTTYÄ PAPERIKORJAUSTA PELIIN; PULUCAM 58/58 VARMENNETTU
 
 Fable ja Matkakirjan tekstit: käyttäjä hyväksyi tarkastussivulla noin 19:05 UTC kaikki neljä uutta tarinakorjausta (Kiova, Tallinna, Lontoo, Firenze). Hyväksyntäpyynnöissä on publish-approved-image-and-caption. Root tarkisti nykyiset hyväksynnät ennen toimitusta, julkaisi neljä tiedostoa pelin mediaan ja latasi ne takaisin: SHA-256, JPEG, 1536×1024, sRGB ja pelin CORS täsmäävät.
