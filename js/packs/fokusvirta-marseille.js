@@ -210,11 +210,16 @@ export const FOKUSVIRTA_MARSEILLE = {
      */
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-marseille-r20260909-paper-v2.jpg',
-      lyhyt: 'Saippuakauppias, köydet ja purjeveneet Marseillen vanhassa satamassa '
-        + 'vuonna 1873.',
-      selite: 'Marseille, syyskuu 1873: kauppias lepää saippuaharkkojen ja '
-        + 'laivaköyden ääressä. Vieux-Portin mastot, kalakorit ja rantatalot '
-        + 'jatkavat sataman tarinaa.',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Marseille, 1873. Saippuaa merelle lähtevän kaupungin tarpeisiin.',
+      selite: 'Saippuaharkot oli ladottu pöydälle kuin pienet rakennuskivet. '
+        + 'Niiden lähellä odottivat köydet ja kala, joita vastaan palat oli '
+        + 'tarkoitettu, ainakin hajusta päätellen. Marseillen satamassa '
+        + 'tavara koskee tavaraan ennen kuin ehtii matkustajan laukkuun. '
+        + 'Kauppias jäi kuvan ajaksi paikoilleen ja laski kätensä pöydälle. '
+        + 'Mustat kynnet eivät heikentäneet myyntipuhetta: hän tunsi työn, '
+        + 'josta lika syntyy.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://collections.musees.marseille.fr/',

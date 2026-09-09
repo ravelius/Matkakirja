@@ -212,7 +212,12 @@ export const FOKUSVIRTA_VENETSIA = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kanavilla kulkee nyt vesibussejakin. Isoisä kuunteli aamiaista; minä olisin selvittänyt sen ikkunan.',
+      // Tekstisession albumirepliikki (12:20; omistaja 9.9.: "hyväksyn kaiken
+      // mitä se ehdottaa sinulle"). 106 merkkiä. Edellinen: 'Kanavilla kulkee
+      // nyt vesibussejakin. Isoisä kuunteli aamiaista; minä olisin selvittänyt
+      // sen ikkunan.'
+      'Tässä Venetsia. Hetkinen. Nuo ovat yksityisiä. Hän vain sattui '
+      + 'jokaiseen hyvään kuvakulmaan. Sulje albumi.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

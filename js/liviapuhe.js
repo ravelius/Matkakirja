@@ -535,6 +535,7 @@ export const LIVIAN_AANITETYT = {
   // Euroopan kaupunkikuplat (-3) generoitu omistajan teksteistä
   // (generoi-pulu.yml ajo 12, ääni Dr. Von, pakota). Numerot 1–2 ovat
   // varattuja (alustus ja huudahdus poistettu), eikä niillä ole kuplaa.
+  // venetsia-3 uusiksi 9.9.2026 ilta (tekstisession albumirepliikki; generoi-pulu.yml).
   'avaus-1': '62c6bcbd',
   'avaus-2': '30c6eb27',
   'avaus-3': '1446cf47',
@@ -592,7 +593,7 @@ export const LIVIAN_AANITETYT = {
   'sevilla-3': '694115b4',
   'amsterdam-3': 'a46657ee',
   'berliini-3': 'f028954d',
-  'venetsia-3': 'ea48851c',
+  'venetsia-3': '0aeef60b',
   'firenze-3': 'c0826d4c',
   'rooma-3': '6e805810',
   'dubrovnik-3': '9392e7f8',

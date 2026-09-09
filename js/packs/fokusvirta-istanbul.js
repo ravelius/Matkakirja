@@ -214,10 +214,15 @@ export const FOKUSVIRTA_ISTANBUL = {
      */
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-istanbul-r20260909-paper-v2.jpg',
-      lyhyt: 'Kantaja levähtää matka-arkkunsa vieressä Galatan mäessä vuonna 1873.',
-      selite: 'Konstantinopoli, syyskuu 1873: kantaja levähtää arkun vieressä '
-        + 'jyrkällä Galatan kujalla; alhaalla näkyvät laivat ja Kultainen '
-        + 'sarvi.',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Konstantinopoli, 1873. Kantajan tauko ja mäen koko paino.',
+      selite: 'Arkun kahvat olivat hioutuneet sileiksi, mutta portaissa riitti '
+        + 'vielä kulutettavaa. Kantaja istui kuormansa viereen ja antoi minun '
+        + 'valmistella kameran. Galatan korkeuksilta näkyi alhaalla mastoja '
+        + 'ja liikettä; jokin osa niistäkin tavaroista oli kannettava tätä '
+        + 'mäkeä ylös. Tuleva tunneli lupaa ihmiselle istumapaikan matkaksi. '
+        + 'Toivoin, että myös tämän miehen arkulle varattaisiin sellainen.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.metmuseum.org/art/collection/search/263021',

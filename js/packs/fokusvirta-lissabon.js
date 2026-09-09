@@ -178,10 +178,16 @@ export const FOKUSVIRTA_LISSABON = {
      */
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lissabon-r20260909-paper-v2.jpg',
-      lyhyt: 'Nainen neuvoo tietä Alfaman portailla Lissabonissa vuonna 1873.',
-      selite: 'Lissabon, lokakuu 1873: ovenpielessä istuva nainen neuvoo portaita '
-        + 'ylöspäin, ja Tejo välähtää kattojen välistä. Historiallisten '
-        + 'rakennustyyppien pohjalta kuviteltu Alfaman kuja.',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Lissabon, 1873. Naisen neuvo jatkui portaina.',
+      selite: 'Nainen osoitti ylöspäin niin varmasti, että annoin kamerankin '
+        + 'katsoa samaan suuntaan. Alfaman katot peittivät veden ja avasivat '
+        + 'sen taas seuraavassa raossa. Alempana Baixan uudelleen rakennetut '
+        + 'kadut tottelevat viivoitinta; tämä kaupunginosa näyttää ottaneen '
+        + 'käskyt rinteeltä. Portaalla seisojan ei tarvitse tietää koko '
+        + 'reittiä neuvoakseen seuraavan käännöksen. Minulle olisi riittänyt '
+        + 'aluksi sekin.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.patrimoniocultural.gov.pt/wp-content/uploads/2024/08/ER4.pdf',

@@ -216,9 +216,16 @@ export const FOKUSVIRTA_DUBLIN = {
      */
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dublin-r20260909-paper-v2.jpg',
-      lyhyt: 'Panimotyöläinen levähtää tynnyrien vieressä Dublinissa vuonna 1873.',
-      selite: 'Dublin, syyskuu 1873: St James’s Gaten panimon lastauspihalla '
-        + 'työntekijä pyyhkii otsaansa; puutynnyrit ja hevoskärryt odottavat.',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Dublin, 1873. Tynnyrit lähtivät, työ jäi.',
+      selite: 'Panimon pihassa tynnyrin pyöreys osoittautui hyvin harkituksi '
+        + 'ominaisuudeksi. Mies saattoi vierittää kuorman kärryille, mutta '
+        + 'joutui nostamaan itsensä jokaisen perässä uudelleen töihin. Pyysin '
+        + 'häntä pysähtymään kuvan ajaksi. Hän pyyhki otsansa ja suostui. '
+        + 'Guinnessin yhdeksäntuhannen vuoden vuokra näyttää paperilla '
+        + 'huvittavalta; tämän pihan työpäivässä siitä näkyy vain pieni, '
+        + 'hikinen osa.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.dublincity.ie/sites/default/files/2020-10/hoyd-volume-1.pdf',
