@@ -1219,10 +1219,12 @@ sanatarkasti:
   `assets/etusivu/reitti/<kaupunkitunnus>.jpg`, 320 px pisimmältä
   sivulta, laatu 0,8, 9–13 kt. Lähde (ämpärin iso vedos) ja kuvateksti
   ovat pakan tietueessa; sw.js:n SHELL esilataa tiedostot.
-- **Kaupunkien kattavuus:** yhdeksän kymmenestä. Kalkutan jaksolla on
-  Benares-kuva ja PARIISI ON ILMAN KUVAA, kunnes kuvaputki toimittaa
-  omat kuvansa — väliaikaista sijaista ei panna. Vartiot:
-  tests/etusivun-reittikuvat.test.mjs. Kaapattu Chromiumilla 1280×800 ja
+- **Kaupunkien kattavuus:** kymmenen kymmenestä (kuvatoimitus
+  9.9.2026). Pariisi oli 6.9. alkaen ainoa kuvaton kaupunki —
+  väliaikaista sijaista ei pantu — ja Kalkutan jaksoa paikkasi Benares;
+  molemmat saivat nyt oman kuvansa, ja Benares palasi varantoon
+  (`kaupunki: null`) omalla kuvatekstillään, koska Varanasi ei ole
+  Kalkutta. Vartiot: tests/etusivun-reittikuvat.test.mjs. Kaapattu Chromiumilla 1280×800 ja
   390×844 (Kairon ja Bombayn käännökset, sama kuva 1,5 s myöhemmin ja
   häipymässä).
 

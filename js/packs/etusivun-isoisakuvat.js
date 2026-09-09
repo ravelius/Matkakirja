@@ -143,15 +143,16 @@ export const ISOISAKUVAN_SAVYT = {
  * vaaleita vinjettikuvia (savy 'vaalea'), koko kuva paperireunoineen,
  * ei rajausta. Reitin jaksot: Lontoo, Kairo, Bombay, Singapore,
  * Kanton (Hongkongin jakso), Jokohama (Tokion jakso), San Francisco,
- * New York. Kalkutan jakson kuvana on 6.9.2026 alkaen Benares
- * (isoisän oma Gangesin-kuva samalta matkaosuudelta) — Varanasi EI ole
- * Kalkutta (kuvaputken huomautus), joten kuvateksti pysyy Benaresina ja
- * rivi palaa arvoon `kaupunki: null`, kun kuvaputki toimittaa Kalkutan
- * oman kuvan. PARIISI ON AINOA REITIN KAUPUNKI ILMAN KUVAA: sille ei
- * panna väliaikaista sijaista (päätoimittaja 6.9.2026 aamu), vaan
- * Pariisin käännös jää ilman kuvaa kunnes kuvaputki toimittaa sen.
- * Vanhat kaksi albumiinivedosta poistuivat pinosta (omistaja 23.15:
- * "kohta pitäisi tulla isoisän uusia kuvia, niin käytä niitä ennemmin").
+ * New York. Vanhat kaksi albumiinivedosta poistuivat pinosta (omistaja
+ * 23.15: "kohta pitäisi tulla isoisän uusia kuvia, niin käytä niitä
+ * ennemmin").
+ *
+ * KUVATOIMITUS 9.9.2026 TÄYTTI REITIN: Pariisi ja Kalkutta saivat omat
+ * kuvansa, ja jokaisella kymmenellä reitin kaupungilla on nyt kuva.
+ * Pariisi oli siihen asti ainoa kuvaton kaupunki (päätoimittaja
+ * 6.9.2026: väliaikaista sijaista ei panna), ja Kalkutan jaksoa paikkasi
+ * 6.9. alkaen Benares — se palasi varantoon (`kaupunki: null`) omalla
+ * kuvatekstillään, koska Varanasi EI ole Kalkutta.
  */
 export const ETUSIVUN_ISOISAKUVAT = [
   {
@@ -161,6 +162,39 @@ export const ETUSIVUN_ISOISAKUVAT = [
     kuvateksti: 'Isoisä, Lontoo, 1873',
     selite: 'Isoisä viivähtää arkun vieressä. Vaunun ikkunassa näkyvä saattaja vastaa hänen pieneen hyvästieleeseensä.',
     kaupunki: 'lontoo',
+    savy: 'vaalea',
+  },
+  /*
+   * PARIISI JA KALKUTTA (kuvatoimitus 9.9.2026 10:48 UTC, omistajan
+   * valtuutus "toimita Isoisän valokuvat / Jatkoon kuvat peliin").
+   * Näillä kahdella reitin kaupungilla ei ollut omaa kuvaa: Pariisi oli
+   * kirjattu poikkeus ja Kalkutan jaksoa paikkasi Benares. Nyt molemmat
+   * saavat oman kuvansa, ja Benares palaa varantoon (`kaupunki: null`)
+   * omalla kuvatekstillään. Kummassakaan kuvassa ei määritellä isoisän
+   * kasvoja (Raamattu: ISOISA JAA ARVOITUKSEKSI): hän on pieni,
+   * varjossa oleva hahmo, 7–10 % kuvan korkeudesta.
+   *
+   * Koko vaalea paperivedos säilyy — ei tiukkaa rajausta eikä tummaa
+   * vinjettiä (toimituksen ohje), joten kummallakaan ei ole `rajaus`ta.
+   *
+   * Aikakauden valokuvat, joihin kuvien arkkitehtuuri perustuu:
+   *   Pariisi:  Edouard Baldus, View of Seine River looking toward
+   *             Notre-Dame, 1851–1870, Library of Congress
+   *             https://www.loc.gov/pictures/item/94504012/
+   *   Kalkutta: William George Stretton, Hooghly from High Court
+   *             looking south, 1870-luku, British Library Photo 760(4);
+   *             Frederick Fiebig, Ghaut on the Hooghly, British Library
+   *             Photo 247/3(51); Bâboo Ghât, Strand, Calcutta,
+   *             1860-luku, British Library Photo 782(80).
+   */
+  {
+    tunnus: 'isoisa-pariisi-route-r20260907-v1',
+    osoite: `${ISOISAN_KUVAJUURI}isoisa-pariisi-route-r20260907-v1.jpg`,
+    pieni: `${ETUSIVUN_PIENET}pariisi.jpg`,
+    kuvateksti: 'Isoisä, Pariisi, 1873',
+    selite: 'Isoisä, Pariisi, 1873',
+    lahde: 'Matkakirjan havainnekuva',
+    kaupunki: 'pariisi',
     savy: 'vaalea',
   },
   {
@@ -179,6 +213,16 @@ export const ETUSIVUN_ISOISAKUVAT = [
     kuvateksti: 'Isoisä, Bombay, 1873',
     selite: 'Venemies ojentaa kätensä, kun isoisä siirtyy Bombayn rantaportailta veneeseen. Kulunut vedos säilyttää pienen auttavan eleen ja avoimen sataman, mutta katoksen varjo jättää isoisän kasvot arvoitukseksi.',
     kaupunki: 'mumbai',
+    savy: 'vaalea',
+  },
+  {
+    tunnus: 'isoisa-kolkata-route-r20260907-v1',
+    osoite: `${ISOISAN_KUVAJUURI}isoisa-kolkata-route-r20260907-v1.jpg`,
+    pieni: `${ETUSIVUN_PIENET}kolkata.jpg`,
+    kuvateksti: 'Isoisä, Kalkutta, 1873',
+    selite: 'Isoisä, Kalkutta, 1873',
+    lahde: 'Matkakirjan havainnekuva',
+    kaupunki: 'kolkata',
     savy: 'vaalea',
   },
   {
@@ -357,19 +401,18 @@ export const ETUSIVUN_ISOISAKUVAT = [
   {
     tunnus: 'isoisa-benares-ghat-more-r20260905-v2',
     osoite: `${ISOISAN_KUVAJUURI}isoisa-benares-ghat-more-r20260905-v2.jpg`,
-    pieni: `${ETUSIVUN_PIENET}kolkata.jpg`,
     kuvateksti: 'Isoisän ottama kuva, Benares, 1873',
     selite: 'Benaresin jokirannassa veneilijät auttavat kukkakauppiasta keräämään veteen kaatuneet seppeleet.',
     /*
-     * KALKUTAN JAKSO TOISTAISEKSI (päätoimittajan tarkennus 6.9.2026
-     * aamu): reittikuvakerros tarvitsee kuvan jokaiselle kaupungille,
-     * ja Benares on isoisän oma Gangesin-kuva samalta matkaosuudelta.
-     * Kuvateksti pysyy kuvaputken sanana ("Benares"), koska se kertoo
-     * mitä kuvassa oikeasti on — Varanasi EI ole Kalkutta. Kuvaputki
-     * toimittaa Kalkutan (ja Pariisin) oman kuvan myöhemmin, jolloin
-     * tämä rivi palaa arvoon `kaupunki: null`.
+     * BENARES PALASI VARANTOON (kuvatoimitus 9.9.2026): se paikkasi
+     * Kalkutan jaksoa 6.9. alkaen, koska reittikuvakerros tarvitsi
+     * kuvan jokaiselle kaupungille — mutta Varanasi EI ole Kalkutta.
+     * Kun Kalkutta sai oman kuvansa, tämä rivi palasi arvoon
+     * `kaupunki: null` ja luopui pienennetystä vedoksesta (`pieni` on
+     * vain reitin kaupungeille). Kuva säilyy varannossa omalla oikealla
+     * kuvatekstillään ja tulee kiertovuorollaan.
      */
-    kaupunki: 'kolkata',
+    kaupunki: null,
     savy: 'vaalea',
   },
   {

@@ -594,6 +594,7 @@ const SHELL = [
    * toimittaa sen (js/packs/etusivun-isoisakuvat.js).
    */
   './assets/etusivu/reitti/lontoo.jpg',
+  './assets/etusivu/reitti/pariisi.jpg',
   './assets/etusivu/reitti/kairo.jpg',
   './assets/etusivu/reitti/mumbai.jpg',
   './assets/etusivu/reitti/kolkata.jpg',
