@@ -71255,6 +71255,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'puolikuulta veden sylissä. Ensimmäinen ruutukaava piirrettiin '
             + 'suoraan joen luonnolliselle penkereelle, joka oli seudun '
             + 'korkeinta maata.',
+          lyhyt: 'Espanjankielinen kaupunkisuunnitelma 1800-luvun alusta: ruutukaava ja kulmalinnakkeet joen mutkassa.',
           selite: 'Espanjankielisessä kaupunkisuunnitelmassa 1800-luvun '
             + 'alusta vanhan kaupungin ruutukaava ja sen kulmalinnakkeet '
             + 'kiertyvät joen mutkan mukaan.',
@@ -71275,6 +71276,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'käytännössä Yhdysvallat osti etuoikeuden hankkia heidän '
             + 'maansa sopimuksin tai valloittamalla. Vallanvaihto '
             + 'vahvistettiin 20. joulukuuta 1803 Place d\'Armesin laidalla.',
+          lyhyt: 'Cabildon salissa Louisiana siirtyi Yhdysvalloille joulukuussa 1803.',
           selite: 'Cabildo oli Espanjan siirtomaahallinnon talo, ja sen '
             + 'salissa Louisiana siirtyi Yhdysvalloille joulukuussa 1803.',
           lahde: 'Richard Koch, Wikimedia Commons (PD)',
@@ -71294,6 +71296,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'penkereitä on korotettu seitsemään metriin. Maa myös painuu, '
             + 'koska pengerrykset estävät tulvia tuomasta uutta lietettä '
             + 'vanhan tilalle.',
+          lyhyt: 'Mississippi kulkee Ranskan Korttelin kohdalla penkereen takana, tulva-aikaan kaupunkia ylempänä.',
           selite: 'Ranskan Korttelin kohdalla Mississippi kulkee penkereen '
             + 'takana, ja tulva-aikaan sen pinta on kaupunkia ylempänä.',
           lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 4.0)',
@@ -71313,6 +71316,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'prosenttia vuoden 2000 laskennasta. Mardi Gras\'ta, Jazz & '
             + 'Heritage -festivaalia eikä Voodoo Experiencea ole silti '
             + 'kertaakaan peruttu.',
+          lyhyt: 'Lake Borgnen myrskytulvapato sulkee kaupungin itäisen vesireitin lähes kolmen kilometrin muurilla.',
           selite: 'Lake Borgnen myrskytulvapato sulkee kaupungin itäisen '
             + 'vesireitin lähes kolmen kilometrin mittaisella muurilla.',
           lahde: 'United States. Army. Corps of Engineers. New Orleans District, Wikimedia Commons (PD)',
@@ -71322,6 +71326,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Garden District, New Orleans in deep summer.jpg',
+          lyhyt: 'Garden Districtin tiiliset jalkakäytävät jäävät kesällä pensasaitojen ja puiden katveeseen.',
           selite: 'Garden Districtin jalkakäytävät on ladottu tiilestä, ja '
             + 'kesällä pensasaidat ja kukkivat puut kaartuvat niiden yli.',
           lahde: 'Andrew, Wikimedia Commons (CC BY-SA 2.0)',
@@ -71362,6 +71367,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Algiers Pointiin joen vastarannalle.',
               kuva: {
                 tiedosto: '20080622 St. Charles St. Trolley behind tree with Mardi Gras beads.JPG',
+                lyhyt: 'St. Charles Avenuen vihreä raitiovaunu kulkee nurmikaistaa tammien ja kesäsyreenin välissä.',
                 selite: 'St. Charles Avenuen vihreä raitiovaunu kulkee '
                   + 'nurmikaistaa pitkin tammien ja kukkivan '
                   + 'kesäsyreenin välissä.',
@@ -71382,6 +71388,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + '"Red beans and ricely yours".',
               kuva: {
                 tiedosto: 'Beignet and Cafe au lait (30116730573).jpg',
+                lyhyt: 'Beignet on uppopaistettu hiivataikinamunkki, joka tarjoillaan tomusokerin alla sikurikahvin kanssa.',
                 selite: 'Beignet on hiivataikinasta uppopaistettu munkku, '
                   + 'joka tarjoillaan paksun tomusokerikerroksen alla '
                   + 'sikurikahvin kanssa.',
@@ -71403,6 +71410,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'yhä paikoillaan.',
               kuva: {
                 tiedosto: 'Marais Street, Treme, New Orleans, 10 Aug 2021 - 02.jpg',
+                lyhyt: 'Tremén kadut ovat täynnä keltaisiksi, vaaleanpunaisiksi ja sinisiksi maalattuja puutaloja.',
                 selite: 'Tremén kadut ovat täynnä matalia puutaloja, jotka '
                   + 'on maalattu keltaiseksi, vaaleanpunaiseksi ja '
                   + 'siniseksi.',
@@ -71484,6 +71492,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nuorempia: ensimmäiset kaksikerroksiset valmistuivat '
             + 'Pontalba-taloihin 1849–1851 ja loivat muodin, jota muut '
             + 'alkoivat seurata.',
+          lyhyt: 'Paronitar Pontalban rakennuttamat Pontalba-talot valmistuivat Jackson Squarelle 1851.',
           selite: 'Pontalba-talot valmistuivat Jackson Squaren molemmille '
             + 'sivuille 1851, ja ne rakennutti paronitar Micaela '
             + 'Almonester Pontalba.',
@@ -71504,6 +71513,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'New Orleansista maan kolmanneksi suurimman tuontisataman '
             + 'lastimäärällä mitattuna ja nostanut sen asukaskohtaisen '
             + 'tulotason maan toiseksi korkeimmaksi.',
+          lyhyt: 'Vuoden 1852 litografiassa kaupungin ranta on täynnä purjelaivoja ja höyrylaivoja.',
           selite: 'Vuoden 1852 näkymässä kaupungin ranta on täynnä '
             + 'purjelaivoja ja höyrylaivoja, ja alalaitaan on painettu '
             + 'litografian oma nimiö.',
@@ -71523,6 +71533,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'orjuutetusta ihmisestä kaksi kolmasosaa vietiin syvään '
             + 'etelään. Vuoteen 1840 mennessä New Orleans oli '
             + 'maan rikkain ja kolmanneksi väkirikkain kaupunki.',
+          lyhyt: 'François Fleischbeinin noin 1837 maalaus esittää vapaan värillisen naisen tignon-päähineessä.',
           selite: 'François Fleischbeinin noin 1837 maalaama muotokuva '
             + 'esittää vapaan värillisen naisen tignon-päähineessä ja '
             + 'pitsikauluksessa.',
@@ -71542,6 +71553,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Yhdysvaltain ensimmäiseksi afrikkalaista syntyperää olevaksi '
             + 'kuvernööriksi, joskin asiasta kiistellään: Oscar Dunn oli '
             + 'hoitanut samaa virkaa 39 päivää jo 1871.',
+          lyhyt: 'P. B. S. Pinchback toimi Louisianan kuvernöörinä talvella 1872–1873, aiemmin varakuvernöörinä.',
           selite: 'P. B. S. Pinchback toimi Louisianan kuvernöörinä '
             + 'talvella 1872–1873 ja oli sitä ennen osavaltion '
             + 'varakuvernööri.',
@@ -71585,6 +71597,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sunnuntain rumpupiiri on tietoinen elvytys, jota ylläpitää '
             + 'lyömäsoittaja Luther Grayn perustama Congo Square '
             + 'Preservation Society.',
+          lyhyt: 'Congo Square on Louis Armstrong Parkin kivetty aukio samankeskisin ympyräkuvioin.',
           selite: 'Congo Square on kivetty aukio Louis Armstrong Parkissa, ja '
             + 'sen päällyste on ladottu suuriksi samankeskisiksi ympyröiksi.',
           lahde: 'Miguel Discart (Photos Vrac), Wikimedia Commons (CC BY-SA 2.0)',
@@ -71603,6 +71616,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Storyvillen saleissa. Louis Armstrong syntyi kaupungissa 4. '
             + 'elokuuta 1901, vaikka hän itse vakuutti usein syntyneensä '
             + '4. heinäkuuta 1900.',
+          lyhyt: 'Preservation Hall on Ranskan Korttelin klubi, jossa on soitettu perinteistä jazzia vuodesta 1961.',
           selite: 'Preservation Hall on Ranskan Korttelin klubi, jossa '
             + 'perinteistä New Orleans -jazzia on soitettu vuodesta 1961.',
           lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 3.0)',
@@ -71621,6 +71635,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'materiaalit maksavat tuhansia dollareita ja valmis asu voi '
             + 'painaa yli neljäkymmentä kiloa. Puvut paljastetaan Super '
             + 'Sunday -paraatissa, ja seuraavan vuoden työ alkaa alusta.',
+          lyhyt: 'Tremén Backstreet Cultural Museum säilyttää karnevaalipukuja käsin tehdyllä helmityöllä.',
           selite: 'Tremén Backstreet Cultural Museum säilyttää kokonaisia '
             + 'karnevaalipukuja, joiden helmityö on kokonaan käsin tehtyä.',
           lahde: 'Barry Solow, Wikimedia Commons (CC BY-SA 2.0)',
@@ -71641,6 +71656,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tunnusvärit. Zulu-seuran kultamaalatut '
             + 'kookospähkinät ojennetaan katsojille kädestä: heittäminen '
             + 'kiellettiin loukkaantumisvaaran vuoksi 1988.',
+          lyhyt: 'Kulkueen kuninkaanvaunu ylitti Canal Streetin 1982; kulkijat kuuluvat karnevaaliseuraan eli kreween.',
           selite: 'Kulkueen kuninkaanvaunu ylitti Canal Streetin 1982, ja '
             + 'sen naamioidut kulkijat kuuluvat karnevaaliseuraan eli '
             + 'kreween.',
@@ -71808,6 +71824,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Plaza de Bolívar Bogotá.jpg',
+          lyhyt: 'Plaza de Bolívarin keskellä on Bolívarin patsas, laitoja reunustavat katedraali ja hallintotalot.',
           selite: 'Plaza de Bolívarin keskellä seisoo Simón Bolívarin '
             + 'patsas, ja aukion laitoja reunustavat katedraali, '
             + 'Sagrarion kappeli ja siirtomaa-ajan hallintorakennukset.',
@@ -71815,6 +71832,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Bogotá D.C.jpg',
+          lyhyt: 'Centro Internacionalin tornirykelmä nousee kaupungin keskeltä matalien kortteleiden ympäröimänä.',
           selite: 'Centro Internacionalin tornirykelmä nousee keskeltä '
             + 'kaupunkia, ja sen ympärillä matalat korttelit jatkuvat '
             + 'näkyvyyden rajalle asti.',
@@ -71822,6 +71840,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'MonserrateBogotá7.jpg',
+          lyhyt: 'Monserraten laelta Itäkukkuloiden metsäinen harjanne jatkuu ja kaupunki leviää laakson pohjalle.',
           selite: 'Monserraten laelta katsottuna Itäkukkuloiden metsäinen '
             + 'harjanne jatkuu eteenpäin ja kaupunki leviää oikealle '
             + 'laakson pohjalle.',
@@ -71834,6 +71853,7 @@ export const KULTTUURI_KATEGORIAT = {
          * kohteen omaan Commons-kategoriaan. */
         {
           ampari: 'herokoe/hero-bogota-aamu.png',
+          lyhyt: 'Gonzalo Jiménez de Quesada leiriytyi 1538 Chorro de Quevedolle ja pystytti kaksitoista ruokomajaa.',
           selite: 'Gonzalo Jiménez de Quesada leiriytyi elokuussa 1538 '
             + 'paikkaan, joka tunnetaan nykyään Chorro de Quevedona, '
             + 'ja pystytti sinne kaksitoista ruokomajaa apostolien '
@@ -71842,6 +71862,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-bogota-keskipaiva.png',
+          lyhyt: 'Museo del Oron rakennus valmistui 1968 ja laajeni 2004; se on modernistinen, ei siirtomaa-ajan talo.',
           selite: 'Museo del Oron nykyinen rakennus valmistui 1968 '
             + 'Parque Santanderin kulmaan ja laajennettiin 2004; '
             + 'naapureistaan poiketen se on modernistinen eikä '
@@ -71856,6 +71877,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Bogotá, Monserrate, 2023-06 CN-02.jpg',
+          lyhyt: 'Sadekuuron jälkeen keskustan tornit erottuvat ylätasangolta, kaupunki jatkuu vuoriin asti.',
           selite: 'Sadekuuron jälkeisessä iltavalossa keskustan tornit '
             + 'erottuvat ylätasangon keskeltä ja kaupunki jatkuu '
             + 'horisontin vuoriin asti.',
@@ -71870,6 +71892,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: '2018 vista aérea del suroriente de Bogotá, localidades de Bosa, Ciudad Bolívar y Tunjuelito.jpg',
+          lyhyt: 'Kaakkoisen Bogotán korttelit peittävät ylätasangon reunakukkulat niin pitkälle kuin näkee.',
           selite: 'Kaakkoisen Bogotán korttelit peittävät ylätasangon '
             + 'reunakukkulat niin pitkälle kuin lentokoneesta näkee.',
           lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
@@ -71890,6 +71913,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Bolívar saapui voittajana 10. elokuuta 1819, hän kastoi '
             + 'kaupungin Bogotáksi kunnioittaakseen muiscoja ja '
             + 'korostaakseen eroa Espanjaan.',
+          lyhyt: 'Agustín Codazzin 1890 atlaslehdellä kaupungin ruutukaava on vaaleanpunaisena, reunoilla piirroksia.',
           selite: 'Agustín Codazzin vuoden 1890 atlaslehdellä kaupungin '
             + 'ruutukaava on vaaleanpunaisena, ja reunoja kiertävät '
             + 'piirrokset kaduista, katedraalista ja pääaukiosta.',
@@ -71946,6 +71970,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennusjärjestyksensä. Vuonna 1793 Bogotássa asui noin '
             + '20 000 ihmistä; vuoteen 1912 mennessä luku oli kasvanut '
             + 'noin 117 000:een.',
+          lyhyt: 'Vuoden 1869 puupiirros esittää Calle Realin eli Carrera Séptiman parvekkeineen ja öljylyhtyineen.',
           selite: 'Vuoden 1869 puupiirros esittää Calle Realin eli '
             + 'nykyisen Carrera Séptiman parvekkeineen, öljylyhtyineen ja '
             + 'ruanaan pukeutuneine kulkijoineen.',
@@ -72001,6 +72026,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Kiinan ulkopuolella.',
               kuva: {
                 tiedosto: 'Ave Caracas TransMilenio BOG 03 2018 8526.jpg',
+                lyhyt: 'Punakeltaiset nivelbussit kulkevat Avenida Caracasilla omilla, muusta erotetuilla kaistoillaan.',
                 selite: 'Punakeltaiset nivelbussit kulkevat Avenida '
                   + 'Caracasilla omilla kaistoillaan muusta liikenteestä '
                   + 'erotettuina.',
@@ -72043,6 +72069,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'riisi.',
               kuva: {
                 tiedosto: 'Ajiaco la puerta falsa.jpg',
+                lyhyt: 'La Puerta Falsassa ajiaco tarjoillaan saviastiassa kerman, kapristen, riisin ja avokadon kera.',
                 selite: 'La Puerta Falsassa ajiaco tarjoillaan mustassa '
                   + 'saviastiassa, ja lisukkeiksi tulevat kerma, '
                   + 'kaprikset, riisi ja avokado.',
@@ -72068,6 +72095,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'metrin syvyyteen.',
               kuva: {
                 tiedosto: 'Catedral de Sal (Salt Cathedral).JPG',
+                lyhyt: 'Suolakatedraalin pääsalissa kallioon veistetty risti hohtaa sinisenä, suolakivipinnat violettina.',
                 selite: 'Suolakatedraalin pääsalissa kallioseinään '
                   + 'veistetty risti on valaistu siniseksi, ja '
                   + 'suolakivipinnat hohtavat violettina käytävän '
@@ -72135,6 +72163,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'huhtikuuta 1539, ja paikalla olivat silloin myös '
             + 'valloittajatoverit Sebastián de Belalcázar ja Nikolaus '
             + 'Federmann.',
+          lyhyt: 'Chorro de Quevedon pieni aukio on La Candelarian vanhinta osaa, taustalla keskustan tornitalot.',
           selite: 'Chorro de Quevedon pieni aukio kivipintoineen ja '
             + 'tiilikattoineen on La Candelarian vanhinta osaa, ja '
             + 'taustalla näkyvät keskustan tornitalot.',
@@ -72154,6 +72183,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakentaminen aloitettiin 11. helmikuuta 1807 munkki '
             + 'Domingo de Petrésin uusklassisten piirustusten mukaan ja '
             + 'saatiin päätökseen 19. huhtikuuta 1823.',
+          lyhyt: 'Plaza de Bolívarin laitaa kiertävät katedraali, arkkipiispanpalatsi ja Capitolion pylväikkö.',
           selite: 'Plaza de Bolívarin laitaa kiertävät katedraali '
             + 'kellotorneineen, arkkipiispanpalatsi ja Capitolio '
             + 'Nacionalin pylväikkö.',
@@ -72175,6 +72205,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tanskalaisen Thomas Reedin 1850 suunnittelema '
             + 'Panóptico-vankila rakennettiin vasta 1872, ja se palveli '
             + 'vankilana vuoteen 1946.',
+          lyhyt: 'Panóptico-vankilan kiviseinä tukipilareineen ja kulmatorneineen toimii nyt museon julkisivuna.',
           selite: 'Panóptico-vankilan massiivinen kiviseinä tukipilareineen '
             + 'ja kulmatorneineen on säilynyt sellaisenaan museon '
             + 'julkisivuna.',
@@ -72196,6 +72227,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja 13 rubiinia. Kun kruunu määräsi 1767 espanjalaiset '
             + 'omaisuudet palautettaviksi, monstranssi kätkettiin – eikä '
             + 'sitä nähty julkisesti ennen vuotta 1985.',
+          lyhyt: 'La Lechugan kultaisessa sädekehässä on neljä kerrosta smaragdeja emaloidun enkelin kannattelemana.',
           selite: 'La Lechugan kultaisessa sädekehässä on neljä kerrosta '
             + 'nelikulmaisiksi hiottuja smaragdeja, ja koko esinettä '
             + 'kannattelee emaloitu enkelihahmo.',
@@ -72240,6 +72272,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vastaavasti smaragdikansaksi. Aikalaiskronikoitsija Juan '
             + 'de Castellanos tiivisti asian toteamalla, että muiscat '
             + 'olivat enemmän kauppiaita kuin sotureita.',
+          lyhyt: 'Ihmisen muotoiseen muisca-uhriastiaan on ladottu smaragdeja, vieressä kaksi kultaista tunjo-hahmoa.',
           selite: 'Ihmisen muotoiseen muisca-uhriastiaan on ladottu pieniä '
             + 'smaragdeja, ja sen vieressä seisoo kaksi kultaista '
             + 'tunjo-hahmoa.',
@@ -72259,6 +72292,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'päälliköiden ympäröimänä. Talonpoika Cruz María Dimaté '
             + 'löysi sen 1969 luolasta Pascan kunnassa – ei järvestä, '
             + 'kuten usein luullaan.',
+          lyhyt: 'Kultaisen lautan keskellä on hallitsija, ympärillä pienempiä päähineellisiä hahmoja reunoilla.',
           selite: 'Kultaisen lautan keskellä seisoo hallitsija, ja hänen '
             + 'ympärillään on pienempiä päähineellisiä hahmoja punotun '
             + 'lautan reunoilla.',
@@ -72279,6 +72313,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kultalautta löytyi 1856 Siechan lammikosta, ei tästä '
             + 'järvestä; se myytiin Saksaan ja tuhoutui tulipalossa '
             + 'Bremenin satamassa.',
+          lyhyt: 'Guatavita-järven pyöreä vesi lepää vihreän kraatterin pohjalla, rinteillä vuoristokasvillisuutta.',
           selite: 'Guatavita-järven pyöreä vesi lepää vihreän kraatterin '
             + 'pohjalla, ja rinteitä peittää päiväntasaajan '
             + 'vuoristokasvillisuus.',
@@ -72301,6 +72336,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1991 – ja siitä lähtien La Perseverancian korttelissa on '
             + 'juhlittu vuosittain chichan, maissin, elämän ja ilon '
             + 'festivaalia.',
+          lyhyt: 'Tibabuyesin kosteikon avovesi ulottuu Suban laidalta kaupungin rakennuksiin ja vuoriin asti.',
           selite: 'Tibabuyesin kosteikon avovesi ulottuu Suban laidalta '
             + 'kaupungin rakennuksiin ja niiden takaisiin vuoriin asti.',
           lahde: 'EEIM, Wikimedia Commons (CC BY-SA 4.0)',
@@ -72530,6 +72566,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Adelaide over Torrens.jpg',
+          lyhyt: 'Torrens Lake on Torrens-joen padottu allas keskustan pohjoislaidalla, rannalla juhlatalot.',
           selite: 'Torrens Lake on Torrens-joen padottu allas keskustan '
             + 'pohjoislaidalla, ja sen rannalla ovat kaupungin juhla- ja '
             + 'kongressitalot.',
@@ -72537,6 +72574,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Glenelg, adelaide.jpg',
+          lyhyt: 'Glenelg on Adelaiden tunnetuin merenrantaesikaupunki, jonka rannalle siirtokunta julistettiin 1836.',
           selite: 'Glenelg on Adelaiden tunnetuin merenrantaesikaupunki, ja '
             + 'juuri sen rannalle siirtokunta julistettiin joulukuussa 1836.',
           lahde: 'Adam.J.W.C., Wikimedia Commons (CC BY-SA 2.5)',
@@ -72554,6 +72592,7 @@ export const KULTTUURI_KATEGORIAT = {
          * kohteen omaan Commons-kategoriaan. */
         {
           ampari: 'herokoe/hero-adelaide-aamu.png',
+          lyhyt: 'Adelaide Central Marketin edustalle Gouger Streetillä valmistui 2019 uusi lasi- ja teräskatos.',
           selite: 'Adelaide Central Market toimii Gouger Streetillä '
             + 'keskustan länsilaidalla, ja vanhan markkinahallin '
             + 'edustalle valmistui 2019 uusi lasi- ja teräskatos.',
@@ -72561,6 +72600,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-adelaide-keskipaiva.png',
+          lyhyt: 'North Adelaiden anglikaaninen St Peter\'s Cathedral valmistui 1904 sinikivestä ja hiekkakivilistoin.',
           selite: 'North Adelaiden anglikaaninen St Peter’s '
             + 'Cathedral valmistui pääosin 1904, ja se on rakennettu '
             + 'sinikivestä vaalein hiekkakivilistoin.',
@@ -72568,6 +72608,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-adelaide-ilta.png',
+          lyhyt: 'Rundle Streetin kulmassa syttyivät Adelaiden ensimmäiset sähkökatuvalot 1895.',
           selite: 'Rundle Streetin ja King William Streetin kulmassa '
             + 'syttyivät Adelaiden ensimmäiset sähkökatuvalot 1895, ja '
             + 'paikka tunnetaan yhä kulmatalon mehiläispesäkoristeen '
@@ -72588,6 +72629,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Adelaide city centre view crop.jpg',
+          lyhyt: 'Adelaide Oval sijaitsee puistovyöhykkeellä Torrens-joen ja North Adelaiden välissä.',
           selite: 'Adelaide Oval on puistovyöhykkeen sisällä Torrens-joen ja '
             + 'North Adelaiden välissä aivan keskustan kupeessa.',
           lahde: 'Normangerman at English Wikipedia, Wikimedia Commons (CC BY-SA 4.0)',
@@ -72607,6 +72649,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuvernööri julisti hallinnon alkaneeksi 28. joulukuuta 1836. '
             + 'Sydneyn, Brisbanen ja Hobartin kaltaista rangaistussiirtolan '
             + 'taustaa Adelaidella ei tämän politiikan takia ole.',
+          lyhyt: 'King William Street on Lightin kaavan pääkatu; sen varrella kohoava kaupungintalo avattiin 1866.',
           selite: 'King William Street on Lightin kaavan pääkatu, ja sen '
             + 'varrella kohoava kaupungintalo avattiin kesäkuussa 1866.',
           lahde: 'Samuel SWEET (1825 - 1886) (Australia) Born in Portsea, Britain. Died in Riverton, South Australia, Australia. Details on Google Art Project, Wikimedia Commons (PD)',
@@ -72624,6 +72667,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'joka kiertää sekä keskustan että North Adelaiden ja erottaa ne '
             + 'esikaupungeista. Puistoiksi varattiin 2 300 eekkeriä ja '
             + 'hautausmaalle 32 lisää. Kaava on yhä paikallaan.',
+          lyhyt: 'Light\'s Vision -patsas Montefiore-kukkulalla osoittaa kohti Lightin suunnittelemaa keskustaa.',
           selite: 'Light’s Vision -patsas seisoo Montefiore-kukkulalla '
             + 'North Adelaidessa ja osoittaa kohti Lightin suunnittelemaa '
             + 'keskustaa.',
@@ -72662,6 +72706,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Elphick ja Alitya Rigney johtivat kulttuurin elvytystä, ja '
             + 'maaliskuussa 2018 kaurnat tunnustettiin koko Adelaiden alueen '
             + 'perinteisiksi omistajiksi.',
+          lyhyt: 'Warriparingan Living Kaurna Cultural Centre avattiin 2002 iibiksen siiven muotoisella katolla.',
           selite: 'Warriparingan Living Kaurna Cultural Centre avattiin 2002, '
             + 'ja sen aaltopeltikatto on muotoiltu iibiksen siiven kaareksi.',
           lahde: 'Bilby, Wikimedia Commons (CC BY 3.0)',
@@ -72671,6 +72716,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Adelaide Town Hall in Adelaide, May 2026 (028A4563).jpg',
+          lyhyt: 'Adelaiden kaupungintalon Albert-torni on nimetty kuningatar Victorian puolison muistoksi.',
           selite: 'Adelaiden kaupungintalo avattiin 20. kesäkuuta 1866, ja '
             + 'sen Albert-torni on nimetty kuningatar Victorian puolison '
             + 'muistoksi.',
@@ -72732,6 +72778,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kilometrin päässä keskustasta.',
               kuva: {
                 tiedosto: 'CBD in the Distance (22809720932).jpg',
+                lyhyt: 'Adelaiden esikaupungit peittävät tasangon, ja Mount Lofty Ranges nousee niiden takana.',
                 selite: 'Adelaiden esikaupungit peittävät tasangon, ja Mount '
                   + 'Lofty Ranges nousee niiden takana kaupungin itäreunalla.',
                 lahde: 'Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)',
@@ -72751,6 +72798,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kahviloita, ravintoloita ja Adelaiden Chinatown.',
               kuva: {
                 tiedosto: 'Interior of Central Market, Adelaide 08.jpg',
+                lyhyt: 'Adelaiden Central Market Grote Streetin varrella kokoaa tuoretuotekojut saman katon alle.',
                 selite: 'Adelaiden Central Market on Grote Streetin varrella, '
                   + 'ja sen tuoretuotekojut ovat kaikki saman katon alla.',
                 lahde: 'Pangalau, Wikimedia Commons (CC BY-SA 4.0)',
@@ -72821,6 +72869,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Avausottelussa Etelä-Australiassa syntyneiden joukkue kohtasi '
             + 'merentakaisten joukkueen noin 500 katsojan edessä, ja '
             + 'edellisenä päivänä nurmea oli ohennettu 2 000 lampaalla.',
+          lyhyt: 'Adelaide Oval on puistovyöhykkeen krikettikenttä Torrens-joen ja North Adelaiden välissä.',
           selite: 'Adelaide Oval on puistovyöhykkeeseen vuokrattu '
             + 'krikettikenttä Torrens-joen ja North Adelaiden välissä.',
           lahde: 'Norwood Football Club (Life time: Unknown), Wikimedia Commons (PD)',
@@ -72840,6 +72889,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ääneen. Vuonna 2025 tilaisuutta edelsi ensimmäistä kertaa '
             + 'alkuperäiskansan yön yli kestänyt leiri ja seremoniallinen '
             + 'tuli.',
+          lyhyt: 'Vanha kumipuu Glenelg Northissa kuoli 1907; runko on tuettu betonilla ja katettu teräskatoksella.',
           selite: 'Vanha kumipuu Glenelg Northissa kuoli viimeistään 1907, ja '
             + 'sen runko on tuettu betonilla ja katettu kaarevalla '
             + 'teräskatoksella.',
@@ -72859,6 +72909,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ryöstöön syyllistynyt Michael Magee teloitettiin 2. toukokuuta '
             + '1838. Pysyvä vankila piirrettiin Lontoon Pentonvillen malliin; '
             + 'se toimi 1841–1988.',
+          lyhyt: 'Adelaiden vankila puistovyöhykkeen luoteiskulmassa on Etelä-Australian vanhimpia rakennuksia.',
           selite: 'Adelaiden vankila puistovyöhykkeen luoteiskulmassa on '
             + 'Government Housen ohella Etelä-Australian vanhin yhä pystyssä '
             + 'oleva rakennus.',
@@ -72878,6 +72929,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset '
             + 'ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut '
             + 'lainkaan: viini ja kupari.',
+          lyhyt: 'Hughesin konehuone toimi Moonta Minesin kuparikaivoksella Yorken niemimaalla vuosina 1865–1923.',
           selite: 'Hughesin konehuone toimi Moonta Minesin kuparikaivoksella '
             + 'Yorken niemimaan pohjoispäässä vuodesta 1865 vuoteen 1923.',
           lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
@@ -72918,6 +72970,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vesihuolto mukaan lukien. Vuoteen 2018 mennessä lukema oli noin '
             + '568 eekkeriä. Kaikilla 29 puistolla on kaurnankielinen nimi, ja '
             + 'valtuusto vahvisti 39 kohteen nimeämisen 2012.',
+          lyhyt: 'Puistovyöhykkeen Park 25 kantaa nimiä Gladys Elphick Park ja Narnungga.',
           selite: 'Puistovyöhykkeen Park 25 kantaa nimiä Gladys Elphick Park '
             + 'ja Narnungga, joka tarkoittaa kaurnaksi kotoperäisen männyn '
             + 'paikkaa.',
@@ -72937,6 +72990,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'huuhtoutui pois 1867. Betonipato valmistui 1881, ja kun sen '
             + 'padottama Torrens Lake avattiin 21. heinäkuuta 1881, paikalla '
             + 'oli arviolta 40 000 ihmistä.',
+          lyhyt: 'Torrensin pato padottaa Torrens Laken keskustan pohjoispuolella; rakenne on 1920-luvun lopulta.',
           selite: 'Torrensin pato padottaa Torrens Laken keskustan '
             + 'pohjoispuolella, ja nykyinen rakenne on 1920-luvun lopun '
             + 'uusinta.',
@@ -72957,6 +73011,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'luonnontutkija Robert Hermann Schomburgkin veli, joka ajoi '
             + 'voimakkaasti metsänsuojelualueita yhä puuttomammaksi käyvään '
             + 'Etelä-Australiaan.',
+          lyhyt: 'Kasvitieteellisen puutarhan Palmuhuone vuodelta 1877 on viktoriaanista rauta- ja lasiarkkitehtuuria.',
           selite: 'Kasvitieteellisen puutarhan Palmuhuone on vuodelta 1877 ja '
             + 'edustaa viktoriaanista rauta- ja lasiarkkitehtuuria.',
           lahde: 'Peripitus, Wikimedia Commons (CC BY-SA 3.0)',
@@ -73015,6 +73070,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oleva saksalaissiirtokunta, ja saksalainen kädenjälki näkyy '
             + 'säilyneiden alkuperäisrakennusten puurunkoisessa '
             + 'Fachwerk-rakenteessa.',
+          lyhyt: 'Hahndorfin pääkatu on Australian vanhimman saksalaissiirtokunnan keskus Adelaide Hillsissä.',
           selite: 'Hahndorfin pääkatu on Australian vanhimman yhä olemassa '
             + 'olevan saksalaissiirtokunnan keskus Adelaide Hillsissä.',
           lahde: 'Yeti Hunter, Wikimedia Commons (CC BY-SA 3.0)',
@@ -73051,6 +73107,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Rann ilmoitti erillislaista, joka suojaisi laaksot '
             + 'kaupungistumiselta; laki säädettiin 2012, jolloin '
             + 'pääministerinä oli jo Jay Weatherill.',
+          lyhyt: 'Barossan laakso avautuu Mengler\'s Hillin näköalapaikalta noin 60 km päässä Adelaidesta koilliseen.',
           selite: 'Barossan laakso avautuu Mengler’s Hillin '
             + 'näköalapaikalta noin kuudenkymmenen kilometrin päässä '
             + 'Adelaiden keskustasta koilliseen.',
@@ -73071,6 +73128,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Adelaide Hillsin koulut, kirkot ja kunnat pyytävät nykyään '
             + 'usein perämangkien vanhimpia ja taiteilijoita pitämään '
             + 'tervetuliaisseremonian.',
+          lyhyt: 'Piccadilly Valley on yksi Mount Lofty Rangesin laaksoista perämangkien perinteisellä maalla.',
           selite: 'Piccadilly Valley on yksi Mount Lofty Rangesin laaksoista '
             + 'Adelaide Hillsissä, perämangkien perinteisellä maalla.',
           lahde: 'Bahudhara, Wikimedia Commons (CC BY-SA 4.0)',
@@ -73223,12 +73281,14 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Hobart seen from Mt Wellington 1.jpg',
+          lyhyt: 'Kunanyin huippu kohoaa tuhannen metrin korkeuteen; sieltä näkyy koko Derwentin suisto.',
           selite: 'Kunanyin huippulaki on runsaan tuhannen metrin korkeudessa '
             + 'aivan kaupungin takana, ja sieltä näkyy koko Derwentin suisto.',
           lahde: 'Andrea Schaffer from Sydney, Australia, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Constitution-Dock-facing-hbt-cbd.jpg',
+          lyhyt: 'Constitution Dock on vanha satama-allas, jonne Sydneystä lähtevät purjeveneet saapuvat uudenvuonna.',
           selite: 'Constitution Dock on keskustan reunassa oleva vanha '
             + 'satama-allas, jonne Sydneystä lähtevät purjeveneet saapuvat '
             + 'uudenvuoden tienoilla.',
@@ -73252,12 +73312,14 @@ export const KULTTUURI_KATEGORIAT = {
          * kohteen omaan Commons-kategoriaan. */
         {
           ampari: 'herokoe/hero-hobart-aamu.png',
+          lyhyt: 'Theatre Royal avasi ovensa 1837 ja on Australian vanhin yhtäjaksoisesti toiminut teatteri.',
           selite: 'Theatre Royal avasi ovensa maaliskuussa 1837, ja se '
             + 'on Australian vanhin yhtäjaksoisesti toiminut teatteri.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-hobart-keskipaiva.png',
+          lyhyt: 'Cascade Brewery Hobart Rivuletin varrella on Australian vanhin yhtäjaksoisesti toiminut panimo.',
           selite: 'Hobart Rivuletin varrella Etelä-Hobartissa toimiva '
             + 'Cascade Brewery on Australian vanhin yhtäjaksoisesti '
             + 'toiminut panimo; sen perusti Hugh Macintosh '
@@ -73266,6 +73328,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-hobart-ilta.png',
+          lyhyt: 'MONA avattiin Berriedalen niemellä 2011; se on eteläisen pallonpuoliskon suurin yksityismuseo.',
           selite: 'MONA avattiin Berriedalen niemellä tammikuussa 2011 '
             + 'David Walshin kokoelman ympärille, ja se on '
             + 'yksityisrahoitteisista taidemuseoista eteläisen '
@@ -73274,6 +73337,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Hobart seen from the east.jpg',
+          lyhyt: 'Hobartin vanhat esikaupungit ovat matalia ja peltikattoisia ja ulottuvat keskustan takaa rinteille.',
           selite: 'Hobartin vanhat esikaupungit ovat matalia ja peltikattoisia, '
             + 'ja ne ulottuvat keskustan takaa ylös rinteille.',
           lahde: 'Thennicke, Wikimedia Commons (CC BY-SA 4.0)',
@@ -73286,6 +73350,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Salamanca Place, Hobart (1).jpg',
+          lyhyt: 'Salamanca Place on sataman vieressä kulkeva katu, jonka laidalla on hiekkakivimakasiineja.',
           selite: 'Salamanca Place on sataman vieressä kulkeva katu, jonka '
             + 'toisella puolella seisoo rivi 1800-luvun hiekkakivimakasiineja.',
           lahde: 'Tim J Keegan, Wikimedia Commons (CC BY-SA 2.0)',
@@ -73306,6 +73371,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laivojen huolto- ja kauppapaikan. Collins nimesi kaupungin '
             + 'sodasta ja siirtomaista vastanneen lordi Hobartin ja lahden '
             + 'tämän alivaltiosihteerin mukaan.',
+          lyhyt: 'John Glover maalasi Hobart Townin 1832 puutarhastaan käsin, kun kaupunki oli vain 25-vuotias.',
           selite: 'John Glover maalasi Hobart Townin 1832 siitä puutarhasta, '
             + 'jossa itse asui, kun kaupunki oli vasta reilut '
             + 'kaksikymmentäviisi vuotta vanha.',
@@ -73326,6 +73392,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja kivennäisöljy syrjäytti valaanrasvan lampuissa. '
             + 'Siirtomaakauden viimeinen pyyntialus Helen lähti Hobartista '
             + '17. maaliskuuta 1898.',
+          lyhyt: 'Vuoden 1834 vedos esittää Hobart Townin mereltä katsottuna vilkkaana valaanpyyntisatamana.',
           selite: 'Vuoden 1834 vedos esittää Hobart Townin mereltä katsottuna '
             + 'aikana, jolloin se oli eteläisten merten vilkkaimpia '
             + 'valaanpyyntisatamia.',
@@ -73346,6 +73413,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kampanjointi. Vuoden 2016 luvuissa itsensä palawaksi tai '
             + 'pakanaksi tunnistavia on kriteereistä riippuen 6 000 – yli '
             + '23 000.',
+          lyhyt: 'South East Tasmanian Aboriginal Corporationin päätoimisto toimii puutalossa Cygnetin kylässä.',
           selite: 'South East Tasmanian Aboriginal Corporationin päätoimisto '
             + 'toimii puutalossa Cygnetin kylässä Etelä-Tasmaniassa.',
           lahde: 'Gary Houston, Wikimedia Commons (CC0)',
@@ -73364,6 +73432,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seisoviin varastoihin. Battery Point puolestaan sai nimensä '
             + '1818 valmistuneesta tykkipatterista, jonka vartiorakennus on '
             + 'yhä kaupunginosan vanhin talo.',
+          lyhyt: 'Kellyn portaat nousevat Salamanca Placelta Battery Pointiin ja hakattiin 1839 samaan kallioon.',
           selite: 'Kellyn portaat nousevat Salamanca Placelta Battery Pointiin '
             + 'ja ne hakattiin 1839 samaan kallioon, josta makasiinien kivet '
             + 'oli louhittu.',
@@ -73374,6 +73443,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: "St George's Battery Pt 2015.jpg",
+          lyhyt: 'St Georgen kirkko Battery Pointissa valmistui 1838; torni lisättiin 1847 Blackburnin piirustuksin.',
           selite: 'St Georgen kirkko Battery Pointissa valmistui 1838, ja sen '
             + 'klassinen torni lisättiin 1847 James Blackburnin piirustusten '
             + 'mukaan.',
@@ -73415,6 +73485,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaduissa.',
               kuva: {
                 tiedosto: 'Waterfront warehouses Hobart.jpg',
+                lyhyt: 'Hunter Streetillä Victoria Dockin takana seisoo georgiaanisia makasiineja vanhan hillitehtaan nimin.',
                 selite: 'Victoria Dockin takana Hunter Streetillä seisoo rivi '
                   + 'georgiaanisia makasiineja, joiden kylkeen on maalattu '
                   + 'vanhan hillitehtaan nimi.',
@@ -73441,6 +73512,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kuoli Hobartin Beaumaris-eläintarhassa 7. syyskuuta 1936.',
               kuva: {
                 tiedosto: 'Tasman Bridge in Hobart.JPG',
+                lyhyt: 'Tasman Bridge kantaa Tasman Highwayn Derwentin yli; se on Tasmanian vilkkain tieosuus.',
                 selite: 'Tasman Bridge kantaa Tasman Highwayn Derwentin yli, '
                   + 'ja se on Tasmanian vilkkaimmin liikennöity tieosuus.',
                 lahde: 'Synyan, Wikimedia Commons (CC BY 3.0)',
@@ -73462,6 +73534,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'suosituimmista käyntikohteista.',
               kuva: {
                 tiedosto: 'SV May Queen, Constitution Dock 2023.jpg',
+                lyhyt: 'Vuonna 1867 rakennettu puinen kauppapurjehtija May Queen on yhä Constitution Dockissa.',
                 selite: 'Vuonna 1867 rakennettu puinen kauppapurjehtija May '
                   + 'Queen on yhä Constitution Dockissa, kuusi vuotta isoisän '
                   + 'matkaa vanhempi alus.',
@@ -73486,6 +73559,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'käyttökelvottomiksi.',
               kuva: {
                 tiedosto: 'Hobart Town Hall 01.jpg',
+                lyhyt: 'Hobartin kaupungintalo valmistui 1866 Henry Hunterin piirustuksin vanhan kuvernöörintalon paikalle.',
                 selite: 'Hobartin kaupungintalo valmistui 1866 Henry Hunterin '
                   + 'piirustusten mukaan vanhan kuvernöörintalon paikalle.',
                 lahde: 'edwardhblake, Wikimedia Commons (CC BY 2.0)',
@@ -73547,6 +73621,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Hobartiin neuvottelemaan aselevosta kuvernööri George Arthurin '
             + 'kanssa. Kymmenen päivää myöhemmin heidät karkotettiin väkisin '
             + 'Flindersin saarelle.',
+          lyhyt: 'John Glover maalasi 1834 alkuperäisasukkaiden tanssin, vaikka heidät oli jo karkotettu alueelta.',
           selite: 'John Glover maalasi 1834 Kangaroo Pointilta näkymän, jossa '
             + 'alkuperäisasukkaat tanssivat rannalla, vaikka heidät oli '
             + 'siihen mennessä jo karkotettu alueelta.',
@@ -73567,6 +73642,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hartauskokouksia. Isoisän aikaan talo oli nelikymppinen; '
             + 'nykyisen punasamettisen katsomon suunnitteli melbournelainen '
             + 'William Pitt vasta 1911.',
+          lyhyt: 'Theatre Royalin julkisivu Campbell Streetillä on vuodelta 1837.',
           selite: 'Theatre Royalin julkisivu Campbell Streetillä on vuodelta '
             + '1837, ja talo on Australian vanhin yhtäjaksoisesti toiminut '
             + 'teatteri.',
@@ -73586,6 +73662,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Panimon perusti Macintosh veljenpoikineen Degravesin istuessa '
             + 'velasta vankilassa. Vasta 2011 tutkimus osoitti, että Degraves '
             + 'oli myöhemmin kirjoittanut Macintoshin osuuden pois.',
+          lyhyt: 'Haughton Forrestin noin 1890 maalaama Cascaden panimo seisoo yhä samassa laaksossa.',
           selite: 'Haughton Forrestin noin 1890 maalaama Cascaden panimo '
             + 'seisoo yhä samassa laaksossa kunanyin urkupillikallioiden '
             + 'alla.',
@@ -73605,6 +73682,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1873 se toimi yhä; ovet menivät kiinni 1877. Läheiselle '
             + 'Kuolleiden saarelle on kirjattu 1 646 hautaa, joista vain 180 '
             + 'on merkitty nimellä.',
+          lyhyt: 'Port Arthurin rauniot ovat museoalue, jonka tunnetuin rakennus on pyöreä vartiotorni.',
           selite: 'Port Arthurin rauniot Tasmanin niemimaalla ovat nykyään '
             + 'museoalue, ja pyöreä vartiotorni on niiden tunnetuin '
             + 'rakennus.',
@@ -73646,6 +73724,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lehvät tekivät varjon "kuin yön ensimmäisellä tunnilla". Vuonna '
             + '2013 Tasmania otti käyttöön kaksoisnimet, ja kunanyi / Mount '
             + 'Wellington oli ensimmäisiä.',
+          lyhyt: 'Urkupillit on kunanyin rinteessä kohoava doleriittipilarien seinämä, vuoren tunnusomaisin piirre.',
           selite: 'Urkupillit ovat kunanyin rinteessä kohoava '
             + 'doleriittipilarien seinämä ja vuoren tunnusomaisin piirre '
             + 'Hobartista katsottuna.',
@@ -73664,6 +73743,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pallonpuoliskolla. Viime vuosikymmeninä sileävalaat ovat '
             + 'alkaneet palata Derwentiin ja muille Australian rannikoille, ja '
             + 'sitä pidetään merkkinä hitaasta toipumisesta.',
+          lyhyt: 'Eteläinen sileävalas nousee hengittämään matalikolla ja tulee talvisin suojaisiin lahtiin poikimaan.',
           selite: 'Eteläinen sileävalas nousee hengittämään matalikolla; laji '
             + 'tulee talvisin suojaisiin lahtiin poikimaan.',
           lahde: 'Donald Hobern from Copenhagen, Denmark, Wikimedia Commons (CC BY 2.0)',
@@ -73683,6 +73763,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Antarktis-osasto, Tasmanian yliopiston meri- ja '
             + 'Antarktis-tutkimuksen instituutti sekä Etelämantereen meren '
             + 'elollisten luonnonvarojen suojelukomissio.',
+          lyhyt: 'Jäänmurtaja Aurora Australis palveli Etelämanner-ohjelmaa, kiinnittyneenä Hobartin satamaan.',
           selite: 'Jäänmurtaja Aurora Australis palveli Australian '
             + 'Etelämanner-ohjelmaa ja on tässä kiinnittyneenä Princes '
             + 'Wharfiin Hobartin satamassa.',
@@ -73702,6 +73783,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rajojen sisällä elää yksitoista uhanalaista eläinlajia, joista '
             + 'viisi ei esiinny missään muualla, ja pademelonit sekä valabit '
             + 'ovat tavallinen näky kaduilla.',
+          lyhyt: 'Vesinokkaeläin uiskentelee pinnan alla; laji elää Hobartin halki virtaavassa purossa.',
           selite: 'Vesinokkaeläin uiskentelee pinnan alla nokka edellä; laji '
             + 'elää myös Hobartin halki virtaavassa purossa.',
           lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
@@ -73742,6 +73824,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tulevat lautalla jokea ylös. Vaikutusta matkailuun on verrattu '
             + 'Bilbaon Guggenheimiin, ja vuoteen 2022 mennessä kävijöitä oli '
             + 'ollut 2,5 miljoonaa.',
+          lyhyt: 'MONA on rakennettu Berriedalen niemen kallioon; suurin osa museosta on maan alla.',
           selite: 'MONA on rakennettu Berriedalen niemen kallioon Moorillan '
             + 'viinitilalle, ja suurin osa museosta on maan alla.',
           lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
@@ -73777,6 +73860,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pohjoispäässä Hunter Streetillä sama muutos on tehty toisin: '
             + 'georgiaanisiin makasiineihin on avattu ravintoloita, baareja ja '
             + 'gallerioita.',
+          lyhyt: 'Salamanca Arts Centren käytävä kulkee vanhan makasiinin läpi työhuoneiden ja myymälöiden välissä.',
           selite: 'Salamanca Arts Centren käytävä kulkee vanhan makasiinin '
             + 'läpi, ja sen molemmin puolin on työhuoneita ja pieniä '
             + 'myymälöitä.',
@@ -73795,6 +73879,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kokoelmassa on yli 1 900 teosta, eikä niiden vieressä ole '
             + 'seinätekstejä: kävijä saa tiedot puhelinsovelluksesta, joka '
             + 'tunnistaa lähellä olevat työt.',
+          lyhyt: 'Sidney Nolanin Käärme koostuu 1 620 pienestä maalauksesta ja täyttää MONAssa salin seinän.',
           selite: 'Sidney Nolanin Käärme koostuu 1 620 pienestä maalauksesta '
             + 'ja täyttää MONAssa kokonaisen salin seinän.',
           lahde: 'jeffowenphotos, Wikimedia Commons (CC BY 2.0)',
@@ -73976,18 +74061,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Darwin CBD (March 2017).jpg',
+          lyhyt: 'Keskusta on matalalla törmällä Darwin Harbourin pohjoisrannalla, sadekauden rintamat mereltä.',
           selite: 'Keskusta on matalalla törmällä Darwin Harbourin '
             + 'pohjoisrannalla, ja sadekauden rintamat tulevat mereltä.',
           lahde: 'Mark Pegrum, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Darwin Waterfront.jpg',
+          lyhyt: 'Waterfront on vanha satamakortteli, joka muutettiin asunnoiksi, hotelleiksi ja uimalaguuniksi.',
           selite: 'Waterfront on vanha satamakortteli, joka rakennettiin '
             + '2000-luvulla asunnoiksi, hotelleiksi ja uimalaguuniksi.',
           lahde: 'eGuide Travel, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Mindil Beach.jpg',
+          lyhyt: 'Mindil Beach on kaupungin tunnetuin ranta; takana kokoontuvat kuivan kauden auringonlaskumarkkinat.',
           selite: 'Mindil Beach on kaupungin tunnetuin ranta, ja sen takana '
             + 'kokoontuvat kuivan kauden auringonlaskumarkkinat.',
           lahde: 'Bidgee, Wikimedia Commons (CC BY 3.0)',
@@ -74005,12 +74093,14 @@ export const KULTTUURI_KATEGORIAT = {
          * kohteen omaan Commons-kategoriaan. */
         {
           ampari: 'herokoe/hero-darwin-aamu.png',
+          lyhyt: 'Esplanadin Government House valmistui 1870–1871, Pohjoisterritorion vanhin eurooppalainen rakennus.',
           selite: 'Esplanadin Government House valmistui 1870–1871 ja '
             + 'on Pohjoisterritorion vanhin eurooppalainen rakennus.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
           ampari: 'herokoe/hero-darwin-keskipaiva.png',
+          lyhyt: 'Fannie Bay Gaol toimi vankilana 1883–1979; rakennukset ovat nykyään museona.',
           selite: 'Fannie Bay Gaol toimi vankilana 20. syyskuuta 1883 '
             + 'alkaen aina syyskuuhun 1979, ja rakennukset ovat '
             + 'nykyään museona.',
@@ -74018,6 +74108,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-darwin-ilta.png',
+          lyhyt: 'Nykyinen Christ Church -katedraali valmistui 1977 Tracyn tuhottua edellisen rakennuksen 1974.',
           selite: 'Nykyinen Christ Church -katedraali valmistui 1977 '
             + 'sen jälkeen kun hirmumyrsky Tracy tuhosi edellisen '
             + 'rakennuksen 1974; ainoa säilynyt osa, vuonna 1944 '
@@ -74026,6 +74117,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Darwin\'s Changing Skyline January 2010.jpg',
+          lyhyt: 'Keskustan asuintornit ovat nousseet matalien peltikattojen väliin vasta Tracyn jälkeen.',
           selite: 'Keskustan asuintornit ovat nousseet matalien peltikattojen '
             + 'väliin vasta hirmumyrsky Tracyn jälkeisinä vuosikymmeninä.',
           lahde: 'kenhodge13, Wikimedia Commons (CC BY 2.0)',
@@ -74093,6 +74185,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'edustaa kansaa nykyään, ja sillä oli joulukuussa 2021 yli 740 '
             + 'jäsentä. Maaliskuussa 2021 Vesteys Beach sai nimekseen '
             + 'Bundilla Beach, jolla larrakiat olivat sitä pitkään kutsuneet.',
+          lyhyt: 'Bundilla Beach kantoi vuoteen 2021 nimeä Vesteys Beach 1910-luvun lihatehtaan mukaan.',
           selite: 'Bundilla Beach kantoi vuoteen 2021 asti nimeä Vesteys '
             + 'Beach 1910-luvulla toimineen lihatehtaan mukaan.',
           lahde: 'kenhodge13, Wikimedia Commons (CC BY 2.0)',
@@ -74110,6 +74203,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tuulen sivuttaisvoimaa. Siksi keskusta näyttää nuorelta: '
             + 'melkein kaikki on 1970-luvun jälkeen tiukempien '
             + 'myrskymääräysten mukaan rakennettua.',
+          lyhyt: 'Palmerstonin kaupungintalon rauniot jätettiin Smith Streetille Tracyn tuhottua talon 1974.',
           selite: 'Palmerstonin kaupungintalon rauniot jätettiin Smith '
             + 'Streetin varteen sen jälkeen kun hirmumyrsky Tracy tuhosi '
             + 'talon 1974.',
@@ -74120,6 +74214,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Northern Territory Legislative Assembly, Darwin, 2021, 01.jpg',
+          lyhyt: 'Pohjoisterritorion parlamenttitalon räystäät ja säleiköt varjostavat julkisivua auringolta.',
           selite: 'Pohjoisterritorion parlamenttitalon syvät räystäät ja '
             + 'säleiköt varjostavat julkisivua trooppiselta auringolta.',
           lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
@@ -74274,6 +74369,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hyökkäys Australiaan. Kuolleiden määrä on yhä kiistanalainen: '
             + 'tuoreeltaan asetettu tutkintakomissio päätyi noin 250:een, '
             + 'myöhemmät arviot ovat suurempia.',
+          lyhyt: 'Pommituksen muistomerkki on lohkare, jonka laattaan on kaiverrettu 19.2.1942 tapahtumien kulku.',
           selite: 'Pommituksen muistomerkki on lohkare, jonka laattaan on '
             + 'kaiverrettu 19. helmikuuta 1942 tapahtumien kulku.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
@@ -74292,6 +74388,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maalla ja 21 merellä. Jouluna 2024, viisikymmentä vuotta '
             + 'myöhemmin, East Point Reserveen paljastettiin muistomerkki '
             + 'uhrien nimillä.',
+          lyhyt: 'East Point Reserven muistomerkki paljastettiin 2024 kohdassa, johon hirmumyrsky Tracy iski.',
           selite: 'East Point Reserven muistomerkki paljastettiin jouluna '
             + '2024 siinä kohdassa, jossa hirmumyrsky Tracy iski rantaan.',
           lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
@@ -74311,6 +74408,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Väestö oli evakuoitu, ja palaajat löysivät raunioita; maat '
             + 'pakkolunastettiin, eikä Chinatownia ole rakennettu uudelleen. '
             + 'Chung Wah -yhdistys ylläpitää yhä temppeliä ja kiinalaismuseota.',
+          lyhyt: 'Kiinalainen temppeli perustettiin 1887 ja rakennettiin uudelleen pommitusten ja Tracyn jäljiltä.',
           selite: 'Kiinalainen temppeli perustettiin 1887, ja se on rakennettu '
             + 'uudelleen sekä vuoden 1942 pommitusten että hirmumyrsky Tracyn '
             + 'jäljiltä.',
@@ -74424,6 +74522,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'simpukkakasoja eli middenejä. Puistosta on näköalapaikkoja '
             + 'kaupungin siluettiin. Aurinko käy Darwinissa suoraan pään '
             + 'päällä kahdesti vuodessa, loka- ja helmikuun puolivälissä.',
+          lyhyt: 'Räjähdebunkkeri on osa pommivarastoa, jonka alueelle kansallispuisto perustettiin.',
           selite: 'Räjähdebunkkeri on osa toisen maailmansodan pommivarastoa, '
             + 'jonka alueelle Charles Darwin -kansallispuisto perustettiin.',
           lahde: 'kenhodge13, Wikimedia Commons (CC BY 2.0)',
@@ -74726,6 +74825,7 @@ export const KULTTUURI_KATEGORIAT = {
          * viitteetön katunäkymä. */
         {
           ampari: 'herokoe/hero-portmoresby-aamu.png',
+          lyhyt: 'Papua-Uuden-Guinean parlamenttitalo avattiin Waiganissa 1984, kattomuoto haus tambaran -tyyliin.',
           selite: 'Papua-Uuden-Guinean kansallinen parlamenttitalo '
             + 'avattiin Waiganin hallintoalueella 1984, ja sen jyrkkä '
             + 'kattomuoto on lainattu ylämaiden haus tambaran '
@@ -74734,6 +74834,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-portmoresby-keskipaiva.png',
+          lyhyt: 'Jacksonin lentoasema on maan suurin; Port Moresbyyn ei pääse muualta maanteitse.',
           selite: 'Jacksonin kansainvälinen lentoasema on maan suurin '
             + 'lentokenttä ja puolustusvoimien ilmavoimien tukikohta; '
             + 'Port Moresbyyn ei pääse muualta Papua-Uudesta-Guineasta '
@@ -74742,6 +74843,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-portmoresby-ilta.png',
+          lyhyt: 'Boroko oli 1900-luvun jälkipuoliskolla Port Moresbyn kaupallinen keskus.',
           selite: 'Boroko oli 1900-luvun jälkipuoliskolla Port '
             + 'Moresbyn kaupallinen keskus vanhan satamakeskustan ja '
             + 'Waiganin hallintoalueen välissä.',
@@ -74749,6 +74851,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Port Moresby at dusk.jpeg',
+          lyhyt: 'Keskustan tornit ja satamalaiturit reunustavat Fairfax Harbouria, takana mantereen kukkulat.',
           selite: 'Keskustan tornit ja satamalaiturit reunustavat Fairfax '
             + 'Harbouria, jonka takana nousevat mantereen kukkulat.',
           lahde: 'Michael Cousins, Wikimedia Commons (CC BY-SA 3.0)',
@@ -74781,6 +74884,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Moresby. Sama vuosi, jona isoisä lähti maailmanmatkalleen, on '
             + 'siis myös vuosi, jona tämä satama sai eurooppalaisen nimensä — '
             + 'mutta ei asukkaitaan.',
+          lyhyt: 'Amiraliteetin merikartta Port Moresbysta 1887 perustuu Pullenin mittauksiin HMS Larkilla 1885.',
           selite: 'Amiraliteetin merikartta Port Moresbysta julkaistiin '
             + 'maaliskuussa 1887, ja se perustuu luutnantti T. F. Pullenin '
             + 'vuonna 1885 HMS Larkilla tekemiin mittauksiin.',
@@ -74801,6 +74905,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Assembly, parlamentin säädöksellä perustettu elin, joka '
             + 'hallinnoi kymmentä tunnustettua kylää eikä sillä ole vertaista '
             + 'muualla maassa.',
+          lyhyt: 'Motu- ja koitabu-kylien talot seisovat paaluilla vedessä, kadut ovat lankkusiltoja.',
           selite: 'Motu- ja koitabu-kylien talot seisovat paaluilla veden '
             + 'päällä, ja kadut ovat lankkusiltoja talolta talolle.',
           lahde: 'eGuide Travel, Wikimedia Commons (CC BY 2.0)',
@@ -74839,6 +74944,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nykyaikaiseen rakennustekniikkaan. Kaupunki on kasvanut '
             + 'nopeasti: vuoden 1980 laskennassa asukkaita oli 120 000, vuonna '
             + '2011 jo 364 145 ja vuonna 2024 kaikkiaan 756 754.',
+          lyhyt: 'Waiganin hallintorakennukset nousivat itsenäistymisen jälkeen avoimelle maalle koilliseen.',
           selite: 'Waiganin hallintorakennukset nousivat itsenäistymisen '
             + 'jälkeen avoimelle maalle noin seitsemän kilometriä vanhasta '
             + 'keskustasta koilliseen.',
@@ -74849,6 +74955,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Office and apartment tower on Ela Beach at the bottom of Musgrave Street.jpg',
+          lyhyt: 'Musgrave Street laskeutuu keskustasta Ela Beachille, tunnetuimpien asuintornien luo.',
           selite: 'Musgrave Street laskeutuu keskustasta Ela Beachille, ja sen '
             + 'päässä seisoo kaupungin tunnetuimpia toimisto- ja asuintorneja.',
           lahde: 'Masalai, Wikimedia Commons (CC BY-SA 3.0)',
@@ -74908,6 +75015,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'uutta asuinrakentamista.',
               kuva: {
                 tiedosto: 'Boroiko post office.jpg',
+                lyhyt: 'Borokon vanha liikekeskus postitaloineen on hiljentynyt kaupan siirryttyä muualle.',
                 selite: 'Borokon vanha liikekeskus postitaloineen on '
                   + 'hiljentynyt sen jälkeen, kun kauppa siirtyi muualle '
                   + 'kaupunkiin.',
@@ -75002,6 +75110,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Basiliskia käytettiin pakkotyövoiman kuljetuksia vastaan '
             + 'Tyynellämerellä. Laiva palasi Englantiin 1874 ja purettiin '
             + 'romuksi Chathamissa 1882.',
+          lyhyt: 'HMS Basilisk on piirroksessa ankkurissa Threshold Bayssa 1874, ei Port Moresbyssä.',
           selite: 'HMS Basilisk on tässä piirroksessa ankkurissa Threshold '
             + 'Bayssa toisaalla Uudella-Guinealla 28. toukokuuta 1874, ei '
             + 'Port Moresbyssä.',
@@ -75022,6 +75131,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lähetystyöntekijät toivomaan, että sanoma leviäisi laajemmalle. '
             + 'Lawesin talo jäi seudun tunnetuimmaksi rakennukseksi '
             + 'vuosikymmeniksi.',
+          lyhyt: 'Elevala-saaren paalutalot ja purjelaivat näkyvät lähetysaseman pihasta 1885 kuvalaatassa.',
           selite: 'Elevala-saaren paalutalot ja sataman purjelaivat näkyvät '
             + 'lähetysaseman pihasta vuoden 1885 kuvalaatassa.',
           lahde: 'John William Lindt, Wikimedia Commons (PD)',
@@ -75040,6 +75150,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lopulla: kultaa ei löytynyt ja tauteja riitti. Ryntäys jäi '
             + 'tulematta, mutta puoti jäi — ja sen mukana ensimmäinen '
             + 'eurooppalainen kaupankäynti sataman rannalla.',
+          lyhyt: 'Rouna Valleyn tie nousee kukkulaseudulle, jonka jokivarsista kultaa etsittiin.',
           selite: 'Rouna Valleyn tie nousee kaupungin takaa sisämaahan sille '
             + 'kukkulaseudulle, jonka jokivarsista kultaa etsittiin.',
           lahde: 'Brian ireland, Wikimedia Commons (CC BY-SA 2.0)',
@@ -75059,6 +75170,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oman suuren seremoniansa vasta 6. marraskuuta. Elokuussa 1885 '
             + 'erikoiskomissaari Peter Scratchley valitsi paikan siirtomaan '
             + 'hallintopaikaksi.',
+          lyhyt: 'Hanuabadan paalutalot rannalla vanhassa kuvassa; kylässä luettiin 1884 suojelualuejulistus.',
           selite: 'Hanuabadan olkikattoiset paalutalot rannalla vanhassa '
             + 'lasidiakuvassa; juuri tässä kylässä luettiin vuoden 1884 '
             + 'suojelualuejulistus.',
@@ -75111,6 +75223,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Bogebada, merikotka, lastasi sen vaimonsa tekemillä padoilla ja '
             + 'purjehti ystävineen Papuanlahden vesille. Näin alkoi '
             + 'kauppapurjehdusten perinne, joka kesti sukupolvien yli.',
+          lyhyt: 'Lagatoin rapusaksipurjeet nostettiin kahdesta mastosta; runkoja sidottiin lastin mukaan.',
           selite: 'Lagatoin rapusaksipurjeet nostettiin kahdesta mastosta, ja '
             + 'runkoja sidottiin yhteen niin monta kuin lastia oli.',
           lahde: 'John William Lindt, Wikimedia Commons (PD)',
@@ -75130,6 +75243,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'purjealukset lähtivät länteen. Menomatka Papuanlahden kyliin '
             + 'kesti tavallisesti vain viikon, ja vaihto tehtiin nopeasti '
             + 'tuttujen kauppakumppanien kanssa.',
+          lyhyt: 'Paalukylän edustalla lagatoi purjehtii ja kanootti soudetaan ohi 1890-luvun kaiverruksessa.',
           selite: 'Paalukylän edustalla lagatoi purjehtii ulos ja pitkä '
             + 'kanootti soudetaan sen ohi 1890-luvun lopun kaiverruksessa.',
           lahde: 'Unknown author Unknown author, Wikimedia Commons (PD)',
@@ -75225,6 +75339,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'MacGregorin kokoelman esinettä, 1990-luvulla lisää Queenslandin '
             + 'museosta ja vuonna 2020 vielä 225 esinettä Australian '
             + 'kansallisgalleriasta.',
+          lyhyt: 'Alasepikin rakokumpurumpu on veistetty yhdestä rungosta, nyt Pariisin quai Branlyn museossa.',
           selite: 'Alasepikin alueelta peräisin oleva rakokumpurumpu on '
             + 'veistetty yhdestä rungosta, ja se on nyt Pariisin quai '
             + 'Branlyn museossa.',
@@ -75262,6 +75377,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ilmailuperintökeskus, jonne palautettiin Australiasta '
             + 'sodanaikainen Douglas A-20 Havoc -kone; keskuksessa kerrotaan '
             + 'myös amerikkalaisesta hävittäjälentäjästä Dick Bongista.',
+          lyhyt: 'Australian ilmavoimien entinen Ford-kolmimoottori seisoo museon nurmella Waiganissa.',
           selite: 'Australian ilmavoimien entinen Ford-kolmimoottorinen kone '
             + 'seisoo museon nurmella Waiganissa runko paljaana.',
           lahde: 'Bauple58, Wikimedia Commons (CC BY-SA 4.0)',
@@ -75417,6 +75533,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Plaza Sotomayor, Valparaíso (39181374915).jpg',
+          lyhyt: 'Plaza Sotomayorin aukiolla on Iquiquen sankarien muistomerkki, takana laivaston palatsi.',
           selite: 'Plaza Sotomayorin kivetyllä aukiolla seisoo Iquiquen '
             + 'sankarien muistomerkki, ja sen takana kohoaa laivaston '
             + 'päämajan vaaleansininen palatsi.',
@@ -75424,6 +75541,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Valparaíso Color Patrimonial.jpg',
+          lyhyt: 'Kukkulan rinne on täynnä värikkäitä peltikattotaloja portaittain harjanteelle asti.',
           selite: 'Kukkulan rinne on täynnä eri väreillä maalattuja '
             + 'peltikattoisia taloja, jotka nousevat portaittain harjanteelle '
             + 'asti.',
@@ -75431,6 +75549,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'El Puerto de Valparaíso. Región de Valparaíso, Chile.jpg',
+          lyhyt: 'Sataman laiturin edessä keinuu lauttaveneitä, takana lastataan rahtilaivaa nosturein.',
           selite: 'Sataman laiturin edessä keinuu rivi pieniä lauttaveneitä, '
             + 'ja takana lastataan rahtilaivaa konttinosturien alla.',
           lahde: 'CARLOS TEIXIDOR CADENAS, Wikimedia Commons (CC BY-SA 4.0)',
@@ -75442,6 +75561,7 @@ export const KULTTUURI_KATEGORIAT = {
          * kohteen omaan Commons-kategoriaan. */
         {
           ampari: 'herokoe/hero-valparaiso-aamu.png',
+          lyhyt: 'Ascensor Concepción avattiin 1883 ja on kaupungin vanhin yhä kulkeva vinohissi.',
           selite: 'Ascensor Concepción avattiin 1. joulukuuta 1883 ja '
             + 'on kaupungin vanhin yhä kulkeva vinohissi; Valparaísoa '
             + 'on palvellut aikojen saatossa jopa 28 hissiä.',
@@ -75449,6 +75569,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-valparaiso-keskipaiva.png',
+          lyhyt: 'Palacio Baburizza valmistui 1916 Cerro Alegrelle salpietarikauppiaan kodiksi, nyt taidemuseo.',
           selite: 'Palacio Baburizza valmistui 1916 Cerro Alegrelle '
             + 'kroatialaissyntyisen salpietarikauppiaan kodiksi, ja '
             + 'siinä toimii nykyään kaupungin taidemuseo.',
@@ -75456,6 +75577,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-valparaiso-ilta.png',
+          lyhyt: 'La Sebastiana Cerro Bellavistan rinteellä on yksi Pablo Nerudan kolmesta talosta, nyt museona.',
           selite: 'La Sebastiana Cerro Bellavistan rinteellä on yksi '
             + 'Pablo Nerudan kolmesta talosta, jotka kaikki toimivat '
             + 'nykyään museoina.',
@@ -75463,18 +75585,21 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Vista aerea Valparaíso, Chile.jpg',
+          lyhyt: 'Ilmasta katsottuna kaupunki täyttää lahden ympärille kohoavan kukkulakehän, satama sen kainalossa.',
           selite: 'Ilmasta katsottuna kaupunki täyttää koko lahden ympärille '
             + 'kohoavan kukkulakehän, ja satama jää sen kainaloon.',
           lahde: 'Marca Chile, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Vista panoramica del plan de Valparaíso y Sotomayor.jpg',
+          lyhyt: 'Kattojen yli avautuu tasainen alakaupunki eli plan, takana sataman nosturit ja laivat.',
           selite: 'Kattojen yli avautuu tasainen alakaupunki eli plan, ja sen '
             + 'takana näkyvät sataman nosturit ja laivat.',
           lahde: 'Jhoncrispapo, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Valparaiso 2018.jpg',
+          lyhyt: 'Aamuaurinko osuu rinnekortteliin, jonka talot on rakennettu kiinni jyrkän notkon reunoilla.',
           selite: 'Aamuaurinko osuu rinnekortteliin, jonka talot on '
             + 'rakennettu kiinni toisiinsa jyrkän notkon molemmin puolin.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
@@ -75493,6 +75618,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'länsirannikon johtavan sataman asemasta. Eurooppalaiset '
             + 'siirtolaiset perustivat tänne Latinalaisen Amerikan vanhimman '
             + 'pörssin ja mantereen ensimmäisen vapaaehtoisen palokunnan.',
+          lyhyt: 'Vanhassa puupiirroksessa lahti on täynnä purjelaivojen mastoja, kuvatekstinä Harbor of Valparaiso.',
           selite: 'Vanhassa puupiirroksessa lahti on täynnä purjelaivojen '
             + 'mastoja, ja kuvan alareunaan on painettu julkaisijan oma '
             + 'kuvateksti "Harbor of Valparaiso, Chili".',
@@ -75512,6 +75638,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '12. Viisitoista on kansallismonumentteja, ja World Monuments '
             + 'Fund otti koko järjestelmän 1996 sadan uhanalaisimman '
             + 'kohteensa listalle.',
+          lyhyt: 'Artillería-radan vanha puuvaunu odottaa ylemmällä asemalla, alapuolella satama konttikenttineen.',
           selite: 'Artillería-radan vanha puuvaunu odottaa ylemmällä '
             + 'asemalla, ja alapuolella levittäytyy satama konttikenttineen.',
           lahde: 'Elboina, Wikimedia Commons (CC BY-SA 4.0)',
@@ -75547,6 +75674,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vilkas: satama välittää noin kymmenen miljoonaa tonnia rahtia '
             + 'vuodessa – kontteja, kuparia ja hedelmiä – ja ottaa vastaan '
             + 'noin 50 risteilyalusta ja 150 000 matkustajaa kaudessa.',
+          lyhyt: 'Cerro Artillérian rinteeltä näkyy konttiterminaali, risteilyalus ja lahden ympäri kiertyvä kaupunki.',
           selite: 'Cerro Artillérian rinteeltä näkyy konttiterminaali '
             + 'nostureineen, sen takana risteilyalus ja koko lahden ympäri '
             + 'kiertävä kaupunki.',
@@ -75598,6 +75726,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'bussit, sähköbussit ja hissit.',
               kuva: {
                 tiedosto: 'Muelle Prat, Puerto de Valparaíso 1.jpg',
+                lyhyt: 'Muelle Pratin laiturissa odottaa kierrosveneitä, takana lastataan rahtilaivaa nostureiden vieressä.',
                 selite: 'Muelle Pratin laiturissa odottaa rivi pieniä '
                   + 'kierrosveneitä, ja takana lastataan rahtilaivaa '
                   + 'konttikentän nostureiden vieressä.',
@@ -75621,6 +75750,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jotka etsivät parasta näkymää lahdelle.',
               kuva: {
                 tiedosto: 'Pasaje Guimera.jpg',
+                lyhyt: 'Pasaje Guimeran kivetyn kujan reunassa on mosaiikkisia istuinkiviä sinisen peltitalon vierellä.',
                 selite: 'Pasaje Guimeran kivetyn kujan reunassa on rivi '
                   + 'mosaiikilla päällystettyjä istuinkiviä sinisen '
                   + 'peltitalon vierellä.',
@@ -75646,6 +75776,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'maaliskuussa 2023.',
               kuva: {
                 tiedosto: '1948 Valparaíso Pullman trolleybus 888 southbound at Plaza Sotomayor (2017).jpg',
+                lyhyt: 'Vihreä-kermainen Pullman-trolleybussi ajaa laivaston päämajan julkisivun ohi Plaza Sotomayorilla.',
                 selite: 'Vihreä-kermainen Pullman-trolleybussi numero 888 '
                   + 'ajaa laivaston päämajan vaaleansinisen julkisivun ohi '
                   + 'Plaza Sotomayorilla.',
@@ -75670,6 +75801,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'täällä 11. maaliskuuta 1990.',
               kuva: {
                 tiedosto: 'Edificio del Congreso Nacional de Chile (Valparaíso).jpg',
+                lyhyt: 'Kongressirakennuksen vaalea betonijulkisivu avautuu porttiaukoksi jakarandojen ja palmujen keskellä.',
                 selite: 'Kongressirakennuksen vaalea betonijulkisivu on '
                   + 'avattu keskeltä suureksi porttiaukoksi, ja sen edessä '
                   + 'kukkivat jakarandat ja palmut.',
@@ -75732,6 +75864,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirkko. Piispa Rodrigo Marmolejo perusti ensimmäisen kappelin '
             + '1559, ja kun englantilainen kaappari Francis Drake ryösti '
             + 'sataman 1578, hän vei kappelista hopeisen kalkin.',
+          lyhyt: 'Iglesia de la Matrizin kellotorni ja sen eteen laskeutuvat kiviportaat valaistuvat iltahämärässä.',
           selite: 'Iglesia de la Matrizin kellotorni ja sen eteen '
             + 'laskeutuvat leveät kiviportaat valaistuvat iltahämärässä '
             + 'satamakortteleiden keskellä.',
@@ -75751,6 +75884,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Arch -muistomerkin 1911. Yhteisö kuitenkin kutistui: jo 1895 '
             + 'italialaisia oli enemmän kuin brittejä, ja 1920 mennessä myös '
             + 'espanjalaiset olivat heitä lukuisampia.',
+          lyhyt: 'British Arch -muistomerkin kaarella lepää pronssileijona, otsassa omistuskirjoitus Valparaísolle.',
           selite: 'British Arch -muistomerkin kaaren päällä lepää '
             + 'pronssileijona, ja otsapintaan on kaiverrettu omistuskirjoitus '
             + 'Valparaíson kaupungille.',
@@ -75770,6 +75904,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja muulit. Chilen ensimmäinen puhelinyhtiö syntyi 1880. '
             + 'Asukkaita oli vuosisadan lopulla yli 160 000, ja taloja oli '
             + 'pakko rakentaa yhä ylemmäs rinteille.',
+          lyhyt: 'Iltahämärässä vanhankaupungin korttelit, palmuaukio ja hissirata erottuvat kukkuloiden juurella.',
           selite: 'Iltahämärässä vanhankaupungin korttelit, palmuaukio ja '
             + 'rinteeseen kiipeävä hissirata erottuvat kukkuloiden juurella.',
           lahde: 'Deensel, Wikimedia Commons (CC BY 2.0)',
@@ -75788,6 +75923,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'bulevardeiksi ja Pedro Montt -pääkatu linjattiin. Jo '
             + '19. marraskuuta 1822 järistys oli jättänyt 16 000 asukkaan '
             + 'kaupungin raunioiksi.',
+          lyhyt: 'Aikalaiskartassa järistyksen vauriokorttelit on merkitty vaaleanpunaisella, palanut alue punaisella.',
           selite: 'Aikalaiskartassa tekijät ovat merkinneet vaaleanpunaisella '
             + 'järistyksessä pahiten kärsineet korttelit ja kirkkaanpunaisella '
             + 'palaneen alueen.',
@@ -75832,6 +75968,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'päällikkö ennusti tulevaa maanjäristystä; kirjoittajaa '
             + 'arvosteltiin ankarasti, ja kymmenen päivää myöhemmin maa '
             + 'järisi.',
+          lyhyt: 'Ensimmäisen numeron etusivulla lehden nimi on isoin kirjaimin, päiväyksenä 12. syyskuuta 1827.',
           selite: 'Ensimmäisen numeron etusivulla lehden nimi on ladottu '
             + 'isoin kirjaimin ja päiväykseksi on painettu 12. syyskuuta '
             + '1827.',
@@ -75853,6 +75990,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja yksinäisyyden voima. Kaupungissa ovat asuneet myös '
             + 'nicaragualainen Rubén Darío ja yhdysvaltalainen Marion '
             + 'Manville Pope.',
+          lyhyt: 'La Sebastianan viisi kerrosta on maalattu sinisen, oranssin ja valkoisen kaistaleiksi.',
           selite: 'La Sebastianan viisi kerrosta on maalattu sinisen, '
             + 'oranssin ja valkoisen kaistaleiksi, ja talon edessä kasvaa '
             + 'violetiksi kukkiva puu.',
@@ -75873,6 +76011,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ulkoministerinä. Kirjojen näyttämö on yhä paikallaan: samat '
             + 'kävelykadut Gervasoni, Atkinson ja Dimalow kiertävät '
             + 'kukkulan reunaa.',
+          lyhyt: 'Cerro Concepciónin rinteellä värikkäiden peltitalojen keskeltä nousee kirkontorni, takana lahti.',
           selite: 'Cerro Concepciónin rinteellä värikkäiden peltitalojen '
             + 'keskeltä nousee kirkontorni, ja rinteen takana avautuu lahti.',
           lahde: 'Carlos Figueroa Rojas, Wikimedia Commons (CC BY-SA 4.0)',
@@ -75892,6 +76031,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kansallismonumentiksi 1998, ja vuoden 2010 maanjäristyksen '
             + 'vaurioiden jälkeen se oli suljettuna seuraavaan vuoteen '
             + 'asti.',
+          lyhyt: 'Santiago Severínin kirjaston uusklassinen pylväsjulkisivu täyttää korttelinsivun puiston laidalla.',
           selite: 'Santiago Severínin kirjaston pitkä uusklassinen '
             + 'julkisivu pylväineen täyttää kokonaisen korttelinsivun '
             + 'puiston laidalla.',
@@ -76158,6 +76298,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: '02-01-2025-Central Christchurch and Tūranga library.jpg',
+          lyhyt: 'Keskustan uusi kortteliluonne syntyi jälleenrakennuksessa; tunnetuin talo on kirjasto Tūranga.',
           selite: 'Keskustan uusi kortteliluonne syntyi jälleenrakennuksessa, '
             + 'ja sen tunnetuin talo on kirjasto Tūranga.',
           lahde: 'ZNDave, Wikimedia Commons (CC0)',
@@ -76210,6 +76351,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'päivänä ja Cressy 27. joulukuuta — noin 750 siirtolaista. '
             + 'Kuninkaallinen patenttikirje teki Christchurchistä kaupungin '
             + '31. heinäkuuta 1856, maan ensimmäisen.',
+          lyhyt: 'Edward Jollien vuoden 1850 Plot of Christchurch on kaupungin alkuperäinen ruutukaava.',
           selite: 'Edward Jollien maaliskuussa 1850 mittaama Plot of '
             + 'Christchurch on kaupungin alkuperäinen ruutukaava, ja sen '
             + 'kulman merkintä B.M. 273 on arkiston oma numero Black Map '
@@ -76229,6 +76371,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paikkaa ja viittaa täsmälleen yhteen kohtaan Avon-joen '
             + 'varrella keskustassa; koko kaupungin māorinkieliseksi nimeksi '
             + 'se otettiin vasta 1930-luvulla.',
+          lyhyt: 'Wairewan marae Banks Peninsulalla on yksi kāi tahun yhdeksästä Canterburyn rūnangasta.',
           selite: 'Wairewan marae Banks Peninsulalla on yksi kāi tahun '
             + 'yhdeksästä Canterburyn rūnangasta, ja sen pihalla seisoo '
             + 'vuonna 1900 paljastettu muistopatsas päällikkö '
@@ -76266,6 +76409,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nimet. Kuninkaallinen hyväksyntä tuli 1. lokakuuta 1998, ja '
             + 'pääministeri Jenny Shipley luki anteeksipyynnön itse '
             + 'marraskuussa Ōnukun maraella Akaroan lähellä.',
+          lyhyt: 'Ōnukun marae Akaroan lähellä on Te Rūnanga o Ōnukun kokoontumispaikka, kokoustalona Karaweko.',
           selite: 'Ōnukun marae Akaroan lähellä on Te Rūnanga o Ōnukun '
             + 'kokoontumispaikka, ja sen kokoustalon nimi on Karaweko.',
           lahde: 'Remi Jouan, Wikimedia Commons (CC BY-SA 4.0)',
@@ -76275,6 +76419,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Christchurch Arts Centre tower May 2025.jpg',
+          lyhyt: 'Arts Centren uusgoottilainen kellotorni kuuluu Canterbury Collegen vanhoihin rakennuksiin.',
           selite: 'Arts Centren uusgoottilainen kellotorni kuuluu Canterbury '
             + 'Collegen vanhoihin rakennuksiin, ja korkeakoulusta kasvoi '
             + 'myöhemmin Canterburyn yliopisto.',
@@ -76357,6 +76502,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Open Christchurch.',
               kuva: {
                 tiedosto: 'Christchurch Tram 01.jpg',
+                lyhyt: 'Christchurchin museoraitiovaunu ajaa keskustan silmukkaa kaupungin kulttuurikohteiden pysäkein.',
                 selite: 'Christchurchin museoraitiovaunu ajaa keskustan '
                   + 'silmukkaa, jonka pysäkit ovat kaupungin kulttuurikohteilla.',
                 lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
@@ -76375,6 +76521,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vetureita, ei vain korjattu niitä.',
               kuva: {
                 tiedosto: 'Steam locomotive W192 by the New Zealand Government Railways; October 2010.jpg',
+                lyhyt: 'Höyryveturi W192 rakennettiin 1889 Addingtonin rautatiepajoissa, nyt Ferrymead Heritage Parkissa.',
                 selite: 'Höyryveturi W192 rakennettiin 1889 Addingtonin '
                   + 'rautatiepajoissa, ja se on nykyään Ferrymead Heritage '
                   + 'Parkin liikennekalustoa.',
@@ -76431,6 +76578,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ihmistä kuoli ja yli 1 700 loukkaantui. Vakuutusvaateita '
             + 'kertyi 2,75–3,5 miljardia dollaria. Tapaninpäivänä 2010 '
             + 'jälkijäristysten parvi osui suoraan keskustan alle.',
+          lyhyt: 'Nesteytynyt maaperä levisi syyskuussa 2010 ja rikkoi jalkakäytäviä ja ajoratoja Christchurchissa.',
           selite: 'Nesteytynyt maaperä levisi syyskuussa 2010 sivusuunnassa '
             + 'ja rikkoi jalkakäytäviä ja ajoratoja Christchurchin '
             + 'esikaupungeissa.',
@@ -76468,6 +76616,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'johtoonsa. Hän muokkasi George Gilbert Scottin piirustuksia '
             + 'parvekkein, huippukoristein ja pidemmin pilaririvein. Pääsali '
             + 'ja torni vihittiin 1. marraskuuta 1881.',
+          lyhyt: 'ChristChurch-katedraalin torni menetti huippunsa 2011 järistyksessä, rakennus on aidattu työmaa.',
           selite: 'ChristChurch-katedraalin torni menetti huippunsa helmikuun '
             + '2011 järistyksessä, ja rakennus on ollut siitä lähtien '
             + 'aidattuna työmaana.',
@@ -76543,6 +76692,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'siis sattumaa, vaikka paikallinen perimätieto uskoo toisin. '
             + 'Vuoden 1998 sopimuslaki teki nimestä virallisesti '
             + 'kaksikielisen: Avon River / Ōtākaro.',
+          lyhyt: 'Avon River / Ōtākaro kiertää keskustan halki; rannoilta nousee jälleenrakennetun kaupungin siluetti.',
           selite: 'Avon River / Ōtākaro kiertää keskustan halki loivana '
             + 'mutkana, ja sen rannoilta nousee jälleenrakennetun kaupungin '
             + 'uusi siluetti.',
@@ -76562,6 +76712,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Deans sopivat 1848 New Zealand Companyn kanssa noin 22 '
             + 'hehtaarin suojelusta, ja Riccarton Bush Act 1914 teki '
             + 'suojelusta pysyvän.',
+          lyhyt: 'Riccarton Bushin kahikateat kohoavat suorina runkoina petoaidan sisällä, jonne kiivi palautetaan.',
           selite: 'Riccarton Bushin kahikateat kohoavat suorina runkoina, ja '
             + 'metsikköä kiertää petoaita, jonka turvin kiivi on tarkoitus '
             + 'palauttaa alueelle.',
@@ -76581,6 +76732,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja Recovery Authority ostivat englantilaiselta kuvanveistäjä '
             + 'Antony Gormleylta kaksi Stay-veistosta; toinen seisoo '
             + 'jokivedessä, toinen Arts Centrellä.',
+          lyhyt: 'Punaisella vyöhykkeellä Avonin ranta on nyt nurmea siellä, missä ennen oli asuinkortteleita.',
           selite: 'Punaisella vyöhykkeellä Avonin ranta on nyt avointa '
             + 'nurmea siellä, missä ennen järistyksiä oli asuinkortteleita.',
           lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
@@ -76705,6 +76857,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Largo de São Sebastião, Manaus, Brazil 01.jpg',
+          lyhyt: 'Largo de São Sebastiãon kiveyksen takana kohoavat oopperatalon kupoli ja satamien muistomerkki.',
           selite: 'Largo de São Sebastiãon aaltokuvioidun kiveyksen takana '
             + 'kohoavat oopperatalon kupoli ja satamien avaamista '
             + 'juhlistava muistomerkki.',
@@ -76712,6 +76865,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Ponte Rio Negro, Estado do Amazonas.jpg',
+          lyhyt: 'Rio Negron ylittävä vinoköysisilta jatkuu pilarien varassa vastarannalle, alla tummaa jokivettä.',
           selite: 'Rio Negron ylittävä vinoköysisilta jatkuu pilarien '
             + 'varassa vastarannalle asti, ja sen alla kulkee tummaa '
             + 'jokivettä.',
@@ -76719,6 +76873,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Manaus harbor.jpg',
+          lyhyt: 'Iltavalossa sataman poukamaan on ahtautunut jokilaivoja, takana nousee keskustan kortteleita.',
           selite: 'Iltavalossa sataman poukamaan on ahtautunut kymmeniä '
             + 'monikerroksisia jokilaivoja, ja niiden takana nousee '
             + 'keskustan kortteleita.',
@@ -76728,18 +76883,21 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Manaus aerial view.jpg',
+          lyhyt: 'Korkealta katsottuna tornirivistön takana kimaltaa joki, kaupunkia rajaa leveä metsäkaistale.',
           selite: 'Korkealta katsottuna tornirivistön takana kimaltaa joki '
             + 'ja etualalla kaupunkia rajaa leveä metsäkaistale.',
           lahde: 'CIAT, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Vista do Centro de Manaus.jpg',
+          lyhyt: 'Satamasta katsottuna katedraalin kaksi tornia jäävät toimistotornien ja markkinahallin väliin.',
           selite: 'Satamasta katsottuna katedraalin kaksi tornia jäävät '
             + 'toimistotornien ja markkinahallin peltikaton väliin.',
           lahde: 'Christian Almeida Campos, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Entre nuvem e floresta.jpg',
+          lyhyt: 'Lentokoneesta pilvenhattarat lipuvat sademetsän ja mutkittelevan joen yllä Manausin lähellä.',
           selite: 'Lentokoneesta kuvattuna pilvenhattarat lipuvat '
             + 'sademetsän ja mutkittelevan joen yllä Manausin lähellä.',
           lahde: 'Sharlene Melanie, Wikimedia Commons (CC BY-SA 4.0)',
@@ -76762,6 +76920,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Wikipedian artikkelit ovat eri mieltä: toisen mukaan se oli '
             + 'jo Manaus, toisen mukaan Nossa Senhora da Conceição da '
             + 'Barra do Rio Negro.',
+          lyhyt: 'Katedraalin valkokeltainen julkisivu ja kaksi kellotornia nousevat leveiden portaiden päästä.',
           selite: 'Katedraalin valkokeltainen julkisivu ja kaksi '
             + 'kellotornia nousevat leveiden portaiden päästä keskustan '
             + 'laidalla.',
@@ -76782,6 +76941,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pituudeksi annetaan sekä kuusi että yhdeksän kilometriä, ja '
             + 'lämpötilan merkityksestä kaksi artikkelia sanoo '
             + 'päinvastoin. Ilmiön nimi on Encontro das Águas.',
+          lyhyt: 'Veneestä katsottuna savenvärinen ja musta vesi kulkevat vierekkäin, raja erottuu aaltoja myöten.',
           selite: 'Veneestä katsottuna savenvärinen ja musta vesi kulkevat '
             + 'vierekkäin niin, että raja erottuu aallonharjoja myöten.',
           lahde: 'Roberto Ravanini, Wikimedia Commons (CC BY-SA 4.0)',
@@ -76802,6 +76962,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'isoisän aikaan. Katedraali oli rakenteilla: edellinen '
             + 'kirkko oli palanut 1850 ja uusi avattiin 1878. '
             + 'Oopperataloa ei ollut vielä edes ehdotettu.',
+          lyhyt: 'Vuoden 1883 taikalyhtylasilla Manausin ranta on talorivi, päässä rautainen silta.',
           selite: 'Vuoden 1883 taikalyhtylasilla, jonka oma musta maski '
             + 'kehystää kuvan, Manausin ranta on matalien tiilikattoisten '
             + 'talojen rivi ja sen päässä rautainen silta.',
@@ -76822,6 +76983,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'väestöstä. Eduardo Gomesin lentoasema on rahtimäärältään '
             + 'Brasilian kolmanneksi suurin, koska teollisuusalueen '
             + 'tuotteet lähtevät ilmateitse.',
+          lyhyt: 'Ilmakuvassa keskustan eteläiset korttelit levittäytyvät mustavetisen puron molemmin puolin.',
           selite: 'Ilmakuvassa keskustan eteläpuoliset korttelit '
             + 'levittäytyvät kerrostaloineen ja peltikattoineen '
             + 'mustavetisen puron molemmin puolin.',
@@ -76832,6 +76994,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Mercado Municipal Adolpho Lisboa - 12.jpg',
+          lyhyt: 'Markkinahallin vihreään valurautakaareen on valettu teksti Mercado Publico ja vuosiluku 1882.',
           selite: 'Markkinahallin vihreään valurautakaareen on valettu '
             + 'kultakirjaimin teksti Mercado Publico ja vuosiluku 1882.',
           lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
@@ -76875,6 +77038,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joiden matkat Belémiin kestävät päiviä.',
               kuva: {
                 tiedosto: 'Cruise ship in Manaus, Brazil.jpg',
+                lyhyt: 'Valtamerialus lipuu leveällä Rio Negrolla kohti Manausia, takana matala metsäraja.',
                 selite: 'Valtamerialus lipuu leveällä Rio Negrolla kohti '
                   + 'Manausia, ja takana horisontin täyttää matala '
                   + 'metsäraja.',
@@ -76933,6 +77097,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'palasi Saksaan.',
               kuva: {
                 tiedosto: 'Palácio Rio Negro (Manaus) 489530.jpg',
+                lyhyt: 'Palácio Rio Negron keltavalkoinen julkisivu kaartuu kadunkulmassa kahden lipputangon takana.',
                 selite: 'Palácio Rio Negron keltavalkoinen julkisivu '
                   + 'pylväineen ja kaidekoristeineen kaartuu kadunkulmassa '
                   + 'kahden lipputangon takana.',
@@ -76957,6 +77122,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'valittu tässä oikeaksi.',
               kuva: {
                 tiedosto: 'Ponta-Negra-Manaus3.jpg',
+                lyhyt: 'Ponta Negran kaartuvalla hiekkarannalla on rivi valkoisia päivävarjoja, taustalla Rio Negron silta.',
                 selite: 'Ponta Negran kaartuvalla hiekkarannalla on '
                   + 'rivissä valkoisia päivävarjoja, ja taustalla häämöttää '
                   + 'Rio Negron silta.',
@@ -77004,6 +77170,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Brasilian lipun väreissä ja salissa 198 kruunua. Talo '
             + 'vihittiin 31. joulukuuta 1896. Heinäkuussa 2026 se liitettiin '
             + 'Unescon maailmanperintöluetteloon.',
+          lyhyt: 'Salin kolme parvikerrosta kaartuvat kullattujen kaiteiden ja pylväiden riveinä.',
           selite: 'Salin kolme parvikerrosta kaartuvat kullattujen '
             + 'kaiteiden ja pylväiden riveinä, ja jokaisen kaaren alla palaa '
             + 'oma valaisimensa.',
@@ -77023,6 +77190,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kun kumin hinta romahti, generaattoreiden käyttö kävi liian '
             + 'kalliiksi, eikä kaupunki kyennyt tuottamaan sähköä uudelleen '
             + 'vuosiin.',
+          lyhyt: 'Kelluvan sataman ponttonilaiturit kaartuvat ulos rannasta, kiinnitettynä valkoisia jokilaivoja.',
           selite: 'Kelluvan sataman ponttonilaiturit kaartuvat ulos '
             + 'rannasta, ja niihin on kiinnitetty rivi valkoisia '
             + 'kaksikerroksisia jokilaivoja.',
@@ -77043,6 +77211,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'niillä jäljiteltiin 1900-luvun alun Lontoon rakennuksia. '
             + 'Viereinen vartiotalo Guardamoria sai torniinsa teräksisen '
             + 'majakan ja avattiin 17. tammikuuta 1909.',
+          lyhyt: 'Tullitalon punatiilinen ja vaalea julkisivu jatkuu kaarien rivinä korttelin mitalta.',
           selite: 'Tullitalon punatiilinen ja vaalea julkisivu jatkuu '
             + 'kaarikkeiden rivinä koko korttelin mitalta, ja oikealla '
             + 'kohoaa Guardamorian torni.',
@@ -77065,6 +77234,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'työ oli tavallista; baré-kansaa portugalilaiset ja '
             + 'espanjalaiset kauppiaat pitivät velkaorjina '
             + 'vuosikymmenten ajan.',
+          lyhyt: 'Kumipuun kuoreen viilletty kierteinen ura ohjaa maitiaisnesteen rungon juurella olevaan kuppiin.',
           selite: 'Kumipuun kuoreen viilletty kierteinen ura ohjaa valkoista '
             + 'maitiaisnestettä rungon juurella olevaan kuppiin.',
           lahde: 'Wee Hong, Wikimedia Commons (CC BY-SA 4.0)',
@@ -77106,6 +77276,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'taistelut laantuivat vasta kun portugalilaiset alkoivat '
             + 'solmia avioliittoja kasiikkien tyttärien kanssa, mistä sai '
             + 'alkunsa alueen caboclo-väestö.',
+          lyhyt: 'Aamu sarastaa Rio Negrolla: pilvet kaartuvat metsärajan yllä, tyyni vesi heijastaa ne takaisin.',
           selite: 'Aamu sarastaa Rio Negrolla: pilvet kaartuvat matalan '
             + 'metsärajan yllä ja tyyni vesi heijastaa ne takaisin.',
           lahde: 'Isabelle Allet-Coche, Wikimedia Commons (CC BY-SA 4.0)',
@@ -77125,6 +77296,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nimeltä guerra justa. Vangittuna ja matkalla oikeuden eteen '
             + 'Ajuricaba hyppäsi jokeen noin vuonna 1728. Hänen nimensä '
             + 'merkitsee mehiläisparvea.',
+          lyhyt: '1700-luvun lopun piirroksessa Barcelosin kylä on matala talorivi Rio Negron rannalla.',
           selite: '1700-luvun lopun piirroksessa Barcelosin kylä on matala '
             + 'valkoisten talojen rivi Rio Negron rannalla, ja edustalla '
             + 'keinuu muutama purjevene.',
@@ -77145,6 +77317,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'karmeliitat levittivät siirtomaa-aikana. Cumati-putouksen '
             + 'alapuolella yhteisöt ovat protestanttisia ja yläpuolella '
             + 'katolisia, ja molemmissa parantajina toimivat yhä šamaanit.',
+          lyhyt: 'Ilmakuvassa Assunção do Içanan kylä levittäytyy joenmutkan niemekkeelle, rannalla veneitä.',
           selite: 'Ilmakuvassa Assunção do Içanan kylä levittäytyy '
             + 'joenmutkan niemekkeelle, ja rantahiekan edessä on rivi '
             + 'veneitä.',
@@ -77165,6 +77338,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oli ratkaisevaa nykyisen Amazonasin osavaltion synnylle. '
             + 'Kapina vähensi silloisen Grão-Parán väkiluvun noin '
             + '100 000:sta 60 000:een.',
+          lyhyt: '1800-luvun kaiverruksessa purjelaiva ja soutuvene kulkevat Belémin edustalla.',
           selite: '1800-luvun alun kaiverruksessa purjelaiva ja soutuvene '
             + 'kulkevat Belémin edustalla, ja rannalla jatkuu matala '
             + 'talorivi kirkon kaksine torneineen.',
@@ -77447,18 +77621,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Caracas y mi Ávila desde su valle.jpg',
+          lyhyt: 'Ávilan metsäinen rinne nousee suoraan kerrostalokortteleiden takaa ja sulkee laakson.',
           selite: 'Ávilan metsäinen rinne nousee suoraan kaupungin '
             + 'kerrostalokortteleiden takaa ja sulkee laakson pohjoisreunan.',
           lahde: 'WILLIAM REYNA, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Caracas from the Avila National Park in 2016.jpg',
+          lyhyt: 'Vuoren rinteeltä keskustan tornit erottuvat laakson keskeltä, kaupunki jatkuu kukkuloille.',
           selite: 'Vuoren rinteeltä katsottuna keskustan tornit erottuvat '
             + 'laakson keskeltä ja kaupunki jatkuu ympäröiville kukkuloille.',
           lahde: 'Oscar Costero, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ciudad de Caracas City, Venezuela 1.jpg',
+          lyhyt: 'Laakson eteläpuolelta avautuu koko rannikkovuoriston harjanne, kaupunki jää kapeana nauhana.',
           selite: 'Laakson eteläpuolelta avautuu koko rannikkovuoriston '
             + 'harjanne, ja kaupunki jää sen juurelle kapeaksi nauhaksi.',
           lahde: 'Warairarepano&Guaicaipuro, Wikimedia Commons (CC0)',
@@ -77467,6 +77644,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Caracas view from UCV grounds towards the east 2012.jpg',
+          lyhyt: 'Yliopiston mailta iltapäivän valo osuu keskustan torneihin, Ávila kohoaa takana.',
           selite: 'Yliopiston mailta itään katsottuna iltapäivän valo osuu '
             + 'keskustan torneihin ja Ávila kohoaa niiden takana.',
           lahde: 'JCFG1989, Wikimedia Commons (CC BY-SA 3.0)',
@@ -77500,6 +77678,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuonna: pormestari Francisco de Infante sai käskyn vangita '
             + 'hänet, ja miehet sytyttivät hänen majansa tuleen saadakseen '
             + 'hänet ulos.',
+          lyhyt: 'Pronssinen Guaicaipuro seisoo keihäs koholla jalustalla, jossa on päällikön muistolaatta.',
           selite: 'Pronssinen Guaicaipuro seisoo keihäs koholla kivijalustan '
             + 'päällä, ja jalustaan on kiinnitetty päällikön muistolaatta.',
           lahde: 'Ramyz18, Wikimedia Commons (CC BY-SA 3.0)',
@@ -77537,6 +77716,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '10 000–12 000:een. Itsenäisyyssota oli käynnissä, ja '
             + 'kuninkaan puolta pitäneet selittivät tuhon jumalan '
             + 'rangaistukseksi kapinasta.',
+          lyhyt: 'Katedraalin sivukappelin kultainen barokkialttari on valaistu violetiksi.',
           selite: 'Katedraalin sivukappelissa kultainen barokkialttari on '
             + 'valaistu violetiksi, ja sen edessä seisovat Venezuelan ja '
             + 'Vatikaanin liput.',
@@ -77557,6 +77737,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'myös kaupunginvaltuusto vahvisti sen. Synnyintalon osti 1876 '
             + 'presidentti Guzmán Blanco – sama mies, joka oli pystyttänyt '
             + 'hänen patsaansa pääaukiolle.',
+          lyhyt: 'Bolívarin synnyintalon valkoiseksi kalkittu holvikaari avautuu pihalle kahden puun kanssa.',
           selite: 'Bolívarin synnyintalon valkoiseksi kalkittu holvikaari '
             + 'avautuu pihalle, jonka nurmikolla kasvaa kaksi pientä puuta.',
           lahde: 'Ricardo Juliao, Wikimedia Commons (CC BY-SA 3.0)',
@@ -77566,6 +77747,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: '02teleferico.jpg',
+          lyhyt: 'Köysiradan vaijeri nousee vuorimetsän yli harjanteelle, jossa asema ja mastot erottuvat.',
           selite: 'Köysiradan vaijeri nousee tiheän vuorimetsän yli '
             + 'harjanteelle, jossa asema ja mastot erottuvat taivasta '
             + 'vasten.',
@@ -77633,6 +77815,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'yhdessä ne muodostavat Suur-Caracasin.',
               kuva: {
                 tiedosto: 'ISS027-E-9881 - View of Venezuela - Caracas - Catia La Mar - La Guaira - Caraballeda - Venezuelan Coastal Range - Caribbean Sea (cropped).jpg',
+                lyhyt: 'Avaruusaseman kuvassa näkyy rannikko satamineen, vuoristo keskellä ja Caracas alavasemmalla.',
                 selite: 'Avaruusaseman kuvassa näkyy koko asetelma kerralla: '
                   + 'rannikko lentokenttineen ja satamineen ylhäällä, '
                   + 'vuoristo keskellä ja Caracasin laakso alavasemmalla.',
@@ -77657,6 +77840,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'paistettujen banaaniviipaleiden kanssa.',
               kuva: {
                 tiedosto: 'Arepas (32187739776).jpg',
+                lyhyt: 'Halkaistut arepat on täytetty lihalla ja juustolla, kuori paistettu kevyesti ruskeaksi.',
                 selite: 'Halkaistut arepat on täytetty lihalla ja juustolla, '
                   + 'ja jauhoinen kuori on paistettu kevyesti ruskeaksi.',
                 lahde: 'Luca Nebuloni, Wikimedia Commons (CC BY 2.0)',
@@ -77750,6 +77934,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Simón Bolívarin ja Guzmán Blancon rintakuvat vierekkäin: '
             + 'presidentti asetti itsensä muistomerkkiin samalle tasolle '
             + 'vapauttajan kanssa.',
+          lyhyt: 'Capitolion kolmiopäädyssä lepäävät allegoriset hahmot vaakunan molemmin puolin.',
           selite: 'Capitolion kolmiopäädyssä lepäävät allegoriset hahmot '
             + 'vaakunan molemmin puolin, ja päädyn reunoilla seisoo '
             + 'jalustoillaan kaksi rintakuvaa.',
@@ -77770,6 +77955,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskilaivan hallitsee yksin hänen pronssinen sarkofaginsa, '
             + 'ja katossa loistaa kristallikruunu, joka asennettiin 1883 '
             + 'hänen syntymänsä satavuotispäivänä.',
+          lyhyt: 'Ferdinand Bellermann piirsi 1840-luvulla Santísima Trinidad -kirkon rauniot.',
           selite: 'Ferdinand Bellermann piirsi 1840-luvulla Santísima '
             + 'Trinidad -kirkon rauniot, joiden paikalle Panteón Nacional '
             + 'myöhemmin rakennettiin.',
@@ -77831,6 +78017,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'metriin. Suojelualueella on dokumentoitu yli 500 lintulajia '
             + '– runsas kolmannes koko maan linnustosta – noin 120 '
             + 'nisäkäslajia, yli sata perhoslajia ja yli 1 800 kasvilajia.',
+          lyhyt: 'Sammalten, saniaisten ja bromelioiden peittämät oksat kertovat pilvien päivittäisestä kastelusta.',
           selite: 'Sammalten, saniaisten ja bromelioiden peittämät oksat '
             + 'kertovat, että harjanteen läpi kulkevat pilvet kastelevat '
             + 'metsän päivittäin.',
@@ -77851,6 +78038,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Angelin putoukseksi. Tarkka korkeus mitattiin vasta '
             + '13. toukokuuta 1949 yhdysvaltalaisen toimittajan Ruth '
             + 'Robertsonin rahoittamalla retkikunnalla.',
+          lyhyt: 'Vesipatsas syöksyy pöytävuoren punaruskealta seinämältä ja sumuuntuu jo puolimatkassa.',
           selite: 'Vesipatsas syöksyy pöytävuoren punaruskealta seinämältä ja '
             + 'sumuuntuu jo puolimatkassa kallion edessä.',
           lahde: 'Stratokumulus, Wikimedia Commons (CC BY 4.0)',
@@ -77889,6 +78077,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1928 mennessä Venezuela oli maailman suurin öljynviejä, ja '
             + 'öljystä tuli maan tärkein vientituote. Valtion öljy-yhtiön '
             + 'pääkonttori on Caracasissa.',
+          lyhyt: 'Vanhassa valokuvassa Maracaibo-järven matalikolla seisoo rivi ristikkorakenteisia poraustorneja.',
           selite: 'Vanhassa valokuvassa Maracaibo-järven matalikolla seisoo '
             + 'rivi ristikkorakenteisia poraustorneja puulaitureineen.',
           lahde: 'Unknown author, Wikimedia Commons (PD)',
@@ -77931,6 +78120,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yli 400 musiikkikeskusta ja 700 000 nuorta soittajaa, ja '
             + 'sen esimerkin mukaan on perustettu ohjelmia yli '
             + 'kuudessakymmenessä maassa.',
+          lyhyt: 'Musiikin kansallisen keskuksen julkisivulta riippuu keltainen kineettinen pallo.',
           selite: 'Musiikin kansallisen keskuksen betonijulkisivulta riippuu '
             + 'keltainen kineettinen pallo, joka on koottu tuhansista '
             + 'ohuista tangoista.',
@@ -77952,6 +78142,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Soittajia on 180, eikä se ole enää nuoriso-orkesteri: '
             + 'vuoteen 2011 mennessä keski-ikä oli noussut yli '
             + 'kahdenkymmenen.',
+          lyhyt: 'Teresa Carreño -kulttuurikeskuksen betoniset kattolevyt kelluvat pilarien varassa.',
           selite: 'Teresa Carreño -kulttuurikeskuksen betoniset kattolevyt '
             + 'kelluvat pilarien varassa kuin päällekkäiset laatat.',
           lahde: 'Angel Castillo, Wikimedia Commons (CC BY-SA 3.0)',
@@ -77971,6 +78162,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin 1944–1967; Unesco otti kampuksen '
             + 'maailmanperintöluetteloon vuonna 2000 ja nimesi pilvet '
             + 'erikseen.',
+          lyhyt: 'Aula Magnan kattoon on ripustettu kymmeniä värillisiä kaarevia levyjä, jotka kelluvat kuin pilvet.',
           selite: 'Aula Magnan kattoon on ripustettu kymmeniä värillisiä '
             + 'kaarevia levyjä, jotka kelluvat katsomon yllä kuin pilvet.',
           lahde: 'GermanX, Wikimedia Commons (CC BY-SA 4.0)',
@@ -77991,6 +78183,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '19. syyskuuta 1914, ja sitä kutsutaan maan toiseksi '
             + 'kansallislauluksi. Unesco otti joropon aineettoman '
             + 'kulttuuriperinnön luetteloon 2025.',
+          lyhyt: '1800-luvun kaiverruksessa katumuusikot soittavat harppua ja rumpua kuistin edessä.',
           selite: '1800-luvun kaiverruksessa katumuusikot soittavat harppua '
             + 'ja rumpua talon kuistin edessä ohikulkijoiden pysähtyessä '
             + 'kuuntelemaan.',
@@ -78233,6 +78426,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Raul Golinelli Elevador Lacerda Mercado Modelo Salvador Bahia Brasil.jpg',
+          lyhyt: 'Lacerdan hissin torni erottaa Yläkaupungin Alakaupungista; takana Kaikkien pyhien lahti.',
           selite: 'Lacerdan hissin torni erottaa Yläkaupungin '
             + 'Alakaupungista, ja sen takana avautuu Kaikkien pyhien lahti '
             + 'venesatamineen, Mercado Modelon keltainen tullitalo ja '
@@ -78241,6 +78435,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Panorama Salvador com Farol da Barra (52620265937).jpg',
+          lyhyt: 'Barran niemen kärjessä seisoo Santo Antônion linnake majakkoineen, takaa alkaa tornirivi.',
           selite: 'Barran niemen kärjessä seisoo Santo Antônion linnake '
             + 'majakkoineen, ja sen takaa alkaa kaupungin tornirivi, joka '
             + 'jatkuu koko rannikon suuntaisesti.',
@@ -78248,6 +78443,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'MARCIO FILHO PELOURINHO SALVADOR BAHIA (40369900734).jpg',
+          lyhyt: 'Largo do Pelourinhon mukulakiviaukiolla siirtomaa-ajan talot on maalattu värikkäiksi.',
           selite: 'Largo do Pelourinhon vinolla mukulakiviaukiolla '
             + 'siirtomaa-ajan talot on maalattu vihreiksi, sinisiksi ja '
             + 'vaaleanpunaisiksi, ja aukion päästä katu laskee kohti merta.',
@@ -78257,6 +78453,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Centro Histórico Salvador Vista Aérea 2021-0933.jpg',
+          lyhyt: 'Historiallisen keskustan tiilikatot peittävät jyrkänteen laen, takana aallonmurtaja.',
           selite: 'Historiallisen keskustan tiilikatot peittävät koko '
             + 'jyrkänteen laen, ja niiden takana näkyvät sataman aallonmurtaja '
             + 'ja Kaikkien pyhien lahti.',
@@ -78264,6 +78461,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Vista de Salvador da ponta da Barra.jpg',
+          lyhyt: 'Mereltä katsottuna kaupunki täyttää kolmion muotoisen niemen, jonka kärjessä on Barran majakka.',
           selite: 'Mereltä katsottuna kaupunki täyttää koko kolmion '
             + 'muotoisen niemen, jonka kärjessä Barran majakka erottaa lahden '
             + 'Atlantista.',
@@ -78271,6 +78469,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Webysther 20150907165153 - Mercado modelo e baia de todos os santos.jpg',
+          lyhyt: 'Yläkaupungin reunalta Alakaupunki jää alapuolelle, lahdella venesatama ja rahtilaivat.',
           selite: 'Yläkaupungin reunalta katsottuna Alakaupunki jää suoraan '
             + 'alapuolelle, ja lahdella näkyvät venesatama, rahtilaivat ja '
             + 'São Marcelon linnake.',
@@ -78291,6 +78490,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hallittiin koko Portugalin Brasiliaa vuoteen 1763, jolloin '
             + 'hallinto siirrettiin Rio de Janeiroon, josta tuli samalla '
             + 'varakuningaskunnan pääkaupunki.',
+          lyhyt: 'Amédée François Frézier\'n vuoden 1714 kuparipiirroksessa on näkymä lahdelta ja asemakaava.',
           selite: 'Amédée François Frézier\'n vuoden 1714 kuparipiirroksessa '
             + 'on ylhäällä näkymä kaupunkiin lahdelta ja alhaalla '
             + 'asemakaava, jonka kirjaimet ja numerot viittaavat reunaan '
@@ -78310,6 +78510,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Barran ranta, joka on Yläkaupungin puolella mutta katsoo '
             + 'silti lahdelle. Brittilehti The Guardian valitsi sen 2007 '
             + 'maailman kolmanneksi parhaaksi rannaksi.',
+          lyhyt: 'Mereltä katsottuna jyrkänne erottaa Alakaupungin venesataman ylhäällä olevasta vanhastakaupungista.',
           selite: 'Mereltä katsottuna jyrkänne erottaa selvästi Alakaupungin '
             + 'venesataman ja Mercado Modelon ylhäällä olevasta '
             + 'vanhastakaupungista, jonne noustaan Lacerdan hissillä.',
@@ -78329,6 +78530,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valaanpyyntisatamista – '
             + 'mutta pyynti oli jo hiipumassa 1870-luvulle tultaessa, juuri '
             + 'isoisän matka-aikoihin.',
+          lyhyt: 'Solar do Unhãon vanha kartano kappeleineen seisoo lahden rannassa venesataman edustalla.',
           selite: 'Solar do Unhãon vanha kartano kappeleineen seisoo lahden '
             + 'rannassa, ja sen edessä levittäytyy venesatama, jonka takana '
             + 'näkyvät sataman nosturit.',
@@ -78347,6 +78549,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1699 nähneensä linnoituksen lyhtyjen opastavan laivoja yöllä. '
             + 'Nykyinen 22-metrinen torni tilattiin Englannista, ja '
             + 'Pedro II vihki sen käyttöön 2. joulukuuta 1839.',
+          lyhyt: 'Mustavalkoraidallinen majakkatorni nousee Santo Antônion linnakkeen keskeltä, juurella vanha tykki.',
           selite: 'Mustavalkoraidallinen majakkatorni nousee Santo Antônion '
             + 'linnakkeen keskeltä, ja sen juurella lepää vanha '
             + 'tykinputki.',
@@ -78357,6 +78560,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Igreja de Nossa Senhora do Rosário dos Pretos Salvador 2018-1153.jpg',
+          lyhyt: 'Rosário dos Pretosin vaaleansininen kirkko Pelourinhossa rakennettiin mustien veljeskunnan varoin.',
           selite: 'Rosário dos Pretosin vaaleansininen kirkko Pelourinhon '
             + 'laidalla rakennettiin mustien veljeskunnan omin varoin, ja '
             + 'siellä pidetään messuja joruban kielellä.',
@@ -78398,6 +78602,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lähtee Alakaupungista.',
               kuva: {
                 tiedosto: 'Estação da linha 1 do metrô de Salvador.jpg',
+                lyhyt: 'Metron ykköslinjan keltainen putkiasema kaartuu moottoritien yli, kaupunki jatkuu rinteitä pitkin.',
                 selite: 'Metron ykköslinjan keltainen putkiasema kaartuu '
                   + 'moottoritien yli, ja sen ympärillä kaupunki jatkuu '
                   + 'rinteitä pitkin joka suuntaan.',
@@ -78439,6 +78644,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Latinalaisen Amerikan suurin.',
               kuva: {
                 tiedosto: 'Fitas senhor do bonfim salvador.jpg',
+                lyhyt: 'Bonfim-kirkon aidan pylväisiin on solmittu satoja värillisiä nauhoja kirkon nimellä.',
                 selite: 'Bonfim-kirkon aidan pylväisiin on solmittu satoja '
                   + 'värillisiä nauhoja, joihin on painettu kirkon nimi.',
                 lahde: 'Py4nf, Wikimedia Commons (CC BY-SA 4.0)',
@@ -78460,6 +78666,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Brasilian primas.',
               kuva: {
                 tiedosto: 'Catedral Basílica de Salvador 2019-6525.jpg',
+                lyhyt: 'Katedraalin vaalea kivijulkisivu Terreiro de Jesusin laidalla on hillityn manieristinen.',
                 selite: 'Katedraalin vaalea kivijulkisivu Terreiro de '
                   + 'Jesusin laidalla on hillityn manieristinen, ja sen '
                   + 'päätykolmiossa lukee jesuiittojen tunnus IHS.',
@@ -78520,6 +78727,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nykyiselle Praça da Piedadelle, mutta nimi jäi elämään koko '
             + 'historiallisen keskustan nimenä. Alue on ollut Unescon '
             + 'maailmanperintökohde vuodesta 1985.',
+          lyhyt: 'Praça da Piedaden aukio 1800-luvulla: kirkon kupoli ja kellotorni matalien talojen takana.',
           selite: 'Praça da Piedaden aukio 1800-luvulla kuvattuna: kirkon '
             + 'kupoli ja kellotorni kohoavat matalien talojen takaa, ja '
             + 'aukion poikki ajaa ratsastaja.',
@@ -78539,6 +78747,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'matkusti 1873, orjuus oli Brasiliassa yhä laillista: se '
             + 'lakkautettiin vasta 13. toukokuuta 1888, viimeisenä Amerikan '
             + 'mantereen maista.',
+          lyhyt: 'Salvadorin satamassa on nykyään konttiterminaali, takana avautuu Kaikkien pyhien lahti.',
           selite: 'Salvadorin satamassa on nykyään konttiterminaali '
             + 'nostureineen, ja sen takana avautuu Kaikkien pyhien lahti.',
           lahde: 'Paul R. Burley, Wikimedia Commons (CC0)',
@@ -78558,6 +78767,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Municipalille. Noin kaksisataa selvinnyttä karkotettiin '
             + 'takaisin Länsi-Afrikkaan, ja heidän jälkeläisiään on yhä '
             + 'muun muassa Lagosissa ja Ghanassa.',
+          lyhyt: 'Praça Municipalin mukulakiviaukiolla seisoo Rio Brancon palatsi ja siirtomaa-ajan kaupungintalo.',
           selite: 'Praça Municipalin laajalla mukulakiviaukiolla seisoo '
             + 'Rio Brancon palatsi, ja aukion toisella laidalla on '
             + 'siirtomaa-ajan kaupungintalo.',
@@ -78619,6 +78829,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'useimmiten naiset, papittaret joita kutsutaan nimellä mãe de '
             + 'santo. Kaupunki on uskonnon keskus: vuoden 1997 laskennassa '
             + 'Salvadorissa oli 1 144 toimivaa temppeliä.',
+          lyhyt: 'Dique do Tororón tekojärvessä seisoo kahdeksan suurikokoista orixá-veistosta.',
           selite: 'Dique do Tororón tekojärvessä seisoo kahdeksan '
             + 'suurikokoista orixá-veistosta, joista kukin kantaa oman '
             + 'jumaluutensa tunnusesinettä.',
@@ -78637,6 +78848,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tunnustetun taidemuodon ensin Brasiliassa ja sitten '
             + 'maailmalla. Musiikin johtaa berimbau, yksikielinen '
             + 'jousisoitin, jonka ääni määrää rinkiin pelin nopeuden.',
+          lyhyt: 'Kadulle pystytetyssä telineessä riippuu rivi myytäviä berimbaueja kirkkain kalebassikaikupohjin.',
           selite: 'Kadulle pystytetyssä telineessä riippuu rivi myytäviä '
             + 'berimbaueja, joiden kalebassikaikupohjat on maalattu '
             + 'kirkkain värein.',
@@ -78655,6 +78867,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kävelee tammikuussa kahdeksan kilometriä Conceiçãon '
             + 'basilikalta Bonfimin kukkulalle ja kaataa tuoksuvettä '
             + 'portaille joruban kielisten laulujen ja rumpujen tahtiin.',
+          lyhyt: 'Valkopukuinen baiana nojaa Bonfim-kirkon vihreään oveen, vierellä tuhansia toivenauhoja.',
           selite: 'Valkopukuinen baiana nojaa Bonfim-kirkon vihreään oveen, '
             + 'ja hänen vierellään roikkuu tuhansia toivenauhoja.',
           lahde: 'Turismo Bahia, Wikimedia Commons (CC BY-SA 2.0)',
@@ -78672,6 +78885,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'afrobrasilialaisen kulttuurin esiin karnevaalin '
             + 'valtavirrasta. Niiden luoma axé ja samba-reggae soivat '
             + 'nykyään koko Brasiliassa.',
+          lyhyt: 'Blocon rummuttajat kantavat olkahihnoissaan surdo-rumpuja, kalvoissa ryhmän omat värit.',
           selite: 'Blocon rummuttajat kantavat olkahihnoissaan suuria '
             + 'surdo-rumpuja, joiden kalvoihin on maalattu ryhmän omat '
             + 'värit.',
@@ -78714,6 +78928,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'perheenjäsenensä vapaaksi. Kaupungissa toimii yhä yli 500 '
             + 'myyjää, ja kulttuuriperintövirasto IPHAN listasi 2004 sekä '
             + 'ruoan että baianojen ammatin kansallisperinnöksi.',
+          lyhyt: 'Myyntikojun leveässä pannussa kohoaa parikymmentä acarajéta kiehuvassa dendê-öljyssä.',
           selite: 'Myyntikojun leveässä pannussa kohoaa parikymmentä '
             + 'acarajéta kiehuvassa oranssissa dendê-palmuöljyssä.',
           lahde: 'MTur Destinos, Wikimedia Commons (PD)',
@@ -78750,6 +78965,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rapadura-sokerista tehtiin kookosmakeiset cocada branca ja '
             + 'cocada preta. Kaikki kolme perinnettä ovat yhä samalla '
             + 'lautasella.',
+          lyhyt: 'Savipadassa höyryävässä moquecassa on katkarapuja, kalmaria, paprikaa ja tomaattia.',
           selite: 'Savipadassa höyryävässä moquecassa on katkarapuja, '
             + 'kalmaria, paprikaa ja tomaattia, ja vieressä odottaa '
             + 'maniokkijauhosta tehty farofa.',
@@ -78768,6 +78984,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laivojen purkupaikaksi. São Joaquimin, Santa Bárbaran ja São '
             + 'Miguelin toreilla myydään perinneruokia kojuilta, ja '
             + 'rannoilla myyntipöydiltä saa rapumuhennosta ja ostereita.',
+          lyhyt: 'Mercado Modelon keltainen tullitalo seisoo Cayrún aukion laidalla mosaiikkipäällysteen edessä.',
           selite: 'Mercado Modelon keltainen uusklassinen tullitalo seisoo '
             + 'Cayrún aukion laidalla, ja sen edessä on mustavalkoinen '
             + 'aaltokuvioinen mosaiikkipäällyste.',
@@ -78938,6 +79155,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Porto Alegre Skyline.JPG',
+          lyhyt: 'Porto Alegre on rakennettu Guaíban itärannalle; tornien takaa erottuu tuomiokirkon kupoli.',
           selite: 'Porto Alegre on rakennettu Guaíban itärannalle, ja '
             + 'keskustan tornien takaa erottuvat tuomiokirkon kupoli ja '
             + 'osavaltion hallintokorttelit.',
@@ -78945,6 +79163,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Cais Mauá by Renato Soares (edited).jpg',
+          lyhyt: 'Cais Maúan laiturit, nosturit ja varastohallit ovat kaupungin vanha satama Guaíban rannassa.',
           selite: 'Cais Maúan laiturit, nosturit ja niiden takana '
             + 'nousevat varastohallit ovat kaupungin vanha satama '
             + 'Guaíban rannassa.',
@@ -78966,6 +79185,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Vista de Porto Alegre a partir do Rio Guaíba 01.jpg',
+          lyhyt: 'Keskustan tornirivi nousee suoraan sataman varastohallien takaa, rantaviiva jatkuu molemmin suunnin.',
           selite: 'Keskustan tornirivi nousee suoraan sataman '
             + 'varastohallien takaa, ja rantaviiva jatkuu molempiin '
             + 'suuntiin niin pitkälle kuin näkyy.',
@@ -78973,12 +79193,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Fog over Guaiba River.jpg',
+          lyhyt: 'Kaupungin eteläpuolella maasto nousee kukkuloiksi, joiden takaa Guaíba avautuu laajaksi vedeksi.',
           selite: 'Kaupungin eteläpuolella maasto nousee kukkuloiksi, '
             + 'joiden takaa Guaíba avautuu laajaksi vesialueeksi.',
           lahde: 'Felipe Valduga, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Acro-íris no chafariz do Parque Farroupilha Porto Alegre.jpg',
+          lyhyt: 'Parque Farroupilha eli Redenção on kaupungin keskuspuisto lampineen ja suihkulähteineen.',
           selite: 'Parque Farroupilha eli Redenção on kaupungin '
             + 'keskuspuisto, ja sen lampi ja suihkulähde ovat aivan '
             + 'keskustan kupeessa.',
@@ -78996,6 +79218,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Porto Alegre, Rio Grande do Sul circa 1903.jpg',
           vuosi: 'noin 1903',
+          lyhyt: 'Sadan vuoden takainen Porto Alegre oli matalien talojen kaupunki, kukkulat vielä tyhjinä.',
           selite: 'Sadan vuoden takainen Porto Alegre oli matalien '
             + 'talojen kaupunki, jonka takana kukkulat näkyivät vielä '
             + 'tyhjinä.',
@@ -79003,6 +79226,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Panoramic of Historic Center, Porto Alegre, Brazil 2014-01-18.JPG',
+          lyhyt: 'Sama historiallinen keskusta on jäänyt tornitalojen väliin, kaupunki jatkuu kukkuloille asti.',
           selite: 'Sama historiallinen keskusta on jäänyt tornitalojen '
             + 'väliin, ja kaupunki jatkuu nykyään niille kukkuloille '
             + 'asti.',
@@ -79023,6 +79247,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1912, 1976, 1979 ja 2013 sekä vuoden 1941 suurtulvasta. '
             + 'Viimeisimmässä palossa 6. heinäkuuta 2013 tuhoutui noin '
             + 'kolmannes rakenteista. Hallissa on nykyään 109 liikettä.',
+          lyhyt: 'Mercado Público on seissyt keskustan torin laidalla vuodesta 1869, kulmassa Bar Naval.',
           selite: 'Mercado Público on seissyt keskustan torin laidalla '
             + 'vuodesta 1869, ja sen kulmassa toimii yhä yli satavuotias '
             + 'Bar Naval.',
@@ -79042,6 +79267,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'perustivat Internacionalin nimenomaan ilman '
             + 'ennakkoluuloja avoimena seurana. Näiden kahden ottelu on '
             + 'nimeltään Grenal.',
+          lyhyt: 'Estádio Beira-Rio on Internacionalin kotikenttä Guaíban rannalla, Grêmio pelaa Humaitássa.',
           selite: 'Estádio Beira-Rio on Internacionalin kotikenttä '
             + 'Guaíban rannalla, ja Grêmio pelaa toisella puolella '
             + 'kaupunkia Humaitán kaupunginosassa.',
@@ -79060,6 +79286,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kampanja pelasti sen: maa-alue siirtyi kaupungille 1982, '
             + 'rakennus suojeltiin 1982 ja 1983, restauroitiin 1988 ja '
             + 'avattiin kulttuurikeskuksena 1991.',
+          lyhyt: 'Usina do Gasômetron piippu on kaupungin tunnetuin maamerkki, kulttuurikeskuksena vuodesta 1991.',
           selite: 'Usina do Gasômetron piippu on kaupungin tunnetuin '
             + 'maamerkki Guaíban rannalla, ja rakennus on toiminut '
             + 'kulttuurikeskuksena vuodesta 1991.',
@@ -79080,6 +79307,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kiertyvät toistensa lomaan. Säätiön kunniapresidenttinä '
             + 'toimii taiteilijan '
             + 'leski Maria Coussirat Camargo.',
+          lyhyt: 'Fundação Iberê Camargo avattiin 2008 Guaíban rantaan; suunnittelija Álvaro Siza.',
           selite: 'Fundação Iberê Camargo avattiin 2008 Guaíban rantaan '
             + 'Cristalin kaupunginosaan, ja sen suunnitteli '
             + 'portugalilainen Álvaro Siza.',
@@ -79127,6 +79355,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Argentiinaan asti.',
               kuva: {
                 tiedosto: 'Cais do porto de Porto Alegre visto do Guaíba.JPG',
+                lyhyt: 'Cais Maúan varastohallit muodostavat yhtenäisen rivin, päässä Usina do Gasômetron piippu.',
                 selite: 'Cais Maúan varastohallit muodostavat yhtenäisen '
                   + 'rivin Guaíban rantaan, ja rivin päässä kohoaa Usina '
                   + 'do Gasômetron piippu.',
@@ -79149,6 +79378,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'UV-säteilyä.',
               kuva: {
                 tiedosto: 'Aerial photograph of Porto Alegre (5744748343).jpg',
+                lyhyt: 'Kaupunki nousee kukkuloille myös keskustan ulkopuolella, laaksot ovat puiden peitossa.',
                 selite: 'Kaupunki nousee kukkuloille myös keskustan '
                   + 'ulkopuolella, ja rinteiden väliin jäävät laaksot '
                   + 'ovat puiden peitossa.',
@@ -79182,6 +79412,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'itseään.',
               kuva: {
                 tiedosto: 'Muro da Mauá (Porto Alegre, Brasil) 11.JPG',
+                lyhyt: 'Muro da Mauá on vuoden 1941 tulvan jälkeen rakennettu penger, jonka pintaan on maalattu muraaleja.',
                 selite: 'Muro da Mauá on vuoden 1941 tulvan jälkeen '
                   + 'rakennettu penger, jonka betonipintaan on '
                   + 'sittemmin maalattu muraaleja.',
@@ -79242,6 +79473,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Virallinen perustamispäivä on 26. maaliskuuta 1772, ja '
             + 'vuotta myöhemmin, 24. heinäkuuta 1773, kylästä tuli '
             + 'maakunnan pääkaupunki.',
+          lyhyt: 'Praça da Matriz on kaupungin ruutukaavan historiallinen keskus tuomiokirkkoineen ja teattereineen.',
           selite: 'Praça da Matriz on kaupungin ruutukaavan '
             + 'historiallinen keskus, ja sen ympärillä ovat '
             + 'tuomiokirkko, osavaltion hallintopalatsi ja Theatro São '
@@ -79262,6 +79494,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lokakuuta 1841 arvonimen Leal e Valorosa, uskollinen ja '
             + 'urhea, ja se lukee yhä vaakunassa. Sota päättyi 1. '
             + 'maaliskuuta 1845.',
+          lyhyt: 'L. P. Diasin vuoden 1839 kartassa on merkitty vuodesta 1836 kaupunkia puolustanut linja.',
           selite: 'L. P. Diasin vuoden 1839 kartassa on merkitty '
             + 'kaivantojen ja varustusten linja, joka oli puolustanut '
             + 'kaupunkia 15. kesäkuuta 1836 lähtien, sekä kaksi '
@@ -79281,6 +79514,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Serra Gaúchan vuoristoon; vuoteen 1914 mennessä heitä oli '
             + 'tullut satatuhatta. Isoisän matkavuosi osuu siis näiden '
             + 'kahden aallon väliin.',
+          lyhyt: 'São Leopoldon 25. heinäkuuta -silta on nimetty saksalaissiirtolaisten saapumispäivästä 1824.',
           selite: 'São Leopoldon 25. heinäkuuta -silta on nimetty '
             + 'päivästä, jona ensimmäiset saksalaissiirtolaiset '
             + 'asettuivat Rio dos Sinosin rannalle 1824.',
@@ -79300,6 +79534,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Angolasta. Kun Uruguayn ja Argentiinan halvempi kuivaliha '
             + 'alkoi 1830-luvulla syrjäyttää gaúcho-tuottajia, '
             + 'tyytymättömyydestä tuli yksi kapinan syistä.',
+          lyhyt: 'Charque on suolattua ja kuivattua naudanlihaa, 1800-luvulla Rio Grande do Sulin tärkein elinkeino.',
           selite: 'Charque on suolattua ja kuivattua naudanlihaa, ja sen '
             + 'valmistus oli 1800-luvulla Rio Grande do Sulin tärkein '
             + 'elinkeino.',
@@ -79341,6 +79576,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kentiksi, juhlistamaan kaupungin varhaista orjuuden '
             + 'lakkautusta — neljä vuotta ennen koko Brasilian '
             + 'lakkautusta. Nykyinen puisto muotoutui 1935.',
+          lyhyt: 'Brique da Redenção on sunnuntain kirpputori puistossa, joka sai muotonsa 1935 satavuotisjuhliin.',
           selite: 'Brique da Redenção on sunnuntaisin puistokadulle '
             + 'levittäytyvä kirpputori, ja puisto sai nykyisen muotonsa '
             + '1935 Farroupilha-kapinan satavuotisjuhliin.',
@@ -79360,6 +79596,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ruokailee jalohaikaroita. Rauhallinen se ei aina ole: '
             + 'vuoden 1941 suurtulvassa Guaíba nousi 4,76 metriin, ja '
             + 'lukema pysyi ennätyksenä yli kahdeksankymmentä vuotta.',
+          lyhyt: 'Jalohaikara kalastaa Guaíban matalikolla, leveä vesialue on auringonlaskujen näyttämö.',
           selite: 'Jalohaikara kalastaa Guaíban matalikolla, ja '
             + 'vesialueen leveys tekee siitä kaupungin auringonlaskujen '
             + 'näyttämön.',
@@ -79378,6 +79615,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'siksakein, toiset pistein ja ympyröin. Mbyá-guaraníta on '
             + 'Brasiliassa noin 8 400, ja heidän kyliään johtaa kaksi '
             + 'henkilöä: hengellinen karaí ja poliittinen mburuvichá.',
+          lyhyt: 'Mbyá-guaraníen oma maissi on säilynyt viljelyssä sukupolvesta toiseen kylien välillä.',
           selite: 'Mbyá-guaraníen oma maissi on säilynyt viljelyssä '
             + 'sukupolvesta toiseen, ja siemenet vaihtavat omistajaa '
             + 'kylien välillä.',
@@ -79399,6 +79637,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'joutui jättämään kotinsa; kuolleiden määräksi artikkeli '
             + 'antaa kaksi lukua, heinäkuun 2024 tilanteen 181 ja '
             + 'tulvan aikaisen uutislähteen 169.',
+          lyhyt: 'Vuoden 2024 tulvan jälki näkyy Mercado Públicon seinässä rajana, johon vesi nousi.',
           selite: 'Vuoden 2024 tulvan jälki näkyy Mercado Públicon '
             + 'seinässä vaakasuorana rajana, johon vesi keskustassa '
             + 'nousi.',
@@ -79553,6 +79792,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Palacio de Lopez from above.jpg',
+          lyhyt: 'Palacio de los López seisoo Paraguayjoen rannassa, edessä Costanera-rantabulevardi.',
           selite: 'Palacio de los López seisoo aivan Paraguayjoen '
             + 'rannassa, ja sen edestä kulkee Costanera-rantabulevardi.',
           lahde: 'Cmasi, Wikimedia Commons (CC BY-SA 4.0)',
@@ -79565,6 +79805,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Costanera Sur Cerro Lambaré 2.png',
+          lyhyt: 'Costanera Surin puisto ulottuu Asunciónin lahden rantaan, taustalla 160-metrinen Cerro Lambaré.',
           selite: 'Costanera Surin puisto ulottuu Asunciónin lahden '
             + 'rantaan, ja taustalla kohoaa 160-metrinen Cerro Lambaré.',
           lahde: 'Overkill53, Wikimedia Commons (CC0)',
@@ -79579,12 +79820,14 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Costanera Asunción.png',
+          lyhyt: 'Costanera-rantabulevardi erottaa keskustan joesta, takana avautuu Asunciónin lahti.',
           selite: 'Costanera-rantabulevardi erottaa keskustan Paraguayjoen '
             + 'rannasta, ja sen takana avautuu Asunciónin lahti.',
           lahde: 'Overkill53, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'La Encarnación (Asunción).jpg',
+          lyhyt: 'Vanhan keskustan ruutukaava on siirtomaa-ajan muodossa, korttelit laskeutuvat suorina kohti jokea.',
           selite: 'Vanhan keskustan ruutukaava on samassa muodossa kuin '
             + 'siirtomaa-aikana, ja korttelit laskeutuvat suorina '
             + 'katulinjoina kohti jokea.',
@@ -79601,6 +79844,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'PARAGUAY. — La ville de l\'Assomption occupée par l\'armée alliée.jpeg',
           vuosi: '1869',
+          lyhyt: 'Kuvalehden kaiverrus 1869 esittää Asunciónia liittoutuneiden joukkojen miehittämänä.',
           selite: 'Kuvalehden kaiverrus 3. huhtikuuta 1869 esittää '
             + 'Asunciónia joelta katsottuna liittoutuneiden joukkojen '
             + 'miehittämänä, neljä vuotta ennen isoisän matkaa.',
@@ -79608,6 +79852,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Porto de assunção (4831205415).jpg',
+          lyhyt: 'Samalla rannalla on nykyään Asunciónin satama, jonne jokilaivat tulevat Paraguayjokea pitkin.',
           selite: 'Samalla rannalla on nykyään Asunciónin satama, jonne '
             + 'jokilaivat ja proomut yhä tulevat Paraguayjokea pitkin.',
           lahde: 'Gabriel Fernandes from São Paulo, Brasil, Wikimedia Commons (CC BY-SA 2.0)',
@@ -79626,6 +79871,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lähetettiin retkikuntia perustamaan uusia kaupunkeja: '
             + 'Villarrica, Corrientes, Santa Fe, Córdoba, Santa Cruz de '
             + 'la Sierra ja 65 muuta — sekä Buenos Aires toistamiseen.',
+          lyhyt: 'Cabildo oli siirtomaa-ajan kaupunginhallinnon talo, nyt tasavallan kulttuurikeskus.',
           selite: 'Cabildo oli siirtomaa-ajan kaupunginhallinnon talo, '
             + 'ja rakennus on nykyään tasavallan kulttuurikeskus.',
           lahde: 'Preyes, Wikimedia Commons (CC BY-SA 3.0)',
@@ -79643,6 +79889,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Viimeiset vaunut olivat tulleet käytettyinä Brysselistä. '
             + 'Kulkumuoto, jonka isoisä olisi juuri ehtinyt nähdä '
             + 'syntyvän, katosi kaupungista kokonaan ennen 2000-lukua.',
+          lyhyt: 'Vanhan keskusaseman viereen nostettiin 2005 näytille brysseliläinen raitiovaunu.',
           selite: 'Vanhan keskusaseman viereen Plaza Uruguayalle '
             + 'nostettiin 2005 näytille brysseliläinen raitiovaunu, '
             + 'jollaisia kaupungissa ajettiin viimeisinä vuosikymmeninä.',
@@ -79662,6 +79909,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yksi Mercosurin kolmesta virallisesta kielestä espanjan '
             + 'ja portugalin ohella — ainoa alkuperäiskieli koko '
             + 'kauppaliiton papereissa.',
+          lyhyt: 'Asunciónin liikkeen opasteessa lukee uloskäynti neljällä kielellä, guaraniksi Ñesẽha.',
           selite: 'Asunciónin liikkeen opasteessa lukee uloskäynti '
             + 'neljällä kielellä: espanjaksi, saksaksi, englanniksi ja '
             + 'guaraniksi, jolla se on Ñesẽha.',
@@ -79681,6 +79929,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'antautumaan. Talo avattiin museona 14. toukokuuta 1965, '
             + 'ja siinä on nähtävänä muun muassa Cabildon istuntosalin '
             + 'jäljennös.',
+          lyhyt: 'Casa de la Independencia on Asunciónin vanhimpia rakennuksia, kylkeä kiertää Callejón Histórico.',
           selite: 'Casa de la Independencia on Asunciónin vanhimpia '
             + 'säilyneitä rakennuksia, ja sen kylkeä kiertää kapea '
             + 'kujanne nimeltä Callejón Histórico.',
@@ -79691,6 +79940,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'El Gran Panteón de Asunción.jpg',
+          lyhyt: 'Sankarien kansallinen panteoni on kaupungin tunnetuin rakennus, kunniavartiosto vaihtuu usein.',
           selite: 'Sankarien kansallinen panteoni on kaupungin tunnetuin '
             + 'rakennus, ja sen edessä kunniavartiosto vaihtuu useita '
             + 'kertoja päivässä.',
@@ -79727,6 +79977,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Pan-Amerikan kisoja.',
               kuva: {
                 tiedosto: 'Estación del Ferrocarril 20180801.jpg',
+                lyhyt: 'Keskusaseman torni Plaza Uruguayan laidalla on tunnistettavimpia vanhan keskustan rakennuksista.',
                 selite: 'Keskusaseman torni Plaza Uruguayan laidalla on '
                   + 'yksi vanhan keskustan tunnistettavimmista '
                   + 'rakennuksista.',
@@ -79779,6 +80030,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaupungissa.',
               kuva: {
                 tiedosto: 'Antiguo Cabildo Asunción.jpg',
+                lyhyt: 'Vanha Cabildo on nykyään tasavallan kulttuurikeskus, Costanera yhdistää sen jokeen.',
                 selite: 'Vanha Cabildo on nykyään tasavallan '
                   + 'kulttuurikeskus, ja se on yksi niistä vanhan '
                   + 'keskustan rakennuksista, jotka Costanera yhdistää '
@@ -79839,6 +80091,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'selvittämisen ehkä mahdottomaksi. Yksi kova luku on '
             + 'vuoden 1871 väestönlaskenta: 221 079 asukasta, joista '
             + '106 254 naista, 86 079 lasta ja 28 746 miestä.',
+          lyhyt: 'Kenraali ja akvarellisti José Ignacio Garmendia maalasi Asunciónin torin 1800-luvulla.',
           selite: 'Argentiinalainen kenraali ja akvarellisti José Ignacio '
             + 'Garmendia, joka itse osallistui sotaan, maalasi '
             + 'Asunciónin torin 1800-luvulla.',
@@ -79876,6 +80129,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ajaksi, ja vuoteen 1876 mennessä rakennus oli hylätty ja '
             + 'rappeutunut. Presidentti Juan Bautista Egusquiza sai sen '
             + 'valmiiksi vasta 1894.',
+          lyhyt: 'Palacio de los López on yhä Paraguayn hallituksen istuin, vuoden 1970 kuvassa valkoisena.',
           selite: 'Palacio de los López on yhä Paraguayn hallituksen '
             + 'istuin, ja tässä vuoden 1970 diakuvassa se on maalattu '
             + 'valkoiseksi.',
@@ -79951,6 +80205,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nimeää työvaiheet niiden mukaan: lyijykynä piirtää '
             + 'kuvion, neula kutoo sen, ja sakset irrottavat valmiin '
             + 'kiekon alustakankaasta.',
+          lyhyt: 'Ñandutí-pitsi tehdään kehykseen pingotetulle kankaalle, valmis kiekko leikataan lopuksi irti.',
           selite: 'Ñandutí-pitsi tehdään kehykseen pingotetulle '
             + 'kankaalle, ja valmis kiekko leikataan lopuksi irti '
             + 'alustastaan.',
@@ -79970,6 +80225,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kulkureitteineen ja kuntoiluvälineineen; toinen vaihe '
             + 'lisää siltoja ja liikuntapaikkoja. Tieltä siirtyneille '
             + 'perheille rakennettiin 144 uutta asuntoa.',
+          lyhyt: 'Costanera Surin puisto kulkee jokirantaa pitkin kävelyalueineen, pyöräkaistoineen ja aukioineen.',
           selite: 'Costanera Surin puisto kulkee Paraguayjoen rantaa '
             + 'pitkin, ja siihen kuuluu kävelyalue, pyöräkaista ja '
             + 'valaistu aukio.',
@@ -79988,6 +80244,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'uhanalaisia ja 28 pesii Pohjois-Amerikassa ja muuttaa '
             + 'talveksi tänne. Yli kolme prosenttia koko maailman '
             + 'kanelisirriäiskannasta lepää lahdella muuttomatkallaan.',
+          lyhyt: 'Asunciónin lahti avautuu kaupungin luoteispuolelle, sen kautta jokilaivat kulkevat Paraguayjoelle.',
           selite: 'Asunciónin lahti avautuu kaupungin luoteispuolelle, ja '
             + 'sen kautta jokilaivat kulkevat Paraguayjoelle.',
           lahde: 'Marcelo Ramirez, Wikimedia Commons (CC BY 3.0)',
@@ -80074,18 +80331,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Dunedin and the Otago Peninsula, Otago, New Zealand, 12th. Dec. 2010 - Flickr - PhillipC.jpg',
+          lyhyt: 'Dunedin ja Otagon niemimaa ovat saman sammuneen tulivuoren päällä, lahti täyttää kuluneimman osan.',
           selite: 'Dunedin ja Otagon niemimaa ovat saman sammuneen '
             + 'tulivuoren päällä, ja lahti täyttää sen kuluneimman osan.',
           lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Otago Harbour towards Aramoana.jpg',
+          lyhyt: 'Otago Harbour on 23 kilometriä pitkä, suulla Aramoanan hiekkasärkkä erottaa lahden merestä.',
           selite: 'Otago Harbour on 23 kilometriä pitkä, ja sen suulla '
             + 'Aramoanan hiekkasärkkä erottaa lahden avomerestä.',
           lahde: 'Pseudopanax at English Wikipedia, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Dunedin City Centre from Roslyn.jpg',
+          lyhyt: 'Keskusta laskeutuu Stuart Streetiä pitkin satamaan, kaupunki nousee ympärillä jyrkille rinteille.',
           selite: 'Keskusta laskeutuu Stuart Streetiä pitkin satamaan, ja '
             + 'sen ympärillä kaupunki nousee jyrkille rinteille.',
           lahde: 'ChristchurchHistorian, Wikimedia Commons (CC BY-SA 4.0)',
@@ -80107,12 +80367,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'St. Clair Beach Dunedin.jpg',
+          lyhyt: 'St Clairin ranta on kaupungin eteläreunalla avointa Tyyntämerta vasten, takana vihreät kukkulat.',
           selite: 'St Clairin ranta on kaupungin eteläreunalla avointa '
             + 'Tyyntämerta vasten, ja sen takana kohoavat vihreät kukkulat.',
           lahde: 'Alexeyevitch, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Harbour Cone Hereweka, Dunedin, New Zealand.jpg',
+          lyhyt: 'Hereweka eli Harbour Cone on Otagon niemimaan tunnistettavin kartio, osa vanhaa tulivuorta.',
           selite: 'Hereweka eli Harbour Cone on Otagon niemimaan '
             + 'tunnistettavin kartio ja osa samaa vanhaa tulivuorta kuin '
             + 'kaupunki itse.',
@@ -80129,6 +80391,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'The Octagon, Dunedin City, Otago.jpg',
+          lyhyt: 'Sama kahdeksankulmainen aukio on yhä kaupungin ydin kaupungintalon ja katedraalin laidalla.',
           selite: 'Sama kahdeksankulmainen aukio on yhä kaupungin ydin, '
             + 'jonka laidalla ovat kaupungintalo kellotorneineen ja '
             + 'katedraali.',
@@ -80150,6 +80413,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunkiin oli muuttanut noin 12 000 skottia, monet '
             + 'teollistuneelta Lowlandsin alueelta.',
           tiedosto: 'Dunedin Burns Statue.JPG',
+          lyhyt: 'Octagonilla istuva Robert Burns on kaupungin skotlantilaisen perustamisen tunnus.',
           selite: 'Octagonilla istuva Robert Burns on kaupungin '
             + 'skotlantilaisen perustamisen tunnus, ja runoilijan '
             + 'veljenpoika Thomas Burns oli siirtokunnan hengellinen '
@@ -80170,6 +80434,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'asukasluvultaan — 29 832 vastaan 27 840 — ja oli hetken '
             + 'koko maan suurin kaupunki.',
           tiedosto: 'University of Otago Clocktower. NZ (22954035383).jpg',
+          lyhyt: 'Otagon yliopiston kellotorni on muurattu Leith Valleyn basaltista ja Oamarun kivestä.',
           selite: 'Otagon yliopiston rekisteritalo eli kellotorni on '
             + 'muurattu tummasta Leith Valleyn basaltista ja vaaleasta '
             + 'Oamarun kivestä.',
@@ -80189,6 +80454,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '-rautatie, kaupungin ensimmäinen, myytiin Otagon '
             + 'maakuntaneuvostolle 187 106 punnalla.',
           tiedosto: 'First church of Otago.jpg',
+          lyhyt: 'First Church of Otago on Robert Lawsonin goottilainen kirkko, jonka torni nousee 56 metriin.',
           selite: 'First Church of Otago on Robert Lawsonin suunnittelema '
             + 'goottilainen kirkko, jonka torni ja huippu nousevat 56 '
             + 'metriin.',
@@ -80208,6 +80474,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupungin vanhat raitiovaunut ja veturit. Dunedinin '
             + 'kaupunki otti museon omistukseensa 1991.',
           tiedosto: 'Toitu Otago Settlers Museum main wing.jpg',
+          lyhyt: 'Toitū Otago Settlers Museumin punatiilinen päärakennus seisoo rautatieaseman kupeessa.',
           selite: 'Toitū Otago Settlers Museumin punatiilinen päärakennus '
             + 'seisoo keskustan eteläreunalla rautatieaseman kupeessa.',
           lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
@@ -80217,6 +80484,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: '00 1512 Dunedin (New Zealand) railway station.jpg',
+          lyhyt: 'Dunedinin rautatieasema valmistui 1906 George Troupin piirustusten mukaan.',
           selite: 'Dunedinin rautatieasema valmistui 1906 George Troupin '
             + 'piirustusten mukaan, ja paikalliset pitävät sitä maan '
             + 'valokuvatuimpana rakennuksena.',
@@ -80330,6 +80598,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Vuodenajat ovat käänteiset: kesä on joulu–helmikuussa.',
               kuva: {
                 tiedosto: 'Dunedin Botanic Garden 05.jpg',
+                lyhyt: 'Dunedinin kasvitieteellisen puutarhan kalliopuutarha kukkii marraskuussa eteläisessä keväässä.',
                 selite: 'Dunedinin kasvitieteellisen puutarhan '
                   + 'kalliopuutarha rinteessä kukkii marraskuussa eli '
                   + 'eteläisen pallonpuoliskon keväässä.',
@@ -80443,6 +80712,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maan suurimmista siirtokunnista ja suljettiin '
             + '1840-luvulla valaskantojen ehdyttyä.',
           tiedosto: 'Otakou marae.jpg',
+          lyhyt: 'Ōtākoun marae niemimaan kärjessä on paikallisen rūnangan koti, rakennukset 1940-luvulta.',
           selite: 'Ōtākoun marae niemimaan kärjessä on paikallisen '
             + 'rūnangan koti, ja sen rakennukset valmistuivat '
             + '1940-luvulla.',
@@ -80462,6 +80732,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'näätiä ja lumikkoja pyydystetään pesimäalueelta jatkuvasti '
             + 'pois.',
           tiedosto: 'Northern royal albatross chick at Taiaroa Head, Aaron Heimann.jpg',
+          lyhyt: 'Kuninkaanalbatrossin poikanen kasvaa Taiaroa Headin ruohikossa lajin ainoassa manneryhdyskunnassa.',
           selite: 'Kuninkaanalbatrossin poikanen kasvaa Taiaroa Headin '
             + 'ruohikossa lajin ainoassa mantereella sijaitsevassa '
             + 'yhdyskunnassa.',
@@ -80499,6 +80770,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '21-vuotislahjaksi. Larnach kuoli parlamenttitalossa 1898, '
             + 'ja perhe myi kartanon 1906.',
           tiedosto: 'Larnach Castle, Dunedin.jpg',
+          lyhyt: 'Larnach Castle on Uuden-Seelannin ainoa linnaksi kutsuttu rakennus, edustalla muotopuutarha.',
           selite: 'Larnach Castle on Uuden-Seelannin ainoa linnaksi '
             + 'kutsuttu rakennus, ja sen edustalla on muotopuutarha '
             + 'suihkulähteineen.',
@@ -80592,6 +80864,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Suva Panorama MatthiasSuessen-8640.jpg',
+          lyhyt: 'Suvan lahden takana kohoavat Viti Levun vuoret, oikeassa reunassa Joske\'s Thumbin kärki.',
           selite: 'Suvan lahden takana kohoavat Viti Levun sisämaan '
             + 'vuoret, joiden oikeassa reunassa erottuu Joske’s Thumbin '
             + 'kärki.',
@@ -80599,6 +80872,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Suva Bay (Imagicity 1016).jpg',
+          lyhyt: 'Suvan lahtea reunustavat matalat mangroverannat, takana vuorijono pysäyttää pasaatin kosteuden.',
           selite: 'Suvan lahtea reunustavat matalat mangroverannat, ja '
             + 'sen takana nousee vuorijono, joka pysäyttää '
             + 'kaakkoispasaatin kosteuden.',
@@ -80606,6 +80880,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Albert Park Suva 1 July 2014.jpg',
+          lyhyt: 'Albert Parkin nurmikenttä on kaupungin suurin avoin tila, takana vuoden 1914 Grand Pacific Hotel.',
           selite: 'Albert Parkin nurmikenttä on kaupungin suurin avoin '
             + 'tila, ja sen takana seisoo vuoden 1914 Grand Pacific '
             + 'Hotel.',
@@ -80621,6 +80896,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Suva City 1 February 2015.jpg',
+          lyhyt: 'Suvan keskustassa siirtomaa-ajan matalat talot ja konttoritornit ovat samassa korttelissa.',
           selite: 'Suvan keskustassa siirtomaa-ajan matalat talot ja '
             + '1970-luvun konttoritornit seisovat samassa korttelissa.',
           lahde: 'Stemoc, Wikimedia Commons (CC0)',
@@ -80642,6 +80918,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Fiji Islands. Suva creek scene and township, 1903, PH-NEG-2561 001.jpg',
           vuosi: '1903',
+          lyhyt: 'Vuonna 1903 puron rannassa oli veneveistämö ja puutaloja, pääkaupunki oli ollut Suvassa 20 vuotta.',
           selite: 'Vuonna 1903 puron rannassa oli veneveistämö ja '
             + 'puutaloja, ja pääkaupunki oli ollut Suvassa runsaat '
             + 'kaksikymmentä vuotta.',
@@ -80669,6 +80946,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'siirsivät pääkaupungin tänne — Levukan ahdas paikka '
             + 'vuoren ja meren välissä esti laajentumisen.',
           tiedosto: 'Admiralty Chart No 1757 Nukulau Island to Namuka Island, including Lauthala, Suva and Namuka Harbs., Fiji Islands, Published 1876.jpg',
+          lyhyt: 'Brittiläinen merikartta Suvan satamasta julkaistiin 1876, kaksi vuotta luovutuksen jälkeen.',
           selite: 'Brittiläinen merikartta Suvan satamasta julkaistiin '
             + '1876, kaksi vuotta sen jälkeen kun saaret oli luovutettu '
             + 'Britannialle.',
@@ -80706,6 +80984,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'elää: vuoden 2017 väestönlaskennassa indofidžiläisiä oli '
             + '289 237 eli 32,7 prosenttia koko maan väestöstä.',
           tiedosto: 'Fiji Museum in Suva.jpg',
+          lyhyt: 'Fidžin museo toimii Thurston Gardensin puistossa, sisäänkäynnillä saarten luontoa kuvaava maalaus.',
           selite: 'Fidžin museo toimii Thurston Gardensin puistossa, ja '
             + 'sen sisäänkäyntiä koristaa saarten luontoa esittävä '
             + 'seinämaalaus.',
@@ -80726,6 +81005,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rappeutuneena 1992 ja avattiin entisöitynä uudelleen 24. '
             + 'toukokuuta 2014, tasan sata vuotta avajaisistaan.',
           tiedosto: 'GPH Suva MatthiasSuessen-7735.jpg',
+          lyhyt: 'Grand Pacific Hotelin valkoinen julkisivu ja kuninkaanpalmut ovat Suvan tunnetuin rantanäkymä.',
           selite: 'Grand Pacific Hotelin valkoinen julkisivu ja '
             + 'kuninkaanpalmut ovat Suvan rantabulevardin tunnetuin '
             + 'näkymä.',
@@ -80736,6 +81016,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Sacred Heart Suva MatthiasSuessen-8140.jpg',
+          lyhyt: 'Pyhän sydämen katedraali kohoaa kaksitorniseksi Suvan keskustan laidalla, päällä Kristus-patsas.',
           selite: 'Pyhän sydämen katedraali kohoaa kaksitorniseksi Suvan '
             + 'keskustan laidalla, ja julkisivun päällä seisoo '
             + 'Kristus-patsas.',
@@ -80815,6 +81096,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'maat rajoittivat 2002 maksavaurioepäilyjen takia.',
               kuva: {
                 tiedosto: 'Kava framställning.jpg',
+                lyhyt: 'Kava siivilöidään kankaan läpi veistettyyn tanoa-maljaan, joka seisoo matalilla jaloilla.',
                 selite: 'Kava siivilöidään kankaan läpi veistettyyn '
                   + 'tanoa-maljaan, joka seisoo matalilla jaloilla '
                   + 'mattojen päällä.',
@@ -80867,6 +81149,7 @@ export const KULTTUURI_KATEGORIAT = {
               {
                 mita: 'Grand Pacific Hotel',
                 tahdet: 3,
+                lyhyt: 'Vuoden 1914 hotelli, jonka huoneet rakennettiin laivahyttien näköisiksi ja jälkeen entisöitiin.',
                 selite: 'Vuoden 1914 hotelli, jonka huoneet rakennettiin '
                   + 'laivahyttien näköisiksi ja joka entisöitiin '
                   + 'satavuotispäivänään.',
@@ -80966,6 +81249,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'säilytti Baun oman Vunivalu-arvonimensä kuolemaansa 1883 '
             + 'saakka.',
           tiedosto: 'Thakombau, ex-king of Fiji, photograph by Dufty.jpg',
+          lyhyt: 'Duftyn valokuvaamossa noin 1874 otettu muotokuva Cakobausta, juuri luopuneena Tui Viti -arvosta.',
           selite: 'Duftyn valokuvaamossa noin 1874 otettu muotokuva '
             + 'Cakobausta, joka oli juuri luopunut Tui Viti '
             + '-arvonimestään.',
@@ -80986,6 +81270,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tänäkin päivänä elävä osa Fidžin iTaukei-väestöä, ja '
             + 'ylänköjen kylissä vaalitaan omia perinteitä.',
           tiedosto: 'Panorama view of Joske\'s Thumb.JPG',
+          lyhyt: 'Joske\'s Thumb on vanhan tulivuoren kovettunut kurkku Viti Levun sisämaassa, juurella kyliä yhä.',
           selite: 'Joske’s Thumb on vanhan tulivuoren kovettunut kurkku '
             + 'Viti Levun sisämaassa, ja sen juurella on kyliä yhä.',
           lahde: 'Tucoxn, Wikimedia Commons (CC BY-SA 3.0)',
@@ -81005,6 +81290,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunki — seitsemänkymmentä vuotta sen jälkeen, kun se '
             + 'oli jo alkanut toimia pääkaupunkina.',
           tiedosto: 'Suva. View from back of Catholic Church. May 1903., PH-NEG-15081 001.jpg',
+          lyhyt: 'Vuonna 1903 Suvan satamassa oli höyrylaivoja, rantaa reunusti jo yhtenäinen kaupunki.',
           selite: 'Vuonna 1903 Suvan satamassa oli höyrylaivoja ja '
             + 'rantaa reunusti jo yhtenäinen kaupunki; oikeassa reunassa '
             + 'näkyy valokuvaajan oma negatiivin numero.',
@@ -81024,6 +81310,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'puolisolta — samalta hallitsijalta, jolle saaret oli '
             + 'aikanaan luovutettu.',
           tiedosto: 'USP Bure MatthiasSuessen-8729.jpg',
+          lyhyt: 'Albert Parkin nurmella pelataan rugbya iltapäivisin, takana hallintorakennuksen kellotorni.',
           selite: 'Albert Parkin nurmella pelataan rugbya iltapäivisin, '
             + 'ja kentän takana kohoaa hallintorakennuksen kellotorni.',
           lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
@@ -81142,6 +81429,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Cairns (Queensland).jpg',
+          lyhyt: 'Cairnsin matala keskusta on kapealla rantakaistaleella, takana nousee Suuri vedenjakajavuoristo.',
           selite: 'Cairnsin matala keskusta on kapealla '
             + 'rantakaistaleella, ja sen takana nousee Suuri '
             + 'vedenjakajavuoristo.',
@@ -81155,6 +81443,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Cape tribulation.jpg',
+          lyhyt: 'Cape Tribulationissa sademetsä kasvaa suoraan rantahiekkaan, riutta alkaa vain kilometrien päästä.',
           selite: 'Cape Tribulationissa Cairnsista pohjoiseen sademetsä '
             + 'kasvaa suoraan rantahiekkaan ja riutta alkaa muutaman '
             + 'kilometrin päästä.',
@@ -81171,6 +81460,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Trinity Bay from the Esplanade, Cairns 102 9163.jpg',
+          lyhyt: 'Keskustan edusta on laajaa liejuista vuorovesitasankoa, laskuveden aikaan mangroven taimet kuivilla.',
           selite: 'Keskustan edusta on laajaa liejuista '
             + 'vuorovesitasankoa, ja laskuveden aikaan mangroven taimet '
             + 'jäävät kuiville.',
@@ -81238,6 +81528,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tunnettuja suurista, koristelluista ulokekanooteistaan. '
             + 'Retkikunta palasi Cardwelliin 22. joulukuuta.',
           tiedosto: 'Rainforest to Reef.jpg',
+          lyhyt: 'Trinity Bayn tasanko avautuu ylängön reunalta merelle päin; jossain tuolla oli syksyn 1873 leiri.',
           selite: 'Trinity Bayn tasanko avautuu ylängön reunalta merelle '
             + 'päin, ja jossain tuolla rannalla oli syksyn 1873 leiri.',
           lahde: 'Olivia Ellman, Wikimedia Commons (CC BY-SA 4.0)',
@@ -81276,6 +81567,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjasi 1909 enää 450 kiinalaista, noin tuhat vähemmän '
             + 'kuin 1901.',
           tiedosto: 'Chinatown Cairns, circa 1890.jpg',
+          lyhyt: 'Cairnsin kiinalaiskaupungin kattoja noin 1890; oikealla Crown Hotel, vasemmalla temppeli.',
           selite: 'Cairnsin kiinalaiskaupungin kattoja noin 1890; oikealla '
             + 'kohoaa Crown Hotel ja sen vasemmalla puolella näkyy Lit '
             + 'Sung Goongin temppeli.',
@@ -81420,6 +81712,7 @@ export const KULTTUURI_KATEGORIAT = {
               {
                 mita: 'Daintreen sademetsä',
                 tahdet: 3,
+                lyhyt: 'Noin 1200 neliökilometriä yhtä maailman vanhimmista sademetsistä, sata kilometriä pohjoisessa.',
                 selite: 'Noin 1 200 neliökilometriä yhtä maailman '
                   + 'vanhimmista sademetsistä, runsaan sadan kilometrin '
                   + 'päässä pohjoisessa.',
@@ -81510,6 +81803,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'upponneiden rantakukkuloiden päällä. Riutta valittiin '
             + 'maailmanperintökohteeksi 1981.',
           tiedosto: 'The Great Barrier Reef, Cairns, Queensland (Ank Kumar) 01.jpg',
+          lyhyt: 'Ilmasta katsottuna riutta on tuhansien erillisten riuttalaikkujen kirjava matalikko avomerellä.',
           selite: 'Ilmasta katsottuna riutta on tuhansien erillisten '
             + 'riuttalaikkujen kirjava matalikko avomeren reunalla.',
           lahde: 'Ank Kumar, Wikimedia Commons (CC BY-SA 4.0)',
@@ -81849,6 +82143,7 @@ export const KULTTUURI_KATEGORIAT = {
               {
                 mita: 'Vanha kortteli',
                 tahdet: 3,
+                lyhyt: 'Portugalilaisajan julkisivut Motaelin ja Gricenforin kaupunginosissa vanhan pääkadun varrella.',
                 selite: 'Portugalilaisajan julkisivut Motaelin, '
                   + 'Gricenforin ja Bidau Leciderén kaupunginosissa '
                   + 'vanhan pääkadun varrella.',
@@ -82598,6 +82893,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Panama City financial district.jpg',
+          lyhyt: 'Nykyinen keskusta kohoaa Panaman lahden rannalta, edustalla vuorovesi paljastaa laajat matalikot.',
           selite: 'Nykyinen keskusta kohoaa Panaman lahden rannalta, ja '
             + 'sen edustalla vuorovesi paljastaa laajat matalikot.',
           lahde: 'Dronepicr, Wikimedia Commons (CC BY 3.0)',
@@ -82610,6 +82906,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Isla Naos e Isla Perico.jpg',
+          lyhyt: 'Amadorin aallonmurtaja yhdistää neljä saarta mantereeseen, rakennettu kanavan kaivumassoista.',
           selite: 'Amadorin aallonmurtaja yhdistää neljä saarta '
             + 'mantereeseen, ja se rakennettiin kanavan kaivumassoista.',
           lahde: 'Ayaita, Wikimedia Commons (CC BY 3.0)',
@@ -82625,6 +82922,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Panama - Panama City - panoramio (6).jpg',
+          lyhyt: 'Nykykeskustan pilvenpiirtäjärivi nousee suoraan lahden rannasta, edustalla kalliomatalikot.',
           selite: 'Nykykeskustan pilvenpiirtäjärivi nousee suoraan '
             + 'lahden rannasta, ja edustalla vuorovesi paljastaa '
             + 'kalliomatalikot.',
@@ -82647,6 +82945,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Panama City, Eastern Suburb, Railway terminus on the right.jpg',
           vuosi: '1863',
+          lyhyt: 'Litografia kaupungin itälaidasta kymmenen vuotta ennen isoisän matkaa.',
           selite: 'Litografia kaupungin itälaidasta kymmenen vuotta '
             + 'ennen isoisän matkaa; laatan alareunaan on painettu '
             + 'kustantajan oma kuvateksti rautatien päätepisteestä.',
@@ -82713,6 +83012,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuten Cartagenasta ja Quitosta. Unesco listasi alueen '
             + 'maailmanperintökohteeksi 2003.',
           tiedosto: 'Casco Viejo, Panama City, Panama.jpg',
+          lyhyt: 'Casco Viejon parvekkeet ja takorautakaiteet ovat 1800–1900-lukujen vaihteen jälleenrakennusta.',
           selite: 'Casco Viejon parvekkeet ja takorautakaiteet ovat '
             + '1800-luvun lopun ja 1900-luvun alun jälleenrakennusta.',
           lahde: 'RB Photo, Wikimedia Commons (CC BY 2.0)',
@@ -82731,6 +83031,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuvattiin Panama-hattu päässään kanavan työmaalla — '
             + 'nimen sekaannus oli siitä lähtien lopullinen.',
           tiedosto: 'Panama Hat factory in Cuenca, Ecuador.jpg',
+          lyhyt: 'Punotut hatut kuivuvat verstaan lattialla Cuencassa, jossa suurin osa niistä yhä tehdään.',
           selite: 'Punotut hatut kuivuvat verstaan lattialla Cuencassa '
             + 'Ecuadorissa, jossa suurin osa niistä yhä tehdään.',
           lahde: 'David Brossard, Wikimedia Commons (CC BY-SA 2.0)',
@@ -82980,6 +83281,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Espanja rakensi Chagres-joen suulle San Lorenzon '
             + 'linnakkeen, joka valmistui 1601.',
           tiedosto: 'Captain Henry Morgan attacking Panama.jpg',
+          lyhyt: 'Vuoden 1684 merirosvokronikan kuvitus kannaksen taisteluista.',
           selite: 'Vuoden 1684 merirosvokronikan kuvitus kannaksen '
             + 'taisteluista; laattaan on kaiverrettu sen oma otsikko.',
           lahde: 'Alexandre Exquemelin, Wikimedia Commons (PD)',
@@ -83153,6 +83455,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'IronbottomSound.jpg',
           vuosi: '1942',
+          lyhyt: 'Elokuussa 1942 salmessa kulki hävittäjä, rannalla ei ollut kaupunkia — Honiaraa ei vielä ollut.',
           selite: 'Elokuussa 1942 salmessa kulki hävittäjä ja rannalla '
             + 'ei ollut kaupunkia — Honiaraa ei vielä ollut olemassa.',
           lahde: 'U.S. Navy, photo was taken from USS San Juan (CL-54)., Wikimedia Commons (PD)',
@@ -83180,6 +83483,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1872 lain, jonka piti hillitä värväystä — se ei '
             + 'onnistunut.',
           tiedosto: 'Bonegi Beach.jpg',
+          lyhyt: 'Guadalcanalin luoteisrannikkoa Bonegi Beachillä, hiekkaa ja kookospalmuja kilometreittäin.',
           selite: 'Guadalcanalin luoteisrannikkoa Bonegi Beachillä, '
             + 'jossa ajopuu, hiekka ja kookospalmut jatkuvat '
             + 'kilometrikaupalla.',
@@ -83334,6 +83638,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'torin merivedellä, koska vesi on saastunutta.',
               kuva: {
                 tiedosto: 'Rear view Honiara Central Market.jpg',
+                lyhyt: 'Torihalli merenpuolelta: rannassa ruostuu vanhan aluksen runko, takana venerampin laituri.',
                 selite: 'Torihalli merenpuolelta: rannassa ruostuu '
                   + 'vanhan aluksen runko, ja sen takana alkaa '
                   + 'venerampin laituri.',
@@ -83527,6 +83832,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kateissa saarella, ja luita on kaivettu esiin vielä '
             + '2010-luvulla.',
           tiedosto: 'US Navy Destroyer Squadron 12 in Ironbottom Sound in early 1944.jpg',
+          lyhyt: 'Viisi hävittäjää tekee kaarroksia Rautapohjan salmessa 1944, taustalla häämöttää Savon saari.',
           selite: 'Viisi hävittäjää tekee kaarroksia Rautapohjan '
             + 'salmessa vuonna 1944, ja taustalla häämöttää Savon '
             + 'saari.',
@@ -83548,6 +83854,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Heinäkuussa 1978 Honiarasta tuli itsenäisten '
             + 'Salomonsaarten pääkaupunki.',
           tiedosto: 'Long shot of the Solomon Islands Parliament House. (10708895683).jpg',
+          lyhyt: 'Parlamenttitalon kartiomainen katto nousee sinistä taivasta vasten, edessä lehtikattoinen katos.',
           selite: 'Parlamenttitalon kartiomainen katto nousee sinistä '
             + 'taivasta vasten, ja sen edessä on lehtikattoinen katos.',
           lahde: 'Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)',
@@ -83634,6 +83941,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Port Vila Vanuatu Harbour.JPG',
+          lyhyt: 'Vilan sataman suulla makaa Iririkin saari lehtikattoisine mökkeineen, poijuissa purjeveneitä.',
           selite: 'Vilan sataman suulla makaa Iririkin saari '
             + 'lehtikattoisine mökkeineen, ja poijuissa keinuu '
             + 'purjeveneitä.',
@@ -83682,6 +83990,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'ANHC jetty at Port Vila.tif',
           vuosi: 'n. 1897',
+          lyhyt: 'Kauppahuoneen kivilaituri ja pensaikkoinen ranta noin 1897 — kaupungin varhaisin tunnettu valokuva.',
           selite: 'Kauppahuoneen kivilaituri ja pensaikkoinen ranta '
             + 'noin vuonna 1897 — kaupungin varhaisin tunnettu '
             + 'valokuva, isoisän matkasta neljännesvuosisata '
@@ -83752,6 +84061,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kahden sektorin välillä: British Paddock etelässä, '
             + 'Quartier français pohjoisessa. Vanuatu itsenäistyi 1980.',
           tiedosto: 'PortVilaPostOffice.jpg',
+          lyhyt: 'Vanuatu Postin oranssi talo seisoo kohdassa, jossa brittiläinen ja ranskalainen puoli kohtasivat.',
           selite: 'Vanuatu Postin oranssi talo seisoo yhä siinä '
             + 'kohdassa, jossa kaupungin brittiläinen ja ranskalainen '
             + 'puoli aikoinaan kohtasivat.',
@@ -83773,6 +84083,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kansallislaulun sanat ovat sillä. Vanuatussa puhutaan '
             + 'yli sataa alkuperäiskieltä.',
           tiedosto: 'PortVilaCityHall.jpg',
+          lyhyt: 'Kaupungintalo seisoo keskustan kukkulalla, julkisivussa Vanuatun lippu ja kaupungin vaakuna.',
           selite: 'Kaupungintalo seisoo keskustan kukkulalla, ja sen '
             + 'julkisivussa on Vanuatun lippu ja kaupungin vaakuna.',
           lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
@@ -84024,6 +84335,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'häviämisen kanssa: saarilta katosivat muun muassa '
             + 'maakrokotiili ja maakilpikonna.',
           tiedosto: 'PortVilaLapita.jpg',
+          lyhyt: 'Lapita-kulttuurin savipata on esillä kulttuurikeskuksen vitriinissä hienoin kuvioinnein.',
           selite: 'Lapita-kulttuurin savipata on esillä '
             + 'kulttuurikeskuksen vitriinissä, ja sen kylkeen on '
             + 'painettu hienoa kuviointia.',
@@ -84065,6 +84377,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vanhempia: alue on eteläefaten kielellä Efil ja '
             + 'mele-filan kielellä Ifira — ja Vila on niiden muunnos.',
           tiedosto: 'The Landing at Tana one of the New Hebrides, by William Hodges.jpg',
+          lyhyt: 'Retkikunnan taiteilija William Hodges maalasi Cookin maihinnousun Tannan saarelle noin 1775.',
           selite: 'Retkikunnan taiteilija William Hodges maalasi Cookin '
             + 'maihinnousun Tannan saarelle noin 1775; kuva on '
             + 'eurooppalaisen matkalaisen näkökulma.',
@@ -84271,6 +84584,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Welcome Arch and Union Depot, Denver, Colo..jpg',
           vuosi: 'noin 1908',
+          lyhyt: 'Tervetuloakaari ja Union Depot noin 1908.',
           selite: 'Tervetuloakaari ja Union Depot noin 1908; kuvan '
             + 'alalaitaan on painettu kustantajan oma negatiivilitera '
             + 'ja otsikko.',
@@ -84300,6 +84614,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vähemmistö päälliköistä. Erimielisyys johti vuosien '
             + '1864–65 Coloradon sotaan ja Sand Creekin verilöylyyn.',
           tiedosto: 'Arapaho camp with buffalo meat drying near Fort Dodge, Kansas, 1870 - NARA - 518892.jpg',
+          lyhyt: 'Tasangoilla asuttiin liikkuvissa tiipiileireissä, joissa puhvelinliha kuivattiin telineillä.',
           selite: 'Tasangoilla asuttiin liikkuvissa tiipiileireissä, '
             + 'joissa puhvelinliha kuivattiin telineillä; kuva on '
             + 'vuodelta 1870.',
@@ -84321,6 +84636,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'territoriokuvernöörin mukaan — tietämättä, että tämä oli '
             + 'jo eronnut.',
           tiedosto: 'Confluence Park - Denver - tps.jpg',
+          lyhyt: 'Confluence Parkissa South Platte ja Cherry Creek yhtyvät, missä Denverin telttakylät olivat.',
           selite: 'Confluence Parkissa South Platte ja Cherry Creek '
             + 'yhtyvät siinä, missä Denverin ensimmäiset telttakylät '
             + 'olivat.',
@@ -84341,6 +84657,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'päivässä. Väkiluku nousi 4 759:stä yli 35 000:een '
             + 'vuosikymmenessä.',
           tiedosto: '\'Denver from the Highlands\' by Paul Frenzeny and Jules Tavernier, 1874.jpg',
+          lyhyt: 'Vuoden 1874 painokuvassa matala kaupunki leviää tasangolle joen mutkaan, Front Range taustalla.',
           selite: 'Vuoden 1874 painokuvassa matala kaupunki leviää '
             + 'tasangolle joen mutkaan ja Front Range nousee taustalle.',
           lahde: 'Jules Tavernier / Paul Frenzeny, Wikimedia Commons (PD)',
@@ -84821,6 +85138,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Old map-Houston-1873.jpg',
           vuosi: '1873',
+          lyhyt: 'Augustus Kochin lintuperspektiivikuva vuodelta 1873.',
           selite: 'Augustus Kochin lintuperspektiivikuva vuodelta 1873; '
             + 'alalaitaan on painettu kustantajan oma otsikko ja '
             + 'kohdeluettelo.',
@@ -84849,6 +85167,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'järjestäytyneet, mutta yhtäkään järjestöä ei ole '
             + 'liittovaltiollisesti tunnustettu.',
           tiedosto: 'Armand Bayou.jpg',
+          lyhyt: 'Aamu-usvassa puro levenee metsäisten törmien väliin, kuten rannikon purot olivat ennen kaupunkia.',
           selite: 'Aamu-usvassa puro levenee metsäisten törmien väliin '
             + 'juuri sellaisena kuin rannikon purot olivat ennen '
             + 'kaupunkia.',
@@ -84886,6 +85205,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Galvestonin sataman välillä kasvaisi. Vuoteen 1890 '
             + 'mennessä Houston oli Texasin rautatiekeskus.',
           tiedosto: 'T N Railroad Through Truss Swing Bridge Over Buffalo Bayou, Just Above Houston Ship Channel Turning Basin, Houston, Texas 1204101357 (5234927581).jpg',
+          lyhyt: 'Vanha ristikkorakenteinen kääntösilta vie radan Buffalo Bayoun yli laivaväylän kääntöaltaalla.',
           selite: 'Vanha ristikkorakenteinen kääntösilta vie radan '
             + 'Buffalo Bayoun yli laivaväylän kääntöaltaan yläpuolella.',
           lahde: 'Patrick Feller from Humble, Texas, USA, Wikimedia Commons (CC BY 2.0)',
@@ -85150,6 +85470,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rannikkotasangolla, ja Houston sai satamansa ja '
             + 'jalostamonsa täyteen työtä.',
           tiedosto: 'Lucas gusher (Spindletop, Beaumont, Port Arthur, and vicinity, Texas - oil industry). LCCN2010649511.jpg',
+          lyhyt: 'Spindletopin kentällä porauskehikot seisoivat rivissä ja maassa lainehti öljy.',
           selite: 'Spindletopin kentällä porauskehikot seisoivat '
             + 'rivissä ja maassa lainehti öljy; kuvan alle on '
             + 'kirjoitettu arkiston oma merkintä.',
@@ -85169,6 +85490,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sen radiokutsumerkki on yksinkertaisesti Houston. '
             + 'Kaupunki sai siitä lempinimensä Space City 1967.',
           tiedosto: 'Mission Operation Control Room 2, Johnson Space Center. 20-3-2017 (38888558160).jpg',
+          lyhyt: 'Apollon aikainen lennonjohtohuone on säilytetty konsoleineen, puhelimineen ja karttanäyttöineen.',
           selite: 'Apollon aikainen lennonjohtohuone on säilytetty '
             + 'konsoleineen, punaisine puhelimineen ja karttanäyttöineen.',
           lahde: 'Alan Wilson from Stilton, Peterborough, Cambs, UK, Wikimedia Commons (CC BY-SA 2.0)',
@@ -85385,6 +85707,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1 839 lammasta ja 149 nautaa, ja vuosina 1600–1652 '
             + 'lahteen pysähtyi vähintään 1 070 laivaa.',
           tiedosto: 'Beautiful day from Bloubergstrand of Table Mountain.jpg',
+          lyhyt: 'Taffelinlahden pohjoisrannalta vuori näyttää samalta kuin purjehtijoille, jotka lähestyivät mereltä.',
           selite: 'Taffelinlahden pohjoisrannalta vuori näyttää samalta '
             + 'kuin purjehtijoille, jotka lähestyivät sitä mereltä.',
           lahde: 'Wynand, Wikimedia Commons (CC BY-SA 4.0)',
@@ -85404,6 +85727,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seuraavana vuonna saapui yhdellä kertaa 402. Siitä lähtien '
             + 'Kapissa oli enemmän muualta kuin Euroopasta tuotuja.',
           tiedosto: 'Gezicht op de botanische tuin te Kaapstad, RP-F-F01156-K.jpg',
+          lyhyt: 'Yhtiön puutarhan pääkäytävä 1800-luvun lopun albumikuvassa.',
           selite: 'Yhtiön puutarhan pääkäytävä 1800-luvun lopun '
             + 'albumikuvassa, jonka alalaitaan on painettu kustantajan '
             + 'oma otsikko ja negatiivinumero.',
@@ -85425,6 +85749,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja Lloyd’s oli kieltäytynyt vakuuttamasta '
             + 'Taffelinlahdessa talvehtivia laivoja.',
           tiedosto: 'Gezicht op Darling Street te Kaapstad, RP-F-F01156-J.jpg',
+          lyhyt: 'Darling Street 1800-luvun lopulla: härkäkärryjä, torikoju ja Paholaisenhuippu taustalla.',
           selite: 'Darling Street 1800-luvun lopulla: härkäkärryjä, '
             + 'torikoju ja Paholaisenhuippu taustalla, alalaidassa '
             + 'kustantajan oma painettu otsikko.',
@@ -85899,6 +86224,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Photograph of Kenyan Sikh pioneers in-front of Gurdwara Sahib Railway Landhies in Nairobi, Kenya, 1903.jpg',
           vuosi: '1903',
+          lyhyt: 'Radanrakentajia gurdwaran edessä 1903, kun Nairobi oli vasta ratatyömaan leiri.',
           selite: 'Radanrakentajia gurdwaran edessä 1903, kun Nairobi '
             + 'oli vasta muutaman vuoden ikäinen ratatyömaan leiri.',
           lahde: 'Unknown photographer, Wikimedia Commons (PD)',
@@ -85994,6 +86320,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Cave at Karura forest.jpg',
+          lyhyt: 'Karuran metsän luolan suulla riippuu viikunapuiden juuria, auringonsäteet putoavat sisään ylhäältä.',
           selite: 'Karuran metsän luolan suulla riippuu viikunapuiden '
             + 'juuria, ja auringonsäteet putoavat sisään ylhäältä.',
           lahde: 'Mwintirew, Wikimedia Commons (CC BY-SA 4.0)',
@@ -86674,6 +87001,7 @@ export const KULTTUURI_KATEGORIAT = {
               {
                 mita: 'Vapaudentorni',
                 tahdet: 2,
+                lyhyt: 'Vuoden 1925 lehtitalo otti mallia Sevillan Giraldasta, toimi sittemmin pakolaisten vastaanottona.',
                 selite: 'Vuoden 1925 lehtitalo, joka otti mallia '
                   + 'Sevillan Giraldasta ja josta tuli pakolaisten '
                   + 'vastaanottopaikka.',
@@ -86948,6 +87276,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'City of Halifax - panoramio.jpg',
+          lyhyt: 'Vanha kellotorni jää keskustan kattojen ja rakenteilla olevien tornien väliin, satama sumussa.',
           selite: 'Vanha kellotorni jää keskustan kattojen ja rakenteilla '
             + 'olevien tornien väliin, satama sumussa taustalla.',
           lahde: 'Jiaqian AirplaneFan, Wikimedia Commons (CC BY 3.0)',
@@ -86984,6 +87313,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Halifax looking down George Street, Nova Scotia, Canada, 1759.jpg',
           vuosi: '1759',
+          lyhyt: 'George Street laskee satamaan ja Dartmouthiin vuoden 1759 piirroksessa.',
           selite: 'George Street laskee satamaan ja Dartmouthiin vuoden '
             + '1759 piirroksessa; alalaidan teksti on kustantajan oma '
             + 'nimiö.',
@@ -87081,6 +87411,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Halifax Town Clock 2.jpg',
+          lyhyt: 'Vanha kellotorni seisoo linnoituskukkulan rinteessä kaupunkiin päin, jotta kaupunki näkee ajan.',
           selite: 'Vanha kellotorni seisoo linnoituskukkulan rinteessä '
             + 'kaupunkiin päin, jotta myös kaupunkilaiset näkevät ajan.',
           lahde: 'Hayden Soloviev, Wikimedia Commons (CC BY 4.0)',
@@ -87453,6 +87784,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Panorama Tanger Bay Tangier Marokko.jpg',
+          lyhyt: 'Sama lahti nykyään: valkoinen kaupunki kiipeää yhä rinnettä, rantaan on kasvanut moderni satama.',
           selite: 'Sama lahti nykyään: valkoinen kaupunki kiipeää yhä '
             + 'rinnettä, mutta rantaan on kasvanut moderni satama.',
           lahde: 'Herbert wie, Wikimedia Commons (CC BY-SA 4.0)',
@@ -87474,6 +87806,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Baal. Claudiuksen aikana Tingiksestä tuli roomalainen '
             + 'siirtokunta ja Mauretania Tingitanan pääkaupunki.',
           tiedosto: 'Cuevas de Hércules, Cabo Espartel, Marruecos, 2015-12-11, DD 22-24 HDR.JPG',
+          lyhyt: 'Herkuleen luolan seinät ja katto ovat täynnä myllynkivien louhinnan jättämiä puolikaaren jälkiä.',
           selite: 'Herkuleen luolan seinät ja katto ovat täynnä puolikaaren '
             + 'muotoisia jälkiä, joita myllynkivien louhinta on jättänyt.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
@@ -87495,6 +87828,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'joukot räjäyttivät sataman, ja Marokko sai kaupungin 7. '
             + 'helmikuuta 1684.',
           tiedosto: 'Planta de Tanger, Leonardo de Ferrari, 1655.jpg',
+          lyhyt: 'Vuoden 1655 pohjapiirros näyttää portugalilaisen Tangerin bastionit ja lahden laivoineen.',
           selite: 'Vuoden 1655 pohjapiirros näyttää portugalilaisen Tangerin '
             + 'bastionit ja lahden laivoineen kuusi vuotta ennen '
             + 'luovutusta Englannille.',
@@ -87516,6 +87850,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'syyskuuta 1873 Hassan I, joka hallitsi kuolemaansa asti '
             + '1894.',
           tiedosto: 'Tanger, le marché devant la légation allemande - btv1b53207533n.jpg',
+          lyhyt: 'Kamelit odottavat markkinapäivänä Saksan lähetystön edessä.',
           selite: 'Kamelit odottavat markkinapäivänä Saksan lähetystön edessä; '
             + 'lasilevyn yläreunassa näkyy kuvaajan oma merkintä.',
           lahde: 'Du Taillis, Jean (1873-1932). Photographe présumé Agence '
@@ -87536,6 +87871,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jotka Delacroix oli maalannut. Hotellin ikkunasta syntyi '
             + 'sininen La Fenêtre à Tanger.',
           tiedosto: 'Henri Matisse, 1912-13, Le café Maure (Arab Coffeehouse), oil on canvas, 176 x 210 cm, Hermitage Museum.jpg',
+          lyhyt: 'Matissen Le café Maure vuosilta 1912–1913 kuvaa tangerilaista kahvilaa kultakalamaljan ympärillä.',
           selite: 'Matissen Le café Maure vuosilta 1912–1913 kuvaa '
             + 'tangerilaista kahvilaa, jossa kaikki istuvat maassa '
             + 'kultakalamaljan ympärillä.',
@@ -87781,6 +88117,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kieltojen Eurooppaa. Vyöhyke lakkautettiin, ja Tanger '
             + 'liittyi muuhun Marokkoon 1956.',
           tiedosto: 'ETH-BIB-Sicht auf Tanger-Nordafrikaflug 1932-LBS MH02-13-0452.tif',
+          lyhyt: 'Ilmakuva vuodelta 1932 näyttää Tangerin: medina, aallonmurtaja ja höyrylaiva lahdella.',
           selite: 'Ilmakuva vuodelta 1932 näyttää kansainvälisen vyöhykkeen '
             + 'Tangerin: medina, aallonmurtaja ja höyrylaiva lahdella.',
           lahde: 'Walter Mittelholzer, Wikimedia Commons (PD)',
@@ -87948,6 +88285,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'siitä tulevat Marokon eurooppalaiset nimet. Persiaksi ja '
             + 'urduksi maa on yhä Marrakesh.',
           tiedosto: 'Almoravid gold dinar coin from Seville, Spain, 1116 British Museum.jpg',
+          lyhyt: 'Almoravidien kultadinaari vuodelta 1116 on lyöty Sevillassa ja kiinnitetty museovitriiniin.',
           selite: 'Almoravidien kultadinaari vuodelta 1116 on lyöty Sevillassa '
             + 'ja kiinnitetty museovitriiniin neljällä nastalla.',
           lahde: 'PHGCOM, Wikimedia Commons (CC BY-SA 3.0)',
@@ -87987,6 +88325,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Isoisän matkavuonna 1873 portti oli siis ollut auki vasta '
             + 'muutaman vuoden.',
           tiedosto: 'Le Tour du monde-01-p213.jpg',
+          lyhyt: 'Vuoden 1860 kaiverruksessa muuri, minareetti ja Atlaksen lumihuiput näkyvät samassa näkymässä.',
           selite: 'Vuoden 1860 kaiverruksessa muuri, minareetti ja Atlaksen '
             + 'lumihuiput näkyvät samassa näkymässä; alalaidassa on '
             + 'painokuvan oma signeeraus.',
@@ -89630,6 +89969,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'violetti. Viikkoa ennen juhlaa Adimu tulee kadulle '
             + 'sauvan kanssa.',
           tiedosto: 'The Eyo Masquerade 04.jpg',
+          lyhyt: 'Kolme Eyo-hahmoa taivasta vasten: valkoinen kaapu peittää kantajansa, hattu kertoo ryhmän.',
           selite: 'Kolme Eyo-hahmoa taivasta vasten: valkoinen kaapu '
             + 'peittää kantajansa kokonaan, ja hattu kertoo ryhmän.',
           lahde: 'Yemi festus, Wikimedia Commons (CC BY-SA 4.0)',
@@ -89639,6 +89979,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'An old Brazilian building at Tinubu square, Lagos.jpg',
+          lyhyt: 'Keltaiset danfo-pikkubussit odottavat vanhan brasilialaistyylisen talon edessä, torin varjot takana.',
           selite: 'Keltaiset danfo-pikkubussit odottavat vanhan '
             + 'brasilialaistyylisen talon edessä, ja torin '
             + 'päivänvarjot alkavat heti niiden takaa.',
@@ -90101,6 +90442,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Panorama van de haven van Zanzibar Panorama of Zanzibar (titel op object) Zanzibar (titel op object), RP-F-F00999-DD.jpg',
           vuosi: 'noin 1900',
+          lyhyt: 'Sansibarin satama noin 1900: purjealukset seisovat redillä, kivikaupunki nousee rantaviivasta.',
           selite: 'Sansibarin satama noin vuonna 1900: purjealukset '
             + 'seisovat redillä ja kivikaupunki nousee suoraan '
             + 'rantaviivasta.',
@@ -90340,6 +90682,7 @@ export const KULTTUURI_KATEGORIAT = {
               {
                 mita: 'Ihmeiden talo',
                 tahdet: 3,
+                lyhyt: 'Sansibarin ensimmäinen sähköistetty rakennus ja Itä-Afrikan ensimmäinen hissitalo, nyt suljettuna.',
                 selite: 'Sansibarin ensimmäinen sähköistetty '
                   + 'rakennus ja Itä-Afrikan ensimmäinen hissitalo; '
                   + 'suljettu vaurioiden takia.',
@@ -90704,6 +91047,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunginportissa: Bab Guissa pohjoisessa, Bab Ftouh '
             + 'etelässä.',
           tiedosto: 'Bab Ftouh.jpg',
+          lyhyt: 'Bab Ftouh eli etelän portti kantaa yhä sen emiirin nimeä, joka linnoitti rantansa veljeään vastaan.',
           selite: 'Bab Ftouh eli etelän portti kantaa yhä sen emiirin '
             + 'nimeä, joka linnoitti oman rantansa veljeään vastaan.',
           lahde: 'Robert Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
@@ -90722,6 +91066,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laajensi kuninkaanpalatsia ja lisäsi sen pohjoispuolelle '
             + 'uuden aukion, jonka portti seisoo yhä.',
           tiedosto: 'Bab Dkaken.jpg',
+          lyhyt: 'Bab Dekkakin on Hassan I:n laajennuksen pohjoisportti Fes Jdidiin, takana palatsin muurit.',
           selite: 'Bab Dekkakin on Hassan I:n laajennuksen pohjoisportti '
             + 'Fes Jdidiin, ja sen takana kohoavat palatsin muurit.',
           lahde: 'Александр Галаган, Wikimedia Commons (CC BY-SA 4.0)',
@@ -90740,6 +91085,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tähän päivään. Unesco merkitsi vanhankaupungin '
             + 'luetteloonsa 1981 Marokon ensimmäisenä kohteena.',
           tiedosto: 'Panoramic view of Rainbow Street towards Bou Inania Minaret, Fes.jpg',
+          lyhyt: 'Kuja on niin kapea, että myytävät taulut mahtuvat molemmille seinille ja kulkijalle jää metri.',
           selite: 'Kuja on niin kapea, että myytävät taulut mahtuvat '
             + 'molemmille seinille ja kulkijalle jää keskelle metri.',
           lahde: 'AdilElouarti, Wikimedia Commons (CC0)',
@@ -90768,6 +91114,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'marjoista. Osmanisulttaani Mahmud II määräsi hatun '
             + 'armeijalleen 1827.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-fes-kaupunki-3-r20260907-v2.jpg',
+          lyhyt: 'Fèsin fetsihattuaihetta havainnollistava kuvitteellinen työpaja.',
           selite: 'Fèsin fetsihattuaihetta havainnollistava kuvitteellinen '
             + 'työpaja. Valmistuksen yksityiskohdat ovat tulkinta '
             + 'pohjoisafrikkalaisesta hattuperinteestä.',
@@ -91009,6 +91356,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sivistyksen keskuksista, ja kaupungin juutalaisyhteisö '
             + 'oli Marokon vanhin ja suurin.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-fes-kirjallisuus-0-r20260907-v1.jpg',
+          lyhyt: 'Fèsissä 1516/1517 painettua Sefer Abudarhamia havainnollistava tekoälykuvitus.',
           selite: 'Fèsissä 1516/1517 painettua Sefer Abudarhamia '
             + 'havainnollistava tekoälykuvitus. Aukeama ja heprealainen '
             + 'teksti eivät ole alkuperäisen sivun jäljennös.',
@@ -91035,6 +91383,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1940-luvulle asti. Vuoteen 1908 mennessä kaupungissa oli '
             + 'vähintään neljä kirjapainoa.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-fes-kirjallisuus-1-r20260907-v7.jpg',
+          lyhyt: 'Fèsin 1860-luvun kivipainoa havainnollistava tekoälykuvitus.',
           selite: 'Fèsin 1860-luvun kivipainoa havainnollistava '
             + 'tekoälykuvitus. Koneen rakenne perustuu saman aikakauden '
             + 'museoprässiin; kuva ei ole al-Rudanin painon tai aidon '
@@ -91058,6 +91407,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'olosuhteita ei ole vahvistettu. Nykyään yhteisö on hyvin '
             + 'pieni, eivätkä korttelin synagogat ole enää käytössä.',
           tiedosto: '"Historisches Erbe der jüdischen Gemeinde in Fes". 01.jpg',
+          lyhyt: 'Medinan muuri kiipeää rinnettä; sisällä eli Marokon vanhin juutalaisyhteisö, ulkona hautausmaa.',
           selite: 'Medinan muuri kiipeää rinnettä, ja sen ulkopuolella '
             + 'levittäytyy hautausmaa — muurien sisällä eli Marokon '
             + 'vanhin juutalaisyhteisö.',
@@ -91249,6 +91599,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Gorée 2024 - Vue de Dakar - 17.jpg',
+          lyhyt: 'Sama kaupunki mereltä nykyään: nuoresta satamasta on kasvanut miljoonien asukkaiden pääkaupunki.',
           selite: 'Sama kaupunki mereltä nykyään: nuoresta '
             + 'satamapaikasta on kasvanut miljoonien asukkaiden '
             + 'pääkaupunki.',
@@ -91320,6 +91671,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oli siis vuoden vanhan Goréen kunnan osa; omaksi '
             + 'kunnakseen se irrotettiin vasta 1887.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-kaupunki-2-r20260907-v2.jpg',
+          lyhyt: 'Senegalin 1800-luvun maapähkinäkauppaa ja Dakarin varhaista satamaa havainnollistava tekoälykuvitus.',
           selite: 'Senegalin 1800-luvun maapähkinäkauppaa ja Dakarin '
             + 'varhaista satamaa havainnollistava tekoälykuvitus. Kuva ei '
             + 'esitä dokumentoitua yksittäistä lastausta vuodelta 1873.',
@@ -91601,6 +91953,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pääsi pitkään vain Afrikan maan kansalainen; 2014 se '
             + 'avattiin ensimmäistä kertaa myös muille.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-nykytaide-1-r20260907-v2.jpg',
+          lyhyt: 'Kuvitteellinen Dak\'Artin teemasta inspiroitunut nykytaidesali.',
           selite: 'Kuvitteellinen Dak’Artin teemasta inspiroitunut '
             + 'nykytaidesali. Teokset ja näyttely eivät jäljennä oikeaa '
             + 'tapahtumaa.',
@@ -91628,6 +91981,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Beaux-Artsin ensimmäinen musta jäsen. Hän kuoli '
             + 'Dakarissa 2016.',
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-nykytaide-2-r20260907-v3.jpg',
+          lyhyt: 'Ousmane Sow\'n Couple de lutteurs -veistoksen muotoja mukaileva tekoälykuvitus.',
           selite: 'Ousmane Sow’n Couple de lutteurs (Corps à corps) '
             + '-veistoksen muotoja mukaileva tekoälykuvitus. Näyttelypiha on '
             + 'kuvitteellinen.',
@@ -91650,6 +92004,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Afrikasta. Time valitsi museon vuoden 2019 sadan '
             + 'parhaan paikan joukkoon.',
           tiedosto: 'Oba Oguola - MCN 4181.jpg',
+          lyhyt: 'Pronssinen kuninkaanpää museon näyttelyssä; tällaiset teokset ovat palautuskeskustelun ytimessä.',
           selite: 'Pronssinen kuninkaanpää museon näyttelyssä; juuri '
             + 'tällaiset teokset ovat palautuskeskustelun ytimessä.',
           lahde: 'GuillaumeG, Wikimedia Commons (CC BY-SA 4.0)',
@@ -91830,6 +92185,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Salta-Square1.jpg',
+          lyhyt: 'Américan kulttuurikeskus nousee pääaukion laidalla naapureitaan korkeammalle.',
           selite: 'Américan kulttuurikeskus nousee pääaukion laidalla '
             + 'naapureitaan korkeammalle ranskalaisine kattoineen.',
           lahde: 'Fulviusbsas, Wikimedia Commons (CC BY-SA 3.0)',
@@ -92943,6 +93299,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Nuup Kangerlua and Nuuk (2) (Kenny McFly).jpg',
+          lyhyt: 'Sama vuono nykyään: rannan takana kerrostaloja, niemen kärjessä yhä vanhan kolonian värikäs rykelmä.',
           selite: 'Sama vuono nykyään: rannan takana on kerrostaloja '
             + 'ja niemen kärjessä yhä vanhan kolonian värikäs rykelmä.',
           lahde: 'Kenny McFly, Wikimedia Commons (CC BY-SA 4.0)',
@@ -93006,6 +93363,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tavoin ja pysyivät erillisinä asutuksina, kunnes '
             + 'herrnhutilaiset lähtivät maasta 1900.',
           tiedosto: 'Nuuk (Godthåb), 1878 (8472508779).jpg',
+          lyhyt: 'Akvarelli viiden vuoden päästä isoisän matkasta: kirkko, muutama talo ja lippu kalliolla.',
           selite: 'Akvarelli viiden vuoden päästä isoisän matkasta: '
             + 'kirkko, muutama talo ja lippu kalliolla — kirjoitus '
             + '"Godthaab 1878" on tekijän omaa käsialaa.',
@@ -93076,6 +93434,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Nuukissa kahdesti viikossa suurimman osan vuodesta.',
               kuva: {
                 tiedosto: 'Nuuk Airport New Terminal.jpg',
+                lyhyt: 'Vuonna 2024 avattu terminaali on ensimmäinen Grönlannin lentoasema suorille kaukolennoille.',
                 selite: 'Vuonna 2024 avattu terminaali on ensimmäinen '
                   + 'Grönlannin lentoasema, jolle laskeutuu suoria '
                   + 'kaukolentoja.',
@@ -93440,6 +93799,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Turnagain Arm south of Anchorage.jpg',
+          lyhyt: 'Turnagain Armin vuorovesi paljastaa laakean mutatasangon, takana vuoret nousevat suoraan vedestä.',
           selite: 'Turnagain Armin vuorovesi paljastaa laakean '
             + 'mutatasangon, jonka takana vuoret nousevat suoraan '
             + 'vedestä.',
@@ -93488,6 +93848,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja puron, jonka rannalta kaupunki alkoi, nimi on '
             + 'Dgheyaytnu.',
           tiedosto: 'Replica house - Alaska Native Heritage Center Museum.jpg',
+          lyhyt: 'Alaska Native Heritage Centerin pihalle on rakennettu jäljennöksiä alkuperäiskansojen asumuksista.',
           selite: 'Alaska Native Heritage Centerin pihalle on '
             + 'rakennettu jäljennöksiä alkuperäiskansojen asumuksista '
             + 'lankuista ja järeistä pystytolpista.',
@@ -93555,6 +93916,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Turnagainin kaupunginosa menetti 75 taloa maanvyöryyn, '
             + 'ja tuhoutunut alue on nykyään Earthquake Park.',
           tiedosto: 'Great Alaska Earthquake Fourth Ave Anchorage.jpg',
+          lyhyt: 'Neljäs katu vajosi järistyksessä kerroksen verran, autot jäivät kadunpätkän mukana alas.',
           selite: 'Neljäs katu vajosi järistyksessä kokonaisen '
             + 'kerroksen verran, ja autot jäivät kadunpätkän mukana '
             + 'alemmalle tasolle.',
@@ -93981,6 +94343,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'General view of Punta Arenas.jpg',
           vuosi: '1912',
+          lyhyt: 'Matkakirjan painettu kuvalaatta 1912: peltikattojen takana salmi toistakymmentä laivaa odottamassa.',
           selite: 'Matkakirjan painettu kuvalaatta vuodelta 1912: '
             + 'peltikattojen takana on salmi ja sillä toistakymmentä '
             + 'laivaa odottamassa.',
@@ -93988,6 +94351,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Punta Arenas, Cerro de la Cruz 0798.jpg',
+          lyhyt: 'Sama kaupunki Cerro de la Cruzilta nykyään: ruutukaava ennallaan, salmella enää yksittäisiä aluksia.',
           selite: 'Sama kaupunki Cerro de la Cruzilta nykyään: '
             + 'ruutukaava on ennallaan, mutta salmella on enää '
             + 'yksittäisiä aluksia ja yksi risteilijä.',
@@ -94129,6 +94493,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'PilotoPardo.jpg',
+          lyhyt: 'Luutnantti Pardon muistomerkki osoittaa salmelle, vieressä laivan keulaa kuvaava teräslevy.',
           selite: 'Luutnantti Pardon muistomerkki osoittaa salmelle, '
             + 'ja sen vieressä nousee laivan keulaa kuvaava teräslevy.',
           lahde: 'AndrewDeAngelo, Wikimedia Commons (CC BY-SA 4.0)',
@@ -94264,6 +94629,7 @@ export const KULTTUURI_KATEGORIAT = {
               {
                 mita: 'Magdalenan saaren pingviinit',
                 tahdet: 3,
+                lyhyt: 'Kymmeniätuhansia pesiviä pareja 32 km päässä koilliseen; käynti onnistuu vain pesimäkaudella.',
                 selite: 'Kymmeniätuhansia pesiviä pareja 32 '
                   + 'kilometrin päässä koilliseen; käynti onnistuu '
                   + 'vain pesimäkaudella.',
@@ -94666,6 +95032,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Catedral Basílica Menor de San Lorenzo, Santa Cruz de la Sierra small.jpg',
+          lyhyt: 'Katedraalin punatiiliset tornit ja kupolit ylhäältä nähtynä, takana alkaa matalien kattojen meri.',
           selite: 'Katedraalin punatiiliset tornit ja kupolit '
             + 'ylhäältä nähtynä, ja niiden takana alkaa matalien '
             + 'kattojen meri.',
@@ -94888,6 +95255,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'macamba. Toisen mukaan se tulee Galician Cambadosista. '
             + 'Kumpaakaan ei ole todistettu.',
           tiedosto: 'Sombreo de saó 2.jpg',
+          lyhyt: 'Saó-hattu on punottu leveälierinen olkihattu, joka kuuluu camba-asuun ja suojaa auringolta.',
           selite: 'Saó-hattu on punottu leveälierinen olkihattu, joka '
             + 'kuuluu camba-asuun ja suojaa maaseudulla auringolta.',
           lahde: 'Carlillasa, Wikimedia Commons (CC BY-SA 4.0)',
@@ -95120,6 +95488,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Santa Lucían lähteen viereltä — siitä kohdasta lähtee '
             + 'nykyään keskustan kanava.',
           tiedosto: 'Paseo Santa Lucía.jpg',
+          lyhyt: 'Santa Lucían kanava kulkee valaistujen puiden välissä kaupungin ensimmäisen lähteen kohdalla.',
           selite: 'Santa Lucían kanava kulkee valaistujen puiden '
             + 'välissä siltä kohdalta, jossa kaupungin ensimmäinen '
             + 'lähde oli.',
@@ -95464,6 +95833,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'läpi, ja kahdeksas ihme, jossa tippukivi ja pisarakivi '
             + 'ovat kasvaneet yhteen pylvääksi.',
           tiedosto: 'Grutas de García 3029.jpg',
+          lyhyt: 'Tippukiviverhot täyttävät salin katosta lattiaan, opastusvalot värjäävät ne vihreäksi ja violetiksi.',
           selite: 'Tippukiviverhot täyttävät salin katosta lattiaan, '
             + 'ja opastusvalot värjäävät ne vihreäksi ja violetiksi.',
           lahde: 'Phyrexian, Wikimedia Commons (CC BY-SA 4.0)',
@@ -95623,6 +95993,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Iglesia de san cristobal desde el mercado de san benito - panoramio.jpg',
+          lyhyt: 'Kattojen yli katsottuna kaupunki on matala ja valkoinen, horisontissa San Cristóbalin tornit.',
           selite: 'Kattojen yli katsottuna kaupunki on matala ja '
             + 'valkoinen, ja horisontissa erottuvat San Cristóbalin '
             + 'tornit.',
@@ -95651,6 +96022,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Merida Yucatan Stereo 1901 cropped.jpg',
           vuosi: '1901',
+          lyhyt: 'Lucas de Gálvezin tori kioskeineen ja tuulimyllyineen vanhan San Beniton linnoituksen muureilta.',
           selite: 'Lucas de Gálvezin tori kioskeineen ja '
             + 'tuulimyllyineen vanhan San Beniton linnoituksen '
             + 'muureilta nähtynä.',
@@ -95992,6 +96364,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keltaisten maissitortillojen, punaisten etikkasipulien, '
             + 'papujen ja habanerojen kanssa.',
           tiedosto: 'Cochinita pibil yucateca.jpg',
+          lyhyt: 'Annatton värjäämä liha on kirkkaan oranssia, kylkeen kuuluvat mustapapusose ja etikkasipulit.',
           selite: 'Annatton värjäämä liha on kirkkaan oranssia, ja '
             + 'kylkeen kuuluvat mustapapusose ja punaiset '
             + 'etikkasipulit.',
@@ -96013,6 +96386,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oli paksu ja kypsennettiin tuhkassa. Kananmunia ei '
             + 'ollut, mutta kalkkunoita ja myskisorsia oli kesytetty.',
           tiedosto: 'Papadzules yucatecos.jpg',
+          lyhyt: 'Vaaleanvihreä kurpitsansiemenkastike peittää tortillat, päällä tomaattikastiketta ja munaa.',
           selite: 'Vaaleanvihreä kurpitsansiemenkastike peittää '
             + 'tortillat, ja päällä on tomaattikastiketta ja '
             + 'murennettua munaa.',
@@ -96173,6 +96547,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: 'Evening glow at Downtown Winnipeg.jpg',
+          lyhyt: 'Ilmasta katsottuna Punainen joki kaartaa vasemmalla, ihmisoikeusmuseo keskellä ja keskusta takana.',
           selite: 'Ilmasta katsottuna Punainen joki kaartaa vasemmalla, '
             + 'ihmisoikeusmuseo kohoaa keskellä ja keskusta jää '
             + 'taakse.',
@@ -96195,6 +96570,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Canadian Dog Train and Remains of Old Fort Garry, Winnipeg 1899 (HS85-10-11350).jpg',
           vuosi: '1899',
+          lyhyt: 'Koiravaljakko ja kuormareki Fort Garryn porttitornin edessä talvella 1899.',
           selite: 'Koiravaljakko ja kuormareki Fort Garryn porttitornin '
             + 'edessä talvella 1899; alalaidan tekstiliuska on '
             + 'valokuvaamon oma nimiö.',
@@ -96202,6 +96578,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Winnipeg Esplanade Riel Bridge & CMHR.jpg',
+          lyhyt: 'Sama kaupunki nykyään: vinoköysisilta joen yli, ihmisoikeusmuseo vasemmalla ja tornit takana.',
           selite: 'Sama kaupunki nykyään: vinoköysisilta joen yli, '
             + 'ihmisoikeusmuseo vasemmalla ja keskustan tornit '
             + 'takana.',
@@ -96222,6 +96599,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'La Vérendrye rakensi paikalle 1738 ensimmäisen '
             + 'kauppa-aseman, Fort Rougen.',
           tiedosto: 'Upper Fort Garry Gate April 2010.jpg',
+          lyhyt: 'Upper Fort Garryn kiviportti on kaikki, mitä linnakkeesta on jäljellä, takana nykyiset kerrostalot.',
           selite: 'Upper Fort Garryn kiviportti on kaikki, mitä '
             + 'linnakkeesta on jäljellä, ja sen takana kohoavat '
             + 'nykyiset kerrostalot.',
@@ -96241,6 +96619,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nimettiin Fort Garryksi 1822; tulva tuhosi sen 1826, ja '
             + 'se rakennettiin uudelleen vasta 1835.',
           tiedosto: 'Scene of the Seven Oaks Fight (1887) (3749553619).jpg',
+          lyhyt: 'Vuoden 1887 kirjan kartassa näkyvät Fort Gibraltar, Fort Douglas ja Seven Oaks.',
           selite: 'Vuoden 1887 kirjan kartassa näkyvät Fort Gibraltar, '
             + 'Fort Douglas ja Seven Oaks; katkoviiva on kustantajan '
             + 'oma merkintä métisien kulkureitistä.',
@@ -96261,6 +96640,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'järveltä kuudenkymmenenviiden kilometrin päästä: creen '
             + 'ja odžibwen sana tarkoittaa sameaa eli mutaista vettä.',
           tiedosto: 'Main Street Winnipeg -1874- (3068449327).jpg',
+          lyhyt: 'Vuoden 1874 kaiverruksessa Main Street on vielä mutainen kylätie.',
           selite: 'Vuoden 1874 kaiverruksessa Main Street on vielä '
             + 'mutainen kylätie; ylälaidan numerot ovat kustantajan '
             + 'omia ja alalaidan teksti selittää ne.',
@@ -96281,6 +96661,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'A. A. Milnen poika Christopher Robin, joka vaihtoi oman '
             + 'nallensa nimen Edward Bearista Winnie the Poohiksi.',
           tiedosto: 'ZSL London - Harry Colebourn and Winnie the Bear (01).jpg',
+          lyhyt: 'Lontoon eläintarhan pronssipatsaassa Colebourn kumartuu karhunpennun puoleen, vieressä muistolaatta.',
           selite: 'Lontoon eläintarhan pronssipatsaassa Colebourn '
             + 'kumartuu karhunpennun puoleen, ja vieressä on '
             + 'muistolaatta.',
@@ -96291,6 +96672,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Manitoba Legislative Building 2 (8032854242).jpg',
+          lyhyt: 'Parlamenttitalon kupolin päällä juoksee Kultapoika soihtu kädessä, portaiden juurella patsas.',
           selite: 'Parlamenttitalon kupolin päällä juoksee Kultapoika '
             + 'soihtu kädessä, ja portaiden juurella seisoo patsas.',
           lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
@@ -96405,6 +96787,7 @@ export const KULTTUURI_KATEGORIAT = {
               {
                 mita: 'Jokien kärki',
                 tahdet: 3,
+                lyhyt: 'Kansallinen historiallinen kohde ja kaupungin suosituin käynti, neljä miljoonaa kävijää vuodessa.',
                 selite: 'Kansallinen historiallinen kohde ja kaupungin '
                   + 'suosituin käyntikohde, neljä miljoonaa kävijää '
                   + 'vuodessa.',
@@ -96412,6 +96795,7 @@ export const KULTTUURI_KATEGORIAT = {
               {
                 mita: 'Pörssikortteli',
                 tahdet: 3,
+                lyhyt: 'Kaksikymmentä korttelia 1900-luvun alun varastoja ja terrakottajulkisivuja, suojeltu 1997.',
                 selite: 'Kaksikymmentä korttelia 1900-luvun alun '
                   + 'varastoja ja terrakottajulkisivuja, '
                   + 'kansallinen historiallinen kohde 1997.',
@@ -96514,6 +96898,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vahingoin, kun taas padoton Grand Forks rajan takana ei. '
             + 'Tulvia oli myös 2009 ja 2011.',
           tiedosto: 'Greater Winnipeg Flooded Area 1950 (1952) (2304469813).jpg',
+          lyhyt: 'Vuoden 1952 kartassa vuoden 1950 tulva-alue on merkitty siniseksi ilmakuvan päälle.',
           selite: 'Vuoden 1952 kartassa vuoden 1950 tulva-alue on '
             + 'merkitty siniseksi ilmakuvan päälle; oikean ylälaidan '
             + 'nimiö ja merkkien selitys ovat julkaisijan omia.',
@@ -96704,6 +97089,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kielsi kalastajilta pysyvän asutuksen, ja kaupunki '
             + 'syntyi vasta vuoden 1630 jälkeen.',
           tiedosto: 'Terra Nova e Labrador 04.png',
+          lyhyt: '1500-luvun portugalilaisessa merikartassa Atlantin yli purjehtii aluksia, vasemmalla Newfoundland.',
           selite: '1500-luvun portugalilaisessa merikartassa Atlantin '
             + 'yli purjehtii aluksia ja vasemmassa ylälaidassa on '
             + 'Newfoundlandin rannikko.',
@@ -97003,6 +97389,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valtameren yli: aseman miehet puhuivat Englannista '
             + 'lähteneen höyrylaivan kanssa.',
           tiedosto: 'Marconi, Signal Hill, Newfoundland and Labrador.jpg',
+          lyhyt: 'Vihertynyt pronssilaatta kertoo ensimmäisestä Atlantin ylittäneestä langattomasta viestistä täällä.',
           selite: 'Vihertynyt pronssilaatta kertoo kalliolla, että '
             + 'ensimmäinen langaton viesti Atlantin yli otettiin '
             + 'vastaan tällä paikalla.',
@@ -97043,6 +97430,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Keski-Kanadaa edellä ja puoli tuntia jäljessä '
             + 'Saint-Pierreä.',
           tiedosto: 'Newfoundland time-zone sign.jpg',
+          lyhyt: 'Tienvarsikyltti Labradorissa käskee siirtämään kelloa puoli tuntia eteenpäin ja näyttää rajan.',
           selite: 'Tienvarsikyltti Labradorissa käskee siirtämään kelloa '
             + 'puoli tuntia eteenpäin ja näyttää kartalla, mistä raja '
             + 'kulkee.',
@@ -97150,6 +97538,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Kejetia-Markt.jpg',
+          lyhyt: 'Iltavalossa torikadun päivänvarjot, pikkubussit ja uuden kauppahallin runko jatkuvat horisonttiin.',
           selite: 'Iltavalossa torikadun päivänvarjot, pikkubussit ja '
             + 'uuden kauppahallin runko jatkuvat horisonttiin asti.',
           lahde: 'Afus199620, Wikimedia Commons (CC0)',
@@ -97162,6 +97551,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Luftbild Kumasi 2012 B004.jpg',
+          lyhyt: 'Lentokoneen ikkunasta kaupunki näkyy matalana ja vehreänä, halki kulkee punainen tie.',
           selite: 'Lentokoneen ikkunasta kaupunki näkyy matalana ja '
             + 'vehreänä, ja punainen tie halkaisee sen kulmasta '
             + 'kulmaan.',
@@ -97171,6 +97561,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: "Kumasi Kejetia on the left and Adehyeman stores on the right, as I've said earlier there isn't anything you can't find here to buy. In between is the busiest road from Suame roundabout entering Kejetia.jpg",
+          lyhyt: 'Sillalta katsottuna Kejetiaan johtava katu on täynnä pikkubusseja, takseja ja kolmipyöriä.',
           selite: 'Sillalta katsottuna Kejetiaan johtava katu on '
             + 'täynnä pikkubusseja, takseja ja kolmipyöriä '
             + 'kaupparivien välissä.',
@@ -97515,6 +97906,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kalanfossiileja, ja vielä noin kolmesataa vuotta '
             + 'sitten järvi oli kutistunut lammeksi.',
           tiedosto: 'An Explosive Beginning for Lake Bosumtwi (154739 - 151229 lrg).jpg',
+          lyhyt: 'Satelliittikuvassa järvi on lähes pyöreä tumma kiekko kraatterirenkaan keskellä, Kumasi yläkulmassa.',
           selite: 'Satelliittikuvassa järvi on lähes pyöreä tumma '
             + 'kiekko keskellä metsäistä kraatterirengasta, ja '
             + 'vasemmassa yläkulmassa levittäytyy Kumasi.',
@@ -97672,6 +98064,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'KanofromDalaHill.jpg',
+          lyhyt: 'Dala-kukkulan kalliolta vanhankaupungin tasakatot jatkuvat horisonttiin palmujen lomassa.',
           selite: 'Dala-kukkulan kalliolta katsoen vanhankaupungin '
             + 'tasakatot jatkuvat horisonttiin palmujen ja '
             + 'minareettien lomassa.',
@@ -97679,6 +98072,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Sabuwar Kofa - Kano City Gate.jpg',
+          lyhyt: 'Kolmikaarinen kaupunginportti kohoaa keskellä katua, hammastettu muuri jatkuu molemmin puolin.',
           selite: 'Kolmikaarinen kaupunginportti kohoaa keskellä '
             + 'katua, ja hammastettu muuri jatkuu sen molemmin '
             + 'puolin.',
@@ -97687,6 +98081,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Dalla Hill from Kano City.jpg',
+          lyhyt: 'Kaupungin takaa nousee Dala-kukkulan tasapäinen kallio, etualalla savimuurin jäänteitä.',
           selite: 'Kaupungin takaa nousee Dala-kukkulan tasapäinen '
             + 'kallio, ja etualalla lammen rannassa on savimuurin '
             + 'jäänteitä.',
@@ -97715,6 +98110,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Kofar Naisa - Kano City Gate.jpg',
+          lyhyt: 'Kofar Naisan portin läpi näkyy kadun jatkuvan vanhaankaupunkiin, muurin vieressä karjakauppaa.',
           selite: 'Kofar Naisan portin läpi näkyy kadun jatkuvan '
             + 'vanhaankaupunkiin, ja muurin vieressä käydään '
             + 'karjakauppaa.',
@@ -97845,6 +98241,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja poistuvat. Unesco otti juhlan aineettoman '
             + 'kulttuuriperinnön luetteloon joulukuussa 2024.',
           tiedosto: 'Horsemen during the September 2016 Durbar in Kano - 1.jpg',
+          lyhyt: 'Kuvioiduissa kaavuissa ratsastajat ohjaavat koristeltuja hevosia hiekkakentän poikki iltavalossa.',
           selite: 'Kuvioiduissa kaavuissa ratsastavat miehet ohjaavat '
             + 'koristeltuja hevosiaan hiekkakentän poikki '
             + 'iltavalossa.',
@@ -98303,6 +98700,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'itseensä vasta 15. joulukuuta 1893. Ristiriita ei ole '
             + 'lähteiden virhe vaan sen ajan kuva.',
           tiedosto: 'Barth 1858 Timbuktu from terrace.jpg',
+          lyhyt: 'Kaupunki kattoterassilta 1850-luvulla Heinrich Barthin mukaan: savitaloja niin kauas kuin näkee.',
           selite: 'Kaupunki kattoterassilta 1850-luvulla Heinrich '
             + 'Barthin luonnoksen mukaan: matalia savitaloja niin '
             + 'kauas kuin näkee, ja takana Sankorén minareetti.',
@@ -99072,6 +99470,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'koristeellisimpana, ja sen keskilaivan seinämaalauksia '
             + 'Etiopian vanhimpina säilyneinä.',
           tiedosto: 'Yemerehne kristos, esterno, 01.jpg',
+          lyhyt: 'Kirkko seisoo luolan sisällä, seinät ovat vuorottelevia valkoisen kiven ja tumman puun kerroksia.',
           selite: 'Kirkko seisoo luolan sisällä, ja sen seinät ovat '
             + 'vuorottelevia valkoisen kiven ja tumman puun kerroksia.',
           lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
@@ -99180,6 +99579,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'StateLibQld 1 235004 Scene at Jetty Wharf, Townsville, Queensland, 1901.jpg',
           vuosi: '1901',
+          lyhyt: 'Elokuussa 1901 Jetty Wharfin laiturissa oli neljä alusta, lastina sokeria, villaa ja malmia.',
           selite: 'Elokuussa 1901 Jetty Wharfin laiturissa oli neljä '
             + 'alusta kylki kyljessä, ja lastina oli sokeria, villaa '
             + 'ja malmia.',
@@ -99189,6 +99589,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Views of the Port of Townsville from the Magnetic Island ferry, Townsville, Australia 01.jpg',
           vuosi: '2026',
+          lyhyt: 'Sama satama tänään: pitkän paalulaiturin päällä kulkee kuljetinhihna, taustalla nousee Castle Hill.',
           selite: 'Sama satama tänään: pitkän paalulaiturin päällä '
             + 'kulkee kuljetinhihna, ja taustalla nousee Castle Hill.',
           lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
@@ -99204,6 +99605,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Castle Hill, Viewed From Townsville Breakwater..jpg',
+          lyhyt: 'Castle Hillin paljas graniittilaki nousee talojen takaa, edessä Cleveland Bayn matala vesi.',
           selite: 'Castle Hillin paljas graniittilaki nousee '
             + 'kaupungin talojen takaa, ja edessä on Cleveland Bayn '
             + 'matala vesi.',
@@ -99211,6 +99613,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'View From Castle Hill Townsville - panoramio (11).jpg',
+          lyhyt: 'Kalliolta katsottuna North Wardin matalat talot levittäytyvät rantaan, lahdella Magnetic Island.',
           selite: 'Kalliolta katsottuna North Wardin matalat talot '
             + 'levittäytyvät rantaan, ja lahden takana on Magnetic '
             + 'Island.',
@@ -99249,6 +99652,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Flinders Street, Townsville, Queensland.jpg',
+          lyhyt: 'Flinders Street on kaupungin vanhin katu, varrella yhä rivi 1800-luvun lopun pankkitaloja.',
           selite: 'Flinders Street on kaupungin vanhin katu, ja sen '
             + 'varrella seisoo yhä rivi 1800-luvun lopun '
             + 'pankkitaloja.',
@@ -99348,6 +99752,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Strand Pier, Townsville, 2023, 03.jpg',
+          lyhyt: 'Illalla The Strandin laituri ja Ocean Siren -veistos palavat sinisinä, taustalla Magnetic Island.',
           selite: 'Illalla The Strandin laituri ja Ocean Siren '
             + '-veistos palavat sinisinä, ja takana näkyy Magnetic '
             + 'Islandin siluetti.',
@@ -99730,6 +100135,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Vista ciudad desde rio.JPG',
           vuosi: '2026',
+          lyhyt: 'Sama kaupunki Itaya-joelta tänään: veneitä, paalutaloja ja niiden takana kellotorni.',
           selite: 'Sama kaupunki Itaya-joelta tänään: veneitä, '
             + 'paalujen varaan rakennettuja taloja ja niiden takana '
             + 'kellotorni.',
@@ -99878,6 +100284,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Ex Hotel Palace en Iquitos, 2018.jpg',
+          lyhyt: 'Ex Hotel Palacen kulmatorni ja takorautaparvekkeet ovat Iquitosin arkkitehtuurin huippu.',
           selite: 'Ex Hotel Palacen kulmatorni, takorautaparvekkeet '
             + 'ja Málagasta tuodut kaakelit ovat Iquitosin '
             + 'arkkitehtuurin huippu.',
@@ -100467,6 +100874,7 @@ export const KULTTUURI_KATEGORIAT = {
               {
                 mita: 'Miles Canyon',
                 tahdet: 3,
+                lyhyt: 'Yukonjoki puristuu 8,4 miljoonan vuoden ikäiseen basalttikanjoniin keskustan eteläpuolella.',
                 selite: 'Yukonjoki puristuu 8,4 miljoonan vuoden '
                   + 'ikäiseen basalttikanjoniin seitsemän kilometriä '
                   + 'keskustasta etelään.',
