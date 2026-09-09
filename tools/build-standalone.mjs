@@ -614,6 +614,8 @@ const MODULES = [
    * mitään.
    */
   'js/pollo-haku.js',
+  'js/livia-kasvot.js',
+  'js/livia-eleet.js',
   'js/pollo.js',
   /*
    * Livian ääni ennen Livian kuplia: js/livia.js soittaa repliikin

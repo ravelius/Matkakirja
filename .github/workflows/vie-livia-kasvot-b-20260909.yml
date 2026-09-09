@@ -1,0 +1,65 @@
+name: Vie Livian B-kasvo R2:een
+on:
+  push:
+    branches: [codex/livia-b-viisi-eletta-20260909]
+    paths: ['.github/workflows/vie-livia-kasvot-b-20260909.yml']
+permissions:
+  contents: read
+concurrency:
+  group: livia-kasvot-b-20260909
+  cancel-in-progress: false
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      DRIVE_AVAIN: ${{ secrets.SAMIREIVINEN_DRIVE_API }}
+      R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_AMPARI: ${{ secrets.R2_BUCKET }}
+      DRIVE_ID: 1y7c58wolEdbiHUdq9tDmtREFlTKd9th-
+      R2_POLKU: hahmot/livia-kasvot-B-r20260909-v1.png
+      SHA256: 04e93dd0c71698f6cb52682d53c63a1a96698d48cf1c5d28889f454c4c8eb94f
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Nouda ja tarkista valittu PNG
+        run: |
+          node --input-type=module <<'JS'
+          import { writeFileSync } from 'node:fs';
+          import { createHash } from 'node:crypto';
+          for (const name of ['DRIVE_AVAIN','R2_TILI','R2_AMPARI','AWS_ACCESS_KEY_ID','AWS_SECRET_ACCESS_KEY']) {
+            if (!process.env[name]) throw new Error(`Puuttuva asetus: ${name}`);
+          }
+          const url = new URL(`https://www.googleapis.com/drive/v3/files/${process.env.DRIVE_ID}`);
+          url.searchParams.set('alt','media');url.searchParams.set('key',process.env.DRIVE_AVAIN);
+          const res=await fetch(url);if(!res.ok)throw Error(`Drive HTTP ${res.status}`);
+          const bytes=Buffer.from(await res.arrayBuffer());
+          if(createHash('sha256').update(bytes).digest('hex')!==process.env.SHA256)throw Error('PNG SHA-256 ei täsmää');
+          if(bytes.subarray(0,8).toString('hex')!=='89504e470d0a1a0a'||bytes.readUInt32BE(16)!==1254||bytes.readUInt32BE(20)!==1254||bytes[25]!==6)throw Error('Odotettiin 1254 × 1254 RGBA-PNG');
+          const existing=await fetch(`https://media.matkakirja.app/${process.env.R2_POLKU}?check=${Date.now()}`);
+          if(existing.ok){
+            if(createHash('sha256').update(Buffer.from(await existing.arrayBuffer())).digest('hex')!==process.env.SHA256)throw Error('R2-avaimessa eri sisältö; ei korvata');
+          }else if(existing.status!==404)throw Error(`R2-esitarkistus HTTP ${existing.status}`);
+          writeFileSync('livia-b.png',bytes);console.log('Hyväksytty B: RGBA, mitat ja tiiviste kunnossa');
+          JS
+      - name: Vie täsmälleen yksi kuvapohja
+        run: |
+          set -euo pipefail
+          aws s3 cp livia-b.png "s3://$R2_AMPARI/$R2_POLKU"             --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com"             --no-progress --content-type image/png             --cache-control 'public, max-age=31536000, immutable'
+      - name: Varmista julkinen kuva ja CORS
+        run: |
+          node --input-type=module <<'JS'
+          import { createHash } from 'node:crypto';
+          const url=`https://media.matkakirja.app/${process.env.R2_POLKU}?check=${Date.now()}`;
+          const r=await fetch(url,{headers:{Origin:'https://matkakirja.app'}});
+          if(!r.ok||!r.headers.get('content-type')?.startsWith('image/png'))throw Error(`R2 HTTP ${r.status}`);
+          if(!r.headers.get('access-control-allow-origin'))throw Error('CORS puuttuu');
+          if(createHash('sha256').update(Buffer.from(await r.arrayBuffer())).digest('hex')!==process.env.SHA256)throw Error('R2-takaisinluvun SHA-256 ei täsmää');
+          console.log('Valittu B-kuvapohja varmennettu julkisesta pelimediasta');
+          JS
