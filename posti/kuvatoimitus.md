@@ -1,3 +1,13 @@
+## 2026-09-09 — PuluCam EU erä 06: seitsemän tarkistettua kuvaa, yhteensä 48 toimitettu
+
+Toimitus `posti/kuvatoimitus-pulucam-euv1-era06-20260909.json`, commit 8186156ad8666fe172091a07dd00ffe9335c4faf: Bergen2, Oslo2, Dubrovnik3, Bukarest1, Sarajevo1, Venetsia1 PAIKKA-V2 ja Kiova1 OHJAUS-EU-V2. Kaikki7 rootin silmin tarkistettu ja julkisen median latauksena SHA/MIME/mitat/ICC/CORS varmennettu. Ota kuvat ja täsmälleen uudet paritetut kuvatekstit yhdessä käyttöön. Kiova ja Venetsia käyttävät masterV1.3:n nimenomaisia uusia prompteja; muiden lähde on alkuperäinen V1. Kuvakohtainen commit/blob näkyy paketissa. Kiova ei esitä tunnistettavaa Lavran ovea tai väitä sen saavutettavuutta varmennetuksi.
+
+Paikkakorjaukset ja Kiovan uusi rajaus saapuivat ja ovat työn alla/valmiit. Lontoo1 PAIKKA-V2 on root-PASS, tulee seuraavassa erässä. Venetsia2/4/5 etenevät yksi kerrallaan, käyttäen oikeita paikkareferenssejä. Vanhan Venetsia3-kuvan lintu pysyy yhteisenä identiteettireferenssinä, mutta Campo Santa Margheritan taustaa ei saatu todennettua. Tekstisessiolta pyydetty täsmällinen korvaava kolmannen kuvan paikkaprompti. Älä tuo vanhaa3-kuvaa uutena hyväksyttynä sen aikaa.
+
+Sivun v181 julkaisu onnistui;48 EU-kuvan ja aiempien yritysten yksityisen median tuonti/tarkistus on käynnissä. Paperikuvien neljä korjausta pysyvät käyttäjän arvioinnissa. V1718:n 35 lisäystä (33EU+2Tampere) on varmennettu oikeista main-kuvapaikoista ja sivulla merkitty Valmiit-tilaan.
+
+---
+
 ## 2026-09-09 — PuluCam EU V1 erä 05: kahdeksan lisää heti peliin
 
 Toimitus: `posti/kuvatoimitus-pulucam-euv1-era05-20260909.json` (commit 35a0154b76f4d8613deb877f8c6e2e8c2e7fe0d0). Bergen 1, Tukholma 1, Kreeta 1, Dubrovnik 1–2, Sofia 1, Kööpenhamina 1, Pietari 1. Kaikki 8 on rootin silmin tarkastettu oikeisiin paikkareferensseihin ja R2:n julkinen lataus SHA-256/MIME/mitat/sRGB varmennettu. Tuo tarkkoine kuvateksteineen omiin kaupunki/järjestys-paikkoihin, säilytä OHJAUS-01 ja aiemmat erät sekä B-tarra.
