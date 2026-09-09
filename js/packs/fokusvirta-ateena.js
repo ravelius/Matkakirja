@@ -160,6 +160,30 @@ export const FOKUSVIRTA_ATEENA = {
    */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-ateena-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-ateena-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Ateena: kultaa sisällä, hyvä varjo puutarhassa.',
+        selite: 'Schliemannin myöhempi kotitalo Ateenassa toimii rahamuseona. '
+          + 'Puutarhakahvilassa kolikot ovat saaneet tavallisen tehtävänsä '
+          + 'takaisin: niillä maksetaan kahvi. Istuin tuolin alla, kun pöydällä '
+          + 'vaihdettiin kuppi ja pieni lautanen eri kohtiin. Isoisä kuuli '
+          + 'täällä väittelyä aarteesta. Minä löysin paikan, jossa kukaan ei '
+          + 'väitellyt varjon arvosta. Se kelpasi kaikille.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.nummus.gr/en/refreshment-room-cafe/',
+          'https://www.nummus.gr/en/iliou-melathron/',
+        ],
+      },
+    ],
+    /*
      * ATEENA SAMAAN KULKUUN KUIN MUUT (omistaja 8.9.2026 klo 19.10).
      *
      * Ennen tätä Ateena oli ainoa kaupunki, jossa pulun teksti asui

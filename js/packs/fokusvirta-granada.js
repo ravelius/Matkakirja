@@ -242,6 +242,30 @@ export const FOKUSVIRTA_GRANADA = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-granada-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-granada-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Granada: palatsilla on toinen kerros veden alla.',
+        selite: 'Alhambran Myrttipihan pitkä allas kantaa Comaresin tornin '
+          + 'peilikuvaa. Tuuli ja pienikin veden liike muuttavat sitä, vaikka '
+          + 'rakennus pysyy paikallaan. Asetuin reunalle niin matalalle, että '
+          + 'melkein koko palatsi mahtui alapuolelleni. Isoisä rikkoi näkymän '
+          + 'sormellaan. Minä odotin hetken. Joskus hyvän kuvan tärkein taito '
+          + 'on pitää nokkansa erossa aiheesta.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.alhambra-patronato.es/en/edificios-lugares/patio-de-los-arrayanes',
+          'https://www.archnet.org/sites/16021?media_content_id=116790',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

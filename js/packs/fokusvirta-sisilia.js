@@ -46,6 +46,30 @@ export const FOKUSVIRTA_SISILIA = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-sisilia-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sisilia-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Palermo: tätä kattoa varten kannattaa nostaa nokkaa.',
+        selite: 'Palatinakappelin puukaton pienet syvennykset asettuvat päällekkäin '
+          + 'kuin huolellisesti rakennettu pesä, jonka tekijä ei ole halunnut '
+          + 'lopettaa. Mosaiikkien kulta tuo tilaan toisenlaista valoa. Isoisä '
+          + 'kyseli käsityöläisten nimiä. Minä katselin, kuinka monta erilaista '
+          + 'taitoa voi mahtua samaan huoneeseen. Palatsissa työskentelee nyt '
+          + 'myös Sisilian parlamentti. Katon puheenvuoro on kestänyt kauemmin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.federicosecondo.org/la-cappella-palatina/',
+          'https://www.federicosecondo.org/cenni-storici/',
+        ],
+      },
+    ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

@@ -136,6 +136,44 @@ export const FOKUSVIRTA_BUDAPEST = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-budapest-01-r20260909-euv1-v1.jpg, pulu-cam-budapest-02-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-budapest-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Budapest: kylpylällä on vihdoin lintujen kerros.',
+        selite: 'Rudasin kattokylpylässä lämmin vesi ja Tonava mahtuvat samaan '
+          + 'näkymään. Istuin altaan ulkopuolisella reunalla ja tarkistin, '
+          + 'oliko ylin kerros yhtä hyvä kuin olin kuullut. Oli. Isoisä pohti '
+          + 'kupolin alla kaupungin nimeä; nämä kylpijät pohtivat lähinnä, '
+          + 'tarvitseeko nousta vielä pois. Ihmiset ovat löytäneet kelvollisen '
+          + 'yhdistelmän: näköalapaikan, jossa saa samalla istua.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.rudasfurdo.hu/',
+          'https://tickets.rudasfurdo.hu/product/b56d483a-364d-4630-8bf5-25ce019cc411',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-budapest-02-r20260909-euv1-v1.jpg',
+        lyhyt: 'Budapest: nimi yhdisti kaupungit. Joki jäi väliin.',
+        selite: 'Nousin altaan reunalta ja katsoin Tonavaa leveämmältä. Buda kohoaa '
+          + 'mäkeen, Pest levittäytyy vastarannalle, ja sillat pitävät '
+          + 'yhteyttä. Kartassa nimi peittää tämän kaiken yhdellä sanalla. '
+          + 'Lennossa erotan rannat, liikenteen ja joen oman reitin. Isoisän '
+          + 'kartta vanheni aamiaisen aikana. Minun kuvani kestää ainakin '
+          + 'siihen saakka, kunnes seuraava laiva ehtii sillan alta.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.rudasfurdo.hu/',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS — PARIPERIAATE (Raamattu, "LIVIA AIKASIIRTYMÄN
      * VÄLITTÄJÄNÄ"): merkintä on kevyt ja utelias, ei synkkä, joten
      * Livia saa naljailla ja mainita herkun. Kirjekyyhkylle

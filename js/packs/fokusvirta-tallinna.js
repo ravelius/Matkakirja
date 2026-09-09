@@ -127,6 +127,30 @@ export const FOKUSVIRTA_TALLINNA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-tallinna-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tallinna-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Tallinna: parempi annoskoko löytyi jo ennen reseptiä.',
+        selite: 'Raeapteekki toimii edelleen Raatihuoneentorilla, ja marsipaania '
+          + 'voi ostaa sen pitkästä historiasta kertovan vierailun lomassa. '
+          + 'Tässä paketissa oli minusta harkittu koko. Sen omistaja pysähtyi '
+          + 'portaalle jakamaan palan matkakumppanilleen. Isoisä piti suurempaa '
+          + 'annosta hyvänä hoitona. Minä pidän jakamista lupaavana '
+          + 'jatkotutkimuksena, vaikka en kuulu tämän seurueen potilaisiin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://raeapteek.ee/en/',
+          'https://visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/174823/town-hall-pharmacy',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS — VÄLITTÄJÄOTE JA SUKUYLPEYS (Raamattu, "LIVIA
      * AIKASIIRTYMÄN VÄLITTÄJÄNÄ" ja "LIVIA TUURAAJANA"). Merkintä on
      * kevyt ja teknistä ihmettelyä täynnä, joten pariperiaate sallii

@@ -186,6 +186,29 @@ export const FOKUSVIRTA_OSLO = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-oslo-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-oslo-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Oslo: ihmisetkin ovat alkaneet käyttää kattoa kulkureittinä.',
+        selite: 'Oslon oopperan vinoa kattoa pitkin kävellään veden ääreltä '
+          + 'ylemmäs. Minä aloitin samasta kohdasta kuin ihmiset, lähinnä '
+          + 'vertailun vuoksi. Valkoinen pinta levitti päivän valon joka '
+          + 'suuntaan, ja kenkien varjot nousivat hitaasti rinnettä. Isoisä '
+          + 'näki rannassa maailmalle lähteviä lankkuja. Nyt täällä katsellaan, '
+          + 'miten kaupunki rakentaa itselleen yhteyttä vuonoon myös ylhäältä.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.operaen.no/',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

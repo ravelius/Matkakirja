@@ -229,6 +229,31 @@ export const FOKUSVIRTA_DUBLIN = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-dublin-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dublin-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Dublin: vuokrasopimus on pitkä. Minun pysähdykseni ei.',
+        selite: 'St James\'s Gatella panimon portti on muuttunut myös matkalaisten '
+          + 'kuvauspaikaksi. Työ jatkuu portin takana, ja edessä säädetään '
+          + 'puhelimia sopivaan asentoon. Arthur Guinness uskalsi vuokrata '
+          + 'paikan yhdeksäksituhanneksi vuodeksi. Minä annoin tälle '
+          + 'reunakivelle yhden hetken ja otin kuvan ennen lähtöä. Pitkää '
+          + 'sopimusta lyhyempi reitti on joskus ihan hyvä suunnitelma.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.visitdublin.com/see-do/details/guinness-storehouse',
+          'https://assets-eu-01.kc-usercontent.com/aa24ba70-9a12-01ae-259b-7ef588a0b2ef/777408eb-dc0c-4197-8878-328a7e76c1b3/Guinness%20Storehouse%20Gates%20%282%29.jpg',
+          'https://www.visitdublin.com/guides/art-of-brewing',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

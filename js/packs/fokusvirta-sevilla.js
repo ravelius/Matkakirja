@@ -192,6 +192,31 @@ export const FOKUSVIRTA_SEVILLA = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-sevilla-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sevilla-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Sevilla: sama portti, toisenlainen työpäivä.',
+        selite: 'Sevillan entiseen tupakkatehtaaseen tullaan nyt opiskelemaan. '
+          + 'Portin lähellä joku tasapainottaa leipää, puhelinta ja '
+          + 'muistikirjaa kahdessa kädessä. Korkeampi koulutus näyttää vaativan '
+          + 'kolmannen. Isoisän näkemä työntekijä ehti syödä ennen sisäänmenoa; '
+          + 'tämän opiskelijan suunnitelma on vielä kesken. Kuvasin hänet '
+          + 'kengänkorkeudelta. Sieltä huomaa ensimmäisenä, jos tärkeä osa '
+          + 'aamiaista putoaa.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.us.es/laUS/secretaria-general/patrimonio-historico-artistico/edificios/real-fabrica-de-tabacos',
+          'https://www.diariodesevilla.es/sevilla/antigua-fabrica-tabacos-sevilla-edificio-industrial-adquirido-Hispalense-1953_0_1540346167.html',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

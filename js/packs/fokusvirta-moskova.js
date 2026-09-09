@@ -223,6 +223,31 @@ export const FOKUSVIRTA_MOSKOVA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-moskova-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-moskova-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Moskova: hiljaisuuden kyljessä on lintua suurempi aukko.',
+        selite: 'Tsaarinkellosta irronnut pala seisoo edelleen suuren kellon '
+          + 'vieressä. Ihmiset kuvaavat kokonaisuutta muutaman askeleen päästä; '
+          + 'minä tarkistin tyhjän kohdan läheltä. Pronssin reuna näyttää tästä '
+          + 'korkeudesta kallionseinältä. Kello ei ole koskaan soinut. Se ei '
+          + 'estä sitä keräämästä yleisöä, mutta myönnän arvostavani myös '
+          + 'pienempiä esineitä, jotka tekevät sen, mitä varten ne on '
+          + 'rakennettu.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://en.wikipedia.org/wiki/Tsar_Bell',
+          'https://bridgetomoscow.com/time-gap-tsar-bell',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
      * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
      * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa

@@ -147,6 +147,31 @@ export const FOKUSVIRTA_PRAHA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-praha-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-praha-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Praha: minua katsotaan harvoin näin yksimielisesti ylöspäin.',
+        selite: 'Prahan astronomisen kellon edessä ihmiset nostavat kasvonsa ja '
+          + 'puhelimensa samaan suuntaan. Minä istuin hetkeksi kellon '
+          + 'alapuoliselle kivireunalle. Oli miellyttävää saada näin suuri '
+          + 'yleisö, kunnes tajusin, ettei kukaan odottanut minun '
+          + 'esiintymistäni. Kellossa näkyvät taivaan kierrot ja pienet hahmot; '
+          + 'torilla näkyy, kuinka monta eri tapaa on yrittää kuvata sama '
+          + 'hetki.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/',
+          'https://prague.eu/en/objevujte/old-town-square-staromestske-namesti/',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS — PARIPERIAATE (Raamattu, "LIVIA AIKASIIRTYMÄN
      * VÄLITTÄJÄNÄ"): merkintä on kevyt arvoitus eikä synkkä, joten
      * Livia saa naljailla ja mainita herkun. Kupla EI koske keisarin

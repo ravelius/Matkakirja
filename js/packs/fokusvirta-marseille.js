@@ -225,6 +225,32 @@ export const FOKUSVIRTA_MARSEILLE = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-marseille-01-r20260909-euv1-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-marseille-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Marseille: sataman lokki tarkasti myös pöydän alapuolen.',
+        selite: 'Vanhassa satamassa veneet ovat vaihtuneet moneen kertaan, mutta '
+          + 'niiden ympärillä tehdään yhä kauppaa ja syödään. Lokki on '
+          + 'järjestänyt itselleen oman tarkastuskierroksen. Katson sen kengän '
+          + 'ja tuolin väliin mahtuvaa reittiä ammatillisella kiinnostuksella. '
+          + 'Isoisä osti täällä saippuaa. Tälle pöydälle pitäisi ehkä hankkia '
+          + 'myös vartija. Olen käytettävissä, kunhan tehtävän tarjoilu '
+          + 'sovitaan ensin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/the-old-port/',
+          'https://provence-alpes-cotedazur.com/en/things-to-do/nature-outdoor-activities/in-the-footsteps-of-saint-mary-magdalene/marseille-lestaque-marseille-city-centre-saint-victor/',
+          'https://woody.cloudly.space/app/uploads/crt-paca/2021/06/thumbs/esplanade-vieux-port-marseille-exclu-mm-otcm-1920x960.jpg',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
