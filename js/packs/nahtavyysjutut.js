@@ -24244,6 +24244,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fulanting Pavilion in Jingshan Park 2.jpg',
+          lyhyt: 'Jingshan on Kielletyn kaupungin kaivumaasta 1400-luvulla kasattu keinotekoinen vuori Pekingissä.',
           selite: 'Jingshan on keinotekoinen vuori: Kielletyn kaupungin '
             + 'vallihautojen ja kanavien kaivumaa kasattiin 1400-luvun '
             + 'alussa 45,7 metriä korkeaksi kukkulaksi, kaikki lihas- ja '
@@ -24286,6 +24287,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Hall of Supreme Harmony.jpg',
+          lyhyt: 'Korkeimman harmonian sali on Kiinan suurin säilynyt puurakennus Kielletyssä kaupungissa.',
           selite: 'Korkeimman harmonian sali on Kiinan suurin säilynyt '
             + 'puurakennus, ja sen mitat — yhdeksän huonealaa leveyttä ja '
             + 'viisi syvyyttä — toistavat keisarin lukuja. Sen eteen johtaa '
@@ -24322,6 +24324,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tiananmen 1901.jpg',
+          lyhyt: 'Taivaallisen rauhan portti valmistui 1420, sai nykyasunsa 1651 ja on Kiinan vaakunassa.',
           selite: 'Taivaallisen rauhan portti valmistui ensimmäisen kerran '
             + 'vuonna 1420, sai porttitalon muotonsa vuoden 1465 '
             + 'jälleenrakennuksessa ja nykyisen nimensä 1651. Vuonna 1901 '
@@ -24358,6 +24361,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Zhengyangmen (gatehouse) 2010 April.jpg',
+          lyhyt: 'Zhengyangmen eli Qianmen on korkein Pekingin kaupunginmuurin porteista, valmistui 1419.',
           selite: 'Zhengyangmen eli kansanomaisesti Qianmen rakennettiin '
             + 'vuonna 1419 sisäkaupungin eteläportiksi, ja sen 42-metrinen '
             + 'porttitalo on korkein kaikista Pekingin kaupunginmuurin '
@@ -24400,6 +24404,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Imperial Vault of Heaven at Temple of Heaven, Beijing.jpg',
+          lyhyt: 'Keisarillinen taivaanholvi on Taivaan temppelin kaikumuurin ympäröimä keskusrakennus.',
           selite: 'Keisarillinen taivaanholvi on Taivaan temppelin '
             + 'pääakselin keskimmäinen rakennus Sadonkorjuurukoushallin ja '
             + 'Pyöreän alttarin välissä; uhripuisto rakennettiin vuonna 1420 '
@@ -24489,6 +24494,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Саха Академический Театр им. П.А. Ойунского, Якутск 28.03.2026.jpg',
+          lyhyt: 'Saha-teatteri on Jakutskin jakuutinkielinen näyttämö, nimetty kirjailija Platon Ojunskin mukaan.',
           selite: 'Saha-teatteri on Jakutskin neljästä teatterista se, jossa '
             + 'näytellään jakuutiksi, ja se on nimetty Platon Ojunskin '
             + 'mukaan — kirjailijan, joka oli jakuutin kirjakielen '
@@ -24535,6 +24541,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Якутск, пр.Ленина,5-2, музей истории и культуры народов Севера им.Е.М.Ярославского, 22.06.2013 - panoramio (4).jpg',
+          lyhyt: 'Jaroslavskin museo on Jakutskin päämuseo, tunnettu täytettyjen pohjoiseläinten kokoelmasta.',
           selite: 'Jemeljan Jaroslavskin mukaan nimetty museo on Jakutskin '
             + 'päämuseo, ja sen kokoelma kattaa pohjoisen kansojen historian '
             + 'esihistoriasta 1990-luvulle; omalaatuisin osa on runsas '
@@ -24577,6 +24584,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Спасский мужской монастырь г.Якутска, Якутск 26.09.2025.jpg',
+          lyhyt: 'Kurašovin kadun luostari on Jakutskin vanhin kirkollinen laitos, rakennettu hirrestä.',
           selite: 'Kurašovin kadun luostari on Jakutskin vanhin kirkollinen '
             + 'laitos: sen varhaisin nimeltä tunnettu esimies oli '
             + 'arkkimandriitta Feofan vuosina 1714–1719, runsas sata vuotta '
@@ -24620,6 +24628,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Никольская церковь, полдень.jpg',
+          lyhyt: 'Nikolskin kirkko on Jakutskin sirointa ortodoksista arkkitehtuuria ja harvinaisesti kiveä.',
           selite: 'Nikolskin kirkko on Jakutskin ortodoksisista kirkoista '
             + 'sirointi ja kuuluu Venäjän kulttuuriperintökohteisiin '
             + 'tunnuksella 1400036000. Se ei ole hirsirakennus vaan '
@@ -24662,6 +24671,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Государственный академический русский драматический театр им. А.С. Пушкина 10.09.2025.jpg',
+          lyhyt: 'Pushkinin teatteri on Jakutskin venäjänkielinen draamateatteri, yksi kaupungin neljästä teatterista.',
           selite: 'Aleksandr Pushkinin mukaan nimetty valtiollinen '
             + 'akateeminen draamateatteri on Jakutskin neljästä teatterista '
             + 'se, jossa näytellään venäjäksi. Neljä teatteria on paljon 355 '
@@ -24702,6 +24712,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Национальный художественный музей Якутии, Якутск 06.07.2026.jpg',
+          lyhyt: 'Sahan kansallinen taidemuseo esittelee jakuutti-, venäläis- ja kansainvälistä taidetta.',
           selite: 'Sahan kansallisen taidemuseon kokoelma on kolmiosainen: '
             + 'jakuuttien omaa taidetta, venäläistä taidetta ja '
             + 'kansainvälistä taidetta 1500-luvulta nykypäivään. Talo on '
@@ -24746,6 +24757,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'In Yakutsk (10802989066).jpg',
+          lyhyt: 'Vanhakaupunki on 1800-luvun tyyliin jälleenrakennettu puukortteli Jakutskissa.',
           selite: 'Vanhakaupunki on rakennettu uudelleen 1800-luvun '
             + 'rakennustyyliin: kadut on suljettu liikenteeltä ja '
             + 'päällystetty puupölkyillä. Korttelissa ovat muun muassa '
@@ -24790,6 +24802,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Театр оперы и балета им. Д. К. Сивцева, Якутск 24.02.2026.jpg',
+          lyhyt: 'Ooppera- ja balettitalo on nimetty kirjailija Suorun Omolloonin mukaan.',
           selite: 'Ooppera- ja balettitalo kantaa Dmitri Sivtsevin eli '
             + 'kirjailijanimeltään Suorun Omolloonin nimeä, ja rakennus on '
             + '1900-luvun jälkipuoliskolta. Kaksikielinen ohjelmisto on koko '
@@ -24865,6 +24878,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Magadan, banya1.jpg',
+          lyhyt: 'Karl Marxin valtakadun yleinen sauna on yhtä vanha kuin Magadan itse, perustettu 1929.',
           selite: 'Karl Marxin valtakadun yleinen sauna on Venäjän '
             + 'kulttuuriperintöluettelossa tunnuksella 4930001000, koska se '
             + 'on yhtä vanha kuin kaupunki: Magadan perustettiin 1929 ja sai '
@@ -24907,6 +24921,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Магадан, Пролетарская, 12 20240901 01.jpg',
+          lyhyt: 'Proletarskajan kadun talo numero 12 tunnetaan SVZ-nimellä kultaa kaivaneen yhtiön mukaan.',
           selite: 'Proletarskajan kadun numero 12 on Magadanin komein '
             + '1950-luvun talo, ja sen kansanomainen nimi SVZ on lyhenne '
             + 'kullankaivuuta hoitaneen yhtiön nimestä. Kaupunki syntyi '
@@ -24947,6 +24962,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Магадан, Ленина, 18 20240904 01.jpg',
+          lyhyt: 'Numero 18 kuuluu Leninin valtakadun 1950-luvun talorivistöön, joka seuraa kadun nousua vaaralle.',
           selite: 'Numero 18 kuuluu yhtenäiseen talorivistöön 14–20, joka on '
             + 'rakennettu samaan aikaan ja porrastettu seuraamaan Leninin '
             + 'valtakadun nousua merestä vaaran juurelle. Katu on myös '
@@ -24987,6 +25003,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Кинотеатр «Горняк».jpg',
+          lyhyt: 'Gornjak-elokuvateatteri on Magadanin varhaisia klassisistisia julkisia rakennuksia.',
           selite: 'Gornjak tarkoittaa kaivosmiestä, ja elokuvateatteri '
             + 'kuuluu samaan sarjaan kuin kaupungin muut julkiset talot: se '
             + 'rakennettiin, kun Magadan oli vasta muutaman vuosikymmenen '
@@ -25031,6 +25048,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Nagaevo bay - panoramio.jpg',
+          lyhyt: 'Nagajevanlahti on 14,5 kilometriä pitkä ja jäässä marraskuusta kesäkuuhun.',
           selite: 'Nagajevanlahti on 14,5 kilometriä pitkä ja suultaan 6,4 '
             + 'kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren '
             + 'parhaaksi ankkuripaikaksi; jäätä siinä on marraskuun lopulta '
@@ -25072,6 +25090,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Дворец спорта г. Магадан.jpg',
+          lyhyt: 'Parkovajan kadun urheilupalatsi on Magadanin koristeellisin julkisivu.',
           selite: 'Parkovajan kadun urheilupalatsi on Magadanin '
             + 'koristeellisin julkisivu ja Venäjän '
             + 'kulttuuriperintöluettelossa tunnuksella 4930006000. Sisähalli '
@@ -25111,6 +25130,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Магаданская научная библиотека им. А. С. Пушкина.jpg',
+          lyhyt: 'Pushkinin kirjaston lähellä Magadanissa on myös kotiseutumuseo mammutinjäänteineen.',
           selite: 'Magadanin alueen yleinen tieteellinen kirjasto on nimetty '
             + 'Aleksandr Pushkinin mukaan, ja sen keltatiilinen talo on '
             + 'toista maailmansotaa myöhempää aikaa. Se kuuluu kaupungin '
@@ -25170,6 +25190,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Delhi Junction railway station building.jpg',
+          lyhyt: 'Delhin ensimmäinen rautatieasema avattiin 1864, nykyinen punatiilirakennus vuonna 1903.',
           selite: 'Delhin ensimmäinen rautatieasema avattiin tähän vuonna '
             + '1864, ja vuonna 1873 siitä lähti Rajputanan metrin '
             + 'raideleveyden rata Rewariin — asemalla kohtasivat siis kaksi '
@@ -25207,6 +25228,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Delhi Town Hall 2012.jpg',
+          lyhyt: 'Keltainen talo rakennettiin 1860-luvulla Lawrence-instituutiksi, sittemmin kunnallishallinnoksi.',
           selite: 'Keltaiseksi rapattu talo rakennettiin vuosina 1860–1863 '
             + 'Lawrence-instituutiksi — museoksi, lukusaliksi ja kirjastoksi '
             + '— ja kaupunki osti sen vuonna 1866 kunnallishallinnon '
@@ -25242,6 +25264,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fatehpuri Masjid in Delhi 11.jpg',
+          lyhyt: 'Fatehpuri-moskeijan rakennutti 1650 Shah Jahanin puoliso Fatehpuri Begum.',
           selite: 'Chandni Chowkin länsipään punaisen hiekkakivimoskeijan '
             + 'rakennutti vuonna 1650 Fatehpuri Begum, yksi Shah Jahanin '
             + 'puolisoista. Vuoden 1857 kapinan jälkeen britit myivät '
@@ -25275,6 +25298,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chandni Chowk Temple and Red Fort.jpg',
+          lyhyt: 'Chandni Chowkin pääkadun suunnitteli 1650 Jahanara Begum, ja keskikanava antoi sille nimen.',
           selite: 'Vanhan Delhin pääkadun suunnitteli vuonna 1650 Shah '
             + 'Jahanin tytär Jahanara Begum, ja kadun keskellä virrannut '
             + 'kanava levisi torin kohdalla altaaksi — kuutamon kimallus '
@@ -25313,6 +25337,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Naubat Khana - Red Fort, Delhi.jpg',
+          lyhyt: 'Naubat Khana eli rumputalo soi Mughal-aikana musiikkia Punaisen linnoituksen basaarikujan päässä.',
           selite: 'Naubat Khana eli rumputalo seisoo katetun Chhatta Chowk '
             + '-basaarikujan päässä: sen parvella soitettiin Mughal-aikana '
             + 'musiikkia päivittäin määrätunteina, ja sen kohdalla jokaisen '
@@ -25348,6 +25373,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Pillared Canopies - Gurdwara Sis Ganj Sahib - Chandni Chowk Road - Delhi 2014-05-13 3504.JPG',
+          lyhyt: 'Baghel Singh pystytti gurdwaran 1783 paikkaan, jossa guru Tegh Bahadur surmattiin vuonna 1675.',
           selite: 'Sotapäällikkö Baghel Singh pystytti gurdwaran vuonna 1783 '
             + 'paikkaan, jossa yhdeksäs guru Tegh Bahadur oli surmattu '
             + 'keisari Aurangzebin käskystä marraskuussa 1675; nimen alkuosa '
@@ -25384,6 +25410,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '20191203 Wielki Meczet w Delhi 0700 6459 DxO.jpg',
+          lyhyt: 'Shah Jahanin perjantaimoskeija valmistui 1656, ja sen pihalle mahtuu 25 000 rukoilijaa.',
           selite: 'Shah Jahan rakennutti suuren perjantaimoskeijansa '
             + 'Shahjahanabadin korkeimmalle kohdalle vuosina 1650–1656 noin '
             + 'viidentuhannen rakentajan voimin, ja sen pihalle mahtuu 25 '
@@ -25420,6 +25447,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Humayun\'s Tomb - Delhi - 0016.jpg',
+          lyhyt: 'Humayunin mausoleumin tilasi 1558 hänen leskensä, ja se oli niemimaan ensimmäinen puutarhahauta.',
           selite: 'Humayunin leski Bega Begum tilasi mausoleumin vuonna 1558 '
             + 'Heratista tuodulta arkkitehdilta Mirak Mirza Ghiyasilta, ja '
             + 'esikuvana oli Timurin hauta Samarkandissa. Se oli Intian '
@@ -25496,6 +25524,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Владивосток, Покровский парк.jpg',
+          lyhyt: 'Pokrovskin puisto oli alun perin hautausmaa, ja se palautettiin ortodoksiselle kirkolle 1990.',
           selite: 'Pokrovskin puisto oli alkujaan kaupungin hautausmaa, ja '
             + 'se muutettiin puistoksi vuonna 1934. Vuonna 1990 puisto '
             + 'suljettiin ja maa palautettiin ortodoksiselle kirkolle; '
@@ -25535,6 +25564,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Безымянная береговая батарея.jpg',
+          lyhyt: 'Vladivostokin ympärille rakennettiin 1889–1918 yksi aikansa vahvimmista merilinnoituksista.',
           selite: 'Vladivostokin ympärille rakennettiin vuosina 1889–1918 '
             + 'yksi aikansa vahvimmista merilinnoituksista: kuusitoista '
             + 'linnaketta, kymmeniä rannikkopattereita ja kilometreittäin '
@@ -25568,6 +25598,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: "A view from Eagle's Nest (21466232344).jpg",
+          lyhyt: 'Kotkanpesä on keskustan korkein kohta, 199 metriä, josta näkyy Kultaisen sarven lahti.',
           selite: 'Kotkanpesä on keskustan korkein kohta, 199 metriä — '
             + 'toisten mittausten mukaan 214 — mutta ei koko kaupungin '
             + 'korkein, sillä Holodilnik-vuori pohjoisempana on 257 metriä. '
@@ -25604,6 +25635,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vladivostok Funicular (October 2024)-0 5.jpg',
+          lyhyt: 'Kotkanpesän funikulaari avattiin 1962 ja vie matkan puolessatoista minuutissa.',
           selite: 'Kotkanpesän rinnettä kiipeävä funikulaari avattiin '
             + 'toukokuussa 1962 Hruštšovin ajan suuren rakennuskauden '
             + 'hankkeena: rataa on 183 metriä, nousua 66 ja puoli, ja matka '
@@ -25638,6 +25670,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vladivostok September Night. 2022. Slava Ivanov 02.jpg',
+          lyhyt: 'Arsenjevin museo on Kaukoidän ensimmäinen kotiseutumuseo, avattu 1890.',
           selite: 'Kaukoidän ensimmäinen kotiseutumuseo avasi ovensa '
             + 'yleisölle lokakuussa 1890 ja nimettiin vuonna 1945 '
             + 'Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan Vladimir '
@@ -25676,6 +25709,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vladivostok. GUM Department Store P8070703 2200.jpg',
+          lyhyt: 'Kunst & Albersin jugendtalon rakennutti Georg Junghändel 1907 Vladivostokin Svetlanskajalle.',
           selite: 'Kunst & Albersista kasvoi Venäjän Kaukoidän suurin '
             + 'kauppahuone, ja arkkitehti Georg Junghändel rakensi sille '
             + 'Svetlanskajalle nykyisen jugendtalon vuonna 1907; '
@@ -25713,6 +25747,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '053 - Wladiwostok 2015 (24130179580).jpg',
+          lyhyt: 'Sukellusvene S-56 rakennettiin 1936–1939 ja on nyt museolaiva Vladivostokissa.',
           selite: 'S-56:n runko rakennettiin Leningradissa 1936, '
             + 'kuljetettiin osina rautateitse halki mantereen ja koottiin '
             + 'Dalzavodin telakalla, ja vene laskettiin vesille joulukuussa '
@@ -25751,6 +25786,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vladivostok railway station (October 2024)-0 6.jpg',
+          lyhyt: 'Vladivostokin rautatieasema vihittiin käyttöön 1893 ja entisöitiin nykyasuunsa 1990-luvulla.',
           selite: 'Aseman ensimmäinen kivi muurattiin toukokuussa 1891 '
             + 'kruununperillisen läsnä ollessa ja vihkiäisiä vietettiin '
             + 'marraskuun alussa 1893; lattioiden japanilaiset savilaatat '
@@ -25788,6 +25824,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Золотой мост, июль 2013.jpg',
+          lyhyt: 'Zolotoi Rog -silta avattiin 2012 APEC-huippukokoukseen, pituutta 1 387 metriä.',
           selite: 'Silta tilattiin vuonna 2006 ja avattiin elokuussa 2012 '
             + 'APEC-huippukokouksen alla: pituutta on 1 387 metriä, '
             + 'pääjännettä 737 ja V-kirjaimen muotoisia pyloneita 222 '
@@ -25856,6 +25893,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Old Train Station in Yekaterinburg (September 2022) - 1.jpg',
+          lyhyt: 'Permin vuorirautatien pääasema valmistui 1878 arkkitehti Pjotr Šreiberin piirustuksin.',
           selite: 'Uralin vuorirata Permistä valmistui vuonna 1878, ja '
             + 'pääteaseman piirsi arkkitehti Pjotr Šreiber venäläiseen '
             + 'kansallisromanttiseen tyyliin — radan toisessa päässä oleva '
@@ -25897,6 +25935,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '1910Усадьба Расторгуевых-Харитоновых.jpg',
+          lyhyt: 'Rastorgujev-Kharitonovin kartano tilattiin 1794 ja sai nykynimensä vävyltä Pjotr Kharitonovilta.',
           selite: 'Kartanon tilasi vuonna 1794 vanhauskoinen kauppias Lev '
             + 'Rastorgujev, ja nykyisen nimensä talo sai vävystä Pjotr '
             + 'Kharitonovista, joka peri sen 1824 ja palkkasi arkkitehti '
@@ -25940,6 +25979,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ural State University (September 2022) - 2.jpg',
+          lyhyt: 'Uralin liittovaltionyliopisto perustettiin 1920 ja on nimetty Maksim Gorkin mukaan.',
           selite: 'Yliopisto perustettiin 19. lokakuuta 1920 — perustajiin '
             + 'kuului kirjailija Maksim Gorki, jonka mukaan se nimettiin '
             + '1936 — ja sen tunnuslause on Tuomas Akvinolaiselta lainattu '
@@ -25984,6 +26024,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Monetki Works complex (May 2026).jpg',
+          lyhyt: 'Jekaterinburg sai alkunsa padotusta Iset-joesta ja ruukin vasarapajan koekäytöstä 1723.',
           selite: 'Kaupunki alkoi tästä: Iset-joki padottiin, ja padon '
             + 'voimalla käyneen ruukin vasarapajaa koeajettiin 18. '
             + 'marraskuuta 1723 — siitä päivästä lasketaan Jekaterinburgin '
@@ -26026,6 +26067,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Николай Чудотворец Первая половина XVIII века Невьянск ЕМИИ.jpg',
+          lyhyt: 'Museon Nevjanskin ikonit syntyivät 1700-luvun vanhauskoisten omassa maalaustavassa.',
           selite: 'Museon ainutlaatuisin kokonaisuus ovat Nevjanskin ikonit: '
             + 'Nevjansk oli 1700-luvulla vanhauskoisten keskus, ja sen '
             + 'muutamassa verstaassa syntyi oma maalaustapa, joka eli aina '
@@ -26063,6 +26105,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Храм Большой Златоуст. Екатеринбург, июнь 2013 г..jpg',
+          lyhyt: 'Kellotorni piirrettiin 1847, purettiin 1930 ja rakennettiin uudelleen 2000-luvulla.',
           selite: 'Vasili Morgan piirsi seitsemänkymmentäseitsemän metriä '
             + 'korkean kellotornin vuonna 1847 venäläis-bysanttilaiseen '
             + 'tyyliin, ja se valmistui 1876 — isoisän matkan aikaan 1873 '
@@ -26102,6 +26145,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Trinity Cathedral (Yekaterinburg) 25-4-10.jpg',
+          lyhyt: 'Vanhauskoisten aloittama kirkko valmistui 1852, tunnustuksen vaihduttua valtakirkolle 1838.',
           selite: 'Kirkkohanketta ajoivat vanhauskoiset, työt alkoivat '
             + 'vuonna 1824 ja piirustukset teki arkkitehti Mihail Malahov '
             + 'klassistiseen tyyliin. Hanke eteni vasta, kun rakennuttajiin '
@@ -26165,6 +26209,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Novosibirsk railway station and square.jpg',
+          lyhyt: 'Novosibirskin asema oli aikataulussa nimellä Ob vuoteen 1909 ja sai nykynimensä 1926.',
           selite: 'Asema on kaupunkia vanhempi: Transsiperian sillan pysäkki '
             + 'oli aikatauluissa nimellä Ob vuoteen 1909, ja nykyisen '
             + 'nimensä se sai 1926 kaupungin mukana. Päärakennusta on 30 000 '
@@ -26203,6 +26248,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'City Trade House in Novosibirsk (May 2025) - 0.jpg',
+          lyhyt: 'Andrei Krjatškovin 1910–1911 rakennuttama talo toimii vuodesta 1985 kaupungin kotiseutumuseona.',
           selite: 'Andrei Krjatškovin piirtämä talo rakennettiin vuosina '
             + '1910–1911 kahta käyttöä varten kerralla: alakerrassa oli '
             + 'puoteja ja yläkerrassa kaupungin hallinto. Se on harvoja '
@@ -26240,6 +26286,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Novosibirsk KrasnyPr5 012 7309.jpg',
+          lyhyt: 'Novosibirskin aluetaidegalleria muutti 1982 Andrei Krjatškovin 1926 valmistuneeseen taloon.',
           selite: 'Novosibirskin aluetaidegalleria perustettiin vuonna 1958 '
             + 'ja muutti 1982 tähän vuonna 1926 valmistuneeseen taloon. Sen '
             + 'piirsi sama Andrei Krjatškov kuin kaupungin vallankumousta '
@@ -26278,6 +26325,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Стоквартирный дом и памятник его автору - архитектору Крячкову.jpg',
+          lyhyt: 'Sata asuntoa käsittävä talo sai Pariisin maailmannäyttelyssä 1937 kultamitalin.',
           selite: 'Taloon suunniteltiin sata asuntoa, ja siitä se tunnetaan; '
             + 'sen piirsivät Andrei Krjatškov ja Vitali Maslennikov, ja '
             + 'kahdeksankerroksinen rakennus valmistui vuonna 1937. Pariisin '
@@ -26314,6 +26362,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Saint Alexander Nevsky Church in Novosibirsk (May 2025) - 0.jpg',
+          lyhyt: 'Katedraali rakennettiin 1896–1899 Transsiperian radan alulle panneen keisarin muistoksi.',
           selite: 'Katedraali on kaupungin ensimmäisiä kivirakennuksia: se '
             + 'rakennettiin vuosina 1896–1899 samaan aikaan kuin '
             + 'rautatiesilta ja vihittiin käyttöön 29. joulukuuta 1899. '
@@ -26388,6 +26437,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'RU Irkutsk Convent of the Theotokos of the Sign 0001.jpg',
+          lyhyt: 'Luostari on nimetty Jumalanäidin Merkin ikonin mukaan ja on Innokenti Irkutskilaisen pääpyhäkkö.',
           selite: 'Luostari on nimetty Jumalanäidin Merkin ikonin mukaan, ja '
             + 'se on Innokenti Irkutskilaisen pääpyhäkkö: Siperian '
             + 'apostoliksi kutsuttu piispa nimitettiin Irkutskiin vuonna '
@@ -26427,6 +26477,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Irkutsk - church LCCN2004707528.jpg',
+          lyhyt: 'Kirovin aukio on 1661 perustetun paalulinnoituksen paikka, laidalla Siperian vanhimpia kivikirkkoja.',
           selite: 'Kirovin aukio on Jakov Pohabovin vuonna 1661 pystyttämän '
             + 'paalulinnoituksen paikalla, ja sen laidalla seisovat Siperian '
             + 'vanhimpiin kuuluvat kivikirkot: Vapahtajan kirkko vuodelta '
@@ -26467,6 +26518,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kościół Wniebowzięcia Najświętszej Maryi Panny w Irkucku.JPG',
+          lyhyt: 'Puolalainen kirkko on Irkutskin karkotushistorian näkyvin rakennus, uusgoottilainen tiilikirkko.',
           selite: 'Puolalainen kirkko on Irkutskin karkotushistorian näkyvin '
             + 'rakennus: katolinen seurakunta perustettiin vuonna 1820, sen '
             + 'puukirkko paloi heinäkuun 1879 suurpalossa, ja tilalle nousi '
@@ -26506,6 +26558,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Иркутский железнодорожный вокзал.jpg',
+          lyhyt: 'Irkutskin rautatieasema avattiin 1899 joen vasemmalle rannalle, ensimmäisen junan saavuttua 1898.',
           selite: 'Ensimmäinen juna saapui Irkutskiin 16. elokuuta 1898, ja '
             + 'asema avattiin vuonna 1899 joen vasemmalle rannalle Glaskovon '
             + 'puolelle, vastapäätä vanhaa kaupunkia. Päärakennuksen '
@@ -26551,6 +26604,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Cerkiew Podwyższenia Krzyża Pańskiego w Irkucku 01.JPG',
+          lyhyt: 'Ristin ylentämisen kirkko on Siperian barokin paras säilynyt esimerkki, valmistui 1758.',
           selite: 'Ristin ylentämisen kirkko rakennettiin vuosina 1747–1758, '
             + 'ja sitä on kutsuttu Siperian barokin parhaaksi esimerkiksi; '
             + 'sen buddhalaisvaikutteiset koristeaiheet kiinnostivat '
@@ -26592,6 +26646,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '130-й квартал.jpg',
+          lyhyt: 'Irkutskin koristeelliset puutalot ovat karkotettujen perintöä ja 130. kortteli on kävelyalue.',
           selite: 'Irkutskin veistokoristeiset puutalot ovat karkotettujen '
             + 'perintöä, ja vuoden 1879 palon jälkeen puusta rakentaminen '
             + 'kiellettiin joen puoleisella alueella — siksi ne ovat '
@@ -26636,6 +26691,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Angara Museum ship in Irkutsk (September 2025) - 0.jpg',
+          lyhyt: 'Höyrylaiva Angara kuljetti matkustajia Baikalin yli vuodesta 1900 ja on nyt museona vuodesta 1991.',
           selite: 'Angara tilattiin vuonna 1898 Newcastlesta Armstrong, '
             + 'Whitworth & Co:n telakalta ja otettiin käyttöön 1. elokuuta '
             + '1900 kuljettamaan matkustajia ja tavaraa Baikalin yli, koska '
@@ -26707,6 +26763,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Japon-1886-41.jpg',
+          lyhyt: 'Kultainen paviljonki valmistui 1399 shōgun Yoshimitsun huvilaksi, kultapinta uusittu 1980-luvulla.',
           selite: 'Kultainen paviljonki valmistui arvion mukaan vuonna 1399 '
             + 'shōgun Ashikaga Yoshimitsun huvilaksi, mutta 1880-luvulla, '
             + 'jolloin Adolfo Farsari valokuvasi sen, kultalehti oli kulunut '
@@ -26746,6 +26803,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sunlight through clouds and view of Ginkaku-ji Temple from above, Kyoto, Japan.jpg',
+          lyhyt: 'Yoshimasan 1482 aloittama huvila muuttui zen-temppeliksi; suunniteltu hopeointi jäi tekemättä.',
           selite: 'Shōgun Ashikaga Yoshimasa aloitti eläkehuvilansa '
             + 'päärakennuksen 21. helmikuuta 1482, ja hänen kuoltuaan 1490 '
             + 'huvilasta tuli zen-temppeli Jishō-ji. Hopeointi, jota hän oli '
@@ -26786,6 +26844,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kyoto Kaiserpalast Kenreimon-Tor 1.jpg',
+          lyhyt: 'Kioton keisarillinen palatsi oli keisarien koti 1331–1868, ja Kenreimon on sen eteläinen pääportti.',
           selite: 'Nykyinen palatsi polveutuu Fujiwara-suvun '
             + 'Tsuchimikado-donosta ja oli keisarien kotina vuodesta 1331 '
             + 'Meiji-restauraatioon asti; Kenreimon on sen eteläinen '
@@ -26832,6 +26891,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Nijo-jo Ninomaru-goten 2009.jpg',
+          lyhyt: 'Ninomaru-palatsissa Tokugawa Yoshinobu ilmoitti 1867 palauttavansa vallan keisarille.',
           selite: 'Ninomaru-palatsi on 3 300 neliömetriä ja rakennettu lähes '
             + 'kokonaan hinoki-sypressistä; seinät ja liukuovet maalasivat '
             + 'Kanō-koulun taiteilijat, ja kultalehteä käytettiin niin '
@@ -26870,6 +26930,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tsukemono shop by collinox in Nishiki Ichiba, Kyoto.jpg',
+          lyhyt: 'Nishikin tori on myynyt kalaa jo vuodesta 782, ja shogunaatti vahvisti kalakaupan luvan 1615.',
           selite: 'Nishikin torilla myytiin kalaa jo vuonna 782, koska '
             + 'paikan kylmä pohjavesi piti kalan ja lihan tuoreena, ja '
             + 'shogunaatti antoi kalakaupalle virallisen luvan vuonna 1615. '
@@ -26911,6 +26972,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Streets of Gion, Kyoto - Gion7708.jpg',
+          lyhyt: 'Gion kasvoi Sengoku-kauden matkalaiskorttelista Japanin arvostetuimmaksi geishakortteliksi.',
           selite: 'Gion rakennettiin Sengoku-kaudella palvelemaan '
             + 'Yasaka-pyhäkölle tulevia matkalaisia teehuoneineen ja '
             + 'majataloineen, ja siitä kasvoi Japanin arvostetuin '
@@ -26951,6 +27013,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kiyomizu-dera,koyasu no tou.JPG',
+          lyhyt: 'Kiyomizu-dera perustettiin perimätiedon mukaan 778, ja nykyinen päähalli valmistui 1633.',
           selite: 'Kiyomizu-dera perustettiin perimätiedon mukaan vuonna '
             + '778, kuusitoista vuotta ennen kuin Heian-kyō mitattiin, ja se '
             + 'on palanut yhdeksän kertaa; nykyinen päähalli rakennettiin '
@@ -26990,6 +27053,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sanjusangendo temple01s1408.jpg',
+          lyhyt: 'Sanjūsangendōn päähalli valmistui 1266, ja sisällä on tuhat seisovaa Kannon-patsasta.',
           selite: 'Päähalli valmistui vuonna 1266 sen jälkeen, kun vuoden '
             + '1249 kaupunkipalo oli tuhonnut Taira no Kiyomorin vuonna 1164 '
             + 'rakennuttaman temppelin. Halli on 120 metriä pitkä, ja '
@@ -27030,6 +27094,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Toji, tou.jpg',
+          lyhyt: 'Tō-jin viisikerroksinen pagodi on 54,8 metriä korkea ja Japanin korkein puutorni.',
           selite: 'Tō-ji perustettiin vuonna 796, kaksi vuotta pääkaupungin '
             + 'perustamisen jälkeen, ja keisari Saga antoi sen 823 munkki '
             + 'Kūkaille shingon-buddhalaisuuden keskukseksi. '
@@ -27069,6 +27134,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Inari fox statue, Fushimi-Inari Shrine (46473407471).jpg',
+          lyhyt: 'Fushimi Inari perustettiin 711, ja vuorenrinteen polulle on lahjoitettu tuhansia torii-portteja.',
           selite: 'Pyhäkön perusti vuonna 711 Hata-suku, ja se on omistettu '
             + 'Inarille, riisin ja maanviljelyn kamille — ja koska riisi oli '
             + 'myös maksuväline, kauppiaat alkoivat palvoa Inaria '
@@ -27150,6 +27216,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Masjid Sultan, augusti 2023.jpg',
+          lyhyt: 'Singaporen sulttaanimoskeija valmistui 1932 indo-saraseenilaiseen tyyliin.',
           selite: 'Nykyinen moskeija valmistui vuonna 1932 Denis Santryn '
             + 'suunnitelmien mukaan, ja se on maan tunnetuin esimerkki '
             + 'indo-saraseenilaisesta tyylistä; rakennus kääntyy '
@@ -27191,6 +27258,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Facade of Raffles Hotel - Singapore (35543226882).jpg',
+          lyhyt: 'Raffles-hotelli avattiin 1887 ja nimettiin Stamford Rafflesin mukaan, nykyinen päärakennus 1899.',
           selite: 'Armenialaiset Sarkies-veljekset avasivat 1. joulukuuta '
             + '1887 Beach Roadin rantahuvilassa kymmenen huoneen hotellin ja '
             + 'nimesivät sen Stamford Rafflesin mukaan. Nykyisen '
@@ -27241,6 +27309,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Gothic gate, Fort Canning Green, Singapore - 20120913.jpg',
+          lyhyt: 'Fort Canningin vanha kristillinen hautausmaa muurattiin 1846 ja suljettiin täytenä 1865.',
           selite: 'Fort Canningin rinteellä on vanha kristillinen '
             + 'hautausmaa, jonka ympärille muurattiin vuonna 1846 tiilimuuri '
             + 'ja goottilainen portti; hautausmaa suljettiin täytenä 1865. '
@@ -27284,6 +27353,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Clarke Quay, Singapore, at night - 20150308.jpg',
+          lyhyt: 'Clarke Quay on nimetty kuvernööri Andrew Clarken mukaan; kävelyalue avattiin 1993.',
           selite: 'Clarke Quay on nimetty Straitsin siirtokuntien '
             + 'kuvernöörin Sir Andrew Clarken mukaan, joka oli virassa '
             + 'vuosina 1873–1875, ja sen varastoihin lastiveneet toivat '
@@ -27331,6 +27401,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Empress Place Building 2023-03-22.jpg',
+          lyhyt: 'Siirtomaahallinnon konttoritalo valmistui 1867, ja siinä toimii nyt Asian Civilisations Museum.',
           selite: 'Siirtomaahallinnon konttoritalo rakennettiin '
             + 'vankityövoimalla kesäkuun 1864 ja joulukuun 1867 välillä '
             + 'siirtokunnan insinöörin J. F. A. McNairin suunnitelmien '
@@ -27343,6 +27414,7 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Cavenagh Bridge 2012 0045.jpg',
+          lyhyt: 'Cavenagh-silta avattiin 1869 vankityövoimalla rakennettuna ja on ollut kävelysilta vuodesta 1910.',
           selite: 'Cavenagh-sillan teräsketjut valettiin Glasgow’ssa P. & W. '
             + 'MacLellanin konepajassa vuonna 1868, ja 79 metriä pitkä silta '
             + 'avattiin marraskuussa 1869; se oli yksi viimeisistä '
@@ -27383,6 +27455,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Boat Quay 05.jpg',
+          lyhyt: 'Boat Quay oli 1860-luvulla Singaporen vilkkain satama-alue, suojeltu vuonna 1989.',
           selite: 'Boat Quay oli vanhan sataman vilkkain kohta: 1860-luvulla '
             + 'kolme neljäsosaa koko Singaporen laivaliikenteen asioista '
             + 'hoidettiin täällä, ja kauppahuoneita ahdettiin rinnakkain, '
@@ -27426,6 +27499,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Singapore Merlion BCT.jpg',
+          lyhyt: 'Merlion-patsaan veisti Lim Nang Seng 1971–1972, ja se siirrettiin nykyiselle paikalleen 2002.',
           selite: 'Merlionin kuvan piirsi vuonna 1964 Van Kleefin akvaarion '
             + 'intendentti Alec Fraser-Brunner, ja kuvanveistäjä Lim Nang '
             + 'Seng veisti 8,6 metriä korkean ja 70 tonnia painavan patsaan '
@@ -27469,6 +27543,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Singapore Supertree-Grove-in-The-Gardens-02.jpg',
+          lyhyt: 'Puiston superpuut ovat teräsrakennelmia, jotka keräävät aurinkoenergiaa ja sadevettä.',
           selite: 'Puiston kahdeksantoista superpuuta ovat 25–50 metriä '
             + 'korkeita teräsrakennelmia, joiden runkoja peittävät '
             + 'saniaiset, köynnökset, orkideat ja bromeliat. Ne myös tekevät '
@@ -27511,6 +27586,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2016 Singapur, Chinatown, Świątynia Sri Mariamman (04).jpg',
+          lyhyt: 'Sri Mariamman on Singaporen vanhin hindutemppeli, perustettu 1827.',
           selite: 'Sri Mariamman on Singaporen ensimmäinen ja vanhin '
             + 'hindutemppeli: sen perusti vuonna 1827 Naraina Pillai, ja '
             + 'nykyisen tiilirakennuksen vanhimmat osat ovat vuodelta 1843, '
@@ -27554,6 +27630,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Thian Hock Keng Temple Singapore.jpg',
+          lyhyt: 'Thian Hock Keng rakennettiin 1839–1842 Kiinasta tuoduista aineksista Mazu-jumalattaren pyhäköksi.',
           selite: 'Thian Hock Keng rakennettiin vuosina 1839–1842 '
             + 'kolmenkymmenentuhannen Espanjan dollarin kustannuksella, ja '
             + 'sen rakennusaineet sekä Mazu-patsas tuotiin laivoilla '
@@ -27635,6 +27712,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ulugh Beg Observatory sectional view.jpg',
+          lyhyt: 'Ulugbekin observatorio valmistui noin 1428, sekstantti oli aikansa suurin tähtitieteen mittalaite.',
           selite: 'Observatorio valmistui noin vuonna 1428: lieriön '
             + 'muotoinen rakennus oli halkaisijaltaan 46 metriä, ja sen '
             + 'keskellä oli Fakhri-sekstantti, jonka 40,04 metrin säde teki '
@@ -27676,6 +27754,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Мазар Ходжи-Данияра.JPG',
+          lyhyt: 'Khoja Doniyorin eli Danielin hauta on pyhäkkö, jolla vierailee kolmen uskonnon edustajia.',
           selite: 'Noin viisitoista metriä pitkä hautasali on 1900-luvun '
             + 'alusta, mutta paikka on vanha: perimätiedon mukaan Timur '
             + 'rakennutti Khoja Doniyorin haudan päälle moskeijan. Sama nimi '
@@ -27721,6 +27800,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ambassadors painting Afrasiyab 01.jpg',
+          lyhyt: 'Afrasiyabin kummun kuuluisin löytö on 600-luvun Lähettiläiden maalaus kuningas Varkhumanin salista.',
           selite: 'Afrasiyabin kuuluisin löytö on Lähettiläiden maalaus, '
             + '600-luvun seinämaalaus ylhäisötalon salista, jossa kuningas '
             + 'Varkhumanin luo saapuu lähetystöjä useista maista; yhdessä '
@@ -27764,6 +27844,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mosque Hazrat-Hyzr (1).JPG',
+          lyhyt: 'Nykyinen moskeija on 1850-luvulta, ja sen portaalin nosti mestari Abduqodir bin Boqiy 1919.',
           selite: 'Nykyinen moskeija on 1850-luvulta ja seisoo vanhoilla '
             + 'perustuksilla — mihrabin kirjoitus antaa vuosiluvuksi 1855 — '
             + 'joten se oli 1800-luvun matkaajan silmissä uusi eikä raunio. '
@@ -27806,6 +27887,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tombs in Shah-i-Zinda.jpg',
+          lyhyt: 'Shah-i-Zindan hautakuja on kasvanut Qutham ibn Abbasin haudan ympärille kahdeksan vuosisadan aikana.',
           selite: 'Hautakuja on kasvanut Qutham ibn Abbasin haudan ympärille '
             + 'kahdeksan vuosisadan aikana, ja siinä on nyt yli '
             + 'kaksikymmentä rakennusta kolmena ryhmänä. Vanhimmista, '
@@ -27848,6 +27930,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bibi-Khanym Mosque, Samarkand.jpg',
+          lyhyt: 'Bibi-Khanymin moskeija oli valmistuessaan yksi islamilaisen maailman suurimmista.',
           selite: 'Moskeija oli valmistuessaan yksi islamilaisen maailman '
             + 'suurimmista: ulkomuurien rajaama alue on 167 metriä pitkä ja '
             + '109 leveä, sisäänkäynnin portaali 35 metriä korkea ja pihan '
@@ -27894,6 +27977,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Memorial complex "Registan" in Samarkand (0).jpg',
+          lyhyt: 'Registanin ympärille nousi kolme medresaa: Ulugbekin, Sherdorin ja Tillakarin, 1417–1660.',
           selite: 'Registanin ympärille nousi kolme medresaa runsaan '
             + 'kahdensadan vuoden aikana: Ulugbekin medrese 1417–1420, '
             + 'Sherdor 1619–1636 ja Tillakari 1646–1660. Ulugbekin medrese '
@@ -27937,6 +28021,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Мавзолей Гур-Эмир. Самарканд.jpg',
+          lyhyt: 'Gur-e-Amir-mausoleumi valmistui 1404 ja tuli Ulugbekin aikana timuridien hautakammioksi.',
           selite: 'Mausoleumi aloitettiin vuonna 1403, kun Timurin '
             + 'kruununperijä Muhammad Sultan kuoli sotaretkellä, ja se '
             + 'valmistui seuraavana vuonna; Ulugbekin aikana siitä tuli koko '
@@ -27978,6 +28063,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mausoleum Ishrathona07.jpg',
+          lyhyt: 'Ishratkhana valmistui 1463 Abu Saidin puolison rakennuttamana varhain kuolleen tyttärensä haudalle.',
           selite: 'Ishratkhana valmistui toukokuussa 1463, kun hallitsija '
             + 'Abu Saidin puoliso Habiba Sultan rakennutti kupolin varhain '
             + 'kuolleen tyttärensä haudan päälle; salista tuli vähitellen '
@@ -28048,6 +28134,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '20250911 Xi\'an Railway Station - South side.jpg',
+          lyhyt: 'Xi\'anin rautatieasema avattiin 1935 ja oli pitkään seudun pääasema.',
           selite: 'Asema avattiin kesäkuussa 1935 Longhai-radan varteen '
             + 'aivan muurikaupungin pohjoispuolelle, ja se oli pitkään koko '
             + 'seudun pääasema. Kun nopeat junat siirtyivät vuonna 2011 '
@@ -28085,6 +28172,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '西安府安远门.jpg',
+          lyhyt: 'Anyuan on muurin pohjoisportti, jonka porttitorni on puurakennus muuratun jalustan päällä.',
           selite: 'Anyuan on muurin pohjoisportti, ja Ernst Boerschmann '
             + 'valokuvasi sen päätornin noin vuosina 1906–1909 — kuvasta '
             + 'erottuu se, mitä muurista on maasta vaikea hahmottaa: '
@@ -28130,6 +28218,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Great Mosque of Xi\'an (13).JPG',
+          lyhyt: 'Xi\'anin suuri moskeija perustettiin noin 742, ja nykyinen muoto on Ming-kaudelta 1392.',
           selite: 'Tang-keisari Xuanzong määräsi noin vuonna 742 '
             + 'rakennettavaksi rukouspaikan kaupungin muslimikauppiaille ja '
             + 'käsityöläisille, ja nykyinen muoto on Ming-keisari Hongwun '
@@ -28167,6 +28256,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Xi\'An Drums.jpg',
+          lyhyt: 'Rumpitorni valmistui 1380, ja sen parvekkeella on aurinkotermejä esittäviä rumpuja.',
           selite: 'Rumpitorni valmistui vuonna 1380 Ming-keisari Hongwun '
             + 'kaudella, ja se on Kellotornin ohella kaupungin tunnus. '
             + 'Ensimmäisen kerroksen ulkoparvekkeella on kaksikymmentäneljä '
@@ -28215,6 +28305,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Xi\'an Bell Tower (9912211844).jpg',
+          lyhyt: 'Kellotorni rakennettiin 1384 ja siirrettiin 1582 nykyiselle paikalleen neljän pääkadun risteykseen.',
           selite: 'Kellotorni rakennettiin vuonna 1384 ja siirrettiin 1582 '
             + 'nykyiselle paikalleen neljän pääkadun risteykseen, kun '
             + 'Ming-kauden laajennus itään oli jättänyt sen sivuun '
@@ -28264,6 +28355,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Nestorian Stone, 781 AD (9913487693).jpg',
+          lyhyt: 'Vuonna 781 pystytetty Xi\'anin steela kertoo idän kirkon varhaisvaiheista kiinaksi ja syyriaksi.',
           selite: 'Vuonna 781 pystytetty Xi’anin steela on 279 senttimetriä '
             + 'korkea kalkkikivipaasi, jonka teksti on sekä kiinaksi että '
             + 'syyriaksi ja joka kertoo idän kirkon ensimmäisistä '
@@ -28305,6 +28397,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Nan Men (South Gate) - Xi\'an City Wall (4535889314).jpg',
+          lyhyt: 'Yongning on muurin eteläportti, jonka vahtitorni rakennettiin 1378 ja uudelleen 2014.',
           selite: 'Yongning on muurin eteläportti ja sen pääportti: '
             + 'ampuma-aukkoinen vahtitorni rakennettiin vuonna 1378, '
             + 'tuhoutui tulipalossa 1926 ja rakennettiin uudelleen '
@@ -28344,6 +28437,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Shaanxi History Museum architecture.JPG',
+          lyhyt: 'Shaanxin historian museo avattiin 1991, kokoelmassa 370 000 maakunnan mullasta kaivettua esinettä.',
           selite: 'Museo avattiin yleisölle 20. kesäkuuta 1991, ja sen '
             + 'Tang-tyylinen ulkoasu noudattaa vanhaa kaavaa: sali keskellä, '
             + 'kerrostetut rakennukset kulmissa. Kokoelmassa on 370 000 '
@@ -28388,6 +28482,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Giant Wild Goose Pagoda 20140502.JPG',
+          lyhyt: 'Pagodi rakennettiin noin 652 säilyttämään munkki Xuanzangin Intiasta tuomia sutria.',
           selite: 'Pagodi rakennettiin noin vuonna 652 Da Ci’enin temppeliin '
             + 'säilyttämään sutria ja Buddha-patsaita, jotka munkki Xuanzang '
             + 'oli tuonut Intiasta, ja uudelleen vuonna 704; jalustoineen se '
@@ -28474,6 +28569,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dhamek Stupa, 2025.jpg',
+          lyhyt: 'Dhamek-stupa merkitsee paikkaa, jossa Buddha piti ensimmäisen opetuksensa.',
           selite: 'Dhamek-stupa merkitsee paikkaa, jossa Buddha piti '
             + 'ensimmäisen opetuksensa, ja nimen arvellaan lyhentyneen '
             + 'sanoista dharma chakra, dharman pyörä. Kivestä ladotussa '
@@ -28514,6 +28610,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chaukhandi Stupa, Sarnath 2.jpg',
+          lyhyt: 'Chaukhandi merkitsee paikkaa, jossa Buddha kohtasi viisi entistä oppilastaan matkalla Sarnathiin.',
           selite: 'Chaukhandi merkitsee paikkaa, jossa Buddhan kerrotaan '
             + 'kohdanneen viisi entistä oppilastaan tullessaan Bodh Gayasta '
             + 'Sarnathiin, ja alkuperäinen rakennelma oli terassitemppeli '
@@ -28552,6 +28649,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sri Ratneshwar Mahadev temple, Varanasi, Uttar Pradesh, India (2016).jpg',
+          lyhyt: 'Manikarnika on Varanasin suuri poltto-ghat, osa kaupungin arkea eikä nähtävyys.',
           selite: 'Manikarnika on Mahasmasana, suureksi hautausmaaksi '
             + 'kutsuttu poltto-ghat, eikä kaupungille nähtävyys vaan osa '
             + 'arkea. Portaiden juuressa seisova Ratneshwar Mahadevin '
@@ -28592,6 +28690,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Benares- The Golden Temple, India, ca. 1915 (IMP-CSCNWW33-OS14-66).jpg',
+          lyhyt: 'Nykyisen temppelin teetti 1780 kuningatar Ahilyabai Holkar, kultauksiin lahjoitettiin tonni kultaa.',
           selite: 'Nykyisen temppelin teetti vuonna 1780 Maratha-kuningatar '
             + 'Ahilyabai Holkar, ja Pandžabin hallitsija Ranjit Singh '
             + 'lahjoitti kultauksiin tonnin verran kultaa — '
@@ -28632,6 +28731,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ganga Aarti at Dashashwamedh Ghat 45.jpg',
+          lyhyt: 'Dashashwamedh on Varanasin pääghat, jossa iltaisin pidetään Ganga aarti -tulenpalvontamenoa.',
           selite: 'Dashashwamedh on Varanasin pääghat ja luultavasti sen '
             + 'vanhin; nimi tulee tarinasta, jonka mukaan Brahma uhrasi '
             + 'täällä kymmenen hevosta ottaakseen Shivan vastaan. Iltaisin '
@@ -28668,6 +28768,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Assi Ghat-Varanasi India-Andres Larin.jpg',
+          lyhyt: 'Assi on Varanasin eteläisin suurghat, josta alkaa noin neljän kilometrin rantakaista.',
           selite: 'Assi on Varanasin eteläisin ja samalla suurimpia ghateja, '
             + 'ja siitä alkaa se noin neljän kilometrin rantakaista, joka '
             + 'päättyy pohjoisessa Varunan suulle — kaupungin nimi tulee '
@@ -28702,6 +28803,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Durga Temple Durga Kund Varanasi India - panoramio.jpg',
+          lyhyt: 'Durga Kundin punainen temppeli on 1700-luvulta ja rakennettu pohjoisintialaiseen nagara-tyyliin.',
           selite: 'Durga Kundin temppeli on 1700-luvulta ja rakennettu '
             + 'pohjoisintialaiseen nagara-tyyliin, jossa torni nousee monena '
             + 'sisäkkäisenä kerroksena ja kapenee huippua kohti; rakennus on '
@@ -28743,6 +28845,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ramnagar Fort, Varanasi, UP.JPG',
+          lyhyt: 'Linnoitus on yhä ruhtinassuvun koti, ja sen museossa on hovin tähtitieteilijän 1852 kello.',
           selite: 'Linnoitus on yhä kaupungin ruhtinassuvun koti, ja se '
             + 'nousee korkealle penkereelle tulvarajan yläpuolelle; lippu '
             + 'nostetaan salkoon silloin, kun maharadža on kotona. '
@@ -28837,6 +28940,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'LONG BIEN BRIDGE HANOI VIETNAM FEB 2012 (6865862586).jpg',
+          lyhyt: 'Silta rakennettiin 1899–1902 ranskalaisin piirustuksin ja oli valmistuessaan Aasian pisimpiä.',
           selite: 'Silta rakennettiin vuosina 1899–1902 pariisilaisen Daydé '
             + '& Pillén piirustusten mukaan, ja se oli valmistuessaan '
             + 'Aasian pisimpiä siltoja. Vain puolet rakenteesta on enää '
@@ -28878,6 +28982,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hanoi Citadel 0359.JPG',
+          lyhyt: 'Kính Thiênin valtaistuinsalista ovat jäljellä perustukset ja 1467 veistetyt kivilohikäärmeportaat.',
           selite: 'Kính Thiênin valtaistuinsalista ovat jäljellä vain '
             + 'perustukset ja portaat, joiden molemmin puolin kiemurtavat '
             + 'vuonna 1467 veistetyt kivilohikäärmeet. Ranska purki '
@@ -28916,6 +29021,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dong Xuan market.jpg',
+          lyhyt: 'Ranskalaishallinto rakennutti torin 1889, ja se on yhä Hanoin suurin katettu tori.',
           selite: 'Ranskalaishallinto rakennutti torin vuonna 1889 kahden '
             + 'vanhan päätorin tilalle, ja julkisivun viisi kaarta '
             + 'vastasivat katon viittä yhdeksäntoistametristä kupolia. '
@@ -28958,6 +29064,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'One Pillar Pagoda - Hanoi, Vietnam - DSC03503.JPG',
+          lyhyt: 'Keisari Lý Thái Tông rakennutti pagodin 1049, nykyinen rakennus on vuodelta 1955.',
           selite: 'Keisari Lý Thái Tông rakennutti pagodin vuonna 1049 '
             + 'kiitokseksi unesta, jossa bodhisattva Quan Âm ojensi hänelle '
             + 'poikalapsen lootuksenkukalla istuen. Nykyinen rakennus '
@@ -28999,6 +29106,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hanoi Flag Tower (9735319302).jpg',
+          lyhyt: 'Lippulinna rakennettiin 1810-luvulla keisarilinnan tähystystorniksi, korkeutta 33,4 metriä.',
           selite: 'Lippulinna rakennettiin 1810-luvulla keisarilinnan '
             + 'tähystystorniksi, ja sitä on 33,4 metriä, lipun kanssa 41 ja '
             + 'jalusta mukaan luettuna 60 metriä. Se säästyi purkamiselta '
@@ -29039,6 +29147,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hanoi - Ngoc Son Temple.jpg',
+          lyhyt: 'Punainen Thê Húc -silta johtaa saaritemppeliin, jota laajennettiin merkittävästi 1864.',
           selite: 'Saarelle johtavan punaisen sillan nimi Thê Húc kääntyy '
             + 'aamuauringon orreksi, ja varma vuosiluku temppelin '
             + 'historiassa on 1864, jolloin virkamies Nguyễn Văn Siêu '
@@ -29081,6 +29190,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'St Joseph Cathedral Hanoi 0385.JPG',
+          lyhyt: 'Hanoin vanhin kirkko vihittiin jouluaattona 1886, ja sen torneja on verrattu Notre-Dameen.',
           selite: 'Hanoin vanhin kirkko vihittiin jouluaattona 1886, ja sen '
             + 'uusgoottisia kaksoistorneja on verrattu Pariisin Notre-Damen '
             + 'torneihin — rakentajat pyrkivätkin siihen. Ilmansaasteista '
@@ -29129,6 +29239,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Constellation of Literature pavilion.jpg',
+          lyhyt: 'Khuê Vănin paviljonki rakennettiin 1805 ja on nyt sadantuhannen đồngin setelin kääntöpuolella.',
           selite: 'Khuê Vănin paviljonki rakennettiin vuonna 1805 neljän '
             + 'valkaistun kivipilarin varaan, ja siitä on tullut Hanoin '
             + 'tunnuskuva — se on myös sadantuhannen đồngin setelin '
@@ -29213,6 +29324,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Gandantegchinlen Monastery 12.jpg',
+          lyhyt: 'Luostari perustettiin 1809 ja avattiin uudelleen 1944 uskonnollisten vainojen jälkeen.',
           selite: 'Luostari sai alkunsa vuonna 1809, ja sen '
             + 'tiibetinkielinen nimi tarkoittaa täydellistä riemua. Vuonna '
             + '1939 se suljettiin uskonnollisten vainojen aikana, mutta '
@@ -29254,6 +29366,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'National Museum of Mongolia im Juli 2019.jpg',
+          lyhyt: 'Rakennus pystytettiin 1971 vallankumouksen museoksi, nykyään Mongolian kansallismuseo.',
           selite: 'Rakennus pystytettiin vuonna 1971 vallankumouksen '
             + 'museoksi, ja huhtikuussa 2008 se sai nimekseen Mongolian '
             + 'kansallismuseo. Kokoelmissa on yli 57 000 esinettä '
@@ -29300,6 +29413,7 @@ export const NAHTAVYYSJUTUT = {
           /* Nimi on yhdellä rivillä, koska peilaustyökalu poimii vain
            * ensimmäisen palan (tests/media.test.mjs). */
           tiedosto: '蒙古國國家宮 (國會與總統-總理辦公室) 正面中央成吉思汗像及麾下大將木華黎(右)與博爾朮(左) Statue of Genghis Khan with Two of His Generals Muqali and Bo\'orchu at the Parliament Building of Mongolia.jpg',
+          lyhyt: 'Hallituksen palatsin pylväikkö valmistui 2006 Tšingis-kaanin kruunauksen 800-vuotispäivänä.',
           selite: 'Hallituksen palatsin edustan pylväikkö valmistui vuonna '
             + '2006, samana vuonna kun Tšingis-kaanin kruunauksesta tuli '
             + 'kuluneeksi kahdeksansataa vuotta. Keskellä istuu kaani itse, '
@@ -29342,6 +29456,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Choijin lama temple museum (2551098844).jpg',
+          lyhyt: 'Temppelialue rakennettiin 1904–1908 valtion oraakkelille ja muutettiin 1938 museoksi.',
           selite: 'Temppelialue rakennettiin vuosina 1904–1908 valtion '
             + 'oraakkelille Choijin Lama Luvsankhaidaville, ja siihen '
             + 'kuuluu päätemppeli ja viisi sivutemppeliä. Se suljettiin '
@@ -29378,6 +29493,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ulaanbaatar Railway Station.jpg',
+          lyhyt: 'Ulaanbaatarin asema avattiin 1949, seitsemän vuotta ennen Trans-Mongolian radan valmistumista.',
           selite: 'Asema avattiin vuonna 1949, seitsemän vuotta ennen kuin '
             + 'Trans-Mongolian rata valmistui kokonaisuudessaan, ja se on '
             + 'koko maan rautatieliikenteen keskus. Laitureita on kolme ja '
@@ -29415,6 +29531,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2019 National Sports Stadium (Mongolia) 01.jpg',
+          lyhyt: 'Stadion valmistui 1958, ja siellä avataan vuosittain heinäkuun Naadam-juhla.',
           selite: 'Stadion valmistui vuonna 1958 venäläisenä rakennustyönä '
             + 'teräsbetonista ja tiilestä, ja katsomoon mahtuu '
             + 'jalkapallo-otteluissa 12 500 katsojaa. Ainoa vuosittainen '
@@ -29455,6 +29572,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Winter Palace of the Bogd Khan 05.jpg',
+          lyhyt: 'Talvipalatsi on Bogd Khanin ainoa säilynyt pääasunto, museossa 8 600 esineen kokoelma.',
           selite: 'Talvipalatsi kuului kahdeksannen Jebtsundamba Khutuktun '
             + 'eli Bogd Khanin Vihreän palatsin kokonaisuuteen, ja '
             + 'hallitsijan neljästä pääasunnosta se on ainoa jäljellä '
@@ -29499,6 +29617,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Zaisan Memorial in Ulaanbaatar, Mongolia.jpg',
+          lyhyt: 'Muistomerkki paljastettiin 1971 toisessa maailmansodassa kaatuneiden muistoksi.',
           selite: 'Muistomerkki paljastettiin vuonna 1971, ja se on '
             + 'omistettu toisessa maailmansodassa kaatuneille '
             + 'mongolialaisille ja neuvostoliittolaisille sotilaille. '
@@ -29573,6 +29692,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Boudhanath Stupa from a different perspective.jpg',
+          lyhyt: 'Boudhanath on Nepalin suurin stupa, jonka maanjäristyksen halkaisema huippu korjattiin 2016.',
           selite: 'Boudhanath on Nepalin suurin pallomainen stupa: kumpu on '
             + 'kolmekymmentäkuusi metriä korkea, ja sen pohjassa on 108 '
             + 'pientä kuvaa Amitabha-buddhasta. Vuoden 2015 maanjäristys '
@@ -29614,6 +29734,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Swayabhunath Temple-IMG 3267.jpg',
+          lyhyt: 'Itäportaat rakennutti 1600-luvulla kuningas Pratap Malla apinatemppeliksikin kutsutulle kukkulalle.',
           selite: 'Idän puoleiset portaat rakennutti 1600-luvulla kuningas '
             + 'Pratap Malla, ja ne nousevat kukkulalle, jonka laella olevan '
             + 'stupan nimi tarkoittaa itsestään syntynyttä. Kukkulalla '
@@ -29658,6 +29779,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kathmandu-Garden of Dreams-28-Palazzo-2013-gje.jpg',
+          lyhyt: 'Kaiser Sumsher Rana rakennutti puutarhan 1920, ja se kunnostettiin 2000–2007.',
           selite: 'Rana-suvun kenttämarsalkka Kaiser Sumsher Rana '
             + 'rakennutti puutarhan vuonna 1920 ja omisti sen paviljongit '
             + 'Nepalin kuudelle vuodenajalle. Vuosikymmenten rapistumisen '
@@ -29698,6 +29820,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bagmati river and Pashupatinath temple.jpg',
+          lyhyt: 'Pashupatinath on Kathmandun vanhin hindutemppeli, nykyinen rakennus 1800-luvulta.',
           selite: 'Pashupatinath on Kathmandun vanhin hindutemppeli ja '
             + 'peräisin 400-luvulta, mutta nykyinen pagodityylinen rakennus '
             + 'kuparilla ja kullalla katettuine kattokertoineen on '
@@ -29741,6 +29864,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Rani Pokhari Jamal Kathmandu-Nepal Rajesh Dhungana (4).jpg',
+          lyhyt: 'Kuningas Pratap Malla rakennutti pyhän altaan 1670, kunnostus valmistui 2020.',
           selite: 'Kuningas Pratap Malla rakennutti altaan vuonna 1670 '
             + 'lohduttaakseen puolisoaan, jonka poika oli kuollut norsun '
             + 'tallaamana, ja täytti sen Nepalista ja Intiasta pyhistä '
@@ -29788,6 +29912,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Top part of one of the temples inside Basantapur Durbar Square.jpg',
+          lyhyt: 'Aukiolla on viisikymmentä temppeliä, useimmat 1500-luvun Malla-kuninkaiden ajalta.',
           selite: 'Aukiolla on kaikkiaan viisikymmentä temppeliä, ja '
             + 'useimmat niistä ovat 1500-luvun Malla-kuninkaiden aikaisia. '
             + 'Kuningasperhe asui aukion Hanuman Dhokan palatsissa vuoteen '
@@ -29830,6 +29955,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Cityscape dharahara.jpg',
+          lyhyt: 'Torni on 72 metriä korkea; vuoden 2015 maanjäristys jätti siitä pystyyn vain jalustan.',
           selite: 'Torni on 72 metriä korkea, ja sen kierreportaikossa on '
             + '213 askelmaa; alun perin ylimmästä kerroksesta puhallettiin '
             + 'torvimerkki, jolla väki kutsuttiin Tundikhelin kentälle '
@@ -29873,6 +29999,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Patandurbar sqaure.jpg',
+          lyhyt: 'Aukion tunnetuin rakennus on vuoden 1667 Krishna Mandir, 21 kullatun huipun kivitemppeli.',
           selite: 'Aukion tunnetuin rakennus on vuoden 1667 Krishna Mandir, '
             + 'kolmikerroksinen kivitemppeli, jossa on 21 kullattua huippua '
             + 'ja jonka pilarikaistoihin on kaiverrettu Mahabharatan ja '
@@ -29951,6 +30078,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The State Opera and Ballet Theatre “Astana Opera”.jpg',
+          lyhyt: 'Oopperatalo avattiin 2013 italialaisin piirustuksin, pääsalissa 1 250 paikkaa.',
           selite: 'Oopperatalo avattiin vuonna 2013 italialaisen '
             + 'ABDR-toimiston piirustusten mukaan, ja sen antiikin '
             + 'temppeliä muistuttavan julkisivun päätykolmion harjalla ajaa '
@@ -29988,6 +30116,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Khan Shatyr.jpg',
+          lyhyt: 'Foster and Partnersin ETFE-kalvoteltta avattiin 2010, sisällä pysytään 15–30 asteessa.',
           selite: 'Foster and Partnersin suunnittelema teltta avattiin 5. '
             + 'heinäkuuta 2010, ja sen katteena ovat lasin sijaan '
             + 'ETFE-kalvotyynyt keskusmastosta lähtevässä vaijeriverkossa. '
@@ -30024,6 +30153,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kazakhstan P9130290 (39375228604).jpg',
+          lyhyt: 'Näköalatorni Bajterek valmistui 2002, näköalatasanne 97 metrin korkeudessa.',
           selite: 'Näköalatasanne on 97 metrin korkeudessa 105-metrisessä '
             + 'tornissa, ja sinne noustaan kahdella hissillä kuilussa, jota '
             + 'kiertävät valkoiset oksamaiset ristikkopalkit. Nimi '
@@ -30058,6 +30188,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kazakhstan P9130282 (25214334277).jpg',
+          lyhyt: 'Bulevardin kaavan piirsi Kisho Kurokawa, joka voitti vuoden 1998 suunnittelukilpailun.',
           selite: 'Bulevardi on 2 200 metrin mittainen kävelyakseli, jonka '
             + 'itäpäässä on Akorda ja länsipäässä Khan Shatyrin teltta ja '
             + 'jonka varrella seisoo Bajterek. Kaavan piirsi japanilainen '
@@ -30092,6 +30223,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Astana DSC04160 (7709718350).jpg',
+          lyhyt: 'Presidentin toimitalo rakennettiin 2001–2004, kupolilla kullattu aurinko ja arokotka.',
           selite: 'Presidentin työpaikka ja hallinnon toimitalo '
             + 'rakennettiin vuosina 2001–2004; korkeutta on huippuineen 80 '
             + 'metriä ja kerroksia seitsemän. Kupolin päällä on kullattu '
@@ -30127,6 +30259,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'National Museum of Kazakhstan 03.jpg',
+          lyhyt: 'Vuonna 2012 avatun moskeijan kupoli on maan suurin, 51 metriä korkea.',
           selite: 'Vuonna 2012 avatun moskeijan päälaen kupoli on maan '
             + 'suurin, 51 metriä korkea, ja nurkissa nousee neljä 77 metrin '
             + 'minareettia. Naapureina samalla aukiolla Esilin '
@@ -30171,6 +30304,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palace of Peace and Reconciliation (pyramid).jpg',
+          lyhyt: 'Foster and Partnersin rauhanpyramidi valmistui 2006 uskontojen johtajien kokouspaikaksi.',
           selite: 'Foster and Partnersin piirtämä pyramidi valmistui vuonna '
             + '2006 maailmanuskontojen johtajien kongressin pysyväksi '
             + 'kokouspaikaksi, ja sekä korkeutta että pohjan sivua on 62 '
@@ -30209,6 +30343,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'National Museum of the Republic of Kazakhstan 01.jpg',
+          lyhyt: 'Vuonna 2014 avattu museo oli Keski-Aasian suurin, tunnetuin esine Issykin kultainen soturi.',
           selite: 'Vuonna 2014 avattu museo oli silloin Keski-Aasian '
             + 'suurin, ja sen yhdessätoista salissa on näyttelytilaa noin '
             + '14 000 neliömetriä. Kokoelmien tunnetuin esine on Issykin '
@@ -30285,6 +30420,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Lai Afong, Five Stories Pagoda Guangzhou, c1880.JPG',
+          lyhyt: 'Torni pystytettiin 1380 kaupunginmuurin osaksi ja on rakennettu uudelleen viisi kertaa.',
           selite: 'Torni pystytettiin vuonna 1380 Yuexiun kukkulalle osaksi '
             + 'kaupunginmuuria, ja se on sittemmin tuhoutunut ja rakennettu '
             + 'uudelleen viisi kertaa. Noin vuoden 1880 valokuvan aikaan '
@@ -30326,6 +30462,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Guangxiao Temple Bodhi Tree.jpg',
+          lyhyt: 'Temppeli syntyi vuonna 233 lahjoitetusta talosta, pagodi rakennettiin 676.',
           selite: 'Temppeli syntyi vuonna 233, kun Wun oppineen virkamiehen '
             + 'Yu Fanin perhe lahjoitti hänen talonsa temppeliksi hänen '
             + 'kuoltuaan. Bodhipuun alla seisoo kahdeksankulmainen pagodi, '
@@ -30367,6 +30504,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chen Clan Academy Wall Carving.jpg',
+          lyhyt: 'Suvun esi-isien palvontasali valmistui 1894 ulkomailla asuvien lahjoituksin, runsain koristein.',
           selite: 'Suvun yhteinen esi-isien palvontasali ja oppilaitos '
             + 'valmistui vuonna 1894 varoilla, jotka kerättiin ulkomailla '
             + 'asuvilta ja Guangdongin seitsemästäkymmenestäkahdesta '
@@ -30405,6 +30543,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Flower Pagoda in Canton.jpg',
+          lyhyt: 'Kukkapagodi rakennettiin 1097 ja uudelleen 1373, oli 1800-luvulla kaupungin näkyvin rakennus.',
           selite: 'Kukkapagodi rakennettiin vuonna 1097 edeltäjänsä '
             + 'paikalle ja uudelleen vuonna 1373, ja 1800-luvulla se oli '
             + 'kaupungin näkyvin rakennus. Lai Afongin vuoden 1863 valokuva '
@@ -30444,6 +30583,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Guangdong Huaisheng Mosque 2024.jpg',
+          lyhyt: 'Moskeijan perusti perimätiedon mukaan 627 profeetta Muhammadin toveri, nykyrakennus 1695.',
           selite: 'Vanhojen kiinalaisten käsikirjoitusten mukaan moskeijan '
             + 'perusti vuonna 627 profeetta Muhammadin toveri Sa’d ibn Abi '
             + 'Waqqas; nykyinen rakennus on vuodelta 1695. Guangta eli '
@@ -30487,6 +30627,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Lai Afong, Sacred Heart Cathedral Guangzhou, c1880.JPG',
+          lyhyt: 'Katedraali tehtiin graniitista käsivoimin ja valmistui 1888, torneja 52,8 metriä.',
           selite: 'Katedraali tehtiin kokonaan graniitista käsivoimin ja '
             + 'ilman koneita, ja se valmistui vuonna 1888, '
             + 'kaksikymmentäviisi vuotta peruskivien laskemisesta. Tornit '
@@ -30526,6 +30667,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Canton1860.jpg',
+          lyhyt: 'Kauppiaskortteli paloi kolmesti, oopiumisotien palojen jälkeen kauppa siirtyi Shamianiin.',
           selite: 'Faktorioiden kortteli oli Helmijoen rannassa vanhan '
             + 'muurikaupungin lounaispuolella, ja se paloi kolmesti — '
             + 'vuosien 1841 ja 1856 palot liittyivät oopiumisotiin. '
@@ -30570,6 +30712,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Shameen, Canton.jpg',
+          lyhyt: 'Britannia ja Ranska kaivoivat 1859 kanavan, jonka synnyttämälle saarelle keskittyivät konsulaatit.',
           selite: 'Britannia ja Ranska kaivoivat vuonna 1859 hiekkasärkän '
             + 'pohjoispuolelle kanavan, ja niin syntyi 0,3 neliökilometrin '
             + 'saari, jolle keskittyi valtaosa kaupungin konsulaateista. '
@@ -30662,6 +30805,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Yangon-Chaukhtatgyi-04-Buddha-gje.jpg',
+          lyhyt: 'Nykyinen 66-metrinen makaava Buddha vihittiin 1973 edeltäjänsä tilalle.',
           selite: 'Nykyinen kuudenkymmenenkuuden metrin makaava Buddha '
             + 'vihittiin vuonna 1973; edellinen, vuonna 1907 valmistunut '
             + 'kuva purettiin 1950-luvulla, koska sen mittasuhteet eivät '
@@ -30709,6 +30853,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Captain Linnaeus Tripe - Rangoon. View Near the Lake - 2009.86 - Cleveland Museum of Art.jpg',
+          lyhyt: 'Kuva vuodelta 1855 on otettu, kun kuningas Hsinbyushin oli nostanut pagodin 99 metriin 1768.',
           selite: 'Vuoden 1855 valokuva on otettu kahdeksankymmentä vuotta '
             + 'sen jälkeen, kun kuningas Hsinbyushin nosti pagodin vuoden '
             + '1768 maanjäristyksen jälkeen nykyiseen '
@@ -30750,6 +30895,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Yangon, Karaweik Hall, Kandawgyi Lake, Myanmar.jpg',
+          lyhyt: 'Karaweik on 1972–1974 rakennettu betonilautta juhlasaleineen keinotekoisella järvellä.',
           selite: 'Karaweik on vuosina 1972–1974 rakennettu kaksirunkoinen '
             + 'betonilautta, jossa on juhlasali ja ravintola; nimi tulee '
             + 'paalin sanasta karavika eli taruolennosta, jonka laulu on '
@@ -30792,6 +30938,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Yangon Central Railway Station.JPG',
+          lyhyt: 'Nykyinen asema valmistui 1954 burmalaiseen perinnearkkitehtuuriin, edeltäjä tuhoutui 1943.',
           selite: 'Nykyinen asema valmistui toukokuussa 1954 insinööri Hla '
             + 'Thwinin piirustusten mukaan, ja se tehtiin tarkoituksella '
             + 'burmalaisen perinnearkkitehtuurin mukaan: valkoiset tornit '
@@ -30835,6 +30982,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Yangon, Scott Market.jpg',
+          lyhyt: 'Markkinahalli avattiin 1926 nimellä Scott Market, nykynimi tuli itsenäistymisen jälkeen.',
           selite: 'Markkinahalli avattiin vuonna 1926, ja britit nimesivät '
             + 'sen Scott Marketiksi; vuoden 1940 ehdotus burmalaisesta '
             + 'nimestä kaatui kaupungin terveys- ja markkinalautakunnassa '
@@ -30878,6 +31026,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Secretariat in Rangun, Myanmar.jpg',
+          lyhyt: 'Brittiläisen Burman hallintorakennus valmistui 1905 Glasgow\'sta tuodusta teräksestä.',
           selite: 'Brittiläisen Burman hallinnon päärakennus valmistui '
             + 'vuonna 1905 Henry Hoyne-Foxin piirustusten mukaan, ja '
             + 'hinnaksi tuli 2,5 miljoonaa rupiaa. Teräs tuotiin '
@@ -30923,6 +31072,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fytche Square, Rangoon.jpg',
+          lyhyt: 'Kahdeksankulmainen chedi laajennettiin nykymittaansa 1400-luvun puolivälissä.',
           selite: 'Kahdeksankulmainen chedi on vajaat neljäkymmentäviisi '
             + 'metriä korkea, ja kuningatar Shin Saw Pu laajensi sen '
             + 'nykymittaansa 1400-luvun puolivälissä. Bengalin '
@@ -30966,6 +31116,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'StrandHotel2009.JPG',
+          lyhyt: 'Hotelli avattiin 1901 ja siirtyi Sarkiesin veljesten omistukseen, samojen kuin Raffles ja E&O.',
           selite: 'Hotelli avattiin vuonna 1901 ja siirtyi pian Sarkiesin '
             + 'veljesten omistukseen — samojen, joilla oli Raffles '
             + 'Singaporessa ja Eastern & Oriental Penangissa. '
@@ -31011,6 +31162,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Botahtaung Pagoda 2.JPG',
+          lyhyt: 'Pagodin sisällä kiertää kullattu käytävä, jonka vitriineissä on 1948 löydettyjä reliikkejä.',
           selite: 'Pagodi on ontto: sisällä kiertää sokkelomainen kullattu '
             + 'käytävä, jonka lasivitriineissä on esineitä, jotka löytyivät '
             + 'saman pagodin sisältä. Ne tulivat esiin vuonna 1948, kun '
@@ -31114,6 +31266,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chinthes guarding Mandalay Hill.JPG',
+          lyhyt: 'Kukkulan huipulla on Sutaungpyei eli toiveet täyttävä pagodi, portaita vartioi kaksi chinthea.',
           selite: 'Eteläisen eli pääsisäänkäynnin vartijoina istuu kaksi '
             + 'jättimäistä chintheä, tyyliteltyä leijonahahmoa. Kukkulalle '
             + 'vie neljä katettua porrasta, ja sen laella on Sutaungpyei '
@@ -31157,6 +31310,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ku Tho Taw Pagoda & Sandar Muni Pagoda, Mandalay.jpg',
+          lyhyt: 'Pagodia ympäröi 729 valkoista kiviluolaa, joihin on kaiverrettu koko Tipitaka-kaanon.',
           selite: 'Pagodia ympäröi 729 valkoista kiviluolaa, joissa '
             + 'kussakin on marmorilaatta ja siihen molemmin puolin '
             + 'kaiverrettuna yksi sivu koko palinkielistä '
@@ -31197,6 +31351,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kyauk Taw Ghi Pagoda 02.jpg',
+          lyhyt: 'Marmorinen suurbuddha veistettiin yhdestä lohkareesta ja pyhitettiin 1865 kuningas Mindonin aikana.',
           selite: 'Temppelin nimi tarkoittaa suurta kivikuvaa: Buddha on '
             + 'veistetty yhdestä vaaleanvihreästä marmorilohkareesta, jonka '
             + 'kuljettamiseen Sagyinista kului kolmetoista päivää ja '
@@ -31235,6 +31390,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sandamuni Pagoda 04.jpg',
+          lyhyt: 'Mindon rakennutti pagodin 1874 murhatun veljensä Kanaungin muistoksi.',
           selite: 'Mindon rakennutti pagodin vuonna 1874 muistoksi '
             + 'nuoremmalle veljelleen Kanaungille, joka sai surmansa vuoden '
             + '1866 palatsikapinassa; hänet ja kolme prinssiä on haudattu '
@@ -31282,6 +31438,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mandalay-Shwenandaw-40-geschnitzte Figur-gje.jpg',
+          lyhyt: 'Rakennus oli osa palatsia ja siirrettiin luostariksi kuningas Thibawn toimesta.',
           selite: 'Rakennus oli alun perin osa palatsia ja kuninkaan omia '
             + 'huoneita, joissa Mindon asui viimeiset aikansa; kuningas '
             + 'Thibaw purki sen isänsä kuoltua ja kokosi uudelleen '
@@ -31333,6 +31490,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mandalay Palace Clock Tower.jpg',
+          lyhyt: 'Kellotornista lyötiin gongia joka kolmas tunti, ja aikaa mitattiin tarkalla vesikellolla.',
           selite: 'Kellotorni Bahozinin lavalta lyötiin gongia ja suurta '
             + 'rumpua joka kolmas tunti, sillä vuorokausi jaettiin neljään '
             + 'päivä- ja neljään yövahtiin. Aikaa mitattiin vesikellolla: '
@@ -31371,6 +31529,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Zeigyo Market.jpg',
+          lyhyt: 'Zegyo on kaupungin vanhin tori, perustettu Mindonin hallituskaudella samalle paikalle.',
           selite: 'Zegyo on kaupungin vanhin ja tärkein tori: se '
             + 'perustettiin Mindonin hallituskaudella ja on ollut siitä '
             + 'asti samalla paikalla 84. kadulla. Torin kautta kulki '
@@ -31407,6 +31566,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '02f-Setkyathiha Paya (NgnL)-10413.jpg',
+          lyhyt: 'Pagodi on vuodelta 1884, mutta sen pronssinen Buddha-kuva valettiin jo 1824 Inwassa.',
           selite: 'Pagodi on vuodelta 1884, mutta sen suuri pronssinen '
             + 'Buddha-kuva on paljon vanhempi: kuningas Bagyidaw valatti '
             + 'sen Inwassa vuonna 1824. Kuva siirrettiin Amarapuraan 1852 '
@@ -31451,6 +31611,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mahamuni Buddha Temple 07.jpg',
+          lyhyt: 'Temppelin Arakanista tuotu Buddha-kuva saapui 1784, nykyinen temppeli valmistui 1896.',
           selite: 'Temppelin Buddha-kuva on kotoisin Arakanista ja tuotiin '
             + 'tänne vuonna 1784, seitsemänkymmentäkolme vuotta ennen '
             + 'Mandalayn perustamista. Nykyisen temppelin rakennutti '
@@ -31522,6 +31683,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Taipeh Dalongdong Baoan Temple Tor 1.jpg',
+          lyhyt: 'Baoan-temppeli perustettiin puisena 1742 ja sai nykymuotonsa alkaen 1804.',
           selite: 'Xiamenin seudulta Fujianista muuttanut väki pystytti '
             + 'paikalle puisen pyhäkön vuonna 1742 ja aloitti nykyisen '
             + 'temppelin rakentamisen 1804; nimi Baoan tarkoittaa sitä, '
@@ -31562,6 +31724,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Buildings along Dihua Street 07.23 (6).jpg',
+          lyhyt: 'Dihua-katu on Taipein vanhin katu, nykyasussaan 1850-luvulta, nimensä se sai 1947.',
           selite: 'Dihua-katu on Taipein vanhin katu, ja nykyisessä '
             + 'asussaan se rakennettiin 1850-luvulla, kun Quanzhousta '
             + 'lähtöisin olleet kauppahuoneet siirtyivät Bangkasta '
@@ -31599,6 +31762,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '北門 North Gate of Taipei City Wall - panoramio.jpg',
+          lyhyt: 'Cheng\'enin portti valmistui 1884 ja on muurin viidestä portista ainoa alkuperäinen.',
           selite: 'Cheng’enin portti valmistui kaupunginmuurin kanssa '
             + 'vuonna 1884, ja se on muurin viidestä portista ainoa '
             + 'alkuperäisessä asussaan säilynyt. Japanin hallinto purki '
@@ -31636,6 +31800,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '總統府 The Presidential Office Building - panoramio.jpg',
+          lyhyt: 'Japanin hallinnon päätalo rakennettiin 1912–1919, presidentin virastotalona vuodesta 1950.',
           selite: 'Japanin hallinnon päätalo rakennettiin vuosina 1912–1919 '
             + 'Nagano Uheijin kilpailuvoiton pohjalta, ja sen '
             + 'kuusikymmentämetrinen keskustorni oli Japanin kaudella '
@@ -31676,6 +31841,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Taipei Taiwan Red-House-Theater-01.jpg',
+          lyhyt: 'Talo valmistui 1908 markkinahalliksi, ei teatteriksi, ja kunnostettiin 2015–2016.',
           selite: 'Talo valmistui vuonna 1908 japanilaisen arkkitehdin '
             + 'Kondo Juron piirustusten mukaan, eikä se ollut alun perin '
             + 'teatteri vaan markkinahalli, jonka pohjakerroksessa toimi '
@@ -31715,6 +31881,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Longshan Temple 2010.jpg',
+          lyhyt: 'Lungshan-temppeli perustettiin 1738, nykyiset rakennukset ovat vuosilta 1919–1924.',
           selite: 'Temppeli perustettiin vuonna 1738, ja Fujianista tulleet '
             + 'uudisasukkaat nimesivät sen kotiseutunsa vanhan '
             + 'Lungshan-temppelin mukaan. Rakennukset ovat tuhoutuneet '
@@ -31753,6 +31920,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '剝皮寮歷史街區 Bopiliao Historic Block - panoramio (1).jpg',
+          lyhyt: 'Bopiliao on Taiwanin varhaisimpia kauppapaikkoja, säilynyt kansakoulun tonttivarauksen ansiosta.',
           selite: 'Bopiliao oli aikanaan yksi pohjoisen Taiwanin '
             + 'varhaisimmista kauppapaikoista, ja osa sen taloista on yli '
             + 'kahdensadan vuoden ikäisiä. Ne säilyivät, koska tontti '
@@ -31789,6 +31957,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Liberty Square viewed from Chiang Kai-shek Memorial Hall.jpg',
+          lyhyt: 'Muistosali avattiin 1980, ja portaissa on 89 askelmaa presidentin elinvuosien mukaan.',
           selite: 'Muistosali avattiin 5. huhtikuuta 1980, ja sen kahdet '
             + 'portaat nousevat 89 askelmaa, yhden kutakin presidentin '
             + 'elinvuotta kohti. Sali seisoo yli 240 000 neliömetrin '
@@ -31826,6 +31995,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '欽差行臺 台灣唯一保存的清朝衙門建築.jpg',
+          lyhyt: 'Keisarillisten lähettiläiden vierastalo on vuodelta 1888 ja siirrettiin puutarhaan 1933.',
           selite: 'Keisarillisten lähettiläiden vierastalo on Qing-kauden '
             + 'virastorakennus vuodelta 1888, ja se siirrettiin puutarhaan '
             + 'vuonna 1933. Se on Pohjoisportin ohella yksi harvoista '
@@ -31868,6 +32038,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Taipei 101 20230401.jpg',
+          lyhyt: 'Taipei 101 -torni on 508 metriä korkea ja avattiin uudenvuodenaattona 2004.',
           selite: 'Torni on 508 metriä korkea ja siinä on 101 kerrosta; se '
             + 'avattiin uudenvuodenaattona 2004. Uudenvuodenyönä torni '
             + 'muuttuu ilotulitusalustaksi, ja Xinyin kaupunginosaan '
@@ -31938,6 +32109,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Former Kowloon-Canton Railway Clock Tower, Tsim Sha Tsui (Hong Kong).jpg',
+          lyhyt: 'Kellotorni on ainoa jäljellä oleva osa 1916 avatusta Kowloonin rautatieasemasta.',
           selite: 'Torni on ainoa jäljellä oleva osa Kowloonin '
             + 'rautatieasemasta, joka oli Kowloonin ja Kantonin välisen '
             + 'radan eteläpää ja avattiin 28. maaliskuuta 1916. '
@@ -31978,6 +32150,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'HK SW 上環 Sheung Wan 摩利臣街 Morrison Street 紅磚屋 red brick building 西港城 Western Market 干諾道中 Connaught Road Central morning February 2020 SS2 06.jpg',
+          lyhyt: 'Sheung Wanin kauppahalli avattiin 1906 ja on kaupungin vanhin säilynyt torirakennus.',
           selite: 'Sheung Wanin kauppahallin pohjoinen osa avattiin vuonna '
             + '1906, ja se on kaupungin vanhin säilynyt torirakennus. Queen '
             + 'Anne -tyylin uusintaa edustavan talon tiilet olivat alun '
@@ -32020,6 +32193,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Central Pier 7 viewed from Hong Kong Maritime Museum.jpg',
+          lyhyt: 'Lauttayhtiö perustettiin 1888, ja köysikiinnitystapa on säilynyt 1800-luvulta.',
           selite: 'Lauttayhtiö perustettiin vuonna 1888, ja Centralin '
             + 'laituri siirtyi täyttötöiden takia nykyiselle paikalleen '
             + 'marraskuussa 2006. Kiinnitystapa on säilynyt 1800-luvulta: '
@@ -32059,6 +32233,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Burning incense coils in the Man Mo temple (Hong Kong).jpg',
+          lyhyt: 'Man Mo -temppeli rakennettiin 1847 kirjallisuuden ja sodan jumalille.',
           selite: 'Temppeli rakennettiin vuonna 1847 kirjallisuuden '
             + 'jumalalle Man Cheongille ja soturijumala Mo Taille, joiden '
             + 'puoleen kääntyivät keisarillisiin virkatutkintoihin '
@@ -32100,6 +32275,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tai Kwun Parade Ground 201806.jpg',
+          lyhyt: 'Vanha paraatikenttä on nyt kulttuurikeskus, jonka kortteli avattiin kunnostettuna 2018.',
           selite: 'Vanha paraatikenttä on nykyään keskusaukio korttelissa, '
             + 'jossa on kuusitoista historiallista rakennusta vuosilta '
             + '1841–1925: entinen keskuspoliisiasema, kihlakunnanoikeus ja '
@@ -32137,6 +32313,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'St John Cathedral Hong Kong.jpg',
+          lyhyt: 'Kirkko valmistui 1849 ja on Hongkongin vanhin säilynyt länsimainen kirkkorakennus.',
           selite: 'Kirkko valmistui vuonna 1849, ja se on Hongkongin vanhin '
             + 'säilynyt länsimainen kirkkorakennus ja Itä-Aasian vanhin '
             + 'anglikaaninen kirkko. Sen tontti on Hongkongin ainoa täysin '
@@ -32178,6 +32355,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'English Quarter, Hong Kong.jpg',
+          lyhyt: 'Rinne veti eurooppalaisia jo 1800-luvulla, ja kuvernööri MacDonnell rakensi sinne kesäasunnon 1868.',
           selite: 'Rinne veti puoleensa eurooppalaisia asukkaita jo '
             + '1800-luvulla, koska sieltä näki koko kaupungin ja koska '
             + 'siellä oli viileämpää kuin alhaalla; kuudes kuvernööri Sir '
@@ -32220,6 +32398,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Blue House in 2020.jpg',
+          lyhyt: 'Tong lau -vuokratalo rakennettiin 1922, ja se sai sinisen nimensä vasta 1990.',
           selite: 'Nelikerroksinen parvekkeellinen tong lau -vuokratalo '
             + 'rakennettiin vuonna 1922 tontille, jolla oli toiminut '
             + '1870-luvulla Wah Ton sairaala ja sen jälkeen temppeli. '
@@ -32262,6 +32441,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Old Peak Tram 202105.jpg',
+          lyhyt: 'Kevyet metallirunkoiset vaunut tulivat käyttöön 1956, kaapeli sähköistettiin jo 1926.',
           selite: 'Vuonna 1956 käyttöön tulivat kevyet metallirunkoiset '
             + 'vaunut, joissa oli kuusikymmentäkaksi istumapaikkaa, ja '
             + 'kaksi vanhaa vaunua seisoo yhä käytöstä poistetulla '
@@ -32350,6 +32530,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jakarta Indonesia Sunda-kelapa-01.jpg',
+          lyhyt: 'Sunda Kelapa oli Sundan valtakunnan tärkein satama, jossa pinisit kuljettavat yhä rahtia.',
           selite: 'Sunda Kelapa oli Sundan valtakunnan tärkein satama ja '
             + 'eli pippurikaupasta; portugalilainen Tomé Pires kirjoitti '
             + '1510-luvulla sen olevan kaikista tärkein ja paras. Kun '
@@ -32393,6 +32574,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tampak depan bangunan Museum Bahari, Jakarta.jpg',
+          lyhyt: 'Museo asuu 1652–1771 rakennetuissa VOC:n varastoissa, joita tulipalo vaurioitti 2018.',
           selite: 'Museo asuu VOC:n varastoissa, jotka rakennettiin '
             + 'Ciliwungin länsirannalle vuosina 1652–1771 ja joissa '
             + 'säilytettiin muskottipähkinää, pippuria, kahvia, teetä ja '
@@ -32431,6 +32613,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jembatan Kota Intan 2017-08-22 (2).jpg',
+          lyhyt: 'VOC rakensi Indonesian vanhimman läppäsillan 1628 Batavian linnan bastionin viereen.',
           selite: 'VOC rakensi Indonesian vanhimman sillan vuonna 1628 '
             + 'läppäsillaksi, jonka kaksi puista lehteä nousivat ylös ja '
             + 'päästivät veneet ali. Nimi on vaihtunut sen jälkeen neljä '
@@ -32472,6 +32655,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Batavia City Hall (Jakarta History Museum) Fatahillah Square (2025) - img 17.jpg',
+          lyhyt: 'Aukion eteläsivun 1710 kaupungintalossa toimii nyt Jakartan historiamuseo.',
           selite: 'Aukion eteläsivulla on vuoden 1710 kaupungintalo, jossa '
             + 'toimii nyt Jakartan historiamuseo noin 23 500 esineen '
             + 'kokoelmineen. Aukion keskellä on 1700-luvun artesiivipumppu, '
@@ -32480,6 +32664,7 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Museum Wayang, Jakarta (2025) - img 01.jpg',
+          lyhyt: 'Aukio sai nykymuotonsa 1632, kun kenraalikuvernööri Specx piirsi sisäkaupungin ruudukoksi.',
           selite: 'Aukion länsisivulla on nukketeatterimuseo. Aukio sai '
             + 'nykyisen muotonsa vuonna 1632, kun kenraalikuvernööri '
             + 'Jacques Specx piirsi Batavian sisäkaupungin ruudukoksi ja '
@@ -32517,6 +32702,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jakarta - Toko Merah (2025) - img 06.jpg',
+          lyhyt: 'Talo rakennettiin noin 1730 ja on varhaisinta hollantilaista siirtomaa-arkkitehtuuria.',
           selite: 'Talo rakennettiin noin vuonna 1730 Gustaaf Willem van '
             + 'Imhoffille, ja se on varhaisinta hollantilaista '
             + 'siirtomaa-arkkitehtuuria eli 1600-luvun kaupunkitaloa '
@@ -32556,6 +32742,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jakarta Kota Station (2025) - img 06.jpg',
+          lyhyt: 'Nykyinen Kota-asema rakennettiin 1926–1929 art deco -tyyliin Ghijselsin piirustuksin.',
           selite: 'Nykyinen asema rakennettiin vuosina 1926–1929 '
             + 'hollantilaisen Frans Johan Louwrens Ghijselsin piirustusten '
             + 'mukaan, ja se on hänen pääteoksensa: art deco yhdistettynä '
@@ -32597,6 +32784,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Klenteng Jin De Yuan, Glodok, Jakarta.jpg',
+          lyhyt: 'Jakartan vanhin kiinalainen temppeli rakennettiin 1650, tulipalo tuhosi kattorakenteet 2015.',
           selite: 'Jakartan vanhimman kiinalaisen temppelin rakennutti '
             + 'vuonna 1650 kiinalaisyhteisön luutnantti Kwee Hoen, ja sen '
             + 'hokkieninkielisestä nimestä Kwan Im Teng tuli sana klenteng, '
@@ -32641,6 +32829,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jakarta Cathedral Afternoon.JPG',
+          lyhyt: 'Uusgoottilainen kirkko rakennettiin 1891–1901 valurautaisin huipuin maanjäristysten varalta.',
           selite: 'Uusgoottilainen kirkko rakennettiin vuosina 1891–1901 '
             + 'edeltäjänsä sortumapaikalle, ja arkkitehti Marius Hulswit '
             + 'lisäsi siihen valurautaiset huiput. Julkisivun kaksi tornia '
@@ -32682,6 +32871,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Masjid Istiqlal.jpg',
+          lyhyt: 'Kaakkois-Aasian suurin moskeija vihittiin 1978, mitat sidottu itsenäisyyden vuosilukuun.',
           selite: 'Kaakkois-Aasian suurin moskeija vihittiin 22. helmikuuta '
             + '1978, ja sen mitat on sidottu itsenäisyyteen: päärukoussalin '
             + 'kupolin halkaisija on 45 metriä vuoden 1945 mukaan ja '
@@ -32726,6 +32916,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Monas (monumen nasional) di Jakarta.jpg',
+          lyhyt: 'Monas-monumentti rakennettiin 1961–1975, mitat itsenäisyysjulistuksen päivämäärän mukaan.',
           selite: 'Monumentti rakennettiin vuosina 1961–1975, ja arkkitehti '
             + 'R. M. Soedarsono kirjoitti sen mittoihin '
             + 'itsenäisyysjulistuksen päivämäärän: jalustan korkeus on 17 '
@@ -32797,6 +32988,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Iglesia de Binondo, Manila, Filipinas, 2023-08-26, DD 16-18 HDR.jpg',
+          lyhyt: 'Kupolin rakentamista valvottiin 1781, ja kirkko koottiin uudelleen 1950-luvulla sotavaurioista.',
           selite: 'Kupolin rakentamista valvoi vuonna 1781 Domingo Cruz y '
             + 'Gonzales. Vuoden 1944 pommituksissa kirkosta jäivät jäljelle '
             + 'vain kiviseinät ja kahdeksankulmainen kellotorni, ja '
@@ -32835,6 +33027,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Quiapo Church, Manila, Feb 2025 (1).jpg',
+          lyhyt: 'Teräsbetoninen kirkko valmistui 1935 tulipalon jälkeen; siinä säilytetään Nazareno-patsasta.',
           selite: 'Nykyinen teräsbetoninen kirkko valmistui vuonna 1935, '
             + 'kun kansallistaiteilija Juan Nakpil suunnitteli vuoden 1929 '
             + 'tulipalossa vaurioituneen rakennuksen uudelleen ja lisäsi '
@@ -32873,6 +33066,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Escolta Manila.jpg',
+          lyhyt: 'Escolta sai nimensä saattueesta, joka vartioi 1590-luvulla vaarallista rantapolkua.',
           selite: 'Escolta sai nimensä espanjan sanasta escoltar, saattaa: '
             + 'kuvernööri määräsi 1590-luvulla saattueen vartioimaan pimeän '
             + 'aikaan vaarallista rantapolkua, josta katu myöhemmin '
@@ -32911,6 +33105,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jones Bridge (Manila; 01-30-2021).jpg',
+          lyhyt: 'Silta rakennettiin 1919–1920 Pont Alexandre III -esikuvan mukaan ja koottiin uudelleen 1946.',
           selite: 'Silta rakennettiin vuosina 1919–1920 filippiiniläisen '
             + 'arkkitehdin Juan M. Arellanon piirustusten mukaan, ja '
             + 'esikuvana oli pariisilainen Pont Alexandre III. Vuonna 1945 '
@@ -32951,6 +33146,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fort Santiago 1880 gate.jpg',
+          lyhyt: 'Kivinen linnoitus rakennettiin 1590–1593, koristeltu portti uusittiin vasta 1982.',
           selite: 'Kivinen linnoitus rakennettiin vuosina 1590–1593 '
             + 'Guadalupen vulkaanisesta tuffista, ja sen koristeltu portti '
             + 'pystytettiin vuonna 1714. Vuoden 1880 maanjäristys pudotti '
@@ -32991,6 +33187,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Catedral de la Inmaculada Concepción, Manila, Filipinas, 2023-08-26, DD 22-24 HDR.jpg',
+          lyhyt: 'Nykyinen kahdeksas katedraali vihittiin 1958, kellot siirrettiin maan tasalle 2011.',
           selite: 'Nykyinen, järjestyksessä kahdeksas katedraali vihittiin '
             + '7. joulukuuta 1958 kapampangan-arkkitehti Fernando Ocampon '
             + 'suunnitelman mukaan. Kellot siirrettiin vuonna 2011 maan '
@@ -33032,6 +33229,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Patio de la iglesia de San Agustín, Manila, Filipinas, 2023-08-27, DD 75-77 HDR.jpg',
+          lyhyt: 'Luostari otettiin käyttöön 1604, ja sotatuhon jälkeen se rakennettiin museoksi 1970-luvulla.',
           selite: 'Luostari saatiin käyttöön vuonna 1604 ja kirkko '
             + 'julistettiin valmiiksi 19. tammikuuta 1607; kivi hakattiin '
             + 'Meycauayanin, Binangonanin ja San Mateon adobelouhoksista. '
@@ -33069,6 +33267,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Museo Nacional de Bellas Artes, Manila, Filipinas, 2023-08-27, DD 51.jpg',
+          lyhyt: 'Talo valmistui 1921 ja jälleenrakennettiin sotatuhon jälkeen suurelta osin muistin varassa.',
           selite: 'Talo valmistui vuonna 1921 ja vihittiin lakiasäätävän '
             + 'kokouksen taloksi 16. heinäkuuta 1926. Vuoden 1945 '
             + 'taisteluissa siitä jäi pystyyn vain keskiosa, ja '
@@ -33108,6 +33307,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bastion de San Diego - Intramuros, Manila.jpg',
+          lyhyt: 'Bastionin seinät rakennettiin 1591–1594, kaivauksissa paljastui kolme sisäkkäistä kivikehää.',
           selite: 'Bastionin väliseinät rakennettiin vuosina 1591–1594, ja '
             + 'sen pataässän muoto syntyi juureen lisätyistä puoliympyrän '
             + 'muotoisista orilloneista. Kaivauksissa 1979–1982 paljastui '
@@ -33147,6 +33347,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Manila, Rizal Park skyline, Philippines.jpg',
+          lyhyt: 'Puistoalueella oli 1601 perustettu kylä, ja se kantaa nyt José Rizalin nimeä.',
           selite: 'Alueella oli vuonna 1601 perustettu Bagumbayanin kylä, '
             + 'ja sen purkamisen jälkeen tyhjennetylle suomaalle valmistui '
             + '1820 kävelyalue Paseo de Luneta. Puisto on nyt 58 hehtaaria '
@@ -33216,6 +33417,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kashgar-Mausolée d\'Abakh Khoja 1996 revêtement céramique 3.jpg',
+          lyhyt: 'Afaq Khojan mausoleumissa on 17 metrin kupoli ja neljä nurkkaminareettia.',
           selite: 'Mausoleumin keskellä on seitsemäntoista metriä leveä '
             + 'kupoli ja ympärillä neljä nurkkaminareettia, ja '
             + 'sisäänkäynnissä on kaakeloitu iwan-syvennys samaan tapaan '
@@ -33259,6 +33461,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Britannian pääkonsulin George Macartneyn talo 1906 (VKK269-156).tif',
+          lyhyt: 'Talo oli Britannian Kašgarin-konsulin George Macartneyn koti lähes kolme vuosikymmentä.',
           selite: 'Talo oli Britannian Kašgarin-pääkonsulin George '
             + 'Macartneyn ja hänen vaimonsa Catherine Macartneyn koti '
             + 'kahdenkymmenenkahdeksan vuoden ajan; vuoden 1906 valokuvan '
@@ -33294,6 +33497,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sunday market Kashgar IGP4049.jpg',
+          lyhyt: 'Basaarikortteli on Kašgarin kaupan ydin, jossa Silkkitien kaksi haaraa kohtasivat.',
           selite: 'Basaarikortteli on Kašgarin kaupan ydin: Silkkitien '
             + 'pohjoinen ja eteläinen haara kohtasivat tällä keitaalla, ja '
             + 'tavara vaihtoi omistajaa juuri tässä. Uiguurinkielinen nimi '
@@ -33336,6 +33540,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kashgar Id Kah Moschee.jpg',
+          lyhyt: 'Nykyinen kultatiilinen portti korvasi vanhemman 1798 ja laajennettiin 1838.',
           selite: 'Portin oviaukko on 4,7 metriä korkea ja sen päällä oleva '
             + 'torni noin seitsemäntoista metriä; molemmin puolin nousee '
             + 'epäsymmetrisesti asetettu kahdeksantoistametrinen '
@@ -33372,6 +33577,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '20250525喀什高台民居.jpg',
+          lyhyt: 'Vanhakaupunki on savitiilinen talorykelmä loessikukkulalla Silkkitien varrella.',
           selite: 'Vanhakaupunki on savitiilinen talorykelmä loessikukkulan '
             + 'päällä, ja juuri sen ohi Silkkitien karavaanit kulkivat. '
             + 'Kujat mutkittelevat rinteen mukaan ilman ruutukaavaa, ovet '
@@ -33429,6 +33635,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mausoleum of Yusuf Khass Hajib main building.jpg',
+          lyhyt: 'Emiiri Yakub Beg pystytti mausoleumin 1865 runoilijalle, joka kirjoitti Kutadgu Biligin.',
           selite: 'Emiiri Yakub Beg pystytti mausoleumin vuonna 1865 '
             + 'runoilijalle, joka kuoli 1077 ja kirjoitti Kutadgu Biligin, '
             + 'ensimmäisen islamilaisten turkkilaisten kielellä kirjoitetun '
@@ -33480,6 +33687,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ramoche temple.jpg',
+          lyhyt: 'Tulipalossa tuhoutuneen temppelin tilalle nousi 1474 Gyuto-koulukunnan kokoushalli.',
           selite: 'Alkuperäisen, tulipalossa tuhoutuneen temppelin tilalle '
             + 'nousi vuonna 1474 kolmikerroksinen talo, josta tuli pian '
             + 'Gyuto-koulukunnan eli Lhasan ylemmän tantrisen korkeakoulun '
@@ -33521,6 +33729,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Potala Palace view Chakpori Hill.jpg',
+          lyhyt: 'Palatsi on rakennettu dzong-tyyliin: punainen keskusosa pyhäköille, valkoinen siipi asuintiloille.',
           selite: 'Palatsi on rakennettu dzong-tyyliin eli tiibetiläisen '
             + 'linnoituksen tapaan: seinät kaartuvat sisäänpäin ylöspäin '
             + 'mentäessä ja katot ovat tasaisia ja eri korkeuksilla. '
@@ -33561,6 +33770,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Lhasa - Norbulingka - letní palác dalajlámů - panoramio.jpg',
+          lyhyt: 'Puisto sai alkunsa Seitsemänneltä dalai-lamalta ja on Tiibetin suurin ihmisen tekemä puutarha.',
           selite: 'Ensimmäisen palatsin rakennutti Seitsemäs dalai-lama, ja '
             + 'Kahdeksas lisäsi kolme temppeliä, eteläisen ja itäisen '
             + 'muurin ja suuren joukon puita; sen jälkeen paikka oli '
@@ -33605,6 +33815,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Cho-Khang The Grand Temple of Buddha at Lhasa 1902.jpg',
+          lyhyt: 'Temppeli pystytettiin 600-luvun puolivälissä ja laajennettiin 1610.',
           selite: 'Vuoden 1902 kirjaan piirretyn lintuperspektiivin aikaan '
             + 'temppeli oli jo runsaat 1 250 vuotta vanha: se pystytettiin '
             + '600-luvun puolivälissä ja laajennettiin vuonna 1610. '
@@ -33614,6 +33825,7 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Jokhang temple monk\'s rooftop house.jpg',
+          lyhyt: 'Temppelin kokoelmassa on yli kolmetuhatta patsasta ja 600–700-luvun kattopalkkeja.',
           selite: 'Temppelin kokoelmiin kuuluu yli kolmetuhatta patsasta '
             + 'sekä käsikirjoituksia, ja päähallissa on puolitoista metriä '
             + 'korkea kullattu pronssipatsas Buddhasta '
@@ -33654,6 +33866,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Lhasa-von Yakhotel-04-Schneeberge-2014-gje.jpg',
+          lyhyt: 'Chagpori-kukkulalla oli Tiibetin tunnetuin lääketieteellinen koulu, rakennettu 1696.',
           selite: 'Chagpori tarkoittaa rautavuorta, ja se on yksi '
             + 'Keski-Tiibetin neljästä pyhästä vuoresta sekä kahden muun '
             + 'lhasalaisen kukkulan kanssa yksi Tiibetin kolmesta '
@@ -33694,6 +33907,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tibet Museum Lhasa Tibet China 西藏 拉萨 西藏博物館 - panoramio.jpg',
+          lyhyt: 'Museo avattiin 1999 alueen ensimmäisenä suurena nykyaikaisena museona.',
           selite: 'Museo avattiin 5. lokakuuta 1999 alueen ensimmäisenä '
             + 'suurena nykyaikaisena museona, ja sen harmaa tiilijulkisivu, '
             + 'tummanruskeat ja valkoiset räystäät sekä kullattu katto '
@@ -33732,6 +33946,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mosques in Lhasa3.jpg',
+          lyhyt: 'Moskeija rakennettiin 1716 ja laajennettiin 1793 Lhasaan asettuneiden kashmirilaisten toimesta.',
           selite: 'Moskeija rakennettiin vuonna 1716 ja laajennettiin 1793, '
             + 'ja sen rakensivat pääosin Lhasaan asettuneet kashmirilaiset '
             + 'kauppiaat. Rakennustapa on tiibetiläinen, ja siihen on '
@@ -33806,6 +34021,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Howrah Bridge, Foggy.jpg',
+          lyhyt: 'Sillassa ei ole mutteria eikä pulttia, vaan koko rakenne on niitattu 26 500 tonnista terästä.',
           selite: 'Sillassa ei ole yhtään mutteria eikä pulttia — koko '
             + 'rakenne on niitattu — ja terästä kului 26 500 tonnia, josta '
             + '23 000 tonnia oli Tata Steelin kehittämää '
@@ -33851,6 +34067,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Howrah Railway Station 01.jpg',
+          lyhyt: 'Punatiilinen asemarakennus avattiin 1905 ja valmistui kokonaan 1911.',
           selite: 'Brittiarkkitehti Halsey Ricardon suunnittelema '
             + 'punatiilinen asemarakennus avattiin yleisölle 1. joulukuuta '
             + '1905 ja valmistui kokonaan 1911. Pääteasema tuli joen '
@@ -33895,6 +34112,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Marble Palace- Kolkata- West Bengal- DSC 0006.jpg',
+          lyhyt: 'Talon rakennutti 1835 kauppias Raja Rajendra Mullick, ja se on yhä suvun kotina.',
           selite: 'Talon rakennutti vuonna 1835 varakas bengalilainen '
             + 'kauppias ja taiteen keräilijä Raja Rajendra Mullick, ja se '
             + 'on säilynyt suvun kotina tähän päivään asti. Tyyli on '
@@ -33936,6 +34154,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Nakhoda Masjid - Front.jpg',
+          lyhyt: 'Moskeija jäljittelee Akbarin mausoleumia, ja sen rukoussaliin mahtuu kymmenentuhatta ihmistä.',
           selite: 'Rakennus jäljittelee mogulikeisari Akbarin mausoleumia '
             + 'Sikandrassa, ja sen portti on kopio Fatehpur Sikrin Buland '
             + 'Darwazasta. Minareetit ovat neljäkymmentäkuusi metriä '
@@ -33977,6 +34196,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'College Street - Kolkata 7391.JPG',
+          lyhyt: 'Boi Para on Intian ja koko Aasian suurin kirjamarkkina, maailman suurin käytettyjen kirjojen tori.',
           selite: 'Katua sanotaan Boi Paraksi eli kirjakortteliksi: se on '
             + 'Intian ja koko Aasian suurin kirjamarkkina sekä maailman '
             + 'suurin käytettyjen kirjojen tori. Nimi tulee '
@@ -34021,6 +34241,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Facade of Writers Building - Central Kolkata.jpg',
+          lyhyt: 'Kirjureiden talo rakennettiin 1777–1780, Kalkutan ensimmäinen kolmikerroksinen rakennus.',
           selite: 'Kauppakomppanian nuorimpia virkamiehiä sanottiin '
             + 'kirjureiksi, ja heille rakennettiin vuosina 1777–1780 oma '
             + 'talo, joka oli Kalkutan ensimmäinen kolmikerroksinen '
@@ -34067,6 +34288,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'St Johns Church - Kolkata 2015-05-09 6615.JPG',
+          lyhyt: 'Kirkko valmistui 1787 julkisella arpajaisella kustannettuna, kansanomaisesti kivikirkko.',
           selite: 'Kirkko valmistui vuonna 1787, ja sen rakentaminen '
             + 'kustannettiin julkisella arpajaisella, joka tuotti '
             + 'kolmekymmentätuhatta rupiaa. Kansanomainen nimi on Pathure '
@@ -34104,6 +34326,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Shahid Minar Full view.jpg',
+          lyhyt: '48 metrin torni pystytettiin 1828 David Ochterlonyn muistoksi, omistettiin 1969 marttyyreille.',
           selite: 'Neljänkymmenenkahdeksan metrin torni pystytettiin vuonna '
             + '1828 kauppakomppanian kenraalimajuri David Ochterlonyn '
             + 'muistoksi, ja elokuussa 1969 se omistettiin uudelleen '
@@ -34148,6 +34371,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '003 The Only Surviving Torana.jpg',
+          lyhyt: 'Museon tunnetuin esine on Bharhutin stupan kivinen kaidejärjestelmä porttiholveineen.',
           selite: 'Museon tunnetuin esine on Bharhutin buddhalaisen stupan '
             + 'kivinen kaidejärjestelmä porttiholveineen; se tuotiin tänne '
             + 'kokonaisena, ja itse stupan kumpu jäi paikalleen Madhya '
@@ -34190,6 +34414,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Victoria Memorial, Iconic view of Victoria Memorial on the lake, Kolkata, India.jpg',
+          lyhyt: 'William Emersonin marmorirakennus 1906–1921 kaikuu Taj Mahalia indosaraseenisella tyylillään.',
           selite: 'William Emersonin suunnittelema rakennus tehtiin vuosina '
             + '1906–1921 valkoisesta Makrana-marmorista, ja sen '
             + 'indosaraseeninen muoto kupoleineen, kattopaviljonkeineen ja '
@@ -34277,6 +34502,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tomb of Timur Shah.jpg',
+          lyhyt: 'Timur Shah Durranin hauta rakennettiin 1793 pääkaupungin siirron jälkeen Kabul-joen rannalle.',
           selite: 'Timur Shah Durrani siirsi vuonna 1776 valtakunnan '
             + 'pääkaupungin Kandaharista Kabuliin, ja kun hän kuoli 1793, '
             + 'hänen poikansa Zaman Shah rakennutti haudan Kabul-joen '
@@ -34311,6 +34537,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Shah do shamsheera.jpg',
+          lyhyt: 'Moskeija rakennettiin 1919–1929 Istanbulin Ortaköyn moskeijan esikuvan mukaan.',
           selite: 'Moskeija rakennettiin vuosina 1919–1929 Amanullah Khanin '
             + 'hallituskaudella, ja esikuva haettiin kaukaa, Istanbulin '
             + 'Ortaköyn moskeijasta. Italialainen koristestukko antaa '
@@ -34344,6 +34571,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ka Farushi Kabul.jpg',
+          lyhyt: 'Ka Faroshi on vanhankaupungin basaarikuja, jossa myydään laululintuja käsinpunotuissa häkeissä.',
           selite: 'Ka Faroshi on vanhankaupungin basaarikuja '
             + 'moskeijakorttelin kupeessa, ja siellä myydään laululintuja '
             + 'ja peltopyitä. Linnut säilytetään käsin punotuissa '
@@ -34385,6 +34613,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bala Hisar.jpg',
+          lyhyt: 'Bala Hissar tarkoittaa korkeaa linnaa, ja Babur valtasi sen vuonna 1504.',
           selite: 'Bala Hissar tarkoittaa korkeaa linnaa, ja paikan käyttö '
             + 'linnoituksena on ajoitettu ainakin 400-luvulle. Babur '
             + 'valtasi sen vuonna 1504 ja mogulit tekivät siitä palatsin, '
@@ -34423,6 +34652,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kabul Baghe Babur mosque.jpg',
+          lyhyt: 'Valkoinen marmorimoskeija seisoo Baburin haudan terassilla, jonka puutarhan hän otti 1504.',
           selite: 'Terassilla Baburin haudan alapuolella seisoo pieni '
             + 'valkoinen marmorimoskeija, jonka rakennuttajaksi lähteet '
             + 'nimeävät joko Shah Jahanin vuoden 1638 vierailun tai '
@@ -34458,6 +34688,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Old City Wall – Sher Darwaza, Kabul, Afghanistan.JPG',
+          lyhyt: 'Muuri seuraa Sher Darwazan harjannetta; viimeinen seitsemästä portista purettiin 1930.',
           selite: 'Muuri alkaa Bala Hissarin linnoituksesta ja seuraa Sher '
             + 'Darwazan harjannetta laajana kaarena alas joelle; korkeutta '
             + 'sillä on kuusi metriä ja paksuutta lähes neljä. Portteja oli '
@@ -34492,6 +34723,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hendaki Palace, the Emir\'s residence, Kabul Wellcome L0025004.jpg',
+          lyhyt: 'Puiston perusti Zaman Shah Durrani 1796, nykyisen palatsin emiiri Abdur Rahman Khan.',
           selite: 'Puiston perusti Zaman Shah Durrani vuonna 1796, mutta '
             + 'nykyisen palatsin ja sen paviljongin rakennutti samalle '
             + 'paikalle emiiri Abdur Rahman Khan 1800-luvun lopulla; '
@@ -34532,6 +34764,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Darulaman palace.jpg',
+          lyhyt: 'Palatsi valmistui 1927 osaksi Amanullah Khanin uutta kaupunginosaa, 150 huonetta.',
           selite: 'Palatsi valmistui vuonna 1927 osaksi Amanullah Khanin '
             + 'kokonaan uutta Darulamanin kaupunginosaa, ja työhön '
             + 'kutsuttiin kaksikymmentäkaksi arkkitehtia Saksasta ja '
@@ -34604,6 +34837,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '04High Court Madras.jpg',
+          lyhyt: 'Oikeuskortteli vihittiin 1892 indo-saraseeniseen tyyliin, yksi maailman suurimmista oikeustaloista.',
           selite: 'Oikeuskortteli vihittiin käyttöön 12. heinäkuuta 1892 '
             + 'indo-saraseeniseen tyyliin J. W. Brassingtonin '
             + 'piirustusten mukaan, ja työtä jatkoi Henry Irwin. '
@@ -34647,6 +34881,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chennai Dr MGR Central railway station.jpg',
+          lyhyt: 'Aseman kellotorni valmistui 1900 ja on rakennuksen korkein osa.',
           selite: 'Robert Fellowes Chisholm lisäsi asemaan kellotornin, '
             + 'joka valmistui 1900 ja on rakennuksen korkein osa. '
             + 'Julkisivu maalattiin 2005 vaaleanruskeaksi, mutta '
@@ -34686,6 +34921,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ripon Building aerial view.jpg',
+          lyhyt: 'Kaupunginhallinnon talo valmistui 1913 uusklassisena, tornin kello soitetaan käsivedolla.',
           selite: 'Kaupunginhallinnon talo valmistui 1913 täysin '
             + 'valkoisena uusklassisena rakennuksena, jossa on '
             + 'pituutta 85 metriä ja leveyttä 32. Keskeltä nousee 43 '
@@ -34731,6 +34967,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fort St. George George Town Chennai India - panoramio (1).jpg',
+          lyhyt: 'Linnoitus valmistui 1644 ensimmäisenä englantilaisena linnoituksena Intiassa.',
           selite: 'Linnoitus valmistui 23. huhtikuuta 1644 ja oli '
             + 'ensimmäinen englantilainen linnoitus Intiassa. Sen '
             + 'pihalla seisova lipputanko on tiikkiä ja '
@@ -34769,6 +35006,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '02Madras Egmore Station.jpg',
+          lyhyt: 'Asema avattiin 1908 indo-saraseeniseen tyyliin, sähkö omista dieselgeneraattoreista.',
           selite: 'Asema avattiin yleisölle 11. kesäkuuta 1908 Henry '
             + 'Irwinin ja E. C. Birdin piirustusten mukaan, ja sen '
             + 'rakensi T. Samynada Pillai. Kolmesataa jalkaa pitkä '
@@ -34813,6 +35051,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'EGMORE GOVERNMENT MUSEUM.jpg',
+          lyhyt: 'Museo siirtyi 1854 Egmoreen, kokoelmassa 1,7 miljoonaa esinettä, muun muassa roomalaisia rahoja.',
           selite: 'Museo siirtyi 1854 Pantheonin alueelle Egmoreen, ja '
             + 'rakennuksia laajennettiin 1864–1890. Kokoelmassa on 1,7 '
             + 'miljoonaa esinettä, muun muassa yksi Euroopan '
@@ -34852,6 +35091,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chepauk Palace, the heritage building and former official residence of the Nawab of Arcot in Chennai 06.jpg',
+          lyhyt: 'Palatsi oli Arcotin nawabin virka-asunto 1768–1855, varhaisinta indo-saraseenista tyyliä.',
           selite: 'Palatsi oli Arcotin nawabin virka-asunto 1768–1855, ja '
             + 'sitä pidetään indo-saraseenisen tyylin varhaisimpina '
             + 'esimerkkeinä Intiassa. Toisen siiven rakensi '
@@ -34895,6 +35135,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chennai, Beach.jpg',
+          lyhyt: 'Marinan hiekkaranta on 13 kilometriä pitkä, uiminen laissa kielletty alivirran takia.',
           selite: 'Marinan hiekkaranta on kolmetoista kilometriä pitkä ja '
             + 'keskimäärin kolmesataa metriä leveä. Uiminen on siellä '
             + 'laissa kielletty voimakkaan alivirran takia, ja '
@@ -34939,6 +35180,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'KAPALEESHWARAR TEMPLE MYLAPORE CHENNAI INDIA +91.jpg',
+          lyhyt: 'Shivalle omistettu temppeli on arvion mukaan 600-luvulta, gopuram kohoaa 40 metriin.',
           selite: 'Shivalle omistetun temppelin arvellaan olevan '
             + '600-luvulta, sillä sen jumalaa ylistetään saman '
             + 'vuosisadan Tevaram-kokoelmassa. Itäinen gopuram kohoaa '
@@ -34979,6 +35221,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Santhome Basilica.jpg',
+          lyhyt: 'Nykyinen uusgoottilainen kirkko vihittiin 1896 apostoli Tuomaan haudan uskotun paikan päälle.',
           selite: 'Nykyinen uusgoottilainen kirkko vihittiin 1. huhtikuuta '
             + '1896 kapteeni J. A. Powerin piirustusten mukaan. Sen '
             + 'kahdesta tornista päätorni on '
@@ -35052,6 +35295,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Frieze on the exterior of Crawford Market, Mumbai.jpg',
+          lyhyt: 'Sisäänkäynnin veistospaneeleista kaksi teki John Lockwood Kipling, kirjailija Rudyardin isä.',
           selite: 'Sisäänkäynnin ovien yläpuolelle veistettiin arjen työtä '
             + 'esittävät paneelit, joista kaksi teki John Lockwood '
             + 'Kipling, kirjailija Rudyard Kiplingin isä. Kolmas jäi '
@@ -35086,6 +35330,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'View of Chowpatty Beach from Kamala Nehru Park 01.jpg',
+          lyhyt: 'Rantabulevardi rakennettiin 1940, ja sitä kutsutaan Kuningattaren kaulanauhaksi.',
           selite: 'Rantabulevardi rakennettiin 1940 Back Bayn kaareen, ja '
             + 'sen pohjoispäässä on Girgaon Chowpattyn hiekkaranta. '
             + 'Kadun toinen nimi Kuningattaren kaulanauha tulee siitä, '
@@ -35129,6 +35374,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Partial wide angle exterior view of Chhatrapati Shivaji Maharaj Terminus.jpg',
+          lyhyt: 'Asema rakennettiin 1878–1888 goottilaiseen uusrenessanssiin Frederick Stevensin piirustuksin.',
           selite: 'Asema rakennettiin 1878–1888 Frederick William '
             + 'Stevensin piirustusten mukaan goottilaiseen '
             + 'uusrenessanssiin. Veistokset, puuleikkaukset ja kaiteet '
@@ -35169,6 +35415,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'St. Thomas Cathedral, Mumbai (40188).jpg',
+          lyhyt: 'Kirkko avattiin jouluna 1718, torni ja kello lisättiin 1838.',
           selite: 'Kirkko avattiin jumalanpalvelukseen jouluna 1718, ja '
             + 'torni ja kello lisättiin siihen 1838. Pihalla seisova '
             + 'juomavesilähde on parsikauppias Cowasji Jehangir '
@@ -35211,6 +35458,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Asiatic Society of Mumbai.jpg',
+          lyhyt: 'Uusklassinen talo valmistui 1833, ja siinä toimii 1804 perustettu Aasian seura.',
           selite: 'Uusklassisen talon suunnitteli eversti Thomas Cowper '
             + 'Bombayn insinöörijoukoista, ja se valmistui 1833 '
             + 'Englannista tuoduista kivistä. Sisäänkäynnille nousee '
@@ -35248,6 +35496,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bombay High Court - Maidan - Mumbai - Maharashtra - India (25805018874).jpg',
+          lyhyt: 'Talo rakennettiin 1871–1878 goottilaiseen uusrenessanssiin, pituutta 562 jalkaa.',
           selite: 'Talo rakennettiin 1871–1878 eversti James A. Fullerin '
             + 'piirustusten mukaan goottilaiseen uusrenessanssiin, ja '
             + 'sen harjalla seisovat Oikeutta ja Armoa esittävät '
@@ -35287,6 +35536,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Rajabai Clock Tower in Mumbai University 01.jpg',
+          lyhyt: 'Torni valmistui 1878 Big Benin esikuvan mukaan, nimetty rahoittajan sokean äidin mukaan.',
           selite: 'Torni valmistui marraskuussa 1878 Sir George Gilbert '
             + 'Scottin piirustusten mukaan, ja esikuvana oli Lontoon '
             + 'Big Ben. Sen maksoi pörssimeklari Premchand Roychand '
@@ -35330,6 +35580,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'David Sassoon Library IMG 20230915 084305 (2) 01.jpg',
+          lyhyt: 'Kirjasto rakennettiin 1867–1870 venetsialaiseen uusgotiikkaan David Sassoonin rahoituksella.',
           selite: 'Kirjasto rakennettiin 1867–1870 keltaisesta Maladin '
             + 'kivestä venetsialaiseen uusgotiikkaan, ja David Sassoon '
             + 'maksoi 125 000 rupian hinnasta 60 000. Talo '
@@ -35372,6 +35623,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Prince of Wales Museum, Mumbai 01.jpg',
+          lyhyt: 'Museon suunnitteli George Wittet indosaraseeniseen tyyliin, avattiin yleisölle 1922.',
           selite: 'Museon suunnitteli George Wittet indosaraseeniseen '
             + 'tyyliin, ja sen valkosinisin laatoin katetun kupolin '
             + 'esikuva on Golcondan linnassa. Talo valmistui 1915, '
@@ -35412,6 +35664,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Gateway ofIndia sea view.jpg',
+          lyhyt: 'Kaaren takaa laskeutuvat portaat merelle, josta lautat lähtevät Elephantan luolasaarelle.',
           selite: 'Kaaren takaa laskeutuu portaat merelle, ja laiturilta '
             + 'lähtevät lautat Elephantan luolasaarelle. Portti '
             + 'kääntyy satamaan päin, ja se on yhä ensimmäisiä '
@@ -35452,6 +35705,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Breakwater Colombo-Ceylon, KITLV 1401648.tiff',
+          lyhyt: 'Colombon avoin redi muutettiin suojaisaksi satamaksi vuonna 1912.',
           selite: 'Colombon satama oli pitkään avoin redi, jota vasta '
             + 'aallonmurtajat suojasivat, ja suojaisaksi satamaksi '
             + 'se muutettiin 1912.',
@@ -35498,6 +35752,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Wolvendaalse Kerk, voorgevel - 20652234 - RCE.jpg',
+          lyhyt: 'Wolvendaalin kirkko vihittiin 1757 ja on ainoa yhtäjaksoisesti käytössä ollut hollantilaiskirkko.',
           selite: 'Wolvendaalin kirkko vihittiin 6. maaliskuuta 1757, '
             + 'ja se on ainoa saaren hollantilaisista kirkoista, '
             + 'joka on ollut yhtäjaksoisesti käytössä.',
@@ -35536,6 +35791,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Redmosque.jpg',
+          lyhyt: 'Moskeijaan mahtui 1909 puolitoista tuhatta rukoilijaa, laajennuksen jälkeen kymmenentuhatta.',
           selite: 'Moskeijaan mahtui valmistuessaan 1909 puolitoista '
             + 'tuhatta rukoilijaa ja vuoden 1975 laajennuksen '
             + 'jälkeen kymmenentuhatta.',
@@ -35584,6 +35840,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Old Fort Lighthouse Clock Tower Colombo Ceylon.jpg',
+          lyhyt: '29 metrin torni oli valmistuessaan 1857 Colombon korkein rakennus.',
           selite: 'Kaksikymmentäyhdeksän metriä korkea torni oli '
             + 'valmistuessaan 1857 Colombon korkein rakennus, ja '
             + 'sen koneiston teki lontoolainen Dent.',
@@ -35619,6 +35876,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Colombo Fort Railway station - panoramio.jpg',
+          lyhyt: 'Asemalla on yksitoista raidetta, joilta lähtee sekä pohjoisrata että rannikkorata.',
           selite: 'Asemalla on yksitoista raidetta, ja sieltä lähtevät '
             + 'sekä päärata Kandyyn ja pohjoiseen että rannikkorata '
             + 'Gallen ja Mataran suuntaan.',
@@ -35662,6 +35920,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'South Beira Lake Colombo (Childrens Park).jpg',
+          lyhyt: 'Beira-järvi oli alun perin puolitoista neliökilometriä, maantäytöt ovat kutistaneet sen.',
           selite: 'Beira-järvi oli alun perin runsas puolitoista '
             + 'neliökilometriä, mutta maantäytöt ovat kutistaneet '
             + 'sen noin kuudeksikymmeneksiviideksi hehtaariksi.',
@@ -35704,6 +35963,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'LK-colombo-galleface-hotel.jpg',
+          lyhyt: 'Galle Face Hotel on ainoa Colombon hotelli, jolla on oma rantaviiva.',
           selite: 'Galle Face Hotel on ainoa Colombon hotelli, jolla on '
             + 'oma rantaviivansa, ja se on perintöä ajalta ennen '
             + 'kuin rannikko rakennettiin täyteen.',
@@ -35743,6 +36003,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Gangaramaya Temple (outdoor pagoda).jpg',
+          lyhyt: 'Gangaramayan temppeli sekoittaa srilankalaista, thaimaalaista, intialaista ja kiinalaista tyyliä.',
           selite: 'Gangaramayan temppelin arkkitehtuuri sekoittaa '
             + 'srilankalaista, thaimaalaista, intialaista ja '
             + 'kiinalaista perinnettä.',
@@ -35786,6 +36047,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Colombo National Museum Sri Lanka.JPG',
+          lyhyt: 'Museo avattiin 1877, ja rakentaja pyysi palkkiokseen vain perjantaisulun.',
           selite: 'Museo avattiin 1877, ja sen rakentaja Arasi Marikar '
             + 'Wapchie Marikar pyysi palkkioksi vain sen, että talo '
             + 'pidettäisiin perjantaisin suljettuna.',
@@ -35984,6 +36246,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Wazir Mansion, Kharadar 10.jpg',
+          lyhyt: 'Talo muurattiin kalkki- ja juuttilaastilla 1860-luvulla meri-ilmastoon sopivaksi.',
           selite: 'Talo muurattiin kalkki- ja juuttilaastilla 1860-luvulla, '
             + 'ja laastin resepti valittiin meri-ilmaston takia.',
           lahde: 'Ghazala Shah, Wikimedia Commons (CC BY-SA 4.0)',
@@ -36162,6 +36425,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Mohatta Palace.JPG',
+          lyhyt: 'Palatsin yhdeksän kupolia on tehty Jodhpurin ja Gizrin kivistä.',
           selite: 'Palatsin yhdeksän kupolia ja kulmatornit on tehty '
             + 'Jodhpurin vaaleanpunaisesta ja Gizrin keltaisesta kivestä.',
           lahde: 'Iqra Khalid Zakaria, Wikimedia Commons (CC BY-SA 3.0)',
@@ -36276,6 +36540,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Metropolitan Museum of Art (The Met) - Central Park, NYC.jpg',
+          lyhyt: 'Viidennen Avenuen julkisivun suunnitteli Richard Morris Hunt vanhan 1880 rakennuksen eteen.',
           selite: 'Viidennen Avenuen julkisivun suunnitteli Richard Morris '
             + 'Hunt, ja museon ensimmäinen rakennus vuodelta 1880 jää '
             + 'kokonaan sen taakse.',
@@ -36360,6 +36625,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Times Square, New York 2019 18.jpg',
+          lyhyt: 'Uudenvuoden pallo on laskettu aukion torniin vuodesta 1907.',
           selite: 'Uudenvuoden pallo on laskettu aukion torniin vuodesta '
             + '1907, jolloin se korvasi kielletyn ilotulituksen.',
           lahde: 'dconvertini, Wikimedia Commons (CC BY-SA 2.0)',
@@ -36400,6 +36666,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Lion and facade - N.Y. Public Library - Schwarzman Bldg. - exterior.jpg',
+          lyhyt: 'Kirjaston leijonapatsaat saivat nimensä Patience ja Fortitude 1930-luvulla.',
           selite: 'Leijonat veistettiin Edward Clark Potterin mallin '
             + 'mukaan, ja pormestari Fiorello La Guardia antoi niille '
             + '1930-luvulla nimet Patience ja Fortitude.',
@@ -36446,6 +36713,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Empire State Building NYC-20090519-RM-084516.jpg',
+          lyhyt: 'Talon huipun masto suunniteltiin alun perin ilmalaivojen kiinnityspaikaksi.',
           selite: 'Talon runko nousi 410 päivässä, ja huipun masto '
             + 'suunniteltiin alun perin ilmalaivojen kiinnityspaikaksi.',
           lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
@@ -36488,6 +36756,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2003-03-Flatiron-Building-New-York-City.jpg',
+          lyhyt: 'Flatiron-talo valmistui 1902 ja sai lempinimensä silitysraudan muotoisesta tontista.',
           selite: 'Talo valmistui 1902 rakennusyhtiö Fullerin '
             + 'pääkonttoriksi, ja se sai lempinimensä silitysraudan '
             + 'muotoisesta tontistaan.',
@@ -36533,6 +36802,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'NYC - Washington Square Park - Arch.jpg',
+          lyhyt: 'Kaari muistuttaa Washingtonin virkaanastujaisia ja korvasi 1889 väliaikaisen kaaren.',
           selite: 'Kaari muistuttaa Washingtonin vuoden 1789 '
             + 'virkaanastujaisista ja korvasi 1889 pystytetyn '
             + 'väliaikaisen puu- ja kipsikaaren.',
@@ -36810,6 +37080,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The fountain at Albert Park.jpg',
+          lyhyt: 'Puiston asemakaava on säilynyt lähes ennallaan 1882, keskellä 1881 tuotu suihkulähde.',
           selite: 'Puiston asemakaava on ollut lähes sama vuodesta 1882, ja '
             + 'sen keskipiste on 1881 tuotu valurautasuihkulähde.',
           lahde: 'RadishSlice, Wikimedia Commons (CC BY-SA 4.0)',
@@ -36853,6 +37124,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Auckland Town Hall from Sky Tower.jpg',
+          lyhyt: 'Talo oli 1911 ensimmäinen paikka, jossa hallinto ja konsertit olivat saman katon alla.',
           selite: 'Talo oli valmistuessaan 1911 kaupungin ensimmäinen '
             + 'pysyvä paikka, jossa hallinto ja konsertit olivat saman '
             + 'katon alla.',
@@ -36988,6 +37260,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ewelme Cottage 20240117 120605 01.jpg',
+          lyhyt: 'Talo rakennettiin 1863–1864 kirkkoherran pojille oppikoulun lähelle.',
           selite: 'Talo rakennettiin 1863–1864 kirkkoherra Vicesimus Lushin '
             + 'pojille, jotta he pääsivät Parnellin oppikouluun.',
           lahde: 'Prosperosity, Wikimedia Commons (CC BY 4.0)',
@@ -37073,6 +37346,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Eden Park aerial from N.jpg',
+          lyhyt: 'Kansallisstadionin paikalla oli suo ja maatila, ennen kuin urheilukenttä syntyi 1900.',
           selite: 'Kansallisstadionin paikalla oli 1800-luvulla suo ja sen '
             + 'jälkeen maatila, ja urheilukenttä siitä tuli vasta 1900.',
           lahde: 'Bjankuloski06, Wikimedia Commons (CC BY 4.0)',
@@ -37125,6 +37399,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Maungawhau in 2009.jpg',
+          lyhyt: 'Vuoren rinteillä näkyy yhä pā-ajan pengerryksiä, huippu on kannaksen korkein kohta.',
           selite: 'Vuoren rinteillä näkyvät yhä pā-ajan pengerrykset, ja '
             + 'huippu on kannaksen korkein luonnollinen kohta.',
           lahde: 'russellstreet, Wikimedia Commons (CC BY-SA 2.0)',
@@ -37179,6 +37454,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ghirardelli Square, San Francisco 2023-07-20.jpg',
+          lyhyt: 'Kortteli oli Ghirardellin suklaatehdas vuodesta 1893, uusiokäyttöön 1964.',
           selite: 'Kortteli oli vuodesta 1893 Ghirardellin '
             + 'suklaatehdas, ja 1964 siitä tehtiin Yhdysvaltain '
             + 'ensimmäinen suuri teollisuuskiinteistön uusiokäyttökohde.',
@@ -37238,6 +37514,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Coit Tower 1.jpg',
+          lyhyt: 'Torni nousi 1933 kukkulalle, jolla oli aiemmin laivoja ilmoittava merkkiasema.',
           selite: 'Torni nousi 1933 sen kukkulan laelle, jolla oli '
             + 'vuosina 1849–1870 laivojen tuloa ilmoittanut '
             + 'merkkiasema.',
@@ -37287,6 +37564,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ferry Building - San Francisco - California.jpg',
+          lyhyt: 'Kellotorni on 245 jalkaa korkea, kellotaulut käyvät vuoden 1898 bostonilaisella koneistolla.',
           selite: 'Kellotorni on 245 jalkaa korkea, ja sen neljä '
             + 'kellotaulua käyvät vuonna 1898 valmistuneella '
             + 'bostonilaisella koneistolla.',
@@ -37343,6 +37621,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Near Trans America Pyramid (10376581266).jpg',
+          lyhyt: 'Talo valmistui 1972 tontille, jolla oli seissyt Montgomery Block vuodesta 1853.',
           selite: 'Talo valmistui 1972 sille tontille, jolla oli '
             + 'seissyt vuodesta 1853 Montgomery Block eli Monkey '
             + 'Block.',
@@ -37394,6 +37673,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Haas-Lilienthal House exterior 2025.jpg',
+          lyhyt: 'Talo rakennettiin 1886 kauppiaalle, ja se säästyi vuoden 1906 palolta.',
           selite: 'Talo rakennettiin 1886 kauppias William Haasille, '
             + 'ja se säästyi vuoden 1906 palolta, joka pysähtyi Van '
             + 'Ness Avenuelle.',
@@ -37444,6 +37724,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: "2017 Old St. Mary's Cathedral 660 California Street.jpg",
+          lyhyt: 'Kirkko vihittiin katedraaliksi 1854, tiilet tuotiin Kap Hornin ympäri.',
           selite: 'Kirkko vihittiin katedraaliksi jouluyönä 1854, ja '
             + 'sen tiilet tuotiin Kap Hornin ympäri ja graniitti '
             + 'Kiinasta.',
@@ -37496,6 +37777,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Grace Cathedral San Francisco facade.jpg',
+          lyhyt: 'Pääovet ovat 1956 valettu jäljennös Firenzen kastekappelin Ghiberti-ovista.',
           selite: 'Pääovet ovat 1956 valettu jäljennös Firenzen '
             + 'kastekappelin Ghiberti-ovista, ja ne asennettiin '
             + 'paikoilleen kirkon vihkimiseen 1964.',
@@ -37548,6 +37830,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palace Hotel from across Market on Montgomery St.JPG',
+          lyhyt: 'Nykyinen talo avattiin 1909 Ralstonin 1875 rakentaman ja 1906 palaneen hotellin paikalle.',
           selite: 'Nykyinen talo avattiin 1909 sen hotellin paikalle, '
             + 'jonka William Ralston rakennutti 1875 ja joka paloi '
             + '1906.',
@@ -37783,6 +38066,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'CABA - Retiro - Monumento al General San Martín.jpg',
+          lyhyt: 'Ratsastajapatsas tilattiin 1862, ja aukio sai San Martínin nimen 1878.',
           selite: 'Ratsastajapatsas tilattiin 1862 ranskalaiselta '
             + 'Louis-Joseph Daumasilta, ja aukio sai San Martínin nimen '
             + '1878.',
@@ -37826,6 +38110,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Aguas Corrientes-fachada-HDR.jpg',
+          lyhyt: 'Julkisivun yli 300 000 terrakottalaattaa tilattiin Britannian Royal Doultonilta.',
           selite: 'Julkisivun terrakottalaatat tilattiin Britanniasta '
             + 'Royal Doultonin tehtaalta, ja niitä on yli 300 000.',
           lahde: 'HalloweenHJB, Wikimedia Commons (CC BY-SA 3.0)',
@@ -37913,6 +38198,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Iglesia Metropolitana (Junior, 1876).jpg',
+          lyhyt: 'Christiano Juniorin valokuva vuodelta 1876 näyttää katedraalin isoisän matkan ajalta.',
           selite: 'Christiano Juniorin valokuva on vuodelta 1876, eli '
             + 'katedraali näytti isoisän matkan aikaan käytännössä '
             + 'tältä.',
@@ -38247,6 +38533,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sydney Harbour Bridge 1 (30646448636).jpg',
+          lyhyt: 'Kaari kohoaa 134 metriä, ja silta oli valmistuessaan maailman leveimmäksi mitattu.',
           selite: 'Kaari kohoaa 134 metriä veden pinnasta, ja silta oli '
             + 'valmistuessaan maailman leveimmäksi mitattu pitkän '
             + 'jännevälin silta.',
@@ -38326,6 +38613,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: "Mrs Macquarie's Chair 2013.jpg",
+          lyhyt: 'Penkki veistettiin 1810 kuvernöörin puolisolle Elizabeth Macquarielle.',
           selite: 'Penkki veistettiin 1810 kuvernöörin puolisolle '
             + 'Elizabeth Macquarielle, ja yläpuolen kaiverrus kertoo '
             + 'hänen suunnittelemastaan tiestä.',
@@ -38419,6 +38707,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'SLNSW 479663 159 Immigration Barracks SH 541.jpg',
+          lyhyt: 'Vankikasarmista tuli 1848 siirtolaisnaisten vastaanottokoti.',
           selite: 'Vankikasarmista tuli 1848 siirtolaisnaisten '
             + 'vastaanottokoti, ja nimenä oli isoisän matkan aikaan '
             + 'Immigration Barracks.',
@@ -38463,6 +38752,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'AUS Sydney, Central Business District, Pyrmont Bridge 001.jpg',
+          lyhyt: 'Nykyinen teräksinen kääntösilta avattiin 1902 vuoden 1858 puupaalusillan tilalle.',
           selite: 'Nykyinen teräksinen kääntösilta avattiin 1902 ja '
             + 'korvasi vuoden 1858 puupaalusillan, jolla perittiin '
             + 'pennin tulli.',
@@ -38505,6 +38795,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: "AUS Sydney, Central Business District, Saint Mary's Cathedral 001.jpg",
+          lyhyt: 'Julkisivun tornihuiput rakennettiin vasta 2000 alkuperäisten piirustusten mukaan.',
           selite: 'Julkisivun tornihuiput rakennettiin vasta vuonna 2000 '
             + 'William Wardellin alkuperäisten piirustusten mukaan.',
           lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
@@ -38605,6 +38896,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Australian Museum - Joy of Museums - External.jpg',
+          lyhyt: 'Museon vanhin siipi avattiin 1857, William Streetin siipi rakennettiin 1868.',
           selite: 'Museon vanhin siipi avattiin yleisölle toukokuussa '
             + '1857, ja William Streetin puoleisen siiven rakensi 1868 '
             + 'siirtomaa-arkkitehti James Barnet.',
@@ -38653,6 +38945,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'ANZAC Memorial Hyde Park 002.jpg',
+          lyhyt: 'Kupolissa on 120 000 kullattua tähteä, yksi jokaista sotaan lähtenyttä kohti.',
           selite: 'Kupolissa on 120 000 kullattua tähteä, yksi jokaista '
             + 'sotaan lähtenyttä New South Walesin miestä ja naista '
             + 'kohti.',
@@ -38728,6 +39021,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mosteiro de São Bento do Rio de Janeiro - Fachada.jpg',
+          lyhyt: 'Kirkon rakensivat 1633–1671 orjuutetut afrikkalaiset luostarin sokerituotoilla.',
           selite: 'Kirkon rakensivat 1633–1671 orjuutetut afrikkalaiset, ja '
             + 'työ maksettiin luostarin sokeriruokotilojen tuotolla.',
           lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 3.0)',
@@ -38765,6 +39059,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Igreja de Nossa Senhora do Monte do Carmo, Rio de Janeiro, Brasil.jpg',
+          lyhyt: 'Kirkon kullattu rokokoopuuveisto tehtiin 1785 jälkeen, siellä kruunattiin molemmat keisarit.',
           selite: 'Kirkon kullattu rokokoopuuveisto tehtiin vuoden 1785 '
             + 'jälkeen, ja samassa salissa kruunattiin Brasilian '
             + 'molemmat keisarit.',
@@ -38805,6 +39100,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Estação Central do Brasil (007A5P4F03-008).jpg',
+          lyhyt: 'Ensimmäinen asemarakennus avattiin 1858 ja purettiin 1939 nykyisen tornitalon tieltä.',
           selite: 'Ensimmäinen asemarakennus, joka avattiin 1858 ja '
             + 'purettiin 1939 nykyisen tornitalon tieltä, kuvattuna '
             + '1860- tai 1870-luvulla.',
@@ -38847,6 +39143,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Real Gabinete Português Interior.jpg',
+          lyhyt: 'Lukusalin rautakattoikkuna oli ensimmäinen laatuaan Brasiliassa, hyllyillä 350 000 nidettä.',
           selite: 'Lukusalin rautarakenteinen kattoikkuna oli ensimmäinen '
             + 'laatuaan Brasiliassa, ja hyllyillä on 350 000 nidettä.',
           lahde: 'Nicolly Alves de Barros, Wikimedia Commons (CC BY-SA 4.0)',
@@ -39010,6 +39307,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Estádio Maracanã 1 by Diego Baravelli.jpg',
+          lyhyt: 'Stadionin nurmi oli 2017 kuivunut olympialaisten jälkeisen ylläpitokiistan takia.',
           selite: 'Stadionin nurmi oli helmikuussa 2017 kuivunut '
             + 'olympialaisten jälkeen, kun vastuu ylläpidosta oli '
             + 'kiistanalainen.',
@@ -39094,6 +39392,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jardim do Passeio Público (014MF002002).jpg',
+          lyhyt: 'Puisto sai lampensa ja polkunsa Auguste Glazioun uudistuksessa 1864.',
           selite: 'Puisto sai lampensa ja mutkittelevat polkunsa Auguste '
             + 'Glazioun uudistuksessa 1864, ja kuva on otettu pian sen '
             + 'jälkeen.',
@@ -39137,6 +39436,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ortelius - Maris Pacifici 1589.jpg',
+          lyhyt: 'Orteliuksen Maris Pacifici 1589 on ensimmäinen painettu kartta Tyynestämerestä.',
           selite: 'Abraham Orteliuksen Maris Pacifici vuodelta 1589 on '
             + 'ensimmäinen painettu kartta Tyynestämerestä, ja sen keskellä '
             + 'purjehtii Victoria.',
@@ -39210,6 +39510,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Baldwin Street (8321363311).jpg',
+          lyhyt: 'Baldwin Streetin talot on rakennettu vaakasuoraan, vaikka katu nousee jyrkimmillään 35 prosenttia.',
           selite: 'Baldwin Streetin talot on rakennettu vaakasuoraan, '
             + 'vaikka katu nousee niiden ohi jyrkimmillään 35 prosentin '
             + 'kaltevuudella.',
@@ -39249,6 +39550,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dunedin Botanic Garden - Dunedin, NZ - DSC04180.jpg',
+          lyhyt: 'Alapuutarhan käytävät kiertävät vanhoja puita, ylempänä alkaa yläpuutarhan metsäpolusto.',
           selite: 'Alapuutarhan käytävät kiertävät vanhoja puita, ja '
             + 'rinteessä ylempänä alkaa yläpuutarhan metsäpolusto.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
@@ -39288,6 +39590,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Otago Museum exterior wide angle.jpg',
+          lyhyt: 'David Rossin 1877 sisäänkäynti on tehty Oamarun kivestä doorilaisin pylväin.',
           selite: 'David Rossin 1877 valmistunut sisäänkäynti Great King '
             + 'Streetillä on tehty Oamarun kivestä doorilaisin pylväin.',
           lahde: 'Rosi Crane, Wikimedia Commons (CC BY-SA 4.0)',
@@ -39365,6 +39668,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Otago Boys High School.jpg',
+          lyhyt: 'Robert Lawsonin 1885 päätornirakennus on sinikiveä, breksiaa ja Oamarun kiveä.',
           selite: 'Robert Lawsonin 1885 valmistunut päätornirakennus on '
             + 'sinikiveä, Port Chalmersin breksiaa ja Oamarun kiveä.',
           lahde: 'Benchill, Wikimedia Commons (CC BY-SA 3.0)',
@@ -39406,6 +39710,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dunedin Railway Station, 2013 (01).jpg',
+          lyhyt: 'Aseman julkisivu on tummaa basalttia ja vaaleaa Oamarun kiveä, kellotorni vasemmalla.',
           selite: 'Aseman julkisivu on tummaa basalttia ja vaaleaa '
             + 'Oamarun kiveä, ja kellotorni nousee vasemmalta '
             + 'siivestä.',
@@ -39443,6 +39748,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'New Zealand Breweries Ltd (Speight\'s Building), Dunedin, New Zealand.jpg',
+          lyhyt: 'Panimon punatiilinen rakennus nousee rinteeseen, seinässä lukee yhä vanha nimi.',
           selite: 'Panimon punatiilinen rakennus nousee Rattray Streetin '
             + 'rinteeseen, ja seinässä lukee yhä New Zealand Breweries '
             + 'Ltd.',
@@ -39538,6 +39844,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sacred Heart Cathedral, Suva Fiji July 2014.jpg',
+          lyhyt: 'Katedraalin hiekkakivinen julkisivu ja kaksi tornia, päätyä koristaa Kristus-patsas.',
           selite: 'Katedraalin hiekkakivinen julkisivu ja kaksi tornia '
             + 'ovat Pratt Streetin päässä, ja päätyä koristaa '
             + 'Kristus-patsas.',
@@ -39576,6 +39883,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Government Buildings Suva MatthiasSuessen-8446.jpg',
+          lyhyt: 'Art deco -hallintorakennuksen edessä on nurmikenttä ja patsas, takana kellotorni.',
           selite: 'Art deco -tyylisen hallintorakennuksen edessä on '
             + 'nurmikenttä ja patsas, ja talon takaa kohoaa '
             + 'kellotorni.',
@@ -39610,6 +39918,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Thurston Gardens from Cakobau Rd and QE Dr.jpg',
+          lyhyt: 'Puutarhan portti avautuu palmujen ja suurten varjopuiden alle.',
           selite: 'Puutarhan portti Cakobau Roadin ja Queen Elizabeth '
             + 'Driven kulmassa avautuu palmujen ja suurten varjopuiden '
             + 'alle.',
@@ -40005,6 +40314,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'MuseoAfroantillano.JPG',
+          lyhyt: 'Museo toimii 1909–1910 rakennetussa puisessa lähetyskappelissa alkuperäisin ikkunoin.',
           selite: 'Museo toimii vuosina 1909–1910 rakennetussa '
             + 'puisessa lähetyskappelissa, jonka kärkikaari-ikkunat '
             + 'ovat yhä alkuperäiset.',
@@ -40073,6 +40383,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Instituto Nacional de Panamá "Nido de Águilas".JPG',
+          lyhyt: 'Kansallisinstituutin keltainen julkisivu valmistui 1911, portaita vartioivat sfinksit.',
           selite: 'Kansallisinstituutin keltainen julkisivu valmistui '
             + '1911, ja sen portaita vartioivat pronssiset sfinksit.',
           lahde: 'Fermín Santana, Wikimedia Commons (CC BY-SA 3.0)',
@@ -40212,6 +40523,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'IslaPerico Causeway Amador.JPG',
+          lyhyt: 'Perikon saaren entiset tukikohtarakennukset ovat nykyään ravintoloita.',
           selite: 'Perikon saaren entiset tukikohtarakennukset ovat '
             + 'nykyään ravintoloita, ja edustalla odottavat lautat.',
           lahde: 'Ayaita, Wikimedia Commons (CC BY 3.0)',
@@ -40332,6 +40644,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Paço dos Açorianos Porto Alegre - 1.jpg',
+          lyhyt: 'Julkisivun edessä on Espanjan lahjoittama suihkulähde ja marmorileijonia portaissa.',
           selite: 'Julkisivun edessä on Talavera de la Reinan suihkulähde, '
             + 'jonka Espanjan siirtokunta lahjoitti Farroupilha-kapinan '
             + 'satavuotispäiväksi; portaiden sivuilla makaa marmorileijonia.',
@@ -40451,6 +40764,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Theatro São Pedro - 30.jpg',
+          lyhyt: 'Teatterin alakerran kaariholvien takana on lämpiö, jossa taidemuseo aloitti 1955.',
           selite: 'Räystäslistan alla lukee THEATRO SÃO PEDRO; alakerran '
             + 'kaariholvien takana on lämpiö, jossa osavaltion taidemuseo '
             + 'aloitti 1955.',
@@ -40532,6 +40846,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Igreja Nossa Senhora das Dores - Porto Alegre - RS - Brasil.jpg',
+          lyhyt: 'Kirkon portaikko valmistui 1873, tornit ovat vuosilta 1900 ja 1901.',
           selite: 'Portaikko kirkon edessä valmistui 1873; sitä ennen sisään '
             + 'mentiin talon takaa. Tornit ovat vuosilta 1900 ja 1901.',
           lahde: 'Jorge Juno Goi Bengochea, Wikimedia Commons (CC BY-SA 4.0)',
@@ -40572,6 +40887,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Viaduto Otávio Rocha 2021 7.jpg',
+          lyhyt: 'Yksi neljästä sillalle nousevasta portaikosta, jalkakäytävän mosaiikki 1930-luvulta.',
           selite: 'Yksi neljästä portaikosta, jotka nousevat kadun tasolta '
             + 'sillalle; jalkakäytävän sementtimosaiikki kuuluu '
             + '1930-luvun alkuperäiseen työhön.',
@@ -40684,6 +41000,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Manzana de la Ribera 1.jpg',
+          lyhyt: 'Tiilikattoiset talot ja hallituspalatsi olivat tarkoitus purkaa puistoksi.',
           selite: 'Manzana de la Riveran tiilikattoiset talot etualalla ja '
             + 'niiden takana hallituspalatsi ja Paraguayjoki — juuri tämä '
             + 'näkymä oli tarkoitus purkaa puistoksi.',
@@ -40793,6 +41110,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Catedral Metropolitana de Asunción, Paraguay.jpg',
+          lyhyt: 'Kaksi tornia, päätykolmio ja kolme kaariholvia sisäänkäynnin edessä, oikeassa tornissa kello.',
           selite: 'Kaksi tornia, matala päätykolmio ja kolme kaariholvia '
             + 'sisäänkäynnin edessä; oikeanpuoleisessa tornissa on kello.',
           lahde: 'Chipachyryry, Wikimedia Commons (CC0)',
@@ -41034,6 +41352,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chateau Ramezay 09.jpg',
+          lyhyt: 'Kivitalo pyöreine torneineen on vastapäätä vuonna 2000 avattua kuvernöörin puutarhaa.',
           selite: 'Kivitalo ja sen pyöreä torni kaupungintaloa vastapäätä; '
             + 'muurin takana on vuonna 2000 avattu kuvernöörin puutarha.',
           lahde: 'Jeangagnon, Wikimedia Commons (CC BY-SA 3.0)',
@@ -41075,6 +41394,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Quartier chinois de Montreal 009.JPG',
+          lyhyt: 'De la Gauchetière -katu on kävelykatuna, kylteissä myös kiinalaista kirjoitusta.',
           selite: 'De la Gauchetière -katu on korttelin matkalta '
             + 'kävelykatuna; kylttien kiinalaiset kirjoitusmerkit ovat '
             + 'ranskan ja englannin rinnalla.',
@@ -41204,6 +41524,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Pointe-à-Callière Museum 2023j.jpg',
+          lyhyt: 'Kryptan muuri on jätetty löytöpaikkaansa, museo on rakennettu sen ylle paalujen varaan.',
           selite: 'Kryptassa muuri on jätetty seisomaan siihen, mistä se '
             + 'kaivettiin esiin; museo on rakennettu paalujen varaan sen '
             + 'ylle.',
@@ -41365,6 +41686,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Honiara National Museum.jpg',
+          lyhyt: 'Museon pihalla on veistettyjä puupaaluja ja seinää kiertävä eläin- ja ihmiskuvakaista.',
           selite: 'Museon pihalla seisoo veistettyjä puupaaluja, ja '
             + 'seinää kiertää kalojen, kilpikonnan ja ihmishahmojen '
             + 'kuvakaista.',
@@ -41670,6 +41992,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'National Cultural Centre, Vanuatu.jpg',
+          lyhyt: 'Sisäänkäynnin edessä on lehtikatto ja veistetty puupaalu suuren varjopuun alla.',
           selite: 'Sisäänkäynnin edessä on lehtikatto ja veistetty '
             + 'puupaalu, ja koko rakennus jää suuren varjopuun alle.',
           lahde: 'PhillipC, Wikimedia Commons (CC BY 2.0)',
@@ -41698,6 +42021,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vanuatu Parliament, Port Vila - Flickr - PhillipC.jpg',
+          lyhyt: 'Punakattoisen parlamenttitalon edessä on valkoinen sisäänkäynti ja pyöreä suihkulähde.',
           selite: 'Punakattoisen parlamenttitalon edessä on valkoinen '
             + 'kolmiokatoksinen sisäänkäynti ja pyöreä suihkulähde.',
           lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
@@ -44258,6 +44582,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Melbourne Trades Hall entrance.jpg',
+          lyhyt: 'Pylväikön päädyssä lukee Trades Hall, katolla liehuu neljä lippua.',
           selite: 'Pylväikön päädyssä lukee TRADES HALL, ja katolla liehuu '
             + 'neljä lippua — Australian, Eurekan, aboriginaalien ja '
             + 'punainen.',
@@ -44301,6 +44626,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Old Melbourne Gaol aerial 1922 (cropped).jpg',
+          lyhyt: 'Ilmakuvassa vuodelta 1922 vankila täyttää korttelin tähtikuvioisine pihoineen.',
           selite: 'Ilmakuva vuodelta 1922: vankila täyttää kokonaisen '
             + 'korttelin, ja oikealla erottuu ulkoilupihojen tähtikuvio.',
           lahde: 'Sir Raymond Garrett, Wikimedia Commons (PD)',
@@ -44372,6 +44698,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Princess Theatre, Melbourne, Australia.jpg',
+          lyhyt: 'William Pittin 1886 julkisivun päätykolmion päällä on kullattu enkelihahmo.',
           selite: 'William Pittin 1886 valmistunut julkisivu Spring Streetin '
             + 'varrella; päätykolmion päällä on kullattu enkelihahmo.',
           lahde: 'Mat Connolley, Wikimedia Commons (CC BY 2.5)',
@@ -44408,6 +44735,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Melbourne Mint corner.jpg',
+          lyhyt: 'Kulmarakennus on hillittyä uusrenessanssia, sisäänkäynnin yllä kullattu vaakuna.',
           selite: 'Williamin ja La Troben katujen kulmaus: hillittyä '
             + 'uusrenessanssia, ja sisäänkäynnin yllä loistaa kullattu '
             + 'vaakuna.',
@@ -44448,6 +44776,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Melbourne GPO@0.5x.jpg',
+          lyhyt: 'Kellotorni sai nykyisen korkeutensa 1887, kerrokset pylväsjärjestyksittäin.',
           selite: 'Kellotorni sai nykyisen korkeutensa 1887. Kerrokset '
             + 'erottuvat pylväsjärjestyksestä: toscanalainen, joonialainen '
             + 'ja korinttilainen päällekkäin.',
@@ -44489,6 +44818,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'St. Paul\'s Cathedral Tower.jpg',
+          lyhyt: 'Huiput ovat sydneyläistä hiekkakiveä ja neljäkymmentä vuotta muuta taloa nuorempia.',
           selite: 'Huiput ovat sydneyläistä hiekkakiveä ja neljäkymmentä '
             + 'vuotta muuta taloa nuorempia — siksi ne ovat selvästi '
             + 'tummemmat.',
@@ -44600,6 +44930,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'St John\'s Cathedral, Brisbane, Queensland, 2020.jpg',
+          lyhyt: 'Kupariset länsihuiput nostettiin 2008, niiden alla on 1900-luvun alun tuffikivi.',
           selite: 'Kupariset länsihuiput nostettiin paikoilleen 2008 ja ovat '
             + 'siksi tummat; niiden alla on 1900-luvun alun tuffikivi.',
           lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
@@ -44686,6 +45017,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'ANZAC Square, Brisbane in February 2020.jpg',
+          lyhyt: 'Aukiolla on buurisodan ratsastajapatsas ja reunoilla 1930-luvun yhtenäiset talot.',
           selite: 'Aukio muistokappelin portailta katsottuna: keskellä on '
             + 'buurisodan ratsastajapatsas ja reunoilla 1930-luvun '
             + 'yhtenäiset talot.',
@@ -44843,6 +45175,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Old State Library of Queensland Building, 2021.jpg',
+          lyhyt: 'William Streetin julkisivu vuosilta 1876–1879 kertoo klassisin pylväin museon arvostuksesta.',
           selite: 'William Streetin puoleinen julkisivu vuosilta 1876–1879: '
             + 'klassinen pylväikkö kertoo, kuinka tärkeänä museota '
             + 'pidettiin.',
@@ -44883,6 +45216,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Mansions, Brisbane, Jan 2020.jpg',
+          lyhyt: 'Punatiiltä ja Oamarun kalkkikiveä, molemmilla katusivuilla kahden kerroksen holvikäytävä.',
           selite: 'Punatiiltä ja Oamarun kalkkikiveä, ja molemmilla katusivuilla '
             + 'kahden kerroksen syvä holvikäytävä — varjoa ilman, että '
             + 'tuuletus katkeaa.',
@@ -44957,6 +45291,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vancouver (BC, Canada), Harbour Centre -- 2022 -- 1843.jpg',
+          lyhyt: 'Toimistotornin näköalataso ja pyörivä ravintola muistuttavat kapealla kaulalla kannatettua lautasta.',
           selite: 'Toimistotornin päällä oleva näköalataso ja pyörivä '
             + 'ravintola muodostavat lautasen, jota kannattaa kapea kaula.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
@@ -44992,6 +45327,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hotel Europe Vancouver.jpg',
+          lyhyt: 'Kolmiotontin pyöristetty kärki nousee kuudessa kerroksessa kadun kulmassa.',
           selite: 'Kolmiotontin kärki on pyöristetty, ja talon kapea pää nousee '
             + 'kuudessa kerroksessa Powell Streetin kulmassa.',
           lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
@@ -45038,6 +45374,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vancouver Art Gallery Lion.jpg',
+          lyhyt: 'Oikeustalon graniittileijonat veistettiin Nelson Islandin kivestä ja pystytettiin 1910.',
           selite: 'Toinen vanhan oikeustalon graniittileijonista; leijonat '
             + 'veistettiin Nelson Islandilta tuodusta kivestä ja asetettiin '
             + 'paikoilleen 1910.',
@@ -45088,6 +45425,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Holy Rosary Cathedral, Vancouver 2023a.jpg',
+          lyhyt: 'Kaksi epäsymmetristä tornia ja ruusuikkuna, seinät Gabriola Islandin hiekkakiveä.',
           selite: 'Kaksi epäsymmetristä tornia ja niiden välissä ruusuikkuna; '
             + 'seinät ovat Gabriola Islandin hiekkakiveä.',
           lahde: 'Greenknight dv, Wikimedia Commons (CC BY-SA 4.0)',
@@ -45174,6 +45512,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vancouver - Orpheum Theatre 01.jpg',
+          lyhyt: 'Neonkyltti ja markiisi kertovat kadulla teatterin nykyisen asukkaan nimen.',
           selite: 'Granville Streetin yllä riippuva neonkyltti ja sen alla '
             + 'markiisi, jossa lukee teatterin nykyisen asukkaan nimi.',
           lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 3.0)',
@@ -45267,6 +45606,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dr. Sun Yat-Sen Classical Chinese Garden 09.jpg',
+          lyhyt: 'Lampi ja kiviasetelmat noudattavat Suzhoun klassisten puutarhojen perinnettä.',
           selite: 'Lampi, kiviasetelmat ja kaartuvat räystäät: rakennusten ja '
             + 'veden suhde on Suzhoun klassisten puutarhojen mukainen.',
           lahde: 'Ɱ, Wikimedia Commons (CC BY-SA 4.0)',
@@ -45346,6 +45686,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Crystal.view.from.west.JPG',
+          lyhyt: 'Michael Lee-Chin Crystalin kallistuvat seinät ovat neljännes lasia, loppu alumiinia.',
           selite: 'Michael Lee-Chin Crystalin kallistuvat seinät ovat '
             + 'neljänneksen lasia ja kolme neljännestä alumiinia.',
           lahde: 'Aptd, Wikimedia Commons (CC BY-SA 4.0)',
@@ -45547,6 +45888,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Toronto city hall hdr.jpg',
+          lyhyt: 'Kaksi kaarevaa tornia kiertää matalan, lautasenmuotoisen neuvostosalin ympärille.',
           selite: 'Kaksi kaarevaa tornia kiertää matalan, lautasenmuotoisen '
             + 'neuvostosalin ympärille; kuva on otettu illalla ylhäältä.',
           lahde: 'FranciscoDiez, Wikimedia Commons (CC BY 2.0)',
@@ -45781,6 +46123,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Merchandise Mart 080405.jpg',
+          lyhyt: 'Kahdeksantoista kerroksen varastolohko ja keskeltä nouseva torni Chicago-joelta katsottuna.',
           selite: 'Kahdeksantoista kerroksen varastolohko ja sen keskeltä '
             + 'nouseva torni Chicago-joen toiselta rannalta katsottuna.',
           lahde: 'User:JeremyA, Wikimedia Commons (CC BY-SA 3.0)',
@@ -45826,6 +46169,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Chicago Theatre blend.jpg',
+          lyhyt: 'State Streetin riemukaaren Tiffany-ikkuna ja katosmainos ovat kaupungin tunnuskuvia.',
           selite: 'State Streetin riemukaari, sen keskellä pyöreä '
             + 'Tiffany-ikkuna ja alla katosmainos, joka on kaupungin '
             + 'epävirallinen tunnus.',
@@ -45873,6 +46217,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'The Anarchist Riot in Chicago - A Dynamite Bomb exploding among the police (McCormick Strike, Haymarket Square) LCCN99614182.jpg',
+          lyhyt: 'Harper\'s Weeklyn 1886 kuva näyttää Haymarketin mellakan puhujineen ja pommeineen.',
           selite: 'Harper’s Weeklyn aukeama toukokuulta 1886: puhuja vaunun '
             + 'päällä vasemmalla, poliisirivi keskellä ja pommi räjähtämässä.',
           lahde: 'Thure de Thulstrup, Wikimedia Commons (PD)',
@@ -45919,6 +46264,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Preston Bradley Hall and Tiffany Glass Dome - Chicago Cultural Center.jpg',
+          lyhyt: 'Preston Bradley Hallin Tiffany-kupolissa on yli 60 000 lasinpalaa.',
           selite: 'Preston Bradley Hallin Tiffany-kupolissa on yli 60 000 '
             + 'lasinpalaa; kaaren alla kiertää Addisonin lause kirjoista.',
           lahde: 'Grant Henninger, Wikimedia Commons (CC BY-SA 4.0)',
@@ -46064,6 +46410,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Willis Tower, Chicago September 2016-26.jpg',
+          lyhyt: 'Yhdeksän putken nippu porrastuu: osa päättyy matalammalle, kaksi jatkuu huipulle.',
           selite: 'Yhdeksän putken nippu näkyy porrastuksina: osa putkista '
             + 'päättyy matalammalle, ja kaksi jatkaa huipulle asti.',
           lahde: 'Alvesgaspar, Wikimedia Commons (CC BY-SA 4.0)',
@@ -46119,6 +46466,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jane Addams-Hull House, University of Illinois Chicago, Halsted Street, Near West Side, Chicago, IL.jpg',
+          lyhyt: 'Charles Hullin 1856 huvila on ainoa kolmestatoista talosta, joka jäi yliopiston tieltä pystyyn.',
           selite: 'Charles Hullin vuoden 1856 huvila kuisteineen on ainoa '
             + 'kolmestatoista talosta, joka jäi yliopiston tieltä pystyyn.',
           lahde: 'w_lemay, Wikimedia Commons (CC BY-SA 2.0)',
@@ -46303,6 +46651,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'LA City Hall - 2007-05-11.JPG',
+          lyhyt: 'Tornin huipulla on Halikarnassoksen mausoleumin mukaan tehty pyramidi.',
           selite: 'Torni hallintokorttelin päästä katsottuna: huipulla on '
             + 'Halikarnassoksen mausoleumin mukaan tehty pyramidi.',
           lahde: 'Kjetil Ree, Wikimedia Commons (CC BY-SA 3.0)',
@@ -46400,6 +46749,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Los Angeles Central Library, 630 W. 5th St. Downtown Los Angeles 1.jpg',
+          lyhyt: 'Keskustornin mosaiikkipyramidissa on soihtua kannatteleva käsi.',
           selite: 'Keskustornin mosaiikkipyramidi aurinkoineen; huipulla on '
             + 'soihtua kannatteleva käsi. Takana kohoaa se torni, joka '
             + 'rakennettiin kirjaston myymille ilmatilaoikeuksille.',
@@ -46443,6 +46793,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Japanese American National Museum (Los Angeles) August 2024.JPG',
+          lyhyt: 'Vuoden 1999 paviljongin rakennustyötä johti arkkitehti Gyo Obata.',
           selite: 'Vuoden 1999 paviljonki, jonka rakennustyötä johti '
             + 'arkkitehti Gyo Obata; vanha temppelirakennus on saman korttelin '
             + 'takana.',
@@ -46498,6 +46849,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Art in Pershing Square Park, a public park in downtown Los Angeles, California LCCN2013632114.tif',
+          lyhyt: 'Legorretan ja Olinin 1994 aukiolla on violetti kellotorni ja oranssit pallot.',
           selite: 'Legorretan ja Olinin vuoden 1994 aukio: violetti '
             + 'kellotorni, oranssit pallot ja kivetys, jonka alla on 1952 '
             + 'kaivettu pysäköintilaitos.',
@@ -46547,6 +46899,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Eastern Columbia Tower - Los Angeles.jpg',
+          lyhyt: 'Turkoosi terrakotta ja kellotorni, jonka joka tahossa lukee Eastern.',
           selite: 'Turkoosi terrakotta ja nelisivuinen kellotorni, jonka joka '
             + 'tahossa lukee EASTERN valkoisella neonilla.',
           lahde: 'Galkab, Wikimedia Commons (CC BY-SA 3.0)',
@@ -46634,6 +46987,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'J34 590 Montevideo, Estación central General Artigas.jpg',
+          lyhyt: 'Tyhjilleen jäänyt asema: kaksikerroksinen julkisivu, holvikäytävä ja pitkä laituriseinä.',
           selite: 'Tyhjilleen jäänyt asema kadun kulmasta: kaksikerroksinen '
             + 'juhlava julkisivu, holvikäytävä ja pitkä laituriseinä '
             + 'jatkuvat vasemmalle.',
@@ -46674,6 +47028,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Auditorio Nacional del Sodre doctora Adela Reta.jpg',
+          lyhyt: 'Auditorion lasinen kulma on katujen risteyksessä, sisäänkäynnin yllä esitysmainos.',
           selite: 'Auditorion lasinen kulma Andesin ja Mercedesin katujen '
             + 'risteyksessä; sisäänkäynnin yllä on näytön mainos illan '
             + 'esityksestä.',
@@ -46787,6 +47142,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2016 Montevideo museo Torres García.jpg',
+          lyhyt: 'Museon kapea julkisivu Ciudad Viejan kadulla: kolme erkkeririviä ja pystykyltit.',
           selite: 'Museon kapea julkisivu Ciudad Viejan kadulla: kolme '
             + 'erkkeririviä ja pystykyltit, joissa lukee museon nimi.',
           lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
@@ -46835,6 +47191,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palacio Estévez 3.jpg',
+          lyhyt: 'Doorilainen pylväsrivi ja päätykolmio vaakunoineen Plaza Independencian laidalla.',
           selite: 'Doorilainen pylväsrivi ja päätykolmio vaakunoineen Plaza '
             + 'Independencian laidalla; edessä on tyhjä kivetty aukio.',
           lahde: 'Santi2903, Wikimedia Commons (CC BY-SA 3.0)',
@@ -46902,6 +47259,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Museo de Arte Precolombino e Indígena.jpg',
+          lyhyt: 'Entinen vesihoitolaitos on nyt museo, kaariholvien yllä riippuu punainen banneri.',
           selite: 'Vesihoitolaitokseksi rakennettu talo kadun kulmasta; '
             + 'julkisivun kaariholvien yllä riippuu museon punainen '
             + 'banneri.',
@@ -46992,6 +47350,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Monumento a los héroes de Iquique, Valparaíso, Chile1.jpg',
+          lyhyt: 'Arturo Pratin muistomerkki seisoo aukiolla kahden tornitalon muodostaman sataman portin edessä.',
           selite: 'Arturo Pratin muistomerkki aukion keskellä; taustalla '
             + 'kohoavat kaksi samanlaista tornitaloa, jotka muodostavat '
             + 'portin satamaan.',
@@ -47198,6 +47557,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Cementerio de Disidentes - Valparaíso - 2011.jpg',
+          lyhyt: 'Rinteen hautakivissä on kelttiläinen risti ja saksankielisiä kirjoituksia.',
           selite: 'Hautakiviä rinteessä: kelttiläinen risti, uurnapylväs ja '
             + 'saksankielisiä kirjoituksia, taustalla kukkulan talot.',
           lahde: 'Carlos yo, Wikimedia Commons (CC BY-SA 4.0)',
@@ -47267,6 +47627,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Iglesia de los Sagrados Corazones, Valparaíso 20230901 02.jpg',
+          lyhyt: 'Kirkon korkea torni kellotauluineen jatkuu saman korttelin koulurakennukseen.',
           selite: 'Kirkon korkea torni kellotauluineen ja suippokärkineen; '
             + 'vasemmalla jatkuu saman korttelin koulurakennus.',
           lahde: 'Carlos Figueroa Rojas, Wikimedia Commons (CC BY-SA 4.0)',
@@ -47360,6 +47721,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'TremeTombUnknownSlave.jpg',
+          lyhyt: 'Tuntemattoman orjan hauta on raskaista ketjuista taivutettu risti kirkon puutarhassa.',
           selite: 'Tuntemattoman orjan hauta on raskaista ketjuista '
             + 'taivutettu risti kirkon puutarhassa, lasimaalausikkunoiden '
             + 'alla.',
@@ -47416,6 +47778,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'United States Mint, New Orleans, La. LCCN93515339.jpg',
+          lyhyt: 'Vuoden 1897 valokuvassa rahapaja seisoo puiden ja rauta-aidan takana.',
           selite: 'Vuoden 1897 valokuvassa rahapaja seisoo puiden ja '
             + 'rauta-aidan takana; kuvan alalaitaan on painettu sen oma '
             + 'nimiö ja valokuvaajan tekijänoikeusmerkintä.',
@@ -47498,6 +47861,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hermann Grima house kitchen.jpg',
+          lyhyt: '1830-luvun avotulikeittiö on Ranskan Korttelin ainoa säilynyt keittiörakennelma.',
           selite: '1830-luvun avotulikeittiö on Ranskan Korttelin ainoa '
             + 'säilynyt: lautateline, kahvimylly ja muurattu uuni ovat '
             + 'paikoillaan.',
@@ -47580,6 +47944,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Cotton Exchange New Orleans 1881 Bldg.jpg',
+          lyhyt: 'Vuonna 1881 valmistunut pörssitalo edusti toisen keisarikunnan tyyliä veistoksineen.',
           selite: 'Vuonna 1881 valmistunut pörssitalo Gravier- ja '
             + 'Carondelet-katujen kulmassa oli toisen keisarikunnan '
             + 'tyyliä veistoksineen ja kaarineen.',
@@ -47763,6 +48128,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bogotá carrera 10 Hotel Tequendama.JPG',
+          lyhyt: 'Punatiilinen hotelli kaartuu kymmenennen valtakadun kulmaan, takana Centro Internacionalin tornit.',
           selite: 'Punatiilinen hotelli kaartuu kymmenennen valtakadun '
             + 'kulmaan; takana näkyvät Centro Internacionalin '
             + 'myöhemmät tornit.',
@@ -47804,6 +48170,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bogotá exterior Museo de Arte Moderno MAMBO.JPG',
+          lyhyt: 'Salmonan paljas tiili porrastuu ylöspäin syvennettyine ikkunoineen.',
           selite: 'Salmonan paljas tiili porrastuu ylöspäin, ja ikkunat '
             + 'on upotettu syviin syvennyksiin; takana nousee '
             + 'Itäkukkuloiden metsä.',
@@ -47849,6 +48216,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Uniandes Campus.jpg',
+          lyhyt: 'Kampus ulottuu keskustan reunasta Itäkukkuloiden metsään, vanhaa ja uutta samassa korttelissa.',
           selite: 'Kampus alkaa keskustan korttelien reunasta ja päättyy '
             + 'Itäkukkuloiden metsään; vanhat siirtomaatalot ja uudet '
             + 'laboratoriorakennukset ovat samassa korttelissa.',
@@ -47894,6 +48262,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palacio de Justicia de Colombia, Bogotá.jpg',
+          lyhyt: 'Kolmas oikeuspalatsi rakennettiin samalle paikalle Plaza de Bolívarin laidalle.',
           selite: 'Kolmas oikeuspalatsi rakennettiin samalle paikalle '
             + 'Plaza de Bolívarin pohjoislaidalle; takana kohoaa '
             + 'Itäkukkuloiden harjanne.',
@@ -47966,6 +48335,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Universidad Externado de Colombia, La Candelaria.jpg',
+          lyhyt: 'Yliopiston tiilirakennukset nousevat rinteeseen, pengerretyt puutarhat laskevat kadulle.',
           selite: 'Yliopiston tiilirakennukset nousevat rinteeseen La '
             + 'Candelarian eteläreunassa, ja pengerretyt puutarhat '
             + 'laskevat kadulle asti.',
@@ -48073,6 +48443,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Boola Bardip, Western Australian Museum, Perth, 2023, 01.jpg',
+          lyhyt: 'Vuonna 2020 avattu museo kantaa noongarinkielistä nimeä Boola Bardip.',
           selite: 'Vuonna 2020 avattu uusi museorakennus Perth Cultural '
             + 'Centressä; kyltissä on museon noongarinkielinen nimi Boola '
             + 'Bardip.',
@@ -48160,6 +48531,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '00 1598 Wesley Church, Perth WA - William Street.jpg',
+          lyhyt: 'Tornin huipun ylin osa purettiin vuoden 1968 järistyksen jälkeen ja korvattiin kuparikartiolla.',
           selite: 'Torninhuipun ylin osa purettiin vuoden 1968 järistyksen '
             + 'jälkeen, ja tilalle pantiin kuparinen kartio.',
           lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
@@ -48867,6 +49239,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Habana - Plaza de Armas y Ayuntamiento 03.jpg',
+          lyhyt: 'Aukio ja kuvernöörien palatsin kaarikäytävä 1900-luvun alun postikortissa.',
           selite: 'Aukio ja kuvernöörien palatsin kaarikäytävä 1900-luvun alun '
             + 'postikortissa; kortin oma teksti on painettu kuvaan.',
           lahde: 'Edicion Jordi, Havanna, Wikimedia Commons (public domain)',
@@ -49085,6 +49458,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Fuente de la India (Havana).jpg',
+          lyhyt: 'Lähdettä käännetään paikoilleen toukokuussa 1928.',
           selite: 'Lähdettä käännetään paikoilleen toukokuussa 1928; kuvan '
             + 'alalaidassa on julkisten töiden viraston oma kuvateksti.',
           lahde: 'Secretaría de Obras Públicas, Wikimedia Commons (public domain)',
@@ -49247,6 +49621,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Plaza de Santo Domingo 1880-1900.tif',
+          lyhyt: 'Aukiolla 1800-luvun lopulla kirkko perällä ja härkävankkureita edessä.',
           selite: 'Aukio 1800-luvun lopulla: kirkko perällä, vasemmalla '
             + 'kirjurien pylväskäytävä ja edessä härkävankkureita.',
           lahde: 'Abel Briquet, Wikimedia Commons (public domain)',
@@ -49619,6 +49994,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Penitentiary Chapel Hobart 20171119-006.jpg',
+          lyhyt: 'Vankilan kappeli rakennettiin 1831–1833, ja siitä tehtiin 1850-luvulla oikeussalit.',
           selite: 'Vankilan kappeli rakennettiin 1831–1833 eristysselien '
             + 'päälle, ja 1850-luvun lopulla siitä tehtiin oikeussalit.',
           lahde: 'Gary Houston, Wikimedia Commons (CC0)',
@@ -49895,6 +50271,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Soldiers Barracks Anglesea Barracks.JPG',
+          lyhyt: 'Kasarmi on ollut käytössä vuodesta 1814, pidempään kuin mikään muu Australian kasarmi.',
           selite: 'Kasarmi on ollut käytössä vuodesta 1814 eli pidempään kuin '
             + 'yksikään toinen Australian armeijan kasarmi.',
           lahde: 'Nick-D, Wikimedia Commons (CC BY-SA 3.0)',
@@ -50310,6 +50687,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Iglesia Santa Rosa, Lima, Perú, 2015-07-28, DD 08.JPG',
+          lyhyt: 'Pyhäkkö on rakennettu Isabel Flores de Olivan kotitalon jäännösten päälle.',
           selite: 'Punainen julkisivu kahden kellotornin välissä; pyhäkkö on '
             + 'rakennettu Isabel Flores de Olivan kotitalon jäännösten päälle.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
@@ -50351,6 +50729,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Palacio de Osambela, Casa Oquendo - Lima.jpg',
+          lyhyt: 'Umpinaiset puiset parvekkeet työntyvät indigonsinisestä seinästä kadulle.',
           selite: 'Umpinaiset puiset parvekkeet työntyvät indigonsinisestä '
             + 'seinästä kadun päälle koko julkisivun leveydeltä.',
           lahde: 'Art DiNo from Lima, Perú, Wikimedia Commons (CC BY-SA 2.0)',
@@ -50394,6 +50773,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Monastery of San Francisco, Lima, Peru.jpg',
+          lyhyt: 'Keltaisen barokkikirkon alla ovat katakombit, jotka olivat kaupungin hautausmaa.',
           selite: 'Keltainen barokkijulkisivu kahden kellotornin välissä; kirkon '
             + 'alla ovat katakombit, jotka olivat kaupungin hautausmaa.',
           lahde: 'Avodrocc, Wikimedia Commons (CC BY 2.0)',
@@ -50431,6 +50811,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Iglesia y monasterio de las Nazarenas de Lima 05.jpg',
+          lyhyt: 'Kupolin lyhty valaisee pyhäkköä, jonka Ihmeiden Herran maalaus säilyi kolme järistystä.',
           selite: 'Kupolin lyhty päästää valon alas pyhäkköön, jonka seinällä '
             + 'Ihmeiden Herran maalaus on säilynyt kolmen järistyksen läpi.',
           lahde: 'Rodolfo pimentel, Wikimedia Commons (CC BY-SA 4.0)',
@@ -50463,6 +50844,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Puerta del museo de la inquisicion catolica en lima.jpg',
+          lyhyt: 'Veistetyn kultaoven takana istui ensin tuomioistuin, itsenäisyyden jälkeen Perun senaatti.',
           selite: 'Veistetty pääovi kultauksineen; saman oven takana istui ensin '
             + 'tuomioistuin ja itsenäisyyden jälkeen Perun senaatti.',
           lahde: 'Quilicho, Wikimedia Commons (CC BY-SA 4.0)',
@@ -50504,6 +50886,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Jr Ucayali, centro de Lima 02.jpg',
+          lyhyt: 'Portaalin vaakunassa lukee tarina käärmeen tappaneesta ja prinsessan naineesta Taglesta.',
           selite: 'Portaalin päällä oleva vaakuna kantaa tekstiä "Tagle se llamó '
             + 'el que la sierpe mató y con la infanta casó".',
           lahde: 'Ibrehaut, Wikimedia Commons (CC BY-SA 4.0)',
@@ -50540,6 +50923,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '2017 Lima - Monumento ecuestre - Plaza San Martín.jpg',
+          lyhyt: 'Mariano Benlliuren ratsastajapatsas esittää San Martínia Andien ylityksellä.',
           selite: 'Mariano Benlliuren ratsastajapatsas esittää San Martínia Andien '
             + 'ylityksellä; ympärillä olevat talot nousivat vasta aukion jälkeen.',
           lahde: 'Felipe Restrpo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
@@ -50654,6 +51038,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Basilika in Quito.jpg',
+          lyhyt: 'Uusgoottilaisen kivikirkon esikuvana oli Ranskan Bourgesin katedraali.',
           selite: 'Uusgoottilainen kivikirkko kellotorneineen; piirustusten '
             + 'esikuvana oli Bourgesin katedraali Ranskassa.',
           lahde: 'Hannelore Hopfe, Wikimedia Commons (CC BY-SA 3.0)',
@@ -50722,6 +51107,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '(Iglesia de San Agustin), Quito S. XVI pic a02.JPG',
+          lyhyt: 'Diego de Escarzan veistämässä pääportaalissa on espanjalaisia ja alkuperäiskansojen aiheita.',
           selite: 'Diego de Escarzan veistämä pääportaali; koristeissa on '
             + 'rinnakkain espanjalaisia ja alkuperäiskansojen aiheita.',
           lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
@@ -50795,6 +51181,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Quito Museo Casa del Alabado Statue of Jama-Coaque culture 1.jpg',
+          lyhyt: 'Jama-Coaque-kulttuurin istuva hahmo on museossa esillä taideteoksena.',
           selite: 'Jama-Coaque-kulttuurin istuva hahmo omalla jalustallaan — '
             + 'museo asettaa esineet esille taideteoksina.',
           lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
@@ -50829,6 +51216,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Museo de la Ciudad, Quito (interior) pic c.JPG',
+          lyhyt: 'Kaarikäytävien sisäpihalla toiminut San Juan de Diosin sairaala on nyt museo.',
           selite: 'Kaarikäytävien reunustama sisäpiha; talo oli San Juan de '
             + 'Diosin sairaala ennen kuin siitä tuli museo.',
           lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
@@ -51219,6 +51607,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Assembleia Legislativa do Estado do Amazonas (ALEAM).jpg',
+          lyhyt: 'Istuntosalin matala kolmiokatto on kiinni toimistotornissa.',
           selite: 'Istuntosalin matala kolmiokatto on kiinni '
             + 'toimistotornissa, ja salin seinään on maalattu '
             + 'kokouksen nimi.',
@@ -51490,6 +51879,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sala São Paulo 2023.jpg',
+          lyhyt: 'Aseman suuri halli toimii konserttisalina puisen vaijereilla riippuvan säätökaton alla.',
           selite: 'Aseman suuri halli konserttisalina: puinen säätökatto '
             + 'riippuu vaijereiden varassa vanhojen pylväiden yläpuolella.',
           lahde: 'Boaventuravinicius, Wikimedia Commons (CC BY-SA 4.0)',
@@ -51534,6 +51924,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Pinacoteca do Estado de São Paulo (3400107451).jpg',
+          lyhyt: 'Julkisivun paljaat tiilet kertovat, ettei taloa koskaan saatu valmiiksi.',
           selite: 'Julkisivun paljaat tiilet kertovat, ettei taloa koskaan '
             + 'saatu valmiiksi; nimikirjaimet lisättiin vasta museoaikana.',
           lahde: 'Rodrigo Soldon, Wikimedia Commons (CC BY 2.0)',
@@ -51579,6 +51970,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Igreja Nossa Senhora do Rosário dos Homens Pretos 01.jpg',
+          lyhyt: 'Keltainen kirkko Largo do Paiçandulla rakennettiin 1904–1906 vanhan tilalle.',
           selite: 'Keltainen kirkko Largo do Paiçandulla; se rakennettiin '
             + 'tähän 1904–1906, kun vanha kirkko purettiin aukion tieltä.',
           lahde: 'Phsartori, Wikimedia Commons (CC BY-SA 4.0)',
@@ -51713,6 +52105,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Viaduto do Chá, São Paulo, Brazil.jpg',
+          lyhyt: 'Vuoden 1938 betonikaari ylittää Anhangabaún laakson Matarazzo-rakennuksen vierellä.',
           selite: 'Vuoden 1938 betonikaari Anhangabaún laakson yli; '
             + 'vasemmalla kaupungintalona toimiva Matarazzo-rakennus.',
           lahde: 'Wilfredor, Wikimedia Commons (CC BY-SA 4.0)',
@@ -51952,6 +52345,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sobrado Azulejado Salvador 2018-0229.jpg',
+          lyhyt: 'Sinivalkoinen kaakelijulkisivu näkyy ylhäältä, naapuritalosta on jäljellä vain seinät.',
           selite: 'Sinivalkoinen kaakelijulkisivu ylhäältä nähtynä; oikealla '
             + 'naapuritalo, josta on jäljellä vain seinät.',
           lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
@@ -51994,6 +52388,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Igreja de São Miguel Salvador 2019-1018.jpg',
+          lyhyt: 'Kirkkosalissa on jakarandakaide ja vuonna 1854 vaihdettu ristiinnaulitun kuva.',
           selite: 'Kirkkosali kuoriin päin: jakarandakaide, 1854 vaihdettu '
             + 'ristiinnaulitun kuva ja perustajan hautakivi lattiassa.',
           lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
@@ -52034,6 +52429,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Igreja De Santo Antônio Da Mouraria Salvador 2019-1408.jpg',
+          lyhyt: 'Sotilaiden kappelin julkisivussa on aaltopääty, kellotorni ja oculus-ikkuna.',
           selite: 'Sotilaiden kappelin julkisivu aaltopäätyineen; vasemmalla '
             + 'kellotorni, keskellä oculus ja pyhimyksen niche.',
           lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
@@ -52074,6 +52470,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Museu de Arte Moderna da Bahia Solar do Unhão Escada Helicoidal 2021-8567 01.jpg',
+          lyhyt: 'Lina Bo Bardin portaikon askelmat on liitetty vanhan myllyn puuhun ilman nauloja.',
           selite: 'Lina Bo Bardin portaikko lähikuvassa: askelmat on liitetty '
             + 'vanhan myllyn puuhun ilman nauloja tai betonia.',
           lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
@@ -52114,6 +52511,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Teatro Vila Velha Salvador Bahia 2018-0131.jpg',
+          lyhyt: 'Modernistinen betonitalo seisoo Passeio Públicon puistossa uusklassisten julkisivujen keskellä.',
           selite: 'Modernistinen betonitalo Passeio Públicon puiden keskellä, '
             + 'kaukana aukion uusklassisista julkisivuista.',
           lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
@@ -52242,6 +52640,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Quinta de Anauco (2).jpg',
+          lyhyt: 'Siirtomaa-ajan salissa seisoo puinen arkkienkeli Mikael maalatun koristenauhan alla.',
           selite: 'Siirtomaa-ajan salissa seisoo puinen arkkienkeli Mikael, ja '
             + 'seinien yläreunaa kiertää maalattu koristenauha.',
           lahde: 'Guillermo Ramos Flamerich, Wikimedia Commons (CC BY-SA 4.0)',
@@ -52278,6 +52677,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Nuestra Señora de Las Mercedes.JPG',
+          lyhyt: 'Uusklassinen julkisivu kupolitorneineen on vuoden 1857 jälleenrakennuksesta.',
           selite: 'Uusklassinen julkisivu, kolme katuovea ja kaksi hopeanhohtoista '
             + 'kupolitornia vuoden 1857 jälleenrakennuksesta.',
           lahde: 'AlexisCarmona, Wikimedia Commons (CC BY-SA 3.0)',
@@ -52316,6 +52716,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Casa de las Primeras Letras Simón Rodríguez.jpg',
+          lyhyt: 'Matala vaaleanpunainen siirtomaatalo on merkitty numerolla 29.',
           selite: 'Matala vaaleanpunainen siirtomaatalo, jonka keskiovi on '
             + 'merkitty numerolla 29 — talon toinen puolisko.',
           lahde: 'JoseGre12, Wikimedia Commons (CC BY-SA 4.0)',
@@ -52358,6 +52759,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Salón Bolívar - Casa Amarilla.jpg',
+          lyhyt: 'Bolívar-sali vie koko toisen kerroksen etusivun tummine kasettikattoineen.',
           selite: 'Bolívar-sali vie koko toisen kerroksen etusivun; katossa on '
             + 'tummaa kasettityötä ja seinällä kokovartalomuotokuva.',
           lahde: 'Venlur, Wikimedia Commons (CC BY-SA 4.0)',
@@ -52461,6 +52863,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Galeria de Arte Nacional, em Caracas 23.JPG',
+          lyhyt: 'Salien renkaassa on marmoriveistos ja siirtomaa-ajasta nykypäivään ulottuvia maalauksia.',
           selite: 'Salien renkaassa marmoriveistos osoittaa ulos kuvasta, ja '
             + 'seinillä on maalauksia siirtomaa-ajalta nykypäivään.',
           lahde: 'Béria Lima de Rodríguez, Wikimedia Commons (CC BY-SA 3.0)',
@@ -52497,6 +52900,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'El centro de Caracas, las torres de Parque Central.jpg',
+          lyhyt: 'Toimistotornin huipulla on antenni, vieressä 1970-luvun asuintorneja.',
           selite: 'Toimistotornin huipussa erottuu antenni, ja sen vieressä '
             + 'nousevat 1970-luvun asuintornit iltapilvien alla.',
           lahde: 'QuinteroP, Wikimedia Commons (CC BY 3.0)',
@@ -52622,6 +53026,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Johan Christian Dahl - Fredriksberg Fortifications on Nordnes in Bergen - NG.M.00426-038 - National Museum of Art, Architecture and Design.jpg',
+          lyhyt: 'Johan Christian Dahlin luonnoksessa linnake istuu Nordnesin kalliokärjessä.',
           selite: 'Johan Christian Dahlin öljyluonnoksessa linnake istuu '
             + 'Nordnesin kalliokärjessä ja vesi kiertää sen kolmelta '
             + 'puolelta.',
@@ -52669,6 +53074,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Munkeliv.jpg',
+          lyhyt: 'Munkelivin keskiaikainen omaisuusluettelo on ainoa jäljellä oleva jälki luostarista.',
           selite: 'Munkelivin oma keskiaikainen omaisuusluettelo '
             + '(käsikirjoitus GKS 1347 4to) — luostarista ei ole jäljellä '
             + 'muuta näkyvää.',
@@ -52883,6 +53289,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bergen-University-modf.jpg',
+          lyhyt: 'Vuoden 1865 museotalon edessä on perustaja Christien patsas ja kivileijona.',
           selite: 'Vuoden 1865 museotalon edessä seisoo perustajan Wilhelm '
             + 'Frimann Koren Christien patsas ja sen juurella kivileijona.',
           lahde: 'Floflo, muokannut Aqwis, Wikimedia Commons (CC BY-SA 2.5)',
@@ -53155,6 +53562,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Gran Teatro Cervantes, Tánger, Marruecos, 2015-12-11, DD 50.JPG',
+          lyhyt: 'Teatterin kaakelikilvessä on nimi ja vuosi 1913, ovet kiinni ja rappaus lohkeillut.',
           selite: 'Teatterin julkisivun kaakelikilpi kertoo nimen ja vuoden '
             + '1913; ovet ovat kiinni ja rappaus lohkeillut.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
@@ -53386,6 +53794,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Badi Palace DSCF6501.jpg',
+          lyhyt: 'El Badin raunioitunut piha on pitkä vesiallas, upotettuja appelsiinitarhoja ja yksi paviljonki.',
           selite: 'El Badin raunioitunut pihamaa: pitkä vesiallas, upotetut '
             + 'appelsiinitarhat ja yksi jäljellä oleva paviljonki.',
           lahde: 'R Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
@@ -54154,6 +54563,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Cathedral Church of Christ, Marina 20025.jpg',
+          lyhyt: 'Katedraalin kellotorni ja jyrkät harjakatot erottuvat keskustan korttelien keskellä.',
           selite: 'Katedraali ylhäältä: kellotorni, jyrkät harjakatot ja '
             + 'valkoiset kaarilistat erottuvat keskustan korttelien '
             + 'keskellä.',
@@ -54264,6 +54674,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tafawa Balewa Square Onikan Lagos - 2024.jpg',
+          lyhyt: 'Aukion betonikenttä katsojakatoksineen näkyy ilmasta, vieressä krikettikenttä ja laguuni.',
           selite: 'Aukion laaja betonikenttä katsojakatoksineen ilmasta; '
             + 'vasemmalla näkyy krikettikenttä ja takana laguuni.',
           lahde: 'Isaacayodele32, Wikimedia Commons (CC BY-SA 4.0)',
@@ -54814,6 +55225,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Al-Attarine Madrasa DSC 0449 (39977440582).jpg',
+          lyhyt: 'Pilarin nurkassa vaihtelevat veistetty stukko, kalligrafianauha ja laattamosaiikki.',
           selite: 'Pilarin nurkassa vaihtuvat kolme koristelutapaa: '
             + 'veistetty stukko, kalligrafianauha ja laattamosaiikki.',
           lahde: 'Carolyn Albritton, Wikimedia Commons (CC0)',
@@ -55043,6 +55455,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dakar-Musique militaire sur la place Protêt (AOF).jpg',
+          lyhyt: 'Aukiolla 1900-luvun alussa soittokunta esiintyy puiden alla.',
           selite: 'Aukio 1900-luvun alussa: soittokunta esiintyy '
             + 'puiden alla, ja kuvan alalaitaan on painettu '
             + 'postikorttikustantajan oma otsikko ja numero.',
@@ -56451,6 +56864,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Monumento al Ovejero Punta Arenas.jpg',
+          lyhyt: 'Pronssinen lammaslauma kulkee kadun keskikaistaa lampurin johdattamana.',
           selite: 'Pronssinen lammaslauma kulkee kadun keskikaistaa '
             + 'pitkin, ja lampuri johtaa sitä hevosineen ja koirineen.',
           lahde: 'Micah MacAllen from Travel Bums, Latin America, Wikimedia Commons (CC BY-SA 2.0)',
@@ -56490,6 +56904,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Cementerio de Punta Arenas.jpg',
+          lyhyt: 'Leikatut sypressit reunustavat käytävää, jonka varrella ovat sukujen kappelit.',
           selite: 'Leikatut sypressit reunustavat käytävää, ja niiden '
             + 'välissä seisovat sukujen kappelit enkelipatsaineen.',
           lahde: 'Daniel Diaz Nauto, Wikimedia Commons (CC BY-SA 2.0)',
@@ -56523,6 +56938,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Museo territorial salesiano - Punta Arenas.jpg',
+          lyhyt: 'Museon salissa on lasivitriinejä, katosta riippuu kanootti ja keskellä rintakuva.',
           selite: 'Museon salissa on lasivitriinejä seinän täydeltä, '
             + 'katosta riippuu kanootti ja keskellä seisoo rintakuva.',
           lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
@@ -56589,6 +57005,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Plaza Muñoz Gamero y monumento a Magallanes - Punta Arenas.jpg',
+          lyhyt: 'Vanhassa kuvassa lumisen aukion keskellä on Magalhãesin muistomerkki.',
           selite: 'Vanhassa painetussa kuvassa aukio on lumen peitossa, '
             + 'keskellä Magalhãesin muistomerkki ja oikealla '
             + 'katedraalin kellotorni.',
@@ -56680,6 +57097,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Vista Sur.jpg',
+          lyhyt: 'Aallonmurtajaksi upotetun purjelaivan mastot törröttävät vedestä Tulimaan rannikolla.',
           selite: 'Iltavalossa aallonmurtajaksi upotetun purjelaivan mastot '
             + 'törröttävät vedestä, ja takana kaartaa Tulimaan rannikko.',
           lahde: 'Gonzalo Baeza H, Wikimedia Commons (CC BY 2.0)',
@@ -56828,6 +57246,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Cementerio de Santa Cruz de la Sierra.jpg',
+          lyhyt: 'Hautausmaan katua reunustavat valkoiset kolumbaarioseinät ja yksi leveälatvainen puu.',
           selite: 'Hautausmaan katua reunustavat valkoiset kolumbaarioseinät, '
             + 'ja keskellä kasvaa yksi leveälatvainen puu.',
           lahde: 'Noé, Wikimedia Commons (CC BY-SA 4.0)',
@@ -56885,6 +57304,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Catedral Basílica Menor de San Lorenzo, Santa Cruz de la Sierra recorte.jpg',
+          lyhyt: 'Katedraalin kaksi punatiilistä kellotornia kohoavat keskustan kattomeren yllä.',
           selite: 'Katedraali ylhäältä: kaksi kellotornia punatiilisine '
             + 'kupoleineen ja niiden takana koko keskustan kattomeri.',
           lahde: 'Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)',
@@ -57604,6 +58024,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bannatyne Ave.jpg',
+          lyhyt: 'Bannatyne Avenuella on talvella rivissä punatiilisiä ja vaaleita varastotaloja.',
           selite: 'Bannatyne Avenue talvella: punatiilisiä ja vaaleita '
             + 'varastotaloja rivissä, ja perällä keskustan torni.',
           lahde: 'Krazytea, Wikimedia Commons (CC BY-SA 4.0)',
@@ -57648,6 +58069,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Winnipeg - Walker Theatre 2.JPG',
+          lyhyt: 'Teatterin sivuseinät jäivät koristelematta, koska viereen oli tarkoitus rakentaa lisää taloja.',
           selite: 'Teatterin julkisivu ja pystykyltti; sivuseinät jäivät '
             + 'koristelematta, koska niiden viereen oli tarkoitus '
             + 'rakentaa muita taloja.',
@@ -57832,6 +58254,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Manitoba Legislature December 2023.jpg',
+          lyhyt: 'Joulukuun hämärässä kupolin kullattu juoksija erottuu palavien lyhtyjen yllä.',
           selite: 'Joulukuun hämärässä kupolin päällä erottuu kullattu '
             + 'juoksija, ja etualalla palavat puiston pallolyhdyt.',
           lahde: 'Reid Campbell, Wikimedia Commons (CC0)',
@@ -58507,6 +58930,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dala Hill, Kano.jpg',
+          lyhyt: 'Kukkulan kylkeen hakattu porrastie nousee vanhankaupungin yläpuolelle.',
           selite: 'Ilmasta katsottuna kukkulan kylkeen on hakattu '
             + 'porrastie, ja tasainen laki nousee tiheän '
             + 'vanhankaupungin yläpuolelle.',
@@ -59655,6 +60079,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bete Maryam 01.jpg',
+          lyhyt: 'Punaisesta kalliosta louhitun kirkon seinässä on ristinmuotoisia ikkuna-aukkoja.',
           selite: 'Punaisesta kalliosta louhitun kirkon seinässä on '
             + 'ristinmuotoisia ikkuna-aukkoja ja kolme ikkunariviä.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
