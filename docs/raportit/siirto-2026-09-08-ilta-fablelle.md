@@ -28,6 +28,51 @@ kuuluu vanhaan sessioon — poista se ja luo uusi: fetch claude/postilaatikko,
 lue posti/kuvatoimitus.md kärjestä, vastaa posti/fable-vanha.md:n kärkeen,
 poimi valmiit agenttityöt ja julkaise, ei salaisuuksia eikä sähköpostia).
 
+## 0000. Päivitys 9.9.2026 klo 15.20 Suomen aikaa (sama sessio)
+
+- **main = v1714.** Päivän julkaisut v1708–v1714 (kaikki omistajan
+  linjaukset Raamatussa 9.9. sanatarkasti):
+  - v1708 uudet äänet ohi välimuistin (`?v=` luennoille UUSITUT_AANET,
+    pululle tiiviste LIVIAN_AANITETYT:stä livianAaniOsoite).
+  - v1709 luentakuvalliset kaupungit sinisinä (luentakuvallisetKaupungit
+    js/packs/fokusvirrat.js), tarkistuskorostus pois.
+  - v1710 LYHYT KUVATEKSTI SIVULLA, PITKÄ AVATUSSA KUVASSA koko peliin:
+    js/kuvatekstit.js (kuvatekstiLyhyt/Pitka), kaikki piirtopaikat;
+    työkalu tools/kuvatekstit-lyhyet.mjs (--lista/--vie/--tarkista).
+    Kentän nimi `lyhyt` kuvaolioon. Sonnet-parvi (yli 20 agenttia)
+    kirjoitti n. 8 300 lyhyttä kaikkiin lajeihin; v1713 jälkeen isoissa
+    tiedostoissa 0 puutetta (--tarkista). Hetkisivujen generaattori
+    kopioi lyhyen. Kaksi työkalubugia korjattu (yksirivinen olio;
+    rivinumero kelpaa vain samalla tiivisteellä) — vanhoista ajoista
+    väärään olioon osuneet lyhyet siivottu (tarkista-kaksoisavaimet).
+  - v1711 kahdeksan luentakuvaa (paper-v2: lontoo, istanbul, dublin,
+    edinburgh, pariisi, marseille, lissabon, madrid) matkakirja.luentakuva
+    { osoite, lyhyt, selite, lahde: 'Matkakirjan havainnekuva', lahteet }.
+    Kuvatoimituksen paper-v3 PERUTTU (omistaja hylkäsi), paper-v4 (13 kpl,
+    Giza-sävy) vain arvioinnissa — odotetaan hyväksyttyä toimitusta.
+  - v1712 luentakuva isompana, vinossa, ilman laatikkoa, lyhyt kuvateksti
+    omassa laatikossa (ei lähderiviä kartalla), kartan liike pienentää;
+    pallon kaupunkipisteet 2× kohdemerkki lähizoomissa + nimi
+    klikattava (karttapallo.md luku 21); galleriakaistat 24 %
+    (js/galleria.js); lehden sivunkääntö scrollbar-gutter; Etsi aarre
+    -nappi kartalle pulun kommentin jälkeen (js/etsi-aarre-nappi.js);
+    isoisän Pariisi/Kalkutta etusivulle (Benares varantoon).
+  - v1713 Ihmisen matka: kertoja putkeen (yhtena-tila, äänikello),
+    pulu 0,55 kertojan päälle; alkuanimaatio aikaleimoihin (musta →
+    piste 6 px → Afrikka sanan kohdalla → kiihtyvä ajo Marokkoon);
+    aloituskortti Ken Burns -taustalla, paperi ilman kuvaa, teksti
+    "Yksi laji levisi…", esittelyluenta generoitu (linssiluennat ajo 9,
+    puheenTiiviste versiokyselynä).
+  - v1714 saapumisasento (js/saapumisasento.js: kaupunki x 42 % / y 78 %),
+    luentakuva kaupungin yläpuolelle oikealle, ankkuroitu karttaan,
+    raahattava. Sivulöytö: ui.nakyvaAlue() likiarvo pallolla — Etsi
+    aarre -nappi ja pulun paikkamerkki vielä sen varassa (karttapallo.md
+    22.4), oma erä.
+- Avoinna: paper-v4-luentakuvat (kuvatoimitus), omistajan silmämääräinen
+  hyväksyntä pallon pistekoolle avauksessa (AVARUUDEN_KORKEUS 300) ja
+  aloituskortin taustalle; savuke-etusivun-animaatio vanhentunut (kaatuu,
+  ei liity muutoksiin).
+
 ## 000. Päivitys 9.9.2026 klo 10.50 Suomen aikaa (sama sessio)
 
 - **main = v1706.** Omistajan postilaatikkoon (claude/postilaatikko,
