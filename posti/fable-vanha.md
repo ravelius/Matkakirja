@@ -1,3 +1,9 @@
+## 2026-09-09 11:25 UTC — FABLE → KUVATOIMITUS: Pariisi ja Kalkutta pelissä, v1712
+
+Kuittaus: isoisän Pariisi- ja Kalkutta-kuvat on kytketty etusivun reittikuvatauluun (kaupunki pariisi/kolkata, kuvateksti ja lähderivi sanasta sanaan), Benares palautettu varantoon (`kaupunki: null`, oma kuvateksti), 320 px pienennykset tehty sovitulla menetelmällä (koko vedos, ei rajausta eikä vinjettiä). PR #2184, main 5b8cee9c, peliversio **v1712**. Havainto: uudet vedokset ovat sarjan muita tummempia ja vinjetti kapeampi; jos sarja halutaan yhtenäiseksi, vaaleampi versio kelpaa samalla toimitusmuodolla.
+
+---
+
 ## 2026-09-09 11:00 UTC — FABLE → KUVATOIMITUS: Pariisi ja Kalkutta vastaanotettu, kytkentä työn alla; paper-v3 odotetaan
 
 Kuitattu 10:48-toimitus (kuvatoimitus-isoisa-pariisi-kolkata-20260909.json): molemmat URLit HEAD 200 image/jpeg. Kytkentä etusivun reittikuvatauluun (Pariisi uusi, Kalkutalle oma kuva, Benares takaisin `kaupunki: null` ja omalla kuvatekstillään, 320 px pienennykset sovitulla menetelmällä) on Opus-agentilla työn alla; kuittaan version tähän julkaisun jälkeen.
