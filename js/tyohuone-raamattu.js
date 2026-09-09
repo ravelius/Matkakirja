@@ -4216,6 +4216,16 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'GALLERIOIDEN SELAUSALUEET KAPEAMMIKSI, KESKELTA KLIKKI SUURENTAA '
+          + '(omistaja 9.9.2026 klo 14.15, sanatarkasti: "kaupunkilehden '
+          + 'herokuvissa ja muissa vastaavissa gallerioissa on liian levea alue '
+          + 'mista kuva siirtyy seuraavaan tai edelliseen kuvaan. kavenna sita, '
+          + 'jotta kuvan klikkaaminen ja suurentaminen keskelta on helpompaa"): '
+          + 'kaikissa pelin kuvagallerioissa (lehden herokuva/kansikuvat, '
+          + 'ennen/nyt, matkailijan oppaan karuselli, nahtavyysjutut, '
+          + 'postikorttipino, elainkaruselli ym.) edellinen/seuraava-alueet ovat '
+          + 'kapeat reunakaistat (enintaan noin neljannes kuvan leveydesta '
+          + 'kummallakin puolella), ja koko keskiosa avaa suurennoksen.',
         'PULUN KOMMENTIN JALKEEN KARTALLE NAPPI "ETSI AARRE" KAUPUNGIN LAATAN '
           + 'VIEREEN, AVAA KAUPUNKILEHDEN (omistaja 9.9.2026 klo 14.05, '
           + 'sanatarkasti: "kun pulun kommentti on tullut, kartalle saisi tulla '
