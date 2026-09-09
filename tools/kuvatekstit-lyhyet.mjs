@@ -376,7 +376,12 @@ function komentoVie(json) {
     }
     const lisaykset = [];
     for (const era of erat) {
-      const kohde = rivinMukaan.get(era.id) ?? tiivisteet.get(era.tiiviste) ?? null;
+      // Rivinumero kelpaa vain, jos sen kohdalla on SAMA teksti (tiiviste):
+      // aiemmat lisäykset siirtävät rivejä, ja vanha numero voi osua
+      // toisen olion kohdalle. Muuten tiiviste, kun se on yksikäsitteinen.
+      const rivilla = rivinMukaan.get(era.id);
+      const kohde = (rivilla && (!era.tiiviste || rivilla.tiiviste === era.tiiviste))
+        ? rivilla : (tiivisteet.get(era.tiiviste) ?? null);
       if (!kohde) {
         // Idempotenssi: jo lyhennetty kenttä ei ole enää listalla.
         ohitettu += 1;
