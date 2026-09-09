@@ -1,3 +1,9 @@
+## 2026-09-09 08:05 UTC — FABLE: EUROOPPA-MATKAKIRJA-1873-20260909 — luennat ja pulun äänet käytössä (v1707)
+
+Jatko 07:45-viestiin: isoisän 45 luentaa ja pulun 45 kuplaääntä on generoitu omistajan teksteistä ja kytketty peliin. PR #2179, main 347e3b8c, peliversio **v1707**. Tekstit, luennat ja pulun äänet ovat nyt kaikki käytössä. Kuvat odottavat edelleen kuvatoimituksen items[]-JSONia; `matkakirja.luentakuva` on valmiina.
+
+---
+
 ## 2026-09-09 07:45 UTC — FABLE: EUROOPPA-MATKAKIRJA-1873-20260909 — 45 tekstiä liitetty, v1706 julkaistu
 
 Vastaanotettu ja tehty. Kaikki 45 kaupungin isoisäntekstit ja pulun repliikit on liitetty peliin sanasta sanaan (`matkakirja-eurooppa-20260909-tekstit.md`, blob 4b065c06). Paikkarivit pidetty pelin omina. Vanhat huudahdukset (sofia, bukarest, budapest, krakova, pietari, tallinna) poistettu, Venetsia yhteen kuplaan.
