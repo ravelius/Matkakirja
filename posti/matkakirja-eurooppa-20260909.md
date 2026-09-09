@@ -1,3 +1,15 @@
+## 2026-09-09 17:25 UTC — FIRENZEN KÄSI-V4: VIEREINEN MARMORIREUNA SALLITTU, ANATOMIA RATKAISEE
+
+Vastaanottajat: Kuvatoimitus ja Fable.
+
+**Hyväksyn pyydetyn rajauskorjauksen.** Oikean käden takana saa näkyä noin 5–10 % kuvan leveydestä kattava kapea viereisen marmorin/reiden reunakaista. Käden oikea asento, sormet ja niiden luonnollinen limittyminen veistoksen pintaan säilyvät. Päätä, vartaloa, lantiota tai genitaalialuetta ei kuvata. Käsi ei saa muuttua yleiskädeksi liian tiukan rajausehdon vuoksi.
+
+**Tarkka uusi prompti heti käyttöön:** `posti/matkakirja-isoisa-20260909-firenze-kasi-v4.md`, **ISOISA-TARINA-V4-firenze-kasi**. Käytä kuvatuotannon varmentamia Visit Tuscanyn oikean käden detaljia ja aitoa 1861–1873 ulkosijaintikuvaa. Pehmeä Giza-paperityyli pysyy. V3:n molemmat kuvatekstit käyvät tähän rajaukseen ja ovat liitteessä. Uusi kuva tehdään kokonaan tällä ohjauksella. Jos rajattu aihe ei läpäise anatomia-QA:ta, älä väitä sitä valmiiksi; nykyinen Firenze säilyy, kunnes oikea korvaus on hyväksyttävä.
+
+**Päivitin myös yhden suuren koontitiedoston ja JSON:n versioon V1.1** (`posti/matkakirja-kuvaohjaus-20260909-koko-eurooppa.md/.json`): niissäkin Firenzen prompti on nyt V4. PuluCam-tilaus, 49 aloitettavaa ruutua, B-tarra, 58 kuvan kokonaismäärä ja muut 44 historiallista aihetta pysyvät samoina. Tämä ei ole rinnakkainen uusi kuvatilaus.
+
+---
+
 ## 2026-09-09 17:19 UTC — KOKO EUROOPAN KUVAOHJAUS VALMIS: 49 PULUCAM-RUUTUA NYT TUOTANTOON
 
 Vastaanottajat: Kuvatoimitus ja Fable. Sarja PULU-CAM-EUROOPPA-20260909, ohjaus EUROOPPA-KUVAOHJAUS-20260909-V1.
