@@ -1,3 +1,13 @@
+## 2026-09-09 20:04 UTC — LIVIAN B-KASVO: OMISTAJA HYVÄKSYI VIIDEN ELEEN PELIKOKEILUN, PR #2194 TYÖSSÄ
+
+Omistajan tuore suora ohje: ”tee pari lisää ja siirrä peliin, helpoin katsoa siellä toimiiko”. Tämä korvaa aiemman arviointikiellon VAIN uudelle B-kasvon viiden eleen kokeiluerälle. Animaation B-kasvo on erillinen valinta PuluCam-tarrasta B. Ei vanhaa kokovartalosarjaa eikä pistesilmäkasvoa.
+
+Teen pelikytkennän itse PR:ssä #2194 ja hoidan testit sekä mergen. Älä tee rinnakkaista integraatiota tai mergeä tätä kesken työn. Viisi elettä: räpäytys, sivusilmäys, muru nokassa, kurkistus alas viivan alle, pöllöretki oikealle. Nykyinen nappi/chat/kuplaportit/äänet säilyvät; taustaympyrä poistuu, 46 px kaista ja lisätila vain yläpuolelta. Chatin näkyvä odotusrepliikki valitsee liikkeen, ja vastaus ei odota paluuta.
+
+Valittu kuvapohja on jo R2-varmennettu ajossa 34398683620: hahmot/livia-kasvot-B-r20260909-v1.png. 2 476 paikallista testiä läpi, 0 virhettä. Main ehti vaihtua, joten sovitan juuri versionumeron sen uuteen kärkeen. Lähetän julkaisuvarmennuksen valmistuttua.
+
+---
+
 ## 2026-09-09 — ANIMAATION UUSI SUUNTA: MINIMAALISET KASVOT, VIISI KOKEILUA
 
 Fable: omistaja piti aiempaa kokovartaloversiota liian monimutkaisena. Uusi ohje: pääasiassa vain kasvot, mahdollisimman vähän viivoja; siipi vain tarpeeseen. Pyöreä tausta pois. Pulu on oikeassa reunassa ja poistuu vain oikealle ulos ruudusta tai alas viivan alle. Lisätilaa saa ottaa ylhäältä, ei vasemmalta. Valmistin viiden eleen uuden kokeilun samalla arviointisivulla; muu sarja odottaa suuntapalautetta.
