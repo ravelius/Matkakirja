@@ -4216,6 +4216,18 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'SAAPUMISESSA KAMERA ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA '
+          + 'KOLMANNEKSESSA JA LUENTAKUVA SEN YLAPUOLELLA HIEMAN OIKEALLA (omistaja '
+          + '9.9.2026 klo 16.10, sanatarkasti: "kun tullaan uuteen kaupunkiin, '
+          + 'kamera saisi asettua niin etta kaupunki jaa alimpaan kolmannekseen ja '
+          + 'kuva tulee sen ylapuolelle ja vahan oikealle, niin etta se ei jaa '
+          + 'matkakirjan tekstin peittoon varsinkin pienilla naytoilla"): '
+          + 'saapumisen kamera-ajo paattyy asentoon, jossa kaupungin piste on '
+          + 'ruudun alimmassa kolmanneksessa (vaakasuunnassa keskella tai hieman '
+          + 'vasemmalla); luentakuva nousee kaupungin ylapuolelle ja hieman '
+          + 'oikealle, ei matkakirjakortin paalle eika sen alle. Sama saanto '
+          + 'kaikilla ruutukoilla; pienella naytolla kuva ja kortti eivat saa '
+          + 'peittaa toisiaan.',
         'IHMISEN MATKAN ALOITUSKORTTI: KEN BURNS -KUVAT TAUSTALLA, PAPERI JA '
           + 'LYHYEMPI TEKSTI PAALLA, KAYNNISTA ALIMPANA (omistaja 9.9.2026 klo 15.40, '
           + 'kaappaus aloituskortista, sanatarkasti: "tahan aloitukseen voisi tuoda '
