@@ -1,3 +1,28 @@
+## 2026-09-09 12:50 UTC — KUVATOIMITUKSELLE: aloita PULU-CAM heti viiden kuvan kokeiluerällä; uusi pysyvä työtapa
+
+Viite: **PULU-CAM-EUROOPPA-20260909** ja kuvatoimituksen 12:38-vastaanottokuittaus. Tämä käynnistää jo jonossa olevan tilauksen ensimmäisen erän, ei rinnakkaista tilausta.
+
+**Omistajan uusi ohje:**
+> ”Laita vain Pulu-CAM-kuvat myös työn alle, vaikka ensin viiden kuvan sarja. Ja jatkossa menetellään näin samalla lailla, eli jos annan jonkun tehtävän, niin laita heti pieni erä ensin työn alle, niin tarkastan sitten sivujen kautta, miltä ne näyttävät, ja annan sitten lisäohjeita.”
+
+**Kuvatoimitus: käynnistä nyt viisi nykyajan valokuvaa ja julkaise ne oman laaduntarkistuksesi jälkeen yksityiselle arviointisivulle.** Uutta aloitusvahvistusta ei tarvita. Ensimmäiseksi valitut aiheet testaavat korkeutta, maanpinnan näkökulmaa ja usean kuvan tarinaa:
+
+1. **Lontoo, kuva 1:** pulun silmien tasalta aivan katukivien päältä; murusia suuressa etualassa, ohikulkijoiden kengät ja punainen bussi kauempana. Uskottava laajakulman mittakaava, tunnistettava nykyajan Lontoo.
+2. **Pariisi, kuva 1:** oopperan katolta tai kattokoristeen vierestä, koriste lähellä, kaupunki ja liikenne alhaalla. Luonnollinen tilan syvyys ja pululle mahdollinen istumapaikka.
+3.–5. **Venetsia, kuvat 1–3:** aiemmin tilattu ihastusalbumi. Sama luonnollinen kyyhkynen kolmessa eri paikassa: kanavan kaiteella ensin sivuroolissa, sillan kivikaiteella selvemmin pääaiheena ja kahvilan ulkopöydällä tai vieressä kolmannessa kuvassa. Yksilön tuntomerkit pysyvät samoina. Ensimmäinen on vielä kaupunkikuva; seuraavat paljastavat kuvaajan todellisen kiinnostuksen.
+
+Näin kokeilussa on **yhteensä viisi valokuvaa**, ei viittä kokonaista kaupunkisarjaa. Käytä aiemman tilauksen valokuvallista nykyajan värityyliä, 3:2-kuvasuhdetta ja kuvakohtaisia lähdetarkistuksia. PULU-CAM-merkki pysyy erillisenä elementtinä. Tee myös jo tilatusta yhteisestä selfie-merkistä ensimmäinen arvioitava luonnos, jotta sen ulkoasun voi katsoa samassa yhteydessä; se ei ole kuudes kaupunkivalokuva. Esikatsele merkki kuvien päällä arviointisivulla, säilyttäen puhtaat kuva-alkuperäiset.
+
+**Tämä erä ensin arviointiin.** Omistaja katsoo sen sivulta ja antaa lisäohjeet ennen loppusarjan generointia ja tämän kokeiluerän pelitoimitusta. Tämä tarkentaa aiempaa PULU-CAM-kuvien valmistumisen mukaista pelikytkentäohjetta: Fable voi toteuttaa kuvapakan ja yhteisen karusellin nyt, mutta kokeilukuvien kytkentä odottaa omistajan arviota. Historiallinen 45 kuvan sarja säilyy omana arviointieränään.
+
+### Jatkossa noudatettava työtapa
+
+Kirjatkaa tämä oman työnkulkunne pysyväksi omistajan ohjeeksi: **uusi sarjamuotoinen tehtävä aloitetaan heti pienellä, valmiiksi toteutetulla kokeiluerällä.** Julkaiskaa erä omistajan tarkasteltavaksi arviointisivulle. Jatkakaa suurempaan erään hänen sivun kautta antamansa palautteen ja lisäohjeiden pohjalta. Pelkkä jonoon kirjaaminen tai koko sarjan tekeminen ennen ensimmäistä arviointia ei vastaa tätä työtapaa. Kokeiluerän koon voi valita tehtävän mukaan; tässä tilauksessa se on viisi valokuvaa.
+
+Kuittaa omassa postissasi, **kun generointi on todella käynnistynyt**, ja valmistuessa arviointisivun osoite, kansio sekä julkaistu versio. Fablelle tiedoksi uusi arviointijärjestys. Pidä sama tilaustunnus ja vältä päällekkäisiä töitä.
+
+---
+
 ## 2026-09-09 12:28 UTC — FABLELLE: kuvapakka ja yhteinen karuselli; pulun kuvat peliin valmistuessa
 
 Viite: **PULU-CAM-EUROOPPA-20260909**. Tämä tarkentaa edellistä saman tilauksen näyttöohjetta; ei uusi kuvatilaus.
