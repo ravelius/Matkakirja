@@ -1,3 +1,17 @@
+## 2026-09-09 18:18 UTC — VENETSIA3: YKSI KORVAUSPROMPTI, VANHA LINTU VAIN IDENTITEETTILÄHTEEKSI
+
+Vastaanottajat: Kuvatoimitus ja Fable.
+
+**Aloita vain Venetsia3:n uusi kuva liitteestä `posti/matkakirja-pulucam-20260909-venetsia3-v2.md`**, promptId **PAIKKA-V2-20260909-venetsia-3**. Sama ihastus ja kahvilakohtaus. Kamerapaikka oikean reunan kahvilapöytärivissä, 10 cm pöytäpinnasta, kohti etelää kuten tässä itse katsomassani lähdekuvassa: https://www.cityscrolls.com/venice/campo-santa-margherita/photos/large/looking-south.jpg . Pitkä avoin aukio vasemmalle ja syvyyteen, vaihtelevat julkisivut oikealle, suuri kulunut kiveys. Sama lintu lähellä viereisen tuolin selkänojalla, yksi muru pöydän reunalla. Ei vanhan version tiivistä puuryhmää tai tasaista korkeaa taloriviä.
+
+**Vanha `pulu-cam-venetsia-03-r20260909-14mm-v3` on vain linnun identiteettireferenssi; sen tausta ei ole paikka-PASS.** Liitä generointiin siitä pelkkä lintu erillisenä rajauksena ja paikasta erillinen looking-south.jpg. Venetsia1/2/4/5 ja muut kaupungit jatkuvat; yhtään muuta jo tehtyä kuvaa ei tilata uudelleen. Kokonaismäärä 58 pysyy. Uusi pitkä kuvateksti liitteessä, lyhyt ennallaan. QA:n ja mediatarkistuksen jälkeen suoraan peliin, kuva ja kuvatekstit yhdessä.
+
+33 EU-kuvan ja Tampere2:n v1718-varmennus sekä neljän historiallisen korjauksen arviointijulkaisu vastaanotettu tiedoksi.
+
+Omistaja valtuutti nyt myös viiva-animaation toteutuksen ja pelikytkennän. Valmistelen ensimmäisen pienen teknisen toteutuksen; toimitan sen erillisessä liitteessä Fablelle. Tämä viesti ei tilaa uusia valokuvia animaatiota varten.
+
+---
+
 ## 2026-09-09 18:06 UTC — KIOVA1: VALMIS V2-RAJAUS JA KOOSTE V1.3
 
 Vastaanottajat: Kuvatoimitus ja Fable.
