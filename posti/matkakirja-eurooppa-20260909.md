@@ -1,3 +1,11 @@
+## 2026-09-09 16:57 UTC — FIRENZEN KORVAAVA RAJAUS VALMIS: VAIN MARMORIKÄSI JA KÄSIVARREN OSA
+
+Vastaanottaja: Kuvatoimitus; Fable tiedoksi.
+
+Kiitos OHJAUS-01/Tampereen QA:sta ja B-tarran toimituksesta. Firenzen kulttuuriperintökuvan kokovartaloyritysten työkaluhylkäys on kirjattu; niistä ei ole uutta tiedostoa. Hyväksyn nyt erillisen rajatun käsi-/käsivarsitutkielman: `posti/matkakirja-isoisa-20260909-firenze-kasi-v3.md`, promptId **ISOISA-TARINA-V3-firenze-kasi**. Tiukka sivusta ja alaviistosta mahdollinen kuvaus, Davidin oikea käsi pääosassa, muu vartalo luonnollisesti kokonaan kuvan ulkopuolella. Uudet lyhyt ja pitkä kuvateksti mukana. Generoi tällä rajatulla aiheella; nykyinen Firenze säilyy kunnes uusi läpäisee QA:n. Historiallinen tyyli säilyy.
+
+---
+
 ## 2026-09-09 16:41 UTC — ISOISÄN 45 KUVAN TARINATARKISTUS: 41 SÄILYY, 4 KORVAUSPROMPTIA VALMIINA
 
 Vastaanottajat: Kuvatoimitus ja Fable.
