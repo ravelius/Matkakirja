@@ -1,0 +1,155 @@
+{
+  "batchId": "ISOISA-TARINAKORJAUKSET-4-20260909",
+  "status": "owner-approved-root-qa-publicly-verified",
+  "instructions": [
+    "Replace matkakirja.luentakuva only for these four cities with each exact image and paired short/long captions. Preserve all other 41 historical slots and all PuluCam photos.",
+    "captionShort maps to lyhyt; caption to selite; sourceLine to lahde; keep working Havainnekuva link in the long-caption view.",
+    "Preserve old assets. This is the owner-approved four-story-correction delivery, not the previously canceled paper-v3 batch. Report main commit/version after integration."
+  ],
+  "items": [
+    {
+      "cityId": "kiova",
+      "captionShort": "Kiova, 1873. Toinen liekki ei pienentänyt ensimmäistä.",
+      "caption": "Nainen suojasi tulta kädellään, ja toinen sydänlanka alkoi hehkua. Kapeassa käytävässä ei juuri ollut tilaa väistää, mutta tuolle eleelle oli. Kiovan luostarin alla kuljetaan pyhiinvaeltajien jäljissä kynttilä kerrallaan. Asetin saamani valon kivireunalle kameran viereen. Kuvassa se näyttää pieneltä. Sen turvin löysin kuitenkin takaisin muiden luo.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://guide.kyivcity.gov.ua/lavra-vr/en/",
+        "https://whc.unesco.org/en/list/527/"
+      ],
+      "promptId": "ISOISA-TARINA-V2-kiova",
+      "sha256": "4bb5b2b0fa9b9a1dc06cf34af434b4c50f60ddc253d5f94f57d6f69ad8e92b64",
+      "id": "matkakirja-eurooppa-1873-kiova-r20260909-story-v1",
+      "fileName": "matkakirja-eurooppa-1873-kiova-r20260909-story-v1.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kiova-r20260909-story-v1.jpg",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "promptProvenance": {
+        "sourceFile": "posti/matkakirja-isoisa-20260909-korjauspromptit.md",
+        "sourceCommit": "f139ab88d451f03d2da3f66a99d7f305d688b730",
+        "sourceBlob": "29574e9218e3ea878b8d98076bb8b086ef0c6ded"
+      },
+      "ownerApprovalRequestId": "71f8dd7f-b6a5-41d7-b66a-84f9c96b32fb",
+      "replacesReviewId": "matkakirja-eurooppa-1873-kiova-r20260909-paper-v4",
+      "reconstructionNotes": "Kyiv Digital identifies the Near and Far Caves as labyrinthine artificial underground corridors in the Lower Lavra; UNESCO supports the Lavra’s long Orthodox monastic context through the nineteenth century. The exact 1873 entrance-threshold finish is not documented by the cited sources, so the image deliberately uses a plain, narrow lime-plastered passage rather than claiming ornate geometry. The woman and flame-sharing moment are fictional. Exactly two prominent candles are shown; one is upright on the ledge and the lit one touches its wick.",
+      "publiclyVerifiedAt": "2026-09-09T19:33:30.695Z"
+    },
+    {
+      "cityId": "tallinna",
+      "captionShort": "Reval, 1873. Apteekkari määräsi suuremman palan.",
+      "caption": "Tiskillä oli vaaka, mutta tällä kertaa apteekkari luotti silmämäärään. Veitsi siirtyi hieman kauemmas, ja lääkeannokseni kasvoi. Raeapteekin hyllyillä seisoi vakavia astioita; mantelista ja sokerista tehty marsipaani piti niiden seurassa varsin iloista virkaa. Kuvasin leikatun palan ennen lähtöä. Se osoittautui hyväksi päätökseksi, sillä satamassa jäljellä oli enää paperi.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://raeapteek.ee/en/",
+        "https://visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/174823/town-hall-pharmacy"
+      ],
+      "promptId": "ISOISA-TARINA-V2-tallinna",
+      "sha256": "b9459f4229a1c0e9300bdfc911029f9a09924e94ba332b56858bb682d087275b",
+      "id": "matkakirja-eurooppa-1873-tallinna-r20260909-story-v2",
+      "fileName": "matkakirja-eurooppa-1873-tallinna-r20260909-story-v2.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tallinna-r20260909-story-v2.jpg",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "promptProvenance": {
+        "sourceFile": "posti/matkakirja-isoisa-20260909-korjauspromptit.md",
+        "sourceCommit": "f139ab88d451f03d2da3f66a99d7f305d688b730",
+        "sourceBlob": "29574e9218e3ea878b8d98076bb8b086ef0c6ded"
+      },
+      "ownerApprovalRequestId": "e4061cc4-93a7-4687-a1d1-5497811ea487",
+      "replacesReviewId": "matkakirja-eurooppa-1873-tallinna-r20260909-paper-v4",
+      "reconstructionNotes": "The official Raeapteek and Visit Tallinn pages establish the historic pharmacy on Town Hall Square and its long pharmacy tradition. Current interior photographs were used only for the compact room, dark wooden cabinetry, ceiling beams and jar-filled pharmacy character. Present-day tiled floors, electric lights and glass museum cases were excluded because they do not prove the 1873 room. No exterior sightline is claimed. The anonymous apothecary and marzipan cutting are fictional; the scale is background context and remains unused.",
+      "publiclyVerifiedAt": "2026-09-09T19:33:37.859Z"
+    },
+    {
+      "cityId": "lontoo",
+      "captionShort": "Lontoo, 1873. Vastapäinen herra pysyi lehden puolella savustakin.",
+      "caption": "Vaunun ikkuna antoi valoa sen verran, että näin lehden liikahtavan. Lukija itse oli savussa epävarmempi tapaus. Metropolitanin junaa veti höyryveturi, vaikka rata kulki maan alla; uutuuden mukana matkusti siis vanha tuttu hiilensavu. Odotin pysähdyksen ajan kameran takana. Herra odotti uutisten loppumista. Kumpikaan meistä ei näyttänyt pitävän yskimistä syynä keskeyttää työtään.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.ltmuseum.co.uk/collections/stories/transport/metropolitan-line",
+        "https://collection.sciencemuseumgroup.org.uk/objects/co8031819/henry-flather-collection-photographs",
+        "https://www.heritagefund.org.uk/news/worlds-oldest-known-underground-carriage-be-restored"
+      ],
+      "promptId": "ISOISA-TARINA-V2-lontoo",
+      "sha256": "d34a57191628c5acb92ac7b3b1225b8f544957c4f9482aa42146b19a59df5b9a",
+      "id": "matkakirja-eurooppa-1873-lontoo-story-v2",
+      "fileName": "matkakirja-eurooppa-1873-lontoo-story-v2.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-story-v2.jpg",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "promptProvenance": {
+        "sourceFile": "posti/matkakirja-isoisa-20260909-korjauspromptit.md",
+        "sourceCommit": "f139ab88d451f03d2da3f66a99d7f305d688b730",
+        "sourceBlob": "29574e9218e3ea878b8d98076bb8b086ef0c6ded"
+      },
+      "ownerApprovalRequestId": "9a4e8d60-fc12-4f45-a7c1-e05a863958c1",
+      "replacesReviewId": "matkakirja-eurooppa-1873-lontoo-r20260909-paper-v4",
+      "reconstructionNotes": "Entirely new AI reconstruction. Camera is unequivocally inside an enclosed wooden individual compartment with facing seats, windows and door portion. Surviving 1892/1900 vehicles were not treated as exact 1873 interiors; precise upholstery, framing and hardware remain informed reconstruction. Open-cutting stop daylight supports exposure.",
+      "publiclyVerifiedAt": "2026-09-09T19:33:44.394Z"
+    },
+    {
+      "cityId": "firenze",
+      "captionShort": "Firenze, 1873. Kivinen käsi näytti osaavan jotakin, mitä omani ei.",
+      "caption": "Rajasin kuvaan Davidin suuren käden ja osan käsivarresta. Marmorin rystysissä on niin tarkkaa lepoa, että odotin melkein sormien liikkuvan. Michelangelon patsas seisoo vielä ulkona Palazzo Vecchion edessä. Sen takana palatsin kivi näyttää kiveltä, mutta tämän käden kohdalla asia ei ole yhtä yksinkertainen. Kamerani pystyy ottamaan siitä kuvan. Veistäjän oli ensin saatava se esiin.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://catalogo.beniculturali.it/detail/PhotographicHeritage/0800635892",
+        "https://www.lombardiabeniculturali.it/fotografie/schede/IMM-3a010-0012052/",
+        "https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/",
+        "https://www.galleriaaccademiafirenze.it/la-galleria/",
+        "https://www.visittuscany.com/en/ideas/michelangelos-david-some-facts-you-might-not-know/"
+      ],
+      "promptId": "ISOISA-TARINA-V4-firenze-kasi",
+      "sha256": "c82effca941bff7848d42a7c85b63acea53fcabbe0ec61519661dd913e9c5c55",
+      "id": "matkakirja-eurooppa-1873-firenze-kasi-v6",
+      "fileName": "matkakirja-eurooppa-1873-firenze-kasi-v6.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-firenze-kasi-v6.jpg",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "promptProvenance": {
+        "sourceFile": "posti/matkakirja-isoisa-20260909-firenze-kasi-v4.md",
+        "sourceCommit": "2a4aa1b45d1d962d8dcdfab792ae64ff17afb159"
+      },
+      "ownerApprovalRequestId": "75df9aa9-072c-4f9c-9497-db00849354d9",
+      "replacesReviewId": "matkakirja-eurooppa-1873-firenze-r20260909-paper-v4",
+      "reconstructionNotes": "Entirely new AI historical reconstruction from the inspected anatomy, period-place and paper references. Fine camera position and light are inferred.",
+      "publiclyVerifiedAt": "2026-09-09T19:33:50.167Z"
+    }
+  ],
+  "gameIntegrationVerified": false,
+  "publicVerification": {
+    "finishedAt": "2026-09-09T19:33:50.206Z",
+    "count": 4,
+    "checks": [
+      "GET HTTP 200",
+      "SHA-256",
+      "MIME image/jpeg",
+      "1536x1024",
+      "embedded sRGB",
+      "game-origin CORS"
+    ]
+  }
+}
