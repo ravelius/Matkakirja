@@ -177,6 +177,8 @@ test('linssimoduuleissa ei ole SVG-suodattimia', () => {
  * moduuli jää ilman tuojaa.
  */
 const NIPUTTAMATTOMAT = new Set([
+  // Vanha PNG-B-sovitin säilyy vertailuun; pelissä käytetään pikselikasvoa.
+  'js/livia-kasvot.js',
   // Linssien aineistopaketit: vain linssimoduulit (js/linssit/) tuovat
   // näitä, ja ne jäävät listalta pois yllä kerrotusta syystä.
   'js/packs/linssi-historia.js',

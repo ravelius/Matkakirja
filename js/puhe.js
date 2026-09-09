@@ -1,3 +1,4 @@
+import { ilmoitaLivianKasvopuhe } from './livia-puhetila.js';
 /*
  * PUHE — lukijaääni lennossa generoituna (omistajan päätös 14.8.2026).
  *
@@ -874,7 +875,16 @@ export function luoPuheSoitin({
     return ketju ? ketju.input : suora;
   };
 
+  const kasvoTunnus = {};
+  const ilmoitaKasvopuhe = () => {
+    if (persoona !== 'pollo') return;
+    const nyt = piiri.currentTime;
+    const i = !tila.peruttu && !tila.tauolla && piiri.state === 'running'
+      ? aloitusajat.findIndex(a => a && nyt >= a.alku && nyt < a.loppu) : -1;
+    ilmoitaLivianKasvopuhe(kasvoTunnus, i >= 0, palat[i]?.teksti);
+  };
   const ilmoita = () => {
+    ilmoitaKasvopuhe();
     if (!onTila || tila.peruttu) return;
     const pala = palat[tila.soiva]
       ?? palat[Math.min(vuorossa, palat.length - 1)] ?? null;
@@ -934,6 +944,7 @@ export function luoPuheSoitin({
   const loppu = () => {
     if (tila.peruttu) return;
     tila.peruttu = true;
+    ilmoitaKasvopuhe();
     clearInterval(kello);
     kello = null;
     puraKetju();
@@ -968,6 +979,7 @@ export function luoPuheSoitin({
           // koko tekstille; myöhempi virhe päättää luennan siististi.
           const vaihe = tila.soiva < 0 && !lahteet.size ? 'alku' : 'kesken';
           tila.peruttu = true;
+          ilmoitaKasvopuhe();
           clearInterval(kello);
           kello = null;
           pysaytaLahteet();
@@ -1013,6 +1025,7 @@ export function luoPuheSoitin({
         return;
       }
       if (!tila.tauolla) aikatauluta();
+      ilmoitaKasvopuhe();
       const nyt = piiri.currentTime;
       let soiva = tila.soiva;
       for (let i = 0; i < aloitusajat.length; i += 1) {
@@ -1102,6 +1115,7 @@ export function luoPuheSoitin({
     pysayta() {
       if (tila.peruttu) return;
       tila.peruttu = true;
+      ilmoitaKasvopuhe();
       clearInterval(kello);
       kello = null;
       pysaytaLahteet();

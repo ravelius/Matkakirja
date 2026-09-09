@@ -478,6 +478,7 @@ const MODULES = [
    * lukijaäänen piirin, joten ambience-stream tuo puhe.js:n
    * staattisesti.
    */
+  'js/livia-puhetila.js',
   'js/puhe.js',
   'js/kehittajan-voimat.js',
   /*
@@ -614,7 +615,7 @@ const MODULES = [
    * mitään.
    */
   'js/pollo-haku.js',
-  'js/livia-kasvot.js',
+  'js/livia-pikselit.js',
   'js/livia-eleet.js',
   'js/pollo.js',
   /*

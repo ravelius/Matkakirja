@@ -1,0 +1,28 @@
+<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Livian 45 pikselielettä</title><link rel="stylesheet" href="../css/styles.css"><style>
+html,body{height:auto;overflow:auto;overscroll-behavior:auto}body{display:block;min-height:100vh;background:#eee4d2;color:#27251f;font:16px system-ui;margin:0;padding:20px}main{display:block;height:auto;max-width:480px;margin:auto}h1{font-size:26px}p{line-height:1.5}.lava{position:relative;height:230px;border:1px solid #938771;border-radius:18px;background:#e0d1b1;margin:20px 0;overflow:hidden}.lava:before{content:'Matkakirjan kasvosovitin';position:absolute;top:18px;left:18px}.lava .pollo-nappi.pollo-kelluu{position:absolute!important;right:12px!important;bottom:14px!important;height:44px!important;transform:none!important}.rivi{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}button,select{font:inherit;padding:10px;border:1px solid #928672;border-radius:7px;background:#fffcf3;color:#24221c}select{max-width:100%}output{display:block;min-height:24px}#virta{background:#fff8e8;padding:12px;border-radius:8px;min-height:44px}.zoomi{height:275px;display:flex;justify-content:center;align-items:end}canvas{image-rendering:pixelated}a{color:#49402f}</style></head><body><main>
+<h1>Pieni naama. 45 elettä.</h1><p>Sama kasvo ja sovitin kuin pelissä. Valitse ele tai kokeile chatin odotusta. Pään lisätila jää ylös.</p>
+<div class="lava"><button class="pollo-nappi pollo-kelluu" id="pulu" aria-label="Avaa Pulun chat" aria-expanded="false"><span class="viiva-ikoni">?</span></button></div>
+<label>Ele <select id="ele"></select></label><div class="rivi"><button id="toista">Toista ele</button><button id="lepo">Palaa lepoon</button></div>
+<div class="rivi"><button id="odota">Käy kysymässä pöllöltä</button><button id="vastaa">Vastaus saapuu</button><button id="pulla">Pulla suussa</button></div><div id="virta" aria-live="polite"></div>
+<div class="rivi"><button id="puhe">Toiston koesignaali (äänetön)</button><button id="tauko">Tauko</button><button id="jatka">Jatka</button><button id="lopeta">Lopeta toisto</button></div><output id="tila" aria-live="polite">Hiljaa</output>
+<div class="zoomi"><canvas id="iso" aria-label="Eleen suurennos"></canvas></div><label>Liikkeen kohta <input type="range" id="kohta" min="0" max="1000" value="500"></label><p><a href="../">Palaa peliin</a></p>
+</main><script type="module">
+import{asennaLivianKasvot}from'../js/livia-eleet.js';
+import{LIVIA_PIX_ELEET,luoLivianPikselit,livianPikseliAsento}from'../js/livia-pikselit.js';
+import{seuraaLivianKasvoAanitetta,lopetaLivianKasvoAanite,kuunteleLivianKasvopuhetta}from'../js/livia-puhetila.js';
+const $=id=>document.getElementById(id),pollo={doc:document,nappi:$('pulu'),virta:$('virta'),auki:false,haeUi:()=>({})};
+const eleet=asennaLivianKasvot(pollo),iso=luoLivianPikselit($('iso'),6);
+for(const c of LIVIA_PIX_ELEET){const o=document.createElement('option');o.value=c.id;o.textContent=c.group+' · '+c.label;$('ele').append(o);}
+const suurennos=()=>iso.paint(livianPikseliAsento($('ele').value,Number($('kohta').value)/1000));
+$('kohta').oninput=suurennos;$('ele').onchange=suurennos;suurennos();
+$('toista').onclick=()=>eleet.toista($('ele').value);$('lepo').onclick=()=>eleet.palaa();
+function chat(auki){pollo.auki=auki;$('pulu').setAttribute('aria-expanded',String(auki));}
+$('pulu').onclick=()=>chat(!pollo.auki);
+function odotus(text){chat(true);$('virta').replaceChildren();const r=document.createElement('div');r.className='pollo-odottaa';r.textContent=text;$('virta').append(r);}
+$('odota').onclick=()=>odotus('Käyn kysymässä pöllöltä, pieni hetki..');$('pulla').onclick=()=>odotus('Hetki, pululla pulla suussa..');
+$('vastaa').onclick=()=>{$('virta').replaceChildren(document.createTextNode('Tässä vastaus. Ei odoteta animaatiota.'));};
+let audio=null,audioUrl=null;
+$('puhe').onclick=()=>{if(audio){lopetaLivianKasvoAanite(audio);audio.pause();URL.revokeObjectURL(audioUrl);}const n=8000*20,b=new ArrayBuffer(44+n*2),v=new DataView(b),str=(o,s)=>[...s].forEach((c,i)=>v.setUint8(o+i,c.charCodeAt(0)));str(0,'RIFF');v.setUint32(4,36+n*2,true);str(8,'WAVEfmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,8000,true);v.setUint32(28,16000,true);v.setUint16(32,2,true);v.setUint16(34,16,true);str(36,'data');v.setUint32(40,n*2,true);audioUrl=URL.createObjectURL(new Blob([b],{type:'audio/wav'}));audio=new Audio(audioUrl);seuraaLivianKasvoAanitetta(audio,'Kuulehan. Minä tiedän.');audio.play().catch(()=>{});};
+$('tauko').onclick=()=>audio?.pause();$('jatka').onclick=()=>audio?.play().catch(()=>{});$('lopeta').onclick=()=>{if(audio){lopetaLivianKasvoAanite(audio);audio.pause();}};
+kuunteleLivianKasvopuhetta(t=>{$('tila').textContent=t.length?'Nokka puhuu':'Hiljaa';});
+</script></body></html>
