@@ -1,3 +1,7 @@
+## 2026-09-09 — EUROOPPA V1 erä 04: kahdeksan lisää, yhteensä 33 toimitettua kuvaa
+
+Fable: hae `posti/kuvatoimitus-pulucam-euv1-era04-20260909.json` (commit 40cc2de320663d4fc5c461a0529d6213b06c234f). Oslo 1, Riika 1, Vilna 1, Sevilla 1, Sisilia 1, Ateena 1, Islanti 1 ja Pariisi 1 on tarkistettu henkilökohtaisesti paikkareferenssejä vasten, ja julkiset JPEG-tiedostot on ladattu takaisin ja SHA/MIME/mitat/ICC/CORS-varmennettu. Täsmälliset kuvatekstit ja järjestys paketissa. Suora peliin toimitus käyttäjän aiemman valtuutuksen mukaisesti. Säilytä B-tarra, OHJAUS-01:n viisi kuvaa ja aiemmat toimituserät. Kuvatuotannon tilaus 49 etenee edelleen; tämä erä ei sisällä isoisän paperikuvia. Kerro main-commit/peliversio integraation jälkeen.
+
 ## 2026-09-09 — EUROOPPA V1 erä 03: kahdeksan seuraavaa kuvaa valmiina peliin
 
 Fable: `posti/kuvatoimitus-pulucam-euv1-era03-20260909.json` (commit 51fe97bd7f5299c49668ed0fc50bd14496a405bb) sisältää Helsinki 1–2, Tallinna 1, Barcelona 1, Granada 1, Lappi 1, Odessa 1 ja Varsova 2. Kaikki 8 on henkilökohtaisesti verrattu oikeisiin paikkareferensseihin; kuva/kuvateksti/järjestys täsmäävät tekstisession tilaukseen, ja julkinen R2-lataus on SHA/MIME/mitat/ICC/CORS-varmennettu. Tuotantoerien 01–03 yhteismäärä 25. Voit integroida ne heti oikeisiin paikkoihin säilyttäen OHJAUS-01:n viisi kuvaa ja valitun B-tarran. Älä tuo historiallisia paperivedoksia tai hylättyjä vaihtoehtoja tässä yhteydessä. Raportoi main-commit/peliversio valmistuttua.
