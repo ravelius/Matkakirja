@@ -217,6 +217,15 @@ Vartijat: `tests/sivunkaanto.test.mjs`, `tools/savukkeet/savuke-sivunkaanto.mjs`
   lisenssiin `(PD)`, ei `(public domain)`. Lisenssi käskee nimetä tekijän.
 - Kuvat päätyvät R2-peiliin itsestään: push mainiin käynnistää
   `.github/workflows/peilaa.yml`:n, joka peilaa uudet viittaukset.
+- **Selauskaistat (omistaja 9.9.2026):** herokuvan ja kansikuvien
+  karusellissa edellinen/seuraava on vain kapea reunakaista, 24 % kuvan
+  leveydestä kummallakin puolella; keskimmäinen 52 % avaa suurennoksen.
+  Luku asuu YHDESSÄ paikassa: `js/galleria.js` `GALLERIAN_REUNAKAISTA`
+  ja sen CSS-pari `--gallerian-reunakaista` (css/styles.css `:root`).
+  Nuolialueiden leveyttä ei kirjoiteta tyyleihin lukuna — `width:
+  var(--gallerian-reunakaista)` — eikä vyöhykettä lasketa käsin, vaan
+  `gallerianVyohyke()`-apurilla. Pyyhkäisy ja nuolinapit toimivat kuten
+  ennen. Vartija: `tests/galleria.test.mjs`.
 
 ### Kuvien sietokyky: r2.dev rajoittaa pyyntöjä (429), 6.9.2026
 

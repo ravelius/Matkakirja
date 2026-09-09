@@ -863,7 +863,14 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 30%;
+  /*
+   * KAPEA REUNAKAISTA (omistaja 9.9.2026, ks. css/styles.css :root
+   * --gallerian-reunakaista ja js/galleria.js GALLERIAN_REUNAKAISTA).
+   * Ennen 30 % kummallakin puolella: keskelle jäi 40 %, eikä kuvan
+   * ylä- ja alalaidasta päässyt suurennokseen muualta. Nyt 24 %,
+   * keskiosaa 52 %.
+   */
+  width: var(--gallerian-reunakaista);
   padding: 0;
   border: 0;
   background: none;

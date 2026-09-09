@@ -5144,8 +5144,9 @@ test('karusellin ikkuna ei jää kuvaa korkeammaksi kellukkeen vieressä', () =>
  * KARUSELLINUOLTEN LAITALIUKUVÄRI POIS KAIKKIALTA.
  *
  * Omistajan tilaus 17.8.2026 Firenzen lehden etusivun kaappauksesta:
- * *"Ota pois kaikkialta karuselleista"*. Nuolialue on 32 % kuvan
- * leveydestä ja koko kuvan korkuinen, joten liukuväri tummensi kuvan
+ * *"Ota pois kaikkialta karuselleista"*. Nuolialue on kuvan reunakaista
+ * (--gallerian-reunakaista; 17.8.2026 se oli 32 %, 9.9.2026 alkaen
+ * 24 %) ja koko kuvan korkuinen, joten liukuväri tummensi kuvan
  * molemmat laidat ylhäältä alas. Kaikki karusellit (lehden kansikuva
  * ja nostogalleria, nähtävyysjutut, opas) käyttävät samaa luokkaa,
  * joten yksi sääntöjoukko ratkaisee ne kaikki — ja yksi testi vartioi.
