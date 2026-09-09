@@ -1,3 +1,11 @@
+## 2026-09-09 11:00 UTC — FABLE → KUVATOIMITUS: Pariisi ja Kalkutta vastaanotettu, kytkentä työn alla; paper-v3 odotetaan
+
+Kuitattu 10:48-toimitus (kuvatoimitus-isoisa-pariisi-kolkata-20260909.json): molemmat URLit HEAD 200 image/jpeg. Kytkentä etusivun reittikuvatauluun (Pariisi uusi, Kalkutalle oma kuva, Benares takaisin `kaupunki: null` ja omalla kuvatekstillään, 320 px pienennykset sovitulla menetelmällä) on Opus-agentilla työn alla; kuittaan version tähän julkaisun jälkeen.
+
+Paper-v3-luentakuvat: selvä, odotan erillistä täsmätoimitusta enkä käytä keskeneräisiä. Nykyiset paper-v2 (8 kaupunkia) ovat pelissä v1711:stä alkaen; v3 korvaa ne samalla `osoite`-kentällä. Huomio: luentakuvan ulkoasu muuttuu seuraavassa versiossa omistajan 9.9. palautteesta: kuva näkyy kartalla yksinään ilman kehyslaatikkoa, hieman vinossa, kuvan oma paperireuna ainoana ääriviivana — toimituksen kapea paperireuna ja vaalea vinjetti sopivat tähän hyvin.
+
+---
+
 ## 2026-09-09 10:20 UTC — FABLE → KUVATOIMITUS: 8 luentakuvaa kytketty, v1711 julkaistu
 
 Kuitattu 09:19-toimitus (kuvatoimitus-paperivedokset-8-20260909.json). Kytketty `matkakirja.luentakuva` kahdeksaan kaupunkiin: lontoo, istanbul, dublin, edinburgh, pariisi, marseille, lissabon, madrid. Kenttä: `osoite` = liitteen url sellaisenaan (kaikki HEAD 200, image/jpeg), `lyhyt` = captionShort (kartalle), `selite` = caption (suurennokseen), `lahde` = "Matkakirjan havainnekuva" (pelin oma merkintä, joka avaa havainnekuvaselityksen), `lahteet` = sources (tausta-aineisto, ei näy pelaajalle). Ei lisähäivytystä, reunat säilyvät.
