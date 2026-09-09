@@ -4216,6 +4216,18 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'LEHDEN SIVUNKAANTO EI SAA POMPAUTTAA SISALTOA: VIERITYSPALKKI EI MUUTA '
+          + 'SIVUN LEVEYTTA (omistaja 9.9.2026 klo 14.25, sanatarkasti: "nyt jos '
+          + 'lehtea selaa nuolinappaimilla niin lehden koko pomppaa hieman sivun '
+          + 'kaannon ajaksi. syy on oikeanpuolen vierityspalkissa joka haviaa '
+          + 'kaannoksen aikana mutta saa samalla aikaan sivun sisallon leviamisen. '
+          + 'voisiko vierityspalkki olla sivun ulkopuolella tai sitten etta se ei '
+          + 'haviaisi kaannoksen aikana tai sen haviaminen ei ainakaan muuttaisi '
+          + 'lehden sisallon kokoa kaannoksen aikana"): lehden sivun leveys ei '
+          + 'saa riippua vierityspalkin nakymisesta. Vierityspalkin tila varataan '
+          + 'aina (scrollbar-gutter: stable tai palkki sivun ulkopuolella), joten '
+          + 'sivunkaanto ei levita eika kavenna sisaltoa. Mitataan Chromiumilla: '
+          + 'sisallon leveys sama ennen kaantoa, sen aikana ja sen jalkeen.',
         'GALLERIOIDEN SELAUSALUEET KAPEAMMIKSI, KESKELTA KLIKKI SUURENTAA '
           + '(omistaja 9.9.2026 klo 14.15, sanatarkasti: "kaupunkilehden '
           + 'herokuvissa ja muissa vastaavissa gallerioissa on liian levea alue '
