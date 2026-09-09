@@ -1,3 +1,17 @@
+## 2026-09-09 20:20 UTC — LIVIAN B-KASVO JA VIISI ELETTÄ PELISSÄ v1722
+
+Omistajan suora lupa ”tee pari lisää ja siirrä peliin, helpoin katsoa siellä toimiiko” on toteutettu. PR #2194 on squash-mergetty (a5b8c7c68295612b3c4f735512e1ed2a45afedd1). Lopullinen julkaisuajo 34399907697, main 200548f5a6186082d621ed9f3f7871be986f071f, build + deploy SUCCESS. Julkisesta https://matkakirja.app/ -pelistä luettu sw.js v1722 sekä molemmat uudet JS-tiedostot: HTTP 200 ja SHA-256 täsmälleen testattuja tiedostoja vastaava. Ohjetiedoston #2195 julkaisu sisältää tämän pelikoodin; oma alkuperäinen julkaisuajo väistyi sen tieltä.
+
+Mukana VAIN omistajan valitsema aikuisen asiantuntijan B-kasvo ja viisi elettä: blink, glance, crumb, peek (uusi kurkistus viivan alta), owl (uusi retki oikealle, hätäinen paluu). Alkuperäinen PNG muuttamattomana: https://media.matkakirja.app/hahmot/livia-kasvot-B-r20260909-v1.png ; kuvan SHA-256 04e93dd0c71698f6cb52682d53c63a1a96698d48cf1c5d28889f454c4c8eb94f, PNG 525503 tavua, CORS pelin originille todennettu. Tämä kasvo-B on erillinen PuluCam-tarrasta B.
+
+Toteutus: js/livia-kasvot.js (Canvas-liikkeet), js/livia-eleet.js (kytkentä), nykyisen js/pollo.js-napin sisälle. Kasvo noin 42 × 31 px, kaista 46 px leveä, tilapäinen lisätila vain yläpuolella; ympyrä poistettu. Vanha kuvake toimii kuvalatauksen varalla. Chat auki → sivusilmäys, chat kiinni → kurkistus. Näkyvä .pollo-odottaa-repliikki ohjaa elettä; pöllöretki pysyy oikealla poissa saman odotusrivin poistumiseen saakka, vastausta ei viivästetä. Kuplat → räpäytys tai pullanmuru. Harvat tyhjäkäyntiliikkeet vain rauhallisella kartalla, ei luennan/chatin päälle. Reduced motion ja taustavälilehti huomioitu. Nykyinen nappi/chat/äänitekstit ja äänien hallinta säilyvät.
+
+Validointi: 2476 testiä PASS, 0 FAIL, 13 tarkoituksella SKIP; CI Testit 34399523652 SUCCESS. Kaksoisavaimet, niputus, savukevartija ja standalone-build PASS. Uudet liikkeet visuaalisesti tarkistettu. Pilviselaimen karttapallo ei avautunut, joten koko pelikierroksen selain-QA:ta ei väitetä; omistaja arvioi tuntuman pelissä.
+
+Viiden eleen yksityinen vertailusivu päivitetty myös: https://matkakirja-pulun-animaatiot.sravelius.chatgpt.site (Sites v5, julkaisu SUCCESS). Ei rinnakkaista integraatiota tarvita. Aiemmat hyväksyntäkiellot koskevat vain muita/vanhoja animaatioversioita. Muu hahmoliiketyö odottaa omistajan palautetta tästä pienestä pelikokeilusta.
+
+---
+
 ## 2026-09-09 20:04 UTC — LIVIAN B-KASVO: OMISTAJA HYVÄKSYI VIIDEN ELEEN PELIKOKEILUN, PR #2194 TYÖSSÄ
 
 Omistajan tuore suora ohje: ”tee pari lisää ja siirrä peliin, helpoin katsoa siellä toimiiko”. Tämä korvaa aiemman arviointikiellon VAIN uudelle B-kasvon viiden eleen kokeiluerälle. Animaation B-kasvo on erillinen valinta PuluCam-tarrasta B. Ei vanhaa kokovartalosarjaa eikä pistesilmäkasvoa.
