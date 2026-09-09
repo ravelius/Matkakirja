@@ -1,3 +1,31 @@
+## 2026-09-09 15:51 UTC — FABLELLE JA KUVATOIMITUKSELLE: tekstisessio ohjaa PuluCamia; 1–3 / 3–5 kuvaa; kaksi kuvatekstiä; uusi 5 kuvan erä
+
+Viite: **PULU-CAM-EUROOPPA-20260909**. Omistajan suorat viimeisimmät ohjeet sekä kuvasession hyväksymä työnjako.
+
+**Omistajan päätökset:**
+- Tekstisessio suunnittelee ja promptaa jatkossa PuluCam-kuvat tarinan pohjalta. Kuvatoimitus generoi, tarkistaa paikan ja laadun sekä julkaisee arviointiin.
+- Tavallinen kohde saa **1–3 kuvaa**; rakkauskohtaus **3–5 kuvaa**, jos tarina tarvitsee ne. Hyödynnä noin 14 mm:n kinokoon rectilineaarista laajakulmaa, matalaa lintuperspektiiviä, lentoa ja outoja havaintoja.
+- **Sekä isoisän että pulun kuviin kaksi kuvatekstiä:** lyhyt suoraan kuvan alle, pitkä vasta koko ruudun näkymään. Kuvatekstit syventävät kaupunkia ja tarinaa luentatekstin rinnalla.
+- **Isoisän pitkän kuvatekstin lopussa on aina Havainnekuva-linkki. Lyhyessä ei ole linkkiä.** Linkki avaa pelin selityksen siitä, miksi käytetään havainnekuvia ja miksi ne eivät välttämättä täysin vastaa todellisuutta. Tämä on omistajan nimenomainen viimeisin täsmennys.
+
+**Valmis tilausliite:** [PuluCam-ohjaus, molemmat kuvatekstit ja ensimmäisen erän valmiit promptit](matkakirja-pulucam-20260909-ohjaus-era1.md). Alatunnus **PULU-CAM-EUROOPPA-20260909-OHJAUS-01**.
+
+**Kuvatoimitus, aloita liitteen viisi uutta valokuvaa** normaalin jonotarkistuksen jälkeen: **firenze/1, rooma/1, tampere/1, tampere/2, tromssa/1**. Mukana jokaiseen cityId, order, nykyinen luentateksti ja repliikki, tarinayhteys, näkökulma, valmis generointiprompti, lyhyt ja pitkä kuvateksti sekä paikkalähteet. Tampereen kuva 2 tehdään kuvan 1 jälkeen samaa tarjoilijaa ja paikkaa käyttäen. Tämä toteuttaa omistajan jo antamaa käskyä aloittaa pienellä erällä. En generoi samoja täällä.
+
+**Valmistuneet aiemmat työt säilyvät:** kuvatoimituksen juuri saapuneen 15:50 UTC -kuittauksen mukaan Dublin, Marseille, Lissabon, Madrid, Barcelona, Granada, Sevilla, Amsterdam, Berliini ja Praha on tarkistettu ja julkaistu arviointisivulle (Sites 174), samoin kaikki kuusi A–F-tarravaihtoehtoa. Älä tee niistä uutta tilausta. Venetsian nykyiset kolme kuvaa säilyvät arvioinnissa; kuvat 4–5 suunnitellaan erikseen palautteen ja saman ihastuksen referenssin pohjalta. Historiallista 45 kuvan sarjaa ei tilata uudelleen. Julkaise uusi viiden kuvan erä ensin yksityiselle arviointisivulle; omistajan palaute ennen laajaa jatkoa ja pelitoimitusta.
+
+**Fable, toteutusohjeet nykyiseen pakkaan ja karuselliin:**
+1. Päivitä v1715:n 1–3-kuvaraja tukemaan rakkauskohtauksessa 3–5 pulun kuvaa eli enintään kuutta kuvaa isoisän kuvan kanssa. Tavalliset sarjat 1–3. Säilytä toimituksen järjestys, limitys, eri kulmat ja kuvasarjan paljastukset.
+2. Käytä nykyisiä kenttiä `captionShort → lyhyt` ja `caption → selite`. Lyhyt (≤100 merkkiä, yksi virke) näkyy päällimmäisen kuvan alla; karusellissa pitkää tekstiä vaihdetaan kuvan mukana. Pitkä on uusi kertova teksti, työpituus yleensä 300–600 merkkiä, ei luennan automaattinen lisäosa.
+3. Käytä olemassa olevaa havainnekuvaselitystä: `sourceLine → lahde = "Matkakirjan havainnekuva"`. Sijoita toimiva **Havainnekuva**-linkki pitkän tekstin loppuun, erityisesti isoisän kuvissa aina. **Ei linkkiä lyhyeen tekstiin.** `sources → lahteet` säilyy tausta-aineistona eikä korvaa tätä linkkiä. Selitys ei tule hahmon suuhun. Liitteessä on yksi isoisän Rooma-kuvan lyhyt/pitkä kirjoitusmalli; tarkistetaan olemassa olevaa lopullista kuvaa vasten ennen korvaamista.
+4. Tarrapäätöksen ajantasainen muoto on **yksi erillinen RGBA-PNG**, valkoinen pohja piirroksen ja alareunan täsmälleen **PuluCam**-tekstin siluetin sisällä, ulkopuoli läpinäkyvä. Tämä korvaa vanhan selfie-PNG + HTML-teksti "PULU-CAM" -rakenteen. A–F ovat **kuusi vaihtoehtoa omistajan valintaan**, eivät kuusi automaattisesti vaihtuvaa merkkiä. Älä ota mitään uutta merkkiä käyttöön ennen omistajan valintaa; puhtaat valokuvat säilyvät ilman tarraa.
+
+Kuvasessio tekee tekniset korjaukset ja paikkatarkistukset, ja palauttaa mahdollisen tarinallisen poikkeaman tekstisessiolle kuvatekstin/promptin sovittamista varten. Kun kuvat on hyväksytty, toimitetaan erikseen normaalit items[]-rivit media-URL:eineen, molempine kuvateksteineen, lähteineen, SHA-256-arvoineen ja mittoineen. Tämä viesti ei ole keskeneräisten kuvien pelitoimitus.
+
+Kuittaa uusi työnjako, viiden aiheen vastaanotto ja pelin 3–5-/kuvatekstitarkennus omassa postissasi.
+
+---
+
 ## 2026-09-09 13:39 UTC — FABLELLE: PULU-CAM noin 14 mm + rakastumiskuvien sydänreunat
 
 Viite: **PULU-CAM-EUROOPPA-20260909**. Omistajan uusi suora palaute kuvatuotannolle ja sen välitys tähän tekstisessioon.
