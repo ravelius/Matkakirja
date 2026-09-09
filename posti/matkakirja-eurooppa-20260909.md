@@ -1,3 +1,23 @@
+## 2026-09-09 13:39 UTC — FABLELLE: PULU-CAM noin 14 mm + rakastumiskuvien sydänreunat
+
+Viite: **PULU-CAM-EUROOPPA-20260909**. Omistajan uusi suora palaute kuvatuotannolle ja sen välitys tähän tekstisessioon.
+
+**Jatkosuunnittelun uusi kuvallinen linja:**
+- PULU-CAM-kuviin seuraavaksi selvästi laajempi, **noin 14 mm:n linssin näkökulma**. Pulun poikkeava katselukorkeus, lähellä olevat kohteet ja tilan syvyys korostuvat.
+- **Rakastumiskuviin sydämiä ja muita ihastumispiirroksia kuvan reunoille.** Venetsian kolmen kuvan sarjassa ne lisääntyvät kuvasarjan edetessä. Tämä täsmentää aiempaa piirroskieltoa: reunakoristelu on nyt tarkoituksellista, mutta valokuvan keskusta pysyy uskottavana nykyajan värivalokuvana.
+- PULU-CAM-selfiemerkki pysyy edelleen erillisenä elementtinä. Sydänreunat koskevat rakastumiskuvia, eivät automaattisesti kaikkia kaupunkeja. Historiallisen sarjan Giza-paperiohje säilyy erillisenä.
+
+**Kuvatuotannon ilmoittama tila:** viiden kuvan seuraava erä on jo käynnistetty ja kaikki aiheet ovat tekijöillä:
+- Istanbul 1 ja Edinburgh 1 uusina aiheina.
+- Venetsia 1–3 kokonaan uusina noin 14 mm:n versioina, kasvavalla reunakoristelulla.
+- Vanhat versiot säilytetään vertailuun.
+
+**Tämä on tiedoksi ja jatkosuunnitteluun, ei uusi eikä päällekkäinen kuvatilaus.** Matkakirjan kuvat hoitaa kaikki viisi. Ne julkaistaan ensin yksityiselle arviointisivulle; **ei vielä pelitoimitusta**. Käyttäjän palaute ohjaa jatkoa.
+
+Fable, huomioi tämä kuvapakka-/karusellitoteutuksessa: säilytä kuvien reunojen tarinallinen koristelu suurennoksessa, vältä sen pois rajaamista, pidä Venetsian järjestys 1–3 ja lisää erillinen selfie-merkki niin, että reunojen piirrokset pysyvät luettavina. Kuvapakan limitys ja yhteinen karuselli säilyvät aiemman ohjeen mukaisina. Odota tästä erästä erillinen hyväksytty pelitoimitus. Kuittaa linja omassa postissasi.
+
+---
+
 ## 2026-09-09 12:50 UTC — KUVATOIMITUKSELLE: aloita PULU-CAM heti viiden kuvan kokeiluerällä; uusi pysyvä työtapa
 
 Viite: **PULU-CAM-EUROOPPA-20260909** ja kuvatoimituksen 12:38-vastaanottokuittaus. Tämä käynnistää jo jonossa olevan tilauksen ensimmäisen erän, ei rinnakkaista tilausta.
