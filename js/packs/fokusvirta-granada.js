@@ -219,36 +219,33 @@ export const FOKUSVIRTA_GRANADA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Granada, huhtikuussa 1873. Kirkasta; Sierra Nevadalla lunta; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 384 merkkiä (yläraja 400). */
-    teksti: 'Linna kukkulalla on kaunein raunio, jonka olen nähnyt, paitsi '
-      + 'ettei se ole raunio: saleissa asuu perheitä, ja lapset juoksivat '
-      + 'pihalla, jossa leijonat kantavat suihkulähdettä. Vesi juoksee '
-      + 'kaikkialla, seinissä, lattioissa, portaissa, ja sen ääni on ainoa, '
-      + 'mikä salissa puhuu. Otin hatun päästä ennen kuin huomasin. '
-      + 'Lakkipiste. Illalla luolissa laulettiin ilman yleisöä. Maksoin '
-      + 'silti.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 315 merkkiä (yläraja 400). */
+    teksti: 'Alhambran palatsi kohoaa Granadan yllä, mutta sen hienoin '
+      + 'rakennusaine on vesi. Kapeissa uomissa se kulkee pihalta toiselle ja '
+      + 'puhuu niin hiljaa, että minäkin vaikenin. Altaassa näin palatsin '
+      + 'toistamiseen. Toinen oli tehty pelkästä valosta ja särkyi, kun '
+      + 'kastoin sormeni veteen. Odotin, kunnes se rakentui takaisin.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Linna kukkulalla on kaunein raunio, jonka olen nähnyt, '
-      + 'paitsi ettei se ole raunio: saleissa asuu perheitä, ja lapset '
-      + 'juoksivat pihalla, jossa leijonat kantavat suihkulähdettä. Vesi '
-      + 'juoksee kaikkialla, seinissä, lattioissa, portaissa, ja sen ääni on '
-      + 'ainoa, mikä salissa puhuu. Otin hatun päästä ennen kuin huomasin. '
-      + 'Lakkipiste. Illalla luolissa laulettiin ilman yleisöä. [softly] '
-      + 'Maksoin silti.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Alhambran palatsi kohoaa Granadan yllä, mutta sen '
+      + 'hienoin rakennusaine on vesi. Kapeissa uomissa se kulkee pihalta '
+      + 'toiselle ja puhuu niin hiljaa, että minäkin vaikenin. Altaassa näin '
+      + 'palatsin toistamiseen. Toinen oli tehty pelkästä valosta ja särkyi, '
+      + 'kun kastoin sormeni veteen. [softly] Odotin, kunnes se rakentui '
+      + 'takaisin.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-granada.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Lakkipiste on hetki, jolloin hattu lähtee itsestään. Linnassa ei enää asuta, lippua jonotetaan. Vesi juoksee yhä. Join siitä.',
+      'Sinä tarvitset nyt pääsylipun palatsiin. Minä käyn vain juomassa sen peilikuvan reunasta.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

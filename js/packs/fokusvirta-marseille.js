@@ -181,36 +181,34 @@ export const FOKUSVIRTA_MARSEILLE = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Marseille, syyskuussa 1873. Mistral puhaltaa; puntari '
       + 'putoaa.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 399 merkkiä (yläraja 400). */
-    teksti: 'Söin satamassa kalakeittoa ja sen perään jotain, jota isäntä ei '
-      + 'suostunut nimeämään. Yöllä huone kääntyi ympäri. Aamulla tein K3:n: '
-      + 'lääkäri sanoi simpukka, isäntä sanoi mistral, siivooja nauroi ja '
-      + 'sanoi että molemmat. Uskoin siivoojaa. Makasin kolme päivää '
-      + 'yövahdissa ja kuuntelin, kuinka satama huusi hintoja. Neljäntenä '
-      + 'päivänä nousin ja söin saman keiton loppuun. Painolasti: se nimetön '
-      + 'lautanen.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
+    teksti: 'Marseillen satamassa myytiin saippuaa tiiliskivinä. Kauppias '
+      + 'vakuutti, että niillä pesisi vaikka koko maailman. Hänen kyntensä '
+      + 'olivat mustat, sillä hän oli juuri auttanut laivan köysissä. Ostin '
+      + 'palan. Terva, kala ja suolavesi seurasivat minua majataloon. Maailma '
+      + 'ei suostunut pesuun yhdellä yrittämällä, mutta käteni olivat jo '
+      + 'toista mieltä.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Söin satamassa kalakeittoa ja sen perään jotain, jota '
-      + 'isäntä ei suostunut nimeämään. Yöllä huone kääntyi ympäri. Aamulla '
-      + 'tein K3:n: lääkäri sanoi simpukka, isäntä sanoi mistral, siivooja '
-      + 'nauroi ja sanoi että molemmat. Uskoin siivoojaa. Makasin kolme '
-      + 'päivää yövahdissa ja kuuntelin, kuinka satama huusi hintoja. '
-      + 'Neljäntenä päivänä nousin ja söin saman keiton loppuun. [softly] '
-      + 'Painolasti: se nimetön lautanen.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Marseillen satamassa myytiin saippuaa tiiliskivinä. '
+      + 'Kauppias vakuutti, että niillä pesisi vaikka koko maailman. Hänen '
+      + 'kyntensä olivat mustat, sillä hän oli juuri auttanut laivan köysissä. '
+      + 'Ostin palan. Terva, kala ja suolavesi seurasivat minua majataloon. '
+      + '[softly] Maailma ei suostunut pesuun yhdellä yrittämällä, mutta '
+      + 'käteni olivat jo toista mieltä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'K3 on kolmiomittaus ihmisillä: kysy kolmelta, usko naurajaa. Keittoa myydään yhä samassa satamassa. Lokit omistavat laiturin.',
+      'Marseillen saippuaa tehdään yhä. Sataman lokit eivät ole kuulleetkaan puhtaasta pöydästä.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi

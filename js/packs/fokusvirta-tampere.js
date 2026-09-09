@@ -218,26 +218,26 @@ export const FOKUSVIRTA_TAMPERE = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Tampere, elokuussa 1873. Viileä aamu; koski kohisee yöllä; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 373 merkkiä (yläraja 400). */
-    teksti: 'Isäntä vertasi kaupunkiaan Manchesteriin ja löi vetoa, etten '
-      + 'löydä koko kaupungista paikkaa, jossa koskea ei kuule. Otin vedon. '
-      + 'Kävelin tehtaiden ohi, kirkon taakse, järven rantaan ja '
-      + 'hautausmaalle, ja koski kuului kaikkialle. Illalla istuin sillalla '
-      + 'ja hävisin vedon mielelläni. Vesi tekee täällä työn, jonka muualla '
-      + 'tekee hiili, eikä vesi lopu. Painolasti: puuvillarulla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
+    teksti: 'Tammerkoski tekee töitä kahden järven välissä. Sen partaalla '
+      + 'puuvilla muuttuu langaksi ja miehet rahakkaiksi. Finlaysonin '
+      + 'tehtaassa nainen näytti, kuinka katkennut lanka yhdistetään. Minun '
+      + 'sormissani se katkesi uudestaan. Hän sitoi sen katsomatta ja palasi '
+      + 'koneelleen. Merkitsen muistiin: tehtaan voimaa mitatessa pitäisi '
+      + 'laskea myös sormet.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä. Suuraakkosia ei tekstissä ole, joten
      * kirjoitusasun sovituksia ei tarvita.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Isäntä vertasi kaupunkiaan Manchesteriin ja löi vetoa, '
-      + 'etten löydä koko kaupungista paikkaa, jossa koskea ei kuule. Otin '
-      + 'vedon. Kävelin tehtaiden ohi, kirkon taakse, järven rantaan ja '
-      + 'hautausmaalle, ja koski kuului kaikkialle. Illalla istuin sillalla '
-      + 'ja hävisin vedon mielelläni. Vesi tekee täällä työn, jonka muualla '
-      + 'tekee hiili, eikä vesi lopu. [softly] Painolasti: puuvillarulla.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Tammerkoski tekee töitä kahden järven välissä. Sen '
+      + 'partaalla puuvilla muuttuu langaksi ja miehet rahakkaiksi. '
+      + 'Finlaysonin tehtaassa nainen näytti, kuinka katkennut lanka '
+      + 'yhdistetään. Minun sormissani se katkesi uudestaan. Hän sitoi sen '
+      + 'katsomatta ja palasi koneelleen. [softly] Merkitsen muistiin: tehtaan '
+      + 'voimaa mitatessa pitäisi laskea myös sormet.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tampere.mp3',
   },
 
@@ -303,9 +303,9 @@ export const FOKUSVIRTA_TAMPERE = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Tehtaat ovat museoita ja ravintoloita, ja koski pyörittää yhä voimaloita. Kosken yllä ilma nostaa siiven alta.',
+      'Nyt Finlaysonilla on ravintoloita. Isoisä seurasi lankaa, minä tarjoilijaa. Molemmilla oli hyvä syy.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

@@ -177,36 +177,34 @@ export const FOKUSVIRTA_FIRENZE = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Firenze, toukokuussa 1873. Lämmintä; joki matalalla; puntari '
       + 'korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 394 merkkiä (yläraja 400). */
-    teksti: 'Aukiolla seisoin Davidin edessä niin kauan, että kyyhkyset '
-      + 'vaihtoivat vahtivuoroa, ja yksi niistä laskeutui hattuuni kuin '
-      + 'tilattuna. Vartija sanoi, että patsas siirretään kesällä sisälle '
-      + 'sateilta suojaan ja sitä varten rakennetaan kiskot. Sillan puodissa '
-      + 'kultaseppä punnitsi sormukseni ja sanoi hinnan, joka oli enemmän '
-      + 'kuin maksoin siitä. En myynyt. Painolasti: kynttilä. Vaakaa hän ei '
-      + 'myynyt.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 358 merkkiä (yläraja 400). */
+    teksti: 'Firenzen David seisoo aukiolla ilman rihman kiertämää, ja minä '
+      + 'hikoilen liivissä. Patsas aiotaan siirtää sisälle sateelta suojaan. '
+      + 'Kolmensadan vuoden jälkeen tämä lienee kohtuullista. Katselin sen '
+      + 'suurta kättä ja omaani. Minun käteni osaa lähinnä piirtää käden. '
+      + 'Palasin illalla, kun aukiolla oli vähemmän väkeä. Kivi vaikutti '
+      + 'silloin vielä enemmän ihmiseltä.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Aukiolla seisoin Davidin edessä niin kauan, että '
-      + 'kyyhkyset vaihtoivat vahtivuoroa, ja yksi niistä laskeutui hattuuni '
-      + 'kuin tilattuna. Vartija sanoi, että patsas siirretään kesällä '
-      + 'sisälle sateilta suojaan ja sitä varten rakennetaan kiskot. Sillan '
-      + 'puodissa kultaseppä punnitsi sormukseni ja sanoi hinnan, joka oli '
-      + 'enemmän kuin maksoin siitä. En myynyt. Painolasti: kynttilä. '
-      + '[softly] Vaakaa hän ei myynyt.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Firenzen David seisoo aukiolla ilman rihman kiertämää, '
+      + 'ja minä hikoilen liivissä. Patsas aiotaan siirtää sisälle sateelta '
+      + 'suojaan. Kolmensadan vuoden jälkeen tämä lienee kohtuullista. '
+      + 'Katselin sen suurta kättä ja omaani. Minun käteni osaa lähinnä '
+      + 'piirtää käden. Palasin illalla, kun aukiolla oli vähemmän väkeä. '
+      + '[softly] Kivi vaikutti silloin vielä enemmän ihmiseltä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-firenze.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Se kyyhkynen olin minä. Hattu on paras paikka, kun haluaa nähdä saman kuin isäntä. David on sisällä, aukiolla on kopio.',
+      'David pääsi sisälle, aukiolle tuli kopio. Fogg, isoisälläsi oli sentään taskut. Patsaan on pärjättävä ilmeellä.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

@@ -1625,9 +1625,8 @@ test('kupliksi kirjoitettu kommentti on valmiiksi osissa', () => {
   // YKSI KUPLA PER KAUPUNKI (omistaja 8.9.2026 ilta: "olisiko parempi jos
   // pululla olisi vain yksi kupla per kaupunki") — kaksi lyhyttä virkettä.
   assert.ok(Array.isArray(kuplat) && kuplat.length === 1, 'Sofian kommentti on yksi kupla');
-  // Kommentti ei ala "Kääk."-sanalla: huudahdus luennan aikana on jo "Kääk.".
-  assert.doesNotMatch(kuplat[0], /^Kääk/);
-  assert.equal(FOKUSVIRTA_SOFIA.pollo.huudahdus.teksti, 'Kääk.');
+  // Huudahdus poistettiin 9.9.2026 (omistajan tekstipaketti): kenttää ei ole.
+  assert.equal(FOKUSVIRTA_SOFIA.pollo.huudahdus, undefined);
   for (const kupla of kuplat) {
     // Raja 125 (Raamattu, PULUN KUPLASSA PULUN NAKOKULMA, RAJA 125 —
     // omistaja 8.9.2026 ilta; ennen 95).

@@ -234,24 +234,25 @@ export const FOKUSVIRTA_ODESSA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Odessa, elokuussa 1873. Kuumaa; merituuli vasta illalla; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 330 merkkiä (yläraja 400). */
-    teksti: 'Satama on täynnä vehnää ja kieliä, ja kaikki ymmärtävät toisiaan '
-      + 'rahasta puhuttaessa. Kysyin kolmelta, mikä laiva lähtee huomenna '
-      + 'Konstantinopoliin. Ensimmäinen sanoi ei mikään, toinen sanoi kaikki, '
-      + 'kolmas nauroi ja sanoi, että herra prässihousuissa kysyi samaa '
-      + 'aamulla. Ostin lipun tänään lähtevään. Painolasti: vehnänjyvä. Yksi.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 353 merkkiä (yläraja 400). */
+    teksti: 'Odessan portaat on tehty niin leveiksi, että niitä pitkin voisi '
+      + 'saapua kokonainen valtakunta. Minä saavuin yksin ja jouduin silti '
+      + 'lepäämään puolivälissä. Satamassa vehnäsäkit siirtyivät selästä '
+      + 'laivaan, ja ylhäällä puistokäytävällä herrat siirsivät vain '
+      + 'kävelykeppiään. Merituuli kulki portaat yhdellä hengenvedolla. Sitä '
+      + 'ei kukaan pysäyttänyt tullissa.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Satama on täynnä vehnää ja kieliä, ja kaikki '
-      + 'ymmärtävät toisiaan rahasta puhuttaessa. Kysyin kolmelta, mikä laiva '
-      + 'lähtee huomenna Konstantinopoliin. Ensimmäinen sanoi ei mikään, '
-      + 'toinen sanoi kaikki, kolmas nauroi ja sanoi, että herra '
-      + 'prässihousuissa kysyi samaa aamulla. Ostin lipun tänään lähtevään. '
-      + 'Painolasti: vehnänjyvä. [softly] Yksi.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Odessan portaat on tehty niin leveiksi, että niitä '
+      + 'pitkin voisi saapua kokonainen valtakunta. Minä saavuin yksin ja '
+      + 'jouduin silti lepäämään puolivälissä. Satamassa vehnäsäkit siirtyivät '
+      + 'selästä laivaan, ja ylhäällä puistokäytävällä herrat siirsivät vain '
+      + 'kävelykeppiään. Merituuli kulki portaat yhdellä hengenvedolla. '
+      + '[softly] Sitä ei kukaan pysäyttänyt tullissa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-odessa.mp3',
   },
 
@@ -314,9 +315,9 @@ export const FOKUSVIRTA_ODESSA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'K3 on kolmiomittaus: kolme vastausta, usko naurajaa. G. jäi taas laivasta. Ooppera rakennettiin uudelleen. Jyvä on vähän.',
+      'Odessan vanha keskusta on nyt sodan uhkaamaa maailmanperintöä. Näitä portaita katson tänään toisin.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi

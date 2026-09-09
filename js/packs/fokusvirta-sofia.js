@@ -285,14 +285,12 @@ export const FOKUSVIRTA_SOFIA = {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Sofia, elokuussa 1873. Helteistä; tomu ei laskeudu; puntari '
       + 'korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 400 merkkiä (yläraja 400). */
-    teksti: 'Sofiassa kukaan ei sano ääneen sen miehen nimeä, joka hirtettiin '
-      + 'täällä viime talvena. Majatalon isäntä jätti silti ikkunalaudalle '
-      + 'kynttilän palamaan. Kysyin kenelle. Hän sanoi: sille, jonka hautaa '
-      + 'ei kukaan tunne. Torin laidalla kuuma lähde höyryää, ja naiset '
-      + 'kantavat sieltä vettä kuin mitään ei olisi tapahtunut. Kirjoitin '
-      + 'nimen muistiin, mutta en tähän kirjaan. Painolasti: kynttilä. '
-      + 'Samanlainen.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 336 merkkiä (yläraja 400). */
+    teksti: 'Sofiassa maa tarjoaa kuumaa vettä pyytämättä halkoja. Lähteellä '
+      + 'nainen täytti kannua ja odotti sen jäähtymistä. Minä olin maksanut '
+      + 'majatalossa kylmästä pesuvedestä. Tällaisista epäjohdonmukaisuuksista '
+      + 'matkailu muodostuu. Minareetin takana kohosi Vitoša. Vuori näytti '
+      + 'nukkuvan, mutta sen kaupungin alla oli selvästi jo noustu keittämään.',
     /*
      * Luenta generoitu 25.8.2026 samalla reseptillä kuin muut
      * matkakirjaluennat (Viisas Kertoja, eleven_v3, stability 0.5).
@@ -310,14 +308,13 @@ export const FOKUSVIRTA_SOFIA = {
      * ja on generoitava uudelleen tästä luennasta (sama tilanne kuin
      * Ateenassa) ennen kuin kertoja lukee saman kuin ruudulla lukee.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Sofiassa kukaan ei sano ääneen sen miehen nimeä, joka '
-      + 'hirtettiin täällä viime talvena. Majatalon isäntä jätti silti '
-      + 'ikkunalaudalle kynttilän palamaan. Kysyin kenelle. Hän sanoi: sille, '
-      + 'jonka hautaa ei kukaan tunne. Torin laidalla kuuma lähde höyryää, ja '
-      + 'naiset kantavat sieltä vettä kuin mitään ei olisi tapahtunut. '
-      + 'Kirjoitin nimen muistiin, mutta en tähän kirjaan. Painolasti: '
-      + 'kynttilä. [softly] Samanlainen.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Sofiassa maa tarjoaa kuumaa vettä pyytämättä halkoja. '
+      + 'Lähteellä nainen täytti kannua ja odotti sen jäähtymistä. Minä olin '
+      + 'maksanut majatalossa kylmästä pesuvedestä. Tällaisista '
+      + 'epäjohdonmukaisuuksista matkailu muodostuu. Minareetin takana kohosi '
+      + 'Vitoša. [softly] Vuori näytti nukkuvan, mutta sen kaupungin alla oli '
+      + 'selvästi jo noustu keittämään.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sofia.mp3',
     kuva: {
       tiedosto: 'BASA-713K-1-52-4-Vasil Levski.JPG',
@@ -414,10 +411,7 @@ export const FOKUSVIRTA_SOFIA = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'joka hirtettiin täällä viime talvena',
-      teksti: 'Kääk.',
-    },
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /*
      * TOINEN "Kääk." POIS (omistaja 8.9.2026, sanatarkasti: *"ota
      * jälkimmäinen kääk pois pulun sofian tekstissä, muuten se tulee
@@ -429,9 +423,9 @@ export const FOKUSVIRTA_SOFIA = {
      * livianAaniAjanTasalla) vaientaa sen kunnes ääni generoidaan
      * uudestaan. Kupla näkyy ja etenee kuten ennen.
      */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Sitä nimeä ei enää kuiskata: hän on koko maan sankari. Ja lähde torin laidalla höyryää yhä. Talvella istumme sen reunalla.',
+      'Sofia on nyt Bulgarian pääkaupunki. Lähdevettä haetaan yhä. Maa ei ole korottanut hintaa arvonimen takia.',
     ],
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,

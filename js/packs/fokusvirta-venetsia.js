@@ -185,41 +185,34 @@ export const FOKUSVIRTA_VENETSIA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Venetsia, kesäkuussa 1873. Kosteaa; laguuni haisee laskuveden aikaan.',
-    /* KAANON UUSIKSI (Fable, omistaja katsoo koosteesta 9.9.2026). 396 merkkiä (yläraja 400). */
-    teksti: 'Kaupunki, jossa kadut ovat vettä ja portaat päättyvät mereen. '
-      + 'Markuksen torilla pulut ruokitaan kaupungin viljalla kello kahdelta, '
-      + 'ja ne tietävät sen kelloa paremmin. Kirkon hevoset ovat '
-      + 'ryöstösaalista Konstantinopolista; täällä sanotaan suoraan, että '
-      + 'puoli kaupunkia on tuotu muualta, ja sanotaan se ylpeänä. '
-      + 'Iltapäivällä vesi nousi torille, ja kauppiaat nostivat tavaransa '
-      + 'penkeille kiroamatta.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 348 merkkiä (yläraja 400). */
+    teksti: 'Venetsiassa oven takana saattaa olla meri. Astuin aamulla '
+      + 'majatalon portaille ja olin mennä kaupunkiin uimaan. Gondolieri tuli '
+      + 'hakemaan ja piti ilmeensä ihailtavan suorana. Kuljimme palatsien ohi '
+      + 'niin hiljaa, että kuulin lusikan osuvan kahvikuppiin yläkerrassa. '
+      + 'Täällä taloilla on hienot julkisivut, mutta vesi pääsee kuuntelemaan '
+      + 'niiden aamiaista.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki, jossa kadut ovat vettä ja portaat päättyvät '
-      + 'mereen. Markuksen torilla pulut ruokitaan kaupungin viljalla kello '
-      + 'kahdelta, ja ne tietävät sen kelloa paremmin. Kirkon hevoset ovat '
-      + 'ryöstösaalista Konstantinopolista; täällä sanotaan suoraan, että '
-      + 'puoli kaupunkia on tuotu muualta, ja sanotaan se ylpeänä. [softly] '
-      + 'Iltapäivällä vesi nousi torille, ja kauppiaat nostivat tavaransa '
-      + 'penkeille kiroamatta.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Venetsiassa oven takana saattaa olla meri. Astuin '
+      + 'aamulla majatalon portaille ja olin mennä kaupunkiin uimaan. '
+      + 'Gondolieri tuli hakemaan ja piti ilmeensä ihailtavan suorana. '
+      + 'Kuljimme palatsien ohi niin hiljaa, että kuulin lusikan osuvan '
+      + 'kahvikuppiin yläkerrassa. [softly] Täällä taloilla on hienot '
+      + 'julkisivut, mutta vesi pääsee kuuntelemaan niiden aamiaista.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-venetsia.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* EHDOTUS omistajalle 8.9.2026: romanssi, kuusi kuplaa — poikkeus yhden kuplan sääntöön. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Niin, niin. Ja sinä sanoit, että laguunin yllä ilma kantaa paremmin. Sanoitko? Sanoit.',
-      'Minä en tavallisesti istu kenenkään kanssa lyijykatolla. Minulla on suku, tehtävä ja aikataulu.',
-      'Mutta se, miten sinä käännät päätä kun kellot lyövät…',
-      '…hetkinen. Fogg. Sinä olet siinä. Tämä on Venetsia. Minä olen töissä.',
-      'Selvennys: Markuksen torilla on tuhansia puluja, eikä niitä saa enää ruokkia.',
-      'Yksi niistä on aivan tavallinen. Aivan tavallinen. Mennään.',
+      'Kanavilla kulkee nyt vesibussejakin. Isoisä kuunteli aamiaista; minä olisin selvittänyt sen ikkunan.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

@@ -159,36 +159,34 @@ export const FOKUSVIRTA_EDINBURGH = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Edinburgh, elokuussa 1873. Viileää; linna sumun yllä; '
       + 'puntari putoaa.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 400 merkkiä (yläraja 400). */
-    teksti: 'Jokainen, jolta kysyin tietä, vastasi aye ja osoitti ylämäkeen. '
-      + 'Luulin päivän, että aye on kaupunginosa. Se tarkoittaa kyllä. '
-      + 'Vanhassa kaupungissa talot ovat kymmenkerroksisia, köyhät ylhäällä '
-      + 'ja rikkaat alhaalla. Kirkkomaan portilla makasi vuosia koira, joka '
-      + 'vartioi isäntänsä hautaa. Se kuoli viime vuonna. Otin peilauksen sen '
-      + 'haudalta portille: neljätoista askelta. Koiralle pitkä matka joka '
-      + 'ilta.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 348 merkkiä (yläraja 400). */
+    teksti: 'Edinburghissa katu saattaa olla toisen kadun katto. Menin '
+      + 'portaita alas ja tulin ulos korkealla jonkun ikkunan yläpuolella. '
+      + 'Pyykkinaru kulki kujan yli, ja sukat riippuivat kuilun päällä vailla '
+      + 'vähäisintäkään huimausta. Linnan musta kallio kohosi kaiken takana. '
+      + 'Kaupungin kartoittamiseen tarvittaisiin tavallisen paperin lisäksi '
+      + 'toinen arkki päälle.',
     /*
      * LUENTA: sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi: ruututeksti = luentateksti sanasta sanaan).
      * Kolme tagia, alku ja loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Jokainen, jolta kysyin tietä, vastasi aye ja osoitti '
-      + 'ylämäkeen. Luulin päivän, että aye on kaupunginosa. Se tarkoittaa '
-      + 'kyllä. Vanhassa kaupungissa talot ovat kymmenkerroksisia, köyhät '
-      + 'ylhäällä ja rikkaat alhaalla. Kirkkomaan portilla makasi vuosia '
-      + 'koira, joka vartioi isäntänsä hautaa. Se kuoli viime vuonna. Otin '
-      + 'peilauksen sen haudalta portille: neljätoista askelta. [softly] '
-      + 'Koiralle pitkä matka joka ilta.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Edinburghissa katu saattaa olla toisen kadun katto. '
+      + 'Menin portaita alas ja tulin ulos korkealla jonkun ikkunan '
+      + 'yläpuolella. Pyykkinaru kulki kujan yli, ja sukat riippuivat kuilun '
+      + 'päällä vailla vähäisintäkään huimausta. Linnan musta kallio kohosi '
+      + 'kaiken takana. [softly] Kaupungin kartoittamiseen tarvittaisiin '
+      + 'tavallisen paperin lisäksi toinen arkki päälle.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-edinburgh.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Peilaus on hänen mittauksensa askelin. Koira ei mitannut. Patsas seisoo portilla, kuonoa hierotaan onneksi. Minäkin, kerran.',
+      'Elokuussa täällä on nyt festivaaleja kellareita myöten. Isoisä eksyi kerroksiin; minä valitsen katon.',
     ],
     teksti: 'Ja se isoisäsi ihmettelemä järjestys — köyhät ylhäällä — '
       + 'johtui savusta: mitä alempana asuit, sitä vähemmän piippuja '

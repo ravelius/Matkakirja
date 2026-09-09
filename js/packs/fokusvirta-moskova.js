@@ -198,26 +198,25 @@ export const FOKUSVIRTA_MOSKOVA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Moskova, heinäkuussa 1873. Helteistä; kupolit häikäisevät; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 395 merkkiä (yläraja 400). */
-    teksti: 'Kauppiastalon päivällinen kesti neljä tuntia, ja kun kaadoin '
-      + 'teetä pöytäliinalle, isäntä sanoi ničevo. Kun ajuri ajoi kiveen, hän '
-      + 'sanoi ničevo. Kun kysyin, milloin kellot lopettavat, vartija sanoi '
-      + 'ničevo. Se tarkoittaa ei mitään, ja se tarkoittaa kaikkea. Kelloja '
-      + 'on niin monta, että kun ne soivat yhtä aikaa, kauppias lopettaa '
-      + 'tinkimisen ja odottaa. Kiersin hevoset koko kaupungin läpi. Ničevo.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
+    teksti: 'Kremlissä seisoo valtava kello, joka ei ole soinut kertaakaan. Se '
+      + 'halkesi ennen ensimmäistä lyöntiä. Irronnut pala on minun huonettani '
+      + 'suuremman oloinen. Vartija kertoi painon ylpeästi, aivan kuin '
+      + 'hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut '
+      + 'syömään. Sillä oli vähemmän mainetta mutta selvästi enemmän '
+      + 'vaikutusvaltaa.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kauppiastalon päivällinen kesti neljä tuntia, ja kun '
-      + 'kaadoin teetä pöytäliinalle, isäntä sanoi ničevo. Kun ajuri ajoi '
-      + 'kiveen, hän sanoi ničevo. Kun kysyin, milloin kellot lopettavat, '
-      + 'vartija sanoi ničevo. Se tarkoittaa ei mitään, ja se tarkoittaa '
-      + 'kaikkea. Kelloja on niin monta, että kun ne soivat yhtä aikaa, '
-      + 'kauppias lopettaa tinkimisen ja odottaa. Kiersin hevoset koko '
-      + 'kaupungin läpi. [softly] Ničevo.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kremlissä seisoo valtava kello, joka ei ole soinut '
+      + 'kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala on '
+      + 'minun huonettani suuremman oloinen. Vartija kertoi painon ylpeästi, '
+      + 'aivan kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello '
+      + 'kutsui minut syömään. [softly] Sillä oli vähemmän mainetta mutta '
+      + 'selvästi enemmän vaikutusvaltaa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-moskova.mp3',
   },
 
@@ -277,9 +276,9 @@ export const FOKUSVIRTA_MOSKOVA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Ničevo on ei mitään, ja sillä pärjää koko maan. Hevosia hän kiertää, kaupungin läpikin. Pääkaupunki palasi. Kellot soivat.',
+      'Tsaarinkello vaikenee edelleen. Moskova on nyt pääkaupunki. Minäkin tulen syömään pienemmästä kutsusta.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

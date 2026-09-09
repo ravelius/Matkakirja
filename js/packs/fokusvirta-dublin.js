@@ -186,14 +186,12 @@ export const FOKUSVIRTA_DUBLIN = {
   matkakirja: {
     /* KAANON (Fable 29.8.2026) — paikkarivi sellaisenaan. */
     paikkarivi: 'Dublin, syyskuussa 1873. Tihkusadetta; puntari putoaa.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 398 merkkiä (yläraja 400). */
-    teksti: 'Panimon portilla lyötiin vetoa, jaksaako mies kantaa tynnyrin '
-      + 'proomuun asti. Löin vetoa itseni kanssa, että jaksaa. Hän kaatui '
-      + 'portaissa, ja tynnyri vieri jokeen. Puoli laituria hyppäsi perään, '
-      + 'ja kolme miestä toi sen ylös laulaen. Kukaan ei ollut vihainen. '
-      + 'Kirjastossa vahtimestari näytti tuhat vuotta vanhaa kirjaa ja katsoi '
-      + 'minua kuin varasta. Hävisin vedon. Painolasti: puinen tappi '
-      + 'tynnyristä.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 331 merkkiä (yläraja 400). */
+    teksti: 'Guinnessin panimon vuokrasopimus on tehty yhdeksäksituhanneksi '
+      + 'vuodeksi. Sellaisen allekirjoittamiseen tarvitaan uskoa joko olueen '
+      + 'tai janoon. Portilla tuoksui lämmin mallas, ja kärryille vieritettiin '
+      + 'tynnyreitä. Mies pyyhki otsaansa hihalla. Kysyin, loppuuko työ '
+      + 'koskaan. Hän katsoi minua pitkään. Olin unohtanut vuokrasopimuksen.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md
      * luku 7). Vain tunnetagit on lisätty, neljä kappaletta, alku ja
@@ -201,23 +199,22 @@ export const FOKUSVIRTA_DUBLIN = {
      * Viimeinen tagi on kohdassa, jossa merkintä kääntyy epäilyksi —
      * juuri se lause kantaa koko kaupungin sävyn.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Panimon portilla lyötiin vetoa, jaksaako mies kantaa '
-      + 'tynnyrin proomuun asti. Löin vetoa itseni kanssa, että jaksaa. Hän '
-      + 'kaatui portaissa, ja tynnyri vieri jokeen. Puoli laituria hyppäsi '
-      + 'perään, ja kolme miestä toi sen ylös laulaen. Kukaan ei ollut '
-      + 'vihainen. Kirjastossa vahtimestari näytti tuhat vuotta vanhaa kirjaa '
-      + 'ja katsoi minua kuin varasta. Hävisin vedon. [softly] Painolasti: '
-      + 'puinen tappi tynnyristä.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Guinnessin panimon vuokrasopimus on tehty '
+      + 'yhdeksäksituhanneksi vuodeksi. Sellaisen allekirjoittamiseen '
+      + 'tarvitaan uskoa joko olueen tai janoon. Portilla tuoksui lämmin '
+      + 'mallas, ja kärryille vieritettiin tynnyreitä. Mies pyyhki otsaansa '
+      + 'hihalla. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään. '
+      + '[softly] Olin unohtanut vuokrasopimuksen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-dublin.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Painolasti on turha esine, jonka hän ostaa joka kaupungissa. Panimo tekee yhä olutta. Kirjan edessä jonotetaan.',
+      'Guinnessiä pannaan täällä yhä. Yhdeksäntuhatta vuotta? Minä en lupaisi edes istuvani samalla räystäällä.',
     ],
     teksti: 'Vahtimestarit katsovat kaikkia edelleen kuin varkaita, ja kohta '
       + 'ymmärrät miksi se ei ole ihan väärä vaisto tässä maassa..',

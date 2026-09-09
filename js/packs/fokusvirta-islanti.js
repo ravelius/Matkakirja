@@ -26,32 +26,30 @@ export const FOKUSVIRTA_ISLANTI = {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Reykjavik, elokuussa 1873. Tuulista; ei yhtään puuta; '
       + 'puntari matalalla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 392 merkkiä (yläraja 400). */
-    teksti: 'Maasta nousee höyryä, vaikka mikään ei pala. Ratsastin päivän '
-      + 'Thingvellirin rotkoon, jossa kansa on kokoontunut käräjille ennen '
-      + 'kuin Euroopassa oli kuninkaita. Mittasin kuuman lähteen, ja '
-      + 'lämpömittari halkesi kädessäni. Opas nauroi: edellinen '
-      + 'englantilainen keitti siinä munan ja hattunsa. Kartassani saaren '
-      + 'keskellä on tyhjää. Kartta ei valehtele, se vaikenee. Painolasti: '
-      + 'haljennut mittari.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 357 merkkiä (yläraja 400). */
+    teksti: 'Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa '
+      + 'lähteessä. Höyry nousi maasta, ja tuuli yritti viedä sen merelle. '
+      + 'Annoin pestäväksi paitani. Se oli ensimmäinen kerta, kun maa teki '
+      + 'minulle palveluksen vaatimatta lapioimista. Paluumatkalla näin pienet '
+      + 'talot ja niiden takana suuren tyhjyyden. Kaulukseni oli puhtaampi '
+      + 'kuin käsitykseni tästä saaresta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Maasta nousee höyryä, vaikka mikään ei pala. Ratsastin '
-      + 'päivän Thingvellirin rotkoon, jossa kansa on kokoontunut käräjille '
-      + 'ennen kuin Euroopassa oli kuninkaita. Mittasin kuuman lähteen, ja '
-      + 'lämpömittari halkesi kädessäni. Opas nauroi: edellinen '
-      + 'englantilainen keitti siinä munan ja hattunsa. Kartassani saaren '
-      + 'keskellä on tyhjää. Kartta ei valehtele, se vaikenee. [softly] '
-      + 'Painolasti: haljennut mittari.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Reykjavikin ulkopuolella naiset pesivät pyykkiä '
+      + 'kuumassa lähteessä. Höyry nousi maasta, ja tuuli yritti viedä sen '
+      + 'merelle. Annoin pestäväksi paitani. Se oli ensimmäinen kerta, kun maa '
+      + 'teki minulle palveluksen vaatimatta lapioimista. Paluumatkalla näin '
+      + 'pienet talot ja niiden takana suuren tyhjyyden. [softly] Kaulukseni '
+      + 'oli puhtaampi kuin käsitykseni tästä saaresta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-islanti.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kartta vaikenee, ja se on kartanpiirtäjälle pahempi kuin valhe. Kaupunki kasvoi, puita istutettiin. Puu on yhä harvinaisuus.',
+      'Reykjavikin talotkin lämpiävät nyt maan lämmöllä. Paita oli lupaava alku. Minä arvostan lämmintä räystästä.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

@@ -175,13 +175,13 @@ export const FOKUSVIRTA_ROOMA = {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät; '
       + 'puntari matalalla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 399 merkkiä (yläraja 400). */
-    teksti: 'Seisoin Vatikaanin muurin alla sateessa. Sen takana on mies, '
-      + 'joka ei ole kolmeen vuoteen tullut ulos: paavi katselee kaupunkiaan '
-      + 'ikkunasta, koska kuningas otti sen häneltä. Vartija käski siirtyä. '
-      + 'Siirryin kolme askelta ja jäin katsomaan ikkunaa, jossa paloi valo. '
-      + 'Minulla on koko maailma edessäni ja hänellä yksi ikkuna. En osannut '
-      + 'sanoa, kumpi meistä oli onnellisempi. Yövahti: sade, kellot, askel.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 344 merkkiä (yläraja 400). */
+    teksti: 'Rooman Pantheonin katossa on pyöreä aukko, josta satoi sisään. '
+      + 'Seisoin kuivassa ja katselin, kuinka sade löysi paikkansa lattialla. '
+      + 'Näin vanhalle talolle ei kai enää tohdi huomauttaa katosta. Rooma on '
+      + 'nyt Italian pääkaupunki; kaduilla on uusia virkamiehiä ja vanhoja '
+      + 'keisareita kivisinä. Pantheon päästää yhä taivaan sisään kysymättä '
+      + 'sen nimeä.',
     /*
      * Luenta ja äänite: kaanon, kohta 1. Teksti on sama kuin yllä —
      * vain tunnetagit on lisätty, samoin kuin Ateenassa ja Sofiassa.
@@ -194,14 +194,13 @@ export const FOKUSVIRTA_ROOMA = {
      * eikä mikään muu hajoa (js/fokusvirta.js lukee kentän vain
      * kytkintä varten).
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Seisoin Vatikaanin muurin alla sateessa. Sen takana on '
-      + 'mies, joka ei ole kolmeen vuoteen tullut ulos: paavi katselee '
-      + 'kaupunkiaan ikkunasta, koska kuningas otti sen häneltä. Vartija '
-      + 'käski siirtyä. Siirryin kolme askelta ja jäin katsomaan ikkunaa, '
-      + 'jossa paloi valo. Minulla on koko maailma edessäni ja hänellä yksi '
-      + 'ikkuna. En osannut sanoa, kumpi meistä oli onnellisempi. [softly] '
-      + 'Yövahti: sade, kellot, askel.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Rooman Pantheonin katossa on pyöreä aukko, josta satoi '
+      + 'sisään. Seisoin kuivassa ja katselin, kuinka sade löysi paikkansa '
+      + 'lattialla. Näin vanhalle talolle ei kai enää tohdi huomauttaa '
+      + 'katosta. Rooma on nyt Italian pääkaupunki; kaduilla on uusia '
+      + 'virkamiehiä ja vanhoja keisareita kivisinä. [softly] Pantheon päästää '
+      + 'yhä taivaan sisään kysymättä sen nimeä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-rooma.mp3',
     /*
      * KUVA: kaanonin ensisijainen valinta — Ludovico Tuminellon
@@ -227,9 +226,9 @@ export const FOKUSVIRTA_ROOMA = {
    */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Paavi tulee nyt ulos, ja Vatikaani on oma valtio. Forumilla ei laidunneta, mutta kaivetaan. Pullaa saa kirkon portailta.',
+      'Pantheoniin ostetaan nyt pääsylippu. Katon aukko on yhä avoin, mutta minäkin käyttäydyn siellä kuin vieras.',
     ],
     teksti: 'Muurin sisällä pysyttiin viisikymmentäyhdeksän vuotta — vasta '
       + '1929 paavi astui taas Rooman puolelle. Ikkunat on yhä ihan '

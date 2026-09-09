@@ -197,26 +197,25 @@ export const FOKUSVIRTA_VARSOVA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Varsova, syyskuussa 1873. Kirkasta; Veikselillä usvaa '
       + 'aamulla; puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 385 merkkiä (yläraja 400). */
-    teksti: 'Kaupunki elää kahta elämää: kaduilla puhutaan puolaa ja '
-      + 'virastoissa venäjää, eikä kumpikaan puoli teeskentele, ettei '
-      + 'huomaisi. Torilla kapakat ovat täynnä, mutta laulut loppuvat kesken, '
-      + 'kun univormu kävelee ohi. Kuulin pianistista, joka kuoli nuorena '
-      + 'Pariisissa. Hänen sisarensa toi sydämen salaa kotiin ja muurautti '
-      + 'sen kirkon pylvääseen. Yövahti: laulu, joka loppui kesken, kahdesti.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 340 merkkiä (yläraja 400). */
+    teksti: 'Kartassani Varsova kuuluu Venäjälle. Torin leipuri sanoi olevansa '
+      + 'puolalainen ja kopautti leipää, jotta kuulisin sen olevan tuoretta. '
+      + 'Talot olivat vieri vieressä kuin kuuntelemassa. Viraston kyltissä '
+      + 'kirjaimet olivat venäläisiä, mutta aamiaiseni sain puolaksi. Karttaan '
+      + 'voi vetää rajan yhdellä liikkeellä. Ihmiset eivät siirry kynän '
+      + 'mukana.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki elää kahta elämää: kaduilla puhutaan puolaa '
-      + 'ja virastoissa venäjää, eikä kumpikaan puoli teeskentele, ettei '
-      + 'huomaisi. Torilla kapakat ovat täynnä, mutta laulut loppuvat kesken, '
-      + 'kun univormu kävelee ohi. Kuulin pianistista, joka kuoli nuorena '
-      + 'Pariisissa. Hänen sisarensa toi sydämen salaa kotiin ja muurautti '
-      + 'sen kirkon pylvääseen. [softly] Yövahti: laulu, joka loppui kesken, '
-      + 'kahdesti.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kartassani Varsova kuuluu Venäjälle. Torin leipuri '
+      + 'sanoi olevansa puolalainen ja kopautti leipää, jotta kuulisin sen '
+      + 'olevan tuoretta. Talot olivat vieri vieressä kuin kuuntelemassa. '
+      + 'Viraston kyltissä kirjaimet olivat venäläisiä, mutta aamiaiseni sain '
+      + 'puolaksi. Karttaan voi vetää rajan yhdellä liikkeellä. [softly] '
+      + 'Ihmiset eivät siirry kynän mukana.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-varsova.mp3',
   },
 
@@ -277,9 +276,9 @@ export const FOKUSVIRTA_VARSOVA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Vanhakaupunki rakennettiin sodan jälkeen uudelleen tiili tiileltä. Sydän on yhä pylväässä. Ylhäältä ei erota, mikä on vanhaa.',
+      'Vanhakaupunki rakennettiin sodan jälkeen uudelleen. Isoisä olisi tunnistanut torin. Se oli rakentajien tarkoitus.',
     ],
     /* KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. */
     /*

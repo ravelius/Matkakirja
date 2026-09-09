@@ -180,21 +180,20 @@ export const FOKUSVIRTA_BUKAREST = {
     /* Kaanon, kohta 1 — paikkarivi, teksti ja luenta sellaisinaan. */
     paikkarivi: 'Bukarest, lokakuussa 1873. Ensimmäinen halla; savu nousee '
       + 'suoraan; puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 397 merkkiä (yläraja 400). */
-    teksti: 'Nousin tornin huipulle, jonka ruotsalaisen kuninkaan sotilaiden '
-      + 'sanotaan rakentaneen paettuaan Poltavasta. Ovensuussa vartioi yhä '
-      + 'kaksi maalattua ruotsalaista. Peilaus portaista: sata kuusikymmentä '
-      + 'askelta ylös, ja koko kaupunki levittäytyi allani, savu suoraan ylös '
-      + 'joka piipusta. Vartija sanoi, että torni on järistyksen jäljiltä '
-      + 'kallellaan ja sitä paikataan joka vuosi. Kauanko se vielä seisoo?',
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Nousin tornin huipulle, jonka ruotsalaisen kuninkaan '
-      + 'sotilaiden sanotaan rakentaneen paettuaan Poltavasta. Ovensuussa '
-      + 'vartioi yhä kaksi maalattua ruotsalaista. Peilaus portaista: sata '
-      + 'kuusikymmentä askelta ylös, ja koko kaupunki levittäytyi allani, '
-      + 'savu suoraan ylös joka piipusta. Vartija sanoi, että torni on '
-      + 'järistyksen jäljiltä kallellaan ja sitä paikataan joka vuosi. '
-      + '[softly] Kauanko se vielä seisoo?',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 350 merkkiä (yläraja 400). */
+    teksti: 'Bukarestin Manucin majatalossa huoneet kiertävät pihaa puuparvien '
+      + 'takana. Avasin oven ja kuulin yhtä aikaa kolmet eri kaupat. Alhaalla '
+      + 'mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. '
+      + 'Keittiöstä nousi tuoksu, jolle ei tarvittu tulkkia. Menin alas ennen '
+      + 'kuin ehdin laskea parven pylväät. Huoneeni löysin illalla naapurini '
+      + 'kuorsauksesta.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Bukarestin Manucin majatalossa huoneet kiertävät pihaa '
+      + 'puuparvien takana. Avasin oven ja kuulin yhtä aikaa kolmet eri '
+      + 'kaupat. Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa '
+      + 'vartijana. Keittiöstä nousi tuoksu, jolle ei tarvittu tulkkia. Menin '
+      + 'alas ennen kuin ehdin laskea parven pylväät. [softly] Huoneeni löysin '
+      + 'illalla naapurini kuorsauksesta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-bukarest.mp3',
     /*
      * KUVA: Carol Szathmarin valokuva Colțean tornista (kaanon, kohta 1).
@@ -284,13 +283,10 @@ export const FOKUSVIRTA_BUKAREST = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'kaksi maalattua ruotsalaista',
-      teksti: 'Maalattua?',
-    },
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Peilaus on merimiehen suuntima, hänellä askelmittaus. Torni purettiin, sairaala hoitaa yhä. Vinolla tornilla oli paha istua.',
+      'Manucin majatalon pihalla syödään edelleen. Isoisä löysi huoneensa korvalla. Minä löydän keittiön samoin.',
     ],
     /*
      * Commons 25.8.2026: 2397×3339, public domain, kuvaus "Photo of

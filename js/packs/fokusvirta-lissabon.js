@@ -149,36 +149,34 @@ export const FOKUSVIRTA_LISSABON = {
      */
     paikkarivi: 'Lissabon, lokakuussa 1873. Tuulista; Tejolla valkoisia '
       + 'harjoja; puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 398 merkkiä (yläraja 400). */
-    teksti: 'Kalastajan vaimo lauloi torilla, ja kysyin isännältä, mistä '
-      + 'laulu kertoo. Hän sanoi: saudade. Kysyin, mikä se on. Hän mietti '
-      + 'kauan, sanoi ettei sitä voi sanoa englanniksi, ja kaatoi lisää '
-      + 'viiniä. Yli sata vuotta sitten tämä kaupunki kaatui järistykseen, '
-      + 'paloi ja hukkui samana aamuna, ja rakennettiin uusiksi '
-      + 'viivoittimella. Lakkipiste: joen suu auringonlaskussa, hattu käteen '
-      + 'ilman lupaa. Saudade.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 330 merkkiä (yläraja 400). */
+    teksti: 'Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin '
+      + 'hallitsijan jakaukseksi. Eksyin silti heti, kun poikkesin Alfamaan. '
+      + 'Siellä portailla istuva nainen neuvoi ylöspäin. Ylhäällä toinen '
+      + 'neuvoi alas. Kumpikin oli oikeassa: löysin meren molemmista '
+      + 'suunnista, vain eri kattojen välistä. Kartta on täällä taskussa '
+      + 'kulkeva lohdutus.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain tunnetagit lisätty
      * (docs/moduulit/tarinakaari.md, luku 7). Neljä tagia, alku ja loppu
      * eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kalastajan vaimo lauloi torilla, ja kysyin isännältä, '
-      + 'mistä laulu kertoo. Hän sanoi: saudade. Kysyin, mikä se on. Hän '
-      + 'mietti kauan, sanoi ettei sitä voi sanoa englanniksi, ja kaatoi '
-      + 'lisää viiniä. Yli sata vuotta sitten tämä kaupunki kaatui '
-      + 'järistykseen, paloi ja hukkui samana aamuna, ja rakennettiin uusiksi '
-      + 'viivoittimella. Lakkipiste: joen suu auringonlaskussa, hattu käteen '
-      + 'ilman lupaa. [softly] Saudade.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Baixan kadut vedettiin järistyksen jälkeen suoriksi '
+      + 'kuin hallitsijan jakaukseksi. Eksyin silti heti, kun poikkesin '
+      + 'Alfamaan. Siellä portailla istuva nainen neuvoi ylöspäin. Ylhäällä '
+      + 'toinen neuvoi alas. Kumpikin oli oikeassa: löysin meren molemmista '
+      + 'suunnista, vain eri kattojen välistä. [softly] Kartta on täällä '
+      + 'taskussa kulkeva lohdutus.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lissabon.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Saudade on ikävä johonkin, jota ei ehkä ollut. Osaan kaikki kielet, ja sen sanan liiankin hyvin. Torni seisoo, joki vetäytyi.',
+      'Lissabonissa on nyt hissejä mäkiä varten. Ihmiset eivät saaneet siipiä, joten piti ryhtyä rakennustöihin.',
     ],
     teksti: 'Se järistys, josta isoisäsi kirjoitti, muutti muuten koko '
       + 'Euroopan ajattelua — sen jälkeen alettiin ensimmäistä kertaa '

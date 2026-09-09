@@ -93,14 +93,13 @@ export const FOKUSVIRTA_PARIISI = {
      */
     paikkarivi: 'Pariisi, lokakuussa 1873. Sateen jälkeen kirkasta; puntari '
       + 'nousee.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 398 merkkiä (yläraja 400). */
-    teksti: 'Hallien laidalla söin sipulikeittoa kello viisi kuormamiesten '
-      + 'seassa, ja yksi heistä kysyi, olenko se englantilainen, jota herra '
-      + 'prässihousuissa etsii. Sanoin, että en. Hän sanoi, että hyvä, koska '
-      + 'se herra maksaa huonosti. Tuileriat ovat yhä mustana raunioina, ja '
-      + 'bulevardeilla nauretaan jo. Uutta oopperaa rakennetaan niin '
-      + 'koristeelliseksi, ettei se valmistu koskaan. Painolasti: sipuli, '
-      + 'ilmainen.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 352 merkkiä (yläraja 400). */
+    teksti: 'Pariisin uusi oopperatalo on yhä kesken, mutta mahtaako sisällä '
+      + 'enää tapahtua mitään seinien veroista? Kultaa, pylväitä, marmoria. '
+      + 'Kokonainen rakennus parhaissa juhlatamineissaan. Paluumatkalla '
+      + 'seurasin kaksi korttelia miestä, joka vihelsi leipä kainalossa. Jos '
+      + 'hänelle annettaisiin tuo talo, menisin kuuntelemaan. Toistaiseksi hän '
+      + 'esiintyy ilmaiseksi.',
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -109,23 +108,22 @@ export const FOKUSVIRTA_PARIISI = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Hallien laidalla söin sipulikeittoa kello viisi '
-      + 'kuormamiesten seassa, ja yksi heistä kysyi, olenko se '
-      + 'englantilainen, jota herra prässihousuissa etsii. Sanoin, että en. '
-      + 'Hän sanoi, että hyvä, koska se herra maksaa huonosti. Tuileriat ovat '
-      + 'yhä mustana raunioina, ja bulevardeilla nauretaan jo. Uutta oopperaa '
-      + 'rakennetaan niin koristeelliseksi, ettei se valmistu koskaan. '
-      + '[softly] Painolasti: sipuli, ilmainen.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Pariisin uusi oopperatalo on yhä kesken, mutta mahtaako '
+      + 'sisällä enää tapahtua mitään seinien veroista? Kultaa, pylväitä, '
+      + 'marmoria. Kokonainen rakennus parhaissa juhlatamineissaan. '
+      + 'Paluumatkalla seurasin kaksi korttelia miestä, joka vihelsi leipä '
+      + 'kainalossa. Jos hänelle annettaisiin tuo talo, menisin kuuntelemaan. '
+      + '[softly] Toistaiseksi hän esiintyy ilmaiseksi.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'G. maksaa huonosti, sen tietää koko Pariisi. Ooppera valmistui. Raunioiden paikalla on puutarha. Penkin alta saa leipää.',
+      'Leipä kainalossa? Olisin seurannut minäkin. Ooppera valmistui, ja nyt pelkästä talon katsomisestakin maksetaan.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Eiffel-torni). Faktat:

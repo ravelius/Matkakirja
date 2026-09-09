@@ -33,31 +33,29 @@ export const FOKUSVIRTA_LAPPI = {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Rovaniemi, syyskuussa 1873. Ensimmäinen ruska; yöllä '
       + 'revontulet; puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 392 merkkiä (yläraja 400). */
-    teksti: 'Kaupan ovella puhuttiin kolmea kieltä, ja kaikki puhuivat '
-      + 'kullasta. Mies, joka oli tullut Ivalojoelta tyhjin käsin, tarjosi '
-      + 'minulle vaskoolin ja osuuden, jos maksan matkan. Tein K3:n: kauppias '
-      + 'sanoi hullu, pappi sanoi rehellinen, poromies nauroi ja sanoi että '
-      + 'molemmat. Kieltäydyin ja kaduin heti. Yöllä taivas syttyi vihreänä, '
-      + 'eikä kukaan paikallinen katsonut ylös. Minä katsoin. Lakkipiste.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 334 merkkiä (yläraja 400). */
+    teksti: 'Rovaniemellä Ounasjoki tuo vetensä Kemijokeen kuin matkustaja '
+      + 'suurempaan veneeseen. Rannassa sidottiin kuormaa, ja kauppapuodissa '
+      + 'puhuttiin yläjuoksun puista. Olin piirtänyt joet rajoiksi. Täällä ne '
+      + 'olivat teitä. Veneeseen astuva nainen tiesi seuraavan talon savusta, '
+      + 'ei kartasta. Lisäsin rannalle talon ja jätin savulle tilaa nousta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain neljä tunnetagia. */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupan ovella puhuttiin kolmea kieltä, ja kaikki '
-      + 'puhuivat kullasta. Mies, joka oli tullut Ivalojoelta tyhjin käsin, '
-      + 'tarjosi minulle vaskoolin ja osuuden, jos maksan matkan. Tein K3:n: '
-      + 'kauppias sanoi hullu, pappi sanoi rehellinen, poromies nauroi ja '
-      + 'sanoi että molemmat. Kieltäydyin ja kaduin heti. Yöllä taivas syttyi '
-      + 'vihreänä, eikä kukaan paikallinen katsonut ylös. Minä katsoin. '
-      + '[softly] Lakkipiste.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Rovaniemellä Ounasjoki tuo vetensä Kemijokeen kuin '
+      + 'matkustaja suurempaan veneeseen. Rannassa sidottiin kuormaa, ja '
+      + 'kauppapuodissa puhuttiin yläjuoksun puista. Olin piirtänyt joet '
+      + 'rajoiksi. Täällä ne olivat teitä. Veneeseen astuva nainen tiesi '
+      + 'seuraavan talon savusta, ei kartasta. [softly] Lisäsin rannalle talon '
+      + 'ja jätin savulle tilaa nousta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lappi.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'K3 on kolmiomittaus: kolme vastausta, usko naurajaa. Porot kulkevat yhä samoja reittejä. Revontulia tullaan katsomaan kaukaa.',
+      'Rovaniemelle lennetään nyt joulupukin vuoksi. Joet kohtaavat yhä. Minusta niissäkin olisi matkan aihetta.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

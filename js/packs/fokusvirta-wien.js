@@ -106,14 +106,13 @@ export const FOKUSVIRTA_WIEN = {
      * päivää myöhemmin, joten isoisä oli Wienissä toukokuussa.
      */
     paikkarivi: 'Wien, toukokuussa 1873. Sadekuuroja; puntari laskee aamusta.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 391 merkkiä (yläraja 400). */
-    teksti: 'Wien on rakentanut maailmannäyttelyn ja sen ylle kupolin, jota '
-      + 'sanotaan maailman suurimmaksi. Otin peilauksen Rotunden alla hattu '
-      + 'kädessä: sata askelta laidasta laitaan, ja katto niin korkealla, '
-      + 'että sen alle mahtuisi kirkko torneineen. Kahdeksan päivää '
-      + 'avajaisten jälkeen pörssi kaatui. Näin rikkaita miehiä itkemässä '
-      + 'kadulla, enkä unohda sitä koskaan. Kahvilassa kukaan ei puhunut '
-      + 'rahasta.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
+    teksti: 'Wienin maailmannäyttelyssä näin koneen painavan sanomalehteä '
+      + 'silmieni edessä. Se ei tarvinnut edes aikaa ajatellakseen, mitä '
+      + 'kirjoitti. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten '
+      + 'pörssi romahti. Kahvilassa herra taitteli lehtensä hyvin pieneksi, '
+      + 'mutta uutinen ei pienentynyt. Tilasin hänelle kahvin. Koneista ei '
+      + 'ollut siihen apua.',
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -122,14 +121,13 @@ export const FOKUSVIRTA_WIEN = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Wien on rakentanut maailmannäyttelyn ja sen ylle '
-      + 'kupolin, jota sanotaan maailman suurimmaksi. Otin peilauksen '
-      + 'Rotunden alla hattu kädessä: sata askelta laidasta laitaan, ja katto '
-      + 'niin korkealla, että sen alle mahtuisi kirkko torneineen. Kahdeksan '
-      + 'päivää avajaisten jälkeen pörssi kaatui. Näin rikkaita miehiä '
-      + 'itkemässä kadulla, enkä unohda sitä koskaan. [softly] Kahvilassa '
-      + 'kukaan ei puhunut rahasta.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Wienin maailmannäyttelyssä näin koneen painavan '
+      + 'sanomalehteä silmieni edessä. Se ei tarvinnut edes aikaa '
+      + 'ajatellakseen, mitä kirjoitti. Rotunden kupoli peitti taivaan '
+      + 'rautaisella hatulla. Sitten pörssi romahti. Kahvilassa herra taitteli '
+      + 'lehtensä hyvin pieneksi, mutta uutinen ei pienentynyt. Tilasin '
+      + 'hänelle kahvin. [softly] Koneista ei ollut siihen apua.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-wien.mp3',
   },
 
@@ -171,9 +169,9 @@ export const FOKUSVIRTA_WIEN = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Peilaus on merimiehen suuntima, hänellä askelmittaus. Kupoli paloi, puisto on yhä. Kahvilassa istutaan tunteja kupilla.',
+      'Rotunde paloi myöhemmin. Wienin kahvilat jäivät. Isoisä ymmärsi koneita, mutta tuossa hän ymmärsi ihmistä.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (valtionooppera). Faktat

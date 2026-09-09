@@ -287,31 +287,29 @@ export const FOKUSVIRTA_TUKHOLMA = {
      */
     paikkarivi: 'Tukholma, toukokuussa 1873. Liputus joka ikkunassa; kaduilla '
       + 'tungos; puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 398 merkkiä (yläraja 400). */
-    teksti: 'Osuin keskelle kruunajaisia. Löin vetoa itseni kanssa, että '
-      + 'pääsen kirkon portaille asti, ja pääsin. Hinta oli kaksi nappia ja '
-      + 'tästä kirjasta sivu, jolla oli puolikas kartta. Tein K3:n: poliisi '
-      + 'sanoi taskuvaras, kauppias sanoi tuuli, pikkupoika nauroi ja sanoi '
-      + 'että hänen setänsä. Uskoin poikaa. Kirjoitin sivun uudestaan niin '
-      + 'tarkasti kuin muistan. Se ei ole tarkasti. Painolasti: '
-      + 'kruunajaislippu.',
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Osuin keskelle kruunajaisia. Löin vetoa itseni kanssa, '
-      + 'että pääsen kirkon portaille asti, ja pääsin. Hinta oli kaksi nappia '
-      + 'ja tästä kirjasta sivu, jolla oli puolikas kartta. Tein K3:n: '
-      + 'poliisi sanoi taskuvaras, kauppias sanoi tuuli, pikkupoika nauroi ja '
-      + 'sanoi että hänen setänsä. Uskoin poikaa. Kirjoitin sivun uudestaan '
-      + 'niin tarkasti kuin muistan. Se ei ole tarkasti. [softly] Painolasti: '
-      + 'kruunajaislippu.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 343 merkkiä (yläraja 400). */
+    teksti: 'Tukholmassa kruunattiin Oskar, mutta minun kohdalleni osui '
+      + 'lähinnä toisten hattuja. Pieni tyttö nousi isänsä hartioille ja '
+      + 'selosti meille lopuille. Hän huomasi hevoset, kukat ja yhden '
+      + 'kadonneen kengän. Kuningas jäi lyhyelle maininnalle. Satamaan '
+      + 'palatessa saarten välissä välkkyi vesi. Suosittelisin samaa '
+      + 'selostajaa myös valtakunnan asioihin.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Tukholmassa kruunattiin Oskar, mutta minun kohdalleni '
+      + 'osui lähinnä toisten hattuja. Pieni tyttö nousi isänsä hartioille ja '
+      + 'selosti meille lopuille. Hän huomasi hevoset, kukat ja yhden '
+      + 'kadonneen kengän. Kuningas jäi lyhyelle maininnalle. Satamaan '
+      + 'palatessa saarten välissä välkkyi vesi. [softly] Suosittelisin samaa '
+      + 'selostajaa myös valtakunnan asioihin.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tukholma.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'K3 on kolmiomittaus: kolme vastausta ja yksi nauru. Kruunajaisia ei enää pidetä. En mene tungokseen. Sivuni ovat tallella.',
+      'Ruotsissa ei enää kruunata kuninkaita. Tyttö tiesi silti olennaisen: näkymä paranee, kun pääsee ylemmäs.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen. Faktat ovat lehden oman

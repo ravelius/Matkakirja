@@ -206,25 +206,23 @@ export const FOKUSVIRTA_KRAKOVA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Krakova, kesäkuussa 1873. Poutaa; torilla pölyää; puntari '
       + 'korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 358 merkkiä (yläraja 400). */
-    teksti: 'Torin laidalla kangashalli on täynnä kauppiaita kuin neljäsataa '
-      + 'vuotta sitten, ja tasatunnein tornista soi torvi, jonka sävelmä '
-      + 'loppuu kesken. Tein K3:n: vahtimestari sanoi nuoli, kauppias sanoi '
-      + 'tulipalo, poika nauroi ja sanoi, ettei soittaja osaa loppua. Uskoin '
-      + 'poikaa. Wawelin kukkulalla kuninkaat nukkuvat kirkon lattian alla, '
-      + 'eikä muisti täällä haalistu.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 298 merkkiä (yläraja 400). */
+    teksti: 'Krakovan Marian kirkon tornista soi torvi ja vaikeni kesken '
+      + 'sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi tuolia. '
+      + 'Hän oli kuullut saman katkoksen koko ikänsä eikä aikonut odottaa '
+      + 'enää. Ostin leivän ja jäin silti. Kun kaupunki jättää jotakin '
+      + 'sanomatta, korva ei tahdo lähteä muualle.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Torin laidalla kangashalli on täynnä kauppiaita kuin '
-      + 'neljäsataa vuotta sitten, ja tasatunnein tornista soi torvi, jonka '
-      + 'sävelmä loppuu kesken. Tein K3:n: vahtimestari sanoi nuoli, kauppias '
-      + 'sanoi tulipalo, poika nauroi ja sanoi, ettei soittaja osaa loppua. '
-      + 'Uskoin poikaa. [softly] Wawelin kukkulalla kuninkaat nukkuvat kirkon '
-      + 'lattian alla, eikä muisti täällä haalistu.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Krakovan Marian kirkon tornista soi torvi ja vaikeni '
+      + 'kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi '
+      + 'tuolia. Hän oli kuullut saman katkoksen koko ikänsä eikä aikonut '
+      + 'odottaa enää. Ostin leivän ja jäin silti. [softly] Kun kaupunki '
+      + 'jättää jotakin sanomatta, korva ei tahdo lähteä muualle.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-krakova.mp3',
   },
 
@@ -271,13 +269,10 @@ export const FOKUSVIRTA_KRAKOVA = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'Uskoin poikaa',
-      teksti: 'Neljäs on minulla.',
-    },
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Torvi soi yhä joka tunti, ja sävelmä katkeaa samalla tavalla. Syyn saat selvittää itse. Tornin laudalta sen kuulee parhaiten.',
+      'Torvi soi yhä joka tunti neljään suuntaan. Isoisä odotti loppua; minä arvostan soittajaa, joka osaa lopettaa.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

@@ -164,34 +164,32 @@ export const FOKUSVIRTA_OSLO = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Kristiania, heinäkuussa 1873. Valoisaa myöhään; vuono tyyni; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 393 merkkiä (yläraja 400). */
-    teksti: 'Kuningas kruunattiin toissa viikolla Trondheimissa toiseen '
-      + 'kertaan, koska norjalaiset vaativat oman kruunauksen. Illalla söin '
-      + 'lohta ja kuuntelin ylioppilaita, jotka väittelivät siitä, kenen '
-      + 'Norja on. Ruotsin kuninkaan, sanoi laki. Ei kauan, sanoivat he, ja '
-      + 'löivät vetoa vuodesta. Löin vetoa itseni kanssa, ettei kukaan heistä '
-      + 'elä sen näkevänsä. Toivon häviäväni. Vuonolla höyry ohitti purjeet.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 332 merkkiä (yläraja 400). */
+    teksti: 'Christianian vuonolla lastattiin lankkuja laivaan. Metsä matkusti '
+      + 'maailmalle siististi pinottuna. Sataman mies näytti rannan sahoja ja '
+      + 'sanoi kaupungin kasvavan puusta. Se oli omituista kuultavaa paikassa, '
+      + 'jossa kivitalot näyttivät niin ylpeiltä itsestään. Poimin vedestä '
+      + 'lastun. Se tuoksui yhä metsältä, vaikka matka oli jo alkanut.',
     /*
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kuningas kruunattiin toissa viikolla Trondheimissa '
-      + 'toiseen kertaan, koska norjalaiset vaativat oman kruunauksen. '
-      + 'Illalla söin lohta ja kuuntelin ylioppilaita, jotka väittelivät '
-      + 'siitä, kenen Norja on. Ruotsin kuninkaan, sanoi laki. Ei kauan, '
-      + 'sanoivat he, ja löivät vetoa vuodesta. Löin vetoa itseni kanssa, '
-      + 'ettei kukaan heistä elä sen näkevänsä. Toivon häviäväni. [softly] '
-      + 'Vuonolla höyry ohitti purjeet.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Christianian vuonolla lastattiin lankkuja laivaan. '
+      + 'Metsä matkusti maailmalle siististi pinottuna. Sataman mies näytti '
+      + 'rannan sahoja ja sanoi kaupungin kasvavan puusta. Se oli omituista '
+      + 'kuultavaa paikassa, jossa kivitalot näyttivät niin ylpeiltä '
+      + 'itsestään. Poimin vedestä lastun. [softly] Se tuoksui yhä metsältä, '
+      + 'vaikka matka oli jo alkanut.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-oslo.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Hän hävisi vedon, ja hyvä niin: nimi on taas Oslo ja Norja oma valtio. Vuonolla ei ole purjeita. Purjeissa oli parempi istua.',
+      'Nimi on nyt Oslo, ja vuonon rannassa kävellään oopperan katolla. Siihen suuntaan kaupunkien pitäisi kasvaa.',
     ],
     /* KAANON (Fable) — kuplateksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Ylioppilaat olivat oikeassa — Norja itsenäistyi 1905, ja '

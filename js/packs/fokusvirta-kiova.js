@@ -185,25 +185,24 @@ export const FOKUSVIRTA_KIOVA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Kiova, toukokuussa 1873. Lämmintä; kastanjat kukkivat; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 385 merkkiä (yläraja 400). */
-    teksti: 'Munkki antoi kynttilän ja käski pysyä pyhiinvaeltajien perässä. '
-      + 'Käytävät kulkevat maan alla kahdeksansataa vuotta, ja katto on niin '
-      + 'matala, että hattu jäi kolmesti seinään. Kynttilä sammui. Pimeys oli '
-      + 'sellaista, jota ei ole merellä koskaan, ja seisoin siinä, kunnes '
-      + 'edelläni joku alkoi laulaa ja kävelin ääntä kohti. Ylhäällä kupolit '
-      + 'kiilsivät. Yövahti: se laulu. Painolasti: kynttilä.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 326 merkkiä (yläraja 400). */
+    teksti: 'Kiovan luostarin kupolit näkyvät kauas Dneprille, mutta '
+      + 'pyhiinvaeltajat menevät maan alle. Seurasin kynttilöitä luoliin. Kun '
+      + 'oma liekkini sammui, edellä kulkeva nainen sytytti sen omastaan '
+      + 'sanomatta mitään. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. '
+      + 'Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Munkki antoi kynttilän ja käski pysyä pyhiinvaeltajien '
-      + 'perässä. Käytävät kulkevat maan alla kahdeksansataa vuotta, ja katto '
-      + 'on niin matala, että hattu jäi kolmesti seinään. Kynttilä sammui. '
-      + 'Pimeys oli sellaista, jota ei ole merellä koskaan, ja seisoin siinä, '
-      + 'kunnes edelläni joku alkoi laulaa ja kävelin ääntä kohti. Ylhäällä '
-      + 'kupolit kiilsivät. Yövahti: se laulu. [softly] Painolasti: kynttilä.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kiovan luostarin kupolit näkyvät kauas Dneprille, mutta '
+      + 'pyhiinvaeltajat menevät maan alle. Seurasin kynttilöitä luoliin. Kun '
+      + 'oma liekkini sammui, edellä kulkeva nainen sytytti sen omastaan '
+      + 'sanomatta mitään. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. '
+      + 'Olen tutkinut monta tapaa siirtää omaisuutta. [softly] Tämän haluan '
+      + 'muistaa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kiova.mp3',
   },
 
@@ -250,9 +249,9 @@ export const FOKUSVIRTA_KIOVA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Yövahti on hänen luettelonsa yön äänistä. Minä en mene maan alle. Käytävissä kävellään yhä kynttilä kädessä.',
+      'Kiova on nyt Ukrainan pääkaupunki. Luostari on kärsinyt sodassa. Tätä isoisän sivua luen hiljaa.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/

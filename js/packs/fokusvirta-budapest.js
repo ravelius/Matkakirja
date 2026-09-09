@@ -116,21 +116,20 @@ export const FOKUSVIRTA_BUDAPEST = {
     paikkarivi: 'Budapest, marraskuussa 1873. Harmaata; joelta nousee kylmä '
       + 'tuuli; puntari putoaa.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 374 merkkiä (yläraja 400). */
-    teksti: 'Saavuin kaupunkiin, jota ei vielä eilen ollut: Buda, Óbuda ja '
-      + 'Pest liitettiin yhteen, ja nimi on nyt Budapest. Kartantekijöille '
-      + 'riittää töitä. Kävin turkkilaisessa kylpylässä, jonka kupolin alla '
-      + 'vesi on kuumaa suoraan maasta, ja vanhat miehet väittivät istuneensa '
-      + 'siinä ennen kuin kaupungilla oli mitään nimeä. Yövahti: joki, yksi '
-      + 'viulu, kellot kahdelta rannalta eri aikaan.',
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Saavuin kaupunkiin, jota ei vielä eilen ollut: Buda, '
-      + 'Óbuda ja Pest liitettiin yhteen, ja nimi on nyt Budapest. '
-      + 'Kartantekijöille riittää töitä. Kävin turkkilaisessa kylpylässä, '
-      + 'jonka kupolin alla vesi on kuumaa suoraan maasta, ja vanhat miehet '
-      + 'väittivät istuneensa siinä ennen kuin kaupungilla oli mitään nimeä. '
-      + '[softly] Yövahti: joki, yksi viulu, kellot kahdelta rannalta eri '
-      + 'aikaan.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 367 merkkiä (yläraja 400). */
+    teksti: 'Buda, Pest ja Óbuda on tänä marraskuuna liitetty yhteen. Karttani '
+      + 'vanheni kesken aamiaisen. Toisella rannalla kohoaa linna, toisella '
+      + 'talot levittäytyvät tasamaalle; välissä Tonava pitää oman suuntansa. '
+      + 'Menin Rudasin turkkilaiseen kylpylään miettimään uuden nimen '
+      + 'sijoittelua. Kupolin alla oli niin lämmintä, että päätin antaa '
+      + 'kaupunkien olla hetken ilman järjestystä.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Buda, Pest ja Óbuda on tänä marraskuuna liitetty '
+      + 'yhteen. Karttani vanheni kesken aamiaisen. Toisella rannalla kohoaa '
+      + 'linna, toisella talot levittäytyvät tasamaalle; välissä Tonava pitää '
+      + 'oman suuntansa. Menin Rudasin turkkilaiseen kylpylään miettimään '
+      + 'uuden nimen sijoittelua. [softly] Kupolin alla oli niin lämmintä, '
+      + 'että päätin antaa kaupunkien olla hetken ilman järjestystä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-budapest.mp3',
   },
 
@@ -176,13 +175,10 @@ export const FOKUSVIRTA_BUDAPEST = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'Kartantekijöille riittää töitä',
-      teksti: 'Ja postille!',
-    },
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Yövahti on yön äänten lista, ja kellot soivat yhä eri aikaan. Nimi on itsestäänselvyys. Vedessä istutaan. Minä katolla.',
+      'Nimi mahtui karttaan. Nykyään Rudasissa kylvetään katollakin. Kerrankin ihmisillä on oikea kerros.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (parlamenttitalo). Faktat

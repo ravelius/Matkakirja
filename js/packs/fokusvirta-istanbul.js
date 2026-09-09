@@ -185,26 +185,25 @@ export const FOKUSVIRTA_ISTANBUL = {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Konstantinopoli, syyskuussa 1873. Sumua salmella; puntari '
       + 'korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 389 merkkiä (yläraja 400). */
-    teksti: 'Kysyin kahvilassa, onko tämä tie basaariin. Mies sanoi yok. '
-      + 'Kiitin ja kävelin puoli tuntia väärään suuntaan, kunnes toinen mies '
-      + 'sanoi saman ja käänsi minut hartioista. Yok tarkoittaa ei. '
-      + 'Basaarissa kolmas mies tarttui hihaani ja sanoi nimeni, jota en ole '
-      + 'sanonut kenellekään. Hän sanoi, ettei minun kannata jatkaa itään, ja '
-      + 'katosi. Yövahti: koirat, kellot, askeleet ovelleni. Jatkan itään.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
+    teksti: 'Galatan mäessä kantaja laski arkkunsa kivelle ja antoi mäen '
+      + 'odottaa. Sen sisään kaivetaan tunnelia, jotta ihmiset pääsisivät ylös '
+      + 'istualtaan. Merkillistä, miten paljon työtä tarvitaan työn '
+      + 'välttämiseen. Alhaalla salmi oli täynnä laivoja. Kantaja nosti arkun '
+      + 'selkäänsä ennen kuin sain niiden mastot lasketuksi. Hänellä oli '
+      + 'parempaa tekemistä.',
     /*
      * Luenta on kaanonin oma (kohta 1), tunnetageineen. Äänite on
      * generoitu samalla reseptillä kuin Ateenalle
      * (tools/generoi-luennat.mjs), ja kaanon nimeää tiedoston.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kysyin kahvilassa, onko tämä tie basaariin. Mies sanoi '
-      + 'yok. Kiitin ja kävelin puoli tuntia väärään suuntaan, kunnes toinen '
-      + 'mies sanoi saman ja käänsi minut hartioista. Yok tarkoittaa ei. '
-      + 'Basaarissa kolmas mies tarttui hihaani ja sanoi nimeni, jota en ole '
-      + 'sanonut kenellekään. Hän sanoi, ettei minun kannata jatkaa itään, ja '
-      + 'katosi. Yövahti: koirat, kellot, askeleet ovelleni. [softly] Jatkan '
-      + 'itään.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Galatan mäessä kantaja laski arkkunsa kivelle ja antoi '
+      + 'mäen odottaa. Sen sisään kaivetaan tunnelia, jotta ihmiset pääsisivät '
+      + 'ylös istualtaan. Merkillistä, miten paljon työtä tarvitaan työn '
+      + 'välttämiseen. Alhaalla salmi oli täynnä laivoja. Kantaja nosti arkun '
+      + 'selkäänsä ennen kuin sain niiden mastot lasketuksi. [softly] Hänellä '
+      + 'oli parempaa tekemistä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-istanbul.mp3',
     /*
      * AIKALAISPIIRROS, HAETTU JA VARMENNETTU ERIKSEEN (ks. tiedoston
@@ -318,9 +317,9 @@ export const FOKUSVIRTA_ISTANBUL = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Yok on ei, ja sen olisin sanonut, jos joku kysyisi minulta. Askeleet olivat G:n miehen. Nimen hän luki minun jalastani.',
+      'Tünelin vaunu vie nyt mäen ylös. Isoisä laski mastoja; kantajalta olisin kysynyt, missä saa levätä.',
     ],
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):

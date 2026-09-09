@@ -359,10 +359,9 @@ test('uuden kulun huudahdus osuu matkakirjan tekstiin tasan kerran', () => {
     assert.ok(livianKuplat(huudahdus)[0].length <= 30,
       `${kaupunki}: välihuuto on liian pitkä`);
   }
-  // Huudahdus jäi 8.9.2026 vain noin puoleen kaupungeista (omistaja:
-  // "puolet välihuomautuksista pois"), ja illan erässä se poistui vielä
-  // Prahasta, Tampereelta ja Riiasta: kuusi kaupunkia.
-  assert.equal(uusia, 6, `huudahduksen kaupunkeja pitäisi olla 6, on ${uusia}`);
+  // Huudahdukset poistettiin kokonaan 9.9.2026 (omistajan tekstipaketti,
+  // yksi kupla per kaupunki): kenttää ei ole enää yhdessäkään kaupungissa.
+  assert.equal(uusia, 0, `huudahduksen kaupunkeja pitäisi olla 0, on ${uusia}`);
 });
 
 test('vähintään yhdessä puheenvuorossa isoisä osoittautuu oikeaksi', () => {
