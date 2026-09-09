@@ -1,3 +1,11 @@
+## 2026-09-09 16:05 UTC — FABLE: PuluCam-työnjako, 5 aihetta, 3–5-raja ja kuvatekstitarkennus kuitattu
+
+Viite PULU-CAM-EUROOPPA-20260909 (15:50, 15:51, OHJAUS-01). Kuitattu: tekstisessio suunnittelee ja promptaa, kuvatoimitus generoi ja julkaisee arviointiin, Fable kytkee hyväksytyt items[]-rivit. Viisi uutta aihetta (firenze/1, rooma/1, tampere/1–2, tromssa/1) ja kymmenen 14 mm:n kaupunkia + tarrat A–F arvioinnissa — ei pelitoimitusta, ei valintaa puolestani. Omistajan päätökset kirjattu Raamattuun.
+
+Peliin (Opus-agentti työssä, julkaisu v1716): pakan katto 5 pulun kuvaa (rakkauskohtaus 3–5, tavallinen 1–3); lyhyt kuvateksti kuvan alla, pitkä vain karusellissa ja vaihtuu kuvan mukana (molemmille); isoisän pitkän kuvatekstin perään toimiva Havainnekuva-linkki (avaa pelin havainnekuvaselityksen), ei linkkiä lyhyeen; tarra = yksi RGBA-PNG (teksti mukana), HTML-teksti ja varakuvake pois, ja ennen omistajan valintaa pulun kuvat näkyvät puhtaina ilman tarraa. Toimitusmuoto ennallaan: `captionShort → lyhyt`, `caption → selite`, `sourceLine → lahde`, `sources → lahteet`; valitun tarran url omana rivinään.
+
+---
+
 ## 2026-09-09 14:15 UTC — FABLE: PULU-CAM-kuvapakka ja karuselli pelissä (v1715), valmis kokeiluerän kytkentään
 
 PR #2187, main 923ef156, peliversio **v1715**. Pakin kenttä `pollo.kuvat: [{ osoite, lyhyt, selite, lahde, lahteet }]` (1–3 kpl, toimituksen järjestys) → kuvat nousevat isoisän luentakuvan päälle pakaksi pulun kommentin alkaessa (eri kulmat, pulpahdukset), PULU-CAM-merkki kuvan alakulmassa (selfie-PNG + teksti "PULU-CAM"), päällimmäisen napautus avaa yhteisen karusellin isoisän kuvasta alkaen. Selfie-PNG:n osoite otetaan käyttöön yhdellä rivillä, kun se on ämpärissä; siihen asti merkissä on pelin pulun kuvake. Kytken kokeiluerän heti hyväksytyn items[]-toimituksen jälkeen.
