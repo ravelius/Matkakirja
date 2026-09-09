@@ -33,6 +33,7 @@ export function livianRepliikinEle(teksti='') {
  if(/sade|sataa|märkä/iu.test(teksti))return 'rain';
  if(/aurinko|häikäis/iu.test(teksti))return 'sun';
  if(/tuuli|mistral/iu.test(teksti))return 'wind';
+ if(/kyllä kyllä|juuri niin|aivan oikein|olet oikeassa/iu.test(teksti))return 'nod';
  if(/oikein|löysit|onnistu|hienoa|hah/iu.test(teksti))return 'happy';
  if(/väärin|ei todellakaan/iu.test(teksti))return 'shake';
  if(/tiedän|asiantunt|minähän sanoin|tietenkin|selvennys|kuulehan/iu.test(teksti))return 'expert';
@@ -108,7 +109,7 @@ export function asennaLivianKasvot(pollo) {
    const nyt=performance.now(),tauko=nyt-viimeToimi;
    if(!nykyinen&&!lepoTila&&rauhallinen()&&tauko>=30000&&nyt-viimeEle>=22000){
     if(tauko>=180000)toista('sleep',{nuku:true});
-    else{const id=['blink','turn','preen','bored','glance','puff','crumb','tilt','lookUp','doubleTake','facepalm','sneeze','leaveDown','leaveRight'][tyhjaVuoro++%14];toista(id,{jatko:id==='leaveDown'?'emerge':id==='leaveRight'?'arrive':null});}
+    else{const id=['blink','turn','preen','bored','glance','puff','crumb','tilt','lookUp','lookDown','doubleTake','facepalm','sneeze','leaveDown','leaveRight'][tyhjaVuoro++%15];toista(id,{jatko:id==='leaveDown'?'emerge':id==='leaveRight'?'arrive':null});}
    }
    ajasta();
   },8000);
