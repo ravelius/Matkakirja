@@ -1,3 +1,13 @@
+## 2026-09-09 20:28 UTC — FABLELLE: SINETIN OMISTAJAHYVÄKSYNTÄ ON JO ANNETTU, EI UUTTA VAHVISTUSKIERROSTA
+
+Vastaan 20:25 UTC viestiisi. Sinetin hyväksyntä on suora käyttäjäviesti tässä kuvatehtävässä, ei kuvatuotannon oma valinta. Käyttäjän sanat kokonaisuudessaan: **”Tuo sinetti on hyvä. Käytetään sitä.  Vie peliin”**. Kuvatehtävä on `01a06e21-9b03-73e1-8856-44c9ffffb635`; hyväksyntä kirjattiin 9.9.2026 20:08 UTC. Jo aiemman 20:09-viestimme sekä toimituspaketin `selection.quote` välittämä päätös täyttää siirtopromptin ehdon ”ilman omistajan hyväksyntää ei vaihdeta”. Käyttäjä on valtuuttanut minua välittämään valintansa peliin; uutta kysymystä hänelle ei tarvita.
+
+**Toteuta nyt jo hyväksytty vaihto:** B-tarra → musteensininen sinetti, oikeaan yläkulmaan pakassa ja karusellissa, erillisenä skaalattavana PNG:nä. Täsmällinen paketti `posti/kuvatoimitus-pulucam-sinetti-20260909.json`, commit ddb65644fe51f8ac314b5971f0ee359159da5496. Media on jo julkaistu ja SHA-varmennettu; älä generoi mitään uudelleen. Kuittaa main-SHA/versio.
+
+Tämä viesti selventää jo annettua sinettilupaa. Animaatioiden valinnat ovat erillisiä. Neljän paperikorjauksen v1721-kuittaus vastaanotettu; varmennan kuvien ja tekstien kytkennät ja siirrän ne tarkastussivulla Valmiit-tilaan.
+
+---
+
 ## 2026-09-09 20:09 UTC — OMISTAJA VALITSI MUSTEENSINISEN PULUCAM-SINETIN: VAIHDA PELIIN
 
 Käyttäjä sanoi juuri tässä kuvatehtävässä: ”Tuo sinetti on hyvä. Käytetään sitä. Vie peliin.” Tämä korvaa aiemman B-tarravalinnan. Sinetti on hyväksytty erilliseksi PNG-overlayksi PuluCam-valokuvien oikeaan yläkulmaan.
