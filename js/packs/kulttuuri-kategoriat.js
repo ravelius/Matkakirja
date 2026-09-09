@@ -856,6 +856,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'virtaa, ensimmäisen generaattorin. Faraday ei osaa matematiikkaa '
             + 'juuri lainkaan; hänen kenttäviivansa muuttaa James Clerk Maxwell '
             + 'yhtälöiksi vasta 1860-luvulla.',
+          lyhyt: 'Faraday saa galvanometrin neulan nytkähtämään ja löytää tavan '
+            + 'tehdä magnetismista sähköä.',
           selite: 'Galvanometrin neula nytkähtää vain silloin, kun Faraday kytkee '
             + 'tai katkaisee virran ensimmäisestä käämistä. Hän on etsinyt vuosia '
             + 'tapaa tehdä magnetismista sähköä; ratkaisu ilmoittaa itsestään '
@@ -866,6 +868,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Royal Institution 1831 — muutos synnyttää sähköä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-faraday-luento-1831-kauko-photo-v4.jpg',
+              lyhyt: 'Faradayn pienen rautarenkaan käämien välinen hetkellinen '
+                + 'virta avaa periaatteen muuntajille.',
               selite: 'Avustajan on ehdittävä merkitä neulan lyhyt liike, ennen '
                 + 'kuin se palaa nollaan. Faradayn rautarengas on vain 17 '
                 + 'senttimetriä leveä, mutta sen kahden käämin välinen '
@@ -931,6 +935,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Howard Floreyn ja Ernst Chainin ryhmä Oxfordissa tekee siitä '
             + 'lääkkeen 1940-luvun alussa, ja kolmikko jakaa lääketieteen Nobelin '
             + '1945.',
+          lyhyt: 'Fleming huomaa homepesäkkeen ympärillä kirkkaan kehän, jossa '
+            + 'bakteerit eivät kasva.',
           selite: 'Fleming on vähällä siirtää sotkuisen viljelymaljan syrjään, '
             + 'kun homepesäkkeen ympärillä oleva kirkas kehä pysäyttää hänet. '
             + 'Kukaan ei hurraa: hänen edessään ei ole vielä lääke vaan outo '
@@ -941,6 +947,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'St Mary\'s 1928 — malja, jota ei heitetty pois',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-fleming-malja-1928-kauko-photo-v4.jpg',
+              lyhyt: 'Flemingin sattuma vaatii vielä Floreyn ja Chainin työn, '
+                + 'ennen kuin siitä tulee penisilliini.',
               selite: 'St Mary\'sin epäjärjestys auttaa sattumaa, mutta havainnon '
                 + 'ymmärtäminen vaatii Flemingin pysähtymään sen ääreen. Hän osaa '
                 + 'osoittaa homeen tuhoavan bakteereita, muttei tehdä siitä '
@@ -1008,6 +1016,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Tammikuussa 1828 tulva tappaa kuusi miestä. Tunneli avataan vasta '
             + '25. maaliskuuta 1843, ensimmäisenä purjehduskelpoisen joen '
             + 'alittajana.',
+          lyhyt: 'Kaivaja etenee Thames-tunnelissa muutaman tuuman kerrallaan '
+            + 'joen alla tihkuvan veden armoilla.',
           selite: 'Kaivaja näkee vain oman valurautaisen lokeronsa, irrotettavan '
             + 'tukilaudan ja märkää savea muutaman kymmenen sentin päässä '
             + 'kasvoistaan. Hän saa ottaa maata pois vain noin neljän tuuman '
@@ -1019,6 +1029,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Rotherhithe 1827 — 36 lokeroa joen alla',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brunel-thames-tunnel-1827-kauko-photo-v4.jpg',
+              lyhyt: 'Nuori Brunel ohjaa kilpeä, joka kaivaa ensimmäistä tunnelia '
+                + 'purjehduskelpoisen joen alle.',
               selite: '21-vuotias Isambard Kingdom Brunel kuuntelee puun, '
                 + 'ruuvitunkkien ja veden ääniä, kun kaksitoista kolmikerroksista '
                 + 'kehystä siirtyy tuuma tuumalta eteenpäin. Kilven 36 kaivajaa '
@@ -1084,6 +1096,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'varastoidut kirjakauppiaiden varastot palavat. Keskiviikkona tuuli '
             + 'laantuu. Palo tuhosi 13 200 taloa ja 87 kirkkoa, mutta kirjattuja '
             + 'kuolleita on vain kourallinen — luku, jota epäillään yhä.',
+          lyhyt: 'Nuori nainen suojaa soitintaan Lontoon suurpalossa veneessä '
+            + 'pakenevien tavaroiden joukossa.',
           selite: 'Samuel Pepys huomasi Thamesilla jotain oudon arkista: lähes '
             + 'joka kolmannessa kotinsa tavaroita kuljettavassa veneessä oli '
             + 'virginal-soitin. Kuvituksen nuori nainen pitää oman soittimensa '
@@ -1095,6 +1109,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-kauko-photo-v4.jpg',
+              lyhyt: 'Thames täyttyy palon tieltä pakenevista veneistä, jotka on '
+                + 'lastattu huonekaluilla ja arkuilla.',
               selite: 'Thames täyttyi veneistä, vuoteista, arkuista ja vedessä '
                 + 'kelluvista tavaroista. Pepys kirjoitti kipinöiden polttaneen '
                 + 'kasvoja joen toiselle puolelle asti; veneessä jokainen joutui '
@@ -1106,6 +1122,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lehti-photo-v4.jpg',
+              lyhyt: 'Palo tuhoaa myös The London Gazetten painopaikan; lehti '
+                + 'ilmestyy viikon viiveellä Savoysta.',
               selite: 'Palo tuhosi myös The London Gazetten painopaikan, ja '
                 + 'numero 85 ilmestyi viikon keskeytyksen jälkeen Savoyssa. '
                 + 'Virallinen selostus lupasi lukijoille “lyhyen mutta '
@@ -1172,6 +1190,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. '
             + 'kesäkuuta 1613, kun tykki sytyttää olkikaton kesken Henrik VIII:n; '
             + 'ainoa vahinko on mies, jonka palavat housut sammutetaan oluella.',
+          lyhyt: 'Poikanäyttelijä esittää Caesarin painajaisunta Globen '
+            + 'äänekkäälle pihayleisölle ilman mikrofonia.',
           selite: 'Nuori poikanäyttelijä astuu Calpurniana näyttämölle, vain '
             + 'käsivarren mitan päähän äänekkäistä pihakatsojista. Hänen on '
             + 'saatava Caesarin paha uni kuuluviin ilman mikrofonia, kulisseja '
@@ -1183,6 +1203,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Globe 1599 — pihalla ei ole koskaan hiljaista',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-shakespeare-globe-1599-kauko-photo-v4.jpg',
+              lyhyt: 'Thomas Platter kuvailee Globen Julius Caesar -esitystä, '
+                + 'jossa yleisö syö ja kommentoi vapaasti.',
               selite: 'Sveitsiläinen Thomas Platter kertoi ylittäneensä Thamesin '
                 + 'noin kahdelta ja nähneensä Julius Caesarin viidentoista '
                 + 'näyttelijän voimin. Pihalla tarina ei ollut hiljainen pyhä '
@@ -3032,6 +3054,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ilolle, tekstinä, jota Beethoven on kantanut mukanaan '
             + 'nuoruudestaan. Samassa konsertissa kuullaan Missa solemniksen '
             + 'kolme osaa. Sävel on nyt Euroopan hymni.',
+          lyhyt: 'Kuuro Beethoven ei kuule Yhdeksännen sinfonian '
+            + 'suosionosoituksia, ennen kuin Unger kääntää hänet.',
           selite: 'Caroline Unger koskettaa Beethovenin hihaa ja kääntää hänet '
             + 'kohti salia. Säveltäjä ei kuule suosionosoituksia; hetken ajan hän '
             + 'joutuu lukemaan oman teoksensa vastaanoton kasvoista, kohoavista '
@@ -3042,6 +3066,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Kärntnertor 1824 — suosionosoitukset, joita ei kuule',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-kauko-photo-v4.jpg',
+              lyhyt: 'Muusikot seuraavat Umlaufin tahtipuikkoa, jotta kuuron '
+                + 'Beethovenin partituuri pysyy koossa.',
               selite: 'Orkesterin alttoviulisti pitää katseensa Umlaufin '
                 + 'tahtipuikossa, vaikka Beethoven merkitsee vieressä tempoja '
                 + 'koko kehollaan. Muusikot ovat sopineet seuraavansa varsinaista '
@@ -3107,6 +3133,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'villitsee talvella koko kaupungin, ja sen ihailijat maksavat '
             + 'Mozartin matkan sinne tammikuussa 1787. Siitä syntyy tilaus Don '
             + 'Giovannille.',
+          lyhyt: 'Anna Storace etsii Mozartin katseesta vihjettä Figaron häiden '
+            + 'ensi-illassa Burgtheaterissa.',
           selite: 'Anna Storace odottaa Susannan seuraavaa repliikkiä ja etsii '
             + 'Mozartin katseesta sisääntulon. Cembalon äärestä johtava säveltäjä '
             + 'voi auttaa vain pienellä nyökkäyksellä — näyttämöllä laulajan on '
@@ -3118,6 +3146,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Burgtheater 1786 — palvelijat nolaavat isäntänsä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-kauko-photo-v4.jpg',
+              lyhyt: 'Mozart johtaa Figaron häiden ensiesityksiä cembalosta '
+                + 'hoviteatterin tiiviin yleisön edessä.',
               selite: 'Mozart johtaa Figaron kahta ensimmäistä esitystä '
                 + 'cembalosta, keskellä laulajia, soittajia ja pienen '
                 + 'hoviteatterin tiivistä yleisöä. Parterren nuori nuotinkääntäjä '
@@ -4510,6 +4540,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'elokuuta Ida Siekmann hyppää kolmannesta kerroksesta ja kuolee, '
             + 'muurin ensimmäinen uhri. Betonimuuri seuraa piikkilankaa, ja se '
             + 'seisoo 28 vuotta.',
+          lyhyt: 'Berliinin muurin ensimmäisenä päivänä poliisi vetää '
+            + 'piikkilangan lähellä olevien sisarusten väliin.',
           selite: 'Bernauer Straßella talon seinä kuului itään mutta jalkakäytävä '
             + 'länteen. Kuvituksen sisarukset ovat yhä huutoetäisyydellä, kun '
             + 'nuori poliisi kiristää lankaa heidän väliinsä; kukaan heistä ei '
@@ -4520,6 +4552,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-kauko-photo-v4.jpg',
+              lyhyt: 'Opiskelijan tie isän luo katkeaa piikkilankaan, kun '
+                + 'tuhannet sulkevat Berliinin rajan.',
               selite: 'Opiskelijan pyörä on samalla kadulla kuin eilen, mutta tie '
                 + 'isän luo katkeaa betonipylväisiin ja piikkilankaan. Yli 10 000 '
                 + 'poliisia, sotilasta ja taisteluryhmäläistä sulkee kaupungin '
@@ -4531,6 +4565,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-lehti-photo-v4.jpg',
+              lyhyt: 'BILD tiivistää Berliinin muurin yön otsikkoon panssareista, '
+                + 'vaikka mitta on tuttu naapuri.',
               selite: 'BILD tiivisti 14.8.1961 yön tapahtumat otsikkoon “Berlin — '
                 + 'Panzer im Ostsektor”. Panssarit olivat totta, mutta Bernauer '
                 + 'Straßella uutisen mitta oli pienempi: tuttu ikkuna, naapurin '
@@ -5134,6 +5170,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Galilein kuina: Io, Europa, Ganymedes ja Kallisto. Kirja tekee '
             + 'hänestä Euroopan kuuluisimman luonnontutkijan — ja aloittaa tien, '
             + 'joka päättyy inkvisition eteen vuonna 1633.',
+          lyhyt: 'Galilei tähyää Jupiteria kaukoputkella Padovassa ja huomaa '
+            + 'valopisteiden vaihtavan paikkaa.',
           selite: 'Galileo painaa silmänsä kapeaan okulaariin ja yrittää pitää '
             + 'Jupiterin näkökentässä paljain käsin tammikuun kylmyydessä. '
             + 'Valopisteet ovat jälleen vaihtaneet paikkaa: havainto on '
@@ -5148,6 +5186,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Padova 1610 — neljä valopistettä Jupiterin vieressä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-galilei-kaukoputki-1610-kauko-photo-v5.jpg',
+              lyhyt: 'Avustaja kirjaa Galilein havainnot, kunnes toistuva liike '
+                + 'paljastaa neljä Jupiterin kuuta.',
               selite: 'Apulainen yrittää saada Galileon sanelemat pisteet '
                 + 'paperille ennen kuin kynttilä tai sormet hyytyvät kylmään. Kun '
                 + 'sama työ toistuu yö toisensa jälkeen, valojen liike alkaa '
@@ -6714,6 +6754,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan Nobelin '
             + 'Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
             + 'vuonna 1911 saa kemian palkinnon yksin.',
+          lyhyt: 'Marie Curie käsittelee tonnikaupalla malmia saadakseen esiin '
+            + 'vain hitusen radiumia.',
           selite: 'Jokainen tankoa kiertävä liike nostaa padasta happamia '
             + 'höyryjä, mutta Marie Curie jatkaa, koska mittari kertoo '
             + 'jäännöksessä olevan jotakin uraania voimakkaampaa. Tuhansien '
@@ -6725,6 +6767,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg',
+              lyhyt: 'Curien pariskunnan laboratorio on kylmä pihavaja, jonka '
+                + 'säteilyriskejä kumpikaan ei vielä tunne.',
               selite: 'Marie ja Pierre Curien laboratorio ei ole loistokas '
                 + 'tiedepalatsi vaan kylmä pihavaja, jossa säkit, padat ja '
                 + 'mittaukset täyttävät päivän. Kumpikaan ei vielä tiedä, kuinka '
@@ -6789,6 +6833,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
             + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta '
             + '1794, vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+          lyhyt: 'Lavoisierit punnitsevat aineet ennen ja jälkeen reaktion '
+            + 'osoittaakseen, ettei massa katoa.',
           selite: 'Kun vaa\'an neula pysähtyy, Marie-Anne merkitsee luvun ennen '
             + 'seuraavaa vaihetta. Lavoisierien läpimurto ei synny näyttävästä '
             + 'reaktiosta vaan uskosta siihen, että aineet voidaan punnita ennen '
@@ -6799,6 +6845,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Arsenaali 1780 — mitään ei katoa, kaikki punnitaan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg',
+              lyhyt: 'Marie-Anne Lavoisier dokumentoi kokeet, kun Antoine mittaa '
+                + 'kaasuja heidän laboratoriossaan.',
               selite: 'Marie-Anne ei ole vain tarkkailija: hän pitää '
                 + 'koepäiväkirjoja, kuvaa laitteet mittakaavaan ja tekee työn '
                 + 'ymmärrettäväksi muille. Antoine mittaa kaasuja, mutta heidän '
@@ -6865,6 +6913,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'viinin kuumennuksen, jota nyt kutsutaan pastöroinniksi. Ajatus, '
             + 'että näkymätön elämä tulee ulkoa eikä synny itsestään, muuttaa '
             + 'myöhemmin kirurgian ja rokotukset.',
+          lyhyt: 'Pasteurin joutsenkaulapullo pysyy kirkkaana, kun taas katkaistu '
+            + 'pullo samenee mikrobeista.',
           selite: 'Ehjässä joutsenkaulapullossa liemi pysyy kirkkaana, vaikka '
             + 'ilma pääsee sisään; katkaistussa se samenee. Pasteur ei näe '
             + 'mikrobeja paljain silmin, mutta pölyviiva lasin mutkassa kertoo, '
@@ -6875,6 +6925,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Rue d\'Ulm 1862 — liemi, joka pysyy kirkkaana',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-kauko-photo-v4.jpg',
+              lyhyt: 'Viikkoja jatkunut odotus vahvistaa Pasteurin kokeen: elämä '
+                + 'ei synny liemeen itsestään.',
               selite: 'Nuori avustaja on kirjoittanut samoihin pulloihin '
                 + 'päivämääriä viikkojen ajan ja odottanut muutosta, jota ei '
                 + 'tule. Juuri odottaminen tekee kokeesta vakuuttavan: keitetty '
@@ -6940,6 +6992,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vetoomuksella, ja sen luvattiin seisovan vain kaksikymmentä '
             + 'vuotta. Torni valmistuu 31. maaliskuuta 1889 maailmannäyttelyyn — '
             + 'ja jää, koska sen huipulle sopii radioantenni.',
+          lyhyt: 'Neljän miehen ketju niittaa Eiffel-tornia ilman suojakaiteita, '
+            + 'joka isku toisen varassa.',
           selite: 'Kuuma niitti ehtii jäähtyä nopeasti, joten neljän miehen '
             + 'työketju ei saa katketa: yksi lämmittää, toinen pitää paikoillaan, '
             + 'kolmas muotoilee kannan ja neljäs lyö liitoksen kiinni. Korkealla '
@@ -6951,6 +7005,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Champ de Mars 1888 — niitti kerrallaan taivaalle',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-kauko-photo-v4.jpg',
+              lyhyt: 'Eiffel-tornin toinen taso valmistuu, kun tuhannet '
+                + 'esivalmistetut osat kootaan yhdeksi torniksi.',
               selite: 'Elokuussa 1888 toinen taso on viimein koossa, mutta torni '
                 + 'jatkuu vielä avonaisena rautaristikkona taivaalle. Alhaalla '
                 + 'hevoskuormat tuovat Levallois’ssa millintarkasti '
@@ -7019,6 +7075,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Versailles\'sta Pariisin kaupungintalolle ja kiinnittää hattuunsa '
             + 'kaupungin sinipunaisen kokardin; Lafayette lisää siihen valkoisen, '
             + 'ja siitä tulee trikolori.',
+          lyhyt: 'Pariisilainen etsii yhä ruutia muskettiinsa, kun Bastiljin '
+            + 'portti vihdoin avautuu.',
           selite: 'Kuvituksen pariisilainen metallityöläinen on kantanut '
             + 'Invalidikirkolta hakemaansa muskettia tuntikausia, mutta ruutia '
             + 'hän etsii yhä. Kun Bastiljin portti viimein avautuu, voitonriemu '
@@ -7030,6 +7088,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Bastilji 1789 — musketti ilman ruutia',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v4.jpg',
+              lyhyt: 'Bastiljin sveitsiläinen vartija yrittää kadota pihalle '
+                + 'ennen kuin väkijoukko saavuttaa hänet.',
               selite: 'Vankilan sveitsiläinen sotilas laskee aseensa ja yrittää '
                 + 'kadota sisäpihan reunaan ennen kuin virta saavuttaa hänet. '
                 + 'Portista tuleville pariisilaisille Bastilji on sortovallan '
@@ -7098,6 +7158,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tulevaisuutta. Méliès rakentaa omansa ja keksii temppuelokuvan. '
             + 'Viikon päästä ovella jonottaa satoja, ja lehdet, Le Radical '
             + 'yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva on.',
+          lyhyt: 'Méliès katsoo hämmästyneenä, kun Lumièren elokuva saa '
+            + 'valkokankaan näyttämään ikkunalta.',
           selite: 'Georges Méliès nojautuu eteenpäin, kun valkokankaan '
             + 'tehdasportti aukeaa ja ihmiset kävelevät ulos kuin seinä olisi '
             + 'muuttunut ikkunaksi. Taikuri tietää katsovansa uutta temppua, '
@@ -7109,6 +7171,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg',
+              lyhyt: 'Avustaja pitää kameran kammen tasaisena, jotta Lumièren '
+                + 'elokuvan ihmiset jatkavat kävelyään.',
               selite: 'Koneen takana nuori avustaja pitää kammen tasaisena, '
                 + 'vaikka 33 katsojan jokainen naurahdus ja henkäys kuuluu '
                 + 'pimeässä kellarissa. Jos käsi nykäisee, kuva värisee; jos se '
@@ -7120,6 +7184,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg',
+              lyhyt: 'Toimittaja yrittää selittää lukijoille liikkuvaa kuvaa, '
+                + 'jota kukaan ei ole ennen nähnyt.',
               selite: 'Lehden nimetön toimittaja yrittää selittää liikkuvaa kuvaa '
                 + 'lukijoille, jotka eivät ole koskaan nähneet sellaista. Hän '
                 + 'kutsuu laitetta valokuvauksen ihmeeksi ja takertuu yhteen '
@@ -7807,6 +7873,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kilpaile; kerrotaan, että hän pyysi palkinnoksi hevosen ja kärryt '
             + 'vesikuljetuksiinsa. Kolmanneksi tullut Spyridon Belokas todetaan '
             + 'pian huijariksi — hän oli matkustanut osan matkaa vaunuissa.',
+          lyhyt: 'Spyridon Louis kuulee Ateenan stadionin huudon ennen maratonin '
+            + 'viimeistä kierrosta 1896.',
           selite: 'Spyridon Louis kuulee stadionin huudon ennen kuin ehtii nähdä '
             + 'marmorikatsomot. Kruununprinssi Konstantin ja prinssi Yrjö '
             + 'juoksevat hänen rinnalleen; 23-vuotiaan vedenkantajan on enää '
@@ -7818,6 +7886,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-kauko-photo-v4.jpg',
+              lyhyt: 'Louisin isä etsii poikansa kasvoja väkijoukosta stadionilla '
+                + 'Kreikan juhliessa olympiavoittoa.',
               selite: 'Louisin isä murtautuu radan reunalle ja etsii poikansa '
                 + 'pölyisiä kasvoja kahden prinssin välistä. '
                 + 'Kuusikymmentätuhantinen stadion juhlii Kreikan voittoa, mutta '
@@ -8981,6 +9051,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'murtavat Hagia Sofian ovet, joiden taakse tuhannet olivat '
             + 'paenneet. Tuhat vuotta vanha keisarikunta päättyy, ja Mehmed tekee '
             + 'kaupungista pääkaupunkinsa.',
+          lyhyt: 'Konstantinopolin puolustajat tukkivat yön aikana kanuunan '
+            + 'murtaman aukon kivillä ja puulla.',
           selite: 'Yön aikana puolustajat ovat täyttäneet kanuunoiden murtamaa '
             + 'aukkoa kivillä, tynnyreillä ja puulla. Nuori apumies ei tiedä, '
             + 'kestääkö hänen tukemansa palkki seuraavan laukauksen; rumpujen '
@@ -8992,6 +9064,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Konstantinopoli 1453 — aamu tulee rumpujen mukana',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-kauko-photo-v4.jpg',
+              lyhyt: 'Kolmen aallon lopullinen hyökkäys päättää Konstantinopolin '
+                + 'kuuden viikon piirityksen.',
               selite: 'Viimeinen hyökkäys tulee kolmessa aallossa. Ensimmäiset '
                 + 'väsyttävät puolustajia, toiset kasvattavat painetta ja '
                 + 'janitsaarit etenevät viimeisinä. Muurin harjalla kuuden viikon '
@@ -10922,6 +10996,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja yli kymmenentuhatta kilometriä Etelä-Atlantin yli — ja sen '
             + 'päässä meritie Intiaan, jonka varaan kasvaa väkivaltainen '
             + 'kauppaimperiumi.',
+          lyhyt: 'Restelossa polvistuva merimies rukoilee ennemmin kotiinpaluuta '
+            + 'kuin Intian rikkauksia.',
           selite: 'Restelossa polvistuva merimies rukoilee ehkä vähemmän Intian '
             + 'rikkauksia kuin sitä, että näkisi vielä kotinsa. Moni ei näe: da '
             + 'Gaman reitti avaa kaupalle uuden tien, mutta matka maksaa '
@@ -10933,6 +11009,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497-kauko-photo-v3.jpg',
+              lyhyt: 'Da Gaman lähtö on rannalle sekä lupaus vauraudesta että '
+                + 'mahdollinen viimeinen hyvästi.',
               selite: 'Rannalle jääville lähtö on lupaus vauraudesta ja '
                 + 'mahdollinen viimeinen hyvästijättö samassa hetkessä. Kun da '
                 + 'Gama palaa, Portugalilla on meritietä Intiaan koskeva vastaus '
@@ -10995,6 +11073,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laivaa eikä rahoittajaa. Seuraavat kahdeksan vuotta hän vie saman '
             + 'kartan Kastilian hoviin, sitten uudelleen ja uudelleen, kunnes '
             + 'joku vihdoin sanoo kyllä.',
+          lyhyt: 'Kolumbus esittelee samat kartat taas, ja Portugalin hovin '
+            + 'asiantuntijat torjuvat ne uudelleen.',
           selite: 'Kolumbus on kantanut samoja karttoja ja laskelmia ovelta '
             + 'toiselle jo vuosia, kun Portugalin hovin asiantuntijat sanovat '
             + 'jälleen ei. Heidän epäilynsä osuu olennaiseen: Kolumbus kuvittelee '
@@ -11006,6 +11086,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Lissabon 1484 — kartta, jota kukaan ei osta',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-portugali-1484-kauko-photo-v3.jpg',
+              lyhyt: 'Juhana II:n hovi pitää Kolumbuksen matkaa turhana riskinä; '
+                + 'hylätty suunnittelija lähtee Kastiliaan.',
               selite: 'Kuningas Juhana II:n pöydällä Kolumbuksen suuri unelma '
                 + 'näyttää tarpeettomalta riskiltä, sillä Portugali etenee jo '
                 + 'Afrikan rannikkoa etelään. Hylätty suunnittelija lähtee '
@@ -11936,6 +12018,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuninkaan taloudenhoitaja Luis de Santángel. Kolumbus ei aavista, '
             + 'että samat pykälät, jotka nyt tekevät hänestä amiraalin, '
             + 'riitautetaan hänen kuolemansa jälkeen vuosikymmeniksi.',
+          lyhyt: 'Kuninkaallinen sanansaattaja tavoittaa Kolumbuksen ja kutsuu '
+            + 'hänet takaisin sopimaan matkasta.',
           selite: 'Kuninkaallinen sanansaattaja tavoittaa jo pois lähteneen '
             + 'Kolumbuksen ja kutsuu hänet takaisin Santa Fehen: vuosien '
             + 'torjunnat vaihtuvat viimein suostumukseksi. Hän ei saa vain '
@@ -11948,6 +12032,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Santa Fé 1492 — sanansaattaja tavoittaa tiellä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-santa-fe-1492-kauko-photo-v3.jpg',
+              lyhyt: 'Huhtikuun 1492 sopimuksessa Kolumbukselle ratkaisee paitsi '
+                + 'matka myös hänen tuleva asemansa.',
               selite: 'Isabella ei tarinan vastaisesti panttaa jalokiviään; '
                 + 'rahoitus syntyy hovin neuvotteluista ja kruunun varoista. '
                 + 'Huhtikuun 1492 sopimuksen äärellä Kolumbukselle ratkaisevaa ei '
@@ -13148,6 +13234,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Aadamin luominen mukaan lukien, syntyy nopeammin ja suuremmin '
             + 'hahmoin, ja koko katto — yli 300 hahmoa — avataan pyhäinpäiväksi '
             + '1512. Michelangelo on 37.',
+          lyhyt: 'Michelangelo maalaa Sikstuksen kappelin kattoa märän rappauksen '
+            + 'ehdoilla, giornata kerrallaan.',
           selite: 'Freskomaalarilla on vain märän rappauksen verran aikaa. '
             + 'Michelangelo kurottaa päivän uutta giornataa kohti, kun apulainen '
             + 'odottaa värikupin kanssa ja tarkkailee pinnan kuivumista; jos '
@@ -13159,6 +13247,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Sikstuksen kappeli 1510 — giornata kerrallaan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-kauko-photo-v4.jpg',
+              lyhyt: 'Vuonna 1510 Sikstuksen katosta on valmiina vasta puolikas, '
+                + 'ja työ etenee alue kerrallaan.',
               selite: 'Vuonna 1510 vasta katon ensimmäinen puolisko on '
                 + 'valmistumassa. Telineellä yksi mies levittää tuoretta '
                 + 'pintalaastia, toinen nostaa vettä ja Michelangelo työskentelee '
@@ -14487,6 +14577,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Finlandia. Venäjän vallan alla sitä soitetaan peitenimillä, kuten '
             + 'Iloisia tunnelmia Suomen kevään heräämisestä. Sanat hymniin '
             + 'kirjoittaa V. A. Koskenniemi vasta 1941.',
+          lyhyt: 'Sibelius johtaa Suomi herää -kuvaelmaa, kun toimittaja pelkää '
+            + 'lehtensä lakkauttamista.',
           selite: 'Jean Sibelius nostaa tahtipuikon viimeiseen kuvaelmaan, mutta '
             + 'eturivin nuori toimittaja kuuntelee myös salin hiljaisuutta. Hänen '
             + 'lehtensä voidaan lakkauttaa seuraavaksi; siksi “Suomi herää” '
@@ -14497,6 +14589,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-sibelius-finlandia-1899-kauko-photo-v4.jpg',
+              lyhyt: 'Finlandian protesti piilotetaan kuvaelmiin ja musiikkiin '
+                + 'niin, ettei sensori voi puuttua siihen.',
               selite: 'Orkesterin nuotinkääntäjä tietää, ettei illan protestia '
                 + 'lausuta suoraan. Se piilotetaan kuuteen historialliseen '
                 + 'kuvaelmaan, näyttämön eleisiin ja Sibeliuksen musiikkiin — '
@@ -16347,6 +16441,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '1879 ja germanium 1886, ja ne sopivat aukkoihin. Saksalainen '
             + 'Lothar Meyer julkaisee lähes saman taulukon muutamaa kuukautta '
             + 'myöhemmin — mutta ilman ennusteita.',
+          lyhyt: 'Mendelejev jättää alkuainetaulukkoonsa tietoisesti tyhjiä '
+            + 'paikkoja tulevia löytöjä varten.',
           selite: 'Mendelejev siirtää yhtä merkintää ja jättää viereen tyhjän '
             + 'paikan — ei siksi, että työ olisi kesken, vaan koska järjestyksen '
             + 'pitäisi ennustaa vielä tuntematon alkuaine. Rohkein osa vuoden '
@@ -16357,6 +16453,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mendelejev-kortit-1869-kauko-photo-v4.jpg',
+              lyhyt: 'Mendelejev korjailee luonnoksiaan ja päättää lähettää 200 '
+                + 'painosta taulukostaan kollegoille.',
               selite: 'Tunnettu kertomus alkuainepasianssista on todennäköisesti '
                 + 'myöhempi legenda; arkistoon jäivät yliviivatut ryhmittelyt ja '
                 + 'jatkuvasti korjatut luonnokset. Kuvan nuori painoapulainen '
@@ -16422,6 +16520,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ammuta vihollista kohti — sen kuuluisin osa on vankila, jossa '
             + 'istuvat myöhemmin Pietarin oma poika Aleksei, dekabristit ja '
             + 'Dostojevski.',
+          lyhyt: 'Sotilaat mittaavat Jänissaarta, jolle tsaari suunnittelee '
+            + 'kuutta bastionia keskellä Pohjan sotaa.',
           selite: 'Sotilaan mittakeppi uppoaa märkään maahan, ja lapioita '
             + 'pitelevät miehet yrittävät nähdä kartasta saman kuusibastionisen '
             + 'linnoituksen kuin tsaari. Heille Jänissaari ei vielä ole '
@@ -16433,6 +16533,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Jänissaari 1703 — kuusi bastionia suohon',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pietari-perustus-1703-kauko-photo-v4.jpg',
+              lyhyt: 'Toukokuussa 1703 Jänissaarella on vasta soinen maa ja '
+                + 'mittanaruja tulevan Pietarin sijaan.',
               selite: 'Pietarin suunnitelma lupaa kuusi bastionia, mutta '
                 + 'toukokuussa 1703 paikalla on vasta soinen saari, mittanaruja '
                 + 'ja märkiä maavalleja. Työryhmän on saatava puu- ja maalinnake '
@@ -26975,6 +27077,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'antaa virran kuljettaa se kohti pohjoisnapaa. Rannalla vilkuttavat '
             + 'odottavat uutisia lähes kolme vuotta. Fram palaa tähän satamaan 9. '
             + 'syyskuuta 1896, eikä yhtään miestä ole menetetty.',
+          lyhyt: 'Nansen jättää vaimonsa ja vauvansa Kristianiaan lähteäkseen '
+            + 'jäädyttämään Framin ahtojäihin.',
           selite: 'Nansen jättää Kristianiaan Eva-vaimonsa ja vasta muutaman '
             + 'kuukauden ikäisen Liv-tyttärensä eikä voi luvata paluupäivää. '
             + 'Hänen suunnitelmansa on tarkoituksella jäädyttää Fram ahtojäihin — '
@@ -26985,6 +27089,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-nansen-fram-1893-kauko-photo-v3.jpg',
+              lyhyt: 'Omaiset odottavat Framin uutisia lähes kolme vuotta '
+                + 'tietämättä, onnistuuko Nansenin uhkapeli.',
               selite: 'Rannalla vilkuttavat omaiset joutuvat odottamaan uutisia '
                 + 'lähes kolme vuotta. Framin runko kestää jään puristuksen ja '
                 + 'koko miehistö palaa, mutta lähdön hetkellä kukaan ei vielä '
@@ -26995,6 +27101,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-nansen-verdens-gang-1893-lehti-photo-v3.jpg',
+              lyhyt: 'Eva Nansen jää odottamaan miestä, joka lähtee '
+                + 'tarkoituksella kadota Jäämeren ahtojäihin.',
               selite: 'Eva Nansen jää puolen vuoden ikäisen Livin kanssa '
                 + 'odottamaan miestä, joka aikoo kadota tarkoituksella Jäämeren '
                 + 'ahtojäihin. Lehden lukijalle suunnitelma näyttää lähes '
@@ -28265,6 +28373,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jäljennös Havhingsten fra Glendalough purjehti vuonna 2007 '
             + 'Roskildesta Dubliniin ja seuraavana kesänä takaisin — sama matka, '
             + 'samat airot, tuhat vuotta myöhemmin.',
+          lyhyt: 'Nuori soutaja lähtee ensi kertaa pitkälle viikinkimatkalle '
+            + 'tietämättä, palaako miehistö lainkaan.',
           selite: 'Kuvan nuori soutaja lähtee ensimmäiselle pitkälle matkalleen '
             + 'eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei '
             + 'lainkaan. Kapea pitkälaiva tekee saman aluksen kaikista kolmesta '
@@ -28277,6 +28387,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1040-kauko-photo-v3.jpg',
+              lyhyt: 'Pitkälaiva kuljettaa kokonaista yhteisöä, sukulaisia ja '
+                + 'soutajia, Atlantille ja itään.',
               selite: 'Vuonon rannalle jäävät eivät näe pelkkää sotalaivaa vaan '
                 + 'kokonaisen liikkuvan yhteisön: sukulaisia, velallisia, vapaita '
                 + 'miehiä ja ehkä pakotettuja soutajia. Noin 60 airoa antaa '
@@ -32859,6 +32971,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'viisituhatta. Carnarvon ei näe niistä kuin alun — hän kuolee '
             + 'Kairossa huhtikuussa 1923 tulehtuneen hyttysenpureman jälkeen, ja '
             + 'lehdet keksivät faaraon kirouksen.',
+          lyhyt: 'Howard Carter näkee kynttilän valossa Tutankhamonin haudan '
+            + 'eteiskammion ensi kertaa.',
           selite: 'Howard Carter jää hetkeksi liikkumatta kynttilä kädessään, kun '
             + 'lordi Carnarvon kysyy näkeekö hän mitään. Pienen oviaukon takana '
             + 'on eteiskammio — varsinainen hautakammio avataan vasta kolme '
@@ -32869,6 +32983,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg',
+              lyhyt: 'Lady Evelyn Herbert seuraa jännittyneenä, kun yli '
+                + 'kolmentuhannen vuoden hiljaisuus rikkoutuu.',
               selite: 'Lady Evelyn Herbert puristaa kättään rintaansa vasten ja '
                 + 'yrittää nähdä isänsä olkapään yli. Carterin kynttilä on ainoa '
                 + 'merkki siitä, että yli kolmentuhannen vuoden hiljaisuus on '
@@ -32879,6 +32995,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
+              lyhyt: 'Brittilehti kuvittaa Carterin löydön piirroksin, ennen kuin '
+                + 'varsinaiset valokuvat leviävät.',
               selite: 'Brittiyleisö näki Carterin kurkistuksen ensin taiteilijan '
                 + 'silmin: The Illustrated London News rakensi kuvan Carnarvonin '
                 + 'kertomuksesta ja ilmoitti rehellisesti, että kyse oli '
@@ -58888,6 +59006,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'päivänä yli 150 000 ihmistä kävelee sen yli. Kuusi päivää '
             + 'myöhemmin portaikossa syntyy tungos ja kaksitoista kuolee — silta '
             + 'on heti liian suosittu.',
+          lyhyt: 'Emily Roebling on kuljettanut työmaan tietoa vuosia, kun hän '
+            + 'ylittää valmiin Brooklyn Bridgen.',
           selite: 'Emily Roebling on vuosien ajan kuljettanut laskelmia ja '
             + 'ohjeita työmaan sekä sukeltajantaudin sairastuttaman Washingtonin '
             + 'välillä. Kun hän ylittää valmiin sillan ensimmäisenä, '
@@ -58900,6 +59020,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-kauko-photo-v4.jpg',
+              lyhyt: 'Washington Roebling seuraa sillan avajaisia kotoaan, '
+                + 'sivussa juhlivasta väkijoukosta.',
               selite: 'Washington Roebling ei seiso arvovieraiden joukossa vaan '
                 + 'seuraa juhlaa kodistaan Columbia Heightsilta. Presidentti, '
                 + 'tykkisalva ja väkijoukko ottavat sillan haltuunsa; '
@@ -58912,6 +59034,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-lehti-photo-v4.jpg',
+              lyhyt: 'Brooklyn Daily Eagle juhlii siltaa erikoisnumerossa, mutta '
+                + 'Emily Roeblingin työ jää rivien väliin.',
               selite: 'Brooklyn Daily Eagle rikkoi avajaispäivänä '
                 + 'levikkiennätyksensä erikoisnumerolla, joka julisti Brooklynin '
                 + 'ja New Yorkin yhdistyneiksi. Lehden suurin uutinen oli silta; '
@@ -62930,6 +63054,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Aasiaan, kuten Kolumbuskin. Matka päätyy toisaalle, ja siitä '
             + 'kohtaamisesta tulee käänne sekä Euroopalle että Amerikan '
             + 'alkuperäiskansoille.',
+          lyhyt: 'Santa Marían laivapoika kuuntelee Palosin kelloja ennen '
+            + 'purjehdusta kohti oletettua Aasiaa.',
           selite: 'Santa Marían nuori laivapoika kuuntelee Palosin kelloja ja '
             + 'yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. '
             + 'Kolumbus uskoo purjehtivansa Aasiaan; pojan tuntematon matka '
@@ -62942,6 +63068,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-kauko-photo-v3.jpg',
+              lyhyt: 'Kolme laivaa katoaa Río Tinton suulle; retki etsii Aasiaa '
+                + 'mutta avaa yhteyden Atlantin yli.',
               selite: 'Rannalle jäävä perhe näkee kolmen pienen laivan katoavan '
                 + 'Río Tinton suulle tietämättä, maksetaanko luvattu palkka tai '
                 + 'palaako oma mies koskaan. Kolumbuksen retkikunta etsii Aasiaa '
@@ -63004,6 +63132,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yksi laiva, Victoria, Juan Sebastián Elcanon komennossa — '
             + 'ensimmäiset maapallon ympäri purjehtineet ihmiset. Useimmat '
             + 'toverit jäivät nimettömiin hautoihin matkan varrelle.',
+          lyhyt: 'Noin 270 lähtijästä vain 18 palaa; Magalhães kuolee matkalla, '
+            + 'Elcano tuo viimeisen laivan kotiin.',
           selite: 'Köyttä kiristävä merimies on yksi noin 270 lähtijästä; kotiin '
             + 'palaa alkuperäisestä joukosta vain 18. Magalhães itse kuolee '
             + 'Filippiineillä, ja Juan Sebastián Elcano tuo viimeisen laivan '
@@ -63016,6 +63146,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-kauko-photo-v3.jpg',
+              lyhyt: 'Viisi laivaa lähtee Sanlúcarista; lähes kolme vuotta '
+                + 'myöhemmin palaa vain uupunut Victoria.',
               selite: 'Viisi laivaa lähtee, mutta Sanlúcar näkee kahden vuoden ja '
                 + 'yhdentoista kuukauden kuluttua palaavan vain Victorian. Sen '
                 + 'uupuneet miehet ovat ensimmäiset, jotka ovat kiertäneet '
@@ -69847,6 +69979,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaivertanut nimensä paikallinen Agustín Lizárraga. Kaupungin '
             + 'rakensi inkakuningas Pachacútec 1400-luvun puolivälissä, ja '
             + 'espanjalaiset eivät löytäneet sitä koskaan — siksi se on säilynyt.',
+          lyhyt: 'Poika Pablito johdattaa hengästyneen Hiram Binghamin tutulle '
+            + 'polulle Machu Picchussa.',
           selite: 'Pablito vilkaisee olkansa yli varmistaakseen, pysyykö '
             + 'hengästynyt Hiram Bingham perässä. Pojalle märkä polku ja '
             + 'köynnösten alta nouseva kiviseinä ovat tuttuja; vasta vieras '
@@ -69857,6 +69991,8 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Machu Picchu 1911 — poika, joka näytti tien',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-machu-picchu-1911-kauko-photo-v5.jpg',
+              lyhyt: 'Paikallisille perheille Machu Picchun kiviseinät ovat '
+                + 'arkea, jonka ulkopuolinen kutsuu löydöksi.',
               selite: 'Pablito vilkaisee mutaiselta polulta, pysyykö hengästynyt '
                 + 'Bingham perässä, samalla kun Richarten ja Álvarezin perheiden '
                 + 'päivä jatkuu maissipellolla. Heille kiviseinät eivät ole löytö '

@@ -1655,6 +1655,8 @@ export const MAA_KATEGORIAT = {
             + 'Kolmivuotinen matka tuottaa tiedettä ja karttoja sekä kohtaamisia, '
             + 'joiden seuraukset Tyynenmeren kansoille ovat kaikkea muuta kuin '
             + 'viattomia.',
+          lyhyt: 'Endeavourin kansimies katsoo Plymouthia viimeisen kerran ennen '
+            + 'tuntemattoman mittaista matkaa.',
           selite: 'Endeavourin kansimies ottaa viimeisen katseen Plymouthiin '
             + 'ennen matkaa, jonka pituutta kukaan ei osaa luvata. Cook ja Joseph '
             + 'Banks tavoittelevat Venuksen ylikulkua ja uusia kasveja, mutta '
@@ -1668,6 +1670,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Plymouth 1768 — hiililaiva lähtee Tyynellemerelle',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-kauko-photo-v3.jpg',
+              lyhyt: 'Hiililaivaan pakattu tiede- ja taiteilijaryhmä lähtee '
+                + 'kolmivuotiselle Tyynenmeren purjehdukselle.',
               selite: 'Hiililaivaksi rakennettuun Endeavouriin pakkautuu '
                 + 'merimiesten lisäksi tähtitieteilijöitä, luonnontutkijoita, '
                 + 'taiteilijoita ja heidän toiveitaan. Heidän kolmivuotinen '
@@ -1733,6 +1737,8 @@ export const MAA_KATEGORIAT = {
             + 'ohittavat toisensa noin metrin päästä; lähtö viivästyy tunnin. '
             + 'Neljästä savupiipusta vain kolme savuaa. Eva ja äiti pelastuvat; '
             + 'isä Benjamin jää niiden yli 1 500 joukkoon, jotka eivät palaa.',
+          lyhyt: 'Titaniciin nousee perhe, jonka äiti ja tytär pelastuvat mutta '
+            + 'isä jää uhrien joukkoon.',
           selite: 'Seitsemänvuotias Eva Hart nousee Titaniciin vanhempiensa '
             + 'kanssa, mutta hänen äitinsä Esther pelkää laivaa niin paljon, '
             + 'ettei suostu nukkumaan öisin. Eva ja äiti pelastuvat; isä Benjamin '
@@ -1744,6 +1750,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Southampton 1912 — metri törmäyksestä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-titanic-southampton-1912-kauko-photo-v3.jpg',
+              lyhyt: 'Kaksi poikaa matkustaa Titanicissa väärällä nimellä; isän '
+                + 'kuoltua heidät tunnetaan orpoina lehdissä.',
               selite: 'Kolmivuotias Michel ja kaksivuotias Edmond matkustavat '
                 + 'isänsä kanssa väärällä sukunimellä, äidiltä salaa vietyinä. '
                 + 'Haaksirikon jälkeen isä kuolee ja pojat tunnetaan viikkoja '
@@ -1757,6 +1765,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Southampton 1912 — metri törmäyksestä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg',
+              lyhyt: 'Radisti Phillips lähettää hätäkutsuja veden noustessa '
+                + 'Titanicissa; Bride selviää, Phillips ei.',
               selite: 'Jack Phillips jatkaa hätäkutsujen lähettämistä, vaikka '
                 + 'vesi nousee Titanicin radiohyttiin; Harold Bride vetää '
                 + 'pelastusliivin hänen ylleen. Bride selviää kaatuneen '
@@ -1824,6 +1834,8 @@ export const MAA_KATEGORIAT = {
             + 'kuu ei. Näitä kahta vuotta on kutsuttu tieteen historian '
             + 'tuottoisimmiksi. Kirjaksi asti työ ehtii vasta 1704, teoksessa '
             + 'Opticks — Newton ei pitänyt kiirettä eikä riitelystä.',
+          lyhyt: 'Newton päästää yhden valonsäteen prisman läpi ja osoittaa '
+            + 'värien piilevän valkoisessa valossa.',
           selite: 'Newton peittää ikkunan lähes kokonaan ja päästää sisään vain '
             + 'yhden valonsäteen, jotta pieni prisma saa vastata. Seinälle venyvä '
             + 'värijono osoittaa, etteivät värit synny lasissa: valkoinen valo '
@@ -1834,6 +1846,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Woolsthorpe 1666 — valo, joka kantaa värit mukanaan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-newton-prisma-1666-kauko-photo-v4.jpg',
+              lyhyt: 'Ruton sulkema Cambridge vapauttaa Newtonin kokeilemaan '
+                + 'prismaa lapsuudenkotinsa pimeässä huoneessa.',
               selite: 'Rutto on sulkenut Cambridgen, ja 23-vuotias Newton on '
                 + 'palannut lapsuudenkotiinsa vailla professoreita tai '
                 + 'laboratoriota. Pimennetty huone, ikkunaluukun reikä ja prisma '
@@ -1898,6 +1912,8 @@ export const MAA_KATEGORIAT = {
             + 'ja julkaisee sen 1798. Lähes kaksi vuosisataa myöhemmin, vuonna '
             + '1980, Maailman terveysjärjestö julistaa isorokon hävitetyksi; se '
             + 'on ainoa ihmisen tauti, jolle on käynyt niin.',
+          lyhyt: 'Jenner naarmauttaa lehmänrokolla Phippsin pojan käsivarren '
+            + 'kokeillakseen rokotusajatustaan.',
           selite: 'Kahdeksanvuotias James Phipps yrittää pitää käsivartensa '
             + 'liikkumatta, kun Jenner tekee siihen pienen naarmun. Poika ei voi '
             + 'antaa nykyisen kaltaista tietoon perustuvaa suostumusta; '
@@ -1909,6 +1925,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Berkeley 1796 — lypsäjän rakkula ja puutarhurin poika',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-kauko-photo-v4.jpg',
+              lyhyt: 'Jennerin rokotuskoe nojaa Sarah Nelmesin lehmänrokkoon ja '
+                + 'pojan isän lupaan osallistua.',
               selite: 'Puutarhuri Christopher Phipps seisoo poikansa takana, ja '
                 + 'Sarah Nelmesin kädestä saatu lehmänrokkoaine odottaa pöydällä. '
                 + 'Toukokuun 1796 hiljainen huone on samalla lääketieteellinen '
@@ -2940,6 +2958,8 @@ export const MAA_KATEGORIAT = {
             + 'murtavat hieroglyfit, joita kukaan ei ollut osannut lukea lähes '
             + 'puoleentoista vuosituhanteen. Sotilaat eivät sitä vielä tiedä: he '
             + 'näkevät vain painavan kiven, joka on kannettava pois muurin tieltä.',
+          lyhyt: 'Sapööri paljastaa Rosettan kiven kolme tekstivyöhykettä, joita '
+            + 'kukaan ei vielä osaa lukea.',
           selite: 'Nuori sapööri pyyhkii rakennuspölyn pois, ja Pierre-François '
             + 'Bouchard tajuaa kolmen tekstivyöhykkeen kertovan saman asian eri '
             + 'merkein. Kumpikaan ei vielä osaa lukea hieroglyfejä, mutta he '
@@ -2950,6 +2970,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-kauko-photo-v4.jpg',
+              lyhyt: 'Fort Julienin korjaajat kampeavat Rosettan kiven esiin '
+                + 'arkisen purkutyön yhteydessä.',
               selite: 'Fort Julienin korjaajat pysäyttävät työn ja kampeavat '
                 + 'raskaan kiven päivänvaloon köysillä ja puulla. Löytö syntyy '
                 + 'linnoituksen arkisesta purkutyöstä — ei suunnitellusta '
@@ -2960,6 +2982,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lehti-photo-v4.jpg',
+              lyhyt: 'Ranskalaislehti raportoi vuonna 1799 Rosettan kivilöydöstä '
+                + 'varovaisena, ilman sensaatio-otsikkoa.',
               selite: 'Courier de l’Égypte raportoi löydöstä syyskuussa 1799 '
                 + 'ilman sensaatio-otsikkoa: kolme kirjoitusjärjestelmää, sama '
                 + 'kivipinta ja varovainen toivo avaimesta. Lukijalle ratkaiseva '
@@ -3026,6 +3050,8 @@ export const MAA_KATEGORIAT = {
             + 'asti, ostaa Egyptin osakkeet 1875 ja miehittää maan 1882. Rannalla '
             + 'juhlavieraat näkevät lippuja ja savua; egyptiläisten kaivajien '
             + 'vuosikymmen ei mahdu ohjelmaan.',
+          lyhyt: 'Nuori köysimies pitää L’Aiglen köyttä irti vedestä Suezin '
+            + 'kanavan juhlavissa avajaisissa.',
           selite: 'Nuoren egyptiläisen köysimiehen tehtävä on arkinen: pitää '
             + 'L’Aiglen kiinnitysköysi poissa vedestä, vaikka kannella seisoo '
             + 'Ranskan keisarinna Eugénie. Hänen ympärillään Port Said on '
@@ -3038,6 +3064,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-kauko-photo-v4.jpg',
+              lyhyt: 'L’Aigle johtaa 77 aluksen jonoa Suezin kanavaan, ja '
+                + 'hiljainen ranta muuttuu meriväyläksi.',
               selite: 'L’Aigle kääntyy kanavaan ensimmäisenä, ja sen takana '
                 + 'odottaa 77 alusta. Hiekkarannalla lapsi laskee lippuja ja '
                 + 'savupiippuja sormillaan; hänelle maailman merireittien muutos '
@@ -3049,6 +3077,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lehti-photo-v4.jpg',
+              lyhyt: 'Kuvittaja lähettää Port Saidista muistiinpanot, joista '
+                + 'Lontoossa tehdään avajaisten puukaiverrus.',
               selite: 'Kuvittaja William Simpson lähetti Port Saidista '
                 + 'kenttämuistiinpanot “kaikkien kansojen väkijoukosta”, ja '
                 + 'Lontoossa ne muutettiin viikkoja myöhemmin puukaiverrukseksi. '
@@ -3758,6 +3788,8 @@ export const MAA_KATEGORIAT = {
             + 'ihmisen jäännökset Pompejista ja Herculaneumista. Perinteinen '
             + 'päivä on 24. elokuuta, mutta löydöt — syksyn hedelmät, lämmin '
             + 'vaatetus — puhuvat lokakuun puolesta.',
+          lyhyt: 'Pompejilainen kauppias yrittää pelastaa omaisuutensa '
+            + 'hohkakivien alkaessa ropista katolle.',
           selite: 'Kuvituksen nimetön torikauppias yrittää vielä pelastaa vaa’an '
             + 'ja rahalippaan, kun hänen tyttärensä kuuntelee hohkakivien alkavaa '
             + 'ropinaa katoksella. He eivät tiedä, onko viisaampaa suojautua vai '
@@ -3769,6 +3801,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Pompeji 79 — ropina katolla',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-kauko-photo-v4.jpg',
+              lyhyt: 'Plinius vertaa Vesuviuksen pilveä pinjapuuhun, mutta '
+                + 'forumilla vertaus ei vielä auta ketään.',
               selite: 'Plinius vertasi Vesuviuksen päälle kohoavaa pilveä '
                 + 'pinjapuuhun: kapea runko levisi korkealla oksistoksi. '
                 + 'Forumilla vertaus ei vielä auta ketään. Yksi perhe kokoaa '
@@ -4547,6 +4581,8 @@ export const MAA_KATEGORIAT = {
             + 'myöhemmin; Hardy selviää päivästä. Brittien 27 linjalaivaa '
             + 'murtavat liittouman 33 laivan rivin, mutta kannella voitto '
             + 'tarkoittaa ensin savua, melua ja tovereiden menettämistä.',
+          lyhyt: 'Nelson kysyy vielä vihollislinjan etäisyyttä hetkeä ennen '
+            + 'kohtalokasta Trafalgarin taistelua.',
           selite: 'Nelson kysyy kapteeni Hardylta vielä kerran vihollislinjan '
             + 'etäisyyttä; kumpikin tietää, että suunnitelma vie Victoryn suoraan '
             + 'lähitulitukseen. Hardy selviää päivästä, Nelson ei — heidän '
@@ -4559,6 +4595,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-kauko-photo-v3.jpg',
+              lyhyt: 'Nuori ruutipoika odottaa Victoryn kannella ensimmäistä '
+                + 'laukausta alivoimaisessa laivastossa.',
               selite: 'Ensimmäistä taisteluaan odottava nuori ruutipoika yrittää '
                 + 'lukea vanhempien merimiesten kasvoista, kuinka lähellä '
                 + 'ensimmäinen laukaus jo on. Nelsonin 27 alusta käyvät suuremman '
@@ -4571,6 +4609,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-trafalgar-the-times-1805-lehti-photo-v3.jpg',
+              lyhyt: 'Lontoo lukee samasta uutisesta sekä voiton Napoleonista '
+                + 'että Nelsonin kuoleman Trafalgarilla.',
               selite: 'Lontoolaiset lukevat samasta uutisesta voiton ja '
                 + 'menetyksen: Napoleonin laivasto on lyöty, mutta Nelson on '
                 + 'kuollut Victoryllä. Merimiesten perheille Collingwoodin '
@@ -6268,6 +6308,8 @@ export const MAA_KATEGORIAT = {
             + 'luodinsirpaleita, ja vuonna 1901 Röntgen sai ensimmäisen fysiikan '
             + 'Nobelin. Keksinnölleen hän ei ottanut patenttia: hän katsoi sen '
             + 'kuuluvan kaikille.',
+          lyhyt: 'Anna Bertha Röntgen pitää kätensä liikkumatta, kun uusi säteily '
+            + 'paljastaa luut sormusten alta.',
           selite: 'Anna Bertha Röntgen pitää vasenta kättään liikkumatta '
             + 'valokuvalevyllä, vaikka pöydän takana rätisevän laitteen '
             + 'vaikutusta ei voi nähdä eikä tuntea. Arjessa tutut sormukset '
@@ -6279,6 +6321,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-kauko-photo-v4.jpg',
+              lyhyt: 'Röntgen kutsuu vaimonsa salaiseen kokeeseen, josta tulee '
+                + 'ensimmäinen kuva ihmisen sisuksista.',
               selite: 'Röntgen on pitänyt löytönsä lähes kokonaan omana tietonaan '
                 + 'ennen kuin pyytää vaimonsa pimeään laboratorioon. Anna Bertha '
                 + 'ei voi tietää näkymättömän säteilyn riskejä; hänen osakseen '
@@ -6344,6 +6388,8 @@ export const MAA_KATEGORIAT = {
             + 'ja ensimmäisen kirjan, jossa painajan nimi ja vuosi on merkitty, '
             + 'julkaisevat Fust ja Peter Schöffer 1457. Keksijä kuolee 1468 '
             + 'arkkipiispan eläkkeellä.',
+          lyhyt: 'Latoja-apulainen ladoo painokoneen kirjaimia, kun Gutenbergin '
+            + 'Raamattu syntyy metallista.',
           selite: 'Latoja-apulainen nostaa yhden käänteisen kirjaimen kerrallaan '
             + 'ja tietää, että virhe voi pakottaa avaamaan koko ladelman. Hänen '
             + 'sormiinsa jäävä muste on osa uutta käsityötä, jossa Raamatun sivu '
@@ -6355,6 +6401,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Mainz 1454 — sivu syntyy metallista',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-kauko-photo-v4.jpg',
+              lyhyt: 'Gutenbergin Raamattu syntyy monen käsiparin vuosien työnä '
+                + 'noin 180 kappaleen painoksena.',
               selite: 'Gutenbergin Raamattu ei synny yhdestä nerokkaasta '
                 + 'painalluksesta: kostea paperi, mustepallot, ruuviprässi ja '
                 + 'kuivuvat arkit kulkevat monen työntekijän käsien kautta '
@@ -6422,6 +6470,8 @@ export const MAA_KATEGORIAT = {
             + 'julistaa Lutherin pannaan, ja samana keväänä hän seisoo Wormsin '
             + 'valtiopäivillä keisarin edessä kieltäytyen perumasta. Kysymykseen '
             + 'vastaa lopulta koko Eurooppa.',
+          lyhyt: 'Luther sinetöi teesinsä arkkipiispalle Wittenbergissä ennen '
+            + 'uskonpuhdistajan mainetta.',
           selite: 'Luther sinetöi teesinsä arkkipiispa Albrechtille, ja nuori '
             + 'yliopiston lähetti odottaa oven luona. Kumpikaan ei vielä kanna '
             + '“uskonpuhdistajan” roolia: pöydällä on professorin kutsu '
@@ -6433,6 +6483,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Wittenberg 1517 — kuka tämän oikein lukee?',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-kauko-photo-v4.jpg',
+              lyhyt: 'Linnankirkon ovi toimii ilmoitustauluna; teesien leviämisen '
+                + 'ratkaisee kirjapaino, ei vasara.',
               selite: 'Linnankirkon ovi toimi yliopiston ilmoitustauluna, joten '
                 + 'avustajan kiinnittämä väittelykutsu ei välttämättä pysäytä '
                 + 'montaa ohikulkijaa. Emme tiedä varmasti, kiinnitettiinkö juuri '
@@ -9774,6 +9826,8 @@ export const MAA_KATEGORIAT = {
             + 'ihmevuodeksi, annus mirabilisiksi. Virastossa se ei näy mitenkään: '
             + 'Einstein arvioi hakemuksia vielä vuosia, ja yliopiston virkaan hän '
             + 'pääsee vasta 1909.',
+          lyhyt: 'Einstein pohtii valoa ja samanaikaisuutta patenttiviraston '
+            + 'työtoverin Bessonin kanssa Bernissä.',
           selite: 'Michele Besso kuuntelee, kun työtoveri yrittää purkaa valoa ja '
             + 'samanaikaisuutta koskevan pulman arkiseksi ajatuskokeeksi. '
             + 'Patenttivirasto maksaa Einsteinin vuokran; Besso on yksi '
@@ -9785,6 +9839,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Bern 1905 — patenttipino ja valonsäde',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-kauko-photo-v4.jpg',
+              lyhyt: 'Virkailija Einstein käsittelee patenttihakemuksia ennen '
+                + 'kuin ehtii omaan vuoden 1905 fysiikkaansa.',
               selite: 'Viraston hakemukset on käsiteltävä ennen kuin oma fysiikka '
                 + 'saa tilaa, ja kotona odottavat Mileva sekä vuoden ikäinen Hans '
                 + 'Albert. Einstein ei näytä toimiston nerolta vaan yhdeltä '
@@ -10178,6 +10234,8 @@ export const MAA_KATEGORIAT = {
             + 'täällä ensimmäisinä: kahdeksantoista nousi ylätasangolle, loput '
             + 'lopetettiin ruoaksi paikassa, jonka miehet nimesivät '
             + 'Teurastamoksi. Kaikki viisi palaavat; Scottin ryhmä ei.',
+          lyhyt: 'Amundsenin viisikko saavuttaa etelänavan mutta jättää kirjeen '
+            + 'varalta, ettei paluu onnistu.',
           selite: 'Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel '
             + 'ja Oscar Wisting tietävät olevansa ensimmäisiä — mutta kotiin on '
             + 'vielä lähes 1 300 kilometriä. He jättävät teltalle kirjeen Norjan '
@@ -10190,6 +10248,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-kauko-photo-v3.jpg',
+              lyhyt: 'Amundsenin ryhmä palaa navalta elossa, kun myöhemmin '
+                + 'saapuva Scottin ryhmä kuolee paluumatkalla.',
               selite: 'Lipunnosto kestää hetken; selviytyminen on vaatinut '
                 + 'viikkojen kylmyyden ja suunnitelman, jossa osa koirista '
                 + 'uhrataan muiden ravinnoksi. Kaikki viisi norjalaista palaavat, '
@@ -10202,6 +10262,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-amundsen-tidens-tegn-1912-lehti-photo-v3.jpg',
+              lyhyt: 'Sähke tekee Amundsenista sankarin, kun taas Scottin ryhmä '
+                + 'on yhä vaarallisella paluumatkalla.',
               selite: 'Lyhyt sähke tekee Roald Amundsenista kansallissankarin, '
                 + 'mutta retkikunnan miehille tärkein sana on paluu: kaikki viisi '
                 + 'ovat hengissä. Samaan aikaan Robert Scott vetäytyy navalta '
@@ -14562,6 +14624,8 @@ export const MAA_KATEGORIAT = {
             + 'Berliinille, josta puna-armeija vie sen 1945; Moskova myöntää sen '
             + 'olemassaolon vasta 1993. Se on lisäksi väärä Troija: kerros, josta '
             + 'kulta nousi, on noin tuhat vuotta Homeroksen sotaa vanhempi.',
+          lyhyt: 'Kaivaja ojentaa Troijan löydön Schliemannille, joka jo '
+            + 'ajattelee sitä oman maineensa avaimena.',
           selite: 'Kaivaja ojentaa löydön Heinrich Schliemannille, mutta miehet '
             + 'eivät katso esinettä samalla tavalla: toiselle se on päivän työ, '
             + 'toiselle avain maineeseen. Se, kuka saa päättää aarteen '
@@ -14572,6 +14636,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Hisarlık 1873 — kulta kaivannon seinämässä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-kauko-photo-v4.jpg',
+              lyhyt: 'Hisarlıkin kaivajat jatkavat työtään, kun Schliemann kokoaa '
+                + 'löydöt omaksi sankaritarinakseen.',
               selite: 'Hisarlıkin kaivajat jatkavat lapiointia, kun Schliemann '
                 + 'kokoaa esineitä peitteen alle. Työmiehet, joiden käsistä '
                 + 'löydöt kulkivat, jäävät pian sivuun kertomuksesta, jonka '
@@ -27281,6 +27347,8 @@ export const MAA_KATEGORIAT = {
             + 'metriä. Sen jälkeen tuulenpuuska kaataa koneen, eikä se lennä enää '
             + 'koskaan. Veljekset lähettävät kotiin sähkeen ja pyytävät kertomaan '
             + 'asiasta lehdistölle.',
+          lyhyt: 'Wrightin veljekset onnistuvat: Flyer nousee ilmaan kaksitoista '
+            + 'sekuntia ennen laskeutumistaan.',
           selite: 'Orville makaa Flyerin ohjaimissa ja Wilbur juoksee siiven '
             + 'rinnalla niin pitkään kuin pystyy. Kahdentoista sekunnin kuluttua '
             + 'kone osuu hiekkaan, mutta veljekset tietävät jo onnistuneensa '
@@ -27292,6 +27360,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wright-kitty-hawk-1903-kauko-photo-v3.jpg',
+              lyhyt: 'Ensi kertaa kameraa käyttävä pelastusmies vangitsee '
+                + 'Orvillen 36 metrin lennon Kitty Hawkissa.',
               selite: 'Pelastusasemalla työskentelevä John T. Daniels ei ole '
                 + 'koskaan ennen ottanut valokuvaa, kun hän puristaa kameran '
                 + 'laukaisupalloa juuri oikealla hetkellä. Hänen levylleen jää '
@@ -27357,6 +27427,8 @@ export const MAA_KATEGORIAT = {
             + 'vuonna yrittäessään samaa. Kokeesta kasvoi ukkosenjohdatin ja '
             + 'siitä Franklinin maine Euroopassa — sama maine, jolla hän '
             + 'myöhemmin neuvotteli Ranskan Amerikan siirtokuntien liittolaiseksi.',
+          lyhyt: 'Franklin ei odota salaman osuvan leijaan vaan pientä kipinää '
+            + 'avaimesta poikansa rystyselle.',
           selite: 'Franklin ei odota salaman osuvan leijaan; hän odottaa märkää '
             + 'narua pitkin kulkevan varauksen kokoontuvan avaimeen. William '
             + 'näkee pienen kipinän isän rystysellä — juuri tarpeeksi '
@@ -27420,6 +27492,8 @@ export const MAA_KATEGORIAT = {
             + 'valojen kylää. Vasta seuraavana vuonna löytyy lanka, joka kestää '
             + 'yli 1 200 tuntia: hiilletty japanilainen bambu. Patentissa on '
             + 'Edisonin nimi, mutta yön valvoi kokonainen työryhmä.',
+          lyhyt: 'Edisonin hiillettyä lankaa palaa 13,5 tuntia, ja työryhmä uskoo '
+            + 'löytäneensä kestävän lampun.',
           selite: 'Charles Batchelor merkitsee vihkoon uuden tunnin, ja Edison '
             + 'uskaltaa viimein nojata lähemmäs haurasta lasia. Hiilletty '
             + 'ompelulanka palaa lopulta 13,5 tuntia — tarpeeksi kauan, että '
@@ -27431,6 +27505,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Menlo Park 1879 — kolmetoista ja puoli tuntia valoa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-kauko-photo-v4.jpg',
+              lyhyt: 'Menlo Parkin hehkulamppu syntyy monen työntekijän '
+                + 'yhteisenä, valvotun yön saavutuksena.',
               selite: 'Menlo Parkin valo syntyy monen käsissä: Ludwig Boehm '
                 + 'puhaltaa lasin, John Kruesi tekee läpiviennit ja Batchelor '
                 + 'käsittelee hiuksenohutta hiililankaa. Edison johtaa koetta, '
@@ -29795,6 +29871,8 @@ export const MAA_KATEGORIAT = {
             + '— osaa näytteistään hän ei ole merkinnyt lainkaan. Beagle '
             + 'purjehtii Tahitille 20. lokakuuta, ja teoria syntyy vasta vuosien '
             + 'vertailusta ja pitkästä epäröinnistä.',
+          lyhyt: '26-vuotias Darwin tarkkailee Galápagosin kilpikonnaa uteliaana '
+            + 'keräilijänä, ei vielä teoreetikkona.',
           selite: '26-vuotias Darwin katsoo kilpikonnaa vielä uteliaana '
             + 'keräilijänä, ei valmiin teorian isänä. Hän ymmärtää saarten '
             + 'havaintojen merkityksen vasta myöhemmin — osin siksi, ettei aluksi '
@@ -29806,6 +29884,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-kauko-photo-v3.jpg',
+              lyhyt: 'Beaglen lyhyt pysähdys Galápagosilla kypsyy Darwinin '
+                + 'mielessä vuosikymmenten evoluutioteoriaksi.',
               selite: 'Beaglen miehistölle Galápagos on lyhyt pysähdys veden, '
                 + 'ruoan ja näytteiden vuoksi; Darwinille sen viidestä viikosta '
                 + 'tulee vuosikymmenten ajatuskumppani. Evoluutioteoria ei synny '
