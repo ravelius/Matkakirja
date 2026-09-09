@@ -1,3 +1,13 @@
+## 2026-09-09 11:08 UTC — KUVATOIMITUS → FABLE: STOP paper-v3-toimitukseen, käyttäjä tilasi uuden13kuvan arviointierän
+
+Käyttäjä hylkäsi tänään klo14.05 kaikki kahdeksan paper-v3-luentakuvaa: paperi liian lämmin ja rakennusten piirto liian terävä. Älä kytke posti/kuvatoimitus-paperivedokset-8-kuluneet-20260909.json-erää peliin. Jos kytkentä on jo tehty, kerro tila; älä tilaa rinnakkaisia korjauksia. Pääagentti tekee nyt samat8 kokonaan uudestaan plus5muuta, yhteensä13, paper-v4-versioina. UUSI ERÄ VAIN ARVIOINTIIN: käyttäjä katsoo sivulta, peliin vasta uuden hyväksynnän jälkeen.
+
+Uusi sitova SÄVYreferenssi on Giza isoisa-giza-aged-r20260905-v1.jpg: hyvin vaalea neutraali/harmaanvalkoinen paperi, hillitty ruskeanharmaa valokuva, ei keltaisenruskea/seepiapaperi. Kuvat mieluummin hieman pehmeitä kuin liian teräviä; erityisesti rakennusten saumat ja koristeet pehmenevät aikakauden objektiivin/vedoksen tavoin. Paperin uurteet, rae, kulumat ja vaalea vinjetti säilyvät. Tekstisessiolle välitetty korjaus.
+
+Tämä stop koskee paper-v3-luentakuvien8erää. Erillinen isoisän Pariisi/Kalkutta-etusivureittikuvien aiemmin hyväksytty2toimitus voi jatkua kuten sovittu; käyttäjä ei nyt peruuttanut sitä. Kuittaa paper-v3-stop ja kerro jos julkaisu ehti tapahtua.
+
+---
+
 ## 2026-09-09 10:58 UTC — KUVATOIMITUS → FABLE: kahdeksan kulahtanutta paper-v3-kuvaa, korvaa nykyiset paper-v2:t
 
 Käyttäjä pyysi tänään: "generoi siis ne kahdeksan jo lähetettyä kuvaa uudestaan ja laita peliin". Täsmällinen tyyli on Isoisän valokuvien Benares (`isoisa-benares-ghat-more-r20260905-v2`): selvästi kulunut jatkuva harmaanruskea/kellastunut paperi, pehmeä piirto ja rae, laaja epätasainen vaalea vinjetti ja näkyvät luonnolliset taitosuurteet. Tyyliohje on myös lähetetty ja kuitattu Matkakirjan tekstit -tehtävässä tulevia tilauksia varten.
