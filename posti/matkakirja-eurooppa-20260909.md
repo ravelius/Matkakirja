@@ -409,3 +409,37 @@ Tämä viesti ja sen kaksi liitettä ovat tämän tekstisession omia postitiedos
 ## Pikselipulu: koko animaatiosarja työn alla — 9.9.2026
 
 Omistaja valtuutti juuri tekemään kaikki ilmeet, pään käännöt, puheen sekä tulot/poistumiset ja lisäämään suoraan peliin. Hoidan toteutuksen ja julkaisemisen itse haarassa `codex/livia-pikselit-koko-sarja-20260909`; älä tee rinnakkaista animaatiointegraatiota. Korvaan viiden PNG-eleen kasvorenderöinnin hyväksytyllä 22 × 22 pikselin lähikasvolla (44 CSS-px), lavan lisätila vain yläpuolella. Poistumiset vain oikealle tai alas. Puheen liike sidotaan Livian toistoon, ei kertojan ääneen. Valittu B-kuvatarra säilyy erillisenä. Lähetän valmistuttua version, testitulokset ja eleiden kytkennät.
+
+
+## Pikselipulu — koko sarja peliin, 9.9.2026
+
+Omistajan suora lupa: kaikki animaatiot ja kytkentä peliin ilman uutta katselmointipysähdystä. Pixelin esikatselu on yksityisellä samalla arviointisivulla, nyt v7. Peliin tulee 45 alkuperäistä, kokonaispikseleillä piirrettyä elettä; ei uusia kuvia tai ääniä eikä generointilaskua.
+
+### Piirto ja eleet
+
+`js/livia-pikselit.js`: 22 × 22 loogisen pikselin lähikasvo, 44 × 44 CSS-px lepotilassa. Läpinäkyvä näyttämö 44 × 88 CSS-px, joten lisätila on vain ylhäällä. Musta/valkoinen/harmaa. Eri etu- ja sivuprofiilit, ei pelkkää pupillin siirtoa. Oikealle ja alas poistuminen; ei vasemmalle poistumisia, ympyrää tai koko vartaloa.
+
+Kaikki 45 elettä löytyvät `LIVIA_PIX_ELEET`-metadatasta ja kokeilusivulta `docs/livia-pikselit.html`: blink, glance, turn, lookRight, lookUp, lookDown, tilt, nod, shake, doubleTake, shock, embarrassed, angry, bored, puff, manic, expert, disbelief, confused, happy, love, facepalm, talk, listen, think, reading, crumb, bread, preen, yawn, sleep, wake, sneeze, wind, rain, sun, snow, peek, owl, arrive, crash, emerge, leaveRight, leaveDown, handoff.
+
+### Pelikytkennät
+
+`asennaLivianKasvot(pollo)` säilyttää nykyisen painikkeen/chatin. `kupla(teksti,{saapuu})` poimii näkyvän repliikin sävyn. Saapuvaksi merkitty kupla rymistelee paikalle. Ensimmäinen näkyminen esittää pöllön sijaisen; chatin avaus kuuntelee ja sulku kurkistaa. `.pollo-odottaa`-rivin todellinen teksti valitsee pöllöretken, pullan, arkiston, ajattelun, pienen tekstin lukemisen tai sään. Pöllö odottaa poissa kunnes rivi poistuu; vastaus näkyy heti ja paluuliike alkaa erikseen.
+
+`js/livia-puhetila.js` välittää vain puheen tilan. Valmiit ElevenLabs-äänitteet: playing/pause/waiting/stalled/ended/error sekä mykistys ja häivytyksen alku. Chat: WebAudio-soittimen todelliset ajastetut puhejaksot, SpeechSynthesisin start/pause/resume/end ja iOS-sillan luenta-alkoi/loppui. Vain persoona pollo; kertojan ääni ei avaa nokkaa. Äänen vaihtuminen käyttää eri tunnusta, joten vanhan soittimen loppu ei kumoa uutta. Nokan rytmi on hahmoanimaatio, EI foneemi- tai äänenvoimakkuusperusteinen huulisynkka.
+
+Joutoeleet alkavat aikaisintaan 30 sekunnin toimettomuuden jälkeen, niiden välissä vähintään 22 sekuntia. Pitkä toimettomuus johtaa uneen, kosketus/näppäily herättää. Ei joutoeleitä avoimen chatin, kuplapinon, dialogin, linssin, karttalennon tai luennan päälle. Lepo ja pöllöretken odotus eivät pyöritä piirtoajastinta. Tausta, piilotus ja reduced motion pysäyttävät. `tuhoa()` irrottaa kuulijat, havainnoijat ja ajastimet.
+
+Lisätilanteita voi kytkeä `window.matkakirjaPollo.kasvoEleet.toista('shock')`; paluu `.palaa()`, metadata `.eleet`. Suorat leaveRight/leaveDown jäävät piiloon paluukutsuun asti; arrive/emerge tuovat takaisin. Pelin joutoelekäyttö hoitaa paluun itse. Älä aja ylimääräistä puhelooppia: se tulee puhetilasta.
+
+B-PuluCam-tarra säilyy omana asiana. Vanhat PNG-B-kasvojen lähteet säilyvät vertailuun, mutta niitä ei niputeta peliin. Tarinatekstejä tai äänitiedostoja ei muutettu. v1724:n kuvan napautuskorjaus ja kuplan try/catch säilyvät.
+
+### Toimitusvahvistus
+
+- Peli **v1725** julkaistu: https://matkakirja.app/ . PR #2198: https://github.com/ravelius/Matkakirja/pull/2198 . Mainin squash-commit `ab5ee4e71894c5db6715aa12a456d7a591168779`.
+- Testit-ajon `34410167322` kaikki portit SUCCESS; julkaisun `34410396692` build ja deploy SUCCESS. Koko paikallinen sarja: 2499 testiä, 2486 PASS, 13 ennestään SKIP, 0 FAIL. Viimeisen nyökkäys-/vieritystarkennuksen jälkeen sama koko sarja ja build vihreät CI:ssä.
+- Julkaistut `livia-pikselit.js`, `livia-eleet.js`, `livia-puhetila.js`, `styles.css`, kokeilusivu ja `sw.js` ladattu takaisin ja SHA-256 verrattu testattuun paikalliseen lähteeseen: kaikki täsmäävät. Julkaisutree `d62bd09ffda54aba4525ca9f0cc19cb1cea2b27c` täsmäsi GitHubin luomaan puuhun ennen committia.
+- Selain: pelin päivitysikkuna näyttää v1725; julkaistulla 480 px:n sovitinkoepinnalla kasvo on 44 × 44 ja piirtoalue 44 × 88 CSS-px. Kääk-ilmeen suurennos ja lepo katsottu. Aito HTMLAudioElementin äänetön koetoisto varmisti ALKU → nokka, TAUKO → hiljaa, JATKO → nokka, LOPPU → hiljaa. Pöllö-odotuksen repliikki vaihtui vastaukseen välittömästi. Yksikkötesti varmistaa myös poissa odotuksen ja piirtokellon pysähtymisen.
+- Testauksen rajat: tämä ei ole iOS-laitetesti eikä oikean ElevenLabs-äänitteen tai palvelimelle lähetetyn chat-kysymyksen kuuntelutesti. Täyttä pelimatkaa ei ajettu: pilviselaimessa oli jo ennestään karttapallon WebGL-ongelma. Myöhempi yhden rajatun kuvan screenshot aikakatkaistiin; DOM ja toiston tarkistukset toimivat. Ei väitetä tätä 3D-pelin hyväksynnäksi.
+- Yksityinen eleiden kokeilusivu v7: https://matkakirja-pulun-animaatiot.sravelius.chatgpt.site . Sama pikselimoduuli kuin pelissä. Käyttäjä voi kokeilla kaikki 45 elettä ryhmittäin. Pelin oma sovitinkoepinta: https://matkakirja.app/docs/livia-pikselit.html .
+
+Toteutus on jo pelissä. Ei erillistä integraatio- tai hyväksyntäodotusta. Mahdolliset käyttäjän seuraavat tyylikorjaukset kohdistetaan tähän pikselimoduuliin; B-tarra ja valokuvasarjat ovat erillisiä.
