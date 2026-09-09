@@ -257,8 +257,9 @@
 
    EI KEHYSLAATIKKOA. Paneeli itse on läpinäkyvä ja reunukseton: kartalla
    on kuva ja sen alla erillinen vaalea lappu, ei yhtä laatikkoa jossa
-   molemmat ovat. Kuvan oma paperireuna (.fokusvirta-kuva alla) on ainoa
-   ääriviiva.
+   molemmat ovat. Isoisän kuvassa ei ole kehystä lainkaan (omistaja
+   9.9.2026): kartalla on paljas valokuva, jonka alalaitaan kuvateksti
+   on kiinni.
 
    MITAT OVAT MUUTTUJIA, EIVÄT LUKUJA SIELLÄ TÄÄLLÄ. Yksi paikka päättää
    leveyden, korkeuskaton, kallistuksen ja pienennyksen — työpöytä ja
@@ -382,13 +383,15 @@
   --luentakuva-skaala: var(--luentakuva-pienennys);
 }
 
-/* KUVAN OMA PAPERIREUNA on ainoa ääriviiva: ohut kermakaista kuvan
-   ympärillä ja kevyt varjo, kuten kartalle jätetty valokuva. */
+/* ISOISÄN KUVASSA EI OLE KEHYSTÄ (omistaja 9.9.2026, sanatarkasti:
+   *"isoisän kuvissa ei saa olla kehystä"*). Kuva näkyy sellaisenaan:
+   ei kermanväristä paperireunaa, ei ääriviivaa — pelkkä kevyt varjo,
+   joka nostaa valokuvan kartan päälle. */
 .fokusvirta-luentakuva .fokusvirta-kuva {
-  padding: 0.3rem;
+  padding: 0;
   border: 0;
-  border-radius: 4px;
-  background: #fbf6ea;
+  border-radius: 2px;
+  background: none;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.34);
 }
 
@@ -404,13 +407,16 @@
    teksti: lähderivi ("Matkakirjan havainnekuva") näkyy vasta
    suurennoksessa (js/kuvatekstit.js). */
 .fokusvirta-luentakuva .fokusvirta-luentateksti {
-  /* Väli kasvaa leveyden mukana: kallistettu kuva laskeutuu leveällä
-     ruudulla toisesta alakulmastaan alemmas (leveys x tan(kulma) / 2),
-     ja kiinteä väli jättäisi kulman lapun päälle. */
-  margin: calc(0.4rem + var(--luentakuva-leveys) * 0.022) 0 0;
+  /* LAPPU ON KIINNI KUVAN ALALAIDASSA (omistaja 9.9.2026, sanatarkasti:
+     *"kuvateksti pitää olla kiinni kuvan alalaidassa"*): ei väliä, ei
+     laskennallista kallistusvaraa. Kallistus tulee koko paneelille
+     (--luentakuva-kallistus), joten kuva ja lappu kääntyvät yhdessä
+     samana kappaleena — lapulla ei ole omaa transformia. Yläkulmat
+     jäävät suoriksi, alakulmat pyöristyvät: lappu on kuvan jatke. */
+  margin: 0;
   padding: 0.4rem 0.6rem;
   border: 0;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   background: rgba(245, 240, 226, 0.94);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
   font-size: 0.85rem;
@@ -492,8 +498,19 @@
  */
 .fokusvirta-luentakuva .fokusvirta-kuva.pulucam-pohja {
   height: var(--luentakuva-korkeus);
+  padding: 0.3rem;
   background: none;
   box-shadow: none;
+}
+
+/*
+ * POHJATTOMAN PAKAN ULKOASU EI MUUTU KEHYKSEN POISTON MYÖTÄ: kun alla ei
+ * ole isoisän kuvaa, ei ole myöskään kuvan reunaa johon kortit
+ * asettuisivat — pakka pitää entisen 0,3 rem sisennyksensä
+ * paikanvaraajan sisällä, jotta se näyttää täsmälleen entiseltä.
+ */
+.fokusvirta-kuvatila:has(.pulucam-pohja) .pulucam-pakka {
+  inset: 0.3rem;
 }
 
 .pulucam-pakka {
@@ -502,10 +519,10 @@
   --pulucam-mitta: var(--luentakuva-leveys);
 
   position: absolute;
-  /* Sama sisennys kuin kuvalaatikon paperireunalla (.fokusvirta-kuva
-     padding 0.3rem): kortit asettuvat isoisän KUVAN päälle, eivät sen
-     paperikaistan päälle. */
-  inset: 0.3rem;
+  /* Isoisän kuva täyttää laatikkonsa kokonaan (ei paperireunaa,
+     .fokusvirta-luentakuva .fokusvirta-kuva padding 0), joten pakan
+     kortit asettuvat suoraan kuvan reunoille. */
+  inset: 0;
   /* Läpinäkyvä kehys ei ota napautuksia; kortit ottavat. */
   pointer-events: none;
 }
@@ -523,7 +540,9 @@
   padding: 0.3rem;
   border: 0;
   border-radius: 4px;
-  /* Sama paperireuna kuin isoisän kuvalla: pakka on valokuvia pöydällä. */
+  /* PuluCamin kortit ovat kehystettyjä valokuvia pöydällä — tämä
+     paperireuna on niiden oma, eikä sitä pidä sekoittaa isoisän
+     kuvaan, joka näkyy kehyksettä (omistaja 9.9.2026). */
   background: #fbf6ea;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.34);
   cursor: zoom-in;
