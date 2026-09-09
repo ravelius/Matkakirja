@@ -179,6 +179,26 @@ export const FOKUSVIRTA_EDINBURGH = {
       + 'kaiken takana. [softly] Kaupungin kartoittamiseen tarvittaisiin '
       + 'tavallisen paperin lisäksi toinen arkki päälle.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-edinburgh.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-edinburgh-r20260909-paper-v2;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-edinburgh-r20260909-paper-v2.jpg',
+      lyhyt: 'Pyykkiä ja päällekkäisiä kulkureittejä Edinburghin Old Townissa '
+        + 'vuonna 1873.',
+      selite: 'Edinburgh, 1873: sukkapyykki riippuu monitasoisen porraskujan yllä, '
+        + 'nainen seisoo ovella ja linnakallio näkyy kaukana. Kuvitteellinen '
+        + 'kuja historiallisten rakennustyyppien pohjalta.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://canmore.org.uk/site/52499/edinburgh-old-town',
+      'https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/history/',
+      ],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

@@ -206,6 +206,25 @@ export const FOKUSVIRTA_ISTANBUL = {
       + 'oli parempaa tekemistä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-istanbul.mp3',
     /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-istanbul-r20260909-paper-v2;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-istanbul-r20260909-paper-v2.jpg',
+      lyhyt: 'Kantaja levähtää matka-arkkunsa vieressä Galatan mäessä vuonna 1873.',
+      selite: 'Konstantinopoli, syyskuu 1873: kantaja levähtää arkun vieressä '
+        + 'jyrkällä Galatan kujalla; alhaalla näkyvät laivat ja Kultainen '
+        + 'sarvi.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://www.metmuseum.org/art/collection/search/263021',
+      'https://archives.saltresearch.org/handle/123456789/204674',
+      ],
+    },
+    /*
      * AIKALAISPIIRROS, HAETTU JA VARMENNETTU ERIKSEEN (ks. tiedoston
      * alku). Commonsin imageinfo 25.8.2026: 800×591, public domain
      * (PD-Art / PD-old, CC-PD-Mark), tekijä Aubry de La Motraye,

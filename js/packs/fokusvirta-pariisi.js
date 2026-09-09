@@ -116,6 +116,25 @@ export const FOKUSVIRTA_PARIISI = {
       + 'kainalossa. Jos hänelle annettaisiin tuo talo, menisin kuuntelemaan. '
       + '[softly] Toistaiseksi hän esiintyy ilmaiseksi.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-pariisi-r20260909-paper-v2;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260909-paper-v2.jpg',
+      lyhyt: 'Leipää kantava mies keskeneräisen Palais Garnier’n edessä vuonna '
+        + '1873.',
+      selite: 'Pariisi, 1873: leipää kantava mies pysähtyy keskeneräisen Palais '
+        + 'Garnier’n rakennustyömaalle; pieni kyyhky seisoo sivummalla kivellä.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://www.parismuseescollections.paris.fr/en/node/490866',
+      'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-du-palais-garnier-actuel-opera-national-de-paris-9eme',
+      ],
+    },
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */

@@ -57,6 +57,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Ship Creek Fishing - Anchorage.jpg',
       vuosi: '2019',
       lahde: 'Haydn Blackey, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Sama Ship Creek nykyään: onkijoita purossa, lohi nousee keskellä kaupunkia.',
       selite: 'Sama Ship Creek nykyään, samat Chugachin vuoret takana. Purossa '
         + 'seisoo onkijoita: lohi nousee jokea keskellä kaupunkia, muutaman '
         + 'korttelin päässä keskustasta. Vasemmalla näkyy vanha voimalaitos.',
@@ -103,6 +104,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Autumn Colors Overlook View Graveyard Fields Blue Ridge Pkwy NC.jpg',
       lahde: 'bobistraveling, Commons (CC BY 2.0)',
+      lyhyt: 'Syysväreissä Graveyard Fieldsin laakso: Appalakit vanhoja, pyöreitä ja metsäisiä huipulle asti.',
       selite: 'Syysväreissä oleva Graveyard Fieldsin laakso Blue Ridge Parkwayn '
         + 'näköalapaikalta. Appalakit ovat vanhoja ja kuluneita vuoria, mistä '
         + 'johtuu niiden pyöreä muoto ja se, että metsä yltää huipuille asti.',
@@ -152,6 +154,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Hamilton Harbour in Bermuda 01.jpg',
       lahde: 'Aodhdubh, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Hamiltonin satama: vesitaksi ylittää lahtea, valkoiset porrastetut katot keräävät sadeveden.',
       selite: 'Hamiltonin satama Front Streetin kohdalla: pieni vesitaksi ylittää '
         + 'lahtea ja vastarannan rinteessä on taloja. Katot ovat valkoisia ja '
         + 'porrastettuja, koska ne keräävät sadeveden talteen — saarella ei '
@@ -199,6 +202,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Chicago Skyline 2022 3.jpg',
       lahde: 'Sea Cow, Wikimedia Commons (CC BY-SA 4.0)',
+      lyhyt: 'Chicagon pilvenpiirtäjärivistö Michiganjärven rannalla, taustalla Willis Tower.',
       selite: 'Chicagon pilvenpiirtäjärivistö Michiganjärven rannalla. Etualalla '
         + 'aallonmurtajien suojaama venesatama ja rantapuisto, taustalla '
         + 'keskustan tornit Willis Towerin antenneineen.',
@@ -250,6 +254,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'End of the line, Churchill Manitoba (30352378547).jpg',
       vuosi: '2014',
       lahde: 'Mike Beauregard, Commons (CC BY 2.0)',
+      lyhyt: 'Radan pää Churchillissä: ainoa maayhteys, tulva katkaisi sen 2017 ja korjattiin 2018.',
       selite: 'Radan pää Churchillissä: kiskot loppuvat tundralle ja taustalla '
         + 'häämöttää viljaterminaali kaupungin laidalla. Hudsoninlahden rata '
         + 'on ainoa maayhteys tänne. Tulva katkaisi sen 2017, ja ensimmäinen '
@@ -297,6 +302,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Denver Union Station - June 2022 - Sarah Stierch 01.jpg',
       lahde: 'Sarah Stierch, Commons (CC BY 4.0)',
+      lyhyt: 'Sama asema nykyään: kunnostettiin 2014, toimii juna- ja bussiasemana sekä liiketilana.',
       selite: 'Sama asema nykyään. Rakennus kunnostettiin ja avattiin uudelleen '
         + '2014, ja se toimii yhtä aikaa juna- ja bussiasemana sekä '
         + 'liikkeiden ja ravintoloiden halliaulana.',
@@ -342,6 +348,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Mather Point Grand Canyon South Rim.jpg',
       lahde: 'Colin Faulkingham, Commons (PD)',
+      lyhyt: 'Mather Point aamuauringossa: kanjonin kivikerrokset eri-ikäisiä, alimmat elämää vanhempia.',
       selite: 'Mather Point etelälaidalla aamuauringossa. Kerrokset kanjonin '
         + 'seinämässä ovat eri-ikäisiä kivilajeja, ja alimmat niistä ovat '
         + 'vanhempia kuin monimutkainen elämä maapallolla.',
@@ -389,6 +396,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Palacion Nacional de Guatemala 12.jpg',
       vuosi: '2022',
       lahde: 'Simon Burchell, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Kansallispalatsi saman aukion laidalla, nykyään kulttuurikeskus entisen hallintorakennuksen tilalla.',
       selite: 'Kansallispalatsi saman aukion laidalla nykyään. Vihertävä rakennus '
         + 'valmistui 1940-luvun alussa hallituksen taloksi, mutta se ei ole '
         + 'enää hallinnon käytössä vaan kulttuurikeskus; aukion nimi on '
@@ -436,6 +444,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Halifax-Dartmouth Ferry Service (21772298471).jpg',
       lahde: 'Tony Webster, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Lautta Dartmouthista Halifaxiin, matkustajaliikenne jatkuu vaikka silta valmistui 1954.',
       selite: 'Lautta matkalla Dartmouthista Halifaxiin. Autolautat kuljettivat '
         + 'liikenteen salmen yli siihen asti, kunnes ensimmäinen silta '
         + 'valmistui 1954; matkustajalautta kulkee yhä.',
@@ -485,6 +494,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Plaza de la Catedral - Havana - Cuba (18059112736).jpg',
       vuosi: '2015',
       lahde: 'Maxence, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Katedraaliaukio 2015, sama paikka sadan vuoden takaisessa vedoksessa, julkisivu ennallaan.',
       selite: 'Katedraaliaukio vuonna 2015 — sama paikka kuin runsaan sadan '
         + 'vuoden takaisessa vedoksessa. Julkisivu on ennallaan, ja koko '
         + 'vanhakaupunki on Unescon maailmanperintökohde.',
@@ -535,6 +545,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Lots of surfers in the water at Waikiki Beach with cloudy sky and Sheraton Waikiki Beach Resort in the background at Honolulu, Hawaii, United States of America, Summer, 2006.jpg',
       vuosi: '2006',
       lahde: 'Antonio Salsedo, Commons (CC BY 3.0)',
+      lyhyt: 'Waikikin ranta 2006, sama paikka jossa Frank Davey kuvasi lautailijoita sata vuotta aiemmin.',
       selite: 'Waikikin ranta heinäkuussa 2006. Vedessä on kymmenittäin '
         + 'lautailijoita ja rannalla hotellirivi; juuri tällä rannalla Frank '
         + 'Davey kuvasi Charles Kauhan alaia-lautoineen runsaat sata vuotta '
@@ -582,6 +593,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Downtown Houston, TX Skyline - 2018.jpg',
       lahde: 'David Daniel Turner, Commons (CC BY 4.0)',
+      lyhyt: 'Houstonin keskusta Buffalo Bayoun yli, ainoana suurkaupunkina ilman kaavoituslakia.',
       selite: 'Houstonin keskusta lännestä Buffalo Bayoun yli katsottuna. Houston '
         + 'on Yhdysvaltain suurista kaupungeista ainoa, jolla ei ole '
         + 'kaavoituslakia, ja korkeat talot nousevat siksi hajanaisina '
@@ -626,6 +638,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Iqaluit from Joamie Hill.JPG',
       vuosi: '2010',
       lahde: 'Aaron M Lloyd, Commons (public domain)',
+      lyhyt: 'Iqaluit Joamie Hillin päältä toukokuussa, Nunavutin ainoa varsinainen kaupunki.',
       selite: 'Iqaluit Joamie Hillin päältä toukokuussa. Talot on maalattu '
         + 'kirkkain värein lumen ja harmaan kallion keskellä, ja etualalla on '
         + 'varastovaja tavaroineen. Iqaluit on Nunavutin pääkaupunki ja koko '
@@ -666,6 +679,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'BattleHarbour Labrador 2008.JPG',
       lahde: 'Paul Gierszewski, Commons (PD)',
+      lyhyt: 'Battle Harbourin varastorakennukset sumussa, entinen turskakalastuksen tukikohta.',
       selite: 'Battle Harbourin puiset varasto- ja käsittelyrakennukset sumussa '
         + 'saarella Labradorin etelärannikolla. Paikka oli vuosisatojen ajan '
         + 'turskakalastuksen tukikohta, jossa saalis suolattiin ennen '
@@ -714,6 +728,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Broadway Theater and Commercial District, 300-849 S. Broadway; 100.jpg',
       lahde: 'MikeJiroch, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Sama Broadway nykyään: entinen teatterikatu, vanhat julkisivut yhä paikoillaan.',
       selite: 'Sama Broadway nykyään. Katu säilyi kaupungin liikekeskuksena '
         + 'teatteriaikaan asti; sittemmin liikkeet muuttivat muualle ja kadun '
         + 'vanhat julkisivut jäivät paikoilleen.',
@@ -762,6 +777,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Plaza de la Revolucion (Managua) 01 CH.jpg',
       vuosi: '2016',
       lahde: 'Martin Thurnherr, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Vallankumouksen aukio nykyään: katedraali ja kansallispalatsi järistysten jälkeen uusittu.',
       selite: 'Vallankumouksen aukio nykyään, laidoillaan vanha katedraali ja '
         + 'kansallispalatsi. Aukio on yhä sama kuin sadan vuoden takaisessa '
         + 'kuvassa, mutta rakennukset sen ympärillä ovat järistysten jälkeen '
@@ -811,6 +827,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Mercado Municipal Lucas de Gálvez - Mérida, Yucatán.jpg',
       vuosi: '2015',
       lahde: 'Bex Walton, Commons (CC BY 2.0)',
+      lyhyt: 'Lucas de Gálvezin tori nykyään, sama tori kuin vuoden 1901 kuvassa, yhä kaupungin kauppapaikka.',
       selite: 'Lucas de Gálvezin tori nykyään — sama tori, joka näkyy vuoden 1901 '
         + 'stereokuvan etualalla. Kojut ovat siirtyneet katosten ja hallien '
         + 'alle, mutta paikka on yhä kaupungin keskeisin kauppapaikka.',
@@ -861,6 +878,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Bandera en plancha del Zocalo.JPG',
       vuosi: '2013',
       lahde: 'Reviloiasi, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Zócalo iltapäivällä: atsteekkien Tenochtitlánin entinen keskus, Templo Mayor kaivettu esiin.',
       selite: 'Zócalo iltapäivällä. Aukion keskellä liehuu suuri lippu, joka '
         + 'lasketaan salosta joka ilta. Sama aukio oli jo atsteekkien '
         + 'Tenochtitlánin keskus, ja sen laidalta on kaivettu esiin Templo '
@@ -908,6 +926,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Miami River Downtown Miami Florida 1 May 2023.jpg',
       lahde: 'Phillip Pessar, Commons (CC BY 2.0)',
+      lyhyt: 'Sama Miami-joki nykyään: tornitaloja rannalla, rahtia lastataan yhä pienille aluksille.',
       selite: 'Sama Miami-joki nykyään keskustan kohdalla. Rannat ovat täynnä '
         + 'tornitaloja, mutta joki on yhä työssä: sen varressa lastataan '
         + 'rahtia pienille aluksille, jotka liikennöivät Karibialle.',
@@ -958,6 +977,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Cerro de La Silla y Faro del Comercio desde el aire.jpg',
       vuosi: '2023',
       lahde: 'ProtoplasmaKid, Commons (CC BY 4.0)',
+      lyhyt: 'Macroplaza ilmasta: Faro del Comercio ja Cerro de la Silla, kaupunki levinnyt rinteille.',
       selite: 'Ilmakuva Macroplazan yltä: etualalla Faro del Comercio -monumentti '
         + 'ja taustalla Cerro de la Silla. Kaupunki on levinnyt laaksoon '
         + 'vuorten väliin, ja tehtaiden ympärille kasvanut Monterrey ulottuu '
@@ -997,6 +1017,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Place Jacques-Cartier, Vieux-Montréal, Montreal, Quebec (30068046525).jpg',
       lahde: 'Ken Lund, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Sama aukio nykyään: terasseja kärryjen tilalla, vanha kaupunki suojeltiin 1960-luvulla.',
       selite: 'Sama aukio nykyään. Kärryjen tilalla on terasseja ja '
         + 'katutaiteilijoita, mutta rinne, kiveys ja pylväs ovat entisellään; '
         + 'vanha kaupunki suojeltiin kokonaisuutena 1960-luvulla.',
@@ -1043,6 +1064,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Mount Rushmore from Grand View Terrace.jpg',
       lahde: 'Jntman5621, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Valmis veistos näköalatasanteelta: neljä päätä hakattiin vuoreen 1927–1941.',
       selite: 'Valmis veistos näköalatasanteelta. Neljä päätä hakattiin vuoreen '
         + 'vuosina 1927–1941, ja alkuperäinen suunnitelma vartaloista jäi '
         + 'toteuttamatta rahan loppuessa.',
@@ -1091,6 +1113,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'City of New Orleans, The French Market, March 2015.jpg',
       lahde: 'Steve Knight, Commons (CC BY 2.0)',
+      lyhyt: 'Ranskalainen tori nykyään: ruokaa ja matkamuistoja katetun hallirivin alla.',
       selite: 'Ranskalainen tori nykyään. Kärryjen ja puuvillan tilalla myydään '
         + 'ruokaa ja matkamuistoja, mutta katettu hallirivi kulkee yhä samaa '
         + 'linjaa Decatur Streetin varressa.',
@@ -1138,6 +1161,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Little Italy, Mulberry Street, Manhattan, New York (7237377196).jpg',
       lahde: 'Ken Lund, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Sama Mulberry Street nykyään: italiankielinen kortteli kutistunut ravintoloiden tieltä.',
       selite: 'Sama Mulberry Street nykyään. Kojujen tilalla on ravintoloita ja '
         + 'terasseja, ja italiankielinen kortteli on kutistunut muutaman '
         + 'korttelin mittaiseksi, kun asukkaat muuttivat vuosikymmenten '
@@ -1190,6 +1214,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Nome Alaska front street snow.jpg',
       vuosi: '2006',
       lahde: 'ra64, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Sama Front Street maaliskuussa: lumivalli kadun reunalla, Iditarodin maali tässä.',
       selite: 'Sama Front Street maaliskuussa. Lumi on kasattu valliksi kadun '
         + 'reunaan ja kone työntää sitä yhä kadun päässä. Kuvaajan mukaan '
         + 'juuri tämän näkymän Iditarodin maaliin ajava valjakko kohtaa.',
@@ -1239,6 +1264,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Nuup Kangerlua and Nuuk (2) (Kenny McFly).jpg',
       vuosi: '2022',
       lahde: 'Kenny McFly, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama vuono nykyään: Nuup Kangerlua, kerrostaloja kalliolla ja vanha kolonisatama kaukana.',
       selite: 'Sama vuono nykyään: Nuup Kangerlua ja sen takana avautuvat vuoret. '
         + 'Etualalla on kerrostaloja aivan kallion reunalla, ja kaukana '
         + 'niemen kärjessä näkyy vanhan kolonisataman värikäs talorykelmä.',
@@ -1289,6 +1315,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Panama City 2016.jpg',
       vuosi: '2016',
       lahde: 'Dronepicr, Commons (CC BY 3.0)',
+      lyhyt: 'Panama Cityn siluetti ilmasta: kanavan tuoma vauraus nosti pilvenpiirtäjärivin.',
       selite: 'Panama Cityn siluetti ilmasta. Kanavan tuottamat maksut ja niiden '
         + 'ympärille kasvanut pankki- ja logistiikka-ala ovat nostaneet '
         + 'rantaan pilvenpiirtäjärivin, jollaista Keski-Amerikassa ei muualla '
@@ -1339,6 +1366,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Market Street at Kearny Street, San Francisco (January 2015)(Unsplash).jpg',
       lahde: 'Anurag Arora, Commons (CC0)',
+      lyhyt: 'Market Street nykyään: vino linja poikkeaa ruutukaavasta kahden eri kaavan liitoskohdassa.',
       selite: 'Market Street nykyään Kearny Streetin kohdalla. Katu kulkee yhä '
         + 'samaa vinoa linjaa läpi keskustan, ja sen suunta poikkeaa muusta '
         + 'ruutukaavasta, koska kaupunki kasvoi kahden eri suuntiin mitatun '
@@ -1390,6 +1418,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Castillo San Felipe del Morro, Puerto Rico.jpg',
       vuosi: '2014',
       lahde: 'Breezy Baldwin, Commons (CC BY 2.0)',
+      lyhyt: 'Castillo San Felipe del Morro niemen kärjessä, nurmikentällä leijoja ja majakka muurilla.',
       selite: 'Castillo San Felipe del Morron linnoitus San Juanin niemen '
         + 'kärjessä, edessään laaja nurmikenttä, jolla kaupunkilaiset '
         + 'lennättävät leijoja. Muurin päällä näkyvä valkoinen majakka on '
@@ -1437,6 +1466,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Santa Fe Plaza gazebo.jpg',
       lahde: 'WikTalksmart, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama aukio nykyään: soittolava ja pylväskäytävät, savitiilityyli yhä pakollinen.',
       selite: 'Sama aukio nykyään. Keskellä on soittolava ja ympärillä yhä '
         + 'pylväskäytävät, sillä kaupungin rakennusmääräykset vaativat '
         + 'keskustassa savitiilityyliä myös uusilta taloilta.',
@@ -1491,6 +1521,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'St John Harbour Newfoundland (40650988114).jpg',
       lahde: 'Michel Rathwell, Commons (CC BY 2.0)',
+      lyhyt: 'Sama satama nykyään: The Narrows ja Signal Hill, jonka laella Cabot Tower.',
       selite: 'Sama satama nykyään. Keskellä avautuu The Narrows, kapea väylä '
         + 'merelle, ja sen vasemmalla puolella kohoaa Signal Hill, jonka '
         + 'laella näkyy Cabot Tower.',
@@ -1539,6 +1570,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Toronto Skyline from Centre Island.jpg',
       lahde: 'Whpq, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama näkymä lahdelta Centre Islandilta: tornirivi ja CN Tower korvasivat laivalaiturit.',
       selite: 'Sama näkymä lahdelta nykyään, kuvattuna Centre Islandilta. '
         + 'Höyrylaivalaiturien tilalla on tornirivi ja CN Tower, ja saarille '
         + 'pääsee edelleen vain lautalla.',
@@ -1589,6 +1621,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Cordova Street, 2016 Blue Hour.jpg',
       vuosi: '2016',
       lahde: 'Dllu, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama Cordova Street sata vuotta myöhemmin: 1800-luvun tiilitalot ja Woodward\'sin W-kyltti.',
       selite: 'Sama Cordova Street runsaat sata vuotta myöhemmin, iltahämärässä. '
         + 'Vasemmalla on 1800-luvun tiilitaloja, joissa on nykyään '
         + 'panimoravintola; taustalla näkyy Woodward\'sin tavaratalon vanha '
@@ -1641,6 +1674,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Downtown Whitehorse (6325219946).jpg',
       vuosi: '2011',
       lahde: 'Anthony DeLorenzo, Commons (CC BY 2.0)',
+      lyhyt: 'Sama rantatörmä nykyään: Yukonjoki virtaa yhä, Yukonin pääkaupunki matalien talojen keskellä.',
       selite: 'Sama rantatörmä nykyään. Yukonjoki virtaa yhä keskustan ohi, mutta '
         + 'laivojen tilalla on matalia taloja ja rantatie. Whitehorse on '
         + 'Yukonin pääkaupunki, ja suurin osa koko territorion asukkaista '
@@ -1692,6 +1726,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Winnipeg Esplanade Riel Bridge & CMHR.jpg',
       vuosi: '2026',
       lahde: 'Travel Manitoba, Wikimedia Commons (CC BY 2.0)',
+      lyhyt: 'Vinoköysisilta sinisenä hetkenä, taustalla lasikupolinen museo ja pilvenpiirtäjät.',
       selite: 'Vinoköysisilta ja sen yksi vino pyloni kaartuvat joen yli sinisenä '
         + 'hetkenä, ja takana kohoavat lasikupolinen museorakennus tornineen '
         + 'sekä keskustan pilvenpiirtäjät. Valot heijastuvat tyynestä '
@@ -1740,6 +1775,7 @@ export const NORTHAMERICA_VALOKUVAT = {
       tiedosto: 'Old Town and N\'Dilo.JPG',
       vuosi: '2008',
       lahde: 'CambridgeBayWeather, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Yellowknifen Old Town kesällä, talot kallion päällä ja vesitasojen laituri lahdessa.',
       selite: 'Yellowknifen Old Town kesällä, taustalla N\'Dilon niemi ja Suuri '
         + 'Orjajärvi. Talot on rakennettu suoraan kallion päälle koivujen '
         + 'sekaan, ja rannassa näkyy vesitasojen laituri — sama lahti, jossa '
@@ -1788,6 +1824,7 @@ export const NORTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Castle Geyser Yellowstone.jpg',
       lahde: 'Clément Bardot, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Sama Castle Geyser nykyään: kartio entisellään, kävijät pitkospuilla ohuen piikuoren takia.',
       selite: 'Sama Castle Geyser nykyään. Kartio on entisellään, mutta kävijät '
         + 'pidetään pitkospuilla: ohut piikuori pettää helposti ja alla on '
         + 'kiehuvaa vettä.',

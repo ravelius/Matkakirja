@@ -169,6 +169,25 @@ export const FOKUSVIRTA_LISSABON = {
       + 'suunnista, vain eri kattojen välistä. [softly] Kartta on täällä '
       + 'taskussa kulkeva lohdutus.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lissabon.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-lissabon-r20260909-paper-v2;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lissabon-r20260909-paper-v2.jpg',
+      lyhyt: 'Nainen neuvoo tietä Alfaman portailla Lissabonissa vuonna 1873.',
+      selite: 'Lissabon, lokakuu 1873: ovenpielessä istuva nainen neuvoo portaita '
+        + 'ylöspäin, ja Tejo välähtää kattojen välistä. Historiallisten '
+        + 'rakennustyyppien pohjalta kuviteltu Alfaman kuja.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://www.patrimoniocultural.gov.pt/wp-content/uploads/2024/08/ER4.pdf',
+      'https://imovel2.patrimoniocultural.gov.pt/detalhes.php?code=19448470',
+      ],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

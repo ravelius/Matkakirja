@@ -207,6 +207,24 @@ export const FOKUSVIRTA_DUBLIN = {
       + 'hihalla. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään. '
       + '[softly] Olin unohtanut vuokrasopimuksen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-dublin.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-dublin-r20260909-paper-v2;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dublin-r20260909-paper-v2.jpg',
+      lyhyt: 'Panimotyöläinen levähtää tynnyrien vieressä Dublinissa vuonna 1873.',
+      selite: 'Dublin, syyskuu 1873: St James’s Gaten panimon lastauspihalla '
+        + 'työntekijä pyyhkii otsaansa; puutynnyrit ja hevoskärryt odottavat.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://www.dublincity.ie/sites/default/files/2020-10/hoyd-volume-1.pdf',
+      'https://www.dublincity.ie/sites/default/files/media/file-uploads/2018-05/Liberties_LAP.pdf',
+      ],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

@@ -147,6 +147,25 @@ export const FOKUSVIRTA_MADRID = {
       + 'väitellään uudesta tasavallasta. [softly] Tässä huoneessa '
       + 'vallanvaihto onnistui ostamatta edes sanomalehteä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-madrid.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-madrid-r20260909-paper-v2;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-madrid-r20260909-paper-v2.jpg',
+      lyhyt: 'Vierailija katsoo Las Meninasia Madridin Pradossa vuonna 1873.',
+      selite: 'Madrid, 1873: nimetön vierailija istuu Pradon salissa Las Meninasin '
+        + 'edessä. Historiallinen ripustus ja maalauksen kuvapinta ovat '
+        + 'generoituja tulkintoja, eivät tarkka museonäkymä tai teosjäljennös.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://www.museodelprado.es/en/learn/encyclopedia/voice/meninas-las-velazquez/296ac38f-8bf6-439d-b13c-ed22de8c39de',
+      'https://www.museodelprado.es/en/museum/history-of-the-museum',
+      ],
+    },
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
