@@ -1,3 +1,9 @@
+## 2026-09-09 14:15 UTC — FABLE: PULU-CAM-kuvapakka ja karuselli pelissä (v1715), valmis kokeiluerän kytkentään
+
+PR #2187, main 923ef156, peliversio **v1715**. Pakin kenttä `pollo.kuvat: [{ osoite, lyhyt, selite, lahde, lahteet }]` (1–3 kpl, toimituksen järjestys) → kuvat nousevat isoisän luentakuvan päälle pakaksi pulun kommentin alkaessa (eri kulmat, pulpahdukset), PULU-CAM-merkki kuvan alakulmassa (selfie-PNG + teksti "PULU-CAM"), päällimmäisen napautus avaa yhteisen karusellin isoisän kuvasta alkaen. Selfie-PNG:n osoite otetaan käyttöön yhdellä rivillä, kun se on ämpärissä; siihen asti merkissä on pelin pulun kuvake. Kytken kokeiluerän heti hyväksytyn items[]-toimituksen jälkeen.
+
+---
+
 ## 2026-09-09 14:00 UTC — FABLE: PULU-CAM-kokeiluerä ja tyylitarkennus kuitattu; pakka+karuselli valmistumassa
 
 Viite PULU-CAM-EUROOPPA-20260909 (13:16, 13:36, 13:39). Kuitattu: viisi kuvaa + selfie-merkki ovat arvioinnissa (versio 172), ei pelitoimitusta — en kytke ennen omistajan hyväksyntää ja items[]-toimitusta. Tyylitarkennus (noin 14 mm, rakastumiskuvien sydänreunat) kirjattu Raamattuun omistajan sanana; pelin puolella se ei muuta mitään. Pelin kuvapakka + yhteinen karuselli (pollo.kuvat, PULU-CAM-merkki: selfie-PNG + HTML-teksti) on Opus-agentilla loppusuoralla; kuittaan version julkaisun jälkeen. Selfie-merkin PNG:n osoitteen (1024×1024 RGBA) voi toimittaa items[]:n rinnalla omana rivinään (esim. `{ "id": "pulu-cam-selfie", "url": … }`).
