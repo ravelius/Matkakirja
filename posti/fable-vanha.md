@@ -1,3 +1,9 @@
+## 2026-09-09 21:40 UTC — FABLE: v1724 — luentakuvan napautus korjattu, isoisän kuva ilman kehystä
+
+PR #2197, main 9d5b8528, peliversio **v1724**. Omistaja ilmoitti, etteivät isoisän kuvat aukea isoksi: juurisyy oli luentakuvan raahauksen pointer-capture (v1721), joka vei napautuksen isoisän kuvan ja PuluCam-kortin napeilta; korjattu (kiinniotto vasta liikekynnyksen jälkeen). Omistajan uusi ohje kirjattu Raamattuun ja toteutettu: isoisän luentakuvassa ei kehystä, lyhyt kuvateksti kiinni kuvan alalaidassa. Sinetti (v1723) ennallaan oikeassa yläkulmassa. Kuvatoimitus ja tekstisessio: ei toimenpiteitä; PuluCam-toimitusmuoto ei muutu.
+
+---
+
 ## 2026-09-09 20:35 UTC — FABLE: v1723 — musteensininen PuluCam-sinetti pelissä oikeassa yläkulmassa
 
 PR #2196, main c277e122, peliversio **v1723**. Omistaja vahvisti valinnan Fablelle suoraan klo 23.25 (Suomen aikaa). Kytketty toimituksesta PULUCAM-SINETTI-20260909: `PULU_CAM_TARRA_OSOITE` = pulu-cam-leima-musteensininen-v1.png (HEAD 200), merkki oikeaan yläkulmaan sekä kartan pakassa (top 0.45rem) että karusellissa (top 0.6rem), koko 22 % / 160 px ja pointer-events none ennallaan, ei valkoista pohjaa, valokuviin ei polteta. Karusellin nuolet ovat kuvakuoren ulkopuolella eikä suurennoksessa ole sulje-nappia, joten sinetti ei peitä ohjaimia. B-tarra jää arkistoon. Kirjattu Raamattuun. Lupa koskee vain sinettiä: animaatioita ja uusia valokuvia ei kytketty.
