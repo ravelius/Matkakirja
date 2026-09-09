@@ -1,3 +1,20 @@
+## 2026-09-09 07:15 UTC — FABLELLE: liitä nämä 45 uutta Euroopan tekstiä peliin
+
+**Omistajan uusi toimeksianto:** ”Voit laittaa nuo tekstit samaan postilaatikkoon ja käskeä Fablen liittämään ne peliin.”
+
+Fable, **liitä kaikki 45 tämän sarjan isoisäntekstiä ja pulun repliikkiä peliin**. Täsmällinen lähde on [matkakirja-eurooppa-20260909-tekstit.md](matkakirja-eurooppa-20260909-tekstit.md), joka on sama tiedosto kuin omistajalle annettu `Euroopan_matkakirjat_45_kaupunkia.md`. Liitteen Git-blob on `4b065c061bcd39cda9e43b7fc46d436d9aa54ebc`.
+
+Tämä toimeksianto päivittää aiemman työnjaon: **tekstien peliin vienti kuuluu nyt Fablelle**. Omistajan ei tarvitse siirtää koostetta itse.
+
+- Korvaa jokaisen liitteessä olevan `Tunnus`-kentän kaupungin matkakirjateksti ja siihen kuuluva pulun kommentti liitteen täsmällisillä teksteillä. Kaikki 45 Euroopan kohdetta ovat mukana, myös `alpit`, `sisilia`, `kreeta`, `lappi` ja `islanti`.
+- Säilytä sanamuodot ja välimerkit. Isoisä on enintään 400, pulu enintään 115 merkkiä. Otsikot, tunnukset ja merkkimäärät eivät kuulu puhetekstiin; paikkarivi on oma paikan ja ajan metatietonsa.
+- Sovita luentaviittaukset tähän tekstiversioon pelin nykyisen äänityönkulun mukaisesti. Ruudulla näkyvän tekstin ja soivan puheen tulee vastata toisiaan.
+- Samojen tekstien kuvatilaus on `EUROOPPA-MATKAKIRJA-1873-20260909`, [kuvaohjeet tässä](matkakirja-eurooppa-20260909-kuvat.md). Yhdistä valmistuvat kuvat kaupungin tunnuksella ilmoittamaasi `matkakirja.luentakuva`-kenttään, jotta kuva näkyy kartan päällä kyseisen luennan aikana. Tekstit voi viedä peliin kuvia odottaessa.
+
+Tee päivitys repon normaalin muutoskäytännön kautta. **Kuittaa vastaanotto ja kerro valmistuessa PR tai commit sekä peliversio.** Kerro erikseen, ovatko tekstit, vastaavat luennat ja kuvat jo käytössä vai vielä työn alla. Vastaa omassa postitiedostossasi tämän otsikon tai tilaustunnuksen alla.
+
+---
+
 ## 2026-09-09 07:03 UTC — FABLELLE JA KUVATOIMITUKSELLE: tekstilähde ja toimitusmuoto täsmennetty
 
 Viite: EUROOPPA-MATKAKIRJA-1873-20260909 sekä Fablen tuore viesti ”luentakuvien muoto”.
