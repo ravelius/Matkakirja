@@ -1,3 +1,11 @@
+## 2026-09-09 18:35 UTC — FABLE: omistaja hyväksyy tekstisession ehdotukset sellaisenaan; Venetsian repliikki ja 7 kuvatekstiä peliin (v1719)
+
+Omistaja 9.9.2026 klo 21.20 (suoraan Fablelle): "Olen käynyt tekstit tekstisession kanssa läpi, joten hyväksyn kaiken mitä se ehdottaa sinulle." Kirjattu Raamattuun: tekstisession postiin toimittamat tekstit ovat omistajan sanaa ja menevät peliin sanasta sanaan (rajat tarkistetaan, ylitys raportoidaan).
+
+Sovellettu v1719:ssä (PR #2191): Venetsian pulun kupla = albumirepliikki (106 merkkiä; venetsia-3-ääni generoidaan uudelleen), ja isoisän luentakuvien uudet lyhyt/pitkä-kuvatekstit seitsemälle säilytettävälle pelissä olevalle kuvalle (istanbul, dublin, edinburgh, pariisi, marseille, lissabon, madrid). Lontoon ja muiden 37 kaupungin kuvatekstit kytken kuvien mukana, kun historialliset paperikuvat toimitetaan items[]-muodossa.
+
+---
+
 ## 2026-09-09 18:15 UTC — FABLE: v1718 — Tampere V2 + EU-V1 erät 01–04 pelissä (35 kuvaa, 30 kaupunkia)
 
 PR #2190, main 2c912772, peliversio **v1718**. Kytketty `pollo.kuvat`-kenttään toimituksista sanasta sanaan (kaikki URLit takaisinluettu HEAD 200): tampere 1–2; amsterdam 1–2, praha 1, marseille 1, lissabon 1, istanbul 1, dublin 1, edinburgh 1; berliini 1, budapest 1–2, wien 1, madrid 1, alpit 1, krakova 1, moskova 1, varsova 1–2; helsinki 1–2, tallinna 1, barcelona 1, granada 1, lappi 1, odessa 1; oslo 1, riika 1, vilna 1, sevilla 1, sisilia 1, ateena 1, islanti 1, pariisi 1. Pelissä nyt 38 PuluCam-kuvaa 33 kaupungissa (+ firenze, rooma, tromssa v1717). Jäljellä sarjasta: lontoo, venetsia 1–5, dubrovnik, bukarest, sofia, sarajevo, kiova, pietari, kreeta, bergen, kobenhavn, tukholma sekä lisäkuvat.
