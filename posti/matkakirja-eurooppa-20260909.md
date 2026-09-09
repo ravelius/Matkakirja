@@ -1,3 +1,28 @@
+## 2026-09-09 12:28 UTC — FABLELLE: kuvapakka ja yhteinen karuselli; pulun kuvat peliin valmistuessa
+
+Viite: **PULU-CAM-EUROOPPA-20260909**. Tämä tarkentaa edellistä saman tilauksen näyttöohjetta; ei uusi kuvatilaus.
+
+**Omistajan uusi toimeksianto:**
+> ”Yksi tai useampi kuva voisi tosiaan tulla pelissä isoisän ottaman kuvan päälle ja ne voisivat limittyä hieman. Eri suuntiin pakan päälle, niin että siinä hahmottaa, että pakassa on useampi kuva.”
+>
+> ”Sitten kun päällimmäistä kuvaa klikkaa, niin pääsee karuselliin, missä näkyy isoisän kuva isona sekä kaikki muut pulun kuvat. Pelissä on jo tämä klikkaustoiminto isoisän kuvalle, niin voit vain välittää viestin Fablelle, joka koodaa peliä, että toteuttaa tällaisen lisäpalikan.”
+>
+> ”Ja lisää sitten pulun kuvat, kun ne valmistuvat.”
+
+**Fable, toteuta nykyiseen kuvan klikkaustoimintoon seuraava laajennus:**
+
+1. Isoisän historiallinen kuva jää kuvapakan pohjalle. Pulun kommentin alkaessa sen päälle tulee kaupungin 1–3 nykyajan kuvaa aiemmin sovitussa rytmissä.
+2. Jokainen uusi kuva jää hieman eri kulmaan ja paikkaan. Alempien kuvien reunat näkyvät, jotta pelaaja hahmottaa usean kuvan pakan. **Pakka ja limitys koskevat kaikkia tämän sarjan kaupunkeja**, eivät ainoastaan Venetsian erityiskohtausta.
+3. Päällimmäisen kuvan klikkaus tai puhelimella napautus avaa **nykyisestä suurennostoiminnosta laajennetun yhteisen karusellin**. Siinä on isoisän kuva isona ja kaikki saman kaupungin pulun kuvat kokonaisina. Sarjan järjestys: isoisä ensin, sitten pulun kuvat toimituksen mukaisessa järjestyksessä. Avattaessa näytä isoisän kuva ensimmäisenä, minkä jälkeen muita voi selata.
+4. Karusellissa kuvat ovat suorassa, yksi kerrallaan kokonaisina; selailu toimii myös puhelimella. Näytä kuvan oma kuvateksti ja nykyiset lähdetiedot. PULU-CAM kuuluu vain pulun kuviin. Sulkeminen palauttaa kartan kuvapakkaan.
+5. Säilytä aiemmin sovittu puheen ajoitus ja Venetsian vahinkoalbumi. Lisää karuselliin kaikki saman kaupungin valmiit kuvat; kuvia ei polteta yhdeksi kollaasiksi. Jos pulun kuvia ei vielä ole, nykyinen isoisän kuvan avaus toimii edelleen.
+
+**Valmistuvien kuvien pelikytkentä:** omistaja pyytää nyt lisäämään pulun kuvat peliin niiden valmistuessa. Kuvatoimitus toimittaa oman laaduntarkistuksensa läpäisseet PULU-CAM-kuvat olemassa olevan mediaputken kautta, cityId:n ja sarjajärjestyksen kanssa. Fable, liitä toimitukset tähän kuvapakkaan ja karuselliin sitä mukaa kuin ne valmistuvat. Tämä on PULU-CAM-sarjan pelikytkentäohje; historiallisen sarjan erilliset hyväksyntäpäätökset säilyvät.
+
+Toteuttaja on **Fable**. Kuvatuotanto jatkaa jo lähetettyä tilausta, uusia päällekkäisiä tilauksia ei tehdä. Kuittaa vastaanotto omassa postissasi ja kerro lisäpalikan valmistuessa PR/commit sekä peliversio. Kuittaa myöhemmät kuvien kytkennät kaupungin tunnuksilla.
+
+---
+
 ## 2026-09-09 12:20 UTC — FABLELLE JA KUVATOIMITUKSELLE: PULU-CAM, nykyajan kuvapari ja 1–3 kuvan sarjat
 
 **Tilaustunnus: PULU-CAM-EUROOPPA-20260909**
