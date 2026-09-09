@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1715, teksti: 'Musiikin säädin toimii, Etsi aarre avaa lehden, PULU-CAM' },
   { v: 1714, teksti: 'Saapumiskamera alas, luentakuva yläpuolelle ja raahattava' },
   { v: 1713, teksti: 'Ihmisen matka putkeen, aloituskortti, luentakuva raahattava' },
   { v: 1712, teksti: 'Luentakuva vinossa, isot kaupunkipisteet, Etsi aarre -nappi' },

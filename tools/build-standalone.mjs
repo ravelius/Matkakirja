@@ -494,6 +494,12 @@ const MODULES = [
    * staattisesti (ketju, tilat ja kuuntelija ovat siellä).
    */
   'js/musiikkivalitsin.js',
+  /*
+   * Musiikin vahvistin ennen soittimia: pohjaraita, siirtymäraidat ja
+   * aarreaihe tuovat sen staattisesti (reititys, kontekstin herätys ja
+   * volume-mittaus ovat siellä).
+   */
+  'js/musiikkivahvistin.js',
   'js/ambience-stream.js',
   /*
    * Siirtymämusiikki AMBIENCE-STREAMIN JÄLKEEN: se rekisteröi
@@ -671,6 +677,12 @@ const MODULES = [
   // fokusmitat (ja sen fokus-grc) ennen fokusvirtaa: saapumisasento 9.9.2026
   'js/packs/fokus-grc.js',
   'js/fokusmitat.js',
+  /*
+   * PULU-CAM-pakka ENNEN fokusvirtaa (fokusvirta tuo sen staattisesti).
+   * Sen omat riippuvuudet — ui-apurit, media, kuvatekstit ja pollo —
+   * ovat kaikki jo yllä.
+   */
+  'js/pulucam.js',
   'js/fokusvirta.js',
   /*
    * Laattapyramidin lataaja ennen kameraa: kamera lukee siitä arkin

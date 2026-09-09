@@ -54,7 +54,6 @@
  */
 import { musaPolku } from './media.js';
 import { kaupunginRaidat } from './kaupunkimusiikki.js';
-import { kehittajanKerroin, kuunteleKehittajanKerrointa } from './kehittajan-voimat.js';
 
 /** Pohjavire: viimeinen taso, joka soi kun mikään muu ei sovi. */
 export const POHJARAITA = 'musa-pohja';
@@ -102,6 +101,13 @@ let paikka = null;
 let paikanMaa = null;
 const tilat = new Set();
 const musiikkiKuuntelijat = new Set();
+/*
+ * Musiikin TASON kuuntelijat (kuunteleMusiikinKerrointa). Eri joukko
+ * kuin musiikkiKuuntelijat: nuo kysyvät "mikä raita soi", nämä "millä
+ * tasolla" — ja soivan raidan pitää seurata säädintä ilman että raita
+ * vaihtuu (omistajan vaatimus 8.9.2026).
+ */
+const kerroinKuuntelijat = new Set();
 
 /**
  * Missä ollaan. Kutsutaan js/ambience-stream.js:n pohjavirekoneistosta
@@ -261,27 +267,26 @@ export function asetaMusiikkiPaalla(paalla) {
  * puheVoima 0,9), joten musiikki on noin 26 dB kertojan alla — ja pulu
  * on kertojan tasolla kertoimella 0,8, joten senkin alle jäädään
  * selvästi. LOPULLINEN LUKEMA ON KUULOKOKEEN NUPPI kuten kaikki muutkin
- * äänitasot; rattaan säädin liikuttaa sitä askelittain (0,25–3,0) ilman
- * koodimuutosta.
+ * äänitasot; rattaan säädin liikuttaa sitä ilman koodimuutosta (liuku
+ * 0–100, ks. seuraava luku).
  */
 export const MUSIIKIN_PERUSTASO = 0.034;
 
 /**
  * KAIKEN MUSIIKIN KERROIN — pohjaraita, kaupunki- ja aluekappaleet,
  * tila- ja paikkaraidat, siirtymä- ja linssiraidat, visamusiikki ja
- * aarreaihe. Tähän tulee aikanaan myös pelaajan oma säädin; siihen
- * asti se on kehittäjän hammasratasvalikon 'musiikki'-säädin
- * (js/kehittajan-voimat.js), jonka oletus on 1,0 eli pelin oma taso.
+ * aarreaihe. Kerroin tulee YHDESTÄ paikasta: musiikin omasta liu'usta
+ * (ks. seuraava luku). Ei rinnakkaisia kertoimia.
  *
- * YKSI FUNKTIO, EI RINNAKKAISIA KERTOIMIA. Ennen tätä osa reiteistä
- * luki kertoimen suoraan ja osa ei lukenut sitä lainkaan
- * (visamusiikki, aarreaihe, kehittäjän varakuvio) — säädin näytti
- * silloin toimivan sattumanvaraisesti sen mukaan, mikä raita sattui
- * soimaan. Vartiotesti tests/musiikin-kerroin.test.mjs pitää huolen,
- * ettei uusi soitin ohita tätä.
+ * KEHITTÄJÄN VANHA 'musiikki'-KERROIN ON POISTETTU KAAVASTA
+ * (9.9.2026). Se oli hammasrattaan ×0,25…×3,0 -askellin, ja sen arvo
+ * jäi laitteen muistiin: omistajan puhelimessa saattoi olla yhä 5.9.
+ * linjattu ×2,0, joka olisi hiljaisuutta tavoittelevan uuden liu'un
+ * päällä kaksinkertaistanut kaiken kenenkään huomaamatta. Kaksi
+ * säädintä samalle asialle oli myös se, mistä koko vika alkoi.
  */
 export function musiikinKerroin() {
-  return kehittajanKerroin('musiikki');
+  return musiikinVahvistus(musiikinLiukuArvo) * MUSIIKIN_KATTO;
 }
 
 /**
@@ -290,7 +295,164 @@ export function musiikinKerroin() {
  * että raita vaihtuu tai peli etenee.
  */
 export function kuunteleMusiikinKerrointa(fn) {
-  return kuunteleKehittajanKerrointa('musiikki', fn);
+  kerroinKuuntelijat.add(fn);
+  return () => kerroinKuuntelijat.delete(fn);
+}
+
+/* ── musiikin oma säädin: liuku 0–100 ja korvan mukainen käyrä ───── */
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * SÄÄDIN TOIMII OIKEASTI JA LAAJALLA VÄLILLÄ, MYÖS IPHONELLA
+ * (omistaja 9.9.2026 klo 16.30, sanatarkasti: *"Taustamusiikki on
+ * ainakin iPhonilla vielä aivan liian kovalla. Saisiko säätimen niin,
+ * että se oikeasti toimisi ja sen pystyisi säätämään todella isolla
+ * välillä, niin, että musiikin saisi oikeasti säädettyä oikealle
+ * tasolle?"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * KAKSI VIKAA, JOTKA NÄYTTIVÄT YHDELTÄ.
+ *
+ * 1. SÄÄDIN OLI VÄÄRÄN MUOTOINEN. Rattaan musiikkirivi oli
+ *    kerroinaskellin (js/kehittajan-voimat.js, ×0,25…×3,0, askel 0,1).
+ *    Alaraja ×0,25 on vain −12 dB eikä hiljaisuus, ja väli on
+ *    LINEAARINEN — korva kuulee desibelejä, joten lineaarisen säätimen
+ *    alapäässä tapahtuu kaikki ja yläpäässä ei mitään. Omistaja ei
+ *    päässyt "oikealle tasolle" millään napautusmäärällä.
+ *
+ * 2. SÄÄDIN EI MENNYT PERILLE PUHELIMESSA. Ks. js/musiikkivahvistin.js:
+ *    iOS:n WebKit ei anna JavaScriptin asettaa `<audio>`-elementin
+ *    `volumea`, joten volume-polulla oleva raita soi tiedoston omalla
+ *    tasolla riippumatta siitä, mitä säädin sanoo.
+ *
+ * KÄYRÄ ON VAKIO, EI MAKUASIA. Liuku on 0–100 ja vahvistus lasketaan
+ *
+ *     vahvistus(x) = (x / 100) ^ MUSIIKIN_KAYRA        (MUSIIKIN_KAYRA = 2,5)
+ *
+ * eli x = 0 on aito hiljaisuus, x = 100 on käyrän täysi arvo 1 ja väli
+ * on korvan mukainen (potenssikäyrä ≈ logaritminen säädin):
+ *
+ *   | liuku | vahvistus | dB käyrän täydestä |
+ *   | ---   | ---       | ---                |
+ *   |   0   | 0         | hiljaisuus         |
+ *   |   5   | 0,00056   | −65,1 dB           |
+ *   |  10   | 0,0032    | −50,0 dB           |
+ *   |  20   | 0,0179    | −35,0 dB           |
+ *   |  35   | 0,0725    | −22,8 dB  (OLETUS) |
+ *   |  50   | 0,1768    | −15,1 dB           |
+ *   |  75   | 0,4871    |  −6,2 dB           |
+ *   | 100   | 1         |    0 dB            |
+ *
+ * Alaspäin väli on siis rajaton (hiljaisuuteen asti) ja 65 dB kuluu jo
+ * säätimen viidellä ensimmäisellä pykälällä — juuri se "todella iso
+ * väli", jota omistaja pyysi. Samalla pykälän kokoinen muutos kuuluu
+ * suunnilleen samanlaisena kaikkialla säätimen matkalla, mikä on koko
+ * potenssikäyrän tarkoitus.
+ *
+ * MITÄ VAHVISTUS TARKOITTAA PELISSÄ. Musiikkireitit lausuvat tasonsa
+ * omina vakioinaan (POHJA_VOIMA, MUSIIKKI_VOIMA, AARRE_MUSIIKIN_VOIMA,
+ * RAIDAT[laji].voima), ja ne ovat KESKENÄÄN sovitettu sekoitus. Säädin
+ * ei saa rikkoa sekoitusta, joten se on niiden yhteinen kerroin:
+ *
+ *     musiikinKerroin() = vahvistus(liuku) × MUSIIKIN_KATTO × kehittäjän kerroin
+ *
+ * MUSIIKIN_KATTO = 8 sitoo käyrän peliin: se on kerroin liu'un
+ * täydessä päässä. Silloin
+ *
+ *   liuku 43,5 → kerroin 1,0   = 8.9.2026 hyväksytty taso
+ *   liuku 35   → kerroin 0,58  = 4,7 dB sen alle   ← OLETUS
+ *   liuku 100  → kerroin 8,0   = 18 dB sen yli
+ *
+ * eli oletus on omistajan pyytämällä tavalla HILJAISEMPI kuin ennen, ja
+ * säätimessä on silti varaa 18 dB ylöspäin (hiljainen laite, huono
+ * kaiutin) ja hiljaisuuteen asti alaspäin.
+ *
+ * OMA AVAIN, EI MIGRAATIOTA. Kehittäjän vanha avain
+ * (`matkakirja-dev-voima-musiikki`) jää paikalleen omana kertoimenaan;
+ * liu'ulla on oma avain, koska se on eri asia eri asteikolla. Vanhan
+ * avaimen arvo ei kelpaisi liu'un lähtöarvoksi (×2,0 tarkoittaisi
+ * liukuna 55, ei 200), joten migraatiota ei tehdä — laite aloittaa
+ * uuden säätimen oletuksesta, joka on nimenomaan haluttu hiljaisempi.
+ */
+export const MUSIIKIN_KAYRA = 2.5;
+export const MUSIIKIN_KATTO = 8;
+export const MUSIIKIN_LIUKU_MIN = 0;
+export const MUSIIKIN_LIUKU_MAX = 100;
+export const MUSIIKIN_LIUKU_ASKEL = 1;
+export const MUSIIKIN_LIUKU_OLETUS = 35;
+export const MUSIIKIN_LIUKU_AVAIN = 'matkakirja-musiikin-taso';
+
+/**
+ * PUHDAS KÄYRÄ: liuku 0–100 → vahvistus 0–1. Rajojen ulkopuolinen ja
+ * kelvoton arvo rajataan, jottei säädin voi koskaan syöttää
+ * negatiivista tai NaN-vahvistusta äänigraafiin (GainNode ottaa NaN:in
+ * vastaan ja vaientaa koko ketjun ilman virhettä).
+ *
+ * @param {number} liuku 0–100
+ * @returns {number} 0–1
+ */
+export function musiikinVahvistus(liuku) {
+  const x = Number(liuku);
+  if (!Number.isFinite(x)) return (MUSIIKIN_LIUKU_OLETUS / MUSIIKIN_LIUKU_MAX) ** MUSIIKIN_KAYRA;
+  const rajattu = Math.min(MUSIIKIN_LIUKU_MAX, Math.max(MUSIIKIN_LIUKU_MIN, x));
+  return (rajattu / MUSIIKIN_LIUKU_MAX) ** MUSIIKIN_KAYRA;
+}
+
+/** Liu'un arvo rajoihin ja kokonaisluvuksi. */
+function rajaaLiuku(arvo) {
+  const luku = Number(arvo);
+  if (!Number.isFinite(luku)) return MUSIIKIN_LIUKU_OLETUS;
+  return Math.round(Math.min(MUSIIKIN_LIUKU_MAX, Math.max(MUSIIKIN_LIUKU_MIN, luku)));
+}
+
+/** Luetaan kerran: valinta on pysyvä, oletus MUSIIKIN_LIUKU_OLETUS. */
+let musiikinLiukuArvo = (() => {
+  try {
+    const t = localStorage.getItem(MUSIIKIN_LIUKU_AVAIN);
+    return t == null ? MUSIIKIN_LIUKU_OLETUS : rajaaLiuku(t);
+  } catch {
+    return MUSIIKIN_LIUKU_OLETUS;
+  }
+})();
+
+/** Säätimen nykyinen lukema 0–100. */
+export const musiikinLiuku = () => musiikinLiukuArvo;
+
+/**
+ * Säätimen uusi lukema. Tallentaa laitteelle ja herättää kertoimen
+ * kuuntelijat, jotta SOIVA raita seuraa säätöä heti (omistajan vaatimus
+ * 8.9.2026: säädön pitää vaikuttaa siihen, mikä juuri nyt soi).
+ *
+ * @returns {number} rajattu lukema
+ */
+export function asetaMusiikinLiuku(arvo) {
+  const uusi = rajaaLiuku(arvo);
+  if (uusi === musiikinLiukuArvo) return uusi;
+  musiikinLiukuArvo = uusi;
+  try {
+    if (uusi === MUSIIKIN_LIUKU_OLETUS) localStorage.removeItem(MUSIIKIN_LIUKU_AVAIN);
+    else localStorage.setItem(MUSIIKIN_LIUKU_AVAIN, String(uusi));
+  } catch {
+    /* yksityinen selaus: säätö elää istunnon */
+  }
+  const kerroin = musiikinKerroin();
+  for (const fn of kerroinKuuntelijat) {
+    try { fn(kerroin); } catch { /* yksi kuuntelija ei kaada muita */ }
+  }
+  return uusi;
+}
+
+/**
+ * Näyttöasu säätimen viereen: lukema ja desibeliero käyrän täydestä.
+ * Desibeli on se, mitä korva kuulee, ja juuri siksi se näytetään —
+ * kuulokokeen tulos on helpompi kertoa eteenpäin lukuna kuin muistikuvana.
+ */
+export function musiikinLiuunTeksti(liuku = musiikinLiukuArvo) {
+  const arvo = rajaaLiuku(liuku);
+  const v = musiikinVahvistus(arvo);
+  if (v <= 0) return '0 · vaiti';
+  // Typografinen miinus (−) eikä yhdysmerkki: sama kuin muualla pelissä.
+  return `${arvo} · ${String(Math.round(20 * Math.log10(v))).replace('-', '−')} dB`;
 }
 
 /* ── ketju ───────────────────────────────────────────────────────── */
@@ -341,4 +503,5 @@ export function nollaaMusiikkivalitsin() {
   paikanMaa = null;
   tilat.clear();
   musiikkiKuuntelijat.clear();
+  kerroinKuuntelijat.clear();
 }

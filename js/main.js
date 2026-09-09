@@ -25,7 +25,9 @@ import {
 } from './ambience-stream.js';
 // Musiikin oma kytkin (Raamattu, VIAT v1672): musiikki ja äänimaisema
 // ovat kaksi eri asiaa, ks. AANIKYTKIMET alla.
-import { asetaMusiikkiPaalla, musiikkiPaalla } from './musiikkivalitsin.js';
+import {
+  asetaMusiikinLiuku, asetaMusiikkiPaalla, musiikinLiuku, musiikinLiuunTeksti, musiikkiPaalla,
+} from './musiikkivalitsin.js';
 // Siirtymämusiikin kehittäjärivit (raitojen olemassaolo + varamusiikki).
 import {
   MUSIIKKILAJIT, asetaVaramusiikki, lopetaSiirtymamusiikki, lopetaVaramusiikki,
@@ -138,7 +140,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1714';
+const APP_VERSION = '2026-08-09.1715';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1655,6 +1657,34 @@ for (const saadin of document.querySelectorAll('.kehittaja-saadin[data-laji]')) 
       nayta();
     });
   }
+}
+/*
+ * TAUSTAMUSIIKIN LIUKU (omistaja 9.9.2026, sanatarkasti: *"Saisiko
+ * säätimen niin, että se oikeasti toimisi ja sen pystyisi säätämään
+ * todella isolla välillä, niin, että musiikin saisi oikeasti säädettyä
+ * oikealle tasolle?"*).
+ *
+ * Yksi liuku 0–100, käyrä ja tallennus js/musiikkivalitsin.js:ssä.
+ * `input` eikä `change`: säädön pitää kuulua sormen alla, ei vasta kun
+ * sormi nousee — juuri niin omistaja etsii oikean tason. Soivat raidat
+ * seuraavat itse (kuunteleMusiikinKerrointa).
+ */
+const musiikkiLiuku = document.getElementById('kehittaja-musiikki-liuku');
+if (musiikkiLiuku) {
+  const lukema = musiikkiLiuku.closest('.kehittaja-saadin')?.querySelector('.kehittaja-saadin-arvo');
+  const naytaLiuku = () => {
+    musiikkiLiuku.value = String(musiikinLiuku());
+    if (lukema) lukema.textContent = musiikinLiuunTeksti();
+  };
+  naytaLiuku();
+  musiikkiLiuku.addEventListener('input', (e) => {
+    e.stopPropagation();
+    asetaMusiikinLiuku(musiikkiLiuku.value);
+    naytaLiuku();
+  });
+  // Valikko sulkeutuu napautuksesta: liu'un veto ei saa sulkea sitä.
+  musiikkiLiuku.addEventListener('click', (e) => e.stopPropagation());
+  musiikkiLiuku.addEventListener('pointerdown', (e) => e.stopPropagation());
 }
 const polloGenerointiNappi = document.getElementById('kehittaja-pollo-btn');
 /*

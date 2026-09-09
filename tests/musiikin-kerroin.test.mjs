@@ -27,11 +27,10 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
-  MUSIIKIN_PERUSTASO, kuunteleMusiikinKerrointa, musiikinKerroin, nollaaMusiikkivalitsin,
+  MUSIIKIN_LIUKU_OLETUS, MUSIIKIN_PERUSTASO, asetaMusiikinLiuku, kuunteleMusiikinKerrointa,
+  musiikinKerroin, musiikinVahvistus, nollaaMusiikkivalitsin,
 } from '../js/musiikkivalitsin.js';
-import {
-  KEHITTAJAN_VOIMA_OLETUS, asetaKehittajanKerroin,
-} from '../js/kehittajan-voimat.js';
+import { KEHITTAJAN_VOIMA_OLETUS } from '../js/kehittajan-voimat.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
@@ -44,22 +43,31 @@ const REITIT = {
 
 /* ── 1. kerroin ja perustaso ─────────────────────────────────────── */
 
-test('musiikin kerroin on oletuksena 1 ja perustaso yksi vakio', () => {
-  assert.equal(KEHITTAJAN_VOIMA_OLETUS.musiikki, 1,
-    'musiikin oletuskerroin ei ole 1 — hyväksytty taso kuuluu perustasoon, ei kertoimeen');
-  assert.equal(musiikinKerroin(), 1);
+test('musiikin kerroin tulee liu\'usta ja perustaso on yksi vakio', () => {
+  /*
+   * KEHITTÄJÄN 'musiikki'-LAJI ON POISTETTU (9.9.2026): kaksi säädintä
+   * samalle asialle oli osa alkuperäistä vikaa, ja laitteelle jäänyt
+   * vanha ×2,0 olisi kaksinkertaistanut uuden liu'un tuloksen.
+   */
+  assert.equal(KEHITTAJAN_VOIMA_OLETUS.musiikki, undefined,
+    'musiikki on taas kehittäjän kerroinlajina — kertoimia on silloin kaksi');
+  asetaMusiikinLiuku(MUSIIKIN_LIUKU_OLETUS);
+  assert.ok(Math.abs(musiikinKerroin() - musiikinVahvistus(MUSIIKIN_LIUKU_OLETUS) * 8) < 1e-9);
+  assert.ok(musiikinKerroin() < 1,
+    `oletuskerroin ${musiikinKerroin()} ei ole entistä tasoa hiljaisempi`);
   assert.equal(typeof MUSIIKIN_PERUSTASO, 'number');
   assert.ok(MUSIIKIN_PERUSTASO > 0 && MUSIIKIN_PERUSTASO < 0.05,
     `perustaso ${MUSIIKIN_PERUSTASO} ei ole taustamusiikin suuruusluokkaa`);
 });
 
 test('kuuntelija saa uuden kertoimen heti', () => {
+  asetaMusiikinLiuku(MUSIIKIN_LIUKU_OLETUS);
   const kuultu = [];
   const irti = kuunteleMusiikinKerrointa((v) => kuultu.push(v));
-  asetaKehittajanKerroin('musiikki', 0.5);
-  asetaKehittajanKerroin('musiikki', 1);
+  asetaMusiikinLiuku(0);
+  asetaMusiikinLiuku(100);
   irti();
-  assert.deepEqual(kuultu, [0.5, 1]);
+  assert.deepEqual(kuultu, [0, 8]);
 });
 
 /* ── 2. lähdekoodivartio: ei rinnakkaisia kertoimia ──────────────── */
@@ -77,8 +85,14 @@ test('musiikkireitti ei lue kehittäjän kerrointa ohi valitsimen', () => {
     assert.doesNotMatch(lue(tiedosto), /kehittajanKerroin\('musiikki'\)/,
       `${tiedosto}: rinnakkainen kerroin — musiikin kerroin tulee vain musiikinKerroin():stä`);
   }
-  // Ainoa paikka, joka saa kysyä kehittäjän säädintä musiikin nimissä.
-  assert.match(lue('../js/musiikkivalitsin.js'), /kehittajanKerroin\('musiikki'\)/);
+  /*
+   * MYÖSKÄÄN VALITSIN EI ENÄÄ LUE SITÄ (9.9.2026). Musiikin kerroin
+   * tulee yksin liu'usta, jottei laitteelle jäänyt vanha ×-arvo pääse
+   * kertautumaan uuden säätimen päälle.
+   */
+  assert.doesNotMatch(lue('../js/musiikkivalitsin.js'), /kehittajanKerroin\('musiikki'\)/);
+  assert.match(lue('../js/musiikkivalitsin.js'),
+    /musiikinKerroin\(\) \{\s*return musiikinVahvistus\(musiikinLiukuArvo\) \* MUSIIKIN_KATTO;/);
 });
 
 test('soivat musiikkireitit päivittyvät ilman raidanvaihtoa', () => {
@@ -180,7 +194,18 @@ async function lataaAmbienssi() {
 }
 
 test('säädin muuttaa soivan raidan tasoa heti ja väistö kertautuu', async () => {
-  asetaKehittajanKerroin('musiikki', 1);
+  /*
+   * VIITELIUKU on se lukema, jolla kerroin on tasan 1 eli 8.9.2026
+   * hyväksytty taso: liuku 100 antaa kertoimen 8, joten 8^(−1/2,5).
+   * Testi lasketaan siitä eikä kovakoodatusta luvusta, jotta käyrän
+   * säätäminen ei riko testiä vaan näkyy siinä.
+   */
+  const viiteliuku = 100 * 8 ** (-1 / 2.5);
+  asetaMusiikinLiuku(viiteliuku);
+  const kerroin1 = musiikinKerroin();
+  // Liuku on kokonaisluku, joten viitepiste osuu pykälän tarkkuudella.
+  assert.ok(Math.abs(kerroin1 - 1) < 0.05, `viiteliuku ei anna kerrointa 1: ${kerroin1}`);
+
   const s = await lataaAmbienssi();
   s.mod.playPlaceAmbience('vilna', 'kaupunki', 'maailma');
   await Promise.resolve();
@@ -189,31 +214,35 @@ test('säädin muuttaa soivan raidan tasoa heti ja väistö kertautuu', async ()
 
   const raita = s.musiikki();
   assert.ok(raita, 'yhtään musiikkiraitaa ei lähtenyt soimaan');
-  assert.ok(Math.abs(raita.volume - MUSIIKIN_PERUSTASO) < 1e-6,
-    `perustaso ei mennyt perille: ${raita.volume} ≠ ${MUSIIKIN_PERUSTASO}`);
+  assert.ok(Math.abs(raita.volume - MUSIIKIN_PERUSTASO * kerroin1) < 1e-6,
+    `perustaso ei mennyt perille: ${raita.volume}`);
 
   // Säädin alas: SAMA soiva soitin hiljenee, uutta ei synny.
-  asetaKehittajanKerroin('musiikki', 0.5);
+  asetaMusiikinLiuku(20);
+  const kerroin2 = musiikinKerroin();
+  assert.ok(kerroin2 < kerroin1 / 4, 'liu\'un väli on liian kapea kuuluakseen');
   await ajaHaivytykset(s.kello);
   assert.equal(s.musiikki(), raita, 'säätö vaihtoi raidan sen sijaan että olisi säätänyt sitä');
-  assert.ok(Math.abs(raita.volume - MUSIIKIN_PERUSTASO * 0.5) < 1e-6,
+  assert.ok(Math.abs(raita.volume - MUSIIKIN_PERUSTASO * kerroin2) < 1e-6,
     `säädin ei vaikuttanut soivaan raitaan: ${raita.volume}`);
 
   // Luennan väistö kertautuu kertoimen kanssa eikä ylikirjoita sitä.
   s.mod.vaimennaTausta(0.25);
   await ajaHaivytykset(s.kello);
-  assert.ok(Math.abs(raita.volume - MUSIIKIN_PERUSTASO * 0.5 * 0.25) < 1e-6,
+  assert.ok(Math.abs(raita.volume - MUSIIKIN_PERUSTASO * kerroin2 * 0.25) < 1e-6,
     `väistö ohitti kertoimen: ${raita.volume}`);
 
   // Luenta ohi: taso palaa SÄÄDETTYYN lukemaan, ei alkuperäiseen.
   s.mod.palautaTausta();
   await ajaHaivytykset(s.kello);
-  assert.ok(Math.abs(raita.volume - MUSIIKIN_PERUSTASO * 0.5) < 1e-6,
+  assert.ok(Math.abs(raita.volume - MUSIIKIN_PERUSTASO * kerroin2) < 1e-6,
     `väistön purku ei palauttanut säädettyä tasoa: ${raita.volume}`);
 
-  asetaKehittajanKerroin('musiikki', 1);
+  // Aivan alaraja on aito hiljaisuus, ei "melkein".
+  asetaMusiikinLiuku(0);
   await ajaHaivytykset(s.kello);
-  assert.ok(Math.abs(raita.volume - MUSIIKIN_PERUSTASO) < 1e-6);
+  assert.equal(raita.volume, 0, 'liu\'un nolla ei vaienna raitaa');
+  asetaMusiikinLiuku(MUSIIKIN_LIUKU_OLETUS);
 });
 
 /* ── 4. ohje ─────────────────────────────────────────────────────── */

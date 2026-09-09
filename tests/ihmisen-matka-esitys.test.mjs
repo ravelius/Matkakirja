@@ -471,7 +471,15 @@ test('avauksen lauseet ovat keskellä ja laskeutuvat alas ensimmäisessä kohtee
   // Lasku on pehmeä siirtymä, ei räpsähdys: sama kesto js:ssä ja css:ssä.
   assert.equal(TEKSTIN_LASKU_MS, 900);
   assert.match(CSS, /\.aikajana-kertomusteksti \{[\s\S]{0,600}top 900ms cubic-bezier/);
-  assert.match(CSS, /\.aikajana-kertomusteksti\.keskella \{\s*\n\s*top: 61%;/);
+  /*
+   * TASAN KESKELLE (Raamattu "IHMISEN MATKA: LUENTAKUVA EI SAA JAADA
+   * LINSSIN PAALLE, JA TEKSTI KESKELLE RUUTUA", omistaja 9.9.2026):
+   * entinen 61 % oli puhelimella jo alakolmannes. Keskitys on linssin
+   * oman kerroksen (.aikajana, inset 0 karttaruudussa) puoliväli.
+   */
+  assert.match(CSS, /\.aikajana-kertomusteksti\.keskella \{\s*\n\s*top: 50%;\s*\n\s*transform: translate\(-50%, -50%\);/);
+  assert.ok(!/\.aikajana-kertomusteksti\.keskella \{[^}]*top: 6\d%/.test(CSS),
+    'keskitetty lause on yhä keskiviivan alapuolella');
   assert.match(CSS, /\.aikajana-kertomusteksti\.keskella \.aikajana-kertomusteksti-sisus \{[\s\S]{0,400}font-size: 1\.5rem;/,
     'keskitetty lause ei ole isolla kirjasimella');
   // Lauseen oma häivytys on sisuksessa, rivin näkyvyys rivissä.

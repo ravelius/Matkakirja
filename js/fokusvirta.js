@@ -152,6 +152,16 @@ import {
   polloPuheenvuoro,
 } from './pollo.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
+/*
+ * PULU-CAM (Raamattu 9.9.2026): pulun nykyajan kuvat nousevat pakaksi
+ * isoisän luentakuvan päälle kommentin alkaessa, ja päällimmäisen
+ * napautus avaa yhteisen karusellin. Pakan piirto ja ajastin asuvat
+ * omassa moduulissaan; osoitteet ja karuselli tulevat täältä
+ * takaisinkutsuina, jottei kehää synny (js/pulucam.js).
+ */
+import {
+  naytaPuluCamPakka, piilotaPuluCamPakka, pulunKuvat, puluCamMerkki, puluCamPakassa,
+} from './pulucam.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
 import { taytaLahderivi } from './tekijakortti.js';
@@ -1155,6 +1165,15 @@ export function fokusvirtaSaapumiskupla(ui, city) {
        * (js/etsi-aarre-nappi.js), ja kaupunki ilman kätköä ei saa sitä.
        */
       naytaEtsiAarreNappi(ui, city);
+      /*
+       * PULU-CAM-PAKKA ISOISÄN KUVAN PÄÄLLE (omistaja 9.9.2026,
+       * Raamattu PULU-CAM: PULUN NYKYAJAN KUVAT PAKKANA ISOISAN KUVAN
+       * PAALLE: kuvat nousevat *"pulun kommentin alkaessa"*). Sama yksi
+       * kohta kuin Etsi aarre -napilla — kutsuhetki ei kelpaa, koska
+       * ketju odottaa luentaa ja paljastussarjaa. Ilman `pollo.kuvat`
+       * -kenttää tämä ei tee mitään.
+       */
+      naytaPulunKuvapakka(ui, city);
     }), SAAPUMISKUPLAN_TAUKO_MS);
   };
   /*
@@ -1840,15 +1859,57 @@ export function naytaLuentakuva(ui, city) {
   piilotaLuentakuva(ui, { heti: true });
   const kuva = fokusvirtaLuentakuva(ui, city);
   if (!kuva) return false;
+  return Boolean(rakennaLuentakuvanPaneeli(ui, city, kuva));
+}
+
+/**
+ * PANEELIN RAKENNUS — YKSI PAIKKA KAHDELLE TAPAUKSELLE.
+ *
+ * `kuva` on isoisän luentakuva, tai NULL. Null on PULU-CAMin
+ * pohjattoman pakan tapaus (Raamattu: *"Jos kaupungilla ei ole
+ * luentakuvaa mutta on pollo.kuvat, pakka nousee samaan paikkaan ilman
+ * pohjakuvaa"*): silloin paneelissa on vain läpinäkyvä pohjalaatikko,
+ * jonka mitat tulevat samasta laskennasta kuin kuvallisella paneelilla
+ * — ankkuri, raahaus ja pienennys ovat siis TÄSMÄLLEEN samat.
+ *
+ * Erillinen "pakan oma paneeli" olisi toinen ankkurointi, toinen
+ * raahaus ja toinen kehyssilmukka; niitä ei kirjoiteta kahdesti.
+ *
+ * @returns {?Element} paneeli, tai null jos dokumenttia ei ole
+ */
+function rakennaLuentakuvanPaneeli(ui, city, kuva) {
+  if (typeof document === 'undefined') return null;
   lataaTyyli();
 
   const koti = document.querySelector('.map-pane') ?? document.body;
-  const paneeli = html('div', 'fokusvirta-luentakuva');
+  const paneeli = html('div', kuva
+    ? 'fokusvirta-luentakuva' : 'fokusvirta-luentakuva pulucam-pohjaton');
   paneeli.setAttribute('role', 'group');
-  paneeli.setAttribute('aria-label', `${city.name}: matkakirjan kuva`);
+  paneeli.setAttribute('aria-label', kuva
+    ? `${city.name}: matkakirjan kuva` : `${city.name}: pulun kuvat`);
   // Kallistus on kaupungin oma, mutta mitta asuu css-muuttujassa: css
   // päättää miten kulmaa käytetään (nousu, pienennys, liikevähennys).
   paneeli.style.setProperty('--luentakuva-kallistus', luentakuvanKallistus(city.id));
+
+  /*
+   * POHJATON PAKKA: paneelissa on vain läpinäkyvä laatikko, johon
+   * pakka ladotaan. Ei nappia, ei kuvaa, ei kuvatekstiä — ja siksi
+   * myöskään ei luennan jälkeistä pienennystä, joka on isoisän kuvan
+   * oma kello.
+   */
+  if (!kuva) {
+    const kuvatila = html('div', 'fokusvirta-kuvatila');
+    kuvatila.appendChild(html('div', 'fokusvirta-kuva pulucam-pohja'));
+    paneeli.appendChild(kuvatila);
+    koti.appendChild(paneeli);
+    ui.luentakuva = paneeli;
+    const naytaPohja = () => { if (paneeli.parentNode) paneeli.classList.add('nakyy'); };
+    globalThis.requestAnimationFrame?.(naytaPohja);
+    setTimeout(naytaPohja, 50);
+    kytkeLuentakuvanPienennys(ui, paneeli);
+    ankkuroiLuentakuva(ui, city, paneeli, null);
+    return paneeli;
+  }
 
   const nappi = html('button', 'fokusvirta-kuva');
   nappi.type = 'button';
@@ -1876,7 +1937,14 @@ export function naytaLuentakuva(ui, city) {
   nappi.addEventListener('click', () => {
     const naytto = ui.luentakuvaAnkkuri;
     if (naytto?.paneeli === paneeli && naytto.raahattu) { naytto.raahattu = false; return; }
-    avaaSuurennos(ui, [kuva], 0, () => nappi);
+    /*
+     * PAKAN OLLESSA PÄÄLLÄ SAMA KARUSELLI (omistaja 9.9.2026): isoisän
+     * kuvan napautus avaa täsmälleen sen karusellin, jonka päällimmäinen
+     * pulun kuva avaa — yksi sarja, yksi järjestys, isoisä ensin.
+     * Ilman pakkaa tämä on nykyinen yhden kuvan suurennos, riviltä
+     * riville ennallaan.
+     */
+    avaaLuentakuvanKaruselli(ui, city, kuva, nappi);
   });
 
   /*
@@ -1895,7 +1963,22 @@ export function naytaLuentakuva(ui, city) {
   const kuvateksti = html('p', 'fokusvirta-kuvateksti fokusvirta-luentateksti');
   kuvateksti.appendChild(html('span', 'fokusvirta-kuvaselite', kuvatekstiLyhyt(kuva)));
 
-  paneeli.append(nappi, kuvateksti);
+  /*
+   * KUVATILA ON PULU-CAM-PAKAN SIJOITUSKEHYS (js/pulucam.js). Kaksi
+   * syytä, kumpikin pakottava:
+   *
+   *   - `.fokusvirta-kuva` on NAPPI, eikä nappiin saa latoa nappeja
+   *     (pakan kortit ovat nappeja);
+   *   - sillä on `overflow: hidden`, joka leikkaisi juuri ne pakan
+   *     reunat, joiden pitää näkyä.
+   *
+   * Kuori on nollan kokoinen lisäys ulkoasuun (block, koko napin
+   * mukaan), joten pakaton paneeli näyttää täsmälleen entiseltä.
+   */
+  const kuvatila = html('div', 'fokusvirta-kuvatila');
+  kuvatila.appendChild(nappi);
+
+  paneeli.append(kuvatila, kuvateksti);
   koti.appendChild(paneeli);
   ui.luentakuva = paneeli;
 
@@ -1915,7 +1998,110 @@ export function naytaLuentakuva(ui, city) {
   ankkuroiLuentakuva(ui, city, paneeli, nappi);
   pienennaLuennanJalkeen(ui, city, paneeli,
     fokusvirtaSisalto(ui, city)?.matkakirja?.teksti ?? '');
-  return true;
+  return paneeli;
+}
+
+/* =================== PULU-CAM: PAKKA JA KARUSELLI ==================
+ *
+ * Omistaja 9.9.2026 klo 15.20–15.30 (Raamattu, PULU-CAM: PULUN
+ * NYKYAJAN KUVAT PAKKANA ISOISAN KUVAN PAALLE, YHTEINEN KARUSELLI).
+ * Piirto ja ajastin ovat js/pulucam.js:ssä; täällä on se kolme asiaa,
+ * jotka kuuluvat fokusvirtaan eivätkä pakan piirtäjälle:
+ *
+ *   1. MISTÄ KUVAT TULEVAT — pakin kenttä `pollo.kuvat` luetaan samasta
+ *      sisällöstä kuin luentakuva (fokusvirtaSisalto).
+ *   2. MILLOIN PAKKA NOUSEE — siitä yhdestä kohdasta, jossa pulun
+ *      kommenttikupla oikeasti nousee ruudulle (fokusvirtaSaapumiskupla
+ *      → nayta), sama koukku kuin Etsi aarre -napilla.
+ *   3. MIHIN NAPAUTUS VIE — yhteiseen karuselliin, joka on tämän
+ *      moduulin oma suurennos (avaaSuurennos) yhdellä listalla:
+ *      isoisän kuva ensin, sitten pulun kuvat toimituksen
+ *      järjestyksessä.
+ */
+
+/** Kaupungin pulun kuvat pakista (tyhjä lista ilman kenttää). */
+export function fokusvirtaPulunKuvat(ui, city) {
+  return pulunKuvat(fokusvirtaSisalto(ui, city));
+}
+
+/**
+ * KARUSELLIN LISTA: ISOISÄ ENSIN, PULUN KUVAT PERÄSSÄ.
+ *
+ * Järjestys on omistajan sanoma järjestys eikä napautuskohdan mukainen:
+ * *"isoisän kuva isona sekä kaikki muut pulun kuvat"*. Ilman isoisän
+ * kuvaa (pohjaton pakka) lista alkaa suoraan pulun kuvista.
+ *
+ * @returns {{lista: Array<object>, pulusta: number}} `pulusta` on
+ *   ensimmäisen pulun kuvan indeksi listalla (0 tai 1).
+ */
+function pulucamKaruselli(ui, city, pohjakuva) {
+  const kuvat = fokusvirtaPulunKuvat(ui, city);
+  const lista = pohjakuva ? [pohjakuva, ...kuvat] : [...kuvat];
+  return { lista, pulusta: pohjakuva ? 1 : 0 };
+}
+
+/**
+ * Isoisän luentakuvan napautus: yhteinen karuselli, jos pakka on
+ * päällä — muuten entinen yhden kuvan suurennos.
+ */
+function avaaLuentakuvanKaruselli(ui, city, kuva, nappi) {
+  if (!puluCamPakassa(ui)) { avaaSuurennos(ui, [kuva], 0, () => nappi); return; }
+  const { lista, pulusta } = pulucamKaruselli(ui, city, kuva);
+  avaaSuurennos(ui, lista, 0, () => nappi, { pulunKuvasta: pulusta });
+}
+
+/**
+ * PAKKA NOUSEE PULUN KOMMENTIN MYÖTÄ.
+ *
+ * KAKSI ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ:
+ *
+ *  1. PIENENNYS PERUUNTUU PAKAN AJAKSI. Luennan loppu on ehtinyt jo
+ *     kutistaa isoisän kuvan (pienennaLuentakuva), ja kommentti tulee
+ *     heti sen perässä. Pakka peukalonkynnen kokoisen kuvan päällä
+ *     olisi lukukelvoton — ja omistajan kuvaus ("niin että siinä
+ *     hahmottaa, että pakassa on useampi kuva") edellyttää, että
+ *     kuvien reunat oikeasti näkyvät. Kuva nousee siis takaisin isoksi
+ *     pakan mukana, ja kartan seuraava liike pienentää ne YHDESSÄ.
+ *  2. POHJATON PAKKA SAA OMAN PANEELINSA. Ilman luentakuvaa paneelia
+ *     ei ole vielä olemassa, joten se rakennetaan tässä samoilla
+ *     mitoilla ja samaan ankkuriin (rakennaLuentakuvanPaneeli, kuva
+ *     null).
+ *
+ * @returns {boolean} nousiko pakka
+ */
+export function naytaPulunKuvapakka(ui, city) {
+  if (typeof document === 'undefined' || !ui || !city) return false;
+  const kuvat = fokusvirtaPulunKuvat(ui, city);
+  if (!kuvat.length) return false;
+  const pohjakuva = fokusvirtaLuentakuva(ui, city);
+  const paneeli = ui.luentakuva ?? rakennaLuentakuvanPaneeli(ui, city, pohjakuva);
+  if (!paneeli) return false;
+  // Pakan koti on kuvatila (nappi ja sen `overflow: hidden` eivät kelpaa).
+  const pohja = paneeli.querySelector?.('.fokusvirta-kuvatila');
+  if (!pohja) return false;
+  // Ks. kohta 1 yllä: pakka ei nouse kutistetun kuvan päälle.
+  paneeli.classList.remove('pieni');
+  if (ui.luentakuvaAnkkuri?.paneeli === paneeli) mitoitaLuentakuva(ui.luentakuvaAnkkuri);
+  const { lista, pulusta } = pulucamKaruselli(ui, city, pohjakuva);
+  return naytaPuluCamPakka(ui, {
+    pohja,
+    kuvat,
+    osoite: (k) => kuvanOsoite(k, LUENTAKUVAN_PX),
+    vara: (k) => kuvanVara(k, LUENTAKUVAN_PX),
+    /*
+     * NAPAUTUS AVAA KARUSELLIN ISOISÄN KUVASTA. Ankkuriksi annetaan
+     * napautettu kortti, jotta kasvu lähtee siitä kuvasta, jota pelaaja
+     * kosketti — myös silloin, kun karuselli avautuu isoisän kuvaan.
+     */
+    avaa: (i) => avaaSuurennos(ui, lista, 0, () => ui.pulucamPakka?.kortit?.[i] ?? pohja,
+      { pulunKuvasta: pulusta }),
+    raahattu: () => {
+      const naytto = ui.luentakuvaAnkkuri;
+      if (naytto?.paneeli !== paneeli || !naytto.raahattu) return false;
+      naytto.raahattu = false;
+      return true;
+    },
+  });
 }
 
 /* ============ LUENTAKUVA ANKKUROITUNA KARTAN KOHTAAN ==============
@@ -2329,7 +2515,19 @@ export function pienennaLuentakuva(ui) {
  */
 function pienennaLuennanJalkeen(ui, city, paneeli, teksti) {
   const alku = Date.now();
-  const lopeta = () => { if (ui.luentakuva === paneeli) pienennaLuentakuva(ui); };
+  /*
+   * PULU-CAM-PAKKA VOITTAA LUENNAN KELLON (mitattu Chromiumilla
+   * 9.9.2026, puhelinajo). Kommentti tulee luennan JÄLKEEN, ja pakka
+   * nousee sen mukana — mutta tämä sama luennan loppu on myös
+   * pienennyksen kello, ja kellojen järjestys vaihtelee (äänite vs.
+   * 400 ms:n kysely). Väärässä järjestyksessä pakka nousi ja kutistui
+   * heti perään peukalonkynneksi. Kun pakka on kartalla, luennan luku
+   * on ohi eikä sen ajastin enää kutista mitään; KARTAN LIIKE kutistaa
+   * yhä molemmat yhdessä (kytkeLuentakuvanPienennys).
+   */
+  const lopeta = () => {
+    if (ui.luentakuva === paneeli && !puluCamPakassa(ui)) pienennaLuentakuva(ui);
+  };
   const kysy = (jaljella = LUENTAKUVAN_ODOTUSKATTO_MS) => {
     if (ui.dead || ui.luentakuva !== paneeli) return;
     // Pelaaja siirtyi toiseen kaupunkiin: kuva kuuluu vain siihen
@@ -2367,6 +2565,13 @@ function pienennaLuennanJalkeen(ui, city, paneeli, teksti) {
  */
 export function piilotaLuentakuva(ui, { heti = false } = {}) {
   if (!ui) return;
+  /*
+   * PULU-CAM-PAKKA LÄHTEE PANEELIN MUKANA (Raamattu: *"Kaupungista
+   * lähtö poistaa pakan"*). Pakka asuu paneelin sisällä, joten sen
+   * solmut lähtisivät joka tapauksessa — mutta pulpahdusajastimet
+   * eivät, ja ne herättäisivät pakan seuraavassa kaupungissa.
+   */
+  piilotaPuluCamPakka(ui);
   ui.luentakuvaSulku?.();
   ui.luentakuvaSulku = null;
   irrotaLuentakuvanAnkkuri(ui);
@@ -2479,8 +2684,13 @@ export function suljeSuurennos(ui) {
  * @param {(i:number)=>Element|null} ankkuri mistä ruudun kohdasta kuva
  *   kasvaa ja mihin se kutistuu — indeksin mukaan, koska selaus voi
  *   vaihtaa kuvaa ja silloin myös paluupaikka vaihtuu.
+ * @param {object} [asetukset]
+ * @param {number} [asetukset.pulunKuvasta] listan indeksi, josta alkaen
+ *   kuvat ovat PULUN kuvia ja saavat PULU-CAM-merkin (js/pulucam.js).
+ *   Ilman tätä suurennos on riviltä riville entinen — merkkiä ei ole,
+ *   eikä kuvatila saa ylimääräistä kuorta.
  */
-function avaaSuurennos(ui, lista, alku, ankkuri) {
+function avaaSuurennos(ui, lista, alku, ankkuri, { pulunKuvasta = -1 } = {}) {
   if (typeof document === 'undefined' || !lista?.length) return;
   suljeSuurennos(ui);
   lataaTyyli();
@@ -2500,12 +2710,29 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
   const lahde = html('span', 'fokuszoom-lahde');
   const laskuri = html('span', 'fokuszoom-laskuri');
   teksti.append(selite, lahde, laskuri);
-  kehys.append(img, teksti);
+  /*
+   * PULU-CAM-MERKKI MYÖS SUURENNOKSESSA (Raamattu kohta 3): merkki on
+   * käyttöliittymätekstiä kuvan päällä eikä kuvaan poltettu, joten sen
+   * on seurattava kuvaa myös isona. Kuva saa siksi ohuen kuoren, jonka
+   * mitat ovat täsmälleen kuvan mitat — merkki asettuu sen oikeaan
+   * alakulmaan. KUORI SYNTYY VAIN KARUSELLISSA: yhden kuvan suurennos
+   * (kaikki muut kutsupaikat) pysyy rakenteeltaan ennallaan.
+   */
+  const puluCam = pulunKuvasta >= 0 ? puluCamMerkki({ luokka: 'pulucam-suuri' }) : null;
+  if (puluCam) {
+    const kuvatila = html('div', 'fokuszoom-kuvatila');
+    kuvatila.append(img, puluCam);
+    kehys.append(kuvatila, teksti);
+  } else {
+    kehys.append(img, teksti);
+  }
   kerros.appendChild(kehys);
 
   /** Kuvan sisältö paikalleen; iso versio vaihtuu tilalle kun se on. */
   const nayta = () => {
     const kuva = lista[i];
+    // Merkki kuuluu vain pulun kuviin, ei isoisän kuvaan.
+    if (puluCam) puluCam.hidden = i < pulunKuvasta;
     // AVATTU KUVA NÄYTTÄÄ AINA PITKÄN (js/kuvatekstit.js).
     img.alt = kuvatekstiPitka(kuva);
     asetaKuva(img, kuvanOsoite(kuva, 320), kuvanVara(kuva, 320), null);
@@ -2559,6 +2786,12 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
     // Palkki on täsmälleen kuvan levyinen: kehys kutistuu kuvan
     // mittoihin, ja teksti taittuu sen sisään eikä kartan päälle.
     kehys.style.width = `${leveys}px`;
+    /*
+     * PULU-CAM-merkin koko skaalautuu KUVAN LEVEYDEN mukaan (omistajan
+     * tilaus): kartalla mitta tulee css-muuttujasta `--luentakuva-leveys`,
+     * suurennoksessa tästä laskennasta. Yksi muuttuja, kaksi lähdettä.
+     */
+    puluCam?.parentNode?.style?.setProperty?.('--pulucam-mitta', `${leveys}px`);
   };
 
   /**

@@ -448,6 +448,188 @@
   }
 }
 
+/* ================= PULU-CAM: PAKKA ISOISÄN KUVAN PÄÄLLE ==================
+   -------------------------------------------------------------------------
+   Omistaja 9.9.2026 klo 15.20–15.30 (Raamattu, PULU-CAM: PULUN NYKYAJAN
+   KUVAT PAKKANA ISOISAN KUVAN PAALLE, YHTEINEN KARUSELLI), sanatarkasti:
+   *"Yksi tai useampi kuva voisi tosiaan tulla pelissä isoisän ottaman kuvan
+   päälle ja ne voisivat limittyä hieman. Eri suuntiin pakan päälle, niin
+   että siinä hahmottaa, että pakassa on useampi kuva."*
+
+   PAKKA ON LUENTAKUVAN SISÄLLÄ, EI SEN VIERESSÄ. Kortit ovat absoluuttisia
+   `.fokusvirta-kuvatila`-kuoren sisällä, joten ne ovat täsmälleen isoisän
+   kuvan kokoiset ja kohdallaan — ja koska kuori on paneelissa, pakka
+   seuraa karttaa, raahautuu ja pienenee ilman omaa koodia (js/pulucam.js
+   moduulikommentti).
+
+   MIKSI KUORI EIKÄ ITSE KUVALAATIKKO: `.fokusvirta-kuva` on NAPPI (nappiin
+   ei ladota nappeja) ja sillä on `overflow: hidden`, joka leikkaisi juuri
+   ne pakan reunat, joiden pitää näkyä. Kuori on kuvan kokoinen block eikä
+   muuta pakattoman paneelin ulkoasua lainkaan.
+
+   SIIRTYMÄ ON PROSENTTIA, EI PIKSELEITÄ. `translate(6%, -6%)` on 6 % KORTIN
+   OMASTA koosta, joten limitys pysyy samana myös kartan liikkeen
+   pienentämässä pakassa. Pikseleinä pieni pakka olisi pelkkä sekasotku.
+   ------------------------------------------------------------------------- */
+
+.fokusvirta-kuvatila {
+  position: relative;
+  display: block;
+}
+
+/*
+ * POHJATON PAKKA (js/fokusvirta.js rakennaLuentakuvanPaneeli, kuva null):
+ * kaupungilla on pulun kuvia mutta ei isoisän luentakuvaa. Laatikko on
+ * paikanvaraaja — sama koko, ei pintaa eikä varjoa.
+ */
+.fokusvirta-luentakuva .fokusvirta-kuva.pulucam-pohja {
+  height: var(--luentakuva-korkeus);
+  background: none;
+  box-shadow: none;
+}
+
+.pulucam-pakka {
+  /* Merkin mitta tulee kartalla paneelin leveydestä; suurennoksessa
+     saman muuttujan kirjoittaa js (avaaSuurennos mitoita). */
+  --pulucam-mitta: var(--luentakuva-leveys);
+
+  position: absolute;
+  /* Sama sisennys kuin kuvalaatikon paperireunalla (.fokusvirta-kuva
+     padding 0.3rem): kortit asettuvat isoisän KUVAN päälle, eivät sen
+     paperikaistan päälle. */
+  inset: 0.3rem;
+  /* Läpinäkyvä kehys ei ota napautuksia; kortit ottavat. */
+  pointer-events: none;
+}
+
+.pulucam-kuva {
+  --pulucam-pomppu: 0.82;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: var(--pulucam-kerros, 1);
+  padding: 0.3rem;
+  border: 0;
+  border-radius: 4px;
+  /* Sama paperireuna kuin isoisän kuvalla: pakka on valokuvia pöydällä. */
+  background: #fbf6ea;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.34);
+  cursor: zoom-in;
+  opacity: 0;
+  pointer-events: auto;
+  transform:
+    translate(var(--pulucam-x, 0%), var(--pulucam-y, 0%))
+    rotate(var(--pulucam-kulma, 0deg))
+    scale(var(--pulucam-pomppu));
+  /* PULPAHDUS: pieni yliheitto (1,56) tekee noususta pomppuavan eikä
+     liukuvan — omistajan sana oli "pulpahtaa". */
+  transition:
+    transform 420ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 220ms ease-out;
+}
+
+.pulucam-kuva.nakyy {
+  --pulucam-pomppu: 1;
+  opacity: 1;
+}
+
+.pulucam-kuva img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+/*
+ * PULU-CAM-MERKKI: PIENI SELFIE JA TERÄVÄ TEKSTI, EI KUVAAN POLTETTU
+ * (Raamattu kohta 3). Kaksi elementtiä kuvan oikeassa alakulmassa; koko
+ * skaalautuu kuvan leveyden mukaan (`--pulucam-mitta`), mutta pysyy
+ * luettavana molemmissa päissä (clamp).
+ */
+.pulucam-merkki {
+  position: absolute;
+  right: 0.45rem;
+  bottom: 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.32em;
+  padding: 0.22em 0.5em 0.22em 0.34em;
+  border-radius: 999px;
+  background: rgba(18, 12, 4, 0.62);
+  color: #f7efdd;
+  font-size: clamp(6px, calc(var(--pulucam-mitta, 240px) * 0.034), 15px);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.pulucam-selfie {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  flex: none;
+}
+
+.pulucam-selfie img,
+.pulucam-selfie svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Varakuvake on pelin viivapiirros (js/pollo.js POLLO_IKONI): se on
+   viivagrafiikkaa, joten väri tulee currentColorista. */
+.pulucam-selfie svg {
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pulucam-selfie svg .taytto {
+  fill: currentcolor;
+  stroke: none;
+}
+
+.pulucam-teksti {
+  font-family: var(--font-otsikko, var(--font-luku));
+  font-weight: 700;
+  /* Pieni versaali: merkki on kameran leima, ei kuvateksti. */
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  white-space: nowrap;
+}
+
+/*
+ * MERKKI MYÖS SUURENNOKSESSA. Karusellissa kuva saa ohuen kuoren
+ * (`.fokuszoom-kuvatila`), jonka mitat ovat täsmälleen kuvan mitat —
+ * merkki asettuu sen alakulmaan eikä kellu paperikehyksen reunalle.
+ * Kuori syntyy VAIN karusellissa (js/fokusvirta.js avaaSuurennos).
+ */
+.fokuszoom-kuvatila {
+  position: relative;
+  align-self: center;
+  display: block;
+  line-height: 0;
+}
+
+.pulucam-merkki.pulucam-suuri {
+  right: 0.6rem;
+  bottom: 0.6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulucam-kuva {
+    --pulucam-pomppu: 1;
+    transition: none;
+  }
+}
+
 /* --- teksti --- */
 
 .fokusvirta-teksti p {

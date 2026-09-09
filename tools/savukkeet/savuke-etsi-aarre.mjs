@@ -14,7 +14,12 @@
  *   3. NAPPI ON LAATAN VIERESSÄ: napin keskipiste on kaupungin pisteen
  *      oikealla puolella ja alapuolella, muutaman kymmenen pikselin
  *      päässä — ei pisteen eikä nimen päällä.
- *   4. PAINALLUS AVAA KAUPUNKILEHDEN ja nappi väistyy.
+ *   4. PAINALLUS AVAA KAUPUNKILEHDEN ETUSIVUN ja nappi väistyy —
+ *      EI aarrekysymystä eikä tietovisaa (omistaja 9.9.2026 klo 16.30:
+ *      *"sen pitäisi avata siis kaupunkilehti, eikä mennä suoraan
+ *      aarteeseen"*).
+ *   5. LEHDEN SULKEMINEN PALAUTTAA NAPIN, kun aarretta ei vielä
+ *      löytynyt: lehti oli vain ensimmäinen askel.
  *
  * Aja:  node tools/savukkeet/savuke-etsi-aarre.mjs [kuvakansio] [lauta]
  *       lauta = pallo (oletus) | kartta
@@ -224,18 +229,45 @@ if (paikka.nappi) {
 }
 await kaappaa(`etsi-aarre-${LAUTA}.png`);
 
-/* 4. Painallus avaa kaupunkilehden ja nappi väistyy. */
+/* 4. Painallus avaa kaupunkilehden ETUSIVUN, ei aarrekysymystä. */
 await sivu.click('.etsi-aarre-nappi');
 await sivu.waitForTimeout(1500);
 const jalkeen = await sivu.evaluate(() => ({
   nappi: document.querySelector('.etsi-aarre-nappi')?.textContent ?? null,
-  lehti: Boolean(document.querySelector('#arrival-dialog[open], dialog[open] .lehti-sivu')
-    || document.querySelector('dialog[open]')),
+  lehti: Boolean(document.querySelector('#arrival-dialog[open]')),
+  // Lehden etusivu: palstat näkyvissä ja sivunumero 0 (js/lehti.js).
+  sivu: window.matkakirja.ui.lehtitila?.tutkiSivu ?? null,
+  etusivu: document.querySelector('#arrival-dialog .arrival-palstat')?.hidden === false,
+  otsikko: document.querySelector('#arrival-city')?.textContent ?? null,
+  // Tietovisa EI saa avautua: nappi ei mene suoraan aarteeseen.
+  visa: Boolean(document.querySelector('#quiz-dialog[open]')),
+  vaihe: window.matkakirja.game?.phase ?? null,
 }));
 tieto('painalluksen jälkeen', JSON.stringify(jalkeen));
 vaadi('nappi väistyy painalluksesta', jalkeen.nappi === null, JSON.stringify(jalkeen.nappi));
-vaadi('painallus avasi näkymän', jalkeen.lehti === true, JSON.stringify(jalkeen));
+vaadi('painallus avasi kaupunkilehden', jalkeen.lehti === true, JSON.stringify(jalkeen));
+vaadi('lehti on etusivulla', jalkeen.sivu === 0 && jalkeen.etusivu === true,
+  JSON.stringify({ sivu: jalkeen.sivu, etusivu: jalkeen.etusivu }));
+vaadi('lehti on tämän kaupungin', (jalkeen.otsikko ?? '').toLowerCase().includes('lontoo'),
+  JSON.stringify(jalkeen.otsikko));
+vaadi('painallus EI vie suoraan aarrekysymykseen',
+  jalkeen.visa === false && jalkeen.vaihe !== 'quiz',
+  JSON.stringify({ visa: jalkeen.visa, vaihe: jalkeen.vaihe }));
 await kaappaa(`etsi-aarre-${LAUTA}-lehti.png`);
+if (KUVAKANSIO) await kaappaa('etsi-aarre-lehti.png');
+
+/* 5. Lehden sulkeminen palauttaa napin: lehti oli ensimmäinen askel. */
+await sivu.evaluate(() => document.querySelector('#arrival-dialog')?.close());
+await sivu.waitForTimeout(1200);
+const suljettu = await sivu.evaluate(() => ({
+  nappi: document.querySelector('.etsi-aarre-nappi')?.textContent ?? null,
+  lehti: Boolean(document.querySelector('#arrival-dialog[open]')),
+}));
+tieto('lehden sulkemisen jälkeen', JSON.stringify(suljettu));
+vaadi('lehti sulkeutui', suljettu.lehti === false, JSON.stringify(suljettu));
+vaadi('nappi palaa lehden sulkeuduttua', suljettu.nappi === 'Etsi aarre',
+  JSON.stringify(suljettu.nappi));
+await kaappaa(`etsi-aarre-${LAUTA}-paluu.png`);
 
 vaadi('sivulla ei ole JS-virheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 

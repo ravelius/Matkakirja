@@ -653,6 +653,13 @@ Kaksi syytä, molemmat korjattu:
    WebKitissä mykäksi, `vartioiMusiikinHiljaisuutta` palauttaa soittimen
    entiselle volume-polulle.
 
+   **TÄMÄ JÄI PUOLITIEHEN** ja omistaja raportoi vian uudestaan 9.9.2026
+   (*"vielä aivan liian kovalla"*): vain pohjaraita oli reititetty,
+   reititystä ei yritetty uudestaan kontekstin herättyä, eikä
+   volume-varareitti ole iPhonessa "entinen taso" vaan täysi taso. Ks.
+   seuraava luku — reititys asuu nyt `js/musiikkivahvistin.js`:ssä ja
+   koskee kaikkia musiikkireittejä.
+
 Väistö (kertoja, pöllö, lukunäkymä) **kertautuu kertoimen kanssa** eikä
 ylikirjoita sitä: taso lasketaan aina samasta kaavasta
 `perustaso × väistö × kerroin × avaus`, joten luennan aikana tehty säätö
@@ -661,6 +668,129 @@ jää väistön alle ja luennan jälkeen taso palaa säädettyyn lukemaan.
 Mittaustyökalut: `node tools/mittaa-musiikin-tasot.mjs` (raitojen omat
 tasot) ja `node tools/savukkeet/savuke-musiikin-taso.mjs` (mitä pelissä
 oikeasti soi, millä tasolla ja seuraako se säädintä).
+
+## Säädin toimii oikeasti ja laajalla välillä (omistaja 9.9.2026)
+
+Omistajan vika 9.9.2026 klo 16.30, sanatarkasti: *"Taustamusiikki on
+ainakin iPhonilla vielä aivan liian kovalla. Saisiko säätimen niin, että
+se oikeasti toimisi ja sen pystyisi säätämään todella isolla välillä,
+niin, että musiikin saisi oikeasti säädettyä oikealle tasolle?"* — sama
+vika toista kertaa, eli edellinen luku jäi puolitiehen.
+**iPhone-tarkistus on omistajan**: alla oleva mittaus on tehty
+Chromiumilla, ja lopullisen tuomion antaa oikea laite.
+
+### Mikä 8.9. korjauksesta jäi puuttumaan
+
+1. **Reititystä ei yritetty uudestaan.** Vahvistin kytkettiin vain, jos
+   äänikonteksti oli JO käynnissä sillä hetkellä kun soitin syntyi.
+   iOS:ssä konteksti on `suspended` vielä eleen jälkeenkin (`resume()`
+   on asynkroninen), joten pelin ensimmäinen raita päätyi lähes aina
+   volume-polulle — ja koska pohjaraita jää soimaan silmukkana, yksi
+   huono ajoitus tarkoitti koko istunnon täyttä tasoa.
+2. **Vain pohjaraita oli reititetty.** Siirtymä- ja linssiraidat,
+   visamusiikki ja aarreaihe soivat yhä elementin oman `volumen`
+   varassa — eli iPhonessa tiedoston omalla tasolla.
+3. **Varareitti oli vikaa pahempi.** Hiljaisuusvahti pudotti mykän
+   ketjun takaisin volume-polulle; iOS:ssä se on täysi taso, ei entinen
+   taso.
+4. **Säädin oli väärän muotoinen.** Rattaan musiikkirivi oli
+   kerroinaskellin ×0,25…×3,0 askeleella 0,1. Alaraja ×0,25 on vain
+   −12 dB eikä hiljaisuus, ja väli on lineaarinen — korva kuulee
+   desibelejä, joten lineaarisen säätimen alapäässä tapahtuu kaikki ja
+   yläpäässä ei mitään.
+
+### Yksi vahvistin kaikelle musiikille
+
+`js/musiikkivahvistin.js` on nyt ainoa paikka, josta musiikkisoitin saa
+tiensä ulos:
+
+    elementti → MediaElementAudioSourceNode → GainNode → Analyser → ulos
+
+| funktio | tehtävä |
+| --- | --- |
+| `musiikkiKonteksti()` | pelin oma AudioContext (`sfx.ensureContext`), herätettynä |
+| `kuunteleReitityksenAvautumista(fn)` | odottaja: `fn` kutsutaan kun konteksti on käynnissä (ele, paluu taustalta, `statechange`) |
+| `volumeToimii()` | mittaa kerran, tottelisiko selain `volumea` — iOS: ei |
+| `liitaMusiikkiin(audio)` | reitittää ja palauttaa GainNoden, tai `null` |
+| `musiikkiSaaSoida(audio)` | saako raidan päästää soimaan (vahvistin TAI toimiva volume) |
+| `asetaMusiikinTaso` / `lueMusiikinTaso` / `liutaMusiikkia` | taso ja liuku oikeaan paikkaan kummallakin polulla |
+| `irrotaMusiikinVahvistin(audio)` | solmut irti kuolleelta soittimelta |
+
+Käyttäjät: `js/ambience-stream.js` (pohjaraita, kaupunkiraidat,
+visamusiikki), `js/siirtymamusiikki.js` (siirtymä- ja linssiraidat) ja
+`js/ui.js` (aarteen paljastusaihe). Vartija:
+`tests/musiikin-saadin.test.mjs` kaatuu, jos jokin musiikkisoitin ei
+pyydä vahvistinta tai päästää raidan soimaan kysymättä
+`musiikkiSaaSoida`.
+
+**Hiljaisuus on parempi kuin hallitsematon täysi taso.** Jos vahvistinta
+ei saatu EIKÄ `volume` tottele, raita jää soimatta. Pohjaraita jää
+odottamaan ja rakennetaan uudelleen reititettynä heti kun konteksti
+herää (enintään neljä yritystä); lyhyet raidat (visa, siirtymä, aarre)
+jäävät väliin ja seuraava yritys onnistuu, koska konteksti on silloin jo
+hereillä.
+
+**CORS.** Web Audio lukee elementin ääntä, joten ämpäristä
+(`media.matkakirja.app`) tuleva raita tarvitsee `crossOrigin =
+'anonymous'` **ennen** `src`:n asettamista; ilman lupaa ketju olisi
+hiljainen ilman virhettä. Palvelutyöntekijän äänipeili (`sw.js`
+`aaniPeilista`) noutaa `mode: 'cors'` ja palauttaa CORS-vastauksen, joten
+lupa saadaan myös välimuistista — sw.js:ään ei tarvittu muutosta.
+Varapolku on repon oma `assets/audio/…` eli samaa alkuperää. Visan
+ulkopuoliselle lähteelle (Freesound) lupaa ei pyydetä.
+
+### Käyrä ja oletus
+
+Musiikin säädin on **liuku 0–100** (`#kehittaja-musiikki-liuku`
+hammasratasvalikossa) ja käyrä on vakio `js/musiikkivalitsin.js`:ssä:
+
+    vahvistus(x) = (x / 100) ^ MUSIIKIN_KAYRA        MUSIIKIN_KAYRA = 2,5
+    musiikinKerroin() = vahvistus(liuku) × MUSIIKIN_KATTO   MUSIIKIN_KATTO = 8
+
+| liuku | vahvistus | dB täydestä | kerroin (1,0 = 8.9. hyväksytty taso) |
+| --- | --- | --- | --- |
+| 0 | 0 | hiljaisuus | 0 |
+| 5 | 0,00056 | −65,1 dB | 0,0045 |
+| 10 | 0,0032 | −50,0 dB | 0,025 |
+| 20 | 0,0179 | −35,0 dB | 0,14 |
+| **35** | **0,0725** | **−22,8 dB** | **0,58 ← OLETUS** |
+| 43,5 | 0,125 | −18,1 dB | 1,00 |
+| 50 | 0,1768 | −15,1 dB | 1,41 |
+| 100 | 1 | 0 dB | 8,0 |
+
+Oletus 35 on siis 4,7 dB entistä tasoa hiljaisempi, väli ulottuu
+hiljaisuudesta 18 dB entisen yli, ja pykälän kokoinen muutos kuuluu
+suunnilleen samanlaisena kaikkialla säätimen matkalla. Tallennus:
+`localStorage['matkakirja-musiikin-taso']` (kirjoitetaan vain kun arvo
+poikkeaa oletuksesta). Lukema säätimen vieressä kertoo desibelit
+(`35 · −23 dB`), koska kuulokokeen tulos on helpompi kertoa eteenpäin
+lukuna kuin muistikuvana.
+
+**Kehittäjän vanha `musiikki`-kerroin on poistettu** (`js/kehittajan-
+voimat.js` `KEHITTAJAN_VOIMA_LAJIT` on nyt pelkkä `['tausta']`). Sen
+arvo jäi laitteen muistiin, ja omistajan puhelimessa saattoi olla yhä
+5.9. linjattu ×2,0, joka olisi kaksinkertaistanut uuden liu'un tuloksen
+kenenkään huomaamatta. Avain `matkakirja-dev-voima-musiikki` jää
+laitteille lojumaan mutta sitä ei lueta; migraatiota ei tehdä, koska
+vanha ×-arvo ei tarkoita liu'ulla mitään.
+
+### Mitattu (Chromium, `node tools/savukkeet/savuke-musiikin-saadin.mjs`)
+
+Savuke vakoilee `createMediaElementSource`- ja `createGain`-kutsut ja
+lukee soivan ketjun. Etusivun raidasta (`musa-etusivu-lyria.mp3`):
+
+| tilanne | elementin volume | kytketty gainiin | gain |
+| --- | --- | --- | --- |
+| liuku 35 (oletus) | 1 | kyllä | 0,01183 |
+| liuku 90 | 1 | kyllä | 0,1254 |
+| liuku 5 | 1 | kyllä | 0,0000228 |
+
+Elementin oma `volume` on 1 eli taso tulee kokonaan gainista — juuri se
+on koko korjaus. Väistö kertautuu edelleen: liu'un 5 ja 60 lukemat on
+mitattu luennan väistön (0,25) aikana ja liu'un 35 ja 90 ilman.
+Säätimestä vedettynä (`input`-tapahtuma) lukema näytti `60 · −11 dB` ja
+gain muuttui samassa. Kaappaus:
+`/tmp/matkakirja-kaappaukset/musiikkisaadin.png`.
 
 ## Kehittäjän voimakkuussäätimet (omistaja 3.9.2026)
 
@@ -674,8 +804,14 @@ oletus **1,0 molemmilla** = pelin nykyinen taso, askel 0,1, rajat
 Hammasratasvalikon (`#kehittaja-valikko`) kaksi riviä näyttävät arvon
 (`×1,0`) ja säätävät sitä miinus- ja plusnapeilla.
 
+> **Musiikki ei ole enää täällä (9.9.2026).** `KEHITTAJAN_VOIMA_LAJIT`
+> on nyt `['tausta']`; musiikilla on oma liuku 0–100 omalla käyrällään.
+> Ks. luku "Säädin toimii oikeasti ja laajalla välillä". Alla oleva
+> teksti kuvaa tilannetta 3.9.–9.9.2026 ja jää muistiin siitä, miksi
+> kertoimia ei saa olla kahta.
+
 `tausta` kerrotaan ambienssin tasoon (`js/ambience-stream.js taso`) ja
-linssien äänimaisemiin. `musiikki` luetaan **vain** valitsimen kautta
+linssien äänimaisemiin. `musiikki` luettiin **vain** valitsimen kautta
 (`js/musiikkivalitsin.js musiikinKerroin`), ja sitä kautta se koskee
 kaikkea musiikkia: pohjaraita ja kaupunkiraidat, tila- ja paikkaraidat,
 siirtymä- ja linssiraidat, visamusiikki, aarreaihe ja kehittäjän

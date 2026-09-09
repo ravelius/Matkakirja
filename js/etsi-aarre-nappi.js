@@ -19,11 +19,29 @@
  *     kestää minuutin, ja nappi ennen kommenttia veisi katseen pois
  *     isoisän merkinnästä.
  *
- *  2. SAMA OVI KUIN KORTIN "ETSI KÄTKÖ" — SAMA FUNKTIO, EI KOPIOTA.
- *     Painallus kutsuu `ui.etsiKatko()`, jonka takana on täsmälleen se
- *     ketju, jonka saapumiskortin nappi ajaa (js/ui.js). Kopioitu
- *     ketju ajautuisi ensimmäisessä muutoksessa erilleen, ja kaupungin
- *     lehteen olisi kaksi eri tietä.
+ *  2. NAPPI AVAA KAUPUNKILEHDEN, EI AARRETTA (omistaja 9.9.2026 klo
+ *     16.30, Raamattu ETSI AARRE -NAPPI AVAA KAUPUNKILEHDEN, EI
+ *     AARRETTA SUORAAN, sanatarkasti: *"kun kartalle tulee etsi
+ *     aarrennappi, niin sen pitäisi avata siis kaupunkilehti, eikä
+ *     mennä suoraan aarteeseen. Se on tavallaan ensimmäinen askel
+ *     aarteen etsintää, että löytää lehdestä sen. Aarrekysymyksen,
+ *     mikä paljastaa aarretta vartioivan henkilön paikan."*)
+ *
+ *     Painallus kutsuu siis `ui.avaaTutkinta(city, { ohitaLehtilukko:
+ *     true })` — SAMA OVI kuin alapalkin Tutki-napilla ja kaupungin
+ *     laatan napautuksella, ei kopiota. Se EI kutsu `ui.etsiKatko`-metodia
+ *     (kortin "Etsi kätkö"), koska se sulkee lehden ja hyppää suoraan
+ *     aarrekysymykseen — juuri se, minkä omistaja kielsi. Lehtilukon
+ *     ohitus on napin oma reitti: nappi tulee ruudulle vasta pulun
+ *     kommentin jälkeen ja on silloin pelaajan ensimmäinen askel, joten
+ *     lehden on auettava sen takaa vaikka fokusvirta pitäisi lukkoa
+ *     kiinni (lukko itse jää voimaan kaikkiin muihin avauskohtiin,
+ *     js/ui.js openArrival).
+ *
+ *     LEHDEN SULKEUTUESSA NAPPI PALAA, jos aarretta ei vielä löytynyt:
+ *     lehti oli vain ensimmäinen askel, eikä kartalle saa jäädä
+ *     umpikujaa, jos pelaaja selaa lehden kiinni löytämättä
+ *     aarrekysymystä.
  *
  *  3. SAMA EHTO KUIN KORTIN NAPILLA. Kaupunki, jossa ei ole enää
  *     kätköä etsittävänä, ei saa nappia (js/game.js tehtavaTarjolla →
@@ -150,6 +168,51 @@ function seuraaKarttaa(naytto) {
 }
 
 /**
+ * KARTAN NAPIN OVI: KAUPUNKILEHDEN ETUSIVU.
+ *
+ * Sama kahva kuin alapalkin Tutki-napilla ja kaupungin laatan
+ * napautuksella (js/ui.js avaaTutkinta → openArrival → rakennaSivut,
+ * joka päättyy aina `naytaTutkiSivu(ui, 0)`:aan eli etusivuun).
+ * `ohitaLehtilukko` on tämän napin oma reitti; ks. sääntö 2 tiedoston
+ * alussa.
+ *
+ * @returns {boolean} jäikö lehti auki
+ */
+export function avaaKaupunkilehti(ui, city) {
+  if (!ui || !city) return false;
+  ui.avaaTutkinta?.(city, { ohitaLehtilukko: true });
+  return Boolean(ui.arrivalDialog?.open);
+}
+
+/**
+ * Nappi takaisin kartalle, kun lehti suljetaan.
+ *
+ * Kuuntelija on dialogin omassa `close`-tapahtumassa eikä lehden
+ * sulkunapissa: lehden voi sulkea myös Escillä, taustaa napauttamalla
+ * ja pelin omilta poluilta, ja `close` laukeaa niistä kaikista (sama
+ * perustelu kuin ambienssin palautuksella, js/ui.js).
+ *
+ * EHTO ON SAMA KUIN NOSTOLLA (etsiAarreTarjolla), ja lisäksi:
+ *   - sama kaupunki (pelaaja on voinut jatkaa matkaa lehden aikana);
+ *   - peli ei ole tietovisassa — lehti sulkeutuu myös silloin, kun
+ *     pelaaja löysi lehdestä aarrekysymyksen ja lähti siihen
+ *     (js/ui.js etsiKatko sulkee lehden ennen visaa). Nappi kartan
+ *     päällä visan alla olisi juuri se oikopolku, joka kiellettiin.
+ */
+export function palautaNappiLehdenJalkeen(ui, city) {
+  const dialogi = ui?.arrivalDialog;
+  if (!dialogi?.addEventListener) return;
+  const kuuntelija = () => {
+    dialogi.removeEventListener?.('close', kuuntelija);
+    if (ui.dead) return;
+    if (ui.game?.phase === 'quiz') return;
+    if (ui.game?.cityOf?.()?.id !== city.id) return;
+    naytaEtsiAarreNappi(ui, city);
+  };
+  dialogi.addEventListener('close', kuuntelija, { once: true });
+}
+
+/**
  * Nostaa napin kartalle kaupungin laatan viereen.
  *
  * @param {object} ui pelin käyttöliittymä
@@ -189,9 +252,12 @@ export function naytaEtsiAarreNappi(ui, city) {
 
   nappi.addEventListener('click', () => {
     // Nappi väistyy heti: lehti on auki, eikä sen alle jää ovea samaan
-    // paikkaan. Sama ovi kuin kortin "Etsi kätkö" — sama funktio.
+    // paikkaan. Jos lehti ei jostain syystä auennut (linssikartan
+    // kuori, puuttuva kahva), nappi jää kartalle — muuten pelaajalta
+    // katoaisi ainoa ovi eteenpäin.
     piilotaEtsiAarreNappi(ui);
-    ui.etsiKatko?.();
+    if (avaaKaupunkilehti(ui, city)) palautaNappiLehdenJalkeen(ui, city);
+    else naytaEtsiAarreNappi(ui, city);
   });
 
   pane.appendChild(ankkuri);

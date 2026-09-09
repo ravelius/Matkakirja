@@ -2243,13 +2243,30 @@
  * joten mikään ei räpsähdä.
  */
 /*
- * HIEMAN KESKIVIIVAN ALAPUOLELLE. Pallo tulee esiin täsmälleen ruudun
- * keskeltä (Afrikka keskellä), ja tasan 50 %:iin ladottu lause meni sen
- * pisteen päälle — mitattu savukkeella 8.9.2026 kuvasta 1-tahdet.
- * 61 % on yhä "keskellä ruutua" mutta jättää pisteelle oman tilansa.
+ * TASAN RUUDUN KESKELLE (Raamattu "IHMISEN MATKA: LUENTAKUVA EI SAA
+ * JAADA LINSSIN PAALLE, JA TEKSTI KESKELLE RUUTUA", omistaja 9.9.2026
+ * klo 16.35 iPhone-kaappauksesta, sanatarkasti: *"Teksti pitää olla
+ * keskelle ruutua. Nyt se on liian alhaalla."*).
+ *
+ * TÄMÄ KUMOAA 8.9.2026 TEHDYN 61 %:N SIIRRON. Silloin lause laskettiin
+ * hieman keskiviivan alapuolelle, jottei se peittäisi sitä pistettä,
+ * josta pallo kasvaa esiin. Omistaja mittasi lopputuloksen iPhonella:
+ * puhelimen kapealla ruudulla 61 % on jo alakolmannes, ja lause luki
+ * kuin kuvateksti eikä kuin kertojan ääni. Piste saa nyt jäädä lauseen
+ * taakse — lauseella on oma varjonsa (text-shadow), joka erottaa sen.
+ *
+ * KESKITYS ON LINSSIN NÄKYMÄALUEEN KESKI, EI DOKUMENTIN. `.aikajana` on
+ * `position: absolute; inset: 0` karttaruudussa, ja linssin ajan
+ * karttaruutu on koko sovellusruutu: Matkakirjan yläpalkki kutistuu
+ * nollaan (body.aikajana-palkki-auki .topbar) ja linssin oma palkki
+ * asettuu sen paikalle karttaruudun SISÄLLE. Palkki ja alareunan
+ * aikaselain ovat siis saman kerroksen päällä eivätkä siirrä tätä
+ * riviä — 50 % on ruudun puoliväli myös puhelimella (mitattu
+ * tools/savukkeet/savuke-linssi-teksti-keskella.mjs: 430 × 930 ja
+ * 1600 × 1000).
  */
 .aikajana-kertomusteksti.keskella {
-  top: 61%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: min(40rem, calc(100vw - 3rem));
 }
@@ -3123,6 +3140,40 @@ body.aikajana-paalla .pallolauta-piste,
 body.aikajana-paalla .pallolauta-kohde,
 body.aikajana-paalla .pallolauta-vesinimi,
 body.aikajana-paalla .pallolauta-nappula { display: none; }
+
+/*
+ * MATKAKIRJAN LUENTAKUVA POIS LINSSIN PÄÄLTÄ (Raamattu "IHMISEN MATKA:
+ * LUENTAKUVA EI SAA JAADA LINSSIN PAALLE, JA TEKSTI KESKELLE RUUTUA",
+ * omistaja 9.9.2026 klo 16.35 iPhone-kaappauksesta, sanatarkasti:
+ * *"Kartalla näkyy valokuva ja toinen korjattava asia."*).
+ *
+ * Fokusvirran luentakuva (js/fokusvirta.js naytaLuentakuva) on kartan
+ * päällä oma ankkuroitu paneelinsa, ja se jäi roikkumaan Ihmisen matkan
+ * ja Tiedeliitteen ruudulle pienenä valokuvana pallon yläpuolelle.
+ *
+ * PIILOTUS ON LUOKKA, EI PURKU. `piilotaLuentakuva` POISTAA paneelin
+ * dokumentista, ja silloin kuva ei enää palaisi linssin sulkeuduttua —
+ * omistajan sääntö on, että kuva saa palata, jos pelaaja on yhä samassa
+ * kaupungissa. `display: none` jättää paneelin, ankkurin ja `ui.luentakuva`
+ * -viitteen paikalleen: linssin purku poistaa `aikajana-paalla`-luokan
+ * (js/aikajana.js) ja kuva on taas kartalla. Kaupungin vaihto vie kuvan
+ * ihan itsestään entiseen tapaan (vaiennaLivianKaupunkipuhe).
+ *
+ * SAMA SÄÄNTÖ KOSKEE PIENENNETTYÄ KUVAA JA SUURENNOSTA: pienennys on
+ * vain paneelin oma luokka (.pieni), ja auki jäänyt suurennos (.fokuszoom)
+ * on saman pakan kartalle levittämä kerros. PULU-CAM-pakka käyttää samaa
+ * ankkuria (.fokusvirta-luentakuva-ankkuri), joten se piiloutuu tästä
+ * samalla säännöllä.
+ *
+ * ETSI AARRE -NAPPI SAMALLA: se on kartan laatan vieressä oma ankkurinsa
+ * (js/etsi-aarre-nappi.js) eikä kuulu tummennetulle linssiruudulle sen
+ * paremmin kuin kohdemerkit (css/styles.css "KARTTA ON LINSSIN AJAN
+ * TYHJÄ TAULU").
+ */
+body.aikajana-paalla .fokusvirta-luentakuva,
+body.aikajana-paalla .fokusvirta-luentakuva-ankkuri,
+body.aikajana-paalla .fokuszoom,
+body.aikajana-paalla .etsi-aarre-ankkuri { display: none; }
 
 /* ===========================================================================
    YKSI PALKKI LINSSIN AJAKSI — molemmat kaaret
