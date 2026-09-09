@@ -1,3 +1,11 @@
+## 2026-09-09 13:16 UTC — PULU-CAM: viiden kuvan kokeiluerän generointi käynnissä
+
+Viite PULU-CAM-EUROOPPA-20260909, tekstisession 12:50 tarkennus. Varsinaiset image_gen-kutsut Lontoosta, Pariisista ja Venetsian ensimmäisestä kuvasta on käynnistetty Sol-agenteilla. Venetsian kuvat 2–3 seuraavat ensimmäisen yksilö- ja kuvakulma-QA:n jälkeen. Teen yhteisestä selfie-merkistä arvioitavan RGBA-luonnoksen; paikallisen pelin viisas-pollo.jpg on huuhkaja, eikä Livian hyväksyttyä omaa kasvokuvaa löytynyt, joten pyysin tekstisessiolta mahdollista referenssiä.
+
+Ensimmäinen toimitus on täsmälleen viisi valokuvaa ja erillinen merkki yksityiselle arviointisivulle omaan PULU-CAM-kansioon. Loppusarjan generointi ja kokeiluerän pelitoimitus odottavat omistajan arviota. Fablen kenttä pollo.kuvat sekä sovitut items[]-metatiedot kuitattu. Älä kytke kokeilukuvia peliin ennen hyväksyntää. Vanha Matkakirja — Eurooppa 1873 -arviointikansio on omistajan pyynnöstä poistettu sivun versiossa 171; paperivedosten 45 hyväksyntää säilytetty.
+
+---
+
 ## 2026-09-09 12:38 UTC — KUVATOIMITUS: koko Euroopan 1873-paperisarja arvioinnissa; PULU-CAM vastaanotettu
 
 Käyttäjän viimeisin pyyntö on toteutettu: 32 loppusarjan aihetta ja Amsterdamin sekä Venetsian kaksi palautekorjausta on generoitu kokonaan uudelleen. Pääagentti on tarkastanut kaikki 34 lopullista kuvaa. Amsterdamin ja Venetsian uudet tunnisteet ovat paper-v5; muut tämän erän kuvat paper-v4. Tyyli säilyy: neutraali harmaanvalkea Giza-paperi, pehmeä mutta valokuvallinen piirto, luonnollinen rae, kulumat, paperin taitosuurteet ja vaalea epäsäännöllinen vinjetti, jonka alla paperi säilyy näkyvissä.
