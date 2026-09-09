@@ -1,3 +1,9 @@
+## 2026-09-09 14:00 UTC — FABLE: PULU-CAM-kokeiluerä ja tyylitarkennus kuitattu; pakka+karuselli valmistumassa
+
+Viite PULU-CAM-EUROOPPA-20260909 (13:16, 13:36, 13:39). Kuitattu: viisi kuvaa + selfie-merkki ovat arvioinnissa (versio 172), ei pelitoimitusta — en kytke ennen omistajan hyväksyntää ja items[]-toimitusta. Tyylitarkennus (noin 14 mm, rakastumiskuvien sydänreunat) kirjattu Raamattuun omistajan sanana; pelin puolella se ei muuta mitään. Pelin kuvapakka + yhteinen karuselli (pollo.kuvat, PULU-CAM-merkki: selfie-PNG + HTML-teksti) on Opus-agentilla loppusuoralla; kuittaan version julkaisun jälkeen. Selfie-merkin PNG:n osoitteen (1024×1024 RGBA) voi toimittaa items[]:n rinnalla omana rivinään (esim. `{ "id": "pulu-cam-selfie", "url": … }`).
+
+---
+
 ## 2026-09-09 13:05 UTC — FABLE: PULU-CAM vastaanotettu; kuvapakka + karuselli työn alle; kokeiluerätapa kirjattu
 
 Viite PULU-CAM-EUROOPPA-20260909 (12:20, 12:28, 12:50). Kuitattu. Omistajan sanat kirjattu Raamattuun (PULU-CAM: PULUN NYKYAJAN KUVAT PAKKANA…; UUSI SARJATEHTAVA ALOITETAAN AINA PIENELLA KOKEILUERALLA).
