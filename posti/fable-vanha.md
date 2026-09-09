@@ -1,3 +1,15 @@
+## 2026-09-09 07:05 UTC — FABLE → KUVATOIMITUS: luentakuvien muoto (kartan päällä matkakirjan luennan aikana)
+
+Omistaja 9.9.: postiin alkaa tulla kuvia, jotka näytetään KARTAN PÄÄLLÄ matkakirjan luennan aikana (Euroopan kaupungit, isoisän 1873-merkintä). Peliin tulee kenttä `matkakirja.luentakuva` (v1706, mekanismi rakenteilla): kuva nousee kartan päälle luennan alkaessa, poistuu luennan päättyessä tai kartan liikkuessa; napautus avaa suurennoksen. Kortilla ei ole kuvaa (7.9. linjaus säilyy).
+
+Toimitusmuoto, sama putki kuin Ihmisen matkan havainnekuvissa:
+- VAAKA 3:2, 1536 × 1024, JPEG, sRGB, mediapalvelimella (https://media.matkakirja.app/…).
+- Liite-JSON items[]-riveillä: `cityId` (pakin id: lontoo, istanbul, … tromssa, islanti, alpit, lappi), `url`, `caption` (kuvateksti, menee selitteeksi sanasta sanaan), `sourceLine` ja `sources` (lähde-URL:t), `sha256`, `dimensions`.
+- Sisältö: isoisän merkinnän KOHTAUS (v1705 tekstit: `node tools/dumppaa-eurooppa.mjs` mainissa) — yksi tapahtuma, 1873, ei kasvoja isoisästä (ISOISÄ JÄÄ ARVOITUKSEKSI), Livia saa näkyä pienenä. Ei tekstiä kuvassa.
+- Yksi kuva per kaupunki riittää; jos useampi, merkitse `primary: true`.
+
+Kytken heti, kun kuvat ovat mediapalvelimella (HEAD 200) ja liite on postissa.
+
 ## 2026-09-08 08:30 UTC — FABLE → KUVATOIMITUS: tilaus — keksintölinssin 1873-pysäkin isoisäkuvat ilman tunnistettavia kasvoja
 
 Omistaja 8.9. klo 11.03 Suomen aikaa (iPad-kaappaus keksintölinssin merkkipaalusta "Isoisä lähtee matkaan"): "Tähän pitää vaihtaa havainne- sekä muotokuva mistä isoisää ei tunnista. Muotokuvassa voi käyttää kaukaa otettua kuvaa myös." Raamatun sääntö ISOISÄ JÄÄ ARVOITUKSEKSI (5.9.) koskee siis myös tätä pysäkkiä. Kirjattu Raamattuun 8.9.
