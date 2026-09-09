@@ -4216,6 +4216,15 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'PULU-CAM: NOIN 14 MM:N LAAJAKULMA JA RAKASTUMISKUVIIN SYDANREUNAT '
+          + '(omistaja 9.9.2026 klo 16.39 postilaatikon kautta, tekstisession '
+          + 'valittamana): PULU-CAM-kuviin selvasti laajempi, noin 14 mm:n linssin '
+          + 'nakokulma - pulun poikkeava katselukorkeus, laheiset kohteet ja tilan '
+          + 'syvyys korostuvat. Rakastumiskuviin (Venetsian kolmen kuvan sarja) '
+          + 'sydamia ja muita ihastumispiirroksia kuvan reunoille, lisaantyen '
+          + 'sarjan edetessa; valokuvan keskusta pysyy uskottavana nykyajan '
+          + 'varivalokuvana. Selfie-merkki pysyy erillisena elementtina. Koskee '
+          + 'kuvatuotantoa; pelin pakka ja karuselli ennallaan.',
         'IHMISEN MATKA: LUENTAKUVA EI SAA JAADA LINSSIN PAALLE, JA TEKSTI '
           + 'KESKELLE RUUTUA (omistaja 9.9.2026 klo 16.35, iPhone-kaappaukset, '
           + 'sanatarkasti: "Kartalla nakyy valokuva ja toinen korjattava asia. '
