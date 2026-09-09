@@ -128,7 +128,7 @@ function paivitaPaikka(naytto) {
  * jää aloituspaikkaansa — se on oikea paikka siihen asti, kunnes
  * karttaa liikutetaan.
  */
-function seuraa(naytto) {
+function seuraaKarttaa(naytto) {
   let laskuri = 0;
   const askel = () => {
     if (naytto.ui?.etsiAarreNappi !== naytto) return;
@@ -207,7 +207,7 @@ export function naytaEtsiAarreNappi(ui, city) {
   const nayta = () => { if (ui.etsiAarreNappi === naytto) ankkuri.classList.add('nakyy'); };
   globalThis.requestAnimationFrame?.(nayta);
   setTimeout(nayta, 50);
-  seuraa(naytto);
+  seuraaKarttaa(naytto);
   return true;
 }
 

@@ -20,7 +20,6 @@ const MODULES = [
   'js/media.js',
   'js/kuvatekstit.js',
   'js/galleria.js',
-  'js/etsi-aarre-nappi.js',
   // Ilmepaketti tuo vain median (peilin juuri); ui, fokusvirta,
   // karttaselite ja main tuovat sen.
   'js/ilme.js',
@@ -526,6 +525,7 @@ const MODULES = [
   'js/sisaltotaulut.js',
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
+  'js/etsi-aarre-nappi.js',
   // Minipopup ennen ehdotuksia ja tasogalleriaa (molemmat tuovat sen;
   // moduuli tuo vain ui-apurit, joka on yllä).
   'js/minipopup.js',
