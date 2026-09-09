@@ -108,22 +108,20 @@ export const FOKUSVIRTA_HELSINKI = {
      */
     paikkarivi: 'Helsingfors, heinäkuussa 1873. Kirkasta; mereltä käy viileä '
       + 'tuuli; puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 393 merkkiä (yläraja 400). */
-    teksti: 'Torilla jokainen kauppias sanoi lopuksi saman miehen nimen: '
-      + 'Kiitos. Kuulin sen kalasta, marjoista ja tervasta, ja päättelin, '
-      + 'että Kiitos omistaa koko torin. Illalla isäntä nauroi niin, että '
-      + 'lasi kaatui. Kaupunki näyttää mereltä suuremmalta kuin maalta, ja '
-      + 'valkoinen kirkko seisoo kukkulallaan kuin keisarin allekirjoitus. '
-      + 'Satamassa tuoksui terva, jota lastattiin laivoihin kuin kultaa. '
-      + 'Kiitos.',
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Torilla jokainen kauppias sanoi lopuksi saman miehen '
-      + 'nimen: Kiitos. Kuulin sen kalasta, marjoista ja tervasta, ja '
-      + 'päättelin, että Kiitos omistaa koko torin. Illalla isäntä nauroi '
-      + 'niin, että lasi kaatui. Kaupunki näyttää mereltä suuremmalta kuin '
-      + 'maalta, ja valkoinen kirkko seisoo kukkulallaan kuin keisarin '
-      + 'allekirjoitus. Satamassa tuoksui terva, jota lastattiin laivoihin '
-      + 'kuin kultaa. [softly] Kiitos.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 350 merkkiä (yläraja 400). */
+    teksti: 'Helsingin valkoisen kirkon katolla apostolit katsovat merelle. '
+      + 'Alhaalla torilla kalakauppias katseli vaakaa. Kummankin työ vaikutti '
+      + 'vakavalta. Tuuli nosti paperini, ja nainen painoi sen paikoilleen '
+      + 'silakalla ennen kuin ehdin auttaa. Nyt kartassani on Suomenlahden '
+      + 'kohdalla täsmällinen rasvajälki. Harvoin olen saanut yhtä luotettavaa '
+      + 'paikallistietoa.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Helsingin valkoisen kirkon katolla apostolit katsovat '
+      + 'merelle. Alhaalla torilla kalakauppias katseli vaakaa. Kummankin työ '
+      + 'vaikutti vakavalta. Tuuli nosti paperini, ja nainen painoi sen '
+      + 'paikoilleen silakalla ennen kuin ehdin auttaa. Nyt kartassani on '
+      + 'Suomenlahden kohdalla täsmällinen rasvajälki. [softly] Harvoin olen '
+      + 'saanut yhtä luotettavaa paikallistietoa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-helsinki.mp3',
   },
 
@@ -177,9 +175,9 @@ export const FOKUSVIRTA_HELSINKI = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kiitos ei ole mies. Isoisäsi kiitti koko torin väärään suuntaan. Torni näkyy mereltä ensimmäisenä. Pullakojut ovat minun.',
+      'Kirkko on nyt tuomiokirkko. Kauppatorin lokit käyttäisivät isoisän paperipainoa mielellään.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (tuomiokirkko Senaatintorilla)

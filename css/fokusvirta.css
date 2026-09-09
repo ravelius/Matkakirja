@@ -245,6 +245,69 @@
   height: min(20vh, 9rem);
 }
 
+/* -------------------------------------------------------------------------
+   LUENTAKUVA KARTAN PÄÄLLÄ (js/fokusvirta.js naytaLuentakuva)
+   ---------------------------------------------------------------------------
+   Omistaja 9.9.2026: matkakirjan luennan aikana kartan päällä näkyy kuva.
+   Se ei ole kortti eikä kupla — ei rastia, ei nappeja, ei taustaverhoa:
+   sama paperi, sama kuvakehys ja sama kuvatekstirivi kuin kortin kuvilla
+   (.fokusvirta-viite), kevyempänä ja kartan päällä.
+
+   PAIKKA: ankkuri on ALAREUNASSA prosentteina. Matkakirjakortti kasvaa
+   ylhäältä alas ja pulun kuplapino alhaalta ylös, joten kuvan paikka on
+   niiden väliin jäävä kaista — kiinteä yläreuna törmäisi pitkään
+   merkintään ja kiinteä alareuna kupliin.
+
+   NOUSU JA HÄIPYMINEN ovat pelkkää läpinäkyvyyttä ja pientä siirtoa
+   (.nakyy): vain opacity ja transform liikkuvat, joten kartan rasterointi
+   ei kilpaile animaation kanssa (sama sääntö kuin suurennoksella).
+   ------------------------------------------------------------------------- */
+
+.fokusvirta-luentakuva {
+  position: absolute;
+  left: 50%;
+  /* Neljännes ruudun korkeudesta alhaalta: yhden kuplan pino (luennan
+     aikainen välihuuto) jää kuvan alapuolelle eikä sen päälle. */
+  bottom: 24%;
+  z-index: 5;
+  width: min(19rem, calc(100% - 1.2rem));
+  padding: 0.45rem 0.5rem 0.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  background: #f5f0e2;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.3);
+  color: #211d18;
+  text-shadow: none;
+  font-family: var(--font-luku);
+  opacity: 0;
+  transform: translate(-50%, 10px);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.fokusvirta-luentakuva.nakyy {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Kuvan ikkuna on matalampi kuin kortilla: kuva on kartan päällä eikä
+   saa syödä koko keskikaistaa. */
+.fokusvirta-luentakuva .fokusvirta-kuva img {
+  height: min(24vh, 11rem);
+}
+
+/* Leveällä ruudulla kuva ei kasva ruudun mittaiseksi: kartan pitää näkyä
+   sen molemmin puolin, kuten kortillakin. */
+@media (min-width: 900px) {
+  .fokusvirta-luentakuva { width: min(24rem, 34%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusvirta-luentakuva {
+    transition: none;
+    transform: translate(-50%, 0);
+  }
+}
+
 /* --- teksti --- */
 
 .fokusvirta-teksti p {

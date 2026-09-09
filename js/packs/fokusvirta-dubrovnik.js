@@ -106,31 +106,29 @@ export const FOKUSVIRTA_DUBROVNIK = {
      */
     paikkarivi: 'Dubrovnik, syyskuussa 1873. Poutaa; muurilla käy tuuli '
       + 'mereltä; puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 398 merkkiä (yläraja 400). */
-    teksti: 'Otin peilauksen muurista: koko kierros, tuhat kaksisataa '
-      + 'askelta, tuulen puolella vähemmän, koska siellä kävelin nojaten. '
-      + 'Yhdessä kohdassa harja on kapeampi kuin hattuni lieri, ja alhaalla '
-      + 'meri on niin kirkas, että näin pohjan kivet. Seisoin siinä kauemmin '
-      + 'kuin oli tarpeen. Ragusa osti rauhansa joka vuosi uudestaan ja '
-      + 'säilyi vapaana kauemmin kuin Venetsia. Painolasti: ei mitään. Tänään '
-      + 'ei ollut.',
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Otin peilauksen muurista: koko kierros, tuhat '
-      + 'kaksisataa askelta, tuulen puolella vähemmän, koska siellä kävelin '
-      + 'nojaten. Yhdessä kohdassa harja on kapeampi kuin hattuni lieri, ja '
-      + 'alhaalla meri on niin kirkas, että näin pohjan kivet. Seisoin siinä '
-      + 'kauemmin kuin oli tarpeen. Ragusa osti rauhansa joka vuosi uudestaan '
-      + 'ja säilyi vapaana kauemmin kuin Venetsia. Painolasti: ei mitään. '
-      + '[softly] Tänään ei ollut.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
+    teksti: 'Ragusan muureilta näkee, kuinka huolellisesti meri on pidetty '
+      + 'ulkona. Portin sisällä vesi kuitenkin tulee vastaan vanhan '
+      + 'suihkukaivon kivikasvoista. Join yhden suusta ja toisenkin, sillä ne '
+      + 'näyttivät olevan eri mieltä mausta. Sama vesi. Kaupunki on rakentanut '
+      + 'janolleen kuusitoista puhuvaa päätä, ja jokainen neuvoo ottamaan '
+      + 'vielä kulauksen.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Ragusan muureilta näkee, kuinka huolellisesti meri on '
+      + 'pidetty ulkona. Portin sisällä vesi kuitenkin tulee vastaan vanhan '
+      + 'suihkukaivon kivikasvoista. Join yhden suusta ja toisenkin, sillä ne '
+      + 'näyttivät olevan eri mieltä mausta. Sama vesi. [softly] Kaupunki on '
+      + 'rakentanut janolleen kuusitoista puhuvaa päätä, ja jokainen neuvoo '
+      + 'ottamaan vielä kulauksen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-dubrovnik.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Peilaus on merimiehen suuntima, hänellä askelmittaus. Muurilla kävellään yhä ympäri, nyt jonossa. Kapean kohdan lensin.',
+      'Onofrion suihkukaivo antaa vettä yhä. Isoisä maistoi kahdesti; minä olisin laskenut nokat ennen juomista.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuurit). Faktat

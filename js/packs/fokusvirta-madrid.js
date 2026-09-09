@@ -119,14 +119,13 @@ export const FOKUSVIRTA_MADRID = {
      */
     paikkarivi: 'Madrid, maaliskuussa 1873. Kirkasta; ylätasangon tuuli '
       + 'kylmä; puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 398 merkkiä (yläraja 400). */
-    teksti: 'Pradon vartija sanoi, että sali avataan mañana. Tulin aamulla, '
-      + 'ja se oli kiinni. Tulin seuraavana aamuna, ja se oli kiinni. '
-      + 'Kolmantena aamuna vartija nukkui tuolillaan ja ovi oli auki, ja '
-      + 'seisoin Velázquezin edessä yksin. Pikkuprinsessa katsoo kuvasta '
-      + 'suoraan minuun, ja maalari katsoo takaa. Tuntui, että minä olin se, '
-      + 'jota katsottiin. Kadulla tasavalta huusi. En kuullut. Matkani '
-      + 'hiljaisin tunti.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 353 merkkiä (yläraja 400). */
+    teksti: 'Pradossa pysähdyin tauluun, jossa pieni prinsessa saa kaiken '
+      + 'huomion ja suuri koira makaa välittämättä siitä. Maalari katsoo '
+      + 'suoraan minuun. Peilissä seisoo kuningaspari, mutta minä olen saanut '
+      + 'parhaan paikan, aivan heidän edestään. Madridin kahviloissa '
+      + 'väitellään uudesta tasavallasta. Tässä huoneessa vallanvaihto '
+      + 'onnistui ostamatta edes sanomalehteä.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu. Äänite
      * generoidaan tästä kentästä työnkulussa .github/workflows/
@@ -140,23 +139,22 @@ export const FOKUSVIRTA_MADRID = {
      * jälkeen repon polun ja vaikenee siististi (audion 'error' →
      * varareitti → catch), eikä mikään muu hajoa.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Pradon vartija sanoi, että sali avataan mañana. Tulin '
-      + 'aamulla, ja se oli kiinni. Tulin seuraavana aamuna, ja se oli '
-      + 'kiinni. Kolmantena aamuna vartija nukkui tuolillaan ja ovi oli auki, '
-      + 'ja seisoin Velázquezin edessä yksin. Pikkuprinsessa katsoo kuvasta '
-      + 'suoraan minuun, ja maalari katsoo takaa. Tuntui, että minä olin se, '
-      + 'jota katsottiin. Kadulla tasavalta huusi. En kuullut. [softly] '
-      + 'Matkani hiljaisin tunti.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Pradossa pysähdyin tauluun, jossa pieni prinsessa saa '
+      + 'kaiken huomion ja suuri koira makaa välittämättä siitä. Maalari '
+      + 'katsoo suoraan minuun. Peilissä seisoo kuningaspari, mutta minä olen '
+      + 'saanut parhaan paikan, aivan heidän edestään. Madridin kahviloissa '
+      + 'väitellään uudesta tasavallasta. [softly] Tässä huoneessa '
+      + 'vallanvaihto onnistui ostamatta edes sanomalehteä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-madrid.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Mañana ei tarkoita huomenna. Se tarkoittaa ei tänään. Velázquezin edessä ei enää seisota yksin. Odotin sen tunnin räystäällä.',
+      'Las Meninas on yhä Pradossa. Isoisä huomasi vallanvaihdon, minä koiran. Se tiesi, milloin kannattaa maata.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Kuninkaanlinna). Faktat:

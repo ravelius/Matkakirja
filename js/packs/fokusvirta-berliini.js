@@ -106,14 +106,12 @@ export const FOKUSVIRTA_BERLIINI = {
      */
     paikkarivi: 'Berliini, syyskuussa 1873. Pilvistä; laastin ja kivipölyn '
       + 'haju; puntari matalalla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 396 merkkiä (yläraja 400). */
-    teksti: 'Jokainen sanoo täällä bitte: kun antaa, kun pyytää, kun ei '
-      + 'kuule, kun törmää. Ensimmäisen päivän luulin, että koko kaupunki '
-      + 'kerjää. Joka kadulla lyödään perustuksia ja puhutaan rahasta, ja '
-      + 'puistoon nostettiin juuri voitonpatsas, jonka pylväässä on '
-      + 'ranskalaisilta otettuja tykinputkia. Wienin pörssin romahdus tuli '
-      + 'perässä, ja mestarit puhuvat hiljempaa kuin keväällä. Sähke: G. '
-      + 'Hampurissa. Bitte.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 324 merkkiä (yläraja 400). */
+    teksti: 'Berliinissä paljastettiin voitonpylväs, jonka koristeina on '
+      + 'vallattuja tykinputkia. Niin korkealle nostettu tykki ei ainakaan osu '
+      + 'ohikulkijaan. Pylvään juurella poika myi lehtiä, ja katsojat polkivat '
+      + 'hänen pudonneen numeronsa mutaan. Ostin senkin. Suuret voitot '
+      + 'painetaan paksuin kirjaimin; pieni tappio oli pojan kasvoilla.',
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -122,23 +120,22 @@ export const FOKUSVIRTA_BERLIINI = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Jokainen sanoo täällä bitte: kun antaa, kun pyytää, '
-      + 'kun ei kuule, kun törmää. Ensimmäisen päivän luulin, että koko '
-      + 'kaupunki kerjää. Joka kadulla lyödään perustuksia ja puhutaan '
-      + 'rahasta, ja puistoon nostettiin juuri voitonpatsas, jonka pylväässä '
-      + 'on ranskalaisilta otettuja tykinputkia. Wienin pörssin romahdus tuli '
-      + 'perässä, ja mestarit puhuvat hiljempaa kuin keväällä. Sähke: G. '
-      + 'Hampurissa. [softly] Bitte.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Berliinissä paljastettiin voitonpylväs, jonka '
+      + 'koristeina on vallattuja tykinputkia. Niin korkealle nostettu tykki '
+      + 'ei ainakaan osu ohikulkijaan. Pylvään juurella poika myi lehtiä, ja '
+      + 'katsojat polkivat hänen pudonneen numeronsa mutaan. Ostin senkin. '
+      + '[softly] Suuret voitot painetaan paksuin kirjaimin; pieni tappio oli '
+      + 'pojan kasvoilla.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-berliini.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Bitte on olkaa hyvä, anteeksi ja mitä, yhdessä sanassa. Patsas siirrettiin keskelle puistoa. Muurin sauma näkyy ylhäältä yhä.',
+      'Pylväs siirrettiin myöhemmin Tiergarteniin. Siivekäs huipulla sai paremman puiston. Poikaa mietin minäkin.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (valtiopäivätalo). Faktat

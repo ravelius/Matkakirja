@@ -108,21 +108,19 @@ export const FOKUSVIRTA_TALLINNA = {
      */
     paikkarivi: 'Reval, syyskuussa 1873. Tuulista; satamassa lokit huutavat; '
       + 'puntari putoaa.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 376 merkkiä (yläraja 400). */
-    teksti: 'Portilla sanottiin tere, torilla tere, apteekissa tere. Luulin, '
-      + 'että minulle tarjotaan teetä, ja kiitin joka kerta. Apteekkari toi '
-      + 'lopulta teetä, koska olin kiittänyt kolmesti, ja siihen meni tunti. '
-      + 'Laiva purki lastinsa aamulla, ja juna vei sen Pietariin ennen iltaa. '
-      + 'Yläkaupungissa asuvat paronit ja alhaalla kaikki muut. Painolasti: '
-      + 'marsipaanisydän. Kuulemma lääkettä. Tere.',
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Portilla sanottiin tere, torilla tere, apteekissa '
-      + 'tere. Luulin, että minulle tarjotaan teetä, ja kiitin joka kerta. '
-      + 'Apteekkari toi lopulta teetä, koska olin kiittänyt kolmesti, ja '
-      + 'siihen meni tunti. Laiva purki lastinsa aamulla, ja juna vei sen '
-      + 'Pietariin ennen iltaa. Yläkaupungissa asuvat paronit ja alhaalla '
-      + 'kaikki muut. Painolasti: marsipaanisydän. Kuulemma lääkettä. '
-      + '[softly] Tere.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 329 merkkiä (yläraja 400). */
+    teksti: 'Revalin torin apteekissa myytiin marsipaania sydänsuruihin. '
+      + 'Kysyin, auttaako se myös silloin, kun ei vielä tiedä ketä kaipaa. '
+      + 'Apteekkari leikkasi suuremman palan. Ikkunasta näkyi raatihuone ja '
+      + 'sen vakava torni; sisällä tuoksui manteli. Söin lääkkeeni matkalla '
+      + 'satamaan. Vaiva jäi, mutta hoitoon olin poikkeuksellisen tyytyväinen.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Revalin torin apteekissa myytiin marsipaania '
+      + 'sydänsuruihin. Kysyin, auttaako se myös silloin, kun ei vielä tiedä '
+      + 'ketä kaipaa. Apteekkari leikkasi suuremman palan. Ikkunasta näkyi '
+      + 'raatihuone ja sen vakava torni; sisällä tuoksui manteli. Söin '
+      + 'lääkkeeni matkalla satamaan. [softly] Vaiva jäi, mutta hoitoon olin '
+      + 'poikkeuksellisen tyytyväinen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tallinna.mp3',
   },
 
@@ -168,13 +166,10 @@ export const FOKUSVIRTA_TALLINNA = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'ennen iltaa',
-      teksti: 'Ilman minua.',
-    },
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Tere on päivää, ei teetä. Minä tiesin ja annoin hänen juoda. Muurit ovat paikoillaan. Verkossa hoituu kaikki, ei marsipaani.',
+      'Raeapteekki myy yhä marsipaania. Suurempi pala? Se mies osasi kuunnella potilasta.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuuri). Faktat ovat

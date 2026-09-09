@@ -28,6 +28,24 @@ kuuluu vanhaan sessioon — poista se ja luo uusi: fetch claude/postilaatikko,
 lue posti/kuvatoimitus.md kärjestä, vastaa posti/fable-vanha.md:n kärkeen,
 poimi valmiit agenttityöt ja julkaise, ei salaisuuksia eikä sähköpostia).
 
+## 00. Päivitys 9.9.2026 klo 00.45 Suomen aikaa (sama sessio)
+
+- **main = v1705.** Illan linjaukset omistajan kanssa (kaikki Raamatussa
+  8.9.–9.9. -merkintöinä): pulun kupla raja 125 ja pulun näkökulma (v1704);
+  isoisän tekstit uusiksi periaatteella yksi kohtaus, yksi tapahtuma, yksi
+  tunne; isoisä ei kirjoita kenellekään (kaanonista poistettu); pahuuden
+  rajaus pois; Horation oma sanasto viidellä meri-/mittaussanalla
+  (peilaus, painolasti, K3, yövahti, lakkipiste; G. = Grimshaw), jota hän
+  ei selitä (Burgess); väärinymmärrys paikallisesta kielestä 12 kaupungissa;
+  Livia osaa kaikki kielet ja käyttää kuplansa omaan elämäänsä. v1705 =
+  43 kaupunkia (kaikki paitsi Ateena ja Venetsia), yksi kupla per kaupunki.
+- **Kooste toimitettu** (eurooppa-matkakirja-v6.md). SEURAAVAKSI omistajan
+  korjaukset koosteesta; painolasti esiintyy 21 kaupungissa (tarkoituksella
+  "joka kaupungissa" -vitsi) — karsitaan jos omistaja pitää liikana.
+  Esikuvat: Twain (Innocents Abroad), Sterne (hobby-horse), Huovinen (sävy).
+- Äänet (pulu + luennat) edelleen generoimatta, odottaa lupaa; kaikki 43
+  luentaa ja kuplaa muuttuneet.
+
 ## 0. Päivitys 8.9.2026 klo 21.40 Suomen aikaa (kolmas sessio, session_01Qpkrpg8NhoBUGTFjQf42f5)
 
 - **main = v1703.** v1702 (PR #2174): pallon kaupunkipisteet (lattia vain

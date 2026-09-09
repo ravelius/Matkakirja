@@ -28,32 +28,30 @@ export const FOKUSVIRTA_TROMSSA = {
     paikkarivi: 'Tromssa, heinäkuussa 1873. Aurinko ei laske; satamassa '
       + 'hylkeenpyytäjiä; puntari korkealla.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 395 merkkiä (yläraja 400). */
-    teksti: 'Nousin laiturille keskellä kirkasta yötä: kello oli yksi, ja '
-      + 'aurinko roikkui vuorten yllä kuin joku olisi unohtanut sammuttaa '
-      + 'sen. Yövahti ei pääty, kun yötä ei ole: hylkeenpyytäjät purkivat '
-      + 'lastia, lapset uivat, joku takoi, ja kirjoitan tätä kello kolme '
-      + 'ilman kynttilää. Tätä sanotaan Pohjolan Pariisiksi. Kysyin miksi, ja '
-      + 'kauppias osoitti hattuaan. Nukuin hattu silmillä. Painolasti: se '
-      + 'hattu.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 364 merkkiä (yläraja 400). */
+    teksti: 'Tromssaan on perustettu museo. Satamasta tuodaan sinne pohjoisen '
+      + 'luita ja kiviä, asioita joista laivanvarustaja ei tavallisesti maksa. '
+      + 'Pöydällä makasi pieni simpukka ja sen vieressä luu, jonka eläimeen en '
+      + 'toivo törmääväni uimassa. Ikkunasta näkyi pyyntilaivojen mastoja. '
+      + 'Sama meri ruokkii täällä sekä vatsan että uteliaisuuden. Jälkimmäinen '
+      + 'vaikutti pohjattomalta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Nousin laiturille keskellä kirkasta yötä: kello oli '
-      + 'yksi, ja aurinko roikkui vuorten yllä kuin joku olisi unohtanut '
-      + 'sammuttaa sen. Yövahti ei pääty, kun yötä ei ole: hylkeenpyytäjät '
-      + 'purkivat lastia, lapset uivat, joku takoi, ja kirjoitan tätä kello '
-      + 'kolme ilman kynttilää. Tätä sanotaan Pohjolan Pariisiksi. Kysyin '
-      + 'miksi, ja kauppias osoitti hattuaan. Nukuin hattu silmillä. [softly] '
-      + 'Painolasti: se hattu.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Tromssaan on perustettu museo. Satamasta tuodaan sinne '
+      + 'pohjoisen luita ja kiviä, asioita joista laivanvarustaja ei '
+      + 'tavallisesti maksa. Pöydällä makasi pieni simpukka ja sen vieressä '
+      + 'luu, jonka eläimeen en toivo törmääväni uimassa. Ikkunasta näkyi '
+      + 'pyyntilaivojen mastoja. Sama meri ruokkii täällä sekä vatsan että '
+      + 'uteliaisuuden. [softly] Jälkimmäinen vaikutti pohjattomalta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tromssa.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Yövahti on yön äänten luettelo, ja täällä yötä ei tule. Aurinko ei laske vieläkään kesällä. Lentäjälle lahja, isoisälle ei.',
+      'Tromssassa on nyt yliopistokin. Isoisä osui oikeaan: pienestä simpukasta voi alkaa pitkä matka.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

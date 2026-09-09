@@ -139,25 +139,25 @@ export const FOKUSVIRTA_RIIKA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Riika, heinäkuussa 1873. Lämmintä; joella pellavan haju; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 337 merkkiä (yläraja 400). */
-    teksti: 'Apteekkari kaatoi ryypyn mustaa juomaa, joka maistui tervalta, '
-      + 'yrteiltä ja erehdykseltä, ja vannoi sen parantavan kaiken. Tein '
-      + 'K3:n: laivuri sanoi että vatsan, pappi sanoi että sielun, pesijätär '
-      + 'nauroi ja sanoi että miehen. Uskoin pesijätärtä ja join toisen. '
-      + 'Aamulla puntari oli pudonnut ja minä sen mukana. Painolasti: '
-      + 'savipullo, tyhjä.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
+    teksti: 'Riikaan on tullut laulajia Latvian ensimmäisille suurille '
+      + 'laulujuhlille. Luulin ensin kuulevani monta kuoroa, kunnes äänet '
+      + 'ottivat saman hengenvedon. En ymmärtänyt sanoja. Viereinen mies '
+      + 'lauloi kyynel poskellaan eikä pyyhkinyt sitä pois. Olin merkinnyt '
+      + 'karttaan sataman ja kirkot. Kaupungin tärkein rakennus olikin hetken '
+      + 'ajan tehty ihmisäänistä.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Apteekkari kaatoi ryypyn mustaa juomaa, joka maistui '
-      + 'tervalta, yrteiltä ja erehdykseltä, ja vannoi sen parantavan kaiken. '
-      + 'Tein K3:n: laivuri sanoi että vatsan, pappi sanoi että sielun, '
-      + 'pesijätär nauroi ja sanoi että miehen. Uskoin pesijätärtä ja join '
-      + 'toisen. Aamulla puntari oli pudonnut ja minä sen mukana. [softly] '
-      + 'Painolasti: savipullo, tyhjä.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Riikaan on tullut laulajia Latvian ensimmäisille '
+      + 'suurille laulujuhlille. Luulin ensin kuulevani monta kuoroa, kunnes '
+      + 'äänet ottivat saman hengenvedon. En ymmärtänyt sanoja. Viereinen mies '
+      + 'lauloi kyynel poskellaan eikä pyyhkinyt sitä pois. Olin merkinnyt '
+      + 'karttaan sataman ja kirkot. [softly] Kaupungin tärkein rakennus '
+      + 'olikin hetken ajan tehty ihmisäänistä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-riika.mp3',
   },
 
@@ -200,9 +200,9 @@ export const FOKUSVIRTA_RIIKA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'K3 on kolmiomittaus: kolme vastausta, usko naurajaa. Mustaa juomaa myydään yhä savipulloissa. Maistoin kerran. Kerran riitti.',
+      'Laulujuhlat jatkuvat yhä. Isoisä ei ymmärtänyt sanoja, mutta ymmärsi sentään olla puhumatta päälle.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

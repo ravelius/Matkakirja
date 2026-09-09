@@ -196,25 +196,25 @@ export const FOKUSVIRTA_PIETARI = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Pietari, kesäkuussa 1873. Valkeat yöt; ei tule pimeää; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 365 merkkiä (yläraja 400). */
-    teksti: 'Kello oli kaksi yöllä ja valoisaa. Päätin ottaa peilauksen Nevan '
-      + 'sillasta. Keskellä siltaa se alkoi nousta. Juoksin, ja silta juoksi '
-      + 'kovempaa. Hyppäsin laiturille ja kaaduin tervatynnyreihin. Ajuri '
-      + 'nauroi niin, ettei ottanut maksua. Hattu jäi jokeen, ja peilaus jäi '
-      + 'kesken: sata kaksikymmentä askelta ja ilmaa. Painolasti tänään: uusi '
-      + 'hattu. Sitä en laske turhaksi.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 333 merkkiä (yläraja 400). */
+    teksti: 'Pietarissa kesäyö on vaalea kuin loppuun pesty lakana. Kello '
+      + 'käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. '
+      + 'Rantakadulla nainen sulki päivänvarjonsa ja jäi silti kävelemään. '
+      + 'Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän '
+      + 'tapahtumat loppuun. Päivä itse ei suostunut lopettamaan, joten '
+      + 'lisäsin vielä tämän.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kello oli kaksi yöllä ja valoisaa. Päätin ottaa '
-      + 'peilauksen Nevan sillasta. Keskellä siltaa se alkoi nousta. Juoksin, '
-      + 'ja silta juoksi kovempaa. Hyppäsin laiturille ja kaaduin '
-      + 'tervatynnyreihin. Ajuri nauroi niin, ettei ottanut maksua. Hattu jäi '
-      + 'jokeen, ja peilaus jäi kesken: sata kaksikymmentä askelta ja ilmaa. '
-      + 'Painolasti tänään: uusi hattu. [softly] Sitä en laske turhaksi.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Pietarissa kesäyö on vaalea kuin loppuun pesty lakana. '
+      + 'Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. '
+      + 'Rantakadulla nainen sulki päivänvarjonsa ja jäi silti kävelemään. '
+      + 'Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän '
+      + 'tapahtumat loppuun. [softly] Päivä itse ei suostunut lopettamaan, '
+      + 'joten lisäsin vielä tämän.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-pietari.mp3',
   },
 
@@ -273,13 +273,10 @@ export const FOKUSVIRTA_PIETARI = {
      * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
-    huudahdus: {
-      kohta: 'Hattu jäi jokeen',
-      teksti: 'Sanoin sen.',
-    },
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Peilaus on merellä suuntima, hänellä askelmittaus. Sillat avataan öisin yhä, ja minä ylitin ilman. Hattu on yhä joessa.',
+      'Pietari ehti olla Leningradkin. Kesäyö on yhä valoisa. Isoisän kellosta taisi loppua valta.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

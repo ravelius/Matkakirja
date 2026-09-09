@@ -26,32 +26,30 @@ export const FOKUSVIRTA_SISILIA = {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Palermo, toukokuussa 1873. Kuumaa; Etna savuaa horisontissa; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 400 merkkiä (yläraja 400). */
-    teksti: 'Kysyin torilla kalakauppiaalta, milloin vuori viimeksi '
-      + 'purkautui. Hän sanoi boh. Kysyin, onko se vaarallinen. Boh. Kysyin, '
-      + 'mitä boh tarkoittaa. Hän levitti kätensä ja lauloi seuraavan hinnan. '
-      + 'Tähän saareen ovat tulleet kreikkalaiset, arabit, normannit ja '
-      + 'espanjalaiset, ja jokainen on jättänyt jotain lautaselle. Sitruunat '
-      + 'kasvavat mustassa laavamullassa, ja vuori savuaa. K3 vuoresta: boh, '
-      + 'boh, boh.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
+    teksti: 'Palermon palatsikappelissa seinät hohtavat kultaa ja puukatto '
+      + 'näyttää puusta veistetyltä luolastolta. Normannien kuningas teetti '
+      + 'sen, mutta kädet tulivat monesta maailmasta: kreikkalaisia '
+      + 'mosaiikkeja, arabialaista veistotyötä. Katselin ylös, kunnes niska '
+      + 'väsyi. Kuninkaan nimi mainittiin monta kertaa. Tekijöiden nimiä '
+      + 'olisin kuunnellut kauemmin.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kysyin torilla kalakauppiaalta, milloin vuori viimeksi '
-      + 'purkautui. Hän sanoi boh. Kysyin, onko se vaarallinen. Boh. Kysyin, '
-      + 'mitä boh tarkoittaa. Hän levitti kätensä ja lauloi seuraavan hinnan. '
-      + 'Tähän saareen ovat tulleet kreikkalaiset, arabit, normannit ja '
-      + 'espanjalaiset, ja jokainen on jättänyt jotain lautaselle. Sitruunat '
-      + 'kasvavat mustassa laavamullassa, ja vuori savuaa. [softly] K3 '
-      + 'vuoresta: boh, boh, boh.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Palermon palatsikappelissa seinät hohtavat kultaa ja '
+      + 'puukatto näyttää puusta veistetyltä luolastolta. Normannien kuningas '
+      + 'teetti sen, mutta kädet tulivat monesta maailmasta: kreikkalaisia '
+      + 'mosaiikkeja, arabialaista veistotyötä. Katselin ylös, kunnes niska '
+      + 'väsyi. Kuninkaan nimi mainittiin monta kertaa. [softly] Tekijöiden '
+      + 'nimiä olisin kuunnellut kauemmin.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sisilia.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Boh tarkoittaa: kuka tietää, ja miksi kysyt. Etna savuaa yhä, rinteillä asutaan silti. Kalatiskin alla on paras paikka.',
+      'Kappeli hohtaa yhä. Palermon palatsissa istuu nyt Sisilian parlamentti. Katto ansaitsee edelleen puheenvuoron.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

@@ -110,31 +110,29 @@ export const FOKUSVIRTA_KOBENHAVN = {
      */
     paikkarivi: 'Kööpenhamina, kesäkuussa 1873. Valoisaa iltamyöhään; koko '
       + 'kaupunki ulkona; puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 399 merkkiä (yläraja 400). */
-    teksti: 'Tanska menetti sodassa kolmanneksen maastaan, ja silti täällä '
-      + 'käydään illat huvipuistossa. Kävelin Tivolin portista sisään ja '
-      + 'ymmärsin, että tämä kansa päätti surra valot päällä. Lakkipiste, '
-      + 'vaikka en tiedä miksi: ilotulitus, torvisoitto ja vanha mies, joka '
-      + 'tanssi yksin. Pyöreässä tornissa nousee luiska, jota tsaari ajoi '
-      + 'hevosella ylös. Kiipesin jalan. Painolasti: Tivolin lippu '
-      + 'huomiselle. Menen.',
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Tanska menetti sodassa kolmanneksen maastaan, ja silti '
-      + 'täällä käydään illat huvipuistossa. Kävelin Tivolin portista sisään '
-      + 'ja ymmärsin, että tämä kansa päätti surra valot päällä. Lakkipiste, '
-      + 'vaikka en tiedä miksi: ilotulitus, torvisoitto ja vanha mies, joka '
-      + 'tanssi yksin. Pyöreässä tornissa nousee luiska, jota tsaari ajoi '
-      + 'hevosella ylös. Kiipesin jalan. Painolasti: Tivolin lippu '
-      + 'huomiselle. [softly] Menen.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
+    teksti: 'Kööpenhaminan Tivolissa näin vanhan pariskunnan tanssivan niin '
+      + 'hitaasti, että orkesteri ehti edelle. He eivät lähteneet sen perään. '
+      + 'Puistossa sytytettiin lamppuja, ja lampi sai oman tähtitaivaansa '
+      + 'ennen oikeaa. Olin tullut katsomaan huvituksia. En arvannut, että '
+      + 'paras niistä olisi kaksi ihmistä, joilla ei ollut enää tarvetta pysyä '
+      + 'tahdissa.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Kööpenhaminan Tivolissa näin vanhan pariskunnan '
+      + 'tanssivan niin hitaasti, että orkesteri ehti edelle. He eivät '
+      + 'lähteneet sen perään. Puistossa sytytettiin lamppuja, ja lampi sai '
+      + 'oman tähtitaivaansa ennen oikeaa. Olin tullut katsomaan huvituksia. '
+      + '[softly] En arvannut, että paras niistä olisi kaksi ihmistä, joilla '
+      + 'ei ollut enää tarvetta pysyä tahdissa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kobenhavn.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Lakkipiste on paikka, jossa hattu lähtee itsestään. Tivoli on yhä auki joka ilta, valot näkyvät ylhäältä. Ne pullat portilla.',
+      'Tivoli huvittaa Kööpenhaminaa yhä. Minäkin pidän hitaista tanssijoista. Heidän pöytänsä ovat pitkään vapaina.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Nyhavn). Faktat ovat lehden

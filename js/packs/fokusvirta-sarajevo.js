@@ -187,22 +187,20 @@ export const FOKUSVIRTA_SARAJEVO = {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 377 merkkiä (yläraja 400). */
-    teksti: 'Kahvilassa sanoin, että minulla on kiire, ja isäntä sanoi polako '
-      + 'ja toi kahvin, kun se oli valmis. Sepälle sanoin, että on kiire, ja '
-      + 'hän sanoi polako ja takoi loppuun. Polako on tämän kaupungin vastaus '
-      + 'kiireeseen. Laskin sillalta neljän uskon äänet: kirkonkellot idästä '
-      + 'ja lännestä, minareetin kutsun ja sapatin hiljaisuuden. Kahvi oli '
-      + 'niin sakeaa, että lusikka seisoi. Polako.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 328 merkkiä (yläraja 400). */
+    teksti: 'Sarajevon kupariseppä naputti pannuun kuvioita niin pienellä '
+      + 'vasaralla, että olisin hukannut sen liivintaskuun. Viereisessä '
+      + 'puodissa kaadettiin kahvia samanlaiseen pannuun. Olin juonut siitä '
+      + 'aamulla katsomatta. Nyt näin jokaisen jäljen. Basaarin kujilla kuului '
+      + 'kilkutusta kaikkialta. Kaupunki oli tehnyt aamiaiseni astian käsin.',
     /* Kaanon, kohta 1 — luenta ja äänitteen polku sellaisinaan. */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kahvilassa sanoin, että minulla on kiire, ja isäntä '
-      + 'sanoi polako ja toi kahvin, kun se oli valmis. Sepälle sanoin, että '
-      + 'on kiire, ja hän sanoi polako ja takoi loppuun. Polako on tämän '
-      + 'kaupungin vastaus kiireeseen. Laskin sillalta neljän uskon äänet: '
-      + 'kirkonkellot idästä ja lännestä, minareetin kutsun ja sapatin '
-      + 'hiljaisuuden. Kahvi oli niin sakeaa, että lusikka seisoi. [softly] '
-      + 'Polako.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Sarajevon kupariseppä naputti pannuun kuvioita niin '
+      + 'pienellä vasaralla, että olisin hukannut sen liivintaskuun. '
+      + 'Viereisessä puodissa kaadettiin kahvia samanlaiseen pannuun. Olin '
+      + 'juonut siitä aamulla katsomatta. Nyt näin jokaisen jäljen. Basaarin '
+      + 'kujilla kuului kilkutusta kaikkialta. [softly] Kaupunki oli tehnyt '
+      + 'aamiaiseni astian käsin.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sarajevo.mp3',
     /*
      * KUVA: Alois Schönnin maalaus Latinalaissillalta, Österreichische
@@ -283,9 +281,9 @@ export const FOKUSVIRTA_SARAJEVO = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Polako on hitaasti, ja minulle sanottiin sitä joka päivä. Ne neljä ääntä kuuluvat yhä sillalta. Kahvi on sakeaa. En juo.',
+      'Kupariseppiä on basaarissa yhä, ja kahvi tulee pienessä pannussa. Isoisä oppi katsomaan kuppiaan. Hyvä alku.',
     ],
     /*
      * Commons 25.8.2026: 5184×3456, CC BY 2.0, Fred Romero, kuvattu

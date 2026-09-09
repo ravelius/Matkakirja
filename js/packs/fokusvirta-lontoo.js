@@ -129,31 +129,29 @@ export const FOKUSVIRTA_LONTOO = {
      */
     paikkarivi: 'Lontoo, joulukuussa 1873. Sumu niin sakea, ettei kadun '
       + 'toista puolta erota; puntari matalalla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 396 merkkiä (yläraja 400). */
-    teksti: 'Ajuri talutti hevosta lyhty kädessä, ja minä kävelin perässä, '
-      + 'kaukana hevosesta, siis ojassa. Kaupunki loppui kymmenen askeleen '
-      + 'päähän. Kuulin kaiken enkä nähnyt mitään: kellot, kärryt, laulun '
-      + 'jostain kellarista. Hotellissa odotti sähke: G. on Doverissa. '
-      + 'Kirjoitin ensimmäiselle sivulle säännön: älä usko ketään, joka '
-      + 'väittää, ettei aarteita ole. Painolasti: ajurin lyhty. Hän möi sen '
-      + 'mielellään.',
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Ajuri talutti hevosta lyhty kädessä, ja minä kävelin '
-      + 'perässä, kaukana hevosesta, siis ojassa. Kaupunki loppui kymmenen '
-      + 'askeleen päähän. Kuulin kaiken enkä nähnyt mitään: kellot, kärryt, '
-      + 'laulun jostain kellarista. Hotellissa odotti sähke: G. on Doverissa. '
-      + 'Kirjoitin ensimmäiselle sivulle säännön: älä usko ketään, joka '
-      + 'väittää, ettei aarteita ole. Painolasti: ajurin lyhty. [softly] Hän '
-      + 'möi sen mielellään.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 328 merkkiä (yläraja 400). */
+    teksti: 'Lontoossa on pantu höyryveturi maan alle ja matkustajat sen '
+      + 'savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä '
+      + 'näkyvistä. Merkillinen kansa, me englantilaiset: jos helvettiin '
+      + 'vedettäisiin kiskot, kysyisimme ensimmäiseksi, onko ensimmäisessä '
+      + 'luokassa pehmustetut penkit. Perille päästiin nopeasti. Yskä saapui '
+      + 'mukana.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Lontoossa on pantu höyryveturi maan alle ja matkustajat '
+      + 'sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä '
+      + 'näkyvistä. Merkillinen kansa, me englantilaiset: jos helvettiin '
+      + 'vedettäisiin kiskot, kysyisimme ensimmäiseksi, onko ensimmäisessä '
+      + 'luokassa pehmustetut penkit. Perille päästiin nopeasti. [softly] Yskä '
+      + 'saapui mukana.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lontoo.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Hevosia hän kiertää kaukaa, ja sumussa se on oja. Sumu oli savua, isoisäsi oli oikeassa. Nyt se on poissa.',
+      'Metro kulkee nyt sähköllä. Minä en vaihtaisi taivasta pehmustettuun penkkiin, Fogg.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Westminsterin palatsi).

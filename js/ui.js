@@ -180,6 +180,7 @@ import {
   fokusvirtaLehtivinkki, fokusvirtaSisalto,
   fokusvirtaHuudahdus, fokusvirtaUusiKulku,
   fokusvirtaSaapumiskupla, nollaaFokuskuvat, vaiennaLivianKaupunkipuhe,
+  naytaLuentakuva,
 } from './fokusvirta.js';
 
 const wikiGalleryCache = new Map();
@@ -12605,6 +12606,16 @@ export class UI {
          * (fokusvirtaMerkintaLuettu).
          */
         fokusvirtaHuudahdus(this, virtaKaupunki);
+        /*
+         * LUENTAKUVA KARTAN PÄÄLLE (omistaja 9.9.2026, Raamattu
+         * POSTILAATIKOSTA TULEE LUENTAKUVIA KARTAN PAALLE). Kuva nousee
+         * SAMASTA HETKESTÄ kuin luenta lähtee — siksi kutsu on tässä,
+         * välihuudon vieressä, eikä kirjoituskoneen lopussa. Kortti
+         * pysyy kuvattomana (yllä oleva sääntö): luentakuva on kartalla,
+         * ei kortilla, ja se poistuu luennan päättyessä. Ilman pakin
+         * `matkakirja.luentakuva`-kenttää tämä ei tee mitään.
+         */
+        naytaLuentakuva(this, virtaKaupunki);
         return;
       }
       if (virtaKaupunki && fokusvirtaLukitseeLehden(this, virtaKaupunki)) {

@@ -832,6 +832,13 @@ export function vaiennaLivianKaupunkipuhe(ui) {
     ui[ajastin] = null;
   }
   pysaytaLivianAani(ui);
+  /*
+   * LUENTAKUVA LÄHTEE SAMASSA (omistaja 9.9.2026): kartan päällä oleva
+   * kuva kuuluu sen kaupungin luentaan, jonka ajaksi se nousi, ja tämä
+   * on se yksi paikka, joka päättää kaupungin puheenvuoron
+   * lähdettäessä. Kuva häipyy pehmeästi kuten kuplatkin.
+   */
+  piilotaLuentakuva(ui);
 }
 
 /** Kaupungin uuden kulun kentät yhtenä oliona (tyhjät listat, jos ei ole). */
@@ -1177,6 +1184,15 @@ export function fokusvirtaSaapuminen(ui) {
   // renderin kytkentäkohta kuitenkin kelpaa aarteen löytymisen
   // huomaamiseen — se on kevyen kulun oma hetki.
   aarreLoytyi(ui);
+  /*
+   * LUENTAKUVAN ESILATAUS (omistaja 9.9.2026). Luenta alkaa sekunnin
+   * sisällä saapumisesta, joten kuva pyydetään jo tässä eikä vasta
+   * luennan alkaessa — muuten se nousisi ruudulle kertojan jo puhuttua
+   * hetken (sama havainto kuin aikajanan havainnekuvilla 5.9.2026).
+   * Kirjanpito on esilataajan omassa varastossa, joten toistuva render
+   * ei tee toista pyyntöä.
+   */
+  esilataaLuentakuva(ui, ui?.game?.cityOf?.());
   if (!FOKUSVIRTA_KORTIT) return;
   const city = ui?.game?.cityOf?.();
   if (!city || !fokusvirtaLukitseeLehden(ui, city)) return;
@@ -1610,6 +1626,276 @@ function piirraKuva(ui, kohde, kuva, luokka = 'fokusvirta-viite') {
  */
 function piirraJalkikuva(ui, kohde, kuva) {
   piirraKuva(ui, kohde, kuva, 'fokusvirta-viite fokusvirta-jalkikuva');
+}
+
+/* ==================== LUENTAKUVA KARTAN PÄÄLLE ======================
+ *
+ * Omistaja 9.9.2026 klo 09.10 (Raamattu, POSTILAATIKOSTA TULEE
+ * LUENTAKUVIA KARTAN PAALLE, sanatarkasti: *"Postilaatikkoon pitäisi
+ * alkaa tulla ainakin uusia kuvia, jotka voidaan näyttää sitten kartan
+ * päällä matkakirjan luennon yhteydessä."*).
+ *
+ * KAKSI ERI SÄÄNTÖÄ, JOTKA EIVÄT OLE RISTIRIIDASSA. Uuden kulun
+ * kaupungissa matkakirjaKORTILLE ei piirretä kuvaa (omistaja 7.9.2026,
+ * fokusvirtaUusiKulku) — kortti on isoisän tekstiä, ja kuvat kuuluvat
+ * kaupunkilehteen. Luentakuva on eri asia: se ei ole kortilla vaan
+ * KARTAN PÄÄLLÄ ja vain luennan ajan. Kortti pysyy kuvattomana.
+ *
+ * MITÄ TÄMÄ EI OLE: se ei ole kortti eikä kupla, siinä ei ole
+ * sulkurastia eikä nappeja, eikä se jää ruudulle. Kuva nousee luennan
+ * alkaessa, on kartan päällä kertojan puheen ajan ja häipyy pois. Kolme
+ * asiaa vie sen: luennan loppu, kartan liike (sama ele, joka supistaa
+ * kuplapinon, js/pollo.js seuraaSulkemista) ja lähtö kaupungista
+ * (vaiennaLivianKaupunkipuhe).
+ *
+ * PAIKKA RUUDULLA. Paneeli on karttapinnan keskivyöhykkeellä alalaidan
+ * puolella (css .fokusvirta-luentakuva): matkakirjakortti on
+ * ylävasemmalla ja pulun kuplat nousevat oikeasta alanurkasta, joten
+ * ankkuri on alareunassa prosentteina — kortti kasvaa ylhäältä alas ja
+ * kuplat alhaalta ylös, ja väliin jää se kaista, jossa kuva ei peitä
+ * kumpaakaan.
+ *
+ * KENTTÄ ON VAPAAEHTOINEN. Ilman `matkakirja.luentakuva`-kenttää
+ * kaupungin kulku on täsmälleen ennallaan — mitään ei piirretä eikä
+ * ladata. Kuvat tulevat kuvatoimituksen postista, eikä tämä erä lisää
+ * niitä yhteenkään pakkiin.
+ */
+
+/**
+ * Luentakuvan leveys pikseleinä. Sama mitta kuin kortin isolla kuvalla
+ * (KORTIN_KUVA_PX): paneeli on kapeampi, mutta retinalla sama tiedosto
+ * kelpaa molempiin — ja silloin suurennos avautuu välimuistista.
+ */
+const LUENTAKUVAN_PX = 800;
+
+/** Nousun ja häipymisen kesto (css .fokusvirta-luentakuva transition). */
+const LUENTAKUVAN_HAIVE_MS = 400;
+
+/** Kuinka usein kysytään, onko luenta jo lähtenyt. */
+const LUENTAKUVAN_ODOTUSVALI_MS = 400;
+
+/** Kuinka kauan luentaa enintään odotetaan ennen varapolkua. */
+const LUENTAKUVAN_ODOTUSKATTO_MS = 6000;
+
+/** Kuinka kauan kuva jää vielä kirjoituskoneen viimeisen lyönnin jälkeen. */
+const LUENTAKUVAN_HANNANVARA_MS = 1200;
+
+/** Montako esiladattua luentakuvaa pidetään muistissa. */
+const LUENTAKUVAVARASTON_KATTO = 8;
+
+/**
+ * Kaupungin luentakuva pakista, tai null.
+ *
+ * Kuva kelpaa vain jos sillä on jokin kolmesta osoitelähteestä
+ * (`osoite`, `ampari`, `tiedosto`) — pelkkä selite ilman kuvaa jättäisi
+ * kartalle tyhjän kehyksen.
+ */
+export function fokusvirtaLuentakuva(ui, city) {
+  const kuva = fokusvirtaSisalto(ui, city)?.matkakirja?.luentakuva;
+  if (!kuva) return null;
+  return (kuva.osoite || kuva.ampari || kuva.tiedosto) ? kuva : null;
+}
+
+/**
+ * Luentakuvan osoite — SAMA PORRASTUS kuin kortin kuvilla ja pöllön
+ * kuvalla (kuvanOsoite): repon oma `osoite`, ämpärin `ampari`
+ * (julisteUrl) tai Commonsin `tiedosto` (valokuvaUrl). Erillistä
+ * osoitelogiikkaa ei kirjoiteta, jottei uusi kenttä ala ajautua
+ * omaan suuntaansa.
+ */
+export function luentakuvanOsoite(kuva) {
+  return kuva ? kuvanOsoite(kuva, LUENTAKUVAN_PX) : null;
+}
+
+/** Luentakuvan varaosoite (vain Commons-tiedostolla on sellainen). */
+export function luentakuvanVara(kuva) {
+  return kuva ? kuvanVara(kuva, LUENTAKUVAN_PX) : null;
+}
+
+/**
+ * ESILATAUS SAAPUMISESTA, EI LUENNAN ALUSTA (sama oppi kuin aikajanan
+ * havainnekuvilla, js/aikajana.js PANEELIN_ESILATAUS_PYSAKKEJA:
+ * omistaja 5.9.2026: *"havainnekuvat pitää esiladata, nyt tulivat
+ * vähän perässä"*).
+ *
+ * Luenta alkaa sekunnin sisällä saapumisesta, ja verkosta haettu kuva
+ * nousisi ruudulle vasta kun kertoja on jo puhunut hetken. Kuva
+ * pyydetään siis heti saapumisrenderissä, ja valmis Image-olio jää
+ * muistiin — paneeli saa sen selaimen välimuistista.
+ *
+ * Kutsutaan joka renderissä (fokusvirtaSaapuminen), joten kirjanpito on
+ * pakko: yksi pyyntö per kaupunki, ja varasto pysyy pienenä.
+ */
+export function esilataaLuentakuva(ui, city) {
+  if (typeof Image === 'undefined' || !city || !ui?.game?.pack) return false;
+  const kuva = fokusvirtaLuentakuva(ui, city);
+  if (!kuva) return false;
+  const avain = `${ui.game.pack.id}:${city.id}`;
+  ui.luentakuvaVarasto ??= new Map();
+  if (ui.luentakuvaVarasto.has(avain)) return false;
+  const esi = new Image();
+  esi.decoding = 'async';
+  esi.src = luentakuvanOsoite(kuva);
+  ui.luentakuvaVarasto.set(avain, esi);
+  // Vanhimmat pois katon ylittyessä: nekin ovat jo selaimen omassa
+  // välimuistissa, eikä peli tarvitse niitä enää oliona.
+  while (ui.luentakuvaVarasto.size > LUENTAKUVAVARASTON_KATTO) {
+    const vanhin = ui.luentakuvaVarasto.keys().next().value;
+    ui.luentakuvaVarasto.delete(vanhin);
+  }
+  return true;
+}
+
+/**
+ * KUVA KARTAN PÄÄLLE LUENNAN AJAKSI (js/ui.js renderFact, heti
+ * välihuudon rekisteröinnin perässä — sama hetki, jona kertoja
+ * aloittaa).
+ *
+ * Napautus kuvaan avaa saman suurennoksen kuin kortin kuvat
+ * (avaaSuurennos): kuva kasvaa paikaltaan kartan päälle, ja kartta
+ * näkyy yhä taustalla.
+ *
+ * @returns {boolean} nousiko kuva ruudulle
+ */
+export function naytaLuentakuva(ui, city) {
+  if (typeof document === 'undefined' || !ui || !city) return false;
+  // Edellinen kuva pois ilman häivytystä: uusi luenta ei odota vanhan
+  // poistumista, eikä kahta paneelia saa olla yhtä aikaa.
+  piilotaLuentakuva(ui, { heti: true });
+  const kuva = fokusvirtaLuentakuva(ui, city);
+  if (!kuva) return false;
+  lataaTyyli();
+
+  const koti = document.querySelector('.map-pane') ?? document.body;
+  const paneeli = html('div', 'fokusvirta-luentakuva');
+  paneeli.setAttribute('role', 'group');
+  paneeli.setAttribute('aria-label', `${city.name}: matkakirjan kuva`);
+
+  const nappi = html('button', 'fokusvirta-kuva');
+  nappi.type = 'button';
+  nappi.title = 'Katso kuva suurempana';
+  const img = document.createElement('img');
+  img.alt = kuva.selite ?? '';
+  img.decoding = 'async';
+  img.draggable = false;
+  /*
+   * PUUTTUVA KUVA VIE KOKO PANEELIN, kuten kortilla (piirraKuva):
+   * rikkinäinen kuva jättäisi kartalle tyhjän kehyksen ja selitteen,
+   * joka selittää kuvaa jota ei ole. Luenta jatkuu häiriöttä.
+   */
+  asetaKuva(img, luentakuvanOsoite(kuva), luentakuvanVara(kuva),
+    () => piilotaLuentakuva(ui, { heti: true }));
+  nappi.appendChild(img);
+  nappi.addEventListener('click', () => avaaSuurennos(ui, [kuva], 0, () => nappi));
+
+  // Selite ohuena rivinä kuvan alla, lähde sen perässä: CC BY vaatii
+  // tekijän maininnan, eikä lisenssiehto jousta paneelin koon mukaan.
+  const kuvateksti = html('p', 'fokusvirta-kuvateksti');
+  kuvateksti.append(
+    html('span', 'fokusvirta-kuvaselite', kuva.selite ?? ''),
+    taytaLahderivi(html('span', 'fokusvirta-kuvalahde'), kuva.lahde ?? '', kuva),
+  );
+
+  paneeli.append(nappi, kuvateksti);
+  koti.appendChild(paneeli);
+  ui.luentakuva = paneeli;
+
+  /*
+   * NOUSU ON LUOKANVAIHTO, EI ANIMAATIO. Paneeli ladotaan
+   * läpinäkyvänä ja saa `nakyy`-luokan seuraavassa kehyksessä, jolloin
+   * css:n siirtymä (400 ms) hoitaa nousun — ja sama luokka pois vie
+   * sen ulos. Varmistus ajastimella siltä varalta, ettei
+   * requestAnimationFrame ole käytössä (testiympäristö, taustavälilehti).
+   */
+  const nayta = () => { if (paneeli.isConnected) paneeli.classList.add('nakyy'); };
+  globalThis.requestAnimationFrame?.(nayta);
+  setTimeout(nayta, 50);
+
+  kytkeLuentakuvanSulku(ui, paneeli);
+  piilotaLuennanJalkeen(ui, city, paneeli,
+    fokusvirtaSisalto(ui, city)?.matkakirja?.teksti ?? '');
+  return true;
+}
+
+/**
+ * KARTAN LIIKE VIE KUVAN (omistajan linjaus 9.9.2026; sama signaali
+ * kuin kuplapinon supistuksessa, v1694). Vedon alku on `pointerdown`
+ * kartalla — pallolaudalla ja tasokartalla sama tapahtuma — ja se
+ * kulkee dokumenttiin asti, joten paneeli ei tarvitse omaa kytköstä
+ * kartan sisälle.
+ *
+ * Paneeli itse ja auki oleva suurennos rajataan pois: napautus kuvaan
+ * on suurennoksen avaus eikä kartan liike, ja suurennoksen taustan
+ * napautus sulkee suurennoksen — ei kuvaa sen alta.
+ */
+function kytkeLuentakuvanSulku(ui, paneeli) {
+  if (typeof document?.addEventListener !== 'function') return;
+  const kasittele = (tapahtuma) => {
+    if (tapahtuma.target?.closest?.('.fokusvirta-luentakuva, .fokuszoom')) return;
+    if (ui.luentakuva === paneeli) piilotaLuentakuva(ui);
+  };
+  document.addEventListener('pointerdown', kasittele);
+  ui.luentakuvaSulku = () => document.removeEventListener('pointerdown', kasittele);
+}
+
+/**
+ * KUVA POISTUU LUENNAN PÄÄTTYESSÄ.
+ *
+ * Ensisijainen kello on äänite (js/luenta.js luennanLoppuun) — sama
+ * lupaus, jota pulun kommentti odottaa (fokusvirtaSaapumiskupla).
+ * Luenta voi kuitenkin olla vasta lähdössä (viive, ensisaapumisen
+ * tuurauspaljastus), joten sitä kysytään hetken aikaa uudestaan.
+ *
+ * VARAPOLKU: KIRJOITUSKONEEN TAHTI. Ilman äänitettä (mykistys,
+ * kertojatila 'ei', puuttuva mp3) luenta on se, mitä kortille
+ * kirjoittuu — sama osuus tekstistä, eri kello, kuten välihuudolla
+ * (ajastaHuudahdus).
+ */
+function piilotaLuennanJalkeen(ui, city, paneeli, teksti) {
+  const alku = Date.now();
+  const lopeta = () => { if (ui.luentakuva === paneeli) piilotaLuentakuva(ui); };
+  const kysy = (jaljella = LUENTAKUVAN_ODOTUSKATTO_MS) => {
+    if (ui.dead || ui.luentakuva !== paneeli) return;
+    // Pelaaja siirtyi toiseen kaupunkiin: kuva kuuluu vain siihen
+    // kaupunkiin, jonka luennan ajaksi se nousi.
+    if (ui.game?.cityOf?.()?.id !== city.id) { lopeta(); return; }
+    const luenta = luennanLoppuun(ui);
+    if (luenta) { void luenta.then(lopeta); return; }
+    if (jaljella > 0) {
+      clearTimeout(ui.luentakuvaAjastin);
+      ui.luentakuvaAjastin = setTimeout(
+        () => kysy(jaljella - LUENTAKUVAN_ODOTUSVALI_MS),
+        LUENTAKUVAN_ODOTUSVALI_MS,
+      );
+      return;
+    }
+    const kesto = String(teksti).length * KIRJOITUSKONE_MS + LUENTAKUVAN_HANNANVARA_MS;
+    clearTimeout(ui.luentakuvaAjastin);
+    ui.luentakuvaAjastin = setTimeout(lopeta, Math.max(0, kesto - (Date.now() - alku)));
+  };
+  kysy();
+}
+
+/**
+ * Luentakuva pois kartalta.
+ *
+ * @param {object} ui
+ * @param {object} [asetukset]
+ * @param {boolean} [asetukset.heti] ilman häivytystä (laudan vaihto,
+ *   uusi luenta, rikkinäinen kuva)
+ */
+export function piilotaLuentakuva(ui, { heti = false } = {}) {
+  if (!ui) return;
+  ui.luentakuvaSulku?.();
+  ui.luentakuvaSulku = null;
+  clearTimeout(ui.luentakuvaAjastin);
+  ui.luentakuvaAjastin = null;
+  const paneeli = ui.luentakuva;
+  ui.luentakuva = null;
+  if (!paneeli) return;
+  if (heti || liikeVahennetty()) { paneeli.remove(); return; }
+  paneeli.classList.remove('nakyy');
+  setTimeout(() => paneeli.remove(), LUENTAKUVAN_HAIVE_MS);
 }
 
 /* ==================== KUVAN SUURENNOS KARTAN PÄÄLLE ==================

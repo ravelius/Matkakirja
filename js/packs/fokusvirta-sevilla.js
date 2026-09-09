@@ -168,36 +168,34 @@ export const FOKUSVIRTA_SEVILLA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Sevilla, huhtikuussa 1873. Appelsiinipuut kukassa; puntari '
       + 'korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 400 merkkiä (yläraja 400). */
-    teksti: 'Söin kadulta appelsiinin, koska niitä on joka puussa, ja se oli '
-      + 'niin karvas, että sylkäisin sen viemäriin ja kaksi naista nauroi '
-      + 'parvekkeelta. Marmeladia varten, sanoi toinen. Tupakkatehtaassa '
-      + 'työskentelee tuhansia naisia, ja heidän sormensa kääntävät lehtiä '
-      + 'nopeammin kuin pankkiirin seteleitä. Portilla vahtimestari ei '
-      + 'päästänyt minua sisään. Olin kiitollinen. Painolasti: appelsiini. '
-      + 'Marmeladiksi.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
+    teksti: 'Sevillan tupakkatehdas näyttää palatsilta, mutta sen portista '
+      + 'kulkee aamuisin kuningattarien sijasta työväkeä. Nainen sitoi '
+      + 'huivinsa, otti viimeisen haukun leivästä ja katosi sisään. Pihalta '
+      + 'tuli appelsiininkukkien tuoksu. Olin aikonut kirjoittaa suuresta '
+      + 'rakennuksesta. Kirjoitankin siitä, miten pienellä aamiaisella sitä '
+      + 'pidetään käynnissä.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Söin kadulta appelsiinin, koska niitä on joka puussa, '
-      + 'ja se oli niin karvas, että sylkäisin sen viemäriin ja kaksi naista '
-      + 'nauroi parvekkeelta. Marmeladia varten, sanoi toinen. '
-      + 'Tupakkatehtaassa työskentelee tuhansia naisia, ja heidän sormensa '
-      + 'kääntävät lehtiä nopeammin kuin pankkiirin seteleitä. Portilla '
-      + 'vahtimestari ei päästänyt minua sisään. Olin kiitollinen. '
-      + 'Painolasti: appelsiini. [softly] Marmeladiksi.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Sevillan tupakkatehdas näyttää palatsilta, mutta sen '
+      + 'portista kulkee aamuisin kuningattarien sijasta työväkeä. Nainen '
+      + 'sitoi huivinsa, otti viimeisen haukun leivästä ja katosi sisään. '
+      + 'Pihalta tuli appelsiininkukkien tuoksu. Olin aikonut kirjoittaa '
+      + 'suuresta rakennuksesta. [softly] Kirjoitankin siitä, miten pienellä '
+      + 'aamiaisella sitä pidetään käynnissä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sevilla.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Painolasti on turha esine. Appelsiini oli sentään syötävä, marmeladina. Tehdas on nyt yliopisto. Puut kukkivat yhä.',
+      'Tupakkatehdas on nyt yliopisto. Portista mennään yhä leipä kädessä. Sivistys alkaa lupaavasti.',
     ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.

@@ -26,31 +26,29 @@ export const FOKUSVIRTA_ALPIT = {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Grindelwald, heinäkuussa 1873. Kylmää keskellä kesää; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 395 merkkiä (yläraja 400). */
-    teksti: 'Vaunut kiipesivät niin jyrkästi, että laukkuni liukui lattialle, '
-      + 'ja kiersin hevoset kaukaa heti ulos päästyäni. Hotellin portaille '
-      + 'asti ulottuu jäätikkö. Opas sanoi sen liikkuvan. Istuin sen reunalla '
-      + 'kaksi tuntia ja näin vain englantilaisia ostamassa jääpaloja. Sitten '
-      + 'jää paukahti kuin tykki, ja talon kokoinen lohkare irtosi kyynärän '
-      + 'päästä jalastani. Hattu lähti päästä itsestään. Lakkipiste.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 336 merkkiä (yläraja 400). */
+    teksti: 'Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas '
+      + 'ylettynyt siihen. Opas sanoi jään liikkuvan. Panin kiven reunalle ja '
+      + 'odotin, mutta kivi ei suostunut todistajaksi. Sitten sisältä kuului '
+      + 'pitkä rasahdus. Siirsin sekä kiven että itseni kauemmas. Alpeilla on '
+      + 'syytä erottaa toisistaan hiljaisuus ja se, ettei vuori vielä puhu.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Vaunut kiipesivät niin jyrkästi, että laukkuni liukui '
-      + 'lattialle, ja kiersin hevoset kaukaa heti ulos päästyäni. Hotellin '
-      + 'portaille asti ulottuu jäätikkö. Opas sanoi sen liikkuvan. Istuin '
-      + 'sen reunalla kaksi tuntia ja näin vain englantilaisia ostamassa '
-      + 'jääpaloja. Sitten jää paukahti kuin tykki, ja talon kokoinen lohkare '
-      + 'irtosi kyynärän päästä jalastani. Hattu lähti päästä itsestään. '
-      + '[softly] Lakkipiste.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Grindelwaldin jäätikössä oli sinistä niin syvällä, '
+      + 'ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Panin kiven '
+      + 'reunalle ja odotin, mutta kivi ei suostunut todistajaksi. Sitten '
+      + 'sisältä kuului pitkä rasahdus. Siirsin sekä kiven että itseni '
+      + 'kauemmas. [softly] Alpeilla on syytä erottaa toisistaan hiljaisuus ja '
+      + 'se, ettei vuori vielä puhu.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-alpit.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Lakkipiste on paikka, jossa hattu lähtee päästä itsestään. Jäätikkö on nyt kaukana portailta. Minä olin katolla.',
+      'Jäätikkö on vetäytynyt kauas isoisän päivistä. Hänen kivensä saattaa olla tallessa; jää sen alta on poissa.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

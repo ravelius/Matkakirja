@@ -127,20 +127,20 @@ export const FOKUSVIRTA_PRAHA = {
     paikkarivi: 'Praha, lokakuussa 1873. Kirkasta; yön aikana ensimmäinen '
       + 'halla; puntari korkealla.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 350 merkkiä (yläraja 400). */
-    teksti: 'Prahassa on kello, joka näyttää auringon ja kuun paikan mutta ei '
-      + 'kiirettä. Tein K3:n siitä, mitä kellon nuket tekevät tasatunnein: '
-      + 'yksi sanoi että apostolit kävelevät, toinen että kuolema soittaa '
-      + 'kelloa, kolmas nauroi ja sanoi että väki katsoo ylös ja taskut '
-      + 'tyhjenevät. Uskoin kolmatta ja pidin kädet taskuissa. Myöhästyin '
-      + 'ajurin kyydistä enkä kadu.',
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Prahassa on kello, joka näyttää auringon ja kuun '
-      + 'paikan mutta ei kiirettä. Tein K3:n siitä, mitä kellon nuket tekevät '
-      + 'tasatunnein: yksi sanoi että apostolit kävelevät, toinen että '
-      + 'kuolema soittaa kelloa, kolmas nauroi ja sanoi että väki katsoo ylös '
-      + 'ja taskut tyhjenevät. Uskoin kolmatta ja pidin kädet taskuissa. '
-      + '[softly] Myöhästyin ajurin kyydistä enkä kadu.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 358 merkkiä (yläraja 400). */
+    teksti: 'Prahan torin kellossa luuranko soittaa kelloa ja apostolit '
+      + 'kulkevat ikkunan ohi. Aioin verrata sitä taskukellooni ja unohdin '
+      + 'koko asian. Tässä koneessa oli tilaa auringolle, kuulle ja '
+      + 'kuolemalle, mutta minun kellossani vain kiireelle. Ajuri löysi minut '
+      + 'samasta paikasta puoli tuntia myöhemmin. Hänellä oli aivan '
+      + 'toisenlainen käsitys hukkaan menneestä ajasta.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Prahan torin kellossa luuranko soittaa kelloa ja '
+      + 'apostolit kulkevat ikkunan ohi. Aioin verrata sitä taskukellooni ja '
+      + 'unohdin koko asian. Tässä koneessa oli tilaa auringolle, kuulle ja '
+      + 'kuolemalle, mutta minun kellossani vain kiireelle. Ajuri löysi minut '
+      + 'samasta paikasta puoli tuntia myöhemmin. [softly] Hänellä oli aivan '
+      + 'toisenlainen käsitys hukkaan menneestä ajasta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-praha.mp3',
   },
 
@@ -191,9 +191,9 @@ export const FOKUSVIRTA_PRAHA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: ei tuo lisähyötyä).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'K3 on kolmiomittaus: kolme vastausta, usko naurajaa. Kello käy yhä torilla, ja väki seisoo puhelimet pystyssä. Minä päällä.',
+      'Kello kokoaa torille väkeä yhä. Nyt kaikilla on kello puhelimessa, ja silti he katsovat tuota. Ymmärrän.',
     ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Kaarlensilta ja linna).

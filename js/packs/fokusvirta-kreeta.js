@@ -45,28 +45,25 @@ export const FOKUSVIRTA_KREETA = {
        tunnelmarivi. */
     paikkarivi: 'Kreeta, huhtikuussa 1873. Lämmintä; vuorilla vielä lunta; '
       + 'puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 382 merkkiä (yläraja 400). */
-    teksti: 'Kysyin paimenelta, onko kukkulan alla vanhan kuninkaan palatsi. '
-      + 'Hän sanoi ne. Kysyin, onko siellä labyrintti. Ne. Kysyin, asuiko '
-      + 'siellä hirviö. Ne, ja hän hymyili. Ratsastin takaisin Haniaan '
-      + 'varmana, ettei mitään ole, ja majatalossa isäntä nauroi: ne '
-      + 'tarkoittaa kyllä. Satamassa venetsialainen majakka vartioi '
-      + 'turkkilaista kaupunkia. Paimen sanoi, että kukkula on onttoa. Nyt '
-      + 'uskon.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 318 merkkiä (yläraja 400). */
+    teksti: 'Hanian sataman majakan aloittivat venetsialaiset ja korjasivat '
+      + 'egyptiläiset. Nyt kaupunki kuuluu sulttaanille. Kalastaja selvitti '
+      + 'minulle kaikki kolme ja paikkasi samalla verkkoaan. Kun kysyin, kenen '
+      + 'majakka siis on, hän osoitti merelle. Niiden, jotka tarvitsevat sitä. '
+      + 'Piirsin karttaani valon ilman valtakunnan väriä.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, sama maltillinen
      * tyyli kuin muissa paketeissa. Yksikään sana, välimerkki tai
      * sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kysyin paimenelta, onko kukkulan alla vanhan kuninkaan '
-      + 'palatsi. Hän sanoi ne. Kysyin, onko siellä labyrintti. Ne. Kysyin, '
-      + 'asuiko siellä hirviö. Ne, ja hän hymyili. Ratsastin takaisin Haniaan '
-      + 'varmana, ettei mitään ole, ja majatalossa isäntä nauroi: ne '
-      + 'tarkoittaa kyllä. Satamassa venetsialainen majakka vartioi '
-      + 'turkkilaista kaupunkia. Paimen sanoi, että kukkula on onttoa. '
-      + '[softly] Nyt uskon.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Hanian sataman majakan aloittivat venetsialaiset ja '
+      + 'korjasivat egyptiläiset. Nyt kaupunki kuuluu sulttaanille. Kalastaja '
+      + 'selvitti minulle kaikki kolme ja paikkasi samalla verkkoaan. Kun '
+      + 'kysyin, kenen majakka siis on, hän osoitti merelle. Niiden, jotka '
+      + 'tarvitsevat sitä. [softly] Piirsin karttaani valon ilman valtakunnan '
+      + 'väriä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kreeta.mp3',
   },
 
@@ -81,9 +78,9 @@ export const FOKUSVIRTA_KREETA = {
      * on Fablen kaanonteksti sellaisenaan: se on puheen mittainen (alle
      * 95 merkkiä), joten sitä ei jaeta kahdeksi.
      */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Ne on kyllä, ja isoisäsi kuuli sen kolmesti väärin. Palatsi kaivettiin esiin hänen jälkeensä. Vuorilla on yhä lunta keväällä.',
+      'Kreeta kuuluu nyt Kreikkaan, majakka seisoo yhä. Kalastaja vastasi paremmin kuin isoisän kartta.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

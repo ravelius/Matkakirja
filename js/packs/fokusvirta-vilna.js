@@ -150,26 +150,25 @@ export const FOKUSVIRTA_VILNA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Vilna, kesäkuussa 1873. Poutaa; kirkonkellot kuuluvat '
       + 'kukkulalle; puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 373 merkkiä (yläraja 400). */
-    teksti: 'Kaupunki on täynnä kirkkoja kuin lipas helmiä. Kiipesin '
-      + 'katedraalin torniin ottamaan peilauksen ylhäältä ja näin metsää joka '
-      + 'suuntaan: tämä maa on metsän sydämeen rakennettu. Torniin tuli '
-      + 'perässäni mies, joka kysyi englanniksi, olenko minä herra Fogg. '
-      + 'Sanoin, että en, ja hän pyysi anteeksi ja meni. Painolasti: '
-      + 'meripihka, jonka sisällä on hyttynen. Vanhempi kuin kaupunki.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 339 merkkiä (yläraja 400). */
+    teksti: 'Vilnan observatoriossa näytettiin valokuvaa auringonpilkuista. '
+      + 'Olin pitänyt aurinkoa virheettömänä valaisimena, mutta silläkin on '
+      + 'tahroja. Ikkunan alla kirkontornit osoittivat taivaaseen kukin omalla '
+      + 'tavallaan. Tutkija odotti pilvien väistymistä. Joimme teetä. On '
+      + 'lohdullista, että taivaan tutkiminenkin vaatii toisinaan vain hyvän '
+      + 'tuolin.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki on täynnä kirkkoja kuin lipas helmiä. '
-      + 'Kiipesin katedraalin torniin ottamaan peilauksen ylhäältä ja näin '
-      + 'metsää joka suuntaan: tämä maa on metsän sydämeen rakennettu. '
-      + 'Torniin tuli perässäni mies, joka kysyi englanniksi, olenko minä '
-      + 'herra Fogg. Sanoin, että en, ja hän pyysi anteeksi ja meni. '
-      + 'Painolasti: meripihka, jonka sisällä on hyttynen. [softly] Vanhempi '
-      + 'kuin kaupunki.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Vilnan observatoriossa näytettiin valokuvaa '
+      + 'auringonpilkuista. Olin pitänyt aurinkoa virheettömänä valaisimena, '
+      + 'mutta silläkin on tahroja. Ikkunan alla kirkontornit osoittivat '
+      + 'taivaaseen kukin omalla tavallaan. Tutkija odotti pilvien '
+      + 'väistymistä. Joimme teetä. [softly] On lohdullista, että taivaan '
+      + 'tutkiminenkin vaatii toisinaan vain hyvän tuolin.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-vilna.mp3',
   },
 
@@ -218,9 +217,9 @@ export const FOKUSVIRTA_VILNA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Peilaus on mittaus askelin, tornistakin. Se mies oli G:n, tunnistin housut. Vanhakaupunki on maailmanperintöä, metsä pitää.',
+      'Vanha observatorio on yhä yliopiston käytössä. Tähtiä tutkitaan kauempana kaupungin valoista. Tuoli ei riitä.',
     ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-

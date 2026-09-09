@@ -196,36 +196,33 @@ export const FOKUSVIRTA_BARCELONA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Barcelona, maaliskuussa 1873. Lämmintä jo; satamassa tervan '
       + 'haju; puntari korkealla.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 400 merkkiä (yläraja 400). */
-    teksti: 'Kaupunki purkaa muurejaan ja rakentaa itseään ruutuihin. Otin '
-      + 'peilauksen uudesta korttelista ja pääsin sadan askeleen päähän, kun '
-      + 'katu loppui kuoppaan ja kuoppa oli täynnä vettä. Insinöörin kartassa '
-      + 'siinä oli katu. Kartta valehtelee. Ramblalla myydään lintuja '
-      + 'häkeissä, ja jokainen puhuu kahta kieltä: toista minulle, toista '
-      + 'toisilleen. Housut kuivuvat ikkunassa. Painolasti: häkkilintu. '
-      + 'Päästin sen.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 317 merkkiä (yläraja 400). */
+    teksti: 'Barcelonan uusista kortteleista on leikattu kulmat pois. Ensin '
+      + 'epäilin muuraria, sitten näin kahden kärryn mahtuvan kääntymään. '
+      + 'Insinööri Cerdà on piirtänyt kaupunkilaisille tilaa hengittää. Yhden '
+      + 'tulevan kadun paikalla kasvoi vielä kaalia. Toivoin sille hyvää '
+      + 'satoa: se ei tiennyt, että oli muuttumassa liikenteeksi.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Kaupunki purkaa muurejaan ja rakentaa itseään '
-      + 'ruutuihin. Otin peilauksen uudesta korttelista ja pääsin sadan '
-      + 'askeleen päähän, kun katu loppui kuoppaan ja kuoppa oli täynnä '
-      + 'vettä. Insinöörin kartassa siinä oli katu. Kartta valehtelee. '
-      + 'Ramblalla myydään lintuja häkeissä, ja jokainen puhuu kahta kieltä: '
-      + 'toista minulle, toista toisilleen. Housut kuivuvat ikkunassa. '
-      + 'Painolasti: häkkilintu. [softly] Päästin sen.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Barcelonan uusista kortteleista on leikattu kulmat '
+      + 'pois. Ensin epäilin muuraria, sitten näin kahden kärryn mahtuvan '
+      + 'kääntymään. Insinööri Cerdà on piirtänyt kaupunkilaisille tilaa '
+      + 'hengittää. Yhden tulevan kadun paikalla kasvoi vielä kaalia. [softly] '
+      + 'Toivoin sille hyvää satoa: se ei tiennyt, että oli muuttumassa '
+      + 'liikenteeksi.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-barcelona.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kartta valehtelee, sanoo kartanpiirtäjä. Ruudukko on valmis, kuoppa on katu. Se lintu ei kiittänyt. Meikäläiset eivät kiitä.',
+      'Cerdàn viistot kulmat ovat yhä paikallaan. Autoja tuli enemmän kuin kaalia. Minä olisin äänestänyt kaalia.',
     ],
     /*
      * KAANON (Fable) — repliikin loput kolme virkettä sellaisenaan.

@@ -139,35 +139,33 @@ export const FOKUSVIRTA_AMSTERDAM = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Amsterdam, toukokuussa 1873. Tuulista; kanavat väreilevät; '
       + 'puntari putoaa.',
-    /* KAANON UUSIKSI v6 (Fable 8.9.2026 ilta: yksi kohtaus, Horation oma kieli; omistaja katsoo koosteesta). 399 merkkiä (yläraja 400). */
-    teksti: 'Isäntä sanoi, että hänen kapakkansa on gezellig, ja kysyin, onko '
-      + 'se lämmin. Hän sanoi ei. Kysyin, onko se halpa. Hän sanoi ei, kaatoi '
-      + 'lasin, ja sitten ymmärsin. Kaupunki seisoo veteen lyötyjen paalujen '
-      + 'varassa, ja moni talo nojaa naapuriin kuin humalainen. '
-      + 'Timanttihiomossa mies halkaisi kiven yhdellä iskulla ja katsoi minua '
-      + 'kuin pyytäisi aplodeja. Yövahti: vesi, köydet, yksi harmonikka. '
-      + 'Gezellig.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
+    teksti: 'Amsterdamin kanavan varrella tuoli matkusti kolmanteen kerrokseen '
+      + 'talon ulkopuolta. Se riippui katon koukusta, ja kaksi miestä komensi '
+      + 'sitä köysillä. Portaat ovat kuulemma liian kapeat. Tuoli meni '
+      + 'ikkunasta sisään selkä edellä, arvokkaasti kuin piispa vaunuihin. '
+      + 'Näissä kapeissa taloissa täytyy harkita tarkkaan sekä kalustonsa että '
+      + 'riitansa.',
     /*
      * LUENTA = sama teksti tunnetagein (Raamattu, luentaprosessi):
      * neljä tagia, alku ja loppu eri sävyssä, yksikään sana ei vaihdu.
      */
-    /* ÄÄNITE VANHENTUNUT (8.9.2026): generoitava uudelleen tästä. */
-    luenta: '[curious] Isäntä sanoi, että hänen kapakkansa on gezellig, ja '
-      + 'kysyin, onko se lämmin. Hän sanoi ei. Kysyin, onko se halpa. Hän '
-      + 'sanoi ei, kaatoi lasin, ja sitten ymmärsin. Kaupunki seisoo veteen '
-      + 'lyötyjen paalujen varassa, ja moni talo nojaa naapuriin kuin '
-      + 'humalainen. Timanttihiomossa mies halkaisi kiven yhdellä iskulla ja '
-      + 'katsoi minua kuin pyytäisi aplodeja. Yövahti: vesi, köydet, yksi '
-      + 'harmonikka. [softly] Gezellig.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Amsterdamin kanavan varrella tuoli matkusti kolmanteen '
+      + 'kerrokseen talon ulkopuolta. Se riippui katon koukusta, ja kaksi '
+      + 'miestä komensi sitä köysillä. Portaat ovat kuulemma liian kapeat. '
+      + 'Tuoli meni ikkunasta sisään selkä edellä, arvokkaasti kuin piispa '
+      + 'vaunuihin. [softly] Näissä kapeissa taloissa täytyy harkita tarkkaan '
+      + 'sekä kalustonsa että riitansa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-amsterdam.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLAT UUSIKSI v6 (Fable 8.9.2026 ilta; omistaja katsoo koosteesta). */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Gezellig on lämmin ilman lämpöä. Talot nojaavat yhä, ja kanavilla on enemmän pyöriä kuin veneitä. Pyörä ei väistä. Kokeiltu.',
+      'Huonekaluja nostetaan ikkunoista edelleen. Lentotaidottomaksi lajiksi olette varsin kekseliäitä.',
     ],
     /* KAANON (Fable) — Livian huomio sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Amsterdamissa on enemmän siltoja kuin Venetsiassa, mut '

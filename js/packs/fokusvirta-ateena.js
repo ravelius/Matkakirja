@@ -103,12 +103,13 @@ export const FOKUSVIRTA_ATEENA = {
      * kullan") on kokonaan korvattu, ei muokattu.
      */
     paikkarivi: 'Ateena, heinäkuussa 1873. Seesteistä; ilmanpuntari korkealla.',
-    teksti: 'Torilla ei tänään tingitty oliiveista. Siellä puhuttiin '
-      + 'miehestä, joka oli löytänyt Troijan kullan. Puoli toria piti häntä '
-      + 'valehtelijana, toinen puoli nerona, eikä kukaan ollut nähnyt kultaa '
-      + 'omin silmin. Akropolis seisoi kaiken yllä niin kuin olisi kuullut '
-      + 'saman jutun ennenkin. Kirjoitan tämän muistiin, koska molemmat '
-      + 'puolet voivat olla oikeassa yhtä aikaa.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
+    teksti: 'Ateenassa puhuttiin Troijasta löydetystä kullasta kuin jokainen '
+      + 'olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia nerona, '
+      + 'asiakas varkaana. Kummallakaan ei ollut kultaa näyttää. Akropoliin '
+      + 'pylväät kohosivat pölyn takaa; ne eivät tarvinneet enää mainosta. '
+      + 'Kaivoin taskustani kolikon kahvia varten. Sen alkuperästä isäntä ei '
+      + 'kysynyt mitään.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia.
      *
@@ -122,13 +123,13 @@ export const FOKUSVIRTA_ATEENA = {
      * ennen seuraavaa julkaisua, tai kertoja lukee eri tekstin kuin
      * ruudulla lukee.
      */
-    luenta: '[curious] Torilla ei tänään tingitty oliiveista. Siellä '
-      + 'puhuttiin miehestä, joka oli löytänyt Troijan kullan. [whispers] '
-      + 'Puoli toria piti häntä valehtelijana, toinen puoli nerona, eikä '
-      + 'kukaan ollut nähnyt kultaa omin silmin. [softly] Akropolis seisoi '
-      + 'kaiken yllä niin kuin olisi kuullut saman jutun ennenkin. '
-      + 'Kirjoitan tämän muistiin, koska molemmat puolet voivat olla '
-      + 'oikeassa yhtä aikaa.',
+    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    luenta: '[curious] Ateenassa puhuttiin Troijasta löydetystä kullasta kuin '
+      + 'jokainen olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia '
+      + 'nerona, asiakas varkaana. Kummallakaan ei ollut kultaa näyttää. '
+      + 'Akropoliin pylväät kohosivat pölyn takaa; ne eivät tarvinneet enää '
+      + 'mainosta. Kaivoin taskustani kolikon kahvia varten. [softly] Sen '
+      + 'alkuperästä isäntä ei kysynyt mitään.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-ateena.mp3',
     /*
      * Fablen päätös 4: Sophia Schliemann koruineen. Commonsin
@@ -180,8 +181,9 @@ export const FOKUSVIRTA_ATEENA = {
      * omistajan päätöstä siitä, sallitaanko se aloituskaupungissa —
      * teksti on kirjoitettu ja äänite voidaan generoida jo nyt.
      */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kulta oli aitoa, mutta ei Troijan kuninkaan. Löytäjän talo Ateenassa on nyt museo.',
+      'Schliemannin myöhempi talo on nyt rahamuseo. Isoisä etsi aarretta; minä tarkistan ensin kahvilan pihan.',
     ],
     kuva: {
       ampari: 'herokoe/hero-ateena-aamu.png',
