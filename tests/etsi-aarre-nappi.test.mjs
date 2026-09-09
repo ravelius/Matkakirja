@@ -17,10 +17,18 @@
  *      ole enää kätköä (js/game.js tehtavaTarjolla → js/ui.js
  *      tehtavaNapinTila), ei saa nappia — eikä myöskään kaupunki, jonka
  *      kortilla nappi olisi harmaana.
- *   3. SAMA OVI, EI KOPIOTA. Painallus kutsuu `ui.etsiKatko()` eli
- *      täsmälleen sitä ketjua, jonka kortin nappi ajaa. Kopioitu ketju
- *      ajautuisi erilleen ensimmäisessä muutoksessa.
- *   4. LÄHTÖ VIE NAPIN. Kaupungista lähtiessä nappi poistuu samasta
+ *   3. NAPPI AVAA KAUPUNKILEHDEN, EI AARRETTA (omistaja 9.9.2026 klo
+ *      16.30: *"sen pitäisi avata siis kaupunkilehti, eikä mennä
+ *      suoraan aarteeseen. Se on tavallaan ensimmäinen askel aarteen
+ *      etsintää, että löytää lehdestä sen."*). Painallus kutsuu
+ *      `ui.avaaTutkinta()`:a — samaa ovea kuin alapalkin Tutki ja
+ *      laatan napautus — EIKÄ `ui.etsiKatko()`:a, joka veisi suoraan
+ *      aarrekysymykseen. Lehtilukko ohitetaan tässä yhdessä kutsussa,
+ *      koska nappi on pelaajan ensimmäinen askel.
+ *   4. LEHDEN SULKEUTUESSA NAPPI PALAA, jos aarretta ei vielä löytynyt
+ *      — muuten kartalle jäisi umpikuja. Ei kuitenkaan visan alle eikä
+ *      toiseen kaupunkiin.
+ *   5. LÄHTÖ VIE NAPIN. Kaupungista lähtiessä nappi poistuu samasta
  *      koukusta kuin luentakuva (vaiennaLivianKaupunkipuhe).
  *
  * DOM-osuus ajetaan pienellä omalla puumallilla samaan tapaan kuin
@@ -35,6 +43,7 @@ import { readFileSync } from 'node:fs';
 
 import {
   ETSI_AARRE_TEKSTI,
+  avaaKaupunkilehti,
   etsiAarreTarjolla,
   naytaEtsiAarreNappi,
   piilotaEtsiAarreNappi,
@@ -123,6 +132,11 @@ class Elementti {
     this.kuuntelijat.get(laji).push(kasittelija);
   }
 
+  removeEventListener(laji, kasittelija) {
+    const lista = this.kuuntelijat.get(laji);
+    if (lista) this.kuuntelijat.set(laji, lista.filter((k) => k !== kasittelija));
+  }
+
   dispatch(laji) {
     [...(this.kuuntelijat.get(laji) ?? [])].forEach((k) => k({ type: laji, target: this }));
   }
@@ -176,14 +190,29 @@ function tekoUi({ tila = { teksti: 'Etsi kätkö', pois: false }, city = KOEKAUP
   pane.clientWidth = 900;
   pane.clientHeight = 600;
   asiakirja.body.appendChild(pane);
+  /*
+   * Lehti on oikeassa pelissä <dialog>; tässä riittää elementti, jolla
+   * on `open`-lippu ja close-tapahtuma. `sulje` matkii sitä, mitä
+   * selain tekee Escillä, taustanapautuksella ja sulkunapilla.
+   */
+  const lehti = new Elementti('dialog');
+  lehti.open = false;
+  lehti.sulje = () => { lehti.open = false; lehti.dispatch('close'); };
   const ui = {
     mapPane: pane,
+    arrivalDialog: lehti,
     kutsutut: [],
-    game: { pack: { id: 'maailmankartta' }, cityOf: () => city },
+    game: { pack: { id: 'maailmankartta' }, cityOf: () => city, phase: 'action' },
     nakyvaAlue: () => ({
       x: city.x - 200, y: city.y - 150, w: 400, h: 300, skaala: 2.25,
     }),
     tehtavaNapinTila: () => tila,
+    // Kaupunkilehden avaus (js/ui.js avaaTutkinta): lehti jää auki.
+    avaaTutkinta: (kohde, valinnat) => {
+      ui.kutsutut.push(`avaaTutkinta:${kohde?.id}:${valinnat?.ohitaLehtilukko === true}`);
+      lehti.open = true;
+    },
+    // Kortin "Etsi kätkö"; kartan napin EI pidä koskaan kutsua tätä.
     etsiKatko: () => ui.kutsutut.push('etsiKatko'),
   };
   return ui;
@@ -248,7 +277,7 @@ test('ehto luetaan kortin omasta tilafunktiosta', () => {
 });
 
 /* ---------------------------------------------------------------- */
-/* 3. Kommentin jälkeen nappi, oikea teksti ja sama ovi              */
+/* 3. Kommentin jälkeen nappi, oikea teksti ja lehden ovi            */
 /* ---------------------------------------------------------------- */
 
 test('kommentin jälkeen kartalla on yksi nappi oikealla tekstillä', () => {
@@ -294,35 +323,126 @@ test('kaupunki ruudun ulkopuolella häivyttää napin paikan valehtelun sijaan',
   assert.ok(ui.etsiAarreNappi.ankkuri.classList.contains('hukassa'));
 });
 
-test('painallus kutsuu samaa avaajaa kuin kortin Etsi kätkö', () => {
+test('painallus avaa kaupunkilehden eikä mene suoraan aarteeseen', () => {
   const ui = tekoUi();
   naytaEtsiAarreNappi(ui, KOEKAUPUNKI);
   napit()[0].dispatch('click');
-  assert.deepEqual(ui.kutsutut, ['etsiKatko'], 'painallus menee ui.etsiKatko():n läpi');
+  assert.deepEqual(ui.kutsutut, ['avaaTutkinta:sofia:true'],
+    'painallus avaa kaupunkilehden lehtilukon ohi');
+  assert.ok(!ui.kutsutut.includes('etsiKatko'),
+    'kartan nappi ei saa kutsua kortin Etsi kätkö -ketjua');
+  assert.equal(ui.arrivalDialog.open, true, 'lehti jää auki');
   // Lehti on auki: nappi ei jää sen alle samaan paikkaan.
   assert.equal(napit().length, 0);
   assert.equal(ui.etsiAarreNappi, null);
 });
 
-test('avaaja on yksi ja sama funktio kortilla ja kartalla', () => {
+test('avaaja on kaupunkilehden ovi, ei aarrekysymyksen', () => {
+  const nappi = lue('js/etsi-aarre-nappi.js');
+  assert.ok(nappi.includes("ui.avaaTutkinta?.(city, { ohitaLehtilukko: true })"),
+    'kartan nappi avaa lehden ui.avaaTutkinta-kahvasta');
+  // Kommentissa etsiKatko saa esiintyä (siksi se juuri EI ole ovi);
+  // kutsu ei. Kaikki `ui.etsiKatko(`-muodot ovat kiellettyjä.
+  assert.ok(!/ui\.etsiKatko\??\.?\(/.test(nappi), 'kartan nappi ei saa kutsua etsiKatkoa');
+  assert.ok(!nappi.includes('actionQuiz'), 'kartan nappi ei kutsu peliä ohi jaetun oven');
+
   const ui = lue('js/ui.js');
+  // Kortin oma nappi jää ennalleen: omistaja puhui vain kartan napista.
   assert.ok(/etsiKatko\(\) \{/.test(ui), 'js/ui.js:ssä on jaettu etsiKatko-metodi');
   assert.ok(
     ui.includes("document.getElementById('arrival-yes').addEventListener('click', () => this.etsiKatko());"),
-    'kortin nappi kutsuu samaa metodia',
+    'kortin nappi kutsuu yhä etsiKatkoa',
   );
   // Ketju on vain yhdessä paikassa: kaksi actionQuiz-kutsua samalla
   // muotoarvonnalla tarkoittaisi kopioitua ovea.
   const kutsut = [...ui.matchAll(/kohtaaminen && !pulmaOdottaa \? \{ form: 'quiz' \} : \{\}/g)];
   assert.equal(kutsut.length, 1, 'muotoarvonta saa olla vain yhdessä paikassa');
+});
 
-  const nappi = lue('js/etsi-aarre-nappi.js');
-  assert.ok(nappi.includes('ui.etsiKatko?.()'), 'kartan nappi ei saa rakentaa omaa ketjuaan');
-  assert.ok(!nappi.includes('actionQuiz'), 'kartan nappi ei kutsu peliä ohi jaetun oven');
+test('lehtilukon ohitus on vain tässä yhdessä kutsussa', () => {
+  const ui = lue('js/ui.js');
+  assert.ok(
+    ui.includes('avaaTutkinta(city = this.game.cityOf(), { ohitaLehtilukko = false } = {})'),
+    'avaaTutkinta välittää lipun eteenpäin',
+  );
+  assert.ok(
+    ui.includes('openArrival(city, { ohitaLehtilukko = false } = {})'),
+    'openArrival ottaa lipun vastaan',
+  );
+  assert.ok(
+    ui.includes('if (!ohitaLehtilukko && fokusvirtaOhittaaLehden(this, city)) return;'),
+    'lukko itse jää voimaan kaikkiin muihin avauskohtiin',
+  );
+  // Oletus on aina false: yksikään muu avaus ei saa mennä lukon ohi.
+  const ohitukset = [...ui.matchAll(/ohitaLehtilukko: true/g)];
+  assert.equal(ohitukset.length, 0, 'js/ui.js ei saa itse ohittaa lukkoa');
+});
+
+test('lehti ei auennut: nappi jää kartalle eikä pelaaja jumitu', () => {
+  const ui = tekoUi();
+  // Linssikartan kuori tms.: avaaTutkinta ei avaa mitään.
+  ui.avaaTutkinta = () => { ui.kutsutut.push('avaaTutkinta'); };
+  naytaEtsiAarreNappi(ui, KOEKAUPUNKI);
+  napit()[0].dispatch('click');
+  assert.equal(napit().length, 1, 'ovi jää kartalle, jos lehti ei auennut');
+  assert.equal(ui.etsiAarreNappi.city.id, 'sofia');
+});
+
+test('avaaKaupunkilehti kertoo, jäikö lehti auki', () => {
+  const ui = tekoUi();
+  assert.equal(avaaKaupunkilehti(ui, KOEKAUPUNKI), true);
+  assert.equal(avaaKaupunkilehti(null, KOEKAUPUNKI), false);
+  assert.equal(avaaKaupunkilehti(ui, null), false);
 });
 
 /* ---------------------------------------------------------------- */
-/* 4. Lähtö vie napin                                                */
+/* 4. Lehden sulkeutuessa nappi palaa                                */
+/* ---------------------------------------------------------------- */
+
+test('lehden sulkeminen palauttaa napin, kun aarretta ei ole löydetty', () => {
+  const ui = tekoUi();
+  naytaEtsiAarreNappi(ui, KOEKAUPUNKI);
+  napit()[0].dispatch('click');
+  assert.equal(napit().length, 0, 'lehden ollessa auki nappia ei ole');
+  ui.arrivalDialog.sulje();
+  assert.equal(napit().length, 1, 'nappi palaa lehden sulkeuduttua');
+  assert.equal(ui.etsiAarreNappi.city.id, 'sofia');
+  // Kuuntelija on kertakäyttöinen: toinen close ei kasaa nappeja.
+  ui.arrivalDialog.dispatch('close');
+  assert.equal(napit().length, 1);
+});
+
+test('kätkön löydyttyä lehden sulkeminen ei tuo nappia takaisin', () => {
+  let tila = { teksti: 'Etsi kätkö', pois: false };
+  const ui = tekoUi();
+  ui.tehtavaNapinTila = () => tila;
+  naytaEtsiAarreNappi(ui, KOEKAUPUNKI);
+  napit()[0].dispatch('click');
+  // Aarre löytyi lehden kautta: kortin nappikin katoaisi.
+  tila = null;
+  ui.arrivalDialog.sulje();
+  assert.equal(napit().length, 0, 'ilman kätköä ei nappia — sama ehto kuin nostolla');
+});
+
+test('visan alle nappi ei palaa eikä toiseen kaupunkiin', () => {
+  const visa = tekoUi();
+  naytaEtsiAarreNappi(visa, KOEKAUPUNKI);
+  napit()[0].dispatch('click');
+  // etsiKatko sulkee lehden ennen visaa: nappi ei saa nousta sen päälle.
+  visa.game.phase = 'quiz';
+  visa.arrivalDialog.sulje();
+  assert.equal(napit().length, 0, 'visan alla kartalla ei ole oikopolkua');
+
+  const matka = tekoUi();
+  naytaEtsiAarreNappi(matka, KOEKAUPUNKI);
+  napit()[0].dispatch('click');
+  matka.game.cityOf = () => TOINEN;
+  matka.arrivalDialog.sulje();
+  assert.equal(napit().length, 0, 'toisessa kaupungissa vanha nappi ei palaa');
+});
+
+/* ---------------------------------------------------------------- */
+/* 5. Lähtö vie napin                                                */
 /* ---------------------------------------------------------------- */
 
 test('piilotus poistaa napin kartalta ja muistista', () => {
@@ -355,7 +475,7 @@ test('kaupungista lähtö purkaa napin samasta koukusta kuin luentakuvan', () =>
 });
 
 /* ---------------------------------------------------------------- */
-/* 5. Yksi koodi molemmille laudoille                                */
+/* 6. Yksi koodi molemmille laudoille                                */
 /* ---------------------------------------------------------------- */
 
 test('moduulissa ei ole lautahaaraa eikä omaa tyylitiedostoa', () => {

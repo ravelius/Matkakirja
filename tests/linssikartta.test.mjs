@@ -222,7 +222,9 @@ test('Liiku ja lehdet estetty kuoressa; valinta null palauttaa pallon; pallon li
   assert.match(ui, /^  linssikarttaEstaa\(\) \{\n    return Boolean\(this\.linssikartta\);\n  \}/m);
   const liiku = ui.match(/ {2}vaihdaLiuku\(\) \{[\s\S]*?\n {2}\}\n/)[0];
   assert.match(liiku, /if \(this\.linssikarttaEstaa\(\)\) return;/, 'Liiku ei ole kiinni kuoressa');
-  const tutkinta = ui.match(/ {2}avaaTutkinta\(city = this\.game\.cityOf\(\)\) \{[\s\S]*?\n {2}\}\n/)[0];
+  // Allekirjoitus sai 9.9.2026 valinnaisen `ohitaLehtilukko`-lipun
+  // (kartan Etsi aarre -nappi), joten haku päättyy sulkuun väljemmin.
+  const tutkinta = ui.match(/ {2}avaaTutkinta\(city = this\.game\.cityOf\(\)[^)]*\)[^{]*\{[\s\S]*?\n {2}\}\n/)[0];
   assert.match(tutkinta, /if \(this\.linssikarttaEstaa\(\)\) return;/, 'kaupungin napautus ja Tutki eivät ole kiinni kuoressa');
   assert.match(ui, /\|\| this\.linssikarttaEstaa\(\);\n/, 'Matkusta-nappi ei harmaannu kuoressa');
   assert.match(ui, /if \(this\.linssikarttaEstaa\(\)\) stayBtn\.disabled = true;/);

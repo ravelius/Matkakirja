@@ -11007,13 +11007,19 @@ export class UI {
   /**
    * TUTKI-TOIMINTO YHTENÄ KAPPALEENA.
    *
-   * Sama teko kahdesta paikasta: alarivin Tutki-nappi (fokusmoodin
-   * ollessa pois) ja fokusnäkymän kaupunkilaatan napautus. openArrival
+   * Sama teko kolmesta paikasta: alarivin Tutki-nappi (fokusmoodin
+   * ollessa pois), fokusnäkymän kaupunkilaatan napautus ja kartan
+   * "Etsi aarre" -nappi (js/etsi-aarre-nappi.js). openArrival
    * ratkaisee lopun — fokusvirran avaus tai paluu nykyvaiheeseen, ja
    * virran ohitettua saapumiskortti, josta laatan kääntö alkaa
    * (fokusvirtaOhittaaLehden).
+   *
+   * `ohitaLehtilukko` on kartan napin oma reitti: se on aarteen
+   * etsinnän ENSIMMÄINEN askel (omistaja 9.9.2026), joten lehti on
+   * sille auettava vaikka fokusvirta pitäisi lehtilukkoa kiinni.
+   * Lukko itse jää paikalleen kaikkiin muihin avauskohtiin.
    */
-  avaaTutkinta(city = this.game.cityOf()) {
+  avaaTutkinta(city = this.game.cityOf(), { ohitaLehtilukko = false } = {}) {
     if (!city) return;
     // Linssikartan kuoressa lehdet eivät aukea (linssikarttaEstaa).
     if (this.linssikarttaEstaa()) return;
@@ -11021,7 +11027,7 @@ export class UI {
     this.lehtitila.tutkiSyke = null;
     // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
     // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
-    this.openArrival(city);
+    this.openArrival(city, { ohitaLehtilukko });
   }
 
   /**
@@ -13394,15 +13400,20 @@ export class UI {
   }
 
   /**
-   * ETSI KÄTKÖ — YKSI OVI, KAKSI KAHVAA.
+   * ETSI KÄTKÖ — LEHDEN OMA NAPPI, EI KARTAN.
    *
-   * Ketju oli ennen saapumiskortin napin kuuntelijan sisällä. Kartalle
-   * tuli 9.9.2026 toinen kahva samaan oveen (js/etsi-aarre-nappi.js,
-   * omistajan tilaus: *"kun pulun kommentti on tullut, kartalle saisi
-   * tulla kaupungin laatan viereen nappi: Etsi aarre, mikä avaisi
-   * kaupunkilehden."*), ja kopioitu ketju ajautuisi ensimmäisessä
-   * muutoksessa erilleen — siksi ketju on tässä nimettynä metodina ja
-   * molemmat napit kutsuvat sitä.
+   * Ketju oli ennen saapumiskortin napin kuuntelijan sisällä; se on
+   * nimettynä metodina, koska kutsujia on useampi kuin yksi ja
+   * kopioitu ketju ajautuisi ensimmäisessä muutoksessa erilleen.
+   *
+   * TÄMÄ ON AARREKYSYMYS, EI LEHTI. Kutsu sulkee lehden ja menee
+   * suoraan tietovisaan/kohtaamiseen (doAction → game.actionQuiz).
+   * Siksi KARTAN "Etsi aarre" -nappi EI kutsu tätä (omistaja 9.9.2026,
+   * Raamattu ETSI AARRE -NAPPI AVAA KAUPUNKILEHDEN, EI AARRETTA
+   * SUORAAN: *"sen pitäisi avata siis kaupunkilehti, eikä mennä
+   * suoraan aarteeseen"*) vaan avaa kaupunkilehden etusivun
+   * (avaaTutkinta). Aarteen etsinnän kulku on siis: kartan nappi →
+   * kaupunkilehti → lehdestä löytyvä aarrekysymys → tämä metodi.
    */
   etsiKatko() {
     // Tutki paikka vie tietovisaan: tauolle jäänyt luenta ei saa
@@ -13426,10 +13437,18 @@ export class UI {
     ));
   }
 
-  openArrival(city) {
+  openArrival(city, { ohitaLehtilukko = false } = {}) {
     // Fokusmoodin lehtilukko: kaupungin lehti aukeaa vasta aarteesta,
     // ja siihen asti sen paikan ottaa annosteluvirta (js/fokusvirta.js).
-    if (fokusvirtaOhittaaLehden(this, city)) return;
+    //
+    // KARTAN "ETSI AARRE" -NAPPI OHITTAA LUKON (omistaja 9.9.2026:
+    // *"se on tavallaan ensimmäinen askel aarteen etsintää, että löytää
+    // lehdestä sen"*). Nappi tulee vasta pulun kommentin jälkeen ja on
+    // pelaajan ainoa ovi eteenpäin — sen takaa lehden on auettava.
+    // Lippu on nimenomaan tässä yhdessä kutsussa: muualla lukko toimii
+    // kuten ennen (tällä hetkellä fokusvirtaOhittaaLehden palauttaa
+    // aina false, mutta lukko voidaan kytkeä takaisin päälle).
+    if (!ohitaLehtilukko && fokusvirtaOhittaaLehden(this, city)) return;
     if (this.lehtitila.arrivalShownFor === city.id && this.arrivalDialog.open) return;
     // Mitta kuntoon ennen kuin mitään sivutetaan (ks. varmistaLehtiMitta).
     this.varmistaLehtiMitta();

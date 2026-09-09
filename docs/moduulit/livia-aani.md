@@ -249,13 +249,46 @@ siis voi tulla luennan aikana. Nappi on HTML-elementti karttapinnalla
 (`js/etsi-aarre-nappi.js`, css `.etsi-aarre-nappi`), se seuraa karttaa
 panoroitaessa ja zoomatessa samalla kaavalla kuin pulun paikkamerkki
 (`ui.nakyvaAlue()`), ja se toimii sellaisenaan tasokartalla ja
-pallolaudalla. Painallus tekee saman kuin kortin "Etsi kätkö" — sama
-funktio (`js/ui.js etsiKatko`), ei kopiota. Nappi jää pois, jos
-kaupungissa ei ole enää kätköä etsittävänä (`ui.tehtavaNapinTila` →
-`js/game.js tehtavaTarjolla`), ja poistuu kolmesta syystä: painalluksesta,
-kätkön löytymisestä muuta kautta ja kaupungista lähdöstä (sama koukku
-kuin luentakuvalla, `vaiennaLivianKaupunkipuhe`). Selainvartio:
-`tools/savukkeet/savuke-etsi-aarre.mjs`.
+pallolaudalla.
+
+**Nappi avaa kaupunkilehden, ei aarretta** (omistaja 9.9.2026 klo 16.30,
+Raamattu ETSI AARRE -NAPPI AVAA KAUPUNKILEHDEN, EI AARRETTA SUORAAN:
+*"kun kartalle tulee etsi aarrennappi, niin sen pitäisi avata siis
+kaupunkilehti, eikä mennä suoraan aarteeseen. Se on tavallaan
+ensimmäinen askel aarteen etsintää, että löytää lehdestä sen.
+Aarrekysymyksen, mikä paljastaa aarretta vartioivan henkilön
+paikan."*). Painallus kutsuu `ui.avaaTutkinta(city, { ohitaLehtilukko:
+true })` — samaa ovea kuin alapalkin Tutki-nappi ja kaupungin laatan
+napautus — ja lehti aukeaa aina etusivulle (`rakennaSivut` päättyy
+`naytaTutkiSivu(ui, 0)`:aan). Nappi EI kutsu kortin `etsiKatko`-ketjua,
+joka sulkee lehden ja hyppää suoraan aarrekysymykseen; kortin oma
+"Etsi kätkö" -nappi jäi ennalleen.
+
+**Lehtilukko.** `ohitaLehtilukko` on tämän yhden napin oma reitti:
+`js/ui.js openArrival` ohittaa lipun kanssa `fokusvirtaOhittaaLehden`-
+portin, koska nappi tulee vasta pulun kommentin jälkeen ja on silloin
+pelaajan ensimmäinen askel eteenpäin. Lukko itse jää voimaan kaikkiin
+muihin avauskohtiin (tällä hetkellä se on joka tapauksessa auki —
+`fokusvirtaOhittaaLehden` palauttaa aina `false`, omistajan linjaus
+2.9.2026 — mutta lippu pitää napin toimivana, jos lukko kytketään
+takaisin päälle).
+
+**Lehden sulkeutuessa nappi palaa**, jos aarretta ei vielä löytynyt:
+lehti oli vain ensimmäinen askel, eikä kartalle saa jäädä umpikujaa,
+jos pelaaja selaa lehden kiinni löytämättä aarrekysymystä. Paluu on
+kiinni dialogin omassa `close`-tapahtumassa (Esc, taustanapautus ja
+sulkunappi laukaisevat sen kaikki) ja jää tekemättä, jos peli on
+siirtynyt tietovisaan (`game.phase === 'quiz'`), pelaaja on toisessa
+kaupungissa tai kätkö on löytynyt.
+
+Nappi jää pois, jos kaupungissa ei ole enää kätköä etsittävänä
+(`ui.tehtavaNapinTila` → `js/game.js tehtavaTarjolla`), ja poistuu
+kolmesta syystä: painalluksesta (kunnes lehti suljetaan), kätkön
+löytymisestä muuta kautta ja kaupungista lähdöstä (sama koukku kuin
+luentakuvalla, `vaiennaLivianKaupunkipuhe`). Selainvartio:
+`tools/savukkeet/savuke-etsi-aarre.mjs` (15 vartiota, pallolauta),
+kaappaus `etsi-aarre-lehti.png`. Testit:
+`tests/etsi-aarre-nappi.test.mjs`.
 
 ## Kaupunkikohtaiset lähteet
 
