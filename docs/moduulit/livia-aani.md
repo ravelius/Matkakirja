@@ -105,17 +105,59 @@ luentakuva: {
 Osoite ratkeaa samalla porrastuksella kuin kortin kuvilla ja `pollo.kuva`:lla
 (`osoite` → `ampari` → Commonsin `tiedosto`, `js/fokusvirta.js kuvanOsoite`).
 Kuva **esiladataan saapumisesta** (`esilataaLuentakuva`,
-`fokusvirtaSaapuminen`), **nousee** kartan päälle luennan alkaessa
-pehmeästi omaan kevyeen paneeliinsa (`naytaLuentakuva`, css
-`.fokusvirta-luentakuva`; selite ohuena rivinä kuvan alla ja lähde sen
-perässä, koska CC BY vaatii maininnan) ja **poistuu** kolmesta syystä:
-luenta päättyy (`js/luenta.js luennanLoppuun`, ilman äänitettä
-kirjoituskoneen tahti), kartta liikkuu (sama `pointerdown`, joka supistaa
-kuplapinon) tai pelaaja lähtee kaupungista
-(`vaiennaLivianKaupunkipuhe`). Napautus kuvaan avaa saman suurennoksen
-kuin kortin kuvat. Paneeli on karttapinnan keskikaistalla, jottei se
-peitä matkakirjakorttia (ylävasen) eikä pulun kuplia (oikea alanurkka).
-Ilman kenttää kaupungin kulku on täsmälleen ennallaan.
+`fokusvirtaSaapuminen`) ja **nousee** kartan päälle luennan alkaessa
+(`naytaLuentakuva`, css `.fokusvirta-luentakuva`). Napautus kuvaan avaa
+saman suurennoksen kuin kortin kuvat, suorassa. Paneeli on karttapinnan
+keskikaistalla, jottei se peitä matkakirjakorttia (ylävasen) eikä pulun
+kuplia (oikea alanurkka). Ilman kenttää kaupungin kulku on täsmälleen
+ennallaan.
+
+#### Ulkoasu: iso, vinossa, ilman laatikkoa (omistaja 9.9.2026 klo 13.50)
+
+Raamattu, LUENTAKUVA ISOMPANA, VINOSSA JA ILMAN LAATIKKOA. Kuva on
+kartalla **yksinään**: paneelilla ei ole reunusta, pintaa eikä
+sisennystä, ja ainoa ääriviiva on kuvan oma **paperireuna** (ohut
+kermakaista ja kevyt varjo). Paneeli on **hieman vinossa** — kulma on
+deterministinen kaupungin tunnuksesta (`luentakuvanKallistus`, haarukka
+−3,2°…−1,4°) ja kirjoitetaan css-muuttujaan, joten sama kaupunki on aina
+samassa asennossa.
+
+Kuvan **alla** on erillinen vaalea laatikko ilman ääriviivoja
+(`.fokusvirta-luentateksti`, sama seepia/kerma kuin korteilla, pehmeä
+pyöristys), ja siinä on **vain lyhyt kuvateksti**. Lähderiviä
+("Matkakirjan havainnekuva") **ei näytetä kartalla** — se kulkee pitkän
+kuvatekstin kanssa vasta suurennoksessa (`js/kuvatekstit.js`).
+
+Mitat ovat css-muuttujia yhdessä paikassa (`css/fokusvirta.css`):
+
+| muuttuja | työpöytä (≥ 900 px) | puhelin |
+| --- | --- | --- |
+| `--luentakuva-leveys` | `min(38vw, 640px)` | `min(80vw, 22rem)` |
+| `--luentakuva-korkeus` (kuvan katto) | `min(46vh, 26rem)` | `min(34vh, 15rem)` |
+| `--luentakuva-kallistus` | kaupungin oma, −3,2°…−1,4° | sama |
+| `--luentakuva-pienennys` | `0.45` | sama |
+
+2000 px:n ruudulla kuva on siis noin 640 px leveä (ennen n. 290 px).
+
+#### Kaksi kokoa: kartan liike pienentää, ei poista
+
+Omistaja: *"jos karttaa liikuttaa kuva saisi pienentyä pienemmäksi mutta
+jäädä kartalle niin kauan kuin kyseisessä kaupungissa ollaan."* Kuva
+**pienenee** (`pienennaLuentakuva`, luokka `pieni`, mittakaava
+`--luentakuva-pienennys`) kahdesta syystä:
+
+1. **kartan liike** — sama `pointerdown`, joka supistaa kuplapinon;
+2. **luennan loppu** (`js/luenta.js luennanLoppuun`, ilman äänitettä
+   kirjoituskoneen tahti).
+
+Pienennys kutistaa paneelin **alareunaansa kohti** (`transform-origin`),
+joten pieni kuva jää siihen kaistaan, josta iso lähti, ja
+kuvatekstilaatikko häipyy (lukukelvoton 45 %:n koossa). Pienen kuvan
+napautus avaa yhä suurennoksen.
+
+Kuva **poistuu vain kaupungista lähdettäessä**
+(`vaiennaLivianKaupunkipuhe` → `piilotaLuentakuva`); paluu samaan
+kaupunkiin nostaa ison uudelleen. Testit: `tests/luentakuva.test.mjs`.
 
 Vanha `pollo.maadoitus` on **varapolku** kaupungille, jota ei ole vielä
 kirjoitettu uusiksi: se piirtyy kommenttina eli luennan jälkeen kuten

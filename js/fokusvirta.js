@@ -1644,18 +1644,33 @@ function piirraJalkikuva(ui, kohde, kuva) {
  * KARTAN PÄÄLLÄ ja vain luennan ajan. Kortti pysyy kuvattomana.
  *
  * MITÄ TÄMÄ EI OLE: se ei ole kortti eikä kupla, siinä ei ole
- * sulkurastia eikä nappeja, eikä se jää ruudulle. Kuva nousee luennan
- * alkaessa, on kartan päällä kertojan puheen ajan ja häipyy pois. Kolme
- * asiaa vie sen: luennan loppu, kartan liike (sama ele, joka supistaa
- * kuplapinon, js/pollo.js seuraaSulkemista) ja lähtö kaupungista
- * (vaiennaLivianKaupunkipuhe).
+ * sulkurastia eikä nappeja eikä kehyslaatikkoa. Kuva on kartalla
+ * YKSINÄÄN, hieman vinossa — kuvan oma paperireuna riittää ääriviivaksi
+ * (omistaja 9.9.2026 klo 13.50, Raamattu LUENTAKUVA ISOMPANA, VINOSSA
+ * JA ILMAN LAATIKKOA, sanatarkasti: *"kuva saisi näkyä isompana ainakin
+ * tässä työpöytänäkymässä ja kuva saisi näkyä yksinään ilman laatikkoa
+ * hieman vinoon käännettynä. kuvan omat ääriviivat riittävät."*).
+ * Kuvan ALLA on erillinen vaalea laatikko ilman ääriviivoja, ja siinä
+ * VAIN LYHYT kuvateksti: lähderivi ("Matkakirjan havainnekuva") näkyy
+ * vasta suurennoksessa pitkän kuvatekstin kanssa (js/kuvatekstit.js).
+ *
+ * KAKSI KOKOA, EI KATOAMISTA KESKEN KAUPUNGIN (sama merkintä: *"jos
+ * karttaa liikuttaa kuva saisi pienentyä pienemmäksi mutta jäädä
+ * kartalle niin kauan kuin kyseisessä kaupungissa ollaan"*). Kuva nousee
+ * ISONA luennan alkaessa ja PIENENEE kahdesta syystä — kartan liike
+ * (sama pointerdown, joka supistaa kuplapinon, js/pollo.js
+ * seuraaSulkemista) ja luennan loppu. Pienenä se jää kartalle, ja sen
+ * napautus avaa yhä suurennoksen. VAIN LÄHTÖ KAUPUNGISTA POISTAA SEN
+ * (vaiennaLivianKaupunkipuhe); paluu samaan kaupunkiin nostaa ison
+ * uudelleen.
  *
  * PAIKKA RUUDULLA. Paneeli on karttapinnan keskivyöhykkeellä alalaidan
  * puolella (css .fokusvirta-luentakuva): matkakirjakortti on
  * ylävasemmalla ja pulun kuplat nousevat oikeasta alanurkasta, joten
  * ankkuri on alareunassa prosentteina — kortti kasvaa ylhäältä alas ja
  * kuplat alhaalta ylös, ja väliin jää se kaista, jossa kuva ei peitä
- * kumpaakaan.
+ * kumpaakaan. Pienennys kutistuu samaa alareunaa kohti
+ * (transform-origin), joten pieni kuva jää siihen, mistä iso lähti.
  *
  * KENTTÄ ON VAPAAEHTOINEN. Ilman `matkakirja.luentakuva`-kenttää
  * kaupungin kulku on täsmälleen ennallaan — mitään ei piirretä eikä
@@ -1684,6 +1699,34 @@ const LUENTAKUVAN_HANNANVARA_MS = 1200;
 
 /** Montako esiladattua luentakuvaa pidetään muistissa. */
 const LUENTAKUVAVARASTON_KATTO = 8;
+
+/**
+ * KALLISTUKSEN HAARUKKA ASTEINA (omistaja 9.9.2026: *"hieman vinoon
+ * käännettynä"*). Kuva on kartalla ilman kehystä, ja pieni kierto tekee
+ * siitä pöydälle jätetyn valokuvan eikä käyttöliittymän elementin.
+ *
+ * Kulma on DETERMINISTINEN kaupungin tunnuksesta: sama kaupunki
+ * kallistuu joka kerta samoin (satunnaisluku vaihtaisi kuvan asentoa
+ * kesken pelin, ja ruutukaappaus näyttäisi joka ajolla eriltä), mutta
+ * kaupungit eivät ole samassa asennossa. Mitat asuvat css-muuttujassa
+ * `--luentakuva-kallistus`; tämä vain valitsee luvun haarukasta.
+ */
+const LUENTAKUVAN_KALLISTUS = { alku: -3.2, loppu: -1.4 };
+
+/**
+ * Kaupungin oma kallistuskulma asteina (deterministinen tiiviste).
+ *
+ * @param {string} tunnus kaupungin id
+ * @returns {string} css-kulma, esim. '-2.4deg'
+ */
+export function luentakuvanKallistus(tunnus) {
+  let tiiviste = 0;
+  for (const merkki of String(tunnus ?? '')) {
+    tiiviste = (tiiviste * 31 + merkki.codePointAt(0)) % 100000;
+  }
+  const { alku, loppu } = LUENTAKUVAN_KALLISTUS;
+  return `${(alku + (tiiviste % 19) * ((loppu - alku) / 18)).toFixed(2)}deg`;
+}
 
 /**
  * Kaupungin luentakuva pakista, tai null.
@@ -1772,6 +1815,9 @@ export function naytaLuentakuva(ui, city) {
   const paneeli = html('div', 'fokusvirta-luentakuva');
   paneeli.setAttribute('role', 'group');
   paneeli.setAttribute('aria-label', `${city.name}: matkakirjan kuva`);
+  // Kallistus on kaupungin oma, mutta mitta asuu css-muuttujassa: css
+  // päättää miten kulmaa käytetään (nousu, pienennys, liikevähennys).
+  paneeli.style.setProperty('--luentakuva-kallistus', luentakuvanKallistus(city.id));
 
   const nappi = html('button', 'fokusvirta-kuva');
   nappi.type = 'button';
@@ -1791,13 +1837,21 @@ export function naytaLuentakuva(ui, city) {
   nappi.appendChild(img);
   nappi.addEventListener('click', () => avaaSuurennos(ui, [kuva], 0, () => nappi));
 
-  // Selite ohuena rivinä kuvan alla, lähde sen perässä: CC BY vaatii
-  // tekijän maininnan, eikä lisenssiehto jousta paneelin koon mukaan.
-  const kuvateksti = html('p', 'fokusvirta-kuvateksti');
-  kuvateksti.append(
-    html('span', 'fokusvirta-kuvaselite', kuvatekstiLyhyt(kuva)),
-    taytaLahderivi(html('span', 'fokusvirta-kuvalahde'), kuva.lahde ?? '', kuva),
-  );
+  /*
+   * LYHYT KUVATEKSTI OMASSA VAALEASSA LAATIKOSSAAN, EI LÄHDERIVIÄ
+   * (omistaja 9.9.2026: *"kuvan alle voisi tehdä oman vaalean laatikon
+   * ilman ääriviivoja, missä olisi lyhennetty kuvateksti. lyhennetystä
+   * kuvatekstistä pitää ottaa havainnekuva teksti pois ja jättää se
+   * vain pidempään kuvatekstiin näkyville."*).
+   *
+   * LÄHDE EI KATOA PELISTÄ: se näkyy suurennoksessa pitkän kuvatekstin
+   * kanssa (avaaSuurennos → taytaLahderivi), joka on tämän kuvan ainoa
+   * "avattu" muoto — sama sääntö kuin kaikkialla muualla pelissä
+   * (js/kuvatekstit.js). Kartalla oleva pikkuteksti ei ole kuvan
+   * julkaisupaikka vaan sen otsikko.
+   */
+  const kuvateksti = html('p', 'fokusvirta-kuvateksti fokusvirta-luentateksti');
+  kuvateksti.appendChild(html('span', 'fokusvirta-kuvaselite', kuvatekstiLyhyt(kuva)));
 
   paneeli.append(nappi, kuvateksti);
   koti.appendChild(paneeli);
@@ -1814,35 +1868,77 @@ export function naytaLuentakuva(ui, city) {
   globalThis.requestAnimationFrame?.(nayta);
   setTimeout(nayta, 50);
 
-  kytkeLuentakuvanSulku(ui, paneeli);
-  piilotaLuennanJalkeen(ui, city, paneeli,
+  kytkeLuentakuvanPienennys(ui, paneeli);
+  pienennaLuennanJalkeen(ui, city, paneeli,
     fokusvirtaSisalto(ui, city)?.matkakirja?.teksti ?? '');
   return true;
 }
 
 /**
- * KARTAN LIIKE VIE KUVAN (omistajan linjaus 9.9.2026; sama signaali
- * kuin kuplapinon supistuksessa, v1694). Vedon alku on `pointerdown`
- * kartalla — pallolaudalla ja tasokartalla sama tapahtuma — ja se
- * kulkee dokumenttiin asti, joten paneeli ei tarvitse omaa kytköstä
- * kartan sisälle.
+ * KARTAN LIIKE PIENENTÄÄ KUVAN — EI POISTA SITÄ (omistajan korjaus
+ * 9.9.2026 klo 13.50: *"jos karttaa liikuttaa kuva saisi pienentyä
+ * pienemmäksi mutta jäädä kartalle niin kauan kuin kyseisessä
+ * kaupungissa ollaan"*). Ensimmäinen versio (aamu) vei kuvan pois, ja
+ * silloin kartan pieninkin nykäisy hävitti kuvan, jota pelaaja oli
+ * juuri katsomassa.
+ *
+ * Signaali on sama kuin kuplapinon supistuksessa (v1694): vedon alku on
+ * `pointerdown` kartalla — pallolaudalla ja tasokartalla sama tapahtuma
+ * — ja se kulkee dokumenttiin asti, joten paneeli ei tarvitse omaa
+ * kytköstä kartan sisälle.
  *
  * Paneeli itse ja auki oleva suurennos rajataan pois: napautus kuvaan
  * on suurennoksen avaus eikä kartan liike, ja suurennoksen taustan
  * napautus sulkee suurennoksen — ei kuvaa sen alta.
+ *
+ * Kuuntelija jää paikalleen pienennyksen jälkeenkin (pienennä on
+ * idempotentti) ja irtoaa vasta piilotaLuentakuvassa: se on yhä sama
+ * yksi paikka, joka siivoaa paneelin jäljet.
  */
-function kytkeLuentakuvanSulku(ui, paneeli) {
+function kytkeLuentakuvanPienennys(ui, paneeli) {
   if (typeof document?.addEventListener !== 'function') return;
   const kasittele = (tapahtuma) => {
     if (tapahtuma.target?.closest?.('.fokusvirta-luentakuva, .fokuszoom')) return;
-    if (ui.luentakuva === paneeli) piilotaLuentakuva(ui);
+    if (ui.luentakuva === paneeli) pienennaLuentakuva(ui);
   };
   document.addEventListener('pointerdown', kasittele);
   ui.luentakuvaSulku = () => document.removeEventListener('pointerdown', kasittele);
 }
 
 /**
- * KUVA POISTUU LUENNAN PÄÄTTYESSÄ.
+ * ISO KUVA PIENEKSI, PAIKALLEEN JÄÄDEN.
+ *
+ * Pienennys on pelkkä luokanvaihto: css skaalaa paneelin
+ * (`--luentakuva-pienennys`) alareunaansa kohti ja häivyttää
+ * kuvatekstilaatikon, joten pieni kuva on kartalla peukalonkynnen
+ * kokoinen valokuva ilman tekstiä. Liike on transformia eikä
+ * asettelua, jotta kartan rasterointi ei kilpaile animaation kanssa
+ * (sama sääntö kuin nousulla ja suurennoksella).
+ *
+ * IDEMPOTENTTI: kartan jokainen veto kutsuu tätä, ja toinen kutsu ei
+ * saa tehdä mitään.
+ *
+ * @returns {boolean} pieneniko kuva tällä kutsulla
+ */
+export function pienennaLuentakuva(ui) {
+  const paneeli = ui?.luentakuva;
+  if (!paneeli || paneeli.classList.contains('pieni')) return false;
+  /*
+   * LUENNAN ODOTUS PÄÄTTYY TÄHÄN. Jos kartta liikahti kesken luennan,
+   * kuva on jo pienenä eikä luennan loppu tee sille enää mitään —
+   * ajastin jäisi muuten kysymään turhaan luennan loppua.
+   */
+  clearTimeout(ui.luentakuvaAjastin);
+  ui.luentakuvaAjastin = null;
+  paneeli.classList.add('pieni');
+  return true;
+}
+
+/**
+ * KUVA PIENENEE LUENNAN PÄÄTTYESSÄ — EI POISTU (omistaja 9.9.2026:
+ * kuva jää kartalle *"niin kauan kuin kyseisessä kaupungissa
+ * ollaan"*). Luennan loppu on siis sama tapahtuma kuin kartan liike:
+ * iso kuva kutistuu pieneksi ja jää.
  *
  * Ensisijainen kello on äänite (js/luenta.js luennanLoppuun) — sama
  * lupaus, jota pulun kommentti odottaa (fokusvirtaSaapumiskupla).
@@ -1853,15 +1949,19 @@ function kytkeLuentakuvanSulku(ui, paneeli) {
  * kertojatila 'ei', puuttuva mp3) luenta on se, mitä kortille
  * kirjoittuu — sama osuus tekstistä, eri kello, kuten välihuudolla
  * (ajastaHuudahdus).
+ *
+ * KAUPUNGINVAIHTO ON EDELLEEN POISTO: odotuksen aikana ehtii lähteä,
+ * ja toisen kaupungin kartalla tämä kuva ei kuulu edes pienenä.
  */
-function piilotaLuennanJalkeen(ui, city, paneeli, teksti) {
+function pienennaLuennanJalkeen(ui, city, paneeli, teksti) {
   const alku = Date.now();
-  const lopeta = () => { if (ui.luentakuva === paneeli) piilotaLuentakuva(ui); };
+  const lopeta = () => { if (ui.luentakuva === paneeli) pienennaLuentakuva(ui); };
   const kysy = (jaljella = LUENTAKUVAN_ODOTUSKATTO_MS) => {
     if (ui.dead || ui.luentakuva !== paneeli) return;
     // Pelaaja siirtyi toiseen kaupunkiin: kuva kuuluu vain siihen
-    // kaupunkiin, jonka luennan ajaksi se nousi.
-    if (ui.game?.cityOf?.()?.id !== city.id) { lopeta(); return; }
+    // kaupunkiin, jonka luennan ajaksi se nousi — ja silloin se
+    // POISTUU, ei pienene.
+    if (ui.game?.cityOf?.()?.id !== city.id) { piilotaLuentakuva(ui); return; }
     const luenta = luennanLoppuun(ui);
     if (luenta) { void luenta.then(lopeta); return; }
     if (jaljella > 0) {
@@ -1881,6 +1981,10 @@ function piilotaLuennanJalkeen(ui, city, paneeli, teksti) {
 
 /**
  * Luentakuva pois kartalta.
+ *
+ * TÄMÄ ON KAUPUNGISTA LÄHDÖN TIE (vaiennaLivianKaupunkipuhe) sekä
+ * uuden luennan ja rikkinäisen kuvan siivous. Kartan liike ja luennan
+ * loppu EIVÄT enää kulje täältä — ne pienentävät (pienennaLuentakuva).
  *
  * @param {object} ui
  * @param {object} [asetukset]
