@@ -1,3 +1,17 @@
+## 2026-09-09 08:55 UTC — KUVATOIMITUS → FABLE: Euroopan matkakirjan 45 kuvaa arvioinnissa, Pulu ja paperivedokset
+
+EUROOPPA-MATKAKIRJA-1873-20260909 on generoitu: kaikki 45 tilattua kaupunkia, yksi nykyinen peruskuva kutakin varten. Root on katsonut kuvat henkilökohtaisesti ja tarkistanut alkuperäiset, promptit, lähteet, 1536 × 1024 JPEG sRGB -tiedostot ja SHA-256:t. Kuvien käsikirjoituksena on tilauksen uusi 45 tekstin liite.
+
+Yksityinen arviointisivu: https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site , versio 166. Kansio Matkakirja — Eurooppa 1873 sisältää peruskuvat. Omistajan pyynnöstä Pariisin, Venetsian, Helsingin, Bukarestin ja Kööpenhaminan rinnalla on viisi uutta Pulu-vaihtoehtoa, jotka avautuvat Muut versiot -pikkukuvista. Tavallisen kyyhkyn identiteetti jää tarkoituksella avoimeksi.
+
+Omistaja hylkäsi Firenzen suurennetun David-lähikuvan. Nykyinen Firenze on v7, maan tasalta kuvattu laaja Piazza della Signorian näkymä, jossa David näkyy kokonaisena pienempänä osana ympäristöä. V4-lähikuva ja v5:n lämpimämpi aukionäkymä on säilytetty vertailuina.
+
+Omassa Matkakirja — paperivedokset -kansiossa on kuusi erillistä vedosta: Helsinki, Kööpenhamina, Kreeta sekä uudet Lontoo, Istanbul ja Dublin. Omistaja valitsi Kööpenhaminan vaalean vinjetin malliksi kolmelle jälkimmäiselle. Uusien kolmen kuvan arvio odottaa omistajaa; koko sarjan vedoskäsittelyä ei ole vielä tilattu jatkettavaksi.
+
+Varmennettu arviointisivun tila: 45 peruskuvaa + 5 Pulu-vaihtoehtoa + 6 paperivedosta + 2 aiempaa Firenze-versiota = 58 tiedostoa. Kaikista on yksityisen palvelimen takaisinluku- ja SHA-varmennus. Omistajan kuvavalinnat ja luovutus peliin ovat seuraava vaihe. Tästä erästä rootin varmennettu R2/pelitoimitus on edelleen 0; arviointisivun yksityiset osoitteet ovat arviointia varten. Pelin cityId/url/caption/sourceLine/sources/sha256/dimensions-items[] toimitetaan erikseen valintojen ja sovitun luovutuksen jälkeen.
+
+---
+
 ## 2026-09-09 07:16 UTC — KUVATOIMITUS: EUROOPPA-MATKAKIRJA-1873-20260909 vastaanotettu
 
 Vastaanotettu 45 kuvan tilaus ja molemmat liitteet postilaatikon kärjestä 97d20a1153b1d348234b8d20e9f365ec9329b77b. Tuotantojono on perustettu: 45 tilattua, 0 tämän sarjan kuvaa generoitu, 0 mediatoimitettua, 0 pelissä näytetyksi todennettua. Generointi ei ole vielä käynnistynyt; tämä seuranta vastaanottaa ja koordinoi tilaukset.
