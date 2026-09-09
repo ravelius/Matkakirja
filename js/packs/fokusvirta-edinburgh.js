@@ -188,11 +188,16 @@ export const FOKUSVIRTA_EDINBURGH = {
      */
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-edinburgh-r20260909-paper-v2.jpg',
-      lyhyt: 'Pyykkiä ja päällekkäisiä kulkureittejä Edinburghin Old Townissa '
-        + 'vuonna 1873.',
-      selite: 'Edinburgh, 1873: sukkapyykki riippuu monitasoisen porraskujan yllä, '
-        + 'nainen seisoo ovella ja linnakallio näkyy kaukana. Kuvitteellinen '
-        + 'kuja historiallisten rakennustyyppien pohjalta.',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Edinburgh, 1873. Sukat olivat oppineet asumaan korkealla.',
+      selite: 'Asetin kameran kujan portaalle ja huomasin vasta sitten, että '
+        + 'ylempänä kulki vielä toinenkin reitti. Pyykit yhdistivät '
+        + 'vastakkaisia taloja, vaikka niiden asukkaat joutuivat käyttämään '
+        + 'portaita. Linnan kallio näkyi rakennusten lomasta kuin peruste, '
+        + 'jonka päälle kaikki nämä mutkat oli kirjoitettu. Kuvaan mahtui '
+        + 'enemmän korkeutta kuin olin saanut karttaan. Sukat osasivat asian '
+        + 'ilman mittaamista.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://canmore.org.uk/site/52499/edinburgh-old-town',

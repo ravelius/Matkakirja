@@ -4216,6 +4216,15 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'TEKSTISESSION EHDOTUKSET OVAT OMISTAJAN SANA (omistaja 9.9.2026 klo '
+          + '21.20, sanatarkasti: "Olen kaynyt tekstit teksti session kanssa lapi, '
+          + 'joten hyvaksyn kaiken mita se ehdottaa sinulle"): Matkakirjan '
+          + 'tekstit -session postilaatikkoon toimittamat tekstit (kuvatekstit, '
+          + 'pulun repliikit, kuvakohtaiset ohjaukset) ovat omistajan sanaa ja '
+          + 'menevat peliin sanasta sanaan ilman erillista hyvaksyntaa; rajat '
+          + '(kupla 125, lyhyt kuvateksti 100) tarkistetaan ja ylitys raportoidaan '
+          + 'postiin. Ensimmainen sovellus: Venetsian albumirepliikki ja isoisan '
+          + 'kuvien uudet kuvatekstit sailytettaville kuville.',
         'PULUCAM SUORAAN PELIIN VAIN TEKSTISESSION PROMPTEISTA; TARRA B; ISOISAN '
           + 'KUVISTA UUSITAAN VAIN TEKSTIIN OSUMATTOMAT (omistaja 9.9.2026 klo '
           + '18.59-19.41 postilaatikon kautta, sanatarkasti: "Voit laittaa '

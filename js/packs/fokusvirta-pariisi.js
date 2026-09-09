@@ -125,10 +125,16 @@ export const FOKUSVIRTA_PARIISI = {
      */
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260909-paper-v2.jpg',
-      lyhyt: 'Leipää kantava mies keskeneräisen Palais Garnier’n edessä vuonna '
-        + '1873.',
-      selite: 'Pariisi, 1873: leipää kantava mies pysähtyy keskeneräisen Palais '
-        + 'Garnier’n rakennustyömaalle; pieni kyyhky seisoo sivummalla kivellä.',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Pariisi, 1873. Ooppera harjoitteli juhlapukuaan.',
+      selite: 'Telineet pitivät vielä kiinni uudesta oopperasta, mutta koristeet '
+        + 'näyttivät jo odottavan yleisöä. Garnier\'n talossa arki '
+        + 'työskentelee parhaillaan juhlan hyväksi: kivipölyä, lautoja ja '
+        + 'paljon käsipareja, jotta joku myöhemmin voisi vain astua sisään '
+        + 'parhaassa takissaan. Odotin valon siirtymistä pylväälle. Se osasi '
+        + 'tehdä rakennukselle enemmän kuin lyhyt vierailuni '
+        + 'rakennusmestarina olisi saanut aikaan.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.parismuseescollections.paris.fr/en/node/490866',

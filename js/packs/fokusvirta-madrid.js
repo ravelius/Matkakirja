@@ -156,10 +156,15 @@ export const FOKUSVIRTA_MADRID = {
      */
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-madrid-r20260909-paper-v2.jpg',
-      lyhyt: 'Vierailija katsoo Las Meninasia Madridin Pradossa vuonna 1873.',
-      selite: 'Madrid, 1873: nimetön vierailija istuu Pradon salissa Las Meninasin '
-        + 'edessä. Historiallinen ripustus ja maalauksen kuvapinta ovat '
-        + 'generoituja tulkintoja, eivät tarkka museonäkymä tai teosjäljennös.',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Madrid, 1873. Maalari huomasi katsojansa ensin.',
+      selite: 'Velázquezin maalauksen edessä huoneen järjestys tuntui vaihtuvan '
+        + 'katsomisen aikana. Kuvassa on hoviväkeä, peilissä kuningaspari ja '
+        + 'maalari itse työnsä ääressä. Koira makaa lattialla '
+        + 'velvollisuuksista erillään. Asetin kameran niin, että taulun ja '
+        + 'tämän salin väliin jäi tyhjää tilaa. Sitä katsellessa en ollut '
+        + 'varma, kummassa huoneessa vierailija oikeastaan seisoo.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.museodelprado.es/en/learn/encyclopedia/voice/meninas-las-velazquez/296ac38f-8bf6-439d-b13c-ed22de8c39de',
