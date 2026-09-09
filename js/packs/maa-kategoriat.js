@@ -54510,6 +54510,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Strutsi, jonka kaula on sininen',
           aika: '2014',
           tiedosto: 'Struthio molybdophanes 443006323.jpg',
+          lyhyt: 'Somalianstrutsin koiras Etiopiassa: kaulan siniharmaa iho erottaa lajin afrikanstrutsista.',
           selite: 'Somalianstrutsin koiras Etiopiassa: kaulan siniharmaa '
             + 'iho ja valkoisen kaularenkaan puuttuminen erottavat lajin '
             + 'afrikanstrutsista.',
@@ -54529,6 +54530,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Villiaasi, jonka jaloissa on seepran raidat',
           tiedosto: 'Equus africanus somaliensis - Réserve africaine de Sigean 01.jpg',
+          lyhyt: 'Somalianvilliaasi Sigeanin eläinpuistossa Ranskassa, jossa lajia on kasvatettu vuodesta 1987.',
           selite: 'Somalianvilliaasin jalkojen raidat näkyvät parhaiten '
             + 'sivusta; kuvan yksilö on Sigeanin eläinpuistossa Ranskassa, '
             + 'jossa lajia on kasvatettu vuodesta 1987.',
@@ -54598,6 +54600,7 @@ export const MAA_KATEGORIAT = {
             + 'ndebelet joutuivat väistymään, ja yhteenotot '
             + 'zulukuningaskunnan kanssa alkoivat murentaa sitä. Suuri '
             + 'vaellus on afrikaanerien perustarina.',
+          lyhyt: 'Smithardin ja Skeltonin kuvitus 1909 esittää voortrekkerien vankkurijonoa matkalla sisämaahan.',
           selite: 'G. S. Smithardin ja J. R. Skeltonin kuvitus vuodelta 1909 '
             + 'esittää voortrekkerien vankkurijonoa matkalla sisämaahan.',
           lahde: 'G. S. Smithard ja J. R. Skelton, Wikimedia Commons (PD)',
@@ -54620,6 +54623,7 @@ export const MAA_KATEGORIAT = {
             + 'elinkautiseen. Käsittely nauhoitettiin 591 '
             + 'Dictabelt-nauhalle, ja Unesco liitti asiakirjat Maailman '
             + 'muisti -rekisteriin 2007.',
+          lyhyt: 'Liliesleafin maatila Rivoniassa oli ANC:n aktivistien kokoushuone; poliisi ratsasi sen 1963.',
           selite: 'Liliesleafin maatilan ruokokattoinen rakennus Rivoniassa oli '
             + 'ANC:n aktivistien salainen kokoushuone, ja poliisi ratsasi sen '
             + 'heinäkuussa 1963.',
@@ -54695,6 +54699,7 @@ export const MAA_KATEGORIAT = {
             + 'puhuvat toisilleen. Kotimaiset bantukielet jakautuvat '
             + 'kahtia: nguni-kieliä puhutaan itärannikolla ja '
             + 'sotho–tswana-kieliä sisämaassa pohjoisessa.',
+          lyhyt: 'Perustuslakituomioistuin Constitution Hillillä Johannesburgissa; nimi on maan virallisilla kielillä.',
           selite: 'Perustuslakituomioistuin toimii Constitution Hillillä '
             + 'Braamfonteinissa Johannesburgissa, ja sen nimi on kirjoitettu '
             + 'sisäänkäyntiin maan virallisilla kielillä.',
@@ -54876,6 +54881,7 @@ export const MAA_KATEGORIAT = {
             + 'ruokansa ensin suurille lehdille, mutta tauko oli lyhyt '
             + 'ja leipä nopeampi astia. Neljännesannosta kutsutaan '
             + 'monin paikoin nimellä kota.',
+          lyhyt: 'Bunny chow syntyi Durbanissa 1940-luvulla: onteloksi kaiverrettu leipä toimii astiana ja ateriana.',
           selite: 'Bunny chow syntyi Durbanissa 1940-luvulla, ja onteloksi '
             + 'kaiverrettu leipä on sekä astia että osa ateriaa.',
           lahde: 'Lucinda Jolly, Wikimedia Commons (CC BY-SA 4.0)',
@@ -54895,6 +54901,7 @@ export const MAA_KATEGORIAT = {
             + 'mikrobeja hillitsevä vaikutus. Paikallisen kertomuksen '
             + 'mukaan 1600-luvun uudisasukkaat kuivattivat lihasuikaleita '
             + 'satulan alla hevosen suolaisessa hiessä.',
+          lyhyt: 'Biltong kuivataan ilmassa kuumentamatta ja maustetaan muun muassa korianterilla ja pippurilla.',
           selite: 'Biltong kuivataan ilmassa eikä kuumenneta lainkaan, ja se '
             + 'maustetaan muun muassa korianterilla ja pippurilla.',
           lahde: 'Delia du Plessis, Wikimedia Commons (CC BY-SA 3.0)',
@@ -54916,6 +54923,7 @@ export const MAA_KATEGORIAT = {
             + 'mursi sen auki: sisällä oli aitta. Piirilääkäri Pieter le '
             + 'Fras Nortier kehitti löydöstä viljelymenetelmän. EU '
             + 'myönsi rooiboksille alkuperäsuojan 2021.',
+          lyhyt: 'Rooibos kasvaa Länsi-Kapin Cederbergissä; sen viljely ratkaistiin Clanwilliamissa 1930-luvulla.',
           selite: 'Rooibos-pensas Aspalathus linearis kasvaa Länsi-Kapin '
             + 'Cederbergissä, ja Clanwilliamin seudulla ratkaistiin '
             + '1930-luvulla, miten sitä voi viljellä.',
@@ -54966,6 +54974,7 @@ export const MAA_KATEGORIAT = {
             + 'kirjaimellisesti "erilaiset ihmiset yhdistyvät". '
             + 'Edellinen, vuodesta 1910 käytössä ollut vaakuna oli '
             + 'latinankielinen.',
+          lyhyt: 'Linton-lohkare on Iziko South African Museumin kokoelmissa; siitä on poimittu vaakunan ihmishahmot.',
           selite: 'Linton-lohkare on Iziko South African Museumin kokoelmissa '
             + 'Kapkaupungissa, ja siitä on poimittu vaakunan kaksi '
             + 'ihmishahmoa.',
@@ -55085,6 +55094,7 @@ export const MAA_KATEGORIAT = {
               + 'ehdolla, että tämä nai portugalilaisen. Haltija sai käydä kauppaa '
               + 'kaikella, pitää järjestystä ja koota oman armeijan. Teten maakunnassa '
               + '1800-luvulla 32 tilanherraa hallitsi 57:ää prazoa.',
+          lyhyt: 'Rigobert Bonnen kartta 1770 nimeää Itä-Afrikan rannikon valtakunnat ja Mosambikin kanaalin.',
           selite: 'Rigobert Bonnen vuoden 1770 kartta Itä-Afrikan rannikosta nimeää '
             + 'Monomotapan, Sofalan, Manican ja Inhambanen valtakunnat sekä Mosambikin '
             + 'kanaalin.',
@@ -55155,6 +55165,7 @@ export const MAA_KATEGORIAT = {
               + 'mahdollisia tuntemattomia luonnon keskittymiä — siksi Mabua sanotaan '
               + 'yhä Googlen metsäksi. Metsästä on kuvattu 126 lintulajia sekä oma '
               + 'kameleontti, hevosenkenkäyökkö, pensaskyy ja kolme perhoslajia.',
+          lyhyt: 'ASTER-satelliittikuva Mabu-vuoresta lokakuulta 2023 kattaa 26,7 kertaa 28,8 kilometrin alan.',
           selite: 'ASTER-instrumentin satelliittikuva Mabu-vuoresta lokakuulta 2023; kuva '
             + 'kattaa 26,7 kertaa 28,8 kilometrin alan.',
           lahde: 'NASA/METI/AIST/Japan Space Systems ja U.S./Japan ASTER Science Team, Wikimedia Commons (PD)',
@@ -55172,6 +55183,7 @@ export const MAA_KATEGORIAT = {
               + 'retkikunta kiipesi seinämät. Metsän arveltiin olevan koskematon, '
               + 'mutta huipun puronsilmäkkeeltä löytyi useita ruukkuja, jotka joku oli '
               + 'asettanut sinne ennen heitä.',
+          lyhyt: 'SkySat-satelliitti kuvasi Lico-vuoren maaliskuussa 2020; kraatterin metsä on maan koskemattomimpia.',
           selite: 'Planet Labsin SkySat-satelliitti kuvasi Lico-vuoren 15. maaliskuuta 2020; '
             + 'kraatterin metsä on maan viimeisiä koskemattomia.',
           lahde: 'Planet Labs, Wikimedia Commons (CC BY 4.0)',
@@ -55190,6 +55202,7 @@ export const MAA_KATEGORIAT = {
               + 'teeviljelmiä — lähin kaupunki Gurué on maan suurin teetila — ja '
               + 'alkuperäismetsä on jäljellä vain ylimpänä ja purolaaksojen '
               + 'käytävissä.',
+          lyhyt: 'Gurué\'n vuoristoa Zambezian maakunnassa; Namulin graniittikupoli kohoaa koilliseen.',
           selite: 'Gurué’n seudun vuoristoa Zambezian maakunnassa; Namulin '
             + 'graniittikupoli kohoaa kaupungista koilliseen.',
           lahde: 'Armindo Pascoal Timóteo Culeco, Wikimedia Commons (CC BY-SA 4.0)',
@@ -55206,6 +55219,7 @@ export const MAA_KATEGORIAT = {
               + 'jäävät sen yläpuolelle, vaikka syvin kohta on 706 metriä. David '
               + 'Livingstone antoi järvelle 1859 kaksi lisänimeä: tähtien järvi, koska '
               + 'kalastajien lyhdyt näyttivät kaukaa tähdiltä, ja myrskyjen järvi.',
+          lyhyt: 'Niassajärven suojelualue Mosambikissa kattaa noin 600 neliökilometriä järveä ja kylien rantoja.',
           selite: 'Niassajärven suojelualue Mosambikin puolella kattaa noin kuusisataa '
             + 'neliökilometriä järveä ja kahdenkymmenen kylän rannat.',
           lahde: 'USAID Africa Bureau, Wikimedia Commons (PD)',
@@ -55232,6 +55246,7 @@ export const MAA_KATEGORIAT = {
               + 'chilihiutaleet ovat tavallinen mauste, mutta itse lehtien maku on '
               + 'mieto ja hieman maanläheinen — kookos ja maapähkinä kantavat '
               + 'kastikkeen.',
+          lyhyt: 'Matapa tarjoillaan riisin kanssa; kastikkeen vihreä väri tulee jauhetuista maniokinlehdistä.',
           selite: 'Matapa tarjoillaan tavallisesti riisin kanssa, ja kastikkeen vihreä väri '
             + 'tulee jauhetuista maniokinlehdistä.',
           lahde: 'PrestigiousSwazi, Wikimedia Commons (CC BY-SA 4.0)',
@@ -55266,6 +55281,7 @@ export const MAA_KATEGORIAT = {
               + 'Chamussa on samosan mosambikilainen serkku, caril de camarão '
               + 'katkarapucurry ja frango à Zambeziana kookosmaidossa haudutettu '
               + 'tulinen kanapata.',
+          lyhyt: 'Caril de camarão com quiabos eli katkarapucurry okran kanssa tunnetaan Goassa ja Mosambikissa.',
           selite: 'Caril de camarão com quiabos eli katkarapucurry okran kanssa tunnetaan '
             + 'sekä Goassa että Mosambikissa.',
           lahde: 'Adriao, Wikimedia Commons (CC BY 3.0)',
@@ -55283,6 +55299,7 @@ export const MAA_KATEGORIAT = {
               + 'kuluttajille kuorineen. Mosambikissa jauhetusta cashewsta ja '
               + 'perunamuusista leivotaan bolo polana, ja chopit käyttävät sekä '
               + 'cashewta että mandariineja väkijuomiin.',
+          lyhyt: 'Kypsä cashewomena ja sen luumarja Goasta, jonne portugalilaiset veivät kasvin 1500-luvulla.',
           selite: 'Kypsä cashewomena ja sen päässä kasvava luumarja, jonka sisällä on yksi '
             + 'siemen; kuva on Goasta, jonne portugalilaiset veivät kasvin 1500-luvulla.',
           lahde: 'Dr. Raju Kasambe, Wikimedia Commons (CC BY-SA 3.0)',
@@ -55322,6 +55339,7 @@ export const MAA_KATEGORIAT = {
               + 'kehittyneimpänä, mitä kirjoitustaidottomien kansojen parista on '
               + 'löydetty, ja Unesco julisti timbilan 2005 ihmiskunnan aineettoman '
               + 'perinnön mestariteokseksi.',
+          lyhyt: 'Chopien mbila kapuloineen oli esillä Mosambikin paviljongissa Venetsian biennaalissa 2015.',
           selite: 'Chopien mbila ja sen kumipäiset kapulat olivat esillä Mosambikin '
             + 'paviljongissa Venetsian biennaalissa 2015.',
           lahde: 'Jean-Pierre Dalbéra, Wikimedia Commons (CC BY 2.0)',
