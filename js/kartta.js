@@ -33,6 +33,7 @@ import { el } from './mapart.js';
 import { sfx } from './sound.js';
 // Ajon keston sovitus asuu koreografiassa (js/siirtokoreografia.js):
 // pallolaudan kamera tarvitsee sen ilman tätä moduulia.
+import { saapumisenKameranKohta } from './saapumisasento.js';
 import { sovitaAjonKesto } from './siirtokoreografia.js';
 import { fokusmoodiPaalla, kehittajaMaailmaPaalla, kehittajaTilaPaalla } from './ui-apurit.js';
 
@@ -1896,7 +1897,31 @@ export class Kartta extends NukkuvaKartta {
     const kerroin = kohde.leveys > 0
       ? (paneW / kohde.leveys) / yleis
       : (kohde.kerroin ?? this.zoomiKerroin);
-    return { x: kohde.x, y: kohde.y, kerroin: rajaa(kerroin) };
+    const rajattu = rajaa(kerroin);
+    /*
+     * SAAPUMISASENTO — SAMA KAAVA KUIN PALLOLLA (js/saapumisasento.js;
+     * omistaja 9.9.2026, Raamattu SAAPUMISESSA KAMERA ASETTUU NIIN, ETTA
+     * KAUPUNKI ON ALIMMASSA KOLMANNEKSESSA). Kamera keskittää aina
+     * näkymän keskipisteen, joten kaupunki viedään alimpaan
+     * kolmannekseen siirtämällä KOHDISTUSPISTETTÄ — laudan pisteet
+     * pysyvät paikoillaan. Vain saapumisajo antaa lipun, joten pelaajan
+     * oma panorointi ja zoomi eivät kulje täältä.
+     *
+     * Tasokartta nukkuu (js/ui-apurit.js VANHA_KARTTA_KAYTOSSA false),
+     * mutta kaava pidetään yhteisenä: kun lauta joskus herää, asento on
+     * sama eikä sitä tarvitse keksiä uudestaan.
+     */
+    if (kohde.saapuminen) {
+      const asento = saapumisenKameranKohta({
+        x: kohde.x,
+        y: kohde.y,
+        leveys: paneW / (rajattu * yleis),
+        paneW,
+        paneH,
+      });
+      if (asento) return { x: asento.x, y: asento.y, kerroin: rajattu };
+    }
+    return { x: kohde.x, y: kohde.y, kerroin: rajattu };
   }
 
   /**

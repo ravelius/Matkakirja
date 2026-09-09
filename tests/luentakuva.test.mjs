@@ -44,6 +44,7 @@ import {
   luentakuvanKallistus, naytaLuentakuva, pienennaLuentakuva,
   piilotaLuentakuva,
 } from '../js/fokusvirta.js';
+import { laudaltaRuudulle, ruudultaLaudalle } from '../js/saapumisasento.js';
 import { julisteUrl } from '../js/media.js';
 import { valokuvaUrl, valokuvaVara } from '../js/packs/africa-valokuvat.js';
 import { fokusvirtaKaupungille } from '../js/packs/fokusvirrat.js';
@@ -166,8 +167,14 @@ class Elementti {
     this.kuuntelijat.set(laji, lista.filter((k) => k !== kasittelija));
   }
 
-  dispatch(laji) {
-    [...(this.kuuntelijat.get(laji) ?? [])].forEach((k) => k({ type: laji, target: this }));
+  /*
+   * `lisa` on osoittimen omat kentät (clientX, clientY, pointerId):
+   * luentakuvan raahaus lukee ne, ja ilman niitä siirto olisi aina
+   * nollan mittainen eikä testi näkisi kynnystä lainkaan.
+   */
+  dispatch(laji, lisa = {}) {
+    [...(this.kuuntelijat.get(laji) ?? [])]
+      .forEach((k) => k({ type: laji, target: this, ...lisa }));
   }
 
   get isConnected() {
@@ -484,4 +491,238 @@ test('jokaisella pakin luentakuvalla on osoite, selite ja lähde', async () => {
     // CC BY vaatii tekijän maininnan; lähde on siksi pakollinen.
     assert.ok(String(kuva.lahde ?? '').trim(), `${id}: luentakuvalta puuttuu lähde`);
   }
+});
+
+/* ---------------------------------------------------------------- */
+/* 6. Ankkuri kartan kohdassa, saapumisasento ja raahaus             */
+/* ---------------------------------------------------------------- */
+
+/*
+ * Omistaja 9.9.2026 klo 16.10 ja 16.15 (Raamattu, SAAPUMISESSA KAMERA
+ * ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA KOLMANNEKSESSA JA LUENTAKUVA
+ * SEN YLAPUOLELLA HIEMAN OIKEALLA; LUENTAKUVAA VOI ITSE LIIKUTTAA, JA SE
+ * ON ANKKUROITU KARTAN KOHTAAN).
+ *
+ * Kolme asiaa, jotka eivät näy diffistä:
+ *   - kuva nousee KAUPUNGIN YLÄPUOLELLE ja hieman oikealle, ei css:n
+ *     alareunan kaistaan;
+ *   - paikka on LAUDAN piste, joten kartan siirto vie kuvaa mukanaan
+ *     eikä ankkuri muutu;
+ *   - raahaus vaihtaa ankkurin, mutta napautus ei — sama ele erotetaan
+ *     pelkästä liikekynnyksestä.
+ *
+ * Ilman karttapintaa (ui.mapPane) ankkurointia ei tehdä lainkaan; yllä
+ * olevat testit ajavat siis täsmälleen vanhan kulun, ja tämä osio antaa
+ * ui:lle pinnan ja näkyvän alueen.
+ */
+
+const PINNAN_LEVEYS = 430;
+const PINNAN_KORKEUS = 930;
+/** Kaupunki laudalla; sen ruutupaikka valitaan näkyvällä alueella. */
+const KOEKAUPUNKI_KARTALLA = { ...KOEKAUPUNKI, x: 5000, y: 3100 };
+/** Kaupungin tavoitepaikka saapumisasennossa (alin kolmannes). */
+const KAUPUNKI_RUUDULLA = { x: PINNAN_LEVEYS * 0.42, y: PINNAN_KORKEUS * 0.78 };
+
+/** Karttapinta: vain ne mitat, joita ankkurointi lukee. */
+function tekoPinta() {
+  return {
+    clientWidth: PINNAN_LEVEYS,
+    clientHeight: PINNAN_KORKEUS,
+    getBoundingClientRect: () => ({
+      left: 0, top: 0, width: PINNAN_LEVEYS, height: PINNAN_KORKEUS,
+    }),
+  };
+}
+
+/**
+ * Näkyvä alue, jolla kaupunki osuu haluttuun kohtaan ruudulla — sama
+ * kuva kuin saapumisajon jälkeen.
+ */
+function tekoAlue(skaala = PINNAN_LEVEYS / 240) {
+  const keskusX = KOEKAUPUNKI_KARTALLA.x - (KAUPUNKI_RUUDULLA.x - PINNAN_LEVEYS / 2) / skaala;
+  const keskusY = KOEKAUPUNKI_KARTALLA.y - (KAUPUNKI_RUUDULLA.y - PINNAN_KORKEUS / 2) / skaala;
+  const w = PINNAN_LEVEYS / skaala;
+  const h = PINNAN_KORKEUS / skaala;
+  return {
+    x: keskusX - w / 2, y: keskusY - h / 2, w, h, skaala,
+  };
+}
+
+/** Tekopeli, jolla on karttapinta ja näkyvä alue. */
+function kartallinenUi() {
+  const tila = { alue: tekoAlue() };
+  return {
+    game: {
+      pack: { id: 'maailmankartta' },
+      player: {},
+      cityOf: () => KOEKAUPUNKI_KARTALLA,
+    },
+    mapPane: tekoPinta(),
+    contentBox: { w: 12000, h: 6000 },
+    nakyvaAlue: () => tila.alue,
+    // Testin oma kahva: kartan panorointi vaihtaa näkyvää aluetta.
+    siirraKarttaa: (dx, dy) => { tila.alue = { ...tila.alue, x: tila.alue.x + dx, y: tila.alue.y + dy }; },
+  };
+}
+
+/*
+ * Luentakuvan ankkurin ruutupaikka juuri nyt.
+ *
+ * Paikka asuu ANKKURISOLMUSSA paneelin ympärillä, ei paneelissa:
+ * paneelin oma transform animoituu (nousu, pienennys), ja
+ * kehyskohtainen paikanvaihto jäisi siirtymän alle (js/fokusvirta.js
+ * paivitaLuentakuvanPaikka).
+ */
+function ankkurinPaikka(naytto) {
+  return {
+    x: Number.parseFloat(naytto.solmu.style['--luentakuva-x']),
+    y: Number.parseFloat(naytto.solmu.style['--luentakuva-y']),
+  };
+}
+
+test('luentakuva ankkuroituu kaupungin yläpuolelle ja hieman oikealle', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = kartallinenUi();
+    assert.equal(naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA), true);
+    const paneeli = ui.luentakuva;
+    assert.ok(paneeli.classList.contains('ankkuroitu'),
+      'kartan kohtaan sidottu kuva tarvitsee oman asemointiluokkansa');
+
+    const paikka = ankkurinPaikka(ui.luentakuvaAnkkuri);
+    assert.ok(paikka.y < KAUPUNKI_RUUDULLA.y,
+      `kuvan alareuna ${paikka.y} ei ole kaupungin pisteen (${KAUPUNKI_RUUDULLA.y}) yläpuolella`);
+    assert.ok(paikka.x > KAUPUNKI_RUUDULLA.x,
+      `kuvan keskilinja ${paikka.x} ei ole kaupungista oikealle`);
+    // Leveys on laskettu (ei css:n oletusta): se mahtuu pinnalle.
+    const leveys = Number.parseFloat(paneeli.style['--luentakuva-leveys']);
+    assert.ok(leveys > 0 && leveys <= PINNAN_LEVEYS, `leveys ${leveys} ei ole pinnan mitoissa`);
+
+    piilotaLuentakuva(ui, { heti: true });
+    assert.equal(ui.luentakuvaAnkkuri, null, 'ankkuri jäi roikkumaan poiston jälkeen');
+  });
+});
+
+test('kartan siirto vie kuvaa mukanaan, ankkuri pysyy samana kartan kohtana', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = kartallinenUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA);
+    const naytto = ui.luentakuvaAnkkuri;
+    const ankkuri = { ...naytto.ankkuri };
+    const ennen = ankkurinPaikka(naytto);
+
+    // Kartta panoroi 30 lautayksikköä itään ja 10 etelään.
+    ui.siirraKarttaa(30, 10);
+    const skaala = ui.nakyvaAlue().skaala;
+    const jalkeen = laudaltaRuudulle(
+      naytto.ankkuri, ui.nakyvaAlue(), PINNAN_LEVEYS, PINNAN_KORKEUS, ui.contentBox.w,
+    );
+
+    assert.deepEqual(naytto.ankkuri, ankkuri, 'kartan liike ei saa muuttaa ankkuria');
+    assert.ok(Math.abs(jalkeen.x - (ennen.x - 30 * skaala)) < 0.2,
+      'kuva ei seurannut karttaa vaakasuunnassa');
+    assert.ok(Math.abs(jalkeen.y - (ennen.y - 10 * skaala)) < 0.2,
+      'kuva ei seurannut karttaa pystysuunnassa');
+
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+test('raahaus siirtää ankkurin uuteen kartan kohtaan', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = kartallinenUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA);
+    const naytto = ui.luentakuvaAnkkuri;
+    const paneeli = naytto.paneeli;
+    const ennen = { ...naytto.ankkuri };
+    const skaala = ui.nakyvaAlue().skaala;
+
+    paneeli.dispatch('pointerdown', { clientX: 200, clientY: 400, pointerId: 1, button: 0 });
+    paneeli.dispatch('pointermove', { clientX: 248, clientY: 372, pointerId: 1 });
+    paneeli.dispatch('pointerup', { clientX: 248, clientY: 372, pointerId: 1 });
+
+    assert.ok(naytto.raahattu, 'raahausta ei tunnistettu');
+    assert.ok(Math.abs((naytto.ankkuri.x - ennen.x) - 48 / skaala) < 1e-6,
+      'ankkuri ei siirtynyt sormen mukana oikealle');
+    assert.ok(Math.abs((naytto.ankkuri.y - ennen.y) + 28 / skaala) < 1e-6,
+      'ankkuri ei siirtynyt sormen mukana ylös');
+
+    // Ankkuri on kartan kohta: sama piste ruudulla ja takaisin laudalle.
+    const paikka = ankkurinPaikka(ui.luentakuvaAnkkuri);
+    const takaisin = ruudultaLaudalle(paikka, ui.nakyvaAlue(), PINNAN_LEVEYS, PINNAN_KORKEUS);
+    assert.ok(Math.abs(takaisin.x - naytto.ankkuri.x) < 0.05
+      && Math.abs(takaisin.y - naytto.ankkuri.y) < 0.05,
+    'ruutupaikka ja ankkuri eivät vastaa toisiaan');
+
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+test('napautus ilman liikettä ei siirrä ankkuria — se jää suurennoksen eleeksi', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = kartallinenUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA);
+    const naytto = ui.luentakuvaAnkkuri;
+    const paneeli = naytto.paneeli;
+    const ennen = { ...naytto.ankkuri };
+
+    // Sormi liikahtaa kolme pikseliä: napautus, ei raahaus.
+    paneeli.dispatch('pointerdown', { clientX: 200, clientY: 400, pointerId: 1, button: 0 });
+    paneeli.dispatch('pointermove', { clientX: 202, clientY: 402, pointerId: 1 });
+    paneeli.dispatch('pointerup', { clientX: 202, clientY: 402, pointerId: 1 });
+
+    assert.equal(naytto.raahattu, false, 'napautus tulkittiin raahaukseksi');
+    assert.deepEqual(naytto.ankkuri, ennen, 'napautus siirsi ankkuria');
+
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+test('raahauksen jälkeinen klikki ei avaa suurennosta, seuraava avaa', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = kartallinenUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA);
+    const naytto = ui.luentakuvaAnkkuri;
+    const nappi = naytto.paneeli.querySelector('.fokusvirta-kuva');
+
+    naytto.paneeli.dispatch('pointerdown', { clientX: 200, clientY: 400, pointerId: 1, button: 0 });
+    naytto.paneeli.dispatch('pointermove', { clientX: 260, clientY: 400, pointerId: 1 });
+    naytto.paneeli.dispatch('pointerup', { clientX: 260, clientY: 400, pointerId: 1 });
+    assert.ok(naytto.raahattu);
+
+    // Selain lähettää klikin raahauksen päätteeksi: sen on vaiettava.
+    nappi.dispatch('click');
+    assert.equal(asiakirja.querySelectorAll('.fokuszoom').length, 0,
+      'raahaus avasi suurennoksen');
+    assert.equal(naytto.raahattu, false, 'lippu ei nollautunut');
+
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+test('raahaus ei pienennä kuvaa (ele ei ole kartan liike)', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = kartallinenUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA);
+    const paneeli = ui.luentakuva;
+    // Sama pointerdown, joka kartalta tulisi, mutta kohteena on paneeli.
+    kartanVeto(paneeli);
+    assert.ok(!paneeli.classList.contains('pieni'),
+      'kuvan oma ele ei ole kartan liike');
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+test('pienennetty kuva pysyy ankkurissaan kartan kohdan päällä', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = kartallinenUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA);
+    const naytto = ui.luentakuvaAnkkuri;
+    const ennen = { ...naytto.ankkuri };
+    kartanVeto();
+    assert.ok(ui.luentakuva.classList.contains('pieni'), 'kartan veto ei pienentänyt');
+    assert.deepEqual(naytto.ankkuri, ennen, 'pienennys siirsi ankkuria');
+    // Ankkuri on yhä sama kartan kohta, joten pieni kuva ei hyppää kulmaan.
+    assert.equal(ui.luentakuvaAnkkuri, naytto);
+    piilotaLuentakuva(ui, { heti: true });
+  });
 });

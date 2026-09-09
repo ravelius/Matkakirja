@@ -280,13 +280,15 @@ export function lennonKorkeus(t, {
  * `korkeudet` on { alku, huippu, loppu } kameran omina korkeuksina
  * (kamera.kameranKohde on jo sitonut ne laattojen tarkkuusrajaan).
  */
-export function lennonSuunnitelma(kaari, korkeudet) {
+export function lennonSuunnitelma(kaari, korkeudet, loppusiirto = null) {
+  const dLat = loppusiirto?.lat ?? 0;
+  const dLng = loppusiirto?.lng ?? 0;
   return (t) => {
     const e = lennonVaihe(t);
     const kohta = lentokaarenKohta(kaari, e);
     return {
-      lat: Math.max(-89.5, Math.min(89.5, kohta.lat)),
-      lng: kohta.lng,
+      lat: Math.max(-89.5, Math.min(89.5, kohta.lat + dLat * e)),
+      lng: kohta.lng + dLng * e,
       altitude: lennonKorkeus(t, korkeudet),
       e,
     };
@@ -314,7 +316,9 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
    * tapahtuu kamerassa (kamera.js kameranKohde → lahinKorkeus), joten
    * lento ei koskaan pyydä lähempää kuin lauta antaa.
    */
-  const nakyma = (pos, leveys) => lauta.kamera.kameranKohde({ ...pixelOf(board, pos), leveys });
+  const nakyma = (pos, leveys, saapuminen = false) => lauta.kamera.kameranKohde(
+    { ...pixelOf(board, pos), leveys, saapuminen },
+  );
 
   /*
    * LENTO ALKAA LÄHTÖKAUPUNGIN YLTÄ, EI KAUPUNKIPARIN LAATIKOSTA
@@ -329,7 +333,7 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
    * päättyisi.
    */
   const rajaus = ui.reducedMotion
-    ? { ...pixelOf(board, kohdePos), leveys: PALLOLAUDAN_SAAPUMISLEVEYS }
+    ? { ...pixelOf(board, kohdePos), leveys: PALLOLAUDAN_SAAPUMISLEVEYS, saapuminen: true }
     : { ...pixelOf(board, lahtoPos), leveys: AVAUSLENNON_ALKULEVEYS };
 
   /** Kaaren geometria koneelle ja jäljelle (sama olio molemmille). */
@@ -398,8 +402,26 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
     kamera.pysaytaKameraAjo();
     const alkuKorkeus = nakyma(lahtoPos, AVAUSLENNON_ALKULEVEYS)?.altitude;
     const huippuKorkeus = nakyma(lahtoPos, AVAUSLENNON_HUIPPULEVEYS)?.altitude;
-    const maali = nakyma(kohdePos, PALLOLAUDAN_SAAPUMISLEVEYS);
+    /*
+     * MAALI ON SAAPUMISASENTO, EI KAUPUNGIN KESKITYS (omistaja 9.9.2026,
+     * Raamattu SAAPUMISESSA KAMERA ASETTUU NIIN, ETTA KAUPUNKI ON
+     * ALIMMASSA KOLMANNEKSESSA). Kamera katsoo kaupungin pohjoispuolelle,
+     * jolloin kaupunki itse jää ruudun alimpaan kolmannekseen ja
+     * luentakuvalle jää tila sen yläpuolelle.
+     *
+     * SIIRTO KULKEE SUUNNITELMAN LOPPUUN, EI HYPPYNÄ. Kaari itse päättyy
+     * kaupunkiin; poikkeama lisätään lennon vaiheella painotettuna
+     * (`loppusiirto`), joten lähtökuva on entisellään, liike on yhä yksi
+     * kaari eikä laskun päähän tule nytkähdystä. Laskeutumisen jälkeinen
+     * `kamera.kotiin` pyytää täsmälleen saman asennon, joten se pysyy
+     * nolla-ajona.
+     */
+    const keskitys = nakyma(kohdePos, PALLOLAUDAN_SAAPUMISLEVEYS);
+    const maali = nakyma(kohdePos, PALLOLAUDAN_SAAPUMISLEVEYS, true);
     if (!(alkuKorkeus > 0) || !(huippuKorkeus > 0) || !(maali?.altitude > 0)) return;
+    const loppusiirto = keskitys
+      ? { lat: maali.lat - keskitys.lat, lng: maali.lng - keskitys.lng }
+      : null;
     /*
      * HUIPPU ON AINA YLIN. Jos laite rajaisi korkeudet niin, ettei
      * huippu jäisi päiden yläpuolelle, kaari menettäisi maksiminsa ja
@@ -409,7 +431,7 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
       alku: alkuKorkeus,
       huippu: Math.max(huippuKorkeus, alkuKorkeus, maali.altitude),
       loppu: maali.altitude,
-    });
+    }, loppusiirto);
     const oma = { kehys: 0, maali };
     kameraAjo = oma;
     const askel = (hetki) => {

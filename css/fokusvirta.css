@@ -326,6 +326,54 @@
   opacity: 1;
 }
 
+/*
+ * ANKKUROITU KARTAN KOHTAAN (js/fokusvirta.js ankkuroiLuentakuva;
+ * omistaja 9.9.2026 klo 16.10 ja 16.15, Raamattu SAAPUMISESSA KAMERA
+ * ASETTUU… ja LUENTAKUVAA VOI ITSE LIIKUTTAA…).
+ *
+ * Paikka ei ole enää css:n kaista vaan LAUDAN piste: skripti kirjoittaa
+ * ankkurin ruutupaikan muuttujiin `--luentakuva-x/-y` joka kehyksellä,
+ * ja paneeli asettuu niin, että sen ALAREUNAN KESKIPISTE osuu siihen
+ * (translate(-50%, -100%)). Alareuna siksi, että kartan liike kutistaa
+ * kuvan `transform-origin: bottom center` -pisteeseen: pieni kuva jää
+ * täsmälleen siihen kartan kohtaan, josta iso lähti.
+ *
+ * Kierto ja mittakaava ovat samassa ketjussa kuin ennen, joten vain
+ * transform ja opacity animoituvat — kartan rasterointi ei kilpaile.
+ *
+ * touch-action: none — paneeli ottaa raahauksen itselleen; ilman tätä
+ * kosketuslaite aloittaisi sivun oman vierityksen kesken siirron.
+ */
+.fokusvirta-luentakuva-ankkuri {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 5;
+  /* EI SIIRTYMÄÄ. Tämä on se piste, jota skripti kirjoittaa joka
+     kehyksellä; siirtymä jäisi ikuisesti jälkeen liikkuvasta
+     kohteesta (mitattu Chromiumilla 9.9.2026: kuva jäi paikalleen
+     kartan kulmaan, koska jokainen kehys aloitti 400 ms:n siirtymän
+     alusta). Nousu, kallistus ja pienennys animoituvat paneelissa. */
+  transform: translate(var(--luentakuva-x, 50%), var(--luentakuva-y, 76%));
+}
+
+.fokusvirta-luentakuva.ankkuroitu {
+  left: 0;
+  top: 0;
+  bottom: auto;
+  /* Ankkuri on nollan kokoinen, joten prosenttikatto olisi myös nolla. */
+  max-width: none;
+  touch-action: none;
+  cursor: grab;
+  transform:
+    translate(-50%, -100%)
+    translate(0, var(--luentakuva-nousu))
+    rotate(var(--luentakuva-kallistus))
+    scale(var(--luentakuva-skaala));
+}
+
 /* KARTAN LIIKE JA LUENNAN LOPPU PIENENTÄVÄT (js/fokusvirta.js
    pienennaLuentakuva). Kuva jää kartalle koko kaupungissaolon ajaksi, ja
    sen napautus avaa yhä suurennoksen — siksi vain mittakaava muuttuu,
@@ -384,6 +432,14 @@
     --luentakuva-korkeus: min(46vh, 26rem);
   }
 }
+
+/*
+ * ANKKUROIDULLA KUVALLA MITAT TULEVAT SKRIPTILTÄ (js/saapumisasento.js
+ * luentakuvanSijainti): leveys on laskettu niin, että kuva mahtuu
+ * matkakirjakortin viereen tai alle. Yllä olevat media-arvot jäävät
+ * varalle sille tapaukselle, ettei näkyvää aluetta ole (testit, laudan
+ * mitoitus kesken) — silloin kuva jää css:n omaan kaistaan.
+ */
 
 @media (prefers-reduced-motion: reduce) {
   .fokusvirta-luentakuva {

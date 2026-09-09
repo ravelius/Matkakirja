@@ -77,7 +77,7 @@ export function etsiAarreTarjolla(ui, city) {
  * Näkymän keskus ja skaala laudan yksiköissä (sama luku kuin
  * js/pulu-paikka.js lahtonakyma; ks. tuontilista tiedoston alussa).
  */
-function nakymanKeskus(ui) {
+function napinNakymanKeskus(ui) {
   const alue = ui?.nakyvaAlue?.();
   if (!alue || !(alue.w > 0) || !Number.isFinite(alue.x) || !Number.isFinite(alue.y)) return null;
   return { x: alue.x + alue.w / 2, y: alue.y + alue.h / 2, skaala: alue.skaala };
@@ -85,7 +85,7 @@ function nakymanKeskus(ui) {
 
 /** Ankkurin ruutupaikka näkyvästä alueesta; null jos mittaa ei ole. */
 function ruutupaikka(ui, city, mitat) {
-  const tila = nakymanKeskus(ui);
+  const tila = napinNakymanKeskus(ui);
   if (!tila || !(tila.skaala > 0) || !mitat?.w || !mitat?.h) return null;
   /*
    * KIERTÄVÄ LAUTA: maailmankartta toistuu laudan leveyden välein, ja

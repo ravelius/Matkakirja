@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1713';
+const CACHE = 'matkakirja-2026-08-09.1714';
 const SHELL = [
   './',
   './index.html',
@@ -71,6 +71,12 @@ const SHELL = [
   './js/fokusvirta.js',
   // Kartan "Etsi aarre" -nappi (9.9.2026): fokusvirta tuo sen staattisesti.
   './js/etsi-aarre-nappi.js',
+  /*
+   * Saapumisasento (9.9.2026): kaupungin paikka ruudulla saapumisessa ja
+   * luentakuvan sijainti. Puhdas moduuli, jonka tuovat fokusvirta,
+   * pallolaudan kamera ja (nukkuva) tasokartta.
+   */
+  './js/saapumisasento.js',
   './js/fokusniput.js',
   './js/fokuskohteet.js',
   './js/fokuspiste.js',

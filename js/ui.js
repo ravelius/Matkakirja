@@ -21136,8 +21136,18 @@ export class UI {
     const kynnys = Math.max(SAATON_VAHIN_PX,
       (this.mapPane?.clientWidth ?? 0) * SAATON_VAHIN_OSUUS);
     if (!(matka > kynnys)) return;
+    /*
+     * SAATTO PÄÄTTYY SAAPUMISASENTOON (omistaja 9.9.2026, Raamattu
+     * SAAPUMISESSA KAMERA ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA
+     * KOLMANNEKSESSA): määränpää ei jää ruudun keskelle vaan alimpaan
+     * kolmannekseen, jolloin luentakuvalle jää tila sen yläpuolelle.
+     * Kävelymatkalla tämä ON saapumisajo — paluuajo poistettiin
+     * 1.9.2026, joten kamera jää tähän asentoon. Siirto lasketaan
+     * laudan kamerassa (`saapuminen`), joten kaava on sama molemmilla
+     * laudoilla eikä ui.js tunne lautaa.
+     */
     void kartta.ajaKamera(
-      { x: kohta.x, y: kohta.y },
+      { x: kohta.x, y: kohta.y, saapuminen: true },
       { kesto, pehmennys: SAATON_PEHMENNYS },
     );
   }
