@@ -56,6 +56,7 @@ import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
+import { asennaLivianKasvot } from './livia-eleet.js';
 import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 // Napautusnielu: kuplan sulkeva klikkaus ei saa vuotaa kartalle
 // (ks. sidoKuplanNapautus). Apuri asuu ui-apureissa, koska sama vuoto
@@ -1691,6 +1692,7 @@ class Pollo {
     this.seuraaSulkemista();
     this.seuraaRuudunKokoa();
     this.paivitaNakyvyys();
+    this.kasvoEleet = asennaLivianKasvot(this);
   }
 
   /* --- rakenne --------------------------------------------------- */
@@ -2954,6 +2956,7 @@ class Pollo {
       ? null : vanhat.map((k) => k.getBoundingClientRect().top);
     this.pinoKehys.hidden = false;
     pino.appendChild(kupla);
+    this.kasvoEleet?.kupla(kupla.textContent);
     this.asetaPinonPaikka();
     /*
      * UUSI KUPLA ON NYT VIIMEISIN: supistetun pinon katto on sen mitta,
