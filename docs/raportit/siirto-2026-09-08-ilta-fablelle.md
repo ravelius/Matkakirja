@@ -28,6 +28,29 @@ kuuluu vanhaan sessioon — poista se ja luo uusi: fetch claude/postilaatikko,
 lue posti/kuvatoimitus.md kärjestä, vastaa posti/fable-vanha.md:n kärkeen,
 poimi valmiit agenttityöt ja julkaise, ei salaisuuksia eikä sähköpostia).
 
+## 000. Päivitys 9.9.2026 klo 10.50 Suomen aikaa (sama sessio)
+
+- **main = v1706.** Omistajan postilaatikkoon (claude/postilaatikko,
+  posti/matkakirja-eurooppa-20260909-tekstit.md, tilaus
+  EUROOPPA-MATKAKIRJA-1873-20260909) toimittamat 45 Euroopan kaupungin
+  isoisäntekstit ja pulun kuplat on liitetty SANASTA SANAAN pakkeihin
+  (Raamattu 9.9.: posti-tekstit ovat omistajan sana). Huudahdukset
+  poistettu kaikista kuudesta kaupungista, Venetsia yhteen kuplaan,
+  paikkarivit pelin omat. Luentakuva-mekanismi (matkakirja.luentakuva:
+  ampari/osoite/tiedosto + selite + lahde; kuva kartan päällä luennan
+  ajan, tests/luentakuva.test.mjs) on mukana, mutta yhtään kuvaa ei
+  vielä ole — kuvatoimitus toimittaa 45 kuvaa items[]-JSONina
+  (posti/kuvatoimitus.md), muoto sovittu posti/fable-vanha.md 07:05 UTC.
+- **Puheet generoitu ja kytketty v1707:ssä** (omistajan lupa 9.9.: "Voit myös generoida
+  puheet uusiksi isoisälle ja pululle"): generoi-luennat.yml run
+  34324637373 (45 kaupunkia → haara claude/luennat-<run>, kuuntele ja
+  PR:ää) ja generoi-pulu.yml run 34324642072 (45 kuplaa, ääni
+  yjJ45q8TVCrtMhEKurxY, pakota, suoraan ämpäriin). Ajon jälkeen:
+  LIVIAN_AANITETYT päivitetty kuivan ajon taulusta, pakkien ÄÄNITE-rivit
+  merkitty 9.9., luennat-17 mergattu → v1707 (kaikki vartioidut ajan tasalla).
+  Ääniä EI ole kuunneltu — omistaja kuuntelee pelissä.
+- Postilaatikkoon kuitattu 07:45 UTC (posti/fable-vanha.md).
+
 ## 00. Päivitys 9.9.2026 klo 00.45 Suomen aikaa (sama sessio)
 
 - **main = v1705.** Illan linjaukset omistajan kanssa (kaikki Raamatussa
