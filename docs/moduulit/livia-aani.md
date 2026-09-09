@@ -163,6 +163,81 @@ Vanha `pollo.maadoitus` on **varapolku** kaupungille, jota ei ole vielä
 kirjoitettu uusiksi: se piirtyy kommenttina eli luennan jälkeen kuten
 ennenkin.
 
+#### Paikka: kaupungin yläpuolella ja hieman oikealla, ankkuroituna kartan kohtaan (omistaja 9.9.2026 klo 16.10 ja 16.15)
+
+Raamattu, SAAPUMISESSA KAMERA ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA
+KOLMANNEKSESSA JA LUENTAKUVA SEN YLAPUOLELLA HIEMAN OIKEALLA sekä
+LUENTAKUVAA VOI ITSE LIIKUTTAA, JA SE ON ANKKUROITU KARTAN KOHTAAN.
+Omistaja: *"kun tullaan uuteen kaupunkiin, kamera saisi asettua niin
+että kaupunki jää alimpaan kolmannekseen ja kuva tulee sen yläpuolelle
+ja vähän oikealle, niin että se ei jää matkakirjan tekstin peittoon
+varsinkin pienillä näytöillä"* ja *"kuvaa pitää myös voida itse
+liikuttaa ja se saisi jäädä paikalleen sen kohdan päälle karttaa missä
+se on jos karttaa liikutetaan."*
+
+Kuva ei enää asetu css:n kaistaan vaan **kartan kohtaan**. Kolme osaa:
+
+**1. Sijainti lasketaan** (`js/saapumisasento.js luentakuvanSijainti`,
+puhdas funktio ilman DOMia). Se saa karttapinnan mitat, kaupungin
+ruutupisteen, matkakirjakortin suorakulmion ja kuvan oman kuvasuhteen,
+ja palauttaa **ankkurin** eli paneelin alareunan keskipisteen sekä
+paneelin leveyden. Säännöt järjestyksessä:
+
+| ehto | tulos |
+| --- | --- |
+| kuvan alareuna | kaupungin pisteen yläpuolella (`LUENTAKUVAN_VALI_PX` 20 px + kallistuksen vara) |
+| kuvan keskilinja | kaupungista oikealle `LUENTAKUVAN_SIVUSIIRTO` = 15 % näkymän leveydestä |
+| kortti tiellä | sama korkeus, mutta kortin **oikealle** puolelle |
+| ei sinnekään | kortin **ali tai yli** — kumpi kaista antaa isomman kuvan |
+| ei mahdu vieläkään | **kuva pienenee** (pohja `LUENTAKUVAN_VAHIN_PX` 96 px); kortin tekstiä ei peitetä koskaan |
+
+Leveys tulee samasta portaasta kuin css:n `--luentakuva-leveys`
+(`luentakuvanPerusleveys`: ≥ 900 px → `min(38 % , 640px)`, muuten
+`min(80 %, 352px)`), mutta se **kutistuu** niin paljon kuin kortti
+vaatii. Kuvatekstilaatikon korkeus mitataan (se ei kutistu leveyden
+mukana) ja kuvasuhde luetaan kuvan omasta `naturalHeight/naturalWidth`
+-suhteesta — mitattu laatikko aiheuttaisi takaisinkytkennän.
+
+**2. Ankkuri on laudan piste, ei ruutupiste.** Paneelin ympärillä on
+nollan kokoinen ankkurisolmu (`.fokusvirta-luentakuva-ankkuri`), jota
+kehyssilmukka siirtää; paneeli sen sisällä hoitaa nousun, kallistuksen ja
+pienennyksen. Työnjako on pakko: paneelin `transform` animoituu 400 ms,
+ja kehyskohtainen paikanvaihto jäisi ikuisesti siirtymän alle (mitattu
+Chromiumilla 9.9.2026 — kuva jäi kartan vasempaan ylänurkkaan).
+
+Ruutupaikka lasketaan **pallon omalla projektiolla**, kun pallolauta on
+hereillä (`js/pallolauta/lauta.js asteet` + Globe.gl
+`getScreenCoords`/`toGlobeCoords`), ja `ui.nakyvaAlue()`-arviolla vasta
+sen puuttuessa. Ero on iso: laudan yksiköt ovat Millerin lieriötä, ja
+Lontoossa arvio antoi pisteen 88 px liian alas ja 78 px liian vasemmalle
+— kuva olisi noussut kaupungin päälle.
+
+**3. Kuvaa voi raahata.** Sormi tai hiiri siirtää paneelia; ele
+katkaistaan paneeliin, joten kartta ei panoroi sen alta eikä kuva
+pienene omasta eleestään. Napautus ja raahaus erotetaan liikekynnyksestä
+(`onRaahaus`, 6 px): kynnyksen alle jäävä ele avaa suurennoksen, sen
+ylittävä vaihtaa **ankkurin** kuvan alla olevaan kartan kohtaan.
+
+Mitattu Chromiumilla 9.9.2026 (repon oma kuva, Lontoo):
+
+| ruutu | karttapinta | kaupunki (x %, y %) | kuvan laatikko | osuuko korttiin |
+| --- | --- | --- | --- | --- |
+| työpöytä 1600 × 1000 | 1579 × 921 | 41,8 % / 77,8 % | 573, 38 – 1198, 712 | ei (kortti 6, 6 – 346, 278) |
+| puhelin 430 × 930 | 414 × 861 | 41,2 % / 77,7 % | 54, 262 – 399, 650 | ei (kortti 6, 6 – 346, 213) |
+
+Kuvan alareuna jää molemmilla noin 5–20 px kaupungin pisteen
+yläpuolelle ja keskilinja 13–14 % näkymän leveydestä sen oikealle
+puolelle. Raahaus 120 px oikealle ja 60 px ylös siirsi kuvaa 122,6 /
+−58,1 px ja vaihtoi ankkurin; kameran panorointi siirsi kuvaa 114 px ja
+kaupunkia 116 px samaan suuntaan (ankkuri ennallaan). Kaappaukset:
+`saapuminen-kolmannes-tyopoyta.png`, `saapuminen-kolmannes-puhelin.png`.
+
+Ilman karttapintaa tai näkyvää aluetta (testit, laudan avaus kesken)
+ankkurointia ei tehdä lainkaan ja paneeli jää css:n omaan kaistaansa.
+Testit: `tests/saapumisasento.test.mjs` (puhtaat funktiot neljällä
+ruutukoolla) ja `tests/luentakuva.test.mjs` (ankkuri, raahaus, napautus,
+kartan siirto).
+
 ### Etsi aarre -nappi kommentin jälkeen (omistaja 9.9.2026)
 
 Raamattu, PULUN KOMMENTIN JALKEEN KARTALLE NAPPI "ETSI AARRE"

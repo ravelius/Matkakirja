@@ -61,6 +61,12 @@
  */
 
 import { laudaltaAsteiksi, projisoiLaudalle } from '../fokusmitat.js';
+/*
+ * Saapumisasento (kaupunki alimpaan kolmannekseen) on YHTEINEN
+ * kaava molemmille laudoille — js/saapumisasento.js. Se on puhdas
+ * moduuli ilman DOMia ja ilman lautaa, joten tuonti ei paina mitään.
+ */
+import { saapumisenPallonKohta } from '../saapumisasento.js';
 import { pixelOf } from '../rules.js';
 /*
  * Ajon kesto ja pehmennys samasta koreografiasta kuin tasokartalla.
@@ -356,6 +362,30 @@ export function luoPallokamera({
     // Kamera ei mene laattojen tarkkuuden alle, ei myöskään suoraan
     // korkeutena annetulla kohteella.
     const altitude = Math.min(PALLO_KORKEUS_MAX, Math.max(korkeusMin(), pyydetty));
+    /*
+     * SAAPUMISASENTO (omistaja 9.9.2026, Raamattu SAAPUMISESSA KAMERA
+     * ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA KOLMANNEKSESSA):
+     * saapumisajo katsoo kaupungin POHJOISPUOLELLE ja hitusen sen
+     * itäpuolelle, jolloin kaupunki itse asettuu ruudun alimpaan
+     * kolmannekseen ja hieman keskeltä vasemmalle. Siirto tehdään
+     * VASTA tässä, valmiista korkeudesta: näkyvä kaari riippuu
+     * korkeudesta ja kotelon kuvasuhteesta, ja vain kohdistuspiste
+     * liikkuu — laudan pisteet pysyvät paikoillaan.
+     *
+     * VAIN SAAPUMISAJOSSA. Pelaajan oma panorointi ja zoomi eivät kulje
+     * täältä, joten mikään ei vedä kameraa jälkikäteen takaisin.
+     */
+    if (kohde.saapuminen) {
+      const nakyvaYks = leveysKorkeudesta(altitude, { laudanLeveys, kuvasuhde: kuvasuhde() });
+      const asento = saapumisenPallonKohta({
+        lat,
+        lng,
+        leveysAst: asteetLeveydesta(nakyvaYks, laudanLeveys),
+        paneW: ruudunLeveys(),
+        paneH: ruudunKorkeus(),
+      });
+      if (asento) return { lat: asento.lat, lng: asento.lng, altitude };
+    }
     return { lat: Math.max(-89.5, Math.min(89.5, lat)), lng, altitude };
   };
 
@@ -450,7 +480,11 @@ export function luoPallokamera({
     if (!pos || !game.board) return Promise.resolve(false);
     const kohta = pixelOf(game.board, pos);
     if (!Number.isFinite(kohta?.x)) return Promise.resolve(false);
-    return ajaKamera({ x: kohta.x, y: kohta.y, leveys: PALLOLAUDAN_SAAPUMISLEVEYS }, { kesto });
+    return ajaKamera(
+      // `saapuminen`: kaupunki alimpaan kolmannekseen (kameranKohde).
+      { x: kohta.x, y: kohta.y, leveys: PALLOLAUDAN_SAAPUMISLEVEYS, saapuminen: true },
+      { kesto },
+    );
   };
 
   return {

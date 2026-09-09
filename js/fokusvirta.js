@@ -100,6 +100,18 @@ import { el } from './mapart.js';
 // Kartan oma "Etsi aarre" -nappi: nousee kommentin jälkeen, lähtee
 // kaupungista lähdettäessä (js/etsi-aarre-nappi.js).
 import { naytaEtsiAarreNappi, piilotaEtsiAarreNappi } from './etsi-aarre-nappi.js';
+/*
+ * Luentakuvan paikka ja ankkuri ovat puhtaita funktioita omassa
+ * moduulissaan (js/saapumisasento.js): sama kaava palvelee kameran
+ * saapumisasentoa, ja sijainti on testattavissa ilman DOMia.
+ */
+import {
+  laudaltaRuudulle, luentakuvanPerusleveys, luentakuvanSijainti,
+  onRaahaus, ruudultaLaudalle, LUENTAKUVAN_KUVASUHDE,
+} from './saapumisasento.js';
+// Pallon tarkka ruutupaikka kääntyy takaisin laudan pisteeksi laudan
+// omalla projektiolla (ks. pallonProjektio alempana).
+import { projisoiLaudalle } from './fokusmitat.js';
 import { valokuvaUrl, valokuvaVara, valokuvaSuurennos } from './packs/africa-valokuvat.js';
 // Vihjelinkin osiotunniste ja sen näyttönimi (ks. piirraVihjelinkki).
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
@@ -1854,7 +1866,18 @@ export function naytaLuentakuva(ui, city) {
   asetaKuva(img, luentakuvanOsoite(kuva), luentakuvanVara(kuva),
     () => piilotaLuentakuva(ui, { heti: true }));
   nappi.appendChild(img);
-  nappi.addEventListener('click', () => avaaSuurennos(ui, [kuva], 0, () => nappi));
+  /*
+   * NAPAUTUS AVAA SUURENNOKSEN, RAAHAUS EI (omistaja 9.9.2026 klo 16.15,
+   * Raamattu LUENTAKUVAA VOI ITSE LIIKUTTAA). Selain lähettää klikin
+   * myös raahauksen päätteeksi, ja ilman tätä lippua jokainen siirto
+   * päättyisi suurennokseen. Lippu nollautuu heti, joten seuraava
+   * napautus toimii normaalisti.
+   */
+  nappi.addEventListener('click', () => {
+    const naytto = ui.luentakuvaAnkkuri;
+    if (naytto?.paneeli === paneeli && naytto.raahattu) { naytto.raahattu = false; return; }
+    avaaSuurennos(ui, [kuva], 0, () => nappi);
+  });
 
   /*
    * LYHYT KUVATEKSTI OMASSA VAALEASSA LAATIKOSSAAN, EI LÄHDERIVIÄ
@@ -1888,10 +1911,342 @@ export function naytaLuentakuva(ui, city) {
   setTimeout(nayta, 50);
 
   kytkeLuentakuvanPienennys(ui, paneeli);
+  // Ankkurointi kartan kohtaan ja saapumisasento (ks. seuraava osio).
+  ankkuroiLuentakuva(ui, city, paneeli, nappi);
   pienennaLuennanJalkeen(ui, city, paneeli,
     fokusvirtaSisalto(ui, city)?.matkakirja?.teksti ?? '');
   return true;
 }
+
+/* ============ LUENTAKUVA ANKKUROITUNA KARTAN KOHTAAN ==============
+ *
+ * OMISTAJA 9.9.2026 klo 16.10 ja 16.15 (Raamattu, SAAPUMISESSA KAMERA
+ * ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA KOLMANNEKSESSA JA LUENTAKUVA
+ * SEN YLAPUOLELLA HIEMAN OIKEALLA sekä LUENTAKUVAA VOI ITSE LIIKUTTAA,
+ * JA SE ON ANKKUROITU KARTAN KOHTAAN, sanatarkasti: *"kuva tulee sen
+ * yläpuolelle ja vähän oikealle, niin että se ei jää matkakirjan tekstin
+ * peittoon varsinkin pienillä näytöillä"* ja *"kuvaa pitää myös voida
+ * itse liikuttaa ja se saisi jäädä paikalleen sen kohdan päälle karttaa
+ * missä se on jos karttaa liikutetaan"*).
+ *
+ * KOLME ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ:
+ *
+ *  1. PAIKKA ON LAUDAN PISTE, EI RUUTUPISTE. Paneelin ankkuri
+ *     (alareunan keskipiste) muunnetaan laudan koordinaateiksi, ja
+ *     kehyssilmukka kirjoittaa siitä ruutupaikan joka kehyksellä —
+ *     TÄSMÄLLEEN sama kaava kuin Etsi aarre -napilla ja pulun
+ *     paikkamerkillä (js/saapumisasento.js laudaltaRuudulle). Kartan
+ *     panorointi ja zoomi siirtävät siis kuvaa kartan mukana.
+ *
+ *  2. KOKO LASKETAAN, EI SANELLA. css:n `--luentakuva-leveys` on
+ *     perusmitta; ankkuroitu kuva pienenee siitä niin paljon kuin
+ *     matkakirjakortti vaatii (js/saapumisasento.js luentakuvanSijainti).
+ *     Kortin päälle tai alle kuva ei mene KOSKAAN — mieluummin pieni
+ *     kuva kuin peitetty teksti.
+ *
+ *  3. ILMAN NÄKYVÄÄ ALUETTA EI ANKKUROIDA. Testiympäristössä ja ennen
+ *     laudan mitoitusta `ui.nakyvaAlue()` on tyhjä; silloin paneeli jää
+ *     css:n omaan paikkaansa (alareunan kaista) eikä mikään hajoa.
+ */
+
+/** Kuinka usein ankkurin mitat ja kortin paikka tarkistetaan. */
+const LUENTAKUVAN_TARKISTUSVALI = 12;
+
+/**
+ * Kuvatekstilaatikon arvioitu korkeus ennen mittausta (px): yksi rivi
+ * 0,85 rem, padding 0,8 rem ja väli kuvaan. Mitattu arvo korvaa tämän
+ * heti ensimmäisen ladonnan jälkeen.
+ */
+const LUENTAKUVAN_TEKSTIVARA = 52;
+
+/*
+ * PALLON OMA PROJEKTIO ENNEN ARVIOTA (mitattu Chromiumilla 9.9.2026).
+ *
+ * `ui.nakyvaAlue()` on LAUDAN yksiköitä, ja se kohtelee niitä ruudulla
+ * lineaarisina. Pallolla se on likiarvo: laudan projektio on Millerin
+ * lieriö, jonka y venyy leveysasteen mukana (Lontoossa 1,34-kertaiseksi)
+ * ja jonka x on pituusastetta eikä kaarta (Lontoossa 1/cos 51,5° =
+ * 1,61-kertainen). Lontoon piste laskettiin siis 88 px liian alas ja
+ * 84 px liian vasemmalle — luentakuva olisi noussut kaupungin PÄÄLLE
+ * eikä sen yläpuolelle.
+ *
+ * Pallolauta osaa saman muunnoksen tarkasti (js/pallolauta/lauta.js
+ * `asteet` + Globe.gl `getScreenCoords`/`toGlobeCoords`, sama kaava kuin
+ * kartan merkeillä, karttapallo.md luku 12). Käytetään sitä, kun pallo
+ * on hereillä, ja `nakyvaAlue`-arviota vasta sen puuttuessa
+ * (tasokartta, testit, laudan avaus kesken).
+ */
+
+/** Pallon lauta on aina maailmankartta (js/pallo.js PALLO_LAUTA). */
+const PALLON_LAUTA = 'maailmankartta';
+
+/** Pallolauta, jos sen projektio on käytettävissä juuri nyt. */
+function pallonProjektio(ui) {
+  const lauta = ui?.pallolauta;
+  if (!ui?.pallolautaPaalla?.() || !lauta?.pallo || !lauta.asteet) return null;
+  return lauta;
+}
+
+/** Laudan piste → karttapinnan pikselit (pallo tarkasti, muuten arvio). */
+function lautaRuudulle(ui, piste, mitat) {
+  const lauta = pallonProjektio(ui);
+  if (lauta?.pallo?.getScreenCoords) {
+    const asteet = lauta.asteet(piste);
+    const p = asteet ? lauta.pallo.getScreenCoords(asteet.lat, asteet.lon, 0) : null;
+    if (p && Number.isFinite(p.x) && Number.isFinite(p.y)) return { x: p.x, y: p.y };
+  }
+  return laudaltaRuudulle(piste, ui?.nakyvaAlue?.(), mitat.w, mitat.h, ui?.contentBox?.w ?? 0);
+}
+
+/** Karttapinnan pikselit → laudan piste (edellisen käänteinen). */
+function ruutuLaudalle(ui, paikka, mitat) {
+  const lauta = pallonProjektio(ui);
+  if (lauta?.pallo?.toGlobeCoords) {
+    const asteet = lauta.pallo.toGlobeCoords(paikka.x, paikka.y);
+    if (asteet && Number.isFinite(asteet.lat) && Number.isFinite(asteet.lng)) {
+      const piste = projisoiLaudalle(PALLON_LAUTA, asteet.lng, asteet.lat);
+      if (piste) return piste;
+    }
+  }
+  return ruudultaLaudalle(paikka, ui?.nakyvaAlue?.(), mitat.w, mitat.h);
+}
+
+/** Matkakirjakortin suorakulmio karttapinnan koordinaateissa, tai null. */
+function matkakirjakortinLaatikko(pane) {
+  const kortti = document.querySelector?.('.fact-card');
+  if (!kortti?.getBoundingClientRect || !pane?.getBoundingClientRect) return null;
+  const k = kortti.getBoundingClientRect();
+  if (!(k.width > 0) || !(k.height > 0)) return null;
+  const p = pane.getBoundingClientRect();
+  return { x: k.left - p.left, y: k.top - p.top, w: k.width, h: k.height };
+}
+
+/**
+ * Paneelin koko ja aloitusankkuri kaupungin pisteen yläpuolelle.
+ *
+ * KAKSI MITTAUSTA: kuvateksti ei kutistu leveyden mukana, joten
+ * ensimmäinen sovitus tehdään oletussuhteella, ja mitatusta paneelista
+ * luetaan kuvan oma kuvasuhde ja kuvatekstin osuus — sitten sovitus
+ * uudestaan. Toinen kierros on halpa (kaksi asettelunlukua) ja se on
+ * ainoa tapa tietää, mahtuuko kuva oikeasti kortin viereen.
+ */
+function mitoitaLuentakuva(naytto) {
+  const {
+    ui, city, paneeli, nappi, pane,
+  } = naytto;
+  const w = pane?.clientWidth ?? 0;
+  const h = pane?.clientHeight ?? 0;
+  if (!(w > 0) || !(h > 0)) return null;
+  naytto.mitat = { w, h };
+  const kaupunki = lautaRuudulle(ui, { x: city.x, y: city.y }, { w, h });
+  if (!kaupunki) return null;
+  const yhteiset = {
+    paneW: w,
+    paneH: h,
+    kaupunki,
+    kortti: matkakirjakortinLaatikko(pane),
+    perusleveys: luentakuvanPerusleveys(w, globalThis.innerWidth ?? w),
+    // Kaupungin oma kallistuskulma: kierretty kuva ulottuu
+    // alakulmastaan alemmas kuin suora (ks. luentakuvanSijainti).
+    kallistus: Number.parseFloat(luentakuvanKallistus(city.id)) || 0,
+  };
+  /*
+   * KUVASUHDE ON KUVAN OMA, EI MITATTU LAATIKKO. Mitattu suhde
+   * (paneelin korkeus / leveys) johtaisi takaisinkytkentään: leveyden
+   * kirjoitus muuttaa korkeutta, joka muuttaa suhdetta, joka muuttaa
+   * leveyttä. `naturalHeight / naturalWidth` on vakio ja tarkka;
+   * ennen latausta käytetään oletusta.
+   */
+  const img = nappi?.querySelector?.('img') ?? null;
+  const suhde = img?.naturalWidth > 0 && img?.naturalHeight > 0
+    ? img.naturalHeight / img.naturalWidth
+    : LUENTAKUVAN_KUVASUHDE;
+  const kirjoita = (sijainti) => {
+    paneeli.style.setProperty('--luentakuva-leveys', `${Math.round(sijainti.leveys)}px`);
+    // Kuvan korkeuskatto on TÄSMÄLLEEN sen luonnollinen korkeus tällä
+    // leveydellä: css:n oma katto ei saa rajata kuvaa, jonka tila on
+    // jo laskettu (object-fit: cover leikkaisi muuten reunoja).
+    paneeli.style.setProperty('--luentakuva-korkeus', `${Math.ceil(sijainti.leveys * suhde)}px`);
+  };
+  kirjoita(luentakuvanSijainti({
+    ...yhteiset, kuvasuhde: suhde, lisakorkeus: naytto.lisakorkeus ?? LUENTAKUVAN_TEKSTIVARA,
+  }));
+  /*
+   * KUVATEKSTILAATIKON KORKEUS MITATAAN, koska se EI kutistu leveyden
+   * mukana: laatikossa on rem-mittainen teksti ja sen padding. Mitta
+   * otetaan vasta kun leveys on kirjoitettu, jotta rivitys on oikea.
+   */
+  const kuvanKorkeus = img?.offsetHeight ?? 0;
+  if (kuvanKorkeus > 0 && (paneeli.offsetHeight ?? 0) > 0) {
+    naytto.lisakorkeus = Math.max(0, paneeli.offsetHeight - kuvanKorkeus);
+  }
+  const sijainti = luentakuvanSijainti({
+    ...yhteiset,
+    kuvasuhde: suhde,
+    lisakorkeus: naytto.lisakorkeus ?? LUENTAKUVAN_TEKSTIVARA,
+  });
+  kirjoita(sijainti);
+  naytto.kuvasuhde = suhde;
+  naytto.sijainti = sijainti;
+  return sijainti;
+}
+
+/**
+ * Kirjoittaa ankkurin ruutupaikan css-muuttujiin.
+ *
+ * PAIKKA ON ANKKURISOLMUSSA, EI PANEELISSA (mitattu Chromiumilla
+ * 9.9.2026). Paneelilla on 400 ms:n transform-siirtymä (nousu,
+ * pienennys), ja siirtymä alkaa alusta joka kerta, kun transformin
+ * arvo muuttuu — myös muuttujan kautta. Kehyssilmukka kirjoittaa
+ * paikan 60 kertaa sekunnissa, joten paneeli ei ehtinyt koskaan
+ * maaliin: kuva jäi kartan vasempaan ylänurkkaan. Nollan kokoinen
+ * ankkurisolmu ilman siirtymää hoitaa paikan, paneeli sen sisällä
+ * hoitaa animaatiot — sama työnjako kuin Etsi aarre -napilla.
+ */
+function paivitaLuentakuvanPaikka(naytto) {
+  const { ui, ankkuri, solmu } = naytto;
+  const { w, h } = naytto.mitat ?? {};
+  if (!ankkuri || !solmu || !(w > 0) || !(h > 0)) return;
+  const paikka = lautaRuudulle(ui, ankkuri, { w, h });
+  if (!paikka) return;
+  solmu.style.setProperty('--luentakuva-x', `${paikka.x.toFixed(1)}px`);
+  solmu.style.setProperty('--luentakuva-y', `${paikka.y.toFixed(1)}px`);
+}
+
+/**
+ * RAAHAUS SORMELLA TAI HIIRELLÄ.
+ *
+ * Ele katkaistaan paneeliin (stopPropagation): kartta ei saa panoroida
+ * kuvan alta, eikä dokumentin pienennyskuuntelija (kartan liike) saa
+ * kutistaa kuvaa, jota pelaaja juuri siirtää. Napautus tunnistetaan
+ * LIIKEKYNNYKSESTÄ (js/saapumisasento.js onRaahaus): sen alle jäävä ele
+ * on napautus ja avaa suurennoksen.
+ *
+ * Uusi ankkuri lasketaan siirrosta suoraan laudan yksiköissä
+ * (px / skaala), joten kuva jää sen kartan kohdan päälle, johon se
+ * jätettiin.
+ */
+function kytkeLuentakuvanRaahaus(naytto) {
+  const { paneeli } = naytto;
+  if (typeof paneeli.addEventListener !== 'function') return;
+  let veto = null;
+  paneeli.addEventListener('pointerdown', (t) => {
+    if (t.button > 0) return;
+    veto = {
+      x: t.clientX,
+      y: t.clientY,
+      id: t.pointerId,
+      // Kuvan ruutupaikka vedon alussa: siirto lasketaan siitä, ei
+      // sormesta, jotta kuva ei hyppää sormen alle.
+      paikka: lautaRuudulle(naytto.ui, naytto.ankkuri, naytto.mitat ?? { w: 0, h: 0 })
+        ?? { x: t.clientX, y: t.clientY },
+      liike: false,
+    };
+    naytto.raahattu = false;
+    paneeli.setPointerCapture?.(t.pointerId);
+    t.stopPropagation?.();
+  });
+  paneeli.addEventListener('pointermove', (t) => {
+    if (!veto) return;
+    const dx = t.clientX - veto.x;
+    const dy = t.clientY - veto.y;
+    if (!veto.liike && !onRaahaus(dx, dy)) return;
+    veto.liike = true;
+    naytto.raahattu = true;
+    t.preventDefault?.();
+    t.stopPropagation?.();
+    // Uusi ankkuri on se KARTAN KOHTA, jonka päälle kuva raahattiin.
+    const paikka = { x: veto.paikka.x + dx, y: veto.paikka.y + dy };
+    const kartalla = ruutuLaudalle(naytto.ui, paikka, naytto.mitat ?? { w: 0, h: 0 });
+    if (!kartalla) return;
+    naytto.ankkuri = kartalla;
+    paivitaLuentakuvanPaikka(naytto);
+  });
+  const lopeta = () => {
+    if (!veto) return;
+    paneeli.releasePointerCapture?.(veto.id);
+    veto = null;
+  };
+  paneeli.addEventListener('pointerup', lopeta);
+  paneeli.addEventListener('pointercancel', lopeta);
+}
+
+/**
+ * Kehyssilmukka: kuva seuraa karttaa ja mitat tarkistetaan harvakseltaan.
+ *
+ * Ilman requestAnimationFramea (testit, taustavälilehti) kuva jää
+ * aloituspaikkaansa — se on oikea paikka siihen asti, kunnes karttaa
+ * liikutetaan.
+ */
+function seuraaKarttaaLuentakuvalla(naytto) {
+  let laskuri = 0;
+  const askel = () => {
+    if (naytto.ui?.luentakuvaAnkkuri !== naytto) return;
+    if (laskuri % LUENTAKUVAN_TARKISTUSVALI === 0) {
+      const w = naytto.pane?.clientWidth ?? 0;
+      const h = naytto.pane?.clientHeight ?? 0;
+      // Ruudun koko vaihtui (kääntö, ikkunan veto): mitat uusiksi, mutta
+      // ANKKURI JÄÄ — kuva pysyy sen kartan kohdan päällä, jossa se on.
+      if (w !== naytto.mitat?.w || h !== naytto.mitat?.h) mitoitaLuentakuva(naytto);
+    }
+    paivitaLuentakuvanPaikka(naytto);
+    laskuri += 1;
+    naytto.kehys = globalThis.requestAnimationFrame?.(askel) ?? 0;
+  };
+  naytto.kehys = globalThis.requestAnimationFrame?.(askel) ?? 0;
+}
+
+/**
+ * Ankkuroi paneelin kartan kohtaan ja asettaa sen saapumisasentoon.
+ *
+ * @returns {boolean} ankkuroitiinko (false = css:n oma paikka jää voimaan)
+ */
+export function ankkuroiLuentakuva(ui, city, paneeli, nappi) {
+  if (!ui || !city || !paneeli) return false;
+  if (!Number.isFinite(city.x) || !Number.isFinite(city.y)) return false;
+  const pane = ui.mapPane ?? document.querySelector?.('.map-pane') ?? null;
+  if (!pane) return false;
+  const naytto = {
+    ui, city, paneeli, nappi, pane, mitat: null, ankkuri: null, kehys: 0, raahattu: false,
+  };
+  const sijainti = mitoitaLuentakuva(naytto);
+  if (!sijainti) return false;
+  const ankkuri = ruutuLaudalle(ui, { x: sijainti.x, y: sijainti.y }, naytto.mitat);
+  if (!ankkuri) return false;
+  naytto.ankkuri = ankkuri;
+  /*
+   * ANKKURISOLMU PANEELIN YMPÄRILLE: nollan kokoinen piste, jota
+   * kehyssilmukka siirtää. Paneeli jää sen lapseksi omine
+   * animaatioineen (ks. paivitaLuentakuvanPaikka).
+   */
+  const solmu = html('div', 'fokusvirta-luentakuva-ankkuri');
+  paneeli.parentNode?.insertBefore(solmu, paneeli);
+  solmu.appendChild(paneeli);
+  naytto.solmu = solmu;
+  paneeli.classList.add('ankkuroitu');
+  ui.luentakuvaAnkkuri = naytto;
+  paivitaLuentakuvanPaikka(naytto);
+  kytkeLuentakuvanRaahaus(naytto);
+  seuraaKarttaaLuentakuvalla(naytto);
+  /*
+   * KUVAN LATATTUA MITAT UUSIKSI: ennen latausta kuvasuhde on oletus,
+   * ja pystykuva tarvitsee kapeamman laatikon mahtuakseen kortin ali.
+   * Ankkuri EI muutu — paneeli kasvaa alareunastaan ylöspäin.
+   */
+  nappi?.querySelector?.('img')?.addEventListener?.('load', () => {
+    if (ui.luentakuvaAnkkuri === naytto) mitoitaLuentakuva(naytto);
+  });
+  return true;
+}
+
+/** Ankkurin kehyssilmukka seis (piilotaLuentakuva kutsuu). */
+export function irrotaLuentakuvanAnkkuri(ui) {
+  const naytto = ui?.luentakuvaAnkkuri;
+  if (!naytto) return;
+  ui.luentakuvaAnkkuri = null;
+  if (naytto.kehys) globalThis.cancelAnimationFrame?.(naytto.kehys);
+}
+
 
 /**
  * KARTAN LIIKE PIENENTÄÄ KUVAN — EI POISTA SITÄ (omistajan korjaus
@@ -2014,14 +2369,22 @@ export function piilotaLuentakuva(ui, { heti = false } = {}) {
   if (!ui) return;
   ui.luentakuvaSulku?.();
   ui.luentakuvaSulku = null;
+  irrotaLuentakuvanAnkkuri(ui);
   clearTimeout(ui.luentakuvaAjastin);
   ui.luentakuvaAjastin = null;
   const paneeli = ui.luentakuva;
   ui.luentakuva = null;
   if (!paneeli) return;
-  if (heti || liikeVahennetty()) { paneeli.remove(); return; }
+  // Ankkurisolmu lähtee paneelin mukana: tyhjä piste jäisi muuten
+  // karttapinnalle jokaisen luennan jäljiltä.
+  const poista = () => {
+    const solmu = paneeli.parentNode;
+    paneeli.remove();
+    if (solmu?.classList?.contains('fokusvirta-luentakuva-ankkuri')) solmu.remove();
+  };
+  if (heti || liikeVahennetty()) { poista(); return; }
   paneeli.classList.remove('nakyy');
-  setTimeout(() => paneeli.remove(), LUENTAKUVAN_HAIVE_MS);
+  setTimeout(poista, LUENTAKUVAN_HAIVE_MS);
 }
 
 /* ==================== KUVAN SUURENNOS KARTAN PÄÄLLE ==================

@@ -526,6 +526,9 @@ const MODULES = [
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
   'js/etsi-aarre-nappi.js',
+  // Saapumisasento ennen fokusvirtaa (fokusvirta ja kartta tuovat sen);
+  // moduuli itse ei tuo mitään.
+  'js/saapumisasento.js',
   // Minipopup ennen ehdotuksia ja tasogalleriaa (molemmat tuovat sen;
   // moduuli tuo vain ui-apurit, joka on yllä).
   'js/minipopup.js',

@@ -4869,3 +4869,95 @@ joten lähizoomissa myös pisteen napautus osuu luotettavammin.
 liu'un jatkuvuus, kaukonäkymän muuttumattomuus) ja
 `tests/pallonimet.test.mjs` osio 7 (nimen napautus antaa saman
 kaupungin, fokuskohteen lappu ei osu kaupunkiin, kytkennät).
+
+## 22. Saapumisasento: kaupunki alimpaan kolmannekseen (9.9.2026)
+
+Omistajan tilaus 9.9.2026 klo 16.10 (Raamattu, SAAPUMISESSA KAMERA
+ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA KOLMANNEKSESSA JA LUENTAKUVA
+SEN YLAPUOLELLA HIEMAN OIKEALLA, sanatarkasti):
+
+> "kun tullaan uuteen kaupunkiin, kamera saisi asettua niin että
+> kaupunki jää alimpaan kolmannekseen ja kuva tulee sen yläpuolelle ja
+> vähän oikealle, niin että se ei jää matkakirjan tekstin peittoon
+> varsinkin pienillä näytöillä"
+
+### 22.1 Kohdistuspisteen siirto, ei uutta paikkaa laudalla
+
+Kamera keskittää aina näkymän keskipisteen. Asento toteutetaan siis
+**kohdistuspisteen siirtona**: saapumisajo katsoo pistettä, joka on
+kaupungin pohjois- ja itäpuolella juuri sen verran, että kaupunki itse
+asettuu ruudulla kohtaan (0,42 · leveys, 0,78 · korkeus). Laudan
+pisteitä ei liikuteta, zoomi ei muutu, eikä mikään kehyssilmukka korjaa
+kameraa jälkikäteen — pelaajan oma panorointi ja nipistys jäävät
+voimaan sellaisinaan.
+
+Kaava on **yhteinen molemmille laudoille** (`js/saapumisasento.js`,
+puhdas moduuli ilman DOMia). Poikkeama annetaan osuuksina näkymästä
+(`saapumisenPoikkeama` → `{ x: −0,08, y: +0,28 }`), ja kumpikin lauta
+soveltaa sitä omissa yksiköissään:
+
+| lauta | funktio | yksikkö |
+| --- | --- | --- |
+| pallo | `saapumisenPallonKohta` | asteita (lat/lng) |
+| tasokartta (nukkuu) | `saapumisenKameranKohta` | lautayksiköitä |
+
+Pallolla pystysiirto on `poikkeama.y · leveysAst · (paneH / paneW)`,
+missä `leveysAst` on ruudun leveydellä näkyvä kaari
+(`asteetLeveydesta`). Vaakasiirto jaetaan **kosinilla**, koska
+pituusaste on kaarta ahtaampi napoja kohti; ilman jakoa Lontoossa kuva
+liukuisi 38 % liian vähän. Etumerkit ovat vastakkaiset: ruudun alaspäin
+on etelään (lat pienenee), mutta lautayksiköiden y kasvaa alaspäin.
+
+### 22.2 Kolme kutsukohtaa — ja vain ne
+
+`saapuminen: true` on `kameranKohde`-kohteen lippu
+(`js/pallolauta/kamera.js`, sama nimi `js/kartta.js`:ssä):
+
+1. **`kamera.kotiin`** — lento- ja teleporttisaapumiset
+   (`js/pallolauta/siirto.js laske`, `lauta.js paivita`);
+2. **avauslennon maali** (`js/pallolauta/avaus.js`): siirto kulkee
+   suunnitelman loppuun `lennonVaihe`-painotuksena (`loppusiirto`), ei
+   hyppynä, joten lähtökuva on ennallaan, liike on yhä yksi kaari ja
+   laskeutumisen jälkeinen `kotiin` pysyy nolla-ajona. Reduced motionin
+   suora hyppy saa saman lipun;
+3. **saattava kamera** (`js/ui.js aloitaSaattavaKamera`) — kävelymatkalla
+   tämä ON saapumisajo, koska paluuajo poistettiin 1.9.2026.
+
+Muualta lippua ei anneta, joten ennakkozoomi, kohdesovitus, linssit ja
+pelaajan omat eleet katsovat kohdettaan keskeltä kuten ennenkin.
+
+### 22.3 Mitattu (Chromium 9.9.2026, Lontoo, saapumisleveys 240)
+
+Kaupungin **todellinen** ruutupaikka luetaan Globe.gl:n
+`getScreenCoords`-projektiosta, ei `nakyvaAlue`-arviosta (ks. 22.4):
+
+| ruutu | karttapinta | kaupungin x | kaupungin y |
+| --- | --- | --- | --- |
+| työpöytä 1600 × 1000 | 1579 × 921 | 41,8 % | **77,8 %** |
+| puhelin 430 × 930 | 414 × 861 | 41,2 % | **77,7 %** |
+
+Molemmilla piste on alimmassa kolmanneksessa (raja 66,7 %) ja hitusen
+keskeltä vasemmalla, kuten tilattiin. Kaappaukset
+`saapuminen-kolmannes-tyopoyta.png` ja `-puhelin.png`.
+
+### 22.4 Sivulöytö: `nakyvaAlue` on pallolla likiarvo
+
+Sama mittaus paljasti, että `ui.nakyvaAlue()` — jolla HTML-kerroksen
+merkit (Etsi aarre -nappi, pulun paikkamerkki) laskevat ruutupaikkansa —
+on pallolla **likiarvo**. Se kohtelee laudan yksiköitä ruudulla
+lineaarisina, mutta laudan projektio on Millerin lieriö: y venyy
+leveysasteen mukana ja x on pituusastetta eikä kaarta. Lontoossa
+(51,5° N) ero mitattiin näin:
+
+| piste | `nakyvaAlue`-arvio | `getScreenCoords` | ero |
+| --- | --- | --- | --- |
+| Lontoo, 1579 × 921 | 581, 806 | 660, 717 | −79 px x, +89 px y |
+
+Kertoimet ovat Millerin venytys (1,34× pystyssä) ja
+1/cos 51,5° = 1,61 (vaakasuunnassa). Ero on nolla päiväntasaajalla ja
+kasvaa napoja kohti; lähikuvassa se on kymmeniä pikseleitä.
+
+Luentakuva (`js/fokusvirta.js`) käyttää siksi **pallon omaa
+projektiota**, kun pallolauta on hereillä, ja `nakyvaAlue`-arviota vasta
+sen puuttuessa. Sama korjaus kuuluisi Etsi aarre -napille ja pulun
+paikkamerkille — se on oma eränsä, ei tämän.

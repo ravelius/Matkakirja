@@ -652,8 +652,15 @@ test('avauslento: kamera lähtee lähtökaupungin yltä ja päätyy saapumisnäk
     assert.ok(alku > loppu, `${nimi}: kamera ei laskeudu lennon aikana`);
   }
   const avaus = lue('../js/pallolauta/avaus.js');
-  // Reduced motion: kamera hyppää suoraan kohdekaupungin saapumisnäkymään.
-  assert.match(avaus, /const rajaus = ui\.reducedMotion\n\s+\? \{ \.\.\.pixelOf\(board, kohdePos\), leveys: PALLOLAUDAN_SAAPUMISLEVEYS \}\n\s+: \{ \.\.\.pixelOf\(board, lahtoPos\), leveys: AVAUSLENNON_ALKULEVEYS \};/);
+  /*
+   * Reduced motion: kamera hyppää suoraan kohdekaupungin
+   * saapumisnäkymään — ja SAAPUMISASENTOON (omistaja 9.9.2026,
+   * Raamattu SAAPUMISESSA KAMERA ASETTUU NIIN, ETTA KAUPUNKI ON
+   * ALIMMASSA KOLMANNEKSESSA): `saapuminen: true` kertoo kameralle,
+   * että kaupunki viedään ruudun alimpaan kolmannekseen. Ilman lippua
+   * liikeherkkä pelaaja saisi eri kuvan kuin muut.
+   */
+  assert.match(avaus, /const rajaus = ui\.reducedMotion\n\s+\? \{ \.\.\.pixelOf\(board, kohdePos\), leveys: PALLOLAUDAN_SAAPUMISLEVEYS, saapuminen: true \}\n\s+: \{ \.\.\.pixelOf\(board, lahtoPos\), leveys: AVAUSLENNON_ALKULEVEYS \};/);
 });
 
 test('avauslento: kamera ajaa yhden suunnitelman, ei seuraa konetta kehys kerrallaan', () => {
@@ -683,8 +690,13 @@ test('avauslento: kamera ajaa yhden suunnitelman, ei seuraa konetta kehys kerral
   assert.match(avaus, /if \(!ui\.reducedMotion && kaari\) ajaKamerasuunnitelma\(kaari, kesto, alkuhetki\);/);
   assert.match(avaus, /const kohta = suunnitelma\(t\);/);
   assert.match(avaus, /\{ lat: kohta\.lat, lng: kohta\.lng, altitude: kohta\.altitude \}, 0,/);
-  // Kolme korkeutta lasketaan kerran kameran omalla kaavalla.
-  assert.match(avaus, /const nakyma = \(pos, leveys\) => lauta\.kamera\.kameranKohde\(\{ \.\.\.pixelOf\(board, pos\), leveys \}\);/);
+  /*
+   * Kolme korkeutta lasketaan kerran kameran omalla kaavalla.
+   * `saapuminen` on kolmas argumentti (9.9.2026): vain lennon MAALI
+   * pyytää saapumisasennon, lähtö ja huippu katsovat kaupunkia keskeltä.
+   */
+  assert.match(avaus, /const nakyma = \(pos, leveys, saapuminen = false\) => lauta\.kamera\.kameranKohde\(\n\s+\{ \.\.\.pixelOf\(board, pos\), leveys, saapuminen \},\n\s+\);/);
+  assert.match(avaus, /const maali = nakyma\(kohdePos, PALLOLAUDAN_SAAPUMISLEVEYS, true\);/);
   for (const leveys of ['AVAUSLENNON_ALKULEVEYS', 'AVAUSLENNON_HUIPPULEVEYS', 'PALLOLAUDAN_SAAPUMISLEVEYS']) {
     assert.match(avaus, new RegExp(`nakyma\\((lahtoPos|kohdePos), ${leveys}\\)`), leveys);
   }
