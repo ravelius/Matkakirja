@@ -10998,6 +10998,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-barcelona-keskipaiva.png',
+          lyhyt: 'Gaudí muokkasi Casa Batllón vanhasta talosta 1904–1906, kattoharja kaartuu kuin lohikäärmeen selkä.',
           selite: 'Gaudí muokkasi Casa Batllón vanhasta talosta 1904–1906: '
             + 'julkisivun alaosa on Montjuïcin hiekkakiveä ja ylempi osa '
             + 'rikotuista laatoista ladottua mosaiikkia, ja kattoharja '
@@ -11006,6 +11007,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-barcelona-ilta.png',
+          lyhyt: 'Palau Nacional avattiin 1929 maailmannäyttelyyn; vuodesta 1934 siinä on Katalonian taidemuseo.',
           selite: 'Palau Nacional avattiin vuoden 1929 maailmannäyttelyyn, ja '
             + 'sen juhlasali mittaa 46 kertaa 74 metriä ja kohoaa 70 metriin '
             + '— vuodesta 1934 talossa on ollut Katalonian kansallinen '
@@ -11014,6 +11016,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Barcelona rooftops.jpg',
+          lyhyt: 'Barcelona pysyi 1850-luvulle asti muurien sisällä, ja Ciutat Vella on yhä sen alkuperäinen ydin.',
           selite: 'Barcelona pysyi 1850-luvulle asti kaupunginmuurien sisällä, '
             + 'ja Ciutat Vella on yhä sen alkuperäinen tiiviisti rakennettu '
             + 'ydin.',
@@ -11021,6 +11024,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Barcelona in evening light (49598614983).jpg',
+          lyhyt: 'Barcelona kääntyi merta kohti vasta 1990-luvulla, sitä ennen rannalla oli tehtaita ja satama.',
           selite: 'Barcelona kääntyi merta kohti vasta 1990-luvulla, sillä sitä '
             + 'ennen rannan ja kaupungin väliin jäivät tehtaat, radat ja '
             + 'satama.',
@@ -11028,6 +11032,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Barcelona desde El Carmelo.JPG',
+          lyhyt: 'Cerdàn ruudukon korttelit ovat 113 metriä sivultaan, laidalla kohoaa Sagrada Família vuodesta 1882.',
           selite: 'Cerdàn ruudukon korttelit ovat 113 metriä sivultaan, ja sen '
             + 'laidalla on vuodesta 1882 rakenteilla ollut Sagrada Família.',
           lahde: 'Jcca76, Wikimedia Commons (CC BY-SA 4.0)',
@@ -11037,6 +11042,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Barcelona. Fachada de la Catedral LCCN2017660376.jpg',
           vuosi: '1890-luku',
+          lyhyt: 'Katedraalin julkisivu rakennettiin 1880-luvulla 1408 piirretyn suunnitelman mukaan, torni puuttuu.',
           selite: 'Katedraalin vastavalmistunut julkisivu 1890-luvun '
             + 'photochrom-vedoksessa: se rakennettiin 1880-luvulla vuonna 1408 '
             + 'piirretyn suunnitelman mukaan, ja keskeltä puuttuu vielä torni.',
@@ -11044,6 +11050,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: '736 Catedral de la Santa Creu i Santa Eulàlia, façana del pla de la Seu (Barcelona).jpg',
+          lyhyt: 'Katedraalin keskitorni valmistui 1913, ja pääalttarin alla lepää pyhä Eulalia.',
           selite: 'Katedraalin keskitorni valmistui vasta 1913, ja kirkon '
             + 'pääalttarin alla lepää kaupungin kanssasuojelija pyhä Eulalia.',
           lahde: 'Enric, Commons (CC BY-SA 4.0)',
@@ -11076,6 +11083,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on tulkittu olevan pyhän Yrjänän keihäs lohikäärmeen selässä. '
             + 'Parvekkeet muistuttavat naamioita, ja talon lempinimi on '
             + 'luutalo.',
+          lyhyt: 'Casa Batllón lempinimi on luutalo, katon kaakeliharja tulkitaan lohikäärmeen seläksi.',
           selite: 'Casa Batllón lempinimi on luutalo, ja katon kaakeliverhoiltua '
             + 'harjaa on tulkittu lohikäärmeen selkänä, jonka läpi tornin risti '
             + 'on työnnetty kuin pyhän Yrjänän keihäs.',
@@ -11093,6 +11101,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'konserttisali, jossa päiväsaikaan ei tarvita lainkaan '
             + 'sähkövaloa. Lavan takaseinällä on kahdeksantoista '
             + 'mosaiikkineitoa, ja jokainen soittaa eri soitinta.',
+          lyhyt: 'Palau de la Música Catalana rakennettiin 1905–1908, lavan seinällä on 18 mosaiikkineitoa.',
           selite: 'Palau de la Música Catalana rakennettiin 1905–1908 Orfeó '
             + 'Català -kuorolle, ja sen lavan takaseinällä on kahdeksantoista '
             + 'mosaiikkineitoa kukin eri soittimineen.',
@@ -11122,12 +11131,14 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'The whole Alhambra Granada Spain.jpg',
+          lyhyt: 'Alhambra oli Granadan emiirikunnan hallintokeskus ja Iberian viimeisen muslimivaltion sydän.',
           selite: 'Alhambra oli Granadan emiirikunnan hallintokeskus ja Iberian '
             + 'niemimaan viimeisen muslimivaltion sydän.',
           lahde: 'Jebulon, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Granada Cathedral as seen from Alhambra 2014-08-06.jpg',
+          lyhyt: 'Granadan tuomiokirkon peruskivi laskettiin 1523, rakennustyöt valmistuivat vasta 1704.',
           selite: 'Granadan tuomiokirkon peruskivi laskettiin 25. maaliskuuta '
             + '1523, ja rakennustyöt saatiin päätökseen vasta jouluaattona '
             + '1704.',
@@ -11135,6 +11146,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Sacromonte-Granada (1).jpg',
+          lyhyt: 'Sacromonte on Granadan romanien kaupunginosa, jonka asunnot on kaivettu Valparaíson rinteeseen.',
           selite: 'Sacromonte on Granadan romanien perinteinen kaupunginosa, '
             + 'jonka asunnot on kaivettu suoraan Valparaíson laakson '
             + 'rinteeseen.',
@@ -11144,6 +11156,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Gran Vía de Colón (2973320148).jpg',
+          lyhyt: 'Gran Vía de Colón murrettiin vanhankaupungin läpi 1895–1934, viidesosa siitä purettiin.',
           selite: 'Gran Vía de Colón murrettiin vanhankaupungin läpi vuosina '
             + '1895–1934 kauppakamarin tilauksesta, ja työ vaati '
             + 'viidesosan silloisen vanhankaupungin purkamista.',
@@ -11344,6 +11357,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjoitukset ovat yhä paikoillaan. Sama lause toistuu seinillä '
             + 'uudestaan ja uudestaan: se oli hallitsijasuvun tunnuslause, ja '
             + 'se kuuluu "ei ole voittajaa paitsi Jumala".',
+          lyhyt: 'Kun Alhambra luovutettiin 1492, voittajat asuivat siinä, joten sen kipsikoristelu säilyi.',
           selite: 'Kun Alhambra luovutettiin vuonna 1492, voittajat eivät '
             + 'purkaneet palatsia vaan muuttivat siihen, ja siksi sen '
             + 'kipsikoristelu ja arabiankieliset kirjoitukset ovat yhä '
@@ -11363,6 +11377,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'katsoi siitä taakseen ja itki, ja hänen äitinsä sanoi, ettei '
             + 'kannata itkeä kuin nainen sitä, mitä ei osannut puolustaa kuin '
             + 'mies.',
+          lyhyt: 'Francisco Pradillan maalaus 1882 esittää Boabdilin luovuttavan Granadan avaimet 1492.',
           selite: 'Francisco Pradillan vuoden 1882 maalaus esittää hetkeä, '
             + 'jona Boabdil luovutti Granadan avaimet Ferdinandille ja '
             + 'Isabellalle 2. tammikuuta 1492.',
@@ -11380,6 +11395,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '479 metriä, Iberian niemimaan korkein huippu. Lunta ei silti '
             + 'ole taattu: alppihiihdon MM-kisat oli määrä pitää täällä 1995, '
             + 'mutta ne siirrettiin vuodella, koska rinteet olivat paljaat.',
+          lyhyt: 'Sierra Nevadan hiihtokeskus on Euroopan eteläisin, hissit nousevat yli kolmen kilometrin korkeuteen.',
           selite: 'Sierra Nevadan hiihtokeskus on Euroopan eteläisin, ja sen '
             + 'hissit nousevat yli kolmen kilometrin korkeuteen aivan '
             + 'Iberian korkeimman huipun Mulhacénin kupeessa.',
@@ -11407,6 +11423,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tulisi kokonainen. Kupolin esikuva oli osittain Persiassa. '
             + 'Vuonna 1934 Leopoldo Torres Balbás purki sen ja teki tilalle '
             + 'pyramidikaton, ja siitä nousi kansainvälinen kiista.',
+          lyhyt: 'Jean Laurentin vedoksessa noin 1865 pihan paviljongin pallokupoli purettiin vasta 1934.',
           selite: 'Jean Laurentin vedoksessa noin vuodelta 1865 pihan '
             + 'perällä olevan paviljongin päällä on pallomainen kupoli, '
             + 'joka purettiin vasta 1934.',
@@ -11425,6 +11442,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-granada-aamu.jpg',
+          lyhyt: 'San Jerónimon luostarin perustivat Isabella ja Ferdinand; kirkko vihittiin Marian sikiämiselle.',
           selite: 'San Jerónimon kuninkaallisen luostarin perustivat '
             + 'katoliset kuninkaat Isabella ja Ferdinand, nykyisten '
             + 'rakennusten työ alkoi Granadassa 1504 Diego de Siloén '
@@ -11434,6 +11452,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-granada-keskipaiva.jpg',
+          lyhyt: 'Granadan kartusiaaniluostari La Cartuja perustettiin 1506, sakaristo valmistui 1727–1764.',
           selite: 'Granadan kartusiaaniluostari La Cartuja perustettiin 1506 '
             + 'ja rakentaminen alkoi kymmenen vuotta myöhemmin jatkuen '
             + 'kolmisensataa vuotta; sakaristo tehtiin 1727–1764 ja on '
@@ -11442,6 +11461,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-granada-ilta.jpg',
+          lyhyt: 'Corral del Carbón on 1300-luvun funduq eli kauppiaiden majatalo, ainoa nasridiajalta säilynyt.',
           selite: 'Corral del Carbón on 1300-luvun alkupuolelta säilynyt '
             + 'funduq eli kauppiaiden majatalo ja viljavarasto — ainoa '
             + 'nasridiajalta säilynyt lajissaan koko Iberian niemimaalla.',
@@ -11452,12 +11472,14 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Court of the Lions, Alhambra by Juan Laurent.jpg',
           vuosi: '1870-luku',
+          lyhyt: '1870-luvun vedoksen otti ranskalainen Jean Laurent, joka avasi Madridiin valokuvaamon 1856.',
           selite: '1870-luvun vedoksen otti ranskalainen Jean Laurent, joka muutti '
             + 'Espanjaan 1843 ja avasi Madridiin valokuvaamon 1856.',
           lahde: 'Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Court of the Lions, Alhambra de Granada (Spain).jpg',
+          lyhyt: 'Leijonapihan rakennutti nasridisulttaani Muhammad V vuosien 1362–1391 välillä.',
           selite: 'Leijonapihan rakennutti nasridisulttaani Muhammad V, ja työt '
             + 'alkoivat hänen toisella hallituskaudellaan vuosien 1362 ja 1391 '
             + 'välillä.',
@@ -11492,6 +11514,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paikallaan. Vuonna 1922 hän järjesti Alhambran pihalla '
             + 'kilpailun, joka pelasti vanhan cante jondo -laulun '
             + 'unohdukselta.',
+          lyhyt: 'Manuel de Falla sävelsi Öitä Espanjan puutarhoissa 1909–1915 ja muutti sitten Granadaan.',
           selite: 'Manuel de Falla (1876–1946) sävelsi "Öitä Espanjan '
             + 'puutarhoissa" vuosina 1909–1915 ja muutti vasta sen jälkeen '
             + 'Granadaan Alhambran kukkulan rinteeseen.',
@@ -11612,6 +11635,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Danube panorama from the Fisherman\'s Bastion Budapest 2026.JPG',
+          lyhyt: 'Kalastajabastioni rakennettiin Frigyes Schulekin suunnitelmin, tornit kuvaavat heimopäälliköitä.',
           selite: 'Kalastajabastioni rakennettiin Frigyes Schulekin '
             + 'suunnitelmien mukaan, ja sen seitsemän tornia vastaavat '
             + 'unkarilaisten seitsemää heimopäällikköä.',
@@ -11619,6 +11643,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Budapest Parliament 4604.JPG',
+          lyhyt: 'Imre Steindlin suunnittelema parlamenttitalo avattiin 1902, korkeus viittaa vuoteen 896.',
           selite: 'Imre Steindlin suunnittelema parlamenttitalo avattiin 1902 '
             + 'ja on yhä Unkarin suurin rakennus; sen 96 metrin korkeus '
             + 'viittaa vuoteen 896.',
@@ -11626,6 +11651,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'The Millennium Monument in Heroes\' Square, Budapest, Hungary.jpg',
+          lyhyt: 'Sankarien aukion Millenniumin muistomerkin 36-metrisen pylvään huipulla on arkkienkeli Gabriel.',
           selite: 'Sankarien aukion Millenniumin muistomerkki esittää '
             + 'unkarilaisten seitsemää heimopäällikköä ja muita kansallisia '
             + 'johtajia, ja 36-metrisen pylvään huipulla on arkkienkeli '
@@ -11636,6 +11662,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Kilátás a Gellérthegyről Pest és az épülő Déli összekötő vasúti híd felé, 1876 körül - Budapest, Fortepan 82207.jpg',
+          lyhyt: 'Noin 1876 otetussa kuvassa Pest on vielä matala, ja Tonavan yli rakennetaan rautatiesiltaa.',
           selite: 'Noin vuonna 1876 otetussa valokuvassa Pest on vielä matala '
             + 'kaupunki ja Tonavan yli rakennetaan Eteläistä rautatiesiltaa.',
           lahde: 'Budapest Főváros Levéltára / Fortepan, Wikimedia Commons (PD)',
@@ -11838,6 +11865,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'asettuvat lautoineen: he seisovat vedessä vyötäröä myöten ja '
             + 'siirtävät nappuloita märin sormin. Vakiopelaajat tulevat '
             + 'paikalle myös talvella, kun altaan pinnasta nousee höyryä.',
+          lyhyt: 'Széchenyi on Euroopan suurin lääkinnällinen kylpylä, ulkoaltaan pöydillä pelataan shakkia.',
           selite: 'Széchenyi on Euroopan suurin lääkinnällinen kylpylä, ja sen '
             + 'ulkoaltaan betonipöydillä pelataan shakkia myös talvella.',
           lahde: 'Christine Zenino, Wikimedia Commons (CC BY 2.0)',
@@ -11855,6 +11883,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ratkaistakseen sen itse. Unkarissa lelu myytiin nimellä bűvös '
             + 'kocka, taikakuutio. Asentoja on yli 43 triljoonaa, mutta '
             + 'jokaisesta pääsee maaliin enintään 20 kierrolla.',
+          lyhyt: 'Rubikin kuution asennoista pääsee maaliin aina enintään 20 kierrolla.',
           selite: 'Rubikin kuution asentoja on yli 43 triljoonaa, mutta '
             + 'jokaisesta pääsee maaliin enintään 20 kierrolla.',
           lahde: 'Lars Karlsson (Keqs), Wikimedia Commons (CC BY-SA 3.0)',
@@ -11863,6 +11892,7 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Ensimmäinen pakkaus',
               tiedosto: 'Magic cube original pack.jpg',
+              lyhyt: 'Unkarissa lelu myytiin nimellä bűvös kocka eli taikakuutio, tehden ensin lelutehdas Politoys.',
               selite: 'Unkarissa lelu myytiin nimellä bűvös kocka eli '
                 + 'taikakuutio, ja ensimmäiset pakkaukset teki lelutehdas '
                 + 'Politoys.',
@@ -11881,6 +11911,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tahallaan hupun varjoon: salaisuus saa pysyä salaisuutena. '
             + 'Patsaan kynä on kulunut kiiltäväksi, sillä sitä käydään '
             + 'koskettamassa onnen toivossa.',
+          lyhyt: 'Miklós Ligeti jätti Anonymuksen kasvot 1903 hupun varjoon, koska kronikoitsijan nimeä ei tiedetä.',
           selite: 'Miklós Ligeti jätti Anonymuksen kasvot vuonna 1903 '
             + 'tahallaan hupun varjoon, koska kronikoitsijan nimeä ei tiedä '
             + 'kukaan.',
@@ -11907,6 +11938,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Zsolnay-laatoilla. Pinta-alaa on 10 000 neliötä kolmessa '
             + 'kerroksessa: alimmasta löytyvät kalakauppiaat ja suolakurkut, '
             + 'kadun tasalta liha, leipä ja mausteet.',
+          lyhyt: 'Suuri kauppahalli vihittiin 1897 Samu Peczin suunnitelmin, katto katettiin Zsolnay-laatoilla.',
           selite: 'Suuri kauppahalli vihittiin 15. helmikuuta 1897 Samu Peczin '
             + 'suunnitelmien mukaan, ja sen katto katettiin Pécsin '
             + 'Zsolnay-laatoilla.',
@@ -11927,6 +11959,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-budapest-parliament.jpg',
+          lyhyt: 'Unkarin parlamenttitalo valmistui 1904, sen kupoli nousee 96 metriin viitaten vuoteen 896.',
           selite: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin '
             + 'piirustuksin: uusgoottilainen palatsi on 268 metriä '
             + 'pitkä, ja sen kupoli nousee tasan 96 metriin — luku '
@@ -11941,6 +11974,7 @@ export const KULTTUURI_KATEGORIAT = {
            * sama kohde, uusi kuva voittaa.
            */
           ampari: 'herokoe/hero-budapest-lanchid.jpg',
+          lyhyt: 'Széchenyin ketjusilta valmistui 1849 ensimmäisenä pysyvänä siltana Tonavan yli.',
           selite: 'Széchenyin ketjusilta valmistui 1849 ensimmäisenä '
             + 'pysyvänä siltana Tonavan yli Budan ja Pestin välillä — '
             + 'kivileijonat ovat vartioineet sen päitä vuodesta 1852.',
@@ -11948,6 +11982,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-budapest-fishermans-bastion.jpg',
+          lyhyt: 'Kalastajanlinnakkeen seitsemän tornia muistuttaa heimoista; terassi valmistui 1902 kirkon viereen.',
           selite: 'Kalastajanlinnakkeen seitsemän suippotornia '
             + 'muistuttavat unkarilaisten seitsemästä heimosta — '
             + 'näköalaterassi valmistui 1902 Matthias-kirkon viereen, '
@@ -11959,6 +11994,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Budapest, Lánchíd a budai hídfőtől nézve, 1873-1880 között. - Fortepan 82081.jpg',
           vuosi: '1870-luku',
+          lyhyt: 'Ketjusilta 1870-luvulla, isoisän matkan aikoihin — Unkarin ensimmäinen kiinteä Tonavan ylitys.',
           selite: 'Ketjusilta 1870-luvulla eli isoisän matkan aikoihin, kun '
             + 'vuonna 1849 valmistunut silta oli Unkarin ensimmäinen kiinteä '
             + 'Tonavan ylitys.',
@@ -11966,6 +12002,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Széchenyi Chain Bridge 2014.jpg',
+          lyhyt: 'Räjäytetty Ketjusilta rakennettiin uudelleen ja avattiin 1949, sata vuotta ensiavajaisten jälkeen.',
           selite: 'Tammikuussa 1945 räjäytetty Ketjusilta rakennettiin uudelleen '
             + 'alkuperäisten piirustusten mukaan ja avattiin 1949, tasan sata '
             + 'vuotta ensimmäisten avajaistensa jälkeen.',
@@ -11997,6 +12034,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerätty matkoilla kyliin, joissa vanhat soittajat vielä '
             + 'muistivat ne ulkoa. Unesco nosti liikkeen mallikelpoisten '
             + 'suojelutapojen luetteloon vuonna 2011.',
+          lyhyt: 'Muzsikás-yhtye soitti Belvárosin tanssitalossa 1978; tanssitaloissa kansantanssia tanssitaan itse.',
           selite: 'Muzsikás-yhtye soitti Belvárosin nuorisotalon tanssitalossa '
             + 'vuonna 1978, ja tanssitaloissa kansantanssia ei katsota vaan '
             + 'tanssitaan itse.',
@@ -12015,6 +12053,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'soitinrakentaja Vencel József Schunda antoi soittimelle jalat '
             + 'ja vuonna 1874 polkimen, joka vaimentaa kielet. Uutuutta oli '
             + 'esittelyssä katsomassa myös Ferenc Liszt.',
+          lyhyt: 'Cimbalomin jokaista säveltä kohti on kolme-neljä terästä kieltä, jotka vetävät runkoa kokoon.',
           selite: 'Cimbalomissa on jokaista säveltä kohti kolme tai neljä '
             + 'samaan vireeseen viritettyä teräskieltä, ja yhdessä ne vetävät '
             + 'runkoa kokoon noin kymmenen tonnin voimalla.',
@@ -12024,6 +12063,7 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Ensiesittely 1874',
               tiedosto: 'Schunda cimbalom presentation.jpg',
+              lyhyt: 'Vencel József Schunda esitteli cimbalomin polkimen 1874, katsomassa oli myös Ferenc Liszt.',
               selite: 'Vencel József Schunda esitteli cimbalomin polkimen '
                 + 'vuonna 1874, ja uutuutta oli katsomassa myös Ferenc Liszt.',
               lahde: 'A. Weinwurm, Wikimedia Commons (PD)',
@@ -12052,6 +12092,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Colosseo 2020.jpg',
+          lyhyt: 'Colosseumin ulkoseinä on säilynyt kolmena kaarikerroksena vain toiselta puolelta.',
           selite: 'Colosseumin ulkoseinä on säilynyt kolmena kaarikerroksena '
             + 'vain toiselta puolelta; toiselta se on romahtanut, ja '
             + 'jäljellä on matalampi sisäkehä.',
@@ -12068,6 +12109,7 @@ export const KULTTUURI_KATEGORIAT = {
           // filmiskannaus oli utuinen ja taivas puhkipalanut. Tilalle
           // sama aukio terävänä ja värit tallella.
           tiedosto: 'Roma, Piazza di Spagna (2).jpg',
+          lyhyt: 'Espanjalaisissa portaissa on 135 askelmaa Piazza di Spagnalta Trinità dei Montin kirkolle.',
           selite: 'Espanjalaisissa portaissa on 135 askelmaa, ja ne nousevat '
             + 'Piazza di Spagnalta ylös Trinità dei Montin kirkolle.',
           lahde: 'Palickap, Wikimedia Commons (CC BY-SA 4.0)',
@@ -12097,6 +12139,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Rome (IT), Trevi-Brunnen -- 2013 -- 3593.jpg',
+          lyhyt: 'Trevin suihkulähteessä seisoo merenjumala Oceanus, sivuilla merihevoset ja alla portainen vesi.',
           selite: 'Trevin suihkulähteessä seisoo keskellä merenjumala '
             + 'Oceanus, sivuilla merihevoset ja alla portaittain putoava '
             + 'vesi.',
@@ -12150,6 +12193,7 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Sampietrini.jpg',
+                  lyhyt: 'Rooman katukiveys sanpietrini koostuu pienistä mustista laavakivistä viuhkakuviossa.',
                   selite: 'Rooman katukiveys on nimeltään sanpietrini: '
                     + 'pieniä mustia laavakiviä, jotka on ladottu '
                     + 'viuhkakuvioon.',
@@ -12157,6 +12201,7 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Piazza sant Ignazio Rome.jpg',
+                  lyhyt: 'Piazza Sant\'Ignazio on Filippo Raguzzinin 1727–1728 suunnittelema aukio kaarevine okrantaloineen.',
                   selite: 'Piazza Sant\'Ignazio, Filippo Raguzzinin vuosina '
                     + '1727–1728 suunnittelema pieni aukio, jonka '
                     + 'okranväriset talot on muotoiltu kaareviksi.',
@@ -12199,6 +12244,7 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Spaghetti Carbonara, Trastevere, Roma.jpg',
                 asettelu: 'kapea',
+                lyhyt: 'Roomalaiseen carbonaraan kuuluu pecorino, munankeltuainen, mustapippuri ja rapea possunliha.',
                 selite: 'Roomalaiseen carbonaraan ei kuulu kermaa vaan '
                   + 'pecorino, munankeltuainen, mustapippuri ja rapeaksi '
                   + 'paistettu possunliha.',
@@ -12225,6 +12271,7 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Campo dei Fiori.jpg',
+                  lyhyt: 'Campo de\' Fiorilla myydään aamuisin vihanneksia, mausteita ja kukkia Giordano Brunon patsaan alla.',
                   selite: 'Campo de\' Fiorilla myydään aamuisin vihanneksia, '
                     + 'mausteita ja kukkia, ja aukion keskellä seisoo '
                     + 'Giordano Brunon patsas vuodelta 1889.',
@@ -12232,6 +12279,7 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Roma- Piazza Navona - 52380663568.jpg',
+                  lyhyt: 'Piazza Navona seuraa yhä antiikin kilpa-areenan pitkulaista muotoa.',
                   selite: 'Piazza Navona seuraa yhä antiikin kilpa-areenan '
                     + 'pitkulaista muotoa: areena oli tässä ensin, ja talot '
                     + 'nousivat katsomon paikalle.',
@@ -12251,6 +12299,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'valaistaan, ja Colosseumin kaarien läpi näkyy taivas.',
               kuva: {
                 tiedosto: 'Roma, veduta dal gianicolo 01.JPG',
+                lyhyt: 'Gianicolo-kukkulalta koko Rooman keskusta erottuu yhdellä silmäyksellä auringonlaskun aikaan.',
                 selite: 'Gianicolo-kukkulalle noustaan auringonlaskun '
                   + 'aikaan, ja sieltä koko Rooman keskusta erottuu yhdellä '
                   + 'silmäyksellä.',
@@ -12394,6 +12443,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. '
             + 'Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja '
             + 'yrittäjiä jää säännöllisesti kiinni.',
+          lyhyt: 'Fontana di Trevi on Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo merenjumala Oceanus.',
           selite: 'Fontana di Trevi ei ole erillinen muistomerkki vaan '
             + 'Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo '
             + 'meren jumala Oceanus.',
@@ -12413,6 +12463,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä '
             + 'oli kangaskatto auringolta, ja sitä kelasivat auki '
             + 'sotalaivaston merimiehet.',
+          lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
           selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen '
             + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja '
             + 'kahdeksankymmentä pystykuilua.',
@@ -12422,6 +12473,7 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Areena kauempaa',
               tiedosto: 'Colosseum (8473462785).jpg',
+              lyhyt: 'Osa areenan lattiaa on rakennettu takaisin; alkuperäinen puulattia peitti koko hypogeumin.',
               selite: 'Osa areenan lattiaa on rakennettu takaisin '
                 + 'paikalleen; alkuperäinen puulattia peitti koko '
                 + 'hypogeumin.',
@@ -12441,6 +12493,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle '
             + 'lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin '
             + 'possua: norsu oli heidän mielestään pieni ja pyöreä.',
+          lyhyt: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti Ercole Ferrata, ja se paljastettiin 1667.',
           selite: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti '
             + 'Ercole Ferrata, ja se paljastettiin vuonna 1667.',
           lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
@@ -12449,6 +12502,7 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Koko muistomerkki',
               tiedosto: 'Elephant and Obelisk - Bernini.jpg',
+              lyhyt: 'Norsun selässä oleva obeliski on Rooman kolmestatoista muinaisobeliskista pienin.',
               selite: 'Norsun selässä oleva obeliski on Rooman '
                 + 'kolmestatoista muinaisobeliskista pienin, viisi ja puoli '
                 + 'metriä.',
@@ -12478,6 +12532,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-rooma-forum.jpg',
+          lyhyt: 'Forum Romanum hautautui keskiajalla maan alle lehmäkentäksi, ja kaivaminen alkoi vasta 1803.',
           selite: 'Forum Romanum oli tasavallan ja keisariajan Rooman tori, '
             + 'oikeuspaikka ja uskonnollinen keskus; keskiajalla se '
             + 'hautautui maan alle ja tunnettiin nimellä Campo Vaccino eli '
@@ -12487,6 +12542,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-rooma-aamu.png',
+          lyhyt: 'Colosseum valmistui vuonna 80, ja noin 50 000 katsojan amfiteatteri on yhä antiikin suurin.',
           selite: 'Colosseum valmistui vuonna 80, ja noin '
             + 'viidenkymmenentuhannen katsojan amfiteatteri on yhä '
             + 'antiikin suurin.',
@@ -12494,6 +12550,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-rooma-keskipaiva.png',
+          lyhyt: 'Pietarinkirkkoa rakennettiin 1506–1626, ja Michelangelon kupoli on yhä Rooman korkein rakennelma.',
           selite: 'Pietarinkirkkoa rakennettiin yli sata vuotta '
             + '(1506–1626), ja Michelangelon kupoli on yhä Rooman '
             + 'korkein rakennelma.',
@@ -12501,6 +12558,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-rooma-ilta.png',
+          lyhyt: 'Pantheonin kupoli on ollut maailman suurin raudoittamaton betonikupoli lähes 2000 vuotta.',
           selite: 'Pantheonin kupoli on ollut maailman suurin '
             + 'raudoittamaton betonikupoli lähes kaksituhatta vuotta, '
             + 'ja sen ainoa valonlähde on katon avoin silmä.',
@@ -12508,6 +12566,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: "Roma da Castel Sant'Angelo.jpg",
+          lyhyt: 'Rooma on kasattu kerroksittain: samassa korttelissa voi olla antiikin pylväs ja barokkikirkko.',
           selite: 'Rooma on kasattu kerroksittain, ja saman korttelin '
             + 'sisällä voi olla antiikin pylväs, keskiaikainen torni ja '
             + 'barokkikirkko.',
@@ -12515,6 +12574,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Rome (IT), Ponte Palatino -- 2013 -- 3482.jpg',
+          lyhyt: 'Tiber on Italian kolmanneksi pisin joki, alkaen Apenniineilta ja laskien Tyrrhenanmereen.',
           selite: 'Tiber on Italian kolmanneksi pisin joki, ja se saa '
             + 'alkunsa Apenniineilta ja laskee Tyrrhenanmereen Ostian ja '
             + 'Fiumicinon välissä.',
@@ -12522,6 +12582,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Piazza Navona 1.jpg',
+          lyhyt: 'Piazza Navonan Neljän virran suihkulähteen suunnitteli Bernini 1651; jokijumalat kuvaavat maanosia.',
           selite: 'Piazza Navonan Neljän virran suihkulähteen suunnitteli '
             + 'Gian Lorenzo Bernini vuonna 1651, ja sen neljä jokijumalaa '
             + 'kuvaavat neljän maanosan suuria virtoja.',
@@ -12532,12 +12593,14 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'The Colisuem and Meta Sudans, Rome, Italy-LCCN2001700939.jpg',
           vuosi: '1890-luku',
+          lyhyt: 'Colosseumin edessä seisoi suihkulähteen tynkä Meta Sudans, joka purettiin 1936 kadun tieltä.',
           selite: 'Colosseumin edessä seisoi antiikin suihkulähteen tynkä '
             + 'Meta Sudans, joka purettiin 1936 kadun tieltä.',
           lahde: 'Library of Congress (PD)',
         },
         {
           tiedosto: 'Colosseum on a November Day (45615640574).jpg',
+          lyhyt: 'Colosseumin travertiinikaaret nousevat kolmessa kerroksessa, kivissä on louhittujen hakojen reikiä.',
           selite: 'Colosseumin travertiinikaaret nousevat kolmessa '
             + 'kerroksessa, ja kivissä on reikiä, joista rautahaat on '
             + 'aikanaan louhittu pois.',
@@ -12571,6 +12634,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi '
             + 'tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille '
             + 'sotilaille lähteen, josta vesi otettiin.',
+          lyhyt: 'Roomaan rakennettiin yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
           selite: 'Roomaan rakennettiin yksitoista akveduktia, ja vesi '
             + 'virtasi kaarien päällä kulkevassa kourussa pelkän painovoiman '
             + 'voimalla.',
@@ -12588,6 +12652,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa '
             + 'reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä '
             + 'toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.',
+          lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on samaa kuin kotihanoissa.',
           selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden '
             + 'vesi on samaa kuin roomalaisten kotihanoissa.',
           lahde: 'Sotamies, Wikimedia Commons (CC BY-SA 4.0)',
@@ -12650,6 +12715,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Battista Piranesi, kuparipiirrostaiteilija, joka piti itseään '
             + 'ennen kaikkea arkkitehtina. Puutarha sai '
             + 'eksterritoriaalisen asemansa 1869.',
+          lyhyt: 'Maltan ritarikunnan portin avaimenreiästä avautuu näkymä sypressikäytävään ja kupoliin.',
           selite: 'Maltan ritarikunnan portin avaimenreiästä avautuu '
             + 'sypressikäytävä ja sen päässä Pietarinkirkon kupoli.',
           lahde: 'Galen Crout, Wikimedia Commons (CC0)',
@@ -12668,6 +12734,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'toiselle. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
             + 'häätöä; vetoomukseen kerättiin yli 30 000 nimeä, ja kissat '
             + 'jäivät.',
+          lyhyt: 'Largo di Torre Argentinan kuopassa on neljä tasavallan ajan temppeliä ja kissasuoja.',
           selite: 'Largo di Torre Argentinan kuopan pohjalla on neljä '
             + 'tasavallan ajan temppeliä, ja niiden raunioissa asuu '
             + 'kissasuoja.',
@@ -12779,18 +12846,21 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Wawel Cathedral Front.jpg',
+          lyhyt: 'Wawelin katedraali on omistettu pyhille Stanislaukselle ja Venceslaukselle.',
           selite: 'Wawelin katedraali on omistettu pyhille Stanislaukselle ja '
             + 'Venceslaukselle, ja siellä kruunattiin Puolan kuninkaat.',
           lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '20200512 Kościół Mariacki w Krakowie 1735 9920.jpg',
+          lyhyt: 'Mariankirkon tornista soitetaan joka tunti torvella hejnał, joka katkeaa aina kesken sävelen.',
           selite: 'Mariankirkon korkeammasta tornista soitetaan joka tunti '
             + 'torvella hejnał, joka katkeaa aina kesken sävelen.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Barbakan in Kraków, 2024 (01).jpg',
+          lyhyt: 'Barbakaani on pyöreä tiililinnake, jonka kolmimetrisissä muureissa on 130 ampuma-aukkoa.',
           selite: 'Barbakaani eli pyöreä tiililinnake, jonka kolmimetrisissä '
             + 'muureissa on 130 ampuma-aukkoa ja seitsemän tornia.',
           lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
@@ -12799,6 +12869,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Planty Park, autumn, Old Town, Krakow, Poland.jpg',
+          lyhyt: 'Planty-puisto perustettiin 1822–1830 puretun kaupunginmuurin paikalle, pituus neljä kilometriä.',
           selite: 'Planty-puisto perustettiin 1822–1830 puretun '
             + 'kaupunginmuurin paikalle, ja se on neljä kilometriä pitkä ja '
             + '21 hehtaarin laajuinen.',
@@ -12998,6 +13069,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jätti luolan eteen rikillä täytetyn lampaan. Lohikäärme ahmi '
             + 'syötin, sai kauhean janon ja joi Veiksel-jokea niin kauan, '
             + 'että halkesi. Kuningas antoi pojalle palkinnoksi tyttärensä.',
+          lyhyt: 'Bronisław Chromyn 1972 veistämä Smok Wawelski puhaltaa oikeaa tulta Wawelin kukkulan juurella.',
           selite: 'Bronisław Chromyn veistämä Smok Wawelski vuodelta 1972 '
             + 'puhaltaa oikeaa tulta muutaman minuutin välein Wawelin '
             + 'kukkulan juurella.',
@@ -13015,6 +13087,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskipäivän soitto kuullaan radiossa koko Puolassa. Tornissa '
             + 'päivystetään ympäri vuorokauden, joten soitto ei jää väliin '
             + 'yhtenäkään yönä.',
+          lyhyt: 'Mariankirkon tornissa päivystetään ympäri vuorokauden, ja hejnał kuullaan radiossa koko Puolassa.',
           selite: 'Mariankirkon tornissa päivystetään ympäri vuorokauden, ja '
             + 'keskipäivän hejnał kuullaan radiossa koko Puolassa.',
           lahde: 'Jadwiga, Wikimedia Commons (CC BY-SA 3.0)',
@@ -13047,6 +13120,7 @@ export const KULTTUURI_KATEGORIAT = {
         /* GENEROIDUT HEROT, KIERROS 15 (23.8.2026, tools/hero-tyolista-10.mjs). */
         {
           ampari: 'herokoe/hero-krakova-aamu.png',
+          lyhyt: 'Wawelin kukkulan katedraali vihittiin 1364, siellä kruunattiin kuninkaat vuoteen 1764 asti.',
           selite: 'Wawelin kukkula on jurakautista kalkkikiveä, ja sen päällä '
             + 'seisova katedraali vihittiin 1364 — siellä kruunattiin Puolan '
             + 'kuninkaat vuoteen 1764 asti.',
@@ -13054,6 +13128,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-krakova-keskipaiva.png',
+          lyhyt: 'Mariacki-kirkon eriparisen korkeamman tornin huipulta soitetaan hejnał, joka katkeaa kesken sävelen.',
           selite: 'Mariacki-kirkon tornit ovat eriparia: korkeampi nousee 80 '
             + 'metriin vartiotorniksi, ja sen huipulta soitetaan joka tunti '
             + 'hejnał, joka katkeaa aina kesken sävelen.',
@@ -13061,6 +13136,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-krakova-ilta.png',
+          lyhyt: 'Sukiennice sai renessanssiasunsa 1555 palon jälkeen, irvinaamat reunustavat sen räystäslistaa.',
           selite: 'Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen '
             + 'torin keskellä; renessanssiasunsa se sai 1555 palon jälkeen, '
             + 'ja kiviset irvinaamat reunustavat sen räystäslistaa.',
@@ -13068,12 +13144,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Main Market Square, view from S, Old Town, Kraków, Poland.jpg',
+          lyhyt: 'Rynek Główny on peräisin 1200-luvulta ja yksi Euroopan suurimmista keskiaikaisista toreista.',
           selite: 'Rynek Główny on peräisin 1200-luvulta, ja sitä sanotaan '
             + 'yhdeksi Euroopan suurimmista keskiaikaisista toreista.',
           lahde: 'Zygmunt Put, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '20200808 Widok z Kopca Krakusa na Stare Miasto w Krakowie wczesnym rankiem 0557 3430.jpg',
+          lyhyt: 'Krakovan laaksossa kivihiilen poltto pilasi talvi-ilmaa, kunnes kaupunki kielsi sen 2019.',
           selite: 'Krakova sijaitsee laaksossa, ja kivihiilen poltto teki '
             + 'talvi-ilmasta ajoittain Euroopan huonointa — kaupunki kielsi '
             + 'sen kotitalouksien lämmityksessä 2019.',
@@ -13081,6 +13159,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Krakow - Wawel and Old Town from balloon.jpg',
+          lyhyt: 'Wawelin kukkula sijaitsee Veikselin rannalla, ja sen juurella on lohikäärmetarun luola.',
           selite: 'Wawelin kukkula sijaitsee Veikselin rannalla '
             + 'vanhankaupungin eteläpuolella, ja sen juurella on '
             + 'lohikäärmetarun luola.',
@@ -13091,6 +13170,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Krakow - Kosciol Maryacki i Sukiennice. 1910 (69699690).jpg',
           vuosi: '1910',
+          lyhyt: 'Marian kirkko ja Sukiennice torin laidalla 1910, jolloin Krakova kuului Itävalta-Unkariin.',
           selite: 'Marian kirkko ja Sukiennice torin laidalla vuonna 1910, jolloin '
             + 'Krakova kuului Itävalta-Unkariin ja aukiolla odotti hevosvaunuja.',
           lahde: 'Wikimedia Commons (PD)',
@@ -13128,6 +13208,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'obwarzanek-renkaita yhdellä grossilla. Kaduilla on nykyään '
             + '170–180 sinistä kärryä, ja rinkeleitä myydään lähes 150 000 '
             + 'päivässä.',
+          lyhyt: 'Wawelin kukkula oli isoisän matkavuonna itävaltalainen kasarmi Veikselin rannalla.',
+          lyhyt: 'Obwarzanek on punottu rinkeli, jonka taikina keitetään ennen uuniin panoa.',
           selite: 'Obwarzanek on punottu rinkeli, jonka taikina keitetään '
             + 'ennen uuniin panoa — nimi tulee verbistä obwarzać, keittää.',
           lahde: 'Stefan Källroos, Wikimedia Commons (CC BY-SA 3.0)',
@@ -13143,6 +13225,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ensimmäisenä torstaina Adam Mickiewiczin patsaalle '
             + 'keskustorille kilpailuun. Unesco otti tavan '
             + 'kulttuuriperintöluetteloonsa 2018.',
+          lyhyt: 'Szopka rakennetaan pahvista krakovalaisten rakennusten mukaan; Unesco listasi tavan perinnöksi 2018.',
           selite: 'Szopka rakennetaan pahvista ja värillisestä foliosta '
             + 'oikeiden krakovalaisten rakennusten mukaan, ja Unesco otti '
             + 'tavan kulttuuriperintöluetteloonsa 2018.',
@@ -13195,6 +13278,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'metriä syvyyttä, järvi maan alla, neljä kappelia ja '
             + 'kaivosmiesten veistämiä patsaita — kaikki samasta aineesta, '
             + 'jota käytiin hakemassa pois.',
+          lyhyt: 'Pyhän Kingan kappelin reliefit, patsaat ja kattokruunut on tehty Wieliczkan kaivoksen suolakivestä.',
           selite: 'Pyhän Kingan kappelin seinäreliefit, patsaat ja '
             + 'kattokruunut on tehty Wieliczkan kaivoksen omasta '
             + 'suolakivestä.',
@@ -13231,6 +13315,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Warszawa Pałac Kultury i Nauki 2009.jpg',
+          lyhyt: 'Kulttuuri- ja tiedepalatsi on 237-metrinen Neuvostoliiton lahja vuodelta 1955.',
           selite: 'Kulttuuri- ja tiedepalatsi, 237 metriä korkea '
             + 'Neuvostoliiton lahja vuodelta 1955, huipun alla kuusimetriset '
             + 'kellotaulut.',
@@ -13238,6 +13323,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Syrenka Warszawska.jpg',
+          lyhyt: 'Merenneito Syrenka on Varsovan vaakunahahmo, patsas seisoo Vanhankaupungin torilla miekka kädessään.',
           selite: 'Merenneito Syrenka on Varsovan vaakunahahmo, ja sen '
             + 'patsas seisoo Vanhankaupungin torilla miekka ja kilpi '
             + 'käsissään.',
@@ -13253,6 +13339,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Presidential Palace in Warsaw (by Pudelek).jpg',
+          lyhyt: 'Presidentinlinna muutettiin 1818 uusklassiseksi; edessä seisoo Józef Poniatowskin ratsastajapatsas.',
           selite: 'Presidentinlinnan rakentaminen alkoi 1643, ja Chrystian '
             + 'Piotr Aigner muutti sen 1818 uusklassiseksi; sen edessä '
             + 'seisoo Józef Poniatowskin ratsastajapatsas.',
@@ -13457,6 +13544,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nimeä kantava pianokilpailu järjestettiin ensimmäisen kerran '
             + '1927, ja vuodesta 1955 se on pidetty kaupungissa viiden vuoden '
             + 'välein.',
+          lyhyt: 'Eugène Delacroix maalasi Chopinin 1838 kaksoismuotokuvaan, joka leikattiin myöhemmin kahtia.',
           selite: 'Eugène Delacroix maalasi Chopinin vuonna 1838 osaksi '
             + 'kaksoismuotokuvaa, jonka kangas leikattiin myöhemmin kahtia.',
           lahde: 'Eugène Delacroix, Wikimedia Commons (PD)',
@@ -13477,6 +13565,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'auttaa niitä esimerkiksi halvalla vuokralla — siksi '
             + 'lautasellinen pierogeja maksaa usein kolmasosan ravintolan '
             + 'hinnasta. Ruoka haetaan itse tiskiltä.',
+          lyhyt: 'Ensimmäisen maitobaarin avasi Stanisław Dłużewski 1896; Varsovassa niitä oli 1972 jo 41.',
           selite: 'Ensimmäisen maitobaarin avasi Stanisław Dłużewski vuonna '
             + '1896, ja pelkästään Varsovassa niitä oli vuonna 1972 '
             + 'neljäkymmentäyksi.',
@@ -13493,6 +13582,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nostettiin paikoilleen kesäkuussa 1974, ja 19. heinäkuuta '
             + 'kello käynnistettiin — ajasta 11.15. Vuodesta 2008 tornista '
             + 'soitetaan joka päivä samalla minuutilla torvisoitto.',
+          lyhyt: 'Kuninkaanlinnan kellotornin viisarit pysähtyivät 1939, käynnistettiin 1974 samasta minuutista.',
           selite: 'Kuninkaanlinnan kellotornin viisarit pysähtyivät 17. '
             + 'syyskuuta 1939 kello 11.15, ja kello käynnistettiin 1974 '
             + 'uudelleen juuri siitä minuutista.',
@@ -13517,6 +13607,7 @@ export const KULTTUURI_KATEGORIAT = {
            * ja Saaripalatsi jäävät alle omina heroinaan.
            */
           ampari: 'herokoe/hero-varsova-vanhatori.jpg',
+          lyhyt: 'Vanhankaupungin tori poltettiin 1944 ja rakennettiin uudelleen 1949–1953.',
           selite: 'Vanhankaupungin tori kaavoitettiin 1200-luvun lopulla, '
             + 'saksalaiset polttivat sen 1944, ja se rakennettiin uudelleen '
             + '1949–1953 muun muassa Bernardo Bellotton maalausten avulla; '
@@ -13527,6 +13618,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-varsova-aamu.png',
+          lyhyt: 'Varsovan kuninkaanlinna sai barokkiasunsa 1598–1619 ja koottiin uudelleen 1971–1984 tuhon jälkeen.',
           selite: 'Varsovan kuninkaanlinna sai barokkiasunsa 1598–1619, se '
             + 'tuhoutui syyskuussa 1944 ja koottiin uudelleen 1971–1984 '
             + 'vanhojen piirustusten mukaan — Sigismundin torni nousee 60 '
@@ -13535,6 +13627,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-varsova-keskipaiva.png',
+          lyhyt: 'Wilanówin palatsin rakentaminen alkoi 1677, päärakennus valmistui 1696, sivusiivet 1720–1729.',
           selite: 'Wilanówin palatsin rakentaminen alkoi 23. huhtikuuta 1677 '
             + 'Augustyn Wincenty Loccin suunnitelmien mukaan ja päärakennus '
             + 'valmistui 1696, ja Elżbieta Sieniawska laajensi sen '
@@ -13543,6 +13636,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-varsova-ilta.png',
+          lyhyt: 'Saaripalatsi valmistui 1689 kylpypaviljongiksi, muutettiin 1764–1795 uusklassiseksi kesäpalatsiksi.',
           selite: 'Saaripalatsi rakennettiin kylpypaviljongiksi ennen vuotta '
             + '1683 ja valmistui 1689, ja Domenico Merlini muutti sen '
             + '1764–1795 uusklassiseksi kesäpalatsiksi 76 hehtaarin '
@@ -13551,12 +13645,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Old Town in Warsaw view from Vistula 2019a.jpg',
+          lyhyt: 'Veikselin länsipuoli rakennettiin sodan jälkeen uudelleen tyhjästä, itäpuolen Praga säilyi ehjänä.',
           selite: 'Veikselin länsipuoli rakennettiin sodan jälkeen uudelleen '
             + 'tyhjästä, ja itäpuolen Praga säilyi lähes ehjänä.',
           lahde: 'Adrian Grycuk, Wikimedia Commons (CC BY-SA 3.0 PL)',
         },
         {
           tiedosto: '2018-07-08 Krakowskie Przedmieście, Warszawa.jpg',
+          lyhyt: 'Krakowskie Przedmieście yhdistää vanhankaupungin, kuninkaanlinnan, presidentinlinnan ja yliopiston.',
           selite: 'Krakowskie Przedmieście on Varsovan kuninkaallisen reitin '
             + 'pohjoisin osa, ja se yhdistää vanhankaupungin ja '
             + 'kuninkaanlinnan presidentinlinnaan ja yliopistoon.',
@@ -13564,6 +13660,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Panoramic view from Palace of Culture and Science in Warsaw.jpg',
+          lyhyt: 'Złota 44 -asuintorni on 192 metriä korkea, Daniel Libeskindin idea tuli kotkan siivestä.',
           selite: 'Złota 44 -asuintorni on 192 metriä korkea, ja Daniel '
             + 'Libeskind sai sen muotoon idean kotkan siivestä.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
@@ -13573,12 +13670,14 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Old part of town, Warsaw, Russia (i.e. Warsaw, Poland)-LCCN2001697518.jpg',
           vuosi: '1890-luku',
+          lyhyt: 'Vanhankaupungin tori oli 1890-luvulla torimyyntipaikka Venäjän vallan aikaisessa kaupungissa.',
           selite: 'Vanhankaupungin tori oli 1890-luvulla torimyyntipaikka, '
             + 'ja kaupunki kuului tuolloin Venäjän keisarikuntaan.',
           lahde: 'Library of Congress (PD)',
         },
         {
           tiedosto: '2018-07-08 Old Town Market Square in Warsaw.jpg',
+          lyhyt: 'Sodassa raunioitunut kortteli pystytettiin uudelleen 1949–1953 vanhojen piirustusten avulla.',
           selite: 'Sodassa raunioitunut kortteli pystytettiin uudelleen '
             + '1949–1953 vanhojen piirustusten ja Bernardo Bellotton '
             + '1700-luvun kaupunkimaalausten avulla.',
@@ -13612,6 +13711,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Pariisiin Bronialle, joka maksoi vuorollaan Marian matkan. '
             + 'Vuonna 1898 Maria nimesi löytämänsä alkuaineen poloniumiksi '
             + 'maan mukaan, jota ei silloin ollut kartalla.',
+          lyhyt: 'Maria Skłodowska syntyi Varsovassa 1867 ja opiskeli salaisessa lentävässä yliopistossa.',
           selite: 'Maria Skłodowska syntyi Varsovassa 1867 ja opiskeli '
             + 'salaisessa lentävässä yliopistossa, koska Varsovan '
             + 'yliopistoon ei otettu naisia.',
@@ -13630,6 +13730,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tohtori. Kirjassa Zamenhof luopui kaikista oikeuksistaan '
             + 'kieleen: kuka tahansa sai käyttää sitä. Salanimestä tuli '
             + 'kielen nimi.',
+          lyhyt: 'Ludwik Zamenhof julkaisi 1887 Varsovassa esperanton kieliopin ja luopui oikeuksistaan kieleen.',
           selite: 'Ludwik Zamenhof julkaisi heinäkuussa 1887 Varsovassa '
             + 'esperanton kieliopin salanimellä Doktoro Esperanto ja luopui '
             + 'kaikista oikeuksistaan kieleen.',
@@ -13660,6 +13761,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Lutheran Cathedral Helsinki.jpg',
+          lyhyt: 'Carl Ludvig Engel suunnitteli tuomiokirkon Senaatintorin huipennukseksi vuosina 1830–1852.',
           selite: 'Carl Ludvig Engel suunnitteli tuomiokirkon Senaatintorin '
             + 'sommitelmansa huipennukseksi, ja se rakennettiin vuosina '
             + '1830–1852.',
@@ -13667,12 +13769,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Helsinki aerial 2022.jpg',
+          lyhyt: 'Helsingin keskusta on rakennettu niemelle, ja edustan saarille alettiin muurata Suomenlinnaa 1748.',
           selite: 'Helsingin keskusta on rakennettu niemelle, ja sen edustan '
             + 'saarille alettiin muurata Suomenlinnan merilinnoitusta vuonna 1748.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Passengers of Suomenlinna ferry on an early winter morning; Helsinki, Finland, 2024 January.jpg',
+          lyhyt: 'Kauppatorilta lähtevä Suomenlinnan lautta kulkee ympäri vuoden tavallisella joukkoliikennelipulla.',
           selite: 'Kauppatorilta lähtevä Suomenlinnan lautta kulkee ympäri '
             + 'vuoden ja kuuluu tavalliseen joukkoliikennelippuun.',
           lahde: 'Pekka Vyhtinen, Wikimedia Commons (CC BY 4.0)',
@@ -13700,6 +13804,7 @@ export const KULTTUURI_KATEGORIAT = {
            * Kohde ja kuvateksti ennallaan — sama kohde, uusi voittaa.
            */
           ampari: 'herokoe/hero-helsinki-senaatintori.jpg',
+          lyhyt: 'Carl Ludvig Engelin piirtämä Tuomiokirkko valmistui 1852 ja tuli merelle näkyväksi tunnukseksi.',
           selite: 'Carl Ludvig Engelin piirtämä Tuomiokirkko valmistui '
             + '1852, ja siitä tuli merelle näkyvä Helsingin tunnus jo '
             + 'purjelaivojen aikana.',
@@ -13707,6 +13812,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero7-uspenski.png',
+          lyhyt: 'Uspenskin katedraali vuodelta 1868 on Länsi-Euroopan suurin ortodoksinen kirkko.',
           selite: 'Uspenskin katedraali (1868) on Länsi-Euroopan suurin '
             + 'ortodoksinen kirkko ja muistuttaa ajasta, jolloin Suomi '
             + 'oli Venäjän suuriruhtinaskunta.',
@@ -13714,6 +13820,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero7-oodi.png',
+          lyhyt: 'Keskustakirjasto Oodi valittiin pian valmistuttuaan maailman parhaaksi yleiseksi kirjastoksi.',
           selite: 'Keskustakirjasto Oodi (2018) valittiin pian '
             + 'valmistumisensa jälkeen maailman parhaaksi uudeksi '
             + 'yleiseksi kirjastoksi.',
@@ -13721,6 +13828,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg',
+          lyhyt: 'Esplanadin puiston nurmella on istuttu 1800-luvun alusta; toisessa päässä on Kauppatori.',
           selite: 'Esplanadin puiston nurmella on istuttu 1800-luvun alusta '
             + 'asti, ja sen toisessa päässä odottavat Kauppatori ja '
             + 'Eteläsatama.',
@@ -13728,6 +13836,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Helsingin Tuomiokirkko ja Senaatintori - D672 - hkm.HKMS000005-km002mzn.jpg',
+          lyhyt: 'Senaatintori määrättiin pääkaupungin pääaukioksi 1812 Ehrenströmin asemakaavassa.',
           selite: 'Senaatintori määrättiin uuden pääkaupungin pääaukioksi '
             + 'vuonna 1812 Johan Albrecht Ehrenströmin asemakaavassa.',
           lahde: 'SKY-FOTO Möller, Helsingin kaupunginmuseo, Wikimedia Commons (CC BY 4.0)',
@@ -13743,6 +13852,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'The new cathedral, Helsingfors, Russia, i.e., Helsinki, Finland-LCCN2001697412.jpg',
           vuosi: '1890-luku',
+          lyhyt: 'Kirkko tunnettiin Nikolainkirkkona keisari Nikolai I:n mukaan, nimi vaihtui itsenäistymisessä 1917.',
           selite: '1890-luvun vedoksen kirkko tunnettiin Nikolainkirkkona, sillä se '
             + 'rakennettiin kunnianosoituksena Suomen suuriruhtinaalle, '
             + 'keisari Nikolai I:lle, ja nimi vaihtui vasta itsenäistymisessä 1917.',
@@ -13750,6 +13860,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg',
+          lyhyt: 'Kirkko on nykyään Helsingin hiippakunnan tuomiokirkko Engelin piirtämien rakennusten keskellä.',
           selite: 'Kirkko on nykyään Helsingin hiippakunnan luterilainen tuomiokirkko, '
             + 'ja Senaatintorin ympärillä seisovat yhä Engelin piirtämät '
             + 'yliopisto ja valtioneuvoston linna.',
@@ -13784,6 +13895,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Catedral Uspenski, Helsinki, Finlandia, 2012-08-14, DD 05.JPG',
+          lyhyt: 'Uspenskin katedraali valmistui Katajanokan kalliolle 1868 ortodoksikirkoksi.',
           selite: 'Uspenskin katedraali valmistui Katajanokan kalliolle 1868, '
             + 'ja se on Länsi-Euroopan suurin ortodoksinen kirkko.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
@@ -13846,6 +13958,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jonne poiketaan yhtä luontevasti kuin kahville.',
               kuva: {
                 tiedosto: 'Allas Sea Pool in September 2019.jpg',
+                lyhyt: 'Keskustan satamassa toimivan merikylpylän altaisiin pulahdetaan mereen löylyn jälkeen talvellakin.',
                 selite: 'Keskustan satamassa toimivan merikylpylän altaisiin '
                   + 'voi pulahtaa keskellä kaupunkia, ja löylyn jälkeen '
                   + 'mennään mereen talvellakin.',
@@ -13886,6 +13999,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'matkan ja hoitaa jarrutuksen. Kesässä rataa kierretään noin '
             + '47 000 kertaa. Huvipuiston omistaa Lasten Päivän Säätiö, ja '
             + 'tuotto jaetaan kuudelle lastensuojelujärjestölle.',
+          lyhyt: 'Linnanmäen puinen Vuoristorata avattiin 1951, ja vauhtia hidastaa yhä käsin jarrumestari.',
           selite: 'Linnanmäen puinen Vuoristorata avattiin 13. heinäkuuta '
             + '1951, ja sen vauhtia hidastaa yhä käsin jarrumestari junan '
             + 'takaosassa.',
@@ -13902,6 +14016,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'silakkamarkkinat. Joka lokakuu Eteläsataman rantaan purjehtii '
             + 'kalastajia myymään suolattua ja maustettua silakkaa suoraan '
             + 'veneen kannelta, ja raati valitsee vuoden parhaan maustekalan.',
+          lyhyt: 'Silakkamarkkinat jäivät jäljelle, kun syysmarkkinoilta lakkautettiin 1891 muu kauppa.',
           selite: 'Silakkamarkkinat jäivät jäljelle, kun syysmarkkinoilta '
             + 'lakkautettiin vuonna 1891 kaikki muu kauppa paitsi suolatun '
             + 'kalan myynti.',
@@ -13919,6 +14034,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hahmoista 2000-luvulla Kivimiehet, ja niille on puettu '
             + 'jääkiekkomaajoukkueen pelipaidat, kasvomaskit ja Käärijän '
             + 'vihreä bolero.',
+          lyhyt: 'Emil Wikström veisti päärautatieaseman neljä graniittimiestä 1914 saman kipsimallin mukaan.',
           selite: 'Emil Wikström veisti päärautatieaseman neljä '
             + 'graniittimiestä vuonna 1914 saman kipsimallin mukaan, joten '
             + 'kaikki neljä ovat sama mies.',
@@ -14089,6 +14205,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Tampere Cathedral.jpg',
+          lyhyt: 'Tampereen tuomiokirkon suunnitteli Lars Sonck kansallisromanttiseen tyyliin 1902–1907.',
           selite: 'Tampereen tuomiokirkon suunnitteli Lars Sonck '
             + 'kansallisromanttiseen tyyliin, ja se rakennettiin vuosina '
             + '1902–1907.',
@@ -14110,6 +14227,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           tiedosto: 'flickr-17157572177.jpg',
+          lyhyt: 'Särkänniemen huvipuisto on Suomen toiseksi suosituin, samalla niemellä akvaario ja planetaario.',
           selite: 'Särkänniemen huvipuisto on Suomen toiseksi suosituin, ja '
             + 'saman niemen kärjessä on akvaario, planetaario ja taidemuseo.',
           lahde: 'Jorge Franganillo, Flickr (CC BY 2.0)',
@@ -14127,6 +14245,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-tampere-aamu.jpg',
+          lyhyt: 'Tampereen Näsilinna valmistui 1898 uusbarokkipalatsiksi; siinä toimii nyt Milavida-museo.',
           selite: 'Tampereen Näsilinna valmistui 1898 Karl August Wreden '
             + 'suunnittelemaksi uusbarokkipalatsiksi tehtailijasuvun '
             + 'jäsenelle Peter von Nottbeckille, joka antoi sille nimen '
@@ -14136,6 +14255,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tampere-keskipaiva.jpg',
+          lyhyt: 'Tampereen pääkirjasto Metso avattiin 1986, ja ylhäältä katsottuna talo muistuttaa metsoa.',
           selite: 'Tampereen pääkirjasto Metso avattiin elokuussa 1986 Reima '
             + 'ja Raili Pietilän suunnitelmien mukaan, ja ylhäältä '
             + 'katsottuna metsoa muistuttavan talon julkisivuissa on '
@@ -14144,6 +14264,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tampere-ilta.jpg',
+          lyhyt: 'Tampereen Vanha kirkko valmistui 1824, kellotapuli 1828; se on keskustan vanhin säilynyt rakennus.',
           selite: 'Tampereen Vanha kirkko valmistui puisena ristikirkkona '
             + '1824 Carlo Bassin suunnitelmien mukaan ja otettiin käyttöön '
             + '1825, sen viereinen kellotapuli valmistui 1828 Carl Ludvig '
@@ -14153,6 +14274,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tampere-nasinneula.jpg',
+          lyhyt: 'Näsinneula avattiin 1971 ja on 168 metriä korkea; pyörivä ravintola tekee kierroksen 45 minuutissa.',
           selite: 'Pekka Ilveskosken suunnittelema Näsinneula avattiin 1971 '
             + 'Särkänniemessä ja on 168 metriä korkea; sen pyörivä ravintola '
             + '124 metrin korkeudessa tekee täyden kierroksen 45 minuutissa.',
@@ -14163,12 +14285,14 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Tampere ca 1900-1910. - 14195290548.jpg',
           vuosi: 'noin 1900–1910',
+          lyhyt: 'Hämeensilta oli 1900-luvun alussa ristikkokaiteinen rautasilta Hämeenkadun edustalla.',
           selite: 'Hämeensilta oli 1900-luvun alussa ristikkokaiteinen '
             + 'rautasilta, ja sen takaa avautui Hämeenkatu kivitaloineen.',
           lahde: 'Åbo Akademi University Library, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Hämeensilta 2021.jpg',
+          lyhyt: 'Vuoden 1929 kivisilta korvattiin 2019, ja Aaltosen veistokset palautettiin kaiteille.',
           selite: 'Vuoden 1929 kivisilta korvattiin 2019 vanhan näköisellä '
             + 'graniittisillalla, ja Wäinö Aaltosen neljä pronssiveistosta '
             + 'nostettiin takaisin kaiteille.',
@@ -14184,6 +14308,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Näsinneula 2020.jpg',
+          lyhyt: 'Näsinneulan huipulla on näköalatasanne ja ravintola, joka tekee kierroksen tunnissa.',
           selite: 'Näsinneulan huipulla on näköalatasanne ja sen yläpuolella '
             + 'ravintola, joka tekee täyden kierroksen tunnissa.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
@@ -14214,6 +14339,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'on niin tiivis, ettei kulkuneuvoa oikeastaan tarvita.',
               kuva: {
                 tiedosto: 'Raitiovaunu1 Tampere Tammerfors 240725.jpg',
+                lyhyt: 'Tampereen raitiotielinjat avattiin 2021 Pyynikin suuntaan ja itään Hervantaan.',
                 selite: 'Tampereen raitiotielinjat avattiin elokuussa 2021, '
                   + 'ja ne vievät keskustasta sekä Pyynikin suuntaan että '
                   + 'itään Hervantaan.',
@@ -14233,6 +14359,7 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Finlayson 2018.jpg',
+                  lyhyt: 'Finlaysonin tehdaskortteli oli vuosisadan lopulla Pohjoismaiden suurin teollisuuslaitos.',
                   selite: 'Finlaysonin tehdaskortteli oli vuosisadan lopulla '
                     + 'Pohjoismaiden suurin teollisuuslaitos ja työllisti '
                     + 'tuhansia ihmisiä.',
@@ -14240,6 +14367,7 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'flickr-17339041906.jpg',
+                  lyhyt: 'Tammerkosken voi ylittää monesta kohtaa, ja tehdaskortteleiden läpi kulkee kävelyreitti.',
                   selite: 'Tammerkosken voi ylittää monesta kohtaa, ja '
                     + 'tehdaskortteleiden läpi kulkee kävelyreitti museoilta '
                     + 'panimolle.',
@@ -14259,6 +14387,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kuin näköala.',
               kuva: {
                 tiedosto: 'Pyynikki observation tower doughnut cafe on 1st May 2016.jpg',
+                lyhyt: 'Pyynikin näkötornin juurella toimii munkkikahvila, jonka munkit ovat yhtä tunnettuja kuin näköala.',
                 selite: 'Pyynikin näkötornin juurella toimii munkkikahvila, '
                   + 'jonka sokeroidut munkit ja sima ovat vähintään yhtä '
                   + 'tunnettuja kuin näköala.',
@@ -14303,6 +14432,7 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Finlaysonin kulmilta.jpg',
+                  lyhyt: 'Finlaysonin vanhassa kutomossa toimii nykyään elokuvateatteri, korttelin pihoilla ravintoloita.',
                   selite: 'Finlaysonin vanhassa kutomossa toimii nykyään '
                     + 'elokuvateatteri, ja saman korttelin sisäpihoilla on '
                     + 'ravintoloita ja baareja.',
@@ -14459,6 +14589,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin vanhan kivisillan näköiseksi ja verhoiltiin '
             + 'samalla punertavalla graniitilla — patsaat nostettiin '
             + 'takaisin paikoilleen.',
+          lyhyt: 'Hämeensillan kaiteilla seisoo Wäinö Aaltosen neljä pronssiveistosta vuodelta 1929.',
           selite: 'Hämeensillan kaiteilla seisoo neljä Wäinö Aaltosen '
             + 'pronssiveistosta vuodelta 1929: metsästäjä, erämies, kauppias '
             + 'ja verontuoja.',
@@ -14516,6 +14647,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'käänsivät sen puuvillatehtaaksi. Vuosisadan lopulla se oli '
             + 'Pohjoismaiden suurin teollisuuslaitos ja työllisti tuhansia '
             + '— enimmäkseen naisia ja lapsia.',
+          lyhyt: 'James Finlayson perusti 1820 konepajan Tammerkosken yläjuoksulle, myöhemmin puuvillatehtaaksi.',
           selite: 'James Finlayson perusti vuonna 1820 konepajan '
             + 'Tammerkosken yläjuoksulle, ja uudet omistajat käänsivät '
             + 'tehtaan 1836 jälkeen puuvillatehtaaksi.',
@@ -14533,6 +14665,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nähtävä lanka myös pimeällä, ja avoliekki oli puuvillasalissa '
             + 'jatkuva palonvaara. Sali sai nimekseen Plevna, ja siinä '
             + 'toimii nykyään elokuvateatteri.',
+          lyhyt: 'Plevnan kutomosaliin sytytettiin 1882 Pohjolan ensimmäiset sähkövalot, nyt salissa elokuvateatteri.',
           selite: 'Plevnan kutomosaliin sytytettiin maaliskuussa 1882 '
             + 'Pohjolan ensimmäiset sähkövalot, ja salissa toimii nykyään '
             + 'elokuvateatteri.',
@@ -14548,6 +14681,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kokonaan 1970-luvulla, mutta yksi jätettiin museoksi: viisi '
             + 'asuintaloa ja neljä piharakennusta, joiden huoneet on sisustettu '
             + 'vuosien 1882 ja 1973 väliltä. Museo on auki touko–syyskuussa.',
+          lyhyt: 'Amurin museokorttelin talot on sisustettu vuosien 1882 ja 1973 väliltä.',
           selite: 'Amurin museokorttelissa on viisi asuintaloa ja neljä '
             + 'piharakennusta, joiden huoneet on sisustettu vuosien 1882 ja '
             + '1973 väliltä.',
@@ -14582,6 +14716,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Viru Gate in Tallinn (45758703212).jpg',
+          lyhyt: 'Virun portti johtaa vanhaankaupunkiin, osana 1265 alkanutta keskiaikaista kaupunginmuuria.',
           selite: 'Virun portti johtaa vanhaankaupunkiin idästä, ja se '
             + 'kuuluu keskiaikaiseen kaupunginmuuriin, jonka rakentaminen '
             + 'alkoi vuonna 1265.',
@@ -14589,6 +14724,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Alexander Nevsky Cathedral, Tallinn.jpg',
+          lyhyt: 'Aleksanteri Nevskin katedraali valmistui Toompean laelle 1900 Venäjän keisarikunnan aikana.',
           selite: 'Aleksanteri Nevskin katedraali valmistui Toompean laelle '
             + 'vuonna 1900, kun Viro kuului Venäjän keisarikuntaan.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 3.0)',
@@ -14597,6 +14733,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Architectural Detail - Kalamaja District - Tallinn - Estonia - 01 (36045920535).jpg',
+          lyhyt: 'Kalamaja on Tallinnan parhaiten säilyneitä puutaloalueita, kalastajien kortteli 1300-luvulta.',
           selite: 'Kalamaja on Tallinnan parhaiten säilyneitä '
             + 'puutaloalueita, ja se oli 1300-luvulta lähtien kalastajien ja '
             + 'veneenrakentajien kortteli.',
@@ -14796,6 +14933,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuulijaa. Syyskuussa 1988 samalle kentälle kokoontui arviolta '
             + '300 000 ihmistä laulamaan lauluja, joita ei silloin saanut '
             + 'laulaa julkisesti. Siitä tuli nimi laulava vallankumous.',
+          lyhyt: 'Laulukaaren lavalle mahtuu noin 15 000 laulajaa ja kentälle jopa 100 000 kuulijaa.',
           selite: 'Laulukaaren lavalle mahtuu noin 15 000 laulajaa ja '
             + 'kentälle jopa 100 000 kuulijaa, ja laulujuhlat pidetään '
             + 'viiden vuoden välein.',
@@ -14816,6 +14954,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'poltettuja mehiläisiä, poltettuja siilejä, oriin kavioita ja '
             + 'kastematojen öljyä. Listalla oli marsipaani, jota myytiin '
             + 'sydänsuruun ja muistin parantamiseen. Sitä saa tiskiltä yhä.',
+          lyhyt: 'Raatihuoneentorin apteekki on toiminut samassa talossa ainakin vuodesta 1422.',
           selite: 'Raatihuoneentorin apteekki on toiminut samassa talossa '
             + 'ainakin vuodesta 1422, jolloin kirjattiin ylös jo sen kolmas '
             + 'omistaja.',
@@ -14842,6 +14981,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'se vaurioitui, ja tornissa on nyt vaskiseppä Vello Rooveerin '
             + 'vuonna 1996 takoma kopio. Alkuperäinen seisoo museossa '
             + 'sisällä.',
+          lyhyt: 'Alkuperäinen Vana Toomas vaurioitui 1944 pommituksessa; nyt tornissa kääntyy 1996 taottu kopio.',
           selite: 'Alkuperäinen Vana Toomas vaurioitui vuoden 1944 '
             + 'pommituksessa, ja raatihuoneen tornissa kääntyy nyt vuonna '
             + '1996 taottu kopio.',
@@ -14867,6 +15007,7 @@ export const KULTTUURI_KATEGORIAT = {
            * kertoo muurista — uusi kohde karuselliin.
            */
           ampari: 'herokoe/hero-tallinna-kaupunginmuuri.jpg',
+          lyhyt: 'Tallinnan kaupunginmuuria on jäljellä noin 1,9 kilometriä ja 20 tornia, aiemmin oli 2,4 kilometriä.',
           selite: 'Tallinnan kaupunginmuuria oli parhaimmillaan 2,4 '
             + 'kilometriä ja siinä 46 tornia; nykyään muuria on jäljellä '
             + 'noin 1,9 kilometriä ja torneista pystyssä 20, ja se on '
@@ -14876,6 +15017,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tallinna-aamu.png',
+          lyhyt: 'Oleviste eli Pyhän Olavin kirkon torni nousee nykyään 123,8 metriin, salama on iskenyt siihen usein.',
           selite: 'Tallinnan Oleviste eli Pyhän Olavin kirkko mainitaan '
             + 'asiakirjoissa ensi kerran 1267, sen torni nousee nykyään 123,8 '
             + 'metriin ja näköalatasanne on 60 metrin korkeudessa, ja torniin '
@@ -14884,6 +15026,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tallinna-keskipaiva.png',
+          lyhyt: 'Kadriorgin palatsi rakennettiin 1718–1725 Pietari Suuren toimeksiannosta Katariina I:lle.',
           selite: 'Tallinnan Kadriorgin palatsi rakennettiin 1718–1725 Nicola '
             + 'Michettin suunnitelmien mukaan Pietari Suuren toimeksiannosta '
             + 'hänen puolisolleen Katariina I:lle, ja siinä toimii nykyään '
@@ -14892,6 +15035,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-tallinna-ilta.png',
+          lyhyt: 'Tallinnan teletorni avattiin 1980, on 314 metriä korkea ja siten Viron korkein rakennus.',
           selite: 'Tallinnan teletorni avattiin 11. heinäkuuta 1980 Moskovan '
             + 'olympialaisten purjehduskisoja varten, se on 314 metriä korkea '
             + 'ja siten Viron korkein rakennus, ja sen näköalatasanne on 170 '
@@ -14900,6 +15044,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Tallinn Landmarks 01.jpg',
+          lyhyt: 'Tallinna oli vuosisatoja kaksi kaupunkia, jotka yhdistettiin vasta vuonna 1878.',
           selite: 'Tallinna oli vuosisatoja kaksi kaupunkia: mäen päällä '
             + 'Toompea omine herroineen ja alhaalla kauppiaiden kaupunki, ja '
             + 'ne yhdistettiin vasta vuonna 1878.',
@@ -14907,12 +15052,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Tallinn view from Kohtuotsa 2018.jpg',
+          lyhyt: 'Raatihuoneen tornin huipulla on kääntynyt vuodesta 1530 Vana Toomas, sotilaaksi puettu tuuliviiri.',
           selite: 'Raatihuoneen tornin huipulla on kääntynyt tuulen mukana '
             + 'vuodesta 1530 Vana Toomas, sotilaaksi puettu tuuliviiri.',
           lahde: 'VargaA, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Talvine Tallinn.jpg',
+          lyhyt: 'Tallinnassa talvi on pakkasen puolella koko kolme kuukautta, helmikuu on vuoden kylmin.',
           selite: 'Tallinnassa talvi on pakkasen puolella koko kolmen '
             + 'kuukauden ajan, ja helmikuu on vuoden kylmin kuukausi.',
           lahde: 'Enel Lepik, Wikimedia Commons (CC BY-SA 4.0)',
@@ -14922,6 +15069,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Reval, general view, 1890 - 1900 crop.jpg',
           vuosi: '1890-luku',
+          lyhyt: 'Tallinnasta käytettiin 1890-luvulla nimeä Reval, Toompealla seisoi jo tuomiokirkko.',
           selite: 'Tallinnasta käytettiin 1890-luvulla nimeä Reval, ja '
             + 'Toompean kallion päällä seisoivat jo silloin Stenbockin talo '
             + 'ja tuomiokirkon torni.',
@@ -14929,6 +15077,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Tallinn old town Aug 2019 041.jpg',
+          lyhyt: 'Maaliskuun 1944 pommituksissa paloi noin viidesosa Tallinnan rakennuksista.',
           selite: 'Maaliskuun 1944 pommituksissa paloi noin viidesosa '
             + 'Tallinnan rakennuksista, ja eniten tuhoutui puisia '
             + 'esikaupunkeja.',
@@ -14961,6 +15110,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1820. Kesäkuun yönä 1820 palo kesti neljä tuntia ja söi koko '
             + 'sisustuksen. Loimun kerrotaan näkyneen Helsinkiin asti, ja '
             + 'uusi torninhuippu valmistui vasta 20 vuotta myöhemmin.',
+          lyhyt: 'Olevisten kirkon torni on Viron korkein kirkontorni, ja salama on iskenyt siihen monesti.',
           selite: 'Olevisten kirkon torni on Viron korkein kirkontorni, '
             + '123,7 metriä maasta, ja salama on sytyttänyt tai '
             + 'vaurioittanut sitä ainakin yhdeksän kertaa.',
@@ -14979,6 +15129,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Toompealle — siksi sitä on kutsuttu Epäluulon torniksi. Kahden '
             + 'eripituisen jalan takia Tallinnaa sanotaan leikillään '
             + 'ontuvaksi kaupungiksi.',
+          lyhyt: 'Lyhyen jalan porttitorniin hakattiin 1400-luvulla Toompealle osoittavia ampuma-aukkoja.',
           selite: 'Lyhyen jalan porttitorniin hakattiin 1400-luvulla '
             + 'ampuma-aukkoja, jotka osoittavat ylös Toompealle — siksi sitä '
             + 'on kutsuttu Epäluulon torniksi.',
@@ -14999,6 +15150,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Golden Gate Kiev 2018 G1.jpg',
+          lyhyt: 'Kultaisen portin porttitorni on vuodelta 1982 ja pelkkä arvaus alkuperäisestä 1000-luvun portista.',
           selite: 'Kultaisen portin porttitorni on vuodelta 1982 ja pelkkä '
             + 'arvaus, sillä 1000-luvun portista ei ole säilynyt yhtään '
             + 'kuvaa — aidot muurinpätkät ovat sen sisällä.',
@@ -15006,12 +15158,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Saint Andrew\'s Church, Kyiv.jpg',
+          lyhyt: 'Andreaksen kirkko valmistui Kiovan mäen laelle 1750-luvulla Bartolomeo Rastrellin piirustuksin.',
           selite: 'Andreaksen kirkko valmistui Kiovan mäen laelle '
             + '1750-luvulla Bartolomeo Rastrellin piirustusten mukaan.',
           lahde: 'Oleh Kushch, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Maidan Nezalezhnosti 20190505-2.jpg',
+          lyhyt: 'Itsenäisyydenaukio eli Maidan avautuu Kiovan pääkadun Hreshtshatykin varrelle.',
           selite: 'Itsenäisyydenaukio eli Maidan avautuu Kiovan 1,2 kilometrin '
             + 'mittaisen pääkadun Hreshtshatykin varrelle.',
           lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
@@ -15020,6 +15174,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Kiev-WalkingBridge.JPG',
+          lyhyt: 'Dneprin yli Truhaniv-saarelle vievä kävelysilta valmistui vasta 1957.',
           selite: 'Dneprin yli Truhaniv-saarelle vievä kävelysilta valmistui vasta 1957; sitä ennen 4,5 neliökilometrin saarelle pääsi vain veneellä tai talvella jäätä pitkin.',
           lahde: 'Vincent de Groot, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -15217,6 +15372,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys '
             + 'ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja '
             + 'asema on kaivettu törmän sisään.',
+          lyhyt: 'Arsenalnan metroasema on 105,5 metriä maanpinnan alla, maailman syvin metroasema vuoteen 2022 asti.',
           selite: 'Arsenalnan metroasema on 105,5 metriä maanpinnan '
             + 'alapuolella, ja se oli maailman syvin metroasema vuoteen 2022 '
             + 'asti.',
@@ -15233,6 +15389,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja ruhtinas Vladimir Monomah kirjoitti seinään oman nimensä. '
             + 'Tutkijat lukevat seiniä kuin ilmoitustaulua, jolle on '
             + 'kirjoitettu seitsemänsadan vuoden ajan.',
+          lyhyt: 'Pyhän Sofian katedraali rakennettiin 1000-luvulla, seinistä on löydetty yli 7000 vanhaa piirrosta.',
           selite: 'Pyhän Sofian katedraali rakennettiin 1000-luvulla, ja sen '
             + 'seinistä on löydetty yli 7 000 kävijöiden raapimaa piirrosta '
             + 'ja tekstiä 1000–1700-luvuilta.',
@@ -15250,6 +15407,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tehtiin kovassa tuulessa ja sateessa ja keskeytyi '
             + 'ilmahälytyksiin, mutta kilpi oli valmis ennen '
             + 'itsenäisyyspäivää 24. elokuuta.',
+          lyhyt: 'Teräksisen 62-metrisen naispatsaan kilvestä irrotettiin Neuvostoliiton vaakuna elokuussa 2023.',
           selite: 'Teräksinen naispatsas on 62 metriä korkea, ja sen '
             + 'kilvestä irrotettiin Neuvostoliiton vaakuna elokuussa 2023 '
             + 'Ukrainan kolmikärjen tieltä.',
@@ -15274,6 +15432,7 @@ export const KULTTUURI_KATEGORIAT = {
            * uusi kohde Kiovan karuselliin.
            */
           ampari: 'herokoe/hero-kiova-mihaelin-luostari.jpg',
+          lyhyt: 'Pyhän Mihaelin luostari rakennettiin 1108–1113, purettiin 1930-luvulla ja uudelleen 1997–1998.',
           selite: 'Pyhän Mihaelin kultakupolinen luostari rakennettiin ensi '
             + 'kerran vuosina 1108–1113, neuvostovalta purki sen '
             + '1930-luvulla, ja nykyinen kirkko rakennettiin uudelleen '
@@ -15282,6 +15441,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-kiova-aamu.jpg',
+          lyhyt: 'Kunstkamera on Venäjän ensimmäinen julkinen museo, Pietari Suuri avasi sen 1714.',
+          lyhyt: 'Pyhän Sofian katedraali on Ukrainan ensimmäinen maailmanperintökohde, kellotorni kasvoi 76 metriin.',
           selite: 'Pyhän Sofian katedraali on Kiovan Rusin ajan '
             + 'rakennusmuistomerkki ja Ukrainan ensimmäinen '
             + 'maailmanperintökohde; sen viereinen barokkikellotorni kasvoi '
@@ -15291,6 +15452,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-kiova-keskipaiva.jpg',
+          lyhyt: 'Kiovan luolaluostarin perusti munkki Antoni 1051, lavra on maailmanperintöluettelossa vuodesta 1990.',
           selite: 'Kiovan luolaluostarin perusti kronikoiden mukaan '
             + 'Athos-vuorelta palannut munkki Antoni vuonna 1051, ja '
             + 'maanalaisista käytävistä kasvanut lavra on ollut Unescon '
@@ -15299,6 +15461,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-kiova-ilta.jpg',
+          lyhyt: 'Isänmaa-äiti-veistos on jalustoineen 102 metriä korkea; se paljastettiin 1981.',
           selite: 'Isänmaa-äiti on ruostumattomasta teräksestä koottu '
             + 'veistos: hahmo on 62 metriä ja jalustoineen kokonaisuus 102 '
             + 'metriä korkea, ja se paljastettiin 9. toukokuuta 1981 Vasyl '
@@ -15310,6 +15473,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'The Lavra gate, Kiev, Russia, (i.e., Ukraine)-LCCN2001697423.jpg',
           vuosi: '1890-luku',
+          lyhyt: 'Porttikirkko rakennettiin 1106–1108 Luolaluostarin pääportin päälle, alueen vanhin rakennus.',
           selite: '1890-luvun photochrom-vedoksen porttikirkko rakennettiin vuosina '
             + '1106–1108 Luolaluostarin pääportin päälle, ja se on koko alueen '
             + 'vanhin säilynyt rakennus.',
@@ -15317,6 +15481,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Gate Church of the Trinity (Pechersk Lavra) 01.JPG',
+          lyhyt: 'Porttikirkon julkisivun barokkimaalaukset ovat 1700-luvulta, holvikäytävä on yhä sisäänkäynti.',
           selite: 'Porttikirkon julkisivun barokkimaalaukset ovat 1700-luvulta, ja '
             + 'sen alla oleva holvikäytävä on yhä luostarin sisäänkäynti.',
           lahde: 'Швітланьо, Commons (CC BY-SA 3.0)',
@@ -15348,6 +15513,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seuran jäsentä ja 60 kutsuvierasta. Seuraavana vuonna hän '
             + 'lauloi Kiovan arkeologisessa kongressissa, ja lontoolainen '
             + 'Athenaeum-lehti vertasi häntä antiikin Kreikan runonlaulajiin.',
+          lyhyt: 'Kobzari Ostap Veresai kutsuttiin Kiovaan 1873 laulamaan dumia banduran säestyksellä.',
           selite: 'Kobzari Ostap Veresai kutsuttiin Kiovaan vuonna 1873 '
             + 'maantieteellisen seuran kokoukseen laulamaan dumia banduran '
             + 'säestyksellä.',
@@ -15370,6 +15536,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sävelmään uudet englanninkieliset sanat kelloista. Niin syntyi '
             + 'Carol of the Bells, joka kuullaan myös Yksin kotona '
             + '-elokuvassa.',
+          lyhyt: 'Mykola Leontovytš sovitti Štšedrykin vanhasta uudenvuodenlaulusta, esitys Kiovassa 1916.',
           selite: 'Mykola Leontovytš sovitti Štšedrykin vanhasta '
             + 'uudenvuodenlaulusta, ja teos esitettiin ensi kerran Kiovassa '
             + '29. joulukuuta 1916.',
@@ -15402,6 +15569,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Smolny Cathedral SPB 02.jpg',
+          lyhyt: 'Smolnan katedraali kuuluu luostariin, joka rakennettiin Pietari Suuren tyttärelle Elisabetille.',
           selite: 'Smolnan katedraali kuuluu luostarikokonaisuuteen, joka '
             + 'rakennettiin Nevan vasemmalle rannalle Pietari Suuren '
             + 'tyttärelle Elisabetille.',
@@ -15409,12 +15577,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Saint Petersburg Winter Palace IMG 6487 1280.jpg',
+          lyhyt: 'Talvipalatsi oli Romanovien virallinen asunto 1732–1917, siinä on 1500 huonetta.',
           selite: 'Talvipalatsi oli Romanovien virallinen asunto vuosina '
             + '1732–1917, ja siinä on 1 500 huonetta ja 117 portaikkoa.',
           lahde: 'Alexxx1979, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Петропавловская крепость в Санкт-Петербурге 2H1A6496WI.jpg',
+          lyhyt: 'Pietari-Paavalin linnoituksen perusti Pietari Suuri 1703, rakennus valmistui 1706–1740.',
           selite: 'Pietari-Paavalin linnoitus on Pietarin alkuperäinen '
             + 'linnoitus, jonka Pietari Suuri perusti 1703 ja joka '
             + 'rakennettiin Domenico Trezzinin piirustusten mukaan '
@@ -15616,6 +15786,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kauppiaiden muuttaa Moskovasta tänne rakentamaan uudet '
             + 'talonsa. Nimi on vaihtunut sen jälkeen kolmesti: Petrograd '
             + '1914, Leningrad 1924, Pietari taas 1991.',
+          lyhyt: 'Godfrey Kneller maalasi 1698 Pietari Suuren, joka aloitti Nevan saarille kaupungin rakentamisen.',
           selite: 'Godfrey Kneller maalasi vuonna 1698 Pietari Suuren, joka '
             + 'aloitti viisi vuotta myöhemmin kaupungin rakentamisen Nevan '
             + 'soisille saarille.',
@@ -15631,6 +15802,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hiirenpyytäjiä pidettiin maan parhaina. Nykyään kissoja on '
             + 'noin 60, niillä on kolme hoitajaa, ja museossa on '
             + 'lehdistösihteeri pelkästään kissoja varten.',
+          lyhyt: 'Eremitaašin kellareissa asuu noin 60 kissaa, joiden työ on pitää hiiret poissa.',
           selite: 'Eremitaašin kellareissa asuu noin 60 kissaa, joiden työ '
             + 'on pitää hiiret poissa taidekokoelmien kimpusta.',
           lahde: 'Petrov Victor, Wikimedia Commons (CC BY-SA 3.0)',
@@ -15646,6 +15818,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'haettiin rintamalta. Esitys kuului kaiuttimista kaduilla ja '
             + 'kaupungin ulkopuolelle asti. Sinfonia kestää noin 80 '
             + 'minuuttia.',
+          lyhyt: 'Šostakovitš oli sodan alussa Leningradin konservatorion palovartiossa, kuva kiersi lehdissä 1942.',
           selite: 'Šostakovitš oli sodan alussa Leningradin konservatorion '
             + 'palovartiossa, ja palokuntakuva hänestä kiersi maailman '
             + 'lehdissä 1942.',
@@ -15669,6 +15842,7 @@ export const KULTTUURI_KATEGORIAT = {
         /* GENEROIDUT HEROT, KIERROS 11 (23.8.2026, tools/hero-tyolista-6.mjs). */
         {
           ampari: 'herokoe/hero-pietari-aamu.png',
+          lyhyt: 'Talvipalatsi valmistui 1762, edustan Aleksanterin pylväs on yksi 600 tonnin graniittikappale.',
           selite: 'Talvipalatsi valmistui 1762 Bartolomeo Rastrellin '
             + 'piirustuksin, ja sen edustan Aleksanterin pylväs (1834) on '
             + 'nostettu paikalleen yhtenä 600 tonnin graniittikappaleena.',
@@ -15676,6 +15850,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-pietari-keskipaiva.png',
+          lyhyt: 'Verikirkko rakennettiin 1883–1907 Aleksanteri II:n murhapaikalle, seiniä peittää mosaiikki.',
           selite: 'Verikirkko rakennettiin 1883–1907 Aleksanteri II:n '
             + 'murhapaikalle, ja sen sisäseiniä peittää yli 7 000 '
             + 'neliömetriä mosaiikkeja.',
@@ -15683,6 +15858,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-pietari-ilta.png',
+          lyhyt: 'Pietari-Paavalin katedraalin kullattu neula nousee 122,5 metriin, kaupungin korkein yli 200 vuotta.',
           selite: 'Pietari-Paavalin katedraalin kullattu neula nousee '
             + '122,5 metriin, ja se oli kaupungin korkein rakennelma yli '
             + 'kahdensadan vuoden ajan.',
@@ -15690,6 +15866,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Spb Views from Isaac Cathedral May2012 05.jpg',
+          lyhyt: 'Iisakinkirkko on omistettu pyhälle Isakille, neuvostohallinto muutti sen museoksi 1931.',
           selite: 'Iisakinkirkko on omistettu Dalmatian pyhälle Isakille, '
             + 'Pietari Suuren suojeluspyhimykselle, ja neuvostohallinto '
             + 'muutti sen museoksi vuonna 1931.',
@@ -15697,6 +15874,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Petersburg Vasilievsky Island-20070703-RM-124551.jpg',
+          lyhyt: 'Vasilinsaaren vanha pörssitalo rakennettiin 1805–1810, rostraalipylväät valmistuivat 1811.',
           selite: 'Vasilinsaaren kärjen vanha pörssitalo rakennettiin '
             + '1805–1810, ja sen molemmin puolin pystytetyt rostraalipylväät '
             + 'valmistuivat 1811.',
@@ -15704,6 +15882,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Санкт-Петербург. Дворцовый мост и Зимний дворец.jpg',
+          lyhyt: 'Palatsisilta rakennettiin 1912–1916, ja se nostetaan öisin auki kuten muutkin Nevan sillat.',
           selite: 'Palatsisilta rakennettiin 1912–1916, ja se nostetaan '
             + 'öisin auki kuten lähes kaikki muutkin Nevan sillat.',
           lahde: 'Igor Abramov, Wikimedia Commons (CC BY-SA 3.0)',
@@ -15713,6 +15892,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Alexander\'s Column, St. Petersburg, Russia-LCCN2001697508.jpg',
           vuosi: '1890-luku',
+          lyhyt: 'Aleksanterin pylväs on veistetty yhdestä graniittilohkareesta ja seisoo ilman kiinnitystä.',
           selite: 'Aleksanterin pylväs on veistetty yhdestä ainoasta '
             + 'graniittilohkareesta, ja se seisoo Palatsiaukiolla pelkän '
             + 'painonsa varassa ilman kiinnitystä.',
@@ -15749,6 +15929,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'myyntiin, ja kaupungissa on 2000-luvun alusta järjestetty '
             + 'sille oma juhla. Suomessa sama kala tunnetaan myös nimellä '
             + 'norssi.',
+          lyhyt: 'Kuore nousee keväällä Nevaan kutemaan, ja se paistetaan kokonaisena jauhoissa pyöriteltynä.',
           selite: 'Kuore nousee keväällä Nevaan kutemaan ja tuoksuu tuoreena '
             + 'kurkulta, ja se paistetaan kokonaisena jauhoissa '
             + 'pyöriteltynä.',
@@ -15766,6 +15947,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tyttö odottaa vuosikausia laivaa, jolla on punaiset purjeet. '
             + 'Nyt sellainen laiva purjehtii oikeasti Nevalle — vuonna 2010 '
             + 'sitä katsoi kolme miljoonaa ihmistä.',
+          lyhyt: 'Punaiset purjeet -juhla alkoi 1968, vuonna 2010 sitä katsoi Nevalla kolme miljoonaa ihmistä.',
           selite: 'Punaiset purjeet -juhla alkoi vuonna 1968, ja vuonna 2010 '
             + 'punapurjeista laivaa katsoi Nevalla kolme miljoonaa ihmistä.',
           lahde: 'Spbkinoforum, Wikimedia Commons (CC BY 3.0)',
@@ -15942,6 +16124,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Sobornaya Square at the Moscow Kremlin, 2014.jpg',
+          lyhyt: 'Kremlin Katedraaliaukion Ivan Suuren kellotorni oli aikoinaan koko Venäjän korkein rakennus.',
           selite: 'Kremlin Katedraaliaukio sai nimensä kolmesta '
             + 'katedraalistaan, ja sen laidalla seisova Ivan Suuren '
             + 'kellotorni oli aikoinaan koko Venäjän korkein rakennus.',
@@ -15949,6 +16132,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Moscow State University crop.jpg',
+          lyhyt: 'Moskovan valtionyliopiston 239-metrinen päärakennus valmistui 1953, Euroopan korkein 37 vuoden ajan.',
           selite: 'Moskovan valtionyliopiston 239 metriä korkea päärakennus '
             + 'valmistui 1953 ja oli Euroopan korkein rakennus 37 vuoden '
             + 'ajan.',
@@ -15956,6 +16140,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Saint Basil\'s Cathedral and the GUM in Red Square (19345522243).jpg',
+          lyhyt: 'Punaisen torin laidalla seisovat Vasili Autuaan katedraali ja GUM, entiset Ylemmät kaupparivit.',
           selite: 'Punaisen torin laidalla seisovat Vasili Autuaan '
             + 'katedraali ja GUM, joka tunnettiin ennen 1920-lukua Ylempinä '
             + 'kauppariveinä.',
@@ -16160,6 +16345,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kelloa ei ole soitettu kertaakaan. Saman muurin sisällä seisoo '
             + 'tsaarin tykki vuodelta 1586, jota ei ole koskaan ammuttu '
             + 'sodassa.',
+          lyhyt: 'Tsaarin kello valmistui 1735, ja siitä lohkesi kaksi vuotta myöhemmin 11 500 kilon pala.',
           selite: 'Tsaarin kello valmistui marraskuussa 1735, ja kaksi '
             + 'vuotta myöhemmin siitä lohkesi tulipalon sammutusvedessä 11 '
             + '500 kilon pala, joka nojaa yhä kellon vierellä.',
@@ -16176,6 +16362,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '2011 kuusi vuotta kestäneen korjauksen jälkeen, jossa salin '
             + 'alkuperäinen akustiikka palautettiin. Teatterin julkisivu on '
             + 'painettu Venäjän sadan ruplan seteliin.',
+          lyhyt: 'Bolshoin balettiryhmässä tanssii yli 200 tanssijaa, enemmän kuin missään muussa ryhmässä.',
           selite: 'Bolshoin balettiryhmässä tanssii yli 200 tanssijaa, '
             + 'enemmän kuin missään muussa maailman balettiryhmässä.',
           lahde: 'www.kremlin.ru, Wikimedia Commons (CC BY 4.0)',
@@ -16196,6 +16383,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'metriä. Vesi lämmitettiin, joten siellä uitiin pakkasellakin. '
             + 'Allas suljettiin 1994, ja kirkko rakennettiin samalle paikalle '
             + 'uudelleen.',
+          lyhyt: 'Kristus Vapahtajan katedraali räjäytettiin 1931 ja rakennettiin uudelleen samalle paikalle.',
           selite: 'Kristus Vapahtajan katedraali räjäytettiin joulukuussa '
             + '1931, ja se rakennettiin uudelleen samalle paikalle, jolla '
             + 'oli välillä ulkouima-allas.',
@@ -16218,6 +16406,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-moskova-aamu.png',
+          lyhyt: 'Vasilin katedraali rakennettiin 1555–1561, yhdeksän kirkkoa kiertyy yhden keskustornin ympärille.',
           selite: 'Vasilin katedraali rakennettiin 1555–1561 Kazanin '
             + 'valloituksen muistoksi, ja sen yhdeksän kirkkoa '
             + 'kiertyy yhden keskustornin ympärille.',
@@ -16225,6 +16414,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-moskova-keskipaiva.png',
+          lyhyt: 'Kremlin punatiiliset muurit rakensivat italialaiset mestarit 1400-luvun lopulla.',
           selite: 'Kremlin punatiiliset muurit rakensivat italialaiset '
             + 'mestarit 1400-luvun lopulla, ja niiden sisällä on ollut '
             + 'vallan keskus yli viisisataa vuotta.',
@@ -16232,6 +16422,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-moskova-ilta.png',
+          lyhyt: 'Moskovan yliopiston päärakennus 1953 oli Euroopan korkein Stalinin ajan seitsemästä tornista.',
           selite: 'Moskovan yliopiston päärakennus (1953) oli '
             + 'valmistuessaan Euroopan korkein rakennus ja on Stalinin '
             + 'ajan seitsemästä tornista suurin.',
@@ -16239,6 +16430,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Moscow skyline.jpg',
+          lyhyt: 'Varpusvuoret on yksi Moskovan korkeimmista kohdista, näköalatasanne jyrkän törmän päällä.',
           selite: 'Varpusvuoret on yksi Moskovan korkeimmista kohdista '
             + 'Moskvajoen rannalla, ja sen näköalatasanne on jyrkän törmän '
             + 'päällä.',
@@ -16252,6 +16444,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'High Night Moscow City (195406651).jpeg',
+          lyhyt: 'Moscow-Cityä alettiin suunnitella 1992, siellä on nyt Euroopan eniten pilvenpiirtäjiä.',
           selite: 'Moscow-Cityn liikekeskusta alettiin suunnitella vuonna '
             + '1992, ja siellä on nykyään Euroopan suurin määrä '
             + 'pilvenpiirtäjiä.',
@@ -16262,6 +16455,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Church of St. Basil, Red Square Moscow LCCN2017660946.jpg',
           vuosi: '1890',
+          lyhyt: 'Vuonna 1890 Punaisella torilla seisoivat jo Vasili Autuaan kirkko ja koroke Lobnoje mesto.',
           selite: 'Vuoden 1890 tienoilla Punaisella torilla seisoivat jo '
             + 'Vasili Autuaan kirkko ja Lobnoje mesto, kivikoroke, jolta '
             + 'luettiin ääneen tsaarin julistuksia.',
@@ -16269,6 +16463,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Saint Basil\'s Cathedral (Moscow, 2004).jpg',
+          lyhyt: 'Vasili Autuaan kirkolla on yhdeksän kappelia, joilla kullakin oma kupolinsa.',
           selite: 'Vasili Autuaan kirkon saman katon alla on yhdeksän '
             + 'kappelia, joista jokaisella on erilainen kupoli, ja Lobnoje '
             + 'meston kiviympyrä on yhä paikallaan.',
@@ -16300,6 +16495,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Dushkin sai New Yorkin maailmannäyttelyn pääpalkinnon vuonna '
             + '1939. Sodan aikana asemalla suojauduttiin pommituksilta, ja '
             + 'marraskuussa 1941 sen keskushallissa pidettiin suuri kokous.',
+          lyhyt: 'Majakovskajan metroasema avattiin 1938, katon kuopissa on 34 mosaiikkia neuvostotaivaasta.',
           selite: 'Majakovskajan metroasema avattiin syyskuussa 1938 '
             + 'kolmenkymmenenkolmen metrin syvyyteen, ja sen katon soikeissa '
             + 'kuopissa on 34 mosaiikkia sarjasta Vuorokausi '
@@ -16352,6 +16548,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tavallisina päivinä kaksikymmentä ja torstaisin viisikymmentä '
             + '— halvimmalla pääsi sisään silloin, kun kaikilla muillakin '
             + 'oli vapaata.',
+          lyhyt: 'Moskovan eläintarha avattiin 1864 Presnjan lammikoilla, ja se on yhä samalla paikalla.',
           selite: 'Moskovan eläintarha avattiin 31. tammikuuta 1864 Presnjan '
             + 'lammikoilla, ja se on yhä samalla paikalla.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
@@ -16370,6 +16567,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'oman talonsa peruskivi laskettiin 1874 ja rakennus vihittiin '
             + '30. toukokuuta 1877. Samana vuonna 1872 kaupunkiin tuli myös '
             + 'ensimmäinen hevosten vetämä raitiovaunu.',
+          lyhyt: 'Vuoden 1872 polyteknillisen näyttelyn pääsisäänkäynti oli puinen paviljonki Voskresenskin aukiolla.',
           selite: 'Vuoden 1872 polyteknillisen näyttelyn pääsisäänkäynti oli '
             + 'puinen paviljonki Voskresenskin aukion puolella.',
           lahde: 'Tuntematon tekijä 1872, Wikimedia Commons (public domain)',
@@ -16402,6 +16600,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Alexander Nevsky Cathedral, Sofia, 2025.jpg',
+          lyhyt: 'Aleksanteri Nevskin katedraaliin mahtuu 5000 kirkkovierasta, raskain kello painaa 12 tonnia.',
           selite: 'Aleksanteri Nevskin katedraaliin mahtuu 5 000 '
             + 'kirkkovierasta, ja sen kahdestatoista kellosta raskain painaa '
             + '12 tonnia ja kevyin 10 kiloa.',
@@ -16409,6 +16608,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Oldest building in the city, Church St. George Rotunda Храм ротонда "Св. Георги", Sofia, Bulgaria.jpg',
+          lyhyt: 'Pyhän Yrjön rotunda rakennettiin 300-luvulla kylpylaitokseksi, Sofian vanhin säilynyt rakennus.',
           selite: 'Pyhän Yrjön rotunda rakennettiin 300-luvulla punatiilestä '
             + 'roomalaiseksi kylpylaitokseksi, ja se on Sofian vanhin '
             + 'säilynyt rakennus.',
@@ -16416,6 +16616,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Sofia Central Mineral Baths 20180224.jpg',
+          lyhyt: 'Keskustan mineraalikylpylä valmistui 1913, suljettiin 1986, nykyään talossa on kaupunginmuseo.',
           selite: 'Keskustan mineraalikylpylä valmistui 1913 lähteen päälle, '
             + 'suljettiin 1986, ja nykyään talon toisessa puoliskossa on '
             + 'kaupunginmuseo.',
@@ -16425,6 +16626,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Stone River in Vitosha 47.jpg',
+          lyhyt: 'Vitosan rinteillä virtaa kivivirtoja: jääkauden jättämiä lohkarejonoja, jotka näyttävät joilta.',
           selite: 'Vitosan rinteillä virtaa kivivirtoja: jääkauden jättämiä '
             + 'lohkarejonoja, jotka näyttävät joilta mutta ovat kiveä.',
           lahde: 'Gligan, Wikimedia Commons (CC BY-SA 3.0)',
@@ -16623,6 +16825,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. '
             + 'Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota '
             + 'pitkin on kuljettu 1800 vuotta.',
+          lyhyt: 'Roomalaisen Serdican kadut ja muurin itäportti paljastuivat metrokaivauksissa 2010–2012.',
           selite: 'Roomalaisen Serdican katuja, taloja ja kaupunginmuurin '
             + 'itäportti paljastuivat metrokaivauksissa vuosina 2010–2012, '
             + 'eikä löytöjä peitetty takaisin.',
@@ -16653,6 +16856,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'siitä ilmaa kainalollaan, jottei ääni katkea hengenvedon '
             + 'ajaksi. Tahtilajit ovat suomalaiseen korvaan outoja: yleisiä '
             + 'ovat 7/8 ja 11/16, joten askel menee pitkä–lyhyt–lyhyt.',
+          lyhyt: 'Gaida on vuohennahasta tehty säkkipilli, jota soittaja puhaltaa ja puristaa kainalollaan.',
           selite: 'Gaida on vuohennahasta tehty säkkipilli, jonka soittaja '
             + 'täyttää puhaltamalla ja josta hän puristaa ilmaa '
             + 'kainalollaan, jottei ääni katkea hengenvedon ajaksi.',
@@ -16680,6 +16884,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'joulukuun lopulla vuonna 2000 ja nimettiin kaupungin mukaan — '
             + 'ja kaupunki taas on nimetty Pyhän Sofian kirkosta, jonka nimi '
             + 'tarkoittaa kreikaksi Pyhää Viisautta.',
+          lyhyt: 'Sofia-patsas seisoo Nezavisimost-aukiolla, kuparinen hahmo on kahdeksan metriä korkea.',
           selite: 'Sofia-patsas seisoo Nezavisimost-aukiolla: kuparinen '
             + 'hahmo on kahdeksan metriä korkea ja jalusta kuusitoista.',
           lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
@@ -16703,6 +16908,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-sofia-nevski.jpg',
+          lyhyt: 'Aleksanteri Nevskin katedraali rakennettiin 1882–1912 sodassa kaatuneiden muistoksi.',
           selite: 'Aleksanteri Nevskin katedraalin rakentaminen alkoi 1882 '
             + 'Aleksandr Pomerantsevin suunnitelmien mukaan ja päättyi 1912; '
             + 'se pystytettiin vuosien 1877–1878 sodassa kaatuneiden '
@@ -16712,6 +16918,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sofia-banya-bashi.jpg',
+          lyhyt: 'Banja Bashin moskeija on rakennettu kuumien lähteiden päälle, ainoa yhä toimiva moskeija Sofiassa.',
           selite: 'Banja Bashin moskeija on rakennettu kuumien lähteiden '
             + 'päälle ja sai nimensä viereisistä kylpylöistä; se on ainoa '
             + 'Sofiassa yhä toimiva moskeija, ja sen leveä lyijykupoli '
@@ -16721,6 +16928,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sofia-vitosa.jpg',
+          lyhyt: 'Sofian raitiotie avattiin 1901, ja suurin osa kulkee poikkeuksellisella 1009 mm raideleveydellä.',
           selite: 'Sofian raitiotie avattiin 1. tammikuuta 1901, ja suurin '
             + 'osa verkosta kulkee poikkeuksellisella 1 009 millimetrin '
             + 'raideleveydellä — kadun päässä kohoaa Vitosa.',
@@ -16734,6 +16942,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Άποψη του Largo από τα δυτικά.jpg',
+          lyhyt: 'Largo on 1950-luvulla rakennettu kolmen rakennuksen kokonaisuus Itsenäisyydenaukion ympärillä.',
           selite: 'Largo on 1950-luvulla rakennettu kolmen rakennuksen '
             + 'kokonaisuus Itsenäisyydenaukion ympärillä, ja aukion pinta on '
             + 'Sofian keltaista mukulakiveä.',
@@ -16741,6 +16950,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Sofia seen from Vitosha 1.jpg',
+          lyhyt: 'Vitosan luonnonpuisto rauhoitettiin 1934 ensimmäisenä koko Balkanilla, huippu yltää 2292 metriin.',
           selite: 'Vitosan luonnonpuisto rauhoitettiin 1934 ensimmäisenä '
             + 'koko Balkanilla, ja sen korkein huippu yltää 2 292 metriin.',
           lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
@@ -16750,12 +16960,14 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Banya Bashi 1900.jpg',
           vuosi: 'noin 1900',
+          lyhyt: 'Banja Bashin moskeija valmistui 1566, Sofiasta tuli itsenäistyneen Bulgarian pääkaupunki 1879.',
           selite: 'Banja Bashin moskeija valmistui vuonna 1566, ja Sofiasta '
             + 'tuli vasta itsenäistyneen Bulgarian pääkaupunki 1879.',
           lahde: 'Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Banya Bashi Mosque.jpg',
+          lyhyt: 'Samalla korttelilla seisovat moskeija, synagoga ja kaksi kirkkoa; kuumat lähteet pulppuavat yhä.',
           selite: 'Saman korttelin matkalla seisovat moskeijan lisäksi '
             + 'synagoga ja kaksi kirkkoa, ja kuumat lähteet pulppuavat yhä '
             + 'viereisessä puistossa julkisiin hanoihin.',
@@ -16801,6 +17013,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pieniä paperilappuja, joihin on kirjoitettu toivotuksia — se, '
             + 'minkä lapun omasta palastaan löytää, kertoo tulevasta '
             + 'vuodesta.',
+          lyhyt: 'Banitsa on filotaikinasta ja sirene-juustosta kierretty piirakka, syödään aamiaiseksi bozan kanssa.',
           selite: 'Banitsa on filotaikinasta ja sirene-juustosta kierretty '
             + 'piirakka, jota syödään aamiaiseksi jogurttijuoman tai bozan '
             + 'kanssa.',
@@ -16838,6 +17051,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yli kahdellekymmenelletuhannelle. Kuudesosa areenasta '
             + 'liitettiin hotellin pohjakerrokseen, ja sinne pääsee päivisin '
             + 'maksutta.',
+          lyhyt: 'Serdican amfiteatterista on jäljellä kuudesosa hotellin pohjakerroksessa keskellä Sofiaa.',
           selite: 'Serdican amfiteatterista on jäljellä kuudesosa, ja se '
             + 'sijaitsee hotellin pohjakerroksessa keskellä Sofiaa.',
           lahde: 'Epaunov72, Wikimedia Commons (CC BY-SA 4.0)',
@@ -16958,6 +17172,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Bucharest-palace-of-parliament-may-2016-001.jpg',
+          lyhyt: 'Parlamenttipalatsi on maailman painavin rakennus, rakentaminen alkoi Ceaușescun määräyksestä 1984.',
           selite: 'Parlamenttipalatsi on maailman painavin rakennus, noin 4,1 '
             + 'miljoonaa tonnia, ja sen rakentaminen alkoi Nicolae '
             + 'Ceaușescun määräyksestä vuonna 1984.',
@@ -16965,6 +17180,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Bucuresti Ateneum 2.jpg',
+          lyhyt: 'Romanian Ateneum avattiin konserttitaloksi 1888 pitkän kansalaiskeräyksen tuella.',
           selite: 'Romanian Ateneum avattiin konserttitaloksi 1888 ranskalaisen '
             + 'Albert Galleronin piirustusten mukaan, ja osa rakennusrahoista '
             + 'kerättiin 28 vuotta kestäneellä kansalaiskeräyksellä.',
@@ -16972,6 +17188,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Bucharest Strada Lipscani.jpg',
+          lyhyt: 'Lipscanin katu sai nimensä Leipzigistä, ja se oli Bukarestin tärkein kauppapaikka 1800-luvulle asti.',
           selite: 'Lipscanin katu sai nimensä Leipzigistä, jonka tavaroita sen '
             + 'kauppiaat toivat, ja alue oli keskiajalta 1800-luvun alkuun '
             + 'Bukarestin ja koko Valakian tärkein kauppapaikka.',
@@ -16981,6 +17198,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Bucharest - Gara de Nord (2023) - img 04.jpg',
+          lyhyt: 'Bukarestin päärautatieaseman peruskivi laskettiin 1868, nykyisen nimensä asema sai 1888.',
           selite: 'Bukarestin päärautatieaseman peruskivi laskettiin 10. syyskuuta 1868 kuningas Carol I:n läsnä ollessa, ja nykyisen nimensä asema sai vuonna 1888.',
           lahde: 'Chainwit., Wikimedia Commons (CC BY 4.0)',
         },
@@ -17182,6 +17400,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kymmenettuhannet asukkaat muuttivat muualle. Nyt talossa '
             + 'kokoontuu Romanian parlamentti, mutta noin 70 prosenttia '
             + 'huoneista on yhä tyhjillään.',
+          lyhyt: 'Parlamenttipalatsissa on lattiaa 365 000 neliömetriä, maailman suurin siviilihallinnon rakennus.',
           selite: 'Parlamenttipalatsissa on lattiapinta-alaa 365 000 '
             + 'neliömetriä, ja se on maailman suurin siviilihallinnon '
             + 'rakennus.',
@@ -17199,6 +17418,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Schitul Maicilor: kesäkuussa 1982 se matkasi 245 metriä uusien '
             + 'talojen taakse. Iordăchescu siirsi kaikkiaan 29 rakennusta, '
             + 'joista 13 oli kirkkoja tai luostareita.',
+          lyhyt: 'Vuonna 1725 rakennettu Schitul Maicilor siirrettiin 1982 kiskoilla 245 metriä sivuun.',
           selite: 'Vuonna 1725 rakennettu Schitul Maicilor siirrettiin '
             + 'kesäkuussa 1982 kiskoilla 245 metriä sivuun, jotta se '
             + 'säästyisi keskustan purkutöiltä.',
@@ -17215,6 +17435,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'loppuivat makkarankuoret kesken illan ja hän paistoi massan '
             + 'sellaisenaan. Vappuna niitä grillataan koko maassa pihoilla ja '
             + 'puistoissa.',
+          lyhyt: 'Mici eli mititei ovat kuorettomia jauhelihamakkaroita, joiden kuohkeuden tekee ruokasooda.',
           selite: 'Mici eli mititei ovat kuorettomia jauhelihamakkaroita, '
             + 'joihin tulee valkosipulia, timjamia ja ruokasoodaa — sooda '
             + 'tekee niistä kuohkeita.',
@@ -17234,6 +17455,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ilon kaupunki. Radu Vodăn kadulla seisoo yhä pieni valkoinen '
             + 'Bucurin kirkko, jonka tutkijat tosin ajoittavat 1600- tai '
             + '1700-luvulle.',
+          lyhyt: 'Bucurin kirkon perinne pitää rakentajana Bucur-paimenta, jonka nimeä kaupunki kantaa.',
           selite: 'Bucurin kirkko on pieni valkoinen kirkko Radu Vodăn '
             + 'kadulla, ja perinne pitää sen rakentajana Bucur-paimenta, '
             + 'jonka nimeä kaupunki kantaa.',
@@ -17272,6 +17494,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-bukarest-parlamentti.jpg',
+          lyhyt: 'Parlamentin palatsin rakentaminen alkoi 1984, siinä on noin 1100 huonetta ja 365 000 m² lattiaa.',
           selite: 'Parlamentin palatsin rakentaminen alkoi 1984 Anca '
             + 'Petrescun johdolla, siinä on noin 1 100 huonetta ja 365 000 '
             + 'neliömetriä lattiaa, ja betoni-, teräs- ja marmorimassansa '
@@ -17280,6 +17503,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-bukarest-aamu.jpg',
+          lyhyt: 'Arcul de Triumf pystytettiin Kiseleff-bulevardille 1936 sodan voiton ja maan yhdistymisen muistoksi.',
           selite: 'Arcul de Triumf pystytettiin Kiseleff-bulevardille '
             + 'graniittisena 1936 ensimmäisen maailmansodan voiton ja maan '
             + 'yhdistymisen muistoksi, ja sen malli tulee Pariisista.',
@@ -17287,6 +17511,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-bukarest-keskipaiva.jpg',
+          lyhyt: 'Stavropoleosin luostarikirkko valmistui 1724 brâncoveanulaiseen tyyliin vanhan keskustan sydämessä.',
           selite: 'Stavropoleosin luostarikirkko valmistui 1724 '
             + 'brâncoveanulaiseen tyyliin: veistetty kiviportaali, maalattu '
             + 'julkisivu ja pylväikköpiha vanhan keskustan sydämessä.',
@@ -17294,6 +17519,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-bukarest-ilta.jpg',
+          lyhyt: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi, keskellä lasi- ja metallikupoli.',
           selite: 'CEC-palatsi valmistui 1900 säästöpankin päärakennukseksi '
             + 'Calea Victoriellen — beaux-arts-tyylinen talo, jonka keskellä '
             + 'kaartuu suuri lasi- ja metallikupoli.',
@@ -17304,6 +17530,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Postcard from the Belle Époque with the Romanian Athenaeum and its garden.jpg',
           vuosi: '1900-luvun taite',
+          lyhyt: 'Ateneum oli 1900-luvun taitteessa uusi talo: konserttisali vihittiin 1888, työt jatkuivat 1897.',
           selite: '1900-luvun taitteen postikortin Ateneum oli tuolloin vielä uusi '
             + 'talo: konserttisali vihittiin 1888, mutta rakennustyöt jatkuivat '
             + 'vuoteen 1897.',
@@ -17311,6 +17538,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Ateneo Rumano, Bucarest, Rumanía, 2016-05-29, DD 73.jpg',
+          lyhyt: 'Ateneum on nyt George Enescun orkesterin koti ja vuonna 1958 perustetun festivaalin päänäyttämö.',
           selite: 'Ateneum on nykyään George Enescun filharmonisen orkesterin koti ja '
             + 'vuonna 1958 perustetun George Enescu -festivaalin päänäyttämö.',
           lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
@@ -17342,6 +17570,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja pian muidenkin maiden museot pyysivät Antipalta neuvoja. '
             + 'Samassa talossa seisoo dinoteriumin luuranko: norsun '
             + 'sukulainen, jonka syöksyhampaat kaartuvat alaleuasta alaspäin.',
+          lyhyt: 'Dinoterium oli norsumainen kärsäkäs, ja Antipan museon luuranko on lajin ainoa ehjä maailmassa.',
           selite: 'Dinoterium oli norsujen kaltainen kärsäkäs, jonka '
             + 'syöksyhampaat kasvoivat alaleuasta alas- ja taaksepäin, ja '
             + 'Antipan museon yksilö on lajin ainoa ehjä luuranko '
@@ -17360,6 +17589,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaksi, toinen ohjaamon edessä ja toinen siiven takana, ja ne '
             + 'pyörivät vastakkaisiin suuntiin. Wienin lentoviikolla 1912 '
             + 'Vlaicu voitti palkinnot muun muassa tarkkuuslaskusta.',
+          lyhyt: 'Aurel Vlaicun koneessa ei ollut siivekkeitä, vaan käännös tehtiin kallistamalla rattitankoa.',
           selite: 'Aurel Vlaicun koneessa ei ollut siivekkeitä lainkaan, vaan '
             + 'ohjaajalla oli ratti kuin autossa ja käännös tehtiin '
             + 'kallistamalla rattitankoa sivulle.',
@@ -17405,6 +17635,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Sarajevo City Hall 01.jpg',
+          lyhyt: 'Vijećnica valmistui 1890-luvulla, kansalliskirjasto tuhoutui 1992, ja se avattiin uudelleen 2014.',
           selite: 'Vijećnica eli kaupungintalo valmistui 1890-luvulla '
             + 'Miljackan rannalle, ja siinä toiminut kansalliskirjasto '
             + 'tuhoutui vuonna 1992, minkä jälkeen rakennus avattiin '
@@ -17413,12 +17644,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Sarajevo City Panorama.JPG',
+          lyhyt: 'Sarajevo on rakennettu 518 metrin korkeuteen Miljacka-joen laaksoon viiden vuoren ympäröimänä.',
           selite: 'Sarajevo on rakennettu 518 metrin korkeuteen kapeaan '
             + 'Miljacka-joen laaksoon, ja sitä ympäröi viisi vuorta.',
           lahde: 'Julian Nyča, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Loop Bridge 01 (23776388375).jpg',
+          lyhyt: 'Festina lente -kävelysillan kaide kiertyy silmukaksi, nimi tarkoittaa kiirehdi hitaasti.',
           selite: 'Festina lente -kävelysillan kaide kiertyy keskellä '
             + 'silmukaksi, ja latinankielinen nimi tarkoittaa kiirehdi '
             + 'hitaasti.',
@@ -17636,6 +17869,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sen jälkeen. Kaarten välissä on pyöreitä aukkoja, joita '
             + 'sanotaan sillan silmiksi — ne näkyvät myös kaupungin '
             + 'sinetissä.',
+          lyhyt: 'Latinalaissillan kaarten pyöreät aukot eli sillan silmät näkyvät myös kaupungin sinetissä.',
           selite: 'Latinalaissillan kaarten välissä on pyöreitä aukkoja, '
             + 'joita sanotaan sillan silmiksi, ja ne ovat myös kaupungin '
             + 'sinetissä.',
@@ -17653,6 +17887,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'niistä 1900-luvulla koko maan musiikkia: Nada Mamula muutti '
             + 'Sarajevoon ja lauloi Radio Sarajevon ohjelmissa, ja '
             + 'radioarkistoihin jäi häneltä yli 150 levytystä.',
+          lyhyt: 'Nada Mamula lauloi Radio Sarajevon ohjelmissa, arkistoihin jäi häneltä yli 150 levytystä.',
           selite: 'Nada Mamula (1927–2001) lauloi Radio Sarajevon '
             + 'ohjelmissa, ja radioarkistoihin jäi häneltä yli 150 '
             + 'levytystä.',
@@ -17673,6 +17908,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'moskeijaan, ja 1990-luvun piirityksen ajan kirja oli pankin '
             + 'holvissa. Sivuilla on viinitahroja: sitä on luettu '
             + 'pääsiäisaterioilla.',
+          lyhyt: 'Sarajevon haggada tehtiin Espanjassa 1300-luvulla, sivuilla on viinitahroja pääsiäisaterioilta.',
           selite: 'Sarajevon haggada tehtiin Espanjassa 1300-luvun '
             + 'puolivälissä, ja sen sivuilla on viinitahroja, koska sitä on '
             + 'luettu pääsiäisaterioilla.',
@@ -17693,6 +17929,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pieniin fildžan-kuppeihin. Vesi kiehautetaan ensin, osa siitä '
             + 'otetaan sivuun, hienoksi jauhettu kahvi lisätään pannuun — ja '
             + 'pannun kapeneva muoto nostaa juoman pinnalle vaahdon.',
+          lyhyt: 'Kazandžiluk on yksi Baščaršijan vanhimmista kujista, nimetty kupariseppien mukaan.',
           selite: 'Kazandžiluk on yksi Baščaršijan vanhimmista ammattikujista, '
             + 'ja se on nimetty kazandžien eli kupariseppien mukaan.',
           lahde: 'Francisco Antunes, Wikimedia Commons (CC BY 2.0)',
@@ -17714,6 +17951,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-sarajevo-bascarsija.jpg',
+          lyhyt: 'Baščaršija oli 1800-luvulla lähes kaksi kertaa nykyistä laajempi ennen vuoden 1879 suurpaloa.',
           selite: 'Baščaršija oli 1800-luvulla lähes kaksi kertaa nykyistä '
             + 'laajempi, ja vuoden 1879 suurpalo vei siitä noin puolet; '
             + 'kortteli rakentuu yhä pienistä yhden huoneen myymälöistä, '
@@ -17722,6 +17960,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sarajevo-aamu.jpg',
+          lyhyt: 'Gazi Husrev-begin moskeija valmistui 1531 Baščaršijaan, pihan takana kohoaa kellotorni Sahat Kula.',
           selite: 'Gazi Husrev-begin moskeija valmistui 1531 Baščaršijan '
             + 'basaarikortteliin, ja sen pihan suihkulähdepaviljongin takana '
             + 'kohoaa Sahat Kula, jonka kello näyttää aikaa auringonlaskusta '
@@ -17730,6 +17969,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sarajevo-keskipaiva.jpg',
+          lyhyt: 'Jeesuksen pyhän sydämen katedraali valmistui 1889 uusgoottilaiseen asuun, tunnetaan Katedralana.',
           selite: 'Jeesuksen pyhän sydämen katedraali valmistui 1889 '
             + 'Ferhadija-kadulle uusgoottilaiseen asuun kaksoistorneineen ja '
             + 'ruusuikkunoineen, ja sitä kutsutaan usein vain Katedralaksi.',
@@ -17737,6 +17977,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-sarajevo-ilta.jpg',
+          lyhyt: 'Latinalaisen sillan kupeessa tapahtui kesäkuussa 1914 laukaus, joka sysäsi maailman sotaan.',
           selite: 'Latinalainen silta rakennettiin kivestä Miljackan yli '
             + 'ottomaanikaudella, ja sen kupeessa tapahtui kesäkuussa 1914 '
             + 'laukaus, joka sysäsi maailman sotaan.',
@@ -17747,12 +17988,14 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Sarajevo Sebilj and Bascarsija, ca. 1930.jpg',
           vuosi: '1930-luku',
+          lyhyt: 'Sebiljin vesikioski ja Baščaršijan basaari aukiolla, joka on ollut kauppapaikkana 1400-luvulta.',
           selite: 'Sebiljin vesikioski ja Baščaršijan basaari 1930-luvulla aukiolla, '
             + 'joka on ollut kauppapaikkana 1400-luvulta asti.',
           lahde: 'Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Sarajevo Bascarsija Sebilj 2007-08-16.jpg',
+          lyhyt: 'Sebilj on Baščaršijan puinen vesikioski, josta on juotu vettä 1700-luvulta asti.',
           selite: 'Sebilj on Baščaršijan puinen vesikioski, jonka '
             + 'kahdeksankulmaisen katoksen alta ohikulkijat ovat juoneet '
             + 'vettä 1700-luvulta asti.',
@@ -17784,6 +18027,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hiihti lisäksi viestistä pronssia. Isäntämaa Jugoslavia sai '
             + 'kisoista ensimmäisen talviolympiamitalinsa, kun Jure Franko '
             + 'tuli suurpujottelussa toiseksi.',
+          lyhyt: 'Miesten pujottelu laskettiin Bjelašnicalla 1984, sen voitti Phil Mahre veljensä Stevenin edellä.',
           selite: 'Miesten pujottelu laskettiin Bjelašnica-vuorella 19. '
             + 'helmikuuta 1984, ja sen voitti Phil Mahre kaksoisveljensä '
             + 'Steven jäädessä toiseksi.',
@@ -17800,6 +18044,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja graffitimaalarit. Nyt kaarteet ovat maalauksia täynnä ja '
             + 'radalle pääsee kävelemään: Trebevićille nousee köysirata, '
             + 'jonka gondoli vie kaupungista vuorelle yhdeksässä minuutissa.',
+          lyhyt: 'Trebevićin bobirata valmistui 1982; sodassa vaurioitunut rata on nyt graffitien peitossa.',
           selite: 'Trebevićin betoninen bobi- ja kelkkarata valmistui '
             + 'syyskuussa 1982, ja sodassa vaurioitunut rata on nyt täynnä '
             + 'graffiteja ja avoinna kävelijöille.',
@@ -17821,6 +18066,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Potemkin stairs, Odessa.jpg',
+          lyhyt: 'Potjomkinin portaat rakennettiin 1837–1841, 192 askelmaa kaupungin sisäänkäynniksi mereltä.',
           selite: 'Potjomkinin portaat rakennettiin 1837–1841, ja niiden 192 '
             + 'askelmaa muodostavat kaupungin juhlallisen sisäänkäynnin '
             + 'mereltä päin.',
@@ -17828,6 +18074,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Vorontsov Lighthouse 2017 G1.jpg',
+          lyhyt: 'Vorontsovin majakan valo välähtää kolme pitkää — morseaakkosten O niin kuin Odessa.',
           selite: 'Vorontsovin majakka on 27 metriä korkea, ja sen valo '
             + 'välähtää sataman aallonmurtajalta kolme pitkää — '
             + 'morseaakkosten O niin kuin Odessa.',
@@ -17835,6 +18082,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Deribasivska-Street-aerial-2.jpg',
+          lyhyt: 'Derybasivska on kaupungin vilkkain kävelykatu, nimetty perustaja José de Ribasin mukaan.',
           selite: 'Derybasivska on kaupungin vilkkain kävelykatu, ja se on '
             + 'nimetty Odessan perustajan José de Ribasin mukaan.',
           lahde: 'Alexey M., Wikimedia Commons (CC BY-SA 4.0)',
@@ -17843,6 +18091,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: '51-101-1013 Odesa Dworzec DSC 3087.jpg',
+          lyhyt: 'Odessan pääasema valmistui 1883, tuhoutui 1944 ja avattiin jälleenrakennettuna 1952.',
           selite: 'Odessan pääasema valmistui 1883 arkkitehti Viktor '
             + 'Schröterin piirustusten mukaan, tuhoutui 1944 ja avattiin '
             + 'jälleenrakennettuna 12. heinäkuuta 1952.',
@@ -18044,6 +18293,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'prosenttia, eikä koko verkostoa ole koskaan kartoitettu. '
             + 'Toisen maailmansodan aikana käytävissä piileskeli '
             + 'partisaaneja, jotka nousivat maan alta ja katosivat takaisin.',
+          lyhyt: 'Odessan alla on arviolta 2500 kilometriä louhoskäytäviä, enemmän kuin minkään muun kaupungin.',
           selite: 'Odessan alla on arviolta 2 500 kilometriä louhoskäytäviä, '
             + 'enemmän kuin minkään muun kaupungin alla, ja syvimmillään ne '
             + 'ulottuvat 60 metriä merenpinnan alapuolelle.',
@@ -18061,6 +18311,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rantatörmälle rakennettaisiin satama. Käsky annettiin 27. '
             + 'toukokuuta 1794, ja siitä lasketaan kaupungin ikä. Vilkkain '
             + 'kävelykatu on yhä Derybasivska eli de Ribasin katu.',
+          lyhyt: 'José de Ribas valtasi 1789 linnakkeen ja ehdotti satamaa; käsky annettiin 1794.',
           selite: 'José de Ribas valtasi 1789 Hadžibein linnakkeen ja '
             + 'ehdotti keisarinna Katariina II:lle satamaa samalle '
             + 'rantatörmälle; käsky annettiin 27. toukokuuta 1794.',
@@ -18078,6 +18329,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ensimmäinen rakennus Odessassa, johon asennettiin sähkövalot. '
             + 'Maapohja sen alla liikkuu, joten halkeamia on paikattu '
             + 'käytännössä avajaisista asti.',
+          lyhyt: 'Odessan oopperatalo avattiin 1887, kaupungin ensimmäinen sähkövaloin varustettu rakennus.',
           selite: 'Odessan oopperatalo avattiin lokakuussa 1887 palaneen '
             + 'teatterin tilalle, ja se oli kaupungin ensimmäinen '
             + 'sähkövaloilla varustettu rakennus.',
@@ -18103,6 +18355,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'bakteerien lisäksi vain kaksi lajia, ja lisääntymisaikaan '
             + 'pikkuäyriäisiä on niin paljon, että koko veden sävy kääntyy '
             + 'punertavaksi. Kylpylä perustettiin rannalle jo 1834.',
+          lyhyt: 'Kuyalnykin lahti kuivuu kesäisin suolaerämaaksi, suola on ollut tulonlähde keskiajalta asti.',
           selite: 'Kuyalnykin lahden yläpää kuivuu kesäisin suolaerämaaksi, '
             + 'ja pohjalle jäävä suola on ollut kaupungin tulonlähde '
             + 'keskiajalta asti.',
@@ -18126,6 +18379,7 @@ export const KULTTUURI_KATEGORIAT = {
            * ja Dumska jäävät alle omina heroinaan.
            */
           ampari: 'herokoe/hero-odessa-potemkinin-portaat.jpg',
+          lyhyt: 'Potemkinin portaissa oli alun perin 200 askelmaa, nyt 192, koska alimmat jäivät sataman alle.',
           selite: 'Potemkinin portaat rakennettiin 1837–1841, ja niissä oli '
             + 'alun perin 200 askelmaa; nykyään niitä on 192, koska alimmat '
             + 'jäivät sataman laajennuksen alle. Portaat kapenevat ylöspäin '
@@ -18135,6 +18389,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-odessa-aamu.jpg',
+          lyhyt: 'Al Fahidin kortteli on Bur Dubain vanhinta rakennuskantaa, jäähdytettynä tuulitorneilla.',
+          lyhyt: 'Odessan ooppera- ja balettiteatterin uusbarokkitalo nousi 1873 palon jälkeen, avattiin 1887.',
           selite: 'Odessan ooppera- ja balettiteatterin nykyinen '
             + 'uusbarokkitalo nousi vuonna 1873 palaneen kaupunginteatterin '
             + 'paikalle wieniläisten Ferdinand Fellnerin ja Hermann Helmerin '
@@ -18143,6 +18399,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-odessa-keskipaiva.jpg',
+          lyhyt: 'Vorontsovin palatsi kaarevine kolonnadeineen rakennettiin 1827–1830 ruhtinas Vorontsoville.',
           selite: 'Vorontsovin palatsi ja sen kaareva kolonnadi rakennettiin '
             + '1827–1830 ruhtinas Mihail Vorontsoville sardinialaissyntyisen '
             + 'Francesco Boffon piirustusten mukaan turkkilaisen Hacıbeyn '
@@ -18151,6 +18408,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-odessa-ilta.jpg',
+          lyhyt: 'Odessan kaupungintalo Dumska valmistui 1828–1834, Franz Morandi rakensi sen uudelleen 1871–1873.',
           selite: 'Odessan kaupungintalo eli Dumska valmistui 1828–1834 '
             + 'Francesco Boffon ja Gregorio Toricellin uusklassisena '
             + 'suunnitelmana Primorskin bulevardin päähän, ja Franz Morandi '
@@ -18168,6 +18426,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Odessa Treppe.JPG',
+          lyhyt: 'Kahdeksan alinta askelmaa jäi sataman alle, portaiden yläpäässä seisoo herttua Richelieun patsas.',
           selite: 'Kahdeksan alinta askelmaa jäi sataman laajennuksen alle, '
             + 'ja portaiden ylälaidassa seisoo herttua Richelieun patsas.',
           lahde: 'Julian Nyča, Commons (CC BY-SA 4.0)',
@@ -18197,6 +18456,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'forshmakia — sillitahnaa, joka tuli kaupungin juutalaisesta '
             + 'keittiöstä. Tinkiminen ei ole täällä epäkohteliasta vaan osa '
             + 'kaupantekoa.',
+          lyhyt: 'Privoz alkoi 1827 hevoskärryjen takalaidoilta ja on yhä Odessan suurin ruokatori.',
           selite: 'Privoz alkoi vuonna 1827 hevoskärryjen takalaidoilta ja '
             + 'on yhä Odessan suurin ruokatori, jolla hinta sovitaan '
             + 'tinkimällä.',
@@ -18214,6 +18474,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lopulta niin paljon, että viranomaiset kielsivät koko jutun, '
             + 'mutta 1990-luvulla se palasi. Kulkueessa marssivat vuodesta '
             + 'toiseen myös Darth Vader ja avaruussotilaat.',
+          lyhyt: 'Humorina keksittiin 1972, ja kulkueessa marssivat vuodesta toiseen myös Darth Vader.',
           selite: 'Humorina keksittiin vuonna 1972 ja sitä on vietetty '
             + 'aprillipäivänä vuodesta 1973, ja kulkueessa marssivat '
             + 'vuodesta toiseen myös Darth Vader ja avaruussotilaat.',
@@ -18243,6 +18504,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Sheikh Zayed Road Skyline from Satwa on 16 May 2007.jpg',
+          lyhyt: 'Sheikh Zayed Road on Dubain osuus emiraattien pisimmästä tiestä E 11:stä.',
           selite: 'Sheikh Zayed Road on Dubain osuus E 11 -valtatiestä, '
             + 'joka on emiraattien pisin tie ja seuraa Persianlahden '
             + 'rannikkoa.',
@@ -18256,6 +18518,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Abra @ From Bur Dubai to Deira @ Dubai Creek (15860705846).jpg',
+          lyhyt: 'Dubai Creek ei ole joki vaan Persianlahden suolavesilahti sisämaahan asti.',
           selite: 'Dubai Creek ei ole joki vaan Persianlahden '
             + 'suolavesilahti, joka työntyy noin neljätoista kilometriä '
             + 'sisämaahan.',
@@ -18288,6 +18551,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ei tiedetä, eikä hän luultavasti ollut paikalla: kuva on '
             + 'tehty matkakertomusten mukaan, ja siksi se kertoo yhtä '
             + 'paljon lukijoistaan kuin lahdesta.',
+          lyhyt: 'The Graphic julkaisi 1881 kaiverruksen lahden helmenpyynnistä, vaikka piirtäjä tuskin kävi paikalla.',
           selite: 'Lontoolainen The Graphic julkaisi 1. lokakuuta 1881 koko '
             + 'sivun kaiverruksen lahden helmenpyynnistä, vaikka piirtäjä '
             + 'ei luultavasti ollut koskaan käynyt paikalla.',
@@ -18303,6 +18567,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'astetta. Rata kulkee suurimmaksi osaksi katujen yläpuolella '
             + 'pilareilla. Ensimmäisessä vaunussa on osa, johon saavat mennä '
             + 'vain naiset ja lapset, ja väärästä vaunusta saa sakon.',
+          lyhyt: 'Dubaissa heinä-elokuun keskilämpötila on yli 43 astetta, vanhat kujat on rakennettu varjoisiksi.',
+          lyhyt: 'Dubain metro avattiin 2009, junat kulkevat ilman kuljettajaa tietokoneen ohjaamina.',
           selite: 'Dubain metro avattiin 9. syyskuuta 2009, ja sen junat '
             + 'kulkevat ilman kuljettajaa tietokoneen ohjaamina.',
           lahde: 'Shahroozporia, Wikimedia Commons (CC BY-SA 3.0)',
@@ -18318,6 +18584,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maailman painavin sormus: se painoi lähes kuusikymmentä kiloa, '
             + 'eikä sitä voinut pitää sormessa vaan vitriinissä. '
             + 'Kaupankäynnissä tinkiminen kuuluu asiaan.',
+          lyhyt: 'Deiran kultatorilla koru punnitaan asiakkaan edessä, hinta lasketaan päivän kultakurssista.',
           selite: 'Deiran kultatorilla koru punnitaan asiakkaan edessä, ja '
             + 'hinta lasketaan päivän kultakurssista ja työn osuudesta.',
           lahde: 'Saaremees, Wikimedia Commons (CC BY-SA 4.0)',
@@ -18345,6 +18612,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-dubai-keskipaiva.png',
+          lyhyt: 'Purjeen muotoinen Burj Al Arab rakennettiin tekosaarelle 1999, siitä tuli Dubain tunnus.',
           selite: 'Purjeen muotoinen Burj Al Arab rakennettiin omalle '
             + 'tekosaarelleen 1999, ja siitä tuli modernin Dubain '
             + 'tunnus.',
@@ -18352,6 +18620,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-dubai-ilta.png',
+          lyhyt: 'Dubai kasvoi Creekin dhow-satamasta, Al Fahidin tuulitornit jäähdyttivät taloja ennen sähköä.',
           selite: 'Dubai kasvoi Creekin dhow-satamasta, ja Al Fahidin '
             + 'vanhassa korttelissa tuulitornit jäähdyttivät taloja jo '
             + 'ennen sähköä.',
@@ -18380,6 +18649,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Bastakia Windtower.JPG',
+          lyhyt: 'Tuulitorni on nelisivuinen ja avoin, joten se ottaa tuulen sisään mistä suunnasta tahansa.',
           selite: 'Tuulitorni on nelisivuinen ja avoin joka suuntaan, joten '
             + 'se ottaa tuulen sisään puhalsi se mistä tahansa.',
           lahde: 'Jpatokal, Wikimedia Commons (CC BY-SA 4.0)',
@@ -18423,6 +18693,7 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Dubai Metro Al Ras station.JPG',
+                  lyhyt: 'Metron vihreä linja kulkee vanhan Dubain läpi museon, kultasuukin ja maustesuukin kohdalla.',
                   selite: 'Metron vihreä linja kulkee vanhan Dubain läpi ja '
                     + 'pysähtyy museon, kultasuukin ja maustesuukin '
                     + 'kohdalla.',
@@ -18430,6 +18701,7 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'A boat on the Dubai Creek 20240605.jpg',
+                  lyhyt: 'Abra ylittää lahden muutaman minuutin välein, matka maksaa yhden dirhamin.',
                   selite: 'Abra ylittää lahden muutaman minuutin välein, ja '
                     + 'matka maksaa yhden dirhamin, joka ojennetaan '
                     + 'kuljettajalle veneessä.',
@@ -18513,6 +18785,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Deiraan.',
               kuva: {
                 tiedosto: 'Windtower Dubai.jpg',
+                lyhyt: 'Sheikh Saeed bin Maktoum asui Shindaghan talossaan 1912–1958, nurkissa on tuulitornit.',
                 selite: 'Sheikh Saeed bin Maktoum asui Shindaghan talossaan '
                   + 'vuodesta 1912 vuoteen 1958, ja talon nurkissa on '
                   + 'tuulitornit.',
@@ -18579,6 +18852,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerroksissa paastotaan hetken pidempään kuin alhaalla. '
             + 'Rakennuksen muoto kapenee portaittain, jotta tuuli ei saisi '
             + 'siitä otetta.',
+          lyhyt: 'Burj Khalifa valmistui 2010 ja kapenee portaittain ylöspäin, jottei tuuli saa siitä otetta.',
           selite: 'Burj Khalifa valmistui vuonna 2010, siinä on 163 '
             + 'kerrosta, ja sen muoto kapenee portaittain, jottei tuuli '
             + 'saisi siitä otetta.',
@@ -18596,6 +18870,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'otetuissa kuvissa. Hiekka tiivistettiin täryttämällä, jotta se '
             + 'kestäisi rakennukset, ja aallonmurtajaan ladottiin miljoonia '
             + 'tonneja louhittua kiveä.',
+          lyhyt: 'Palm Jumeirah ruopattiin merenpohjasta palmun muotoon: runko, 17 lehteä ja kaareva aallonmurtaja.',
           selite: 'Palm Jumeirah ruopattiin merenpohjan hiekasta ja kivestä '
             + 'palmun muotoon: runko, seitsemäntoista lehteä ja kaareva '
             + 'aallonmurtaja.',
@@ -18613,6 +18888,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jäljelle jäävä väkevä suolaliuos palautetaan mereen — se '
             + 'lämmittää ja suolaa lahtea, mikä on alueen isoja '
             + 'ympäristökysymyksiä.',
+          lyhyt: 'Jebel Alin laitoksessa merivesi kuumennetaan juomavedeksi, väkevä suolaliuos palautetaan mereen.',
           selite: 'Jebel Alin laitoksessa merivesi kuumennetaan ja höyry '
             + 'tiivistetään juomavedeksi, ja jäljelle jäävä väkevä '
             + 'suolaliuos palautetaan mereen.',
@@ -18655,6 +18931,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Al-Khazneh (Treasury) Petra.JPG',
+          lyhyt: 'Al-Khazneh louhittiin 100-luvulla kuningas Aretas IV:n aikana hautamonumentiksi ja kryptaksi.',
           selite: 'Al-Khazneh louhittiin 100-luvun alussa jKr. kuningas '
             + 'Aretas IV:n aikana hautamonumentiksi ja kryptaksi.',
           lahde: 'Kfoulk, Wikimedia Commons (CC BY-SA 3.0)',
@@ -18685,6 +18962,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-petra-aamu.png',
+          lyhyt: 'Al-Khazneh hakattiin nabatealaiskuninkaiden haudaksi; nimen antoivat beduiinien aarretarinat.',
           selite: 'Al-Khazneh eli Aarrekammio hakattiin kallioon '
             + 'nabatealaisten kuninkaiden haudaksi ajanlaskun alun '
             + 'tienoilla, ja nimensä se sai beduiinien '
@@ -18693,6 +18971,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-petra-keskipaiva.png',
+          lyhyt: 'Ad-Deir eli Luostari on Petran suurin kalliojulkisivu, sen luo nousee noin 800 kallioporrasta.',
           selite: 'Ad-Deir eli Luostari on Petran suurin kalliojulkisivu '
             + '— lähes 50 metriä korkea — ja sen luo noustaan noin 800 '
             + 'kallioporrasta.',
@@ -18700,6 +18979,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-petra-ilta.png',
+          lyhyt: 'Kuningashautojen rivistö hakattiin länsijyrkänteeseen Petran rikkaimpina suitsukevuosina.',
           selite: 'Kuningashautojen rivistö hakattiin länsijyrkänteeseen '
             + 'ensimmäisellä vuosisadalla, kun Petra eli '
             + 'suitsukekaravaanien rikkaimpia vuosiaan.',
@@ -18713,6 +18993,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'City center and the so called colonnaded street, upper view. Petra.jpg',
+          lyhyt: 'Laakson pohjan pylväskatua kavensivat roomalaiset, ja sen varteen lisättiin 72 pylvästä.',
           selite: 'Laakson pohjaa seuraa pylväskatu, jonka roomalaiset '
             + 'kavensivat jalkakäytävää varten ja jonka varteen lisättiin '
             + '72 pylvästä.',
@@ -18720,6 +19001,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Petra, Siq, Canyon, Jordan.jpg',
+          lyhyt: 'Siq on kapeimmillaan noin kolme metriä, kun seinät kohoavat lähes kahteensataan metriin.',
           selite: 'Siq on kapeimmillaan noin kolme metriä leveä, kun seinät '
             + 'kohoavat yhdeksästäkymmenestä lähes kahteensataan metriin.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
@@ -18736,6 +19018,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Al Khazneh 2025.jpg',
           vuosi: '2025',
+          lyhyt: 'Al-Khaznen julkisivu on 37 metriä korkea ja lainaa muotonsa Aleksandrian arkkitehtuurilta.',
           selite: 'Al-Khaznen julkisivu on 37 metriä korkea ja 24 metriä '
             + 'leveä, ja se lainaa muotonsa Aleksandrian hellenistiseltä '
             + 'arkkitehtuurilta.',
@@ -18757,6 +19040,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaksinkertaisessa koossa veistettyä kauppiasta, kumpikin '
             + 'taluttamassa kahta kamelia. Rotkon suulla ollut '
             + 'holvikaari romahti maanjäristyksessä 1896.',
+          lyhyt: 'Siq on maankuoren liikkeen halkaisema luonnollinen murros, jonka vesi vasta myöhemmin hioi sileäksi.',
           selite: 'Siq ei ole veden kaivama vaan luonnollinen murros, jonka '
             + 'maankuoren liike halkaisi ja jonka vesi vasta myöhemmin hioi '
             + 'sileäksi.',
@@ -18777,6 +19061,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'toisen kerroksen koristeuurnassa olisi faaraon aarre. '
             + 'Uurna on täyttä hiekkakiveä, mutta siinä näkyy yhä '
             + 'luodinjälkiä niiltä, jotka uskoivat tarinan.',
+          lyhyt: 'Aarrekammion koristeuurnaan on jäänyt luodinjälkiä sen kätkevän faaraon aarteen etsijöiltä.',
           selite: 'Aarrekammion koristeuurna on täyttä hiekkakiveä, mutta '
             + 'siihen on jäänyt luodinjälkiä niiltä, jotka uskoivat sen '
             + 'kätkevän faaraon aarteen.',
@@ -18799,6 +19084,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Newdigate-palkinnon ja antoi kaupungille nimen, joka on '
             + 'jäänyt: ruusunpunainen kaupunki, puoliksi yhtä vanha '
             + 'kuin aika.',
+          lyhyt: 'David Roberts piirsi Petran 1839, litografiat veivät kaupungin eurooppalaisiin olohuoneisiin.',
           selite: 'David Roberts piirsi Petran vuonna 1839, ja hänen '
             + 'litografiansa veivät kaupungin eurooppalaisiin '
             + 'olohuoneisiin.',
@@ -18821,6 +19107,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Rakennustyössä leikattiin useiden vanhempien hautojen '
             + 'läpi. Rooma liitti kuningaskunnan valtakuntaansa vuonna '
             + '106 jKr.',
+          lyhyt: 'Petran teatteri louhittiin rinteeseen niin, että katsomosta näkyi mahdollisimman monta hautaa.',
           selite: 'Petran teatteri louhittiin rinteeseen niin, että '
             + 'katsomosta näkyi mahdollisimman monta hautaa, ja siihen '
             + 'mahtui arviolta 8 500 katsojaa.',
@@ -18917,6 +19204,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kuvassa, jos katsoo tarkkaan.',
               kuva: {
                 tiedosto: 'Jordan 2021 P186 Petra Theater Necropolis.jpg',
+                lyhyt: 'Petran hautakammioissa asuivat bdul-beduiinit 1980-luvulle asti ennen siirtoa Umm Seyhouniin.',
                 selite: 'Petran hautakammioissa asuivat bdul-beduiinit '
                   + '1980-luvulle asti, kunnes heidät siirrettiin Umm '
                   + 'Seyhounin kylään.',
@@ -18940,6 +19228,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kirjoittivat alueesta, Petraa ei enää mainittu.',
               kuva: {
                 tiedosto: 'Qasr al-Bint (Petra) 01.jpg',
+                lyhyt: 'Vuoden 363 maanjäristys rikkoi Petran rakennukset, kauppa oli jo siirtynyt merireiteille.',
                 selite: 'Vuoden 363 maanjäristys rikkoi Petran rakennuksia '
                   + 'ja kaupungin vesijärjestelmän, ja kauppa oli jo '
                   + 'siirtynyt merireiteille.',
@@ -19006,6 +19295,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskellä ollutta aluetta pidettiin pitkään torina, mutta '
             + 'kaivaukset paljastivat sen puutarhaksi, jossa oli suuri '
             + 'uima-allas ja keskellä saaripaviljonki.',
+          lyhyt: 'Siqin suulla oleva pato ohjaa tulvavedet pois rotkosta, rakennettu uudelleen 1963 ja 1991.',
           selite: 'Siqin suulla oleva pato ohjaa Wadi Musan tulvavedet pois '
             + 'rotkosta, ja se on rakennettu uudelleen vuosina 1963 ja '
             + '1991.',
@@ -19027,6 +19317,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kierukan tilalla on neljä norsunpäätä — kaikkiaan '
             + 'norsunpääosien katkenneita paloja on kertynyt 328. '
             + 'Rakennuksen käyttötarkoituksesta kiistellään yhä.',
+          lyhyt: 'Suuren temppelin kompleksi kattaa noin 7560 neliömetriä, portaat ovat 17 metriä leveät.',
           selite: 'Suuren temppelin kompleksi kattaa noin 7 560 '
             + 'neliömetriä, ja sen portaat ovat seitsemäntoista metriä '
             + 'leveät.',
@@ -19047,6 +19338,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin 400-luvun jälkipuoliskolla, ja se paloi '
             + '600-luvun alussa. Sivulaivojen mosaiikeissa on '
             + 'vuodenaikoja, eläimiä, ihmisiä, saviastioita ja kasveja.',
+          lyhyt: 'Petran bysanttilaisen kirkon mosaiikeissa on vuodenaikoja, eläimiä, ihmisiä ja kasveja.',
           selite: 'Petran bysanttilaisen kirkon sivulaivojen mosaiikeissa '
             + 'on vuodenaikoja, eläimiä, ihmisiä, saviastioita ja kasveja.',
           lahde: 'Odilia, Wikimedia Commons (CC BY-SA 3.0)',
@@ -19130,6 +19422,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Al-Masjid An-Nabawi (Bird\'s Eye View).jpg',
+          lyhyt: 'Profeetan moskeija aukioineen on Medinan keskipiste, jonka mukaan hotellit ja kadut asettuvat.',
           selite: 'Profeetan moskeija aukioineen on Medinan keskipiste, ja '
             + 'hotellit, kadut ja kehätiet asettuvat sen mukaan.',
           lahde: 'Konevi, Wikimedia Commons (CC0)',
@@ -19182,6 +19475,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Mezquita del Profeta, Medina, Arabia Saudita, 2025-05-22, DD 02.jpg',
           vuosi: '2025',
+          lyhyt: 'Profeetan moskeijaa on laajennettu valtavaksi, vanha kupoli on jäänyt uusien minareettien keskelle.',
           selite: 'Profeetan moskeijaa on laajennettu satojentuhansien '
             + 'ihmisten mittaiseksi, ja vanha kupoli on jäänyt uusien '
             + 'minareettien keskelle.',
@@ -19203,6 +19497,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Abdullah Road ja King Khalid Road. Vanhan kaupungin '
             + 'soikea ääriviiva elää siis yhä katuverkossa, vaikka '
             + 'muurikiveä ei ole jäljellä.',
+          lyhyt: 'Muurien paikalle vedettiin kolme kehätietä, vanhan kaupungin soikea ääriviiva elää yhä katuverkossa.',
           selite: 'Muurien paikalle vedettiin Saudi-Arabian aikana kolme '
             + 'kehätietä, joten vanhan kaupungin soikea ääriviiva elää yhä '
             + 'katuverkossa.',
@@ -19222,6 +19517,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'al-Aqiqin rannat vihertyivät viljelyksistä. Kaivoista '
             + 'kuuluisimpia on Ruman kaivo, jonka kalifi Uthman osti ja '
             + 'lahjoitti yhteiseksi, niin ettei vedestä tarvinnut maksaa.',
+          lyhyt: 'Kalifi Muawiyan käskyläiset kaivoivat 600-luvulla Ayn az-Zarqan lähteen ja kastelukanavia.',
           selite: 'Kalifi Muawiyan käskyläiset kaivoivat 600-luvulla Ayn '
             + 'az-Zarqan lähteen ja rakensivat maanalaisia kanavia peltojen '
             + 'kasteluun.',
@@ -19243,6 +19539,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laskettiin väliaikaisille penkereille wadien yli. Mekkaan '
             + 'rataa ei jatkettu, sillä Harb-heimo nousi vuonna 1907 '
             + 'vastustamaan jatkoa.',
+          lyhyt: 'Hidžaz-rata saavutti Medinan syyskuussa 1908 sulttaanin valtaannousun vuosipäivänä.',
           selite: 'Hidžaz-rata saavutti Medinan 1. syyskuuta 1908, ja päivä '
             + 'oli valittu sulttaanin valtaannousun vuosipäiväksi.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
@@ -19261,6 +19558,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'entisöitiin, ja niihin avattiin vuonna 2006 Hidžaz-radan '
             + 'museo. Aseman kortteli on siis yhä olemassa, vaikka '
             + 'raiteet eivät enää vie mihinkään.',
+          lyhyt: 'Hidžaz-rata ehti palvella runsaat kymmenen vuotta ennen kuin se oli 1920 käytännössä hylätty.',
           selite: 'Hidžaz-rata ehti palvella runsaat kymmenen vuotta, ja '
             + 'vuoteen 1920 mennessä se oli käytännössä hylätty.',
           lahde: 'Imam Khairul Annas, Wikimedia Commons (CC BY-SA 4.0)',
@@ -19309,6 +19607,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'jotka kiertävät keskustan renkaina.',
               kuva: {
                 tiedosto: 'قطار الحرمين 2023.jpg',
+                lyhyt: 'Haramain-pikajuna avattiin 2018 ja kulkee Mekasta Medinaan noin 450 kilometriä kahdessa tunnissa.',
                 selite: 'Haramain-pikajuna avattiin 11. lokakuuta 2018, ja '
                   + 'se kulkee Mekasta Medinaan noin 450 kilometriä '
                   + 'kahdessa tunnissa.',
@@ -19436,6 +19735,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kahdelle heistä, Awsille ja Khazrajille. Quban kylä '
             + 'keitaan eteläreunalla pysyi omana yhdyskuntanaan vielä '
             + 'pitkään.',
+          lyhyt: 'Quban kylä keitaan eteläreunalla pysyi omana yhdyskuntanaan, kunnes kaupunki kasvoi sen ympärille.',
           selite: 'Quban kylä keitaan eteläreunalla pysyi omana '
             + 'yhdyskuntanaan pitkään, kunnes kaupunki kasvoi sen '
             + 'ympärille.',
@@ -19456,6 +19756,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sitä alettiin kutsua yksinkertaisesti al-Madinaksi, '
             + 'kaupungiksi. Jälkimmäisestä ovat lähtöisin pidemmät '
             + 'muodot Profeetan kaupunki ja Valaistu kaupunki.',
+          lyhyt: 'Nimi Yathrib esiintyy Harranin kirjoituksessa, joka kuuluu Nabonidukselle 500-luvulla eKr.',
           selite: 'Nimi Yathrib esiintyy Harranista löytyneessä '
             + 'kirjoituksessa, joka kuuluu babylonialaiselle kuninkaalle '
             + 'Nabonidukselle 500-luvulla eKr.',
@@ -19477,6 +19778,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'riidat vietiin Muhammadin ratkaistaviksi. Tutkijat '
             + 'kiistelevät yhä siitä, oliko kyseessä yksi asiakirja vai '
             + 'kokoelma sopimuksia.',
+          lyhyt: 'Birminghamin Koraani-fragmentti on näyte aikakauden kirjoituksesta, ei perustuslain asiakirja.',
           selite: 'Birminghamin Koraani-fragmentti on näyte aikakauden '
             + 'kirjoituksesta eikä Medinan perustuslain asiakirja.',
           lahde: 'AnonymousUnknown author, Wikimedia Commons (PD)',
@@ -19618,6 +19920,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-mekka-aamu.png',
+          lyhyt: 'Suuren moskeijan keskellä on Kaaba, jonka luo pyhiinvaellus on islamin viides peruspilari.',
           selite: 'Suuren moskeijan keskellä on Kaaba, jota kohti '
             + 'maailman muslimit rukoilevat, ja pyhiinvaellus sen '
             + 'luo on islamin viides peruspilari.',
@@ -19625,6 +19928,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-mekka-keskipaiva.png',
+          lyhyt: 'Abraj Al-Bait -tornissa on maailman suurimmat kellotaulut, 601-metrinen torni moskeijan vierestä.',
           selite: 'Abraj Al-Bait -tornin kellotaulut ovat maailman '
             + 'suurimmat, ja 601-metrinen torni nousee suoraan Suuren '
             + 'moskeijan vierestä.',
@@ -19632,6 +19936,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-mekka-ilta.png',
+          lyhyt: 'Jabal al-Nourin huipulla on Hiran luola, jossa Muhammad sai perimätiedon mukaan ensi ilmestyksensä.',
           selite: 'Jabal al-Nourin huipulla on Hiran luola, jossa '
             + 'perimätiedon mukaan profeetta Muhammad sai ensimmäisen '
             + 'ilmestyksensä.',
@@ -19645,6 +19950,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Masjid Haram 1889 Snouck Hurgronje.jpg',
+          lyhyt: 'Ajyadin linnoitus peitti moskeijan eteläpuolella noin 23 000 neliömetriä suojatakseen pyhäkköä.',
           selite: 'Ajyadin linnoitus peitti moskeijan eteläpuolisella '
             + 'kukkulalla noin kaksikymmentäkolmetuhatta neliömetriä ja '
             + 'rakennettiin suojaamaan pyhäkköä.',
@@ -19689,6 +19995,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pysyisi kuivana. Tutkija al-Kurdin mukaan tulvia oli '
             + 'vuoteen 1965 mennessä tullut kahdeksankymmentä'
             + 'yhdeksän, pahin niistä vuonna 1942.',
+          lyhyt: 'Mekan laakson uoma ohjaa rankkasateen vedet kaduille; kalifien ajoista lähtien rakennettiin patoja.',
           selite: 'Mekan laakson uoma ohjaa rankkasateen vedet suoraan '
             + 'kaduille, ja jo kalifien aikana kaupunkiin rakennettiin '
             + 'patoja ja penkereitä.',
@@ -19733,6 +20040,7 @@ export const KULTTUURI_KATEGORIAT = {
             + '1800-luvun alussa kiswan kulut valtion kassasta, ja '
             + 'silloin työ annettiin Kairon Dar '
             + 'al-Khoronfoshin verstaalle.',
+          lyhyt: 'Kaaban musta peite kiswa valmistettiin ajjubideista lähtien Egyptissä; oviverho on nyt Bursassa.',
           selite: 'Kaaban musta peite eli kiswa valmistettiin ajjubidien '
             + 'ajoista lähtien Egyptissä; tämä mamelukkiaikainen oviverho '
             + 'on Bursan Ulu Camiissa.',
@@ -19950,6 +20258,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muslimi ja pääsi Mekkaan, jossa vietti useita kuukausia ja '
             + 'teki pyhiinvaelluksen riitit. Muistiinpanot julkaistiin '
             + 'vasta kuoleman jälkeen, vuonna 1829.',
+          lyhyt: 'Sveitsiläinen Johann Ludwig Burckhardt otti nimen šeikki Ibrahim ja pääsi Mekkaan 1814.',
           selite: 'Sveitsiläinen Johann Ludwig Burckhardt otti nimen šeikki '
             + 'Ibrahim ibn Abdallah ja pääsi Mekkaan vuonna 1814.',
           lahde: 'Maurice Babey, Wikimedia Commons (PD)',
@@ -19971,6 +20280,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjoitti: "Mekassa ei ole mitään teatraalista, mikään ei '
             + 'muistuta oopperaa, vaan kaikki on yksinkertaista ja '
             + 'vaikuttavaa."',
+          lyhyt: 'Richard Francis Burton matkusti Mekkaan 1853 valepuvussa, muistiinpanot koraanikotelossa.',
           selite: 'Richard Francis Burton matkusti Mekkaan vuonna 1853 '
             + 'valepuvussa ja kantoi muistiinpanovälineitä '
             + 'koraanikotelossa.',
@@ -19992,6 +20302,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'osa kukkulasta tasoitettiin kellotornikompleksin tieltä. '
             + 'Rakennuksesta on jäljellä 1:25-kokoinen pienoismalli '
             + 'Istanbulin Miniatürk-puistossa.',
+          lyhyt: 'Ajyadin linnoitus purettiin 2002 kellotornin tieltä, siitä on pienoismalli Istanbulissa.',
           selite: 'Ajyadin linnoitus purettiin tammikuussa 2002 '
             + 'kellotornikompleksin tieltä, ja siitä on jäljellä '
             + 'pienoismalli Istanbulin Miniatürk-puistossa.',
@@ -20012,6 +20323,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Mekasta sen keskus, ja vuonna 1885 vali Osman Nuri Pasha '
             + 'toi kaupunkiin ensimmäisen kirjapainon. Samana vuonna '
             + 'väkiluvuksi arvioitiin neljäkymmentäviisi tuhatta.',
+          lyhyt: 'Osmanit antoivat Mekan takaisinvaltauksen Muhammad Ali Pashalle, joka onnistui siinä 1813.',
           selite: 'Osmanit antoivat Mekan takaisinvaltauksen Egyptin '
             + 'varakuninkaalle Muhammad Ali Pashalle, joka onnistui siinä '
             + 'vuonna 1813.',
@@ -20045,6 +20357,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Light in Goreme Valley.jpg',
+          lyhyt: 'Tuuli ja vesi ovat veistäneet Keski-Anatolian tuffiin piikkejä eli keijupiippuja.',
           selite: 'Tuuli ja vesi ovat veistäneet Keski-Anatolian tuffista '
             + 'piikkejä, joita turkiksi sanotaan peribacalariksi eli '
             + 'keijupiipuiksi.',
@@ -20052,6 +20365,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Uçhisar Castle 02.jpg',
+          lyhyt: 'Uçhisarin 60-metrisen kalliolinnakkeen huoneisiin arvellaan mahtuneen tuhatkunta ihmistä.',
           selite: 'Uçhisarin kuusikymmenmetrisen kalliolinnakkeen sisään '
             + 'louhittuihin huoneisiin arvellaan mahtuneen tuhatkunta '
             + 'ihmistä.',
@@ -20082,6 +20396,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           ampari: 'herokoe/hero-goreme-aamu.jpg',
+          lyhyt: 'Göremen ulkoilmamuseon kalliokirkot ovat 900–1200-luvuilta, maailmanperinnössä vuodesta 1985.',
           selite: 'Göremen ulkoilmamuseo kokoaa yhteen laaksoon kallioon '
             + 'hakatut luostarikirkot, kappelit ja ruokasalit; freskot ovat '
             + 'pääosin 900–1200-luvuilta, ja kohde on ollut Unescon '
@@ -20090,6 +20405,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-ortahisar-aamu.jpg',
+          lyhyt: 'Ortahisarin kylän keskellä kohoaa 86-metrinen tuffipaasi, jonka huoneet palvelivat asumuksina.',
           selite: 'Ortahisarin kylän keskellä kohoaa noin 86 metriä korkea '
             + 'tuffipaasi, jonka sisään louhitut huoneet ja käytävät ovat '
             + 'palvelleet sekä asumuksina että viileinä varastoina.',
@@ -20097,6 +20413,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-selime-aamu.jpg',
+          lyhyt: 'Selimen luostari on Kappadokian suurin kalliokirkkokokonaisuus, louhittu 700–900-luvuilla.',
           selite: 'Selimen luostari Ihlaran laakson suulla on Kappadokian '
             + 'suurin kalliokirkkokokonaisuus: 700–900-luvuilla kallioon '
             + 'louhittiin kirkkosali, keittiö, tallit ja asuintiloja.',
@@ -20132,6 +20449,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kansainvälinen geologian liitto valitsi Kappadokian '
             + 'mioseenikautisen ignimbriittisarjan lokakuussa 2022 sadan '
             + 'geologisen perintökohteen joukkoon.',
+          lyhyt: 'Sammunut Erciyes on alueen korkein kohta, sen purkaukset veistivät koko maiseman.',
           selite: 'Sammunut Erciyes on alueen korkein kohta, ja sen '
             + 'purkaukset kerrostivat tuhkan, josta koko maisema on '
             + 'veistetty.',
@@ -20150,6 +20468,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'värejä. Laakson yllä kohoaa Uçhisarin kuusikymmenmetrinen '
             + 'kalliolinnake, jonka sisään louhittuihin huoneisiin arvellaan '
             + 'mahtuneen tuhatkunta ihmistä.',
+          lyhyt: 'Kyyhkysten lantaa käytettiin lannoitteena 1970-luvulle asti ja luolakirkkojen maaleissa.',
           selite: 'Kyyhkysten lantaa käytettiin peltojen lannoitteena '
             + '1970-luvulle asti, ja samaa ainetta sekoitettiin '
             + 'luolakirkkojen maaleihin.',
@@ -20167,6 +20486,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Venessa ja Kappadokian kuningaskunnan kolmanneksi tärkein '
             + 'kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, '
             + 'joita savipajat käyttävät yhä varastoinaan.',
+          lyhyt: 'Kızılırmakin punainen siltti on Avanosin savenvalajien raaka-aine, ehkä heettiläisajoilta asti.',
           selite: 'Kızılırmakin punainen siltti on Avanosin savenvalajien '
             + 'raaka-aine, ja perinteen arvellaan ulottuvan '
             + 'heettiläisaikaan asti.',
@@ -20184,6 +20504,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kapinallisten käsiin Istanbulissa vuonna 1730, mutta kaupunki '
             + 'oli silloin jo vakiintunut. Vuonna 2015 keskustan alta '
             + 'paljastui purkutöissä tuntematon maanalainen kaupunki.',
+          lyhyt: 'Nevşehir oli 1700-luvulla pieni kylä, kunnes suurvisiiri rakennutti sinne moskeijoita ja kouluja.',
           selite: 'Nevşehir oli 1700-luvun alussa kahdeksantoista talon '
             + 'kylä, kunnes suurvisiiri Nevşehirli Damad İbrahim Paşa '
             + 'rakennutti kotiseudulleen moskeijoita, kouluja ja '
@@ -20230,6 +20551,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'maakunnan hallintokaupunki.',
               kuva: {
                 tiedosto: 'The Roads to Cappadocia.jpg',
+                lyhyt: 'Kappadokia on historiallinen alue kuuden maakunnan päällä, Nevşehiristä Ankaraan on 290 km.',
                 selite: 'Kappadokia on historiallinen alue kuuden maakunnan '
                   + 'päällä, ja Nevşehiristä on Ankaraan 290 kilometriä.',
                 lahde: 'Emrahuygun, Wikimedia Commons (CC BY-SA 4.0)',
@@ -20271,6 +20593,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'koko alueella: mitä tarvitaan, se kaivetaan.',
               kuva: {
                 tiedosto: 'The Rock formations.jpg',
+                lyhyt: 'Tuffi kovettuu ilmassa, joten Kappadokiassa on louhittu eikä rakennettu: talot, tallit ja kirkot.',
                 selite: 'Tuffi kovettuu ilmassa, joten Kappadokiassa ei ole '
                   + 'rakennettu vaan louhittu: talot, tallit, kirkot ja '
                   + 'varastot on kaiverrettu kallioon.',
@@ -20358,6 +20681,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerroksen kirkkoon. Ilmanvaihto oli suunniteltu: pystykuiluja '
             + 'on runsaasti, ja pääkuilun aukot on porrastettu niin, etteivät '
             + 'kahden kerroksen aukot ole koskaan päällekkäin.',
+          lyhyt: 'Derinkuyun maanalainen kaupunki ulottuu noin 85 metriin ja viiteen kerrokseen.',
           selite: 'Derinkuyun maanalainen kaupunki ulottuu noin '
             + 'kahdeksaankymmeneenviiteen metriin ja viiteen kerrokseen.',
           lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
@@ -20375,6 +20699,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaivoivat fryygialaiset 700–600-luvulla eKr., kun taas '
             + 'artikkelin toinen lähde katsoo kristittyjen aloittaneen työn '
             + 'vasta 700-luvulla jKr.',
+          lyhyt: 'Kaymaklın käytävien pyöreät kivilaatat aukesivat vain sisäpuolelta kerroksittain.',
           selite: 'Kaymaklın käytävien pyöreät kivilaatat aukesivat vain '
             + 'sisäpuolelta, joten jokainen kerros voitiin sulkea '
             + 'erikseen.',
@@ -20392,6 +20717,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Unescon maailmanperintöluetteloon vuonna 1985. Ensimmäinen '
             + 'kirjallinen maininta paikasta on Khalkedonin kirkolliskokouksen '
             + 'pöytäkirjoissa vuodelta 451.',
+          lyhyt: 'Osa Göremen kalliokirkoista on paljastunut, kun ulompi kallio on rapautunut pois holvien näkyviin.',
           selite: 'Osa Göremen kalliokirkoista on paljastunut, kun ulompi '
             + 'kallio on rapautunut pois, ja silloin holvit ja apsidit '
             + 'erottuvat kuin poikkileikkauksena.',
@@ -20409,6 +20735,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'neliömetriä, mikä tekee siitä Turkin suurimman keskiaikaisen '
             + 'karavaaniseraalin: kauppiaat, eläimet ja tavarat yöpyivät '
             + 'saman portin takana.',
+          lyhyt: 'Sultanhanın muurien sisään jää 4900 neliömetriä, Turkin suurin keskiaikainen karavaaniseraali.',
           selite: 'Sultanhanın muurien sisään jää 4 900 neliömetriä, mikä '
             + 'tekee siitä Turkin suurimman keskiaikaisen '
             + 'karavaaniseraalin.',
@@ -20440,6 +20767,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Persepolis – Gate of All Nations 01.jpg',
+          lyhyt: 'Kaikkien kansojen portin rakennutti Xerxes I, oviaukkoja vartioivat siivekkäät lamassut.',
           selite: 'Kaikkien kansojen portin rakennutti Xerxes I, ja sen '
             + 'oviaukkoja vartioivat lamassut eli siivekkäät '
             + 'härkä-ihmishahmot.',
@@ -20461,6 +20789,7 @@ export const KULTTUURI_KATEGORIAT = {
       avauskuvat: [
         {
           tiedosto: '2009-11-24 Persepolis 03.jpg',
+          lyhyt: 'Persepoliksen terassi on 125 000 neliömetriä, osa louhittu suoraan Rahmat-vuoren kylkeen.',
           selite: 'Persepoliksen terassi on 125 000 neliömetriä, ja osa '
             + 'siitä on louhittu suoraan Rahmat-vuoren kylkeen.',
           lahde: 'Hansueli Krapf, Wikimedia Commons (CC BY-SA 3.0)',
@@ -20474,6 +20803,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Persépolis, Irán, 2016-09-24, DD 53.jpg',
+          lyhyt: 'Pylvässalin portaiden kylkeen on veistetty kulkue, jossa kansat tuovat lahjoja kuninkaalle.',
           selite: 'Pylvässalin portaiden kylkeen on veistetty kulkue, jossa '
             + 'valtakunnan eri kansat tuovat lahjoja kuninkaalle.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
@@ -20483,6 +20813,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Groep mannen poserend bij de Poort van alle Naties (Poort van Xerxes) in Persepolis Persepolis (titel op object), RP-F-F01048-AI.jpg',
           vuosi: 'n. 1880-1895',
+          lyhyt: 'Persepolis on ollut matkailukohde 1600-luvulta, portin kivissä on yli 200 kaiverrettua nimeä.',
           selite: 'Persepolis on ollut matkailukohde ainakin 1600-luvulta, '
             + 'ja portin kivipinnoissa on yli kaksisataa kävijän '
             + 'kaivertamaa nimeä.',
@@ -20491,6 +20822,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Persepolis - Apadana 01.jpg',
           vuosi: '2016',
+          lyhyt: 'Apadanan setripuinen katto paloi vuonna 330 eKr., pylväät kannattelevat siitä lähtien vain taivasta.',
           selite: 'Apadanan setripuinen katto paloi vuonna 330 eKr., joten '
             + 'pylväät ovat siitä lähtien kannatelleet vain taivasta.',
           lahde: 'Bernard Gagnon, Commons (CC BY-SA 4.0)',
@@ -20508,6 +20840,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valmiiksi, ja Artakserkses III jätti oman porttinsa kesken. '
             + 'Terassi on 125 000 neliömetriä: osa siitä on louhittu suoraan '
             + 'Rahmat-vuoren kylkeen, osa muurattu tasangolle päin.',
+          lyhyt: 'Persepolis on neljän hallitsijan työ, vanhimmat jäänteet ajoittuvat vuoteen 515 eKr.',
           selite: 'Persepolis ei ole yhden hallitsijan työ vaan neljän, ja '
             + 'vanhimmat jäänteet ajoittuvat vuoteen 515 eKr.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
@@ -20524,6 +20857,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vartioivat lamassut, siivekkäät härkä-ihmishahmot. Portin '
             + 'oma piirtokirjoitus antaa sille nimen kaikkien kansojen '
             + 'portti, ja teksti on kaiverrettu kolmella kielellä.',
+          lyhyt: 'Portin kivipylväät kohoavat noin 16,5 metriin, piirtokirjoitus on kaiverrettu kolmella kielellä.',
           selite: 'Portin kivipylväät kohoavat noin kuudentoista ja puolen '
             + 'metrin korkeuteen, ja sen piirtokirjoitus on kaiverrettu '
             + 'kolmella kielellä.',
@@ -20541,6 +20875,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kulkueen matkan samanlaisena. Kivi on paikoin kulunut '
             + 'sileäksi kosketuksesta, mutta partojen kiharat ja kankaan '
             + 'poimut erottuvat yhä terävinä.',
+          lyhyt: 'Kulkueen ryhmät on erotettu toisistaan samanlaisena toistuvalla tyylitellyllä sypressillä.',
           selite: 'Kulkueen ryhmät on erotettu toisistaan tyylitellyllä '
             + 'sypressillä, joka toistuu samanlaisena koko matkan.',
           lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons '
@@ -20558,6 +20893,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pylväänjalusta British Museumissa Lontoossa — sali on siis '
             + 'kaivausten ja keräilyn myötä jakautunut kolmelle '
             + 'mantereelle.',
+          lyhyt: 'Valtaistuinsalin kivihärän pää on nykyään Chicagossa, yksi pylväänjalusta British Museumissa.',
           selite: 'Valtaistuinsalin kivihärän pää on nykyään Chicagossa ja '
             + 'yksi salin pylväänjalusta British Museumissa.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
@@ -20566,6 +20902,8 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Tribute Bearers on the Apadana Staircase 22 (Best Viewed Size "Large") (4688831503).jpg',
+          lyhyt: 'Muuria kiertää 34 tornia, ja vanhakaupunki hyväksyttiin maailmanperintöluetteloon 1981.',
+          lyhyt: 'Kulkueen hahmot kantavat maljoja, kankaita ja eläimiä, kukin omassa asussaan.',
           selite: 'Kulkueen hahmot kantavat maljoja, kankaita, astioita ja '
             + 'eläimiä, kukin omassa asussaan ja omine päähineineen.',
           lahde: 'A.Davey from Portland, Oregon, EE UU, Wikimedia Commons '
@@ -20602,6 +20940,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tavallisesti samalla matkalla.',
               kuva: {
                 tiedosto: 'Naqsh-e Rustam 02.jpg',
+                lyhyt: 'Naqsh-e Rustamin kallioon on louhittu neljä kuninkaanhautaa lähellä Persepolista.',
                 selite: 'Naqsh-e Rustamin kallioseinään on louhittu neljä '
                   + 'kuninkaanhautaa noin kolmentoista kilometrin päähän '
                   + 'Persepoliksesta.',
@@ -20644,6 +20983,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'intialaisia, ja mukana on yksi unkarilainen nimi.',
               kuva: {
                 tiedosto: 'Troisième Vue de Persepolis - Quatrième Vue de Persepolis - Bruyn Cornelis De - 1725.jpg',
+                lyhyt: 'Persepoliksen kivipintoihin on kirjattu 222 ulkomaisen kävijän nimeä 1600-luvulta lähtien.',
                 selite: 'Persepoliksen kivipintoihin on kirjattu 222 '
                   + 'ulkomaisen kävijän nimeä, ja ensimmäiset kaiverrettiin '
                   + '1600-luvulla.',
@@ -20666,6 +21006,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kulkee nuolenpääkirjoitusta.',
               kuva: {
                 tiedosto: 'Persepolis stairs of the Apadana relief.jpg',
+                lyhyt: 'Reliefien kivi on tummunut kosketuksesta, mutta hiusten kiharat ovat yhä teräviä.',
                 selite: 'Reliefien kivi on tummunut ja paikoin kiillottunut '
                   + 'kosketuksesta, mutta hiusten kiharat ja kankaan '
                   + 'laskokset ovat yhä teräviä.',
@@ -20730,6 +21071,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'karjaa. Tauluihin on kirjattu yhtä paljon naisia kuin '
             + 'miehiä, ja osa naisista sai suuremman annoksen kuin kukaan '
             + 'saman työryhmän mies.',
+          lyhyt: 'Persepoliksesta löytyi 1933 kymmeniätuhansia savitauluja hallinnon kirjanpidosta.',
           selite: 'Persepoliksesta löytyi vuonna 1933 kymmeniätuhansia '
             + 'savitauluja, jotka ovat hallinnon kirjanpitoa vuosilta '
             + '509–493 eKr.',
@@ -20747,6 +21089,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seisoo keihäs kädessä samassa asennossa kuin edellinen — '
             + 'ja kirjoitus alkaa suoraan rivin vierestä, ilman kehystä '
             + 'tai erillistä taulua.',
+          lyhyt: 'Persepoliksen piirtokirjoitukset kaiverrettiin kolmella kielellä, mikä avasi kielten lukemisen.',
           selite: 'Persepoliksen piirtokirjoitukset kaiverrettiin '
             + 'tavallisesti kolmella kielellä samaan seinään, ja juuri se '
             + 'teki niistä avaimen kielten lukemiseen.',
@@ -20782,6 +21125,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjoittajien Persepolis. Italialainen Pietro Della Valle '
             + 'laski 1621, että alkuperäisestä 72 pylväästä oli pystyssä '
             + 'enää 25.',
+          lyhyt: 'Pietro Della Valle laski 1621, että alkuperäisestä 72 pylväästä oli pystyssä enää 25.',
           selite: 'Italialainen Pietro Della Valle laski vuonna 1621, että '
             + 'alkuperäisestä 72 pylväästä oli pystyssä enää 25.',
           lahde: 'Cornelis de Bruijn, Wikimedia Commons (public domain)',
@@ -20801,6 +21145,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Jerusalem Dome of the rock BW 2010-09-21 07-01-06.JPG',
+          lyhyt: 'Kalliomoskeija on islamilaisen rakennustaiteen vanhin säilynyt työ Peruskallion päällä.',
           selite: 'Kalliomoskeija on kahdeksankulmainen pyhäkkö Peruskallion '
             + 'päällä, ja se on islamilaisen rakennustaiteen vanhin '
             + 'säilynyt työ.',
@@ -20814,6 +21159,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Western Wall Plaza - Jerusalem (1291829327).jpg',
+          lyhyt: 'Länsimuuri on 488-metrinen temppelivuoren tukimuuri, alimmat kivet toisen temppelin ajalta.',
           selite: 'Länsimuuri on temppelivuoren läntinen tukimuuri, jota on '
             + 'kaikkiaan 488 metriä, ja sen alimmat kivikerrokset ovat '
             + 'toisen temppelin ajalta.',
@@ -20828,6 +21174,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           ampari: 'herokoe/hero-jerusalem-aamu.png',
+          lyhyt: 'Kalliomoskeija valmistui 691, kultakupoli sai nykyisen pinnoitteensa 1993.',
           selite: 'Kalliomoskeija valmistui 691 ja on islamin '
             + 'vanhimpia rakennuksia; kultakupoli sai nykyisen '
             + 'pinnoitteensa 1993.',
@@ -20835,6 +21182,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-jerusalem-keskipaiva.png',
+          lyhyt: 'Daavidin tornin sitadelli on vartioinut Jaffa-porttia yli 2000 vuotta.',
           selite: 'Daavidin tornin sitadelli on vartioinut Jaffa-portin '
             + 'sisäänkäyntiä yli kaksituhatta vuotta, ja nimensä se '
             + 'sai Bysantin munkeilta.',
@@ -20842,6 +21190,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-jerusalem-ilta.png',
+          lyhyt: 'Pyhän haudan kirkko rakennettiin 300-luvulla, kuusi kirkkokuntaa jakaa sen hallinnan.',
           selite: 'Pyhän haudan kirkko rakennettiin 300-luvulla '
             + 'paikalle, jota perimätieto pitää Jeesuksen hautana, ja '
             + 'kuusi kirkkokuntaa jakaa sen hallinnan tarkoin '
@@ -20850,12 +21199,14 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'JERUSALEM THE OLD CITY & THE TEMPLE MOUNT.JPG',
+          lyhyt: 'Muurien sisäinen vanhakaupunki on vain 0,9 neliökilometriä, kävelee laidasta laitaan vartissa.',
           selite: 'Muurien sisäinen vanhakaupunki on vain 0,9 '
             + 'neliökilometriä, eli sen kävelee laidasta laitaan vartissa.',
           lahde: 'AVRAHAM GRAICER, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Jerusalem-2013(2)-View of the Dome of the Rock & Temple Mount 02.jpg',
+          lyhyt: 'Öljymäki on vanhankaupungin itäpuolen noin 3,5 kilometrin kolmihuippuinen harjanne.',
           selite: 'Öljymäki on vanhankaupungin itäpuolella kohoava noin '
             + 'kolmen ja puolen kilometrin pituinen kolmihuippuinen '
             + 'harjanne.',
@@ -20863,6 +21214,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'East Jerusalem, Old City, East.jpg',
+          lyhyt: 'Jerusalem on vuoristokaupunki kolmen laakson välissä lähes 800 metrin korkeudessa ilman omaa jokea.',
           selite: 'Jerusalem on vuoristokaupunki kolmen laakson välissä '
             + 'lähes kahdeksansadan metrin korkeudessa, eikä sillä ole omaa '
             + 'jokea.',
@@ -20880,6 +21232,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Jerusalem, 21 December 2025 192.jpg',
           vuosi: '2025',
+          lyhyt: 'Jerusalemin julkisivut on määrätty verhottaviksi paikallisella vaalealla kivellä.',
           selite: 'Jerusalemin julkisivut on määrätty verhottaviksi '
             + 'paikallisella vaalealla kivellä, joten koko kaupunki on '
             + 'samanvärinen.',
@@ -20916,6 +21269,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja hautoja arvioidaan olevan noin satviisikymmentätuhatta. '
             + 'Näköala teki mäestä myös tähystyspaikan: toisen temppelin '
             + 'aikana täältä tarkkailtiin, milloin uusi kuu nousi.',
+          lyhyt: 'Öljymäen länsirinne on ollut hautausmaana yli 3000 vuotta, hautoja arviolta 150 000.',
           selite: 'Öljymäen länsirinne on ollut hautausmaana yli '
             + 'kolmetuhatta vuotta, ja hautoja arvioidaan olevan noin '
             + 'satviisikymmentätuhatta.',
@@ -20933,6 +21287,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin usein omalta tontilta louhitusta kivestä, ja '
             + 'kuoppa, joka louhinnasta jäi, muurattiin talon alle '
             + 'sadevesisäiliöksi.',
+          lyhyt: 'Jerusalemin talot louhittiin omalta tontilta, louhoskuoppa muurattiin sadevesisäiliöksi.',
           selite: 'Jerusalemin talot rakennettiin usein omalta tontilta '
             + 'louhitusta kivestä, ja louhinnasta jäänyt kuoppa muurattiin '
             + 'talon alle sadevesisäiliöksi.',
@@ -20950,6 +21305,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuonna 1857 valmistunut tuulimylly, jonka piti antaa '
             + 'asukkaille leipä — mutta tuulta riittää seudulla enintään '
             + 'parinakymmenenä päivänä vuodessa.',
+          lyhyt: 'Montefioren tuulimylly valmistui 1857, mutta tuulta riittää harvoin.',
           selite: 'Montefioren tuulimylly valmistui vuonna 1857 antamaan '
             + 'uudelle korttelille leivän, mutta tuulta seudulla riittää '
             + 'enintään parinakymmenenä päivänä vuodessa.',
@@ -20993,6 +21349,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'muurien ulkopuolella.',
               kuva: {
                 tiedosto: 'Raffaele Mainella. Äusere mauern von Jerusalem. 1895. P.164.jpg',
+                lyhyt: 'Jaffan tie päällystettiin 1861, minkä ansiosta muurien ulkopuolella oli järkevää asua.',
                 selite: 'Jaffan tie päällystettiin ajokelpoiseksi vuonna '
                   + '1861, ja vasta sen ansiosta oli järkevää asua muurien '
                   + 'ulkopuolella.',
@@ -21013,6 +21370,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'nykyään kadun tasolla nähtävissä.',
               kuva: {
                 tiedosto: '1650 Fuller Map of Jerusalem ( Israel, Palestine, Holy Land) - Geographicus - jerusalem-fuller-1650.jpg',
+                lyhyt: 'Vuoden 1650 kartta kuvaa Jerusalemin eurooppalaisten kuvitelmana Salomon ajasta.',
                 selite: 'Vuoden 1650 kartta kuvaa Jerusalemin sellaisena '
                   + 'kuin eurooppalainen kuvitteli sen Salomon aikaan, '
                   + 'suorana ruutukaavana ja temppeli keskellä.',
@@ -21054,6 +21412,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'bysanttilaiselle ajalle asti.',
               kuva: {
                 tiedosto: 'Jerusalem Kidron Valley Tombs.JPG',
+                lyhyt: 'Keisari Hadrianus perusti Jerusalemin uudelleen 129–130 nimellä Aelia Capitolina.',
                 selite: 'Keisari Hadrianus perusti Jerusalemin uudelleen '
                   + 'roomalaisena siirtokuntana vuosina 129–130 ja antoi '
                   + 'sille nimen Aelia Capitolina.',
@@ -21136,6 +21495,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sen verran että vesi virtaa. Tunnelin seinästä löytyi '
             + '1800-luvun lopulla Siiloan kirjoitus, joka kertoo '
             + 'louhinnasta ja kaivajien kohtaamisesta.',
+          lyhyt: 'Hiskian tunneli louhittiin 533 metrin matkalle kahdesta päästä, ryhmät kohtasivat keskellä.',
           selite: 'Hiskian tunneli louhittiin kallioon 533 metrin matkalle '
             + 'kahdesta päästä yhtä aikaa, ja ryhmät kohtasivat keskellä.',
           lahde: 'Matson Collection, Wikimedia Commons (public domain)',
@@ -21152,6 +21512,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sivulla ja eri syvyyksillä, joten veteen pääsi omalle '
             + 'tasolleen riippumatta siitä, kuinka korkealla vedenpinta '
             + 'sillä hetkellä oli.',
+          lyhyt: 'Siiloan allas on puolisuunnikkaan muotoinen, kaivaukset paljastivat leveydeksi noin 69 metriä.',
           selite: 'Siiloan allas on loivan puolisuunnikkaan muotoinen, ja '
             + 'kaivaukset ovat paljastaneet sen leveydeksi noin '
             + 'kuusikymmentäyhdeksän metriä.',
@@ -21170,6 +21531,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'etelämpää Arrubin altailta. Altaista alin on paljon '
             + 'nuorempi kuin kaksi muuta: se rakennettiin vasta vuonna '
             + '1483.',
+          lyhyt: 'Salomon altailta vesi johdettiin Jerusalemiin korkeuskäyriä myötäillen ilman pumppuja.',
           selite: 'Salomon altailta vesi johdettiin Jerusalemiin maaston '
             + 'korkeuskäyriä myötäillen niin loivasti, ettei pumppuja '
             + 'tarvittu.',
@@ -21192,6 +21554,7 @@ export const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Katharinenkloster Sinai BW 2.jpg',
+          lyhyt: 'Pyhän Katariinan luostari rakennettiin 548–565, maailman vanhin yhtäjaksoisesti asuttu luostari.',
           selite: 'Pyhän Katariinan luostari rakennettiin vuosina 548–565, '
             + 'ja se on maailman vanhin yhtäjaksoisesti asuttu kristillinen '
             + 'luostari.',
@@ -21205,6 +21568,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Saint Catherine Monastery , Saint Catherine , south Sinai, Egypt.jpg',
+          lyhyt: 'Luostari on Siinain tunnetuin kohde, kylä sijaitsee lähes puolentoista kilometrin korkeudessa.',
           selite: 'Luostari on Siinain tunnetuin yksittäinen kohde, ja Pyhän '
             + 'Katariinan kylä on lähes puolentoista kilometrin '
             + 'korkeudessa.',
@@ -21220,6 +21584,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Katharinenkloster Sinai BW 4.jpg',
+          lyhyt: 'Luostarin kirjasto on maailman vanhin yhä toimiva, kokoelma toiseksi suurin koodekseissa.',
           selite: 'Luostarin kirjasto on maailman vanhin yhä toimiva, ja sen '
             + 'kokoelma on varhaisten koodeksien määrässä maailman toiseksi '
             + 'suurin.',
@@ -21227,6 +21592,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Sinai Coloured Canyon - panoramio.jpg',
+          lyhyt: 'Siinain kanjonit ovat vesiuomia, jotka täyttyvät nopeasti sadekuuron aikana.',
           selite: 'Siinain kanjonit ovat vesiuomia, jotka ovat kuivia lähes '
             + 'koko vuoden mutta täyttyvät sadekuuron aikana nopeasti.',
           lahde: 'Tanya Dedyukhina, Wikimedia Commons (CC BY 3.0)',
@@ -21293,6 +21659,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'eikä sanoja — juuri se on aakkoskirjoituksen periaate. '
             + 'Ajoituksesta kiistellään: varhainen arvio on noin 1850 eKr. '
             + 'ja myöhäinen noin 1550 eKr.',
+          lyhyt: 'Serabit el-Khadimin turkoosikaivosten läheltä löytyi varhaisimpia aakkoskirjoituksen jälkiä.',
           selite: 'Serabit el-Khadimin turkoosikaivosten läheltä löytyi '
             + 'talvella 1904–1905 varhaisimpia aakkoskirjoituksen jälkiä.',
           lahde: 'NASA Earth Observatory, Wikimedia Commons (public domain)',
@@ -21309,6 +21676,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja se on 193 kilometriä pitkä. Sen jälkeen Siinai on ollut '
             + 'käytännössä oma saarensa: kanava vetää rajan Afrikan ja '
             + 'Aasian väliin, ja Siinai jää Aasian puolelle.',
+          lyhyt: 'Siinainvuoren huipun kreikkalais-ortodoksinen kappeli rakennettiin 1934 vanhan kirkon raunioille.',
           selite: 'Siinainvuoren huipun kreikkalais-ortodoksinen kappeli '
             + 'rakennettiin vuonna 1934 1500-luvun kirkon raunioille.',
           lahde: 'Mcstafford, Wikimedia Commons (public domain)',
@@ -21317,6 +21685,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Formación de coral, parque nacional Ras Muhammad, Egipto, 2022-03-26, DD 02.jpg',
+          lyhyt: 'Punaisenmeren riutat ovat lajirikkaita lämpimän, kirkkaan ja jokisameudettoman veden ansiosta.',
           selite: 'Punaisenmeren riutat ovat poikkeuksellisen lajirikkaita, '
             + 'koska vesi on lämmintä ja kirkasta eivätkä joet tuo siihen '
             + 'sameutta.',
@@ -21374,6 +21743,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'aakkoskirjoituksen jäljet.',
               kuva: {
                 tiedosto: 'Serabit el-Khadim, Egypt (ASTER).jpg',
+                lyhyt: 'Serabit el-Khadimin ylängöllä on Hathorin temppeli, jumalatarta palvottiin turkoosin valtiattarena.',
                 selite: 'Serabit el-Khadimin ylängöllä on Hathorin temppeli, '
                   + 'ja jumalatarta palvottiin siellä turkoosin '
                   + 'valtiattarena.',
@@ -21395,6 +21765,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kuin itse Siinainvuori.',
               kuva: {
                 tiedosto: 'WEBSTER(1830) 2.210 WADY FARAN.jpg',
+                lyhyt: 'Wadi Feiran on Siinain suurin keidas ja pitkäaikainen matkalaisten pysähdyspaikka.',
                 selite: 'Wadi Feiran on Siinain suurin keidas ja '
                   + 'matkalaisten pysähdyspaikka niin kauan kuin reitti on '
                   + 'ollut olemassa.',
@@ -21416,6 +21787,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joka jää hiekkaan.',
               kuva: {
                 tiedosto: 'Sinai Coloured Canyon - panoramio (7).jpg',
+                lyhyt: 'Kanjonin seinämien värit vaihtelevat keltaisesta punaiseen ja violettiin mineraalien mukaan.',
                 selite: 'Kanjonin seinämien värit vaihtelevat keltaisesta '
                   + 'punaiseen ja violettiin sen mukaan, mitä mineraaleja '
                   + 'kussakin kerroksessa on.',
@@ -21476,6 +21848,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Katariinanvuoren oma tietolaatikko 2 653 metriä. Ero on '
             + 'pieni mutta todellinen, ja se on hyvä muistutus siitä, '
             + 'ettei korkeuslukema ole aina yksiselitteinen.',
+          lyhyt: 'Siinainvuori on 2285 metriä korkea ja koostuu vanhempien kivilajien läpi työntyneestä graniitista.',
           selite: 'Siinainvuori on 2 285 metriä korkea ja koostuu '
             + 'emäksisestä graniitista, joka on työntynyt vanhempien '
             + 'kivilajien läpi.',
@@ -21509,6 +21882,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vaatii myös suojaa, ja korallien haarojen väliin mahtuu '
             + 'piiloon — siksi kalat pysyttelevät lähellä pohjaa eivätkä '
             + 'avoveden puolella.',
+          lyhyt: 'Keisarikalan voimakkaat kuviot toimivat kirkkaassa vedessä tunnistuksena ja varoituksena.',
           selite: 'Keisarikalan voimakkaat kuviot toimivat kirkkaassa '
             + 'vedessä sekä tunnistusmerkkinä lajitovereille että '
             + 'varoituksena.',
@@ -21526,6 +21900,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seinistä on irronnut. Kuivuus on kuitenkin vain tavallinen '
             + 'tila eikä pysyvä: kuuron aikana kapea rotko täyttyy '
             + 'nopeasti, ja juuri se tekee niistä yhä syvempiä.',
+          lyhyt: 'Kanjonin pohjan hiekka on seinistä irronnutta ainesta harvinaisten rajujen sadekuurojen ajalta.',
           selite: 'Kanjonin pohjan hiekka on sitä, mitä seinistä on '
             + 'irronnut harvinaisten mutta rajujen sadekuurojen aikana.',
           lahde: 'Tanya Dedyukhina, Wikimedia Commons (CC BY 3.0)',
@@ -21665,6 +22040,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Sanaw well.jpg',
           vuosi: '1946',
+          lyhyt: 'Wilfred Thesiger ylitti hiekkameren kameleilla kahdesti 1946–1948 heinäsirkkojen torjuntayksikölle.',
           selite: 'Wilfred Thesiger ylitti hiekkameren kameleilla kahdesti '
             + 'vuosina 1946–1948 heinäsirkkojen torjuntayksikön lukuun.',
           lahde: 'Wilfred Thesiger / Pitt Rivers Museum, Commons (CC BY-SA 4.0)',
@@ -21730,6 +22106,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lähteen ehdyttyä. Samastus Ubariin ei silti ole tutkijoiden '
             + 'hyväksymä, ja sen esittänyt Nicholas Clapp kumosi sen '
             + 'itsekin myöhemmin.',
+          lyhyt: 'Shisrin kaivon kauppa-asema rakennettiin 300-luvulla ja hylättiin lähteen ehdyttyä.',
           selite: 'Shisrin kaivolla oli sisämaan kauppa-asema, joka '
             + 'rakennettiin 300-luvulla ja hylättiin 1400–1500-luvuilla '
             + 'lähteen ehdyttyä.',
@@ -21792,6 +22169,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kiitorata, jolta lennetään vain yhtiön omia vuoroja.',
               kuva: {
                 tiedosto: 'Road to Ubar.jpg',
+                lyhyt: 'Ensimmäinen aavikon poikki kulkeva maantie valmistui 2021 Omanin Ibristä Saudi-Arabiaan.',
                 selite: 'Ensimmäinen aavikon poikki kulkeva maantie '
                   + 'valmistui syyskuussa 2021 Omanin Ibristä '
                   + 'Saudi-Arabian Al-Ahsaan.',
@@ -21850,6 +22228,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + '1 494 metrin syvyydestä.',
               kuva: {
                 tiedosto: 'Oman, Wadi Dawkah, Land of Frankincense.jpg',
+                lyhyt: 'Suitsuke kuljetettiin Dhofarista karavaaneilla Petraan ja Gazaan, kultaa kalliimpana.',
                 selite: 'Suitsuke kerättiin Dhofarissa ja kuljetettiin '
                   + 'karavaaneilla Petraan ja Gazaan, ja Rooman maailmassa '
                   + 'se oli kultaa kalliimpaa.',
@@ -21870,6 +22249,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'hiekassa raskas myös tammikuussa.',
               kuva: {
                 tiedosto: 'Saudi Arabia Empty Quarter Nov. 2021 (101).jpg',
+                lyhyt: 'Shaybahin öljykentällä talviyöt painuvat noin kymmeneen asteeseen ja kesäpäivät viiteenkymmeneen.',
                 selite: 'Shaybahin öljykentällä talviyöt painuvat noin '
                   + 'kymmeneen asteeseen ja kesäpäivät noin '
                   + 'viiteenkymmeneen.',
@@ -21917,6 +22297,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'virtahevon, vesipuhvelin ja pitkäsarvisen naudan luita, '
             + 'etanoita ja makean veden simpukoita — ja piikivityökaluja, '
             + 'mutta ei yhtään ihmisen luuta.',
+          lyhyt: 'Aavikon vaaleat laikut ovat matalien järvien pohjia kahdelta kaudelta tuhansien vuosien takaa.',
           selite: 'Aavikon kovettuneet vaaleat laikut ovat matalien järvien '
             + 'pohjia kahdelta kaudelta, 6 000–5 000 ja 3 000–2 000 vuotta '
             + 'sitten.',
