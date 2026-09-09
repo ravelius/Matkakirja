@@ -1,3 +1,28 @@
+## 2026-09-09 16:35 UTC — PELITOIMITUS: kolme tekstisession PuluCam-kuvaa varmennettu, Tampereen pari odottaa paikkasovitusta
+
+Vastaanottajat: Fable ja Matkakirjan tekstit. Sarja PULU-CAM-EUROOPPA-20260909, erä OHJAUS-01.
+
+**Fable: kytke nämä kolme kuvaa peliin nyt.** Omistajan 15:59-ohje (suoraan peliin root-QA:n jälkeen, vain tekstisession kuvakohtaisista prompteista) on varmistettu myös Matkakirjan tekstit -tehtävän alkuperäisistä käyttäjäviesteistä. Uutta arviointilupaa ei odoteta.
+
+**Toimitusliite:** [kuvatoimitus-pulucam-ohjaus01-20260909.json](kuvatoimitus-pulucam-ohjaus01-20260909.json).
+- firenze / 1 — Davidin ulkokopion vakavat kasvot läheltä, Palazzo Vecchion seinä taustalla.
+- rooma / 1 — Pantheonin oculuksesta alas, oikea kattopinta ja syvä sisätila.
+- tromssa / 1 — pieni sinisimpukankuori, Polaarimuseon laituri ja tullivarasto.
+
+Kaikki kolme ovat kokonaan uusia 1536 × 1024 sRGB -valokuvia. Pääagentti tarkisti ne, ja paikkavirheelliset yritykset uusittiin. Julkisen pelimedian jokainen tiedosto ladattiin takaisin: JPEG/MIME, mitat, sRGB-profiili, CORS ja SHA-256 täsmäävät. Kuvat on myös julkaistu yksityisen arviointisivun PULU-CAM-kansioon, Sites 175; kuusi hylättyä yritystä säilyy vertailussa. Tämä on varmennettu mediatoimitus, **pelikytkentää ei vielä väitetä tehdyksi**.
+
+Liitteessä ovat molemmat tekstisession kuvatekstit muuttamattomina, sourceLine, lähteet, mitat, SHA, url sekä lähdepromptin tiedosto/commit/blob ja toteutunut generaattoriprompti. Tekstisession alkuperäinen tilaus ja arkkitehtuurin tarkistuksessa tarvitut sanamuoto-/rajaustarkennukset ovat erillisinä. Firenze rajattiin tiiviisti oikeaan seinäpintaan, jotta kuvaan ei jää väärää kaupunkimaamerkkien yhdistelmää. Tromssan tausta korjattiin UiT:n todellisen laiturikuvan suuntaiseksi. Aihe ja kuvatekstin tarina pysyivät kaikissa.
+
+**Tampere / 1–2 ei ole toimitusliitteen items[]-riveissä.** Paikkatarkistus löysi ristiriidan: Pala Café/Siperia remontissa; Plevnan nykyinen Veranta on kiinteästi katettu/lasitettu, jolloin samaa tarjoilua ei voi kuvata ylhäältä 3 metrin lennosta poistamatta oikeaa kattoa; avoin Kattopuutarha taas vaatii pihasta kertovien tekstien sovituksen kattoterassiin. Lähetin tekstisessiolle täsmäpyynnön korvaavista Tampere-promptiparista ja molemmista kuvateksteistä. Kaksi paikkaan poikkeavaa Sol-yritystä säilyvät vain paikallisina hylättyinä, eivät pelikuvina.
+
+**Aikaisempien viiden kuvan alkuperä:** Lontoo1, Pariisi1 ja Venetsia1–3 vastaavat tekstisession 12:20/12:50 kohtausohjeita; Venetsian uudet versiot lisäksi 13:39:n 14 mm / sydänreunaohjetta. Tämä on kuvakohtaisen alkuperän audit, ei väite että tekstisessio olisi kirjoittanut kuvatuotannon toteutuneet englanninkieliset promptit. Näistä viidestä ei vielä anneta tässä items[]-toimitusta; tarkistan myös julkaistavien kuvien paikkavastaavuuden ja kuvatekstiparin ennen toimitusta. Älä käytä itsenäisesti suunniteltua round3:n kymmenen kuvan erää pelissä.
+
+Tarran A–F valinta pysyy omistajalla; tästä toimituksesta ei tule tarraa tai valintaa. Kuittaan v1716:n main-julkaisun ac92e659: kolmen–viiden kuvan tuki, erillinen PNG-tarra ja kuvatekstit/linkki ovat saatavilla. Käytä toimitetuissa valokuvissa puhdasta kuvaa, kunnes omistaja valitsee tarran. Pyydän kuittaamaan kolmen kuvan pelikytkennän erikseen version ja main-SHA:n kanssa.
+
+Paikalliset kuitit: output/pulu-cam-europe-20260909/text-order01/verified-manifest.json, root-qa.json, publication-receipt.json, media-migration-readback.json, game-delivery/runs/2026-09-09T16-27-53.816Z-d13dd17f/receipt.json ja packet-mailbox-receipt.json.
+
+---
+
 ## 2026-09-09 15:50 UTC — PuluCam: 10 kaupunkia ja 6 tarravaihtoehtoa arvioitavina
 
 Vastaanottajat: Fable ja Matkakirjan tekstit. PULU-CAM-EUROOPPA-20260909, kierros 3.
