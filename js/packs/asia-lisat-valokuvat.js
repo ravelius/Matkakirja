@@ -17,6 +17,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Menam-rivier in Bangkok met gebouwen en boten, gezien vanaf de Royal Dock Yard Menam River from the Royal Dock Yard, B(..)ok (titel op object), RP-F-F01197-X.jpg',
     vuosi: '1870–1900',
     lahde: 'G. R. Lambert & Co. / Rijksmuseum, Commons (CC0)',
+    lyhyt: 'Chao Phraya -joki Bangkokissa 1800-luvun lopulla, Lambertin studion valokuvassa.',
     selite: 'Chao Phraya -joki Bangkokissa 1800-luvun lopulla, kuvattuna '
       + 'kuninkaallisen telakan puolelta. Vedos on singaporelaisen G. R. '
       + 'Lambert & Co:n studion tekemä. Eurooppalaiset kutsuivat jokea '
@@ -27,6 +28,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: '2016 Bangkok, Dystrykt Samphanthawong, Ulica Yaowarat (12).jpg',
         vuosi: '2016',
         lahde: 'Marcin Konsek, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Katuruokakojut Yaowarat-kadulla, Bangkokin kiinalaiskorttelissa illan tullen.',
         selite: 'Katuruokakojuja Yaowarat-kadulla Samphanthawongin '
           + 'kaupunginosassa. Yaowarat on Bangkokin kiinalaiskortteli, ja '
           + 'kadun kojut työntyvät jalkakäytäville vasta illan tullen.',
@@ -35,6 +37,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Bangkok, Chao Phraya Express Boat (6223055781).jpg',
         vuosi: '2011',
         lahde: 'Fabio Achilli, Commons (CC BY 2.0)',
+        lyhyt: 'Chao Phraya Express Boat -vene laiturissa: joen vesibussi ruuhkaisessa Bangkokissa.',
         selite: 'Chao Phraya Express Boatin vene laiturissa. Joella kulkee '
           + 'säännöllinen vesibussiliikenne, jonka puiset veneet pysähtyvät '
           + 'kymmenillä laitureilla — monelle se on nopein tapa liikkua '
@@ -44,6 +47,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Bangkok along the Chao Phraya and Wat Arun (15068304635).jpg',
         vuosi: '2014',
         lahde: 'Clay Gilliland, Commons (CC BY-SA 2.0)',
+        lyhyt: 'Wat Arun, Aamuruskon temppeli, Chao Phrayan Thonburin puoleisella rannalla.',
         selite: 'Wat Arun Chao Phrayan Thonburin puoleisella rannalla, lähes '
           + 'vastapäätä kuninkaanlinnaa. Temppelin koko nimi on Wat Arun '
           + 'Ratchawararam Ratchawaramahawihan, mutta se tunnetaan Aamuruskon '
@@ -53,6 +57,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Chao Phraya in Bangkok 2.jpg',
       lahde: 'Christophe95, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Chao Phraya-joki tänään vesibussin kannelta: hotelleja telakoiden sijaan.',
       selite: 'Sama joki tänään, kuvattuna vesibussin kannelta. Proomut ja '
         + 'matkustajaveneet käyttävät jokea yhä, mutta rantaa reunustavat nyt '
         + 'hotellit ja tornitalot telakoiden ja varastojen sijaan.',
@@ -62,6 +67,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'View on Bandjermasin-river (Borneo)., KITLV 1400217.tiff',
     vuosi: '1800- ja 1900-luvun taite',
     lahde: 'Koninklijke Paketvaart Maatschappij / KITLV, Leidenin yliopiston kirjasto, Commons (CC BY 4.0)',
+    lyhyt: 'Veneitä Banjarmasinin joella Etelä-Borneolla noin 1800-1900-luvun taitteessa.',
     selite: 'Veneitä Banjarmasinin joella Etelä-Borneolla. Kuvan on teettänyt '
       + 'hollantilainen laivayhtiö Koninklijke Paketvaart Maatschappij, joka '
       + 'hoiti saariston välistä liikennettä; arkisto ajoittaa sen 1800- ja '
@@ -71,6 +77,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Floating market Lok Baintan.jpg',
         vuosi: '2013',
         lahde: 'Midori, Commons (CC BY 3.0)',
+        lyhyt: 'Lok Baintanin kelluva tori Martapura-joella Banjarmasinin lähellä.',
         selite: 'Lok Baintanin kelluva tori Martapura-joella. Banjarmasinin '
           + 'keskustasta tänne on vajaan tunnin matka klotokilla, '
           + 'perinteisellä puuveneellä.',
@@ -79,6 +86,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Pasar Terapung Lok Baintan pisang.jpg',
         vuosi: '2013',
         lahde: 'Midori, Commons (CC BY 3.0)',
+        lyhyt: 'Banaanikuormia Borneon kelluvalla torilla: vene kulkuneuvona ja myyntipöytänä.',
         selite: 'Banaanikuormia samalla kelluvalla torilla. Vene on täällä yhtä '
           + 'aikaa kulkuneuvo, varasto ja myyntipöytä.',
       },
@@ -86,6 +94,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Restlessness in The Forest.jpg',
         vuosi: '2019',
         lahde: 'Aryanto, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Orangutan Borneon metsässä, jonka elintila kapenee viljelmien tieltä.',
         selite: 'Orangutan Borneon metsässä. Lajia elää luonnossa enää Borneolla '
           + 'ja Sumatralla, ja sen elintila kapenee, kun metsää raivataan '
           + 'viljelmiksi, teiksi ja kaivoksiksi.',
@@ -95,6 +104,7 @@ export const ASIA_LISAT_VALOKUVAT = {
       tiedosto: 'Jukung Pasar Terapung.jpg',
       vuosi: '2016',
       lahde: 'Muhammad Haris, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Jukung-veneitä Banjarmasinin kelluvalla torilla, tuhannen joen kaupungissa.',
       selite: 'Jukung-veneitä kelluvalla torilla nykyään. Banjarmasinia kutsutaan '
         + 'tuhannen joen kaupungiksi, ja kauppa vedeltä veneeseen on osa sen '
         + 'omaa tapaa.',
@@ -104,6 +114,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: '06Marina Madras.jpg',
     vuosi: '1913',
     lahde: 'Messrs. Nicholas & Co. / Etelä-Intian rautatien matkaopas, Commons (PD)',
+    lyhyt: 'Madrasin Marina-ranta 1913: matkustajat tuotiin maihin veneillä aallokon läpi.',
     selite: 'Madrasin Marina-ranta vuonna 1913, kuvattuna Etelä-Intian rautatien '
       + 'matkaoppaaseen. Kaupungilla ei ollut luonnonsatamaa, joten '
       + 'matkustajat ja tavarat tuotiin pitkään maihin veneillä aallokon '
@@ -113,6 +124,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Chennai Egmore station Madras.jpg',
         vuosi: '2023',
         lahde: 'Photopank, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Egmoren rautatieasema Chennaissa, siirtomaa-ajalta 1900-luvun alusta.',
         selite: 'Egmoren rautatieasema Chennaissa. Siirtomaa-ajan asemarakennus '
           + 'valmistui 1900-luvun alussa, ja siitä lähtevät yhä junat Tamil '
           + 'Nadun sisämaahan.',
@@ -121,6 +133,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Kapaleeshwarar Temple, Mylapore, Chennai, India.jpg',
         vuosi: '2024',
         lahde: 'N. Vivekananthamoorthy, Commons (CC BY 4.0)',
+        lyhyt: 'Kapaleeshwararin temppeli Mylaporessa, tamilirunoilijoiden ylistämä 600-800-luvuilta.',
         selite: 'Kapaleeshwararin temppeli Mylaporen kaupunginosassa. Temppeli '
           + 'kuuluu niihin 275 Shiva-pyhäkköön, joita tamilirunoilijat '
           + 'ylistivät jo 600–800-luvuilla.',
@@ -129,6 +142,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'India - Koyambedu Market - Faces 01 (3983959747).jpg',
         vuosi: '2009',
         lahde: 'McKay Savage, Commons (CC BY 2.0)',
+        lyhyt: 'Kantajia hedelmäkuorman kanssa Koyambedun tukkutorilla Chennaissa.',
         selite: 'Kantajia purkamassa hedelmäkuormaa Koyambedun tukkutorilla. '
           + 'Chennain kaupat ja pienemmät torit hakevat vihanneksensa, '
           + 'hedelmänsä ja kukkansa täältä.',
@@ -138,6 +152,7 @@ export const ASIA_LISAT_VALOKUVAT = {
       tiedosto: 'Glitters, at Marina beach, Chennai.jpg',
       vuosi: '2013',
       lahde: 'D. Vasanth Kumar, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Kalastajia Marina-rannalla Chennaissa auringonnousun aikaan.',
       selite: 'Kalastajia veneessä auringonnousun aikaan samalla Marina-rannalla. '
         + 'Vaikka kaupunkiin rakennettiin satama, rantakalastajat lähtevät '
         + 'yhä suoraan hiekalta aallokkoon.',
@@ -147,6 +162,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'De vuurtoren op de kruising van Queen Street (tegenwoordig Janadhipathi Mawatha) en Chatham Street, Colombo, RP-F-F01197-AP.jpg',
     vuosi: 'noin 1875–1880',
     lahde: 'Charles T. Scowen & Co. / Rijksmuseum, Commons (CC0)',
+    lyhyt: 'Colombon majakka Queen Streetin kulmassa noin 1875-1880, Scowenin kuvaamana.',
     selite: 'Colombon majakka Queen Streetin ja Chatham Streetin kulmassa noin '
       + 'vuosina 1875–1880. Kuva on osa albumia, jonka joku toi mukanaan '
       + 'Kaakkois-Aasian matkaltaan; ottajaksi arvellaan Ceylonissa '
@@ -156,6 +172,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: '20160122 Sri Lanka 3590 crop Colombo sRGB (25770952495).jpg',
         vuosi: '2016',
         lahde: 'Dan Lundberg, Commons (CC BY-SA 2.0)',
+        lyhyt: 'Kuivatun kalan puoti Pettahissa, Colombon vanhinta kauppa-aluetta.',
         selite: 'Kuivatun kalan puoti Pettahissa. Kala suolataan ja kuivataan, '
           + 'jotta se säilyy ilman kylmäketjua; Pettah on Colombon vanhimpia '
           + 'kaupunginosia ja yhä sen vilkkain kauppa-alue.',
@@ -164,6 +181,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Sri Lanka - 013 - Harbour fish market area panorama (1630266779).jpg',
         vuosi: '2007',
         lahde: 'McKay Savage, Commons (CC BY 2.0)',
+        lyhyt: 'Colombon sataman kalatorin edusta iltapäivällä, kun myyjät ovat jo lähteneet.',
         selite: 'Colombon sataman kalatorin edusta. Tori käy puoli viidestä '
           + 'aamulla kymmeneen, ja tämä kuva on otettu vasta iltapäivällä, '
           + 'kun myyjät ovat jo lähteneet.',
@@ -172,6 +190,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Colombo galle face on Sunday.JPG',
         vuosi: '2013',
         lahde: 'Saqib Qayyum, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Galle Face sunnuntaina, Colombon yhteinen ulkoilupaikka meren rannalla.',
         selite: 'Galle Face sunnuntaina. Meren rantaan jätetty avoin nurmikenttä '
           + 'on kaupungin yhteinen ulkoilupaikka, ja sen laidalle on noussut '
           + 'hotelleja ja virastoja.',
@@ -181,6 +200,7 @@ export const ASIA_LISAT_VALOKUVAT = {
       tiedosto: 'Old Colombo Lighthouse - 02.jpg',
       vuosi: '2016',
       lahde: 'Dan arndt, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama torni nykyään Colombossa: kellotorni, katu nimeltä Janadhipathi Mawatha.',
       selite: 'Sama torni nykyään samassa risteyksessä. Se ei enää toimi '
         + 'majakkana vaan kellotornina, ja Queen Streetin nimi on vaihtunut '
         + 'Janadhipathi Mawathaksi.',
@@ -190,6 +210,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Delhi. Chandee Chawk LCCN2017657607.jpg',
     vuosi: '1890-luku',
     lahde: 'Photoglob Co. / Library of Congress (PD)',
+    lyhyt: 'Chandni Chowk Delhissä 1890-luvulla, kadun keskellä virtasi ennen kanava.',
     selite: 'Chandni Chowk Delhissä 1890-luvulla, käsinväritetty '
       + 'photochrom-vedos. Kadun nimi tarkoittaa kuunvalon toria, ja sen '
       + 'keskellä virtasi alun perin kanava.',
@@ -198,6 +219,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Chandni Chowk, 2008 (20).JPG',
         vuosi: '2008',
         lahde: 'Bahnfrend, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Khari Baoli, Delhin maustekortteli Fatehpurin moskeijan pohjoisportilla.',
         selite: 'Näkymä länteen Khari Baoli -kadulla Fatehpurin moskeijan '
           + 'pohjoisportin kohdalta. Khari Baoli on Chandni Chowkin '
           + 'maustekortteli, jossa chili, kurkuma ja pähkinät myydään '
@@ -207,6 +229,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Old and famous Jalebiwala shop at Chandni Chowk, Delhi IMG 20150401 135516.jpg',
         vuosi: '2015',
         lahde: 'Sumita Roy Dutta, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Vanha jalebi-puoti Chandni Chowkilla, Sis Ganj Sahibin gurdwaran vieressä.',
         selite: 'Vanha jalebi-puoti Chandni Chowkilla, Sis Ganj Sahibin gurdwaran '
           + 'pohjoispäässä. Jalebit paistetaan puhtaassa voisulassa ja '
           + 'upotetaan mausteiseen sokerisiirappiin; täällä ne ovat paksuja '
@@ -216,6 +239,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Cycle Rickshaw - Chandni Chowk Road - Delhi 2014-05-13 3517.JPG',
         vuosi: '2014',
         lahde: 'Biswarup Ganguly, Commons (CC BY 3.0)',
+        lyhyt: 'Polkuriksa Chandni Chowkin kadulla vanhan Delhin kapeilla kujilla.',
         selite: 'Polkuriksa Chandni Chowkin kadulla. Vanhankaupungin kujilla '
           + 'riksa pääsee sinne, minne auto ei mahdu, ja siksi se on säilynyt '
           + 'osana liikennettä.',
@@ -225,6 +249,7 @@ export const ASIA_LISAT_VALOKUVAT = {
       tiedosto: 'Chandni Chowk. Delhi, India (23389084162).jpg',
       vuosi: '2015',
       lahde: 'Juan Antonio Segal, Commons (CC BY 2.0)',
+      lyhyt: 'Chandni Chowk nykyään, Vanhan Delhin pääväylä kauppakujien verkostoineen.',
       selite: 'Sama katu nykyään. Kanava on peitetty jo kauan sitten, mutta '
         + 'Chandni Chowk on yhä Vanhan Delhin pääväylä, ja sen molemmin '
         + 'puolin aukeaa kauppakujien verkosto.',
@@ -234,6 +259,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Hanoï - Congais au Grand Marché.jpg',
     vuosi: '1800-luvun loppu',
     lahde: 'Tuntematon kuvaaja, Commons (PD)',
+    lyhyt: 'Kaupankäyntiä Đồng Xuânin torilla Hanoissa 1800-luvun lopulla, postikorttikuvana.',
     selite: 'Kaupankäyntiä Đồng Xuânin torilla 1800-luvun lopulla, ennen kuin '
       + 'torialue oli rakennettu valmiiksi. Kuva levisi postikorttina, kuten '
       + 'suuri osa Ranskan Indokiinan aikaisista Hanoi-valokuvista.',
@@ -242,6 +268,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Hanoi Old Quarter, 9 March 2019-1.jpg',
         vuosi: '2019',
         lahde: 'Alexey Komarov, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Hanoin vanhankaupungin kadut nimetty ammattikuntien mukaan, osa myy yhä samaa.',
         selite: 'Vanhankaupungin katu Hanoissa. Korttelin kadut on nimetty '
           + 'ammattikuntien mukaan: Hàng-alkuinen nimi kertoo, mitä tavaraa '
           + 'kadulla aikoinaan myytiin, ja osalla kaduista sama tavara on '
@@ -251,6 +278,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Hanoi Night Market 3.jpg',
         vuosi: '2018',
         lahde: 'Christophe95, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Viikonlopun yömarkkinat Hanoin vanhassakaupungissa, ajoradalla autoilta suljettuna.',
         selite: 'Viikonlopun yömarkkinat Hanoin vanhassakaupungissa. Markkinat '
           + 'pidetään ajoradalla, joka suljetaan viikonlopuiksi autoilta ja '
           + 'mopoilta.',
@@ -259,6 +287,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Thap Rua (Tottoise) Tower, Hoan Kiem Lake, Hanoi (1) (38442367376).jpg',
         vuosi: '2017',
         lahde: 'Richard Mortel, Commons (CC BY 2.0)',
+        lyhyt: 'Kilpikonnatorni Hoàn Kiếmin järvellä Hanoissa, "palautetun miekan" tarinassa.',
         selite: 'Kilpikonnatorni Hoàn Kiếmin järven saarekkeella. Järven nimi '
           + 'tarkoittaa palautettua miekkaa ja viittaa tarinaan '
           + 'hallitsijasta, joka voitettuaan sodan antoi taikamiekan takaisin '
@@ -268,6 +297,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Đồng Xuân Market 1.jpg',
       lahde: 'Christophe95, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Đồng Xuân, Hanoin suurin katettu tori, rakennettu uudelleen 1990-luvulla.',
       selite: 'Sama tori tänään. Đồng Xuân on Hanoin suurin katettu tori; '
         + 'nykyinen halli rakennettiin uudelleen 1990-luvulla sen jälkeen, '
         + 'kun vanha paloi.',
@@ -277,6 +307,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Gezicht op de haven van Hongkong, RP-F-F20158.jpg',
     vuosi: '1863–1900',
     lahde: 'Wilhelm Burger / Rijksmuseum, Commons (CC0)',
+    lyhyt: 'Hongkongin satama 1800-luvun jälkipuoliskolla, Wilhelm Burgerin kuvaamana.',
     selite: 'Näkymä Hongkongin satamaan 1800-luvun jälkipuoliskolla. Vedoksen '
       + 'otti itävaltalainen Wilhelm Burger, joka valokuvasi Itä-Aasiassa '
       + 'Itävalta-Unkarin retkikunnan mukana. Satama oli tuolloin '
@@ -286,6 +317,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'HK SEA FOOD STREET NIGHT VIEW 10.19.jpg',
         vuosi: '2019',
         lahde: 'Smallpei, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Des Voeux Road West, Hongkongin kuivatun merenelävän katu raitiovaunuineen.',
         selite: 'Des Voeux Road Westiä kutsutaan kuivatun merenelävän kaduksi. '
           + 'Liikkeissä myydään kuivattua kalaa, simpukkaa ja merilevää '
           + 'säkeittäin, ja kadulla kulkevat sekä kaksikerroksinen '
@@ -295,6 +327,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Hong Kong, Part 3 - HongKong8641.jpg',
         vuosi: '2026',
         lahde: 'lumoplank, Commons (CC0)',
+        lyhyt: 'Kaksi raitiovaunua Des Voeux Road Centralilla, Hongkongin radalla vuodesta 1904.',
         selite: 'Kaksi kaksikerroksista raitiovaunua Des Voeux Road Centralilla. '
           + 'Hongkongin raitiotie on kulkenut saaren pohjoisrannikkoa '
           + 'vuodesta 1904, ja lippu on yhä kaupungin edullisimpia.',
@@ -303,6 +336,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'HK 中環 Central 結志街 Gage Street 嘉咸街 Graham Street 街市 market stall fruit February 2021 SS2 22.jpg',
         vuosi: '2021',
         lahde: 'Commonsin käyttäjä Shio Piemnd Wosmvi (CC BY-SA 4.0)',
+        lyhyt: 'Hedelmäkoju Gage Streetin torilla Hongkongin Centralissa, kalleimman tontin kupeessa.',
         selite: 'Hedelmäkoju Gage Streetin ja Graham Streetin katutorilla '
           + 'Hongkongin Centralissa. Kojut seisovat ajoradan reunassa aivan '
           + 'pankkikorttelin kupeessa, missä tontit ovat maailman kalleimpia.',
@@ -311,6 +345,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Victoria Harbour Hong Kong and Star Ferry.JPG',
       lahde: 'Clark Sui, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Victoria Harbour ja Star Ferryn laituri Hongkongissa, lauttayhteys 1880-luvulta.',
       selite: 'Sama satama nykyään: Victoria Harbour ja etualalla Star Ferryn '
         + 'laituri. Lauttayhteys saaren ja Kowloonin välillä on toiminut '
         + '1880-luvulta asti, vaikka rinnalle on sittemmin rakennettu '
@@ -321,6 +356,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Collectie NMvWereldculturen, RV-A121-1-25, Foto, \'Stadhuis van Batavia met het tramspoor\', fotograaf Woodbury & Page, ca. 1900.jpg',
     vuosi: 'noin 1900',
     lahde: 'Woodbury & Page / Nationaal Museum van Wereldculturen, Commons (PD)',
+    lyhyt: 'Batavian raatihuone noin 1900, hollantilaisen Jakartan hallinnon keskus.',
     selite: 'Batavian raatihuone noin vuonna 1900; kadussa sen edessä kulkee '
       + 'raitiotien kisko. Talo oli hollantilaisen siirtomaakaupungin '
       + 'hallinnon keskus, ja aukio sen edustalla on yhä vanhan kaupungin '
@@ -330,6 +366,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Pinisi at Sunda Kelapa Port.jpg',
         vuosi: '2017',
         lahde: 'Cun Cun, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Pinisi-purjealuksia Sunda Kelapan satamassa, Jakartan vanhassa satamassa.',
         selite: 'Pinisi-purjealuksia Sunda Kelapan satamassa, Jakartan vanhassa '
           + 'satamassa. Puurunkoiset rahtipurjehtijat kuljettavat tavaraa '
           + 'saarelta toiselle vielä nykyään.',
@@ -338,6 +375,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Warung martabak.JPG',
         vuosi: '2013',
         lahde: 'Lord Mountbatten, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Katukoju Karet Pedurenanissa Jakartassa, erikoistunut martabakiin.',
         selite: 'Katukoju Karet Pedurenanin kadulla Jakartassa. Paikka on '
           + 'erikoistunut martabakiin, paistettuun täytettyyn taikinaleipään, '
           + 'jota tehdään sekä suolaisena että makeana.',
@@ -346,6 +384,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Taman Fatahillah, Kota Tua, Jakarta.jpg',
         vuosi: '2022',
         lahde: 'Alif Mikail, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Fatahillahin aukio Jakartan vanhassakaupungissa joulukuussa 2022.',
         selite: 'Fatahillahin aukio Kota Tuassa eli Jakartan vanhassakaupungissa '
           + 'joulukuussa 2022. Tämän aukion ympärille hollantilainen Batavia '
           + 'aikanaan rakennettiin.',
@@ -355,6 +394,7 @@ export const ASIA_LISAT_VALOKUVAT = {
       tiedosto: 'Batavia City Hall (Jakarta History Museum) Fatahillah Square (2025) - img 06.jpg',
       vuosi: '2025',
       lahde: 'Chainwit., Commons (CC BY 4.0)',
+      lyhyt: 'Sama raatihuone nykyään Jakartassa, nyt kaupungin historian museo.',
       selite: 'Sama raatihuone nykyään Fatahillahin aukion laidalla. Raitiovaunut '
         + 'ovat kadonneet kadulta, ja talossa toimii Jakartan historian '
         + 'museo.',
@@ -364,6 +404,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'NO-NB BLDSA GM2a287n.jpg',
     vuosi: '1924',
     lahde: 'Georg Morgenstierne / Norjan kansalliskirjasto, Commons (PD)',
+    lyhyt: 'Bala Hissarin linnoitus Kabulissa 1924, Morgenstiernen kuvaamana.',
     selite: 'Bala Hissarin linnoitus Kabulissa vuonna 1924. Kaupungin kuuluisa '
       + 'muuri seitsemine portteineen alkoi tästä; viimeinen porteista '
       + 'purettiin 1930. Kuvan otti norjalainen kielentutkija Georg '
@@ -373,6 +414,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Fruit market seller, Kabul.jpg',
         vuosi: '2018',
         lahde: 'Hogai Aryoubi, Commons (CC0)',
+        lyhyt: 'Hedelmäkauppias Kabulin torilla, Afganistanin tärkeimpien vientitavaroiden äärellä.',
         selite: 'Hedelmäkauppias Kabulin torilla. Tuoreet ja kuivatut hedelmät '
           + 'ovat Afganistanin tärkeimpiä vientitavaroita, ja sadonkorjuun '
           + 'aikaan ne täyttävät kaupungin torit.',
@@ -381,6 +423,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: '2009 winter street scene in Kabul.jpg',
         vuosi: '2009',
         lahde: 'Brian Hillegas, Commons (CC BY 2.0)',
+        lyhyt: 'Talvinen katunäkymä Kabulin keskustassa joulukuussa 2009, 1800 metrin korkeudella.',
         selite: 'Talvinen katunäkymä Kabulin keskustassa joulukuussa 2009. '
           + 'Kaupunki on noin 1 800 metrin korkeudessa vuorten ympäröimässä '
           + 'laaksossa, ja talvella siellä on lunta.',
@@ -389,6 +432,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Afghan locals stand near shops in a bazaar in Kabul, Afghanistan, March 11, 2009. (U.S. Army photo by Staff Sgt. James Fidel - Released) 090311-A-AZ411-078.jpg',
         vuosi: '2009',
         lahde: 'James Fidel / U.S. Army, Commons (PD)',
+        lyhyt: 'Puoteja Kabulin basaarissa maaliskuussa 2009, kapealla kaupankäynnin kujalla.',
         selite: 'Puoteja Kabulin basaarissa maaliskuussa 2009. Basaari on '
           + 'kaupankäynnin vanha muoto: kapea kuja, jonka molemmin puolin '
           + 'liikkeet aukeavat suoraan kadulle.',
@@ -398,6 +442,7 @@ export const ASIA_LISAT_VALOKUVAT = {
       tiedosto: 'Bala Hisar.jpg',
       vuosi: '2018',
       lahde: 'AhmadElhan, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Bala Hissarin linnoitus nykyään, tuhoutunut ja jälleenrakennettu useaan kertaan.',
       selite: 'Sama Bala Hissarin linnoitus nykyään. Se tuhoutui osittain '
         + 'toisessa Britannian ja Afganistanin sodassa 1878–1880 ja '
         + 'rakennettiin uudelleen; vuodesta 1939 siinä toimi sotakoulu, '
@@ -408,6 +453,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'A street in Old Town, Karachi, India. Photograph, 1897. Wellcome V0029261.jpg',
     vuosi: '1897',
     lahde: 'R. Jalbhoy / Wellcome Collection, Commons (CC BY 4.0)',
+    lyhyt: 'Rampart Row Karachin vanhassakaupungissa, ruttokomitean teettämässä vedoksessa.',
     selite: 'Rampart Row Karachin vanhassakaupungissa: leveä päällystämätön '
       + 'katu ja kivitaloja, joiden julkisivuilla on riveittäin veistettyjä '
       + 'puuparvekkeita. Vedos on kaupungin ruttokomitean teettämästä '
@@ -417,6 +463,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Rustpauze bij de oase van Malir bij Karachi, Bestanddeelnr 255-8196.jpg',
         vuosi: '1946',
         lahde: 'Willem van de Poll / Nationaal Archief, Commons (CC0)',
+        lyhyt: 'Autot tauolla Malirin keitaalla Karachin ulkopuolella helmikuussa 1946.',
         selite: 'Autot ovat pysähtyneet tauolle Malirin keitaalle Karachin '
           + 'ulkopuolelle helmikuussa 1946. Hollantilainen Willem van de Poll '
           + 'kuvasi matkalaisia Malaijalle ja Indonesiaan; Malir on nykyään '
@@ -426,6 +473,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Empress Market Saddar Karachi.jpg',
         vuosi: '2018',
         lahde: 'Siddiqi, Commons (CC BY 4.0)',
+        lyhyt: 'Empress Market Saddarissa, 1880-luvun kauppahalli kuningatar Viktorian mukaan.',
         selite: 'Empress Market Saddarissa iltavalaistuksessa. Kauppahalli '
           + 'rakennettiin 1880-luvulla ja nimettiin kuningatar Viktorian '
           + 'mukaan; siellä myydään yhä vihanneksia, mausteita ja lihaa.',
@@ -434,6 +482,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'FishingshipsatKarachiHarbour.JPG',
         vuosi: '2008',
         lahde: 'Shayanshaukat, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Puisia kalastusaluksia Karachin satamassa Keamarin kaupunginosassa.',
         selite: 'Puisia kalastusaluksia Karachin satamassa, kyljet maalattu '
           + 'sinisiksi ja mastoissa liehuu lippuja. Kalasatama on '
           + 'Keamarin kaupunginosassa, joka yhdistettiin muuhun '
@@ -443,6 +492,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Karachi Port Trust (KPT) Head Office Building Karachi.jpg',
         vuosi: '2016',
         lahde: 'Furqanlw, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Karachin satamalaitoksen pääkonttori, suojeltu, sataman kautta ulkomaankauppa.',
         selite: 'Karachin satamalaitoksen pääkonttori, suojeltu '
           + 'rakennusmuistomerkki. Talon koko kertoo, mistä kaupunki on '
           + 'elänyt: sataman läpi kulkee valtaosa Pakistanin '
@@ -453,6 +503,7 @@ export const ASIA_LISAT_VALOKUVAT = {
       tiedosto: 'Clifton Beach, Karachi - Pakistan.jpg',
       vuosi: '2019',
       lahde: 'Nomi887, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Cliftonin hiekkaranta Karachissa aamu-usvassa, ennen laitamia, nyt arvostettu alue.',
       selite: 'Cliftonin leveä hiekkaranta Karachissa aamu-usvassa; '
         + 'etualalla kävelijä antaa mittakaavan ja taustalla kohoaa '
         + 'rakenteilla olevia tornitaloja nostureineen. Clifton oli sata '
@@ -464,6 +515,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Kurt boeck indien nepal 265A.jpg',
     vuosi: '1898',
     lahde: 'Kurt Boeck, Commons (PD)',
+    lyhyt: 'Newar-temppeli Kathmandun kuninkaanpalatsin edustalla 1898, Kurt Boeckin kuvaamana.',
     selite: 'Puuleikkauksin koristeltu newar-temppeli kuninkaanpalatsin '
       + 'edustalla Kathmandussa 1898. Saksalainen Kurt Boeck julkaisi kuvan '
       + 'kirjassa, jonka nimi kuuluu suomeksi \'Intian kautta suljettuun '
@@ -474,6 +526,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Asan Spice Market,Kathmandu,Nepal.jpg',
         vuosi: '2017',
         lahde: 'Dr. Nishant Bhatt, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Asanin tori Kathmandussa, kuuden kadun risteys ja vanha Intian-Tiibetin kauppareitti.',
         selite: 'Asanin tori Kathmandussa, jonne kuusi katua yhtyy. Torilla '
           + 'myydään mausteita, kankaita ja elektroniikkaa, ja aukion läpi '
           + 'kulki vanha Intian ja Tiibetin välinen kauppareitti.',
@@ -482,6 +535,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Asan Bazaar woman selling vegetables in front of Jwalamai temple Kathmandu Nepal 20Apr2008.jpg',
         vuosi: '2008',
         lahde: 'Everhard van Eimeren, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Vihanneksia myyvä nainen Jwala Main temppelin edustalla Asanin torilla.',
         selite: 'Vihanneksia myyvä nainen Jwala Main temppelin edustalla Asanin '
           + 'torilla. Kauppapaikka ja pyhäkkö ovat samalla aukiolla, muutaman '
           + 'metrin päässä toisistaan.',
@@ -490,6 +544,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Pilgrims at Boudhanath 02.jpg',
         vuosi: '2018',
         lahde: 'Bernard Gagnon, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Pyhiinvaeltajia Boudhanathin stupalla Kathmandun laidalla, vanhalla kauppareitillä.',
         selite: 'Pyhiinvaeltajia Boudhanathin stupalla Kathmandun laidalla. Stupa '
           + 'nousee vanhan Tiibetistä laaksoon laskeutuvan kauppareitin '
           + 'varrella, ja se on ollut pysähdyspaikka kauppiaille yhtä lailla '
@@ -500,6 +555,7 @@ export const ASIA_LISAT_VALOKUVAT = {
       tiedosto: 'Kathmandu Durbar Square (17830895562).jpg',
       vuosi: '2014',
       lahde: 'Jorge Láscar, Commons (CC BY 2.0)',
+      lyhyt: 'Kathmandun Durbar-aukio ennen vuoden 2015 maanjäristystä.',
       selite: 'Kathmandun Durbar-aukio, sama palatsin edusta kuin vanhassa '
         + 'kuvassa. Durbar-aukioita on laaksossa kolme, yksi kutakin ennen '
         + 'valtakunnan yhdistämistä ollutta newar-kuningaskuntaa kohti; kuva '
@@ -510,6 +566,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Calcutta. Hughlee boats LCCN2017658184.jpg',
     vuosi: '1890-luku',
     lahde: 'Photoglob Co. / Library of Congress (PD)',
+    lyhyt: 'Hooghly-joen veneitä Kalkutassa 1890-luvulla, kaupunki syntyi joen varteen.',
     selite: 'Hooghly-joen veneitä Kalkutassa 1890-luvulla, käsinväritetty '
       + 'photochrom-vedos. Kaupunki syntyi juuri tämän joen varteen: Hooghly '
       + 'on Gangesin haara, jota pitkin merilaivat pääsivät sisämaahan.',
@@ -518,6 +575,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Mallick Ghat Flower Market, Kolkata 03.jpg',
         vuosi: '2013',
         lahde: 'Bernard Gagnon, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Mallick Ghatin kukkatori Hooghlyn rannassa Howrahin sillan kupeessa.',
         selite: 'Mallick Ghatin kukkatori Hooghlyn rannassa Howrahin sillan '
           + 'kupeessa. Kukat myydään täällä tukuittain, ja suuri osa niistä '
           + 'sidotaan seppeleiksi temppeleitä varten.',
@@ -526,6 +584,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Making of Durga Idol in Kumartuli, Kolkata.jpg',
         vuosi: '2015',
         lahde: 'Debnathsonu1996, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Durga-jumalattaren kuvien valmistusta Kumartulissa Durga Puja -juhlaa varten.',
         selite: 'Durga-jumalattaren kuvan valmistusta Kumartulissa. Kaupunginosan '
           + 'savenvalajat tekevät joka syksy tuhansia kuvia Durga Puja '
           + '-juhlaan, ja juhlan päätteeksi ne lasketaan jokeen.',
@@ -534,6 +593,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Tram in Kolkata 1191.jpg',
         vuosi: '2011',
         lahde: 'Rameshng, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Raitiovaunu Kolkatan kadulla, Intian ainoa yhä liikennöivä, hevosvetoinen 1800-luvulla.',
         selite: 'Raitiovaunu Kolkatan kadulla. Kaupungin raitiotie on Intian '
           + 'ainoa yhä liikennöivä, ja se aloitti hevosvetoisena jo '
           + '1800-luvulla.',
@@ -543,6 +603,7 @@ export const ASIA_LISAT_VALOKUVAT = {
       tiedosto: 'A view of howrah bridge by boat.jpg',
       vuosi: '2017',
       lahde: 'Sanjukta19, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Howrahin silta veneestä Hooghlyllä, valmistui 1943 ilman jokeen upotettua tukea.',
       selite: 'Howrahin silta veneestä nähtynä samalla joella kuin vanhassa '
         + 'kuvassa. Silta valmistui 1943, ja se ylittää Hooghlyn ilman '
         + 'ainuttakaan jokeen upotettua tukea.',
@@ -552,6 +613,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Escolta, Manila, P. I. LCCN2013646443.jpg',
     vuosi: '1910',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Escolta-katu Manilassa 1910, kaupungin tärkein liikekatu.',
     selite: 'Escolta-katu Manilassa 1910. Katu oli kaupungin tärkein liikekatu, '
       + 'jonka varrelle kerääntyivät suuret kaupat, pankit ja ensimmäiset '
       + 'tavaratalot.',
@@ -560,6 +622,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Jeepney, Muralla Street, 2018 (02).jpg',
         vuosi: '2018',
         lahde: 'Bahnfrend, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Jeepneyt Muralla-kadulla Intramurosissa, Filippiinien yleisin joukkoliikenneväline.',
         selite: 'Jeepneyt Muralla-kadulla Intramurosissa, taustalla vanha '
           + 'tullirakennus Aduana. Jeepney on Filippiinien yleisin '
           + 'joukkoliikenteen väline, ja jokainen auto maalataan ja '
@@ -569,6 +632,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Tondo Binondo Soler Recto Avenue Divisoria District 27.jpg',
         vuosi: '2022',
         lahde: 'SwarmCheng, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Azcarragan kangastori Divisoriassa, Manilan tukkukaupan keskuksessa.',
         selite: 'Azcarragan kangastori C. M. Recto Avenuen varrella Divisorian '
           + 'alueella. Divisoria on Manilan tukkukaupan keskus, jossa kangas '
           + 'myydään metreittäin ja hinnasta tingitään.',
@@ -577,6 +641,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Museo de la iglesia de San Agustín, Manila, Filipinas, 2023-08-27, DD 82-84 HDR.jpg',
         vuosi: '2023',
         lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+        lyhyt: 'San Agustínin kirkon sisäpiha Intramurosissa, Filippiinien vanhin kivikirkko 1607.',
         selite: 'San Agustínin kirkon sisäpiha Intramurosin muurikaupungissa. '
           + 'Kirkko valmistui 1607 ja on Filippiinien vanhin kivikirkko; se '
           + 'oli ainoa Intramurosin kirkoista, joka jäi pystyyn toisen '
@@ -586,6 +651,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Escolta Street in Manila looking west from the Burke Street intersection with Burke Building to the right.jpg',
       lahde: 'Judgefloro, Commons (PD)',
+      lyhyt: 'Escolta tänään Burke Streetin risteyksestä, vanhat liiketalot yhä paikoillaan.',
       selite: 'Escolta tänään, kuvattuna Burke Streetin risteyksestä. '
         + 'Liike-elämän painopiste siirtyi muualle jo vuosikymmeniä sitten, '
         + 'mutta vanhat liiketalot kuten Regina Building ja First United '
@@ -596,6 +662,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Bombay. Harbour with arriving mail. LCCN2017658173.jpg',
     vuosi: '1890-luku',
     lahde: 'Photoglob Co. / Library of Congress (PD)',
+    lyhyt: 'Bombayn satama ja postilaiva 1890-luvulla, Suezin kanavan jälkeinen ensisatama.',
     selite: 'Bombayn satama ja saapuva postilaiva 1890-luvulla, käsinväritetty '
       + 'photochrom-vedos. Suezin kanavan avaamisen jälkeen Bombay oli '
       + 'Euroopasta tulevien laivojen ensimmäinen intialainen satama, ja '
@@ -605,6 +672,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Dhobi ghat Mumbai.jpg',
         vuosi: '2012',
         lahde: 'Siddhartha Kandoi, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Dhobit eli pyykinpesijät Mahalaxmin dhobi ghatilla Mumbaissa.',
         selite: 'Dhobit eli pyykinpesijät työssään Mahalaxmin dhobi ghatilla. '
           + 'Pyykki tuodaan tänne ympäri kaupunkia, pestään käsin '
           + 'betonialtaissa ja palautetaan takaisin omistajilleen.',
@@ -613,6 +681,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Dabbawala, Mumbai, India (52822285094).jpg',
         vuosi: '2023',
         lahde: 'Ninara, Commons (CC BY 2.0)',
+        lyhyt: 'Dabbawala kuljettaa lounasrasioita Mumbaissa kodeista työpaikoille ja takaisin.',
         selite: 'Dabbawala kuljettaa lounasrasioita Mumbaissa. Lämmin ruoka '
           + 'haetaan kodeista ja ruokaloista aamupäivällä, viedään '
           + 'työpaikoille ja tyhjät rasiat palautetaan samaa reittiä '
@@ -622,6 +691,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: '\'Fish Auction\' at Sassoon Docks in Mumbai..JPG',
         vuosi: '2011',
         lahde: 'Rudolph.A.furtado, Commons (CC0)',
+        lyhyt: 'Kalahuutokauppa Sassoon Docksilla Mumbaissa, allas valmistui 1870-luvulla.',
         selite: 'Kalahuutokauppa Sassoon Docksilla. Yön saalis puretaan '
           + 'laiturille aamulla ja myydään heti paikan päällä; allas on '
           + 'kaupungin vanhin ja valmistui 1870-luvulla.',
@@ -631,6 +701,7 @@ export const ASIA_LISAT_VALOKUVAT = {
       tiedosto: 'The boats,Gateway of India,mumbai,TN558.JPG',
       vuosi: '2011',
       lahde: 'தகவலுழவன், Commons (CC BY-SA 3.0)',
+      lyhyt: 'Veneitä Gateway of Indian edustalla Mumbaissa, kaari valmistui 1924.',
       selite: 'Veneitä Gateway of Indian edustalla nykyään. Kaari valmistui 1924 '
         + 'kuninkaan vierailun muistoksi juuri siihen kohtaan rantaa, jossa '
         + 'laivalla saapuneet nousivat maihin.',
@@ -640,6 +711,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Peking - inside view of gateway leading toward the Emperor\'s Palace LCCN2004707954.jpg',
     vuosi: '1895',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Portti keisarin palatsiin Pekingissä 1895, William Henry Jacksonin kuvaamana.',
     selite: 'Portti keisarin palatsin suuntaan Pekingissä vuonna 1895. William '
       + 'Henry Jackson kiersi maailmaa World\'s Transportation Commissionin '
       + 'valokuvaajana, ja tämä on käsinväritetty lyhtykuvalevy hänen '
@@ -649,6 +721,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Beijing hutong Shuaifu yuan.jpg',
         vuosi: '2023',
         lahde: 'Andrzej Otrębski, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Shuaifuyuanin hutong-kuja Pekingissä, vanhan kaupungin kapeita kujia.',
         selite: 'Shuaifuyuanin hutong-kuja Pekingissä. Hutongit ovat vanhan '
           + 'kaupungin kapeita kujia, joiden varrella asutaan muurien '
           + 'ympäröimissä pihataloissa; suuri osa niistä on purettu, ja '
@@ -658,6 +731,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Pekin Duck IMG 4256 beijing roast duck.jpg',
         vuosi: '2017',
         lahde: 'Bjoertvedt, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Pekinginankkaa leikataan Pekingin ravintolassa, rapea nahka arvostettu osa.',
         selite: 'Pekinginankkaa leikataan siivuiksi ravintolassa Pekingin '
           + 'pohjoisosassa. Kokonaisena paahdetun linnun rapea nahka on '
           + 'ruokalajin arvostetuin osa, ja se leikataan omaksi annoksekseen.',
@@ -666,6 +740,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Temple of Heaven, Beijing - February 2024.jpg',
         vuosi: '2024',
         lahde: 'Lloyd Tudor, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Taivaan temppeli Pekingin eteläpuolella, keisarien vuosittainen uhripaikka.',
         selite: 'Taivaan temppeli Pekingin eteläpuolella. Ming- ja Qing-kausien '
           + 'keisarit tulivat tänne vuosittain toimittamaan uhrin hyvän sadon '
           + 'puolesta, ja koko laaja temppelialue oli rakennettu tuota yhtä '
@@ -675,6 +750,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Hall of Supreme Harmony, Forbidden City, from southeast.jpg',
       lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+      lyhyt: 'Ylimmän sopusoinnun sali Kielletyssä kaupungissa marmoriterassin päällä.',
       selite: 'Kielletyn kaupungin suurin rakennus, Ylimmän sopusoinnun sali, '
         + 'kohoaa kolminkertaisen marmoriterassin päällä. Keisarillisen '
         + 'palatsin punaiset seinät ja keltatiiliset katot erottuvat laajan '
@@ -685,6 +761,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Lai Afong, The Bund, Shanghai, c1870.jpg',
     vuosi: '1870-luku',
     lahde: 'Lai Afong, Commons (PD)',
+    lyhyt: 'Bundin rantakatu Shanghaissa 1870-luvulla, Lai Afongin kuvaamana.',
     selite: 'Bundin rantakatu Shanghaissa 1870-luvulla. Kuvan otti Lai Afong, '
       + '1800-luvun tunnetuin kiinalainen valokuvaaja, joka piti studiota '
       + 'Hongkongissa ja matkusti kuvaamassa pitkin rannikkoa.',
@@ -693,6 +770,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Yu Garden Shanghai November 2017 001.jpg',
         vuosi: '2017',
         lahde: 'King of Hearts, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Hu Xin Tingin teehuone Yun puutarhassa Shanghaissa, mutkittelevan sillan päässä.',
         selite: 'Hu Xin Tingin teehuone Yun puutarhan laidalla. Rakennus seisoo '
           + 'lammen päällä, ja sinne johtaa mutkitteleva silta — '
           + 'kiinalaisessa puutarhataiteessa polku käännetään tarkoituksella, '
@@ -702,6 +780,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'More barges on the Huangpu Wharf (35607232474).jpg',
         vuosi: '2017',
         lahde: 'shankar s., Commons (CC BY 2.0)',
+        lyhyt: 'Rahtiproomuja Huangpu-joella Shanghaissa, kaupungin elinehto satamana.',
         selite: 'Rahtiproomuja Huangpu-joella. Joki on ollut Shanghain elinehto '
           + 'satamakaupunkina, ja se kuljettaa yhä tavaraa kaupungin ja '
           + 'Kiinan sisämaan välillä.',
@@ -710,6 +789,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Shanghai The Bund (22219109059).jpg',
       lahde: 'Gary Todd, Commons (CC0)',
+      lyhyt: 'Sama rantakatu Shanghaissa tänään, siirtomaa-ajan pankkitalot yhä rannassa.',
       selite: 'Sama rantakatu tänään. Siirtomaa-ajan pankki- ja kauppahuoneiden '
         + 'rivi seisoo yhä Huangpun rannassa; talot rakennettiin ulkomaisten '
         + 'yhtiöiden konttoreiksi, ja niissä toimii nyt kiinalaisia pankkeja, '
@@ -720,6 +800,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Singapore. Collyer Quai LCCN2017657654.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Collyer Quay Singaporessa, sveitsiläisen Photoglobin photochrom-vedoksena.',
     selite: 'Collyer Quay Singaporessa — käsinväritetty photochrom-vedos, '
       + 'jollaisia myytiin matkailijoille jo isoisän aikaan. Vedokset '
       + 'painettiin sveitsiläisessä Photoglob-yhtiössä mustavalkoisista '
@@ -729,6 +810,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Satay stall at East Coast Lagoon Food Village.jpg',
         vuosi: '2023',
         lahde: 'Commonsin käyttäjä PipeDr3am2000 (CC BY-SA 4.0)',
+        lyhyt: 'Satay-vartaita East Coast Lagoon Food Villagessa, Singaporen hawker centressä.',
         selite: 'Satay-vartaita grillataan East Coast Lagoon Food Villagessa. '
           + 'Hawker centre on Singaporen tapa koota kadulla myyneet '
           + 'ruokakojut yhden katon alle; siirto alkoi 1970-luvulla eikä '
@@ -738,6 +820,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Singapore (SG), Tanjong Pagar Terminal -- 2019 -- 4728.jpg',
         vuosi: '2019',
         lahde: 'Dietmar Rabich, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Tanjong Pagarin konttiterminaali Singaporessa, maailman vilkkain jälleenlaivaus.',
         selite: 'Tanjong Pagarin konttiterminaali kuvattuna Marina Bay Sandsin '
           + 'näköalatasanteelta. Singaporen satama on maailman vilkkaimpia '
           + 'jälleenlaivaussatamia: suuri osa konteista ei tule maihin vaan '
@@ -747,6 +830,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: '2016 Singapur, Chinatown, Ulica South Bridge, Domy-sklepy (10).jpg',
         vuosi: '2016',
         lahde: 'Marcin Konsek, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Shophouse-kauppataloja South Bridge Roadilla Singaporen Chinatownissa.',
         selite: 'Kauppataloja South Bridge Roadin varrella Chinatownissa. '
           + 'Shophouse-talossa alakerta oli myymälä ja yläkerta asunto, ja '
           + 'julkisivun eteen jätettiin katettu jalkakäytävä suojaamaan '
@@ -756,6 +840,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Collyer-Quay-skyline-night-2017-Luka-Peternel.jpg',
       lahde: 'Luka Peternel, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama rantakatu Singaporessa tänään Marina Bay Sandsilta, meri täytetty kauas.',
       selite: 'Sama rantakatu tänään, nähtynä Marina Bay Sandsilta. Meri ei enää '
         + 'huuhdo laiturin juurta: lahtea on täytetty niin paljon, että vanha '
         + 'rantakatu jäi keskelle kaupunkia.',
@@ -765,6 +850,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'South Korea, Great South Gate in Seoul.jpg',
     vuosi: 'noin 1884',
     lahde: 'George Clayton Foulk, Commons (PD)',
+    lyhyt: 'Namdaemun, Soulin Suuri eteläportti, noin 1884, George Clayton Foulkin kuvaamana.',
     selite: 'Namdaemun eli Suuri eteläportti Soulissa noin 1884. Portti oli '
       + 'kaupunginmuurin eteläinen pääsisäänkäynti. Kuvan otti '
       + 'yhdysvaltalainen meriupseeri George Clayton Foulk, joka oli tuolloin '
@@ -774,6 +860,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Gwangjang Market.JPG',
         vuosi: '2013',
         lahde: 'ChongDae, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Gwangjangin tori Soulin Jongnossa, kangaskauppaa ja tunnettu ruokakuja.',
         selite: 'Gwangjangin tori Soulin Jongnossa. Tori perustettiin '
           + 'kangaskaupaksi ja kangasta myydään siellä yhä, mutta tunnetuin '
           + 'se on ruokakujastaan, jossa syödään seisten kojun tiskin '
@@ -783,6 +870,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Korea GwangjangMarket Eats 02 (13885109655).jpg',
         vuosi: '2014',
         lahde: 'Korean kulttuuri- ja tiedotuspalvelu, Commons (CC BY-SA 2.0)',
+        lyhyt: 'Bindaetteokia paistetaan Gwangjangin torilla mungpapuutahnasta.',
         selite: 'Bindaetteokia paistetaan Gwangjangin torilla. Mungpavut '
           + 'liotetaan, jauhetaan karkeaksi tahnaksi ja paistetaan öljyssä '
           + 'paksuiksi letuiksi asiakkaan silmien edessä.',
@@ -791,6 +879,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Bukchon-ro 11-gil street with hanok houses and blue sky in Bukchon Hanok Village Seoul.jpg',
         vuosi: '2024',
         lahde: 'Basile Morin, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Bukchon-ro 11-gilin katu Soulin hanok-kylässä, perinteisiä puutaloja.',
         selite: 'Bukchon-ro 11-gilin katu Bukchonin hanok-kylässä. Hanok on '
           + 'korealainen puutalo, jonka lattian alla kulkee '
           + 'ondol-lämmityskanava; Bukchonin rinnekortteleissa taloja on '
@@ -800,6 +889,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Sungnyemun Gate, Seoul, 1394 (1) (26261755967).jpg',
       lahde: 'Richard Mortel, Commons (CC BY 2.0)',
+      lyhyt: 'Namdaemun eli Sungnyemun nykyään, jälleenrakennettu tuhopolton jälkeen 2013.',
       selite: 'Sama portti tänään, virallisella nimellään Sungnyemun. Puinen '
         + 'porttirakennus tuhoutui tuhopoltossa 2008 ja rakennettiin '
         + 'uudelleen vanhoin puusepäntekniikoin; portti avattiin taas '
@@ -810,6 +900,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Collectie NMvWereldculturen, RV-A106-1-11, Foto- \'Het Karbouwengat bij Fort de Kock aan Sumatra\'s westkust met op de achtergrond de Singkalang\', fotograaf C.B. Nieuwenhuis, ca. 1918.jpg',
     vuosi: 'noin 1918',
     lahde: 'C.B. Nieuwenhuis / Nationaal Museum van Wereldculturen, Commons (PD)',
+    lyhyt: 'Karbouwengat eli puhvelinrotko Bukittinggissa Sumatralla, Singgalangin vuoren edessä.',
     selite: 'Karbouwengat eli puhvelinrotko Fort de Kockin laidalla Sumatran '
       + 'länsirannikolla, taustalla Singgalangin vuori. Kaupunki sai nimensä '
       + 'hollantilaisesta linnoituksesta, ja se tunnetaan nykyään nimellä '
@@ -819,6 +910,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Rumah Gadang dan Rangkiang.jpg',
         vuosi: '2021',
         lahde: 'Hermadiyansyah Putra St Bagindo, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Minangkabau-suvun talo eli rumah gadang ja riisiaitat, rangkiang.',
         selite: 'Minangkabau-suvun talo eli rumah gadang ja sen edessä '
           + 'riisiaitat, rangkiang. Aittoja on useaa lajia sen mukaan, mihin '
           + 'sato on aiottu: yhdestä otetaan myytävä vilja, toisesta talon '
@@ -828,6 +920,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Lake Toba and the surrounding hills.jpg',
         vuosi: '2019',
         lahde: 'Bisajunisa, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Toba-järvi Pohjois-Sumatralla, tulivuoren kraatterijärvi Samosirin saaren kohdalta.',
         selite: 'Toba-järvi Pohjois-Sumatralla, kuvattuna Telestä Samosirin '
           + 'saaren puolelta. Järvi täyttää valtavan tulivuorenpurkauksen '
           + 'jättämän kraatterin, ja sen rannat jakautuvat seitsemän '
@@ -837,6 +930,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Nasi bungkus opened.JPG',
         vuosi: '2008',
         lahde: 'Midori, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Nasi padang mukaan pakattuna: Sumatran länsirannikon keittiötä.',
         selite: 'Nasi padang mukaan pakattuna: riisiä, kanacurrya ja keitettyjä '
           + 'kassavanlehtiä. Padangin keittiö on lähtöisin juuri Sumatran '
           + 'länsirannikolta, ja sen ruokapaikkoja on nykyään kaikkialla '
@@ -847,6 +941,7 @@ export const ASIA_LISAT_VALOKUVAT = {
       tiedosto: 'Ngarai Sianok Bukittinggi.jpg',
       vuosi: '2022',
       lahde: 'Adhmi, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Ngarai Sianokin rotko Bukittinggissä nykyään, sama Singgalangin vuori taustalla.',
       selite: 'Sama rotko nykyään. Ngarai Sianok on kapea laakso jyrkkien '
         + 'rinteiden välissä Bukittinggin kupeessa, ja taustalla kohoaa yhä '
         + 'sama Singgalangin vuori.',
@@ -856,6 +951,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Pond before the Banka Longshan Temple.jpg',
     vuosi: '1800- ja 1900-lukujen vaihde',
     lahde: 'Tuntematon kuvaaja, Commons (PD)',
+    lyhyt: 'Lampi Bangkan Longshan-temppelin edessä Taipeissa, rakennettu 1738.',
     selite: 'Lampi Bangkan Longshan-temppelin edessä. Temppeli rakennettiin 1738 '
       + 'Fujianista tulleiden uudisasukkaiden kauppapaikan viereen, ja se '
       + 'toimi pitkään koko kaupunginosan kokoontumis- ja '
@@ -865,6 +961,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: '2017-07-02 Raohe Street Night Market.jpg',
         vuosi: '2017',
         lahde: 'Felix Filnkoessl, Commons (CC BY-SA 2.0)',
+        lyhyt: 'Raohe-kadun yömarkkinat Songshanissa Taipeissa, arkinen ruokapaikka illoin.',
         selite: 'Raohe-kadun yömarkkinat Songshanin kaupunginosassa. Yömarkkinat '
           + 'ovat Taipeissa arkinen ruokapaikka: kojut asettuvat illansuussa '
           + 'kadulle, joka on päivällä tavallinen kulkuväylä.',
@@ -873,6 +970,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Buildings along Dihua Street 07.23 (2).jpg',
         vuosi: '2023',
         lahde: 'Supanut Arunoprayote, Commons (CC BY 4.0)',
+        lyhyt: 'Kauppataloja Dihua-kadulla Taipeissa, vanha kuivatun tavaran ja teen kauppapaikka.',
         selite: 'Kauppataloja Dihua-kadun varrella Datongin kaupunginosassa. '
           + 'Julkisivuissa yhdistyvät barokkikoristelu ja eteläisen Fujianin '
           + 'rakennustapa. Katu on vanha kuivatun tavaran, yrttien ja teen '
@@ -882,6 +980,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: '202606 Guan Da Chang Bao Xiao Chang.jpg',
         vuosi: '2026',
         lahde: 'Junyu-K, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Da chang bao xiao chang -makkara Shilinin yömarkkinoilla Taipeissa.',
         selite: 'Da chang bao xiao chang eli iso makkara pikkumakkaran ympärillä: '
           + 'tahmeasta riisistä tehty makkara halkaistaan ja sen väliin '
           + 'pannaan sianlihamakkara. Kojun edessä jonotetaan Shilinin '
@@ -891,6 +990,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Taipei Taiwan Mengjia-Longshan-Temple-06.jpg',
       lahde: 'CEphoto, Uwe Aranas, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Longshan-temppelin portti nykyään Taipeissa, jälleenrakennettu monesti.',
       selite: 'Longshan-temppelin portti nykyään. Temppeli on rakennettu '
         + 'uudelleen useaan otteeseen tulipalojen, maanjäristysten ja toisen '
         + 'maailmansodan pommitusten jälkeen, ja se on yhä päivittäisessä '
@@ -901,6 +1001,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'De Nijûbashi-brug bij het Edo-kasteel van Tokyo Nijûbashi (titel op object), RP-F-F01177-AC.jpg',
     vuosi: '1870–1900',
     lahde: 'Rijksmuseum, Commons (CC0)',
+    lyhyt: 'Nijūbashin silta Edon linnalla 1800-luvun jälkipuoliskolta, ennen Tokioksi muuttoa.',
     selite: 'Nijūbashin silta Edon linnan vallihaudan yli 1800-luvun '
       + 'jälkipuoliskolta. Linnasta tuli keisarin palatsi, kun hovi siirtyi '
       + 'Kiotosta tänne 1868 ja Edon nimi vaihtui Tokioksi. Vedos on '
@@ -911,6 +1012,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Tsukiji Market.jpg',
         vuosi: '2013',
         lahde: 'ElHeineken, Commons (CC BY 4.0)',
+        lyhyt: 'Tsukijin kalatorin halli Tokiossa, tukkukauppa siirtyi Toyosuun 2018.',
         selite: 'Tsukijin kalatorin halli Tokiossa. Tukkukauppa siirtyi täältä '
           + 'Toyosun uuteen halliin 2018, mutta torin ulkokujien kaupat ja '
           + 'ruokapaikat jäivät paikoilleen.',
@@ -919,6 +1021,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Mosuke Dango.jpg',
         vuosi: '2026',
         lahde: 'Fred Cherrygarden, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Mosuke Dango, japanilainen riisimakeisliike, perustettu Nihonbashiin 1898.',
         selite: 'Mosuke Dango, japanilaisia riisimakeisia myyvä liike Toyosun '
           + 'torilla. Kauppa perustettiin Nihonbashiin 1898, ja se on nyt '
           + 'kalatorin mukana Toyosussa.',
@@ -927,6 +1030,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Shibuya Crossing 20241020.jpg',
         vuosi: '2024',
         lahde: 'Supanut Arunoprayote, Commons (CC BY 4.0)',
+        lyhyt: 'Shibuyan risteys Tokiossa, jalankulkijat ylittävät aukion myös vinottain.',
         selite: 'Shibuyan risteys Tokiossa. Valot pysäyttävät autot kaikista '
           + 'suunnista yhtä aikaa, jolloin jalankulkijat ylittävät aukion '
           + 'myös vinottain; risteys on Shibuyan aseman Hachikō-uloskäynnin '
@@ -936,6 +1040,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Nijubashi Bridge. Tokyo. (42521677522).jpg',
       lahde: 'Bernard Spragg, Commons (PD)',
+      lyhyt: 'Nijūbashi eli kaksoissilta Tokiossa nykyään, palatsin edustan vallihaudan yli.',
       selite: 'Sama silta nykyään. Nimi Nijūbashi tarkoittaa kaksoissiltaa ja '
         + 'tulee siitä, että paikalla oli aikoinaan kaksitasoinen puusilta. '
         + 'Silta yhdistää palatsin edustan aukion vallihaudan yli keisarin '
@@ -946,6 +1051,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: '西安府安远门.jpg',
     vuosi: '1906–1909',
     lahde: 'Ernst Boerschmann, Commons (PD)',
+    lyhyt: 'Anyuanmen, Xi\'anin muurin pohjoisportti, Ernst Boerschmannin kuvaamana 1906-1909.',
     selite: 'Anyuanmen, Xi\'anin kaupunginmuurin pohjoinen portti, kuvattuna '
       + 'vuosien 1906 ja 1909 välillä. Saksalainen arkkitehti Ernst '
       + 'Boerschmann kiersi noina vuosina kahtatoista Kiinan maakuntaa '
@@ -955,6 +1061,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Beiyuanmen.jpg',
         vuosi: '2024',
         lahde: 'Codas, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Beiyuanmenin katu Xi\'anin muslimikorttelissa, huiväestön kotina satoja vuosia.',
         selite: 'Beiyuanmenin katu Xi\'anin muslimikorttelissa. Korttelin asukkaat '
           + 'ovat pääosin huita eli kiinankielisiä muslimeja, joiden yhteisö '
           + 'on ollut kaupungissa satoja vuosia Silkkitien kauppareitin '
@@ -964,6 +1071,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: '普通腊汁肉夹馍 02.jpg',
         vuosi: '2021',
         lahde: 'Liuxingy, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Roujiamo: haudutettua lihaa sämpylän välissä, Shaanxin tunnetuinta katuruokaa.',
         selite: 'Roujiamo: pitkään haudutettua lihaa hakattuna vastapaistetun '
           + 'litteän sämpylän väliin. Annos on Shaanxin maakunnan '
           + 'tunnetuimpia katuruokia, ja tämä on ostettu Xi\'anista.',
@@ -972,6 +1080,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Teracotta army pit 1 20090717-02.JPG',
         vuosi: '2009',
         lahde: 'Hans A. Rosbach, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Terrakotta-armeija kaivannossa Xi\'anissa, löytyi vasta 1974 kaivoa kaivettaessa.',
         selite: 'Terrakotta-armeijan sotilaita kaivannossa numero yksi Xi\'anin '
           + 'liepeillä. Savihahmot haudattiin ensimmäisen keisarin Qin Shi '
           + 'Huangin hautakummun lähelle, ja ne löytyivät vasta 1974, kun '
@@ -981,6 +1090,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Xi\'an City Wall South Gate (9912144783).jpg',
       lahde: 'Gary Todd, Commons (CC0)',
+      lyhyt: 'Xi\'anin muurin eteläportti nykyään, Ming-kaudelta, kolmentoista kilometrin kehä.',
       selite: 'Xi\'anin kaupunginmuurin eteläportti nykyään. Ming-kaudella '
         + 'rakennettu muuri kiertää vanhan keskustan runsaan kolmentoista '
         + 'kilometrin kehänä, ja sen leveällä harjalla kuljetaan jalan ja '
@@ -991,6 +1101,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Fytche Square, Rangoon.jpg',
     vuosi: '1895',
     lahde: 'Philip Adolphe Klier, Commons (PD)',
+    lyhyt: 'Fytche Square Rangoonissa 1895, taustalla Sulen pagodi, nyt Mahabandulan puisto.',
     selite: 'Fytche Square Rangoonissa 1895, taustalla Sulen pagodi. Aukio '
       + 'raivattiin 1867–68 suoperäiselle tontille, jota kutsuttiin Tank '
       + 'Squareksi, ja se nimettiin kuvernööri Fytchen mukaan. Nykyään paikka '
@@ -1000,6 +1111,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Street food vendor in Yangon.jpg',
         vuosi: '2016',
         lahde: 'Commonsin käyttäjä Z3144228 (CC BY-SA 4.0)',
+        lyhyt: 'Katuruokamyyjä Yangonissa, entisen Brittiläisen Intian satamakaupungin perintöä.',
         selite: 'Katuruokamyyjä Yangonissa. Kaupungin kojuilta saa sekä '
           + 'burmalaista että intialais- ja kiinalaisperäistä ruokaa: Rangoon '
           + 'oli sata vuotta sitten Brittiläisen Intian satamakaupunki, jonne '
@@ -1009,6 +1121,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'YANGON CIRCULAR RAILWAY DURATION 3 HOURS YANGON MYANMA JAN 2013 (8528276396).jpg',
         vuosi: '2013',
         lahde: 'Commonsin käyttäjä calflier001 (CC BY-SA 2.0)',
+        lyhyt: 'Yangonin kehärata kiertää kaupungin laitakylät noin kolmessa tunnissa.',
         selite: 'Yangonin kehärata. Juna kiertää kaupungin ja sen laitakylät noin '
           + 'kolmessa tunnissa, ja moni matkustaja kuljettaa sillä tavaraa '
           + 'torille myytäväksi.',
@@ -1017,6 +1130,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Shwedagon Zedi Daw Yangon 4.jpg',
         vuosi: '2019',
         lahde: 'Commonsin käyttäjä kallerna (CC BY-SA 4.0)',
+        lyhyt: 'Shwedagonin kultapagodi kohoaa Yangonin yllä kukkulalta.',
         selite: 'Shwedagonin pagodi kohoaa kukkulalta Yangonin yllä. Stupan pinta '
           + 'on päällystetty kullalla, jota uskovaiset lahjoittavat lehtinä '
           + 'ja levyinä; huipun paikka näkyy kaupungin joka puolelle.',
@@ -1025,6 +1139,7 @@ export const ASIA_LISAT_VALOKUVAT = {
     uusi: {
       tiedosto: 'Sule Pagoda.jpg',
       lahde: 'Commonsin käyttäjä Mrsoethuaung (CC BY 4.0)',
+      lyhyt: 'Sulen pagodi Yangonissa nykyään, jäi keskelle liikenneympyrää katukaavassa.',
       selite: 'Sulen pagodi nykyään, kuvattuna Sakura Towerista. Kun britit '
         + 'kaavoittivat Rangoonin ruutukaduiksi, pagodia ei siirretty vaan '
         + 'kadut vedettiin sen ympäri — niin se jäi keskelle liikenneympyrää.',
