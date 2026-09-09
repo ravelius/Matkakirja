@@ -8179,6 +8179,48 @@ body.flight-active .fact-card {
   animation: card-in 0.32s cubic-bezier(0.2, 1.2, 0.5, 1);
 }
 
+/*
+ * VIERITYSPALKKI EI MUUTA LEHDEN LEVEYTTÄ (omistaja 9.9.2026 klo 14.25,
+ * sanatarkasti: "nyt jos lehteä selaa nuolinäppäimillä niin lehden koko
+ * pomppaa hieman sivun käännön ajaksi. syy on oikeanpuolen
+ * vierityspalkissa joka häviää käännöksen aikana mutta saa samalla
+ * aikaan sivun sisällön leviämisen. voisiko vierityspalkki olla sivun
+ * ulkopuolella tai sitten että se ei häviäisi käännöksen aikana tai sen
+ * häviäminen ei ainakaan muuttaisi lehden sisällön kokoa käännöksen
+ * aikana"; Raamattu: LEHDEN SIVUNKÄÄNTÖ EI SAA POMPAUTTAA SISÄLTÖÄ).
+ *
+ * JUURISYY. Kääntöteatterin kloonit ovat `overflow-y: hidden` (ks.
+ * `.sivunkaanto-sivu .dialog-card` alempana): klooni ei piirrä
+ * vierityspalkkia lainkaan, ja klassisilla palkeilla (työpöytä-Chromium,
+ * Firefox, Windows) palkin 15 px vapautuu tekstille juuri käännön
+ * ajaksi. Mitattu 1600×1000, Lontoon kaupunkilehti: elävän kortin sisus
+ * 943 px, kloonin 958 px — sisältö levisi käännön ajaksi ja kutistui
+ * takaisin, kun teatteri katosi. Sama pomppu uhkasi käännön JÄLKEEN,
+ * jos uusi sivu oli niin lyhyt, ettei elävä kortti enää tarvinnut
+ * palkkia: piirto tapahtuu teatterin alla (js/sivunkaanto.js
+ * valmistele).
+ *
+ * KORJAUS. Palkin tila varataan aina, molemmissa. `scrollbar-gutter:
+ * stable` pätee myös `overflow: hidden` -säiliöön (mitattu Chromiumissa
+ * 9.9.2026: 15 px varattuna kummassakin), joten sama sääntö kattaa
+ * elävän kortin ja kloonin — leveys on sama ennen käännön, sen aikana
+ * ja sen jälkeen (0 px ero).
+ *
+ * SAFARI JA IPAD. Safari ei tunne scrollbar-gutteria ja ohittaa
+ * säännön — eikä tarvitse sitä: sen vierityspalkki on päällekkäinen
+ * (overlay) eikä vie asettelusta tilaa, joten leveys ei pompi siellä
+ * muutenkaan. Sääntö on Chromiumin korjaus, joka ei muuta iPadin
+ * ulkoasua.
+ *
+ * VAIN LEHTI. Sääntö on rajattu saapumislehteen ja sen klooneihin:
+ * muut kortit (laukku, tehtävä, kohtaamiset) eivät käänny, joten
+ * niille varattu kaista olisi turhaa tyhjää oikeassa reunassa.
+ */
+#arrival-dialog > .dialog-card,
+.sivunkaanto-sivu .dialog-card {
+  scrollbar-gutter: stable;
+}
+
 /* Toinen, hieman kiertynyt reunaviiva vahvistaa käsin piirretyn vaikutelman. */
 .dialog-card::before {
   content: "";
@@ -12665,7 +12707,15 @@ button.lukija-nappi.lukee,
   isolation: isolate;
 }
 
-/* Klooni täyttää sivun eikä toista kortin ilmestymisliikettä. */
+/*
+ * Klooni täyttää sivun eikä toista kortin ilmestymisliikettä.
+ *
+ * `overflow-y: hidden` piilottaa palkin, mutta EI saa vapauttaa sen
+ * tilaa tekstille: vierityspalkin kaista varataan kloonillekin
+ * (`scrollbar-gutter: stable`, sääntö `.dialog-card`-lohkon perässä),
+ * jottei sivun leveys pomppaa käännön ajaksi — omistaja 9.9.2026,
+ * Raamattu: LEHDEN SIVUNKÄÄNTÖ EI SAA POMPAUTTAA SISÄLTÖÄ.
+ */
 .sivunkaanto-sivu .dialog-card {
   width: 100% !important;
   max-width: 100% !important;

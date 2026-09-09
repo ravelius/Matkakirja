@@ -200,3 +200,28 @@ test('taitteen varjo on hento, ei kiiltävä (omistaja 5.9.2026: "Saako tästä 
   const lahde = readFileSync(new URL('../js/sivunkaanto.js', import.meta.url), 'utf8');
   assert.match(lahde, /maxShadowOpacity: SIVUNKAANTO_VARJO/);
 });
+
+/*
+ * VIERITYSPALKKI EI MUUTA SIVUN LEVEYTTÄ (omistaja 9.9.2026 klo 14.25:
+ * *"lehden koko pomppaa hieman sivun käännön ajaksi. syy on
+ * oikeanpuolen vierityspalkissa joka häviää käännöksen aikana"*;
+ * Raamattu: LEHDEN SIVUNKÄÄNTÖ EI SAA POMPAUTTAA SISÄLTÖÄ).
+ *
+ * Teatterin klooni on `overflow-y: hidden`, joten ilman varattua
+ * kaistaa se ei piirrä palkkia ja klassisen palkin 15 px vapautuu
+ * tekstille juuri käännön ajaksi (mitattu 1600×1000, Lontoon lehti:
+ * elävä kortti 943 px, klooni 958 px). Kaista varataan siksi
+ * molemmille. Mittaava vartio on selaimessa
+ * tools/savukkeet/savuke-lehden-kaanto.mjs; tämä testi vartioi itse
+ * sääntöä, joka on koko korjaus.
+ */
+test('lehtikortti ja sen kääntöklooni varaavat vierityspalkin kaistan (omistaja 9.9.2026)', () => {
+  const tyyli = lue('../css/styles.css');
+  assert.match(
+    tyyli,
+    /#arrival-dialog > \.dialog-card,\n\.sivunkaanto-sivu \.dialog-card \{\n\s+scrollbar-gutter: stable;\n\}/,
+    'scrollbar-gutter: stable puuttuu lehtikortilta tai sen kääntökloonilta',
+  );
+  // Kloonin overflow-piilotus on yhä voimassa: kaista korvaa palkin, ei palkkia.
+  assert.match(tyyli, /\.sivunkaanto-sivu \.dialog-card \{[^}]*overflow-y: hidden;/);
+});
