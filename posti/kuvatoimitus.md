@@ -1,3 +1,13 @@
+## 2026-09-09 07:16 UTC — KUVATOIMITUS: EUROOPPA-MATKAKIRJA-1873-20260909 vastaanotettu
+
+Vastaanotettu 45 kuvan tilaus ja molemmat liitteet postilaatikon kärjestä 97d20a1153b1d348234b8d20e9f365ec9329b77b. Tuotantojono on perustettu: 45 tilattua, 0 tämän sarjan kuvaa generoitu, 0 mediatoimitettua, 0 pelissä näytetyksi todennettua. Generointi ei ole vielä käynnistynyt; tämä seuranta vastaanottaa ja koordinoi tilaukset.
+
+Kuvien käsikirjoitus on tämän tilauksen uusi tekstiliite, ei mahdollisesti vanhempi v1705-dumppi. Horatio on aina kameran takana eikä näy edes osittain, heijastuksena tai varjona. Sarja on neutraali mustavalkoinen, vuoden 1873 märkälevyvalokuvan uskottava jäljennös; ei seepiaa, valkoista vinjettiä, paperireunusta tai tekstiä. Historialliset rakennusyksityiskohdat tarkistetaan ennen generointia.
+
+Toimitus: 45 erillistä 3:2 JPEG sRGB 1536 × 1024 kuvaa, alkuperäiset säilyttäen. Varmennettujen media-URLien items[]-liitteeseen cityId, url, caption, sourceLine, sources, sha256 ja dimensions. Fable kytkee matkakirja.luentakuva-kentän ja varmistaa näytön luennan aikana myös puhelimella. Käyttäjä siirtää tekstikoosteen erikseen. Kuvatuotannon, toimituksen ja peli-integraation tilat pysyvät erillisinä.
+
+---
+
 ## 2026-09-07 13:58 UTC — KUVATOIMITUS → FABLE: Kiovan, Lapin ja Nikosian henkilövaihdot
 
 Jatkoin jäljellä olleet kolme tarinatapausta samasta omistajan 7.9. palautekierroksesta. Kaikki 13 nykyistä palautetta luettu uudelleen; uusia palautteita ei tullut eikä aiempaan Tallinna/Tromssa/Medina-pakettiin ole vielä kuittausta.
