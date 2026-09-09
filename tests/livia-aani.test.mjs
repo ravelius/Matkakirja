@@ -312,7 +312,7 @@ test('äänen osoite osoittaa ämpärin pulukansioon', () => {
   assert.equal(LIVIAN_AANIJUURI.endsWith('aanet/pulu/'), true);
   assert.equal(ampariKansio(), 'aanet/pulu');
   assert.equal(livianAaniOsoite('mannerivihje', 0),
-    `${LIVIAN_AANIJUURI}livia-mannerivihje-1.mp3`);
+    `${LIVIAN_AANIJUURI}livia-mannerivihje-1.mp3?v=${LIVIAN_AANITETYT['mannerivihje-1']}`);
   assert.equal(livianAaniOsoite('kupla', 0), null);
 });
 
@@ -348,8 +348,15 @@ test('työkalu tuntee saapumisrepliikit, mutta peli soittaa aina kuivan', () => 
   // Paluun ENSIMMÄINEN kupla (sofia-13) on se, jossa Livia tulee ilmasta.
   assert.deepEqual(LIVIAN_SAAPUMISREPLIIKIT, { avaus: [0], paljastus: [0], sofia: [12] });
   // Osoite seuraa samaa valintaa: kuiva tiedosto ämpärissä.
-  assert.equal(livianAaniOsoite('avaus', 0), `${LIVIAN_AANIJUURI}livia-avaus-1.mp3`);
-  assert.equal(livianAaniOsoite('sofia', 12), `${LIVIAN_AANIJUURI}livia-sofia-13.mp3`);
+  assert.equal(livianAaniOsoite('avaus', 0),
+    `${LIVIAN_AANIJUURI}livia-avaus-1.mp3?v=${LIVIAN_AANITETYT['avaus-1']}`);
+  assert.equal(livianAaniOsoite('sofia', 12),
+    `${LIVIAN_AANIJUURI}livia-sofia-13.mp3?v=${LIVIAN_AANITETYT['sofia-13']}`);
+  // VERSIOKYSELY VAIHTUU TEKSTIN MUKANA (9.9.2026): vartioidun repliikin
+  // osoitteessa on taulun tiiviste, jotta välimuisti ei soita vanhaa
+  // äänitettä samannimisen tiedoston alta; vartioimaton on ilman kyselyä.
+  assert.match(livianAaniOsoite('lontoo', 2), /livia-lontoo-3\.mp3\?v=[0-9a-f]{8}$/);
+  assert.equal(LIVIAN_AANITETYT['lontoo-3'], livianAaniOsoite('lontoo', 2).split('?v=')[1]);
 });
 
 /* ---------- vanhentunut äänite on hiljainen ---------- */

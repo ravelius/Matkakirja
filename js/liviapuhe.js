@@ -716,10 +716,23 @@ export function livianSoitettava(lahde, indeksi) {
   return livianAaniNimi(lahde, indeksi, { kaiku });
 }
 
-/** Repliikin koko osoite ämpärissä. */
+/**
+ * Repliikin koko osoite ämpärissä.
+ *
+ * VARTIOIDULLA REPLIIKILLÄ ON VERSIOKYSELY (9.9.2026): `?v=<tiiviste>`
+ * LIVIAN_AANITETYT-taulusta. Tiedostonimi ei muutu, kun teksti
+ * äänitetään uusiksi, ja palvelutyöntekijän äänikori (sw.js AANICACHE)
+ * on välimuisti ensin — ilman kyselyä selain soittaisi vanhan
+ * repliikin, vaikka ämpärissä on jo uusi (omistajan havainto 9.9.2026:
+ * "pulun ääntä ei jostain syystä tule isoisän tekstin jälkeen"; sama
+ * mekanismi kuin js/media.js UUSITUT_AANET). Ämpäri ohittaa kyselyn.
+ * Vartioimaton repliikki (ei riviä taulussa) saa osoitteen ilman kyselyä.
+ */
 export function livianAaniOsoite(lahde, indeksi, juuri = LIVIAN_AANIJUURI) {
   const nimi = livianSoitettava(lahde, indeksi);
-  return nimi ? `${juuri}${nimi}` : null;
+  if (!nimi) return null;
+  const versio = LIVIAN_AANITETYT[`${lahde}-${indeksi + 1}`];
+  return `${juuri}${nimi}${versio ? `?v=${versio}` : ''}`;
 }
 
 /**
