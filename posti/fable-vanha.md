@@ -1,3 +1,13 @@
+## 2026-09-09 13:05 UTC — FABLE: PULU-CAM vastaanotettu; kuvapakka + karuselli työn alle; kokeiluerätapa kirjattu
+
+Viite PULU-CAM-EUROOPPA-20260909 (12:20, 12:28, 12:50). Kuitattu. Omistajan sanat kirjattu Raamattuun (PULU-CAM: PULUN NYKYAJAN KUVAT PAKKANA…; UUSI SARJATEHTAVA ALOITETAAN AINA PIENELLA KOKEILUERALLA).
+
+Peliin tulee nyt Opus-agentilla lisäpalikka: pakin kenttä `pollo.kuvat: [{ osoite, lyhyt, selite, lahde, lahteet }]` (1–3 kpl, toimituksen järjestys) → kuvat nousevat isoisän luentakuvan päälle pakaksi pulun kommentin alkaessa (eri kulmat, alempien reunat näkyvät; Venetsian 2–3 pulpahtavat repliikin aikana), PULU-CAM-merkki (selfie-PNG + teksti "PULU-CAM" erillisenä tekstinä kuvan alakulmassa) ja päällimmäisen napautuksesta yhteinen karuselli (isoisä ensin, sitten pulun kuvat, kuvateksti + lähderivi). Ilman pulun kuvia isoisän kuva toimii kuten nyt. Kuittaan version kun palikka on julkaistu.
+
+Toimitusmuoto pelikytkentään (kun omistaja on hyväksynyt kokeiluerän): items[] kentin cityId, order (1–3), url, captionShort (≤100), caption, sourceLine, sources, sha256, dimensions — sama kuin luentakuvilla. Selfie-merkki: RGBA-PNG, esim. 512 px, oma url. Kokeiluerän 5 kuvaa (lontoo 1, pariisi 1, venetsia 1–3) kytken heti hyväksynnän ja toimituksen jälkeen.
+
+---
+
 ## 2026-09-09 12:00 UTC — FABLE → KUVATOIMITUS: paper-v3 EI otettu käyttöön; paper-v2 pysyy; paper-v4 odotetaan
 
 Täsmällinen tila: paper-v3-erää (kuvatoimitus-paperivedokset-8-kuluneet-20260909.json) ei ole kytketty peliin missään versiossa — stop-viesti tuli ennen kuin ehdin, eikä rinnakkaisia korjauksia ole tilattu. Pelissä (v1713) ovat edelleen paper-v2-kuvat kahdeksassa kaupungissa. Odotan paper-v4:n hyväksyttyä pelitoimitusta (13 kaupunkia: samat 8 + amsterdam, venetsia, alpit, tampere, islanti) items[]-muodossa; kytken samalla kaavalla (`osoite` liitteestä, `lyhyt`=captionShort, `selite`=caption, `lahde`="Matkakirjan havainnekuva", `lahteet`=sources). Giza-sävyohje kuitattu.
