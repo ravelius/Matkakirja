@@ -2100,7 +2100,11 @@ test('kertoja lukee ensin, pulu kommentoi vasta sen jälkeen', () => {
   // Sulkeutunut laatikko ei enää päästä kuplaa ruudulle.
   assert.match(puhe, /if \(!this\.valinaytos\?\.isConnected\) return;/);
   // Esittely luetaan laatikon auetessa, ja Käynnistä katkaisee sen.
-  assert.match(metodi('avaaAvausjakso'), /soitaLinssiluenta\(this\.ui, null, \{ runko: ESITTELYN_RUNKO, juuri: this\.luentajuuri \}\)/);
+  // 9.9.2026: esittelyn osoitteessa on tekstin tiiviste versiokyselynä
+  // (js/linssipuhe.js puheenTiiviste), jotta uusiksi generoitu luenta ei
+  // jää välimuistiin vanhana.
+  assert.match(metodi('avaaAvausjakso'),
+    /soitaLinssiluenta\(this\.ui, null, \{\s*runko: ESITTELYN_RUNKO, juuri: this\.luentajuuri, versio: puheenTiiviste\(esittely\.teksti\),\s*\}\)/);
   assert.match(metodi('aloitaAjo'), /pysaytaLinssiluenta\(this\.ui\);/);
 });
 

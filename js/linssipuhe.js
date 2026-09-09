@@ -486,8 +486,26 @@ export function pysaytaLinssiluenta(ui) {
  * @returns {HTMLAudioElement|null} soittimen kahva, tai null jos
  *   luentaa ei aloitettu
  */
+/**
+ * TEKSTIN TIIVISTE VERSIOKYSELYKSI (9.9.2026). Kaaren omat puheet
+ * (esittely, loppu) säilyttävät tiedostonimensä, kun teksti kirjoitetaan
+ * uusiksi ja luenta generoidaan uudelleen — ja palvelutyöntekijän
+ * äänikori (sw.js AANICACHE) on välimuisti ensin, joten ilman
+ * versiokyselyä selain lukisi vanhaa tekstiä. Sama FNV-1a kuin pulun
+ * repliikeillä (js/liviapuhe.js livianTiiviste); ämpäri ohittaa kyselyn.
+ */
+export function puheenTiiviste(teksti) {
+  let h = 0x811c9dc5;
+  for (const merkki of String(teksti ?? '').trim()) {
+    h ^= merkki.codePointAt(0);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return h.toString(16).padStart(8, '0');
+}
+
 export function soitaLinssiluenta(ui, t, {
   viive = LUENNAN_VIIVE_MS, runko = null, juuri = LINSSILUENTA_JUURI, valmistele = null,
+  versio = null,
 } = {}) {
   pysaytaLinssiluenta(ui);
   if (!ui || (!t && !runko) || typeof Audio === 'undefined') return null;
@@ -496,7 +514,7 @@ export function soitaLinssiluenta(ui, t, {
   // Radiotilassa ei kaksi ääntä päällekkäin — sama ehto kuin
   // matkakirjaluennalla.
   if (ui.radioModuuli && !ui.radioModuuli.luentaSallittu()) return null;
-  const url = runko ? `${juuri}/${runko}.mp3` : luennanOsoite(t, juuri);
+  const url = runko ? `${juuri}/${runko}.mp3${versio ? `?v=${versio}` : ''}` : luennanOsoite(t, juuri);
   if (!url) return null;
 
   const audio = new Audio(url);

@@ -154,7 +154,7 @@ import { sfx } from './sound.js';
 import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from './ambience-stream.js';
 import { stopDiaryVoice } from './luenta.js';
 import {
-  ESITTELYN_RUNKO, LOPUN_RUNKO, pysaytaLinssiluenta, soitaLinssiluenta, valinaytoksenRunko,
+  ESITTELYN_RUNKO, LOPUN_RUNKO, puheenTiiviste, pysaytaLinssiluenta, soitaLinssiluenta, valinaytoksenRunko,
 } from './linssipuhe.js';
 import { pysaytaLukija } from './lukija.js';
 import { esilataaKuvat, vapautaKosketus } from './ui-apurit.js';
@@ -4536,7 +4536,13 @@ class Aikajana {
        * pysäkeillä (js/linssipuhe.js kaarenPuheet); puuttuva tiedosto on
        * hiljainen, ja Käynnistä katkaisee luennan kesken (aloitaAjo).
        */
-      if (esittely.teksti) soitaLinssiluenta(this.ui, null, { runko: ESITTELYN_RUNKO, juuri: this.luentajuuri });
+      // Versiokysely tekstin tiivisteestä: uusiksi kirjoitettu esittely ei
+      // jää välimuistiin vanhana (js/linssipuhe.js puheenTiiviste).
+      if (esittely.teksti) {
+        soitaLinssiluenta(this.ui, null, {
+          runko: ESITTELYN_RUNKO, juuri: this.luentajuuri, versio: puheenTiiviste(esittely.teksti),
+        });
+      }
       const ajo = Promise.resolve(this.sovitaAlkuun(heti ? 0 : AVAUS_KAMERA_MS))
         .then(() => new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok))));
       // Alaraja pitää juuren häivytyksen erossa laatikon liu'usta, yläraja on katto.

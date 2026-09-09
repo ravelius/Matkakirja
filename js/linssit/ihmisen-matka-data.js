@@ -204,7 +204,8 @@ export const IHMISEN_MATKA_ESITTELY = 'Ihmisen matka Afrikasta koko maapallolle:
  * seuraavaksi näkemään' ja tekstiä voi muutenkin lyhentää hieman"*).
  * Kaari alkaa nyt väitteestä eikä lupauksesta; loppu on ennallaan.
  *
- * ÄÄNITE VANHENTUNUT (9.9.2026): ämpärin
+ * ÄÄNITE GENEROITU UUDELLEEN 9.9.2026 (generoi-linssiluennat.yml ajo 9, esittely;
+ * osoitteessa on tekstin tiiviste versiokyselynä). Aiemmin tässä luki: ämpärin
  * aikajana/ihmisen-matka/puhe/esittely.mp3 lukee yhä edellistä
  * ensimmäistä lausetta ("Tulet seuraavaksi näkemään, miten yksi laji
  * levisi…"), eikä sitä voi tällä kertaa korjata leikkaamalla — lause
