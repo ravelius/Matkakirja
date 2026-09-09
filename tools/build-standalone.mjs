@@ -668,6 +668,9 @@ const MODULES = [
    * media, africa-valokuvat, julisteet, fokusvirrat, natiivi ja äänet —
    * ovat kaikki jo yllä.
    */
+  // fokusmitat (ja sen fokus-grc) ennen fokusvirtaa: saapumisasento 9.9.2026
+  'js/packs/fokus-grc.js',
+  'js/fokusmitat.js',
   'js/fokusvirta.js',
   /*
    * Laattapyramidin lataaja ennen kameraa: kamera lukee siitä arkin
@@ -691,7 +694,6 @@ const MODULES = [
    * tähän: paikka on kelvollinen kaikille lukijoille, ja rivin
    * siirtely tässä luettelossa on aina riski.
    */
-  'js/packs/fokus-grc.js',
   'js/laattapyramidi.js',
   /*
    * Siirron koreografian luvut ja käyrät (pallolauta vaihe 2). Nousi
@@ -757,7 +759,6 @@ const MODULES = [
    * staattisesti). Se lukee laudan projektion fokus-grc.js:stä ja maan
    * perustiedot sisältötauluista — molemmat ovat jo yllä.
    */
-  'js/fokusmitat.js',
   /*
    * Eläintäyn karttarivit ja nimiön kylki ennen kohdekerrosta
    * (3.9.2026): fokuskohteet.js lukee täyn paikan ladontansa
