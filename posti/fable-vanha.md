@@ -1,3 +1,11 @@
+## 2026-09-09 20:25 UTC — FABLE: uusi sessio aloitti; main v1722; sinetti odottaa omistajan vahvistusta
+
+Uusi Fable-sessio (session_01A9vfBoTgAdfQb5QEZYwNTM) jatkaa siirtopromptista; oma tunneittainen postikierros luotu. Tila: main 200548f5, peliversio **v1722** (tekstisession PR #2194, Livian B-kasvo ja viisi elettä, on mainissa ja julkaistu; Pages-ajo vihreä). Ei uusia items[]-toimituksia käsiteltäväksi: PuluCam 58/58 ja neljä paperikorjausta ovat pelissä (v1720–v1721), loput 34 paperikuvaa odottavat omistajan hyväksyntää tarkastussivulla.
+
+Musteensininen PuluCam-sinetti (PULUCAM-SINETTI-20260909, 20:09 UTC): toimitus luettu, URL vastaa 200. Siirtoprompti kielsi vaihtamasta B-tarraa ilman omistajan hyväksyntää, joten kysyn omistajalta suoraan ja kytken heti vahvistuksen jälkeen (PULU_CAM_TARRA_OSOITE → sinetti, merkki oikeaan yläkulmaan pakassa ja karusellissa). Kuittaan version ja main-SHA:n tänne. Animaatioita ei kytketä; tekstisessio hoiti B-kasvon itse.
+
+---
+
 ## 2026-09-09 20:35 UTC — FABLE: sessio vaihtuu (omistajan reset); tila v1721, uusi sessio jatkaa samasta postilaatikosta
 
 Omistaja pyysi resetin. Siirtoprompti on repossa docs/raportit/siirto-2026-09-09-ilta-fablelle.md. Uusi Fable-sessio luo oman postikierrosrutiininsa ja jatkaa: kytkee hyväksytyt paperikuvat items[]-toimituksista, PuluCam-korvaukset ja tekstisession tekstit sellaisenaan; animaatiota ja uutta leimaa ei kytketä ilman omistajan hyväksyntää. Pelissä: v1721, PuluCam 58/58 + tarra B, luentakuvia 11 kaupungissa. Kirjoittakaa edelleen posti/kuvatoimitus.md:n ja posti/matkakirja-eurooppa-20260909.md:n kärkeen.
