@@ -97,6 +97,9 @@ import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 // Ilmepaketti (omistaja 5.9.2026): kynän korostus pöllön vinkkiin ja sähkeen kysymysriviin.
 import { korostaSana, korostaSisalto } from './ilme.js';
 import { el } from './mapart.js';
+// Kartan oma "Etsi aarre" -nappi: nousee kommentin jälkeen, lähtee
+// kaupungista lähdettäessä (js/etsi-aarre-nappi.js).
+import { naytaEtsiAarreNappi, piilotaEtsiAarreNappi } from './etsi-aarre-nappi.js';
 import { valokuvaUrl, valokuvaVara, valokuvaSuurennos } from './packs/africa-valokuvat.js';
 // Vihjelinkin osiotunniste ja sen näyttönimi (ks. piirraVihjelinkki).
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
@@ -840,6 +843,12 @@ export function vaiennaLivianKaupunkipuhe(ui) {
    * lähdettäessä. Kuva häipyy pehmeästi kuten kuplatkin.
    */
   piilotaLuentakuva(ui);
+  /*
+   * ETSI AARRE -NAPPI LÄHTEE SAMASSA (omistaja 9.9.2026): nappi kuuluu
+   * sen kaupungin kommenttiin, jonka jälkeen se nousi, eikä se saa jäädä
+   * kartalle osoittamaan kaupunkia, josta on jo lähdetty.
+   */
+  piilotaEtsiAarreNappi(ui);
 }
 
 /** Kaupungin uuden kulun kentät yhtenä oliona (tyhjät listat, jos ei ole). */
@@ -1124,6 +1133,16 @@ export function fokusvirtaSaapumiskupla(ui, city) {
         aani,
         ...livianPuherytmi(city.id, kentta),
       });
+      /*
+       * ETSI AARRE -NAPPI KARTALLE (omistaja 9.9.2026, sanatarkasti:
+       * *"kun pulun kommentti on tullut, kartalle saisi tulla kaupungin
+       * laatan viereen nappi: Etsi aarre, mikä avaisi kaupunkilehden."*).
+       * Tämä on se yksi kohta, jossa kommentti oikeasti nousee ruudulle
+       * — kutsuhetki ei kelpaa, koska ketju odottaa luentaa ja
+       * paljastussarjaa. Nappi tekee saman kuin kortin "Etsi kätkö"
+       * (js/etsi-aarre-nappi.js), ja kaupunki ilman kätköä ei saa sitä.
+       */
+      naytaEtsiAarreNappi(ui, city);
     }), SAAPUMISKUPLAN_TAUKO_MS);
   };
   /*

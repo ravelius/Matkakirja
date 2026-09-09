@@ -69,6 +69,8 @@ const SHELL = [
   // Kehittäjän kohtaamislista (5.9.2026): ui.js tuo sen staattisesti.
   './js/kohtaamistesti.js',
   './js/fokusvirta.js',
+  // Kartan "Etsi aarre" -nappi (9.9.2026): fokusvirta tuo sen staattisesti.
+  './js/etsi-aarre-nappi.js',
   './js/fokusniput.js',
   './js/fokuskohteet.js',
   './js/fokuspiste.js',

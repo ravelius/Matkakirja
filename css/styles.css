@@ -21423,6 +21423,75 @@ a.pollo-kasitelinkki:active { color: var(--pollo-muste); }
 }
 
 /* ---------------------------------------------------------------------
+   ETSI AARRE -NAPPI KAUPUNGIN LAATAN VIERESSÄ (js/etsi-aarre-nappi.js).
+
+   Omistaja 9.9.2026: *"kun pulun kommentti on tullut, kartalle saisi
+   tulla kaupungin laatan viereen nappi: Etsi aarre, mikä avaisi
+   kaupunkilehden."*
+
+   ANKKURI ON NOLLAN KOKOINEN ja istuu täsmälleen kaupungin kohdalla;
+   skripti kirjoittaa sen transformin joka kehyksellä. Nappi kasvaa
+   ankkurista ALAS OIKEALLE (left/top), jolloin laattaan poltettu nimi ja
+   pisteen osumapinta jäävät sen yläpuolelle — tekstin pituus ei voi
+   siirtää nappia niiden päälle. Siirto ja häivytys ovat eri
+   ominaisuuksia: transformia ei saa siirtää CSS-siirtymällä, koska
+   skripti päivittää sen kehyskohtaisesti.
+   --------------------------------------------------------------------- */
+.etsi-aarre-ankkuri {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+
+.etsi-aarre-ankkuri.nakyy { opacity: 1; }
+/* Kaupunki ajautui ruudun ulkopuolelle: nappi ei saa valehdella paikkaa. */
+.etsi-aarre-ankkuri.hukassa { opacity: 0; pointer-events: none; }
+
+/*
+ * KULTAREUNA, KERMAPOHJA — sama pelin nappityyli kuin kortin "Etsi
+ * kätkö" (.dialog.lehti .arrival-card .dialog-actions button.primary),
+ * mutta kartan päällä pohja on kermaa eikä täyttä kultaa: kultainen
+ * laatikko hukkuisi kartan omiin kultaisiin merkkeihin.
+ */
+.etsi-aarre-nappi {
+  position: absolute;
+  /*
+   * Mitat kaappauksesta (Lontoo pallolaudalla 9.9.2026): laattaan
+   * poltettu nimi kulkee pisteestä oikealle sen omalla rivillään, joten
+   * nappi lasketaan sen ALAPUOLELLE — 0,5 rem jäi nimen kylkeen kiinni.
+   */
+  left: 0.65rem;
+  top: 1rem;
+  min-height: 32px;
+  padding: 0.2rem 0.7rem;
+  border: 1.5px solid #8a6118;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f7ecd2, #ead9ae);
+  color: #2d1f08;
+  font-family: var(--font-otsikko, inherit);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 rgba(255, 245, 220, 0.6);
+  box-shadow: 0 2px 8px rgba(46, 30, 14, 0.28);
+  cursor: pointer;
+}
+
+.etsi-aarre-nappi:hover:not(:disabled) {
+  background: linear-gradient(180deg, #fdf5e2, #f0e2bd);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .etsi-aarre-ankkuri { transition: none; }
+}
+
+/* ---------------------------------------------------------------------
    KEVYT KUVAPOPUP nähtävyyslinkin päällä (js/pollo.js avaaKuvapopup).
 
    Linkki nähtävyysjuttuun avaa ensin pelkän kuvan ja sen valmiin

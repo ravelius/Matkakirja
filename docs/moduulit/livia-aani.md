@@ -163,6 +163,25 @@ Vanha `pollo.maadoitus` on **varapolku** kaupungille, jota ei ole vielä
 kirjoitettu uusiksi: se piirtyy kommenttina eli luennan jälkeen kuten
 ennenkin.
 
+### Etsi aarre -nappi kommentin jälkeen (omistaja 9.9.2026)
+
+Raamattu, PULUN KOMMENTIN JALKEEN KARTALLE NAPPI "ETSI AARRE"
+KAUPUNGIN LAATAN VIEREEN. Saapumisen kulku kartalla päättyy siis
+nappiin: **luenta (+ luentakuva) → pulun kommentti → nappi**. Nappi
+syntyy siinä yhdessä kohdassa, jossa kommenttikupla oikeasti nousee
+ruudulle (`fokusvirtaSaapumiskupla` → `nayta`), ei kutsuhetkellä — se ei
+siis voi tulla luennan aikana. Nappi on HTML-elementti karttapinnalla
+(`js/etsi-aarre-nappi.js`, css `.etsi-aarre-nappi`), se seuraa karttaa
+panoroitaessa ja zoomatessa samalla kaavalla kuin pulun paikkamerkki
+(`ui.nakyvaAlue()`), ja se toimii sellaisenaan tasokartalla ja
+pallolaudalla. Painallus tekee saman kuin kortin "Etsi kätkö" — sama
+funktio (`js/ui.js etsiKatko`), ei kopiota. Nappi jää pois, jos
+kaupungissa ei ole enää kätköä etsittävänä (`ui.tehtavaNapinTila` →
+`js/game.js tehtavaTarjolla`), ja poistuu kolmesta syystä: painalluksesta,
+kätkön löytymisestä muuta kautta ja kaupungista lähdöstä (sama koukku
+kuin luentakuvalla, `vaiennaLivianKaupunkipuhe`). Selainvartio:
+`tools/savukkeet/savuke-etsi-aarre.mjs`.
+
 ## Kaupunkikohtaiset lähteet
 
 Raamattu, VAIN EUROOPPA TYÖN ALLA: puhe soi Euroopan kaupungeissa,
