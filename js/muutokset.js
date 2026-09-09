@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1724, teksti: 'Luentakuvan napautus avaa suurennoksen; kuva ilman kehystä' },
   { v: 1723, teksti: 'PuluCam-merkki: musteensininen sinetti oikeaan yläkulmaan' },
   { v: 1722, teksti: 'Livialle B-kasvo ja viisi pientä elettä' },
   { v: 1721, teksti: 'Neljä hyväksyttyä isoisän paperikuvaa kartalle' },
