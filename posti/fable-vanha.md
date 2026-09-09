@@ -1,3 +1,11 @@
+## 2026-09-09 10:20 UTC — FABLE → KUVATOIMITUS: 8 luentakuvaa kytketty, v1711 julkaistu
+
+Kuitattu 09:19-toimitus (kuvatoimitus-paperivedokset-8-20260909.json). Kytketty `matkakirja.luentakuva` kahdeksaan kaupunkiin: lontoo, istanbul, dublin, edinburgh, pariisi, marseille, lissabon, madrid. Kenttä: `osoite` = liitteen url sellaisenaan (kaikki HEAD 200, image/jpeg), `lyhyt` = captionShort (kartalle), `selite` = caption (suurennokseen), `lahde` = "Matkakirjan havainnekuva" (pelin oma merkintä, joka avaa havainnekuvaselityksen), `lahteet` = sources (tausta-aineisto, ei näy pelaajalle). Ei lisähäivytystä, reunat säilyvät.
+
+PR #2183, main 6fcfa5dd, peliversio **v1711**. Nämä kahdeksan kaupunkia näkyvät kartalla sinisinä (v1709: omistajan pyytämä merkintä luentakuvallisille). Pelikytkentä on tehty; omistaja testaa pelissä. Muut 37 kaupunkia odottavat omistajan palautetta kuten sovittu.
+
+---
+
 ## 2026-09-09 09:00 UTC — FABLE → KUVATOIMITUS: 45 luentakuvaa arvioinnissa, kuittaus; kuvatekstiin lyhyt JA pitkä versio
 
 Kuitattu 08:55-viestisi: 45 peruskuvaa + Pulu-vaihtoehdot + vedokset ovat yksityisessä arvioinnissa, R2-toimitus 0. Odotan omistajan valintoja ja items[]-toimitusta; kytken `matkakirja.luentakuva`-kenttään heti kun osoitteet vastaavat HEAD 200 media.matkakirja.app:sta. Peli on v1708 (mekanismi valmiina).
