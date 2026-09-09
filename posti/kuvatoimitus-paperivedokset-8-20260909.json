@@ -1,0 +1,220 @@
+{
+  "orderId": "EUROOPPA-MATKAKIRJA-1873-20260909-PAPER-8",
+  "createdAt": "2026-09-09T09:17:47.779215+00:00",
+  "status": "r2-verified-user-approved-awaiting-fable-integration",
+  "userAuthorization": "Voit lähettää nämä kahdeksan versiota suoraan peliin. Testaan vielä kuvien toimivuuden siellä ja jatketaan sen jälkeen.",
+  "integrationTarget": "matkakirja.luentakuva",
+  "instructions": "Kytke nämä kahdeksan valittua paper-v2-versiota heti käyttäjän pelitestiä varten. Käytä suoraa osoite-kenttää annetuilla URL:eilla, koska ampari-kenttä lisää julisteet/-etuliitteen. Ei automaattista lisähäivytystä; kuvissa on jo paperireuna ja vaalea vinjetti. Käyttäjä testaa toimivuuden, muita kuvia jatketaan vasta palautteen jälkeen.",
+  "items": [
+    {
+      "cityId": "lontoo",
+      "id": "matkakirja-eurooppa-1873-lontoo-r20260909-paper-v2",
+      "primary": true,
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-r20260909-paper-v2.jpg",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-r20260909-paper-v2.jpg",
+      "captionShort": "Höyryjuna ja sanomalehdenlukija Lontoon Metropolitan Railwayn asemalla vuonna 1873.",
+      "caption": "Lontoo, joulukuu 1873: höyryjuna odottaa avokaivantoasemalla, ja herrasmies lukee sanomalehteä höyryn keskellä.",
+      "sourceLine": "Tekoälyllä tuotettu historiallinen kuvitus vuoden 1873 matkakertomukseen.",
+      "sources": [
+        "https://collection.sciencemuseumgroup.org.uk/objects/co8031819/henry-flather-collection-photographs",
+        "https://historicengland.org.uk/listing/the-list/list-entry/1239815?section=official-list-entry",
+        "https://collection.sciencemuseumgroup.org.uk/people/ap27611/metropolitan-railway",
+        "https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/33362"
+      ],
+      "sha256": "efed35308641e7c7cbc3b22b8b4edb8d280f6dc506edbe3e3f4579fe2b588510",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "sRGB ICC",
+      "rootQa": "passed",
+      "userApproved": true,
+      "reviewSourceSha256": "cf0499ad62c736e2455e4262f025a0ec5fb0306ade3bcbeaaaf4c9e37a01a905",
+      "prompt": "# Lontoo — hillitty paperivedos v2\n\nUse case: historical-scene. Image 1 is the approved UNAGED London historical composition reference. Generate ONE ENTIRELY FRESH full image from scratch; do not paste, edit, filter, recolor, or retain its pixels. Landscape 3:2, requested 1536x1024 INCLUDING a physical paper border. Recreate the same London December 1873 Metropolitan Railway scene: an early cut-and-cover open railway station in winter daylight, London stock brick retaining walls, restrained iron-and-glass platform canopy, gas lamps, two rails; a completely stationary compact early steam tank locomotive coupled coherently to plain wooden compartment carriages; thin lingering steam; at near right an ordinary middle-aged gentleman in dark 1873 clothes and top hat seated still on a simple wooden bench, calmly reading one believable folded newspaper with no readable text. Preserve the strong rail diagonal, train left-middle, daylight opening, reader right, and understated humor. The unseen grandfather/photographer/camera must never appear in any form.\n\nRender the photograph itself in neutral black and white as a plausible 1873 wet-plate/albumen photograph, with fine irregular photographic grain, clear architectural detail, and gentle authentic optical softness. Present it as a restrained real old print using the EARLIER PILOT METHOD: NARROW 2–3% visible ivory paper margins on all four sides, paper alone with a very slight ivory cast and subtle fine fiber. Add only a modest PALE edge vignette within the photograph, gently blending toward the paper while bricks, canopy, rails, platform, train and bench remain clearly visible all the way near the boundary. The vignette must be restrained and natural, never intensified, broad, foggy, or washed to blank white. At most one extremely faint shallow handling crease and sparse tiny age marks away from the man and train.\n\nNo broad white haze, repeated diagonal scratches, dramatic stains, tears, burnt edges, foxing spectacle, dark vignette, heavy sepia, warm-toned photograph, writing, caption, typography, watermark, decorative frame, scrapbook, curled loose sheet, modern objects, London Underground roundel, electric train, painterly rendering, CGI, visible photographer, grandfather, camera, shadow, reflection, or proxy portrait. Preserve scene detail and historical railway geometry above all.\n",
+      "historicalNotes": "Dokumentoitu 1863 Metropolitan Railwayn höyrykalusto ja avokaivantoasemien tiilimuurien sekä rauta-lasikatosten rakennetyyppi. Nimetön asema ja sanomalehdenlukija ovat tilauksen mukainen fiktiivinen rekonstruktio."
+    },
+    {
+      "cityId": "istanbul",
+      "id": "matkakirja-eurooppa-1873-istanbul-r20260909-paper-v2",
+      "primary": true,
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-istanbul-r20260909-paper-v2.jpg",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-istanbul-r20260909-paper-v2.jpg",
+      "captionShort": "Kantaja levähtää matka-arkkunsa vieressä Galatan mäessä vuonna 1873.",
+      "caption": "Konstantinopoli, syyskuu 1873: kantaja levähtää arkun vieressä jyrkällä Galatan kujalla; alhaalla näkyvät laivat ja Kultainen sarvi.",
+      "sourceLine": "Tekoälyllä tuotettu historiallinen kuvitus vuoden 1873 matkakertomukseen.",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/263021",
+        "https://archives.saltresearch.org/handle/123456789/204674"
+      ],
+      "sha256": "787799c817ae2d40a887ae8e6091acc9dded48467c5adaa635dbdd86cecc16d0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "sRGB ICC",
+      "rootQa": "passed",
+      "userApproved": true,
+      "reviewSourceSha256": "440325830d0662d7ede26e058ef1c82aefbcd25d30b80a5d254da61a153fd24c",
+      "prompt": "Use case: historical-scene. Image 1 is the approved unaged Istanbul scene and primary content reference. Generate ONE ENTIRELY NEW image from scratch; do not paste, edit, filter, recolor or retain pixels. Landscape 3:2 requested 1536x1024 including print margins. Recreate Galata, September 1873: steep cobbled lane, resting hamal at left beside his complete travel trunk, close projecting wooden houses, restrained Tünel work detail, Bosporus harbor and sailing masts below; ordinary period people, no grandfather, photographer or camera. Use the restrained first-pilot print method: neutral black-and-white wet-plate/albumen photograph, fine irregular photographic grain, gentle authentic optical softness, narrow 2–3% lightly ivory textured paper margins on all four sides, and a modest pale photographic vignette near edges. Preserve readable buildings, road and harbor beneath the fade. Natural old-print character with at most tiny handling marks. No broad white halo or washout, emphatic all-edge bleaching, excessive wrinkles or scratches, dramatic damage, heavy sepia, dark vignette, stains, tears, writing, text, decorative frame, modern objects, painting or CGI.\n",
+      "historicalNotes": "Approved Galata reconstruction retained as content guidance; fully regenerated."
+    },
+    {
+      "cityId": "dublin",
+      "id": "matkakirja-eurooppa-1873-dublin-r20260909-paper-v2",
+      "primary": true,
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dublin-r20260909-paper-v2.jpg",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dublin-r20260909-paper-v2.jpg",
+      "captionShort": "Panimotyöläinen levähtää tynnyrien vieressä Dublinissa vuonna 1873.",
+      "caption": "Dublin, syyskuu 1873: St James’s Gaten panimon lastauspihalla työntekijä pyyhkii otsaansa; puutynnyrit ja hevoskärryt odottavat.",
+      "sourceLine": "Tekoälyllä tuotettu historiallinen kuvitus vuoden 1873 matkakertomukseen.",
+      "sources": [
+        "https://www.dublincity.ie/sites/default/files/2020-10/hoyd-volume-1.pdf",
+        "https://www.dublincity.ie/sites/default/files/media/file-uploads/2018-05/Liberties_LAP.pdf"
+      ],
+      "sha256": "1292b45436234053094b423acc2cfd9fcbaf8c3f8bb558cf24947002414539fc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "sRGB ICC",
+      "rootQa": "passed",
+      "userApproved": true,
+      "reviewSourceSha256": "1292b45436234053094b423acc2cfd9fcbaf8c3f8bb558cf24947002414539fc",
+      "prompt": "Use case: historical-scene. Image 1 is the approved Dublin historical scene and composition reference. Generate one entirely fresh full photograph from scratch; do not edit, filter, recolor, paste, or retain its pixels. Landscape 3:2, requested 1536x1024 including physical paper border.\nRecreate St James's Gate brick loading yard in September 1873: rows of heavy wooden barrels, a barrel handcart, one tired local brewery worker standing still beside it and wiping his forehead with his shirt sleeve, and a harnessed horse cart behind. Preserve coherent cobbled-yard depth, arched brick loading bays, restrained industrial structures, authentic Irish working clothing and natural overcast light. No grandfather, traveler, photographer or camera visible in any form.\nRender the photograph itself in neutral black and white as a plausible 1873 wet-plate/albumen image with fine irregular photographic grain and gentle authentic optical softness. Present it as a real old print with narrow visible paper margins, about 2 to 3 percent, on all four sides. The paper alone has a very slight restrained ivory cast and visible fine paper fiber. Add a modest pale edge vignette within the photograph that gently blends toward the paper, while all picture edges, brickwork, barrels, cobbles, worker and horse remain clearly visible. The transition must never wash out to blank digital white. Add only restrained natural age: at most one faint shallow crease and sparse tiny age marks, away from faces.\nNo branded Guinness graphics, labels, signs or readable writing. No birds. No dark vignette, broad white haze, heavy sepia, repeated diagonal scratches, heavy wrinkling, dramatic tears, burnt/deckled edges, large stains, thick mat, caption, handwriting, text, watermark, modern objects, painterly rendering or CGI.\n",
+      "historicalNotes": "Fresh generation preserves the approved 1873 St James's Gate barrel yard, handcart, tired worker and harnessed horse cart."
+    },
+    {
+      "cityId": "edinburgh",
+      "id": "matkakirja-eurooppa-1873-edinburgh-r20260909-paper-v2",
+      "primary": true,
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-edinburgh-r20260909-paper-v2.jpg",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-edinburgh-r20260909-paper-v2.jpg",
+      "captionShort": "Pyykkiä ja päällekkäisiä kulkureittejä Edinburghin Old Townissa vuonna 1873.",
+      "caption": "Edinburgh, 1873: sukkapyykki riippuu monitasoisen porraskujan yllä, nainen seisoo ovella ja linnakallio näkyy kaukana. Kuvitteellinen kuja historiallisten rakennustyyppien pohjalta.",
+      "sourceLine": "Tekoälyllä tuotettu historiallinen kuvitus vuoden 1873 matkakertomukseen.",
+      "sources": [
+        "https://canmore.org.uk/site/52499/edinburgh-old-town",
+        "https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/history/"
+      ],
+      "sha256": "5e083b8469ea3356a4f6b046fff171bfa491350cc497bfcee3f38af8faa079fb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "sRGB ICC",
+      "rootQa": "passed",
+      "userApproved": true,
+      "reviewSourceSha256": "fa919e9ef2041b6c13c7577ed97b13b79bf65df6d4330fc0103b18b715c8466e",
+      "prompt": "# Edinburgh — hillitty paperivedos v2\n\nUse case: historical-scene. Image 1 is the approved UNAGED Edinburgh composition reference. Generate ONE ENTIRELY FRESH full image from scratch; do not paste, edit, filter, recolor, or retain its pixels. Landscape 3:2, requested 1536x1024 INCLUDING a physical paper border. Recreate the same August 1873 Edinburgh Old Town historical reconstruction: a steep, narrow, multi-level stone close framed by tall rough masonry tenements; descending worn stone steps, iron handrails, a small bridge or elevated walkway crossing the close, layered passages; several socks and plain linens hanging still from one washing line overhead; Edinburgh Castle and Castle Rock clearly but naturally visible at real middle distance beyond the dense roofs. One modestly dressed adult woman stands still and small in a left doorway, with one or two tiny stationary scale figures lower in the close. Preserve the deep downward view, intimate vertical stone enclosure, laundry detail, and distant castle. This is a historically grounded reconstruction rather than a claim to document one named exact close. The unseen grandfather/photographer/camera must never appear.\n\nRender the photograph itself in neutral black and white as a plausible 1873 wet-plate/albumen photograph with fine irregular photographic grain, detailed stone, and gentle authentic optical softness. Present it as a restrained real old print using the EARLIER PILOT METHOD: NARROW 2–3% visible ivory paper margins on all four sides, paper alone with a very slight ivory cast and subtle fine fiber. Add only a modest PALE edge vignette within the photograph that gently blends toward the paper, while masonry, windows, stairs, handrails, woman, laundry, roofs, Castle Rock and castle remain readable near every boundary. The vignette must be restrained and natural, never intensified, broad, foggy, or washed to blank white. At most one extremely faint shallow handling crease and sparse tiny age marks away from faces and castle.\n\nNo broad white haze, repeated diagonal scratches, dramatic stains, tears, burnt edges, foxing spectacle, dark vignette, heavy sepia, warm-toned photograph, writing, caption, typography, watermark, decorative frame, scrapbook, curled loose sheet, modern objects, modern railings, tourist signs, painterly rendering, CGI, visible photographer, grandfather, camera, shadow, reflection, or proxy portrait. Preserve the architectural depth, socks on washing line, and plausible castle geography above all.\n",
+      "historicalNotes": "Old Townin päällekkäiset kulkutasot, jyrkät closet ja Castle Rock muodostavat historiallisen rekonstruktion; kuva ei dokumentoi tarkasti nimettyä kujaa."
+    },
+    {
+      "cityId": "pariisi",
+      "id": "matkakirja-eurooppa-1873-pariisi-r20260909-paper-v2",
+      "primary": true,
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260909-paper-v2.jpg",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260909-paper-v2.jpg",
+      "captionShort": "Leipää kantava mies keskeneräisen Palais Garnier’n edessä vuonna 1873.",
+      "caption": "Pariisi, 1873: leipää kantava mies pysähtyy keskeneräisen Palais Garnier’n rakennustyömaalle; pieni kyyhky seisoo sivummalla kivellä.",
+      "sourceLine": "Tekoälyllä tuotettu historiallinen kuvitus vuoden 1873 matkakertomukseen.",
+      "sources": [
+        "https://www.parismuseescollections.paris.fr/en/node/490866",
+        "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-du-palais-garnier-actuel-opera-national-de-paris-9eme"
+      ],
+      "sha256": "a46350e8f8cd6408051edff1ae149bf6ca6f0c9aaa54cff3faae4078511bd4f0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "sRGB ICC",
+      "rootQa": "passed",
+      "userApproved": true,
+      "reviewSourceSha256": "8089387f0a4c3716e55c00650a79c4290205b2fe31cb3c91d1854b1e61903233",
+      "prompt": "# Pariisi — hillitty paperivedos v2\n\nUse case: historical-scene. Image 1 is the approved UNAGED Paris Pulu-alternative composition reference. Generate ONE ENTIRELY FRESH full image from scratch; do not paste, edit, filter, recolor, or retain its pixels. Landscape 3:2, requested 1536x1024 INCLUDING a physical paper border. Recreate Paris in October 1873 with the recognizable Palais Garnier still under construction, grounded in the circa-1864 and circa-1871 Musée Carnavalet construction photographs: the monumental ornate main facade, paired columns, arches, sculptural groups and roofline largely established, but restrained timber scaffolding remains at the sides and upper portions; rough muddy worksite foreground, plank fencing, stone blocks and construction materials. At lower left foreground, one ordinary stationary working man in plausible 1873 clothes carries a loaf of bread tucked under one arm. Retain EXACTLY ONE small but findable ordinary gray city rock pigeon with dark wing bars, realistic anatomy, standing quietly on a low stone block or believable ledge in the lower-right worksite; secondary and never competing with architecture or man. No other birds. Preserve the emotional and spatial composition: grand unfinished building, humble bread carrier, subtle pigeon cameo. The pigeon is unnamed and only ambiguously evocative of Pulu. The unseen grandfather/photographer/camera must never appear.\n\nRender the photograph itself in neutral black and white as a plausible 1873 wet-plate/albumen photograph with fine irregular photographic grain, crisp architectural evidence and gentle authentic optical softness. Present it as a restrained real old print using the EARLIER PILOT METHOD: NARROW 2–3% visible ivory paper margins on all four sides, paper alone with a very slight ivory cast and subtle fine fiber. Add only a modest PALE edge vignette within the photograph that gently blends toward paper, while facade, scaffolding, worksite, bread carrier and pigeon remain visible and detailed near boundaries. The vignette must be restrained and natural, never intensified, broad, foggy or washed to blank white. At most one extremely faint shallow handling crease and sparse tiny age marks away from the man, pigeon and facade.\n\nNo broad white haze, repeated diagonal scratches, dramatic stains, tears, burnt edges, foxing spectacle, dark vignette, heavy sepia, warm-toned photograph, writing, caption, readable signage, typography, watermark, decorative frame, scrapbook, curled loose sheet, modern objects, completed modern plaza, painterly rendering, CGI, cartoon bird, mascot, bird costume, speech, visible photographer, grandfather, camera, shadow, reflection, or proxy portrait. Preserve the documented building form and the single subtle pigeon above all.\n",
+      "historicalNotes": "Carnavalet'n noin 1871 ja 1864 albumiinivedokset ohjaavat keskeneräistä Palais Garnieria. Leipää kantava mies ja yksi tavallinen kaupunkikyyhky ovat fiktiivisiä."
+    },
+    {
+      "cityId": "marseille",
+      "id": "matkakirja-eurooppa-1873-marseille-r20260909-paper-v2",
+      "primary": true,
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-marseille-r20260909-paper-v2.jpg",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-marseille-r20260909-paper-v2.jpg",
+      "captionShort": "Saippuakauppias, köydet ja purjeveneet Marseillen vanhassa satamassa vuonna 1873.",
+      "caption": "Marseille, syyskuu 1873: kauppias lepää saippuaharkkojen ja laivaköyden ääressä. Vieux-Portin mastot, kalakorit ja rantatalot jatkavat sataman tarinaa.",
+      "sourceLine": "Tekoälyllä tuotettu historiallinen kuvitus vuoden 1873 matkakertomukseen.",
+      "sources": [
+        "https://collections.musees.marseille.fr/",
+        "https://www.musee-orsay.fr/sites/default/files/2021-10/feuilletage_cinema_2.pdf"
+      ],
+      "sha256": "a9c983a87026a80b00b628bfa90a9401b0c00bfd5e1d9755b8dd508a2daba975",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "sRGB ICC",
+      "rootQa": "passed",
+      "userApproved": true,
+      "reviewSourceSha256": "786eda26a9465b7cdc45009a5b7a83f0675058896bf09948d8f47590fc83bea5",
+      "prompt": "Use case: historical-scene. Image 1 is the approved unaged Marseille scene and primary reference. Generate ONE ENTIRELY NEW image from scratch; no retained pixels or filtering. Landscape 3:2 requested 1536x1024 including margins. Marseille Vieux-Port, September 1873: quay-side merchant paused at wooden stall; large plain Marseille soap blocks on table, worn rope, fish baskets, dense sailing masts and old stone waterfront behind. Accurate ordinary 1873 work clothes; hands and objects complete; no grandfather, photographer or camera. Restrained first-pilot physical print: neutral black-and-white wet-plate/albumen photograph, fine irregular photographic grain, gentle optical softness, narrow 2–3% lightly ivory textured paper margins, modest pale edge vignette with quay, baskets, boats and buildings still readable beneath fade; only tiny natural handling marks. No broad white halo or washout, excessive wrinkles or scratches, dramatic damage, heavy sepia, dark vignette, tears, stains, writing, text, logos, modern boats, painting or CGI.\n",
+      "historicalNotes": "Approved Vieux-Port reconstruction retained as content guidance; fully regenerated."
+    },
+    {
+      "cityId": "lissabon",
+      "id": "matkakirja-eurooppa-1873-lissabon-r20260909-paper-v2",
+      "primary": true,
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lissabon-r20260909-paper-v2.jpg",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lissabon-r20260909-paper-v2.jpg",
+      "captionShort": "Nainen neuvoo tietä Alfaman portailla Lissabonissa vuonna 1873.",
+      "caption": "Lissabon, lokakuu 1873: ovenpielessä istuva nainen neuvoo portaita ylöspäin, ja Tejo välähtää kattojen välistä. Historiallisten rakennustyyppien pohjalta kuviteltu Alfaman kuja.",
+      "sourceLine": "Tekoälyllä tuotettu historiallinen kuvitus vuoden 1873 matkakertomukseen.",
+      "sources": [
+        "https://www.patrimoniocultural.gov.pt/wp-content/uploads/2024/08/ER4.pdf",
+        "https://imovel2.patrimoniocultural.gov.pt/detalhes.php?code=19448470"
+      ],
+      "sha256": "6bacf9238501855941edcf6a89efe4866239262fa788b310e12029c4a48b0e35",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "sRGB ICC",
+      "rootQa": "passed",
+      "userApproved": true,
+      "reviewSourceSha256": "7a5154815df7187daf0e7e45f814a5ebea26c73c75ba0e8151c0d18cad389231",
+      "prompt": "Use case: historical-scene. Image 1 is the approved unaged Lisbon scene and primary content reference. Generate ONE ENTIRELY NEW image from scratch; no retained pixels or filtering. Landscape 3:2 requested 1536x1024 including margins. Alfama, October 1873, human-eye view: steep layered stone stair-lane between worn plaster houses and tile roofs; ordinary local woman in accurate 1873 dress sits in doorway at left calmly pointing upward; narrow glimpse of Tagus between roofs. Preserve complete woman, gesture, stair geometry and river view. No grandfather, photographer or camera. Restrained first-pilot physical print: neutral black-and-white wet-plate/albumen photograph, fine irregular photographic grain, gentle optical softness, narrow 2–3% lightly ivory textured paper margins, modest pale vignette near edges while wall, steps and doorway stay readable beneath fade; only tiny natural handling marks. No broad white halo or washout, excessive wrinkles or scratches, dramatic damage, heavy sepia, dark vignette, tears, stains, writing, text, elevator, tram or modern objects, painting or CGI.\n",
+      "historicalNotes": "Approved Alfama reconstruction retained as content guidance; fully regenerated."
+    },
+    {
+      "cityId": "madrid",
+      "id": "matkakirja-eurooppa-1873-madrid-r20260909-paper-v2",
+      "primary": true,
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-madrid-r20260909-paper-v2.jpg",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-madrid-r20260909-paper-v2.jpg",
+      "captionShort": "Vierailija katsoo Las Meninasia Madridin Pradossa vuonna 1873.",
+      "caption": "Madrid, 1873: nimetön vierailija istuu Pradon salissa Las Meninasin edessä. Historiallinen ripustus ja maalauksen kuvapinta ovat generoituja tulkintoja, eivät tarkka museonäkymä tai teosjäljennös.",
+      "sourceLine": "Tekoälyllä tuotettu historiallinen kuvitus vuoden 1873 matkakertomukseen.",
+      "sources": [
+        "https://www.museodelprado.es/en/learn/encyclopedia/voice/meninas-las-velazquez/296ac38f-8bf6-439d-b13c-ed22de8c39de",
+        "https://www.museodelprado.es/en/museum/history-of-the-museum"
+      ],
+      "sha256": "ba795d31629ba881ce5a017ddf1992baede1bd20ec1bb39925b0aa726d6da93b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "sRGB ICC",
+      "rootQa": "passed",
+      "userApproved": true,
+      "reviewSourceSha256": "ba795d31629ba881ce5a017ddf1992baede1bd20ec1bb39925b0aa726d6da93b",
+      "prompt": "Generate one entirely fresh full image from scratch, not an edit. Historical-scene, landscape 3:2, requested 1536x1024 including paper margin. Recreate only the approved Madrid content in Image 1: Prado Museum natural-light painting gallery in March 1873; Las Meninas recognizable within a large ornate wall frame as the central artwork; restrained surrounding old-master paintings; polished wood floor, high window, simple upholstered bench; one anonymous adult visitor seated perfectly still in side profile contemplating Las Meninas. Quiet spacious pre-1878 museum character. No grandfather, photographer, camera, reflection or modern museum technology.\nThe photographic image is neutral black and white, plausible 1873 wet-plate/albumen, with fine irregular grain and gentle optical softness. Narrow visible paper margins, 2 to 3 percent, all four sides; only paper has slight ivory warmth and fine fiber. Modest pale edge vignette within photograph, preserving clear wall, floor and painting detail through every image edge, never blank-white washout. Paper is intact, calm and minimally aged.\nCritical: absolutely no scratches, diagonal lines caused by damage, crease lines, cracks, tears, foxing, stains, abrasions or corner damage anywhere. Clean intact narrow print edge.\nNo birds, readable labels, signs, caption, handwriting, title, text or watermark. No dark vignette, broad haze, strong sepia, heavy wrinkling, torn/burnt/deckled edge, thick mat, CGI or painterly overall scene. Las Meninas remains a framed painting inside a camera-made historical photograph.\n",
+      "historicalNotes": "Fresh generation presents a reconstructed pre-1878 Prado hanging and a generated, recognizable interpretation of Las Meninas rather than an exact reproduction of the painting; the anonymous seated visitor is also reconstructed."
+    }
+  ]
+}

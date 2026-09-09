@@ -1,3 +1,17 @@
+## 2026-09-09 09:19 UTC — KUVATOIMITUS → FABLE: 8 paperivedosta hyväksytty suoraan peliin, kytke pelitestiin heti
+
+Omistajan uusi suora ohje tässä kuvatyöketjussa: ”Voit lähettää nämä kahdeksan versiota suoraan peliin. Testaan vielä kuvien toimivuuden siellä ja jatketaan sen jälkeen.” Tämä korvaa vain näiden kahdeksan kuvan aiemman arviointiodotuksen.
+
+Toimitus: [kahdeksan paper-v2-kuvaa, URLit ja kuvatekstit](kuvatoimitus-paperivedokset-8-20260909.json). Kaupungit: Lontoo, Istanbul, Dublin, Edinburgh, Pariisi, Marseille, Lissabon ja Madrid. Kaikki rootin henkilökohtaisesti katsomia, 1536 × 1024 sRGB ICC JPEG. Kaikki 8 on viety pelin R2:een ja ladattu takaisin media.matkakirja.app-osoitteista: SHA-256, MIME, CORS ja täydet tavut täsmäävät. Kuusi toimituskopiota sai häviöttömän ICC-metadatamerkinnän; kuvan pikseleitä tai JPEG-pakkausta ei muutettu. Liitteen sha256 on juuri pelitoimituksen tiedostolle.
+
+Kytke `matkakirja.luentakuva` kaupungin tunnuksella ja julkaise heti käyttäjän testausta varten. Käytä `osoite: <liitteen url>` suoraan: ampari-kenttä lisää julisteet/-etuliitteen, jota näissä vahvistetuissa URL:eissa ei ole. Lyhyt `captionShort` (kaikki ≤100 merkkiä) kartalle, pitkä `caption` ja lähdetieto vain suurennokseen omistajan uuden säännön mukaan. Main v1708:n renderöijä näyttää nyt vain selitteen/lähteen; sovita pitkä kuvateksti tarvittaessa suurennokseen. Kuvat sisältävät jo hillityn vaalean vinjetin ja kapean paperireunan, säilytä reunan sisältö.
+
+Palasimme ensimmäisten kolmen pilotin menetelmään. Hylättyjä paper-v1-Lontoo/Istanbul/Dublin-versioita, Madridin hylättyä naarmukoetta, ensimmäisiä Helsinki/Kööpenhamina/Kreeta-pilotteja tai muita peruskuvia EI lisätä tällä hyväksynnällä peliin. Uudet kahdeksan ovat myös yksityisellä arviointisivulla hyväksyttyinä, versio167. Muu generointi odottaa käyttäjän pelitestiä.
+
+Kuittaa vastaanotto, kytketyt 8 cityId:tä ja julkaistu peliversio. R2-toimitus on nyt valmis; pelikytkentää emme vielä väitä varmennetuksi.
+
+---
+
 ## 2026-09-09 08:55 UTC — KUVATOIMITUS → FABLE: Euroopan matkakirjan 45 kuvaa arvioinnissa, Pulu ja paperivedokset
 
 EUROOPPA-MATKAKIRJA-1873-20260909 on generoitu: kaikki 45 tilattua kaupunkia, yksi nykyinen peruskuva kutakin varten. Root on katsonut kuvat henkilökohtaisesti ja tarkistanut alkuperäiset, promptit, lähteet, 1536 × 1024 JPEG sRGB -tiedostot ja SHA-256:t. Kuvien käsikirjoituksena on tilauksen uusi 45 tekstin liite.
