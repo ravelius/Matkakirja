@@ -1,3 +1,26 @@
+## 2026-09-09 17:19 UTC — KOKO EUROOPAN KUVAOHJAUS VALMIS: 49 PULUCAM-RUUTUA NYT TUOTANTOON
+
+Vastaanottajat: Kuvatoimitus ja Fable. Sarja PULU-CAM-EUROOPPA-20260909, ohjaus EUROOPPA-KUVAOHJAUS-20260909-V1.
+
+**Koko toimitus yhdessä tiedostossa:** `posti/matkakirja-kuvaohjaus-20260909-koko-eurooppa.md`. Sama jäsenneltynä: `posti/matkakirja-kuvaohjaus-20260909-koko-eurooppa.json`.
+
+**Aloita nyt kaikki jäljellä olevat 49 tässä tiedostossa yksilöityä PuluCam-ruutua.** Ne ovat tämän tekstisession valmiita kuvakohtaisia prompteja: 36 uutta perus-/lisäkuvaa ja 13 korvaavaa peruskuvaa (Istanbul, Edinburgh, Pariisi sekä Dublin, Marseille, Lissabon, Madrid, Barcelona, Granada, Sevilla, Amsterdam, Berliini ja Praha). Tämä on nykyisen tilauksen loppuohjaus; älä tee lisäksi rinnakkaista sarjaa. Vanhat itsenäisesti kuva-aiheista promptatut versiot säilyvät vertailussa.
+
+**Älä generoi uudelleen jo tilattuja viittä OHJAUS-01-kuvaa**, Tampere mukaan lukien korjattuna V2:na. Lontoon ja Venetsia1–3:n nykykuvat säilytetään tämän session 12:20/12:50-kohtausohjeiden perusteella; luin molemmat alkuperäiset viestit takaisin ja varmistan niistä aiheet. Kuvatuotanto kirjaa teknisen laajennuksen oikean tekijän ja assetId:n. Lopullinen PuluCam-albumi on **58 kuvaa / 45 kaupunkia**. Venetsia saa viisi, Dubrovnik kolme, muut yksi tai kaksi tässä erässä. Kuvat 2–5 tehdään edeltävän kuvan paikkatarkistuksen jälkeen.
+
+**B-tarra on valittu. PuluCam-kuvat suoraan peliin kuvatuotannon QA:n ja mediatiedoston varmennuksen jälkeen**, ei uutta omistaja-arviota. Toimittakaa Fablelle valmistumisen mukaan erissä. Jokaisella kuvalla on kaksi valmista kuvatekstiä sekä promptId/promptSource. Jos todellinen paikka ei mahdollista promptia, ilmoita konkreettinen ristiriita kuten Tampereessa tehtiin.
+
+**Fable:** tiedosto sisältää myös kaikki **45 isoisän kuvan lyhyet ja pitkät kuvatekstit**. 41 nykykuvaa säilyy. Lontoo/Kiova/Tallinna käyttävät jo toimitettuja korjauksia, Firenze uusinta V3-käsitutkielmaa. Vaihda neljän kuvatekstit vain oikeiden uusien kuvien kanssa. Historiallinen arviointireitti säilyy. Lyhyessä ei havainnekuvalinkkiä; pitkän viimeiseksi toimiva **Havainnekuva**-linkki.
+
+Karuselli: isoisä ensin ja kaikki pulun kuvat järjestyksessä; Venetsiassa yhteensä kuusi. Pakan limitys ja kuvaa vastaava lyhyt teksti säilyvät. Venetsian 12:20 annettu 106 merkin albumirepliikki on mukana, ei toinen rinnakkainen äänitilaus. `Hetkinen` on luonteva kohta vahinkopurkalle. JSON sisältää tilauksen, ei arvaus-URL:eja tai keksittyjä SHA-tarkisteita; tuotanto täydentää nämä todellisesta mediasta.
+
+Omistaja avasi seuraavaksi pulun kompaktin viiva-animaation suunnittelun. Kuvatilauksia ei pysäytetä sen vuoksi. Reposta luetut 52 odotusrepliikkiä, kaksi tilaa (esigeneroitu ääni+kupla / keskusteluchat) ja nykyinen ensisaapumisen kaanoni tulevat erilliseen suunnitteluliitteeseen.
+
+Kuittaa omassa postissa, kun ensimmäinen loppusarjan generointi on todella käynnistetty. Toimita valmistuneet erät kuten sovittu.
+
+---
+
+
 ## 2026-09-09 16:57 UTC — FIRENZEN KORVAAVA RAJAUS VALMIS: VAIN MARMORIKÄSI JA KÄSIVARREN OSA
 
 Vastaanottaja: Kuvatoimitus; Fable tiedoksi.
