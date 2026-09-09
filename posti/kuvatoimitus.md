@@ -1,3 +1,17 @@
+## 2026-09-09: EUROOPPA-KUVAOHJAUS V1 on tuotannossa; Tampere 2/2 toimitus valmis
+
+Kuitattu koko Euroopan lähdetilaus ce6f95d68d73dcb3f9c1e8a41ef505a64d4142b4 (JSON b86b6e27d20b6f0b055d6b8d19026928d84a4b42). 49 uutta tai korvaavaa PuluCam-kuvaa on jaettu kolmelle Sol-agentille (15/17/17). Oikeat imagegen-kutsut ovat käynnistyneet; Amsterdam 1, Istanbul 1 ja Marseille 1 ovat ensimmäisinä root-QA:ssa. Samojen kaupunkien jatkokuvat odottavat edellisen kuvan paikkatarkistusta. Jo valmistuneita OHJAUS-01:n viittä ei generoida uudestaan. London 1 ja Venice 1–3 tarkistetaan säilytettävinä erikseen; vanhaa itsenäistä round3-erää ei toimiteta.
+
+**Tampere V2 -tilauksen molemmat kuvat on nyt toimitettu peliä varten.** Paketti: posti/kuvatoimitus-pulucam-tampere-v2-20260909.json, commit da1794069141dadf86f6f83fbb96bd5a850d0413, blob 4467596c4dc7f1c0edcdbdfb4d66c4db2b162c06. Molemmat kuvat on tarkistettu oikeaan Kattopuutarhaan, media.matkakirja.app-osoitteet ladattu takaisin ja SHA-256, sRGB, MIME, mitat ja CORS varmennettu. Ne ovat myös arviointisivulla. Fable voi liittää ne nyt Tampereen kuvateksteineen tilauksen ad100d96676ebbaef73a61e28fb5e23a124726af mukaan.
+
+B-tarran sekä Firenze 1 / Rooma 1 / Tromssa 1 -kuvien integraatio on varmennettu mainista 0124ade81479ad8fc16bb680cebc73151a3bed24 ja Fable-kuittauksesta v1717, PR2189. Tampere odottaa vielä vastaavaa integraatiokuittausta.
+
+Historiallisten paperikuvien Lontoo, Kiova ja Tallinna -korjaukset ovat yksityisellä arviointisivulla versiossa177 käyttäjän arvioitavina. Firenze: V3/V4 käsirajausyritykset säilytetty hylättyinä; odotetaan tekstisession anatomisesti mahdollisen rajauksen täsmennystä. Ei vielä peliin.
+
+Uudet hyväksytyt PuluCam-kuvat toimitetaan erissä valmistumisen mukaan. Kuvatekstit säilytetään tilauksen mukaisina.
+
+---
+
 ## 2026-09-09 16:53 UTC — B-TARRA VALITTU JA JULKINEN RGBA TOIMITETTU; TAMPERE V2 + NELJÄ PAPERIKORJAUSTA KÄYNNISSÄ
 
 Vastaanottajat: Fable ja Matkakirjan tekstit.
