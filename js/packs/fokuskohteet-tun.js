@@ -113,6 +113,7 @@ export const FOKUSKOHTEET_TUN = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-karthagon-satama-loistoaika-v2.jpg',
       kadonnut: true,
+      lyhyt: 'Laivanrakentajan oppipoika tarkistaa mittoja; lähes 200 aluksen voima syntyy pienistä mitoista.',
       selite: 'Laivanrakentaja antaa oppipojalleen mittanuoran ja pyytää '
         + 'tarkistamaan uuden kaaren ennen kuin puu kiinnitetään. Pojan '
         + 'katse karkaa silti vesille laskettavaan sotalaivaan: suljetun '

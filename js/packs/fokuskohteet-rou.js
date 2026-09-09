@@ -175,6 +175,7 @@ export const FOKUSKOHTEET_ROU = [
      */
     kuva: {
       tiedosto: 'Casa Vlad Dracul din Sighisoara4.JPG',
+      lyhyt: 'Vlad Draculin talo Sighișoaran vanhassakaupungissa, Unescon listalla vuodesta 1999.',
       selite: 'Vlad Draculin talo Sighișoaran vanhassakaupungissa. '
         + 'Vanhakaupunki on ollut Unescon listalla vuodesta 1999.',
       lahde: 'Cezar Suceveanu, Wikimedia Commons (CC BY-SA 4.0)',
@@ -214,6 +215,7 @@ export const FOKUSKOHTEET_ROU = [
     // Myrabella, kuvattu 29.7.2012, kuvaus "Peleș Castle in Sinaia, Romania".
     kuva: {
       tiedosto: '01 Chateau Peles.jpg',
+      lyhyt: 'Peleșin linna Sinaiassa: peruskivi 22.8.1873, linna valmistui lopullisesti vasta 1914.',
       selite: 'Peleșin linna Sinaiassa. Peruskivi laskettiin 22. elokuuta '
         + '1873, ja linna valmistui lopullisesti vasta 1914.',
       lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',

@@ -102,6 +102,7 @@ export const FOKUSKOHTEET_SYR = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-palmyra.webp',
       kadonnut: true,
+      lyhyt: 'Belin temppeli oli Palmyran uskonnollinen keskus lähes 2000 vuotta; Isis tuhosi sen 30.8.2015.',
       selite: 'Belin temppeli oli Palmyran uskonnollinen keskus lähes '
         + 'kaksituhatta vuotta: pylväikön ympäröimä temppelirakennus '
         + 'keskellä 200 metrin levyistä pihaa, ensin pyhäkkönä, sitten '

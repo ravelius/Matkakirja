@@ -395,6 +395,7 @@ export const FOKUSKOHTEET_BGR = [
      */
     kuva: {
       tiedosto: 'Balkan Mountains from Trakia motorway 1.jpg',
+      lyhyt: 'Balkanvuorten harjanne: Triglav oikealla, Botev-huippu vasemmalla.',
       selite: 'Balkanvuorten harjannetta; oikealla Triglav ja vasemmalla '
         + 'Botev-huippu Keskisen Balkanin massiivissa.',
       lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
@@ -513,6 +514,7 @@ export const FOKUSKOHTEET_BGR = [
      */
     kuva: {
       tiedosto: 'Rose-picking in Bulgaria 1870ies.jpg',
+      lyhyt: 'Ruusunpoimintaa Kazanlakin lähellä 1870-luvulla, yhä käsin touko-kesäkuussa.',
       selite: 'Ruusunpoimintaa Kazanlakin lähellä 1870-luvulla. Kukat '
         + 'poimitaan käsin touko-kesäkuussa yhä samaan tapaan.',
       lahde: 'Felix Philipp Kanitz, "Donau-Bulgarien und der Balkan" '
@@ -674,6 +676,7 @@ export const FOKUSKOHTEET_BGR = [
      */
     kuva: {
       tiedosto: 'Round Church, Preslav - Church outside view.jpg',
+      lyhyt: 'Kultaisen kirkon rauniot Veliki Preslavissa, ensimmäisen Bulgarian valtakunnan pääkaupungissa.',
       selite: 'Kultaisen eli pyöreän kirkon rauniot Veliki Preslavissa, '
         + 'ensimmäisen Bulgarian valtakunnan pääkaupungissa.',
       lahde: 'Alexander.D.Hristov, Wikimedia Commons (CC BY-SA 4.0)',
@@ -776,6 +779,7 @@ export const FOKUSKOHTEET_BGR = [
     kuvat: [
       {
         tiedosto: 'Dalmatian pelican (Pelecanus crispus) in flight Danube delta.jpg',
+        lyhyt: 'Kiharapelikaani Tonavan suistossa Srebarnalla, jonka kaislikoissa pesii 179 lintulajia.',
         selite: 'Kiharapelikaani lennossa Tonavan suistossa, Srebarnan '
           + 'muuttoreitin varrella. Järven kaislikoissa pesii 179 '
           + 'lintulajia.',
@@ -838,6 +842,7 @@ export const FOKUSKOHTEET_BGR = [
      */
     kuva: {
       tiedosto: 'Kukeri razlog.JPG',
+      lyhyt: 'Kukereita Razlogin uudenvuoden kulkueessa; sama perinne kokoaa tuhannet Pernikin Survaan.',
       selite: 'Kukereita uudenvuoden kulkueessa Razlogissa. Sama '
         + 'naamioperinne kokoaa tuhannet kulkijat Pernikin Survaan.',
       lahde: 'Ivaneskoto, bg-Wikipedia / Wikimedia Commons (public '

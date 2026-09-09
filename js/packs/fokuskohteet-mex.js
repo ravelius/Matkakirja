@@ -112,6 +112,7 @@ export const FOKUSKOHTEET_MEX = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-templo-mayor-loistoaika-v2.jpg',
       kadonnut: true,
+      lyhyt: 'Kukkakauppiaan tytär näkee kaksoispyhäkön ensi kertaa, jonka ovet kuuluvat kahdelle jumalalle.',
       selite: 'Kuvituksen kukkakauppias pitää tytärtään hartioista, kun tämä '
         + 'näkee kaksoispyhäkön ensimmäisen kerran. Tavalliset '
         + 'kaupunkilaiset pääsevät pyhälle alueelle vain suurina '

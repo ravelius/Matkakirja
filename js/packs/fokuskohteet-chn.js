@@ -103,6 +103,7 @@ export const FOKUSKOHTEET_CHN = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-yuanmingyuan.webp',
       kadonnut: true,
+      lyhyt: 'Putkimestarin oppilas kastuu juuri kun keisarin seurue lähestyy palatsin suihkulähdettä.',
       selite: 'Nuori putkimestarin oppilas saa jääkylmän vesisuihkun '
         + 'syliinsä ja nauraa — kunnes huomaa hovieunukin katseen ja '
         + 'keisarin seurueen lähestyvän. Palatsin ihme toimii vain '

@@ -135,6 +135,7 @@ export const FOKUSKOHTEET_FRA = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg',
       kadonnut: true,
+      lyhyt: 'Palatsin ompelijan tytär ihastelee kristallikruunua; neljä vuotta myöhemmin palatsi palaa poroksi.',
       selite: 'Palatsin ompelija kiirehtii iltavastaanoton pukua sisään, mutta '
         + 'hänen tyttärensä pysähtyy katsomaan palvelijoiden kantamaa '
         + 'kristallikruunua. Lapselle pitkä kivijulkisivu on satulinna; '
@@ -220,6 +221,7 @@ export const FOKUSKOHTEET_FRA = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-bastilji-loistoaika-v2.jpg',
       kadonnut: true,
+      lyhyt: 'Käsityöläinen katsoo Bastillin kahdeksaa tornia, jotka symboloivat kuninkaan rajatonta valtaa.',
       selite: 'Faubourg Saint-Antoinen käsityöläinen pysäyttää kärrynsä '
         + 'vallihaudan reunalle ja nostaa katseensa vankilan kahdeksaan '
         + 'torniin. Linnoituksessa oli tuolloin vain vähän vankeja, mutta '

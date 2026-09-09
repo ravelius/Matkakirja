@@ -612,6 +612,7 @@ export const FOKUSKOHTEET_HUN = [
       + 'johdanto (tarkistettu 27.8.2026).',
     kuva: {
       tiedosto: 'Aggtelek - Baradla.jpg',
+      lyhyt: 'Baradlan luolan tippukiviä; luolasto jatkuu Slovakiaan yli kahdenkymmenen kilometrin mittaisena.',
       selite: 'Baradlan luolan tippukiviä; luolasto jatkuu Slovakian '
         + 'puolelle yli kahdenkymmenen kilometrin mittaisena.',
       lahde: 'Fenyessanyi, Wikimedia Commons (CC BY 3.0)',

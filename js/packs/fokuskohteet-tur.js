@@ -207,6 +207,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Ephesus Celsus Library Façade.jpg',
+      lyhyt: 'Celsuksen kirjaston julkisivu Efesoksessa; Artemiin temppelistä on jäljellä vain kivijalka.',
       selite: 'Celsuksen kirjaston julkisivu Efesoksessa. Artemiin '
         + 'temppelistä on jäljellä vain kivijalka ja yksi pylväs.',
       lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY-SA 3.0)',
@@ -223,6 +224,7 @@ export const FOKUSKOHTEET_TUR = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-artemiin-temppeli-loistoaika-v2.jpg',
       kadonnut: false,
+      lyhyt: 'Pyhiinvaeltaja tuo säästämänsä uhrilahjan Artemiin temppeliin, joka toimi myös pankkina.',
       selite: 'Pyhiinvaeltaja on ehkä säästänyt matkarahoja vuosia tuodakseen '
         + 'Artemiille pienen uhrilahjan. Temppelin portailla hänen '
         + 'vieressään kulkevat käsityöläiset, papit ja kauppiaat: pyhäkkö '
@@ -273,6 +275,7 @@ export const FOKUSKOHTEET_TUR = [
     // kuvaa.
     kuva: {
       tiedosto: 'Göreme Valley in Cappadocia edit1.jpg',
+      lyhyt: 'Göremen keijunsavupiippuja Kappadokiassa; kiveen on kaiverrettu satoja kirkkoja ja luostareita.',
       selite: 'Göremen laakson keijunsavupiippuja Kappadokiassa. Kiveen '
         + 'on kaiverrettu satoja kirkkoja ja luostareita.',
       lahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 3.0)',
@@ -365,6 +368,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Castillo de Ankara, Ankara, Turquía, 2024-10-03, DD 47.jpg',
+      lyhyt: 'Ankaran linna kaupungin vanhalla ytimellä; isoisän aikaan kaupunki tunnettiin Euroopassa Angorana.',
       selite: 'Ankaran linna kaupungin vanhan ytimen laella. Isoisän '
         + 'aikaan kaupunki tunnettiin Euroopassa nimellä Angora.',
       lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
@@ -567,6 +571,7 @@ export const FOKUSKOHTEET_TUR = [
     // Category:Göbekli Tepe. Laajalti käytetty yleiskuva kaivausalueesta.
     kuva: {
       tiedosto: 'Göbekli Tepe, Urfa.jpg',
+      lyhyt: 'Göbekli Tepen T-kirjaimen muotoiset kivipylväät ovat maailman vanhimpia tunnettuja megaliitteja.',
       selite: 'Göbekli Tepen kaivausaluetta. T-kirjaimen muotoiset '
         + 'kivipylväät ovat maailman vanhimpia tunnettuja megaliitteja.',
       lahde: 'Teomancimit, Wikimedia Commons (CC BY-SA 3.0)',
@@ -739,6 +744,7 @@ export const FOKUSKOHTEET_TUR = [
     // suistolta, jonka koordinaatti osoittaa.
     kuva: {
       tiedosto: 'Kızıl ırmak Bafra Samsun (64325689).jpeg',
+      lyhyt: 'Kızılırmak Bafran suistossa; Turkin pisin kokonaan maan sisällä virtaava joki, 1 355 kilometriä.',
       selite: 'Kızılırmak Bafran suistossa. Joki on Turkin pisin '
         + 'kokonaan maan sisällä virtaava joki, 1 355 kilometriä.',
       lahde: 'Sadi Sezgin, Wikimedia Commons (CC BY 3.0)',
@@ -895,6 +901,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Piri reis world map 01.jpg',
+      lyhyt: 'Piri Reisin maailmankartan säilynyt osa vuodelta 1513 löytyi uudelleen Topkapıssa 1929.',
       selite: 'Piri Reisin maailmankartan säilynyt osa vuodelta 1513. '
         + 'Kartta löytyi uudelleen Topkapın palatsista 1929.',
       lahde: 'Piri Reis 1513, Wikimedia Commons (public domain)',
@@ -1017,6 +1024,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Oil wrestling match in the gardens of the Sultan\'s Palace.jpg',
+      lyhyt: 'Öljypainiottelu Topkapın puutarhassa, tuntemattoman taiteilijan maalauksessa noin 1809.',
       selite: 'Öljypainiottelu Topkapın palatsin puutarhassa '
         + 'tuntemattoman kreikkalaisen taiteilijan maalauksessa '
         + 'noin 1809. Laji oli sama kuin Kırkpınarin kentällä.',
@@ -1154,6 +1162,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Ciconia ciconia - White Stork 09.jpg',
+      lyhyt: 'Kattohaikara Turkissa; haikarat kiertävät Bosporin kautta, koska merellä ei synny nousuvirtauksia.',
       selite: 'Kattohaikara Turkissa. Haikarat kiertävät Välimeren '
         + 'Bosporin kautta, koska nousuvirtauksia ei synny meren yllä.',
       lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1211,6 +1220,7 @@ export const FOKUSKOHTEET_TUR = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-halikarnassoksen-mausoleumi-loistoaika-v2.jpg',
       kadonnut: true,
+      lyhyt: 'Kivenveistäjä näkee huipulle nostetun nelivaljakon ensi kertaa; siitä juontuu sana mausoleumi.',
       selite: 'Nuori kivenveistäjä on työstänyt hautamuistomerkin reliefejä '
         + 'ehkä vuosia, mutta huipulle nostettua nelivaljakkoa hän katsoo '
         + 'nyt ensi kertaa valmiina. Hallitsijoille rakennus lupaa '
@@ -1294,6 +1304,7 @@ export const FOKUSKOHTEET_TUR = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-hippodromi-loistoaika-v2.jpg',
       kadonnut: true,
+      lyhyt: 'Vedenmyyjäpoika säikähtää valjakkoa; kilpa-ajot ovat viihdettä, toimeentuloa ja politiikkaa.',
       selite: 'Vedenmyyjäksi palkattu poika ehtii tuskin nostaa tarjotintaan, '
         + 'kun valjakko ajautuu pölyssä kohti matalaa suojamuuria. Hän '
         + 'tuntee sinisten ja vihreiden kannattajien huudon kehossaan ennen '
@@ -1386,6 +1397,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Walls of Constantinople.JPG',
+      lyhyt: 'Theodosiuksen muurien korjattu osuus: vallihaudan muuri, ulkomuuri ja päämuurin torni.',
       selite: 'Theodosiuksen muurien korjattu osuus: edessä vallihaudan '
         + 'muuri, keskellä ulkomuuri ja takana päämuurin torni.',
       lahde: 'Bigdaddy1204, Wikimedia Commons (CC BY-SA 3.0)',
@@ -1401,6 +1413,7 @@ export const FOKUSKOHTEET_TUR = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-theodosiuksen-muurit-loistoaika-v2.jpg',
       kadonnut: false,
+      lyhyt: 'Kilpa-ajokannattajat rakentavat puolustuslinjaa hunneja vastaan, muttei suostu lopettamaan kisojaan.',
       selite: 'Sinisten ja vihreiden kilpa-ajokannattajat rakentavat nyt samaa '
         + 'puolustuslinjaa — mutta eivät suostu lopettamaan kilpailuaan. '
         + 'Kuvituksen muurarinoppilas pelkää pudottavansa raskaan tiilen '
@@ -1495,6 +1508,7 @@ export const FOKUSKOHTEET_TUR = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-pergamonin-alttari-loistoaika-v2.jpg',
       kadonnut: true,
+      lyhyt: 'Kuvanveistäjä ja sisar katsovat jumalien ja jättiläisten taistelua, joka kiertää alttaria 120 m.',
       selite: 'Nuori kuvanveistäjä tuntee jättiläisen kasvoissa jokaisen '
         + 'taltaniskun, mutta hänen sisarensa näkee hahmon nyt ensi kertaa '
         + 'lähes elävänä. Yli sadan jumalan ja jättiläisen taistelu kiertää '

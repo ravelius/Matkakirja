@@ -113,6 +113,7 @@ export const FOKUSKOHTEET_ZWE = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-suuri-zimbabwe.webp',
       kadonnut: false,
+      lyhyt: 'Suuri Zimbabwe rakennettiin ilman laastia 1200–1300-luvuilla; maa sai siitä nimensä.',
       selite: 'Suuren Zimbabwen suuri aitaus rakennettiin 1200- ja '
         + '1300-luvuilla kuningashuoneen asunnoksi, ja muurien sisällä '
         + 'seisoi savimajoja olkikattoineen. Kaupunki eli kaukokaupasta: '
