@@ -4216,6 +4216,17 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'PULUCAM-MERKKI ON MUSTEENSININEN SINETTI OIKEASSA YLAKULMASSA, B '
+          + 'JAA ARKISTOON (omistaja 9.9.2026 klo 23.09 kuvatoimituksen kautta, '
+          + 'sanatarkasti: "Tuo sinetti on hyva. Kaytetaan sita. Vie peliin"; '
+          + 'vahvistettu Fablelle suoraan klo 23.25): PuluCam-kuvien merkki on '
+          + 'kuvatoimituksen musteensininen sinetti (PULU ylakaaressa, CAM '
+          + 'alakaaressa, pulu keskella; yksi RGBA-PNG, lapinakyva myos sinetin '
+          + 'sisalla, ei valkoista pohjaa). Se korvaa B-tarran '
+          + '(PULU_CAM_TARRA_OSOITE) ja sijoitetaan kuvan OIKEAAN YLAKULMAAN '
+          + 'seka kartan pakassa etta karusellissa; koko ennallaan (22 % kuvan '
+          + 'leveydesta, katto 160 px), sinettia ei polteta valokuviin. Lupa '
+          + 'koskee vain sinettia, ei animaatioita eika uusia valokuvia.',
         'TEKSTISESSION EHDOTUKSET OVAT OMISTAJAN SANA (omistaja 9.9.2026 klo '
           + '21.20, sanatarkasti: "Olen kaynyt tekstit teksti session kanssa lapi, '
           + 'joten hyvaksyn kaiken mita se ehdottaa sinulle"): Matkakirjan '
