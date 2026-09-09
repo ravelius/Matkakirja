@@ -89,7 +89,10 @@ import { kuvatekstiLyhyt } from './kuvatekstit.js';
  *
  * @type {?string}
  */
-export const PULU_CAM_TARRA_OSOITE = null;
+// Omistaja valitsi B:n (9.9.2026, sanatarkasti: "Valitsin b tarran"):
+// selkeä sarjakuva, 1254×1254 RGBA, teksti PuluCam PNG:ssä (kuvatoimitus
+// posti/kuvatoimitus-pulucam-tarra-B-20260909.json).
+export const PULU_CAM_TARRA_OSOITE = 'https://media.matkakirja.app/matkakirja/pulu-cam/pulucam-sticker-B-r20260909-v1.png';
 
 /**
  * TARRAN LEVEYS: 22 % KUVAN LEVEYDESTÄ, KATTO 160 px.

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1717, teksti: 'PuluCam: tarra B ja Firenze, Rooma, Tromssa' },
   { v: 1716, teksti: 'PuluCam: 3–5 kuvaa, tarra PNG:nä, Havainnekuva-linkki' },
   { v: 1715, teksti: 'Musiikin säädin toimii, Etsi aarre avaa lehden, PULU-CAM' },
   { v: 1714, teksti: 'Saapumiskamera alas, luentakuva yläpuolelle ja raahattava' },

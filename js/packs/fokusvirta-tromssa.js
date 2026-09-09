@@ -48,6 +48,34 @@ export const FOKUSVIRTA_TROMSSA = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, pulu-cam-tromssa-01-r20260909-14mm-v3.jpg, tilaus
+     * PULU-CAM-EUROOPPA-20260909-OHJAUS-01; omistaja: "ne voi hyvaksya
+     * sellaisenaan suoraan peliin"). Kuvatekstit tekstisession sanasta
+     * sanaan: lyhyt kuvan alle, pitka karuselliin. Lahteet on
+     * tausta-aineisto (ei nay pelaajalle).
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tromssa-01-r20260909-14mm-v3.jpg',
+        lyhyt: 'Tromssa: yksi simpukankuori ja koko meri täynnä kysymyksiä.',
+        selite: 'Tromssan Polaarimuseo toimii vanhoissa tullirakennuksissa meren '
+          + 'äärellä. Se kertoo pyynnistä, retkikunnista ja arjesta '
+          + 'pohjoisessa. Museon laituri on rakennettu uudelleen vanhojen '
+          + 'valokuvien avulla. Laudalle jäänyt simpukankuori ei kuulu '
+          + 'näyttelyyn, mutta pysäytti minut silti. Isoisäkin huomasi, että '
+          + 'pienestä esineestä voi alkaa suuri uteliaisuus. Minä aloitin '
+          + 'tarkistamalla, oliko asunto jo vapaa.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://en.uit.no/tavla/artikkel?p_document_id=804921',
+          'https://www.visittromso.no/polar-museum',
+          'https://en.uit.no/om/historie',
+          'https://uit.no/Content/672073/cache%3D20222601171440/transformation%3DkompJpgHighTommy/Foto%2C-Marius-Fiskum_tmu_Slider1.jpg',
+          'https://uit.no/Content/411677/transformation%3Dscale10000x560/tollbunaustet.jpg',
+        ],
+      },
+    ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

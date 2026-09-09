@@ -132,7 +132,11 @@ class Elementti {
 
   set src(arvo) {
     this.attrs.src = String(arvo);
-    setTimeout(() => this.dispatch('load'), 0);
+    // Lataus "onnistuu" heti: testit ovat synkronisia, ja js/media.js:n
+    // latausjono vapauttaa vuoron vasta load-tapahtumasta. Tarran (B)
+    // myötä jokaisella kortilla on kaksi kuvaa, joten asynkroninen load
+    // jättäisi loput kuvat jonoon ilman src:tä.
+    this.dispatch('load');
   }
 
   appendChild(solmu) {
@@ -525,13 +529,14 @@ test('ilman omistajan valitsemaa tarraa pulun kuvat näkyvät puhtaina', () => {
      * HTML-tekstiä "PULU-CAM". Kun tarra valitaan, tämä testi
      * päivitetään yhdessä vakion kanssa.
      */
-    assert.equal(PULU_CAM_TARRA_OSOITE, null,
-      'kun omistaja valitsee tarran, päivitä myös tämä testi');
+    // OMISTAJA VALITSI TARRAN B (9.9.2026): jokaisessa pulun kuvassa on
+    // yksi tarra (PNG, jossa PuluCam-teksti on mukana) eikä HTML-tekstiä.
+    assert.match(PULU_CAM_TARRA_OSOITE, /pulucam-sticker-B-r20260909-v1\.png$/);
     const kortti = pakanKortit()[0];
-    assert.equal(kortti.querySelectorAll('.pulucam-merkki').length, 0);
-    assert.equal(kortti.querySelectorAll('.pulucam-tarra').length, 0);
+    assert.equal(kortti.querySelectorAll('.pulucam-merkki').length, 1);
     assert.equal(kortti.querySelectorAll('.pulucam-teksti').length, 0);
-    assert.equal(puluCamMerkki(), null, 'ilman osoitetta merkkiä ei synny');
+    assert.ok(puluCamMerkki(), 'osoitteella merkki syntyy');
+    assert.equal(puluCamMerkki({ osoite: null }), null, 'ilman osoitetta merkkiä ei synny');
     assert.equal(kortti.textContent, '', 'kuvan päälle jäi tekstiä');
 
     // Kuvassa itsessään on lyhyt kuvateksti alt-tekstinä (kartalla lyhyt).
@@ -619,9 +624,11 @@ test('päällimmäisen kuvan napautus avaa karusellin isoisän kuvasta', () => {
     // Nuolinapit kumpaankin suuntaan.
     assert.equal(kerros.querySelectorAll('.fokuszoom-nuoli').length, 2);
 
-    // Ilman omistajan tarravalintaa merkkiä ei ole lainkaan.
-    assert.equal(PULU_CAM_TARRA_OSOITE, null);
-    assert.equal(kerros.querySelectorAll('.pulucam-merkki').length, 0);
+    // Tarra B on karusellissa yhtenä elementtinä, mutta isoisän kuvan
+    // kohdalla piilossa (tarra kuuluu vain pulun kuviin).
+    const merkit = kerros.querySelectorAll('.pulucam-merkki');
+    assert.equal(merkit.length, 1);
+    assert.equal(merkit[0].hidden, true, 'isoisän kuvassa tarra on piilossa');
 
     // Seuraavat kuvat ovat PULUN kuvia toimituksen järjestyksessä, ja
     // PITKÄ KUVATEKSTI VAIHTUU KUVAN MUKANA.
@@ -630,6 +637,7 @@ test('päällimmäisen kuvan napautus avaa karusellin isoisän kuvasta', () => {
       assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, `${i + 2} / 6`);
       assert.equal(pitkaTeksti(kerros), VIISI_KUVAA[i].selite, `pitkä teksti ${i}`);
       assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, VIISI_KUVAA[i].lahde);
+      assert.equal(merkit[0].hidden, false, `pulun kuvassa ${i} tarra näkyy`);
     }
     // Pyörii ympäri takaisin isoisään.
     nappain('ArrowRight');
@@ -928,9 +936,12 @@ test('ilman luentakuvaa pakka nousee samaan paikkaan ilman pohjakuvaa', () => {
     assert.ok(paneeli, 'pohjaton pakka tarvitsee saman paneelin kuin luentakuva');
     assert.ok(paneeli.classList.contains('pulucam-pohjaton'));
     assert.ok(paneeli.querySelector('.pulucam-pohja'), 'pohjalaatikko puuttuu');
-    // Isoisän kuvaa ei ole: paneelissa on vain pakan oma kuva.
-    assert.equal(paneeli.querySelectorAll('img').length, 1,
-      'pohjattomassa paneelissa saa olla vain pakan oma kuva');
+    // Isoisän kuvaa ei ole: paneelissa on vain pakan oma kuva (ja sen
+    // tarra B, joka on oma img-elementtinsä).
+    const kuvat = paneeli.querySelectorAll('img')
+      .filter((img) => !img.classList.contains('pulucam-tarra'));
+    assert.equal(kuvat.length, 1, 'pohjattomassa paneelissa saa olla vain pakan oma kuva');
+    assert.equal(paneeli.querySelectorAll('.pulucam-tarra').length, 1);
     assert.equal(pakanKortit().length, 1);
     /*
      * KUVATEKSTILAATIKKO ON MUKANA MYÖS POHJATTOMASSA PANEELISSA, ja

@@ -201,6 +201,34 @@ export const FOKUSVIRTA_FIRENZE = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, pulu-cam-firenze-01-r20260909-14mm-v4.jpg, tilaus
+     * PULU-CAM-EUROOPPA-20260909-OHJAUS-01; omistaja: "ne voi hyvaksya
+     * sellaisenaan suoraan peliin"). Kuvatekstit tekstisession sanasta
+     * sanaan: lyhyt kuvan alle, pitka karuselliin. Lahteet on
+     * tausta-aineisto (ei nay pelaajalle).
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-firenze-01-r20260909-14mm-v4.jpg',
+        lyhyt: 'Firenze: Davidin kopio osaa pitää ilmeensä myös lähikuvassa.',
+        selite: 'Piazza della Signorian David on kopio. Michelangelon alkuperäinen '
+          + 'veistos vietiin vuonna 1873 suojaan Galleria dell’Accademiaan. '
+          + 'Aukiolla patsas kuuluu yhä Palazzo Vecchion ympärille '
+          + 'levittäytyvään kivisten kertomusten joukkoon. Isoisä vertasi '
+          + 'Davidin kättä omaansa. Minä tutkin ilmettä: sama keskittynyt katse '
+          + 'joka suunnasta. Malli ei pyytänyt nähdä kuvaa eikä ehdottanut '
+          + 'uutta otosta. Arvostan sellaista ammattitaitoa.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/',
+          'https://portalegiovani.comune.fi.it/urlnews/webzine/46183.html',
+          'https://en.wikipedia.org/wiki/Palazzo_Vecchio',
+          'https://cdn.getyourguide.com/img/tour/11e6e1a6fa1ad3deaf35396de0c298da7dd3862d37ef8ec733486d6204ed13b9.jpg/148.jpg',
+          'https://a.storyblok.com/f/291714/4032x3024/fbdd6c78dd/20220428_104442.jpg',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
