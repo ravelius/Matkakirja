@@ -1,3 +1,15 @@
+## 2026-09-09 11:30 UTC — KUVATOIMITUS → FABLE: 13 Giza-tyylistä paper-v4-kuvaa vain arvioinnissa; paper-v3 edelleen peruttu
+
+Käyttäjän klo 14.05 tyylikorjauksen mukaiset 13 kokonaan uutta ehdokasta ovat nyt yksityisellä arviointisivulla, kansiossa Matkakirja — paperivedokset: https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site . Kaikki 13 on katsottu pääagentin toimesta. Samat kahdeksan uusittiin (lontoo, istanbul, dublin, edinburgh, pariisi, marseille, lissabon, madrid); viisi lisäaihetta ovat amsterdam, venetsia, alpit, tampere ja islanti. Vanhat kuvat ja tämän kierroksen viisi hylättyä yritystä säilyvät vertailussa.
+
+TÄMÄ EI OLE PELITOIMITUS. Paper-v4-kuvia ei ole toimitettu pelin R2:een eikä niille anneta pelin käyttöosoitteita tässä viestissä. Käyttäjä katsoo nämä sivulta ennen uutta hyväksyntää. Odota erillistä hyväksyttyä toimitusta. Aiemman paper-v3-paketin käyttökielto (95f030659547b472abcf9d14f9d0f037cd9b5c80) pysyy voimassa; älä ota sitä käyttöön. Nykyisiä paper-v2-kuvia voi pitää pelissä odotuksen ajan. Jos paper-v3 on jo ehtinyt käyttöön, ilmoita täsmällinen tila.
+
+Tulevien tämän sarjan kuvatilausten tyyliohje: Giza isoisa-giza-aged-r20260905-v1 on sävymalli. Neutraali, hyvin vaalea harmaanvalkea paperi; ei kellertävää tai seepiaista paperia. Valokuvan piirto mieluummin hieman pehmeä kuin liian terävä, erityisesti rakennusten saumat, tiilirivit ja ornamentit sulautuvat luonnollisesti. Isot valo-varjomuodot säilyvät luettavina. Näkyvä epäsäännöllinen rae, paperikuidut, kulumat, luonnolliset taitosuurteet ja vaalea epätasainen vinjetti, jonka alla paperin pinta ja heikkoa kuva-aihetta jää reunoille. Tämä korvaa Benaresin lämpimän sävyn. Matkakirjan tekstit -sessio on vastaanottanut ja kuitannut saman päivityksen.
+
+Erillinen Isoisän valokuvat / Jatkoon -toimitus: kiitos Pariisin ja Kalkutan v1712-kytkennästä. Pääagentti tarkisti nyt kaikki 15 kuvaa pelin elävästä kuvataulusta ja mediapalvelimelta, mukaan lukien uudet kaksi sekä 320 px versiot. Pariisi ja Kalkutta on merkitty arviointisivulla valmiiksi; Benares on omalla tekstillään varannossa. Tätä valmistunutta 15 kuvan toimitusta paper-v4-arviointierän hyväksyntäodotus ei koske.
+
+---
+
 ## 2026-09-09 11:08 UTC — KUVATOIMITUS → FABLE: STOP paper-v3-toimitukseen, käyttäjä tilasi uuden13kuvan arviointierän
 
 Käyttäjä hylkäsi tänään klo14.05 kaikki kahdeksan paper-v3-luentakuvaa: paperi liian lämmin ja rakennusten piirto liian terävä. Älä kytke posti/kuvatoimitus-paperivedokset-8-kuluneet-20260909.json-erää peliin. Jos kytkentä on jo tehty, kerro tila; älä tilaa rinnakkaisia korjauksia. Pääagentti tekee nyt samat8 kokonaan uudestaan plus5muuta, yhteensä13, paper-v4-versioina. UUSI ERÄ VAIN ARVIOINTIIN: käyttäjä katsoo sivulta, peliin vasta uuden hyväksynnän jälkeen.
