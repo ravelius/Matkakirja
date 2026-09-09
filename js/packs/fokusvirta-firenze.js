@@ -197,6 +197,31 @@ export const FOKUSVIRTA_FIRENZE = {
       + 'piirtää käden. Palasin illalla, kun aukiolla oli vähemmän väkeä. '
       + '[softly] Kivi vaikutti silloin vielä enemmän ihmiseltä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-firenze.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-firenze-kasi-v6.jpg;
+     * omistajan hyväksymä tarinakorjaus ISOISA-TARINAKORJAUKSET-4, promptId
+     * ISOISA-TARINA-V4-firenze-kasi). Kuvatekstit tekstisession sanasta sanaan: lyhyt
+     * kartalle, pitkä suurennokseen. Lähde on pelin oma havainnekuvamerkintä;
+     * lahteet on toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-firenze-kasi-v6.jpg',
+      lyhyt: 'Firenze, 1873. Kivinen käsi näytti osaavan jotakin, mitä omani ei.',
+      selite: 'Rajasin kuvaan Davidin suuren käden ja osan käsivarresta. Marmorin '
+        + 'rystysissä on niin tarkkaa lepoa, että odotin melkein sormien '
+        + 'liikkuvan. Michelangelon patsas seisoo vielä ulkona Palazzo '
+        + 'Vecchion edessä. Sen takana palatsin kivi näyttää kiveltä, mutta '
+        + 'tämän käden kohdalla asia ei ole yhtä yksinkertainen. Kamerani '
+        + 'pystyy ottamaan siitä kuvan. Veistäjän oli ensin saatava se esiin.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://catalogo.beniculturali.it/detail/PhotographicHeritage/0800635892',
+        'https://www.lombardiabeniculturali.it/fotografie/schede/IMM-3a010-0012052/',
+        'https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/',
+        'https://www.galleriaaccademiafirenze.it/la-galleria/',
+        'https://www.visittuscany.com/en/ideas/michelangelos-david-some-facts-you-might-not-know/',
+      ],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
