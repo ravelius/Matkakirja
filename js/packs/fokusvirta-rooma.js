@@ -226,6 +226,35 @@ export const FOKUSVIRTA_ROOMA = {
    * kaanonin oma korvaava muoto, ks. tiedoston alku, rajaus 2.
    */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, pulu-cam-rooma-01-r20260909-14mm-text1-v2.jpg, tilaus
+     * PULU-CAM-EUROOPPA-20260909-OHJAUS-01; omistaja: "ne voi hyvaksya
+     * sellaisenaan suoraan peliin"). Kuvatekstit tekstisession sanasta
+     * sanaan: lyhyt kuvan alle, pitka karuselliin. Lahteet on
+     * tausta-aineisto (ei nay pelaajalle).
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-rooma-01-r20260909-14mm-text1-v2.jpg',
+        lyhyt: 'Rooma: isoisä katsoi aukosta ylös, minä katsoin alas.',
+        selite: 'Pantheonin kupolin keskellä oleva oculus on avoin taivaalle. '
+          + 'Aurinko kuljettaa valoa sen kautta sisään, ja sade pääsee '
+          + 'lattialle asti. Ylhäältä aukko näyttää valtavalta silmältä, jonka '
+          + 'takana ihmiset liikkuvat pieninä. Isoisä ihmetteli, miksei näin '
+          + 'vanhaa kattoa ollut paikattu. Minusta avoimuudessa on puolensa. '
+          + 'Lensin vain ohi ja kurkistin: vieraan kuuluu tietää, milloin hän '
+          + 'on toisen talon yllä.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.pantheonroma.com/en/pantheon-history/',
+          'https://www.pantheonroma.com/en/2025/04/24/the-oculus-of-the-pantheon/',
+          'https://www.vigilfuoco.tv/eventi/lancio-di-petali-dalla-cupola-del-pantheon',
+          'https://hrtprikazuje.hrt.hr/hrt1/rimski-panteon-anticka-megastruktura-0-12197405',
+          'https://www.flickr.com/photos/escriteur/28753433533',
+          'https://www.rainews.it/video/2025/06/pantheon-vigili-del-fuoco-pioggia-di-petali-in-occasione-della-pentecoste-d7ec84a1-0da1-4b59-8a0a-831713e71490.html',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

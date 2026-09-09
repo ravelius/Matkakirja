@@ -337,7 +337,8 @@ vaadi('viisi kuvaa pulpahti pakkaan', tila.kortteja === KOEKUVAT.kuvat.length,
  * kuvien pitää näkyä PUHTAINA. Kun PULU_CAM_TARRA_OSOITE saa arvon,
  * tämä vartio käännetään toisin päin (tarra jokaisessa pulun kuvassa).
  */
-vaadi('pulun kuvat ovat puhtaita ilman tarraa', tila.merkkeja === 0, String(tila.merkkeja));
+// Omistaja valitsi tarran B (9.9.2026): jokaisessa pulun kuvassa yksi tarra.
+vaadi('pulun kuvissa on tarra B', tila.merkkeja === KOEKUVAT.kuvat.length, String(tila.merkkeja));
 
 /* 3. Limitys: kortit ovat oikeasti eri kohdissa. */
 if (tila.laatikot.length === KOEKUVAT.kuvat.length) {
