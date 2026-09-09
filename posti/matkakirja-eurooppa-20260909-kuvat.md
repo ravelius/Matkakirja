@@ -6,7 +6,7 @@ Tee yksi erillinen valmis kuva jokaiseen tämän tiedoston 45 kohteeseen. Kuvan 
 
 ## Yhteinen kuvallinen ohje
 
-Kuvat ovat pelimaailmassa Horatio Foggin itse vuonna 1873 ottamia matkakuvia. Horatio on aina kameran takana. Häntä ei näy kuvassa kokonaan eikä osittain: ei kasvoja, selkähahmoa, käsiä, heijastusta tai kuvaajan varjoa. Myöskään pelaajaa tai tunnistettavaa Livia-hahmoa ei lisätä kuviin. Muut paikan ihmiset saavat näkyä luontevasti aikakauden asuissa.
+Kuvat ovat pelimaailmassa Horatio Foggin itse vuonna 1873 ottamia matkakuvia. Horatio on aina kameran takana. Häntä ei näy kuvassa kokonaan eikä osittain: ei kasvoja, selkähahmoa, käsiä, heijastusta tai kuvaajan varjoa. Pelaajaa ei kuvata. Luonnollisen näköinen pieni pulu saa näkyä tilanteeseen kuuluvana lintuna, mutta lintua ei tarvitse lisätä joka kuvaan. Muut paikan ihmiset saavat näkyä luontevasti aikakauden asuissa.
 
 Tyylinä on taitavan mutta uteliaan matkakuvaajan märkälevynegatiivista tehty albumiinivedos, esitettynä NEUTRAALINA MUSTAVALKOISENA jäljennöksenä. Ei seepiaa, kellastunutta väriä, maalausta, piirrosta tai nykyvalokuvaa vanhennussuodattimella. Rikas harmaa-asteikko, hienot yksityiskohdat, pehmeät valokohdat, tummissa sävyissä luettavuutta. Paras osa kuvasta saa olla tarkka: vanha valokuva ei tarkoita kauttaaltaan sumeaa. Hyvin vähäinen reunapehmeys ja satunnainen pieni levyn epätasaisuus riittävät. Ei tekograinia, palaneita reunoja, raskasta likaa tai joka kuvaan samoja naarmuja.
 
@@ -21,8 +21,8 @@ Huumori syntyy koosta, paikasta tai arjen yksityiskohdasta: ikkunasta kulkeva tu
 - 45 erillistä vaakakuvaa, kuvasuhde 3:2. Tavoitekoko 1536 × 1024 tai suurempi samaa suhdetta noudattava lähde; sRGB. Tallenna hyvälaatuinen JPEG sekä alkuperäinen generaattorin tiedosto, jos putki säilyttää lähteet.
 - Kuvapinta reunasta reunaan. Ei valkoista taustaa, pahvikorttia, albumisivua, kehyksiä, kirjoitusta, allekirjoitusta, vesileimaa tai kuvatekstiä kuvan sisään. Pelin käyttöliittymä voi tehdä reunuksen.
 - Uusi sarja saa omat tiedostonimensä: `matkakirja-eurooppa-1873-{kaupunki_id}-r20260909-v1.jpg`. Olemassa oleva pelin kuvatoimitus ja mediajakelu käyvät; lopulliset URL-osoitteet saadaan onnistuneesta tallennuksesta, niitä ei päätellä ennalta.
-- Toimita kohdetunnus, tiedostonimi, lopullinen URL, todelliset mitat, lyhyt suomenkielinen alt-teksti ja tuotantotila. Säilytä tuotantometatiedossa tieto, että kyseessä on peliä varten generoitu historiallinen rekonstruktio, ei arkistovalokuva.
-- Kytkentä on matkakirjan KAUPUNKIKOHTAISEEN LUENTAAN: oikea kuva näkyviin isoisän puheen alkaessa. Kuva saa pysyä myös siihen liittyvän pulun kommentin ajan. Se vaihtuu kohteen mukana ja sulkeutuu matkakirjakohtauksen mukana. Uudelleenkuuntelu näyttää saman kuvan. Kuvan latausvirhe ei saa pysäyttää puhetta.
+- Fablen 9.9. toimitussopimus: toimita liite-JSON, jossa on `items[]`. Rivin kentät: `cityId` (täsmällinen pelin kohdetunnus), `url`, `caption`, `sourceLine`, `sources` (lähde-URL:t), `sha256`, `dimensions`. Tarvittaessa `primary: true`. Lisää myös tiedostonimi ja tuotantotila raporttiin. Esimerkkikuvatekstin muoto: “Isoisän kuva: Lontoo, 1873”. `sourceLine` ilmaisee, että kyseessä on peliä varten generoitu historiallinen rekonstruktio. Tarkista mediapalvelimen URL onnistuneen tallennuksen jälkeen. Säilytä tuotantometatiedossa tieto, että kyseessä on peliä varten generoitu historiallinen rekonstruktio, ei arkistovalokuva.
+- Kytkentä Fablen ilmoittamaan `matkakirja.luentakuva`-kenttään. Kuva nousee KARTAN PÄÄLLE oikean kaupungin matkakirjaluennan alkaessa ja poistuu luennan päättyessä tai kartan liikkuessa. Napautus avaa suurennoksen. Uudelleenkuuntelu näyttää saman kuvan. Kuvan latausvirhe ei saa pysäyttää puhetta.
 - Nykyinen `js/isoisan-valokuvat.js` sisältää myös muuhun käyttöön tehtyjä kuvia. Pelkkä uuden rivin lisääminen varastotauluun ei osoita kuvan olevan käytössä. Integraattorin tulee varmistaa luennan aikainen näyttö oikeassa näkymässä, myös puhelimella.
 - Omistaja siirtää tekstikoosteen peliin oman työnkulkunsa kautta. Sovittakaa kuvat tunnuksilla tähän tekstiversioon. Vanhan MP3:n ja uuden kirjoitetun tekstin eroa ei saa kuitata valmiiksi toiminnoksi: mahdollinen uusi ääniversio kuuluu tekstipäivityksen koordinointiin.
 - Kuittaa vastaanotto omassa postitiedostossasi viitteellä EUROOPPA-MATKAKIRJA-1873-20260909. Erota raportissa tilattu, generoitu, toimitettu ja pelissä näytetty. Jos peliasennus tehdään toisessa sessiossa, anna sille valmis tunnus–URL-luettelo ja tämä näyttöohje.
@@ -119,7 +119,7 @@ Huumori syntyy koosta, paikasta tai arjen yksityiskohdasta: ikkunasta kulkeva tu
 
 **Isoisän teksti:** Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin hallitsijan jakaukseksi. Eksyin silti heti, kun poikkesin Alfamaan. Siellä portailla istuva nainen neuvoi ylöspäin. Ylhäällä toinen neuvoi alas. Kumpikin oli oikeassa: löysin meren molemmista suunnista, vain eri kattojen välistä. Kartta on täällä taskussa kulkeva lohdutus.
 
-**Pulun kommentti:** Lissabonissa pääsee nyt mäkiä ylös hisseilläkin. Isoisä tarvitsi kartan; minä etsin aukon kattojen välistä.
+**Pulun kommentti:** Lissabonissa on nyt hissejä mäkiä varten. Ihmiset eivät saaneet siipiä, joten piti ryhtyä rakennustöihin.
 
 **Kuvaa tämä:** Alfaman porraskuja, nainen ovenpielessä istumassa ja Tejon välähdys tiilikattojen välissä. Kamera ihmisen korkeudella portaiden tasanteella, ei ilmakuvaa.
 
@@ -659,7 +659,7 @@ Huumori syntyy koosta, paikasta tai arjen yksityiskohdasta: ikkunasta kulkeva tu
 
 ## Taustatarkistukset tuotannolle
 
-Nämä ovat lähteitä historian, nykytilan ja kuvausmenetelmän tarkistamiseen; fiktiiviset kohtaamiset eivät ole arkistosta poimittuja tapahtumia. Tuotannossa on vielä verrattava kuvien rakennusyksityiskohtia aikakauden referensseihin, etenkin Berliinissä, Ateenassa, Krakovassa ja Tivolissa. Nykytilaa koskevat tiedot tarkistettu syyskuussa 2026.
+Nämä ovat lähteitä historian, nykytilan ja kuvausmenetelmän tarkistamiseen; fiktiiviset kohtaamiset eivät ole arkistosta poimittuja tapahtumia. Tuotannossa on vielä verrattava kuvien rakennusyksityiskohtia aikakauden referensseihin, etenkin Berliinissä, Ateenassa, Krakovassa ja Tivolissa. Lähteitä on tarkastettu syyskuussa 2026; ne tukevat kuvien ja tekstien taustaa, eivät fiktiivisten kohtaamisten tapahtumista.
 
 - **Menetelmä:** Märkälevyprosessi oli vallitseva 1870-luvulla; valotus edellytti valoa ja paikallaan pysyviä kohteita. [Lähde](https://blog.scienceandmediamuseum.org.uk/photography-a-z-frederick-scott-archer-wet-collodion-process/)
 - **Vedoksen tuntuma:** Albumiinivedos perustui lasinegatiivista tehtyyn kontaktivedokseen. Tässä sarjassa vedos esitetään käyttäjän toiveen mukaisena neutraalina mustavalkoisena jäljennöksenä. [Lähde](https://www.rct.uk/group/381/content/explore/themes/photographic-technologies/albumen-print)
@@ -717,3 +717,8 @@ Nämä ovat lähteitä historian, nykytilan ja kuvausmenetelmän tarkistamiseen;
 - **Tromssa:** Nykyinen yliopistomuseo. [Lähde](https://en.uit.no/tmu)
 - **Islanti:** Laugardalurin pyykkilähteet. [Lähde](https://reykjavik.is/en/laugardalurinn)
 - **Islanti:** Geoterminen lämmitys Reykjavikissa. [Lähde](https://www.hsorka.is/en/about-hs-orka/the-business/geothermal-energy-in-iceland/)
+
+- **Lissabon:** Santa Justan hissin rakennushistoria. Pulun teksti kertoo hissien olemassaolosta eikä lupaa niiden tämänhetkistä liikennöintiä. [Lähde](https://www.pac4portugal.com/post/santa-justa-lift-guide-lisbon)
+- **Sarajevo:** Kazandžilukin nykyiset kuparipajat ja kahvipannut. [Lähde](https://exploresarajevo.com/destinations/kazandziluk/)
+- **Rovaniemi:** jokien yhtymäkohta. [Lähde](https://santasafaris.com/en/destinations/rovaniemi)
+- **Sisilia:** palatsin parlamenttikäyttö. [Lähde](https://artsandculture.google.com/entity/m0bbksq?hl=it)

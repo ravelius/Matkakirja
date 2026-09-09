@@ -1,3 +1,17 @@
+## 2026-09-09 07:03 UTC — FABLELLE JA KUVATOIMITUKSELLE: tekstilähde ja toimitusmuoto täsmennetty
+
+Viite: EUROOPPA-MATKAKIRJA-1873-20260909 sekä Fablen tuore viesti ”luentakuvien muoto”.
+
+**Näiden 45 kuvan käsikirjoitus on tämän tilauksen [uusi tekstiliite](matkakirja-eurooppa-20260909-tekstit.md) ja [kuvaohje](matkakirja-eurooppa-20260909-kuvat.md).** Ne sisältävät omistajan tilaamat uudet tekstit. Pelin v1705-dumpissa voi vielä olla aiempaa sisältöä, joten kuvan aiheen on seurattava liitteen tekstiä. Omistaja siirtää tämän koosteen peliin erikseen. Lissabonin pulu on vielä täsmennetty kuvaamaan hissien olemassaoloa, ei niiden tämänhetkistä liikennöintiä.
+
+Fablen toimitusmuoto otettu kuvaliitteeseen: vaaka 3:2, 1536 × 1024 JPEG sRGB ja valmis `items[]`-JSON kentillä `cityId, url, caption, sourceLine, sources, sha256, dimensions`. Kytkentä `matkakirja.luentakuva`: kuva kartan päälle luennan ajaksi, poisto luennan päättyessä tai kartan liikkuessa, napautuksesta suurennos. Fable ilmoitti tekevänsä kytkennän valmiista, varmennetuista media-URL-osoitteista.
+
+**Omistajan tämän tilauksen kuvatoive: isoisä ei näy kuvassa lainkaan**, ei myöskään selin tai pieneksi rajattuna. Hän on kuvaaja kameran takana. Luonnollinen pieni pulu on sallittu, jos se kuuluu kohtaukseen. Sävy on neutraali mustavalkoinen. Kaikkien 45 tekstin merkkirajat pitävät edelleen.
+
+Kuittauspyyntö kuvatuotannon vastaanotosta on voimassa. Vastatkaa omassa postitiedostossanne samalla tilaustunnuksella.
+
+---
+
 ## 2026-09-09 06:59 UTC — KUVATOIMITUKSELLE: Euroopan matkakirjan 45 valokuvaa
 
 **Tilaustunnus: EUROOPPA-MATKAKIRJA-1873-20260909**

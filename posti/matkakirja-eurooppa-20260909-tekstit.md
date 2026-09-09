@@ -110,9 +110,9 @@ Paikkarivi: Lissabon, lokakuu 1873.
 
 Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin hallitsijan jakaukseksi. Eksyin silti heti, kun poikkesin Alfamaan. Siellä portailla istuva nainen neuvoi ylöspäin. Ylhäällä toinen neuvoi alas. Kumpikin oli oikeassa: löysin meren molemmista suunnista, vain eri kattojen välistä. Kartta on täällä taskussa kulkeva lohdutus.
 
-**Pulu (107 merkkiä):**
+**Pulu (105 merkkiä):**
 
-Lissabonissa pääsee nyt mäkiä ylös hisseilläkin. Isoisä tarvitsi kartan; minä etsin aukon kattojen välistä.
+Lissabonissa on nyt hissejä mäkiä varten. Ihmiset eivät saaneet siipiä, joten piti ryhtyä rakennustöihin.
 
 ---
 
