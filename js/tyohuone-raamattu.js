@@ -4216,6 +4216,15 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'PULUN KOMMENTIN JALKEEN KARTALLE NAPPI "ETSI AARRE" KAUPUNGIN LAATAN '
+          + 'VIEREEN, AVAA KAUPUNKILEHDEN (omistaja 9.9.2026 klo 14.05, '
+          + 'sanatarkasti: "kun pulun kommentti on tullut, kartalle saisi tulla '
+          + 'kaupungin laatan viereen nappi: Etsi aarre, mika avaisi '
+          + 'kaupunkilehden."): saapumisen kulku kartalla on matkakirjan luenta '
+          + '(+ luentakuva) -> pulun kommentti -> nappi "Etsi aarre" ilmestyy '
+          + 'kaupungin laatan (pallolla pisteen) viereen. Napin painallus avaa '
+          + 'kaupunkilehden, kuten kortin "Etsi katko" nyt. Nappi nakyy vasta '
+          + 'kommentin jalkeen, ei ennen, ja poistuu kaupungista lahdettaessa.',
         'LUENTAKUVA ISOMPANA, VINOSSA JA ILMAN LAATIKKOA; LYHYT KUVATEKSTI OMASSA '
           + 'VAALEASSA LAATIKOSSA; KARTAN LIIKE PIENENTAA, EI PIILOTA (omistaja '
           + '9.9.2026 klo 13.50, tyopoytakaappaus Lontoon luentakuvasta, '
