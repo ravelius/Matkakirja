@@ -177,11 +177,19 @@
               <span class="kehittaja-saadin-arvo" aria-live="polite">×1,0</span>
               <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="1" aria-label="Taustaäänen voimakkuus kovemmalle">+</button>
             </div>
-            <div class="kehittaja-saadin" data-laji="musiikki" role="group" aria-label="Taustamusiikin voimakkuus">
+            <!-- TAUSTAMUSIIKIN SÄÄDIN (omistaja 9.9.2026: *"Saisiko säätimen
+                 niin, että se oikeasti toimisi ja sen pystyisi säätämään
+                 todella isolla välillä"*). Liuku 0–100, käyrä
+                 (x/100)^2,5 (js/musiikkivalitsin.js musiikinVahvistus):
+                 0 = hiljaisuus, oletus 35. Entinen +/- kerroinaskellin oli
+                 lineaarinen ja sen alaraja ×0,25 vain −12 dB. -->
+            <div class="kehittaja-saadin kehittaja-liuku" data-liuku="musiikki"
+                 role="group" aria-label="Taustamusiikin voimakkuus">
               <span class="kehittaja-kytkin-nimi">taustamusiikki</span>
-              <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="-1" aria-label="Taustamusiikin voimakkuus hiljemmalle">&minus;</button>
-              <span class="kehittaja-saadin-arvo" aria-live="polite">×1,0</span>
-              <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="1" aria-label="Taustamusiikin voimakkuus kovemmalle">+</button>
+              <input id="kehittaja-musiikki-liuku" class="kehittaja-liuku-vipu" type="range"
+                     min="0" max="100" step="1" value="35"
+                     aria-label="Taustamusiikin voimakkuus" />
+              <span class="kehittaja-saadin-arvo" aria-live="polite">35 &middot; &minus;23 dB</span>
             </div>
             <button id="kehittaja-mittari-btn" class="ghost kehittaja-kytkin"
                     type="button" aria-pressed="false">

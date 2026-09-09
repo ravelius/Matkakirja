@@ -242,6 +242,14 @@ import {
   musiikkiPaalla,
 } from './musiikkivalitsin.js';
 /*
+ * Aarteen paljastusaihe on musiikkia, joten sekin kulkee musiikin
+ * yhteisen vahvistimen kautta — muuten iOS soittaisi sen tiedoston
+ * omalla tasolla (omistajan vika 9.9.2026).
+ */
+import {
+  asetaMusiikinTaso, irrotaMusiikinVahvistin, liitaMusiikkiin, musiikkiSaaSoida,
+} from './musiikkivahvistin.js';
+/*
  * Siirtymän oma musiikki (omistajan tilaus 2.9.2026). Oma moduulinsa,
  * koska se ei ole paikan ääni vaan matkan: ks. js/siirtymamusiikki.js.
  */
@@ -18450,11 +18458,20 @@ export class UI {
     // Edellinen aihe pois, jos pelaaja ehti seuraavaan paljastukseen:
     // kaksi fanfaaria päällekkäin ei ole juhla vaan sotku.
     this.pysaytaAarreMusiikki();
-    const audio = new Audio(aaniUrl(lahde));
+    const audio = new Audio();
+    /*
+     * crossOrigin ENNEN srciä: aihe reititetään vahvistimen läpi, ja
+     * Web Audio tarvitsee CORS-luvan lukeakseen ämpäristä tulevaa
+     * ääntä (sw.js aaniPeilista vastaa CORS-tilassa).
+     */
+    audio.crossOrigin = 'anonymous';
+    audio.src = aaniUrl(lahde);
     // Paljastusaihe on musiikkia: sama kerroin kuin kaikella muulla
-    // musiikilla (js/musiikkivalitsin.js musiikinKerroin), jotta rattaan
-    // säädin koskee myös sitä.
-    audio.volume = Math.min(1, AARRE_MUSIIKIN_VOIMA * musiikinKerroin());
+    // musiikilla (js/musiikkivalitsin.js musiikinKerroin), jotta säädin
+    // koskee myös sitä — ja sama vahvistinreitti, jotta taso menee
+    // perille myös iPhonessa (omistajan vika 9.9.2026).
+    audio.aaniVahvistin = liitaMusiikkiin(audio);
+    asetaMusiikinTaso(audio, AARRE_MUSIIKIN_VOIMA * musiikinKerroin());
     /*
      * Tausta madaltuu aiheen ajaksi. Hiljennys (syyjoukko) eikä väistö
      * (laskuri): pääaarteella soi samaan aikaan luettu huudahdus, joka
@@ -18467,7 +18484,7 @@ export class UI {
     // Säädin koskee myös kesken soivaa aihetta: kuuntelija irtoaa, kun
     // aihe päättyy tai seuraava ottaa sen paikan.
     const irtiSaatimesta = kuunteleMusiikinKerrointa(() => {
-      audio.volume = Math.min(1, AARRE_MUSIIKIN_VOIMA * musiikinKerroin());
+      asetaMusiikinTaso(audio, AARRE_MUSIIKIN_VOIMA * musiikinKerroin());
     });
     /*
      * Purku VAIN jos tämä aihe on yhä se soiva. Pysäytys asettaa
@@ -18484,6 +18501,13 @@ export class UI {
     };
     audio.addEventListener('ended', ohi);
     audio.addEventListener('error', ohi);
+    /*
+     * Ilman vahvistinta JA ilman toimivaa volumea (iOS) aihe soisi
+     * tiedoston omalla täydellä tasolla. Silloin se jätetään soimatta
+     * ja hiljennys puretaan heti — juhla ilman fanfaaria on parempi
+     * kuin fanfaari, joka jyrää huudahduksen yli.
+     */
+    if (!musiikkiSaaSoida(audio)) { ohi(); return; }
     audio.play().catch(ohi);
   }
 
@@ -18498,6 +18522,9 @@ export class UI {
     } catch {
       /* soitin oli jo purettu */
     }
+    // Solmut irti: reititys on pysyvä, ja purkamaton ketju pitäisi
+    // elementin kiinni destinationissa jokaisen aarteen jälkeen.
+    irrotaMusiikinVahvistin(audio);
     palautaAmbienssi(AARRE_MUSIIKIN_SYY);
   }
 

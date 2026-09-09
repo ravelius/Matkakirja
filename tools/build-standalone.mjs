@@ -494,6 +494,12 @@ const MODULES = [
    * staattisesti (ketju, tilat ja kuuntelija ovat siellä).
    */
   'js/musiikkivalitsin.js',
+  /*
+   * Musiikin vahvistin ennen soittimia: pohjaraita, siirtymäraidat ja
+   * aarreaihe tuovat sen staattisesti (reititys, kontekstin herätys ja
+   * volume-mittaus ovat siellä).
+   */
+  'js/musiikkivahvistin.js',
   'js/ambience-stream.js',
   /*
    * Siirtymämusiikki AMBIENCE-STREAMIN JÄLKEEN: se rekisteröi

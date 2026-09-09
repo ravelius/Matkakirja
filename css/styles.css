@@ -814,6 +814,27 @@ button, .brand, .turn-pill, .fact-card h2 {
   line-height: 1.2;
 }
 
+/*
+ * TAUSTAMUSIIKIN LIUKU (omistaja 9.9.2026). Kolme saraketta: nimi, itse
+ * liuku ja lukema. Liuku saa venyä, koska koko sen idea on laaja väli —
+ * napautusnappien kokoinen säädin ei anna korvalle mitään säädettävää.
+ */
+.kehittaja-valikko .kehittaja-liuku {
+  grid-template-columns: auto 1fr auto;
+}
+
+.kehittaja-liuku-vipu {
+  width: 100%;
+  min-width: 5rem;
+  margin: 0;
+  accent-color: var(--kulta, #eab84e);
+}
+
+/* Lukema on "35 · −23 dB" eikä "×1,0", joten se tarvitsee enemmän tilaa. */
+.kehittaja-liuku .kehittaja-saadin-arvo {
+  min-width: 5.2rem;
+}
+
 .kehittaja-saadin-arvo {
   min-width: 2.6rem;
   text-align: center;

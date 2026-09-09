@@ -142,6 +142,17 @@ import { sfx } from './sound.js';
 // 8.9.2026: "eikä rattaan säädin vaikuta sen tasoon ollenkaan").
 import { kuunteleMusiikinKerrointa, musiikinKerroin, musiikkiPaalla } from './musiikkivalitsin.js';
 import { lisaaVaistaja } from './ambience-stream.js';
+/*
+ * MATKAN JA LINSSIN RAIDAT OVAT MYÖS MUSIIKKIA, JOTEN NE REITITETÄÄN
+ * (omistajan vika 9.9.2026: *"Taustamusiikki on ainakin iPhonilla vielä
+ * aivan liian kovalla"*). 8.9. korjaus reititti vain pohjaraidan; nämä
+ * jäivät elementin oman `volumen` varaan, eikä iOS:n WebKit tottele
+ * sitä — jalankulkumusiikki soi siis puhelimessa tiedoston omalla
+ * tasolla kertojan päällä. Sama vahvistin kuin pohjaraidalla.
+ */
+import {
+  irrotaMusiikinVahvistin, liitaMusiikkiin, liutaMusiikkia, musiikkiSaaSoida,
+} from './musiikkivahvistin.js';
 
 /*
  * YKSI TAULUKKO KAIKILLE LAJEILLE, KAKSI POLKUA KUHUNKIN.
@@ -284,26 +295,20 @@ let vaistonPohja = 1;
 let ajonHimmennys = 1;
 
 /**
- * Pehmeä tason liuku. Oma pieni toteutus tarkoituksella: raita soi
- * suoraan `<audio>`-elementin volumella eikä Web Audio -ketjussa.
- * Reititetty elementti voi WebKitissä jäädä täysin mykäksi ilman
- * virhettä (ks. ambience-stream.js HILJAISUUSVAHTI), ja siirtymä on
- * niin lyhyt, ettei mykkyyttä ehtisi mitata eikä korjata.
+ * Pehmeä tason liuku. Yhteinen toteutus (js/musiikkivahvistin.js
+ * liutaMusiikkia) osaa molemmat polut: reititetyllä raidalla liuku on
+ * gain-ramppi äänisäikeellä, reitittämättömällä rAF-askel elementin
+ * volumeen kuten ennenkin.
+ *
+ * AIEMPI PERUSTELU EI ENÄÄ PÄDE. Tässä oli oma volume-liuku sillä
+ * perusteella, että reititetty elementti voi WebKitissä vaieta ilman
+ * virhettä eikä lyhyt siirtymä ehdi mitata mykkyyttä. Vaihtokauppa oli
+ * kuitenkin väärinpäin: iOS ei tottele volumea lainkaan, joten
+ * reitittämätön raita ei soinut hiljaa vaan TÄYDELLÄ — ja se on
+ * pahempi vika kuin hiljaisuus (omistaja 9.9.2026).
  */
 function siirtymanLiuku(audio, kohde, kesto, done) {
-  const oma = (audio.liukuId = (audio.liukuId ?? 0) + 1);
-  const alku = audio.volume;
-  const aika = Math.max(1, kesto);
-  let t0 = null;
-  const askel = (nyt) => {
-    if (audio.liukuId !== oma) return;
-    if (t0 === null) t0 = nyt;
-    const t = Math.min(1, Math.max(0, (nyt - t0) / aika));
-    audio.volume = Math.min(1, Math.max(0, alku + (kohde - alku) * t));
-    if (t < 1) requestAnimationFrame(askel);
-    else done?.();
-  };
-  requestAnimationFrame(askel);
+  liutaMusiikkia(audio, kohde, kesto, done);
 }
 
 /**
@@ -336,6 +341,12 @@ function vapautaRaita(audio) {
   audio.liukuId = (audio.liukuId ?? 0) + 1;
   audio.pause();
   audio.removeAttribute('src');
+  /*
+   * Solmut irti. createMediaElementSource on pysyvä reititys: purkamatta
+   * jäänyt ketju pitää elementin kiinni destinationissa, ja jokainen
+   * matka kasvattaisi äänigraafia.
+   */
+  irrotaMusiikinVahvistin(audio);
 }
 
 /**
@@ -355,10 +366,24 @@ export function aloitaSiirtymamusiikki(laji) {
   if (soiva) lopetaSiirtymamusiikki();
 
   ajonHimmennys = 1;
-  const audio = new Audio(raita.ampari);
+  const audio = new Audio();
+  /*
+   * crossOrigin ENNEN srciä: Web Audio lukee elementin ääntä, ja ilman
+   * CORS-lupaa ketju olisi hiljainen ilman virhettä. Ämpärin vastaus
+   * tulee palvelutyöntekijän äänipeilistä CORS-tilassa (sw.js
+   * aaniPeilista), ja varapolku (raita.oma) on samaa alkuperää.
+   */
+  audio.crossOrigin = 'anonymous';
+  audio.src = raita.ampari;
   audio.loop = true;
   audio.preload = 'auto';
-  audio.volume = 0;
+  /*
+   * Vahvistin, jotta taso menee perille myös puhelimessa. Reititettynä
+   * elementin oma volume on osa ketjua ja jää ykköseen; ilman
+   * reititystä taso on volumessa ja sen on alettava nollasta.
+   */
+  audio.aaniVahvistin = liitaMusiikkiin(audio);
+  audio.volume = audio.aaniVahvistin ? 1 : 0;
   const oma = { laji, audio };
   soiva = oma;
 
@@ -395,6 +420,14 @@ export function aloitaSiirtymamusiikki(laji) {
     soi();
   };
   audio.addEventListener('error', petti);
+  /*
+   * Ilman vahvistinta JA ilman toimivaa volumea (iOS) soitto
+   * tarkoittaisi tiedoston omaa täyttä tasoa. Siirtymä on lyhyt eikä
+   * sitä jäädä odottamaan: hiljainen matka on parempi kuin kertojan yli
+   * jyräävä raita, ja seuraava siirto yrittää uudestaan — konteksti on
+   * silloin jo hereillä.
+   */
+  if (!musiikkiSaaSoida(audio)) { luovuta(); return; }
   soi();
 }
 

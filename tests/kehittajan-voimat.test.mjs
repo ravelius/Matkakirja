@@ -12,15 +12,14 @@ const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 test('kerroin on oletuksena 1 ja pysyy rajoissa', () => {
   assert.equal(kehittajanKerroin('tausta'), 1);
   /*
-   * MOLEMPIEN OLETUS ON 1,0 (omistajan vika 8.9.2026: *"Taustamusiikki
-   * on aivan liian kovalla"*). Musiikin oletus oli 2,0 niin kauan kuin
-   * paletti oli vanha ja hiljainen; hyväksytty kuuluva taso asuu nyt
-   * perustasossa (js/musiikkivalitsin.js MUSIIKIN_PERUSTASO) ja kerroin
-   * on jälleen pelkkä säädin.
+   * VAIN TAUSTAÄÄNI ON JÄLJELLÄ (9.9.2026). Musiikin ×0,25…×3,0
+   * -askellin poistettiin: se oli lineaarinen ja kapea, eikä sen arvo
+   * mennyt iPhonessa perille lainkaan. Musiikilla on nyt oma liuku
+   * 0–100 omalla käyrällään (js/musiikkivalitsin.js), ja kaksi
+   * säädintä samalle asialle oli osa alkuperäistä vikaa.
    */
-  assert.deepEqual(KEHITTAJAN_VOIMA_OLETUS, { tausta: 1, musiikki: 1 });
-  assert.equal(kehittajanKerroin('musiikki'), 1);
-  assert.equal(kehittajanKerroinTeksti('musiikki'), '×1,0');
+  assert.deepEqual(KEHITTAJAN_VOIMA_OLETUS, { tausta: 1 });
+  assert.equal(kehittajanKerroin('musiikki'), 1, 'poistettu laji ei saa muuttua säätimeksi');
   assert.equal(kehittajanKerroin('olematon'), 1);
   assert.equal(asetaKehittajanKerroin('tausta', 99), KEHITTAJAN_VOIMA_MAX);
   assert.equal(asetaKehittajanKerroin('tausta', 0), KEHITTAJAN_VOIMA_MIN);
@@ -28,14 +27,14 @@ test('kerroin on oletuksena 1 ja pysyy rajoissa', () => {
 });
 
 test('plus ja miinus liikuttavat askelen ja kuuntelija kuulee muutoksen', () => {
-  asetaKehittajanKerroin('musiikki', 1);
+  asetaKehittajanKerroin('tausta', 1);
   const kuultu = [];
-  const irti = kuunteleKehittajanKerrointa('musiikki', (v) => kuultu.push(v));
-  assert.equal(saadaKehittajanKerrointa('musiikki', 1), 1 + KEHITTAJAN_VOIMA_ASKEL);
-  assert.equal(saadaKehittajanKerrointa('musiikki', -1), 1);
+  const irti = kuunteleKehittajanKerrointa('tausta', (v) => kuultu.push(v));
+  assert.equal(saadaKehittajanKerrointa('tausta', 1), 1 + KEHITTAJAN_VOIMA_ASKEL);
+  assert.equal(saadaKehittajanKerrointa('tausta', -1), 1);
   assert.deepEqual(kuultu, [1.1, 1]);
   irti();
-  assert.equal(kehittajanKerroinTeksti('musiikki'), '×1,0');
+  assert.equal(kehittajanKerroinTeksti('tausta'), '×1,0');
 });
 
 test('ambienssi ja siirtymämusiikki kertovat tasonsa kehittäjän kertoimella', () => {
@@ -54,7 +53,10 @@ test('ambienssi ja siirtymämusiikki kertovat tasonsa kehittäjän kertoimella',
   assert.match(lue('../js/siirtymamusiikki.js'), /raidanTaso = [\s\S]{0,160}musiikinKerroin\(\)/);
   const html = lue('../index.html');
   assert.match(html, /kehittaja-saadin" data-laji="tausta"/);
-  assert.match(html, /kehittaja-saadin" data-laji="musiikki"/);
+  // Musiikin rivi on nyt liuku 0–100 eikä +/- askellin (omistaja 9.9.2026).
+  assert.match(html, /id="kehittaja-musiikki-liuku"[\s\S]{0,200}type="range"/);
+  assert.doesNotMatch(html, /data-laji="musiikki"/,
+    'musiikilla on taas kaksi säädintä — kerroinaskellin ja liuku');
 });
 
 test('Sarajevon äänimaisema ei ole kirkonkelloja (omistaja 3.9.2026)', () => {

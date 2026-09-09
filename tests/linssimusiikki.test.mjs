@@ -73,8 +73,8 @@ let soittimet = [];
 /** Soitin tynkänä: vain se, mitä siirtymämusiikki oikeasti käyttää. */
 class TynkaAudio {
   constructor(src) {
-    this.src = src;
-    this.alkuSrc = src;
+    this._src = src ?? null;
+    this.alkuSrc = src ?? '';
     this.volume = 0;
     this.loop = false;
     this.preload = '';
@@ -82,6 +82,11 @@ class TynkaAudio {
     this.kuuntelijat = new Map();
     soittimet.push(this);
   }
+
+  /* Raita saa srcinsä vasta konstruktorin jälkeen (crossOrigin ensin). */
+  get src() { return this._src; }
+
+  set src(v) { this._src = v; if (!this.alkuSrc) this.alkuSrc = v ?? ''; }
 
   play() { this.paused = false; return Promise.resolve(); }
 
@@ -94,7 +99,7 @@ class TynkaAudio {
     this.kuuntelijat.get(laji).add(fn);
   }
 
-  removeAttribute(nimi) { if (nimi === 'src') this.src = null; }
+  removeAttribute(nimi) { if (nimi === 'src') this._src = null; }
 
   /** Verkko petti: sama tapahtuma kuin selaimen 404. */
   laukaiseVirhe() {
@@ -104,9 +109,15 @@ class TynkaAudio {
 globalThis.Audio = TynkaAudio;
 
 const musiikki = await import('../js/siirtymamusiikki.js');
-// Kehittäjän musiikkikerroin on oletuksena ×2,0 (omistaja 5.9.2026); nämä
-// testit mittaavat pelin OMIA tasoja, joten kerroin nollataan yhteen.
-const { asetaKehittajanKerroin } = await import('../js/kehittajan-voimat.js');
+/*
+ * MUSIIKIN SÄÄDIN ON MUKANA JOKAISESSA TASOSSA (omistaja 9.9.2026: liuku
+ * 0–100 korvasi kehittäjän ×-askeltimen). Nämä testit mittaavat pelin
+ * OMIA tasoja, joten säädin viedään joka testissä samaan lukemaan ja
+ * odotettu taso kerrotaan kertoimella — ei kovakoodata, jotta käyrän
+ * säätäminen näkyy testissä eikä riko sitä.
+ */
+const { MUSIIKIN_LIUKU_OLETUS, asetaMusiikinLiuku, musiikinKerroin } = await import('../js/musiikkivalitsin.js');
+const kerroin = () => musiikinKerroin();
 const {
   MUSIIKKILAJIT, SIIRTYMALAJIT, aloitaSiirtymamusiikki, himmennaSiirtymamusiikki,
   lopetaSiirtymamusiikki, nollaaSiirtymamusiikki, siirtymamusiikinRivi, siirtymamusiikkiSoi,
@@ -114,7 +125,7 @@ const {
 
 /** Puhdas pöytä joka testille: ei soivaa raitaa, ei istunnon lippuja. */
 async function pystyta() {
-  asetaKehittajanKerroin('musiikki', 1);
+  asetaMusiikinLiuku(MUSIIKIN_LIUKU_OLETUS);
   nollaaSiirtymamusiikki();
   soittimet = [];
   rafJono = [];
@@ -167,11 +178,12 @@ test('linssiraita nousee voimaan 0,11 kuten laiva, lento jää matalammaksi', as
     await pystyta();
     voimat[laji] = (await soita(laji)).volume;
   }
-  assert.equal(voimat.jalan, 0.11);
-  assert.equal(voimat.laiva, 0.11);
-  assert.equal(voimat.lento, 0.06);
-  assert.equal(voimat.keksinnot, 0.11);
-  assert.equal(voimat['ihmisen-matka'], 0.11);
+  const k = kerroin();
+  assert.equal(voimat.jalan, 0.11 * k);
+  assert.equal(voimat.laiva, 0.11 * k);
+  assert.equal(voimat.lento, 0.06 * k);
+  assert.equal(voimat.keksinnot, 0.11 * k);
+  assert.equal(voimat['ihmisen-matka'], 0.11 * k);
 });
 
 test('linssiraita feidaa sisään 600 ms, siirtymä entiseen tapaan 300 ms', async () => {
@@ -183,14 +195,14 @@ test('linssiraita feidaa sisään 600 ms, siirtymä entiseen tapaan 300 ms', asy
   await pystyta();
   aloitaSiirtymamusiikki('keksinnot');
   await mikrotehtavat();
-  const linssi = feidauksenKesto(soittimet.at(-1), 0.11);
+  const linssi = feidauksenKesto(soittimet.at(-1), 0.11 * kerroin());
   assert.ok(linssi !== null && Math.abs(linssi - 600) <= 20,
     `linssin nousun pitäisi kestää 600 ms — kesti ${linssi} ms`);
 
   await pystyta();
   aloitaSiirtymamusiikki('jalan');
   await mikrotehtavat();
-  const siirtyma = feidauksenKesto(soittimet.at(-1), 0.11);
+  const siirtyma = feidauksenKesto(soittimet.at(-1), 0.11 * kerroin());
   assert.ok(siirtyma !== null && Math.abs(siirtyma - 300) <= 20,
     `siirtymän nousun pitäisi kestää 300 ms — kesti ${siirtyma} ms`);
 });
@@ -201,8 +213,9 @@ test('linssiraita feidaa ulos 800 ms ja vapauttaa soittimen vasta lopuksi', asyn
   lopetaSiirtymamusiikki();
   ajaKehykset(400, 50);
   const puolivalissa = audio.volume;
-  assert.ok(puolivalissa > 0.02 && puolivalissa < 0.09,
-    `800 ms:n laskun puolivälissä pitäisi olla n. 0,055 — oli ${puolivalissa}`);
+  const puolet = 0.11 * kerroin() / 2;
+  assert.ok(puolivalissa > puolet * 0.4 && puolivalissa < puolet * 1.6,
+    `800 ms:n laskun puolivälissä pitäisi olla n. ${puolet} — oli ${puolivalissa}`);
   assert.equal(audio.src, audio.alkuSrc, 'soitinta ei saa vapauttaa kesken feidauksen');
   ajaKehykset(500, 50);
   assert.equal(audio.volume, 0);
@@ -225,16 +238,17 @@ test('siirtymäraita feidaa ulos entiseen tapaan 500 ms', async () => {
 test('himmennys puolittaa soivan raidan ja palautus nostaa sen takaisin', async () => {
   await pystyta();
   const audio = await soita('keksinnot');
-  assert.equal(audio.volume, 0.11);
+  const taysi = 0.11 * kerroin();
+  assert.equal(audio.volume, taysi);
 
   himmennaSiirtymamusiikki(0.5);
   ajaKehykset(1000);
-  assert.ok(Math.abs(audio.volume - 0.055) < 1e-9, `himmennetty taso ${audio.volume}`);
+  assert.ok(Math.abs(audio.volume - taysi / 2) < 1e-9, `himmennetty taso ${audio.volume}`);
   assert.equal(audio.paused, false, 'tauolla musiikki JATKUU, se vain hiljenee');
 
   himmennaSiirtymamusiikki(1);
   ajaKehykset(1000);
-  assert.equal(audio.volume, 0.11);
+  assert.equal(audio.volume, taysi);
 });
 
 test('himmennys ei jää päälle seuraavaan raitaan eikä kelvoton arvo riko tasoa', async () => {
@@ -246,11 +260,12 @@ test('himmennys ei jää päälle seuraavaan raitaan eikä kelvoton arvo riko ta
   ajaKehykset(1000);
 
   const seuraava = await soita('jalan');
-  assert.equal(seuraava.volume, 0.11, 'uusi käynnistys nollaa himmennyksen');
+  const taysi = 0.11 * kerroin();
+  assert.equal(seuraava.volume, taysi, 'uusi käynnistys nollaa himmennyksen');
 
   himmennaSiirtymamusiikki(undefined);
   ajaKehykset(1000);
-  assert.equal(seuraava.volume, 0.11, 'kelvoton kerroin tarkoittaa täyttä tasoa');
+  assert.equal(seuraava.volume, taysi, 'kelvoton kerroin tarkoittaa täyttä tasoa');
 });
 
 test('himmennys ilman soivaa raitaa on turvallinen', async () => {

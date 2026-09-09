@@ -581,6 +581,7 @@ const SHELL = [
   './js/sound.js',
   './js/ambience-stream.js',
   './js/kaupunkimusiikki.js',
+  './js/musiikkivahvistin.js',
   './js/musiikkivalitsin.js',
   './js/siirtymamusiikki.js',
   './js/die.js',

@@ -3,15 +3,22 @@
  * saisi hammasrattaan alle laittaa äänenvoimakkuus säätimet taustaäänen ja
  * taustamusiikin voimakkuuksille (+/- arvot nykyisille arvoille)"*).
  *
- * Kaksi kerrointa, jotka kerrotaan pelin omiin tasoihin päälle:
+ * Yksi kerroin, joka kerrotaan pelin omaan tasoon päälle:
  *   tausta    kaupungin äänimaisema (js/ambience-stream.js taso)
- *   musiikki  KAIKKI musiikki — pohjaraita, kaupunki- ja aluekappaleet,
- *             tila- ja paikkaraidat, siirtymä- ja linssiraidat,
- *             visamusiikki ja aarreaihe. Soittimet eivät lue tätä
- *             suoraan vaan js/musiikkivalitsin.js `musiikinKerroin()`
- *             -funktion kautta, jotta rinnakkaisia kertoimia ei
- *             pääse syntymään (omistajan vika 8.9.2026: *"eikä rattaan
- *             säädin vaikuta sen tasoon ollenkaan"*).
+ *
+ * MUSIIKKI EI OLE ENÄÄ TÄÄLLÄ (9.9.2026). Musiikilla oli oma laji
+ * `musiikki`, ja se oli sama ×0,25…×3,0 -askellin kuin taustaäänellä.
+ * Omistajan vika toistui kahdesti (*"eikä rattaan säädin vaikuta sen
+ * tasoon ollenkaan"* 8.9., *"vielä aivan liian kovalla … säätimen
+ * pystyisi säätämään todella isolla välillä"* 9.9.), ja syitä oli
+ * kaksi: lineaarinen ja kapea väli (alaraja ×0,25 on vain −12 dB, ei
+ * hiljaisuus) sekä se, ettei taso mennyt iPhonessa perille lainkaan.
+ * Musiikilla on nyt oma liuku 0–100 omalla korvan mukaisella
+ * käyrällään (js/musiikkivalitsin.js `musiikinVahvistus`) ja oma tie
+ * äänen läpi (js/musiikkivahvistin.js). Vanha avain
+ * `matkakirja-dev-voima-musiikki` jää laitteille lojumaan, mutta sitä
+ * ei enää lueta — juuri siksi, ettei sinne unohtunut ×2,0
+ * kaksinkertaistaisi uuden säätimen tulosta.
  *
  * Kerroin 1,0 = pelin nykyinen taso; +/- liikuttaa sitä askelittain
  * (ASKEL) rajojen sisällä. Arvo tallennetaan localStorageen, joten
@@ -25,28 +32,18 @@
  * säädön pitää kuulua ilman että ääni vaihtuu.
  */
 
-export const KEHITTAJAN_VOIMA_LAJIT = /** @type {const} */ (['tausta', 'musiikki']);
+export const KEHITTAJAN_VOIMA_LAJIT = /** @type {const} */ (['tausta']);
 export const KEHITTAJAN_VOIMA_MIN = 0.25;
 export const KEHITTAJAN_VOIMA_MAX = 3;
 export const KEHITTAJAN_VOIMA_ASKEL = 0.1;
 export const KEHITTAJAN_VOIMA_AVAIN = 'matkakirja-dev-voima-';
 /*
- * LAJIN OLETUSKERROIN — MOLEMMAT 1,0 ELI PELIN OMA TASO.
- *
- * Musiikin oletus oli 5.9.2026 illasta 2,0 (omistajan linjaus
- * sanatarkasti: "taustamusiikki saa olla x2.0 arvossa oletuksena").
- * Se linjaus koski VANHAA palettia, joka oli 16,8 dB nykyisiä
- * Lyria-raitoja hiljaisempi — kaksinkertaistus oli tapa saada liian
- * hiljainen raita kuuluviin. Palettivaihdon jälkeen sama kerroin
- * kaksinkertaisti jo valmiiksi liian kovan raidan (omistaja 8.9.2026:
- * *"Taustamusiikki on aivan liian kovalla"*), joten hyväksytty taso on
- * nyt siellä minne se kuuluu — perustasossa (js/musiikkivalitsin.js
- * MUSIIKIN_PERUSTASO) — ja kerroin on jälleen pelkkä säädin.
+ * LAJIN OLETUSKERROIN — 1,0 ELI PELIN OMA TASO.
  *
  * OLETUS ON SE ARVO, JOLLA TAVALLINEN PELAAJA KUULEE PELIN; tallennus
  * kirjoitetaan vain, kun kerroin poikkeaa oletuksesta.
  */
-export const KEHITTAJAN_VOIMA_OLETUS = /** @type {const} */ ({ tausta: 1, musiikki: 1 });
+export const KEHITTAJAN_VOIMA_OLETUS = /** @type {const} */ ({ tausta: 1 });
 const oletus = (laji) => KEHITTAJAN_VOIMA_OLETUS[laji] ?? 1;
 
 const kertoimet = new Map();

@@ -34,6 +34,16 @@ import {
   kuunteleMusiikinKerrointa, kuunteleMusiikkitilaa, musiikinKerroin,
   musiikinMaa, musiikinPaikka, musiikkiPaalla, valitseMusiikki,
 } from './musiikkivalitsin.js';
+/*
+ * MUSIIKIN VAHVISTIN (js/musiikkivahvistin.js) on se tie, jota pitkin
+ * taso menee perille myös iPhonessa: reititys, kontekstin herätys
+ * eleestä ja mittaus siitä, tottelisiko selain volumea lainkaan
+ * (omistajan vika 9.9.2026: *"Taustamusiikki on ainakin iPhonilla vielä
+ * aivan liian kovalla"*).
+ */
+import {
+  kuunteleReitityksenAvautumista, liitaMusiikkiin, musiikkiSaaSoida, volumeToimii,
+} from './musiikkivahvistin.js';
 
 // Arvottu ääni pysyy samana koko käynnin ajan: syncAmbience kutsuu
 // playPlaceAmbiencea jokaisella piirrolla, eikä ääni saa vaihtua tai
@@ -315,27 +325,15 @@ function liitaKompressori(audio) {
  * täsmälleen entiselleen (volume-polku). Mykäksi jäävän ketjun varalta
  * on sama hiljaisuusvahti kuin maisemalla (vartioiMusiikinHiljaisuutta).
  */
-function liitaMusiikinVahvistin(audio) {
-  try {
-    // ensureContext on TRYN SISÄLLÄ: kontekstin rakentaminen voi heittää
-    // (suljettu konteksti, riisuttu ympäristö), eikä musiikki saa jäädä
-    // soimatta siksi, että sen tasonsäätöä yritettiin parantaa.
-    const ctx = sfx.ensureContext?.();
-    if (!ctx || ctx.state !== 'running' || !ctx.createMediaElementSource) return null;
-    const lahde = ctx.createMediaElementSource(audio);
-    const vahvistin = ctx.createGain();
-    vahvistin.gain.value = 0;
-    // Mittari ketjussa eikä haarassa — sama perustelu kuin maisemalla.
-    const mittari = ctx.createAnalyser();
-    mittari.fftSize = 256;
-    lahde.connect(vahvistin).connect(mittari).connect(ctx.destination);
-    audio.aaniSolmut = [lahde, vahvistin, mittari];
-    audio.aaniMittari = mittari;
-    return vahvistin;
-  } catch {
-    return null;
-  }
-}
+/*
+ * REITITYS ASUU NYT OMASSA MODUULISSAAN (js/musiikkivahvistin.js), koska
+ * pohjaraita ei ole ainoa musiikkireitti: visamusiikki, siirtymä- ja
+ * linssiraidat sekä aarreaihe tarvitsevat täsmälleen saman kohtelun,
+ * ja ne asuvat eri tiedostoissa. Neljä kopiota samasta ketjusta olisi
+ * neljä paikkaa, joissa iOS:n volume-vika pitäisi muistaa erikseen —
+ * ja juuri niin kävi 8.9.2026 korjauksessa, joka jäi puolitiehen.
+ */
+const liitaMusiikinVahvistin = (audio) => liitaMusiikkiin(audio);
 
 /*
  * ── HILJAISUUSVAHTI (turvaverkko Web Audio -reitille) ────────────────
@@ -1063,13 +1061,31 @@ export function startQuizMusic(lauta) {
   // uudestaan ilman että soittimen asetuksia tarvitsee etsiä uudelleen.
   visanVoima = asetus.voima ?? 1;
   const alkuperainen = asetus.url ?? QUIZ_MUSIC.url;
-  const audio = new Audio(aaniOsoite(alkuperainen));
+  const osoite = aaniOsoite(alkuperainen);
+  const audio = new Audio();
+  /*
+   * crossOrigin ENNEN srciä ja VAIN peilistä tulevalle raidalle. Web
+   * Audio lukee elementin ääntä, ja ilman CORS-lupaa ketju olisi
+   * hiljainen ilman virhettä; toisaalta lupaa ei saa vaatia
+   * ulkopuoliselta lähteeltä (Freesound), jolle sitä ei ole luvattu —
+   * silloin raita jäisi soimatta kokonaan. Peilin vastaus tulee
+   * palvelutyöntekijän kautta CORS-tilassa (sw.js aaniPeilista).
+   */
+  if (onPeilista(osoite)) audio.crossOrigin = 'anonymous';
+  audio.src = osoite;
   audio.loop = true;
   audio.preload = 'auto';
-  audio.volume = 0;
   // Visan raita on musiikkia: ei kompressoria, ei korvauskerrointa
   // (ks. korvaus()) — taso tarkoittaa sitä mitä lukee.
   audio.aaniKorvaus = 1;
+  /*
+   * VISAMUSIIKKI ON MUSIIKKIA MYÖS TÄSSÄ: sama vahvistinreitti kuin
+   * pohjaraidalla, jotta säädin ja perustaso menevät perille myös
+   * puhelimessa (omistajan vika 9.9.2026). Ilman reititystä taso jää
+   * elementin omaan volumeen kuten ennen.
+   */
+  audio.aaniVahvistin = liitaMusiikkiin(audio);
+  audio.volume = audio.aaniVahvistin ? 1 : 0;
   if (asetus.alku) {
     audio.addEventListener('loadedmetadata', () => {
       try {
@@ -1113,6 +1129,13 @@ export function startQuizMusic(lauta) {
     soi();
   };
   audio.addEventListener('error', petti);
+  /*
+   * Sama sääntö kuin pohjaraidalla: ilman vahvistinta JA ilman toimivaa
+   * volumea (iOS) soitto tarkoittaisi tiedoston omaa täyttä tasoa.
+   * Kysymyksen musiikki on lyhyt kohtaus eikä sitä jäädä odottamaan —
+   * hiljainen kysymys on parempi kuin kertojan yli soiva huilu.
+   */
+  if (!musiikkiSaaSoida(audio)) { luovuta(); return; }
   soi();
 }
 
@@ -1214,6 +1237,35 @@ const puuttuvatMusiikit = new Set();
  */
 let musiikkiIlmanReititysta = false;
 
+/*
+ * ── REITITYSTÄ YRITETÄÄN UUDESTAAN, KUN KONTEKSTI HERÄÄ ─────────────
+ *
+ * TÄMÄ OLI 8.9.2026 KORJAUKSEN AUKKO. Reititys onnistuu vain käynnissä
+ * olevaan äänikontekstiin, ja iOS:ssä konteksti on `suspended` siihen
+ * asti kunnes `resume()` on ehtinyt ratketa — eleen JÄLKEENKIN. Pelin
+ * ensimmäinen raita syntyy juuri siinä hetkessä, joten se päätyi lähes
+ * aina volume-polulle. Ja koska pohjaraita jää soimaan silmukkana,
+ * yksi huono ajoitus tarkoitti koko istunnon täyttä tasoa puhelimessa.
+ *
+ * Nyt soitin ilmoittautuu odottajaksi: kun konteksti on käynnissä,
+ * reitittämätön raita rakennetaan uudelleen reititettynä. Yritysten
+ * määrä on rajattu, ettei epäonnistuva reititys jäisi rakentamaan
+ * soittimia loputtomiin.
+ */
+const REITITYSYRITYKSET = 4;
+let reitityksenYritykset = 0;
+
+kuunteleReitityksenAvautumista(() => {
+  if (!pohja || pohja.aaniVahvistin || musiikkiIlmanReititysta) return;
+  if (reitityksenYritykset >= REITITYSYRITYKSET) return;
+  reitityksenYritykset += 1;
+  const vanha = pohja;
+  pohja = null;
+  pohjaPolku = null;
+  vapautaSoitin(vanha);
+  kaynnistaPohjaMusiikki();
+});
+
 /**
  * Mittaa reititetyn musiikkiketjun ulostuloa ja rakentaa raidan
  * uudelleen ilman reititystä, jos ketju on mykkä. Sama turvaverkko ja
@@ -1232,6 +1284,15 @@ function vartioiMusiikinHiljaisuutta(audio) {
     }
     if (audio.readyState < 3) return; // lataus kesken, ei mykkyys
     if (pohjaMusiikinTaso() <= 0) return; // täysi väistö on tarkoitus
+    /*
+     * VARAREITTI EI SAA OLLA VIKAA PAHEMPI (omistajan vika 9.9.2026).
+     * Volume-polku palauttaa tason elementin omaan volumeen — ja jos
+     * selain ei tottele volumea (iOS), se tarkoittaa TÄYTTÄ tasoa eikä
+     * entistä tasoa. Sellaisessa selaimessa mykkä ketju jätetään
+     * paikalleen: hiljainen musiikki on korjattavissa, kertojan yli
+     * jyräävä ei.
+     */
+    if (!volumeToimii()) return;
     musiikkiIlmanReititysta = true;
     pohja = null;
     pohjaPolku = null;
@@ -1429,6 +1490,14 @@ export function kaynnistaPohjaMusiikki(cityId = musiikinPaikka(), maa = musiikin
     soi();
   };
   audio.addEventListener('error', petti);
+  /*
+   * HILJAISUUS ON PAREMPI KUIN HALLITSEMATON TÄYSI TASO. Jos elementin
+   * volume ei tottele (iOS) EIKÄ vahvistinta saatu, soitto tarkoittaisi
+   * tiedoston omaa tasoa — juuri sitä, mistä omistaja valitti kahdesti.
+   * Silloin raita jää odottamaan: yllä oleva odottaja rakentaa sen
+   * uudelleen reititettynä heti kun äänikonteksti herää eleestä.
+   */
+  if (!musiikkiSaaSoida(audio)) return;
   soi();
 }
 
