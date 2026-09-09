@@ -171,6 +171,7 @@ import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
 import { livianKorostetutKaupungit } from './liviapuhe.js';
+import { luentakuvallisetKaupungit } from './packs/fokusvirrat.js';
 // Fokusmoodin annosteluvirta (js/fokusvirta.js). Kytkentä on kaksi
 // kutsua: saapumisen laukaisin renderissä ja lehtilukko openArrivalissa.
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
@@ -6988,8 +6989,9 @@ export class UI {
      * se on nyt poissa, myös kehittäjätilassa. Laatan luokka on siis
      * pelkkä `city`/`city-start` joka tilassa.
      */
-    // Tarkistuskehän lista kerran, ei kaupunkia kohti (ks. alempaa).
+    // Kehien listat kerran, ei kaupunkia kohti (ks. alempaa).
     const tarkistettavat = livianKorostetutKaupungit();
+    const luentakuvalliset = luentakuvallisetKaupungit();
     for (const c of board.cities) {
       const wobble = `rotate(${vary(`city:rot:${c.id}`, 12).toFixed(1)} ${c.x} ${c.y})`;
       /*
@@ -7072,7 +7074,17 @@ export class UI {
        * pysyvät ennallaan. Päätoimittaja kääntää LIVIAN_KOROSTUS_KAYTOSSA
        * falseksi, kun kaupungit on käyty läpi.
        */
-      if (tarkistettavat.has(c.id)) {
+      /*
+       * LUENTAKUVAKEHÄ (omistaja 9.9.2026 klo 12.20: *"Voisit nyt merkata
+       * eri värillä sellaiset kaupungit, joissa tällaiset kuvat on. Muut
+       * värimerkinnät voi nollata kartalta."*): kaupunki, jonka pakissa on
+       * matkakirja.luentakuva, saa sinisen kehän (sama mekaniikka kuin
+       * tarkistuskehällä, css .city-luentakuva). Tarkistuskehä on
+       * nollattu (LIVIAN_KOROSTUS_KAYTOSSA false).
+       */
+      const kehanLuokka = luentakuvalliset.has(c.id) ? 'city-luentakuva'
+        : (tarkistettavat.has(c.id) ? 'city-tarkistus' : null);
+      if (kehanLuokka) {
         const tr = base + 5.2;
         el('ellipse', {
           cx: c.x,
@@ -7080,7 +7092,7 @@ export class UI {
           rx: tr + vary(`tarkistus:rx:${c.id}`, 0.7),
           ry: tr + vary(`tarkistus:ry:${c.id}`, 0.7),
           transform: wobble,
-          class: 'city-tarkistus',
+          class: kehanLuokka,
           ...tunnus, ...fokus,
         }, cities);
       }

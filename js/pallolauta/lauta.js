@@ -71,6 +71,7 @@ import {
 import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
 import { livianKorostetutKaupungit } from '../liviapuhe.js';
+import { luentakuvallisetKaupungit } from '../packs/fokusvirrat.js';
 import { asemoiFokuskohde } from '../fokuskohteet.js';
 import { laudaltaAsteiksi } from '../fokusmitat.js';
 import { packById } from '../pack.js';
@@ -618,8 +619,21 @@ const TARKISTUSVARI = '#f7c948';
  */
 export const KAUPUNKIPISTEEN_VARI = '#8c6d4e';
 
-/** Pisteen väri: tarkistettava kirkasta kultaa, käyty kultaa, alku vaaleaa. */
+/*
+ * LUENTAKUVAN VÄRI (omistaja 9.9.2026 klo 12.20, sanatarkasti: *"Voisit
+ * nyt merkata eri värillä sellaiset kaupungit, joissa tällaiset kuvat on.
+ * Muut värimerkinnät voi nollata kartalta."*): kaupunki, jonka pakissa on
+ * matkakirja.luentakuva (kuva kartan päällä luennan aikana), näkyy
+ * pallolla sinisenä pisteenä. Sepiakartalla sininen on ainoa väri, joka
+ * ei sekoitu kultaan (käyty/alku) eikä seepiaan (käymätön). Vain väri:
+ * koko ja osumapinta ennallaan. Tarkistuskorostus (kulta) on nollattu
+ * (js/liviapuhe.js LIVIAN_KOROSTUS_KAYTOSSA false).
+ */
+export const LUENTAKUVAN_VARI = '#2f6fbf';
+
+/** Pisteen väri: luentakuva sinistä, tarkistettava kirkasta kultaa, käyty kultaa, alku vaaleaa. */
 export function kaupunkipisteenVari(kaupunki) {
+  if (luentakuvallisetKaupungit().has(kaupunki.id)) return LUENTAKUVAN_VARI;
   if (livianKorostetutKaupungit().has(kaupunki.id)) return TARKISTUSVARI;
   if (kaupunki.kayty) return '#d9a13b';
   if (kaupunki.alku) return '#b28a4a';

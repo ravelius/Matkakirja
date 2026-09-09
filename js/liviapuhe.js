@@ -621,7 +621,11 @@ export const LIVIAN_AANITETYT = {
  * saa muuttaa yhtäkään osumapintaa — pelkkä lisäkehä kaupungin merkin
  * ympärillä (css .kaupunki-tarkistus).
  */
-export const LIVIAN_KOROSTUS_KAYTOSSA = true;
+// POIS 9.9.2026: kaikki 45 kaupunkia on äänitetty, ja omistaja nollasi
+// kartan muut värimerkinnät ("Muut värimerkinnät voi nollata kartalta");
+// kartalla korostetaan nyt vain luentakuvalliset kaupungit
+// (js/packs/fokusvirrat.js luentakuvallisetKaupungit).
+export const LIVIAN_KOROSTUS_KAYTOSSA = false;
 
 /**
  * Ne kaupungit, joissa uusi kulku on VALMIS KUUNNELTAVAKSI: kaupungilla

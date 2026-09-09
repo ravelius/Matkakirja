@@ -4216,6 +4216,17 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'LUENTAKUVALLISET KAUPUNGIT ERI VARILLA KARTALLE, MUUT VARIMERKINNAT '
+          + 'NOLLATAAN (omistaja 9.9.2026 klo 12.20, sanatarkasti: "Kuvaputkelta '
+          + 'tulee kohta kahdeksan kuvaa, joita kaytetaan matkakirjan luennon '
+          + 'kanssa yhta aikaa. Ne voisivat siis ilmestya kartan paalle silloin, '
+          + 'kun matkakirjaa luetaan. Voisit nyt merkata eri varilla sellaiset '
+          + 'kaupungit, joissa tallaiset kuvat on. Muut varimerkinnat voi nollata '
+          + 'kartalta."): kaupunki, jonka pakissa on matkakirja.luentakuva, '
+          + 'nakyy pallolla sinisena pisteena ja tasokartalla sinisena kehana; '
+          + 'joukko johdetaan pakeista. Tarkistuskorostus (kultainen piste ja '
+          + 'keha aanitetyille pulukuluille, 7.9.2026) nollataan. Kayty/alku-'
+          + 'varit ovat pelin tilaa, eivat merkintoja, ja jaavat.',
         'LYHYT KUVATEKSTI SIVULLA, PITKA VASTA AVATUSSA KUVASSA - SAMA SAANTO '
           + 'KAIKKIIN PELIN KUVATEKSTEIHIN (omistaja 9.9.2026 klo 11.40, '
           + 'sanatarkasti: "Ja saman saannon voisi itse asiassa ajaa kaikkiin '
