@@ -3132,7 +3132,6 @@ export const MAA_KATEGORIAT = {
                 + 'neljänkymmenen vuoden ajan, ja sen arkistoon on kertynyt '
                 + 'valokuvia, muistikirjoja, karttoja ja piirroksia koko '
                 + 'siltä ajalta.',
-              lyhyt: 'Firenzen tuomiokirkko aloitettiin 1296 ja valmistui 1436 Brunelleschin kupolin myötä.',
               lyhyt: 'Deir el-Medina oli käsityöläiskylä, jossa asuivat Kuninkaiden laakson hautoja tehneet työmiehet.',
               selite: 'Deir el-Medina oli käsityöläiskylä, jossa asuivat '
                 + 'Kuninkaiden laakson hautoja tehneet työmiehet; kylän '
@@ -3349,7 +3348,6 @@ export const MAA_KATEGORIAT = {
             + 'puristettua ja pikaista. Monessa baarissa kahvi maksaa '
             + 'tiskillä vähemmän kuin pöydässä: istumisesta veloitetaan, '
             + 'kahvista ei juuri.',
-          lyhyt: 'Napolilainen O sole mio kirjoitettiin 1898 Giovanni Capurron sanoin ja Eduardo di Capuan sävelin.',
           lyhyt: 'Espresso puristetaan hienoksi jauhetuista pavuista kuumalla vedellä ja korkealla paineella.',
           selite: 'Espresso puristetaan hienoksi jauhetuista pavuista '
             + 'kuumalla vedellä ja korkealla paineella, ja annos on '
@@ -3697,7 +3695,6 @@ export const MAA_KATEGORIAT = {
             + 'nuori. Ensimmäinen Italiassa painettu ohje ilmestyi vasta '
             + 'vuonna 1954, ja siinä oli mukana valkosipulia ja sveitsiläistä '
             + 'gruyère-juustoa.',
-          lyhyt: 'Plinius vertasi Vesuviuksen pilveä pinjapuuhun, mutta forumilla vertaus ei vielä auttanut ketään.',
           lyhyt: 'Carbonara tehdään suolatusta sianlihasta, juustosta, kananmunasta ja mustapippurista.',
           selite: 'Carbonara tehdään suolatusta sianlihasta, kovasta '
             + 'juustosta, kananmunasta ja mustapippurista, ja se sai '
@@ -4698,7 +4695,6 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Pavillon Cour des Lions Alhambra Granada Spain.jpg',
               teksti: 'Granadan Alhambra rakennettiin 1300-luvulla, kun kaupunki '
                 + 'oli vielä musliminhallitsijoiden pääkaupunki.',
-              lyhyt: 'Lihapullat tehdään jauhelihasta korppujauhoin, sipulein ja maustein.',
               lyhyt: 'Alhambran Leijonapiha rakennettiin Nasridi-sulttaani Muhammad V:n käskystä 1362–1391.',
               selite: 'Alhambran Leijonapiha rakennettiin Nasridi-sulttaani '
                 + 'Muhammad V:n käskystä vuosien 1362 ja 1391 välillä.',
@@ -5160,7 +5156,6 @@ export const MAA_KATEGORIAT = {
             + 'vaan se on tapa, joka on aikojen kuluessa vahvistettu. '
             + 'Sama oikeus on Suomessa ja Norjassa, mutta suuressa '
             + 'osassa Eurooppaa metsään ei saa mennä ilman lupaa.',
-          lyhyt: 'Turvatulitikun teollinen valmistus keskittyi Jönköpingiin Lundströmin veljesten aloittamana.',
           lyhyt: 'Jokamiehenoikeus antaa Ruotsissa ja Suomessa yleisen oikeuden liikkua luonnossa ja poimia marjoja.',
           selite: 'Jokamiehenoikeus antaa Ruotsissa, Suomessa ja useissa '
             + 'muissa maissa yleisen oikeuden liikkua luonnossa ja poimia '
@@ -5276,7 +5271,6 @@ export const MAA_KATEGORIAT = {
             + 'keräämään lajeja ympäri maailmaa; osa heistä ei palannut '
             + 'koskaan. Hänen kotinsa Uppsalan kasvitieteellisessä '
             + 'puutarhassa on yhä nähtävissä.',
-          lyhyt: 'Codex Argenteus on 500-luvun käsikirjoitus Wulfilan goottilaisesta raamatunkäännöksestä.',
           lyhyt: 'Alexander Roslinin muotokuva Carl von Linnéstä, joka vakiinnutti eliöiden kaksiosaisen nimeämisen.',
           selite: 'Alexander Roslinin muotokuva Carl von Linnésta '
             + '(1707–1778), joka vakiinnutti eliöiden kaksiosaisen '
@@ -7085,7 +7079,6 @@ export const MAA_KATEGORIAT = {
             + 'portista, vauva syö lusikasta, meri lyö rantaan. Joukossa oli '
             + 'ensimmäinen elokuvakomedia, jossa poika astuu puutarhurin '
             + 'letkun päälle.',
-          lyhyt: 'Marseillen saippuaa on valmistettu kasviöljyistä noin 600 vuotta, nimen rajaten Ludvig XIV 1688.',
           lyhyt: 'Auguste ja Louis Lumière tunnetaan Cinématographe-järjestelmästään ja lyhytelokuvistaan.',
           selite: 'Auguste ja Louis Lumière valmistivat valokuvauslaitteita '
             + 'ja tunnetaan Cinématographe-järjestelmästään sekä '
@@ -7144,7 +7137,6 @@ export const MAA_KATEGORIAT = {
             + 'ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä '
             + 'ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia '
             + 'härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.',
-          lyhyt: 'Bouquinistit myyvät vanhoja kirjoja Seinen rantamuurien varrella.',
           lyhyt: 'Camarguenhevonen on ranskalainen työhevosrotu, joka on elänyt vuosisatoja puolivilleinä.',
           selite: 'Camarguenhevonen on ranskalainen työhevosrotu, joka on '
             + 'elänyt vuosisatoja puolivilleinä Rhônen suiston kosteikoilla.',
@@ -7991,7 +7983,6 @@ export const MAA_KATEGORIAT = {
             + 'tehtyjä rakeita alettiin myydä vasta 1913. Lajeja on nykyään '
             + 'parikymmentä, ja suklaaraeksi saa kutsua vain sellaista, jossa '
             + 'on vähintään viidennes kaakaota.',
-          lyhyt: 'Vuoden 1502 Cantinon planisfääri on vanhin säilynyt kartta portugalilaisten löytöretkistä.',
           lyhyt: 'Hagelslag on suklaarakeita, joita hollantilaiset ripottelevat voileivän päälle aamiaisella.',
           selite: 'Hagelslag on muutaman millin mittaisia suklaarakeita, '
             + 'joita hollantilaiset ripottelevat voileivän päälle '
@@ -8439,7 +8430,6 @@ export const MAA_KATEGORIAT = {
             + 'ja se ladottiin myöhemmin myös Rio de Janeiron rantakadulle. '
             + 'Työ on hidasta: taitava latoja saa päivässä muutaman '
             + 'neliömetrin.',
-          lyhyt: 'Nazarén Praia do Norten aallot syntyvät rannan edustalla kulkevasta syvästä kanjonista.',
           lyhyt: 'Calçada portuguesa on portugalilainen jalkakäytäväperinne, jossa kivistä ladotaan mosaiikkikuvioita.',
           selite: 'Calçada portuguesa on portugalilainen '
             + 'jalkakäytäväperinne, jossa pienistä kivistä ladotaan '
@@ -9928,7 +9918,6 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Pocket Watch (Switzerland), 1850–53 (CH 18475631).jpg',
               teksti: 'La Chaux-de-Fonds on kellojen kaupunki Jura-vuorilla, ja '
                 + 'koko kaupunki on Unescon maailmanperintökohde.',
-              lyhyt: 'Edvard Munchin 1893 Huuto tunnettiin ensin nimellä Der Schrei der Natur.',
               lyhyt: 'La Chaux-de-Fondsin kellomuseo tutkii aikaa ja ajanmittausta kelloin, kronometrein ja automaatein.',
               selite: 'La Chaux-de-Fondsin kellomuseo on omistettu ajan ja '
                 + 'ajanmittauslaitteiden tutkimukselle, ja sen kokoelmiin '

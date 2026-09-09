@@ -19,6 +19,8 @@ const MODULES = [
   'js/wiki.js',
   'js/media.js',
   'js/kuvatekstit.js',
+  'js/galleria.js',
+  'js/etsi-aarre-nappi.js',
   // Ilmepaketti tuo vain median (peilin juuri); ui, fokusvirta,
   // karttaselite ja main tuovat sen.
   'js/ilme.js',

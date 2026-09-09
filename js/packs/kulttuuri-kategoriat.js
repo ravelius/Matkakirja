@@ -13638,7 +13638,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'obwarzanek-renkaita yhdellä grossilla. Kaduilla on nykyään '
             + '170–180 sinistä kärryä, ja rinkeleitä myydään lähes 150 000 '
             + 'päivässä.',
-          lyhyt: 'Wawelin kukkula oli isoisän matkavuonna itävaltalainen kasarmi Veikselin rannalla.',
           lyhyt: 'Obwarzanek on punottu rinkeli, jonka taikina keitetään ennen uuniin panoa.',
           selite: 'Obwarzanek on punottu rinkeli, jonka taikina keitetään '
             + 'ennen uuniin panoa — nimi tulee verbistä obwarzać, keittää.',
@@ -15875,7 +15874,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-kiova-aamu.jpg',
-          lyhyt: 'Kunstkamera on Venäjän ensimmäinen julkinen museo, Pietari Suuri avasi sen 1714.',
           lyhyt: 'Pyhän Sofian katedraali on Ukrainan ensimmäinen maailmanperintökohde, kellotorni kasvoi 76 metriin.',
           selite: 'Pyhän Sofian katedraali on Kiovan Rusin ajan '
             + 'rakennusmuistomerkki ja Ukrainan ensimmäinen '
@@ -18831,7 +18829,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           ampari: 'herokoe/hero-odessa-aamu.jpg',
-          lyhyt: 'Al Fahidin kortteli on Bur Dubain vanhinta rakennuskantaa, jäähdytettynä tuulitorneilla.',
           lyhyt: 'Odessan ooppera- ja balettiteatterin uusbarokkitalo nousi 1873 palon jälkeen, avattiin 1887.',
           selite: 'Odessan ooppera- ja balettiteatterin nykyinen '
             + 'uusbarokkitalo nousi vuonna 1873 palaneen kaupunginteatterin '
@@ -19009,7 +19006,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'astetta. Rata kulkee suurimmaksi osaksi katujen yläpuolella '
             + 'pilareilla. Ensimmäisessä vaunussa on osa, johon saavat mennä '
             + 'vain naiset ja lapset, ja väärästä vaunusta saa sakon.',
-          lyhyt: 'Dubaissa heinä-elokuun keskilämpötila on yli 43 astetta, vanhat kujat on rakennettu varjoisiksi.',
           lyhyt: 'Dubain metro avattiin 2009, junat kulkevat ilman kuljettajaa tietokoneen ohjaamina.',
           selite: 'Dubain metro avattiin 9. syyskuuta 2009, ja sen junat '
             + 'kulkevat ilman kuljettajaa tietokoneen ohjaamina.',
@@ -21344,7 +21340,6 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Tribute Bearers on the Apadana Staircase 22 (Best Viewed Size "Large") (4688831503).jpg',
-          lyhyt: 'Muuria kiertää 34 tornia, ja vanhakaupunki hyväksyttiin maailmanperintöluetteloon 1981.',
           lyhyt: 'Kulkueen hahmot kantavat maljoja, kankaita ja eläimiä, kukin omassa asussaan.',
           selite: 'Kulkueen hahmot kantavat maljoja, kankaita, astioita ja '
             + 'eläimiä, kukin omassa asussaan ja omine päähineineen.',
@@ -36745,7 +36740,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Views of the Forbidden City from Jingshan Park 3.jpg',
-          lyhyt: 'Meridiaaniportti on Kielletyn kaupungin pääsisäänkäynti; muurien sisällä asui aikanaan 24 keisaria.',
           lyhyt: 'Kielletyn kaupungin palatsialue on suorakaide, 961 metriä pohjoisesta etelään, 753 idästä länteen.',
           selite: 'Kielletyn kaupungin palatsialue on suorakaide, 961 '
             + 'metriä pohjoisesta etelään ja 753 metriä idästä länteen.',
@@ -37520,7 +37514,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Qila Rai Pithoraksi. Sulttaanikunnan linnoituskaupunkien '
             + 'jälkeen Shah Jahanin Shahjahanabad täydensi sarjan '
             + 'seitsemänteen — se on nykyinen Vanha Delhi.',
-          lyhyt: 'Shibuyan risteystä pidetään vilkkaimpana suojatienä: vihreän aikana sen ylittää 3 000 ihmistä.',
           lyhyt: 'Perimätieto sijoittaa Indraprasthan Purana Qilaan, mutta kaivauksista löytyi vain keramiikkaa.',
           selite: 'Perimätieto sijoittaa legendaarisen Indraprasthan Purana '
             + 'Qilan paikalle, mutta kaivauksista on löytynyt vain vanhaa '
@@ -37707,7 +37700,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Nijubashi Bridge. Tokyo. (42521677522).jpg',
-          lyhyt: 'Kappabashin kauppiaat ovat ottaneet maskotikseen vesihiisi kappan, jonka hahmoja on kylteissä.',
           lyhyt: 'Nijūbashi tarkoittaa kaksoissiltaa ja on nimetty paikan aiemman kaksitasoisen puusillan mukaan.',
           selite: 'Sama silta nykyään: nimi Nijūbashi tarkoittaa kaksoissiltaa ja '
             + 'tulee paikalla aikoinaan olleesta kaksitasoisesta puusillasta.',
@@ -37797,7 +37789,6 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: [
                 {
                   tiedosto: 'Along Yamanote line between Harajuku and Shibuya.jpg',
-                  lyhyt: 'Näyteikkunoiden muoviruoka shokuhin sampuru tehtiin 1920-luvulta parafiinista, myöhemmin PVC:stä.',
                   lyhyt: 'Yamanote-linja kiertää 34,5 kilometrin lenkin 30 aseman kautta, kierros kestää 59–65 minuuttia.',
                   selite: 'Yamanote-linja kiertää 34,5 kilometrin lenkin '
                     + 'kolmenkymmenen aseman kautta, ja koko kierros '
@@ -40132,7 +40123,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tarjottimen, joka oli taottu ensimmäisestä '
             + 'kuparisulatuksesta, ja pyysi saada nimetä ruukin tämän '
             + 'mukaan. Vasarapajaa koeajettiin 18. marraskuuta 1723.',
-          lyhyt: 'Šigirin veistos on maailman vanhin tunnettu puuveistos, yli 11 000 vuoden takaa lehtikuusesta.',
           lyhyt: 'Rakentaminen alkoi 1723 de Genninin johdolla: ensin padottiin joki, sitten nousi ruukki.',
           selite: 'Rakentaminen alkoi 12. maaliskuuta 1723 Georg Wilhelm de '
             + 'Genninin johdolla, ja ensin padottiin joki, vasta sitten '
@@ -42187,7 +42177,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vasta 1941 — se tarina on luontosivulla.',
               kuva: {
                 tiedosto: 'Паратунские горячие источники.jpg',
-                lyhyt: 'Gagarinin puistossa Južno-Sahalinskissa kulkee lasten rautatie Ylemmän lammen rannalla.',
                 lyhyt: 'Paratunkan laakso kaupungin lounaispuolella on kylpylä- ja parantolaseutu kuumine lähteineen.',
                 selite: 'Paratunkan laakso kaupungin lounaispuolella on '
                   + 'kokonainen kylpylä- ja parantolaseutu kuumien '
@@ -42967,7 +42956,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kymmeneen minuuttiin.',
               kuva: {
                 tiedosto: 'Russki Island Bridge, Russia1.jpg',
-                lyhyt: 'Bangkok on rakennettu Chao Phrayan suistotasangolle, keskikorkeudeltaan puolitoista metriä merestä.',
                 lyhyt: 'Russkin silta ylittää salmen 1 104 metrin jännevälillä, A-muotoiset pylonit ovat 320 metriä korkeat.',
                 selite: 'Russkin silta ylittää Itäisen Bosporin salmen '
                   + 'yhdellä 1 104 metrin jännevälillä, ja sen '
