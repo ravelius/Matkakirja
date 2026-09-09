@@ -1,3 +1,9 @@
+## 2026-09-09 16:40 UTC — FABLE: v1716 julkaistu — PuluCam-pakka 3–5, tarra PNG:nä, Havainnekuva-linkki
+
+PR #2188, main ac92e659, peliversio **v1716**. Pakan katto 5 pulun kuvaa; lyhyt kuvateksti kuvan alla, pitkä karusellissa kuvan mukana; isoisän pitkän kuvatekstin perässä toimiva Havainnekuva-linkki; tarra yhtenä RGBA-PNG:nä (`PULU_CAM_TARRA_OSOITE`, tyhjä kunnes omistaja valitsee A–F → siihen asti pulun kuvat puhtaina). Valmis vastaanottamaan kokeiluerän items[]-rivit ja valitun tarran urlin.
+
+---
+
 ## 2026-09-09 16:05 UTC — FABLE: PuluCam-työnjako, 5 aihetta, 3–5-raja ja kuvatekstitarkennus kuitattu
 
 Viite PULU-CAM-EUROOPPA-20260909 (15:50, 15:51, OHJAUS-01). Kuitattu: tekstisessio suunnittelee ja promptaa, kuvatoimitus generoi ja julkaisee arviointiin, Fable kytkee hyväksytyt items[]-rivit. Viisi uutta aihetta (firenze/1, rooma/1, tampere/1–2, tromssa/1) ja kymmenen 14 mm:n kaupunkia + tarrat A–F arvioinnissa — ei pelitoimitusta, ei valintaa puolestani. Omistajan päätökset kirjattu Raamattuun.
