@@ -248,8 +248,78 @@ export const KAUPUNKIPISTEEN_HALKAISIJA_PX = 7;
  * suhde kuin tasokartan laatalla, jonka alta omistaja halusi laatan
  * näkyvän (js/ui.js FOKUS_NAPPULA_PX).
  */
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LÄHIZOOMISSA JOKAINEN PELIKAUPUNKI EROTTUU KOHDEPISTEISTÄ
+ * (omistaja 9.9.2026, työpöytäkaappaus Euroopan lähizoomista)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJA, SANATARKASTI: *"kohdekaupunkien pisteet saisivat puolestaan
+ * tässä zoom tasossa olla isommalla, nyt niitä ei erota muista
+ * palloista."* Kaappauksessa näkyvät pelikaupungit isoilla
+ * kapiteelinimillä (WIEN, BUDAPEST, VENETSIA, SARAJEVO, SOFIA,
+ * BUKAREST, ISTANBUL) ja niiden ympärillä sadat fokuskohteiden pisteet
+ * kursiivinimineen (Hallstatt, Melk, Pécs). Kaupunkipiste oli 7 px ja
+ * kohdemerkki 11,44 px (KOHDEMERKIN_RUUTU_PX): kaupunki oli yhä kartan
+ * pienin merkki — 8.9. korjaus nosti vain PELAAJAN oman kaupungin.
+ *
+ * ── MIKÄ ZOOMI ON "LÄHIZOOMI" — MITTAKAAVA, EI LEHDEN OSUUS ───────
+ *
+ * 8.9. illan sääntö (LATTIA ON YHDEN PISTEEN SÄÄNTÖ) syntyi siitä,
+ * että lattian portti oli `nostot.lehdenOsuus`: maan lehden leveys
+ * näkymästä. Se ei kerro zoomia lainkaan — Ukrainan levyinen lehti
+ * täyttää puolet ruudusta jo koko Euroopan zoomilla, ja juuri siksi
+ * omistaja näki 8.9. jokaisen pisteen 17,2 pikselinä liian kaukaa.
+ * Sama portti tekisi saman virheen uudestaan.
+ *
+ * Mitta on siksi KAMERAN OMA MITTAKAAVA (kamera.nakyvaAlue().skaala =
+ * ruudun pikseliä yhtä lautayksikköä kohden). Mitattu Chromiumilla
+ * 1419 x 821 css (kotelo 1398 x 742), sama ruutu kuin omistajalla:
+ *
+ *     korkeus 0,42  skaala 0,99   koko Eurooppa   (8.9. "liian isoja")
+ *     korkeus 0,30  skaala 1,39
+ *     korkeus 0,22  skaala 1,89   Venetsia-Istanbul (9.9. kaappaus)
+ *     korkeus 0,16  skaala 2,60
+ *
+ * Liuku alkaa 8.9. näkymän YLÄPUOLELTA (LAHIZOOMIN_SKAALA_ALKU 1,2) ja
+ * on täydessä mitassaan omistajan 9.9. näkymässä (…_TAYSI 1,8), joten
+ * 8.9. korjaus säilyy tavulleen: koko Euroopan zoomilla muut kuin
+ * pelaajan kaupunki ovat yhä 7 px. Liuku on jatkuva — piste kasvaa
+ * pehmeästi eikä hyppää missään kohdassa.
+ *
+ * ── TAVOITEKOKO: KAKSI KOHDEPISTETTÄ ──────────────────────────────
+ *
+ * *"nyt niitä ei erota muista palloista"* on erotettavuuden vaatimus,
+ * ja se mitataan siitä, mihin kaupunki sekoittui: kohdemerkkiin.
+ * Täysi lähizoomikoko on LAHIZOOMIN_PISTE_SUHDE x KOHDEMERKIN_RUUTU_PX
+ * = 22,87 px eli kaksi kohdepisteen halkaisijaa. Nappula on 32 px, joten
+ * piste jää yhä sen alle.
+ *
+ * PELAAJAN KAUPUNGIN LATTIA ON ENNALLAAN (8.9.): se lasketaan yhä
+ * lehden osuudesta, ja pelaajan piste on näiden kahden SUUREMPI — se ei
+ * siis pienene mistään, eikä 8.9. mitattu 17,2 px muutu siellä, missä
+ * lähizoomiliuku on vielä nolla.
+ */
 /** Piste lähikuvassa vähintään tämän verran kohdemerkin halkaisijasta. */
 export const KOHDEKAUPUNGIN_PISTE_SUHDE = 1.5;
+/** Lähizoomissa jokainen pelikaupunki on tämän verran kohdemerkistä. */
+export const LAHIZOOMIN_PISTE_SUHDE = 2;
+/** Mittakaava (px / lautayksikkö), jossa lähizoomin kasvu alkaa. */
+export const LAHIZOOMIN_SKAALA_ALKU = 1.2;
+/** Mittakaava, jossa lähizoomin koko on täysi. */
+export const LAHIZOOMIN_SKAALA_TAYSI = 1.8;
+/**
+ * Lähizoomiliu'un asento 0…1 kameran mittakaavasta (ks. lohko yllä).
+ * Jatkuva ja kasvava: ei hyppyä missään zoomin kohdassa.
+ *
+ * @param {number} skaala ruudun pikseliä lautayksikköä kohden
+ */
+export function lahizoominOsuus(skaala) {
+  if (!(skaala > 0)) return 0;
+  const vali = LAHIZOOMIN_SKAALA_TAYSI - LAHIZOOMIN_SKAALA_ALKU;
+  if (!(vali > 0)) return Number(skaala >= LAHIZOOMIN_SKAALA_TAYSI);
+  return Math.min(1, Math.max(0, (skaala - LAHIZOOMIN_SKAALA_ALKU) / vali));
+}
 /** Nimi vähintään tämän verran kohdenimiön ruutukoosta. */
 export const KOHDEKAUPUNGIN_NIMI_SUHDE = 1.3;
 /**
@@ -292,34 +362,48 @@ export function poltetunMusteenSuurennus({
  *   lehdenOsuus) — portti ja liuku, ks. lohko yllä
  * @param {number} suurennus poltetun musteen suurennus
  *   (poltetunMusteenSuurennus)
- * @returns {{halkaisijaPx: number, nimiKerroin: number}}
+ * @param {number} skaala    kameran mittakaava (px / lautayksikkö,
+ *   kamera.nakyvaAlue().skaala) — lähizoomiliuku, ks. LÄHIZOOMISSA
+ *   JOKAINEN PELIKAUPUNKI EROTTUU
+ * @returns {{halkaisijaPx: number, lahiHalkaisijaPx: number,
+ *   nimiKerroin: number}} halkaisijaPx on PELAAJAN kaupungin piste,
+ *   lahiHalkaisijaPx jokaisen muun
  */
-export function kohdekaupunginMitat({ osuus = 0, suurennus = 1 } = {}) {
+export function kohdekaupunginMitat({ osuus = 0, suurennus = 1, skaala = 0 } = {}) {
   const vali = KOHDEKAUPUNGIN_TAYSI_OSUUS - LEHDEN_VAHIN_OSUUS;
   const lahella = vali > 0
     ? Math.min(1, Math.max(0, (osuus - LEHDEN_VAHIN_OSUUS) / vali))
     : Number(osuus >= LEHDEN_VAHIN_OSUUS);
   const lattia = KOHDEKAUPUNGIN_PISTE_SUHDE * KOHDEMERKIN_RUUTU_PX;
-  const halkaisijaPx = KAUPUNKIPISTEEN_HALKAISIJA_PX
+  const omanLattia = KAUPUNKIPISTEEN_HALKAISIJA_PX
     + lahella * Math.max(0, lattia - KAUPUNKIPISTEEN_HALKAISIJA_PX);
+  // Lähizoomi koskee JOKAISTA pelikaupunkia (omistaja 9.9.2026).
+  const lahizoomi = LAHIZOOMIN_PISTE_SUHDE * KOHDEMERKIN_RUUTU_PX;
+  const lahiHalkaisijaPx = KAUPUNKIPISTEEN_HALKAISIJA_PX
+    + lahizoominOsuus(skaala) * Math.max(0, lahizoomi - KAUPUNKIPISTEEN_HALKAISIJA_PX);
+  // Pelaajan piste on näiden kahden suurempi: kumpikaan ei pienennä.
+  const halkaisijaPx = Math.max(omanLattia, lahiHalkaisijaPx);
   const nimiLattia = KOHDEKAUPUNGIN_NIMI_SUHDE * KARTTANIMI_KOOT.kohde
     * Math.max(1, suurennus);
   const nimiKerroin = Math.max(1, nimiLattia / KARTTANIMI_KOOT.kaupunki);
-  return { halkaisijaPx, nimiKerroin };
+  return { halkaisijaPx, lahiHalkaisijaPx, nimiKerroin };
 }
 /**
- * YHDEN pisteen ruutuhalkaisija: lattia vain pelaajan omalle
- * kaupungille, kaikille muille KAUPUNKIPISTEEN_HALKAISIJA_PX joka
- * zoomilla (ks. LATTIA ON YHDEN PISTEEN SÄÄNTÖ yllä).
+ * YHDEN pisteen ruutuhalkaisija. Lehden osuudesta laskettu lattia
+ * koskee vain pelaajan omaa kaupunkia (LATTIA ON YHDEN PISTEEN SÄÄNTÖ),
+ * mutta LÄHIZOOMIN koko koskee jokaista pelikaupunkia (omistaja
+ * 9.9.2026) — kaukaa katsottuna se on KAUPUNKIPISTEEN_HALKAISIJA_PX.
  *
  * @param {object} d      pistedatum (kaupungilla on id)
  * @param {string|null} oma  pelaajan nykyisen kaupungin id
- * @param {{halkaisijaPx: number}} mitat kohdekaupungin mitat juuri nyt
+ * @param {{halkaisijaPx: number, lahiHalkaisijaPx: number}} mitat
+ *   kohdekaupungin mitat juuri nyt
  * @returns {number} halkaisija ruudun pikseleinä
  */
 export function kaupunkipisteenHalkaisijaPx(d, oma, mitat) {
-  if (!d?.id || !oma || d.id !== oma) return KAUPUNKIPISTEEN_HALKAISIJA_PX;
-  return Math.max(KAUPUNKIPISTEEN_HALKAISIJA_PX, mitat?.halkaisijaPx ?? 0);
+  const lahi = Math.max(KAUPUNKIPISTEEN_HALKAISIJA_PX, mitat?.lahiHalkaisijaPx ?? 0);
+  if (!d?.id || !oma || d.id !== oma) return lahi;
+  return Math.max(lahi, mitat?.halkaisijaPx ?? 0);
 }
 /**
  * Kirjaston pistemitta: `pointRadius` → olion skaala pallon yksiköissä.
@@ -399,7 +483,7 @@ export const NAPAUTUKSEN_SADE_PX = 44;
  * *"Symboli ottaa klikkauksen mutta teksti ei."*)
  * ══════════════════════════════════════════════════════════════════
  *
- * v1673 lisäsi osumatestiin lapun laatikon (lappuunOsunut), mutta
+ * v1673 lisäsi osumatestiin lapun laatikon (musteeseenOsunut), mutta
  * laatikko on TÄSMÄLLEEN PIIRRETTY MUSTE eikä kosketuspinta. Mitattu
  * 7.9.2026 (Chromium 834 × 1100 dpr 2, aidot CDP-kosketukset,
  * Istanbul ja Bukarest):
@@ -425,6 +509,46 @@ export const NAPAUTUKSEN_SADE_PX = 44;
  * säteenään.
  */
 export const LAPUN_KOSKETUSVARA_PX = 16;
+/** Sormen etäisyys ruutulaatikkoon (0, jos sormi on sen sisällä). */
+export function laatikonEtaisyys(kohta, r) {
+  return Math.hypot(
+    Math.max(r.x0 - kohta.x, 0, kohta.x - r.x1),
+    Math.max(r.y0 - kohta.y, 0, kohta.y - r.y1),
+  );
+}
+/**
+ * PIIRRETYN MUSTEEN VOITTAJA — yksi sääntö noston nimilapulle ja
+ * kaupungin nimelle (js/pallolauta/lauta.js musteeseenOsunut; omistaja
+ * 9.9.2026: *"kaupungin nimi saisi olla myös klikattavaa aluetta"*).
+ *
+ * Osuma mitataan ETÄISYYTENÄ LAATIKKOON (musteen päällä 0) ja kelpaa
+ * kosketusvaran sisällä; pienin etäisyys voittaa, ja tasapelissä se,
+ * jonka laatikon keskipiste on lähinnä (js/fokusniput.js sääntö 9).
+ * Musteen päällä oleva sormi voittaa siis aina naapurin pelkän varan.
+ *
+ * @param {{x: number, y: number}} kohta napautuksen ruutupiste
+ * @param {Array<{r: object, voittaja: object}>} ehdokkaat laatikot nyt
+ * @param {number} vara kosketusvara pikseleinä
+ * @returns {object|null} voittajan tietue tai null
+ */
+export function musteenVoittaja(kohta, ehdokkaat, vara = LAPUN_KOSKETUSVARA_PX) {
+  let paras = null;
+  let parasMatka = Infinity;
+  let parasKeski = Infinity;
+  for (const e of ehdokkaat) {
+    const r = e?.r;
+    if (!r) continue;
+    const matka = laatikonEtaisyys(kohta, r);
+    if (matka > vara) continue;
+    const keski = Math.hypot((r.x0 + r.x1) / 2 - kohta.x, (r.y0 + r.y1) / 2 - kohta.y);
+    if (matka > parasMatka + 1e-6) continue;
+    if (Math.abs(matka - parasMatka) <= 1e-6 && keski >= parasKeski) continue;
+    parasMatka = matka;
+    parasKeski = keski;
+    paras = e.voittaja;
+  }
+  return paras;
+}
 /*
  * PALLON TAKAPUOLI EI OTA NAPAUTUKSIA (vika v1664; omistaja 7.9.2026
  * aamu, sanatarkasti: *"Kartta saattaa lennähtää myös aivan eri maahan,
@@ -1545,42 +1669,62 @@ export async function avaaPallolauta(ui) {
    * (js/fokusniput.js sääntö 9), jotta kaksi reittiä samaan nostoon ei
    * voi eri mieltä. Musteen päällä oleva sormi voittaa siis aina
    * naapurin pelkän varan.
+   *
+   * ── KAUPUNGIN NIMI ON SAMASSA KILPAILUSSA (omistaja 9.9.2026) ─────
+   *
+   * OMISTAJA, SANATARKASTI: *"lisäksi kaupungin nimi saisi olla myös
+   * klikattavaa aluetta"*. Kaupungin nimi on ladottu piirtomerkki
+   * täsmälleen kuten noston nimilappu — vain eri kerroksessa
+   * (js/pallolauta/nimet.js, CSS2D-solmu, pointer-events: none) — joten
+   * se tulee samaan vertailuun samalla säännöllä: etäisyys laatikkoon,
+   * kosketusvara, pienin voittaa ja tasapelissä lähin keskipiste. Nimen
+   * napautus palauttaa saman voittajan kuin pisteen napautus
+   * (`{ laji: 'kaupunki', k }` → napautaKaupunki), joten teko on sama.
+   *
+   * FOKUSKOHTEIDEN NIMET EIVÄT VUODA KAUPUNKIIN: kohteen nimilappu on
+   * oma ehdokkaansa (`laji: 'nosto'`) ja voittaa oman musteensa päällä,
+   * eikä nimien ja lappujen laatikoita edes lasketa päällekkäin —
+   * sovittelu pitää kaupungin nimen kiinteänä esteenä, jota lappu
+   * väistää (js/pallolauta/sovittelu.js).
    */
-  /** Sormen etäisyys ruutulaatikkoon (0, jos sormi on sen sisällä). */
-  const laatikonEtaisyys = (kohta, r) => Math.hypot(
-    Math.max(r.x0 - kohta.x, 0, kohta.x - r.x1),
-    Math.max(r.y0 - kohta.y, 0, kohta.y - r.y1),
-  );
-  const lappuunOsunut = (lat, lng) => {
+  /**
+   * Piirretty muste napautuskohdan alla: noston nimilappu tai kaupungin
+   * nimi. Yksi vertailu molemmille (ks. lohko yllä ja musteenVoittaja).
+   */
+  const musteeseenOsunut = (lat, lng) => {
     const kohta = pallo.getScreenCoords(lat, lng, 0);
     if (!kohta) return null;
-    let paras = null;
-    let parasMatka = Infinity;
-    let parasKeski = Infinity;
+    const ehdokkaat = [];
+    /** Ehdokkaan laatikko juuri nyt: merkin oma ruutupiste + sen muste. */
+    const lisaa = (osuma, laatikko, voittaja) => {
+      if (typeof laatikko !== 'function' || !edessa(osuma.lat, osuma.lng)) return;
+      const p = pallo.getScreenCoords(osuma.lat, osuma.lng, 0);
+      const r = p ? laatikko(p) : null;
+      if (r) ehdokkaat.push({ r, voittaja });
+    };
     for (const o of nostot.osumat()) {
-      if (typeof o.lappu !== 'function' || !edessa(o.lat, o.lng)) continue;
-      const p = pallo.getScreenCoords(o.lat, o.lng, 0);
-      if (!p) continue;
-      const r = o.lappu(p);
-      if (!r) continue;
-      const matka = laatikonEtaisyys(kohta, r);
-      if (matka > LAPUN_KOSKETUSVARA_PX) continue;
-      const keski = Math.hypot((r.x0 + r.x1) / 2 - kohta.x, (r.y0 + r.y1) / 2 - kohta.y);
-      if (matka > parasMatka + 1e-6) continue;
-      if (Math.abs(matka - parasMatka) <= 1e-6 && keski >= parasKeski) continue;
-      parasMatka = matka;
-      parasKeski = keski;
-      paras = { laji: 'nosto', lat: o.lat, lng: o.lng, o };
+      lisaa(o, o.lappu, { laji: 'nosto', lat: o.lat, lng: o.lng, o });
     }
-    return paras;
+    // Linssin ajaksi nimet ovat piilossa (css/aikajana.css display:none),
+    // eikä näkymätön muste ota napautuksia.
+    if (!linssiPaalla()) {
+      for (const n of nimet.osumat()) {
+        const k = kaupunkiId.get(n.id);
+        if (!k || !pisteNakyy(k)) continue;
+        lisaa(n, n.laatikko, { laji: 'kaupunki', lat: n.lat, lng: n.lng, k });
+      }
+    }
+    return musteenVoittaja(kohta, ehdokkaat);
   };
 
   /**
    * Kaupungit ja nostot SAMASSA kilpailussa (js/fokusniput.js sääntö 9:
    * lähin keskipiste voittaa) — vain näkyvät: nimetty kaupunki, oma
    * kaupunki, ruudulla oleva nosto, eläintäky tai kohtaamispiste.
-   * NOSTON NIMILAPPU ON MUKANA (VIAT v1672): jos merkin oma piste ei
-   * vie osumaa, katsotaan vielä, osuiko sormi piirretyn lapun päälle.
+   * PIIRRETTY MUSTE ON MUKANA (VIAT v1672 ja omistaja 9.9.2026): jos
+   * merkin oma piste ei vie osumaa, katsotaan vielä, osuiko sormi
+   * noston nimilapun tai KAUPUNGIN NIMEN päälle (musteeseenOsunut) —
+   * nimen napautus on kaupungin napautus.
    */
   const lahinMerkki = (lat, lng) => {
     const ehdokkaat = [];
@@ -1590,13 +1734,17 @@ export async function avaaPallolauta(ui) {
     for (const o of nostot.osumat()) ehdokkaat.push({ laji: 'nosto', lat: o.lat, lng: o.lng, o });
     const voittaja = lahin(lat, lng, ehdokkaat, (e) => e.lat, (e) => e.lng);
     /*
-     * KAUPUNKIPISTEEN OMA MUSTE VOITTAA LAPUN. Piste on 7 px leveä
-     * levy (KAUPUNKIPISTEEN_HALKAISIJA_PX), ja jos sormi on sen päällä,
-     * pelaaja tähtäsi kaupunkiin — sama myönnytys kuin aarrepisteen
-     * sivusiirrolla (js/fokuspiste.js). Kaikkialla muualla piirretty
-     * teksti voittaa pelkän 44 px:n läheisyyden.
+     * KAUPUNKIPISTEEN OMA MUSTE VOITTAA LAPUN. Jos sormi on pisteen
+     * päällä, pelaaja tähtäsi kaupunkiin — sama myönnytys kuin
+     * aarrepisteen sivusiirrolla (js/fokuspiste.js). Kaikkialla muualla
+     * piirretty teksti voittaa pelkän 44 px:n läheisyyden. Säde on
+     * pisteen OMA ruutuhalkaisija juuri nyt (lähizoomissa suurempi kuin
+     * 7 px, omistaja 9.9.2026), yhdestä ja samasta lähteestä kuin piirto.
      */
-    if (voittaja?.laji === 'kaupunki' && lahella(lat, lng, voittaja, KAUPUNKIPISTEEN_HALKAISIJA_PX / 2)) {
+    const pisteenPx = voittaja?.laji === 'kaupunki'
+      ? kaupunkipisteenHalkaisijaPx(voittaja.k, pelaajanKaupunki(), kohdekaupunki())
+      : 0;
+    if (voittaja?.laji === 'kaupunki' && lahella(lat, lng, voittaja, pisteenPx / 2)) {
       return voittaja;
     }
     /*
@@ -1608,7 +1756,7 @@ export async function avaaPallolauta(ui) {
      * alta. Lappu voittaa siis vain toisen noston tai tyhjän.
      */
     if (voittaja?.o?.perhe === 'piste') return voittaja;
-    return lappuunOsunut(lat, lng) ?? voittaja;
+    return musteeseenOsunut(lat, lng) ?? voittaja;
   };
 
   /**
@@ -1707,13 +1855,18 @@ export async function avaaPallolauta(ui) {
     const korkeus = pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX;
     const leveysPx = kotelo.clientWidth;
     // Avaimessa on kaikki, mistä mitat riippuvat — myös kesken oleva
-    // siirto, joka sulkee kohdemerkkien portin (nostot.lehdenOsuus).
-    const avain = `${korkeus.toFixed(5)}:${leveysPx}:${pelaajanKaupunki() ?? ''}:${ui.movingPlayerId ?? ''}`;
+    // siirto, joka sulkee kohdemerkkien portin (nostot.lehdenOsuus), ja
+    // ruudun korkeus, joka on osa kameran mittakaavaa (kuvasuhde).
+    const korkeusPx = kotelo.clientHeight;
+    const avain = `${korkeus.toFixed(5)}:${leveysPx}x${korkeusPx}:${pelaajanKaupunki() ?? ''}:${ui.movingPlayerId ?? ''}`;
     if (avain === kaupunkiAvain) return kaupunkiMitat;
     const nakyva = kamera.nakyvaAlue();
     kaupunkiAvain = avain;
     kaupunkiMitat = kohdekaupunginMitat({
       osuus: nostot.lehdenOsuus(nakyva),
+      // Lähizoomin liuku on kameran oma mittakaava (px / lautayksikkö),
+      // ei lehden osuus (ks. MIKÄ ZOOMI ON "LÄHIZOOMI").
+      skaala: nakyva?.skaala ?? 0,
       suurennus: poltetunMusteenSuurennus({
         leveysPx,
         dpr: globalThis.devicePixelRatio || 1,
@@ -1740,7 +1893,10 @@ export async function avaaPallolauta(ui) {
     const edellinenKohde = asetettuKohdeSade;
     const edellinenLinssi = asetettuLinssi;
     const mitat = kohdekaupunki();
-    const sade = sadeRuudulta(KAUPUNKIPISTEEN_HALKAISIJA_PX);
+    // Kaksi kokoa, samasta funktiosta kuin pointRadius-luennassa: muut
+    // kaupungit (lähizoomin liuku) ja pelaajan oma (myös lehden lattia).
+    const muidenPx = kaupunkipisteenHalkaisijaPx(null, null, mitat);
+    const sade = sadeRuudulta(muidenPx);
     const kohdeSade = sadeRuudulta(mitat.halkaisijaPx);
     if (!sade) return;
     asetettuSade = sade;
@@ -1774,9 +1930,9 @@ export async function avaaPallolauta(ui) {
       // Koko on kaupunkipisteen asia: helmellä ja valolla on omansa.
       if (d.laji === 'helmi' || d.laji === 'valo') continue;
       // Sama sääntö kuin pointRadius-luennassa, yhdestä paikasta: kaksi
-      // valmista skaalaa, joista lattia kuuluu vain pelaajan kaupungille.
-      const s = kaupunkipisteenHalkaisijaPx(d, oma, mitat) > KAUPUNKIPISTEEN_HALKAISIJA_PX
-        ? kohdeSkaala : skaala;
+      // valmista skaalaa, joista lehden lattia kuuluu vain pelaajan
+      // kaupungille (lähizoomin koko on jo molemmissa).
+      const s = kaupunkipisteenHalkaisijaPx(d, oma, mitat) > muidenPx ? kohdeSkaala : skaala;
       o.scale.x = s;
       o.scale.y = s;
     }

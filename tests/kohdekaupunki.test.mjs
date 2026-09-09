@@ -50,8 +50,9 @@ const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const {
   KAUPUNKIPISTEEN_HALKAISIJA_PX, KOHDEKAUPUNGIN_NIMI_SUHDE,
   KOHDEKAUPUNGIN_PISTE_SUHDE, KOHDEKAUPUNGIN_TAYSI_OSUUS, katsesateenPaikka,
+  LAHIZOOMIN_PISTE_SUHDE, LAHIZOOMIN_SKAALA_ALKU, LAHIZOOMIN_SKAALA_TAYSI,
   kaupunkipisteenHalkaisijaPx, kaupunkipisteenSade,
-  kohdekaupunginMitat, poltetunMusteenSuurennus,
+  kohdekaupunginMitat, lahizoominOsuus, poltetunMusteenSuurennus,
 } = await import('../js/pallolauta/lauta.js');
 const { KOHDEMERKIN_RUUTU_PX } = await import('../js/pallolauta/nostot.js');
 const { LEHDEN_VAHIN_OSUUS } = await import('../js/fokuskohteet.js');
@@ -222,6 +223,78 @@ test('pelaajan siirtyessä lattia siirtyy uuteen kaupunkiin', () => {
   // Sama piste, uusi pelaajan kaupunki: vanha palaa 7 px:ään, uusi kasvaa.
   assert.equal(kaupunkipisteenHalkaisijaPx(kiova, 'venetsia', mitat), KAUPUNKIPISTEEN_HALKAISIJA_PX);
   assert.equal(kaupunkipisteenHalkaisijaPx(venetsia, 'venetsia', mitat), mitat.halkaisijaPx);
+});
+
+/* ================================================================== *
+ * 5b. LÄHIZOOMISSA JOKAINEN PELIKAUPUNKI EROTTUU (omistaja 9.9.2026)
+ *
+ * *"kohdekaupunkien pisteet saisivat puolestaan tässä zoom tasossa olla
+ * isommalla, nyt niitä ei erota muista palloista."*
+ *
+ * MITATTU (Chromium 1419 x 821 css, kotelo 1398 x 742, Fogg Wienissä,
+ * näkymä Venetsia–Istanbul kuten omistajan kaappauksessa; halkaisija
+ * ruudun keskellä olevasta pisteestä):
+ *
+ *   korkeus  skaala  ENNEN            JÄLKEEN
+ *   0,42     0,99    6,97 px          6,97 px   (8.9. sääntö säilyy)
+ *   0,30     1,39    6,95 px         11,90 px
+ *   0,22     1,89    6,88 px         22,49 px   (omistajan näkymä)
+ *   0,16     2,60    6,84 px         22,35 px
+ *
+ * Kohdemerkki on 11,44 px, joten lähizoomissa piste on 1,97 x sen.
+ * ================================================================== */
+
+test('lähizoomissa piste on ~2 x kohdemerkki, kaukaa yhä 7 px', () => {
+  assert.equal(LAHIZOOMIN_PISTE_SUHDE, 2);
+  // Omistajan 9.9. näkymä (skaala 1,89): selvästi yli 1,8 x kohdemerkki.
+  const lahella = kohdekaupunginMitat({ osuus: 0, skaala: 1.894 });
+  assert.ok(lahella.lahiHalkaisijaPx > 1.8 * KOHDEMERKIN_RUUTU_PX,
+    `lähizoomi ${lahella.lahiHalkaisijaPx.toFixed(2)} px <= 1,8 x ${KOHDEMERKIN_RUUTU_PX.toFixed(2)}`);
+  assert.ok(Math.abs(lahella.lahiHalkaisijaPx - 2 * KOHDEMERKIN_RUUTU_PX) < 1e-9);
+  // 8.9. näkymä (koko Eurooppa, skaala 0,99) on tavulleen entinen.
+  for (const skaala of [0, 0.694, 0.992, LAHIZOOMIN_SKAALA_ALKU]) {
+    const m = kohdekaupunginMitat({ osuus: 0, skaala });
+    assert.equal(m.lahiHalkaisijaPx, KAUPUNKIPISTEEN_HALKAISIJA_PX,
+      `skaala ${skaala}: ${m.lahiHalkaisijaPx} px`);
+  }
+  // Raja on 8.9. mitatun näkymän (0,99) yläpuolella, jottei se palaa.
+  assert.ok(LAHIZOOMIN_SKAALA_ALKU > 0.992);
+  assert.ok(LAHIZOOMIN_SKAALA_TAYSI <= 1.894, 'omistajan näkymässä täysi koko');
+});
+
+test('lähizoomin liuku on jatkuva eikä hyppää', () => {
+  assert.equal(lahizoominOsuus(0), 0);
+  assert.equal(lahizoominOsuus(LAHIZOOMIN_SKAALA_TAYSI), 1);
+  assert.equal(lahizoominOsuus(50), 1);
+  let edellinen = kohdekaupunginMitat({ osuus: 0, skaala: 0 }).lahiHalkaisijaPx;
+  for (let skaala = 0; skaala <= 6; skaala += 0.01) {
+    const nyt = kohdekaupunginMitat({ osuus: 0, skaala }).lahiHalkaisijaPx;
+    assert.ok(nyt >= edellinen - 1e-9, `piste pieneni skaalalla ${skaala.toFixed(2)}`);
+    assert.ok(nyt - edellinen < 0.5, `hyppy ${(nyt - edellinen).toFixed(2)} px skaalalla ${skaala.toFixed(2)}`);
+    edellinen = nyt;
+  }
+});
+
+test('lähizoomi koskee jokaista kaupunkia, pelaajan lattia säilyy', () => {
+  const lahi = kohdekaupunginMitat({ osuus: 1, skaala: 1.894 });
+  // Jokainen kaupunki saa lähizoomin koon…
+  for (const id of ['venetsia', 'sofia', 'istanbul']) {
+    assert.equal(kaupunkipisteenHalkaisijaPx({ id }, 'wien', lahi), lahi.lahiHalkaisijaPx);
+  }
+  // …ja pelaajan oma on vähintään sen verran, ei koskaan vähempää.
+  assert.ok(kaupunkipisteenHalkaisijaPx({ id: 'wien' }, 'wien', lahi) >= lahi.lahiHalkaisijaPx);
+  // Pelaajan 8.9. lattia (1,5 x kohdemerkki) on ennallaan siellä, missä
+  // lähizoomia ei ole: kaukonäkymä osuudella 1.
+  const kaukaa = kohdekaupunginMitat({ osuus: 1, skaala: 0.992 });
+  assert.ok(Math.abs(kaukaa.halkaisijaPx - KOHDEKAUPUNGIN_PISTE_SUHDE * KOHDEMERKIN_RUUTU_PX) < 1e-9);
+  assert.equal(kaukaa.lahiHalkaisijaPx, KAUPUNKIPISTEEN_HALKAISIJA_PX);
+});
+
+test('lähizoomin mitta luetaan kameran mittakaavasta, ei lehden osuudesta', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /skaala: nakyva\?\.skaala \?\? 0,/);
+  // Sama funktio antaa yhä sekä pisteen että tahdistuksen koon.
+  assert.match(lauta, /const muidenPx = kaupunkipisteenHalkaisijaPx\(null, null, mitat\);/);
 });
 
 /* ================================================================== *
