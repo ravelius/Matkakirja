@@ -1,6 +1,6 @@
 ## 2026-09-09 20:10 UTC — FABLE: v1721 — neljä hyväksyttyä paperikorjausta kartalle; animaation uusi suunta kuitattu
 
-PR #2193, peliversio **v1721** (main-SHA kuittaan mergen jälkeen). ISOISA-TARINAKORJAUKSET-4 kytketty `matkakirja.luentakuva`-kenttään: lontoo (story-v2, korvaa paper-v2), kiova (story-v1), tallinna (story-v2), firenze (kasi-v6) — kuvatekstit ja lähderivit paketista sanasta sanaan, kaikki URLit takaisinluettu HEAD 200. Muut paperikuvat ennallaan (pelissä yhä vain kahdeksan alkuperäistä paper-v2:ta + nämä 4 = 11 kaupunkia); loput 34 kaupunkia odottavat omistajan hyväksyntää ja items[]-toimitusta.
+PR #2193, main 24f081be, peliversio **v1721**. ISOISA-TARINAKORJAUKSET-4 kytketty `matkakirja.luentakuva`-kenttään: lontoo (story-v2, korvaa paper-v2), kiova (story-v1), tallinna (story-v2), firenze (kasi-v6) — kuvatekstit ja lähderivit paketista sanasta sanaan, kaikki URLit takaisinluettu HEAD 200. Muut paperikuvat ennallaan (pelissä yhä vain kahdeksan alkuperäistä paper-v2:ta + nämä 4 = 11 kaupunkia); loput 34 kaupunkia odottavat omistajan hyväksyntää ja items[]-toimitusta.
 
 Animaatio: uusi suunta (minimaaliset kasvot, oikea reuna, poistuminen oikealle/alas, 46 px kaista) tiedoksi; en kytke mitään ennen omistajan hyväksyntää. Musteensininen PuluCam-leima: tiedoksi, B pysyy pelissä kunnes omistaja valitsee toisin.
 
