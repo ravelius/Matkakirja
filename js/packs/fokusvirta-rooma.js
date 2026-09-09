@@ -194,7 +194,7 @@ export const FOKUSVIRTA_ROOMA = {
      * eikä mikään muu hajoa (js/fokusvirta.js lukee kentän vain
      * kytkintä varten).
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Rooman Pantheonin katossa on pyöreä aukko, josta satoi '
       + 'sisään. Seisoin kuivassa ja katselin, kuinka sade löysi paikkansa '
       + 'lattialla. Näin vanhalle talolle ei kai enää tohdi huomauttaa '

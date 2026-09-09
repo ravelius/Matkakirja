@@ -197,7 +197,7 @@ export const FOKUSVIRTA_VENETSIA = {
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Venetsiassa oven takana saattaa olla meri. Astuin '
       + 'aamulla majatalon portaille ja olin mennä kaupunkiin uimaan. '
       + 'Gondolieri tuli hakemaan ja piti ilmeensä ihailtavan suorana. '

@@ -40,7 +40,7 @@ export const FOKUSVIRTA_LAPPI = {
       + 'olivat teitä. Veneeseen astuva nainen tiesi seuraavan talon savusta, '
       + 'ei kartasta. Lisäsin rannalle talon ja jätin savulle tilaa nousta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain neljä tunnetagia. */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Rovaniemellä Ounasjoki tuo vetensä Kemijokeen kuin '
       + 'matkustaja suurempaan veneeseen. Rannassa sidottiin kuormaa, ja '
       + 'kauppapuodissa puhuttiin yläjuoksun puista. Olin piirtänyt joet '

@@ -123,7 +123,7 @@ export const FOKUSVIRTA_BUDAPEST = {
       + 'Menin Rudasin turkkilaiseen kylpylään miettimään uuden nimen '
       + 'sijoittelua. Kupolin alla oli niin lämmintä, että päätin antaa '
       + 'kaupunkien olla hetken ilman järjestystä.',
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Buda, Pest ja Óbuda on tänä marraskuuna liitetty '
       + 'yhteen. Karttani vanheni kesken aamiaisen. Toisella rannalla kohoaa '
       + 'linna, toisella talot levittäytyvät tasamaalle; välissä Tonava pitää '

@@ -217,7 +217,7 @@ export const FOKUSVIRTA_KRAKOVA = {
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Krakovan Marian kirkon tornista soi torvi ja vaikeni '
       + 'kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi '
       + 'tuolia. Hän oli kuullut saman katkoksen koko ikänsä eikä aikonut '

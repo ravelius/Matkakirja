@@ -151,7 +151,7 @@ export const FOKUSVIRTA_RIIKA = {
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Riikaan on tullut laulajia Latvian ensimmäisille '
       + 'suurille laulujuhlille. Luulin ensin kuulevani monta kuoroa, kunnes '
       + 'äänet ottivat saman hengenvedon. En ymmärtänyt sanoja. Viereinen mies '

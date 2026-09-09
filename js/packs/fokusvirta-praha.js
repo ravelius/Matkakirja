@@ -134,7 +134,7 @@ export const FOKUSVIRTA_PRAHA = {
       + 'kuolemalle, mutta minun kellossani vain kiireelle. Ajuri löysi minut '
       + 'samasta paikasta puoli tuntia myöhemmin. Hänellä oli aivan '
       + 'toisenlainen käsitys hukkaan menneestä ajasta.',
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Prahan torin kellossa luuranko soittaa kelloa ja '
       + 'apostolit kulkevat ikkunan ohi. Aioin verrata sitä taskukellooni ja '
       + 'unohdin koko asian. Tässä koneessa oli tilaa auringolle, kuulle ja '

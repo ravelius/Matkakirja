@@ -391,41 +391,17 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   assert.equal(tila('paljastus-3'), 'ajan tasalla');
   assert.equal(tila('lehtivinkki-1'), 'ajan tasalla');
   /*
-   * KAUPUNGIT OVAT NYT VARTIOITUJA (7.9.2026). Euroopan 18 kaupungin
-   * kuplat generoitiin 7.9.2026 illalla, joten ne ovat ajan tasalla.
-   *
-   * ATEENA ON UUSI (8.9.2026): maadoitus korvattiin kommenttikuplalla,
-   * ja kupla odottaa generointia — sen tila on siis "uusi" eikä sillä
-   * ole riviä LIVIAN_AANITETYT-taulussa. Sama koskee kevyen erän kuutta
-   * kohdetta.
+   * KAIKKI 45 EUROOPAN KAUPUNKIKUPLAT GENEROITIIN 9.9.2026 omistajan
+   * teksteistä (generoi-pulu.yml ajo 12, pakota), ja LIVIAN_AANITETYT
+   * päivitettiin samasta kuivan ajon taulusta — joten jokainen vartioitu
+   * repliikki on ajan tasalla. Taulun ja pakkien eriytyminen näkyisi
+   * tässä heti muuttuneena tilana.
    */
-  assert.equal(tila('ateena-3'), 'uusi');
-  assert.equal(tila('kreeta-3'), 'uusi');
-  assert.equal(tila('sofia-3'), 'muuttunut');
-  /*
-   * PIETARIN HUUDAHDUS VAIHTUI (Fablen erä v6 8.9.2026 ilta): teksti on
-   * nyt "Sanoin sen." ja kohta "Hattu jäi jokeen", joten ämpärin
-   * pietari-2 sanoo eri asian kuin kupla. Rivi jää LIVIAN_AANITETYT-
-   * tauluun, koska vanha äänite on yhä ämpärissä — tila on MUUTTUNUT ja
-   * peli vaikenee kunnes ääni generoidaan uudelleen.
-   */
-  assert.equal(tila('pietari-3'), 'muuttunut');
-  /*
-   * PULUN KAUPUNKITEKSTIT KIRJOITETTIIN UUSIKSI 8.9.2026 (Fable, omistajan
-   * linjaus): kommentit, jotka muuttuivat, ovat MUUTTUNEITA ja vaikenevat
-   * kunnes ääni on generoitu; muuttumattomat (esim. Riian kaksi
-   * ensimmäistä, Krakovan kaksi ensimmäistä) ovat yhä ajan tasalla.
-   */
-  // Yhden kuplan tekstit (8.9.2026 ilta) ovat kaikki uusia: muuttuneita
-  // kunnes ääni generoidaan.
-  assert.equal(tila('riika-3'), 'muuttunut');
-  assert.equal(tila('istanbul-3'), 'muuttunut');
-  /*
-   * SOFIAN KOMMENTIN ALUSTA POISTUI TOISTUVA "Kääk." (omistaja
-   * 8.9.2026), joten ämpärin sofia-3 sanoo eri asian kuin kupla — se on
-   * MUUTTUNUT eikä uusi, ja peli vaikenee kunnes ääni on generoitu.
-   */
-  assert.equal(tila('sofia-3'), 'muuttunut');
+  for (const avain of ['ateena-3', 'kreeta-3', 'sofia-3', 'pietari-3', 'riika-3', 'istanbul-3']) {
+    assert.equal(tila(avain), 'ajan tasalla', avain);
+  }
+  assert.ok(rivit.every((rivi) => rivi.tila === 'ajan tasalla'),
+    `vanhentuneita: ${rivit.filter((r) => r.tila !== 'ajan tasalla').map((r) => r.avain).join(', ')}`);
   for (const rivi of rivit) assert.equal(rivi.tila, aanitteenTila(rivi));
   // Peli vaikenee juuri niissä, jotka odottavat ajoa.
   for (const rivi of rivit) {

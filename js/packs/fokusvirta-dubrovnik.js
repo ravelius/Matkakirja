@@ -113,7 +113,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
       + 'näyttivät olevan eri mieltä mausta. Sama vesi. Kaupunki on rakentanut '
       + 'janolleen kuusitoista puhuvaa päätä, ja jokainen neuvoo ottamaan '
       + 'vielä kulauksen.',
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Ragusan muureilta näkee, kuinka huolellisesti meri on '
       + 'pidetty ulkona. Portin sisällä vesi kuitenkin tulee vastaan vanhan '
       + 'suihkukaivon kivikasvoista. Join yhden suusta ja toisenkin, sillä ne '

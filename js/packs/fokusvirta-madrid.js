@@ -139,7 +139,7 @@ export const FOKUSVIRTA_MADRID = {
      * jälkeen repon polun ja vaikenee siististi (audion 'error' →
      * varareitti → catch), eikä mikään muu hajoa.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Pradossa pysähdyin tauluun, jossa pieni prinsessa saa '
       + 'kaiken huomion ja suuri koira makaa välittämättä siitä. Maalari '
       + 'katsoo suoraan minuun. Peilissä seisoo kuningaspari, mutta minä olen '

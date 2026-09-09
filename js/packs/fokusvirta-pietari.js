@@ -208,7 +208,7 @@ export const FOKUSVIRTA_PIETARI = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Pietarissa kesäyö on vaalea kuin loppuun pesty lakana. '
       + 'Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. '
       + 'Rantakadulla nainen sulki päivänvarjonsa ja jäi silti kävelemään. '

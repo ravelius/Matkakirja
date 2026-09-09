@@ -114,7 +114,7 @@ export const FOKUSVIRTA_TALLINNA = {
       + 'Apteekkari leikkasi suuremman palan. Ikkunasta näkyi raatihuone ja '
       + 'sen vakava torni; sisällä tuoksui manteli. Söin lääkkeeni matkalla '
       + 'satamaan. Vaiva jäi, mutta hoitoon olin poikkeuksellisen tyytyväinen.',
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Revalin torin apteekissa myytiin marsipaania '
       + 'sydänsuruihin. Kysyin, auttaako se myös silloin, kun ei vielä tiedä '
       + 'ketä kaipaa. Apteekkari leikkasi suuremman palan. Ikkunasta näkyi '

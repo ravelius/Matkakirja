@@ -150,7 +150,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
      * LUENTA = sama teksti tunnetagein (Raamattu, luentaprosessi):
      * neljä tagia, alku ja loppu eri sävyssä, yksikään sana ei vaihdu.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Amsterdamin kanavan varrella tuoli matkusti kolmanteen '
       + 'kerrokseen talon ulkopuolta. Se riippui katon koukusta, ja kaksi '
       + 'miestä komensi sitä köysillä. Portaat ovat kuulemma liian kapeat. '

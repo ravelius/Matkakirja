@@ -136,7 +136,7 @@ export const FOKUSVIRTA_LONTOO = {
       + 'vedettäisiin kiskot, kysyisimme ensimmäiseksi, onko ensimmäisessä '
       + 'luokassa pehmustetut penkit. Perille päästiin nopeasti. Yskä saapui '
       + 'mukana.',
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Lontoossa on pantu höyryveturi maan alle ja matkustajat '
       + 'sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä '
       + 'näkyvistä. Merkillinen kansa, me englantilaiset: jos helvettiin '

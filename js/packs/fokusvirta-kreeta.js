@@ -57,7 +57,7 @@ export const FOKUSVIRTA_KREETA = {
      * tyyli kuin muissa paketeissa. Yksikään sana, välimerkki tai
      * sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Hanian sataman majakan aloittivat venetsialaiset ja '
       + 'korjasivat egyptiläiset. Nyt kaupunki kuuluu sulttaanille. Kalastaja '
       + 'selvitti minulle kaikki kolme ja paikkasi samalla verkkoaan. Kun '

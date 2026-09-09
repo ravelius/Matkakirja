@@ -294,7 +294,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
       + 'kadonneen kengän. Kuningas jäi lyhyelle maininnalle. Satamaan '
       + 'palatessa saarten välissä välkkyi vesi. Suosittelisin samaa '
       + 'selostajaa myös valtakunnan asioihin.',
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Tukholmassa kruunattiin Oskar, mutta minun kohdalleni '
       + 'osui lähinnä toisten hattuja. Pieni tyttö nousi isänsä hartioille ja '
       + 'selosti meille lopuille. Hän huomasi hevoset, kukat ja yhden '

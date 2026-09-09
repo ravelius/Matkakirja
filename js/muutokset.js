@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1707, teksti: 'Isoisän luennat ja pulun äänet omistajan teksteistä' },
   { v: 1706, teksti: 'Omistajan Euroopan tekstit 45 kaupunkiin, luentakuvat' },
   { v: 1705, teksti: 'Matkakirjat v6: yksi kohtaus, Horation sanasto, kuplat' },
   { v: 1704, teksti: 'Pulun kuplat pulun näkökulmalla, raja 125, kuittaukset' },

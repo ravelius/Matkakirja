@@ -174,7 +174,7 @@ export const FOKUSVIRTA_OSLO = {
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Christianian vuonolla lastattiin lankkuja laivaan. '
       + 'Metsä matkusti maailmalle siististi pinottuna. Sataman mies näytti '
       + 'rannan sahoja ja sanoi kaupungin kasvavan puusta. Se oli omituista '

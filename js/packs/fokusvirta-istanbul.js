@@ -197,7 +197,7 @@ export const FOKUSVIRTA_ISTANBUL = {
      * generoitu samalla reseptillä kuin Ateenalle
      * (tools/generoi-luennat.mjs), ja kaanon nimeää tiedoston.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Galatan mäessä kantaja laski arkkunsa kivelle ja antoi '
       + 'mäen odottaa. Sen sisään kaivetaan tunnelia, jotta ihmiset pääsisivät '
       + 'ylös istualtaan. Merkillistä, miten paljon työtä tarvitaan työn '

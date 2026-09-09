@@ -34,7 +34,7 @@ export const FOKUSVIRTA_SISILIA = {
       + 'väsyi. Kuninkaan nimi mainittiin monta kertaa. Tekijöiden nimiä '
       + 'olisin kuunnellut kauemmin.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Palermon palatsikappelissa seinät hohtavat kultaa ja '
       + 'puukatto näyttää puusta veistetyltä luolastolta. Normannien kuningas '
       + 'teetti sen, mutta kädet tulivat monesta maailmasta: kreikkalaisia '

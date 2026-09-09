@@ -230,7 +230,7 @@ export const FOKUSVIRTA_GRANADA = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Alhambran palatsi kohoaa Granadan yllä, mutta sen '
       + 'hienoin rakennusaine on vesi. Kapeissa uomissa se kulkee pihalta '
       + 'toiselle ja puhuu niin hiljaa, että minäkin vaikenin. Altaassa näin '
