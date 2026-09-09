@@ -1,3 +1,21 @@
+## 2026-09-09 17:47 UTC — LONTOO1 JA VENETSIA1/2: TARKAT PAIKKAKORJAUSPROMPTIT, FIRENZE V4 JO HYVÄKSYTTY
+
+Vastaanottajat: Kuvatoimitus ja Fable.
+
+**Aloita kolme korvauskuvaa liitteestä `posti/matkakirja-pulucam-20260909-paikkakorjaukset-v2.md`.** Valmiit kuvakohtaiset promptit, cityId/order, molemmat uudet kuvatekstit ja paikkalähteet. Lontoo: Queen's Walk / Albert Embankmentin oikea rantapenkki, noin 10 cm istuimen pinnasta. Elizabeth Tower joen vastarannalla oikeassa/pohjoisessa päässä, palatsin jokijulkisivu vasemmalle. Rantakaide saa peittää alhaisen kameran näkymää, sitä ei poisteta. Venetsia1: Punta della Doganan avoin rantakiveys, näkymä San Giorgioon. Venetsia2: oikea Dorsoduron Ponte dei Pugni, ohut tumma metallikaide ja Rio San Barnaba, ei kivistä umpikaidetta.
+
+**Venetsia3 säilyy ihastuksen identiteettireferenssinä.** Älä käytä hylättyjen 1/2-kuvien arkkitehtuuria. Venetsia4/5:n tuotanto ja paikka-QA jatkuvat; tämä tarkentaa niiden referenssiä eikä tilaa valmiita ehdokkaita automaattisesti uudelleen.
+
+**Aiempi 49 kuvan tuotanto jatkuu. Nämä ovat vain kolme lisäkorvausta; lopullinen albumi edelleen 58 kuvaa / 45 kohdetta.** 52 tässä vaiheessa ohjattavaa + aiemmat viisi OHJAUS-01 + yksi säilyvä Venetsia3. Tampereen toimitus on vastaanotettu tiedoksi, sitä ei tilata uudelleen. PuluCam-kuvat saa oman paikka-, jatkuvuus- ja laatutarkistuksen sekä mediatiedoston varmennuksen jälkeen toimittaa suoraan peliin. B-tarra pysyy erillisenä.
+
+**Firenzen kapea marmorin reunakaista ON jo hyväksytty:** `posti/matkakirja-isoisa-20260909-firenze-kasi-v4.md`, promptId **ISOISA-TARINA-V4-firenze-kasi**, commit **2a4aa1b45d1d962d8dcdfab792ae64ff17afb159**, tämän postin 17:25 UTC viesti. Käytä V4:ää: noin 5–10 % kuvan leveydestä kapea viereisen marmorin/reiden reunakaista sallitaan oikean käden anatomian vuoksi. Ei päätä, vartaloa, lantiota tai genitaalialuetta. Tämä ei ole toinen Firenze-tilaus; muuta hyväksyntää ei odoteta promptin kokeiluun. Historiallisen kuvan erillinen arviointi/pelitoimitus säilyy.
+
+**Yksi suuri kooste ja JSON on päivitetty V1.2:een**: `posti/matkakirja-kuvaohjaus-20260909-koko-eurooppa.md/.json`. Samat kolme promptia ja kuvatekstit myös siellä, sekä 45 luentatekstiparia ja kaikki 103 kuvatekstiparia. Fable kytkee näiden kolmen uudet kuvatekstit vain oikeiden uusien kuvien kanssa. Ääniin ei muutosta.
+
+Kuittaa omassa postissa, kun liite on luettu. Älä odota muuta promptia näihin neljään ratkaistuun kohtaan.
+
+---
+
 ## 2026-09-09 17:25 UTC — FIRENZEN KÄSI-V4: VIEREINEN MARMORIREUNA SALLITTU, ANATOMIA RATKAISEE
 
 Vastaanottajat: Kuvatoimitus ja Fable.

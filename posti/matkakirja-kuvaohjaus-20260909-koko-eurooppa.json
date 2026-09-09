@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "edition": "EUROOPPA-KUVAOHJAUS-20260909-V1.1",
+  "edition": "EUROOPPA-KUVAOHJAUS-20260909-V1.2",
   "createdAt": "2026-09-09T17:07:08.256Z",
   "author": "Matkakirjan tekstit / kuvakohtainen tarinaohjaus",
   "cityCount": 45,
@@ -1011,27 +1011,37 @@
   ],
   "pulu": [
     {
-      "caption": "Parlamentin torni on ihmisille tärkeä suunnistusmerkki. Minun kuvassani sitä edeltävät kengät, reunakivi ja muutama muru, joiden tarkkaa sijaintia kukaan muu ei tunnu kartoittavan. Isoisä matkusti täällä savun seassa maan alla. Minä jäin pinnalle. Punainen bussi peittää näkymän hetkeksi, sitten katu avautuu taas. Hyvässä kaupungissa on monta korkeutta, joista valita.",
-      "captionShort": "Lontoo: taivas on vapaa, ja kadullakin riittää tutkittavaa.",
+      "caption": "Istuin Thamesin rantapenkin reunalle. Elizabeth Tower näkyy joen toisella puolella parlamentin pohjoispäässä, mutta aivan nokan edessä on muru. Sitä ei ole merkitty yhteenkään karttaan. Westminsterin sillalla punainen bussi vie ihmisiä eteenpäin; minun ei tarvitse lähteä vielä mihinkään. Isoisä valitsi maanalaisen vaunun. Tällä penkillä on parempi ilmanvaihto ja oma tarjoilu.",
+      "captionShort": "Lontoo: parlamentti jäi taustalle. Penkillä oli tärkeämpää.",
       "city": "Lontoo",
       "cityId": "lontoo",
       "existingAssetId": "pulu-cam-lontoo-01-r20260909-v1",
       "existingReviewUrl": "/pulu-cam-pilot-20260909/pulu-cam-lontoo-01-r20260909-v1.jpg",
       "order": 1,
-      "placeCheck": "Varmista lopuksi kuvassa näkyvän tarkan paikan nimi ja yhteys alkuperäiseen ohjeeseen. Jos alkuperäistä kuvakohtaista ohjausta ei voida osoittaa, älä hyväksy kuvaa automaattisesti; pyydä tekstisessiolta korvaava prompti.",
-      "productionAction": "retain_existing_directed",
-      "prompt": null,
-      "promptId": "ALKUPERAINEN-OHJAUS-20260909-lontoo-1",
-      "promptSource": "posti/matkakirja-eurooppa-20260909.md (12:20 ja 12:50 kuvakohtaiset ohjeet; Venetsian 14 mm ja sydänreunat omistajan tarkennus)",
-      "provenanceNote": "Tämä ei ole uusi generointitilaus eikä väite, että kirjoitin kuvatuotannon teknisen promptilaajennuksen. Kuvakohtainen tilanneohje on tekstisession aiempi. Varmista sen vastaavuus tuotantolokiin ennen pelikytkentää.",
+      "placeCheck": "Varmista oikea penkki ja rantasuojan korkeus; kamera on penkin istuimen tasosta 10 cm, ei maasta esteen läpi. Vastarantaa katsottaessa Elizabeth Tower oikealla/pohjoispäässä, pitkä jokijulkisivu vasemmalle/etelään. Älä rakenna tornin oikealle puolelle symmetristä palatsia. Kaide saa peittää alemman näkymän. Bussi vain oikealla Westminster Bridgellä.",
+      "productionAction": "replace_geography",
+      "prompt": "Create one authentic present-day colour photograph from Livia's own pigeon-eye camera. Landscape 3:2, 1536x1024, sRGB. Full-frame 14 mm RECTILINEAR ultra-wide lens: strong near/far perspective, natural spatial depth, real materials and believable daylight. No fisheye circle, CGI, painted outlines, synthetic HDR, fake miniature blur or historical paper treatment. The photographer Livia remains behind the camera and is never visible. Use real photographs of the exact named viewpoint to constrain architecture, water edges and railings. Ordinary people and the small incident may be fictional, but architecture must not be invented. Keep the subject and place legible at phone size. Supply the clean colour photograph without text, PuluCam sticker or watermark; the selected B sticker is added separately by the game. Exact setting: a real riverside bench on the Queen's Walk / Albert Embankment opposite St Thomas' Hospital, SOUTH of Westminster Bridge. The camera is about 10 centimetres above the bench seat, not 10 centimetres above the pavement. A few ordinary bread crumbs and the near edge of the real bench dominate the lower foreground. The perspective makes one crumb comically important without turning it into an oversized fantasy object. A passer-by's lower leg may enter a side margin only if it fits this actual bench viewpoint. Look WEST to NORTHWEST across the Thames. Elizabeth Tower is at the RIGHT/NORTHERN end of the Palace of Westminster in this composition; the palace's long river frontage extends LEFT/SOUTH from it. If Victoria Tower fits, it belongs at the far LEFT/southern end. Preserve the real asymmetric outline and the clock tower's position set back from the river front: do not place Elizabeth Tower in the middle of a symmetrical palace, and do not extend a fabricated matching Gothic facade to its right. Westminster Bridge, if included, enters on the RIGHT/northern side, with one small contemporary red double-decker bus on the actual bridge roadway, never on the riverside footpath. Retain the real riverside barrier at its real height; at this deliberately low bench-seat camera position it may legitimately hide the river surface and lower parts of the opposite facade. Do not remove, lower, make transparent or replace the barrier just to show more palace. A partial but geometrically faithful landmark view is wanted. Match bench position, barrier construction, bridge direction and facade relationships to actual current reference photographs before rendering. Livia's amusing observation is the tiny crumb immediately in front of the great clock tower, not a fabricated unrestricted panorama.",
+      "promptId": "PAIKKA-V2-20260909-lontoo-1",
+      "promptSource": "posti/matkakirja-pulucam-20260909-paikkakorjaukset-v2.md",
+      "provenanceNote": "Tämä uusi korvaava prompti on tekstisession kirjoittama. Aiempi kuva säilytetään hylättynä paikkageometrian vuoksi; sen alkuperäisiä tekijätietoja ei muuteta.",
       "series": "pulu-cam",
       "sourceLine": "Matkakirjan havainnekuva",
       "sources": [
-        "https://www.parliament.uk/about/living-heritage/building/palace-westmister-at-150/external-architecture-/",
-        "https://content.tfl.gov.uk/visitors-partnership.pdf"
+        "https://southbank.london/see-and-do/queens-walk",
+        "https://www.parliament.uk/about/living-heritage/building/palace-westmister-at-150/external-architecture-/"
       ],
-      "story": "Tekstisession alkuperäinen 12:20/12:50-kohtaus: murut maan tasolla, kävelijöiden jalat, Westminster ja bussi taustalla.",
-      "viewpoint": "Nykyisen visuaalisesti tarkistetun kuvan todellinen lintuperspektiivi."
+      "story": "Pulun oma tärkeysjärjestys: penkin muru etualalla, Westminsterin valtava koneisto oikeassa paikassaan joen takana. Maailma on avoin isoisän savuisen vaunun jälkeen.",
+      "viewpoint": "Queen's Walk / Albert Embankment, St Thomas' Hospitalin kohdalla Westminster Bridgen eteläpuolella. Kamera noin 10 cm oikean rantapenkin istuimen yläpuolella, kohti joen vastarantaa länteen–luoteeseen.",
+      "previousDirection": {
+        "promptId": "ALKUPERAINEN-OHJAUS-20260909-lontoo-1",
+        "promptSource": "posti/matkakirja-eurooppa-20260909.md (12:20 ja 12:50 kuvakohtaiset ohjeet; Venetsian 14 mm ja sydänreunat omistajan tarkennus)",
+        "story": "Tekstisession alkuperäinen 12:20/12:50-kohtaus: murut maan tasolla, kävelijöiden jalat, Westminster ja bussi taustalla.",
+        "viewpoint": "Nykyisen visuaalisesti tarkistetun kuvan todellinen lintuperspektiivi.",
+        "provenanceNote": "Tämä ei ole uusi generointitilaus eikä väite, että kirjoitin kuvatuotannon teknisen promptilaajennuksen. Kuvakohtainen tilanneohje on tekstisession aiempi. Varmista sen vastaavuus tuotantolokiin ennen pelikytkentää."
+      },
+      "referenceNotes": "South Bank Londonin Queen's Walk -sivu osoittaa kuvausalueen, Westminster Bridge–Lambeth Bridge -rantakävelyn ja penkit. Parlamentin oma arkkitehtuurisivu ja sen kokonaiskuva määräävät rakennuksen geometrian. Tarkka penkin ja rantasuojan suhde varmistetaan tuotannossa oikeasta paikkakuvasta; alhaisen kameran näkymäesteitä ei poisteta.",
+      "captionActivation": "only_with_corresponding_new_image",
+      "existingAssetDisposition": "retain_for_comparison_not_for_game_delivery"
     },
     {
       "caption": "Galatan mäkeä kiivetään yhä ostosten, laukkujen ja päivän töiden kanssa. Tünel kuljettaa ihmisiä ylöspäin maan sisällä, mutta levähdyspaikka kelpaa sen valmistumisesta huolimatta. Minä tunnistan hyvän pysähdyksen heti: seinä selän takana ja koko kulkureitti näkyvissä. Isoisä laski alhaalla mastoja. Tässä olisi ollut tilaisuus kysyä siltä istuvalta ihmiseltä, miten kaupunki oikeasti kannetaan ylös.",
@@ -1483,52 +1493,73 @@
       "viewpoint": "Present-day Lower Grindelwald Glacier Gorge, from a pigeon perched 10 cm above a real walkway railing."
     },
     {
-      "caption": "San Marcon altaalla kulkee vesibusseja, ja San Giorgio Maggiore kohoaa vastarannalla. Tarkoitukseni oli näyttää liikennettä. Kaiteelle sattui paikallinen, joka katsoi juuri oikeaan suuntaan ja osasi olla peittämättä koko näkymää. Se on harvinainen taito. Kuvasin maiseman tietenkin sen vuoksi. Kuvan reunassa oleva sydän on luultavasti jokin kameran asetus.",
+      "caption": "Punta della Doganan kärjestä näkyy San Giorgio Maggioren saari ja sen edessä kulkevia vesibusseja. Tarkoitukseni oli näyttää liikennettä. Rannan reunalle sattui paikallinen, joka katsoi juuri oikeaan suuntaan ja osasi olla peittämättä koko näkymää. Se on harvinainen taito. Kuvasin maiseman tietenkin sen vuoksi. Kuvan reunassa oleva sydän on luultavasti jokin kameran asetus.",
       "captionShort": "Venetsia: vesibussi ja aivan sattumalta yksi paikallinen.",
       "city": "Venetsia",
       "cityId": "venetsia",
       "existingAssetId": "pulu-cam-venetsia-01-r20260909-14mm-v1",
       "existingReviewUrl": "/pulu-cam-14mm-20260909/pulu-cam-venetsia-01-r20260909-14mm-v1.jpg",
       "order": 1,
-      "placeCheck": "Varmista lopuksi kuvassa näkyvän tarkan paikan nimi ja yhteys alkuperäiseen ohjeeseen. Jos alkuperäistä kuvakohtaista ohjausta ei voida osoittaa, älä hyväksy kuvaa automaattisesti; pyydä tekstisessiolta korvaava prompti.",
-      "productionAction": "retain_existing_directed",
-      "prompt": null,
-      "promptId": "ALKUPERAINEN-OHJAUS-20260909-venetsia-1",
-      "promptSource": "posti/matkakirja-eurooppa-20260909.md (12:20 ja 12:50 kuvakohtaiset ohjeet; Venetsian 14 mm ja sydänreunat omistajan tarkennus)",
-      "provenanceNote": "Tämä ei ole uusi generointitilaus eikä väite, että kirjoitin kuvatuotannon teknisen promptilaajennuksen. Kuvakohtainen tilanneohje on tekstisession aiempi. Varmista sen vastaavuus tuotantolokiin ennen pelikytkentää.",
+      "placeCheck": "Punta della Doganan itäkärki, kamera itään–kaakkoon. San Giorgio omalla saarellaan veden takana. Ei Rivan pitkää kivikaidetta eikä Saluten kupolia vastarantaan. Avoin kiveys ja vedenreuna oikeasta paikkakuvasta. Vanhojen lähdekuvien vaihtuvaa taideteosta ei kopioida nykyhetkeen. Ihastus sama kuin Venice3.",
+      "productionAction": "replace_geography",
+      "prompt": "Create one authentic present-day colour photograph from Livia's own pigeon-eye camera. Landscape 3:2, 1536x1024, sRGB. Full-frame 14 mm RECTILINEAR ultra-wide lens: strong near/far perspective, natural spatial depth, real materials and believable daylight. No fisheye circle, CGI, painted outlines, synthetic HDR, fake miniature blur or historical paper treatment. The photographer Livia remains behind the camera and is never visible. Use real photographs of the exact named viewpoint to constrain architecture, water edges and railings. Ordinary people and the small incident may be fictional, but architecture must not be invented. Keep the subject and place legible at phone size. Supply the clean colour photograph without text, PuluCam sticker or watermark; the selected B sticker is added separately by the game. Use ONLY the bird in pulu-cam-venetsia-03-r20260909-14mm-v3 as the continuity reference for Livia's crush: the same grey pigeon, orange iris, dark beak with pale cere, green-violet neck iridescence, distinctive irregular white throat patch, two dark wing bars and pink-red feet. Follow the actual reference over this verbal shorthand. Livia is invisible; the visible bird is her crush. Do not copy architecture from rejected Venice 1 or 2 images. Frame 1 of the five-picture accidental crush album. Move the scene to the ACTUAL open stone quay at the EASTERN TIP OF PUNTA DELLA DOGANA, looking EAST to SOUTHEAST across the water towards the island and church of SAN GIORGIO MAGGIORE. Camera about 10 centimetres above the real paving; leave a strip of ordinary quay paving and the real low water edge in the near foreground. San Giorgio's church, dome and campanile must keep their real proportions and mutual positions as seen from this exact tip; do not import the more familiar Riva degli Schiavoni angle. The island is across open water, not attached to this quay. Include one reasonably distant contemporary ACTV-type vaporetto travelling on a credible water route, clear of the foreground bird and shoreline. The same crush from Venice 3 stands naturally on the open paving near the water edge at a side of the composition, about 0.7–1 metre from the camera. His feet stand on paving, not a fabricated balustrade. The city and boat are still the ostensible main subjects. His head happens to turn towards the passing boat, giving Livia a reason to keep him in frame. There is NO long continuous stone balustrade along this open quay: follow the actual tip's edge and any real objects visible in the selected current site reference. Do not copy the temporary statue or protective enclosure visible in older museum photographs. The Dogana and Salute are behind or outside this east-facing camera and must not be magically added to the San Giorgio skyline. Keep daylight and the crush's identity consistent with Venice 3. Add only one or two small pink hand-drawn heart doodles at the outermost picture margins, as a discreet digital album overlay, never in the real scene. No solid border and no doodles over the bird, boat or architecture; the photographic centre remains completely believable.",
+      "promptId": "PAIKKA-V2-20260909-venetsia-1",
+      "promptSource": "posti/matkakirja-pulucam-20260909-paikkakorjaukset-v2.md",
+      "provenanceNote": "Tämä uusi korvaava prompti on tekstisession kirjoittama. Aiempi kuva säilytetään hylättynä paikkageometrian vuoksi; sen alkuperäisiä tekijätietoja ei muuteta.",
       "series": "pulu-cam",
       "sourceLine": "Matkakirjan havainnekuva",
       "sources": [
-        "https://www.veneziaunica.it/en/plan-your-trip/getting-around-venice",
-        "https://avm.avmspa.it/en/content/consult-map",
-        "https://www.comune.venezia.it/en/node/15128",
-        "https://cultura.gov.it/comunicato/20973"
+        "https://www.pinaultcollection.com/palazzograssi/en/punta-della-dogana",
+        "https://www.pinaultcollection.com/palazzograssi/media/styles/big/s3/w_image/golden-hour-1_0.jpg?itok=N1pd3O6K",
+        "https://avm.avmspa.it/en/content/consult-map"
       ],
-      "story": "Tekstisession alkuperäinen rakkauskohtaussarja: nähtävyys pääosassa, sama ihastus ilmestyy kuvan reunaan.",
-      "viewpoint": "Nykyisen visuaalisesti tarkistetun kuvan todellinen lintuperspektiivi."
+      "story": "Ihastusalbumin alku näyttää vielä kaupunkia: vesiliikenne ja San Giorgio Maggiore pääosassa, sama paikallinen lintu kuvan sivussa. Riva degli Schiavonin epävarma kaide poistuu vaihtamalla oikeaan kuvauspaikkaan.",
+      "viewpoint": "Punta della Doganan itäkärjen todelliselta avoimelta rantakiveykseltä noin 10 cm pinnan yläpuolelta itään–kaakkoon kohti San Giorgio Maggiorea.",
+      "previousDirection": {
+        "promptId": "ALKUPERAINEN-OHJAUS-20260909-venetsia-1",
+        "promptSource": "posti/matkakirja-eurooppa-20260909.md (12:20 ja 12:50 kuvakohtaiset ohjeet; Venetsian 14 mm ja sydänreunat omistajan tarkennus)",
+        "story": "Tekstisession alkuperäinen rakkauskohtaussarja: nähtävyys pääosassa, sama ihastus ilmestyy kuvan reunaan.",
+        "viewpoint": "Nykyisen visuaalisesti tarkistetun kuvan todellinen lintuperspektiivi.",
+        "provenanceNote": "Tämä ei ole uusi generointitilaus eikä väite, että kirjoitin kuvatuotannon teknisen promptilaajennuksen. Kuvakohtainen tilanneohje on tekstisession aiempi. Varmista sen vastaavuus tuotantolokiin ennen pelikytkentää."
+      },
+      "referenceNotes": "Pinault Collectionin paikkasivu vahvistaa San Giorgion näkymän. Sen Matteo De Fina -ilmakuva näyttää avoimen rantakärjen ja rakennusten keskinäisen sijainnin. Vanhempi Thomas Mayerin ulkokuva tukee kiveyksen/vedenreunan rakennetta; siinä näkyvää tilapäistä taidetta ei siirretä nykykuvaan. Ilmakuva on kartallinen lähde, ei tämän matalan otoksen kamerapaikka.",
+      "captionActivation": "only_with_corresponding_new_image",
+      "existingAssetDisposition": "retain_for_comparison_not_for_game_delivery"
     },
     {
-      "caption": "Dorsoduron kapeilla kanavilla tavaraa kuljetetaan veneellä ja ihmiset ylittävät veden pieniä siltoja pitkin. Tästä piti tulla kuva yhdestä sellaisesta risteyksestä. Paikallinen ehti taas etualalle. Hän katsoi ensin venettä ja sitten minua. Vaihdoin hieman kuvakulmaa saadakseni kanavan paremmin näkyviin. Jos lintu näyttää edellistä suuremmalta, se johtuu hyvin vaativasta paikkatutkimuksesta.",
+      "caption": "Ponte dei Pugnin alta kulkee Rio San Barnaba. Ihmiset ylittävät kanavan siltaa pitkin, tavara pääsee veneellä. Tästä piti tulla kuva liikenteestä. Paikallinen ehti taas etualalle, tällä kertaa metallikaiteelle. Hän katsoi ensin vettä ja sitten minua. Vaihdoin hieman kuvakulmaa saadakseni kanavan paremmin näkyviin. Jos lintu näyttää edellistä suuremmalta, se johtuu vaativasta paikkatutkimuksesta.",
       "captionShort": "Venetsia: sama paikallinen. Kaupunki on yllättävän pieni.",
       "city": "Venetsia",
       "cityId": "venetsia",
       "existingAssetId": "pulu-cam-venetsia-02-r20260909-14mm-v1",
       "existingReviewUrl": "/pulu-cam-14mm-20260909/pulu-cam-venetsia-02-r20260909-14mm-v1.jpg",
       "order": 2,
-      "placeCheck": "Varmista lopuksi kuvassa näkyvän tarkan paikan nimi ja yhteys alkuperäiseen ohjeeseen. Jos alkuperäistä kuvakohtaista ohjausta ei voida osoittaa, älä hyväksy kuvaa automaattisesti; pyydä tekstisessiolta korvaava prompti.",
-      "productionAction": "retain_existing_directed",
-      "prompt": null,
-      "promptId": "ALKUPERAINEN-OHJAUS-20260909-venetsia-2",
-      "promptSource": "posti/matkakirja-eurooppa-20260909.md (12:20 ja 12:50 kuvakohtaiset ohjeet; Venetsian 14 mm ja sydänreunat omistajan tarkennus)",
-      "provenanceNote": "Tämä ei ole uusi generointitilaus eikä väite, että kirjoitin kuvatuotannon teknisen promptilaajennuksen. Kuvakohtainen tilanneohje on tekstisession aiempi. Varmista sen vastaavuus tuotantolokiin ennen pelikytkentää.",
+      "placeCheck": "Tarkasta Dorsoduron oikea silta: kivinen kaari ja askelmat alhaalla, ohuet tummat metallikaiteet ylhäällä. Ei umpinaista kivikaidetta. Linnun jalat tarttuvat todellisen paksuiseen metalliin. Kamera samassa sillassa: koko siltaa ei voi samalla keksiä eteen toiseksi sillaksi. Kanavan rakennukset ja venereitti yhdestä todellisesta katselusuunnasta.",
+      "productionAction": "replace_geography",
+      "prompt": "Create one authentic present-day colour photograph from Livia's own pigeon-eye camera. Landscape 3:2, 1536x1024, sRGB. Full-frame 14 mm RECTILINEAR ultra-wide lens: strong near/far perspective, natural spatial depth, real materials and believable daylight. No fisheye circle, CGI, painted outlines, synthetic HDR, fake miniature blur or historical paper treatment. The photographer Livia remains behind the camera and is never visible. Use real photographs of the exact named viewpoint to constrain architecture, water edges and railings. Ordinary people and the small incident may be fictional, but architecture must not be invented. Keep the subject and place legible at phone size. Supply the clean colour photograph without text, PuluCam sticker or watermark; the selected B sticker is added separately by the game. Use ONLY the bird in pulu-cam-venetsia-03-r20260909-14mm-v3 as the continuity reference for Livia's crush: the same grey pigeon, orange iris, dark beak with pale cere, green-violet neck iridescence, distinctive irregular white throat patch, two dark wing bars and pink-red feet. Follow the actual reference over this verbal shorthand. Livia is invisible; the visible bird is her crush. Do not copy architecture from rejected Venice 1 or 2 images. Frame 2 of the five-picture accidental crush album. Exact bridge: PONTE DEI PUGNI over RIO SAN BARNABA in DORSODURO, by Campo San Barnaba, not the other similarly named bridge in Cannaregio. Reconstruct this small bridge from the real place photographs: a masonry arch and pale stone steps BELOW, but the sides ABOVE THE WALKING DECK are slender dark wrought-iron railings, open vertical bars and curved decorative metalwork with narrow metal top rails and distinct posts. It does NOT have a thick solid stone parapet at bird height. Livia's camera is perched on the actual metal top rail, about 10 centimetres above that perch, looking obliquely along the railing and down the real Rio San Barnaba. The SAME crush as Venice 3 is only about 35–50 centimetres along the rail from the lens. His natural toes grip the narrow metal securely. Keep the real rail thickness and profile; do not enlarge it into a broad stone ledge to support the bird. The bird fills appreciably more of the frame than in Venice 1, roughly a quarter to a third, without a deformed beak or extra toes. He has just turned from the water towards Livia's camera. Beyond him, show the actual small canal, authentic adjacent facades, a partial continuation of the same iron railing, and a modest workboat only where the water route permits. Use a single documented viewing direction; do not put a second whole Ponte dei Pugni in front of the camera when the photographer is sitting on it, and do not insert Rialto, Bridge of Sighs or San Marco monuments into this local canal view. Real bridge steps or stone footprint markers may appear only if this camera can actually see them; they are not mandatory props. Add a few more small pink heart doodles and two tiny sparkle marks to the extreme outer margins than in Venice 1, still less than in Venice 3. They are a separate-looking digital album embellishment, never painted onto the actual bridge. The central image stays an authentic contemporary camera photograph.",
+      "promptId": "PAIKKA-V2-20260909-venetsia-2",
+      "promptSource": "posti/matkakirja-pulucam-20260909-paikkakorjaukset-v2.md",
+      "provenanceNote": "Tämä uusi korvaava prompti on tekstisession kirjoittama. Aiempi kuva säilytetään hylättynä paikkageometrian vuoksi; sen alkuperäisiä tekijätietoja ei muuteta.",
       "series": "pulu-cam",
       "sourceLine": "Matkakirjan havainnekuva",
       "sources": [
+        "https://www.veneziaunica.it/en/content/dorsoduro-art-district-venetian-origins-international-contemporary-art",
+        "https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/immagini/ponte%20dei%20pugni.jpg",
         "https://live.comune.venezia.it/index.php/it/2025/04/una-calle-una-storia-ponte-dei-pugni",
-        "https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/documenti/Classic_Dorsoduro_EN.pdf"
+        "https://theboutiqueadventurer.com/landmarks-in-venice/"
       ],
-      "story": "Tekstisession alkuperäinen toinen ihastuskuva: sama lintu lähempänä, kanava alkaa jäädä sivurooliin.",
-      "viewpoint": "Nykyisen visuaalisesti tarkistetun kuvan todellinen lintuperspektiivi."
+      "story": "Ihastusalbumin toisessa kuvassa sama lintu tulee lähemmäs. Oikean Ponte dei Pugnin metallikaide tarjoaa uskottavan lintujen istumapaikan; kanava jää sivurooliin.",
+      "viewpoint": "Dorsoduron Ponte dei Pugnin todellisella ohuella yläkaiteella, pulun silmien kohdalla noin 10 cm kaiteen yläpuolella. Katse viistosti kaidetta pitkin ja Rio San Barnabaa alaspäin.",
+      "previousDirection": {
+        "promptId": "ALKUPERAINEN-OHJAUS-20260909-venetsia-2",
+        "promptSource": "posti/matkakirja-eurooppa-20260909.md (12:20 ja 12:50 kuvakohtaiset ohjeet; Venetsian 14 mm ja sydänreunat omistajan tarkennus)",
+        "story": "Tekstisession alkuperäinen toinen ihastuskuva: sama lintu lähempänä, kanava alkaa jäädä sivurooliin.",
+        "viewpoint": "Nykyisen visuaalisesti tarkistetun kuvan todellinen lintuperspektiivi.",
+        "provenanceNote": "Tämä ei ole uusi generointitilaus eikä väite, että kirjoitin kuvatuotannon teknisen promptilaajennuksen. Kuvakohtainen tilanneohje on tekstisession aiempi. Varmista sen vastaavuus tuotantolokiin ennen pelikytkentää."
+      },
+      "referenceNotes": "Venezia Unican virallisen Dorsoduro-reitin Stage 3 yksilöi Rio San Barnaban sillan ja sisältää sen valokuvan. Kaupungin artikkeli erottaa kaksi samannimistä siltaa. Kaiteen ulkoasu on lisäksi katsottu tämän tekstisession toimesta artikkelin aidosta lähikuvasta: https://i0.wp.com/theboutiqueadventurer.com/wp-content/uploads/2021/03/ponte-dei-pugni-venice.jpg?fit=1200%2C800&ssl=1 . Kuvassa metallikaiteen alla oleva kivikaari ei ole kivinen kaide.",
+      "captionActivation": "only_with_corresponding_new_image",
+      "existingAssetDisposition": "retain_for_comparison_not_for_game_delivery"
     },
     {
       "caption": "Campo Santa Margheritan laidalla tuolit, puut ja kahvilapöydät levittäytyvät kaupungin yhteiseen olohuoneeseen. Istuin vain hetkeksi. Paikallinen tuli viereen ja kallisti päätään kellojen kuuluessa. Tässä näkyy siis aukion arkista elämää. Se on tärkeä aihe. Pöydän reunalle jäänyt muru ei selitä, miksi otin samasta linnusta näin monta kuvaa, eikä sen tarvitsekaan.",
@@ -1563,7 +1594,7 @@
       "order": 4,
       "placeCheck": "Kuvatuotanto valitsee lähteistä todelliseen kuvauskohtaan osuvan nykyreferenssin ja varmistaa näkölinjat. Tekstin puuttuvaa rakennetta ei saa keksiä. Jos paikka ei mahdollista tätä sommittelua, ilmoita ristiriita ennen generointia; älä korvaa paikkaa toisella omin päin.",
       "productionAction": "generate_new",
-      "prompt": "Create one authentic present-day colour photograph from the first-person viewpoint of Livia, a carrier pigeon with her own camera. Use a full-frame 14 mm rectilinear ultra-wide lens: strong near/far perspective, natural materials, believable depth and light. This is a photograph, never an illustration or CGI scene. The camera is where the bird's eyes would be; the photographer herself is not visible. No floating third-person view of a bird holding a camera. No circular fisheye, fake depth blur, synthetic HDR, text, sticker, watermark, vintage paper or decorative frame. Keep the full composition readable at phone size. Landscape 3:2, deliver 1536x1024 sRGB. Use real current place-reference images for the site geometry; people and incidental events are fictional everyday moments. Fourth photograph of the established Venice crush sequence. Attach the APPROVED current Venice 1–3 images as identity and graphic-language references. The photographer Livia is invisible, flying about 2 metres over the real Rio di San Barnaba near the documented Ponte dei Pugni area, about 1–1.5 metres behind and to one side of the SAME grey male-looking crush pigeon. The other bird's natural near wing, orange eye, dark beak with pale cere, green-violet neck sheen, distinctive irregular white throat patch and two dark wing bars remain consistent with the references. Capture a credible brief flight moment, not a hovering bird statue, with actual canal façades and bridge placement receding. The crush dominates but the city remains recognizable. Natural daylight as in the existing sequence. Add a few MORE thin hand-drawn pink hearts, tiny sparkles and one bashful curved arrow at OUTER EDGES ONLY, consistent with frame 3; the centre stays a real colour photograph. No text, sticker or hearts replacing feathers. This romantic edge-decoration instruction is the explicit exception to the series' usual clean-image rule.",
+      "prompt": "Create one authentic present-day colour photograph from the first-person viewpoint of Livia, a carrier pigeon with her own camera. Use a full-frame 14 mm rectilinear ultra-wide lens: strong near/far perspective, natural materials, believable depth and light. This is a photograph, never an illustration or CGI scene. The camera is where the bird's eyes would be; the photographer herself is not visible. No floating third-person view of a bird holding a camera. No circular fisheye, fake depth blur, synthetic HDR, text, sticker, watermark, vintage paper or decorative frame. Keep the full composition readable at phone size. Landscape 3:2, deliver 1536x1024 sRGB. Use real current place-reference images for the site geometry; people and incidental events are fictional everyday moments. Fourth photograph of the established Venice crush sequence. Use pulu-cam-venetsia-03-r20260909-14mm-v3 ONLY as the bird-identity reference. Use real current place photographs for architecture; never inherit the rejected Venice 1 or 2 geometry. Match the established increasing heart-margin decoration without restarting already generated frames. The photographer Livia is invisible, flying about 2 metres over the real Rio di San Barnaba near the documented Ponte dei Pugni area, about 1–1.5 metres behind and to one side of the SAME grey male-looking crush pigeon. The other bird's natural near wing, orange eye, dark beak with pale cere, green-violet neck sheen, distinctive irregular white throat patch and two dark wing bars remain consistent with the references. Capture a credible brief flight moment, not a hovering bird statue, with actual canal façades and bridge placement receding. The crush dominates but the city remains recognizable. Natural daylight as in the existing sequence. Add a few MORE thin hand-drawn pink hearts, tiny sparkles and one bashful curved arrow at OUTER EDGES ONLY, consistent with frame 3; the centre stays a real colour photograph. No text, sticker or hearts replacing feathers. This romantic edge-decoration instruction is the explicit exception to the series' usual clean-image rule.",
       "promptId": "OHJAUS-EU-V1-venetsia-4",
       "promptSource": "posti/matkakirja-kuvaohjaus-20260909-koko-eurooppa.md",
       "series": "pulu-cam",
@@ -1573,7 +1604,8 @@
         "https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/documenti/Classic_Dorsoduro_EN.pdf"
       ],
       "story": "Venetsia: tämä kuva käsittelee kuulemma lentoreittejä.",
-      "viewpoint": "Fourth photograph of the established Venice crush sequence."
+      "viewpoint": "Fourth photograph of the established Venice crush sequence.",
+      "continuityReference": "pulu-cam-venetsia-03-r20260909-14mm-v3"
     },
     {
       "caption": "Aukion laidalla oli kaksi vierekkäistä kuivaa kohtaa samalla ikkunalaudalla. Hän valitsi toisen ja jätti toisen vapaaksi. Venetsiassa tila on arvokasta; siitä isoisä olisi osannut kirjoittaa pitkän huomion. Minä istuin siihen. Tässä viimeisessä kuvassa kaupunkia näkyy vähän, mutta muistan paikan aivan tarkasti. Hetkinen. Fogg. Kuinka monta näistä sinä jo näit?",
@@ -1584,7 +1616,7 @@
       "order": 5,
       "placeCheck": "Kuvatuotanto valitsee lähteistä todelliseen kuvauskohtaan osuvan nykyreferenssin ja varmistaa näkölinjat. Tekstin puuttuvaa rakennetta ei saa keksiä. Jos paikka ei mahdollista tätä sommittelua, ilmoita ristiriita ennen generointia; älä korvaa paikkaa toisella omin päin.",
       "productionAction": "generate_new",
-      "prompt": "Create one authentic present-day colour photograph from the first-person viewpoint of Livia, a carrier pigeon with her own camera. Use a full-frame 14 mm rectilinear ultra-wide lens: strong near/far perspective, natural materials, believable depth and light. This is a photograph, never an illustration or CGI scene. The camera is where the bird's eyes would be; the photographer herself is not visible. No floating third-person view of a bird holding a camera. No circular fisheye, fake depth blur, synthetic HDR, text, sticker, watermark, vintage paper or decorative frame. Keep the full composition readable at phone size. Landscape 3:2, deliver 1536x1024 sRGB. Use real current place-reference images for the site geometry; people and incidental events are fictional everyday moments. Fifth and final Venice crush album photograph, using approved frames 1–3 and generated frame 4 as references for the SAME individual pigeon. First-person camera from Livia's place on one end of a real externally accessible wide stone window ledge overlooking Campo Santa Margherita in Dorsoduro; choose a genuine documented ledge and actual view direction. The same crush sits extremely close at the other end, three-quarter profile turned mildly toward the lens, large due to real 14 mm proximity, with natural orange iris, grey plumage, dark beak/pale cere, green-purple neck and identical white throat marking. He is an ordinary real pigeon, no human lips or cartoon grin. A narrow believable background slice of the café square, tree and façades remains. The composition has almost forgotten the landmark, tender and slightly embarrassing. Outer-edge pink hearts, sparkles and small affectionate arrow are the MOST abundant of this five-frame sequence, but do not cover the face or central photographic world. No words or embedded PuluCam sticker. Photographer herself remains unseen; the open ledge space near the lens implies company without a selfie.",
+      "prompt": "Create one authentic present-day colour photograph from the first-person viewpoint of Livia, a carrier pigeon with her own camera. Use a full-frame 14 mm rectilinear ultra-wide lens: strong near/far perspective, natural materials, believable depth and light. This is a photograph, never an illustration or CGI scene. The camera is where the bird's eyes would be; the photographer herself is not visible. No floating third-person view of a bird holding a camera. No circular fisheye, fake depth blur, synthetic HDR, text, sticker, watermark, vintage paper or decorative frame. Keep the full composition readable at phone size. Landscape 3:2, deliver 1536x1024 sRGB. Use real current place-reference images for the site geometry; people and incidental events are fictional everyday moments. Fifth and final Venice crush album photograph, using approved frames 1–3 and generated frame 4 as references for the SAME individual pigeon. First-person camera from Livia's place on one end of a real externally accessible wide stone window ledge overlooking Campo Santa Margherita in Dorsoduro; choose a genuine documented ledge and actual view direction. The same crush sits extremely close at the other end, three-quarter profile turned mildly toward the lens, large due to real 14 mm proximity, with natural orange iris, grey plumage, dark beak/pale cere, green-purple neck and identical white throat marking. He is an ordinary real pigeon, no human lips or cartoon grin. A narrow believable background slice of the café square, tree and façades remains. The composition has almost forgotten the landmark, tender and slightly embarrassing. Outer-edge pink hearts, sparkles and small affectionate arrow are the MOST abundant of this five-frame sequence, but do not cover the face or central photographic world. No words or embedded PuluCam sticker. Photographer herself remains unseen; the open ledge space near the lens implies company without a selfie. Continuity clarification V1.2: use pulu-cam-venetsia-03-r20260909-14mm-v3 for the crush bird identity; do not copy architecture from rejected Venice 1 or 2. This is a reference/QA clarification, not an order to regenerate a frame already in production.",
       "promptId": "OHJAUS-EU-V1-venetsia-5",
       "promptSource": "posti/matkakirja-kuvaohjaus-20260909-koko-eurooppa.md",
       "series": "pulu-cam",
@@ -1594,7 +1626,8 @@
         "https://www.camposantamargherita.com/bar.htm"
       ],
       "story": "Venetsia: nämä eivät kaikki kuuluneet esitykseen.",
-      "viewpoint": "Fifth and final Venice crush album photograph, using approved frames 1–3 and generated frame 4 as references for the SAME individual pigeon."
+      "viewpoint": "Fifth and final Venice crush album photograph, using approved frames 1–3 and generated frame 4 as references for the SAME individual pigeon.",
+      "continuityReference": "pulu-cam-venetsia-03-r20260909-14mm-v3"
     },
     {
       "caption": "Piazza della Signorian David on kopio. Michelangelon alkuperäinen veistos vietiin vuonna 1873 suojaan Galleria dell’Accademiaan. Aukiolla patsas kuuluu yhä Palazzo Vecchion ympärille levittäytyvään kivisten kertomusten joukkoon. Isoisä vertasi Davidin kättä omaansa. Minä tutkin ilmettä: sama keskittynyt katse joka suunnasta. Malli ei pyytänyt nähdä kuvaa eikä ehdottanut uutta otosta. Arvostan sellaista ammattitaitoa.",
@@ -2520,5 +2553,24 @@
       "source": "posti/matkakirja-eurooppa-20260909.md — 12:20 kuvakohtainen ihastusalbumin tilaus",
       "note": "Aiemmin annettu romantiikkarepliikki, ei uusi toinen päällekkäinen äänitilaus. Jos ei vielä pelissä/äänenä, Fable kytkee saman tekstin ja sitä vastaavan esigeneroidun äänen."
     }
-  ]
+  ],
+  "updatedAt": "2026-09-09T17:45:31.048491+00:00",
+  "productionSummary": {
+    "totalFinalPuluImages": 58,
+    "initialNewOrderContinues": 49,
+    "additionalGeographyReplacements": 3,
+    "previouslyOrderedOHJAUS01": 5,
+    "retainedPriorDirectedPilotImages": 1,
+    "newOrderIsIncrementalNotDuplicate": true
+  },
+  "changeLogV12": {
+    "file": "posti/matkakirja-pulucam-20260909-paikkakorjaukset-v2.md",
+    "replace": [
+      "lontoo/1",
+      "venetsia/1",
+      "venetsia/2"
+    ],
+    "identityReference": "pulu-cam-venetsia-03-r20260909-14mm-v3",
+    "historicalFlorencePrompt": "ISOISA-TARINA-V4-firenze-kasi"
+  }
 }
