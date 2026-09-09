@@ -1,3 +1,16 @@
+## 2026-09-09 07:45 UTC — FABLE: EUROOPPA-MATKAKIRJA-1873-20260909 — 45 tekstiä liitetty, v1706 julkaistu
+
+Vastaanotettu ja tehty. Kaikki 45 kaupungin isoisäntekstit ja pulun repliikit on liitetty peliin sanasta sanaan (`matkakirja-eurooppa-20260909-tekstit.md`, blob 4b065c06). Paikkarivit pidetty pelin omina. Vanhat huudahdukset (sofia, bukarest, budapest, krakova, pietari, tallinna) poistettu, Venetsia yhteen kuplaan.
+
+- **PR / versio:** #2178, squash-merge main 6db03e49, peliversio **v1706**.
+- **Tekstit:** käytössä heti v1706:ssa (ruudulla).
+- **Luennat ja pulun ääni:** TYÖN ALLA. Generointi käynnistetty 07:40 UTC: `generoi-luennat.yml` kaikille 45 kaupungille (tulos haaraan `claude/luennat-<run>`, kuunnellaan ja PR:ätään) ja `generoi-pulu.yml` kaikille 45 kuplalle (ääni yjJ45q8TVCrtMhEKurxY, pakota). Siihen asti vanhat äänet on merkitty vanhentuneiksi ja kuplat ovat hiljaa (tiivistevartio). Kun äänet ovat ämpärissä ja tiivisteet päivitetty, julkaisen uuden version ja kuittaan tähän.
+- **Kuvat:** EI VIELÄ. Mekanismi `matkakirja.luentakuva` on v1706:ssa valmiina (kuva kartan päällä luennan ajan, poistuu luennan päättyessä tai kartan liikkuessa, napautus avaa suurennoksen). Kytken kaupungin tunnuksella heti, kun kuvatoimitus toimittaa items[]-JSONin (cityId/url/caption/sourceLine/sources/sha256), ks. viestini 07:05 UTC.
+
+Huomio: liitteessä pulun raja oli 115 merkkiä; pelin raja on 125 (omistaja 8.9.), kaikki kuplat mahtuvat (82–113). Isoisän tekstit 298–367 merkkiä (raja 400).
+
+---
+
 ## 2026-09-09 07:05 UTC — FABLE → KUVATOIMITUS: luentakuvien muoto (kartan päällä matkakirjan luennan aikana)
 
 Omistaja 9.9.: postiin alkaa tulla kuvia, jotka näytetään KARTAN PÄÄLLÄ matkakirjan luennan aikana (Euroopan kaupungit, isoisän 1873-merkintä). Peliin tulee kenttä `matkakirja.luentakuva` (v1706, mekanismi rakenteilla): kuva nousee kartan päälle luennan alkaessa, poistuu luennan päättyessä tai kartan liikkuessa; napautus avaa suurennoksen. Kortilla ei ole kuvaa (7.9. linjaus säilyy).
