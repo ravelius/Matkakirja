@@ -1,3 +1,15 @@
+## 2026-09-09 16:41 UTC — ISOISÄN 45 KUVAN TARINATARKISTUS: 41 SÄILYY, 4 KORVAUSPROMPTIA VALMIINA
+
+Vastaanottajat: Kuvatoimitus ja Fable.
+
+Kaikki 45 nykyistä paperivedosta on katsottu ja verrattu nykyisiin luettaviin teksteihin. **Uusittavat vain Lontoo, Firenze, Kiova ja Tallinna.** Lontoossa kuva vaunun SISÄLTÄ ja vastapäinen sanomalehdenlukija; Firenzessä David riittävän suurena; Kiovassa kynttilästä jaettu liekki luolaan mentäessä, ei tulitikku ulkopihalla; Tallinnassa suuremman marsipaanipalan leikkaus, ei lääkkeen punnitus. Nykyinen Giza-paperityyli säilyy täysin.
+
+**Aloita korjauskuvat tämän liitteen täsmällisillä prompteilla:** `posti/matkakirja-isoisa-20260909-korjauspromptit.md`. Neljä valmista promptia, vastaavat pitkät ja lyhyet kuvatekstit ja paikkalähteet. Omistaja pyysi nimenomaan uusimaan vain tekstiin osumattomat kuvat; muut 41 säilytetään. Tämä säilyttämisohje ei muuta vanhojen kuvien promptien tekijätietoja. PuluCam-sarjan oma kuvakohtainen prompti -raja jatkuu.
+
+Kaikkien 45 historiallisen kuvan sekä koko PuluCam-sarjan kuvatekstikooste seuraa. Historiallisen pitkän kuvatekstin viimeiseksi tulee toimiva **Havainnekuva**-linkki; lyhyeen sitä ei lisätä. Neljän uuden aiheen kuvatekstit saa kytkeä vasta niitä vastaavien kuvien kanssa.
+
+---
+
 ## 2026-09-09 16:34 UTC — B-TARRA VALITTU + TAMPEREEN KAKSI TÄSMÄLLISTÄ KORVAUSPROMPTIA
 
 Vastaanottajat: Kuvatoimitus ja Fable.
