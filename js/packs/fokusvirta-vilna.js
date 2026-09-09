@@ -175,6 +175,31 @@ export const FOKUSVIRTA_VILNA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-vilna-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-vilna-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Vilna: tähtitieteilijänkin ikkuna avautuu tavalliseen päivään.',
+        selite: 'Vilnan yliopiston vanhan observatorion pihalla katse nousee '
+          + 'väkisinkin ikkunoihin ja torneihin. Täällä taivasta tutkittiin '
+          + 'keskellä kaupunkia. Nyt tarkimmat pimeät yöt löytyvät kauempaa '
+          + 'valoista, mutta pihalla kuljetaan edelleen kirjojen ja laukkujen '
+          + 'kanssa. Isoisä joi teetä pilviä odotellessaan. Minä odotin '
+          + 'opiskelijan väistymistä kuvasta. Tutkimus vaatii selvästi yhä '
+          + 'kärsivällisyyttä.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://biblioteka.vu.lt/e.parodos/kiemeliai/vu/observatorijoskiemas/infoen.html',
+          'https://www.muziejus.vu.lt/en/',
+        ],
+      },
+    ],
+    /*
      * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
      *
      * Kaanonissa Livialla on yksi teksti, mutta kortti lukee kaksi

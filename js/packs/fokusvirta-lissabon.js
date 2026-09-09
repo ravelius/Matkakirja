@@ -192,6 +192,30 @@ export const FOKUSVIRTA_LISSABON = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-lissabon-01-r20260909-euv1-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lissabon-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Lissabon: hissin yläpää. Siipiä myydään ilmeisesti pareittain.',
+        selite: 'Santa Justan hissi yhdistää Baixan alempia katuja Carmon '
+          + 'korkeuksiin. Yhdessä kaupungissa voi siis jäädä jonottamaan '
+          + 'pelkkää ylämäkeä. Minä saavuin viereiselle reunalle toisesta '
+          + 'suunnasta ja katselin, kuinka matkustajat astuivat ulos. Isoisä '
+          + 'löysi veden kattojen välistä. Tästä löytyvät ensin katot ja niiden '
+          + 'päältä taas ihmisiä, jotka yrittävät päästä vielä vähän ylemmäs.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.visitlisboa.com/pt-pt/locais/elevador-de-santa-justa',
+          'https://www.carris.pt/',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

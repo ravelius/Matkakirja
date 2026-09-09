@@ -134,6 +134,30 @@ export const FOKUSVIRTA_WIEN = {
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-wien-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-wien-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Wien: kahvi saapui, vaikka uutinen ei parantunut.',
+        selite: 'Wieniläisessä kahvilassa lehti ja kahvi saavat viipyä samassa '
+          + 'pöydässä. Istuin terassin reunalla, kun tarjoilija laski kupin '
+          + 'yksin istuvan asiakkaan eteen. Lehti jäi hetkeksi alas. Isoisä '
+          + 'tilasi kerran kahvin toiselle ihmiselle, koska mikään hänen '
+          + 'näkemänsä kone ei osannut lohduttaa. Minä en tiedä, mitä tämän '
+          + 'lehden sivulla luki. Tuon pienen tauon osasin silti kuvata.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.wien.info/en/dine-drink/coffeehouses/top-traditional-coffee-houses-in-vienna-361666',
+          'https://www.wien.gv.at/en/leisure/viennese-coffee-culture',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS — VÄLITTÄJÄOTE. Yksi kupla per saapuminen.
      * Merkintä päättyy itkeviin miehiin, joten kupla ei alota
      * naljasta: myötätunto ensin, sitten etäisyys.

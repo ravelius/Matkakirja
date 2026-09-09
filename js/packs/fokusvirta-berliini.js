@@ -132,6 +132,32 @@ export const FOKUSVIRTA_BERLIINI = {
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-berliini-01-r20260909-euv1-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-berliini-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Berliini: siipien omistaja voi silti viettää koko päivän '
+          + 'paikallaan.',
+        selite: 'Voitonpylvään kultainen Victoria katsoo nykyään Tiergartenin yli. '
+          + 'Pylväs siirrettiin tänne, mutta hahmo ei ole ottanut käyttöönsä '
+          + 'yhtäkään uutta lentoreittiä. Kiersin sen vierestä tarkistamassa '
+          + 'siiven rakennetta. Näyttävä työ. Oma höyhenpukuni on vähemmän '
+          + 'kultainen, mutta pääsen sillä takaisin alas ilman portaita. '
+          + 'Isoisän lehtipojasta tämä korkeus ei kerro mitään. Sen puutteen '
+          + 'huomaan minäkin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.visitberlin.de/en/siegessaule',
+          'https://upload.wikimedia.org/wikipedia/commons/3/32/Siegess%C3%A4ule-Berlin-Tiergarten.jpg',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

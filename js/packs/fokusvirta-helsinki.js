@@ -128,6 +128,48 @@ export const FOKUSVIRTA_HELSINKI = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-helsinki-01-r20260909-euv1-v1.jpg, pulu-cam-helsinki-02-r20260909-euv1-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-helsinki-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Helsinki: paperipaino on siirtynyt lokkien kiinnostuksen piiriin.',
+        selite: 'Kauppatorilla tuuli tarttuu paperiin yhtä luontevasti kuin '
+          + 'ennenkin. Tällä kertaa sen lähellä seisova lokki huomasi '
+          + 'kalatiskin ennen minua, mutta minä ehdin huomata lokin. Isoisä sai '
+          + 'kartalleen silakan rasvajäljen. Nykyisen kauppiaan käärepaperi '
+          + 'odottaa huomattavasti lyhyempää matkaa. Kuvasin tilanteen ennen '
+          + 'kuin kumpikaan meistä ehti sekaantua kaupankäyntiin. Se vaati '
+          + 'pientä itsehillintää.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.myhelsinki.fi/places/helsinki-cathedral/',
+          'https://www.myhelsinki.fi/places/senate-square/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-helsinki-02-r20260909-euv1-v2.jpg',
+        lyhyt: 'Helsinki: katolla seurataan toisenlaista toria.',
+        selite: 'Tuomiokirkon katon apostolipatsailla on hyvä paikka katsella '
+          + 'Helsinkiä. Minä kävin tarkistamassa näkymän yhden kiviseltä '
+          + 'näyttävän vaipan vierestä; patsaat ovatkin sinkkiä. Alempana '
+          + 'Senaatintori asettuu rakennusten väliin, ja merikaupunki jatkuu '
+          + 'sen takana. Isoisä vertasi apostolien ja kalakauppiaan vakavuutta. '
+          + 'Tästä kuvasta puuttuu vaaka, mutta tarkkaavaisuudessa on samaa '
+          + 'sukua.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.myhelsinki.fi/places/helsinki-cathedral/',
+          'https://www.myhelsinki.fi/places/senate-square/',
+          'https://www.helsinginseurakunnat.fi/artikkelit/apostoliveistokset_0',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS — VÄLITTÄJÄOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
      * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä ei ole synkkä vaan tarkka:
      * isoisä tekee havainnon ja päättää sen oikein ("tavallaan se sitä

@@ -222,6 +222,45 @@ export const FOKUSVIRTA_VARSOVA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02, euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-varsova-01-r20260909-euv1-v1.jpg, pulu-cam-varsova-02-r20260909-euv1-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-varsova-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Varsova: tämän torin tunnistaminen on jonkun tekemää työtä.',
+        selite: 'Varsovan vanhankaupungin tori rakennettiin sodan jälkeen '
+          + 'uudelleen. Värit, mittasuhteet ja talojen omat kasvot palautettiin '
+          + 'osaksi kaupunkia, jossa taas asutaan ja käydään kauppaa. Kuvasin '
+          + 'talon juurelta ylöspäin: pieni kynnys edessä, kokonainen julkisivu '
+          + 'takana. Isoisä olisi etsinyt täältä leipuriaan. Minä katson, '
+          + 'kuinka paljon vaivaa tutun paikan säilyttäminen voi vaatia.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://whc.unesco.org/en/list/30/',
+          'https://zabytek.pl/en/obiekty/warszawa-historyczne-centrum-warszawy',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-varsova-02-r20260909-euv1-v2.jpg',
+        lyhyt: 'Varsova: katolta näkyvät myös talojen välit.',
+        selite: 'Räystään tasolta tori muuttuu tilaksi, jonka talot muodostavat '
+          + 'yhdessä. Yhdessä ikkunassa on kukkia, toisessa verho ja '
+          + 'kolmannessa ihminen. Uudelleen rakentaminen ei palauttanut vain '
+          + 'ulkoseiniä vaan paikkoja aivan tavallisille päiville. Näytän tämän '
+          + 'toisen kuvan siksi, ettei ensimmäinen jäisi pelkäksi kauniiksi '
+          + 'julkisivuksi. Kaupunki tarvitsee myös sen, mitä ikkunoiden takana '
+          + 'tapahtuu.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://whc.unesco.org/en/list/30/',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
      * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
      * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa

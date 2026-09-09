@@ -219,6 +219,32 @@ export const FOKUSVIRTA_BARCELONA = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-barcelona-01-r20260909-euv1-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-barcelona-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Barcelona: kulma leikattiin pois. Näkymään tuli tilaa.',
+        selite: 'Eixamplen viistetyt korttelinkulmat avautuvat ilmasta selvästi: '
+          + 'talojen väliin syntyy tavallista leveämpi risteys. Cerdàn viiva ei '
+          + 'ole kadonnut liikenteen alle, vaikka kaalit ovat väistyneet. '
+          + 'Kuvasin juuri sen kohdan, jossa jalankulkija, pyöräilijä ja '
+          + 'autoilija kaikki katsovat eri suuntaan. Hyvässä kartassa riittää '
+          + 'tilaa heille jokaiselle. Minulla on varmuuden vuoksi vielä tämä '
+          + 'kerros.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.barcelona.cat/imatges/es/29/vistes-de-barcelona/7871/avenida-diagonal-cruce-con-la-calle/',
+          'https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/101603/1/bcn01engp.pdf',
+          'https://www.barcelona.cat/museuhistoria/sites/default/files/cerda_eng.pdf',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

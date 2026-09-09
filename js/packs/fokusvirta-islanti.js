@@ -46,6 +46,31 @@ export const FOKUSVIRTA_ISLANTI = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-islanti-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-islanti-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Reykjavik: lämmin vesi on saanut ympärilleen kokonaisen arjen.',
+        selite: 'Laugardalurissa kuumia lähteitä käytettiin ennen pyykinpesuun. Nyt '
+          + 'laaksossa on myös suuri geotermisesti lämmitetty uimala, ja '
+          + 'kaupungin talot saavat lämpönsä samasta maanalaisesta voimasta. '
+          + 'Asetuin altaan ulkopuoliselle aidalle katsomaan höyryä. Isoisän '
+          + 'paita oli tämän tarinan pieni alku. Minä pidän kehityksen '
+          + 'suunnasta: ihmiset ovat löytäneet syyn istua ulkona silloinkin, '
+          + 'kun ilma ei sitä ehdota.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://visitreykjavik.is/laugardalur-valley',
+          'https://www.icelandtravel.is/attractions/laugardalur-2-2/',
+        ],
+      },
+    ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

@@ -229,6 +229,30 @@ export const FOKUSVIRTA_KRAKOVA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-krakova-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-krakova-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Krakova: soittajalla on neljä yleisöä ja yksi hengitys kerrallaan.',
+        selite: 'Marian kirkon tornista soitettava sävelmä lähetetään neljään '
+          + 'suuntaan. Minä odotin ikkunan ulkopuolella ja sain '
+          + 'poikkeuksellisen läheisen paikan. Vasken pinnassa näkyi valoa, '
+          + 'kaupungin katoilla iltapäivä. Isoisä odotti melodian loppua '
+          + 'torilla. Tästä huomasi, että soittajalla oli jo seuraava suunta '
+          + 'mielessä. Kuuntelin loppuun asti, niin pitkälle kuin loppua '
+          + 'annettiin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://culture.pl/en/article/the-hejnal-trumpet-call-of-krakow-fact-vs-fiction',
+        ],
+      },
+    ],
+    /*
      * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
      *
      * Kaanonissa Livialla on yksi teksti, mutta kortti lukee kaksi

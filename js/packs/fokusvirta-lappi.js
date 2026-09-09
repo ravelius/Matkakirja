@@ -52,6 +52,31 @@ export const FOKUSVIRTA_LAPPI = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-lappi-01-r20260909-euv1-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lappi-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Rovaniemi: jokien risteyksessä ei ole liikennevaloja.',
+        selite: 'Ounasjoki liittyy Kemijokeen aivan Rovaniemen äärellä. Rannoilta '
+          + 'nähtynä veden leveys on maisema; ilmasta sen suunnat alkavat '
+          + 'muistuttaa reittejä. Lensin hetken veneen kulkusuunnan mukana ja '
+          + 'kuvasin, missä virrat liittyvät. Isoisä piirsi joet ensin '
+          + 'rajoiksi. Minä pidän hänen korjauksestaan. Kaupunkiin voi tulla '
+          + 'lentäen ja huomata silti, että vesi ehti yhdistää paikat paljon '
+          + 'aikaisemmin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.visitrovaniemi.fi/professionals/media/rovaniemi-facts/',
+          'https://www.visitrovaniemi.fi/summer-by-the-river-in-rovaniemi/',
+        ],
+      },
+    ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

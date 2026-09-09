@@ -244,6 +244,50 @@ export const FOKUSVIRTA_TAMPERE = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat tampere-v2; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-tampere-01-r20260909-14mm-v2.jpg, pulu-cam-tampere-02-r20260909-14mm-v3.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tampere-01-r20260909-14mm-v2.jpg',
+        lyhyt: 'Tampere: seurasin tarjoilijaa ja päädyin tehtaan katolle.',
+        selite: 'Finlaysonin alueen Kattopuutarhassa kahvilan vieressä kasvaa '
+          + 'kokonainen puutarha katon korkeudella. Ihmiset katselevat '
+          + 'kaupunkia, minä tarkistan pöytien välisen liikenteen. '
+          + 'Sinipaitaisella tarjoilijalla on leipäkori, joten hänen reittinsä '
+          + 'on juuri nyt näkymistä kiinnostavin. Isoisä seurasi tehtaan '
+          + 'lankaa. Minun tutkimukseni etenee tuolinjalalta toiselle ja vaatii '
+          + 'yhtä tarkkaa silmää.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.kattopuutarha.fi/',
+          'https://finlaysoninalue.fi/tehdaspuutarha/',
+          'https://finlaysoninalue.fi/ravintolat-ja-kahvilat/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tampere-02-r20260909-14mm-v3.jpg',
+        lyhyt: 'Tampere: puutarha katolla, leipäkori reitillä. Hyvä '
+          + 'kaupunkisuunnitelma.',
+        selite: 'Nousin vähän ylemmäs. Kattopuutarhan pöydät ja istutukset '
+          + 'asettuivat kartaksi, ja sama tarjoilija jatkoi korinsa kanssa '
+          + 'kohti asiakasta. Tehdasalueelle on tullut kasveja, kahvia ja '
+          + 'kokonaan uusia kulkureittejä. Minulle kahden tuolin väliin jää '
+          + 'käytävä; ihmiselle siihen mahtuu korkeintaan anteeksipyyntö. '
+          + 'Kuvassa on myös Tamperetta, jos maltat katsoa leipäkorin ohi. Minä '
+          + 'maltoin juuri valotuksen verran.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.kattopuutarha.fi/',
+          'https://finlaysoninalue.fi/tehdaspuutarha/',
+          'https://finlaysoninalue.fi/ravintolat-ja-kahvilat/',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ —
      * PARIPERIAATE"). Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti
      * isoisän merkinnän perään (js/fokusvirta.js piirraPollo);

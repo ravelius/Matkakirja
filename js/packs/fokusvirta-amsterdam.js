@@ -162,6 +162,50 @@ export const FOKUSVIRTA_AMSTERDAM = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-amsterdam-01-r20260909-euv1-v1.jpg, pulu-cam-amsterdam-02-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-amsterdam-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Amsterdam: lentokoulun oppilas on tällä kertaa nojatuoli.',
+        selite: 'Amsterdamin kapeissa taloissa muutto saattaa alkaa kadulta ja '
+          + 'päättyä ikkunaan. Nostolaite hoitaa osuuden, johon portaat eivät '
+          + 'taivu. Minä seurasin nojatuolin ensimmäistä nousua. Sillä oli '
+          + 'lentoasento kohdallaan mutta suuntavaisto täysin köyden varassa. '
+          + 'Isoisä näki saman ongelman ratkaistuna kattokoukulla. Olette '
+          + 'edistyneet: nykyään tuolilla on matkallaan oma pieni lava.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.iamsterdam.com/en/travel-stay/getting-around/why-a-canal-cruise-is-the-best-introduction-to-amsterdam',
+          'https://huurverhuislift.nl/ladderlift-amsterdam',
+          'https://huurverhuislift.nl/uploads/pages/283/normal/original/ladderlift-huurverhuislift.nl-amsterdam-4.jpg',
+          'https://fotoamsterdam.com/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-amsterdam-02-r20260909-euv1-v1.jpg',
+        lyhyt: 'Amsterdam: saavuin ikkunalle ennen huonekaluja.',
+        selite: 'Ikkunan tasolla nostimen lava näyttää jo melkein '
+          + 'laskeutumispaikalta. Sisällä odottaa muuttaja, kadulla toinen '
+          + 'katsoo ylöspäin ja tuoli jatkaa heidän välissään. Minä pääsin '
+          + 'tänne yhdellä kaarroksella. En maininnut sitä ääneen. Kun joku '
+          + 'tekee vaivalla jotakin, minkä itse osaa helposti, pieni '
+          + 'hienotunteisuus tekee asiantuntijasta huomattavasti '
+          + 'siedettävämmän.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.iamsterdam.com/en/travel-stay/getting-around/why-a-canal-cruise-is-the-best-introduction-to-amsterdam',
+          'https://huurverhuislift.nl/ladderlift-amsterdam',
+          'https://huurverhuislift.nl/uploads/pages/283/normal/original/ladderlift-huurverhuislift.nl-amsterdam-4.jpg',
+          'https://fotoamsterdam.com/',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

@@ -259,6 +259,30 @@ export const FOKUSVIRTA_ODESSA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-odessa-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-odessa-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Odessa: portaat jatkuvat kuvan ulkopuolelle.',
+        selite: 'Odessan leveät portaat yhdistävät kaupungin ylätason sataman '
+          + 'suuntaan. Isoisä vertasi siellä tavaran kantajien työtä herrasväen '
+          + 'kevyempiin liikkeisiin. Minä katson nyt samoja kiviä kaupungissa, '
+          + 'jonka maailmanperintöä sota uhkaa. Tähän kuvaan ei tarvittu mitään '
+          + 'suurta tapahtumaa. Valo kulki askelman yli, eikä sen perässä '
+          + 'kuulunut kiirettä. Toivon, että tuollaisia hetkiä riittää.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://whc.unesco.org/en/list/1703/',
+          'https://www.unesco.org/en/articles/odesa-unesco-condemns-renewed-attack-world-heritage-property',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
      * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
      * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa

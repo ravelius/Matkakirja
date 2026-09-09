@@ -164,6 +164,30 @@ export const FOKUSVIRTA_RIIKA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-riika-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-riika-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Riika: tämä pesä on rakennettu ihmisäänille.',
+        selite: 'Mežaparksin suuri laululava on tehty kuoroja varten, ja sen '
+          + 'rakenteet avautuvat ilmaan kuin oksisto. Isoisä kuuli Riian '
+          + 'laulujuhlilla suuren joukon hengittävän yhdessä. Minä katsoin '
+          + 'harjoitukseen asettuvia laulajia ja tyhjiä rivejä heidän edessään. '
+          + 'Vielä oli tilaa hiljaisuudelle. Kuvasin tämän hetken ennen '
+          + 'aloitusta, sillä laulun ajaksi sopi laskea kamera ja kuunnella.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.liveriga.com/en/1168-grand-stage-at-mezaparks',
+          'https://www.liveriga.com/en/14576-mezaparks-1',
+        ],
+      },
+    ],
+    /*
      * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
      *
      * Kaanonissa Livialla on yksi teksti, mutta kortti lukee kaksi

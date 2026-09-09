@@ -288,6 +288,33 @@ export const FOKUSVIRTA_ISTANBUL = {
    */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-istanbul-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-istanbul-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Istanbul: mäen voi voittaa myös istumalla.',
+        selite: 'Galatan mäkeä kiivetään yhä ostosten, laukkujen ja päivän töiden '
+          + 'kanssa. Tünel kuljettaa ihmisiä ylöspäin maan sisällä, mutta '
+          + 'levähdyspaikka kelpaa sen valmistumisesta huolimatta. Minä '
+          + 'tunnistan hyvän pysähdyksen heti: seinä selän takana ja koko '
+          + 'kulkureitti näkyvissä. Isoisä laski alhaalla mastoja. Tässä olisi '
+          + 'ollut tilaisuus kysyä siltä istuvalta ihmiseltä, miten kaupunki '
+          + 'oikeasti kannetaan ylös.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.metro.istanbul/en/Hatlarimiz/HatDetay?hat=T1',
+          'https://visit.istanbul/galata-tower',
+          'https://commons.wikimedia.org/wiki/Category:Galata_Tower_from_the_B%C3%BCy%C3%BCk_Hendek_Street',
+          'https://commons.wikimedia.org/wiki/File:Galata_Kulesi_Street,_viewed_from_Galata_Tower_in_2024.jpg',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS + SIVUPOLKU (Fablen kaanon 27.8.2026,
      * TUURAAJA-KEHYS). Tämä on se yksi kuudesta, jossa Livia ajautuu
      * sivupolulle: hän aloittaa maadoituksesta, karkaa suvun

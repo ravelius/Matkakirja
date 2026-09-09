@@ -139,6 +139,32 @@ export const FOKUSVIRTA_PARIISI = {
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-pariisi-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-pariisi-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Pariisi: oopperan paras aitiopaikka jäi ilman samettia.',
+        selite: 'Palais Garnier\'n yleisö katsoo tavallisesti lavalle tai ylöspäin '
+          + 'kohti koristeita. Minä aloitin koristeen vierestä. Katon reunalla '
+          + 'kullan rinnalla näkyvät saumat, sadejäljet ja tavallinen kivi: '
+          + 'juhla-asu tarvitsee huoltoa siinä missä sulatkin. Isoisä epäili, '
+          + 'riittäisikö talon sisään yhtä paljon katsottavaa. Näytän ensin '
+          + 'tämän puolen. Aitiopaikastani puuttuu tuoli, mutta siihen olen jo '
+          + 'tottunut.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.operadeparis.fr/actualites/restauration-de-la-facade-principale-du-palais-garnier',
+          'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/loggia-et-toit-de-l-opera-garnier-9eme-arrondissement-paris',
+          'https://www.operadeparis.fr/en/enterprises/film-and-spaces-locations',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

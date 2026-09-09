@@ -203,6 +203,31 @@ export const FOKUSVIRTA_EDINBURGH = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-edinburgh-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-edinburgh-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Edinburgh: löysin kerroksen, jossa ei tarvitse kysyä tietä.',
+        selite: 'Edinburghin vanhakaupunki kasvaa sekä pitkin katua että sen '
+          + 'päälle. Elokuun festivaaleilla kellaritkin muuttuvat '
+          + 'esityspaikoiksi, ja ihmiset etsivät oikeaa ovea ohjelma kädessään. '
+          + 'Katolla ovia on vähemmän. Tästä erotan reitit, savupiiput ja sen, '
+          + 'kuka pysähtyy väärän talon kohdalle. Isoisän toinen kartta-arkki '
+          + 'oli hyvä ajatus. Minun versioni ei tarvitse paperia.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.edinburgh.gov.uk/downloads/file/23848/c2a-camera-obscura-calton-hill',
+          'https://www.camera-obscura.co.uk/home/',
+          'https://www.camera-obscura.co.uk/news/article/Best-Views/',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

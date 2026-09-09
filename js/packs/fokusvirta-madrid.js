@@ -170,6 +170,30 @@ export const FOKUSVIRTA_MADRID = {
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-madrid-01-r20260909-euv1-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-madrid-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Madrid: Pradon taiteeseen johtaa myös varjoisa odotus.',
+        selite: 'Las Meninas odottaa Pradossa, mutta minä tarkastan ulkopuolen. '
+          + 'Puun varjossa lepäävä koira on löytänyt saman asennon kuin '
+          + 'maalauksen kuuluisa edeltäjänsä. Sen ihminen katsoo puhelinta, '
+          + 'museovieraat sisäänkäyntiä ja minä koko joukkoa. Madridissa on '
+          + 'tällä hetkellä ainakin kolme käsitystä siitä, mikä ansaitsee '
+          + 'huomion. Koira vaikuttaa ainoalta, joka ei aio perustella omaansa.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.museodelprado.es/en/visit/getting-here',
+          'https://www.museodelprado.es/en/visit-the-museum',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

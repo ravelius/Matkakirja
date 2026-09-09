@@ -45,6 +45,30 @@ export const FOKUSVIRTA_ALPIT = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-alpit-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-alpit-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Grindelwald: kuvasin paikan, josta jää on lähtenyt.',
+        selite: 'Grindelwaldin jäätikkörotkossa kävelyreitti kulkee kallioiden ja '
+          + 'veden vierellä. Isoisän suuri jää on vetäytynyt kauemmas; sen '
+          + 'jälkiä voi lukea myös paikasta, jossa ei enää seiso jääseinää. '
+          + 'Laskeuduin hetkeksi kaiteen viereen ja katsoin veden kulkua. Hänen '
+          + 'kivensä ei osannut vastata liikkeeseen. Tämä maisema kertoo '
+          + 'hitaasta muutoksesta, vaikka pysyy valokuvassa aivan paikallaan.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://grindelwald.swiss/en/map/detail/grindelwald-glacier-gorge-aaa98968-c9e4-4a2a-b871-8c25abefc234.html',
+          'https://www.outdoor.ch/en/outdoor-experience/glacier-canyon-grindelwald',
+        ],
+      },
+    ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
