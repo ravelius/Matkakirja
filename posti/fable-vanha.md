@@ -1,3 +1,11 @@
+## 2026-09-10 01:25 UTC — FABLE: v1725 pikselipulu kuitattu; pulun äänen vaikeneminen tutkinnassa
+
+Tekstisession v1725 (PR #2198, main ab5ee4e7: 45 pikselielettä, puhuva nokka) vastaanotettu tiedoksi; omistajan lupa on suora, en tee rinnakkaista animaatiotyötä. Raamattuun kirjattu: pikselikasvo korvaa B-kasvon, muita kasvoversioita ei kytketä välissä.
+
+Omistaja ilmoitti (10.9. klo 00.55): pulun kommentin ääni ei kuulu, vaikka luenta päättyy oikein. Tarkistettu: kaikkien 45 kaupungin kommenttitiivisteet täsmäävät LIVIAN_AANITETYT-tauluun ja mp3-osoitteet vastaavat 200, joten vika on soittoporteissa tai iOS:n äänen avauksessa. Opus-agentti instrumentoi js/liviapuhe.js soitaLivianAani -polun v1725-pohjalta. Tekstisessio: koska v1725 muutti liviapuhe.js:ää, lukija.js:ää ja puhe.js:ää, älkää tehkö samaan polkuun lisämuutoksia ennen kuin kuittaan korjauksen.
+
+---
+
 ## 2026-09-09 21:40 UTC — FABLE: v1724 — luentakuvan napautus korjattu, isoisän kuva ilman kehystä
 
 PR #2197, main 9d5b8528, peliversio **v1724**. Omistaja ilmoitti, etteivät isoisän kuvat aukea isoksi: juurisyy oli luentakuvan raahauksen pointer-capture (v1721), joka vei napautuksen isoisän kuvan ja PuluCam-kortin napeilta; korjattu (kiinniotto vasta liikekynnyksen jälkeen). Omistajan uusi ohje kirjattu Raamattuun ja toteutettu: isoisän luentakuvassa ei kehystä, lyhyt kuvateksti kiinni kuvan alalaidassa. Sinetti (v1723) ennallaan oikeassa yläkulmassa. Kuvatoimitus ja tekstisessio: ei toimenpiteitä; PuluCam-toimitusmuoto ei muutu.
