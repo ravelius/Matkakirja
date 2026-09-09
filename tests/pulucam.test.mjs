@@ -529,9 +529,10 @@ test('ilman omistajan valitsemaa tarraa pulun kuvat näkyvät puhtaina', () => {
      * HTML-tekstiä "PULU-CAM". Kun tarra valitaan, tämä testi
      * päivitetään yhdessä vakion kanssa.
      */
-    // OMISTAJA VALITSI TARRAN B (9.9.2026): jokaisessa pulun kuvassa on
-    // yksi tarra (PNG, jossa PuluCam-teksti on mukana) eikä HTML-tekstiä.
-    assert.match(PULU_CAM_TARRA_OSOITE, /pulucam-sticker-B-r20260909-v1\.png$/);
+    // OMISTAJA VALITSI MUSTEENSINISEN SINETIN (9.9.2026): jokaisessa pulun
+    // kuvassa on yksi sinetti (PNG, jossa PuluCam-teksti on mukana) eikä
+    // HTML-tekstiä.
+    assert.match(PULU_CAM_TARRA_OSOITE, /pulu-cam-leima-musteensininen-v1\.png$/);
     const kortti = pakanKortit()[0];
     assert.equal(kortti.querySelectorAll('.pulucam-merkki').length, 1);
     assert.equal(kortti.querySelectorAll('.pulucam-teksti').length, 0);

@@ -2739,13 +2739,13 @@ function avaaSuurennos(ui, lista, alku, ankkuri, { pulunKuvasta = -1 } = {}) {
   const laskuri = html('span', 'fokuszoom-laskuri');
   teksti.append(selite, lahde, laskuri);
   /*
-   * PULU-CAM-TARRA MYÖS SUURENNOKSESSA (Raamattu kohta 3): tarraa ei
-   * ole poltettu kuvaan, joten sen on seurattava kuvaa myös isona.
+   * PULU-CAM-SINETTI MYÖS SUURENNOKSESSA (Raamattu kohta 3): sinettiä
+   * ei ole poltettu kuvaan, joten sen on seurattava kuvaa myös isona.
    * Kuva saa siksi ohuen kuoren, jonka mitat ovat täsmälleen kuvan
-   * mitat — tarra asettuu sen oikeaan alakulmaan. KUORI SYNTYY VAIN
-   * KARUSELLISSA JA VAIN JOS TARRA ON OLEMASSA: yhden kuvan suurennos
+   * mitat — sinetti asettuu sen oikeaan YLÄKULMAAN. KUORI SYNTYY VAIN
+   * KARUSELLISSA JA VAIN JOS SINETTI ON OLEMASSA: yhden kuvan suurennos
    * (kaikki muut kutsupaikat) pysyy rakenteeltaan ennallaan, ja ennen
-   * omistajan tarravalintaa (js/pulucam.js PULU_CAM_TARRA_OSOITE) niin
+   * omistajan merkkivalintaa (js/pulucam.js PULU_CAM_TARRA_OSOITE) niin
    * pysyy karusellikin — kuvat näkyvät puhtaina.
    */
   const puluCam = pulunKuvasta >= 0 ? puluCamMerkki({ luokka: 'pulucam-suuri' }) : null;

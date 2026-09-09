@@ -554,27 +554,31 @@
 }
 
 /*
- * PULU-CAM-TARRA: YKSI PNG, EI KUVAAN POLTETTU (Raamattu kohta 3;
- * omistajan tarkennus 9.9.2026 klo 18.50). Teksti PuluCam on tarran
- * sisällä, joten HTML-tekstiä ei ole — aiempi selfie + teksti -pari on
- * poistettu. Tarra on läpinäkyvä RGBA-PNG, joten sen alle EI ladota
- * taustalaatikkoa eikä pyöristystä: kuvaan tulee tarra, ei nappi.
+ * PULU-CAM-MERKKI: MUSTEENSININEN SINETTI KUVAN OIKEASSA YLÄKULMASSA
+ * (omistajan päätös 9.9.2026; Raamattu "PULUCAM-MERKKI ON
+ * MUSTEENSININEN SINETTI OIKEASSA YLAKULMASSA"). Yksi PNG, ei kuvaan
+ * poltettu: teksti PuluCam on sinetin sisällä, joten HTML-tekstiä ei
+ * ole — aiempi selfie + teksti -pari on poistettu. Sinetti on
+ * läpinäkyvä RGBA-PNG (läpinäkyvä myös sinetin sisällä), joten sen alle
+ * EI ladota taustalaatikkoa eikä pyöristystä: kuvaan tulee sinetti, ei
+ * nappi.
  *
  * KOKO SKAALAUTUU KUVAN LEVEYDEN MUKAAN: 22 % `--pulucam-mitta`-arvosta
  * (kartalla luentakuvan leveys, suurennoksessa js:n laskema kuvan
- * leveys), katto 160 px, jottei tarra kasva koko ruudun suurennoksessa
- * julisteeksi. Luvut ovat myös js:ssä (js/pulucam.js
+ * leveys), katto 160 px, jottei sinetti kasva koko ruudun
+ * suurennoksessa julisteeksi. Luvut ovat myös js:ssä (js/pulucam.js
  * PULUCAM_TARRA_OSUUS, PULUCAM_TARRA_KATTO_PX), jotta testit valvovat
  * samaa sopimusta.
  *
- * ILMAN OMISTAJAN VALITSEMAA TARRAA MERKKIÄ EI SYNNY LAINKAAN
+ * ILMAN OMISTAJAN VALITSEMAA SINETTIÄ MERKKIÄ EI SYNNY LAINKAAN
  * (js/pulucam.js puluCamMerkki palauttaa null): kuvat näkyvät puhtaina
  * sekä pakassa että karusellissa.
  */
 .pulucam-merkki {
   position: absolute;
   right: 0.45rem;
-  bottom: 0.45rem;
+  top: 0.45rem;
+  bottom: auto;
   display: block;
   width: min(calc(var(--pulucam-mitta, 240px) * 0.22), 160px);
   line-height: 0;
@@ -588,10 +592,10 @@
 }
 
 /*
- * TARRA MYÖS SUURENNOKSESSA. Karusellissa kuva saa ohuen kuoren
+ * SINETTI MYÖS SUURENNOKSESSA. Karusellissa kuva saa ohuen kuoren
  * (`.fokuszoom-kuvatila`), jonka mitat ovat täsmälleen kuvan mitat —
- * tarra asettuu sen alakulmaan eikä kellu paperikehyksen reunalle.
- * Kuori syntyy VAIN karusellissa ja vain tarran kanssa
+ * sinetti asettuu sen oikeaan yläkulmaan eikä kellu paperikehyksen
+ * reunalle. Kuori syntyy VAIN karusellissa ja vain sinetin kanssa
  * (js/fokusvirta.js avaaSuurennos).
  */
 .fokuszoom-kuvatila {
@@ -603,7 +607,8 @@
 
 .pulucam-merkki.pulucam-suuri {
   right: 0.6rem;
-  bottom: 0.6rem;
+  top: 0.6rem;
+  bottom: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

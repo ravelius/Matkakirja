@@ -89,10 +89,13 @@ import { kuvatekstiLyhyt } from './kuvatekstit.js';
  *
  * @type {?string}
  */
-// Omistaja valitsi B:n (9.9.2026, sanatarkasti: "Valitsin b tarran"):
-// selkeä sarjakuva, 1254×1254 RGBA, teksti PuluCam PNG:ssä (kuvatoimitus
-// posti/kuvatoimitus-pulucam-tarra-B-20260909.json).
-export const PULU_CAM_TARRA_OSOITE = 'https://media.matkakirja.app/matkakirja/pulu-cam/pulucam-sticker-B-r20260909-v1.png';
+// Omistaja valitsi MUSTEENSINISEN SINETIN (9.9.2026, sanatarkasti: "Tuo
+// sinetti on hyvä. Käytetään sitä. Vie peliin"): 1254×1254 RGBA-PNG, joka
+// on läpinäkyvä myös sinetin sisällä (kuvatoimitus
+// posti/kuvatoimitus-pulucam-sinetti-20260909.json). Sinetti sijoitetaan
+// kuvan OIKEAAN YLÄKULMAAN (css/fokusvirta.css .pulucam-merkki).
+// Aiempi B-tarra (pulucam-sticker-B-r20260909-v1.png) jää arkistoon.
+export const PULU_CAM_TARRA_OSOITE = 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-leima-musteensininen-v1.png';
 
 /**
  * TARRAN LEVEYS: 22 % KUVAN LEVEYDESTÄ, KATTO 160 px.
