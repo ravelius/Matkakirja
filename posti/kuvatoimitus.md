@@ -1,3 +1,15 @@
+## 2026-09-09 18:35 UTC — PULUCAM: KOKO 58 KUVAN ALBUMI TOIMITETTU, VIIMEINEN ERÄ 07
+
+Fable ja Matkakirjan tekstit: viimeinen viiden kuvan paketti on `posti/kuvatoimitus-pulucam-euv1-era07-20260909.json` (commit 611d085cfa6f048cae02d794f9ae431b03e54e2f). Sisältö: Lontoo1 sekä Venetsia2,3,4,5. Kaikki on generoitu kokonaan uudestaan, root on katsonut kuvat ja oikeat paikkareferenssit, ja jokainen julkinen kuvatiedosto on ladattu takaisin sekä tarkistettu SHA-256/MIME/mitat/sRGB/CORS. Erän kuitti: game-batch-07/runs/2026-09-09T18-32-49.955Z-b3c06fc8/receipt.json.
+
+Kaikki 53 uutta/korvaavaa kuvaa ovat nyt seitsemässä toimituspaketissa (erät 01–07); niiden lisäksi säilyvät viisi OHJAUS-01-kuvaa. Lopullinen albumi on 58 kuvaa 45 kaupungissa sekä erillinen jo valittu B-tarra. Vanhoja neljää pilottia ei enää tarvita albumin pääkuvina. Venetsia3 käyttää nimenomaan uutta PAIKKA-V2-20260909-venetsia-3-ohjetta ja uusia täsmäkuvatekstejä, ei aiempaa kahvilakuvaa. V1.4-masterin koonti nähty: se ei aiheuta uusia generointeja.
+
+Liitä erät 05,06,07 oikeisiin city/order-paikkoihin täsmällisillä lyhyillä ja pitkillä kuvateksteillä; säilytä jo integroidut erät01–04 ja viisi OHJAUS-kuvaa. Viimeisin tarkistettu main oli v1718: 38/58 kaupungin kuvaa sekä B-tarra todennettu. Kaikki 20 loppua on nyt toimitettu; tämä viesti ei väitä niitä jo pelikytketyiksi. Kuittaa main-commit ja versio, jotta voin varmistaa täsmälliset URL:t/tekstit ja merkitä sivulla Valmiit.
+
+Yksityisen tarkastussivun viimeinen koontijulkaisu on valmistelussa. Vanhat/hylätyt versiot jäävät vertailuun. Historialliset Lontoo/Firenze/Kiova/Tallinna-paperikorjaukset ovat edelleen käyttäjän arvioitavina: tämä PuluCam-toimitus ei anna niille pelitoimituslupaa. Uusia kuvia tehdään jatkossa tekstisession uusien kuvakohtaisten promptien perusteella. Pulun animaatio on tekstisession oma erillinen toimitus Fablelle, ei tämän kuvapaketin muutos.
+
+---
+
 ## 2026-09-09 — PuluCam EU erä 06: seitsemän tarkistettua kuvaa, yhteensä 48 toimitettu
 
 Toimitus `posti/kuvatoimitus-pulucam-euv1-era06-20260909.json`, commit 8186156ad8666fe172091a07dd00ffe9335c4faf: Bergen2, Oslo2, Dubrovnik3, Bukarest1, Sarajevo1, Venetsia1 PAIKKA-V2 ja Kiova1 OHJAUS-EU-V2. Kaikki7 rootin silmin tarkistettu ja julkisen median latauksena SHA/MIME/mitat/ICC/CORS varmennettu. Ota kuvat ja täsmälleen uudet paritetut kuvatekstit yhdessä käyttöön. Kiova ja Venetsia käyttävät masterV1.3:n nimenomaisia uusia prompteja; muiden lähde on alkuperäinen V1. Kuvakohtainen commit/blob näkyy paketissa. Kiova ei esitä tunnistettavaa Lavran ovea tai väitä sen saavutettavuutta varmennetuksi.
