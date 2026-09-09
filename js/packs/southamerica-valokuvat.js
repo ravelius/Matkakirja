@@ -17,6 +17,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Una calle de Antofagasta (1912).jpg',
     vuosi: '1912',
     lahde: 'Nevin O. Winter, Commons (PD)',
+    lyhyt: 'Katu Antofagastassa vuonna 1912, jolloin kaupunki eli salpietarin viennistä.',
     selite: 'Katu Antofagastassa vuonna 1912, kuvattuna yhdysvaltalaisen Nevin O. '
       + 'Winterin Chile-kirjaan. Kaupunki eli tuolloin salpietarista: '
       + 'sisämaan Atacamasta tuotu lasti kulki rautateitse rannalle ja sieltä '
@@ -26,6 +27,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: '“Caleta de Pescadores” in Antofagasta (pzidar paranal lv-2).jpg',
         vuosi: '2011',
         lahde: 'P. Zidar/ESO, Commons (CC BY 4.0)',
+        lyhyt: 'Kalastusveneitä Caleta de Pescadoresin poukamassa Antofagastassa vuonna 2011.',
         selite: 'Kalastusveneitä Caleta de Pescadores -poukamassa. Antofagasta on '
           + 'venynyt parinkymmenen kilometrin nauhaksi Tyynenmeren ja '
           + 'rannikkovuoriston väliin, joten satamille on jäänyt vain kapeita '
@@ -35,6 +37,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Antofagasta - Terminal Pesquero (5203547755).jpg',
         vuosi: '2010',
         lahde: 'Antofagastan kaupunki, Commons (CC BY 2.0)',
+        lyhyt: 'Antofagastan kalaterminaali vuonna 2010, jossa päivän saalis myydään.',
         selite: 'Kaupungin kalaterminaali, jossa päivän saalis myydään. Rannikko '
           + 'on autiomaata, mutta Humboldtin virta nostaa pinnalle kylmää ja '
           + 'ravinteikasta vettä, ja siksi kalaa riittää.',
@@ -43,6 +46,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Vista desde el Monumento Natural La Portada, Antofagasta.jpg',
         vuosi: '2018',
         lahde: 'Nicolás Valdés Ortega, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Näkymä La Portadan luonnonmuistomerkiltä Antofagastan rannikolla vuonna 2018.',
         selite: 'Näkymä La Portadan luonnonmuistomerkiltä pohjoiseen kohti Juan '
           + 'Lópezin rantaa, taustalla Morro Morenon massiivi. Kuva on otettu '
           + 'illansuussa, jolloin rannikon värit erottuvat voimakkaimpina.',
@@ -61,6 +65,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Movimiento insurgente paraguayo, Asunción (1912).jpg',
     vuosi: '1912',
     lahde: 'Imagoteca Paraguaya (Milda Rivarola), Commons (CC BY 4.0)',
+    lyhyt: 'Aseistettuja miehiä Asunciónin kadulla Paraguayn sisällissodan aikaan 1911–1912.',
     selite: 'Aseistettuja miehiä vetämässä kärryä pitkin Asunciónin kivetöntä '
       + 'katua kartanon aidan vierestä. Kuva on Paraguayn sisällissodan '
       + 'ajalta 1911–1912, jolloin valta vaihtui pääkaupungissa useaan '
@@ -70,6 +75,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: '"Mercado 4" Asunción, (Paraguay).jpg',
         vuosi: '2023',
         lahde: 'David Ramalleira, Commons (CC BY 2.0)',
+        lyhyt: 'Mercado 4, Asunciónin suurin tori, vuonna 2023.',
         selite: 'Mercado 4 eli Nelostori. Kojut ovat levinneet useiden korttelien '
           + 'alueelle katujen päälle, ja siellä myydään kaikkea vihanneksista '
           + 'vaatteisiin. Se on Asunciónin suurin tori ja kaupungin arjen '
@@ -79,6 +85,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Tereré - infusión 2.jpg',
         vuosi: '2018',
         lahde: 'TitiNicola, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Tereré eli kylmä mate valmistumassa Asunciónissa vuonna 2018.',
         selite: 'Tereré eli kylmä mate. Yrttijauhe pannaan sarvi- tai puukuppiin '
           + 'ja päälle kaadetaan jääkylmää vettä termospullosta. Paraguayssa '
           + 'juoma kuuluu päivään ympäri vuoden, ja kuumuudessa se juodaan '
@@ -88,6 +95,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'National Pantheon of the Heroes, Asunción, Paraguay.jpg',
         vuosi: '2012',
         lahde: 'CivArmy, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Sankarien kansallinen panteoni Asunciónin keskustassa vuonna 2012.',
         selite: 'Sankarien kansallinen panteoni Palman ja Chilen katujen kulmassa '
           + 'aivan keskustassa. Kupolirakennus on samalla kirkko ja koko maan '
           + 'mausoleumi: sen sisällä lepäävät Paraguayn historian '
@@ -106,6 +114,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'A thousand miles in a dug-out; being the narrative of a journey of investigation among the red-skin Indians of Central Brazil (1911) (14798735293).jpg',
     vuosi: '1911',
     lahde: 'Frederick Charles Glass, Internet Archive Book Images (ei tunnettuja tekijänoikeusrajoituksia)',
+    lyhyt: 'Karajá-ryhmä Araguaia-joen hiekkasärkällä Brasiliassa vuonna 1911.',
     selite: 'Karajá-ryhmä leveällä hiekkasärkällä Araguaia-joen rannassa. '
       + 'Kuva on lähetystyöntekijä Frederick Charles Glassin kirjasta, joka '
       + 'kertoo tuhannen mailin venematkasta jokea ylös vuonna 1911. '
@@ -116,6 +125,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Rio Javaés.jpg',
         vuosi: '2012',
         lahde: 'Arthur to, Commons (public domain)',
+        lyhyt: 'Javaés-joki Txuirin kylän kohdalla Bananalin saarella vuonna 2012.',
         selite: 'Javaés-joki Txuirin kylän kohdalla Formoso do Araguaian '
           + 'kunnassa. Javaés on Araguaian sivuhaara: se erkanee päähaarasta '
           + 'ja yhtyy siihen taas satojen kilometrien päässä, ja väliin jäävä '
@@ -125,6 +135,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Praias de Transição dos 03 Biomas - Ecótono.JPG',
         vuosi: '2012',
         lahde: 'Leonardo Azevedo, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Matalan veden aika Cantãon osavaltiopuistossa Bananalin saarella vuonna 2012.',
         selite: 'Matalan veden aika Cantãon osavaltiopuistossa Bananalin saaren '
           + 'tuntumassa. Kuvaajan mukaan tässä kohtaa vaihettuvat kolme '
           + 'luonnonaluetta: cerrado-savanni, tulvamaa ja sademetsä. '
@@ -134,6 +145,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Marsh Deer.JPG',
         vuosi: '2010',
         lahde: 'araguaia.org, Commons (CC BY 3.0)',
+        lyhyt: 'Suokauris laiduntaa Cantãon osavaltiopuistossa Brasiliassa vuonna 2010.',
         selite: 'Suokauris laiduntaa vesilintujen seassa Cantãon '
           + 'osavaltiopuistossa. Se on Etelä-Amerikan suurin hirvieläin ja '
           + 'elää nimenomaan tulvamailla, jollaisia Araguaia täyttää joka '
@@ -154,6 +166,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Orla de Boa Vista-RR.jpg',
         vuosi: '2021',
         lahde: 'Andrezza Mariot, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Boa Vistan jokiranta Rio Brancon varrella Brasiliassa vuonna 2021.',
         selite: 'Boa Vistan jokiranta Rio Brancon varrella. Rantakansi on '
           + 'rakennettu pilareiden varaan veden ylle, sillä joen pinta nousee '
           + 'ja laskee sadekausien mukaan; kuivaan aikaan rantaan paljastuu '
@@ -163,6 +176,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Pintolandia Shelter, 8 March 2017 - Boa Vista, Brazil (01).jpg',
         vuosi: '2017',
         lahde: 'Migration Brazil, Commons (CC BY 4.0)',
+        lyhyt: 'Pintolândian vastaanottokeskus Boa Vistassa maaliskuussa 2017.',
         selite: 'Pintolândian vastaanottokeskus Boa Vistassa maaliskuussa 2017. '
           + 'Venezuelasta Brasiliaan johtava maantie kulkee Roraiman läpi, ja '
           + 'Boa Vista on ensimmäinen suuri kaupunki rajan jälkeen — sinne on '
@@ -172,6 +186,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'EDERSON BRITO IGARAPE AGUA BOA BOA VISTA RR (39266636780).jpg',
         vuosi: '2018',
         lahde: 'Ederson Brito / MTur Destinos, Commons (PD)',
+        lyhyt: 'Igarapé Água Boa Boa Vistan liepeillä Brasiliassa vuonna 2018.',
         selite: 'Igarapé Água Boa Boa Vistan liepeillä. Roraiman pääkaupunkia ei '
           + 'ympäröi sademetsä vaan lavrado, avoin savanni, ja puut kasvavat '
           + 'lähinnä purojen varsilla. Sillan kupeeseen on syntynyt '
@@ -191,6 +206,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Calle Real - Bogota.jpg',
     vuosi: '1886',
     lahde: 'Julio Racines, Gallica / Commons (PD)',
+    lyhyt: 'Calle Real, nykyinen Carrera Séptima, Bogotássa vuonna 1886.',
     selite: 'Calle Real eli nykyinen Carrera Séptima. Kadun päässä kohoaa San '
       + 'Franciscon kirkon torni, ja kulkijat näkyvät haamuina, koska '
       + 'valotusaika oli pitkä. Katu oli kaupungin pääväylä jo '
@@ -200,6 +216,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Market in Bogotá.jpg',
         vuosi: '2022',
         lahde: 'Mussi Katz, Commons (CC0)',
+        lyhyt: 'Paloquemaon torihalli Bogotássa vuonna 2022.',
         selite: 'Paloquemaon torihalli. Kolumbian hedelmät kasvavat hyvin eri '
           + 'korkeuksilla, kylmästä ylätasangosta kuumiin laaksoihin, ja ne '
           + 'kohtaavat vasta täällä samoilla tiskeillä.',
@@ -208,6 +225,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: '2019 Bogotá - Ciclovía en la calle 26.jpg',
         vuosi: '2019',
         lahde: 'Felipe Restrepo Acosta, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Ciclovía Calle 26:lla Bogotássa vuonna 2019.',
         selite: 'Ciclovía Calle 26:lla. Sunnuntaisin ja pyhäpäivinä osa '
           + 'pääkaduista suljetaan autoilta ja annetaan pyöräilijöille ja '
           + 'kävelijöille. Tapa alkoi Bogotássa 1970-luvulla ja on sittemmin '
@@ -217,6 +235,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Bogotá Monserrate desde La Candelaria.JPG',
         vuosi: '2013',
         lahde: 'Felipe Restrepo Acosta, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Monserraten kirkko La Candelarian yllä Bogotássa vuonna 2013.',
         selite: 'Monserraten kirkko kohoaa La Candelarian tiilikattojen yllä. '
           + 'Vuorelle noustaan funikulaarilla tai köysiradalla, ja se on '
           + 'ollut pyhiinvaelluskohde vuosisatoja. Bogotá on itsekin jo 2 600 '
@@ -236,6 +255,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Buenos Aires. Plaza Victoria l LCCN2017656795.jpg',
     vuosi: '1890',
     lahde: 'Photoglob Co., Library of Congress (PD)',
+    lyhyt: 'Plaza Victoria, nykyinen Plaza de Mayo, Buenos Airesissa vuonna 1890.',
     selite: 'Plaza Victoria eli nykyinen Plaza de Mayo käsinväritettynä '
       + 'photochrom-vedoksena: suihkulähde ja ratsastajapatsas paikoillaan, '
       + 'aukion laidalla vielä matalia kaarikäytäväisiä taloja. Vedokset '
@@ -245,6 +265,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Feria de San Telmo, Buenos Aires.jpg',
         vuosi: '2005',
         lahde: 'Alexandre Campolina, Commons (CC BY 3.0)',
+        lyhyt: 'Sunnuntaitori San Telmon mukulakivikadulla Buenos Airesissa vuonna 2005.',
         selite: 'Sunnuntaitori San Telmon mukulakivikadulla; valkoisissa '
           + 'teltoissa myydään vanhoja käyttöesineitä ja huonekaluja. San '
           + 'Telmo oli 1800-luvulla varakkaiden kortteli, kunnes keltakuume '
@@ -255,6 +276,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'San Telmo Plaza Dorrego.JPG',
         vuosi: '2008',
         lahde: 'Helge Høifødt, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Tangoa Plaza Dorregolla Buenos Airesissa vuonna 2008.',
         selite: 'Tangoa Plaza Dorregolla sunnuntai-iltapäivänä. Sama aukio on San '
           + 'Telmon torin keskus, ja tanssijat ottavat sen käyttöönsä kojujen '
           + 'välissä. Tango syntyi 1800-luvun lopun Buenos Airesissa '
@@ -264,6 +286,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: '2018-10-19 La Boca, Buenos Aires, Argentina (Martin Rulsch) 10.jpg',
         vuosi: '2018',
         lahde: 'DerHexer, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Caminito La Bocan kaupunginosassa Buenos Airesissa vuonna 2018.',
         selite: 'Caminito La Bocan kaupunginosassa. Talojen seinät on maalattu '
           + 'isoina värikenttinä, ja kujalla myydään taidetta ja '
           + 'matkamuistoja. La Boca kasvoi Riachuelo-joen suulle satamatyön '
@@ -283,6 +306,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Inauguração da base de Mato Grosso com a presença do ministro da Aeronáutica, em Campo Grande..tif',
     vuosi: '1945',
     lahde: 'Arquivo Nacional (Brasilia), Commons (PD)',
+    lyhyt: 'Campo Granden lentotukikohdan vihkiäiset Brasiliassa 19.4.1945.',
     selite: 'Campo Granden lentotukikohdan vihkiäiset 19. huhtikuuta 1945. '
       + 'Nurmikentälle on aseteltu riviin kymmenkunta konetta, kaksitasoja '
       + 'ja yksitasoja sekaisin, ja niiden takana seisoo sotilasosasto '
@@ -292,6 +316,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Feira Central de Campo Grande, dezembro de 2022 (1).jpg',
         vuosi: '2022',
         lahde: 'Fronteira, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Feira Central joulukuisena iltana Campo Grandessa vuonna 2022.',
         selite: 'Feira Central joulukuisena iltana. Kojukäytävän yllä on '
           + 'kangaskatos ja valoketjut, myyntipöydillä taimia ja ruokaa, ja '
           + 'tolpassa iso punainen joulurusetti. Tori on auki myöhään iltaan, '
@@ -301,6 +326,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Sobá.jpg',
         vuosi: '2018',
         lahde: 'Flávio André / MTur Destinos, Commons (CC BY 2.0)',
+        lyhyt: 'Sobáa, Campo Granden okinawalaistaustaista nuudeliliemiruokaa, vuonna 2018.',
         selite: 'Kolme kulhoa sobáa: nuudeliliemi, jossa on paahdettua '
           + 'naudanlihaa, suikaloitua munakasta ja vihreää sipulia. Ruoka '
           + 'tuli Campo Grandeen Okinawalta muuttaneiden siirtolaisten mukana '
@@ -310,6 +336,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Estação Ferroviária de Campo Grande.jpg',
         vuosi: '2018',
         lahde: 'Flávio André / MTur Destinos, Commons (CC BY 2.0)',
+        lyhyt: 'Campo Granden rautatieaseman laituri iltahämärässä vuonna 2018.',
         selite: 'Rautatieaseman laituri iltahämärissä. Kyltissä lukee vaihtoasema '
           + 'Ponta Porãn haaralle. Rata teki Campo Grandesta solmukohdan '
           + '1910-luvulla, mutta matkustajaliikenne on loppunut ja kiskojen '
@@ -331,6 +358,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: '00 2082 Cape Horn - Chile.jpg',
         vuosi: '2005',
         lahde: 'W. Bulach, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Kap Horn, Etelä-Amerikan eteläisin kärki, vuonna 2005.',
         selite: 'Kap Horn, Etelä-Amerikan eteläisin kärki. Varsinainen niemi on '
           + '424 metriä korkea basalttikallio, ja noin 240 metrin korkeudella '
           + 'olevalla tasanteella on majakka asuinrakennuksineen, kappeli ja '
@@ -340,6 +368,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Horn albatros.JPG',
         vuosi: '2006',
         lahde: 'Rémi Jouan, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Kap Hornin caphornier-merimiesten muistomerkki vuonna 2006.',
         selite: 'Kap Hornin muistomerkki, joka on omistettu kapinkiertäjille eli '
           + 'caphornier-merimiehille. Teräslevyistä leikattu muoto esittää '
           + 'albatrossia, ja se on pystytetty niiden muistoksi, jotka jäivät '
@@ -349,6 +378,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Cape Horn, Chile (6315052275).jpg',
         vuosi: '2011',
         lahde: 'Liam Quinn, Commons (CC BY-SA 2.0)',
+        lyhyt: 'Mustakulmaalbatrossi liitää Kap Hornin edustalla vuonna 2011.',
         selite: 'Mustakulmaalbatrossi liitämässä Kap Hornin edustalla. Laji '
           + 'viettää suurimman osan elämästään avomerellä ja tulee maalle '
           + 'vain pesimään; merimiehet ovat pitäneet sitä näiden vesien '
@@ -368,6 +398,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Panoramic view of Caracas, Venezuela 1900 restored version.jpg',
     vuosi: 'noin 1900',
     lahde: 'Library of Congress, Commons (CC0)',
+    lyhyt: 'Caracas El Calvarion kukkulalta kuvattuna noin vuonna 1900.',
     selite: 'Caracas El Calvarion kukkulalta kuvattuna. Oikealla on Lourdesin '
       + 'Neitsyen kappeli, alhaalla matalia tiilikattoisia kortteleita ja '
       + 'takana Ávila-vuori, joka erottaa kaupungin merestä. Kaupunki mahtui '
@@ -377,6 +408,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Caracas Metro 1.jpg',
         vuosi: '2013',
         lahde: 'Wilfredor, Commons (CC0)',
+        lyhyt: 'Plaza Venezuelan metroasema Caracasissa ruuhka-aikaan vuonna 2013.',
         selite: 'Plaza Venezuelan metroasema ruuhka-aikaan. Kyltti opastaa '
           + 'linjalle 3 ja suuntaan El Valle. Metro avattiin 1983, ja se '
           + 'kulkee laakson suunnassa kuten kaupunkikin: kapea laakso '
@@ -386,6 +418,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Teleferico waraira repano caracas.JPG',
         vuosi: '2007',
         lahde: 'Adryan Amaya, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Köysirata Waraira Repanon kansallispuistoon Caracasin yllä vuonna 2007.',
         selite: 'Köysirata nousee kaupungin yläpuolelle Waraira Repanon eli '
           + 'Ávilan kansallispuistoon. Vuorenrinne on jätetty rakentamatta, '
           + 'ja huipulla on selvästi viileämpää kuin laaksossa parin '
@@ -395,6 +428,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Plaza Bolivar de Caracas en la celebracion del Bicentenario.JPG',
         vuosi: '2011',
         lahde: 'Javiermartinez76, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Plaza Bolívar Caracasissa itsenäisyyden 200-vuotisjuhlan aikaan 2011.',
         selite: 'Plaza Bolívar itsenäisyyden 200-vuotisjuhlan aikaan. Aukio on '
           + 'kaupungin alkuperäisen ruutukaavan keskiruutu vuodelta 1567, ja '
           + 'sen laidoilla ovat katedraali, arkkipiispan palatsi ja '
@@ -414,6 +448,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Gezicht op een plein in Cayenne, Frans Guyana Public Square, Cayenne (titel op object), RP-F-2001-7-959-2.jpg',
     vuosi: '1880-luvun loppu',
     lahde: 'W. B. Tyler / Rijksmuseum, Commons (CC0)',
+    lyhyt: 'Aukio Cayennessa 1880-luvun lopulla.',
     selite: 'Aukio Cayennessa 1880-luvun lopulla: palmurivi, matalia '
       + 'puutaloja ja yksinäinen kulkija. Painolaatta on kirjasta, jossa '
       + 'Lick-observatorion tutkijat raportoivat joulukuun 1889 '
@@ -424,6 +459,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'French Guiana Cayenne place du Coq magasin.jpg',
         vuosi: '2013',
         lahde: 'Cayambe, Commons (CC BY-SA 3.0 lu)',
+        lyhyt: 'Kauppa Place du Coq’n laidalla Cayennessa vuonna 2013.',
         selite: 'Kauppa Place du Coq\'n laidalla Cayennessa. Ranskan Guayana ei '
           + 'ole siirtomaa vaan Ranskan departementti ja osa Euroopan '
           + 'unionia, joten kaupassa maksetaan euroilla.',
@@ -432,6 +468,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Cayenne, Französisch Guyana (11844039733).jpg',
         vuosi: '2014',
         lahde: 'M M, Commons (CC BY-SA 2.0)',
+        lyhyt: 'Papaijoita myytävänä Cayennessa vuonna 2014.',
         selite: 'Papaijoita myytävänä Cayennessa. Kaupungin nimi on kulkeutunut '
           + 'ympäri maailmaa cayennepippurin mukana, vaikka torilla myydään '
           + 'ennen muuta trooppisia hedelmiä.',
@@ -440,6 +477,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Cayenne - Site pénitencier - Depot 003.jpg',
         vuosi: '2018',
         lahde: 'Ayshka Sene, Sophie Fuggle & Claire Reddleman, Commons (CC BY 4.0)',
+        lyhyt: 'Ranskan Guayanan entinen rangaistussiirtola Cayennessa vuonna 2018.',
         selite: 'Entisen rangaistussiirtolan varikkoalue keskellä Cayennea, aidan '
           + 'ja piikkilangan takana. Ranska kuljetti tuomittuja Guayanaan '
           + '1850-luvulta 1930-luvulle, ja leirien rakennuksia seisoo yhä '
@@ -459,6 +497,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Falklander-1936.jpg',
     vuosi: 'noin 1936',
     lahde: 'Tuntematon kuvaaja, Commons (PD)',
+    lyhyt: 'Falklandilainen W. E. Spencer ratsailla noin vuonna 1936.',
     selite: 'Falklandilainen W. E. Spencer ratsailla noin vuonna 1936. Saarten '
       + 'elinkeino oli tuolloin lammastalous, ja tiettömillä laidunmailla '
       + 'pitkät matkat taitettiin hevosen selässä.',
@@ -467,6 +506,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Houses possibly painted when paint ship capsized starting tradition of colorful roofs Stanley Falkland Islands.jpg',
         vuosi: '2019',
         lahde: 'amanderson2, Commons (CC BY 2.0)',
+        lyhyt: 'Stanleyn kirkkaanvärisiä peltikattoja Falklandinsaarilla vuonna 2019.',
         selite: 'Stanleyn asuintaloja, joiden peltikatot on maalattu kirkkain '
           + 'värein. Värikkäät katot ovat pikkukaupungin tunnetuin piirre, ja '
           + 'niiden alkuperästä kerrotaan saarilla useampikin selitys.',
@@ -475,6 +515,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Fish and chips IMG 3689a Stanley.jpg',
         vuosi: '2014',
         lahde: 'Christof46, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Fish and chips stanleylaisessa pubissa Falklandinsaarilla vuonna 2014.',
         selite: 'Fish and chips stanleylaisessa pubissa. Falklandinsaaret ovat '
           + 'Britannian merentakainen alue, ja brittiläinen arki näkyy '
           + 'saarilla ruoasta pubeihin ja vasemmanpuoleiseen liikenteeseen.',
@@ -483,6 +524,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Stanley (Falkland Islands) - Wrack der Jhelum.jpg',
         vuosi: '2010',
         lahde: 'HaSt, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Jhelum-purjelaivan hylky Stanleyn rannassa Falklandinsaarilla vuonna 2010.',
         selite: 'Jhelum-purjelaivan hylky Stanleyn rannassa. Alus jäi satamaan '
           + '1870-luvulla eikä siitä enää lähtenyt; Stanley oli '
           + 'purjelaivakaudella paikka, jonne Kap Hornin myrskyissä '
@@ -502,6 +544,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Preparing for the trail LCCN99472325.jpg',
     vuosi: '1903',
     lahde: 'R. H. Beck, Library of Congress (PD)',
+    lyhyt: 'Keräysretkikunnan miehiä Galápagossaarilla vuonna 1903.',
     selite: 'Keräysretkikunnan miehiä työssä Galápagossaarilla vuonna 1903: '
       + 'maassa on jättiläiskilpikonnien kilpiä, ja näytteitä valmistellaan '
       + 'kuljetusta varten. Retkikunnat keräsivät saarilta eläinnäytteitä '
@@ -511,6 +554,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'PtoAyoraMercado.jpg',
         vuosi: '2018',
         lahde: 'Torbenbrinker, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Puerto Ayoran tori Santa Cruzin saarella Galápagossaarilla vuonna 2018.',
         selite: 'Puerto Ayoran tori Santa Cruzin saarella. Kaali, banaani, sipuli '
           + 'ja munat myydään muovilaareista ja pahvilaatikoista. Osa '
           + 'tuotteista kasvatetaan saaren kosteammalla ylängöllä, osa '
@@ -520,6 +564,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: '(Zalophus wollebaeki) main water taxi dock at Puerto Ayora, three Galápagos Sea Lions.JPG',
         vuosi: '2015',
         lahde: 'David Adam Kess, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Galápagosinmerileijonia Puerto Ayoran laiturilla vuonna 2015.',
         selite: 'Kolme galápagosinmerileijonaa makaa Puerto Ayoran '
           + 'vesitaksilaiturilla. Laituri on saaren vilkkain kohta, mutta '
           + 'eläimet eivät väisty: saarten lajit ovat suojeltuja eivätkä ole '
@@ -529,6 +574,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Piquero patiazul (Sula nebouxii), isla Lobos, islas Galápagos, Ecuador, 2015-07-25, DD 42.JPG',
         vuosi: '2015',
         lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Sinijalkasuulapari kosiomenoissa Lobosin saarella Galápagossaarilla 2015.',
         selite: 'Sinijalkasuulapari kosiomenoissa Lobosin saarella. Koiras '
           + 'nostelee jalkojaan vuoron perään naaraan edessä. Jalkojen '
           + 'sinisen sävy vaihtelee ravinnon mukaan, ja tutkijoiden mukaan se '
@@ -547,6 +593,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Salto Floriano e Garganta do Inferno, na fronteira Brasil-Argentina.jpg',
     vuosi: '1929–1930',
     lahde: 'B. Rondon, Arquivo Nacional (PD)',
+    lyhyt: 'Salto Florianon putoukset ja Garganta do Inferno Iguazúlla 1929–1930.',
     selite: 'Salto Florianon putoukset ja Garganta do Inferno panoraamavedoksena. '
       + 'Kuva on Brasilian sotaministeriön rajakomission aineistoa: putouksia '
       + 'mitattiin ja kuvattiin, koska ne merkitsevät valtakunnanrajaa '
@@ -556,6 +603,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'IGUACU FALLS AND CATWALK, BRAZIL.jpg',
         vuosi: '2009',
         lahde: 'Jerrye & Roy Klotz MD, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Kävelysilta Iguazún putousten keskelle Paholaisen kurkkua kohti 2009.',
         selite: 'Kävelysilta vie keskelle putousryhmää kohti Paholaisen kurkkua. '
           + 'Sillalla on jatkuva vesisumu, joka kastelee kulkijat ja kamerat '
           + 'muutamassa minuutissa.',
@@ -564,6 +612,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Parque Nacional do Iguaçú - Iguaçu National Park - Quati - South American Coati (ring-tailed coati - Nasua nasua) (14116265571).jpg',
         vuosi: '2013',
         lahde: 'Deni Williams, Commons (CC BY 2.0)',
+        lyhyt: 'Nenäkarhu Iguazún kansallispuiston polulla vuonna 2013.',
         selite: 'Nenäkarhu eli quati kansallispuiston polulla. Laji on tottunut '
           + 'kävijöihin ja etsii ruokaa roskiksista ja repuista, minkä vuoksi '
           + 'puistossa varoitetaan ruokkimasta niitä.',
@@ -572,6 +621,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Boat tour Foz de Iguaçu 64 Nov 2005.jpg',
         vuosi: '2005',
         lahde: 'Mario Roberto Durán Ortiz, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Iguaçu-joen putoukset Brasilian ja Argentiinan rajalla vuonna 2005.',
         selite: 'Putoukset Iguaçu-joelta nähtynä. Veneet vievät matkustajia '
           + 'putousten juurelle asti; joki muodostaa tässä kohtaa Brasilian '
           + 'ja Argentiinan rajan.',
@@ -589,6 +639,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'PERU. SCENES IN IQUITOS LCCN2016864106.jpg',
     vuosi: '1912',
     lahde: 'Harris & Ewing, Library of Congress (PD)',
+    lyhyt: 'Iquitosin The Booth Pier -laituri Perussa kumibuumin aikaan 1912.',
     selite: 'Iquitosin laituri vuonna 1912; kuvan alareunassa lukee The '
       + 'Booth Pier. Höyrylaivoja on kiinni kylki kyljessä ja laiturin '
       + 'päässä nosturi. Kaupunki eli kumibuumista, ja merikelpoiset '
@@ -598,6 +649,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Belen, Iquitos (11473478223).jpg',
         vuosi: '2013',
         lahde: 'M M, Commons (CC BY-SA 2.0)',
+        lyhyt: 'Iquitosin Belénin kortteli sateen jälkeen vuonna 2013.',
         selite: 'Belénin kortteli sateen jälkeen. Mototaksit eli moottoripyörän '
           + 'ja rikšan yhdistelmät ovat kaupungin pääasiallinen kulkuneuvo, '
           + 'ja kadun molemmin puolin on peltikatteisia kojuja.',
@@ -606,6 +658,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Iquitos-Plaza de Armas-1.JPG',
         vuosi: '2015',
         lahde: 'Maurice Chédel, Commons (CC BY 3.0)',
+        lyhyt: 'Iquitosin pääaukio ja Casa de Fierro, rautatalo, vuonna 2015.',
         selite: 'Iquitosin pääaukio, oikealla Casa de Fierro eli rautatalo. Sen '
           + 'valurautaosat tuotiin laivalla Euroopasta kumikaupan aikaan, '
           + 'jolloin kaupungilla oli varaa tilata rakennusaineensa meren '
@@ -615,6 +668,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Paiche en Belen.jpg',
         vuosi: '2006',
         lahde: 'Jorge Mori, Commons (PD)',
+        lyhyt: 'Suolattua paichea myynnissä Iquitosin Belénin torilla vuonna 2006.',
         selite: 'Suolattua paichea myynnissä Belénin torilla. Paiche eli arapaima '
           + 'on Amazonin suurimpia kaloja. Suolaus ja kuivaus pitävät saaliin '
           + 'syömäkelpoisena ilman kylmäketjua.',
@@ -633,6 +687,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'João Pessoa, Paraíba circa 1903.jpg',
     vuosi: '1903',
     lahde: 'Virgílio Cardoso de Oliveira, A Patria Brazileira, Commons (PD)',
+    lyhyt: 'Parahyban, nykyisen João Pessoan, kaupunki jokirannasta 1903.',
     selite: 'Parahyban kaupunki jokirannasta katsottuna, kuva kirjasta vuodelta '
       + '1903. Rannassa on höyrylaiva ja pitkä varastorakennus; kaupunki '
       + 'kasvoi Paraíbajoen varteen satamana ja sai nykyisen nimensä João '
@@ -642,6 +697,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Vista do Centro Histórico de João Pessoa PB BR.jpg',
         vuosi: '2017',
         lahde: 'Rogerio121402, Commons (CC BY-SA 4.0)',
+        lyhyt: 'João Pessoan vanhakaupunki Paraíbajoen rannalla illansuussa 2017.',
         selite: 'João Pessoan vanhaakaupunkia illansuussa, takana Paraíbajoki ja '
           + 'sen mangrovesaaret. Kaupunki perustettiin 1585 juuri tähän, joen '
           + 'ja meren väliin, ja se on yksi Brasilian vanhimmista.',
@@ -650,6 +706,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Centro Cultural São Francisco JP PB.jpg',
         vuosi: '2019',
         lahde: 'Rogerio121402, Commons (CC BY-SA 4.0)',
+        lyhyt: 'São Franciscon kirkko- ja luostarikokonaisuus João Pessoassa vuonna 2019.',
         selite: 'São Franciscon kirkko- ja luostarikokonaisuus João Pessoassa. '
           + 'Etualalla on kivinen ristinjalusta ja taustalla laatoitettu '
           + 'kellotorni; rakentaminen alkoi 1500-luvun lopulla ja jatkui '
@@ -660,6 +717,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Apr2024. Cabo Branco Lighthouse aka Farol do Cabo Branco, João Pessoa, state of Paraíba, Brazil. 03.jpg',
         vuosi: '2024',
         lahde: 'Ridiculopathy, Commons (CC0)',
+        lyhyt: 'Cabo Brancon majakka João Pessoassa, lähellä Amerikan itäisintä kärkeä, 2024.',
         selite: 'Cabo Brancon majakka João Pessoassa. Reilun puolen kilometrin '
           + 'päässä etelään on Ponta do Seixas, koko Amerikan mantereen '
           + 'itäisin kärki — aurinko nousee siellä ennen muuta maanosaa.',
@@ -678,6 +736,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Lima. The Rimac Bridge LCCN2006679716.jpg',
     vuosi: '1868',
     lahde: 'Courret Hermanos, Library of Congress (PD)',
+    lyhyt: 'Lima korkealta kuvattuna Puente de Piedran holveineen vuonna 1868.',
     selite: 'Lima korkealta kuvattuna vuonna 1868: Puente de Piedran '
       + 'holvit, Rímac-joen uoma ja takana paljas San Cristóbalin kukkula. '
       + 'Kaupunki oli tuolloin matalaa, tasakattoista kortteliverkkoa. '
@@ -687,6 +746,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Lunchtime ceviche at the Mercado Central.jpg',
         vuosi: '2018',
         lahde: 'Bex Walton, Commons (CC BY 2.0)',
+        lyhyt: 'Cevichetiski Liman keskustorilla vuonna 2018.',
         selite: 'Cevichetiski Limán keskustorilla. Ceviche on raakaa kalaa, joka '
           + 'kypsyy limemehun hapossa ja tarjotaan sipulin, chilin ja '
           + 'keitetyn maissin kanssa. Perussa se syödään perinteisesti '
@@ -696,6 +756,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Escolta presidencial, Plaza de Armas, Lima, Perú, 2015-07-28, DD 40.JPG',
         vuosi: '2015',
         lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Presidentin ratsuväkisaattue Liman Plaza de Armasilla itsenäisyyspäivänä 2015.',
         selite: 'Presidentin ratsuväkisaattue Plaza de Armasilla '
           + 'itsenäisyyspäivänä 28. heinäkuuta. Vartiosto kuuluu Mariscal '
           + 'Domingo Nieton ratsuväkirykmenttiin ja esiintyy hallituspalatsin '
@@ -705,6 +766,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Cerro de San Cristóbal, Lima, Perú, 2015-07-28, DD 113.JPG',
         vuosi: '2015',
         lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+        lyhyt: 'San Cristóbalin kukkula Limassa nykyään taloja täynnä vuonna 2015.',
         selite: 'San Cristóbalin kukkula nykyään. Sama rinne, joka vuoden 1868 '
           + 'kuvassa on paljas, on nyt katettu taloilla laelle asti. '
           + 'Korttelit syntyivät maaltamuuton myötä, ja talot on rakennettu '
@@ -723,6 +785,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Macapá 1908.jpg',
     vuosi: '1908',
     lahde: 'Wikimedia Commons (PD)',
+    lyhyt: 'Macapá, São Josén kirkkoineen, Brasilian Amazonin suulla vuonna 1908.',
     selite: 'Macapá vuonna 1908: São Josén kirkko aukion laidalla, matalia '
       + 'tiilikattoisia taloja ja yksi katulyhty. Kirkko ja kaupungin '
       + 'linnoitus rakennettiin 1700-luvun jälkipuoliskolla, kun Portugali '
@@ -732,6 +795,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Fortaleza de São José de Macapá.JPG',
         vuosi: '2011',
         lahde: 'Alécio Cezar, Commons (CC BY-SA 4.0)',
+        lyhyt: 'São Josén linnoitus Macapássa, Portugalin 1700-luvun rakennelma, 2011.',
         selite: 'São Josén linnoitus Macapássa. Portugali aloitti sen '
           + 'rakentamisen vuonna 1764 Amazonin pohjoisrannalle, ja '
           + 'tähtimäinen pohjakaava oli aikansa eurooppalaista '
@@ -741,6 +805,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Marco Zero do Equador, Macapá AP.jpg',
         vuosi: '2018',
         lahde: 'Márcia do Carmo / MTur Destinos, Commons (PD)',
+        lyhyt: 'Päiväntasaajan merkki Macapán eteläreunalla vuonna 2018.',
         selite: 'Päiväntasaajan merkki Macapán eteläreunalla. Viiva kulkee '
           + 'kaupungin läpi, joten Macapá on yhtä aikaa pohjoisella ja '
           + 'eteläisellä pallonpuoliskolla; monumentti valmistui 1987.',
@@ -749,6 +814,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Orla de Macapá 01.jpg',
         vuosi: '2013',
         lahde: 'Amir.sebe, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Amazonjoki Macapán rantabulevardin kohdalla vuonna 2013.',
         selite: 'Amazonjoki Macapán rantabulevardin kohdalla. Joki on täällä niin '
           + 'leveä, ettei vastarantaa erota, ja meren vuorovesi nostaa ja '
           + 'laskee sen pintaa päivittäin.',
@@ -768,6 +834,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Machupicchu hb10.jpg',
     vuosi: '1912',
     lahde: 'Hiram Bingham, National Geographic 1913 (PD)',
+    lyhyt: 'Machu Picchu vuonna 1912, kun Hiram Binghamin retkikunta oli raivannut rinteen.',
     selite: 'Machu Picchu vuonna 1912, kun Hiram Binghamin retkikunta oli '
       + 'raivannut rinteen kasvillisuudesta. Takana kohoaa Huayna Picchu. '
       + 'Vuotta aiemmin paikka oli lähes kokonaan viidakon peitossa, ja '
@@ -777,6 +844,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Machu Picchu, Perú, 2015-07-30, DD 51.JPG',
         vuosi: '2015',
         lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Machu Picchun laastittomia kivimuureja ja pengerryksiä vuonna 2015.',
         selite: 'Muureja ja pengerryksiä läheltä. Kivet on hakattu sopimaan '
           + 'toisiinsa ilman laastia, ja terassien tukimuurit pitävät jyrkän '
           + 'rinteen paikallaan sadekaudella.',
@@ -785,6 +853,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Llamas on Machu Picchu Peru.jpg',
         vuosi: '2012',
         lahde: 'Thomas Quine, Commons (CC BY 2.0)',
+        lyhyt: 'Laamoja Machu Picchun pengerryksillä vuonna 2012.',
         selite: 'Laamoja Machu Picchun pengerryksillä. Eläimet liikkuvat alueella '
           + 'vapaasti. Terasseja viljeltiin vielä muutama vuosikymmen sitten, '
           + 'ja nyt niillä kasvaa nurmi.',
@@ -793,6 +862,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Machu Picchu, Perú, 2015-07-30, DD 47.JPG',
         vuosi: '2015',
         lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Machu Picchun 1400-luvun asuinrakennusten jäännöksiä vuonna 2015.',
         selite: 'Asuinrakennusten jäännöksiä. Machu Picchu rakennettiin '
           + '1400-luvulla ja hylättiin noin sata vuotta myöhemmin; katot '
           + 'olivat olkea, joten jäljellä ovat vain kiviseinät ja oviaukot.',
@@ -810,6 +880,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Chegada do navio no porto de Manaus 1902Arquivo, César e Cia.Coleção, Jorge Herrán - panoramio.jpg',
     vuosi: '1902',
     lahde: 'César e Cia. / Jorge Herránin kokoelma, Commons (PD)',
+    lyhyt: 'Laivan saapuminen Manausin satamaan kumibuumin aikaan vuonna 1902.',
     selite: 'Laivan saapuminen Manausin satamaan vuonna 1902. Puoli kaupunkia on '
       + 'soutanut vastaan: veneet ovat täynnä väkeä olkihatuissa ja valkeissa '
       + 'puvuissa, ja rantamuurilla seisoo yleisöä. Kuva on kumibuumin '
@@ -819,6 +890,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Mercado Municipal Adolpho Lisboa, Manaus, Brazil 03.jpg',
         vuosi: '2024',
         lahde: 'Ridiculopathy, Commons (CC0)',
+        lyhyt: 'Kuivattua ja suolattua kalaa Manausin kauppahallissa vuonna 2024.',
         selite: 'Kuivattua ja suolattua kalaa myynnissä Manausin kauppahallissa. '
           + 'Amazonilla kala säilötään yhä kuivaamalla levyiksi, koska '
           + 'kuumuudessa tuore saalis pilaantuu muutamassa tunnissa.',
@@ -827,6 +899,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Interior of Teatro Amazonas, Manaus, Brazil 01.jpg',
         vuosi: '2024',
         lahde: 'Ridiculopathy, Commons (CC0)',
+        lyhyt: 'Teatro Amazonasin katsomo Manausissa, 1896 valmistunut oopperatalo, 2024.',
         selite: 'Teatro Amazonasin katsomo: kolme kerrosta hevosenkengän '
           + 'muotoisia parvia, valurautaiset kaiteet ja punaverhoinen '
           + 'keskiaitio. Oopperatalo valmistui 1896 kumirahoilla, ja '
@@ -836,6 +909,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Porto flutuante com barcos de cargas e de passageiros - panoramio.jpg',
         vuosi: '2009',
         lahde: 'James Martins, Commons (CC BY 3.0)',
+        lyhyt: 'Jokialuksia Manausin kelluvassa satamassa vuonna 2009.',
         selite: 'Rahti- ja matkustajaveneitä Manausin kelluvassa satamassa. '
           + 'Amazonin varren kyliin ei useinkaan mene maantietä, joten '
           + 'ihmiset ja tavarat liikkuvat näillä monikerroksisilla '
@@ -855,6 +929,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Cerro de Montevideo desde la ciudad. Año 1865.jpg',
     vuosi: '1865',
     lahde: 'Tuntematon kuvaaja, Commons (PD)',
+    lyhyt: 'Montevideon vanhakaupunki ja lahti purjelaivoineen vuonna 1865.',
     selite: 'Näkymä vanhankaupungin kattojen yli lahdelle ja sen takana '
       + 'kohoavalle Cerrolle. Redillä on kymmeniä purjelaivoja ankkurissa. '
       + 'Juuri tämä kukkulan suojaama luonnonsatama oli syy siihen, että '
@@ -864,6 +939,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: '2016 Mercado del Puerto de Montevideo.jpg',
         vuosi: '2016',
         lahde: 'Felipe Restrepo Acosta, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Mercado del Puerto, Montevideon vanha markkinahalli, vuonna 2016.',
         selite: 'Mercado del Puerto sataman kupeessa. Kaari-ikkunaisen julkisivun '
           + 'takana on vanha rautarunkoinen markkinahalli, jonka kojut ovat '
           + 'vaihtuneet grilliravintoloiksi: sisällä palaa rivi hiilillä '
@@ -873,6 +949,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: '2016 Montevideo calle Piedras en la Ciudad Vieja.jpg',
         vuosi: '2016',
         lahde: 'Felipe Restrepo Acosta, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Calle Piedras Montevideon siirtomaa-ajan vanhassakaupungissa 2016.',
         selite: 'Calle Piedras vanhassakaupungissa. Kapea ruutukaavakatu on '
           + 'peräisin siirtomaa-ajalta, jolloin koko kaupunki mahtui muurien '
           + 'sisään niemen kärkeen.',
@@ -881,6 +958,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Terminal Cuenca del Plata.jpg',
         vuosi: '2014',
         lahde: 'Mevrob, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Konttinosturit Montevideon satamassa vuonna 2014.',
         selite: 'Konttinosturit lastaamassa laivaa Montevideon satamassa. Samassa '
           + 'lahdessa, jossa 1800-luvulla makasi purjelaivoja, käsitellään '
           + 'nykyään myös sisämaan naapurimaiden vientiä, joka tulee jokea '
@@ -899,6 +977,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Igreja de São Francisco de Assis (Ouro Preto), vista aérea.jpg',
     vuosi: '2026',
     lahde: 'Rafael Lemieszek, Commons (CC BY-SA 4.0)',
+    lyhyt: 'São Franciscon kirkko ja Ouro Preton kultakaupungin vanhakaupunki ylhäältä.',
     selite: 'São Franciscon kirkko ja Ouro Preton tiilikattoinen vanhakaupunki '
       + 'ylhäältä. Kaupunki kasvoi 1700-luvun kultaryntäyksestä ja oli '
       + 'aikanaan yksi Amerikan suurimpia; kirkon vuolukiviveistokset ovat '
@@ -908,6 +987,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Porto Alegre, Rio Grande do Sul circa 1903.jpg',
     vuosi: 'noin 1903',
     lahde: 'Virgílio Cardoso de Oliveira, teoksesta A Patria Brazileira (PD)',
+    lyhyt: 'Porto Alegre 1900-luvun alussa kaupungin yläpuolelta kuvattuna.',
     selite: 'Porto Alegre 1900-luvun alussa kaupungin yläpuolelta '
       + 'kuvattuna: matalia taloja, puistokaistoja, suuri kaksikerroksinen '
       + 'julkinen rakennus ja takana matalat kukkulat. Kuva on painettu '
@@ -917,6 +997,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Mercado Público de Porto Alegre, Centro, Porto Alegre, abril de 2023 (1).jpg',
         vuosi: '2023',
         lahde: 'Fronteira, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Porto Alegren keskustan julkinen markkinahalli vuonna 2023.',
         selite: 'Keskustan julkinen markkinahalli. Suojeltu rakennus seisoo '
           + 'historiallisessa keskustassa kaupungintalon vieressä, muutaman '
           + 'korttelin päässä Guaíban rannasta, jota myöten tavara aikanaan '
@@ -926,6 +1007,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Usina do Gasômetro em Porto Alegre.jpg',
         vuosi: '2021',
         lahde: 'Boaventuravinicius, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Gasômetron voimalaitos Porto Alegressa, nykyinen kulttuurikeskus, 2021.',
         selite: 'Gasômetron voimalaitos Guaíban rannalla. Rakennus on nykyään '
           + 'kulttuurikeskus, jossa on gallerioita, elokuvasali ja teatteri. '
           + 'Nimi on peräisin samalla paikalla toimineesta kaasulaitoksesta, '
@@ -935,6 +1017,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Chimarrão em cuia gajeta.jpg',
         vuosi: '2026',
         lahde: 'Nutsie04, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Chimarrão, kuuma mate kurpitsakupissa, Rio Grande do Sulissa.',
         selite: 'Chimarrão eli kuuma mate kurpitsakupissa metallipillin kanssa. '
           + 'Kuppi on koristeltu Rio Grande do Sulin vaakunalla. '
           + 'Etelä-Brasiliassa kuppi kiertää seurueessa niin, että jokainen '
@@ -954,6 +1037,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Vista Panorâmica de Porto Velho em 1910 - 1144, Acervo do Museu Paulista da USP.jpg',
     vuosi: '1910',
     lahde: 'Dana Merrill / Museu Paulista (USP), Commons (PD)',
+    lyhyt: 'Porto Velho radan rakennustyömaana Brasiliassa vuonna 1910.',
     selite: 'Porto Velho vuonna 1910: raivattua rantatörmää, puisia halleja, '
       + 'kiskoja ja pieni laituri Madeirajoen rannassa. Kuvan otti Dana '
       + 'Merrill, joka palkattiin dokumentoimaan Madeira–Mamoré-radan '
@@ -963,6 +1047,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Estrada de Ferro Madeira Mamoré EFMM- Porto Velho (52265421081).jpg',
         vuosi: '2021',
         lahde: 'Imagens de Rondônia, Commons (PD)',
+        lyhyt: 'Madeira–Mamoré-radan ratapiha Porto Velhossa vuonna 2021.',
         selite: 'Madeira–Mamoré-radan ratapiha Porto Velhossa. Kiskot, '
           + 'vaihdeviitta ja punainen veturitalli ovat yhä paikoillaan, mutta '
           + 'junia ei kulje; alue on nykyään museota ja puistoa.',
@@ -971,6 +1056,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Museu da Estrada de Ferro Madeira-Mamoré (4154586710).jpg',
         vuosi: '2009',
         lahde: 'Cleber Rech, Commons (CC BY 2.0)',
+        lyhyt: 'Hylätty Madeira–Mamoré-radan asema Porto Velhon lähellä vuonna 2009.',
         selite: 'Yksi Madeira–Mamoré-radan vanhoista asemista, täysin hylättynä. '
           + 'Rata suljettiin 1972, ja suurin osa reilun 360 kilometrin '
           + 'linjasta on jäänyt metsän alle.',
@@ -979,6 +1065,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Porto Velho, Rondônia, Brasil (cropped).jpg',
         vuosi: '2018',
         lahde: 'Silva Júnior / MTur, Commons (CC0)',
+        lyhyt: 'Madeirajoen ylittävä silta Porto Velhossa vuonna 2018.',
         selite: 'Madeirajoen ylittävä silta Porto Velhossa. Madeira on Amazonin '
           + 'suurimpia sivujokia ja tuo Andeilta niin paljon lietettä, että '
           + 'vesi pysyy ruskeana ympäri vuoden. Nimi tarkoittaa portugaliksi '
@@ -999,6 +1086,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Puerto Montt (ca. 1912).jpg',
     vuosi: 'noin 1912',
     lahde: 'Bulletin of the Pan American Union, Commons (PD)',
+    lyhyt: 'Puerto Montt, saksalaissiirtolaisten 1853 perustama kaupunki, noin 1912.',
     selite: 'Puerto Montt noin vuonna 1912. Kaupunki perustettiin 1853 '
       + 'saksalaisten siirtolaisten asutuskeskukseksi Reloncavín lahden '
       + 'pohjukkaan, ja nimensä se sai Chilen silloiselta presidentiltä '
@@ -1008,6 +1096,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Angelmó 2014 f06 -entrada al mercado.jpg',
         vuosi: '2014',
         lahde: 'Rodrigo Fernández, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Angelmón kalatori Puerto Montissa vuonna 2014.',
         selite: 'Sisäänkäynti Angelmón torille. Angelmó on Puerto Montin '
           + 'satamakylä Tenglon salmen varrella, ja sen kojuista ostetaan '
           + 'kalaa, simpukoita ja merilevää.',
@@ -1016,6 +1105,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Choromytilus chorus - Choro zapato 03 Mercado Pto Montt 2013 04.jpg',
         vuosi: '2013',
         lahde: 'Rodrigo Fernández, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Choro zapato -simpukoita Puerto Montin torilla vuonna 2013.',
         selite: 'Choro zapato -simpukoita Puerto Montin torilla. Laji on '
           + 'Choromytilus chorus, ja lisänimi zapato eli kenkä viittaa kuoren '
           + 'kokoon.',
@@ -1024,6 +1114,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Chile - Puerto Montt 23 - Cochayuyo seaweed for sale (6837476714).jpg',
         vuosi: '2012',
         lahde: 'McKay Savage, Commons (CC BY 2.0)',
+        lyhyt: 'Cochayuyoa, kuivattua ruskolevää, Puerto Montin torilla vuonna 2012.',
         selite: 'Cochayuyoa myynnissä torilla. Cochayuyo on rantakallioilta '
           + 'korjattava ruskolevä, jota on syöty Chilen rannikolla kauan '
           + 'ennen espanjalaisten tuloa; se myydään kuivattuina nippuina.',
@@ -1042,6 +1133,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'General view of Punta Arenas.jpg',
     vuosi: '1912',
     lahde: 'Nevin O. Winter, Commons (PD)',
+    lyhyt: 'Punta Arenas, Magalhãesinsalmen laivakaupunki, vuonna 1912.',
     selite: 'Yleisnäkymä Punta Arenasiin vuonna 1912. Kaupunki eli lampaista ja '
       + 'Magalhãesinsalmen läpi kulkevasta laivaliikenteestä; Panaman kanavan '
       + 'valmistuminen 1914 vei salmelta suurimman osan matkustavista '
@@ -1051,6 +1143,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'CL-Punta Arenas hafen.jpg',
         vuosi: '2017',
         lahde: 'Balou46, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Punta Arenasin satamaterminaali Patagonian liikenteelle vuonna 2017.',
         selite: 'Punta Arenasin satamaterminaali. Satama palvelee nykyään '
           + 'Patagonian ja Etelämantereen liikennettä: kaupungista lähtevät '
           + 'sekä tutkimusasemien huoltoalukset että risteilijät.',
@@ -1059,6 +1152,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Punta Arenas, costanera 0808.jpg',
         vuosi: '2019',
         lahde: 'Draceane, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Punta Arenasin rantabulevardi Magalhãesinsalmen rannalla vuonna 2019.',
         selite: 'Punta Arenasin rantabulevardi Magalhãesinsalmen rannalla. Salmen '
           + 'toisella puolen on Tulimaan saari, ja tuuli käy tällä rannalla '
           + 'lähes yhtenään.',
@@ -1067,6 +1161,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Punta-arenas-sara-brown.jpg',
         vuosi: '2018',
         lahde: 'Parnikoza, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Sara Braunin palatsi Punta Arenasissa vuonna 2018.',
         selite: 'Sara Braunin hahmo hänen palatsinsa edustalla. Braun rikastui '
           + 'Patagonian lammastaloudesta, ja hänen rakennuttamansa palatsi '
           + 'pääaukion laidalla on kaupungin tunnetuimpia rakennuksia.',
@@ -1085,6 +1180,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Government Building and principal public square with cathedral at left, Quito, Ecuador LCCN90710775.jpg',
     vuosi: '1907',
     lahde: 'Underwood & Underwood, Library of Congress (PD)',
+    lyhyt: 'Quiton pääaukio kantajineen, stereokortin puolikkaana, vuonna 1907.',
     selite: 'Quiton pääaukio vuonna 1907: hallituspalatsin pylväikkö, '
       + 'katedraali ja aukiolla taakkojen kantajia sekä saviruukkua '
       + 'päälaellaan kantava kulkija. Kuva on stereokortin puolikas — '
@@ -1095,6 +1191,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Quito calle García Moreno.jpg',
         vuosi: '2010',
         lahde: 'Cayambe, Commons (CC BY-SA 3.0)',
+        lyhyt: 'García Morenon katu ja El Panecillon Neitsyt Quitossa vuonna 2010.',
         selite: 'García Morenon katu laskee vanhan keskustan halki, ja perällä El '
           + 'Panecillon kukkulalla seisoo Quiton Neitsyen patsas. Vanha '
           + 'keskusta kuuluu Unescon maailmanperintöluetteloon, ja siksi '
@@ -1104,6 +1201,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Iglesia de la Compañía de Jesus, Quito 01.jpg',
         vuosi: '2014',
         lahde: 'Bernard Gagnon, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Jesuiittakirkko La Compañían julkisivu Quitossa vuonna 2014.',
         selite: 'Jesuiittakirkon La Compañían julkisivun yksityiskohta. '
           + 'Kierrepylväät ja koristeet on veistetty vulkaanisesta kivestä '
           + 'paikallisissa työpajoissa, joiden tuotannosta käytetään '
@@ -1113,6 +1211,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Basílica del Voto Nacional, Quito (exterior) pic.ao1.jpg',
         vuosi: '2017',
         lahde: 'David Adam Kess, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Basílica del Voto Nacional Quitossa illalla vuonna 2017.',
         selite: 'Basílica del Voto Nacional illalla. Uusgoottilainen kirkko '
           + 'kohoaa vanhan keskustan yläpuolelle, ja sen torneihin voi '
           + 'kiivetä: ylhäältä näkyvät keskusta ja Pichincha-tulivuori.',
@@ -1131,6 +1230,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Copacabana, Acervo do Instituto Moreira Salles.jpg',
     vuosi: '1895',
     lahde: 'Marc Ferrez / Instituto Moreira Salles, Commons (PD)',
+    lyhyt: 'Copacabanan lahti Riossa lähes rakentamattomana vuonna 1895.',
     selite: 'Copacabanan lahti ylhäältä kuvattuna. Rannan takana on vain muutama '
       + 'rakennusrivi ja hiekkasärkkä, ja loppu on paljasta rinnettä. Marc '
       + 'Ferrez kuvasi Rion maisemat lasilevyille, ja tämä vedos on hänen '
@@ -1140,6 +1240,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Escadaria Selarón - Rio de Janeiro - 20240417062601.jpg',
         vuosi: '2024',
         lahde: 'Donatas Dabravolskas, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Selarónin laatoitetut portaat Rio de Janeirossa vuonna 2024.',
         selite: 'Selarónin portaat Lapan kaupunginosassa. Chileläinen Jorge '
           + 'Selarón alkoi laatoittaa talonsa edustan rappuja 1990-luvulla ja '
           + 'jatkoi työtä kuolemaansa asti; laattoja on lähetetty hänelle '
@@ -1149,6 +1250,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Scene at Feira De Sao Cristovao - Zona Norte - Rio de Janeiro - Brazil - 01 (17556944211).jpg',
         vuosi: '2015',
         lahde: 'Adam Jones, Commons (CC BY-SA 2.0)',
+        lyhyt: 'São Cristóvãon markkinat Rion pohjoisosassa vuonna 2015.',
         selite: 'São Cristóvãon markkinat Rion pohjoisosassa. Katetulla '
           + 'käytävällä myydään vaatteita, lääkeyrttejä ja kääretupakkaa. '
           + 'Halli on nimetty laulaja Luiz Gonzagan mukaan, ja se on Rioon '
@@ -1158,6 +1260,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Rocinha rio de janeiro panorama 2010.jpg',
         vuosi: '2010',
         lahde: 'chensiyuan, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Rocinha, Rion suurimpiin kuuluva favela, vuonna 2010.',
         selite: 'Rocinha, Brasilian suurimpiin kuuluva favela, peittää jyrkän '
           + 'rinteen Rion eteläosassa. Talot on rakennettu toistensa päälle '
           + 'ilman katusuunnitelmaa, ja kulku sisäosiin käy portaita ja kujia '
@@ -1177,6 +1280,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Scene of the story of Robinson Crusoe. Selkirk\'s Cave. Side view looking up the valley. "Crusoe\'s Quibedrada" LCCN2006687056.jpg',
     vuosi: '1874',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Selkirkin luola Robinson Crusoe -saarella Chilessä vuonna 1874.',
     selite: 'Laakso, jota vedoksen alkuperäinen kuvateksti kutsuu Selkirkin '
       + 'luolaksi, valokuvattuna vuonna 1874. Skotlantilainen merimies '
       + 'Alexander Selkirk jätettiin saarelle 1704 ja eli siellä yksin yli '
@@ -1186,6 +1290,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Isla Juan Fernandez- Langostas (Lobsters).jpg',
         vuosi: '2005',
         lahde: 'Serpentus, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Langustinkalastaja Juan Fernándezin saaristossa vuonna 2005.',
         selite: 'Kalastaja ja kaksi langustia Juan Fernándezin saaristossa. '
           + 'Langustinpyynti on saaren tärkein elinkeino, ja pyydettävä laji '
           + 'Jasus frontalis elää vain tämän saariryhmän vesissä.',
@@ -1194,6 +1299,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Maisons de pêcheurs de langoustes.jpg',
         vuosi: '2013',
         lahde: 'PatHen3333, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Langustinkalastajien puutaloja Robinson Crusoe -saarella vuonna 2013.',
         selite: 'Langustinkalastajien taloja, jotka on rakennettu pääosin puusta. '
           + 'Saaren ainoa kylä on Cumberlandinlahden rannalla, ja '
           + 'rakennustarpeet samoin kuin muu tavara tuodaan sinne laivalla '
@@ -1203,6 +1309,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Voie d\'évacuation en cas de tsunami.jpg',
         vuosi: '2013',
         lahde: 'PatHen3333, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Tsunamin pakoreitti Robinson Crusoe -saaren kylässä vuonna 2013.',
         selite: 'Tsunamin varalle merkitty pakoreitti. Kylä on rakennettu aivan '
           + 'meren tasalle lahden pohjukkaan, joten hälytyksen tullessa ainoa '
           + 'suunta on ylös rinnettä.',
@@ -1221,6 +1328,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Cabildo de Salta siglo XIX.jpg',
     vuosi: '1890-luku',
     lahde: 'Archivo General de la Nación (Argentiina), Commons (PD)',
+    lyhyt: 'Saltan cabildo, siirtomaa-ajan hallintorakennus, 1890-luvulla.',
     selite: 'Saltan cabildo 1800-luvun lopulla. Cabildo oli siirtomaa-ajan '
       + 'kaupunginhallinnon talo; Saltan cabildo on säilynyt pääaukion '
       + 'laidalla, ja kuva on Argentiinan kansallisarkiston harrastajakuvien '
@@ -1230,6 +1338,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'La Balcarce, ciudad de Salta.jpg',
         vuosi: '2012',
         lahde: 'jikatu, Commons (CC BY-SA 2.0)',
+        lyhyt: 'Calle Balcarce, Saltan ravintola- ja peñakortteli, vuonna 2012.',
         selite: 'Calle Balcarce Saltan keskustassa. Katu on kaupungin ravintola- '
           + 'ja peñakortteli: peña on paikka, jossa syödään ja kuunnellaan '
           + 'pohjoisen Argentiinan kansanmusiikkia.',
@@ -1238,6 +1347,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Télécabines.jpg',
         vuosi: '2012',
         lahde: 'Bachelot Pierre J-P, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Köysirata Cerro San Bernardolle Saltassa vuonna 2012.',
         selite: 'Köysiradan vaunuja ala-asemalla Saltassa. Rata nousee kaupungin '
           + 'yllä kohoavalle Cerro San Bernardolle — samalle huipulle, jolta '
           + 'Saltaa on kuvattu jo 1850-luvulla.',
@@ -1246,6 +1356,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Vendedor en el parque San Martín.JPG',
         vuosi: '2010',
         lahde: 'Fabianchie, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Kaupustelija San Martínin puistossa Saltassa vuonna 2010.',
         selite: 'Kaupustelija kärryineen San Martínin puistossa. Puisto on '
           + 'keskustan suurin viheralue, ja sen laidalta lähtee köysirata '
           + 'Cerro San Bernardolle.',
@@ -1264,6 +1375,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Salvador bahia panorama 1870.jpg',
     vuosi: '1870-luku',
     lahde: 'Guilherme Gaensly, Commons (PD)',
+    lyhyt: 'Salvador ylhäältä kuvattuna Brasiliassa noin 1870.',
     selite: 'Salvador noin 1870 ylhäältä kuvattuna: alakaupungin kattoja ja '
       + 'Kaikkien pyhien lahti täynnä purjelaivoja. Guilherme Gaensly '
       + 'kiersi Brasiliaa suurella kameralla ja myi vedoksia. Ylä- ja '
@@ -1273,6 +1385,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Baiana-acarajé-Salvador.jpg',
         vuosi: '2008',
         lahde: 'Rodrigues Pozzebom / Agência Brasil, Commons (CC BY 3.0 br)',
+        lyhyt: 'Acarajé-myyjä Anelita Conceição Viana Salvadorissa vuonna 2008.',
         selite: 'Acarajé-myyjä Anelita Conceição Viana Salvadorissa. Acarajé on '
           + 'lehmänpavusta muotoiltu ja palmuöljyssä paistettu leipänen, ja '
           + 'myyjien ammatti asuineen ja tapoineen on Brasiliassa suojeltua '
@@ -1282,6 +1395,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Largo do Pelourinho, Salvador 20150719-DSC05452.JPG',
         vuosi: '2015',
         lahde: 'Matti Blume, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Largo do Pelourinho Salvadorin vanhassakaupungissa vuonna 2015.',
         selite: 'Largo do Pelourinho Salvadorin vanhassakaupungissa. Nimi '
           + 'tarkoittaa häpeäpaalua: aukiolla rangaistiin orjuutettuja '
           + 'ihmisiä julkisesti. Talot kunnostettiin 1990-luvulta alkaen, ja '
@@ -1291,6 +1405,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Elevador Lacerda Salvador Bahia 2019-0359.jpg',
         vuosi: '2019',
         lahde: 'Paul R. Burley, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Lacerdan hissi Salvadorin ala- ja yläkaupungin välillä vuonna 2019.',
         selite: 'Lacerdan hissi yhdistää Salvadorin alakaupungin ylhäällä olevaan '
           + 'vanhaankaupunkiin. Ensimmäinen, vesivoimalla toimiva hissi '
           + 'avattiin 1873; nykyinen torni on vuodelta 1930, kuten sen '
@@ -1313,6 +1428,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Benthic microhabitats (10.7717-peerj.10531) Figure 4.png',
         vuosi: '2021',
         lahde: 'Matthias Gorny / Oceana, Commons (CC BY 4.0)',
+        lyhyt: 'Merenpohjaa San Ambrosion merensuojelualueella Chilessä vuonna 2021.',
         selite: 'Merenpohjaa Nazca-Desventuradasin merensuojelualueella, '
           + 'kuvattuna kauko-ohjattavalla sukellusrobotilla 176 ja 200 '
           + 'metrin syvyydessä. Karkealla hiekalla kasvaa merikyniä ja '
@@ -1323,6 +1439,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Nazca-Desventuradas Marine Park (10.7717-peerj.8279) Figure 5.png',
         vuosi: '2019',
         lahde: 'Matthias Gorny / Oceana, Commons (CC BY 4.0)',
+        lyhyt: 'Sukellusrobotin kuvia San Félixin ja San Ambrosion vesiltä vuonna 2019.',
         selite: 'Lisää sukellusrobotin kuvia samalta suojelualueelta. Juuri '
           + 'näiltä vedenalaisilta vuorilta löytyi kotilo, joka kuvattiin '
           + 'tieteelle uutena lajina vuonna 2019 — saaret ovat niin kaukana, '
@@ -1345,6 +1462,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: '20170803 Bolivia 0990 Santa Cruz sRGB (37270707024).jpg',
         vuosi: '2017',
         lahde: 'Dan Lundberg, Commons (CC BY-SA 2.0)',
+        lyhyt: 'Plaza 24 de Septiembre Santa Cruz de la Sierrassa vuonna 2017.',
         selite: 'Plaza 24 de Septiembre katedraalin kellotornista: palmuja, '
           + 'kukkiva vaaleanpunainen puu ja matalia tiilikattoisia taloja, '
           + 'joiden takaa nousevat tornitalot. Aukion nimi muistuttaa 24. '
@@ -1355,6 +1473,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Catedral Metropolitana Basílica Menor de San Lorenzo de Santa Cruz - Bolivia (53041053638).jpg',
         vuosi: '2023',
         lahde: 'Rômulo Gama Ferreira, Commons (CC BY 2.0)',
+        lyhyt: 'San Lorenzon katedraali Santa Cruz de la Sierrassa vuonna 2023.',
         selite: 'San Lorenzon katedraali aukion laidalla. Kirkko on kaupungin '
           + 'vanhimman keskustan kiintopiste, ja sen tornista aukeaa näkymä, '
           + 'josta muut aukion kuvat on otettu.',
@@ -1363,6 +1482,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Coche Motor Ferrostaal (FCOSA) 01.jpg',
         vuosi: '2010',
         lahde: 'jimcintosh, Commons (CC BY 2.0)',
+        lyhyt: 'Ferrocarril Orientalin moottorivaunu Santa Cruz de la Sierrassa vuonna 2010.',
         selite: 'Ferrocarril Orientalin moottorivaunu. Runko on saksalainen '
           + 'Ferrostaal-kiskobussi, mutta se on rakennettu uudelleen Santa '
           + 'Cruzin omissa korjaamoissa. Itäinen rataverkko ei ole koskaan '
@@ -1385,6 +1505,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Observando o encontro das águas (42070272564).jpg',
         vuosi: '2018',
         lahde: 'Wellington-stm, Commons (CC BY 2.0)',
+        lyhyt: 'Tapajósin ja Amazonin vesien raja Santarémin rannalla vuonna 2018.',
         selite: 'Nainen istuu Santarémin rantapenkillä ja katsoo jokea, jossa '
           + 'erottuu kaksi väriä. Tapajósin kirkas vesi ja Amazonin savinen '
           + 'vesi kulkevat rinnakkain pitkän matkan ennen kuin sekoittuvat.',
@@ -1393,6 +1514,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Orla de Santarém - Pará (Brasil).JPG',
         vuosi: '2015',
         lahde: 'Nayaniteixeira, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Jalohaikara Santarémin rannassa Brasiliassa vuonna 2015.',
         selite: 'Jalohaikara seisoo kiinnityspaalulla Santarémin rannassa. Amazon '
           + 'on kaupungin päätie: matkustajalaivat Belémiin ja Manausiin '
           + 'lähtevät samasta rannasta.',
@@ -1401,6 +1523,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Catedral Metropolitana de Santarém, Santarém, Pará, 2007.jpg',
         vuosi: '2007',
         lahde: 'Lopmed, Commons (PD)',
+        lyhyt: 'Santarémin katedraali Amazonin varrella vuonna 2007.',
         selite: 'Santarémin katedraali. Kaupunki kasvoi jesuiittojen '
           + 'lähetysaseman ympärille Tapajósin suulle 1600-luvulla, ja kirkko '
           + 'on yhä keskustan tunnistettavin rakennus.',
@@ -1419,6 +1542,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Largo do Carmo - São Luís - em 1908.jpg',
     vuosi: '1908',
     lahde: 'Gaudêncio Cunha, Álbum do Maranhão em 1908, Commons (PD)',
+    lyhyt: 'Largo do Carmo, nykyinen Praça João Lisboa, São Luísissa vuonna 1908.',
     selite: 'Largo do Carmo São Luísissa vuonna 1908: leikattuja puita, penkkejä, '
       + 'lyhtypylväitä ja etualalla raitiotien kiskot. Oikealla Carmon '
       + 'kirkko, jonka mukaan aukio oli nimetty; vuonna 1901 se sai uuden '
@@ -1428,6 +1552,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Mercado das Tulhas - 01.jpg',
         vuosi: '2019',
         lahde: 'Ajmcbarreto, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Mercado das Tulhas, São Luísin 1861 rakennettu kauppahalli, vuonna 2019.',
         selite: 'Mercado das Tulhas São Luísin vanhassakaupungissa. Kaarikäytävän '
           + 'yläpuolelle on hakattu vuosiluku 1861, ja halli on yhä '
           + 'kauppapaikka; nykyään kojuissa myydään enimmäkseen käsitöitä ja '
@@ -1437,6 +1562,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'BOI DA MAIOBA ARRASTÃO DA ILHA - SÃO LUÍS MA.jpg',
         vuosi: '2023',
         lahde: 'Clarycepb, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Boi da Maioba -ryhmä bumba meu boi -kulkueessa São Luísissa 2023.',
         selite: 'Boi da Maioba -ryhmä kulkueessa São Luísissa. Bumba meu boi on '
           + 'Maranhãon kesäkuun juhla, ja tämä ryhmä edustaa matraca-tyyliä: '
           + 'satojen puukapuloiden yhteinen kalke antaa kulkueelle rytmin.',
@@ -1445,6 +1571,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Azulejos azuis no Centro Histórico de São Luís.jpg',
         vuosi: '2024',
         lahde: 'Thuaia, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Portugalilaisia azulejo-laattoja São Luísin vanhassakaupungissa 2024.',
         selite: 'Sinivalkoisia azulejo-laattoja vanhankaupungin seinässä. Laatat '
           + 'tulivat aikoinaan Portugalista, ja niillä oli myös käytännön '
           + 'tehtävä: keraaminen pinta kestää kosteutta ja pitää seinän '
@@ -1465,6 +1592,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Militão Augusto de Azevedo - Rua Direita, 1862.jpg',
     vuosi: '1862',
     lahde: 'Militão Augusto de Azevedo, Biblioteca Guita e José Mindlin (PD)',
+    lyhyt: 'Rua Direita hiekkakatuna São Paulossa vuonna 1862.',
     selite: 'Rua Direita hiekkakatuna, laidoilla matalia siirtomaa-ajan taloja '
       + 'markiiseineen ja perällä kirkontorni. Militão Augusto de Azevedo '
       + 'kuvasi samat kadut uudelleen 1887 ja kokosi otokset '
@@ -1474,6 +1602,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Mercado Municipal São Paulo.jpg',
         vuosi: '2015',
         lahde: 'Celykzk, Commons (CC BY-SA 4.0)',
+        lyhyt: 'São Paulon Mercadão-markkinahallin sisätila vuonna 2015.',
         selite: 'Kaupungin markkinahallin sisätila. Holvikaton alla on '
           + 'lasimaalauksia ja niiden alla kojurivit. Hallia sanotaan '
           + 'Mercadãoksi, ja sen tunnetuin tuote on paksu mortadellaleipä.',
@@ -1482,6 +1611,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Liberdade of Sao Paulo.jpg',
         vuosi: '2019',
         lahde: 'Wilfredor, Commons (CC0)',
+        lyhyt: 'Liberdaden japanilaistaustainen kaupunginosa São Paulossa vuonna 2019.',
         selite: 'Liberdaden kaupunginosan pääkatu punaisine lyhtypylväineen '
           + 'ja juhlaviireineen. Alue kasvoi japanilaisten siirtolaisten '
           + 'ympärille 1900-luvun alusta, ja São Paulon osavaltiossa asuu '
@@ -1492,6 +1622,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Avenida Paulista aberta em Domingo.jpg',
         vuosi: '2017',
         lahde: 'Willemarcel, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Avenida Paulista suljettuna autoilta sunnuntaina São Paulossa 2017.',
         selite: 'Avenida Paulista sunnuntaina. Kaupungin vilkkain valtaväylä '
           + 'suljetaan viikoittain autoilta, ja tilalle tulevat pyöräilijät, '
           + 'kävelijät ja katukaupustelijat. Katu kulkee harjanteella, joka '
@@ -1510,6 +1641,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'N° 308. Lago Titicaca, Balsas de cañas, hechas por los naturales del pais.png',
     vuosi: '1900',
     lahde: 'Fernando Garreaud, albumi República Peruana (PD)',
+    lyhyt: 'Kaislaveneitä Titicacajärvellä vuonna 1900.',
     selite: 'Kaislaveneitä Titicacajärvellä vuonna 1900. Miehet seisovat keulassa '
       + 'ja työntävät venettä sauvomalla, ja tyyni vesi kahdentaa mastot. '
       + 'Veneet punotaan totora-kaislasta, jota kasvaa järven matalikoilla.',
@@ -1518,6 +1650,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Islas flotantes de los Uros, Lago Titicaca, Perú, 2015-08-01, DD 32.JPG',
         vuosi: '2015',
         lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Uros-kansan kelluva kaislasaari Titicacajärvellä vuonna 2015.',
         selite: 'Uros-kansan kelluva saari. Sekä alusta että majat tehdään '
           + 'totora-kaislasta. Pintaan on lisättävä uutta kaislaa jatkuvasti, '
           + 'koska alta se lahoaa veteen.',
@@ -1526,6 +1659,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Puno, puerto, 2023.jpg',
         vuosi: '2023',
         lahde: 'Draceane, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Punon satama Titicacajärven Perun-puoleisella rannalla vuonna 2023.',
         selite: 'Punon satama järven Perun-puoleisella rannalla. Laiturissa on '
           + 'matkustajaveneiden lisäksi ruoppaaja: väylä on pidettävä auki '
           + 'kaislikon läpi, jotta veneet pääsevät ulos järvelle.',
@@ -1534,6 +1668,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Dança na Ilha de Taquile.jpg',
         vuosi: '2022',
         lahde: 'NKost94, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Taquilen saaren asukkaita tanssimassa Titicacajärvellä vuonna 2022.',
         selite: 'Taquilen saaren asukkaita tanssimassa kylän aukiolla. Saari '
           + 'tunnetaan käsin kudotuista ja neulotuista tekstiileistä, ja '
           + 'tanssiasut on tehty itse.',
@@ -1551,6 +1686,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Harbor of Valparaiso, Chile LCCN2016821516.jpg',
     vuosi: '1910-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Valparaíson satama purjelaivakauden loppupuolella 1910-luvulla.',
     selite: 'Valparaíson satama lasilevynegatiiville kuvattuna. Satama oli '
       + 'purjelaivakaudella Etelä-Amerikan tärkeimpiä pysähdyspaikkoja Kap '
       + 'Hornin kiertäneille laivoille; Panaman kanavan avaaminen 1914 vei '
@@ -1560,6 +1696,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Ascensor El Peral, tipo funicular, año 1902, Valparaíso, Chile.jpg',
         vuosi: '2017',
         lahde: 'Carlos Teixidor Cadenas, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Ascensor El Peral, Valparaíson 1902 köysihissi, vuonna 2017.',
         selite: 'Ascensor El Peral, vuonna 1902 rakennettu köysihissi, joka '
           + 'nousee Cerro Alegren rinteeseen. Se on suojeltu historiallisena '
           + 'monumenttina ja kunnostettiin perusteellisesti vuonna 2016.',
@@ -1568,6 +1705,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Mercado Cardonal (40046532572).jpg',
         vuosi: '2018',
         lahde: 'Deensel, Commons (CC BY 2.0)',
+        lyhyt: 'Mercado Cardonal, Valparaíson ruokatori, vuonna 2018.',
         selite: 'Mercado Cardonal, Valparaíson suuri ruokatori. Halli seisoo '
           + 'kaupungin tasaisella osalla, jota kutsutaan nimellä el plan — '
           + 'kaikki muu kaupunki nousee sen takaa rinteille.',
@@ -1576,6 +1714,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Cerros de Valparaíso.jpg',
         vuosi: '2021',
         lahde: 'Cris.tbl, Commons (CC BY 4.0)',
+        lyhyt: 'Valparaíson rinnekaupunginosia, Unescon maailmanperintökohde, 2021.',
         selite: 'Valparaíson rinnekaupunginosia. Talot on rakennettu jyrkkään '
           + 'rinteeseen puusta ja aaltopellistä, ja tämä satamaa ympäröivä '
           + 'kukkulakaupunki on Unescon maailmanperintökohde.',
