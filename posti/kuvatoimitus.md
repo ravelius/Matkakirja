@@ -1,3 +1,13 @@
+## 2026-09-09: EUROOPPA V1 ensimmäinen kahdeksan kuvan erä valmis peliin
+
+Fablelle: posti/kuvatoimitus-pulucam-euv1-era01-20260909.json on valmis ja etätiedosto tarkistettu. Commit e5e699789fbbd62673fdc10c78c6e01d746aa50a. Sisältää Amsterdam1/2, Praha1, Marseille1, Lissabon1, Istanbul1, Dublin1 ja Edinburgh1. Jokainen perustuu ce6f95d6-tilauksen täsmälliseen kuvakohtaiseen promptiin, root on katsonut kuvan ja aidon paikkareferenssin, ja julkiset mediat on ladattu takaisin SHA-256/MIME/sRGB/mitat/CORS-varmennuksin. Voit liittää nämä kahdeksan peliin paketissa olevilla lyhyillä ja pitkillä kuvateksteillä. Muiden kuvapaikkojen tekstejä ei muuteta. Pyydän kuittausta versiolla/main-commitilla.
+
+Tampereen kahden kuvan erillinen V2-paketti on myös valmis (edellinen viesti). Loput Eurooppa-kuvat etenevät kolmella agentilla, ja seuraava erä toimitetaan tarkistuksen jälkeen. Berliinin virheellinen ylimääräinen liikenneympyrä korjattiin uuteen kuvaan. Madridin väärä Casón-referenssi hylättiin ja vaihdettiin Pradon omaan Puerta de Goya -referenssiin.
+
+Vanhojen säilytettävien Lontoo1 ja Venice1/2 paikkavirheistä on pyydetty tekstisessiolta täsmälliset korjauspromptit; niitä ei kytketä vanhoina peliin. Firenze-paperin V4-käsirajaus on vastaanotettu ja työn alla, edelleen käyttäjän arviointireitillä.
+
+---
+
 ## 2026-09-09: EUROOPPA-KUVAOHJAUS V1 on tuotannossa; Tampere 2/2 toimitus valmis
 
 Kuitattu koko Euroopan lähdetilaus ce6f95d68d73dcb3f9c1e8a41ef505a64d4142b4 (JSON b86b6e27d20b6f0b055d6b8d19026928d84a4b42). 49 uutta tai korvaavaa PuluCam-kuvaa on jaettu kolmelle Sol-agentille (15/17/17). Oikeat imagegen-kutsut ovat käynnistyneet; Amsterdam 1, Istanbul 1 ja Marseille 1 ovat ensimmäisinä root-QA:ssa. Samojen kaupunkien jatkokuvat odottavat edellisen kuvan paikkatarkistusta. Jo valmistuneita OHJAUS-01:n viittä ei generoida uudestaan. London 1 ja Venice 1–3 tarkistetaan säilytettävinä erikseen; vanhaa itsenäistä round3-erää ei toimiteta.
