@@ -1,3 +1,15 @@
+## 2026-09-09 19:38 UTC — NELJÄ HYVÄKSYTTYÄ PAPERIKORJAUSTA PELIIN; PULUCAM 58/58 VARMENNETTU
+
+Fable ja Matkakirjan tekstit: käyttäjä hyväksyi tarkastussivulla noin 19:05 UTC kaikki neljä uutta tarinakorjausta (Kiova, Tallinna, Lontoo, Firenze). Hyväksyntäpyynnöissä on publish-approved-image-and-caption. Root tarkisti nykyiset hyväksynnät ennen toimitusta, julkaisi neljä tiedostoa pelin mediaan ja latasi ne takaisin: SHA-256, JPEG, 1536×1024, sRGB ja pelin CORS täsmäävät.
+
+Täsmällinen toimituspaketti: `posti/kuvatoimitus-isoisa-tarinakorjaukset4-20260909.json` (commit 881b868063ab71b78232ea8a78fef6a37ffa4cd1). Vaihda vain nämä neljä `matkakirja.luentakuva`-kuvaa sekä niiden paketin mukaiset lyhyet/pitkät kuvatekstit ja lähderivit. Säilytä muut 41 paperikuvaa ja kaikki PuluCam-kuvat. Tämä on uusi omistajan hyväksymä neljän korjauksen toimitus, ei aiemmin peruttu paper-v3-erä. Firenze on hyväksytty käsikuva v6. Säilytä Havainnekuva-linkki pitkän kuvatekstin yhteydessä. Kuittaa main-commit ja versio; merkitsen nämä neljä Valmiit-tilaan vasta pelikytkennän tarkistuksen jälkeen.
+
+PuluCam-albumin kaikki 58 kuvan city/order/URL/lyhyt/selite/lahde-kytkennät on nyt erikseen varmennettu mainissa 945ddc3e9cd23297825943560fcf422c3229e0ae (v1720). Valittu B-tarra säilyy. Kaikki 58 ovat myös yksityisen tarkastussivun Valmiit-kansiossa; 20 viimeistä merkittiin nyt, ilman uudempien käyttäjäpäätösten ylikirjoitusta.
+
+Käyttäjän myöhemmin pyytämä musteensininen PuluCam-leima on tehty erilliseksi läpinäkyväksi PNG-esikatseluksi (PULU yläkaaressa, CAM alakaaressa, ylpeä Pulu keskellä). Se ei ole vielä käyttäjän valitsema eikä korvaa B-tarraa pelissä. Ei animaatioiden hyväksyntää tässä toimituksessa.
+
+---
+
 ## 2026-09-09 18:35 UTC — PULUCAM: KOKO 58 KUVAN ALBUMI TOIMITETTU, VIIMEINEN ERÄ 07
 
 Fable ja Matkakirjan tekstit: viimeinen viiden kuvan paketti on `posti/kuvatoimitus-pulucam-euv1-era07-20260909.json` (commit 611d085cfa6f048cae02d794f9ae431b03e54e2f). Sisältö: Lontoo1 sekä Venetsia2,3,4,5. Kaikki on generoitu kokonaan uudestaan, root on katsonut kuvat ja oikeat paikkareferenssit, ja jokainen julkinen kuvatiedosto on ladattu takaisin sekä tarkistettu SHA-256/MIME/mitat/sRGB/CORS. Erän kuitti: game-batch-07/runs/2026-09-09T18-32-49.955Z-b3c06fc8/receipt.json.
