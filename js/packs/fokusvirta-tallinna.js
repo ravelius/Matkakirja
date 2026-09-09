@@ -183,6 +183,7 @@ export const FOKUSVIRTA_TALLINNA = {
      */
     kuva: {
       ampari: 'herokoe/hero-tallinna-kaupunginmuuri.jpg',
+      lyhyt: 'Tallinnan kaupunginmuuria oli 2,4 km ja 46 tornia; jäljellä noin 1,9 km ja 20 tornia pystyssä.',
       selite: 'Tallinnan kaupunginmuuria oli parhaimmillaan 2,4 kilometriä '
         + 'ja siinä 46 tornia; nykyään muuria on jäljellä noin 1,9 '
         + 'kilometriä ja torneista pystyssä 20.',
@@ -235,6 +236,7 @@ export const FOKUSVIRTA_TALLINNA = {
        */
       kuva: {
         tiedosto: 'Kama.jpg',
+        lyhyt: 'Kama on paahdetuista ohrasta, rukiista ja kaurasta jauhettu Baltian ruokalaji, sekoitetaan maitoon.',
         selite: 'Kama on Baltian ruokalaji, jonka pohjana on paahdetuista '
           + 'ohrasta, rukiista ja kaurasta jauhettu seos ja joka '
           + 'sekoitetaan kypsentämättä maitoon tai piimään.',
@@ -302,6 +304,7 @@ export const FOKUSVIRTA_TALLINNA = {
        */
       kuva: {
         tiedosto: 'E-Residency card.jpg',
+        lyhyt: 'Viron e-residenttiohjelma alkoi 2014, antaen ulkomaalaisille sirukortin asiakirjoihin ja yritykseen.',
         selite: 'Viron e-residenttiohjelma alkoi 1. joulukuuta 2014, ja se '
           + 'antaa ulkomaalaisille sirukortin, jolla voi allekirjoittaa '
           + 'asiakirjoja ja perustaa yrityksen.',
@@ -365,6 +368,7 @@ export const FOKUSVIRTA_TALLINNA = {
        */
       kuva: {
         tiedosto: 'Lühikese Jala värav.JPG',
+        lyhyt: 'Lyhyen jalan porttitorniin hakattiin ampuma-aukkoja Toompeata kohti, siksi Epäluulon torni.',
         selite: 'Lyhyen jalan porttitorniin hakattiin 1400-luvulla '
           + 'ampuma-aukkoja, jotka osoittavat ylös Toompealle — siksi sitä '
           + 'on kutsuttu Epäluulon torniksi.',
@@ -446,6 +450,7 @@ export const FOKUSVIRTA_TALLINNA = {
      */
     kuva: {
       tiedosto: 'Vana Toomas (anno 1530) Tallinna raekojas (2013).jpg',
+      lyhyt: 'Alkuperäinen Vana Toomas vaurioitui 1944; tornissa kääntyy nyt vuonna 1996 taottu kopio.',
       selite: 'Alkuperäinen Vana Toomas vaurioitui vuoden 1944 '
         + 'pommituksessa, ja raatihuoneen tornissa kääntyy nyt vuonna 1996 '
         + 'taottu kopio.',
@@ -631,6 +636,7 @@ export const FOKUSVIRTA_TALLINNA = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-kaali-loistoaika.webp',
+        lyhyt: 'Kaalin kraatteri tuoreena: metsä kaatunut ja savuaa kilometrien säteellä.',
         selite: 'Kaalin kraatteri tuoreena: metsä on kaatunut ja savuaa '
           + 'kilometrien säteellä, ja kuopan reunalle on tultu katsomaan.',
         lahde: 'Matkakirjan havainnekuva: kohde törmäyksen jälkeisenä hetkenä',
@@ -643,6 +649,7 @@ export const FOKUSVIRTA_TALLINNA = {
        */
       valokuva: {
         tiedosto: 'Livonia, Vulgo Lyefland - Atlas Maior, vol 2, map 10 - Joan Blaeu, 1667 - BL 114.h(star).2.(10).jpg',
+        lyhyt: 'Joan Blaeun 1667 kartta Liivinmaasta: Saarenmaa tarkasti piirretty, kraatterijärvi vain järvi.',
         selite: 'Joan Blaeun vuoden 1667 kartta Liivinmaasta: Saarenmaa on '
           + 'siinä jo tarkasti piirretty, mutta kraatterijärvi on vain '
           + 'järvi muiden joukossa.',

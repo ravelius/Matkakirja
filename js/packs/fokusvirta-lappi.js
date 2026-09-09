@@ -65,6 +65,7 @@ export const FOKUSVIRTA_LAPPI = {
      */
     kuva: {
       ampari: 'herokoe/hero-lappi-aamu.jpg',
+      lyhyt: 'Rovaniemen Arktikum avattiin 1992; sen 172 metrin lasiputki kurottaa Ounasjokea kohti.',
       selite: 'Rovaniemen Arktikum vihittiin käyttöön 2. joulukuuta 1992, ja '
         + 'sen näkyvin osa on Ounasjokea kohti kurottava 172 metriä pitkä '
         + 'lasiputki; talossa toimivat Lapin maakuntamuseo ja Lapin '

@@ -138,6 +138,7 @@ export const FOKUSVIRTA_ATEENA = {
      */
     kuva: {
       tiedosto: 'Sophia Schliemann wearing gold jewelry.jpg',
+      lyhyt: 'Sophia Schliemann koruissaan Priamoksen aarteen löydön jälkeen; kulta oli Euroopan puheenaihe.',
       selite: 'Sophia Schliemann kantaa "Priamoksen aarteen" koruja. '
         + 'Kuva otettiin pian löydön jälkeen, ja juuri se teki '
         + 'kullasta puheenaiheen kaikkialla Euroopassa.',
@@ -238,6 +239,7 @@ export const FOKUSVIRTA_ATEENA = {
        */
       kuva: {
         tiedosto: "Acròpoli d'Atenes - Temple de Nike Àptera.JPG",
+        lyhyt: 'Athena Niken temppeli Akropoliin lounaiskulmassa; toinen nimi Nike Aptera, siivetön Voitto.',
         selite: 'Athena Niken temppeli Akropoliin lounaiskulmassa. '
           + 'Toinen nimi Nike Aptera tarkoittaa siivetöntä Voittoa.',
         lahde: 'Joanbanjo, Wikimedia Commons (CC BY-SA 3.0)',
@@ -270,6 +272,7 @@ export const FOKUSVIRTA_ATEENA = {
        */
       kuva: {
         tiedosto: 'At Wikimedia Hackathon Athens (MP) 2023 365.jpg',
+        lyhyt: 'Myöhäisroomalainen viljanastia Ateenasta, samaa lajia kuin Diogeneen asuma astia, ei se itse.',
         selite: 'Tällaisessa viljanastiassa Diogenes majaili: '
           + 'myöhäisroomalainen pithos Ateenasta. Astia on samaa lajia '
           + 'kuin filosofin asumus, ei se itse.',
@@ -326,6 +329,7 @@ export const FOKUSVIRTA_ATEENA = {
        */
       kuva: {
         tiedosto: "Heinrich Schliemann's house..tif",
+        lyhyt: 'Iliou Melathronin pääsisäänkäynti; Schliemannin kotipalatsissa toimii nykyään numismaattinen museo.',
         selite: 'Iliou Melathronin pääsisäänkäynti. Schliemannin '
           + 'kotipalatsissa toimii nykyään Ateenan numismaattinen museo.',
         lahde: 'athenswalk, Wikimedia Commons (CC0)',

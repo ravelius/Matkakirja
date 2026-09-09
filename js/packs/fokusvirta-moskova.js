@@ -297,6 +297,7 @@ export const FOKUSVIRTA_MOSKOVA = {
        * Selite on lehden oman avauskuvan selite sellaisenaan; yksikään
        * luku ei muutu.
        */
+      lyhyt: 'Kremlin punatiiliset muurit rakensivat italialaiset 1400-luvun lopulla, vallan keskus 500 vuotta.',
       selite: 'Kremlin punatiiliset muurit rakensivat italialaiset '
         + 'mestarit 1400-luvun lopulla, ja niiden sisällä on ollut '
         + 'vallan keskus yli viisisataa vuotta.',
@@ -382,6 +383,7 @@ export const FOKUSVIRTA_MOSKOVA = {
        */
       kuva: {
         tiedosto: 'Кяхта 1783 год.jpg',
+        lyhyt: 'Kyahta ja Maimaitsheng 1783: kaksi kauppapaikkaa rajan yli, Venäjän tee kulki niiden välistä.',
         selite: 'Kyahta ja sen kiinalainen naapurikaupunki Maimaitsheng '
           + 'vuoden 1783 kaiverruksessa: kaksi muurattua kauppapaikkaa '
           + 'vastakkain rajan yli, ja koko Venäjän tee kulki niiden '
@@ -480,6 +482,7 @@ export const FOKUSVIRTA_MOSKOVA = {
        */
       kuva: {
         tiedosto: '1900th-MoscowZoo.jpg',
+        lyhyt: 'Moskovan eläintarhan portti 1913 postikortissa, puoli vuosisataa avajaisistaan 1864.',
         selite: 'Moskovan eläintarhan portti vuoden 1913 postikortissa: '
           + 'tarha oli silloin puoli vuosisataa vanha ja seisoi yhä '
           + 'samalla Presnjan lammikoiden paikalla kuin avajaispäivänään '
@@ -579,6 +582,7 @@ export const FOKUSVIRTA_MOSKOVA = {
        */
       kuva: {
         tiedosto: '(05) Москва. Политехническая выставка. Главный вход. 1872г e1t3.jpg',
+        lyhyt: 'Vuoden 1872 polyteknillisen näyttelyn pääsisäänkäynti näyttelykomitean albumissa, puinen paviljonki.',
         selite: 'Vuoden 1872 polyteknillisen näyttelyn pääsisäänkäynti '
           + 'näyttelykomitean omassa kuva-albumissa: puinen paviljonki '
           + 'Voskresenskin aukion puolelta.',
@@ -690,6 +694,7 @@ export const FOKUSVIRTA_MOSKOVA = {
      */
     kuva: {
       tiedosto: 'Спасская башня. Часы.jpg',
+      lyhyt: 'Tornin kellotaulun halkaisija 6,12 m ja numerot 72 cm korkeat; kellot soivat taulun yläpuolelta.',
       selite: 'Tornin kellotaulun halkaisija on 6,12 metriä ja numerot '
         + '72 senttiä korkeat; kellot soittavat taulun yläpuolella '
         + 'olevasta aukosta.',

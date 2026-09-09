@@ -223,6 +223,7 @@ export const FOKUSVIRTA_SARAJEVO = {
      */
     kuva: {
       tiedosto: 'Friedrich Alois Schönn - An der lateinischen Brücke in Sarajewo - 171 - Österreichische Galerie Belvedere.jpg',
+      lyhyt: 'Latinalaissilta; Alois Schönn maalasi näkymän 1883, kymmenen vuotta isoisän käynnin jälkeen.',
       selite: 'Latinalaissilta Sarajevossa. Alois Schönn maalasi näkymän '
         + 'vuonna 1883, kymmenen vuotta isoisän käynnin jälkeen.',
       lahde: 'Alois Schönn 1883, Österreichische Galerie Belvedere, '
@@ -292,6 +293,7 @@ export const FOKUSVIRTA_SARAJEVO = {
      */
     kuva: {
       tiedosto: 'Sarajevo - Inat kuća (49104054186).jpg',
+      lyhyt: 'Inat kuća eli Uhman talo Miljackan rannalla; talo purettiin ja koottiin joen toiselle puolelle.',
       selite: 'Inat kuća eli Uhman talo Miljackan rannalla. Talo purettiin '
         + 'ja koottiin uudelleen joen toiselle puolelle.',
       lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
@@ -352,6 +354,7 @@ export const FOKUSVIRTA_SARAJEVO = {
        */
       kuva: {
         tiedosto: 'Sarajevo - Inat kuća (49104054186).jpg',
+        lyhyt: 'Uhman talo joen rannalla; alkuperäinen tontti oli vastarannalla, missä kaupungintalo nyt on.',
         selite: 'Uhman talo joen rannalla. Alkuperäinen tontti oli '
           + 'vastarannalla, siellä missä kaupungintalo nyt seisoo.',
         lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',

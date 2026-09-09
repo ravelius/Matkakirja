@@ -227,6 +227,7 @@ export const FOKUSVIRTA_DUBLIN = {
      */
     kuva: {
       ampari: 'herokoe/hero-dublin-aamu.png',
+      lyhyt: 'Trinity Collegen kellotorni valmistui 1853; takana Vanha kirjasto ja Kellsin kirja.',
       selite: 'Trinity Collegen kellotorni valmistui 1853 Charles Lanyonin '
         + 'suunnitelmien mukaan, ja sen takana Vanhassa kirjastossa '
         + 'säilytetään Kellsin kirjaa.',
@@ -304,6 +305,7 @@ export const FOKUSVIRTA_DUBLIN = {
        */
       kuva: {
         tiedosto: 'KellsFol034rChiRhoMonogram.jpg',
+        lyhyt: 'Kellsin kirjan tunnetuin aukeama on folio 34r, jossa yksi kirjainyhdistelmä täyttää koko sivun.',
         selite: 'Kellsin kirjan tunnetuin aukeama on folio 34r, jossa yksi '
           + 'ainoa kirjainyhdistelmä täyttää koko sivun kiemuroineen.',
         lahde: 'Wikimedia Commons (public domain)',
@@ -385,6 +387,7 @@ export const FOKUSVIRTA_DUBLIN = {
        */
       kuva: {
         tiedosto: 'Guinness brewery, Dublin.jpg',
+        lyhyt: 'Panimo on yhä samalla tontilla, jonka Arthur Guinness vuokrasi St James’s Gaten portilta 1759.',
         selite: 'Panimo toimii yhä samalla tontilla St James’s Gaten '
           + 'portin luona, jonka Arthur Guinness vuokrasi vuonna 1759.',
         lahde: 'Metro Centric, Wikimedia Commons (CC BY 2.0)',
@@ -479,6 +482,7 @@ export const FOKUSVIRTA_DUBLIN = {
        */
       kuva: {
         tiedosto: 'Metro-Goldwyn-Mayer — Slats the Lion (1926).png',
+        lyhyt: 'Dublinissa syntynyt Slats katsoo MGM:n tunnuksesta vuoden 1926 elokuvassa, muttei koskaan karjaise.',
         selite: 'Dublinissa syntynyt Slats katsoo MGM:n tunnuksesta vuoden '
           + '1926 elokuvassa. Hän ei karjaise siinä eikä missään muussa.',
         lahde: 'Metro-Goldwyn-Mayer 1926, Wikimedia Commons (public domain)',
@@ -586,6 +590,7 @@ export const FOKUSVIRTA_DUBLIN = {
        * lainausmerkeissä eikä heittomerkeissä.
        */
       tiedosto: "The Ha'Penny Bridge Dublin - Samuel Frederick Brocas.jpg",
+      lyhyt: 'Brocasin näkymä sillasta ensivuosilta, kun maksu oli voimassa ja joella soudettiin.',
       selite: 'Samuel Frederick Brocasin näkymä sillasta sen ensimmäisiltä '
         + 'vuosilta: maksu oli silloin voimassa ja joella soudettiin yhä.',
       lahde: 'Samuel Frederick Brocas, Wikimedia Commons (public domain)',
@@ -959,6 +964,7 @@ export const FOKUSVIRTA_DUBLIN = {
        */
       kuva: {
         tiedosto: 'Entrance to Newgrange passage tomb.jpg',
+        lyhyt: 'Newgrangen sisäänkäynnin yläpuolella on aukko, josta talvipäivänseisauksen aurinko yltää kammioon.',
         selite: 'Newgrangen sisäänkäynnin yläpuolella on aukko, '
           + 'kattolaatikko, jonka läpi talvipäivänseisauksen aurinko '
           + 'yltää käytävää pitkin kammioon.',

@@ -171,6 +171,7 @@ export const FOKUSVIRTA_MADRID = {
       + 'neljäsataa. Katso ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-madrid-aamu.png',
+      lyhyt: 'Madridin kuninkaanlinna valmistui 1755 palaneen maurilinnan paikalle, Länsi-Euroopan suurin.',
       selite: 'Madridin kuninkaanlinna valmistui 1755 tulipalossa '
         + 'tuhoutuneen maurilinnan paikalle, ja yli 3 400 huoneellaan '
         + 'se on Länsi-Euroopan suurin kuninkaanlinna.',
@@ -358,6 +359,7 @@ export const FOKUSVIRTA_MADRID = {
        */
       kuva: {
         tiedosto: 'Alegoría de la Primera República Española, por Tomás Padró.jpg',
+        lyhyt: 'Aikalaisallegoria Espanjan ensimmäisen tasavallan julistuksesta, painettu La Flacassa 1873.',
         selite: 'Aikalaisallegoria Espanjan ensimmäisen tasavallan '
           + 'julistamisesta, painettu La Flaca -lehdessä maaliskuussa '
           + '1873.',
@@ -425,6 +427,7 @@ export const FOKUSVIRTA_MADRID = {
      */
     kuva: {
       tiedosto: 'Puerta del Sol - Reloj.jpg',
+      lyhyt: 'Real Casa de Correosin kellotorni Puerta del Solilla; kellon lahjoitti palannut kelloseppa 1866.',
       selite: 'Real Casa de Correosin kellotorni Puerta del Solilla. '
         + 'Kellon lahjoitti kaupungille maanpaosta palannut kelloseppä '
         + 'vuonna 1866.',
@@ -609,6 +612,7 @@ export const FOKUSVIRTA_MADRID = {
        */
       valokuva: {
         tiedosto: 'Altamira-1880.jpg',
+        lyhyt: 'Kattomaalausten piirros 1880: juuri se kuva, jonka takia löytäjää syytettiin väärentäjäksi.',
         selite: 'Kattomaalausten piirros vuoden 1880 julkaisusta — juuri se '
           + 'kuva, jonka takia löytäjää syytettiin väärentäjäksi.',
         lahde: 'Vuoden 1880 julkaisu, Wikimedia Commons (public domain)',
@@ -700,6 +704,7 @@ export const FOKUSVIRTA_MADRID = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-munkkiaratit-loistoaika.webp',
+        lyhyt: 'Munkkiarattien jättipesä puistopuun oksistossa Madridissa, kaupungin julkisivut takana.',
         selite: 'Munkkiarattien jättipesä puistopuun oksistossa: monta '
           + 'omaa sisäänkäyntiä ja Madridin julkisivut takana.',
         lahde: 'Matkakirjan havainnekuva: yhdyskunnan pesä Madridin '

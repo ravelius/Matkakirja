@@ -205,6 +205,7 @@ export const FOKUSVIRTA_BUKAREST = {
      */
     kuva: {
       tiedosto: 'Carol Popp de Szathmari - Colţa.jpg',
+      lyhyt: 'Colțean torni Bukarestissa; Carol Szathmari valokuvasi sen 1867, kuusi vuotta ennen isoisän käyntiä.',
       selite: 'Colțean torni Bukarestissa. Carol Szathmari valokuvasi sen '
         + 'vuonna 1867, kuusi vuotta ennen isoisän käyntiä.',
       lahde: 'Carol Szathmari 1867, Wikimedia Commons (public domain)',
@@ -525,6 +526,7 @@ export const FOKUSVIRTA_BUKAREST = {
      */
     kuva: {
       tiedosto: 'Curtea Veche 1.jpg',
+      lyhyt: 'Vanhan ruhtinaanhovin raunioita; Vlad III nimitti paikan asuinpaikakseen 1459.',
       selite: 'Vanhan ruhtinaanhovin raunioita Bukarestin vanhassakaupungissa. '
         + 'Juuri tämän paikan Vlad III nimitti 1459 asuinpaikakseen.',
       lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0 ro)',
@@ -717,6 +719,7 @@ export const FOKUSVIRTA_BUKAREST = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-dracula-loistoaika.webp',
+        lyhyt: 'Kirjailijan työpöytä muistiinpanojen aikaan: historiateos, käsin kirjoitettuja arkkeja, öljylamppu.',
         selite: 'Kirjailijan työpöytä muistiinpanojen aikaan: avattu '
           + 'historiateos, käsin kirjoitettuja arkkeja ja öljylamppu.',
         lahde: 'Matkakirjan havainnekuva: hetki, jona myytti syntyi',

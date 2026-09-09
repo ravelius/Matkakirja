@@ -234,6 +234,7 @@ export const FOKUSVIRTA_VILNA = {
      */
     kuva: {
       ampari: 'herokoe/hero-vilna-gediminas.jpg',
+      lyhyt: 'Gediminaan torni on ainoa jäljellä oleva osa Vilnan ylälinnasta, 1400-luvun puoliväliltä.',
       selite: 'Gediminaan torni on ainoa jäljellä oleva osa Vilnan '
         + 'ylälinnasta, ja nykyinen tiilitorni on 1400-luvun puolivälistä.',
       lahde: 'Matkakirjan havainnekuva',
@@ -336,6 +337,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Lithuanian book carrier Kazys Ūdra (1857–1937).jpg',
+        lyhyt: 'Kazys Ūdra (1857–1937) oli knygnešys, joka kuljetti kiellettyjä liettuankielisiä kirjoja rajan yli.',
         selite: 'Kazys Ūdra (1857–1937) oli knygnešys eli kirjankantaja, '
           + 'joka kuljetti kiellettyjä liettuankielisiä kirjoja rajan yli '
           + 'selässään.',
@@ -439,6 +441,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Vilnius Sts Peter et Paul Church 05.jpg',
+        lyhyt: 'Pyhien Pietarin ja Paavalin kirkon holveissa on noin 2000 valkoista stukkohahmoa.',
         selite: 'Pyhien Pietarin ja Paavalin kirkon holveissa on noin '
           + 'kaksituhatta stukkohahmoa, ja ne ovat kaikki valkoisia.',
         lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
@@ -548,6 +551,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Sun of Amber.jpg',
+        lyhyt: 'Palangan meripihkamuseon Meripihkan aurinko painaa 3526 g, Euroopan kolmanneksi suurin.',
         selite: 'Palangan meripihkamuseon Meripihkan aurinko painaa 3526 '
           + 'grammaa ja on Euroopan kolmanneksi suurin meripihkapala.',
         lahde: 'Beny Shlevich, Wikimedia Commons (CC BY-SA 2.0)',
@@ -690,6 +694,7 @@ export const FOKUSVIRTA_VILNA = {
      */
     kuva: {
       tiedosto: 'Vilnius Cathedral in the 19th c.jpg',
+      lyhyt: 'Puupiirros Vilnan katedraalista 1871: kolme kivipatsasta purettiin 1950 ja palasivat 1997.',
       selite: 'Puupiirros Vilnan katedraalista noin vuodelta 1871: katolla '
         + 'seisovat vielä ne kolme kivipatsasta, jotka purettiin 1950 ja '
         + 'palasivat paikoilleen vasta 1997.',
@@ -938,6 +943,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Dune slope with view over the lagoon at Curonian Spit, Lithuania.jpg',
+        lyhyt: 'Kuršių nerija on 98 km pitkä dyynikannas, joka erottaa Kuurinlahden ja kuuluu Unescoon.',
         selite: 'Kuršių nerija on 98 kilometrin pituinen dyynikannas, joka '
           + 'erottaa Kuurinlahden Itämerestä ja kuuluu Unescon '
           + 'maailmanperintöön.',
@@ -1049,6 +1055,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Hill of Crosses 1, Siauliai, Lithuania.JPG',
+        lyhyt: 'Ristien kukkulalla arvioitiin olevan 55 000 ristiä 1990 ja 100 000 vuonna 2006.',
         selite: 'Ristien kukkulalla arvioitiin olevan noin 55 000 ristiä '
           + 'vuonna 1990 ja noin 100 000 vuonna 2006, eikä tarkkaa lukua ole '
           + 'kenelläkään.',
@@ -1160,6 +1167,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Front facade of the Trakai Island Castle, 2009.jpg',
+        lyhyt: 'Trakain saarilinnan rakensivat Kęstutis ja hänen poikansa Vytautas Suuri, joka kuoli linnassa 1430.',
         selite: 'Trakain saarilinnan rakensivat Kęstutis 1300-luvulla ja '
           + 'hänen poikansa Vytautas Suuri, joka kuoli linnassa 1430.',
         lahde: 'Leszek Kozlowski, Wikimedia Commons (CC BY 2.0)',

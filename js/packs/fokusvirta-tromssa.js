@@ -62,6 +62,7 @@ export const FOKUSVIRTA_TROMSSA = {
      */
     kuva: {
       ampari: 'herokoe/hero-tromssa-ilta.jpg',
+      lyhyt: 'Polarmuseet avattiin 1978, 50 vuotta Amundsenin viimeisen lennon jälkeen, tullimakasiineissa.',
       selite: 'Polarmuseet avattiin 18. kesäkuuta 1978 tasan viisikymmentä '
         + 'vuotta Roald Amundsenin viimeisen lennon jälkeen, ja se toimii '
         + '1840-luvun tullimakasiineissa Skansenin lähellä.',

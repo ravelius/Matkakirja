@@ -59,6 +59,7 @@ export const FOKUSVIRTA_ALPIT = {
      */
     kuva: {
       ampari: 'herokoe/hero-alpit-keskipaiva.jpg',
+      lyhyt: 'Landwasserin viadukti 1901–1902 Albula-radalla: kuusi kalkkikivikaarta ja kallioon päättyvä tunneli.',
       selite: 'Landwasserin viadukti rakennettiin 1901–1902 Albula-radan '
         + 'varteen Alexander Acatosin suunnitelmien mukaan: kuusi '
         + 'kalkkikivikaarta, 65 metriä korkea ja 136 metriä pitkä kaarre, '

@@ -138,6 +138,7 @@ export const FOKUSVIRTA_PARIISI = {
       + 'käyntinsä jälkeen. Katso ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-pariisi-eiffel.jpg',
+      lyhyt: 'Eiffel-torni rakennettiin 1889 maailmannäyttelyyn väliaikaiseksi, maailman korkein vuosikymmeniksi.',
       selite: 'Eiffel-torni rakennettiin vuoden 1889 maailmannäyttelyyn '
         + 'väliaikaiseksi, ja siitä tuli maailman korkein rakennelma '
         + 'neljäksi vuosikymmeneksi.',
@@ -233,6 +234,7 @@ export const FOKUSVIRTA_PARIISI = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
+        lyhyt: 'Tuileriain palatsin palanut runko puutarhan puolelta: katto poissa, kivimuurit ehjät.',
         selite: 'Tuileriain palatsin palanut runko puutarhan puolelta: '
           + 'katto poissa, kivimuurit ehjät, lauta-aita raunion edessä '
           + 'ja kaupunkilaisia altaan äärellä.',
@@ -250,6 +252,7 @@ export const FOKUSVIRTA_PARIISI = {
        */
       valokuva: {
         tiedosto: "Vue des Tuileries après l'incendie de 1871, PH83415.jpg",
+        lyhyt: 'Tuileriain palatsi palon jälkeen; rauniot seisoivat vielä kaupungin keskellä samalta ajalta.',
         selite: 'Tuileriain palatsi palon jälkeen. Valokuva on samalta '
           + 'ajalta, jona rauniot seisoivat kaupungin keskellä.',
         // Tekijän nimi Commonsin omassa muodossa (tools/
@@ -373,6 +376,7 @@ export const FOKUSVIRTA_PARIISI = {
        */
       kuva: {
         tiedosto: 'Monet - Impression, Sunrise.jpg',
+        lyhyt: 'Claude Monet\'n Impression, soleil levant vuodelta 1872 antoi pilkkanimen koko ryhmälle.',
         selite: 'Claude Monet’n Impression, soleil levant vuodelta '
           + '1872. Kriitikko teki sen nimestä pilkkanimen koko '
           + 'ryhmälle.',
@@ -435,6 +439,7 @@ export const FOKUSVIRTA_PARIISI = {
      */
     kuva: {
       tiedosto: 'Quai Saint-Michel, Paris 5 May 2016.jpg',
+      lyhyt: 'Bukinistien vihreät laatikot Seinen rantamuurilla; ammattikunta joen varrella 1500-luvulta.',
       selite: 'Bukinistien vihreät laatikot Seinen rantamuurilla. '
         + 'Ammattikunta on ollut joen varrella 1500-luvulta asti.',
       lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
@@ -586,6 +591,7 @@ export const FOKUSVIRTA_PARIISI = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-lustig-eiffel-loistoaika.webp',
+        lyhyt: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, romukauppiaat kuuntelemassa, torni takana.',
         selite: 'Hotellin salonki: väärennetyt asiakirjat pöydällä, '
           + 'romukauppiaat kuuntelemassa ja torni ikkunan takana.',
         lahde: 'Matkakirjan havainnekuva: hetki, jona torni myytiin',
@@ -648,6 +654,7 @@ export const FOKUSVIRTA_PARIISI = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-kirahvin-kavelymatka-loistoaika.webp',
+        lyhyt: 'Kirahvi kävelee maantietä takki päällä, saattajat rinnalla ja kyläläiset katsomassa.',
         selite: 'Kirahvi kävelemässä maantietä takki päällä, saattajat '
           + 'rinnalla ja kyläläiset tien vierellä katsomassa.',
         lahde: 'Matkakirjan havainnekuva: hetki kirahvin kävelymatkalta',
@@ -791,6 +798,7 @@ export const FOKUSVIRTA_PARIISI = {
        */
       kuva: {
         tiedosto: "Prudent-Louis Leray - Poster for the première of Georges Bizet's Carmen.jpg",
+        lyhyt: 'Lerayn litografia on Carmenin ensi-illan juliste 1875, epäonnistuneeksi luullusta esityksestä.',
         selite: 'Prudent-Louis Lerayn litografia on Carmenin ensi-illan '
           + 'juliste vuodelta 1875 — samasta esityksestä, jonka '
           + 'säveltäjä uskoi epäonnistuneen.',

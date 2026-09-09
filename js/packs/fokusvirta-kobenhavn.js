@@ -150,6 +150,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
       + 'koska kaikki asuvat samalla puolella vettä.',
     kuva: {
       ampari: 'herokoe/hero-kobenhavn-nyhavn.jpg',
+      lyhyt: 'Nyhavn kaivettiin 1670-luvulla kanavaksi laivojen lastinpurkuun keskelle kaupunkia.',
       selite: 'Nyhavn kaivettiin 1670-luvulla kanavaksi, jotta laivat '
         + 'pääsisivät purkamaan lastinsa keskelle kaupunkia.',
       lahde: 'Matkakirjan havainnekuva',
@@ -301,6 +302,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
        */
       kuva: {
         tiedosto: 'Jelling rune stones.1.ajb.jpg',
+        lyhyt: 'Jellingin pienemmän kiven pystytti Gorm Vanha vaimolleen, suuremman poika Harald Sinihammas.',
         selite: 'Vanhemman Jellingin kiven pystytti kuningas Gorm Vanha '
           + 'vaimonsa Thyran muistoksi, ja suuremman hänen poikansa Harald '
           + 'Sinihammas vanhempiensa muistoksi.',
@@ -369,6 +371,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
        */
       kuva: {
         tiedosto: 'Lego 2x4 brick.jpg',
+        lyhyt: 'Lego-palikat valmistetaan ABS-muovista Billundissa, liitettäviksi lukemattomilla tavoilla.',
         selite: 'Lego-palikat valmistetaan ABS-muovista Billundissa, ja ne '
           + 'on suunniteltu liitettäviksi toisiinsa lukemattomilla '
           + 'tavoilla.',
@@ -476,6 +479,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
      */
     kuva: {
       tiedosto: 'Hans Christian Andersen by Thora Hallager 1869.jpg',
+      lyhyt: 'Hans Christian Andersen vuoden 1869 valokuvassa, neljä vuotta ennen isoisän käyntiä.',
       selite: 'Hans Christian Andersen vuonna 1869 otetussa valokuvassa, '
         + 'neljä vuotta ennen isoisän käyntiä. Hän syntyi Odensessa '
         + 'suutarin perheeseen vuonna 1805.',
@@ -655,6 +659,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-trelleborg-loistoaika.webp',
+        lyhyt: 'Trelleborg asuttuna: neljä pihaa, kuusitoista samanmittaista taloa ja portti joka ilmansuuntaan.',
         selite: 'Trelleborg asuttuna: neljä pihaa, kuusitoista pitkää taloa '
           + 'täsmälleen samassa mitassa ja portti jokaiseen ilmansuuntaan.',
         lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
@@ -668,6 +673,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
        */
       valokuva: {
         tiedosto: 'Trelleborg airphoto.JPG',
+        lyhyt: 'Trelleborg on viikinkiaikainen rengaslinnoitus, kuningas Harald Sinihampaan rakennuttama 980.',
         selite: 'Trelleborg on yksi seitsemästä tunnetusta '
           + 'viikinkiaikaisesta rengaslinnoituksesta, ja sen rakennutti '
           + 'kuningas Harald Sinihammas vuonna 980.',

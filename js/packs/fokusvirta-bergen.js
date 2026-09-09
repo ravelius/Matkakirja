@@ -277,6 +277,7 @@ export const FOKUSVIRTA_BERGEN = {
        */
       kuva: {
         tiedosto: 'Borgund Stave Church in Lærdalen, 2013 June.jpg',
+        lyhyt: 'Borgundin sauvakirkko rakennettiin noin 1200 seurakuntakirkoksi ja toimi sellaisena vuoteen 1868.',
         selite: 'Borgundin sauvakirkko rakennettiin noin vuonna 1200 kylän '
           + 'seurakuntakirkoksi, ja se toimi sellaisena vuoteen 1868.',
         lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
@@ -357,6 +358,7 @@ export const FOKUSVIRTA_BERGEN = {
        */
       kuva: {
         tiedosto: 'Muskox (Ovibos moschatus) male Dovrefjell 1.jpg',
+        lyhyt: 'Myskihärkä on paksuturkkinen arktinen sorkkaeläin; inuktitutiksi nimi tarkoittaa parrakasta.',
         selite: 'Myskihärkä on arktinen sorkkaeläin, joka tunnetaan '
           + 'paksusta turkistaan; inuktitutiksi sen nimi tarkoittaa '
           + 'parrakasta.',
@@ -445,6 +447,7 @@ export const FOKUSVIRTA_BERGEN = {
        */
       kuva: {
         tiedosto: 'Geirangerfjord from Ørnesvingen, 2013 June.jpg',
+        lyhyt: 'Geirangervuono on 15 km pitkä Sunnylvsfjordenin haara Møre og Romsdalissa, pohjukassa Geiranger.',
         selite: 'Geirangervuono on 15 kilometrin pituinen '
           + 'Sunnylvsfjordenin haara Møre og Romsdalissa, ja sen '
           + 'pohjukassa on Geirangerin kylä.',
@@ -580,6 +583,7 @@ export const FOKUSVIRTA_BERGEN = {
      */
     kuva: {
       tiedosto: 'Tørrfisk.jpg',
+      lyhyt: 'Turska kuivuu hjelle-telineillä; kuvan telineet ovat Moskenesissa Lofooteilla.',
       selite: 'Turska kuivuu telineillä, joita Norjassa sanotaan '
         + 'hjelleiksi; kuvan telineet ovat Moskenesissa Lofooteilla.',
       lahde: 'Sondrekv, Wikimedia Commons (public domain)',
@@ -822,6 +826,7 @@ export const FOKUSVIRTA_BERGEN = {
        */
       kuva: {
         tiedosto: 'Amundsen Expedition at South Pole.jpg',
+        lyhyt: 'Amundsenin retkikunta etelänavalla joulukuussa 1911; kuvan otti viides mies, Olav Bjaaland.',
         selite: 'Amundsenin retkikunta etelänavalla joulukuussa 1911: '
           + 'Roald Amundsen, Helmer Hanssen, Sverre Hassel ja Oscar '
           + 'Wisting. Kuvan otti viides mies, Olav Bjaaland.',
@@ -928,6 +933,7 @@ export const FOKUSVIRTA_BERGEN = {
        */
       kuva: {
         tiedosto: 'Ekofisk (TELE.1990-2-438).jpg',
+        lyhyt: 'Ekofiskin öljykenttä löytyi 1969, ensimmäinen öljylöytö Pohjanmerellä yli 200 koereikän jälkeen.',
         selite: 'Ekofiskin öljykenttä löydettiin 1969 Stavangerista 320 '
           + 'kilometriä lounaaseen, ja se oli ensimmäinen öljylöytö '
           + 'Pohjanmerellä yli 200 koereiän jälkeen.',

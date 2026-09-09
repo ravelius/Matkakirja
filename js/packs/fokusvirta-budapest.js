@@ -191,6 +191,7 @@ export const FOKUSVIRTA_BUDAPEST = {
      */
     kuva: {
       ampari: 'herokoe/hero-budapest-parliament.jpg',
+      lyhyt: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin piirustuksin, kupoli tasan 96 metrissä.',
       selite: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin '
         + 'piirustuksin: uusgoottilainen palatsi on 268 metriä pitkä, ja '
         + 'sen kupoli nousee tasan 96 metriin.',
@@ -267,6 +268,7 @@ export const FOKUSVIRTA_BUDAPEST = {
        */
       kuva: {
         tiedosto: 'Roman pipe organ Aquincum.jpg',
+        lyhyt: 'Aquincumin vesiurkujen rekonstruktio; alkuperäisestä soittimesta jäljellä noin 300 metalliosaa.',
         selite: 'Aquincumin vesiurkujen rekonstruktio museossa. '
           + 'Alkuperäisestä soittimesta on jäljellä noin kolmesataa '
           + 'metalliosaa.',
@@ -342,6 +344,7 @@ export const FOKUSVIRTA_BUDAPEST = {
        */
       kuva: {
         tiedosto: 'Pál-völgy Cave.JPG',
+        lyhyt: 'Pál-völgyin luola Budan kukkuloiden sisällä syntyi alhaalta nousseesta lämpimästä vedestä.',
         selite: 'Pál-völgyin luola Budan kukkuloiden sisällä. Käytävät '
           + 'ovat syntyneet alhaalta nousseesta lämpimästä vedestä.',
         lahde: 'VinceB, Wikimedia Commons (CC BY-SA 3.0)',
@@ -422,6 +425,7 @@ export const FOKUSVIRTA_BUDAPEST = {
        */
       kuva: {
         tiedosto: 'Budapest, M1 metró (kisföldalatti), Andrássy út.png',
+        lyhyt: 'Aikalaispiirros 1896 näyttää millenniumin maanalaisen kulkevan matalalla Andrássy-kadun alla.',
         selite: 'Aikalaispiirros vuodelta 1896 näyttää, kuinka matalalla '
           + 'millenniumin maanalainen kulkee Andrássy-kadun alla.',
         lahde: 'Wikimedia Commons (public domain)',
@@ -502,6 +506,7 @@ export const FOKUSVIRTA_BUDAPEST = {
      */
     kuva: {
       tiedosto: 'Budapest, Lánchíd a budai hídfőtől nézve, 1873-1880 között. - Fortepan 82081.jpg',
+      lyhyt: 'Ketjusilta Budan sillanpäältä vuosien 1873–1880 väliltä, isoisän matkavuonna tai heti sen jälkeen.',
       selite: 'Ketjusilta Budan puoleiselta sillanpäältä kuvattuna '
         + 'vuosien 1873 ja 1880 välillä — isoisän matkavuonna tai aivan '
         + 'sen jälkeen.',

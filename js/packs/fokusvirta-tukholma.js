@@ -330,6 +330,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
       + 'Tämän kaupungin alla on enemmän tavaraa kuin sen päällä.',
     kuva: {
       ampari: 'herokoe/hero-tukholma-gamlastan.jpg',
+      lyhyt: 'Tukholma on rakennettu 14 saarelle, kohtaan jossa makea Mälaren purkautuu suolaiseen Itämereen.',
       selite: 'Tukholma on rakennettu neljälletoista saarelle siihen '
         + 'kohtaan, jossa makea Mälaren purkautuu suolaiseen Itämereen.',
       lahde: 'Matkakirjan havainnekuva',
@@ -395,6 +396,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
        */
       kuva: {
         tiedosto: 'Silver tangle Spillings Hoard 1.jpg',
+        lyhyt: 'Spillingsin aarre on maailman suurin viikinkiaikainen hopealöytö, 67 kg ja 14 295 kolikkoa.',
         selite: 'Spillingsin aarre on maailman suurin viikinkiaikainen '
           + 'hopealöytö: se painoi 67 kiloa ja sisälsi 14 295 kolikkoa, '
           + 'joista useimmat islamilaisia.',
@@ -455,6 +457,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
        */
       kuva: {
         tiedosto: 'Fishing in Strömmen, Stockholm - panoramio.jpg',
+        lyhyt: 'Tukholman Strömmenissä saa onkia keskellä kaupunkia, lohi nousee vanhankaupungin kupeeseen.',
         selite: 'Tukholman Strömmenissä saa onkia keskellä kaupunkia, ja '
           + 'lohi nousee virtaan aivan vanhankaupungin kupeeseen.',
         lahde: 'Bengt Nyman, Wikimedia Commons (CC BY 3.0)',
@@ -531,6 +534,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
        */
       kuva: {
         tiedosto: 'Vädersolstavlan 1535.jpg',
+        lyhyt: 'Vädersolstavlan kuvaa Tukholman halo-ilmiötä 20.4.1535, vanhin värillinen kuva kaupungista.',
         selite: 'Vädersolstavlan kuvaa Tukholman yllä 20. huhtikuuta 1535 '
           + 'nähtyä halo-ilmiötä, ja se on vanhin värillinen kuva '
           + 'kaupungista.',
@@ -616,6 +620,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
      */
     kuva: {
       tiedosto: 'Oscar II of Sweden & Sofia of Sweden coronation 1873.jpg',
+      lyhyt: 'Oscar II ja kuningatar Sofia kruunajaisissaan 1873, Ruotsin viimeisissä kruunajaisissa.',
       selite: 'Oscar II ja kuningatar Sofia kruunajaisissaan vuonna 1873. '
         + 'Ne jäivät Ruotsin viimeisiksi kruunajaisiksi.',
       lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
@@ -797,6 +802,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
        */
       valokuva: {
         tiedosto: 'Jørgen Aukland Vasaloppet 2013 002.jpg',
+        lyhyt: 'Vasaloppet hiihdetään Bergasta Moraan, 90 km ja maailman vanhin, suurin hiihtokilpailu.',
         selite: 'Vasaloppet hiihdetään maaliskuun ensimmäisenä sunnuntaina '
           + 'Bergasta Moraan, ja 90 kilometrin kisa on maailman vanhin ja '
           + 'osanottajamäärältään suurin hiihtokilpailu.',

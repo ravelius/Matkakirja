@@ -188,6 +188,7 @@ export const FOKUSVIRTA_HELSINKI = {
      */
     kuva: {
       ampari: 'herokoe/hero-helsinki-senaatintori.jpg',
+      lyhyt: 'Carl Ludvig Engelin Tuomiokirkko valmistui 1852, merelle näkyväksi Helsingin tunnukseksi.',
       selite: 'Carl Ludvig Engelin piirtämä Tuomiokirkko valmistui 1852, ja '
         + 'siitä tuli merelle näkyvä Helsingin tunnus jo purjelaivojen '
         + 'aikana.',
@@ -249,6 +250,7 @@ export const FOKUSVIRTA_HELSINKI = {
        */
       kuva: {
         tiedosto: 'Kotiharjun yleinen sauna (Kotiharju public sauna in Helsinki) Helsingin Torkkelinmäellä Kalliossa 01.jpg',
+        lyhyt: 'Vuonna 1928 avattu Kotiharjun sauna on viimeinen alkuperäinen puulämmitteinen yleinen sauna.',
         selite: 'Vuonna 1928 avattu Kotiharjun sauna on Helsingin viimeinen '
           + 'alkuperäisessä käytössä säilynyt puulämmitteinen yleinen '
           + 'sauna.',
@@ -314,6 +316,7 @@ export const FOKUSVIRTA_HELSINKI = {
        */
       kuva: {
         tiedosto: 'Musician Rauno Esa Nieminen with Saarijärven kantele (Saarijärvi zither).jpg',
+        lyhyt: 'Kantele kuuluu Baltian psalttereiden perheeseen viron kandlen ja latvian kokleen kanssa.',
         selite: 'Kantele kuuluu Baltian psalttereiden perheeseen yhdessä '
           + 'viron kandlen, latvian kokleen ja liettuan kanklėsin kanssa.',
         lahde: 'R.o.t, Wikimedia Commons (CC BY-SA 4.0)',
@@ -380,6 +383,7 @@ export const FOKUSVIRTA_HELSINKI = {
        */
       kuva: {
         tiedosto: 'Jean-Sibelius-at-the-piano.jpg',
+        lyhyt: 'Jean Sibelius (1865–1957) on Suomen tunnetuin säveltäjä, vahvisti kansallista identiteettiä.',
         selite: 'Jean Sibelius (1865–1957) on Suomen tunnetuin säveltäjä, '
           + 'ja hänen musiikkinsa vahvisti kansallista identiteettiä '
           + 'venäläistämiskausien aikana.',
@@ -629,6 +633,7 @@ export const FOKUSVIRTA_HELSINKI = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-tervakauppa-loistoaika.webp',
+        lyhyt: 'Tervavene tulee Oulujokea alas täydessä lastissa, tynnyrit nostetaan tervahovin rantaan.',
         selite: 'Tervavene tulee Oulujokea alas täydessä lastissa, ja '
           + 'tynnyrit nostetaan tervahovin rantaan punnittaviksi.',
         lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
@@ -643,6 +648,7 @@ export const FOKUSVIRTA_HELSINKI = {
        */
       valokuva: {
         tiedosto: 'Kauppatori, syys- eli silakkamarkkinat - G30676 - hkm.HKMS000005-km0000pheu.jpg',
+        lyhyt: 'Eteläsataman rantaan purjehdittiin ennen höyrylaivoja; samoja laitureita myöten kulki myös terva.',
         selite: 'Eteläsataman rantaan purjehdittiin lasteineen kauan ennen '
           + 'höyrylaivoja; samoja laitureita myöten kulki myös terva.',
         lahde: 'Tuntematon tekijä, Helsingin kaupunginmuseo, Wikimedia '

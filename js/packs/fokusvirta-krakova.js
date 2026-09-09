@@ -289,6 +289,7 @@ export const FOKUSVIRTA_KRAKOVA = {
      */
     kuva: {
       ampari: 'herokoe/hero-krakova-ilta.png',
+      lyhyt: 'Sukiennice seisoo keskiaikaisen torin keskellä; renessanssiasunsa se sai 1555 palon jälkeen.',
       selite: 'Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen torin '
         + 'keskellä, ja renessanssiasunsa se sai 1555 palon jälkeen.',
       lahde: 'Matkakirjan havainnekuva',
@@ -393,6 +394,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: 'Krakow - Kosciol Maryacki i Sukiennice. 1910 (69699690).jpg',
+        lyhyt: 'Postikortti 1910 näyttää kangashallin 1870-luvun kunnostuksen: kaarikäytävä ja räystäslinja.',
         selite: 'Postikortti vuodelta 1910 näyttää kangashallin 1870-luvun '
           + 'kunnostuksen jäljiltä: kaarikäytävä ja räystäslinja ovat siitä '
           + 'työstä.',
@@ -532,6 +534,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: 'Hejnalista krakowski.jpg',
+        lyhyt: 'Hejnał soitetaan Mariankirkon 80-metrisestä tornista joka tunti neljään ilmansuuntaan.',
         selite: 'Hejnał soitetaan Mariankirkon korkeammasta, 80 metrin '
           + 'tornista joka tunti neljään ilmansuuntaan, ympäri vuorokauden.',
         lahde: 'Jadwiga, Wikimedia Commons (CC BY-SA 3.0)',
@@ -661,6 +664,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: 'Krakow - Wawel and Old Town from balloon.jpg',
+        lyhyt: 'Wawelin kukkula Veikselin rannalla oli isoisän matkavuonna itävaltalainen kasarmi.',
         selite: 'Wawelin kukkula kohoaa Veikselin rannalla vanhankaupungin '
           + 'eteläpuolella, ja se oli isoisän matkavuonna itävaltalainen '
           + 'kasarmi.',
@@ -828,6 +832,7 @@ export const FOKUSVIRTA_KRAKOVA = {
      */
     kuva: {
       tiedosto: 'Portrait of a Young Man by Raphael - Cleaned Archival Scan.jpg',
+      lyhyt: 'Rafaelin Nuoren miehen muotokuva tunnetaan enää valokuvista; maalaus katosi 1945.',
       selite: 'Rafaelin Nuoren miehen muotokuva tunnetaan nykyään vain '
         + 'valokuvista: maalaus katosi vuonna 1945 eikä sitä ole nähty sen '
         + 'jälkeen.',
@@ -1118,6 +1123,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: 'Saint Kinga Chapel in Wieliczka Salt Mine.jpg',
+        lyhyt: 'Pyhän Kingan kappeli on louhittu Wieliczkan kaivokseen; reliefit ja kattokruunut suolakivestä.',
         selite: 'Pyhän Kingan kappeli on louhittu Wieliczkan kaivokseen, ja '
           + 'sen seinäreliefit, patsaat ja kattokruunut on tehty '
           + 'suolakivestä.',
@@ -1248,6 +1254,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: "Toruń Gingerbread baking mould with city's coat of arms.jpg",
+        lyhyt: 'Toruńin piparkakkumuotteihin veistettiin vaakuna ja hallitsijoiden kuvia; tämä muotti 1600-luvulta.',
         selite: 'Toruńin piparkakkumuotteihin veistettiin kaupungin vaakuna ja '
           + 'hallitsijoiden kuvia; tämä muotti on 1600-luvulta.',
         lahde: 'Tuntematon tekijä (Toruń), Wikimedia Commons (CC0)',
@@ -1359,6 +1366,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: 'Dwarfs, Wroclaw (P1180307).jpg',
+        lyhyt: 'Wrocławin krasnale ovat 20–30 cm korkeita pronssihahmoja, joita kaduilla on yli 800.',
         selite: 'Wrocławin krasnale ovat 20–30 senttiä korkeita '
           + 'pronssihahmoja, ja niitä on kaupungin kaduilla yli 800.',
         lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',

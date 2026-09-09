@@ -224,6 +224,7 @@ export const FOKUSVIRTA_ISTANBUL = {
      */
     kuva: {
       tiedosto: 'At Meydani square, Hippodrome of Constantinople, Serpent Column, Obelisk of Theodosius - Aubry de la Mottraye, Constantinople, 1727.jpg',
+      lyhyt: 'At Meydanın aukio hippodromilla de La Motrayen kuvassa 1727: Käärmepylväs ja obeliski.',
       selite: 'At Meydanın aukio entisellä hippodromilla ranskalaisen '
         + 'matkaajan Aubry de La Motrayen kuvassa vuodelta 1727. Aukiolla '
         + 'näkyvät Käärmepylväs ja Theodosiuksen obeliski.',
@@ -388,6 +389,7 @@ export const FOKUSVIRTA_ISTANBUL = {
        */
       kuva: {
         tiedosto: 'Snake column Hippodrome Constantinople 2007.jpg',
+        lyhyt: 'Käärmepylväs Sultanahmetin aukiolla: kiertyneistä pronssikäärmeistä tehty, seissyt vuodesta 324.',
         selite: 'Käärmepylväs Sultanahmetin aukiolla. Kiertyneistä '
           + 'pronssikäärmeistä tehty pylväs on seissyt kaupungissa '
           + 'vuodesta 324.',
@@ -443,6 +445,7 @@ export const FOKUSVIRTA_ISTANBUL = {
        */
       kuva: {
         tiedosto: 'Abraham Salomon de Camondo.jpg',
+        lyhyt: 'Kreivi Camondo noin 1860; ottomaanihallituksen pankkiiri ja juutalaisyhteisön patriarkka.',
         selite: 'Kreivi Abraham Salomon Camondo noin vuonna 1860. Hän oli '
           + 'ottomaanihallituksen pankkiiri ja kaupungin juutalaisen '
           + 'yhteisön patriarkka.',

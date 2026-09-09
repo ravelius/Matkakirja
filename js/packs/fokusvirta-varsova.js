@@ -300,6 +300,7 @@ export const FOKUSVIRTA_VARSOVA = {
      */
     kuva: {
       ampari: 'herokoe/hero-varsova-vanhatori.jpg',
+      lyhyt: 'Vanhankaupungin tori kaavoitettiin 1200-luvulla; merenneito on kopio vuoden 1855 veistoksesta.',
       selite: 'Vanhankaupungin tori kaavoitettiin 1200-luvun lopulla, ja sen '
         + 'keskellä seisova merenneito on kopio Konstanty Hegelin vuoden '
         + '1855 veistoksesta, jonka alkuperäinen on kaupunginmuseossa.',
@@ -396,6 +397,7 @@ export const FOKUSVIRTA_VARSOVA = {
        */
       kuva: {
         tiedosto: 'Bernardo Bellotto - Miodowa Street in Warsaw - Google Art Project.jpg',
+        lyhyt: 'Bellotton Miodowa-katu 1777: samaan kirkkoon maalari itse haudattiin kolme vuotta myöhemmin.',
         selite: 'Bellotton Miodowa-katu vuodelta 1777: sama katu, jonka '
           + 'kirkkoon maalari itse haudattiin kolme vuotta myöhemmin.',
         lahde: 'Bernardo Bellotto 1777, Wikimedia Commons (public domain)',
@@ -544,6 +546,7 @@ export const FOKUSVIRTA_VARSOVA = {
        */
       kuva: {
         tiedosto: 'Dworzec Wiedeński w Warszawie ok. 1890.jpg',
+        lyhyt: 'Wienin asema Varsovassa noin 1890: hevosraitiovaunu kuljetti matkustajat radalta toiselle.',
         selite: 'Wienin asema Varsovassa noin 1890: etualalla '
           + 'hevosraitiovaunu, joka kuljetti matkustajat radalta toiselle.',
         lahde: 'Konrad Brandel, Wikimedia Commons (public domain)',
@@ -683,6 +686,7 @@ export const FOKUSVIRTA_VARSOVA = {
        */
       kuva: {
         tiedosto: 'Jaktorow pomnik tura.jpg',
+        lyhyt: 'Jaktorówin muistokivi kertoo turin eläneen metsässä vuoteen 1627, kivessä eläimen pää.',
         selite: 'Jaktorówin muistokivi kertoo, että tur eli tässä metsässä '
           + 'vuoteen 1627, ja kiveen on hakattu myös eläimen pää.',
         lahde: 'Tomasz Kuran, Wikimedia Commons (CC BY-SA 3.0)',
@@ -834,6 +838,7 @@ export const FOKUSVIRTA_VARSOVA = {
      */
     kuva: {
       tiedosto: 'Biblioteka Załuskich r. 1745 (43692).jpg',
+      lyhyt: 'Puupiirros 1861 esittää Załuskien kirjaston talon vuoden 1745 asussa, tornissa tähtitorni.',
       selite: 'Puupiirros vuodelta 1861 esittää Załuskien kirjaston talon '
         + 'sellaisena kuin se oli 1745; katon pienessä tornissa oli '
         + 'tähtitorni.',

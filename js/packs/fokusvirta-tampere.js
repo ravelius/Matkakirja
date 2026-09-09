@@ -326,6 +326,7 @@ export const FOKUSVIRTA_TAMPERE = {
       ampari: 'herokoe/hero-tampere-aamu.jpg',
       /* Selite on lehden oman avauskuvan selite lyhennettynä yhdeksi
        * virkkeeksi; yksikään luku eikä nimi muutu. */
+      lyhyt: 'Näsilinna valmistui 1898 Karl August Wreden suunnittelemana uusbarokkipalatsina, nimeltä Milavida.',
       selite: 'Tampereen Näsilinna valmistui 1898 Karl August Wreden '
         + 'suunnittelemaksi uusbarokkipalatsiksi tehtailijasuvun '
         + 'jäsenelle Peter von Nottbeckille, joka antoi sille nimen '
@@ -405,6 +406,7 @@ export const FOKUSVIRTA_TAMPERE = {
        */
       kuva: {
         tiedosto: 'Magnus von Wright - Tammerkoski - A I 36-2 - Finnish National Gallery.jpg',
+        lyhyt: 'Tammerkosken partaalla seisoi tehtaita ja piippuja jo 1861, ennen isoisän käyntiä.',
         selite: 'Tammerkosken partaalla seisoi tehtaita ja savuavia '
           + 'piippuja jo vuonna 1861, kaksitoista vuotta ennen isoisän '
           + 'käyntiä.',
@@ -513,6 +515,7 @@ export const FOKUSVIRTA_TAMPERE = {
        */
       kuva: {
         tiedosto: 'Finlaysonin kirkko Heli Haavisto (16556986992).jpg',
+        lyhyt: 'Finlaysonin puuvillatehtaan kirkko valmistui 1879, luovutettiin seurakunnalle 1981 nimi säilyttäen.',
         selite: 'Finlaysonin puuvillatehtaan oma kirkko valmistui 1879, '
           + 'ja tehdas luovutti sen seurakunnalle 1981 ehdolla, että nimi '
           + 'säilyy.',
@@ -602,6 +605,7 @@ export const FOKUSVIRTA_TAMPERE = {
        */
       kuva: {
         tiedosto: 'Kattofresko Tampereen tuomiokirkko.jpg',
+        lyhyt: 'Tampereen tuomiokirkon pääholvin keskellä paratiisikäärme, suussaan hyvän ja pahan tiedon omena.',
         selite: 'Tampereen tuomiokirkon pääholvin keskellä kiemurtelee '
           + 'paratiisikäärme, jonka suussa on hyvän ja pahan tiedon '
           + 'omena.',
@@ -711,6 +715,7 @@ export const FOKUSVIRTA_TAMPERE = {
      */
     kuva: {
       tiedosto: 'Senate Atlas, 1870–1907. Sheet XIX-XX 24-25 Tampere.jpg',
+      lyhyt: 'Venäjän sotaministeriön topografit kartoittivat Tampereen Senaatin kartastoon nimellä Таммерфорсъ.',
       selite: 'Venäjän sotaministeriön topografit kartoittivat Tampereen '
         + 'seudun Senaatin kartastoon, jossa kaupunki on kahden järven '
         + 'välissä nimellä Таммерфорсъ.',
