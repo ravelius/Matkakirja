@@ -201,6 +201,26 @@ export const FOKUSVIRTA_MARSEILLE = {
       + '[softly] Maailma ei suostunut pesuun yhdellä yrittämällä, mutta '
       + 'käteni olivat jo toista mieltä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-marseille-r20260909-paper-v2;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-marseille-r20260909-paper-v2.jpg',
+      lyhyt: 'Saippuakauppias, köydet ja purjeveneet Marseillen vanhassa satamassa '
+        + 'vuonna 1873.',
+      selite: 'Marseille, syyskuu 1873: kauppias lepää saippuaharkkojen ja '
+        + 'laivaköyden ääressä. Vieux-Portin mastot, kalakorit ja rantatalot '
+        + 'jatkavat sataman tarinaa.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://collections.musees.marseille.fr/',
+      'https://www.musee-orsay.fr/sites/default/files/2021-10/feuilletage_cinema_2.pdf',
+      ],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

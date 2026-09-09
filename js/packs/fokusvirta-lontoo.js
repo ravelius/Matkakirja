@@ -144,6 +144,27 @@ export const FOKUSVIRTA_LONTOO = {
       + 'luokassa pehmustetut penkit. Perille päästiin nopeasti. [softly] Yskä '
       + 'saapui mukana.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lontoo.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-lontoo-r20260909-paper-v2;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-r20260909-paper-v2.jpg',
+      lyhyt: 'Höyryjuna ja sanomalehdenlukija Lontoon Metropolitan Railwayn '
+        + 'asemalla vuonna 1873.',
+      selite: 'Lontoo, joulukuu 1873: höyryjuna odottaa avokaivantoasemalla, ja '
+        + 'herrasmies lukee sanomalehteä höyryn keskellä.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://collection.sciencemuseumgroup.org.uk/objects/co8031819/henry-flather-collection-photographs',
+      'https://historicengland.org.uk/listing/the-list/list-entry/1239815?section=official-list-entry',
+      'https://collection.sciencemuseumgroup.org.uk/people/ap27611/metropolitan-railway',
+      'https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/33362',
+      ],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
