@@ -4216,6 +4216,16 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'IHMISEN MATKA: LUENTAKUVA EI SAA JAADA LINSSIN PAALLE, JA TEKSTI '
+          + 'KESKELLE RUUTUA (omistaja 9.9.2026 klo 16.35, iPhone-kaappaukset, '
+          + 'sanatarkasti: "Kartalla nakyy valokuva ja toinen korjattava asia. '
+          + 'Teksti pitaa olla keskelle ruutua. Nyt se on liian alhaalla."): '
+          + '1) Matkakirjan luentakuva (ja sen pakka) piilotetaan, kun linssi '
+          + '(Ihmisen matka, Tiedeliite) avataan, ja se saa palata vasta linssin '
+          + 'sulkeuduttua, jos pelaaja on yha samassa kaupungissa. 2) Ihmisen '
+          + 'matkan avaus- ja afrikka-jaksojen ruudulle ladottu teksti on '
+          + 'pystysuunnassa ruudun keskella kaikilla ruutukoilla (puhelin '
+          + 'mukaan lukien), ei alakolmanneksessa.',
         'TAUSTAMUSIIKIN SAADIN TOIMII OIKEASTI JA LAAJALLA VALILLA, MYOS '
           + 'IPHONELLA (omistaja 9.9.2026 klo 16.30, sanatarkasti: "Taustamusiikki '
           + 'on ainakin iPhonilla viela aivan liian kovalla. Saisiko saatimen niin, '
