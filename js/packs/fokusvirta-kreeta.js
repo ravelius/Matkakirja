@@ -70,6 +70,30 @@ export const FOKUSVIRTA_KREETA = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-kreeta-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-kreeta-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Hania: majakkaa tarvitaan siltäkin puolelta, josta sitä ei kuvata.',
+        selite: 'Hanian majakka seisoo pitkän aallonmurtajan päässä. Sataman suulta '
+          + 'sen tehtävä on helppo ymmärtää: valon paikka kertoo, missä kova '
+          + 'reuna alkaa ja avoin vesi jatkuu. Lensin matalalta ohi juuri kun '
+          + 'pieni vene palasi suojaan. Isoisän kalastaja sanoi majakan '
+          + 'kuuluvan sitä tarvitseville. Kuvan alakulmaan jäi vene. Pidin sen '
+          + 'mukana, sillä siinä oli koko vastauksen syy.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.chaniatourism.gr/monument/the-egyptian-lighthouse/',
+          'https://www.chaniatourism.gr/neighborhood/venetian-harbor/',
+        ],
+      },
+    ],
+    /*
      * KAUPUNGIN KULKU: LUENTA — PULU (Raamattu, omistaja 7.9.2026 ja sen
      * kavennus 8.9.2026: *"ota kaikki pulun alustukset pois."*).
      *

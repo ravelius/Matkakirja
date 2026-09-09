@@ -125,6 +125,59 @@ export const FOKUSVIRTA_DUBROVNIK = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-dubrovnik-01-r20260909-euv1-v1.jpg, pulu-cam-dubrovnik-02-r20260909-euv1-v1.jpg, pulu-cam-dubrovnik-03-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dubrovnik-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Dubrovnik: laskenta alkoi yhdestä märästä nenästä.',
+        selite: 'Suuren Onofrion suihkukaivon kivikasvot ovat janon asialla. '
+          + 'Ihmiset kumartuvat veden ääreen, mutta minulle sopiva '
+          + 'katselukorkeus on valmiiksi juuri tässä. Kuvasin yhden naamion '
+          + 'läheltä. Sen ilme oli vakava siihen nähden, että koko työpäivä '
+          + 'kuluu veden sylkemiseen. Isoisä vertaili makuja. Minä päätin ensin '
+          + 'selvittää, kuinka monta tällaista työtoveria rakennuksessa oikein '
+          + 'on.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.historyhit.com/locations/large-onofrio-fountain/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dubrovnik-02-r20260909-euv1-v1.jpg',
+        lyhyt: 'Dubrovnik: sama vesi, lisää puheenvuoroja.',
+        selite: 'Siirryin seuraavan sivun kohdalle. Kivikasvojen jono jatkui kaivon '
+          + 'ympäri, ja jokaiselle saapui vuorollaan joku pullon kanssa. Yksi '
+          + 'rakennus järjestää kokonaisen aukion juomatauon. Aloin ymmärtää '
+          + 'isoisän kiinnostusta, vaikka pidän veden maistelun mielelläni '
+          + 'lyhyenä toimituksena. Laskennassa oli vielä kesken se tärkeä '
+          + 'kysymys, lasketaanko ihmisten nenät mukaan.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.historyhit.com/locations/large-onofrio-fountain/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dubrovnik-03-r20260909-euv1-v1.jpg',
+        lyhyt: 'Dubrovnik: kuusitoista suuta, yksi kaivo. Tarkastettu.',
+        selite: 'Lopuksi nousin kaivon yläpuolelle. Koko rakennus asettui '
+          + 'paikalleen portin lähellä, ja vedenhakijoiden reitit erkanivat '
+          + 'takaisin kujille. Kuusitoista sivua selvisi ilman, että minun '
+          + 'tarvitsi maistaa niistä jokaista. Otin vielä tämän kuvan '
+          + 'todistusaineistoksi. Isoisällä oli karttakynä; minulla on siivet '
+          + 'ja kohtuullinen käsitys siitä, milloin laskut kannattaa tarkistaa '
+          + 'ylhäältä.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.historyhit.com/locations/large-onofrio-fountain/',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

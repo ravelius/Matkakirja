@@ -187,11 +187,11 @@ export const FOKUSVIRTA_OSLO = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
     /*
-     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
      * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
      * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
      * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-oslo-01-r20260909-euv1-v1.jpg.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-oslo-01-r20260909-euv1-v1.jpg, pulu-cam-oslo-02-r20260909-euv1-v3.jpg.
      */
     kuvat: [
       {
@@ -203,6 +203,21 @@ export const FOKUSVIRTA_OSLO = {
           + 'suuntaan, ja kenkien varjot nousivat hitaasti rinnettä. Isoisä '
           + 'näki rannassa maailmalle lähteviä lankkuja. Nyt täällä katsellaan, '
           + 'miten kaupunki rakentaa itselleen yhteyttä vuonoon myös ylhäältä.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.operaen.no/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-oslo-02-r20260909-euv1-v3.jpg',
+        lyhyt: 'Oslo: katon idea näkyi paremmin, kun nousin siitä irti.',
+        selite: 'Lennosta oopperan katto asettuu vuonon reunalle kuin kaupungin '
+          + 'jatkama kävelytie. Alempana ihmiset pysähtyvät katsomaan vettä; '
+          + 'ylempänä näkyy uusia rakennuksia. Samaa reunaa voi käyttää niin '
+          + 'monella tavalla, että siitä kannattaa ottaa toinenkin kuva. '
+          + 'Ensimmäisessä seurasin kenkiä. Tässä tarkistin, mihin ne ovat '
+          + 'menossa. Arvostan arkkitehtuuria, joka ei lopu ihmisen pään '
+          + 'korkeudelle.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.operaen.no/',

@@ -221,6 +221,30 @@ export const FOKUSVIRTA_PIETARI = {
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-pietari-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-pietari-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Pietari: kello näyttää yötä, kaupunki esittää vastalauseen.',
+        selite: 'Nevan rannassa vaalea kesäyö tekee kellonajasta huonon '
+          + 'maisemaoppaan. Ihmiset pysähtyvät kaiteelle, vaikka päivän pitäisi '
+          + 'jo olla valmis. Istuin kivireunalla ja kuvasin tyhjän penkin, '
+          + 'jolle joku oli jättänyt tilaa toisellekin. Isoisä jatkoi '
+          + 'kirjoittamista. Minä otin vielä yhden ruudun. Tämän valon kanssa '
+          + 'ongelmana ei ole, ettei näkisi, vaan ettei tahdo lopettaa '
+          + 'katsomista.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.awaywithmaja.com/guide-st-petersburgs-white-nights/',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
      * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
      * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa

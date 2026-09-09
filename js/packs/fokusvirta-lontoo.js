@@ -201,6 +201,33 @@ export const FOKUSVIRTA_LONTOO = {
    * kulku on täsmälleen ennallaan.
    */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-lontoo-01-r20260909-paikka-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lontoo-01-r20260909-paikka-v2.jpg',
+        lyhyt: 'Lontoo: parlamentti jäi taustalle. Penkillä oli tärkeämpää.',
+        selite: 'Istuin Thamesin rantapenkin reunalle. Elizabeth Tower näkyy joen '
+          + 'toisella puolella parlamentin pohjoispäässä, mutta aivan nokan '
+          + 'edessä on muru. Sitä ei ole merkitty yhteenkään karttaan. '
+          + 'Westminsterin sillalla punainen bussi vie ihmisiä eteenpäin; minun '
+          + 'ei tarvitse lähteä vielä mihinkään. Isoisä valitsi maanalaisen '
+          + 'vaunun. Tällä penkillä on parempi ilmanvaihto ja oma tarjoilu.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://southbank.london/see-and-do/queens-walk',
+          'https://www.parliament.uk/about/living-heritage/building/palace-westmister-at-150/external-architecture-/',
+          'https://commons.wikimedia.org/wiki/File:London_-_Albert_Embankment_path_-_Lambeth_Palace_Road_-_South_Bank_-_Jubilee_Walkway_-_Panorama_view_on_Victoria_Tower_Gardens,_Houses_of_Parliament,_Westminster_Bridge_%26_Saint_Thomas_Medical_School_01.jpg',
+          'https://commons.wikimedia.org/wiki/File:London_-_Albert_Embankment_path_-_Lambeth_Palace_Road_-_South_Bank_-_Jubilee_Walkway_-_View_North_along_St_Thomas%27_Hospital.jpg',
+          'https://memoirsofametrogirl.com/2015/01/13/swan-benches-albert-embankment-lambeth-london-history/',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [

@@ -209,6 +209,96 @@ export const FOKUSVIRTA_VENETSIA = {
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-venetsia-01-r20260909-paikka-v2.jpg, pulu-cam-venetsia-02-r20260909-paikka-v2-v3.jpg, pulu-cam-venetsia-03-r20260909-euv2-v1.jpg, pulu-cam-venetsia-04-r20260909-euv1-v2.jpg, pulu-cam-venetsia-05-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-01-r20260909-paikka-v2.jpg',
+        lyhyt: 'Venetsia: vesibussi ja aivan sattumalta yksi paikallinen.',
+        selite: 'Punta della Doganan kärjestä näkyy San Giorgio Maggioren saari ja '
+          + 'sen edessä kulkevia vesibusseja. Tarkoitukseni oli näyttää '
+          + 'liikennettä. Rannan reunalle sattui paikallinen, joka katsoi juuri '
+          + 'oikeaan suuntaan ja osasi olla peittämättä koko näkymää. Se on '
+          + 'harvinainen taito. Kuvasin maiseman tietenkin sen vuoksi. Kuvan '
+          + 'reunassa oleva sydän on luultavasti jokin kameran asetus.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.pinaultcollection.com/palazzograssi/en/punta-della-dogana',
+          'https://www.pinaultcollection.com/palazzograssi/media/styles/big/s3/w_image/golden-hour-1_0.jpg?itok=N1pd3O6K',
+          'https://avm.avmspa.it/en/content/consult-map',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-02-r20260909-paikka-v2-v3.jpg',
+        lyhyt: 'Venetsia: sama paikallinen. Kaupunki on yllättävän pieni.',
+        selite: 'Ponte dei Pugnin alta kulkee Rio San Barnaba. Ihmiset ylittävät '
+          + 'kanavan siltaa pitkin, tavara pääsee veneellä. Tästä piti tulla '
+          + 'kuva liikenteestä. Paikallinen ehti taas etualalle, tällä kertaa '
+          + 'metallikaiteelle. Hän katsoi ensin vettä ja sitten minua. Vaihdoin '
+          + 'hieman kuvakulmaa saadakseni kanavan paremmin näkyviin. Jos lintu '
+          + 'näyttää edellistä suuremmalta, se johtuu vaativasta '
+          + 'paikkatutkimuksesta.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.veneziaunica.it/en/content/dorsoduro-art-district-venetian-origins-international-contemporary-art',
+          'https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/immagini/ponte%20dei%20pugni.jpg',
+          'https://live.comune.venezia.it/index.php/it/2025/04/una-calle-una-storia-ponte-dei-pugni',
+          'https://theboutiqueadventurer.com/landmarks-in-venice/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-03-r20260909-euv2-v1.jpg',
+        lyhyt: 'Venetsia: aukion nimi on… tiedän kyllä. Aivan varmasti.',
+        selite: 'Campo Santa Margheritan kahvilapöydistä voi seurata aukion elämää '
+          + 'nousematta tuolilta. Se oli suunnitelmani. Paikallinen laskeutui '
+          + 'viereisen tuolin selkänojalle ja kallisti päätään. Aukion toisessa '
+          + 'päässä joku käveli, varmaankin. En tarkistanut. Pöydän reunalle '
+          + 'jäi yksi muru, mutta se ei selitä, miksi kamera osoittaa aivan '
+          + 'toiseen suuntaan. Kuvassa on kaupungin elämää. Hän asuu täällä.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.cityscrolls.com/venice/campo-santa-margherita/',
+          'https://www.cityscrolls.com/venice/campo-santa-margherita/photos/large/looking-south.jpg',
+          'https://www.travellers-insight.com/europa/italien/venedig-sehenswuerdigkeiten',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-04-r20260909-euv1-v2.jpg',
+        lyhyt: 'Venetsia: tämä kuva käsittelee kuulemma lentoreittejä.',
+        selite: 'Kanavan yllä reitti on hetken suoraviivainen: vettä alhaalla ja '
+          + 'sillan kaari edessä. Hän nousi tuolilta ja lensi ensin. Minä '
+          + 'seurasin, koska paikallinen tuntee ilmavirtaukset. Se on järkevä '
+          + 'syy, Fogg. Kuvasta jäi pois osa sillasta, mutta siipien liike '
+          + 'onnistui hyvin. Niin hyvin, että säästin ruudun. Sydämiä on '
+          + 'reunoilla nyt useampia. Tutkin asetuksia myöhemmin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://live.comune.venezia.it/index.php/it/2025/04/una-calle-una-storia-ponte-dei-pugni',
+          'https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/documenti/Classic_Dorsoduro_EN.pdf',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-05-r20260909-euv1-v1.jpg',
+        lyhyt: 'Venetsia: nämä eivät kaikki kuuluneet esitykseen.',
+        selite: 'Aukion laidalla oli kaksi vierekkäistä kuivaa kohtaa samalla '
+          + 'ikkunalaudalla. Hän valitsi toisen ja jätti toisen vapaaksi. '
+          + 'Venetsiassa tila on arvokasta; siitä isoisä olisi osannut '
+          + 'kirjoittaa pitkän huomion. Minä istuin siihen. Tässä viimeisessä '
+          + 'kuvassa kaupunkia näkyy vähän, mutta muistan paikan aivan '
+          + 'tarkasti. Hetkinen. Fogg. Kuinka monta näistä sinä jo näit?',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/documenti/Classic_Dorsoduro_EN.pdf',
+          'https://www.camposantamargherita.com/bar.htm',
+          'https://commons.wikimedia.org/wiki/File:6598_-_Venezia_-_Campo_Santa_Margherita_-_S._Margherita_-_Foto_Giovanni_Dall%27Orto,_8-Aug-2007.jpg',
+        ],
+      },
+    ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
