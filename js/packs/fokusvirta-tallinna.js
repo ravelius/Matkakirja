@@ -122,6 +122,28 @@ export const FOKUSVIRTA_TALLINNA = {
       + 'lääkkeeni matkalla satamaan. [softly] Vaiva jäi, mutta hoitoon olin '
       + 'poikkeuksellisen tyytyväinen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tallinna.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-tallinna-r20260909-story-v2.jpg;
+     * omistajan hyväksymä tarinakorjaus ISOISA-TARINAKORJAUKSET-4, promptId
+     * ISOISA-TARINA-V2-tallinna). Kuvatekstit tekstisession sanasta sanaan: lyhyt
+     * kartalle, pitkä suurennokseen. Lähde on pelin oma havainnekuvamerkintä;
+     * lahteet on toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tallinna-r20260909-story-v2.jpg',
+      lyhyt: 'Reval, 1873. Apteekkari määräsi suuremman palan.',
+      selite: 'Tiskillä oli vaaka, mutta tällä kertaa apteekkari luotti '
+        + 'silmämäärään. Veitsi siirtyi hieman kauemmas, ja lääkeannokseni '
+        + 'kasvoi. Raeapteekin hyllyillä seisoi vakavia astioita; mantelista '
+        + 'ja sokerista tehty marsipaani piti niiden seurassa varsin iloista '
+        + 'virkaa. Kuvasin leikatun palan ennen lähtöä. Se osoittautui '
+        + 'hyväksi päätökseksi, sillä satamassa jäljellä oli enää paperi.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://raeapteek.ee/en/',
+        'https://visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/174823/town-hall-pharmacy',
+      ],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

@@ -204,6 +204,28 @@ export const FOKUSVIRTA_KIOVA = {
       + 'Olen tutkinut monta tapaa siirtää omaisuutta. [softly] Tämän haluan '
       + 'muistaa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kiova.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-kiova-r20260909-story-v1.jpg;
+     * omistajan hyväksymä tarinakorjaus ISOISA-TARINAKORJAUKSET-4, promptId
+     * ISOISA-TARINA-V2-kiova). Kuvatekstit tekstisession sanasta sanaan: lyhyt
+     * kartalle, pitkä suurennokseen. Lähde on pelin oma havainnekuvamerkintä;
+     * lahteet on toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kiova-r20260909-story-v1.jpg',
+      lyhyt: 'Kiova, 1873. Toinen liekki ei pienentänyt ensimmäistä.',
+      selite: 'Nainen suojasi tulta kädellään, ja toinen sydänlanka alkoi hehkua. '
+        + 'Kapeassa käytävässä ei juuri ollut tilaa väistää, mutta tuolle '
+        + 'eleelle oli. Kiovan luostarin alla kuljetaan pyhiinvaeltajien '
+        + 'jäljissä kynttilä kerrallaan. Asetin saamani valon kivireunalle '
+        + 'kameran viereen. Kuvassa se näyttää pieneltä. Sen turvin löysin '
+        + 'kuitenkin takaisin muiden luo.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://guide.kyivcity.gov.ua/lavra-vr/en/',
+        'https://whc.unesco.org/en/list/527/',
+      ],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

@@ -13,7 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 1721, teksti: 'Livialle B-kasvo ja viisi pientä elettä' },
+  { v: 1722, teksti: 'Livialle B-kasvo ja viisi pientä elettä' },
+  { v: 1721, teksti: 'Neljä hyväksyttyä isoisän paperikuvaa kartalle' },
   { v: 1720, teksti: 'PuluCam-albumi valmis: 58 kuvaa 45 kaupungissa' },
   { v: 1719, teksti: 'Venetsian albumirepliikki ja isoisän kuvatekstit' },
   { v: 1718, teksti: 'PuluCam: 35 kuvaa 30 kaupunkiin (erät 01–04, Tampere)' },
