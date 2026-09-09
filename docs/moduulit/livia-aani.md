@@ -87,6 +87,36 @@ Kuvia ei näytetä: uuden kulun kaupungin matkakirjakortti on pelkkää
 tekstiä, vaikka pakkauksessa olisi vanha `matkakirja.kuva`
 (`js/ui.js renderFact` → `fokusvirtaUusiKulku`).
 
+### Luentakuva kartan päällä (omistaja 9.9.2026)
+
+Raamattu, POSTILAATIKOSTA TULEE LUENTAKUVIA KARTAN PAALLE. Kortilla ei
+ole kuvaa (yllä oleva sääntö), mutta **kartan päällä** on luennan ajan:
+pakin vapaaehtoinen kenttä `matkakirja.luentakuva`
+(`js/packs/fokusvirta-<id>.js`) on
+
+```js
+luentakuva: {
+  ampari: 'luentakuvat/tiedosto.jpg',   // TAI osoite: 'https://media.matkakirja.app/…'
+  selite: 'Mitä kuvassa näkyy.',
+  lahde: 'Tekijä, Wikimedia Commons (CC BY 4.0)',
+},
+```
+
+Osoite ratkeaa samalla porrastuksella kuin kortin kuvilla ja `pollo.kuva`:lla
+(`osoite` → `ampari` → Commonsin `tiedosto`, `js/fokusvirta.js kuvanOsoite`).
+Kuva **esiladataan saapumisesta** (`esilataaLuentakuva`,
+`fokusvirtaSaapuminen`), **nousee** kartan päälle luennan alkaessa
+pehmeästi omaan kevyeen paneeliinsa (`naytaLuentakuva`, css
+`.fokusvirta-luentakuva`; selite ohuena rivinä kuvan alla ja lähde sen
+perässä, koska CC BY vaatii maininnan) ja **poistuu** kolmesta syystä:
+luenta päättyy (`js/luenta.js luennanLoppuun`, ilman äänitettä
+kirjoituskoneen tahti), kartta liikkuu (sama `pointerdown`, joka supistaa
+kuplapinon) tai pelaaja lähtee kaupungista
+(`vaiennaLivianKaupunkipuhe`). Napautus kuvaan avaa saman suurennoksen
+kuin kortin kuvat. Paneeli on karttapinnan keskikaistalla, jottei se
+peitä matkakirjakorttia (ylävasen) eikä pulun kuplia (oikea alanurkka).
+Ilman kenttää kaupungin kulku on täsmälleen ennallaan.
+
 Vanha `pollo.maadoitus` on **varapolku** kaupungille, jota ei ole vielä
 kirjoitettu uusiksi: se piirtyy kommenttina eli luennan jälkeen kuten
 ennenkin.
