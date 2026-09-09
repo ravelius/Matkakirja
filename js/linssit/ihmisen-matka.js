@@ -130,16 +130,21 @@ function laatikoksi(arvo, otsikko) {
 }
 
 /**
- * Avausjakson laatikko: kaaren alkusanat ja niiden rinnalle nostettu
- * havainnekuva. Kuva liitetään vasta tässä, jotta aineistotiedosto
- * pysyy tarinatekstien puolella eikä tiedä laatikon asettelusta.
+ * Avausjakson laatikko: kaaren alkusanat ja niiden TAUSTALLE pyörivät
+ * havainnekuvat. Kuvat liitetään vasta tässä, jotta aineistotiedosto
+ * pysyy tarinatekstien puolella eikä tiedä avauksen asettelusta.
+ *
+ * PAPERILLA EI OLE OMAA KUVAA (omistaja 9.9.2026: *"sitten paperi ja
+ * teksti näiden päälle ilman kuvaa."*): kenttää `kuva` ei enää anneta,
+ * jolloin moottori piirtää täsmälleen entisen yhden palstan paperin
+ * (js/aikajana.js avaaAvausjakso, css/aikajana.css `.on-kuva`).
  */
 function avauslaatikko() {
   const laatikko = laatikoksi(data.IHMISEN_MATKA_ALOITUS, 'Ihmisen matka')
     ?? laatikoksi(data.IHMISEN_MATKA_ESITTELY, 'Ihmisen matka');
   if (!laatikko) return null;
-  const kuva = avauksenKuva();
-  return kuva ? { ...laatikko, kuva } : laatikko;
+  const taustakuvat = avauksenTaustakuvat();
+  return taustakuvat.length ? { ...laatikko, taustakuvat } : laatikko;
 }
 
 /**
@@ -166,40 +171,49 @@ export const ESITYKSEN_KUVAT = [
 ];
 
 /**
- * AVAUSLAATIKON KUVA (omistaja 7.9.2026 ilta, sanatarkasti: *"tuohon
- * tekstin rinnalle voisi nostaa jonkun hienon kuvan, mitä jo on
- * generoitu tuohon tuota linssiä varten, ja samalla voisi tehdä
- * suuremmaksi tuon Itse paperin, missä tuo teksti on, jotta se kuvakin
- * mahtuu paremmin."*; Raamattu › "IHMISEN MATKAN AVAUSTEKSTI
- * LYHYEKSI, KUVA RINNALLE").
+ * ALOITUSKORTIN TAUSTAKUVAT (omistaja 9.9.2026 klo 15.40, sanatarkasti:
+ * *"tähän aloitukseen voisi tuoda muutamia kuvia isona taustalle niin
+ * että ne liikkuvat hitaasti ja vaihtuvat muutaman sekunnin välein (ken
+ * burns tyylinen liike + ristihäivytys). kuvien tulisi feidautua mustaan
+ * reuna-alueilla ja kuvat hieman sumennettuina ja tummennettuina. sitten
+ * paperi ja teksti näiden päälle ilman kuvaa."*; Raamattu › "IHMISEN
+ * MATKAN ALOITUSKORTTI: KEN BURNS -KUVAT TAUSTALLA…").
  *
- * KUVAA EI GENEROIDA UUTTA eikä sen osoitetta kirjoiteta tähän käsin:
- * kuva otetaan AINEISTOSTA tunnuksella, joten kuvaputken uusi erä
- * (osoite, kuvateksti, lähderivi) seuraa mukana yhdessä paikassa.
+ * Tämä KORVAA edellisen linjauksen "kuva tekstin rinnalle"
+ * (AVAUKSEN_KUVA_TUNNUS = 'white-sands', 7.9.2026): paperilla ei ole
+ * enää kuvaa lainkaan, ja havainnekuvat ovat sen takana koko linssin
+ * kokoisina.
  *
- * MIKSI WHITE SANDS. Avausteksti päättyy nyt lauseeseen *"jokainen
- * sukupolvi siirtyi vain vähän kauemmas kuin edellinen, ja tuhat
- * sukupolvea myöhemmin oltiin toisella puolella maapalloa"*, ja
- * White Sandsin havainnekuva on tasan se lause kuvana: kaksi kulkijaa
- * selin katsojaan, jalanjäljet jatkuvat eteenpäin märkään savikkoon,
- * takana vuoret ja yksi mammutti — ja paikka ON maapallon toinen
- * puoli (New Mexico). Kuva on leveä maisema, siinä ei ole kasvoja
- * eikä luita, ja se ei ole esityksen kuudesta kuvasta
- * (ESITYKSEN_KUVAT) — avaus ei siis paljasta mitään, minkä pelaaja
- * näkee kohta uudestaan, vaan tämä on yksi galleriaan jäävistä
- * neljästätoista.
+ * KUUSI KUVAA MATKAN JÄRJESTYKSESSÄ. Tausta kertoo saman matkan kuin
+ * kaari, alusta loppuun, ja kierros alkaa alusta: Marokon kukkula →
+ * eteläisen Afrikan ranta → Arabian järvimaa → Australia → Beringian
+ * maasilta → Amerikan eteläkärki. Luku on KUUSI eikä mikä tahansa:
+ * ristihäivytyksen rytmi on ladottu CSS:ään kuuden kuvan kierroksena
+ * (css/aikajana.css "ALOITUSKORTIN KEN BURNS -TAUSTA",
+ * `--avaus-tausta-kierros`), joten listan pituuden muuttaminen vaatii
+ * myös keyframe-prosenttien laskemisen uudelleen. Vartioitu testissä
+ * (tests/ihmisen-matka.test.mjs).
+ *
+ * KUVIA EI GENEROIDA UUTTA eikä niiden osoitteita kirjoiteta tähän
+ * käsin: ne otetaan AINEISTOSTA tunnuksilla, joten kuvaputken uusi erä
+ * seuraa mukana yhdessä paikassa.
  */
-export const AVAUKSEN_KUVA_TUNNUS = 'white-sands';
+export const ALOITUKSEN_TAUSTAKUVAT = [
+  'jebel-irhoud', 'pinnacle-point', 'al-wusta', 'madjedbebe', 'beringia', 'monte-verde',
+];
 
 /**
- * Avauslaatikon kuva aineistosta. Palauttaa moottorin odottaman
- * kuvatiedon (`osoite`, `kuvateksti`, `lahde`) tai nullin, jos
- * tunnusta ei löydy — puuttuva kuva jättää laatikon entiselleen eikä
- * kaada avausta.
+ * Aloituskortin taustakuvat aineistosta, listan järjestyksessä.
+ * Palauttaa moottorin odottamat kuvatiedot (`osoite`, `kuvateksti`,
+ * `lahde`); tuntematon tunnus jätetään pois, jolloin tausta vain
+ * lyhenee eikä avaus kaadu. Tyhjä lista = ei taustaa lainkaan, ja
+ * aloituskortti näyttää täsmälleen entiseltä mustaa vasten.
  */
-export function avauksenKuva(tapahtumat = AINEISTO, tunnus = AVAUKSEN_KUVA_TUNNUS) {
-  const pysakki = (tapahtumat ?? []).find((t) => t.tunnus === tunnus);
-  return pysakki?.kuva?.osoite ? { ...pysakki.kuva } : null;
+export function avauksenTaustakuvat(tapahtumat = AINEISTO, tunnukset = ALOITUKSEN_TAUSTAKUVAT) {
+  return (tunnukset ?? [])
+    .map((tunnus) => (tapahtumat ?? []).find((t) => t.tunnus === tunnus))
+    .filter((pysakki) => pysakki?.kuva?.osoite)
+    .map((pysakki) => ({ ...pysakki.kuva }));
 }
 
 /**

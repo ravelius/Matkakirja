@@ -31,7 +31,9 @@ import { karjenPaino } from '../js/aikajana-vanat.js';
 import {
   KERTOMUKSEN_MERKKIA_SEKUNNISSA, kertomuksenLuennat, kertomuksenRunko, kertomuksenVarakesto,
 } from '../js/linssipuhe.js';
-import { LIVIAN_AANILAHTEET, LIVIAN_LINSSILAHTEET, livianLinssiIndeksi } from '../js/liviapuhe.js';
+import {
+  LIVIAN_AANILAHTEET, LIVIAN_LINSSILAHTEET, LIVIAN_VALIHUOMION_VAIMENNUS, livianLinssiIndeksi,
+} from '../js/liviapuhe.js';
 import { IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
 import { IHMISEN_MATKA } from '../js/linssit/ihmisen-matka-data.js';
 import { TAHTIKERROKSET } from '../js/pallolauta/tahdet.js';
@@ -40,9 +42,11 @@ import {
   ESITYKSEN_ALUEET, ESITYKSEN_LAHIKUVA, IHMISEN_MATKA_KUVAT_ESITYKSESSA, KUVAN_OSUUS,
   LOPUN_ASETUS_MS, alueenLaatikko, jaksonTahti, kelauksenPehmennys,
   jaksonRajaus, KARJEN_ETAISYYS_MAX_AST, HAARAN_ETAISYYS_MAX_AST, KARJEN_LIIKE_MIN_AST,
-  AVAUKSEN_SANA, AVARUUDEN_KORKEUS, AVARUUDEN_MS, LAUSEEN_HAIVE_MS, MUSTAN_HETKI_MS,
-  TAHTIEN_FEIDI_MS, TAHTIEN_KERROIN, TEKSTIN_LASKU_MS,
-  jaaLauseiksi, lauseidenHetket, pallonOsuusRuudusta, sananHetki,
+  AVAUKSEN_SANA, AVARUUDEN_KORKEUS, AVARUUDEN_MS, AVARUUDEN_MIN_MS, LAUSEEN_HAIVE_MS,
+  FEIDIN_OSUUS, MUSTAN_OSUUS, TAHTIEN_FEIDI_MS, TAHTIEN_KERROIN, TEKSTIN_LASKU_MS,
+  MAROKON_JARRU, MAROKON_POHJA_MS, PULUN_VAIMENNUS_PUTKESSA, PULUN_VARA_MS,
+  avauksenVaiheet, jaaLauseiksi, jaksojenValiMs, lauseidenHetket, marokonPehmennys,
+  pallonOsuusRuudusta, sananHetki,
 } from '../js/linssit/ihmisen-matka-esitys.js';
 import { valitseKertomus, kokoaKertomusManifesti } from '../tools/generoi-linssiluennat.mjs';
 
@@ -225,18 +229,21 @@ test('kertomusmanifesti kattaa koko kaanonin', () => {
   assert.match(manifesti.kansio, /ihmisen-matka\/puhe$/);
 });
 
-/* ============ 3b. AVAUS: MUSTA, TÄHDET, PISTE, LAUSEET ============ */
+/* ==== 3b. AVAUS: MUSTA VIRKE, PISTE, AFRIKKA, MAROKON AJO ==== */
 
 /*
- * Raamattu "IHMISEN MATKA: ETELA-AFRIKKA VAIN KERRAN … JA AVAUS
- * MUSTASTA TAHTIIN JA AFRIKKAAN SANAN KOHDALLA" (omistaja 8.9.2026,
- * sanatarkasti): *"Linssin aloitus voisi olla kokonaan musta ruutu ja
- * sitten siihen feidautuisi ensin tähtiä ja sitten ihan pienestä
- * pisteestä zoomautuisi afrikka esiin juuri sillä hetkellä kun kertoja
- * mainitsee sanan afrikka. Jokainen lause voisi tulla tämän kappaleen
- * loppuun asti yksitellen keskelle ruutua. Vasta kun siirrytään
- * ensimmäiseen kohteeseen tekstit hyppäävät alas nykyiselle
- * paikalleen."*
+ * Raamattu "IHMISEN MATKAN ALKUANIMAATIO: ENSIMMAINEN VIRKE MUSTALLE,
+ * PALLO TAHTIEN KESKELLA PISTEENA, AFRIKKA TAYTTAA RUUDUN KUN SE
+ * MAINITAAN, KAMERA KIIHTYY MAROKKOON" (omistaja 9.9.2026 klo 15.15,
+ * sanatarkasti): *"ensimmäinen virke saisi tulla täysin mustalle
+ * näytölle. sitten musta feidautuisi pois näkyvistä ja maapallo tulisi
+ * näkyviin tähtien keskellä aivan pienenä pisteenä, ei juuri tähtiä
+ * isompana. sen jälkeen maapallo saisi zoomautua nopeasti niin lähelle
+ * että afrikka täyttää koko peli-ikkunan sillä hetkellä kun lukija
+ * mainitsee afrikan ensimmäistä kertaa. tämän jälkeen kamera saa alkaa
+ * hitaasti liikkua kohti ensimmäistä kohdetta marokossa ja sen vauhti
+ * voi kiihtyä loppua kohden kunnes hidastaa juuri ennen kuin saapuu
+ * perille kun marokon teksti alkaa."*
  *
  * Selaimen puoli (mitä ruudulla oikeasti näkyy) on savukkeessa
  * tools/savukkeet/savuke-ihmisen-esitys.mjs; tässä vartioidaan se, mikä
@@ -249,25 +256,117 @@ test('avaus alkaa mustasta ruudusta ilman palloa ja tähtiä', () => {
   assert.match(OHJAAJA, /tila\.tahdet\?\.paivita\(0, 0\);/,
     'tähdet syntyvät näkyvinä — ruutu ei ole kokonaan musta');
   assert.match(CSS, /\.aikajana-esitys-peite\.avaruus\.musta \{ opacity: 1;/);
-  // 2. Pallo on niin kaukana, että se on piste: alle 6 % ruudun
-  //    korkeudesta (vanha avaus 7,5 oli 27 %, laudan katto 2,5 yli 60 %).
+  // 2. PALLO ON PISTE, EI JUURI TÄHTEÄ ISOMPI (omistaja 9.9.2026).
+  //    Alle prosentin ruudun korkeudesta eli noin 6 px 800 px:n
+  //    ruudulla; vanha korkeus 50 antoi 4,5 % (36 px), 7,5 antoi 27 %.
   const osuus = pallonOsuusRuudusta(AVARUUDEN_KORKEUS);
-  assert.ok(osuus > 0 && osuus < 0.06, `pallo on ${(osuus * 100).toFixed(1)} % ruudun korkeudesta`);
+  assert.ok(osuus > 0 && osuus < 0.01, `pallo on ${(osuus * 100).toFixed(2)} % ruudun korkeudesta`);
+  assert.ok(osuus * 800 <= 6.5, `pallo on ${(osuus * 800).toFixed(1)} px 800 px:n ruudulla`);
   assert.ok(pallonOsuusRuudusta(7.5) > 0.25, 'vertailuluku muuttui: kaava on rikki');
+  assert.ok(pallonOsuusRuudusta(50) > 0.04, 'vanha korkeus 50 ei ollut piste');
   // 3. Tähdet venytetään samassa suhteessa, jotta taivas on joka
   //    suunnassa eikä rypäs pallon vieressä: kirkkain kerros jää
-  //    kameran (1 + AVARUUDEN_KORKEUS) taakse.
+  //    kameran (1 + AVARUUDEN_KORKEUS) taakse — ja kauimmainenkin tähti
+  //    mahtuu kameran far-tasoon (1 250 pallonsädettä).
   const kaukaisin = Math.max(...TAHTIKERROKSET.map((k) => k.korkeus[1])) * TAHTIEN_KERROIN;
   assert.ok(kaukaisin > 1 + AVARUUDEN_KORKEUS,
     `tähdet (${kaukaisin}) jäävät kameran (${1 + AVARUUDEN_KORKEUS}) eteen ryppääksi`);
-  // 4. Feidaus on omistajan mitassa (1,5–2 s) ja alkaa lyhyen mustan jälkeen.
+  assert.ok(1 + kaukaisin + AVARUUDEN_KORKEUS < 1250,
+    `taivas (${Math.round(1 + kaukaisin + AVARUUDEN_KORKEUS)}) leikkautuu far-tasoon`);
+  // 4. Feidauksen katto on omistajan mitassa (1,5–2 s), mutta itse kesto
+  //    tulee luennasta: css lukee sen muuttujasta eikä omasta luvustaan.
   assert.ok(TAHTIEN_FEIDI_MS >= 1500 && TAHTIEN_FEIDI_MS <= 2000, `${TAHTIEN_FEIDI_MS} ms`);
-  assert.ok(MUSTAN_HETKI_MS > 0 && MUSTAN_HETKI_MS < 1000, `${MUSTAN_HETKI_MS} ms`);
-  assert.match(CSS, /\.aikajana-esitys-peite\.avaruus \{[\s\S]{0,160}transition: opacity 1800ms ease 300ms;/,
-    'css-liuku ei vastaa TAHTIEN_FEIDI_MS + MUSTAN_HETKI_MS');
+  assert.match(CSS, /\.aikajana-esitys-peite\.avaruus \{[\s\S]{0,200}transition: opacity var\(--avauksen-feidi, 1800ms\) ease;/,
+    'css-liuku ei lue feidausta ohjaajan muuttujasta');
+  assert.match(CSS, /\.aikajana-esitys-peite\.avaruus\.kirkastuu \{[\s\S]{0,120}var\(--avauksen-zoomi, 7000ms\)/);
+  assert.match(OHJAAJA, /peite\.style\.setProperty\('--avauksen-feidi', `\$\{Math\.max\(0, Math\.round\(feidi\)\)\}ms`\);/);
   // 5. Tähtien nousu on kehyssilmukassa eikä koskaan laske.
   assert.match(OHJAAJA, /tila\.tahtiEsiin = Math\.max\(tila\.tahtiEsiin, nousu\);/);
-  assert.match(OHJAAJA, /tila\.tahdet\.paivita\(dt, Math\.min\(tahtienEsiinTulo\(\), haipyy\)\);/);
+  assert.match(OHJAAJA, /tila\.tahdet\.paivita\(dt, Math\.min\(tahtienEsiinTulo\(ajat\), haipyy\)\);/);
+});
+
+test('avauksen vaiheet lasketaan luennan aikaleimoista', () => {
+  // Ensimmäinen virke mustalla: musta kestää lauseet[1]:een asti.
+  const v = avauksenVaiheet({ lauseet: [0, 3000, 4500, 6000, 7500], sana: 6000, kesto: 8400 });
+  assert.equal(v.musta, 3000, 'musta ei kestä ensimmäistä virkettä');
+  assert.equal(v.afrikka, 6000);
+  // Feidaus mahtuu mustan ja sanan väliin eikä syö koko rakoa.
+  assert.ok(v.feidi > 0 && v.feidi <= TAHTIEN_FEIDI_MS);
+  assert.equal(v.feidi, (v.afrikka - v.musta) * FEIDIN_OSUUS);
+  assert.equal(v.piste, v.musta + v.feidi);
+  // ZOOMI PÄÄTTYY SANAAN: alku + kesto = sanan hetki.
+  assert.equal(v.zoomAlku + v.zoomKesto, v.afrikka);
+  assert.ok(v.zoomAlku >= v.piste - 1, 'zoomi lähtee ennen kuin pallo on näkyvissä');
+  // Ilman lauseita musta on osuus matkasta sanaan.
+  const ilman = avauksenVaiheet({ sana: 6000, kesto: 8400 });
+  assert.equal(ilman.musta, 6000 * MUSTAN_OSUUS);
+  // Lyhyt äänite: zoomille jää aina vähimmäisaikansa, eikä musta syö sitä.
+  const lyhyt = avauksenVaiheet({ lauseet: [0, 900], sana: 1000, kesto: 1200 });
+  assert.equal(lyhyt.zoomKesto, AVARUUDEN_MIN_MS);
+  assert.ok(lyhyt.musta <= Math.max(0, 1000 - AVARUUDEN_MIN_MS));
+  // Pitkä äänite: zoomi ei veny yli katon.
+  const pitka = avauksenVaiheet({ lauseet: [0, 2000], sana: 60000, kesto: 90000 });
+  assert.equal(pitka.zoomKesto, AVARUUDEN_MS);
+  assert.equal(pitka.zoomAlku + pitka.zoomKesto, 60000);
+  // Ei sanaa lainkaan: vaiheet mahtuvat silti jakson sisään.
+  const eiSanaa = avauksenVaiheet({ lauseet: [0, 2000], kesto: 8000 });
+  assert.equal(eiSanaa.afrikka, 8000);
+  assert.ok(eiSanaa.zoomAlku + eiSanaa.zoomKesto <= 8000);
+});
+
+test('kaanonin avaus: musta, piste ja zoomi osuvat oikeisiin lauseisiin', () => {
+  const avaus = IHMISEN_MATKA_KERTOMUS[0];
+  const kesto = kertomuksenVarakesto(avaus);
+  const lauseet = jaaLauseiksi(avaus.teksti);
+  const hetket = lauseidenHetket(lauseet, kesto);
+  const v = avauksenVaiheet({ lauseet: hetket, sana: sananHetki(avaus.teksti, AVAUKSEN_SANA, kesto), kesto });
+  // Musta kestää tasan ensimmäisen virkkeen ("Tiedätkö, mistä…?").
+  assert.equal(Math.round(v.musta), Math.round(hetket[1]));
+  // Pallo on esillä pisteenä ennen kuin kertoja sanoo "Afrikasta".
+  assert.ok(v.piste < v.afrikka, `${v.piste} vs ${v.afrikka}`);
+  // Zoomi on nopea (omistaja: "zoomautua nopeasti") muttei räpsähdys.
+  assert.ok(v.zoomKesto >= AVARUUDEN_MIN_MS && v.zoomKesto < 4000, `${Math.round(v.zoomKesto)} ms`);
+  // Ja se päättyy sanaan, ei ala siitä.
+  assert.equal(Math.round(v.zoomAlku + v.zoomKesto), Math.round(v.afrikka));
+});
+
+test('kamera lähtee Marokkoon hitaasti, kiihtyy ja jarruttaa perille', () => {
+  // Käyrä on 0…1 ja monotoninen: kamera ei koskaan peruuta.
+  assert.equal(marokonPehmennys(0), 0);
+  assert.ok(Math.abs(marokonPehmennys(1) - 1) < 1e-9, `${marokonPehmennys(1)}`);
+  let edellinen = -1;
+  for (let i = 0; i <= 100; i += 1) {
+    const arvo = marokonPehmennys(i / 100);
+    assert.ok(arvo >= edellinen - 1e-12, `käyrä laskee kohdassa ${i / 100}`);
+    edellinen = arvo;
+  }
+  // HIDAS LÄHTÖ: puolivälissä on kuljettu selvästi alle puolet matkasta
+  // (tasainen vauhti antaisi 0,5, laudan oma trapetsi hieman alle).
+  assert.ok(marokonPehmennys(0.5) < 0.3, `puolivälissä ${marokonPehmennys(0.5).toFixed(3)}`);
+  // KIIHTYY LOPPUA KOHDEN: nopeus kasvaa jarrutuskohtaan asti…
+  const nopeus = (t) => marokonPehmennys(t + 0.01) - marokonPehmennys(t);
+  assert.ok(nopeus(0.6) > nopeus(0.3) && nopeus(0.3) > nopeus(0.1), 'vauhti ei kiihdy');
+  // …ja HIDASTAA JUURI ENNEN PERILLE TULOA.
+  assert.ok(nopeus(0.99) < nopeus(MAROKON_JARRU - 0.05) * 0.35, 'ei jarruta lopussa');
+  assert.ok(MAROKON_JARRU > 0.6 && MAROKON_JARRU < 0.95, `${MAROKON_JARRU}`);
+  // Ajo lähtee valojen syttyessä eli sillä hetkellä, kun Afrikka on
+  // ruudussa, ja sen kesto on aika ensimmäisen kohteen jakson alkuun.
+  assert.match(OHJAAJA, /function sytytaValot\(\) \{[\s\S]{0,200}aloitaKohdeajo\(\);/);
+  assert.match(OHJAAJA, /pehmennys: marokonPehmennys,/);
+  assert.match(OHJAAJA, /const rivi = ensimmainenKohde \? luenta\.leimat\(ensimmainenKohde\.id\) : null;/);
+  assert.match(OHJAAJA, /if \(jakso\.alue && !tila\.kohdeajo\) ajaAlueeseen\(jakso\.alue, alueenKesto\);/,
+    "'afrikka'-jakso nykäisee kameran takaisin kesken Marokon ajon");
+  assert.match(OHJAAJA, /if \(tila\.kohdeajo\) tila\.kohdeajo = false;\n\s*else ajaKohteeseen\(/);
+  assert.ok(MAROKON_POHJA_MS > 0);
+  // Varareitti ilman ääntä: aika lasketaan varakestoista.
+  const kertomus = IHMISEN_MATKA_KERTOMUS;
+  const kohde = kertomus.find((j) => j.kohde);
+  const i = kertomus.indexOf(kohde);
+  assert.ok(i >= 1, 'ensimmäinen kohde on heti kaaren alussa');
+  const valissa = kertomus.slice(1, i).reduce((s, j) => s + kertomuksenVarakesto(j), 0);
+  assert.ok(Math.abs(jaksojenValiMs(kertomus, 0, kohde.id, 1000) - (1000 + valissa)) < 1);
+  assert.equal(jaksojenValiMs(kertomus, 5, kertomus[2].id, 1000), null, 'takaperin ei lasketa');
+  assert.equal(jaksojenValiMs(kertomus, 0, 'ei-tallaista', 1000), null);
 });
 
 test('avausjakso jakautuu lauseiksi ja neljäs lause on Afrikasta', () => {
@@ -314,7 +413,7 @@ test('lauseiden ja sanan hetket ovat merkkiosuuksia — aikaleimat voittavat', (
   assert.ok(Math.abs(sananHetki(teksti, 'Kolme', 12000, { sanat: [0, 1000] }) - 6000) < 1);
 });
 
-test('zoomi lähtee sanasta Afrikasta eikä jakson alusta', () => {
+test('zoomi päättyy sanaan Afrikasta eikä lähde siitä', () => {
   const avaus = IHMISEN_MATKA_KERTOMUS[0];
   const kesto = kertomuksenVarakesto(avaus);
   const hetki = sananHetki(avaus.teksti, AVAUKSEN_SANA, kesto);
@@ -322,20 +421,23 @@ test('zoomi lähtee sanasta Afrikasta eikä jakson alusta', () => {
   const hetket = lauseidenHetket(lauseet, kesto);
   // Sanan hetki on täsmälleen neljännen lauseen alku — se on "Afrikasta.".
   assert.ok(Math.abs(hetki - hetket[3]) < 1, `${hetki} vs ${hetket[3]}`);
-  // Ja se on jakson loppupuolella: musta ja tähdet ehtivät ensin.
+  // Ja se on jakson loppupuolella: musta virke ja piste ehtivät ensin.
   assert.ok(hetki > kesto * 0.6 && hetki < kesto, `${Math.round(hetki)} / ${Math.round(kesto)} ms`);
-  assert.ok(hetki > MUSTAN_HETKI_MS + TAHTIEN_FEIDI_MS,
-    'zoomi lähtisi ennen kuin tähdet ovat esillä');
-  // Kytkentä: kehyssilmukka odottaa hetkeä, ja hetki tulee luennasta
-  // tai kaanonin aikaleimoista.
+  // Kytkentä: kehyssilmukka odottaa zoomin LÄHTÖÄ (avauksenVaiheet), ja
+  // hetki tulee luennasta tai kaanonin aikaleimoista.
+  // Kesto lasketaan LÄHTÖHETKELLÄ (afrikka − kulunut), jotta myöhässä
+  // tullut kehys ei myöhästytä perille tuloa.
   assert.match(OHJAAJA,
-    /if \(tila\.avausOdottaa && tila\.i === 0 && tila\.kulunut >= avauksenHetki\(\)\) \{\n\s*kaynnistaAvaruusajo\(\);/);
+    /if \(tila\.avausOdottaa && tila\.kulunut >= ajat\.zoomAlku\) \{\n\s*kaynnistaAvaruusajo\(ajat\.afrikka - tila\.kulunut\);/);
+  assert.match(OHJAAJA,
+    /if \(tila\.mustaPaalla && tila\.kulunut >= ajat\.musta\) nostaMusta\(ajat\.feidi\);/);
   assert.match(OHJAAJA,
     /sananHetki\(jakso\?\.teksti, AVAUKSEN_SANA, Math\.max\(1, tila\.luenta\), jakso\?\.aikaleimat\)/);
-  // Zoomi mahtuu avaus- ja afrikka-jaksojen loppuun: valot syttyvät
-  // vasta kun pallo on perillä, joten se ei saa venyä kolmanteen jaksoon.
-  const tilaa = (kesto - hetki) + kertomuksenVarakesto(IHMISEN_MATKA_KERTOMUS[1]);
-  assert.ok(AVARUUDEN_MS < tilaa, `zoomi ${AVARUUDEN_MS} ms > tilaa ${Math.round(tilaa)} ms`);
+  // Zoomi mahtuu avausjakson sisään: se päättyy sanaan, joten valot
+  // syttyvät jo ennen kuin 'afrikka'-jakso alkaa.
+  const v = avauksenVaiheet({ lauseet: hetket, sana: hetki, kesto });
+  assert.ok(v.zoomAlku > 0 && v.zoomAlku + v.zoomKesto <= kesto,
+    `zoomi ${Math.round(v.zoomAlku)}…${Math.round(v.zoomAlku + v.zoomKesto)} / ${Math.round(kesto)} ms`);
 });
 
 test('valot syttyvät vasta kun pallo on perillä', () => {
@@ -401,15 +503,44 @@ test('pulun välihuomiot ovat samassa järjestyksessä taulussa ja kaanonissa', 
   assert.ok(LIVIAN_AANILAHTEET.includes('ihmisen-matka'));
 });
 
-test('välihuomio soi kertojan päälle eikä kertoja väisty', () => {
+test('välihuomio soi kertojan päälle hiljempaa eikä kertoja väisty', () => {
   assert.match(OHJAAJA, /soitaLivianLinssiAani\(/);
   const puhe = readFileSync(new URL('../js/liviapuhe.js', import.meta.url), 'utf8');
   assert.match(puhe, /export const LIVIAN_VALIHUOMION_VAIMENNUS = 0\.7;/);
   assert.match(puhe, /vaimennus = LIVIAN_VALIHUOMION_VAIMENNUS, vaista = false/);
+  /*
+   * PUTKESSA HILJEMPAA (Raamattu KERTOJA LUKEE KOKO KERTOMUKSEN
+   * PUTKEEN, PULU PUHUU HILJEMPAA KERTOJAN PAALLE; omistaja 9.9.2026:
+   * *"pulu voi puhua hieman hiljempaa kertojan päälle omat
+   * kommentit"*). Kertoja ei enää vaikene välihuomion ajaksi, joten
+   * taso on entisen välihuudon (0,7) alapuolella.
+   */
+  assert.equal(PULUN_VAIMENNUS_PUTKESSA, 0.55);
+  assert.ok(PULUN_VAIMENNUS_PUTKESSA < LIVIAN_VALIHUOMION_VAIMENNUS
+    && PULUN_VAIMENNUS_PUTKESSA > 0.4, `${PULUN_VAIMENNUS_PUTKESSA}`);
+  assert.match(OHJAAJA,
+    /const vaimennus = luenta\.yhtena\(\) \? PULUN_VAIMENNUS_PUTKESSA : LIVIAN_VALIHUOMION_VAIMENNUS;/);
+  // EI VÄISTÖÄ eikä puhevuoron varausta: sama reitti kuin fokusvirran
+  // huudahduksella (js/fokusvirta.js).
+  assert.match(OHJAAJA, /teksti: jakso\.pulu, vaimennus, vaista: false,/);
   // Kupla on linssin oma (ohittaa kuplaportin) ja välihuudon mittainen.
   assert.match(OHJAAJA, /polloLinssikupla\(\[jakso\.pulu\], \{/);
   assert.match(OHJAAJA, /luokka: 'aikajana-kertomus-pulu'/);
   assert.match(CSS, /\.aikajana-kertomus-pulu \{/);
+});
+
+test('putkessa ei ole jakson häntää, jakso kerrallaan on', () => {
+  /*
+   * Raamattu KERTOJA LUKEE KOKO KERTOMUKSEN PUTKEEN: *"Jaksojen välissä
+   * ei ole taukoa eikä pulun varaa."* Häntä on jakso kerrallaan -tilan
+   * asia, ja pulu puhuu jakson OMAN PUHEEN loputtua (tila.puluHetki)
+   * eikä koko jakson kestettyä.
+   */
+  assert.match(OHJAAJA,
+    /const jaksonHanta = \(jakso\) => \(\n\s*!luenta\.yhtena\(\) && jakso\?\.pulu \? PULUN_VARA_MS : 0\n\s*\);/);
+  assert.match(OHJAAJA, /tila\.kesto = tila\.luenta \+ jaksonHanta\(jakso\);/);
+  assert.match(OHJAAJA, /if \(!tila\.puluSanottu && tila\.kulunut >= tila\.puluHetki\) sanoPulu\(kertomus\[tila\.i\]\);/);
+  assert.ok(PULUN_VARA_MS > 0, 'jakso kerrallaan -tilan häntä katosi');
 });
 
 /* ==================== 5. VANOJEN PITO ==================== */
@@ -599,7 +730,7 @@ test('kärkisääntö: jo piirretty osuus ei ole rintama, ja toinen näyttämö 
 });
 
 test('kohteen kamera-ajo käyttää kärkisääntöä eikä alita lähikuvaa', () => {
-  const ajo = OHJAAJA.match(/const ajaKohteeseen = \(tunnus, kesto, \{ alku = null, loppu = null \} = \{\}\) => \{[\s\S]*?\n  \};/)[0];
+  const ajo = OHJAAJA.match(/const ajaKohteeseen = \(tunnus, kesto, \{[^)]*\} = \{\}\) => \{[\s\S]*?\n  \};/)[0];
   assert.match(ajo, /jaksonRajaus\(\{/);
   assert.match(ajo, /Math\.max\(ESITYKSEN_LAHIKUVA, rajauksenLeveys\(rajaus, kuvasuhde\(\), KARJEN_VARA\)/);
   // Jakso antaa kellovälinsä ajolle (alku → loppu), ei pelkkää kohdetta.

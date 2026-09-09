@@ -1,47 +1,50 @@
 /*
- * SELAINSAVUKE: IHMISEN MATKAN AVAUSLAATIKKO (teksti + kuva rinnalla).
+ * SELAINSAVUKE: IHMISEN MATKAN ALOITUSKORTTI (Ken Burns -tausta, paperi ilman kuvaa).
  *
  *   NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-ihmisen-avaus.mjs
  *
- * OMISTAJAN TILAUS 7.9.2026 ilta, sanatarkasti: *"Tästä
- * aloitustekstistä voi poistaa kaiken tekstin lauseen, joka loppuu:
- * 'Tuhat sukupolvea myöhemmin oltiin toisella puolella maapalloa',
- * niin sen jälkeen koko lopputeksti pois. Mutta tuohon tekstin
- * rinnalle voisi nostaa jonkun hienon kuvan, mitä jo on generoitu
- * tuohon tuota linssiä varten, ja samalla voisi tehdä suuremmaksi tuon
- * Itse paperin, missä tuo teksti on, jotta se kuvakin mahtuu
- * paremmin."* (Raamattu › "IHMISEN MATKAN AVAUSTEKSTI LYHYEKSI, KUVA
- * RINNALLE").
+ * OMISTAJAN TILAUS 9.9.2026 klo 15.40, sanatarkasti: *"tähän aloitukseen
+ * voisi tuoda muutamia kuvia isona taustalle niin että ne liikkuvat
+ * hitaasti ja vaihtuvat muutaman sekunnin välein (ken burns tyylinen
+ * liike + ristihäivytys). kuvien tulisi feidautua mustaan reuna-alueilla
+ * ja kuvat hieman sumennettuina ja tummennettuina. sitten paperi ja
+ * teksti näiden päälle ilman kuvaa. ota tekstistä pois muoto 'tulet
+ * seuraavaksi näkemään' ja tekstiä voi muutenkin lyhentää hieman.
+ * käynnistä nappi alimpana. ihmisen matka otsikko hieman isommalla."*
+ * (Raamattu › "IHMISEN MATKAN ALOITUSKORTTI: KEN BURNS -KUVAT
+ * TAUSTALLA, PAPERI JA LYHYEMPI TEKSTI PÄÄLLÄ, KÄYNNISTÄ ALIMPANA").
+ *
+ * TÄMÄ SAVUKE KÄÄNTYI 9.9.2026. Aiemmin (7.9.2026) se vaati, että
+ * paperilla ON havainnekuva tekstin rinnalla ja että palstoja on kaksi.
+ * Omistaja siirsi kuvat paperin TAAKSE, joten väitteet on käännetty
+ * eikä poistettu: kuva ei saa palata paperille takaovesta.
  *
  * MIKSI OMA SAVUKE. tools/savukkeet/savuke-aikajana.mjs ajaa koko
  * kaaren minuutissa ja toteaa avausjaksosta vain, että Käynnistä-nappi
- * on olemassa. Tässä mitataan ASETTELU, joka rikkoutuu hiljaa:
- * yksikkötesti näkee tekstin ja luokat, muttei sitä, seisovatko teksti
- * ja kuva vierekkäin, mahtuuko nappi niiden alle vai valuuko paperi
- * ruudun ulkopuolelle. Ajo pysähtyy avauslaatikkoon eikä paina
- * Käynnistä-nappia — koko esitys on jo savuke-aikajanan asia.
+ * on olemassa. Tässä mitataan se, mitä yksikkötesti ei näe: latautuvatko
+ * taustakuvat, lähteekö kierros vasta niiden jälkeen, jääkö paperi
+ * luettavaksi sumeiden kuvien päällä ja pysähtyykö tausta Käynnistästä.
  *
- * NÄKYMÄT (omistajan laitteet): iPad 834 × 1100 ja iPhone 390 × 844.
- * Työpöytä on iPadin kanssa sama haara (kaksi palstaa), puhelin on
- * `@media (max-width: 640px)` -haara (yksi palsta, kuva ylhäällä).
+ * NÄKYMÄT: työpöytä 1600 × 1000 ja puhelin 430 × 930.
  *
  * VÄITTEET:
- *   1. Laatikko avautuu ja siinä on `.on-kuva`-luokka (kehys ja
- *      paperi) — muutos on rajattu tähän kaareen, ei jaettuun css:ään.
- *   2. Teksti päättyy omistajan lauseeseen "...toisella puolella
- *      maapalloa." eikä siinä ole enää kartan lukuohjetta.
- *   3. Kuva on ladattu (naturalWidth > 0) ja näkyvissä, kuvateksti
- *      pienemmällä kuin leipäteksti.
- *   4. ASETTELU: iPadilla kuva on tekstin RINNALLA (palstat menevät
- *      vaakasuunnassa limittäin ajassa 0 ja pystysuunnassa päällekkäin),
- *      puhelimessa kuva on tekstin YLÄPUOLELLA (yksi palsta).
- *   5. Paperi on SUUREMPI kuin vanha min(31rem, 88%) = 496 px, mutta
- *      mahtuu ruutuun; koko laatikko on näkyvissä pystysuunnassa.
- *   6. Käynnistä-nappi on ruudukon ALLA ja vaakasuunnassa keskellä
- *      paperia.
- *   7. Ei sivuvirheitä.
+ *   1. Laatikko avautuu, eikä siinä ole enää kuvaa (.aikajana-avaus-kuva)
+ *      eikä `.on-kuva`-luokkaa — paperi on entinen yhden palstan arkki.
+ *   2. Taustalla on kuusi kerrosta, jokaisen kuva ladattu, ja kierros on
+ *      käynnissä (luokka `kaynnissa`) vasta latauksen jälkeen.
+ *   3. Tausta on mustan peitteen PÄÄLLÄ ja paperin ALLA (DOM-järjestys
+ *      ja z-index), ja sen reunat häipyvät mustaan (mask-image).
+ *   4. Kuvat ovat sumennettuja ja tummennettuja (filter blur+brightness).
+ *   5. Ken Burns liikkuu: kerroksen transform-matriisi muuttuu sekunnissa.
+ *   6. Teksti ei ala muodolla "Tulet seuraavaksi" ja päättyy omistajan
+ *      lauseeseen "…toisella puolella maapalloa."
+ *   7. Otsikko on isommalla kuin leipäteksti (+20 % entisestä).
+ *   8. Käynnistä-nappi on laatikon VIIMEINEN lapsi ja sen alin elementti.
+ *   9. Paperi mahtuu ruutuun kokonaan.
+ *  10. Käynnistä pysäyttää taustan ja häivyttää sen (luokka `pois`).
+ *  11. Ei sivuvirheitä.
  *
- * KUVAKAAPPAUKSET: savuke-ihmisen-avaus-<nakyma>.png kansioon
+ * KUVAKAAPPAUKSET: ihmisen-matka-aloitus-{tyopoyta,puhelin}.png kansioon
  * KAAPPAUKSET (oletus /tmp/matkakirja-kaappaukset).
  */
 import { createServer } from 'node:http';
@@ -59,7 +62,7 @@ const MIME = {
   '.jpg': 'image/jpeg', '.webp': 'image/webp', '.mp3': 'audio/mpeg', '.woff2': 'font/woff2',
 };
 
-/* Ämpäri Noden kautta (CLAUDE.md: NODE_USE_ENV_PROXY=1) — pallo ja avauskuva. */
+/* Ämpäri Noden kautta (CLAUDE.md: NODE_USE_ENV_PROXY=1) — pallo ja taustakuvat. */
 const AMPARI_VALIMUISTI = new Map();
 async function ampariHaku(url) {
   if (AMPARI_VALIMUISTI.has(url)) return AMPARI_VALIMUISTI.get(url);
@@ -83,14 +86,14 @@ const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 
-/** Omistajan kaksi laitetta. iPad on sama haara kuin työpöytä. */
+/** Työpöytä ja puhelin omistajan pyytämillä mitoilla (kaappaus 1:1). */
 const NAKYMAT = {
-  ipad: { viewport: { width: 834, height: 1100 }, deviceScaleFactor: 1 },
-  puhelin: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 },
+  tyopoyta: { viewport: { width: 1600, height: 1000 }, deviceScaleFactor: 1 },
+  puhelin: { viewport: { width: 430, height: 930 }, deviceScaleFactor: 1 },
 };
 
-/** Vanha paperin leveys: min(31rem, 88%) = 496 px isolla ruudulla. */
-const VANHA_LEVEYS_PX = 496;
+/** Kuvia taustalla — sama luku kuin CSS:n kierros olettaa (6 × 6,5 s = 39 s). */
+const TAUSTAKUVIA = 6;
 
 const tulokset = [];
 const vaadi = (nimi, ok, lisa = '') => {
@@ -102,7 +105,7 @@ async function avaaSivu(nakyma, virhelista) {
   const konteksti = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
   const sivu = await konteksti.newPage();
   await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
-  // Ämpäri (Globe.gl, laatat JA avauslaatikon havainnekuva) Noden kautta.
+  // Ämpäri (Globe.gl, laatat JA aloituskortin taustakuvat) Noden kautta.
   await sivu.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
     const vastaus = await ampariHaku(route.request().url());
     if (!vastaus) { route.abort(); return; }
@@ -143,7 +146,7 @@ for (const nakyma of Object.keys(NAKYMAT)) {
   const pallo = await avaaPeli(sivu);
   vaadi(nimessa('pallolauta avautuu'), pallo, 'ui.pallolauta ei syntynyt 45 s:ssa');
 
-  // Linssi laukusta; avausjakso jää auki (Käynnistä-nappia EI paineta).
+  // Linssi laukusta; avausjakso jää auki (Käynnistä-nappia EI vielä paineta).
   await sivu.evaluate(async () => {
     const { ui } = window.matkakirja;
     ui.busy = false;
@@ -155,107 +158,162 @@ for (const nakyma of Object.keys(NAKYMAT)) {
     }
   });
   /*
-   * KUVA ODOTETAAN PERILLE ennen mittausta: havainnekuva tulee
-   * ämpäristä Noden fetchin kautta, ja ensimmäisellä kierroksella
-   * (kylmä välimuisti) se saapuu vasta parin sekunnin kuluttua.
-   * Kiinteä odotus kuvasi tyhjän kehyksen.
+   * KIERROS ODOTETAAN LIIKKEELLE. Moottori päästää animaatiot irti
+   * (luokka `kaynnissa`) vasta kun kaikki taustakuvat ovat ladanneet;
+   * kylmällä välimuistilla se kestää ämpäristä pari sekuntia.
    */
-  await sivu.waitForFunction(() => {
-    const img = document.querySelector('.aikajana-avaus-kuva img');
-    return Boolean(img && img.complete && img.naturalWidth > 0);
-  }, null, { timeout: 30000 }).catch(() => null);
-  await sivu.waitForTimeout(600);
-  await sivu.screenshot({ path: join(ULOS, `savuke-ihmisen-avaus-${nakyma}.png`) });
+  await sivu.waitForFunction(() => Boolean(document.querySelector('.aikajana-avaus-tausta.kaynnissa')),
+    null, { timeout: 30000 }).catch(() => null);
+  // Kolme sekuntia kierrosta: ensimmäinen kuva on täydessä näkyvyydessä ja liikkeessä.
+  await sivu.waitForTimeout(3000);
+  await sivu.screenshot({ path: join(ULOS, `ihmisen-matka-aloitus-${nakyma}.png`) });
 
   const mitat = await sivu.evaluate(() => {
     const laatuun = (el) => (el ? el.getBoundingClientRect().toJSON() : null);
     const kehys = document.querySelector('.aikajana-avaus-kehys');
     const laatikko = document.querySelector('.aikajana-avaus-laatikko');
+    const otsikko = document.querySelector('.aikajana-avaus-otsikko');
     const teksti = document.querySelector('.aikajana-avaus-teksti');
-    const kuvakehys = document.querySelector('.aikajana-avaus-kuva');
-    const img = document.querySelector('.aikajana-avaus-kuva img');
-    const selite = document.querySelector('.aikajana-avaus-kuvateksti');
     const nappi = document.querySelector('.aikajana-avaus-nappi');
+    const tausta = document.querySelector('.aikajana-avaus-tausta');
+    const peite = document.querySelector('.aikajana-avaus-peite');
+    const kerrokset = [...document.querySelectorAll('.aikajana-avaus-taustakuva')];
     const koko = (el) => (el ? parseFloat(getComputedStyle(el).fontSize) : null);
+    const tyyli = tausta ? getComputedStyle(tausta) : null;
+    const kuvatyyli = kerrokset[0] ? getComputedStyle(kerrokset[0].querySelector('img')) : null;
     return {
       auki: Boolean(document.querySelector('.aikajana-avaus.laatikko-nakyy')),
-      kehysLuokka: kehys?.classList.contains('on-kuva') ?? false,
-      laatikkoLuokka: laatikko?.classList.contains('on-kuva') ?? false,
-      tekstinSisalto: teksti?.textContent ?? '',
-      kuvaLadattu: Boolean(img && img.naturalWidth > 0),
-      kuvaOsoite: img?.currentSrc ?? img?.src ?? null,
-      seliteTeksti: selite?.textContent ?? '',
+      kuvaPaperilla: Boolean(document.querySelector('.aikajana-avaus-kuva')),
+      onKuvaLuokka: (kehys?.classList.contains('on-kuva') ?? false)
+        || (laatikko?.classList.contains('on-kuva') ?? false),
+      kerroksia: kerrokset.length,
+      ladattu: kerrokset.filter((k) => {
+        const img = k.querySelector('img');
+        return Boolean(img && img.complete && img.naturalWidth > 0);
+      }).length,
+      kaynnissa: tausta?.classList.contains('kaynnissa') ?? false,
+      ajotila: kerrokset[0] ? getComputedStyle(kerrokset[0]).animationPlayState : null,
+      // Peite ensin, tausta sen jälkeen, kehys viimeisenä.
+      jarjestys: [...(tausta?.parentElement?.children ?? [])].map((el) => el.className),
+      // Tausta täyttää koko linssin alueen (avauskerroksen, ei ikkunan).
+      avaus: laatuun(document.querySelector('.aikajana-avaus')),
+      taustaZ: tyyli?.zIndex ?? null,
+      kehysZ: kehys ? getComputedStyle(kehys).zIndex : null,
+      peiteVari: peite ? getComputedStyle(peite).backgroundColor : null,
+      maski: (tyyli?.maskImage && tyyli.maskImage !== 'none' ? tyyli.maskImage : tyyli?.webkitMaskImage) ?? '',
+      suodatin: kuvatyyli?.filter ?? '',
+      otsikkoTeksti: otsikko?.textContent ?? '',
+      otsikkoKoko: koko(otsikko),
       tekstinKoko: koko(teksti),
-      seliteKoko: koko(selite),
-      palstoja: kuvakehys ? getComputedStyle(kuvakehys.parentElement).gridTemplateColumns.split(' ').length : 0,
+      tekstinSisalto: teksti?.textContent ?? '',
+      viimeinen: laatikko?.lastElementChild?.className ?? '',
       r: {
-        kehys: laatuun(kehys), laatikko: laatuun(laatikko), teksti: laatuun(teksti),
-        kuva: laatuun(kuvakehys), nappi: laatuun(nappi),
+        kehys: laatuun(kehys), laatikko: laatuun(laatikko), otsikko: laatuun(otsikko),
+        teksti: laatuun(teksti), nappi: laatuun(nappi), tausta: laatuun(tausta),
       },
       ruutu: { w: window.innerWidth, h: window.innerHeight },
     };
   });
 
   const { r } = mitat;
-  vaadi(nimessa('avauslaatikko on auki ja merkitty kuvalliseksi (.on-kuva)'),
-    mitat.auki && mitat.kehysLuokka && mitat.laatikkoLuokka,
-    JSON.stringify({ auki: mitat.auki, kehys: mitat.kehysLuokka, laatikko: mitat.laatikkoLuokka }));
+  vaadi(nimessa('kortti on auki eikä paperilla ole kuvaa'),
+    mitat.auki && !mitat.kuvaPaperilla && !mitat.onKuvaLuokka,
+    JSON.stringify({ auki: mitat.auki, kuva: mitat.kuvaPaperilla, onKuva: mitat.onKuvaLuokka }));
 
-  const paattyy = mitat.tekstinSisalto.trim()
-    .endsWith('tuhat sukupolvea myöhemmin oltiin toisella puolella maapalloa.');
-  vaadi(nimessa('teksti päättyy omistajan lauseeseen eikä selitä karttaa'),
-    paattyy && !/vana|Harmaa|Löytöpaikat/.test(mitat.tekstinSisalto),
-    `…${mitat.tekstinSisalto.trim().slice(-64)}`);
-
-  vaadi(nimessa('kuva on ladattu ja kuvateksti pienempi kuin leipäteksti'),
-    mitat.kuvaLadattu && r.kuva?.width > 120 && mitat.seliteTeksti.length > 5
-      && mitat.seliteKoko < mitat.tekstinKoko,
+  vaadi(nimessa(`taustalla on ${TAUSTAKUVIA} ladattua kuvaa ja kierros on käynnissä`),
+    mitat.kerroksia === TAUSTAKUVIA && mitat.ladattu === TAUSTAKUVIA
+      && mitat.kaynnissa && mitat.ajotila === 'running',
     JSON.stringify({
-      osoite: mitat.kuvaOsoite, leveys: Math.round(r.kuva?.width ?? 0),
-      selite: mitat.seliteTeksti.slice(0, 48), koot: [mitat.tekstinKoko, mitat.seliteKoko],
+      kerroksia: mitat.kerroksia, ladattu: mitat.ladattu,
+      kaynnissa: mitat.kaynnissa, ajotila: mitat.ajotila,
     }));
+
+  const paikallaan = mitat.jarjestys.length === 3
+    && /avaus-peite/.test(mitat.jarjestys[0]) && /avaus-tausta/.test(mitat.jarjestys[1])
+    && /avaus-kehys/.test(mitat.jarjestys[2]);
+  vaadi(nimessa('tausta on mustan päällä ja paperin alla, reunat häipyvät mustaan'),
+    paikallaan && Number(mitat.taustaZ) < Number(mitat.kehysZ)
+      && /rgb\(0, 0, 0\)/.test(mitat.peiteVari) && /radial-gradient/.test(mitat.maski)
+      && r.tausta.width >= mitat.avaus.width - 1 && r.tausta.height >= mitat.avaus.height - 1,
+    JSON.stringify({
+      jarjestys: mitat.jarjestys, z: [mitat.taustaZ, mitat.kehysZ], peite: mitat.peiteVari,
+      maski: mitat.maski.slice(0, 48),
+      tausta: [Math.round(r.tausta.width), Math.round(r.tausta.height)],
+      avaus: [Math.round(mitat.avaus.width), Math.round(mitat.avaus.height)],
+    }));
+
+  vaadi(nimessa('taustakuvat ovat sumennettuja ja tummennettuja'),
+    /blur\(3px\)/.test(mitat.suodatin) && /brightness\(0\.55\)/.test(mitat.suodatin),
+    mitat.suodatin);
 
   /*
-   * ASETTELU. Vierekkäin = laatikot menevät PYSTYSUUNNASSA päällekkäin
-   * mutta eivät vaakasuunnassa; päällekkäin = päinvastoin. Yksi mitta
-   * kelpaa kumpaankin haaraan, joten sama vartija tunnistaa myös sen,
-   * jos media query putoaa pois.
+   * KEN BURNS: NÄKYVÄ kerros on sekunnin päästä eri kohdassa. Kerrosta ei
+   * saa poimia järjestysnumerolla — kierros on 39 s pitkä, ja mikä tahansa
+   * yksittäinen kerros on suurimman osan ajasta häivytettynä ja siis
+   * paikallaan (liike kestää vain sen 8 s, jonka kuva näkyy).
    */
-  const vaakaLimi = Math.min(r.teksti.right, r.kuva.right) - Math.max(r.teksti.left, r.kuva.left);
-  const pystyLimi = Math.min(r.teksti.bottom, r.kuva.bottom) - Math.max(r.teksti.top, r.kuva.top);
-  if (nakyma === 'puhelin') {
-    vaadi(nimessa('kuva on tekstin YLÄPUOLELLA (yksi palsta)'),
-      r.kuva.bottom <= r.teksti.top + 1 && vaakaLimi > 40 && mitat.palstoja === 1,
-      JSON.stringify({ vaakaLimi: Math.round(vaakaLimi), palstoja: mitat.palstoja }));
-  } else {
-    vaadi(nimessa('kuva on tekstin RINNALLA (kaksi palstaa)'),
-      vaakaLimi <= 0 && pystyLimi > 60 && mitat.palstoja === 2,
-      JSON.stringify({
-        vaakaLimi: Math.round(vaakaLimi), pystyLimi: Math.round(pystyLimi), palstoja: mitat.palstoja,
-      }));
-  }
+  const liike = await sivu.evaluate(async () => {
+    const nakyva = () => [...document.querySelectorAll('.aikajana-avaus-taustakuva')]
+      .map((el) => ({ el, op: Number(getComputedStyle(el).opacity) }))
+      .sort((a, b) => b.op - a.op)[0];
+    const kerros = nakyva();
+    const lue = () => getComputedStyle(kerros.el).transform;
+    const ennen = lue();
+    await new Promise((r2) => setTimeout(r2, 1000));
+    return { ennen, jalkeen: lue(), peittavyys: kerros.op };
+  });
+  vaadi(nimessa('Ken Burns -liike etenee (näkyvän kerroksen transform muuttuu sekunnissa)'),
+    liike.ennen !== liike.jalkeen && liike.ennen !== 'none' && liike.peittavyys > 0.5,
+    `${liike.ennen} → ${liike.jalkeen} (opacity ${liike.peittavyys})`);
 
-  const mahtuu = r.kehys.left >= -1 && r.kehys.right <= mitat.ruutu.w + 1
-    && r.kehys.top >= -1 && r.kehys.bottom <= mitat.ruutu.h + 1;
-  if (nakyma === 'puhelin') {
-    vaadi(nimessa('paperi mahtuu ruutuun kokonaan'), mahtuu,
-      JSON.stringify({ kehys: [Math.round(r.kehys.width), Math.round(r.kehys.height)], ruutu: mitat.ruutu }));
-  } else {
-    vaadi(nimessa(`paperi on suurempi kuin vanha ${VANHA_LEVEYS_PX} px ja mahtuu ruutuun`),
-      r.kehys.width > VANHA_LEVEYS_PX && mahtuu,
-      JSON.stringify({ leveys: Math.round(r.kehys.width), korkeus: Math.round(r.kehys.height), ruutu: mitat.ruutu }));
-  }
+  const sisalto = mitat.tekstinSisalto.trim();
+  vaadi(nimessa('teksti ei ala muodolla "Tulet seuraavaksi" ja päättyy maapallo-lauseeseen'),
+    !/^Tulet seuraavaksi/i.test(sisalto)
+      && sisalto.endsWith('tuhat sukupolvea myöhemmin oltiin toisella puolella maapalloa.'),
+    `${sisalto.slice(0, 42)}… (${sisalto.length} merkkiä)`);
 
-  const nappiKeskella = Math.abs(
-    (r.nappi.left + r.nappi.right) / 2 - (r.laatikko.left + r.laatikko.right) / 2,
-  ) < 12;
-  vaadi(nimessa('Käynnistä-nappi on ruudukon alla keskellä'),
-    r.nappi.top >= r.kuva.bottom - 1 && r.nappi.top >= r.teksti.bottom - 1 && nappiKeskella
-      && r.nappi.bottom <= r.laatikko.bottom + 1,
+  vaadi(nimessa('otsikko on isommalla kuin leipäteksti'),
+    /Ihmisen matka/i.test(mitat.otsikkoTeksti) && mitat.otsikkoKoko > mitat.tekstinKoko * 1.25,
+    JSON.stringify({ otsikko: mitat.otsikkoKoko, teksti: mitat.tekstinKoko }));
+
+  vaadi(nimessa('Käynnistä on kortin viimeinen ja alin elementti'),
+    /avaus-nappi/.test(mitat.viimeinen) && r.nappi.top >= r.teksti.bottom - 1
+      && r.nappi.top >= r.otsikko.bottom - 1 && r.nappi.bottom <= r.laatikko.bottom + 1,
     JSON.stringify({
-      nappiTop: Math.round(r.nappi.top), kuvaBottom: Math.round(r.kuva.bottom),
-      tekstiBottom: Math.round(r.teksti.bottom), keskella: nappiKeskella,
+      viimeinen: mitat.viimeinen, nappiTop: Math.round(r.nappi.top),
+      tekstiBottom: Math.round(r.teksti.bottom), laatikkoBottom: Math.round(r.laatikko.bottom),
     }));
+
+  vaadi(nimessa('paperi mahtuu ruutuun kokonaan'),
+    r.kehys.left >= -1 && r.kehys.right <= mitat.ruutu.w + 1
+      && r.kehys.top >= -1 && r.kehys.bottom <= mitat.ruutu.h + 1,
+    JSON.stringify({ kehys: [Math.round(r.kehys.width), Math.round(r.kehys.height)], ruutu: mitat.ruutu }));
+
+  /*
+   * KÄYNNISTÄ: tausta pysähtyy ja häipyy samalla kun paperi väistyy. Tilaa
+   * seurataan silmukassa eikä yhdellä otoksella: häivytys kestää 550 ms ja
+   * koko kerros irrotetaan 700 ms:n kohdalla (AVAUS_POISTUMA_MS), joten
+   * yksi kiinteä odotus osuu milloin mihinkin kohtaan.
+   */
+  const jalkeen = await sivu.evaluate(async () => {
+    const kerros = document.querySelector('.aikajana-avaus-taustakuva');
+    const ajotilat = new Set();
+    document.querySelector('.aikajana-avaus-nappi')?.click();
+    let pois = false;
+    let peittavyys = 1;
+    for (let i = 0; i < 30; i += 1) {
+      await new Promise((r2) => setTimeout(r2, 60));
+      pois = pois || Boolean(document.querySelector('.aikajana-avaus.pois'));
+      if (kerros.isConnected) ajotilat.add(getComputedStyle(kerros).animationPlayState);
+      const tausta = document.querySelector('.aikajana-avaus-tausta');
+      peittavyys = tausta ? Number(getComputedStyle(tausta).opacity) : 0;
+      if (!tausta || peittavyys <= 0.05) break;
+    }
+    return { pois, peittavyys, ajotilat: [...ajotilat] };
+  });
+  vaadi(nimessa('Käynnistä pysäyttää ja häivyttää taustan'),
+    jalkeen.pois && !jalkeen.ajotilat.includes('running') && jalkeen.peittavyys <= 0.05,
+    JSON.stringify(jalkeen));
 
   vaadi(nimessa('ei sivuvirheitä'), virheet.length === 0, virheet.slice(0, 3).join(' | '));
   await konteksti.close();

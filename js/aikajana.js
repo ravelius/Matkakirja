@@ -154,7 +154,7 @@ import { sfx } from './sound.js';
 import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from './ambience-stream.js';
 import { stopDiaryVoice } from './luenta.js';
 import {
-  ESITTELYN_RUNKO, LOPUN_RUNKO, pysaytaLinssiluenta, soitaLinssiluenta, valinaytoksenRunko,
+  ESITTELYN_RUNKO, LOPUN_RUNKO, puheenTiiviste, pysaytaLinssiluenta, soitaLinssiluenta, valinaytoksenRunko,
 } from './linssipuhe.js';
 import { pysaytaLukija } from './lukija.js';
 import { esilataaKuvat, vapautaKosketus } from './ui-apurit.js';
@@ -743,6 +743,14 @@ const AVAUS_TAUSTAN_KATTO_MS = 2500;
 const AVAUS_LUKUAIKA_MS = 900;
 /** Peitteen poistuminen Käynnistä-napin jälkeen (css .aikajana-avaus.pois). */
 const AVAUS_POISTUMA_MS = 700;
+/**
+ * ALOITUSKORTIN TAUSTAKUVAT ESILADATAAN, JOTTA ENSIMMÄINEN EI VÄLÄHDÄ
+ * (omistaja 9.9.2026: taustan on liikuttava ja vaihduttava tasaisesti).
+ * Ken Burns -kierros lähtee vasta kun kaikki kuvat ovat ladanneet — tai
+ * viimeistään tämän katon jälkeen, jottei hidas peili jätä korttia
+ * pelkän mustan päälle koko avausjaksoksi.
+ */
+const AVAUS_TAUSTAN_LATAUSKATTO_MS = 4000;
 
 /* ==================== VÄLINÄYTÖS ==================== */
 
@@ -2566,6 +2574,8 @@ class Aikajana {
      */
     this.avaus = null;
     this.avausPeite = null;
+    /** Aloituskortin Ken Burns -taustakerros, kun kaarella on taustakuvia. */
+    this.avausTausta = null;
     this.avausNappi = null;
     this.avausKesken = false;
     this.avausAjastimet = [];
@@ -4329,6 +4339,73 @@ class Aikajana {
   }
 
   /**
+   * ALOITUSKORTIN KEN BURNS -TAUSTA (omistaja 9.9.2026 klo 15.40,
+   * sanatarkasti: *"tähän aloitukseen voisi tuoda muutamia kuvia isona
+   * taustalle niin että ne liikkuvat hitaasti ja vaihtuvat muutaman
+   * sekunnin välein (ken burns tyylinen liike + ristihäivytys). kuvien
+   * tulisi feidautua mustaan reuna-alueilla ja kuvat hieman
+   * sumennettuina ja tummennettuina. sitten paperi ja teksti näiden
+   * päälle ilman kuvaa."*; Raamattu › "IHMISEN MATKAN ALOITUSKORTTI:
+   * KEN BURNS -KUVAT TAUSTALLA…").
+   *
+   * KENTTÄ ON VALINNAINEN: kaari, jonka datassa ei ole
+   * `esittely.taustakuvat`-listaa, saa täsmälleen entisen mustan
+   * avauksen (keksinnöt). Kuvat tulevat kaaren omasta aineistosta
+   * (js/linssit/ihmisen-matka.js avauksenTaustakuvat).
+   *
+   * LIIKE JA VAIHTO OVAT CSS:SSÄ, EI rAF-SILMUKASSA (css/aikajana.css
+   * "ALOITUSKORTIN KEN BURNS -TAUSTA"): jokainen kerros saa saman
+   * kierroksen mittaisen animaation ja oman viiveensä `nth-child`illä,
+   * joten selain hoitaa ajastuksen ja `prefers-reduced-motion` sammuttaa
+   * pelkän liikkeen ristihäivytyksen jäädessä. Moottori ei laske
+   * sekunteja, se vain päättää MILLOIN kierros lähtee.
+   *
+   * KIERROS LÄHTEE VASTA LATAUKSEN JÄLKEEN. Animaatiot ovat aluksi
+   * pysäytetyt (`animation-play-state: paused`), joten myös viiveet
+   * seisovat; luokka `kaynnissa` päästää koko kierroksen liikkeelle
+   * kerralla, kun jokainen kuva on latautunut tai lopullisesti pettänyt
+   * — tai viimeistään AVAUS_TAUSTAN_LATAUSKATTO_MS:n jälkeen. Näin
+   * ensimmäinen kuva ei välähdä paikalleen kesken häivytyksen.
+   *
+   * Kuvat kulkevat talon `asetaKuva`-apurin läpi (peilin uusinta ja
+   * varareitti); pettänyt kuva jää mustaksi kerrokseksi eikä kaada
+   * avausta.
+   */
+  avauksenTausta(kuvat) {
+    const lista = (Array.isArray(kuvat) ? kuvat : []).filter((k) => k?.osoite);
+    if (!lista.length) return null;
+    const tausta = solmu('div', 'aikajana-avaus-tausta');
+    tausta.setAttribute('aria-hidden', 'true');
+    let odottaa = lista.length;
+    let kaynnissa = false;
+    const aloita = () => {
+      if (kaynnissa) return;
+      kaynnissa = true;
+      tausta.classList.add('kaynnissa');
+    };
+    for (const tiedot of lista) {
+      const kerros = solmu('div', 'aikajana-avaus-taustakuva');
+      const kuva = solmu('img');
+      // Koriste mustan päällä: kortin sisältö on otsikko, teksti ja nappi.
+      kuva.alt = '';
+      kuva.decoding = 'async';
+      let laskettu = false;
+      const laske = () => {
+        if (laskettu) return;
+        laskettu = true;
+        odottaa -= 1;
+        if (odottaa <= 0) aloita();
+      };
+      kuva.addEventListener('load', laske, { once: true });
+      asetaKuva(kuva, tiedot.osoite, tiedot.vara ?? null, laske);
+      kerros.appendChild(kuva);
+      tausta.appendChild(kerros);
+    }
+    this.avausViive(aloita, AVAUS_TAUSTAN_LATAUSKATTO_MS);
+    return tausta;
+  }
+
+  /**
    * Musta peite kartta-alueen päälle ja sen keskelle kaaren esittely.
    * Teksti tulee DATASTA (linssin `aikajana.esittely`), ei koodista:
    * omistaja hioo sanat kaarikohtaisesti.
@@ -4407,6 +4484,14 @@ class Aikajana {
     this.avausNappi.addEventListener('click', () => this.aloitaAjo());
     laatikko.appendChild(this.avausNappi);
     this.avaus.append(this.avausPeite, kehys);
+    /*
+     * TAUSTA MUSTAN PÄÄLLE JA PAPERIN ALLE (omistaja 9.9.2026): kerros
+     * lisätään peitteen JÄLKEEN, joten se piirtyy mustan päälle, ja
+     * ennen kehystä, joten paperi jää sen päälle. Puuttuva kenttä
+     * jättää avauksen entiselleen — pelkäksi mustaksi.
+     */
+    this.avausTausta = this.avauksenTausta(esittely.taustakuvat);
+    if (this.avausTausta) this.avausPeite.after(this.avausTausta);
     koti.appendChild(this.avaus);
     this.avausKesken = true;
     /*
@@ -4451,7 +4536,13 @@ class Aikajana {
        * pysäkeillä (js/linssipuhe.js kaarenPuheet); puuttuva tiedosto on
        * hiljainen, ja Käynnistä katkaisee luennan kesken (aloitaAjo).
        */
-      if (esittely.teksti) soitaLinssiluenta(this.ui, null, { runko: ESITTELYN_RUNKO, juuri: this.luentajuuri });
+      // Versiokysely tekstin tiivisteestä: uusiksi kirjoitettu esittely ei
+      // jää välimuistiin vanhana (js/linssipuhe.js puheenTiiviste).
+      if (esittely.teksti) {
+        soitaLinssiluenta(this.ui, null, {
+          runko: ESITTELYN_RUNKO, juuri: this.luentajuuri, versio: puheenTiiviste(esittely.teksti),
+        });
+      }
       const ajo = Promise.resolve(this.sovitaAlkuun(heti ? 0 : AVAUS_KAMERA_MS))
         .then(() => new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok))));
       // Alaraja pitää juuren häivytyksen erossa laatikon liu'usta, yläraja on katto.
@@ -4523,6 +4614,8 @@ class Aikajana {
     const avaus = this.avaus;
     this.avausNappi = null;
     this.avausPeite = null;
+    // Taustan liike ja häivytys pysähtyvät luokalla `pois` (css/aikajana.css).
+    this.avausTausta = null;
     if (avaus) {
       // Lyhdyt palavat vielä häipymisen ajan; silmukka pysähtyy, kun laatikko irtoaa.
       avaus.classList.remove('laatikko-nakyy');
@@ -4564,6 +4657,7 @@ class Aikajana {
     this.avaus?.remove();
     this.avaus = null;
     this.avausPeite = null;
+    this.avausTausta = null;
     this.avausNappi = null;
   }
 

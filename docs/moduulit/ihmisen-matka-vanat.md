@@ -1042,6 +1042,11 @@ kuvissa:
 
 ## 7b. Avauslaatikko: teksti lyhyeksi, kuva rinnalle (V6, 7.9.2026 ilta)
 
+> **KUMOTTU 9.9.2026 kuvan ja paperin osalta** — omistaja siirsi kuvat
+> paperin taakse Ken Burns -taustaksi, ks. luku 7c. Tekstin lyhennys ja
+> luennan leikkaus pätevät yhä. Luku jää historiaksi: se kertoo, miksi
+> paperilla oli kuva ja miksi sitä ei enää ole.
+
 Omistaja sanatarkasti: *"Tästä aloitustekstistä voi poistaa kaiken
 tekstin lauseen, joka loppuu: 'Tuhat sukupolvea myöhemmin oltiin
 toisella puolella maapalloa', niin sen jälkeen koko lopputeksti pois.
@@ -1100,8 +1105,78 @@ prosenttiyksikön osuma). Leikkaus `afade=t=out:st=17.80:d=0.15` ja
 | avaustekstin merkkejä | 626 | 232 |
 | paperin leveys (834 × 1100) | 496 px | 718 px |
 
-Savuke `tools/savukkeet/savuke-ihmisen-avaus.mjs` (iPad 834 × 1100 ja
-iPhone 390 × 844) mittaa asettelun: 16/16 läpi.
+Savuke `tools/savukkeet/savuke-ihmisen-avaus.mjs` mittasi asettelun:
+16/16 läpi. **Savuke ja tämä luku on kumottu 9.9.2026** — ks. 7c.
+
+## 7c. Aloituskortti: Ken Burns -kuvat taustalle, paperi ilman kuvaa (9.9.2026)
+
+Omistaja sanatarkasti: *"tähän aloitukseen voisi tuoda muutamia kuvia
+isona taustalle niin että ne liikkuvat hitaasti ja vaihtuvat muutaman
+sekunnin välein (ken burns tyylinen liike + ristihäivytys). kuvien
+tulisi feidautua mustaan reuna-alueilla ja kuvat hieman sumennettuina ja
+tummennettuina. sitten paperi ja teksti näiden päälle ilman kuvaa. ota
+tekstistä pois muoto 'tulet seuraavaksi näkemään' ja tekstiä voi
+muutenkin lyhentää hieman. käynnistä nappi alimpana. ihmisen matka
+otsikko hieman isommalla. kokeillaan ensin näin ja jos huono, niin
+sitten otetaan paperilappu välistä pois kokonaan ja ladotaan tekstit
+suoraan kuva-animaation päälle."* (Raamattu › "IHMISEN MATKAN
+ALOITUSKORTTI: KEN BURNS -KUVAT TAUSTALLA…".) **Tämä kumoaa luvun 7b
+kuvan ja paperin osalta**: teksti pysyy lyhyenä, mutta kuva siirtyy
+paperin päältä sen taakse. Kokeilu — jos ei toimi, paperi otetaan
+kokonaan pois ja tekstit ladotaan suoraan kuvien päälle.
+
+**Tausta.** `esittely.taustakuvat` on uusi VALINNAINEN kaaren kenttä
+(`avauksenTaustakuvat`, tunnukset `ALOITUKSEN_TAUSTAKUVAT`); ilman sitä
+avaus on entinen musta ruutu, joten keksintökaari ei liiku. Kuusi
+havainnekuvaa matkan järjestyksessä: Jebel Irhoud → Pinnacle Point →
+Al Wusta → Madjedbebe → Beringia → Monte Verde. Moottori
+(`js/aikajana.js avauksenTausta`) rakentaa kerrokset ja päättää vain,
+MILLOIN kierros lähtee — ajastus on CSS:ssä (`css/aikajana.css`
+"ALOITUSKORTIN KEN BURNS -TAUSTA"), ei rAF-silmukassa.
+
+| Mitta | Arvo | Missä |
+| --- | --- | --- |
+| kuvia | 6 | `ALOITUKSEN_TAUSTAKUVAT` |
+| kierros | 39 s (6 × 6,5 s) | `--avaus-tausta-kierros` |
+| vaihtoväli | 6,5 s | `--avaus-tausta-vaihto` |
+| ristihäivytys | 1,5 s (3,846 % kierroksesta) | `@keyframes avaus-tausta-vaihto` |
+| Ken Burns | scale 1,05 → 1,15 + pieni pan, 8,0 s | `avaus-tausta-liike-{a,b,c}` |
+| sumennus / tummennus | `blur(3px) brightness(0.55) saturate(0.85)` | `.aikajana-avaus-taustakuva img` |
+
+Keyframe-prosentit on laskettu KUUDESTA kuvasta; jos lista lyhenee tai
+pitenee, ne on laskettava uudelleen (vartija
+`tests/ihmisen-matka.test.mjs`). Reunat häipyvät mustaan kahdella
+keinolla: pyöreä `mask-image` kerroksessa (ei kuvissa, muuten Ken Burns
+kuljettaisi häivytystä mukanaan) ja sen päällä musta reunakehys
+(`::after`, kaksi lineaarista liukua ristiin) — pelkkä ellipsi jätti
+1600 px:n ruudulla sivureunat noin 35 %:n peittoon. Pystyruudulla
+(`max-width: 640px`) maski ja kehys on erikseen väljennetty.
+
+**Esilataus.** Animaatiot ovat aluksi `animation-play-state: paused`,
+jolloin myös viiveet seisovat; moottori lisää luokan `kaynnissa` vasta
+kun jokainen kuva on latautunut tai lopullisesti pettänyt — tai
+viimeistään 4 s:n katon (`AVAUS_TAUSTAN_LATAUSKATTO_MS`) jälkeen. Näin
+ensimmäinen kuva ei välähdä paikalleen kesken häivytyksen. Käynnistä
+pysäyttää liikkeen ja häivyttää kerroksen 550 ms:ssa, ennen kuin koko
+avaus irtoaa (`AVAUS_POISTUMA_MS` 700 ms).
+
+**Paperi.** `esittely.kuva` poistui, joten paperi on taas entinen yhden
+palstan arkki `min(31rem, 88%)` ilman `.on-kuva`-luokkaa; kuvateksti ja
+lähderivi jäivät pois kortilta. Otsikko 1,22 rem → 1,46 rem (+20 %).
+Käynnistä on laatikon viimeinen lapsi ja sen alin elementti.
+
+**Teksti.** `IHMISEN_MATKA_ALOITUS` alkaa nyt väitteestä eikä
+lupauksesta: *"Yksi laji levisi yhdestä maanosasta kaikkiin. Kukaan ei
+suunnitellut matkaa: …"* (205 merkkiä, ennen 232). **ÄÄNITE VANHENTUNUT
+(9.9.2026):** ämpärin `aikajana/ihmisen-matka/puhe/esittely.mp3` lukee
+yhä muotoa *"Tulet seuraavaksi näkemään…"*, eikä sitä voi tällä kertaa
+korjata leikkaamalla — lause on luennan ALUSSA. Luenta on generoitava
+uudelleen ennen julkaisua:
+`node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --pysakit esittely`.
+
+Savuke `tools/savukkeet/savuke-ihmisen-avaus.mjs` (työpöytä 1600 × 1000
+ja puhelin 430 × 930) mittaa uuden kortin: 24/24 läpi. Kaappaukset
+`ihmisen-matka-aloitus-{tyopoyta,puhelin}.png`.
 
 ## 8. Mitä jää auki toteutukseen
 
@@ -1433,6 +1508,11 @@ kertojan puhuessa pisimmästä kävelymatkasta. Sääntö on siksi:
 `jaksonTahti` pitää jakson lukemassaan, jos SEURAAVA jakso on
 hyppyjakso — hyppy kuuluu hyppyjaksolle.
 
+> **Tarkennettu 9.9.2026 (luku 18):** putkiluennassa jakson kesto tulee
+> manifestin aikaleimoista (seuraavan jakson alku) eikä äänitteen
+> metatiedoista, ja kulunut aika luetaan soittimen `currentTime`:stä.
+> Alla kuvattu seinäkello on nyt varareitti mykistetylle pelille.
+
 Jakson kesto on **äänitteen kesto**, luettuna soittimen
 `loadedmetadata`-tapahtumasta heti kun se saapuu. Siihen asti — ja
 kokonaan ilman äänitettä (mykistys, kertojatila 'ei', puuttuva
@@ -1479,6 +1559,11 @@ Esinerivi (alareunan karuselli) on **piilossa koko esityksen ajan**
 poistaa luokan juuri ennen tutkimusvaiheen koukkua.
 
 ### 12.7 Pulun välihuomiot
+
+> **Korvattu putkiluennassa 9.9.2026 (luku 18.4):** kertojaa ei enää
+> katkota, joten jaksolla ei ole `PULUN_VARA_MS`-häntää eikä pulu odota
+> vuoroaan. Tämä luku kuvaa jakso kerrallaan -tilan, joka on yhä
+> voimassa vanhalle ämpärin sisällölle.
 
 Jakson `pulu` luetaan pulun äänellä jakson **luennan päätyttyä**, ennen
 seuraavaa jaksoa: jakson kesto on luenta + `PULUN_VARA_MS` (2,6 s), ja
@@ -2624,3 +2709,177 @@ Savuke `tools/savukkeet/savuke-ihmisen-esitys.mjs`:
   7 sekunnin zoomi ei mahtuisi kolmen sekunnin luentaan.
 - Kuvat: `0-musta`, `1-tahdet`, `2-afrikka-pisteena`, `3-tauko-avauksessa`,
   `4-afrikka-puolivalissa`, `5-valot-afrikkaan`, `6-teksti-alhaalla`.
+
+## 18. Kertoja lukee kertomuksen putkeen (9.9.2026)
+
+*(Raamattu "IHMISEN MATKA: KERTOJA LUKEE KOKO KERTOMUKSEN PUTKEEN, PULU
+PUHUU HILJEMPAA KERTOJAN PAALLE", omistaja 9.9.2026 klo 15.00,
+sanatarkasti: **"siinä koko tekstin luenta saisi mennä putkeen ilman
+että sitä katkotaan välillä"** ja valinta Fablen vaihtoehdoista:
+**"vaihtoehto 1 mutta pulu voi puhua hieman hiljempaa kertojan päälle
+omat kommentit"**. Sekä "IHMISEN MATKAN ALKUANIMAATIO: ENSIMMAINEN VIRKE
+MUSTALLE, PALLO TAHTIEN KESKELLA PISTEENA, AFRIKKA TAYTTAA RUUDUN KUN SE
+MAINITAAN, KAMERA KIIHTYY MAROKKOON", omistaja klo 15.15.)*
+
+Tämä luku korvaa luvusta 12 sen, mikä koski jakson kelaamista ja
+pysäyttämistä: luvut 12.4 (kesto) ja 12.7 (pulun häntä) ovat voimassa
+enää **jakso kerrallaan -tilassa**.
+
+### 18.1 Mikä muuttui
+
+| Ennen (jakso kerrallaan tai kelattu putki) | Nyt (putki) |
+| --- | --- |
+| Soitin kelattiin jokaisen jakson alkuun ja pysäytettiin jakson loppuun | Yksi `play()` koko kertomukselle, ei kelausta eikä pysäytystä |
+| Jaksojen väliin jäi `PULUN_VARA_MS` (2,6 s) | Ei taukoa, ei häntää |
+| Kello ja kamera kulkivat seinäkellosta | Kello ja kamera kulkevat **äänikellosta** (`currentTime`) |
+| Jakso vaihtui kun `kulunut ≥ kesto` | Jakso vaihtuu kun soittimen kello ohittaa seuraavan jakson `alku`-aikaleiman |
+| Pulu puhui jakson päätyttyä, kertoja oli vaiti | Pulu puhuu kappaleiden väliseen hengähdykseen **kertojan päälle** 0,55 × tasolla |
+
+### 18.2 Kaksi kestoa: `kesto` ja `puhe`
+
+`js/linssit/ihmisen-matka-luenta.js jaksojenAikaleimat` antaa jokaiselle
+manifestin jaksolle neljä lukua (ms tiedoston alusta):
+
+| kenttä | merkitys |
+| --- | --- |
+| `alku` | jakson ensimmäinen ääni |
+| `loppu` | jakson viimeinen ääni (kappale + `JAKSON_HANTA_MS` 250 ms) |
+| `paattyy` | **seuraavan** jakson `alku` — viimeisellä `loppu` |
+| `kesto` | `paattyy − alku`, jakson mitta esitykselle |
+
+Ero `loppu`- ja `paattyy`-kenttien välillä on juuri se hiljaisuus, joka
+äänitteessä on kappaleiden välissä. Sitä **ei leikata pois** vaan se
+kuuluu läpi: kello, kamera ja kuvat jakavat matkansa koko `kesto`-
+välille, ja pulu puhuu `loppu`-hetkellä siihen rakoon.
+
+Ohjaajalle nämä tulevat yhtenä kutsuna: `onKesto(kesto, { puhe })`.
+`tila.luenta` = `kesto` (kello ja kamera), `tila.puluHetki` = `puhe`.
+Jakso kerrallaan -tilassa molemmat ovat äänitteen kesto, ja `puhe`
+oletusarvoistuu `kesto`:ksi — kutsupaikan ei tarvitse tietää tilasta.
+
+### 18.3 Äänikello ja jakson raja
+
+Kaksi uutta kohtaa `js/linssit/ihmisen-matka-luenta.js`:ssä:
+
+- **`kulunut()`** — jakson kulunut aika soittimesta (`currentTime × 1000
+  − jakson alku`) tai `null`, jos ääntä ei ole. Kehyssilmukka lukee
+  tämän ensin ja putoaa seinäkelloon vain, jos se on `null`
+  (mykistys, kertojatila *ei*, puuttuva tiedosto, torjuttu `play`).
+  Seinäkellon lähtöhetki päivitetään joka kehyksellä, joten pudotus
+  varareitille ei hypäytä mitään. Tauko pysäyttää äänikellon itsestään:
+  pysäytetty soitin ei etene.
+- **`vahdiRajaa`** — `timeupdate` + `setInterval(RAJAN_TARKKUUS_MS)`,
+  sama 60 ms:n tarkkuus kuin ennen loppuvahdilla. Kun kello ohittaa
+  `paattyy`-hetken (tai äänite loppuu kesken), ohjaajan `onRaja` vaihtaa
+  jakson. **Ääntä ei kosketa**: kertoja jatkaa lukemistaan seuraavan
+  jakson puolella, kuten lukija kääntää sivua kesken kappaleen.
+
+Kehyssilmukan vanha ehto (`kulunut ≥ kesto`) on yhä paikallaan
+varareittinä sille ajolle, jossa ääntä ei ole lainkaan.
+
+**Soitin luodaan uudestaan vain hypätessä**: esityksen alussa, muistista
+jatkettaessa ja aikaselaimen valinnasta. Silloin `currentTime` asetetaan
+`alku + alkukohta`-kohtaan ennen soittoa (`valmistele`-koukku). Muissa
+jaksonvaihdoissa `putkenJakso` huomaa, että soitin on jo jakson välillä,
+eikä tee sille mitään. `pura()` pysäyttää putken (`pysaytaLinssiluenta`)
+— muuten viiden minuutin luenta jatkuisi linssin sulkeuduttua.
+
+**Aikahypyn kelaus on visuaalinen.** `KELAUKSEN_MS` kelaa kellon
+14 500 → 50 000 ja siirtää kameran Keski-Aasiaan, mutta ääntä ei kelata:
+kertoja lukee aikahypyn kappaleen putkessa muiden joukossa.
+
+### 18.4 Pulu puhuu kertojan päälle
+
+`tila.puluHetki` on jakson **oman puheen** loppu (`loppu − alku`), joten
+välihuomio alkaa kappaleiden välisestä hiljaisuudesta ja kuuluu kertojan
+päälle vasta hännästään — luontevin kohta, joka putkessa on olemassa.
+
+| | jakso kerrallaan | putki |
+| --- | --- | --- |
+| taso | `LIVIAN_VALIHUOMION_VAIMENNUS` 0,7 | `PULUN_VAIMENNUS_PUTKESSA` **0,55** |
+| jakson häntä | `PULUN_VARA_MS` 2,6 s | ei häntää |
+| väistö | ei (`vaista: false`) | ei (`vaista: false`) |
+
+Kerroin kertoo pulun perustasoon (`LIVIAN_PERUSTASO` 0,8), joten putken
+välihuomio soi 0,44 × puhevoimasta. `vaista: false` on sama reitti kuin
+fokusvirran huudahduksella (`js/fokusvirta.js`): pulu ei varaa
+puhevuoroa eikä kertoja hiljene sen alla. Kupla on ennallaan
+(`polloLinssikupla`, luokka `aikajana-kertomus-pulu`).
+
+### 18.5 Alkuanimaatio: musta virke, piste, Afrikka, Marokko
+
+Koko avaus on kiinni luennan aikaleimoissa. `avauksenVaiheet` (puhdas
+funktio, `js/linssit/ihmisen-matka-esitys.js`) kääntää avausjakson
+lauseiden ja sanojen aikaleimat viideksi hetkeksi, ja kehyssilmukka
+vertaa niihin äänikelloa:
+
+| hetki | mitä tapahtuu |
+| --- | --- |
+| 0 … `musta` | ruutu **täysin musta**, ensimmäinen virke |
+| `musta` | musta laskee harsoksi `feidi`:n aikana, tähdet nousevat |
+| `piste` | pallo näkyy tähtien keskellä pisteenä |
+| `zoomAlku` | zoomi lähtee |
+| `afrikka` | zoomi on perillä **tasan** sanan "Afrikasta" kohdalla |
+
+`musta` = aikaleimojen `lauseet[1]` (toisen virkkeen alku); ilman
+lauseita se on `MUSTAN_OSUUS` (0,35) matkasta sanaan. `feidi` =
+`min(TAHTIEN_FEIDI_MS, (afrikka − musta) × FEIDIN_OSUUS)`, ja
+`zoomKesto` = loput, rajattuna välille `AVARUUDEN_MIN_MS` (1,2 s) …
+`AVARUUDEN_MS` (7 s). Kaanonin omilla varakestoilla zoomi on **1,9
+sekuntia** — omistajan *"zoomautua nopeasti"*.
+
+CSS ei enää tiedä kestoja: ohjaaja kirjoittaa ne muuttujiin
+`--avauksen-feidi` ja `--avauksen-zoomi`, ja `css/aikajana.css` lukee ne
+(`var(--avauksen-feidi, 1800ms)`). Vanhat luvut jäivät varalukemiksi.
+
+**Pallo on piste.** `AVARUUDEN_KORKEUS` nousi 50 → **300** ja
+`TAHTIEN_KERROIN` 10 → **60** (= korkeus / 5, sama suhde kuin ennen,
+joten kirkkain tähtikerros jää yhä kameran taakse). Mitat
+(`pallonOsuusRuudusta`, fov 50°):
+
+| korkeus | pallo ruudun korkeudesta | 800 px:n ruudulla |
+| --- | --- | --- |
+| 2,5 (laudan katto) | yli 60 % | — |
+| 7,5 (vanha avaus) | 27 % | 216 px |
+| 50 (avaus 8.9.) | 4,5 % | 36 px |
+| **300 (nyt)** | **0,76 %** | **6 px** |
+
+Kauimmainen tähti on 391 ja kamera 301 pallonsädettä keskipisteestä,
+joten kameran far-taso (1 250 sädettä) riittää yhä.
+
+**Kamera kiihtyy Marokkoon.** Samalla hetkellä kun Afrikka täyttää
+ruudun (`sytytaValot`), `aloitaKohdeajo` lähettää kameran kohti
+ensimmäistä kohdetta (kaanonin ensimmäinen `kohde`, Jebel Irhoud). Ajon
+kesto on aika sen jakson alkuun — putkessa tarkasti manifestista
+(`luenta.leimat(...).alku − luenta.hetki()`), ilman ääntä varakestoista
+(`jaksojenValiMs`). Käyrä on **`marokonPehmennys`** eikä laudan oma
+trapetsi (`js/siirtokoreografia.js siirtoajonPehmennys`, jossa vauhti
+nousee heti täyteen ja pysyy siinä):
+
+- kuutiollinen kiihtyvyys koko matkan `MAROKON_JARRU`-kohtaan (0,8) asti,
+- sen jälkeen jarrutus nollaan perillä,
+- nopeus jatkuva molemmissa liitoksissa: ei nytkähdystä kummassakaan päässä,
+- puolivälissä on kuljettu vain noin 18 % matkasta.
+
+`'afrikka'`-jakson aluerajaus ja ensimmäisen kohteen oma ajo jäävät
+tekemättä niin kauan kuin tämä ajo on menossa (`tila.kohdeajo`) —
+muuten kamera nykäistäisiin takaisin koko maanosaan tai perillä
+uudestaan liikkeelle. `prefers-reduced-motion`: ei ajoa lainkaan,
+jaksot leikkaavat paikalleen kuten ennenkin.
+
+### 18.6 Portit
+
+- `node --test tests/*.test.mjs` — `tests/ihmisen-matka-luenta.test.mjs`
+  (putki: yksi soitin, yksi `play()`, ei taukoja jaksojen välissä,
+  jaksoraja aikaleimasta, äänikello, hyppy kelaa mutta vain hypätessä,
+  jakso kerrallaan ennallaan) ja `tests/ihmisen-matka-esitys.test.mjs`
+  (avauksen vaiheet, Marokon käyrä, pulun taso ja väistämättömyys,
+  hännän puuttuminen putkessa). Myös `tests/tahdet.test.mjs` seuraa
+  avauksen kytkentää.
+- `NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-ihmisen-esitys.mjs`
+  — selain ajaa koko esityksen. Savukkeen äänet ovat mockattuja
+  hiljaisuuksia **jakso kerrallaan** (manifesti ei tule läpi mockista),
+  joten se vartioi nimenomaan sitä, ettei vanha tila rikkoutunut; uudet
+  väitteet ovat MUSTA ALKU (luokka `musta` pysyy ensimmäisen virkkeen),
+  AFRIKKA-SANA (`kulunut + kesto ≈ hetki`) ja MAROKKO (kohdeajo alkaa
+  valojen kanssa).

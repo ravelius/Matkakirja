@@ -215,31 +215,34 @@ test('avaus lähtee laudan katon takaa ja palauttaa katon', () => {
    */
   assert.ok(AVARUUDEN_KORKEUS > PALLO_KORKEUS_MAX * 2,
     `lähtökorkeus ${AVARUUDEN_KORKEUS} ei ole reilusti laudan katon (${PALLO_KORKEUS_MAX}) takana`);
+  // AVARUUDEN_MS on nyt zoomin KATTO: kesto luetaan luennasta niin,
+  // että zoomi päättyy sanaan "Afrikasta" (ALKUANIMAATIO 9.9.2026).
   assert.ok(AVARUUDEN_MS >= 3000 && AVARUUDEN_MS <= 9000, `${AVARUUDEN_MS} ms`);
   assert.ok(TAHTIEN_HAIVE > 0 && TAHTIEN_HAIVE < 1, `${TAHTIEN_HAIVE}`);
   assert.ok(AVARUUDEN_HARSO > 0 && AVARUUDEN_HARSO < 1, `${AVARUUDEN_HARSO}`);
   const puhdas = koodi(OHJAAJA);
   const avaus = puhdas.slice(puhdas.indexOf('const avaruusavaus = ()'), puhdas.indexOf('const avaruudenKulunut'));
   assert.match(avaus, /avaaKaukaisuus\(alueenKeskus\('afrikka'\)\)/, 'avaus ei avaa etäisyyskattoa');
-  assert.match(avaus, /ajaAlueeseen\('afrikka', AVARUUDEN_MS\)/,
+  assert.match(avaus, /ajaAlueeseen\('afrikka', tila\.avaruusKesto\)/,
     'zoomi ei aja Afrikkaan laudan omalla ajolla');
   assert.match(avaus, /if \(reduced\) \{[\s\S]*?ajaAlueeseen\('afrikka', 0\)/,
     'vähennetty liike ei ole suora leikkaus');
   // Katto palautuu sekä ajastimella että purussa.
-  assert.match(avaus, /setTimeout\(palautaKaukaisuus, AVARUUDEN_MS \+ \d+\)/);
+  assert.match(avaus, /setTimeout\(palautaKaukaisuus, tila\.avaruusKesto \+ \d+\)/);
   assert.match(puhdas, /clearTimeout\(tila\.kattoAjastin\);\s*\n\s*palautaKaukaisuus\(\);/,
     'purku ei palauta etäisyyskattoa');
   const kaukaisuus = puhdas.slice(puhdas.indexOf('const avaaKaukaisuus'), puhdas.indexOf('const palautaKaukaisuus'));
   assert.match(kaukaisuus, /pallo\.pointOfView\(\{ \.\.\.keski, altitude: AVARUUDEN_KORKEUS \}, 0\)/,
     'lähtönäkymä ei tule laudan omasta pointOfView-kutsusta');
   /*
-   * UUTTA KAMERAMOOTTORIA EI TEHDÄ. Avauksen ainoa kehyskutsu on mustan
-   * luokanvaihto (css hoitaa liu'un); kameraa liikuttavat vain laudan
-   * omat `pointOfView` (lähtönäkymä) ja `ajaKamera` (zoomi).
+   * UUTTA KAMERAMOOTTORIA EI TEHDÄ. Avauksessa ei ole yhtäkään omaa
+   * kehyskutsua: musta nostetaan luennan aikaleimasta kertomuksen omassa
+   * silmukassa (nostaMusta), ja kameraa liikuttavat vain laudan omat
+   * `pointOfView` (lähtönäkymä) ja `ajaKamera` (zoomi).
    */
   const kehyskutsut = (avaus.match(/requestAnimationFrame/g) ?? []);
-  assert.equal(kehyskutsut.length, 1, `avauksessa ${kehyskutsut.length} kehyskutsua`);
-  assert.match(avaus, /requestAnimationFrame\(\(\) => peite\.classList\.remove\('musta'\)\);/);
+  assert.equal(kehyskutsut.length, 0, `avauksessa ${kehyskutsut.length} kehyskutsua`);
+  assert.match(puhdas, /function nostaMusta\(feidi\) \{[\s\S]{0,300}peite\.classList\.remove\('musta'\);/);
   assert.ok(!/pointOfView/.test(avaus), 'zoomi ohittaa laudan kameran');
 });
 
@@ -271,6 +274,8 @@ test('musta on ensin peitteessä ja sitten pallon ALLA', () => {
    * ruutu ja sitten siihen feidautuisi ensin tähtiä"*):
    *
    *   1. `avaruus musta` — peite läpinäkymätön: ei palloa, ei tähtiä.
+   *                        Kestää tasan ENSIMMÄISEN VIRKKEEN (omistaja
+   *                        9.9.2026, ALKUANIMAATIO).
    *   2. `avaruus`       — harso (AVARUUDEN_HARSO): tähdet ja pallon
    *                        alla oleva musta levy tulevat näkyviin.
    *   3. `kirkastuu`     — harso pois zoomin tahdissa.
@@ -280,8 +285,8 @@ test('musta on ensin peitteessä ja sitten pallon ALLA', () => {
     'musta levy ei mene karttaruudun ensimmäiseksi lapseksi (jäisi pallon päälle)');
   assert.match(puhdas, /peite\.classList\.add\('avaruus', 'musta'\)/,
     'avaus ei ala kokonaan mustasta ruudusta');
-  assert.match(puhdas, /requestAnimationFrame\(\(\) => peite\.classList\.remove\('musta'\)\)/,
-    'musta ei väisty tähtien tieltä');
+  assert.match(puhdas, /if \(tila\.mustaPaalla && tila\.kulunut >= ajat\.musta\) nostaMusta\(ajat\.feidi\);/,
+    'musta ei väisty tähtien tieltä ensimmäisen virkkeen jälkeen');
   assert.match(CSS, /\.aikajana-avaruus \{[\s\S]{0,300}position: absolute;/);
   assert.match(CSS, /\.aikajana-avaruus\.pois \{ opacity: 0; \}/);
   assert.match(CSS, /\.aikajana-esitys-peite\.avaruus \{[\s\S]{0,160}opacity: 0\.35;/,

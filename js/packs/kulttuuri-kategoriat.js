@@ -11608,7 +11608,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lännessä, kaukana kaupungista, ja se nimettiin '
                 + 'runoilija Federico García Lorcan mukaan 2006. Nopea '
                 + 'junayhteys Madridiin avattiin vasta kesäkuussa 2019.',
-              kuva: { tiedosto: 'Metro de Granada por Maracena.jpg', selite: 'Granadan raitiotie avattiin 21. syyskuuta 2017, ja sen lähes kuudentoista kilometrin linjalla on 26 asemaa.', lahde: 'Lopezsuarez, Wikimedia Commons (CC0)' },
+              kuva: { tiedosto: 'Metro de Granada por Maracena.jpg', lyhyt: 'Granadan raitiotie avattiin 2017; sen lähes 16 kilometrin linjalla on 26 asemaa.', selite: 'Granadan raitiotie avattiin 21. syyskuuta 2017, ja sen lähes kuudentoista kilometrin linjalla on 26 asemaa.', lahde: 'Lopezsuarez, Wikimedia Commons (CC0)' },
             },
             {
               otsikko: 'Katu, joka murrettiin läpi',
@@ -12139,7 +12139,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'muualta löytyi. Virallinen kapasiteetti on '
                 + 'kuusisataa henkeä, mutta illan aikana kävijöitä voi '
                 + 'olla tuhansia.',
-              kuva: { tiedosto: 'Budapest Szimpla Kert (54176243453).jpg', selite: 'Ensimmäinen raunioravintola avattiin vuonna 2002 vanhaan pihapiiriin, ja sen sisustus kerättiin siitä, mitä tiloissa oli valmiina.', lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)' },
+              kuva: { tiedosto: 'Budapest Szimpla Kert (54176243453).jpg', lyhyt: 'Ensimmäinen raunioravintola avattiin 2002; sisustus koottiin tiloista löytyneestä.', selite: 'Ensimmäinen raunioravintola avattiin vuonna 2002 vanhaan pihapiiriin, ja sen sisustus kerättiin siitä, mitä tiloissa oli valmiina.', lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)' },
             },
             {
               otsikko: 'Kolmesta kaupungista yksi vuonna 1873',
@@ -13329,7 +13329,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'noin seitsemässätoista minuutissa. Raitiovaunut '
                 + 'aloittivat 1882 hevosvetoisina, ja verkko '
                 + 'sähköistettiin maaliskuussa 1901. Linjoja on nyt 27.',
-              kuva: { tiedosto: 'Kraków - tram Bombardier NGT6 twisting from Nowosądecka street to Wielicka street.JPG', selite: 'Krakovan raitiovaunut aloittivat 1882 hevosvetoisina, verkko sähköistettiin maaliskuussa 1901, ja linjoja on nyt 27.', lahde: 'Wuhazet (Henryk Żychowski), Wikimedia Commons (CC BY 3.0)' },
+              kuva: { tiedosto: 'Kraków - tram Bombardier NGT6 twisting from Nowosądecka street to Wielicka street.JPG', lyhyt: 'Krakovan raitiovaunut aloittivat 1882 hevosvetoisina; verkko sähköistettiin 1901, linjoja nyt 27.', selite: 'Krakovan raitiovaunut aloittivat 1882 hevosvetoisina, verkko sähköistettiin maaliskuussa 1901, ja linjoja on nyt 27.', lahde: 'Wuhazet (Henryk Żychowski), Wikimedia Commons (CC BY 3.0)' },
             },
             {
               otsikko: 'Puisto muurin paikalla',
@@ -13363,7 +13363,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kasvoi maan suurimmaksi. 1980-luvulla alueesta tuli '
                 + 'Solidaarisuus-liikkeen keskus: tehtaan 38 000 '
                 + 'työntekijästä lähes 29 000 kuului liittoon.',
-              kuva: { tiedosto: 'Plac Centralny - Nowa Huta.jpg', selite: 'Nowa Huta perustettiin 1949 omaksi kaupungikseen ihanteelliseksi sosialistiseksi kaupungiksi ja liitettiin Krakovaan 1951.', lahde: 'TomRollauer, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Plac Centralny - Nowa Huta.jpg', lyhyt: 'Nowa Huta perustettiin 1949 sosialistiseksi ihannekaupungiksi ja liitettiin Krakovaan 1951.', selite: 'Nowa Huta perustettiin 1949 omaksi kaupungikseen ihanteelliseksi sosialistiseksi kaupungiksi ja liitettiin Krakovaan 1951.', lahde: 'TomRollauer, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -13688,6 +13688,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rahoitettiin yleisellä keräyksellä, ja lahjoittajien nimet '
             + 'kaiverrettiin tiiliin, joista muurattiin muuri pohjoisen '
             + 'portin lähelle. Ne ovat siellä yhä ja niitä voi lukea.',
+          lyhyt: 'Wawelin kukkula Veikselin rannalla oli isoisän matkavuonna itävaltalainen kasarmi.',
           selite: 'Wawelin kukkula kohoaa Veikselin rannalla vanhankaupungin '
             + 'eteläpuolella, ja se oli isoisän matkavuonna itävaltalainen '
             + 'kasarmi.',
@@ -13797,7 +13798,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'toinen linja avattiin 2015. Asemia on 39. '
                 + 'Raitiovaunut aloittivat hevosvetoisina 1866, ja '
                 + 'verkko sähköistettiin vuoteen 1908 mennessä.',
-              kuva: { tiedosto: 'Bemowo metro station, 3.jpg', selite: 'Varsovan metron ensimmäinen linja avattiin 7. huhtikuuta 1995, vaikka rakentaminen oli aloitettu jo 1983.', lahde: 'Oliwier Brzeziński, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Bemowo metro station, 3.jpg', lyhyt: 'Varsovan metron ensimmäinen linja avattiin 1995, vaikka rakentaminen alkoi jo 1983.', selite: 'Varsovan metron ensimmäinen linja avattiin 7. huhtikuuta 1995, vaikka rakentaminen oli aloitettu jo 1983.', lahde: 'Oliwier Brzeziński, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Kaksi rantaa, kaksi kaupunkia',
@@ -13809,7 +13810,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'poikkeuksellisen hyvin, joten siellä on yhä '
                 + 'sotaa edeltäviä kadunvarsitaloja — joen länsipuolella '
                 + 'niitä ei juuri ole.',
-              kuva: { tiedosto: 'Warszawa targowa 43 45.jpg', selite: 'Praga säästyi vuoden 1944 tuholta poikkeuksellisen hyvin, joten siellä on yhä sotaa edeltäviä kadunvarsitaloja.', lahde: 'Panek, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Warszawa targowa 43 45.jpg', lyhyt: 'Praga säästyi vuoden 1944 tuholta poikkeuksellisen hyvin, ja siellä on yhä sotaa edeltäviä taloja.', selite: 'Praga säästyi vuoden 1944 tuholta poikkeuksellisen hyvin, joten siellä on yhä sotaa edeltäviä kadunvarsitaloja.', lahde: 'Panek, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Palmu keskellä kiertoliittymää',
@@ -13822,7 +13823,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + '2012 palmu on kuulunut nykytaiteen museon '
                 + 'kokoelmiin, ja liittymästä on tullut '
                 + 'kokoontumispaikka.',
-              kuva: { tiedosto: 'Warszawa - Pozdrowienia z Alej Jerozolimskich.jpg', selite: 'Kiertoliittymän keinotekoinen palmu pystytettiin 12. joulukuuta 2002, ja sen runko on verhoiltu aidolla palmunkuorella ja lehdet ovat lasikuitua.', lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)' },
+              kuva: { tiedosto: 'Warszawa - Pozdrowienia z Alej Jerozolimskich.jpg', lyhyt: 'Kiertoliittymän keinotekoinen palmu pystytettiin 2002: runko on aidolla kuorella, lehdet lasikuitua.', selite: 'Kiertoliittymän keinotekoinen palmu pystytettiin 12. joulukuuta 2002, ja sen runko on verhoiltu aidolla palmunkuorella ja lehdet ovat lasikuitua.', lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)' },
             },
             {
               otsikko: 'Sopimus, joka nimettiin kaupungin mukaan',
@@ -15195,7 +15196,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'linjaa. Joukkoliikenne on maksutonta, mutta vain '
                 + 'kaupunkiin kirjatuille asukkaille: muualta tulevat '
                 + 'ostavat lipun normaalisti.',
-              kuva: { tiedosto: 'Empty tram near Tallinn airport.JPG', selite: 'Tallinnan raitiotietä on 19,7 kilometriä ja viisi linjaa, ja joukkoliikenne on maksutonta kaupunkiin kirjatuille asukkaille.', lahde: 'Dmitry G, Wikimedia Commons (PD)' },
+              kuva: { tiedosto: 'Empty tram near Tallinn airport.JPG', lyhyt: 'Tallinnan raitiotietä on 19,7 kilometriä; joukkoliikenne on maksutonta kirjatuille asukkaille.', selite: 'Tallinnan raitiotietä on 19,7 kilometriä ja viisi linjaa, ja joukkoliikenne on maksutonta kaupunkiin kirjatuille asukkaille.', lahde: 'Dmitry G, Wikimedia Commons (PD)' },
             },
             {
               otsikko: 'Puutaloja ja betonia',
@@ -15208,7 +15209,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Lasnamäen betonilähiössä asuu 119 695 ihmistä eli '
                 + 'runsas neljäsosa koko kaupungista. Rakentaminen '
                 + 'alkoi 1973.',
-              kuva: { tiedosto: 'Soviet-era apartment building in Lasnamäe, Tallinn, Estonia.jpg', selite: 'Lasnamäen betonilähiössä asuu 119 695 ihmistä eli runsas neljäsosa koko kaupungista, ja rakentaminen alkoi 1973.', lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)' },
+              kuva: { tiedosto: 'Soviet-era apartment building in Lasnamäe, Tallinn, Estonia.jpg', lyhyt: 'Lasnamäen betonilähiössä asuu runsas neljäsosa kaupungin väestöstä; rakentaminen alkoi 1973.', selite: 'Lasnamäen betonilähiössä asuu 119 695 ihmistä eli runsas neljäsosa koko kaupungista, ja rakentaminen alkoi 1973.', lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)' },
             },
             {
               otsikko: 'Valtio, johon voi liittyä verkosta',
@@ -15656,7 +15657,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Albaniaan, Bulgariaan, Kreikan mantereelle ja '
                 + 'Pohjois-Makedoniaan. Kiovan päivää vietetään '
                 + 'toukokuun lopulla, juuri kukinnan aikaan.',
-              kuva: { tiedosto: '2010.05.09 Horse chestnut blossom, Kyiv, Ukraine 001c.jpg', selite: 'Hevoskastanja on Kiovan tunnetuimpia epävirallisia symboleja, vaikka lajin luontainen levinneisyys rajoittuu Balkanille.', lahde: 'William N. Beckon, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: '2010.05.09 Horse chestnut blossom, Kyiv, Ukraine 001c.jpg', lyhyt: 'Hevoskastanja on yksi Kiovan tunnetuimmista symboleista, vaikka laji on luontaisesti balkanilainen.', selite: 'Hevoskastanja on Kiovan tunnetuimpia epävirallisia symboleja, vaikka lajin luontainen levinneisyys rajoittuu Balkanille.', lahde: 'William N. Beckon, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Pääkatu, joka rakennettiin uudelleen',
@@ -16027,6 +16028,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Saint Petersburg Kunstkamera from Neva.jpg',
+          lyhyt: 'Kunstkamera on Venäjän ensimmäinen julkinen museo; Pietari Suuri avasi sen kokoelmineen 1714.',
           selite: 'Kunstkamera on Venäjän ensimmäinen julkinen museo, jonka '
             + 'Pietari Suuri avasi kokoelmineen vuonna 1714.',
           lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
@@ -16053,7 +16055,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kanavien yli kulkee yli 340 isompaa siltaa, ja '
                 + 'pienemmät mukaan laskien niitä on toista tuhatta. '
                 + 'Kesäisin liikkuu myös kantosiipialuksia.',
-              kuva: { tiedosto: 'Metro SPB Line5 Admiralteyskaya Platform.jpg', selite: 'Pietarin metro avattiin 15. marraskuuta 1955, ja sen asemat kuuluvat maailman syvimpiin: syvin on noin 86 metriä maanpinnan alapuolella.', lahde: 'Florstein, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Metro SPB Line5 Admiralteyskaya Platform.jpg', lyhyt: 'Pietarin metro avattiin 1955; sen asemat ovat maailman syvimpiä, syvin noin 86 metriä maan alla.', selite: 'Pietarin metro avattiin 15. marraskuuta 1955, ja sen asemat kuuluvat maailman syvimpiin: syvin on noin 86 metriä maanpinnan alapuolella.', lahde: 'Florstein, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Sata saarta, sitten neljäkymmentä',
@@ -17094,7 +17096,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'noin kaksikymmentä minuuttia. Lentokenttä on '
                 + 'kymmenen kilometriä itään, ja se vihittiin käyttöön '
                 + 'jo syyskuussa 1937.',
-              kuva: { tiedosto: 'Vitosha metro station, terminus platform.jpg', selite: 'Sofian metro avattiin 28. tammikuuta 1998, ja siinä on neljä linjaa, 50 asemaa ja 55 kilometriä rataa.', lahde: 'Robot8A, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Vitosha metro station, terminus platform.jpg', lyhyt: 'Sofian metro avattiin 1998; siinä on neljä linjaa, 50 asemaa ja 55 kilometriä rataa.', selite: 'Sofian metro avattiin 28. tammikuuta 1998, ja siinä on neljä linjaa, 50 asemaa ja 55 kilometriä rataa.', lahde: 'Robot8A, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Vuori kuuluu kaupunkiin',
@@ -17129,7 +17131,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'enää 19 000. Kasvu alkoi vasta pääkaupungiksi '
                 + 'tulon jälkeen. Toisessa maailmansodassa '
                 + 'pommituksissa tuhoutui täysin 2 670 rakennusta.',
-              kuva: { tiedosto: 'Sofia sv Sophia 1878.jpg', selite: 'Vuonna 1878 Sofia oli 11 649 asukkaan maakuntakaupunki, ja seuraavana vuonna siitä tehtiin Bulgarian pääkaupunki.', lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)' },
+              kuva: { tiedosto: 'Sofia sv Sophia 1878.jpg', lyhyt: 'Vuonna 1878 Sofia oli maakuntakaupunki; seuraavana vuonna siitä tuli Bulgarian pääkaupunki.', selite: 'Vuonna 1878 Sofia oli 11 649 asukkaan maakuntakaupunki, ja seuraavana vuonna siitä tehtiin Bulgarian pääkaupunki.', lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)' },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -17665,7 +17667,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'siinä on viisi linjaa, 64 asemaa ja 80 kilometriä '
                 + 'rataa. Päärautatieaseman peruskivi laskettiin '
                 + 'syyskuussa 1868 ja asema avattiin 1872.',
-              kuva: { tiedosto: 'Grivița Metro Station, Bucharest, Romania - 1.jpg', selite: 'Grivițan metroasema avattiin 1. maaliskuuta 2000 neloslinjan ensimmäisellä osuudella Gara de Nordin ja 1 Main välillä.', lahde: 'Mihnea L, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Grivița Metro Station, Bucharest, Romania - 1.jpg', lyhyt: 'Grivițan metroasema avattiin 2000 neloslinjan osuudella Gara de Nordin ja 1 Main välillä.', selite: 'Grivițan metroasema avattiin 1. maaliskuuta 2000 neloslinjan ensimmäisellä osuudella Gara de Nordin ja 1 Main välillä.', lahde: 'Mihnea L, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Kuusi sektoria',
@@ -18143,7 +18145,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Cultures: sen toisella puolella on matala '
                 + 'ottomaaniajan kaupunki, toisella suoraviivainen '
                 + 'itävaltalainen ruutukaava.',
-              kuva: { tiedosto: 'Buiobuione-Sarajevo-Meeting-of-Cultures-23-04-2018.jpg', selite: 'Ferhadija-kadulla jalkakäytävään on upotettu messinkiviiva ja teksti Sarajevo Meeting of Cultures: sen toisella puolella on ottomaaniajan kaupunki, toisella itävaltalainen ruutukaava.', lahde: 'Buiobuione, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Buiobuione-Sarajevo-Meeting-of-Cultures-23-04-2018.jpg', lyhyt: 'Ferhadija-kadun messinkiviiva erottaa ottomaaniajan kaupungin itävaltalaisesta ruutukaavasta.', selite: 'Ferhadija-kadulla jalkakäytävään on upotettu messinkiviiva ja teksti Sarajevo Meeting of Cultures: sen toisella puolella on ottomaaniajan kaupunki, toisella itävaltalainen ruutukaava.', lahde: 'Buiobuione, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Kello, joka seuraa aurinkoa',
@@ -18156,7 +18158,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vaihtelee, mekanismia on säädettävä jatkuvasti. '
                 + 'Torni on maan kellotorneista ainoa, jota ei ole '
                 + 'muutettu eurooppalaiseen aikaan.',
-              kuva: { tiedosto: 'Sahat kula in Sarajevo 02.jpg', selite: 'Sahat-kula rakennettiin 1500-luvun puolivälissä, ja 28 metrin korkeudellaan se on Bosnia ja Hertsegovinan korkein kellotorni.', lahde: 'Adam Harangozó, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: 'Sahat kula in Sarajevo 02.jpg', lyhyt: 'Sahat-kula rakennettiin 1500-luvun puolivälissä; 28-metrisenä se on maan korkein kellotorni.', selite: 'Sahat-kula rakennettiin 1500-luvun puolivälissä, ja 28 metrin korkeudellaan se on Bosnia ja Hertsegovinan korkein kellotorni.', lahde: 'Adam Harangozó, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Tuhat neljäsataa kaksikymmentäviisi päivää',
@@ -18572,7 +18574,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ja se säilytti liitoksen jälkeenkin oman '
                 + 'katuverkkonsa. Ennen vuotta 1917 se oli kaupungin '
                 + 'juutalaisen väestön ja työväen kortteli.',
-              kuva: { tiedosto: 'Staroportofrankivska Street - panoramio.jpg', selite: 'Moldavanka oli alun perin oma siirtokuntansa, mahdollisesti Odessaa vanhempi, ja se säilytti liitoksen jälkeenkin oman katuverkkonsa.', lahde: 'Дмитрий Ванькевич, Wikimedia Commons (CC BY-SA 3.0)' },
+              kuva: { tiedosto: 'Staroportofrankivska Street - panoramio.jpg', lyhyt: 'Moldavanka oli oma siirtokuntansa, mahdollisesti Odessaa vanhempi, ja säilytti oman katuverkkonsa.', selite: 'Moldavanka oli alun perin oma siirtokuntansa, mahdollisesti Odessaa vanhempi, ja se säilytti liitoksen jälkeenkin oman katuverkkonsa.', lahde: 'Дмитрий Ванькевич, Wikimedia Commons (CC BY-SA 3.0)' },
             },
             {
               otsikko: 'Kaupunki, jolla on oma puheenparsi',
@@ -19078,6 +19080,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Al Fahidi Historical Neighbourhood, Dubai.jpg',
+          lyhyt: 'Al Fahidin kortteli on Bur Dubain vanhinta rakennuskantaa; jäähdytys hoitui tuulitorneilla.',
           selite: 'Al Fahidin kortteli on Bur Dubain vanhinta '
             + 'rakennuskantaa, ja sen talot jäähdytettiin tuulitorneilla jo '
             + 'ennen sähköä.',
@@ -19250,6 +19253,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'aamuun ja iltaan, niin kuin dubailaiset tekevät.',
               kuva: {
                 tiedosto: 'Al Bastakiya-Dubai8888.JPG',
+                lyhyt: 'Dubaissa heinä-elokuun lämpötila on keskimäärin yli 43 astetta; vanhat kujat ovat varjoisia.',
                 selite: 'Dubaissa ylin lämpötila on heinä- ja elokuussa '
                   + 'keskimäärin yli 43 astetta, ja vanhan kaupungin kapeat '
                   + 'kujat on rakennettu varjoisiksi.',
@@ -21689,6 +21693,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'portteja on seitsemän; arkeologit ovat lisäksi avanneet kaksi '
             + 'pientä porttia. Muurit ja vanhakaupunki hyväksyttiin Unescon '
             + 'maailmanperintöluetteloon vuonna 1981.',
+          lyhyt: 'Muuria kiertää 34 tornia ja seitsemän porttia; vanhakaupunki on Unescon maailmanperintöä 1981.',
           selite: 'Muuria kiertää 34 tornia ja liikennöityjä portteja on '
             + 'seitsemän, ja vanhakaupunki hyväksyttiin Unescon '
             + 'maailmanperintöluetteloon vuonna 1981.',
@@ -36795,6 +36800,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maailman suurin säilynyt puurakenteinen '
             + 'palatsikokonaisuus. Alueella asui 24 keisaria, 14 '
             + 'Mingin ja 10 Qingin sukua.',
+          lyhyt: 'Meridiaaniportti on Kielletyn kaupungin pääsisäänkäynti; sisällä asui 24 keisaria kahdesta suvusta.',
           selite: 'Meridiaaniportti on Kielletyn kaupungin eteläinen '
             + 'pääsisäänkäynti, ja muurien sisällä asui aikanaan 24 '
             + 'keisaria, 14 Mingin ja 10 Qingin sukua.',
@@ -37618,6 +37624,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Shibuya Crossing, Aerial.jpg',
+          lyhyt: 'Shibuyan risteystä pidetään vilkkaimpana suojatienä: sen ylittää jopa 3000 ihmistä vihreän aikana.',
           selite: 'Shibuyan risteystä pidetään maailman vilkkaimpana '
             + 'suojatienä: yhden vihreän aikana sen yli kulkee jopa 3 '
             + '000 ihmistä.',
@@ -37803,6 +37810,7 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'Kappabashi Street with Tokyo Skytree in Background, Tokyo 130810 1.jpg',
+                  lyhyt: 'Kappabashin kauppiaat ovat ottaneet maskotikseen vesihiisi kappan, jonka hahmoja näkyy kylteissä.',
                   selite: 'Kappabashin kauppiaat ovat ottaneet '
                     + 'maskotikseen vesihiisi kappan, jonka hahmoja on '
                     + 'kylteissä pitkin katua.',
@@ -37894,6 +37902,7 @@ export const KULTTUURI_KATEGORIAT = {
                 },
                 {
                   tiedosto: 'flickr-16200454374.jpg',
+                  lyhyt: 'Näyteikkunoiden muoviruoka tehtiin ensin parafiinista, kunnes 1980-luvulla siirryttiin PVC-muoviin.',
                   selite: 'Näyteikkunoiden muoviruoka eli shokuhin '
                     + 'sampuru tehtiin 1920-luvun lopulta parafiinista, '
                     + 'kunnes 1980-luvun puolivälissä siirryttiin '
@@ -40328,6 +40337,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vanhin tunnettu puuveistos, yli 11 000 vuoden takaa. '
             + 'Kaivauksiin oli ryhdytty, koska avoimesta kultakaivoksesta '
             + 'oli löytynyt esihistoriallisia esineitä.',
+          lyhyt: 'Šigirin veistos on maailman vanhin tunnettu puuveistos, yli 11 000 vuoden takaa lehtikuusesta.',
           selite: 'Šigirin veistos on maailman vanhin tunnettu puuveistos, yli '
             + '11 000 vuoden takaa, ja se on veistetty lehtikuusesta '
             + 'kivityökaluilla.',
@@ -42435,6 +42445,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: '2024-10-03-Sakhalin-park-lake.jpg',
+          lyhyt: 'Gagarinin puistossa Južno-Sahalinskissa kulkee lasten rautatie Ylemmän lammen rannalla.',
           selite: 'Gagarinin puistossa Južno-Sahalinskissa kulkee lasten '
             + 'rautatie, jonka Komsomolskajan asema on Ylemmän lammen '
             + 'rannalla.',
@@ -43211,6 +43222,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Chao Phraya River Skyline - panoramio.jpg',
+          lyhyt: 'Bangkok on rakennettu Chao Phrayan suistotasangolle, jonka keskikorkeus on vain 1,5 metriä.',
           selite: 'Bangkok on rakennettu Chao Phrayan suistotasangolle, jonka '
             + 'keskikorkeus on vain puolitoista metriä merenpinnasta.',
           lahde: 'Piyatad, Wikimedia Commons (CC BY-SA 3.0)',

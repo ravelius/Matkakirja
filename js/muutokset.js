@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1713, teksti: 'Ihmisen matka putkeen, aloituskortti, luentakuva raahattava' },
   { v: 1712, teksti: 'Luentakuva vinossa, isot kaupunkipisteet, Etsi aarre -nappi' },
   { v: 1711, teksti: 'Kahdeksan luentakuvaa kartan päälle, nykykuvien lyhyet' },
   { v: 1710, teksti: 'Lyhyt kuvateksti sivulla, pitkä avatussa kuvassa (2214 kpl)' },
