@@ -421,10 +421,15 @@
  * koristeviiva, leipäteksti tasattuna anfangilla kuten Tiedeliitteessä,
  * muste tummanruskeaa — ei kirkasta mustaa.
  */
+/*
+ * OTSIKKO HIEMAN ISOMMALLA (omistaja 9.9.2026: *"ihmisen matka otsikko
+ * hieman isommalla"*). 1,22 rem → 1,46 rem, eli tasan +20 %; kapiteelit,
+ * harvennus ja koristeviiva ovat ennallaan.
+ */
 .aikajana-avaus-otsikko {
   margin: 0 0 0.85rem;
   font-family: var(--font-luku);
-  font-size: 1.22rem;
+  font-size: 1.46rem;
   font-weight: 600;
   font-variant: small-caps;
   letter-spacing: 0.09em;
@@ -569,6 +574,167 @@
 }
 .aikajana-avaus-nappi:focus-visible { outline: 2px solid rgba(246, 230, 194, 0.85); outline-offset: 3px; }
 .aikajana-avaus-nappi:active { transform: translateY(1px); }
+
+/* ===========================================================================
+   ALOITUSKORTIN KEN BURNS -TAUSTA
+   ---------------------------------------------------------------------------
+   Omistaja 9.9.2026 klo 15.40, sanatarkasti: *"tähän aloitukseen voisi tuoda
+   muutamia kuvia isona taustalle niin että ne liikkuvat hitaasti ja vaihtuvat
+   muutaman sekunnin välein (ken burns tyylinen liike + ristihäivytys). kuvien
+   tulisi feidautua mustaan reuna-alueilla ja kuvat hieman sumennettuina ja
+   tummennettuina. sitten paperi ja teksti näiden päälle ilman kuvaa."*
+   (Raamattu › "IHMISEN MATKAN ALOITUSKORTTI: KEN BURNS -KUVAT TAUSTALLA…").
+
+   KERROSJÄRJESTYS: musta peite (#000) — tausta — paperi. Tausta on peitteen
+   PÄÄLLÄ, joten sen reunamaskin läpi näkyy tasan sama musta kuin ennenkin, ja
+   paperin ALLA (kehys z-index 1), joten pergamentti ja teksti pysyvät
+   terävinä. Aiempi linjaus "peite on täysin musta Käynnistä-nappiin asti"
+   pätee siis yhä siltä osin, ettei KARTTA näy taustan takaa.
+
+   SUMENNUS ON KUVASSA, EI LIIKKUVASSA KERROKSESSA. `filter: blur()` on
+   `img`-elementillä, joka ei itse animoi; liike ja ristihäivytys ovat sen
+   vanhemmassa `div`:issä. Näin selain rasteroi sumennuksen kerran kuvaa
+   kohti eikä joka kehyksellä — sama syy, miksi avausjakson muissa kerroksissa
+   ei ole suodattimia (ks. edellinen osio). Sumennus ei myöskään kosketa
+   pergamenttia: se on omassa kerroksessaan taustakuvan sisällä.
+
+   AJASTUS ON KOKONAAN CSS:SSÄ (js/aikajana.js avauksenTausta päättää vain,
+   milloin kierros lähtee). Kierros on KUUSI kuvaa × 6,5 s = 39 s, ja
+   keyframe-prosentit on laskettu siitä:
+
+       ristihäivytys 1,5 s  → 1,5 / 39   = 3,846 %
+       näkyvillä     6,5 s  → 6,5 / 39   = 16,667 %
+       häivytetty    8,0 s  → 8,0 / 39   = 20,513 %
+
+   Kerros i saa viiveen i × 6,5 s, joten kerroksen i häipyessä (6,5 → 8,0 s)
+   kerros i+1 nousee samassa 1,5 sekunnissa. JOS KUVIEN MÄÄRÄ MUUTTUU, nämä
+   prosentit on laskettava uudelleen — lista ja sen pituus asuvat kaaren
+   datassa (js/linssit/ihmisen-matka.js ALOITUKSEN_TAUSTAKUVAT) ja suhde on
+   vartioitu testissä (tests/ihmisen-matka.test.mjs).
+   =========================================================================== */
+.aikajana-avaus-tausta {
+  --avaus-tausta-kierros: 39s;
+  --avaus-tausta-vaihto: 6.5s;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1100ms ease;
+  /*
+   * REUNAT HÄIPYVÄT TÄYSIN MUSTAAN (omistajan *"kuvien tulisi feidautua
+   * mustaan reuna-alueilla"*). Maski on kerroksessa eikä kuvissa, jotta
+   * häivytys pysyy paikallaan, vaikka kuva sen alla liikkuu — muuten
+   * Ken Burns kuljettaisi reunapehmennystä mukanaan. Maskin ulkopuolella
+   * näkyy suoraan alla oleva peite, joka on puhdas #000.
+   *
+   * PYÖREÄ MASKI EI YKSIN RIITÄ LEVEÄLLÄ RUUDULLA. Keskitetty ellipsi
+   * ehtii nollaan kulmissa mutta ei sivujen ja ylälaidan keskikohdassa
+   * (mitattu 1600 × 979: vasen reuna jäi noin 35 %:n peittoon), joten
+   * reunoille tulee lisäksi musta kehys omana kerroksenaan (::after).
+   * Kaksi keinoa yhdessä: pehmeä pyöreä sammutus ja suora reunapimennys.
+   */
+  -webkit-mask-image: radial-gradient(ellipse 70% 76% at 50% 47%, #000 0%, #000 26%, rgba(0, 0, 0, 0.6) 54%, rgba(0, 0, 0, 0.12) 76%, transparent 92%);
+  mask-image: radial-gradient(ellipse 70% 76% at 50% 47%, #000 0%, #000 26%, rgba(0, 0, 0, 0.6) 54%, rgba(0, 0, 0, 0.12) 76%, transparent 92%);
+}
+/*
+ * MUSTA KEHYS REUNOILLE: kaksi lineaarista mustaa liukua ristiin, joten
+ * jokainen reuna on täysin musta ja sammuu vasta reilusti sisempänä.
+ * Kerros on kuvien PÄÄLLÄ mutta yhä paperin alla (tausta itse on
+ * z-index 0, kehys 1), eikä se ota napautuksia vastaan.
+ */
+.aikajana-avaus-tausta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 24%, rgba(0, 0, 0, 0) 76%, #000 100%),
+    linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, #000 100%);
+}
+/* Kierros näkyy vasta kun kuvat ovat ladanneet (luokka tulee moottorista). */
+.aikajana-avaus.musta .aikajana-avaus-tausta.kaynnissa { opacity: 1; }
+/*
+ * KÄYNNISTÄ HÄIVYTTÄÄ TAUSTAN. Valitsin kantaa `kaynnissa`-luokan, jotta se
+ * on yhtä painava kuin yllä oleva `.musta`-sääntö ja voittaa myöhempänä —
+ * `musta` jää päälle koko poistuman ajaksi. Häivytys on lyhyempi kuin
+ * sisääntulo, jotta se ehtii loppuun ennen kuin kerros irtoaa DOM:ista
+ * (js/aikajana.js AVAUS_POISTUMA_MS = 700 ms).
+ */
+.aikajana-avaus.pois .aikajana-avaus-tausta.kaynnissa {
+  opacity: 0;
+  transition-duration: 550ms;
+}
+/*
+ * Kerros on ruutua suurempi (inset: -8%), jotta Ken Burnsin pan ei paljasta
+ * reunaa. Animaatiot ovat aluksi PYSÄYTETYT, jolloin myös viiveet seisovat ja
+ * koko kierros lähtee tasan samasta hetkestä, kun moottori päästää sen irti.
+ */
+.aikajana-avaus-taustakuva {
+  position: absolute;
+  inset: -8%;
+  opacity: 0;
+  animation:
+    avaus-tausta-vaihto var(--avaus-tausta-kierros) linear infinite,
+    avaus-tausta-liike-a var(--avaus-tausta-kierros) ease-in-out infinite;
+  animation-play-state: paused;
+}
+.aikajana-avaus-tausta.kaynnissa .aikajana-avaus-taustakuva { animation-play-state: running; }
+/*
+ * KÄYNNISTÄ PYSÄYTTÄÄ TAUSTAN. Sääntö on `kaynnissa`-säännön JÄLKEEN ja
+ * yhtä painava (kolme luokkaa), joten myöhempänä se voittaa: kuvat jäävät
+ * paikalleen sen ~0,7 s ajaksi, jonka kerros vielä häipyy ruudulta.
+ */
+.aikajana-avaus.pois .aikajana-avaus-tausta .aikajana-avaus-taustakuva { animation-play-state: paused; }
+/* Kolme liikesuuntaa vuorotellen: kierros ei näytä samalta kuvalta joka kerta. */
+.aikajana-avaus-taustakuva:nth-child(3n + 2) { animation-name: avaus-tausta-vaihto, avaus-tausta-liike-b; }
+.aikajana-avaus-taustakuva:nth-child(3n) { animation-name: avaus-tausta-vaihto, avaus-tausta-liike-c; }
+/* Vuoro: kerros i alkaa i × 6,5 s myöhemmin (yksi arvo koskee kumpaakin animaatiota). */
+.aikajana-avaus-taustakuva:nth-child(2) { animation-delay: calc(var(--avaus-tausta-vaihto) * 1); }
+.aikajana-avaus-taustakuva:nth-child(3) { animation-delay: calc(var(--avaus-tausta-vaihto) * 2); }
+.aikajana-avaus-taustakuva:nth-child(4) { animation-delay: calc(var(--avaus-tausta-vaihto) * 3); }
+.aikajana-avaus-taustakuva:nth-child(5) { animation-delay: calc(var(--avaus-tausta-vaihto) * 4); }
+.aikajana-avaus-taustakuva:nth-child(6) { animation-delay: calc(var(--avaus-tausta-vaihto) * 5); }
+/*
+ * SUMENNETTU JA TUMMENNETTU KUVA (omistaja: *"kuvat hieman sumennettuina ja
+ * tummennettuina"*). Arvot on valittu niin, että paperin muste (#2b2116
+ * kermalla) pysyy luettavana: kirkkaimmillaankin kuva jää selvästi paperia
+ * tummemmaksi. Kuva on `cover`, koska tausta täyttää koko linssin — kaaren
+ * `kuvasovitus: contain` koskee havainnekuvapaneelia, ei tätä.
+ */
+.aikajana-avaus-taustakuva img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3px) brightness(0.55) saturate(0.85);
+}
+@keyframes avaus-tausta-vaihto {
+  0% { opacity: 0; }
+  3.846% { opacity: 1; }
+  16.667% { opacity: 1; }
+  20.513% { opacity: 0; }
+  100% { opacity: 0; }
+}
+/*
+ * Liike kestää tasan sen ajan, jonka kuva on näkyvissä (0 → 20,513 %), ja
+ * palautuu alkuun heti sen jälkeen, kun peittävyys on jo nolla.
+ */
+@keyframes avaus-tausta-liike-a {
+  0% { transform: scale(1.05) translate3d(-1.6%, 1%, 0); }
+  20.513% { transform: scale(1.15) translate3d(1.6%, -1%, 0); }
+  20.6%, 100% { transform: scale(1.05) translate3d(-1.6%, 1%, 0); }
+}
+@keyframes avaus-tausta-liike-b {
+  0% { transform: scale(1.14) translate3d(1.4%, -1.2%, 0); }
+  20.513% { transform: scale(1.05) translate3d(-1.4%, 0.8%, 0); }
+  20.6%, 100% { transform: scale(1.14) translate3d(1.4%, -1.2%, 0); }
+}
+@keyframes avaus-tausta-liike-c {
+  0% { transform: scale(1.06) translate3d(1.5%, 1.2%, 0); }
+  20.513% { transform: scale(1.15) translate3d(-1.5%, -1.2%, 0); }
+  20.6%, 100% { transform: scale(1.06) translate3d(1.5%, 1.2%, 0); }
+}
 
 /* ===========================================================================
    VÄLINÄYTÖS — merkkipaalun hengähdystauko kartan keskellä
@@ -1889,6 +2055,23 @@
   }
   .aikajana-avaus-sisus { grid-template-columns: 1fr; gap: 0.95rem; }
   .aikajana-avaus-kuva { order: -1; }
+  /*
+   * ALOITUSKORTIN TAUSTA PYSTYRUUDULLA. Työpöydän mitoitus jätti
+   * puhelimeen (mitattu 430 × 914) vain kapean valoisan vyön keskelle:
+   * pystysuunnassa reunapimennys puree kahdesta suunnasta samaan
+   * lyhyeen matkaan. Maski levitetään sivuille ja musta kehys ohenee,
+   * jotta kuva näkyy myös täällä — paperi jää silti selvästi
+   * kirkkaimmaksi pinnaksi.
+   */
+  .aikajana-avaus-tausta {
+    -webkit-mask-image: radial-gradient(ellipse 92% 66% at 50% 47%, #000 0%, #000 34%, rgba(0, 0, 0, 0.68) 62%, rgba(0, 0, 0, 0.14) 82%, transparent 96%);
+    mask-image: radial-gradient(ellipse 92% 66% at 50% 47%, #000 0%, #000 34%, rgba(0, 0, 0, 0.68) 62%, rgba(0, 0, 0, 0.14) 82%, transparent 96%);
+  }
+  .aikajana-avaus-tausta::after {
+    background:
+      linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 16%, rgba(0, 0, 0, 0) 84%, #000 100%),
+      linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0) 12%, rgba(0, 0, 0, 0) 88%, #000 100%);
+  }
 }
 
 /* Tabletti pystyssä: paneeli kaksi kolmasosaa leveydestä, hieman oikealle (omistaja 4.9.2026). */
@@ -1908,6 +2091,15 @@
   .aikajana, .aikajana-avaus-peite, .aikajana-avaus-kehys, .aikajana-avaus-nappi,
   .aikajana-valinaytos-teksti { transition: none; }
   .aikajana-avaus-kehys { transform: none; }
+  /*
+   * ALOITUSKORTIN TAUSTA: ei Ken Burns -liikettä, pelkkä ristihäivytys.
+   * Nimilistan lyhentäminen yhteen jättää keston, viiveen ja toiston
+   * ennalleen, joten kuvat vaihtuvat samassa rytmissä mutta paikallaan.
+   */
+  .aikajana-avaus-tausta .aikajana-avaus-taustakuva {
+    animation-name: avaus-tausta-vaihto;
+    transform: scale(1.06);
+  }
   /*
    * Lyhdyt palavat tasaisesti: js/lyhty.js ei käynnistä silmukkaa vaan
    * kirjoittaa yhden kehyksen, joten myös varjo ja ulkokajo jäävät

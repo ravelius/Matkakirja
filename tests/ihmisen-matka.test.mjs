@@ -38,7 +38,7 @@ import {
 } from '../js/aikajana.js';
 import {
   LINSSI, PYSAKIT, IHMISEN_MATKAN_LAHIKUVA, ihmisenMatkanPysakit, ESITYKSEN_KUVAT,
-  AVAUKSEN_KUVA_TUNNUS, avauksenKuva,
+  ALOITUKSEN_TAUSTAKUVAT, avauksenTaustakuvat,
 } from '../js/linssit/ihmisen-matka.js';
 import {
   IHMISEN_MATKA_KUVAJUURI, IHMISEN_MATKA_ESINEJUURI, IHMISEN_MATKA_ALOITUS,
@@ -156,27 +156,107 @@ test('avausteksti päättyy maapallo-lauseeseen eikä selitä karttaa', () => {
   assert.equal(LINSSI.aikajana.esittely.teksti, IHMISEN_MATKA_ALOITUS);
 });
 
-test('avauslaatikossa on kuva tekstin rinnalla, eikä se ole esityksen kuvia', () => {
-  const kuva = LINSSI.aikajana.esittely.kuva;
-  assert.ok(kuva?.osoite, 'avauslaatikon kuva puuttuu');
-  assert.ok(kuva.osoite.startsWith(`${IHMISEN_MATKA_KUVAJUURI}/`),
-    'avauskuva ei ole kaaren omasta kuvajuuresta — kuvaa ei generoida uutta');
-  assert.ok(kuva.kuvateksti, 'kuvateksti puuttuu (näytetään pienenä kuvan alla)');
-  assert.match(kuva.lahde, HAVAINNEKUVA_RE, 'lähderivi kertoo, että kuva on havainnekuva');
-  // Kuva tulee AINEISTOSTA tunnuksella: osoitetta ei kirjoiteta käsin.
-  assert.deepEqual(avauksenKuva(), kuva);
-  const pysakki = PYSAKIT.find((t) => t.tunnus === AVAUKSEN_KUVA_TUNNUS);
-  assert.ok(pysakki, `avauskuvan tunnusta ${AVAUKSEN_KUVA_TUNNUS} ei ole aineistossa`);
-  // PYSAKIT on moottorin muodossa: havainnekuva on `ilmio`, ei `kuva`.
-  assert.equal(kuva.osoite, pysakki.ilmio.osoite);
+/*
+ * ALOITUSKORTTI: KEN BURNS -KUVAT TAUSTALLA, PAPERI ILMAN KUVAA
+ * (omistaja 9.9.2026 klo 15.40, sanatarkasti: *"tähän aloitukseen voisi
+ * tuoda muutamia kuvia isona taustalle niin että ne liikkuvat hitaasti
+ * ja vaihtuvat muutaman sekunnin välein (ken burns tyylinen liike +
+ * ristihäivytys) … sitten paperi ja teksti näiden päälle ilman
+ * kuvaa."*; Raamattu › "IHMISEN MATKAN ALOITUSKORTTI: KEN BURNS -KUVAT
+ * TAUSTALLA…").
+ *
+ * TÄMÄ VARTIJA KÄÄNSI EDELLISEN. 7.9.2026 sama testi vaati, että
+ * paperilla ON kuva tekstin rinnalla (white-sands); omistaja siirsi
+ * kuvat 9.9.2026 paperin taakse. Väite on käännetty eikä poistettu:
+ * kuva ei saa palata paperille takaovesta.
+ */
+test('aloituskortin paperilla ei ole kuvaa — kuvat ovat sen takana taustalla', () => {
+  const esittely = LINSSI.aikajana.esittely;
+  assert.equal(esittely.kuva, undefined,
+    'paperille ilmestyi taas kuva — omistajan 9.9.2026 linjaus on "paperi ja teksti ilman kuvaa"');
+  const taustat = esittely.taustakuvat;
+  assert.ok(Array.isArray(taustat), 'aloituskortin taustakuvat puuttuvat');
   /*
-   * EI ESITYKSEN KUUDESTA KUVASTA: avaus ei saa paljastaa kuvaa, jonka
-   * pelaaja näkee kohta uudestaan matkan varrella.
+   * KUUSI KUVAA: ristihäivytyksen keyframe-prosentit on laskettu kuuden
+   * kuvan kierroksesta (css/aikajana.css "ALOITUSKORTIN KEN BURNS
+   * -TAUSTA": 6 × 6,5 s = 39 s). Määrän muuttuessa prosentit on
+   * laskettava uudelleen, joten luku vartioidaan täällä.
    */
-  assert.ok(!ESITYKSEN_KUVAT.includes(AVAUKSEN_KUVA_TUNNUS),
-    'avauskuva on yksi esityksen kuudesta — valitse galleriaan jäävistä');
-  // Tuntematon tunnus ei kaada avausta vaan jättää laatikon kuvattomaksi.
-  assert.equal(avauksenKuva(PYSAKIT, 'ei-tallaista'), null);
+  assert.equal(taustat.length, 6, 'taustakuvia on kuusi (CSS:n kierros on laskettu kuudesta)');
+  assert.equal(ALOITUKSEN_TAUSTAKUVAT.length, taustat.length);
+  for (const kuva of taustat) {
+    assert.ok(kuva.osoite.startsWith(`${IHMISEN_MATKA_KUVAJUURI}/`),
+      `taustakuva ${kuva.osoite} ei ole kaaren omasta kuvajuuresta — kuvia ei generoida uutta`);
+    assert.match(kuva.lahde, HAVAINNEKUVA_RE, 'lähderivi kertoo, että kuva on havainnekuva');
+  }
+  // Kuvat tulevat AINEISTOSTA tunnuksilla: osoitteita ei kirjoiteta käsin.
+  assert.deepEqual(avauksenTaustakuvat(), taustat);
+  assert.deepEqual(
+    taustat.map((k) => k.osoite),
+    ALOITUKSEN_TAUSTAKUVAT.map((tunnus) => PYSAKIT.find((t) => t.tunnus === tunnus).ilmio.osoite),
+  );
+  // Tausta kertoo saman matkan kuin kaari: tunnukset ovat pysäkkijärjestyksessä.
+  const numerot = ALOITUKSEN_TAUSTAKUVAT.map((tunnus) => PYSAKIT.find((t) => t.tunnus === tunnus).n);
+  assert.deepEqual(numerot, [...numerot].sort((a, b) => a - b),
+    'taustakuvat eivät ole matkan järjestyksessä');
+  // Tuntematon tunnus ei kaada avausta vaan lyhentää taustaa.
+  assert.deepEqual(avauksenTaustakuvat(PYSAKIT, ['ei-tallaista']), []);
+});
+
+/*
+ * TAUSTA ON OMA KERROKSENSA MUSTAN PÄÄLLÄ JA PAPERIN ALLA, ja sen liike
+ * on CSS:ssä eikä rAF-silmukassa (omistajan tilaus: *"ne liikkuvat
+ * hitaasti ja vaihtuvat muutaman sekunnin välein"*).
+ */
+test('aloituskortin tausta on CSS-animaatio mustan päällä ja paperin alla', () => {
+  const rakenne = metodi('avauksenTausta');
+  assert.match(rakenne, /solmu\('div', 'aikajana-avaus-tausta'\)/);
+  assert.match(rakenne, /solmu\('div', 'aikajana-avaus-taustakuva'\)/);
+  // Esilataus: kierros lähtee vasta kun kuvat ovat ladanneet (tai katto umpeutuu).
+  assert.match(rakenne, /classList\.add\('kaynnissa'\)/);
+  assert.match(rakenne, /AVAUS_TAUSTAN_LATAUSKATTO_MS/);
+  assert.ok(!/requestAnimationFrame/.test(rakenne), 'taustan liike ei saa olla rAF-silmukka');
+  // Kerros peitteen JÄLKEEN (mustan päälle) ja kehyksen ALLE (paperin alle).
+  const avaus = metodi('avaaAvausjakso');
+  assert.match(avaus, /this\.avausTausta = this\.avauksenTausta\(esittely\.taustakuvat\);/);
+  assert.match(avaus, /this\.avausPeite\.after\(this\.avausTausta\)/);
+
+  const lohko = CSS.match(/\.aikajana-avaus-tausta \{[\s\S]*?@keyframes avaus-tausta-liike-c \{[\s\S]*?\n\}/)[0];
+  // Reunat häipyvät mustaan: pyöreä maski JA suora musta reunakehys.
+  assert.match(lohko, /mask-image: radial-gradient\([\s\S]*?transparent 92%\);/);
+  assert.match(lohko, /\.aikajana-avaus-tausta::after \{[\s\S]*?linear-gradient\(to bottom, #000 0%[\s\S]*?linear-gradient\(to right, #000 0%/);
+  // Sumennus ja tummennus (omistaja: "hieman sumennettuina ja tummennettuina").
+  assert.match(lohko, /filter: blur\(3px\) brightness\(0\.55\)/);
+  // Ken Burns: zoom 1,05 → 1,15 ja pieni pan.
+  assert.match(lohko, /scale\(1\.05\) translate3d\(-1\.6%, 1%, 0\)/);
+  assert.match(lohko, /scale\(1\.15\) translate3d\(1\.6%, -1%, 0\)/);
+  // Kierros on kuusi kuvaa × 6,5 s, ristihäivytys 1,5 s (3,846 % kierroksesta).
+  assert.match(lohko, /--avaus-tausta-kierros: 39s;/);
+  assert.match(lohko, /--avaus-tausta-vaihto: 6\.5s;/);
+  assert.match(lohko, /3\.846% \{ opacity: 1; \}/);
+  assert.match(lohko, /20\.513% \{ opacity: 0; \}/);
+  // Käynnistä pysäyttää ja häivyttää taustan.
+  assert.match(CSS, /\.aikajana-avaus\.pois \.aikajana-avaus-tausta\.kaynnissa \{\n\s*opacity: 0;/);
+  assert.match(CSS, /\.aikajana-avaus\.pois \.aikajana-avaus-tausta \.aikajana-avaus-taustakuva \{ animation-play-state: paused; \}/);
+  // prefers-reduced-motion: pelkkä ristihäivytys, ei liikettä.
+  const rauha = CSS.match(/@media \(prefers-reduced-motion: reduce\) \{[\s\S]*/)[0];
+  assert.match(rauha, /\.aikajana-avaus-tausta \.aikajana-avaus-taustakuva \{\n\s*animation-name: avaus-tausta-vaihto;/);
+});
+
+/*
+ * KÄYNNISTÄ ON KORTIN ALIN ELEMENTTI (omistaja 9.9.2026: *"käynnistä
+ * nappi alimpana."*). Nappi liitetään laatikkoon vasta tekstin jälkeen,
+ * eikä se ole ruudukon sisällä.
+ */
+test('Käynnistä-nappi on aloituskortin viimeinen elementti', () => {
+  const avaus = metodi('avaaAvausjakso');
+  const teksti = avaus.indexOf("solmu('p', 'aikajana-avaus-teksti'");
+  const nappi = avaus.indexOf('laatikko.appendChild(this.avausNappi);');
+  assert.ok(teksti > 0 && nappi > teksti, 'Käynnistä ei ole tekstin jälkeen');
+  assert.ok(!/laatikko\.appendChild\(solmu\('h2'[\s\S]*?laatikko\.appendChild\(this\.avausNappi\);[\s\S]*?laatikko\.appendChild/.test(avaus),
+    'laatikkoon lisätään jotain Käynnistä-napin jälkeen');
+  // Otsikko hieman isommalla (1,22 rem → 1,46 rem, +20 %).
+  assert.match(CSS, /\.aikajana-avaus-otsikko \{[\s\S]*?font-size: 1\.46rem;/);
 });
 
 /*

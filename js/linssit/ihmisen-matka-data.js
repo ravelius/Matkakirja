@@ -191,24 +191,34 @@ export const IHMISEN_MATKA_ESITTELY = 'Ihmisen matka Afrikasta koko maapallolle:
  * omana kerroksenaan, löytöjen luku loppusanoista
  * (IHMISEN_MATKA_LOPPU) ja galleriasta ("Katso löydöt").
  *
- * TEKSTIN RINNALLA ON KUVA (js/linssit/ihmisen-matka.js avauksenKuva):
- * yksi kaaren jo generoiduista havainnekuvista, joten lyhentyminen ei
- * jätä laatikkoa tyhjäksi vaan vaihtaa selityksen näkymään.
+ * PAPERILLA EI OLE ENÄÄ KUVAA (omistaja 9.9.2026 klo 15.40, Raamattu ›
+ * "IHMISEN MATKAN ALOITUSKORTTI: KEN BURNS -KUVAT TAUSTALLA…",
+ * sanatarkasti: *"sitten paperi ja teksti näiden päälle ilman
+ * kuvaa."*). Havainnekuvat siirtyivät paperin TAAKSE koko linssin
+ * kokoiseksi Ken Burns -taustaksi (js/linssit/ihmisen-matka.js
+ * avauksenTaustakuvat), joten paperille jää otsikko, teksti ja
+ * Käynnistä-nappi.
  *
- * LUENTA ON LEIKATTU SAMAAN KOHTAAN, EI GENEROITU UUDESTAAN (omistaja:
- * *"Luennasta onneksi riittää, kun otetaan sen viimeinen lause pois,
- * mikä on jo generoitu. Eli sitä ei tarvitse generoida uudestaan."*).
- * Ämpärin aikajana/ihmisen-matka/puhe/esittely.mp3 luki kaaren
- * ENSIMMÄISTÄ avaustekstiä, jonka kaksi ensimmäistä lausetta ovat
- * sanasta sanaan nämä; kolmas lause leikattiin ffmpegillä pois
- * (25,4 s → 18,0 s, häivytys 150 ms). Jos tätä tekstiä muutetaan,
- * luenta on generoitava uudelleen:
+ * TEKSTIN ENSIMMÄINEN LAUSE ON RIISUTTU MUODOSTA "Tulet seuraavaksi
+ * näkemään" (sama omistajan viesti: *"ota tekstistä pois muoto 'tulet
+ * seuraavaksi näkemään' ja tekstiä voi muutenkin lyhentää hieman"*).
+ * Kaari alkaa nyt väitteestä eikä lupauksesta; loppu on ennallaan.
+ *
+ * ÄÄNITE VANHENTUNUT (9.9.2026): ämpärin
+ * aikajana/ihmisen-matka/puhe/esittely.mp3 lukee yhä edellistä
+ * ensimmäistä lausetta ("Tulet seuraavaksi näkemään, miten yksi laji
+ * levisi…"), eikä sitä voi tällä kertaa korjata leikkaamalla — lause
+ * on luennan ALUSSA ja sen sanat ovat vaihtuneet. Luenta on
+ * generoitava uudelleen ennen julkaisua:
  * `node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --pysakit esittely`.
+ * (Aiempi merkintä tässä: 7.9.2026 luenta LEIKATTIIN ffmpegillä
+ * 25,4 s → 18,0 s, kun tekstin viimeinen lause poistettiin; se leikkaus
+ * pätee yhä loppupäähän, mutta alkupää on nyt eri teksti.)
  */
-export const IHMISEN_MATKA_ALOITUS = 'Tulet seuraavaksi näkemään, miten yksi laji '
-  + 'levisi yhdestä maanosasta kaikkiin. Kukaan ei suunnitellut matkaa: jokainen '
-  + 'sukupolvi siirtyi vain vähän kauemmas kuin edellinen, ja tuhat sukupolvea '
-  + 'myöhemmin oltiin toisella puolella maapalloa.';
+export const IHMISEN_MATKA_ALOITUS = 'Yksi laji levisi yhdestä maanosasta '
+  + 'kaikkiin. Kukaan ei suunnitellut matkaa: jokainen sukupolvi siirtyi vain '
+  + 'vähän kauemmas kuin edellinen, ja tuhat sukupolvea myöhemmin oltiin '
+  + 'toisella puolella maapalloa.';
 
 /*
  * KAISTAN SELITE TIEDELIITTEEN ALKUUN (omistaja 8.9.2026 kortilla: "Kyllä,

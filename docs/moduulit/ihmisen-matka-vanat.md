@@ -1042,6 +1042,11 @@ kuvissa:
 
 ## 7b. Avauslaatikko: teksti lyhyeksi, kuva rinnalle (V6, 7.9.2026 ilta)
 
+> **KUMOTTU 9.9.2026 kuvan ja paperin osalta** — omistaja siirsi kuvat
+> paperin taakse Ken Burns -taustaksi, ks. luku 7c. Tekstin lyhennys ja
+> luennan leikkaus pätevät yhä. Luku jää historiaksi: se kertoo, miksi
+> paperilla oli kuva ja miksi sitä ei enää ole.
+
 Omistaja sanatarkasti: *"Tästä aloitustekstistä voi poistaa kaiken
 tekstin lauseen, joka loppuu: 'Tuhat sukupolvea myöhemmin oltiin
 toisella puolella maapalloa', niin sen jälkeen koko lopputeksti pois.
@@ -1100,8 +1105,78 @@ prosenttiyksikön osuma). Leikkaus `afade=t=out:st=17.80:d=0.15` ja
 | avaustekstin merkkejä | 626 | 232 |
 | paperin leveys (834 × 1100) | 496 px | 718 px |
 
-Savuke `tools/savukkeet/savuke-ihmisen-avaus.mjs` (iPad 834 × 1100 ja
-iPhone 390 × 844) mittaa asettelun: 16/16 läpi.
+Savuke `tools/savukkeet/savuke-ihmisen-avaus.mjs` mittasi asettelun:
+16/16 läpi. **Savuke ja tämä luku on kumottu 9.9.2026** — ks. 7c.
+
+## 7c. Aloituskortti: Ken Burns -kuvat taustalle, paperi ilman kuvaa (9.9.2026)
+
+Omistaja sanatarkasti: *"tähän aloitukseen voisi tuoda muutamia kuvia
+isona taustalle niin että ne liikkuvat hitaasti ja vaihtuvat muutaman
+sekunnin välein (ken burns tyylinen liike + ristihäivytys). kuvien
+tulisi feidautua mustaan reuna-alueilla ja kuvat hieman sumennettuina ja
+tummennettuina. sitten paperi ja teksti näiden päälle ilman kuvaa. ota
+tekstistä pois muoto 'tulet seuraavaksi näkemään' ja tekstiä voi
+muutenkin lyhentää hieman. käynnistä nappi alimpana. ihmisen matka
+otsikko hieman isommalla. kokeillaan ensin näin ja jos huono, niin
+sitten otetaan paperilappu välistä pois kokonaan ja ladotaan tekstit
+suoraan kuva-animaation päälle."* (Raamattu › "IHMISEN MATKAN
+ALOITUSKORTTI: KEN BURNS -KUVAT TAUSTALLA…".) **Tämä kumoaa luvun 7b
+kuvan ja paperin osalta**: teksti pysyy lyhyenä, mutta kuva siirtyy
+paperin päältä sen taakse. Kokeilu — jos ei toimi, paperi otetaan
+kokonaan pois ja tekstit ladotaan suoraan kuvien päälle.
+
+**Tausta.** `esittely.taustakuvat` on uusi VALINNAINEN kaaren kenttä
+(`avauksenTaustakuvat`, tunnukset `ALOITUKSEN_TAUSTAKUVAT`); ilman sitä
+avaus on entinen musta ruutu, joten keksintökaari ei liiku. Kuusi
+havainnekuvaa matkan järjestyksessä: Jebel Irhoud → Pinnacle Point →
+Al Wusta → Madjedbebe → Beringia → Monte Verde. Moottori
+(`js/aikajana.js avauksenTausta`) rakentaa kerrokset ja päättää vain,
+MILLOIN kierros lähtee — ajastus on CSS:ssä (`css/aikajana.css`
+"ALOITUSKORTIN KEN BURNS -TAUSTA"), ei rAF-silmukassa.
+
+| Mitta | Arvo | Missä |
+| --- | --- | --- |
+| kuvia | 6 | `ALOITUKSEN_TAUSTAKUVAT` |
+| kierros | 39 s (6 × 6,5 s) | `--avaus-tausta-kierros` |
+| vaihtoväli | 6,5 s | `--avaus-tausta-vaihto` |
+| ristihäivytys | 1,5 s (3,846 % kierroksesta) | `@keyframes avaus-tausta-vaihto` |
+| Ken Burns | scale 1,05 → 1,15 + pieni pan, 8,0 s | `avaus-tausta-liike-{a,b,c}` |
+| sumennus / tummennus | `blur(3px) brightness(0.55) saturate(0.85)` | `.aikajana-avaus-taustakuva img` |
+
+Keyframe-prosentit on laskettu KUUDESTA kuvasta; jos lista lyhenee tai
+pitenee, ne on laskettava uudelleen (vartija
+`tests/ihmisen-matka.test.mjs`). Reunat häipyvät mustaan kahdella
+keinolla: pyöreä `mask-image` kerroksessa (ei kuvissa, muuten Ken Burns
+kuljettaisi häivytystä mukanaan) ja sen päällä musta reunakehys
+(`::after`, kaksi lineaarista liukua ristiin) — pelkkä ellipsi jätti
+1600 px:n ruudulla sivureunat noin 35 %:n peittoon. Pystyruudulla
+(`max-width: 640px`) maski ja kehys on erikseen väljennetty.
+
+**Esilataus.** Animaatiot ovat aluksi `animation-play-state: paused`,
+jolloin myös viiveet seisovat; moottori lisää luokan `kaynnissa` vasta
+kun jokainen kuva on latautunut tai lopullisesti pettänyt — tai
+viimeistään 4 s:n katon (`AVAUS_TAUSTAN_LATAUSKATTO_MS`) jälkeen. Näin
+ensimmäinen kuva ei välähdä paikalleen kesken häivytyksen. Käynnistä
+pysäyttää liikkeen ja häivyttää kerroksen 550 ms:ssa, ennen kuin koko
+avaus irtoaa (`AVAUS_POISTUMA_MS` 700 ms).
+
+**Paperi.** `esittely.kuva` poistui, joten paperi on taas entinen yhden
+palstan arkki `min(31rem, 88%)` ilman `.on-kuva`-luokkaa; kuvateksti ja
+lähderivi jäivät pois kortilta. Otsikko 1,22 rem → 1,46 rem (+20 %).
+Käynnistä on laatikon viimeinen lapsi ja sen alin elementti.
+
+**Teksti.** `IHMISEN_MATKA_ALOITUS` alkaa nyt väitteestä eikä
+lupauksesta: *"Yksi laji levisi yhdestä maanosasta kaikkiin. Kukaan ei
+suunnitellut matkaa: …"* (205 merkkiä, ennen 232). **ÄÄNITE VANHENTUNUT
+(9.9.2026):** ämpärin `aikajana/ihmisen-matka/puhe/esittely.mp3` lukee
+yhä muotoa *"Tulet seuraavaksi näkemään…"*, eikä sitä voi tällä kertaa
+korjata leikkaamalla — lause on luennan ALUSSA. Luenta on generoitava
+uudelleen ennen julkaisua:
+`node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --pysakit esittely`.
+
+Savuke `tools/savukkeet/savuke-ihmisen-avaus.mjs` (työpöytä 1600 × 1000
+ja puhelin 430 × 930) mittaa uuden kortin: 24/24 läpi. Kaappaukset
+`ihmisen-matka-aloitus-{tyopoyta,puhelin}.png`.
 
 ## 8. Mitä jää auki toteutukseen
 
