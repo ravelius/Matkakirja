@@ -53,6 +53,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Early Morning Gondolas at Piazza San Marco (3500989834).jpg',
       lahde: 'Rob Young, Commons (CC BY 2.0)',
+      lyhyt: 'Sama ranta nykyään: gondolit suojapeitteiden alla, siivekäs leijona yhä pylväällä.',
       selite: 'Sama ranta nykyään ylhäältä nähtynä: gondolit odottavat '
         + 'rivissä sinisten suojapeitteiden alla, ja pylvään päässä seisoo '
         + 'yhä sama siivekäs leijona kuin vanhassa kuvassa.',
@@ -110,6 +111,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Notre-Dame de la Garde from port Marseille 2026.JPG',
       lahde: 'Mike is Michi, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Notre-Dame de la Garde kukkulallaan sataman yllä, tornin huipulla kullattu Madonna.',
       selite: 'Notre-Dame de la Garden basilika kukkulallaan sataman yllä. Tornin '
         + 'huipulla seisoo kullattu Madonna, jota merimiehet ovat katsoneet '
         + 'satamaan tullessaan jo isoisän aikaan.',
@@ -166,6 +168,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Court of the Lions, Alhambra de Granada (Spain).jpg',
       lahde: 'Heparina1985, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama piha tänään: kaksitoista leijonaa kannattelee allasta, suihkulähde taas käynnissä.',
       selite: 'Sama piha tänään. Kaksitoista leijonaa kannattelevat yhä '
         + 'allasta keskellä; ne puhdistettiin ja korjattiin perusteellisesti '
         + '2000-luvulla, ja suihkulähde toimii taas.',
@@ -225,6 +228,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Cloth Hall (Sukiennice) in Main Market Square - panoramio.jpg',
       lahde: 'Laima Gūtmane, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Sukiennice, Krakovan vanha kangashalli torilla, kaarikäytävineen ja myyntikojuineen.',
       selite: 'Sukiennice eli vanha kangashalli Krakovan suurella torilla. '
         + 'Kaarikäytävien alla on myyntikojuja, ja vasemmalla kohoaa vanhan '
         + 'raatihuoneen torni.',
@@ -303,6 +307,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Sarajevo Bascarsija Sebilj 2007-08-16.jpg',
       lahde: 'Milan Suvajac, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sebilj, Baščaršijan puinen vesikioski, josta on juotu vettä 1700-luvulta asti.',
       selite: 'Sebilj eli Baščaršijan puinen vesikioski iltavalaistuksessa. '
         + 'Kahdeksankulmaisen katoksen alla on hana, josta ohikulkijat ovat '
         + 'juoneet vettä 1700-luvulta asti.',
@@ -401,6 +406,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Hallgrimskirkja church view.jpg',
       lahde: 'Alberto Moreno, Commons (CC0)',
+      lyhyt: 'Hallgrímskirkja Reykjavíkissa aamuhämärässä, edessä Leif Erikssonin patsas.',
       selite: 'Hallgrímskirkjan kirkko Reykjavíkissa aamuhämärissä. Betoniset '
         + 'pilarit nousevat portaittain kuin basalttipatsaat, ja edessä '
         + 'seisoo Leif Erikssonin patsas.',
@@ -467,6 +473,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'The Acropolis of Athens with the Parthenon, the Erecththeion and the Mycenean Fountain from Monastiraki Square on March 11, 2020.jpg',
       lahde: 'George E, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama kallio tänään: alla miljoonakaupunki, päällä Parthenon yhä telineissä korjaustöissä.',
       selite: 'Sama kallio tänään Monastirakin aukiolta: alla kolmen '
         + 'miljoonan asukkaan kaupunki, päällä Parthenon telineineen. '
         + 'Temppeliä on korjattu yhtäjaksoisesti vuodesta 1975 — '
@@ -524,6 +531,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Colosseum on a November Day (45615640574).jpg',
       lahde: 'Sonse, Commons (CC BY 2.0)',
+      lyhyt: 'Colosseumin ulkokehä alhaalta: travertiinikaaret ja reiät, joista rautahakaset louhittiin pois.',
       selite: 'Colosseumin ulkokehä alhaalta kuvattuna. Travertiinikaaret '
         + 'nousevat kolmessa kerroksessa, ja kivissä näkyvät reiät, joista '
         + 'rautahaat on aikanaan louhittu pois.',
@@ -573,6 +581,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Knossos North entrance bull fresco.jpg',
       lahde: 'Jebulon, Commons (CC0)',
+      lyhyt: 'Knossoksen palatsin pohjoinen sisäänkäynti pylväineen ja härkäfreskon jäljennöksineen.',
       selite: 'Knossoksen palatsin pohjoinen sisäänkäynti. Punaiset pylväät on '
         + 'pystytetty uudelleen, ja seinällä on jäljennös härkäfreskosta, '
         + 'jonka alkuperäinen on Herakleionin museossa.',
@@ -667,6 +676,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Sicily Taormina Teatro Greco Etna.jpg',
       lahde: 'Commons (CC0)',
+      lyhyt: 'Sama kreikkalaisteatteri nykyään Etna taustalla, yhä konserttikäytössä.',
       selite: 'Sama teatteri tänään, Etna taustalla. Rakennettu '
         + 'kreikkalaisten aikaan 200-luvulla eaa. ja laajennettu '
         + 'roomalaisten toimesta; siellä pidetään yhä konsertteja.',
@@ -722,6 +732,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Steep coast near the city wall in the Old Town of Dubrovnik, Croatia (48613191222).jpg',
       lahde: 'dronepicr, Commons (CC BY 2.0)',
+      lyhyt: 'Vanhankaupungin muuri ja katot, joista osa uusittiin 1990-luvun sodan jälkeen.',
       selite: 'Vanhankaupungin muuri ja kattotiilet nykyään. Osa '
         + 'katoista on kirkkaan oransseja: ne uusittiin 1990-luvun sodan '
         + 'jälkeen, kun kaupunkia pommitettiin.',
@@ -797,6 +808,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Banya Bashi Mosque.jpg',
       lahde: 'Apokats, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama moskeija tänään, lähellä synagoga, kaksi kirkkoa ja yhä pulppuavat kuumat lähteet.',
       selite: 'Sama moskeija tänään. Sen ympärillä on korttelin matkalla '
         + 'myös synagoga ja kaksi kirkkoa, ja kuumat lähteet pulppuavat '
         + 'yhä viereisessä puistossa julkisiin hanoihin.',
@@ -869,6 +881,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Tower bridge Mars 2014 03.jpg',
       lahde: 'Arild Vågen, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Sama silta nykyään: 65 metrin tornit, läpät nousevat yhä satoja kertoja vuodessa.',
       selite: 'Sama silta samasta suunnasta nykyään. Tornit ovat 65 metriä '
                 + 'korkeat, ja läpät nousevat yhä noin 800 kertaa vuodessa — '
                 + 'koneisto vaihtui höyrystä sähköön 1976.',
@@ -939,6 +952,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Castle, City of Edinburgh (IMG 20190628 180330).jpg',
       lahde: 'Matti Blume, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Edinburghin linna jyrkän kalliojyrkänteen päällä, alla Princes Street Gardensin puistot.',
       selite: 'Edinburghin linna jyrkän kalliojyrkänteen päällä. Alla ovat '
         + 'Princes Street Gardensin puistot, joissa kaupunkilaiset istuvat '
         + 'kesäiltana.',
@@ -1044,6 +1058,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Buses on O\'Connell Bridge, Dublin - geograph.org.uk - 2776449.jpg',
       lahde: 'Richard Humphrey, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Sama näkymä sillalta: O\'Connell Street, teräsneula vuodesta 2003 ja patsas paikallaan.',
       selite: 'Sama näkymä samalta sillalta nykyään. Katu sai nimen '
                 + 'O\'Connell Street vuonna 1924, ja pylvään paikalla on '
                 + 'vuodesta 2003 seissyt 120-metrinen teräsneula. O\'Connellin '
@@ -1132,6 +1147,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Eiffel Tower from Champ-de-Mars, Paris 5 February 2019.jpg',
       lahde: 'Alexandre Prévot, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Sama näkymä tänään: torni ennallaan, mutta kaaren alla nyt Palais de Chaillot.',
       selite: 'Sama näkymä tänään. Torni on ennallaan, mutta kaaren alta '
                 + 'paistava rakennus on vaihtunut: Trocadéron palatsi purettiin '
                 + '1935, ja tilalle nousi Palais de Chaillot vuoden 1937 '
@@ -1200,6 +1216,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Elevador de Santa Justa - Lisboa - Portugal (51688493041).jpg',
       lahde: 'Vitor Oliveira, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Sama torni tänään: taustalla São Jorgen linna, hissi yhä osa joukkoliikennettä.',
       selite: 'Sama torni tänään lähes samasta suunnasta. Taustalla kohoaa '
                 + 'São Jorgen linna kukkulallaan kuten vanhassakin kuvassa. '
                 + 'Ylätasanne on näköalapaikka, ja hissi kuuluu yhä kaupungin '
@@ -1269,6 +1286,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Felipe III - Casa de la Panadería - Plaza Mayor de Madrid - 01.jpg',
       lahde: 'Carlos Delgado, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Sama aukio tänään: puisto vaihtui pysäköintihalliin ja kivetykseen 1960-luvulla.',
       selite: 'Sama aukio tänään. Puisto poistettiin 1960-luvulla, kun '
                 + 'aukion alle louhittiin pysäköintihalli, ja tilalle tuli '
                 + 'kivetys. Casa de la Panaderían julkisivun maalaukset ovat '
@@ -1357,6 +1375,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: '736 Catedral de la Santa Creu i Santa Eulàlia, façana del pla de la Seu (Barcelona).jpg',
       lahde: 'Enric, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama julkisivu tänään: keskitorni valmistui 1913, alttarin alla lepää pyhä Eulalia.',
       selite: 'Sama julkisivu tänään. Keskitorni nousi paikalleen vasta '
                 + '1913, runsaat kaksikymmentä vuotta vanhan kuvan jälkeen. '
                 + 'Kirkon alla, pääalttarin alapuolella, lepää pyhä Eulalia — '
@@ -1416,6 +1435,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Amsterdam, de Munttoren RM3729 IMG 3346 2024-06-24 11.41.jpg',
       lahde: 'Michielverbeek, Commons (CC BY 4.0)',
+      lyhyt: 'Sama torni 2024 vesirajalta: keskiaikaisen portin jäänne, kellopeli soi yhä.',
       selite: 'Sama torni vuonna 2024 samalta vesirajalta. Alaosa on '
                 + 'keskiaikaisen kaupunginportin jäännös, ja palon jälkeen 1620 '
                 + 'pystytetyssä tornissa soi yhä kellopeli. Ohi kulkee '
@@ -1486,6 +1506,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Lascar Fernsehturm (Television tower) (4471645489).jpg',
       lahde: 'Jorge Láscar, Commons (CC BY 2.0)',
+      lyhyt: 'Berliinin televisiotorni valaistuna, pallo 200 metrin korkeudessa Alexanderplatzin yllä.',
       selite: 'Berliinin televisiotorni valaistuna. Pallo tornin päässä on 200 '
         + 'metrin korkeudessa, ja sen alla kaartuu Alexanderplatzin aseman '
         + 'terävä katos.',
@@ -1555,6 +1576,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Opernring - panoramio (1).jpg',
       lahde: 'Mister No, Commons (CC BY 3.0)',
+      lyhyt: 'Sama bulevardi nykyään: raitiovaunu kulkee sähköllä, taustalla vuoden 1869 oopperatalo.',
       selite: 'Sama bulevardin osuus nykyään. Raitiovaunu kulkee yhä samaa '
                 + 'reittiä, mutta sähköllä. Taustalla vuonna 1869 valmistunut '
                 + 'valtionooppera, joka antoi kadulle nimensä.',
@@ -1653,6 +1675,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Matterhorn in winter with Zermatt village.jpg',
       lahde: 'Deralpinbergsteiger, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Matterhorn talvella Zermattin yläpuolelta, huippu erottuu laakson kylän yllä.',
       selite: 'Matterhorn talvella Zermattin yläpuolelta nähtynä. Kolmikulmainen '
         + 'huippu erottuu vasemmalla, ja laaksossa näkyy kylä lumen keskellä.',
     },
@@ -1711,6 +1734,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Praha Hrad sníh 2010 22.jpg',
       lahde: 'Commons (PD)',
+      lyhyt: 'Sama portti tänään: taistelevat jättiläiset ja linnan vartijat paikallaan, taustalla katedraali.',
       selite: 'Sama portti tänään. Pylväiden päällä taistelevat jättiläiset '
                 + 'ovat samat kuin vedoksessa, ja vartiokopeissa seisovat '
                 + 'linnan vartijat. Katon takaa kohoavat nyt katedraalin '
@@ -1774,6 +1798,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Széchenyi Chain Bridge 2014.jpg',
       lahde: 'Commons (CC0)',
+      lyhyt: 'Sama silta nykyään: räjäytettiin 1945, rakennettiin uudelleen ja avattiin 1949.',
       selite: 'Sama näkymä nykyään. Perääntyvät joukot räjäyttivät sillan '
                 + 'tammikuussa 1945; se rakennettiin uudelleen alkuperäisten '
                 + 'piirustusten mukaan ja avattiin 1949, tasan sata vuotta '
@@ -1836,6 +1861,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: '2018-07-08 Old Town Market Square in Warsaw.jpg',
       lahde: 'Maksym Kozlenko, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama tori tänään: sodan raunioittama kortteli jälleenrakennettiin vuosina 1949–1953.',
       selite: 'Sama tori tänään. Toisen maailmansodan lopulla koko kortteli '
                 + 'oli raunioina; talot pystytettiin uudelleen vuosina '
                 + '1949–1953 vanhojen piirustusten ja Bernardo Bellotton '
@@ -1925,6 +1951,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Ateneo Rumano, Bucarest, Rumanía, 2016-05-29, DD 73.jpg',
       lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama rakennus tänään: kupoli ja pylväikkö ennallaan, sisällä soittaa filharmoninen orkesteri.',
       selite: 'Sama rakennus tänään. Kupoli, pylväikkö ja puisto ovat '
                 + 'entisellään. Sisällä soittaa George Enescun filharmoninen '
                 + 'orkesteri, ja joka toinen vuosi talo on Enescu-festivaalin '
@@ -1977,6 +2004,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Gate Church of the Trinity (Pechersk Lavra) 01.JPG',
       lahde: 'Швітланьо, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Sama porttikirkko tänään: 1700-luvun barokkimaalaukset ja kullattu kupoli.',
       selite: 'Sama porttikirkko tänään. Julkisivun barokkimaalaukset ovat '
                 + '1700-luvulta ja kupoli on kullattu; alla oleva holvikäytävä '
                 + 'on yhä luostarin sisäänkäynti.',
@@ -2035,6 +2063,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Odessa Treppe.JPG',
       lahde: 'Julian Nyča, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama näkymä nykyään: Richelieun patsas ja portaat, jotka kapenevat ylöspäin.',
       selite: 'Sama näkymä nykyään. Ylhäällä siintää herttua Richelieun '
                 + 'patsas, ja portaat kapenevat ylöspäin: alin askelma on 21,7 '
                 + 'metriä leveä, ylin 12,5 metriä.',
@@ -2095,6 +2124,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Saint Basil\'s Cathedral (Moscow, 2004).jpg',
       lahde: 'Andrew Shiva / Wikipedia, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama kirkko tänään: Lobnoje meston kiviympyrä edessä, yhdeksän erilaista kupolia.',
       selite: 'Sama kirkko tänään lähes samalta kohdalta: etualalla yhä '
                 + 'Lobnoje meston kiviympyrä. Kirkossa on yhdeksän kappelia '
                 + 'saman katon alla, ja jokaisen kupoli on erilainen.',
@@ -2147,6 +2177,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'The Winter Palace and Column of Alexander I, Saint Petersburg, Russia.jpg',
       lahde: 'Vyacheslav Argenberg, Commons (CC BY 4.0)',
+      lyhyt: 'Sama aukio nykyään: taustalla Talvipalatsi ja 47,5 metrin pylväs enkeleineen.',
       selite: 'Sama aukio nykyään. Taustalla Talvipalatsi, jossa toimii '
                 + 'Eremitaaši-museo. Pylväs on 47,5 metriä korkea, ja sen '
                 + 'huipulla seisova enkeli on runsaat neljä metriä.',
@@ -2206,6 +2237,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Tallinn old town Aug 2019 041.jpg',
       lahde: 'Yamen, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Tallinnan vanhankaupungin taloja Raatihuoneentorilla kesäpäivän varjoissa.',
       selite: 'Tallinnan vanhankaupungin taloja Raatihuoneentorin laidalla. '
         + 'Keltainen kauppiaantalo, punatiilinen pääty ja terassien varjot '
         + 'kesäpäivänä.',
@@ -2292,6 +2324,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: '20150505 25 Riga - National Opera (16834432564).jpg',
       lahde: 'Sjaak Kempe, Commons (CC BY 2.0)',
+      lyhyt: 'Sama talo tänään: Latvian kansallisooppera vuodesta 1919, puisto ja kanava ennallaan.',
       selite: 'Sama talo tänään. Vuodesta 1919 se on ollut Latvian '
                 + 'kansallisooppera, ja pylväikön yläpuolella lukee nyt '
                 + 'latviaksi Nacionālā opera. Puisto ja kanava sen ympärillä '
@@ -2353,6 +2386,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Gate of Dawn Exterior, Vilnius, Lithuania - Diliff.jpg',
       lahde: 'Diliff, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Sama portti ja katu tänään: kappelin parveke, mukulakivet vaihdettu ja latinankielinen kirjoitus.',
       selite: 'Sama portti ja sama katu tänään. Kappelin parvekkeella '
                 + 'seisoo yhä ihmisiä, mukulakivet on vaihdettu tasaisempaan '
                 + 'kiveykseen, ja päädyssä lukee latinaksi Mater Misericordiae, '
@@ -2444,6 +2478,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Galata Tower January 2015.JPG',
       lahde: 'Martin Falbisoner, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Galatan torni Kultaisen sarven pohjoispuolella, rakennettu 1348, huipulta näkyy koko salmi.',
       selite: 'Galatan torni Kultaisen sarven pohjoispuolella. Kivinen torni on '
         + 'rakennettu 1348 ja sen huipulta näkee koko salmen; alhaalla kulkee '
         + 'jyrkkä katu.',
@@ -2515,6 +2550,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg',
       lahde: 'JIP, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama tori tänään: kirkko on nyt Tuomiokirkko, portailla istutaan kesäiltoina.',
       selite: 'Sama tori tänään. Kirkon nimi vaihtui Nikolainkirkosta '
                 + 'Tuomiokirkoksi Suomen itsenäistyttyä, ja leveille portaille '
                 + 'istuudutaan kesäiltoina kuin katsomoon.',
@@ -2569,6 +2605,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Hämeensilta 2021.jpg',
       lahde: 'Tiia Monto, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama silta tänään: vuoden 1929 kivisilta korvattiin 2019 uudella, graniitilla verhoiltuna.',
       selite: 'Sama silta tänään. Vuoden 1929 kivisilta korvattiin 2019 '
         + 'uudella, joka rakennettiin vanhan näköiseksi ja verhoiltiin '
         + 'punertavalla graniitilla. Kaiteella seisoo yhä yksi Wäinö '
@@ -2653,6 +2690,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Stockholm - Kungsträdgården - April 2019 03.jpg',
       lahde: 'Liridon, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama puisto huhtikuussa: kirsikkapuiden parin viikon kukinta houkuttelee väkeä.',
       selite: 'Sama puisto huhtikuussa. Kirsikkapuiden kukinta kestää noin '
                 + 'kaksi viikkoa, ja sitä seurataan uutisissa — silloin '
                 + 'puistoon mahtuu väkeä vain hitaasti kävellen.',
@@ -2732,6 +2770,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'The parliament of Norway building - Stortingsbygningen (Storting building) - Stortinget (29765743122).jpg',
       lahde: 'Jorge Láscar, Commons (CC BY 2.0)',
+      lyhyt: 'Sama talo tänään Karl Johans gatenilla: puolipyöreä sali ja edessä Leijonakukkula.',
       selite: 'Sama talo tänään Karl Johans gaten varrella. Keltatiilinen '
                 + 'puolipyöreä sali on yhä käytössä: siellä istuu 169 '
                 + 'kansanedustajaa. Edessä olevaa nurmirinnettä kutsutaan '
@@ -2808,6 +2847,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Vista de Florencia desde Piazzale Michelangelo, Italia, 2022-09-18, DD 199.jpg',
       lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama näkymä samalta terassilta noin 150 vuotta myöhemmin, sillat ja kupoli ennallaan.',
       selite: 'Sama näkymä samalta terassilta noin 150 vuotta myöhemmin. '
         + 'Sillat, joen mutka, torni ja kupoli ovat paikoillaan; uutta on '
         + 'vain rantakatujen liikenne ja puiden korkeus.',
@@ -2916,6 +2956,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Kongens Nytorv (The King\'s New Square) and the Royal Danish Theatre.jpg',
       lahde: 'European Union, 2026, Commons (CC BY 4.0)',
+      lyhyt: 'Sama teatteri ja aukio nykyään: Kongens Nytorv kaivettiin auki metroasemaa varten 2010-luvulla.',
       selite: 'Sama teatteri ja aukio nykyään. Kongens Nytorv kaivettiin '
                 + '2010-luvulla auki metroasemaa varten ja rakennettiin sen '
                 + 'jälkeen uudelleen; talossa esitetään yhä sekä näytelmiä että '
@@ -2986,6 +3027,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Pallastunturi and Hanhijärvi in Muonio, Lapland, Finland, 2023 September.jpg',
       lahde: 'Ximonic (Simo Räsänen), Commons (CC BY-SA 4.0)',
+      lyhyt: 'Pallastunturit ja Hanhijärven suolampi syyskuussa, ruska värjännyt suon oranssiksi.',
       selite: 'Pallastunturit ja Hanhijärven suolampi syyskuussa. Ruska on '
         + 'värjännyt suon oranssiksi, ja taustalla nousevat tunturit metsän '
         + 'takaa.',
@@ -3057,6 +3099,7 @@ export const EUROPE_VALOKUVAT = {
     uusi: {
       tiedosto: 'Tromsø harbour 01.jpg',
       lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
+      lyhyt: 'Sama satama helmikuussa 2013: puiset makasiinit, terässiset veneet ja Tromssan silta.',
       selite: 'Sama satama helmikuussa 2013. Puiset makasiinit seisovat yhä '
                 + 'laiturilla, mutta veneet ovat terästä ja salmen yli kaartaa '
                 + '1960 valmistunut Tromssan silta. Asukkaita on nyt noin 80 '

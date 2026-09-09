@@ -55,6 +55,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Aden - panorama of crater from Tawila Tunks (8739851148).jpg',
       vuosi: '2013',
       lahde: 'JamesGardinerCollection, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Adenin Crater-kaupunginosa nykyään: talot täyttävät kraatterin pohjan, tummat rinteet ympärillä.',
       selite: 'Adenin Crater-kaupunginosa nykyään vesisäiliöiden kohdalta '
         + 'katsottuna. Talot täyttävät kraatterin pohjan ja tummat rinteet '
         + 'nousevat ympärillä joka suuntaan kuin muuri.',
@@ -96,6 +97,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'View of Ankara city from the castle.jpg',
       vuosi: '2021',
       lahde: 'Tsdlnsaıd, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Näkymä linnanmuurilta: vanhan kaupungin kattoja, moskeija ja nykyinen keskusta tornitaloineen.',
       selite: 'Näkymä linnanmuurilta: etualalla vanhan kaupungin tiilikattoja, '
         + 'taustalla moskeija ja kauempana nykyinen keskusta tornitaloineen. '
         + 'Sama kukkula, jolta vanha valokuva on otettu, on nyt keskellä '
@@ -137,6 +139,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Astana Esil view.jpg',
       vuosi: '2026',
       lahde: 'Dauren Nabijan, Commons (CC0)',
+      lyhyt: 'Astanan lasitornit Esil-joelta nähtynä, väkiluku kasvanut miljoonaan pääkaupungiksi tulon jälkeen.',
       selite: 'Astanan lasitornit Esil-joen rannalta nähtynä. Kaupungissa asuu '
         + 'nyt yli miljoona ihmistä, kun pääkaupungiksi nimeämisen aikaan '
         + '1997 heitä oli noin kolmesataatuhatta.',
@@ -176,6 +179,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'بغداد نهر دجلة.jpg',
       vuosi: '2015',
       lahde: 'Mustafa Nader, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Tigris keskellä Bagdadia nykyään, ylitse nyt kymmenkunta siltaa entisten veneiden tilalla.',
       selite: 'Tigris keskellä Bagdadia nykyään. Joki on yhä yhtä leveä ja '
         + 'ruskea, mutta sen yli vie nyt kymmenkunta kiinteää siltaa siellä, '
         + 'missä 1930-luvulla kelluivat veneet.',
@@ -226,6 +230,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Bab Sharqi Street, Damascus.jpg',
       vuosi: '2010',
       lahde: 'Bernard Gagnon, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Suoran kadun itäpää Damaskoksessa: puiset erkkerit ja roomalaisen pääkadun linja säilyneet.',
       selite: 'Suoran kadun itäpää Damaskoksessa nykyään: ulos työntyvät puiset '
         + 'erkkerit ovat yhä paikoillaan, ja keskikaistalle on nostettu '
         + 'vanhoja pylväänpätkiä. Katu kulkee samaa linjaa kuin roomalainen '
@@ -267,6 +272,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Doha Corniche by KS.jpg',
       vuosi: '2017',
       lahde: 'Krissubh, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Dohan lahti nykyään: puuveneitä ja West Bayn lasitornit merestä täytetyn maan takana.',
       selite: 'Dohan lahti nykyään: puisia veneitä etualalla ja West Bayn '
         + 'lasitornit vastarannalla. Rantabulevardin alla oleva maa on '
         + 'suurelta osin merestä täytettyä.',
@@ -316,6 +322,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Downtown Dubai - Dubai - United Arab Emirates - panoramio (22).jpg',
       vuosi: '2013',
       lahde: 'Xiaotong Gao, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Dubain keskusta ilmasta: lasitorneja ja moottoriteitä entisellä aavikolla.',
       selite: 'Dubain keskusta ilmasta: lasitorneja ja moottoritien silmukoita '
         + 'Sheikh Zayed Roadin varrella. Sama tienvarsi oli 1980-luvulla '
         + 'vielä lähes pelkkää aavikkoa.',
@@ -366,6 +373,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Aleppo Citadel at sunset, October 2024.jpg',
       vuosi: '2024',
       lahde: 'Noureddine Attar, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Linnoituksen porttitorni illan valossa 2024, sillan kaaret alla ja korjaustyömaa kyljessä.',
       selite: 'Linnoituksen porttitorni illan valossa lokakuussa 2024; alla '
         + 'näkyvät sillan kaaret. Tornin kyljessä oleva teline on '
         + 'korjaustyömaa — linnoitusta kunnostetaan pala kerrallaan.',
@@ -404,6 +412,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Irkutsk, Lower Embankment, Russia.jpg',
       vuosi: '2015',
       lahde: 'Vjatšeslav Argenberg, Commons (CC BY 4.0)',
+      lyhyt: 'Angaran alaranta Irkutskissa, ainoa Baikalista lähtevä joki.',
       selite: 'Angaran alaranta Irkutskissa nykyään. Angara on ainoa joki, joka '
         + 'lähtee Baikalista ulos; kaikki muut sadat joet laskevat siihen.',
     },
@@ -452,6 +461,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Naqsh-e Jahan Square 01.jpg',
       vuosi: '2018',
       lahde: 'Gladiator2714, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Naqsh-e Jahan nykyään: nurmikot, suihkulähdeallas ja moskeijan kupoli yli 500 metrin aukiolla.',
       selite: 'Naqsh-e Jahan nykyään: leikatut nurmikot, pitkä suihkulähdeallas '
         + 'ja moskeijan kupoli aukion laidalla. Aukio on yli 500 metriä '
         + 'pitkä, joten toisesta päästä katsoen ihmiset toisessa päässä '
@@ -504,6 +514,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Izmir 2012.jpg',
       vuosi: '2012',
       lahde: 'Haluxjason, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Izmirin lahti Kadifekalen linnavuorelta: sama näkymä kuin antiikin Smyrnan muurien takaa.',
       selite: 'Izmirin lahti Kadifekalen linnavuorelta katsottuna: kaupunki '
         + 'kaartuu veden ympäri ja talot nousevat rinteille joka suunnasta. '
         + 'Kuvauspaikan huipulla ovat antiikin ajoilta periytyvät '
@@ -546,6 +557,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Yakutsk - 190228 DSC 5379.jpg',
       vuosi: '2019',
       lahde: 'Ilja Varlamov, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Jakutsk helmikuussa 2019: pakkasen jäädyttämä jääsumu kaupungin päällä.',
       selite: 'Jakutsk helmikuussa 2019. Kaupungin päällä lepää jääsumu: kovassa '
         + 'pakkasessa savu ja pakokaasujen kosteus jäätyvät heti ilmaan '
         + 'eivätkä nouse pois.',
@@ -587,6 +599,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Views of Yekaterinburg-2021-1.jpg',
       vuosi: '2021',
       lahde: 'Vjatšeslav Buharov, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Jekaterinburg 2021: Uralin suurin kaupunki kasvoi entisestä rautatehtaasta.',
       selite: 'Jekaterinburg vuonna 2021. Kaupunki on Uralin suurin ja siinä asuu '
         + 'yli miljoona ihmistä, vaikka se aloitti pelkkänä rautatehtaana '
         + 'joen padon vieressä.',
@@ -637,6 +650,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Jerusalem, 21 December 2025 192.jpg',
       vuosi: '2025',
       lahde: 'מקף־עברי, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Kalliomoskeijan kupoli ja minareetti vanhankaupungin kattojen yllä, julkisivut vaaleaa kalkkikiveä.',
       selite: 'Kalliomoskeijan kupoli ja minareetti kohoavat vanhankaupungin '
         + 'kattojen yli iltapäivän valossa. Talojen kalkkikivi on määrätty '
         + 'rakennussäännöissä: Jerusalemissa julkisivut on verhottava '
@@ -687,6 +701,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Petropavlovsk-Kamchatsky with Koryaksky Volcano in background.jpg',
       vuosi: '2007',
       lahde: 'Vfp15, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Sama satama nykyään, takana Korjakskaja Sopka; yhteys vain laivalla tai lentäen.',
       selite: 'Sama satama nykyään, nostureita laiturilla ja takana Korjakskaja '
         + 'Sopka. Kaupunkiin ei johda maantietä muualta Venäjältä, joten '
         + 'kaikki tulee yhä laivalla tai lentäen.',
@@ -737,6 +752,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Goreme Panorama From Southeast.JPG',
       vuosi: '2009',
       lahde: 'Bjørn Christian Tørrissen, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Göremen kylä aamuvalossa: talot ja kartiot kallioiden seassa, osa taloista kallion sisällä.',
       selite: 'Göremen kylä aamuvalossa: talot, kartiot ja kalliot ovat sekaisin, '
         + 'ja monessa kartiossa on ikkuna. Osa kylän taloista on yhä puoliksi '
         + 'kallion sisällä, eli sisähuoneet jatkuvat vuoreen niiden '
@@ -785,6 +801,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Id Kah Mosque Kashgar.jpg',
       vuosi: '2017',
       lahde: 'Radosław Botev, Commons (CC BY 3.0)',
+      lyhyt: 'Id Kahin moskeija Kasgarin keskusaukiolla, Kiinan suurin moskeija ja sadan vuoden takainen tori.',
       selite: 'Id Kahin moskeija Kasgarin keskusaukiolla nykyään. Se on Kiinan '
         + 'suurin moskeija, ja aukio sen edessä on yhä sama tori, jolla '
         + 'melonikauppiaat seisoivat sata vuotta sitten.',
@@ -843,6 +860,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Kuwait City skyline (39710595225).jpg',
       vuosi: '2018',
       lahde: 'Francisco Anzola, Commons (CC BY 2.0)',
+      lyhyt: 'Kuwait Cityn silhuetti mereltä, juomavesi nykyään merivedestä valmistettua.',
       selite: 'Kuwait Cityn silhuetti mereltä nähtynä. Kaupunki on yhä samassa '
         + 'lahden pohjukassa kuin satamana, mutta lähes kaikki sen juomavesi '
         + 'tehdään nykyään merivedestä.',
@@ -890,6 +908,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Lhassa Potala.jpg',
       vuosi: '2012',
       lahde: 'Royonx, Commons (CC0)',
+      lyhyt: 'Potala nykyään, valkoinen ja punainen palatsi Punaisen vuoren päällä lähes 3700 metrissä.',
       selite: 'Potala nykyään, valkoinen ja punainen palatsi Punaisen vuoren '
         + 'päällä. Katolla ollaan lähes 3 700 metrissä, korkeammalla kuin '
         + 'useimpien Euroopan vuorten huipulla.',
@@ -937,6 +956,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Luxor Temple Square R01.jpg',
       vuosi: '2013',
       lahde: 'Marc Ryckaert, Commons (CC BY 3.0)',
+      lyhyt: 'Luxorin temppeliaukio nykyään: Abu Haggagin moskeija temppelin päällä, vanha ovi korkealla.',
       selite: 'Luxorin temppeliaukio nykyään. Pylonin edessä kulkee katu ja '
         + 'temppelin päälle on rakennettu Abu Haggagin moskeija, joka jäi '
         + 'paikalleen kun temppeli kaivettiin ympäriltä pois - siksi sen '
@@ -986,6 +1006,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Magadan seen from mountain.jpg',
       vuosi: '2008',
       lahde: 'Johannes Rohr, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Magadan Staritskin niemeltä, lumiset kukkulat takana ja Kolyman maantie ainoana maayhteytenä.',
       selite: 'Magadan Staritskin niemeltä nähtynä, takana lumiset kukkulat. '
         + 'Kaupungissa asuu noin 90 000 ihmistä, ja siitä lähtee sisämaahan '
         + 'Kolyman maantie — kaupungin ainoa maayhteys muualle.',
@@ -1046,6 +1067,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Old Muscat City View, Muscat, Oman.jpg',
       vuosi: '2024',
       lahde: 'Domenico Convertini, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Vanha Maskat nykyään samojen vuorten välissä, uusi kaupunki venynyt rannikkoa pitkin.',
       selite: 'Vanha Maskat nykyään samojen vuorten välissä kuin sata vuotta '
         + 'sitten. Uusi kaupunki on jouduttu kasvattamaan kymmenien '
         + 'kilometrien nauhaksi rannikkoa pitkin, koska vuoret eivät anna '
@@ -1095,6 +1117,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Mezquita del Profeta, Medina, Arabia Saudita, 2025-05-22, DD 02.jpg',
       vuosi: '2025',
       lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Profeetan moskeija nykyään: laajennettu piha ja vanha kupoli uusien minareettien keskellä.',
       selite: 'Profeetan moskeija nykyään. Pihaa on laajennettu niin, että sinne '
         + 'mahtuu kerralla satojatuhansia ihmisiä, ja vanha kupoli on jäänyt '
         + 'uusien minareettien keskelle.',
@@ -1142,6 +1165,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Makkah 550m.jpg',
       vuosi: '2011',
       lahde: 'Wurzelgnohm, Commons (CC0)',
+      lyhyt: 'Suuri moskeija ja kaupunki 550 metrin korkeudesta, Kaaba pienenä pisteenä keskellä.',
       selite: 'Suuri moskeija ja sitä ympäröivä kaupunki 550 metrin korkeudesta '
         + 'nähtynä. Kaaba on pieni tumma piste keskellä pihaa, ja koko muu '
         + 'rakennus on kasvanut sen ympärille vähitellen.',
@@ -1198,6 +1222,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: '1I0A9237.jpg',
       vuosi: '2019',
       lahde: 'Goldmansam, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Tigrisin länsiranta Mosulissa, vanha silta ja Niniven raunioiden kummut toisella puolella.',
       selite: 'Tigrisin länsiranta Mosulissa ja taustalla kaupungin vanha silta. '
         + 'Joen toisella puolella, kuvan yläreunan takana, ovat Niniven '
         + 'raunioiden kummut.',
@@ -1248,6 +1273,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Along ledras street.JPG',
       vuosi: '2010',
       lahde: 'Andreas2009, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Ledran katu muurien sisäpuolella, päättyy tarkastuspisteeseen joka avautui vuonna 2008.',
       selite: 'Ledran katu muurien sisäpuolella: kävelykatu, liikkeitä ja ihmisiä '
         + 'ostoksilla. Tämä sama katu päättyy muutaman korttelin päässä '
         + 'tarkastuspisteeseen, jonka läpi pääsee kaupungin toiselle puolelle '
@@ -1287,6 +1313,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Ob River, Novosibirsk 2.jpg',
       vuosi: '2018',
       lahde: 'K. Artjom, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Obin ranta Novosibirskissä, sadan vuoden ikäisessä kaupungissa jo yli 1,5 miljoonaa asukasta.',
       selite: 'Obin ranta Novosibirskissä, takana keskustan talot. Kaupunki on '
         + 'vasta reilun sadan vuoden ikäinen, mutta siinä asuu jo yli '
         + 'puolitoista miljoonaa ihmistä.',
@@ -1328,6 +1355,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Persepolis - Apadana 01.jpg',
       vuosi: '2016',
       lahde: 'Bernard Gagnon, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Apadanan pylväitä nykyään, katto paloi 330 eaa. ja pylväät kannattelevat vain taivasta.',
       selite: 'Apadanan pylväitä nykyään. Katto oli setripuuta ja se paloi vuonna '
         + '330 eaa., joten pylväät ovat siitä lähtien kannatelleet vain '
         + 'taivasta.',
@@ -1378,6 +1406,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Al Khazneh 2025.jpg',
       vuosi: '2025',
       lahde: 'ほっきー, Commons (CC0)',
+      lyhyt: 'Khazne Petrassa nykyään: pylväät ja veistokset ruusunpunaisessa hiekkakivessä, edessä kameli.',
       selite: 'Khazne Petrassa nykyään: pylväät, kaarielementti ja veistokset '
         + 'erottuvat selvästi, ja edessä lepää kameli ohjaajineen. Kivi on '
         + 'hiekkakiveä, jonka rautapitoisuus antaa sille ruusunpunaisen värin '
@@ -1426,6 +1455,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Riyadh Skyline showing the King Abdullah Financial District (KAFD) and the famous Kingdom Tower .jpg',
       vuosi: '2016',
       lahde: 'B. Alotaby, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Riadin keskusta iltahämärässä: Kingdom Centre ja tornit, vesi tuotu Persianlahdelta.',
       selite: 'Riadin keskusta iltahämärässä: Kingdom Centre ja taustalla '
         + 'rahoituskaupunginosan tornit. Kaupunki jatkuu horisonttiin asti, '
         + 'vaikka lähellä ei ole jokea eikä merta - vesi tulee kaivoista ja '
@@ -1475,6 +1505,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Saudi Arabia Empty Quarter Nov. 2021 (100).jpg',
       vuosi: '2021',
       lahde: 'Richard Mortel, Commons (CC BY 2.0)',
+      lyhyt: 'Rub al-Khali nykyään: dyynejä ilman kylää tai tietä, Ranskan kokoinen asumaton aavikko.',
       selite: 'Rub al-Khali nykyään: dyyni toisensa jälkeen ilman kylää, tietä '
         + 'tai puuta. Aavikko on suunnilleen Ranskan kokoinen eikä siellä ole '
         + 'pysyvää asutusta.',
@@ -1524,6 +1555,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Маяк на мысе Жонкьер.jpg',
       vuosi: '2018',
       lahde: 'Maxim Truhin, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Zonkjerin niemen majakka Aleksandrovsk-Sahalinskissa, tunneli louhittiin pakkotyöllä 1880-luvulla.',
       selite: 'Zonkjerin niemen majakka Aleksandrovsk-Sahalinskin laidalla '
         + 'nykyään. Se on Kaukoidän vanhimpia majakoita, ja niemen läpi menee '
         + 'kallioon louhittu tunneli, jonka pakkotyövangit hakkasivat '
@@ -1573,6 +1605,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'OM-salalah-einfahrt.jpg',
       vuosi: '2016',
       lahde: 'Balou46, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Salalah nykyään: nurmea, palmuja ja banaania sataman kupeessa, harvinaista Arabian niemimaalla.',
       selite: 'Salalah nykyään: nurmea, palmuja ja matalia taloja sataman '
         + 'kupeessa. Kaupungin ympärillä kasvaa banaania ja kookosta, mikä on '
         + 'Arabian niemimaalla harvinaista.',
@@ -1621,6 +1654,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Registan 01.jpg',
       vuosi: '2023',
       lahde: 'Bernard Gagnon, Commons (CC0)',
+      lyhyt: 'Registan nykyään: Ulug Begin, Tilla-Karin ja Sir-Dorin medreset entisellä kauppatorilla.',
       selite: 'Registan nykyään: vasemmalla Ulug Begin medrese, keskellä '
         + 'Tilla-Kari ja oikealla Sir-Dor. Aukio oli alun perin kauppatori, '
         + 'ja koulut nousivat sen ympärille noin kahdensadan vuoden välein.',
@@ -1669,6 +1703,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Old Sanaa, Yemen (10732756906).jpg',
       vuosi: '2013',
       lahde: 'Rod Waddington, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Vanhan Sanaan kattoja nykyään, maailmanperintökohde jossa yhä asutaan.',
       selite: 'Vanhan Sanaan kattoja nykyään. Alue on Unescon '
         + 'maailmanperintökohde, mutta talot eivät ole museo vaan koteja, '
         + 'joissa asutaan yhä.',
@@ -1717,6 +1752,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Saint Catherine\'s Monastery, Mount Sinai morning.jpg',
       vuosi: '2010',
       lahde: 'Abraham, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Pyhän Katariinan luostari Siinain vuorten juurella, kirkko ja kellotorni muurien sisällä.',
       selite: 'Pyhän Katariinan luostari Siinain vuorten juurella aamuvalossa. '
         + 'Muurien sisällä on kirkko ja kellotorni, ja ympärillä kohoaa '
         + 'paljas kalliorinne.',
@@ -1764,6 +1800,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Landscape of Tabriz 01.jpg',
       vuosi: '2019',
       lahde: 'Mostafameraji, Commons (CC0)',
+      lyhyt: 'Tabriz nykyään vuorenrinteeltä, basaari yhä yksi maailman laajimmista katetuista kauppapaikoista.',
       selite: 'Tabriz nykyään vuorenrinteeltä katsottuna. Basaari on jossain tuon '
         + 'kattomeren keskellä, ja se on yhä yksi maailman laajimmista '
         + 'katetuista kauppapaikoista.',
@@ -1805,6 +1842,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Tehran skyline- Alborz Mountains on background-20150401.jpg',
       vuosi: '2015',
       lahde: 'Mhsheikholeslami, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Teheran Tabiat-sillalta, Alborzin harjanne takana ja pohjoisosa etelää viileämpi.',
       selite: 'Teheran Tabiat-sillalta katsottuna, taustalla Alborzin harjanne. '
         + 'Kaupungin pohjoisosa on satoja metrejä etelää korkeammalla, ja '
         + 'siksi siellä on useita asteita viileämpää samaan aikaan päivästä.',
@@ -1845,6 +1883,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: 'Panorama Ulan Bator 13.JPG',
       vuosi: '2009',
       lahde: 'Brücke-Osteuropa, Commons (PD)',
+      lyhyt: 'Ulaanbaatarin keskusta nykyään: Suhbaatarin aukio, lasitorni ja puolet Mongolian väestöstä.',
       selite: 'Ulaanbaatarin keskusta nykyään: Suhbaatarin aukio, lasitorni ja '
         + 'takana kukkulat, joilla gerikaupunginosat alkavat. Kaupungissa '
         + 'asuu noin puolet koko Mongolian väestöstä.',
@@ -1904,6 +1943,7 @@ export const ASIA_VALOKUVAT = {
       tiedosto: '20220816 City view from the Eagle\'s nest hill.jpg',
       vuosi: '2022',
       lahde: 'travelling_eidolon, Commons (CC BY 2.0)',
+      lyhyt: 'Sama kaupunki Kotkanpesän kukkulalta, puutalojen tilalla kerrostalot ja köysirata huipulla.',
       selite: 'Sama kaupunki Kotkanpesän kukkulalta nykyään. Talot kiipeävät '
         + 'rinteitä samalla tavalla kuin sata vuotta sitten, mutta puutalojen '
         + 'tilalla ovat kerrostalot ja kukkulan huipulla köysirata.',

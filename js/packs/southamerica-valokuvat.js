@@ -56,6 +56,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'A main street in Antofagasta (pzidar paranal lv-1).jpg',
       vuosi: '2011',
       lahde: 'P. Zidar/ESO, Commons (CC BY 4.0)',
+      lyhyt: 'Antofagastan pääkatu nykyään: salpietarin tilalle tuli kupari, Chilen kaivosteollisuuden keskus.',
       selite: 'Yksi Antofagastan pääkaduista nykyään. Salpietarin tilalle tuli '
         + 'kupari: kaupunki on Chilen kaivosteollisuuden keskus ja '
         + 'väkiluvultaan maan viidenneksi suurin.',
@@ -105,6 +106,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Gran Palacio Nacional de Paraguay.jpg',
       lahde: 'FF MM, Commons (CC BY-SA 4.0)',
+      lyhyt: 'López-palatsi Asunciónissa, 1800-luvulta ja nykyään presidentin työpaikka.',
       selite: 'López-palatsi Asunciónin vanhassa keskustassa. Se rakennettiin '
         + '1800-luvun puolivälissä maata hallinneen López-suvun asunnoksi ja '
         + 'on nykyään presidentin työpaikka ja hallituksen istuinpaikka.',
@@ -155,6 +157,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Rio Javaés 03.jpg',
       lahde: 'Iza Guedes, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Auringonlasku Javaés-joen yllä, Bananalin saaren ainoa yhteys ja kalavesi.',
       selite: 'Auringonlasku Javaés-joen yllä. Sama vesireitti erottaa Bananalin '
         + 'saaren mantereesta. Saaren kylien välillä liikutaan pääosin '
         + 'venein, ja joki on samalla tie ja kalavesi.',
@@ -197,6 +200,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Boa Vista Roraima Brazil.jpg',
       vuosi: '2018',
       lahde: 'Ederson Brito / MTur Destinos, Commons (CC0)',
+      lyhyt: 'Boa Vistan keskusta ilmasta: kadut viuhkana aukiolta kuin auringonkehrä.',
       selite: 'Boa Vistan keskusta ilmasta. Kadut lähtevät viuhkana Centro '
         + 'Cívicon aukiolta: keskusta kaavoitettiin 1940-luvulla '
         + 'säteittäiseksi, ja siksi se muistuttaa ylhäältä auringonkehrää.',
@@ -245,6 +249,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Peatonalización de Carrera Séptima cerca Avenida Jimenez.jpg',
       lahde: 'Peter Angritt, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama katu nykyään: Carrera Séptima kävelykaduksi, San Franciscon kirkontorni taustalla.',
       selite: 'Sama katu nykyään: Carrera Séptimaa muutetaan kävelykaduksi '
         + 'Avenida Jiménezin kohdalla. Taustalla näkyy yhä San Franciscon '
         + 'kirkon torni, sama kuin vuoden 1886 kuvassa. Työmiehet latovat '
@@ -296,6 +301,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Plaza de Mayo panorama.jpg',
       lahde: 'The Cosmonaut, Commons (CC BY-SA 2.5)',
+      lyhyt: 'Sama aukio nykyään: Casa Rosada ja ratsastajapatsas, Argentiinan tärkein mielenosoituspaikka.',
       selite: 'Sama aukio nykyään, kuvattuna vastakkaisesta suunnasta. Perällä on '
         + 'Casa Rosada eli presidentin virastotalo, ja vasemmalla seisoo '
         + 'ratsastajapatsas kuten vanhassakin vedoksessa. Plaza de Mayo on '
@@ -346,6 +352,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'VA Avenida Afonso Pena.jpg',
       lahde: 'Flávio André / MTur Destinos, Commons (CC BY 2.0)',
+      lyhyt: 'Avenida Afonso Pena ilmasta: leveä puistokaista ja tornitalot tasaisella tasangolla.',
       selite: 'Avenida Afonso Pena halkoo kaupungin ilmasta katsottuna. Puurivin '
         + 'jakama keskikaista on poikkeuksellisen leveä, ja kaupunki on '
         + 'kasvanut sen molemmin puolin tornitaloiksi tasaisella tasangolla, '
@@ -389,6 +396,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Cape Horn (js) 1.jpg',
       vuosi: '2000',
       lahde: 'Jerzy Strzelecki, Commons (CC BY 3.0)',
+      lyhyt: 'Kap Horn mereltä nähtynä, Hornoksen saarella Chilen laivaston majakka.',
       selite: 'Kap Horn mereltä nähtynä. Niemi ei ole mantereella vaan Hornoksen '
         + 'saarella, joka kuuluu Wollastonin saariryhmään; kalliolla on '
         + 'Chilen laivaston miehittämä majakka.',
@@ -438,6 +446,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Caracas, Venezuela (10707698243).jpg',
       lahde: 'Fernando Flores, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Caracas nykyään: laakso täynnä ja asutus rinteillä, tasainen lämpötila 900 metrin korkeudessa.',
       selite: 'Caracas nykyään. Laakso on täyttynyt reunoja myöten ja asutus '
         + 'noussut ympäröiville rinteille. Kaupunki on noin 900 metrin '
         + 'korkeudessa, mikä pitää lämpötilan tasaisena ympäri vuoden vaikka '
@@ -488,6 +497,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Cayenne place des palmistes 2013.jpg',
       vuosi: '2013',
       lahde: 'Cayambe, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Place des Palmistes, Cayennen palmuaukio kuninkaanpalmujen mukaan nimetty.',
       selite: 'Place des Palmistes eli palmuaukio Cayennen keskustassa. Nimi '
         + 'tulee aukion korkeista kuninkaanpalmuista; taustalla kulkee Avenue '
         + 'du Général-de-Gaulle.',
@@ -535,6 +545,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Stanley waterfront.jpg',
       vuosi: '2014',
       lahde: 'CHK46, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Stanleyn rantatie nykyään, Falklandinsaarten ainoa varsinainen kaupunki.',
       selite: 'Stanleyn rantatie nykyään. Kaupungissa asuu selvä enemmistö '
         + 'saarten väestä, ja se on ainoa paikka Falklandinsaarilla, jota voi '
         + 'kutsua kaupungiksi.',
@@ -584,6 +595,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Bartholomew - Beautiful Galapagos (35570836620).jpg',
       lahde: 'Derek Keats from Johannesburg, South Africa, Wikimedia Commons (CC BY 2.0)',
+      lyhyt: 'Bartolomén saaren huipulta: Pinnacle Rock nousee merestä kahden lahden välissä.',
       selite: 'Näkymä Bartolomén saaren huipulta: terävä Pinnacle Rock -kallio '
         + 'nousee merestä, ja kapea hiekkakannas erottaa kaksi lahtea '
         + 'toisistaan. Taustalla kohoaa karuja tulivuorenkartioita.',
@@ -630,6 +642,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: '00 1828 Views of Iguazu Falls from the Brazilian side.jpg',
       lahde: 'W. Bulach, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama putousrivi Brasilian puolelta korkean veden aikaan, noin 270 putousta yhteensä.',
       selite: 'Sama putousrivi Brasilian puolelta kuvattuna korkean veden aikaan. '
         + 'Putouksia on kaikkiaan noin 20 suurta ja yli 250 pienempää lähes '
         + 'kolmen kilometrin matkalla.',
@@ -677,6 +690,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Vista ciudad desde rio.JPG',
       lahde: 'Gabymuaa, Commons (PD)',
+      lyhyt: 'Iquitos Itaya-joelta: paalutaloja ja kellotorni, yhteys vain jokea pitkin tai lentäen.',
       selite: 'Iquitos nykyään Itaya-joelta katsottuna. Rannassa on veneitä ja '
         + 'paalujen varaan rakennettuja taloja, ja niiden takaa kohoaa '
         + 'kaupungin kellotorni. Iquitosiin ei tule tietä muualta: sinne '
@@ -727,6 +741,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'João Pessoa, capital da Paraíba.jpg',
       vuosi: '2022',
       lahde: 'Marcos Elias de Oliveira Júnior, Commons (CC0)',
+      lyhyt: 'João Pessoa ilmasta: tiilikattoja edessä, tornirivi ja Atlantti kasvaneen kaupungin takana.',
       selite: 'João Pessoa ilmasta. Etualalla matalaa tiilikattoista asutusta, '
         + 'taustalla rannan tornirivi ja Atlantti: kaupunki on kasvanut '
         + 'jokivarresta merenrantaan asti.',
@@ -776,6 +791,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Puente de piedra en el rio rimac Lima.jpg',
       lahde: 'Silvia Alcocer, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Puente de Piedra nykyään: 1600-luvun holvisilta yhä käytössä, penkereet palmuineen.',
       selite: 'Puente de Piedra nykyään, kuvattuna Desamparadosin rautatieaseman '
         + 'puolelta. Kivinen holvisilta on 1600-luvun alusta ja yhä käytössä; '
         + 'joen rannat on muurattu ja penkereille istutettu palmuja.',
@@ -824,6 +840,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Saint Joseph Church, Macapá city, Brazil.jpg',
       vuosi: '2011',
       lahde: 'Jorge Andrade, Commons (CC BY 2.0)',
+      lyhyt: 'Sama São Josén kirkko sata vuotta myöhemmin: kellotorni ennallaan, hiekan tilalla asfaltti.',
       selite: 'Sama São Josén kirkko runsaat sata vuotta myöhemmin. Hiekkakentän '
         + 'tilalla on asfalttikatu ja pysäköityjä autoja, mutta kupolillinen '
         + 'kellotorni on entisellään; kaupungin vuosipäivää vietetään yhä '
@@ -871,6 +888,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Machu Picchu, Perú, 2015-07-30, DD 60.JPG',
       lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama näkymä nykyään: nurmiset pengerrykset, rekonstruktiot ja Huayna Picchu taustalla.',
       selite: 'Sama näkymä nykyään: pengerrykset ovat nurmella, rinteessä seisoo '
         + 'pari olkikattoista rekonstruktiota ja Huayna Picchu on yhä '
         + 'taustalla. Muurin päällä laiduntaa laama.',
@@ -920,6 +938,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Panorama do Porto de Manaus.jpg',
       vuosi: '2018',
       lahde: 'Adriel Marcos, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Manausin satama nykyään: kelluva laituri, koska Rio Negron pinta vaihtelee kymmeniä metrejä.',
       selite: 'Manausin satama nykyään. Laituri on kelluva, koska Rio Negron '
         + 'pinta vaihtelee vuoden mittaan toistakymmentä metriä; kuvassa vesi '
         + 'on matalalla ja edessä näkyy paljastunut hiekkaranta.',
@@ -968,6 +987,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Montevideo desde arriba.jpg',
       lahde: 'Marcelo Campi, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Montevideo ilmasta: matala ruutukaupunki entisen pellon paikalla Río de la Platan rantaan asti.',
       selite: 'Montevideo ilmasta. Matala ruutukaupunki jatkuu horisonttiin asti '
         + 'Río de la Platan rantaan, ja siellä missä 1865 oli kattojen takana '
         + 'peltoa, on nyt yhtenäinen korttelimatto.',
@@ -1027,6 +1047,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Panoramic of Historic Center, Porto Alegre, Brazil 2014-01-18.JPG',
       lahde: 'Eugenio Hansen OFS, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Historiallinen keskusta nykyään: matalat korttelit tornitalojen välissä, kaupunki kukkuloilla.',
       selite: 'Historiallinen keskusta nykyään. Samat matalat korttelit ovat '
         + 'jääneet tornitalojen väliin, ja kaupunki jatkuu kukkuloille, jotka '
         + 'näkyivät vielä sadan vuoden takaisessa kuvassa tyhjänä '
@@ -1076,6 +1097,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Porto Velho, Rondônia, Brasil.jpg',
       vuosi: '2018',
       lahde: 'Silva Júnior / MTur, Commons (CC0)',
+      lyhyt: 'Porto Velho nykyään: silta, viljasiilot ja proomu entisen ratatyömaan paikalla.',
       selite: 'Porto Velho nykyään: etualalla joen ylittävä silta, rannassa '
         + 'viljasiiloja ja proomu, takana korkeaa keskustaa. Sadassa vuodessa '
         + 'metsän reunaan raivatusta ratatyömaasta on tullut osavaltion '
@@ -1124,6 +1146,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Costanera de Puerto Montt.jpg',
       vuosi: '2016',
       lahde: 'Manxuc, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Puerto Montin rantakatu nykyään: Chilen lohenkasvatuksen ja Patagonian laivareittien keskus.',
       selite: 'Puerto Montin rantakatu nykyään, kuvassa kohti Paseo Costanera '
         + '-kauppakeskusta. Kaupunki on kasvanut Chilen lohenkasvatuksen '
         + 'keskukseksi ja Patagonian laivareittien lähtösatamaksi.',
@@ -1171,6 +1194,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Punta Arenas, Cerro de la Cruz 0798.jpg',
       vuosi: '2019',
       lahde: 'Draceane, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Näkymä Cerro de la Cruzilta Punta Arenasin ylle, sama ruutukaava kuin sata vuotta sitten.',
       selite: 'Näkymä Cerro de la Cruzilta Punta Arenasin ylle. Kukkula on aivan '
         + 'keskustan yläpuolella, ja sieltä erottuu sama ruutukaava, joka '
         + 'näkyy jo sadan vuoden takaisessa kuvassa.',
@@ -1220,6 +1244,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Quito Plaza Independencia Pal Carondelet 2010.jpg',
       lahde: 'Cayambe, Commons (CC BY-SA 3.0)',
+      lyhyt: 'Sama aukio nykyään: Palacio de Carondelet ja katedraali ennallaan, laatoitus kivien tilalla.',
       selite: 'Sama aukio nykyään. Hallituspalatsin Palacio de Carondelet\'n '
         + 'pylväikkö ja katedraali ovat ennallaan, mutta mukulakivien tilalla '
         + 'on laatoitus ja istutukset ja kuormankantajien tilalla '
@@ -1270,6 +1295,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'BrunaPrado Praia de Copacabana Praia do Leme Rio de Janeiro RJ (40070449945).jpg',
       lahde: 'Bruna Prado / MTur Destinos, Commons (public domain)',
+      lyhyt: 'Sama Copacabanan kaari nykyään: tornitalorivi rannan takana, rinteet kansallispuistona.',
       selite: 'Sama Copacabanan kaari nykyään, kuvattuna vuorenrinteeltä. Ranta '
         + 'on samanmuotoinen kuin Ferrezin kuvassa, mutta sen takana on '
         + 'yhtenäinen tornitalorivi, joka jatkuu Leman niemeen asti. Rinteet '
@@ -1319,6 +1345,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Robinson Crusoe Island bayside view of the town of San Juan Bautista.jpg',
       vuosi: '2020',
       lahde: 'Richard N Horne, Commons (CC BY-SA 4.0)',
+      lyhyt: 'San Juan Bautista, saaren ainoa kylä Cumberlandinlahden rannalla kansallispuiston keskellä.',
       selite: 'San Juan Bautista, saaren ainoa kylä, Cumberlandinlahden rannalla. '
         + 'Kylän ulkopuolinen osa saarta on kansallispuistoa ja Unescon '
         + 'biosfäärialuetta.',
@@ -1366,6 +1393,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Cabildo de Salta, Argentina.jpg',
       vuosi: '2026',
       lahde: 'Dpalma01, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama cabildo tänään Saltan pääaukiolla, nyt Pohjois-Argentiinan historiallinen museo.',
       selite: 'Sama cabildo tänään Saltan pääaukion laidalla. Rakennuksessa '
         + 'toimii nykyään pohjoisen Argentiinan historiallinen museo, ja '
         + 'holvikäytävän alta kuljetaan aukiolle.',
@@ -1416,6 +1444,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Salvador 01.jpg',
       vuosi: '2014',
       lahde: 'Dlgoncalves, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Salvadorin alakaupunki nykyään: toimistotorneja ja rahtialuksia entisen panoraaman paikalla.',
       selite: 'Salvadorin alakaupunki nykyään, kuvattuna samalta rinteeltä kuin '
         + 'vanha panoraama. Comércion matalien varastojen tilalla on '
         + 'toimistotorneja, lahdella on purjelaivojen sijasta rahtialuksia ja '
@@ -1450,6 +1479,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Desventuradas - Landsat OLI 7.jpg',
       vuosi: '2015',
       lahde: 'USGS/NASA, Commons (PD)',
+      lyhyt: 'Desventuradas-saaret satelliitista: San Ambrosio, tulivuoriperäinen ja asumaton.',
       selite: 'Desventuradas-saaret Landsat 8 -satelliitin kuvaamana. San '
         + 'Ambrosio on ryhmän suurin saari; se on tulivuoriperäinen, asumaton '
         + 'ja koko kehältään lähes rantautumiskelvoton, ja Chilen rannikolle '
@@ -1493,6 +1523,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Vista Aérea de Santa Cruz de la Sierra, Bolivia.jpg',
       lahde: 'EEJCC, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Santa Cruz ilmasta: kaupunki levinnyt leveydelle, kaava sisäkkäisistä anillo-kehäkaduista.',
       selite: 'Santa Cruz ilmasta. Kaupunki on kasvanut leveydelle eikä '
         + 'korkeuteen, ja sen kaava rakentuu sisäkkäisistä kehäkaduista, '
         + 'joita sanotaan anilloiksi ja joiden mukaan osoitteetkin '
@@ -1533,6 +1564,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Santarém 01.jpg',
       vuosi: '2024',
       lahde: 'Redbaobab, Commons (CC BY 4.0)',
+      lyhyt: 'Santarém ylhäältä: sinivihreä Tapajós ja ruskea Amazon kohtaavat kaupungin edustalla.',
       selite: 'Santarém ylhäältä: sinivihreä Tapajós ja ruskea Amazon kohtaavat '
         + 'aivan kaupungin edustalla. Raja pysyy näkyvissä, koska jokien '
         + 'lämpötila, virtausnopeus ja lietemäärä ovat erilaiset.',
@@ -1582,6 +1614,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'São Luis-04.jpg',
       vuosi: '2008',
       lahde: 'JLPizzol, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Sama aukio nykyään: kaksikerroksiset sobradot rivissä, raitiotien tilalla autorivi.',
       selite: 'Sama aukio nykyään Praça João Lisboana. Kaksikerroksiset sobradot '
         + 'seisovat rivissä kuten sata vuotta sitten, osa laatoitettuna ja '
         + 'osa korjausta odottamassa — mutta raitiotietä ei enää ole, ja '
@@ -1632,6 +1665,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Caminhando pela Rua Direita (8125039350).jpg',
       lahde: 'Eli Kazuyuki Hayasaka, Commons (CC BY-SA 2.0)',
+      lyhyt: 'Sama Rua Direita 150 vuotta myöhemmin: kivetty, rauhoitettu ja lähes tyhjä katu.',
       selite: 'Sama Rua Direita 150 vuotta myöhemmin, iltakävelyn aikaan. Katu on '
         + 'kivetty ja rauhoitettu jalankulkijoille, liikkeet ovat kiinni ja '
         + 'ainoa liikenne on ryhmä kävelijöitä keskellä keskustaa.',
@@ -1677,6 +1711,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
     uusi: {
       tiedosto: 'Traditional reed boat in the Uros floating islands.jpg',
       lahde: 'H.dav.are, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Totora-kaislavene Uros-saarten kanavalla, nyt koristeltu ja matkustajia kuljettava.',
       selite: 'Totora-kaislasta tehty vene Uros-saarten välisellä kanavalla. Vene '
         + 'on punottu samasta kasvista kuin vanhassa kuvassa, mutta sen keula '
         + 'on nyt koristeltu ja matkustajia kuljetetaan saarelta toiselle.',
@@ -1724,6 +1759,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
       tiedosto: 'Valparaiso is built across 42 hills and has a major port (38362456435).jpg',
       vuosi: '2017',
       lahde: 'Winniepix, Commons (CC BY 2.0)',
+      lyhyt: 'Valparaíso nykyään: satama edessä, kaupunki 42 kukkulalla, yhä Chilen vilkkaimpia satamia.',
       selite: 'Valparaíso nykyään: satama edessä ja kaupunki nousemassa '
         + 'kukkuloille sen takana. Kuvaaja laskee kukkuloita olevan 42; '
         + 'satama on yhä Chilen vilkkaimpia.',
