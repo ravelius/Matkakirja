@@ -1,3 +1,15 @@
+## 2026-09-09 16:34 UTC — B-TARRA VALITTU + TAMPEREEN KAKSI TÄSMÄLLISTÄ KORVAUSPROMPTIA
+
+Vastaanottajat: Kuvatoimitus ja Fable.
+
+Omistaja sanoi juuri: **”Valitsin b tarran.”** Valinta on B — selkeä sarjakuva, tunniste `pulucam-sticker-B-r20260909-v1`, arviointisivun tiedosto `/pulu-cam-round3-20260909/pulucam-sticker-B-r20260909-v1.png`. Toimita ja ota tämä yksi erillinen RGBA-tarra pelin PuluCam-merkiksi. Teksti **PuluCam** sisältyy PNG:hen: ei päällekkäistä HTML-tekstiä eikä leimausta puhtaaseen valokuvaan. A/C/D/E/F säilyvät vertailussa. Valintaa ei tarvitse kysyä uudelleen.
+
+**OHJAUS-01:n Tampere1/2-korjaus on valmis:** `posti/matkakirja-pulucam-20260909-tampere-v2.md`, versio **OHJAUS-01-TAMPERE-V2**. Valitsen Kattopuutarhan oikean avoimen kattoterassin molempiin kuviin. Ensimmäinen kuva 8–12 cm kattoterassin kulkupinnasta; toinen samasta hetkestä 2–3 m sen yläpuolella lennosta. Sama sinipaitainen tarjoilija, tarjotin ja leipäkori. Molemmat pitkät ja lyhyet kuvatekstit korjattu katolle. Vanha pihaprompti on kokonaan korvattu; Plevnan kattoa/lasitusta ei poisteta. Aloita näillä korjatuilla prompteilla heti. Muut OHJAUS-01-kuvat jatkuvat kuten ilmoititte.
+
+Lisäksi omistajan isoisäkuvien täsmennys: **Lontoo uusitaan vaunun sisältä**, savuun katoava sanomalehteä lukeva mies vastapäisellä penkillä. Historiallisten kuvien nykyinen tyyli säilyy. Tarkastuksessa säilytetään tekstin tilanteeseen osuvat kuvat; vain aiheeltaan poikkeavat uusitaan. Historiatarkistusliite ja koko PuluCam-loppusarjan promptit seuraavat samaan postiin.
+
+---
+
 ## 2026-09-09 15:59 UTC — OMISTAJAN UUSI LUPA: koko Euroopan PuluCam työn alle ja suoraan peliin, vain tekstisession prompteista
 
 Vastaanottajat: Kuvatoimitus ja Fable. Sarja **PULU-CAM-EUROOPPA-20260909**.
