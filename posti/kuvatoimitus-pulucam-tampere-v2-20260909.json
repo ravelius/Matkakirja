@@ -1,0 +1,61 @@
+{
+  "batchId": "PULU-CAM-OHJAUS-01-TAMPERE-V2-20260909",
+  "status": "ready-for-immediate-game-integration",
+  "items": [
+    {
+      "id": "pulu-cam-tampere-01-r20260909-14mm-v2",
+      "cityId": "tampere",
+      "order": 1,
+      "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tampere-01-r20260909-14mm-v2.jpg",
+      "fileName": "pulu-cam-tampere-01-r20260909-14mm-v2.jpg",
+      "sha256": "ae8908c01cf36c9100682db1a4e004553890b6231dc9f835eb7e78a61134488b",
+      "width": 1536,
+      "height": 1024,
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Tampere: seurasin tarjoilijaa ja päädyin tehtaan katolle.",
+      "caption": "Finlaysonin alueen Kattopuutarhassa kahvilan vieressä kasvaa kokonainen puutarha katon korkeudella. Ihmiset katselevat kaupunkia, minä tarkistan pöytien välisen liikenteen. Sinipaitaisella tarjoilijalla on leipäkori, joten hänen reittinsä on juuri nyt näkymistä kiinnostavin. Isoisä seurasi tehtaan lankaa. Minun tutkimukseni etenee tuolinjalalta toiselle ja vaatii yhtä tarkkaa silmää.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "promptId": "OHJAUS-01-TAMPERE-V2-1",
+      "promptSourceFile": "posti/matkakirja-pulucam-20260909-tampere-v2.md",
+      "promptSourceCommit": "ad100d96676ebbaef73a61e28fb5e23a124726af",
+      "promptSourceBlob": "85a315c352d80bf6b6d5130659d80fd66f7c01c3",
+      "rootQa": "pass",
+      "serverDownloadVerified": true,
+      "sources": [
+        "https://www.kattopuutarha.fi/",
+        "https://finlaysoninalue.fi/tehdaspuutarha/",
+        "https://finlaysoninalue.fi/ravintolat-ja-kahvilat/"
+      ]
+    },
+    {
+      "id": "pulu-cam-tampere-02-r20260909-14mm-v3",
+      "cityId": "tampere",
+      "order": 2,
+      "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tampere-02-r20260909-14mm-v3.jpg",
+      "fileName": "pulu-cam-tampere-02-r20260909-14mm-v3.jpg",
+      "sha256": "e8f0f3abc64c0a033bc5e3870689aeb4b3a32d38d5d7aab118fba08934c99089",
+      "width": 1536,
+      "height": 1024,
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Tampere: puutarha katolla, leipäkori reitillä. Hyvä kaupunkisuunnitelma.",
+      "caption": "Nousin vähän ylemmäs. Kattopuutarhan pöydät ja istutukset asettuivat kartaksi, ja sama tarjoilija jatkoi korinsa kanssa kohti asiakasta. Tehdasalueelle on tullut kasveja, kahvia ja kokonaan uusia kulkureittejä. Minulle kahden tuolin väliin jää käytävä; ihmiselle siihen mahtuu korkeintaan anteeksipyyntö. Kuvassa on myös Tamperetta, jos maltat katsoa leipäkorin ohi. Minä maltoin juuri valotuksen verran.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "promptId": "OHJAUS-01-TAMPERE-V2-2",
+      "promptSourceFile": "posti/matkakirja-pulucam-20260909-tampere-v2.md",
+      "promptSourceCommit": "ad100d96676ebbaef73a61e28fb5e23a124726af",
+      "promptSourceBlob": "85a315c352d80bf6b6d5130659d80fd66f7c01c3",
+      "rootQa": "pass",
+      "serverDownloadVerified": true,
+      "sources": [
+        "https://www.kattopuutarha.fi/",
+        "https://finlaysoninalue.fi/tehdaspuutarha/",
+        "https://finlaysoninalue.fi/ravintolat-ja-kahvilat/"
+      ]
+    }
+  ],
+  "authorization": "Owner direct-game permission verified from text thread original user turns ee37961a-1ee4-4249-8ed3-042ac27c35b5 and b7733747-bd81-462d-82e5-5fe7e65e46b2. Exact text-session revised source prompts from ad100d96676ebbaef73a61e28fb5e23a124726af. Root place/continuity/quality QA passed.",
+  "instructions": "Kytke Tampereen order1 ja order2 juuri näillä uusilla kattoterassin kuvateksteillä. Vanhaa tehdaspihatekstiä ei käytetä. Lyhyt kuvan alle, pitkä karuselliin, sourceLine Havainnekuva-linkkinä pitkän loppuun. Valittu B-tarra erillisen PNG-toimituksen mukaan; ei leimausta valokuviin. Tämä täydentää OHJAUS-01:n aiempia kolmea kuvaa, ei korvaa niitä.",
+  "gameIntegrationVerified": false
+}
