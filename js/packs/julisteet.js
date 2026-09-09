@@ -73,6 +73,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-istanbul.png',
     kaupunki: 'Istanbul',
     otsikko: 'Konstantinopoli 1883',
+    lyhyt: 'Konstantinopoli 1883: ensimmäinen Orient Express päättyy yhä kauas idästä.',
     selite: 'Ensimmäinen Orient Express lähti Pariisista 4. lokakuuta 1883, '
       + 'mutta sen pääte oli Giurgiu Tonavan varrella — Konstantinopoliin '
       + 'matkustettiin vielä lautalla ja laivalla, ja suora juna tuli vasta '
@@ -82,6 +83,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-tokio.png',
     kaupunki: 'Tokio',
     otsikko: 'Tokio 1872',
+    lyhyt: 'Tokio 1872: Japanin ensimmäinen rautatie yhdistää sen juuri Yokohamaan.',
     selite: 'Japanin ensimmäinen rautatie avattiin vuonna 1872 Tokion '
       + 'Shinbashista Yokohamaan; sitä ennen koko keisarikunnassa ei ollut '
       + 'metriäkään kiskoa.',
@@ -90,6 +92,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-moskova.png',
     kaupunki: 'Moskova',
     otsikko: 'Moskova 1873',
+    lyhyt: 'Moskova 1873: vanha pääkaupunki, jonka ensimmäinen hevosraitiotie on tuore.',
     selite: 'Isoisän matkavuonna Moskova oli keisarikunnan vanha pääkaupunki, '
       + 'jonka hallinto istui Pietarissa — kaupungin ensimmäinen hevosraitiotie '
       + 'oli avattu vasta edellisenä vuonna 1872.',
@@ -98,6 +101,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-lontoo.png',
     kaupunki: 'Lontoo',
     otsikko: 'Lontoo 1894',
+    lyhyt: 'Lontoo 1894: Tower Bridge avataan kahdeksan rakennusvuoden jälkeen.',
     selite: 'Walesin prinssi ja prinsessa avasivat Tower Bridgen 30. kesäkuuta '
       + '1894: kahdeksan vuotta rakennettu silta nousi keskeltä auki ja päästi '
       + 'laivat Lontoon satamaan.',
@@ -106,6 +110,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kairo.png',
     kaupunki: 'Kairo',
     otsikko: 'Kairo 1873',
+    lyhyt: 'Kairo 1873: velkaantunut Egypti on juuri myymässä Suezin kanavan osakkeitaan.',
     selite: 'Isoisän matkavuonna sulttaanin firmaani vahvisti khedivi Ismailin '
       + 'Egyptin lähes itsenäiseksi — velkaantunut maa myi Suezin kanavan '
       + 'osakkeensa briteille kaksi vuotta myöhemmin.',
@@ -114,6 +119,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-xian.png',
     kaupunki: 'Xi’an',
     otsikko: 'Xi’an 1873',
+    lyhyt: 'Xi’an 1873: Ming-ajan muuri ympäröi yhä Silkkitien lähtökaupunkia.',
     selite: 'Isoisän matkavuonna Xi’an oli Shaanxin maakuntapääkaupunki, jota '
       + 'kiersi yhä Ming-kaudella 1370-luvulta lähtien muurattu kaupunginmuuri '
       + '— sen porteista karavaanit lähtivät vanhalle Silkkitielle.',
@@ -122,6 +128,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-pariisi.png',
     kaupunki: 'Pariisi',
     otsikko: 'Pariisi 1889',
+    lyhyt: 'Pariisi 1889: maailmannäyttely avaa juuri valmistuneen, maailman korkeimman Eiffel-tornin.',
     selite: 'Maailmannäyttely avattiin 6. toukokuuta 1889, ja sitä varten '
       + 'rakennettu Eiffel-torni oli valmistuessaan maailman korkein '
       + 'rakennelma.',
@@ -130,6 +137,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-delhi.png',
     kaupunki: 'Delhi',
     otsikko: 'Delhi 1873',
+    lyhyt: 'Delhi 1873: vasta piirikunta, sillä Britti-Intian pääkaupunki on yhä Kalkutta.',
     selite: 'Isoisän matkavuonna Delhi oli vain Punjabin maakunnan piirikunta: '
       + 'Britti-Intian pääkaupunki oli Kalkutta, ja se siirtyi Delhiin vasta '
       + 'vuonna 1911.',
@@ -138,6 +146,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-peking.png',
     kaupunki: 'Peking',
     otsikko: 'Peking 1873',
+    lyhyt: 'Peking 1873: nuori Tongzhi-keisari ottaa juuri vallan omiin käsiinsä.',
     selite: 'Isoisän matkavuonna nuori Tongzhi-keisari otti vallan omiin '
       + 'käsiinsä ja otti 29. kesäkuuta 1873 ensi kerran vastaan vieraiden '
       + 'valtojen lähettiläät.',
@@ -146,6 +155,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-samarkand.png',
     kaupunki: 'Samarkand',
     otsikko: 'Samarkand 1888',
+    lyhyt: 'Samarkand 1888: Taka-Kaspian rautatie pysähtyy tähän kymmeneksi vuodeksi.',
     selite: 'Taka-Kaspian rautatie saavutti Samarkandin Buharan kautta vuonna '
       + '1888 ja pysähtyi siihen kymmeneksi vuodeksi — Tashkentiin päästiin '
       + 'vasta 1898.',
@@ -159,6 +169,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-rooma.png',
     kaupunki: 'Rooma',
     otsikko: 'Rooma 1873',
+    lyhyt: 'Rooma 1873: tuore pääkaupunki, jonka Termini-asema valmistuu vasta ensi vuonna.',
     selite: 'Isoisän matkavuonna Rooma oli ollut Italian pääkaupunki vasta '
       + 'kaksi vuotta, ja paavin aikaan aloitettu Terminin pääteasema '
       + 'valmistui vasta seuraavana vuonna.',
@@ -167,6 +178,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-wien.png',
     kaupunki: 'Wien',
     otsikko: 'Wien 1873',
+    lyhyt: 'Wien 1873: maailmannäyttelyä varjostavat pörssiromahdus ja kolera.',
     selite: 'Maailmannäyttely avattiin 1. toukokuuta 1873, mutta pörssiromahdus '
       + 'ja kolera pitivät kävijämäärän kaukana tavoitteesta.',
   },
@@ -174,6 +186,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-ateena.png',
     kaupunki: 'Ateena',
     otsikko: 'Ateena 1873',
+    lyhyt: 'Ateena 1873: Schliemann on juuri salakuljettanut Priamoksen aarteen tänne.',
     selite: 'Heinrich Schliemann kaivoi Troijasta esiin 15. kesäkuuta 1873 '
       + 'kultalöydön, jota kutsui Priamoksen aarteeksi, ja salakuljetti sen '
       + 'osmanien mailta Ateenaan.',
@@ -182,6 +195,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-venetsia.png',
     kaupunki: 'Venetsia',
     otsikko: 'Venetsia 1873',
+    lyhyt: 'Venetsia 1873: vasta seitsemän vuotta Italiaa, rautatiepenger yhdistää mantereeseen.',
     selite: 'Isoisän matkavuonna Venetsia oli kuulunut Italiaan vasta '
       + 'seitsemän vuotta, ja mantereelta kaupunkiin tultiin vuonna 1846 '
       + 'valmistunutta rautatiepengertä pitkin.',
@@ -190,6 +204,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-madrid.png',
     kaupunki: 'Madrid',
     otsikko: 'Madrid 1873',
+    lyhyt: 'Madrid 1873: kuningas on luopunut kruunusta, ja tasavalta on juuri julistettu.',
     selite: 'Kuningas Amadeo luopui kruunusta, ja Madridissa julistettiin '
       + '11. helmikuuta 1873 Espanjan ensimmäinen tasavalta — se kesti vajaat '
       + 'kaksi vuotta.',
@@ -213,6 +228,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-praha.png',
     kaupunki: 'Praha',
     otsikko: 'Praha 1883',
+    lyhyt: 'Praha 1883: kansallisteatteri avautuu uudelleen palon jälkeen kansalaiskeräyksellä.',
     selite: 'Tšekkien kansallisteatteri paloi kaksi kuukautta avajaistensa '
       + 'jälkeen kesällä 1881, ja se rakennettiin uudelleen kansalaiskeräyksellä '
       + 'niin nopeasti, että ovet aukesivat taas 18. marraskuuta 1883.',
@@ -221,6 +237,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-berliini.png',
     kaupunki: 'Berliini',
     otsikko: 'Berliini 1873',
+    lyhyt: 'Berliini 1873: voitonpylväs vihitään Königsplatzilla, ei vielä nykypaikallaan.',
     selite: 'Voitonpylväs vihittiin 2. syyskuuta 1873 kolmen sodan muistoksi, '
       + 'ja se seisoi tuolloin Königsplatzilla — nykyiselle paikalleen Suureen '
       + 'tähteen se siirrettiin vasta 1930-luvun lopulla.',
@@ -229,6 +246,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-tukholma.png',
     kaupunki: 'Tukholma',
     otsikko: 'Tukholma 1891',
+    lyhyt: 'Tukholma 1891: Hazelius avaa Skansenin, maailman ensimmäisen ulkoilmamuseon.',
     selite: 'Artur Hazelius avasi Djurgårdenilla 11. lokakuuta 1891 Skansenin, '
       + 'maailman ensimmäisen ulkoilmamuseon, johon siirrettiin kokonaisia '
       + 'taloja eri puolilta Ruotsia.',
@@ -237,6 +255,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-amsterdam.png',
     kaupunki: 'Amsterdam',
     otsikko: 'Amsterdam 1885',
+    lyhyt: 'Amsterdam 1885: Rijksmuseum kokoaa hajallaan olleet valtion kokoelmat yhteen.',
     selite: 'Pierre Cuypersin suunnittelema Rijksmuseum avattiin vuonna 1885, '
       + 'ja vasta silloin Alankomaiden hajallaan olleet valtion kokoelmat '
       + 'saatiin saman katon alle.',
@@ -245,6 +264,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-dublin.png',
     kaupunki: 'Dublin',
     otsikko: 'Dublin 1873',
+    lyhyt: 'Dublin 1873: Isaac Buttin Home Rule League järjestäytyy kotihallinnon puolesta.',
     selite: 'Isaac Buttin löyhä yhdistys järjestäytyi Dublinissa vuonna 1873 '
       + 'Home Rule Leagueksi, ja jo seuraavan vuoden vaaleissa kotihallintoa '
       + 'vaatinut puolue vei enemmistön Irlannin paikoista.',
@@ -253,6 +273,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-edinburgh.png',
     kaupunki: 'Edinburgh',
     otsikko: 'Edinburgh 1883',
+    lyhyt: 'Edinburgh 1883: Stevenson julkaisee juuri Aarresaaren kirjana.',
     selite: 'Edinburghissa syntynyt Robert Louis Stevenson julkaisi '
       + '14. marraskuuta 1883 kirjana Aarresaaren — kartan, jossa risti '
       + 'merkitsee aarteen, opetti lukemaan koko maailma.',
@@ -261,6 +282,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-marseille.png',
     kaupunki: 'Marseille',
     otsikko: 'Marseille 1873',
+    lyhyt: 'Marseille 1873: Suezin kanava on juuri tehnyt satamasta Ranskan portin itään.',
     selite: 'Isoisän matkavuonna kukkulan Notre-Dame de la Garde oli vihitty '
       + 'vasta yhdeksän vuotta aiemmin 1864, ja vuonna 1869 avattu Suezin '
       + 'kanava oli juuri tehnyt satamasta Ranskan portin itään.',
@@ -269,6 +291,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-lissabon.png',
     kaupunki: 'Lissabon',
     otsikko: 'Lissabon 1873',
+    lyhyt: 'Lissabon 1873: hevosraitiovaunut ovat vasta vuoden vanha uutuus.',
     selite: 'Isoisän matkavuonna Lissabonin hevosraitiovaunut olivat aivan '
       + 'uusi asia: Carris aloitti liikenteen 18. syyskuuta 1872, vain vuotta '
       + 'aiemmin.',
@@ -277,6 +300,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-barcelona.png',
     kaupunki: 'Barcelona',
     otsikko: 'Barcelona 1888',
+    lyhyt: 'Barcelona 1888: maailmannäyttely nostaa Kolumbuksen pylvään Ramblan päähän.',
     selite: 'Maailmannäyttely avattiin 8. huhtikuuta 1888 Ciutadellan puistossa, '
       + 'ja sitä varten rakennettiin niin näyttelyn tiiliportti Arc de Triomf '
       + 'kuin Rambla-kadun päähän pystytetty Kolumbuksen pylväs.',
@@ -285,6 +309,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-granada.png',
     kaupunki: 'Granada',
     otsikko: 'Granada 1870',
+    lyhyt: 'Granada 1870: rapistunut Alhambra julistetaan juuri kansallismonumentiksi.',
     selite: 'Alhambra julistettiin vuonna 1870 Espanjan kansallismonumentiksi '
       + 'ja sai valtiolta ensimmäisen oman korjausmäärärahansa — sitä ennen '
       + 'palatsi oli saanut rapistua vuosisatoja.',
@@ -293,6 +318,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-budapest.png',
     kaupunki: 'Budapest',
     otsikko: 'Budapest 1873',
+    lyhyt: 'Budapest 1873: Buda, Pest ja Óbuda yhdistyvät juuri yhdeksi kaupungiksi.',
     selite: 'Buda, Pest ja Óbuda yhdistettiin 17. marraskuuta 1873 yhdeksi '
       + 'kaupungiksi, ja vasta siitä päivästä lähtien on ollut olemassa '
       + 'Budapest.',
@@ -301,6 +327,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-krakova.png',
     kaupunki: 'Krakova',
     otsikko: 'Krakova 1873',
+    lyhyt: 'Krakova 1873: Wawel on yhä itävaltalainen kasarmi, ei kuninkaiden linna.',
     selite: 'Isoisän matkavuonna Puolan kuninkaiden Wawel oli itävaltalainen '
       + 'kasarmi: keisari Frans Joosef käski sotaväen pois linnasta vasta '
       + 'vuonna 1905.',
@@ -309,6 +336,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-varsova.png',
     kaupunki: 'Varsova',
     otsikko: 'Varsova 1873',
+    lyhyt: 'Varsova 1873: Kierbedźin ristikkosilta on Veikselin ensimmäinen teräksinen ylitys.',
     selite: 'Isoisän matkavuonna Veiksel ylitettiin Kierbedźin siltaa pitkin: '
       + '474 metriä pitkä ristikkosilta avattiin 22. marraskuuta 1864 ja oli '
       + 'Varsovan ensimmäinen teräksinen jokisilta.',
@@ -317,6 +345,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-helsinki.png',
     kaupunki: 'Helsinki',
     otsikko: 'Helsinki 1873',
+    lyhyt: 'Helsinki 1873: uusi rata Pietariin sitoo sen keisarikunnan pääkaupunkiin.',
     selite: 'Isoisän matkavuonna Helsinki oli ollut kolme vuotta kiinni '
       + 'keisarikunnan pääkaupungissa: Riihimäen ja Pietarin välinen rata '
       + 'valmistui 1870.',
@@ -328,6 +357,7 @@ export const JULISTEET = {
     /* Tarkennus 23.8.2026 (omistajan faktakysymys): Pietarissa oli jo
      * 1879–80 KAARILAMPPUVALOA, joten ensimmäisyys koskee nimenomaan
      * hehkulamppuvalaistusta. */
+    lyhyt: 'Tampere 1882: Finlaysonin tehdas saa keisarikunnan ensimmäiset hehkulamput.',
     selite: 'Finlaysonin Plevna-kutomossa sytytettiin 15. maaliskuuta 1882 '
       + 'Edisonin hehkulamput — Pohjoismaiden ja koko Venäjän keisarikunnan '
       + 'ensimmäinen hehkulamppuvalaistus.',
@@ -336,6 +366,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-tallinna.png',
     kaupunki: 'Tallinna',
     otsikko: 'Reval 1873',
+    lyhyt: 'Reval 1873: Toompea on yhä oma erillinen kaupunkinsa alakaupungin vieressä.',
     selite: 'Isoisän matkavuonna kaupungin virallinen nimi oli Reval ja '
       + 'Toompea oli yhä oma erillinen kaupunkinsa — se liitettiin alakaupunkiin '
       + 'vasta vuonna 1877.',
@@ -344,6 +375,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kiova.png',
     kaupunki: 'Kiova',
     otsikko: 'Kiova 1892',
+    lyhyt: 'Kiova 1892: jyrkille rinteille avataan Venäjän ensimmäinen sähköraitiotie.',
     selite: 'Kiovan jyrkille rinteille avattiin vuonna 1892 sähköraitiotie, '
       + 'ensimmäinen koko Venäjän keisarikunnassa ja kolmas maailmassa.',
   },
@@ -351,6 +383,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-pietari.png',
     kaupunki: 'Pietari',
     otsikko: 'Pietari 1873',
+    lyhyt: 'Pietari 1873: Katariina Suuren yksitoista vuotta veistetty muistomerkki vihitään.',
     selite: 'Katariina Suuren muistomerkki vihittiin Nevski Prospektin varrella '
       + '24. marraskuuta 1873 vanhan lukukalenterin mukaan; sitä oli veistetty '
       + 'yksitoista vuotta.',
@@ -359,6 +392,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-sofia.png',
     kaupunki: 'Sofia',
     otsikko: 'Sofia 1873',
+    lyhyt: 'Sofia 1873: kansallissankari Levski hirtetään yhä osmanien pikkukaupungissa.',
     selite: 'Bulgarian kansallissankari Vasil Levski hirtettiin Sofiassa '
       + '18. helmikuuta 1873; kaupunki oli tuolloin yhä osmanien pikkukaupunki '
       + 'eikä pääkaupunki, joksi se tuli vasta 1879.',
@@ -367,6 +401,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-bukarest.png',
     kaupunki: 'Bukarest',
     otsikko: 'Bukarest 1888',
+    lyhyt: 'Bukarest 1888: kansalaiskeräyksellä rahoitettu Ateneul Român vihitään.',
     selite: 'Kansalaiskeräyksellä rahoitettu kupolisali Ateneul Român vihittiin '
       + 'vuonna 1888, vaikka koristelutyöt jatkuivat vielä vuoteen 1897.',
   },
@@ -374,6 +409,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-sarajevo.png',
     kaupunki: 'Sarajevo',
     otsikko: 'Sarajevo 1878',
+    lyhyt: 'Sarajevo 1878: neljäsataa vuotta kestänyt osmanivalta päättyy yhdessä kesässä.',
     selite: 'Berliinin kongressi antoi Bosnian Itävalta-Unkarin hallintaan '
       + 'vuonna 1878, ja neljäsataa vuotta kestänyt osmanivalta päättyi '
       + 'Sarajevossa yhdessä kesässä.',
@@ -382,6 +418,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-odessa.png',
     kaupunki: 'Odessa',
     otsikko: 'Odessa 1873',
+    lyhyt: 'Odessa 1873: kaupungin ensimmäinen teatteri on juuri palanut tulipalossa.',
     selite: 'Kaupungin vuonna 1810 avattu ensimmäinen teatteri tuhoutui '
       + 'tulipalossa vuonna 1873, ja nykyinen oopperatalo valmistui sen tilalle '
       + 'vasta 1887.',
@@ -390,6 +427,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-dubai.png',
     kaupunki: 'Dubai',
     otsikko: 'Dubai 1873',
+    lyhyt: 'Dubai 1873: palmunlehväkylä helmenkalastajille lahden molemmin puolin.',
     selite: 'Isoisän matkavuonna Dubai oli helmenkalastajakylä lahden '
       + 'molemmin puolin, ja sen talot olivat palmunlehvistä (barasti) — '
       + 'puolet Bur Dubaista paloi maan tasalle vuoden 1896 tulipalossa.',
@@ -398,6 +436,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-petra.png',
     kaupunki: 'Petra',
     otsikko: 'Petra 1873',
+    lyhyt: 'Petra 1873: länsimaille vasta kuusikymmentä vuotta tunnettu kalliokaupunki.',
     selite: 'Isoisän matkavuonna Petra oli ollut länsimaiden tiedossa vasta '
       + 'kuusikymmentä vuotta: sveitsiläinen Johann Ludwig Burckhardt pääsi '
       + 'beduiinioppaan kanssa kalliokaupunkiin vuonna 1812.',
@@ -406,6 +445,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-medina.png',
     kaupunki: 'Medina',
     otsikko: 'Medina 1873',
+    lyhyt: 'Medina 1873: Profeetan moskeija on vasta kaksitoista vuotta vanha uudisrakennus.',
     selite: 'Isoisän matkavuonna Profeetan moskeija oli vasta kaksitoista '
       + 'vuotta vanha uudisrakennus: sulttaani Abdülmecidin uudistus alkoi 1849 '
       + 'ja kesti kolmetoista vuotta, ja Vihreä kupoli oli maalattu vihreäksi '
@@ -415,6 +455,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-mekka.png',
     kaupunki: 'Mekka',
     otsikko: 'Mekka 1873',
+    lyhyt: 'Mekka 1873: Pyhä moskeija on säilynyt lähes muuttumattomana vuodesta 1629.',
     selite: 'Isoisän matkavuonna Pyhä moskeija oli yhä siinä asussa, jonka '
       + 'sulttaani Murad IV:n korjaus antoi sille vuonna 1629: kivipylväikkö ja '
       + 'seitsemän minareettia säilyivät lähes kolmesataa vuotta muuttumatta.',
@@ -423,6 +464,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kapadokia.png',
     kaupunki: 'Kappadokia',
     otsikko: 'Kappadokia 1873',
+    lyhyt: 'Kappadokia 1873: kalliokirkoissa elettiin yhä, mutta maanalaiset kaupungit ovat unohtuneet.',
     selite: 'Isoisän matkavuonna tuffikartioiden asunnoissa ja kalliokirkoissa '
       + 'elettiin yhä, mutta suuret maanalaiset kaupungit olivat unohtuneet — '
       + 'Derinkuyu löytyi vasta 1963, kun talon seinän takaa paljastui huone.',
@@ -431,6 +473,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-persepolis.png',
     kaupunki: 'Persepolis',
     otsikko: 'Persepolis 1873',
+    lyhyt: 'Persepolis 1873: matkalaiset kaivertavat nimiään pylväisiin ennen tieteellisiä kaivauksia.',
     selite: 'Isoisän matkavuonna Dareioksen terassilla kävi vain matkalaisia, '
       + 'jotka kaiversivat nimensä pylväisiin: ensimmäiset tieteelliset '
       + 'kaivaukset alkoivat vasta 1931.',
@@ -439,6 +482,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-jerusalem.png',
     kaupunki: 'Jerusalem',
     otsikko: 'Jerusalem 1873',
+    lyhyt: 'Jerusalem 1873: kaupungista on juuri tehty oma piirikuntansa suurvaltojen tarkkailun alle.',
     selite: 'Jerusalemista tehtiin vuonna 1872 oma erillinen piirikuntansa, '
       + 'joka raportoi suoraan Konstantinopoliin eikä enää Damaskokseen — '
       + 'merkki siitä, kuinka tarkasti suurvallat kaupunkia seurasivat.',
@@ -447,6 +491,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-siinai.png',
     kaupunki: 'Siinai',
     otsikko: 'Siinai 1859',
+    lyhyt: 'Siinai 1859: Tischendorf vie luostarista Codex Sinaiticuksen, vanhimman Raamatun käsikirjoituksen.',
     selite: 'Constantin von Tischendorf vei Pyhän Katariinan luostarista vuonna '
       + '1859 Venäjälle Codex Sinaiticuksen, tuolloin maailman vanhimman lähes '
       + 'täydellisen Raamatun käsikirjoituksen.',
@@ -455,6 +500,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-rubalkhali.png',
     kaupunki: 'Rub al-Khali',
     otsikko: 'Rub al-Khali 1873',
+    lyhyt: 'Rub al-Khali 1873: hiekkameren ovat ylittäneet toistaiseksi vain beduiinit.',
     selite: 'Isoisän matkavuonna hiekkameren yli olivat kulkeneet vain siellä '
       + 'asuvat beduiinit: ensimmäiset ulkopuolisten dokumentoidut ylitykset '
       + 'tehtiin vasta 1930-luvun alussa.',
@@ -463,6 +509,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-tromssa.png',
     kaupunki: 'Tromssa',
     otsikko: 'Tromssa 1873',
+    lyhyt: 'Tromssa 1873: arktisen pyynnin uusi pääpaikka saa juuri oman museonsa.',
     selite: 'Isoisän matkavuonna Tromssa oli ohittanut Hammerfestin arktisen '
       + 'pyynnin pääpaikkana ja saanut edellisenä vuonna 1872 oman museonsa; '
       + 'sen jäämerimiehiä värvättiin myöhemmin lähes joka retkikuntaan.',
@@ -471,6 +518,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-islanti.png',
     kaupunki: 'Islanti',
     otsikko: 'Islanti 1874',
+    lyhyt: 'Islanti 1874: tuhatvuotisjuhlassa Tanska antaa saarelle oman perustuslain.',
     selite: 'Tuhat vuotta ensimmäisestä asutuksesta täyttyi vuonna 1874, ja '
       + 'Tanska antoi saarelle juhlavuoden kunniaksi oman perustuslain ja '
       + 'rajatun itsehallinnon sisäisissä asioissa.',
@@ -479,6 +527,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-lappi.png',
     kaupunki: 'Lappi',
     otsikko: 'Lappi 1873',
+    lyhyt: 'Lappi 1873: Ivalojoen kultaryntäys täyttää erämaan huuhtojilla.',
     selite: 'Ivalojoen kultaryntäys täytti 1870-luvulla erämaan huuhtojilla, '
       + 'ja valtio rakensi joen varteen Kultalan aseman jakamaan valtauslupia '
       + 'ja lunastamaan kullan — ryntäys hiipui 1880-luvun lopulla.',
@@ -487,6 +536,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kreeta.png',
     kaupunki: 'Kreeta',
     otsikko: 'Kreeta 1878',
+    lyhyt: 'Kreeta 1878: Halepan sopimus tuo laajan itsehallinnon kapinoiden jälkeen.',
     selite: 'Halepan sopimus antoi Kreetalle vuonna 1878 osmanien alaisuudessa '
       + 'oman edustajakokouksen ja laajan itsehallinnon kymmenen vuoden '
       + 'kapinoiden jälkeen.',
@@ -495,6 +545,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-sisilia.png',
     kaupunki: 'Sisilia',
     otsikko: 'Sisilia 1860',
+    lyhyt: 'Sisilia 1860: Garibaldin punapaidat irrottavat saaren kuningaskunnasta kesässä.',
     selite: 'Giuseppe Garibaldi nousi maihin Marsalassa toukokuussa 1860 '
       + 'runsaan tuhannen punapaidan kanssa, ja saari irtosi Molempain Sisiliain '
       + 'kuningaskunnasta yhden kesän aikana.',
@@ -503,6 +554,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-alpit.png',
     kaupunki: 'Alpit',
     otsikko: 'Alpit 1865',
+    lyhyt: 'Alpit 1865: Whymperin retkikunta valloittaa Matterhornin, mutta neljä miestä kuolee laskeutuessa.',
     selite: 'Edward Whymperin retkikunta nousi Matterhornin huipulle ensi '
       + 'kertaa 14. heinäkuuta 1865, mutta laskeutumisella katkennut köysi vei '
       + 'seitsemästä miehestä neljän hengen.',
@@ -511,6 +563,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-dubrovnik.png',
     kaupunki: 'Dubrovnik',
     otsikko: 'Ragusa 1873',
+    lyhyt: 'Ragusa 1873: entinen kauppatasavalta on nyt Itävallan Dalmatian pikkukaupunki.',
     selite: 'Isoisän matkavuonna kaupungin virallinen nimi oli Ragusa ja se oli '
       + 'Itävallan Dalmatian kuningaskunnan pikkukaupunki — oma kauppatasavalta '
       + 'oli lakkautettu vuonna 1808.',
@@ -519,6 +572,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-riika.png',
     kaupunki: 'Riika',
     otsikko: 'Riika 1873',
+    lyhyt: 'Riika 1873: ensimmäiset latvialaiset laulujuhlat käynnistävät toistuvan perinteen.',
     selite: 'Ensimmäiset latvialaiset laulujuhlat pidettiin Riiassa vuonna '
       + '1873, ja niistä kasvoi perinne, joka toistuu yhä noin viiden vuoden '
       + 'välein.',
@@ -527,6 +581,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-vilna.png',
     kaupunki: 'Vilna',
     otsikko: 'Vilna 1873',
+    lyhyt: 'Vilna 1873: liettuankieliset kirjat kannetaan rajan yli kirjoituskiellon aikana salaa.',
     selite: 'Isoisän matkavuonna liettuan kielen painaminen latinalaisin '
       + 'kirjaimin oli kielletty — kielto oli voimassa 1865–1904, ja kirjat '
       + 'kannettiin rajan yli salaa kirjankantajien selässä.',
@@ -535,6 +590,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-oslo.png',
     kaupunki: 'Oslo',
     otsikko: 'Kristiania 1873',
+    lyhyt: 'Kristiania 1873: kuningas lakkauttaa Norjan sijaishallitsijan viran.',
     selite: 'Isoisän matkavuonna kaupungin nimi oli Kristiania, ja kuningas '
       + 'Oscar II lakkautti samana vuonna 1873 Norjan sijaishallitsijan viran — '
       + 'askel kohti maan omaa hallitusta.',
@@ -543,6 +599,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-firenze.png',
     kaupunki: 'Firenze',
     otsikko: 'Firenze 1887',
+    lyhyt: 'Firenze 1887: tuomiokirkko saa marmorijulkisivunsa yli neljäsataa vuotta kuvun jälkeen.',
     selite: 'Firenzen tuomiokirkko sai monivärisen marmorijulkisivunsa vasta '
       + 'vuonna 1887 — Brunelleschin kupoli oli silloin ollut valmiina jo yli '
       + 'neljäsataa vuotta.',
@@ -551,6 +608,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kobenhavn.png',
     kaupunki: 'Kööpenhamina',
     otsikko: 'Kööpenhamina 1873',
+    lyhyt: 'Kööpenhamina 1873: Tanska ja Ruotsi perustavat yhteisen skandinaavisen rahaliiton.',
     selite: 'Tanska ja Ruotsi perustivat vuonna 1873 Skandinaavisen rahaliiton '
       + 'ja vaihtoivat hopeariikintaalerin kultakantaiseen kruunuun; Norja '
       + 'liittyi mukaan 1875.',
@@ -559,6 +617,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-doha.png',
     kaupunki: 'Doha',
     otsikko: 'Doha 1873',
+    lyhyt: 'Doha 1873: osmanien varuskuntalinnake kasvaa tuhannen talon kaupungiksi.',
     selite: 'Osmanit toivat joulukuussa 1871 sata sotilasta Dohan linnakkeeseen, '
       + 'ja komentajan raportti seuraavalta vuodelta kertoo noin tuhannesta '
       + 'talosta ja neljästätuhannesta asukkaasta.',
@@ -567,6 +626,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-nikosia.png',
     kaupunki: 'Nikosia',
     otsikko: 'Nikosia 1878',
+    lyhyt: 'Nikosia 1878: saari siirtyy brittihallintoon, vaikka pysyy yhä muodollisesti osmanien aluetta.',
     selite: 'Kypros siirtyi Kyproksen sopimuksella brittihallintoon, ja '
       + 'Nikosiassa vaihtui isäntä 5. heinäkuuta 1878 — saari pysyi silti '
       + 'muodollisesti osmanien aluetta vielä vuosikymmeniä.',
@@ -575,6 +635,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kuwait.png',
     kaupunki: 'Kuwait',
     otsikko: 'Kuwait 1873',
+    lyhyt: 'Kuwait 1873: dhow-veistämöt palvelevat Persianlahden ja Intian välistä kauppaa.',
     selite: 'Isoisän matkavuonna Kuwait oli Persianlahden tärkein dhow-veneiden '
       + 'veistämö, ja sen rannalla rakennetut alukset kuljettivat suuren osan '
       + 'Intian, Itä-Afrikan ja Punaisenmeren satamien välisestä kaupasta.',
@@ -583,6 +644,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-masqat.png',
     kaupunki: 'Masqat',
     otsikko: 'Masqat 1873',
+    lyhyt: 'Masqat 1873: Sansibarin itsenäistyttyä Omanin merivalta on hiipunut.',
     selite: 'Isoisän matkavuonna Masqat oli menettänyt valtakuntansa rikkaimman '
       + 'puolen: sulttaani Saidin kuoltua 1856 Sansibarista tuli oma '
       + 'sulttaanikuntansa, ja Omanin merivalta hiipui.',
@@ -591,6 +653,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-bagdad.png',
     kaupunki: 'Bagdad',
     otsikko: 'Bagdad 1873',
+    lyhyt: 'Bagdad 1873: kuvernööri Midhat Pasha on juuri uudistanut kaupungin infrastruktuurin.',
     selite: 'Kuvernööri Midhat Pasha muutti Bagdadia vuosina 1869–1872 enemmän '
       + 'kuin kukaan sitä ennen: kouluja, sairaaloita, teitä ja Irakin '
       + 'ensimmäinen sanomalehti al-Zawra.',
@@ -599,6 +662,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-izmir.png',
     kaupunki: 'Izmir',
     otsikko: 'Smyrna 1873',
+    lyhyt: 'Smyrna 1873: täältä lähtee nykyisen Turkin ensimmäinen rautatie.',
     selite: 'Isoisän matkavuonna kaupungin nimi oli lännessä Smyrna ja sieltä '
       + 'lähti nykyisen Turkin ensimmäinen rautatie: Aydınin rata aloitettiin '
       + '1856 ja saatiin valmiiksi 1867.',
@@ -614,6 +678,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-ankara.png',
     kaupunki: 'Ankara',
     otsikko: 'Angora 1892',
+    lyhyt: 'Angora 1892: Anatolian rautatie tuo mohairkaupungille ensimmäisen asemansa.',
     selite: 'Anatolian rautatie Konstantinopolista saapui Angoraan 31. '
       + 'joulukuuta 1892, ja mohairvillastaan tunnettu arokaupunki sai '
       + 'ensimmäisen rautatieasemansa.',
@@ -622,6 +687,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-halab.png',
     kaupunki: 'Aleppo',
     otsikko: 'Aleppo 1873',
+    lyhyt: 'Aleppo 1873: vilajetin pääkaupungin karavaanikauppa kääntyy laskuun Suezin kanavan myötä.',
     selite: 'Isoisän matkavuonna Aleppo oli vuonna 1866 perustetun Halepin '
       + 'vilajetin pääkaupunki, mutta sen vuosisatainen karavaanikauppa oli '
       + 'kääntynyt laskuun heti Suezin kanavan avauduttua 1869.',
@@ -630,6 +696,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-damaskos.png',
     kaupunki: 'Damaskos',
     otsikko: 'Damaskos 1873',
+    lyhyt: 'Damaskos 1873: pyhiinvaelluskaravaanin lähtöpaikka, jonka moskeija on vuosisatoja vanha.',
     selite: 'Isoisän matkavuonna Damaskos oli osmanien Syyrian vilajetin '
       + 'pääkaupunki ja Mekan-pyhiinvaelluskaravaanin perinteinen lähtöpaikka; '
       + 'sen Umaijadien moskeija oli valmistunut jo vuonna 715.',
@@ -638,6 +705,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-luxor.png',
     kaupunki: 'Luxor',
     otsikko: 'Luxor 1881',
+    lyhyt: 'Luxor 1881: Deir el-Bahrin kalliokätköstä paljastuu kymmenien faaraoiden muumiot.',
     selite: 'Vuonna 1881 Deir el-Bahrin kalliokätkö tuli viranomaisten '
       + 'tietoon: paikalliset olivat löytäneet jo aiemmin haudan, johon '
       + 'muinaiset papit olivat piilottaneet kymmenien faaraoiden muumiot, ja '
@@ -647,6 +715,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-riad.png',
     kaupunki: 'Riad',
     otsikko: 'Riad 1873',
+    lyhyt: 'Riad 1873: savitiilimuurien pääkaupunkia repii valtataistelu keskeneräisen linnoituksen ympärillä.',
     selite: 'Isoisän matkavuonna Riad oli savitiilimuurien ympäröimä Nejdin '
       + 'emiraatin pääkaupunki, jota Faisalin poikien valtataistelu repi — '
       + 'Masmakin linnoitusta oli muurattu vuodesta 1865, ja se valmistui '
@@ -656,6 +725,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-tabriz.png',
     kaupunki: 'Tabriz',
     otsikko: 'Tabriz 1873',
+    lyhyt: 'Tabriz 1873: kruununprinssin kaupunki, jonka basaari yhdistää idän ja Mustanmeren kaupan.',
     selite: 'Isoisän matkavuonna Tabriz oli Persian kruununprinssin '
       + 'asuinkaupunki ja maan tärkein kauppapaikka, jonka katetun basaarin '
       + 'kautta kulki idän ja Mustanmeren välinen tavaravirta.',
@@ -664,6 +734,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-teheran.png',
     kaupunki: 'Teheran',
     otsikko: 'Teheran 1873',
+    lyhyt: 'Teheran 1873: shaahi palaa juuri ensimmäisenä Persian hallitsijana Euroopan-matkalta.',
     selite: 'Naser al-Din Shah matkusti vuonna 1873 ensimmäisenä Persian '
       + 'hallitsijana Eurooppaan ja palasi Teheraniin täynnä ajatuksia '
       + 'näkemästään tekniikasta.',
@@ -672,6 +743,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-isfahan.png',
     kaupunki: 'Isfahan',
     otsikko: 'Isfahan 1873',
+    lyhyt: 'Isfahan 1873: safavidien loiston jäänteet, pääkaupunki siirtyi Teheraniin jo sata vuotta sitten.',
     selite: 'Isoisän matkavuonna Isfahanissa asui enää noin 60 000 ihmistä '
       + 'safavidien loiston jäänteissä: Persian pääkaupunki oli siirretty '
       + 'Teheraniin jo vuonna 1775.',
@@ -680,6 +752,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-sana.png',
     kaupunki: 'Sanaa',
     otsikko: 'Sanaa 1873',
+    lyhyt: 'Sanaa 1873: osmanit ovat juuri vallanneet kaupungin Jemenin hallintokeskuksekseen.',
     selite: 'Osmanit valtasivat Sanaan vasta 1872 Ahmed Muhtar Pashan '
       + 'johdolla, joten isoisän matkavuonna kaupunki oli juuri tullut '
       + 'osmanien Jemenin hallintokaupungiksi.',
@@ -688,6 +761,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-aden.png',
     kaupunki: 'Aden',
     otsikko: 'Aden 1873',
+    lyhyt: 'Aden 1873: Suezin kanava tekee brittihallussa olevasta satamasta tärkeän hiiliaseman.',
     selite: 'Suezin kanavan avaaminen 1869 teki vuodesta 1839 brittihallussa '
       + 'olleesta Adenista Intian-reitin tärkeimmän hiilenottosataman.',
   },
@@ -695,6 +769,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-salalah.png',
     kaupunki: 'Salalah',
     otsikko: 'Salalah 1873',
+    lyhyt: 'Salalah 1873: entinen suitsukekaupan pääkaupunki on nyt osa Maskatin sulttaanikuntaa.',
     selite: 'Salalah oli Dhofarin perinteinen pääkaupunki, jonka '
       + 'suitsukekauppa oli kukoistanut 1200-luvulla; 1800-luvulla alue '
       + 'liitettiin Maskatin sulttaanikuntaan.',
@@ -703,6 +778,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-mosul.png',
     kaupunki: 'Mosul',
     otsikko: 'Mosul 1873',
+    lyhyt: 'Mosul 1873: George Smith löytää Ninevehin kummusta Gilgameš-eepoksen puuttuvat palat.',
     selite: 'George Smith kaivoi vuonna 1873 Mosulin vastarannalla Ninevehin '
       + 'Kuyunjik-kummussa ja löysi savitaulun palasia, jotka täydensivät '
       + 'Gilgameš-eepoksen vedenpaisumuskertomusta.',
@@ -711,6 +787,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-soul.png',
     kaupunki: 'Soul',
     otsikko: 'Soul 1873',
+    lyhyt: 'Soul 1873: nuori kuningas Kojong ottaa vallan omiin käsiinsä isänsä holhouksen jälkeen.',
     selite: 'Kuningas Kojong ilmoitti vuonna 1873 ottavansa vallan omiin '
       + 'käsiinsä isänsä Taewongunin holhouskauden jälkeen, ja hänen '
       + 'esi-isiensä Kyongbokin palatsi oli juuri muurattu uudelleen.',
@@ -719,6 +796,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-shanghai.png',
     kaupunki: 'Shanghai',
     otsikko: 'Shanghai 1876',
+    lyhyt: 'Shanghai 1876: Kiinan ensimmäinen rautatie puretaan alle vuodessa varakuninkaan käskystä.',
     selite: 'Kiinan ensimmäinen liikennöinyt rautatie rakennettiin 1876 '
       + 'Shanghaista Woosungiin ilman viranomaisten lupaa, ja se ehti kulkea '
       + 'alle vuoden ennen kuin varakuningas osti kiskot ja purki radan.',
@@ -727,6 +805,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-tripoli.png',
     kaupunki: 'Tripoli',
     otsikko: 'Tripoli 1873',
+    lyhyt: 'Tripoli 1873: Saharan karavaanien viimeinen Välimeren-satama osmanien suorassa hallinnossa.',
     selite: 'Isoisän matkavuonna Tripoli oli osmanien Tripolitanian vilajetin '
       + 'pääkaupunki — suora hallinto oli palautettu 1835 — ja Saharan halki '
       + 'kulkevien karavaanien viimeinen Välimeren-satama.',
@@ -735,6 +814,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-jekaterinburg.png',
     kaupunki: 'Jekaterinburg',
     otsikko: 'Jekaterinburg 1873',
+    lyhyt: 'Jekaterinburg 1873: rahapaja lyö yhä suurimman osan keisarikunnan kolikoista.',
     selite: 'Isoisän matkavuonna Jekaterinburgin rahapajassa lyötiin yhä '
       + 'valtaosa Venäjän keisarikunnan liikkeessä olleista kolikoista; paja '
       + 'suljettiin 1876.',
@@ -743,6 +823,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-novosibirsk.png',
     kaupunki: 'Novosibirsk',
     otsikko: 'Novonikolajevsk 1897',
+    lyhyt: 'Novonikolajevsk 1897: kylä on syntynyt vasta Siperian radan sillan työmaalle.',
     selite: 'Novosibirskia ei ollut isoisän matkavuonna olemassa: kylä syntyi '
       + '1893 Siperian radan Ob-sillan työmaalle, sai nimen Novonikolajevsk '
       + '1895, ja silta valmistui keväällä 1897.',
@@ -751,6 +832,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-irkutsk.png',
     kaupunki: 'Irkutsk',
     otsikko: 'Irkutsk 1873',
+    lyhyt: 'Irkutsk 1873: teekaravaaneista rikastunut puinen pääkaupunki ennen suurpaloa.',
     selite: 'Isoisän matkavuonna Irkutsk oli Itä-Siperian kenraalikuvernöörin '
       + 'puinen pääkaupunki, joka rikastui Kiahtan teekaravaaneista — suuri '
       + 'osa siitä paloi heinäkuun 1879 tulipalossa.',
@@ -759,6 +841,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-jakutsk.png',
     kaupunki: 'Jakutsk',
     otsikko: 'Jakutsk 1873',
+    lyhyt: 'Jakutsk 1873: turkiskaupan hirsikaupunki ikiroudan keskellä Lenan rannalla.',
     selite: 'Isoisän matkavuonna Jakutsk oli vuonna 1632 Lenan rannalle '
       + 'perustettu hirsikaupunki, joka oli kasvanut turkiskaupan ja '
       + 'Koillis-Siperian hallinnon keskukseksi keskelle ikiroutaa.',
@@ -767,6 +850,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-magadan.png',
     kaupunki: 'Magadan',
     otsikko: 'Ohotanmeren rannikko 1873',
+    lyhyt: 'Ohotanmeren rannikko 1873: Magadania ei vielä ole, vain poropaimenia ja valaanpyytäjiä.',
     selite: 'Magadania ei ollut isoisän matkavuonna olemassa — kaupunki '
       + 'perustettiin Nagajevin lahden rannalle vasta 1929 — joten juliste '
       + 'kuvaa sitä Ohotanmeren rannikkoa, jolla evenit paimensivat poroja ja '
@@ -776,6 +860,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kamtsatka.png',
     kaupunki: 'Kamtšatka',
     otsikko: 'Kamtšatka 1873',
+    lyhyt: 'Kamtšatka 1873: Petropavlovskin torjuttua piirityksen pääpaikka on kutistunut satamakyläksi.',
     selite: 'Petropavlovsk torjui liittoutuneiden piirityksen 1854, mutta '
       + 'varuskunta evakuoitiin Amurille jo seuraavana keväänä, ja isoisän '
       + 'matkavuonna Kamtšatkan pääpaikka oli enää pieni satamakylä '
@@ -785,6 +870,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-sahalin.png',
     kaupunki: 'Sahalin',
     otsikko: 'Sahalin 1875',
+    lyhyt: 'Sahalin 1875: Japani luovuttaa saaren Venäjälle rangaistussiirtolan käyttöön.',
     selite: 'Pietarin sopimuksessa 1875 Japani luopui Sahalinista Venäjälle '
       + 'Kuriilien vastineeksi, ja koko saari jäi vuonna 1869 laillistetun '
       + 'rangaistussiirtolan käyttöön.',
@@ -793,6 +879,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-vladivostok.png',
     kaupunki: 'Vladivostok',
     otsikko: 'Vladivostok 1873',
+    lyhyt: 'Vladivostok 1873: uusi laivastotukikohta on yhä hirsinen varuskuntakylä.',
     selite: 'Siperian laivueen päätukikohta siirrettiin Nikolajevskista '
       + 'Vladivostokiin 1871, mutta isoisän matkavuonna paikka oli yhä '
       + 'hirsinen varuskuntakylä — kaupunkioikeudet tulivat vasta 1880.',
@@ -801,6 +888,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-bangkok.png',
     kaupunki: 'Bangkok',
     otsikko: 'Bangkok 1873',
+    lyhyt: 'Bangkok 1873: nuori Chulalongkorn kruunataan ja lakkauttaa maahan heittäytymisen.',
     selite: 'Chulalongkorn kruunattiin täysivaltaisena kuninkaana 16. '
       + 'marraskuuta 1873, ja samana vuonna hän julisti maahan heittäytymisen '
       + 'viranomaisten edessä lakkautetuksi.',
@@ -809,6 +897,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kioto.png',
     kaupunki: 'Kioto',
     otsikko: 'Kioto 1895',
+    lyhyt: 'Kioto 1895: 1100-vuotisjuhlaan valmistuu Heian-jingū ja Japanin ensimmäinen sähköraitiotie.',
     selite: 'Heian-jingū rakennettiin 1895 kaupungin 1100-vuotisjuhlaan, ja '
       + 'samana vuonna Kiotossa avattiin Japanin ensimmäinen sähköraitiotie, '
       + 'jonka virta tuli Biwa-järven kanavan voimalasta.',
@@ -817,6 +906,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-singapore.png',
     kaupunki: 'Singapore',
     otsikko: 'Singapore 1873',
+    lyhyt: 'Singapore 1873: Suezin kanava on kääntänyt höyrylaivat Kaakkois-Aasian vilkkaimpaan satamaan.',
     selite: 'Suezin kanavan avaaminen 1869 käänsi höyrylaivaliikenteen '
       + 'Singaporen kautta, ja Straits Settlements oli siirretty Lontoon '
       + 'suoraan hallintaan 1867 — satama oli isoisän matkavuonna '
@@ -826,6 +916,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-varanasi.png',
     kaupunki: 'Varanasi',
     otsikko: 'Benares 1873',
+    lyhyt: 'Benares 1873: hindulaisuuden pyhin kaupunki kivisine kylpyportaineen ja kultatemppeleineen.',
     selite: 'Benares oli hindulaisuuden pyhin kaupunki, jonka kivisiä '
       + 'kylpyportaita rakennettiin 1700-luvulla; Kashi Višvanathin '
       + 'kultakupolisen temppelin pystytti Ahilyabai Holkar vuonna 1780.',
@@ -834,6 +925,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-hanoi.png',
     kaupunki: 'Hanoi',
     otsikko: 'Hanoi 1873',
+    lyhyt: 'Hanoi 1873: ranskalaiset valtaavat linnoituksen, mutta luovuttavat sen vielä takaisin.',
     selite: 'Ranskalaiset valtasivat Hanoin linnoituksen 20. marraskuuta 1873, '
       + 'mutta kaupunki palautettiin Nguyễn-hoville ja jäi Ranskalle vasta '
       + 'kymmenen vuotta myöhemmin.',
@@ -842,6 +934,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-ulanbator.png',
     kaupunki: 'Ulan Bator',
     otsikko: 'Urga 1873',
+    lyhyt: 'Urga 1873: Mongolian uskonnollinen keskus teekaravaanien risteyksessä.',
     selite: 'Urga oli Mongolian uskonnollinen ja kaupallinen keskus, jonka '
       + 'Gandanin luostari oli perustettu 1809 ja jonka ohi kulki Kiahtan ja '
       + 'Kalganin välinen teekaravaanitie.',
@@ -850,6 +943,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kathmandu.png',
     kaupunki: 'Kathmandu',
     otsikko: 'Kathmandu 1873',
+    lyhyt: 'Kathmandu 1873: Rana-pääministerien suljettu valtakunta pagodeineen ja Dharahara-torneineen.',
     selite: 'Isoisän matkavuonna Nepal oli Rana-pääministerien suljettu '
       + 'valtakunta, jonne ulkomaalaisia päästettiin vain harvoin; Kathmandun '
       + 'kaupunkikuvaa hallitsivat Durbar-aukion pagodit ja 1830-luvulla '
@@ -859,6 +953,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-astana.png',
     kaupunki: 'Astana',
     otsikko: 'Akmolinsk 1873',
+    lyhyt: 'Akmolinsk 1873: arojen karavaanireittien risteykseen 1830 perustettu linnoituskylä.',
     selite: 'Astana oli isoisän matkavuonna Akmolinsk: Ishimin rannalle 1830 '
       + 'perustettu linnoituskylä, joka sai kaupunkioikeudet 1832 ja eli '
       + 'arojen karavaanireittien risteyksestä.',
@@ -867,6 +962,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kanton.png',
     kaupunki: 'Kanton',
     otsikko: 'Kanton 1873',
+    lyhyt: 'Kanton 1873: länsimaiset kauppahuoneet asuvat yhä pengerretyllä Shamianin saarella.',
     selite: 'Kanton oli ollut vuoteen 1842 asti Kiinan ainoa ulkomaankaupalle '
       + 'avoin satama, ja isoisän matkavuonna länsimaiset kauppahuoneet '
       + 'asuivat yhä Shamianin saarella, joka oli pengerretty jokeen '
@@ -876,6 +972,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-yangon.png',
     kaupunki: 'Yangon',
     otsikko: 'Rangoon 1873',
+    lyhyt: 'Rangoon 1873: britit ovat tehneet siitä pääkaupungin, kun kuningas hallitsee yhä Mandalaysta.',
     selite: 'Britit tekivät Rangoonista Britti-Burman pääkaupungin 31. '
       + 'tammikuuta 1862 ja rakensivat sen ruutukaavaan, kun Burman kuningas '
       + 'hallitsi yhä ylävirran Mandalaysta.',
@@ -884,6 +981,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-mandalay.png',
     kaupunki: 'Mandalay',
     otsikko: 'Mandalay 1873',
+    lyhyt: 'Mandalay 1873: Mindon-kuningas kutsui tänne kirkolliskokouksen kaivertamaan Pali-kaanonin.',
     selite: 'Mindon-kuningas perusti Mandalayn 1857 ja kutsui sinne 1871 '
       + 'viidennen buddhalaisen kirkolliskokouksen, joka hakkasi Pali-kaanonin '
       + '729 marmoritaululle.',
@@ -892,6 +990,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-taipei.png',
     kaupunki: 'Taipei',
     otsikko: 'Taipeh 1884',
+    lyhyt: 'Taipeh 1884: uudet muurit ja teekauppa nostavat sen koko provinssin pääpaikaksi.',
     selite: 'Taipeh sai muurinsa ja porttinsa 1884, ja Dadaochengin teekauppa '
       + 'kasvatti sen niin nopeasti, että kaupungista tuli pian koko Taiwanin '
       + 'provinssin pääpaikka.',
@@ -900,6 +999,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-hongkong.png',
     kaupunki: 'Hongkong',
     otsikko: 'Hongkong 1888',
+    lyhyt: 'Hongkong 1888: Aasian ensimmäinen köysirata korvaa kantotuolimatkan Victoria Peakille.',
     selite: 'Aasian ensimmäinen köysirata, Peak Tram, avattiin 30. toukokuuta '
       + '1888 ja nosti matkustajat Victoria Peakille, jonne oli siihen asti '
       + 'noustu kantotuolissa.',
@@ -908,6 +1008,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-jakarta.png',
     kaupunki: 'Jakarta',
     otsikko: 'Batavia 1873',
+    lyhyt: 'Batavia 1873: uusi rautatie valmistuu, kun Alankomaat aloittaa sodan Acehia vastaan.',
     selite: 'Batavian rautatie Buitenzorgiin valmistui 1873, samana vuonna kun '
       + 'Alankomaat aloitti Acehin sodan Sumatran pohjoiskärjessä; '
       + 'hevosraitiovaunut olivat kulkeneet kaupungissa vuodesta 1869.',
@@ -916,6 +1017,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-manila.png',
     kaupunki: 'Manila',
     otsikko: 'Manila 1873',
+    lyhyt: 'Manila 1873: katedraalin seitsemättä versiota aletaan rakentaa maanjäristyksen jäljiltä.',
     selite: 'Vuoden 1863 maanjäristys kaatoi Manilan katedraalin, ja sen '
       + 'seitsemättä versiota alettiin rakentaa 1873 — se vihittiin vasta '
       + '1879.',
@@ -924,6 +1026,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-borneo.png',
     kaupunki: 'Borneo',
     otsikko: 'Borneo 1873',
+    lyhyt: 'Borneo 1873: valkoisten rajahien Sarawak, jonka sademetsissä Wallace keräsi näytteitään.',
     selite: 'Borneon luoteisrannikkoa hallitsi valkoisten rajahien Sarawakin '
       + 'kuningaskunta, jonka Charles Brooke rakennutti Kuchingiin '
       + 'Astana-palatsin 1869; saaren sademetsissä Alfred Russel Wallace oli '
@@ -933,6 +1036,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-sumatra.png',
     kaupunki: 'Sumatra',
     otsikko: 'Sumatra 1873',
+    lyhyt: 'Sumatra 1873: Alankomaat aloittaa juuri neljäkymmentä vuotta kestävän Acehin sodan.',
     selite: 'Alankomaat hyökkäsi Acehin sulttaanikuntaan keväällä 1873 ja '
       + 'aloitti Sumatran pohjoiskärjessä sodan, joka kesti neljäkymmentä '
       + 'vuotta.',
@@ -941,6 +1045,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kashgar.png',
     kaupunki: 'Kashgar',
     otsikko: 'Kashgar 1873',
+    lyhyt: 'Kashgar 1873: itsenäisen Jettišarin pääkaupunki ennen Qing-armeijan paluuta.',
     selite: 'Isoisän matkavuonna Kashgar oli Jakub Begin itsenäisen Jettišarin '
       + 'pääkaupunki: kapina oli irrottanut sen Kiinasta 1865, ja Qing-armeija '
       + 'otti alueen takaisin vasta 1877.',
@@ -949,6 +1054,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-lhasa.png',
     kaupunki: 'Lhasa',
     otsikko: 'Lhasa 1873',
+    lyhyt: 'Lhasa 1873: kahdestoista dalai-lama asetetaan täysivaltaiseksi, mutta hallitsee vain kaksi vuotta.',
     selite: 'Kahdestoista dalai-lama Trinley Gyatso asetettiin '
       + 'täysivaltaiseksi 11. maaliskuuta 1873, mutta hän ehti hallita vain '
       + 'kaksi vuotta ennen kuolemaansa.',
@@ -957,6 +1063,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kolkata.png',
     kaupunki: 'Kolkata',
     otsikko: 'Kalkutta 1873',
+    lyhyt: 'Kalkutta 1873: Intian ensimmäinen hevosraitiovaunu ajaa vain muutaman kuukauden.',
     selite: 'Intian ensimmäinen hevosraitiovaunu lähti Kalkutassa 24. '
       + 'helmikuuta 1873 Sealdahista Armenian Ghatille, mutta linja '
       + 'lakkautettiin jo saman vuoden marraskuussa.',
@@ -965,6 +1072,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-kabul.png',
     kaupunki: 'Kabul',
     otsikko: 'Kabul 1873',
+    lyhyt: 'Kabul 1873: emiiri Sher Ali Khan hallitsee Bala Hissarin linnoituksesta.',
     selite: 'Isoisän matkavuonna Kabulia hallitsi emiiri Sher Ali Khan Bala '
       + 'Hissarin linnoituksesta, joka tuhoutui osittain 1879 toisen '
       + 'brittiläis-afgaanisodan alettua.',
@@ -973,6 +1081,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-chennai.png',
     kaupunki: 'Chennai',
     otsikko: 'Madras 1873',
+    lyhyt: 'Madras 1873: laivat ankkuroivat kauas rannasta vailla satamaa lainkaan.',
     selite: 'Isoisän matkavuonna Madrasissa ei ollut satamaa lainkaan: laivat '
       + 'ankkuroivat kauas rannasta ja lasti tuotiin maihin ommelluilla '
       + 'masula-veneillä — aallonmurtajien muuraus alkoi vasta 1876.',
@@ -981,6 +1090,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-mumbai.png',
     kaupunki: 'Mumbai',
     otsikko: 'Bombay 1888',
+    lyhyt: 'Bombay 1888: Victoria Terminus avataan kymmenen rakennusvuoden jälkeen.',
     selite: 'Victoria Terminus valmistui kuningatar Victorian kultaisen '
       + 'juhlavuoden 1887 kunniaksi ja avattiin matkustajille 20. toukokuuta '
       + '1888 kymmenen rakennusvuoden jälkeen.',
@@ -989,6 +1099,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-colombo.png',
     kaupunki: 'Colombo',
     otsikko: 'Colombo 1875',
+    lyhyt: 'Colombo 1875: kahviruosteen jälkeen saarelta lähtee ensimmäinen teelasti Lontooseen.',
     selite: 'Kahviruoste oli tuhonnut Ceylonin kahviviljelmät, ja vuonna 1875 '
       + 'James Taylorin viljelmältä lähetettiin saaren ensimmäinen teelasti '
       + 'Lontoon huutokauppaan.',
@@ -1009,6 +1120,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-ateena-nike.png',
     kaupunki: 'Ateena',
     otsikko: 'Athena Nike 1873',
+    lyhyt: 'Athena Nike 1873: siivetön voitonjumalatar ei voi koskaan lentää kaupungista pois.',
     selite: 'Athena Niken temppelin kadonnut puujumalankuva oli siivetön — '
       + 'ateenalaiset sanoivat, ettei voitto voisi koskaan lentää pois '
       + 'kaupungista. Kädessään sillä oli granaattiomena ja kypärä.',
@@ -1017,6 +1129,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-ateena-nike-temppeli.png',
     kaupunki: 'Ateena',
     otsikko: 'Nike Apteros 1873',
+    lyhyt: 'Nike Apteros 1873: aikalaiskuvitelma voitonjumalattaresta temppelinsä pylväiden välissä.',
     selite: 'Aikalaiskuvitelma siivettömän voitonjumalattaren kuvasta '
       + 'temppelinsä pylväiden välissä Akropoliin lounaisbastionilla.',
   },
@@ -1024,6 +1137,7 @@ export const JULISTEET = {
     tiedosto: 'tuotanto/tuot-karachi.png',
     kaupunki: 'Karachi',
     otsikko: 'Karachi 1873',
+    lyhyt: 'Karachi 1873: Suezin kanava nostaa sen Sindin vehnän ja puuvillan vientisatamaksi.',
     selite: 'Suezin kanavan avaaminen 1869 nosti Karachin Sindin vehnän ja '
       + 'puuvillan vientisatamaksi, ja brittien hallintorakennuksista Frere '
       + 'Hall oli valmistunut 1865.',

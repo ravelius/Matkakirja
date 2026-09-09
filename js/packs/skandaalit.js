@@ -167,6 +167,7 @@ export const SKANDAALIT = {
       lahde: 'en-Wikipedia "Mechanical Turk". Tarkistettu 2.9.2026.',
       kuva: {
         osoite: `${SKANDAALI_KUVAJUURI}skandaali-shakkiturkkilainen-photo-v1.jpg`,
+        lyhyt: 'Hovinainen tutkii shakkiturkkilaisen rattaita, kun Kempelen kätkee koneeseen oikean pelaajan.',
         selite: 'Nuori hovinainen kumartuu tutkimaan rattaita niin syvälle kuin '
           + 'etiketti sallii, ja vieressä hovipoika yrittää pidätellä nauruaan. '
           + 'Kempelen avaa ovet tyynenä: koneen sisään kätketty pelaaja osaa '
@@ -229,6 +230,7 @@ export const SKANDAALIT = {
         + 'Tarkistettu 2.9.2026.',
       kuva: {
         osoite: `${SKANDAALI_KUVAJUURI}skandaali-klimtin-tiedekuntamaalaukset-photo-v1.jpg`,
+        lyhyt: 'Maaliapulainen yrittää lukea professorien kasvoilta, tuomitaanko Klimtin kattomaalaus.',
         selite: 'Maaliapulainen pitää telineen köydestä kiinni ja yrittää lukea '
           + 'professorien kasvoilta, onko vuosien työ juuri tuomittu. Yksi osoittaa '
           + 'kattoon suuttuneena, toinen vaikenee ihastuksestaan — kiista on alkanut '
@@ -287,6 +289,7 @@ export const SKANDAALIT = {
       lahde: 'en-Wikipedia "Cellini Salt Cellar". Tarkistettu 2.9.2026.',
       kuva: {
         osoite: `${SKANDAALI_KUVAJUURI}skandaali-salieran-varkaus-photo-v1.jpg`,
+        lyhyt: 'Varas pakenee Saliera kainalossaan, kun museon hälytys kuitataan virheellisesti tekniseksi viaksi.',
         selite: 'Varas pysähtyy märillä telineillä, kun punainen hälytysvalo '
           + 'välähtää museon ikkunassa. Alhaalla sateenvarjon alla kulkeva ihminen '
           + 'ei katso ylös — eikä vartiointikeskuskaan usko, että hälytys on '
@@ -349,6 +352,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-veda-slovena-photo-v1.jpg`,
+          lyhyt: 'Vanha laulaja ja paimenpoika toistavat säkeitä, joista kerääjän kynä tekee kiistellyn Veda Slovenan.',
           selite: 'Vanha laulaja etsii seuraavaa säettä muististaan, ja hänen '
             + 'vieressään paimenpoika liikuttaa huuliaan ääneti, ettei laulu '
             + 'katoaisi. Kerääjän kiireinen kynä tekee suullisesta perinteestä '
@@ -426,6 +430,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-battenbergin-ruhtinaskaappaus-photo-v1.jpg`,
+          lyhyt: 'Aleksanteri I luovuttaa vallastaan paljain jaloin upseereille, jotka äsken tottelivat häntä.',
           selite: 'Aleksanteri I seisoo paljain jaloin vastapäätä upseereita, '
             + 'joita hän oli vielä vähän aiemmin johtanut sodassa. Nuorin heistä '
             + 'ei pysty katsomaan ruhtinasta silmiin, kun luopumispaperi ojennetaan '
@@ -437,6 +442,7 @@ export const SKANDAALIT = {
         },
         {
           tiedosto: 'Alexander I of Bulgaria by Dimitar Karastoyanov.jpg',
+          lyhyt: 'Bulgarian ensimmäinen ruhtinas Aleksanteri Battenberg hovivalokuvaajan muotokuvassa.',
           selite: 'Bulgarian ensimmäinen ruhtinas Aleksanteri Battenberg '
             + 'sofialaisen hovivalokuvaajan Dimitar Karastojanovin ottamassa '
             + 'muotokuvassa.',
@@ -497,6 +503,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-kansallisteatterin-vihellyskohu-photo-v1.jpg`,
+          lyhyt: 'Opiskelija viheltää ruhtinas Ferdinandille, minkä seurauksena Sofian yliopisto suljetaan.',
           selite: 'Nuori opiskelija viheltää ruhtinas Ferdinandin vaunuille, mutta '
             + 'hänen ystävänsä seuraa jo poliisien liikkeitä. Avajaisillan uhma '
             + 'tuntuu hetken vapauttavalta; pian Sofian yliopisto suljetaan puoleksi '
@@ -507,6 +514,7 @@ export const SKANDAALIT = {
         },
         {
           tiedosto: 'BASA-3K-7-328-5a-Sofia Ivan Vazov National Theatre, 1907.jpg',
+          lyhyt: 'Sofian kansallisteatteri vuonna 1907, samana vuonna kun ylioppilaat viheltivät ruhtinaalle.',
           selite: 'Kansallisteatteri Sofiassa vuonna 1907, samana vuonna kun talo '
             + 'avattiin ja ylioppilaat viheltivät ruhtinaalle.',
           lahde: 'Ivan Karastoyanov 1907, Wikimedia Commons (PD)',
@@ -581,6 +589,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-fojnican-vaakunakirja-photo-v1.jpg`,
+          lyhyt: 'Munkki tarkkailee vierasta, joka etsii Fojnican vaakunakirjasta suvulleen keksittyä kilpeä.',
           selite: 'Nuori vieras etsii avoimesta kirjasta suvulleen kelpaavaa '
             + 'kilpeä, mutta munkki tarkkailee hänen kasvojaan enemmän kuin '
             + 'vaakunoita. Ikkunasyvennyksen noviisi hymyilee salaa: epävarma '
@@ -646,6 +655,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-bosnian-kriisi-1908-photo-v1.jpg`,
+          lyhyt: 'Sarajevolaiset kuulevat Vijećnican portailla uutisen liittämisestä, jota kukaan ei kysynyt heiltä.',
           selite: 'Nuori latoja kuiskaa julistuksen merkityksen isänsä korvaan, '
             + 'kun keisarillinen virkamies lukee uutisen Vijećnican portailta. '
             + 'Väkijoukossa joku taputtaa ja toinen puristaa koriaan: tavallisten '
@@ -713,6 +723,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-anna-goldin-tapaus-photo-v1.jpg`,
+          lyhyt: 'Anna Göldi seisoo yksin raatimiesten edessä oikeusmurhaksi myöhemmin tunnustetussa kuulustelussa.',
           selite: 'Anna Göldi seisoo yksin pöydän edessä ja pakottaa raatimiehet '
             + 'kohtaamaan katseensa. Nuori kirjuri epäröi kynä paperilla: '
             + 'kuulustelun pöytäkirjasta tulee osa järjestelmää, jonka Glarusin '
@@ -778,6 +789,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-farinet-alppien-vaararahanpainaja-photo-v1.jpg`,
+          lyhyt: 'Väärentäjä Farinet pysäyttää vasaransa, kun santarmit lähestyvät alppikylän polkua.',
           selite: 'Farinet pysäyttää vasaran kesken lyönnin, kun leipää tuonut '
             + 'viininviljelijä vilkaisee vuoripolulle. Kaksi santarmia on jo '
             + 'näkyvissä, mutta naisen ilme kertoo, kumman puolella kylä tänään on '
@@ -837,6 +849,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-vedenpaisumuksen-todistaja-photo-v1.jpg`,
+          lyhyt: 'Scheuchzer nimeää kivessä olevan salamanterin fossiilin vedenpaisumuksen ihmisuhriksi.',
           selite: 'Kaivertajan terä pysähtyy, kun Johann Jakob Scheuchzer '
             + 'osoittaa kivessä kalloa ja nimeää sen vedenpaisumuksessa '
             + 'kuolleeksi ihmiseksi. Kahdeksankymmentäviisi vuotta myöhemmin '
@@ -908,6 +921,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-kuninkaanhovin-kasikirjoitukset-photo-v1.jpg`,
+          lyhyt: 'Masaryk vaatii kollegoitaan asettamaan totuuden kansallisen käsikirjoitusväärennöksen edelle.',
           selite: 'Nuori latoja jää oviaukkoon kuuntelemaan, kun 36-vuotias '
             + 'Masaryk pyytää kollegoitaan asettamaan kansallisen ylpeyden '
             + 'todisteiden jälkeen. Käsikirjoitusten aitouden epäily teki '
@@ -974,6 +988,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-kelley-alkemistihuijari-photo-v1.jpg`,
+          lyhyt: 'Keisarin lähettiläs odottaa alkemisti Kelleyltä luvattua kultaa, jota upokkaasta ei löydy.',
           selite: 'Nuori linnanvartija yrittää olla katsomatta tyhjää upokasta, '
             + 'kun keisarin lähettiläs odottaa Edward Kelleyltä luvattua kultaa. '
             + 'Kelleyn vankeus alkoi kielletyn kaksintaistelun jälkeen, mutta '
@@ -1042,6 +1057,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-tycho-brahen-kuolinmysteeri-photo-v1.jpg`,
+          lyhyt: 'Palveluspoika huomaa Tycho Brahen kivun juhlassa, joka edeltää tämän arvoituksellista kuolemaa.',
           selite: 'Nuori palveluspoika huomaa Tycho Brahen kivun ennen muita, '
             + 'mutta ei uskalla rikkoa juhlapöydän sääntöjä hänen puolestaan. '
             + 'Astronomi kuolee yksitoista päivää myöhemmin; tutkimukset '
@@ -1111,6 +1127,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-beringerin-valhekivet-photo-v1.jpg`,
+          lyhyt: 'Beringer julkaisee louhoksesta löytyneet vale-fossiilit luonnon ihmeinä tietämättä pilasta.',
           selite: 'Louhoksen poika ymmärtää liian nopeasti, miksi oppineiden '
             + 'miesten kori on täynnä sammakoiksi ja tähdiksi kaiverrettuja '
             + 'kiviä. Johann Bartholomew Beringer julkaisee löydöt vuonna '
@@ -1177,6 +1194,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-kopenickin-kapteeni-photo-v1.jpg`,
+          lyhyt: 'Wilhelm Voigt komentaa Köpenickin virkailijoita pelkällä lainatulla kapteeninpuvulla.',
           selite: 'Nuori sotilas tekee kunniaa ennen kuin ehtii kysyä, kuka '
             + 'käytetyssä kapteeninpuvussa oikeastaan käskee. Wilhelm Voigt '
             + 'saa Köpenickin raatihuoneen kassasta rahat pelkän univormun '
@@ -1245,6 +1263,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-hitlerin-paivakirjat-photo-v1.jpg`,
+          lyhyt: 'Ultraviolettivalo paljastaa Sternin lehden julkaisemat Hitlerin päiväkirjat väärennöksiksi.',
           selite: 'Nuori asiakirjatutkija näkee ultraviolettivalossa sen, '
             + 'mitä toimitus ei enää haluaisi nähdä: sodanjälkeinen paperi '
             + 'paljastaa miljoonahankinnan väärennökseksi. Stern ehti '
@@ -1315,6 +1334,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-struensee-kuninkaan-laakari-photo-v1.jpg`,
+          lyhyt: 'Struensee pidätetään sen jälkeen, kun hän oli hallinnut Tanskaa kuninkaan lääkärinä ja rakastajana.',
           selite: 'Vielä edellisenä päivänä Struensee hallitsi kuninkaan '
             + 'nimissä; nyt nuori vartija ei tiedä, pitäisikö hänen tervehtiä '
             + 'vankia vai entistä valtakunnan mahtavinta miestä. '
@@ -1382,6 +1402,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-tanskan-valtionvararikko-1813-photo-v1.jpg`,
+          lyhyt: 'Napoleonin sotien velat pakottavat Tanskan perustamaan Rigsbankenin ja uuden rahayksikön 1813.',
           selite: 'Poika katsoo äitiään, ei seteleitä: hänen kasvoiltaan hän '
             + 'ymmärtää, ettei perheen säästöillä enää osteta samaa leipää. '
             + 'Napoleonin sotien laskut maksettiin setelipainolla, kunnes '
@@ -1447,6 +1468,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-alberti-skandaali-photo-v1.jpg`,
+          lyhyt: 'Oikeusministeri Alberti ilmoittautuu poliisille vuosia peitellyn petoksen paljastuttua.',
           selite: 'Nuori poliisikirjuri ehtii tarttua kynään, mutta ei vielä '
             + 'käsittää, miksi entinen oikeusministeri tuo avaimensa ja '
             + 'tilikirjansa hänen pöydälleen. Peter Adler Alberti '
@@ -1515,6 +1537,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-sacromonten-lyijykirjat-photo-v1.jpg`,
+          lyhyt: 'Sacromonten lyijykirjat lupaavat moriskoille paikan Granadan kristillisessä menneisyydessä.',
           selite: 'Nuori moriscotulkki tunnistaa lyijystä kielen, joka lupaa '
             + 'hänen yhteisölleen paikan Granadan vanhimmassa kristillisessä '
             + 'menneisyydessä — ja näkee papin jo uskovan. Vuosina 1595–1599 '
@@ -1579,6 +1602,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-baldomera-larra-pyramidi-photo-v1.jpg`,
+          lyhyt: 'Baldomera Larra kerää madridilaisten säästöjä pyramidihuijaukseen, joka romahtaa 1876.',
           selite: 'Vanha ompelijatar näkee Baldomeran kädessä lupaamansa '
             + 'voiton; hänen takanaan tyttö huomaa, että rahat tulevat juuri '
             + 'sisään astuneen perheen kukkarosta. Caja de Imposiciones '
@@ -1647,6 +1671,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-cerro-de-los-santos-vaarennokset-photo-v1.jpg`,
+          lyhyt: 'Väärennettyjä Cerro de los Santosin patsaita myydään Madridin arkeologiselle museolle.',
           selite: 'Nuori museoapulainen katsoo ensin tuoretta uurretta ja '
             + 'vasta sitten pöydän ääressä seisovia miehiä: jos hän sanoo '
             + 'epäilyn ääneen, koko löytöhuuma alkaa horjua. Vicente Juan y '
@@ -1720,6 +1745,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-lasnamaen-valkea-laiva-photo-v1.jpg`,
+          lyhyt: 'Sadat seuraajat odottavat Lasnamäellä profeetta Maltsvetin luvattua valkeaa laivaa.',
           selite: 'Äiti etsii tyttärensä kasvoilta vastausta, jota tyhjä '
             + 'horisontti ei anna: kuinka monta aamua heidän pitää vielä '
             + 'odottaa? Juhan Leinberg oli jo lähtenyt Krimille, mutta sadat '
@@ -1788,6 +1814,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-pirtukauppa-suomenlahdella-photo-v1.jpg`,
+          lyhyt: 'Kieltolaki muuttaa Suomenlahden rannikon asukkaat pirtua salakuljettaviksi laivamiehiksi.',
           selite: 'Nuori apumies kuulee tulliveneen moottorin juuri kun '
             + 'seuraava pirtukanisteri laskeutuu hänen käsiinsä. Kieltolaki '
             + 'teki tavallisista rannikon ihmisistä salakuljettajia: suuret '
@@ -1853,6 +1880,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-rummu-jyri-mestarikarkuri-photo-v1.jpg`,
+          lyhyt: 'Rummu Jüri solmii lakanaköyttä paetakseen kartanosta mestarikarkurin maineeseen.',
           selite: 'Keittiöpiika nostaa katseensa juuri kun Rummu Jüri solmii '
             + 'lakanaköyttä, ja päättää olla huutamatta. Tarina kattoreiästä '
             + 'ja tornista laskeutumisesta kuuluu mestarikarkurin legendaan; '
@@ -1924,6 +1952,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-seitseman-veljesta-kirjasota-photo-v1.jpg`,
+          lyhyt: 'Kirjapainon poika lukee Seitsemän veljeksen vetäytyneitä vihkoja ennen kuin arvostelu tuomitsee ne.',
           selite: 'Kirjapainon poika tuo Aleksis Kivelle myynnistä vedetyt '
             + 'vihkot, mutta piilottaa yhden takkinsa alle: hän haluaa lukea '
             + 'itse ennen kuin uskoo professoria. August Ahlqvistin '
@@ -1994,6 +2023,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-kieltolaki-ja-pirtukuningas-photo-v1.jpg`,
+          lyhyt: 'Algoth Niska piilottaa pirtukanistereita silakoiden alle kieltolain kissa-hiiri-leikissä.',
           selite: 'Satamapoika näkee silakoiden alta paljastuvan '
             + 'pirtukanisterin ja etsii Algoth Niskan kasvoilta ohjetta ennen '
             + 'kuin tullimies ehtii lähemmäs. Entinen '
@@ -2065,6 +2095,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-nurmen-amatoorikohu-photo-v1.jpg`,
+          lyhyt: 'Paavo Nurmi luetaan amatöörisääntöjen nojalla pois Los Angelesin olympiaradalta 1932.',
           selite: 'Nuori joukkueen viestinviejä ei tohdi nostaa katsettaan, '
             + 'kun Paavo Nurmi lukee paperin, joka pitää hänet poissa Los '
             + 'Angelesin radalta. Sekuntikello käy yhä hänen kädessään: mies '
@@ -2142,6 +2173,7 @@ export const SKANDAALIT = {
            * kortin oma teksti (korjaus 2.9.2026) kertoo, ettei taulu
            * mahtunut työtakin alle — Peruggia kantoi sen käärittynä.
            */
+          lyhyt: 'Vincenzo Peruggia kuljettaa Mona Lisan Louvresta työtakin ja käärön suojissa vuonna 1911.',
           selite: 'Huoltomies avaa juuttuneen oven Vincenzo Peruggialle ja '
             + 'luulee auttavansa työtoveria. Valkoisen työtakin ja käärön '
             + 'suojissa kulkee Mona Lisa — pieni puupaneeli, joka katoaa yli '
@@ -2216,6 +2248,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-kaulanauhajuttu-1785-photo-v1.jpg`,
+          lyhyt: 'Jeanne de la Motten juoni vie kuningattaren kaulanauhajutussa syyttömän Marie Antoinetten maineen.',
           selite: 'Jalokivisepän nuori apulainen ymmärtää ensimmäisenä, ettei '
             + 'kuningattaren nimi näytä oikealta, mutta kardinaali on jo '
             + 'painanut sulkakynän paperiin. Jeanne de la Motte tarvitsee '
@@ -2340,6 +2373,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-piltdownin-ihminen-photo-v1.jpg`,
+          lyhyt: 'Piltdownin ihmiseksi ristitty löytö pysyy oppikirjoissa neljä vuosikymmentä ennen paljastusta.',
           selite: 'Sorakuopan poika jää katsomaan leuan liian tasaisia '
             + 'hampaita, mutta Arthur Smith Woodward näkee löydössä juuri sen '
             + 'puuttuvan renkaan, jota tiede odotti. Ihmisen kallon ja '
@@ -2406,6 +2440,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-etelameren-kupla-photo-v1.jpg`,
+          lyhyt: 'Etelämeren kuplan puhkeaminen 1720 vie perheen säästöt tyhjäksi jääneestä osakelaatikosta.',
           selite: 'Tytär ei katso osakepaperia vaan äitinsä kasvoja, kun '
             + 'virkailijan lähes tyhjä kolikkolaatikko kertoo hinnan '
             + 'romahduksesta. South Sea Company myi valtionvelasta ja '
@@ -2474,6 +2509,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-poyaisin-huijaus-photo-v1.jpg`,
+          lyhyt: 'MacGregorin Poyais-huijaus houkuttelee siirtolaisia laivaan kohti olematonta maata.',
           selite: 'Poika on jo antanut leikkilaivalleen Poyaisin nimen; hänen '
             + 'äitinsä on vaihtanut perheen säästöt MacGregorin seteleihin, '
             + 'ja isoisä ehtii epäillä karttaa vasta lähtölaiturilla. '
@@ -2547,6 +2583,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-elginin-marmorit-photo-v1.jpg`,
+          lyhyt: 'Elginin marmorien irrottaminen Parthenonista 1801–1805 kiistellään yhä Ateenan ja Lontoon välillä.',
           selite: 'Nuori kivimies tuntee friisin painon käsissään ennen kuin '
             + 'ymmärtää, että pala saattaa lähteä temppelistä pysyvästi. '
             + 'Elginin asiamiehet veivät 1801–1805 noin puolet Parthenonissa '
@@ -2616,6 +2653,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-simonides-kasikirjoitusvaarentaja-photo-v1.jpg`,
+          lyhyt: 'Simonides myy keksittyjä käsikirjoituksia ja väittää lopulta Codex Sinaiticuksen omakseen.',
           selite: 'Oppipojan sormeen tarttuu märkä muste tekstistä, jonka '
             + 'Simonides aikoo myydä vuosisatoja vanhana. Symin saarelta '
             + 'lähtenyt mestarikalligrafi teki kadonneista teoksista '
@@ -2686,6 +2724,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-belokas-maratonhuijaus-1896-photo-v1.jpg`,
+          lyhyt: 'Kellnerin vastalause paljastaa Belokasin kyydin, ja Kreikan maratonkolmoisvoitto 1896 mitätöityy.',
           selite: 'Gyula Kellner näkee uupuneen Spyridon Belokasin '
             + 'laskeutuvan kärryistä kesken olympiamaratonin. Tienvarren '
             + 'nuori vedenkantaja ymmärtää asian heidän kasvoistaan jo ennen '
@@ -2757,6 +2796,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-rijecka-krpica-1868-photo-v1.jpg`,
+          lyhyt: 'Rijekan paperilappu liittää kaupungin Unkarin kruunuun ilman Kroatian parlamentin keskustelua.',
           selite: 'Nuori kansliakirjuri pitää korvaavaa paperiliuskaa vielä '
             + 'ilmassa: vanha 66. artikla näkyy sen alla, mutta huoneen '
             + 'vanhemmat miehet odottavat liimaa. Jo vahvistetun '
@@ -2826,6 +2866,7 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-pacta-conventa-photo-v1.jpg`,
+          lyhyt: 'Pacta conventa -sopimuksen aitoutta epäillään, sillä säilynyt teksti on vasta 1300-luvulta.',
           selite: 'Nuori trogirilainen kirjuri pysäyttää kynänsä, kun '
             + 'aatelinen painaa kahdentoista suvun luetteloa lähemmäs. Hän ei '
             + 'voi tietää, kopioiko vanhempaa sopimusta vai valmistaa '
