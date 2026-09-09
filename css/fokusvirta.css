@@ -417,6 +417,14 @@
   color: rgba(33, 29, 24, 0.84);
 }
 
+/* TYHJÄ LAPPU EI OLE LAPPU. Pohjattoman pakan paneeli ladotaan tyhjällä
+   kuvatekstillä, jonka pakka täyttää ensimmäisen pulpahduksen kohdalla
+   (js/fokusvirta.js rakennaLuentakuvanPaneeli, kuva null) — siihen asti
+   kartalla ei saa olla tyhjää kermanväristä laatikkoa. */
+.fokusvirta-luentakuva .fokusvirta-luentateksti:not(:has(.fokusvirta-kuvaselite:not(:empty))) {
+  display: none;
+}
+
 /* Pienessä koossa lappu on lukukelvoton (0,45 × 0,85 rem), joten se
    häipyy: peukalonkynnen kokoinen valokuva jää kartalle yksin. */
 .fokusvirta-luentakuva.pieni .fokusvirta-luentateksti {
@@ -546,70 +554,45 @@
 }
 
 /*
- * PULU-CAM-MERKKI: PIENI SELFIE JA TERÄVÄ TEKSTI, EI KUVAAN POLTETTU
- * (Raamattu kohta 3). Kaksi elementtiä kuvan oikeassa alakulmassa; koko
- * skaalautuu kuvan leveyden mukaan (`--pulucam-mitta`), mutta pysyy
- * luettavana molemmissa päissä (clamp).
+ * PULU-CAM-TARRA: YKSI PNG, EI KUVAAN POLTETTU (Raamattu kohta 3;
+ * omistajan tarkennus 9.9.2026 klo 18.50). Teksti PuluCam on tarran
+ * sisällä, joten HTML-tekstiä ei ole — aiempi selfie + teksti -pari on
+ * poistettu. Tarra on läpinäkyvä RGBA-PNG, joten sen alle EI ladota
+ * taustalaatikkoa eikä pyöristystä: kuvaan tulee tarra, ei nappi.
+ *
+ * KOKO SKAALAUTUU KUVAN LEVEYDEN MUKAAN: 22 % `--pulucam-mitta`-arvosta
+ * (kartalla luentakuvan leveys, suurennoksessa js:n laskema kuvan
+ * leveys), katto 160 px, jottei tarra kasva koko ruudun suurennoksessa
+ * julisteeksi. Luvut ovat myös js:ssä (js/pulucam.js
+ * PULUCAM_TARRA_OSUUS, PULUCAM_TARRA_KATTO_PX), jotta testit valvovat
+ * samaa sopimusta.
+ *
+ * ILMAN OMISTAJAN VALITSEMAA TARRAA MERKKIÄ EI SYNNY LAINKAAN
+ * (js/pulucam.js puluCamMerkki palauttaa null): kuvat näkyvät puhtaina
+ * sekä pakassa että karusellissa.
  */
 .pulucam-merkki {
   position: absolute;
   right: 0.45rem;
   bottom: 0.45rem;
-  display: flex;
-  align-items: center;
-  gap: 0.32em;
-  padding: 0.22em 0.5em 0.22em 0.34em;
-  border-radius: 999px;
-  background: rgba(18, 12, 4, 0.62);
-  color: #f7efdd;
-  font-size: clamp(6px, calc(var(--pulucam-mitta, 240px) * 0.034), 15px);
-  line-height: 1;
+  display: block;
+  width: min(calc(var(--pulucam-mitta, 240px) * 0.22), 160px);
+  line-height: 0;
   pointer-events: none;
 }
 
-.pulucam-selfie {
-  display: block;
-  width: 1.5em;
-  height: 1.5em;
-  flex: none;
-}
-
-.pulucam-selfie img,
-.pulucam-selfie svg {
+.pulucam-tarra {
   display: block;
   width: 100%;
-  height: 100%;
-}
-
-/* Varakuvake on pelin viivapiirros (js/pollo.js POLLO_IKONI): se on
-   viivagrafiikkaa, joten väri tulee currentColorista. */
-.pulucam-selfie svg {
-  fill: none;
-  stroke: currentcolor;
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.pulucam-selfie svg .taytto {
-  fill: currentcolor;
-  stroke: none;
-}
-
-.pulucam-teksti {
-  font-family: var(--font-otsikko, var(--font-luku));
-  font-weight: 700;
-  /* Pieni versaali: merkki on kameran leima, ei kuvateksti. */
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  white-space: nowrap;
+  height: auto;
 }
 
 /*
- * MERKKI MYÖS SUURENNOKSESSA. Karusellissa kuva saa ohuen kuoren
+ * TARRA MYÖS SUURENNOKSESSA. Karusellissa kuva saa ohuen kuoren
  * (`.fokuszoom-kuvatila`), jonka mitat ovat täsmälleen kuvan mitat —
- * merkki asettuu sen alakulmaan eikä kellu paperikehyksen reunalle.
- * Kuori syntyy VAIN karusellissa (js/fokusvirta.js avaaSuurennos).
+ * tarra asettuu sen alakulmaan eikä kellu paperikehyksen reunalle.
+ * Kuori syntyy VAIN karusellissa ja vain tarran kanssa
+ * (js/fokusvirta.js avaaSuurennos).
  */
 .fokuszoom-kuvatila {
   position: relative;
@@ -1665,6 +1648,23 @@
 }
 
 .fokuszoom-selite { display: block; }
+
+/*
+ * HAVAINNEKUVA-LINKKI PITKÄN KUVATEKSTIN PERÄSSÄ (omistaja 9.9.2026 klo
+ * 18.50, Raamattu PULU-CAM: … HAVAINNEKUVA-LINKKI PITKAN LOPUSSA).
+ *
+ * Perusasu tulee `.havainnekuva-selite`-luokasta (css/styles.css:
+ * napin nollaus, pisteviiva, `pointer-events: auto` suurennoksen
+ * paperin yli). Tässä vain se, mikä on tälle paikalle omaa: omistaja
+ * pyysi ALLEVIIVATTUA sanaa, joten viiva on yhtenäinen eikä
+ * pisteviiva — se erottaa linkin lähderivin maininnasta, joka on osa
+ * juoksevaa tekstiä.
+ */
+.fokuszoom-selite .havainnekuva-linkki {
+  border-bottom-style: solid;
+  border-bottom-color: rgba(58, 38, 16, 0.75);
+  white-space: nowrap;
+}
 
 .fokuszoom-lahde,
 .fokuszoom-laskuri {

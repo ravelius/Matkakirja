@@ -248,8 +248,16 @@ pakassa on useampi kuva."* ja *"Sitten kun päällimmäistä kuvaa klikkaa,
 niin pääsee karuselliin, missä näkyy isoisän kuva isona sekä kaikki muut
 pulun kuvat."*
 
+**Tarkennus 9.9.2026 klo 18.50** (Raamattu, PULU-CAM: RAKKAUSKOHTAUS
+3-5 KUVAA, KAKSI KUVATEKSTIA MOLEMMILLE, HAVAINNEKUVA-LINKKI PITKAN
+LOPUSSA, TARRA YHTENA PNG:NA OMISTAJAN VALINNASTA): tavallinen kohde
+saa **1–3** kuvaa ja rakkauskohtaus **3–5** — pakassa on isoisän kuvan
+kanssa enintään kuusi kuvaa. PULU-CAM-merkki on nyt **yksi tarra-PNG**,
+jossa teksti on jo mukana, ja **kaksi kuvatekstiä** koskee sekä isoisän
+että pulun kuvia.
+
 Pakin **vapaaehtoinen** kenttä on `pollo.kuvat`
-(`js/packs/fokusvirta-<id>.js`), 1–3 kuvaa **toimituksen
+(`js/packs/fokusvirta-<id>.js`), 1–5 kuvaa **toimituksen
 järjestyksessä**:
 
 ```js
@@ -257,8 +265,8 @@ pollo: {
   kuvat: [
     {
       osoite: 'https://media.matkakirja.app/pulucam/…jpg', // TAI ampari / tiedosto
-      lyhyt: 'Yksi virke kartalle.',
-      selite: 'Pidempi kuvateksti karuselliin.',
+      lyhyt: 'Yksi virke kartalle.',            // PAKOLLINEN: kartan teksti
+      selite: 'Pidempi kertova kuvateksti (300–600 merkkiä) karuselliin.',
       lahde: 'Pulun kamera',
       lahteet: ['https://…'],   // toimituksen tausta-aineisto, ei näy pelaajalle
     },
@@ -268,15 +276,16 @@ pollo: {
 
 Osoite ratkeaa **samalla porrastuksella** kuin luentakuvalla (`osoite` →
 `ampari` → Commonsin `tiedosto`, `js/fokusvirta.js kuvanOsoite`); kuva
-ilman osoitetta jätetään pois (`js/pulucam.js pulunKuvat`). Kolmea
+ilman osoitetta jätetään pois (`js/pulucam.js pulunKuvat`). Viittä
 enempää ei oteta (`PULUCAM_KATTO`).
 
 **Milloin pakka nousee.** Siinä yhdessä kohdassa, jossa pulun
 kommenttikupla oikeasti nousee ruudulle (`fokusvirtaSaapumiskupla` →
 `nayta`) — sama koukku kuin Etsi aarre -napilla, ei kutsuhetkellä.
-Ensimmäinen kuva nousee heti, seuraavat pulpahtavat 0,95 s ja 1,15 s
-välein pienellä pomppuanimaatiolla (`PULUCAM_VALIT_MS`, css-siirtymä
-yliheitolla `cubic-bezier(0.34, 1.56, 0.64, 1)`).
+Ensimmäinen kuva nousee heti, seuraavat pulpahtavat 0,95–1,15 s välein
+pienellä pomppuanimaatiolla (`PULUCAM_VALIT_MS`, css-siirtymä
+yliheitolla `cubic-bezier(0.34, 1.56, 0.64, 1)`); viiden kuvan pakka on
+kasassa noin 4,3 sekunnissa eli pulun repliikin aikana.
 
 **Missä pakka on.** Luentakuvan paneelin sisällä, kuvan kokoisessa
 kuoressa (`.fokusvirta-kuvatila`) — ei sen vieressä. Siitä seuraa
@@ -288,29 +297,73 @@ liikkeestä yhdessä luentakuvan kanssa. Kuori on pakko, koska
 Pakan noustessa luennan lopussa tullut **pienennys peruuntuu**: pakka ei
 nouse peukalonkynnen kokoisen kuvan päälle.
 
-Asennot ovat deterministisiä (`PULUCAM_ASENNOT`): kulmat +4°, −3°, +2° ja
-siirtymä 6–10 % **kortin omasta koosta** — prosenttia eikä pikseleitä,
-jotta limitys pysyy samana myös pienennetyssä pakassa.
+Asennot ovat deterministisiä (`PULUCAM_ASENNOT`): **viisi** asentoa,
+kulmat +4°, −3°, +2°, −6°, +7° ja siirtymä 6–10 % **kortin omasta
+koosta** — prosenttia eikä pikseleitä, jotta limitys pysyy samana myös
+pienennetyssä pakassa. Neljäs ja viides eivät ole kolmen ensimmäisen
+kierrätystä: niiden kulmat ovat jyrkempiä ja siirtymät eri
+neljänneksiin, jottei viidenkään kuvan pakka sulkeudu yhdeksi
+suorakaiteeksi.
 
 **Ilman luentakuvaa** (kaupungilla on `pollo.kuvat` mutta ei
 `matkakirja.luentakuva`) pakka nousee samaan paikkaan ilman pohjakuvaa:
 paneeli rakennetaan läpinäkyvällä pohjalaatikolla
 (`.pulucam-pohja`, `rakennaLuentakuvanPaneeli` kuvalla `null`), joten
-ankkuri, raahaus ja pienennys ovat täsmälleen samat.
+ankkuri, raahaus ja pienennys ovat täsmälleen samat. Kuvatekstilaatikko
+ladotaan silloinkin, mutta tyhjänä: pakka täyttää sen ensimmäisen
+pulpahduksen kohdalla, ja tyhjä laatikko piiloutuu css:llä.
 
 **Kaupungista lähtö poistaa pakan** (`piilotaLuentakuva` →
 `piilotaPuluCamPakka`, joka myös nollaa pulpahdusajastimet).
 
-#### PULU-CAM-merkki
+#### Kaksi kuvatekstiä, molemmille kuville (omistaja 9.9.2026 klo 18.50)
 
-Jokaisessa pulun kuvassa on oikeassa alakulmassa merkki, jota **ei
-polteta kuvaan**: pieni piirretty pulun selfie ja teksti `PULU-CAM`
-erillisenä HTML-tekstinä (pieni versaali, terävä). Koko skaalautuu kuvan
-leveyden mukaan (css `--pulucam-mitta`: kartalla `--luentakuva-leveys`,
-suurennoksessa js:n laskema kuvan leveys). Selfien osoite on vakiossa
-`PULU_CAM_SELFIE_OSOITE` (`js/pulucam.js`) — **null** siihen asti kunnes
-kuvatoimitus toimittaa RGBA-PNG:n, ja silloin merkissä näkyy pelin
-nykyinen pulun kuvake (`js/pollo.js POLLO_IKONI`).
+Sama sääntö kuin muuallakin pelissä (`js/kuvatekstit.js`), mutta nyt
+sanottuna myös pulun kuville:
+
+| missä | mikä | linkki |
+| --- | --- | --- |
+| kartalla, **päällimmäisen** kuvan alla | `lyhyt` | ei koskaan |
+| karusellissa / koko ruudun näkymässä | `selite` | Havainnekuva-linkki perässä |
+
+**Lyhyt teksti seuraa päällimmäistä kuvaa.** Pakan noustessa isoisän
+kuva jää alle, joten kartalla lukee sen kuvan lyhyt teksti, joka on
+ruudulla päällimmäisenä: pakka päivittää paneelin kuvatekstin joka
+pulpahduksessa (`naytaPuluCamPakka`-asetus `kuvateksti` →
+`.fokusvirta-kuvaselite`). **Pitkä teksti vaihtuu karusellissa kuvan
+mukana** (`avaaSuurennos` → `nayta`), sekä isoisän että pulun kuvilla.
+
+#### Havainnekuva-linkki pitkän kuvatekstin perässä
+
+Kun kuvan lähde on *"Matkakirjan havainnekuva"* (tai *"Matkakirjan
+kuvitus"*), suurennoksen **pitkän kuvatekstin perään** ladotaan
+erillinen alleviivattu **Havainnekuva**-linkki, joka avaa pelin oman
+havainnekuvaselityksen (`js/havainnekuva.js havainnekuvaLinkki` →
+`avaaHavainnekuvaSelite`). Isoisän kuvissa se on käytännössä aina;
+pulun kuvissa silloin, kun lähde sen sanoo — yksi ehto, ei kahta
+sääntöä.
+
+**Lähderivi säilyy ennallaan.** Rivin oma "Matkakirjan havainnekuva"
+-maininta on yhä pisteviivainen selite (`taytaLahderivi` →
+`merkitseHavainnekuva`); linkki on sen **lisä**, ei korvaaja, ja
+molemmat avaavat saman selitteen. **Kartan lyhyessä tekstissä linkkiä
+ei ole koskaan.**
+
+#### PULU-CAM-tarra
+
+Merkki on **yksi RGBA-PNG**, jossa teksti PuluCam on jo mukana
+(omistaja 9.9.2026 klo 18.50) — erillistä HTML-tekstiä ja selfie-kuvaketta
+ei enää ole. Tarraa **ei polteta kuvaan**: se on yksi elementti kuvan
+oikeassa alakulmassa, ja sen leveys on **22 % kuvan leveydestä, katto
+160 px** (`PULUCAM_TARRA_OSUUS`, `PULUCAM_TARRA_KATTO_PX`; css
+`--pulucam-mitta` on kartalla `--luentakuva-leveys` ja suurennoksessa
+js:n laskema kuvan leveys).
+
+Osoite on vakiossa `PULU_CAM_TARRA_OSOITE` (`js/pulucam.js`) — **null**
+siihen asti kunnes omistaja valitsee vaihtoehdon A–F. **Null ei ole
+varakuvake vaan puhdas kuva**: siihen asti pulun kuvissa ei näy mitään
+merkkiä, ei pakassa eikä karusellissa (`puluCamMerkki` palauttaa
+`null`, eikä suurennoksen kuvatilan kuorta edes synny).
 
 #### Yhteinen karuselli
 
@@ -325,19 +378,21 @@ Järjestys on omistajan sanoma järjestys eikä napautuskohdan mukainen:
 Kuvat ovat **suorassa**, yksi kerrallaan kokonaisena; edellinen/seuraava
 -nuolinapit (`.fokuszoom-nuoli`), pyyhkäisy ja `js/galleria.js`:n
 kaistasääntö toimivat kuten muissakin gallerioissa. Jokaisella kuvalla on
-oma **pitkä kuvateksti** (`kuvatekstiPitka`) ja **lähderivi**
-(`taytaLahderivi`), ja pulun kuvissa PULU-CAM-merkki näkyy myös
-suurennoksessa (`.fokuszoom-kuvatila` + `.pulucam-suuri`). Sulkeminen
-palauttaa kartan pakkoineen.
+oma **pitkä kuvateksti** (`kuvatekstiPitka`, Havainnekuva-linkki
+perässä tarvittaessa) ja **lähderivi** (`taytaLahderivi`), ja kun tarra
+on valittu, se näkyy pulun kuvissa myös suurennoksessa
+(`.fokuszoom-kuvatila` + `.pulucam-suuri`). Sulkeminen palauttaa kartan
+pakkoineen.
 
 **Ilman `pollo.kuvat`-kenttää `avaaSuurennos` toimii täsmälleen kuten
 ennen**: karusellin lisäys on valinnainen `pulunKuvasta`-asetus, ja ilman
 sitä kuvatilan kuorta ei edes synny.
 
 Testit: `tests/pulucam.test.mjs`. Selainvartio:
-`tools/savukkeet/savuke-pulucam.mjs` (repon omat koekuvat, Lontoo;
-kaappaukset `pulucam-pakka.png`, `pulucam-karuselli.png`,
-`pulucam-puhelin.png`).
+`tools/savukkeet/savuke-pulucam.mjs` (repon omat koekuvat, Lontoo,
+viiden kuvan pakka; kaappaukset `pulucam-5-pakka.png`,
+`pulucam-karuselli-isoisa.png`, `pulucam-havainnekuva-linkki.png`,
+`pulucam-karuselli.png`, `pulucam-raahaus.png`, `pulucam-puhelin.png`).
 
 ### Etsi aarre -nappi kommentin jälkeen (omistaja 9.9.2026)
 

@@ -247,3 +247,71 @@ export function merkitseHavainnekuva(el, lahde, kohde = {}) {
   emo.removeChild(solmu);
   return el;
 }
+
+/* ------------------------------------------------------------------ *
+ * Linkki pitkän kuvatekstin perässä (omistaja 9.9.2026 klo 18.50)
+ * ------------------------------------------------------------------ */
+
+/**
+ * Linkin teksti. Omistaja: *"esim. teksti Havainnekuva, alleviivattu,
+ * sama avaaja"* — sama selite kuin lähderivin maininnasta, mutta oma
+ * elementtinsä pitkän kuvatekstin lopussa.
+ */
+export const HAVAINNEKUVA_LINKKI_TEKSTI = 'Havainnekuva';
+
+/**
+ * HAVAINNEKUVA-LINKKI PITKÄN KUVATEKSTIN PERÄÄN (Raamattu, PULU-CAM:
+ * RAKKAUSKOHTAUS 3-5 KUVAA…, kohta 3: *"Isoisan pitkan kuvatekstin
+ * lopussa on aina toimiva Havainnekuva-linkki, joka avaa pelin
+ * selityksen havainnekuvista; lyhyessa ei ole linkkia."*).
+ *
+ * MIKSI LÄHDERIVIN MAININTA EI RIITÄ. Lähderivi on suurennoksessa
+ * pieni harmaa rivi kuvatekstin alla, ja siinä oleva selitenappi on
+ * kahden sanan pisteviiva keskellä muuta lähdetekstiä. Omistaja
+ * halusi selityksen sinne, mistä se luetaan: pitkän kuvatekstin
+ * PERÄÄN, omana alleviivattuna sanana. LÄHDERIVI SÄILYY ENNALLAAN —
+ * tämä on lisä eikä siirto, ja molemmat avaavat saman selitteen
+ * (avaaHavainnekuvaSelite), joten pelaajalle ei synny kahta eri
+ * tarinaa samasta asiasta.
+ *
+ * VAIN AVATUSSA KUVASSA. Kartalla näkyvä lyhyt kuvateksti ei koskaan
+ * saa linkkiä (js/kuvatekstit.js: lyhyestä on nimenomaan poistettu
+ * havainnekuvamaininta) — kutsupaikka on siksi yksi: suurennoksen
+ * pitkä teksti (js/fokusvirta.js avaaSuurennos).
+ *
+ * LINKKI SYNTYY LÄHTEESTÄ EIKÄ KUVAN OMISTAJASTA: isoisän kuvien
+ * lähde on käytännössä aina "Matkakirjan havainnekuva", joten ne
+ * saavat linkin aina, ja pulun kuvat saavat sen silloin kun niiden
+ * lähde sen sanoo. Yksi ehto, ei kahta erillistä sääntöä.
+ *
+ * @param {string} lahde kuvan lähderivi (linkki syntyy vain, jos
+ *   rivissä lukee "Matkakirjan havainnekuva" tai "Matkakirjan kuvitus")
+ * @param {object} [kohde] kuva-olio (variantti ja palautetunnus)
+ * @returns {?HTMLElement} nappi, tai null jos kuva ei ole havainnekuva
+ */
+export function havainnekuvaLinkki(lahde, kohde = {}) {
+  if (typeof document === 'undefined') return null;
+  const teksti = String(lahde ?? '');
+  if (!HAVAINNEKUVA_RE.test(teksti)) return null;
+
+  const laji = havainnekuvaLaji(teksti, kohde);
+  const nappi = html('button',
+    'havainnekuva-selite havainnekuva-linkki', HAVAINNEKUVA_LINKKI_TEKSTI);
+  nappi.type = 'button';
+  nappi.title = laji === 'ihme'
+    ? 'Mihin ihmeen kuva perustuu?'
+    : 'Miksi Matkakirjassa on havainnekuvia?';
+  nappi.setAttribute('aria-label', `${HAVAINNEKUVA_LINKKI_TEKSTI} — avaa selite`);
+  nappi.addEventListener('click', (e) => {
+    // Sama pysäytys kuin lähderivin selitteellä: linkki on avattavan
+    // kuvan sisällä, eikä se saa sulkea suurennosta altaan.
+    e.preventDefault?.();
+    e.stopPropagation?.();
+    avaaHavainnekuvaSelite({
+      laji,
+      kuvatunnus: havainnekuvanTunnus(kohde, nappi),
+      kuvalahde: teksti,
+    });
+  });
+  return nappi;
+}
