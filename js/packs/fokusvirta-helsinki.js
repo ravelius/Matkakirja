@@ -115,7 +115,7 @@ export const FOKUSVIRTA_HELSINKI = {
       + 'silakalla ennen kuin ehdin auttaa. Nyt kartassani on Suomenlahden '
       + 'kohdalla täsmällinen rasvajälki. Harvoin olen saanut yhtä luotettavaa '
       + 'paikallistietoa.',
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Helsingin valkoisen kirkon katolla apostolit katsovat '
       + 'merelle. Alhaalla torilla kalakauppias katseli vaakaa. Kummankin työ '
       + 'vaikutti vakavalta. Tuuli nosti paperini, ja nainen painoi sen '

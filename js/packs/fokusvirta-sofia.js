@@ -308,7 +308,7 @@ export const FOKUSVIRTA_SOFIA = {
      * ja on generoitava uudelleen tästä luennasta (sama tilanne kuin
      * Ateenassa) ennen kuin kertoja lukee saman kuin ruudulla lukee.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Sofiassa maa tarjoaa kuumaa vettä pyytämättä halkoja. '
       + 'Lähteellä nainen täytti kannua ja odotti sen jäähtymistä. Minä olin '
       + 'maksanut majatalossa kylmästä pesuvedestä. Tällaisista '

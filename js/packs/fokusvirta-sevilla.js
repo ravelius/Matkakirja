@@ -180,7 +180,7 @@ export const FOKUSVIRTA_SEVILLA = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Sevillan tupakkatehdas näyttää palatsilta, mutta sen '
       + 'portista kulkee aamuisin kuningattarien sijasta työväkeä. Nainen '
       + 'sitoi huivinsa, otti viimeisen haukun leivästä ja katosi sisään. '

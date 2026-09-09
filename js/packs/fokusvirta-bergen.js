@@ -156,7 +156,7 @@ export const FOKUSVIRTA_BERGEN = {
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Bergenin Bryggenissä puutalot seisovat kylki kyljessä, '
       + 'ja niiden välissä tuoksuu kapakala. Kauppias näytti kuivattua turskaa '
       + 'kuin hopeaharkkoa. Sillä on täällä maksettu paljon muutakin kuin '

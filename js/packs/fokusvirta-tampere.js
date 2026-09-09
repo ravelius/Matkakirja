@@ -231,7 +231,7 @@ export const FOKUSVIRTA_TAMPERE = {
      * loppu eri sävyssä. Suuraakkosia ei tekstissä ole, joten
      * kirjoitusasun sovituksia ei tarvita.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Tammerkoski tekee töitä kahden järven välissä. Sen '
       + 'partaalla puuvilla muuttuu langaksi ja miehet rahakkaiksi. '
       + 'Finlaysonin tehtaassa nainen näytti, kuinka katkennut lanka '

@@ -187,7 +187,7 @@ export const FOKUSVIRTA_BUKAREST = {
       + 'Keittiöstä nousi tuoksu, jolle ei tarvittu tulkkia. Menin alas ennen '
       + 'kuin ehdin laskea parven pylväät. Huoneeni löysin illalla naapurini '
       + 'kuorsauksesta.',
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Bukarestin Manucin majatalossa huoneet kiertävät pihaa '
       + 'puuparvien takana. Avasin oven ja kuulin yhtä aikaa kolmet eri '
       + 'kaupat. Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa '

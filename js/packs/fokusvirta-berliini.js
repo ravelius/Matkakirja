@@ -120,7 +120,7 @@ export const FOKUSVIRTA_BERLIINI = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Berliinissä paljastettiin voitonpylväs, jonka '
       + 'koristeina on vallattuja tykinputkia. Niin korkealle nostettu tykki '
       + 'ei ainakaan osu ohikulkijaan. Pylvään juurella poika myi lehtiä, ja '

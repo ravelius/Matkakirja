@@ -196,7 +196,7 @@ export const FOKUSVIRTA_KIOVA = {
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Kiovan luostarin kupolit näkyvät kauas Dneprille, mutta '
       + 'pyhiinvaeltajat menevät maan alle. Seurasin kynttilöitä luoliin. Kun '
       + 'oma liekkini sammui, edellä kulkeva nainen sytytti sen omastaan '

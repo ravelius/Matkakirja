@@ -194,7 +194,7 @@ export const FOKUSVIRTA_SARAJEVO = {
       + 'aamulla katsomatta. Nyt näin jokaisen jäljen. Basaarin kujilla kuului '
       + 'kilkutusta kaikkialta. Kaupunki oli tehnyt aamiaiseni astian käsin.',
     /* Kaanon, kohta 1 — luenta ja äänitteen polku sellaisinaan. */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Sarajevon kupariseppä naputti pannuun kuvioita niin '
       + 'pienellä vasaralla, että olisin hukannut sen liivintaskuun. '
       + 'Viereisessä puodissa kaadettiin kahvia samanlaiseen pannuun. Olin '

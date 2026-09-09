@@ -121,7 +121,7 @@ export const FOKUSVIRTA_WIEN = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Wienin maailmannäyttelyssä näin koneen painavan '
       + 'sanomalehteä silmieni edessä. Se ei tarvinnut edes aikaa '
       + 'ajatellakseen, mitä kirjoitti. Rotunden kupoli peitti taivaan '

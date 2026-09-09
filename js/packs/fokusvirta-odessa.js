@@ -246,7 +246,7 @@ export const FOKUSVIRTA_ODESSA = {
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Odessan portaat on tehty niin leveiksi, että niitä '
       + 'pitkin voisi saapua kokonainen valtakunta. Minä saavuin yksin ja '
       + 'jouduin silti lepäämään puolivälissä. Satamassa vehnäsäkit siirtyivät '

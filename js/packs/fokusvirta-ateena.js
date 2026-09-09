@@ -123,7 +123,7 @@ export const FOKUSVIRTA_ATEENA = {
      * ennen seuraavaa julkaisua, tai kertoja lukee eri tekstin kuin
      * ruudulla lukee.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Ateenassa puhuttiin Troijasta löydetystä kullasta kuin '
       + 'jokainen olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia '
       + 'nerona, asiakas varkaana. Kummallakaan ei ollut kultaa näyttää. '

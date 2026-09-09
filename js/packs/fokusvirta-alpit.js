@@ -33,7 +33,7 @@ export const FOKUSVIRTA_ALPIT = {
       + 'pitkä rasahdus. Siirsin sekä kiven että itseni kauemmas. Alpeilla on '
       + 'syytä erottaa toisistaan hiljaisuus ja se, ettei vuori vielä puhu.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Grindelwaldin jäätikössä oli sinistä niin syvällä, '
       + 'ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Panin kiven '
       + 'reunalle ja odotin, mutta kivi ei suostunut todistajaksi. Sitten '

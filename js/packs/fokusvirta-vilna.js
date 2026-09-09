@@ -162,7 +162,7 @@ export const FOKUSVIRTA_VILNA = {
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Vilnan observatoriossa näytettiin valokuvaa '
       + 'auringonpilkuista. Olin pitänyt aurinkoa virheettömänä valaisimena, '
       + 'mutta silläkin on tahroja. Ikkunan alla kirkontornit osoittivat '

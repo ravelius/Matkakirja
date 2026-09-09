@@ -199,7 +199,7 @@ export const FOKUSVIRTA_DUBLIN = {
      * Viimeinen tagi on kohdassa, jossa merkintä kääntyy epäilyksi —
      * juuri se lause kantaa koko kaupungin sävyn.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Guinnessin panimon vuokrasopimus on tehty '
       + 'yhdeksäksituhanneksi vuodeksi. Sellaisen allekirjoittamiseen '
       + 'tarvitaan uskoa joko olueen tai janoon. Portilla tuoksui lämmin '

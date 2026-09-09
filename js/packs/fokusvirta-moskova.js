@@ -210,7 +210,7 @@ export const FOKUSVIRTA_MOSKOVA = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Kremlissä seisoo valtava kello, joka ei ole soinut '
       + 'kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala on '
       + 'minun huonettani suuremman oloinen. Vartija kertoi painon ylpeästi, '

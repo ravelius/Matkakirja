@@ -34,7 +34,7 @@ export const FOKUSVIRTA_ISLANTI = {
       + 'talot ja niiden takana suuren tyhjyyden. Kaulukseni oli puhtaampi '
       + 'kuin käsitykseni tästä saaresta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Reykjavikin ulkopuolella naiset pesivät pyykkiä '
       + 'kuumassa lähteessä. Höyry nousi maasta, ja tuuli yritti viedä sen '
       + 'merelle. Annoin pestäväksi paitani. Se oli ensimmäinen kerta, kun maa '

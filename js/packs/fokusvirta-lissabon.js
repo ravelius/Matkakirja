@@ -161,7 +161,7 @@ export const FOKUSVIRTA_LISSABON = {
      * (docs/moduulit/tarinakaari.md, luku 7). Neljä tagia, alku ja loppu
      * eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Baixan kadut vedettiin järistyksen jälkeen suoriksi '
       + 'kuin hallitsijan jakaukseksi. Eksyin silti heti, kun poikkesin '
       + 'Alfamaan. Siellä portailla istuva nainen neuvoi ylöspäin. Ylhäällä '

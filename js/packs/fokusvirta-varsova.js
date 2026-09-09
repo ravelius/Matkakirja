@@ -209,7 +209,7 @@ export const FOKUSVIRTA_VARSOVA = {
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Kartassani Varsova kuuluu Venäjälle. Torin leipuri '
       + 'sanoi olevansa puolalainen ja kopautti leipää, jotta kuulisin sen '
       + 'olevan tuoretta. Talot olivat vieri vieressä kuin kuuntelemassa. '

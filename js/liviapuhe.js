@@ -531,28 +531,22 @@ export function livianTiiviste(teksti) {
  * on MUUTTUNUT eikä uusi (peli vaikenee tiivisteen erotessa).
  */
 export const LIVIAN_AANITETYT = {
+  // Taulu tools/generoi-pulu.mjs --kuiva -tulosteesta 9.9.2026: kaikki 45
+  // Euroopan kaupunkikuplat (-3) generoitu omistajan teksteistä
+  // (generoi-pulu.yml ajo 12, ääni Dr. Von, pakota). Numerot 1–2 ovat
+  // varattuja (alustus ja huudahdus poistettu), eikä niillä ole kuplaa.
   'avaus-1': '62c6bcbd',
   'avaus-2': '30c6eb27',
   'avaus-3': '1446cf47',
   'avaus-4': 'b8bf54c6',
   'avaus-5': 'c7f488b4',
-  // Uusi rytmi generoitu 7.9.2026 (generoi-pulu, ääni Dr. Von, pakota):
-  // paljastus 1–3 ja lehtivinkki. Tiivisteet manifestista.
   'paljastus-1': '4dd412c2',
   'paljastus-2': '55959b90',
   'paljastus-3': '531008d4',
-  'lehtivinkki-1': '676644e9',
   'mannerivihje-1': '9b1a96f3',
-  // Euroopan 18 kaupunkia generoitu 7.9.2026 (erät 1 ja 2), "Kääk."-huudahdukset
-  // (sofia-2, wien-2) uusinta-ajossa.
-  // NUMERO 1 PUUTTUU JOKA KAUPUNGILTA (8.9.2026): siinä oli alustus,
-  // joka poistettiin — numero on varattu eikä sillä ole enää kuplaa.
-  // ATEENA-1 ON POISTETTU (omistaja 8.9.2026 klo 19.10): se oli
-  // maadoituksen äänite, ja maadoitus korvattiin kommenttikuplalla.
-  // Ämpärin tiedosto jää orvoksi kuten alustuksetkin; uusi kupla
-  // (ateena-3) odottaa generointia eikä siksi ole tässä taulussa.
-  // Teksti muuttui 8.9.2026 (toinen "Kääk." pois) — äänite odottaa ajoa.
-  'sofia-3': '82771368',
+  'lehtivinkki-1': '676644e9',
+  'ateena-3': '418f4055',
+  'sofia-3': 'da74f265',
   'sofia-5': '1e64f9d0',
   'sofia-6': '2618c9dd',
   'sofia-7': '9118b3f7',
@@ -563,26 +557,49 @@ export const LIVIAN_AANITETYT = {
   'sofia-12': '75c13aff',
   'sofia-13': 'bc7f04ef',
   'sofia-14': 'ced3fd34',
-  'istanbul-3': '97b8ba5a',
-  'bukarest-3': 'aee2c92a',
-  'sarajevo-3': '4ec98aa1',
-  'budapest-3': '979edb25',
-  'wien-3': 'd2399e33',
-  'praha-3': '614f7f30',
-  'krakova-3': 'ce7224cd',
-  'varsova-3': '5c732ab7',
-  'pietari-3': '5845dc3f',
-  'moskova-3': '246d4a35',
-  'kiova-3': '46b284b5',
-  'odessa-3': '2678dada',
-  'helsinki-3': '517dea08',
-  'tampere-3': 'a9036aa1',
-  'tallinna-3': 'ed338f86',
-  'riika-3': 'aa3997d2',
-  'vilna-3': 'b5b7ea25',
-  // Ihmisen matkan neljä välihuomiota generoitu 7.9.2026 illalla
-  // (generoi-pulu, ääni Dr. Von, pakota; omistaja: "laita ihmislinssin
-  // puheet generoitumaan"). Tiivisteet ajon manifestista.
+  'istanbul-3': '756164a4',
+  'bukarest-3': '597547ac',
+  'sarajevo-3': '006c3c2a',
+  'budapest-3': 'bc5ea301',
+  'wien-3': '00047f56',
+  'praha-3': 'b77679bd',
+  'krakova-3': '8bdba29d',
+  'varsova-3': 'eb8985f6',
+  'pietari-3': 'a6e8cbd3',
+  'moskova-3': 'e0081a97',
+  'kiova-3': '424e9548',
+  'odessa-3': '26f74238',
+  'helsinki-3': '2ecdf730',
+  'tampere-3': 'fe83653c',
+  'tallinna-3': '67d40dc7',
+  'riika-3': '914988b0',
+  'vilna-3': '9a1a39a3',
+  'kreeta-3': 'b743530e',
+  'sisilia-3': '08c3c066',
+  'islanti-3': 'da30eaee',
+  'alpit-3': '6e181c84',
+  'lappi-3': '8d9f73fb',
+  'tromssa-3': '76110386',
+  'lontoo-3': '72a05ee9',
+  'dublin-3': '0badc854',
+  'edinburgh-3': 'ddaabb36',
+  'pariisi-3': '8c2abb8d',
+  'marseille-3': 'bc17db80',
+  'lissabon-3': '0bcde086',
+  'madrid-3': '8d2192d8',
+  'barcelona-3': '53e543a2',
+  'granada-3': '986bf065',
+  'sevilla-3': '694115b4',
+  'amsterdam-3': 'a46657ee',
+  'berliini-3': 'f028954d',
+  'venetsia-3': 'ea48851c',
+  'firenze-3': 'c0826d4c',
+  'rooma-3': '6e805810',
+  'dubrovnik-3': '9392e7f8',
+  'tukholma-3': '0dc306e4',
+  'oslo-3': 'fb2b20a7',
+  'bergen-3': 'c030ad82',
+  'kobenhavn-3': '49453206',
   'ihmisen-matka-1': '019b7159',
   'ihmisen-matka-2': '45dafd6e',
   'ihmisen-matka-3': '77366164',

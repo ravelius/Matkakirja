@@ -207,7 +207,7 @@ export const FOKUSVIRTA_BARCELONA = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Barcelonan uusista kortteleista on leikattu kulmat '
       + 'pois. Ensin epäilin muuraria, sitten näin kahden kärryn mahtuvan '
       + 'kääntymään. Insinööri Cerdà on piirtänyt kaupunkilaisille tilaa '

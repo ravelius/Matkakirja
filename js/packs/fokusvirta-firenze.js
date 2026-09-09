@@ -189,7 +189,7 @@ export const FOKUSVIRTA_FIRENZE = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Firenzen David seisoo aukiolla ilman rihman kiertämää, '
       + 'ja minä hikoilen liivissä. Patsas aiotaan siirtää sisälle sateelta '
       + 'suojaan. Kolmensadan vuoden jälkeen tämä lienee kohtuullista. '

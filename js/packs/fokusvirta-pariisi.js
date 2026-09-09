@@ -108,7 +108,7 @@ export const FOKUSVIRTA_PARIISI = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Pariisin uusi oopperatalo on yhä kesken, mutta mahtaako '
       + 'sisällä enää tapahtua mitään seinien veroista? Kultaa, pylväitä, '
       + 'marmoria. Kokonainen rakennus parhaissa juhlatamineissaan. '

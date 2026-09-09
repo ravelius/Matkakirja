@@ -117,7 +117,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
       + 'ennen oikeaa. Olin tullut katsomaan huvituksia. En arvannut, että '
       + 'paras niistä olisi kaksi ihmistä, joilla ei ollut enää tarvetta pysyä '
       + 'tahdissa.',
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Kööpenhaminan Tivolissa näin vanhan pariskunnan '
       + 'tanssivan niin hitaasti, että orkesteri ehti edelle. He eivät '
       + 'lähteneet sen perään. Puistossa sytytettiin lamppuja, ja lampi sai '

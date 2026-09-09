@@ -36,7 +36,7 @@ export const FOKUSVIRTA_TROMSSA = {
       + 'Sama meri ruokkii täällä sekä vatsan että uteliaisuuden. Jälkimmäinen '
       + 'vaikutti pohjattomalta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Tromssaan on perustettu museo. Satamasta tuodaan sinne '
       + 'pohjoisen luita ja kiviä, asioita joista laivanvarustaja ei '
       + 'tavallisesti maksa. Pöydällä makasi pieni simpukka ja sen vieressä '

@@ -171,7 +171,7 @@ export const FOKUSVIRTA_EDINBURGH = {
      * luentaprosessi: ruututeksti = luentateksti sanasta sanaan).
      * Kolme tagia, alku ja loppu eri sävyssä.
      */
-    /* ÄÄNITE VANHENTUNUT (9.9.2026): generoitava uudelleen tästä. */
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Edinburghissa katu saattaa olla toisen kadun katto. '
       + 'Menin portaita alas ja tulin ulos korkealla jonkun ikkunan '
       + 'yläpuolella. Pyykkinaru kulki kujan yli, ja sukat riippuivat kuilun '
