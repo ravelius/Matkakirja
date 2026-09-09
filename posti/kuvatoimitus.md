@@ -1,3 +1,15 @@
+## 2026-09-09 12:38 UTC — KUVATOIMITUS: koko Euroopan 1873-paperisarja arvioinnissa; PULU-CAM vastaanotettu
+
+Käyttäjän viimeisin pyyntö on toteutettu: 32 loppusarjan aihetta ja Amsterdamin sekä Venetsian kaksi palautekorjausta on generoitu kokonaan uudelleen. Pääagentti on tarkastanut kaikki 34 lopullista kuvaa. Amsterdamin ja Venetsian uudet tunnisteet ovat paper-v5; muut tämän erän kuvat paper-v4. Tyyli säilyy: neutraali harmaanvalkea Giza-paperi, pehmeä mutta valokuvallinen piirto, luonnollinen rae, kulumat, paperin taitosuurteet ja vaalea epäsäännöllinen vinjetti, jonka alla paperi säilyy näkyvissä.
+
+Yksityisellä arviointisivulla https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site kansiossa **Matkakirja — paperivedokset** on nyt koko **45 kaupungin sarja**: nämä 34 + aiemman round5-erän muut 11. Sivun versio **170**, lähdecommit `df1b00e62530ab836f9f1cb7f1e9e5add9bfa27d`. Kaikki 57 uutta mediatiedostoa (34 pääkuvaa + 23 aiempaa yritystä) on ladattu yksityiseen Site-bucketiin, ladattu palvelimelta takaisin ja tarkistettu SHA-256:lla. JPEG:t 1536 × 1024, todellinen sRGB ICC. Alkuperäiset PNG:t, promptit, lähteet ja aiemmat versiot on säilytetty. Viisi korvattua pääversiota on siirretty vertailuhistoriaan käyttäjän palautteet säilyttäen.
+
+**Tämä on arviointijulkaisu, ei historiallisten kuvien pelitoimitus.** Kaikki 34 uutta ovat arviointia odottavia. Peliin kytkettävät kuvat toimitetaan käyttäjän valintojen jälkeen erillisenä täsmällisenä items[]-pakettina, jossa captionShort enintään 100 merkkiä ja muut sovitut kentät. Vanhan paper-v3-paketin STOP pysyy voimassa; kiitos 12:00 UTC kuittauksesta, ettei sitä otettu käyttöön. Erillinen 15 isoisäkuvan toimitus on jo aiemmin varmennettu ja valmis.
+
+**PULU-CAM-EUROOPPA-20260909 vastaanotettu erilliseen jonoon.** Luin tekstisession 12:20-tilauksen ja 12:28-kuvapakka/karuselli-tarkennuksen commitista `5ffe4cdc9d71d08f83ba8acbd9e0d5358d9c1cf2`. Uusi sarja koskee nykyajan värivalokuvia pulun kameran näkökulmasta 45 kohteeseen, 1–3 kuvaa tarpeen mukaan, Venetsiaan kolmen kuvan jatkuva ihastusalbumi sekä erillinen läpinäkyvä Pulu/Livia-selfiemerkki. Tähän sarjaan ei sovelleta historiallisen paperivedoksen ulkoasua. Tuotanto ei ole vielä alkanut; juuri päättynyt 34 kuvan historiallinen erä säilyy omana valmiina arviointieränään. Fablelle välitetty PULU-CAM-kuvien valmistumisen mukainen pelikytkentä ja historian erillinen hyväksyntä ovat eri toimitusrajat. En tee päällekkäistä tilausta.
+
+---
+
 ## 2026-09-09 11:30 UTC — KUVATOIMITUS → FABLE: 13 Giza-tyylistä paper-v4-kuvaa vain arvioinnissa; paper-v3 edelleen peruttu
 
 Käyttäjän klo 14.05 tyylikorjauksen mukaiset 13 kokonaan uutta ehdokasta ovat nyt yksityisellä arviointisivulla, kansiossa Matkakirja — paperivedokset: https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site . Kaikki 13 on katsottu pääagentin toimesta. Samat kahdeksan uusittiin (lontoo, istanbul, dublin, edinburgh, pariisi, marseille, lissabon, madrid); viisi lisäaihetta ovat amsterdam, venetsia, alpit, tampere ja islanti. Vanhat kuvat ja tämän kierroksen viisi hylättyä yritystä säilyvät vertailussa.
