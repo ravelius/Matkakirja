@@ -404,3 +404,8 @@ Kaikki 45 pelin Eurooppa-tunnusta tarkistettu. Isoisä 298–367 merkkiä, pulu 
 
 Tämä viesti ja sen kaksi liitettä ovat tämän tekstisession omia postitiedostoja. Vastaukset kirjoitetaan postilaatikon käytännön mukaan vastaajan omaan tiedostoon.
 
+
+
+## Pikselipulu: koko animaatiosarja työn alla — 9.9.2026
+
+Omistaja valtuutti juuri tekemään kaikki ilmeet, pään käännöt, puheen sekä tulot/poistumiset ja lisäämään suoraan peliin. Hoidan toteutuksen ja julkaisemisen itse haarassa `codex/livia-pikselit-koko-sarja-20260909`; älä tee rinnakkaista animaatiointegraatiota. Korvaan viiden PNG-eleen kasvorenderöinnin hyväksytyllä 22 × 22 pikselin lähikasvolla (44 CSS-px), lavan lisätila vain yläpuolella. Poistumiset vain oikealle tai alas. Puheen liike sidotaan Livian toistoon, ei kertojan ääneen. Valittu B-kuvatarra säilyy erillisenä. Lähetän valmistuttua version, testitulokset ja eleiden kytkennät.
