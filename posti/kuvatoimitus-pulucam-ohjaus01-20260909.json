@@ -1,0 +1,144 @@
+{
+  "orderId": "PULU-CAM-EUROOPPA-20260909",
+  "batchId": "PULU-CAM-EUROOPPA-20260909-OHJAUS-01",
+  "status": "public-r2-verified-ready-for-game-import",
+  "gameIntegrationVerified": false,
+  "ownerDirectDeliveryAuthorized": true,
+  "authorizationEvidence": {
+    "threadId": "6aa0f60f-5df8-83ed-89c6-cdc5771d942f",
+    "userTurnIds": [
+      "ee37961a-1ee4-4249-8ed3-042ac27c35b5",
+      "b7733747-bd81-462d-82e5-5fe7e65e46b2"
+    ],
+    "mailboxSource": "posti/matkakirja-eurooppa-20260909.md",
+    "messageTimestamp": "2026-09-09 15:59 UTC"
+  },
+  "items": [
+    {
+      "cityId": "firenze",
+      "order": 1,
+      "series": "pulu-cam",
+      "fileName": "pulu-cam-firenze-01-r20260909-14mm-v4.jpg",
+      "captionShort": "Firenze: Davidin kopio osaa pitää ilmeensä myös lähikuvassa.",
+      "caption": "Piazza della Signorian David on kopio. Michelangelon alkuperäinen veistos vietiin vuonna 1873 suojaan Galleria dell’Accademiaan. Aukiolla patsas kuuluu yhä Palazzo Vecchion ympärille levittäytyvään kivisten kertomusten joukkoon. Isoisä vertasi Davidin kättä omaansa. Minä tutkin ilmettä: sama keskittynyt katse joka suunnasta. Malli ei pyytänyt nähdä kuvaa eikä ehdottanut uutta otosta. Arvostan sellaista ammattitaitoa.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/",
+        "https://portalegiovani.comune.fi.it/urlnews/webzine/46183.html",
+        "https://en.wikipedia.org/wiki/Palazzo_Vecchio",
+        "https://cdn.getyourguide.com/img/tour/11e6e1a6fa1ad3deaf35396de0c298da7dd3862d37ef8ec733486d6204ed13b9.jpg/148.jpg",
+        "https://a.storyblok.com/f/291714/4032x3024/fbdd6c78dd/20220428_104442.jpg"
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "8d5b7f110860836dd3cdaaf805e94a43466f7993ae522cd2d3eb1366b0df669b",
+      "bytes": 753469,
+      "promptProvenance": {
+        "promptSourceFile": "posti/matkakirja-pulucam-20260909-ohjaus-era1.md",
+        "promptSourceCommit": "a3c0af5d46566f831d4d45b08c77521cb8fd5667",
+        "promptSourceBlob": "95ffb049256a0c622743c9f924de205841c2040b"
+      },
+      "promptAdaptation": "Text-session scene retained; generation wording refined only for verified location, framing and geometry. Actual executed prompt is preserved separately.",
+      "reconstructionNotes": "Entirely new tight AI reconstruction. The frame deliberately excludes all openings and landmarks: only the outdoor replica head/neck/shoulder, a continuous crop of Palazzo Vecchio rusticated pietra-forte wall, and a very narrow bottom sliver of piazza paving are shown. The fictional pigeon flight is not a measured photogrammetric view.",
+      "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-firenze-01-r20260909-14mm-v4.jpg",
+      "publicUrl": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-firenze-01-r20260909-14mm-v4.jpg",
+      "targetKey": "matkakirja/pulu-cam/pulu-cam-firenze-01-r20260909-14mm-v4.jpg",
+      "mime": "image/jpeg",
+      "sRGB": true,
+      "rootQa": "pass",
+      "actualGenerationPrompt": "Create one authentic present-day colour photograph from the first-person viewpoint of Livia, a carrier pigeon with her own camera. Use a full-frame 14 mm rectilinear ultra-wide lens: strong near/far perspective, natural materials, believable depth and light. This is a photograph, never an illustration or CGI scene. The camera is where the bird's eyes would be; the photographer herself is not visible. No floating third-person view of a bird holding a camera. No circular fisheye, fake depth blur, synthetic HDR, text, sticker, watermark, vintage paper or decorative frame. Keep the full composition readable at phone size. Landscape 3:2, deliver 1536x1024 sRGB. Use real current place-reference images for the site geometry; people and incidental events are fictional everyday moments.\n\nThe scene is Piazza della Signoria in Florence, beside the current outdoor WHITE-MARBLE replica of Michelangelo's David at Palazzo Vecchio. Capture a fleeting pigeon flight close beside the statue's LEFT shoulder, with the camera at roughly shoulder height directed toward the face. The correctly shaped marble cheek, intent eye, nose, closed mouth and curls occupy a large near foreground on the left; enough neck and shoulder remain to explain the statue and its ordinary human-sized monumental scale. The head turns toward its own left, outward across the piazza, as in the real installation. Use the real statue's proportions; the 14 mm perspective exaggerates proximity without bending or enlarging it into a fantasy giant. Late afternoon light brings out pale marble against warm architecture. Quiet comedy: an intensely serious stone model photographed absurdly close. No living pigeons, no changed expression, no new statue features, no gratuitous focus on anatomy.\n\nBACKGROUND MUST BE AN EXTREMELY TIGHT, ERROR-PROOF CROP. Behind the face and shoulder show ONLY a continuous flat field of Palazzo Vecchio's authentic rough, irregular brown pietra-forte rusticated masonry wall. At the absolute bottom edge only, include a very narrow downward sliver of gray Piazza della Signoria paving with two or three tiny present-day pedestrians, enough to establish height. Absolutely NO doorway, doorframe, arch, window, niche, white stone trim, decorative portal, inscription, plaque, banner, flag, letters, roof, skyline, tower, Duomo, Loggia, Uffizi, arcade, colonnade, other building, landmark, companion statue or second sculpture anywhere in the frame.\n\nThe camera is visibly in a brief close pass through a slight natural bank, not hovering. No photographer pigeon, wing, body, camera device or photographer shadow. No text, badge, paper, frame, painterly rendering, CGI, artificial blur or HDR.\n",
+      "textSessionOriginalPrompt": "Create one authentic present-day colour photograph from the first-person viewpoint of Livia, a carrier pigeon with her own camera. Use a full-frame 14 mm rectilinear ultra-wide lens: strong near/far perspective, natural materials, believable depth and light. This is a photograph, never an illustration or CGI scene. The camera is where the bird's eyes would be; the photographer herself is not visible. No floating third-person view of a bird holding a camera. No circular fisheye, fake depth blur, synthetic HDR, text, sticker, watermark, vintage paper or decorative frame. Keep the full composition readable at phone size. Landscape 3:2, deliver 1536x1024 sRGB. Use real current place-reference images for the site geometry; people and incidental events are fictional everyday moments. The scene is Piazza della Signoria in Florence, beside the outdoor marble replica of Michelangelo's David at Palazzo Vecchio. Capture a fleeting pigeon flight close beside the statue's shoulder, with the camera at roughly shoulder height and directed toward its face. The correctly shaped marble cheek, intent eye, nose and curls occupy a large near foreground at one side; enough shoulder and neck remain to explain the statue. A physically correct slice of Palazzo Vecchio and present-day square life recedes behind it. Use the real statue's proportions, head direction and installation from references; the 14 mm perspective exaggerates proximity without deforming the sculpture. Late afternoon light brings out pale stone against the warm architecture. Quiet comedy: an intensely serious stone model being photographed absurdly close. No living pigeons, no changed expression on the statue, no new statue features, no gratuitous focus on anatomy. This frame must feel physically made during a brief close pass, not like a portrait composited onto a city.\n"
+    },
+    {
+      "cityId": "rooma",
+      "order": 1,
+      "series": "pulu-cam",
+      "fileName": "pulu-cam-rooma-01-r20260909-14mm-text1-v2.jpg",
+      "captionShort": "Rooma: isoisä katsoi aukosta ylös, minä katsoin alas.",
+      "caption": "Pantheonin kupolin keskellä oleva oculus on avoin taivaalle. Aurinko kuljettaa valoa sen kautta sisään, ja sade pääsee lattialle asti. Ylhäältä aukko näyttää valtavalta silmältä, jonka takana ihmiset liikkuvat pieninä. Isoisä ihmetteli, miksei näin vanhaa kattoa ollut paikattu. Minusta avoimuudessa on puolensa. Lensin vain ohi ja kurkistin: vieraan kuuluu tietää, milloin hän on toisen talon yllä.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.pantheonroma.com/en/pantheon-history/",
+        "https://www.pantheonroma.com/en/2025/04/24/the-oculus-of-the-pantheon/",
+        "https://www.vigilfuoco.tv/eventi/lancio-di-petali-dalla-cupola-del-pantheon",
+        "https://hrtprikazuje.hrt.hr/hrt1/rimski-panteon-anticka-megastruktura-0-12197405",
+        "https://www.flickr.com/photos/escriteur/28753433533",
+        "https://www.rainews.it/video/2025/06/pantheon-vigili-del-fuoco-pioggia-di-petali-in-occasione-della-pentecoste-d7ec84a1-0da1-4b59-8a0a-831713e71490.html"
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "2e554371b92587a818d9597bbdf62936b2fccb8e7663e4705e77000da37e79b8",
+      "bytes": 916549,
+      "promptProvenance": {
+        "promptSourceFile": "posti/matkakirja-pulucam-20260909-ohjaus-era1.md",
+        "promptSourceCommit": "a3c0af5d46566f831d4d45b08c77521cb8fd5667",
+        "promptSourceBlob": "95ffb049256a0c622743c9f924de205841c2040b"
+      },
+      "promptAdaptation": "Text-session scene retained; generation wording refined only for verified location, framing and geometry. Actual executed prompt is preserved separately.",
+      "reconstructionNotes": "Source-grounded imagined passing-pigeon view of the real Pantheon roof: patinated bronze collar, radial lead panels, deep dark interior with distant marble grid and tiny visitors. Camera position is reconstructed, not a documented photograph; incidental visitors fictional. V1 rejected because interior looked too shallow; V2 restores depth and dome curvature with restrained interior exposure.",
+      "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-rooma-01-r20260909-14mm-text1-v2.jpg",
+      "publicUrl": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-rooma-01-r20260909-14mm-text1-v2.jpg",
+      "targetKey": "matkakirja/pulu-cam/pulu-cam-rooma-01-r20260909-14mm-text1-v2.jpg",
+      "mime": "image/jpeg",
+      "sRGB": true,
+      "rootQa": "pass",
+      "actualGenerationPrompt": "Create one authentic present-day colour photograph from the first-person viewpoint of Livia, a carrier pigeon with her own camera. Use a full-frame 14 mm rectilinear ultra-wide lens: strong near/far perspective, natural materials, believable depth and light. This is a photograph, never an illustration or CGI scene. The camera is where the bird's eyes would be; the photographer herself is not visible. No floating third-person view of a bird holding a camera. No circular fisheye, fake depth blur, synthetic HDR, text, sticker, watermark, vintage paper or decorative frame. Keep the full composition readable at phone size. Landscape 3:2, deliver 1536x1024 sRGB. Use real current place-reference images for the site geometry; people and incidental events are fictional everyday moments. Photograph the real present-day Pantheon in Rome while the pigeon is flying a few metres ABOVE its roof, glancing diagonally downward across the rim of the open oculus. Include the weathered exterior roof surface in the near foreground, the real aperture and rim, and a convincing glimpse deep down to the rotunda floor with a few tiny modern visitors. The interior must have the immense depth of the real building, not resemble a shallow pit or swimming pool. Use correct current roof cladding, ring geometry and floor pattern from reference photographs. The oculus is fully open, without glazing. Natural daylight outside and realistically darker interior, exposure holding both with believable contrast. A slight bank in the framing conveys a passing flight; there is no hovering drone or diagrammatic perfect symmetry. The story is an intimate reverse of a visitor looking up, full of curiosity and quiet respect. No wing, body, camera device or other pigeon in frame.\n\nReference roles: image1 is the actual roof/collar geometry and materials, image2 the correct floor pattern. Reference photos are only for architecture, not composition or event content; never reproduce firefighters, petals, logos or text. Camera during flight about 5 metres ABOVE the oculus, approximately 1 metre off its centre, looking DOWN only 12 degrees off vertical, banked slightly. Frame mostly weathered grey-brown lead roof and its green bronze collar around the opening, with NO skyline, no distant landmark. The oculus opening remains about 9 metres across, but the actual floor is a staggering 43.44 metres below. The deep interior is mostly dark open air and shadow; through the narrow opening, reveal only a SMALL distant patch of correctly patterned marble floor and a few TINY overhead human figures. Convey the enormous drop with strong scale separation and very subdued interior details. The hole must not widen to replace the whole dome. Never place the tall drum walls immediately beneath the lip or show a complete rotunda wall as a shallow well. It is fine for much of the interior to be shadowed or occluded, but the little floor patch and tiny people must be findable. Photo exposure is for the roof, giving a genuinely dark cavernous interior. The actual thin metal cap collar is not thick stone masonry. Keep the 14mm rectilinear photographic viewpoint and the original commissioned story.\n",
+      "textSessionOriginalPrompt": "Create one authentic present-day colour photograph from the first-person viewpoint of Livia, a carrier pigeon with her own camera. Use a full-frame 14 mm rectilinear ultra-wide lens: strong near/far perspective, natural materials, believable depth and light. This is a photograph, never an illustration or CGI scene. The camera is where the bird's eyes would be; the photographer herself is not visible. No floating third-person view of a bird holding a camera. No circular fisheye, fake depth blur, synthetic HDR, text, sticker, watermark, vintage paper or decorative frame. Keep the full composition readable at phone size. Landscape 3:2, deliver 1536x1024 sRGB. Use real current place-reference images for the site geometry; people and incidental events are fictional everyday moments. Photograph the real present-day Pantheon in Rome while the pigeon is flying a few metres ABOVE its roof, glancing diagonally downward across the rim of the open oculus. Include the weathered exterior roof surface in the near foreground, the real aperture and rim, and a convincing glimpse deep down to the rotunda floor with a few tiny modern visitors. The interior must have the immense depth of the real building, not resemble a shallow pit or swimming pool. Use correct current roof cladding, ring geometry and floor pattern from reference photographs. The oculus is fully open, without glazing. Natural daylight outside and realistically darker interior, exposure holding both with believable contrast. A slight bank in the framing conveys a passing flight; there is no hovering drone or diagrammatic perfect symmetry. The story is an intimate reverse of a visitor looking up, full of curiosity and quiet respect. No wing, body, camera device or other pigeon in frame.\n"
+    },
+    {
+      "cityId": "tromssa",
+      "order": 1,
+      "series": "pulu-cam",
+      "fileName": "pulu-cam-tromssa-01-r20260909-14mm-v3.jpg",
+      "captionShort": "Tromssa: yksi simpukankuori ja koko meri täynnä kysymyksiä.",
+      "caption": "Tromssan Polaarimuseo toimii vanhoissa tullirakennuksissa meren äärellä. Se kertoo pyynnistä, retkikunnista ja arjesta pohjoisessa. Museon laituri on rakennettu uudelleen vanhojen valokuvien avulla. Laudalle jäänyt simpukankuori ei kuulu näyttelyyn, mutta pysäytti minut silti. Isoisäkin huomasi, että pienestä esineestä voi alkaa suuri uteliaisuus. Minä aloitin tarkistamalla, oliko asunto jo vapaa.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://en.uit.no/tavla/artikkel?p_document_id=804921",
+        "https://www.visittromso.no/polar-museum",
+        "https://en.uit.no/om/historie",
+        "https://uit.no/Content/672073/cache%3D20222601171440/transformation%3DkompJpgHighTommy/Foto%2C-Marius-Fiskum_tmu_Slider1.jpg",
+        "https://uit.no/Content/411677/transformation%3Dscale10000x560/tollbunaustet.jpg"
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "1edfbf2c4cee2280b6df2fdd9c30b5c1207889133868687ef2dbffdda11d13eb",
+      "bytes": 849579,
+      "promptProvenance": {
+        "promptSourceFile": "posti/matkakirja-pulucam-20260909-ohjaus-era1.md",
+        "promptSourceCommit": "a3c0af5d46566f831d4d45b08c77521cb8fd5667",
+        "promptSourceBlob": "95ffb049256a0c622743c9f924de205841c2040b"
+      },
+      "promptAdaptation": "Text-session scene retained; generation wording refined only for verified location, framing and geometry. Actual executed prompt is preserved separately.",
+      "reconstructionNotes": "UiT states that the museum occupies the former Customs warehouse, seaside building and office at Skansen. The 1991 reconstructed pier is perpendicular to the warehouse on its south side and nearly closes Tollbufjæra; it stands on piles. Inspected UiT photographs show the long dark-red vertical-board warehouse at the waterline, steep dark slate gable roof, white-trimmed openings and cargo-door/hoist features. The generated shell, people, small boats and exact summer moment are fictional. The warehouse and pier are a source-grounded visual reconstruction, not a documentary photograph or an assertion that this was the 1872 museum building. V1 was rejected after directional QA because its eastern-shore mountain/bridge background could not coexist with the depicted pier-to-warehouse viewing axis. V2 uses the supplied UiT photograph as the direct geometry reference: warehouse gable at left, long waterside wall receding right, pier foreground, and no distant Tromsø landmarks.",
+      "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tromssa-01-r20260909-14mm-v3.jpg",
+      "publicUrl": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tromssa-01-r20260909-14mm-v3.jpg",
+      "targetKey": "matkakirja/pulu-cam/pulu-cam-tromssa-01-r20260909-14mm-v3.jpg",
+      "mime": "image/jpeg",
+      "sRGB": true,
+      "rootQa": "pass",
+      "actualGenerationPrompt": "Create a completely new present-day summer colour photograph using the attached UiT Polar Museum photograph only as the authoritative geometry reference.\n\nMatch its spatial relationship precisely: the long red historic customs warehouse stands at the waterfront on piles; its gable end is at the LEFT and its long waterside wall extends and recedes toward the RIGHT. A reconstructed timber pier occupies the foreground and lies perpendicular to the warehouse area. Supporting pale customs buildings sit inland behind it. Keep the warehouse’s vertical red timber boards, white trim, steep dark slate gable roof, cargo doors, simple hoist structures, timber piles and small tidal shoreline. All building walls and gables must be completely blank: NO letters, signs, logos, numbers, pseudo-writing or decorative text anywhere.\n\nThis is an authentic modern PULU-CAM photograph from a camera only 4–6 cm above the pier boards, a physically possible pigeon standing viewpoint. Full-frame equivalent 14 mm RECTILINEAR ultrawide, strong low foreground and deep natural perspective, no fisheye or bent architecture. Place one small empty blue-mussel shell hinge-side down near the lens at lower left-centre, with realistic blue-black edge and nacre interior, shaped and sized like a real shell. Perspective makes it feel like a tiny empty boat. Weathered board seams lead toward the red museum warehouse. Show only a narrow local sliver of harbour water and the immediate piles/tidal edge. Exclude the distant skyline entirely: NO Tromsø Bridge, NO Arctic Cathedral, NO mountain panorama and no invented landmark.\n\nClear cool northern summer daylight, restrained warm highlight on the wood, no snow or ice. Natural documentary color and moderate deep focus so shell, boards and warehouse remain readable. The photographer pigeon is never visible: no bird, wing, feet, reflection or shadow. No sticker, caption, text, watermark, paper, border, vintage treatment, polar bear props, CGI, illustration, HDR or fantasy architecture. Landscape 3:2, requested 1536×1024 sRGB.\n",
+      "textSessionOriginalPrompt": "Create one authentic present-day colour photograph from the first-person viewpoint of Livia, a carrier pigeon with her own camera. Use a full-frame 14 mm rectilinear ultra-wide lens: strong near/far perspective, natural materials, believable depth and light. This is a photograph, never an illustration or CGI scene. The camera is where the bird's eyes would be; the photographer herself is not visible. No floating third-person view of a bird holding a camera. No circular fisheye, fake depth blur, synthetic HDR, text, sticker, watermark, vintage paper or decorative frame. Keep the full composition readable at phone size. Landscape 3:2, deliver 1536x1024 sRGB. Use real current place-reference images for the site geometry; people and incidental events are fictional everyday moments. Place the camera only a few centimetres above the wooden boards of the real Polar Museum pier at Skansen in Tromso, using the museum's current pier and building reference photographs. A small empty blue-mussel shell rests naturally near the lens, its curved interior catching cool northern light; perspective makes it look like a tiny abandoned boat without altering its realistic shape or scale. Beyond it, the pier leads into the correctly oriented historic Customs waterfront buildings now used by the Polar Museum, with a little harbour water and present-day life visible. The shell is tack-readable, the museum still recognisable, with credible optical depth rather than a pasted sharp foreground and blurred background. Clear cool summer daylight with a restrained warm highlight on the old wood. This is an inquisitive pigeon noticing a small mystery, not a wildlife portrait, a food advertisement or a macro photograph with no location. No pigeon in the frame, no fictional new museum architecture, no polar bear props or snow in summer.\n"
+    }
+  ],
+  "pending": [
+    {
+      "cityId": "tampere",
+      "order": 1,
+      "reason": "Awaiting text-session location adaptation; fixed terrace roof contradicts second flying view."
+    },
+    {
+      "cityId": "tampere",
+      "order": 2,
+      "reason": "Awaiting text-session location adaptation; fixed terrace roof contradicts second flying view."
+    }
+  ],
+  "stickerSelected": null,
+  "deliveryVerifiedAt": "2026-09-09T16:28:11.448Z"
+}
