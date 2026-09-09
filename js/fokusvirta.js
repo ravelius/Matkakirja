@@ -2357,7 +2357,18 @@ function kytkeLuentakuvanRaahaus(naytto) {
       liike: false,
     };
     naytto.raahattu = false;
-    paneeli.setPointerCapture?.(t.pointerId);
+    /*
+     * OSOITINTA EI OTETA KIINNI VIELÄ TÄSSÄ. Kaapattu osoitin siirtää
+     * myös `pointerup`- ja `click`-tapahtuman kaappaajalle (paneelille),
+     * jolloin paneelin SISÄLLÄ olevien nappien (isoisän `.fokusvirta-kuva`
+     * ja PULU-CAM-pakan `.pulucam-kuva`) omat kuuntelijat eivät saa
+     * napautusta lainkaan — kuva ei siis avautunut suurennokseksi
+     * oikealla sormella tai hiirellä, vaikka ohjelmallinen `click()`
+     * (savukkeet) toimi. Sama havainto on kirjattu jo js/karttazoom.js:ään.
+     * Kiinniotto siirtyy siksi liikekynnyksen ylitykseen: napautus jää
+     * napautukseksi ja raahaus saa kaappauksensa silloin, kun sitä
+     * oikeasti tarvitaan.
+     */
     t.stopPropagation?.();
   });
   paneeli.addEventListener('pointermove', (t) => {
@@ -2365,6 +2376,11 @@ function kytkeLuentakuvanRaahaus(naytto) {
     const dx = t.clientX - veto.x;
     const dy = t.clientY - veto.y;
     if (!veto.liike && !onRaahaus(dx, dy)) return;
+    if (!veto.liike) {
+      // Vasta tästä eteenpäin ele on raahaus: nyt osoitin otetaan kiinni,
+      // jotta veto jatkuu vaikka sormi karkaisi paneelin ulkopuolelle.
+      try { paneeli.setPointerCapture?.(veto.id); veto.kaapattu = true; } catch { /* veto toimii ilman kaappausta */ }
+    }
     veto.liike = true;
     naytto.raahattu = true;
     t.preventDefault?.();
@@ -2378,7 +2394,9 @@ function kytkeLuentakuvanRaahaus(naytto) {
   });
   const lopeta = () => {
     if (!veto) return;
-    paneeli.releasePointerCapture?.(veto.id);
+    if (veto.kaapattu) {
+      try { paneeli.releasePointerCapture?.(veto.id); } catch { /* jo vapautettu */ }
+    }
     veto = null;
   };
   paneeli.addEventListener('pointerup', lopeta);
