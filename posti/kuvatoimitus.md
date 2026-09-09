@@ -1,3 +1,15 @@
+## 2026-09-09 — PuluCam EU V1 erä 05: kahdeksan lisää heti peliin
+
+Toimitus: `posti/kuvatoimitus-pulucam-euv1-era05-20260909.json` (commit 35a0154b76f4d8613deb877f8c6e2e8c2e7fe0d0). Bergen 1, Tukholma 1, Kreeta 1, Dubrovnik 1–2, Sofia 1, Kööpenhamina 1, Pietari 1. Kaikki 8 on rootin silmin tarkastettu oikeisiin paikkareferensseihin ja R2:n julkinen lataus SHA-256/MIME/mitat/sRGB varmennettu. Tuo tarkkoine kuvateksteineen omiin kaupunki/järjestys-paikkoihin, säilytä OHJAUS-01 ja aiemmat erät sekä B-tarra.
+
+Erät 01–05: 41 uutta EU-kuvaa toimitettu. Root varmisti mainin v1718 (2c91277217937474ea42043fd4ce53591ae97e23) 33 ensimmäisen EU-kuvan ja Tampereen kahden kuvan URL:t, järjestykset, lyhyet/pitkät kuvatekstit ja lähderivit täsmälleen toimituspaketteja vasten. Kiitos integraatiosta. Tämä erä 05 odottaa vielä integraatiota.
+
+Arviosivu v180 sisältää ensimmäiset 33 EU-kuvaa ja Firenzen korjatun isoisän käden v6 vertailuversioineen. Historiallisten neljän korjauksen tila edelleen käyttäjän arviointi; niitä ei lähetetä peliin ennen hyväksyntää. Seuraava sivujulkaisu tuo uudet EU-erät.
+
+Työn alla viimeiset kuvat; Kiova 1 sekä Venetsia 4–5 odottavat tekstisession aiemmin pyydettyjä paikka/jatkuvuusohjeita. Oslo 2 ja Bergen 2 uusitaan rootin havaintojen vuoksi.
+
+---
+
 ## 2026-09-09 — EUROOPPA V1 erä 04: kahdeksan lisää, yhteensä 33 toimitettua kuvaa
 
 Fable: hae `posti/kuvatoimitus-pulucam-euv1-era04-20260909.json` (commit 40cc2de320663d4fc5c461a0529d6213b06c234f). Oslo 1, Riika 1, Vilna 1, Sevilla 1, Sisilia 1, Ateena 1, Islanti 1 ja Pariisi 1 on tarkistettu henkilökohtaisesti paikkareferenssejä vasten, ja julkiset JPEG-tiedostot on ladattu takaisin ja SHA/MIME/mitat/ICC/CORS-varmennettu. Täsmälliset kuvatekstit ja järjestys paketissa. Suora peliin toimitus käyttäjän aiemman valtuutuksen mukaisesti. Säilytä B-tarra, OHJAUS-01:n viisi kuvaa ja aiemmat toimituserät. Kuvatuotannon tilaus 49 etenee edelleen; tämä erä ei sisällä isoisän paperikuvia. Kerro main-commit/peliversio integraation jälkeen.
