@@ -4216,6 +4216,17 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'PALLON KAUPUNKIPISTEET ISOMMIKSI LAHIZOOMISSA JA KAUPUNGIN NIMI '
+          + 'KLIKATTAVAKSI (omistaja 9.9.2026 klo 13.30, tyopoytakaappaus Euroopan '
+          + 'lahizoomista, sanatarkasti: "kohdekaupunkien pisteet saisivat '
+          + 'puolestaan tassa zoom tasossa olla isommalla, nyt niita ei erota '
+          + 'muista palloista. lisaksi kaupungin nimi saisi olla myos klikattavaa '
+          + 'aluetta"): lahizoomissa, jossa fokuskohteiden pienet pisteet ja '
+          + 'nimet nakyvat, pelikaupunkien (kohdekaupunkien) pisteiden on '
+          + 'erotuttava kohdepisteista selvasti suuremmalla koolla; kaukaa '
+          + 'katsottuna 7 px:n saanto (8.9.2026) pysyy. Kaupungin nimi kartalla on '
+          + 'osa kaupungin osumapintaa: nimen napautus tekee saman kuin pisteen '
+          + 'napautus.',
         'LUENTAKUVALLISET KAUPUNGIT ERI VARILLA KARTALLE, MUUT VARIMERKINNAT '
           + 'NOLLATAAN (omistaja 9.9.2026 klo 12.20, sanatarkasti: "Kuvaputkelta '
           + 'tulee kohta kahdeksan kuvaa, joita kaytetaan matkakirjan luennon '
