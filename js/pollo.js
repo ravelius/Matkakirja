@@ -2965,7 +2965,7 @@ class Pollo {
      * Ele on koriste; kupla ja kuvat ovat peli.
      */
     try {
-      this.kasvoEleet?.kupla(kupla.textContent);
+      this.kasvoEleet?.kupla(kupla.textContent, { saapuu: kupla.classList.contains('pollo-vihje-lennahtaa') });
     } catch { /* ele jää väliin, kupla tulee silti */ }
     this.asetaPinonPaikka();
     /*

@@ -25,7 +25,7 @@ test('mietintäliike seuraa näkyvän lauseen aihetta', () => {
   assert.equal(livianMietintaEle('Hetki, pululla pulla suussa..'),'crumb');
   assert.equal(livianMietintaEle('Hetki, murut pois kirjan päältä..'),'crumb');
   assert.equal(livianMietintaEle('Pieni hetki, arkiston hyllyt ovat minua korkeammalla..'),'peek');
-  assert.equal(livianMietintaEle('Sopiva kysymys minulle. Hetki, tarkistan etten muista väärin..'),'glance');
+  assert.equal(livianMietintaEle('Sopiva kysymys minulle. Hetki, tarkistan etten muista väärin..'),'think');
 });
 
 test('valittu B-kuvapohja haetaan pelin mediasta', () => {

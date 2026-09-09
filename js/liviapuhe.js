@@ -1,3 +1,4 @@
+import { seuraaLivianKasvoAanitetta, lopetaLivianKasvoAanite } from './livia-puhetila.js';
 /*
  * LIVIAN ÄÄNI — pulu puhuu kuplansa ääneen.
  *
@@ -890,6 +891,7 @@ export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
   const audio = ui.liviaAani;
   ui.liviaAani = null;
   if (!audio) return false;
+  lopetaLivianKasvoAanite(audio);
   // Häivytys on hyvästely: puhevuoro vapautuu heti, jotta kertoja tai
   // seuraava kupla ei jää odottamaan häipyvää lausetta (js/luenta.js
   // luovutaPuhevuoro).
@@ -1013,6 +1015,7 @@ export function soitaLivianAani(ui, lahde, indeksi,
   // vaimennus kertoo siihen eikä korvaa sitä.
   audio.volume = Math.max(0, Math.min(1, puheVoima() * LIVIAN_PERUSTASO * vaimennus));
   ui.liviaAani = audio;
+  seuraaLivianKasvoAanitetta(audio, teksti);
   // Kirjanpito kaikkiin luentoihin: taustalle menevä peli hiljentää
   // myös tämän (js/luenta.js taustaHiljennaLuennat).
   (ui.luennat ??= new Set()).add(audio);
