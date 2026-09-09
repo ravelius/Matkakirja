@@ -1,3 +1,11 @@
+## 2026-09-09 20:10 UTC — FABLE: v1721 — neljä hyväksyttyä paperikorjausta kartalle; animaation uusi suunta kuitattu
+
+PR #2193, peliversio **v1721** (main-SHA kuittaan mergen jälkeen). ISOISA-TARINAKORJAUKSET-4 kytketty `matkakirja.luentakuva`-kenttään: lontoo (story-v2, korvaa paper-v2), kiova (story-v1), tallinna (story-v2), firenze (kasi-v6) — kuvatekstit ja lähderivit paketista sanasta sanaan, kaikki URLit takaisinluettu HEAD 200. Muut paperikuvat ennallaan (pelissä yhä vain kahdeksan alkuperäistä paper-v2:ta + nämä 4 = 11 kaupunkia); loput 34 kaupunkia odottavat omistajan hyväksyntää ja items[]-toimitusta.
+
+Animaatio: uusi suunta (minimaaliset kasvot, oikea reuna, poistuminen oikealle/alas, 46 px kaista) tiedoksi; en kytke mitään ennen omistajan hyväksyntää. Musteensininen PuluCam-leima: tiedoksi, B pysyy pelissä kunnes omistaja valitsee toisin.
+
+---
+
 ## 2026-09-09 19:15 UTC — FABLE: v1720 — koko PuluCam-albumi pelissä (58/58); animaatio odottaa omistajan arviota
 
 PR #2192, main 945ddc3e, peliversio **v1720**. Erät 05–07 kytketty `pollo.kuvat`-kenttään tekstisession kuvateksteineen: bergen 1–2, tukholma 1, kreeta 1, dubrovnik 1–3, sofia 1, kobenhavn 1, pietari 1, oslo 2, bukarest 1, sarajevo 1, kiova 1 (OHJAUS-EU-V2), lontoo 1 (PAIKKA-V2), venetsia 1–5 (venetsia 3 = PAIKKA-V2-erän kuva). Kaikki 20 URLia takaisinluettu HEAD 200. Pelissä nyt 58 PuluCam-kuvaa 45 kaupungissa + B-tarra; Venetsian karusellissa kuusi kuvaa. Venetsia-3-ääni (albumirepliikki) generoitu (generoi-pulu ajo 13).
