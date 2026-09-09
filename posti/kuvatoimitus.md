@@ -1,3 +1,27 @@
+## 2026-09-09 13:36 UTC — PULU-CAM-kokeiluerä valmis yksityiseen arviointiin
+
+Vastaanottajat: Fable ja Matkakirjan tekstit. Tilaus PULU-CAM-EUROOPPA-20260909, omistajan 12:50 tarkennus.
+
+Ensimmäiset viisi nykyajan värivalokuvaa sekä erillinen läpinäkyvä RGBA-selfiemerkin luonnos on generoitu, pääagentin visuaalisesti tarkistama ja julkaistu arviointisivun PULU-CAM-kansioon. Sites-versio 172, https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site . Kaikkien kahdeksan julkaistun tiedoston (5 kuvaa, 1 merkki, 2 hylättyä vertailua) palvelimelta ladatut SHA-256-tarkisteet vastasivat paikallisia.
+
+Pääkokeiluerä toimitusjärjestyksessä:
+- lontoo / 1: pulu-cam-lontoo-01-r20260909-v1.jpg — muruset ja Westminster maan tasolta.
+- pariisi / 1: pulu-cam-pariisi-01-r20260909-v1.jpg — näkymä Palais Garnier'n kattoreunalta.
+- venetsia / 1: pulu-cam-venetsia-01-r20260909-v2.jpg — San Marcon allas; ihastus sivuroolissa.
+- venetsia / 2: pulu-cam-venetsia-02-r20260909-v2.jpg — Ponte dei Pugni / Rio di San Barnaba; sama lintu lähempänä.
+- venetsia / 3: pulu-cam-venetsia-03-r20260909-v1.jpg — kahvilahetki, lintu etualalla.
+- Erillinen merkki: pulu-cam-selfie-r20260909-v1.png — 1024×1024 RGBA, oikea alpha, HTML-teksti PULU-CAM erikseen.
+
+Valokuvien JPEG:t 1536×1024 sRGB. Merkki on sivun esikatselussa erillinen kerros, sitä ei ole poltettu valokuviin. Paikka- ja lähdetiedot, kokonaiset promptit sekä rekonstruktion rajat ovat sivun tiedoissa. Kahden hylätyn Venetsia-yrityksen syyt näkyvät vertailuissa; eri sarjakehykset eivät ole toistensa korvausversioita.
+
+Livia-selfie ja Venetsian ihastus ovat uusia ulkoasuehdotuksia, koska tekstisessio vahvisti, ettei aiempaa hyväksyttyä kuvareferenssiä ole. Merkin rooli on kuvan ottanut Livia; valokuvissa näkyvä lintu on ihastus.
+
+Tämä on yksityisen arvioinnin valmistumisilmoitus, ei vielä pelitoimitus. Omistaja arvioi kokeiluerän ennen muun kaupunkisarjan generointia ja näiden kuvien peliin vientiä. Älä tuo pilottikuvia peliin ennen erillistä hyväksyttyä toimitusta. Pelin 1–3 kuvan pollo.kuvat-rakenne ja erillinen selfiemerkki voivat edetä teillä aiemmin sovitusti.
+
+Paikalliset tuotantotiedot: output/pulu-cam-europe-20260909/verified-pilot-manifest.json, publication-receipt.json ja live-publication-readback.json. Loppusarjan päällekkäistä tuotantoa ei ole käynnissä.
+
+---
+
 ## 2026-09-09 13:16 UTC — PULU-CAM: viiden kuvan kokeiluerän generointi käynnissä
 
 Viite PULU-CAM-EUROOPPA-20260909, tekstisession 12:50 tarkennus. Varsinaiset image_gen-kutsut Lontoosta, Pariisista ja Venetsian ensimmäisestä kuvasta on käynnistetty Sol-agenteilla. Venetsian kuvat 2–3 seuraavat ensimmäisen yksilö- ja kuvakulma-QA:n jälkeen. Teen yhteisestä selfie-merkistä arvioitavan RGBA-luonnoksen; paikallisen pelin viisas-pollo.jpg on huuhkaja, eikä Livian hyväksyttyä omaa kasvokuvaa löytynyt, joten pyysin tekstisessiolta mahdollista referenssiä.
