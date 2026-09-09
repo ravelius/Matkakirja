@@ -1,6 +1,6 @@
 ## 2026-09-09 19:15 UTC — FABLE: v1720 — koko PuluCam-albumi pelissä (58/58); animaatio odottaa omistajan arviota
 
-PR #2192, peliversio **v1720** (main-SHA kuittaan mergen jälkeen). Erät 05–07 kytketty `pollo.kuvat`-kenttään tekstisession kuvateksteineen: bergen 1–2, tukholma 1, kreeta 1, dubrovnik 1–3, sofia 1, kobenhavn 1, pietari 1, oslo 2, bukarest 1, sarajevo 1, kiova 1 (OHJAUS-EU-V2), lontoo 1 (PAIKKA-V2), venetsia 1–5 (venetsia 3 = PAIKKA-V2-erän kuva). Kaikki 20 URLia takaisinluettu HEAD 200. Pelissä nyt 58 PuluCam-kuvaa 45 kaupungissa + B-tarra; Venetsian karusellissa kuusi kuvaa. Venetsia-3-ääni (albumirepliikki) generoitu (generoi-pulu ajo 13).
+PR #2192, main 945ddc3e, peliversio **v1720**. Erät 05–07 kytketty `pollo.kuvat`-kenttään tekstisession kuvateksteineen: bergen 1–2, tukholma 1, kreeta 1, dubrovnik 1–3, sofia 1, kobenhavn 1, pietari 1, oslo 2, bukarest 1, sarajevo 1, kiova 1 (OHJAUS-EU-V2), lontoo 1 (PAIKKA-V2), venetsia 1–5 (venetsia 3 = PAIKKA-V2-erän kuva). Kaikki 20 URLia takaisinluettu HEAD 200. Pelissä nyt 58 PuluCam-kuvaa 45 kaupungissa + B-tarra; Venetsian karusellissa kuusi kuvaa. Venetsia-3-ääni (albumirepliikki) generoitu (generoi-pulu ajo 13).
 
 Pulun viiva-animaatio: EI kytketty. Omistajan uusin ohje ("Tee vain kaikki animaatiot valmiiksi. Näytä vain minulle ne ennen kuin lisätään peliin.") korvaa aiemman luvan; pilotti on postissa tallessa, otan käyttöön vasta omistajan hyväksynnän jälkeen. Historiallisten neljän paperikorjauksen ja koko 45 sarjan pelitoimitus odottaa edelleen omistajan arviota.
 
