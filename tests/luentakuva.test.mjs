@@ -677,6 +677,47 @@ test('napautus ilman liikettä ei siirrä ankkuria — se jää suurennoksen ele
   });
 });
 
+/*
+ * NAPAUTUS EI SAA OTTAA OSOITINTA KIINNI (vika 9.9.2026: *"miksi isoisän
+ * kuvat eivät aukea isoksi?"*).
+ *
+ * Kaapattu osoitin siirtää selaimessa myös `pointerup`- ja
+ * `click`-tapahtuman kaappaajalle, jolloin paneelin SISÄLLÄ olevien
+ * nappien (`.fokusvirta-kuva`, PULU-CAM-pakan `.pulucam-kuva`) omat
+ * kuuntelijat eivät saa napautusta lainkaan — mitattuna Chromiumilla:
+ * oikea hiiren tai sormen napautus ei avannut suurennosta, vaikka
+ * ohjelmallinen `click()` (savukkeet) toimi. Sama havainto on kirjattu
+ * jo js/karttazoom.js:ään. Kiinniotto kuuluu siksi vasta liikekynnyksen
+ * ylitykseen, ja juuri se mitataan tässä.
+ */
+test('napautus ei ota osoitinta kiinni — raahaus ottaa', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = kartallinenUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA);
+    const paneeli = ui.luentakuvaAnkkuri.paneeli;
+    const kaapatut = [];
+    paneeli.setPointerCapture = (id) => kaapatut.push(id);
+    paneeli.releasePointerCapture = () => {};
+
+    // Napautus: kolme pikseliä, kynnyksen alle.
+    paneeli.dispatch('pointerdown', { clientX: 200, clientY: 400, pointerId: 1, button: 0 });
+    assert.deepEqual(kaapatut, [], 'napautus otti osoittimen kiinni');
+    paneeli.dispatch('pointermove', { clientX: 202, clientY: 402, pointerId: 1 });
+    paneeli.dispatch('pointerup', { clientX: 202, clientY: 402, pointerId: 1 });
+    assert.deepEqual(kaapatut, [], 'napautus otti osoittimen kiinni');
+
+    // Raahaus: kynnyksen yli, ja vasta silloin kiinniotto.
+    paneeli.dispatch('pointerdown', { clientX: 200, clientY: 400, pointerId: 2, button: 0 });
+    paneeli.dispatch('pointermove', { clientX: 260, clientY: 400, pointerId: 2 });
+    assert.deepEqual(kaapatut, [2], 'raahaus ei ottanut osoitinta kiinni');
+    paneeli.dispatch('pointermove', { clientX: 300, clientY: 400, pointerId: 2 });
+    assert.deepEqual(kaapatut, [2], 'osoitin otettiin kiinni useammin kuin kerran');
+    paneeli.dispatch('pointerup', { clientX: 300, clientY: 400, pointerId: 2 });
+
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
 test('raahauksen jälkeinen klikki ei avaa suurennosta, seuraava avaa', () => {
   pakinKanssa(KOEKUVA, () => {
     const ui = kartallinenUi();

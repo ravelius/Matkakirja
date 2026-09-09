@@ -2956,7 +2956,17 @@ class Pollo {
       ? null : vanhat.map((k) => k.getBoundingClientRect().top);
     this.pinoKehys.hidden = false;
     pino.appendChild(kupla);
-    this.kasvoEleet?.kupla(kupla.textContent);
+    /*
+     * B-KASVON ELE EI SAA KAATAA KUPLAA (v1722 toi tämän kutsun
+     * keskelle kuplan latomista). Kaikki alla oleva — pinon paikka,
+     * korkeus, vieritys — ja koko kutsuketjun jatko (js/fokusvirta.js:
+     * Etsi aarre -nappi ja PULU-CAM-pakka isoisän kuvan päälle) jäisi
+     * tekemättä, jos ele heittäisi poikkeuksen jossain selaimessa.
+     * Ele on koriste; kupla ja kuvat ovat peli.
+     */
+    try {
+      this.kasvoEleet?.kupla(kupla.textContent);
+    } catch { /* ele jää väliin, kupla tulee silti */ }
     this.asetaPinonPaikka();
     /*
      * UUSI KUPLA ON NYT VIIMEISIN: supistetun pinon katto on sen mitta,

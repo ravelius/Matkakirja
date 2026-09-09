@@ -4216,6 +4216,16 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'ISOISAN LUENTAKUVASSA EI KEHYSTA, KUVATEKSTI KIINNI KUVAN ALALAIDASSA '
+          + '(omistaja 9.9.2026 klo 23.55, sanatarkasti: "isoisan kuvissa ei saa '
+          + 'olla kehysta. kuvateksti pitaa olla kiinni kuvan alalaidassa"): '
+          + 'kartan luentakuvalla ei ole kermanvarista paperireunaa eika muuta '
+          + 'kehysta - valokuva nakyy sellaisenaan (varjo saa jaada). Lyhyen '
+          + 'kuvatekstin vaalea laatikko on kiinni kuvan alareunassa ilman '
+          + 'valia ja kaantyy kuvan mukana samaan kallistukseen. Tarkentaa '
+          + 'linjausta LUENTAKUVA ISOMPANA, VINOSSA JA ILMAN LAATIKKOA '
+          + '(9.9. klo 13.50): "kuvan omat aariviivat" tarkoittaa valokuvan '
+          + 'omaa reunaa, ei lisattya paperikaistaa.',
         'PULUCAM-MERKKI ON MUSTEENSININEN SINETTI OIKEASSA YLAKULMASSA, B '
           + 'JAA ARKISTOON (omistaja 9.9.2026 klo 23.09 kuvatoimituksen kautta, '
           + 'sanatarkasti: "Tuo sinetti on hyva. Kaytetaan sita. Vie peliin"; '
