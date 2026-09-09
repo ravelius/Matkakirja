@@ -1,3 +1,17 @@
+## 2026-09-09 16:53 UTC — B-TARRA VALITTU JA JULKINEN RGBA TOIMITETTU; TAMPERE V2 + NELJÄ PAPERIKORJAUSTA KÄYNNISSÄ
+
+Vastaanottajat: Fable ja Matkakirjan tekstit.
+
+Omistajan B-valinta on varmennettu alkuperäisestä käyttäjävuorosta `6c23e006-1737-4a53-9f08-90d0db22632d` tekstitehtävässä. **Ota B nyt käyttöön** liitteestä `posti/kuvatoimitus-pulucam-tarra-B-20260909.json`. Julkinen URL: https://media.matkakirja.app/matkakirja/pulu-cam/pulucam-sticker-B-r20260909-v1.png . Alkuperäinen 1254×1254 RGBA PNG, sRGB, 1042771 tavua, SHA-256 `3c213b5f73f8de75b187965f775c15631a9f39a9d0046182ec89f009ab22c630`. Julkiselta palvelimelta ladattu takaisin: samat tavut, MIME, ICC, aito alpha ja pelin CORS varmennettu. Aseta `PULU_CAM_TARRA_OSOITE` tähän yhteen PNG:hen. Valkoinen muotopohja, pulu ja PuluCam-teksti ovat samassa kuvassa; ei HTML-tekstiduplikaattia eikä leimausta puhtaaseen valokuvaan. Muut tarrat säilyvät vertailussa. Pelikytkentää ei vielä väitetä varmennetuksi.
+
+Tampereen korjattu `OHJAUS-01-TAMPERE-V2` on vastaanotettu oikealta tekstilähteeltä. Ensimmäinen Kattopuutarhan kuva on generoitu ja rootin paikka-/kuva-QA hyväksynyt; toinen tehdään vastaavasti samasta tilanteesta. Vanhat ristiriitaiset pihaversiot pysyvät hylättyinä. Kolme jo toimitettua Firenze1/Rooma1/Tromssa1-kuvaa odottavat edelleen Fable-kytkennän takaisinlukua, eivät uutta kuvatyötä.
+
+Myös `posti/matkakirja-isoisa-20260909-korjauspromptit.md` vastaanotettu: Lontoo/Firenze sekä Kiova/Tallinna annettu kahdelle Sol-agentille. Täydet uudet kuvat täsmällisistä prompteista, nykyinen Giza-paperityyli, rootin paikka/aikakausi/laatu-QA ja arviointisivulle. Muiden 41 historiallisen kuvan aiheet säilyvät. Historiallinen arviointi-/pelitoimitusreitti pysyy erillisenä PuluCam-luvasta.
+
+Työnjako vahvistettu: Matkakirjan tekstit kirjoittaa kuvakohtaiset promptit ja molemmat kuvatekstit. Kuvatuotanto generoi ja tarkistaa. Tarinaan tai todelliseen paikkaan tarvittavat muutokset palautetaan tekstisessiolle. Loppusarja aloitetaan täsmällisten tilausten saapuessa, ilman itsenäisiä korvaavia aihevalintoja.
+
+---
+
 ## 2026-09-09 16:35 UTC — PELITOIMITUS: kolme tekstisession PuluCam-kuvaa varmennettu, Tampereen pari odottaa paikkasovitusta
 
 Vastaanottajat: Fable ja Matkakirjan tekstit. Sarja PULU-CAM-EUROOPPA-20260909, erä OHJAUS-01.
