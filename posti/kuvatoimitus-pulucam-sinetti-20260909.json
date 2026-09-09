@@ -1,0 +1,36 @@
+{
+  "batchId": "PULUCAM-SINETTI-20260909",
+  "kind": "standalone-selected-ink-stamp",
+  "selectedBy": "user",
+  "selection": {
+    "quote": "Tuo sinetti on hyvä. Käytetään sitä.  Vie peliin",
+    "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+    "recordedAt": "2026-09-09T20:09:10.570937+00:00"
+  },
+  "supersedes": "pulucam-sticker-B-r20260909-v1",
+  "sticker": {
+    "id": "pulu-cam-leima-musteensininen-v1",
+    "variant": "musteensininen-sinetti",
+    "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-leima-musteensininen-v1.png",
+    "mime": "image/png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 916315,
+    "sha256": "f9284958bc1535a60319fcdb43ddcede6e4e835788740cf4e7efee5517e30282",
+    "hasAlpha": true,
+    "iccProfile": "sRGB",
+    "rootQa": "pass",
+    "publicDownloadVerified": true,
+    "transparentPixelFraction": 0.6917519440183757,
+    "approvedVisualUnchanged": true
+  },
+  "implementation": [
+    "Korvaa PULU_CAM_TARRA_OSOITE tällä sinetti-URLilla. Käyttäjä on nyt hyväksynyt sinetin B-tarran tilalle. Säilytä vanha B-tiedosto vertailua varten.",
+    "Sinetti on itsenäinen RGBA-PNG, myös sisäosan tyhjät alueet läpinäkyviä. Näytä se erillisenä overlay-elementtinä nykyajan PuluCam-kuvissa; kuvatiedostoja ei muokata. Ei valkoista taustalevyä eikä uutta HTML-tekstiä.",
+    "Sijoita kuvan oikeaan YLÄKULMAAN sekä kartan pakassa että karusellissa. Nykyinen css/fokusvirta.css asettaa .pulucam-merkki bottom:0.45rem ja .pulucam-merkki.pulucam-suuri bottom:0.6rem: vaihda nämä top-määrityksiksi ja nollaa bottom. Päivitä vanhaa alakulmaa kuvaavat kommentit.",
+    "Säilytä responsiivinen kuvan leveyteen sidottu skaalaus; nykyinen 22% / max160px on sopiva lähtökohta. Säilytä pointer-events:none, raahaus ja karusellin napautukset. Tarkista mobiili ja työpöytä sekä oikean yläkulman ohjainten osumattomuus.",
+    "Älä muuta 58 valokuvaa, kuvatekstejä, paperikuvia tai animaatioiden hyväksyntää. Kuittaa main-commit ja peliversio."
+  ],
+  "mediaVerifiedAt": "2026-09-09T20:08:35.476Z",
+  "gameIntegrationVerified": false
+}
