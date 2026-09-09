@@ -256,3 +256,24 @@ export const FOKUSVIRRAT = {
 export function fokusvirtaKaupungille(cityId) {
   return (cityId && FOKUSVIRRAT[cityId]) || null;
 }
+
+/**
+ * KAUPUNGIT, JOILLA ON LUENTAKUVA (omistaja 9.9.2026 klo 12.20,
+ * sanatarkasti: *"Kuvaputkelta tulee kohta kahdeksan kuvaa, joita
+ * käytetään matkakirjan luennon kanssa yhtä aikaa. … Voisit nyt merkata
+ * eri värillä sellaiset kaupungit, joissa tällaiset kuvat on."*).
+ *
+ * Joukko JOHDETAAN pakeista (matkakirja.luentakuva), ei ylläpidetä
+ * käsin: kartan merkintä seuraa dataa eikä lupaa kuvaa, jota ei ole.
+ * Kartta (js/pallolauta/lauta.js kaupunkipisteenVari, js/ui.js
+ * luentakuvakehä) värjää nämä pisteet omalla värillään.
+ *
+ * @returns {Set<string>} kaupunkien tunnukset
+ */
+export function luentakuvallisetKaupungit() {
+  const joukko = new Set();
+  for (const [id, virta] of Object.entries(FOKUSVIRRAT)) {
+    if (virta?.matkakirja?.luentakuva) joukko.add(id);
+  }
+  return joukko;
+}

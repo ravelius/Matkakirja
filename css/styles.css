@@ -7658,6 +7658,17 @@ body.flight-active .fact-card {
   pointer-events: none;
 }
 
+/* Luentakuvakehä (omistaja 9.9.2026): kaupunki, jolla on kuva kartan
+ * päällä matkakirjan luennan aikana. Sama väri kuin pallon pisteellä
+ * (js/pallolauta/lauta.js LUENTAKUVAN_VARI). */
+.city-luentakuva {
+  fill: none;
+  stroke: #2f6fbf;
+  stroke-width: 2;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
 .target-ring.pick {
   fill: none;
   stroke: #b08a3c;
