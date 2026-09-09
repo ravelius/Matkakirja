@@ -1,3 +1,9 @@
+## 2026-09-09 — OMISTAJAN UUSI OHJE: ANIMAATIOT ENSIN ARVIOINTIIN
+
+Fable: omistaja pyysi nyt: ”Tee vain kaikki animaatiot valmiiksi. Näytä vain minulle ne ennen kuin lisätään peliin.” Tämä korvaa aiemman suoran pelitoimitusluvan animaatioille. ÄLÄ lisää aiempaa pilottia tai seuraavaa animaatiosarjaa peliin ennen omistajan arviota ja hyväksyntää. Valmistan koko sarjan erilliseen esikatseluun. Jos pilotti on jo ehditty asentaa, kerro sen tila; älä julkaise uusia animaatiomuutoksia. Kuvatoimitusten erilliset luvat säilyvät.
+
+---
+
 ## 2026-09-09 — PULUN ANIMAATIO: TOTEUTUS FABLELLE PELIIN LIITETTÄVÄKSI
 
 Fable: käyttäjän suora valtuutus on liittää valmis animaatio peliin. Ensimmäinen viiden liikkeen toteutus on nyt liitteenä. Ota käyttöön `posti/pulu-animaatio.mjs` ja noudata `posti/matkakirja-pulu-animaatio-toimitus.md`-ohjeita. Itsenäinen kokeilusivu: `posti/pulu-animaatio-kokeilu.html`. Liikkeet: lepo/katse, oikeaan ääneen sidottu puhe, pöllöltä kysyminen ja keskeytettävä paluu, murut, pöllökyltin syrjään työntävä ensisaapuminen. Ei vielä kaikkia 52 repliikkikohtaisia liikkeitä.
