@@ -106,6 +106,7 @@ export const MAAKARTAT = {
         + 'siksi, että sen hallussa on suojelukirje, jonka kerrotaan '
         + 'olevan profeetta Muhammadin antama — pihalla on myös '
         + 'moskeija.',
+      lyhyt: 'Pyhän Katariinan luostari 500-luvulta Siinain vuorten kainalossa.',
       selite: 'Pyhän Katariinan luostari Siinain paljaiden vuorten '
         + 'kainalossa. Muurit ovat 500-luvulta, keisari Justinianuksen '
         + 'rakennuttamat.',
@@ -156,6 +157,7 @@ export const MAAKARTAT = {
         + 'jättiläisen kanssa. Skotlannin puolella Staffan saarella on '
         + 'samanlaisia pylväitä — tarina ja geologia osoittavat samaan '
         + 'suuntaan.',
+      lyhyt: 'Kuusikulmaiset basalttipylväät laskeutuvat mereen Antrimin rannikolla.',
       selite: 'Kuusikulmaiset basalttipylväät laskeutuvat mereen Antrimin '
         + 'rannikolla. Korkeimmat pylväät ovat kaksitoistametrisiä.',
       lahde: 'Chmee2, Wikimedia Commons (CC BY 3.0)',
@@ -662,6 +664,7 @@ export const MAAKARTAT = {
         + 'yli vie tavallinen maantiesilta, jolta pyörteitä katsotaan '
         + 'kaiteen takaa. Virta on nuori: se syntyi vasta pari kolme '
         + 'tuhatta vuotta sitten, kun maa nousi jääkauden jälkeen.',
+      lyhyt: 'Saltstraumenin salmi ilmasta: vuorovesivirta piirtää veteen vaahtoisia pyörteitä.',
       selite: 'Saltstraumenin salmi ilmasta: maantiesilta ylittää '
         + 'kapean väylän, ja vuorovesivirta piirtää veteen vaahtoisia '
         + 'pyörteitä.',
@@ -716,6 +719,7 @@ export const MAAKARTAT = {
         + 'vetämällä matkustajavaunulla. Kieleke ei ole valmis: meri '
         + 'kuljettaa hiekkaa pitkin länsirannikkoa pohjoiseen, ja kärki '
         + 'kasvaa noin kymmenen metriä vuodessa kohti Ruotsia.',
+      lyhyt: 'Grenenin hiekkakärki ilmasta: aallot murtuvat kielekkeen kummallakin puolella.',
       selite: 'Grenenin hiekkakärki ilmasta: kävijät kulkevat jonossa '
         + 'kapeaa kielekettä pitkin, ja aallot murtuvat kummallakin '
         + 'puolella.',
@@ -765,6 +769,7 @@ export const MAAKARTAT = {
         + 'kalat putosivat koreihin. Kuldīgaa sanottiin kaupungiksi, '
         + 'jossa lohta saa ilmasta. Lohet ovat kadonneet, mutta '
         + 'vimpoja hyppää yhä joka kevät.',
+      lyhyt: 'Vimpoja hyppää Ventas rumban leveän mutta matalan putouksen yli Kuldīgassa.',
       selite: 'Vimpoja hyppää ilmaan Ventas rumban yli Kuldīgassa: '
         + 'putous on matala mutta leveä, ja kalojen on noustava sen '
         + 'yli päästäkseen kutupaikoille.',
@@ -814,6 +819,7 @@ export const MAAKARTAT = {
         + 'heitä asuu Trakaissa yhä. Sotien jälkeen linna seisoi '
         + 'raunioina lähes kolmesataa vuotta, ja se rakennettiin '
         + 'uudelleen vasta 1950- ja 1960-luvulla.',
+      lyhyt: 'Trakain saarilinna Galvė-järvellä nousee muureineen suoraan vedestä.',
       selite: 'Trakain saarilinna Galvė-järvellä: punatiiliset muurit '
         + 'ja punakattoiset tornit nousevat suoraan vedestä.',
       lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
@@ -875,6 +881,7 @@ export const MAAKARTAT = {
         + 'Posoaapa, joka oli siihen asti Suomen ja Euroopan suurin '
         + 'aapasuo. Kaikkia puita ei ehditty kaataa ennen tulvitusta, '
         + 'ja kantoja on nostettu pohjasta vielä 2000-luvulla.',
+      lyhyt: 'Lokan tekojärvi patotieltä nähtynä; horisontissa siintävät Nattaset.',
       selite: 'Lokan tekojärvi patotieltä nähtynä; horisontissa '
         + 'siintävät Nattaset. Veden alla ovat vanhat kylänpaikat ja '
         + 'suo.',
@@ -971,6 +978,7 @@ export const MAAKARTAT = {
         + 'mahtuakseen kapeasta uomasta mereen. Monessa on mustia '
         + 'raitoja — tuhkaa tulivuorenpurkauksista, joka jäi jään '
         + 'sisään.',
+      lyhyt: 'Tuhkaraitainen jäävuori Jökulsárlónin jäätikköjärvessä.',
       selite: 'Tuhkaraitainen jäävuori Jökulsárlónin jäätikköjärvessä. '
         + 'Mustat juovat ovat vanhojen purkausten tuhkakerroksia.',
       lahde: 'Snowolf, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1025,6 +1033,7 @@ export const MAAKARTAT = {
         + 'noin 17 minuutiksi. Sisään ei pääse ostamalla lippua: paikat '
         + 'arvotaan, ja kymmenistä tuhansista hakijoista valitaan '
         + 'kuusikymmentä vuodessa.',
+      lyhyt: 'Newgrangen sisäänkäynti: kierrekuvioitu porttikivi ja kattolaatikon aukko.',
       selite: 'Newgrangen sisäänkäynti: oven yläpuolella on '
         + 'kattolaatikon aukko, ja edessä makaa kierrekuvioitu '
         + 'porttikivi. Valkoinen kvartsiseinä on 1970-luvun '
@@ -1079,6 +1088,7 @@ export const MAAKARTAT = {
         + 'se kaiversi Zêzere-joelle laakson, jonka U-kirjaimen muoto '
         + 'on niin tarkka, että sitä käytetään oppikirjaesimerkkinä '
         + 'siitä, mitä jää tekee maisemalle.',
+      lyhyt: 'Cântaro-kalliot Serra da Estrelan luonnonpuistossa.',
       selite: 'Cântaro-kalliot Serra da Estrelan luonnonpuistossa. '
         + 'Alarinteet ovat kesäkuussa keltaisenaan kukkivia pensaita.',
       lahde: 'Raquel Rosa, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1131,6 +1141,7 @@ export const MAAKARTAT = {
         + 'rakennustarpeet nostettiin ylös pitkillä tikkailla tai '
         + 'vinssillä ja nostokorissa. Rappuset hakattiin kallioon vasta '
         + '1920-luvulla. Kuusi luostaria toimii yhä.',
+      lyhyt: 'Metéoran kalliopylväillä Thessaliassa luostari kohoaa pylvään laella.',
       selite: 'Metéoran kalliopylväitä Thessaliassa. Kahden pylvään '
         + 'laella näkyy luostari, alhaalla mutkittelee tie ja takana '
         + 'kohoaa Píndos-vuoristo.',
@@ -1182,6 +1193,7 @@ export const MAAKARTAT = {
         + 'omilla paikoillaan. Patsaiden takana kohoaa 49 metriä korkea '
         + 'kivikumpu, jonka sisään ei ole päästy — irtonainen sora '
         + 'valuu takaisin jokaiseen kaivantoon.',
+      lyhyt: 'Nemrutin huipulla aamuauringossa rivi päättömiä jumalpatsaita kivikummun juurella.',
       selite: 'Nemrutin huippu aamuauringossa: kivikummun juurella '
         + 'istuu rivi päättömiä jumalpatsaita, ja irronneet kivipäät '
         + 'on aseteltu niiden eteen.',
@@ -1236,6 +1248,7 @@ export const MAAKARTAT = {
         + 'Yhdeksänkaarinen silta: 167 metriä kiveä, valmiina 1833. '
         + 'Helteellä pustalla näkee kangastuksia, joissa puut '
         + 'näyttävät kelluvan ilmassa.',
+      lyhyt: 'Yhdeksänkaarinen kivisilta Hortobágyn pustalla keskellä tasaista maisemaa.',
       selite: 'Yhdeksänkaarinen kivisilta Hortobágyn pustalla: '
         + 'valkoinen kaide jatkuu kaaresta toiseen, alla kasvaa '
         + 'ruovikko ja ympärillä maa on tasaista joka suuntaan.',
@@ -1281,6 +1294,7 @@ export const MAAKARTAT = {
         + 'uuden vartijan: kallioon hakattiin daakialaisten viimeisen '
         + 'kuninkaan Decebaluksen kasvot, jotka ovat yli neljäkymmentä '
         + 'metriä korkeat.',
+      lyhyt: 'Decebaluksen kasvot hakattuna kalliojyrkänteeseen Tonavan yläpuolella.',
       selite: 'Decebaluksen kasvot hakattuna kalliojyrkänteeseen '
         + 'Tonavan yläpuolella; leuan alla lukee latinaksi '
         + '"DECEBALUS REX".',
@@ -1326,6 +1340,7 @@ export const MAAKARTAT = {
         + 'vuosikymmenistä. Sää on kuluttanut yksityiskohtia, joten '
         + 'ratsastajan vaatteet erottuvat huonosti. Kun Bulgaria otti '
         + 'euron käyttöön, ratsastaja päätyi sentin kolikoihin.',
+      lyhyt: 'Madaran ratsastaja kalliopinnassa: hevonen, ratsastaja ja kaatunut leijona.',
       selite: 'Madaran ratsastaja kalliopinnassa: hevonen keskellä, '
         + 'ratsastaja sen selässä, koira vasemmalla alhaalla ja '
         + 'kaatunut leijona hevosen jalkojen alla.',
@@ -1384,6 +1399,7 @@ export const MAAKARTAT = {
         + 'Rakentaminen kesti neljä vuotta ja maksoi noin 420 '
         + 'miljoonaa euroa. Ensimmäisenä elokuunaan silta kantoi noin '
         + '455 000 autoa.',
+      lyhyt: 'Pelješacin silta kaartaa köysipylonein Mali Stonin lahden yli.',
       selite: 'Pelješacin silta kaartaa Mali Stonin lahden yli; '
         + 'köysipylonit kannattavat viittä 285 metrin jännettä, ja '
         + 'taustalla nousevat karstivuoret.',
@@ -1435,6 +1451,7 @@ export const MAAKARTAT = {
         + 'vanha. Nisäkäslajeja on 36, muun muassa karhu, susi ja '
         + 'gemssi. Laakson pohjalla putoaa Skakavacin vesiputous noin '
         + '75 metriä.',
+      lyhyt: 'Perućican aarniometsä täyttää laakson, ja keskellä siintää Skakavacin vesiputous.',
       selite: 'Perućican aarniometsä täyttää koko laakson pohjasta '
         + 'harjanteille asti, ja keskellä erottuu ohuena valkoisena '
         + 'juovana Skakavacin vesiputous.',
@@ -1480,6 +1497,7 @@ export const MAAKARTAT = {
         + 'vanhaankaupunkiin silta rotkon yli. Kaupungissa asuu noin '
         + '98 000 ihmistä, ja kanjoni on suojeltu geologisena '
         + 'luonnonmuistomerkkinä.',
+      lyhyt: 'Näkymä Armenialaiselta bastionilta: kallio putoaa kanjoniin, Linnansilta johtaa kaupunkiin.',
       selite: 'Näkymä Armenialaiselta bastionilta linnoitukseen: '
         + 'kallio putoaa pystysuorana kanjoniin, ja Linnansilta '
         + 'johtaa kaupunkiin.',
@@ -1640,6 +1658,7 @@ export const MAAKARTAT = {
         + 'huipulle asti — pehmeä hiekka syö vauhdin, ja auto valuu '
         + 'takaisin alas. Kuvan suorat urat rinteessä ovat renkaiden '
         + 'jälkiä.',
+      lyhyt: 'Moreebin dyyni Liwan eteläpuolella; hiekkaseinämässä kilpa-ajojen jättämät urat.',
       selite: 'Moreebin dyyni Liwan eteläpuolella. Hiekkaseinämän yli '
         + 'nousee kolme suoraa uraa — kilpa-ajojen jälkiä. Alhaalla '
         + 'näkyy kisa-alueen aita, valonheitinmastot ja tasainen '
@@ -1711,6 +1730,7 @@ export const MAAKARTAT = {
         + 'rakensivat vuonna 1864 lennätinaseman — kuumuus oli niin '
         + 'sietämätöntä, että asema hylättiin runsaassa kymmenessä '
         + 'vuodessa.',
+      lyhyt: 'Dhow-vene kuljettaa matkustajia Khor Ash Shamin poukamassa Musandamissa.',
       selite: 'Matkustajia kuljettava dhow-vene Khor Ash Shamin '
         + 'poukamassa Musandamissa, Omanin lippu perässä. Paljaat '
         + 'kalliot laskeutuvat suoraan veteen ilman rantakaistaletta, '
@@ -1784,6 +1804,7 @@ export const MAAKARTAT = {
         + 'ennen vuotta 1990 Failakalla asui noin 5 800 ihmistä, mutta '
         + 'Irakin miehityksen jälkeen vain harvat palasivat. Juomavesi '
         + 'tulee saarelle yhä mantereelta merenalaista putkea pitkin.',
+      lyhyt: 'Kaivausaluetta Failakan länsipäässä: kivimuureja ja kynnyksiä Persianlahden rannalla.',
       selite: 'Kaivausaluetta Failakan länsipäässä: kivimuurien '
         + 'rajaamia huoneita ja kynnyksiä, ja aivan takana '
         + 'Persianlahti.',
@@ -1855,6 +1876,7 @@ export const MAAKARTAT = {
         + 'ainoa Unescon maailmanperintökohde; listalle se pääsi '
         + 'vuonna 2013.',
       tiedosto: 'Ruins in Zubarah on a cloudy day.jpg',
+      lyhyt: 'Kaivettuja talonseiniä al-Zubarahin rauniokaupungissa Persianlahden rannalla.',
       selite: 'Kaivettuja talonseiniä al-Zubarahin rauniokaupungissa. '
         + 'Vasemmalla siintää Persianlahti, ja aavikon yli työntyy '
         + 'sadekuuron tumma rintama.',
@@ -1938,6 +1960,7 @@ export const MAAKARTAT = {
         + 'rata jäi hiekkaan: asemarakennuksia ja vetureita seisoo yhä '
         + 'paikoillaan. Ratapenkkaa myös kaivellaan yhä, koska '
         + 'kerrotaan, että radalta jäi maahan piilotettua kultaa.',
+      lyhyt: 'Kunnostettu höyryveturi ja vaunurivi Hijazin radan vanhalla asemalla Al-Ulassa.',
       selite: 'Kunnostettu höyryveturi ja vaunurivi Hijazin radan '
         + 'vanhalla asemalla Al-Ulassa. Veturin edessä on kiiloiksi '
         + 'taivutettu puskin, savupiipun takana vihreä höyrykupu, ja '
@@ -2034,6 +2057,7 @@ export const MAAKARTAT = {
         + 'kuin pullo. Saarelaisia on noin 50 000, ja he puhuvat '
         + 'arabian lisäksi omaa kieltään sokotraa. Unesco otti saaren '
         + 'maailmanperintöluetteloon vuonna 2008.',
+      lyhyt: 'Kaksi sokotrantraakkipuuta kivisellä ylätasangolla.',
       selite: 'Kaksi sokotrantraakkipuuta kivisellä ylätasangolla. '
         + 'Etummaisen paksu vaalea runko jakautuu ylhäällä sadoiksi '
         + 'ruskeiksi oksiksi, ja vain niiden kärjissä on vihreää — '
@@ -2118,6 +2142,7 @@ export const MAAKARTAT = {
         + 'kutakin, joten merimiehiä oli luultavasti neljä. Laiva on '
         + 'nyt esillä Kyrenian linnan hylkymuseossa, ja sen kuva on '
         + 'Kyproksen 10, 20 ja 50 sentin kolikoissa.',
+      lyhyt: 'Kyrenialaisen laivan runko hylkymuseossa puisten pukkien päällä.',
       selite: 'Kyrenialaisen laivan runko hylkymuseossa puisten '
         + 'pukkien päällä. Kaaret ja lankut ovat mustuneet, mutta '
         + 'kylki ja pohja ovat lähes kokonaisia; taustalla '
@@ -2203,6 +2228,7 @@ export const MAAKARTAT = {
         + 'vuoden välein. Kääntyessään rattaat narisevat ja voihkivat '
         + 'niin että ääni kuuluu kauas. Haman nuoret ovat vanhastaan '
         + 'kiivenneet rattaan kyytiin ja hypänneet ylhäältä jokeen.',
+      lyhyt: 'Yksi Haman suurista vesirattaista Orontesjoen rannalla.',
       selite: 'Yksi Haman suurista vesirattaista Orontesjoen '
         + 'rannalla. Puinen kehä kohoaa kivimuurin takaa korkeammalle '
         + 'kuin viereisen rakennuksen holvikaaret, ja joen vihreässä '
@@ -2317,6 +2343,7 @@ export const MAAKARTAT = {
         + 'samanlainen kaarikattoinen ruokotalo. Talo tehdään '
         + 'uudestaan noin kymmenen vuoden välein, eikä se haittaa — '
         + 'ruoko kasvaa suolla joka kesä uudelleen.',
+      lyhyt: 'Mudhif-ruokomaja nousee Etelä-Irakin soille; miehet sitovat ruokokimppuja katolle.',
       selite: 'Mudhif nousee Etelä-Irakin soilla. Ruokokaaret on jo '
         + 'pystytetty riviin ja seinät verhottu punotuilla matoilla; '
         + 'katolla kaksi miestä sitoo suoria ruokokimppuja '
@@ -2432,6 +2459,7 @@ export const MAAKARTAT = {
         + '427 kuilua ja tunnelia 33 kilometriä. Se kaivettiin noin '
         + '2 700 vuotta sitten ja antaa yhä vetensä lähes '
         + '40 000 ihmiselle.',
+      lyhyt: 'Gonabadin Qasabeh-qanatin tunneli pitkällä valotusajalla kuvattuna.',
       selite: 'Gonabadin Qasabeh-qanatin tunneli pitkällä '
         + 'valotusajalla kuvattuna. Käsin hakattu kallioholvi kaartuu '
         + 'korkealle, seinien kuopat ja iskunjäljet näkyvät '
@@ -2543,6 +2571,7 @@ export const MAAKARTAT = {
         + '1859–1898, ja Mark Twain kirjoitti juuri näistä vuosista '
         + 'kirjansa Elämää Mississippillä. St. Louis oli solmukohta, '
         + 'jossa joen laivat ja lännen rautatiet kohtasivat.',
+      lyhyt: 'Mississippi virtaa Itascajärvestä Meksikonlahteen 3 766 kilometriä.',
       selite: 'Mississippi virtaa Itascajärvestä Meksikonlahteen 3 766 '
         + 'kilometriä ja oli ennen rautateitä maan valtaväylä, jonka '
         + 'höyrylaivakausi kesti 1830-luvulta 1870-luvulle; painoksen '
@@ -2625,6 +2654,7 @@ export const MAAKARTAT = {
         + 'Wai Pounamu, vihreän kiven vedet. James Cook antoi '
         + 'vuoristolle nimen todennäköisesti 23. maaliskuuta 1770, '
         + 'vaikka ei sumun takia nähnyt korkeinta huippua.',
+      lyhyt: 'Aoraki hohtaa auringonlaskun valossa Hooker Valleyn perällä.',
       selite: 'Aoraki hohtaa auringonlaskun valossa Hooker Valleyn '
         + 'perällä, ja sen edessä jyrkät rinteet putoavat jäätikön '
         + 'uurtamaan laaksoon.',
@@ -2776,6 +2806,7 @@ export const MAAKARTAT = {
         + 'Blaxland, William Lawson ja William Charles Wentworth '
         + 'lähtivät 11. toukokuuta 1813 ja pääsivät yli kuukauden '
         + 'lopulla. Vasta silloin siirtokunta pääsi mantereen sisään.',
+      lyhyt: 'Wentworth Fallsilta katsottuna Jamisonin laakson jyrkänteet laskeutuvat portaina.',
       selite: 'Wentworth Fallsilta katsottuna Jamisonin laakson '
         + 'hiekkakivijyrkänteet laskeutuvat portaina metsän peittämään '
         + 'pohjaan, ja kaukaisuus siintää sinisenä.',
@@ -2858,6 +2889,7 @@ export const MAAKARTAT = {
         + 'rautateitä joki oli ainoa nopea reitti sisämaahan: '
         + 'jokilaivat kulkivat Buenos Airesista Asunciónin satamaan '
         + 'asti. Suistossa joki hajoaa sadoiksi saariksi ja haaroiksi.',
+      lyhyt: 'Paraná levittäytyy Argentiinan halki niin leveänä, että vastaranta jää metsäviivaksi.',
       selite: 'Paraná levittäytyy Argentiinan halki niin leveänä, että '
         + 'vastaranta jää matalaksi metsäviivaksi taivaanrannassa.',
       lahde: 'Luis Argerich from Buenos Aires, Argentina, Wikimedia '

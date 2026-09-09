@@ -451,6 +451,7 @@ export const ELAINTAKYT = {
     kuvat: [
       {
         url: `${ELAINTAKY_KUVAJUURI}elain-bih-tornjakpentu-vlasic-v2.jpg`,
+        lyhyt: 'Nuori tornjak harjoittelee suvulleen tuttua karjanvartiointia Balkanilla.',
         kuvateksti: 'Nuori tornjak harjoittelee tehtävää, jossa sen suvun koirat '
           + 'ovat vartioineet Balkanin karjaa vuosisatoja. Tänään suurin saavutus '
           + 'on kuitenkin paimenen kadonnut sininen kinnas, jonka pentu palauttaa '
@@ -651,6 +652,7 @@ export const ELAINTAKYT = {
     kuvat: [
       {
         url: `${ELAINTAKY_KUVAJUURI}elain-png-photo-r20260905-v1.jpg`,
+        lyhyt: 'Kuningasparatiisilintu pysähtyy oksalle pitkine kylkihöyhenineen.',
         kuvateksti: 'Kuningasparatiisilintu pysähtyy oksalle; pitkät oranssinpunaiset '
           + 'kylkihöyhenet ja kaksi tummaa pyrstöruotoa laskeutuvat sen taakse.',
         lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Cornell '
@@ -1100,6 +1102,7 @@ export const ELAINTAKYT = {
       },
       {
         url: `${ELAINTAKY_KUVAJUURI}elain-mar-story-r20260905-v1.jpg`,
+        lyhyt: 'Nuoret berberiapinat valtaavat hetkeksi polun Marokossa.',
         kuvateksti: 'Nuoret berberiapinat valtaavat hetkeksi polun kaatuneen rungon. Opas '
           + 'odottaa taaempana niiden väistymistä.',
         lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Barbary '
@@ -1148,6 +1151,7 @@ export const ELAINTAKYT = {
     kuvat: [
       {
         url: `${ELAINTAKY_KUVAJUURI}elain-zaf-photo-r20260905-v1.jpg`,
+        lyhyt: 'Afrikanpingviini pysähtyy Boulders Beachin hiekalle Etelä-Afrikassa.',
         kuvateksti: 'Afrikanpingviini pysähtyy Boulders Beachin vaalealle hiekalle; sen '
           + 'rinnassa kulkee lajille ominainen yksi musta vyö.',
         lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: BirdLife '
@@ -2404,6 +2408,7 @@ export const ELAINTAKYT = {
     kuvat: [
       {
         url: `${ELAINTAKY_KUVAJUURI_0709}elain-slb-ducorpsinkakadu-r20260907-v1.jpg`,
+        lyhyt: 'Ducorpsinkakadu pitää nokassaan pähkinää Salomonsaarten metsäkuvituksessa.',
         kuvateksti: 'Ducorpsinkakadu pitää nokassaan pyöreää pähkinää '
           + 'Salomonsaarten metsäympäristöä mukailevassa kuvituksessa.',
         lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Cornell '
@@ -2498,6 +2503,7 @@ export const ELAINTAKYT = {
       {
         url: 'https://commons.wikimedia.org/wiki/Special:FilePath/'
           + 'Birgus%20latro%20197146121.jpg?width=1200',
+        lyhyt: 'Sinertävä kookoskrapu tarttuu keppiin kyläpihalla Vanuatussa.',
         kuvateksti: 'Kookoskrapu tarttuu keppiin kyläpihalla Vanuatussa; '
           + 'sinertävä väri on lajilla useimmilla alueilla vallitseva.',
         lahde: 'Dominik Maximilián Ramík, Commons (CC BY 4.0)',
