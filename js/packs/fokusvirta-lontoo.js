@@ -145,24 +145,27 @@ export const FOKUSVIRTA_LONTOO = {
       + 'saapui mukana.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lontoo.mp3',
     /*
-     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-lontoo-r20260909-paper-v2;
-     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
-     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
-     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
-     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-lontoo-story-v2.jpg;
+     * omistajan hyväksymä tarinakorjaus ISOISA-TARINAKORJAUKSET-4, promptId
+     * ISOISA-TARINA-V2-lontoo). Kuvatekstit tekstisession sanasta sanaan: lyhyt
+     * kartalle, pitkä suurennokseen. Lähde on pelin oma havainnekuvamerkintä;
+     * lahteet on toimituksen tausta-aineisto (ei näy pelaajalle).
      */
     luentakuva: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-r20260909-paper-v2.jpg',
-      lyhyt: 'Höyryjuna ja sanomalehdenlukija Lontoon Metropolitan Railwayn '
-        + 'asemalla vuonna 1873.',
-      selite: 'Lontoo, joulukuu 1873: höyryjuna odottaa avokaivantoasemalla, ja '
-        + 'herrasmies lukee sanomalehteä höyryn keskellä.',
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-story-v2.jpg',
+      lyhyt: 'Lontoo, 1873. Vastapäinen herra pysyi lehden puolella savustakin.',
+      selite: 'Vaunun ikkuna antoi valoa sen verran, että näin lehden '
+        + 'liikahtavan. Lukija itse oli savussa epävarmempi tapaus. '
+        + 'Metropolitanin junaa veti höyryveturi, vaikka rata kulki maan '
+        + 'alla; uutuuden mukana matkusti siis vanha tuttu hiilensavu. Odotin '
+        + 'pysähdyksen ajan kameran takana. Herra odotti uutisten loppumista. '
+        + 'Kumpikaan meistä ei näyttänyt pitävän yskimistä syynä keskeyttää '
+        + 'työtään.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
-      'https://collection.sciencemuseumgroup.org.uk/objects/co8031819/henry-flather-collection-photographs',
-      'https://historicengland.org.uk/listing/the-list/list-entry/1239815?section=official-list-entry',
-      'https://collection.sciencemuseumgroup.org.uk/people/ap27611/metropolitan-railway',
-      'https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/33362',
+        'https://www.ltmuseum.co.uk/collections/stories/transport/metropolitan-line',
+        'https://collection.sciencemuseumgroup.org.uk/objects/co8031819/henry-flather-collection-photographs',
+        'https://www.heritagefund.org.uk/news/worlds-oldest-known-underground-carriage-be-restored',
       ],
     },
   },
