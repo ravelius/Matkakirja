@@ -238,6 +238,107 @@ Testit: `tests/saapumisasento.test.mjs` (puhtaat funktiot neljällä
 ruutukoolla) ja `tests/luentakuva.test.mjs` (ankkuri, raahaus, napautus,
 kartan siirto).
 
+### PULU-CAM: pulun kuvat pakkana isoisän kuvan päälle (omistaja 9.9.2026)
+
+Raamattu, PULU-CAM: PULUN NYKYAJAN KUVAT PAKKANA ISOISAN KUVAN PAALLE,
+YHTEINEN KARUSELLI. Omistaja: *"Yksi tai useampi kuva voisi tosiaan
+tulla pelissä isoisän ottaman kuvan päälle ja ne voisivat limittyä
+hieman. Eri suuntiin pakan päälle, niin että siinä hahmottaa, että
+pakassa on useampi kuva."* ja *"Sitten kun päällimmäistä kuvaa klikkaa,
+niin pääsee karuselliin, missä näkyy isoisän kuva isona sekä kaikki muut
+pulun kuvat."*
+
+Pakin **vapaaehtoinen** kenttä on `pollo.kuvat`
+(`js/packs/fokusvirta-<id>.js`), 1–3 kuvaa **toimituksen
+järjestyksessä**:
+
+```js
+pollo: {
+  kuvat: [
+    {
+      osoite: 'https://media.matkakirja.app/pulucam/…jpg', // TAI ampari / tiedosto
+      lyhyt: 'Yksi virke kartalle.',
+      selite: 'Pidempi kuvateksti karuselliin.',
+      lahde: 'Pulun kamera',
+      lahteet: ['https://…'],   // toimituksen tausta-aineisto, ei näy pelaajalle
+    },
+  ],
+},
+```
+
+Osoite ratkeaa **samalla porrastuksella** kuin luentakuvalla (`osoite` →
+`ampari` → Commonsin `tiedosto`, `js/fokusvirta.js kuvanOsoite`); kuva
+ilman osoitetta jätetään pois (`js/pulucam.js pulunKuvat`). Kolmea
+enempää ei oteta (`PULUCAM_KATTO`).
+
+**Milloin pakka nousee.** Siinä yhdessä kohdassa, jossa pulun
+kommenttikupla oikeasti nousee ruudulle (`fokusvirtaSaapumiskupla` →
+`nayta`) — sama koukku kuin Etsi aarre -napilla, ei kutsuhetkellä.
+Ensimmäinen kuva nousee heti, seuraavat pulpahtavat 0,95 s ja 1,15 s
+välein pienellä pomppuanimaatiolla (`PULUCAM_VALIT_MS`, css-siirtymä
+yliheitolla `cubic-bezier(0.34, 1.56, 0.64, 1)`).
+
+**Missä pakka on.** Luentakuvan paneelin sisällä, kuvan kokoisessa
+kuoressa (`.fokusvirta-kuvatila`) — ei sen vieressä. Siitä seuraa
+kolme asiaa ilman omaa koodia: pakka **seuraa karttaa**, **raahautuu**
+luentakuvan mukana (yksi ele siirtää koko pakan) ja **pienenee** kartan
+liikkeestä yhdessä luentakuvan kanssa. Kuori on pakko, koska
+`.fokusvirta-kuva` on nappi (nappiin ei ladota nappeja) ja sillä on
+`overflow: hidden`, joka leikkaisi juuri ne reunat, joiden pitää näkyä.
+Pakan noustessa luennan lopussa tullut **pienennys peruuntuu**: pakka ei
+nouse peukalonkynnen kokoisen kuvan päälle.
+
+Asennot ovat deterministisiä (`PULUCAM_ASENNOT`): kulmat +4°, −3°, +2° ja
+siirtymä 6–10 % **kortin omasta koosta** — prosenttia eikä pikseleitä,
+jotta limitys pysyy samana myös pienennetyssä pakassa.
+
+**Ilman luentakuvaa** (kaupungilla on `pollo.kuvat` mutta ei
+`matkakirja.luentakuva`) pakka nousee samaan paikkaan ilman pohjakuvaa:
+paneeli rakennetaan läpinäkyvällä pohjalaatikolla
+(`.pulucam-pohja`, `rakennaLuentakuvanPaneeli` kuvalla `null`), joten
+ankkuri, raahaus ja pienennys ovat täsmälleen samat.
+
+**Kaupungista lähtö poistaa pakan** (`piilotaLuentakuva` →
+`piilotaPuluCamPakka`, joka myös nollaa pulpahdusajastimet).
+
+#### PULU-CAM-merkki
+
+Jokaisessa pulun kuvassa on oikeassa alakulmassa merkki, jota **ei
+polteta kuvaan**: pieni piirretty pulun selfie ja teksti `PULU-CAM`
+erillisenä HTML-tekstinä (pieni versaali, terävä). Koko skaalautuu kuvan
+leveyden mukaan (css `--pulucam-mitta`: kartalla `--luentakuva-leveys`,
+suurennoksessa js:n laskema kuvan leveys). Selfien osoite on vakiossa
+`PULU_CAM_SELFIE_OSOITE` (`js/pulucam.js`) — **null** siihen asti kunnes
+kuvatoimitus toimittaa RGBA-PNG:n, ja silloin merkissä näkyy pelin
+nykyinen pulun kuvake (`js/pollo.js POLLO_IKONI`).
+
+#### Yhteinen karuselli
+
+Päällimmäisen kuvan napautus (ilman raahausta) avaa **nykyisestä
+`avaaSuurennos`-toiminnosta laajennetun** karusellin, ja sama karuselli
+avautuu isoisän luentakuvan napautuksesta, kun pakka on päällä.
+Järjestys on omistajan sanoma järjestys eikä napautuskohdan mukainen:
+
+1. isoisän luentakuva,
+2. pulun kuvat toimituksen järjestyksessä.
+
+Kuvat ovat **suorassa**, yksi kerrallaan kokonaisena; edellinen/seuraava
+-nuolinapit (`.fokuszoom-nuoli`), pyyhkäisy ja `js/galleria.js`:n
+kaistasääntö toimivat kuten muissakin gallerioissa. Jokaisella kuvalla on
+oma **pitkä kuvateksti** (`kuvatekstiPitka`) ja **lähderivi**
+(`taytaLahderivi`), ja pulun kuvissa PULU-CAM-merkki näkyy myös
+suurennoksessa (`.fokuszoom-kuvatila` + `.pulucam-suuri`). Sulkeminen
+palauttaa kartan pakkoineen.
+
+**Ilman `pollo.kuvat`-kenttää `avaaSuurennos` toimii täsmälleen kuten
+ennen**: karusellin lisäys on valinnainen `pulunKuvasta`-asetus, ja ilman
+sitä kuvatilan kuorta ei edes synny.
+
+Testit: `tests/pulucam.test.mjs`. Selainvartio:
+`tools/savukkeet/savuke-pulucam.mjs` (repon omat koekuvat, Lontoo;
+kaappaukset `pulucam-pakka.png`, `pulucam-karuselli.png`,
+`pulucam-puhelin.png`).
+
 ### Etsi aarre -nappi kommentin jälkeen (omistaja 9.9.2026)
 
 Raamattu, PULUN KOMMENTIN JALKEEN KARTALLE NAPPI "ETSI AARRE"

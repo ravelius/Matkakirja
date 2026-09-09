@@ -168,6 +168,38 @@ export const FOKUSVIRTA_LONTOO = {
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
+  /*
+   * PULU-CAM: PULUN NYKYAJAN KUVAT (vapaaehtoinen kenttä `pollo.kuvat`,
+   * omistaja 9.9.2026, Raamattu "PULU-CAM: PULUN NYKYAJAN KUVAT PAKKANA
+   * ISOISAN KUVAN PAALLE, YHTEINEN KARUSELLI").
+   *
+   * Kaupungilla voi olla 1–3 pulun nykyajan värivalokuvaa (pulun silmien
+   * tasolta, laajakulma). Ne nousevat kartalla isoisän luentakuvan PÄÄLLE
+   * pakaksi silloin, kun pulun kommenttikupla alkaa, ja päällimmäisen
+   * napautus avaa yhteisen karusellin (isoisän kuva ensin, sitten pulun
+   * kuvat toimituksen järjestyksessä). Kenttä on TOIMITUKSEN JÄRJESTYS:
+   * lista latautuu ja pulpahtaa siinä järjestyksessä kuin se on kirjoitettu.
+   *
+   *   kuvat: [
+   *     {
+   *       // Osoite ratkeaa samalla porrastuksella kuin luentakuvalla ja
+   *       // pollo.kuvalla: osoite → ampari → Commonsin tiedosto.
+   *       osoite: 'https://media.matkakirja.app/pulucam/…jpg',
+   *       lyhyt: 'Yksi virke kartalle.',
+   *       selite: 'Pidempi kuvateksti karuselliin.',
+   *       lahde: 'Pulun kamera',           // CC BY vaatii maininnan
+   *       lahteet: ['https://…'],          // toimituksen tausta-aineisto
+   *     },
+   *   ],
+   *
+   * PULU-CAM-merkki (piirretty selfie + teksti "PULU-CAM") on
+   * käyttöliittymän elementti eikä kuuluu kuvatiedostoon: merkkiä EI
+   * polteta kuvaan (js/pulucam.js puluCamMerkki).
+   *
+   * EI DATAA TÄSSÄ ERÄSSÄ. Kokeiluerä (Lontoo 1, Pariisi 1, Venetsia 3)
+   * tulee kuvatoimitukselta omistajan arvioon; ilman kenttää kaupungin
+   * kulku on täsmälleen ennallaan.
+   */
   pollo: {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
