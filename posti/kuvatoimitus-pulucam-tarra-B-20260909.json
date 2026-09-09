@@ -1,0 +1,26 @@
+{
+  "batchId": "PULUCAM-STICKER-B-20260909",
+  "kind": "standalone-selected-sticker",
+  "selectedBy": "user",
+  "selection": {
+    "threadId": "6aa0f60f-5df8-83ed-89c6-cdc5771d942f",
+    "userTurnId": "6c23e006-1737-4a53-9f08-90d0db22632d",
+    "quote": "Valitsin b tarran"
+  },
+  "sticker": {
+    "id": "pulucam-sticker-B-r20260909-v1",
+    "variant": "B",
+    "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulucam-sticker-B-r20260909-v1.png",
+    "mime": "image/png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1042771,
+    "sha256": "3c213b5f73f8de75b187965f775c15631a9f39a9d0046182ec89f009ab22c630",
+    "hasAlpha": true,
+    "iccProfile": "sRGB",
+    "rootQa": "pass",
+    "publicDownloadVerified": true
+  },
+  "implementation": "Aseta PULU_CAM_TARRA_OSOITE tähän URLiin. Tämä yksi PNG sisältää valkoisen muotoon leikatun pohjan, Pulun ja PuluCam-tekstin. Skaalaa ja sijoita erillisenä kuvan päälle käyttötilanteen mukaan. Ei erillistä HTML-tekstiä, ei vanhaa selfie-merkkiä rinnalle, ei leimausta puhtaisiin valokuviin. A/C/D/E/F säilyvät vertailussa.",
+  "gameIntegrationVerified": false
+}
