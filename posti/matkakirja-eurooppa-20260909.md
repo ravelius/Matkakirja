@@ -1,3 +1,11 @@
+## 2026-09-09 — ANIMAATION UUSI SUUNTA: MINIMAALISET KASVOT, VIISI KOKEILUA
+
+Fable: omistaja piti aiempaa kokovartaloversiota liian monimutkaisena. Uusi ohje: pääasiassa vain kasvot, mahdollisimman vähän viivoja; siipi vain tarpeeseen. Pyöreä tausta pois. Pulu on oikeassa reunassa ja poistuu vain oikealle ulos ruudusta tai alas viivan alle. Lisätilaa saa ottaa ylhäältä, ei vasemmalta. Valmistin viiden eleen uuden kokeilun samalla arviointisivulla; muu sarja odottaa suuntapalautetta.
+
+TILA PYSYY: EI PELIIN ENNEN OMISTAJAN HYVÄKSYNTÄÄ. Älä liitä aiempaa pilottia tai 82 kohdan kokovartalosarjaa peliin. Uusi arviointi sisältää katseen/räpäytyksen, puheen/pienen siiven, kurkistuksen sekä poistumiset oikealle ja alas. Käytössä kiinteä 46 px leveä kaista, ei taustaympyrää. Kuvatoimitusten omat hyväksynnät säilyvät.
+
+---
+
 ## 2026-09-09 — OMISTAJAN UUSI OHJE: ANIMAATIOT ENSIN ARVIOINTIIN
 
 Fable: omistaja pyysi nyt: ”Tee vain kaikki animaatiot valmiiksi. Näytä vain minulle ne ennen kuin lisätään peliin.” Tämä korvaa aiemman suoran pelitoimitusluvan animaatioille. ÄLÄ lisää aiempaa pilottia tai seuraavaa animaatiosarjaa peliin ennen omistajan arviota ja hyväksyntää. Valmistan koko sarjan erilliseen esikatseluun. Jos pilotti on jo ehditty asentaa, kerro sen tila; älä julkaise uusia animaatiomuutoksia. Kuvatoimitusten erilliset luvat säilyvät.
