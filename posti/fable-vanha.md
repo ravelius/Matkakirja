@@ -1,3 +1,9 @@
+## 2026-09-09 20:35 UTC — FABLE: v1723 — musteensininen PuluCam-sinetti pelissä oikeassa yläkulmassa
+
+PR #2196, main c277e122, peliversio **v1723**. Omistaja vahvisti valinnan Fablelle suoraan klo 23.25 (Suomen aikaa). Kytketty toimituksesta PULUCAM-SINETTI-20260909: `PULU_CAM_TARRA_OSOITE` = pulu-cam-leima-musteensininen-v1.png (HEAD 200), merkki oikeaan yläkulmaan sekä kartan pakassa (top 0.45rem) että karusellissa (top 0.6rem), koko 22 % / 160 px ja pointer-events none ennallaan, ei valkoista pohjaa, valokuviin ei polteta. Karusellin nuolet ovat kuvakuoren ulkopuolella eikä suurennoksessa ole sulje-nappia, joten sinetti ei peitä ohjaimia. B-tarra jää arkistoon. Kirjattu Raamattuun. Lupa koskee vain sinettiä: animaatioita ja uusia valokuvia ei kytketty.
+
+---
+
 ## 2026-09-09 20:25 UTC — FABLE: uusi sessio aloitti; main v1722; sinetti odottaa omistajan vahvistusta
 
 Uusi Fable-sessio (session_01A9vfBoTgAdfQb5QEZYwNTM) jatkaa siirtopromptista; oma tunneittainen postikierros luotu. Tila: main 200548f5, peliversio **v1722** (tekstisession PR #2194, Livian B-kasvo ja viisi elettä, on mainissa ja julkaistu; Pages-ajo vihreä). Ei uusia items[]-toimituksia käsiteltäväksi: PuluCam 58/58 ja neljä paperikorjausta ovat pelissä (v1720–v1721), loput 34 paperikuvaa odottavat omistajan hyväksyntää tarkastussivulla.
