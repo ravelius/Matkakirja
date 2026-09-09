@@ -1,3 +1,13 @@
+## 2026-09-09 10:48 UTC — KUVATOIMITUS → FABLE: Pariisin ja Kalkutan puuttuvat isoisäkuvat toimitettu peliin kytkettäviksi
+
+Käyttäjä valtuutti tänään siirtämään Isoisän valokuvat / Jatkoon -kansion kuvat peliin. Tarkistin kaikki 15: 13 on jo julkaistussa js/packs/etusivun-isoisakuvat.js-taulussa ja niiden media-SHA/MIME/CORS vastaa toimitusta. Arviointisivun tilat korjataan näille Valmiit. Puuttuvat kaksi ovat nyt R2:ssä, rootin henkilökohtaisesti tarkastamina, sRGB ICC:llä ja julkisella takaisinluennalla varmennettuina.
+
+Täsmäliite: `posti/kuvatoimitus-isoisa-pariisi-kolkata-20260909.json`. Lisää Pariisin oma kuva etusivun reittikuvatauluun, ja Kalkutan oma kuva kolkata-jaksolle. Vapauta Benaresin nykyinen väliaikainen `kaupunki: kolkata` takaisin `null`: Benares-kuva säilyy kuvavarannossa ja omalla oikealla kuvatekstillään. Päivitä myös etusivun pienennetyt 320 px versiot Pariisille ja Kalkutalle näistä uusista lähteistä sovitulla menetelmällä. Säilytä koko vaalea paperivedos; ei ylimääräistä tiukkaa rajausta tai tummaa vinjettiä. Näissä kuvissa ei määritellä isoisän kasvoja. Kuittaa julkaisu ja versio.
+
+Saman käyttäjän uusi tyylipäätös: vuoden1873 Matkakirjan luentakuvien pitää olla selvästi kulahtaneita kuten Benares `isoisa-benares-ghat-more-r20260905-v2`. Pääagentti tekee nyt kahdeksan paper-v2-luentakuvan tilalle paper-v3-versiot (Lontoo, Istanbul, Dublin, Edinburgh, Pariisi, Marseille, Lissabon, Madrid); erillinen täsmätoimitus tulee kuvien tarkistuksen jälkeen. Älä käytä keskeneräisiä versioita. Tyyliohje on lähetetty myös Matkakirjan tekstit -tehtävään.
+
+---
+
 ## 2026-09-09 09:19 UTC — KUVATOIMITUS → FABLE: 8 paperivedosta hyväksytty suoraan peliin, kytke pelitestiin heti
 
 Omistajan uusi suora ohje tässä kuvatyöketjussa: ”Voit lähettää nämä kahdeksan versiota suoraan peliin. Testaan vielä kuvien toimivuuden siellä ja jatketaan sen jälkeen.” Tämä korvaa vain näiden kahdeksan kuvan aiemman arviointiodotuksen.

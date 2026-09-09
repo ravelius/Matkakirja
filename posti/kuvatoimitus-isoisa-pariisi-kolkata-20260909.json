@@ -1,0 +1,81 @@
+{
+  "orderId": "isoisa-jatkoon-pariisi-kolkata-20260909",
+  "userAuthorization": "9.9.2026 toimita Isoisän valokuvat / Jatkoon kuvat peliin",
+  "deliveredCount": 2,
+  "items": [
+    {
+      "id": "isoisa-pariisi-route-r20260907-v1",
+      "cityId": "pariisi",
+      "city": "Pariisi",
+      "url": "https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-pariisi-route-r20260907-v1.jpg",
+      "fileName": "isoisa-pariisi-route-r20260907-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-pariisi-route-r20260907-v1.jpg",
+      "sha256": "40eea855ef12cb3de12485bbe402898bf1895bd3102d94655006f2c4e4c0a076",
+      "bytes": 639339,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "sRGB embedded ICC",
+      "caption": "Isoisä, Pariisi, 1873",
+      "description": "Isoisä, Pariisi, 1873",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        {
+          "label": "Edouard Baldus, View of Seine River looking toward Notre-Dame, 1851-1870, Library of Congress",
+          "url": "https://www.loc.gov/pictures/item/94504012/"
+        }
+      ],
+      "historicalNotes": "Vuoden 1873 fiktiivinen matkakuva, jonka arkkitehtuuri perustuu aikakauden valokuviin. Isoisä jää pieneksi ja kasvoiltaan epäselväksi. Kulunut paperi ja osittainen vaalea vinjetti säilyvät reunoilla.",
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja fictional 1873 grandfather route photograph, landscape 3:2, final exact size 1536 x 1024\nPrimary request: Create an entirely NEW historically grounded photograph of Paris in 1873 from the Seine, looking toward Notre-Dame. The cathedral, river embankment, stone bridge, low working boats and dense pre-Eiffel Parisian roofline make a rich, believable environment. A solitary young European male traveler, the grandfather, stands SMALL and partly obscured in deep shade beside a moored river boat in the lower-left middle distance, full figure only about 8–10 percent of image height. His face is naturally unreadable because of distance, coherent shade, imperfect optics and old-print density. He watches a boatman handling a rope; the moment is quiet and mysterious, no posing.\nInput images: Image 1 is Edouard Baldus's authentic albumen photograph View of Seine River, looking toward Notre-Dame, 1851–1870, Library of Congress LC-DIG-ds-04859. Use its real historical cathedral silhouette, Seine banks, bridge proportions and pre-1873 city fabric as architectural evidence. Image 2 is a previously accepted Matkakirja pale-grandfather photograph; use ONLY its complete-sheet pale vignette, aged paper, old optical softness, tonal contrast, grain, creases and small-person scale. Do not copy its Rangoon architecture, vegetation, people or composition.\nStyle/medium: genuinely camera-made 1873 albumen print, soft imperfect optics and micro-detail but believable broad tonal contrast; grey-brown monochrome, fine uneven photographic grain, worn emulsion, creased and aged paper. Not an illustration.\nComposition/framing: roomy landscape, Notre-Dame and the Seine dominate; grandfather small and obscured, safely inside the surviving image field. The entire canvas is one continuous paper sheet.\nPaper and vignette: broad pale neutral-white vignette at all four sides and corners, but the PAPER MUST REMAIN VISIBLY PRESENT beneath the fade all the way to the outermost pixels: fine fibers, gentle tooth, shallow dents and slight relief. The photographic scene remains faintly readable near the edges. Add two irregular physical creases with thin exposed fibers and tiny adjacent relief shadows, plus restrained scuffs and local image loss. No hard frame or blank digital border.\nConstraints: exact historical 1873 Paris; Notre-Dame's 19th-century Viollet-le-Duc spire is present; no Eiffel Tower; no cars, electric lights, modern bridges, modern signs, text, caption, watermark, mount or tabletop. Accurate human anatomy and boat rigging.\nAvoid: crisp modern digital photography, HDR, cinematic color, watercolor, painting, illustration, orange sepia, dark vignette, burnt corners, smooth blank white frame, erased paper edges, oversized face or hero portrait.",
+      "keepFullImage": true,
+      "crop": null,
+      "paleVignette": true,
+      "rootQa": "pass",
+      "userApproved": true,
+      "target": "etusivun reittikuvat"
+    },
+    {
+      "id": "isoisa-kolkata-route-r20260907-v1",
+      "cityId": "kolkata",
+      "city": "Kalkutta",
+      "url": "https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-kolkata-route-r20260907-v1.jpg",
+      "fileName": "isoisa-kolkata-route-r20260907-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-kolkata-route-r20260907-v1.jpg",
+      "sha256": "0e9e5c56f01df2319a505347a84593c17dc5ffd5d0709658a2a082f28d32ccd3",
+      "bytes": 553974,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "sRGB embedded ICC",
+      "caption": "Isoisä, Kalkutta, 1873",
+      "description": "Isoisä, Kalkutta, 1873",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        {
+          "label": "William George Stretton, Hooghly from High Court looking south, 1870s, British Library Photo 760(4)",
+          "url": "https://searcharchives.bl.uk/?f%5Brelated_subjects_ssim%5D%5B%5D=Babu+Ghat+%28Calcutta%29"
+        },
+        {
+          "label": "Frederick Fiebig, Ghaut on the Hooghly, British Library Photo 247/3(51)",
+          "url": "https://searcharchives.bl.uk/catalog/041-003057924"
+        },
+        {
+          "label": "Bâboo Ghât, Strand, Calcutta, 1860s, British Library Photo 782(80)",
+          "url": "https://searcharchives.bl.uk/?f%5Brelated_subjects_ssim%5D%5B%5D=Babu+Ghat+%28Calcutta%29"
+        }
+      ],
+      "historicalNotes": "Vuoden 1873 fiktiivinen matkakuva, jonka arkkitehtuuri perustuu aikakauden valokuviin. Isoisä jää pieneksi ja kasvoiltaan epäselväksi. Kulunut paperi ja osittainen vaalea vinjetti säilyvät reunoilla.",
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja fictional 1873 grandfather route photograph, landscape 3:2, final exact size 1536 x 1024\nPrimary request: Create an entirely NEW historically grounded photograph of Calcutta (Kolkata) in 1873 on the Hooghly riverfront. View along the east bank near a substantial classical ghat: broad stone landing steps, a low Doric or Ionic colonnaded ghat building, local wooden cargo and passenger boats drawn up at the water, and several tall-masted sailing ships moored farther out. Do not depict Benares or its temple skyline. The scene should feel unmistakably like a major colonial-era Hooghly port yet focus on layered local river life.\nHistorical evidence: British Library Photo 760(4), William George Stretton, Hooghly from High Court looking south, 1870s, records ghats, sailing ships and shipping; British Library Photo 247/3(51), Frederick Fiebig, Ghaut on the Hooghly, records local boats drawn up by a riverside ghat; British Library Photo 782(80), Bâboo Ghât, Strand, 1860s, records the Doric colonnade and sailing ships. Use these facts as the site architecture and river-traffic basis.\nStory: a solitary young European male traveler, the grandfather, stands SMALL and half-obscured beneath the deep shadow of the ghat colonnade, full figure only 7–9 percent of image height. His face is naturally unreadable due to distance, coherent shade, imperfect optics and old-print density. In the brighter middle distance two Bengali boatmen guide a narrow boat against the landing while a family waits with cloth bundles. Quiet, observed, mysterious; nobody poses.\nInput image: this is a previously accepted Matkakirja pale-grandfather image. Use ONLY its complete-sheet pale vignette, aged paper, optical softness, tonal contrast, fine grain, physical creases and small-person scale. Do not copy its Rangoon architecture, vegetation, people or composition.\nStyle/medium: genuinely camera-made 1873 albumen print, soft imperfect photography and micro-detail but believable broad tonal contrast; grey-brown monochrome, fine uneven grain, worn emulsion, creased aged paper. Not an illustration.\nComposition/framing: roomy riverscape, low ghat and landing steps fill the near bank, Hooghly and sailing ships open the center and background; grandfather is small, obscured and safely inside the surviving field. Entire canvas is one continuous sheet.\nPaper and vignette: broad pale neutral-white vignette at all four sides and corners, while the PAPER REMAINS VISIBLY PRESENT beneath the fade to every outermost pixel: fine fibers, gentle tooth, shallow dents and slight relief. Scene stays faintly readable near edges. Two irregular physical creases with exposed fibers and tiny relief shadows, restrained scuffs and local emulsion loss. No hard frame or blank digital border.\nConstraints: plausible Calcutta 1873; accurate Bengali clothing, anatomy, boat construction and sailing rigging. No Howrah Bridge steel truss, no modern bridge, cars, electricity, plastic, modern skyline, signs, text, caption, watermark, mount or tabletop.\nAvoid: Benares temple ghats, giant ornate Hindu temple towers, crisp modern digital photography, HDR, cinematic color, watercolor, painting, illustration, orange sepia, dark vignette, burnt corners, smooth blank white frame, erased paper edges, oversized hero portrait.",
+      "keepFullImage": true,
+      "crop": null,
+      "paleVignette": true,
+      "rootQa": "pass",
+      "userApproved": true,
+      "target": "etusivun reittikuvat"
+    }
+  ]
+}
