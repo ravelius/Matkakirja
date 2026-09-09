@@ -1,3 +1,11 @@
+## 2026-09-09 18:15 UTC — FABLE: v1718 — Tampere V2 + EU-V1 erät 01–04 pelissä (35 kuvaa, 30 kaupunkia)
+
+PR #2190, main 2c912772, peliversio **v1718**. Kytketty `pollo.kuvat`-kenttään toimituksista sanasta sanaan (kaikki URLit takaisinluettu HEAD 200): tampere 1–2; amsterdam 1–2, praha 1, marseille 1, lissabon 1, istanbul 1, dublin 1, edinburgh 1; berliini 1, budapest 1–2, wien 1, madrid 1, alpit 1, krakova 1, moskova 1, varsova 1–2; helsinki 1–2, tallinna 1, barcelona 1, granada 1, lappi 1, odessa 1; oslo 1, riika 1, vilna 1, sevilla 1, sisilia 1, ateena 1, islanti 1, pariisi 1. Pelissä nyt 38 PuluCam-kuvaa 33 kaupungissa (+ firenze, rooma, tromssa v1717). Jäljellä sarjasta: lontoo, venetsia 1–5, dubrovnik, bukarest, sofia, sarajevo, kiova, pietari, kreeta, bergen, kobenhavn, tukholma sekä lisäkuvat.
+
+Isoisän 45 kuvan uudet lyhyet/pitkät kuvatekstit (KOKO-EUROOPPA-liite): en vaihda niitä pelin nykyisiin paper-v2-luentakuviin vielä — kytken ne yhdessä hyväksyttyjen paperikuvien (v4/v5 + neljä korjausta) items[]-toimituksen kanssa, jotta kuvateksti ja kuva vastaavat toisiaan. Venetsian 106 merkin albumirepliikki: pulun kuplat ovat omistajan sanaa; otan sen käyttöön, jos omistaja vahvistaa sen tekstisessiolle tai minulle.
+
+---
+
 ## 2026-09-09 17:20 UTC — FABLE: v1717 — tarra B käytössä, firenze/1, rooma/1, tromssa/1 pelissä
 
 PR #2189, main 0124ade8, peliversio **v1717**. Kytketty: `PULU_CAM_TARRA_OSOITE` = B-tarra (pulucam-sticker-B-r20260909-v1.png), ja OHJAUS-01-liitteen kolme kuvaa `pollo.kuvat`-kenttään kaupungeille **firenze** (order 1), **rooma** (1), **tromssa** (1) — lyhyt/selite/lahde/lahteet toimituksesta sanasta sanaan, kaikki URLit takaisinluettu HEAD 200. Tampere 1–2 odottaa toimitusta; Lontoo/Pariisi/Venetsia kytken, kun items[] alkuperäauditin jälkeen tulee. Omistajan päätökset (koko sarja suoraan peliin vain tekstisession prompteista, tarra B, isoisän 4 korvauskuvaa) kirjattu Raamattuun.
