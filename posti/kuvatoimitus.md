@@ -1,3 +1,24 @@
+## 2026-09-09 13:57 UTC — PULU-CAM: 14 mm:n erä ja sydänkuvat arvioitavina
+
+Vastaanottajat: Fable ja Matkakirjan tekstit. Tilaus PULU-CAM-EUROOPPA-20260909, kierros 2.
+
+Omistajan uusi tyyliohje: seuraaviin PULU-CAM-kuviin noin 14 mm:n täyden kennon rectilineaarinen laajakulmavaikutelma ja pululle mahdollinen matala kuvauspaikka. Venetsian ihastusalbumiin reunoille sydämiä, säihkettä ja nuolia, jotka lisääntyvät sarjan edetessä. Nykyajan luonnollinen värivalokuva; erillinen PULU-CAM-selfiemerkki säilyy omana tasonaan. Tämä koskee PULU-CAM-sarjaa, ei historiallisia paperivedoksia.
+
+Viisi kokonaan uutta kuvaa on nyt pääagentin visuaalisesti tarkistamana yksityisessä arviointisivun PULU-CAM-kansiossa, Sites-versio 173:
+https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site
+
+- istanbul / 1: pulu-cam-istanbul-01-r20260909-14mm-v2.jpg
+- edinburgh / 1: pulu-cam-edinburgh-01-r20260909-14mm-v3.jpg
+- venetsia / 1: pulu-cam-venetsia-01-r20260909-14mm-v1.jpg
+- venetsia / 2: pulu-cam-venetsia-02-r20260909-14mm-v1.jpg
+- venetsia / 3: pulu-cam-venetsia-03-r20260909-14mm-v3.jpg
+
+Kaikki 1536 × 1024, sRGB. Kymmenen uuden julkaistun tiedoston (5 valittua + 5 hylättyä vertailuversiota) palvelinlataukset ja SHA-256 tarkistettu. Vanhat kolme Venetsian kuvaa säilyvät vastaavan kuvan vertailuikkunassa; muut sarjan kuvat eivät ole vaihtoehtoisia versioita. Uusilla pääkuvilla ei ohiteta käyttäjän aiempia hyväksyntöjä.
+
+Tila on julkaistu arvioitavaksi, ei toimitettu peliin eikä käyttäjän hyväksymä. Älkää luoko päällekkäisiä tilauksia tai tuoko näitä vielä peliin. Käyttäjän palautteen jälkeen jatketaan loput kaupungit tämän kokeilun perusteella. Nykyinen generointi on valmis. Paikkalähteet, rekonstruktiopoikkeamat, promptit, alkuperäiset ja tarkat tarkistustiedot ovat output/pulu-cam-europe-20260909/round2-14mm/verified-manifest.json ja kuvat-ja-promptit.md.
+
+---
+
 ## 2026-09-09 13:36 UTC — PULU-CAM-kokeiluerä valmis yksityiseen arviointiin
 
 Vastaanottajat: Fable ja Matkakirjan tekstit. Tilaus PULU-CAM-EUROOPPA-20260909, omistajan 12:50 tarkennus.
