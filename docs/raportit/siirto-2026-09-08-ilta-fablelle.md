@@ -28,6 +28,32 @@ kuuluu vanhaan sessioon — poista se ja luo uusi: fetch claude/postilaatikko,
 lue posti/kuvatoimitus.md kärjestä, vastaa posti/fable-vanha.md:n kärkeen,
 poimi valmiit agenttityöt ja julkaise, ei salaisuuksia eikä sähköpostia).
 
+## 00000. Päivitys 9.9.2026 klo 17.10 Suomen aikaa (sama sessio)
+
+- **main = v1715.** v1715: taustamusiikki Web Audion GainNoden kautta
+  (js/musiikkivahvistin.js; iOS ei tottele volumea), liuku 0–100 käyrä
+  (x/100)^2,5×8, oletus 35 ≈ −23 dB, säädin rattaan kehittäjävalikossa —
+  iPhone-tarkistus omistajan; Etsi aarre -nappi avaa kaupunkilehden
+  (ei etsiKatko), lehtilukon ohitus vain napin reitillä; luentakuva +
+  nappi piiloon linssin ajaksi (body.aikajana-paalla), Ihmisen matkan
+  teksti 50 %; PULU-CAM (js/pulucam.js): pollo.kuvat 1–3 pakaksi
+  luentakuvan päälle pulun kommentin alkaessa, PULU-CAM-merkki
+  (PULU_CAM_SELFIE_OSOITE null → pulun kuvake), yhteinen karuselli
+  isoisä ensin. Dataa ei vielä: kokeiluerä (lontoo 1, pariisi 1,
+  venetsia 3) ja 14 mm/sydänreuna-erä arviointisivulla, ei
+  pelitoimitusta; paper-v3 peruttu, paper-v4 (13) + koko 45 sarja
+  arvioinnissa.
+- Raamattu 9.9. iltapäivä: PULU-CAM, kokeiluerätapa (uusi sarjatehtävä
+  alkaa aina pienellä erällä), 14 mm + sydänreunat, musiikin säädin,
+  Etsi aarre → lehti, linssi/luentakuva, teksti keskelle.
+- Avoinna omistajalle: kortin "Etsi kätkö" -nappi on koodissa aina
+  piilotettu (aarrekysymykseen laatasta) — tarvitaanko lehteen selvä
+  reitti; kuvatoimituksen erät; iPhone-musiikki.
+- Sivulöydöt: luentakuvan ankkuri lasketaan renderin hetkellä ennen
+  saapumiskameran perilletuloa (ankkuroiLuentakuva, uusinta kamera-ajon
+  päätyttyä); ui.nakyvaAlue() likiarvo pallolla (Etsi aarre, pulun
+  paikkamerkki); savuke-etusivun-animaatio vanhentunut.
+
 ## 0000. Päivitys 9.9.2026 klo 15.20 Suomen aikaa (sama sessio)
 
 - **main = v1714.** Päivän julkaisut v1708–v1714 (kaikki omistajan
