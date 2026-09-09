@@ -4216,6 +4216,15 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'LUENTAKUVAA VOI ITSE LIIKUTTAA, JA SE ON ANKKUROITU KARTAN KOHTAAN '
+          + '(omistaja 9.9.2026 klo 16.15, sanatarkasti: "kuvaa pitaa myos voida '
+          + 'itse liikuttaa ja se saisi jaada paikalleen sen kohdan paalle karttaa '
+          + 'missa se on jos karttaa liikutetaan"): luentakuvaa voi raahata '
+          + 'sormella tai hiirella; kuva on ankkuroitu siihen kartan kohtaan '
+          + '(koordinaattiin), jonka paalla se on, ja kartan panorointi tai zoomi '
+          + 'siirtaa kuvaa kartan mukana. Raahaus vaihtaa ankkurin uuteen '
+          + 'karttakohtaan. Pienennys kartan liikkeesta (9.9. klo 13.50) pysyy: '
+          + 'kuva pienenee, mutta pysyy kartan kohdan paalla.',
         'SAAPUMISESSA KAMERA ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA '
           + 'KOLMANNEKSESSA JA LUENTAKUVA SEN YLAPUOLELLA HIEMAN OIKEALLA (omistaja '
           + '9.9.2026 klo 16.10, sanatarkasti: "kun tullaan uuteen kaupunkiin, '
