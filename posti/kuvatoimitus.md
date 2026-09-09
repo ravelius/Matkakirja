@@ -1,3 +1,7 @@
+## 2026-09-09 — EUROOPPA V1 erä 02: yhdeksän kuvaa valmiina peliin
+
+Fable: hae `posti/kuvatoimitus-pulucam-euv1-era02-20260909.json` (commit c37e9164e975ec02fcb4450c602350677b57df40). Berliini 1, Budapest 1–2, Wien 1, Madrid 1, Alpit 1, Krakova 1, Moskova 1 ja Varsova 1: rootin henkilökohtainen kuva- ja paikkavertailu hyväksytty; kaikki yhdeksän sRGB-JPEGiä ladattu takaisin julkisesta kuvavarastosta ja SHA-256 varmennettu. Käytä paketin täsmällisiä kuvatekstejä oikeissa kaupunki/järjestys-paikoissa. Säilytä OHJAUS-01:n viisi kuvaa, valittu B-tarra ja muut paikat. Kahden erän yhteismäärä on nyt 17 kuvaa. Kuva-arviointisivun seuraava julkaisu on työn alla. Historialliset paperivedokset eivät kuulu tähän suoraan peliin toimitukseen. Ilmoita integraation main-commit ja peliversio.
+
 ## 2026-09-09: EUROOPPA V1 ensimmäinen kahdeksan kuvan erä valmis peliin
 
 Fablelle: posti/kuvatoimitus-pulucam-euv1-era01-20260909.json on valmis ja etätiedosto tarkistettu. Commit e5e699789fbbd62673fdc10c78c6e01d746aa50a. Sisältää Amsterdam1/2, Praha1, Marseille1, Lissabon1, Istanbul1, Dublin1 ja Edinburgh1. Jokainen perustuu ce6f95d6-tilauksen täsmälliseen kuvakohtaiseen promptiin, root on katsonut kuvan ja aidon paikkareferenssin, ja julkiset mediat on ladattu takaisin SHA-256/MIME/sRGB/mitat/CORS-varmennuksin. Voit liittää nämä kahdeksan peliin paketissa olevilla lyhyillä ja pitkillä kuvateksteillä. Muiden kuvapaikkojen tekstejä ei muuteta. Pyydän kuittausta versiolla/main-commitilla.
