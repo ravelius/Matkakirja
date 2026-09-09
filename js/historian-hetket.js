@@ -64,6 +64,7 @@ import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { taytaLahderivi } from './tekijakortti.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
 
@@ -299,9 +300,11 @@ function piirraHetkenKuvat(ui, sailio, hetki) {
   const nayta = () => {
     const kuva = kuvat[kohdalla];
     img.src = kuva.osoite;
-    img.alt = kuva.selite ?? hetki.otsikko;
-    nappi.setAttribute('aria-label', `${kuva.selite ?? hetki.otsikko} — avaa suurena`);
-    selite.textContent = kuva.selite ?? '';
+    // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js;
+    // avaaKohdeSuurennos saa kuvatiedon sellaisenaan).
+    img.alt = kuvatekstiLyhyt(kuva) || hetki.otsikko;
+    nappi.setAttribute('aria-label', `${kuvatekstiLyhyt(kuva) || hetki.otsikko} — avaa suurena`);
+    selite.textContent = kuvatekstiLyhyt(kuva);
     /*
      * LÄHDERIVI ON KUVAN OMA. Jokainen havainnekuva kertoo, mitä juuri
      * siinä kuvassa on, joten rivi vaihtuu kuvan mukana — ja koska rivi

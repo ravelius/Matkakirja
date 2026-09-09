@@ -61,6 +61,7 @@ import {
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { asetaNostonKuva, piirraNostonKuva } from './fokusnosto.js';
 import { taytaLahderivi } from './tekijakortti.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
@@ -368,9 +369,11 @@ function piirraSkandaalinGalleria(ui, sailio, skandaali, kuvat) {
     }
     kohdalla = ((kohdalla % jaljella.length) + jaljella.length) % jaljella.length;
     const kuva = jaljella[kohdalla];
-    img.alt = kuva.selite ?? skandaali.otsikko ?? '';
-    nappi.setAttribute('aria-label', `${kuva.selite ?? 'Kuva'} — avaa suurena`);
-    selite.textContent = kuva.selite ?? '';
+    // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js;
+    // avaaKohdeSuurennos saa kuvatiedon sellaisenaan).
+    img.alt = kuvatekstiLyhyt(kuva) || skandaali.otsikko || '';
+    nappi.setAttribute('aria-label', `${kuvatekstiLyhyt(kuva) || 'Kuva'} — avaa suurena`);
+    selite.textContent = kuvatekstiLyhyt(kuva);
     /*
      * LÄHDERIVI ON KUVAN OMA, ja se kulkee taytaLahderivin läpi, joten
      * "Matkakirjan havainnekuva" saa painettavan selitteen joka kerta

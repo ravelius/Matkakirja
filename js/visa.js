@@ -260,6 +260,9 @@ export function renderQuiz(ui) {
       ui.naytaKohtaamiskuva({
         osoite: kuvaTiedot.osoite,
         alt: kuvaTiedot.alt,
+        // Kaksi pituutta: kortilla lyhyt, avatussa kuvassa pitkä
+        // (js/kuvatekstit.js, omistaja 9.9.2026).
+        lyhyt: kuvaTiedot.lyhyt,
         kuvateksti: kuvaTiedot.kuvateksti,
         valokuva: true,
       });

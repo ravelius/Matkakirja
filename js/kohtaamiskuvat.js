@@ -1,4 +1,5 @@
 import { kohtaamiskuvaOsoite, kohtaamiskuvat } from './kohtaamiskuvat-data.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 
 const galleria = document.querySelector('#galleria');
 const korttipohja = document.querySelector('#kuvakortti');
@@ -32,7 +33,8 @@ function kortti(kohtaaminen) {
   pala.querySelector('.maa').textContent = kohtaaminen.maa;
   pala.querySelector('.kaupunki').textContent = kohtaaminen.kaupunki;
   pala.querySelector('.hahmo').textContent = kohtaaminen.hahmo;
-  pala.querySelector('.kuvateksti').textContent = kohtaaminen.kuvateksti;
+  // Kortilla lyhyt (js/kuvatekstit.js) — sama sääntö kuin pelin kortilla.
+  pala.querySelector('.kuvateksti').textContent = kuvatekstiLyhyt(kohtaaminen);
   pala.querySelector('.hetki').textContent = kohtaaminen.hetki;
   pala.querySelector('.vihje').textContent = kohtaaminen.vihje;
   return pala;

@@ -12,6 +12,7 @@
 import { piirraSivunTehtava } from './fokustehtavat.js';
 import { avaaLippuikkuna } from './liput.js';
 import { asetaKuva } from './media.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { avaaKarttaSuurennos } from './nahtavyydet.js';
 import {
   lippuUrl, lippuVara, valokuvaUrl, valokuvaVara,
@@ -939,7 +940,8 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     if (eka) {
       const hero = html('figure', 'vinkki-hero');
       const kuva = document.createElement('img');
-      kuva.alt = eka.selite ?? eka.nimi ?? '';
+      // Sivulla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+      kuva.alt = kuvatekstiLyhyt(eka) || eka.nimi || '';
       kuva.decoding = 'async';
       asetaKuva(kuva, valokuvaUrl(eka.tiedosto, 1200), valokuvaVara(eka.tiedosto, 1200), () => hero.remove());
       hero.appendChild(kuva);
@@ -950,9 +952,10 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
        * JATKEENA samalla rivillä hennolla pienellä (omistajan tilaus
        * 23.8.2026; ks. css/styles.css "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
        */
-      if (eka.selite || eka.lahde) {
+      const ekaLyhyt = kuvatekstiLyhyt(eka);
+      if (ekaLyhyt || eka.lahde) {
         const teksti = html('figcaption', 'vinkki-hero-teksti');
-        if (eka.selite) teksti.appendChild(html('span', 'vinkki-hero-selite', eka.selite));
+        if (ekaLyhyt) teksti.appendChild(html('span', 'vinkki-hero-selite', ekaLyhyt));
         if (eka.lahde) teksti.appendChild(taytaLahderivi(html('span', 'lahde'), eka.lahde, eka));
         hero.appendChild(teksti);
       }
@@ -1071,7 +1074,7 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       kuva = document.createElement('img');
       kuva.decoding = 'async';
       kuva.draggable = false;
-      kuva.alt = nosto.selite ?? nosto.otsikko ?? 'Lukijan lähettämä kuva';
+      kuva.alt = kuvatekstiLyhyt(nosto) || nosto.otsikko || 'Lukijan lähettämä kuva';
       kuva.src = nosto.kuvaUrl;
       lohko.appendChild(kuva);
     }

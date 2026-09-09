@@ -49,6 +49,7 @@ const SHELL = [
   './js/vertailu.js',
   './js/nahtavyydet.js',
   './js/kuvagalleria.js',
+  './js/kuvatekstit.js',
   './js/kohtaamiskuvat-data.js',
   './js/kohtaamiskuvat.js',
   './js/opas.js',

@@ -66,6 +66,20 @@ vaadi koodimuutoksia:
   ovat yhden virkkeen mittaiset kuten muuallakin — vasemmassa myös
   ajankohta, oikeassa nykytila. Uusi kaupunki ei vaadi koodia; ilman
   kenttää etusivu taittuu ennallaan.
+- **Lyhyt kuvateksti sivulla, pitkä avatussa kuvassa (omistajan
+  linjaus 9.9.2026, Raamattu "LYHYT KUVATEKSTI SIVULLA, PITKA VASTA
+  AVATUSSA KUVASSA"):** jokaisella kuvalla voi olla kaksi pituutta.
+  Sivulla, kortilla ja kartan päällä näkyy `lyhyt` (yksi virke,
+  enintään 100 merkkiä, päättyy pisteeseen); suurennoksessa näkyy
+  entinen `selite`/`kuvateksti` kokonaisuudessaan ja sen jatkeena
+  lähderivi. Sääntö on yhdessä paikassa (`js/kuvatekstit.js`:
+  `kuvatekstiLyhyt` ja `kuvatekstiPitka`), ja kaikki piirtopaikat
+  kysyvät sitä sieltä — uuteen piirtopaikkaan ei kirjoiteta omaa
+  `?? `-ketjua. Valmiiksi lyhyt kuvateksti kelpaa sellaisenaan ilman
+  `lyhyt`-kenttää. Isojen datatiedostojen lyhennystyö tehdään
+  työkalulla `tools/kuvatekstit-lyhyet.mjs` (`--lista`, `--vie`,
+  `--tarkista`); työkalun otsikkokommentissa ovat tarkat komennot ja
+  lyhyen kuvatekstin kirjoitussäännöt.
 - **Äänirivin ennen ja nyt (pilotti Lontoossa ja Kairossa, omistajan
   tilaus 21.8.2026):** äänirivi jakautuu kahtia, kun kaupungille on
   vanha äänitallenne `js/packs/vanhat-aanet.js`:ssä. Vasemmalla on

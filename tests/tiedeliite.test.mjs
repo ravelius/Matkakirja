@@ -308,7 +308,7 @@ test('kortti lataa lyhyen, suurennos pitkän ja lähderivin', () => {
   // Suurennos saa kuvatiedon sellaisenaan, ja piirtää siitä pitkän
   // selitteen ja lähderivin (js/fokuskohteet.js avaaKohdeSuurennos).
   const F = lue('js/fokuskohteet.js');
-  assert.match(F, /html\('span', 'fokuskohde-zoomselite', kuva\.selite \?\? ''\)/);
+  assert.match(F, /html\('span', 'fokuskohde-zoomselite', kuvatekstiPitka\(kuva\)\)/);
   assert.match(F, /taytaLahderivi\(html\('span', 'fokuskohde-zoomlahde'\), kuva\.lahde \?\? '', kuva\)/);
 });
 

@@ -49,6 +49,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Florence, Duomo di Firenze.jpg',
+          lyhyt: 'Kupoli valmistui 1436 ilman koko aukon täyttävää puutelinettä.',
           selite: 'Kupoli valmistui 1436 ilman koko aukon täyttävää puutelinettä, '
             + 'ja viereisen kellotornin suunnitteli Giotto — sen huipulle '
             + 'kiipeää 414 porrasta.',
@@ -56,6 +57,7 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'The Facade of Cattedrale di Santa Maria del Fiore (Cathedral of Saint Mary of the Flowers), Florence.jpg',
+          lyhyt: 'Marmorijulkisivu valmistui vasta 1887, paljon kirkkoa myöhemmin.',
           selite: 'Marmorijulkisivu on paljon nuorempi kuin kirkko: alkuperäinen '
             + 'jäi kesken, ja nykyinen valko-viher-punainen asu valmistui vasta '
             + 'vuonna 1887.',
@@ -90,6 +92,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Italie, Florence, Piazza della Signoria, Palazzo Vecchio (1299-1314), Torre di Arnolfo et les blasons (50130860426).jpg',
+          lyhyt: 'Talo rakennettiin 1299–1314 Signorian yhdeksän hallitusmiehen taloksi.',
           selite: 'Talo rakennettiin 1299–1314 Signorian eli kaupungin yhdeksän '
             + 'hallitusmiehen taloksi, ja he asuivat virkakautensa ajan sen '
             + 'sisällä saamatta poistua.',
@@ -123,6 +126,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Piazzale degli Uffizi perspective view, Florence, Italy, August 2025.jpg',
+          lyhyt: 'Vasari aloitti talon 1560 Medicien virastoiksi; museo avattiin yleisölle 1769.',
           selite: 'Vasari alkoi rakentaa taloa vuonna 1560 Medicien virastoiksi — '
             + 'nimi tarkoittaa italiaksi yksinkertaisesti virastoja — ja '
             + 'yleisölle museo avattiin 1769.',
@@ -155,6 +159,7 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Ponte Vecchio at sunset from Piazzale Michelangelo Florence 2023 dllu.jpg',
+          lyhyt: 'Kivisilta on vuodelta 1345: ainoa Firenzen silta, jota ei räjäytetty elokuussa 1944.',
           selite: 'Nykyinen kivisilta on vuodelta 1345, ja kauppojen katon yllä '
             + 'kulkevaa Vasarin käytävää myöten ruhtinasperhe pääsi Palazzo '
             + 'Vecchiosta Pitti-palatsiin joutumatta kaduille. Elokuussa 1944 '

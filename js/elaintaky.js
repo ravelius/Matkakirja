@@ -94,6 +94,7 @@ import {
 import { elaintakyKarttarivit, elaintakyNimioKylki } from './elaintaky-rivit.js';
 import { ELAINTAKYT, elaintakynKuvat } from './packs/elaintakyt.js';
 import { assetOsoite } from './media.js';
+import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
 
@@ -773,7 +774,9 @@ function elaintakyPiirraKaruselli(ui, kohde, kuvat, vakioselite) {
   let estaNapautus = false;
   let virheita = 0;
   const osoitteet = kuvat.map((kuva) => assetOsoite('elaimet', kuva.url || kuva.tiedosto));
-  const selitteet = kuvat.map((kuva) => kuva.kuvateksti || vakioselite);
+  // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  const selitteet = kuvat.map((kuva) => kuvatekstiLyhyt(kuva) || vakioselite);
+  const pitkat = kuvat.map((kuva) => kuvatekstiPitka(kuva) || vakioselite);
 
   const ruudut = selitteet.map((teksti, j) => {
     const nappi = html('button', 'fokusnosto-kuvanappi elaintaky-karuselli-ruutu');
@@ -801,7 +804,7 @@ function elaintakyPiirraKaruselli(ui, kohde, kuvat, vakioselite) {
       if (estaNapautus) { estaNapautus = false; return; }
       avaaKohdeSuurennos(
         ui,
-        { osoite: osoitteet[kohdalla], selite: selitteet[kohdalla] },
+        { osoite: osoitteet[kohdalla], selite: pitkat[kohdalla] },
         () => ruudut[kohdalla],
         'elaintakyZoom',
       );
@@ -978,7 +981,9 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa) {
    */
   const [kuva] = kuvat;
   if (!kuva) return;
-  const selite = kuva.kuvateksti || vakioselite;
+  // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  const selite = kuvatekstiLyhyt(kuva) || vakioselite;
+  const pitka = kuvatekstiPitka(kuva) || vakioselite;
   const kehys = html('figure', 'fokusnosto-kuva elaintaky-kuva');
   const nappi = html('button', 'fokusnosto-kuvanappi');
   nappi.type = 'button';
@@ -1007,7 +1012,7 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa) {
    */
   nappi.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
-    avaaKohdeSuurennos(ui, { osoite: elainkuva, selite }, () => nappi, 'elaintakyZoom');
+    avaaKohdeSuurennos(ui, { osoite: elainkuva, selite: pitka }, () => nappi, 'elaintakyZoom');
   });
   kehys.appendChild(nappi);
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');

@@ -93,6 +93,7 @@ import {
   pullaOstosnappi, pullanNimi,
 } from './fokustehtavat.js';
 import { asetaKuva, julisteUrl } from './media.js';
+import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 // Ilmepaketti (omistaja 5.9.2026): kynän korostus pöllön vinkkiin ja sähkeen kysymysriviin.
 import { korostaSana, korostaSisalto } from './ilme.js';
 import { el } from './mapart.js';
@@ -1589,7 +1590,8 @@ function piirraKuva(ui, kohde, kuva, luokka = 'fokusvirta-viite') {
   nappi.title = 'Katso kuva suurempana';
   const kuvateksti = html('p', 'fokusvirta-kuvateksti');
   const img = document.createElement('img');
-  img.alt = kuva.selite ?? '';
+  // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  img.alt = kuvatekstiLyhyt(kuva);
   // EI `lazy`: kuva on kortin ensimmäinen asia ja näkyvissä heti, joten
   // laiska lataus vain viivyttäisi sitä.
   img.decoding = 'async';
@@ -1606,7 +1608,7 @@ function piirraKuva(ui, kohde, kuva, luokka = 'fokusvirta-viite') {
   nappi.appendChild(img);
   nappi.addEventListener('click', () => avaaSuurennos(ui, [kuva], 0, () => nappi));
   kuvateksti.append(
-    html('span', 'fokusvirta-kuvaselite', kuva.selite ?? ''),
+    html('span', 'fokusvirta-kuvaselite', kuvatekstiLyhyt(kuva)),
     taytaLahderivi(html('span', 'fokusvirta-kuvalahde'), kuva.lahde ?? '', kuva),
   );
   viite.append(nappi, kuvateksti);
@@ -1775,7 +1777,8 @@ export function naytaLuentakuva(ui, city) {
   nappi.type = 'button';
   nappi.title = 'Katso kuva suurempana';
   const img = document.createElement('img');
-  img.alt = kuva.selite ?? '';
+  // Kartan päällä lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  img.alt = kuvatekstiLyhyt(kuva);
   img.decoding = 'async';
   img.draggable = false;
   /*
@@ -1792,7 +1795,7 @@ export function naytaLuentakuva(ui, city) {
   // tekijän maininnan, eikä lisenssiehto jousta paneelin koon mukaan.
   const kuvateksti = html('p', 'fokusvirta-kuvateksti');
   kuvateksti.append(
-    html('span', 'fokusvirta-kuvaselite', kuva.selite ?? ''),
+    html('span', 'fokusvirta-kuvaselite', kuvatekstiLyhyt(kuva)),
     taytaLahderivi(html('span', 'fokusvirta-kuvalahde'), kuva.lahde ?? '', kuva),
   );
 
@@ -2017,7 +2020,8 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
   /** Kuvan sisältö paikalleen; iso versio vaihtuu tilalle kun se on. */
   const nayta = () => {
     const kuva = lista[i];
-    img.alt = kuva.selite ?? '';
+    // AVATTU KUVA NÄYTTÄÄ AINA PITKÄN (js/kuvatekstit.js).
+    img.alt = kuvatekstiPitka(kuva);
     asetaKuva(img, kuvanOsoite(kuva, 320), kuvanVara(kuva, 320), null);
     /*
      * PIKKUKUVA ENSIN, ISO PERÄSSÄ. Kortin pikkukuva on jo selaimen
@@ -2031,7 +2035,7 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
       if (kerros.isConnected && lista[i] === kuva) img.src = iso.src;
     }, { once: true });
     iso.src = kuvanSuurennos(kuva);
-    selite.textContent = kuva.selite ?? '';
+    selite.textContent = kuvatekstiPitka(kuva);
     // Lähderivi kirjoitetaan uudestaan joka kuvanvaihdossa, joten
     // havainnekuvaselite on rakennettava samalla — taytaLahderivi
     // tyhjentää elementin ja kokoaa sen uudelleen.

@@ -56,6 +56,7 @@ import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
+import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 // Napautusnielu: kuplan sulkeva klikkaus ei saa vuotaa kartalle
 // (ks. sidoKuplanNapautus). Apuri asuu ui-apureissa, koska sama vuoto
 // koskee muitakin kelluvia kuplia — ja se on niputuksessa jo ennen
@@ -4217,7 +4218,7 @@ class Pollo {
     const kortti = polloElementti('figure', 'pollo-kuvakortti');
     const el = this.doc.createElement('img');
     el.className = 'pollo-kuva';
-    el.alt = kuva.selite ?? reitti.kohde ?? '';
+    el.alt = kuvatekstiLyhyt(kuva) || reitti.kohde || '';
     el.decoding = 'async';
     el.draggable = false;
     /*
@@ -4229,8 +4230,21 @@ class Pollo {
     asetaKuva(el, valokuvaUrl(kuva.tiedosto, 1024), valokuvaVara(kuva.tiedosto, 1024));
     kortti.appendChild(el);
 
-    // Kuvateksti on jutun oma, valmiiksi kirjoitettu ja tarkistettu.
-    if (kuva.selite) kortti.appendChild(polloElementti('figcaption', 'pollo-kuvateksti', kuva.selite));
+    /*
+     * KUVAPOPUP ON AVATTU KUVA, joten siinä näkyy PITKÄ kuvateksti ja
+     * lähderivi (js/kuvatekstit.js, omistaja 9.9.2026): kuvasta ei ole
+     * enää omaa suurennosta, ja CC BY vaatii tekijän maininnan siellä,
+     * missä kuva on isoimmillaan. Kuvateksti on jutun oma, valmiiksi
+     * kirjoitettu ja tarkistettu.
+     */
+    const kuvanPitka = kuvatekstiPitka(kuva);
+    if (kuvanPitka || kuva.lahde) {
+      const teksti = polloElementti('figcaption', 'pollo-kuvateksti', kuvanPitka);
+      if (kuva.lahde) {
+        teksti.appendChild(polloElementti('span', 'pollo-kuvateksti-lahde', kuva.lahde));
+      }
+      kortti.appendChild(teksti);
+    }
 
     const nappi = polloElementti('button', 'pollo-kuvanappi', 'Avaa juttu');
     nappi.type = 'button';

@@ -109,6 +109,7 @@ import {
 } from './karttanimet.js';
 import { karttavaloKarkisymboli, piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva, assetOsoite } from './media.js';
+import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 import {
   html, jaaKappaleiksi, linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu,
   suurennoksenMitat,
@@ -4605,7 +4606,8 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
   const img = document.createElement('img');
   img.decoding = 'async';
   img.draggable = false;
-  img.alt = kuva.selite ?? '';
+  // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  img.alt = kuvatekstiLyhyt(kuva);
   asetaKohdeKuva(img, kuva, KOHDE_KUVAN_PX, () => kehys.remove());
   nappi.appendChild(img);
   /*
@@ -4625,8 +4627,9 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
     avaaKohdeSuurennos(ui, kuva, () => nappi);
   });
   kehys.appendChild(nappi);
-  if (kuva.selite || kuva.lahde) {
-    const teksti = html('figcaption', 'fokuskohde-kuvateksti', kuva.selite ?? '');
+  const kortinTeksti = kuvatekstiLyhyt(kuva);
+  if (kortinTeksti || kuva.lahde) {
+    const teksti = html('figcaption', 'fokuskohde-kuvateksti', kortinTeksti);
     // CC BY vaatii tekijän maininnan: lähde on aina kuvan vieressä.
     if (kuva.lahde) {
       teksti.appendChild(taytaLahderivi(html('span', 'fokuskohde-kuvalahde'), kuva.lahde, kuva));
@@ -5082,10 +5085,11 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
   const img = document.createElement('img');
   img.className = 'fokuskohde-zoomkuva';
   img.draggable = false;
-  img.alt = kuva.selite ?? '';
+  img.alt = kuvatekstiPitka(kuva);
   const teksti = html('figcaption', 'fokuskohde-zoomteksti');
   teksti.append(
-    html('span', 'fokuskohde-zoomselite', kuva.selite ?? ''),
+    // AVATTU KUVA NÄYTTÄÄ AINA PITKÄN (js/kuvatekstit.js).
+    html('span', 'fokuskohde-zoomselite', kuvatekstiPitka(kuva)),
     // CC BY vaatii tekijän maininnan myös suurennoksessa.
     taytaLahderivi(html('span', 'fokuskohde-zoomlahde'), kuva.lahde ?? '', kuva),
   );
@@ -5104,7 +5108,7 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
    * luokallaan, ja kerroksen sulkukuuntelija väistää sen (ks. alempana).
    */
   piirraReaktiot(kehys, kuva.reaktio, {
-    otsikko: kuva.reaktioOtsikko ?? kuva.selite ?? '',
+    otsikko: kuva.reaktioOtsikko ?? kuvatekstiPitka(kuva),
     luokka: 'reaktiot-suurennos',
   });
   kerros.appendChild(kehys);
