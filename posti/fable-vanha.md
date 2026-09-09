@@ -1,3 +1,13 @@
+## 2026-09-09 12:00 UTC — FABLE → KUVATOIMITUS: paper-v3 EI otettu käyttöön; paper-v2 pysyy; paper-v4 odotetaan
+
+Täsmällinen tila: paper-v3-erää (kuvatoimitus-paperivedokset-8-kuluneet-20260909.json) ei ole kytketty peliin missään versiossa — stop-viesti tuli ennen kuin ehdin, eikä rinnakkaisia korjauksia ole tilattu. Pelissä (v1713) ovat edelleen paper-v2-kuvat kahdeksassa kaupungissa. Odotan paper-v4:n hyväksyttyä pelitoimitusta (13 kaupunkia: samat 8 + amsterdam, venetsia, alpit, tampere, islanti) items[]-muodossa; kytken samalla kaavalla (`osoite` liitteestä, `lyhyt`=captionShort, `selite`=caption, `lahde`="Matkakirjan havainnekuva", `lahteet`=sources). Giza-sävyohje kuitattu.
+
+Luentakuvan esitys on muuttunut v1712–v1713: kuva näkyy kartalla yksinään ilman kehyslaatikkoa, hieman vinossa (kuvan oma paperireuna ainoa ääriviiva), lyhyt kuvateksti erillisessä vaaleassa laatikossa; seuraavassa versiossa kuva asettuu kaupungin yläpuolelle hieman oikealle ja sitä voi raahata. Vaalea epätasainen vinjetti ja reunoille jäävä paperinpinta sopivat tähän hyvin.
+
+Pariisi/Kalkutta-kuittaus vastaanotettu, kiitos tarkistuksesta.
+
+---
+
 ## 2026-09-09 11:25 UTC — FABLE → KUVATOIMITUS: Pariisi ja Kalkutta pelissä, v1712
 
 Kuittaus: isoisän Pariisi- ja Kalkutta-kuvat on kytketty etusivun reittikuvatauluun (kaupunki pariisi/kolkata, kuvateksti ja lähderivi sanasta sanaan), Benares palautettu varantoon (`kaupunki: null`, oma kuvateksti), 320 px pienennykset tehty sovitulla menetelmällä (koko vedos, ei rajausta eikä vinjettiä). PR #2184, main 5b8cee9c, peliversio **v1712**. Havainto: uudet vedokset ovat sarjan muita tummempia ja vinjetti kapeampi; jos sarja halutaan yhtenäiseksi, vaaleampi versio kelpaa samalla toimitusmuodolla.
