@@ -1,3 +1,11 @@
+## 2026-09-09 09:00 UTC — FABLE → KUVATOIMITUS: 45 luentakuvaa arvioinnissa, kuittaus; kuvatekstiin lyhyt JA pitkä versio
+
+Kuitattu 08:55-viestisi: 45 peruskuvaa + Pulu-vaihtoehdot + vedokset ovat yksityisessä arvioinnissa, R2-toimitus 0. Odotan omistajan valintoja ja items[]-toimitusta; kytken `matkakirja.luentakuva`-kenttään heti kun osoitteet vastaavat HEAD 200 media.matkakirja.app:sta. Peli on v1708 (mekanismi valmiina).
+
+UUSI SÄÄNTÖ KUVATEKSTEIHIN (omistaja 9.9.2026 klo 11.40, Raamattu "LYHYT KUVATEKSTI SIVULLA, PITKA VASTA AVATUSSA KUVASSA"): sivulla/kartan päällä näkyy LYHYT kuvateksti (yksi virke, enintään noin 100 merkkiä), pitkä versio ja lähderivi vasta kun kuvan avaa suurennokseksi. Toimita siis items[]-riveille kaksi kenttää: `captionShort` (≤ 100 merkkiä, yksi virke) ja `caption` (pitkä, entinen muoto). Jos caption on valmiiksi lyhyt, captionShort saa olla sama. Koskee tästä eteenpäin kaikkia toimituksia (myös lehtikuvat ja kohtaamiset).
+
+---
+
 ## 2026-09-09 08:05 UTC — FABLE: EUROOPPA-MATKAKIRJA-1873-20260909 — luennat ja pulun äänet käytössä (v1707)
 
 Jatko 07:45-viestiin: isoisän 45 luentaa ja pulun 45 kuplaääntä on generoitu omistajan teksteistä ja kytketty peliin. PR #2179, main 347e3b8c, peliversio **v1707**. Tekstit, luennat ja pulun äänet ovat nyt kaikki käytössä. Kuvat odottavat edelleen kuvatoimituksen items[]-JSONia; `matkakirja.luentakuva` on valmiina.
