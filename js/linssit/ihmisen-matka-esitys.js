@@ -38,6 +38,8 @@
  *   4. HYPPY    'aikahyppy': kello kelaa taaksepäin (14 500 → 50 000)
  *               nopeana mutta pehmeänä liukuna ja kamera siirtyy
  *               Keski-Aasiaan. Rintama ei katoa (ks. PITO alla).
+ *               KELAUS ON VISUAALINEN: ääntä ei kelata, kertoja lukee
+ *               aikahypyn kappaleen putkeen muiden joukossa.
  *   5. LOPPU    Kamera vetäytyy koko palloon, kaikki vanat näkyvissä,
  *               pulun välihuomio — ja `ui.aloitaTutkimusvaihe?.()`.
  *
@@ -50,35 +52,50 @@
  * (js/aikajana-virrat.js asetaPito, js/aikajana-vanat.js paivita):
  * piirretty vana ei enää lyhene, mutta kasvaa yhä normaalisti.
  *
- * ── AVAUS: MUSTA, TÄHDET, PISTE, AFRIKKA ──────────────────────────
+ * ── AVAUS: MUSTA VIRKE, PISTE TÄHDISSÄ, AFRIKKA SANAN KOHDALLA ────
  *
- * Raamattu "IHMISEN MATKA: ETELA-AFRIKKA VAIN KERRAN … JA AVAUS
- * MUSTASTA TAHTIIN JA AFRIKKAAN SANAN KOHDALLA" (omistaja 8.9.2026,
- * sanatarkasti): *"Linssin aloitus voisi olla kokonaan musta ruutu ja
- * sitten siihen feidautuisi ensin tähtiä ja sitten ihan pienestä
- * pisteestä zoomautuisi afrikka esiin juuri sillä hetkellä kun kertoja
- * mainitsee sanan afrikka. Jokainen lause voisi tulla tämän kappaleen
- * loppuun asti yksitellen keskelle ruutua. Vasta kun siirrytään
- * ensimmäiseen kohteeseen tekstit hyppäävät alas nykyiselle
- * paikalleen."*
+ * Raamattu "IHMISEN MATKAN ALKUANIMAATIO: ENSIMMAINEN VIRKE MUSTALLE,
+ * PALLO TAHTIEN KESKELLA PISTEENA, AFRIKKA TAYTTAA RUUDUN KUN SE
+ * MAINITAAN, KAMERA KIIHTYY MAROKKOON" (omistaja 9.9.2026 klo 15.15,
+ * sanatarkasti): *"ensimmäinen virke saisi tulla täysin mustalle
+ * näytölle. sitten musta feidautuisi pois näkyvistä ja maapallo tulisi
+ * näkyviin tähtien keskellä aivan pienenä pisteenä, ei juuri tähtiä
+ * isompana. sen jälkeen maapallo saisi zoomautua nopeasti niin lähelle
+ * että afrikka täyttää koko peli-ikkunan sillä hetkellä kun lukija
+ * mainitsee afrikan ensimmäistä kertaa. tämän jälkeen kamera saa alkaa
+ * hitaasti liikkua kohti ensimmäistä kohdetta marokossa ja sen vauhti
+ * voi kiihtyä loppua kohden kunnes hidastaa juuri ennen kuin saapuu
+ * perille kun marokon teksti alkaa."* — sekä edeltävä AVAUS MUSTASTA
+ * TAHTIIN JA AFRIKKAAN SANAN KOHDALLA (8.9.2026): *"Jokainen lause
+ * voisi tulla tämän kappaleen loppuun asti yksitellen keskelle ruutua.
+ * Vasta kun siirrytään ensimmäiseen kohteeseen tekstit hyppäävät alas
+ * nykyiselle paikalleen."*
  *
- * Neljä asiaa, tässä järjestyksessä:
+ * KOKO AVAUS ON KIINNI LUENNAN AIKALEIMOISSA, ei sekuntikellossa.
+ * `avauksenVaiheet` (puhdas funktio) kääntää avausjakson lauseiden ja
+ * sanojen aikaleimat viideksi hetkeksi, ja kehyssilmukka lukee ne
+ * äänikellosta (js/linssit/ihmisen-matka-luenta.js kulunut):
  *
- *   1. MUSTA. Peite on läpinäkymätön (`musta`): pallo on jo asetettu
+ *   1. MUSTA VIRKE. Peite on läpinäkymätön (`musta`) koko ENSIMMÄISEN
+ *      VIRKKEEN ajan (aikaleimojen `lauseet[1]`): pallo on jo asetettu
  *      kauas (AVARUUDEN_KORKEUS) ja tähtitaivas rakennettu, mutta
  *      kumpaakaan ei näy.
- *   2. TÄHDET. MUSTAN_HETKI_MS:n jälkeen peite laskee harsoksi
- *      (AVARUUDEN_HARSO) TAHTIEN_FEIDI_MS:ssä ja pistepilvi nousee
- *      samassa tahdissa peittävyyteen 1. Maa on tähtien keskellä
- *      pienenä pisteenä (n. 3 % ruudun korkeudesta, ks.
- *      pallonOsuusRuudusta).
- *   3. AFRIKKA-SANA. Zoomi EI lähde kellosta vaan kertojan sanasta:
- *      avausjakson neljäs lause on "Afrikasta.", ja sen alkuhetki
- *      lasketaan luennan kestosta merkkiosuutena (sananHetki) tai
- *      luetaan valmiista aikaleimoista, jos kaanonissa on sellaiset.
- *      Silloin peite kirkastuu ja pallo kasvaa AVARUUDEN_MS:ssä ruudun
- *      täyttäväksi Afrikka keskellä.
- *   4. LAUSEET KESKELLÄ. Avaus- ja afrikka-jaksojen teksti ladotaan
+ *   2. PISTE TÄHDISSÄ. Toisen virkkeen alkaessa peite laskee harsoksi
+ *      (AVARUUDEN_HARSO) ja pistepilvi nousee samassa tahdissa
+ *      peittävyyteen 1. Maa on tähtien keskellä PISTEENÄ, tuskin
+ *      tähteä isompana: korkeudella 300 se on 0,8 % ruudun korkeudesta
+ *      eli noin 6 px (pallonOsuusRuudusta).
+ *   3. AFRIKKA-SANA. Zoomi ei lähde kellosta vaan PÄÄTTYY kertojan
+ *      sanaan: avausjakson neljäs lause on "Afrikasta.", ja sen
+ *      alkuhetki luetaan aikaleimoista (tai lasketaan merkkiosuutena,
+ *      sananHetki). Zoomi ajetaan taaksepäin siitä hetkestä, joten
+ *      Afrikka täyttää ruudun TASAN silloin kun sana kuuluu.
+ *   4. KAMERA KIIHTYY MAROKKOON. Samalla hetkellä kamera lähtee
+ *      hitaasti kohti ensimmäistä kohdetta (Jebel Irhoud), kiihtyy ja
+ *      jarruttaa juuri ennen perille tuloa (marokonPehmennys). Ajon
+ *      kesto luetaan luennasta: perillä ollaan kun 'jebel-irhoud'-
+ *      jakson aikaleima alkaa.
+ *   5. LAUSEET KESKELLÄ. Avaus- ja afrikka-jaksojen teksti ladotaan
  *      lause kerrallaan RUUDUN KESKELLE (.aikajana-kertomusteksti
  *      .keskella): lause tulee omalla vuorollaan, häipyy ennen
  *      seuraavaa, ja koko rivi laskeutuu pehmeästi alalaitaan vasta kun
@@ -113,30 +130,45 @@
  * ── LUENTA JA KESTO ───────────────────────────────────────────────
  *
  * Luenta on omassa moduulissaan (js/linssit/ihmisen-matka-luenta.js),
- * ja sillä on kaksi tilaa. YKSI YHTENÄINEN LUENTA (omistaja 8.9.2026:
- * *"kertojan äänensävy hyppii liikaa"*): koko kertomus on ämpärissä
- * yhtenä äänitteenä, ja jakso soitetaan sen väliltä, jonka
- * kertomus-manifesti.json antaa (`alku`–`loppu`, ms). JAKSO KERRALLAAN
- * on entinen käytös: oma mp3 per jakso nimellä, jonka antaa
+ * ja sillä on kaksi tilaa. PUTKI (Raamattu KERTOJA LUKEE KOKO
+ * KERTOMUKSEN PUTKEEN, omistaja 9.9.2026: *"siinä koko tekstin luenta
+ * saisi mennä putkeen ilman että sitä katkotaan välillä"*): koko
+ * kertomus on ämpärissä yhtenä äänitteenä ja se soitetaan KERRAN alusta
+ * loppuun — ei kelausta, ei pysäytystä, ei taukoa jaksojen väliin.
+ * Ohjaaja ei silloin aja kelloa seinäkellosta vaan ÄÄNIKELLOSTA
+ * (`luenta.kulunut()`), ja jakso vaihtuu, kun soittimen `currentTime`
+ * ohittaa seuraavan jakson `alku`-aikaleiman (`onRaja`). JAKSO
+ * KERRALLAAN on entinen käytös: oma mp3 per jakso nimellä, jonka antaa
  * js/linssipuhe.js kertomuksenRunko — sama funktio kuin
  * generointityökalulla (tools/generoi-linssiluennat.mjs --kertomus),
- * joten nimi ei voi eriytyä. Kesto tulee manifestista (yhtenäinen) tai
- * ÄÄNITTEESTÄ heti kun sen metatiedot saapuvat; siihen asti (ja
- * kokonaan ilman äänitettä) kesto on tekstin pituus jaettuna 14
+ * joten nimi ei voi eriytyä.
+ *
+ * KAKSI KESTOA. Putkessa jakso antaa `kesto`-luvun (seuraavan jakson
+ * alkuun — kello, kamera ja jakson vaihto) ja `puhe`-luvun (tämän
+ * jakson viimeiseen ääneen). Kello ja kamera jakavat matkansa koko
+ * `kesto`-välille, joten tiedostossa kappaleiden välissä olevat
+ * hiljaisuudet kuuluvat luontevasti läpi. Jakso kerrallaan -tilassa
+ * kesto tulee ÄÄNITTEESTÄ heti kun sen metatiedot saapuvat; siihen asti
+ * (ja kokonaan ilman äänitettä) kesto on tekstin pituus jaettuna 14
  * merkillä sekunnissa (kertomuksenVarakesto). Esitys ei siis pysähdy
- * siihen, ettei ääntä ole — mykistetty peli kulkee luetun mittaisena.
- * Manifestin lauseiden ja sanojen aikaleimat välittyvät jaksolle
- * kenttään `jakso.aikaleimat` (ms jakson alusta), josta avaus ja
- * tekstin rytmitys voivat lukea ne.
+ * siihen, ettei ääntä ole — mykistetty peli kulkee luetun mittaisena
+ * seinäkellolla. Manifestin lauseiden ja sanojen aikaleimat välittyvät
+ * jaksolle kenttään `jakso.aikaleimat` (ms jakson alusta), josta avaus
+ * ja tekstin rytmitys lukevat ne.
  *
  * ── PULUN VÄLIHUOMIOT ─────────────────────────────────────────────
  *
- * Jakson `pulu` luetaan pulun äänellä jakson LUENNAN PÄÄTYTTYÄ, ennen
- * seuraavaa jaksoa: pieni kupla (js/pollo.js polloLinssikupla, linssin
- * oma poikkeus kuplaporttiin) ja äänite 0,7 × tasolla ilman kertojan
- * väistöä — sama mekanismi kuin fokusvirran huudahduksella
- * (js/liviapuhe.js soitaLivianLinssiAani). Kello ei pysähdy siksi
- * aikaa; jakso vain saa hännäkseen PULUN_VARA_MS.
+ * Jakson `pulu` luetaan pulun äänellä sillä hetkellä, kun jakson oma
+ * PUHE päättyy (`tila.puluHetki`): putkessa se on kappaleiden välinen
+ * hengähdys, joten välihuomio alkaa hiljaisuudesta ja kuuluu kertojan
+ * päälle vasta hännästään. Kupla on pieni (js/pollo.js
+ * polloLinssikupla, linssin oma poikkeus kuplaporttiin) ja äänite soi
+ * PULUN_VAIMENNUS_PUTKESSA (0,55) × tasolla ilman kertojan väistöä —
+ * sama mekanismi kuin fokusvirran huudahduksella (js/liviapuhe.js
+ * soitaLivianLinssiAani, `vaista: false`). Kertoja ei vaikene eikä
+ * kello pysähdy. Jakso kerrallaan -tilassa välihuomio soi entiseen
+ * tapaan omassa raossaan (LIVIAN_VALIHUOMION_VAIMENNUS, jakson häntä
+ * PULUN_VARA_MS); putkessa häntää EI ole, koska luentaa ei katkota.
  *
  * ── TUTKIMUSVAIHE ON TOISEN TYÖTÄ ─────────────────────────────────
  *
@@ -150,7 +182,7 @@
 import { projisoiLaudalle } from '../fokusmitat.js';
 import { kertomuksenVarakesto } from '../linssipuhe.js';
 import { luoKertomusluenta } from './ihmisen-matka-luenta.js';
-import { soitaLivianLinssiAani } from '../liviapuhe.js';
+import { LIVIAN_VALIHUOMION_VAIMENNUS, soitaLivianLinssiAani } from '../liviapuhe.js';
 import { polloLinssikupla } from '../pollo.js';
 import { karkiHetkella } from '../aikajana-vanat.js';
 import { luoTahtitaivas } from '../pallolauta/tahdet.js';
@@ -222,16 +254,21 @@ export const VALOJEN_MS = 2600;
  * on niiden keskellä PISTEENÄ, kunnes kertoja sanoo "Afrikasta" ja
  * pallo kasvaa ruudun täyttäväksi.
  *
- * KORKEUS 50 ON KAUKANA LAUDAN OMAN KATON TAKANA (js/pallolauta/kamera.js
+ * KORKEUS 300 ON KAUKANA LAUDAN OMAN KATON TAKANA (js/pallolauta/kamera.js
  * PALLO_KORKEUS_MAX = 2,5, ja js/pallolauta/lauta.js sitoo
  * OrbitControlsin maxDistancen samaan). MITATTU (kontti, 1280 × 800):
  * korkeudella 2,5 pallo täyttää jo ruudun leveyden ja korkeudella 7,5 se
  * on kolmanneksen ruudun korkeudesta — kumpikaan ei ole "ihan pieni
- * piste". Korkeudella 50 pallo on 4,5 % ruudun korkeudesta eli noin
- * 36 px (pallonOsuusRuudusta), ja tähdet venytetään kymmenkertaisiksi
- * (TAHTIEN_KERROIN), jotta taivas on joka suunnassa eikä rypäs pallon
- * vieressä. Kameran far-taso (mitattu: 125 000 yksikköä eli 1 250
- * pallonsädettä) riittää tähän moninkertaisesti.
+ * piste". Korkeudella 50 pallo oli 4,5 % ruudun korkeudesta eli noin
+ * 36 px, mikä on yhä moninkertainen tähteen verrattuna; omistajan
+ * tarkennus 9.9.2026 (*"aivan pienenä pisteenä, ei juuri tähtiä
+ * isompana"*) vei korkeuden 300:aan, jolloin pallo on 0,76 % ruudun
+ * korkeudesta eli noin 6 px 800 px:n ruudulla (pallonOsuusRuudusta).
+ * Tähdet venytetään SAMASSA SUHTEESSA (TAHTIEN_KERROIN = korkeus / 5),
+ * jotta kirkkain kerros jää yhä kameran taakse ja taivas on joka
+ * suunnassa eikä rypäs pallon vieressä. Kameran far-taso (mitattu:
+ * 125 000 yksikköä eli 1 250 pallonsädettä) riittää tähänkin: kaukaisin
+ * tähti on 391 ja kamera 301 pallonsädettä keskipisteestä.
  *
  * Avaus siis LEVENTÄÄ ohjaimen kattoa hetkeksi ja asettaa lähtönäkymän
  * laudan omalla `pointOfView`-kutsulla; katto palautetaan ajon jälkeen
@@ -239,24 +276,37 @@ export const VALOJEN_MS = 2600;
  * (peite on edessä). Zoomi itse ajetaan laudan omalla ajaKameralla,
  * joka rajaa MAALIN normaaliin 2,5:een.
  */
-export const AVARUUDEN_KORKEUS = 50;
+export const AVARUUDEN_KORKEUS = 300;
 /** Tähtitaivaan venytys avauksessa (js/pallolauta/tahdet.js kerroin). */
-export const TAHTIEN_KERROIN = 10;
+export const TAHTIEN_KERROIN = AVARUUDEN_KORKEUS / 5;
 /**
- * Zoomin kesto. Matka on nyt lähes kolme kertaa pitempi kuin ennen
- * (50 → n. 1,9 eli 2,9 e-kertaa, ennen 8,5 → 2,9 eli 1,1), ja korkeus
- * interpoloidaan logaritmisesti, joten vanha 5,2 s olisi tuntunut
- * moninkertaisesti nopeammalta kuin vanha avaus.
+ * ZOOMIN ENIMMÄIS- JA VÄHIMMÄISKESTO. Kesto ei ole enää vakio vaan
+ * luetaan luennasta: zoomi PÄÄTTYY sanaan "Afrikasta", joten sen mitta
+ * on se aika, joka jää tähtien esiintulon ja sanan väliin
+ * (avauksenVaiheet). Katto ja pohja pitävät huolen siitä, ettei
+ * poikkeuksellisen pitkä tai lyhyt äänite tee siitä tahmeaa tai
+ * räpsähdystä.
  */
 export const AVARUUDEN_MS = 7000;
+export const AVARUUDEN_MIN_MS = 1200;
 /** Osuus zoomista, jonka jälkeen tähdet alkavat häipyä. */
 export const TAHTIEN_HAIVE = 0.55;
 /** Avauksen tumma harso pallon päällä (0 = ei harsoa). */
 export const AVARUUDEN_HARSO = 0.35;
-/** Kuinka kauan ruutu on TÄYSIN musta ennen kuin tähdet alkavat tulla. */
-export const MUSTAN_HETKI_MS = 300;
+/**
+ * MUSTAN OSUUS, JOS LAUSEITA EI TIEDETÄ. Musta kestää ensimmäisen
+ * virkkeen ajan (aikaleimojen `lauseet[1]`); jos avausjaksosta ei löydy
+ * toista lausetta lainkaan, musta kestää tämän osuuden siitä matkasta,
+ * joka jakson alusta on sanaan "Afrikasta".
+ */
+export const MUSTAN_OSUUS = 0.35;
 /** Tähtien feidaus mustasta esiin (omistaja: "esim. 1,5–2 s"). */
 export const TAHTIEN_FEIDI_MS = 1800;
+/**
+ * Osuus mustan ja Afrikka-sanan välisestä ajasta, jonka feidaus saa
+ * viedä: loppu jää pisteen katselulle ja zoomille.
+ */
+export const FEIDIN_OSUUS = 0.45;
 /** Avauslauseen häivytys ennen seuraavan lauseen alkua. */
 export const LAUSEEN_HAIVE_MS = 340;
 /** Tekstirivin lasku keskeltä alalaitaan (css .aikajana-kertomusteksti). */
@@ -266,15 +316,39 @@ export const TEKSTIN_LASKU_MS = 900;
  * "Afrikasta.", mutta taivutus voi vaihtua ilman että ajoitus rikkoutuu.
  */
 export const AVAUKSEN_SANA = 'Afrik';
-/** Aikahypyn kelaus: nopea mutta pehmeä liuku taaksepäin. */
+/**
+ * AIKAHYPYN KELAUS: nopea mutta pehmeä liuku taaksepäin. VAIN
+ * VISUAALINEN — putkiluennassa ääntä ei kelata (Raamattu KERTOJA LUKEE
+ * KOKO KERTOMUKSEN PUTKEEN): kello ja kamera palaavat, kertoja jatkaa.
+ */
 export const KELAUKSEN_MS = 2400;
-/** Jakson häntä, jonka aikana pulun välihuomio ehtii kuulua. */
+/**
+ * JAKSON HÄNTÄ JAKSO KERRALLAAN -TILASSA: aika, jonka pulun välihuomio
+ * saa jakson perään. Putkessa häntää ei ole (luentaa ei katkota), vaan
+ * pulu puhuu kappaleiden väliseen hengähdykseen kertojan päälle.
+ */
 export const PULUN_VARA_MS = 2600;
+/**
+ * PULUN TASO KERTOJAN PÄÄLLÄ (omistaja 9.9.2026: *"pulu voi puhua
+ * hieman hiljempaa kertojan päälle omat kommentit"*). Kerroin pulun
+ * perustasoon (js/liviapuhe.js LIVIAN_PERUSTASO = 0,8), aivan kuten
+ * LIVIAN_VALIHUOMION_VAIMENNUS (0,7) — putkessa vain hieman sen alle,
+ * koska kertoja ei enää vaikene välihuomion ajaksi.
+ */
+export const PULUN_VAIMENNUS_PUTKESSA = 0.55;
 /** Lyhin ja pisin kamera-ajo jaksolla. */
 export const KAMERAN_POHJA_MS = 1400;
 export const KAMERAN_KATTO_MS = 9000;
 /** Osuus jakson luennasta, jonka kamera-ajo saa kestää. */
 export const KAMERAN_OSUUS = 0.85;
+/**
+ * ENSIMMÄISEEN KOHTEESEEN KIIHTYEN (Raamattu ALKUANIMAATIO … KAMERA
+ * KIIHTYY MAROKKOON). `MAROKON_JARRU` on se kohta ajosta, jossa
+ * kiihdytys loppuu ja jarrutus alkaa; `MAROKON_POHJA_MS` on lyhin ajo,
+ * joka kannattaa aloittaa (sitä lyhyempi jää jakson omaksi ajoksi).
+ */
+export const MAROKON_JARRU = 0.8;
+export const MAROKON_POHJA_MS = 1600;
 /** Kuvan häivytys (css .aikajana-kertomuskuva). */
 export const KUVAN_POISTUMA_MS = 420;
 /** Loppunäkymän varmistava liuku, jos viimeinen ajo jäi kesken (ks. paata). */
@@ -590,6 +664,104 @@ export function pallonOsuusRuudusta(korkeus, fov = 50) {
   return halkaisija / fov;
 }
 
+/**
+ * AVAUKSEN VAIHEET LUENNAN AIKALEIMOISTA (Raamattu IHMISEN MATKAN
+ * ALKUANIMAATIO). PUHDAS FUNKTIO — kaikki avauksen ajoitus on tässä
+ * yhdessä laskussa, ja kehyssilmukka vain vertaa äänikelloa näihin
+ * lukuihin.
+ *
+ *   musta     kuinka kauan ruutu on TÄYSIN musta (ensimmäinen virke)
+ *   feidi     mustan häivytys harsoksi, tähdet nousevat samassa tahdissa
+ *   piste     hetki, jolloin pallo on näkyvissä pisteenä tähtien keskellä
+ *   zoomAlku  zoomin lähtöhetki
+ *   zoomKesto zoomin kesto — niin, että zoomi PÄÄTTYY sanaan "Afrikasta"
+ *   afrikka   sanan "Afrikasta" hetki jakson luennassa
+ *
+ * Kaikki ovat millisekunteja AVAUSJAKSON alusta. Aikaleimojen
+ * puuttuessa luvut lasketaan merkkiosuuksista (lauseidenHetket,
+ * sananHetki), joten mykistetty peli kulkee samaa koreografiaa.
+ *
+ * @param {object} a
+ * @param {Array<number>} [a.lauseet] lauseiden alkuhetket (lauseidenHetket)
+ * @param {number|null} [a.sana] sanan "Afrikasta" hetki (sananHetki)
+ * @param {number} [a.kesto] avausjakson kesto (ms)
+ * @returns {{musta:number, feidi:number, piste:number, zoomAlku:number,
+ *   zoomKesto:number, afrikka:number}}
+ */
+export function avauksenVaiheet({ lauseet = [], sana = null, kesto = 0 } = {}) {
+  const kaikki = Math.max(1, Number(kesto) || 0);
+  const hetki = Number(sana);
+  const afrikka = Number.isFinite(hetki) && hetki > 0 ? Math.min(hetki, kaikki) : kaikki;
+  const toinen = Number(lauseet?.[1]);
+  // Musta kestää ensimmäisen virkkeen, mutta zoomille on jäätävä tilaa.
+  const musta = Math.max(0, Math.min(
+    Number.isFinite(toinen) && toinen > 0 ? toinen : afrikka * MUSTAN_OSUUS,
+    afrikka - AVARUUDEN_MIN_MS,
+  ));
+  const tilaa = Math.max(0, afrikka - musta);
+  const feidi = Math.max(0, Math.min(TAHTIEN_FEIDI_MS, tilaa * FEIDIN_OSUUS));
+  const piste = musta + feidi;
+  const zoomKesto = Math.max(AVARUUDEN_MIN_MS, Math.min(AVARUUDEN_MS, afrikka - piste));
+  return {
+    musta,
+    feidi,
+    piste,
+    zoomAlku: Math.max(musta, afrikka - zoomKesto),
+    zoomKesto,
+    afrikka,
+  };
+}
+
+/**
+ * ENSIMMÄISEN KOHTEEN AJON KÄYRÄ (omistaja 9.9.2026: *"kamera saa alkaa
+ * hitaasti liikkua kohti ensimmäistä kohdetta marokossa ja sen vauhti
+ * voi kiihtyä loppua kohden kunnes hidastaa juuri ennen kuin saapuu
+ * perille"*). PUHDAS FUNKTIO.
+ *
+ * Ero laudan omaan trapetsiin (js/siirtokoreografia.js
+ * siirtoajonPehmennys) on juuri se, mitä omistaja pyysi: siellä vauhti
+ * nousee heti täyteen ja pysyy siinä, tässä se kasvaa KOKO MATKAN
+ * (kuutiollinen kiihtyvyys) `jarru`-kohtaan asti ja pysähtyy vasta
+ * lopussa. Nopeus on jatkuva kohdassa `jarru` ja tasan nolla perillä,
+ * joten kamera ei nytkähdä kummassakaan päässä.
+ *
+ * @param {number} t 0…1
+ * @param {number} [jarru] osuus, jonka jälkeen jarrutetaan
+ * @returns {number} kuljettu osuus 0…1
+ */
+export function marokonPehmennys(t, jarru = MAROKON_JARRU) {
+  const x = Math.max(0, Math.min(1, Number(t) || 0));
+  const j = Math.min(0.95, Math.max(0.05, Number(jarru) || MAROKON_JARRU));
+  const d = 1 - j;
+  // Skaalaus, jolla koko matka tulee kuljetuksi tasan kerran.
+  const a = 1 / (j ** 3 + 1.5 * (j ** 2) * d);
+  if (x <= j) return a * x ** 3;
+  const u = (x - j) / d;
+  return a * (j ** 3) + 3 * a * (j ** 2) * d * (u - (u * u) / 2);
+}
+
+/**
+ * AIKA TÄSTÄ JAKSOSTA JAKSON `tunnus` ALKUUN (ms) VARAKESTOISTA.
+ *
+ * PUHDAS FUNKTIO ja varareitti: putkessa sama luku saadaan tarkasti
+ * manifestin aikaleimoista (luenta.hetki + leimat), ja tätä käytetään
+ * vain silloin kun ääntä ei ole. Palauttaa null, jos jakso ei ole
+ * edessä päin.
+ *
+ * @param {Array<object>} kertomus kaanonin jaksot
+ * @param {number} i menossa oleva jakso
+ * @param {string} tunnus etsittävä jakso
+ * @param {number} jaljella menossa olevasta jaksosta jäljellä (ms)
+ * @returns {number|null}
+ */
+export function jaksojenValiMs(kertomus, i, tunnus, jaljella) {
+  const kohde = (kertomus ?? []).findIndex((j) => j?.id === tunnus);
+  if (kohde < 0 || kohde <= i) return null;
+  let ms = Math.max(0, Number(jaljella) || 0);
+  for (let k = i + 1; k < kohde; k += 1) ms += kertomuksenVarakesto(kertomus[k]);
+  return ms;
+}
+
 /** Onko kuvien näyttö päällä (lippu tai osoiterivin koe). */
 function kuvatKaytossa() {
   const haku = new URLSearchParams(globalThis.location?.search ?? '');
@@ -625,6 +797,13 @@ export function luoEsitys({ ajo }) {
    * kertomus-manifestin ämpäristä ennen kuin pelaaja painaa Käynnistä.
    */
   const luenta = luoKertomusluenta({ ajo, etuliite });
+  /*
+   * ENSIMMÄINEN KOHDE (Jebel Irhoud) haetaan kaanonista eikä kirjoiteta
+   * tunnuksena: avauksen kamera-ajo kuuluu sille jaksolle, joka
+   * ENSIMMÄISENÄ osoittaa kartalle — vaikka kaanonin alkuun tulisi
+   * uusia jaksoja.
+   */
+  const ensimmainenKohde = kertomus.find((j) => j?.kohde) ?? null;
 
   const tila = {
     i: -1,
@@ -638,10 +817,12 @@ export function luoEsitys({ ajo }) {
      */
     alkuHetki: 0,
     kulunut: 0,
-    /** Jakson koko kesto (luenta + pulun vara). */
+    /** Jakson koko kesto (putkessa = luenta, muuten + pulun vara). */
     kesto: 0,
-    /** Luennan osuus jakson kestosta — kello kulkee tässä ajassa. */
+    /** Kellon ja kameran matka-aika jaksossa (putkessa seuraavan alkuun). */
     luenta: 0,
+    /** Hetki, jolla pulun välihuomio sanotaan (jakson oman puheen loppu). */
+    puluHetki: 0,
     /** Kelauksen lähtölukema aikahypyssä (null = ei kelausta). */
     kelauksenAlku: null,
     puluSanottu: false,
@@ -686,6 +867,14 @@ export function luoEsitys({ ajo }) {
     avausOdottaa: false,
     avaruusTauko: null,
     tahtiEsiin: 0,
+    /** Zoomin kesto tälle ajolle (avauksenVaiheet, ei enää vakio). */
+    avaruusKesto: AVARUUDEN_MS,
+    /** Onko peite yhä TÄYSIN musta (ensimmäinen virke). */
+    mustaPaalla: false,
+    /** Onko avauksen oma ajo ensimmäiseen kohteeseen käynnissä. */
+    kohdeajo: false,
+    /** Sen ajon kesto (savukkeen mittari). */
+    kohdeajonKesto: null,
     /**
      * MISTÄ KOHTAA LUENTAA ZOOMI LÄHTI (savukkeen mittari). Kontissa
      * kehystahti on noin kehys sekunnissa, eikä mittaava savuke ehdi
@@ -804,7 +993,7 @@ export function luoEsitys({ ajo }) {
    * koskaan lähikuvaa tiukempi. Ilman vanoja (tasokartta, laskenta
    * kesken) rajaus on pelkkä kohde eli entinen lähikuva.
    */
-  const ajaKohteeseen = (tunnus, kesto, { alku = null, loppu = null } = {}) => {
+  const ajaKohteeseen = (tunnus, kesto, { alku = null, loppu = null, pehmennys = null } = {}) => {
     const k = kamera();
     const i = pysakit.get(tunnus);
     const t = ajo.tapahtumat[i];
@@ -825,7 +1014,9 @@ export function luoEsitys({ ajo }) {
       {
         lat: rajaus?.lat ?? t.lat, lng: rajaus?.lon ?? t.lon, leveys,
       },
-      { kesto: reduced ? 0 : kesto },
+      pehmennys
+        ? { kesto: reduced ? 0 : kesto, pehmennys }
+        : { kesto: reduced ? 0 : kesto },
     );
   };
 
@@ -845,9 +1036,9 @@ export function luoEsitys({ ajo }) {
    * Kamera asetetaan ensin KAUAS (AVARUUDEN_KORKEUS, laudan oman katon
    * takana): Maa on piste, Afrikka jo keskellä. Ruutu on siihen asti
    * täysin musta, ja tähdet nousevat esiin vasta mustan laskiessa
-   * harsoksi. Vasta kun kertoja sanoo "Afrikasta" (kaynnistaAvaruusajo)
-   * SAMA laudan kamerarajapinta ajaa Afrikan rajaukseen AVARUUDEN_MS:ssä
-   * omalla pehmennyksellään — uutta kameramoottoria ei tehdä. Tähdet
+   * harsoksi ensimmäisen virkkeen jälkeen. Zoomi (kaynnistaAvaruusajo)
+   * ajetaan SAMALLA laudan kamerarajapinnalla niin, että se PÄÄTTYY
+   * sanaan "Afrikasta" — uutta kameramoottoria ei tehdä. Tähdet
    * ovat pallon näyttämöllä (js/pallolauta/tahdet.js) ja häipyvät pallon
    * kasvaessa (kehys → paivita).
    *
@@ -890,42 +1081,66 @@ export function luoEsitys({ ajo }) {
     tila.tahdet?.paivita(0, 0);
     peite.classList.add('avaruus', 'musta');
     tila.avausOdottaa = true;
+    tila.mustaPaalla = true;
     if (!k?.ajaKamera) return false;
     if (reduced) {
       // Ei liikettä: pallo on heti Afrikassa, tähdet näkyvissä.
+      nostaMusta(0);
       kaynnistaAvaruusajo();
       return true;
     }
     avaaKaukaisuus(alueenKeskus('afrikka'));
-    // Musta väistyy tähtien tieltä (css .avaruus, TAHTIEN_FEIDI_MS).
-    requestAnimationFrame(() => peite.classList.remove('musta'));
     return true;
   };
 
   /**
-   * ZOOMI LÄHTEE SANASTA (Raamattu AVAUS MUSTASTA TAHTIIN JA AFRIKKAAN
-   * SANAN KOHDALLA). Kutsutaan kehyssilmukasta sillä hetkellä, kun
-   * kertoja sanoo "Afrikasta" (avauksenHetki) — tai viimeistään
-   * 'valot'-jakson alkaessa, jos luenta ehti loppua ennen sitä.
+   * MUSTA POIS ENSIMMÄISEN VIRKKEEN JÄLKEEN (Raamattu ALKUANIMAATIO:
+   * *"ensimmäinen virke saisi tulla täysin mustalle näytölle. sitten
+   * musta feidautuisi pois näkyvistä ja maapallo tulisi näkyviin"*).
+   * Häivytyksen kesto annetaan css:lle muuttujana, koska se lasketaan
+   * luennasta eikä ole vakio.
    */
-  function kaynnistaAvaruusajo() {
+  function nostaMusta(feidi) {
+    if (!tila.mustaPaalla) return false;
+    tila.mustaPaalla = false;
+    peite.style.setProperty('--avauksen-feidi', `${Math.max(0, Math.round(feidi))}ms`);
+    peite.classList.remove('musta');
+    return true;
+  }
+
+  /**
+   * ZOOMI PÄÄTTYY SANAAN "AFRIKASTA" (Raamattu ALKUANIMAATIO: *"afrikka
+   * täyttää koko peli-ikkunan sillä hetkellä kun lukija mainitsee
+   * afrikan ensimmäistä kertaa"*). Kutsutaan kehyssilmukasta hetkellä
+   * `zoomAlku` = sanan hetki − zoomin kesto — tai viimeistään
+   * 'valot'-jakson alkaessa, jos luenta ehti loppua ennen sitä.
+   *
+   * @param {number} [kesto] zoomin kesto (avauksenVaiheet.zoomKesto)
+   */
+  function kaynnistaAvaruusajo(kesto = null) {
     if (!tila.avausOdottaa) return false;
     tila.avausOdottaa = false;
+    tila.avaruusKesto = Math.max(
+      AVARUUDEN_MIN_MS,
+      Math.min(AVARUUDEN_MS, Number(kesto) || AVARUUDEN_MS),
+    );
     tila.zoomLahti = {
       jakso: kertomus[tila.i]?.id ?? null,
       kulunut: Math.round(tila.kulunut),
       hetki: Math.round(avauksenHetki()),
       luenta: Math.round(tila.luenta),
+      kesto: Math.round(tila.avaruusKesto),
     };
     const k = kamera();
     if (!k?.ajaKamera) return false;
-    peite.classList.remove('musta');
+    nostaMusta(0);
     if (reduced) {
       ajaAlueeseen('afrikka', 0);
       tila.tahdet?.paivita(0, 1);
       return true;
     }
     tila.avaruusAlku = performance.now();
+    peite.style.setProperty('--avauksen-zoomi', `${Math.round(tila.avaruusKesto)}ms`);
     /*
      * KATTO PALAUTETAAN AJASTIMELLA EIKÄ AJON LUPAUKSELLA: 'afrikka'-
      * jakso ajaa saman rajauksen uudestaan jäljellä olevalla ajalla
@@ -937,10 +1152,10 @@ export function luoEsitys({ ajo }) {
      * OrbitControls loikkasi pallon takaisin lukemaan 2,5.
      */
     clearTimeout(tila.kattoAjastin);
-    tila.kattoAjastin = setTimeout(palautaKaukaisuus, AVARUUDEN_MS + 400);
+    tila.kattoAjastin = setTimeout(palautaKaukaisuus, tila.avaruusKesto + 400);
     // Harso pois zoomin tahdissa: pallo kirkastuu tullessaan lähemmäs.
     peite.classList.add('kirkastuu');
-    ajaAlueeseen('afrikka', AVARUUDEN_MS);
+    ajaAlueeseen('afrikka', tila.avaruusKesto);
     return true;
   }
 
@@ -950,6 +1165,18 @@ export function luoEsitys({ ajo }) {
     const hetki = sananHetki(jakso?.teksti, AVAUKSEN_SANA, Math.max(1, tila.luenta), jakso?.aikaleimat);
     return Number.isFinite(hetki) ? hetki : 0;
   };
+
+  /**
+   * AVAUKSEN VAIHEET NYKYISELLÄ KESTOLLA. Lasketaan kehyksittäin, koska
+   * kesto ja aikaleimat tarkentuvat kesken avausjakson (manifesti tai
+   * äänitteen metatiedot) — silloin loputkin hetket siirtyvät oikeaan
+   * kohtaan ilman erillistä kytkentää.
+   */
+  const avauksenAjat = () => avauksenVaiheet({
+    lauseet: lauseHetket(),
+    sana: avauksenHetki(),
+    kesto: Math.max(1, tila.luenta),
+  });
 
   /**
    * Zoomissa kulunut aika (ms). TAUKO JÄÄDYTTÄÄ SEN: kamera-ajo elää
@@ -966,24 +1193,27 @@ export function luoEsitys({ ajo }) {
   /** Avausajosta jäljellä (ms); 0 kun pallo on perillä tai ajoa ei ollut. */
   const avaruuttaJaljella = () => {
     if (!tila.avaruusAlku) return 0;
-    return Math.max(0, AVARUUDEN_MS - avaruudenKulunut());
+    return Math.max(0, tila.avaruusKesto - avaruudenKulunut());
   };
 
   /** Avausajon eteneminen 0…1 (tähtien häivytys seuraa tätä). */
   const avaruudenOsuus = () => {
     if (!tila.avaruusAlku) return 0;
-    return Math.max(0, Math.min(1, avaruudenKulunut() / AVARUUDEN_MS));
+    return Math.max(0, Math.min(1, avaruudenKulunut() / Math.max(1, tila.avaruusKesto)));
   };
 
   /**
    * TÄHTIEN FEIDAUS MUSTASTA (omistaja 8.9.2026: *"siihen feidautuisi
-   * ensin tähtiä"*). Nousu mitataan avausjakson kuluneesta ajasta, joten
-   * tauko pysäyttää sen samoin kuin lauseet; luku ei koskaan laske,
-   * jottei taivas välkähtäisi jakson vaihtuessa.
+   * ensin tähtiä"*; 9.9.2026: vasta ensimmäisen virkkeen JÄLKEEN).
+   * Nousu mitataan avausjakson kuluneesta ajasta, joten tauko pysäyttää
+   * sen samoin kuin lauseet; luku ei koskaan laske, jottei taivas
+   * välkähtäisi jakson vaihtuessa.
+   *
+   * @param {{musta:number, feidi:number}} [ajat] avauksenVaiheet
    */
-  const tahtienEsiinTulo = () => {
-    const nousu = tila.i === 0 && !reduced
-      ? Math.max(0, Math.min(1, (tila.kulunut - MUSTAN_HETKI_MS) / TAHTIEN_FEIDI_MS))
+  const tahtienEsiinTulo = (ajat = null) => {
+    const nousu = tila.i === 0 && !reduced && ajat
+      ? Math.max(0, Math.min(1, (tila.kulunut - ajat.musta) / Math.max(1, ajat.feidi)))
       : 1;
     tila.tahtiEsiin = Math.max(tila.tahtiEsiin, nousu);
     return tila.tahtiEsiin;
@@ -1161,30 +1391,62 @@ export function luoEsitys({ ajo }) {
    * ja sanojen aikaleimat kenttään `jakso.aikaleimat`. Ohjaaja saa
    * siltä vain kaksi asiaa: soittimen kahvan ja jakson keston.
    */
-  const aloitaLuenta = (jakso, { alkukohta = 0 } = {}) => {
+  const aloitaLuenta = (jakso, { alkukohta = 0, hyppy = false } = {}) => {
     tila.aani = luenta.aloita(jakso, {
       alkukohta,
+      /*
+       * PELAAJAN HYPPY (aikaselain, muisti) aloittaa kertojan jakson
+       * alusta myös putkessa; luonnollinen jaksonvaihto ei koske
+       * soittimeen lainkaan.
+       */
+      hyppy,
       onAani: (aani) => { tila.aani = aani; },
       // Vanha äänite (edellinen jakso) ei saa muuttaa nykyistä.
       ajankohtainen: () => !tila.purettu && kertomus[tila.i] === jakso,
       voiSoida: () => !tila.purettu && !tila.tauolla,
-      onKesto: (ms) => {
+      /*
+       * KAKSI LUKUA. `ms` on jakson mitta ESITYKSELLE (putkessa
+       * seuraavan jakson alkuun, muuten äänitteen kesto) ja `puhe`
+       * tämän jakson viimeiseen ääneen — pulu puhuu siihen kohtaan.
+       */
+      onKesto: (ms, { puhe = ms } = {}) => {
         if (!Number.isFinite(ms) || ms <= 0) return;
         tila.luenta = Math.round(ms);
-        tila.kesto = tila.luenta + (jakso.pulu ? PULUN_VARA_MS : 0);
+        tila.puluHetki = Math.max(0, Math.round(Math.min(Number(puhe) || ms, ms)));
+        tila.kesto = tila.luenta + jaksonHanta(jakso);
+      },
+      /*
+       * JAKSON RAJA SOITTIMESTA (putki). Kertojaa ei pysäytetä: kun
+       * ääni ohittaa seuraavan jakson aikaleiman, kartta seuraa perässä
+       * samalla kierroksella. Kehyssilmukan oma ehto (kulunut ≥ kesto)
+       * jää varareitiksi mykistetylle pelille.
+       */
+      onRaja: () => {
+        if (tila.purettu || kertomus[tila.i] !== jakso) return;
+        seuraavaJakso();
       },
     });
   };
 
   /* ------------------------------------------------------------- pulu */
 
+  /**
+   * PULU PUHUU KERTOJAN PÄÄLLE HILJEMPAA (Raamattu KERTOJA LUKEE KOKO
+   * KERTOMUKSEN PUTKEEN, PULU PUHUU HILJEMPAA KERTOJAN PAALLE).
+   * Välihuomio ei väistä eikä varaa puhevuoroa (`vaista: false`, sama
+   * reitti kuin fokusvirran huudahduksella), joten kertoja jatkaa
+   * entisellä voimallaan sen alla. Putkessa taso on
+   * PULUN_VAIMENNUS_PUTKESSA; jakso kerrallaan -tilassa välihuomio soi
+   * omassa raossaan entisellä tasollaan.
+   */
   const sanoPulu = (jakso) => {
     tila.puluSanottu = true;
     if (!jakso.pulu) return;
+    const vaimennus = luenta.yhtena() ? PULUN_VAIMENNUS_PUTKESSA : LIVIAN_VALIHUOMION_VAIMENNUS;
     const nakyi = polloLinssikupla([jakso.pulu], {
       luokka: 'aikajana-kertomus-pulu',
       aani: () => soitaLivianLinssiAani(ajo.ui, ajo.linssi?.tunnus ?? 'ihmisen-matka', jakso.id, {
-        teksti: jakso.pulu,
+        teksti: jakso.pulu, vaimennus, vaista: false,
       }),
     });
     if (nakyi) tila.pulujaSanottu += 1;
@@ -1192,7 +1454,23 @@ export function luoEsitys({ ajo }) {
 
   /* ------------------------------------------------------------- jakso */
 
-  const aloitaJakso = (i, { kulunut = 0 } = {}) => {
+  /**
+   * JAKSON HÄNTÄ. Putkessa nolla: luentaa ei katkota, joten jaksojen
+   * väliin ei jää pulun varaa (Raamattu KERTOJA LUKEE KOKO KERTOMUKSEN
+   * PUTKEEN: *"Jaksojen välissä ei ole taukoa eikä pulun varaa"*).
+   * Jakso kerrallaan -tilassa häntä on entinen PULUN_VARA_MS.
+   */
+  const jaksonHanta = (jakso) => (
+    !luenta.yhtena() && jakso?.pulu ? PULUN_VARA_MS : 0
+  );
+
+  /** Seuraava jakso — tai kaaren loppu. */
+  function seuraavaJakso() {
+    if (tila.i + 1 < kertomus.length) aloitaJakso(tila.i + 1);
+    else paata();
+  }
+
+  function aloitaJakso(i, { kulunut = 0, hyppy = false } = {}) {
     const jakso = kertomus[i];
     if (!jakso) { paata(); return; }
     /*
@@ -1216,7 +1494,8 @@ export function luoEsitys({ ajo }) {
     tila.puluSanottu = false;
     tila.jaksoja += 1;
     tila.luenta = kertomuksenVarakesto(jakso);
-    tila.kesto = tila.luenta + (jakso.pulu ? PULUN_VARA_MS : 0);
+    tila.puluHetki = tila.luenta;
+    tila.kesto = tila.luenta + jaksonHanta(jakso);
     tila.kelauksenAlku = null;
 
     /*
@@ -1243,7 +1522,7 @@ export function luoEsitys({ ajo }) {
     // Kello jakson alkuun heti (kelaus lähtee omasta lukemastaan).
     if (jakso.vaihe !== 'hyppy' || tila.kelauksenAlku === null) kirjoitaKello(tahti.alku);
 
-    aloitaLuenta(jakso, { alkukohta: kulunut });
+    aloitaLuenta(jakso, { alkukohta: kulunut, hyppy });
 
     /*
      * KAMERAN KESTO LASKETAAN VARAKESTOSTA eikä äänitteestä: ajo on
@@ -1275,7 +1554,13 @@ export function luoEsitys({ ajo }) {
     if (jakso.kohde) {
       sytytaKohde(jakso.kohde);
       naytaKuva(jakso.kohde);
-      ajaKohteeseen(jakso.kohde, kesto, { alku: tahti.alku, loppu: tahti.loppu });
+      /*
+       * ENSIMMÄISEEN KOHTEESEEN ON JO AJETTU (Raamattu ALKUANIMAATIO):
+       * avauksen oma ajo lähti Afrikka-sanan kohdalla ja on juuri nyt
+       * perillä. Uusi ajo samaan paikkaan vain nytkäyttäisi kuvaa.
+       */
+      if (tila.kohdeajo) tila.kohdeajo = false;
+      else ajaKohteeseen(jakso.kohde, kesto, { alku: tahti.alku, loppu: tahti.loppu });
     } else {
       tila.karjet = [];
       suljeKuva();
@@ -1287,7 +1572,13 @@ export function luoEsitys({ ajo }) {
        * perillä), ja silloin ajo jatkuu jäljellä olevan ajan.
        */
       const alueenKesto = jakso.vaihe === 'valot' ? avaruuttaJaljella() : kesto;
-      if (jakso.alue) ajaAlueeseen(jakso.alue, alueenKesto);
+      /*
+       * MAROKON AJO ON JO MATKALLA (Raamattu ALKUANIMAATIO): kamera on
+       * lähtenyt ensimmäistä kohdetta kohti heti Afrikka-sanasta, eikä
+       * 'afrikka'-jakson aluerajaus saa nykäistä sitä takaisin koko
+       * maanosaan kesken ajon.
+       */
+      if (jakso.alue && !tila.kohdeajo) ajaAlueeseen(jakso.alue, alueenKesto);
     }
     // Aikaselaimen valittu viiva seuraa esitystä (Raamattu LINSSIEN
     // AIKASELAIN ALAREUNAAN: "vuosiluku … voisi toistua pienellä sen
@@ -1295,7 +1586,7 @@ export function luoEsitys({ ajo }) {
     ajo.aikaselain?.aseta?.(jakso.id);
     // Muisti seuraa jaksoa: sulku tai virkistys jatkaa tästä jaksosta.
     ajo.tallennaMuisti?.();
-  };
+  }
 
   /**
    * VALOT SYTTYVÄT (Raamattu ALKAA MUSTASTA RUUDUSTA). Musta häipyy,
@@ -1311,6 +1602,8 @@ export function luoEsitys({ ajo }) {
    */
   function sytytaValot() {
     tila.valotOdottaa = false;
+    // Pallo on perillä: kamera saa heti lähteä kohti Marokkoa.
+    aloitaKohdeajo();
     ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus');
     peite.classList.add('pois');
     if (reduced) peite.remove();
@@ -1322,6 +1615,49 @@ export function luoEsitys({ ajo }) {
     palautaKaukaisuus();
     ajo.virrat?.asetaPito?.(true);
     ajo.aloitaMusiikki?.(true);
+  }
+
+  /**
+   * AIKA ENSIMMÄISEN KOHTEEN JAKSON ALKUUN (ms). Putkessa luku on
+   * TARKKA: manifestin aikaleima miinus soittimen kohta. Ilman ääntä se
+   * lasketaan varakestoista (jaksojenValiMs), jolloin mykistetty peli
+   * ajaa saman koreografian omalla mitallaan.
+   */
+  const kohteeseenAsti = () => {
+    const rivi = ensimmainenKohde ? luenta.leimat(ensimmainenKohde.id) : null;
+    const nyt = luenta.hetki();
+    if (rivi && nyt !== null) return rivi.alku - nyt;
+    return jaksojenValiMs(kertomus, tila.i, ensimmainenKohde?.id, tila.luenta - tila.kulunut);
+  };
+
+  /**
+   * KAMERA LÄHTEE MAROKKOON (Raamattu ALKUANIMAATIO: *"tämän jälkeen
+   * kamera saa alkaa hitaasti liikkua kohti ensimmäistä kohdetta
+   * marokossa ja sen vauhti voi kiihtyä loppua kohden kunnes hidastaa
+   * juuri ennen kuin saapuu perille kun marokon teksti alkaa"*).
+   *
+   * Ajo alkaa sillä hetkellä, kun Afrikka täyttää ruudun (sanan
+   * "Afrikasta" kohdalla, ks. sytytaValot) ja kestää tasan siihen asti,
+   * kun ensimmäisen kohteen jakso alkaa. Käyrä on marokonPehmennys eikä
+   * laudan oma trapetsi: hidas lähtö, kiihtyvä keskiosa, jarrutus juuri
+   * ennen perille tuloa.
+   *
+   * `prefers-reduced-motion`: ei ajoa lainkaan — jaksot leikkaavat
+   * paikalleen kuten ennenkin.
+   */
+  function aloitaKohdeajo() {
+    if (reduced || tila.kohdeajo || tila.avausOhi || tila.paattynyt) return false;
+    const kohde = ensimmainenKohde?.kohde;
+    if (!kohde) return false;
+    const kesto = kohteeseenAsti();
+    if (!Number.isFinite(kesto) || kesto < MAROKON_POHJA_MS) return false;
+    const tahti = jaksonTahti(kertomus, kertomus.indexOf(ensimmainenKohde));
+    tila.kohdeajo = true;
+    tila.kohdeajonKesto = Math.round(kesto);
+    ajaKohteeseen(kohde, kesto, {
+      alku: tahti.alku, loppu: tahti.loppu, pehmennys: marokonPehmennys,
+    });
+    return true;
   }
 
   /* ------------------------------------------------------------ silmukka */
@@ -1349,15 +1685,40 @@ export function luoEsitys({ ajo }) {
   const kehys = (nyt) => {
     if (!tila.kaynnissa || tila.purettu) return;
     tila.raf = requestAnimationFrame(kehys);
-    tila.kulunut = nyt - tila.alkuHetki;
     /*
-     * ZOOMI LÄHTEE SANASTA "AFRIKASTA" (omistaja 8.9.2026: *"ihan
-     * pienestä pisteestä zoomautuisi afrikka esiin juuri sillä hetkellä
-     * kun kertoja mainitsee sanan afrikka"*). Hetki on arvio luennan
-     * merkkiosuudesta tai kaanonin aikaleima (avauksenHetki).
+     * ÄÄNIKELLO ENSIN, SEINÄKELLO VARALLA (Raamattu KERTOJA LUKEE KOKO
+     * KERTOMUKSEN PUTKEEN). Putkessa jakson kulunut aika luetaan
+     * soittimen `currentTime`:stä, jolloin kello, kamera, kuvat ja
+     * lauseiden rytmi seuraavat kertojaa eivätkä kehystahtia. Ilman
+     * ääntä (mykistys, kertojatila 'ei', puuttuva tiedosto, jakso
+     * kerrallaan -tila) mitta on entinen seinäkello; lähtöhetki
+     * pidetään ajan tasalla, jotta pudotus varareitille ei hyppäisi.
      */
-    if (tila.avausOdottaa && tila.i === 0 && tila.kulunut >= avauksenHetki()) {
-      kaynnistaAvaruusajo();
+    const aanikello = luenta.kulunut();
+    if (aanikello === null) tila.kulunut = nyt - tila.alkuHetki;
+    else {
+      tila.kulunut = aanikello;
+      tila.alkuHetki = nyt - aanikello;
+    }
+    /*
+     * AVAUKSEN KOREOGRAFIA (Raamattu ALKUANIMAATIO): ensimmäinen virke
+     * mustalla, sitten piste tähtien keskellä, ja zoomi, joka PÄÄTTYY
+     * sanaan "Afrikasta". Kaikki hetket tulevat luennan aikaleimoista
+     * (avauksenVaiheet) — ei sekuntikellosta.
+     */
+    const ajat = tila.i === 0 && !tila.avausOhi ? avauksenAjat() : null;
+    if (ajat) {
+      if (tila.mustaPaalla && tila.kulunut >= ajat.musta) nostaMusta(ajat.feidi);
+      /*
+       * ZOOMIN KESTO LASKETAAN LÄHTÖHETKELLÄ, EI ETUKÄTEEN: kehysväli
+       * voi olla pitkä (kontin ohjelmisto-WebGL piirtää noin kehyksen
+       * sekunnissa), ja etukäteen laskettu kesto myöhästyttäisi perille
+       * tuloa saman verran. Näin Afrikka täyttää ruudun sanan kohdalla,
+       * vaikka lähtö tulisi kehyksen myöhässä.
+       */
+      if (tila.avausOdottaa && tila.kulunut >= ajat.zoomAlku) {
+        kaynnistaAvaruusajo(ajat.afrikka - tila.kulunut);
+      }
     }
     /*
      * TÄHDET FEIDAUTUVAT ESIIN JA HÄIPYVÄT PALLON KASVAESSA (Raamattu
@@ -1369,18 +1730,17 @@ export function luoEsitys({ ajo }) {
       const dt = Math.min(0.5, Math.max(0, (nyt - (tila.viimeKehys || nyt)) / 1000));
       const osuus = avaruudenOsuus();
       const haipyy = 1 - Math.max(0, (osuus - TAHTIEN_HAIVE) / (1 - TAHTIEN_HAIVE));
-      tila.tahdet.paivita(dt, Math.min(tahtienEsiinTulo(), haipyy));
+      tila.tahdet.paivita(dt, Math.min(tahtienEsiinTulo(ajat), haipyy));
     }
     // Valot syttyvät sillä hetkellä, kun pallo on perillä ruudun täydeltä.
     if (tila.valotOdottaa && avaruuttaJaljella() <= 0) sytytaValot();
     tila.viimeKehys = nyt;
     paivitaTeksti();
     paivitaKello();
-    if (!tila.puluSanottu && tila.kulunut >= tila.luenta) sanoPulu(kertomus[tila.i]);
-    if (tila.kulunut >= tila.kesto) {
-      if (tila.i + 1 < kertomus.length) aloitaJakso(tila.i + 1);
-      else paata();
-    }
+    if (!tila.puluSanottu && tila.kulunut >= tila.puluHetki) sanoPulu(kertomus[tila.i]);
+    // Putkessa jakson vaihtaa soittimen rajavahti (onRaja); tämä on
+    // varareitti sille ajolle, jossa ääntä ei ole lainkaan.
+    if (tila.kulunut >= tila.kesto) seuraavaJakso();
   };
 
   /**
@@ -1413,7 +1773,7 @@ export function luoEsitys({ ajo }) {
     // Aikaselain vei jo eteenpäin: kamera on toisen jakson käsissä,
     // eikä keskeytynyttä avausajoa saa herättää sen päälle.
     if (tila.avausOhi) {
-      tila.avaruusAlku = performance.now() - AVARUUDEN_MS;
+      tila.avaruusAlku = performance.now() - tila.avaruusKesto;
       palautaKaukaisuus();
       return;
     }
@@ -1538,7 +1898,7 @@ export function luoEsitys({ ajo }) {
       return true;
     }
     suljeKuva();
-    aloitaJakso(i);
+    aloitaJakso(i, { hyppy: true });
     if (selaus?.oliTauolla) {
       // Pelaaja oli itse tauolla: jakso vaihtuu, mutta esitys ei lähde.
       seis();
@@ -1584,7 +1944,7 @@ export function luoEsitys({ ajo }) {
     if (i < 0) return false;
     // Jakson kesto tarkentuu äänitteestä; kulunut ei saa ylittää varakestoa.
     const kulunut = Math.max(0, Math.min(Number(muisti.kulunut) || 0, kertomuksenVarakesto(kertomus[i]) - 200));
-    aloitaJakso(i, { kulunut });
+    aloitaJakso(i, { kulunut, hyppy: true });
     kaynnista();
     return true;
   }
@@ -1695,8 +2055,12 @@ export function luoEsitys({ ajo }) {
       koukku: tila.koukkuKutsuttu,
       kesto: Math.round(tila.kesto),
       luenta: Math.round(tila.luenta),
-      /** Soiko kertoja yhtenä tiedostona (manifesti) vai jakso kerrallaan. */
+      /** Hetki, jolla pulu puhuu (jakson oman puheen loppu). */
+      puluHetki: Math.round(tila.puluHetki),
+      /** Soiko kertoja putkena (manifesti) vai jakso kerrallaan. */
       yhtenainenLuenta: luenta.yhtena(),
+      /** Putken kohta koko kertomuksessa (ms) tai null ilman ääntä. */
+      aanikello: luenta.hetki() === null ? null : Math.round(luenta.hetki()),
       /** Jakson aikaleimat esityksen käyttöön (lauseiden määrä riittää mittariksi). */
       lauseita: kertomus[tila.i]?.aikaleimat?.lauseet?.length ?? null,
       kulunut: Math.round(tila.kulunut),
@@ -1718,6 +2082,12 @@ export function luoEsitys({ ajo }) {
       avausOhi: tila.avausOhi,
       zoominHetki: tila.i === 0 ? Math.round(avauksenHetki()) : null,
       zoomLahti: tila.zoomLahti,
+      /** Avauksen vaiheet nykyisellä kestolla (musta, piste, zoomi). */
+      avauksenVaiheet: tila.i === 0 && !tila.avausOhi ? avauksenAjat() : null,
+      /** Onko ruutu yhä TÄYSIN musta (ensimmäinen virke). */
+      mustaPaalla: tila.mustaPaalla,
+      /** Avauksen ajo ensimmäiseen kohteeseen: kesto ms tai null. */
+      kohdeajo: tila.kohdeajonKesto,
       tahtiEsiin: Math.round(tila.tahtiEsiin * 100) / 100,
       keskella: tekstirivi.classList.contains('keskella'),
       lause: tila.lauseIndeksi,

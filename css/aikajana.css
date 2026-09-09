@@ -3434,25 +3434,34 @@ body.aikaselain-auki { --aikaselain-korkeus: 62px; }
 /*
  * PEITE ON AVAUKSESSA ENSIN MUSTA, SITTEN HARSO JA AINA ESTE.
  *
- * Raamattu "IHMISEN MATKA: … AVAUS MUSTASTA TAHTIIN JA AFRIKKAAN SANAN
- * KOHDALLA" (omistaja 8.9.2026, sanatarkasti: *"Linssin aloitus voisi
- * olla kokonaan musta ruutu ja sitten siihen feidautuisi ensin
- * tähtiä"*): aloitus on läpinäkymätön #000 koko ruudun päällä (luokka
- * `musta`), jolloin ruudulla ei ole palloa eikä tähtiä. Kun kertoja
- * alkaa, musta laskee harsoksi (js MUSTAN_HETKI_MS:n viiveellä,
- * TAHTIEN_FEIDI_MS:ssä) ja tähdet nousevat esiin sen alta. Harso jää
- * eteen kahdesta syystä: pallo ei saa pyörähtää sormesta kesken ajon,
- * ja kaukana oleva Maa on TUMMA (omistaja: *"aluksi pieni ja tumma"*).
- * Harso häipyy zoomin tahdissa — kesto on sama kuin
- * js/linssit/ihmisen-matka-esitys.js AVARUUDEN_MS.
+ * Raamattu "IHMISEN MATKAN ALKUANIMAATIO: ENSIMMAINEN VIRKE MUSTALLE…"
+ * (omistaja 9.9.2026, sanatarkasti: *"ensimmäinen virke saisi tulla
+ * täysin mustalle näytölle. sitten musta feidautuisi pois näkyvistä ja
+ * maapallo tulisi näkyviin tähtien keskellä aivan pienenä pisteenä"*) ja
+ * sitä edeltävä AVAUS MUSTASTA TAHTIIN JA AFRIKKAAN SANAN KOHDALLA
+ * (8.9.2026): aloitus on läpinäkymätön #000 koko ruudun päällä (luokka
+ * `musta`), jolloin ruudulla ei ole palloa eikä tähtiä. ENSIMMÄISEN
+ * VIRKKEEN jälkeen musta laskee harsoksi ja tähdet nousevat esiin sen
+ * alta. Harso jää eteen kahdesta syystä: pallo ei saa pyörähtää
+ * sormesta kesken ajon, ja kaukana oleva Maa on TUMMA (omistaja:
+ * *"aluksi pieni ja tumma"*). Harso häipyy zoomin tahdissa.
+ *
+ * KESTOT TULEVAT LUENNASTA, EIVÄT TÄÄLTÄ. Sekä feidaus että zoomi
+ * lasketaan avausjakson aikaleimoista (js/linssit/ihmisen-matka-esitys.js
+ * avauksenVaiheet), ja ohjaaja kirjoittaa ne muuttujiin
+ * `--avauksen-feidi` ja `--avauksen-zoomi`. Tässä olevat luvut ovat
+ * vain varalukemia sille hetkelle, ennen kuin kesto on tiedossa.
  */
 .aikajana-esitys-peite.avaruus {
   background-color: #000;
   opacity: 0.35;
-  transition: opacity 1800ms ease 300ms;
+  transition: opacity var(--avauksen-feidi, 1800ms) ease;
 }
 .aikajana-esitys-peite.avaruus.musta { opacity: 1; transition: none; }
-.aikajana-esitys-peite.avaruus.kirkastuu { opacity: 0; transition: opacity 7000ms ease; }
+.aikajana-esitys-peite.avaruus.kirkastuu {
+  opacity: 0;
+  transition: opacity var(--avauksen-zoomi, 7000ms) ease;
+}
 @media (prefers-reduced-motion: reduce) {
   .aikajana-esitys-peite.avaruus,
   .aikajana-esitys-peite.avaruus.musta,

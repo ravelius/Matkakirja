@@ -27,12 +27,14 @@
  *   1. Linssi laukusta: vanat valmiit ja Käynnistä-nappi ruudulla.
  *   2. MUSTA ALKU (8.9.2026): Käynnistä-napin jälkeen ruutu on KOKONAAN
  *      musta — ei palloa, ei tähtiä — ja kertoja puhuu jo.
- *   2a. TÄHDET: pistepilvi feidautuu esiin mustan laskiessa harsoksi,
- *      pallo on tähtien keskellä pisteenä (korkeus 50), ja avausjakson
- *      lauseet tulevat YKSITELLEN KESKELLE RUUTUA isolla kirjasimella.
- *   2b. AFRIKKA-SANA: zoomi lähtee vasta neljännen lauseen
- *      ("Afrikasta.") kohdalla ja pallo kasvaa pisteestä ruudun
- *      täyttäväksi Afrikka keskellä.
+ *   2a. TÄHDET: pistepilvi feidautuu esiin mustan laskiessa harsoksi
+ *      ENSIMMÄISEN VIRKKEEN jälkeen, pallo on tähtien keskellä
+ *      pisteenä (korkeus 300, n. 6 px), ja avausjakson lauseet tulevat
+ *      YKSITELLEN KESKELLE RUUTUA isolla kirjasimella.
+ *   2b. AFRIKKA-SANA: zoomi PÄÄTTYY neljännen lauseen ("Afrikasta.")
+ *      kohdalle — pallo kasvaa pisteestä ruudun täyttäväksi Afrikka
+ *      keskellä juuri silloin kun sana kuuluu — ja samalla hetkellä
+ *      kamera lähtee kohti Marokkoa (MAROKKO-väite kohdassa 3).
  *   2c. TAUKO/JATKA: kello, luenta JA zoomi pysähtyvät samasta kohdasta
  *      ja jatkuvat siitä.
  *   3. VALOT: musta väistyy vasta kun pallo on perillä, kamera on
@@ -45,8 +47,8 @@
  *      14 500 → 50 000.
  *   7. PULU: välihuomiot sanotaan (neljä kuplaa) eikä esitys pysähdy.
  *   7b. AIKASELAIN (7.9.2026): nauha on pimeässä piilossa mutta
- *      rakennettu (22 viivaa), ja sen valinta seuraa esitystä jakso
- *      jaksolta viimeiseen asti. Aito veto on savukkeessa
+ *      rakennettu (yksi viiva per jakso, 21 kpl), ja sen valinta seuraa
+ *      esitystä jakso jaksolta viimeiseen asti. Aito veto on savukkeessa
  *      savuke-ihmisen-tutkimus.mjs (väite 2b).
  *   8. LOPPU: kamera koko pallossa, esinerivi palaa ja
  *      ui.aloitaTutkimusvaihe on kutsuttu tasan kerran.
@@ -108,13 +110,22 @@ const HILJAISUUS = hiljaisuusWav(3);
 /*
  * AVAUSJAKSOT SAAVAT OIKEAN MITTAISEN HILJAISUUDEN (8.9.2026). Muille
  * jaksoille kolme sekuntia riittää, mutta avaus, afrikka ja ensimmäinen
- * kohde ovat se kohta, jossa ajoitus on koko juju: zoomi lähtee sanasta "Afrikasta"
- * (n. 79 % avausjakson luennasta) ja kestää AVARUUDEN_MS = 7 s, joten
- * kolmen sekunnin luennalla se valuisi kolmannen jakson yli eikä
- * savuke mittaisi sitä, mitä pelaaja näkee. Yhdeksän sekuntia vastaa
- * tekstin omaa mittaa (kertomuksenVarakesto: 8,4 s ja 7,8 s).
+ * kohde ovat se kohta, jossa ajoitus on koko juju: musta kestää
+ * ensimmäisen virkkeen, tähdet nousevat sen jälkeen ja zoomi PÄÄTTYY
+ * sanaan "Afrikasta" (n. 79 % avausjakson luennasta) — kolmen sekunnin
+ * luennalla nämä kolme vaihetta puristuisivat päällekkäin eikä savuke
+ * mittaisi sitä, mitä pelaaja näkee. Yhdeksän sekuntia vastaa tekstin
+ * omaa mittaa (kertomuksenVarakesto: 8,4 s ja 7,8 s).
+ *
+ * KAKSINKERTAINEN MITTA 9.9.2026. Kun zoomi PÄÄTTYY sanaan "Afrikasta"
+ * eikä lähde siitä (ALKUANIMAATIO), sen kestoksi jää tekstin omalla
+ * mitalla vain noin kaksi sekuntia — juuri niin nopea kuin omistaja
+ * pyysi, mutta kontissa se on vain kaksi kehystä, eikä tauko-väite ehdi
+ * mitata pysähtynyttä ajoa (mitattu: zoomi ehti perille kahden
+ * Playwright-kutsun välissä). Mock on siksi 18 s: vaiheiden SUHTEET
+ * ovat samat kuin pelissä, mutta jokainen niistä kestää monta kehystä.
  */
-const HILJAISUUS_AVAUS = hiljaisuusWav(9);
+const HILJAISUUS_AVAUS = hiljaisuusWav(18);
 
 /* Ämpäri Noden kautta (CLAUDE.md: NODE_USE_ENV_PROXY=1). */
 const AMPARI_VALIMUISTI = new Map();
@@ -412,26 +423,26 @@ const mittaaPinnat = () => s.evaluate(() => {
 
 await s.evaluate(() => document.querySelector('.aikajana-avaus-nappi')?.click());
 /*
- * MITTA HETI, KUVA VASTA SEN JÄLKEEN. Musta laskee harsoksi
- * MUSTAN_HETKI_MS:n viiveellä, ja kuvakaappaus pakottaa kehyksen, joka
- * kontissa kestää sekunnin — mittaus otetaan siksi ensin.
+ * MITTA HETI, KUVA VASTA SEN JÄLKEEN. Musta pysyy nyt koko ENSIMMÄISEN
+ * VIRKKEEN ajan (omistaja 9.9.2026, ALKUANIMAATIO), mutta kuvakaappaus
+ * pakottaa kehyksen, joka kontissa kestää sekunnin — mittaus otetaan
+ * siksi ensin.
  */
 await s.waitForTimeout(200);
 const musta = await mittaaPinnat();
 await s.screenshot({ path: kuva('0-musta') });
 /*
- * PALLO ON PISTE. Kamera on korkeudella 50 (AVARUUDEN_KORKEUS), jolloin
- * pallon kulmahalkaisija on 2·asin(1/51) ≈ 2,2° eli 4,5 % ruudun
- * korkeudesta (fov 50°) — ja mustan peitteen alla ei näy sitäkään.
+ * PALLO ON PISTE. Kamera on korkeudella 300 (AVARUUDEN_KORKEUS),
+ * jolloin pallon kulmahalkaisija on 2·asin(1/301) ≈ 0,38° eli 0,76 %
+ * ruudun korkeudesta (fov 50°) — noin 6 px, ja mustan peitteen alla ei
+ * näy sitäkään.
+ *
+ * LUOKKA `musta` ON NYT MYÖS VÄITE: se poistetaan vasta kun kertoja on
+ * lukenut ensimmäisen virkkeen loppuun (avauksenVaiheet.musta), joten
+ * 200 ms:n kohdalla sen on oltava vielä paikallaan.
  */
-/*
- * LUOKKA `musta` EI OLE VÄITE, PEITTÄVYYS ON. Luokka poistetaan heti
- * ensimmäisellä kehyksellä, ja css hoitaa loput: 300 ms:n viive ja
- * 1 800 ms:n liuku. Mitattu 8.9.2026: 200 ms:n kohdalla luokka oli jo
- * poissa mutta peittävyys tasan 1 — ruutu siis musta, kuten pitääkin.
- */
-vaadi('MUSTA ALKU: ruutu on kokonaan musta, ei palloa eikä tähtiä',
-  musta.peiteOn && musta.peite > 0.9
+vaadi('MUSTA ALKU: ensimmäinen virke luetaan kokonaan mustalle ruudulle',
+  musta.peiteOn && musta.peite > 0.9 && musta.musta === true
     && (musta.tahtienPeitto === null || musta.tahtienPeitto < 0.1)
     && musta.korkeus > 25 && musta.avausOdottaa === true
     && musta.jakso === 'avaus',
@@ -509,8 +520,14 @@ vaadi('PIMEÄ: kartta ja käyttöliittymä piilossa, hampurilainen käytettävis
   pimea.pimeaLuokka && pimea.kelloNakyy === 0 && pimea.suljeNakyy === 1
     && pimea.mustaEnsin === true,
   JSON.stringify(pimea));
+/*
+ * VIIVOJA ON YHTÄ MONTA KUIN JAKSOJA. Luku oli 22 siihen asti, kun
+ * Blombos oli oma jaksonsa; 8.9.2026 Etelä-Afrikassa käydään enää
+ * kerran (Raamattu ETELA-AFRIKKA VAIN KERRAN), joten jaksoja on 21.
+ */
 vaadi('AIKASELAIN: nauha on rakennettu mutta pimeässä piilossa',
-  pimea.nauhaOlemassa && pimea.nauhaNakyy < 0.15 && pimea.nauhanViivoja === 22,
+  pimea.nauhaOlemassa && pimea.nauhaNakyy < 0.15
+    && pimea.nauhanViivoja === lahto.jaksoja,
   JSON.stringify({
     olemassa: pimea.nauhaOlemassa, nakyy: pimea.nauhaNakyy, viivoja: pimea.nauhanViivoja,
   }));
@@ -519,28 +536,38 @@ await jatkaEsitys();
 /* ------------------------------------------- zoomi lähtee Afrikka-sanasta */
 
 /*
- * ZOOMI EI SAA LÄHTEÄ ENNEN SANAA. Ennen kuin kertoja on lauseessa
- * "Afrikasta.", `avausOdottaa` on tosi ja kamera seisoo korkeudella 50;
- * sanan kohdalla (zoominHetki, arvio luennan merkkiosuudesta tai
- * kaanonin aikaleimoista) ajo lähtee.
+ * ZOOMI PÄÄTTYY SANAAN (Raamattu ALKUANIMAATIO, omistaja 9.9.2026:
+ * *"afrikka täyttää koko peli-ikkunan sillä hetkellä kun lukija
+ * mainitsee afrikan ensimmäistä kertaa"*). Ennen zoomin lähtöä
+ * `avausOdottaa` on tosi ja kamera seisoo korkeudella 300; ajo lähtee
+ * hetkellä `kulunut` ja on perillä hetkellä `hetki` (sanan aikaleima
+ * tai arvio luennan merkkiosuudesta).
  */
 const zoomHetki = await odotaJaPysayta('avausOdottaa', '===', false, 900);
 const piste = await mittaaPinnat();
 await s.screenshot({ path: kuva('2-afrikka-pisteena') });
 /*
  * LÄHTÖHETKI LUETAAN OHJAAJAN KIRJAUKSESTA (tila().zoomLahti) EIKÄ
- * NÄYTTEESTÄ: sanan ja jakson lopun väliin jää vain 1,8 sekuntia, eikä
- * kontin näytteenotto mahdu siihen. Ohjaaja kirjaa hetken silloin kun
- * se tapahtuu, joten väite on tarkka riippumatta kehystahdista.
+ * NÄYTTEESTÄ: zoomi kestää vain pari sekuntia, eikä kontin
+ * näytteenotto mahdu siihen. Ohjaaja kirjaa hetken silloin kun se
+ * tapahtuu, joten väite on tarkka riippumatta kehystahdista.
  */
-vaadi('AFRIKKA-SANA: zoomi lähtee vasta neljännen lauseen kohdalla',
+vaadi('AFRIKKA-SANA: zoomi päättyy neljännen lauseen kohdalle',
   zoomHetki.osui && zoomHetki.zoomLahti?.jakso === 'avaus'
     && zoomHetki.zoomLahti.hetki > 0
-    && zoomHetki.zoomLahti.kulunut >= zoomHetki.zoomLahti.hetki
-    // Sana on jakson loppupuolella: musta ja tähdet ehtivät ensin.
+    // Ajo lähtee ENNEN sanaa ja on perillä sanan kohdalla (±150 ms).
+    && zoomHetki.zoomLahti.kulunut < zoomHetki.zoomLahti.hetki
+    && Math.abs((zoomHetki.zoomLahti.kulunut + zoomHetki.zoomLahti.kesto)
+      - zoomHetki.zoomLahti.hetki) < 60
+    // Sana on jakson loppupuolella: musta virke ja piste ehtivät ensin.
     && zoomHetki.zoomLahti.hetki > zoomHetki.zoomLahti.luenta * 0.55
-    // Pallo on yhä piste sillä hetkellä, kun ajo lähtee.
-    && piste.korkeus > 20,
+    /*
+     * Pallo on yhä kaukana sillä hetkellä, kun ajo lähtee. Raja on
+     * väljä (lähtö 300, maali 2,5): zoomi kestää enää pari sekuntia, ja
+     * kontin kehysväli on lähes sekunti — yksi kehys ehtii kulua ennen
+     * kuin näytteenotto huomaa lähdön ja pysäyttää ajon.
+     */
+    && piste.korkeus > 10,
   JSON.stringify({ ...zoomHetki.zoomLahti, korkeus: piste.korkeus, teksti: zoomHetki.teksti }));
 await jatkaEsitys();
 
@@ -647,6 +674,8 @@ const valot = await s.evaluate(async () => {
     keskiX: nakyma ? Math.round(nakyma.x + nakyma.w / 2) : null,
     keskiY: nakyma ? Math.round(nakyma.y + nakyma.h / 2) : null,
     pito: ui.aikajana?.virrat?.tila().pito,
+    // Kamera lähtee Marokkoon samalla hetkellä (ALKUANIMAATIO 9.9.2026).
+    kohdeajo: t?.kohdeajo ?? null,
   };
   // Musta häipyy 2,6 sekunnissa (VALOJEN_MS) — kuva otetaan sen jälkeen.
   await new Promise((r) => setTimeout(r, 2800));
@@ -674,6 +703,16 @@ vaadi('VALOT: musta väistyy vasta kun pallo on rajattuna koko Afrikkaan',
   JSON.stringify(valot));
 vaadi('VALOT: vanojen pito kytkeytyy päälle (rintama ei katoa kelauksessa)',
   valot.pito === true, JSON.stringify({ pito: valot.pito }));
+/*
+ * KAMERA LÄHTEE MAROKKOON SAMALLA HETKELLÄ (Raamattu ALKUANIMAATIO,
+ * omistaja 9.9.2026: *"tämän jälkeen kamera saa alkaa hitaasti liikkua
+ * kohti ensimmäistä kohdetta marokossa"*). Ajon kesto on aika
+ * 'jebel-irhoud'-jakson alkuun, eli useita sekunteja — hidas lähtö,
+ * kiihtyvä keskiosa, jarrutus perille.
+ */
+vaadi('MAROKKO: kamera lähtee ensimmäistä kohdetta kohti heti valojen kanssa',
+  Number.isFinite(valot.kohdeajo) && valot.kohdeajo >= 1600,
+  JSON.stringify({ kohdeajo: valot.kohdeajo }));
 
 /* --------------------------------- teksti hyppää alas ensimmäisessä kohteessa */
 
@@ -842,8 +881,10 @@ try {
     loppu.tila?.paattynyt === true && jaksot.length >= 20,
     `${jaksot.length} jaksoa: ${jaksot.slice(0, 3).join(', ')} … ${jaksot.slice(-2).join(', ')}`);
 
+  // Pisteitä on yhtä monta kuin jaksoja (21 sen jälkeen, kun Blombos
+  // lakkasi olemasta oma jaksonsa 8.9.2026).
   vaadi('AIKASELAIN: nauhan valinta seuraa esitystä viimeiseen jaksoon asti',
-    loppu.selain?.pisteita === 22 && loppu.selain?.valittu === 'loppu'
+    loppu.selain?.pisteita === lahto.jaksoja && loppu.selain?.valittu === 'loppu'
       && loppu.selain?.vedossa === false,
     JSON.stringify(loppu.selain && {
       pisteita: loppu.selain.pisteita, valittu: loppu.selain.valittu, vuosi: loppu.selain.vuosi,

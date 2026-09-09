@@ -369,6 +369,16 @@ test('manifestin jaksot luetaan hakurakenteeksi ja suhteutetaan jakson alkuun', 
   const kartta = jaksojenAikaleimat(TEKOMANIFESTI);
   assert.equal(kartta.size, 2, 'kelvoton rivi tuli mukaan');
   assert.equal(kartta.get('avaus').loppu, 8200);
+  /*
+   * PUTKESSA JAKSO PÄÄTTYY SEURAAVAN ALKUUN (Raamattu KERTOJA LUKEE
+   * KOKO KERTOMUKSEN PUTKEEN): väliin jäävä hiljaisuus (8 200 → 8 500)
+   * kuuluu läpi, joten kello ja kamera jakavat matkansa koko välille.
+   */
+  assert.equal(kartta.get('avaus').paattyy, 8500);
+  assert.equal(kartta.get('avaus').kesto, 8500);
+  // Viimeisellä jaksolla ei ole seuraavaa: se päättyy omaan loppuunsa.
+  assert.equal(kartta.get('afrikka').paattyy, 15000);
+  assert.equal(kartta.get('afrikka').kesto, 6500);
   // Aikaleimat esitykselle: nolla on jakson ensimmäinen ääni.
   const afrikka = jaksonAikaleimat(kartta.get('afrikka'));
   assert.deepEqual(afrikka.lauseet, [0, 3500]);
@@ -399,10 +409,13 @@ test('soitin lukee manifestin ja antaa jaksolle aikaleimat', async () => {
 
   const jakso = { id: 'afrikka', teksti: 'Tämä on se maanosa…' };
   let kesto = null;
+  let puhe = null;
   // Selaimeton ympäristö: soitinta ei synny, mutta kesto ja aikaleimat
   // menevät esitykselle — juuri niiden varassa kello ja kamera kulkevat.
-  luenta.aloita(jakso, { onKesto: (ms) => { kesto = ms; } });
+  luenta.aloita(jakso, { onKesto: (ms, lisa) => { kesto = ms; puhe = lisa?.puhe; } });
   assert.equal(kesto, 6500);
+  // Kaksi lukua: esityksen mitta ja jakson oman puheen loppu (pulu).
+  assert.equal(puhe, 6500);
   assert.deepEqual(jakso.aikaleimat.lauseet, [0, 3500]);
   assert.deepEqual(jakso.aikaleimat.sanat, [0]);
   assert.deepEqual(jakso.aikaleimat.sanatiedot, [{ sana: 'Tämä', alku: 0 }]);
@@ -417,6 +430,178 @@ test('ilman manifestia soitin putoaa jakso kerrallaan -tilaan', async () => {
   const jakso = { id: 'avaus', teksti: 'Tiedätkö…' };
   assert.equal(luenta.aloita(jakso, {}), null);
   assert.equal(jakso.aikaleimat, undefined, 'aikaleimoja ei saa keksiä ilman manifestia');
+  luenta.pura();
+});
+
+/* ============ 6. PUTKI: YKSI SOITTO, EI KATKOJA ============ */
+
+/*
+ * Raamattu "IHMISEN MATKA: KERTOJA LUKEE KOKO KERTOMUKSEN PUTKEEN, PULU
+ * PUHUU HILJEMPAA KERTOJAN PAALLE" (omistaja 9.9.2026, sanatarkasti:
+ * *"siinä koko tekstin luenta saisi mennä putkeen ilman että sitä
+ * katkotaan välillä"*). Tässä mitataan juuri se, mikä rikkoutuisi
+ * hiljaa: soitetaanko kertoja kerran vai kerran per jakso, katkotaanko
+ * ääntä jaksojen välissä ja tuleeko jakson vaihto aikaleimasta.
+ */
+
+/** Selaimeton <audio>: vain se, mitä putkiluenta ja soitin lukevat. */
+function tekoAudioLuokka(soittimet) {
+  return class TekoAudio {
+    constructor(src = '') {
+      this.src = src;
+      this.paused = true;
+      this.ended = false;
+      this.currentTime = 0;
+      this.duration = 300;
+      this.volume = 1;
+      this.preload = '';
+      this.soitot = 0;
+      this.tauot = 0;
+      this.kuuntelijat = new Map();
+      soittimet.push(this);
+    }
+
+    addEventListener(laji, fn) {
+      if (!this.kuuntelijat.has(laji)) this.kuuntelijat.set(laji, new Set());
+      this.kuuntelijat.get(laji).add(fn);
+    }
+
+    removeEventListener(laji, fn) { this.kuuntelijat.get(laji)?.delete(fn); }
+
+    dispatchEvent(tapahtuma) {
+      for (const fn of [...(this.kuuntelijat.get(tapahtuma?.type) ?? [])]) fn(tapahtuma);
+      return true;
+    }
+
+    laukaise(laji) { this.dispatchEvent({ type: laji }); }
+
+    play() { this.soitot += 1; this.paused = false; return Promise.resolve(); }
+
+    pause() { this.tauot += 1; this.paused = true; }
+
+    removeAttribute() { this.src = ''; }
+  };
+}
+
+/** Manifestin lupaava luenta selaimettomassa ympäristössä. */
+async function putkiluenta(soittimet) {
+  globalThis.Event = globalThis.Event ?? class { constructor(type) { this.type = type; } };
+  globalThis.Audio = tekoAudioLuokka(soittimet);
+  const ajo = { ui: {}, luentajuuri: 'https://esimerkki/aikajana/ihmisen-matka/puhe' };
+  const luenta = luoKertomusluenta({
+    ajo,
+    etuliite: 'ihmisen-matka-kertomus',
+    hae: async () => ({ ok: true, json: async () => TEKOMANIFESTI }),
+  });
+  await luenta.valmis;
+  return { ajo, luenta };
+}
+
+test('putkessa kertoja soitetaan KERRAN eikä jaksojen väliin tule katkoa', async () => {
+  const soittimet = [];
+  const { luenta } = await putkiluenta(soittimet);
+  assert.equal(luenta.yhtena(), true);
+
+  const avaus = { id: 'avaus', teksti: 'Tiedätkö…' };
+  const afrikka = { id: 'afrikka', teksti: 'Tämä on se maanosa…' };
+  const rajat = [];
+  const kestot = [];
+  luenta.aloita(avaus, {
+    onKesto: (ms, lisa) => kestot.push([ms, lisa?.puhe]),
+    onRaja: () => rajat.push(avaus.id),
+  });
+  // 1. YKSI SOITIN JA YKSI play(): koko kertomus on yksi äänite.
+  assert.equal(soittimet.length, 1, `soittimia ${soittimet.length}`);
+  assert.equal(soittimet[0].soitot, 1);
+  assert.equal(soittimet[0].tauot, 0);
+  // Ensimmäinen jakso alkaa tiedoston alusta: ei kelausta.
+  assert.equal(soittimet[0].currentTime, 0);
+  // Jakson kesto on seuraavan alkuun, puhe oman loppunsa mittainen.
+  assert.deepEqual(kestot, [[8500, 8200]]);
+
+  // 2. JAKSO VAIHTUU AIKALEIMASTA: soittimen kello ohittaa 'afrikka'-
+  //    jakson alun (8 500 ms), ja rajavahti kertoo siitä ohjaajalle.
+  soittimet[0].currentTime = 8.2;
+  soittimet[0].laukaise('timeupdate');
+  assert.deepEqual(rajat, [], 'raja laukesi liian aikaisin');
+  soittimet[0].currentTime = 8.5;
+  soittimet[0].laukaise('timeupdate');
+  assert.deepEqual(rajat, ['avaus']);
+
+  // 3. SEURAAVA JAKSO EI KOSKE SOITTIMEEN: ei uutta soitinta, ei play,
+  //    ei pause, ei kelausta.
+  luenta.aloita(afrikka, {
+    onKesto: (ms, lisa) => kestot.push([ms, lisa?.puhe]),
+    onRaja: () => rajat.push(afrikka.id),
+  });
+  assert.equal(soittimet.length, 1, 'jakso sai oman soittimensa');
+  assert.equal(soittimet[0].soitot, 1, 'play kutsuttiin uudestaan');
+  assert.equal(soittimet[0].tauot, 0, 'ääni pysäytettiin jaksojen välissä');
+  assert.equal(soittimet[0].currentTime, 8.5, 'soitinta kelattiin jakson alkuun');
+  assert.deepEqual(kestot.at(-1), [6500, 6500]);
+  assert.deepEqual(afrikka.aikaleimat.lauseet, [0, 3500]);
+
+  // 4. ÄÄNIKELLO: jakson kulunut aika ja koko kertomuksen kohta.
+  soittimet[0].currentTime = 10;
+  assert.equal(Math.round(luenta.kulunut()), 1500);
+  assert.equal(Math.round(luenta.hetki()), 10000);
+
+  // 5. ÄÄNITTEEN LOPPU laukaisee viimeisen rajan, vaikka kello jäisi
+  //    kesken: esitys ei saa jumittua odottamaan.
+  soittimet[0].ended = true;
+  soittimet[0].laukaise('timeupdate');
+  assert.deepEqual(rajat, ['avaus', 'afrikka']);
+
+  luenta.pura();
+  assert.equal(soittimet[0].tauot, 1, 'putki jäi soimaan linssin sulkeuduttua');
+});
+
+test('putkessa hyppy kelaa, mutta vain kerran ja vain hypätessä', async () => {
+  const soittimet = [];
+  const { luenta } = await putkiluenta(soittimet);
+  // Muistista jatko keskeltä jaksoa: kelaus jakson alkuun + alkukohta.
+  luenta.aloita({ id: 'afrikka' }, { alkukohta: 1500 });
+  assert.equal(soittimet.length, 1);
+  assert.equal(soittimet[0].currentTime, 10, 'ei kelattu 8 500 + 1 500 ms:iin');
+  // Aikaselaimen valinta taaksepäin: uusi soitto tiedoston alusta.
+  luenta.aloita({ id: 'avaus' }, { hyppy: true });
+  assert.equal(soittimet.length, 2, 'hyppy taaksepäin ei aloittanut luentaa');
+  assert.equal(soittimet[1].currentTime, 0);
+  assert.equal(soittimet[1].soitot, 1);
+  /*
+   * HYPPY SAMAAN JAKSOON aloittaa sen alusta, vaikka soitin olisi jo
+   * sen välillä: aikaselaimen valinta tarkoittaa "jatka tästä jakson
+   * alusta" (Raamattu LINSSIEN AIKASELAIN ALAREUNAAN).
+   */
+  soittimet[1].currentTime = 4;
+  luenta.aloita({ id: 'avaus' }, { hyppy: true });
+  assert.equal(soittimet.length, 3);
+  assert.equal(soittimet[2].currentTime, 0);
+  luenta.pura();
+});
+
+test('jakso kerrallaan -tila on ennallaan: oma soitin ja oma äänite', async () => {
+  const soittimet = [];
+  globalThis.Event = globalThis.Event ?? class { constructor(type) { this.type = type; } };
+  globalThis.Audio = tekoAudioLuokka(soittimet);
+  const ajo = { ui: {}, luentajuuri: 'https://esimerkki/puhe' };
+  const luenta = luoKertomusluenta({
+    ajo, etuliite: 'ihmisen-matka-kertomus', hae: async () => ({ ok: false, status: 404 }),
+  });
+  await luenta.valmis;
+  assert.equal(luenta.yhtena(), false);
+  assert.equal(luenta.kulunut(), null, 'äänikello käy ilman manifestia');
+
+  let kesto = null;
+  luenta.aloita({ id: 'avaus', teksti: 'Tiedätkö…' }, { onKesto: (ms) => { kesto = ms; } });
+  assert.equal(soittimet.length, 1);
+  assert.match(soittimet[0].src, /ihmisen-matka-kertomus-avaus\.mp3$/);
+  // Kesto tulee äänitteen metatiedoista, ei manifestista.
+  assert.equal(kesto, 300000);
+  // Toinen jakso saa OMAN tiedostonsa ja oman soittimensa (entinen käytös).
+  luenta.aloita({ id: 'afrikka', teksti: 'Tämä…' }, {});
+  assert.equal(soittimet.length, 2);
+  assert.match(soittimet[1].src, /ihmisen-matka-kertomus-afrikka\.mp3$/);
   luenta.pura();
 });
 
