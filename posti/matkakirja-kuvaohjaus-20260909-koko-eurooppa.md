@@ -1,10 +1,12 @@
 # Matkakirja — koko Euroopan kuvaohjaus ja kuvatekstit
 
-**9.9.2026 · EUROOPPA-KUVAOHJAUS-20260909-V1.2 · 45 kohdetta · 45 isoisän kuvaa + 58 PuluCam-kuvaa**
+**9.9.2026 · EUROOPPA-KUVAOHJAUS-20260909-V1.3 · 45 kohdetta · 45 isoisän kuvaa + 58 PuluCam-kuvaa**
 
 Tämä on yksi yhteinen toimitustiedosto: nykyiset luentatekstit tarinayhteydeksi, molemmat kuvatekstit kaikkiin 103 kuvaan, 49 jo käynnistetyn PuluCam-kuvan promptit, kolme paikka-QA:n vaatimaa korvaavaa promptia, aiemmin tilatut viisi omalla ohjauksella tehtävää kuvaa ja yhden säilytettävän Venetsia3-pilottikuvan alkuperäinen kohtausohje sekä isoisän 45 kuvan tarkistus ja neljä korjauspromptia. Koneelliseen käsittelyyn sama sisältö rinnakkaisessa [JSON-tiedostossa](matkakirja-kuvaohjaus-20260909-koko-eurooppa.json).
 
 ## Voimassa olevat päätökset
+
+**V1.3-tarkennus:** Kiova1:n samaan tilaukseen on annettu rajaus V2: kädet, kynttilä ja kiveys. Tietyn Lavran oven nykyistä saavutettavuutta ei väitetä varmennetuksi eikä ovea kuvata. Tarkka liite `posti/matkakirja-pulucam-20260909-kiova-rajaus-v2.md`. Määrät eivät muutu. Kuvatuotanto ilmoitti myös Firenzen V4-ohjeen v6-kuvan läpäisseen anatomia- ja paperityylin QA:n; historiallinen kuva etenee käyttäjän arviointiin.
 
 **V1.2-tarkennus:** Lontoo1 sekä Venetsia1/2 korvataan paikka-QA:ssa löydettyjen geometriavirheiden vuoksi. Kolme uutta promptia ovat liitteessä `posti/matkakirja-pulucam-20260909-paikkakorjaukset-v2.md` ja alla. Lontoo käyttää oikeaa rantapenkkiä, Venetsia1 Punta della Doganan avointa kiveystä ja Venetsia2 Ponte dei Pugnin metallikaidetta. Venetsia3 säilyy lintureferenssinä. Aiempi 49 kuvan tilaus jatkuu; nämä ovat kolme lisäkorvausta, eivät rinnakkainen koko sarjan tilaus. Lopullinen kokonaisuus pysyy 58 PuluCam-kuvassa.
 
@@ -1992,31 +1994,34 @@ Create a believable travel photograph made in 1873, printed as the SAME worn pho
 
 ### PuluCam / 1
 
-**Toimi:** UUSI KUVA — tuotantoon tällä promptilla
+**Toimi:** UUSI KUVA — saman tilauksen korjattu V2-rajaus
 
-**PromptId:** `OHJAUS-EU-V1-kiova-1`
+**PromptId:** `OHJAUS-EU-V2-kiova-1`
 
-**Promptin alkuperä:** `posti/matkakirja-kuvaohjaus-20260909-koko-eurooppa.md`
+**Promptin alkuperä:** `posti/matkakirja-pulucam-20260909-kiova-rajaus-v2.md`
 
-**Tarinallinen havainto:** Kiova: tähän kuvaan jätin tilaa hiljaisuudelle.
+**Tarinallinen havainto:** Pulu pysähtyy kynttilää suojaavan käden ääreen. Isoisän kertomus valon jakamisesta jatkuu hiljaisena nykyhetken havaintona.
 
-**Näkökulma:** A quiet fictional present-day human moment at a VERIFIED currently surviving accessible exterior threshold within Kyiv Pechersk Lavra, using up-to-date reference images after the documented wartime damage.
+**Näkökulma:** Kamera 10 cm tavallisen ulkokiveyksen yläpuolella, 40–60 cm kynttilää suojaavista käsistä, rajaus hieman alaviistoon. Ei tunnistettavaa kynnystä tai rakennusta.
 
 **Lyhyt kuvateksti (47):** Kiova: tähän kuvaan jätin tilaa hiljaisuudelle.
 
-**Pitkä kuvateksti (356):** Kiovan luolaluostari kuuluu kaupungin pitkään muistiin, ja sota on vahingoittanut sitä. Tässä katson läheltä kiveä, käden suojaamaa liekkiä ja hetkeä, joka ei tarvitse selostusta. Isoisä kirjoitti valosta, jonka saattoi antaa pois menettämättä omaansa. En tiedä, mitä kuvani ihminen ajattelee. Siksi jätän sen kertomatta ja pidän kameran hetken paikallaan.
+**Pitkä kuvateksti (361):** Kiovan luolaluostari kuuluu kaupungin pitkään muistiin, ja sota on vahingoittanut sitä. Isoisä kirjoitti siellä valosta, jonka saattoi antaa pois menettämättä omaansa. Minun kuvassani käsi suojaa yhtä liekkiä tuulelta. En tiedä, mitä ihminen ajattelee. Kiveys jatkuu kuvan ulkopuolelle, mutta tällä kertaa en lentänyt katsomaan, mitä seuraavan kulman takana on.
 
 **Valmis kuvakohtainen generointiprompti:**
 
-Create one authentic present-day colour photograph from the first-person viewpoint of Livia, a carrier pigeon with her own camera. Use a full-frame 14 mm rectilinear ultra-wide lens: strong near/far perspective, natural materials, believable depth and light. This is a photograph, never an illustration or CGI scene. The camera is where the bird's eyes would be; the photographer herself is not visible. No floating third-person view of a bird holding a camera. No circular fisheye, fake depth blur, synthetic HDR, text, sticker, watermark, vintage paper or decorative frame. Keep the full composition readable at phone size. Landscape 3:2, deliver 1536x1024 sRGB. Use real current place-reference images for the site geometry; people and incidental events are fictional everyday moments. A quiet fictional present-day human moment at a VERIFIED currently surviving accessible exterior threshold within Kyiv Pechersk Lavra, using up-to-date reference images after the documented wartime damage. Pigeon camera 10 cm above a dry stone step, with the hand of an ordinary adult sheltering a small candle in the near-middle frame. The hand, flame, real stone surface and a modest recognizable doorway detail carry the picture; no huge pristine monastery panorama. Do not reconstruct the entire prewar skyline as current, invent bomb damage, smoke, soldiers, memorial inscriptions or a specific real victim. Natural sober daylight, authentic colour, no romantic heart marks or comic food detail. Do not identify the person or imply this is a documentary photo of an actual recent event. If a proposed doorway no longer survives or is inaccessible, use another verified surviving public threshold and record the exact source before generation.
+Create one authentic present-day colour photograph from Livia's own pigeon-eye camera in Kyiv. Full-frame 14 mm RECTILINEAR ultra-wide lens, landscape 3:2, 1536x1024 sRGB. This is a fictional quiet everyday moment, not a documentary reconstruction of a real identifiable person's experience. Place the camera about 10 centimetres above ordinary outdoor stone paving, only about 40–60 centimetres from a crouching adult's hands. One hand holds a thin, simply made wax candle upright; the other shields its small living flame from a light breeze. Show natural fingers, believable wrist connections, and a cropped sleeve or knee at an edge so the human pose makes sense without showing a face. The flame is small and physically plausible in daylight, not an illuminating fireball. Let the 14 mm near/far perspective spread the worn paving joints gently away from the camera. Frame tightly and slightly downwards so the hands, candle and a short stretch of everyday paving fill the entire photograph. No horizon or identifiable building is required. There is NO doorway, entrance, threshold, cave, monastery interior, church facade, panorama, named street sign or memorial in this composition. Do not invent the condition or accessibility of any specific Lavra entrance. This new composition deliberately makes no claim to document a verified currently open doorway. Do not use a prewar monastery panorama, fabricate intact architecture or manufacture ruins and battle damage. No soldiers, rescue workers, readable inscriptions, tears or signs identifying a real victim. Livia herself is behind the camera and invisible. Natural restrained daylight and authentic contemporary colour; a small warm flame against neutral stone, natural photographic depth, no fake shallow-focus smear. No painted outlines, CGI, sepia paper, decorative border, hearts, humorous food, text, watermark or baked-in PuluCam sticker. The chosen B sticker remains a separate game layer. The story is the care taken to keep a little light alive; the connection to Kyiv and the grandfather's Lavra memory is carried by the city context and caption, not by invented landmark geometry.
 
-**Paikkatarkistus:** Kuvatuotanto valitsee lähteistä todelliseen kuvauskohtaan osuvan nykyreferenssin ja varmistaa näkölinjat. Tekstin puuttuvaa rakennetta ei saa keksiä. Jos paikka ei mahdollista tätä sommittelua, ilmoita ristiriita ennen generointia; älä korvaa paikkaa toisella omin päin.
+**Rajauksen muutos:** Alkuperäisen tietyn Lavran oven nykyistä kuvauskelpoisuutta ei väitetä varmennetuksi. Kuva rajataan käsiin, liekkiin ja kiveykseen; tunnistettavaa kynnystä tai rakennusta ei esitetä. Sama Kiova1-tilaus jatkuu tällä ohjauksella.
+
+**Paikkatarkistus:** Kyse on nyt tietoisesti rajatusta, Kiovaan sijoitetusta fiktiivisestä lähikuvasta. Älä merkitse mitään Lavran ovea tai kulkureittiä varmennetuksi tämän kuvan perusteella. Ei näkyvää oviaukkoa, julkisivua, muistomerkkiä tai keksittyä sotavauriota. Tarkista kädet, kynttilä, perspektiivi ja maantasosta mahdollinen asento.
+
+**Lähteiden käyttö:** UNESCO yksilöi maailmanperintökohteen. Suspilnen 19.6.2026 oma paikan päältä tehty juttu ja kuvat vahvistavat osittaisen avauksen sekä palvelusten jatkumisen, mutta eivät varmista alkuperäisen promptin tiettyä ulko-ovea nykyhetkessä. Siksi tämä on nimenomainen rajauksen ja paikkaväitteen muutos, ei väite löydetystä uudesta ovireferenssistä. Lähteet tukevat kuvatekstin taustaa; niiden henkilöitä tai tapahtumia ei kopioida fiktiivisen kuvan henkilöiksi.
 
 **Lähteet:**
 
 - [Lähde 1](https://whc.unesco.org/en/list/527/)
-- [Lähde 2](https://www.unesco.org/en/articles/unesco-statement-ukraine)
-- [Lähde 3](https://www.icomos.org/news/statement-attacks-june-2026-kyiv-ukraine/)
+- [Lähde 2](https://suspilne.media/kyiv/1335280-kievo-pecerska-lavra-castkovo-vidnovila-svou-robotu/)
 
 ---
 

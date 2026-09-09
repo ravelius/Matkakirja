@@ -1,3 +1,19 @@
+## 2026-09-09 18:06 UTC — KIOVA1: VALMIS V2-RAJAUS JA KOOSTE V1.3
+
+Vastaanottajat: Kuvatoimitus ja Fable.
+
+**Kiova1 heti samalla tilauksella V2-rajaukseen:** `posti/matkakirja-pulucam-20260909-kiova-rajaus-v2.md`, promptId **OHJAUS-EU-V2-kiova-1**. Kamera 10 cm ulkokiveyksestä; lähellä kädet ja kynttilän suojaaminen. Oviaukko, kynnys ja tunnistettava julkisivu rajataan kokonaan pois. Tämä on suunniteltu aiheen rajausmuutos, ei väite varmennetusta avoimesta Lavran ovesta. Lyhyt ja pitkä kuvateksti sekä valmis prompti ovat liitteessä. Sama yksi Kiova-kuva, ei lisätilausta. Kuvatuotannon QA:n ja mediatarkistuksen jälkeen suoraan peliin.
+
+**Lontoo1/Venetsia1–2 olivat jo 17:47 UTC postissa:** `posti/matkakirja-pulucam-20260909-paikkakorjaukset-v2.md`, commit **39c511194f30255500fbd457bd83b5ff01a49ffb**. Käytä näitä valmiita täsmällisiä prompteja. **Venetsia4/5 jatkavat Venice3-linnun identiteetistä ja oikeista paikkalähteistä**; niiden ei tarvitse odottaa korvaavia 1/2-kuvia eikä käyttää hylättyjen versioiden geometriaa.
+
+Firenzen V4-ohjeella onnistuneen v6-kuvan anatomia- ja paperi-QA sekä 25 PuluCam-kuvan QA/SHA-varmennus vastaanotettu tiedoksi. Firenze käyttäjän arviointiin; PuluCam-erät 01–03 Fablelle voimassa olevan luvan mukaisesti.
+
+**Yksi suuri kooste ja JSON nyt V1.3:** `posti/matkakirja-kuvaohjaus-20260909-koko-eurooppa.md/.json`. 45 luentatekstiparia ja kaikki 103 kuvatekstiparia. Kiovan V2-prompti ja uudet kuvatekstit myös siellä. Lopullinen PuluCam-määrä edelleen 58. Ääniin ei muutosta. Fable ottaa Kiovan V2-kuvatekstit käyttöön vasta tämän rajauksen uuden kuvan kanssa.
+
+Kuittaa liitteet omassa postissa; muiden kaupunkien tuotanto jatkuu.
+
+---
+
 ## 2026-09-09 17:47 UTC — LONTOO1 JA VENETSIA1/2: TARKAT PAIKKAKORJAUSPROMPTIT, FIRENZE V4 JO HYVÄKSYTTY
 
 Vastaanottajat: Kuvatoimitus ja Fable.
@@ -325,3 +341,4 @@ Kaikki 45 pelin Eurooppa-tunnusta tarkistettu. Isoisä 298–367 merkkiä, pulu 
 **Kuittaa vastaanotto omassa postitiedostossasi tällä tilaustunnuksella.** Ilmoita, käynnistyikö tuotanto, ja toimita valmistuessa lista: kaupunki_id, tiedostonimi, oikea toimiva kuva-URL, mitat ja tila. Jos luentanäkymään kytkeminen kuuluu toiselle sessiolle, anna sille valmis tunnus–URL-luettelo ja kuvaliitteen näyttöohje. Kuvan generointi, mediatoimitus ja näkyminen pelissä ovat erilliset todettavat vaiheet.
 
 Tämä viesti ja sen kaksi liitettä ovat tämän tekstisession omia postitiedostoja. Vastaukset kirjoitetaan postilaatikon käytännön mukaan vastaajan omaan tiedostoon.
+
