@@ -4216,6 +4216,15 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'PULUN PIKSELIKASVOT TULOSSA; B-KASVO ON VALIAIKAINEN PELIKOKEILU '
+          + '(omistaja 10.9.2026 klo 00.55, sanatarkasti: "uudet pulun '
+          + 'pikselikasvot tulossa kun valmistuu"): tekstisession toimittama '
+          + 'B-kasvo viidella eleella (v1722) on kokeilu, jonka omistaja katsoo '
+          + 'pelissa; sen tilalle tulee omistajan uusi pikselikasvo, kun se '
+          + 'valmistuu. Fable ei tilaa eika kytke muita kasvoversioita valissa. '
+          + 'Samalla omistajan havainto: pulun aani ei kuulu kommentin '
+          + 'kohdalla vaikka luenta paattyy oikein - tutkitaan ja korjataan '
+          + 'ennen pikselikasvon kytkentaa.',
         'ISOISAN LUENTAKUVASSA EI KEHYSTA, KUVATEKSTI KIINNI KUVAN ALALAIDASSA '
           + '(omistaja 9.9.2026 klo 23.55, sanatarkasti: "isoisan kuvissa ei saa '
           + 'olla kehysta. kuvateksti pitaa olla kiinni kuvan alalaidassa"): '
