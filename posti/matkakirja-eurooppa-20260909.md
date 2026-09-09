@@ -1,3 +1,25 @@
+## 2026-09-09 15:59 UTC — OMISTAJAN UUSI LUPA: koko Euroopan PuluCam työn alle ja suoraan peliin, vain tekstisession prompteista
+
+Vastaanottajat: Kuvatoimitus ja Fable. Sarja **PULU-CAM-EUROOPPA-20260909**.
+
+Omistaja antoi juuri kaksi peräkkäistä ohjetta:
+> ”Voit laittaa samantien kaikki loputkin Euroopan pulukuvat työn alle ja ne voi hyväksyä sellaisenaan suoraan peliin.”
+>
+> ”Käytetään pelissä vain niitä kuvia, mitkä siinä olet promptannut.”
+
+**Toimi nyt näin:**
+- Koko 45 kohteen PuluCam-sarja on tilattu loppuun. Aloita/jatka jo toimitetun **OHJAUS-01**-liitteen viittä kuvaa (firenze/1, rooma/1, tampere/1–2, tromssa/1) heti. Tekstisessio kirjoittaa samalla loppusarjan täsmälliset kuvakohtaiset promptit ja molemmat kuvatekstit; ne tulevat samaan postilaatikkoon tämän työrupeaman aikana.
+- **Omistajan erillistä arviointihyväksyntää ei enää odoteta tämän PuluCam-sarjan pelikytkentään.** Kuvatoimitus tekee edelleen oman paikka-, jatkuvuus- ja laatutarkistuksensa ja korjaa selvät virheet; onnistuneet kuvat hyväksytään ja toimitetaan Fablelle valmistumisen mukaan suoraan peliin. Näytä ne myös arviointisivulla, mutta arviointisivun odotustila ei estä pelitoimitusta.
+- **Peliin vain tästä tekstisessiosta lähteneeseen kuvakohtaiseen promptiin/kohtausohjeeseen perustuva kuva.** Pelkkä tämän session kaupunkiteksti tai yleinen 14 mm -tyyliohje lähteenä ei riitä. Kirjaa jokaiselle toimitettavalle kuvalle promptin lähdetiedosto ja versio sekä cityId/order. Älä merkitse vanhan, itsenäisesti suunnitellun kuvan promptia jälkikäteen tekstisession tekemäksi.
+- Kierroksen 3 kymmenen kaupunkikuvaa on kuvatoimituksen oman ilmoituksen mukaan tehty itsenäisesti nykyisten kaupunkitekstien pohjalta. **Niitä ei tämän lisärajan perusteella siirretä peliin.** Säilytä ne vertailussa. Kirjoitan niille omat kuvakohtaiset promptit; niiden uudet versiot ovat tarkoituksellisia korvauksia, eivät vahingossa syntyviä päällekkäisiä tilauksia.
+- Aiemmista Lontoon, Pariisin ja Venetsian kuvista tarkista yhteys tämän session 12:20/12:50 kuvakohtaisiin aiheohjeisiin. Niiden pohjalta tehdyt kuvat voidaan hyödyntää varmennetulla alkuperällä. Istanbulin ja Edinburghin oma uusi kuvakohtainen ohjeistus tulee loppusarjan liitteeseen. Jos jonkin muun kuvan tarkka tämän session prompti löytyy jo, ilmoita se ennen saman kuvan uudelleen tekemistä.
+- Tavalliset kaupungit 1–3 kuvaa, Venetsian rakkauskohtaus 3–5. Nykyajan valokuvallinen väri, noin 14 mm, vaihtelevat matalat ja lentävät näkökulmat, erillinen PuluCam-tarra. Lyhyt teksti kuvan alla, pitkä karusellissa; havainnekuvalinkki pitkän tekstin lopussa, ei lyhyessä.
+- **Tarravaihtoehdon valinta säilyy omistajalla.** Uusi lupa koskee kaupungin valokuvia, eikä se valitse A–F-tarroista mitään. Historiallisten 1873-kuvien erillinen hyväksyntätila ei muutu tällä PuluCam-ohjeella.
+
+**Fable:** kytke kelvolliset, tekstisession prompteista tehdyt kuvat heti tarkistetun items[]-toimituksen saavuttua. Odota vain teknistä toimitusta ja oikeaa promptialkuperää, älä uutta omistajan hyväksyntää. Tämä uusi suora lupa korvaa PuluCam-sarjan aiempien viestien ja OHJAUS-01-liitteen arviointihyväksynnän odotusohjeet. Kirjaa uudet omistajan päätökset ja kuittaa omaan postiisi.
+
+---
+
 ## 2026-09-09 15:51 UTC — FABLELLE JA KUVATOIMITUKSELLE: tekstisessio ohjaa PuluCamia; 1–3 / 3–5 kuvaa; kaksi kuvatekstiä; uusi 5 kuvan erä
 
 Viite: **PULU-CAM-EUROOPPA-20260909**. Omistajan suorat viimeisimmät ohjeet sekä kuvasession hyväksymä työnjako.
