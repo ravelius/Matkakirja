@@ -1748,6 +1748,43 @@ test('linssi häivyttää kartan omat merkit eikä jätä napautettavia jälkiä
   assert.match(MOOTTORI, /document\.body\.classList\.remove\('aikajana-paalla'\)/);
 });
 
+/*
+ * Raamattu "IHMISEN MATKA: LUENTAKUVA EI SAA JAADA LINSSIN PAALLE, JA
+ * TEKSTI KESKELLE RUUTUA" (omistaja 9.9.2026 klo 16.35 iPhone-kaappauksista,
+ * sanatarkasti: *"Kartalla näkyy valokuva ja toinen korjattava asia."*).
+ *
+ * Fokusvirran luentakuva on ankkuroitu kartan päälle omaksi paneelikseen,
+ * ja se jäi näkyviin Ihmisen matkan ja Tiedeliitteen ajaksi — pieneksi
+ * valokuvaksi pallon yläpuolelle. Piilotus tehdään linssin puolelta
+ * CSS-luokalla, jonka moottori jo asettaa ja purkaa, EIKÄ kutsumalla
+ * fokusvirran `piilotaLuentakuva`-vientiä: se poistaisi paneelin
+ * dokumentista, jolloin kuva ei enää palaisi linssin sulkeuduttua.
+ */
+test('linssin ajaksi luentakuva piiloon kartalta ja takaisin sulkiessa', () => {
+  // Luokka tulee avauksessa ja lähtee purussa — yksi ja sama kytkin.
+  assert.match(MOOTTORI, /document\.body\.classList\.add\('aikajana-paalla'\)/);
+  assert.match(PURA, /document\.body\.classList\.remove\('aikajana-paalla'\)/);
+  // Piilotus on display:none, ei häivytys: kuva ei saa kuultaa läpi.
+  const lohko = TYYLI.match(/body\.aikajana-paalla \.fokusvirta-luentakuva[\s\S]*?\{ display: none; \}/);
+  assert.ok(lohko, 'css/aikajana.css ei piilota luentakuvaa linssin ajaksi');
+  for (const valitsin of [
+    '.fokusvirta-luentakuva',        // paneeli (myös pienennetty .pieni)
+    '.fokusvirta-luentakuva-ankkuri', // ankkurisolmu (myös PULU-CAM-pakka)
+    '.fokuszoom',                     // auki jäänyt suurennos kartan päällä
+    '.etsi-aarre-ankkuri',            // Etsi aarre -nappi laatan vieressä
+  ]) {
+    assert.ok(lohko[0].includes(`body.aikajana-paalla ${valitsin}`),
+      `${valitsin} jää linssin päälle`);
+  }
+  /*
+   * PALUU EI SAA OLLA PURKU. Jos moottori kutsuisi piilotaLuentakuvaa,
+   * paneeli ja ui.luentakuva katoaisivat eikä kuva palaisi samassa
+   * kaupungissa linssin jälkeen.
+   */
+  assert.ok(!/piilotaLuentakuva/.test(MOOTTORI),
+    'moottori purkaa luentakuvan sen sijaan että piilottaisi sen');
+});
+
 test('rikkinäinen karttalaatta ei maalaa selaimen kysymysmerkkiä kartalle', () => {
   // WebKit piirtää saapumattoman <image>-elementin tilalle sinisen
   // laatikon ja kysymysmerkin, venytettynä laatan koko alaan
