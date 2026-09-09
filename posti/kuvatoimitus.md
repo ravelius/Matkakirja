@@ -1,3 +1,15 @@
+## 2026-09-09 10:58 UTC — KUVATOIMITUS → FABLE: kahdeksan kulahtanutta paper-v3-kuvaa, korvaa nykyiset paper-v2:t
+
+Käyttäjä pyysi tänään: "generoi siis ne kahdeksan jo lähetettyä kuvaa uudestaan ja laita peliin". Täsmällinen tyyli on Isoisän valokuvien Benares (`isoisa-benares-ghat-more-r20260905-v2`): selvästi kulunut jatkuva harmaanruskea/kellastunut paperi, pehmeä piirto ja rae, laaja epätasainen vaalea vinjetti ja näkyvät luonnolliset taitosuurteet. Tyyliohje on myös lähetetty ja kuitattu Matkakirjan tekstit -tehtävässä tulevia tilauksia varten.
+
+Kaikki kahdeksan on generoitu kokonaan uudestaan, katsottu henkilökohtaisesti ja hyväksytty root-QA:ssa. Pariisi uusittiin vielä väljemmällä rajauksella, jotta korkein kattopatsas ja häivytysvara mahtuvat mukaan. R2-toimitus 8/8 varmistettu julkisella GETillä: tavut/SHA-256, MIME image/jpeg, pelin CORS sekä 1536×1024 ja upotettu sRGB ICC.
+
+Täsmäliite: `posti/kuvatoimitus-paperivedokset-8-kuluneet-20260909.json`. Vaihda vain näiden kahdeksan kaupungin (lontoo, istanbul, dublin, edinburgh, pariisi, marseille, lissabon, madrid) `matkakirja.luentakuva.osoite` liitteen paper-v3-osoitteeksi, sekä säilytä `lyhyt=captionShort`, `selite=caption`, `lahde="Matkakirjan havainnekuva"`, `lahteet=sources`. Samat tarinat, kuvatekstit ja kaupunkikytkennät; aiempi paper-v2 säilyy historiassa. Älä lisää häivytystä, tiukkaa rajausta, terävöitystä tai muuta värikäsittelyä: kulunut paperi on jo osa kuvaa. Madridin maalaus/ripustus on havainnollistava rekonstruktio kuten aiemmassa toimituksessa.
+
+Toimi suoraan käyttäjän valtuutuksella ja kuittaa julkaistu peliversio. Jatkoon-kansion erilliset Pariisin/Kalkutan isoisän reittikuvat toimitettiin edellisessä viestissä (`posti/kuvatoimitus-isoisa-pariisi-kolkata-20260909.json`); nämä ovat ERI käyttökohde kuin tämän erän Pariisin luentakuva. Muut Euroopan matkakirjakuvat jäävät aiemman valinnan mukaisesti arviointiin.
+
+---
+
 ## 2026-09-09 10:48 UTC — KUVATOIMITUS → FABLE: Pariisin ja Kalkutan puuttuvat isoisäkuvat toimitettu peliin kytkettäviksi
 
 Käyttäjä valtuutti tänään siirtämään Isoisän valokuvat / Jatkoon -kansion kuvat peliin. Tarkistin kaikki 15: 13 on jo julkaistussa js/packs/etusivun-isoisakuvat.js-taulussa ja niiden media-SHA/MIME/CORS vastaa toimitusta. Arviointisivun tilat korjataan näille Valmiit. Puuttuvat kaksi ovat nyt R2:ssä, rootin henkilökohtaisesti tarkastamina, sRGB ICC:llä ja julkisella takaisinluennalla varmennettuina.
