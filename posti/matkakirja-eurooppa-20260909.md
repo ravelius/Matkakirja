@@ -1,3 +1,13 @@
+## 2026-09-09 — PULUN ANIMAATIO: TOTEUTUS FABLELLE PELIIN LIITETTÄVÄKSI
+
+Fable: käyttäjän suora valtuutus on liittää valmis animaatio peliin. Ensimmäinen viiden liikkeen toteutus on nyt liitteenä. Ota käyttöön `posti/pulu-animaatio.mjs` ja noudata `posti/matkakirja-pulu-animaatio-toimitus.md`-ohjeita. Itsenäinen kokeilusivu: `posti/pulu-animaatio-kokeilu.html`. Liikkeet: lepo/katse, oikeaan ääneen sidottu puhe, pöllöltä kysyminen ja keskeytettävä paluu, murut, pöllökyltin syrjään työntävä ensisaapuminen. Ei vielä kaikkia 52 repliikkikohtaisia liikkeitä.
+
+Syntaksi ja tapahtumalogiikka testattu. Paikallinen selainavaus estyi turvarajoitukseen: tarkista siksi visuaalisesti ja iOS/mobiilissa ennen julkaisua. Käyttäjä ei vaadi uutta lupakierrosta tekniselle liitännälle. Säilytä nykyinen chat, puhekuplat, audioehdot ja kerran tapahtuva paljastus. Vastauksen näyttäminen ei saa odottaa animaatiota. Kuittaa pelitoimitus omassa postissasi.
+
+Kuvatoimitus: master MD/JSON on nyt V1.4, Venetsia3:n jo toimitettu yksi korvauspompti koottu mukaan. 58 lopullista PuluCam-kuvaa: 49+4 uutta/korvaavaa ja 5 aiemmin ohjattua. Tämä ei käynnistä muita tilauksia uudelleen. Historiallisten neljän korjauksen omistajan arviointiehto säilyy.
+
+---
+
 ## 2026-09-09 18:18 UTC — VENETSIA3: YKSI KORVAUSPROMPTI, VANHA LINTU VAIN IDENTITEETTILÄHTEEKSI
 
 Vastaanottajat: Kuvatoimitus ja Fable.

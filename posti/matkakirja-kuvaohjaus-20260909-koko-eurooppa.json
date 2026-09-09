@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "edition": "EUROOPPA-KUVAOHJAUS-20260909-V1.3",
+  "edition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
   "createdAt": "2026-09-09T17:07:08.256Z",
   "author": "Matkakirjan tekstit / kuvakohtainen tarinaohjaus",
   "cityCount": 45,
@@ -1562,28 +1562,54 @@
       "existingAssetDisposition": "retain_for_comparison_not_for_game_delivery"
     },
     {
-      "caption": "Campo Santa Margheritan laidalla tuolit, puut ja kahvilapöydät levittäytyvät kaupungin yhteiseen olohuoneeseen. Istuin vain hetkeksi. Paikallinen tuli viereen ja kallisti päätään kellojen kuuluessa. Tässä näkyy siis aukion arkista elämää. Se on tärkeä aihe. Pöydän reunalle jäänyt muru ei selitä, miksi otin samasta linnusta näin monta kuvaa, eikä sen tarvitsekaan.",
+      "caption": "Campo Santa Margheritan kahvilapöydistä voi seurata aukion elämää nousematta tuolilta. Se oli suunnitelmani. Paikallinen laskeutui viereisen tuolin selkänojalle ja kallisti päätään. Aukion toisessa päässä joku käveli, varmaankin. En tarkistanut. Pöydän reunalle jäi yksi muru, mutta se ei selitä, miksi kamera osoittaa aivan toiseen suuntaan. Kuvassa on kaupungin elämää. Hän asuu täällä.",
       "captionShort": "Venetsia: aukion nimi on… tiedän kyllä. Aivan varmasti.",
       "city": "Venetsia",
       "cityId": "venetsia",
       "existingAssetId": "pulu-cam-venetsia-03-r20260909-14mm-v3",
       "existingReviewUrl": "/pulu-cam-14mm-20260909/pulu-cam-venetsia-03-r20260909-14mm-v3.jpg",
       "order": 3,
-      "placeCheck": "Varmista lopuksi kuvassa näkyvän tarkan paikan nimi ja yhteys alkuperäiseen ohjeeseen. Jos alkuperäistä kuvakohtaista ohjausta ei voida osoittaa, älä hyväksy kuvaa automaattisesti; pyydä tekstisessiolta korvaava prompti.",
-      "productionAction": "retain_existing_directed",
-      "prompt": null,
-      "promptId": "ALKUPERAINEN-OHJAUS-20260909-venetsia-3",
-      "promptSource": "posti/matkakirja-eurooppa-20260909.md (12:20 ja 12:50 kuvakohtaiset ohjeet; Venetsian 14 mm ja sydänreunat omistajan tarkennus)",
+      "placeCheck": "Vertaa liitettyyn looking-south.jpg-paikkakuvaan: sama etelään avautuva suunta, avoin kivetty tila vasemmalla ja syvyyteen, eri korkuiset ja levyiset julkisivut oikealla. Ei suljettua pikkupiazzaa, tiheää puuryhmää tai yhtenäistä nelikerroksista taustaseinää. Säilytä referenssin kiveyksen ladonta ja epätasaisuudet; älä muuta sitä pieneksi nupukiviruudukoksi. Kahvilakalusteet ja ihmisten hetki saavat olla fiktiiviset. Vanhan kuvan lintu on ainoa siitä käytettävä referenssialue.",
+      "productionAction": "replace_geography",
+      "prompt": "Create ONE replacement for Venice photograph 3 of Livia's accidental crush album. Authentic present-day colour camera photograph, landscape 3:2, 1536x1024 sRGB. Use a full-frame 14 mm RECTILINEAR ultra-wide lens with natural near/far perspective, real optical depth and believable materials. No circular fisheye, illustration, CGI, synthetic HDR or artificial blur masking an invented background.\n\nATTACH TWO SEPARATE REFERENCES. BIRD IDENTITY ONLY: use a crop of the pigeon from pulu-cam-venetsia-03-r20260909-14mm-v3, excluding its background. Match that exact bird's plumage pattern, orange iris, beak and pale cere, throat markings, neck iridescence and wing bars; do not redesign him. PLACE GEOMETRY ONLY: https://www.cityscrolls.com/venice/campo-santa-margherita/photos/large/looking-south.jpg . This photograph has been visually inspected by the directing session. It shows the documented SOUTH-facing view of Campo Santa Margherita: an open, elongated paved space receding on the left and middle; an irregular sequence of varied-width and varied-height cafe facades on the right; sparse trees on the left; and the Carmini bell tower in the distant south, behind the lower roofs, not attached to a foreground cafe.\n\nPlace Livia's invisible camera on an empty cafe table at the OUTER edge of the right-hand cafe seating strip shown in that south-facing reference, about 10 cm above the tabletop, pointing south along the same spatial corridor. This is a pigeon seated at a table, not a human standing at eye height and not an aerial view. The exact same crush pigeon stands on the backrest of the neighbouring empty cafe chair, roughly 40–60 cm from the lens, and turns his head towards the photographer with a small natural tilt. His feet must grip a believable chair back; no floating feet, extra toes or impossible body twist. The bird occupies about one third of the frame. Preserve a small corner of Livia's tabletop with a SINGLE ordinary crumb near a lower edge. The crumb is not what she is looking at. A few anonymous seated adults may appear farther away, naturally cropped and subordinate.\n\nKeep the documented south-facing geometry behind the bird. The cafe chairs and tables are fictional movable objects in the existing seating strip; the square's shape, paving and buildings are not invented. Leave the open paved corridor clearly visible beside the close bird. Use the actual large, worn paving slabs, variations in size and joints visible in the place reference. Do not make a small enclosed plaza with a dense grove, a uniform high four-storey residential wall, new arcades, a canal or a stone balustrade. Keep the real differing rooflines, facade widths and setbacks where visible. The distant Carmini tower may be omitted by the close framing, but never relocated to fit. Do not require a full panorama or make every landmark visible at once. Match the reference's physical proportions without copying its people, readable shop signs or exact transient furniture layout.\n\nUse natural gentle afternoon colour consistent with the other Venice photographs. The joke is that Livia has stopped paying attention to the square and is photographing her crush instead. Add five or six small hand-drawn pink hearts and two tiny sparkles at the extreme outer margins: more affectionate decoration than frame 2, less than frames 4–5. These are album-overlay marks, not physical hearts floating in the scene. Leave the bird's face, the paving and the architectural evidence clear. The photographic centre must remain fully photographic. Livia is behind the camera and never visible. No captions, PuluCam sticker, watermark, historical paper treatment or solid decorative frame. The selected B sticker is supplied separately by the game.",
+      "promptId": "PAIKKA-V2-20260909-venetsia-3",
+      "promptSource": "posti/matkakirja-pulucam-20260909-venetsia3-v2.md",
       "provenanceNote": "Tämä ei ole uusi generointitilaus eikä väite, että kirjoitin kuvatuotannon teknisen promptilaajennuksen. Kuvakohtainen tilanneohje on tekstisession aiempi. Varmista sen vastaavuus tuotantolokiin ennen pelikytkentää.",
       "series": "pulu-cam",
       "sourceLine": "Matkakirjan havainnekuva",
       "sources": [
-        "https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/documenti/Classic_Dorsoduro_EN.pdf",
-        "https://www.camposantamargherita.com/bar.htm",
-        "https://www.comune.venezia.it/en/content/venice-and-bycicles"
+        "https://www.cityscrolls.com/venice/campo-santa-margherita/",
+        "https://www.cityscrolls.com/venice/campo-santa-margherita/photos/large/looking-south.jpg",
+        "https://www.travellers-insight.com/europa/italien/venedig-sehenswuerdigkeiten"
       ],
-      "story": "Tekstisession alkuperäinen kolmas ihastuskuva: kahvilatuoli ja sama lintu pääosassa, ympäristö jää vähitellen toiseksi.",
-      "viewpoint": "Nykyisen visuaalisesti tarkistetun kuvan todellinen lintuperspektiivi."
+      "story": "Sama kahvilakohtaus ja sama ihastus, nyt lähietäisyydellä tuolin selkänojalla. Livia alkaa unohtaa aukion, vaikka väittää yhä kuvaavansa kaupunkia.",
+      "viewpoint": "CityScrollsin looking-south.jpg-kuvan dokumentoitu eteläsuunta: oikean reunan kahvilapöytärivin ulommaiselta pöydältä kohti etelää. Kamera noin 10 cm pöytäpinnan yläpuolella. Aukion avoin kulkutila vasemmalle, vaihteleva julkisivurivi oikealle.",
+      "previousDirectionV13": {
+        "caption": "Campo Santa Margheritan laidalla tuolit, puut ja kahvilapöydät levittäytyvät kaupungin yhteiseen olohuoneeseen. Istuin vain hetkeksi. Paikallinen tuli viereen ja kallisti päätään kellojen kuuluessa. Tässä näkyy siis aukion arkista elämää. Se on tärkeä aihe. Pöydän reunalle jäänyt muru ei selitä, miksi otin samasta linnusta näin monta kuvaa, eikä sen tarvitsekaan.",
+        "captionShort": "Venetsia: aukion nimi on… tiedän kyllä. Aivan varmasti.",
+        "city": "Venetsia",
+        "cityId": "venetsia",
+        "existingAssetId": "pulu-cam-venetsia-03-r20260909-14mm-v3",
+        "existingReviewUrl": "/pulu-cam-14mm-20260909/pulu-cam-venetsia-03-r20260909-14mm-v3.jpg",
+        "order": 3,
+        "placeCheck": "Varmista lopuksi kuvassa näkyvän tarkan paikan nimi ja yhteys alkuperäiseen ohjeeseen. Jos alkuperäistä kuvakohtaista ohjausta ei voida osoittaa, älä hyväksy kuvaa automaattisesti; pyydä tekstisessiolta korvaava prompti.",
+        "productionAction": "retain_existing_directed",
+        "prompt": null,
+        "promptId": "ALKUPERAINEN-OHJAUS-20260909-venetsia-3",
+        "promptSource": "posti/matkakirja-eurooppa-20260909.md (12:20 ja 12:50 kuvakohtaiset ohjeet; Venetsian 14 mm ja sydänreunat omistajan tarkennus)",
+        "provenanceNote": "Tämä ei ole uusi generointitilaus eikä väite, että kirjoitin kuvatuotannon teknisen promptilaajennuksen. Kuvakohtainen tilanneohje on tekstisession aiempi. Varmista sen vastaavuus tuotantolokiin ennen pelikytkentää.",
+        "series": "pulu-cam",
+        "sourceLine": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/documenti/Classic_Dorsoduro_EN.pdf",
+          "https://www.camposantamargherita.com/bar.htm",
+          "https://www.comune.venezia.it/en/content/venice-and-bycicles"
+        ],
+        "story": "Tekstisession alkuperäinen kolmas ihastuskuva: kahvilatuoli ja sama lintu pääosassa, ympäristö jää vähitellen toiseksi.",
+        "viewpoint": "Nykyisen visuaalisesti tarkistetun kuvan todellinen lintuperspektiivi."
+      },
+      "existingAssetDisposition": "identity_reference_only_background_not_QA_passed",
+      "captionActivation": "only_with_corresponding_new_image"
     },
     {
       "caption": "Kanavan yllä reitti on hetken suoraviivainen: vettä alhaalla ja sillan kaari edessä. Hän nousi tuolilta ja lensi ensin. Minä seurasin, koska paikallinen tuntee ilmavirtaukset. Se on järkevä syy, Fogg. Kuvasta jäi pois osa sillasta, mutta siipien liike onnistui hyvin. Niin hyvin, että säästin ruudun. Sydämiä on reunoilla nyt useampia. Tutkin asetuksia myöhemmin.",
@@ -2567,9 +2593,9 @@
   "productionSummary": {
     "totalFinalPuluImages": 58,
     "initialNewOrderContinues": 49,
-    "additionalGeographyReplacements": 3,
+    "additionalGeographyReplacements": 4,
     "previouslyOrderedOHJAUS01": 5,
-    "retainedPriorDirectedPilotImages": 1,
+    "retainedPriorDirectedPilotImages": 0,
     "newOrderIsIncrementalNotDuplicate": true
   },
   "changeLogV12": {
@@ -2588,5 +2614,6 @@
     "promptId": "OHJAUS-EU-V2-kiova-1",
     "additionalImageCount": 0,
     "florenceStatus": "Image session reports V4-directed v6 passed anatomy and paper QA; awaiting owner review."
-  }
+  },
+  "changeLogV14": "Venetsia3 korvataan taustan paikkavirheen vuoksi. Vanhan kuvan lintu säilyy vain identiteettilähteenä. 49+4 uutta/korvaavaa ja 5 OHJAUS-kuvaa = 58. Vain tämä yksi lisäkorjaus: muita tilauksia ei aloiteta uudelleen."
 }

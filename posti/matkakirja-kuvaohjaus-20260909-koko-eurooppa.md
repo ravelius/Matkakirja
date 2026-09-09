@@ -1,6 +1,10 @@
+# V1.4 — voimassa oleva lisäkorjaus
+
+Venetsia3 korvataan taustan paikkavirheen vuoksi. Vanhan kuvan lintu säilyy vain identiteettilähteenä. 49+4 uutta/korvaavaa ja 5 OHJAUS-kuvaa = 58. Vain tämä yksi lisäkorjaus: muita tilauksia ei aloiteta uudelleen. Aiemmat säilyttämistä koskevat Venetsia3-merkinnät alla ovat korvattuja historiatietoja.
+
 # Matkakirja — koko Euroopan kuvaohjaus ja kuvatekstit
 
-**9.9.2026 · EUROOPPA-KUVAOHJAUS-20260909-V1.3 · 45 kohdetta · 45 isoisän kuvaa + 58 PuluCam-kuvaa**
+**9.9.2026 · EUROOPPA-KUVAOHJAUS-20260909-V1.4 · 45 kohdetta · 45 isoisän kuvaa + 58 PuluCam-kuvaa**
 
 Tämä on yksi yhteinen toimitustiedosto: nykyiset luentatekstit tarinayhteydeksi, molemmat kuvatekstit kaikkiin 103 kuvaan, 49 jo käynnistetyn PuluCam-kuvan promptit, kolme paikka-QA:n vaatimaa korvaavaa promptia, aiemmin tilatut viisi omalla ohjauksella tehtävää kuvaa ja yhden säilytettävän Venetsia3-pilottikuvan alkuperäinen kohtausohje sekä isoisän 45 kuvan tarkistus ja neljä korjauspromptia. Koneelliseen käsittelyyn sama sisältö rinnakkaisessa [JSON-tiedostossa](matkakirja-kuvaohjaus-20260909-koko-eurooppa.json).
 
@@ -1330,31 +1334,27 @@ Tämä uusi korvaava prompti on tekstisession kirjoittama. Aiempi kuva säilytet
 
 ### PuluCam / 3
 
-**Toimi:** SÄILYTÄ — tämän session aiempi kuvakohtainen ohje, varmennettu lähtökohta
+**Toimi:** KORVAA — vanha tausta ei läpäissyt paikka-QA:ta.
 
-**PromptId:** `ALKUPERAINEN-OHJAUS-20260909-venetsia-3`
+**PromptId:** `PAIKKA-V2-20260909-venetsia-3`
 
-**Promptin alkuperä:** `posti/matkakirja-eurooppa-20260909.md (12:20 ja 12:50 kuvakohtaiset ohjeet; Venetsian 14 mm ja sydänreunat omistajan tarkennus)`
+**Lyhyt kuvateksti:** Venetsia: aukion nimi on… tiedän kyllä. Aivan varmasti.
 
-**Tarinallinen havainto:** Tekstisession alkuperäinen kolmas ihastuskuva: kahvilatuoli ja sama lintu pääosassa, ympäristö jää vähitellen toiseksi.
+**Pitkä kuvateksti:** Campo Santa Margheritan kahvilapöydistä voi seurata aukion elämää nousematta tuolilta. Se oli suunnitelmani. Paikallinen laskeutui viereisen tuolin selkänojalle ja kallisti päätään. Aukion toisessa päässä joku käveli, varmaankin. En tarkistanut. Pöydän reunalle jäi yksi muru, mutta se ei selitä, miksi kamera osoittaa aivan toiseen suuntaan. Kuvassa on kaupungin elämää. Hän asuu täällä.
 
-**Näkökulma:** Nykyisen visuaalisesti tarkistetun kuvan todellinen lintuperspektiivi.
+**Prompti:**
 
-**Lyhyt kuvateksti (55):** Venetsia: aukion nimi on… tiedän kyllä. Aivan varmasti.
+Create ONE replacement for Venice photograph 3 of Livia's accidental crush album. Authentic present-day colour camera photograph, landscape 3:2, 1536x1024 sRGB. Use a full-frame 14 mm RECTILINEAR ultra-wide lens with natural near/far perspective, real optical depth and believable materials. No circular fisheye, illustration, CGI, synthetic HDR or artificial blur masking an invented background.
 
-**Pitkä kuvateksti (365):** Campo Santa Margheritan laidalla tuolit, puut ja kahvilapöydät levittäytyvät kaupungin yhteiseen olohuoneeseen. Istuin vain hetkeksi. Paikallinen tuli viereen ja kallisti päätään kellojen kuuluessa. Tässä näkyy siis aukion arkista elämää. Se on tärkeä aihe. Pöydän reunalle jäänyt muru ei selitä, miksi otin samasta linnusta näin monta kuvaa, eikä sen tarvitsekaan.
+ATTACH TWO SEPARATE REFERENCES. BIRD IDENTITY ONLY: use a crop of the pigeon from pulu-cam-venetsia-03-r20260909-14mm-v3, excluding its background. Match that exact bird's plumage pattern, orange iris, beak and pale cere, throat markings, neck iridescence and wing bars; do not redesign him. PLACE GEOMETRY ONLY: https://www.cityscrolls.com/venice/campo-santa-margherita/photos/large/looking-south.jpg . This photograph has been visually inspected by the directing session. It shows the documented SOUTH-facing view of Campo Santa Margherita: an open, elongated paved space receding on the left and middle; an irregular sequence of varied-width and varied-height cafe facades on the right; sparse trees on the left; and the Carmini bell tower in the distant south, behind the lower roofs, not attached to a foreground cafe.
 
-**Säilytettävän tiedoston tunniste:** `pulu-cam-venetsia-03-r20260909-14mm-v3`
+Place Livia's invisible camera on an empty cafe table at the OUTER edge of the right-hand cafe seating strip shown in that south-facing reference, about 10 cm above the tabletop, pointing south along the same spatial corridor. This is a pigeon seated at a table, not a human standing at eye height and not an aerial view. The exact same crush pigeon stands on the backrest of the neighbouring empty cafe chair, roughly 40–60 cm from the lens, and turns his head towards the photographer with a small natural tilt. His feet must grip a believable chair back; no floating feet, extra toes or impossible body twist. The bird occupies about one third of the frame. Preserve a small corner of Livia's tabletop with a SINGLE ordinary crumb near a lower edge. The crumb is not what she is looking at. A few anonymous seated adults may appear farther away, naturally cropped and subordinate.
 
-Tämä ei ole uusi generointitilaus eikä väite, että kirjoitin kuvatuotannon teknisen promptilaajennuksen. Kuvakohtainen tilanneohje on tekstisession aiempi. Varmista sen vastaavuus tuotantolokiin ennen pelikytkentää.
+Keep the documented south-facing geometry behind the bird. The cafe chairs and tables are fictional movable objects in the existing seating strip; the square's shape, paving and buildings are not invented. Leave the open paved corridor clearly visible beside the close bird. Use the actual large, worn paving slabs, variations in size and joints visible in the place reference. Do not make a small enclosed plaza with a dense grove, a uniform high four-storey residential wall, new arcades, a canal or a stone balustrade. Keep the real differing rooflines, facade widths and setbacks where visible. The distant Carmini tower may be omitted by the close framing, but never relocated to fit. Do not require a full panorama or make every landmark visible at once. Match the reference's physical proportions without copying its people, readable shop signs or exact transient furniture layout.
 
-**Paikkatarkistus:** Varmista lopuksi kuvassa näkyvän tarkan paikan nimi ja yhteys alkuperäiseen ohjeeseen. Jos alkuperäistä kuvakohtaista ohjausta ei voida osoittaa, älä hyväksy kuvaa automaattisesti; pyydä tekstisessiolta korvaava prompti.
+Use natural gentle afternoon colour consistent with the other Venice photographs. The joke is that Livia has stopped paying attention to the square and is photographing her crush instead. Add five or six small hand-drawn pink hearts and two tiny sparkles at the extreme outer margins: more affectionate decoration than frame 2, less than frames 4–5. These are album-overlay marks, not physical hearts floating in the scene. Leave the bird's face, the paving and the architectural evidence clear. The photographic centre must remain fully photographic. Livia is behind the camera and never visible. No captions, PuluCam sticker, watermark, historical paper treatment or solid decorative frame. The selected B sticker is supplied separately by the game.
 
-**Lähteet:**
-
-- [Lähde 1](https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/documenti/Classic_Dorsoduro_EN.pdf)
-- [Lähde 2](https://www.camposantamargherita.com/bar.htm)
-- [Lähde 3](https://www.comune.venezia.it/en/content/venice-and-bycicles)
+**Lähteet ja rajaus:** katso `matkakirja-pulucam-20260909-venetsia3-v2.md`. Vanha lintu vain identiteettilähteenä.
 
 ### PuluCam / 4
 
