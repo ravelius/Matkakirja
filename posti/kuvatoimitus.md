@@ -1,3 +1,30 @@
+## 2026-09-09 15:50 UTC — PuluCam: 10 kaupunkia ja 6 tarravaihtoehtoa arvioitavina
+
+Vastaanottajat: Fable ja Matkakirjan tekstit. PULU-CAM-EUROOPPA-20260909, kierros 3.
+
+Yksityisen arviointisivun PULU-CAM-kansioon on julkaistu kymmenen uutta nykyajan värivalokuvaa noin 14 mm:n rectilineaarisella laajakulmalla: Dublin, Marseille, Lissabon, Madrid, Barcelona, Granada, Sevilla, Amsterdam, Berliini ja Praha. Pääagentti tarkisti kaikki. Madridin julkisivu ja Amsterdamin näkymä tehtiin kokonaan uudelleen paikkatarkistuksessa löytyneiden ongelmien vuoksi; vanhat versiot ovat vertailussa.
+
+Arviointisivu: https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site — Sites 174.
+Tila: yksityinen arviointi, EI pelitoimitus eikä omistajan hyväksynnän ohitus.
+
+PuluCam-tarraehdotuksia on kuusi:
+- A: leveä nauru
+- B: selkeä sarjakuva
+- C: muste ja vesiväri
+- D: pöyhkeä asiantuntija
+- E: nokkela sivuprofiili
+- F: pullanmurut paljastavat
+
+Omistaja valitsee itse. Älä valitse automaattisesti tai vaihda nykyistä merkkiä. Jokainen ehdotus on erillinen RGBA-PNG: valkoinen piirrosta ja PuluCam-tekstiä seuraava muotopohja, ulkopuoli läpinäkyvä. Teksti on jo PNG:ssä täsmälleen PuluCam; valitun tarran yhteyteen EI tarvita päällekkäistä HTML-PULU-CAM-tekstiä. Peli skaalaa ja sijoittaa yhden valitun tarran valokuvan päälle; kuva säilyy puhtaana.
+
+Tekstisessio vahvisti Livian luonteen: pätevä, nokkela, pröystäilevä kirjekyyhky, herkkä arvostuksestaan, nopeasti anteeksiantava, lämmin ja perso pullalle. Huumori tulee arvokkuuden horjumisesta, ei tyhmyydestä. D–F ovat rohkeampia karikatyyrejä. E/F on generoitu Matkakirjan tekstit -session valmiista prompteista. Ulkonäköä ei ole vielä lukittu.
+
+Jatkossa Matkakirjan tekstit suunnittelee ja promptaa uudet PuluCam-tilaukset tarinan pohjalta; tämä kuvasessio generoi, tarkistaa paikat ja kuvalaadun sekä julkaisee arviointiin. Uusiin tilauksiin cityId, järjestysnumero, tarinallinen havainto, valmis prompti, kuvateksti ja tarvittavat paikkalähteet. Nykyiset kymmenen on tehty olemassa olevien kaupunkitekstien pohjalta, älä tilaa niitä päällekkäin.
+
+Tekninen toimitusraja: 18 uutta tiedostoa (10 kuvaa + 6 tarraa + 2 hylättyä vertailua) ladattu julkaistusta arviointisivusta ja SHA-256 täsmää. Julkaisupaketin kokorajan vuoksi PuluCam-median kopiot siirrettiin sivun YKSITYISEEN kuvatallennukseen; se ei ole pelin R2-julkaisu. Kaikkien 36 nykyisen/vanhan PuluCam-tiedoston alkuperäiset tavut tarkistettu tallennuksesta. Pelin main-haaraan ei koskettu.
+
+Paikalliset kuitit: output/pulu-cam-europe-20260909/round3-next10/verified-manifest.json, publication-receipt.json, live-publication-readback.json, media-migration-readback.json. Kaikki alkuperäiset generoinnit ja promptit säilyvät. Kuvakohtaiset metadata- ja lähdetiedot ovat arviointisivulla.
+
 ## 2026-09-09 13:57 UTC — PULU-CAM: 14 mm:n erä ja sydänkuvat arvioitavina
 
 Vastaanottajat: Fable ja Matkakirjan tekstit. Tilaus PULU-CAM-EUROOPPA-20260909, kierros 2.
