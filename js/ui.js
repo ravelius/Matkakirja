@@ -220,6 +220,8 @@ async function cachedGallery(title) {
 }
 import { sfx, treasureSound } from './sound.js';
 import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
+// Gallerioiden selauskaistat: yksi jaettu sääntö (omistaja 9.9.2026).
+import { gallerianVyohyke, vyohykkeenAskel } from './galleria.js';
 import {
   playPlaceAmbience, stopPlaceStream, stopQuizMusic,
   vaimennaTausta, palautaTausta,
@@ -2431,27 +2433,7 @@ export class UI {
     this.arrivalKulttuuriKysymys = document.getElementById('arrival-kulttuuri-kysymys');
     this.arrivalKulttuuriVaihtoehdot = document.getElementById('arrival-kulttuuri-vaihtoehdot');
     this.arrivalKulttuuriTulos = document.getElementById('arrival-kulttuuri-tulos');
-    document.getElementById('arrival-yes').addEventListener('click', () => {
-      // Tutki paikka vie tietovisaan: tauolle jäänyt luenta ei saa
-      // jatkua kysymyksen alle. Ehto closeArrivalissa ei riitä, koska
-      // visa syntyy vasta actionQuizissa — sulku ehtii ensin
-      // (omistajan havainto Tangerissa).
-      this.luentaTauolla = null;
-      this.closeArrival();
-      sfx.play('paper');
-      /*
-       * Kohtaamiskaupungissa hahmo esittää kysymyksen itse, joten
-       * muotoarvonta (väittämä, valokuvaaja, tullimies) ohitetaan —
-       * "Tapaa gondolieeri" ei saa avata tullimiestä. Isoisän pulma
-       * pysyy silti etusijalla: nimetty muoto ohittaisi sen, joten
-       * pulman odottaessa kutsu tehdään entiseen tapaan.
-       */
-      const kohtaaminen = KOHTAAMISET[this.game.cityOf()?.id];
-      const pulmaOdottaa = this.game.pendingPuzzle?.();
-      this.doAction(() => this.game.actionQuiz(
-        kohtaaminen && !pulmaOdottaa ? { form: 'quiz' } : {},
-      ));
-    });
+    document.getElementById('arrival-yes').addEventListener('click', () => this.etsiKatko());
     document.getElementById('arrival-no').addEventListener('click', () => {
       this.closeArrival();
       // Kortti avataan nykyään Tutki-napista kesken vuoron, jolloin
@@ -2559,12 +2541,25 @@ export class UI {
       // (omistajan toive). Yhden kuvan kortti sulkeutuu mistä napautuksesta
       // tahansa, kuten ennenkin.
       /*
-       * Pino kiertää eteenpäin, ei vaihda päikseen.
+       * Pino kiertää, ei vaihda päikseen.
        *
        * Kahdella kuvalla vaihto riitti, mutta pinossa voi nyt olla
        * useampi (omistajan toive). Napautus nostaa seuraavan
        * päällimmäiseksi ja kiertää lopusta alkuun; pinosta pääsee pois
        * napauttamalla sen ulkopuolelle.
+       *
+       * SELAUS ON NYT KAPEILLA REUNAKAISTOILLA (omistaja 9.9.2026 klo
+       * 14.15: *"liian leveä alue mistä kuva siirtyy seuraavaan tai
+       * edelliseen kuvaan"*). Ennen KOKO kortti vei eteenpäin, joten
+       * kuvaa ei voinut katsoa napauttamatta sitä pois. Nyt vasen
+       * reunakaista vie edelliseen, oikea seuraavaan ja keskiosa
+       * (js/galleria.js: 52 % kortin leveydestä) jättää kortin
+       * paikalleen. Sama vakio kuin karusellien nuolialueilla.
+       *
+       * KESKELTÄ EI AVAUDU ERILLISTÄ SUURENNOSTA, koska postikortti ON
+       * jo avattu kuva: se aukeaa matkakirjan pikkukuvasta ja näyttää
+       * pitkän kuvatekstin (Raamattu 9.9.2026, ks. naytaPostikortti).
+       * Keskiosan tehtävä on siis pitää kuva paikallaan.
        */
       const kortit = this.postikortti
         ? [...this.postikortti.querySelectorAll('.postikortti-kortti')] : [];
@@ -2572,7 +2567,13 @@ export class UI {
       if (kortit.length > 1 && kortilla) {
         e.preventDefault();
         e.stopPropagation();
-        this.postikorttiIndeksi = ((this.postikorttiIndeksi ?? 0) + 1) % kortit.length;
+        const nykyinen = ((this.postikorttiIndeksi ?? 0) % kortit.length + kortit.length)
+          % kortit.length;
+        // Vyöhyke mitataan PÄÄLLIMMÄISESTÄ kortista: pinon alemmat
+        // ovat sen alla ja hieman eri kohdassa.
+        const askel = vyohykkeenAskel(gallerianVyohyke(e, kortit[nykyinen]));
+        if (!askel) return;
+        this.postikorttiIndeksi = (nykyinen + askel + kortit.length) % kortit.length;
         kortit.forEach((k, i) => k.classList.toggle('alla', i !== this.postikorttiIndeksi));
         sfx.play('swipe');
         return;
@@ -13390,6 +13391,39 @@ export class UI {
     nappi.textContent = tila.teksti;
     nappi.disabled = tila.pois;
     nappi.classList.toggle('tehtava-pois', tila.pois);
+  }
+
+  /**
+   * ETSI KÄTKÖ — YKSI OVI, KAKSI KAHVAA.
+   *
+   * Ketju oli ennen saapumiskortin napin kuuntelijan sisällä. Kartalle
+   * tuli 9.9.2026 toinen kahva samaan oveen (js/etsi-aarre-nappi.js,
+   * omistajan tilaus: *"kun pulun kommentti on tullut, kartalle saisi
+   * tulla kaupungin laatan viereen nappi: Etsi aarre, mikä avaisi
+   * kaupunkilehden."*), ja kopioitu ketju ajautuisi ensimmäisessä
+   * muutoksessa erilleen — siksi ketju on tässä nimettynä metodina ja
+   * molemmat napit kutsuvat sitä.
+   */
+  etsiKatko() {
+    // Tutki paikka vie tietovisaan: tauolle jäänyt luenta ei saa
+    // jatkua kysymyksen alle. Ehto closeArrivalissa ei riitä, koska
+    // visa syntyy vasta actionQuizissa — sulku ehtii ensin
+    // (omistajan havainto Tangerissa).
+    this.luentaTauolla = null;
+    this.closeArrival();
+    sfx.play('paper');
+    /*
+     * Kohtaamiskaupungissa hahmo esittää kysymyksen itse, joten
+     * muotoarvonta (väittämä, valokuvaaja, tullimies) ohitetaan —
+     * "Tapaa gondolieeri" ei saa avata tullimiestä. Isoisän pulma
+     * pysyy silti etusijalla: nimetty muoto ohittaisi sen, joten
+     * pulman odottaessa kutsu tehdään entiseen tapaan.
+     */
+    const kohtaaminen = KOHTAAMISET[this.game.cityOf()?.id];
+    const pulmaOdottaa = this.game.pendingPuzzle?.();
+    this.doAction(() => this.game.actionQuiz(
+      kohtaaminen && !pulmaOdottaa ? { form: 'quiz' } : {},
+    ));
   }
 
   openArrival(city) {

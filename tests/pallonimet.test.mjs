@@ -264,3 +264,89 @@ test('pallon CSS2D-kerros on oma pinontakonteksti eikä nouse korttien päälle'
     assert.ok(!/fokuskohde|popup|kupla|toast/.test(s), `korttikohtainen paikkaus: ${s}`);
   }
 });
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * 7. KAUPUNGIN NIMI ON OSA OSUMAPINTAA (omistaja 9.9.2026,
+ *    työpöytäkaappaus Euroopan lähizoomista)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJA, SANATARKASTI: *"lisäksi kaupungin nimi saisi olla myös
+ * klikattavaa aluetta"*. ENNEN osuma oli 44 px kaupungin PISTEESTÄ,
+ * joten pitkän nimen ulkopää jäi ulottumattomiin: mitattu Chromiumilla
+ * (1419 × 821 css, näkymä Venetsia–Istanbul) pisin nimi oli musteeltaan
+ * 79,8 px leveä ja sen ulkopää 94,3 px pisteestä, eikä sen napautus
+ * tehnyt mitään. JÄLKEEN sama napautus ajaa kameran kaupungin ylle
+ * täsmälleen kuten pisteen napautus (mitattu: molemmat kirjaavat saman
+ * kamera-ajon, Sofia laudan kohtaan 6611, 1696).
+ *
+ * SÄÄNTÖ: nimen laatikko on samassa vertailussa kuin noston nimilappu
+ * (js/pallolauta/lauta.js musteenVoittaja): etäisyys laatikkoon,
+ * kosketusvara, pienin voittaa ja tasapelissä lähin keskipiste. Nimen
+ * laatikko talletetaan PISTEEN SUHTEEN (js/pallolauta/nimet.js
+ * `osuma(p)`), koska ladonta ajetaan vain levossa mutta nimi seuraa
+ * pistettään CSS2D:n mukana.
+ */
+
+const {
+  LAPUN_KOSKETUSVARA_PX, laatikonEtaisyys, musteenVoittaja,
+} = await import('../js/pallolauta/lauta.js');
+
+const nimenLaatikko = {
+  r: {
+    x0: 380, y0: 275, x1: 440, y1: 290,
+  },
+  voittaja: { laji: 'kaupunki', k: { id: 'sofia' } },
+};
+const lapunLaatikko = {
+  r: {
+    x0: 300, y0: 320, x1: 360, y1: 332,
+  },
+  voittaja: { laji: 'nosto', o: { id: 'rila' } },
+};
+
+test('nimen napautus antaa saman kaupungin kuin pisteen napautus', () => {
+  // Musteen päällä: nimi voittaa ja palauttaa kaupungin tietueen.
+  const osuma = musteenVoittaja({ x: 410, y: 283 }, [nimenLaatikko]);
+  assert.equal(osuma.laji, 'kaupunki');
+  assert.equal(osuma.k.id, 'sofia');
+  // Pitkän nimen ULKOPÄÄ on yhä osumaa, vaikka piste olisi kaukana.
+  assert.equal(musteenVoittaja({ x: 439, y: 283 }, [nimenLaatikko]).k.id, 'sofia');
+  // Kosketusvaran sisällä kelpaa, sen ulkopuolella ei.
+  assert.equal(musteenVoittaja({ x: 410, y: 290 + LAPUN_KOSKETUSVARA_PX - 1 }, [nimenLaatikko]).k.id, 'sofia');
+  assert.equal(musteenVoittaja({ x: 410, y: 290 + LAPUN_KOSKETUSVARA_PX + 1 }, [nimenLaatikko]), null);
+  assert.equal(musteenVoittaja({ x: 410, y: 283 }, []), null);
+});
+
+test('fokuskohteen nimilappu ei osu kaupunkiin vaan omaan nostoonsa', () => {
+  const ehdokkaat = [nimenLaatikko, lapunLaatikko];
+  // Lapun musteen päällä voittaa nosto, ei viereinen kaupungin nimi.
+  const lapulla = musteenVoittaja({ x: 330, y: 326 }, ehdokkaat);
+  assert.equal(lapulla.laji, 'nosto');
+  assert.equal(lapulla.o.id, 'rila');
+  // Ja päinvastoin: kaupungin musteen päällä voittaa kaupunki.
+  assert.equal(musteenVoittaja({ x: 400, y: 282 }, ehdokkaat).laji, 'kaupunki');
+  // Kummankin varan sisällä: lähempi laatikko voittaa (sääntö 9).
+  assert.equal(musteenVoittaja({ x: 366, y: 310 }, ehdokkaat).laji, 'nosto');
+});
+
+test('laatikon etäisyys on 0 sisällä ja kasvaa ulkopuolella', () => {
+  const r = {
+    x0: 0, y0: 0, x1: 10, y1: 10,
+  };
+  assert.equal(laatikonEtaisyys({ x: 5, y: 5 }, r), 0);
+  assert.equal(laatikonEtaisyys({ x: 13, y: 5 }, r), 3);
+  assert.equal(laatikonEtaisyys({ x: -3, y: -4 }, r), 5);
+});
+
+test('lauta kysyy nimien osumat ja tekee niistä kaupungin napautuksen', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /for \(const n of nimet\.osumat\(\)\) \{/);
+  assert.match(lauta, /lisaa\(n, n\.laatikko, \{ laji: 'kaupunki', lat: n\.lat, lng: n\.lng, k \}\);/);
+  // Sama käsittelijä kuin pisteellä: voittaja.laji === 'kaupunki'.
+  assert.match(lauta, /if \(voittaja\.laji === 'kaupunki'\) napautaKaupunki\(voittaja\.k\);/);
+  // Nimen laatikko lasketaan napautuksen hetken ruutupisteestä.
+  const nimet = lue('../js/pallolauta/nimet.js');
+  assert.match(nimet, /osuma: suhde \? \(p\) => \(\{/);
+  assert.match(nimet, /osumat: \(\) => osumat,/);
+});

@@ -52,23 +52,34 @@ const reitti = teeReitti(reitinPisteet(packById('maailmankartta')));
 const hetket = saapumisenHetket(reitti);
 
 /*
- * PARIISI ON AINOA REITIN KAUPUNKI ILMAN KUVAA (päätoimittajan
- * tarkennus 6.9.2026 aamu: väliaikaista sijaista ei panna). Kun
- * kuvaputki toimittaa Pariisin kuvan, tämä lista tyhjenee — ja jos
- * jokin MUU kaupunki putoaa kuvattomaksi, testi kaatuu.
+ * JOKAISELLA REITIN KAUPUNGILLA ON KUVA (kuvatoimitus 9.9.2026:
+ * Pariisi ja Kalkutta saivat omat kuvansa). Lista oli aiemmin
+ * ['pariisi'] — päätoimittajan tarkennus 6.9.2026 kielsi väliaikaisen
+ * sijaisen — ja se on nyt tyhjä: jos jokin kaupunki putoaa
+ * kuvattomaksi, testi kaatuu.
  */
-const KUVATTOMAT = ['pariisi'];
+const KUVATTOMAT = [];
 
-test('jokaisella reitin kaupungilla on kuva (Pariisi kirjattu poikkeus)', () => {
+test('jokaisella reitin kaupungilla on kuva', () => {
   const kartta = reitinKuvat(ETUSIVUN_ISOISAKUVAT);
   const kaupungit = [...new Set(ETUSIVUN_REITTI)];
   const ilman = kaupungit.filter((id) => !kartta.has(id));
   assert.deepEqual(ilman, KUVATTOMAT,
     'reitin kaupunki jäi ilman kuvaa (tai kirjattu poikkeus sai kuvan) — '
     + 'päivitä pakan kaupunki-kentät ja tämän testin KUVATTOMAT');
-  // Kalkutta sai Benares-kuvan (päätoimittaja 6.9.2026), kuvateksti ennallaan.
-  assert.equal(kartta.get('kolkata').tunnus, 'isoisa-benares-ghat-more-r20260905-v2');
-  assert.equal(kartta.get('kolkata').kuvateksti, 'Isoisän ottama kuva, Benares, 1873');
+  /*
+   * KALKUTTA JA PARIISI OVAT OMIA KUVIAAN (kuvatoimitus 9.9.2026).
+   * Benares paikkasi Kalkutan jaksoa 6.9.–9.9.2026, mutta Varanasi ei
+   * ole Kalkutta: se on palannut varantoon eikä saa enää olla reitillä.
+   */
+  assert.equal(kartta.get('kolkata').tunnus, 'isoisa-kolkata-route-r20260907-v1');
+  assert.equal(kartta.get('kolkata').kuvateksti, 'Isoisä, Kalkutta, 1873');
+  assert.equal(kartta.get('pariisi').tunnus, 'isoisa-pariisi-route-r20260907-v1');
+  assert.equal(kartta.get('pariisi').kuvateksti, 'Isoisä, Pariisi, 1873');
+  const benares = ETUSIVUN_ISOISAKUVAT.find((k) => k.tunnus === 'isoisa-benares-ghat-more-r20260905-v2');
+  assert.equal(benares.kaupunki, null, 'Benares on varannossa, ei Kalkutan jaksolla');
+  assert.equal(benares.pieni, undefined, 'pienennetty vedos on vain reitin kaupungeille');
+  assert.equal(benares.kuvateksti, 'Isoisän ottama kuva, Benares, 1873');
   // Yksi kaupunki, yksi kuva: pakan ensimmäinen osuma voittaa.
   const laskuri = new Map();
   for (const k of ETUSIVUN_ISOISAKUVAT) {
@@ -148,8 +159,12 @@ test('kuva nousee juuri käännöksessä ja saa kaupunkinsa koordinaatit', () =>
     assert.ok(hetket[i].aika > hetket[i - 1].aika, 'käännökset eivät ole aikajärjestyksessä');
   }
   assert.ok(hetket[hetket.length - 1].aika <= reitti.kesto, 'käännös kierroksen ulkopuolella');
-  // Pariisi ei tuo kuvaa (eikä tyhjää elementtiä).
-  assert.ok(!hetket.some((h) => h.id === 'pariisi'), 'kuvattomalle kaupungille syntyi kuvahetki');
+  // Kuvaton kaupunki ei tuo tyhjää elementtiä (nyt lista on tyhjä).
+  for (const id of KUVATTOMAT) {
+    assert.ok(!hetket.some((h) => h.id === id), `kuvattomalle kaupungille ${id} syntyi kuvahetki`);
+  }
+  // Pariisi sai oman kuvansa 9.9.2026: sen käännöksellä on kuvahetki.
+  assert.ok(hetket.some((h) => h.id === 'pariisi'), 'Pariisin käännös jäi ilman kuvahetkeä');
 });
 
 /*

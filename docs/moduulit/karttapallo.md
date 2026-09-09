@@ -1219,10 +1219,12 @@ sanatarkasti:
   `assets/etusivu/reitti/<kaupunkitunnus>.jpg`, 320 px pisimmältä
   sivulta, laatu 0,8, 9–13 kt. Lähde (ämpärin iso vedos) ja kuvateksti
   ovat pakan tietueessa; sw.js:n SHELL esilataa tiedostot.
-- **Kaupunkien kattavuus:** yhdeksän kymmenestä. Kalkutan jaksolla on
-  Benares-kuva ja PARIISI ON ILMAN KUVAA, kunnes kuvaputki toimittaa
-  omat kuvansa — väliaikaista sijaista ei panna. Vartiot:
-  tests/etusivun-reittikuvat.test.mjs. Kaapattu Chromiumilla 1280×800 ja
+- **Kaupunkien kattavuus:** kymmenen kymmenestä (kuvatoimitus
+  9.9.2026). Pariisi oli 6.9. alkaen ainoa kuvaton kaupunki —
+  väliaikaista sijaista ei pantu — ja Kalkutan jaksoa paikkasi Benares;
+  molemmat saivat nyt oman kuvansa, ja Benares palasi varantoon
+  (`kaupunki: null`) omalla kuvatekstillään, koska Varanasi ei ole
+  Kalkutta. Vartiot: tests/etusivun-reittikuvat.test.mjs. Kaapattu Chromiumilla 1280×800 ja
   390×844 (Kairon ja Bombayn käännökset, sama kuva 1,5 s myöhemmin ja
   häipymässä).
 
@@ -4762,3 +4764,108 @@ katsesäteellä, projektio osuu pinnan pisteeseen, ennen/jälkeen-laskenta
 samalla kameralla) ja selainsavuke
 `tools/savukkeet/savuke-pallo-merkit-lukossa.mjs` vartio 3b (levyn oma
 ruutupaikka on pinnan pisteessä ±1 px myös ruudun laidalla).
+
+## 21. Lähizoomin kaupunkipisteet ja nimi osumapintana (9.9.2026)
+
+**Omistaja, sanatarkasti** (työpöytäkaappaus Euroopan lähizoomista,
+jossa näkyvät pelikaupungit isoilla kapiteelinimillä — WIEN, BUDAPEST,
+VENETSIA, SARAJEVO, SOFIA, BUKAREST, ISTANBUL — ja niiden ympärillä
+fokuskohteiden pienet pisteet kursiivinimineen): *"kohdekaupunkien
+pisteet saisivat puolestaan tässä zoom tasossa olla isommalla, nyt
+niitä ei erota muista palloista. lisäksi kaupungin nimi saisi olla myös
+klikattavaa aluetta"*.
+
+### 21.1 Mikä zoomi on "lähizoomi": kameran mittakaava, ei lehden osuus
+
+Luvun 19.4 lattian portti on `nostot.lehdenOsuus` — maan lehden leveys
+näkymästä. Se ei kerro zoomia lainkaan: Ukrainan levyinen lehti täyttää
+puolet ruudusta jo koko Euroopan zoomilla, ja juuri siksi 8.9. jokainen
+piste oli 17,2 px liian kaukaa katsottuna. Sama portti tekisi saman
+virheen uudestaan, joten lähizoomin mitta on **kameran oma mittakaava**
+`kamera.nakyvaAlue().skaala` (ruudun pikseliä yhtä lautayksikköä
+kohden).
+
+Mitattu Chromiumilla (1419 × 821 css, kotelo 1398 × 742, dpr 1, Fogg
+Wienissä, näkymä Venetsia–Istanbul kuten omistajan kaappauksessa):
+
+| korkeus | skaala | `lehdenOsuus` | näkymä |
+| --- | --- | --- | --- |
+| 0,60 | 0,69 | 0,22 | Eurooppa ja Pohjois-Afrikka |
+| 0,42 | 0,99 | 0,32 | koko Eurooppa (8.9. *"liian isoja"*) |
+| 0,30 | 1,39 | 0,45 | Alpit–Musta meri |
+| 0,22 | 1,89 | 0,61 | **omistajan 9.9. näkymä** |
+| 0,16 | 2,60 | 0,84 | Balkan |
+
+Liuku alkaa 8.9. näkymän yläpuolelta (`LAHIZOOMIN_SKAALA_ALKU` 1,2) ja
+on täydessä mitassaan omistajan näkymässä (`…_TAYSI` 1,8). Se on yksi
+jatkuva funktio (`lahizoominOsuus`), joten piste kasvaa pehmeästi eikä
+hyppää missään kohdassa — ja 8.9. sääntö säilyy tavulleen.
+
+**Tavoitekoko on kaksi kohdepistettä:**
+`LAHIZOOMIN_PISTE_SUHDE` × `KOHDEMERKIN_RUUTU_PX` = 2 × 11,44 =
+**22,87 px**. Nappula on 32 px, joten piste jää yhä sen alle.
+Pelaajan kaupungin lattia (luku 19.4) on ennallaan: pelaajan piste on
+näiden kahden suurempi eikä siis pienene mistään.
+
+### 21.2 Mitattu ennen ja jälkeen (pisteen halkaisija ruudulla)
+
+Halkaisija laskettu olion skaalasta ja kameran etäisyydestä
+(`2 · scale.x · f / etäisyys`, `f = korkeusPx / (2 tan(fov/2))`).
+`muut` on suurin muu kuin pelaajan kaupunki (ruudun keskellä; pallon
+reunalla perspektiivi syö osan), `oma` on Wien.
+
+| korkeus | skaala | ENNEN muut | JÄLKEEN muut | ENNEN oma | JÄLKEEN oma |
+| --- | --- | --- | --- | --- | --- |
+| 0,60 | 0,69 | 6,98 px | 6,98 px | 6,87 px | 6,87 px |
+| 0,42 | 0,99 | 6,97 px | 6,97 px | 6,78 px | 6,78 px |
+| 0,30 | 1,39 | 6,95 px | 11,90 px | 6,61 px | 11,33 px |
+| 0,22 | 1,89 | 6,88 px | **22,49 px** | 10,38 px | 20,79 px |
+| 0,16 | 2,60 | 6,84 px | 22,35 px | 14,63 px | 19,50 px |
+| 0,12 | 3,47 | 6,74 px | 22,01 px | 13,39 px | 17,85 px |
+
+Omistajan näkymässä (0,22) piste on siis **1,97 × kohdemerkki**
+(11,44 px), kun se ennen oli 0,60 × kohdemerkki. Kaukonäkymät (0,60 ja
+0,42) eivät muuttuneet pikseliäkään. Värit (käymätön seepia, käyty ja
+alku kulta, luentakuvallisten sininen v1709) ovat ennallaan.
+
+Kaappaukset: `/tmp/matkakirja-kaappaukset/pallopisteet-lahizoom-ennen.png`
+ja `…-jalkeen.png` (sama näkymä, korkeus 0,22).
+
+### 21.3 Nimi on osa osumapintaa
+
+Kaupungin nimi on ladottu piirtomerkki täsmälleen kuten noston
+nimilappu (luku 18.1), vain eri kerroksessa (`js/pallolauta/nimet.js`,
+CSS2D-solmu, `pointer-events: none`). Ennen osuma oli 44 px kaupungin
+**pisteestä**, joten pitkän nimen ulkopää jäi ulottumattomiin: mitattu
+samasta näkymästä, että pisin nimi (KAPPADOKIA) on musteeltaan 79,8 px
+leveä ja sen ulkopää **94,3 px** pisteestä.
+
+Korjaus: nimen laatikko tulee **samaan vertailuun** noston nimilapun
+kanssa (`musteenVoittaja`): etäisyys laatikkoon (musteen päällä 0),
+`LAPUN_KOSKETUSVARA_PX`, pienin voittaa ja tasapelissä lähin
+keskipiste. Laatikko talletetaan **pisteen suhteen** (`nimet.js`
+`osuma(p)`), koska ladonta ajetaan vain levossa mutta nimi seuraa
+pistettään CSS2D:n mukana — sama ratkaisu kuin nostojen `lappu(p)`.
+Voittaja on `{ laji: 'kaupunki', k }`, eli täsmälleen sama tietue kuin
+pisteen napautuksesta, ja teon tekee sama `napautaKaupunki`.
+
+Fokuskohteiden nimet eivät vuoda kaupunkeihin: kohteen lappu on oma
+ehdokkaansa ja voittaa oman musteensa päällä, eivätkä laatikot mene
+päällekkäin (sovittelu pitää kaupungin nimen kiinteänä esteenä).
+
+**Mitattu jälkeen** (aidot hiiren klikkaukset, kamera-ajot kirjattu):
+
+| napautus | ENNEN | JÄLKEEN |
+| --- | --- | --- |
+| Sofian piste | ei ajoa | ajo laudan kohtaan 6611, 1696 |
+| Sofian nimi (26,6 px pisteestä) | ei ajoa | **sama ajo** 6611, 1696 |
+| Kappadokian nimen ulkopää (94,3 px) | ei ajoa | ajo 7001, 1867 (sama kaupunki) |
+
+Sivutuote: kaupunkipisteen oma muste voittaa lapun (luku 18.1) nyt
+pisteen **todellisella** ruutuhalkaisijalla eikä kiinteällä 7 px:llä,
+joten lähizoomissa myös pisteen napautus osuu luotettavammin.
+
+**Vartijat:** `tests/kohdekaupunki.test.mjs` osio 5b (lähizoomin koko,
+liu'un jatkuvuus, kaukonäkymän muuttumattomuus) ja
+`tests/pallonimet.test.mjs` osio 7 (nimen napautus antaa saman
+kaupungin, fokuskohteen lappu ei osu kaupunkiin, kytkennät).

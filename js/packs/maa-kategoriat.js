@@ -173,6 +173,7 @@ export const MAA_KATEGORIAT = {
             + 'jättimäisenä kalenterina. Rakentamiseen meni yli tuhat vuotta '
             + 'ja monta sukupolvea: ne jotka aloittivat, eivät nähneet sitä '
             + 'valmiina.',
+          lyhyt: 'Salisbury Plainin kivikehä rakennettiin vaiheittain noin 3100–1600 eaa.',
           selite: 'Salisbury Plainin kivikehä rakennettiin useassa vaiheessa '
             + 'noin 3100–1600 eaa., ja suuret sarsenkivet pystytettiin '
             + '2600–2400 eaa.',
@@ -193,6 +194,7 @@ export const MAA_KATEGORIAT = {
             + 'kaivettiin taidemuseon perustuksia. Muurit, puinen '
             + 'vedenpoistokouru ja areenan hiekkapohja ovat nyt esillä museon '
             + 'kellarissa noin kuusi metriä kadun pinnan alapuolella.',
+          lyhyt: 'Roomalaisen Londiniumin amfiteatterin rauniot Guildhall Yardin alla löytyivät vuonna 1988.',
           selite: 'Roomalaisen Londiniumin amfiteatteri sijaitsi Guildhall '
             + 'Yardin alla, ja sen vuonna 1988 löytyneet rauniot ovat esillä '
             + 'Guildhall Art Galleryn kellarissa.',
@@ -212,6 +214,7 @@ export const MAA_KATEGORIAT = {
             + 'Juhana yritti mitätöidä sopimuksen heti, mutta ajatus jäi '
             + 'elämään — ja siitä kasvoi vähitellen ajatus siitä, että '
             + 'vallalla on rajat.',
+          lyhyt: 'Magna Carta sinetöitiin Runnymedessä 15. kesäkuuta 1215; siitä säilyy neljä alkuperäistä kappaletta.',
           selite: 'Runnymedessä 15. kesäkuuta 1215 sinetöidystä Magna '
             + 'Cartasta on säilynyt neljä alkuperäistä kappaletta.',
           lahde: 'Tuntematon kirjuri, Wikimedia Commons (PD)',
@@ -230,6 +233,7 @@ export const MAA_KATEGORIAT = {
             + 'Jälkeenpäin kaupunki määrättiin rakennettavaksi tiilestä ja '
             + 'kivestä, ja kadut levennettiin — palo kirjoitti Lontoon '
             + 'uusiksi.',
+          lyhyt: 'Maalaus vuodelta 1675 kuvaa syyskuun 1666 suurpaloa, joka tuhosi vanhan roomalaisen kaupunginmuurin.',
           selite: 'Tuntemattoman taiteilijan maalaus noin vuodelta 1675 '
             + 'esittää syyskuun 1666 suurpaloa, joka tuhosi keskiaikaisen '
             + 'Cityn vanhan roomalaisen kaupunginmuurin sisäpuolelta.',
@@ -249,6 +253,7 @@ export const MAA_KATEGORIAT = {
             + 'kattilassa, jonka läpi kulki 25 kuparista putkea — mitä '
             + 'enemmän pintaa, sitä nopeammin vesi kiehui. Kaikki '
             + 'höyryveturit rakennettiin sen jälkeen samalla periaatteella.',
+          lyhyt: 'Robert Stephensonin Rocket voitti 1829 Rainhillin kilpailun ja siitä tuli höyryveturien esikuva.',
           selite: 'Robert Stephensonin vuonna 1829 rakentama Rocket voitti '
             + 'Rainhillin kilpailun ja siitä tuli höyryveturien esikuva.',
           lahde: 'Malcolmxl5, Wikimedia Commons (CC0)',
@@ -268,6 +273,7 @@ export const MAA_KATEGORIAT = {
             + 'yhdeksän hehtaaria eli 22 eekkeriä Thamesia muuttui kaduksi. '
             + 'Victoria Embankmentin leveä rantakatu on siis viemärin katto — '
             + 'ja saman penkereen sisällä kulkee myös metro.',
+          lyhyt: 'Piirros vuodelta 1867 esittää Thamesin pengertä, jonka sisään rakennettiin viemäri ja rautatie.',
           selite: 'Vuoden 1867 poikkileikkauspiirros Thamesin penkereestä, '
             + 'joka rakennettiin osana Joseph Bazalgetten viemärihanketta '
             + '1859–1875 ja jonka sisään sijoitettiin kokoojaviemäri, katu '
@@ -284,6 +290,7 @@ export const MAA_KATEGORIAT = {
             + 'johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä '
             + 'vuonna tehtiin 9,5 miljoonaa matkaa. Nyt asemia on 272 ja '
             + 'rataa 400 kilometriä.',
+          lyhyt: 'Metropolitan Railway avattiin 1863 maailman ensimmäisenä matkustajametrona.',
           selite: 'Metropolitan Railway avattiin yleisölle 10. tammikuuta '
             + '1863 maailman ensimmäisenä matkustajametrona, ja sen '
             + 'kaasuvalaistuja puuvaunuja vetivät höyryveturit.',
@@ -305,6 +312,7 @@ export const MAA_KATEGORIAT = {
             + 'avattiin 1971. Nyt ikkuna-aukoista työntyy puita ja '
             + 'köynnöksiä, ja entisen keskilaivan kohdalla lorisee matala '
             + 'suihkulähde.',
+          lyhyt: 'Kirkko tuhoutui toisessa maailmansodassa, ja Lontoon City teki raunioista julkisen puutarhan.',
           selite: 'Kirkko tuhoutui suurelta osin toisessa maailmansodassa, '
             + 'ja Lontoon Cityn hallinto teki raunioista julkisen puutarhan.',
           lahde: 'Peter Trimming, Wikimedia Commons (CC BY-SA 2.0)',
@@ -345,6 +353,7 @@ export const MAA_KATEGORIAT = {
             + 'kahdeksan lehden sarjansa perintönsä tuhlaavasta nuoresta '
             + 'miehestä, ja jokaisen lehden alle painettiin rivi "Publish\'d '
             + 'according to Act of Parliament".',
+          lyhyt: 'Hogarthin kahdeksan maalauksen sarja kaiverrettiin 1734 ja julkaistiin 1735.',
           selite: 'Hogarthin kahdeksan maalauksen sarja kaiverrettiin 1734 '
             + 'ja julkaistiin painoksena 1735, samana vuonna kun hänen '
             + 'ajamansa kaiverruslaki alkoi suojata tekijöitä kopioinnilta.',
@@ -365,6 +374,7 @@ export const MAA_KATEGORIAT = {
             + 'toivoi valmiiden töidensä pysyvän yhdessä. Toive ei aivan '
             + 'toteutunut, mutta hänen töitään katsellaan yhä ilman '
             + 'pääsymaksua Tate Britainissa ja National Galleryssä.',
+          lyhyt: 'Turnerin 1838 maalaus Temerairen hinauksesta äänestettiin 2005 suosikkimaalaukseksi.',
           selite: 'Turnerin vuonna 1838 maalaama teos kuvaa Trafalgarin '
             + 'taistelussa palvellutta 98-tykkistä Temerairea hinattavana '
             + 'purettavaksi, ja se äänestettiin 2005 britannialaisten '
@@ -385,6 +395,7 @@ export const MAA_KATEGORIAT = {
             + 'tavoin, joten pieneen huoneeseen mahtuu kolminkertainen määrä '
             + 'tauluja. Sisään pääsee yhä ilmaiseksi, mutta vain '
             + 'yhdeksänkymmentä ihmistä kerrallaan.',
+          lyhyt: 'John Soanen koti muuttui museoksi erillislailla 1833, joka astui voimaan hänen kuoltuaan 1837.',
           selite: 'Uusklassisen arkkitehdin John Soanen koti muuttui '
             + 'museoksi vuoden 1833 erillislain nojalla, joka astui voimaan '
             + 'hänen kuoltuaan 1837.',
@@ -404,6 +415,7 @@ export const MAA_KATEGORIAT = {
             + 'pronssilaattaan. Kivi pystytettiin paikalleen vasta syyskuussa '
             + '1878, ja kun viereen putosi pommi vuonna 1917, sirpaleiden '
             + 'jäljet jätettiin tahallaan korjaamatta.',
+          lyhyt: 'Faarao Thutmosis III:n Heliopolikseen teettämä obeliski pystytettiin Lontooseen vuonna 1878.',
           selite: 'Obeliskin teetti faarao Thutmosis III Heliopolikseen eikä '
             + 'sillä ole yhteyttä Kleopatraan; Lontooseen se pystytettiin '
             + 'vuonna 1878.',
@@ -423,6 +435,7 @@ export const MAA_KATEGORIAT = {
             + 'latoi nurmikolle 1 802 lasikuitulaatikkoa, jotka aukeavat '
             + 'suorasta seinästä kaartuvaksi tilaksi. Sisällä oli kahvila, '
             + 'iltaisin esityksiä, eikä pääsy maksanut mitään.',
+          lyhyt: 'Serpentine-galleria tilaa kesäisin väliaikaisen paviljongin; 2016 sen suunnitteli Bjarke Ingels.',
           selite: 'Kensington Gardensin Serpentine-galleria tilaa kesäksi '
             + 'arkkitehdilta väliaikaisen paviljongin, ja vuoden 2016 työn '
             + 'suunnitteli Bjarke Ingels Group.',
@@ -443,6 +456,7 @@ export const MAA_KATEGORIAT = {
             + 'viikossa maalauksen eteen kertyi satoja saapaspareja ja '
             + 'galleriaan yli 15 000 kävijää. Talo näyttää yhä nykytaidetta, '
             + 'ja sisään pääsee ilmaiseksi.',
+          lyhyt: 'Charles Harrison Townsendin galleria avattiin 1901 ja laajeni 2009 viereiseen kirjastoon.',
           selite: 'Charles Harrison Townsendin suunnittelema galleria '
             + 'avattiin 1901 yhtenä Lontoon ensimmäisistä '
             + 'julkisrahoitteisista näyttelygallerioista, ja 2009 se laajeni '
@@ -483,6 +497,7 @@ export const MAA_KATEGORIAT = {
             + 'näytelmän tykinlaukaus sytytti olkikaton. Nykyinen Globe on '
             + '1997 valmistunut jäljennös muutaman sadan metrin päässä '
             + 'alkuperäisestä.',
+          lyhyt: 'Nykyinen Globe valmistui 1997 rekonstruktiona Shakespearen vuoden 1599 teatterista.',
           selite: 'Nykyinen Globe valmistui 1997 rekonstruktiona vuoden 1599 '
             + 'teatterista, jolle Shakespeare kirjoitti näytelmänsä.',
           lahde: 'Amy Truter, Wikimedia Commons (CC BY 2.0)',
@@ -501,6 +516,7 @@ export const MAA_KATEGORIAT = {
             + 'paperiliuskoille. Talon edustalla istuu nykyään pronssinen '
             + 'kissa: Johnsonin Hodge, jolle isäntä kävi itse ostamassa '
             + 'ostereita, jottei palvelusväki suuttuisi elukalle.',
+          lyhyt: 'Gough Squaren talo on Samuel Johnsonin kirjailijakotimuseo; patsas esittää hänen kissaansa Hodgea.',
           selite: 'Gough Squaren talo on Samuel Johnsonin entinen koti ja '
             + 'nykyään kirjailijakotimuseo, ja patsas esittää hänen '
             + 'kissaansa Hodgea, joka tunnetaan Boswellin vuoden 1791 '
@@ -538,6 +554,7 @@ export const MAA_KATEGORIAT = {
             + 'niin tunnettuja, että moni näkee Liisan yhä juuri sellaisena. '
             + 'Hullun hatuntekijän hattuun kirjoitettu "10/6" on hinta: '
             + 'kymmenen shillinkiä ja kuusi penceä.',
+          lyhyt: 'John Tenniel piirsi 42 puukaiverrusta Lewis Carrollin 1865 kirjaan; tämä on värillinen 1890 laitos.',
           selite: 'John Tenniel piirsi 42 puukaiverrusta Lewis Carrollin '
             + 'vuoden 1865 kirjaan, ja tämä väritetty laitos on vuoden 1890 '
             + 'Nursery Alicesta.',
@@ -558,6 +575,7 @@ export const MAA_KATEGORIAT = {
             + 'vastata niihin, ja tätä työtä riitti vuodesta 1932 aina '
             + 'vuoteen 2002. Vakiovastaus kuului, että etsivä on jäänyt '
             + 'eläkkeelle ja hoitaa nyt mehiläisiä Sussexissa.',
+          lyhyt: 'Vuonna 1990 avattu museo saa käyttää osoitetta 221b talon sijaitessa numeroiden 237 ja 241 välissä.',
           selite: 'Vuonna 1990 avattu museo saa Westminsterin luvalla '
             + 'käyttää osoitetta 221b, vaikka sen georgiaaninen talo '
             + 'sijaitsee numeroiden 237 ja 241 välissä.',
@@ -577,6 +595,7 @@ export const MAA_KATEGORIAT = {
             + 'Michael Llewelyn Daviesia, jonka valokuvat Barrie oli hänelle '
             + 'antanut, ja kirjailija jäi pettyneeksi: hänen mielestään '
             + 'patsaasta puuttui Peterin pirullinen puoli.',
+          lyhyt: 'Pronssiveistos pystytettiin 1912 kohtaan, johon Peter Pan Barrien 1902 kirjassa laskeutuu.',
           selite: 'George Framptonin pronssiveistos pystytettiin 1912 J. M. '
             + 'Barrien tilauksesta siihen kohtaan, johon Peter Pan hänen '
             + 'vuoden 1902 kirjassaan laskeutuu.',
@@ -595,6 +614,7 @@ export const MAA_KATEGORIAT = {
             + 'after this bear. Thank you", ja esikuvana olivat sota-ajan '
             + 'uutisfilmit, joissa lontoolaislapsia lähetettiin maaseudulle '
             + 'turvaan nimilappu kaulassa ja pieni matkalaukku kädessä.',
+          lyhyt: 'Patsas Paddingtonin asemalla esittää karhua, joka ilmestyi ensi kerran kirjassa vuonna 1958.',
           selite: 'Marcus Cornishin patsas Paddingtonin asemalla esittää '
             + 'Michael Bondin karhua, joka ilmestyi ensi kerran kirjassa A '
             + 'Bear Called Paddington 13. lokakuuta 1958.',
@@ -612,6 +632,7 @@ export const MAA_KATEGORIAT = {
             + '1599, tapa oli syntynyt. Nyt saman eteläisen ristivarren '
             + 'lattia on täynnä kirjailijoiden muistolaattoja, joiden yli '
             + 'kävellään joka päivä.',
+          lyhyt: 'Westminster Abbeyn runoilijoiden nurkka sai alkunsa Geoffrey Chaucerin hautauksesta vuonna 1400.',
           selite: 'Westminster Abbeyn runoilijoiden nurkka sai alkunsa '
             + 'Geoffrey Chaucerin hautauksesta vuonna 1400, ja hänen '
             + 'nykyinen hautamonumenttinsa teetettiin 1556.',
@@ -669,6 +690,7 @@ export const MAA_KATEGORIAT = {
             + 'sinfoniansa päässään, ilman soitinta. Se kantaesitettiin 21. '
             + 'helmikuuta 1765 Haymarketin pienessä teatterissa, ja poika '
             + 'johti esitystä itse.',
+          lyhyt: 'Belgravian talossa kahdeksanvuotias Mozart sävelsi Lontoossa ensimmäisen sinfoniansa vuonna 1764.',
           selite: 'Belgravian Ebury Streetin talo muistetaan Mozarteista, '
             + 'sillä kahdeksanvuotias Wolfgang Amadeus sävelsi Lontoossa '
             + 'vuonna 1764 ensimmäisen sinfoniansa.',
@@ -687,6 +709,7 @@ export const MAA_KATEGORIAT = {
             + 'kolmekymmentä vuotta. Täysi peal on vähintään viisituhatta '
             + 'vaihdosta ja kestää noin kolme tuntia, kaikki ulkomuistista '
             + 'ilman nuotteja.',
+          lyhyt: 'Cheapsiden kirkko rakennettiin suurpalon jälkeen uudelleen Christopher Wrenin piirustusten mukaan.',
           selite: 'Cheapsiden kirkko perustettiin 1080 ja rakennettiin '
             + 'suurpalon jälkeen uudelleen Christopher Wrenin piirustusten '
             + 'mukaan, ja juuri sen kellojen kuuluvilla syntynyttä on '
@@ -706,6 +729,7 @@ export const MAA_KATEGORIAT = {
             + 'sama sävelmä soi käytännössä joka koulun ja yliopiston '
             + 'päättäjäisissä — tapa alkoi Yalessa 1905, kun Elgar itse oli '
             + 'paikalla vastaanottamassa kunniatohtorin arvoa.',
+          lyhyt: 'Elgar vuonna 1905, jolloin hänen marssistaan tuli amerikkalaisten päättäjäisten vakiosävelmä.',
           selite: 'Elgar vuonna 1905, samana vuonna kun hänen marssistaan tuli '
             + 'amerikkalaisten päättäjäisten vakiosävelmä.',
           lahde: 'Arthur Elson, Wikimedia Commons (PD)',
@@ -724,6 +748,7 @@ export const MAA_KATEGORIAT = {
             + 'the drunken sailor on niin sanottu stamp-and-go -laulu, jota '
             + 'laulettiin marssien kannen poikki köysi kädessä. Höyrykoneen '
             + 'myötä työlaulut kävivät tarpeettomiksi, mutta laulut jäivät.',
+          lyhyt: 'Vuonna 1869 rakennettu Cutty Sark oli viimeisiä ja nopeimpia teeklippereitä.',
           selite: 'Vuonna 1869 Dumbartonissa rakennettu Cutty Sark oli '
             + 'viimeisiä ja nopeimpia teeklippereitä, ja sen nimi tulee '
             + 'Robert Burnsin runon noidasta.',
@@ -739,6 +764,7 @@ export const MAA_KATEGORIAT = {
             + 'mutta halvimmat liput ovat lattialle: prommaajat seisovat '
             + 'orkesterin edessä koko illan. Jokainen konsertti lähetetään '
             + 'radiossa, joten sen kuulee ilmaiseksi missä tahansa.',
+          lyhyt: 'Robert Newman perusti Promsin 1895; BBC on järjestänyt konserttisarjaa vuodesta 1927.',
           selite: 'Robert Newman perusti Promsin 1895, ja BBC on järjestänyt '
             + 'kahdeksan viikon konserttisarjan vuodesta 1927.',
           lahde: 'Ed g2s, Wikimedia Commons (CC BY-SA 4.0)',
@@ -782,6 +808,7 @@ export const MAA_KATEGORIAT = {
             + 'täyttävää. Toisessa maailmansodassa fish and chips oli yksi '
             + 'harvoista ruoista, joita ei säännöstelty: hallitus katsoi sen '
             + 'pitävän mielialaa yllä.',
+          lyhyt: 'Fish and chips syntyi Englannissa 1800-luvulla, ja 1910 maassa oli jo yli 25 000 kalapuotia.',
           selite: 'Fish and chips syntyi Englannissa 1800-luvulla, ja '
             + 'vuoteen 1910 mennessä maassa oli jo yli 25 000 kalapuotia.',
           lahde: 'LearningLark, Wikimedia Commons (CC BY 2.0)',
@@ -798,6 +825,7 @@ export const MAA_KATEGORIAT = {
             + 'sitä mitä Sandwich syö. Nimi jäi. Jaarli oli myös laivaston '
             + 'johtaja, ja kapteeni Cook nimesi hänen mukaansa Havaijin '
             + 'saaret, jotka tunnettiin pitkään Sandwichsaarina.',
+          lyhyt: 'Johann Zoffanyn muotokuva John Montagusta, Sandwichin jaarlista, jonka sanotaan keksineen voileivän.',
           selite: 'Johann Zoffanyn muotokuva John Montagusta, Sandwichin '
             + 'neljännestä jaarlista (1718–1792), jonka sanotaan keksineen '
             + 'voileivän.',
@@ -816,6 +844,7 @@ export const MAA_KATEGORIAT = {
             + 'lihaa. Kuninkaallinen kemian seura julisti vuonna 2008, ettei '
             + 'alle neljän tuuman eli noin kymmenen sentin korkuinen kohokas '
             + 'enää ansaitse vanukkaan nimeä.',
+          lyhyt: 'Yorkshirenvanukas paistetaan kananmunasta, jauhoista ja maidosta sunnuntaipaistin lisukkeeksi.',
           selite: 'Yorkshirenvanukas paistetaan kananmunasta, jauhoista ja '
             + 'maidosta, ja se tarjotaan sunnuntaipaistin osana tai omana '
             + 'alkuruokanaan sipulikastikkeen kera.',
@@ -834,6 +863,7 @@ export const MAA_KATEGORIAT = {
             + 'eli high tea ei siis ole hienompi vaan päinvastoin: se on '
             + 'työväen kunnon iltaruoka, joka syötiin viiden ja seitsemän '
             + 'välillä korkean ruokapöydän ääressä.',
+          lyhyt: 'Sveitsiläinen César Ritz avasi Piccadillyn Ritzin 1906; iltapäivätee on yhä talon perinteitä.',
           selite: 'Sveitsiläinen hotellinpitäjä César Ritz avasi Piccadillyn '
             + 'Ritzin vuonna 1906, ja iltapäivätee on yhä talon tunnetuimpia '
             + 'perinteitä.',
@@ -852,6 +882,7 @@ export const MAA_KATEGORIAT = {
             + 'Westminsterissä 500–600. Edward Lloyd avasi omansa 1686, ja '
             + 'siellä vaihdetuista laivauutisista kasvoi vakuutustalo '
             + 'Lloyd\'s.',
+          lyhyt: 'Lloyd\'sin kahvihuoneesta kasvoivat sekä Lloyd\'s of London että laivalehti Lloyd\'s List.',
           selite: 'Kahvihuoneet olivat 1600- ja 1700-luvun Lontoon uutis- ja '
             + 'kauppapaikkoja, ja Lloyd\'sin kahvihuoneesta kasvoivat sekä '
             + 'Lloyd\'s of London että laivalehti Lloyd\'s List.',
@@ -870,6 +901,7 @@ export const MAA_KATEGORIAT = {
             + 'maataan, joten radalle annettiin vain vuokraoikeus sillan '
             + 'verran ja kauppa jatkui sen alla. Nyt junat jyrisevät ostajien '
             + 'pään päällä. Maanantaisin tori on kiinni.',
+          lyhyt: 'Southwarkin Borough Market on Lontoon vanhimpia ruokatoreja; kauppaa on käyty 1100-luvulta.',
           selite: 'Southwarkin Borough Market on Lontoon vanhimpia '
             + 'ruokatoreja: paikalla on käyty kauppaa ainakin 1100-luvulta, '
             + 'ja nykyiset hallit ovat 1850-luvulta.',
@@ -883,6 +915,7 @@ export const MAA_KATEGORIAT = {
             + 'persiljakastike — nimestä huolimatta siinä ei ole tippaakaan '
             + 'väkijuomaa. Ennen piirakat tehtiin ankeriaasta, sillä Thames '
             + 'oli niitä täynnä ja ne olivat halvinta lihaa mitä sai.',
+          lyhyt: 'Lontoon satamissa syntynyt pie and mash tarjoillaan jauhelihapiiraana, perunamuusina ja liquorina.',
           selite: 'Lontoon satamissa syntynyt pie and mash tarjoillaan '
             + 'jauhelihapiiraana, perunamuusina ja persiljakastikkeena eli '
             + 'liquorina, ja puoteja on ollut kaupungissa 1800-luvulta.',
@@ -901,6 +934,7 @@ export const MAA_KATEGORIAT = {
             + 'kaikki seisoisivat molemmin puolin. Portaisiin mahtui lähes '
             + 'kolmanneksen enemmän väkeä, mutta heti kun valvojat lähtivät, '
             + 'lontoolaiset palasivat entiseen.',
+          lyhyt: 'Lontoon metro avattiin 1863 maailman ensimmäisenä matkustajametrona.',
           selite: 'Lontoon metro avattiin 1863 maailman ensimmäisenä '
             + 'matkustajametrona, ja sen liukuportaissa seistään oikealla, '
             + 'jotta vasen puoli jää kiirehtijöille.',
@@ -946,6 +980,7 @@ export const MAA_KATEGORIAT = {
             + 'nuorille yhdeksäntoista joululuentosarjaa, ja sarja on '
             + 'järjestetty vuodesta 1825 lähtien joka vuosi, neljää '
             + 'maailmansodan vuotta lukuun ottamatta.',
+          lyhyt: 'Royal Institutionin kellarissa Michael Faraday teki sähkökokeensa.',
           selite: 'Vuonna 1799 perustetun Royal Institutionin kellarissa '
             + 'Michael Faraday teki sähkökokeensa, ja laboratorio koottiin '
             + 'uudelleen museoksi 1930-luvulla.',
@@ -963,6 +998,7 @@ export const MAA_KATEGORIAT = {
             + 'ainoan vesipumpun ympärille Broad Streetillä; pumpun kahva '
             + 'irrotettiin 8. syyskuuta, ja myöhemmin selvisi, että kaivon '
             + 'reunasta oli vajaa metri vuotavaan likakaivoon.',
+          lyhyt: 'John Snow\'n kartta vuoden 1854 koleraepidemiasta osoitti taudin leviävän saastuneesta vedestä.',
           selite: 'John Snow\'n kartta vuoden 1854 Broad Streetin '
             + 'koleraepidemiasta, joka tappoi 616 ihmistä ja jonka avulla '
             + 'Snow osoitti taudin leviävän saastuneesta vedestä eikä '
@@ -999,6 +1035,7 @@ export const MAA_KATEGORIAT = {
             + 'siitä kun se pysähtyy. Merkki annetaan yhdeltä eikä '
             + 'keskipäivällä siksi, että tähtitieteilijät olivat puolenpäivän '
             + 'aikaan itse kiinni auringon mittauksissa.',
+          lyhyt: 'Greenwichin observatorion nollameridiaani antoi nimen Greenwichin ajalle.',
           selite: 'Greenwichin observatorion aikapallo pudotettiin '
             + 'päivittäin, jotta laivojen merikronometrit voitiin tahdistaa '
             + 'tarkkaan aikaan; observatorion kautta kulkeva nollameridiaani '
@@ -1019,6 +1056,7 @@ export const MAA_KATEGORIAT = {
             + 'suunnittelema tulostin saatiin valmiiksi vasta 2002, ja koko '
             + 'laitteessa on noin 8 000 osaa ja painoa viisi tonnia — sähköä '
             + 'se ei tarvitse lainkaan.',
+          lyhyt: 'Charles Babbage suunnitteli erotuskoneensa 1820-luvulla; se valmistui vasta 1991.',
           selite: 'Charles Babbage suunnitteli erotuskoneensa 1820-luvulla '
             + 'taulukoimaan polynomifunktioita, ja Lontoon Science Museum '
             + 'rakensi Engine No. 2:n valmiiksi vasta 1991.',
@@ -1037,6 +1075,7 @@ export const MAA_KATEGORIAT = {
             + 'sanalla WETTER. Työn arvioidaan lyhentäneen sotaa vuosilla. '
             + 'Turing oli myös kuvannut jo 1936 ajatuksen yleiskäyttöisestä '
             + 'laskukoneesta — tietokoneen esi-isästä.',
+          lyhyt: 'Bletchley Parkissa toimi sodanaikainen koodinmurron keskus, jossa Alan Turing mursi Enigma-salausta.',
           selite: 'Bletchley Parkissa toimi toisen maailmansodan aikana '
             + 'liittoutuneiden koodinmurron pääkeskus, jossa Alan Turing oli '
             + 'purkamassa saksalaisten Enigma-salausta.',
@@ -1055,6 +1094,7 @@ export const MAA_KATEGORIAT = {
             + 'metriä pitkä, 221 luuta, 4,5 tonnia — nostettiin pääsalin '
             + 'kattoon syöksysukelluksen asentoon suu auki: se on maailman '
             + 'ainoa näin ripustettu sinivalaan luuranko.',
+          lyhyt: 'Hintze Hallin sinivalaan luuranko Hope on 25,2 metriä pitkä ja ajautui matalikolle Irlannissa 1891.',
           selite: 'Hintze Hallin sinivalaan luuranko Hope on 25,2 metriä '
             + 'pitkä ja koostuu 221 luusta; valas ajautui matalikolle '
             + 'Wexfordin edustalla Irlannissa vuonna 1891.',
@@ -1093,6 +1133,7 @@ export const MAA_KATEGORIAT = {
             + 'nauhasta, jota nukettaja pitää suussaan koko näytöksen ajan. '
             + 'Punchista on jäänyt englantiin sanontakin: pleased as Punch '
             + 'tarkoittaa hyvin tyytyväistä.',
+          lyhyt: 'Muistolaatan mukaan Punch ja Judy -nukketeatteri esitettiin Englannissa ensi kerran vuonna 1662.',
           selite: 'Muistolaatta kertoo, että Punch ja Judy -nukketeatteri '
             + 'esitettiin Englannissa ensi kerran vuonna 1662 ja Samuel '
             + 'Pepys näki esityksen.',
@@ -1112,6 +1153,7 @@ export const MAA_KATEGORIAT = {
             + 'muotokuvat riippuivat nälkäisten silmien edessä. Pilkka jäi '
             + 'elämään niin sitkeästi, että cartoon tarkoittaa englannissa '
             + 'yhä pilapiirrosta.',
+          lyhyt: 'Vuonna 1841 perustettu Punch-lehti vakiinnutti sanan cartoon pilapiirroksen merkityksessä.',
           selite: 'Vuonna 1841 perustettu Punch-lehti vakiinnutti sanan '
             + 'cartoon nykymerkityksessään pilapiirroksena, ja tämä '
             + 'heinäkuun 1843 sivu oli sarjan ensimmäinen.',
@@ -1131,6 +1173,7 @@ export const MAA_KATEGORIAT = {
             + 'toukokuuta 1941 kellot tuhoutuivat. Uudet kellot soivat vasta '
             + '21. joulukuuta 1961. Näiden kellojen alla kehittyi myös '
             + 'riimislangi, jossa portaat ovat apples and pears.',
+          lyhyt: 'St Mary-le-Bow on Christopher Wrenin suurpalon jälkeen rakentama kirkko Cheapsidessa.',
           selite: 'Cheapsiden St Mary-le-Bow on Christopher Wrenin suurpalon '
             + 'jälkeen rakentama kirkko, ja perinne pitää oikeana cockneynä '
             + 'vain sen kellojen kuuluvilla syntynyttä.',
@@ -1151,6 +1194,7 @@ export const MAA_KATEGORIAT = {
             + 'queen. Croft kuoli tammikuussa 1930, ja hänen '
             + 'hautajaissaattueensa oli noin puoli mailia pitkä; siinä käveli '
             + '400 nappipukuista.',
+          lyhyt: 'Pearly kings ja queens edustavat lontoolaista työväenkulttuurin perinnettä helmiäisnapein puvuin.',
           selite: 'Pearly kings ja queens ovat lontoolaisen '
             + 'työväenkulttuurin hyväntekeväisyysperinne, jonka tunnus on '
             + 'helmiäisnapein kirjailtu puku.',
@@ -1169,6 +1213,7 @@ export const MAA_KATEGORIAT = {
             + 'hän myöhemmin kirjoitti muistiin: kaiken piti olla '
             + 'ristiriitaista, housut pussittavat, takki tiukka, hattu pieni '
             + 'ja kengät suuret.',
+          lyhyt: 'John Doubledayn veistos esittää Chaplinia hänen tunnetuimmassa roolissaan Kulkurina.',
           selite: 'John Doubledayn veistos esittää Chaplinia hänen '
             + 'tunnetuimmassa roolissaan Kulkurina, ja muistomerkkiä '
             + 'ehdotettiin hänen synnyinkaupunkiinsa jouluna 1977 pian hänen '
@@ -1188,6 +1233,7 @@ export const MAA_KATEGORIAT = {
             + 'lumppuvarasto ennen kuin se määrättiin purettavaksi, mutta '
             + 'koomikot Peter Sellers ja Spike Milligan olivat mukana '
             + 'pelastamassa sitä, ja talo suojeltiin huhtikuussa 1971.',
+          lyhyt: 'Shadwellin Wilton\'s on harvoja säilyneitä East Endin music halleja, nykyään esitystalo.',
           selite: 'Shadwellin Wilton\'s on harvoja säilyneitä East Endin '
             + 'music halleja, ja se toimii nykyään monialaisena '
             + 'esitystalona.',
@@ -1228,6 +1274,7 @@ export const MAA_KATEGORIAT = {
             + 'halusivat pitää ne, lähtivät ja perustivat myöhemmin rugbyn. '
             + 'Käsisääntö erotti kaksi maailmanlaajuista peliä toisistaan '
             + 'yhdessä illassa.',
+          lyhyt: 'Vuoden 1863 säännöt ovat nykyisten jalkapallosääntöjen perusta Football Associationissa.',
           selite: 'Vuoden 1863 säännöt ovat nykyisten jalkapallosääntöjen '
             + 'perusta, ja ne hyväksyttiin juuri perustetussa Football '
             + 'Associationissa.',
@@ -1246,6 +1293,7 @@ export const MAA_KATEGORIAT = {
             + 'turnauksen aikana noin 30 tonnia mansikoita. Nurmi leikataan '
             + 'täsmälleen kahdeksan millimetrin mittaan — lyhyempi kuluisi '
             + 'puhki, pidempi hidastaisi palloa.',
+          lyhyt: 'All England Clubin keskuskenttä on Wimbledonin pääkenttä vain turnauksen kahden viikon ajan.',
           selite: 'All England Clubin keskuskenttä on Wimbledonin pääkenttä, '
             + 'ja säännöllisessä pelikäytössä se on vain turnauksen kahden '
             + 'viikon ajan.',
@@ -1263,6 +1311,7 @@ export const MAA_KATEGORIAT = {
             + 'The Ashes -sarjan palkinto. Kansainvälinen testiottelu kestää '
             + 'enintään viisi päivää eikä silti aina ratkea. Lounas- ja '
             + 'teetauko ovat sääntöihin kirjattuja: peli keskeytetään teelle.',
+          lyhyt: 'Krikettiä pelaavat kaksi yksitoistahenkistä joukkuetta kentällä, jonka keskellä on 22 jaardin pitch.',
           selite: 'Krikettiä pelaavat kaksi yksitoistahenkistä joukkuetta '
             + 'kentällä, jonka keskellä on 22 jaardin mittainen pitch ja sen '
             + 'molemmissa päissä portti.',
@@ -1281,6 +1330,7 @@ export const MAA_KATEGORIAT = {
             + 'sanoa vain "three" ennen kuin yleisön huuto peitti loput. Alle '
             + 'kaksi kuukautta myöhemmin toinen juoksija alitti saman rajan — '
             + 'muuri oli ollut päässä.',
+          lyhyt: 'Roger Bannister juoksi 1954 ensimmäisenä mailin alle neljän minuutin Oxfordin radalla.',
           selite: 'Oxfordin yliopiston radalla Roger Bannister juoksi 6. '
             + 'toukokuuta 1954 ensimmäisenä mailin alle neljän minuutin, ja '
             + 'rata kantaa nykyään hänen nimeään.',
@@ -1325,6 +1375,7 @@ export const MAA_KATEGORIAT = {
             + 'avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. '
             + 'Yli kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon '
             + 'museolle.',
+          lyhyt: 'Mudlarkeiksi kutsuttiin lontoolaisia, jotka etsivät Thamesin rannoilta myytävää tavaraa.',
           selite: 'Mudlarkeiksi kutsuttiin 1700- ja 1800-luvun lontoolaisia, '
             + 'jotka etsivät Thamesin rannoilta myytävää tavaraa, ja etsintä '
             + 'jatkuu yhä laskuveden aikaan.',
@@ -1345,6 +1396,7 @@ export const MAA_KATEGORIAT = {
             + 'punaiseen. Osan joutsenista omistavat yhä kaksi Cityn vanhaa '
             + 'ammattikuntaa, viininmyyjät ja värjärit; ennen linnut '
             + 'merkittiin lovilla nokkaan, nykyään renkailla.',
+          lyhyt: 'Swan upping on vuosittainen seremonia, jossa Thamesin kyhmyjoutsenet kootaan ja rengastetaan.',
           selite: 'Swan upping on vuosittainen seremonia, jossa Thamesin '
             + 'kyhmyjoutsenet kootaan, pyydystetään, rengastetaan ja '
             + 'lasketaan takaisin jokeen.',
@@ -1364,6 +1416,7 @@ export const MAA_KATEGORIAT = {
             + 'laidun riittää lopuille. Vuosina 1867 ja 1876 puistosta '
             + 'lähetettiin kuusipeuroja laivalla Uuteen-Seelantiin, ja ne '
             + 'olivat maan ensimmäiset kuusipeurat.',
+          lyhyt: 'Kaarle I perusti Richmond Parkin 1600-luvulla; se on nykyään Lontoon suurin kuninkaallinen puisto.',
           selite: 'Kaarle I perusti Richmond Parkin 1600-luvulla '
             + 'hirvitarhaksi, ja se on nykyään Lontoon suurin kuninkaallinen '
             + 'puisto ja kansallinen luonnonsuojelualue.',
@@ -1383,6 +1436,7 @@ export const MAA_KATEGORIAT = {
             + 'lumisilla alarinteillä parintuhannen metrin korkeudessa. Hyde '
             + 'Parkissa ja Kensington Gardensissa ne ovat oppineet lentämään '
             + 'suoraan avoimelle kämmenelle, jos siinä on siemeniä.',
+          lyhyt: 'Kauluskaijan levinneisyys on trooppisessa Afrikassa ja Intiassa, myös Lontoon puistoissa.',
           selite: 'Kauluskaijan alkuperäinen levinneisyys on trooppisessa '
             + 'Afrikassa ja Intiassa, mutta karanneista lemmikeistä on '
             + 'syntynyt vakiintuneita kantoja muualle, myös Lontoon '
@@ -1404,6 +1458,7 @@ export const MAA_KATEGORIAT = {
             + 'arvioitiin ensin neljätuhatta, myöhemmissä laskelmissa 10 '
             + '000-12 000. Neljä vuotta myöhemmin säädettiin laki, jonka '
             + 'nojalla kaupunginosia voitiin määrätä savuttomiksi.',
+          lyhyt: 'London particular eli hernekeittosumu syntyi kivihiilen noesta ja vaivasi kaupunkia yli vuosisadan.',
           selite: 'London particular eli hernekeittosumu syntyi kivihiilen '
             + 'noesta ja rikkidioksidista ja vaivasi kaupunkia jo yli '
             + 'vuosisadan ennen vuoden 1952 savusumua.',
@@ -1423,6 +1478,7 @@ export const MAA_KATEGORIAT = {
             + 'Blackfriarsin sillan alapuolelta. Sitten purettiin vanha '
             + 'Lontoon silta, jonka yhdeksäntoista pilaria olivat padonneet '
             + 'virran hitaaksi. Nyt joki juoksee liian nopeasti jäätyäkseen.',
+          lyhyt: 'Thamesin jäämarkkinoita pidettiin pikkujääkauden talvina, kunnes vanha Lontoon silta purettiin 1831.',
           selite: 'Thamesin jäämarkkinoita pidettiin pikkujääkauden ankarina '
             + 'talvina, kun vanhan Lontoon sillan 19 pilaria hidastivat '
             + 'virtausta; silta purettiin 1831 ja markkinat jäivät '
@@ -1464,6 +1520,7 @@ export const MAA_KATEGORIAT = {
             + 'Britainissa. Notting Hillin karnevaalia edeltävässä '
             + 'Panorama-kisassa soittaa nykyään noin tuhat ihmistä, kaikki '
             + 'ulkomuistista.',
+          lyhyt: 'Steelpan kehittyi Trinidadissa karnevaaliperinteestä ja siitä tuli 1992 kansallissoitin.',
           selite: 'Steelpan kehittyi Trinidadissa 1930- ja 1940-luvulla '
             + 'karnevaalin lyömäsoitinperinteestä, ja siitä tuli 1992 '
             + 'saarivaltion kansallissoitin.',
@@ -1483,6 +1540,7 @@ export const MAA_KATEGORIAT = {
             + 'katusoitto on kielletty, ja Leicester Squaren esiintymispaikat '
             + 'suljettiin huhtikuussa 2025, kun tuomioistuin oli määrännyt '
             + 'melun loppumaan.',
+          lyhyt: 'Lontoon metron soittopaikat ovat luvanvaraisia; busking on esiintymistä julkisella paikalla.',
           selite: 'Lontoon metron soittopaikat ovat luvanvaraisia, ja '
             + 'busking tarkoittaa esiintymistä julkisella paikalla '
             + 'vapaaehtoista maksua vastaan.',
@@ -1500,6 +1558,7 @@ export const MAA_KATEGORIAT = {
             + 'sävelet toisistaan salamannopeilla koristenuoteilla. Soitin on '
             + 'tehty ulkona soitettavaksi: sisätiloissa se peittää alleen '
             + 'kaikki muut soittimet.',
+          lyhyt: 'Skotlantilainen isopilli mainitaan ensi kerran noin 1400 ja vakiintui varhain sotilassoittimeksi.',
           selite: 'Skotlantilainen isopilli mainitaan Skotlannissa ensi '
             + 'kerran noin vuonna 1400, ja se vakiintui varhain '
             + 'sotilassoittimeksi.',
@@ -1522,6 +1581,7 @@ export const MAA_KATEGORIAT = {
             + 'tattoo pidettiin vuonna 1950. Siinä oli kahdeksan '
             + 'ohjelmanumeroa ja noin 6 000 katsojaa rakennustelineillä; '
             + 'nykyään katsomoon mahtuu 8 800 ihmistä joka ilta.',
+          lyhyt: 'Royal Edinburgh Military Tattoo esitetään joka elokuu Edinburghin linnan esplanadilla.',
           selite: 'Royal Edinburgh Military Tattoo esitetään joka elokuu '
             + 'Edinburghin linnan esplanadilla osana kaupungin '
             + 'festivaalikuukautta.',
@@ -1595,6 +1655,8 @@ export const MAA_KATEGORIAT = {
             + 'Kolmivuotinen matka tuottaa tiedettä ja karttoja sekä kohtaamisia, '
             + 'joiden seuraukset Tyynenmeren kansoille ovat kaikkea muuta kuin '
             + 'viattomia.',
+          lyhyt: 'Endeavourin kansimies katsoo Plymouthia viimeisen kerran ennen '
+            + 'tuntemattoman mittaista matkaa.',
           selite: 'Endeavourin kansimies ottaa viimeisen katseen Plymouthiin '
             + 'ennen matkaa, jonka pituutta kukaan ei osaa luvata. Cook ja Joseph '
             + 'Banks tavoittelevat Venuksen ylikulkua ja uusia kasveja, mutta '
@@ -1608,6 +1670,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Plymouth 1768 — hiililaiva lähtee Tyynellemerelle',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-kauko-photo-v3.jpg',
+              lyhyt: 'Hiililaivaan pakattu tiede- ja taiteilijaryhmä lähtee '
+                + 'kolmivuotiselle Tyynenmeren purjehdukselle.',
               selite: 'Hiililaivaksi rakennettuun Endeavouriin pakkautuu '
                 + 'merimiesten lisäksi tähtitieteilijöitä, luonnontutkijoita, '
                 + 'taiteilijoita ja heidän toiveitaan. Heidän kolmivuotinen '
@@ -1673,6 +1737,8 @@ export const MAA_KATEGORIAT = {
             + 'ohittavat toisensa noin metrin päästä; lähtö viivästyy tunnin. '
             + 'Neljästä savupiipusta vain kolme savuaa. Eva ja äiti pelastuvat; '
             + 'isä Benjamin jää niiden yli 1 500 joukkoon, jotka eivät palaa.',
+          lyhyt: 'Titaniciin nousee perhe, jonka äiti ja tytär pelastuvat mutta '
+            + 'isä jää uhrien joukkoon.',
           selite: 'Seitsemänvuotias Eva Hart nousee Titaniciin vanhempiensa '
             + 'kanssa, mutta hänen äitinsä Esther pelkää laivaa niin paljon, '
             + 'ettei suostu nukkumaan öisin. Eva ja äiti pelastuvat; isä Benjamin '
@@ -1684,6 +1750,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Southampton 1912 — metri törmäyksestä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-titanic-southampton-1912-kauko-photo-v3.jpg',
+              lyhyt: 'Kaksi poikaa matkustaa Titanicissa väärällä nimellä; isän '
+                + 'kuoltua heidät tunnetaan orpoina lehdissä.',
               selite: 'Kolmivuotias Michel ja kaksivuotias Edmond matkustavat '
                 + 'isänsä kanssa väärällä sukunimellä, äidiltä salaa vietyinä. '
                 + 'Haaksirikon jälkeen isä kuolee ja pojat tunnetaan viikkoja '
@@ -1697,6 +1765,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Southampton 1912 — metri törmäyksestä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg',
+              lyhyt: 'Radisti Phillips lähettää hätäkutsuja veden noustessa '
+                + 'Titanicissa; Bride selviää, Phillips ei.',
               selite: 'Jack Phillips jatkaa hätäkutsujen lähettämistä, vaikka '
                 + 'vesi nousee Titanicin radiohyttiin; Harold Bride vetää '
                 + 'pelastusliivin hänen ylleen. Bride selviää kaatuneen '
@@ -1764,6 +1834,8 @@ export const MAA_KATEGORIAT = {
             + 'kuu ei. Näitä kahta vuotta on kutsuttu tieteen historian '
             + 'tuottoisimmiksi. Kirjaksi asti työ ehtii vasta 1704, teoksessa '
             + 'Opticks — Newton ei pitänyt kiirettä eikä riitelystä.',
+          lyhyt: 'Newton päästää yhden valonsäteen prisman läpi ja osoittaa '
+            + 'värien piilevän valkoisessa valossa.',
           selite: 'Newton peittää ikkunan lähes kokonaan ja päästää sisään vain '
             + 'yhden valonsäteen, jotta pieni prisma saa vastata. Seinälle venyvä '
             + 'värijono osoittaa, etteivät värit synny lasissa: valkoinen valo '
@@ -1774,6 +1846,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Woolsthorpe 1666 — valo, joka kantaa värit mukanaan',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-newton-prisma-1666-kauko-photo-v4.jpg',
+              lyhyt: 'Ruton sulkema Cambridge vapauttaa Newtonin kokeilemaan '
+                + 'prismaa lapsuudenkotinsa pimeässä huoneessa.',
               selite: 'Rutto on sulkenut Cambridgen, ja 23-vuotias Newton on '
                 + 'palannut lapsuudenkotiinsa vailla professoreita tai '
                 + 'laboratoriota. Pimennetty huone, ikkunaluukun reikä ja prisma '
@@ -1838,6 +1912,8 @@ export const MAA_KATEGORIAT = {
             + 'ja julkaisee sen 1798. Lähes kaksi vuosisataa myöhemmin, vuonna '
             + '1980, Maailman terveysjärjestö julistaa isorokon hävitetyksi; se '
             + 'on ainoa ihmisen tauti, jolle on käynyt niin.',
+          lyhyt: 'Jenner naarmauttaa lehmänrokolla Phippsin pojan käsivarren '
+            + 'kokeillakseen rokotusajatustaan.',
           selite: 'Kahdeksanvuotias James Phipps yrittää pitää käsivartensa '
             + 'liikkumatta, kun Jenner tekee siihen pienen naarmun. Poika ei voi '
             + 'antaa nykyisen kaltaista tietoon perustuvaa suostumusta; '
@@ -1849,6 +1925,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Berkeley 1796 — lypsäjän rakkula ja puutarhurin poika',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-kauko-photo-v4.jpg',
+              lyhyt: 'Jennerin rokotuskoe nojaa Sarah Nelmesin lehmänrokkoon ja '
+                + 'pojan isän lupaan osallistua.',
               selite: 'Puutarhuri Christopher Phipps seisoo poikansa takana, ja '
                 + 'Sarah Nelmesin kädestä saatu lehmänrokkoaine odottaa pöydällä. '
                 + 'Toukokuun 1796 hiljainen huone on samalla lääketieteellinen '
@@ -1877,6 +1955,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Giuseppe Gabrielli - The National Gallery, Interior of Room 32 - 1886.png',
               teksti: 'National Galleryn kokoelmassa on yli 2 400 maalausta, ja '
                 + 'jokaisella on verkossa oma sivunsa.',
+              lyhyt: 'Vuonna 1824 perustetussa National Galleryssa on yli 2 300 maalausta 1200-luvulta 1900-luvulle.',
               selite: 'Vuonna 1824 perustetussa National Galleryssa on yli 2 '
                 + '300 maalausta 1200-luvun puolivälistä vuoteen 1900, ja '
                 + 'pääkokoelmaan on vapaa pääsy.',
@@ -1889,6 +1968,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Victoria and Albert Museum on maailman suurin muotoilun ja '
                 + 'käsityön museo, ja sen hakukoneessa on yli 1,25 miljoonaa '
                 + 'esinettä.',
+              lyhyt: 'V&A:n Cast Courtien 1800-luvun kipsijäljennökset ovat paikoin paremmin säilyneitä kuin alkuperäiset.',
               selite: 'V&A:n Cast Courtit koottiin arkkitehtuurisaleiksi, ja '
                 + 'niiden 1800-luvun kipsijäljennökset ovat paikoin paremmin '
                 + 'säilyneitä kuin alkuperäiset veistokset.',
@@ -1901,6 +1981,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Wellcome Collection kerää lääketieteen ja tieteen '
                 + 'historiaa: verkkokatalogissa on 1,17 miljoonaa teosta ja '
                 + '126 559 kuvaa.',
+              lyhyt: 'Euston Roadin Wellcome Collection avattiin 2007 lääketiedettä ja taidetta yhdistävänä museona.',
               selite: 'Euston Roadin Wellcome Collection avattiin 2007 '
                 + 'museona ja kirjastona, joka yhdistää lääketieteen '
                 + 'esineistön ja alkuperäisen taiteen.',
@@ -1918,6 +1999,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Old Bailey Online sisältää Lontoon '
                 + 'keskusrikostuomioistuimen painetut pöytäkirjat vuosilta '
                 + '1674–1913: 197 754 oikeudenkäyntiä sanatarkasti.',
+              lyhyt: 'Old Bailey on Englannin ja Walesin keskusrikostuomioistuin, jossa on istuttu oikeutta 1500-luvulta.',
               selite: 'Old Bailey on Englannin ja Walesin '
                 + 'keskusrikostuomioistuin, ja samalla kadulla on istuttu '
                 + 'oikeutta ainakin 1500-luvulta, jolloin oikeussali liittyi '
@@ -1931,6 +2013,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Bodleianin kirjaston oma kappale Shakespearen '
                 + 'ensimmäisestä foliosta on skannattu kokonaan, ja sitä voi '
                 + 'lukea verkossa sivunkääntäjällä kuten oikeaa kirjaa.',
+              lyhyt: 'Bodleianin vanhin lukusali on nimetty Humphrey Lancasterilaisen mukaan, joka lahjoitti 281 kirjaa.',
               selite: 'Bodleianin vanhin lukusali on nimetty Humphrey '
                 + 'Lancasterilaisen mukaan, joka testamenttasi kirjastolle '
                 + '281 kirjaa kuoltuaan 1447.',
@@ -1944,6 +2027,7 @@ export const MAA_KATEGORIAT = {
                 + 'Britanniaa kaupunki kaupungilta, ja koko arkisto on nyt '
                 + 'verkossa: 96 344 kuvaa, joista 82 521 Englannista, 6 398 '
                 + 'Skotlannista ja 4 321 Walesista.',
+              lyhyt: 'Aerofilms oli Britannian ensimmäinen kaupallinen ilmakuvausyhtiö, perustettu 1919.',
               selite: 'Aerofilms oli Britannian ensimmäinen kaupallinen '
                 + 'ilmakuvausyhtiö, jonka Francis Wills ja Claude Graham '
                 + 'White perustivat 1919.',
@@ -1960,6 +2044,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Puffin on Skomer Island.jpg',
               teksti: 'The Wildlife Trusts kokoaa yhdelle sivulle Britannian '
                 + 'suorat luontokamerat, ja niitä on yli 25.',
+              lyhyt: 'Pembrokeshiren edustalla sijaitsevalla Skomerin saarella pesii Etelä-Britannian suurin lunnikolonia.',
               selite: 'Pembrokeshiren edustalla sijaitsevalla Skomerin '
                 + 'saarella pesii Etelä-Britannian suurin lunnikolonia, ja '
                 + 'saari on kansallinen luonnonsuojelualue.',
@@ -1992,6 +2077,7 @@ export const MAA_KATEGORIAT = {
             + 'ihmeellisiä asioita." Hauta oli ainoa lähes koskemattomana '
             + 'löydetty faaraonhauta: yli 5 000 esinettä, ja niiden '
             + 'joukossa 11-kiloinen kultainen kasvonaamio.',
+          lyhyt: 'Tutankhamonin kultainen hautanaamio löytyi 1922 Kuninkaiden laaksosta ja esittää Osiriksen hahmoa.',
           selite: 'Tutankhamonin kultainen hautanaamio löytyi 1922 '
             + 'Kuninkaiden laaksosta, ja se esittää faaraon tuonpuoleisen '
             + 'jumalan Osiriksen hahmossa.',
@@ -2011,6 +2097,7 @@ export const MAA_KATEGORIAT = {
             + 'mursi koodin 1822. Sillä hetkellä kolme tuhatta vuotta '
             + 'mykkänä ollut sivilisaatio alkoi taas puhua: temppelien '
             + 'seinät muuttuivat luettaviksi kirjoiksi.',
+          lyhyt: 'Rosettan kiveen hakattiin 196 eaa. sama teksti kolmella kirjoitustavalla, mikä avasi hieroglyfit.',
           selite: 'Rosettan kiveen hakattiin vuonna 196 eaa. sama päätös '
             + 'hieroglyfein, demoottisella kirjoituksella ja kreikaksi, ja '
             + 'juuri se avasi tien hieroglyfien tulkintaan.',
@@ -2030,6 +2117,7 @@ export const MAA_KATEGORIAT = {
             + 'metriä korkeammalle keinotekoisen kukkulan sisään. '
             + 'Urakasta syntyi ajatus maailmanperinnöstä — siitä, että '
             + 'jotkin paikat kuuluvat koko ihmiskunnalle.',
+          lyhyt: 'Abu Simbelin kaksoistemppelit louhittiin kallioon Ramses II:n aikana ja siirrettiin 1960-luvulla.',
           selite: 'Abu Simbelin kaksoistemppelit louhittiin kallioon '
             + '1200-luvulla eaa. Ramses II:n hallituskaudella, ja ne '
             + 'siirrettiin 1960-luvulla nykyiselle paikalleen Nasser-järven '
@@ -2050,6 +2138,7 @@ export const MAA_KATEGORIAT = {
             + 'kanavaan kuudeksi päiväksi: sadat laivat jonottivat, ja '
             + 'kaivinkone kaivoi keulaa irti hiekasta koko maailman '
             + 'seuratessa.',
+          lyhyt: 'Konttialus Ever Given juuttui Suezin kanavaan maaliskuussa 2021 ja tukki väylän kuudeksi päiväksi.',
           selite: 'Konttialus Ever Given juuttui poikittain Suezin kanavaan '
             + '23. maaliskuuta 2021 ja tukki koko väylän kuudeksi päiväksi.',
           lahde: 'NASA, Wikimedia Commons (PD)',
@@ -2073,6 +2162,7 @@ export const MAA_KATEGORIAT = {
             + 'ympärillä. Osuma ei ole tavoite — voittaja on se, joka '
             + 'liikkuu kauneimmin. Unesco otti tahtibin aineettoman '
             + 'kulttuuriperinnön luetteloonsa 2016.',
+          lyhyt: 'Tahtib on egyptiläinen keppitaistelun perinne, josta kehittyi myös kepin kanssa tanssittava tanssi.',
           selite: 'Tahtib on egyptiläinen keppitaistelun perinne, josta on '
             + 'sittemmin kehittynyt myös kepin kanssa esitettävä '
             + 'kansantanssi.',
@@ -2118,6 +2208,7 @@ export const MAA_KATEGORIAT = {
             + 'kootaan metallikulhoon sekunneissa. Jokainen lisää itse '
             + 'etikkaa ja tulista dakka-kastiketta — siitä väitellään, '
             + 'kuinka paljon on oikea määrä.',
+          lyhyt: 'Koshary on Egyptin kansallisruoka, jossa yhdistyvät pasta, riisi, nuudelit, linssit ja kikherneet.',
           selite: 'Koshary on Egyptin kansallisruoka, jossa yhdistyvät '
             + 'pasta, riisi, nuudelit ja linssit sekä kikherneet, '
             + 'valkosipulinen tomaattikastike ja paistettu sipuli.',
@@ -2134,6 +2225,7 @@ export const MAA_KATEGORIAT = {
             + 'haudoista asti. Aamuisin ful-kärryjen ympärille syntyy '
             + 'jono: myyjä kauhoo papuja ruukun suusta leipätaskuihin, '
             + 'ja työmatkalaiset syövät ne siinä seisten.',
+          lyhyt: 'Ful medames on härkäpavuista haudutettu pata, jota tarjotaan oliiviöljyn ja kuminan kera.',
           selite: 'Ful medames on kypsennetyistä härkäpavuista haudutettu '
             + 'pata, jota tarjotaan oliiviöljyn ja kuminan kera '
             + 'perinteisesti isosta metalliruukusta.',
@@ -2169,6 +2261,7 @@ export const MAA_KATEGORIAT = {
             + 'tunneta: lasi teetä oikeuttaa istumaan niin pitkään kuin '
             + 'juttua riittää, ja vakioasiakkaan tilaus muistetaan '
             + 'kysymättä.',
+          lyhyt: 'Ahwa tarkoittaa Egyptissä kahvia ja kahvilaa; kahvi keitetään turkkilaiseen tapaan kanakah-pannussa.',
           selite: 'Ahwa tarkoittaa Egyptissä sekä kahvia että kahvilaa, ja '
             + 'kahvi keitetään turkkilaiseen tapaan pienessä '
             + 'kanakah-pannussa ja tarjotaan fengan-kupista.',
@@ -2195,6 +2288,7 @@ export const MAA_KATEGORIAT = {
             + 'myöhemmin harjoitustyöstä on tullut yksi maailman '
             + 'kuuluisimmista muotokuvista, jota jonotetaan Berliinin '
             + 'museossa kuin tähteä ainakin.',
+          lyhyt: 'Rintakuvan uskotaan syntyneen noin 1345 eaa.; se on nykyään Berliinin Neues Museumissa.',
           selite: 'Rintakuvan uskotaan syntyneen noin 1345 eaa. '
             + 'kuvanveistäjä Thutmosisin työpajassa Amarnassa, josta se myös '
             + 'löytyi, ja se on nykyään Berliinin Neues Museumissa.',
@@ -2212,6 +2306,7 @@ export const MAA_KATEGORIAT = {
             + 'juhlavaatteissa, koska kuva ei esitä arkea vaan '
             + 'ikuisuutta: tällaisena Nebamun halusi elää kuolemansa '
             + 'jälkeen — perhe ja kissa mukanaan.',
+          lyhyt: 'Nebamun oli noin 1350 eaa. Theban temppelin kirjuri, joka tunnetaan hautakappelinsa maalauksista.',
           selite: 'Nebamun oli noin 1350 eaa. elänyt Theban Amon-temppelin '
             + 'kirjuri ja viljanlaskija, ja hänet tunnetaan nykyään '
             + 'hautakappelinsa maalauksista.',
@@ -2229,6 +2324,7 @@ export const MAA_KATEGORIAT = {
             + 'silmiin: kampaukset, korvakorut ja katse kuin '
             + 'valokuvassa. Museot ympäri maailman pitävät niitä '
             + 'muotokuvamaalauksen ensimmäisenä kultakautena.',
+          lyhyt: 'Fajumin muumiomuotokuvat maalattiin vahaväreillä puulevylle vainajan muumion päälle.',
           selite: 'Fajumin muumiomuotokuvat maalattiin vahaväreillä '
             + 'puulevylle ja kiinnitettiin roomalaisajan Egyptissä vainajan '
             + 'muumion päälle.',
@@ -2246,6 +2342,7 @@ export const MAA_KATEGORIAT = {
             + 'Osiriksen valtakuntaan. Kirjuri Huneferin kääröllä kuvat '
             + 'ja kirjoitus kulkevat rinnakkain kuin sarjakuvassa — '
             + 'kolme tuhatta vuotta ennen sarjakuvia.',
+          lyhyt: 'Kuolleiden kirja on muinaisegyptiläinen hautateksti, jonka loitsut auttoivat vainajaa tuonpuoleen.',
           selite: 'Kuolleiden kirja on muinaisegyptiläinen hautateksti, '
             + 'jonka loitsujen oli määrä auttaa vainajaa Duatin eli '
             + 'tuonpuoleisen halki; sitä käytettiin noin 1550 eaa. alkaen.',
@@ -2283,6 +2380,7 @@ export const MAA_KATEGORIAT = {
             + 'levenee suistoksi pohjoisessa. Joella purjehtivat yhä '
             + 'felukat, kolmikulmapurjeiset puuveneet, joiden malli on '
             + 'pysynyt samana vuosisatoja.',
+          lyhyt: 'Niili on 7 088 kilometrillään maailman pisin joki ja Afrikan talouden ja kulttuurin keskus.',
           selite: 'Niili on 7 088 kilometrillään maailman pisin joki, ja se '
             + 'on ollut Afrikan talouden ja kulttuurin keskus vuosituhansia.',
           lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
@@ -2299,6 +2397,7 @@ export const MAA_KATEGORIAT = {
             + 'jälkiä keskellä kuivinta hiekkaa. Täysikuun valossa '
             + 'valkoiset muodot hohtavat niin aavemaisesti, että '
             + 'retkeilijät leiriytyvät niiden keskelle varta vasten.',
+          lyhyt: 'Farafran pohjoispuolella sijaitseva Valkoinen autiomaa on kansallispuisto lumenvalkoisine kivineen.',
           selite: 'Farafran pohjoispuolella sijaitseva Valkoinen autiomaa on '
             + 'kansallispuisto, jonka kivi vaihtelee lumenvalkoisesta '
             + 'kermanväriseen.',
@@ -2317,6 +2416,7 @@ export const MAA_KATEGORIAT = {
             + 'arvelevat, että Punaisenmeren riutta voi olla viimeisiä, '
             + 'jotka selviävät merien lämmetessä — koko maailman '
             + 'korallien varakappale.',
+          lyhyt: 'Punainenmeri on Arabian niemimaan ja Afrikan välinen merenlahti, joka syntyi Suureen hautavajoamaan.',
           selite: 'Punainenmeri on Arabian niemimaan ja Afrikan välinen '
             + 'merenlahti, joka syntyi Suureen hautavajoamaan kuuluvaan '
             + 'Punaisenmeren repeämään.',
@@ -2334,6 +2434,7 @@ export const MAA_KATEGORIAT = {
             + 'ei puhuta. Kuuluisin vieras saapui vuonna 331 eaa.: '
             + 'Aleksanteri Suuri vaelsi aavikon poikki kysymään neuvoa '
             + 'keitaan oraakkelilta.',
+          lyhyt: 'Länsiaavikon Siwa tunnettiin muinoin Amonin oraakkelista, jonka rauniot näkyvät keitaalla yhä.',
           selite: 'Länsiaavikon Siwa tunnettiin muinoin Amonin oraakkelista, '
             + 'jonka rauniot ovat keitaalla yhä nähtävissä.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
@@ -2371,6 +2472,7 @@ export const MAA_KATEGORIAT = {
             + 'saman kalenterin Roomaan. Meidän kalenterimme on sen '
             + 'suora jälkeläinen: kun katsot seinäkalenteria, katsot '
             + 'Niilin tulvan aikataulua.',
+          lyhyt: 'Denderan eläinrata irrotettiin Hathorin temppelin katosta ja on nykyään Louvressa.',
           selite: 'Denderan eläinrata irrotettiin Hathorin temppelin '
             + 'Osiris-kappelin katosta, se ajoitetaan Ptolemaiosten ja '
             + 'Rooman aikaan ja on nykyään Louvressa.',
@@ -2388,6 +2490,7 @@ export const MAA_KATEGORIAT = {
             + 'vaan lastoja, ompeleita ja hunajasiteitä — ja siinä '
             + 'mainitaan aivot ensimmäistä kertaa ihmiskunnan '
             + 'kirjoitetussa historiassa.',
+          lyhyt: 'Edwin Smithin papyrus on vanhin tunnettu kirurginen tutkielma, joka käy läpi 48 vammatapausta.',
           selite: 'Edwin Smithin papyrus on vanhin tunnettu kirurginen '
             + 'tutkielma: se käy läpi 48 vamma- ja murtumatapausta ilman '
             + 'taikuutta.',
@@ -2405,6 +2508,7 @@ export const MAA_KATEGORIAT = {
             + 'Verotkin määrättiin lukeman mukaan: hyvänä tulvavuonna '
             + 'viljelijä maksoi enemmän. Rhodan nilometri mittasi jokea '
             + 'yli tuhat vuotta, kunnes Assuanin pato tasasi tulvat.',
+          lyhyt: 'Nilometrit mittasivat Niilin tulvan korkeutta, sillä liian matala tai korkea tulva uhkasi satoa.',
           selite: 'Nilometrit mittasivat Niilin tulvan korkeutta, sillä '
             + 'liian matala tulva uhkasi satoa ja liian korkea tuhosi '
             + 'rakennukset.',
@@ -2422,6 +2526,7 @@ export const MAA_KATEGORIAT = {
             + 'luetteloiksi. Kirjasto tuhoutui vähitellen, mutta vuonna '
             + '2002 Aleksandriaan avattiin sen perillinen: Bibliotheca '
             + 'Alexandrina, jonka lukusali on maailman suurimpia.',
+          lyhyt: 'Antiikin Aleksandrian kirjaston muistoksi vihittiin 2002 Bibliotheca Alexandrina.',
           selite: 'Antiikin Aleksandrian kirjasto pyrki kokoamaan kaiken '
             + 'maailman kirjallisuuden, ja sen muistoksi vihittiin 2002 '
             + 'Bibliotheca Alexandrina.',
@@ -2470,6 +2575,7 @@ export const MAA_KATEGORIAT = {
             + 'joulukuuta 1871. Lokakuun yönä 1971 lähes kokonaan puusta '
             + 'rakennettu talo paloi maan tasalle, ja jäljelle jäi kaksi '
             + 'patsasta. Nykyinen oopperatalo avattiin 1988.',
+          lyhyt: 'Kediivin oopperatalo vihittiin 1869 Afrikan ja Lähi-idän ensimmäisenä oopperatalona.',
           selite: 'Kediivin oopperatalo vihittiin 1. marraskuuta 1869 '
             + 'Afrikan ja Lähi-idän ensimmäisenä oopperatalona, ja se '
             + 'tuhoutui tulipalossa 1971.',
@@ -2494,6 +2600,7 @@ export const MAA_KATEGORIAT = {
             + 'ud tarkoittaa puuta, ja siitä tuli mutkan kautta myös '
             + 'eurooppalaisen luutun nimi: al-ud muuttui espanjaksi laúdiksi '
             + 'ja englanniksi luteksi.',
+          lyhyt: 'Ud on lyhytkaulainen ja nauhaton luuttu, jossa on tavallisesti yksitoista kieltä kuudessa kuorossa.',
           selite: 'Ud on lyhytkaulainen ja nauhaton päärynänmuotoinen '
             + 'luuttu, jossa on tavallisesti yksitoista kieltä kuudessa '
             + 'kuorossa.',
@@ -2514,6 +2621,7 @@ export const MAA_KATEGORIAT = {
             + 'sokeita: soittajan ammatti oli yksi harvoista, joka sopi '
             + 'näkövammaiselle. Kuvien soittimista on rakennettu '
             + 'jäljennöksiä, mutta sävelmät ovat kadonneet lopullisesti.',
+          lyhyt: 'Paatenemhebin hautakappelin reliefi Sakkarasta on noin vuodelta 1330 eaa. ja kuvaa musiikkia.',
           selite: 'Paatenemhebin hautakappelin reliefi Sakkarasta on noin '
             + 'vuodelta 1330 eaa., ja musiikki on kuulunut egyptiläiseen '
             + 'kulttuuriin jo muinaisajoista.',
@@ -2570,6 +2678,7 @@ export const MAA_KATEGORIAT = {
             + 'parantuneita luunmurtumia, eli loukkaantuneita hoidettiin. '
             + 'Työläiset olivat palkattuja ryhmiä eivätkä orjia — ryhmillä '
             + 'oli jopa omat nimensä, kuten Kheopsin ystävät.',
+          lyhyt: 'Kheopsin pyramidi rakennettiin noin 2600 eaa. ja oli pitkään maailman korkein rakennus.',
           selite: 'Kheopsin pyramidi rakennettiin noin 2600 eaa. faarao '
             + 'Kheopsin haudaksi, ja 146,6 metrin korkuisena se oli pitkään '
             + 'maailman korkein rakennus.',
@@ -2589,6 +2698,7 @@ export const MAA_KATEGORIAT = {
             + 'doleriittipalloilla — käsissä pidellyillä kivipalloilla, jotka '
             + 'ovat graniittia kovempia. Ura hakattiin senttimetri kerrallaan '
             + 'koko obeliskin ympäri.',
+          lyhyt: 'Assuanin louhoksessa yhä kalliossa kiinni oleva keskeneräinen obeliski on suurin tunnettu obeliski.',
           selite: 'Assuanin louhoksessa yhä kalliossa kiinni oleva '
             + 'keskeneräinen obeliski on suurin tunnettu muinainen obeliski.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
@@ -2607,6 +2717,7 @@ export const MAA_KATEGORIAT = {
             + 'suunnitelma vaan sarja muutoksia — matalaa hautaa '
             + 'laajennettiin ja korotettiin kerta toisensa jälkeen, kunnes '
             + 'portaita oli kuusi ja korkeutta 62 metriä.',
+          lyhyt: 'Sakkaran porraspyramidi rakennettiin 2600-luvulla eaa. Djoserin haudaksi, ensimmäisenä Egyptissä.',
           selite: 'Sakkaran porraspyramidi rakennettiin 2600-luvulla eaa. '
             + 'faarao Djoserin haudaksi, ja se on Egyptin ensimmäinen '
             + 'pyramidi ja vanhin suuri kivirakennus.',
@@ -2626,6 +2737,7 @@ export const MAA_KATEGORIAT = {
             + 'myöhemmin. Suippo kaari johtaa painon alaspäin pilareille, '
             + 'joten sillä voi tehdä korkeampia ja kevyempiä holveja kuin '
             + 'pyöreällä.',
+          lyhyt: 'Ahmad ibn Tulunin 800-luvulla rakennuttama moskeija on Egyptin vanhin hyvin säilynyt moskeija.',
           selite: 'Ahmad ibn Tulunin vuosina 876–879 rakennuttama moskeija '
             + 'on Egyptin vanhin hyvin säilynyt moskeija, ja sen esikuvana '
             + 'olivat Samarran abbasidimoskeijat.',
@@ -2699,6 +2811,7 @@ export const MAA_KATEGORIAT = {
             + 'kokonaan raivattu, ja vuonna 2006 villejä yksilöitä tunnettiin '
             + 'enää kymmenkunta Bardawilinjärven seudulta. Nykyään lajia '
             + 'kasvatetaan tarhoissa palautettavaksi luontoon.',
+          lyhyt: 'Egyptinkilpikonna on äärimmäisen uhanalainen laji, joka elää nykyään lähinnä Libyassa.',
           selite: 'Egyptinkilpikonna on äärimmäisen uhanalainen laji, joka '
             + 'on Egyptistä mahdollisesti jo hävinnyt ja elää nykyään '
             + 'lähinnä Libyassa.',
@@ -2737,6 +2850,7 @@ export const MAA_KATEGORIAT = {
             + 'kaarevia koukeroita, kukkia ja kirjaimia. Katu on Kairon '
             + 'viimeinen katettu kauppakuja, ja sen työpajoissa istutaan yhä '
             + 'matalilla penkeillä neula kädessä.',
+          lyhyt: 'Khayamiya on egyptiläinen applikointitekstiili, jota tehdään yhä Kairon telttatekijöiden kadulla.',
           selite: 'Khayamiya on egyptiläinen applikointitekstiili, jota '
             + 'tehdään yhä Kairon telttatekijöiden kadulla 1600-luvulla '
             + 'rakennetun katetun basaarin liepeillä.',
@@ -2770,6 +2884,7 @@ export const MAA_KATEGORIAT = {
             + 'talo saa nimensä seinään samalla siveltimellä. Nykyään talot '
             + 'muurataan tiilestä ja betonista, mutta kupolikatto ja maalaus '
             + 'tehdään entiseen tapaan.',
+          lyhyt: 'Nubialaiset ovat Etelä-Egyptin ja Pohjois-Sudanin alkuperäisväestö omine kielineen.',
           selite: 'Nubialaiset ovat Etelä-Egyptin ja Pohjois-Sudanin '
             + 'alkuperäisväestö, jolla on oma nilo-saharalainen kielensä ja '
             + 'egyptiläisistä poikkeava kulttuurinsa.',
@@ -2843,6 +2958,8 @@ export const MAA_KATEGORIAT = {
             + 'murtavat hieroglyfit, joita kukaan ei ollut osannut lukea lähes '
             + 'puoleentoista vuosituhanteen. Sotilaat eivät sitä vielä tiedä: he '
             + 'näkevät vain painavan kiven, joka on kannettava pois muurin tieltä.',
+          lyhyt: 'Sapööri paljastaa Rosettan kiven kolme tekstivyöhykettä, joita '
+            + 'kukaan ei vielä osaa lukea.',
           selite: 'Nuori sapööri pyyhkii rakennuspölyn pois, ja Pierre-François '
             + 'Bouchard tajuaa kolmen tekstivyöhykkeen kertovan saman asian eri '
             + 'merkein. Kumpikaan ei vielä osaa lukea hieroglyfejä, mutta he '
@@ -2853,6 +2970,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-kauko-photo-v4.jpg',
+              lyhyt: 'Fort Julienin korjaajat kampeavat Rosettan kiven esiin '
+                + 'arkisen purkutyön yhteydessä.',
               selite: 'Fort Julienin korjaajat pysäyttävät työn ja kampeavat '
                 + 'raskaan kiven päivänvaloon köysillä ja puulla. Löytö syntyy '
                 + 'linnoituksen arkisesta purkutyöstä — ei suunnitellusta '
@@ -2863,6 +2982,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lehti-photo-v4.jpg',
+              lyhyt: 'Ranskalaislehti raportoi vuonna 1799 Rosettan kivilöydöstä '
+                + 'varovaisena, ilman sensaatio-otsikkoa.',
               selite: 'Courier de l’Égypte raportoi löydöstä syyskuussa 1799 '
                 + 'ilman sensaatio-otsikkoa: kolme kirjoitusjärjestelmää, sama '
                 + 'kivipinta ja varovainen toivo avaimesta. Lukijalle ratkaiseva '
@@ -2929,6 +3050,8 @@ export const MAA_KATEGORIAT = {
             + 'asti, ostaa Egyptin osakkeet 1875 ja miehittää maan 1882. Rannalla '
             + 'juhlavieraat näkevät lippuja ja savua; egyptiläisten kaivajien '
             + 'vuosikymmen ei mahdu ohjelmaan.',
+          lyhyt: 'Nuori köysimies pitää L’Aiglen köyttä irti vedestä Suezin '
+            + 'kanavan juhlavissa avajaisissa.',
           selite: 'Nuoren egyptiläisen köysimiehen tehtävä on arkinen: pitää '
             + 'L’Aiglen kiinnitysköysi poissa vedestä, vaikka kannella seisoo '
             + 'Ranskan keisarinna Eugénie. Hänen ympärillään Port Said on '
@@ -2941,6 +3064,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-kauko-photo-v4.jpg',
+              lyhyt: 'L’Aigle johtaa 77 aluksen jonoa Suezin kanavaan, ja '
+                + 'hiljainen ranta muuttuu meriväyläksi.',
               selite: 'L’Aigle kääntyy kanavaan ensimmäisenä, ja sen takana '
                 + 'odottaa 77 alusta. Hiekkarannalla lapsi laskee lippuja ja '
                 + 'savupiippuja sormillaan; hänelle maailman merireittien muutos '
@@ -2952,6 +3077,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lehti-photo-v4.jpg',
+              lyhyt: 'Kuvittaja lähettää Port Saidista muistiinpanot, joista '
+                + 'Lontoossa tehdään avajaisten puukaiverrus.',
               selite: 'Kuvittaja William Simpson lähetti Port Saidista '
                 + 'kenttämuistiinpanot “kaikkien kansojen väkijoukosta”, ja '
                 + 'Lontoossa ne muutettiin viikkoja myöhemmin puukaiverrukseksi. '
@@ -2980,6 +3107,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Digital Giza on Harvardin yliopiston projekti, joka on '
                 + 'koonnut kaiken Gizan pyramidikentästä tiedetyn yhteen '
                 + 'paikkaan.',
+              lyhyt: 'Gizan sfinksi hakattiin tasangon kalkkikivestä ja on Egyptin vanhin tunnettu monumentaaliveistos.',
               selite: 'Gizan sfinksi hakattiin tasangon kalkkikivestä, ja se '
                 + 'on Egyptin vanhin tunnettu monumentaaliveistos.',
               lahde: 'kallerna, Wikimedia Commons (CC BY-SA 3.0)',
@@ -2990,6 +3118,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Karnak Temple Great Hypostyle Hall 2014.jpg',
               teksti: 'Karnakin temppelialuetta rakennettiin yli tuhat vuotta, ja '
                 + 'sen seinät, pylväät ja obeliskit ovat täynnä hieroglyfejä.',
+              lyhyt: 'Karnakin temppelialueen rakentaminen alkoi Senusret I:n aikana ja oli Amonin tärkein palvontapaikka.',
               selite: 'Karnakin temppelialueen rakentaminen alkoi Senusret '
                 + 'I:n aikana ja jatkui ptolemaiosten kaudelle, ja se oli '
                 + 'Amonin tärkein palvontapaikka.',
@@ -3003,6 +3132,7 @@ export const MAA_KATEGORIAT = {
                 + 'neljänkymmenen vuoden ajan, ja sen arkistoon on kertynyt '
                 + 'valokuvia, muistikirjoja, karttoja ja piirroksia koko '
                 + 'siltä ajalta.',
+              lyhyt: 'Deir el-Medina oli käsityöläiskylä, jossa asuivat Kuninkaiden laakson hautoja tehneet työmiehet.',
               selite: 'Deir el-Medina oli käsityöläiskylä, jossa asuivat '
                 + 'Kuninkaiden laakson hautoja tehneet työmiehet; kylän '
                 + 'muinainen nimi oli Set maat eli Totuuden paikka.',
@@ -3021,6 +3151,7 @@ export const MAA_KATEGORIAT = {
                 + 'Egyptille omistettu museo, ja sen kokoelma on Kairon '
                 + 'jälkeen laajin. Esineet on kuvattu ja viety verkkoon '
                 + 'yksitellen.',
+              lyhyt: 'Sekhmet on egyptiläisen mytologian leijonapäinen sodan ja lääkinnän jumalatar.',
               selite: 'Sekhmet on egyptiläisen mytologian leijonapäinen '
                 + 'sodan ja lääkinnän jumalatar, jota kutsuttiin myös Ran '
                 + 'silmäksi.',
@@ -3033,6 +3164,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Aleksandrian antiikin kirjasto tuhoutui kauan sitten, '
                 + 'mutta sen muistoksi rakennettiin samalle seudulle uusi. '
                 + 'Bibliotheca Alexandrina avattiin vuonna 2002.',
+              lyhyt: 'Bibliotheca Alexandrina avattiin 2002 kirjastona ja kulttuurikeskuksena Aleksandriaan.',
               selite: 'Bibliotheca Alexandrina avattiin 2002 kirjastona ja '
                 + 'kulttuurikeskuksena Välimeren rannalle Aleksandriaan.',
               lahde: 'D-Stanley, Wikimedia Commons (CC BY 2.0)',
@@ -3065,6 +3197,7 @@ export const MAA_KATEGORIAT = {
             + 'kirjaimellinen väite. Pinjojen reunustamalla Via Appialla '
             + 'voi kävellä saman kiveyksen päällä kuin roomalaiset kaksi '
             + 'vuosituhatta sitten.',
+          lyhyt: 'Via Appia oli Rooman tärkeimpiä valtateitä, ja se yhdisti pääkaupungin Brindisiin.',
           selite: 'Via Appia oli Rooman varhaisimpia ja tärkeimpiä '
             + 'valtateitä, ja se yhdisti pääkaupungin Brindisiin Italian '
             + 'kaakkoiskolkassa.',
@@ -3084,6 +3217,7 @@ export const MAA_KATEGORIAT = {
             + 'kolmasosa kaupungista on edelleen tuhkan alla. Kadun päässä '
             + 'häämöttää itse tulivuori, joka ei ole sammunut: se on vain '
             + 'tauolla.',
+          lyhyt: 'Pompeji hautautui Vesuviuksen purkauksessa vuonna 79 tuhka- ja hohkakivikerroksen alle.',
           selite: 'Pompeji hautautui Vesuviuksen purkauksessa vuonna 79 '
             + 'neljän–kuuden metrin tuhka- ja hohkakivikerroksen alle, joka '
             + 'säilytti kaupungin lähes sellaisenaan.',
@@ -3103,6 +3237,7 @@ export const MAA_KATEGORIAT = {
             + 'kupoli, eikä kukaan tiennyt varmasti, pysyisikö se '
             + 'pystyssä: se rakennettiin ilman tukitelineitä tavalla, '
             + 'jota insinöörit ihmettelevät yhä.',
+          lyhyt: 'Firenzen tuomiokirkko aloitettiin 1296 ja valmistui 1436 Brunelleschin kupolin myötä.',
           selite: 'Firenzen tuomiokirkon rakentaminen aloitettiin 1296 '
             + 'Arnolfo di Cambion piirustusten mukaan, ja se valmistui 1436, '
             + 'kun Filippo Brunelleschi sai kupolin katetuksi.',
@@ -3122,6 +3257,7 @@ export const MAA_KATEGORIAT = {
             + 'kädenpuristuksella. Kun valtio syntyi, vain harva osasi '
             + 'yhteistä italiaa — kieli opittiin vasta koulusta, '
             + 'radiosta ja televisiosta.',
+          lyhyt: 'Alinarin veljesten valokuva Giuseppe Garibaldista, joka johti sotaretkensä Italian yhdistämiseen.',
           selite: 'Alinarin veljesten valokuva Giuseppe Garibaldista '
             + '(1807–1882), joka johti sotaretkensä Italian yhdistämiseen ja '
             + 'Italian kuningaskunnan syntyyn.',
@@ -3174,6 +3310,7 @@ export const MAA_KATEGORIAT = {
             + 'kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. '
             + 'Unesco otti napolilaisen pizzanpaiston aineettoman '
             + 'kulttuuriperinnön luetteloonsa 2017.',
+          lyhyt: 'Napolilainen pizza margherita maustetaan tomaateilla, mozzarellalla, basilikalla ja oliiviöljyllä.',
           selite: 'Napolilainen pizza margherita maustetaan käsin '
             + 'murskatuilla kuoritulla tomaateilla, mozzarellalla, tuoreella '
             + 'basilikalla ja oliiviöljyllä.',
@@ -3193,6 +3330,7 @@ export const MAA_KATEGORIAT = {
             + 'kiloa vuodessa, enemmän kuin kukaan muu maailmassa, ja '
             + 'väittely oikeasta muodosta oikealle kastikkeelle on '
             + 'kansallislaji siinä missä jalkapallokin.',
+          lyhyt: 'Pasta valmistetaan durumvehnäjauhon ja veden tai kananmunan taikinasta, muotoillen ja keittäen.',
           selite: 'Pasta valmistetaan tavallisesti durumvehnäjauhon ja veden '
             + 'tai kananmunan taikinasta, joka muotoillaan ja keitetään.',
           lahde: 'ChiemseeMan, Wikimedia Commons (PD)',
@@ -3210,6 +3348,7 @@ export const MAA_KATEGORIAT = {
             + 'puristettua ja pikaista. Monessa baarissa kahvi maksaa '
             + 'tiskillä vähemmän kuin pöydässä: istumisesta veloitetaan, '
             + 'kahvista ei juuri.',
+          lyhyt: 'Espresso puristetaan hienoksi jauhetuista pavuista kuumalla vedellä ja korkealla paineella.',
           selite: 'Espresso puristetaan hienoksi jauhetuista pavuista '
             + 'kuumalla vedellä ja korkealla paineella, ja annos on '
             + 'tavallisesti vain 25–30 millilitraa.',
@@ -3227,6 +3366,7 @@ export const MAA_KATEGORIAT = {
             + 'maitoa, suolaa ja aikaa. Kiekot ovat niin arvokkaita, '
             + 'että jotkut italialaiset pankit hyväksyvät niitä lainan '
             + 'vakuudeksi — holveissa kypsyy juustoa kuin kultaharkkoja.',
+          lyhyt: 'Parmigiano Reggiano on lehmänmaidosta valmistettu kova juusto, jota kypsytetään vuoden verran.',
           selite: 'Parmigiano Reggiano on lehmänmaidosta valmistettu kova '
             + 'rakeinen juusto, jota kypsytetään vähintään kaksitoista '
             + 'kuukautta.',
@@ -3252,6 +3392,7 @@ export const MAA_KATEGORIAT = {
             + 'anna virheitä anteeksi. Sanat, joilla musiikista puhutaan '
             + 'kaikkialla maailmassa, ovat italiaa: piano tarkoittaa '
             + 'hiljaa, forte lujaa ja allegro iloisesti.',
+          lyhyt: 'Milanon La Scala vihittiin 1778, ja avajaisissa esitettiin Salierin ooppera Europa riconosciuta.',
           selite: 'Milanon La Scala vihittiin 3. elokuuta 1778, ja '
             + 'avajaisissa esitettiin Antonio Salierin ooppera Europa '
             + 'riconosciuta.',
@@ -3270,6 +3411,7 @@ export const MAA_KATEGORIAT = {
             + '"Vittorio Emanuele Re D\'Italia". Kun säveltäjä kuoli '
             + '1901, Milanon kaduilla sadattuhannet lauloivat juuri sen '
             + 'kuoron — hiljaa, ilman johtajaa.',
+          lyhyt: 'Giovanni Boldinin muotokuva Giuseppe Verdistä, joka hallitsi italialaista oopperaa vuosikymmeniä.',
           selite: 'Giovanni Boldinin muotokuva Giuseppe Verdistä '
             + '(1813–1901), joka hallitsi italialaista oopperaa Rossinin, '
             + 'Bellinin ja Donizettin jälkeen.',
@@ -3292,6 +3434,7 @@ export const MAA_KATEGORIAT = {
             + 'puusta, lakasta ja liimasta, mutta varmaa vastausta ei '
             + 'tiedä kukaan. Cremonassa on edelleen yli sata '
             + 'viulunrakentajan verstasta, ja käsityö jatkuu.',
+          lyhyt: 'Antonio Stradivari teki Cremonassa arviolta 1 116 soitinta, joista noin 650 on säilynyt.',
           selite: 'Antonio Stradivari (n. 1644–1737) teki Cremonassa '
             + 'arviolta 1 116 soitinta, joista noin 650 on säilynyt tähän '
             + 'päivään.',
@@ -3310,6 +3453,7 @@ export const MAA_KATEGORIAT = {
             + 'aurinkoni", ja se sävellettiin 1898 — ei Napolissa vaan '
             + 'Odessassa, jossa napolilainen säveltäjä oli kiertueella '
             + 'ja ikävöi kotiin.',
+          lyhyt: 'Napolilainen O sole mio kirjoitettiin 1898 Giovanni Capurron sanoin ja Eduardo di Capuan sävelin.',
           selite: 'Napolilainen O sole mio kirjoitettiin 1898: sanat teki '
             + 'Giovanni Capurro ja sävelen Eduardo di Capua yhdessä Alfredo '
             + 'Mazzucchin kanssa.',
@@ -3354,6 +3498,7 @@ export const MAA_KATEGORIAT = {
             + 'odotti valmiina kiven sisällä, ja hän poisti vain '
             + 'ylimääräisen. Alkuperäinen on Firenzen galleriassa; '
             + 'aukiolla seisoo kopio.',
+          lyhyt: 'Michelangelo veisti Davidin marmorista 1501–1504; 5,17-metrinen patsas oli aikansa jättiläisveistos.',
           selite: 'Michelangelo veisti Davidin marmorista 1501–1504, ja '
             + '5,17-metrinen patsas oli antiikin jälkeen ensimmäinen '
             + 'jättiläiskokoinen marmoriveistos.',
@@ -3372,6 +3517,7 @@ export const MAA_KATEGORIAT = {
             + 'samassa seinässä, ja sitä katsotaan vartin vuoroissa '
             + 'kuivatussa ilmassa, muutama kymmenen ihmistä kerrallaan. '
             + 'Hauras alkuperäinen voittaa silti kaikki kopiot.',
+          lyhyt: 'Leonardon seinämaalaus kuvaa hetkeä, jolloin Jeesus kertoo opetuslapsensa kavaltavan hänet.',
           selite: 'Leonardon seinämaalaus vuosilta 1495–1498 kuvaa hetkeä, '
             + 'jolloin Jeesus on juuri kertonut yhden opetuslapsistaan '
             + 'kavaltavan hänet.',
@@ -3390,6 +3536,7 @@ export const MAA_KATEGORIAT = {
             + 'Vuosisatoja myöhemmin siitä on tullut yksi maailman '
             + 'tunnistetuimmista kuvista — Venus katsoo ohi, kuin ei '
             + 'huomaisi koko mainetta.',
+          lyhyt: 'Sandro Botticelli maalasi teoksen 1480-luvulla; se esittää Venusta saapumassa rantaan merestä.',
           selite: 'Sandro Botticelli maalasi teoksen todennäköisesti '
             + '1480-luvun puolivälissä, ja se esittää Venusta saapumassa '
             + 'rantaan merestä syntyneenä.',
@@ -3409,6 +3556,7 @@ export const MAA_KATEGORIAT = {
             + 'ja varhainen kuolema epäselvissä oloissa. Rooman '
             + 'kirkoissa hänen teoksiaan voi yhä katsoa ilmaiseksi — '
             + 'kolikolla valot syttyvät.',
+          lyhyt: 'Caravaggio maalasi teoksen 1599–1600 San Luigi dei Francesin Contarelli-kappeliin.',
           selite: 'Caravaggio maalasi teoksen 1599–1600 San Luigi dei '
             + 'Francesin Contarelli-kappeliin, jossa se yhä on kahden muun '
             + 'Matteus-aiheisen maalauksen rinnalla.',
@@ -3447,6 +3595,7 @@ export const MAA_KATEGORIAT = {
             + 'Paikalliset elävät tulivuorensa kanssa kuin ison '
             + 'eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään '
             + 'sadosta.',
+          lyhyt: 'Etna on Sisilian itärannikon toimiva tulivuori, Euroopan korkeimpia, huippu noin 3 400 metrissä.',
           selite: 'Etna on Sisilian itärannikolla kohoava toimiva tulivuori, '
             + 'Euroopan korkeimpia, ja sen huippu on nykyisin noin 3 400 '
             + 'metrissä.',
@@ -3465,6 +3614,7 @@ export const MAA_KATEGORIAT = {
             + 'tornia ovat vuoriston tunnus, ja niiden ympäri kävelee '
             + 'puolessa päivässä. Unesco liitti Dolomiitit '
             + 'maailmanperintöluetteloon 2009.',
+          lyhyt: 'Dolomiitit kuuluvat eteläisiin kalkkikivialppeihin Koillis-Italiassa.',
           selite: 'Dolomiitit kuuluvat eteläisiin kalkkikivialppeihin ja '
             + 'ulottuvat Adigejoelta Piaven laaksoon Koillis-Italiassa.',
           lahde: 'Andremere, Wikimedia Commons (CC BY-SA 4.0)',
@@ -3483,6 +3633,7 @@ export const MAA_KATEGORIAT = {
             + 'maailmanperintökohde — ei koskemattomana luontona, vaan '
             + 'siksi että ihminen ja maisema muovasivat toisiaan '
             + 'satojen vuosien ajan.',
+          lyhyt: 'Val d\'Orcia on Sienan eteläpuolinen viljelty kukkulaseutu, johon kuuluu muun muassa Pienza.',
           selite: 'Val d\'Orcia on Sienan eteläpuolinen viljelty '
             + 'kukkulaseutu, jonka kyliä ovat muun muassa 1400-luvulla '
             + 'ihannekaupungiksi rakennettu Pienza ja Montalcino.',
@@ -3503,6 +3654,7 @@ export const MAA_KATEGORIAT = {
             + '50 000 kaurista, ja jokainen polveutuu Gran Paradison '
             + 'lauman eläimistä. Sarvekas kiipeilijä on nykyään '
             + 'puiston tunnuksessa.',
+          lyhyt: 'Alppikauris elää jyrkillä rinteillä jopa 3 300 metrin korkeudessa; uroksilla on isot sarvet.',
           selite: 'Alppikauris elää jyrkillä rinteillä ja avoimilla '
             + 'alppiniityillä jopa 3 300 metrin korkeudessa, ja uroksilla on '
             + 'selvästi naaraita suuremmat sarvet.',
@@ -3543,6 +3695,7 @@ export const MAA_KATEGORIAT = {
             + 'nuori. Ensimmäinen Italiassa painettu ohje ilmestyi vasta '
             + 'vuonna 1954, ja siinä oli mukana valkosipulia ja sveitsiläistä '
             + 'gruyère-juustoa.',
+          lyhyt: 'Carbonara tehdään suolatusta sianlihasta, juustosta, kananmunasta ja mustapippurista.',
           selite: 'Carbonara tehdään suolatusta sianlihasta, kovasta '
             + 'juustosta, kananmunasta ja mustapippurista, ja se sai '
             + 'nykymuotonsa vasta 1900-luvun puolivälissä.',
@@ -3632,6 +3785,8 @@ export const MAA_KATEGORIAT = {
             + 'ihmisen jäännökset Pompejista ja Herculaneumista. Perinteinen '
             + 'päivä on 24. elokuuta, mutta löydöt — syksyn hedelmät, lämmin '
             + 'vaatetus — puhuvat lokakuun puolesta.',
+          lyhyt: 'Pompejilainen kauppias yrittää pelastaa omaisuutensa '
+            + 'hohkakivien alkaessa ropista katolle.',
           selite: 'Kuvituksen nimetön torikauppias yrittää vielä pelastaa vaa’an '
             + 'ja rahalippaan, kun hänen tyttärensä kuuntelee hohkakivien alkavaa '
             + 'ropinaa katoksella. He eivät tiedä, onko viisaampaa suojautua vai '
@@ -3643,6 +3798,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Pompeji 79 — ropina katolla',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-kauko-photo-v4.jpg',
+              lyhyt: 'Plinius vertaa Vesuviuksen pilveä pinjapuuhun, mutta '
+                + 'forumilla vertaus ei vielä auta ketään.',
               selite: 'Plinius vertasi Vesuviuksen päälle kohoavaa pilveä '
                 + 'pinjapuuhun: kapea runko levisi korkealla oksistoksi. '
                 + 'Forumilla vertaus ei vielä auta ketään. Yksi perhe kokoaa '
@@ -3682,6 +3839,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Uffizi rakentaa verkkoon omia näyttelyitään, jotka kootaan '
                 + 'yhden aiheen ympärille ja jotka pysyvät auki senkin '
                 + 'jälkeen, kun museon oma näyttely on purettu.',
+              lyhyt: 'Firenzen Uffizi on Italian tunnetuimpia museoita, ja sen kokoelmien painopiste on renessanssissa.',
               selite: 'Firenzen Uffizi on Italian tunnetuimpia ja '
                 + 'vierailluimpia museoita, ja sen kokoelmien painopiste on '
                 + 'renessanssissa.',
@@ -3693,6 +3851,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'North Wall of Cubiculum 20 in House of Neptune Pompeii VI 5,3.jpg',
               teksti: 'Pompejin kaivausalueen oma sivusto kertoo, mitä '
                 + 'kaupungista on juuri nyt kaivettu esiin.',
+              lyhyt: 'Pompejin seinämaalaukset jaetaan neljään tyylikauteen, jotka August Mau erotti kaivausten pohjalta.',
               selite: 'Pompejin seinämaalaukset jaetaan neljään '
                 + 'tyylikauteen, jotka arkeologi August Mau erotti juuri '
                 + 'näiden kaivausten perusteella.',
@@ -3711,6 +3870,7 @@ export const MAA_KATEGORIAT = {
                 + 'vanhimmista kirjastoista, ja sen käsikirjoituksia ei '
                 + 'lainata. Sen sijaan niitä on kuvattu tuhansia sivu '
                 + 'kerrallaan, ja kuvat ovat kenen tahansa katsottavissa.',
+              lyhyt: 'Käsikirjoitus sisältää Terentiuksen komediat, jotka ovat kaikki säilyneet kokonaisina.',
               selite: 'Käsikirjoitus sisältää roomalaisen näytelmäkirjailija '
                 + 'Terentiuksen (n. 195–159 eaa.) komediat, jotka ovat '
                 + 'kaikki säilyneet kokonaisina.',
@@ -3724,6 +3884,7 @@ export const MAA_KATEGORIAT = {
                 + 'koneita, pyörteitä, kasveja, ostoslistoja ja '
                 + 'muistiinpanoja, jotka hän kirjoitti peilikuvana oikealta '
                 + 'vasemmalle.',
+              lyhyt: 'Codex Atlanticus on Leonardon laajin muistiinpanokokoelma, 1 119 lehteä vuosilta 1478–1519.',
               selite: 'Codex Atlanticus on Leonardon laajin '
                 + 'muistiinpanokokoelma: 1 119 lehteä vuosilta 1478–1519 '
                 + 'lennosta ja aseista matematiikkaan ja kasvitieteeseen.',
@@ -3737,6 +3898,7 @@ export const MAA_KATEGORIAT = {
                 + 'säilynyttä kaukoputkea. Ne ovat puisia putkia, joissa on '
                 + 'nahkapäällys — ei mitään sen kummempaa, ja silti niillä '
                 + 'nähtiin ensimmäisenä Jupiterin kuut ja Kuun vuoret.',
+              lyhyt: 'Firenzen Museo Galileo on maailman merkittävimpiä tieteellisten kojeiden kokoelmia.',
               selite: 'Firenzen Museo Galileon kokoelma on maailman '
                 + 'merkittävimpiä tieteellisten kojeiden kokoelmia, ja se on '
                 + 'nimetty Galileo Galilein mukaan.',
@@ -3803,6 +3965,7 @@ export const MAA_KATEGORIAT = {
             + 'lähes kaksituhatta vuotta. Suurin uhka ei ollut aika '
             + 'vaan autojen pakokaasu, joka alkoi syödä kiveä 1970-'
             + 'luvulla; nyt liikenne on ohjattu muualle.',
+          lyhyt: 'Segovian akvedukti rakennettiin 1. vuosisadalla ja oli käytössä vuoteen 1973.',
           selite: 'Segovian akvedukti rakennettiin ensimmäisellä '
             + 'vuosisadalla tuomaan vettä 17 kilometrin päästä vuorilta, ja '
             + 'se oli käytössä vuoteen 1973.',
@@ -3823,6 +3986,7 @@ export const MAA_KATEGORIAT = {
             + 'rakennettiin katedraali — kaupunki pyysi kuningas '
             + 'Kaarle V:tä estämään työn, ja tämän kerrotaan '
             + 'katuneen lupaansa nähtyään lopputuloksen.',
+          lyhyt: 'Córdoban Mezquita-Catedral oli aiemmin al-Andalusin suuri moskeija, nyt katedraali.',
           selite: 'Córdoban Mezquita-Catedral oli aiemmin al-Andalusin suuri '
             + 'moskeija ja on nykyään Córdoban hiippakunnan katedraali.',
           lahde: 'Alvaro.vinuela.carnicero, Wikimedia Commons (CC BY-SA 4.0)',
@@ -3841,6 +4005,7 @@ export const MAA_KATEGORIAT = {
             + '70 kilometrin tuntinopeuteen ja nousee 21 metrin '
             + 'korkeuteen. Alkuperäinen syy oli arkinen: pitkän '
             + 'matkan kulkeneet pyhiinvaeltajat haisivat.',
+          lyhyt: 'Santiago de Compostelan katedraalin Botafumeiro heilahtaa messussa jopa 68 km/h nopeuteen.',
           selite: 'Santiago de Compostelan katedraalin Botafumeiro on '
             + 'suitsutusastia, joka heilahtaa pyhiinvaeltajien messussa jopa '
             + '68 kilometrin tuntinopeuteen.',
@@ -3881,6 +4046,7 @@ export const MAA_KATEGORIAT = {
             + 'kertaan. Ruoka on talvista ja raskasta, ja Madridin '
             + 'vanhat ravintolat tarjoavat sitä vain tiettyinä '
             + 'viikonpäivinä.',
+          lyhyt: 'Cocido madrileño on Madridin seudun kikhernepata, joka juontuu sefardijuutalaisesta perinteestä.',
           selite: 'Cocido madrileño on Madridin seudun kikhernepata, jonka '
             + 'juuret johtavat sefardijuutalaiseen adafina-perinteeseen.',
           lahde: 'Smnt, Wikimedia Commons (CC BY-SA 4.0)',
@@ -3902,6 +4068,7 @@ export const MAA_KATEGORIAT = {
             + 'kuivataan sen jälkeen kolmesta neljään vuotta. Dehesa '
             + 'on ihmisen tekemä maisema, joka on säilynyt satoja '
             + 'vuosia juuri siksi, että se kannattaa.',
+          lyhyt: 'Jamón ibérico kuivataan mustan iberiansian reidestä ja on espanjalaisen keittiön peruspilareita.',
           selite: 'Jamón ibérico kuivataan mustan iberiansian reidestä, ja '
             + 'se on sekä espanjalaisen että portugalilaisen keittiön '
             + 'peruspilareita.',
@@ -3920,6 +4087,7 @@ export const MAA_KATEGORIAT = {
             + 'sanomalehtiin asti. Ruoka syötiin suoraan pannusta '
             + 'puulusikoilla, jokainen omalta sektoriltaan, ja '
             + 'parasta on socarrat: pohjaan paahtunut rapea riisi.',
+          lyhyt: 'Paella on kotoisin Valencian seudulta; alkuperäisessä versiossa on kania, kanaa, ankkaa ja etanoita.',
           selite: 'Paella on kotoisin Valencian seudulta, ja alkuperäisessä '
             + 'valencialaisessa versiossa on kania, kanaa, ankkaa ja '
             + 'etanoita.',
@@ -3938,6 +4106,7 @@ export const MAA_KATEGORIAT = {
             + 'viininviljelijöillä oli poikkeuksellisen suuri sato '
             + 'myytävänä. Nykyään rypäleitä myydään purkeissa '
             + 'valmiiksi kuorittuina ja siemenettöminä.',
+          lyhyt: 'Puerta del Sol on Espanjan tieverkon nollapiste ja tahdittaa uudenvuodenyön rypäleensyöntiä.',
           selite: 'Puerta del Sol on Espanjan tieverkon nollapiste, ja '
             + 'aukion kellon lyönnit tahdittavat kahdentoista rypäleen '
             + 'syöntiä uudenvuodenyönä.',
@@ -3956,6 +4125,7 @@ export const MAA_KATEGORIAT = {
             + 'esiliina. Kausi kestää marraskuusta huhtikuuhun. Valls, josta '
             + 'laji on kotoisin, järjestää calçotada-juhlansa tammikuun '
             + 'viimeisenä sunnuntaina, ja siellä kilpaillaan myös syömisessä.',
+          lyhyt: 'Calçot on mieto pitkä kevätsipuli, jota kasvatetaan multaamalla vartta syksyn ja talven ajan.',
           selite: 'Calçot on mieto pitkä kevätsipuli, joka kasvatetaan '
             + 'multaamalla vartta syksyn ja talven ajan; Vallsin calçotilla '
             + 'on EU:n suojattu maantieteellinen merkintä.',
@@ -3972,6 +4142,7 @@ export const MAA_KATEGORIAT = {
             + 'paljaana ja tomaatinpuolikas viereen, jolloin jokainen hieroo '
             + 'omansa. Tomaatiksi kasvatetaan omaa lajiketta, tomàquet de '
             + 'penjar, joka sidotaan letiksi roikkumaan ja säilyy talven yli.',
+          lyhyt: 'Pa amb tomàquet on katalonialaista perusruokaa: leipä hierotaan tomaatilla ja oliiviöljyllä.',
           selite: 'Pa amb tomàquet on katalonialaisen keittiön perusruokaa: '
             + 'leipä hierotaan tuoreella tomaatilla ja maustetaan '
             + 'oliiviöljyllä ja suolalla.',
@@ -4011,6 +4182,7 @@ export const MAA_KATEGORIAT = {
             + 'katsoo sinua takaisin ja panee sinut mallin paikalle. '
             + 'Pradossa se on oma huoneensa, ja sen edessä seisotaan '
             + 'joka päivä jonossa.',
+          lyhyt: 'Velázquezin 1656 maalaama teos on länsimaisen maalaustaiteen analysoiduimpia ja monitulkintaisimpia.',
           selite: 'Velázquezin vuonna 1656 maalaama teos on länsimaisen '
             + 'maalaustaiteen analysoiduimpia: sen sommittelu jättää auki, '
             + 'mikä teoksessa on totta ja mikä harhaa.',
@@ -4030,6 +4202,7 @@ export const MAA_KATEGORIAT = {
             + 'vääntyneinä. Ampujilla ei näy kasvoja lainkaan. '
             + 'Maalauksesta tuli malli lähes kaikelle sotaa '
             + 'kuvaavalle taiteelle sen jälkeen.',
+          lyhyt: 'Goya maalasi teoksen 1814 muistoksi madridilaisten vastarinnasta Napoleonin joukoille vuonna 1808.',
           selite: 'Goya maalasi teoksen 1814 muistoksi madridilaisten '
             + 'vastarinnasta Napoleonin joukoille kaupungin miehityksen '
             + 'aikana 1808.',
@@ -4049,6 +4222,7 @@ export const MAA_KATEGORIAT = {
             + 'siinä kirkossa, jota varten se maalattiin 1586: '
             + 'alaosassa Toledon herrat mustissa kauluksissaan, '
             + 'yläosassa taivas.',
+          lyhyt: 'El Grecon 1586 maalaama teos kertoo legendan ja jakautuu taivaalliseen ja maalliseen osaan.',
           selite: 'El Grecon vuonna 1586 maalaama teos kertoo paikallisen '
             + 'legendan ja jakautuu ylempään taivaalliseen ja alempaan '
             + 'maalliseen osaan.',
@@ -4068,6 +4242,7 @@ export const MAA_KATEGORIAT = {
             + 'katsoi mallia peilistä ylösalaisin. Rakennus '
             + 'valmistuu aikaisintaan 2030-luvulla, eli työtä on '
             + 'kestänyt yli 140 vuotta.',
+          lyhyt: 'Gaudín suunnittelema Sagrada Família on maailman korkein kirkko; paavi vihki sen basilikaksi 2010.',
           selite: 'Antoni Gaudín suunnittelema Sagrada Família on maailman '
             + 'korkein kirkko, ja paavi Benedictus XVI vihki sen basilikaksi '
             + '7. marraskuuta 2010.',
@@ -4108,6 +4283,7 @@ export const MAA_KATEGORIAT = {
             + 'jazzin harmoniat ja cajón-rummun 1970-luvulla; '
             + 'perinteen vartijat suuttuivat, ja lopputuloksesta '
             + 'tuli uusi perinne.',
+          lyhyt: 'Flamenco kehittyi Andalusian kansanmusiikkiperinteistä gitano-yhteisössä.',
           selite: 'Flamenco kehittyi Andalusian kansanmusiikkiperinteistä '
             + 'gitano-yhteisössä, ja se tunnetaan myös Extremadurassa ja '
             + 'Murciassa.',
@@ -4132,6 +4308,7 @@ export const MAA_KATEGORIAT = {
             + 'espanjalainen sävelmä. Rodrigo kertoi myöhemmin sen '
             + 'kertovan surusta: pariskunnan menettämästä '
             + 'esikoisesta.',
+          lyhyt: 'Joaquín Rodrigo sävelsi kitarakonserttonsa Concierto de Aranjuez 1939.',
           selite: 'Joaquín Rodrigo sävelsi kitarakonserttonsa Concierto de '
             + 'Aranjuez vuonna 1939, ja se nosti hänet 1900-luvun '
             + 'tunnetuimpiin espanjalaissäveltäjiin.',
@@ -4156,6 +4333,7 @@ export const MAA_KATEGORIAT = {
             + 'olivat pahvia — ja se soi. Kaikki nykyiset '
             + 'klassiset ja flamencokitarat noudattavat hänen '
             + 'mittojaan.',
+          lyhyt: 'Antonio de Torres Jurado oli 1800-luvun tärkein espanjalainen kitaranrakentaja.',
           selite: 'Antonio de Torres Jurado (1817–1892) oli 1800-luvun '
             + 'tärkein espanjalainen kitaranrakentaja, ja lähes kaikki '
             + 'nykyiset kitarat perustuvat hänen mittoihinsa.',
@@ -4223,6 +4401,7 @@ export const MAA_KATEGORIAT = {
             + 'marjapelloille ja kuivat vuodet ovat kutistaneet '
             + 'lammikoita niin, että osa niistä ei enää täyty '
             + 'joka vuosi.',
+          lyhyt: 'Doñanan kansallispuisto suojelee Guadalquivirin suiston kosteikkoja yli 540 neliökilometrillä.',
           selite: 'Doñanan kansallispuisto suojelee Guadalquivirin suiston '
             + 'kosteikkoja, matalia puroja ja dyynejä yli 540 '
             + 'neliökilometrin alalla.',
@@ -4242,6 +4421,7 @@ export const MAA_KATEGORIAT = {
             + 'rakennettiin alikulkuja. Nyt niitä on yli '
             + 'kaksituhatta, ja laji siirrettiin luokasta '
             + '"äärimmäisen uhanalainen" luokkaan "vaarantunut".',
+          lyhyt: 'Iberianilves elää vain Iberian niemimaalla; sen kanta romahti 1900-luvulla metsästyksen takia.',
           selite: 'Iberianilves elää vain Iberian niemimaalla, ja sen kanta '
             + 'romahti 1900-luvulla metsästyksen ja elinympäristöjen '
             + 'pirstoutumisen takia.',
@@ -4261,6 +4441,7 @@ export const MAA_KATEGORIAT = {
             + 'siellä mönkijöitään. Vuori purkautui viimeksi 1909. '
             + 'Kanariansaaret ovat maantieteellisesti Afrikkaa, '
             + 'sata kilometriä Marokon rannikolta.',
+          lyhyt: 'Teneriffan Teide on 3 715 metrillään Espanjan korkein kohta ja kohoaa merenpohjasta 7 500 metriä.',
           selite: 'Teneriffan Teide on 3 715 metrillään Espanjan korkein '
             + 'kohta, ja merenpohjasta mitattuna se kohoaa 7 500 metriä.',
           lahde: 'Quartl, Wikimedia Commons (CC BY-SA 3.0)',
@@ -4305,6 +4486,7 @@ export const MAA_KATEGORIAT = {
             + 'kiivaasti. Ruokalistaa ei siis kannata pyytää: illan syö '
             + 'helpoiten kävelemällä baarista toiseen ja katsomalla, mitä '
             + 'eteen tuodaan.',
+          lyhyt: 'Tapaksiksi kutsutaan espanjalaisen keittiön pikkuannoksia, joista voi koota kokonaisen aterian.',
           selite: 'Tapaksiksi kutsutaan espanjalaisen keittiön '
             + 'pikkuannoksia, joita tarjoillaan kylminä tai lämpiminä ja '
             + 'joista voi koota kokonaisen aterian.',
@@ -4396,6 +4578,8 @@ export const MAA_KATEGORIAT = {
             + 'myöhemmin; Hardy selviää päivästä. Brittien 27 linjalaivaa '
             + 'murtavat liittouman 33 laivan rivin, mutta kannella voitto '
             + 'tarkoittaa ensin savua, melua ja tovereiden menettämistä.',
+          lyhyt: 'Nelson kysyy vielä vihollislinjan etäisyyttä hetkeä ennen '
+            + 'kohtalokasta Trafalgarin taistelua.',
           selite: 'Nelson kysyy kapteeni Hardylta vielä kerran vihollislinjan '
             + 'etäisyyttä; kumpikin tietää, että suunnitelma vie Victoryn suoraan '
             + 'lähitulitukseen. Hardy selviää päivästä, Nelson ei — heidän '
@@ -4408,6 +4592,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-kauko-photo-v3.jpg',
+              lyhyt: 'Nuori ruutipoika odottaa Victoryn kannella ensimmäistä '
+                + 'laukausta alivoimaisessa laivastossa.',
               selite: 'Ensimmäistä taisteluaan odottava nuori ruutipoika yrittää '
                 + 'lukea vanhempien merimiesten kasvoista, kuinka lähellä '
                 + 'ensimmäinen laukaus jo on. Nelsonin 27 alusta käyvät suuremman '
@@ -4420,6 +4606,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-trafalgar-the-times-1805-lehti-photo-v3.jpg',
+              lyhyt: 'Lontoo lukee samasta uutisesta sekä voiton Napoleonista '
+                + 'että Nelsonin kuoleman Trafalgarilla.',
               selite: 'Lontoolaiset lukevat samasta uutisesta voiton ja '
                 + 'menetyksen: Napoleonin laivasto on lyöty, mutta Nelson on '
                 + 'kuollut Victoryllä. Merimiesten perheille Collingwoodin '
@@ -4450,6 +4638,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Elchen daami on kalkkikivestä veistetty naisen rintakuva, '
                 + 'jonka iberialainen kuvanveistäjä teki yli kaksituhatta '
                 + 'vuotta sitten.',
+              lyhyt: 'Elchen nainen löytyi 1897 La Alcudian kaivauksilta ja on Madridin arkeologisessa museossa.',
               selite: 'Elchen nainen löytyi 1897 La Alcudian kaivauksilta, '
                 + 'ja tämä 300-luvulla eaa. veistetty iberialainen rintakuva '
                 + 'on Madridin arkeologisessa museossa.',
@@ -4463,6 +4652,7 @@ export const MAA_KATEGORIAT = {
                 + 'seinät maalattiin täyteen 1100-luvulla. Kun kävi ilmi, '
                 + 'että maalaukset olivat katoamassa, ne irrotettiin '
                 + '1920-luvulla seinistä ja siirrettiin Barcelonaan.',
+              lyhyt: 'Katalonian kansallinen taidemuseo tunnetaan romaanisten kirkkojen maalauksista Pyreneiden kylistä.',
               selite: 'Katalonian kansallinen taidemuseo tunnetaan '
                 + 'erityisesti romaanisten kirkkojen maalauksista, joita on '
                 + 'siirretty museoon Pyreneiden kylistä kuten Taüllista.',
@@ -4475,6 +4665,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Thyssen-Bornemiszan suku keräsi maalauksia kahdessa '
                 + 'polvessa, ja kokoelmasta tuli niin laaja, että Espanjan '
                 + 'valtio osti sen vuonna 1993.',
+              lyhyt: 'Thyssen-Bornemiszan museo täydentää Pradon ja Reina Sofían kokoelmia taiteen kultaisessa kolmiossa.',
               selite: 'Thyssen-Bornemiszan museo täydentää Pradon ja Reina '
                 + 'Sofían kokoelmia ja muodostaa niiden kanssa Madridin '
                 + 'taiteen kultaisen kolmion.',
@@ -4487,6 +4678,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Joan Miró maalasi kirkkailla väreillä muotoja, jotka '
                 + 'näyttävät yksinkertaisilta mutta joita ei osaa piirtää '
                 + 'perässä.',
+              lyhyt: 'Joan Mirón 22-metrinen veistos Dona i Ocell nousee Barcelonan Mirón puistossa.',
               selite: 'Joan Mirón 22-metrinen veistos Dona i Ocell nousee '
                 + 'Barcelonan Mirón puistossa, ja sen laatoituksen teki '
                 + 'taiteilijan avustaja Joan Gardy Artigas.',
@@ -4503,6 +4695,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Pavillon Cour des Lions Alhambra Granada Spain.jpg',
               teksti: 'Granadan Alhambra rakennettiin 1300-luvulla, kun kaupunki '
                 + 'oli vielä musliminhallitsijoiden pääkaupunki.',
+              lyhyt: 'Alhambran Leijonapiha rakennettiin Nasridi-sulttaani Muhammad V:n käskystä 1362–1391.',
               selite: 'Alhambran Leijonapiha rakennettiin Nasridi-sulttaani '
                 + 'Muhammad V:n käskystä vuosien 1362 ja 1391 välillä.',
               lahde: 'Jebulon, Wikimedia Commons (CC0)',
@@ -4513,6 +4706,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Title page first edition Don Quijote.jpg',
               teksti: 'Biblioteca Virtual Miguel de Cervantes on espanjankielisen '
                 + 'kirjallisuuden ilmainen verkkokirjasto.',
+              lyhyt: 'Miguel de Cervantesin Don Quijote julkaistiin 1605 ja 1615, ensimmäisenä nykyaikaisena romaanina.',
               selite: 'Miguel de Cervantesin Don Quijote julkaistiin '
                 + 'kahdessa osassa 1605 ja 1615, ja sitä pidetään '
                 + 'ensimmäisenä nykyaikaisena romaanina.',
@@ -4549,6 +4743,7 @@ export const MAA_KATEGORIAT = {
             + 'ei elä laivamato, joka syö puun muissa merissä — siksi '
             + 'laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on '
             + 'alkuperäistä puuta yli 95 prosenttia.',
+          lyhyt: 'Vuosina 1626–1628 rakennettu sotalaiva upposi neitsytmatkallaan ja nostettiin ehjänä 1961.',
           selite: 'Vuosina 1626–1628 rakennettu sotalaiva upposi '
             + 'neitsytmatkallaan noin 1 300 metrin jälkeen 10. elokuuta 1628 '
             + 'ja nostettiin lähes ehjänä pinnalle 1961.',
@@ -4568,6 +4763,7 @@ export const MAA_KATEGORIAT = {
             + 'Tukholmasta: kaupunki muureineen, kirkontorneineen ja '
             + 'ympäröivine hirsiaitoineen. Alkuperäinen taulu on '
             + 'kadonnut — Storkyrkanissa riippuu vuoden 1636 kopio.',
+          lyhyt: 'Vädersolstavlan kuvaa Tukholman yllä 1535 nähtyä halo-ilmiötä, vanhinta väristä kuvaa kaupungista.',
           selite: 'Vädersolstavlan kuvaa Tukholman yllä 20. huhtikuuta 1535 '
             + 'nähtyä halo-ilmiötä, ja se on vanhin värillinen kuva '
             + 'kaupungista.',
@@ -4587,6 +4783,7 @@ export const MAA_KATEGORIAT = {
             + 'oli lyöty islamilaisissa maissa Bagdadista Samarkandiin. '
             + 'Gotlantilaiset kävivät siis kauppaa Venäjän jokia pitkin '
             + 'aina Kaspianmerelle saakka ja toivat turkiksista hopeaa.',
+          lyhyt: 'Spillingsin aarre on maailman suurin viikinkiaikainen hopealöytö, 67 kiloa ja yli 14 000 kolikkoa.',
           selite: 'Spillingsin aarre on maailman suurin viikinkiaikainen '
             + 'hopealöytö: se painoi 67 kiloa ja sisälsi 14 295 kolikkoa, '
             + 'joista useimmat islamilaisia.',
@@ -4607,6 +4804,7 @@ export const MAA_KATEGORIAT = {
             + 'hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. '
             + 'Ensimmäinen kilpailu järjestettiin sanomalehden '
             + 'ehdotuksesta, ja siihen osallistui 119 hiihtäjää.',
+          lyhyt: 'Vasaloppet hiihdetään Bergasta Moraan, ja se on maailman vanhin ja suurin hiihtokilpailu.',
           selite: 'Vasaloppet hiihdetään maaliskuun ensimmäisenä sunnuntaina '
             + 'Bergasta Moraan, ja 90 kilometrin kisa on maailman vanhin ja '
             + 'osanottajamäärältään suurin hiihtokilpailu.',
@@ -4653,6 +4851,7 @@ export const MAA_KATEGORIAT = {
             + 'somekin on kertonut, että lihapullan resepti tuotiin '
             + 'maahan Turkista kuningas Kaarle XII:n mukana 1700-luvun '
             + 'alussa — asiaa on sen jälkeen kiistelty innokkaasti.',
+          lyhyt: 'Lihapullat tehdään jauhelihasta korppujauhoin, sipulein ja maustein.',
           selite: 'Lihapullat tehdään jauhelihasta, johon sekoitetaan '
             + 'yleensä korppujauhoja, sipulia ja mausteita; puolukkahillo '
             + 'kuuluu ruotsalaiseen tapaan tarjoiluun.',
@@ -4670,6 +4869,7 @@ export const MAA_KATEGORIAT = {
             + 'ja kallista, joten kalaa säilöttiin niukalla suolalla ja '
             + 'käymisellä. Perinteinen tarjoilu on ohut näkkileipä, '
             + 'perunaa ja sipulia. Ensimmäinen purkki avataan elokuussa.',
+          lyhyt: 'Surströmming on kevyesti suolattua ja käytettyä Itämeren silakkaa, syötyä Ruotsissa 1500-luvulta.',
           selite: 'Surströmming on kevyesti suolattua ja käytettyä Itämeren '
             + 'silakkaa, jota on syöty Ruotsissa ainakin 1500-luvulta.',
           lahde: 'hadyelsahar, Wikimedia Commons (CC BY-SA 4.0)',
@@ -4688,6 +4888,7 @@ export const MAA_KATEGORIAT = {
             + 'lokakuun neljännen päivän kanelipullan päiväksi. Päivä jäi '
             + 'elämään: sinä päivänä ruotsalaiset syövät arviolta useita '
             + 'miljoonia pullia enemmän kuin tavallisena päivänä.',
+          lyhyt: 'Kanelipulla on Pohjois-Euroopassa yleinen makea pulla; ruotsalaisversiossa on usein kardemummaa.',
           selite: 'Kanelipulla on Pohjois-Euroopassa yleinen hiivataikinasta '
             + 'leivottu makea pulla, ja ruotsalaiseen versioon tulee kanelin '
             + 'lisäksi usein kardemummaa.',
@@ -4707,6 +4908,7 @@ export const MAA_KATEGORIAT = {
             + 'vaikka nykyään suurin osa ravuista tuodaan ulkomailta. '
             + 'Ruotsin omat joet menetti 1900-luvulla rapurutto, joka '
             + 'levisi Amerikasta tuotujen rapujen mukana.',
+          lyhyt: 'Kräftskiva eli rapujuhla sai alkunsa Ruotsista ja ajoittuu elokuuhun ravustuskauden vuoksi.',
           selite: 'Kräftskiva eli rapujuhla sai alkunsa Ruotsista, ja se '
             + 'ajoittuu elokuuhun, koska ravustus oli pitkään sallittua '
             + 'vasta loppukesästä.',
@@ -4734,6 +4936,7 @@ export const MAA_KATEGORIAT = {
             + 'joka suunnitteli huonekalut ja tekstiilit. Sama ihanne '
             + 'näkyy yhä ruotsalaisissa huonekaluliikkeissä ympäri '
             + 'maailman.',
+          lyhyt: 'Carl Larsson tunnetaan akvarelleistaan, jotka kuvaavat perheen arkea kotona Sundbornissa.',
           selite: 'Carl Larsson (1853–1919) tunnetaan ennen kaikkea '
             + 'akvarelleistaan, jotka kuvaavat perheen arkea kotona '
             + 'Sundbornissa.',
@@ -4772,6 +4975,7 @@ export const MAA_KATEGORIAT = {
             + 'Kalpea keltainen taivas kertoo kellonajan tarkemmin kuin '
             + 'mikään kello. Zorn maalasi teoksen omassa kotikylässään '
             + 'ja käytti mallina naapureitaan, ei ammattimalleja.',
+          lyhyt: 'Anders Zornin 1897 maalaama Midsommardans esittää juhannusjuhlaa Nationalmuseumin kokoelmassa.',
           selite: 'Anders Zornin vuonna 1897 maalaama Midsommardans esittää '
             + 'perinteistä juhannusjuhlaa, ja tunnetuin versio on Tukholman '
             + 'Nationalmuseumissa.',
@@ -4791,6 +4995,7 @@ export const MAA_KATEGORIAT = {
             + 'kuolemastaan. Maailma näki ne kunnolla vasta 1980-luvulla, '
             + 'ja vasta silloin taidehistoriaa alettiin kirjoittaa '
             + 'uudestaan: abstrakti taide olikin alkanut Ruotsissa.',
+          lyhyt: 'Hilma af Klintin maalauksia pidetään länsimaisen taiteen ensimmäisinä abstrakteina töinä.',
           selite: 'Hilma af Klintin (1862–1944) maalauksia pidetään '
             + 'länsimaisen taiteen ensimmäisinä merkittävinä abstrakteina '
             + 'töinä, ja ne syntyivät ennen Kandinskya ja Mondriania.',
@@ -4837,6 +5042,7 @@ export const MAA_KATEGORIAT = {
             + '1300-luvulla. Välillä soitin melkein unohtui, mutta '
             + 'kansanmuusikot elvyttivät sen, ja nykyään sitä opetetaan '
             + 'taas musiikkiopistoissa.',
+          lyhyt: 'Nyckelharpa on jousisoitin, jonka sävelkorkeutta muutetaan kaulan näppäimillä keskiajalta asti.',
           selite: 'Nyckelharpa on jousisoitin, jonka sävelkorkeutta '
             + 'muutetaan kaulan näppäimillä; sen juuret ulottuvat '
             + 'keskiaikaiseen Eurooppaan.',
@@ -4860,6 +5066,7 @@ export const MAA_KATEGORIAT = {
             + 'sairaaloille jo kiertueen aikana. Sata vuotta myöhemmin '
             + 'hänen kasvonsa painettiin Ruotsin '
             + 'viidenkymmenen kruunun seteliin.',
+          lyhyt: 'Eduard Magnusin muotokuva Jenny Lindistä, Ruotsin satakielenä tunnetusta laulajattaresta.',
           selite: 'Eduard Magnusin muotokuva Jenny Lindistä (1820–1887), '
             + 'jota kutsuttiin Ruotsin satakieleksi ja joka teki 1850 '
             + 'suositun konserttikiertueen Yhdysvalloissa.',
@@ -4882,6 +5089,7 @@ export const MAA_KATEGORIAT = {
             + 'laulavat muidenkin maiden tähdet. Esiintymisasut tehtiin '
             + 'tahallaan mahdottomiksi — ne sai vähentää verotuksessa '
             + 'vain, jos niitä ei voinut käyttää arkena.',
+          lyhyt: 'ABBA perustettiin Tukholmassa 1972 ja voitti Eurovision 1974 kappaleella Waterloo.',
           selite: 'ABBA perustettiin Tukholmassa 1972, ja yhtye voitti '
             + 'Eurovision laulukilpailun 1974 kappaleella Waterloo.',
           lahde: 'Kåre Eide, Wikimedia Commons (CC0)',
@@ -4903,6 +5111,7 @@ export const MAA_KATEGORIAT = {
             + 'ABBA lähti Waterloineen maailmalle 1974, ja Ruotsi on '
             + 'voittanut euroviisut seitsemän kertaa — yhtä moneen '
             + 'voittoon on yltänyt vain Irlanti.',
+          lyhyt: 'Melodifestivalen on valinnut Ruotsin euroviisuedustajan lähes joka vuosi vuodesta 1959.',
           selite: 'Melodifestivalen on SVT:n ja SR:n järjestämä kilpailu, '
             + 'joka on valinnut Ruotsin euroviisuedustajan lähes joka vuosi '
             + 'vuodesta 1959.',
@@ -4947,6 +5156,7 @@ export const MAA_KATEGORIAT = {
             + 'vaan se on tapa, joka on aikojen kuluessa vahvistettu. '
             + 'Sama oikeus on Suomessa ja Norjassa, mutta suuressa '
             + 'osassa Eurooppaa metsään ei saa mennä ilman lupaa.',
+          lyhyt: 'Jokamiehenoikeus antaa Ruotsissa ja Suomessa yleisen oikeuden liikkua luonnossa ja poimia marjoja.',
           selite: 'Jokamiehenoikeus antaa Ruotsissa, Suomessa ja useissa '
             + 'muissa maissa yleisen oikeuden liikkua luonnossa ja poimia '
             + 'marjoja myös toisen mailla.',
@@ -4966,6 +5176,7 @@ export const MAA_KATEGORIAT = {
             + 'suistoja kuin punos — vihreä laakso keskellä harmaita '
             + 'vuoria. Puistossa ei ole majoitusta eikä kioskeja, joten '
             + 'kaikki tarvittava kannetaan selässä.',
+          lyhyt: 'Vuonna 1909 perustettu Sarekin kansallispuisto on Euroopan vanhimpia kansallispuistoja.',
           selite: 'Vuonna 1909 perustettu Sarekin kansallispuisto on '
             + 'Euroopan vanhimpia, ja sen alueella on kuusi Ruotsin '
             + 'kolmestatoista yli 2 000 metrin huipusta.',
@@ -5003,6 +5214,7 @@ export const MAA_KATEGORIAT = {
             + '— happi hehkuu vihreänä, typpi violettina. Parhaat yöt '
             + 'ovat pimeimmän talven selkeitä pakkasöitä, jolloin valo '
             + 'näkyy myös vedenpinnasta heijastuneena.',
+          lyhyt: 'Revontulet syntyvät, kun Auringon hiukkaset saavat ilmakehän hapen ja typen hehkumaan värikkäinä.',
           selite: 'Revontulet syntyvät, kun Auringon hiukkaset törmäävät '
             + 'ilmakehän happeen ja typpeen ja saavat ne hehkumaan vihreänä, '
             + 'punaisena tai violettina.',
@@ -5059,6 +5271,7 @@ export const MAA_KATEGORIAT = {
             + 'keräämään lajeja ympäri maailmaa; osa heistä ei palannut '
             + 'koskaan. Hänen kotinsa Uppsalan kasvitieteellisessä '
             + 'puutarhassa on yhä nähtävissä.',
+          lyhyt: 'Alexander Roslinin muotokuva Carl von Linnéstä, joka vakiinnutti eliöiden kaksiosaisen nimeämisen.',
           selite: 'Alexander Roslinin muotokuva Carl von Linnésta '
             + '(1707–1778), joka vakiinnutti eliöiden kaksiosaisen '
             + 'nimeämistavan ja tunnetaan nykytaksonomian isänä.',
@@ -5079,6 +5292,7 @@ export const MAA_KATEGORIAT = {
             + 'on suurempi luku. Asteikko sai Celsiuksen nimen vasta '
             + 'vuonna 1948 — sitä ennen sitä kutsuttiin usein '
             + 'sadanjaon asteikoksi.',
+          lyhyt: 'Anders Celsius esitti 1742 satajakoisen lämpötila-asteikon, joka nimettiin myöhemmin hänen mukaansa.',
           selite: 'Anders Celsius (1701–1744) esitti vuonna 1742 '
             + 'satajakoisen lämpötila-asteikon, joka nimettiin myöhemmin '
             + 'hänen mukaansa.',
@@ -5097,6 +5311,7 @@ export const MAA_KATEGORIAT = {
             + 'valmistuskelpoisen tuotteen 1850-luvulla. Turvatulitikku '
             + 'syttyy vain omaa raapaisupintaansa vasten — siksi tikut '
             + 'eivät syty taskussa.',
+          lyhyt: 'Turvatulitikun teollinen valmistus keskittyi Jönköpingiin Lundströmin veljesten aloittamana.',
           selite: 'Turvatulitikun teollinen valmistus keskittyi '
             + 'Jönköpingiin, jossa Lundströmin veljekset aloittivat '
             + 'tuotannon 1840-luvulla ja paransivat tikun 1850-luvun alussa.',
@@ -5142,6 +5357,7 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Onkija keskellä kaupunkia',
               tiedosto: 'Fishing in Strömmen, Stockholm - panoramio.jpg',
+              lyhyt: 'Tukholman Strömmenissä saa onkia keskellä kaupunkia, ja lohi nousee virtaan sinne asti.',
               selite: 'Tukholman Strömmenissä saa onkia keskellä kaupunkia, '
                 + 'ja lohi nousee virtaan aivan vanhankaupungin kupeeseen.',
               lahde: 'Bengt Nyman, Wikimedia Commons (CC BY 3.0)',
@@ -5161,6 +5377,7 @@ export const MAA_KATEGORIAT = {
             + 'niistä eli täällä. Vuonna 1929 Skansenilta lähetettiin hiehoja '
             + 'Puolan Białowieżaan, jonne laji päästettiin takaisin metsään '
             + '1952.',
+          lyhyt: 'Visentti on Euroopan painavin luonnonvarainen maaeläin ja toinen kahdesta elävästä biisonilajista.',
           selite: 'Visentti on Euroopan painavin luonnonvarainen maaeläin ja '
             + 'toinen kahdesta yhä elävästä biisonilajista.',
           lahde: 'Bengt Nyman, Wikimedia Commons (CC BY 2.0)',
@@ -5196,6 +5413,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Selma Lagerlof (1908), painted by Carl Larsson.jpg',
               teksti: 'Litteraturbanken on Ruotsin kirjallisuuden ilmainen '
                 + 'verkkokirjasto.',
+              lyhyt: 'Carl Larssonin muotokuva esittää Selma Lagerlöfiä, joka sai 1909 Nobelin kirjallisuuspalkinnon.',
               selite: 'Carl Larssonin muotokuva Selma Lagerlöfistä '
                 + '(1858–1940), joka sai 1909 ensimmäisenä naisena Nobelin '
                 + 'kirjallisuuspalkinnon.',
@@ -5209,6 +5427,7 @@ export const MAA_KATEGORIAT = {
                 + 'digitointiportaali: käsikirjoituksia, karttoja ja '
                 + 'valokuvia. Sen kuuluisin aarre on Codex Argenteus, '
                 + 'Hopearaamattu.',
+              lyhyt: 'Codex Argenteus on 500-luvun käsikirjoitus Wulfilan goottilaisesta raamatunkäännöksestä.',
               selite: 'Codex Argenteus on 500-luvun käsikirjoitus, joka '
                 + 'sisältää osia Wulfilan goottilaisesta '
                 + 'raamatunkäännöksestä ja on esillä Uppsalassa.',
@@ -5237,6 +5456,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Ruotsissa on enemmän riimukiviä kuin missään muualla '
                 + 'maailmassa, ja suurin osa niistä seisoo yhä ulkona samalla '
                 + 'paikalla kuin tuhat vuotta sitten.',
+              lyhyt: 'Riimukiviä pystytettiin vainajien muistoksi 300-luvulta 1100-luvulle.',
               selite: 'Riimukiviä pystytettiin vainajien muistoksi '
                 + '300-luvulta 1100-luvulle, ja valtaosa säilyneistä on '
                 + 'myöhäiseltä viikinkiajalta Ruotsista.',
@@ -5255,6 +5475,7 @@ export const MAA_KATEGORIAT = {
                 + 'kirjanpito. Kuka tahansa saa ilmoittaa näkemänsä lajin, ja '
                 + 'kaikki havainnot ovat julkisia — myös ne, jotka on tehty '
                 + 'tunti sitten.',
+              lyhyt: 'Kuukkeli elää Pohjois-Euraasian havumetsissä ja tunnetaan ruskeanharmaasta puvustaan.',
               selite: 'Kuukkeli elää Pohjois-Euraasian havumetsissä, ja sen '
                 + 'tuntee ruskeanharmaasta puvusta ja ruosteenpunaisesta '
                 + 'pyrstön tyvestä.',
@@ -5267,6 +5488,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Tekniska museet Tukholmassa on Ruotsin tekniikan museo, ja '
                 + 'sen kokoelmissa on Christopher Polhemin mekaaninen '
                 + 'aakkosto.',
+              lyhyt: 'Johan Henrik Scheffelin muotokuva Christopher Polhemista, joka kehitti Ruotsin kaivosteollisuutta.',
               selite: 'Johan Henrik Scheffelin muotokuva Christopher '
                 + 'Polhemista (1661–1751), joka kehitti Ruotsin '
                 + 'kaivosteollisuutta ja aateloitiin 1716 teknisistä '
@@ -5303,6 +5525,7 @@ export const MAA_KATEGORIAT = {
             + 'saartoon — ja voitti kerran Tanskan sodassakin. Moni '
             + 'Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi '
             + 'vielä tänäänkin.',
+          lyhyt: 'Kogi oli Hansaliiton kauppalaivatyyppi; liitto kasvoi 1100-luvulla lähes 200 kaupungin verkostoksi.',
           selite: 'Kogi oli Hansaliiton kauppalaivatyyppi; liitto kasvoi '
             + '1100-luvun lopulla Lyypekistä ja käsitti laajimmillaan lähes '
             + '200 kaupunkia kahdeksan nykyisen valtion alueella.',
@@ -5323,6 +5546,7 @@ export const MAA_KATEGORIAT = {
             + 'loppuivat kesken — torneja jäi rakentamatta. Nykyään '
             + 'linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen '
             + 'sanotaan olleen Disneyn satulinnan esikuva.',
+          lyhyt: 'Neuschwanstein on kuningas Ludvig II:n rakennuttama 1800-luvun palatsi Baijerin Alppien esivuorilla.',
           selite: 'Neuschwanstein on kuningas Ludvig II:n rakennuttama '
             + '1800-luvun historisoiva palatsi Alppien esivuorilla '
             + 'Schwangaun kunnassa Baijerissa.',
@@ -5343,6 +5567,7 @@ export const MAA_KATEGORIAT = {
             + 'Berliiniläislapset kutsuivat koneita nimellä '
             + 'Rosinenbomber, rusinapommittaja. Saarto päättyi 1949, '
             + 'kun se ei ollut tehonnut.',
+          lyhyt: 'Neuvostoliitto sulki Berliinin maa- ja vesiyhteydet 1948, ja kaupunkia huollettiin ilmasillalla.',
           selite: 'Neuvostoliitto sulki länsiliittoutuneilta maa- ja '
             + 'vesiyhteydet Berliiniin 24. kesäkuuta 1948, ja kaupunkia '
             + 'huollettiin ilmasillalla toukokuuhun 1949 asti.',
@@ -5362,6 +5587,7 @@ export const MAA_KATEGORIAT = {
             + 'itäberliiniläiset lähtivät samana iltana muurille, '
             + 'rajavartijat avasivat puomit — ja 28 vuotta kaupungin '
             + 'halkaissut muuri alkoi murtua vielä samana yönä.',
+          lyhyt: 'DDR aloitti Länsi-Berliinin muurin rakentamisen 1961, ja muuri pysyi pystyssä vuoteen 1989.',
           selite: 'DDR aloitti Länsi-Berliinin ympäri kulkevan muurin '
             + 'rakentamisen 13. elokuuta 1961, ja muuri pysyi vartioituna '
             + 'aina vuoteen 1989.',
@@ -5399,6 +5625,7 @@ export const MAA_KATEGORIAT = {
             + 'taikinanauha vedetään pitkäksi, solmitaan kädenkäänteessä ja '
             + 'kastetaan lipeään, joka antaa kuoreen ruskean värin ja oman '
             + 'makunsa.',
+          lyhyt: 'Brezel leivotaan pitkästä taikinanauhasta, jonka päät kierretään solmuksi.',
           selite: 'Brezel leivotaan pitkästä taikinanauhasta, jonka päät '
             + 'kierretään solmuksi; muoto on saksalaisen leipomoperinteen '
             + 'tunnus.',
@@ -5416,6 +5643,7 @@ export const MAA_KATEGORIAT = {
             + 'ja se näkyy yhä siinä, että konditoriat ovat täynnä juuri '
             + 'iltapäivällä. Kakku on usein hedelmäpiirakka tai Schwarzwaldin '
             + 'kirsikkakakku.',
+          lyhyt: 'Ernst Ludwig Kirchnerin maalaus vuodelta 1907; hän oli saksalaisen ekspressionismin uranuurtaja.',
           selite: 'Ernst Ludwig Kirchnerin maalaus vuodelta 1907; Kirchner '
             + 'oli saksalaisen ekspressionismin uranuurtaja ja Die Brücke '
             + '-ryhmän perustajajäseniä.',
@@ -5433,6 +5661,7 @@ export const MAA_KATEGORIAT = {
             + 'kynttilöitä, paahdettuja manteleita ja Glühweiniä, joka on '
             + 'kuumaa maustettua viiniä — lapsille sama juoma tehdään ilman '
             + 'viiniä ja se on nimeltään Kinderpunsch.',
+          lyhyt: 'Joulumarkkinat syntyivät myöhäiskeskiajan Saksassa; Nürnbergin markkinat ovat tunnetuimpia.',
           selite: 'Joulumarkkinat syntyivät myöhäiskeskiajan '
             + 'saksankielisessä Euroopassa, ja Nürnbergin Christkindlesmarkt '
             + 'on niistä tunnetuimpia.',
@@ -5449,6 +5678,7 @@ export const MAA_KATEGORIAT = {
             + 'hellyttäviä tai kiusoittelevia, ja sydän annetaan lahjaksi sen '
             + 'sijaan että asia sanottaisiin ääneen. Syödä sitä ei ole pakko '
             + '— moni säilyttää sydämen vuosia.',
+          lyhyt: 'Lebkuchen on hunajalla makeutettu saksalainen kakku tai pikkuleipä jouluperinteessä.',
           selite: 'Lebkuchen on hunajalla makeutettu saksalainen kakku tai '
             + 'pikkuleipä, joka kuuluu maan jouluperinteeseen.',
           lahde: 'Naturpuur, Wikimedia Commons (CC BY-SA 4.0)',
@@ -5464,6 +5694,7 @@ export const MAA_KATEGORIAT = {
             + 'Yrityksen nimi Haribo tulee perustajan nimestä ja '
             + 'kotikaupungista: HAns RIegel, BOnn. Karhu on sittemmin '
             + 'kutistunut ja pyöristynyt nykyiseen muotoonsa.',
+          lyhyt: 'Hans Riegel perusti Haribon Bonnissa ja valmisti maailman ensimmäiset kumikarhut 1922.',
           selite: 'Hans Riegel perusti Haribon Bonnissa, ja yritys valmisti '
             + 'maailman ensimmäiset kumikarhut vuonna 1922.',
           lahde: 'Indoor-Fanatiker, Wikimedia Commons (CC BY-SA 3.0)',
@@ -5480,6 +5711,7 @@ export const MAA_KATEGORIAT = {
             + 'döner on Saksan myydyimpiä pikaruokia, ja Berliinissä siitä '
             + 'kiistellään yhä: kuka keksi, mitä kuuluu sisään ja mikä kioski '
             + 'on paras.',
+          lyhyt: 'Döner kebab on turkkilainen ruokalaji, jossa liha kypsyy pystyvartaassa.',
           selite: 'Döner kebab on turkkilainen ruokalaji, jossa liha kypsyy '
             + 'pystyvartaassa; varras keksittiin 1800-luvun Osmanien '
             + 'valtakunnassa.',
@@ -5520,6 +5752,7 @@ export const MAA_KATEGORIAT = {
             + 'sanoi haluavansa kuulla, onko soittimella "hyvät '
             + 'keuhkot". Kotona oli kaksikymmentä lasta, joista neljä '
             + 'pojista nousi itsekin kuuluisiksi säveltäjiksi.',
+          lyhyt: 'Elias Gottlob Haussmannin muotokuva vuodelta 1746 esittää Johann Sebastian Bachia.',
           selite: 'Elias Gottlob Haussmannin muotokuva vuodelta 1746 esittää '
             + 'Johann Sebastian Bachia (1685–1750), myöhäisbarokin '
             + 'tuotteliainta säveltäjää.',
@@ -5542,6 +5775,7 @@ export const MAA_KATEGORIAT = {
             + 'suosionosoitukset, joita ei kuullut. Sinfonian '
             + 'loppuhymni Oodi ilolle on nykyään Euroopan unionin '
             + 'hymni.',
+          lyhyt: 'Joseph Karl Stielerin muotokuva vuodelta 1820 esittää Ludwig van Beethovenia.',
           selite: 'Joseph Karl Stielerin muotokuva vuodelta 1820 esittää '
             + 'Ludwig van Beethovenia (1770–1827), jonka tyyli vei '
             + 'klassismista romantiikkaan.',
@@ -5563,6 +5797,7 @@ export const MAA_KATEGORIAT = {
             + 'kasvatti kahdeksan lasta. Saksa painoi hänen kuvansa '
             + 'sadan markan seteliin 1989 — harva pianisti on päätynyt '
             + 'rahaan.',
+          lyhyt: 'Franz Hanfstaenglin valokuva Clara Schumannista, joka konsertoi 61 vuoden ajan.',
           selite: 'Franz Hanfstaenglin valokuva Clara Schumannista '
             + '(1819–1896), joka konsertoi 61 vuoden ajan ja muutti '
             + 'pianoresitaalin ohjelmiston painopistettä.',
@@ -5587,6 +5822,7 @@ export const MAA_KATEGORIAT = {
             + 'maaliskuussa 2024 Saksan aineettoman kulttuuriperinnön '
             + 'luetteloon — samaan sarjaan leipurintaidon ja '
             + 'käkikellojen kanssa.',
+          lyhyt: 'Love Parade sai alkunsa Länsi-Berliinissä 1989 ja järjestettiin myöhemmin myös Ruhrin alueella.',
           selite: 'Love Parade sai alkunsa Länsi-Berliinissä 1989, ja se '
             + 'järjestettiin Berliinissä vuoteen 2003 ja Ruhrin alueella '
             + '2007–2010.',
@@ -5637,6 +5873,7 @@ export const MAA_KATEGORIAT = {
             + 'suursanakirjan, joka oli niin valtava urakka, että se '
             + 'valmistui vasta yli sata vuotta heidän kuolemansa '
             + 'jälkeen.',
+          lyhyt: 'Elisabeth Jerichau-Baumannin kaksoismuotokuva esittää Jacob ja Wilhelm Grimmiä.',
           selite: 'Elisabeth Jerichau-Baumannin kaksoismuotokuva Jacob '
             + '(1785–1863) ja Wilhelm Grimmistä (1786–1859), joiden '
             + 'kansanperinnetyö loi pohjan nykyiselle folkloristiikalle.',
@@ -5657,6 +5894,7 @@ export const MAA_KATEGORIAT = {
             + 'Bungelosenstrassella eli Rummuttomalla kadulla ei '
             + 'edelleenkään soiteta musiikkia — kunnioituksesta '
             + 'kadonneita kohtaan.',
+          lyhyt: 'Hamelnin pillipiipari on tarina rotanpyydystäjästä, joka vei kostoksi kaupungin lapset.',
           selite: 'Hamelnin pillipiipari on keskiajalta periytyvä tarina '
             + 'rotanpyydystäjästä, joka jäi ilman palkkiotaan ja vei '
             + 'kostoksi kaupungin lapset.',
@@ -5678,6 +5916,7 @@ export const MAA_KATEGORIAT = {
             + 'kullalta, koska niistä pidetään kiinni molemmin käsin '
             + 'ja toivotaan — yhdellä kädellä tarttuminen on '
             + 'paikallisten mukaan vain aasin kättelyä.',
+          lyhyt: 'Grimmin veljesten 1819 satu kertoo eläimistä, jotka lähtevät Bremeniin muttei koskaan pääse perille.',
           selite: 'Grimmin veljesten vuonna 1819 julkaisema satu kertoo '
             + 'neljästä ikääntyneestä kotieläimestä, jotka lähtevät '
             + 'Bremeniin soittoniekoiksi mutta eivät koskaan päädy perille.',
@@ -5698,6 +5937,7 @@ export const MAA_KATEGORIAT = {
             + 'nimellä Jörö-Jukka jo 1869, ja englanniksi sen käänsi '
             + 'itse Mark Twain. Nykylukija hymyilee varoituksille, '
             + 'mutta tunnistaa hahmot heti.',
+          lyhyt: 'Heinrich Hoffmannin 1845 kirja sisältää kymmenen kuvitettua varoitustarinaa lapsille.',
           selite: 'Psykiatri Heinrich Hoffmannin vuonna 1845 julkaisema '
             + 'kirja sisältää kymmenen kuvitettua ja riimitettyä '
             + 'varoitustarinaa lapsille.',
@@ -5738,6 +5978,7 @@ export const MAA_KATEGORIAT = {
             + 'kotiloita ja simpukoita, ja hietikoilla lepää '
             + 'kirjohylkeitä. Vattimeri on Unescon '
             + 'maailmanperintökohde.',
+          lyhyt: 'Vattimeri on Pohjanmeren vuorovesivyöhyke, jonka matalikot paljastuvat laskuveden aikaan.',
           selite: 'Vattimeri on Pohjanmeren kaakkoisosan vuorovesivyöhyke, '
             + 'jonka matalikot ja kosteikot paljastuvat laskuveden aikaan.',
           lahde: 'Stephan Sprinz, Wikimedia Commons (CC BY 4.0)',
@@ -5755,6 +5996,7 @@ export const MAA_KATEGORIAT = {
             + 'Kuninkaanistuin. Taidemaalari Caspar David Friedrich '
             + 'maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, '
             + 'että sitä pidetään Saksan romantiikan tunnuskuvana.',
+          lyhyt: 'Jasmundin kansallispuistossa ovat Saksan suurimmat liitukalliot, korkeimpana Königsstuhl.',
           selite: 'Jasmundin kansallispuistossa ovat Saksan suurimmat '
             + 'liitukalliot, joista korkein Königsstuhl kohoaa 118 metriä '
             + 'Itämeren pinnasta.',
@@ -5773,6 +6015,7 @@ export const MAA_KATEGORIAT = {
             + 'laumaa. Paluu jakaa mielipiteitä: lammasfarmarit '
             + 'suojaavat katraitaan aidoin ja koirin, ja susikannan '
             + 'kasvua seurataan tarkasti.',
+          lyhyt: 'Susi on koiraeläinten suurin luonnonvarainen laji, jota esiintyy Euraasiassa ja Pohjois-Amerikassa.',
           selite: 'Susi on koiraeläinten heimon suurin luonnonvarainen laji, '
             + 'ja sitä esiintyy sekä Euraasiassa että Pohjois-Amerikassa.',
           lahde: 'Stephan van Helden, Wikimedia Commons (CC BY-SA 4.0)',
@@ -5790,6 +6033,7 @@ export const MAA_KATEGORIAT = {
             + 'tunnit kukkumalla — käki siksi, että sen kutsu on '
             + 'helppo matkia kahdella urkupillillä. Schonachin kylässä '
             + 'voi kävellä sisään maailman suurimpaan käkikelloon.',
+          lyhyt: 'Käkikellon käkiäänen koneisto on ollut käytössä 1700-luvulta lähes muuttumattomana.',
           selite: 'Käkikellon käkiäänen tuottava koneisto on ollut käytössä '
             + '1700-luvun puolivälistä lähes muuttumattomana.',
           lahde: 'joergens.mi, Wikimedia Commons (CC BY-SA 3.0)',
@@ -5829,6 +6073,7 @@ export const MAA_KATEGORIAT = {
             + 'vuosisadassa Euroopassa oli painettu jo miljoonia '
             + 'kirjoja, ja tieto lähti leviämään vauhdilla, jota '
             + 'kukaan ei enää pysäyttänyt.',
+          lyhyt: 'Gutenbergin 1450-luvulla painama Raamattu oli Euroopan ensimmäinen irtokirjasimin painettu kirja.',
           selite: 'Gutenbergin 1450-luvulla painama latinankielinen Raamattu '
             + 'oli Euroopan ensimmäinen suuri irtokirjasimin painettu kirja.',
           lahde: 'Kpalion, Wikimedia Commons (CC BY-SA 4.0)',
@@ -5848,6 +6093,7 @@ export const MAA_KATEGORIAT = {
             + 'historian ensimmäisen fysiikan Nobelin 1901 eikä '
             + 'patentoinut keksintöään: se kuului hänen mielestään '
             + 'kaikille.',
+          lyhyt: 'Wilhelm Röntgen havaitsi röntgensäteet ja sai niistä 1901 ensimmäisen fysiikan Nobelin palkinnon.',
           selite: 'Wilhelm Röntgen (1845–1923) tuotti ja havaitsi '
             + 'röntgensäteet ja sai niistä 1901 ensimmäisen fysiikan Nobelin '
             + 'palkinnon.',
@@ -5868,6 +6114,7 @@ export const MAA_KATEGORIAT = {
             + 'tuli yhdessä yössä maailman kuuluisin tiedemies. '
             + 'Nykyään hänen teoriaansa tarvitaan joka kerta, kun '
             + 'puhelin näyttää sijainnin kartalla.',
+          lyhyt: 'Albert Einstein kehitti suhteellisuusteorian ja sai 1921 fysiikan Nobelin palkinnon.',
           selite: 'Albert Einstein (1879–1955) kehitti suhteellisuusteorian '
             + 'ja sai 1921 fysiikan Nobelin palkinnon teoreettisen fysiikan '
             + 'ansioistaan.',
@@ -5887,6 +6134,7 @@ export const MAA_KATEGORIAT = {
             + 'koko keksintöä ennen kuin vuosia myöhemmin. Zuse '
             + 'rakensi koneensa uudelleen — ja jäljennös naksuttaa '
             + 'nykyään museossa Münchenissä.',
+          lyhyt: 'Konrad Zusen 1941 valmistunut Z3 oli ensimmäinen toimiva ohjelmoitava digitaalinen tietokone.',
           selite: 'Konrad Zusen suunnittelema ja 1941 valmistunut Z3 oli '
             + 'maailman ensimmäinen toimiva ohjelmoitava ja täysin '
             + 'automaattinen digitaalinen tietokone.',
@@ -5950,6 +6198,7 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Idän puolella keitettiin oma kastike',
               tiedosto: 'MitteKonnopke.jpg',
+              lyhyt: 'Konnopken kioski on toiminut samassa kulmassa 1930-luvulta; Berliinissä syödään currywurstia paljon.',
               selite: 'Konnopken kioski on toiminut samassa kulmassa '
                 + '1930-luvulta, ja pelkästään Berliinissä syödään arviolta '
                 + '70 miljoonaa currywurstia vuodessa.',
@@ -5969,6 +6218,7 @@ export const MAA_KATEGORIAT = {
             + 'länsipuolella samanlaisia alettiin 1980-luvulla kutsua nimellä '
             + 'Spätkauf. Lyhennys Späti otettiin Duden-sanakirjaan vuonna '
             + '2017.',
+          lyhyt: 'Späti on itäsaksalaisten kaupunkien lähikauppa, joka on auki tavallisten aukioloaikojen jälkeen.',
           selite: 'Späti on itäsaksalaisten kaupunkien lähikauppa, joka on '
             + 'auki tavallisten aukioloaikojen jälkeen ja usein ympäri '
             + 'vuorokauden.',
@@ -6052,6 +6302,8 @@ export const MAA_KATEGORIAT = {
             + 'luodinsirpaleita, ja vuonna 1901 Röntgen sai ensimmäisen fysiikan '
             + 'Nobelin. Keksinnölleen hän ei ottanut patenttia: hän katsoi sen '
             + 'kuuluvan kaikille.',
+          lyhyt: 'Anna Bertha Röntgen pitää kätensä liikkumatta, kun uusi säteily '
+            + 'paljastaa luut sormusten alta.',
           selite: 'Anna Bertha Röntgen pitää vasenta kättään liikkumatta '
             + 'valokuvalevyllä, vaikka pöydän takana rätisevän laitteen '
             + 'vaikutusta ei voi nähdä eikä tuntea. Arjessa tutut sormukset '
@@ -6063,6 +6315,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-kauko-photo-v4.jpg',
+              lyhyt: 'Röntgen kutsuu vaimonsa salaiseen kokeeseen, josta tulee '
+                + 'ensimmäinen kuva ihmisen sisuksista.',
               selite: 'Röntgen on pitänyt löytönsä lähes kokonaan omana tietonaan '
                 + 'ennen kuin pyytää vaimonsa pimeään laboratorioon. Anna Bertha '
                 + 'ei voi tietää näkymättömän säteilyn riskejä; hänen osakseen '
@@ -6128,6 +6382,8 @@ export const MAA_KATEGORIAT = {
             + 'ja ensimmäisen kirjan, jossa painajan nimi ja vuosi on merkitty, '
             + 'julkaisevat Fust ja Peter Schöffer 1457. Keksijä kuolee 1468 '
             + 'arkkipiispan eläkkeellä.',
+          lyhyt: 'Latoja-apulainen ladoo painokoneen kirjaimia, kun Gutenbergin '
+            + 'Raamattu syntyy metallista.',
           selite: 'Latoja-apulainen nostaa yhden käänteisen kirjaimen kerrallaan '
             + 'ja tietää, että virhe voi pakottaa avaamaan koko ladelman. Hänen '
             + 'sormiinsa jäävä muste on osa uutta käsityötä, jossa Raamatun sivu '
@@ -6139,6 +6395,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Mainz 1454 — sivu syntyy metallista',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-kauko-photo-v4.jpg',
+              lyhyt: 'Gutenbergin Raamattu syntyy monen käsiparin vuosien työnä '
+                + 'noin 180 kappaleen painoksena.',
               selite: 'Gutenbergin Raamattu ei synny yhdestä nerokkaasta '
                 + 'painalluksesta: kostea paperi, mustepallot, ruuviprässi ja '
                 + 'kuivuvat arkit kulkevat monen työntekijän käsien kautta '
@@ -6206,6 +6464,8 @@ export const MAA_KATEGORIAT = {
             + 'julistaa Lutherin pannaan, ja samana keväänä hän seisoo Wormsin '
             + 'valtiopäivillä keisarin edessä kieltäytyen perumasta. Kysymykseen '
             + 'vastaa lopulta koko Eurooppa.',
+          lyhyt: 'Luther sinetöi teesinsä arkkipiispalle Wittenbergissä ennen '
+            + 'uskonpuhdistajan mainetta.',
           selite: 'Luther sinetöi teesinsä arkkipiispa Albrechtille, ja nuori '
             + 'yliopiston lähetti odottaa oven luona. Kumpikaan ei vielä kanna '
             + '“uskonpuhdistajan” roolia: pöydällä on professorin kutsu '
@@ -6217,6 +6477,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Wittenberg 1517 — kuka tämän oikein lukee?',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-kauko-photo-v4.jpg',
+              lyhyt: 'Linnankirkon ovi toimii ilmoitustauluna; teesien leviämisen '
+                + 'ratkaisee kirjapaino, ei vasara.',
               selite: 'Linnankirkon ovi toimi yliopiston ilmoitustauluna, joten '
                 + 'avustajan kiinnittämä väittelykutsu ei välttämättä pysäytä '
                 + 'montaa ohikulkijaa. Emme tiedä varmasti, kiinnitettiinkö juuri '
@@ -6246,6 +6508,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Frankfurtin Städelissä on yli 25 000 teosta verkossa, muun '
                 + 'muassa Vermeerin Maantieteilijä. Etusivun arpakuutio '
                 + 'heittää kolme sanaa ja etsii niihin sopivan maalauksen.',
+              lyhyt: 'Johannes Vermeerin maalaus vuosilta 1668–1669 kuuluu Frankfurtin Städelin kokoelmaan.',
               selite: 'Johannes Vermeerin maalaus vuosilta 1668–1669 kuuluu '
                 + 'Frankfurtin Städelin kokoelmaan ja liittyy läheisesti '
                 + 'hänen Tähtitieteilijäänsä.',
@@ -6258,6 +6521,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Baijerin valtion taidekokoelmien 17 museota ja yli 27 000 '
                 + 'teosta ovat samassa haussa. Mukana on Dürerin omakuva '
                 + 'vuodelta 1500, jossa hän katsoo suoraan katsojaa silmiin.',
+              lyhyt: 'Albrecht Dürerin omakuva valmistui 1500 ja on hänen kolmesta omakuvastaan viimeinen.',
               selite: 'Albrecht Dürerin omakuva valmistui alkuvuodesta 1500 '
                 + 'juuri ennen hänen 29-vuotispäiväänsä ja on hänen kolmesta '
                 + 'maalatusta omakuvastaan viimeinen.',
@@ -6270,6 +6534,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Dresdenin viidentoista museon esineet ovat yhdessä haussa: '
                 + 'vanhat mestarit, Vihreän holvin jalokivityöt ja Liotardin '
                 + 'Suklaatyttö, joka on maalattu pastelliliiduilla.',
+              lyhyt: 'Jean-Étienne Liotardin pastelli Suklaatyttö kuuluu Dresdenin Gemäldegalerien kokoelmaan.',
               selite: 'Jean-Étienne Liotardin pastelli Suklaatyttö kuuluu '
                 + 'Dresdenin Gemäldegalerie Alte Meisterin kokoelmaan.',
               lahde: 'Jean-Étienne Liotard, Wikimedia Commons (public domain)',
@@ -6282,6 +6547,7 @@ export const MAA_KATEGORIAT = {
                 + 'luettelossa on maailman vanhin säilynyt maapallo vuodelta '
                 + '1492. Siitä puuttuu Amerikka, koska sitä ei vielä '
                 + 'tunnettu.',
+              lyhyt: 'Martin Behaimin 1490–1492 valmistama Erdapfel on vanhin säilynyt maapallo, halkaisijaltaan 51 cm.',
               selite: 'Martin Behaimin vuosina 1490–1492 valmistama Erdapfel '
                 + 'on vanhin säilynyt maapallo, halkaisijaltaan 51 '
                 + 'senttimetriä.',
@@ -6296,6 +6562,7 @@ export const MAA_KATEGORIAT = {
                 + 'Ištarin portti on niistä tunnetuin: sinisiksi lasitettuja '
                 + 'tiiliä, joiden pintaan on muotoiltu leijonia ja '
                 + 'lohikäärmeitä.',
+              lyhyt: 'Ištarin portti rakennettiin noin 569 eaa. Nebukadnessar II:n käskystä Babylonin muurin portiksi.',
               selite: 'Ištarin portti rakennettiin noin 569 eaa. kuningas '
                 + 'Nebukadnessar II:n käskystä Babylonin sisemmän '
                 + 'kaupunginmuurin kahdeksanneksi portiksi.',
@@ -6309,6 +6576,7 @@ export const MAA_KATEGORIAT = {
                 + '1919 vuoteen 1933. Silti sen ajatus siitä, miltä tuoli, '
                 + 'lamppu, talo tai kirjasin saa näyttää, näkyy yhä lähes '
                 + 'kaikkialla.',
+              lyhyt: 'Dessaun Bauhaus-rakennuksessa toimii 1994 perustettu säätiö, joka tutkii kokeellista muotoilua.',
               selite: 'Dessaun Bauhaus-rakennuksessa toimii 1994 perustettu '
                 + 'säätiö, joka tutkii ja opettaa kokeellista muotoilua.',
               lahde: 'JensKunstfreund, Wikimedia Commons (CC BY-SA 4.0)',
@@ -6322,6 +6590,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Münchner Stadtmuseum — valokuva-albumit verkossa',
               tiedosto: 'München Alte Pinakothek um 1900.jpg',
+              lyhyt: 'Münchenin Alte Pinakothek on maailman vanhimpia gallerioita, kokoelma 1300–1700-luvuilta.',
               selite: 'Münchenin Alte Pinakothek on maailman vanhimpia '
                 + 'gallerioita, ja sen kokoelma kattaa 1300-luvulta '
                 + '1700-luvulle.',
@@ -6339,6 +6608,7 @@ export const MAA_KATEGORIAT = {
                 + 'muotokuvat ja Karl Blossfeldtin kasvikuvat. '
                 + 'Aakkosellisesta luettelosta pääsee jokaisen valokuvaajan '
                 + 'omalle sivulle.',
+              lyhyt: 'Karl Blossfeldt tunnetaan kasvien lähikuvista, jotka julkaistiin 1929 kirjana Urformen der Kunst.',
               selite: 'Karl Blossfeldt (1865–1932) tunnetaan kasvien '
                 + 'lähikuvista, jotka julkaistiin 1929 kirjana Urformen der '
                 + 'Kunst.',
@@ -6348,6 +6618,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Museum Folkwang Essen — valokuvakokoelma',
               tiedosto: 'Museum Folkwang Essen-10.jpg',
+              lyhyt: 'Essenin Museum Folkwang syntyi 1922 kaupungin taidemuseon ja Osthausin kokoelman yhdistyessä.',
               selite: 'Essenin Museum Folkwang syntyi 1922, kun kaupungin '
                 + 'taidemuseo ja Karl Ernst Osthausin yksityiskokoelma '
                 + 'yhdistettiin.',
@@ -6363,6 +6634,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Bundesarchiv Bild 183-63107-0001, Berlin, Postzeitungsvertrieb, Zeitungshändlerin.jpg',
               teksti: 'Saksan liittovaltion arkisto luovutti valtavan määrän '
                 + 'valokuviaan vapaaseen käyttöön Wikimedia Commonsiin.',
+              lyhyt: 'Saksan liittovaltion arkisto Bundesarchiv perustettiin Koblenziin 1952 maan kansallisarkistoksi.',
               selite: 'Saksan liittovaltion arkisto Bundesarchiv '
                 + 'perustettiin nykyiselle paikalleen Koblenziin 1952, ja se '
                 + 'on maan kansallisarkisto.',
@@ -6380,6 +6652,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Deutsche Digitale Bibliothek kokoaa saksalaisten '
                 + 'museoiden, arkistojen ja kirjastojen aineistot samaan '
                 + 'hakuun.',
+              lyhyt: 'Weimarin kirjasto säilyttää saksalaista kirjallisuutta ja on nimetty herttuatar Anna Amalian mukaan.',
               selite: 'Weimarin kirjasto säilyttää saksalaista '
                 + 'kirjallisuutta ja historiallisia asiakirjoja, ja se '
                 + 'nimettiin herttuatar Anna Amalian mukaan 1991.',
@@ -6392,6 +6665,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Berliinin valtionkirjasto säilyttää suurinta osaa Johann '
                 + 'Sebastian Bachin säilyneistä nuottikäsikirjoituksista, ja '
                 + 'ne on digitoitu.',
+              lyhyt: 'Bachin h-molli-messu valmistui 1749 ja pohjautuu suurelta osin hänen aiempiin teoksiinsa.',
               selite: 'Bachin h-molli-messu valmistui 1749 vuotta ennen '
                 + 'säveltäjän kuolemaa, ja se pohjautuu suurelta osin hänen '
                 + 'aiempiin teoksiinsa.',
@@ -6401,6 +6675,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Münchener DigitalisierungsZentrum — kolme miljoonaa niteen sivua',
               tiedosto: '2009-08-20-Bayerische-Staatsbibliothek-Muenchen-1.jpg',
+              lyhyt: 'Baijerin valtionkirjasto on Saksan suurin tutkimuskirjasto, noin 39 miljoonaa aineistoyksikköä.',
               selite: 'Baijerin valtionkirjasto on Saksan suurin yleis- ja '
                 + 'tutkimuskirjasto, ja sen kokoelmissa on noin 39 miljoonaa '
                 + 'aineistoyksikköä.',
@@ -6418,6 +6693,7 @@ export const MAA_KATEGORIAT = {
                 + 'koodekseja aukeama kerrallaan. Talon kuuluisin aarre on '
                 + 'Heinrich Leijonan kultaisin kirjaimin kirjoitettu '
                 + 'evankeliumikirja.',
+              lyhyt: 'Wolfenbüttelin Herzog August Bibliothek on merkittävä keskiajan ja uuden ajan alun kokoelmistaan.',
               selite: 'Wolfenbüttelin Herzog August Bibliothek on '
                 + 'kansainvälisesti merkittävä keskiajan ja uuden ajan alun '
                 + 'kokoelmistaan.',
@@ -6427,6 +6703,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'LeMO — Saksan historia aikajanana',
               tiedosto: 'Fassade der Stiftung Deutsches Historisches Museum (ehem. Zeughaus) - Berlin.jpg',
+              lyhyt: 'Unter den Lindenin vanhin rakennus Zeughaus valmistui 1706; siinä toimii historiallinen museo.',
               selite: 'Unter den Lindenin vanhin rakennus Zeughaus valmistui '
                 + 'barokkityyliin 1695–1706, ja siinä toimii nykyään Saksan '
                 + 'historiallinen museo.',
@@ -6444,6 +6721,7 @@ export const MAA_KATEGORIAT = {
                 + 'nuottikäsikirjoituksia, kirjeitä ja kuvia. Osassa '
                 + 'käsikirjoituksia musiikki soi samaan aikaan kuin sivua '
                 + 'selaa.',
+              lyhyt: 'Bonnin Beethoven-Haus perustettiin 1889 säveltäjän syntymätaloon Bonngasse 20:een.',
               selite: 'Bonnin Beethoven-Haus perustettiin 1889, ja museo '
                 + 'toimii säveltäjän syntymätalossa osoitteessa Bonngasse '
                 + '20.',
@@ -6461,6 +6739,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Münchenin Deutsches Museum on yksi maailman suurimmista '
                 + 'tekniikan ja luonnontieteen museoista, ja sen '
                 + 'kokoelmatietokanta on avoin.',
+              lyhyt: 'Münchenin Deutsches Museum on maailman suurin tiede- ja tekniikkamuseo noin 125 000 esineellä.',
               selite: 'Münchenin Deutsches Museum on maailman suurin tiede- '
                 + 'ja tekniikkamuseo, ja esillä on noin 125 000 esinettä '
                 + 'viideltäkymmeneltä alalta.',
@@ -6474,6 +6753,7 @@ export const MAA_KATEGORIAT = {
                 + 'kuuluisin Archaeopteryx-fossiili ja Tristan-niminen '
                 + 'tyrannosaurus. Sivustolla on ääniopastuksia ja '
                 + 'digitaalisia näyttelyitä.',
+              lyhyt: 'Archaeopteryx on sukupuuttoon kuollut lintumaisten dinosaurusten suku, nimeltään muinainen siipi.',
               selite: 'Archaeopteryx on sukupuuttoon kuollut lintumaisten '
                 + 'dinosaurusten suku, jonka nimi tarkoittaa muinaista '
                 + 'siipeä.',
@@ -6491,6 +6771,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Saksan luonnonsuojeluliiton kamerat näyttävät suorana '
                 + 'kattohaikaran pesän, tornipöllöt ja muuttohaukat. Keväällä '
                 + 'poikaset kuoriutuvat ja kasvavat kameran edessä.',
+              lyhyt: 'Kattohaikaran siipien kärkiväli on 155–215 cm, ja laji pesii pohjoisessa aina Suomeen asti.',
               selite: 'Kattohaikaran siipien kärkiväli on 155–215 '
                 + 'senttimetriä, ja laji pesii Euroopassa pohjoisessa Suomea '
                 + 'myöten.',
@@ -6500,6 +6781,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Zugspitze — Saksan korkein huippu kameran takaa',
               tiedosto: 'Zugspitze Cross.JPG',
+              lyhyt: 'Zugspitze on 2 962 metrillään Saksan korkein vuori, ja Itävallan raja kulkee sen huipun yli.',
               selite: 'Zugspitze on 2 962 metrillään Saksan korkein vuori, '
                 + 'ja Itävallan raja kulkee sen läntisen huipun yli.',
               lahde: 'Svíčková, Wikimedia Commons (CC BY-SA 3.0)',
@@ -6535,6 +6817,7 @@ export const MAA_KATEGORIAT = {
             + 'kävijöiden hengitys alkoi tuhota värejä, ja se suljettiin '
             + 'vuonna 1963. Viereen rakennettiin tarkka jäljennös, jossa '
             + 'käydään yhä.',
+          lyhyt: 'Lascaux\'n luolaston seinillä on yli 600 maalausta, enimmäkseen jääkauden suuria eläimiä.',
           selite: 'Montignacin lähellä Dordognessa sijaitsevan Lascaux\'n '
             + 'luolaston seinillä ja katoissa on yli 600 maalausta, '
             + 'enimmäkseen jääkauden suuria eläimiä.',
@@ -6553,6 +6836,7 @@ export const MAA_KATEGORIAT = {
             + 'tekstirivi. Yhdessä kohtauksessa ihmiset osoittavat taivaalle: '
             + 'siellä näkyy Halleyn komeetta, joka todella ohitti maan samana '
             + 'vuonna.',
+          lyhyt: 'Lähes 70-metrinen kirjottu kangas kertoo Englannin normannivalloituksesta vuonna 1066.',
           selite: 'Lähes 70 metriä pitkä ja 50 senttiä korkea kirjottu '
             + 'kangas kertoo tapahtumat, jotka johtivat Englannin '
             + 'normannivalloitukseen ja Hastingsin taisteluun 1066.',
@@ -6570,6 +6854,7 @@ export const MAA_KATEGORIAT = {
             + 'kuningas saattoi sulkea kenet tahansa sinne ilman '
             + 'oikeudenkäyntiä. Linnoitus purettiin heti, ja päivästä tuli '
             + 'Ranskan kansallispäivä, jota vietetään yhä joka vuosi.',
+          lyhyt: 'Bastiljin valtaus 1789 kohdistui keskiaikaiseen linnoitukseen ja vankilaan.',
           selite: 'Bastiljin valtaus 14. heinäkuuta 1789 kohdistui '
             + 'keskiaikaiseen asevarastoon, linnoitukseen ja vankilaan, ja '
             + 'neljän tunnin taistelussa kuoli 94 ihmistä.',
@@ -6587,6 +6872,7 @@ export const MAA_KATEGORIAT = {
             + 'valmistustaitoaan tarkasti. Kun kynttilät sytytettiin illalla, '
             + 'valo heijastui edestakaisin ja sali näytti kaksi kertaa '
             + 'suuremmalta. Nykyään sinne pääsee tavallisella pääsylipulla.',
+          lyhyt: 'Versailles\'n peilisali rakennettiin osoittamaan Ludvig XIV:n mahtia ja on palatsin tunnetuin huone.',
           selite: 'Versailles\'n peilisali rakennettiin osoittamaan '
             + 'itsevaltiaan Ludvig XIV:n mahtia, ja se on palatsin tunnetuin '
             + 'huone.',
@@ -6628,6 +6914,7 @@ export const MAA_KATEGORIAT = {
             + 'Kuningas Kaarle VI antoi kyläläisille yksinoikeuden '
             + 'kypsytykseen jo vuonna 1411, ja 1925 roquefort sai '
             + 'ensimmäisenä ranskalaisena juustona virallisen alkuperäsuojan.',
+          lyhyt: 'Roquefort on lampaanmaidosta tehty sinihomejuusto, jota kypsytetään Combalou-luolissa.',
           selite: 'Roquefort on lampaanmaidosta tehty sinihomejuusto, ja '
             + 'vain Roquefort-sur-Soulzonin Combalou-luolissa kypsytetty '
             + 'juusto saa käyttää nimeä.',
@@ -6647,6 +6934,7 @@ export const MAA_KATEGORIAT = {
             + 'valita palaansa. Se, jonka palasta figuuri löytyy, saa '
             + 'pahvikruunun päähänsä. Figuureja myös kerätään, ja '
             + 'harrastuksella on oma nimensä: fabophilie.',
+          lyhyt: 'Loppiaisena syötävään galette des rois\'hen kätketään fève, ja löytäjä saa palkinnon.',
           selite: 'Loppiaisena syötävään galette des rois\'hen kätketään '
             + 'fève, ja se, jonka palasta esine löytyy, saa palkinnon.',
           lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
@@ -6666,6 +6954,7 @@ export const MAA_KATEGORIAT = {
             + 'jalkaa ja päätti, että kirjasta on otettava maksu. '
             + 'Ravintoloille alettiin antaa tähtiä 1926, ja kolmen tähden '
             + 'asteikko tuli käyttöön 1931.',
+          lyhyt: 'Rengasyhtiö Michelin on julkaissut opastaan vuodesta 1900, alun perin autoilijoille.',
           selite: 'Rengasyhtiö Michelin on julkaissut opastaan vuodesta '
             + '1900, ja alun perin autoilijoille tarkoitetusta kirjasta tuli '
             + 'kansainvälinen ravintola-arvostelun mittapuu.',
@@ -6685,6 +6974,7 @@ export const MAA_KATEGORIAT = {
             + 'kolikko, niin vuodesta tulee onnekas. Bretagnessa ohukaisia '
             + 'paistetaan pyöreällä valurautalevyllä, ja taikina levitetään '
             + 'pitkällä puulastalla.',
+          lyhyt: 'Kynttilänpäivä on kristillinen juhla Jeesuksen temppeliin tuomisesta; Ranskassa syödään ohukaisia.',
           selite: 'Kynttilänpäivä on kristillinen juhla Jeesuksen temppeliin '
             + 'tuomisen muistoksi, ja Ranskassa siihen kuuluvat ohukaiset.',
           lahde: 'Agence de presse Mondial Photo-Presse (commanditaire), Wikimedia Commons (public domain)',
@@ -6725,6 +7015,7 @@ export const MAA_KATEGORIAT = {
             + 'eläintä: lammas, ankka ja kukko. Lento kesti kahdeksan '
             + 'minuuttia ja vei matkustajat kolmen kilometrin päähän. Kaikki '
             + 'selvisivät.',
+          lyhyt: 'Montgolfierin veljesten kuumailmapallo nosti ensimmäiset ihmiset ilmaan.',
           selite: 'Joseph-Michel ja Jacques-Étienne Montgolfier olivat '
             + 'paperinvalmistajia Annonaysta, ja heidän kuumailmapallonsa '
             + 'nosti ensimmäiset ihmiset ilmaan.',
@@ -6746,6 +7037,7 @@ export const MAA_KATEGORIAT = {
             + 'Viisitoistavuotiaana hän esitti oman ratkaisunsa: yhteen '
             + 'merkkiin riittää kuusi pistettä, ja merkki vastaa kirjainta '
             + 'eikä äännettä.',
+          lyhyt: 'Louis Braille sokeutui lapsena ja kehitti sokeainkirjoituksen, jota käytetään yhä maailmalla.',
           selite: 'Louis Braille (1809–1852) sokeutui lapsena ja kehitti '
             + 'sokeainkirjoituksen, jota käytetään yhä lähes muuttumattomana '
             + 'kaikkialla maailmassa.',
@@ -6766,6 +7058,7 @@ export const MAA_KATEGORIAT = {
             + 'jonka hän oli testannut koirilla. Poika ei sairastunut, ja '
             + 'aikuisena hän työskenteli Pasteur-instituutissa '
             + 'vahtimestarina.',
+          lyhyt: 'Albert Edelfeltin maalaus vuodelta 1885 esittää kemisti Louis Pasteuria.',
           selite: 'Albert Edelfeltin maalaus vuodelta 1885 esittää kemisti '
             + 'Louis Pasteuria (1822–1895), joka kehitti rokotusperiaatteen '
             + 'ja pastöroinnin.',
@@ -6786,6 +7079,7 @@ export const MAA_KATEGORIAT = {
             + 'portista, vauva syö lusikasta, meri lyö rantaan. Joukossa oli '
             + 'ensimmäinen elokuvakomedia, jossa poika astuu puutarhurin '
             + 'letkun päälle.',
+          lyhyt: 'Auguste ja Louis Lumière tunnetaan Cinématographe-järjestelmästään ja lyhytelokuvistaan.',
           selite: 'Auguste ja Louis Lumière valmistivat valokuvauslaitteita '
             + 'ja tunnetaan Cinématographe-järjestelmästään sekä '
             + 'lyhytelokuvistaan vuosilta 1895–1905.',
@@ -6843,6 +7137,7 @@ export const MAA_KATEGORIAT = {
             + 'ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä '
             + 'ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia '
             + 'härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.',
+          lyhyt: 'Camarguenhevonen on ranskalainen työhevosrotu, joka on elänyt vuosisatoja puolivilleinä.',
           selite: 'Camarguenhevonen on ranskalainen työhevosrotu, joka on '
             + 'elänyt vuosisatoja puolivilleinä Rhônen suiston kosteikoilla.',
           lahde: 'Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0)',
@@ -6861,6 +7156,7 @@ export const MAA_KATEGORIAT = {
             + 'sulattouuneina, kunnes tutkijat tunnistivat ne tulivuoriksi. '
             + 'Viimeisin purkaus tapahtui noin kuusituhatta vuotta sitten. '
             + 'Alue pääsi Unescon maailmanperintöluetteloon 2018.',
+          lyhyt: 'Chaîne des Puys on noin 40 km:n tulivuorijono, jonka korkein on 1 465-metrinen Puy de Dôme.',
           selite: 'Chaîne des Puys on noin 40 kilometrin pituinen '
             + 'tulivuorijono, jossa on 48 tuhkakartiota, kahdeksan '
             + 'laavakupolia ja 15 maaria; korkein on 1 465-metrinen Puy de '
@@ -6881,6 +7177,7 @@ export const MAA_KATEGORIAT = {
             + 'silta, ja Couesnon-jokeen padottiin vettä, joka päästetään '
             + 'huuhtomaan lietettä pois. 21. maaliskuuta 2015 '
             + 'poikkeuksellisen korkea vuoksi peitti uuden sillan kokonaan.',
+          lyhyt: 'Mont-Saint-Michel on Normandian rannikon vuorovesisaari, pinta-alaltaan seitsemän hehtaaria.',
           selite: 'Mont-Saint-Michel on Normandian rannikon edustalla '
             + 'sijaitseva vuorovesisaari, jonka pinta-ala on seitsemän '
             + 'hehtaaria.',
@@ -6921,6 +7218,7 @@ export const MAA_KATEGORIAT = {
             + 'tuli Maurice Garin lähes kolmen tunnin erolla. Keltainen paita '
             + 'tuli vasta 1919, ja väri selitetään sillä, että L\'Auto '
             + 'painettiin keltaiselle paperille.',
+          lyhyt: 'Tour de France järjestettiin ensi kerran 1903 ja on kolmesta suurkierroksesta vanhin.',
           selite: 'Tour de France järjestettiin ensi kerran 1903 '
             + 'kasvattamaan L\'Auto-lehden myyntiä, ja se on kolmesta '
             + 'suurkierroksesta vanhin ja arvostetuin.',
@@ -6941,6 +7239,7 @@ export const MAA_KATEGORIAT = {
             + 'ja siitä tuli sana pétanque. Ensimmäinen turnaus pelattiin La '
             + 'Ciotat\'ssa 1910. Maalina on pieni puupallo, cochonnet eli '
             + 'porsas.',
+          lyhyt: 'Petankki kuuluu boule-pelien perheeseen, ja pisteet ratkeavat kuulien läheisyydestä kohdepalloon.',
           selite: 'Petankki kuuluu boule-pelien perheeseen, ja pisteet '
             + 'ratkeavat siitä, kenen kuulat ovat lähinnä pientä '
             + 'kohdepalloa.',
@@ -6960,6 +7259,7 @@ export const MAA_KATEGORIAT = {
             + 'jyrätty muutaman millimetrin kerros jauhettua tiiltä ja '
             + 'kasteltu se vedellä. Otteluiden välissä pintaa tasoitetaan '
             + 'raahaamalla sen yli ketjumattoa.',
+          lyhyt: 'Roland-Garrosin turnaus perustettiin 1891, ja se on vuoden toinen tenniksen Grand Slam.',
           selite: 'Roland-Garrosin turnaus perustettiin 1891, ja se on '
             + 'vuoden toinen tennisen Grand Slam -kilpailu Australian '
             + 'avointen jälkeen.',
@@ -6979,6 +7279,7 @@ export const MAA_KATEGORIAT = {
             + 'sisään ja lähtivät. Vuonna 1969 Jacky Ickx käveli juoksemisen '
             + 'sijasta, kiinnitti turvavyönsä rauhassa — ja voitti silti koko '
             + 'kisan. Seuraavana vuonna juoksulähdöstä luovuttiin.',
+          lyhyt: 'Le Mansin 24 tunnin ajo järjestettiin ensi kerran 1923 ja on vanhin yhä ajettava kestävyyskilpailu.',
           selite: 'Le Mansin 24 tunnin ajo järjestettiin ensi kerran 1923, '
             + 'ja se on maailman vanhin yhä ajettava kestävyyskilpailu.',
           lahde: 'ZANTAFIO56, Wikimedia Commons (CC BY-SA 2.0)',
@@ -7018,6 +7319,7 @@ export const MAA_KATEGORIAT = {
             + 'haaksirikosta: maalauksen tapahtumasta tai pienoismallin '
             + 'omasta aluksestaan. Siksi kirkon kultamosaiikkiholvien alla '
             + 'roikkuu katosta purjeveneitä ja laivoja.',
+          lyhyt: 'Notre-Dame de la Garde on Marseillen tunnetuin maamerkki, rakennettu vanhan linnoituksen paikalle.',
           selite: 'Notre-Dame de la Garde on Marseillen tunnetuin maamerkki '
             + 'ja vierailluin kohde, ja se rakennettiin vanhan linnoituksen '
             + 'perustuksille kaupungin korkeimmalle kohdalle.',
@@ -7036,6 +7338,7 @@ export const MAA_KATEGORIAT = {
             + 'joka kertoo öljyn osuuden prosentteina. Vuonna 1913 kaupunki '
             + 'tuotti saippuaa 180 000 tonnia; nykyään vanhalla tavalla '
             + 'keittäviä saippuatehtaita on enää kourallinen.',
+          lyhyt: 'Marseillen saippuaa on valmistettu kasviöljyistä noin 600 vuotta, nimen rajaten Ludvig XIV 1688.',
           selite: 'Marseillen saippuaa on valmistettu kasviöljyistä noin 600 '
             + 'vuotta, ja Ludvig XIV rajasi 1688 nimen käytön '
             + 'oliiviöljypohjaisiin saippuoihin.',
@@ -7074,6 +7377,7 @@ export const MAA_KATEGORIAT = {
             + 'raadissa istuu kuusi arvottua tavallista pariisilaista. '
             + 'Voittaja saa 4 000 euroa ja toimittaa vuoden ajan '
             + 'presidentinpalatsin leivät.',
+          lyhyt: 'Patongin taikina ja mitat on määritelty Ranskan laissa; leipä on tavallisesti noin 65 cm pitkä.',
           selite: 'Patongin taikina ja mitat on määritelty Ranskan laissa, '
             + 'ja leipä on halkaisijaltaan 5–6 senttiä ja tavallisesti noin '
             + '65 senttiä pitkä.',
@@ -7093,6 +7397,7 @@ export const MAA_KATEGORIAT = {
             + 'kuin ensimmäisen metron kylteissä. Kesällä 2024 laatikot piti '
             + 'purkaa olympialaisten avajaisten tieltä, mutta päätös '
             + 'peruttiin ja ne saivat jäädä.',
+          lyhyt: 'Bouquinistit myyvät vanhoja kirjoja Seinen rantamuurien varrella.',
           selite: 'Bouquinistit myyvät käytettyjä ja vanhoja kirjoja Seinen '
             + 'rantamuurien varrella, minkä vuoksi jokea sanotaan ainoaksi, '
             + 'joka virtaa kahden kirjahyllyn välissä.',
@@ -7129,6 +7434,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Cour Napoléon at night - Louvre.jpg',
               teksti: 'Louvren kokoelmatietokannassa on yli 480 000 teosta — eli '
                 + 'paljon enemmän kuin museon seinillä on tilaa.',
+              lyhyt: 'Louvre on Pariisin kansallinen taidemuseo, jonka kokoelmiin kuuluu muun muassa Mona Lisa.',
               selite: 'Louvre on Pariisin kansallinen taidemuseo, jonka '
                 + 'kokoelmiin kuuluvat muun muassa Mona Lisa, Milon Venus ja '
                 + 'Samothrakein Nike.',
@@ -7142,6 +7448,7 @@ export const MAA_KATEGORIAT = {
                 + 'rakennus on itsessään osa juttua: putket, ilmastointi ja '
                 + 'portaat vietiin julkisivulle, jotta sisälle jäisi '
                 + 'mahdollisimman paljon tyhjää tilaa.',
+              lyhyt: 'Centre Pompidou valmistui high tech -tyyliin Rogersin ja Renzo Pianon suunnitelmien mukaan.',
               selite: 'Centre Pompidou valmistui high tech -arkkitehtuurin '
                 + 'tyyliin Richard Rogersin, Su Rogersin ja Renzo Pianon '
                 + 'suunnitelmien mukaan.',
@@ -7154,6 +7461,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Rodinin museon kokoelmahausta löytyy veistoksia, '
                 + 'piirroksia ja vanhoja valokuvia. Haun sivupalkista voi '
                 + 'rajata mukaan vain ne kohteet, joista on kuva.',
+              lyhyt: 'Auguste Rodinin Ajattelija on pronssiveistos, josta tuli yksi tunnetuimmista taideteoksista.',
               selite: 'Auguste Rodinin Ajattelija on pronssiveistos, josta '
                 + 'on tullut yksi maailman tunnetuimmista taideteoksista.',
               lahde: 'Auguste Rodin, Wikimedia Commons (CC0)',
@@ -7181,6 +7489,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Chauvet\'n luola löytyi vuonna 1994, ja sen maalaukset ovat '
                 + 'noin 36 000 vuotta vanhoja — kaksi kertaa vanhempia kuin '
                 + 'Lascaux\'n.',
+              lyhyt: 'Ardèchen Chauvet\'n luolassa on maailman parhaiten säilyneitä esittäviä luolamaalauksia.',
               selite: 'Ardèchen Chauvet\'n luolassa on maailman parhaiten '
                 + 'säilyneitä esittäviä luolamaalauksia myöhäiseltä '
                 + 'vanhemmalta kivikaudelta.',
@@ -7194,6 +7503,7 @@ export const MAA_KATEGORIAT = {
                 + 'koiraa. Luola on ollut suljettuna vuodesta 1963, mutta '
                 + 'verkossa sen salit voi kiertää ja katsoa maalauksia aivan '
                 + 'läheltä.',
+              lyhyt: 'Lascaux\'n maalaukset syntyivät jääkauden lopulla ja kuvaavat aikakauden suuria nisäkkäitä.',
               selite: 'Lascaux\'n maalaukset syntyivät jääkauden lopulla, ja '
                 + 'niissä toistuvat aikakauden suuret nisäkkäät kuten '
                 + 'jättiläishirvi.',
@@ -7206,6 +7516,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Linnan omat 360 asteen kierrokset vievät peilisaliin, '
                 + 'kuninkaan makuuhuoneeseen ja näyttelysaleihin. Kuvaa voi '
                 + 'pyörittää joka suuntaan ja zoomata kattomaalauksiin asti.',
+              lyhyt: 'Versailles\'n puutarhan Apollon allas syntyi 1671, kun Ludvig XIV suurensi vanhaa lampea.',
               selite: 'Versailles\'n puutarhan Apollon allas syntyi 1671, '
                 + 'kun Ludvig XIV suurensi vanhaa lampea, ja Charles Le Brun '
                 + 'suunnitteli sen keskusveistoksen.',
@@ -7220,6 +7531,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Médiathèque du patrimoine — Ranskan valokuva-arkisto',
               tiedosto: 'Sarah Bernhardt, par Nadar, 1864.jpg',
+              lyhyt: 'Valokuvaaja Nadar otti 1858 ensimmäisenä ilmavalokuvia, ja hänen muotokuvansa ovat arvostettuja.',
               selite: 'Valokuvaaja Nadar (1820–1910) otti 1858 ensimmäisenä '
                 + 'ilmavalokuvia, ja hänen muotokuvansa ovat monien '
                 + 'kansalliskokoelmien helmiä.',
@@ -7235,6 +7547,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Pankkiiri Albert Kahn lähetti 1900-luvun alussa kuvaajansa '
                 + 'ympäri maailmaa. Kuvaportaalissa on yli 69 000 kuvaa, ja '
                 + 'autochrome-lasilevyt ovat aitoja värivalokuvia.',
+              lyhyt: 'Pankkiiri Albert Kahn kustansi Planeetan arkiston, johon kertyi 22 vuodessa 72 000 värivalokuvaa.',
               selite: 'Pankkiiri Albert Kahn kustansi Planeetan arkiston, '
                 + 'johon kertyi 22 vuodessa 72 000 värivalokuvaa ympäri '
                 + 'maailman.',
@@ -7252,6 +7565,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Gallicassa on miljoonia digitoituja kirjoja, karttoja, '
                 + 'sanomalehtiä, valokuvia ja nuotteja. Jokaista voi selata '
                 + 'sivu kerrallaan ja suurentaa yksityiskohtiin asti.',
+              lyhyt: 'Ranskan kansalliskirjasto on maan vapaakappalekirjasto Richelieun ja Mitterrandin toimipisteissä.',
               selite: 'Ranskan kansalliskirjasto on maan '
                 + 'vapaakappalekirjasto, ja se toimii Pariisissa Richelieun '
                 + 'ja François-Mitterrandin toimipisteissä.',
@@ -7261,6 +7575,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Angoulêmen sarjakuvamuseo — digitoidut sarjakuvat',
               tiedosto: 'Cnbdi cognac.jpg',
+              lyhyt: 'Angoulême on ranskalaisen sarjakuvan keskus, jonka festivaali on järjestetty vuodesta 1974.',
               selite: 'Angoulême on ranskalaisen sarjakuvan keskus, ja '
                 + 'kaupungin sarjakuvafestivaali on järjestetty vuodesta '
                 + '1974 Euroopan suurimpien joukossa.',
@@ -7274,6 +7589,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'POP — Ranskan kulttuuriperintö yhdessä haussa',
               tiedosto: 'Carnac Standing Stones Alignment, Carnac, Brittany - panoramio.jpg',
+              lyhyt: 'Carnacin seudulla on yli 3 000 esihistoriallista pystykiveä esikelttiläiseltä väestöltä.',
               selite: 'Carnacin seudulla on yli 3 000 esihistoriallista '
                 + 'pystykiveä, jotka Bretagnen esikelttiläinen väestö '
                 + 'hakkasi paikallisesta graniitista.',
@@ -7302,6 +7618,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Auditorium de la Maison de la Radio, Paris 2018.jpg',
               teksti: 'INA on Ranskan valtion audiovisuaalinen arkisto, joka '
                 + 'tallentaa maan radio- ja tv-lähetykset.',
+              lyhyt: 'Radio Francen Maison de la Radio on rakennettu 500-metriseksi renkaaksi studioineen ja saleineen.',
               selite: 'Radio Francen päärakennus Maison de la Radio on '
                 + 'rakennettu 500 metriä ympärysmitaltaan olevaksi '
                 + 'renkaaksi, ja siinä on studioita ja konserttisaleja.',
@@ -7336,6 +7653,7 @@ export const MAA_KATEGORIAT = {
             + 'sipulista tarjottiin 4 200 guldenia, ja samalla rahalla sai '
             + 'kanavatalon. Kaksi päivää aiemmin kauppa oli Haarlemissa jo '
             + 'pysähtynyt.',
+          lyhyt: 'Hans Bollongierin kukka-asetelma vuodelta 1639 liittyy tulppaanikuplaan, joka romahti 1637.',
           selite: 'Hans Bollongierin kukka-asetelma vuodelta 1639; '
             + 'tulppaanien hintakupla kiihtyi 1634 ja romahti helmikuussa '
             + '1637 ensimmäisenä tunnettuna keinottelukuplana.',
@@ -7356,6 +7674,7 @@ export const MAA_KATEGORIAT = {
             + 'oli harvinaisesta ilmakehän kangastuksesta. Kesäkuussa '
             + 'lähdettiin kahdella avoveneellä kohti kotia. Barentsz kuoli '
             + 'viikko lähdön jälkeen; kaksitoista pääsi perille.',
+          lyhyt: 'Vuoden 1598 kuparipiirros esittää Barentszin retkikunnan talvimajaa Novaja Zemljalla.',
           selite: 'Vuoden 1598 kuparipiirros esittää Willem Barentszin '
             + 'retkikunnan talvimajaa Novaja Zemljalla; Barentsz haki '
             + 'kolmella retkellä koillisväylää.',
@@ -7375,6 +7694,7 @@ export const MAA_KATEGORIAT = {
             + 'palvelustyttö Elsje van Houweningen saatteli arkun ulos '
             + 'linnasta markkinapäivänä, eikä kukaan avannut sitä. Toisella '
             + 'rannalla De Groot pukeutui muurariksi ja käveli tiehensä.',
+          lyhyt: 'Kirja-arkku Rijksmuseumista; oikeusoppinut Hugo Grotius oli vangittuna Loevesteinin linnassa.',
           selite: 'Kirja-arkku Rijksmuseumin kokoelmasta; oikeusoppinut Hugo '
             + 'Grotius oli vangittuna Loevesteinin linnassa '
             + 'uskontopolitiikan kiistojen takia.',
@@ -7394,6 +7714,7 @@ export const MAA_KATEGORIAT = {
             + 'ryhdyttiin rakentamaan erillisiä pyöräteitä ja hiljaisia '
             + 'asuinkatuja. Nykyään runsas neljännes kaikista matkoista '
             + 'tehdään maassa polkupyörällä.',
+          lyhyt: 'Lapset Haagin parlamenttitalossa 1972; Alankomaista kasvoi maailman tihein pyörätieverkosto.',
           selite: 'Lapset Haagin parlamenttitalossa lokakuussa 1972; '
             + 'Alankomaista kasvoi näiden vuosien liikehdinnän myötä '
             + 'maailman tihein pyörätieverkosto.',
@@ -7435,6 +7756,7 @@ export const MAA_KATEGORIAT = {
             + 'asti, ja tärkein varuste on kello, sillä vuorovesi palaa. '
             + 'Yksin ei lähdetä: mukaan tarvitaan viranomaisen hyväksymä '
             + 'opas. Vattimeri on ollut maailmanperintökohde vuodesta 2009.',
+          lyhyt: 'Vattivaellus tarkoittaa merenpohjan ylitystä laskuveden aikaan Frisian mantereelta saarille.',
           selite: 'Vattivaellus tarkoittaa merenpohjan ylitystä laskuveden '
             + 'aikaan vuorovesitaulukon avulla, ja sitä harrastetaan Frisian '
             + 'mantereelta saarille.',
@@ -7454,6 +7776,7 @@ export const MAA_KATEGORIAT = {
             + 'Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon '
             + 'sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. '
             + 'Suolainen vesi muuttui vähitellen makeaksi.',
+          lyhyt: 'Afsluitdijk rakennettiin 1927–1932; 32 kilometrin pituinen pato sulki Zuiderzeen merestä.',
           selite: 'Afsluitdijk rakennettiin 1927–1932 Den Oeveristä Zurichin '
             + 'kylään, ja 32 kilometrin pituinen pato sulki Zuiderzeen '
             + 'merestä.',
@@ -7473,6 +7796,7 @@ export const MAA_KATEGORIAT = {
             + '1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui '
             + 'pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta '
             + 'aiemmin ollut meren pohjaa.',
+          lyhyt: 'Oostvaardersplassen on 56 km² luonnonsuojelualue, kuuluisa villiinnyttämiskokeilustaan.',
           selite: 'Oostvaardersplassen on 56 neliökilometrin '
             + 'luonnonsuojelualue vuonna 1968 kuivatulla polderilla, ja se '
             + 'on kuuluisa villiinnyttämiskokeilustaan.',
@@ -7492,6 +7816,7 @@ export const MAA_KATEGORIAT = {
             + 'tekee tietokone, ei ihminen. Portti otettiin käyttöön 1997 ja '
             + 'koekäytetään joka syksy; oikeassa myrskyssä se suljettiin '
             + 'ensimmäisen kerran marraskuussa 2007.',
+          lyhyt: 'Maeslantkering sulkeutuu automaattisesti, kun Rotterdamia uhkaa tulva.',
           selite: 'Vuosina 1991–1997 rakennettu Maeslantkering sulkeutuu '
             + 'automaattisesti BOS-tietokonejärjestelmän ennusteen '
             + 'perusteella, kun Rotterdamia uhkaa tulva.',
@@ -7533,6 +7858,7 @@ export const MAA_KATEGORIAT = {
             + 'kaukoputkesta ja niistä 900 guldenia. Vuotta myöhemmin Galileo '
             + 'Galilei kuuli asiasta, rakensi paremman putken ja käänsi sen '
             + 'taivaalle.',
+          lyhyt: 'Adriaen van de Vennen kaiverrus 1624; Hans Lipperhey haki ensimmäisenä patenttia kaukoputkelle.',
           selite: 'Adriaen van de Vennen kaiverrus vuodelta 1624; '
             + 'silmälasintekijä Hans Lipperhey haki ensimmäisenä patenttia '
             + 'kaukoputkelle Middelburgissa.',
@@ -7553,6 +7879,7 @@ export const MAA_KATEGORIAT = {
             + 'uskottu, joten Lontoosta lähetettiin miehiä katsomaan. '
             + 'Samanlaisia löytyi myös hänen omista hampaistaan. Linssien '
             + 'hiontatavan hän vei mukanaan hautaan.',
+          lyhyt: 'Antonie van Leeuwenhoekin yhden linssin mikroskooppi; kauppiasta kutsutaan mikrobiologian isäksi.',
           selite: 'Antonie van Leeuwenhoekin (1632–1723) yhden linssin '
             + 'mikroskooppi; itseoppinutta kangaskauppiasta kutsutaan '
             + 'mikrobiologian isäksi.',
@@ -7572,6 +7899,7 @@ export const MAA_KATEGORIAT = {
             + 'sanoilla köyhä maalaismies. Myllyt tekivät laudasta halpaa, ja '
             + 'siitä hyötyi ennen kaikkea laivanrakennus: hollantilaisia '
             + 'laivoja valmistui nopeammin kuin muualla.',
+          lyhyt: 'Sahamylly sahaa tukin pituussuunnassa lankuiksi, ja tuulivoima nopeutti laivanrakennusta.',
           selite: 'Sahamylly sahaa tukin pituussuunnassa lankuiksi, ja '
             + 'tuulivoimalla toimivat sahamyllyt nopeuttivat hollantilaista '
             + 'laivanrakennusta.',
@@ -7592,6 +7920,7 @@ export const MAA_KATEGORIAT = {
             + 'cd-levystä tuli 12 senttiä leveä. Tiedot ovat pieninä kuoppina '
             + 'kierteellä, joka suoraksi vedettynä on jopa 5,4 kilometriä '
             + 'pitkä.',
+          lyhyt: 'Philips ja Sony kehittivät cd-levyn yhdessä; ensimmäiset soittimet myytiin Japanissa 1982.',
           selite: 'Philips ja Sony kehittivät cd-levyn yhdessä, ja '
             + 'ensimmäiset soittimet tulivat myyntiin Japanissa lokakuussa '
             + '1982.',
@@ -7634,6 +7963,7 @@ export const MAA_KATEGORIAT = {
             + 'myydään erikseen pussissa. Vohvelin läpimitta on tavallisesti '
             + 'kymmenen senttiä, mutta niitä tehdään viidestä '
             + 'kahteenkymmeneenviiteen senttiin.',
+          lyhyt: 'Stroopwafel on kahdesta vohvelilevystä ja siirappitäytteestä tehty leivonnainen Goudasta.',
           selite: 'Stroopwafel on kahdesta ohuesta vohvelilevystä ja niiden '
             + 'välisestä siirappitäytteestä tehty leivonnainen, joka '
             + 'valmistettiin ensi kerran Goudassa.',
@@ -7653,6 +7983,7 @@ export const MAA_KATEGORIAT = {
             + 'tehtyjä rakeita alettiin myydä vasta 1913. Lajeja on nykyään '
             + 'parikymmentä, ja suklaaraeksi saa kutsua vain sellaista, jossa '
             + 'on vähintään viidennes kaakaota.',
+          lyhyt: 'Hagelslag on suklaarakeita, joita hollantilaiset ripottelevat voileivän päälle aamiaisella.',
           selite: 'Hagelslag on muutaman millin mittaisia suklaarakeita, '
             + 'joita hollantilaiset ripottelevat voileivän päälle '
             + 'aamiaisella ja lounaalla.',
@@ -7689,6 +8020,7 @@ export const MAA_KATEGORIAT = {
             + 'Kuninkaallisen lapsen syntyessä kaupoista löytyy oranssia. '
             + 'Tapa levisi koko maahan 1938, kun prinsessa Beatrixin syntymän '
             + 'kunniaksi palatsiin vietiin iso peltipurkki oransseja hiiriä.',
+          lyhyt: 'Muisjes ovat anisrakeita, joita syödään värillisin sokerikuorin korpun päällä vauvan syntyessä.',
           selite: 'Muisjes ovat anisrakeita, joiden päällä on värillinen '
             + 'sokerikuori, ja niitä syödään korpun päällä vauvan syntymän '
             + 'kunniaksi.',
@@ -7727,6 +8059,7 @@ export const MAA_KATEGORIAT = {
             + 'kampea ja ravistaa toisella kädellä rahalipasta '
             + 'ohikulkijoille. Warniesin jälkeläiset ovat yhä samassa työssä: '
             + 'Amsterdamissa toimii urkuliike Perlee.',
+          lyhyt: 'Katu-urut ovat siirrettäviä mekaanisia urkuja, ja hollantilaismalli on saksalaista suurempi.',
           selite: 'Katu-urut ovat siirrettäväksi rakennettuja mekaanisia '
             + 'urkuja, ja hollantilainen malli on saksalaista suurempi.',
           lahde: 'Charles Breijer / Anefo, Wikimedia Commons (CC0)',
@@ -7764,6 +8097,7 @@ export const MAA_KATEGORIAT = {
             + 'metriä pitkä, mutta siitä näkyy vain 75 senttiä; loppu on '
             + 'kivetyksen alla. Vuonna 1984 niitä laskettiin noin 100 000, '
             + 'vuonna 2003 enää alle 40 000.',
+          lyhyt: 'Amsterdammertje on ruskeanpunainen teräspollari, joka kantaa Amsterdamin kolmea Andreaan ristiä.',
           selite: 'Amsterdammertje on ruskeanpunainen teräspollari, joka '
             + 'erottaa jalkakäytävän ajoradasta ja kantaa Amsterdamin '
             + 'vaakunan kolmea Andreaan ristiä.',
@@ -7801,6 +8135,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Rijksmuseum Amsterdamissa on kuvaillut verkkoon yli puoli '
                 + 'miljoonaa kokoelmansa esinettä ja julkaissut niistä '
                 + 'satojatuhansia valokuvia.',
+              lyhyt: 'Rijksmuseum on Alankomaiden kansallismuseo, perustettu 1798 ja siirretty Amsterdamiin 1808.',
               selite: 'Rijksmuseum on Alankomaiden kansallismuseo, joka '
                 + 'perustettiin Haagissa 1798 ja siirtyi Amsterdamiin 1808.',
               lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
@@ -7814,6 +8149,7 @@ export const MAA_KATEGORIAT = {
                 + 'Tuloksena on 717 gigapikselin kuva eli 717 000 000 000 '
                 + 'pikseliä: suurin ja tarkin valokuva, joka taideteoksesta '
                 + 'on koskaan otettu.',
+              lyhyt: 'Rembrandtin 1642 maalaama Yövartio on Rijksmuseumin esillä oleva tunnetuin teos.',
               selite: 'Rembrandtin vuonna 1642 maalaama Yövartio kuuluu '
                 + 'Amsterdamin kaupunginmuseolle mutta on esillä '
                 + 'Rijksmuseumissa sen tunnetuimpana teoksena.',
@@ -7826,6 +8162,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Van Gogh Museum Amsterdamissa omistaa maailman suurimman '
                 + 'Vincent van Goghin kokoelman, ja verkossa siitä on yli '
                 + 'tuhat maalausta, piirustusta ja kirjettä.',
+              lyhyt: 'Van Gogh maalasi mantelinkukkia Arlesissa ja Saint-Rémyssä; ne merkitsivät hänelle toivoa.',
               selite: 'Van Gogh maalasi mantelinkukkia Arlesissa ja '
                 + 'Saint-Rémyssä 1888 ja 1890, ja kukkivat puut merkitsivät '
                 + 'hänelle heräämistä ja toivoa.',
@@ -7844,6 +8181,7 @@ export const MAA_KATEGORIAT = {
                 + 'Prinsengracht 263:n takarakennukseen. Viikkoa myöhemmin '
                 + 'tuli van Pelsin perhe ja neljän kuukauden päästä Fritz '
                 + 'Pfeffer — kahdeksan ihmistä yli kahdeksi vuodeksi.',
+              lyhyt: 'Prinsengrachtin talon takahuoneistossa Anne Frank piileskeli perheineen Saksan miehityksen aikana.',
               selite: 'Prinsengrachtin talon takahuoneistossa Anne Frank '
                 + 'piileskeli perheineen ja neljän muun kanssa Saksan '
                 + 'miehityksen aikana.',
@@ -7856,6 +8194,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Delpher on Alankomaiden kansalliskirjaston hakupalvelu, '
                 + 'jossa on yli kaksi miljoonaa sanomalehteä vuosilta '
                 + '1618–1995, lähes 500 000 aikakauslehteä ja 200 000 kirjaa.',
+              lyhyt: 'Courante uyt Italien, Duytslandt oli Alankomaiden ensimmäinen sanomalehti Amsterdamissa 1618.',
               selite: 'Courante uyt Italien, Duytslandt oli Alankomaiden '
                 + 'ensimmäinen sanomalehti: se alkoi ilmestyä Amsterdamissa '
                 + 'kesäkuussa 1618 viikoittain.',
@@ -7869,6 +8208,7 @@ export const MAA_KATEGORIAT = {
                 + 'luonnontieteellisistä kokoelmista: lähes 200 vuodessa '
                 + 'kertyneet 43 miljoonaa esinettä, sammalista '
                 + 'dinosauruksiin.',
+              lyhyt: 'Trix on vuonna 2013 Montanasta kaivettu Tyrannosaurus rex, vanhin tunnettu yksilö.',
               selite: 'Trix on vuonna 2013 Montanasta kaivettu Tyrannosaurus '
                 + 'rex, vanhin tunnettu yksilö, joka eli noin 67 miljoonaa '
                 + 'vuotta sitten.',
@@ -7901,6 +8241,7 @@ export const MAA_KATEGORIAT = {
             + 'Miehistöä oli vain parikymmentä. Purjeisiin maalattiin usein '
             + 'punainen risti, Kristuksen ritarikunnan merkki, joka rahoitti '
             + 'retkiä.',
+          lyhyt: 'Karavelli oli pieni purjealus, joka kehittyi Portugalin kalastusveneistä ja luovi hyvin.',
           selite: 'Karavelli oli pieni purjealus, joka kehittyi Portugalin '
             + 'ja Galician kalastusveneistä ja tunnettiin kyvystään luovia '
             + 'vastatuuleen sekä nopeudestaan.',
@@ -7918,6 +8259,7 @@ export const MAA_KATEGORIAT = {
             + 'kaksi laivaa neljästä. Reitti mullisti kaupan, koska mausteita '
             + 'ei enää tarvinnut kuljettaa maitse. Merimiehet sairastuivat '
             + 'keripukkiin, jonka syytä ei vielä tunnettu.',
+          lyhyt: 'Vanha muotokuva Vasco da Gamasta, joka avasi ensimmäisen suoran merireitin Euroopasta Intiaan.',
           selite: 'Vanha muotokuva Vasco da Gamasta (n. 1460-luku–1524), '
             + 'joka avasi ensimmäisen suoran merireitin Euroopasta Intiaan '
             + 'Hyväntoivonniemen kautta.',
@@ -7936,6 +8278,7 @@ export const MAA_KATEGORIAT = {
             + 'kuoli Filippiineillä 1521. Espanjaan palasi syyskuussa 1522 '
             + 'yksi ainoa laiva, Victoria, ja siinä 18 miestä. He olivat '
             + 'ensimmäiset, jotka kiersivät maapallon ympäri.',
+          lyhyt: 'Victoria oli ensimmäinen alus, joka purjehti maapallon ympäri Magalhãesin retkikunnassa.',
           selite: 'Victoria oli ensimmäinen alus, joka purjehti maapallon '
             + 'ympäri; se kuului Magalhãesin johtamaan viiden laivan '
             + 'retkikuntaan.',
@@ -7953,6 +8296,7 @@ export const MAA_KATEGORIAT = {
             + 'portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja '
             + 'Brasilia sattui jäämään viivan itäpuolelle. Siksi siellä '
             + 'puhutaan yhä portugalia eikä espanjaa.',
+          lyhyt: 'Vuoden 1502 Cantinon planisfääri on vanhin säilynyt kartta portugalilaisten löytöretkistä.',
           selite: 'Vuoden 1502 Cantinon planisfääri on vanhin säilynyt '
             + 'kartta portugalilaisten löytöretkistä idässä ja lännessä, ja '
             + 'se salakuljetettiin Portugalista Italiaan.',
@@ -7991,6 +8335,7 @@ export const MAA_KATEGORIAT = {
             + 'kuorintavuoden. Sama puu voi antaa kuorta parinsadan vuoden '
             + 'ajan. Maassa on maailman suurimmat korkkitammimetsät, ja '
             + 'niistä tulee noin puolet koko maailman korkista.',
+          lyhyt: 'Korkki on korkkitammen kaarnakerros, jota käytetään etenkin viinipullojen tulppina.',
           selite: 'Korkki on korkkitammen kaarnakerros, ja sitä käytetään '
             + 'keveytensä, kimmoisuutensa ja vedenpitävyytensä takia etenkin '
             + 'viinipullojen tulppina.',
@@ -8008,6 +8353,7 @@ export const MAA_KATEGORIAT = {
             + 'pisaroita, jotka tippuvat maahan. Vettä johdetaan kapeissa '
             + 'kivikourujen kaltaisissa kanavissa eli levadoissa kylille ja '
             + 'pelloille. Kanavia on tuhansia kilometrejä.',
+          lyhyt: 'Laurimetsä on subtrooppinen metsätyyppi, jonka puilla on ikivihreät kiiltävät lehdet.',
           selite: 'Laurimetsä on subtrooppinen metsätyyppi kosteassa ja '
             + 'tasalämpöisessä ilmastossa, ja sen puilla on ikivihreät '
             + 'kiiltävät lehdet.',
@@ -8026,6 +8372,7 @@ export const MAA_KATEGORIAT = {
             + 'minkään muun eläimen. Saarten ympärillä on syvää vettä aivan '
             + 'rannan tuntumassa, joten valaita voi nähdä lyhyen veneretken '
             + 'päässä.',
+          lyhyt: 'Kaskelotti on suurin hammasvalas ja maailman suurin hampaallinen saalistaja.',
           selite: 'Kaskelotti on suurin hammasvalas ja maailman suurin '
             + 'hampaallinen saalistaja, ja se vaeltaa vuodenaikojen mukaan '
             + 'ruokailualueilleen.',
@@ -8043,6 +8390,7 @@ export const MAA_KATEGORIAT = {
             + 'lainkaan pesimäaikaan. Saarella on myös 1600-luvun linnake, '
             + 'joka on rakennettu omalle luodolleen ja jonne pääsee kapeaa '
             + 'kivipengertä pitkin.',
+          lyhyt: 'Berlengas on Penichen edustalla sijaitseva saaristo, jonka ainoa asuttu saari on Berlenga Grande.',
           selite: 'Berlengas on Penichen edustalla 10–17 kilometrin päässä '
             + 'sijaitseva saaristo, jonka ainoa asuttu saari on Berlenga '
             + 'Grande.',
@@ -8082,6 +8430,7 @@ export const MAA_KATEGORIAT = {
             + 'ja se ladottiin myöhemmin myös Rio de Janeiron rantakadulle. '
             + 'Työ on hidasta: taitava latoja saa päivässä muutaman '
             + 'neliömetrin.',
+          lyhyt: 'Calçada portuguesa on portugalilainen jalkakäytäväperinne, jossa kivistä ladotaan mosaiikkikuvioita.',
           selite: 'Calçada portuguesa on portugalilainen '
             + 'jalkakäytäväperinne, jossa pienistä kivistä ladotaan '
             + 'mosaiikin tapaan kuvioita ja kuvia.',
@@ -8116,6 +8465,7 @@ export const MAA_KATEGORIAT = {
             + 'kalastajia ja pilailevia kohtauksia, joihin kuuluu aina lyhyt '
             + 'teksti. Nykyään veneet kuljettavat matkailijoita, mutta '
             + 'maalaukset uusitaan yhä.',
+          lyhyt: 'Moliceiro-veneet rakennettiin Ria de Aveiron laguuniin vesikasvillisuuden keräämiseen.',
           selite: 'Moliceiro-veneet rakennettiin Ria de Aveiron matalaan '
             + 'laguuniin, ja niillä koottiin lannoitteeksi '
             + 'vesikasvillisuutta eli moliçoa.',
@@ -8133,6 +8483,7 @@ export const MAA_KATEGORIAT = {
             + 'Halli valmistui vuonna 1916. Asema rakennettiin vanhan '
             + 'luostarin paikalle, ja siitä se sai nimensä. Sininen väri '
             + 'tulee kobolttioksidista, joka kestää polttoa kirkkaana.',
+          lyhyt: 'São Benton asema sijaitsee Porton historiallisessa keskustassa Unescon maailmanperintöluettelossa.',
           selite: 'São Benton asema sijaitsee Porton historiallisessa '
             + 'keskustassa, joka kuuluu Unescon maailmanperintöluetteloon.',
           lahde: 'Michael Gaylard, Wikimedia Commons (CC BY 4.0)',
@@ -8170,6 +8521,7 @@ export const MAA_KATEGORIAT = {
             + 'aallon energia purkautuu ylöspäin. Rannalta katsottuna aalto '
             + 'voi nousta yli kahdenkymmenen metrin korkeuteen. Surffaaja '
             + 'hinataan aaltoon vesijetillä, koska omin voimin ei ehdi.',
+          lyhyt: 'Nazaré on Portugalin länsirannikon lomakaupunki, tunnettu maailman suurimmista aalloistaan.',
           selite: 'Nazaré on Portugalin länsirannikon lomakaupunki, joka '
             + 'tunnetaan maailman suurimpiin kuuluvista aalloistaan.',
           lahde: 'Alohamansurfer, Wikimedia Commons (CC BY-SA 4.0)',
@@ -8187,6 +8539,7 @@ export const MAA_KATEGORIAT = {
             + 'kertaa, ensimmäisen kerran vuonna 1947. Halleja rakennettiin '
             + 'pikkukaupunkeihin samaan aikaan kuin muualla rakennettiin '
             + 'jalkapallostadioneita.',
+          lyhyt: 'Rullakiekkoa pelataan rullaluistimilla ja lyhyellä mailalla viiden pelaajan joukkueissa.',
           selite: 'Rullakiekkoa pelataan rullaluistimilla ja lyhyellä '
             + 'mailalla; kentällä on kerrallaan viisi pelaajaa joukkueesta '
             + 'ja peli kestää kaksi 25 minuutin puoliaikaa.',
@@ -8204,6 +8557,7 @@ export const MAA_KATEGORIAT = {
             + 'nimi. Seuran kotistadion on maan suurin, ja sinne mahtuu yli '
             + '64 000 katsojaa. Kannattajakirjoja on niin paljon, että seura '
             + 'on ollut jäsenmäärältään maailman suurimpia.',
+          lyhyt: 'Sport Lisboa e Benfica perustettiin 1904, ja se on yksi Portugalin kolmesta suurseurasta.',
           selite: 'Sport Lisboa e Benfica perustettiin 28. helmikuuta 1904, '
             + 'ja se on yksi Portugalin kolmesta suurseurasta, joita ei ole '
             + 'koskaan pudotettu pääsarjasta.',
@@ -8256,6 +8610,7 @@ export const MAA_KATEGORIAT = {
             + 'mitä ei enää ole. Amália Rodrigues lauloi fadoa yli '
             + 'viisikymmentä vuotta, ja kun hän kuoli 1999, Portugalissa '
             + 'vietettiin kolme päivää kansallista surua.',
+          lyhyt: 'Amália Rodrigues tunnetaan fadon kuningattarena ja myydyimpänä portugalilaisena levyttäjänä.',
           selite: 'Amália Rodrigues (1920–1999) tunnetaan fadon '
             + 'kuningattarena, ja hän on kaikkien aikojen myydyin '
             + 'portugalilainen levyttäjä.',
@@ -8278,6 +8633,7 @@ export const MAA_KATEGORIAT = {
             + 'Kahdeksankymmentäviisi vuotta myöhemmin hänestä tehtiin '
             + 'Portugalin ensimmäinen äänielokuva, ja hänen kotikatunsa '
             + 'kiveykseen on ladottu kitaran kuva.',
+          lyhyt: 'Maria Severa oli fadolaulaja ja kitaristi, ensimmäinen maineeseen noussut fadista.',
           selite: 'Maria Severa (1820–1846) oli fadolaulaja ja kitaristi, '
             + 'ensimmäinen maineeseen noussut fadista, josta tuli kuolemansa '
             + 'jälkeen lähes myyttinen hahmo.',
@@ -8316,6 +8672,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Museu Nacional de Arte Antiga Lissabonissa omistaa '
                 + 'Hieronymus Boschin Pyhän Antoniuksen kiusaukset noin '
                 + 'vuodelta 1500.',
+              lyhyt: 'Hieronymus Boschin noin 1501 maalaama triptyykki on Lissabonin muinaistaiteen kansallismuseossa.',
               selite: 'Hieronymus Boschin noin vuonna 1501 maalaama '
                 + 'triptyykki Pyhän Antoniuksen kiusauksista on Lissabonin '
                 + 'muinaistaiteen kansallismuseossa.',
@@ -8327,6 +8684,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Portugal, Lisbon, Gulbenkian Museum, Peacock Corsage, René Lalique (52593923406).jpg',
               teksti: 'Calouste Gulbenkian oli öljymies, joka keräsi elämänsä '
                 + 'aikana noin 6 000 taideteosta ja jätti ne Lissabonille.',
+              lyhyt: 'Calouste Gulbenkianin museo esittelee yhtä maailman merkittävimmistä yksityiskokoelmista.',
               selite: 'Calouste Gulbenkianin museo esittelee yhtä maailman '
                 + 'merkittävimmistä yksityiskokoelmista, johon kuuluu myös '
                 + 'René Laliquen koruja.',
@@ -8341,6 +8699,7 @@ export const MAA_KATEGORIAT = {
                 + 'yhteen saliin. Google Arts & Culturen katunäkymässä museo '
                 + 'aukeaa niin, että vaunujen välissä voi kävellä ja kääntyä '
                 + 'ympäri.',
+              lyhyt: 'Lissabonin vaunumuseo perustettiin 1905, ja sen kokoelmassa on kuningashuoneiden vaunuja.',
               selite: 'Lissabonin vaunumuseo perustettiin 1905, ja sen '
                 + 'kokoelmassa on Portugalin kuningashuoneiden vaunuja '
                 + '1500-luvulta 1800-luvulle.',
@@ -8369,6 +8728,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Lissabonin fadomuseon digitaalinen ääniarkisto on '
                 + 'Portugalin suurin äänitekokoelma verkossa: 6 159 raitaa, '
                 + 'vanhimmat 1900-luvun alusta.',
+              lyhyt: 'Fado on musiikinlaji, jonka historia jäljittyy 1820-luvun Lissaboniin; nimi merkitsee kohtaloa.',
               selite: 'Fado on musiikinlaji, jonka historia voidaan '
                 + 'jäljittää 1820-luvun Lissaboniin, ja sen nimi merkitsee '
                 + 'kohtaloa.',
@@ -8382,6 +8742,7 @@ export const MAA_KATEGORIAT = {
                 + 'paikoin 5 000 metriä syvä kanjoni. Se ohjaa Atlantin '
                 + 'myrskyjen voiman suoraan rantaan, ja siksi Praia do '
                 + 'Nortessa nousevat maailman suurimmat surffatut aallot.',
+              lyhyt: 'Nazarén Praia do Norten aallot syntyvät rannan edustalla kulkevasta syvästä kanjonista.',
               selite: 'Nazarén Praia do Norten aallot syntyvät rannan '
                 + 'edustalla kulkevasta syvästä merenalaisesta kanjonista.',
               lahde: 'Carlos Eduardo Joos, Wikimedia Commons (CC BY 2.0)',
@@ -8415,6 +8776,7 @@ export const MAA_KATEGORIAT = {
             + 'harvoin. Molekyylitutkimukset paljastivat yllätyksen: kri-kri '
             + 'ei olekaan alkuperäinen villivuohi vaan villiintynyt '
             + 'kesyvuohi.',
+          lyhyt: 'Kri-kri on villiintynyt vuohi, jota tavataan nykyään vain Kreetalla ja parilla pikkusaarella.',
           selite: 'Kri-kri on villiintynyt vuohi, jota tavataan nykyään vain '
             + 'Kreetalla, sen edustan kolmella pikkusaarella ja Sapientzan '
             + 'saarella.',
@@ -8434,6 +8796,7 @@ export const MAA_KATEGORIAT = {
             + 'joten rannan lamput voivat viedä ne väärään suuntaan. Siksi '
             + 'Zakynthoksen lentokentältä ei saa nousta eikä sinne laskeutua '
             + 'yöllä. Toiseksi tärkein pesimäranta on Kyparissian lahti.',
+          lyhyt: 'Valekarettikilpikonna on merikilpikonna, jonka selkäkilpi kasvaa noin 90 senttiä pitkäksi.',
           selite: 'Valekarettikilpikonna on merikilpikonna, jonka selkäkilpi '
             + 'kasvaa noin 90 senttiä pitkäksi ja joka painaa '
             + 'täysikasvuisena keskimäärin 135 kiloa.',
@@ -8454,6 +8817,7 @@ export const MAA_KATEGORIAT = {
             + 'mittainen ja mustanruskean karvan peitossa. Alonnisoksen '
             + 'ympärille perustettiin vuonna 1992 merikansallispuisto juuri '
             + 'hylkeitä varten.',
+          lyhyt: 'Munkkihylkeitä arvioidaan olevan jäljellä 800–1 000 yksilöä, maailman harvinaisimpana hylkeenä.',
           selite: 'Munkkihylkeitä arvioidaan olevan jäljellä 800–1 000 '
             + 'yksilöä, mikä tekee siitä maailman harvinaisimman hylkeen.',
           lahde: 'Wanax01, Wikimedia Commons (CC BY-SA 4.0)',
@@ -8472,6 +8836,7 @@ export const MAA_KATEGORIAT = {
             + 'yhteistyötä. Kiharapelikaani ei syöksy veteen ylhäältä, vaan '
             + 'ui pinnalla ja kurottaa nokkansa pinnan alle. Kreikassa nopeat '
             + 'moottoriveneet häiritsevät parvien ruokailua.',
+          lyhyt: 'Kiharapelikaani on pelikaaniheimon suurin laji, siipien kärkiväli 2,7–3,2 metriä.',
           selite: 'Kiharapelikaani on pelikaaniheimon suurin laji ja '
             + 'maailman painavimpia lentäviä lintuja, ja sen siipien '
             + 'kärkiväli on 2,7–3,2 metriä.',
@@ -8532,6 +8897,7 @@ export const MAA_KATEGORIAT = {
             + 'taiteessa jo 600-luvulla eaa. Merenneidon hahmon ne saivat '
             + 'vasta keskiajalla. Erään myöhemmän tarinan mukaan seireenit '
             + 'heittäytyivät mereen, kun laiva pääsi ohi.',
+          lyhyt: 'Kreikkalaisessa mytologiassa seireenit olivat lumoavasti laulavia olentoja Odysseiassa.',
           selite: 'Kreikkalaisessa mytologiassa seireenit olivat naismaisia '
             + 'olentoja, joiden lumoava laulu esiintyy Odysseiassa; '
             + 'kuva-aiheissa ne saivat linnun hahmon.',
@@ -8551,6 +8917,7 @@ export const MAA_KATEGORIAT = {
             + 'maalle nimen Ikaria pojan muistoksi. Ikaria on todellinen '
             + 'Kreikan saari Samoksesta lounaaseen, ja sen ympärillä oleva '
             + 'merialue on yhä nimeltään Ikarianmeri.',
+          lyhyt: 'Ikaros oli labyrintin rakentaneen Daidaloksen poika, vangittu isänsä kanssa Minoksen käskystä.',
           selite: 'Ikaros oli Kreetan labyrintin rakentaneen Daidaloksen '
             + 'poika, ja isä ja poika vangittiin, kun Minos epäili heidän '
             + 'paljastaneen labyrintin salaisuuden.',
@@ -8570,6 +8937,7 @@ export const MAA_KATEGORIAT = {
             + 'sananlaskukokoelmassaan sanan pithos latinan sanaksi pyxis, '
             + 'joka tarkoittaa pientä rasiaa. Virhe jäi elämään, ja '
             + 'suomeksikin puhutaan yhä Pandoran lippaasta.',
+          lyhyt: 'Kreikkalaisen taruston Pandora oli ensimmäinen nainen, joka avasi kielletyn pithos-astian.',
           selite: 'Kreikkalaisen taruston Pandora oli ensimmäinen nainen, ja '
             + 'hän avasi pithos-astian, joka on käännöksissä muuttunut '
             + 'lippaaksi.',
@@ -8610,6 +8978,7 @@ export const MAA_KATEGORIAT = {
             + 'ulos. Samaa temppua käyttää wc-pytty. Kuppia kutsutaan '
             + 'Pythagoraan maljaksi, vaikka vanhin tunnettu kuvaus '
             + 'tällaisesta astiasta on Heron Aleksandrialaisen kirjoittama.',
+          lyhyt: 'Pythagoraan kuppi tyhjenee kokonaan pohjastaan lappoilmiön ansiosta ylitäytettynä.',
           selite: 'Pythagoraan kuppi tyhjenee kokonaan pohjastaan '
             + 'lappoilmiön ansiosta, jos se täytetään yli merkkiviivan.',
           lahde: 'M Todorovic, Wikimedia Commons (CC BY-SA 4.0)',
@@ -8628,6 +8997,7 @@ export const MAA_KATEGORIAT = {
             + 'määrän pyhää vettä — se on maailman ensimmäinen tunnettu '
             + 'myyntiautomaatti — sekä temppelin ovet, jotka aukesivat '
             + 'itsestään, kun alttarilla sytytettiin tuli.',
+          lyhyt: 'Aiolipila on siipipyörätön höyryturbiini, jonka Heron Aleksandrialainen esitteli 1. vuosisadalla.',
           selite: 'Aiolipila on siipipyörätön höyryturbiini, joka pyörii '
             + 'veden kiehuessa; Heron Aleksandrialainen esitteli laitteen '
             + 'ensimmäisellä vuosisadalla.',
@@ -8647,6 +9017,7 @@ export const MAA_KATEGORIAT = {
             + 'Hippokrates matkusti potilaiden luo ainakin Thessaliaan, '
             + 'Traakiaan ja Marmaranmerelle asti. Hän on myös ensimmäinen, '
             + 'joka mainitsee kirjoituksissaan Khioksen mastiksin kyyneleet.',
+          lyhyt: 'Kosin plataani liitetään perimätiedossa Hippokrateeseen, lääketieteen isänä tunnettuun lääkäriin.',
           selite: 'Kosin plataani liitetään perimätiedossa Hippokrateeseen '
             + '(n. 460–370 eaa.), jota kutsutaan lääketieteen isäksi.',
           lahde: 'Steven Fruitsmaak, Wikimedia Commons (CC BY-SA 3.0)',
@@ -8665,6 +9036,7 @@ export const MAA_KATEGORIAT = {
             + 'tutkijat totesivat sen pitävän paikkansa. Aristoteles syntyi '
             + 'Stageirassa Pohjois-Kreikassa, opiskeli Ateenassa Platonin '
             + 'koulussa ja opetti myöhemmin nuorta Aleksanteri Suurta.',
+          lyhyt: 'Marmorinen rintakuva Aristoteleesta, joka perusti peripateettisen koulukunnan.',
           selite: 'Marmorinen rintakuva Aristoteleesta (384–322 eaa.), joka '
             + 'perusti peripateettisen koulukunnan ja kirjoitti '
             + 'luonnontieteistä politiikkaan.',
@@ -8706,6 +9078,7 @@ export const MAA_KATEGORIAT = {
             + 'ensimmäisen päätöksen kumotuksi. Vuonna 2002 nimi suojattiin '
             + 'lopullisesti: fetaksi saa kutsua vain Manner-Kreikassa ja '
             + 'Lesboksella perinteiseen tapaan tehtyä juustoa.',
+          lyhyt: 'Feta on lampaanmaidosta tehty kreikkalainen suolavesijuusto, jota kypsytetään suolaliemessä.',
           selite: 'Feta on lampaanmaidosta tai lampaan- ja vuohenmaidon '
             + 'seoksesta tehty kreikkalainen suolavesijuusto, jota '
             + 'kypsytetään suurina paloina suolaliemessä.',
@@ -8726,6 +9099,7 @@ export const MAA_KATEGORIAT = {
             + 'pureskellaan purukumin tapaan. Ottomaanien aikaan se oli '
             + 'painonsa arvoista kultaa, ja kylät rakennettiin linnoituksiksi '
             + 'ilman katutason ovia.',
+          lyhyt: 'Mastiksi on mastiksipistaasin pihkaa, jota tuotetaan Khioksen saarella Khioksen kyynelinä.',
           selite: 'Mastiksi on mastiksipistaasin pihkaa, jota on '
             + 'perinteisesti tuotettu Khioksen saarella ja jota kutsutaan '
             + 'Khioksen kyyneliksi.',
@@ -8744,6 +9118,7 @@ export const MAA_KATEGORIAT = {
             + 'säilyy ehjänä, jatkaa seuraavaa vastaan, ja viimeinen ehjä '
             + 'muna voittaa. Leikin nimi on tsougrisma. Paasto katkaistaan '
             + 'magiritsa-keitolla, jota on haudutettu illan mittaan.',
+          lyhyt: 'Tsoureki on makea juhlaleipä, joka maustetaan usein sitruunalla tai mastiksilla.',
           selite: 'Tsoureki on makea juhlaleipä, joka leivotaan maidosta, '
             + 'voista, kananmunista ja sokerista ja maustetaan usein '
             + 'sitruunalla tai mastiksilla.',
@@ -8762,6 +9137,7 @@ export const MAA_KATEGORIAT = {
             + 'kirjoittavat kuorrutuksella leivän pintaan tulevan vuoden '
             + 'numeron. Myös yhdistykset, työpaikat ja ministeriöt leikkaavat '
             + 'oman vasilopitansa tammikuun aikana.',
+          lyhyt: 'Vasilopita on uudenvuoden leipä, johon kätketään kolikko, ja se liittyy Pyhän Basileioksen päivään.',
           selite: 'Vasilopita on uudenvuoden leipä, johon kätketään kolikko '
             + 'onnen tuojaksi; se liittyy Pyhän Basileioksen päivään 1. '
             + 'tammikuuta.',
@@ -8799,6 +9175,7 @@ export const MAA_KATEGORIAT = {
             + 'vuodesta 1937, mutta musiikki jäi henkiin. Unesco otti '
             + 'rebetikon ihmiskunnan kulttuuriperinnön luetteloon vuonna '
             + '2017.',
+          lyhyt: 'Rebetiko syntyi kreikkalaisten kaupunkien lauluperinteistä ja muotoutui 1930-luvulla tyylilajiksi.',
           selite: 'Rebetiko syntyi kreikkalaisten kaupunkien '
             + 'lauluperinteistä ja muotoutui 1930-luvulla omaksi '
             + 'tyylilajikseen.',
@@ -8819,6 +9196,7 @@ export const MAA_KATEGORIAT = {
             + 'Mikis Theodorakis. Kun sotilasjuntta kielsi hänen musiikkinsa '
             + 'vuonna 1967, sitä laulettiin muualla — kiertueen solistina oli '
             + 'suomalainen Arja Saijonmaa.',
+          lyhyt: 'Mikis Theodorakis sävelsi yli tuhat teosta, muun muassa elokuviin Kreikkalainen Zorbas ja Z.',
           selite: 'Mikis Theodorakis (1925–2021) sävelsi yli tuhat teosta, '
             + 'muun muassa elokuviin Kreikkalainen Zorbas, Z ja Serpico.',
           lahde: 'Hugo Sundström, Museovirasto, Wikimedia Commons (CC BY 4.0)',
@@ -8858,6 +9236,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Akropoliin monumenttien suojelupalvelu ΥΣΜΑ kuvasi '
                 + 'kukkulan 360 asteen panoraamoina, ja kierros aukeaa '
                 + 'suoraan selaimessa.',
+              lyhyt: 'Propylaia rakennettiin Akropoliin porttirakennukseksi 437–432 eaa. Perikleen ohjelmassa.',
               selite: 'Propylaia rakennettiin Akropoliin juhlalliseksi '
                 + 'porttirakennukseksi 437–432 eaa. osana Perikleen '
                 + 'rakennusohjelmaa, ja sen suunnitteli Mnesikles.',
@@ -8870,6 +9249,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Ateenan Kykladisen taiteen museo on tehnyt 20 esineestään '
                 + 'kolmiulotteiset mallit. Niitä voi kääntää, kallistaa ja '
                 + 'katsoa takaapäin — sitä museosalissa ei saa tehdä.',
+              lyhyt: 'Kykladinen kulttuuri kukoisti Egeanmeren saarilla noin 3300–1100 eaa. marmorisine ihmisfiguureineen.',
               selite: 'Kykladinen kulttuuri kukoisti Egeanmeren saarilla '
                 + 'noin 3300–1100 eaa., ja sen tunnetuin taidemuoto ovat '
                 + 'marmoriset ihmisfiguurit.',
@@ -8882,6 +9262,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Kotsanaksen museo rakentaa toimivia kopioita antiikin '
                 + 'kreikkalaisista koneista, ja jokaisella on verkossa oma '
                 + 'sivunsa: yli 90 keksintöä yli 30 aihepiirissä.',
+              lyhyt: 'Antikytheran mekanismi on 100-luvulla eaa. rakennettu vanhin tunnettu analoginen tietokone.',
               selite: 'Antikytheran mekanismi on 100-luvulla eaa. rakennettu '
                 + 'käsikäyttöinen tähtitieteellinen laskin, vanhin tunnettu '
                 + 'analoginen tietokone.',
@@ -8899,6 +9280,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'SearchCulture.gr kokoaa kreikkalaisten museoiden, '
                 + 'arkistojen ja kirjastojen digitoinnit samaan hakuun: 1 085 '
                 + '547 kohdetta 163 kokoelmasta.',
+              lyhyt: 'Karagiozis on kreikkalaisen varjoteatterin päähahmo, versio turkkilaisesta Karagözistä.',
               selite: 'Karagiozis on kreikkalaisen varjoteatterin päähahmo, '
                 + 'ottomaaniajalta periytyvä versio turkkilaisesta '
                 + 'Karagözistä.',
@@ -8911,6 +9293,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Britannian Ateenan-instituutti on kaivanut Kreikassa '
                 + '1880-luvulta asti, ja sen arkisto on nyt verkossa: 36 048 '
                 + 'kuvallista kohdetta.',
+              lyhyt: 'Knossoksen valtaistuinsali rakennettiin 1400-luvulla eaa. ja on Euroopan vanhin valtaistuinsali.',
               selite: 'Knossoksen valtaistuinsali rakennettiin seremonioita '
                 + 'varten 1400-luvulla eaa., ja sitä pidetään Euroopan '
                 + 'vanhimpana valtaistuinsalina.',
@@ -8923,6 +9306,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Kreikassa maa tärisee lähes päivittäin, ja Ateenan '
                 + 'observatorion geodynaaminen instituutti seuraa sitä ympäri '
                 + 'vuorokauden.',
+              lyhyt: 'Vuoden 365 maanjäristys arvioidaan magnitudiltaan vähintään 8,5:ksi ja nosti Kreetan rannikkoa.',
               selite: 'Vuoden 365 maanjäristys arvioidaan magnitudiltaan '
                 + 'vähintään 8,5:ksi, ja se nosti Kreetan länsirannikkoa '
                 + 'useita metrejä.',
@@ -8952,6 +9336,7 @@ export const MAA_KATEGORIAT = {
             + 'Stwosz otti krakovalaisilta, ja hän teki työnsä niin tarkasti, '
             + 'että hahmoista erottuvat vääntyneet sormet, pullistuneet '
             + 'suonet ja ihotautien jäljet.',
+          lyhyt: 'Veit Stoss muutti Krakovaan 1477 veistämään Marian kirkkoon jättimäisen puisen alttarin.',
           selite: 'Veit Stoss muutti Krakovaan 1477 veistämään Marian '
             + 'kirkkoon jättimäisen puisen alttarin, ja hänen tyylinsä '
             + 'yhdisti myöhäisgotiikan ja pohjoisen renessanssin.',
@@ -8969,6 +9354,7 @@ export const MAA_KATEGORIAT = {
             + 'Ludovico Sforzan oma tunnus. Ruhtinas Czartoryski osti taulun '
             + 'Italiasta vuonna 1798, ja Krakovaan se tuotiin 1876. Se on '
             + 'ainoa Leonardo Puolassa.',
+          lyhyt: 'Leonardo maalasi teoksen noin 1489–1491 Ludovico Sforzan rakastajattaresta Cecilia Gallerani.',
           selite: 'Leonardo maalasi teoksen öljyvärein pähkinäpuulevylle '
             + 'noin 1489–1491, ja sen kohde on Milanon herttuan Ludovico '
             + 'Sforzan rakastajatar Cecilia Gallerani.',
@@ -9023,6 +9409,7 @@ export const MAA_KATEGORIAT = {
             + 'katosivat metsästä kokonaan, mutta ne tuotiin takaisin vuonna '
             + '1951, ja nyt hirvi on puiston tunnus. Ilves palasi 1993 ja '
             + 'susi 2013.',
+          lyhyt: 'Kampinosin metsä Varsovan länsipuolella alkoi muodostua viime jääkauden lopulla.',
           selite: 'Kampinosin metsä Varsovan länsipuolella alkoi muodostua '
             + '14 000–11 000 vuotta sitten viime jääkauden lopulla, ja sitä '
             + 'on jäljellä noin 240 neliökilometriä.',
@@ -9061,6 +9448,7 @@ export const MAA_KATEGORIAT = {
                 + 'ja maan suurin: kirjoja, sanomalehtiä, karttoja, '
                 + 'julisteita, nuotteja ja käsikirjoituksia, kaikki ilman '
                 + 'kirjautumista ja maksua.',
+              lyhyt: 'Noin 1400 kirjoitettu Florianin psalttari sisältää vanhimman puolankielisen psalmikäännöksen.',
               selite: 'Noin vuonna 1400 kirjoitettu Florianin psalttari on '
                 + 'kolmikielinen latinaksi, puolaksi ja saksaksi, ja sen '
                 + 'puolankielinen teksti on vanhin tunnettu psalmien käännös '
@@ -9074,6 +9462,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Wirtualne Muzea Małopolski on skannannut yli tuhat '
                 + 'esinettä 42 museosta Krakovan seudulta, ja niitä voi '
                 + 'kääntää ruudulla joka suuntaan.',
+              lyhyt: 'Wawelin linna on Puolan historiallisesti merkittävin kohde, Kasimir III Suuren rakennuttama.',
               selite: 'Wawelin linna on Puolan historiallisesti merkittävin '
                 + 'kohde, ja Kasimir III Suuri määräsi sen rakennettavaksi '
                 + 'Veikselin rannalle Krakovaan.',
@@ -9085,6 +9474,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Faras Saint Anne.jpg',
               teksti: 'Varsovan kansallismuseo on vienyt verkkoon lähes 60 000 '
                 + 'esinettä. Erikoisin osa on Farasin galleria.',
+              lyhyt: 'Nubian Faras jäi 1960-luvulla Nasser-järven alle, mutta katedraalin maalaukset pelastettiin.',
               selite: 'Nubian Faras jäi 1960-luvulla pysyvästi Nasser-järven '
                 + 'alle, mutta puolalainen tutkimusryhmä ehti pelastaa '
                 + 'katedraalin seinämaalaukset.',
@@ -9103,6 +9493,7 @@ export const MAA_KATEGORIAT = {
                 + 'vuosina 2017–2020 ja avasi sen verkkoon. Kohteita on 39 '
                 + '500: käsikirjoituksia, 500 ensipainosta, 30 000 valokuvaa, '
                 + 'Chopinin kirjeitä ja lähes tuhat tuntia äänitteitä.',
+              lyhyt: 'Chopin sävelsi opus 27:n kaksi nokturnoa 1836, julkaistuina kreivitär d\'Apponylle omistettuina.',
               selite: 'Chopin sävelsi opus 27:n kaksi nokturnoa vuonna 1836, '
                 + 'ja ne julkaistiin seuraavana vuonna kreivitär '
                 + 'd\'Apponylle omistettuina.',
@@ -9116,6 +9507,7 @@ export const MAA_KATEGORIAT = {
                 + '1200-luvulta lähtien, ja suolaa nostettiin sieltä vuoteen '
                 + '1996 asti. Käytäviä kertyi 287 kilometriä ja syvyyttä 327 '
                 + 'metriä.',
+              lyhyt: 'Wieliczkan suolakaivosta on louhittu 1200-luvulta, tuotannon jatkuttua yhtäjaksoisesti vuoteen 1996.',
               selite: 'Wieliczkan suolakaivosta on louhittu 1200-luvulta '
                 + 'lähtien, ja ruokasuolan tuotanto jatkui siellä '
                 + 'yhtäjaksoisesti vuoteen 1996.',
@@ -9129,6 +9521,7 @@ export const MAA_KATEGORIAT = {
                 + 'alussa. Vuonna 1923 perustettu kansainvälinen '
                 + 'suojeluyhdistys laski jäljellä olevat puhdasrotuiset '
                 + 'eläimet: niitä oli 54, kaikki tarhoissa.',
+              lyhyt: 'Białowieżan metsä on jäänne Euroopan tasangon aarniometsästä, ja siellä elää yli 800 visenttiä.',
               selite: 'Białowieżan metsä on viimeisiä jäänteitä Euroopan '
                 + 'tasankoa peittäneestä aarniometsästä, ja siellä elää yli '
                 + '800 visenttiä.',
@@ -9160,6 +9553,7 @@ export const MAA_KATEGORIAT = {
             + 'suoraan ja lähes vaakasuoraan, joten junat kulkevat siellä '
             + 'nopeammin kuin ennen vuoren yli. Kiveä louhittiin niin paljon, '
             + 'että siitä olisi saanut viisi Kheopsin pyramidia.',
+          lyhyt: 'Kesäkuussa 2016 avattu Gotthardin pohjatunneli on 57 kilometrillään maailman pisin rautatietunneli.',
           selite: 'Kesäkuussa 2016 avattu Gotthardin pohjatunneli on 57 '
             + 'kilometrin pituisena maailman pisin ja syvin rautatietunneli.',
           lahde: 'Kecko, Wikimedia Commons (CC BY 2.0)',
@@ -9177,6 +9571,7 @@ export const MAA_KATEGORIAT = {
             + 'kuin joen pyörteet. Unesco otti jäätikön ympäristöineen '
             + 'maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt '
             + 'viime vuosikymmeninä nopeasti.',
+          lyhyt: 'Aletschin jäätikkö on Alppien suurin, noin 23 kilometriä pitkä ja 82 neliökilometrin laajuinen.',
           selite: 'Aletschin jäätikkö on Alppien suurin: noin 23 kilometriä '
             + 'pitkä ja pinta-alaltaan lähes 82 neliökilometriä.',
           lahde: 'Tobias Alt, Wikimedia Commons (CC BY-SA 4.0)',
@@ -9194,6 +9589,7 @@ export const MAA_KATEGORIAT = {
             + 'seisahtuu ja matkustajat katsovat jäätikölle vuoreen '
             + 'hakatuista ikkunoista. Ylhäällä ilma on ohutta, ja portaat '
             + 'tuntuvat raskaammilta kuin alhaalla.',
+          lyhyt: 'Jungfraubahn on Euroopan korkein rautatie, joka nousee Kleine Scheideggistä Jungfraujochille.',
           selite: 'Jungfraubahn on Sveitsin ja Euroopan korkein rautatie, ja '
             + 'se nousee yhdeksän kilometrin matkalla Kleine Scheideggistä 3 '
             + '454 metrin korkeuteen Jungfraujochille.',
@@ -9234,6 +9630,7 @@ export const MAA_KATEGORIAT = {
             + 'sanoista velours ja crochet eli sametti ja koukku. Nykyään '
             + 'samaa kiinnitystä on kengissä, avaruusaluksissa ja '
             + 'verenpainemittareissa.',
+          lyhyt: 'Tarranauha keksittiin 1900-luvun puolivälissä takiaisen koukkupäisistä piikeistä mallia ottaen.',
           selite: 'Tarranauha eli koukku- ja silmukkakiinnitin keksittiin '
             + '1900-luvun puolivälissä, ja se otti mallia takiaisen '
             + 'koukkupäisistä piikeistä.',
@@ -9253,6 +9650,7 @@ export const MAA_KATEGORIAT = {
             + 'äidin nimestä Victoria ja ruostumattoman teräksen lyhenteestä '
             + 'inox. Kylkeen leimattu risti ja kilpi ovat samat kuin maan '
             + 'vaakunassa.',
+          lyhyt: 'Sveitsiläistä armeijan taskuveistä on valmistettu vuodesta 1890, tekijöinä Victorinox ja Wenger.',
           selite: 'Sveitsiläistä armeijan taskuveistä on valmistettu '
             + 'vuodesta 1890, ja sen tunnetuimmat tekijät ovat Victorinox ja '
             + 'Wenger.',
@@ -9308,6 +9706,7 @@ export const MAA_KATEGORIAT = {
             + 'välistä rajaa sanotaan leikillään Röstigrabeniksi, '
             + 'röstihaudaksi: sen molemmin puolin äänestetään eri tavalla ja '
             + 'puhutaan eri kieltä, ja perunakakku jäi rajan nimeksi.',
+          lyhyt: 'Rösti syntyi Bernin ja Fribourgin maanviljelijöiden aamiaisruokana, nyt Sveitsin kansallisruoka.',
           selite: 'Rösti syntyi Bernin ja Fribourgin kantonien '
             + 'maanviljelijöiden aamiaisruokana, ja monet sveitsiläiset '
             + 'pitävät sitä kansallisruokanaan.',
@@ -9325,6 +9724,7 @@ export const MAA_KATEGORIAT = {
             + 'lauman paras lypsäjä. Jos kesän aikana on sattunut '
             + 'onnettomuus, koristeet jätetään pois — silloin kulkue kertoo '
             + 'surusta ilman sanoja.',
+          lyhyt: 'Karjan siirtäminen kesälaitumelta laaksoon on osa transhumanssia, karjan vuodenaikaista siirtoa.',
           selite: 'Karjan siirtäminen kesälaitumelta laaksoon on osa '
             + 'transhumanssia eli laiduntavan karjan vuodenaikaista siirtoa '
             + 'kiinteiden laidunten välillä.',
@@ -9342,6 +9742,7 @@ export const MAA_KATEGORIAT = {
             + 'Menetelmää sanotaan konssaukseksi, ja hyvää suklaata '
             + 'sekoitetaan yhä tunteja. Sveitsiläiset syövät suklaata enemmän '
             + 'henkeä kohti kuin minkään muun maan asukkaat.',
+          lyhyt: 'Konssauksessa suklaamassaa hierretään pitkään, mikä jakaa kaakaovoin ja kehittää makua.',
           selite: 'Konssauksessa suklaamassaa hierretään pitkään '
             + 'sekoittimessa, mikä jakaa kaakaovoin tasaisesti ja kehittää '
             + 'samalla makua.',
@@ -9415,6 +9816,8 @@ export const MAA_KATEGORIAT = {
             + 'ihmevuodeksi, annus mirabilisiksi. Virastossa se ei näy mitenkään: '
             + 'Einstein arvioi hakemuksia vielä vuosia, ja yliopiston virkaan hän '
             + 'pääsee vasta 1909.',
+          lyhyt: 'Einstein pohtii valoa ja samanaikaisuutta patenttiviraston '
+            + 'työtoverin Bessonin kanssa Bernissä.',
           selite: 'Michele Besso kuuntelee, kun työtoveri yrittää purkaa valoa ja '
             + 'samanaikaisuutta koskevan pulman arkiseksi ajatuskokeeksi. '
             + 'Patenttivirasto maksaa Einsteinin vuokran; Besso on yksi '
@@ -9426,6 +9829,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Bern 1905 — patenttipino ja valonsäde',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-kauko-photo-v4.jpg',
+              lyhyt: 'Virkailija Einstein käsittelee patenttihakemuksia ennen '
+                + 'kuin ehtii omaan vuoden 1905 fysiikkaansa.',
               selite: 'Viraston hakemukset on käsiteltävä ennen kuin oma fysiikka '
                 + 'saa tilaa, ja kotona odottavat Mileva sekä vuoden ikäinen Hans '
                 + 'Albert. Einstein ei näytä toimiston nerolta vaan yhdeltä '
@@ -9455,6 +9860,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'e-codices on Sveitsin virtuaalinen käsikirjoituskirjasto. '
                 + 'Siellä on 3 049 käsikirjoitusta sadasta eri kokoelmasta, '
                 + 'ja jokainen on kuvattu sivu sivulta.',
+              lyhyt: 'Sankt Gallenin luostarikirjasto on maailman vanhimpia kirjastoja Euroopan kulttuurikeskuksesta.',
               selite: 'Sankt Gallenin luostarikirjasto on maailman vanhimpia '
                 + 'kirjastoja, ja luostari oli 700-luvulta 1805 asti '
                 + 'Euroopan merkittävimpiä kulttuurikeskuksia.',
@@ -9469,6 +9875,7 @@ export const MAA_KATEGORIAT = {
                 + 'Comet Photo AG:n uutiskuvat, postikorttikokoelmia ja '
                 + 'lentäjä Walter Mittelholzerin ilmakuvat 1920- ja '
                 + '1930-luvuilta.',
+              lyhyt: 'Walter Mittelholzer oli sveitsiläinen lentämisen pioneeri, lentäjä, valokuvaaja ja matkakirjailija.',
               selite: 'Walter Mittelholzer (1894–1937) oli sveitsiläinen '
                 + 'lentämisen pioneeri, joka toimi lentäjänä, valokuvaajana '
                 + 'ja matkakirjailijana.',
@@ -9481,6 +9888,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Sveitsin kansallismuseo säilyttää maan omaa historiaa: '
                 + 'pukuja, huonekaluja, aseita, kolikoita, leluja ja '
                 + 'tavallisen arjen esineitä.',
+              lyhyt: 'Zürichin Landesmuseum on Sveitsin kansallismuseo päärautatieaseman ja Platzspitzin puiston vieressä.',
               selite: 'Zürichin Landesmuseum on Sveitsin kansallismuseo, ja '
                 + 'se sijaitsee päärautatieaseman ja Platzspitzin puiston '
                 + 'vieressä.',
@@ -9498,6 +9906,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'CERN on Geneven kupeessa, osaksi Sveitsin ja osaksi '
                 + 'Ranskan puolella. Sen kiihdytin on 27 kilometrin mittainen '
                 + 'rengas maan alla.',
+              lyhyt: 'CMS-ilmaisin on LHC-kiihdyttimen suuri yleisilmaisin, 21 metriä pitkä ja noin 14 000 tonnia painava.',
               selite: 'CMS-ilmaisin on LHC-kiihdyttimen kahdesta suuresta '
                 + 'yleisilmaisimesta toinen: 21 metriä pitkä, 15 metriä '
                 + 'halkaisijaltaan ja noin 14 000 tonnia painava.',
@@ -9509,6 +9918,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Pocket Watch (Switzerland), 1850–53 (CH 18475631).jpg',
               teksti: 'La Chaux-de-Fonds on kellojen kaupunki Jura-vuorilla, ja '
                 + 'koko kaupunki on Unescon maailmanperintökohde.',
+              lyhyt: 'La Chaux-de-Fondsin kellomuseo tutkii aikaa ja ajanmittausta kelloin, kronometrein ja automaatein.',
               selite: 'La Chaux-de-Fondsin kellomuseo on omistettu ajan ja '
                 + 'ajanmittauslaitteiden tutkimukselle, ja sen kokoelmiin '
                 + 'kuuluu kelloja, kronometrejä ja automaatteja.',
@@ -9521,6 +9931,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Zermattin matkailutoimisto pitää yllä webkameroita, jotka '
                 + 'kuvaavat Matterhornia ja sen ympärysvuoria. Vuori on 4 478 '
                 + 'metriä korkea ja melkein täydellinen kolmio.',
+              lyhyt: 'Matterhorn kohoaa 4 478 metriin Sveitsin ja Italian rajalla Alppien korkeimpien huippujen joukossa.',
               selite: 'Matterhorn kohoaa 4 478 metriin Sveitsin ja Italian '
                 + 'rajalla, ja se on Alppien ja Euroopan korkeimpia '
                 + 'huippuja.',
@@ -9553,6 +9964,7 @@ export const MAA_KATEGORIAT = {
             + 'vuoritiloja, joihin päästiin ennen vain veneellä ja '
             + 'köysitikkaita pitkin — lasten kerrotaan olleen köydessä '
             + 'kiinni, jotta he eivät putoaisi.',
+          lyhyt: 'Geirangervuono on 15 kilometrin pituinen vuonon haara, jonka pohjukassa on Geirangerin kylä.',
           selite: 'Geirangervuono on 15 kilometrin pituinen '
             + 'Sunnylvsfjordenin haara Møre og Romsdalissa, ja sen '
             + 'pohjukassa on Geirangerin kylä.',
@@ -9571,6 +9983,7 @@ export const MAA_KATEGORIAT = {
             + 'kestää saman verran, ja aurinko ei nouse ollenkaan. Silloin '
             + 'lumi ja meri heijastavat sinistä valoa, jota norjalaiset '
             + 'sanovat siniseksi hetkeksi.',
+          lyhyt: 'Reine on Moskenesin kunnan keskus Lofooteilla, kalastajakylässä asuu alle 300 ihmistä.',
           selite: 'Reine on Moskenesin kunnan keskus Lofooteilla napapiirin '
             + 'pohjoispuolella, ja kalastajakylässä asuu alle 300 ihmistä.',
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
@@ -9587,6 +10000,7 @@ export const MAA_KATEGORIAT = {
             + 'ja vuohien sukulaisia, ja niiden alusvilla on maailman '
             + 'lämpimimpiä. Retkeilijöitä kehotetaan pysymään kahdensadan '
             + 'metrin päässä: eläin on rauhallinen mutta nopea suuttumaan.',
+          lyhyt: 'Myskihärkä on arktinen sorkkaeläin, joka tunnetaan paksusta turkistaan ja kiima-ajan hajustaan.',
           selite: 'Myskihärkä on arktinen sorkkaeläin, joka tunnetaan '
             + 'paksusta turkistaan ja urosten kiima-aikaisesta hajusta; '
             + 'inuktitutiksi sen nimi tarkoittaa parrakasta.',
@@ -9626,6 +10040,7 @@ export const MAA_KATEGORIAT = {
             + 'keulassa: kristillinen kirkko sai koristeekseen vanhemman '
             + 'uskon hahmot. Puu on suojattu tervaamalla, ja siitä tulee sen '
             + 'musta väri.',
+          lyhyt: 'Borgundin sauvakirkko rakennettiin noin 1200 seurakuntakirkoksi ja toimi sellaisena vuoteen 1868.',
           selite: 'Borgundin sauvakirkko rakennettiin noin vuonna 1200 kylän '
             + 'seurakuntakirkoksi, ja se toimi sellaisena vuoteen 1868.',
           lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
@@ -9643,6 +10058,7 @@ export const MAA_KATEGORIAT = {
             + 'kirjeen. Scottin retkikunta menehtyi paluumatkalla. Amundsen '
             + 'oli aiemmin purjehtinut ensimmäisenä Luoteisväylän ja '
             + 'myöhemmin lensi ilmalaivalla pohjoisnavan yli.',
+          lyhyt: 'Roald Amundsen purjehti 1903–1906 ensimmäisenä Luoteisväylän läpi ja saavutti etelänavan 1911.',
           selite: 'Roald Amundsen (1872–1928) oli napaseutujen tutkija, joka '
             + 'purjehti 1903–1906 ensimmäisenä Luoteisväylän läpi ja '
             + 'saavutti etelänavan 1911.',
@@ -9662,6 +10078,7 @@ export const MAA_KATEGORIAT = {
             + 'suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta '
             + 'tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä '
             + 'tehdä kun öljy loppuu.',
+          lyhyt: 'Ekofiskin öljykenttä löydettiin 1969 ja oli ensimmäinen öljylöytö Pohjanmerellä.',
           selite: 'Ekofiskin öljykenttä löydettiin 1969 Stavangerista 320 '
             + 'kilometriä lounaaseen, ja se oli ensimmäinen öljylöytö '
             + 'Pohjanmerellä yli 200 koereiän jälkeen.',
@@ -9701,6 +10118,7 @@ export const MAA_KATEGORIAT = {
             + 'koulussa ole vieläkään yleensä tarjolla lämmintä ruokaa. '
             + 'Päällisenä on tavallisimmin juustoa, maksamakkaraa tai '
             + 'kananmunaa.',
+          lyhyt: 'Smørbrød on pohjoismainen avoin voileipä tummalla ruisleivällä ja lihalla, kalalla tai juustolla.',
           selite: 'Smørbrød on pohjoismainen avoin voileipä, jonka pohjana '
             + 'on voideltu tumma ruisleipä ja päällä lihaa, kalaa, juustoa '
             + 'tai kananmunaa.',
@@ -9719,6 +10137,7 @@ export const MAA_KATEGORIAT = {
             + 'metriä; nykyisestä mäestä lennetään yli sata. Kilpailupäivänä '
             + 'rinteillä on kymmeniätuhansia ihmisiä, ja moni tulee paikalle '
             + 'hiihtäen.',
+          lyhyt: 'Holmenkollbakken on suurmäki, jonka mäkikisoja on hypätty vuodesta 1892.',
           selite: 'Holmenkollbakken on suurmäki, jonka mäkikisoja on hypätty '
             + 'vuodesta 1892 ja jonne mahtuu 70 000 katsojaa.',
           lahde: 'Kvtvfinn, Wikimedia Commons (CC BY-SA 4.0)',
@@ -9736,6 +10155,7 @@ export const MAA_KATEGORIAT = {
             + 'katolle syömään. Tapa ei kadonnut: uusissa mökeissä ja jopa '
             + 'kaupunkitaloissa tehdään yhä turvekattoja, koska ne sitovat '
             + 'sadevettä ja pysyvät kesällä viileinä.',
+          lyhyt: 'Lillehammerin Maihaugen on Pohjois-Euroopan suurimpia ulkomuseoita, lähes 200 rakennuksellaan.',
           selite: 'Lillehammerin Maihaugen on Pohjois-Euroopan suurimpia '
             + 'ulkomuseoita, ja siellä on lähes 200 rakennusta.',
           lahde: 'אמא של, Wikimedia Commons (CC0)',
@@ -9803,6 +10223,8 @@ export const MAA_KATEGORIAT = {
             + 'täällä ensimmäisinä: kahdeksantoista nousi ylätasangolle, loput '
             + 'lopetettiin ruoaksi paikassa, jonka miehet nimesivät '
             + 'Teurastamoksi. Kaikki viisi palaavat; Scottin ryhmä ei.',
+          lyhyt: 'Amundsenin viisikko saavuttaa etelänavan mutta jättää kirjeen '
+            + 'varalta, ettei paluu onnistu.',
           selite: 'Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel '
             + 'ja Oscar Wisting tietävät olevansa ensimmäisiä — mutta kotiin on '
             + 'vielä lähes 1 300 kilometriä. He jättävät teltalle kirjeen Norjan '
@@ -9815,6 +10237,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-kauko-photo-v3.jpg',
+              lyhyt: 'Amundsenin ryhmä palaa navalta elossa, kun myöhemmin '
+                + 'saapuva Scottin ryhmä kuolee paluumatkalla.',
               selite: 'Lipunnosto kestää hetken; selviytyminen on vaatinut '
                 + 'viikkojen kylmyyden ja suunnitelman, jossa osa koirista '
                 + 'uhrataan muiden ravinnoksi. Kaikki viisi norjalaista palaavat, '
@@ -9827,6 +10251,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-amundsen-tidens-tegn-1912-lehti-photo-v3.jpg',
+              lyhyt: 'Sähke tekee Amundsenista sankarin, kun taas Scottin ryhmä '
+                + 'on yhä vaarallisella paluumatkalla.',
               selite: 'Lyhyt sähke tekee Roald Amundsenista kansallissankarin, '
                 + 'mutta retkikunnan miehille tärkein sana on paluu: kaikki viisi '
                 + 'ovat hengissä. Samaan aikaan Robert Scott vetäytyy navalta '
@@ -9859,6 +10285,7 @@ export const MAA_KATEGORIAT = {
                 + 'zoomattavana kuvana. Vuoden 1893 versio on niistä '
                 + 'ensimmäinen, maalattu pahville temperalla ja '
                 + 'rasvaliidulla.',
+              lyhyt: 'Edvard Munchin 1893 Huuto tunnettiin ensin nimellä Der Schrei der Natur.',
               selite: 'Edvard Munchin vuonna 1893 tekemä Huuto tunnettiin '
                 + 'ensin saksalaisella nimellä Der Schrei der Natur, ja '
                 + 'siitä on tullut taiteen tunnetuimpia kuvia.',
@@ -9872,6 +10299,7 @@ export const MAA_KATEGORIAT = {
                 + 'tuotannon verkkoon ilmaiseksi. Peer Gynt aukeaa siinä '
                 + 'asussa, jossa se ilmestyi vuonna 1867: vanha kirjoitustapa '
                 + 'ja ensipainoksen sivunvaihdot näkyvissä.',
+              lyhyt: 'Henrik Ibsenin 1867 runonäytelmä seuraa Peer Gyntiä Norjan vuorilta Pohjois-Afrikkaan ja takaisin.',
               selite: 'Henrik Ibsenin vuonna 1867 kirjoittama '
                 + 'viisinäytöksinen runonäytelmä seuraa Peer Gyntiä Norjan '
                 + 'vuorilta Pohjois-Afrikan autiomaahan ja takaisin.',
@@ -9890,6 +10318,7 @@ export const MAA_KATEGORIAT = {
                 + 'haudattiin maakumpuun kahden naisen kanssa. Kummallakin '
                 + 'laidalla on 15 airoreikää, eli täysi miehistö oli 30 '
                 + 'soutajaa.',
+              lyhyt: 'Osebergin laiva löytyi hautakummusta Tønsbergin läheltä ja on viikinkiajan hienoimpia löytöjä.',
               selite: 'Osebergin laiva löytyi suuresta hautakummusta '
                 + 'Tønsbergin läheltä, ja sitä pidetään viikinkiajan '
                 + 'hienoimpiin kuuluvana löytönä.',
@@ -9902,6 +10331,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Kon-Tiki lähti Perun Callaosta 28. huhtikuuta 1947. Lautta '
                 + 'oli sidottu balsapuun rungoista, kippari oli 33-vuotias '
                 + 'Thor Heyerdahl, ja mukana oli viisi miestä ja papukaija.',
+              lyhyt: 'Oslon Kon-Tiki-museo säilyttää Thor Heyerdahlin retkikuntien aluksia ja avattiin 1949.',
               selite: 'Oslon Kon-Tiki-museo säilyttää Thor Heyerdahlin '
                 + 'retkikuntien aluksia ja karttoja, ja se avattiin '
                 + 'väliaikaisessa rakennuksessa 1949.',
@@ -9920,6 +10350,7 @@ export const MAA_KATEGORIAT = {
                 + 'hakupalvelu. Sinne on kirjoitettu puhtaaksi maan '
                 + 'väestönlaskennat vuosilta 1769, 1801, 1815, 1865, 1900 ja '
                 + 'aina vuoteen 1920 asti.',
+              lyhyt: 'Norjan kansallisarkisto vastaa valtion ja yksityisarkistojen säilyttämisestä maassa.',
               selite: 'Norjan kansallisarkisto vastaa valtion arkistoista ja '
                 + 'yksityisarkistojen säilyttämisestä kahdeksassa '
                 + 'toimipisteessä.',
@@ -9934,6 +10365,7 @@ export const MAA_KATEGORIAT = {
                 + 'kaari kelluu Pohjolan yllä, ja punainen kolmio merkitsee '
                 + 'Tromssaa: jos kaari osuu kolmion päälle, ulkona kannattaa '
                 + 'käydä.',
+              lyhyt: 'Revontulet syntyvät Auringon hiukkasten törmätessä ilmakehän happeen ja typpeen.',
               selite: 'Revontulet syntyvät, kun Auringon varautuneet '
                 + 'hiukkaset törmäävät ilmakehän happeen ja typpeen ja '
                 + 'saavat kaasut hehkumaan.',
@@ -9966,6 +10398,7 @@ export const MAA_KATEGORIAT = {
             + 'jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen '
             + 'mukaansa, koska se yhdistää laitteita kuten hän yhdisti '
             + 'heimoja.',
+          lyhyt: 'Jellingin kivet pystyttivät kuningas Gorm Vanha ja poikansa Harald Sinihammas.',
           selite: 'Vanhemman Jellingin kiven pystytti kuningas Gorm Vanha '
             + 'vaimonsa Thyran muistoksi, ja suuremman hänen poikansa Harald '
             + 'Sinihammas vanhempiensa muistoksi.',
@@ -9985,6 +10418,7 @@ export const MAA_KATEGORIAT = {
             + 'suunniteltu yhdessä paikassa ja mitattu tarkasti maastoon. '
             + 'Unesco otti linnoitukset maailmanperintöluetteloon vuonna '
             + '2023.',
+          lyhyt: 'Trelleborg on viikinkiaikainen rengaslinnoitus, jonka Harald Sinihammas rakennutti 980.',
           selite: 'Trelleborg on yksi seitsemästä tunnetusta '
             + 'viikinkiaikaisesta rengaslinnoituksesta, ja sen rakennutti '
             + 'kuningas Harald Sinihammas vuonna 980.',
@@ -10002,6 +10436,7 @@ export const MAA_KATEGORIAT = {
             + 'syntymäpäiväkakkuun, ripustetaan joulukuuseen ja viedään '
             + 'mukaan lentokentälle vastaanottamaan matkalaisia. Lippu ei ole '
             + 'juhlava harvinaisuus vaan arkinen ilon merkki.',
+          lyhyt: 'Dannebrog on punainen, valkoristinen lippu, jota on käytetty 1300-luvulta.',
           selite: 'Dannebrog on punainen lippu, jonka valkoinen risti '
             + 'ulottuu reunoihin asti ja jonka pystyosa on siirretty salon '
             + 'puolelle; valkorististä lippua on käytetty 1300-luvulta.',
@@ -10042,6 +10477,7 @@ export const MAA_KATEGORIAT = {
             + '1958 tehty palikka sopii tänään ostettuun. Kuudesta '
             + 'samanlaisesta kahdeksan nystyn palikasta saa yli 900 miljoonaa '
             + 'erilaista yhdistelmää.',
+          lyhyt: 'Lego-palikat valmistetaan ABS-muovista Billundissa liitettäviksi lukemattomilla tavoilla.',
           selite: 'Lego-palikat valmistetaan ABS-muovista Billundissa, ja ne '
             + 'on suunniteltu liitettäviksi toisiinsa lukemattomilla '
             + 'tavoilla.',
@@ -10060,6 +10496,7 @@ export const MAA_KATEGORIAT = {
             + 'merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet '
             + 'tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. '
             + 'Nykyään tuuli tuottaa yli puolet koko maan sähköstä.',
+          lyhyt: 'Middelgrundenin merituulipuisto valmistui 2000 maailman suurimpana, 20 turbiinia.',
           selite: 'Vuonna 2000 valmistunut Middelgrundenin merituulipuisto '
             + 'oli maailman suurin: 20 turbiinia ja 40 megawatin teho, noin '
             + 'neljä prosenttia Kööpenhaminan sähköstä.',
@@ -10077,6 +10514,7 @@ export const MAA_KATEGORIAT = {
             + 'lainkaan. Se kaartaa sataman yli neljän metrin korkeudessa ja '
             + 'on neljä metriä leveä. Naapurikuntiin johtaa pyöräteitä, joita '
             + 'sanotaan supercykelstier — pyörien moottoriteiksi.',
+          lyhyt: 'Cykelslangen on 220 metrin pyöräilysilta Kööpenhaminassa, avattu 2014.',
           selite: 'Cykelslangen on 220 metriä pitkä pyöräilysilta '
             + 'Kööpenhaminassa, ja se avattiin yleisölle 28. kesäkuuta 2014.',
           lahde: 'Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0)',
@@ -10114,6 +10552,7 @@ export const MAA_KATEGORIAT = {
             + 'frikadelli päätyy leivän päälle. Reseptistä ei ole yhtä oikeaa '
             + 'versiota: jokainen perhe tekee omansa, ja siitä kiistellään '
             + 'sukujuhlissa hyväntahtoisesti.',
+          lyhyt: 'Frikadelle on paistettu jauhelihapyörykkä pohjoismaisessa ja itäeurooppalaisessa keittiössä.',
           selite: 'Frikadelle on pannulla paistettu litteäpohjainen '
             + 'jauhelihapyörykkä, joka tunnetaan saksalaisessa, '
             + 'pohjoismaisessa ja itäeurooppalaisessa keittiössä.',
@@ -10131,6 +10570,7 @@ export const MAA_KATEGORIAT = {
             + 'tanskalaisten yhteiseksi ruokapöydäksi: sen ääressä seisovat '
             + 'vierekkäin puvussa tuleva ja työhaalarissa tuleva. Kärryjä on '
             + 'nykyään vähemmän kuin ennen, mutta ne eivät ole kadonneet.',
+          lyhyt: 'Pølsevogn on tanskalainen makkarakoju, jossa pølsemand myy makkaroita ohikulkijoille.',
           selite: 'Pølsevogn on tanskalainen makkarakoju, jossa on pieni '
             + 'keittiö ja keittimet ja jossa pølsemand myy makkarat '
             + 'ohikulkijoille.',
@@ -10148,6 +10588,7 @@ export const MAA_KATEGORIAT = {
             + 'jatkoivat menetelmällä ja kehittivät siitä omansa. Siksi '
             + 'tanskalainen sanoo leivosta wienerleiväksi, mutta muualla '
             + 'maailmassa sitä sanotaan tanskalaiseksi.',
+          lyhyt: 'Wienerbrød on kerrostaikinaleivonnainen, jonka uskotaan tulleen Tanskaan Itävallasta.',
           selite: 'Wienerbrød on kerroksittain taiteltu '
             + 'hiivataikinaleivonnainen, ja tekniikan uskotaan tulleen '
             + 'Tanskaan itävaltalaisten leipurien mukana.',
@@ -10196,6 +10637,7 @@ export const MAA_KATEGORIAT = {
                 + 'ja niiden holvit maalattiin täyteen kuvia. Kalkmalerier.dk '
                 + 'on kuvannut näitä maalauksia 538 kirkosta, '
                 + 'kymmeniätuhansia otoksia vuosilta 1100–1600.',
+              lyhyt: 'Mønin Fanefjordin kirkko tunnetaan keskiaikaisista kalkkimaalauksistaan.',
               selite: 'Mønin saarella sijaitseva Fanefjordin kirkko '
                 + 'tunnetaan erityisesti keskiaikaisista '
                 + 'kalkkimaalauksistaan.',
@@ -10207,6 +10649,7 @@ export const MAA_KATEGORIAT = {
               tiedosto: 'Hans Christian Andersen - paper cut, 1874.jpg',
               teksti: 'H.C. Andersen kirjoitti paljon muutakin kuin Pienen '
                 + 'merenneidon ja Ruman ankanpoikasen.',
+              lyhyt: 'H. C. Andersen kirjoitti 156 satua, jotka on käännetty yli 125 kielelle.',
               selite: 'H. C. Andersen (1805–1875) kirjoitti yhdeksään '
                 + 'niteeseen 156 satua, jotka on käännetty yli 125 kielelle.',
               lahde: 'Hans Christian Andersen, Wikimedia Commons (public domain)',
@@ -10223,6 +10666,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Tanskan kuninkaallisella kirjastolla on noin kolme '
                 + 'miljoonaa ilmakuvaa vuosilta 1890–2010. Lentokoneesta '
                 + 'kuvattiin talo talolta, ja kuvat myytiin asukkaille.',
+              lyhyt: 'Det Kgl. Bibliotek syntyi 2017 Aarhusin ja Kööpenhaminan kirjastojen yhdistyessä.',
               selite: 'Tanskan kansalliskirjasto Det Kgl. Bibliotek syntyi '
                 + '2017, kun Aarhusin ja Kööpenhaminan kansalliskirjastot '
                 + 'yhdistettiin.',
@@ -10235,6 +10679,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Tanskan valtio pitää rekisteriä kaikista maan '
                 + 'muinaisjäännöksistä ja arkeologisista löydöistä, ja '
                 + 'rekisteri on auki kenelle tahansa.',
+              lyhyt: 'Poskær Stenhus on Tanskan suurin pyöreä hautakumpu noin vuodelta 3300 eaa.',
               selite: 'Poskær Stenhus on Tanskan suurin pyöreä hautakumpu '
                 + 'noin vuodelta 3300 eaa., ja sen 11 tonnin kattokiveä '
                 + 'ympäröi 23 miehenkorkuista kiveä.',
@@ -10248,6 +10693,7 @@ export const MAA_KATEGORIAT = {
                 + 'merikotkien pesältä Fugleværnsfondenin '
                 + 'luonnonsuojelualueelta Saksfjed-Hyllekrogissa Lollannin '
                 + 'saarella.',
+              lyhyt: 'Merikotka on suuri petolintu, joka on levinnyt laajalti lauhkeaan Euraasiaan.',
               selite: 'Merikotka on suuri petolintu, joka on levinnyt '
                 + 'laajalti lauhkeaan Euraasiaan ja kuuluu merikotkien '
                 + 'sukuun.',
@@ -10280,6 +10726,7 @@ export const MAA_KATEGORIAT = {
             + 'Itsetutkisteluistaan. Rauniot ovat nyt kymmenen '
             + 'neliökilometrin arkeologiapuisto Wienin ja Bratislavan '
             + 'puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.',
+          lyhyt: 'Carnuntum oli roomalainen linnoitus, josta kasvoi 50 000 asukkaan kaupunki Tonavan varrelle.',
           selite: 'Carnuntum oli roomalainen legioonalinnoitus ja Pannonian '
             + 'laivaston tukikohta vuodesta 50 jaa., ja siitä kasvoi noin 50 '
             + '000 asukkaan kaupunki Tonavan varrelle.',
@@ -10299,6 +10746,7 @@ export const MAA_KATEGORIAT = {
             + 'heitä naitettiin Euroopan hoveihin, ja nuorimmasta tyttärestä '
             + 'Marie Antoinettesta tuli Ranskan kuningatar. Kuusi lapsista '
             + 'kuoli äitinsä eläessä.',
+          lyhyt: 'Maria Teresia hallitsi Habsburgien monarkiaa 1740 alkaen ainoana naisena omassa oikeudessaan.',
           selite: 'Maria Teresia (1717–1780) hallitsi Habsburgien monarkiaa '
             + '1740 alkaen ja oli ainoa nainen, joka nousi asemaan omassa '
             + 'oikeudessaan.',
@@ -10317,6 +10765,7 @@ export const MAA_KATEGORIAT = {
             + 'metrissä. Matkalla on 14 tunnelia, 16 viaduktia ja yli sata '
             + 'holvattua kivisiltaa. Moni piti hanketta mahdottomana, koska '
             + 'kukaan ei tiennyt, jaksaisiko veturi nousta niin jyrkkää.',
+          lyhyt: 'Semmeringin rata oli Euroopan ensimmäinen normaaliraiteinen vuoristorautatie, yhä käytössä.',
           selite: 'Semmeringin rata Gloggnitzista Mürzzuschlagiin oli '
             + 'Euroopan ensimmäinen normaaliraiteinen vuoristorautatie, ja '
             + 'se on yhä täydessä käytössä.',
@@ -10336,6 +10785,7 @@ export const MAA_KATEGORIAT = {
             + 'tuli Correspondenz-Karte, kooltaan 8,5 kertaa 12,2 senttiä ja '
             + 'hinnaltaan kaksi kreutzeria. Sanarajan posti jätti pois. '
             + 'Ensimmäisessä kuukaudessa kortteja myytiin 1,4 miljoonaa.',
+          lyhyt: 'Postikortti on kirjekuoreton postilähetys, jonka lähettäminen maksaa usein kirjettä vähemmän.',
           selite: 'Postikortti on kirjekuoreton postilähetys paksulle '
             + 'paperille tai ohuelle pahville, ja sen lähettäminen maksaa '
             + 'monin paikoin kirjettä vähemmän.',
@@ -10377,6 +10827,7 @@ export const MAA_KATEGORIAT = {
             + 'vesi kulkee 18 kilometriä putouksille ja on matkalla 9–12 '
             + 'tuntia. Vuonna 1899 putouksia yritettiin valjastaa tehtaan '
             + 'voimaksi, mutta hanke kaatui.',
+          lyhyt: 'Krimmlin putoukset ovat 380-metrisinä Itävallan korkeimmat, Hohe Tauernin kansallispuistossa.',
           selite: 'Krimmlin putoukset ovat 380 metrin kokonaiskorkeudellaan '
             + 'Itävallan korkeimmat, ja ne sijaitsevat Hohe Tauernin '
             + 'kansallispuistossa.',
@@ -10395,6 +10846,7 @@ export const MAA_KATEGORIAT = {
             + 'sulanut lähes puolet. Jään alta on paljastunut turvetta ja '
             + 'puuta: seitsemäntuhatta vuotta sitten samalla paikalla kasvoi '
             + 'sembramänty, ja karja kävi syömässä ruohoa.',
+          lyhyt: 'Pasterze on 8,4 kilometrin pituisena Itä-Alppien pisin jäätikkö, Grossglocknerin juurella.',
           selite: 'Pasterze on noin 8,4 kilometrin pituisena Itävallan ja '
             + 'koko Itä-Alppien pisin jäätikkö, ja se sijaitsee '
             + 'Grossglocknerin juurella.',
@@ -10414,6 +10866,7 @@ export const MAA_KATEGORIAT = {
             + 'takaisin. Anton Posselt pääsi vuonna 1879 noin 200 metrin '
             + 'päähän ja merkitsi kääntöpaikkansa mustalla ristillä. '
             + 'Kierroksella astutaan 1 400 porrasta.',
+          lyhyt: 'Werfenin Eisriesenwelt on maailman suurin jääluola, yli 42 kilometrin pituinen.',
           selite: 'Werfenin Eisriesenwelt on maailman suurin jääluola: se '
             + 'ulottuu yli 42 kilometrin päähän Hochkogel-vuoren sisään.',
           lahde: 'MatthiasKabel, modified by Werckmeister / Wildfeuer, Wikimedia Commons (CC BY-SA 3.0)',
@@ -10431,6 +10884,7 @@ export const MAA_KATEGORIAT = {
             + 'Euroopan laajin. Järvi on 34 kilometriä pitkä, ja matka '
             + 'riittää maapallon kaarevuuteen: 22 kilometrin päähän toiselle '
             + 'rannalle ei näy kymmenmetrisessä mastossa palava varoitusvalo.',
+          lyhyt: 'Neusiedlerjärvi on Keski- ja Länsi-Euroopan suurin laskujoeton järvi Itävallan ja Unkarin rajalla.',
           selite: 'Neusiedlerjärvi on Keski- ja Länsi-Euroopan suurin '
             + 'sisäjärvi ilman laskujokea, ja sen suolainen vesi jakautuu '
             + 'Itävallan ja Unkarin kesken.',
@@ -10471,6 +10925,7 @@ export const MAA_KATEGORIAT = {
             + 'pestään, kuivataan, jauhetaan ja paahdetaan ennen puristusta. '
             + 'Ohuena kalvona öljy näyttää vihreältä ja paksuna kerroksena '
             + 'punaruskealta — samaa väriä ei saa valokuvaan.',
+          lyhyt: 'Kurpitsansiemenöljy on ruokaöljy, jota käytetään Itä-Euroopassa ja Steiermarkin keittiössä.',
           selite: 'Kurpitsansiemenöljy on ruokaöljy, jota käytetään '
             + 'erityisesti Itä-Euroopassa ja Steiermarkin keittiössä.',
           lahde: 'Wolf32at, Wikimedia Commons (CC BY-SA 3.0)',
@@ -10489,6 +10944,7 @@ export const MAA_KATEGORIAT = {
             + 'Elisabetille ja repesi tarjolle pantaessa vahingossa rikki. '
             + 'Vasta sen jälkeen se nimettiin uudelleen keisari Frans '
             + 'Joosefin mukaan.',
+          lyhyt: 'Kaiserschmarrn on revitty ohukainen, nimetty keisari Frans Joosef I:n mukaan.',
           selite: 'Kaiserschmarrn on kevyesti makeutettu revitty ohukainen, '
             + 'joka on nimetty keisari Frans Joosef I:n mukaan.',
           lahde: 'Dr. Bernd Gross, Wikimedia Commons (CC BY-SA 3.0 de)',
@@ -10506,6 +10962,7 @@ export const MAA_KATEGORIAT = {
             + 'aprikoosi kääritään perunataikinaan, keitetään vedessä ja '
             + 'pyöritetään voissa paahdetuissa korppujauhoissa. Yleisin '
             + 'lajike on nimeltään Klosterneuburger.',
+          lyhyt: 'Marillenknödel on itävaltalainen jälkiruoka, jota tehdään etenkin aprikoosialueilla kuten Wachaussa.',
           selite: 'Marillenknödel on itävaltalainen, tšekkiläinen ja '
             + 'unkarilainen jälkiruoka, ja sitä tehdään etenkin '
             + 'aprikoosinviljelyalueilla kuten Wachaussa.',
@@ -10525,6 +10982,7 @@ export const MAA_KATEGORIAT = {
             + 'patentoinut keksintöään, joten kopioita tuli heti. Riidat '
             + 'päättyivät sopimuksiin: tehtaista vain yksi saa tehdä täysin '
             + 'pyöreitä palloja, muiden on litistettävä pohja.',
+          lyhyt: 'Mozartkugel on suklaakuorrutettu makeinen, jonka salzburgilainen Paul Fürst kehitti 1890.',
           selite: 'Mozartkugel on pistaasista, marsipaanista ja nougatista '
             + 'tehty tummalla suklaalla kuorrutettu makeinen, jonka '
             + 'salzburgilainen konditori Paul Fürst kehitti 1890.',
@@ -10565,6 +11023,7 @@ export const MAA_KATEGORIAT = {
             + 'kertaa peräkkäin, kunnes hän tajusi säännön: sisempi suksi '
             + 'pidetään lappeellaan. Kirjaa ei huolinut yksikään wieniläinen '
             + 'kustantaja, joten se painettiin Hampurissa.',
+          lyhyt: 'Mathias Zdarsky kehitti alppihiihtotekniikan ja toimi ensimmäisenä hiihdonopettajana.',
           selite: 'Mathias Zdarsky (1856–1940) kehitti nykyaikaisen '
             + 'alppihiihtotekniikan ja toimi maailman ensimmäisenä '
             + 'hiihdonopettajana.',
@@ -10584,6 +11043,7 @@ export const MAA_KATEGORIAT = {
             + 'hetkeksi kolminkertainen paino. Loppusuoralla vauhti nousee '
             + '140 kilometriin tunnissa. Ennätys on Fritz Stroblin 1.51,58 '
             + 'vuodelta 1997.',
+          lyhyt: 'Kitzbühelin Hahnenkammin Streif-rinteellä ajetaan vuosittain maailmancupin syöksylasku.',
           selite: 'Kitzbühelin Hahnenkamm kohoaa 1 712 metriin, ja sen '
             + 'Streif-rinteellä ajetaan vuosittain maailmancupin '
             + 'syöksylasku.',
@@ -10602,6 +11062,7 @@ export const MAA_KATEGORIAT = {
             + 'vinohissillä. Mäkiviikko perustettiin vuonna 1952, ja sen '
             + 'neljästä kilpailupaikasta kaksi on Itävallassa: Innsbruck ja '
             + 'Bischofshofen.',
+          lyhyt: 'Bergisel on Innsbruckin 746 metrin kukkula, jonka nimi tarkoittaa korkeaa paikkaa.',
           selite: 'Bergisel on Innsbruckin eteläpuolinen 746 metrin kukkula, '
             + 'jonka nimi juontuu esiroomalaisesta sanasta burgusinus eli '
             + 'korkea paikka.',
@@ -10621,6 +11082,7 @@ export const MAA_KATEGORIAT = {
             + 'vuotivat kypärän alla, eikä hän palaneiden silmäluomiensa '
             + 'takia pystynyt räpyttämään kunnolla. Mestaruuksia hänelle '
             + 'kertyi kolme.',
+          lyhyt: 'Niki Lauda ajoi formula ykkösissä ja voitti kolme maailmanmestaruutta ja 25 osakilpailua.',
           selite: 'Niki Lauda (1949–2019) ajoi formula ykkösissä 1971–1985 '
             + 'ja voitti kolme maailmanmestaruutta sekä 25 osakilpailua.',
           lahde: 'Gillfoto from Juneau, Alaska, United States, Wikimedia Commons (CC BY-SA 3.0)',
@@ -10659,6 +11121,7 @@ export const MAA_KATEGORIAT = {
             + 'kermavaahtohatun alla. Nimi tulee yksivaljakon ajureista, '
             + 'jotka pitivät lasia toisessa kädessä ja ohjaksia toisessa — '
             + 'vaahto piti kahvin lämpimänä.',
+          lyhyt: 'Wieniläinen kahvilakulttuuri merkittiin 2011 Itävallan aineettoman kulttuuriperinnön luetteloon.',
           selite: 'Wieniläinen kahvilakulttuuri on kaupungille tyypillinen '
             + 'instituutio, ja se merkittiin 2011 Itävallan aineettoman '
             + 'kulttuuriperinnön luetteloon.',
@@ -10676,6 +11139,7 @@ export const MAA_KATEGORIAT = {
             + 'tehtiin 1 382 asuntoa noin viidelletuhannelle asukkaalle. '
             + 'Tontista rakennettiin vain 23 prosenttia — kaikki muu '
             + 'jätettiin pihaksi ja leikkikentäksi.',
+          lyhyt: 'Karl-Marx-Hof on 1 100 metrin kunnallinen asuintalo Döblingissä, yksi maailman pisimmistä.',
           selite: 'Karl-Marx-Hof on 1 100 metriä pitkä kunnallinen asuintalo '
             + 'Döblingissä ja yksi maailman pisimmistä yhtenäisistä '
             + 'asuinrakennuksista.',
@@ -10714,6 +11178,7 @@ export const MAA_KATEGORIAT = {
                 + 'Pieter Bruegel vanhemman kokoelma: kaksitoista maalausta. '
                 + 'Museo valokuvasi ne kaikki ja avasi kuvat verkkoon '
                 + 'ilmaiseksi.',
+              lyhyt: 'Bruegel vanhemman vuoden 1560 Lastenleikeistä on tunnistettu yli 90 aikakauden leikkiä.',
               selite: 'Pieter Bruegel vanhemman vuonna 1560 maalaamasta '
                 + 'Lastenleikeistä on tunnistettu yli 90 aikakauden '
                 + 'lastenleikkiä.',
@@ -10726,6 +11191,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Gustav Klimt maalasi Suudelman vuosina 1907–1908. Hän '
                 + 'liimasi kankaalle oikeaa kultaa, hopeaa ja platinaa, joten '
                 + 'teos kimaltaa yhä.',
+              lyhyt: 'Gustav Klimt maalasi Suudelman 1907–1908 kultakautensa huipulla kultalehden kera.',
               selite: 'Gustav Klimt maalasi Suudelman 1907–1908 '
                 + 'kultakautensa huipulla öljyväreillä sekä kulta-, hopea- '
                 + 'ja platinalehdellä.',
@@ -10738,6 +11204,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Salzburgin Mozarteum-säätiöllä on noin puolet kaikista '
                 + 'tunnetuista Mozartin perheen kirjeistä. Verkkoeditiossa '
                 + 'niitä on yli 1400, vanhin vuodelta 1747.',
+              lyhyt: 'Mozartin vanhemmat veivät lapsensa Nannerlin ja Wolfgangin kiertueelle Länsi-Eurooppaan 1763–1766.',
               selite: 'Leopold ja Anna Maria Mozart veivät lapsensa '
                 + 'Nannerlin ja Wolfgangin kiertueelle Länsi-Eurooppaan '
                 + '1763–1766, kun nämä olivat yksitoista- ja '
@@ -10757,6 +11224,7 @@ export const MAA_KATEGORIAT = {
                 + 'miljoonaa skannattua sivua ja yli 1600 lehteä. Wiener '
                 + 'Zeitung alkoi ilmestyä vuonna 1703, ja se on verkossa '
                 + 'ensimmäisestä vuodesta lähtien.',
+              lyhyt: 'Wienin maailmannäyttely pidettiin 1873 tunnuslauseella Kultur und Erziehung.',
               selite: 'Wienin maailmannäyttely pidettiin 1. toukokuuta–31. '
                 + 'lokakuuta 1873 tunnuslauseella Kultur und Erziehung.',
               lahde: 'Wiener Photographen-Association, Wikimedia Commons (public domain)',
@@ -10769,6 +11237,7 @@ export const MAA_KATEGORIAT = {
                 + 'kelloja, Praterin huvipuiston esineitä, kaivauslöytöjä ja '
                 + 'taidetta. Verkkokokoelmassa on nyt 135 968 kohdetta ja 212 '
                 + '917 kuvaa, ja jokaisesta kohteesta on kuva.',
+              lyhyt: 'Wien Museum on kaupungin historiaa esittelevä museoryhmä, jonka päärakennus on Karlsplatzilla.',
               selite: 'Wien Museum on kaupungin historiaa esittelevien '
                 + 'museoiden ryhmä, jonka päärakennus on Karlsplatzilla.',
               lahde: 'Renek78, Wikimedia Commons (CC0)',
@@ -10781,6 +11250,7 @@ export const MAA_KATEGORIAT = {
                 + 'korkeudessa, on kamera joka kuvaa kaupunkia etelään päin. '
                 + 'Kuva päivittyy jatkuvasti ja on niin tarkka, että siitä '
                 + 'voi etsiä hyppyrimäen, sillat ja Inn-joen mutkat.',
+              lyhyt: 'Nordkette on Innsbruckin pohjoispuolinen vuorijono, Karwendelin eteläisin suuri ketju.',
               selite: 'Nordkette on Innsbruckin pohjoispuolinen vuorijono ja '
                 + 'Karwendelin neljästä suuresta ketjusta eteläisin.',
               lahde: 'Blommetjie1, Wikimedia Commons (CC BY-SA 4.0)',
@@ -10810,6 +11280,7 @@ export const MAA_KATEGORIAT = {
             + 'on yhä yleisiä saunoja, joihin ostetaan lippu kuin elokuviin '
             + 'ja joissa istutaan vieretysten tuntemattomien kanssa. Löylyn '
             + 'jälkeen mennään kadulle jäähtymään pyyhe päällä, kesät talvet.',
+          lyhyt: 'Kotiharjun sauna vuodelta 1928 on Helsingin viimeinen alkuperäinen yleinen sauna.',
           selite: 'Vuonna 1928 avattu Kotiharjun sauna on Helsingin '
             + 'viimeinen alkuperäisessä käytössä säilynyt puulämmitteinen '
             + 'yleinen sauna, ja suomalainen saunakulttuuri liitettiin '
@@ -10845,6 +11316,7 @@ export const MAA_KATEGORIAT = {
             + 'vuosittain satoja miljoonia kiloja marjoja, mutta niistä '
             + 'poimitaan vain pieni osa. Poimituin on mustikka, jota kerätään '
             + 'ämpäriin loppukesästä.',
+          lyhyt: 'Mustikka on euraasialainen matalakasvuinen varpu, erillään pohjoisamerikkalaisesta pensasmustikasta.',
           selite: 'Mustikka on euraasialainen matalakasvuinen varpu, joka '
             + 'eroaa läheisestä pohjoisamerikkalaisesta pensasmustikasta.',
           lahde: 'Ypsilon from Finland, Wikimedia Commons (CC0)',
@@ -10882,6 +11354,7 @@ export const MAA_KATEGORIAT = {
             + 'sen jälkeen vaihtuvilla nimillä — yksi niistä oli pelkkä '
             + 'Impromptu. Nimen Finlandia teos sai vasta vuonna 1900. Se '
             + 'kestää noin kahdeksan minuuttia.',
+          lyhyt: 'Jean Sibeliuksen musiikki vahvisti Suomen kansallista identiteettiä venäläistämiskausien aikana.',
           selite: 'Jean Sibelius (1865–1957) on Suomen tunnetuin säveltäjä, '
             + 'ja hänen musiikkinsa vahvisti kansallista identiteettiä '
             + 'venäläistämiskausien aikana.',
@@ -10904,6 +11377,7 @@ export const MAA_KATEGORIAT = {
             + 'puukappaleesta. Nykyisessä konserttikanteleessa on 39 kieltä '
             + 'ja vipuja, joilla sävelkorkeutta muutetaan kesken soiton. '
             + 'Pienintä viisikielistä opetellaan kouluissa.',
+          lyhyt: 'Kantele kuuluu Baltian psalttereihin viron kandlen, latvian kokleen ja liettuan kanklėsin rinnalla.',
           selite: 'Kantele kuuluu Baltian psalttereiden perheeseen yhdessä '
             + 'viron kandlen, latvian kokleen ja liettuan kanklėsin kanssa.',
           lahde: 'R.o.t, Wikimedia Commons (CC BY-SA 4.0)',
@@ -10921,6 +11395,7 @@ export const MAA_KATEGORIAT = {
             + 'tavua. Elias Lönnrot keräsi näitä runoja 1830-luvulta alkaen '
             + 'ja kokosi niistä Kalevalan. Valokuvaaja I. K. Inha kuvasi '
             + 'laulajaveljekset Vienan Uhtualla vuonna 1894.',
+          lyhyt: 'Runonlaulusta koottiin muun muassa Kalevala, Kanteletar ja Kalevipoeg.',
           selite: 'Runonlaulu on itämerensuomalaisten kansojen suullinen '
             + 'runoperinne, josta koottiin muun muassa Kalevala, Kanteletar '
             + 'ja Kalevipoeg.',
@@ -10976,6 +11451,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Seurasaaren ulkomuseo — vanha Suomi yhdellä saarella',
               tiedosto: 'Seurasaari Open-Air Museum - panoramio.jpg',
+              lyhyt: 'Seurasaaren ulkomuseoon on siirretty vanhoja puurakennuksia eri puolilta Suomea.',
               selite: 'Seurasaaren ulkomuseoon on siirretty vanhoja, pääosin '
                 + 'puisia rakennuksia eri puolilta Suomea saaren '
                 + 'metsämaisemaan.',
@@ -10993,6 +11469,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Norppalive — saimaannorppa suorana kuvana',
               tiedosto: 'Pusa hispida saimensis 304551354.jpg',
+              lyhyt: 'Saimaannorppa on elänyt Saimaalla eristyksissä 9 500 vuotta, kanta noin 500 yksilöä.',
               selite: 'Saimaannorppa on maailman uhanalaisimpia hylkeitä: '
                 + 'kanta on noin 500 yksilöä, ja se on elänyt Saimaalla '
                 + 'eristyksissä noin 9 500 vuotta.',
@@ -11016,6 +11493,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Ateneum — kokoelma verkossa ja paikan päällä',
               tiedosto: 'Art museum Ateneum in Kluuvi, Helsinki, Finland, 2014.jpg',
+              lyhyt: 'Ateneumissa on Suomen laajimmat vanhan taiteen kokoelmat, osana Kansallisgalleriaa.',
               selite: 'Ateneum on yksi Kansallisgallerian kolmesta museosta, '
                 + 'ja siinä on Suomen laajimmat vanhan taiteen kokoelmat.',
               lahde: 'Kansallisgalleria / Yehia Eweis, Wikimedia Commons (CC BY-SA 4.0)',
@@ -11038,6 +11516,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Luontoportti — lajit tunnistettavaksi',
               tiedosto: 'Grat Tit (52398676319).jpg',
+              lyhyt: 'Talitiainen on tiaisheimon pikkulintu, jota tavataan Euroopasta Amurille asti.',
               selite: 'Talitiainen on tiaisheimon pikkulintu, jota tavataan '
                 + 'koko Euroopassa, Lähi-idässä ja Keski-Aasiassa Amurille '
                 + 'asti.',
@@ -11075,6 +11554,7 @@ export const MAA_KATEGORIAT = {
             + '1420–1431 viisi ristiretkeä. Heidän keinonsa oli vaunumuuri — '
             + 'talonpojat ajoivat maatalousvaununsa piiriin ja ampuivat '
             + 'rakojen välistä.',
+          lyhyt: 'Jan Husin opetuksista kasvoivat hussilaisuus ja Böömin reformaatio.',
           selite: 'Jan Hus (n. 1369–1415) oli tšekkiläinen teologi ja '
             + 'kirkonuudistaja, jonka opetuksista kasvoi hussilaisuus ja '
             + 'Böömin reformaatio.',
@@ -11094,6 +11574,7 @@ export const MAA_KATEGORIAT = {
             + 'oli siis laaksolainen. Taalereita alettiin lyödä ympäri '
             + 'Eurooppaa, ja samasta sanasta on kasvanut sana, jolla '
             + 'maksetaan yhä Yhdysvalloissa: dollari.',
+          lyhyt: 'Taaleri oli suuri hopearaha, ja sana juontuu Jáchymovissa lyödystä Joachimsthalerista.',
           selite: 'Taaleri oli Pyhän saksalais-roomalaisen keisarikunnan '
             + 'suuri hopearaha, ja sana lyhentyi Joachimsthalerista, joka '
             + 'lyötiin Jáchymovin laaksossa.',
@@ -11114,6 +11595,7 @@ export const MAA_KATEGORIAT = {
             + 'Tehdas rakensi työntekijöilleen kokonaisen kaupungin, ja sen '
             + 'konttoritalo numero 21 nousi 77,5 metriin — valmistuessaan '
             + '1938 Euroopan toiseksi korkein moderni rakennus.',
+          lyhyt: 'Zlínin kaupungin kasvu liittyy Baťan kenkätehtaaseen ja sen sosiaaliseen järjestelmään.',
           selite: 'Zlínin kaupungin kasvu liittyy kiinteästi Baťan '
             + 'kenkätehtaaseen ja sen ensimmäisen maailmansodan jälkeen '
             + 'kehittämään sosiaaliseen järjestelmään.',
@@ -11133,6 +11615,7 @@ export const MAA_KATEGORIAT = {
             + 'yksinvallastaan. Vuoden viimeisinä päivinä presidentiksi '
             + 'valittiin näytelmäkirjailija Václav Havel, joka oli saman '
             + 'vuoden alussa istunut vankilassa.',
+          lyhyt: 'Samettivallankumous 1989 päätti 41 vuotta kestäneen yksipuoluehallinnon Tšekkoslovakiassa.',
           selite: 'Samettivallankumous oli 17.–28. marraskuuta 1989 '
             + 'tapahtunut väkivallaton vallanvaihto, joka päätti 41 vuotta '
             + 'kestäneen yksipuoluehallinnon Tšekkoslovakiassa.',
@@ -11173,6 +11656,7 @@ export const MAA_KATEGORIAT = {
             + 'maadoitetuista ukkosenjohdattimista — vaikka Diviš itse luuli '
             + 'tekevänsä aivan muuta. Kuivana kesänä 1759 kyläläiset '
             + 'syyttivät konetta sateen puutteesta ja purkivat sen.',
+          lyhyt: 'Prokop Diviš rakensi yhden varhaisimmista maadoitetuista ukkosenjohdattimista.',
           selite: 'Prokop Diviš (1698–1765) oli tšekkiläinen kirkonmies ja '
             + 'luonnontutkija, joka rakensi ukkosmyrskyjä torjuakseen yhden '
             + 'varhaisimmista maadoitetuista ukkosenjohdattimista.',
@@ -11192,6 +11676,7 @@ export const MAA_KATEGORIAT = {
             + 'kuivattiin kaksitoista tuntia. Juliana sai ensimmäisen '
             + 'laatikon, jossa oli yli kolmesataa palaa valkoisina ja '
             + 'punaisina.',
+          lyhyt: 'Sokeripala keksittiin 1800-luvun alussa, koska sokeritopan lohkominen oli hankalaa.',
           selite: 'Sokeripala keksittiin 1800-luvun alussa, koska kovan '
             + 'sokeritopan lohkominen tasakokoisiksi paloiksi oli hankalaa.',
           lahde: 'Harold, Wikimedia Commons (CC BY-SA 3.0)',
@@ -11209,6 +11694,7 @@ export const MAA_KATEGORIAT = {
             + 'maaorjan pakkotyötä. Näytelmä R.U.R. sai ensi-iltansa 2. '
             + 'tammikuuta 1921 Hradec Královéssa, ja kolmessa vuodessa se oli '
             + 'käännetty kolmellekymmenelle kielelle.',
+          lyhyt: 'Josef Čapekin piirros veljestä Karel Čapekista, jonka R.U.R. toi sanan robotti maailmalle 1920.',
           selite: 'Josef Čapekin pastellipiirros veljestään Karel Čapekista '
             + '(1890–1938), jonka näytelmä R.U.R. toi sanan robotti maailman '
             + 'kieliin vuonna 1920.',
@@ -11229,6 +11715,7 @@ export const MAA_KATEGORIAT = {
             + 'Wichterle kokeili niitä omiin silmiinsä. Seuraavan vuoden '
             + 'neljässä ensimmäisessä kuukaudessa hän ja hänen vaimonsa Linda '
             + 'tekivät 5 500 linssiä.',
+          lyhyt: 'Otto Wichterle keksi nykyaikaiset pehmeät piilolinssit ja piti noin 180 patenttia.',
           selite: 'Otto Wichterle (1913–1998) keksi nykyaikaiset pehmeät '
             + 'piilolinssit, ja hän oli mukana noin 180 patentissa.',
           lahde: 'JanSuchy, Wikimedia Commons (public domain)',
@@ -11269,6 +11756,7 @@ export const MAA_KATEGORIAT = {
             + 'luonnonsuojelualue. Se on yksi Euroopan tärkeimmistä '
             + 'muuttohaukan pesimäpaikoista, ja siksi osa kallioista '
             + 'suljetaan pesimäaikaan.',
+          lyhyt: 'Adršpachin ja Teplicen hiekkakivet ovat olleet suosittu retkikohde jo 1800-luvulla.',
           selite: 'Adršpachin ja Teplicen hiekkakivimuodostumat ovat olleet '
             + 'suosittu retkikohde jo 1800-luvulla, mistä kertovat '
             + 'kallioihin hakatut kirjoitukset.',
@@ -11287,6 +11775,7 @@ export const MAA_KATEGORIAT = {
             + 'pitkän luolaston. Alimman lammen pinnan alapuolelta on '
             + 'tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä '
             + 'alaspäin.',
+          lyhyt: 'Macochan kuilu on 138,5 metriä syvä ja lajissaan Keski-Euroopan syvin vajoama.',
           selite: 'Macochan kuilu on 138,5 metriä syvä vajoama Moravian '
             + 'karstin luolastossa ja lajissaan Keski-Euroopan syvin.',
           lahde: 'Pericluss, Wikimedia Commons (CC0)',
@@ -11304,6 +11793,7 @@ export const MAA_KATEGORIAT = {
             + 'aidattu, jotta kävijät ja peurat eivät talloisi taimia. '
             + 'Kaatuneet rungot jätetään maahan lahoamaan, sillä niiden '
             + 'päältä nousee uusi puusukupolvi.',
+          lyhyt: 'Boubínin 1 362 metrin vuoren aarniometsä on ollut suojelualue vuodesta 1858.',
           selite: 'Boubín kohoaa 1 362 metriin Etelä-Böömissä, ja sen '
             + 'rinteitä peittävä aarniometsä on ollut suojelualue vuodesta '
             + '1858.',
@@ -11321,6 +11811,7 @@ export const MAA_KATEGORIAT = {
             + 'Škopek maalasi 28 vaakunaa: ne kuuluvat kaupungeille, joiden '
             + 'ohi joki matkallaan merelle virtaa. Todellinen lähde on '
             + 'parisataa metriä lännempänä, eikä sinne päästetä ketään.',
+          lyhyt: 'Labe eli Elbe virtaa Krkonošen vuorilta 1 094 kilometriä Pohjanmereen.',
           selite: 'Labe eli Elbe saa alkunsa Krkonošen vuorilta ja virtaa 1 '
             + '094 kilometriä Böömin ja Saksan halki Pohjanmereen.',
           lahde: 'cs:ŠJů, Wikimedia Commons (CC BY-SA 3.0)',
@@ -11360,6 +11851,7 @@ export const MAA_KATEGORIAT = {
             + 'voitti 5 000 metriä, 10 000 metriä ja lopuksi maratonin, jota '
             + 'hän ei ollut koskaan aiemmin juossut. Kukaan muu ei ole '
             + 'voittanut näitä kolmea samoissa kisoissa.',
+          lyhyt: 'Emil Zátopek voitti Helsingissä 1952 kultaa 5 000:lla, 10 000:lla ja maratonilla.',
           selite: 'Emil Zátopek (1922–2000) voitti Helsingin olympialaisissa '
             + '1952 kultaa 5 000 ja 10 000 metrillä sekä elämänsä '
             + 'ensimmäisessä maratonissa.',
@@ -11380,6 +11872,7 @@ export const MAA_KATEGORIAT = {
             + 'matkustaa Mexico Cityn olympialaisiin tuli vasta viime '
             + 'hetkellä — ja siellä hän voitti mitalin kaikista kuudesta '
             + 'lajista.',
+          lyhyt: 'Věra Čáslavská voitti 1959–1968 kaikkiaan 22 mestaruutta, joista seitsemän olympiakultaa.',
           selite: 'Věra Čáslavská (1942–2016) voitti vuosina 1959–1968 '
             + 'kaikkiaan 22 kansainvälistä mestaruutta, joihin kuuluu '
             + 'seitsemän olympiakultaa.',
@@ -11400,6 +11893,7 @@ export const MAA_KATEGORIAT = {
             + 'olympiakulta. Hänen tyyliään sanottiin räpiköinniksi: hän '
             + 'heittäytyi jäähän ja torjui millä tahansa ruumiinosalla. Hänen '
             + 'torjuntaprosenttinsa on NHL:n kaikkien aikojen paras.',
+          lyhyt: 'Dominik Hašek torjui NHL:ssä 16 kautta ja häntä pidetään kaikkien aikojen parhaimpiin kuuluvana.',
           selite: 'Dominik Hašek (s. 1965) torjui NHL:ssä kuusitoista '
             + 'kautta, pääosin Buffalo Sabresissa, ja häntä pidetään '
             + 'kaikkien aikojen parhaiden maalivahtien joukossa.',
@@ -11419,6 +11913,7 @@ export const MAA_KATEGORIAT = {
             + 'kaksinpelin yhdeksän kertaa — enemmän kuin kukaan muu koko '
             + 'lajin historiassa. Viimeisen suuren turnausvoittonsa hän otti '
             + '49-vuotiaana vuonna 2006.',
+          lyhyt: 'Martina Navrátilová oli kaksinpelin ykkönen 332 viikkoa, nelinpelin ennätykselliset 237.',
           selite: 'Martina Navrátilová (s. 1956) oli naisten kaksinpelin '
             + 'maailmanlistan ykkösenä 332 viikkoa ja nelinpelin ykkösenä '
             + 'ennätykselliset 237 viikkoa.',
@@ -11457,6 +11952,7 @@ export const MAA_KATEGORIAT = {
             + 'slovakialaisen nukketeatterin ihmiskunnan kulttuuriperinnön '
             + 'luetteloon vuonna 2016. Prahassa on yhä teattereita, joissa '
             + 'lankojen varassa esitetään kokonainen ooppera.',
+          lyhyt: 'Don Giovanni sai maailman ensi-iltansa Prahassa 1787 Mozartin itsensä johtamana.',
           selite: 'Nukketeatterin ohjelmistoon kuuluva Don Giovanni sai '
             + 'maailman ensi-iltansa Prahassa 29. lokakuuta 1787 Mozartin '
             + 'itsensä johtamana.',
@@ -11473,6 +11969,7 @@ export const MAA_KATEGORIAT = {
             + 'liikkeessään 1910-luvulla, ja tapa levisi koko maahan. '
             + 'Syntymäpäiviin ja hautajaisiin niitä tehdään yhä vadillinen, '
             + 'ja kaupassa hinta lasketaan kappaleittain.',
+          lyhyt: 'Chlebíček on tšekkiläisen ja slovakialaisen keittiön avoin voileipä alku- tai välipalana.',
           selite: 'Chlebíček on tšekkiläisen ja slovakialaisen keittiön '
             + 'avoin voileipä, jota tarjotaan alkupalana tai välipalana.',
           lahde: 'Wikimedia Commons (CC0)',
@@ -11509,6 +12006,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Velislavin raamattu tehtiin Prahassa noin vuonna 1340, ja '
                 + 'se on keskiajan Keski-Euroopan laajin kuvakirja. '
                 + 'Pergamenttilehtiä on 188 ja piirroksia 747.',
+              lyhyt: 'Velislavin raamattu on 1325–1349 tehty kuvakäsikirjoitus, jossa on 747 kuvaa.',
               selite: 'Velislavin raamattu on vuosina 1325–1349 tehty '
                 + 'kuvakäsikirjoitus, jossa on 747 kuvaa ja vain lyhyet '
                 + 'latinankieliset selitykset.',
@@ -11522,6 +12020,7 @@ export const MAA_KATEGORIAT = {
                 + 'paikkaan: 302 118 esinettä 148 laitoksesta. Sivustoa '
                 + 'ylläpitää Tšekin kansallismuseo, ja hakuun pääsee ilman '
                 + 'tunnuksia.',
+              lyhyt: 'Tšekin kansallismuseo perustettiin 1818, ja sen kokoelmissa on lähes 14 miljoonaa esinettä.',
               selite: 'Tšekin kansallismuseo perustettiin 1818, ja sen '
                 + 'kokoelmissa on lähes 14 miljoonaa esinettä '
                 + 'luonnontieteistä historiaan.',
@@ -11534,6 +12033,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Alfons Mucha teki Pariisissa julisteita, joiden kaartuvat '
                 + 'kukat, kehykset ja pitkät hiukset määrittelivät koko '
                 + 'jugendtyylin.',
+              lyhyt: 'Alfons Mucha tunnettiin Pariisin jugendkaudella koristeellisista teatterijulisteistaan.',
               selite: 'Alfons Mucha (1860–1939) oli tšekkiläinen taiteilija, '
                 + 'joka tunnettiin Pariisin jugendkaudella koristeellisista '
                 + 'teatterijulisteistaan.',
@@ -11551,6 +12051,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Prahan raatihuoneen tähtitieteellinen kello on vuodelta '
                 + '1410 ja käy yhä. Vanhempaa toimivaa tähtikelloa ei '
                 + 'maailmassa ole.',
+              lyhyt: 'Prahan orloj on keskiaikainen astronominen kello Vanhankaupungin raatihuoneen seinässä.',
               selite: 'Prahan orloj on keskiaikainen astronominen kello, '
                 + 'joka on kiinnitetty Vanhankaupungin raatihuoneen seinään.',
               lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
@@ -11575,6 +12076,7 @@ export const MAA_KATEGORIAT = {
                 + 'kokoelmaesinettä, ja pelkkiä nukkeja on yli 10 000 eri '
                 + 'puolilta maailmaa. Vanhimmat ovat 1800-luvun kiertävien '
                 + 'kansannukketeatterien marionetteja.',
+              lyhyt: 'Chrudim tunnetaan nukketeatteriperinteestä, museosta ja vuosittaisesta festivaalista.',
               selite: 'Chrudim tunnetaan nukketeatteriperinteestään, ja '
                 + 'kaupungissa toimii nukketeatterimuseo sekä vuosittainen '
                 + 'nukketeatterifestivaali.',
@@ -11607,6 +12109,7 @@ export const MAA_KATEGORIAT = {
             + 'pitkin kammioon noin seitsemäntoista minuuttia. Muina päivinä '
             + 'kammio on pimeä. Katsojat arvotaan sisään, koska tilaa on vain '
             + 'parillekymmenelle.',
+          lyhyt: 'Newgrangen käytävähauta noin vuodelta 3100 eaa. on Stonehengeä ja pyramideja vanhempi.',
           selite: 'Newgrangen käytävähauta rakennettiin Meathin '
             + 'kreivikuntaan noin 3100 eaa., mikä tekee siitä Stonehengeä ja '
             + 'Egyptin pyramideja vanhemman.',
@@ -11626,6 +12129,7 @@ export const MAA_KATEGORIAT = {
             + 'sulkeutuu lopulta itsestään. Rakennukset ovat pysyneet kuivina '
             + 'yli tuhat vuotta. Munkit elivät kalalla, linnunmunilla ja '
             + 'sadevedellä, ja luostarista luovuttiin 1100-luvulla.',
+          lyhyt: 'Skellig Michael on kaksihuippuinen kallioluoto, nimetty arkkienkeli Mikaelin mukaan.',
           selite: 'Skellig Michael on kaksihuippuinen kallioluoto 11,6 '
             + 'kilometriä Iveraghin niemimaasta länteen, ja saari on nimetty '
             + 'arkkienkeli Mikaelin mukaan.',
@@ -11644,6 +12148,7 @@ export const MAA_KATEGORIAT = {
             + 'käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei '
             + 'tunnustanut Elisabetia Irlannin kuningattareksi. Poika '
             + 'päästettiin silti vapaaksi.',
+          lyhyt: 'Gráinne Ní Mháille johti Ó Máille -sukua Länsi-Irlannissa maalla ja merellä.',
           selite: 'Gráinne Ní Mháille (n. 1530–1603) johti Ó Máille -suvun '
             + 'aluetta Länsi-Irlannissa maalla ja merellä isänsä kuoleman '
             + 'jälkeen.',
@@ -11662,6 +12167,7 @@ export const MAA_KATEGORIAT = {
             + 'kuluttua enää noin kuusi ja puoli miljoonaa. Muutto jatkui '
             + 'vuosikymmeniä, eikä väkiluku ole vieläkään noussut takaisin '
             + 'vuoden 1841 tasolle.',
+          lyhyt: 'Suuri nälänhätä koetteli Irlantia 1845–1852, pahiten länsi- ja eteläosia.',
           selite: 'Suuri nälänhätä koetteli Irlantia 1845–1852, ja pahiten '
             + 'kärsivät maan länsi- ja eteläosat, joissa iiriä puhuttiin '
             + 'eniten.',
@@ -11702,6 +12208,7 @@ export const MAA_KATEGORIAT = {
             + 'tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill '
             + 'rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen '
             + 'jättiläisen kanssa.',
+          lyhyt: 'Giant\'s Causewayn 40 000 basalttipylvästä syntyivät muinaisessa rakopurkauksessa.',
           selite: 'Giant\'s Causewayn noin 40 000 basalttipylvästä syntyivät '
             + 'muinaisessa rakopurkauksessa Paleogeenikaudella Antrimin '
             + 'rannikolla.',
@@ -11719,6 +12226,7 @@ export const MAA_KATEGORIAT = {
             + 'jotka eivät muualla tapaa toisiaan: arktisia kasveja '
             + 'pohjoisesta ja Välimeren kasveja etelästä. Kevät on runsain '
             + 'aika. Alueen nimi Boireann tarkoittaa kivistä paikkaa.',
+          lyhyt: 'Burren on noin 530 neliökilometrin karstimaisema, jonka nimi merkitsee kivistä seutua.',
           selite: 'Burren on noin 530 neliökilometrin karstimaisema Claren '
             + 'kreivikunnassa, ja sen nimi merkitsee kivistä seutua.',
           lahde: 'Gareth James, Wikimedia Commons (CC BY-SA 2.0)',
@@ -11736,6 +12244,7 @@ export const MAA_KATEGORIAT = {
             + 'ja soista on löytynyt puisia teitä, voita puuastioissa ja '
             + 'kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä '
             + 'ja niitä on jäljellä vain murto-osa.',
+          lyhyt: 'Turve on soille kertyvää maatunutta kasviainesta, jota muodostaa etenkin rahkasammal.',
           selite: 'Turve on osittain maatunutta kasviainesta, jota kertyy '
             + 'soille; yleisimpiä muodostajia on rahkasammal.',
           lahde: 'Kevin Scannell, Wikimedia Commons (CC BY-SA 4.0)',
@@ -11752,6 +12261,7 @@ export const MAA_KATEGORIAT = {
             + 'levyt irtoavat ja nokka kapenee harmaaksi. Kalastaessaan lunni '
             + 'voi kantaa nokassaan monta kalaa kerralla, koska kielessä ja '
             + 'suulaessa on piikkejä, jotka pitävät saaliin paikallaan.',
+          lyhyt: 'Lunni on ainoa Atlantilla pesivä lunnilaji, muun muassa Irlannissa ja Islannissa.',
           selite: 'Lunni on ainoa Atlantilla pesivä lunnilaji, ja se pesii '
             + 'muun muassa Irlannissa, Islannissa, Norjassa ja '
             + 'Newfoundlandissa.',
@@ -11789,6 +12299,7 @@ export const MAA_KATEGORIAT = {
             + 'nuori: se levisi vasta 1900-luvulla näytelmän ja matkailun '
             + 'mukana. Paidat itsekin ovat luultua nuorempia, sillä vanhimmat '
             + 'tunnetut ovat 1900-luvun alusta eivätkä vuosisatojen takaa.',
+          lyhyt: 'Aranneule on nimetty Aransaarten mukaan, alun perin lanoliinipitoisesta villasta.',
           selite: 'Aranneule on nimetty Irlannin länsirannikon Aransaarten '
             + 'mukaan, ja alun perin se neulottiin pesemättömästä villasta, '
             + 'jonka lanoliini teki paidasta vettähylkivän.',
@@ -11807,6 +12318,7 @@ export const MAA_KATEGORIAT = {
             + 'sisäänpäin kertoo päinvastaista. Vasemmassa kädessä kärki '
             + 'sisäänpäin tarkoittaa avioliittoa. Vanhimmat säilyneet '
             + 'sormukset ovat 1700-luvulta.',
+          lyhyt: 'Claddagh-sormuksen sydän, kruunu ja kädet symboloivat rakkautta, uskollisuutta ja ystävyyttä.',
           selite: 'Claddagh-sormuksen sydän tarkoittaa rakkautta, kruunu '
             + 'uskollisuutta ja kädet ystävyyttä, ja nykymuotoista sormusta '
             + 'on tehty 1600-luvulta lähtien Galwayn Claddaghissa.',
@@ -11825,6 +12337,7 @@ export const MAA_KATEGORIAT = {
             + 'tarkkaa, ja hyvästä kauluksesta sai enemmän kuin viikon '
             + 'päiväpalkan. Pitsiä tehdään kaupungissa yhä, ja sitä on '
             + 'käytetty muun muassa kuninkaallisissa hääpuvuissa.',
+          lyhyt: 'Carrickmacross-pitsi tehdään kolmikerroksisena koneverkosta ja musliinista.',
           selite: 'Carrickmacross-pitsi tehdään kolmikerroksisena: kuvion '
             + 'päälle asetetaan koneverkko ja musliini, jotka ommellaan '
             + 'yhteen kuvion ääriviivoja pitkin.',
@@ -11843,6 +12356,7 @@ export const MAA_KATEGORIAT = {
             + 'aallokkoa yllättävän hyvin. Airot ovat kapeat ja lähes '
             + 'lavattomat, jottei tuuli tartu niihin. Veneitä säilytetään '
             + 'ylösalaisin, ettei sade jää sisään.',
+          lyhyt: 'Currach on irlantilainen vene, jonka runko päällystettiin vuodilla tai kankaalla.',
           selite: 'Currach on irlantilainen vene, jonka puurunko '
             + 'päällystettiin ennen eläinten vuodilla ja nykyään yleensä '
             + 'kankaalla.',
@@ -11882,6 +12396,7 @@ export const MAA_KATEGORIAT = {
             + 'kenttäpelinä, ja siitä on maininta jo keskiajan laeissa, '
             + 'joissa sitä yritettiin kieltää. Ensimmäinen koko saaren '
             + 'mestaruusottelu pelattiin vuonna 1887.',
+          lyhyt: 'Hurling on muinainen gaelilainen mailapeli, jonka naisten versio on camogie.',
           selite: 'Hurling on muinaisiin gaelilaisiin peleihin kuuluva '
             + 'joukkuepeli, jossa lyödään palloa saarnipuisella mailalla; '
             + 'naisten versiota kutsutaan camogieksi.',
@@ -11899,6 +12414,7 @@ export const MAA_KATEGORIAT = {
             + 'Kypärä kasvosuojineen tuli pakolliseksi kaikille pelaajille '
             + 'vasta 2010-luvulla. Lajia pelataan seuroissa ympäri maata, ja '
             + 'loppuottelut pelataan samalla kentällä kuin miesten.',
+          lyhyt: 'Camogie on naisten irlantilainen maila- ja pallopeli, jota pelaa noin 100 000 naista.',
           selite: 'Camogie on naisten pelaama irlantilainen maila- ja '
             + 'pallopeli, jota pelaa noin 100 000 naista Irlannissa ja '
             + 'muualla maailmassa.',
@@ -11917,6 +12433,7 @@ export const MAA_KATEGORIAT = {
             + 'palaa. Varsinaista katsomoa ei ole, vaan yleisö seisoo '
             + 'rannalla aitojen takana. Tallialueena toimii yhden päivän ajan '
             + 'läheinen pelto.',
+          lyhyt: 'Laytownin hiekkarannalla Meathin kreivikunnassa ajetaan vuosittaiset laukkakilpailut.',
           selite: 'Laytown on Meathin kreivikunnan kylä Irlanninmeren '
             + 'rannalla, ja sen hiekkarannalla ajetaan vuosittaiset '
             + 'laukkakilpailut.',
@@ -11934,6 +12451,7 @@ export const MAA_KATEGORIAT = {
             + 'vähän, ja pelaajat ovat paikallisia. Ottelut pelataan usein '
             + 'lainatulla kentällä, jonka viivat on maalattu aivan toista '
             + 'lajia varten, ja maalitolpat pystytetään vain ottelun ajaksi.',
+          lyhyt: 'Gaelilaista jalkapalloa pelaavat kaksi 15 pelaajan joukkuetta eri pistesäännöin.',
           selite: 'Gaelilaista jalkapalloa pelaavat kaksi 15 pelaajan '
             + 'joukkuetta, ja maalista saa kolme pistettä ja '
             + 'rimanylityksestä yhden.',
@@ -11971,6 +12489,7 @@ export const MAA_KATEGORIAT = {
             + 'melodiapillin pään reittään vasten: kun kaikki sormireiät ovat '
             + 'peitettyinä, ääni vaikenee kokonaan. Unesco otti '
             + 'uilleann-pillin perinneluetteloonsa vuonna 2017.',
+          lyhyt: 'Uilleann-pilli on Irlannin kansallinen säkkipilli, jonka nimi viittaa kyynärpäähän.',
           selite: 'Uilleann-pilli on Irlannin kansallinen säkkipilli, ja sen '
             + 'iirinkielinen nimi tarkoittaa kyynärpään pillejä '
             + 'puhallustavan mukaan.',
@@ -11993,6 +12512,7 @@ export const MAA_KATEGORIAT = {
             + 'veistettiin. Kolikoihin painettu harppu on kapea, koska se '
             + 'piirrettiin 1800-luvulla huonosti korjatun soittimen mukaan. '
             + 'Oikea harppu on paljon leveämpi.',
+          lyhyt: 'Trinity Collegen harppu on vanhin kolmesta säilyneestä ja Irlannin vaakunan esikuva.',
           selite: 'Trinity Collegen harppu ajoitetaan 1300- tai '
             + '1400-luvulle, ja se on kolmesta säilyneestä keskiaikaisesta '
             + 'harpusta vanhin sekä Irlannin vaakunan esikuva.',
@@ -12031,6 +12551,7 @@ export const MAA_KATEGORIAT = {
                 + 'tarinoita isovanhemmiltaan ja naapureiltaan. Lapset '
                 + 'kirjoittivat vihkoihin taruja, kummituksia, '
                 + 'parannuskeinoja, sääenteitä ja leikkejä.',
+              lyhyt: 'Irlantilaisessa kansanperinteessä leprikoni kuvataan pienenä suutarina ja aarteen vartijana.',
               selite: 'Warwick Goblen piirros vuodelta 1920; irlantilaisessa '
                 + 'kansanperinteessä leprikoni on pieni parrakas olento, '
                 + 'joka myöhemmin kuvattiin suutariksi ja kulta-aarteen '
@@ -12044,6 +12565,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Ballymoten kirja kirjoitettiin vasikannahalle 1300-luvun '
                 + 'lopulla. Vuonna 1522 Aodh Dubh Ó Domhnaill osti sen 140 '
                 + 'lypsylehmällä.',
+              lyhyt: 'Ballymoten kirja kirjoitettiin 1390 tai 1391 nykyisessä Sligon kreivikunnassa.',
               selite: 'Ballymoten kirja kirjoitettiin vuonna 1390 tai 1391 '
                 + 'Ballymoten seudulla nykyisessä Sligon kreivikunnassa.',
               lahde: 'Wikimedia Commons (public domain)',
@@ -12056,6 +12578,7 @@ export const MAA_KATEGORIAT = {
                 + 'Britanniassa. Siinä ei ole yhtään kuvaa muistuttavaa '
                 + 'merkkiä: kirjaimet ovat yhdestä viiteen viirua, jotka on '
                 + 'hakattu kiven särmän yli, ja teksti luetaan pystysuoraan.',
+              lyhyt: 'Oghamilla kirjoitettiin varhaista iiriä 300–500-luvuilla ja myöhemmin muinaisiiriä.',
               selite: 'Ogham on varhaiskeskiaikainen kirjaimisto, jolla '
                 + 'kirjoitettiin varhaista iiriä 300–500-luvuilla ja '
                 + 'myöhemmin muinaisiiriä.',
@@ -12074,6 +12597,7 @@ export const MAA_KATEGORIAT = {
                 + 'lempinimellä Dead Zoo. Merrion Streetin talo on suljettu '
                 + 'suuren korjauksen ajaksi, mutta salit on kuvattu '
                 + 'kolmiulotteisiksi.',
+              lyhyt: 'Dublinin luonnontieteellinen museo rakennettiin 1856 ja tunnetaan lempinimellä Dead Zoo.',
               selite: 'Dublinin luonnontieteellinen museo rakennettiin 1856 '
                 + 'Royal Dublin Societyn kokoelmille, ja se tunnetaan '
                 + 'lempinimellä Dead Zoo.',
@@ -12086,6 +12610,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Irlannin kansallisgallerian verkkokokoelmassa on 14 637 '
                 + 'teosta: 6 893 piirustusta, 3 597 grafiikanlehteä, 2 903 '
                 + 'maalausta, 566 valokuvaa ja 391 veistosta.',
+              lyhyt: 'Caravaggio maalasi Kristuksen vangitsemisen 1602, ja teos on Irlannin kansallisgalleriassa.',
               selite: 'Caravaggio maalasi Kristuksen vangitsemisen '
                 + 'roomalaisen aatelisen Ciriaco Mattein tilauksesta 1602, '
                 + 'ja teos on Irlannin kansallisgalleriassa.',
@@ -12098,6 +12623,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Irish Traditional Music Archive Dublinissa kerää '
                 + 'irlantilaista kansanmusiikkia ja antaa sen kaikkien '
                 + 'kuunneltavaksi ilmaiseksi.',
+              lyhyt: 'Irish Traditional Music Archive on irlantilaisen perinnemusiikin kansallinen arkisto.',
               selite: 'Irish Traditional Music Archive on irlantilaisen '
                 + 'perinnemusiikin, laulun ja tanssin kansallinen arkisto ja '
                 + 'tutkimuskeskus.',
@@ -12129,6 +12655,7 @@ export const MAA_KATEGORIAT = {
             + 'ilmiö sai maailmalla nimensä: sana geysir tulee islannin '
             + 'verbistä gjósa eli purskahtaa. Ennen purkausta vesi kohoaa '
             + 'hetkeksi siniseksi kuplaksi.',
+          lyhyt: 'Strokkur-geysir purkautuu Hvítá-joen varrella 6–10 minuutin välein 15–20 metriin.',
           selite: 'Strokkur on suihkulähdetyyppinen geysir Hvítá-joen '
             + 'varrella, ja se purkautuu 6–10 minuutin välein 15–20 metrin '
             + 'korkeuteen.',
@@ -12147,6 +12674,7 @@ export const MAA_KATEGORIAT = {
             + 'miten elämä valtaa aivan tyhjän maan itsestään. Siemenet '
             + 'tulivat merivirtojen mukana, linnut lensivät, ja saarelle on '
             + 'ilmestynyt kasveja, hyönteisiä ja lintuja ilman ihmisen apua.',
+          lyhyt: 'Surtsey nousi merenpinnalle purkauksessa 14. marraskuuta 1963.',
           selite: 'Surtsey syntyi purkauksessa, joka alkoi 130 metriä '
             + 'merenpinnan alapuolella ja nousi pinnalle 14. marraskuuta '
             + '1963.',
@@ -12165,6 +12693,7 @@ export const MAA_KATEGORIAT = {
             + 'pumppaamaan merivettä laavan päälle: vesi jäähdytti reunan '
             + 'kovaksi ja käänsi virtaa. Satama säilyi, ja lopulta siitä tuli '
             + 'aiempaa suojaisampi.',
+          lyhyt: 'Eldfellin purkaus alkoi 23. tammikuuta 1973 ja pakotti saaren evakuointiin.',
           selite: 'Eldfellin purkaus alkoi varoittamatta Heimaeyn '
             + 'itäpuolella 23. tammikuuta 1973 ja pakotti saaren '
             + 'väliaikaiseen evakuointiin.',
@@ -12236,6 +12765,7 @@ export const MAA_KATEGORIAT = {
             + 'ruskeanharmaa. Turkki on nisäkkäiden lämpimimpiä, ja tassujen '
             + 'pohjat ovat karvaiset, joten jää ei liukastele eikä kylmä '
             + 'pure.',
+          lyhyt: 'Naali on arktisilla alueilla elävä pieni kettu, jonka turkki suojaa talvella lumessa.',
           selite: 'Naali on pohjoisen pallonpuoliskon arktisilla alueilla '
             + 'elävä pieni kettu, jonka paksu turkki toimii talvella lumen '
             + 'suojavärinä.',
@@ -12274,6 +12804,7 @@ export const MAA_KATEGORIAT = {
             + 'politiikasta ja naapureista. Yksi sääntö on ehdoton: ennen '
             + 'altaaseen menoa peseydytään ilman uimapukua, ja siitä '
             + 'muistuttavat kyltit pukuhuoneen seinällä.',
+          lyhyt: 'Laugardalslaug on Reykjavíkin suurin uimalakokonaisuus altaineen ja höyrysaunoineen.',
           selite: 'Laugardalslaug on Reykjavíkin suurin uimalakokonaisuus: '
             + 'siinä on sisä- ja ulkoallas, kahdeksan eri lämpöistä '
             + 'porealtaista ja höyrysauna.',
@@ -12291,6 +12822,7 @@ export const MAA_KATEGORIAT = {
             + 'jonne lampaat ajetaan ja jossa ne lajitellaan omistajille '
             + 'korvamerkkien mukaan. Työn päätteeksi lauletaan ja syödään '
             + 'yhdessä — réttir on yhtä paljon juhla kuin työ.',
+          lyhyt: 'Syksyisin lampaat kootaan tuntureilta ja lajitellaan karsinoissa nimeltä réttir.',
           selite: 'Syksyisin lampaat kootaan tuntureilta ja lajitellaan '
             + 'omistajien kesken karsinoissa, joita kutsutaan nimellä '
             + 'réttir.',
@@ -12308,6 +12840,7 @@ export const MAA_KATEGORIAT = {
             + 'Turvetaloissa asuttiin yleisesti vielä 1800-luvulla ja paikoin '
             + '1900-luvun puolelle asti. Glaumbærin museossa niitä on '
             + 'säilynyt kokonainen rivi.',
+          lyhyt: 'Islantilaiset turvetalot on rakennettu puurungosta ja turpeesta 800-luvulta lähtien.',
           selite: 'Islantilaiset turvetalot ovat puurunkoisia rakennuksia, '
             + 'joiden seinät ja katot on tehty turpeesta; niitä on '
             + 'rakennettu 800-luvun asuttamisesta lähtien.',
@@ -12345,6 +12878,7 @@ export const MAA_KATEGORIAT = {
                 + 'ja 1300-luvuilla. Handrit.is kokoaa kymmenen kirjaston '
                 + 'käsikirjoitukset samaan hakuun: kaikkiaan 17 953 '
                 + 'kappaletta, joista 4 353 on kuvattu sivu sivulta.',
+              lyhyt: 'Flateyjarbók on keskiaikainen islantilainen käsikirjoitus, jonka teetti Jón Hákonarson.',
               selite: 'Flateyjarbók on keskiaikainen islantilainen '
                 + 'käsikirjoitus, jonka teetti ritari ja lainlausuja Jón '
                 + 'Hákonarson ja jonka kirjoittivat papit Jón Þórðarson ja '
@@ -12359,6 +12893,7 @@ export const MAA_KATEGORIAT = {
                 + 'ja pannut ne verkkoon. Íslandskort.is-sivustolla niitä on '
                 + '285, jaettuna 13 ryhmään sen mukaan kuka kartan piirsi ja '
                 + 'milloin.',
+              lyhyt: 'Orteliuksen Theatrum Orbis Terrarum painettiin 1570 ensimmäisenä nykyaikaisena karttakirjana.',
               selite: 'Abraham Orteliuksen Theatrum Orbis Terrarum '
                 + 'painettiin ensi kerran Antwerpenissä 20. toukokuuta 1570, '
                 + 'ja sitä pidetään ensimmäisenä nykyaikaisena '
@@ -12390,6 +12925,7 @@ export const MAA_KATEGORIAT = {
                 + 'maasta ja näyttää ne kartalla saman tien. Listassa on '
                 + 'jokainen järistys viimeisen 48 tunnin ajalta: kellonaika, '
                 + 'syvyys kilometreinä, voimakkuus ja lähin paikannimi.',
+              lyhyt: 'Fagradalsfjall on jääkaudella syntynyt tuya-tulivuori Reykjanesin niemimaalla.',
               selite: 'Fagradalsfjall on viime jääkaudella syntynyt '
                 + 'tuya-tulivuori Reykjanesin niemimaalla noin 40 kilometrin '
                 + 'päässä Reykjavíkista.',
@@ -12403,6 +12939,7 @@ export const MAA_KATEGORIAT = {
                 + 'Islantia. Kuusi kameraa on suunnattu Reykjanesin '
                 + 'purkausalueelle, ja omansa on myös Heklalla, Katlalla ja '
                 + 'Eyjafjallajökullilla.',
+              lyhyt: 'Sólheimajökull on Mýrdalsjökullin purkautumisjäätikkö Etelä-Islannissa.',
               selite: 'Sólheimajökull on Mýrdalsjökullin purkautumisjäätikkö '
                 + 'Katlan ja Eyjafjallajökullin välissä Etelä-Islannissa.',
               lahde: 'Netha Hussain, Wikimedia Commons (CC BY-SA 4.0)',
@@ -12415,6 +12952,7 @@ export const MAA_KATEGORIAT = {
                 + 'pitää löytyä virallisesta nimirekisteristä, ja jos sitä ei '
                 + 'ole siellä, vanhemmat joutuvat hakemaan lupaa '
                 + 'nimilautakunnalta.',
+              lyhyt: 'Nicoline Weywadt oli Islannin ensimmäinen ammattimainen naispuolinen valokuvaaja.',
               selite: 'Nicoline Weywadtin (1848–1921) ottama kuva; hän oli '
                 + 'Islannin ensimmäinen valokuvausta opiskellut ja sitä '
                 + 'ammatikseen harjoittanut nainen.',
@@ -12443,6 +12981,7 @@ export const MAA_KATEGORIAT = {
             + 'minuutissa. Paahdettu jauho säilyi ennen kuukausia '
             + 'pilaantumatta, joten se oli pellolle ja merimatkalle sopiva '
             + 'eväs. Nykyään kamasta vatkataan myös jälkiruokavaahtoa.',
+          lyhyt: 'Kama on Baltian ruokalaji paahdetuista viljajauhoista, sekoitettuna maitoon tai piimään.',
           selite: 'Kama on Baltian ruokalaji, jonka pohjana on paahdetuista '
             + 'ohrasta, rukiista ja kaurasta jauhettu seos ja joka '
             + 'sekoitetaan kypsentämättä maitoon tai piimään.',
@@ -12460,6 +12999,7 @@ export const MAA_KATEGORIAT = {
             + 'haetaan resepti, allekirjoitetaan sopimus ja perustetaan '
             + 'yritys. Kortti on pakollinen jokaiselle virolaiselle 15 '
             + 'ikävuodesta alkaen.',
+          lyhyt: 'Viron e-residenttiohjelma alkoi 2014 ja antaa ulkomaalaisille sirukortin asiointiin.',
           selite: 'Viron e-residenttiohjelma alkoi 1. joulukuuta 2014, ja se '
             + 'antaa ulkomaalaisille sirukortin, jolla voi allekirjoittaa '
             + 'asiakirjoja ja perustaa yrityksen.',
@@ -12496,6 +13036,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Viron kansallismuseo sai vuonna 2016 Tartossa uuden talon, '
                 + 'joka nousee maasta vanhan sotilaslentokentän kiitoradan '
                 + 'päästä. Sivuilta pääsee näyttelyihin ja kokoelmiin.',
+              lyhyt: 'Viron kansallismuseo perustettiin 1909 Tartossa esittelemään virolaista kansankulttuuria.',
               selite: 'Vuonna 1909 Tartossa perustettu Viron kansallismuseo '
                 + 'esittelee virolaista kansatiedettä ja kansantaidetta sekä '
                 + 'muiden suomalais-ugrilaisten kansojen kulttuuria.',
@@ -12509,6 +13050,7 @@ export const MAA_KATEGORIAT = {
                 + 'museoiden yhteinen kuvatietokanta. Teokset on lajiteltu '
                 + 'kirkkotaiteesta japanilaiseen grafiikkaan, joten selata '
                 + 'voi ilman hakusanaa.',
+              lyhyt: 'Johann Köler oli Viron kansallisen heräämisen johtohahmoja ja ensimmäinen ammattimaalari.',
               selite: 'Johann Köler (1826–1899) oli Viron kansallisen '
                 + 'heräämisen johtohahmoja ja maan ensimmäinen '
                 + 'ammattimaalari.',
@@ -12522,6 +13064,7 @@ export const MAA_KATEGORIAT = {
                 + 'Google Arts & Culturessa. Sivulla on virtuaalikäyntejä sen '
                 + 'seitsemään taloon, muun muassa Kiek in de Kökin '
                 + 'tykkitorniin.',
+              lyhyt: 'Kiek in de Kök on 1475 rakennettu 38 metrin tykkitorni, jossa on yhä vuoden 1577 tykinkuulia.',
               selite: 'Vuonna 1475 rakennettu Kiek in de Kök on 38 metriä '
                 + 'korkea tykkitorni, jonka nelimetrisissä muureissa on yhä '
                 + 'vuoden 1577 tykinkuulia.',
@@ -12539,6 +13082,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Viron kansalliskirjaston digiarkistossa on kirjoja, '
                 + 'aikakauslehtiä, karttoja, nuotteja ja pikkupainatteita. '
                 + 'Suuri osa aukeaa suoraan luettavaksi selaimessa.',
+              lyhyt: 'Viron kansalliskirjasto perustettiin 1918 parlamentin kirjastoksi.',
               selite: 'Viron kansalliskirjasto perustettiin 21. joulukuuta '
                 + '1918 maan parlamentin kirjastoksi, ja se säilyttää '
                 + 'virolaista kansallisaineistoa.',
@@ -12552,6 +13096,7 @@ export const MAA_KATEGORIAT = {
                 + 'digitoitua karttaa Rahvusarhiivista ja Tallinnan '
                 + 'kaupunginarkistosta. Vanhimpiin on piirretty jokainen talo '
                 + 'käsin.',
+              lyhyt: 'Joan Blaeu oli hollantilainen kartografi ja Hollannin Itä-Intian komppanian virallinen kartantekijä.',
               selite: 'Joan Blaeu (1596–1673) oli hollantilainen kartografi '
                 + 'ja Hollannin Itä-Intian komppanian virallinen '
                 + 'kartantekijä.',
@@ -12561,6 +13106,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Eesti regilaulude andmebaas — 92 134 kansanlaulua',
               tiedosto: 'Monument of Singing Mother Hilana Taarka, Obinitsa village Setomaa region, Estonia.jpg',
+              lyhyt: 'Setomaan Laulava äiti -patsas kunnioittaa seton laulajaperinnettä ja laulaja Hilana Taarkaa.',
               selite: 'Setomaan Obinitsassa seisova Laulava äiti -patsas '
                 + 'kunnioittaa seton laulajaperinnettä ja laulaja Hilana '
                 + 'Taarkaa.',
@@ -12582,6 +13128,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Viron merimuseon Lennusadam on satavuotiaassa '
                 + 'vesilentokonehallissa Tallinnassa. Sisällä on sukellusvene '
                 + 'Lembit vuodelta 1936, jonka sisään pääsee kiipeämään.',
+              lyhyt: 'Lembit laskettiin vesille 1936 ja oli vuoteen 2011 maailman vanhin kelluva sukellusvene.',
               selite: 'Lembit laskettiin vesille 1936, ja se oli vuoteen '
                 + '2011 asti maailman vanhin yhä kelluva sukellusvene.',
               lahde: 'MKFI, Wikimedia Commons (public domain)',
@@ -12593,6 +13140,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Kotkaklubi vei ensimmäisen kameran mustan haikaran pesään '
                 + 'vuonna 2007. Nyt merikotkan, kalasääsken ja maakotkan '
                 + 'pesiä katsotaan suorana koko kevään ja kesän.',
+              lyhyt: 'Merikotka on suuri petolintu, joka on levinnyt laajalti lauhkeaan Euraasiaan.',
               selite: 'Merikotka on suuri petolintu, joka on levinnyt '
                 + 'laajalti lauhkeaan Euraasiaan ja kuuluu merikotkien '
                 + 'sukuun.',
@@ -12624,6 +13172,7 @@ export const MAA_KATEGORIAT = {
             + 'joten turistien tapa kaivertaa nimensä kiveen on paljon '
             + 'vanhempi kuin luulisi. Gaujan kansallispuisto perustettiin '
             + '1973, ja se on Latvian suurin.',
+          lyhyt: 'Gaujan kansallispuisto on Latvian suurin, 918 neliökilometriä Gauja-joen laaksossa.',
           selite: 'Gaujan kansallispuisto on Latvian suurin, 918 '
             + 'neliökilometriä, ja se seuraa Gauja-joen laaksoa Siguldan ja '
             + 'Cēsisin välillä.',
@@ -12641,6 +13190,7 @@ export const MAA_KATEGORIAT = {
             + 'paksuinen kerros on tuhat vuotta vanha. Suoveden ja mudan '
             + 'takia alueella on myös kylpylä, jonne tultiin jo tsaarin '
             + 'aikaan hoitoihin.',
+          lyhyt: 'Ķemerin kansallispuisto perustettiin 1997 ja on Latvian kolmanneksi suurin, pääosin metsää ja soita.',
           selite: 'Vuonna 1997 perustettu Ķemerin kansallispuisto on maan '
             + 'kolmanneksi suurin, ja sen alasta suurin osa on metsää ja '
             + 'soita, kuten Suuri Ķemerin suo.',
@@ -12657,6 +13207,7 @@ export const MAA_KATEGORIAT = {
             + '1800-luvun lopulta, jolloin paikasta tuli kylpyläkaupunki. '
             + 'Ranta on niin leveä, että tuuli kasaa siitä hiekkavalleja, ja '
             + 'talvella meri jäätyy paikoin rantaviivaan asti.',
+          lyhyt: 'Jūrmala on 32 kilometrin pituinen kylpyläkaupunki Riianlahden ja Lielupe-joen välissä.',
           selite: 'Jūrmala on 32 kilometrin pituinen kylpyläkaupunki '
             + 'Riianlahden ja Lielupe-joen välissä, ja sen valkoista '
             + 'hiekkarantaa riittää 33 kilometriä.',
@@ -12693,6 +13244,7 @@ export const MAA_KATEGORIAT = {
             + 'kiellettyjä kansanlauluja yhdessä, ketään ei voitu pidättää. '
             + 'Unesco otti Baltian laulujuhlat aineettoman kulttuuriperinnön '
             + 'luetteloon vuonna 2003.',
+          lyhyt: 'Latvian laulu- ja tanssijuhlia on pidetty 1873 lähtien, ja ne ovat Unescon perintölistalla.',
           selite: 'Latvian laulu- ja tanssijuhlia on pidetty vuodesta 1873, '
             + 'ja ne on merkitty Unescon aineettoman kulttuuriperinnön '
             + 'luetteloon 2008.',
@@ -12709,6 +13261,7 @@ export const MAA_KATEGORIAT = {
             + 'käärmeitä ja kasviköynnöksiä, ja parvekkeita kannattelevat '
             + 'naishahmot. Monet niistä suunnitteli Mihail Eisenstein, jonka '
             + 'poika Sergei tuli myöhemmin kuuluisaksi elokuvaohjaajana.',
+          lyhyt: 'Jugend on kolmasosassa Riian keskustan rakennuksista, valmistuneina 1904–1914.',
           selite: 'Jugend on noin kolmasosassa Riian keskustan '
             + 'rakennuksista, ja valtaosa niistä valmistui talouskasvun '
             + 'vuosina 1904–1914.',
@@ -12782,6 +13335,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Latvian museoissa on 7,4 miljoonaa esinettä. Niistä yli '
                 + 'kaksi miljoonaa on jo valokuvattu, ja ne kaikki löytyvät '
                 + 'samasta hakukoneesta.',
+              lyhyt: 'Latgallit olivat muinainen balttiheimo, jonka kielestä kehittyi latvia.',
               selite: 'Latgallit olivat muinainen balttiheimo, jonka '
                 + 'kielestä kehittyi latvia ja josta tuli ristiretkien '
                 + 'aikaan alueen valtakieli.',
@@ -12799,6 +13353,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Sama kirjasto on kuvannut noin 8 000 kirjaa sivu sivulta, '
                 + 'yhteensä puolitoista miljoonaa sivua. Kirjastorakennus '
                 + 'itse on nimeltään Gaismas pils eli Valon linna.',
+              lyhyt: 'Latvian kansalliskirjasto perustettiin 1919, ja sen päärakennus on Gaismas pils, Valon linna.',
               selite: 'Latvian kansalliskirjasto perustettiin 1919, ja sen '
                 + 'nykyinen päärakennus tunnetaan nimellä Gaismas pils eli '
                 + 'Valon linna.',
@@ -12811,6 +13366,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Arkistoon on koottu valokuvia, postikortteja ja piirroksia '
                 + 'rakennuksista ja paikoista, joita ei enää ole olemassa. '
                 + 'Vanhimmat ovat 1800-luvun lopulta.',
+              lyhyt: 'Riika on Latvian pääkaupunki ja Baltian toiseksi suurin kaupunki.',
               selite: 'Riika on Latvian pääkaupunki ja Baltian toiseksi '
                 + 'suurin kaupunki, ja siellä asuu kolmasosa maan väestöstä.',
               lahde: 'Library of Congress, Wikimedia Commons (public domain)',
@@ -12819,6 +13375,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Periodika — latvialaiset lehdet vuodesta 1822',
               tiedosto: 'Latweeschu Awises 1824.jpg',
+              lyhyt: 'Latviešu Avīzes oli 1800-luvun alun latviankielinen sanomalehti, ladottu fraktuuralla.',
               selite: 'Latviešu Avīzes oli 1800-luvun alkupuolella '
                 + 'ilmestynyt latviankielinen sanomalehti, jonka teksti '
                 + 'ladottiin fraktuuralla.',
@@ -12839,6 +13396,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Panoraamakuvissa pääsee keskelle juhlia: kuorolavalle, '
                 + 'kulkueeseen ja täyteen katsomoon. Kuvaa voi pyörittää '
                 + 'ympäri ja katsoa mihin suuntaan haluaa.',
+              lyhyt: 'Latvian laulu- ja tanssijuhlat ovat maailman suurimpia harrastajakuorojen tapahtumia.',
               selite: 'Latvian laulu- ja tanssijuhlat ovat maailman '
                 + 'suurimpia harrastajakuorojen ja kansantanssin tapahtumia.',
               lahde: 'Diaaaana, Wikimedia Commons (CC BY-SA 4.0)',
@@ -12850,6 +13408,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Turaidan punatiilistä linnaa alettiin rakentaa vuonna '
                 + '1214. Tällä kierroksella kamera on nostettu linnan '
                 + 'yläpuolelle, ja Gaujan laakso avautuu joka suuntaan.',
+              lyhyt: 'Turaidan linna on Gauja-joen vastarannalla sijaitseva jälleenrakennettu keskiaikainen linna.',
               selite: 'Turaidan linna on Gauja-joen vastarannalla Siguldasta '
                 + 'sijaitseva jälleenrakennettu keskiaikainen linna.',
               lahde: 'PIERRE ANDRE LECLERCQ, Wikimedia Commons (CC BY-SA 4.0)',
@@ -12880,6 +13439,7 @@ export const MAA_KATEGORIAT = {
             + 'Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata '
             + 'vuotta kestäneellä työllä. Unesco otti niemen '
             + 'maailmanperintöluetteloon vuonna 2000.',
+          lyhyt: 'Kuurinkynnäs on 98 kilometrin dyynikannas, joka kuuluu Unescon maailmanperintöön.',
           selite: 'Kuurinkynnäs on 98 kilometrin pituinen kapea dyynikannas, '
             + 'joka erottaa Kuurinlahden Itämerestä ja kuuluu Unescon '
             + 'maailmanperintöön.',
@@ -12898,6 +13458,7 @@ export const MAA_KATEGORIAT = {
             + 'joka näkyy sisällä kuin ikkunan takana. Palangan museossa on '
             + 'pala nimeltä Meripihkan aurinko: se painaa noin kolme ja puoli '
             + 'kiloa.',
+          lyhyt: 'Meripihka on fossiloitunutta puunpihkaa, arvostettua korua kivikaudelta lähtien.',
           selite: 'Meripihka on fossiloitunutta puunpihkaa, jota on '
             + 'arvostettu kivikaudelta lähtien ja työstetty jalokivenä '
             + 'antiikista alkaen.',
@@ -12953,6 +13514,7 @@ export const MAA_KATEGORIAT = {
             + 'takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä '
             + 'ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka '
             + 'tahansa saa tuoda omansa.',
+          lyhyt: 'Ristien kukkulalle uskotaan viedyn ensimmäiset ristit vuoden 1831 kapinan jälkeen.',
           selite: 'Ristien kukkulalle uskotaan viedyn ensimmäiset ristit '
             + 'vuoden 1831 kapinan jälkeen, ja sinne on sittemmin tuotu myös '
             + 'patsaita ja rukousnauhoja.',
@@ -12971,6 +13533,7 @@ export const MAA_KATEGORIAT = {
             + 'kiloja. Sitä tarjotaan häissä ja isoissa juhlissa, ja '
             + 'leikkaaminen on oma taitonsa: kakku sahataan poikittain '
             + 'renkaiksi, jotta jokaiseen palaan tulee piikkejä.',
+          lyhyt: 'Šakotis on vartaassa pyörien paistettu liettualainen kakku voista ja munista.',
           selite: 'Šakotis on vartaassa paistettu kakku, joka tehdään '
             + 'voista, kananmunista, jauhoista, sokerista ja kermasta '
             + 'pyörivällä vartaalla uunissa tai avotulella.',
@@ -12988,6 +13551,7 @@ export const MAA_KATEGORIAT = {
             + 'yhdysvaltalainen yhtye Grateful Dead — pelaajat nousivat '
             + 'palkintokorokkeelle keltavihreissä batiikkipaidoissa, joista '
             + 'tuli koko maan tunnus.',
+          lyhyt: 'Alle kolmen miljoonan asukkaan Liettuasta on tullut koripallon perinteinen suurmaa.',
           selite: 'Alle kolmen miljoonan asukkaan Liettuasta on koripallon '
             + 'omistautuneisuuden ansiosta tullut lajin perinteinen suurmaa.',
           lahde: 'globalite, Wikimedia Commons (CC BY-SA 2.0)',
@@ -13023,6 +13587,7 @@ export const MAA_KATEGORIAT = {
                 + 'seitsemässä vuodessa maalata yli 300 työtä ja säveltää '
                 + 'noin 400 teosta. Galleriassa ne ovat vierekkäin: '
                 + 'maalaukset, nuotit, valokuvat ja tekstit.',
+              lyhyt: 'Mikalojus Konstantinas Čiurlionis oli Euroopan abstraktin taiteen uranuurtajia.',
               selite: 'Mikalojus Konstantinas Čiurlionis (1875–1911) oli '
                 + 'liettualainen säveltäjä ja taidemaalari, jota pidetään '
                 + 'yhtenä Euroopan abstraktin taiteen uranuurtajista.',
@@ -13046,6 +13611,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Trakain vesilinnan museo on skannannut kokoelmaesineitään '
                 + 'kolmiulotteisiksi. Niitä voi pyörittää ruudulla ja katsoa '
                 + 'myös alapuolelta, mikä vitriinissä ei onnistu.',
+              lyhyt: 'Trakain saarilinnan rakensivat Kęstutis ja poikansa Vytautas Suuri, joka kuoli linnassa 1430.',
               selite: 'Trakain saarilinnan rakensivat Kęstutis 1300-luvulla '
                 + 'ja hänen poikansa Vytautas Suuri, joka kuoli linnassa '
                 + '1430.',
@@ -13064,6 +13630,7 @@ export const MAA_KATEGORIAT = {
                 + 'maalattu täyteen kuvia. Kuusi virtuaalikierrosta vie '
                 + 'saleihin, joissa säilytetään yli viittä miljoonaa '
                 + 'asiakirjaa.',
+              lyhyt: 'Vilnan yliopiston kirjasto perustettiin 1570, ja siinä on 5,4 miljoonaa teosta.',
               selite: 'Vilnan yliopiston kirjasto perustettiin 1570 '
                 + 'jesuiittojen toimesta, yhdeksän vuotta ennen yliopistoa, '
                 + 'ja siinä on 5,4 miljoonaa teosta.',
@@ -13077,6 +13644,7 @@ export const MAA_KATEGORIAT = {
                 + 'kansanmusiikkiäänitteet. Vuosina 1908–1949 '
                 + 'vahasylintereille tallennettiin 340 kappaletta, ja 117 '
                 + 'sylinteriä on yhä tallella.',
+              lyhyt: 'Kanklės on liettualainen kielisoitin Baltian psalttereiden perheestä.',
               selite: 'Kanklės on liettualainen näppäiltävä kielisoitin, '
                 + 'joka kuuluu Baltian psalttereiden perheeseen yhdessä '
                 + 'kokleen, kandlen ja kanteleen kanssa.',
@@ -13086,6 +13654,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Sutartinės — 1820 laulua nuotteineen ja äänineen',
               tiedosto: 'Dainu svente 1937 dalyviai Kaunas.jpg',
+              lyhyt: 'Liettualaiset kansanlaulut kertovat mytologiasta ja historiasta, usein terssiharmoniassa.',
               selite: 'Liettualaiset kansanlaulut kertovat sekä mytologiasta '
                 + 'että historian tapahtumista, ja niitä lauletaan yksin tai '
                 + 'ryhmässä, usein terssiharmoniassa.',
@@ -13108,6 +13677,7 @@ export const MAA_KATEGORIAT = {
                 + 'ylälinnasta. Kierros vie tornin sisään ja '
                 + 'näköalatasanteelle, ja mukana on 3D-esineitä ja animoitu '
                 + 'basiliskitaru.',
+              lyhyt: 'Gediminaksen torni on Vilnan Ylälinnasta jäljellä oleva Liettuan tärkeä tunnus.',
               selite: 'Gediminaksen torni on Vilnan Ylälinnasta jäljellä '
                 + 'oleva osa, ja se on kaupungin ja koko Liettuan tärkeitä '
                 + 'tunnuksia.',
@@ -13120,6 +13690,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Rumšiškėsin ulkomuseoon on siirretty kokonaisia kyliä eri '
                 + 'puolilta Liettuaa 195 hehtaarin alueelle. Kahteen '
                 + 'alueeseen pääsee 3D-kierroksella myös tupien sisälle.',
+              lyhyt: 'Rumšiškės sijaitsee Kaunasin tekojärven rannalla, jonka alle jäi osa vanhaa kylää.',
               selite: 'Rumšiškės sijaitsee 20 kilometriä Kaunasista itään '
                 + 'Kaunasin tekojärven pohjoisrannalla, ja osa vanhasta '
                 + 'kylästä jäi tekojärven alle.',
@@ -13151,6 +13722,7 @@ export const MAA_KATEGORIAT = {
             + 'honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, '
             + 'sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta '
             + 'satoja vuosia myöhemmin, kuvitettuun kronikkaan.',
+          lyhyt: 'Képes Krónika on 1300-luvun kuvitettu kronikka Unkarin kuningaskunnasta.',
           selite: 'Képes Krónika on 1300-luvun kuvitettu kronikka Unkarin '
             + 'kuningaskunnasta, ja se edustaa kuninkaanhovin taidetyyliä.',
           lahde: 'Márk Kálti, Wikimedia Commons (public domain)',
@@ -13167,6 +13739,7 @@ export const MAA_KATEGORIAT = {
             + 'pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli '
             + 'erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, '
             + 'ellei häntä kruunattu juuri tällä esineellä.',
+          lyhyt: 'Unkarin pyhä kruunu oli kruunajaiskruunu, jolla kuninkaat kruunattiin 1100-luvulta lähtien.',
           selite: 'Unkarin pyhä kruunu oli kuningaskunnan kruunajaiskruunu, '
             + 'ja kuninkaat kruunattiin sillä 1100-luvulta lähtien.',
           lahde: 'Tolfavi, Wikimedia Commons (public domain)',
@@ -13184,6 +13757,7 @@ export const MAA_KATEGORIAT = {
             + 'soitto ei loppunut voittoon vaan jäi voimaan sen muistoksi, ja '
             + 'siksi monessa maassa kirkonkellot soivat yhä puolenpäivän '
             + 'aikaan.',
+          lyhyt: 'Belgradin piiritys 1456 syntyi, kun Mehmed II pyrki laajentamaan ottomaanivaltaa Eurooppaan.',
           selite: 'Belgradin piiritys käytiin 4.–22. heinäkuuta 1456, kun '
             + 'sulttaani Mehmed II pyrki laajentamaan ottomaanivaltaa '
             + 'Eurooppaan Konstantinopolin kukistumisen jälkeen.',
@@ -13201,6 +13775,7 @@ export const MAA_KATEGORIAT = {
             + 'marraskuun alussa. Noin kaksisataatuhatta ihmistä pakeni '
             + 'maasta. Reikälippu on yhä maan kansallispäivän tunnus, ja sitä '
             + 'nostetaan salkoon joka lokakuu.',
+          lyhyt: 'Unkarin kansannousu kesti lokakuusta marraskuuhun 1956, ennen kuin panssarit tukahduttivat sen.',
           selite: 'Unkarin kansannousu kesti 23. lokakuuta–4. marraskuuta '
             + '1956 eli viisitoista päivää, ennen kuin neuvostopanssarit '
             + 'tukahduttivat sen.',
@@ -13239,6 +13814,7 @@ export const MAA_KATEGORIAT = {
             + 'mustetta. Ensimmäinen patentti tehtiin vuonna 1938. Kynästä '
             + 'tuli suosittu lentäjien keskuudessa, koska se ei vuotanut '
             + 'korkealla, missä ilmanpaine on matala.',
+          lyhyt: 'Kuulakärkikynä syöttää mustetta pyörivän kuulan kautta, joka on yleensä terästä tai messinkiä.',
           selite: 'Kuulakärkikynä syöttää mustetta kärjessä pyörivän kovan '
             + 'kuulan kautta, ja kuula on tavallisesti terästä, messinkiä '
             + 'tai volframikarbidia.',
@@ -13256,6 +13832,7 @@ export const MAA_KATEGORIAT = {
             + 'nostettua siirtoa varten ja laskettua taas käyttöpaikalla. He '
             + 'antoivat laitteelle myös nimen, joka on yhä käytössä: '
             + 'muuntaja. Bláthy kehitti lisäksi sähkömittarin.',
+          lyhyt: 'Muuntaja siirtää sähköenergiaa käämien välillä muuttuvan magneettivuon avulla.',
           selite: 'Muuntaja siirtää sähköenergiaa piiristä toiseen: käämin '
             + 'vaihtuva virta synnyttää sydämeen muuttuvan magneettivuon, '
             + 'joka indusoi jännitteen toiseen käämiin.',
@@ -13273,6 +13850,7 @@ export const MAA_KATEGORIAT = {
             + 'saatiin talteen kiloittain. Aine osoittautui C-vitamiiniksi, '
             + 'ja Szent-Györgyi sai työstään Nobelin palkinnon vuonna 1937. '
             + 'Tarinan mukaan idea syntyi illallispöydässä.',
+          lyhyt: 'Paprikamauste jauhetaan kuivatuista punaisista Capsicum annuum -paloista.',
           selite: 'Paprikamauste jauhetaan kuivatuista punaisista Capsicum '
             + 'annuum -paloista, jotka ovat chilijauheen raaka-aineita '
             + 'mietompia ja ohutlihaisempia.',
@@ -13290,6 +13868,7 @@ export const MAA_KATEGORIAT = {
             + 'kääntyvän. Keksintö jäi aluksi käyttämättä, koska tarpeeksi '
             + 'tasaista valoa ei ollut. Laserin keksiminen 1960-luvulla '
             + 'muutti asian, ja Gábor sai Nobelin palkinnon 1971.',
+          lyhyt: 'Holografia tallentaa ja palauttaa aaltorintaman, tunnetuimmin kolmiulotteisina kuvina.',
           selite: 'Holografia tallentaa ja palauttaa aaltorintaman, ja se '
             + 'tunnetaan parhaiten kolmiulotteisten kuvien tuottamisesta.',
           lahde: 'Dominic Alves, Wikimedia Commons (CC BY 2.0)',
@@ -13328,6 +13907,7 @@ export const MAA_KATEGORIAT = {
             + 'kotieläinrotuja, muun muassa harmaata nautaa ja '
             + 'kierteissarvista racka-lammasta, joita ilman niitty kasvaisi '
             + 'umpeen.',
+          lyhyt: 'Hortobágyn kansallispuisto on jäljellä olevaa unkarilaista pusztaa.',
           selite: 'Hortobágyn kansallispuisto koostuu pääosin jäljellä '
             + 'olevasta unkarilaisesta pusztasta, ja kylän kohdalla joen '
             + 'ylittää Yhdeksänkaarinen silta.',
@@ -13345,6 +13925,7 @@ export const MAA_KATEGORIAT = {
             + 'lämpimämpi kuin useimmat Euroopan järvet. Samasta syystä se '
             + 'myös jäätyy talvella lähes joka vuosi. Rannat ovat '
             + 'purjehdusaluetta, sillä moottoriveneily on järvellä kielletty.',
+          lyhyt: 'Balaton on Keski-Euroopan suurin järvi, jonka ainoa laskuväylä on kanavoitu Sió.',
           selite: 'Balaton on Keski-Euroopan suurin järvi, ja sen suurin '
             + 'tulojoki on Zala ja ainoa laskuväylä kanavoitu Sió.',
           lahde: 'DavidivardiIL, Wikimedia Commons (CC BY-SA 4.0)',
@@ -13361,6 +13942,7 @@ export const MAA_KATEGORIAT = {
             + 'joka pisarasta ohuen kalkkikerroksen. Kasvu on hidasta, '
             + 'luokkaa senttimetri sadassa vuodessa. Yhdessä salissa on niin '
             + 'hyvä kaiku, että siellä pidetään konsertteja.',
+          lyhyt: 'Baradla–Domican luolasto Pohjois-Unkarissa on yli 25 kilometriä pitkä ja täynnä tippukiviä.',
           selite: 'Baradla–Domican luolasto Pohjois-Unkarissa on yli 25 '
             + 'kilometriä pitkä, ja se tunnetaan runsaista '
             + 'tippukivimuodostumistaan.',
@@ -13378,6 +13960,7 @@ export const MAA_KATEGORIAT = {
             + 'muutaman tunnin, parittelee ja kuolee. Vedenpinta täyttyy '
             + 'silloin siivistä niin, että ilmiötä kutsutaan joen kukinnaksi. '
             + 'Ilmiö on palannut sen jälkeen, kun joen vedenlaatu parani.',
+          lyhyt: 'Tiszan päivänkorento on Euroopan suurin päivänkorentolaji, 12 senttiä päästä pyrstöön.',
           selite: 'Tiszan päivänkorento on Euroopan suurin '
             + 'päivänkorentolaji, 12 senttiä päästä pyrstöön, eivätkä '
             + 'aikuiset koskaan poistu veden päältä.',
@@ -13416,6 +13999,7 @@ export const MAA_KATEGORIAT = {
             + 'näkyvät silti vanhimmissa sanoissa: kéz on käsi, vér on veri, '
             + 'hal on kala, méz on mesi ja szem on silmä. Erot syntyivät, kun '
             + 'kansat erosivat toisistaan tuhansia vuosia sitten.',
+          lyhyt: 'Uralilaisista kielistä puhutuimmat ovat unkari, suomi ja viro.',
           selite: 'Uralilaisista kielistä puhutuimmat ovat unkari, suomi ja '
             + 'viro, ja yli 100 000 puhujan kieliä ovat myös ersä, mokša, '
             + 'mari, udmurtti ja komi.',
@@ -13450,6 +14034,7 @@ export const MAA_KATEGORIAT = {
             + 'kielellä aikana, jolloin kirkon ja hallinnon kieli oli latina. '
             + 'Sen jälkeen kesti vielä satoja vuosia, ennen kuin kirjoja '
             + 'alettiin painaa unkariksi.',
+          lyhyt: 'Halotti beszéd on vanhin säilynyt yhtenäinen unkarinkielinen teksti, kirjoitettu 1192–1195.',
           selite: 'Halotti beszéd on vanhin säilynyt yhtenäinen '
             + 'unkarinkielinen teksti, ja se on kirjoitettu latinalaisin '
             + 'kirjaimin vuosina 1192–1195.',
@@ -13468,6 +14053,7 @@ export const MAA_KATEGORIAT = {
             + 'vuosikymmeninä useisiin kyliin ja kaupunkeihin on pystytetty '
             + 'tienvarsipylväs, jossa paikan nimi on kaiverrettu vanhoin '
             + 'merkein.',
+          lyhyt: 'Vanha unkarilainen riimukirjoitus rovásírás polveutuu vanhasta turkkilaisesta kirjaimistosta.',
           selite: 'Vanha unkarilainen riimukirjoitus eli rovásírás on '
             + 'unkarin kielen kirjoitusjärjestelmä, joka polveutuu vanhasta '
             + 'turkkilaisesta kirjaimistosta.',
@@ -13503,6 +14089,7 @@ export const MAA_KATEGORIAT = {
             + 'padassa laitumella. Paprika saapui maahan ottomaanien mukana '
             + '1500-luvulla, ja Budapestin suuressa kauppahallissa, joka '
             + 'avattiin vuonna 1897, sitä myydään makeasta tuliseen.',
+          lyhyt: 'Gulassi on paprikalla maustettu liha- ja vihannesruoka, Unkarin kansallisruoka ja tunnus.',
           selite: 'Gulassi on paprikalla ja muilla mausteilla maustettu '
             + 'liha- ja vihannesruoka, joka on Unkarin kansallisruokia ja '
             + 'maan tunnus.',
@@ -13521,6 +14108,7 @@ export const MAA_KATEGORIAT = {
             + 'keisarinna Elisabet. Reseptin Dobos piti salassa vuoteen 1906. '
             + 'Vuonna 2017 Unkarin ministeriö määräsi asetuksella, millainen '
             + 'dobostorta saa olla.',
+          lyhyt: 'Dobostorta on unkarilainen kerroskakku, jonka kehitti keittiömestari József C. Dobos.',
           selite: 'Dobostorta on unkarilainen kerroskakku suklaavoikreemillä '
             + 'ja karamellikannella, ja sen kehitti budapestilainen '
             + 'keittiömestari József C. Dobos.',
@@ -13560,6 +14148,7 @@ export const MAA_KATEGORIAT = {
                 + 'kokoelmaluettelo on jaettu kymmeniin osastoihin: '
                 + 'kivikauden esineisiin, roomalaisiin löytöihin, '
                 + 'kirkonkelloihin, julisteisiin ja postikortteihin.',
+              lyhyt: 'Seuson aarre on neljäntoista hopeaesineen kätkö myöhäiseltä Rooman ajalta.',
               selite: 'Seuson aarre on neljäntoista hopeaesineen kätkö '
                 + 'myöhäiseltä Rooman ajalta, ja ensimmäiset esineet '
                 + 'ilmestyivät markkinoille Lontoossa 1980.',
@@ -13573,6 +14162,7 @@ export const MAA_KATEGORIAT = {
                 + '& Culturessa suurennettuina. Mukana ovat Csontváry, '
                 + 'Munkácsy ja Szinyei Merse, kolme unkarilaisen '
                 + 'maalaustaiteen tunnetuinta nimeä.',
+              lyhyt: 'Tivadar Csontváry Kosztka oli ensimmäisiä Euroopassa tunnettuja unkarilaistaiteilijoita.',
               selite: 'Tivadar Csontváry Kosztka (1853–1919) oli 1900-luvun '
                 + 'alun avantgardeen kuulunut unkarilainen maalari ja '
                 + 'ensimmäisiä Euroopassa tunnettuja '
@@ -13587,6 +14177,7 @@ export const MAA_KATEGORIAT = {
                 + 'Unkaria ja pystytetty ne uudelleen kylänraiteiksi. '
                 + 'Sivuilta näkee, miltä maalaiselämä näytti sata tai '
                 + 'kaksisataa vuotta sitten.',
+              lyhyt: 'Szentendren ulkoilmamuseo perustettiin 1967 ja on Unkarin suurin kansatieteellinen ulkomuseo.',
               selite: 'Vuonna 1967 perustettu Szentendren ulkoilmamuseo on '
                 + 'Unkarin suurin kansatieteellinen ulkomuseo, ja sen 63 '
                 + 'hehtaarin alueella on sekä siirrettyjä rakennuksia että '
@@ -13606,6 +14197,7 @@ export const MAA_KATEGORIAT = {
                 + 'valokuvista. Nyt kuvia on yli 200 000, ja kuka tahansa saa '
                 + 'katsoa ja ladata ne isokokoisina ilman maksua tai '
                 + 'tunnuksia.',
+              lyhyt: 'Kalastajabastioni on Budapestin tunnetuimpia muistomerkkejä ja Unescon perintöä vuodesta 1987.',
               selite: 'Kalastajabastioni on Budapestin tunnetuimpia '
                 + 'muistomerkkejä Budan linnan lähellä, ja se kuuluu '
                 + 'vuodesta 1987 Unescon maailmanperintöön.',
@@ -13615,6 +14207,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Filmhíradók Online — unkarilaiset uutisfilmit',
               tiedosto: 'Uránia mozi, Budapest.jpg',
+              lyhyt: 'Uránian elokuvateatteri valmistui 1896 yhdistäen venetsialaista gotiikkaa ja itämaisia aiheita.',
               selite: 'Uránian elokuvateatteri valmistui 1896 Henrik '
                 + 'Schmahlin suunnitelmien mukaan, ja sen julkisivussa '
                 + 'yhdistyvät venetsialainen gotiikka ja itämaiset aiheet.',
@@ -13637,6 +14230,7 @@ export const MAA_KATEGORIAT = {
                 + 'nidettä, aikansa toiseksi suurin heti Vatikaanin jälkeen. '
                 + 'Niistä on jäljellä noin 220, ja sivusto kokoaa digitoidut '
                 + 'yhteen paikkaan.',
+              lyhyt: 'Bibliotheca Corviniana oli renessanssin kuuluisimpia kirjastoja, kirjat vietiin Istanbuliin 1526.',
               selite: 'Kuningas Matias Corvinuksen perustama Bibliotheca '
                 + 'Corviniana oli renessanssin kuuluisimpia kirjastoja, ja '
                 + 'kirjat vietiin Istanbuliin Mohácsin tappion jälkeen 1526.',
@@ -13650,6 +14244,7 @@ export const MAA_KATEGORIAT = {
                 + '1900-luvun alussa. Verkossa on hänen järjestelmänsä yli 13 '
                 + '000 sävelmää: luettelokortit, nuotinnokset ja alkuperäiset '
                 + 'äänitteet kuunneltavina.',
+              lyhyt: 'Béla Bartók oli säveltäjä, pianisti ja kansanmusiikin tutkija, 1900-luvun merkittävimpiä säveltäjiä.',
               selite: 'Béla Bartók (1881–1945) oli säveltäjä, pianisti ja '
                 + 'kansanmusiikin tutkija, jota pidetään 1900-luvun '
                 + 'merkittävimpiin kuuluvana säveltäjänä.',
@@ -13680,6 +14275,7 @@ export const MAA_KATEGORIAT = {
                 + 'vanhimpia. Kamerat näyttävät savannin, merileijona-altaan, '
                 + 'orankitarhan, norsutarhan, Etelä-Amerikan tarhan ja haiden '
                 + 'altaan.',
+              lyhyt: 'Budapestin eläintarha avattiin 1866 ja on Unkarin vanhin ja maailman vanhimpia eläintarhoja.',
               selite: 'Budapestin eläintarha avattiin 9. elokuuta 1866, ja '
                 + 'se on Unkarin vanhin ja maailman vanhimpia eläintarhoja.',
               lahde: 'József Rozsnyai, Wikimedia Commons (CC BY-SA 4.0)',
@@ -13713,6 +14309,7 @@ export const MAA_KATEGORIAT = {
             + 'eivätkä viljelleet peltoa. Kukkulaa luultiin pitkään '
             + 'keskiaikaiseksi hautausmaaksi, ja kunnolliset kaivaukset '
             + 'alkoivat vasta vuonna 1995.',
+          lyhyt: 'Göbekli Tepe oli asuttu noin 9500–8000 eaa. ja sisältää maailman vanhimpia kivipylväitä.',
           selite: 'Göbekli Tepe oli asuttu noin 9500–8000 eaa., ja sen '
             + 'suurissa ympyrärakenteissa on maailman vanhimpia tunnettuja '
             + 'kivipylväitä.',
@@ -13733,6 +14330,7 @@ export const MAA_KATEGORIAT = {
             + 'vuonna 1906, ja se on kirjoitettu akkadiksi, ajan '
             + 'yleiskielellä. Suurennettu jäljennös sopimuksesta on esillä '
             + 'YK:n päämajassa New Yorkissa.',
+          lyhyt: 'Ramses II ja Hattusili III solmivat noin 1259 eaa. vanhimman tunnetun rauhansopimuksen.',
           selite: 'Ramses II ja Hattusili III solmivat rauhansopimuksen noin '
             + '1259 eaa.; se on vanhin säilynyt rauhansopimus, jonka '
             + 'molempien osapuolten versiot tunnetaan.',
@@ -13752,6 +14350,7 @@ export const MAA_KATEGORIAT = {
             + '— mutta esineet olivat yli tuhat vuotta vanhempia kuin '
             + 'kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota '
             + 'etsi.',
+          lyhyt: 'Troija tuhoutui ja rakennettiin uudelleen 4 000 vuoden aikana, ja kaivauksissa on yhdeksän kerrosta.',
           selite: 'Troija tuhoutui ja rakennettiin uudelleen 4 000 vuoden '
             + 'asutushistoriansa aikana, ja kaivauksissa on erotettu '
             + 'yhdeksän arkeologista kerrosta.',
@@ -13771,6 +14370,7 @@ export const MAA_KATEGORIAT = {
             + 'opetti kirjaimia toreilla ja kylissä. Samana syksynä hänelle '
             + 'annettiin nimitys başöğretmen, pääopettaja. Koko maa opetteli '
             + 'lukemaan uudestaan muutamassa vuodessa.',
+          lyhyt: 'Atatürkin uudistukset muuttivat Turkin maalliseksi valtioksi ja toivat latinalaiset kirjaimet.',
           selite: 'Atatürkin uudistukset muuttivat nuoren Turkin tasavallan '
             + 'maalliseksi kansallisvaltioksi, ja niihin kuului myös '
             + 'siirtyminen latinalaisiin kirjaimiin.',
@@ -13811,6 +14411,7 @@ export const MAA_KATEGORIAT = {
             + 'kahdeksassa kerroksessa noin 85 metrin syvyyteen. Se '
             + 'löydettiin uudestaan vuonna 1963, kun talon seinän takaa '
             + 'paljastui käytävä.',
+          lyhyt: 'Kappadokia on Keski-Anatolian historiallinen maakunta, nykyisin Nevşehirin matkailualue.',
           selite: 'Kappadokia on Keski-Anatolian historiallinen maakunta, ja '
             + 'nykyinen matkailualue keskittyy Nevşehirin maakuntaan.',
           lahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 3.0)',
@@ -13829,6 +14430,7 @@ export const MAA_KATEGORIAT = {
             + 'päälle perustettiin noin vuonna 190 eaa. kaupunki Hierapolis, '
             + 'jonne tultiin kylpemään terveyden vuoksi. Nykyään altailla saa '
             + 'kävellä vain paljain jaloin, ettei valkoinen pinta likaannu.',
+          lyhyt: 'Pamukkalen valkoiset terassit ovat kuumien lähteiden karbonaattikiveä, päällä antiikin Hierapolis.',
           selite: 'Pamukkalen valkoiset terassit ovat kuumien lähteiden '
             + 'veden jättämää karbonaattikiveä, ja terassien päälle '
             + 'rakennettiin antiikin Hierapolis.',
@@ -13848,6 +14450,7 @@ export const MAA_KATEGORIAT = {
             + 'Kissojen kotijärvi on Turkin suurin järvi, mutta sen vesi on '
             + 'niin emäksistä, että siinä elää vain yksi kalalaji, '
             + 'helmisärki, joka nousee keväisin jokiin kutemaan.',
+          lyhyt: 'Van-kissa jalostettiin 1950-luvulla Britanniassa Turkista tuoduista kissoista.',
           selite: 'Van-kissa jalostettiin 1950-luvulla Britanniassa Turkista '
             + 'tuoduista kissoista, ja sen tuntee van-kuviosta, jossa väriä '
             + 'on vain päässä ja hännässä.',
@@ -13867,6 +14470,7 @@ export const MAA_KATEGORIAT = {
             + 'Aikuisen flamingon vaaleanpunainen väri tulee ravinnosta, '
             + 'pikkuäyriäisistä ja levistä, joita lintu siivilöi vedestä '
             + 'nokallaan. Poikaset ovat ensin harmaita.',
+          lyhyt: 'Tuz Gölü on 1 665 neliökilometrin alallaan Turkin toiseksi suurin ja maailman suurimpia suolajärviä.',
           selite: 'Tuz Gölü on 1 665 neliökilometrin pinta-alallaan Turkin '
             + 'toiseksi suurin järvi ja maailman suurimpia hypersuolaisia '
             + 'järviä.',
@@ -13908,6 +14512,7 @@ export const MAA_KATEGORIAT = {
             + 'useita tuhansia. Iso matto vie kutojalta kuukausia. Kilim on '
             + 'eri asia: siinä ei ole solmuja lainkaan, vaan kuvio syntyy '
             + 'pelkästä kudonnasta, eikä kilimissä siksi ole nukkaa.',
+          lyhyt: 'Anatolialainen matto on solmittu nukkapintainen tekstiili kotikäyttöön, myyntiin ja vientiin.',
           selite: 'Anatolialainen matto on solmittu nukkapintainen lattia- '
             + 'tai seinätekstiili, jota on kudottu kotikäyttöön, '
             + 'paikalliseen myyntiin ja vientiin.',
@@ -13926,6 +14531,7 @@ export const MAA_KATEGORIAT = {
             + 'hieman koholle pinnasta — sen voi tuntea sormella. Kuvioissa '
             + 'toistuvat tulppaanit, neilikat ja kaarevat lehdet. Kaupungin '
             + 'vanha nimi on Nikaia.',
+          lyhyt: 'Iznikin keramiikkaa valmistettiin 1400–1600-luvuilla tavoitellen kiinalaisen posliinin arvostusta.',
           selite: 'Iznikin keramiikkaa valmistettiin 1400-luvun lopulta '
             + '1600-luvun loppuun, ja osmanit tavoittelivat sillä '
             + 'kiinalaisen posliinin arvostusta.',
@@ -13944,6 +14550,7 @@ export const MAA_KATEGORIAT = {
             + 'nostetaan pois: kuvio siirtyy paperiin kerralla. Samaa kuviota '
             + 'ei voi tehdä kahdesti. Nimi tulee todennäköisesti persian '
             + 'pilveä tarkoittavasta sanasta.',
+          lyhyt: 'Marmorointi on vesipinnalla tehtävä koristelutekniikka, jossa värit siirretään paperille.',
           selite: 'Marmorointi on vesipinnalla tehtävä koristelutekniikka, '
             + 'jossa kelluvat värit siirretään paperille tai kankaalle.',
           lahde: 'İzgi Örs, Wikimedia Commons (CC BY-SA 4.0)',
@@ -13961,6 +14568,7 @@ export const MAA_KATEGORIAT = {
             + 'ovat suorapuheinen Karagöz ja oppinut Hacivat, jotka '
             + 'ymmärtävät toisensa aina väärin. Yksi nukettaja puhuu kaikki '
             + 'roolit eri äänillä.',
+          lyhyt: 'Karagöz ja Hacivat ovat turkkilaisen varjoteatterin päähahmot, levinneet laajalle osmanikaudella.',
           selite: 'Karagöz ja Hacivat ovat turkkilaisen varjoteatterin '
             + 'päähahmot, ja perinne levisi osmanikaudella laajalle '
             + 'valtakuntaan.',
@@ -14000,6 +14608,7 @@ export const MAA_KATEGORIAT = {
             + 'siirtää. Siksi soittimella saa myös sävelet, jotka jäävät '
             + 'pianon koskettimien väliin. Sazia soittavat aşıkit, '
             + 'laulaja-runoilijat, jotka kiersivät kylästä kylään.',
+          lyhyt: 'Bağlama eli saz on pitkäkaulainen luuttu Turkin, Azerbaidžanin ja naapurialueiden kansanmusiikissa.',
           selite: 'Bağlama eli saz on pitkäkaulainen nauhoitettu luuttu, '
             + 'jota soitetaan Turkin, Azerbaidžanin ja naapurialueiden '
             + 'kansanmusiikissa.',
@@ -14018,6 +14627,7 @@ export const MAA_KATEGORIAT = {
             + 'taivasta kohti ja vasen alas maata kohti, ikään kuin saatu '
             + 'annettaisiin eteenpäin. Musiikin johtaa ney, ruokohuilu, jonka '
             + 'ääni on tarkoituksella hengittävä.',
+          lyhyt: 'Dervissipyörintä on meditaation muoto, jota mevlevi-dervissit harjoittavat sema-seremoniassa.',
           selite: 'Dervissipyörintä on aktiivisen meditaation muoto, jota '
             + 'mevlevi-veljeskunnan dervissit harjoittavat '
             + 'sema-seremoniassa.',
@@ -14036,6 +14646,7 @@ export const MAA_KATEGORIAT = {
             + 'häissä, painiotteluissa ja kevätjuhlissa. Zurnan soittaja '
             + 'hengittää nenän kautta samalla kun puhaltaa, jolloin ääni ei '
             + 'katkea lainkaan.',
+          lyhyt: 'Davul on kaksikalvoinen rumpu, jota lyödään nuijilla matalan ja kirkkaan äänen tuottamiseksi.',
           selite: 'Davul on kaksikalvoinen suuri rumpu, jota lyödään '
             + 'nuijilla ja jonka kaksi eri kalvoa tuottavat sekä matalan '
             + 'että kirkkaan äänen.',
@@ -14090,6 +14701,7 @@ export const MAA_KATEGORIAT = {
             + 'hautuu väkevä uute. Se tarjoillaan tulppaanin muotoisessa '
             + 'korvattomassa lasissa, josta pidetään kiinni reunasta, jottei '
             + 'sormia polta.',
+          lyhyt: 'Turkissa juodaan teetä maailman eniten asukasta kohti, ja maa on viidenneksi suurin teen viejä.',
           selite: 'Turkissa juodaan teetä maailman eniten asukasta kohti, '
             + 'yli kolme kiloa vuodessa, ja maa on viidenneksi suurin teen '
             + 'viejä.',
@@ -14107,6 +14719,7 @@ export const MAA_KATEGORIAT = {
             + 'Matkakirjailija Evliya Çelebi laski 1600-luvun Istanbulissa '
             + 'satoja bozapuoteja. Vefan korttelissa avattiin puoti vuonna '
             + '1876, ja se on yhä samassa paikassa.',
+          lyhyt: 'Boza on Keski-Aasialainen käytetty viljajuoma, jonka alkoholipitoisuus on vain noin prosentin.',
           selite: 'Boza on Keski-Aasiasta peräisin oleva käytetty '
             + 'viljajuoma, jonka alkoholipitoisuus on noin prosentin ja maku '
             + 'hapahkon makea.',
@@ -14182,6 +14795,8 @@ export const MAA_KATEGORIAT = {
             + 'Berliinille, josta puna-armeija vie sen 1945; Moskova myöntää sen '
             + 'olemassaolon vasta 1993. Se on lisäksi väärä Troija: kerros, josta '
             + 'kulta nousi, on noin tuhat vuotta Homeroksen sotaa vanhempi.',
+          lyhyt: 'Kaivaja ojentaa Troijan löydön Schliemannille, joka jo '
+            + 'ajattelee sitä oman maineensa avaimena.',
           selite: 'Kaivaja ojentaa löydön Heinrich Schliemannille, mutta miehet '
             + 'eivät katso esinettä samalla tavalla: toiselle se on päivän työ, '
             + 'toiselle avain maineeseen. Se, kuka saa päättää aarteen '
@@ -14192,6 +14807,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Hisarlık 1873 — kulta kaivannon seinämässä',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-kauko-photo-v4.jpg',
+              lyhyt: 'Hisarlıkin kaivajat jatkavat työtään, kun Schliemann kokoaa '
+                + 'löydöt omaksi sankaritarinakseen.',
               selite: 'Hisarlıkin kaivajat jatkavat lapiointia, kun Schliemann '
                 + 'kokoaa esineitä peitteen alle. Työmiehet, joiden käsistä '
                 + 'löydöt kulkivat, jäävät pian sivuun kertomuksesta, jonka '
@@ -14222,6 +14839,7 @@ export const MAA_KATEGORIAT = {
                 + 'verkkoon. Pelkästään kirjataiteen ja kalligrafian '
                 + 'osastossa on yli 600 teosta, ja jokaista voi suurentaa '
                 + 'ruudulla siveltimenvedon tarkkuudelle.',
+              lyhyt: 'Hilya on osmanitaiteen muoto, joka kuvaa profeetta Muhammadin ulkomuotoa hadithien pohjalta.',
               selite: 'Hilya on osmanitaiteen muoto ja kirjallisuudenlaji, '
                 + 'joka kuvaa profeetta Muhammadin ulkomuotoa '
                 + 'hadith-kertomusten pohjalta.',
@@ -14235,6 +14853,7 @@ export const MAA_KATEGORIAT = {
                 + 'kesyttäjä vuodelta 1906. Jokainen maalaus aukeaa omalle '
                 + 'sivulleen, ja osa museon esineistä on skannattu myös '
                 + 'kolmiulotteisiksi.',
+              lyhyt: 'Osman Hamdi Beyn Kilpikonnankesyttäjä valmistui 1906–1907 satiirina osmanien hitaista uudistuksista.',
               selite: 'Osman Hamdi Beyn Kilpikonnankesyttäjä valmistui 1906 '
                 + 'ja toisena versiona 1907, ja sitä on tulkittu satiiriksi '
                 + 'osmanivaltakunnan hitaista uudistuksista.',
@@ -14265,6 +14884,7 @@ export const MAA_KATEGORIAT = {
                 + 'virtuaalikierrosta: Göbeklitepen kaivaus, Troija, Efeso, '
                 + 'Hattusa ja Zeugman mosaiikkimuseo. Näkymää pyöritetään '
                 + 'hiirellä.',
+              lyhyt: 'Gaziantepin Zeugman mosaiikkimuseo avattiin 2011 maailman suurimpana mosaiikkimuseona.',
               selite: 'Gaziantepin Zeugman mosaiikkimuseo avattiin 9. '
                 + 'syyskuuta 2011, ja se on 1 700 neliömetrin mosaiikeillaan '
                 + 'maailman suurin mosaiikkimuseo.',
@@ -14285,6 +14905,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Byzantium 1200 — Konstantinopoli rakennettuna uudelleen',
               tiedosto: 'Panorama di Costantinopoli a.jpg',
+              lyhyt: 'Konstantinopoli oli Rooman ja Bysantin pääkaupunki vuodesta 330 ottomaanien valloitukseen 1453.',
               selite: 'Konstantinopoli oli Rooman ja Bysantin valtakunnan '
                 + 'pääkaupunki vuodesta 330 aina ottomaanien valloitukseen '
                 + '1453.',
@@ -14303,6 +14924,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'SALT Research — istanbulilainen arkisto auki kaikille',
               tiedosto: 'Galata and the Banque Imperiale Ottomane.jpg',
+              lyhyt: 'SALT perustettiin 2011 yhdistäen Garanti-pankin gallerian ja Osmanipankin arkiston.',
               selite: 'SALT perustettiin 2011, ja se yhdisti Garanti-pankin '
                 + 'gallerian, Osmanipankin arkiston ja tutkimuskeskuksen '
                 + 'sekä nykytaidekeskuksen toiminnan.',
@@ -14316,6 +14938,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Koç-yliopiston digitaaliset kokoelmat — 90 000 kohdetta',
               tiedosto: 'Panorama van Istanbul, de Bosporus en de Gouden Hoorn Souvenir de Constantinople (titel op object), RP-F-F00968.jpg',
+              lyhyt: 'Konstantinopolin matkamuistoalbumeja myytiin 1800-luvun lopulla panoraamavalokuvin varustettuina.',
               selite: 'Konstantinopolin matkamuistoalbumeja myytiin '
                 + '1800-luvun lopulla matkailijoille, ja niihin koottiin '
                 + 'kaupungin panoraamavalokuvia.',
@@ -14338,6 +14961,7 @@ export const MAA_KATEGORIAT = {
                 + 'lajia ja yli 114 000 valokuvaa. Lajigalleriasta näkee, '
                 + 'miltä kukin lintu näyttää ja missä päin maata se on '
                 + 'kuvattu.',
+              lyhyt: 'Krüperinnakkeli on 12,5 senttinen nakkelilaji, tunnettu mustasta päälaesta ja silmäjuovasta.',
               selite: 'Krüperinnakkeli on 12,5 senttimetrin mittainen '
                 + 'nakkelilaji, jonka tuntee mustasta päälaen etuosasta ja '
                 + 'valkoisesta silmäkulmajuovasta.',
@@ -14347,6 +14971,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'TrakEl — Turkin perhoset lajigalleriana',
               tiedosto: 'Anatolian Odd-spot Blue - Turanana endymion 01.jpg',
+              lyhyt: 'Turanana endymion on Turkissa, Libanonissa ja Iranissa esiintyvä pieni sinisiipiperhonen.',
               selite: 'Turanana endymion on Turkissa, Libanonissa ja '
                 + 'Iranissa esiintyvä sinisiipiperhonen, jonka etusiiven '
                 + 'pituus on 10–12 milliä.',
@@ -14380,6 +15005,7 @@ export const MAA_KATEGORIAT = {
             + 'rakennettiin 24 vuotta. Seiniä ja kattoja peittää yli 7 000 '
             + 'neliömetriä mosaiikkia, ja valaistus oli alusta asti '
             + 'sähköinen: hehkulamppuja oli 1 689.',
+          lyhyt: 'Verikirkko rakennettiin 1883–1907 paikalle, jossa Narodnaja Volja surmasi keisari Aleksanteri II:n.',
           selite: 'Verikirkko rakennettiin 1883–1907 sille paikalle, jossa '
             + 'Narodnaja Volja -liikkeen jäsenet surmasivat keisari '
             + 'Aleksanteri II:n.',
@@ -14399,6 +15025,7 @@ export const MAA_KATEGORIAT = {
             + 'Petipa oli pyytänyt Sokerihaltijattaren tanssiin musiikkia, '
             + 'joka kuulostaisi suihkulähteen pisaroilta — siihen Tšaikovski '
             + 'valitsi celestan.',
+          lyhyt: 'Tšaikovskin vuoden 1892 Pähkinänsärkijä-baletti perustuu Alexandre Dumas\'n vuoden 1844 versioon.',
           selite: 'Pjotr Tšaikovskin vuoden 1892 baletti perustuu Alexandre '
             + 'Dumas\'n vuonna 1844 kirjoittamaan versioon '
             + 'Pähkinänsärkijä-tarinasta.',
@@ -14441,6 +15068,7 @@ export const MAA_KATEGORIAT = {
             + 'Strelka sai pentuja, ja yksi niistä lähetettiin lahjaksi '
             + 'Yhdysvaltain presidentin perheelle. Molemmat koirat ovat yhä '
             + 'esillä täytettyinä Moskovan kosmonautiikan museossa.',
+          lyhyt: 'Korabl-Sputnik 2 palautti 1960 ensimmäisenä eläimet elävinä maahan, mukana Belka ja Strelka.',
           selite: 'Korabl-Sputnik 2 lähetettiin 19. elokuuta 1960, ja se '
             + 'palautti ensimmäisenä eläimet kiertoradalta elävinä maahan — '
             + 'mukana koirat Belka ja Strelka.',
@@ -14460,6 +15088,7 @@ export const MAA_KATEGORIAT = {
             + 'levisi Moskovassa levykkeeltä toiselle ilmaiseksi, ja '
             + 'IBM-koneelle sitä oli kääntämässä 16-vuotias koululainen Vadim '
             + 'Gerasimov.',
+          lyhyt: 'Aleksei Pažitnov loi Tetriksen 1980-luvulla, pelissä tetrominot kasataan riveiksi, jotka katoavat.',
           selite: 'Neuvostoinsinööri Aleksei Pažitnov loi Tetriksen '
             + '1980-luvun puolivälissä, ja pelissä neljän palikan tetrominot '
             + 'kasataan riveiksi, jotka katoavat täyttyessään.',
@@ -14496,6 +15125,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Pietarin Eremitaasi on maailman suurimpia museoita. Täällä '
                 + 'sen teoksia voi suurentaa siveltimenvetoja myöten, ja '
                 + 'katunäkymä vie kävelylle palatsin salien läpi.',
+              lyhyt: 'Leonardon 1400-luvun lopun Madonna Litta kuuluu Eremitaasiin ja esittää Mariaa imettämässä Jeesusta.',
               selite: 'Leonardon 1400-luvun lopulla maalaama Madonna Litta '
                 + 'kuuluu Eremitaasin kokoelmaan ja esittää Mariaa '
                 + 'imettämässä Jeesus-lasta.',
@@ -14508,6 +15138,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Moskovan Tretjakov on venäläisen taiteen päämuseo. Oma '
                 + 'Tretjakovka -palvelussa teokset avautuvat suurina kuvina, '
                 + 'ja jokaisesta kerrotaan, mitä siinä oikein tapahtuu.',
+              lyhyt: 'Valentin Serovin vuoden 1887 Tyttö ja persikoita on venäläisen maalaustaiteen mestariteos.',
               selite: 'Valentin Serovin vuonna 1887 maalattua Tyttö ja '
                 + 'persikoita pidetään taiteilijan pääteoksena ja venäläisen '
                 + 'maalaustaiteen mestariteoksena.',
@@ -14520,6 +15151,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Venäjän museon verkkokokoelmassa on ikoneja, maalauksia, '
                 + 'veistoksia ja kansantaidetta tarkkoina kuvina. Rastilla '
                 + 'voi rajata näkyviin vaikka pelkät veistokset.',
+              lyhyt: 'Ivan Aivazovskin vuoden 1850 Yhdeksäs aalto kuvaa myrskyn jälkeistä merta ja haaksirikkoutuneita.',
               selite: 'Ivan Aivazovskin vuonna 1850 maalaama Yhdeksäs aalto '
                 + 'kuvaa myrskyn jälkeistä merta ja haaksirikkoutuneita, '
                 + 'jotka takertuvat laivan jäänteisiin.',
@@ -14533,6 +15165,7 @@ export const MAA_KATEGORIAT = {
                 + 'kruunuja, valtaistuimia, juhlavaunuja ja kirkkoesineitä. '
                 + 'Kokoelmat aukeavat kuvaruudukkoina, ja kuvia voi '
                 + 'suurentaa.',
+              lyhyt: 'Monomahin lakki on 1300-luvun kultainen päähine, Kremlin asevaraston kruunuista vanhin.',
               selite: 'Monomahin lakki on 1300-luvun alkupuolen kultainen '
                 + 'päähine ja Kremlin asevarastossa esillä olevista '
                 + 'kruunuista vanhin.',
@@ -14550,6 +15183,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Sergei Prokudin-Gorski valokuvasi Venäjää värillisenä jo '
                 + 'yli sata vuotta sitten kolmella värisuotimella. Kongressin '
                 + 'kirjastossa on noin 1900 lasinegatiivia selattavana.',
+              lyhyt: 'Sergei Prokudin-Gorski dokumentoi 1900-luvun Venäjää värivalokuvin keisarin rautatievaunupimiössä.',
               selite: 'Kemisti ja valokuvaaja Sergei Prokudin-Gorski '
                 + 'dokumentoi 1900-luvun alun Venäjää värivalokuvin keisari '
                 + 'Nikolai II:n järjestämässä rautatievaunupimiössä.',
@@ -14559,6 +15193,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Venäjän historia valokuvissa — arkisto vuodesta 1860',
               tiedosto: 'Russian peasant girls in front of a traditional wooden house in Kirillov.jpg',
+              lyhyt: 'Prokudin-Gorski kuvasi Venäjän maaseutua ja kaupunkeja kolmen värisuotimen menetelmällä.',
               selite: 'Prokudin-Gorskin värivalokuva; hän kuvasi Venäjän '
                 + 'maaseutua ja kaupunkeja kolmen värisuotimen menetelmällä.',
               lahde: 'Sergei Prokudin-Gorskii, Wikimedia Commons (public domain)',
@@ -14575,6 +15210,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Venäjän kansalliskirjasto — virtuaalinäyttelyt',
               tiedosto: 'Russian National Bibliotheque, Saint Petersburg.jpg',
+              lyhyt: 'Venäjän kansalliskirjasto Pietarissa on maan vanhin ja kokoelmiltaan toiseksi suurin.',
               selite: 'Venäjän kansalliskirjasto Pietarissa on maan kolmesta '
                 + 'kansalliskirjastosta vanhin ja kokoelmiltaan toiseksi '
                 + 'suurin.',
@@ -14588,6 +15224,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Elektronekrasovka — digitoitu kirjasto vuodesta 1564',
               tiedosto: 'Apostol 1564 Frontispis.jpg',
+              lyhyt: 'Ivan Fjodorov oli itäslaavilaisen kirjapainotaidon uranuurtaja, hänen Apostolinsa ilmestyi 1564.',
               selite: 'Ivan Fjodorov oli itäslaavilaisen kirjapainotaidon '
                 + 'uranuurtajia, ja hänen painamansa Apostol ilmestyi 1564.',
               lahde: 'Ivan Fjodorov ja Pjotr Mstislavets, Wikimedia Commons (public domain)',
@@ -14604,6 +15241,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Darwin-museo — kokoelma kolmiulotteisena',
               tiedosto: 'Darwin\'s finches in the Darwin museum in Moscow.jpg',
+              lyhyt: 'Moskovan Darwin-museon perusti Aleksandr Kohts 1907 maailman ensimmäisenä evoluutiomuseona.',
               selite: 'Moskovan Darwin-museon perusti 1907 Aleksandr Kohts, '
                 + 'ja se oli maailman ensimmäinen evoluutiota esittelevä '
                 + 'museo.',
@@ -14616,6 +15254,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Digitaalinen Kunstkamera — 1700-luvun museo uudelleen',
               tiedosto: 'Kunstkamera SPB.jpg',
+              lyhyt: 'Kunstkamera on Nevan rannalla toimiva Venäjän tiedeakatemian antropologian ja etnografian museo.',
               selite: 'Kunstkamera on Nevan rannalla toimiva tiedemuseo, '
                 + 'Venäjän tiedeakatemian Pietari Suuren antropologian ja '
                 + 'etnografian museo.',
@@ -14648,6 +15287,7 @@ export const MAA_KATEGORIAT = {
             + 'kiireellistä suojelua vaativien luetteloon heinäkuussa 2022. '
             + 'Samalla se muistutti, että borssia keitetään monessa maassa '
             + 'eikä merkintä tee siitä kenenkään yksinomaista omaisuutta.',
+          lyhyt: 'Borssi on itäeurooppalainen hapan keitto, jossa punajuuri antaa ukrainalaiselle liemelle sen värin.',
           selite: 'Borssi on itäeurooppalainen hapan keitto, ja '
             + 'ukrainalaisessa versiossa punajuuri antaa liemelle sen '
             + 'tunnusomaisen värin.',
@@ -14667,6 +15307,7 @@ export const MAA_KATEGORIAT = {
             + 'tarkoituksella, kun Intiasta saapui suuri lasti '
             + 'cashewpähkinöitä. Rasian kannessa on kastanjanoksa, Kiovan oma '
             + 'tunnus.',
+          lyhyt: 'Kiovan kakkua on valmistettu vuodesta 1956, ja siitä on tullut kaupungin tunnus.',
           selite: 'Kiovan kakkua on valmistettu 6. joulukuuta 1956 lähtien, '
             + 'ja siitä on tullut kaupungin tunnus hevoskastanjan lehteä '
             + 'esittävine pakkauksineen.',
@@ -14707,6 +15348,7 @@ export const MAA_KATEGORIAT = {
             + 'joka sai Neuvostoliiton kansantaiteilijan arvon. '
             + 'Kaupunginpuistossa hän istuu nykyään pronssisena penkillä, ja '
             + 'viereen on jätetty tilaa.',
+          lyhyt: 'Leonid Utjosov oli odessalaissyntyinen estradilaulaja ja ensimmäinen kansantaiteilija-laulaja.',
           selite: 'Leonid Utjosov (1895–1982) oli odessalaissyntyinen '
             + 'estradilaulaja ja koomikko, ensimmäinen populaarilaulaja, '
             + 'joka sai Neuvostoliiton kansantaiteilijan arvonimen 1965.',
@@ -14730,6 +15372,7 @@ export const MAA_KATEGORIAT = {
             + 'Milstein. Brysselin suuressa viulukilpailussa 1937 voiton vei '
             + 'Oistrah, ja palkintosijoille ylsi muitakin saman opettajan '
             + 'oppilaita.',
+          lyhyt: 'David Oistrah oli viulisti ja Moskovan konservatorion professori, jolle omistettiin teoksia.',
           selite: 'David Oistrah (1908–1974) oli viulisti ja Moskovan '
             + 'konservatorion professori, jolle omistettiin lukuisia '
             + 'viuluteoksia.',
@@ -14766,6 +15409,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'museum-digital Ukraina — 54 museon esineet samassa haussa',
               tiedosto: 'Berezhany- (279).jpg',
+              lyhyt: 'Ukrainalainen kirjonta vyšyvka on koristetaiteen keskeinen osa, jonka kuviot vaihtelevat alueittain.',
               selite: 'Ukrainalainen kirjonta eli vyšyvka on keskeinen osa '
                 + 'maan koristetaidetta, ja sen kuviot vaihtelevat '
                 + 'alueittain.',
@@ -14783,6 +15427,7 @@ export const MAA_KATEGORIAT = {
                 + 'verkkoon: pyhäinkuvia, pukuja, keramiikkaa, soittimia, '
                 + 'leluja ja sata pääsiäismunaa eli pysankaa, jokainen omana '
                 + 'kuvanaan.',
+              lyhyt: 'Slaavilainen munien koristelu juontuu pakanuudesta ja sulautui kristilliseen pääsiäismunaan.',
               selite: 'Slaavilainen munien koristelu juontuu pakanuuden '
                 + 'ajalta, ja perinne sulautui myöhemmin kristilliseen '
                 + 'pääsiäismunaan.',
@@ -14796,6 +15441,7 @@ export const MAA_KATEGORIAT = {
                 + 'mestarin elämäkerrat. Samalla sivulla voi tehdä itselleen '
                 + 'taustakuvan petrykivkan kukista puhelimeen tai '
                 + 'tietokoneeseen.',
+              lyhyt: 'Petrykivka-maalaus on Dnipropetrovskin alueelta lähtenyt koristemaalauksen tyyli 1700-luvulta.',
               selite: 'Petrykivka-maalaus on Dnipropetrovskin alueen kylästä '
                 + 'lähtenyt koristemaalauksen tyyli, jolla koristeltiin '
                 + 'talojen seiniä ja käyttöesineitä 1700-luvulta lähtien.',
@@ -14826,6 +15472,7 @@ export const MAA_KATEGORIAT = {
                 + 'luostarialueeseen. Seinillä hehkuu tuhatvuotinen '
                 + 'mosaiikki, ja tiloihin on piilotettu kaksitoista kysymystä '
                 + 'etsittäväksi.',
+              lyhyt: 'Kiovan Pyhän Sofian katedraali on Ukrainan ensimmäinen Unescon maailmanperintökohde.',
               selite: 'Kiovan Pyhän Sofian katedraali on Kiovan Rusin ajan '
                 + 'muistomerkki ja Ukrainan ensimmäinen Unescon '
                 + 'maailmanperintökohde.',
@@ -14839,6 +15486,7 @@ export const MAA_KATEGORIAT = {
                 + 'kultaisesta rintakorusta, joka löytyi Tovsta Mohylan '
                 + 'hautakummusta vuonna 1971. Mukana on videokierroksia ja '
                 + 'kaivauspäiväkirjan sivuja.',
+              lyhyt: 'Tovsta Mohylan kurgaanista löytyi 1971 kultainen pektoraali, jonka Borys Mozolevskyi kaivoi esiin.',
               selite: 'Tovsta Mohylan skyyttalaisesta kurgaanista löytyi '
                 + '1971 kultainen pektoraali, jonka arkeologi Borys '
                 + 'Mozolevskyi kaivoi esiin.',
@@ -14853,6 +15501,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Urban Media Archive — 21 000 valokuvaa kaupungeista',
               tiedosto: 'Old Town (8674962314).jpg',
+              lyhyt: 'Lviv on Länsi-Ukrainan suurin kaupunki, nimetty Leo I Galitsialaisen mukaan.',
               selite: 'Lviv on Länsi-Ukrainan suurin kaupunki ja maan '
                 + 'kulttuurikeskuksia, ja se on nimetty Leo I Galitsialaisen '
                 + 'mukaan.',
@@ -14865,6 +15514,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Ukrainan taidekirjasto — kirjat sivu kerrallaan',
               tiedosto: 'Petrykivka painting workshop at the BWF 2019.jpg',
+              lyhyt: 'Petrykivka-maalauksen kuviot tehdään ohuin siveltimenvedoin ja elävät yhä koristetaiteena.',
               selite: 'Petrykivka-maalauksen kuviot tehdään ohuin '
                 + 'siveltimenvedoin, ja tyyli elää yhä ukrainalaisena '
                 + 'koristetaiteena.',
@@ -14885,6 +15535,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Pyriatynin kansallispuisto pitää kameraa kattohaikaran '
                 + 'pesällä Leljakyn kylässä. Kanavalle tulee uusia pätkiä '
                 + 'lähes joka päivä: ruokintaa, poikasia ja ukkosen katselua.',
+              lyhyt: 'Kattohaikara on suuri haikaralintu, jonka siipien kärkiväli on 155–215 senttimetriä.',
               selite: 'Kattohaikara on suuri haikaralintu, jonka siipien '
                 + 'kärkiväli on 155–215 senttimetriä ja joka on pitkän '
                 + 'matkan muuttaja.',
@@ -14898,6 +15549,7 @@ export const MAA_KATEGORIAT = {
                 + 'Panoraamakierros vie aseman sisätiloihin ja viereiseen '
                 + 'vanhaan Wordie Houseen, jonka kallioilla kävelee '
                 + 'pingviinejä.',
+              lyhyt: 'Vernadskyn tutkimusasema on Ukrainan ainoa Etelämantereen tutkimusasema Galindezin saarella.',
               selite: 'Vernadskyn tutkimusasema on Ukrainan ainoa '
                 + 'Etelämantereen tutkimusasema, ja se sijaitsee Galindezin '
                 + 'saarella Argentiinansaarilla.',
@@ -14929,6 +15581,7 @@ export const MAA_KATEGORIAT = {
             + 'Dinicun soittokunta vei tämän musiikin Pariisin '
             + 'maailmannäyttelyyn vuonna 1889 ja voitti siellä kesäkuussa '
             + 'soittajien kilpailun kultamitalin.',
+          lyhyt: 'Panhuilu koostuu pitenevistä putkista, jotka tehdään yleensä bambusta tai järviruo\'osta.',
           selite: 'Panhuilu koostuu vähitellen pitenevistä suljetuista '
             + 'putkista, jotka tehdään yleensä bambusta, järviruo\'osta tai '
             + 'muusta paikallisesta kaislasta.',
@@ -14949,6 +15602,7 @@ export const MAA_KATEGORIAT = {
             + 'putoavat kuin rakeet. Wienin konservatorion stipendi jäi '
             + 'käyttämättä, koska romania ei päästetty lähtemään. Kappaleesta '
             + 'tuli viulistien näytösnumero kaikkialla maailmassa.',
+          lyhyt: 'Grigoraș Dinicu oli romanialainen viuluvirtuoosi, joka sävelsi 1906 Hora staccaton.',
           selite: 'Grigoraș Dinicu (1889–1949) oli romanialainen '
             + 'viuluvirtuoosi, joka sävelsi 1906 usein soitetun Hora '
             + 'staccato -kappaleen.',
@@ -14989,6 +15643,7 @@ export const MAA_KATEGORIAT = {
                 + 'taidemuseon saleja kierretään verkossa 360 asteen kuvina. '
                 + 'Brâncuşin salista on oma kierroksensa: Uni, Danaïde ja '
                 + 'Suudelmanportin pienoismalli.',
+              lyhyt: 'Nicolae Grigorescu perusti nykyaikaisen romanialaisen maalaustaiteen ja kuvasi maaseudun elämää.',
               selite: 'Nicolae Grigorescu (1838–1907) oli nykyaikaisen '
                 + 'romanialaisen maalaustaiteen perustajia, ja hänet '
                 + 'tunnetaan maaseudun elämää kuvaavista töistään.',
@@ -15001,6 +15656,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Bukarestin talonpoikaismuseon esineitä voi katsoa läheltä: '
                 + 'kirjailtuja paitoja, lasille maalattuja ikoneita, '
                 + 'kolikkokoristeisia asuja ja koristeltuja pääsiäismunia.',
+              lyhyt: 'Bukovinan koristellut pääsiäismunat kuuluvat pakanuudesta juontuvaan slaavilaiseen perinteeseen.',
               selite: 'Bukovinan koristellut pääsiäismunat kuuluvat '
                 + 'slaavilaiseen munien koristeluperinteeseen, joka juontuu '
                 + 'pakanuuden ajalta.',
@@ -15010,6 +15666,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Muzee de la sat — kylämuseot 3D-kierroksina',
               tiedosto: 'Carusel din zona Bacăului, Muzeul Național al Satului „Dimitrie Gusti”, București.jpg',
+              lyhyt: 'Bukarestin kylämuseo esittelee romanialaista maaseutuelämää yli 100 000 neliömetrin alueella.',
               selite: 'Bukarestin kylämuseo esittelee romanialaista '
                 + 'maaseudun elämää yli 100 000 neliömetrin alueella, jolla '
                 + 'on 123 alkuperäistä pihapiiriä ja 363 rakennusta.',
@@ -15031,6 +15688,7 @@ export const MAA_KATEGORIAT = {
                 + 'näyttelyihin: daakialaisnäyttely, Traianuksen pylvään '
                 + 'kipsikopio ja esittelyt aarteista, kuten Coţofeneştin '
                 + 'kultakypärästä.',
+              lyhyt: 'Coțofeneștin kultakypärä on geto-daakialainen elektronikypärä 400-luvun jälkipuoliskolta eaa.',
               selite: 'Coțofeneștin kultakypärä on elektronista taottu '
                 + 'geto-daakialainen kypärä 400-luvun jälkipuoliskolta eaa.',
               lahde: 'Dorieo, Wikimedia Commons (CC BY-SA 4.0)',
@@ -15039,6 +15697,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Romanian aarteet Google Arts & Culturessa',
               tiedosto: 'Pátera - Tesoro de Pietroasele (3).jpg',
+              lyhyt: 'Pietroaselen 1837 löydetty aarre on 300-luvun goottilainen kultalöytö, josta säilyi 12 esinettä.',
               selite: 'Vuonna 1837 löydetty Pietroaselen aarre on 300-luvun '
                 + 'lopun goottilainen kultalöytö, ja sen 22 esineestä on '
                 + 'säilynyt kaksitoista.',
@@ -15052,6 +15711,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Peleşin linna — kokoelmat osastoittain',
               tiedosto: 'Castle Peleş in 2009.jpg',
+              lyhyt: 'Peleșin uusrenessanssipalatsi rakennettiin Karpaateille kuningas Carol I:lle ja vihittiin 1883.',
               selite: 'Peleșin uusrenessanssipalatsi rakennettiin Sinaian '
                 + 'lähelle Karpaateille 1873–1914 kuningas Carol I:lle, ja '
                 + 'se vihittiin käyttöön 1883.',
@@ -15073,6 +15733,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Sloboziassa 1920–1940-luvuilla kuvannut studiovalokuvaaja '
                 + 'jätti tuhansia lasinegatiiveja. Skannauksissa näkyvät myös '
                 + 'levyjen naarmut ja lohkeamat.',
+              lyhyt: 'Costică Acsinte oli romanialainen valokuvaaja, jonka lasilevynegatiiviarkisto on säilynyt.',
               selite: 'Costică Acsinte (1897–1984) oli romanialainen '
                 + 'valokuvaaja, jonka lasilevynegatiiveista koottu arkisto '
                 + 'on säilynyt.',
@@ -15082,6 +15743,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Galeria Portretelor — muotokuvat museon kokoelmista',
               tiedosto: 'Museum of Art Collections - room with three anonymous 19th-century Romanian portraits.jpg',
+              lyhyt: 'Bukarestin taidekokoelmien museo esittelee 1800-luvun romanialaisia muotokuvia.',
               selite: 'Bukarestin taidekokoelmien museo esittelee 1800-luvun '
                 + 'romanialaisia muotokuvia yksityiskokoelmien pohjalta.',
               lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 4.0)',
@@ -15102,6 +15764,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Zărneştin turvakodissa elää yli sata häkeistä pelastettua '
                 + 'ruskeakarhua 69 hehtaarin metsässä. Kamera osoittaa '
                 + 'lampeen, jolla karhut käyvät juomassa ja kylpemässä.',
+              lyhyt: 'Ruskeakarhu on Euraasian ja Pohjois-Amerikan suuri karhu, jota kokoisempi maapeto on vain jääkarhu.',
               selite: 'Ruskeakarhu on Euraasiassa ja Pohjois-Amerikassa '
                 + 'elävä suuri karhu, jonka kokoista maapetoa lyö vain sen '
                 + 'lähisukulainen jääkarhu.',
@@ -15111,6 +15774,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Wildlife Romania — pesäkamerat haukalla ja haikaroilla',
               tiedosto: 'Cigognes Vladeni Roumanie.jpg',
+              lyhyt: 'Kattohaikara mittaa 100–115 senttiä, ja sen siipien kärkiväli on 155–215 senttimetriä.',
               selite: 'Kattohaikara mittaa nokan kärjestä pyrstöön 100–115 '
                 + 'senttimetriä, ja sen siipien kärkiväli on 155–215 '
                 + 'senttimetriä.',
@@ -15146,6 +15810,7 @@ export const MAA_KATEGORIAT = {
             + 'jäänteitä. Elokuussa 1895 kolmesataa sofialaista kiipesi '
             + 'yhtenä joukkona huipulle, ja siitä päivästä lasketaan '
             + 'bulgarialaisen retkeilyn alku.',
+          lyhyt: 'Vitosha on Sofian laidan vuorimassiivi, jonka kupolimaiset rinteet ovat suosittu retkikohde.',
           selite: 'Vitosha on Sofian laidalla kohoava vuorimassiivi ja '
             + 'kaupungin tunnuksia, ja sen kupolimaiset rinteet ovat '
             + 'suosittu retkikohde.',
@@ -15199,6 +15864,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Bulgarian kansallisgalleria on avannut kokoelmansa '
                 + 'verkkoon osasto kerrallaan. Jokainen sivu on kuvalistaus, '
                 + 'jossa teoksen vieressä lukee tekijä, vuosi ja koko.',
+              lyhyt: 'Ivan Milev oli bulgarialainen maalari ja lavastaja, bulgarialaisen secessionin perustaja.',
               selite: 'Ivan Milev (1897–1927) oli bulgarialainen maalari ja '
                 + 'lavastaja, jota pidetään bulgarialaisen secessionin '
                 + 'perustajana.',
@@ -15208,6 +15874,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Google Arts & Culture — Bulgarian museot yhdessä haussa',
               tiedosto: 'Sofia - Panagyurishte Thracian Gold Treasure.jpg',
+              lyhyt: 'Panagjurišten traakialaisen kulta-aarteen löysivät vahingossa kolme tehtaantyöläistä 1949.',
               selite: 'Panagjurišten traakialaisen kulta-aarteen löysivät '
                 + 'vahingossa kolme tehtaantyöläistä 8. joulukuuta 1949.',
               lahde: 'Ann Wuyts, Wikimedia Commons (CC BY 2.0)',
@@ -15220,6 +15887,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Virtuaalinen Bulgaria — museokierroksia kolmiulotteisina',
               tiedosto: '2016-07-31 Bulgaria, Rila Monastery DSC 9242 DxO.jpg',
+              lyhyt: 'Rilan luostari on Bulgarian suurin ortodoksiluostari, Rilan vuoristossa 1 147 metrin korkeudessa.',
               selite: 'Rilan luostari on Bulgarian suurin ja tunnetuin '
                 + 'ortodoksiluostari, ja se sijaitsee Rilan vuoristossa 1 '
                 + '147 metrin korkeudessa.',
@@ -15254,6 +15922,7 @@ export const MAA_KATEGORIAT = {
                 + 'maailmanperintökohde. Panoraamakierroksella pääsee pieneen '
                 + 'kirkkosaliin, jonka seinät maalattiin täyteen kuvia vuonna '
                 + '1259.',
+              lyhyt: 'Bojanan kirkko liitettiin Unescon perintöluetteloon 1979, vanhin osa 900–1000-luvun vaihteesta.',
               selite: 'Sofian laidalla sijaitseva Bojanan kirkko liitettiin '
                 + 'Unescon maailmanperintöluetteloon 1979, ja sen vanhin osa '
                 + 'on 900–1000-luvun vaihteesta.',
@@ -15282,6 +15951,7 @@ export const MAA_KATEGORIAT = {
               teksti: 'Kuvia voi selata vuosikymmenen, aiheen tai paikan mukaan: '
                 + 'juhlia, kouluja, katunäkymiä, tuntemattomia ihmisiä ja '
                 + 'kokonaisia albumeita 1800-luvulta nykypäivään.',
+              lyhyt: 'Vasil Levski oli bulgarialainen vallankumouksellinen, jota kutsutaan vapauden apostoliksi.',
               selite: 'Vasil Levski (1837–1873) oli bulgarialainen '
                 + 'vallankumouksellinen ja kansallissankari, jota kutsutaan '
                 + 'vapauden apostoliksi.',
@@ -15291,6 +15961,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Arkistojen taidekokoelma — maalauksia ja veistoksia',
               tiedosto: 'Ivan Mrkvička - Rachenitsa.jpg',
+              lyhyt: 'Ivan Mrkvička oli Itävallassa syntynyt maalari, nykyaikaisen bulgarialaisen kuvataiteen perustaja.',
               selite: 'Ivan Mrkvička (1856–1938) oli Itävallassa syntynyt '
                 + 'maalari, jota pidetään nykyaikaisen bulgarialaisen '
                 + 'kuvataiteen perustajiin kuuluvana.',
@@ -15312,6 +15983,7 @@ export const MAA_KATEGORIAT = {
                 + 'suoraa lähetystä pesiltä: kaksi kattohaikaran pesää, '
                 + 'kyhmypöllön pöntön sisältä kuvattuna ja pikkukorppikotkan '
                 + 'kalliopesän.',
+              lyhyt: 'Kattohaikara on valkoinen haikara, jonka siivissä on mustaa ja jalat ja nokka punaiset.',
               selite: 'Kattohaikara on valkoinen haikaralintu, jonka '
                 + 'siivissä on mustaa ja jonka jalat ja nokka ovat punaiset.',
               lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
@@ -15353,6 +16025,7 @@ export const MAA_KATEGORIAT = {
             + 'Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin '
             + 'palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa '
             + 'asuu yhä tuhansia ihmisiä keisarin muurien sisällä.',
+          lyhyt: 'Diocletianus rakennutti Splitin palatsin 200-luvun lopulla eläkeasunnokseen sotaväen osin käyttöön.',
           selite: 'Keisari Diocletianus rakennutti Splitin palatsin '
             + '200-luvun lopulla eläkeasunnokseen, ja puolet linnoituksesta '
             + 'oli varattu sotaväen käyttöön.',
@@ -15372,6 +16045,7 @@ export const MAA_KATEGORIAT = {
             + 'naapureilleen ja lähetti lahjoja sulttaanille. Muurin päällä '
             + 'kulkee kävelytie, jota pitkin kiertää koko kaupungin ympäri '
             + 'katot allaan.',
+          lyhyt: 'Dubrovnikin nykyiset kaupunginmuurit rakennettiin 1200–1600-luvuilla vanhaakaupunkia kiertäen.',
           selite: 'Dubrovnikin nykyiset kaupunginmuurit rakennettiin pääosin '
             + '1200–1600-luvuilla, ja ne kiertävät vanhaakaupunkia '
             + 'katkeamattomana kehänä.',
@@ -15390,6 +16064,7 @@ export const MAA_KATEGORIAT = {
             + 'konsertteja ja elokuvafestivaali — yleisö istuu samoilla '
             + 'paikoilla kuin kaksituhatta vuotta sitten, mutta katsoo '
             + 'elokuvaa.',
+          lyhyt: 'Pulan amfiteatteri rakennettiin Augustuksen aikana ja on parhaiten säilyneitä roomalaisia areenoita.',
           selite: 'Pulan amfiteatteri rakennettiin 27 eaa.–14 jaa. '
             + 'Augustuksen aikana ja laajennettiin Vespasianuksen kaudella; '
             + 'se on parhaiten säilyneitä roomalaisia areenoita.',
@@ -15429,6 +16104,7 @@ export const MAA_KATEGORIAT = {
             + 'tarua, piirros on tosi: sen mitat toimivat, ja samalla '
             + 'periaatteella laskuvarjot tehtiin vielä satoja vuosia '
             + 'myöhemmin.',
+          lyhyt: 'Faust Vrančić oli šibenikiläinen monialainen tiedemies, diplomaatti ja piispa Venetsian aikaan.',
           selite: 'Šibenikistä kotoisin ollut Faust Vrančić (n. 1551–1617) '
             + 'oli monialainen tiedemies, diplomaatti ja piispa Venetsian '
             + 'tasavallan aikaan.',
@@ -15463,6 +16139,7 @@ export const MAA_KATEGORIAT = {
             + 'aallot: tyynellä säällä ääni on hiljainen huokaus, myrskyllä '
             + 'kokonainen soinnutus. Portailla istutaan kuuntelemassa '
             + 'auringonlaskua.',
+          lyhyt: 'Zadarin meriurut soivat aaltojen työntäessä ilmaa marmoriportaiden alle sijoitettuihin putkiin.',
           selite: 'Zadarin meriurut on äänitaideteos ja kokeellinen soitin, '
             + 'joka soi aaltojen työntäessä ilmaa marmoriportaiden alle '
             + 'sijoitettuihin putkiin.',
@@ -15501,6 +16178,7 @@ export const MAA_KATEGORIAT = {
                 + 'höyrykoneita, vanhoja radioita ja Penkalan kynää. '
                 + 'Jokaisesta esineestä on valokuva, mitat ja selitys siitä, '
                 + 'miten se toimii.',
+              lyhyt: 'Nikola Tesla oli serbialais-amerikkalainen insinööri, joka kehitti vaihtovirtajärjestelmän.',
               selite: 'Nikola Tesla (1856–1943) oli '
                 + 'serbialais-amerikkalainen insinööri ja keksijä, joka '
                 + 'kehitti nykyaikaisen vaihtovirtajärjestelmän.',
@@ -15510,6 +16188,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Muzej za umjetnost i obrt — virtuaaliset näyttelyt',
               tiedosto: 'Muzej za umjetnost i obrt - Zagreb.jpg',
+              lyhyt: 'Zagrebin taide- ja käsityömuseo perustettiin 1880 Arts and Crafts -liikkeen esikuvan mukaan.',
               selite: 'Zagrebin taide- ja käsityömuseo perustettiin 1880 '
                 + 'taideyhdistyksen aloitteesta englantilaisen Arts and '
                 + 'Crafts -liikkeen esikuvan mukaan.',
@@ -15522,6 +16201,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Museum of Broken Relationships — särkyneiden suhteiden esineet',
               tiedosto: 'Museum of Broken Relationships Zagreb 2012.jpg',
+              lyhyt: 'Särkyneiden suhteiden museon perustivat Olinka Vištica ja Dražen Grubišić kiertonäyttelystä.',
               selite: 'Särkyneiden suhteiden museon perustivat taiteilijat '
                 + 'Olinka Vištica ja Dražen Grubišić, ja se kasvoi '
                 + 'kiertonäyttelystä pysyväksi kokoelmaksi.',
@@ -15544,6 +16224,7 @@ export const MAA_KATEGORIAT = {
                 + '3D-malleiksi, joita voi pyörittää hiirellä joka suuntaan. '
                 + 'Mukana on Vučedolin kyyhky, noin 4500 vuotta vanha '
                 + 'lintuastia.',
+              lyhyt: 'Vučedolin kulttuuri kukoisti 3000–2200 eaa. Tonavalla, samaan aikaan Sumerin kanssa.',
               selite: 'Vučedolin kulttuuri kukoisti 3000–2200 eaa. Tonavan '
                 + 'oikealla rannalla, ja se ajoittuu samaan aikaan '
                 + 'Mesopotamian Sumerin kanssa.',
@@ -15557,6 +16238,7 @@ export const MAA_KATEGORIAT = {
                 + 'neandertalilaisen luuta. Museon digitoitu aineisto avautuu '
                 + 'kuvasarjana: ammoniitteja, mammutin hammas, hain hammas ja '
                 + 'ametisti.',
+              lyhyt: 'Krapinan neandertalilaislöytö on maailman laajin yksittäisen myöhäispleistoseenikohteen luukokoelma.',
               selite: 'Krapinan neandertalilaislöytö on maailman laajin '
                 + 'yksittäisestä myöhäispleistoseenikohteesta saatu '
                 + 'ihmisluukokoelma.',
@@ -15571,6 +16253,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'NSK digitalna — kansalliskirjaston digitaaliset kokoelmat',
               tiedosto: 'National and University Library in Zagreb.jpg',
+              lyhyt: 'Kroatian kansallis- ja yliopistokirjasto perustettiin 1607 kirjaperinnön säilyttäjäksi.',
               selite: 'Kroatian kansallis- ja yliopistokirjasto perustettiin '
                 + '1607, ja sen tehtävänä on kroatialaisen kirjallisen '
                 + 'perinnön kartuttaminen ja säilyttäminen.',
@@ -15583,6 +16266,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Glagoljica.hr — oma kirjaimisto verkossa',
               tiedosto: 'Baska tablet.png',
+              lyhyt: 'Noin vuoden 1100 Baškan taulussa mainitaan ensin kroaattien nimi ja kuningas Dmitar Zvonimir.',
               selite: 'Noin vuodelta 1100 peräisin olevassa Baškan taulussa '
                 + 'mainitaan ensimmäistä kertaa kroaattien nimi ja kuningas '
                 + 'Dmitar Zvonimir, ja teksti on glagoliittista.',
@@ -15600,6 +16284,7 @@ export const MAA_KATEGORIAT = {
                 + 'muotokuvavalokuvia, lastenkirjoja ja kuvia vuoden 1880 '
                 + 'maanjäristyksestä. Mukana Ivana Brlić-Mažuranićin satujen '
                 + 'käännöksiä.',
+              lyhyt: 'Ivana Brlić-Mažuranić oli kroatialainen kirjailija, jota pidetään maan parhaana lastenkirjailijana.',
               selite: 'Ivana Brlić-Mažuranić (1874–1938) oli kroatialainen '
                 + 'kirjailija, jota pidetään maan parhaana '
                 + 'lastenkirjailijana.',
@@ -15618,6 +16303,7 @@ export const MAA_KATEGORIAT = {
                 + 'vesiputousten viereen. Kuvasta toiseen siirrytään '
                 + 'nuolista, ja mukaan pääsee myös puiston juniin ja '
                 + 'veneisiin.',
+              lyhyt: 'Plitvicen järvet ovat Kroatian suurimpia kansallispuistoja, Unescon perintöä travertiinijärvineen.',
               selite: 'Plitvicen järvet on Kroatian vanhimpia ja suurimpia '
                 + 'kansallispuistoja, ja se liitettiin 1979 Unescon '
                 + 'maailmanperintöluetteloon travertiinijärviensä ja '
@@ -15628,6 +16314,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Kroatian luonnontieteellinen museo — digitaalinen arkisto',
               tiedosto: 'Hrvatski prirodoslovni muzej.jpg',
+              lyhyt: 'Kroatian luonnontieteellinen museo on maan vanhin ja suurin, alan tutkimuksen keskus.',
               selite: 'Kroatian luonnontieteellinen museo on maan vanhin ja '
                 + 'suurin luonnontieteellinen museo ja alan tutkimuksen '
                 + 'keskus.',
@@ -15661,6 +16348,7 @@ export const MAA_KATEGORIAT = {
             + 'juoda janoon vaan seuraksi: tapaamisen pituus mitataan '
             + 'kupillisina. Baščaršijan basaari, jonka kujilla kuparisepät '
             + 'yhä takovat džezvoja, on 1400-luvulta.',
+          lyhyt: 'Baščaršija on Sarajevon vanha basaari, rakennettu 1400-luvulla Isa-beg Ishakovićin kaupunkiin.',
           selite: 'Baščaršija on Sarajevon vanha basaari ja kaupungin '
             + 'historiallinen keskus, ja se rakennettiin 1400-luvulla, kun '
             + 'Isa-beg Ishaković perusti kaupungin.',
@@ -15678,6 +16366,7 @@ export const MAA_KATEGORIAT = {
             + 'päivä, kellonvartija eli muvekit nousee torniin ja siirtää '
             + 'viisareita käsin. Koneisto on tehty Lontoossa vuonna 1874. '
             + 'Bosniassa on 21 kellotornia, ja tämä on niistä korkein.',
+          lyhyt: 'Sarajevon kellotorni on 30 metrin korkuisena maan korkein, ja sen kello näyttää kuuaikaa.',
           selite: 'Sarajevon kellotorni on 30 metriä korkea ja maan 21 '
             + 'kellotornista korkein, ja sen kello näyttää kuuaikaa.',
           lahde: 'Smooth_O, Wikimedia Commons (CC BY-SA 4.0)',
@@ -15712,6 +16401,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Bosnian kansallisgalleria — kokoelma zoomattavana',
               tiedosto: 'Umjetnička Galerija Bosne i Hercegovine.png',
+              lyhyt: 'Bosnia ja Hertsegovinan kansallisgalleria perustettiin 1946, kokoelmissa yli 6 000 teosta.',
               selite: 'Bosnia ja Hertsegovinan kansallisgalleria '
                 + 'perustettiin 11. lokakuuta 1946, ja sen kokoelmissa on '
                 + 'yli 6 000 teosta.',
@@ -15729,6 +16419,7 @@ export const MAA_KATEGORIAT = {
                 + 'näppäimillä kuin pelissä: ympärille voi katsella, '
                 + 'vitriineihin mennä lähelle ja etsiä esineitä, joista '
                 + 'aukeaa lisää tietoa.',
+              lyhyt: 'Zemaljski muzej perustettiin 1888, ja Karel Pařík laajensi sen 1913 neljällä paviljongilla.',
               selite: 'Zemaljski muzej perustettiin 1888, ja tšekkiläinen '
                 + 'arkkitehti Karel Pařík laajensi sen 1913 neljällä '
                 + 'symmetrisellä paviljongilla.',
@@ -15747,6 +16438,7 @@ export const MAA_KATEGORIAT = {
                 + 'kolmiulotteisiksi, ja niitä voi pyörittää hiirellä joka '
                 + 'puolelta: kuningas Tvrtkon kultasormus, hopeadiadeemi, '
                 + 'Butmirin savikasvot ja roomalaisia hautakiviä.',
+              lyhyt: 'Butmirin kulttuuri oli Keski-Bosnian kivikautinen kulttuuri, tunnettu koristellusta keramiikastaan.',
               selite: 'Butmirin kulttuuri oli Keski-Bosnian merkittävä '
                 + 'kivikautinen kulttuuri, joka tunnetaan omaleimaisesta '
                 + 'koristellusta keramiikastaan.',
@@ -15760,6 +16452,7 @@ export const MAA_KATEGORIAT = {
                 + 'malleiksi, joita voi kääntää ja zoomata. Kivien kyljistä '
                 + 'löytyy käsi kädessä tanssivia ihmisiä, hirviä, miekkoja ja '
                 + 'kohotettuja kämmeniä.',
+              lyhyt: 'Stećak on keskiaikainen hautakivi, joita Bosnia ja Hertsegovinassa arvioidaan olevan noin 60 000.',
               selite: 'Stećak on keskiaikainen monumentaalinen hautakivi, ja '
                 + 'Bosnia ja Hertsegovinan alueella niitä arvioidaan olevan '
                 + 'noin 60 000.',
@@ -15769,6 +16462,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Stećci-maailmanperintökohteet — virallinen kuvagalleria',
               tiedosto: 'Stecci necropolis in Bijambare - general view.jpg',
+              lyhyt: 'Stećci-hautakiviä on myös Kroatiassa, Montenegrossa ja Serbiassa yhteensä noin 10 000.',
               selite: 'Stećci-hautakiviä on Bosnia ja Hertsegovinan lisäksi '
                 + 'Kroatiassa, Montenegrossa ja Serbiassa yhteensä noin 10 '
                 + '000.',
@@ -15790,6 +16484,7 @@ export const MAA_KATEGORIAT = {
                 + 'aarteitaan: julisteita, postikortteja, valokuva-albumeita, '
                 + 'karttoja ja atlaksia, käsikirjoituksia ja 1400-luvulta '
                 + 'alkaen painettuja kirjoja.',
+              lyhyt: 'Sarajevon Vijećnican suunnitteli 1891 Karel Pařík, ja siinä toimi kansalliskirjasto vuoteen 1992.',
               selite: 'Sarajevon Vijećnican suunnitteli 1891 tšekkiläinen '
                 + 'arkkitehti Karel Pařík, ja rakennuksessa toimi '
                 + 'kansalliskirjasto vuoteen 1992.',
@@ -15799,6 +16494,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Sarajevon kirjaston digitoidut kuvat',
               tiedosto: 'Vijecnica (41626036484).jpg',
+              lyhyt: 'Vijećnica oli valmistuessaan Sarajevon suurin ja edustavin rakennus Miljacka-joen rannalla.',
               selite: 'Vijećnica oli valmistuessaan Sarajevon suurin ja '
                 + 'edustavin rakennus, ja se seisoo Miljacka-joen rannalla.',
               lahde: 'Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY 2.0)',
@@ -15820,6 +16516,7 @@ export const MAA_KATEGORIAT = {
                 + 'aakkosjärjestyksessä afrikankäestä mustapääkerttuun. '
                 + 'Jokaisella lajilla on omat valokuvansa ja kuvaus siitä, '
                 + 'missä lintu Bosniassa näkyy.',
+              lyhyt: 'Hiirihaukka on keskikokoinen petolintu, joka pesii lähes koko Euroopassa Luoteis-Kiinaan asti.',
               selite: 'Hiirihaukka on keskikokoinen petolintu, joka elää '
                 + 'lähes koko Euroopassa ja pesii Palearktisella alueella '
                 + 'Luoteis-Kiinaan asti.',
@@ -15833,6 +16530,7 @@ export const MAA_KATEGORIAT = {
                 + 'Neretva-joen turkoosia vettä. Kesäisin ruutuun osuu '
                 + 'hyppääjiä, jotka syöksyvät kaiteelta yli kahdenkymmenen '
                 + 'metrin korkeudesta jokeen.',
+              lyhyt: 'Mostarin Vanhan sillan rakennutti sulttaani Suleiman Suuri 1557 yhdistämään Neretvan kaupunginosat.',
               selite: 'Mostarin Vanhan sillan rakennutti sulttaani Suleiman '
                 + 'Suuri 1557, ja se yhdistää Neretvan halkoman kaupungin '
                 + 'kaksi puolta.',
@@ -15865,6 +16563,7 @@ export const MAA_KATEGORIAT = {
             + 'takaisin aavikolle 1980-luvulla. Nykyään niitä elää vapaana '
             + 'tuhansia. Oryks kestää kuumuutta hyvin ja saa suuren osan '
             + 'vedestään kasveista, joten se tulee toimeen viikkoja juomatta.',
+          lyhyt: 'Arabianoryks hävisi luonnosta 1972 mennessä ja palautettiin aavikolle eläintarhoista 1980-luvulla.',
           selite: 'Arabianoryks on Emiraattien kansalliseläin, joka hävisi '
             + 'luonnosta kokonaan vuoteen 1972 mennessä ja palautettiin '
             + 'aavikolle 1980-luvulla eläintarhoihin talteen otettujen '
@@ -15883,6 +16582,7 @@ export const MAA_KATEGORIAT = {
             + 'kaataminen ilman lupaa on kielletty, ja koulut istuttavat '
             + 'ghafin taimia joka vuosi. Aavikolla yksinään seisova ghaf '
             + 'näkyy kauas, ja sen alle kerääntyy varjoa hakevia eläimiä.',
+          lyhyt: 'Ghaf on Emiraattien kansallispuu, joka pysyy vihreänä juuriensa yltäessä syvälle pohjaveteen.',
           selite: 'Ghaf on Emiraattien kansallispuu, joka pysyy vihreänä '
             + 'ympäri vuoden, koska sen juuret yltävät kymmenien metrien '
             + 'syvyyteen pohjaveteen asti.',
@@ -15900,6 +16600,7 @@ export const MAA_KATEGORIAT = {
             + 'lentokoneeseen omalle istuimelle. Abu Dhabissa toimii maailman '
             + 'suurin haukkasairaala, jossa hoidetaan tuhansia lintuja '
             + 'vuodessa.',
+          lyhyt: 'Haukka on Emiraattien kansallislintu, jonka päähän puettu nahkahuppu rauhoittaa sen matkalla.',
           selite: 'Haukka on Emiraattien kansallislintu, ja sen päässä '
             + 'pidettävä pehmeä nahkahuppu rauhoittaa linnun matkan ajaksi.',
           lahde: 'Delta.jpg, Wikimedia Commons (CC BY-SA 4.0)',
@@ -15915,6 +16616,7 @@ export const MAA_KATEGORIAT = {
             + 'muuttuu hiekkakiveksi. Sen jälkeen tuuli on kaivanut pehmeät '
             + 'kohdat pois ja jättänyt kovat pystyyn. Alue on suojeltu, ja sen '
             + 'poikki kulkee merkitty polku.',
+          lyhyt: 'Al Wathbanin fossiilidyynit Abu Dhabin lähellä ovat tuulen veistämiä, kalkin kovettamia hiekkakiviä.',
           selite: 'Al Wathbanin fossiilidyynit Abu Dhabin lähellä ovat '
             + 'vanhoja hiekkadyynejä, jotka sadeveden tuoma kalkki on '
             + 'kovettanut hiekkakiveksi ja tuuli veistänyt nykyisiin '
@@ -15953,6 +16655,7 @@ export const MAA_KATEGORIAT = {
             + 'Jokaisella tarhalla on oma vuoronsa, ja vuorot on jaettu '
             + 'kellon mukaan. Vanhimmat kanavat ovat tuhansia vuosia vanhoja, '
             + 'ja Unesco otti alueen maailmanperintöluetteloon vuonna 2011.',
+          lyhyt: 'Al Ainin keitaalla kasvaa yli satatuhatta taatelipalmua, jotka Unesco otti perintöluetteloon 2011.',
           selite: 'Al Ainin keitaalla kasvaa yli satatuhatta taatelipalmua, '
             + 'jotka saavat vetensä painovoiman avulla kulkevista '
             + 'falaj-kanavista, ja Unesco otti alueen '
@@ -15970,6 +16673,7 @@ export const MAA_KATEGORIAT = {
             + 'ehdi ensin. Sato kerätään kiipeämällä puuhun. Taateleita '
             + 'tarjotaan vieraalle kahvin kanssa, ja niitä syödään myös '
             + 'paaston päätteeksi.',
+          lyhyt: 'Yksi taatelipalmu voi tuottaa satakunta kiloa taateleita vuodessa, ja tertut suojataan verkoin.',
           selite: 'Yksi taatelipalmu voi tuottaa satakunta kiloa taateleita '
             + 'vuodessa, ja kypsyvät tertut kääritään verkkopusseihin, jotta '
             + 'linnut ja hyönteiset eivät ehdi satoon ensin.',
@@ -15987,6 +16691,7 @@ export const MAA_KATEGORIAT = {
             + 'kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä '
             + 'tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman '
             + 'kulttuuriperinnön luetteloon vuonna 2015.',
+          lyhyt: 'Arabialainen kahvi eli gahwa keitetään dallah-kannussa, ja Unesco listasi tavan perinnökseen 2015.',
           selite: 'Arabialainen kahvi eli gahwa maustetaan kardemummalla ja '
             + 'keitetään dallah-kannussa, ja Unesco lisäsi tarjoilutavan '
             + 'aineettoman kulttuuriperinnön luetteloon vuonna 2015.',
@@ -16003,6 +16708,7 @@ export const MAA_KATEGORIAT = {
             + 'ottavat vetensä. Vuoren juurella on myös lämpimiä lähteitä, '
             + 'joiden vesi tulee maasta noin neljänkymmenen asteisena. '
             + 'Rinteiltä on löydetty satoja pronssikautisia hautoja.',
+          lyhyt: 'Jebel Hafeet on yli tuhat metriä korkea kalkkikivivuori, jonka sadevesi täyttää keitaan pohjaveden.',
           selite: 'Jebel Hafeet on yli tuhat metriä korkea kalkkikivivuori Al '
             + 'Ainin laidalla, ja sen rinteiltä valuva sadevesi täyttää '
             + 'pohjaveden, josta keitaan falaj-kanavat ottavat vetensä.',
@@ -16042,6 +16748,7 @@ export const MAA_KATEGORIAT = {
             + 'myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu '
             + 'Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta '
             + 'metsää voi katsella.',
+          lyhyt: 'Harmaamangrove kestää Emiraattien suolaisen veden erittämällä suolaa lehdistään.',
           selite: 'Harmaamangrove on ainoa puu, joka kestää Emiraattien '
             + 'rannikon suolaista vettä, sillä se erittää ylimääräisen suolan '
             + 'lehtiensä läpi ja hengittää mudasta nousevien juuriputkien '
@@ -16059,6 +16766,7 @@ export const MAA_KATEGORIAT = {
             + 'poikaset ovat harmaita. Rannalle on rakennettu kolme '
             + 'katselukojua, joissa on kiikarit, eikä lahdelle saa mennä '
             + 'muualta.',
+          lyhyt: 'Ras Al Khorin lintusuojelualueelle Dubaissa kerääntyy talvisin tuhansia flamingoja.',
           selite: 'Ras Al Khorin lintusuojelualueelle Dubain keskustan '
             + 'kupeessa kerääntyy talvisin tuhansia flamingoja, joiden '
             + 'vaaleanpunainen väri tulee mudasta siivilöidystä ravinnosta.',
@@ -16074,6 +16782,7 @@ export const MAA_KATEGORIAT = {
             + 'jota ohjataan radiolla. Omistajat ajavat radan viertä autoissa '
             + 'ja seuraavat kamelia ikkunasta. Talvikaudella kilpailuja on '
             + 'lähes joka viikonloppu, ja voittajat ovat kylissä kuuluisia.',
+          lyhyt: 'Kilpakameli juoksee noin 40 kilometriä tunnissa nykyään radio-ohjatun robottiratsastajan kera.',
           selite: 'Kilpakameli juoksee noin neljääkymmentä kilometriä '
             + 'tunnissa, ja nykyään ratsastajana on satulaan kiinnitetty '
             + 'radio-ohjattu robotti.',
@@ -16091,6 +16800,7 @@ export const MAA_KATEGORIAT = {
             + 'viileämpää kuin lännessä, ja siksi kalasto on toinen. Satama '
             + 'on tärkeä, koska laivan ei tarvitse kiertää Hormuzinsalmen '
             + 'kautta.',
+          lyhyt: 'Khor Fakkanin puolikuun lahti on Emiraattien itärannikolla, jossa Hajar-vuoret laskeutuvat mereen.',
           selite: 'Khor Fakkanin puolikuun muotoinen lahti on Emiraattien '
             + 'itärannikolla Omaninlahden puolella, jossa Hajar-vuoret '
             + 'laskeutuvat suoraan mereen.',
@@ -16129,6 +16839,7 @@ export const MAA_KATEGORIAT = {
             + 'ihmisistä ja eläimistä — ne ovat harvinaisia, koska '
             + 'useimmissa saman ajan haudoissa ei ole kuvia lainkaan. Alue '
             + 'kuuluu Al Ainin maailmanperintökohteeseen.',
+          lyhyt: 'Hilin suuri hauta Al Ainissa on kolmannen vuosituhannen eaa. pyöreä kivirakennelma veistoksineen.',
           selite: 'Hilin suuri hauta Al Ainissa on halkaisijaltaan noin '
             + 'kahdentoista metrin pyöreä kivirakennelma kolmannelta '
             + 'vuosituhannelta ennen ajanlaskun alkua, ja sen oviaukon '
@@ -16147,6 +16858,7 @@ export const MAA_KATEGORIAT = {
             + 'Näkyvimmässä kulmassa on pyöreä torni, jossa on neljä '
             + 'kerrosta ja katolla hammaslaita. Linnake on kunnostettu, ja '
             + 'sisällä on nykyään näyttelytiloja ja kirjasto.',
+          lyhyt: 'Al Jahilin linnake rakennettiin 1890-luvulla savitiilestä Al Ainin keitaan reunalle.',
           selite: 'Al Jahilin linnake rakennettiin 1890-luvulla Al Ainin '
             + 'keitaan reunalle savitiilestä, ja sen muuria vasten nojaavat '
             + 'kartiomaiset keilat ottavat vastaan seinän painon.',
@@ -16164,6 +16876,7 @@ export const MAA_KATEGORIAT = {
             + 'viileämpänä. Seinät ovat korallikiveä ja kipsiä, ja '
             + 'kattopalkkeina on mangrovepuun runkoja, jotka kasvavat '
             + 'suoriksi mutta jäävät ohuiksi.',
+          lyhyt: 'Sheikh Saeed al-Maktoumin talo Dubaissa on 1890-luvun museo, jonka tuulitornit viilensivät huoneita.',
           selite: 'Dubain Shindaghassa 1890-luvulla rakennettu Sheikh Saeed '
             + 'al-Maktoumin talo on nykyään museo, ja sen katon tuulitornit '
             + 'viilensivät huoneita johtamalla ilmaa sisään siitä suunnasta, '
@@ -16181,6 +16894,7 @@ export const MAA_KATEGORIAT = {
             + 'säännöllisesti, ja portaikko rikkoo pyörteet, koska '
             + 'poikkileikkaus muuttuu joka kerroksessa. Ylimmät sata metriä '
             + 'ovat pelkkää teräspiikkiä. Rakennus valmistui vuonna 2010.',
+          lyhyt: 'Burj Khalifa valmistui 2010 maailman korkeimpana, 828-metrisenä rakennuksena.',
           selite: 'Vuonna 2010 valmistunut Burj Khalifa on 828 metriä korkea '
             + 'ja maailman korkein rakennus, ja sen portaittain kapeneva '
             + 'muoto rikkoo tuulen synnyttämät pyörteet.',
@@ -16213,6 +16927,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Emiraatit Google Arts & Culturessa',
               tiedosto: 'Dubai Museum and Al Fahidi Fort.jpg',
+              lyhyt: 'Al Fahidin linnoitus vuodelta 1787 on Dubain vanhin rakennus ja sen museon koti.',
               selite: 'Al Fahidin linnoitus rakennettiin vuonna 1787, se on '
                 + 'Dubain vanhin säilynyt rakennus, ja siinä toimii vuonna '
                 + '1971 avattu Dubain museo.',
@@ -16226,6 +16941,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Sharjah Art Foundation — näyttelyt verkossa',
               tiedosto: 'Section of Al Mureijah Square, a part of the Sharjah Art Foundation.jpg',
+              lyhyt: 'Sharjahin taidesäätiö perustettiin 2009 järjestämään muun muassa Sharjahin biennaalia.',
               selite: 'Sharjahin taidesäätiö perustettiin vuonna 2009, ja se '
                 + 'järjestää muun muassa Sharjahin biennaalia, joka pidettiin '
                 + 'ensimmäisen kerran vuonna 1993.',
@@ -16251,6 +16967,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Mohammed bin Rashid -avaruuskeskus',
               tiedosto: 'Emirates Mars Mission mockup at IAC 2021 01 (cropped).jpg',
+              lyhyt: 'Hope-luotain lähti Marsin kiertoradalle 2020 Dubain avaruuskeskuksen rakentamana.',
               selite: 'Hope-luotain lähti Marsin kiertoradalle vuonna 2020, '
                 + 'ja sen rakensi Dubain Mohammed bin Rashid -avaruuskeskus.',
               lahde: 'BugWarp, Wikimedia Commons (CC BY-SA 4.0)',
@@ -16263,6 +16980,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Emirates Nature-WWF — aavikon eläimet',
               tiedosto: 'Arabian oryx (oryx leucoryx).jpg',
+              lyhyt: 'Arabianoryks tulee toimeen viikkoja juomatta saaden veden syömistään kasveista.',
               selite: 'Arabianoryks tulee toimeen viikkoja juomatta, koska se '
                 + 'saa suuren osan tarvitsemastaan vedestä syömistään '
                 + 'kasveista.',
@@ -16276,6 +16994,7 @@ export const MAA_KATEGORIAT = {
             {
               nimi: 'Dubai Frame — kehys, josta katsoo kahteen aikaan',
               tiedosto: '190410 Dubai Frame.jpg',
+              lyhyt: 'Dubai Frame on 150 metrin korkuinen kehys, josta näkyy vanha ja uusi Dubai.',
               selite: 'Dubai Frame on sadanviidenkymmenen metrin korkuinen '
                 + 'kehys, jonka toiselta puolelta avautuu vanha ja toiselta '
                 + 'uusi Dubai.',
@@ -16316,6 +17035,7 @@ export const MAA_KATEGORIAT = {
               + 'valtakunnassa valmistettiin. Rakennustyö alkoi noin vuonna 518 '
               + 'eaa. Dareios I:n käskystä, ja sitä jatkettiin sukupolvien ajan. '
               + 'Persepolis otettiin maailmanperintöluetteloon vuonna 1979.',
+          lyhyt: 'Persepoliksen Apadana-salin portaikkoon veistettiin kulkue, työ alkoi noin 518 eaa.',
           selite: 'Persepoliksen Apadana-salin portaikkoon on veistetty '
             + 'kulkue, jossa kolmisenkymmentä valtakunnan kansaa tuo '
             + 'lahjojaan kuninkaalle, ja rakennustyö alkoi noin vuonna 518 '
@@ -16336,6 +17056,7 @@ export const MAA_KATEGORIAT = {
               + 'nimitystä: teksti noudattaa vanhaa mesopotamialaista perinnettä, '
               + 'jossa uusi hallitsija ilmoittaa korjaavansa edeltäjänsä '
               + 'laiminlyönnit.',
+          lyhyt: 'Kyroksen sylinteriin kirjattiin Kyros II:n käskyjä 539 eaa., ja se kaivettiin esiin 1879.',
           selite: 'Kyroksen sylinteri on noin 23 senttimetrin mittainen '
             + 'savikappale, johon kirjattiin akkadiksi Kyros II:n käskyjä '
             + 'Babylonin valloituksen jälkeen vuonna 539 eaa., ja se '
@@ -16355,6 +17076,7 @@ export const MAA_KATEGORIAT = {
               + 'kannattelevat käsivarsillaan. Haudat on hakattu korkealle maasta, '
               + 'eikä niihin pääse ilman telineitä — juuri siksi niiden sisältö '
               + 'ryöstettiin vasta myöhemmin.',
+          lyhyt: 'Naqsh-e Rostamin ristinmuotoinen kuninkaanhauta liitetään Kserkses I:een noin 2 500 vuoden takaa.',
           selite: 'Naqsh-e Rostamin kallioseinään veistetty ristinmuotoinen '
             + 'kuninkaanhauta liitetään Kserkses I:een, ja sen julkisivu on '
             + 'hakattu noin 2 500 vuotta sitten näyttämään palatsin '
@@ -16372,6 +17094,7 @@ export const MAA_KATEGORIAT = {
               + 'vesisäiliö. Meybodin seraabi Yazdin maakunnassa on 1600-luvulta. '
               + 'Iranissa tällaisia taloja on satoja, ja vuonna 2023 niistä 54 '
               + 'otettiin yhdessä maailmanperintöluetteloon.',
+          lyhyt: 'Meybodin 1600-luvun karavaaniseraabi on yksi 54 iranilaisesta Unesco-kohteesta vuodelta 2023.',
           selite: 'Meybodin karavaaniseraabi Yazdin maakunnassa on '
             + '1600-luvulta, ja se on yksi niistä 54 iranilaisesta '
             + 'karavaaniseraabista, jotka otettiin yhdessä '
@@ -16412,6 +17135,7 @@ export const MAA_KATEGORIAT = {
               + 'kuin useimmat Euroopan torit. Alun perin sillä pelattiin poolo, ja '
               + 'maalitolpat seisovat yhä paikoillaan päädyissä. Aukio otettiin '
               + 'maailmanperintöluetteloon vuonna 1979.',
+          lyhyt: 'Isfahanin Naqsh-e Jahan rakennettiin 1600-luvulla poolokentäksi, 160 x 560 metriä.',
           selite: 'Isfahanin Naqsh-e Jahan rakennettiin 1600-luvun alussa, se '
             + 'on 160 metriä leveä ja 560 metriä pitkä, ja alun perin sillä '
             + 'pelattiin poolo.',
@@ -16428,6 +17152,7 @@ export const MAA_KATEGORIAT = {
               + 'jonka ikkuna-aukoista näkee joelle, ja alempi kerros johtaa veden '
               + 'läpi. Iltaisin sillan kaaret valaistaan, ja isfahanilaiset istuvat '
               + 'käytävissä juttelemassa.',
+          lyhyt: 'Si-o-se-pol vuodelta 1602 toimii siltana, patona ja holvikäytävänä Zayandeh-joen yli.',
           selite: 'Vuonna 1602 valmistunut Si-o-se-pol on noin 300 metriä '
             + 'pitkä ja toimii yhtä aikaa siltana, patona ja varjoisana '
             + 'holvikäytävänä Isfahanin Zayandeh-joen yli.',
@@ -16444,6 +17169,7 @@ export const MAA_KATEGORIAT = {
               + 'tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen '
               + 'vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin '
               + 'vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.',
+          lyhyt: 'Badgir eli tuulitorni johtaa viileän ilman alas, ja Yazdin vanha kaupunki on Unesco-kohde 2017.',
           selite: 'Badgir eli tuulitorni johtaa yläilman viileämmän tuulen '
             + 'alas huoneisiin ja lämpimän ilman ulos, ja Yazdin vanha '
             + 'kaupunki otettiin maailmanperintöluetteloon vuonna 2017.',
@@ -16461,6 +17187,7 @@ export const MAA_KATEGORIAT = {
               + '1610-luvulla, eikä siinä ole minareettia eikä pihaa — se '
               + 'rakennettiin hovin omaksi rukoushuoneeksi eikä suurta väkijoukkoa '
               + 'varten.',
+          lyhyt: 'Sheikh Lotfollahin moskeija valmistui 1610-luvulla, kupolin laatat kapenevat kaarrettaan myöten.',
           selite: 'Sheikh Lotfollahin moskeija valmistui 1610-luvulla hovin '
             + 'omaksi rukoushuoneeksi, ja sen kupolin laattakuviossa jokainen '
             + 'kehä on omanlaisensa, koska laatan on kavennuttava sitä mukaa '
@@ -16501,6 +17228,7 @@ export const MAA_KATEGORIAT = {
               + 'pitämään suihkut käynnissä. Yhdeksän iranilaista puutarhaa '
               + 'otettiin yhdessä maailmanperintöluetteloon vuonna 2011, ja Fin on '
               + 'niistä yksi.',
+          lyhyt: 'Kashanin Finin puutarha 1500-luvulta pyörittää suihkujaan rinteen kaltevuudella ilman pumppuja.',
           selite: 'Kashanin Finin puutarha on säilynyt 1500-luvulta, ja sen '
             + 'suihkut pysyvät käynnissä ilman pumppuja, koska koko puisto on '
             + 'rakennettu loivaan rinteeseen.',
@@ -16526,6 +17254,7 @@ export const MAA_KATEGORIAT = {
               + 'tilauksesta. Rakennuttaja kuoli 1890-luvun alussa, ja '
               + 'muurarit jättivät työn kesken: sisääntuloportissa näkyy yhä '
               + 'viimeistelemättömiä kohtia.',
+          lyhyt: 'Mahanin Shazdeh-puutarha on 5,5 hehtaarin porrastettu puutarha kuvernöörin tilauksesta 1870-luvulta.',
           selite: 'Mahanin Shazdeh-puutarha on 5,5 hehtaarin kokoinen ja '
             + 'porrastettu rinteeseen, ja se sai nykyisen asunsa 1870-luvulta '
             + 'alkaen Kermanin kuvernöörin Abdolhamid Mirzan tilauksesta.',
@@ -16542,6 +17271,7 @@ export const MAA_KATEGORIAT = {
               + 'vastaanottopaikka. Puutarha on samaa chahar bagh -kaavaa kuin '
               + 'Finissä, mutta allas on tehty leveäksi eikä kapeaksi kanavaksi — '
               + 'juuri sitä heijastusta varten.',
+          lyhyt: 'Chehel Sotoun valmistui 1600-luvun puolivälissä, nimensä mukaan neljäkymmentä pylvästä.',
           selite: 'Chehel Sotoun valmistui 1600-luvun puolivälissä juhla- ja '
             + 'vastaanottopaikaksi, ja sen nimi tarkoittaa neljääkymmentä '
             + 'pylvästä, vaikka paviljongin edustalla niitä on kaksikymmentä.',
@@ -16558,6 +17288,7 @@ export const MAA_KATEGORIAT = {
               + 'Sypressit ovat puutarhan tunnusmerkki — yhtä niistä on kutsuttu '
               + 'Shirazin komeimmaksi puuksi. Eram kuuluu samaan yhdeksän puutarhan '
               + 'maailmanperintökohteeseen kuin Fin.',
+          lyhyt: 'Shirazin Eramin puutarha on nykyään yliopiston kasvitieteellinen puutarha 1800-luvun paviljongein.',
           selite: 'Shirazin Eramin puutarha on nykyään Shirazin yliopiston '
             + 'kasvitieteellinen puutarha, jossa kasvaa yli kolmesataa '
             + 'kasvilajia, ja sen kolmikerroksinen paviljonki rakennettiin '
@@ -16599,6 +17330,7 @@ export const MAA_KATEGORIAT = {
               + 'poimintatyötä. Iran tuottaa noin 90 prosenttia maailman '
               + 'sahramista, ja suurin osa kasvaa maan koillisosassa Khorasanin '
               + 'maakunnissa.',
+          lyhyt: 'Kilo kuivattua sahramia vaatii 150 000 kukkaa, ja Iran tuottaa 90 prosenttia maailman sahramista.',
           selite: 'Kilo kuivattua sahramia vaatii noin 150 000 Crocus sativus '
             + '-kukkaa ja noin 40 tuntia käsin tehtyä poimintatyötä, ja Iran '
             + 'tuottaa noin 90 prosenttia maailman sahramista.',
@@ -16615,6 +17347,7 @@ export const MAA_KATEGORIAT = {
               + 'leipä nostetaan ulos kolmikärkisellä koukulla, ja muutama kivi '
               + 'tulee usein mukana. Leipomot kilpailevat siitä, kuka saa uunista '
               + 'pisimmän leivän.',
+          lyhyt: 'Sangak-leipä paistetaan kuumien jokikivien päällä, ja nimi tarkoittaa persiaksi pikkukiveä.',
           selite: 'Sangak paistetaan uunin pohjalle ladottujen kuumien '
             + 'jokikivien päällä, ja siitä tulee leivän nimi, joka tarkoittaa '
             + 'persiaksi pikkukiveä.',
@@ -16633,6 +17366,7 @@ export const MAA_KATEGORIAT = {
               + 'tonnia. Tärkein alue on Kermanin maakunnan Rafsanjan, jonka '
               + 'kastelu ottaa vetensä pohjavedestä — ja jonka maanpinta on '
               + 'siksi painunut.',
+          lyhyt: 'Pistaasin kuori halkeaa kypsyessään, ja Iran on maailman suurimpia tuottajia.',
           selite: 'Pistaasin kova kuori halkeaa kypsyessään itsestään '
             + 'napsahtaen, ja Iran on maailman kolmen suurimman tuottajan '
             + 'joukossa noin 316 000 tonnin sadollaan vuonna 2024.',
@@ -16650,6 +17384,7 @@ export const MAA_KATEGORIAT = {
               + 'kasvoi 300 000 teepensasta. Tarjoiluastia on vyötäröltä kapea '
               + 'lasi. Sokeria ei sekoiteta joukkoon: kidesokeripala pidetään '
               + 'suussa ja tee juodaan sen läpi.',
+          lyhyt: 'Iranilainen tee juodaan sokeripala suussa pidellen, pensaat polveutuvat Intiasta tuoduista taimista.',
           selite: 'Iranilainen tee juodaan vyötäröltä kapeasta lasista niin, '
             + 'että kidesokeripala pidetään suussa, ja maan teepensaat '
             + 'polveutuvat 4 000 taimesta, jotka Kashef as-Saltaneh toi '
@@ -16691,6 +17426,7 @@ export const MAA_KATEGORIAT = {
               + 'kangaspuut ja naiset kehräävät, värjäävät ja kutovat. Värit '
               + 'saadaan matarasta, indigosta sekä saksanpähkinän ja '
               + 'granaattiomenan kuorista.',
+          lyhyt: 'Iranilainen matto solmitaan käsin, ja Unesco listasi Kashanin mattoperinteen 2010.',
           selite: 'Iranilainen matto solmitaan käsin rivi riviltä, ja Unesco '
             + 'otti Kashanin mattoperinteen aineettoman kulttuuriperinnön '
             + 'luetteloon vuonna 2010.',
@@ -16708,6 +17444,7 @@ export const MAA_KATEGORIAT = {
               + 'käytetään muun muassa saksanpähkinää, sypressiä ja mäntyä. Työn '
               + 'keskukset ovat Shiraz ja Isfahan, ja loistokautensa khatam eli '
               + 'safavidien aikana.',
+          lyhyt: 'Khatam on upotustyötä, jossa kolmiotangoista viipaloidut levyt liimataan esineen pintaan tiheästi.',
           selite: 'Khatam on upotustyötä, jossa puusta, messingistä ja luusta '
             + 'tehdyistä kolmiotangoista viipaloidut levyt liimataan esineen '
             + 'pintaan niin tiheästi, että kuutiosenttimetriin mahtuu noin '
@@ -16726,6 +17463,7 @@ export const MAA_KATEGORIAT = {
               + 'jolloin värit kiinnittyvät lasittuneeseen pintaan. Isfahan on '
               + 'työn tärkein keskus, ja samaa kuviokieltä näkee kaupungin '
               + 'kupolien laatoissa.',
+          lyhyt: 'Mina eli emalityö poltetaan kuparille noin 700 asteessa ennen metallioksidiväreillä maalaamista.',
           selite: 'Mina eli emalityö tehdään kuparille, joka päällystetään '
             + 'emalijauheella ja poltetaan noin 700 asteessa kolmesta neljään '
             + 'kertaan ennen kuin se maalataan metallioksidiväreillä.',
@@ -16742,6 +17480,7 @@ export const MAA_KATEGORIAT = {
               + 'sauma näkynyt. Qajarien aikana termeh oli hovipuvun ja lahjan '
               + 'kangas. 1970-luvulta lähtien suurin osa on kudottu '
               + 'jacquard-koneilla, ja käsin tehty kaista on kallis erikoisuus.',
+          lyhyt: 'Termeh on villasta tai silkistä kudottu kangas, tunnettu boteh-kuviostaan, keskuksena Yazd.',
           selite: 'Termeh on villasta tai silkistä kudottu kangas, jonka '
             + 'tunnistaa pisaran muotoisesta boteh-kuviosta, ja sen kudonnan '
             + 'keskus on nykyään Yazd.',
@@ -16783,6 +17522,7 @@ export const MAA_KATEGORIAT = {
               + 'Nannan pyhäkkö. Uusbabylonialainen kuningas Nabonidus korjasi '
               + 'tornin 500-luvulla eaa., ja julkisivu ja portaikko muurattiin '
               + 'uudelleen 1980-luvulla.',
+          lyhyt: 'Urin zigguratin aloitti Ur-Nammu noin 2100 eaa. ja sen huipulla oli kuun jumalan Nannan pyhäkkö.',
           selite: 'Urin zigguratin aloitti Ur-Nammu noin 2100-luvulla eaa. ja '
             + 'sai valmiiksi Shulgi noin vuonna 2000 eaa., ja sen huipulla '
             + 'oli kuun jumalan Nannan pyhäkkö.',
@@ -16799,6 +17539,7 @@ export const MAA_KATEGORIAT = {
               + 'on Sulaymaniyahin museossa. Kirjoitus on nuolenpääkirjoitusta: '
               + 'kiilanmuotoisia painaumia, jotka syntyvät painamalla ruokokynän '
               + 'kulmaa kosteaan saveen.',
+          lyhyt: 'Gilgamesh-eepoksen akkadinkielinen versio koottiin kahdelletoista savitaululle noin 1300–1000 eaa.',
           selite: 'Gilgamesh-eepoksen akkadinkielinen vakioversio koottiin '
             + 'kahdelletoista savitaululle noin vuosina 1300–1000 eaa., ja '
             + 'tämä eepoksen viides taulu on Sulaymaniyahin museossa.',
@@ -16816,6 +17557,7 @@ export const MAA_KATEGORIAT = {
               + 'muurattua jälleenrakennusta, joka aloitettiin vuonna 1978. '
               + 'Silloin nousivat muun muassa eteläisen palatsin seinät. '
               + 'Babylon otettiin maailmanperintöluetteloon vasta vuonna 2019.',
+          lyhyt: 'Babylon oli Nebukadnessar II:n pääkaupunki 604–561 eaa., jälleenrakennettu vuodesta 1978.',
           selite: 'Babylon oli Nebukadnessar II:n pääkaupunki vuosina 604–561 '
             + 'eaa., ja alkuperäisten tiilikerrosten päälle muurattiin '
             + 'vuodesta 1978 alkaen jälleenrakennusta.',
@@ -16832,6 +17574,7 @@ export const MAA_KATEGORIAT = {
               + 'kaariholvi. Suurimman temppelin holvit kohosivat noin '
               + 'kolmenkymmenen metrin korkeuteen. Hatra otettiin '
               + 'maailmanperintöluetteloon vuonna 1985.',
+          lyhyt: 'Hatra kukoisti karavaanikaupunkina 100–200-luvuilla jaa. kreikkalais-idän tyylisine temppeleineen.',
           selite: 'Hatra kukoisti karavaanikaupunkina 100- ja 200-luvuilla '
             + 'jaa., ja sen temppelirakennuksissa yhdistyvät kreikkalainen '
             + 'pylväsjärjestys ja idän korkea kaariholvi.',
@@ -16868,6 +17611,7 @@ export const MAA_KATEGORIAT = {
               + 'rakkuloita, ja leipä irrotetaan koukulla ennen kuin se putoaa '
               + 'pohjalle. Leipää ostetaan päivittäin ja se syödään samana '
               + 'päivänä.',
+          lyhyt: 'Tanoor on savesta muurattu uuni, jonka kuumaan seinään taikinalevy läiskäistään paistumaan.',
           selite: 'Tanoor on savesta muurattu uuni, jonka kuumalle '
             + 'sisäseinälle ohueksi taputeltu taikinalevy läiskäistään kiinni '
             + 'ja jossa se paistuu muutamassa minuutissa.',
@@ -16884,6 +17628,7 @@ export const MAA_KATEGORIAT = {
               + 'arabialaisella alueella nimellä tharid; Irakissa annos on '
               + 'tashrib, ja se on tavallinen ruoka paastokuukauden '
               + 'iltapöydässä.',
+          lyhyt: 'Tashribissa kuivunut leipä kastellaan kuumalla lihaliemellä paastokuukauden iltaruoaksi.',
           selite: 'Tashribissa kuivunut leipä revitään kulhon pohjalle ja '
             + 'kastellaan kuumalla lihaliemellä, ja annos on tavallinen ruoka '
             + 'paastokuukauden iltapöydässä.',
@@ -16899,6 +17644,7 @@ export const MAA_KATEGORIAT = {
               + 'taatelisiirappia, ja seos syödään tuoreen leivän kanssa. Dibs '
               + 'on vanha tapa säilöä taatelisato nestemäisenä — palmutarhat '
               + 'ovat olleet Irakin maatalouden selkäranka vuosituhansia.',
+          lyhyt: 'Gaymar on paksu kerma, joka kaavitaan kuumennetun ja jäähdytetyn maidon pinnalta rullalle.',
           selite: 'Gaymar on paksua kermaa, joka kaavitaan hitaasti '
             + 'kuumennetun ja jäähdytetyn maidon pinnalle nousseesta '
             + 'rasvakerroksesta ja kääritään rullalle.',
@@ -16917,6 +17663,7 @@ export const MAA_KATEGORIAT = {
               + 'Esikuvana pidetään sumerilaista qullupua, jota leivottiin '
               + 'uudenvuoden juhlaan kuun muotoon. Kleichaa tehdään yhä '
               + 'juhlapyhiin ja tarjotaan teen kanssa.',
+          lyhyt: 'Kleicha on Irakin kansallisleivonnainen kardemummalla, esikuvanaan sumerilainen qullupu.',
           selite: 'Kleicha on Irakin kansallisleivonnainen, jonka taikinaan '
             + 'tulee kardemummaa ja usein ruusuvettä, ja sen esikuvana '
             + 'pidetään sumerilaista kuun muotoon leivottua qullupua.',
@@ -16955,6 +17702,7 @@ export const MAA_KATEGORIAT = {
               + 'Itse moskeija oli aikanaan valtava: sen ala oli noin 166 000 '
               + 'neliömetriä. Samarran arkeologinen kaupunki otettiin '
               + 'maailmanperintöluetteloon vuonna 2007.',
+          lyhyt: 'Samarran Malwiya-minareetti on 52 metriä korkea, valmistunut al-Mutawakkilin käskystä 848–852.',
           selite: 'Samarran suuren moskeijan Malwiya-minareetti on 52 metriä '
             + 'korkea ja pohjaltaan 33 metriä leveä, ja se valmistui kalifi '
             + 'al-Mutawakkilin käskystä vuosina 848–852.',
@@ -16971,6 +17719,7 @@ export const MAA_KATEGORIAT = {
               + 'yhdistyvät käytävillä ja kaaririveillä. Vastakohta on '
               + 'tahallinen — ulkoa mahtava mittakaava, sisältä ahtaat '
               + 'asuinhuoneet.',
+          lyhyt: 'Al-Ukhaidirin linnoituspalatsi rakennettiin noin 775, muureineen vastaanottosali, moskeija ja pihat.',
           selite: 'Al-Ukhaidirin linnoituspalatsi rakennettiin noin vuonna '
             + '775, ja sen muurien sisään mahtuu vastaanottosali, moskeija, '
             + 'asuinsiipiä ja useita pihoja.',
@@ -16988,6 +17737,7 @@ export const MAA_KATEGORIAT = {
               + 'asunnon, vaatteet ja kuukausirahan. Pihalle valmistui vuonna '
               + '1235 vesikello, joka ilmoitti rukoushetket. Rakennus kuuluu '
               + 'nykyään Mustansiriyan yliopistolle.',
+          lyhyt: 'Bagdadin Mustansiriya-madrasa vihittiin 1233, ja siellä opiskeli neljä sunnalaista lakikoulukuntaa.',
           selite: 'Bagdadin Mustansiriya-madrasa vihittiin käyttöön 6. '
             + 'huhtikuuta 1233, ja sen pihan ympärillä opiskeli neljä '
             + 'sunnalaista lakikoulukuntaa lääketieteen, matematiikan ja '
@@ -17007,6 +17757,7 @@ export const MAA_KATEGORIAT = {
               + 'kantoi itsensä jo muurausvaiheessa. Tulva vei suuren osan '
               + 'rakennuksesta vuonna 1888, ja osa siitä romahti vielä '
               + 'maaliskuussa 2019.',
+          lyhyt: 'Ktesifonin Taq Kasra on sasanidipalatsin 37 metrin holvisali, jota tulva on vaurioittanut.',
           selite: 'Ktesifonin Taq Kasra on sasanidipalatsin 37 metriä korkea '
             + 'holvisali, josta tulva vei suuren osan vuonna 1888 ja josta '
             + 'osa romahti vielä maaliskuussa 2019.',
@@ -17044,6 +17795,7 @@ export const MAA_KATEGORIAT = {
               + 'gaymar. Soiden alue otettiin maailmanperintöluetteloon vuonna '
               + '2016, ja se on harvinainen sekakohde — luettelointi kattaa '
               + 'sekä kosteikot että kolme muinaista kaupunkia.',
+          lyhyt: 'Etelä-Irakin soilla asutaan ruo\'osta kasatuilla keinosaarilla, Unesco-kohteena vuodesta 2016.',
           selite: 'Etelä-Irakin soilla asutaan keinosaarilla, jotka syntyvät '
             + 'kerroksittain kasatusta ja tiiviiksi poljetusta ruo\'osta, ja '
             + 'alue otettiin maailmanperintöluetteloon vuonna 2016.',
@@ -17062,6 +17814,7 @@ export const MAA_KATEGORIAT = {
               + 'ja surraan vainajia. Samanmuotoinen rakennus on kuvattu jo '
               + 'Urukin kivikaiverrukseen noin vuonna 3300 eaa., joten muoto on '
               + 'lähes viisituhatta vuotta vanha.',
+          lyhyt: 'Mudhif on ruokonipuista kaarrettu kylän juhlatila, kuvattu jo Urukin kaiverruksessa noin 3300 eaa.',
           selite: 'Mudhif on yhden pitkän huoneen kokoinen kylän juhla- ja '
             + 'neuvottelutila, jonka kaaret on tehty taivutetuista '
             + 'ruokonipuista, ja samanmuotoinen rakennus on kuvattu jo Urukin '
@@ -17081,6 +17834,7 @@ export const MAA_KATEGORIAT = {
               + 'palautettiin, ja vuoden 2006 lopussa noin 58 prosenttia '
               + 'kosteikosta oli taas veden alla. Kuivat vuodet ovat sen '
               + 'jälkeen laskeneet osuuden noin kolmannekseen.',
+          lyhyt: 'Soiden ruoko on yhtä aikaa majan runko, mattojen materiaali ja vesipuhvelin talviruoka.',
           selite: 'Soiden ruoko niitetään veneisiin ja tuodaan rantaan, ja se '
             + 'on yhtä aikaa majan runko, mattojen materiaali ja vesipuhvelin '
             + 'talviruoka.',
@@ -17127,6 +17881,7 @@ export const MAA_KATEGORIAT = {
               + 'kivet uudelleen. '
               + 'Noin 40 kylää kahdeksassa arkeologisessa puistossa otettiin '
               + 'maailmanperintöluetteloon vuonna 2011.',
+          lyhyt: 'Serjilla on yksi parhaiten säilyneistä Aleppon ja Idlibin ylängön hylätyistä asuinpaikoista.',
           selite: 'Serjilla on yksi parhaiten säilyneistä Aleppon ja Idlibin '
             + 'välisen kalkkikiviylängön noin 700 hylätystä asuinpaikasta, ja '
             + 'sen kylpylän kirjoitus ajoittaa kylän vuoteen 473.',
@@ -17148,6 +17903,7 @@ export const MAA_KATEGORIAT = {
               + 'Hiekka kaivettiin pois, ja teatteri kunnostettiin vuosina '
               + '1947–1970. Bosra otettiin maailmanperintöluetteloon vuonna '
               + '1980.',
+          lyhyt: 'Bosran teatteri rakennettiin 100-luvulla basaltista, ja katsomo säilyi linnoituksen suojassa.',
           selite: 'Bosran teatteri rakennettiin 100-luvulla jaa. mustasta '
             + 'basaltista, ja sen 102 metriä leveä katsomo säilyi '
             + 'kokonaisena, koska rakennuksen ympärille muurattiin vuosina '
@@ -17170,6 +17926,7 @@ export const MAA_KATEGORIAT = {
               + 'vanhin suora todiste siitä, että kirjaimilla on vakiintunut '
               + 'järjestys — sama, joka jatkuu foinikialaisen kirjoituksen '
               + 'kautta kreikkaan ja latinaan.',
+          lyhyt: 'Ugaritin kirjoituksessa on vain 30 äännemerkkiä, käytössä noin 1400–1190 eaa.',
           selite: 'Ugaritin kirjoituksessa on vain 30 merkkiä, joista '
             + 'jokainen vastaa yhtä äännettä eikä tavua tai sanaa, ja se oli '
             + 'käytössä noin vuosina 1400–1190 eaa.',
@@ -17190,6 +17947,7 @@ export const MAA_KATEGORIAT = {
               + 'muodossa kahdeksankulmaisen keskipihan ympärillä. Se oli '
               + 'kristikunnan suurin kirkko siihen asti, kun Hagia Sofia '
               + 'valmistui Konstantinopoliin vuonna 537.',
+          lyhyt: 'Simeon eli pylvään päällä 36 vuotta, ja siitä noussut kirkko oli suurin ennen Hagia Sofiaa.',
           selite: 'Simeon eli pylvään päässä 36 vuotta ja kuoli vuonna 459, '
             + 'ja pylvään ympärille vuonna 490 valmistunut kirkko oli '
             + 'kristikunnan suurin siihen asti, kun Hagia Sofia valmistui '
@@ -17233,6 +17991,7 @@ export const MAA_KATEGORIAT = {
               + 'uudelleen New Yorkiin. Vanhoissa huoneissa '
               + 'värit näyttävät nykyään tummilta, koska pintaan sivelty '
               + 'lakka on kellastunut kerros kerrokselta.',
+          lyhyt: 'Damaskoslaisen talon 1707 vierashuone on paneloitu ajami-tekniikalla koholla olevin kuvioin.',
           selite: 'Damaskoslaisen talon vierashuone vuodelta 1707 on '
             + 'paneloitu ajami-tekniikalla, jossa kuvion ääriviivat '
             + 'pursotetaan koholle ennen kuin niiden päälle painetaan '
@@ -17252,6 +18011,7 @@ export const MAA_KATEGORIAT = {
               + 'toiminut vanhassakaupungissa polvesta polveen. Työ tehdään '
               + 'ilman koneita ja ilman kaavaa, joten kahta samanlaista '
               + 'kappaletta ei synny.',
+          lyhyt: 'Damaskoksen lasi maalataan käsin ilman kaavaa, ja se oli keskiajalla haluttua kauppatavaraa.',
           selite: 'Damaskoksessa lasi maalataan käsin ohuella siveltimellä '
             + 'ilman kaavaa, ja kaupungin lasi oli keskiajalla haluttua '
             + 'kauppatavaraa Eurooppaa myöten.',
@@ -17268,6 +18028,7 @@ export const MAA_KATEGORIAT = {
               + 'vuoden välein — asiakas ei osta uutta vaan korjauttaa '
               + 'vanhan. Aleppon vanhassakaupungissa metallipajoilla on oma '
               + 'kujansa, kuten muillakin ammateilla.',
+          lyhyt: 'Kupariastian sisäpinta pinnoitetaan tinalla hapanta ruokaa varten, ja pinnoite uusitaan ajoittain.',
           selite: 'Kupariastian sisäpinta pinnoitetaan tinalla, jotta astia '
             + 'kestäisi happamia ruokia, ja kulunut pinnoite uusitaan samaan '
             + 'astiaan muutaman vuoden välein.',
@@ -17286,6 +18047,7 @@ export const MAA_KATEGORIAT = {
               + 'ja niiden mittasuhteet on määritelty tarkasti: kirjaimen '
               + 'korkeus ilmoitetaan pisteinä, ja yksi piste on kynän '
               + 'kärjen levyinen jälki.',
+          lyhyt: 'Arabialainen kalligrafia kirjoitetaan qalamilla, ruo\'onvarresta leikatulla kynällä.',
           selite: 'Arabialainen kalligrafia kirjoitetaan qalamilla, joka on '
             + 'ruo\'onvarresta vinoksi leikattu kynä, ja kirjaimen korkeus '
             + 'ilmoitetaan pisteinä, joista yksi on kynänkärjen levyinen '
@@ -17326,6 +18088,7 @@ export const MAA_KATEGORIAT = {
               + 'veitsellä, ja se sulaa selvästi hitaammin kuin tavallinen. '
               + 'Damaskoksen al-Hamidiyan basaarissa toimiva '
               + 'Bakdash on tehnyt boozaa 1800-luvun lopulta asti.',
+          lyhyt: 'Booza on Levantin jäätelö, joka hakataan sitkeäksi mastiksin ja salepin ansiosta.',
           selite: 'Booza on Levantin jäätelö, joka hakataan sitkeäksi '
             + 'pitkällä puusurvimella ja saa rakenteensa mastiksista ja '
             + 'kämmekän mukulasta jauhetusta salepista.',
@@ -17344,6 +18107,7 @@ export const MAA_KATEGORIAT = {
               + 'sekoitetaan usein oliiviöljyyn ja levitetään leivälle. '
               + 'Kuvan mausteet ovat Aleppon Suq al-Attarinesta, jonka nimi '
               + 'tarkoittaa mausteiden ja hajusteiden kauppakujaa.',
+          lyhyt: 'Zaatar-seokseen tulee kuivattua yrttiä, seesaminsiemeniä ja happaman makuista sumakkia.',
           selite: 'Zaatar-seokseen tulee kuivattua Origanum syriacum -yrttiä, '
             + 'paahdettuja seesaminsiemeniä, sumakkia ja suolaa, ja juuri '
             + 'sumakki tuo seokseen happaman vivahteen.',
@@ -17360,6 +18124,7 @@ export const MAA_KATEGORIAT = {
               + 'appelsiinista ja granaattiomenasta, usein kerroksittain '
               + 'samaan lasiin. Hedelmät roikkuvat katoksen alla '
               + 'näytteillä, ja niitä otetaan suoraan tiskin yläpuolelta.',
+          lyhyt: 'Aleppon tuoremehubaarit puristavat mehuja banaanista, appelsiinista ja granaattiomenasta.',
           selite: 'Aleppon tuoremehubaarien kylteissä lukee lähes aina '
             + 'vitamiini, ja mehut puristetaan tilauksesta banaanista, '
             + 'appelsiinista ja granaattiomenasta.',
@@ -17399,6 +18164,7 @@ export const MAA_KATEGORIAT = {
             + 'kömpelöä, koska jalat nousevat itsestään pintaan, eikä vettä '
             + 'saa roiskia silmiin. Kalat eivät tule toimeen tällaisessa '
             + 'vedessä, ja siitä nimi.',
+          lyhyt: 'Kuolleessameressä on lähes kymmenkertainen suolapitoisuus, koska Jordanjoen vesi vain haihtuu siitä.',
           selite: 'Kuolleessameressä on suolaa lähes kymmenen kertaa niin '
             + 'paljon kuin valtameressä, koska siihen laskeva Jordanjoen vesi '
             + 'haihtuu auringossa eikä pääse virtaamaan mihinkään.',
@@ -17416,6 +18182,7 @@ export const MAA_KATEGORIAT = {
             + 'vuodelta kauemmas. Kuivuneelle pohjalle syntyy myös kuoppia, '
             + 'kun suolakerros liukenee maan alla. Jordania ja naapurimaat '
             + 'ovat suunnitelleet veden johtamista Punaisestamerestä asti.',
+          lyhyt: 'Kuolleenmeren pinta laskee vuosittain, koska Jordanjoen vettä otetaan kasteluun ja juomavedeksi.',
           selite: 'Kuolleenmeren pinta laskee noin metrin vuodessa, koska '
             + 'Jordanjoen vettä otetaan matkan varrella kasteluun ja '
             + 'juomavedeksi.',
@@ -17432,6 +18199,7 @@ export const MAA_KATEGORIAT = {
             + 'kalalajeja. Osa rannasta on merisuojelualuetta, jossa '
             + 'ankkurointi on kielletty, ettei ankkuri riko koralleja. Akaban '
             + 'satama on samalla maan ainoa portti merelle.',
+          lyhyt: 'Jordanian ainoa merenranta on Akabanlahdella, noin 27 kilometrin mittainen koralliriuttoineen.',
           selite: 'Jordanian ainoa merenranta on Akabanlahdella ja sitä on '
             + 'vain noin kaksikymmentäseitsemän kilometriä, ja sen tuntumassa '
             + 'kasvaa satojen kalalajien koralliriuttoja.',
@@ -17449,6 +18217,7 @@ export const MAA_KATEGORIAT = {
             + 'ruokkii seitsemän sivupuroa, ja valuma-alueen korkeusero on yli '
             + 'tuhat seitsemänsataa metriä — ylängöltä alas neljänsadan metrin '
             + 'syvyyteen merenpinnan alapuolelle.',
+          lyhyt: 'Wadi Mujibin suojelualue perustettiin 1987, ja kapeimmassa kohdassa kuljetaan vedessä kahlaten.',
           selite: 'Wadi Mujibin suojelualue perustettiin vuonna 1987 ja '
             + 'nimettiin Unescon biosfäärialueeksi vuonna 2011, ja sen '
             + 'kapeimmassa kohdassa eli Siqissä kuljetaan vastavirtaan '
@@ -17488,6 +18257,7 @@ export const MAA_KATEGORIAT = {
             + 'kivet on ladottu kaareviin riveihin torin muodon mukaan. '
             + 'Kaupunki tyhjeni maanjäristyksen jälkeen ja peittyi hiekkaan, '
             + 'mistä syystä se on säilynyt näin hyvin.',
+          lyhyt: 'Jerashin tori tehtiin soikeaksi sovittamaan yhteen pyhäkköalue ja pylväskatu, kivetys alkuperäinen.',
           selite: 'Jerashin tori tehtiin soikeaksi, jotta vanha pyhäkköalue '
             + 'ja uusi pylväskatu saatiin sovitettua yhteen, ja sen kivetys '
             + 'on yhä alkuperäinen.',
@@ -17508,6 +18278,7 @@ export const MAA_KATEGORIAT = {
             + 'on lisäksi umaijadien palatsin kupolisali ja bysanttilaisen '
             + 'kirkon pohja — kolme aikakautta muutaman sadan metrin '
             + 'matkalla.',
+          lyhyt: 'Ammanin Herkuleen temppelin kuudesta pylväästä kolme on nostettu takaisin pystyyn.',
           selite: 'Ammanin kukkulalla kohoavan Herkuleen temppelin etusivulla '
             + 'oli kuusi runsaan kolmentoista metrin korkuista pylvästä, ja '
             + 'niistä kolme on nostettu takaisin pystyyn.',
@@ -17524,6 +18295,7 @@ export const MAA_KATEGORIAT = {
             + '— se on vanhimpia säilyneitä yrityksiä kuvata taivas pyöreälle '
             + 'pinnalle. Linna on Unescon maailmanperintökohde, ja sen '
             + 'vieressä on yhä vanha kaivo.',
+          lyhyt: 'Qusayr Amra on 700-luvun kalifien levähdyspaikka, jonka kupolissa on varhainen tähtitaivasmaalaus.',
           selite: 'Qusayr Amra on 700-luvulla rakennettu kalifien hovin '
             + 'levähdyspaikka ja kylpylä, ja sen kupoliin maalattu '
             + 'tähtitaivas on vanhimpia säilyneitä yrityksiä kuvata taivas '
@@ -17543,6 +18315,7 @@ export const MAA_KATEGORIAT = {
             + 'takana. Nimi Deir tarkoittaa luostaria ja juontuu myöhemmästä '
             + 'käytöstä: tutkijoiden mukaan salia käytettiin bysanttilaisaikana '
             + 'todennäköisesti kirkkona.',
+          lyhyt: 'Petran ad-Deir hakattiin kallioon 1. vuosisadan puolivälissä, julkisivultaan 47 x 48 metriä.',
           selite: 'Petran ad-Deir hakattiin kallioseinään noin ensimmäisen '
             + 'vuosisadan puolivälissä, ja sen julkisivu on 47 metriä korkea '
             + 'ja 48 metriä leveä, vaikka sen takana on vain yksi huone.',
@@ -17582,6 +18355,7 @@ export const MAA_KATEGORIAT = {
             + 'häihin, valmistujaisiin ja juhlapyhiin, ja sitä tarjotaan myös '
             + 'silloin, kun riitoja sovitellaan. Unesco lisäsi tavan '
             + 'aineettoman kulttuuriperinnön luetteloon vuonna 2022.',
+          lyhyt: 'Mansaf on Jordanian kansallisruoka riisistä, lihasta ja jameed-kastikkeesta, Unesco-perintöä 2022.',
           selite: 'Mansaf on Jordanian kansallisruoka, jossa ohuen leivän '
             + 'päälle ladotaan riisi ja liha ja päälle kaadetaan kuumaa '
             + 'jameed-kastiketta, ja Unesco lisäsi tavan aineettoman '
@@ -17599,6 +18373,7 @@ export const MAA_KATEGORIAT = {
             + 'sellaisina ne säilyvät kuukausia ilman kylmää. Kun kastiketta '
             + 'tarvitaan, pallo liotetaan ja hierotaan takaisin nesteeksi. '
             + 'Parhaan jameedin maineessa on Al-Karakin kaupunki.',
+          lyhyt: 'Jameed tehdään kuivatuista hapatetun maidon palloista, parhaana Al-Karakin kaupungista.',
           selite: 'Jameed tehdään lampaan- tai vuohenmaidosta hapatetusta '
             + 'jogurtista, joka suolataan tiiviiksi, pyöritellään palloiksi '
             + 'ja kuivataan auringossa, ja parhaan jameedin maineessa on '
@@ -17617,6 +18392,7 @@ export const MAA_KATEGORIAT = {
             + 'nostetaan, hiekasta nousee ensin höyry ja sitten koko ruoka '
             + 'kerralla. Valmistuminen vie koko iltapäivän, joten zarb tehdään '
             + 'vieraille ja juhlaan.',
+          lyhyt: 'Zarb on Wadi Rumin beduiinien juhlaruoka, joka hautuu tuntikausia hiekkaan kaivetussa kuopassa.',
           selite: 'Zarb on Wadi Rumin beduiinien juhlaruoka, joka hautuu '
             + 'tuntikausia hiekkaan kaivetussa kuopassa hiilloksen päällä '
             + 'kannen ja hiekan alla.',
@@ -17634,6 +18410,7 @@ export const MAA_KATEGORIAT = {
             + 'vadille kokonaisena ennen leikkaamista. Makmuraa on tehty '
             + 'erityisesti oliivinkorjuun juhlaksi, koska öljyä kuluu paljon '
             + 'ja korjuun jälkeen sitä on tuoreena.',
+          lyhyt: 'Makmura tarkoittaa peitettyä, kun sipulitäyte jää taikinakerrosten alle oliivinkorjuun juhlaksi.',
           selite: 'Makmuran nimi tarkoittaa peitettyä, koska oliiviöljyssä '
             + 'kuullotettu sipulitäyte jää taikinakerrosten alle, ja '
             + 'piirakkaa on leivottu erityisesti oliivinkorjuun juhlaksi.',
@@ -17674,6 +18451,7 @@ export const MAA_KATEGORIAT = {
             + 'niitä on rivikaupalla. Alue on ollut Unescon '
             + 'maailmanperintökohde vuodesta 2011, ja suojelun perusteena ovat '
             + 'sekä maisema että kalliopiirrokset.',
+          lyhyt: 'Wadi Rum on Jordanian suurin kuivalaakso, Unesco-kohde 2011 maisemansa ja kalliopiirrosten vuoksi.',
           selite: 'Wadi Rum on Jordanian suurin kuivalaakso eli '
             + 'seitsemänsataakaksikymmentä neliökilometriä hiekkakiveä ja '
             + 'graniittia, ja se otettiin maailmanperintöluetteloon vuonna '
@@ -17692,6 +18470,7 @@ export const MAA_KATEGORIAT = {
             + 'kasvilajia ei tavata mistään muualta maailmasta, ja Dana on '
             + 'eteläisin paikka, jossa kasvaa välimerensypressi. Alue '
             + 'perustettiin vuonna 1989.',
+          lyhyt: 'Danan biosfäärialue perustettiin 1989 ja laskeutuu ylängöltä aavikolle neljän vyöhykkeen läpi.',
           selite: 'Vuonna 1989 perustettu Danan biosfäärialue laskeutuu 1 500 '
             + 'metrin ylängöltä Wadi Araban aavikolle neljän '
             + 'kasvillisuusvyöhykkeen läpi, ja siellä elää 703 kasvilajia, '
@@ -17710,6 +18489,7 @@ export const MAA_KATEGORIAT = {
             + 'palauttamaan alkuperäisestä kosteikosta vain kymmenesosan. Osa '
             + 'linnuista on silti palannut, ja alueelta on kirjattu 280 '
             + 'muuttavaa lajia.',
+          lyhyt: 'Azraqin kosteikon lähteet kuivuivat 1992 mennessä pohjaveden pumppauksesta Ammanin juomavedeksi.',
           selite: 'Azraqin kosteikon lähteet olivat kuivuneet umpeen vuoteen '
             + '1992 mennessä, kun sen pohjavettä oli pumpattu 1960-luvulta '
             + 'alkaen Ammanin juomavedeksi.',
@@ -17727,6 +18507,7 @@ export const MAA_KATEGORIAT = {
             + 'sitä löytää kivikkoisilta rinteiltä. Jordaniassa kasvaa '
             + 'kahdeksan muutakin irislajia, ja useimmat niistä ovat nekin '
             + 'uhanalaisia.',
+          lyhyt: 'Jordanian kansalliskukka mustairis kasvaa luonnonvaraisena vain Jordaniassa.',
           selite: 'Jordanian kansalliskukka mustairis kasvaa luonnonvaraisena '
             + 'vain Jordaniassa, ja sen lähes musta kukka on halkaisijaltaan '
             + '12–15 senttimetriä.',
@@ -17767,6 +18548,7 @@ export const MAA_KATEGORIAT = {
             + 'pitkin kuljettiin ennen kylien välillä. Ylhäällä on niin '
             + 'viileää, että talviaamuina kiviin tulee huurretta — sama '
             + 'vuori, jonka juurella on aavikko.',
+          lyhyt: 'Jebel Shams on Omanin korkein vuori, jonka Wadi Nakhrin rotko putoaa yli kilometrin syvyyteen.',
           selite: 'Jebel Shams on Omanin korkein vuori, ja sen kyljessä '
             + 'ammottavan Wadi Nakhrin rotkon seinämät putoavat yli '
             + 'kilometrin syvyyteen.',
@@ -17783,6 +18565,7 @@ export const MAA_KATEGORIAT = {
             + 'huhtikuun aamuina ja niistä tislataan ruusuvettä. Vesi tuodaan '
             + 'pelloille kanavia pitkin lähteestä, ja jokainen terassi saa '
             + 'vuorollaan oman osuutensa.',
+          lyhyt: 'Jebel Akhdar eli vihreä vuori kasvattaa terassipelloillaan granaattiomenaa ja ruusuja.',
           selite: 'Jebel Akhdar tarkoittaa vihreää vuorta, ja sen kahden ja '
             + 'puolen kilometrin korkeudessa olevilla terassipelloilla '
             + 'kasvatetaan granaattiomenaa, aprikoosia, viinirypälettä ja '
@@ -17800,6 +18583,7 @@ export const MAA_KATEGORIAT = {
             + 'se oli aikanaan yhtä kallista kuin kulta. Vanhat '
             + 'karavaanireitit ja satamat kuuluvat Unescon '
             + 'maailmanperintöluetteloon.',
+          lyhyt: 'Suitsuke on suitsukepuun pihkaa Dhofarin tasangoilta, aikanaan yhtä kallista kuin kulta.',
           selite: 'Suitsuke on Dhofarin tasangoilla kasvavan suitsukepuun '
             + 'viillosta valuvaa pihkaa, joka kovettuu ilmassa jyviksi, ja se '
             + 'oli aikanaan yhtä kallista kuin kulta.',
@@ -17818,6 +18602,7 @@ export const MAA_KATEGORIAT = {
             + 'joita syntyy kun sula laava purkautuu veden alla ja jähmettyy '
             + 'heti ulkopinnalta. Geologit tulevat tänne katsomaan sitä, mitä '
             + 'muualla pitäisi porata merenpohjasta.',
+          lyhyt: 'Samailin ofioliitti on noin sata miljoonaa vuotta sitten maalle työntynyt pala valtameren pohjaa.',
           selite: 'Samailin ofioliitti on noin sata miljoonaa vuotta sitten '
             + 'kuivalle maalle työntynyt pala valtameren pohjaa, ja Wadi '
             + 'Jizzin tyynylaava syntyi, kun sula laava purkautui veden alla '
@@ -17856,6 +18641,7 @@ export const MAA_KATEGORIAT = {
             + 'rungosta joustavan. Valmiilla laivoilla purjehdittiin '
             + 'taatelilastissa Intiaan ja Sansibariin ja palattiin mausteiden '
             + 'kanssa. Nykyään moni dhow tehdään matkailukäyttöön.',
+          lyhyt: 'Surin telakoilla dhow-laivan runko syntyy mestarin päässä, lankut sidottiin ennen köysin.',
           selite: 'Surin telakoilla dhow-purjelaivan rungon muoto on mestarin '
             + 'päässä eikä paperilla, ja ennen lankut sidottiin yhteen '
             + 'kookoskuidusta punotulla köydellä ilman nauloja.',
@@ -17872,6 +18658,7 @@ export const MAA_KATEGORIAT = {
             + 'merelle valon mukaan: meren puoli on aina vaaleampi kuin '
             + 'dyynien puoli. Ranta on suojelualuetta, ja vierailijat '
             + 'kulkevat siellä oppaan kanssa ilman taskulamppuja.',
+          lyhyt: 'Ras al Jinzin ranta on tärkeä vihreän merikilpikonnan munimispaikka, poikaset suunnistavat valoon.',
           selite: 'Ras al Jinzin ranta on yksi maailman tärkeimmistä vihreän '
             + 'merikilpikonnan munimispaikoista, ja kuoriutuneet poikaset '
             + 'suunnistavat merelle sen mukaan, kumpi puoli rannasta on '
@@ -17897,6 +18684,7 @@ export const MAA_KATEGORIAT = {
               + 'Kantoniin laiva saapui 6. heinäkuuta 1981: matkaa oli takana '
               + 'noin 9 600 kilometriä ja aikaa kahdeksan kuukautta. Sohar '
               + 'seisoo nykyään liikenneympyrässä Muscatin Al Bustanissa.',
+          lyhyt: 'Sohar-puulaiva purjehti 1980–1981 ilman moottoria Omanista Kantoniin noin 9 600 kilometriä.',
           selite: 'Sohar on Surin telakalla rakennettu 26,5-metrinen '
             + 'puulaiva, joka purjehti ilman moottoria Omanista Kantoniin '
             + 'marraskuusta 1980 heinäkuun 6. päivään 1981 eli noin 9 600 '
@@ -17915,6 +18703,7 @@ export const MAA_KATEGORIAT = {
             + 'makean ja suolaisen veden sekoitus, jonka matalikoilla lepää '
             + 'flamingoja. Paikka kuuluu Unescon Suitsukkeen maa -nimiseen '
             + 'maailmanperintökohteeseen.',
+          lyhyt: 'Sumhuramin satamakaupunki jäi autioksi 400-luvulla, kun hiekka katkaisi lahden väylän.',
           selite: 'Sumhuramin satamakaupunki Khor Rorin lahden rannalla jäi '
             + 'autioksi noin 400-luvulla, kun meren tuoma hiekka kasasi '
             + 'lahden suulle vallin ja katkaisi väylän.',
@@ -17955,6 +18744,7 @@ export const MAA_KATEGORIAT = {
             + 'auki: niissä ei ole ainuttakaan aukkoa ulos, joten ne saattoivat '
             + 'olla varastoja tai vesisäiliöitä. Alue otettiin '
             + 'maailmanperintöluetteloon vuonna 1988.',
+          lyhyt: 'Al-Aynin kivihaudat ladottiin ilman laastia kolmannella vuosituhannella eaa., Unesco-kohde 1988.',
           selite: 'Al-Aynin kivihaudat ladottiin litteistä kivistä ilman '
             + 'laastia kolmannella vuosituhannella ennen ajanlaskun alkua, ja '
             + 'alue otettiin maailmanperintöluetteloon vuonna 1988.',
@@ -17972,6 +18762,7 @@ export const MAA_KATEGORIAT = {
             + 'peitettiin sementillä, ja kohde oli vaarantuneiden '
             + 'maailmanperintökohteiden listalla vuoteen 2004. Linnan ympärillä '
             + 'on keidas ja kolmentoista kilometrin muuri.',
+          lyhyt: 'Bahlan savitiililinna 1100–1400-luvuilta on Omanin ensimmäinen maailmanperintökohde.',
           selite: 'Bahlan linna rakennettiin 1100–1400-luvuilla savesta ja '
             + 'oljesta muotoillusta kuivatusta tiilestä, ja siitä tuli vuonna '
             + '1987 Omanin ensimmäinen maailmanperintökohde.',
@@ -17988,6 +18779,7 @@ export const MAA_KATEGORIAT = {
             + 'salissa palkkeihin on maalattu auringon ja kuun kiekkoja — '
             + 'huoneen nimi tulee niistä. Linna on kunnostettu ja avoinna, ja '
             + 'osa kattomaalauksista on säilynyt alkuperäisenä.',
+          lyhyt: 'Jabreenin linna (1670) on asuinpalatsi, jossa opetettiin tähtitiedettä ja lakia.',
           selite: 'Vuonna 1670 valmistunut Jabreenin linna on asuinpalatsi, '
             + 'jonka kolmessa kerroksessa oli luokkahuoneita ja kirjasto ja '
             + 'jossa opetettiin tähtitiedettä, lääketiedettä ja lakia.',
@@ -18006,6 +18798,7 @@ export const MAA_KATEGORIAT = {
             + 'auringon ja tähtien mukaan. Omanissa toimii yhä noin '
             + 'kolmetuhatta falajia; viisi niistä on maailmanperintöluettelossa '
             + 'vuodesta 2006.',
+          lyhyt: 'Falaj-kanavat tuovat veden painovoimalla; Omanissa niitä toimii yhä noin 3000.',
           selite: 'Falaj on kanava, joka tuo veden kylään pelkän painovoiman '
             + 'avulla, ja Omanissa niitä toimii yhä noin kolmetuhatta, joista '
             + 'viisi on ollut maailmanperintöluettelossa vuodesta 2006.',
@@ -18043,6 +18836,7 @@ export const MAA_KATEGORIAT = {
             + 'Ilmiötä sanotaan khareefiksi, ja sen aikaan Salalahiin tullaan '
             + 'lomalle muualta Arabiasta. Sama kosteus tekee mahdolliseksi '
             + 'kasvattaa kaupungin puutarhoissa kookosta ja banaania.',
+          lyhyt: 'Dhofarin khareef-kausi syntyy, kun monsuuni pysähtyy rannikkovuoriin kesä–syyskuussa.',
           selite: 'Dhofarissa sataa kesällä, kun Intian valtamereltä työntyvä '
             + 'monsuuni pysähtyy rannikkovuoriin, ja tätä kesä–syyskuun '
             + 'vihreää aikaa sanotaan khareefiksi.',
@@ -18061,6 +18855,7 @@ export const MAA_KATEGORIAT = {
             + 'selkärangatonta lajia ja 150 kasvilajia. Beduiiniperheet '
             + 'kokoontuvat kesällä aavikon laidan keitaalle korjaamaan '
             + 'taateleita.',
+          lyhyt: 'Sharqiyan hiekka-aavikko on 180 km pitkä, dyynit pohjois-eteläsuunnassa.',
           selite: 'Sharqiyan hiekka-aavikko on satakahdeksankymmentä '
             + 'kilometriä pitkä ja kahdeksankymmentä leveä, ja sen '
             + 'dyyniharjanteet kulkevat monsuunituulen antamassa suunnassa '
@@ -18079,6 +18874,7 @@ export const MAA_KATEGORIAT = {
             + 'samasta vedestä kanavia pitkin. Laakson yläpäässä on Muqalin '
             + 'luola, jonne kavutaan kapeaa polkua; sisällä on pimeää ja '
             + 'viileää, ja katosta tippuu vettä.',
+          lyhyt: 'Wadi Bani Khalidin altaat eivät kuivu, sillä vesi tulee kalliolähteistä.',
           selite: 'Wadi Bani Khalidin altaat eivät kuivu edes kesällä, koska '
             + 'niiden vesi tulee lähteistä kallion sisältä eikä ole sateen '
             + 'varassa.',
@@ -18095,6 +18891,7 @@ export const MAA_KATEGORIAT = {
             + 'vihreä merikilpikonna munimaan. Juuri siksi saaret suljetaan '
             + 'vierailijoilta kokonaan toukokuun alusta lokakuun loppuun. '
             + 'Kallioilla pesii merilintuja, muun muassa sääksi ja nokihaukka.',
+          lyhyt: 'Daymaniyatin yhdeksän saarta on suojeltu 1996, suljettu touko–lokakuussa kilpikonnille.',
           selite: 'Daymaniyatin yhdeksän asumatonta saarta ovat olleet '
             + 'luonnonsuojelualuetta vuodesta 1996, ja ne suljetaan '
             + 'vierailijoilta toukokuun alusta lokakuun loppuun kilpikonnien '
@@ -18135,6 +18932,7 @@ export const MAA_KATEGORIAT = {
             + 'vedessä elää rapuja ja pieniä kaloja, ja talvella lahdella '
             + 'lepää muuttolintuja matkallaan etelään. Alue on '
             + 'luonnonsuojelualuetta, jonne mennään oppaan kanssa.',
+          lyhyt: 'Khor Al Adaid on Qatarin autiomaan merenlahti, jonka ranta siirtyy vuoroveden mukana.',
           selite: 'Khor Al Adaid on Qatarin eteläkärjessä autiomaan halki '
             + 'syvälle työntyvä merenlahti, jonka rantaviiva siirtyy '
             + 'vuoroveden mukana satoja metrejä kahdesti vuorokaudessa.',
@@ -18151,6 +18949,7 @@ export const MAA_KATEGORIAT = {
             + 'tuuli siirtää dyynejä hitaasti paikasta toiseen, ja '
             + 'autiomaassa erottuu paikoin vanhoja rantaviivoja ajalta, '
             + 'jolloin meri ulottui kauemmas.',
+          lyhyt: 'Zekreetin sienimäiset kalkkikivipaadet ovat tuulen hiomia hiekan kuluttamina.',
           selite: 'Zekreetin sienimäiset kalkkikivipaadet ovat tuulen työtä, '
             + 'sillä hiekanjyvät lentävät lähellä maanpintaa ja hiovat kiveä '
             + 'eniten alaosasta.',
@@ -18175,6 +18974,7 @@ export const MAA_KATEGORIAT = {
               + 'laulavia dyynejä tunnetaan maailmasta noin 35 paikassa. '
               + 'Qatarissa rinteelle kiivetään iltapäivällä ja ääni saadaan '
               + 'aikaan liukumalla alas.',
+          lyhyt: 'Mesaieedin dyyni hurisee hiekan vyöryessä, ääni voi yltää yli sadan desibelin.',
           selite: 'Mesaieedin suunnassa noin neljänkymmenen kilometrin päässä '
             + 'Dohasta on dyyni, jonka rinne hurisee kuivan hiekan vyöryessä '
             + 'alas, ja ääni voi yltää yli sadan desibelin.',
@@ -18193,6 +18993,7 @@ export const MAA_KATEGORIAT = {
             + 'kiistellään: arviot ulottuvat kolmannelta vuosisadalta ennen '
             + 'ajanlaskua muutamaan sataan vuoteen, eikä vuoden 2012 ajoitus '
             + 'tukenut vanhimpia arvioita.',
+          lyhyt: 'Al Jassasiya on Qatarin laajin kalliotaidekohde ja ainoa, jossa on veneenkuvia.',
           selite: 'Al Jassasiya on Qatarin laajin kalliotaidekohde, jossa on '
             + 'yli yhdeksänsataa kuvaa lähes kuudessasadassa numeroidussa '
             + 'kohdassa, ja se on maan ainoa paikka, josta on löydetty '
@@ -18232,6 +19033,7 @@ export const MAA_KATEGORIAT = {
             + 'puolentoista kilometrin mittainen reitti, ja sen keskellä '
             + 'seisoo vanha emiirin palatsi, jonka ympärille museo on '
             + 'rakennettu.',
+          lyhyt: 'Qatarin kansallismuseo (2019) muistuttaa aavikkoruusua ja koostuu betonikiekoista.',
           selite: 'Vuonna 2019 avatun Qatarin kansallismuseon muoto on '
             + 'lainattu aavikkoruususta, ja se on rakennettu sadoista '
             + 'betonikiekoista, joista ei ole kahta samanlaista.',
@@ -18248,6 +19050,7 @@ export const MAA_KATEGORIAT = {
             + 'savi- ja kivimuuria, kattopalkkeina mangrovepuun runkoja. '
             + 'Kujilla myydään mausteita, kankaita ja lintuja, ja illalla '
             + 'tori täyttyy ihmisistä, kun päivän kuumin aika on ohi.',
+          lyhyt: 'Souq Waqif eli seisova tori muurattiin uudelleen vanhoin menetelmin 2000-luvulla.',
           selite: 'Souq Waqif tarkoittaa seisovaa toria, ja sen rapistuneet '
             + 'rakennukset purettiin ja muurattiin 2000-luvun alussa '
             + 'uudelleen vanhoilla menetelmillä.',
@@ -18265,6 +19068,7 @@ export const MAA_KATEGORIAT = {
             + 'ylöspäin portaittain, ja ylimmässä kerroksessa on ikkuna, '
             + 'josta näkyy merelle. Kokoelmassa on esineitä tuhannen vuoden '
             + 'ajalta.',
+          lyhyt: 'Islamilaisen taiteen museon suunnitteli I. M. Pei Dohan lahden tekosaarelle.',
           selite: 'Islamilaisen taiteen museon suunnitteli 91-vuotias '
             + 'arkkitehti I. M. Pei erään kairolaisen moskeijan suihkulähteen '
             + 'mukaan, ja rakennus seisoo omalla tekosaarellaan Dohan '
@@ -18283,6 +19087,7 @@ export const MAA_KATEGORIAT = {
             + 'alku määräytyy kuun mukaan. Katto tehtiin neljässä kerroksessa: '
             + 'puiset danchal-orret, punottua bambua, mangrovepuun oksaverkko '
             + 'ja päällimmäisenä tiivistetty savi.',
+          lyhyt: 'Umm Salalin 1800-luvun Barzanin tornit vartioivat sadevettä, kunnostettu 1910.',
           selite: 'Umm Salalin kaksi kuudentoista metrin korkuista Barzanin '
             + 'tornia rakennettiin 1800-luvun lopulla vartioimaan rawdaa eli '
             + 'sadeveden painannetta, ja ne kunnostettiin vuonna 1910.',
@@ -18322,6 +19127,7 @@ export const MAA_KATEGORIAT = {
             + 'paikkana, jossa kotilopurppuraa on valmistettu, ja se on '
             + 'Qatarin ainoa toiselle vuosituhannelle eaa. ajoittuva '
             + 'muinaisjäännös.',
+          lyhyt: 'Al Khorin Purppurasaarella valmistettiin murex-purppuraa noin 1400–1100 eaa.',
           selite: 'Al Khorin Purppurasaarella kassilaiset valmistivat '
             + 'murex-kotilosta purppuraväriä noin vuosina 1400–1100 eaa., ja '
             + 'saarelta on kaivettu esiin kolme miljoonaa rikottua '
@@ -18349,6 +19155,7 @@ export const MAA_KATEGORIAT = {
               + 'uudelleen: vuonna 2014 avatussa Souq Al Wakrassa on '
               + 'toistasataa liikettä, hiekalle on nostettu puuveneitä '
               + 'näytille ja kalasatama on yhä käytössä.',
+          lyhyt: 'Al Wakra oli 1908 Qatarin toiseksi suurin helmisatama; Souq Al Wakra avattiin 2014.',
           selite: 'Al Wakra oli vuoden 1908 tilastossa Qatarin toiseksi '
             + 'suurin helmenpyyntisatama 150 veneellään, ja sen vanhalle '
             + 'rantakaistalle avattiin vuonna 2014 Souq Al Wakra.',
@@ -18366,6 +19173,7 @@ export const MAA_KATEGORIAT = {
             + 'siirtyi mestarilta oppipojalle. Sheikh Faisalin museossa on '
             + 'rivi pienoismalleja, joista tyyppierot näkee kerralla: '
             + 'toisella on suora perä, toisella kaareva.',
+          lyhyt: 'Dhow on venetyyppien yhteisnimi: boom, baghlah, sambuk, jalibut ja shu\'ai.',
           selite: 'Dhow ei ole yksi vene vaan joukko veneitä, joista boom ja '
             + 'baghlah kulkivat pitkiä matkoja Intiaan, sambuk ja jalibut '
             + 'olivat helmisukeltajien veneitä ja pienin shu\'ai jäi '
@@ -18383,6 +19191,7 @@ export const MAA_KATEGORIAT = {
             + 'kaupungin kalatorilla samana aamuna. Kalastajat lähtevät ennen '
             + 'auringonnousua, koska keskipäivällä kansi on liian kuuma '
             + 'seistä. Sama lahti on lintujen talvehtimispaikka.',
+          lyhyt: 'Al Khorin kalastajat laskevat yhä kupumaisia mertoja matalaan lahteen.',
           selite: 'Al Khor oli aikanaan helmenpyynnin keskus, ja nykyään sen '
             + 'kalastajat laskevat matalaan lahteen kupumaisia mertoja ja '
             + 'nostavat ne seuraavana päivänä.',
@@ -18420,6 +19229,7 @@ export const MAA_KATEGORIAT = {
             + 'kalkkikivikerroksista, jotka ovat noin neljä-viisikymmentä '
             + 'miljoonaa vuotta vanhoja; luola itse on niitä nuorempi. Alas '
             + 'pääsee vain kiipeämällä kivikkoista rinnettä pitkin.',
+          lyhyt: 'Dahl Al Misfirin luolansuu on noin 12 metriä pitkä, seinien kipsi hohtaa hämärässä.',
           selite: 'Dahl Al Misfirin luolan suu on noin kaksitoista metriä '
             + 'pitkä ja neljä ja puoli metriä leveä, ja sen seinien '
             + 'kuitumainen kipsi hohtaa hämärässä heikosti.',
@@ -18436,6 +19246,7 @@ export const MAA_KATEGORIAT = {
             + 'sidra-puut ja ruoho, joka viheriöi sateen jälkeen muutamaksi '
             + 'viikoksi. Rawdat ovat aina olleet laiduntamisen ja asutuksen '
             + 'paikkoja, ja niitä on myös vartioitu torneista.',
+          lyhyt: 'Rawda on matala painanne, jonne sadevesi valuu ja jossa kasvaa harvinaisia puita.',
           selite: 'Rawda on matala painanne, jonne sadevesi valuu ja jonka '
             + 'hienojakoinen maa pitää kosteuden pitkään, joten juuri siellä '
             + 'kasvavat Qatarin harvat puut ja pensaat.',
@@ -18452,6 +19263,7 @@ export const MAA_KATEGORIAT = {
             + 'kaivumaata, ja käytävät päästävät happea maan sisään. '
             + 'Vuoroveden mukana lahdet täyttyvät ja tyhjenevät, ja silloin '
             + 'ravut, katkaravut ja pikkukalat liikkuvat sisään ja ulos.',
+          lyhyt: 'Sabkha eli suolatasanko syntyy merenveden haihtuessa jättäen suolakuoren.',
           selite: 'Sabkha eli suolatasanko syntyy, kun matalalle maalle '
             + 'noussut merivesi haihtuu ja jättää jälkeensä suolakuoren, ja '
             + 'rapujen kaivamat käytävät päästävät happea sen alle.',
@@ -18468,6 +19280,7 @@ export const MAA_KATEGORIAT = {
             + 'lahdelta. Rantavedessä ruokailee lintuja: haikaroita, '
             + 'kahlaajia ja talvisin flamingoja. Alue on suojeltu, ja siellä '
             + 'liikutaan kajakilla, koska vettä on paikoin vain vaaksan verran.',
+          lyhyt: 'Al Thakiran harmaamangrovemetsä on Qatarin laajin ja ainoa varsinainen metsä.',
           selite: 'Al Thakiran harmaamangrovekasvusto on Qatarin laajin '
             + 'yhtenäinen mangrovemetsä ja maan ainoa varsinainen metsä, ja '
             + 'sen juurten suojassa kasvaa kalanpoikasia ja katkarapuja.',
@@ -18507,6 +19320,7 @@ export const MAA_KATEGORIAT = {
             + 'läpikulkumatkalla. Matalat rantavedet ja mutatasangot ovat '
             + 'pitkän matkan levähdyspaikka: lintu syö mahansa täyteen, lepää '
             + 'muutaman päivän ja jatkaa.',
+          lyhyt: 'Kuwaitin yli muuttaa vuosittain 2–3 miljoonaa lintua yli 400 lajista.',
           selite: 'Kuwaitin yli kulkee joka vuosi kahdesta kolmeen miljoonaa '
             + 'lintua, ja maasta on kirjattu yli neljäsataa lajia, joista '
             + 'vain kahdeksantoista pesii siellä.',
@@ -18523,6 +19337,7 @@ export const MAA_KATEGORIAT = {
             + 'pesimäyhdyskunnan takia. Tiiran pesä ei ole risuista tehty '
             + 'rakennelma vaan pelkkä matala hiekkakuoppa. Saarta ympäröivät '
             + 'koralliriutat, ja sen laella on majakka.',
+          lyhyt: 'Kubbarin pyöreä hiekkasaari on halkaisijaltaan vain 380 metriä, tärkeä lintualue.',
           selite: 'Kubbarin melkein pyöreä hiekkasaari on halkaisijaltaan '
             + 'vain noin 380 metriä, ja se on merkitty tärkeäksi '
             + 'lintualueeksi arabiantiiran pesimäyhdyskunnan takia.',
@@ -18539,6 +19354,7 @@ export const MAA_KATEGORIAT = {
             + 'jotka eivät muuta minnekään. Sellainen on sulttaanikana, joka '
             + 'kävelee vedessä pitkillä varpaillaan ja kiipeää ruo\'on vartta '
             + 'ylös kuin tikkaita.',
+          lyhyt: 'Sulttaanikana kävelee pitkillä varpaillaan ja kiipeää ruokoa kuin tikkaita.',
           selite: 'Sulttaanikana kävelee matalassa vedessä pitkillä '
             + 'varpaillaan ja kiipeää ruo\'on vartta ylös kuin tikkaita, eikä '
             + 'se muuta Al-Jahran kosteikolta minnekään.',
@@ -18555,6 +19371,7 @@ export const MAA_KATEGORIAT = {
             + 'lintu kävelee maassa ja työntää nokan pehmeään maahan etsien '
             + 'toukkia ja kuoriaisia. Kuwaitissa harjalintuja nähdään eniten '
             + 'kevät- ja syysmuuton aikaan puistoissa ja peltojen laidoilla.',
+          lyhyt: 'Harjalinnun töyhtö nousee viuhkaksi vain laskeutuessa tai säikähtäessä.',
           selite: 'Harjalinnun päälaen töyhtö on tavallisesti litteänä '
             + 'taaksepäin mutta nousee viuhkaksi, kun lintu laskeutuu tai '
             + 'säikähtää.',
@@ -18592,6 +19409,7 @@ export const MAA_KATEGORIAT = {
             + 'Kesään kuuluu myös pölymyrsky: kuiva tuuli nostaa hiekan '
             + 'ilmaan, taivas muuttuu oranssiksi ja lähimmätkin talot '
             + 'katoavat näkyvistä.',
+          lyhyt: 'Mitribahissa mitattiin heinäkuussa 2016 Aasian korkein lukema, 53,9 astetta.',
           selite: 'Kuwaitin kesään kuuluu pölymyrsky, jossa kuiva tuuli '
             + 'nostaa hiekan ilmaan, ja Mitribahin sääasemalla mitattiin 21. '
             + 'heinäkuuta 2016 Aasian korkein luotettava lukema 53,9 '
@@ -18609,6 +19427,7 @@ export const MAA_KATEGORIAT = {
             + 'kansalliskukka. Pensaan alle kertyy hedelmiä maahan, ja tuuli '
             + 'ja vesi kuljettavat siemeniä sieltä uusille paikoille '
             + 'odottamaan seuraavaa sadetta.',
+          lyhyt: 'Kuwaitissa sataa vuodessa vain 75–150 mm, lähes kaikki talvella.',
           selite: 'Kuwaitissa sataa vuodessa vain 75–150 millimetriä ja '
             + 'melkein kaikki siitä talvella, ja sateiden jälkeen aavikko '
             + 'peittyy muutamaksi viikoksi ruohoon ja kukkiin.',
@@ -18628,6 +19447,7 @@ export const MAA_KATEGORIAT = {
             + 'yhdistys ja pari vuotta myöhemmin Sadu-talo, jotta taito ei '
             + 'katoaisi, ja vuonna 2020 sadu-kudonta otettiin Unescon '
             + 'perintöluetteloon.',
+          lyhyt: 'Beduiinien bait al-shaar -teltta kudotaan villasta; Unescon perintöä 2020.',
           selite: 'Beduiinien bait al-shaar -teltta kudotaan lampaan ja '
             + 'vuohen villasta ja kamelinkarvasta maahan levitetyillä '
             + 'kangaspuilla, ja sadu-kudonta otettiin Unescon '
@@ -18645,6 +19465,7 @@ export const MAA_KATEGORIAT = {
             + 'hohtaa kirkkaan vihreänä ultraviolettivalossa, ja siksi '
             + 'tutkijat etsivät skorpioneja yöllä UV-lampun kanssa: hiekalla '
             + 'loistaa pisteitä, joita ei paljaalla silmällä erota lainkaan.',
+          lyhyt: 'Arabianpaksupyrstöskorpionin kuori hohtaa vihreänä UV-valossa.',
           selite: 'Arabianpaksupyrstöskorpioni on kämmenen mittainen ja '
             + 'myrkyllinen yöeläin, jonka kuoressa oleva aine hohtaa '
             + 'ultraviolettivalon alla kirkkaan vihreänä.',
@@ -18683,6 +19504,7 @@ export const MAA_KATEGORIAT = {
             + 'löytynyt nuolenpääkirjoitusta ja sinettejä, joihin on kaiverrettu '
             + 'kuninkaiden nimiä. Kivikorttelit on kaivettu esiin ja peitetty '
             + 'paikoin suojaverkoilla, jottei tuuli kuluttaisi muureja.',
+          lyhyt: 'Failakan saarelle asetuttiin noin 2000 eaa.; Dilmunin aikaan se oli Agarum.',
           selite: 'Failakan saarelle asetuttiin noin vuoden 2000 eaa. '
             + 'tienoilla, ja Dilmunin aikaan se tunnettiin nimellä Agarum ja '
             + 'sitä pidettiin Enzak-jumalan maana.',
@@ -18700,6 +19522,7 @@ export const MAA_KATEGORIAT = {
             + 'pystyraidoin. Tornit seisovat useimmiten rivissä, koska yhteen '
             + 'paikkaan tehtiin monta kerralla. Järjestelmä sai vuonna 1980 '
             + 'kansainvälisen arkkitehtuuripalkinnon.',
+          lyhyt: 'Kuwaitiin rakennettiin 1960–70-luvuilla noin 30 vesitornia, palkittu 1980.',
           selite: 'Kuwaitissa ei ole jokea eikä järveä, joten '
             + '1960–70-luvuilla rakennettiin kolmisenkymmentä vesitornia '
             + 'tislatulle merivedelle, ja järjestelmä sai vuonna 1980 '
@@ -18717,6 +19540,7 @@ export const MAA_KATEGORIAT = {
             + 'ympäri puolessa tunnissa. Pallot on päällystetty noin 41 000 '
             + 'emaloidulla teräskiekolla kahdeksassa sinisen ja vihreän '
             + 'sävyssä. Tornit avattiin yleisölle maaliskuussa 1979.',
+          lyhyt: 'Kuwaitin tornit (1979): korkein on 187 m ja sisältää pyörivän kahvilan.',
           selite: 'Kuwaitin tornit avattiin yleisölle maaliskuussa 1979, ja '
             + 'korkein niistä on 187 metriä ja sisältää 4 500 kuutiometrin '
             + 'vesisäiliön sekä puolessa tunnissa pyörähtävän '
@@ -18734,6 +19558,7 @@ export const MAA_KATEGORIAT = {
             + 'nimeä. Sali on tarkoituksella lähes tyhjä: matto, pilarit ja '
             + 'valo riittävät. Rakennuksen mittakaavan huomaa vasta kun katsoo '
             + 'lattialla seisovia ihmisiä.',
+          lyhyt: 'Kuwait Cityn suureen moskeijaan (1979–86) mahtuu 10 000 rukoilijaa.',
           selite: 'Kuwait Cityn suuri moskeija rakennettiin vuosina '
             + '1979–1986, sen päärukoussaliin mahtuu kymmenentuhatta ihmistä, '
             + 'ja 26 metriä leveän keskuskupolin sisäpintaan on kirjoitettu '
@@ -18775,6 +19600,7 @@ export const MAA_KATEGORIAT = {
             + 'vasta vadille kaadettaessa — siksi valmis annos on raidallinen. '
             + 'Katkaravut jäävät riisikerroksen alle, ja ne löytyvät vasta '
             + 'lusikoimalla.',
+          lyhyt: 'Murabyan tehdään keittämällä katkaravut ja höyryttämällä riisi niiden liemessä.',
           selite: 'Murabyan on Kuwaitin tunnetuin kotiruoka, jossa katkaravut '
             + 'keitetään vadin pohjalle ja päälle höyrytetään riisi, joka '
             + 'imee liemen makuunsa.',
@@ -18791,6 +19617,7 @@ export const MAA_KATEGORIAT = {
             + 'kokonaisena. Kalatorilla hinta vaihtelee vuodenajan mukaan '
             + 'enemmän kuin millään muulla lajilla, ja parhaat yksilöt '
             + 'myydään heti aamulla. Lisukkeeksi tulee riisi ja hapan kastike.',
+          lyhyt: 'Zubaidi eli hopeaparma marinoidaan yrttitahnassa ja paistetaan kokonaisena.',
           selite: 'Zubaidi eli hopeaparma on Kuwaitin arvostetuin kala, ja se '
             + 'marinoidaan korianterista, valkosipulista, kuivatusta '
             + 'limetistä ja mausteista tehtyyn vihreään tahnaan ja paistetaan '
@@ -18808,6 +19635,7 @@ export const MAA_KATEGORIAT = {
             + 'samalta tarjottimelta yhdessä, ja leipää käytetään lusikan '
             + 'sijasta. Tori on toiminut samalla paikalla toistasataa vuotta, '
             + 'ja sen ympärillä myydään yhä mausteita, kultaa ja kankaita.',
+          lyhyt: 'Souq Al-Mubarakiyalla annos tarjoillaan yhdellä isolla yhteisellä tarjottimella.',
           selite: 'Souq Al-Mubarakiya on Kuwait Cityn vanhin tori, ja sen '
             + 'ruokapaikoissa annos tuodaan pöytään yhtenä isona '
             + 'metallitarjottimena, jolta syödään yhdessä.',
@@ -18824,6 +19652,7 @@ export const MAA_KATEGORIAT = {
             + 'kypsyyden. Osa lajikkeista syödään kiinteinä ja rapeina, osa '
             + 'pehmeinä ja siirappisina. Hyllyillä on lisäksi taatelisiirappia '
             + 'purkeissa — sitä valuu hedelmistä itsestään, kun ne pinotaan.',
+          lyhyt: 'Vanhan torin taatelikaupassa kauppias tunnistaa lajikkeet väristä ja kiillosta.',
           selite: 'Vanhan torin taatelikaupassa jokainen lajike on omassa '
             + 'matalassa laatikossaan, ja kauppias tunnistaa ne väristä, '
             + 'ryppyisyydestä ja kiillosta.',
@@ -18871,6 +19700,7 @@ export const MAA_KATEGORIAT = {
             + 'koristeineen, alaosa on jäänyt karkeaksi kiveksi. Hegrasta '
             + 'tuli vuonna 2008 Saudi-Arabian ensimmäinen Unescon '
             + 'maailmanperintökohde.',
+          lyhyt: 'Qasr al-Farid on nabatealaisten 2000 vuotta sitten veistämä, kesken jäänyt hauta.',
           selite: 'Qasr al-Farid on nabatealaisten noin kaksituhatta vuotta '
             + 'sitten yhteen yli kaksikymmentä metriä korkeaan lohkareeseen '
             + 'veistämä hauta, jonka työ jäi kesken.',
@@ -18889,6 +19719,7 @@ export const MAA_KATEGORIAT = {
             + 'Mäkien juurella oli ennen järvi, jonka luo ihmiset ja eläimet '
             + 'tulivat juomaan — se on kuivunut kokonaan, mutta kuvat '
             + 'kertovat yhä, ketkä siellä kävivät.',
+          lyhyt: 'Jubbahin kalliokuvat syntyivät hakkaamalla; alue on maailmanperintöä 2015.',
           selite: 'Jubbahin kalliokuvat tehtiin hakkaamalla tummunutta '
             + 'kalliopintaa rikki, ja alue otettiin Unescon '
             + 'maailmanperintöluetteloon vuonna 2015.',
@@ -18907,6 +19738,7 @@ export const MAA_KATEGORIAT = {
             + 'tehtiin palmunrungoista. Taloissa asuttiin pitkälle 1900-luvun '
             + 'loppuun: viimeisen perheen kerrotaan muuttaneen pois vuonna '
             + '1983, ja moskeijassa pidettiin viimeinen rukous vuonna 1985.',
+          lyhyt: 'AlUlan vanhassa kaupungissa on lähes 900 tiiviisti ladottua savitiilirakennusta.',
           selite: 'AlUlan vanhassa kaupungissa on noin yhdeksänsataa '
             + 'savitiilirakennusta, jotka on rakennettu niin tiiviisti kiinni '
             + 'toisiinsa, että uloimpien talojen seinät muodostavat koko '
@@ -18925,6 +19757,7 @@ export const MAA_KATEGORIAT = {
             + 'kannattamaan savimuuria. Alue otettiin maailmanperintöluetteloon '
             + 'vuonna 2010, ja rauniot on sen jälkeen tuettu ja avattu '
             + 'yleisölle.',
+          lyhyt: 'Diriyan At-Turaifi oli Saudi-valtion keskus 1727–1818, maailmanperintöä 2010.',
           selite: 'Diriyan keitaalla oleva At-Turaifin kaupunginosa '
             + 'perustettiin 1400-luvulla ja oli ensimmäisen Saudi-valtion '
             + 'keskus vuosina 1727–1818, ja se otettiin '
@@ -18963,6 +19796,7 @@ export const MAA_KATEGORIAT = {
             + 'on muotoiltu portaiksi, jotta sadevesi ei valuisi suoraan alas '
             + 'vaan jäisi pelloille. Portaat on tuettu kivimuureilla, ja '
             + 'niitä on korjattu sukupolvesta toiseen.',
+          lyhyt: 'Asirin vuoriston huiput kohoavat lähes 3 km, rinteet muurattu sadevesiportaiksi.',
           selite: 'Asirin vuoristossa ovat Saudi-Arabian korkeimmat huiput '
             + 'lähes kolmen kilometrin korkeudessa, ja sen rinteet on '
             + 'muotoiltu kivimuurein tuetuiksi portaiksi, jotta sadevesi '
@@ -18980,6 +19814,7 @@ export const MAA_KATEGORIAT = {
             + 'seiniin on ladottu valkoisia kvartsikiviä riveiksi ja '
             + 'kolmioiksi. Kuviot eivät ole pelkkää koristetta: ne auttoivat '
             + 'erottamaan talot toisistaan ja kertoivat suvun asemasta.',
+          lyhyt: 'Rijal Almaan yli 900-vuotias kylä vaurastui kauppatiellä Jemeniin.',
           selite: 'Rijal Almaan yli yhdeksänsataa vuotta vanha kylä vaurastui '
             + 'Jemenistä pohjoiseen kulkeneella kauppatiellä, ja sen '
             + 'korkeimmissa kivitaloissa on kahdeksan kerrosta.',
@@ -18996,6 +19831,7 @@ export const MAA_KATEGORIAT = {
             + 'vertailivat töitään keskenään, ja taitavimmin maalattu huone '
             + 'oli talon ylpeys. Unesco otti tavan aineettoman '
             + 'kulttuuriperinnön luetteloon vuonna 2017.',
+          lyhyt: 'Al-qatt al-asiri, asirilainen seinämaalausperinne, on Unescon listalla 2017.',
           selite: 'Al-qatt al-asiri on asirilainen tapa maalata vierashuoneen '
             + 'seinät geometrisin kuvioin, ja Unesco otti sen aineettoman '
             + 'kulttuuriperinnön luetteloon vuonna 2017.',
@@ -19013,6 +19849,7 @@ export const MAA_KATEGORIAT = {
             + 'olevan jäljellä noin 270 aikuista, ja määrä laskee, koska '
             + 'juniperimetsä ei uudistu. Kesällä ruokana ovat toukat, muina '
             + 'aikoina siemenet ja katajanmarjat.',
+          lyhyt: 'Asirinharakkaa tavataan vain Asirin juniperimetsissä, enää noin 270 yksilöä.',
           selite: 'Asirinharakkaa ei tavata missään muualla maailmassa kuin '
             + 'Asirin vuoriston afrikanjuniperimetsissä, ja aikuisia lintuja '
             + 'arvioidaan olevan jäljellä noin 270.',
@@ -19049,6 +19886,7 @@ export const MAA_KATEGORIAT = {
             + 'katsottuna saaret näyttävät kelluvan vaaleansinisellä matolla: '
             + 'matalaa vettä riutan päällä, ja sen ympärillä tummaa, syvää '
             + 'merta. Unesco nimesi saariston biosfäärialueeksi vuonna 2021.',
+          lyhyt: 'Farasanin saaristossa on lähes 200 saarta, vain kolme asuttua; biosfääriä 2021.',
           selite: 'Farasanin saaristossa on lähes kaksisataa saarta ja luotoa '
             + 'mutta vain kolme asuttua, ja Unesco nimesi saariston '
             + 'biosfäärialueeksi vuonna 2021.',
@@ -19065,6 +19903,7 @@ export const MAA_KATEGORIAT = {
             + 'Rantavesi on matalaa pitkälle ulos, ja siellä, missä pohja on '
             + 'suojassa aalloilta, kasvaa mangrovea: matalaa metsää '
             + 'suolavedessä.',
+          lyhyt: 'Farasanin saaret ovat korallikalkkikiveä, jossa erottuu korallien rakenne.',
           selite: 'Farasanin saaret ovat vanhaa korallikalkkikiveä, joka jäi '
             + 'kuivalle maan kohotessa, ja kivessä erottuu yhä korallien '
             + 'reikäinen rakenne.',
@@ -19081,6 +19920,7 @@ export const MAA_KATEGORIAT = {
             + 'huhtikuun loppuun, ja parvia voi olla toistakymmentä, kussakin '
             + 'satoja kaloja. Huhtikuussa saarella pidetään juhla, jossa '
             + 'kilpaillaan saaliin määrästä ja tanssitaan.',
+          lyhyt: 'Papukaijakalan yhteen kasvaneet etuhampaat rouhivat korallia ja levää.',
           selite: 'Papukaijakalan etuhampaat ovat kasvaneet yhteen '
             + 'nokkamaiseksi levyksi, jolla se rouhii korallin pintaa ja syö '
             + 'siitä levät.',
@@ -19097,6 +19937,7 @@ export const MAA_KATEGORIAT = {
             + 'merilintuja ja elää oma gasellikanta, joka on jäänyt saarille '
             + 'eristyksiin. Talvella lahdilla lepää myös kahlaajia, jotka ovat '
             + 'matkalla Euraasiasta Afrikkaan.',
+          lyhyt: 'Isoflamingo siivilöi ravintoa Farasanin matalikoilta vuoroveden aikaan.',
           selite: 'Isoflamingo siivilöi ravintonsa nokkansa reunalevyillä, ja '
             + 'Farasanin saarten välissä vuorovesi paljastaa kahdesti '
             + 'vuorokaudessa laajat matalikot, joiden liejusta ruokaa löytyy.',
@@ -19136,6 +19977,7 @@ export const MAA_KATEGORIAT = {
             + 'kokonaan. Maassa toimii kasvatuskeskus, jossa poikasia syntyy '
             + 'vuosittain, ja tavoitteena on palauttaa laji takaisin '
             + 'vuoristoon.',
+          lyhyt: 'Arabianleopardi, maailman pienin leopardin alalaji, oli 2023 enää noin sata.',
           selite: 'Arabianleopardi on maailman pienin leopardin alalaji, ja '
             + 'villejä yksilöitä arvioitiin vuonna 2023 olevan koko Arabian '
             + 'niemimaalla enää noin sata.',
@@ -19153,6 +19995,7 @@ export const MAA_KATEGORIAT = {
             + 'pohjoisosaan, joka on pinta-alaltaan yksi maailman laajimmista. '
             + 'Alueella liikkuu vartijoita, ja laidunkasvillisuutta on '
             + 'istutettu takaisin.',
+          lyhyt: 'Arabiangaselli eli reem on palautettu Kuningas Salmanin suojelualueelle.',
           selite: 'Arabiangaselli eli reem tulee toimeen vähällä vedellä ja '
             + 'on palautettu maan pohjoisosan Kuningas Salmanin '
             + 'suojelualueelle, joka on pinta-alaltaan yksi maailman '
@@ -19171,6 +20014,7 @@ export const MAA_KATEGORIAT = {
             + 'valkoiset vuoret. Niistä korkein, Jabal Abyad, on koko maan '
             + 'korkein tulivuori. Avaruusasemalta otetussa kuvassa ero näkyy '
             + 'väreinä.',
+          lyhyt: 'Harrat Khaybarin laavakenttä syntyi viiden miljoonan vuoden purkauksista.',
           selite: 'Harrat Khaybarin laavakenttä kattaa noin '
             + 'kaksitoistatuhatta neliökilometriä ja on syntynyt purkauksista '
             + 'viiden miljoonan vuoden aikana, ja viimeisin purkaus ajoittuu '
@@ -19188,6 +20032,7 @@ export const MAA_KATEGORIAT = {
             + 'Salmanin suojelualueeseen, ja sen halki on kuljettu vanhoja '
             + 'karavaanireittejä. Aamulla ja illalla kivi hehkuu oranssina, '
             + 'koska matala aurinko korostaa hiekkakiven rautapitoista pintaa.',
+          lyhyt: 'Hailin hiekkakiveä tuuli ja sateet kuluttavat ulokkeiksi ja onkaloiksi.',
           selite: 'Hailin seudun hiekkakivi on kerroksellista, ja tuuli ja '
             + 'harvat rankkasateet ovat kuluttaneet pehmeämmät kerrokset '
             + 'kovia nopeammin ulokkeiksi, kielekkeiksi ja onkaloiksi.',
@@ -19230,6 +20075,7 @@ export const MAA_KATEGORIAT = {
             + 'vetäjä piti köydestä kiinni ja nosti sukeltajan pintaan, kun '
             + 'tämä nykäisi. Yhdellä hengityksellä pohjassa vietettiin reilu '
             + 'minuutti, ja sukelluksia tehtiin kymmeniä päivässä.',
+          lyhyt: 'Bu Maherin linnakkeelta seurattiin helmenkalastuslaivojen lähtöä kesäisin.',
           selite: 'Bu Maherin linnakkeelta Muharraqin kärjessä katsottiin '
             + 'helmenkalastuslaivojen lähtöä, ja suuri sukelluskausi kesti '
             + 'kesäkuusta syyskuuhun.',
@@ -19248,6 +20094,7 @@ export const MAA_KATEGORIAT = {
             + 'reittinä: seitsemäntoista rakennusta, kolme '
             + 'helmisimpukkapenkkiä merellä ja linnake, joita yhdistää kolmen '
             + 'ja puolen kilometrin polku.',
+          lyhyt: 'Bayt Siyadin kipsiristikkoikkunat päästävät valon mutta torjuvat auringon.',
           selite: 'Bayt Siyadi on muharraqilaisen helmikauppiaan talo, jonka '
             + 'korallikiviseinien kipsiristikkoikkunat päästävät ilman ja '
             + 'valon sisään mutta pitävät suoran auringon ulkona.',
@@ -19267,6 +20114,7 @@ export const MAA_KATEGORIAT = {
             + 'vuosikymmeneltä, ja 1950-luvun alussa merelle lähti enää '
             + 'tusina venettä. Bahrain kieltää yhä viljellyn helmen myynnin — '
             + 'maassa myytävän helmen on oltava merestä nostettu.',
+          lyhyt: 'Bahrainin helmilaivasto kutistui 900 veneestä tusinaan 1950-luvulle mennessä.',
           selite: 'Bahrainin helmilaivasto kutistui noin yhdeksästäsadasta '
             + 'veneestä tusinaan 1950-luvun alkuun mennessä, kun japanilainen '
             + 'viljelty helmi tuli markkinoille ja maasta löytyi öljyä vuonna '
@@ -19284,6 +20132,7 @@ export const MAA_KATEGORIAT = {
             + 'usein myös rahoitti kauden etukäteen ja peri velan saaliista. '
             + 'Kauden tuotto jaettiin osuuksina, ja parhaan helmen hinta '
             + 'saattoi ratkaista koko miehistön vuoden.',
+          lyhyt: 'Helmiveneellä nahkoda johti, ghais sukelsi ja saib veti köyttä.',
           selite: 'Helmiveneellä nahkoda johti, ghais sukelsi ja saib veti '
             + 'köyttä, ja päivän simpukat avattiin vasta yhdessä, jottei '
             + 'kukaan voisi ottaa helmeä omaan taskuunsa.',
@@ -19328,6 +20177,7 @@ export const MAA_KATEGORIAT = {
             + "mäet. Haudoista on löytynyt ruukkuja, sinettejä, norsunluuta "
             + "ja kuparia. Alue otettiin maailmanperintöluetteloon vuonna "
             + "2019.",
+          lyhyt: 'Bahrainin pääsaarella on yli 10 000 hautakumpua, maailmanperintöä 2019.',
           selite: 'Bahrainin pääsaarella on säilynyt yli kymmenentuhatta '
             + 'hautakumpua, joista vanhimmat on tehty pronssikaudella noin '
             + 'neljätuhatta vuotta sitten, ja alue otettiin '
@@ -19348,6 +20198,7 @@ export const MAA_KATEGORIAT = {
             + "Päällimmäisenä on portugalilaisten 1500-luvulla rakentama "
             + "linnoitus, joka antoi paikalle nykyisen nimen. Kummusta on "
             + "kaivettu esiin vasta neljäsosa.",
+          lyhyt: 'Qal\'at al-Bahrain kohoaa kummulla, jonka päällä on 1500-luvun linnoitus.',
           selite: 'Qal\'at al-Bahrain seisoo kahdentoista metrin korkuisella '
             + 'kummulla, joka on syntynyt seitsemästä päällekkäisestä '
             + 'asutuskerroksesta lähes neljäntuhannen vuoden ajalta, ja '
@@ -19367,6 +20218,7 @@ export const MAA_KATEGORIAT = {
             + 'asti. Puu on tullut niin kuuluisaksi, että sitä käy katsomassa '
             + 'noin kuusikymmentäviisituhatta ihmistä vuodessa, ja runkoon '
             + 'kaiverretut nimet pakottivat lopulta aitaamaan sen.',
+          lyhyt: 'Bahrainin aavikon yli 400-vuotias Elämän puu kasvaa täysin yksinään.',
           selite: 'Bahrainin eteläosan aavikolla yksinään kasvava '
             + 'Prosopis-suvun Elämän puu on lähes kymmenen metriä korkea ja '
             + 'arviolta yli neljäsataa vuotta vanha, ja sen juuriston '
@@ -19385,6 +20237,7 @@ export const MAA_KATEGORIAT = {
             + 'tuotiin veneillä Jiddan saarelta ja hiottiin tarkoiksi '
             + 'palikoiksi. Tanskalainen tutkimusryhmä löysi paikan vuonna '
             + '1954; kuuluisin löytö on kuparinen häränpää.',
+          lyhyt: 'Barbarin kylässä on kolme päällekkäistä temppeliä, vanhin noin 3000 eaa.',
           selite: 'Barbarin kylässä on kolme temppeliä päällekkäin, joista '
             + 'vanhin on noin vuodelta 3000 eaa., ja niiden keskellä on '
             + 'luonnonlähde, jonka ympärille rakennettiin pyöreä allas.',
@@ -19422,6 +20275,7 @@ export const MAA_KATEGORIAT = {
             + 'täytetty uutta maata, ja portin edessä kulkee valtatie. '
             + 'Julkisivu muutettiin vuonna 1986 islamilaiseen tyyliin, ja '
             + 'pohjakerroksessa on nyt matkailuneuvonta ja käsityöpuoti.',
+          lyhyt: 'Bab al-Bahrain valmistui 1949 veden äärelle; nyt meri on kilometrien päässä.',
           selite: 'Bab al-Bahrain valmistui vuonna 1949 Manaman tulliaukiolle '
             + 'aivan veden äärelle, mutta maantäytön jälkeen meri on '
             + 'kilometrien päässä.',
@@ -19439,6 +20293,7 @@ export const MAA_KATEGORIAT = {
             + 'sitten samoja: sementtiä ei laitettu lainkaan, koska se olisi '
             + 'sulkenut kosteuden muurin sisään. Linnake seisoi ennen omalla '
             + 'saarellaan, mutta maantäyttö on liittänyt sen Muharraqiin.',
+          lyhyt: 'Aradin 1400-luvun linnake muurattiin korallikivestä ja palmunrungoista.',
           selite: 'Aradin linnake on 1400-luvun lopulta, ja se muurattiin '
             + 'matalikoilta irrotetusta korallikivestä, kalkista ja '
             + 'palmunrungoista.',
@@ -19455,6 +20310,7 @@ export const MAA_KATEGORIAT = {
             + 'Italiasta, kattokruunu Itävallasta ja ovet Intian tiikistä. '
             + 'Seinillä kiertää kulmikasta kufi-kirjoitusta. Vuodesta 2006 '
             + 'rakennuksessa on toiminut myös Bahrainin kansalliskirjasto.',
+          lyhyt: 'Manaman al-Fatehin moskeijaan (1987) mahtuu yli 7000 ihmistä.',
           selite: 'Vuonna 1987 valmistuneeseen Manaman al-Fatehin moskeijaan '
             + 'mahtuu yli seitsemäntuhatta ihmistä, ja sen noin '
             + 'viisikymmentäneljä tonnia painava kupoli on lasikuitua.',
@@ -19472,6 +20328,7 @@ export const MAA_KATEGORIAT = {
             + 'pieninä kuppeina ja teetä lasissa. Alkuperäisissä taloissa '
             + 'sama viilennys hoidettiin ilman koneita: paksu korallikivimuuri '
             + 'ja ristikkoikkunat pitivät auringon ulkona.',
+          lyhyt: 'Manaman perinnekorttelin taloissa viilennys hoidettiin ilman koneita.',
           selite: 'Manaman perinnekorttelissa vanha rakennustapa on tehty '
             + 'uudelleen näkyväksi, ja alkuperäisissä taloissa viilennys '
             + 'hoidettiin ilman koneita paksuin korallikivimuurein ja '
@@ -19511,6 +20368,7 @@ export const MAA_KATEGORIAT = {
             + 'jolloin syntyy pyöreä leivonnainen, joka on ulkoa rapea ja '
             + 'sisältä pehmeä. Päälle ripotellaan seesaminsiemeniä. Nimen '
             + 'alkuperästä ei olla yksimielisiä.',
+          lyhyt: 'Khanfaroosh on riisijauho- ja sahramileivonnainen valurautamuotissaan.',
           selite: 'Khanfaroosh on bahrainilainen riisijauhosta, sahramista, '
             + 'kardemummasta ja ruusuvedestä tehty leivonnainen, joka '
             + 'paistetaan omassa kuoppaisessa valurautamuotissaan.',
@@ -19527,6 +20385,7 @@ export const MAA_KATEGORIAT = {
             + 'jolloin pallot tulevat samankokoisiksi nopeasti. Luqaimat '
             + 'tarjotaan arabialaisen kahvin kanssa, ja se on tuttu koko '
             + 'Persianlahden alueella.',
+          lyhyt: 'Luqaimat-suupalat kastetaan kuumina hunajaan tai taatelisiirappiin.',
           selite: 'Luqaimat tarkoittaa pieniä suupaloja, ja ne ovat '
             + 'hiivataikinapalleroita, jotka paistetaan öljyssä ja kastetaan '
             + 'heti kuumina hunajaan tai taatelisiirappiin.',
@@ -19543,6 +20402,7 @@ export const MAA_KATEGORIAT = {
             + 'lihaa. Näin ruokailu sujuu ilman aterimia, ja pöydän keskellä '
             + 'olevat kulhot ovat kaikkien yhteisiä. Aterian lopuksi jäljelle '
             + 'jäänyt leipä käytetään kulhojen puhtaaksi pyyhkimiseen.',
+          lyhyt: 'Bahrainilaisella pöydällä litteä leipä toimii sekä lautasena että lusikkana.',
           selite: 'Bahrainilaisella pöydällä litteä leipä toimii sekä '
             + 'lautasena että lusikkana, sillä siitä revitään pala, joka '
             + 'taivutetaan sormin pieneksi kauhaksi.',
@@ -19559,6 +20419,7 @@ export const MAA_KATEGORIAT = {
             + 'ja se rikotaan pataan antamaan hapokkuutta. Lisukkeeksi tulee '
             + 'salaattia ja iso lasillinen tuoremehua. Aterimia ei '
             + 'välttämättä tuoda pöytään lainkaan, koska leipä riittää.',
+          lyhyt: 'Loomi, kuivattu limetti, on Persianlahden keittiön tunnusmauste.',
           selite: 'Loomi eli suolavedessä keitetty ja auringossa kuivattu '
             + 'limetti on koko Persianlahden keittiön tunnusmauste, ja se '
             + 'rikotaan pataan antamaan hapokkuutta.',
@@ -19602,6 +20463,7 @@ export const MAA_KATEGORIAT = {
               + 'Kasteltua maata oli noin 9 600 hehtaaria. Pato murtui ja '
               + 'korjattiin useasti — vuosina 449, 450, 542 ja 548 — ja vuoden '
               + '570 tienoilla sitä ei enää korjattu.',
+          lyhyt: 'Maribin pato kasteli 9600 hehtaaria tuhannen vuoden ajan 570-luvulle asti.',
           selite: 'Maribin pato oli tuhannen vuoden työ, jonka vanhin '
             + 'luotettavasti ajoitettu vaihe on 700-luvulta eaa., ja se '
             + 'kasteli noin 9 600 hehtaaria maata siihen asti, kunnes sitä ei '
@@ -19625,6 +20487,7 @@ export const MAA_KATEGORIAT = {
             + 'jumalalle omistettu Awwamin temppeli, Etelä-Arabian suurin '
             + 'tunnettu temppelialue. Maribin sabalaiskohteet otettiin '
             + 'maailmanperintöluetteloon vuonna 2023.',
+          lyhyt: 'Bar\'anin temppelissä Maribissa oli kaivausten mukaan kuusi pylvästä viiden sijaan.',
           selite: 'Maribin keitaan reunalla oleva Bar\'anin temppeli '
             + 'pyhitettiin Almaqah-jumalalle, ja vuoden 1988 kaivauksissa '
             + 'selvisi, että sen pylväitä oli viiden sijaan kuusi, sillä '
@@ -19643,6 +20506,7 @@ export const MAA_KATEGORIAT = {
               + '1900-luvun kuluessa, ja asukkaat siirtyivät tasangolle uuteen '
               + 'Maribiin noin kolmen kilometrin päähän. Vanhat talot jäivät '
               + 'paikoilleen ilman kattoja.',
+          lyhyt: 'Vanhan Maribin savitiilikylän kumpu syntyi raunioiden päälle rakentamalla.',
           selite: 'Vanhan Maribin savitiilikylä seisoo kummulla, joka on '
             + 'syntynyt siitä, että sortuneen talon raunion päälle '
             + 'rakennettiin aina uusi talo.',
@@ -19664,6 +20528,7 @@ export const MAA_KATEGORIAT = {
               + 'maailmanperintöluetteloon vuonna 1993 ja siirrettiin '
               + 'vaarantuneen maailmanperinnön luetteloon vuonna 2000 maan omasta '
               + 'pyynnöstä.',
+          lyhyt: 'Zabid perustettiin noin 820 pyöreäksi muurikaupungiksi tunnettuine korkeakouluineen.',
           selite: 'Zabid perustettiin noin vuonna 820 muurien ympäröimäksi '
             + 'pyöreäksi kaupungiksi, jonka moskeijoista kasvoi kauas '
             + 'tunnettu korkeakoulu, ja nykyinen kaupunginmuuri portteineen '
@@ -19707,6 +20572,7 @@ export const MAA_KATEGORIAT = {
               + 'eli kuivan jokiuoman tulvatasankoa, ja tiiviin muurin sisällä '
               + 'oltiin turvassa myös kilpailevilta suvuilta. Shibam otettiin '
               + 'maailmanperintöluetteloon vuonna 1982.',
+          lyhyt: 'Shibamissa on noin 500 savitiilistä tornitaloa, maailmanperintöä 1982.',
           selite: 'Shibamin muurien sisällä on noin viisisataa auringossa '
             + 'kuivatusta savitiilestä muurattua tornitaloa, joissa on '
             + 'viidestä yhteentoista kerrosta, ja kaupunki otettiin '
@@ -19728,6 +20594,7 @@ export const MAA_KATEGORIAT = {
               + 'Alimmat kerrokset on muurattu mustasta basaltista ja ylemmät '
               + 'poltetusta tiilestä. Kallion sisässä on kaivo, josta talo sai '
               + 'vetensä. Palatsi on nykyään museo.',
+          lyhyt: 'Dar al-Hajar sai 1920 imaami Yahyan kesäasunnon muodon hiekkakivipaadella.',
           selite: 'Dar al-Hajar sai nykyisen muotonsa vuonna 1920 imaami '
             + 'Yahyan kesäasunnoksi, ja sen epäsäännöllinen pohjakaava '
             + 'noudattaa alla olevan hiekkakivipaaden muotoa.',
@@ -19744,6 +20611,7 @@ export const MAA_KATEGORIAT = {
               + 'katsottuna on vaikea sanoa, missä kallio loppuu ja seinä alkaa. '
               + 'Kiviseinä on paksu, mikä pitää sisätilat viileinä päivällä ja '
               + 'lämpiminä yöllä. Kylään kuljetaan kapeita kivikujia pitkin.',
+          lyhyt: 'Al-Hajjarah kohoaa Harazin vuorilla, talot muurattu samasta kivestä.',
           selite: 'Al-Hajjarah on Harazin vuorilla 1 858 metrin korkeudessa, '
             + 'ja sen talot on muurattu samasta harmaasta kivestä, jonka '
             + 'päällä ne seisovat, ilman erillistä perustusta.',
@@ -19764,6 +20632,7 @@ export const MAA_KATEGORIAT = {
               + 'joilla on omat nimensä. Vettä myös riittää: Kawkabaniin sataa '
               + 'vuodessa noin 380 millimetriä, enemmän kuin lähelle jäävään '
               + 'Sanaaseen.',
+          lyhyt: 'Kawkabanista johtaa alas yli tuhat kallioon hakattua porrasta.',
           selite: 'Kawkaban on vuoren laella lähes kolmen kilometrin '
             + 'korkeudessa, ja alas tasangolle johtaa runsaat tuhat kallioon '
             + 'hakattua porrasta lähes 600 metrin korkeuserolla.',
@@ -19808,6 +20677,7 @@ export const MAA_KATEGORIAT = {
               + 'toisin kuin vuorilla: talo on pyöreä ja sen katto on oljesta '
               + 'kartion muotoon sidottu, mikä muistuttaa enemmän Afrikan puolta '
               + 'kuin Arabiaa.',
+          lyhyt: 'Tihaman rannikkokylissä talo on pyöreä ja katto oljesta kartiomainen.',
           selite: 'Tihama on Punaisenmeren ja vuorten välinen kuuma '
             + 'rannikkokaistale, jonka kylissä talo on pyöreä ja katto '
             + 'oljesta kartion muotoon sidottu.',
@@ -19826,6 +20696,7 @@ export const MAA_KATEGORIAT = {
               + 'Kahdensadan kilometrin päässä koilliseen alkaa Ramlat '
               + 'as-Sabatayn, hiekka-aavikko jossa sataa muutama kymmenen '
               + 'millimetriä vuodessa.',
+          lyhyt: 'Ibbin ylängöllä sataa eniten koko Arabian niemimaalla, siksi \'vihreä maakunta\'.',
           selite: 'Ibbin, Taizzin ja Yarimin lounaisylängöllä sataa vuodessa '
             + '600–1 500 millimetriä eli enemmän kuin missään muualla Arabian '
             + 'niemimaalla, ja siksi Ibbiä kutsutaan vihreäksi maakunnaksi.',
@@ -19846,6 +20717,7 @@ export const MAA_KATEGORIAT = {
               + 'yksiköt liittyvät klaaneiksi, klaanit joukoiksi ja joukot '
               + 'satojen yksilöiden laumoiksi. Yönsä lauma nukkuu '
               + 'kallioseinämillä.',
+          lyhyt: 'Mantelipaviaani on ainoa paviaanilaji Afrikan ulkopuolella.',
           selite: 'Mantelipaviaani on ainoa paviaanilaji Afrikan '
             + 'ulkopuolella, ja geenitutkimuksen mukaan se tuli Arabian '
             + 'niemimaalle itse viimeisen jääkauden aikana, kun merenpinta '
@@ -19888,6 +20760,7 @@ export const MAA_KATEGORIAT = {
               + 'ja yrteistä survottu tahna. Ateria syödään ohuella '
               + 'mulawah-leivällä, jota revitään pala kerrallaan ja käytetään '
               + 'lusikkana.',
+          lyhyt: 'Saltah ja fahsa tarjoillaan vuolukivipadassa, joka pitää ruoan poreilevana.',
           selite: 'Saltah ja fahsa keitetään ja tarjoillaan madrassa eli '
             + 'vuolukivestä koverretussa padassa, joka kuumennetaan niin, '
             + 'että sisältö poreilee vielä pöydässä.',
@@ -19903,6 +20776,7 @@ export const MAA_KATEGORIAT = {
               + 'pähkinöitä tai juustoa. Annos tarjoillaan isolta vadilta, ja '
               + 'siitä syödään yhdessä. Ruokalajia sanotaan myös malikiaksi, ja '
               + 'sitä syödään yhtä lailla Saudi-Arabian länsiosissa.',
+          lyhyt: 'Masoob survotaan banaaneista ja leivästä, tarjoillaan kerman ja hunajan kera.',
           selite: 'Masoob tehdään ylikypsistä banaaneista ja edellisen päivän '
             + 'leivästä, jotka survotaan yhdessä tasaiseksi massaksi ja '
             + 'tarjoillaan kerman ja hunajan kanssa.',
@@ -19920,6 +20794,7 @@ export const MAA_KATEGORIAT = {
               + 'ripotellaan mustakuminan siemeniä. Sama leivonnainen tunnetaan '
               + 'myös nimellä sabaya. Se tarjoillaan juhlissa ja usein aterian '
               + 'yhteydessä eikä vasta jälkiruokana.',
+          lyhyt: 'Bint al-sahn paistetaan kymmenestä ohuesta taikinalevystä voin kera.',
           selite: 'Bint al-sahn tarkoittaa lautasen tytärtä, ja se paistetaan '
             + 'noin kymmenestä käsin läpinäkyväksi venytetystä '
             + 'taikinalevystä, joiden väliin sivellään kirkastettua voita.',
@@ -19965,6 +20840,7 @@ export const MAA_KATEGORIAT = {
               + 'otettiin maailmanperintöluetteloon 1998. Ranskalainen '
               + 'tutkimusryhmä on kaivanut paikkaa vuodesta 1976, eikä suurinta '
               + 'osaa kylästä ole vieläkään avattu.',
+          lyhyt: 'Khirokitiassa asuttiin 7.–5. vuosituhannella eaa. pyöreissä savitiilitaloissa.',
           selite: 'Khirokitiassa asuttiin 7.–5. vuosituhannella eaa. muurien '
             + 'suojaan rakennetuissa pyöreissä savitiili- ja kivitaloissa, '
             + 'joiden poljetun lattian alle myös vainajat haudattiin.',
@@ -19987,6 +20863,7 @@ export const MAA_KATEGORIAT = {
               + 'takaisin teatteriksi, ja alimmat karkeasti hakatut rivit ovat '
               + 'siitä jälleenrakennuksesta. Katsomo koottiin uudelleen 1961, ja '
               + 'siellä pidetään taas esityksiä.',
+          lyhyt: 'Kourionin teatteri toimi 200-luvulla myös petoeläinareenana.',
           selite: 'Kourionin teatteri rakennettiin 100-luvulla eaa. ja '
             + 'laajennettiin 100-luvulla jaa. 3 500 katsojan kokoiseksi, ja '
             + '200-luvun alkupuolella siitä tehtiin petoeläinnäytösten areena '
@@ -20009,6 +20886,7 @@ export const MAA_KATEGORIAT = {
               + 'tunnetaan vain kaksi, molemmat Syyriasta. Lattian erikoisuus on '
               + 'se, että lähes jokaisen hahmon yläpuolelle on ladottu tämän nimi '
               + 'kreikkalaisin kirjaimin.',
+          lyhyt: 'Aionin talon mosaiikissa (1983) jokaisen hahmon yllä lukee tämän nimi.',
           selite: 'Aionin talon mosaiikkilattia löytyi Nea Pafoksesta vuonna '
             + '1983, ja sen erikoisuus on se, että lähes jokaisen hahmon '
             + 'yläpuolelle on ladottu tämän nimi kreikkalaisin kirjaimin.',
@@ -20029,6 +20907,7 @@ export const MAA_KATEGORIAT = {
               + 'Tacitus kuvaa sen pyöreäksi möhkäleeksi, joka kohoaa leveästä '
               + 'pohjasta kartiona kapeaan huippuun. Alttarilla ei uhrattu verta '
               + 'vaan pelkkiä rukouksia ja puhdasta liekkiä.',
+          lyhyt: 'Palaipafoksen pyhäkön muuri koostuu kalkkikivilaatoista, pisimmät 5 metriä.',
           selite: 'Palaipafoksen pyhäkkö pystytettiin noin 1200–1100 eaa., ja '
             + 'sen läntinen muuri ladottiin kalkkikivilaatoista, joista '
             + 'pisimmät ovat viisi metriä pitkiä ja 2,2 metriä korkeita.',
@@ -20074,6 +20953,7 @@ export const MAA_KATEGORIAT = {
               + 'eteishuone sai yhtenäisen ohjelmansa vuonna 1332 tai 1333. Sen '
               + 'omistuskirjoituksen mukaan työ tehtiin luostarin ja tavallisen '
               + 'kansan tuella.',
+          lyhyt: 'Asinoun kirkko maalattiin 1105–1106, eteishuone 1332–1333.',
           selite: 'Asinoun kirkko rakennettiin tai maalattiin '
             + 'piirtokirjoituksen mukaan vuonna 1105 tai 1106 Nikeforos '
             + 'Ischyrioksen lahjoituksella, ja sen eteishuone sai yhtenäisen '
@@ -20096,6 +20976,7 @@ export const MAA_KATEGORIAT = {
               + '1200-luvulle. Kate on erikoisvalmisteista litteää koukkutiiltä, '
               + 'ja kukin tiili peittää seuraavasta kaksi kolmasosaa, joten '
               + 'pystysuora leikkaus osuu aina kolmeen tiileen.',
+          lyhyt: 'Agios Nikolaos tis Stegis on nimetty ison puukattonsa mukaan.',
           selite: 'Agios Nikolaos tis Stegis on Kyproksen kirkoista ainoa, '
             + 'joka on nimetty kattonsa mukaan, sillä kreikan stegi '
             + 'tarkoittaa kattoa ja iso puukatto peittää 1000-luvun '
@@ -20118,6 +20999,7 @@ export const MAA_KATEGORIAT = {
               + 'lisättiin luultavasti vasta 1300-luvulla — sen alla holvien '
               + 'päällä ovat yhä alkuperäiset kattotiilet. Kirkkoa käytetään yhä, '
               + 'ja sen juhlapäivä on 8. syyskuuta.',
+          lyhyt: 'Panagia tou Arakan kupolissa on 12 ikkunaa ja 12 profeettaa, maalattu 1192.',
           selite: 'Panagia tou Arakan kupolin rummussa on kaksitoista ikkunaa '
             + 'ja niiden välissä kaksitoista profeettaa, ja seinämaalaukset '
             + 'valmistuivat joulukuussa 1192 Leon tou Authentoun '
@@ -20139,6 +21021,7 @@ export const MAA_KATEGORIAT = {
               + 'holvikaareen. Rakennuksessa on vielä yksi piirre, jota ei ole '
               + 'muualla saarella: jyrkkä puukatto jatkuu seinien ulkopuolelle '
               + 'kaikilla neljällä sivulla ja muodostaa kiertävän kuistin.',
+          lyhyt: 'Timios Stavros tou Agiasmatin maalaukset (1494) ovat saaren täydellisimmät.',
           selite: 'Timios Stavros tou Agiasmatin maalaukset valmistuivat '
             + 'vuonna 1494 pappi Petros Peratiksen ja hänen vaimonsa Pepanin '
             + 'lahjoituksella, ja ne ovat saaren täydellisimmät 1400-luvun '
@@ -20184,6 +21067,7 @@ export const MAA_KATEGORIAT = {
               + 'Pafoksen metsä rauhoitettiin. Kanta on siitä lähtien noussut, ja '
               + 'viranomaiset ilmoittavat nyt yli kolmetuhatta yksilöä — tarkin '
               + 'julkaistu laskenta on silti vuodelta 2007.',
+          lyhyt: 'Kyproksenmuflonista tuli saaren suurin nisäkäs kuusipeuran hävittyä.',
           selite: 'Kyproksenmufloni on villilammas, jota ei tavata missään '
             + 'muualla, ja siitä tuli saaren suurin maalla elävä nisäkäs, kun '
             + 'mesopotamiankuusipeura hävisi.',
@@ -20204,6 +21088,7 @@ export const MAA_KATEGORIAT = {
               + 'miljoonaa vuotta sitten. Puu kukkii syys–lokakuussa, ja käpy '
               + 'kypsyy vasta seuraavan vuoden loppukesällä. Vanhimmat puut ovat '
               + 'yli 500-vuotiaita.',
+          lyhyt: 'Kyproksensetri kasvaa vain Pafoksen metsässä, käpy kypsyy vasta vuoden päästä.',
           selite: 'Kyproksensetri kasvaa luonnonvaraisena vain Pafoksen '
             + 'metsässä kaikkiaan 290 hehtaarin alalla, ja sen käpy kypsyy '
             + 'vasta seuraavan vuoden loppukesällä.',
@@ -20225,6 +21110,7 @@ export const MAA_KATEGORIAT = {
               + 'kääntynyt topografisesti ympäri: syvimmät kivet paljastuvat '
               + 'korkeimman huipun ympäriltä ja nuoremmat alempaa rinteiltä. '
               + 'Korkein huippu Chionistra on 1 952 metriä.',
+          lyhyt: 'Troodoksen ofioliitti on kääntynyt ympäri: syvimmät kivet ovat huipulla.',
           selite: 'Troodoksen vuoristo on noin 92 miljoonaa vuotta sitten '
             + 'Neotethys-meren pohjalla syntynyt ofioliitti, jonka '
             + 'kerrossarja on kääntynyt ympäri niin, että syvimmät kivet '
@@ -20247,6 +21133,7 @@ export const MAA_KATEGORIAT = {
               + 'Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä '
               + 'vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on '
               + 'Ramsar-kosteikko ja rauhoitettiin 1997.',
+          lyhyt: 'Larnakan suolajärven flamingot viipyvät marraskuusta helmikuun loppuun.',
           selite: 'Larnakan suolajärvessä on vettä vain myöhäisestä syksystä '
             + 'alkukesään, ja sen flamingot saapuvat marraskuussa Turkin ja '
             + 'Iranin pesimäalueilta ja viipyvät helmikuun loppuun.',
@@ -20290,6 +21177,7 @@ export const MAA_KATEGORIAT = {
               + 'Leonardo da Vinci olisi ostanut sieltä liinan Milanon '
               + 'tuomiokirkolle vuonna 1481, mutta aikalaislähdettä siitä ei ole: '
               + 'tarina ilmestyi painettuna vasta noin 1930.',
+          lyhyt: 'Lefkaralainen pitsi syntyy osin lankoja poistamalla, juontaa 1300-luvulle.',
           selite: 'Lefkaralainen pitsi ommellaan pellavaan puuvillalangalla '
             + 'niin, että osa kuviosta syntyy poistamalla lankoja kankaasta, '
             + 'ja perinne ulottuu Lefkaran kylässä ainakin 1300-luvulle.',
@@ -20308,6 +21196,7 @@ export const MAA_KATEGORIAT = {
               + 'oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä '
               + 'käsissä. Lefkaritika merkittiin Unescon aineettoman '
               + 'kulttuuriperinnön luetteloon vuonna 2009.',
+          lyhyt: 'Pano Lefkarassa yhteen pöytäliinaan voi kulua kaksi vuotta.',
           selite: 'Pano Lefkarassa yhteen pöytäliinaan voi kulua kaksi '
             + 'vuotta, ja lefkaritika merkittiin Unescon aineettoman '
             + 'kulttuuriperinnön luetteloon vuonna 2009.',
@@ -20330,6 +21219,7 @@ export const MAA_KATEGORIAT = {
               + 'trahanas-keittoa. Foinin tuotanto loppui 1970-luvun alussa; '
               + 'Kornoksessa työ jatkuu yhä, mutta perinnesavenvalajia on '
               + 'jäljellä vain muutamia kymmeniä, enimmäkseen naisia.',
+          lyhyt: 'Kyproksen pitharia-ruukut ladottiin savirenkaista 20–45 päivässä.',
           selite: 'Kyproksen vuoristokylissä suuret pitharia-ruukut '
             + 'rakennettiin päällekkäin ladotuista savirenkaista, ja yhden '
             + 'ruukun valmistus kesti koosta riippuen 20–45 päivää.',
@@ -20349,6 +21239,7 @@ export const MAA_KATEGORIAT = {
               + 'oranssi ja vihreä tulivat myöhemmin. Kudonta kuului taloihin, '
               + 'joissa tytöt valmistivat vuosien ajan tekstiilejä omiin '
               + 'myötäjäisiinsä. Kylässä on nykyään kudontamuseo.',
+          lyhyt: 'Fythkiotika-kudonnaissa kuvio syntyy loimen kanssa; kapeilla mostres-riveillä on omat nimensä.',
           selite: 'Fythkiotika-kudonnaisissa kuvio kudotaan kankaaseen '
             + 'samalla kertaa loimen kanssa, ja kapeilla mostres-riveillä on '
             + 'omat nimensä, kuten psarokokkaloudi eli kalanruoto.',
@@ -20392,6 +21283,7 @@ export const MAA_KATEGORIAT = {
               + 'niitä haudutetaan vedessä suuressa astiassa muutaman tunnin, '
               + 'minkä jälkeen neste siivilöidään ja siitä tehdään '
               + 'pastelli-nimistä makeista.',
+          lyhyt: 'Johanneksenleipäpuun palkoja kutsuttiin Kyproksella mustaksi kullaksi ja niistä tehtiin siirappia.',
           selite: 'Johanneksenleipäpuun palkoja kutsuttiin Kyproksella '
             + 'mustaksi kullaksi, ja niistä keitetään siirappia, josta '
             + 'tehdään pastelli-nimistä makeista.',
@@ -20412,6 +21304,7 @@ export const MAA_KATEGORIAT = {
               + 'joko pitaleivässä salaatin kanssa tai lautasella. Saaren toinen '
               + 'grilliperinne on souvla, jossa suuret lihapalat pyörivät '
               + 'pitkässä vartaassa kauempana hiilloksesta ja kypsyvät hitaasti.',
+          lyhyt: 'Sheftalia on kyproslainen makkara ilman suolta; täyte kääritään sulavaan verkkorasvaan.',
           selite: 'Sheftalia on kyproslainen grillimakkara, jossa ei ole '
             + 'lainkaan suolta, vaan täyte kääritään verkkorasvaan, joka '
             + 'sulaessaan kastelee lihan sisältä.',
@@ -20434,6 +21327,7 @@ export const MAA_KATEGORIAT = {
               + 'EU:n suojattu alkuperänimitys vuodesta 2006, ja Guinnessin '
               + 'ennätyskirja pitää sitä maailman vanhimpana yhä valmistettavana '
               + 'nimettynä viininä.',
+          lyhyt: 'Commandaria tehdään kahdesta saaren omasta rypälelajikkeesta, marjat kuivataan auringossa viikon.',
           selite: 'Commandaria tehdään vain kahdesta saaren omasta '
             + 'rypälelajikkeesta, ja marjat kuivataan ennen puristusta '
             + 'auringossa runsaan viikon, jotta mehun sokeripitoisuus nousee.',
@@ -20453,6 +21347,7 @@ export const MAA_KATEGORIAT = {
               + 'altaiden ja vesimyllyjen verkosto. Sokeri oli keskiajan '
               + 'Euroopassa kallis ylellisyystuote, ja saaren sokeri myytiin '
               + 'sinne mausteen tapaan.',
+          lyhyt: 'Kolossin tila annettiin 1210 johanniitoille; sokerinvalmistus on dokumentoitu 1343.',
           selite: 'Kolossin tila annettiin vuonna 1210 johanniittojen '
             + 'ritarikunnalle, ja sokerin valmistus paikalla on dokumentoitu '
             + 'vuodesta 1343.',
@@ -20496,6 +21391,7 @@ export const MAA_KATEGORIAT = {
               + 'oma katto kävi 1800-luvun lopulla niin raskaaksi, että '
               + 'rakennus oli romahtaa: se tuettiin vuosina 1904–1913 ja sai '
               + 'lopulta sisäänsä teräsrungon 1974–1980.',
+          lyhyt: 'Tōdai-jin saliin valettiin maailman suurin pronssibuddha; temppeli vihittiin vuonna 752.',
           selite: 'Tōdai-jin suureen saliin valettiin maailman suurin '
             + 'pronssinen buddhankuva, ja temppeli vihittiin vuonna 752 '
             + 'keisari Shōmun käynnistämän työn päätteeksi.',
@@ -20516,6 +21412,7 @@ export const MAA_KATEGORIAT = {
               + 'koskemattomana, myös vuoden 1995 suuren Hanshinin '
               + 'maanjäristyksen läpi, ja se merkittiin '
               + 'maailmanperintöluetteloon vuonna 1993.',
+          lyhyt: 'Himejin linna valmistui 1601–1609; valkoiset seinät antoivat nimen valkohaikaran linna.',
           selite: 'Himejin linna sai nykyisen muotonsa Ikeda Terumasan '
             + 'rakennustyössä vuosina 1601–1609, ja valkoisella '
             + 'kalkkilaastilla rapatut seinät antoivat sille nimen '
@@ -20536,6 +21433,7 @@ export const MAA_KATEGORIAT = {
               + 'siitä päivästä tehtiin Japanissa kulttuuriomaisuuden '
               + 'paloturvallisuuden päivä. Hōryū-ji oli vuonna 1993 Japanin '
               + 'ensimmäinen maailmanperintökohde.',
+          lyhyt: 'Hōryū-jin Kondō on maailman vanhin puurakennus; pagodin pylväspuu kaadettiin 594.',
           selite: 'Hōryū-jin päähallia Kondōa pidetään maailman vanhimpana '
             + 'puurakennuksena, ja viereisen viisikerroksisen pagodin '
             + 'keskuspylvään puu on vuosilustojen mukaan kaadettu jo vuonna '
@@ -20556,6 +21454,7 @@ export const MAA_KATEGORIAT = {
               + 'rangaku eli hollantilainen oppi, jonka kautta japanilaiset '
               + 'lääkärit ja tähtitieteilijät seurasivat Euroopan tiedettä. '
               + 'Saari on nykyään kaivettu esiin ja rakennettu uudelleen.',
+          lyhyt: 'Dejima syntyi 1636 kanavasaarena; se oli 1858 asti ainoa paikka länsimaalaiselle Japanissa.',
           selite: 'Dejima syntyi vuonna 1636 kaivamalla kanava niemen poikki '
             + 'Nagasakin edustalla, ja se oli vuoteen 1858 asti ainoa paikka '
             + 'Japanissa, jonne länsimaalainen sai astua.',
@@ -20595,6 +21494,7 @@ export const MAA_KATEGORIAT = {
               + 'pinnalle kylvetään Aspergillus glaucus -hometta, joka imee '
               + 'lopunkin kosteuden. Hiutaleet syntyvät höyläämällä, ja '
               + 'merilevän kanssa niistä uutetaan dashi-liemi.',
+          lyhyt: 'Katsuobushi tehdään boniitista, jota savustetaan 12–15 kertaa ja lopuksi homehdutetaan.',
           selite: 'Katsuobushi tehdään boniitista, joka haudutetaan, '
             + 'savustetaan kaksitoista tai viisitoista kertaa ja lopuksi '
             + 'homehdutetaan tarkoituksella kuivaksi.',
@@ -20612,6 +21512,7 @@ export const MAA_KATEGORIAT = {
               + 'ostettuna kadun kojusta ja syötynä sormin seisaaltaan. Utagawa '
               + 'Hiroshige asetteli tällaisen annoksen viuhkanmuotoiseen '
               + 'vedokseen, ja katkarapu on siinä samanlainen kuin nyt.',
+          lyhyt: 'Hiroshigen vedos kuvaa Edon sushia; nigirin keksi Hanaya Yohei noin vuonna 1824.',
           selite: 'Utagawa Hiroshigen viuhkanmuotoinen vedos esittää Edon '
             + 'aikaista sushiannosta, ja kädessä puristetun nigirin keksi '
             + 'Hanaya Yohei noin vuonna 1824.',
@@ -20629,6 +21530,7 @@ export const MAA_KATEGORIAT = {
               + 'sameaksi tonkotsuksi. Päälle ladotaan siivu porsasta, '
               + 'hapatettua bambunversoa ja merilevää. Vuonna 1958 Momofuku '
               + 'Ando keksi pikanuudelin, ja ramen levisi maailmalle.',
+          lyhyt: 'Ramen syntyi Jokohaman kiinalaiskaupungissa 1800-luvun lopulla emäksisestä taikinavedestä.',
           selite: 'Ramen syntyi Jokohaman kiinalaiskaupungissa 1800-luvun '
             + 'lopulla, ja sen nuudeli saa keltaisen värinsä ja '
             + 'kimmoisuutensa taikinaan sekoitetusta emäksisestä vedestä.',
@@ -20646,6 +21548,7 @@ export const MAA_KATEGORIAT = {
               + 'luotijunissa ekiben palasi käyttöön, kun ravintolavaunut '
               + 'lakkautettiin. Osa rasioista on itsessään matkamuisto: astia '
               + 'voi olla puuta, keramiikkaa tai junan muotoinen laatikko.',
+          lyhyt: 'Ekiben, juna-aseman eväsrasia, myytiin ensi kerran uskottavasti Utsunomiyassa 1885.',
           selite: 'Ekiben on juna-aseman eväsrasia, jonka ensimmäisen myynnin '
             + 'uskotaan tapahtuneen Utsunomiyan asemalla vuonna 1885.',
           lahde: 'masataka muto from japan, Wikimedia Commons (CC BY-SA 2.0)',
@@ -20683,6 +21586,7 @@ export const MAA_KATEGORIAT = {
               + 'merenkäynti, ja vuori jää sen taakse pieneksi kolmioksi. '
               + 'Vedoksia lyötiin puulaatoista niin monta kuin kysyntää riitti; '
               + 'niistä tunnetaan nykyään enää noin sata säilynyttä kappaletta.',
+          lyhyt: 'Hokusain Suuri aalto (1831) rakentuu Euroopasta tuodun, haalistumattoman berliininsinisen varaan.',
           selite: 'Katsushika Hokusai piirsi Suuren aallon vuoden 1831 '
             + 'lopulla, ja koko vedos rakentuu Euroopasta tuodun '
             + 'berliininsinisen varaan, joka ei haalistunut kuten kasvivärit.',
@@ -20700,6 +21604,7 @@ export const MAA_KATEGORIAT = {
               + 'risteävät kahteen suuntaan. Kantajat juoksevat rinnettä alas, '
               + 'olkihatut painuvat ja bambumetsä taipuu. Sarjasta tuli aikansa '
               + 'myydyin japanilainen vedossarja.',
+          lyhyt: 'Hiroshigen Shōno-lehti (1833–34) veistää sateen puulaattaan suorina vinoina viivoina.',
           selite: 'Utagawa Hiroshigen Shōno on vuosina 1833–1834 ilmestyneen '
             + 'Tōkaidōn 53 aseman sarjan neljäskymmenneskuudes lehti, ja sade '
             + 'on veistetty puulaattaan suorina vinoina viivoina.',
@@ -20717,6 +21622,7 @@ export const MAA_KATEGORIAT = {
               + 'Tausta on kultalehteä, eikä maisemasta näy mitään muuta — ei '
               + 'rantaa, ei taivasta. Teos on Japanissa kansallisaarre ja '
               + 'esillä MOA-museossa Atamin kaupungissa.',
+          lyhyt: 'Ogata Kōrin Punaiset ja valkoiset luumunkukat (n. 1714–15) on Japanin kansallisaarre.',
           selite: 'Ogata Kōrin maalasi Punaiset ja valkoiset luumunkukat '
             + 'kahdelle taittoseinälle todennäköisesti vuosina 1714–1715, ja '
             + 'teos on Japanissa kansallisaarre.',
@@ -20734,6 +21640,7 @@ export const MAA_KATEGORIAT = {
               + 'vuoden 1795 ensimmäisessä kuussa. Hänen oikeaa nimeään ei '
               + 'tiedetä. Arvauksia on kymmeniä — runoilija, no-näyttelijä, '
               + 'jopa Hokusai itse.',
+          lyhyt: 'Sharaku teki kabuki-muotokuvia vain 10 kuukautta 1794–95, eikä hänen nimeään tiedetä.',
           selite: 'Tōshūsai Sharaku teki kabuki-näyttelijöiden muotokuvia '
             + 'vain kymmenen kuukauden ajan vuosina 1794–1795, eikä hänen '
             + 'oikeaa nimeään tiedetä.',
@@ -20774,6 +21681,7 @@ export const MAA_KATEGORIAT = {
               + 'rinnalla. Maailmanperintöluetteloon se otettiin vuonna 2013 '
               + 'kulttuurikohteena, koska se on ollut vuosisatoja '
               + 'pyhiinvaelluksen määränpää.',
+          lyhyt: 'Fuji, Japanin korkein vuori (3776 m), purkautui viimeksi 1707–08 ja on maailmanperintöä 2013.',
           selite: 'Fuji on Japanin korkein vuori 3 776 metrillään, se '
             + 'purkautui viimeksi vuosina 1707–1708, ja se otettiin '
             + 'maailmanperintöluetteloon vuonna 2013 kulttuurikohteena.',
@@ -20792,6 +21700,7 @@ export const MAA_KATEGORIAT = {
               + 'vuodessa. Talvella apinat tulevat istumaan kuumaan altaaseen. '
               + 'Paikalle pääsee vain kahden kilometrin polkua pitkin metsän '
               + 'läpi.',
+          lyhyt: 'Jigokudanin japaninmakakit siirtyivät laaksoon 1950-luvulla ja istuvat talvella kuumassa altaassa.',
           selite: 'Jigokudanin japaninmakakit siirtyivät alas laaksoon '
             + '1950-luvulla, kun vuorten metsiä hakattiin, ja talvella ne '
             + 'tulevat istumaan kuumaan altaaseen.',
@@ -20810,6 +21719,7 @@ export const MAA_KATEGORIAT = {
               + 'jälkeen puun luo on päässyt vain katselulavalle, joka on '
               + 'viidentoista metrin päässä rungosta. Kävelymatka lähimmältä '
               + 'tieltä kestää neljästä viiteen tuntia.',
+          lyhyt: 'Yakushiman Jōmon Sugi on 25,3 m korkea, ja sen iäksi on arvioitu 2170–7200 vuotta.',
           selite: 'Yakushimalta vuonna 1968 löydetty Jōmon Sugi on 25,3 '
             + 'metriä korkea ja rungon ympärysmitaltaan 16,4 metriä, ja sen '
             + 'iästä esitetyt arviot vaihtelevat 2 170 ja 7 200 vuoden '
@@ -20829,6 +21739,7 @@ export const MAA_KATEGORIAT = {
               + 'suon jumala. Japani rauhoitti lajin ja sen pesimäalueet '
               + 'vuonna 1935, ja Kushiron kurjet nimettiin erityiseksi '
               + 'luonnonmuistomerkiksi vuonna 1952.',
+          lyhyt: 'Japaninkurki on harvinaisimpia kurkia; talvella 2020 Japanissa laskettiin noin 1900 lintua.',
           selite: 'Japaninkurki on maailman harvinaisimpia kurkia, ja '
             + 'Itä-Hokkaidon kanta pysyy paikallaan muuttamatta minnekään; '
             + 'vuoden 2020 talvilaskennassa Japanissa oli noin 1 900 lintua.',
@@ -20868,6 +21779,7 @@ export const MAA_KATEGORIAT = {
               + 'erillään Euroopasta, eikä differentiaalilaskentaa tunnettu: '
               + 'pinta-alat ja tilavuudet ratkottiin laskemalla päättymättömiä '
               + 'sarjoja termi kerrallaan.',
+          lyhyt: 'Sangaku-geometriatauluja ripustettiin temppelien seinille uhrina; niitä on säilynyt noin 900.',
           selite: 'Sangaku on geometrian tehtävä, joka maalattiin puiselle '
             + 'ema-levylle ja ripustettiin temppelin seinälle sekä '
             + 'uhrilahjaksi että haasteeksi muille kävijöille, ja tauluja on '
@@ -20887,6 +21799,7 @@ export const MAA_KATEGORIAT = {
               + 'asetetaan takaisin, nukke kohottaa päänsä, kääntyy ympäri ja '
               + 'palaa lähtöpaikkaansa. Voima tulee valaanluusta väännetystä '
               + 'jousesta.',
+          lyhyt: 'Teetä kantava chahakobi-nukke lähtee liikkeelle, kun kuppi lasketaan sen tarjottimelle.',
           selite: 'Chahakobi eli teetä kantava karakuri-nukke lähtee '
             + 'kävelemään, kun kuppi lasketaan sen tarjottimelle, ja kääntyy '
             + 'takaisin, kun kuppi asetetaan siihen uudelleen.',
@@ -20905,6 +21818,7 @@ export const MAA_KATEGORIAT = {
               + 'kokoaminen kesti yli kolme vuotta. Yksi veto riittää vuodeksi. '
               + 'Vuonna 2004 sata insinööriä rakensi siitä kopion puolessa '
               + 'vuodessa, eikä kaikkia osia silti pystytty toistamaan.',
+          lyhyt: 'Tanakan Mannen dokei (1851) näyttää ajan seitsemällä tavalla; sen yli tuhat osaa tehtiin käsin.',
           selite: 'Hisashige Tanakan vuonna 1851 valmistunut Mannen dokei '
             + 'näyttää ajan seitsemällä eri tavalla ja siirtää tuntijakoaan '
             + 'vuodenajan mukana, ja sen yli tuhat osaa tehtiin käsin '
@@ -20923,6 +21837,7 @@ export const MAA_KATEGORIAT = {
               + '3 216 kappaletta vuosina 1963–1986, ja viimeiset sarjan 0 '
               + 'junat poistettiin liikenteestä vuonna 2008. Pyöreä nokka on '
               + 'yhä luotijunan tunnusmerkki.',
+          lyhyt: 'Sarjan 0 luotijuna aloitti 1964, huippunopeus 220 km/h, viimeiset poistuivat liikenteestä 2008.',
           selite: 'Sarjan 0 luotijuna aloitti lokakuussa 1964 '
             + 'Tōkaidō-radalla, sen huippunopeus oli 220 kilometriä tunnissa, '
             + 'ja viimeiset yksilöt poistettiin liikenteestä vuonna 2008.',
@@ -20966,6 +21881,7 @@ export const MAA_KATEGORIAT = {
               + 'kirjakääröjä ja asiakirjoja. Kokoelma hajosi ympäri maailmaa, '
               + 'ja suurimmat osat ovat nyt Pekingissä, Lontoossa, Pariisissa '
               + 'ja Berliinissä.',
+          lyhyt: 'Mogaon ensimmäinen luola kaivettiin 366; jyrkänteeseen on hakattu noin 500 luolatemppeliä.',
           selite: 'Mogaon ensimmäinen luola kaivettiin vuonna 366 '
             + 'mietiskelypaikaksi, ja jyrkänteeseen hakattuja '
             + 'luolatemppeleitä on noin viisisataa tuhannen vuoden ajalta.',
@@ -20985,6 +21901,7 @@ export const MAA_KATEGORIAT = {
               + 'kaivoa kaivaessaan ensimmäisiin palasiin vuonna 1974. Muutkin '
               + 'kuin sotilaat ovat päässeet esiin: virkamiehiä, '
               + 'akrobaatteja ja soittajia.',
+          lyhyt: 'Qin Shi Huangin savisotilaat koottiin osista, mutta jokaiselle tehtiin oma ilme; löytö 1974.',
           selite: 'Qin Shi Huangin haudan savisotilaat valmistettiin osista '
             + 'niin, että vartalot tulivat muotista ja vasta viimeistelyssä '
             + 'jokaiselle kasvolle tehtiin oma ilme, ja ensimmäiset palaset '
@@ -21004,6 +21921,7 @@ export const MAA_KATEGORIAT = {
               + 'vaan verojen kulkuväylä: vilja liikkui kanavaa pitkin '
               + 'pääkaupunkiin. Eteläiset osuudet ovat pysyneet lähes samoina '
               + 'tähän päivään, ja kanava on maailmanperintökohde.',
+          lyhyt: 'Suuri kanava on maailman pisin ihmisen kaivama vesitie, nykyään noin 1776 km Pekingistä Hangzhouhun.',
           selite: 'Suuri kanava on maailman pisin ihmisen kaivama vesitie, ja '
             + 'sen nykyinen päähaara Pekingistä Hangzhouhun on noin 1 776 '
             + 'kilometriä pitkä.',
@@ -21023,6 +21941,7 @@ export const MAA_KATEGORIAT = {
               + 'pystykääröön, joka tunnetaan Shen Dun nimellä; Philadelphian '
               + 'taidemuseo pitää säilynyttä versiota myöhempänä, 1500-luvulla '
               + 'tehtynä toisintona.',
+          lyhyt: 'Zheng Hen laivasto toi 1414 Kiinaan kirahvin, jonka hovi tulkitsi qilin-taruolennoksi.',
           selite: 'Zheng Hen laivasto toi vuonna 1414 Kiinaan elävän '
             + 'kirahvin, jonka hovi tulkitsi onnea tuovaksi '
             + 'qilin-taruolennoksi, ja säilynyttä maalausta pidetään '
@@ -21062,6 +21981,7 @@ export const MAA_KATEGORIAT = {
               + 'mingqian-teeksi. Qing-kaudella Longjing sai keisarillisen '
               + 'teen aseman, ja tarinan mukaan Qianlong-keisari nimesi '
               + 'kahdeksantoista pensasta omikseen.',
+          lyhyt: 'Longjing-vihreätee kuivataan käsin kuumassa pannussa; parhaat poimitaan ennen qingming-juhlaa.',
           selite: 'Longjing on vihreä tee, jonka lehdet kuivataan kuumassa '
             + 'pannussa käsin, ja parhaat erät poimitaan ennen huhtikuun alun '
             + 'qingming-juhlaa.',
@@ -21079,6 +21999,7 @@ export const MAA_KATEGORIAT = {
               + 'ruokavalio-oppaassa. Japanin ramen ei polveudu lamianista, '
               + 'mutta sen nimi on lainattu siitä — ja korean ramyeon taas '
               + 'japanista.',
+          lyhyt: 'Lamian-vetonuudelissa jokainen taitto tuplaa lankamäärän, joten kymmenen antaa tuhat säiettä.',
           selite: 'Lamian tarkoittaa vedettyä nuudelia, ja jokainen taitto '
             + 'kaksinkertaistaa lankojen määrän, joten kymmenen taittoa '
             + 'riittää tuhanteen säikeeseen.',
@@ -21096,6 +22017,7 @@ export const MAA_KATEGORIAT = {
               + 'Chongqingin tulisessa padassa, jossa ainekset keitetään '
               + 'pöydässä kuplivassa liemessä. Puutuminen ei ole makuaisti '
               + 'vaan tuntoaisti — se on kemiallinen väristys, ei maku.',
+          lyhyt: 'Sichuaninpippurin sanshooli puuduttaa huulet; chilin kanssa syntyy mala-tulisuus.',
           selite: 'Sichuaninpippuri on sitruunan sukuisen puun kuivattu '
             + 'hedelmäkuori, jonka sanshooli saa huulet ja kielen puutumaan, '
             + 'ja chiliin yhdistettynä siitä syntyy mala eli puuduttava '
@@ -21114,6 +22036,7 @@ export const MAA_KATEGORIAT = {
               + 'jälkipuoliskolla, ja annokset höyrytetään bambukoreissa, '
               + 'jotka pinotaan päällekkäin. Ateria on aamun ja keskipäivän '
               + 'väliin sijoittuva, ja se syödään yhdessä pöydän ääressä.',
+          lyhyt: 'Dim sum syntyi Guangzhoun teehuoneissa; nykyinen valikoima kehittyi 1800-luvun jälkipuoliskolla.',
           selite: 'Dim sum syntyi Guangzhoun teehuoneissa, joissa teen kanssa '
             + 'alettiin tarjota kaksi pientä suupalaa, ja nykyinen valikoima '
             + 'kehittyi 1800-luvun jälkipuoliskolla.',
@@ -21153,6 +22076,7 @@ export const MAA_KATEGORIAT = {
               + 'kaarisillan alla vene on törmäämässä siltaan mastonsa vuoksi, '
               + 'väki huutaa ja joku laskee köyttä miehistölle. Teosta on '
               + 'kopioitu satoja kertoja.',
+          lyhyt: 'Zhang Zeduanin 5,25 m pitkässä käärössä on 814 ihmistä, 28 venettä ja 60 eläintä.',
           selite: 'Zhang Zeduanin käärö on 25,5 senttimetriä korkea ja 5,25 '
             + 'metriä pitkä, ja siihen on laskettu 814 ihmistä, 28 venettä, '
             + '60 eläintä, 30 rakennusta ja 170 puuta.',
@@ -21170,6 +22094,7 @@ export const MAA_KATEGORIAT = {
               + 'pieninä — kuormahevosten jono erottuu vaivoin puiden takaa '
               + 'jyrkänteen juurella. Maalarin oma nimikirjoitus löydettiin '
               + 'lehvistön seasta vasta vuonna 1958.',
+          lyhyt: 'Fan Kuanin ainoa varma työ on Vaeltajia vuorten keskellä; nimikirjoitus löytyi vasta 1958.',
           selite: 'Vaeltajia vuorten ja purojen keskellä on noin vuosina '
             + '960–1030 eläneen Fan Kuanin ainoa varmuudella säilynyt työ, ja '
             + 'hänen nimikirjoituksensa löydettiin lehvistön seasta vasta '
@@ -21188,6 +22113,7 @@ export const MAA_KATEGORIAT = {
               + 'Lantingji Xu on kiinalaisen kalligrafian kuuluisin teos. '
               + 'Alkuperäinen katosi jo kauan sitten; jäljellä on vain '
               + 'jäljennöksiä paperilla ja kiveen hakattuina.',
+          lyhyt: 'Lantingji Xu, kalligrafian kuuluisin teos, kirjoitettiin 353; alkuperäinen on kadonnut.',
           selite: 'Lantingji Xu on kiinalaisen kalligrafian kuuluisin teos, '
             + 'jonka Wang Xizhi kirjoitti vuonna 353 Orkideapaviljongin '
             + 'kevätjuhlan runokokoelman esipuheeksi, ja alkuperäinen on '
@@ -21206,6 +22132,7 @@ export const MAA_KATEGORIAT = {
               + 'jäljittelivät Kiinasta tuotua valkoista kiviastiaa. Kiinassa '
               + 'tekniikka vietiin täydellisyyteen Jingdezhenin uuneissa, ja '
               + 'sieltä astiat matkasivat takaisin länteen.',
+          lyhyt: 'Sinivalkoisen posliinin kobolttiväri kestää harvinaisen hyvin posliinin polttolämpötilan.',
           selite: 'Sinivalkoisen posliinin väri on kobolttioksidia, joka on '
             + 'harvoja väriaineita, jotka kestävät posliinin vaatiman korkean '
             + 'polttolämpötilan.',
@@ -21245,6 +22172,7 @@ export const MAA_KATEGORIAT = {
               + 'suuria määriä. Panda elää yksin ja tapaa lajitovereitaan '
               + 'lähinnä pariutumisaikaan; naaras hoitaa poikastaan noin '
               + 'kahden vuoden ajan.',
+          lyhyt: 'Isopandalla on etukäpälässä peukalomainen uloke, jolla se pitää kiinni bambusta.',
           selite: 'Isopanda on karhu, joka syö lähes pelkkää bambua, ja sen '
             + 'etukäpälässä on ylimääräinen peukalomainen uloke, jolla se '
             + 'pitää bambun varresta kiinni.',
@@ -21262,6 +22190,7 @@ export const MAA_KATEGORIAT = {
               + 'kiveä. Kiinalaiset maisemamaalarit ovat piirtäneet näitä '
               + 'kukkuloita vuosisatoja, ja monessa maalauksessa väitetty '
               + 'liioittelu onkin lähempänä totuutta kuin luulisi.',
+          lyhyt: 'Li-joen karstikukkulat syntyivät, kun sade liuotti kalkkikiveä rakojen kohdalta.',
           selite: 'Li-joen karstimaisema syntyi, kun sade liuotti kalkkikiveä '
             + 'ennen kaikkea rakojen kohdalta ja jätti väliin kymmenien '
             + 'metrien korkuisia jyrkkäseinäisiä kukkuloita.',
@@ -21280,6 +22209,7 @@ export const MAA_KATEGORIAT = {
               + 'kerrokset näkyvät rinteessä vierekkäisinä raitoina. Ilmiö on '
               + 'nimetty Danxia-vuoren mukaan, jota tutkittiin ensimmäisenä '
               + '1920- ja 1930-luvuilla.',
+          lyhyt: 'Zhangyen Danxia-vuorten punaisissa hiekkakivikerroksissa raidat kertovat rautapitoisuudesta.',
           selite: 'Zhangyen Danxia-muodostumat ovat pääosin liitukautisia '
             + 'punaisia hiekkakivivuoria, joiden vinoon kallistuneissa '
             + 'kerroksissa eri rautapitoisuudet erottuvat raitoina.',
@@ -21297,6 +22227,7 @@ export const MAA_KATEGORIAT = {
               + 'ja oksilla. Apina viettää noin 97 prosenttia ajastaan puiden '
               + 'latvustossa. Kanta on arviolta 8 000–15 000 yksilöä, ja '
               + 'suurin uhka on elinympäristön katoaminen.',
+          lyhyt: 'Kultanenäapina elää vain Kiinan vuoristometsissä ja sietää kylmää paremmin kuin muut kädelliset.',
           selite: 'Kultanenäapina elää vain Keski- ja Lounais-Kiinan '
             + 'vuoristometsissä, se sietää kylmää paremmin kuin yksikään muu '
             + 'kädellinen ihmistä lukuun ottamatta, ja se syö pääasiassa '
@@ -21337,6 +22268,7 @@ export const MAA_KATEGORIAT = {
               + 'louhitusta aukosta kastelukanaviin ja päästää liian veden '
               + 'takaisin ylivuotokohdasta. Järjestelmä toimii yhä ja kastelee '
               + 'yli 600 000 hehtaaria peltoa.',
+          lyhyt: 'Dujiangyan hillitsee tulvia jakamalla Min-joen kahtia; se rakennettiin noin 256 eaa.',
           selite: 'Dujiangyan hillitsee tulvia jakamalla Min-joen kahtia sen '
             + 'sijaan että patoaisi sen, ja noin vuonna 256 eaa. rakennettu '
             + 'järjestelmä kastelee yhä yli 600 000 hehtaaria peltoa.',
@@ -21355,6 +22287,7 @@ export const MAA_KATEGORIAT = {
               + 'ladelma painettiin tasaiseksi ja seos jähmettyi. Keksinnön '
               + 'kuvasi Shen Kuo kirjassaan Unilammikon esseitä. Myöhemmin '
               + 'kirjakkeita tehtiin myös puusta ja metallista.',
+          lyhyt: 'Bi Sheng keksi liikkuvan kirjakkeen 1039–48 polttamalla savesta jokaisen merkin erikseen.',
           selite: 'Bi Sheng keksi liikkuvan kirjakkeen vuosina 1039–1048 '
             + 'muotoilemalla jokaisen merkin savitiilestä ja polttamalla sen '
             + 'kovaksi, ja myöhemmin kirjakkeita tehtiin myös puusta ja '
@@ -21374,6 +22307,7 @@ export const MAA_KATEGORIAT = {
               + 'torni näytti tunnit 133 pienen liikkuvan hahmon avulla. Kun '
               + 'pääkaupunkia siirrettiin vuonna 1127, torni purettiin eikä '
               + 'sitä saatu enää koskaan kokoon.',
+          lyhyt: 'Su Songin vesikäyttöinen kellotorni (1092) näytti tunnit 133 pienen liikkuvan hahmon avulla.',
           selite: 'Su Songin vesikäyttöinen tähtitieteellinen kellotorni '
             + 'valmistui Kaifengiin vuonna 1092, ja se näytti tunnit 133 '
             + 'pienen liikkuvan hahmon avulla.',
@@ -21393,6 +22327,7 @@ export const MAA_KATEGORIAT = {
               + 'suuhun ja kilahti — ja se kertoi, mistä ilmansuunnasta '
               + 'liike oli tullut. Sisärakenne on hävinnyt, ja siitä on tehty '
               + 'useita erilaisia arvauksia.',
+          lyhyt: 'Zhang Heng esitteli 132 laitteen, joka kertoi maanjäristyksen suunnan pronssikuulan pudotessa.',
           selite: 'Zhang Heng esitteli vuonna 132 laitteen, joka kertoi '
             + 'kaukaisen maanjäristyksen suunnan pudottamalla pronssikuulan '
             + 'lohikäärmeen suusta sammakon suuhun.',
@@ -21436,6 +22371,7 @@ export const MAA_KATEGORIAT = {
               + 'niiden välissä pyörä. Pylväs kaatui aikojen kuluessa ja '
               + 'hautautui maahan; se kaivettiin esiin vasta talvella '
               + '1904–1905.',
+          lyhyt: 'Ashokan pylvään neljä leijonaa veistettiin yhdestä lohkareesta; kaivettiin esiin 1904–05.',
           selite: 'Ashokan pylvään huippuun veistettiin neljä leijonaa '
             + 'yhdestä ainoasta hiekkakivilohkareesta, ja 2,1 metriä korkea '
             + 'kappale kaivettiin maasta esiin talvella 1904–1905.',
@@ -21454,6 +22390,7 @@ export const MAA_KATEGORIAT = {
               + 'kääntö, kallistunut pää, katse ohi katsojan. Luolat jäivät '
               + 'metsän peittoon vuosisadoiksi ja tulivat uudelleen '
               + 'tunnetuiksi vasta vuonna 1819.',
+          lyhyt: 'Ajantan 30 luolaa hakattiin kallioon 200-luvulta eaa. noin vuoteen 480 asti.',
           selite: 'Ajantan 30 luolaa on hakattu 75 metriä korkeaan '
             + 'kallioseinään, vanhimmat 200-luvulla eaa. ja nuorimmat noin '
             + 'vuonna 480, ja niiden maalaukset kertovat Buddhan aiemmista '
@@ -21474,6 +22411,7 @@ export const MAA_KATEGORIAT = {
               + 'Kaakkois-Aasiasta asti, ja kiinalaiset pyhiinvaeltajat '
               + 'kirjoittivat paikasta matkakertomuksia, joista tiedämme yhä '
               + 'suuren osan siitä mitä tiedämme.',
+          lyhyt: 'Nalanda perustettiin noin 427 ja opetti lähes tuhat vuotta opiskelijoita kaukaa Aasiasta.',
           selite: 'Nalanda perustettiin Biharissa noin vuonna 427, ja siellä '
             + 'opetettiin lähes tuhat vuotta opiskelijoille, joita tuli '
             + 'Kiinasta, Koreasta ja Kaakkois-Aasiasta asti.',
@@ -21493,6 +22431,7 @@ export const MAA_KATEGORIAT = {
               + 'ohut tiivis kerros, joka suojaa alla olevaa metallia. Sitä ei '
               + 'osattu tehdä tarkoituksella, mutta seppien taito valmistaa '
               + 'rautaa oli poikkeuksellinen.',
+          lyhyt: 'Delhin 7,21 metrin rautapylväs ei ruostu korkean fosforipitoisuuden ansiosta.',
           selite: 'Delhin rautapylväs on 7,21 metriä korkea ja painaa yli '
             + 'kuusi tonnia, eikä se juuri ruostu, koska raudan korkea '
             + 'fosforipitoisuus on synnyttänyt pintaan ohuen suojaavan '
@@ -21533,6 +22472,7 @@ export const MAA_KATEGORIAT = {
               + 'vuodenaikojen mukaan monta metriä, ja portaat vievät veden '
               + 'ääreen milloin tahansa. Syvällä altaan pohjalla on myös '
               + 'monta astetta viileämpää kuin pinnalla.',
+          lyhyt: 'Chand Baori laskeutuu 30 metriä maan alle, ja sen seinille on ladottu 3500 porrasta.',
           selite: 'Chand Baori laskeutuu noin kolmekymmentä metriä maan '
             + 'sisään, ja sen kolmelle seinälle on ladottu 3 500 porrasta '
             + 'kolmessatoista kerroksessa.',
@@ -21553,6 +22493,7 @@ export const MAA_KATEGORIAT = {
               + 'kymmenien metrien korkeuteen. Kaikki mittaukset tehdään '
               + 'paljain silmin — kaukoputkea ei tarvita, vaan luetaan '
               + 'auringon varjon reunaa kaarelta.',
+          lyhyt: 'Jaipurin Jantar Mantar (1734) sisältää 19 talon kokoista kojetta pienemmän lukemisvirheen vuoksi.',
           selite: 'Jaipurin Jantar Mantar valmistui vuonna 1734 kuningas '
             + 'Sawai Jai Singhin käskystä, ja sen yhdeksäntoista kojetta '
             + 'tehtiin talon kokoisiksi, koska pidempi asteikko antaa '
@@ -21572,6 +22513,7 @@ export const MAA_KATEGORIAT = {
               + 'ajoneuvo, ja pyörät ovat erillisiä kiekkoja, joiden '
               + 'kerrotaan aikoinaan pyörineen paikallaan. Kuva vaunusta on '
               + 'painettu Intian viidenkymmenen rupian seteliin.',
+          lyhyt: 'Hampin Vittala-temppelin kivinen temppelivaunu on kuvattuna Intian 50 rupian setelissä.',
           selite: 'Hampin Vittala-temppelin pihalla oleva pyhäkkö on '
             + 'veistetty kivestä temppelivaunun muotoon, ja sen kuva on '
             + 'painettu Intian viidenkymmenen rupian seteliin.',
@@ -21591,6 +22533,7 @@ export const MAA_KATEGORIAT = {
               + 'kukkakuvioiksi. Marmori muuttaa väriä päivän mittaan, koska '
               + 'kivi päästää valon hieman lävitseen: aamulla se on '
               + 'vaaleanpunertava, keskipäivällä valkoinen.',
+          lyhyt: 'Taj Mahal on Shah Jahanin 1632 alkaen rakennuttama hautamuistomerkki puolisolleen Mumtaz Mahalille.',
           selite: 'Taj Mahal on hautamuistomerkki, jonka Shah Jahan '
             + 'rakennutti Agraan puolisonsa Mumtaz Mahalin muistoksi vuodesta '
             + '1632 alkaen, ja sen valkoinen marmori päästää valon hieman '
@@ -21630,6 +22573,7 @@ export const MAA_KATEGORIAT = {
               + 'määränpään ja talon, joten pitkiä osoitteita ei tarvitse '
               + 'lukea. Uniformuun kuuluu valkoinen puuvillapaita ja valkoinen '
               + 'gandhilakki.',
+          lyhyt: 'Mumbain dabbawalat siirtävät päivittäin 175 000–200 000 lounasrasiaa pelkin kansimerkinnöin.',
           selite: 'Mumbain dabbawala-palvelu alkoi vuonna 1890, ja nykyään 4 '
             + '500–5 000 kuljettajaa siirtää 175 000–200 000 lounasrasiaa '
             + 'päivässä pelkkien kansimerkintöjen ohjaamana.',
@@ -21647,6 +22591,7 @@ export const MAA_KATEGORIAT = {
               + 'levitetään kauhan pohjalla ohueksi kiekoksi. Vanhin '
               + 'kirjallinen maininta dosasta on 700-luvun tamilinkielisessä '
               + 'kirjallisuudessa.',
+          lyhyt: 'Dosan taikina käy yön yli riisistä ja mustapapulinsseistä; vanhin maininta on 700-luvulta.',
           selite: 'Dosan taikina tehdään riisistä ja mustapapulinsseistä, '
             + 'jotka jätetään käymään yön yli, ja vanhin kirjallinen maininta '
             + 'ruoasta on 700-luvun tamilinkielisessä kirjallisuudessa.',
@@ -21663,6 +22608,7 @@ export const MAA_KATEGORIAT = {
               + 'lasiin, ja se kaadetaan usein korkealta astiasta toiseen, '
               + 'jotta se jäähtyy ja vaahtoutuu. Katukojujen chai juodaan '
               + 'seisaaltaan ja nopeasti — lasi on pieni tarkoituksella.',
+          lyhyt: 'Intialainen chai keitetään: vesi, maito, sokeri ja musta tee kiehautetaan yhdessä.',
           selite: 'Intialainen chai keitetään eikä haudute, sillä vesi, '
             + 'maito, sokeri ja voimakas musta tee kiehautetaan yhdessä ennen '
             + 'kuin juoma siivilöidään pieneen lasiin.',
@@ -21680,6 +22626,7 @@ export const MAA_KATEGORIAT = {
               + 'niitä itse suupala kerrallaan. Etelässä lehti pestään ennen '
               + 'käyttöä ja heitetään aterian jälkeen pois, joten astioita ei '
               + 'tarvitse tiskata.',
+          lyhyt: 'Thali-ateriassa riisin ympärille asetetaan rivi pieniä annoksia, jotta kaikki maut ovat esillä.',
           selite: 'Thali tarkoittaa vatia, mutta sana on siirtynyt '
             + 'tarkoittamaan ateriaa, jossa riisin ympärille asetetaan rivi '
             + 'pieniä annoksia, niin että kaikki maut ovat tarjolla yhtä '
@@ -21720,6 +22667,7 @@ export const MAA_KATEGORIAT = {
               + 'hallitsija seisoo leijonan ja vasikan vieressä — vertauskuva '
               + 'siitä, että saalistaja ja saalis ovat rauhassa hyvän '
               + 'hallitsijan aikana.',
+          lyhyt: 'Mogulikauden miniatyyrissä leijona ja vasikka hallitsijan vieressä ovat vertauskuva rauhasta.',
           selite: 'Mogulikauden miniatyyri maalattiin muutaman oravankarvan '
             + 'siveltimellä kivistä ja kasveista jauhetuilla väreillä, ja '
             + 'hallitsijan vieressä oleva leijona ja vasikka ovat vertauskuva '
@@ -21738,6 +22686,7 @@ export const MAA_KATEGORIAT = {
               + 'jumalhahmon nykyinen ulkonäkö on peräisin juuri näistä '
               + 'vedoksista — kasvot, asento ja vaatteet vakiintuivat sen '
               + 'mukaan, miltä ne näyttivät seinällä olevassa painokuvassa.',
+          lyhyt: 'Raja Ravi Varma (1848–1906) vakiinnutti monen jumalhahmon ulkonäön halvoilla litografioillaan.',
           selite: 'Raja Ravi Varma (1848–1906) alkoi myydä maalauksiaan '
             + 'halpoina litografiavedoksina, ja monen intialaisen jumalhahmon '
             + 'nykyinen ulkonäkö vakiintui juuri näiden painokuvien mukaan.',
@@ -21754,6 +22703,7 @@ export const MAA_KATEGORIAT = {
               + 'mukana. Jauho on tarkoituksella syötävää: muurahaiset ja '
               + 'linnut saavat sen. Kolamin tekevät useimmiten talon naiset, '
               + 'ja juhlien aikaan kuviot ovat suuria ja värillisiä.',
+          lyhyt: 'Kolam piirretään oven eteen syötävästä riisijauhosta, ja kuvio kuluu pois päivän mittaan.',
           selite: 'Kolam piirretään talon oven eteen aamulla riisi- tai '
             + 'kivijauhosta, joka on tarkoituksella syötävää, ja kuvio kuluu '
             + 'päivän mittaan pois jalkojen ja tuulen mukana.',
@@ -21771,6 +22721,7 @@ export const MAA_KATEGORIAT = {
               + 'aineista — okrasta ruskea, noesta musta. Tyylille ovat '
               + 'tunnusomaisia tiheät geometriset kuviot, joilla koko pinta '
               + 'täytetään: tyhjää kohtaa ei jätetä.',
+          lyhyt: 'Madhubani-maalauksen tunnistaa tiheistä geometrisista kuvioista, jotka täyttävät koko pinnan.',
           selite: 'Madhubani-maalausta ovat Biharin Mithilan seudulla '
             + 'perinteisesti tehneet talon naiset, ja sen tunnistaa tiheistä '
             + 'geometrisista kuvioista, joilla koko pinta täytetään tyhjää '
@@ -21810,6 +22761,7 @@ export const MAA_KATEGORIAT = {
               + 'jotta loppuosa säilyisi. Puun ympäri rakennettiin 330 metriä '
               + 'pitkä tie, mutta se on jo kasvanut tien ylikin. Vuonna 1989 '
               + 'se merkittiin maailman laaja-alaisimmaksi puuksi.',
+          lyhyt: 'Howrahin Suuri banyan leviää ilmajuurineen sivulle ja on maailman laaja-alaisin puu vuodesta 1989.',
           selite: 'Howrahin Suuri banyan leviää sivusuunnassa oksistaan '
             + 'laskeutuvien ilmajuurten avulla, ja se merkittiin vuonna 1989 '
             + 'maailman laaja-alaisimmaksi puuksi.',
@@ -21827,6 +22779,7 @@ export const MAA_KATEGORIAT = {
               + 'Valmiin sillan yli voi kulkea viisikymmentä ihmistä '
               + 'yhtä aikaa. Siltoja on eniten 50–1 150 metrin korkeudella '
               + 'Shillongin ylängön eteläreunalla.',
+          lyhyt: 'Meghalayan elävät sillat kasvatetaan ohjaamalla kumiviikunan juuret puron yli.',
           selite: 'Meghalayan elävät sillat kasvatetaan ohjaamalla '
             + 'kumiviikunan ilmajuuret puron yli toiselle rannalle, ja '
             + 'valmiin sillan yli voi kulkea viisikymmentä ihmistä yhtä '
@@ -21845,6 +22798,7 @@ export const MAA_KATEGORIAT = {
               + 'mudasta kuin piikit, ja monet lajit suodattavat suolaa jo '
               + 'juurissaan. Yleisin puu on sundri, josta metsä on saanut '
               + 'nimensä. Alue on myös bengalintiikerin elinaluetta.',
+          lyhyt: 'Sundarbans, maailman laajin mangrovemetsä noin 10 300 km², on myös bengalintiikerin elinaluetta.',
           selite: 'Sundarbans on maailman laajin mangrovemetsä eli noin 10 '
             + '300 neliökilometriä Gangesin, Brahmaputran ja Meghnan '
             + 'suistossa, ja se on myös bengalintiikerin elinaluetta.',
@@ -21862,6 +22816,7 @@ export const MAA_KATEGORIAT = {
               + 'kärsäänsä myös hajuaistiin: se nostaa kärsän ilmaan kuin '
               + 'jaksoperiskoopin ja tunnistaa hajusta tutut yksilöt ja '
               + 'veden suunnan kilometrien päästä.',
+          lyhyt: 'Aasiannorsujen laumaa johtaa vanhin naaras, joka haistaa veden suunnan kilometrien päästä.',
           selite: 'Aasiannorsun lauman johtaja on iäkkäin naaras, ja norsu '
             + 'nostaa kärsänsä ilmaan tunnistaakseen hajusta tutut yksilöt ja '
             + 'veden suunnan kilometrien päästä.',
@@ -21903,6 +22858,7 @@ export const MAA_KATEGORIAT = {
               + 'myös thaimaalainen kirjaimisto, jonka syntyajaksi on '
               + 'perinteisesti sanottu vuotta 1283. Alue otettiin '
               + 'maailmanperintöluetteloon vuonna 1991.',
+          lyhyt: 'Sukhothai oli 1200–1300-luvulla thaikuningaskunnan keskus; sen Wat Mahathatin puukatto on kadonnut.',
           selite: 'Sukhothai oli 1200- ja 1300-luvulla thaikuningaskunnan '
             + 'keskus, ja sen suurimman temppelin Wat Mahathatin pylväät '
             + 'kannattelivat aikanaan puukattoa, joka on aikaa sitten '
@@ -21922,6 +22878,7 @@ export const MAA_KATEGORIAT = {
               + 'bodhipuun juurten väliin: puu kasvoi vuosikymmenten kuluessa '
               + 'maahan pudonneen pään ympärille ja nosti sen takaisin '
               + 'silmien korkeudelle. Kukaan ei asettanut sitä sinne.',
+          lyhyt: 'Ayutthayan Wat Mahathatissa bodhipuu nosti maahan pudonneen buddhanpään takaisin ylös kasvaessaan.',
           selite: 'Ayutthayan Wat Mahathatissa bodhipuu kasvoi vuosikymmenten '
             + 'kuluessa maahan pudonneen kivisen buddhanpään ympärille ja '
             + 'nosti sen takaisin silmien korkeudelle.',
@@ -21939,6 +22896,7 @@ export const MAA_KATEGORIAT = {
               + 'arvostetuin buddhankuva, ja kuningas vaihtaa sille '
               + 'vuodenaikojen mukaan puvun. Temppelialueella ei asu munkkeja: '
               + 'se on hovin oma pyhäkkö eikä luostari.',
+          lyhyt: 'Bangkokin Wat Phra Kaew säilyttää yhdestä jadeiitista veistettyä 66 cm korkeaa Smaragdibuddhaa.',
           selite: 'Bangkokin Wat Phra Kaew on hovin oma pyhäkkö, jossa '
             + 'säilytetään yhdestä jadeiittilohkareesta veistettyä noin 66 '
             + 'senttimetrin korkuista Smaragdibuddhaa.',
@@ -21957,6 +22915,7 @@ export const MAA_KATEGORIAT = {
               + 'kaltaisilla kanavamarkkinoilla kauppa käydään yhä vedestä '
               + 'käsin, ja kapea pitkähäntävene on edelleen nopein kulkutapa '
               + 'kanavien verkossa.',
+          lyhyt: 'Chao Phrayan suiston klong-kanavat toimivat kauppapaikkoina; Amphawassa kauppa käydään yhä vedeltä.',
           selite: 'Chao Phrayan suistossa kaivetut klong-kanavat olivat '
             + 'pitkään kaupunkien katuja, ja Amphawan kaltaisilla '
             + 'kanavamarkkinoilla kauppa käydään yhä vedestä käsin.',
@@ -21995,6 +22954,7 @@ export const MAA_KATEGORIAT = {
               + 'kansalaisia syömään nuudeleita riisin sijaan. Samalla '
               + 'annoksesta tehtiin tietoisesti kansallisruoka. Nykyään se on '
               + 'katukeittiöiden perusannos.',
+          lyhyt: 'Pad thai syntyi 1930-luvulla ja levisi sodanaikaisen riisipulan takia.',
           selite: 'Pad thai syntyi 1930-luvulla ja levisi toisen '
             + 'maailmansodan aikana, kun riisistä oli pulaa ja hallitus '
             + 'kannusti kansalaisia syömään nuudeleita riisin sijaan.',
@@ -22012,6 +22972,7 @@ export const MAA_KATEGORIAT = {
               + 'imeytyvät suikaleisiin. Ruoka on kotoisin Koillis-Thaimaan '
               + 'Isanista. Tekijä kysyy usein ensin, montako chiliä laitetaan '
               + '— ja vastausta kannattaa harkita.',
+          lyhyt: 'Som tam tehdään survomalla raastettu raakapapaija huhmareessa mausteiden kanssa.',
           selite: 'Som tam tehdään raa\'asta papaijasta, joka raastetaan '
             + 'suikaleiksi ja survotaan huhmaressa niin, että nuija rikkoo '
             + 'soluseinät ja mausteet imeytyvät suikaleisiin.',
@@ -22029,6 +22990,7 @@ export const MAA_KATEGORIAT = {
               + 'valkosipulia. Sillä syöjä säätää annoksensa itse: ruoka '
               + 'tuodaan keittiöstä perusmaultaan, ja loppusilaus tehdään '
               + 'pöydässä.',
+          lyhyt: 'Nam pla tehdään suolaamalla pieniä kaloja kuukausiksi, ja syöjä säätää maun chili-versiolla.',
           selite: 'Nam pla tehdään suolaamalla pieniä kaloja tynnyriin '
             + 'kuukausiksi, ja pöydässä odottavalla chiliviipaleisella nam '
             + 'pla phrikillä syöjä säätää annoksensa maun itse.',
@@ -22045,6 +23007,7 @@ export const MAA_KATEGORIAT = {
               + 'annetaan vetäytyä. Päälle asetetaan kypsän mangon lohkot ja '
               + 'lorautetaan suolaista kookoskermaa. Annos on parhaimmillaan '
               + 'huhti-kesäkuussa, kun mangot kypsyvät.',
+          lyhyt: 'Tahmea riisi tarttuu vähäisen amyloosin ansiosta yhteen; mangoannos on parhaimmillaan keväällä.',
           selite: 'Tahmeassa riisissä on hyvin vähän amyloosia, joten jyvät '
             + 'tarttuvat kypsyessään yhteen, ja mangon kanssa tarjottu annos '
             + 'on parhaimmillaan huhti–kesäkuussa.',
@@ -22083,6 +23046,7 @@ export const MAA_KATEGORIAT = {
               + 'jatkuvat sadan kahdeksankymmenen kentän verran. Alkuperäiset '
               + '1700-luvun maalaukset tehtiin kultalehteä käyttäen, ja niitä '
               + 'on korjattu useaan otteeseen.',
+          lyhyt: 'Ramakien, Thaimaan kansalliseepos, koottiin 1797 ja maalattiin 180 kenttään Wat Phra Kaew\'hun.',
           selite: 'Ramakien on Thaimaan kansalliseepos, jonka nykyinen laitos '
             + 'koottiin vuonna 1797 kuningas Rama I:n johdolla, ja Wat Phra '
             + 'Kaew\'n pylväskäytävään se on maalattu sadan kahdeksankymmenen '
@@ -22101,6 +23065,7 @@ export const MAA_KATEGORIAT = {
               + 'käsivarret kuin norsun kärsä, kasvot kuin muna. Patsaat '
               + 'valettiin pronssista, ja niiden pinta on tarkoituksella '
               + 'sileä ja kiillotettu.',
+          lyhyt: 'Sukhothain kävelevä buddhahahmo mukailee runokuvia: leijonan hartiat, norsun kärsä, munan kasvot.',
           selite: 'Sukhothain kuvanveistäjät kehittivät kävelevän '
             + 'buddhahahmon, jonka muoto ei jäljittele ihmisvartaloa vaan '
             + 'runokuvia: hartiat kuin leijonalla, käsivarret kuin norsun '
@@ -22119,6 +23084,7 @@ export const MAA_KATEGORIAT = {
               + 'jumalhahmot ja kukkarivit, ja tausta täytetään kokonaan. '
               + 'Kultaus lisätään viimeisenä ja poltetaan matalassa '
               + 'lämpötilassa, ettei se pala pois.',
+          lyhyt: 'Benjarong-posliinin viiden värin kuviot maalataan emalilla lasituksen päälle kohomaisiksi.',
           selite: 'Benjarong tarkoittaa viittä väriä, ja sen kuviot maalataan '
             + 'emalilla lasituksen päälle, joten pinnan voi tunnustella '
             + 'sormella kohomaisena.',
@@ -22137,6 +23103,7 @@ export const MAA_KATEGORIAT = {
               + 'kuvioihin käytetään myös kultalankaa. Thaimaalainen silkki '
               + 'tunnetaan epätasaisesta langastaan, joka saa kankaan '
               + 'kimaltamaan eri tavoin eri suunnista.',
+          lyhyt: 'Ban Tha Sawangin brokadisilkkiä kudotaan käsin nostaen; työ etenee vain senttejä päivässä.',
           selite: 'Ban Tha Sawangin brokadisilkkiä kudotaan kangaspuilla, '
             + 'joita ei voi käyttää yksin, koska kuviolangat on nostettava '
             + 'käsin sukkulan heiton tahtiin, ja työ etenee muutamia '
@@ -22176,6 +23143,7 @@ export const MAA_KATEGORIAT = {
               + 'jyrkkäreunainen laakso omine metsineen. Merenpinnan noustua '
               + 'jääkauden jälkeen vanha maasto jäi veden alle ja jäljelle '
               + 'jäivät vain kovimmat kalliot.',
+          lyhyt: 'Phang Ngan lahden kalkkikiveen sadevesi on liuottanut onkaloita, luolia ja sisäjärviä.',
           selite: 'Phang Ngan lahden kalkkikivi syntyi muinaisen matalan '
             + 'meren pohjalle kertyneistä kuorista ja korallista, ja sadevesi '
             + 'on liuottanut siihen onkaloita, luolia ja kokonaisia '
@@ -22194,6 +23162,7 @@ export const MAA_KATEGORIAT = {
               + 'koko pesintä kestää 111–137 päivää. Sarvinokka syö suuria '
               + 'hedelmiä kokonaisina ja pudottaa siemenet ehjinä kauas — '
               + 'yhden seuratun koiraan päivämatka oli lähes 25 kilometriä.',
+          lyhyt: 'Sarvinokkanaaras muuraa pesäkolonsa lähes umpeen ja hautoo yksin noin 40 vuorokautta.',
           selite: 'Sarvinokkanaaras muuraa pesäkolon lähes umpeen '
             + 'ulosteellaan ja mudalla ja hautoo yksin noin 40 vuorokautta, '
             + 'kun koiras syöttää sitä jäljelle jätetystä raosta.',
@@ -22210,6 +23179,7 @@ export const MAA_KATEGORIAT = {
               + 'poikasten muodostama, ja sitä johtaa vanhin naaras, joka '
               + 'muistaa vesipaikkojen sijainnin vuosikymmenten takaa. '
               + 'Kuivana kautena tämä muisti ratkaisee, missä lauma selviää.',
+          lyhyt: 'Aasiannorsu on Thaimaan kansalliseläin; Kui Burin laumaa johtaa vesipaikat muistava vanhin naaras.',
           selite: 'Aasiannorsu on Thaimaan kansalliseläin, ja Kui Burin '
             + 'laumaa johtaa vanhin naaras, joka muistaa vesipaikkojen '
             + 'sijainnin vuosikymmenten takaa.',
@@ -22226,6 +23196,7 @@ export const MAA_KATEGORIAT = {
               + 'entiset kukkulanhuiput jäivät saariksi, ja kalkkikivijyrkänteet '
               + 'nousevat nyt suoraan järvestä. Aamuisin vesi höyryää ja '
               + 'sumu jää roikkumaan puiden latvoihin.',
+          lyhyt: 'Khao Sokin Cheow Lanin järvi syntyi padosta, kun entiset kukkulanhuiput jäivät saariksi.',
           selite: 'Khao Sokin kansallispuiston Cheow Lanin järvi syntyi, kun '
             + 'jokeen rakennettiin pato ja laakso täyttyi vedellä, jolloin '
             + 'entiset kukkulanhuiput jäivät saariksi.',
@@ -22264,6 +23235,7 @@ export const MAA_KATEGORIAT = {
               + 'käytössä kolme päivää — huhtikuu on vuoden kuumin kuukausi, '
               + 'joten kastuminen on lahja. Juhla on Unescon aineettoman '
               + 'kulttuuriperinnön luettelossa.',
+          lyhyt: 'Songkrania eli thaimaalaista uuttavuotta vietetään huhtikuussa; juhla on Unescon perintöluettelossa.',
           selite: 'Songkrania eli thaimaalaista uuttavuotta vietetään 13. '
             + 'huhtikuuta ja kahtena seuraavana päivänä, ja juhla on Unescon '
             + 'aineettoman kulttuuriperinnön luettelossa.',
@@ -22281,6 +23253,7 @@ export const MAA_KATEGORIAT = {
               + 'se on myös kiitos vesien jumalattarelle. Nykymuotoinen juhla '
               + 'on osin uusi: se levisi koko maahan vasta toisen '
               + 'maailmansodan jälkeen.',
+          lyhyt: 'Loi Krathong tarkoittaa kelluvaa banaaninlehtikoria, joka lasketaan jokeen kynttilöineen.',
           selite: 'Loi Krathongin nimi tarkoittaa kelluvaa koria, joka '
             + 'taitellaan banaaninlehdistä ja lasketaan jokeen kynttilöineen '
             + 'kuluneen vuoden harmien mukana.',
@@ -22298,6 +23271,7 @@ export const MAA_KATEGORIAT = {
               + 'niitä nousee tuhansia yhtä aikaa. Lentokentät sopivat '
               + 'nykyään erikseen siitä, milloin ja missä lyhtyjä saa '
               + 'päästää ilmaan.',
+          lyhyt: 'Yi Peng juontaa Lannan kuningaskunnasta; khom loi -lyhdyt nousevat taivaalle kuuman ilman voimalla.',
           selite: 'Yi Peng on peräisin vanhasta Lannan kuningaskunnasta, ja '
             + 'sen khom loi -lyhdyt nousevat taivaalle kuuman ilman voimalla '
             + 'samalla periaatteella kuin kuumailmapallo.',
@@ -22315,6 +23289,7 @@ export const MAA_KATEGORIAT = {
               + 'ennen seuraavaa aamua. Moni thaimaalainen mies viettää '
               + 'jonkin jakson elämästään luostarissa, usein muutaman '
               + 'kuukauden nuorena aikuisena.',
+          lyhyt: 'Munkkien aamukerjuussa antaja saa ansiota, joten munkki ei pyydä eikä kiitä mistään.',
           selite: 'Munkkien aamuisessa kerjuukulkueessa antaja saa ansiota, '
             + 'joten munkki ei pyydä mitään eikä kiitä, ja saatu ruoka '
             + 'syödään ennen keskipäivää.',
@@ -22358,6 +23333,7 @@ export const MAA_KATEGORIAT = {
               + 'vokaalit koottiin kolmesta merkistä. Oppineet halveksivat '
               + 'sitä vuosisatoja, ja yleisesti hyväksytyksi se tuli vasta '
               + '1800-luvun lopulla.',
+          lyhyt: 'Kuningas Sejongin kirjaimisto (1446) jäljittelee konsonanteissaan kielen ja huulten asentoa.',
           selite: 'Kuningas Sejongin kirjaimisto julkaistiin vuonna 1446 '
             + 'teoksessa Hunminjeongeum, ja sen konsonanttimuodot '
             + 'jäljittelevät sitä, miten kieli, huulet ja kurkku asettuvat '
@@ -22378,6 +23354,7 @@ export const MAA_KATEGORIAT = {
               + 'luostarissa varastorakennuksissa, joiden ristikkoikkunat ja '
               + 'savikerroksinen lattia pitävät ilman kuivana ilman koneita — '
               + 'laatat ovat yhä vääntymättömiä.',
+          lyhyt: 'Tripitaka Koreana kaiverrettiin 1200-luvulla yli 81 000 puulaattaan, peräkkäin 60 km pitkälti.',
           selite: 'Tripitaka Koreana kaiverrettiin 1200-luvulla yli 81 000 '
             + 'puulaattaan, ja peräkkäin aseteltuina laatat ulottuisivat '
             + 'kuusikymmentä kilometriä.',
@@ -22396,6 +23373,7 @@ export const MAA_KATEGORIAT = {
               + 'Pariisissa. Unesco vahvisti kirjan aseman vuonna 2001 ja '
               + 'merkitsi sen Maailman muisti -rekisteriin. Sisältö on '
               + 'kokoelma buddhalaisten mestareiden opetuksia.',
+          lyhyt: 'Jikji (1377) on maailman vanhin metallikirjakkein painettu kirja, 78 vuotta ennen Gutenbergia.',
           selite: 'Jikji painettiin vuonna 1377, ja se on maailman vanhin '
             + 'säilynyt metallikirjakkeilla painettu kirja — '
             + 'seitsemänkymmentäkahdeksan vuotta ennen Gutenbergin 42-rivistä '
@@ -22415,6 +23393,7 @@ export const MAA_KATEGORIAT = {
               + 'seinillä on reliefeinä oppilaita ja vartijoita. Nykyään '
               + 'kammion eteen on rakennettu lasiseinä, eikä sisälle pääse — '
               + 'kuva katsotaan lasin läpi.',
+          lyhyt: 'Seokguram rakennettiin 700-luvulla ladomalla graniittikupoli, joka pysyy koossa ilman laastia.',
           selite: 'Seokguram rakennettiin 700-luvulla Silla-kaudella '
             + 'latomalla graniittilohkareista pyöreä kammio ja sen päälle '
             + 'kupoli, joka pysyy koossa kivien painon varassa ilman laastia.',
@@ -22453,6 +23432,7 @@ export const MAA_KATEGORIAT = {
               + 'Soulin Bukchonissa on satoja hanokeja rinnekujien varrella; '
               + 'moni niistä on nykyään kahvila tai majatalo, mutta kadut '
               + 'ovat entisellään kapeat.',
+          lyhyt: 'Hanokissa on lattialämmitteinen ondol-huone ja korotettu, viileänä pysyvä puulattia maru.',
           selite: 'Hanokissa on kaksi erilaista huonetta saman katon alla: '
             + 'lattialämmitteinen ondol-huone ja korotettu puulattiainen '
             + 'maru, joka pysyy viileänä kesähelteellä.',
@@ -22471,6 +23451,7 @@ export const MAA_KATEGORIAT = {
               + 'koristeelliseksi. Lattian päällimmäisenä on öljytty paperi, '
               + 'joka pitää savun poissa huoneesta. Tästä on peräisin tapa '
               + 'istua ja nukkua lattialla.',
+          lyhyt: 'Ondol on vanhimpia yhä käytössä olevia lattialämmityksiä, joka johtaa savun lattian alta piippuun.',
           selite: 'Ondol on maailman vanhimpia yhä käytössä olevia '
             + 'lattialämmityksiä, ja siinä tulisijan savu johdetaan kanavia '
             + 'pitkin lattian alle ja ulos erillisestä, usein '
@@ -22489,6 +23470,7 @@ export const MAA_KATEGORIAT = {
               + 'ennestään hyvä. Sama periaate erottaa Changdeokgungin '
               + 'suorakulmaisista palatseista, ja se on syy siihen, että '
               + 'alue otettiin maailmanperintöluetteloon vuonna 1997.',
+          lyhyt: 'Changdeokgungin Huwon-puutarha seurasi maaston muotoja; maailmanperintöä vuodesta 1997.',
           selite: 'Changdeokgungin Huwon-takapuutarhaa ei muotoiltu vaan '
             + 'seurattiin, sillä lammet kaivettiin valmiiksi kosteisiin '
             + 'kohtiin ja polut kiertävät kukkulat, ja alue otettiin '
@@ -22508,6 +23490,7 @@ export const MAA_KATEGORIAT = {
               + 'uusia nostolaitteita, joilla raskaat kivet saatiin '
               + 'paikalleen pienemmällä väellä. Alue merkittiin '
               + 'maailmanperintöluetteloon vuonna 1997.',
+          lyhyt: 'Suwonin Hwaseong (1794–96) dokumentoitiin niin tarkasti, että muuri voitiin korjata alkuperäiseksi.',
           selite: 'Suwonin Hwaseong rakennettiin vuosina 1794–1796, ja siitä '
             + 'laadittiin niin yksityiskohtainen selvitys piirustuksineen ja '
             + 'mittoineen, että muuri voitiin myöhemmin korjata alkuperäisen '
@@ -22547,6 +23530,7 @@ export const MAA_KATEGORIAT = {
               + 'talveksi riittävän määrän kerralla, satoja kaalinkeriä '
               + 'yhtenä päivänä. Tapa otettiin Unescon aineettoman '
               + 'kulttuuriperinnön luetteloon vuonna 2013.',
+          lyhyt: 'Kimchiin tuli punainen chili vasta 1600-luvulla; gimjang on Unescon perintölistalla 2013.',
           selite: 'Kimchiin tuli punainen chili vasta 1600-luvulla, ja '
             + 'lokakuusta alkaen vietettävä gimjang eli talvivaraston teko '
             + 'otettiin Unescon aineettoman kulttuuriperinnön luetteloon '
@@ -22565,6 +23549,7 @@ export const MAA_KATEGORIAT = {
               + 'yhdeksi massaksi — vasta silloin maut yhdistyvät. Kuumassa '
               + 'kivikulhossa tarjottu versio paahtaa pohjalle rapean '
               + 'riisikerroksen.',
+          lyhyt: 'Bibimbap eli sekoitettu riisi tuodaan pöytään koskemattomana, ja syöjä sekoittaa sen itse.',
           selite: 'Bibimbap tarkoittaa sekoitettua riisiä, ja annos tuodaan '
             + 'pöytään koskemattomana, koska syöjä sekoittaa erikseen '
             + 'maustetut ainekset itse yhdeksi massaksi.',
@@ -22581,6 +23566,7 @@ export const MAA_KATEGORIAT = {
               + 'rinnalla, ja ravintolat täyttävät lautaset pyydettäessä '
               + 'ilman lisämaksua. Tapa on peräisin hovin ateriajärjestyksestä, '
               + 'jossa lautasten lukumäärä kertoi juhlan arvon.',
+          lyhyt: 'Banchan-lisukkeet syödään pääruoan rinnalla ja täytetään ilmaiseksi hovin tapojen mukaan.',
           selite: 'Banchan ovat pieniä lisukkeita, jotka syödään pääruoan '
             + 'rinnalla ja täytetään pyydettäessä ilman lisämaksua, ja tapa '
             + 'on peräisin hovin ateriajärjestyksestä.',
@@ -22598,6 +23584,7 @@ export const MAA_KATEGORIAT = {
               + 'Korean niemimaan pohjoisosista, Pjongjangista ja '
               + 'Hamhungista, ja se oli alun perin talviruoka — nykyään se '
               + 'syödään kesähelteellä.',
+          lyhyt: 'Naengmyeonin sitkeät tattarinuudelit leikataan pöydässä saksilla; annos oli alun perin talviruoka.',
           selite: 'Naengmyeonin nuudelit tehdään tattarista ja tärkkelyksestä '
             + 'ja ovat niin sitkeitä, että ne leikataan saksilla pöydässä, ja '
             + 'niemimaan pohjoisosista kotoisin oleva annos oli alun perin '
@@ -22637,6 +23624,7 @@ export const MAA_KATEGORIAT = {
               + 'poltetaan. Kuvio ei siis ole maalattu pinnalle vaan se on '
               + 'osa astian seinämää. Aiheiksi valittiin kurkia, pilviä, '
               + 'krysanteemeja ja luumunkukkia.',
+          lyhyt: 'Goryeo-seladonin sanggam-kuvio kaiverretaan saveen ja täytetään valkoisella tai mustalla vellillä.',
           selite: 'Goryeo-kauden seladon sanggam-koristelussa kuvio '
             + 'kaiverretaan puolikuivaan saveen uraksi ja täytetään '
             + 'valkoisella tai mustalla savivellillä, joten kuvio on osa '
@@ -22655,6 +23643,7 @@ export const MAA_KATEGORIAT = {
               + 'Sauma jättää muodon hieman epäsymmetriseksi, eikä sitä '
               + 'pidetty virheenä vaan osana viehätystä. Yli 40 senttimetrin '
               + 'kokoisia purkkeja tunnetaan enää parikymmentä.',
+          lyhyt: 'Kuupurkkeja tehtiin 1600–1700-luvuilla kahdesta puolikkaasta; yli 40 cm:n on enää parikymmentä.',
           selite: 'Kuupurkkeja tehtiin 1600-luvun lopulta 1700-luvun '
             + 'puoliväliin kahdesta erikseen dreijatusta puolikkaasta, ja yli '
             + '40 senttimetrin kokoisia tunnetaan enää parikymmentä.',
@@ -22672,6 +23661,7 @@ export const MAA_KATEGORIAT = {
               + 'tavallinen ihminen ja tiikeri mahtava mutta hidasjärkinen '
               + 'vallanpitäjä. Sama kuva ripustettiin uudenvuoden aikaan '
               + 'oveen karkottamaan vahinkoja.',
+          lyhyt: 'Minhwa-maalauksessa harakka on tavallinen ihminen, tiikeri mahtava mutta hidasjärkinen vallanpitäjä.',
           selite: 'Minhwa on nimettömien tekijöiden kansanmaalausta, ja sen '
             + 'suosituimmassa aiheessa harakan tulkitaan olevan tavallinen '
             + 'ihminen ja tiikerin mahtava mutta hidasjärkinen vallanpitäjä.',
@@ -22690,6 +23680,7 @@ export const MAA_KATEGORIAT = {
               + 'auringolta ja hyönteisiltä, ja peittää samalla puun '
               + 'epätasaisuudet. Työn tekee erikoistunut maalari, ja kuviot '
               + 'noudattavat vakiintuneita malleja.',
+          lyhyt: 'Dancheong-maali viidessä ilmansuuntaväreissä suojaa temppelin puuta kosteudelta ja hyönteisiltä.',
           selite: 'Dancheong perustuu viiteen ilmansuuntia vastaavaan väriin, '
             + 'ja paksu mineraalipohjainen maali suojaa temppelin '
             + 'puurakenteita kosteudelta, auringolta ja hyönteisiltä.',
@@ -22728,6 +23719,7 @@ export const MAA_KATEGORIAT = {
               + 'kun hiekka kasautui väliin. Nimi tarkoittaa '
               + 'auringonnousuhuippua: sen laelta katsotaan auringon nousua '
               + 'merestä.',
+          lyhyt: 'Seongsan Ilchulbong syntyi noin 5000 vuotta sitten sulan kiven kohdatessa matalan meren.',
           selite: 'Seongsan Ilchulbong syntyi noin viisituhatta vuotta sitten '
             + 'purkauksessa, jossa sula kivi kohtasi matalan meren ja '
             + 'höyryräjähdys sinkosi tuhkaa renkaaksi purkausaukon ympärille.',
@@ -22745,6 +23737,7 @@ export const MAA_KATEGORIAT = {
               + 'tippukiviä, ja luolan perällä seisoo 7,6 metriä korkea '
               + 'laavapylväs, joka on maailman suurin tunnettu. Luola '
               + 'kuuluu Jejun maailmanperintökohteeseen.',
+          lyhyt: 'Manjanggulin lähes 9 km:n laavaputkessa on maailman suurin tunnettu laavapylväs, 7,6 metriä.',
           selite: 'Manjanggulin lähes yhdeksän kilometrin pituinen laavaputki '
             + 'syntyi, kun laavavirran pinta jähmettyi katoksi ja kuuma laava '
             + 'jatkoi matkaansa sen alla, ja luolan perällä seisoo maailman '
@@ -22763,6 +23756,7 @@ export const MAA_KATEGORIAT = {
               + 'talvehtii muun muassa munkkikurkia, jotka ruokailevat '
               + 'sängellä ja mutatasangolla. Alue on rauhoitettu ja sinne '
               + 'pääsee vain merkittyjä pitkospuita pitkin.',
+          lyhyt: 'Suncheonin lahti on Korean laajimpia ruovikoita, ja sen mutatasangolla talvehtii munkkikurkia.',
           selite: 'Suncheonin lahti on yksi Korean laajimmista ruovikoista, '
             + 'ja sen vuoroveden paljastamalla mutatasangolla talvehtii muun '
             + 'muassa munkkikurkia.',
@@ -22781,6 +23775,7 @@ export const MAA_KATEGORIAT = {
               + 'ruskaviikkoina kapeat laaksot ruuhkautuvat kävelijöistä. '
               + 'Nimi tarkoittaa lumista huippua: lunta on rinteillä '
               + 'pitkälle kevääseen.',
+          lyhyt: 'Seoraksanin graniittihuiput lohkeilevat pystyseiniksi ja torneiksi päällyskiven kuluttua.',
           selite: 'Seoraksanin huiput ovat graniittia, joka jähmettyi '
             + 'aikanaan syvälle maan sisään ja alkoi päällyskiven kuluttua '
             + 'lohkeilla suuriksi pystyseiniksi ja torneiksi.',
@@ -22824,6 +23819,7 @@ export const MAA_KATEGORIAT = {
               + 'levyn ostaneet pääsevät arvonnan kautta lavan eteen '
               + 'muutamaksi minuutiksi, ja tapaamiset ovat osa työtä siinä '
               + 'missä konsertitkin.',
+          lyhyt: 'K-pop-yhtyeiden harjoittelijat asuvat asuntolassa ja treenaavat vuosia ilman debyyttitakuuta.',
           selite: 'K-popin yhtyeet kootaan harjoittelijoista, jotka asuvat '
             + 'levy-yhtiön asuntolassa ja käyvät päivittäin laulu-, tanssi- '
             + 'ja kielitunneilla vuodesta kuuteen vuoteen ilman takeita '
@@ -22846,6 +23842,7 @@ export const MAA_KATEGORIAT = {
               + 'ensimmäinen korealainen kokoonpano Yhdysvaltain '
               + 'albumilistan kärjessä ja 2020 ensimmäinen myös '
               + 'kappalelistalla.',
+          lyhyt: 'BTS oli 2018 ensimmäinen korealaisryhmä USA:n albumilistan kärjessä.',
           selite: 'BTS aloitti vuonna 2013 pienen levy-yhtiön kokoamana, sai '
             + 'kotimaan pääpalkinnon vasta vuonna 2016 ja oli vuonna 2018 '
             + 'ensimmäinen korealainen kokoonpano Yhdysvaltain albumilistan '
@@ -22869,6 +23866,7 @@ export const MAA_KATEGORIAT = {
               + 'ensimmäisenä muulla kuin englannin kielellä tehtynä '
               + 'elokuvana myös parhaan elokuvan palkinnon. Sanat hallyu ja '
               + 'Korean wave lisättiin Oxfordin sanakirjaan vuonna 2021.',
+          lyhyt: 'Bong Joon-hon Parasite voitti 2019 Cannesin pääpalkinnon ja 2020 neljä Oscaria.',
           selite: 'Bong Joon-hon Parasite voitti Cannesin pääpalkinnon 2019 '
             + 'ja helmikuussa 2020 neljä Oscaria, ja se oli ensimmäinen '
             + 'muulla kuin englannin kielellä tehty elokuva, joka sai parhaan '
@@ -22890,6 +23888,7 @@ export const MAA_KATEGORIAT = {
               + '1800-luvulla myös säätyläisille. Etelä-Korea merkitsi sen '
               + 'kansalliseen kulttuuriperintöluetteloonsa vuonna 1964 ja '
               + 'Unesco omaansa vuonna 2003.',
+          lyhyt: 'Pansorissa laulaja vuorottelee laulun ja puheen välillä; Unesco listasi sen 2003.',
           selite: 'Pansori on kertova laulu, jossa laulaja vuorottelee laulun '
             + 'ja puheen välillä ja vieressä istuva rumpali huutaa väliin '
             + 'kannustuksia, ja Unesco merkitsi sen luetteloonsa vuonna 2003.',
@@ -22933,6 +23932,7 @@ export const MAA_KATEGORIAT = {
               + 'lintuja ja sulkapukuisia ihmisiä. Rummuista tuli myös '
               + 'kauppatavaraa: niitä on löydetty yli kaksisataa aina Itä-'
               + 'Indonesiaa myöten.',
+          lyhyt: 'Dong Sonin pronssirummut valettiin katoavan vahan tekniikalla noin 600 eaa.–200 jaa.',
           selite: 'Dong Sonin kulttuuri valoi pronssirumpuja noin vuodesta '
             + '600 eaa. 200-luvulle jaa. katoavan vahan menetelmällä, ja '
             + 'suurimmat ovat metrin korkuisia ja painavat sata kiloa.',
@@ -22952,6 +23952,7 @@ export const MAA_KATEGORIAT = {
               + 'ettei sauma erotu, ja koristelu on veistetty valmiiseen '
               + 'seinään vasta jälkeenpäin. Unescon '
               + 'maailmanperintöluetteloon laakso otettiin vuonna 1999.',
+          lyhyt: 'My Sonin Champa-temppelit Shivalle rakennettiin 300–1200-luvuilla saumattoman tiiviisti.',
           selite: 'My Sonin laaksossa Champan kuninkaat rakensivat Shivalle '
             + 'omistettuja temppeleitä 300-luvulta 1200-luvulle, ja niiden '
             + 'tiilet on ladottu niin tiiviisti, ettei sauma erotu.',
@@ -22972,6 +23973,7 @@ export const MAA_KATEGORIAT = {
               + 'on jäljellä 82. Unescon Maailman muisti -ohjelman '
               + 'Aasian ja Tyynenmeren rekisteriin ne liitettiin vuonna '
               + '2010.',
+          lyhyt: 'Kuningas Le Thanh Tong määräsi 1484 hovikoevoittajien nimet kaiverrettavaksi kilpikonnan selkään.',
           selite: 'Kuningas Le Thanh Tong määräsi vuonna 1484 hovikokeiden '
             + 'läpäisseiden nimet hakattaviksi kiveen, ja kivipaadet '
             + 'nostettiin kilpikonnien selkään, koska kilpikonna tarkoitti '
@@ -22992,6 +23994,7 @@ export const MAA_KATEGORIAT = {
               + 'Vuonna 1719 ruhtinas Nguyen Phuc Chu antoi sillalle nimen Lai '
               + 'Vien Kieu, kaukaisten vieraiden silta. Kappelissa sillan '
               + 'kyljessä ei ole Buddhan kuvaa.',
+          lyhyt: 'Hoi Anin japanilaiskauppiaiden puusilta on tarun mukaan miekka, joka hillitsee Namazu-hirviötä.',
           selite: 'Hoi Anin japanilaisten kauppiaiden kustantama katettu '
             + 'puusilta on noin kahdeksantoista metriä pitkä, ja tarun mukaan '
             + 'se on miekka, joka pitää aloillaan maata järisyttävää '
@@ -23033,6 +24036,7 @@ export const MAA_KATEGORIAT = {
               + 'ensimmäisen kiinteän Nam Dinhin tyylisen kojun. Pohjoisen ja '
               + 'etelän tyylit eroavat nuudelin leveydessä, liemen makeudessa '
               + 'ja yrteissä.',
+          lyhyt: 'Pho ilmestyy lähteisiin vasta 1900-luvun alussa, kotiseutunaan Nam Dinhin Van Cut.',
           selite: 'Pho ilmestyy kirjallisiin lähteisiin vasta 1900-luvun '
             + 'alussa, ja sen kotiseutuna pidetään Nam Dinhin maakunnan '
             + 'kyliä, etenkin Van Cuta.',
@@ -23051,6 +24055,7 @@ export const MAA_KATEGORIAT = {
               + 'ensimmäisten joukossa myydä täytettyä banh mi thitiä. Täytteet '
               + 'sekoittavat kaksi keittiötä: maksapateeta, siankinkkua, '
               + 'etikkaporkkanaa, korianteria ja chiliä.',
+          lyhyt: 'Vietnamilaiseen patongiin tuli riisijauhoa ensimmäisen maailmansodan vehnäpulan takia.',
           selite: 'Vietnamilaisen patongin kuori on ohut ja sisus kevyt, '
             + 'koska leipurit alkoivat ensimmäisen maailmansodan aikana '
             + 'sekoittaa taikinaan halpaa riisijauhoa vehnän tuonnin '
@@ -23070,6 +24075,7 @@ export const MAA_KATEGORIAT = {
               + '120 rottinkisäikeestä, ja hyvin hoidettu tynnyri kestää '
               + 'kuusikymmentä vuotta. Käyminen kestää kaksitoista kuukautta. '
               + 'Ensimmäinen lasku on väkevintä.',
+          lyhyt: 'Phu Quocin kalakastike tehdään pelkästä sardellista, joka käy tynnyrissä 12 kuukautta.',
           selite: 'Phu Quocin kalakastike tehdään vain sardellista, joka '
             + 'suolataan heti verkon noston jälkeen laivan kannella, ja '
             + 'käyminen puutynnyrissä kestää kaksitoista kuukautta.',
@@ -23087,6 +24093,7 @@ export const MAA_KATEGORIAT = {
               + 'seisoo lasin päällä ja tiputtaa hitaasti. Kuppi tarjoillaan '
               + 'usein kuumaa vettä täynnä olevan kulhon sisällä, jottei vaahto '
               + 'ehdi jäähtyä ennen kuin juoma on juotu.',
+          lyhyt: 'Ca phe trung eli munakahvi keksittiin Hanoissa 1940-luvulla vatkaamalla keltuainen vaahdoksi.',
           selite: 'Ca phe trung eli munakahvi kehitettiin Hanoissa 1940-luvun '
             + 'lopulla, kun maitoa oli vaikea saada, ja siinä keltuainen '
             + 'vatkataan sokerin ja kondensoidun maidon kanssa vaahdoksi '
@@ -23128,6 +24135,7 @@ export const MAA_KATEGORIAT = {
               + 'sininen kuparihilseestä tai indigosta, keltainen kukista, '
               + 'punainen puusta ja vuoren punaisesta sorasta. Jokaiselle '
               + 'värille veistettiin oma painolaatta ja ääriviivoille omansa.',
+          lyhyt: 'Dong Hon puupiirrokset ostettiin uudenvuonna ja tehtiin luonnonväreistä, kuten bambuhiilestä.',
           selite: 'Dong Hon puupiirrokset ostettiin uudenvuoden alla ja '
             + 'revittiin seinältä vuoden lopussa, ja niiden värit tehtiin '
             + 'bambunlehtien hiilestä, kukista, puusta ja vuoren punaisesta '
@@ -23147,6 +24155,7 @@ export const MAA_KATEGORIAT = {
               + 'edustalla hylkykaivaus, joka kesti neljä vuotta yli '
               + 'seitsemänkymmenen metrin syvyydessä ja nosti pinnalle yli '
               + '240 000 esinettä.',
+          lyhyt: 'Chu Daun sinivalkoinen keramiikka unohtui, kunnes Cu Lao Chamin hylky nosti sen esiin 1997.',
           selite: 'Chu Daun uunit polttivat sinivalkoista keramiikkaa 1400- '
             + 'ja 1500-luvulla, ja unohtunut tuotanto palasi tietoisuuteen, '
             + 'kun Cu Lao Chamin hylkykaivaus nosti vuodesta 1997 alkaen '
@@ -23166,6 +24175,7 @@ export const MAA_KATEGORIAT = {
               + 'suunnittelema rakennus avattiin vuonna 1919. Siellä on '
               + 'maailman suurin cham-veistosten kokoelma, ja vanhat '
               + 'kokoelmat on järjestetty löytöpaikkojen mukaan.',
+          lyhyt: 'Cham-veistäjien Tra Kieun tyylissä 900-luvulla tanssijattaren vartalo kaartuu kolmeen mutkaan.',
           selite: 'Cham-kansan kivenveistäjät työskentelivät pehmeään '
             + 'hiekkakiveen, ja Tra Kieun tyylin 900-luvun alttarijalustoissa '
             + 'tanssijattaren vartalo kaartuu kolmeen mutkaan ja sormet '
@@ -23185,6 +24195,7 @@ export const MAA_KATEGORIAT = {
               + 'pitkällä sauvalla tai naruilla. Näyttämö on kylän lammessa '
               + 'seisova paviljonki, ja nukettajat seisovat vyötäröä myöten '
               + 'vedessä verhon takana.',
+          lyhyt: 'Vesinukketeatteri syntyi Punaisenjoen suistossa; nuket liikkuvat veden alta sauvoin.',
           selite: 'Vesinukketeatteri syntyi Punaisenjoen suistossa noin tuhat '
             + 'vuotta sitten, ja sen nuket veistetään kelluvasta '
             + 'viikunapuusta ja niitä liikutetaan veden alta sauvoin ja '
@@ -23225,6 +24236,7 @@ export const MAA_KATEGORIAT = {
               + 'laskee tai nousee. Vanhin kirjallinen maininta on vuodelta '
               + '1770, ja soitinta ovat perinteisesti soittaneet sokeat '
               + 'muusikot.',
+          lyhyt: 'Dan bau -sitrassa sävel syntyy huiluäänestä ja soittimen joustavan varren taivutuksesta.',
           selite: 'Dan bau on yksikielinen sitra, jossa ei ole otelautaa '
             + 'lainkaan, vaan sävel syntyy huiluäänestä ja joustavan varren '
             + 'taivuttamisesta soittimeen päin tai siitä poispäin.',
@@ -23242,6 +24254,7 @@ export const MAA_KATEGORIAT = {
               + 'kevätjuhlissa heti uudenvuoden jälkeen, ennen vanhaan '
               + 'kokonaan ilman soittimia. Unesco otti quan hon aineettoman '
               + 'kulttuuriperinnön luetteloon vuonna 2009.',
+          lyhyt: 'Quan ho -laulussa naispari haastaa ja miespari vastaa samalla sävelellä; Unescon listalla 2009.',
           selite: 'Quan ho on Bac Ninhin laulutapa, jossa naispari laulaa '
             + 'haastesäkeen ja miesparin on vastattava täsmälleen samalla '
             + 'sävelmällä eri sanoin, ja Unesco otti sen luetteloonsa vuonna '
@@ -23260,6 +24273,7 @@ export const MAA_KATEGORIAT = {
               + 'soitetaan uuden riisin juhlassa ja muissa kylän menoissa. '
               + 'Unesco nimesi gongikulttuurin tilan ihmiskunnan '
               + 'mestariteokseksi 25. marraskuuta 2005.',
+          lyhyt: 'Keskiylängön gongisarjoissa jokaisen gongin uskotaan asuvan jumaluuden, joka vahvistuu iän myötä.',
           selite: 'Keskiylängön gongisarjoissa jokaisella soittajalla on oma '
             + 'gonginsa, ja jokaisessa gongissa ajatellaan asuvan jumaluus, '
             + 'jonka voima kasvaa gongin iän mukana.',
@@ -23278,6 +24292,7 @@ export const MAA_KATEGORIAT = {
               + 'seremoniasta toiseen, ja kokenut johtaja voi vetää parisataa '
               + 'seremoniaa vuodessa. Unescon luetteloon then otettiin vuonna '
               + '2019.',
+          lyhyt: 'Then-rituaalissa johtaja laulaa matkasta taivaaseen kurpitsakoppaisella tinh-luutulla säestäen.',
           selite: 'Then on tay-, nung- ja thai-kansojen rituaali, jossa '
             + 'johtaja kuvaa laulaen matkaa maan piiristä taivaan piiriin ja '
             + 'säestää itseään tinh-luutulla, jonka kaikukoppa on kurpitsa.',
@@ -23317,6 +24332,7 @@ export const MAA_KATEGORIAT = {
               + 'Kahdessa kohdassa katto on romahtanut, ja aukoista tulviva '
               + 'päivänvalo on kasvattanut luolan pohjalle metsän. Korkeimmat '
               + 'tippukivipatsaat yltävät 80 metriin.',
+          lyhyt: 'Son Doongin pääkäytävä on niin korkea, että romahtaneisiin kattoihin on kasvanut metsä.',
           selite: 'Son Doongin pääkäytävä on yli viisi kilometriä pitkä, '
             + 'kaksisataa metriä korkea ja sataviisikymmentä metriä leveä, ja '
             + 'romahtaneista katoista tulviva päivänvalo on kasvattanut '
@@ -23335,6 +24351,7 @@ export const MAA_KATEGORIAT = {
               + 'järviä, ja Dau Be -saarella niitä on kuusi. Lahdella asuu '
               + 'noin 1 600 ihmistä neljässä kelluvassa kalastajakylässä. '
               + 'Unescon maailmanperintöluetteloon lahti otettiin 1994.',
+          lyhyt: 'Ha Longin lahdella on 1969 saarta, joiden tornimainen muoto syntyi 20 miljoonan vuoden aikana.',
           selite: 'Ha Longin lahdella on 1 969 saarta ja luotoa, joista 989 '
             + 'on saanut nimen, ja niiden tornimainen muoto on kahdenkymmenen '
             + 'miljoonan vuoden työtä trooppisessa sateessa.',
@@ -23352,6 +24369,7 @@ export const MAA_KATEGORIAT = {
               + 'bakteerit käyvät kuidun läpi. Lauma jakautuu ja yhdistyy '
               + 'päivän mittaan, ja keskikokoinen ryhmä on noin '
               + 'kahdeksantoista yksilöä. Laji on äärimmäisen uhanalainen.',
+          lyhyt: 'Punasääridouc sai nimensä tiilenpunaisesta säärestä ja sulattaa lehtiä nelilokeroisessa mahassa.',
           selite: 'Punasääridouc on lehtiapina, joka on saanut nimensä '
             + 'tiilenpunaisesta jaksosta polvesta nilkkaan, ja se sulattaa '
             + 'lehtiravintonsa nelilokeroisessa mahassa.',
@@ -23370,6 +24388,7 @@ export const MAA_KATEGORIAT = {
               + 'portti seuraavalle. Näin pelto ei tulvi eikä multa huuhtoudu. '
               + 'Pengerpellot suojeltiin kansallisena muistomerkkinä vuonna '
               + '2007, ja sato korjataan lokakuun alussa.',
+          lyhyt: 'Mu Cang Chain pengerpelloille tuodaan vesi bambuputkia pitkin; suojeltu muistomerkiksi 2007.',
           selite: 'Mu Cang Chain noin 2 200 hehtaarin pengerpelloille tuodaan '
             + 'vesi ylärinteen puroista halkaistuja bambuja pitkin, ja ne '
             + 'suojeltiin kansallisena muistomerkkinä vuonna 2007.',
@@ -23414,6 +24433,7 @@ export const MAA_KATEGORIAT = {
               + 'hallitsijalle Stamford Rafflesille kerrottiin viidakossa '
               + 'olevasta jättiläisestä, ja hänen lähettämänsä insinööri kaivoi '
               + 'sen esiin kahdessa kuukaudessa kahdensadan miehen voimin.',
+          lyhyt: 'Borobudur nousi 700-luvun lopulla; sen yhdeksälle tasanteelle on veistetty 504 buddhankuvaa.',
           selite: 'Borobudur nousi Keski-Jaavalle 700-luvun lopulla, ja sen '
             + 'yhdeksälle tasanteelle veistettiin 2 672 reliefilaattaa ja '
             + 'aseteltiin 504 buddhankuvaa, joista 72 istuu oman reikäisen '
@@ -23434,6 +24454,7 @@ export const MAA_KATEGORIAT = {
               + 'vähintään 75 prosenttia sen omista kivistä on tallella. Siksi '
               + 'suuret päätemppelit seisovat, mutta 224 pienestä '
               + 'sivutemppelistä on koottu vasta kuusi.',
+          lyhyt: 'Prambananin 47-metrinen Shivan temppeli vihittiin 856 ja oli muinaisen Jaavan korkein rakennus.',
           selite: 'Prambananin Shivan temppeli vihittiin piirtokirjoituksen '
             + 'mukaan 12. marraskuuta 856, ja sen 47 metriä teki siitä '
             + 'muinaisen Jaavan korkeimman rakennuksen.',
@@ -23452,6 +24473,7 @@ export const MAA_KATEGORIAT = {
               + 'lähti Jakartasta elokuussa 2003 ja purjehti Seychelleille, '
               + 'Madagaskarille, Etelä-Afrikkaan ja Ghanaan asti, perille '
               + 'helmikuussa 2004. Matkaa kutsuttiin kanelireitiksi.',
+          lyhyt: 'Samudra Raksa rakennettiin 2003 Borobudurin laivareliefien mukaan ja purjehti Ghanaan asti 2004.',
           selite: 'Samudra Raksa rakennettiin vuonna 2003 Borobudurin '
             + 'reliefien laivakuvien mukaan, ja se purjehti Jakartasta '
             + 'Ghanaan asti helmikuuhun 2004 mennessä.',
@@ -23471,6 +24493,7 @@ export const MAA_KATEGORIAT = {
               + 'kertaa 11 metriä. Tätä candi bentar -tyyliä pidetään '
               + 'Majapahitin keksintönä, ja se elää yhä: Balin temppeleihin '
               + 'astutaan samanlaisesta halkaistusta portista.',
+          lyhyt: 'Trowulanin Wringin Lawang on Majapahitin 15,5-metrinen portti; sama muoto Balilla yhä.',
           selite: 'Trowulanin Wringin Lawang on 15,5 metriä korkea '
             + 'punatiilinen candi bentar -portti Majapahitin pääkaupungista, '
             + 'ja samanlaisesta halkaistusta portista astutaan yhä Balin '
@@ -23511,6 +24534,7 @@ export const MAA_KATEGORIAT = {
               + 'ottivat sitä evääksi pitkille matkoille, ja niin ruoka levisi '
               + 'ympäri saaristoa. Indonesia julisti rendangin '
               + 'kansallisruoakseen vuonna 2018.',
+          lyhyt: 'Rendang hautuu kookosmaidossa tuntikausia, kunnes neste haihtuu ja liha säilyy omassa rasvassaan.',
           selite: 'Rendangissa naudanliha hautuu kookosmaidossa ja '
             + 'mausteseoksessa tuntikausia, kunnes neste on haihtunut ja liha '
             + 'paistuu omassa rasvassaan — juuri siksi ruoka säilyy.',
@@ -23529,6 +24553,7 @@ export const MAA_KATEGORIAT = {
               + 'elää luonnostaan — luultavasti juuri siksi koko ruoka keksittiin '
               + 'sattumalta. Toisin kuin tofu, tempe tehdään kokonaisista '
               + 'pavuista, joten siinä on kuitua ja vitamiineja enemmän.',
+          lyhyt: 'Tempessä Rhizopus-home kasvattaa keitettyjen soijapapujen väliin sitovan valkoisen rihmaston.',
           selite: 'Tempessä Rhizopus-home kasvaa vuorokaudessa tai kahdessa '
             + 'keitettyjen soijapapujen väliin valkoiseksi rihmastoksi, joka '
             + 'sitoo ne tiiviiksi levyksi.',
@@ -23546,6 +24571,7 @@ export const MAA_KATEGORIAT = {
               + 'maapähkinään. Lopputulos ei muistuta enää mitään lähtökohtaansa. '
               + 'Sate on nykyään yksi Indonesian kansallisruoista, ja sitä '
               + 'myydään yhtä lailla ravintoloista kuin kadunkulman kärryistä.',
+          lyhyt: 'Sate syntyi Jaavan satamissa Lähi-idän vartaiden ja kiinalaisen pilkkomistavan yhdistyessä.',
           selite: 'Sate syntyi Jaavan ja Sumatran satamakaupungeissa, joissa '
             + 'Lähi-idän vartaat, intialaiset tekniikat ja kiinalainen tapa '
             + 'pilkkoa ruoka suupaloiksi sekoittuivat paikallisiin '
@@ -23565,6 +24591,7 @@ export const MAA_KATEGORIAT = {
               + 'että mauste on valmis. Kuori rikotaan puunuijalla. Nykyään '
               + 'muskottia viljellään myös muualla Indonesiassa, ja maa on yhä '
               + 'yksi maailman suurimmista tuottajista.',
+          lyhyt: 'Muskottipuun siemenestä saadaan muskottipähkinä, sen kuoresta muskottikukka; kuivuvat viikkoja.',
           selite: 'Muskottipuun hedelmästä saadaan kaksi maustetta, '
             + 'siemenestä muskottipähkinä ja sitä ympäröivästä punaisesta '
             + 'kuoresta muskottikukka, ja siemeniä kuivataan auringossa 15–30 '
@@ -23606,6 +24633,7 @@ export const MAA_KATEGORIAT = {
               + 'sai lajista tiedon vuonna 1912. Kun W. Douglas Burden palasi '
               + 'Komodolta 1926 mukanaan eläviä varaaneja, hänen retkestään '
               + 'syntyi idea King Kong -elokuvaan.',
+          lyhyt: 'Komodonvaraani elää vain viidellä Indonesian saarella ja löytää raadon haarukkakielellään.',
           selite: 'Komodonvaraani elää luonnossa vain viidellä Indonesian '
             + 'saarella, ja se löytää raadon jopa yhdeksän kilometrin päästä '
             + 'haarukkakielellään keräämiensä hiukkasten avulla.',
@@ -23624,6 +24652,7 @@ export const MAA_KATEGORIAT = {
               + 'kukka — ja se haisee mädäntyvältä lihalta, koska sen '
               + 'pölyttäjiä ovat raatokärpäset. Kukinta kestää vain muutaman '
               + 'päivän. Laji löydettiin Sumatran Bengkulusta vuonna 1818.',
+          lyhyt: 'Rafflesia arnoldii elää loisena liaanissa ilman lehtiä; sen metrin kukka on maailman suurin.',
           selite: 'Rafflesia arnoldii elää loisena liaanin sisällä ilman '
             + 'lehtiä, vartta ja juuria, ja sen noin metrin levyinen kukka on '
             + 'maailman suurin yksittäinen kukka.',
@@ -23642,6 +24671,7 @@ export const MAA_KATEGORIAT = {
               + 'ulkopuolella. Emo imettää poikastaan jopa kahdeksan vuotta, '
               + 'pidempään kuin yksikään toinen nisäkäs, ja poikanen roikkuu '
               + 'ensimmäiset kuukautensa kiinni emon vatsassa.',
+          lyhyt: 'Orangutani, ainoa ihmisapina Afrikan ulkopuolella, imettää poikastaan jopa kahdeksan vuotta.',
           selite: 'Orangutani on ainoa ihmisapina Afrikan ulkopuolella, ja '
             + 'emo imettää poikastaan jopa kahdeksan vuotta eli pidempään '
             + 'kuin yksikään toinen nisäkäs.',
@@ -23661,6 +24691,7 @@ export const MAA_KATEGORIAT = {
               + 'tuhoutuivat Euroopassa ja Pohjois-Amerikassa. Samana synkkänä '
               + 'kesänä Genevenjärvellä Mary Shelley alkoi kirjoittaa '
               + 'Frankensteinia.',
+          lyhyt: 'Tamboran purkaus 1815 vei vuorenhuipusta kolmanneksen ja teki vuodesta 1816 kesättömän.',
           selite: 'Tamboran purkaus 10. huhtikuuta 1815 vei vuoren huipusta '
             + 'kolmanneksen, ja sen stratosfääriin nousseet rikkihiukkaset '
             + 'tekivät vuodesta 1816 kesättömän vuoden.',
@@ -23702,6 +24733,7 @@ export const MAA_KATEGORIAT = {
               + 'hienon liinan tekeminen voi viedä kuukausia. Unesco merkitsi '
               + 'indonesialaisen batikin luetteloonsa 2. lokakuuta 2009, ja '
               + 'siitä päivästä tuli maan batikin päivä.',
+          lyhyt: 'Batikin kuvio syntyy säästämällä: vahalla peitetyt kohdat eivät ota väriä; Unescon perintöä 2009.',
           selite: 'Batikissa kuvio ei ole maalattu vaan säästetty, sillä '
             + 'vahalla peitetyt kohdat eivät ota väriä, ja Unesco merkitsi '
             + 'indonesialaisen batikin luetteloonsa 2. lokakuuta 2009.',
@@ -23719,6 +24751,7 @@ export const MAA_KATEGORIAT = {
               + 'puhuu kaikki roolit, antaa merkit gamelan-orkesterille ja '
               + 'pistää nuket odottamaan maahan asetettuun banaanipuun '
               + 'runkoon. Esitys alkaa pimeän tultua ja päättyy aamunkoittoon.',
+          lyhyt: 'Wayang kulit -nukkeja liikutetaan lampun ja liinan välissä pimeästä aamunkoittoon.',
           selite: 'Wayang kulit -nuket leikataan puhvelinnahasta ja niitä '
             + 'liikutetaan lampun ja pingotetun liinan välissä, ja esitys '
             + 'alkaa pimeän tultua ja päättyy aamunkoittoon.',
@@ -23737,6 +24770,7 @@ export const MAA_KATEGORIAT = {
               + 'muotokuvia ja maisemia ja hoiti taidekokoelmaa. Häntä '
               + 'pidetään Indonesian ensimmäisenä modernina taiteilijana. Tämä '
               + 'maisema on vuodelta 1860.',
+          lyhyt: 'Raden Saleh, Indonesian ensimmäinen moderni taiteilija, maalasi tämän maiseman 1860.',
           selite: 'Raden Salehia pidetään Indonesian ensimmäisenä modernina '
             + 'taiteilijana, ja tämä maisema on vuodelta 1860 eli kahdeksan '
             + 'vuotta hänen Euroopasta paluunsa jälkeen.',
@@ -23755,6 +24789,7 @@ export const MAA_KATEGORIAT = {
               + 'rautameteoriitti, joka vietiin Surakartan hoviin, ja sen '
               + 'paloja käytettiin hovisepiltä tilattuihin teriin. Sepän '
               + 'arvonimi on empu.',
+          lyhyt: 'Kerisin terä taotaan rauta- ja nikkelikerroksista; 1700-luvulla käytettiin rautameteoriittiakin.',
           selite: 'Kerisin terä taotaan vuorottelevista raudan ja '
             + 'nikkelipitoisen raudan kerroksista, ja 1700-luvun lopulla '
             + 'Prambananin lähelle pudonneen rautameteoriitin paloja '
@@ -23797,6 +24832,7 @@ export const MAA_KATEGORIAT = {
               + 'soitti keskijaavalainen gamelan, kuulijoiden joukossa olivat '
               + 'Claude Debussy ja Erik Satie. Unesco merkitsi gamelanin '
               + 'luetteloonsa joulukuussa 2021.',
+          lyhyt: 'Gamelan viritetään aina omaksi kokonaisuudekseen; sitä kuulivat 1889 Debussy ja Satie Pariisissa.',
           selite: 'Gamelan viritetään aina omaksi kokonaisuudekseen, joten '
             + 'soittimia ei vaihdella orkesterista toiseen, ja Pariisin '
             + 'maailmannäyttelyssä 1889 sitä kuulivat muun muassa Claude '
@@ -23817,6 +24853,7 @@ export const MAA_KATEGORIAT = {
               + 'angklung viritettiin slendroon ja pelogiin, mutta Daeng '
               + 'Soetigna teki siitä 1938 diatonisen, ja soitin pääsi mukaan '
               + 'orkesteriin.',
+          lyhyt: 'Yksi angklung soi vain yhtä säveltä; Daeng Soetigna teki siitä diatonisen 1938.',
           selite: 'Yksi angklung antaa vain yhden sävelen, joten melodia '
             + 'syntyy ainoastaan ryhmässä, ja Daeng Soetigna teki soittimesta '
             + 'vuonna 1938 diatonisen.',
@@ -23834,6 +24871,7 @@ export const MAA_KATEGORIAT = {
               + 'kaksinkertaisena 56. Soittaja työntää molemmat kätensä viuhkan '
               + 'aukosta sisään ja näppäilee kieliä molemmin puolin kuin '
               + 'harppua.',
+          lyhyt: 'Sasandon kielet kiristetään bambuputken ympärille, ja kaikukoppana toimii lontarpalmun viuhka.',
           selite: 'Sasandon kielet on kiristetty bambuputken ympärille '
             + 'kiilattujen puupalikoiden yli, ja lontarpalmun kuivatuista '
             + 'lehdistä tehty viuhka toimii soittimen kaikukoppana.',
@@ -23852,6 +24890,7 @@ export const MAA_KATEGORIAT = {
               + 'ja balilainen tanssija Wayan Limbak muokkasi sitä yhdessä '
               + 'saarella asuneen saksalaisen taidemaalarin Walter Spiesin '
               + 'kanssa ja vei sen kiertueille maailmalle.',
+          lyhyt: 'Kecakissa jopa 150 miestä hokee tavua ilman soittimia; muoto syntyi 1930-luvun transsirituaalista.',
           selite: 'Kecakissa jopa 150 miestä hokee tavua tšak lomittain ilman '
             + 'yhtäkään soitinta, ja muoto kehittyi 1930-luvulla vanhasta '
             + 'sanghyang-transsirituaalista.',
@@ -23894,6 +24933,7 @@ export const MAA_KATEGORIAT = {
               + 'ajoitettiin 40 000 vuoden taakse, ja helmikuussa 1958 '
               + 'Barbara Harrissonin ryhmä nosti kuumasta Helvetin '
               + 'kaivannosta kallonpalan, jota kutsutaan Syväksi kalloksi.',
+          lyhyt: 'Niahin luolasta löytyi 1958 Syvä kallo; asutus ajoitettiin 1957 yli 40 000 vuoden taakse.',
           selite: 'Niahin luolasta nostettiin helmikuussa 1958 kallonpala, '
             + 'jota kutsutaan Syväksi kalloksi, ja vuoden 1957 hiilinäytteet '
             + 'ajoittivat luolan asutuksen 40 000 vuoden taakse.',
@@ -23913,6 +24953,7 @@ export const MAA_KATEGORIAT = {
               + 'ja sen mukaan rakennus pystytettiin uudelleen vuosina '
               + '1984–1986: runko kovapuuta, katto belian-puuta ja liitokset '
               + 'puutapeilla, ei yhtään naulaa.',
+          lyhyt: 'Melakan sulttaani Mansur Shahin palatsi pystytettiin uudelleen 1984–86 puutapeilla ilman nauloja.',
           selite: 'Melakan sulttaani Mansur Shahin palatsi pystytettiin '
             + 'vuosina 1984–1986 uudelleen Malaijien aikakirjan kuvauksen '
             + 'mukaan puutapeilla ilman yhtäkään naulaa.',
@@ -23932,6 +24973,7 @@ export const MAA_KATEGORIAT = {
               + 'High School ja muutti omalle tontilleen 1931. Nykyään '
               + 'Stadthuys on historian ja etnografian museo, ja aukiota '
               + 'kutsutaan Punaiseksi toriksi.',
+          lyhyt: 'Melakan Stadthuys (1650) on vanhin säilynyt hollantilainen rakennus idässä.',
           selite: 'Melakan Stadthuys rakennettiin vuonna 1650 kuvernöörin '
             + 'toimistoksi, ja sitä pidetään vanhimpana säilyneenä '
             + 'hollantilaisena rakennuksena idässä.',
@@ -23951,6 +24993,7 @@ export const MAA_KATEGORIAT = {
               + 'Hullu Ridley. Käänne tuli 1898, kun maanomistaja Tan Chay '
               + 'Yan istutti neljäkymmentä eekkeriä kumia menestyksekkäästi '
               + 'ja muut seurasivat perässä.',
+          lyhyt: 'Ridley kehitti 1895 kalanruodon muotoisen viiltotavan kumipuun maitiaisnesteen keräämiseen.',
           selite: 'Henry Nicholas Ridley kehitti vuonna 1895 kalanruodon '
             + 'muotoisen viiltotavan, jolla kumipuun maitiaisnestettä sai '
             + 'talteen ilman että kuori tuhoutui.',
@@ -23991,6 +25034,7 @@ export const MAA_KATEGORIAT = {
               + 'paistetut pikkusardellit, maapähkinät, kurkkuviipaleet ja '
               + 'kananmuna. Malesia sai sille Unescon aineettoman '
               + 'kulttuuriperinnön aseman vuonna 2024.',
+          lyhyt: 'Nasi lemak eli rasvainen riisi kypsyy kookosmaidossa; Unescon perintöä Malesialle 2024.',
           selite: 'Nasi lemak tarkoittaa rasvaista riisiä, koska riisi '
             + 'kypsennetään kookosmaidossa pandanuksen lehden kanssa, ja '
             + 'Malesia sai sille Unescon aineettoman kulttuuriperinnön aseman '
@@ -24008,6 +25052,7 @@ export const MAA_KATEGORIAT = {
               + 'chili, ananas, minttu, laksanlehti ja soihtu-inkiväärin '
               + 'avautumaton kukannuppu. Päälle lusikoidaan hae ko, paksu ja '
               + 'makea katkarapumassa, ja alla ovat paksut riisinuudelit.',
+          lyhyt: 'Penangin asam laksan happamuus tulee kookosmaidon sijaan tamarindista, liemessä hiutaleina makrilli.',
           selite: 'Penangin asam laksassa ei ole kookosmaitoa lainkaan, vaan '
             + 'liemen happamuus tulee tamarindista, ja keitetty makrilli '
             + 'revitään hiutaleiksi ja pannaan takaisin liemeen.',
@@ -24025,6 +25070,7 @@ export const MAA_KATEGORIAT = {
               + 'luvun jälkeen. Kojut palvelivat kumiplantaasien portilla jo '
               + '1870-luvulla, ja sodan jälkeen kallis tee vaihtui teepölyyn, '
               + 'jonka karvauden kondensoitu maito peitti.',
+          lyhyt: 'Teh tarik eli vedetty tee jäähdytetään ja vaahdotetaan kaatamalla edestakaisin astioiden välillä.',
           selite: 'Teh tarik tarkoittaa vedettyä teetä, ja edestakainen '
             + 'kaataminen kahden astian välillä jäähdyttää juoman juotavaksi '
             + 'ja nostaa pintaan tiheän vaahtopään.',
@@ -24043,6 +25089,7 @@ export const MAA_KATEGORIAT = {
               + 'kuvasi 1856 maun kermavanukkaaksi, jossa on runsaasti '
               + 'mantelia — haju taas on saanut hedelmän kielletyksi monissa '
               + 'hotelleissa ja busseissa.',
+          lyhyt: 'Malesian durianrekisterissä on yli 200 lajiketta vuodesta 1934, tunnetuin 1980-luvun Musang King.',
           selite: 'Malesia on pitänyt durianin lajikeluetteloa vuodesta 1934, '
             + 'ja rekisterissä on yli kaksisataa nimettyä lajiketta, joista '
             + 'tunnetuin on 1980-luvulla löytynyt Musang King.',
@@ -24082,6 +25129,7 @@ export const MAA_KATEGORIAT = {
               + 'nimetty Pohjois-Borneon metsänhoitajan Harry Keithin mukaan. '
               + 'Nuput ovat hauraita: muurahaiset syövät niitä ja villisiat '
               + 'tallaavat ne rikki.',
+          lyhyt: 'Rafflesia on täysloinen ilman vartta, lehtiä tai juuria; laji keithii kasvaa metrin levyiseksi.',
           selite: 'Rafflesia on täysloinen, jolla ei ole vartta, lehtiä eikä '
             + 'juuria, ja Sabahissa kasvava Rafflesia keithii voi kasvaa '
             + 'metrin läpimittaiseksi.',
@@ -24101,6 +25149,7 @@ export const MAA_KATEGORIAT = {
               + '4 294 hehtaarista suurin osa on koskematonta sademetsää; '
               + 'alueella elää vapaana kuudestakymmenestä kahdeksaankymmeneen '
               + 'orankia.',
+          lyhyt: 'Sepilok avattiin 1964 maailman ensimmäisenä orankien kuntoutuskeskuksena.',
           selite: 'Sepilok avattiin vuonna 1964 maailman ensimmäisenä '
             + 'virallisena orankien kuntoutuskeskuksena, ja sen '
             + 'suojelualueella elää vapaana kuudestakymmenestä '
@@ -24121,6 +25170,7 @@ export const MAA_KATEGORIAT = {
               + 'suurin luolasali: kolme brittiluolatutkijaa löysi sen '
               + 'tammikuussa 1981, ja se on 600 metriä pitkä, 435 leveä ja '
               + 'enimmillään 115 metriä korkea.',
+          lyhyt: 'Gunung Mulun Deer Cave on nimetty suolaa nuolevien sambarhirvien mukaan; käytävä on 174×122 metriä.',
           selite: 'Gunung Mulun Deer Cave sai nimensä sambarhirvistä, jotka '
             + 'käyvät luolassa nuolemassa suolaista kalliota, ja sen käytävä '
             + 'on 174 metriä leveä ja 122 metriä korkea.',
@@ -24138,6 +25188,7 @@ export const MAA_KATEGORIAT = {
               + '16–22,5 kiloa ja naaras 7–12. Poikanen syntyy sinikasvoisena, '
               + 'ja kasvot vaalenevat kermanvärisiksi vasta noin '
               + 'kahdeksan kuukauden iässä.',
+          lyhyt: 'Nenäapina elää vain Borneolla, ja koiraan yli 10 cm nenä vahvistaa sen ääntä.',
           selite: 'Nenäapina elää vain Borneolla, ja koiraan yli kymmenen '
             + 'senttiä pitkä nenä vahvistaa ääntä, mitä pidetään yhtenä '
             + 'selityksenä sen koolle.',
@@ -24176,6 +25227,7 @@ export const MAA_KATEGORIAT = {
               + 'tavallisin poikkeus. Työ keskittyy niemimaan itärannikolle: '
               + 'kankaista 42 prosenttia tehdään Kelantanissa, 36 '
               + 'Terengganussa ja 22 Pahangissa.',
+          lyhyt: 'Malesialaisessa batiikissa kuvio on suurempi ja yksinkertaisempi kuin jaavalaisessa.',
           selite: 'Malesialaisessa batiikissa kuvio on suurempi ja '
             + 'yksinkertaisempi kuin jaavalaisessa, ja värit maalataan '
             + 'enimmäkseen siveltimellä canting-vahakynän sijaan.',
@@ -24193,6 +25245,7 @@ export const MAA_KATEGORIAT = {
               + 'maan kansallissymboleista ja se on vuoden 1989 sarjan 50 '
               + 'sentin kolikossa. Malaysia Airlinesin tunnus on eri leija, '
               + 'wau kucing eli kissaleija.',
+          lyhyt: 'Wau bulan eli kuuleija on suurin malesialainen leija ja kuvattu 1989 vuoden 50 sentin kolikossa.',
           selite: 'Wau bulan eli kuuleija on suurin malesialaisista '
             + 'leijoista, tavallisesti 2,5 metriä leveä ja 3,5 metriä pitkä, '
             + 'ja se on kuvattu vuoden 1989 sarjan 50 sentin kolikossa.',
@@ -24211,6 +25264,7 @@ export const MAA_KATEGORIAT = {
               + 'aikanaan Terengganuun, Pahangiin, Kedahiin ja Perakiin sekä '
               + 'Etelä-Thaimaan Patanin seudulle; nykyään sitä näkee enää '
               + 'Kelantanissa ja Terengganussa.',
+          lyhyt: 'Wayang kulit -varjoteatterissa dalang puhuu kaikki roolit; Kelantanin muoto on aina malaijiksi.',
           selite: 'Wayang kulit on varjoteatteria, jossa dalang puhuu kaikki '
             + 'roolit, ja Malesian vanhin ja tunnetuin muoto Wayang Kulit '
             + 'Siam esitetään aina Kelantanin malaijiksi.',
@@ -24228,6 +25282,7 @@ export const MAA_KATEGORIAT = {
               + 'perinteisesti unista. Kangasta käytetään Gawai-juhlassa ja '
               + 'muissa dayakkien juhlissa, ja Malesian perintövirasto '
               + 'nimesi sen kansalliseksi kuvataideperinnöksi vuonna 2012.',
+          lyhyt: 'Pua kumbu -kankaan kuvio syntyy jo loimessa langat sitomalla ja värjäämällä ennen kutomista.',
           selite: 'Pua kumbun langat sidotaan ja värjätään ennen kutomista, '
             + 'joten kuvio on valmiina jo loimessa, ja Malesian '
             + 'perintövirasto nimesi kankaan kansalliseksi '
@@ -24271,6 +25326,7 @@ export const MAA_KATEGORIAT = {
               + '41. ja 42. kerroksessa, 170 metrin korkeudessa. Se on 58,4 '
               + 'metriä pitkä ja painaa 750 tonnia, ja se koottiin maassa ja '
               + 'nostettiin paikalleen kolmen päivän aikana heinäkuussa 1995.',
+          lyhyt: 'Petronasin torneja yhdistävä taivassilta (170 m, 58,4 m pitkä) nostettiin paikalleen 1995.',
           selite: 'Petronasin torneja yhdistävä taivassilta on 41. ja 42. '
             + 'kerroksessa 170 metrin korkeudessa, ja 58,4 metriä pitkä ja '
             + '750 tonnia painava rakennelma koottiin maassa ja nostettiin '
@@ -24290,6 +25346,7 @@ export const MAA_KATEGORIAT = {
               + 'merkkilaukaus, mutta 41-metrinen torni kesti. Ensimmäinen '
               + 'kello jouduttiin vaihtamaan, koska se ei sopinut '
               + 'rakennukseen; toinen tuli Croydonista ja löi kesäkuussa 1897.',
+          lyhyt: 'Sultan Abdul Samadin rakennuksen kellotornin kello Croydonista löi ensi kerran kesäkuussa 1897.',
           selite: 'Sultan Abdul Samadin rakennuksen julkisivu on 137,2 metriä '
             + 'pitkä, ja sen 41-metrisen kellotornin toinen kello tuli '
             + 'Croydonista ja löi ensi kerran kesäkuussa 1897.',
@@ -24308,6 +25365,7 @@ export const MAA_KATEGORIAT = {
               + 'satamakaupunkeihin, ja käytävä sai nimen viiden jalan tie. '
               + 'George Townin maailmanperintöalueella on luetteloitu 3 642 '
               + 'perintörakennusta; alue merkittiin listalle 2008.',
+          lyhyt: 'George Townin katetut kuistit, viiden jalan tie, syntyivät Rafflesin kaavamääräyksestä 1822.',
           selite: 'George Townin kauppatalot ovat kapeita ja syviä, ja niiden '
             + 'eteen jätetty jatkuva katettu kuisti sai nimen viiden jalan '
             + 'tie Stamford Rafflesin vuoden 1822 kaavamääräyksen jälkeen.',
@@ -24325,6 +25383,7 @@ export const MAA_KATEGORIAT = {
               + 'alta. Portaat nousevat pihalta serambille eli kuistille. '
               + 'Osissa Sabahia paalujen määrä saattoi jopa vaikuttaa siihen, '
               + 'montako puhvelia morsiamesta luvattiin.',
+          lyhyt: 'Perinteinen malaijitalo tehdään ilman nauloja paaluille tulvaveden ulottumattomiin.',
           selite: 'Perinteinen malaijitalo tehdään puusta ja bambusta ilman '
             + 'nauloja, joten sen voi purkaa ja pystyttää uudelleen toiseen '
             + 'paikkaan, ja se seisoo paaluilla tulvaveden ulottumattomissa.',
@@ -24368,6 +25427,7 @@ export const MAA_KATEGORIAT = {
               + '600–900-luvuille, ja niiden ympäriltä nousi kauppatavaraa '
               + 'Itä-Aasiasta asti. Sama sana barangay tarkoittaa nykyään '
               + 'kaupunginosaa.',
+          lyhyt: 'Balangay-vene rakennettiin ilman nauloja puutapein; vanhimmat ajoittuvat 600–900-luvuille.',
           selite: 'Balangay rakennettiin ilman nauloja liittämällä lankut '
             + 'puutapein ja sitomalla ne kuituköysin, ja vanhimmat Butuanista '
             + 'kaivetut veneet ajoittuvat 600–900-luvuille.',
@@ -24386,6 +25446,7 @@ export const MAA_KATEGORIAT = {
               + 'peson setelissä, mutta juuri ne jäivät pois Unescon '
               + 'luettelosta, koska seassa on liikaa uusia rakennuksia. '
               + 'Kansallisaarteeksi ne julistettiin 1973.',
+          lyhyt: 'Ifugaon riisipenkereet nousevat Luzonilla noin 1500 metriin; Banauen pengermät julistettiin 1973.',
           selite: 'Ifugaon riisipenkereet nousevat Luzonin vuorilla noin 1 '
             + '500 metrin korkeuteen, ja Banauen pengermät julistettiin '
             + 'kansallisaarteeksi vuonna 1973.',
@@ -24404,6 +25465,7 @@ export const MAA_KATEGORIAT = {
               + 'ylä- tai alapuolella. Kirjasta tunnetaan enää yksi kappale, '
               + 'ja se on Yhdysvaltain kongressin kirjastossa. Unesco otti '
               + 'teoksen Maailman muisti -rekisteriin 2024.',
+          lyhyt: 'Doctrina Christiana (1593) sisältää tekstin espanjaksi ja tagalogiksi baybayin-kirjoituksella.',
           selite: 'Vuonna 1593 Manilassa painettu Doctrina Christiana '
             + 'sisältää saman tekstin espanjaksi latinalaisin kirjaimin ja '
             + 'tagalogiksi baybayin-kirjoituksella, ja siitä tunnetaan enää '
@@ -24423,6 +25485,7 @@ export const MAA_KATEGORIAT = {
               + 'vietiin Manilasta Britanniaan 1762, ja niistä lyötiin lisää '
               + 'vedoksia ennen kuin metalli sulatettiin merikarttojen '
               + 'tarpeisiin. Alkuperäispainoksia tunnetaan alle viisikymmentä.',
+          lyhyt: 'Murillo Velarden 1734 kartta, Filippiinien karttojen äiti, kaiversi Nicolás de la Cruz Bagay.',
           selite: 'Pedro Murillo Velarden vuoden 1734 karttaa kutsutaan '
             + 'kaikkien Filippiinien karttojen äidiksi, ja sen kaiversi '
             + 'tagalogilainen Nicolás de la Cruz Bagay.',
@@ -24462,6 +25525,7 @@ export const MAA_KATEGORIAT = {
               + 'naturales. Etikka tehdään kookoksen, sokeriruo\'on tai '
               + 'nipapalmun mehusta. Soijaton vaalea adobong puti lienee '
               + 'lähinnä alkuperäistä.',
+          lyhyt: 'Adobo-menetelmässä liha haudutetaan etikassa ja valkosipulissa; kirjattu sanakirjaan jo 1613.',
           selite: 'Adobo on ennen kaikkea menetelmä, jossa liha haudutetaan '
             + 'etikassa, valkosipulissa, mustapippurissa ja laakerinlehdessä, '
             + 'ja munkki Pedro de San Buenaventura kirjasi sen sanakirjaansa '
@@ -24481,6 +25545,7 @@ export const MAA_KATEGORIAT = {
               + 'sitruspuun lehdet ovat paikallisia. Cebun lechon on maan '
               + 'kuuluisin. Torilla porsaat ladotaan riviin pöydälle ja '
               + 'pilkotaan asiakkaan edessä.',
+          lyhyt: 'Lechon on hiilloksella tuntikausia käännelty kokonainen sika; Cebun lechon on maan kuuluisin.',
           selite: 'Lechon on kokonainen sika, joka täytetään sitruunaruoholla '
             + 'ja mausteilla ja käännellään hiilloksen päällä tuntikausia, ja '
             + 'Cebun lechon on maan kuuluisin.',
@@ -24498,6 +25563,7 @@ export const MAA_KATEGORIAT = {
               + 'japanilaisten siirtolaisten kojuissa 1920- ja 1930-luvun '
               + 'Manilassa: varhainen versio oli pelkkiä mungpapuja jään ja '
               + 'maidon kanssa, ja jää tuli Quiapon jäätehtaalta.',
+          lyhyt: 'Halo-halo eli sekoita-sekoita juontaa japanilaissiirtolaisten kojuista 1920–30-luvun Manilasta.',
           selite: 'Halo-halo tarkoittaa sekoita-sekoita, ja sen juuret ovat '
             + 'japanilaisten siirtolaisten kojuissa 1920- ja 1930-luvun '
             + 'Manilassa.',
@@ -24514,6 +25580,7 @@ export const MAA_KATEGORIAT = {
               + 'matalalla kauhalla, valuttaa liian veden pois ja lusikoi '
               + 'annoksen mukiin. Reitti ja kellonaika ovat samat päivästä '
               + 'toiseen. Taho tuli Kiinasta hokkienin sanan tāu-hū mukana.',
+          lyhyt: 'Magtataho-kauppias kantaa tofua ja arnibal-siirappia; sana taho tulee hokkienin kielestä.',
           selite: 'Magtataho kantaa olallaan kantotankoa, jonka sangoissa on '
             + 'lämmintä silkkistä tofua, sagohelmiä ja ruskeasta sokerista '
             + 'keitettyä arnibal-siirappia, ja sana taho tuli Kiinasta '
@@ -24554,6 +25621,7 @@ export const MAA_KATEGORIAT = {
               + 'kuukautta. Lentäjä Charles Lindbergh matkusti maahan '
               + 'useasti 1969–1972 ja sai hallituksen ryhtymään lajin '
               + 'suojeluun.',
+          lyhyt: 'Filippiinienkotka on maailman pisin kotka; sen pääsaalis Mindanaolla on kolugo eli lentävä lemuri.',
           selite: 'Filippiinienkotka on pituudeltaan maailman suurin kotka, '
             + 'ja Mindanaon vanhoissa vuorimetsissä sen pääsaalis on kolugo '
             + 'eli lentävä lemuri.',
@@ -24571,6 +25639,7 @@ export const MAA_KATEGORIAT = {
               + 'Suku sai nimen Carlito bohololaisen suojelijan Carlito '
               + 'Pizarrasin mukaan. Boholin saarella yksilöitä arvioidaan '
               + 'olevan enää noin seitsemänsataa.',
+          lyhyt: 'Filippiinientarsierin silmät ovat suhteessa niin suuret, ettei se voi liikuttaa niitä kuopissaan.',
           selite: 'Filippiinientarsierin silmät ovat suhteessa ruumiin '
             + 'painoon nisäkkäiden suurimmat eivätkä mahdu liikkumaan '
             + 'kuopissaan, joten sen niska kääntää pään puoli kierrosta '
@@ -24589,6 +25658,7 @@ export const MAA_KATEGORIAT = {
               + 'ruoho kellastuu suklaanruskeaksi, ja siitä tulee nimi. '
               + 'Tarinat puhuvat tulivuorista ja jättiläisistä, mutta '
               + 'laavakiveä alueelta ei löydy.',
+          lyhyt: 'Boholin suklaakukkulat ovat merikalkkikiveä, joka kuivalla kaudella kellastuu suklaanruskeaksi.',
           selite: 'Boholin kukkulat ovat merikalkkikiveä, jossa on yhä '
             + 'koralleja ja simpukoita, ja kuivalla kaudella ruoho kellastuu '
             + 'suklaanruskeaksi, mistä ne ovat saaneet nimensä.',
@@ -24605,6 +25675,7 @@ export const MAA_KATEGORIAT = {
               + 'huippukraatteri on noin 250 metriä leveä. Vuori kohoaa 2 463 '
               + 'metriin aivan Albayn lahden takaa. Ympäröivä alue nimettiin '
               + '1938 maan ensimmäiseksi kansallispuistoksi.',
+          lyhyt: 'Mayon, maan aktiivisin tulivuori, säilyttää kartionsa purkausten ja sateen tasapainossa.',
           selite: 'Mayon on maan aktiivisin tulivuori, ja sen tasainen 2 463 '
             + 'metrin kartio syntyy tasapainosta, jossa purkaus kasaa tuhkaa '
             + 'rinteille ja sade kuluttaa sitä pois.',
@@ -24644,6 +25715,7 @@ export const MAA_KATEGORIAT = {
               + 'lapsesta kallion pintaan. Paikan löysi taidemaalari Carlos '
               + 'V. Francisco vuonna 1965. Hahmoista erottuu enää 51 '
               + 'selvästi, loput ovat kuluneet pois.',
+          lyhyt: 'Angonon kalliosuojan 127 kaiverrettua hahmoa ovat Filippiinien vanhin tunnettu taideteos.',
           selite: 'Angonon kalliosuojan seinään kaiverretut 127 hahmoa ovat '
             + 'Filippiinien vanhin tunnettu taideteos, ja ne on arvioitu '
             + 'tehdyn ennen vuotta 2000 eaa.',
@@ -24662,6 +25734,7 @@ export const MAA_KATEGORIAT = {
               + 'on maalattu hematiitilla aaltomaisia kiehkuroita. Astia '
               + 'ajoittuu vuosiin 890–710 eaa. ja on Manilan antropologisen '
               + 'museon kuuluisin esine.',
+          lyhyt: 'Manunggulin hautauurna (890–710 eaa.) kuvaa soutajaa, joka vie vainajan tuonpuoleiseen vesitse.',
           selite: 'Manunggulin hautauurna ajoittuu vuosiin 890–710 eaa., ja '
             + 'sen kannen veneessä istuu soutaja melan kanssa ja vainaja '
             + 'kädet ristissä rinnalla — matka tuonpuoleiseen tehtiin siis '
@@ -24681,6 +25754,7 @@ export const MAA_KATEGORIAT = {
               + 'osti työn 20 000 pesetalla, ja Manilaan se palasi Espanjan '
               + 'lahjana vasta 1958. Kangas on 4,22 × 7,68 metriä eli maan '
               + 'suurin maalaus.',
+          lyhyt: 'Juan Lunan Spoliarium voitti Madridissa 1884 kultamitalin ja on Filippiinien suurin maalaus.',
           selite: 'Juan Lunan Spoliarium voitti Madridin taidenäyttelyssä '
             + 'vuonna 1884 ensimmäisen kultamitalin, ja 4,22 × 7,68 metrin '
             + 'kangas on Filippiinien suurin maalaus.',
@@ -24698,6 +25772,7 @@ export const MAA_KATEGORIAT = {
               + 'kangaspuilla. Työhön osallistuu koko yhteisö: miehet '
               + 'valitsevat varret, irrottavat kuidut ja kuivaavat ne '
               + 'auringossa. Kutojia sanotaan unikutojiksi.',
+          lyhyt: 'T\'boli-naisten t\'nalak-kudonnan kuvio nähdään unessa, minkä vuoksi kutojia sanotaan unikutojiksi.',
           selite: 'T\'boli-naisten t\'nalak kudotaan abakabanaanin kuidusta, '
             + 'eikä sen kuviota piirretä vaan nähdään unessa, minkä vuoksi '
             + 'kutojia sanotaan unikutojiksi.',
@@ -24735,6 +25810,7 @@ export const MAA_KATEGORIAT = {
               + 'oli lopulta tehtävä metallista, koska bambusta ei saatu '
               + 'samaa ääntä. Vuosina 1972–1975 urku vietiin korjattavaksi '
               + 'Saksaan. Kansallisaarteeksi se julistettiin 2003.',
+          lyhyt: 'Las Piñasin urun 1031 pillistä 902 on bambua; isä Diego Cera aloitti työn 1816.',
           selite: 'Las Piñasin urun 1 031 pillistä 902 on bambua, ja isä '
             + 'Diego Cera aloitti työn vuonna 1816 hautaamalla bambut '
             + 'rantahiekkaan hyönteisiltä suojaan.',
@@ -24752,6 +25828,7 @@ export const MAA_KATEGORIAT = {
               + 'nuoteista. Monilla kansoilla soitin on ollut naisten. '
               + 'Musiikkia kuullaan häissä, sadonkorjuujuhlissa ja vieraita '
               + 'vastaanotettaessa.',
+          lyhyt: 'Kulintang-gongsarjoilla ei ole yhteistä viritystä, joten sävelmä tunnistetaan sävelvälien kuviosta.',
           selite: 'Kulintang on rivi pieniä vaakatasossa olevia gongeja, eikä '
             + 'sarjoilla ole yhteistä viritystä, joten sävelmän tunnistaa '
             + 'sävelten välimatkojen kuviosta eikä nuoteista.',
@@ -24769,6 +25846,7 @@ export const MAA_KATEGORIAT = {
               + 'keskittyneet Pajacin kaupunginosaan. Kitaralle on käyttöä '
               + 'kotonakin: haranassa eli serenadissa laulaja tulee ikkunan '
               + 'alle ja seuralainen säestää.',
+          lyhyt: 'Mactanin Lapu-Lapussa käsintehdyt kitarat ja ukulelet ovat tunnetuin vientituote.',
           selite: 'Mactanin saarella Lapu-Lapun kaupungissa käsin tehdyt '
             + 'akustiset kitarat ja ukulelet ovat tunnetuin vientituote, ja '
             + 'pajat ovat keskittyneet Pajacin kaupunginosaan.',
@@ -24786,6 +25864,7 @@ export const MAA_KATEGORIAT = {
               + 'kansanlauluihin, oopperaan ja nykymusiikkiin. Kuoro oli '
               + 'ensimmäinen maailmassa, joka voitti kuorolaulun Euroopan '
               + 'grand prix\'n kahdesti, vuosina 1997 ja 2007.',
+          lyhyt: 'Filippiinien Madrigal-kuoro (per. 1963) voitti kuorolaulun Euroopan grand prix\'n kahdesti.',
           selite: 'Filippiinien Madrigal-kuoro perustettiin vuonna 1963, se '
             + 'laulaa istuen ilman kapellimestaria, ja se oli maailman '
             + 'ensimmäinen kuoro, joka voitti kuorolaulun Euroopan grand '
@@ -24829,6 +25908,7 @@ export const MAA_KATEGORIAT = {
               + 'paikan buddhalaista stupaa ja löysi piikivikaapimen, joka '
               + 'paljasti raunion todellisen iän. Nimi tarkoittaa sindhiksi '
               + 'kuolleiden kumpua, sillä alkuperäistä ei tiedetä.',
+          lyhyt: 'Mohenjo-daron suuri allas tiivistettiin bitumilla noin vuonna 2500 eaa.',
           selite: 'Mohenjo-daron suuri allas on 12 metriä pitkä, 7 metriä '
             + 'leveä ja 2,4 metriä syvä, ja sen tiiliseinät tiivistettiin '
             + 'maapiellä eli bitumilla noin vuonna 2500 eaa.',
@@ -24850,6 +25930,7 @@ export const MAA_KATEGORIAT = {
               + 'mainittiin ensi kerran länsimaisessa lähteessä 1836, ja '
               + 'kaivaukset alkoivat 1864. Unesco kutsuu kohdetta '
               + 'poikkeuksellisen hyvin säilyneeksi.',
+          lyhyt: 'Takht-i-Bahin buddhalainen luostari perustettiin 100-luvulla ja pysyi käytössä 600-luvulle asti.',
           selite: 'Takht-i-Bahin buddhalainen luostari perustettiin '
             + 'ensimmäisellä vuosisadalla ja pysyi käytössä 600-luvulle asti, '
             + 'ja sen rakennukset ladottiin paikallisesta kivestä kalkki- ja '
@@ -24871,6 +25952,7 @@ export const MAA_KATEGORIAT = {
               + 'karuna ja puutarhattomana; Akbar yöpyi siellä yhden yön. '
               + 'Muurien sisällä on asuttu siitä asti, ja kylä peittää yhä yli '
               + 'kolmanneksen linnoituksen 70 hehtaarista.',
+          lyhyt: 'Sher Shah Suri perusti Rohtasin linnoituksen 1541; sen sisällä on asuttu keskeytyksettä siitä asti.',
           selite: 'Sher Shah Suri perusti Rohtasin linnoituksen vuonna 1541, '
             + 'ja sen 70 hehtaarin muurien sisällä on asuttu siitä asti — '
             + 'kylä peittää yhä yli kolmanneksen alasta.',
@@ -24891,6 +25973,7 @@ export const MAA_KATEGORIAT = {
               + 'muslimihautausmaalla harvinaista. Kupolin koko kertoi vainajan '
               + 'arvon. Komeimmat muistomerkit rakennettiin vuosien 1570 ja '
               + '1640 välillä.',
+          lyhyt: 'Maklin hautausmaa Thattan vieressä alkoi 1300-luvulla Jam Tamachin toiveesta.',
           selite: 'Maklin hautausmaa levittäytyy kymmenen neliökilometrin '
             + 'alalle Thattan vieressä, ja tapa alkoi 1300-luvulla, kun Jam '
             + 'Tamachi tahtoi tulla haudatuksi sufioppinut Shaikh Jamalin '
@@ -24931,6 +26014,7 @@ export const MAA_KATEGORIAT = {
               + 'naapurustoa, ja osassa kyliä tapa jatkuu yhä. '
               + 'Uunin nimi on ikivanha. Se juontaa akkadin sanaan tinūru, '
               + 'joka esiintyy jo Gilgamesh-eepoksessa.',
+          lyhyt: 'Punjabilaisen tandoorin sisus kuumenee noin 480 asteeseen; yksi uuni palveli koko naapurustoa.',
           selite: 'Punjabilaisen tandoorin sisus nousee puilla tai hiilellä '
             + 'lämmitettynä noin 480 asteeseen, ja kylissä yksi uuni palveli '
             + 'usein koko naapurustoa.',
@@ -24948,6 +26032,7 @@ export const MAA_KATEGORIAT = {
               + 'tai Delhissä, ja vuoden 1947 jaon jälkeen urdunkieliset '
               + 'muuttajat toivat sen mukanaan Karachiin, josta tuli niharin '
               + 'toinen kotikaupunki. Seuralaisena on naan, roti tai riisi.',
+          lyhyt: 'Niharin nimi tulee arabian sanasta nahâr eli aamu, koska pataa syötiin heti aamurukouksen jälkeen.',
           selite: 'Niharin nimi tulee arabian aamua tarkoittavasta sanasta '
             + 'nahâr, koska pataa syötiin mughaliajan ylhäisön pöydässä heti '
             + 'aamurukouksen jälkeen.',
@@ -24966,6 +26051,7 @@ export const MAA_KATEGORIAT = {
               + 'sandaalia tarkoittavasta sanasta chappal, sillä pihvi on '
               + 'jokseenkin pohjallisen kokoinen. Talvella kaverina '
               + 'tarjotaan vihreää kahwa-teetä.',
+          lyhyt: 'Chapli kabab on Peshawarin ja pastujen tunnetuin annos, nimeltään joko litteä tai sandaali.',
           selite: 'Chapli kabab on Peshawarin ja pastujen keittiön tunnetuin '
             + 'annos, ja sen nimi juontuu joko litteää tarkoittavasta pastun '
             + 'sanasta tai sandaalia tarkoittavasta sanasta chappal.',
@@ -24984,6 +26070,7 @@ export const MAA_KATEGORIAT = {
               + 'lajike, joka kypsyy kirkkaan keltaiseksi; Punjabin puolella '
               + 'kasvatetaan chaunsaa, josta Lodhranin seudulla on oma '
               + 'vaalea muunnoksensa.',
+          lyhyt: 'Mango, Pakistanin kansallishedelmä, kypsyy kukasta 4–5 kuukaudessa ja korjataan kesällä.',
           selite: 'Mango on Pakistanin kansallishedelmä, ja kukasta kypsäksi '
             + 'hedelmäksi menee neljästä viiteen kuukautta, joten sato tulee '
             + 'kesällä.',
@@ -25024,6 +26111,7 @@ export const MAA_KATEGORIAT = {
               + 'nimeä — sitä ei näy kylistä. Ensimmäisinä huipulla olivat '
               + 'italialaiset Lino Lacedelli ja Achille Compagnoni vuonna '
               + '1954. Talvella se noustiin vasta tammikuussa 2021.',
+          lyhyt: 'K2, maailman toiseksi korkein vuori (8611 m), sai nimensä Thomas Montgomerien mittauksesta 1856.',
           selite: 'K2 on 8 611 metriä korkea ja maailman toiseksi korkein '
             + 'vuori, ja sen nimi on Thomas Montgomerien vuonna 1856 tekemä '
             + 'mittausmerkintä.',
@@ -25041,6 +26129,7 @@ export const MAA_KATEGORIAT = {
               + 'yhdeksäntoista yksilöä. Vuonna 2005 niitä oli 40 ja vuonna '
               + '2022 jo 78. Puisto on 843 neliökilometriä, ja lyhyenä kesänä '
               + 'tasanko peittyy kukkiin ja perhosiin.',
+          lyhyt: 'Deosain kansallispuisto perustettiin 1993 himalajanruskeakarhun suojaksi; 19 yksilöstä 78:aan 2022.',
           selite: 'Deosain kansallispuisto perustettiin vuonna 1993 '
             + 'pelastamaan himalajanruskeakarhu, jota oli jäljellä '
             + 'yhdeksäntoista yksilöä, ja vuonna 2022 niitä oli jo 78.',
@@ -25059,6 +26148,7 @@ export const MAA_KATEGORIAT = {
               + 'yhdeksäntoista, joista yksitoista maan alla, käytävää noin 40 '
               + 'kilometriä ja lämpötila pysyy 18–20 asteessa. Suolatiilistä '
               + 'on muurattu kaivokseen moskeija.',
+          lyhyt: 'Khewran suolakaivoksessa vain puolet suolasta louhitaan, loput jätetään kannattelemaan kattoa.',
           selite: 'Khewran suolakaivosta louhitaan kammio ja pylväs '
             + '-menetelmällä, jossa vain puolet suolasta otetaan ja loput '
             + 'jätetään kannattelemaan kattoa.',
@@ -25085,6 +26175,7 @@ export const MAA_KATEGORIAT = {
               + 'vapaaehtoista valoisan aikaan. Taimet painetaan käsin '
               + 'pehmeään mutaan vuoroveden laskettua. Lehdet kelpaavat myös '
               + 'rehuksi, ja kyläläiset keräävät niitä karjalleen.',
+          lyhyt: 'Keti Bandarissa istutettiin 2018 yhden päivän aikana yli 1,1 miljoonaa mangroventainta, ennätys.',
           selite: 'Induksen suistoon istutettiin Keti Bandarissa 19. '
             + 'huhtikuuta 2018 yhden päivän aikana 1 129 294 mangroventainta, '
             + 'mikä on maailmanennätys.',
@@ -25123,6 +26214,7 @@ export const MAA_KATEGORIAT = {
               + 'vuodesta 1971, esiintyi yli neljässäkymmenessä maassa ja '
               + 'levytti yli 125 qawwali-albumia — enemmän kuin kukaan muu. '
               + 'Hän kuoli 1997 vain 48-vuotiaana.',
+          lyhyt: 'Qawwali on sufilaista hartausmusiikkia, jossa säestävät harmoni, rummut ja taputukset.',
           selite: 'Qawwali on sufilaista hartausmusiikkia, jossa johtavan '
             + 'laulajan ja kuoron rinnalla soivat harmoni, rummut ja '
             + 'kädentaputukset.',
@@ -25141,6 +26233,7 @@ export const MAA_KATEGORIAT = {
               + 'jotka soivat itsestään. Kielet tehtiin ennen suolesta, nyt '
               + 'usein nailonista. Rababia sanotaan soittimien leijonaksi, ja '
               + 'siitä polveutuu pohjoisintialainen sarod.',
+          lyhyt: 'Rabab kaiverretaan yhdestä mulperipuun rungosta, ja sen kaikukoppa peitetään usein vuohennahalla.',
           selite: 'Rababin runko kaiverretaan yhdestä mulperipuun rungosta, '
             + 'ja sen kaikukoppa peitetään usein vuohennahalla, jonka päällä '
             + 'lepäävää tallaa pitää paikallaan pelkkä kielten kireys.',
@@ -25158,6 +26251,7 @@ export const MAA_KATEGORIAT = {
               + 'korkeaa. Rytmin päälle tanssitaan dhamaalia, joka on '
               + 'pyörivää ja polkevaa hurmostanssia. Kuuluisin juhla on Lal '
               + 'Shahbaz Qalandarin pyhäkössä Sehwanissa.',
+          lyhyt: 'Urs, sufipyhimyksen kuolinpäivän juhla, tarkoittaa häitä: kuolema on yhtymistä Jumalaan.',
           selite: 'Urs on sufipyhimyksen kuolinpäivän vuosijuhla, ja sanan '
             + 'merkitys on häät, koska kuolinpäivä ymmärretään yhtymisenä '
             + 'Jumalaan.',
@@ -25175,6 +26269,7 @@ export const MAA_KATEGORIAT = {
               + 'kahdeksantoista vuotta. Hän kirjoitti äidinkielellään '
               + 'saraikilla runoja rakkaudesta, kaipuusta ja kuolemasta, ja '
               + 'niitä lauletaan yhä seudun juhlissa.',
+          lyhyt: 'Khwaja Ghulam Farid kirjoitti Cholistanin aavikolla saraikiksi runoja, joita lauletaan yhä juhlissa.',
           selite: 'Cholistanin aavikko sai oman runoilijansa, kun Khwaja '
             + 'Ghulam Farid vetäytyi Rohiin kahdeksaksitoista vuodeksi ja '
             + 'kirjoitti saraikiksi runoja, joita lauletaan seudun juhlissa '
@@ -25215,6 +26310,7 @@ export const MAA_KATEGORIAT = {
               + 'lamppuja, lasia ja peiliä; Sindhissä käytetään paljon punaista '
               + 'ja kamelinluuta. Puskurissa roikkuvat ketjut helisevät, ja '
               + 'siitä tuli lempinimi jingle truck.',
+          lyhyt: 'Pakistanilaisen kuorma-auton koristelu maksaa tuhansia; puskurin ketjut antoivat lempinimen.',
           selite: 'Pakistanilaisen kuorma-auton koristelu maksaa tuhansia '
             + 'dollareita ja sen aiheet ovat kuljettajan kotoa, ja puskurissa '
             + 'helisevistä ketjuista tuli lempinimi jingle truck.',
@@ -25233,6 +26329,7 @@ export const MAA_KATEGORIAT = {
               + 'Ajrak annetaan vieraalle kunnianosoituksena sindhiläisen lakin '
               + 'kanssa, ja vuonna 2025 Sindh otti ajrak-kuvion myös autojen '
               + 'rekisterikilpiin.',
+          lyhyt: 'Ajrak-huivin kuvio painetaan puupalikoilla; mestaruus mitataan pisterivien tasakokoisuudesta.',
           selite: 'Ajrak on sindhiläinen huivi, jonka kuvio painetaan '
             + 'kaiverretuilla puupalikoilla kasvi- ja mineraaliväreillä, ja '
             + 'mestaruus mitataan pisterivien tasakokoisuudesta.',
@@ -25251,6 +26348,7 @@ export const MAA_KATEGORIAT = {
               + 'puunveistostaan. Moskeija rakennettiin sufipyhimys Miran '
               + 'Badshahin haudan ympärille, ja se seisoo vanhalla '
               + 'kuninkaantiellä Delhin portilta linnoitukselle.',
+          lyhyt: 'Wazir Khanin moskeija (1634–1641) Lahoressa on peitetty kashi-kari-laattamosaiikilla ja freskoin.',
           selite: 'Wazir Khanin moskeija rakennettiin Lahoreen vuosina '
             + '1634–1641, ja sen pinnat on peitetty '
             + 'kashi-kari-laattamosaiikilla ja sisäpinnat lähes kokonaan '
@@ -25271,6 +26369,7 @@ export const MAA_KATEGORIAT = {
               + 'paastoavasta Siddharthasta: kylkiluut, suonet ja kuopalle '
               + 'painuneet posket kertovat vuosista, jotka hän eli '
               + 'äärimmäisessä kieltäymyksessä ennen kuin hylkäsi sen tien.',
+          lyhyt: 'Lahoren museon tunnetuin esine on gandharalainen veistos paastoavasta Siddharthasta.',
           selite: 'Lahoren museon tunnetuin esine on gandharalainen '
             + 'kiviveistos paastoavasta Siddharthasta niiltä vuosilta, jotka '
             + 'hän eli äärimmäisessä kieltäymyksessä ennen kuin hylkäsi sen '
@@ -25378,6 +26477,7 @@ export const MAA_KATEGORIAT = {
             + 'Madagaskarille lännessä, Pääsiäissaarelle idässä ja '
             + 'Uuteen-Seelantiin noin 1250 jaa. Mukana kulkivat riisi, '
             + 'banaani, kookos, taaro, kana, sika ja koira.',
+          lyhyt: 'Lanyun saaren tao-kansalle veneenrakennus ja kalastus ovat merikulttuurin tärkeimmät taidot.',
           selite: 'Lanyun saaren tao-kansa on yksi Taiwanin austronesialaisista '
             + 'alkuperäiskansoista, ja sen merikulttuurissa veneenrakennus ja '
             + 'kalastus ovat rituaalisesti tärkeimmät taidot.',
@@ -25398,6 +26498,7 @@ export const MAA_KATEGORIAT = {
             + 'vuonna 1658 Taiwan tuotti 1 730 000 catty-painoa, josta '
             + '800 000 purjehti Persiaan ja 600 000 Japaniin. Kolmas oli '
             + 'rikki, jota kerättiin Keelungin ja Tamsuin seudulta.',
+          lyhyt: 'Vingboonsin kartassa (n. 1640) saari on Het Eylant Formosa, edustallaan Pescadores eli Penghu.',
           selite: 'Johannes Vingboonsin noin vuonna 1640 piirtämässä kartassa saari '
             + 'on nimeltään Het Eylant Formosa ja sen edustalla ovat Pescadores '
             + 'eli Penghun saaret.',
@@ -25441,6 +26542,7 @@ export const MAA_KATEGORIAT = {
             + 'Ontariossa, ja vuotta myöhemmin tyttökoulu; samana vuonna '
             + 'alkoi toimia Tamsuin sairaala. Isoisän matkavuonna 1873 '
             + 'Mackay oli ollut Tamsuissa vasta vuoden.',
+          lyhyt: 'Oxford College valmistui Tamsuihin 1882; siinä toimii nykyään Aletheian yliopisto.',
           selite: 'Oxford College valmistui Tamsuihin 1882, ja rakennuksen otsikkoon '
             + 'on muurattu sen nimi ja vuosiluku. Nykyään siinä toimii Aletheian '
             + 'yliopisto.',
@@ -25469,6 +26571,7 @@ export const MAA_KATEGORIAT = {
             + 'sitä yli vuorokauden. Päälle tulee hapansäilöttyä sinappikaalia '
             + 'ja kevätsipulia. Lanzhoun kuuluisa versio on juuri päinvastainen: '
             + 'kirkas liemi ilman soijakastiketta.',
+          lyhyt: 'Punaruskeaksi haudutetussa naudanlihanuudelikeitossa lientä keitetään joskus yli vuorokauden.',
           selite: 'Punaruskeaksi haudutetussa naudanlihanuudelikeitossa on lihaa, '
             + 'vehnänuudelia ja kevätsipulia, ja lientä keitetään joskus yli '
             + 'vuorokauden.',
@@ -25556,6 +26659,7 @@ export const MAA_KATEGORIAT = {
             + 'thao- ja bununkansojen suuressa tulvatarinassa ihmiset pakenivat '
             + 'vuorten huipuille, ja siniharakka uhrasi itsensä kantaakseen '
             + 'viimeisen sytykkeen Yu Shanin huipulta takaisin heille.',
+          lyhyt: 'Taiwaninsiniharakalla on musta pää, keltaiset silmät, punainen nokka ja pitkä pyrstö.',
           selite: 'Taiwaninsiniharakalla on musta pää, keltaiset silmät, punainen '
             + 'nokka ja pyrstö, joka on pidempi kuin muu lintu.',
           lahde: 'Charles Lam from Hong Kong, China, Wikimedia Commons (CC BY-SA 2.0)',
@@ -25573,6 +26677,7 @@ export const MAA_KATEGORIAT = {
             + 'romahti: vuonna 1992 yksilöitä laskettiin enää 200. Shei-Pan '
             + 'kansallispuistossa aloitettiin 1995 istutustyö, ja maaliskuussa '
             + '2023 laskennassa löytyi 15 374 kalaa.',
+          lyhyt: 'Formosanlohi elää yli 1500 metrin korkeuden vuoristopuroissa, missä vesi pysyy alle 17 asteessa.',
           selite: 'Formosanlohi elää kirkkaissa vuoristopuroissa yli 1 500 metrin '
             + 'korkeudessa, missä vesi pysyy alle 17 asteessa.',
           lahde: 'Kyo chen, Wikimedia Commons (CC BY-SA 4.0)',
@@ -25590,6 +26695,7 @@ export const MAA_KATEGORIAT = {
             + 'palautus: Taipein eläintarhasta vietiin 22 peuraa Kentingin '
             + 'kansallispuistoon, aitauksissa odotettiin kymmenen vuotta ja '
             + '1994 ne päästettiin vapaaksi. Nyt niitä on yli tuhat.',
+          lyhyt: 'Formosanpeurojen luontoonpalautus alkoi Taipein eläintarhan yksilöistä, joita hoidetaan yhä siellä.',
           selite: 'Formosanpeurojen palautus luontoon alkoi Taipein eläintarhan '
             + 'yksilöistä, ja tarhassa lajia hoidetaan yhä.',
           lahde: 'Lord Koxinga, Wikimedia Commons (CC BY-SA 3.0)',
@@ -25608,6 +26714,7 @@ export const MAA_KATEGORIAT = {
             + 'osuu saaliiseen — siksi se on täysin riippuvainen vuorovesilietteistä. '
             + '1980-luvulla laji oli lähellä hävitä. Vuoden 2012 laskennassa '
             + 'lintuja oli 2 693 ja vuoden 2022 laskennassa 6 162.',
+          lyhyt: 'Mustanaamalusikkanokka ruokailee huitomalla lapiomaista nokkaansa matalassa vedessä.',
           selite: 'Mustanaamalusikkanokka ruokailee matalassa vedessä huitomalla '
             + 'lapiomaista nokkaansa puolelta toiselle.',
           lahde: '邱文強, Wikimedia Commons (CC BY-SA 4.0)',
@@ -25650,6 +26757,7 @@ export const MAA_KATEGORIAT = {
             + 'viisisataa. Ooppera siirtyi radioon 1954, ensimmäiseen '
             + 'elokuvaan 1955 ja televisioon 1962. Miesten roolit laulaa '
             + 'perinteisesti nainen.',
+          lyhyt: 'Gezaixi esitetään usein kadulle pystytetyllä lavalla, ja soittajat istuvat näyttämön laidassa.',
           selite: 'Gezaixi esitetään usein ulkona kadulle pystytetyllä koristellulla '
             + 'lavalla, ja soittajat istuvat näyttämön laidassa.',
           lahde: 'Sean Chiu, Wikimedia Commons (CC BY-SA 4.0)',
@@ -25706,6 +26814,7 @@ export const MAA_KATEGORIAT = {
             + 'viisikymmentä tunnelia, 77 puusiltaa ja harvinaisia Z-kirjaimen '
             + 'muotoisia peräytysmutkia, joissa juna kiipeää rinnettä sahaten. '
             + 'Koko päärata avattiin taas heinäkuussa 2024.',
+          lyhyt: 'Alishanin metsäradan Shay-vetureissa sylinterit ovat rungon kyljessä, voima siirtyy hammasakselilla.',
           selite: 'Alishanin metsäradalla käytettiin Shay-vetureita, joiden '
             + 'sylinterit ovat rungon kyljessä ja voima siirtyy pyöriin '
             + 'hammasakselin kautta.',
@@ -25726,6 +26835,7 @@ export const MAA_KATEGORIAT = {
             + 'täydellisen synteesin kamferihaposta ja aloitti 1907 teollisen '
             + 'valmistuksen Tainionkoskella. Formosan kamferi maksoi tavallisesti '
             + 'noin 50 senttiä naulalta, vuonna 1918 jo 3,75 dollaria.',
+          lyhyt: 'Kamferipuusta höyrytetty kamferi oli 1800-luvun lopulla Taiwanin tuottoisimpia vientitavaroita.',
           selite: 'Kamferipuun rungosta ja oksista höyrytettiin kamferia, joka oli '
             + '1800-luvun lopulla Taiwanin tuottoisimpia vientitavaroita.',
           lahde: 'harum.koh from Kobe city, Japan, Wikimedia Commons (CC BY-SA 2.0)',
@@ -25744,6 +26854,7 @@ export const MAA_KATEGORIAT = {
             + 'Schwinn siirsi tilauksensa muualle 1987, Giant toi markkinoille '
             + 'oman merkkinsä. Vuonna 2017 yhtiö myi 6,6 miljoonaa polkupyörää, '
             + 'ja niitä myytiin yli viidessäkymmenessä maassa.',
+          lyhyt: 'Taiwanin ympäripyöräilyreitin varrella pyörän saa vuokrata yhdestä kaupungista ja jättää toiseen.',
           selite: 'Taiwanissa polkupyörä on myös matkailuväline: saaren ympäri '
             + 'kulkevan reitin varrella on vuokraamoja, joista pyörän saa '
             + 'yhdestä kaupungista ja jättää toiseen.',
@@ -25847,6 +26958,7 @@ export const MAA_KATEGORIAT = {
               + 'mutaan ja hiekkaan jo ennen mongolien hyökkäystä '
               + '1220. Kumpu kaivettiin auki vasta 1920-luvun '
               + 'tutkimuksissa.',
+          lyhyt: 'Samanidimausoleumin poltetusta tiilestä ladottu kuvio muuttuu auringon mukana; kulmissa tukitornit.',
           selite: 'Samanidimausoleumin seinät on ladottu paljaasta poltetusta '
             + 'tiilestä niin, että kuvio muuttuu auringon kiertäessä, ja '
             + 'kulmissa ovat paksut tukitornit.',
@@ -25870,6 +26982,7 @@ export const MAA_KATEGORIAT = {
               + 'Baburnaman hän kirjoitti tšagataiksi, ja se on '
               + 'islamilaisen kirjallisuuden varhaisimpia '
               + 'omaelämäkertoja.',
+          lyhyt: 'Baburnaman 1590 käsikirjoituksessa kuvataan hetki, jona Baburille kerrottiin Andižanin menetyksestä.',
           selite: 'Baburnaman vuoden 1590 käsikirjoituksessa on oma kuvansa '
             + 'hetkelle, jona Baburille tuotiin tieto Andižanin '
             + 'menetyksestä.',
@@ -25892,6 +27005,7 @@ export const MAA_KATEGORIAT = {
               + 'väkeä muista neuvostotasavalloista; vuoteen 1970 '
               + 'mennessä oli valmistunut 100 000 uutta asuntoa. '
               + 'Samana vuonna perustettiin seismologian laitos.',
+          lyhyt: 'Alisher Navoin teatteri oli 1966 järistyksessä ainoa merkittävä rakennus, joka säilyi vaurioitta.',
           selite: 'Alisher Navoin teatteri oli vuoden 1966 järistyksessä ainoa '
             + 'merkittävä rakennus, joka säilyi vaurioitta.',
           lahde: 'Atilin, Wikimedia Commons (CC BY 2.5)',
@@ -25935,6 +27049,7 @@ export const MAA_KATEGORIAT = {
               + 'sanoo sen olleen Khwarazm, josta liikanimi tulee, '
               + 'kun taas osa tutkijoista sijoittaa syntymän Bagdadin '
               + 'liepeille.',
+          lyhyt: 'Al-Khwarizmista ei ole aikalaiskuvaa; tämä 1900-luvun puuveistos kantaa hänen nimensä arabiaksi.',
           selite: 'Al-Khwarizmista ei ole aikalaiskuvaa; tämä puuhun veistetty '
             + 'muotokuva on 1900-luvulta, ja alareunaan on kaiverrettu '
             + 'hänen nimensä arabialaisin kirjaimin.',
@@ -25957,6 +27072,7 @@ export const MAA_KATEGORIAT = {
               + 'Aasian ja Euroopan välisessä valtameressä täytyy olla '
               + 'tuntematonta maata — ja että ainakin osa siitä on '
               + 'asuttavaa.',
+          lyhyt: 'Al-Biruni selitti kuun vaiheet piirroksella auringonsäteiden osumisesta kuun eri kohtiin.',
           selite: 'Al-Biruni selitti kuun vaiheet Kitab al-Tafhim -teoksessaan '
             + 'piirroksella, jossa auringon säteet osuvat kuuhun radan '
             + 'eri kohdissa.',
@@ -25978,6 +27094,7 @@ export const MAA_KATEGORIAT = {
               + 'kirjeenvaihto on säilynyt: al-Biruni aloitti '
               + 'kahdeksallatoista kysymyksellä, joista kymmenen oli '
               + 'Aristoteleen taivaita käsittelevän kirjan arvostelua.',
+          lyhyt: 'Lääketieteen kaanon on viisiosainen; tämä käsikirjoituskopio on Ibn Sinan museossa Hamadanissa.',
           selite: 'Lääketieteen kaanon on viisiosainen teos; tämä persiankielinen '
             + 'käsikirjoituskopio on Ibn Sinan museossa ja mausoleumissa '
             + 'Hamadanissa.',
@@ -26001,6 +27118,7 @@ export const MAA_KATEGORIAT = {
               + 'rakennutti Rawdan saarelle nilometrin, joka valmistui '
               + 'vuonna 861. Kuun kraatteri Alfraganus on nimetty hänen '
               + 'mukaansa.',
+          lyhyt: 'Kuun kraatteri Alfraganus on nimetty al-Farghanin mukaan; Apollo 16 kuvasi sen 1972.',
           selite: 'Kuun kraatteri Alfraganus on nimetty al-Farghanin mukaan, ja '
             + 'Apollo 16:n miehistö kuvasi sen vuonna 1972.',
           lahde: 'James Stuby NASAn kuvasta, Wikimedia Commons (PD)',
@@ -26042,6 +27160,7 @@ export const MAA_KATEGORIAT = {
               + 'oshi, aamuplov, kello kuuden ja yhdeksän välillä, ja '
               + 'vanhimmat aloittavat ensin. Unesco otti plovin '
               + 'luetteloonsa 2016.',
+          lyhyt: 'Samarkandilainen plov keitetään pellavaöljyssä, riisi vadin pohjalla, porkkana ja liha päällä.',
           selite: 'Samarkandilainen plov keitetään pellavaöljyssä, ja vadille se '
             + 'kootaan kerroksittain: riisi pohjalle, porkkanasuikaleet ja '
             + 'liha päälle.',
@@ -26062,6 +27181,7 @@ export const MAA_KATEGORIAT = {
               + 'Vastasyntyneen pään alle pannaan non pitkän elämän '
               + 'toivotukseksi, ja maailmalle lähtevän leivät '
               + 'kuivataan ja ripustetaan kattoon odottamaan paluuta.',
+          lyhyt: 'Chekichin jälki painaa leivän keskelle painauman; päälle ripotellaan seesamia ja mustakuminaa.',
           selite: 'Chekichin jälki jää leivän keskelle painaumaksi, reunus '
             + 'kohoaa paksuksi, ja päälle ripotellaan seesamia ja '
             + 'mustakuminaa.',
@@ -26137,6 +27257,7 @@ export const MAA_KATEGORIAT = {
               + 'Vuonna 1951 maqomin kehittäminen kiellettiin '
               + 'päätöksellä, ja 1950-luvun puolivälissä kielto '
               + 'purettiin.',
+          lyhyt: 'Doira-kehärummun sisäkehälle ripustetut metallirenkaat helisevät jokaisella lyönnillä.',
           selite: 'Doira eli dayra on kehärumpu, jonka kehän sisäpuolelle on '
             + 'ripustettu metallirenkaita; ne helisevät jokaisella '
             + 'lyönnillä.',
@@ -26232,6 +27353,7 @@ export const MAA_KATEGORIAT = {
               + 'kaupunkinsa mukaan: Nurata, Buhara, Shahrisabz, '
               + 'Samarkand ja Taškent tekivät kukin omanlaisensa '
               + 'kuvioinnin.',
+          lyhyt: 'Suzanin kuvio rakentuu suurten ympyröiden varaan; tämä 1970-luvun työ on valtion taidemuseossa.',
           selite: 'Suzanin kuvio rakentuu suurten ympyröiden varaan ja pohja '
             + 'kirjotaan kokonaan täyteen; tämä työ on 1970-luvulta ja '
             + 'kuuluu Uzbekistanin valtion taidemuseon kokoelmaan.',
@@ -26270,6 +27392,7 @@ export const MAA_KATEGORIAT = {
               + 'tulenkestävä savi otetaan ympäröiviltä vuorilta, ja '
               + 'kuuluisan ishkor-lasitteen väri saadaan luonnon '
               + 'mineraaleista ja vuoristokasvien tuhkasta.',
+          lyhyt: 'Ferganan laakson keramiikassa toistuvat sininen rishtanilainen lasite ja keskellä oleva kukka-aihe.',
           selite: 'Ferganan laakson keramiikassa toistuvat sininen '
             + 'rishtanilainen lasite ja lautasen keskelle sijoitettu '
             + 'kukka-aihe.',
@@ -26290,6 +27413,7 @@ export const MAA_KATEGORIAT = {
               + 'kestämään voimakas järistys. Valokuvaus oli kielletty '
               + '31. toukokuuta 2018 asti, koska asemat luokiteltiin '
               + 'sotilaskohteiksi: ne toimivat myös väestönsuojina.',
+          lyhyt: 'Doʻstlik-asema on koristeltu kipsiholvein ja marmoripylväin, sama lattiakuvio koko laiturin matkan.',
           selite: 'Kansojen ystävyyden asema eli nykyinen Doʻstlik on koristeltu '
             + 'kipsiholvein ja marmoripylväin, ja sama lattiakuvio '
             + 'jatkuu koko laiturin matkan.',
@@ -26387,6 +27511,7 @@ export const MAA_KATEGORIAT = {
               + 'ilman edustusta. Puolentoista vuoden päästä alkoi '
               + 'vapaussota — ja vuonna 1873 teekutsuista on kulunut tasan '
               + 'sata vuotta.',
+          lyhyt: 'Bostonin teekutsuissa 1773 heitettiin satamaan yli 340 teelaatikkoa protestina verotusoikeudesta.',
           selite: 'Bostonin teekutsuissa 16. joulukuuta 1773 heitettiin '
             + 'kolmelta alukselta satamaan 340–342 teelaatikkoa protestina '
             + 'Tea Actia vastaan, eikä syynä ollut teen hinta vaan '
@@ -26410,6 +27535,7 @@ export const MAA_KATEGORIAT = {
               + 'käsityksestä poiketen hetkeä, jolloin viisikko luovutti '
               + 'luonnoksensa kongressille 28. kesäkuuta — ei '
               + 'allekirjoitustilaisuutta.',
+          lyhyt: 'Trumbullin maalaus esittää itsenäisyysjulistuksen luonnoksen luovutusta mannerkongressille 1776.',
           selite: 'John Trumbullin maalaus esittää hetkeä, jolloin '
             + 'viisihenkinen valiokunta luovutti itsenäisyysjulistuksen '
             + 'luonnoksen mannerkongressille 28. kesäkuuta 1776.',
@@ -26431,6 +27557,7 @@ export const MAA_KATEGORIAT = {
               + '1830-luvulla: kellon kylkeen valettu lupaus vapaudesta '
               + 'kaikille maan asukkaille oli heidän mielestään pilkkaa '
               + 'niin kauan kuin osa asukkaista oli orjina.',
+          lyhyt: 'Philadelphian Vapauskello halkesi jo 1752 ja vaikeni lopullisesti 1846.',
           selite: 'Philadelphian Vapauskello halkesi jo ensimmäisellä '
             + 'soitollaan vuonna 1752 ja vaikeni lopullisesti helmikuussa '
             + '1846, ja nimensä se sai 1830-luvulla orjuuden vastustajilta.',
@@ -26452,6 +27579,7 @@ export const MAA_KATEGORIAT = {
               + 'majoituksen mutta laittoivat ruokansa itse; lakon jälkeen '
               + 'vuonna 1867 palkka nousi 35 dollariin. Matka rannikolta '
               + 'rannikolle lyheni puolesta vuodesta viikkoon.',
+          lyhyt: 'Promontory Summitissa 1869 lyöty viimeinen naula lyhensi rannikolta rannikolle matkan viikkoon.',
           selite: 'Promontory Summitissa 10. toukokuuta 1869 lyöty '
             + 'viimeinen naula yhdisti Yhdysvaltain rannikot raiteilla, ja '
             + 'matka rannikolta rannikolle lyheni puolesta vuodesta '
@@ -26483,6 +27611,7 @@ export const MAA_KATEGORIAT = {
               + 'saanut kongressilta palkkaa, rahoitusta eikä yhtään '
               + 'työntekijää, joten suojelu jäi vuosiksi enemmän aatteeksi '
               + 'kuin käytännöksi.',
+          lyhyt: 'Yellowstonesta tuli 1872 yleisesti maailman ensimmäinen kansallispuisto.',
           selite: 'Yellowstonesta tuli 1. maaliskuuta 1872 yleisesti '
             + 'maailman ensimmäisenä pidetty kansallispuisto, ja kongressin '
             + 'vakuuttivat Thomas Moranin maalaukset ja William Henry '
@@ -26504,6 +27633,7 @@ export const MAA_KATEGORIAT = {
               + 'pestyinä, mutta villavaatteet repeytyivät riekaleiksi. '
               + 'Vesipatsas nousee 32–56 metriin. Purkausväli on nykyisin '
               + 'keskimäärin 92 minuuttia; vuonna 1939 keskiarvo oli 66,5.',
+          lyhyt: 'Old Faithful, Yellowstonen ensimmäinen nimetty geysiri (1870), purkautuu noin 92 minuutin välein.',
           selite: 'Old Faithful sai nimensä 18. syyskuuta 1870 ja oli '
             + 'Yellowstonen ensimmäinen nimetty geysiri, jonka vesipatsas '
             + 'nousee 32–56 metriin keskimäärin 92 minuutin välein.',
@@ -26524,6 +27654,7 @@ export const MAA_KATEGORIAT = {
               + 'loppumatka soudettiin nälkäannoksilla. Kanjoni, jonka he '
               + 'kartoittivat, on 446 kilometriä pitkä, enimmillään 29 '
               + 'kilometriä leveä ja yli kilometrin syvä.',
+          lyhyt: 'Grand Canyon, hopien Öngtupqa, on 446 km pitkä ja enimmillään 29 km leveä ja kilometrin syvä.',
           selite: 'Grand Canyon on hopin kielellä Öngtupqa ja pueblokansojen '
             + 'pyhä paikka, ja se on 446 kilometriä pitkä, enimmillään 29 '
             + 'kilometriä leveä ja yli kilometrin syvä.',
@@ -26544,6 +27675,7 @@ export const MAA_KATEGORIAT = {
               + 'ja siitä tuli malli Yellowstonelle kahdeksan vuotta '
               + 'myöhemmin. Matkailijoita alkoi tulla toden teolla vasta '
               + 'kun mannertenvälinen rautatie valmistui 1869.',
+          lyhyt: 'Lincoln allekirjoitti 1864 lain, jolla liittovaltio varasi ensi kerran maata suojeluun Yosemitessa.',
           selite: 'Yosemiten laakso on ahwahneechee-kansan Ahwahnee, ja '
             + 'Abraham Lincoln allekirjoitti 30. kesäkuuta 1864 lain, jolla '
             + 'liittovaltio varasi ensimmäistä kertaa maata suojeluun ja '
@@ -26586,6 +27718,7 @@ export const MAA_KATEGORIAT = {
               + 'kuningatar Viktorialle laulut "Steal Away to Jesus" ja "Go '
               + 'Down, Moses". Kiertueiden tuotoilla yliopisto rakensi '
               + 'ensimmäisen kivitalonsa, Jubilee Hallin, joka seisoo yhä.',
+          lyhyt: 'Fisk Jubilee Singers lauloi 1873 kuningatar Viktorialle; tuotoilla rakennettiin Jubilee Hall.',
           selite: 'Fisk Jubilee Singers lauloi huhtikuussa 1873 kuningatar '
             + 'Viktorialle Lontoossa, ja kiertueiden tuotoilla rakennettiin '
             + 'Fisk-yliopiston ensimmäinen kivitalo Jubilee Hall; kuvan '
@@ -26610,6 +27743,7 @@ export const MAA_KATEGORIAT = {
               + 'saarella. Laulujen kaksoismerkitys oli avoin salaisuus: '
               + '"Go Down, Moses" kertoi Egyptistä mutta tarkoitti '
               + 'vapautta, ja monet orjanomistajat kielsivät sen.',
+          lyhyt: 'Slave Songs of the United States (1867) sisälsi 136 laulua ja oli ensimmäinen laatuaan.',
           selite: 'Slave Songs of the United States ilmestyi 1867, sisälsi '
             + '136 laulua ja oli ensimmäinen painettu kokoelma '
             + 'afroamerikkalaista musiikkia.',
@@ -26631,6 +27765,7 @@ export const MAA_KATEGORIAT = {
               + 'ja enintään kuusi kieltä. Nimen alkuperästä kiistellään '
               + 'yhä; ehdolla ovat muun muassa kimbundun mbanza ja mandingon '
               + 'sanat.',
+          lyhyt: 'Banjon esi-isät tehtiin kurpitsasta ja eläimennahasta; varhaisin kuvaus on vuodelta 1621 Gambiasta.',
           selite: 'Banjon esi-isät tehtiin halkaistusta kurpitsasta ja '
             + 'eläimennahasta, ja varhaisin tunnettu kuvaus soittimesta on '
             + 'Richard Jobsonin muistiinpano Gambiasta vuodelta 1621.',
@@ -26651,6 +27786,7 @@ export const MAA_KATEGORIAT = {
               + 'Saratogassa 1777. Vuoteen 1781 mennessä siitä oli tullut '
               + 'kansallisylpeyden laulu, ja se toimi yhtenä epävirallisena '
               + 'kansallislauluna aina vuoteen 1931 asti.',
+          lyhyt: 'Britit sepittivät Yankee Doodlen 1755 pilkaksi, mutta amerikkalaiset tekivät siitä ylpeydenlaulunsa.',
           selite: 'Britit sepittivät "Yankee Doodlen" noin 1755 '
             + 'pilkkalauluksi siirtomaajoukoista, mutta amerikkalaiset '
             + 'omivat sen itselleen ja tekivät siitä kansallisylpeyden '
@@ -26681,6 +27817,7 @@ export const MAA_KATEGORIAT = {
               + 'lähetti sitä pitkin sanat "Mitä Jumala on tehnyt". Laite '
               + 'välitti kolmekymmentä merkkiä minuutissa. Vuoteen 1850 '
               + 'mennessä lennätinlankaa oli maassa jo 19 000 kilometriä.',
+          lyhyt: 'Samuel Morse lähetti lennättimellä 1844 sanat \'Mitä Jumala on tehnyt\' Washingtonista Baltimoreen.',
           selite: 'Samuel Morse oli taidemaalari, joka keksi yhden langan '
             + 'lennättimen ja lähetti sillä 24. toukokuuta 1844 sanat "Mitä '
             + 'Jumala on tehnyt" Washingtonista Baltimoreen; kuvan '
@@ -26702,6 +27839,7 @@ export const MAA_KATEGORIAT = {
               + 'nostetun tason päällä. Ensimmäinen matkustajakäyttöön '
               + 'asennettu turvahissi otettiin käyttöön newyorkilaisessa '
               + 'tavaratalossa 23. maaliskuuta 1857.',
+          lyhyt: 'Otisin turvajarru pysäytti hissin köyden pettäessä; ensimmäinen turvahissi New Yorkissa 1857.',
           selite: 'Elisha Otisin turvajarru pysäyttää hissikorin itsestään, '
             + 'kun nostoköyden veto lakkaa, ja ensimmäinen matkustajakäyttöön '
             + 'asennettu turvahissi otettiin käyttöön New Yorkissa 23. '
@@ -26723,6 +27861,7 @@ export const MAA_KATEGORIAT = {
               + 'epäluotettavina. Vuonna 1847 McCormick siirsi tuotannon '
               + 'Chicagoon, jonne Suuret järvet toivat raaka-aineet ja josta '
               + 'rautatiet veivät koneet lännen viljapelloille.',
+          lyhyt: 'McCormickin leikkuukone esiteltiin 1831; tuotanto siirtyi 1847 Chicagoon Suurten järvien ääreen.',
           selite: 'Cyrus McCormickin hevosvetoinen leikkuukone esiteltiin '
             + 'Virginiassa vuonna 1831, ja tuotanto siirtyi 1847 Chicagoon, '
             + 'jonne Suuret järvet ja rautatiet toivat raaka-aineet ja '
@@ -26744,6 +27883,7 @@ export const MAA_KATEGORIAT = {
               + 'sotkua kutsuttiin ompelukonesodaksi; se päättyi 1856, kun '
               + 'viisi suurinta yhdisti patenttinsa ja alkoi periä muilta '
               + '15 dollaria konetta kohti.',
+          lyhyt: 'Howen ja Singerin patenttiriita päättyi 1856 yhteiseen patenttipooliin.',
           selite: 'Elias Howen ja Isaac Singerin patenttiriita päättyi 1856 '
             + 'yhteiseen patenttipooliin, ja ompelukone siirsi vaatteiden '
             + 'valmistuksen kodeista tehtaisiin; kuvan yläreunassa on '
@@ -26774,6 +27914,7 @@ export const MAA_KATEGORIAT = {
               + 'Julistuksen kirjoitti ulkoministeri William Seward. Tarina '
               + 'ensimmäisestä kiitosjuhlasta ulottuu vuoteen 1621, mutta '
               + 'koko maan yhteinen juhlapäivä on Lincolnin perua.',
+          lyhyt: 'Lincoln julisti 1863 marraskuun viimeisen torstain kiitospäiväksi Sarah Josepha Halen ansiosta.',
           selite: 'Abraham Lincoln julisti 3. lokakuuta 1863 marraskuun '
             + 'viimeisen torstain kansalliseksi kiitospäiväksi Sarah '
             + 'Josepha Halen vuosien painostuksen jälkeen; kuvan alareunassa '
@@ -26796,6 +27937,7 @@ export const MAA_KATEGORIAT = {
               + 'ja liha kypsyy tuntikausia savussa. Kansanselitys '
               + 'ranskan sanoista "parrasta häntään" ei saa tukea '
               + 'kielitieteestä.',
+          lyhyt: 'Sana barbecue juontuu arawakin sanasta barabicu; Oviedo painatti sen ensi kerran 1526.',
           selite: 'Sana barbecue juontuu Karibian arawak-kielten sanasta '
             + 'barabicu, joka tarkoitti puista telinettä lihan '
             + 'kypsentämiseen tulen yllä, ja espanjalainen Oviedo painatti '
@@ -26818,6 +27960,7 @@ export const MAA_KATEGORIAT = {
               + 'vuodelta 1802, ja 1800-luvun jälkipuoliskolla se oli jo '
               + 'monessa keittokirjassa. Louisiana nimesi sen '
               + 'osavaltioruoakseen vuonna 2004.',
+          lyhyt: 'Louisianan gumbo yhdistää okran, sassafrasjauheen ja eurooppalaiset perinteet; kirjattu 1802.',
           selite: 'Louisianan gumbo yhdistää länsiafrikkalaisen okran, '
             + 'choctawien sassafrasjauheen ja eurooppalaiset '
             + 'ruokaperinteet, ja se kuvattiin kirjallisesti ensi kerran '
@@ -26840,6 +27983,7 @@ export const MAA_KATEGORIAT = {
               + 'koko kansan tuntema hahmo hänestä tuli vasta marraskuussa '
               + '1871, kun Harper\'s-aikakauslehti julkaisi hänestä pitkän '
               + 'jutun.',
+          lyhyt: 'Johnny Appleseed perusti aidattuja omenataimitarhoja; Harper\'s-lehti teki hänestä tunnetun 1871.',
           selite: 'John Chapman eli Johnny Appleseed perusti rajaseudulle '
             + 'aidattuja omenataimitarhoja eikä sirotellut siemeniä '
             + 'umpimähkään, ja Harper\'s-lehden juttu marraskuussa 1871 '
@@ -26901,6 +28045,8 @@ export const MAA_KATEGORIAT = {
             + 'metriä. Sen jälkeen tuulenpuuska kaataa koneen, eikä se lennä enää '
             + 'koskaan. Veljekset lähettävät kotiin sähkeen ja pyytävät kertomaan '
             + 'asiasta lehdistölle.',
+          lyhyt: 'Wrightin veljekset onnistuvat: Flyer nousee ilmaan kaksitoista '
+            + 'sekuntia ennen laskeutumistaan.',
           selite: 'Orville makaa Flyerin ohjaimissa ja Wilbur juoksee siiven '
             + 'rinnalla niin pitkään kuin pystyy. Kahdentoista sekunnin kuluttua '
             + 'kone osuu hiekkaan, mutta veljekset tietävät jo onnistuneensa '
@@ -26912,6 +28058,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wright-kitty-hawk-1903-kauko-photo-v3.jpg',
+              lyhyt: 'Ensi kertaa kameraa käyttävä pelastusmies vangitsee '
+                + 'Orvillen 36 metrin lennon Kitty Hawkissa.',
               selite: 'Pelastusasemalla työskentelevä John T. Daniels ei ole '
                 + 'koskaan ennen ottanut valokuvaa, kun hän puristaa kameran '
                 + 'laukaisupalloa juuri oikealla hetkellä. Hänen levylleen jää '
@@ -26977,6 +28125,8 @@ export const MAA_KATEGORIAT = {
             + 'vuonna yrittäessään samaa. Kokeesta kasvoi ukkosenjohdatin ja '
             + 'siitä Franklinin maine Euroopassa — sama maine, jolla hän '
             + 'myöhemmin neuvotteli Ranskan Amerikan siirtokuntien liittolaiseksi.',
+          lyhyt: 'Franklin ei odota salaman osuvan leijaan vaan pientä kipinää '
+            + 'avaimesta poikansa rystyselle.',
           selite: 'Franklin ei odota salaman osuvan leijaan; hän odottaa märkää '
             + 'narua pitkin kulkevan varauksen kokoontuvan avaimeen. William '
             + 'näkee pienen kipinän isän rystysellä — juuri tarpeeksi '
@@ -27040,6 +28190,8 @@ export const MAA_KATEGORIAT = {
             + 'valojen kylää. Vasta seuraavana vuonna löytyy lanka, joka kestää '
             + 'yli 1 200 tuntia: hiilletty japanilainen bambu. Patentissa on '
             + 'Edisonin nimi, mutta yön valvoi kokonainen työryhmä.',
+          lyhyt: 'Edisonin hiillettyä lankaa palaa 13,5 tuntia, ja työryhmä uskoo '
+            + 'löytäneensä kestävän lampun.',
           selite: 'Charles Batchelor merkitsee vihkoon uuden tunnin, ja Edison '
             + 'uskaltaa viimein nojata lähemmäs haurasta lasia. Hiilletty '
             + 'ompelulanka palaa lopulta 13,5 tuntia — tarpeeksi kauan, että '
@@ -27051,6 +28203,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Menlo Park 1879 — kolmetoista ja puoli tuntia valoa',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-kauko-photo-v4.jpg',
+              lyhyt: 'Menlo Parkin hehkulamppu syntyy monen työntekijän '
+                + 'yhteisenä, valvotun yön saavutuksena.',
               selite: 'Menlo Parkin valo syntyy monen käsissä: Ludwig Boehm '
                 + 'puhaltaa lasin, John Kruesi tekee läpiviennit ja Batchelor '
                 + 'käsittelee hiuksenohutta hiililankaa. Edison johtaa koetta, '
@@ -27169,6 +28323,7 @@ export const MAA_KATEGORIAT = {
               + 'hänet "siviilivaatteissa, hattua lukuun ottamatta". Jokaisen '
               + 'allekirjoituksen jälkeen hän sanoi: "He iwi tahi tātou", '
               + 'olemme nyt yksi kansa.',
+          lyhyt: 'Ōriwa Haddonin maalaus esittää Waitangin sopimuksen allekirjoitusta 6. helmikuuta 1840.',
           selite: 'Ōriwa Haddonin maalaus esittää Waitangin sopimuksen '
             + 'allekirjoitustilaisuutta 6. helmikuuta 1840: teltan alla '
             + 'istuvat virkamiehet, pöydän yli kumartuva päällikkö ja '
@@ -27192,6 +28347,7 @@ export const MAA_KATEGORIAT = {
               + 'sotien takana: ensimmäiset laukaukset ammuttiin pohjoisessa '
               + 'jo 1845, ja tammikuussa 1846 tykit jauhoivat Te Ruki '
               + 'Kawitin Ruapekapeka-linnoitusta.',
+          lyhyt: 'Ruapekapekan pā:n ruohottuneet valli- ja kaivantoharjanteet näyttävät yhä linnoituksen rakenteen.',
           selite: 'Ruapekapekan pā:n valleista ja kaivannoista on jäljellä '
             + 'ruohottuneet harjanteet, jotka näyttävät yhä, miten '
             + 'linnoitus rakennettiin maan sisään.',
@@ -27212,6 +28368,7 @@ export const MAA_KATEGORIAT = {
               + 'jauhaneet varustusta koko päivän, mutta puolustajat olivat '
               + 'katetuissa kaivannoissa. Hyökkääjistä kaatui 31 ja '
               + 'haavoittui 80 — yli kolmasosa joukosta.',
+          lyhyt: 'Vuoden 1864 kuva Gate Pān varustuksesta näyttää kaivannot ja vallit, alle 250 puolustajan turvana.',
           selite: 'Vuonna 1864 piirretty kuva Gate Pān varustuksesta '
             + 'taistelun jälkeen näyttää kaivannot, matalat vallit ja '
             + 'paaluaidan tyngät, joiden takana alle 250 puolustajaa oli '
@@ -27233,6 +28390,7 @@ export const MAA_KATEGORIAT = {
               + 'yhtäkään taistelua, mutta hylkäsi 1869 vahvan asemansa '
               + 'yllättäen, ja joukot hajosivat. Vuonna 1873 ase on vaiennut '
               + 'koko maassa, mutta maakysymystä ei ole ratkaistu.',
+          lyhyt: 'Daniel Mundyn valokuva (1870) näyttää māorikylän olkikattoiset talot ja kokoontumiskentän.',
           selite: 'Daniel Mundyn valokuva vuodelta 1870 näyttää māorikylän '
             + 'olkikattoisine taloineen ja avoimen kokoontumiskentän, jonka '
             + 'reunalle koko kylän väki on asettunut kuvaan.',
@@ -27270,6 +28428,7 @@ export const MAA_KATEGORIAT = {
               + 'eikä siihen astuttu keulasta tai perästä vaan laidan yli. '
               + 'Sotaretkellä yhteen alukseen mahtui jopa kahdeksankymmentä '
               + 'soutajaa.',
+          lyhyt: 'Waitangin suuri waka taua lepää katoksensa alla punaisena runkona kaiverretuin peräkuvioin.',
           selite: 'Waitangissa säilytettävä suuri waka taua lepää katoksensa '
             + 'alla: punainen runko, mustaksi kaiverrettu korkea peräkuvio ja '
             + 'kymmenien soutajien penkkirivi.',
@@ -27290,6 +28449,7 @@ export const MAA_KATEGORIAT = {
               + 'lapsuudesta aikuisuuteen. Isoisän aikaan tapa oli '
               + 'muuttumassa: eurooppalainen neula alkoi korvata taltan, ja '
               + 'miesten kasvokuviot harvinaistuivat.',
+          lyhyt: 'Lindauerin muotokuva (1878) esittää päällikkö Tukukinon kasvoillaan täysi moko-kuvio.',
           selite: 'Gottfried Lindauerin muotokuva vuodelta 1878 esittää '
             + 'päällikkö Tukukinon, jonka kasvoja kiertää täysi moko-kuvio ja '
             + 'jonka kädessä on kaiverrettu puinen ase.',
@@ -27309,6 +28469,7 @@ export const MAA_KATEGORIAT = {
               + 'kantaa yli kentän, ja sitten puhutaan vuorotellen. Lähes '
               + 'jokaisella heimolla ja alaheimolla on oma marae, joka on '
               + 'monelle yhtä tärkeä kuin oma koti.',
+          lyhyt: 'Kokoustalon punaiset kaiverrukset kehystävät oviaukkoa; edessä avautuu marae ātea -nurmikenttä.',
           selite: 'Kokoustalon punaiseksi maalatut kaiverrukset kehystävät '
             + 'oviaukkoa ja ikkunaa, ja talon edessä avautuu nurmikenttä eli '
             + 'marae ātea.',
@@ -27329,6 +28490,7 @@ export const MAA_KATEGORIAT = {
               + 'esitetään ilman aseita. Sen sanat kertovat siitä, miten hän '
               + 'väisti vainoojansa ja nousi piilostaan päivänvaloon: elämän '
               + 'voitosta kuoleman yli.',
+          lyhyt: 'Merrettin vesiväri (n. 1845) esittää aseistettuja miehiä hakassa kokoustalon edustalla.',
           selite: 'Joseph Jenner Merrettin noin vuonna 1845 maalaama vesiväri '
             + 'esittää rivin miehiä hakassa kokoustalon edustalla, aseet '
             + 'koholla, ja istuvan yleisön kentän laidalla.',
@@ -27370,6 +28532,7 @@ export const MAA_KATEGORIAT = {
               + 'laivat toivat rotat, kissat ja myöhemmin kärpät, tasapaino '
               + 'kaatui: lähes puolet saarten alkuperäisistä lintulajeista on '
               + 'kadonnut ihmisen saapumisen jälkeen.',
+          lyhyt: 'Kiivi työntää nokkansa multaan Rotoruan kiivitalossa, jalassaan nimilaputettu rengas.',
           selite: 'Kiivi työntää pitkän nokkansa multaan Rotoruan '
             + 'kiivitalossa, jossa lintu on nimilaputettu rengas jalassaan.',
           lahde: 'The.Rohit, Wikimedia Commons (CC BY 2.0)',
@@ -27388,6 +28551,7 @@ export const MAA_KATEGORIAT = {
               + 'metsästetty loppuun: vuoteen 1445 mennessä kaikki lajit '
               + 'olivat kadonneet, ja kotka hävisi pian perässä. Lajin kuvasi '
               + 'tieteelle Julius von Haast vasta vuonna 1871.',
+          lyhyt: 'Megahanin maalaus esittää Haastin kotkan iskeytymässä kahden pakenevan moan kimppuun.',
           selite: 'John Megahanin maalaus esittää Haastin kotkan iskeytymässä '
             + 'kahden pakenevan moan kimppuun metsänreunassa.',
           lahde: 'John Megahan, Wikimedia Commons (CC BY 2.5)',
@@ -27407,6 +28571,7 @@ export const MAA_KATEGORIAT = {
               + 'kruunulle viisikymmentä eekkeriä maata sopimuksella, joka '
               + 'teki paikasta kylpyläkaupungin ja matkailijoiden '
               + 'lähtöpisteen.',
+          lyhyt: 'Whakarewarewan geysirikentällä höyry nousee piikuoresta ja kuuma puro juoksee kentän halki.',
           selite: 'Whakarewarewan geysirikentällä höyry nousee vaaleasta '
             + 'piikuoresta ja kuuma puro juoksee kentän halki.',
           lahde: 'Carl Lindberg, Wikimedia Commons (CC BY-SA 3.0)',
@@ -27426,6 +28591,7 @@ export const MAA_KATEGORIAT = {
               + 'loppui 10. kesäkuuta 1886, kun Tarawera purkautui ja hautasi '
               + 'terassit. Tutkijat kiistelevät yhä siitä, tuhoutuiko kaikki: '
               + 'vuoden 2016 tutkimus päätyi siihen, että suurin osa tuhoutui.',
+          lyhyt: 'Blomfieldin maalaus (1884) kuvaa Valkoisten Terassien portaikkoa kaksi vuotta ennen purkausta.',
           selite: 'Charles Blomfieldin vuonna 1884 maalaama näkymä esittää '
             + 'Valkoisten Terassien portaikon vaaleine altaineen ja '
             + 'vaaleansinisine vesineen kaksi vuotta ennen purkausta.',
@@ -27468,6 +28634,7 @@ export const MAA_KATEGORIAT = {
               + 'kun virkamies John Hardy kävi katsomassa kentän. Jouluun '
               + 'mennessä etsijöitä oli 14 000, ja Otagon väkiluku kasvoi '
               + '400 prosenttia vuosina 1861–1864.',
+          lyhyt: 'St. Bathansin vesisuihkuin huuhdotut kalliot ja syvä vesikuoppa ovat kultaryntäyksen jälki.',
           selite: 'St. Bathansissa vesisuihkuilla huuhdotut kalliot ja niiden '
             + 'juureen jäänyt syvä vedellä täyttynyt kuoppa ovat sitä, mitä '
             + 'kultaryntäys jätti maisemaan.',
@@ -27489,6 +28656,7 @@ export const MAA_KATEGORIAT = {
               + 'ei tarkoittanut tervetulotoivotusta: kaivajat kohtasivat '
               + 'syrjintää, ja harva ansaitsi tarpeeksi päästäkseen takaisin '
               + 'kotiin.',
+          lyhyt: 'Arrowtownin kiinalaiskylän maja on rakennettu liuskekallion kylkeen olkikattoineen.',
           selite: 'Arrowtownin kiinalaiskylän maja on rakennettu suoraan '
             + 'liuskekallion kylkeen, ja sen katto jatkuu rinteeseen '
             + 'olkikerroksena.',
@@ -27528,6 +28696,7 @@ export const MAA_KATEGORIAT = {
               + 'sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä '
               + 'puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan '
               + 'jälkeen, ja vain yksi ruho hylättiin.',
+          lyhyt: 'Tudgayn maalaus (1875) esittää Dunedinin täysissä purjeissa avomerellä punainen kauppalippu perässä.',
           selite: 'Frederick Tudgayn maalaus vuodelta 1875 esittää Dunedinin '
             + 'täysissä purjeissa avomerellä, punainen kauppalippu perässä.',
           lahde: 'Frederick Tudgay, Wikimedia Commons (PD)',
@@ -27567,6 +28736,7 @@ export const MAA_KATEGORIAT = {
               + 'Eteläsaaren pohjoisrannikolta, on ajoitettu noin vuoteen '
               + '1400 ja rakennettu jo täällä — muun Polynesian tyyliin, '
               + 'mutta uusiseelantilaisesta puusta.',
+          lyhyt: 'Kaksirunkoinen purjehduskanootti Te Aurere lepää ankkurissa kahdella mastollaan.',
           selite: 'Kaksirunkoinen purjehduskanootti Te Aurere makaa ankkurissa '
             + 'tyynellä lahdella, kaksi mastoa pystyssä ja rungot yhdistetty '
             + 'kannella.',
@@ -27587,6 +28757,7 @@ export const MAA_KATEGORIAT = {
               + 'patu-aseen iskuista, ja laivoilta ammuttiin poistuvia '
               + 'kanootteja. Tasman nimesi paikan Murhaajien lahdeksi ja '
               + 'purjehti pois astumatta koskaan maihin.',
+          lyhyt: 'Gilsemansin piirros (1642) näyttää hollantilaisalukset ja niitä ympäröivät kanootit.',
           selite: 'Isaack Gilsemansin piirros vuodelta 1642 näyttää '
             + 'hollantilaiset alukset ja niitä ympäröivät kanootit; kirjaimet '
             + 'A–F ja käsin kirjoitettu selitys ovat piirtäjän omat.',
@@ -27607,6 +28778,7 @@ export const MAA_KATEGORIAT = {
               + 'erottavan kaksi saarta. Hän purjehti koko maan ympäri ja '
               + 'kartoitti rantaviivan niin tarkasti, että karttoja '
               + 'käytettiin vielä sata vuotta myöhemmin.',
+          lyhyt: 'Tupaian piirroksessa māori ojentaa punaisen ravun ja Joseph Banks tarjoaa valkoista kangasta.',
           selite: 'Tupaian piirroksessa viittaan pukeutunut māori ojentaa '
             + 'suuren punaisen ravun ja Joseph Banks tarjoaa vastineeksi '
             + 'valkoista kangaspalaa.',
@@ -27626,6 +28798,7 @@ export const MAA_KATEGORIAT = {
               + 'eteläisillä leveysasteilla. Suezin kanava avattiin 1869 ja '
               + 'höyrylaivat lyhensivät matkoja muualla, mutta Uusi-Seelanti '
               + 'pysyi kaukaisimpana kohteena, johon Euroopasta lähdettiin.',
+          lyhyt: 'Allsworthin maalaus (1844) esittää skotlantilaisperheen rannalla purjelaivaa odottamassa.',
           selite: 'William Allsworthin maalaus vuodelta 1844 esittää '
             + 'skotlantilaisperheen tavaroineen ja lampaineen rannalla, '
             + 'purjelaiva odottamassa ulapalla.',
@@ -27731,6 +28904,7 @@ export const MAA_KATEGORIAT = {
               + 'oppineena: hän luki kymmentä kieltä latinasta arabiaan ja '
               + 'tupiin, ja hänen palatsissaan São Cristóvãossa oli kolme '
               + 'kirjastoa ja yli 60 000 kirjaa.',
+          lyhyt: 'Pedro Américon maalaus (1872) esittää Pedro II:n keisarillisessa asussaan avajaisissa.',
           selite: 'Pedro Américon maalaus vuodelta 1872 esittää Pedro II:n '
             + 'keisarillisessa asussaan yleiskokouksen avajaisissa.',
           lahde: 'Pedro Américo, Wikimedia Commons (PD)',
@@ -27749,6 +28923,7 @@ export const MAA_KATEGORIAT = {
               + 'laki vapauttanut yhtäkään jo elävää orjaa: yli miljoona '
               + 'ihmistä jäi orjuuteen. Kokonaan orjuus kiellettiin vasta '
               + 'Kultalailla 13. toukokuuta 1888.',
+          lyhyt: 'Juhlalitografia ylistää ministeriötä, joka sääti Rio Brancon lain 1871.',
           selite: 'Juhlalitografia ylistää ministeriötä, joka sääti Rio '
             + 'Brancon lain 1871; painoksen oma otsikko ja ministerien '
             + 'nimiluettelo ovat kuvan alalaidassa.',
@@ -27769,6 +28944,7 @@ export const MAA_KATEGORIAT = {
               + 'Upseerit, jotka olivat taistelleet heidän rinnallaan, '
               + 'alkoivat epäillä koko järjestelmää eivätkä enää halunneet '
               + 'jäljittää karanneita orjia armeijan käskystä.',
+          lyhyt: 'Brasilian armeija kokoontui Paraguayssa; rintamalle lähetettiin noin 146 000 miestä.',
           selite: 'Brasilian armeija kokoontuneena Paraguayssa sodan '
             + 'loppuvaiheessa; rintamalle lähetettiin kaikkiaan noin '
             + '146 000 miestä.',
@@ -27788,6 +28964,7 @@ export const MAA_KATEGORIAT = {
               + 'yhtenä valtiona — ja sen hallitsijaksi tuli emämaan oman '
               + 'kuningashuoneen prinssi, keisari Pedro I. Vuonna 1873 '
               + 'tästä on kulunut 51 vuotta.',
+          lyhyt: 'Moreaux\'n maalaus (1844) esittää Brasilian itsenäisyysjulistuksen Ipiranga-purolla 1822.',
           selite: 'François-René Moreaux’n maalaus vuodelta 1844 esittää '
             + 'Brasilian itsenäisyyden julistamista Ipiranga-purolla '
             + '7. syyskuuta 1822.',
@@ -27823,6 +29000,7 @@ export const MAA_KATEGORIAT = {
               + 'Yhdellä hehtaarilla elää noin miljardi selkärangatonta. '
               + 'Alue ulottuu yhdeksän valtion alueelle, ja siellä on '
               + '3 344 tunnustettua alkuperäiskansojen aluetta.',
+          lyhyt: 'Amazonin sademetsäaltaasta noin kuusi miljoonaa neliökilometriä on sademetsää.',
           selite: 'Amazonin sademetsä ja joki Manausin lähellä; sademetsää '
             + 'on altaan seitsemästä miljoonasta neliökilometristä kuusi '
             + 'miljoonaa.',
@@ -27842,6 +29020,7 @@ export const MAA_KATEGORIAT = {
               + 'ja taimet päätyivät Ceyloniin ja Singaporeen. Kumin vienti '
               + 'Amazonilta oli noussut 2 100 tonnista matkalla kohti '
               + 'kymmentätuhatta — suuri kumibuumi oli vasta alkamassa.',
+          lyhyt: 'Henry Wickham vei Kew Gardensiin 70 000 kumipuun siementä.',
           selite: 'Kumipuun siemeniä, joita Henry Wickham vei Kew Gardensiin '
             + '70 000 kappaletta; kuvan mittajana kertoo niiden koon.',
           lahde: 'User:Luis Fernández García, Wikimedia Commons '
@@ -27862,6 +29041,7 @@ export const MAA_KATEGORIAT = {
               + 'yli kymmeneen prosenttiin metsän alasta. Xingu-joen '
               + 'latvoilta on löytynyt Kuhikugu, parinkymmenen '
               + 'muinaisyhdyskunnan verkosto.',
+          lyhyt: 'Santarémin kulttuurin keramiikka on Brasilian kansallismuseossa; sirpaleet ovat osa terra pretaa.',
           selite: 'Santarémin kulttuurin keramiikkaa Brasilian '
             + 'kansallismuseon kokoelmissa; ruukunsirpaleet ovat yksi '
             + 'terra pretan aineksista.',
@@ -27916,6 +29096,7 @@ export const MAA_KATEGORIAT = {
               + 'kolmekymmentä vuotta, ja häntä itseään kuvattiin niin '
               + 'usein, että hänestä tuli yksi 1800-luvun kuvatuimmista '
               + 'hallitsijoista.',
+          lyhyt: 'Klumbin valokuva (1865) esittää Pedro II:n, joka oli itse Brasilian ensimmäinen valokuvaaja.',
           selite: 'Revert Henrique Klumbin valokuva vuodelta 1865 esittää '
             + 'Pedro II:n, joka oli itse Brasilian ensimmäinen '
             + 'valokuvaaja.',
@@ -27974,6 +29155,7 @@ export const MAA_KATEGORIAT = {
               + 'Museo muutti 1892 tyhjilleen jääneeseen keisarilliseen '
               + 'palatsiin São Cristóvãossa, ja siellä se paloi '
               + '2. syyskuuta 2018.',
+          lyhyt: 'São Cristóvãon palatsi oli 1862 keisariperheen koti; kansallismuseo muutti siihen 1892.',
           selite: 'São Cristóvãon palatsi vuonna 1862 oli keisariperheen '
             + 'koti, ja Brasilian kansallismuseo muutti siihen 1892.',
           lahde: 'Augusto Stahl (1828–1877), Wikimedia Commons (PD)',
@@ -28015,6 +29197,7 @@ export const MAA_KATEGORIAT = {
               + 'tulla portugalin itkemistä tarkoittavasta sanasta tai '
               + 'latinan kuoroa tarkoittavasta sanasta. Musiikki itse on '
               + 'useimmiten nopeaa ja iloista.',
+          lyhyt: 'Revista Illustradan kansi (1880) esittää huilisti Joaquim Calladon, choro-tyylin uranuurtajan.',
           selite: 'Revista Illustrada -lehden kansi vuodelta 1880 esittää '
             + 'huilisti Joaquim Calladon, jonka yhtyeestä choro sai '
             + 'alkunsa; kannessa on lehden oma nimiö ja hintaluettelo.',
@@ -28036,6 +29219,7 @@ export const MAA_KATEGORIAT = {
               + 'illan polkan Atraente, ensimmäisen suuren hittinsä. '
               + 'Myöhemmin hänestä tuli Brasilian ensimmäinen '
               + 'naiskapellimestari.',
+          lyhyt: 'Chiquinha Gonzagan muotokuva vuodelta 1877, samana vuonna hän sävelsi polkan Atraente.',
           selite: 'Chiquinha Gonzagan muotokuva noin vuodelta 1877, '
             + 'myöhemmin väritettynä; samana vuonna hän sävelsi polkan '
             + 'Atraente.',
@@ -28109,6 +29293,7 @@ export const MAA_KATEGORIAT = {
               + 'kahvista. Hinta maksettiin toisaalla: 1800-luvun '
               + 'alkupuoliskolla plantaaseille tuotiin puolitoista '
               + 'miljoonaa orjuutettua ihmistä.',
+          lyhyt: 'Santa Genebran kahvitila São Paulon provinssissa 1880 kuivatti pavut terasseilla.',
           selite: 'Santa Genebran kahvitila São Paulon provinssissa vuonna '
             + '1880; kahvipavut kuivattiin laajoilla terasseilla '
             + 'päärakennuksen edessä.',
@@ -28284,6 +29469,7 @@ export const MAA_KATEGORIAT = {
               + 'kuljetettiin Australiaan noin 162 000. Isoisän matkan '
               + 'aikaan Sydney on jo satamakaupunki, jonka villalaivat '
               + 'purjehtivat Lontooseen.',
+          lyhyt: 'Ensimmäisen laivueen upseeri William Bradley maalasi laivat saapumassa satamaan tammikuussa 1788.',
           selite: 'William Bradley, ensimmäisen laivueen upseeri, maalasi '
             + 'laivat purjehtimassa sisään sataman hiekkakivikallioiden '
             + 'ohi tammikuussa 1788.',
@@ -28304,6 +29490,7 @@ export const MAA_KATEGORIAT = {
               + 'päivän matkalla syntyi seitsemän numeroa käsin '
               + 'kirjoitettua laivalehteä The Wild Goose. Numerot ovat '
               + 'yhä tallessa New South Walesin osavaltionkirjastossa.',
+          lyhyt: 'Fremantlen vankilan porttirakennus muurattiin vankityönä 1854–1855, portin rauta haaksirikoista.',
           selite: 'Fremantlen vankilan porttirakennus muurattiin '
             + 'vankityönä 1854–1855 paikalta louhitusta kalkkikivestä, ja '
             + 'sen portin rauta saatiin haaksirikkoutuneista laivoista.',
@@ -28325,6 +29512,7 @@ export const MAA_KATEGORIAT = {
               + 'kapinallisia. Kolmetoista vangittua vapautettiin '
               + 'oikeudessa, ja kaivoslupa korvattiin punnan vuosimaksulla, '
               + 'joka antoi haltijalleen myös äänioikeuden.',
+          lyhyt: 'Charles Doudiet maalasi Ballaratissa kaivosmiehet Eureka-lipun ympärillä kädet koholla.',
           selite: 'Charles Doudiet oli itse Ballaratissa ja maalasi '
             + 'kaivosmiehet Eureka-lipun ympärillä kädet koholla; hän '
             + 'kirjoitti akvarellin alalaitaan päiväyksen ja nimen omalla '
@@ -28347,6 +29535,7 @@ export const MAA_KATEGORIAT = {
               + 'kohtasivat: Melbournen ja Sydneyn linjat yhtyivät '
               + 'Alburyssa 1883, ja siitä eteenpäin matkustajat vaihtoivat '
               + 'junaa rajalla. Yhtenäinen normaaliraide valmistui 1995.',
+          lyhyt: 'Vuoden 1873 kartta erottaa siirtokuntien rajat väreillä; Pohjoisterritorio kuuluu Etelä-Australiaan.',
           selite: 'Vuoden 1873 kartassa siirtokuntien rajat on värjätty '
             + 'erikseen, ja Pohjoisterritorio on merkitty Etelä-Australiaan '
             + 'liitetyksi; alalaidassa on painoksen oma otsikko.',
@@ -28385,6 +29574,7 @@ export const MAA_KATEGORIAT = {
               + 'Kalliomaalaukset eivät ole muisto kadonneesta: samat '
               + 'kansat asuvat yhä alueillaan, ja kertomukset kulkevat '
               + 'edelleen sukupolvelta toiselle.',
+          lyhyt: 'Ubirrin kalliosuojan okrakala Kakadussa on maalattu röntgentyyliin, ruodot ja sisäelimet näkyvissä.',
           selite: 'Ubirrin kalliosuojassa Kakadussa okralla maalattu kala '
             + 'on tehty niin sanottuun röntgentyyliin, jossa näkyvät myös '
             + 'ruodot ja sisäelimet.',
@@ -28405,6 +29595,7 @@ export const MAA_KATEGORIAT = {
               + 'Tähdet toimivat myös kalenterina: kun Boorong-kansan '
               + 'pensaskana eli Lyyra katoaa lokakuussa auringon seuraan, '
               + 'on aika kerätä munia.',
+          lyhyt: 'Linnunrata kaartuu järven yli Uudessa Etelä-Walesissa, tummat pölypilvet erottuvat tähdistä.',
           selite: 'Linnunrata kaartuu järven yli Uudessa Etelä-Walesissa, '
             + 'ja sen halki kulkevat tummat pölypilvet erottuvat selvästi '
             + 'tähtien seasta.',
@@ -28425,6 +29616,7 @@ export const MAA_KATEGORIAT = {
               + 'poltot laajoilla alueilla, mutta 2000-luvulla ne ovat '
               + 'palanneet alkuperäiskansojen tietäjien johdolla — '
               + 'Victoriassa 170 vuoden tauon jälkeen.',
+          lyhyt: 'Länsi-Australian hallitussa poltossa ruohopuu roihahtaa tulen kulkiessa matalana metsässä.',
           selite: 'Länsi-Australiassa hallitussa poltossa palava '
             + 'ruohopuu roihahtaa hetkeksi, kun tuli kulkee matalana '
             + 'maanpintaa pitkin eukalyptusmetsässä.',
@@ -28446,6 +29638,7 @@ export const MAA_KATEGORIAT = {
               + 'lokakuuta 1985. Puiston hallitus päätti 2017 yksimielisesti '
               + 'kieltää kiipeämisen, ja kielto astui voimaan lokakuussa '
               + '2019 — kalliota katsotaan nyt vain sen juurelta.',
+          lyhyt: 'Ulurun juurelta kallion punaiset kupeet nousevat spinifexruohikosta ja matalasta puustosta.',
           selite: 'Ulurun juurelta katsottuna kallion punaiset kupeet '
             + 'nousevat suoraan spinifexruohikosta ja matalasta '
             + 'puurivistä.',
@@ -28488,6 +29681,7 @@ export const MAA_KATEGORIAT = {
               + '20 000 kiinalaista kaivosmiestä ja New South Walesissa '
               + '13 000. Siirtokuntien hallitukset vastasivat säätämällä '
               + 'kiinalaisille erillisiä veroja ja rajoituksia.',
+          lyhyt: 'Edward Roper maalasi Araratin kaivoskentän 1854: teltat, puodit ja kullanhuuhtojat puron rannalla.',
           selite: 'Edward Roper maalasi Araratin kaivoskentän vuonna 1854: '
             + 'telttarivit, kauppapuodit, härkävaljakko ja miehiä '
             + 'huuhtomassa kultaa puron rannalla.',
@@ -28508,6 +29702,7 @@ export const MAA_KATEGORIAT = {
               + 'sen tuotto rakensi rautatiet, kirjastot ja leveät kadut. '
               + 'Työ nojasi vaeltaviin lampaanleikkaajiin, jotka kulkivat '
               + 'tilalta toiselle omaisuus käärittynä selkään.',
+          lyhyt: 'Tom Robertsin maalaus vuodelta 1890 esittää keritsimön, jossa miehet keritsevät lampaita käsin.',
           selite: 'Tom Robertsin vuoden 1890 maalaus vie keritsimöön, '
             + 'jossa miehet keritsevät lampaita käsin ja pojat kantavat '
             + 'villat pois.',
@@ -28528,6 +29723,7 @@ export const MAA_KATEGORIAT = {
               + 'elokuuta 1872. Kun linja kytkettiin Jaavan merikaapeliin, '
               + 'viesti Eurooppaan kulki tunneissa. Isoisän saapuessa '
               + 'yhteys on toiminut runsaan vuoden.',
+          lyhyt: 'Alice Springsin toistinasema seisoo yhä kivimuureineen jokivarren punaisten eukalyptusten alla.',
           selite: 'Alice Springsin toistinasema on yhä pystyssä '
             + 'kivimuureineen ja peltikattoineen jokivarren '
             + 'punaisten eukalyptusten alla.',
@@ -28547,6 +29743,7 @@ export const MAA_KATEGORIAT = {
               + '1864, Riverinan villapaalit kulkivat ensin jokea alas '
               + 'Echucaan ja sieltä junalla Melbourneen. Isoisän matkan '
               + 'aikaan tämä on mantereen vilkkain sisämaan reitti.',
+          lyhyt: 'Siipirataslaiva on kiinnittynyt Murrayn rantaan, kuten villalastin laivat 1870-luvulla.',
           selite: 'Siipirataslaiva on kiinnittynyt Murrayn rantaan '
             + 'punaisten eukalyptusten alle, samaan tapaan kuin '
             + 'villalastin ottavat laivat 1870-luvulla.',
@@ -28584,6 +29781,7 @@ export const MAA_KATEGORIAT = {
               + 'yhden eläimen, ja sen nahka vietiin Englantiin. George '
               + 'Stubbs maalasi kengurun 1772 pelkän täytetyn nahan '
               + 'mukaan.',
+          lyhyt: 'Stubbsin vuoden 1772 maalaus oli ensimmäinen australialaisesta eläimestä tehty länsimainen taulu.',
           selite: 'Stubbsin maalaus vuodelta 1772 oli ensimmäinen '
             + 'australialaisesta eläimestä tehty länsimainen taulu, ja '
             + 'siksi eläimen asento on hieman oudon jäykkä.',
@@ -28701,6 +29899,7 @@ export const MAA_KATEGORIAT = {
               + 'ohikulkijalle ruoka ja yösija silloinkin kun työtä ei '
               + 'ollut. Etelä-Australian Canowiessa jaettiin vuoden 1903 '
               + 'tienoilla yli 2 000 yösijaa vuodessa.',
+          lyhyt: 'McCubbinin maalaus 1889 esittää kulkumiehen istumassa nuotiolla eukalyptusmetsässä.',
           selite: 'Frederick McCubbinin maalaus vuodelta 1889 esittää '
             + 'kulkumiehen istumassa kääröllään pienen nuotion vieressä '
             + 'eukalyptusmetsässä.',
@@ -28722,6 +29921,7 @@ export const MAA_KATEGORIAT = {
               + 'kiinalaiskaupunki. 1860-luvulla Australiassa oli noin '
               + '40 000 kiinalaista, heistä vain kourallinen naisia. '
               + 'Syrjivistä laeista huolimatta kauppaverkosto jäi.',
+          lyhyt: 'Kultakentille matkaava postivaunu on lastattu matkatavaralla, matkustajat istuvat myös katolla.',
           selite: 'Kultakentille matkaava postivaunu on lastattu '
             + 'täyteen matkatavaraa, ja matkustajat istuvat myös katolla.',
           lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
@@ -28844,6 +30044,7 @@ export const MAA_KATEGORIAT = {
               + 'opettajia maan omiin seminaareihin. Suosittu hän ei '
               + 'silti ollut: Paraguayn sota söi rahat, ja pääkaupungin '
               + 'ja maakuntien kilpailu jatkui koko kauden.',
+          lyhyt: 'Sarmienton muotokuvan maalasi hänen lapsenlapsensa Eugenia Belín Sarmiento noin vuonna 1884.',
           selite: 'Sarmienton muotokuvan maalasi hänen oma '
             + 'lapsenlapsensa Eugenia Belín Sarmiento noin vuonna 1884, '
             + 'kymmenen vuotta presidenttikauden jälkeen.',
@@ -28865,6 +30066,7 @@ export const MAA_KATEGORIAT = {
               + 'luettavaa olivat kaksi muuta lukua: 70 prosenttia asui '
               + 'maaseudulla ja 71 prosenttia ei osannut lukea. Juuri '
               + 'sitä lukutaidottomuutta vastaan koulut rakennettiin.',
+          lyhyt: 'Buenos Airesin hallinnollinen kaavakartta vuodelta 1870 näyttää ruutukaavan, rautatiet ja rannan.',
           selite: 'Buenos Airesin hallinnollinen kaavakartta vuodelta '
             + '1870 näyttää kaupungin ruutukaavan, rautatiet ja Río de la '
             + 'Platan rannan vuosi väestönlaskennan jälkeen.',
@@ -28887,6 +30089,7 @@ export const MAA_KATEGORIAT = {
               + 'kaatui rintamalla. Sodan viimeisenä vuonna perustettiin '
               + 'maan ensimmäinen sotilasakatemia, Colegio Militar de la '
               + 'Nación.',
+          lyhyt: 'Sodassa palvellut Cándido López maalasi vuoden 1866 talvileirin karjalaitumineen.',
           selite: 'Argentiinalainen Cándido López, joka palveli itse '
             + 'sodassa, maalasi vuoden 1866 talvileirin karjalaitumineen '
             + 'ja auringonlaskuineen.',
@@ -28907,6 +30110,7 @@ export const MAA_KATEGORIAT = {
               + 'Varsinainen maahanmuuttolaki säädettiin vasta 1876 ja '
               + 'suuri Hotel de Inmigrantes valmistui vasta 1898 — muutos '
               + 'näkyi kadulla kauan ennen kuin se näkyi laissa.',
+          lyhyt: 'Retiron vanha siirtolaiskoti Buenos Airesin rannassa valokuvassa vuodelta 1875.',
           selite: 'Retiron vanha siirtolaiskoti Buenos Airesin rannassa '
             + 'vuonna 1875 otetussa valokuvassa, kaksi vuotta isoisän '
             + 'matkan jälkeen.',
@@ -28962,6 +30166,7 @@ export const MAA_KATEGORIAT = {
               + 'gaucho oli alun perin siirtomaahallinnon halveksuva '
               + 'nimitys; kenraali Güemes otti sen ylpeydellä omien '
               + 'joukkojensa nimeksi.',
+          lyhyt: 'Prilidiano Pueyrredónin maalauksessa noin 1860 gaucho pysähtyy juttelemaan pulperían edustalla.',
           selite: 'Prilidiano Pueyrredónin maalauksessa noin vuodelta '
             + '1860 ratsastava gaucho pysähtyy juttelemaan pulperían eli '
             + 'maalaiskapakan edustalla härkävankkurien vieressä.',
@@ -28983,6 +30188,7 @@ export const MAA_KATEGORIAT = {
               + 'karjanomistajan aikakausi alkanut. Jatko-osa ilmestyi '
               + '1879, ja runosta tuli kansalliseepos, joka on käännetty '
               + 'yli 70 kielelle.',
+          lyhyt: 'Jatko-osan La vuelta de Martín Fierro ensipainoksen kansi vuodelta 1879 lupaa kymmenen kuvalaattaa.',
           selite: 'Jatko-osan La vuelta de Martín Fierro ensipainoksen '
             + 'kansi vuodelta 1879 lupaa kymmenen kuvalaattaa ja myyntiä '
             + 'kaikissa Buenos Airesin kirjakaupoissa.',
@@ -29012,6 +30218,7 @@ export const MAA_KATEGORIAT = {
               + 'lähetysasemillaan. Kun jesuiitat karkotettiin '
               + '1770-luvulla, plantaasit rappeutuivat — mutta juoma oli '
               + 'jo jäänyt.',
+          lyhyt: 'Buenos Airesin katukauppiaalla on koristeltuja matekalebasseja ja bombilla-pillejä.',
           selite: 'Buenos Airesin katukauppiaan valikoimassa on '
             + 'kymmeniä koristeltuja matekalebasseja ja niiden '
             + 'bombilla-pillejä.',
@@ -29033,6 +30240,7 @@ export const MAA_KATEGORIAT = {
               + 'päällikkö Calfucurán joukot ratsastivat yhä vapaina '
               + 'pampan halki; vasta 1878 alkanut sotaretki, jota alettiin '
               + 'kutsua Aavikon valloitukseksi, siirsi rajan etelään.',
+          lyhyt: 'Mapuchemallisia hopeisia chaway-korvakoruja myydään yhä Buenos Airesin katukojussa.',
           selite: 'Mapuchemallisia hopeisia chaway-korvakoruja myydään '
             + 'yhä Buenos Airesin katukojussa, samaa seppäperinnettä '
             + 'jatkaen.',
@@ -29071,6 +30279,7 @@ export const MAA_KATEGORIAT = {
               + 'espanjalais-kuubalaisen habaneran ja pampan milongan '
               + 'rinnalla. Vuonna 1873 nämä perinteet elävät rinnakkain, '
               + 'mutta kukaan ei vielä kutsu niiden yhdistelmää tangoksi.',
+          lyhyt: 'Martín Boneon maalauksessa candombea tanssitaan ja rummutetaan Buenos Airesin pihalla.',
           selite: 'Martín Boneon maalauksessa candombea tanssitaan ja '
             + 'rummutetaan Buenos Airesin pihalla; jäljellä on vain '
             + 'karkearasterinen mustavalkopainos teoksesta.',
@@ -29091,6 +30300,7 @@ export const MAA_KATEGORIAT = {
               + 'mittaan, jotta se kuulostaisi siltä kuin gaucho itse sen '
               + 'lausuisi. Vuonna 1873 payada elää yhä suullisena '
               + 'perinteenä, ei painettuna kirjana.',
+          lyhyt: 'Carlos Morelin maalauksessa kaksi kitaristia laulaa vastakkain pulperían hämärässä yleisön edessä.',
           selite: 'Carlos Morelin maalauksessa kaksi kitaristia laulaa '
             + 'vastakkain pulperían hämärässä ponchoihin ja '
             + 'silinterihattuihin pukeutuneen yleisön keskellä.',
@@ -29111,6 +30321,7 @@ export const MAA_KATEGORIAT = {
               + 'perinteet kukin muovasivat lopputulosta — mutta kaikki '
               + 'kolme olivat läsnä samoissa kortteleissa jo isoisän '
               + 'matkan aikaan.',
+          lyhyt: 'Pueyrredónin vesivärityö vuodelta 1864 näyttää sunnuntain Buenos Airesin laitamilla San Isidrossa.',
           selite: 'Pueyrredónin vesivärityö vuodelta 1864 näyttää '
             + 'sunnuntain Buenos Airesin laitamilla San Isidrossa, jossa '
             + 'maaseutu ja kaupunki kohtaavat.',
@@ -29132,6 +30343,7 @@ export const MAA_KATEGORIAT = {
               + 'saapuu New Yorkiin ja Suomeen asti. Isoisän Argentiina '
               + 'soi toisenlaista musiikkia — juuri niitä aineksia, joista '
               + 'seuraavat polvet rakentavat tangon.',
+          lyhyt: 'La Bocan laituri noin 1900: purjealuksia ja hevoskärryjä satamassa, jossa tango syntyi.',
           selite: 'La Bocan laituri noin vuonna 1900: purjealusten '
             + 'mastoja, hevoskärryjä ja säkkilastia siinä satamakaupungin '
             + 'osassa, jossa tango oli juuri syntynyt.',
@@ -29195,6 +30407,7 @@ export const MAA_KATEGORIAT = {
               + 'heittämällä boleadora-painoja lintujen jalkoihin. Karja, '
               + 'lampaat ja vilja muuttivat maiseman 1800-luvulla '
               + 'lopullisesti.',
+          lyhyt: 'Nandu juoksee heinikossa La Pampan maakunnassa, jossa lintu on elänyt kauan ennen karjataloutta.',
           selite: 'Nandu juoksee heinikossa La Pampan maakunnassa, jossa '
             + 'lintu on elänyt kauan ennen karjatalouden tuloa.',
           lahde: 'Juan Eduardo De Cristófaro , \'Juanedc\', Wikimedia '
@@ -29271,6 +30484,7 @@ export const MAA_KATEGORIAT = {
               + 'eläin paahtuu puuseipäässä avotulen äärellä — juuri niin '
               + 'kuin gauchot tekivät pampan leirissä ja niin kuin '
               + 'Patagoniassa tehdään yhä.',
+          lyhyt: 'Tiiliparrillassa puu palaa, ja suolatut naudanlihapalat kypsyvät hiilloksen päällä.',
           selite: 'Tiiliparrillassa palaa puu rautaisessa telineessä ja '
             + 'karkealla suolalla maustetut naudanlihapalat kypsyvät '
             + 'hiilloksen päällä.',
@@ -29415,6 +30629,8 @@ export const MAA_KATEGORIAT = {
             + '— osaa näytteistään hän ei ole merkinnyt lainkaan. Beagle '
             + 'purjehtii Tahitille 20. lokakuuta, ja teoria syntyy vasta vuosien '
             + 'vertailusta ja pitkästä epäröinnistä.',
+          lyhyt: '26-vuotias Darwin tarkkailee Galápagosin kilpikonnaa uteliaana '
+            + 'keräilijänä, ei vielä teoreetikkona.',
           selite: '26-vuotias Darwin katsoo kilpikonnaa vielä uteliaana '
             + 'keräilijänä, ei valmiin teorian isänä. Hän ymmärtää saarten '
             + 'havaintojen merkityksen vasta myöhemmin — osin siksi, ettei aluksi '
@@ -29426,6 +30642,8 @@ export const MAA_KATEGORIAT = {
             {
               otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
               osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-kauko-photo-v3.jpg',
+              lyhyt: 'Beaglen lyhyt pysähdys Galápagosilla kypsyy Darwinin '
+                + 'mielessä vuosikymmenten evoluutioteoriaksi.',
               selite: 'Beaglen miehistölle Galápagos on lyhyt pysähdys veden, '
                 + 'ruoan ja näytteiden vuoksi; Darwinille sen viidestä viikosta '
                 + 'tulee vuosikymmenten ajatuskumppani. Evoluutioteoria ei synny '
@@ -29504,6 +30722,7 @@ export const MAA_KATEGORIAT = {
               + 'vuosilustot tarkensivat vuonna 2021 yhden vuoden: 1021. '
               + 'Löydetyt voipähkinät eivät kasva näin pohjoisessa, joten '
               + 'purjehdittiin myös etelämmäksi.',
+          lyhyt: 'L’Anse aux Meadows on ainoa kohde, jossa eurooppalaiset asuivat Amerikassa ennen Kolumbusta.',
           selite: 'Newfoundlandin L’Anse aux Meadows on ainoa kiistaton '
             + 'kohde, jossa eurooppalaiset asuivat Amerikassa ennen '
             + 'Kolumbusta, ja vuosilustot ajoittavat asumisen vuoteen 1021.',
@@ -29523,6 +30742,7 @@ export const MAA_KATEGORIAT = {
               + 'käytetty priimamajavannahka, ja saukonnahat, hirvennahat ja '
               + 'villahuovat hinnoiteltiin siinä. Alue myytiin Kanadalle '
               + '1869. Yhtiö eli vielä 155 vuotta ja purkautui 2025.',
+          lyhyt: 'York Factory oli Hudson’s Bay Companyn päätukikohta turkiskaupassa 1774–1869.',
           selite: 'York Factory oli Hudson’s Bay Companyn päätukikohta '
             + 'vuodesta 1774, ja yhtiö hallitsi turkiskauppaa Rupert’s '
             + 'Landissa peruskirjastaan 1670 aina alueen luovutukseen 1869.',
@@ -29542,6 +30762,7 @@ export const MAA_KATEGORIAT = {
               + 'provinssin Dominion of Canada. Kutsujaisisäntä jäi '
               + 'ulkopuolelle: Prinssi Edwardin saari liittyi vasta 1. '
               + 'heinäkuuta 1873, kun sen talous oli ajautunut ahtaalle.',
+          lyhyt: 'Charlottetownin kokouksessa 1864 sovittiin Kanadan konfederaation perustasta.',
           selite: 'Charlottetownin kokouksessa syyskuussa 1864 sovittiin '
             + 'Kanadan konfederaation perustasta, mutta kokouksen isäntä '
             + 'Prinssi Edwardin saari liittyi liittovaltioon vasta '
@@ -29563,6 +30784,7 @@ export const MAA_KATEGORIAT = {
               + 'joukko ratsasti 1 400 kilometriä länteen; retki oli niin '
               + 'huonosti suunniteltu, että historioitsijat kutsuvat sitä '
               + 'fiaskoksi. Vuonna 1920 nimeksi tuli RCMP.',
+          lyhyt: 'North-West Mounted Police perustettiin 1873 valvomaan lakia Luoteisterritorioissa.',
           selite: 'North-West Mounted Police perustettiin 23. toukokuuta '
             + '1873 valvomaan lakia Luoteisterritorioissa, ja sen punainen '
             + 'takki valittiin muistuttamaan brittiläistä sotilaspukua; '
@@ -29592,6 +30814,7 @@ export const MAA_KATEGORIAT = {
               + '1,8 miljoonaa ihmistä eli viisi prosenttia väestöstä, ja '
               + 'heidän keski-ikänsä oli 33,6 vuotta muun väestön 41,8 '
               + 'vuotta vastaan.',
+          lyhyt: 'Punaisenjoen kärryt olivat métis-kansan kulkuneuvo, korjattavissa matkalla ilman seppää.',
           selite: 'Punaisenjoen kärryt olivat métis-kansan kulkuneuvo '
             + 'preerialla: kokonaan puusta ja nahasta tehdyn kärryn saattoi '
             + 'korjata matkalla ilman seppää.',
@@ -29612,6 +30835,7 @@ export const MAA_KATEGORIAT = {
               + 'kohtasivat, ja loppui lähes kokonaan vuoteen 1901 '
               + 'mennessä. Paalu kestää sateisella rannikolla 60–80 vuotta; '
               + 'nyt niitä kaiverretaan taas.',
+          lyhyt: 'Toteemipaalu kertoo suvun tapahtumia ja oikeuksia; jättiläistuija kestää 60–80 vuotta.',
           selite: 'Toteemipaalu kertoo suvun linjaa, tapahtumia ja '
             + 'oikeuksia eikä ole palvonnan kohde, ja jättiläistuijasta '
             + 'tehty paalu kestää rannikkoilmastossa 60–80 vuotta.',
@@ -29632,6 +30856,7 @@ export const MAA_KATEGORIAT = {
               + 'Luoteisterritorioista 1. huhtikuuta 1999. Se on '
               + '1 836 994 neliökilometriä ja siellä asui vuoden 2021 '
               + 'laskennassa 36 858 ihmistä.',
+          lyhyt: 'Inuksuk tarkoittaa ihmisen sijasta toimivaa merkkiä, joka näyttää tundralla reitin tai ruokakätkön.',
           selite: 'Inuksuk tarkoittaa sitä, joka toimii ihmisen sijasta, ja '
             + 'puuttomalla tundralla kiviladelma kertoo reitin, kalapaikan '
             + 'tai ruokakätkön.',
@@ -29652,6 +30877,7 @@ export const MAA_KATEGORIAT = {
               + 'lasta, ja viimeinen suljettiin 1997. Totuus- ja '
               + 'sovintokomissio nimitti järjestelmän 2015 kulttuuriseksi '
               + 'kansanmurhaksi; 30. syyskuuta on nyt kansallinen päivä.',
+          lyhyt: 'Brantfordin Mohawk Institute oli Kanadan sisäoppilaitos, nyt Woodland Cultural Centre.',
           selite: 'Brantfordin Mohawk Institute oli yksi Kanadan '
             + 'sisäoppilaitoksista, ja rakennuksessa toimii nykyään '
             + 'Woodland Cultural Centre -museo.',
@@ -29678,6 +30904,7 @@ export const MAA_KATEGORIAT = {
               + 'Park — Kanadan ensimmäinen ja Pohjois-Amerikan kolmas '
               + 'kansallispuisto Yellowstonen ja Mackinacin jälkeen. Nyt '
               + 'Banff on 6 641 neliökilometriä nakoda-kansan vanhaa maata.',
+          lyhyt: 'Banffista tuli marraskuussa 1885 Kanadan ensimmäinen kansallispuisto.',
           selite: 'Banffista tuli 25. marraskuuta 1885 Kanadan ensimmäinen '
             + 'kansallispuisto, kun kiista rautatietyömiesten löytämien '
             + 'kuumien lähteiden omistuksesta ratkaistiin suojelemalla ne.',
@@ -29696,6 +30923,7 @@ export const MAA_KATEGORIAT = {
               + 'kuin maailman kaikki joet yhteensä samassa ajassa. '
               + 'Mi’kmaqit ja passamaquoddyt kutsuivat lahtea nimellä '
               + 'Bakudabakek, avoin väylä.',
+          lyhyt: 'Fundynlahdella on maailman suurin vuorovesivaihtelu, keskimäärin noin kuusitoista metriä.',
           selite: 'Fundynlahdella on maailman suurin vuorovesivaihtelu, '
             + 'keskimäärin noin kuusitoista metriä, ja yhden vuorovesijakson '
             + 'aikana liikkuu noin sata miljardia tonnia vettä.',
@@ -29715,6 +30943,7 @@ export const MAA_KATEGORIAT = {
               + 'soittivat nauhaa kuivalla maalla, eläin peitti soittimen '
               + 'oksilla ja mudalla. Kanadan ensimmäisessä postimerkissä on '
               + 'majava eikä hallitsija.',
+          lyhyt: 'Kanadanmajava on avainlaji ja Kanadan kansallissymboli sekä maan ensimmäisen postimerkin aihe.',
           selite: 'Kanadanmajava on avainlaji, jonka padot ja lammikot '
             + 'nostavat seudun lajimäärää, ja se on Kanadan '
             + 'kansallissymboli sekä maan ensimmäisen postimerkin aihe.',
@@ -29734,6 +30963,7 @@ export const MAA_KATEGORIAT = {
               + 'yhden maailman suurimmista makean veden suistoista. '
               + 'Vuonna 2013 Kanadan tähtitieteellinen seura julisti puiston '
               + 'maailman suurimmaksi pimeän taivaan suojelualueeksi.',
+          lyhyt: 'Wood Buffalon kansallispuisto perustettiin 1922 metsäbiisonin suojaksi, ja se on Sveitsiä suurempi.',
           selite: 'Wood Buffalon kansallispuisto perustettiin 1922 '
             + 'metsäbiisonin suojaksi, ja se on 44 741 neliökilometrillään '
             + 'Sveitsiä suurempi ja maailman toiseksi suurin '
@@ -29774,6 +31004,7 @@ export const MAA_KATEGORIAT = {
               + 'siirappia kohti. Keittopaikkaa sanotaan Québecissä nimellä '
               + 'cabane à sucre, ja provinssi tuottaa yksin 72 prosenttia '
               + 'maailman vaahterasiirapista.',
+          lyhyt: 'Vaahterasiirappi syntyy keittämällä mahlaa, ja Québec tuottaa 72 prosenttia maailman siirapista.',
           selite: 'Vaahterasiirappi syntyy keittämällä 20–50 tilavuutta '
             + 'mahlaa yhdeksi tilavuudeksi siirappia, ja Québec tuottaa '
             + 'yksin 72 prosenttia maailman siirapista.',
@@ -29793,6 +31024,7 @@ export const MAA_KATEGORIAT = {
               + 'oli niin tärkeää turkiskaupalle, että kuvernööri Miles '
               + 'Macdonell kielsi sen viennin 1814 ja sytytti riidan, jota '
               + 'kutsutaan pemmikaanisodaksi.',
+          lyhyt: 'Pemmikaani on kuivatusta lihasta ja talista tehtyä métisien matkaruokaa.',
           selite: 'Pemmikaani on kuivatusta lihasta, talista ja joskus '
             + 'marjoista tehtyä matkaruokaa, ja métisien noin '
             + 'neljänkymmenenyhden kilon taureau-säkkiin meni yhden '
@@ -29812,6 +31044,7 @@ export const MAA_KATEGORIAT = {
               + 'luonnonruokiin katkesi. Siksi ruoka jakaa mielipiteet: '
               + 'osalle se on oman kulttuurin lohturuokaa, osalle muistutus '
               + 'siitä, mistä ainekset tulivat.',
+          lyhyt: 'Bannock on Kanadan alkuperäiskansojen levinnein ruokalaji, mutta nykyresepti on 1800-luvun lopulta.',
           selite: 'Bannock on Kanadan alkuperäiskansojen levinnein '
             + 'ruokalaji, mutta sen nykyresepti perustuu 1800-luvun lopun '
             + 'reservaattimuonaan eli vehnäjauhoon, sokeriin ja laardiin.',
@@ -29830,6 +31063,7 @@ export const MAA_KATEGORIAT = {
               + 'ja otti sen ruokalistalle 1964. Ratkaiseva ainesosa on '
               + 'tuoreus: narskut menettävät narinansa vuorokaudessa, joten '
               + 'ravintolan on oltava lähellä meijeriä.',
+          lyhyt: 'Poutine syntyi Keski-Québecissä 1950-luvulla, ja juustonarskut on syötävä vuorokauden sisällä.',
           selite: 'Poutine syntyi Keski-Québecissä 1950-luvun lopulla, ja '
             + 'sen juustonarskujen on oltava alle vuorokauden vanhoja, '
             + 'muuten narina katoaa.',
@@ -29858,6 +31092,7 @@ export const MAA_KATEGORIAT = {
               + 'huronien pelaavan 1637 ja antoi sille ranskalaisen nimen. '
               + 'Hammaslääkäri William George Beers kirjoitti säännöt 1860, '
               + 'ja ensimmäinen niiden mukainen ottelu pelattiin 1867.',
+          lyhyt: 'Lacrosse on Pohjois-Amerikan vanhin järjestäytynyt urheilulaji, jota pelasi jopa tuhat pelaajaa.',
           selite: 'Lacrosse on Pohjois-Amerikan vanhin järjestäytynyt '
             + 'urheilulaji, ja perinteisessä pelissä saattoi olla tuhat '
             + 'pelaajaa kilometrien mittaisella kentällä kolmen päivän ajan.',
@@ -29877,6 +31112,7 @@ export const MAA_KATEGORIAT = {
               + 'kerran 1893: Stanley Cup. Vuonna 1994 jääkiekosta tehtiin '
               + 'laissa Kanadan virallinen talviurheilulaji — kesälajiksi '
               + 'nimettiin samalla lacrosse.',
+          lyhyt: 'Nykyjääkiekon lasketaan alkaneen Montrealissa maaliskuussa 1875, myöhemmin Kanadan talvilajiksi.',
           selite: 'Nykyjääkiekon lasketaan alkaneen Montrealissa 3. '
             + 'maaliskuuta 1875 pelatusta ensimmäisestä sisäottelusta, ja '
             + 'laji on ollut vuodesta 1994 Kanadan virallinen '
@@ -29898,6 +31134,7 @@ export const MAA_KATEGORIAT = {
               + 'maanosan vanhin yhä toimiva urheiluseura. Kolmekymmentä '
               + 'vuotta myöhemmin sama joukko rakensi Kanadan ensimmäisen '
               + 'sisäjäähallin.',
+          lyhyt: 'Montreal Curling Club perustettiin 1807 ja on Pohjois-Amerikan vanhin yhä toimiva urheiluseura.',
           selite: 'Montreal Curling Club perustettiin 27. tammikuuta 1807 ja '
             + 'on Pohjois-Amerikan vanhin yhä toimiva urheiluseura; '
             + 'ensimmäiset kivet valettiin raudasta, koska graniittia ei '
@@ -29918,6 +31155,7 @@ export const MAA_KATEGORIAT = {
               + 'kirjoitti kolmetoista sääntöä ja järjesti ensimmäisen '
               + 'ottelun joulukuussa 1891 yhdeksän vastaan yhdeksän '
               + 'jalkapallolla. Tärkein sääntö: pallon kanssa ei saa juosta.',
+          lyhyt: 'James Naismith kirjoitti koripallolle kolmetoista sääntöä ja kielsi pallon kanssa juoksemisen.',
           selite: 'James Naismith kirjoitti koripallolle kolmetoista sääntöä '
             + 'ja kielsi pallon kanssa juoksemisen tehdäkseen pelistä '
             + 'turvallisen; asiakirjan alalaidassa on hänen oma '
@@ -29988,6 +31226,7 @@ export const MAA_KATEGORIAT = {
               + 'Iturbide sopi sissijohtaja Vicente Guerreron kanssa. Heidän '
               + 'lippunsa vihreä, valkoinen ja punainen ovat yhä Meksikon '
               + 'värit.',
+          lyhyt: 'Miguel Hidalgo y Costilla aloitti Meksikon itsenäisyyssodan syyskuussa 1810 Doloresin kirkossa.',
           selite: 'Miguel Hidalgo y Costilla aloitti Meksikon '
             + 'itsenäisyyssodan 16. syyskuuta 1810 Doloresin kirkossa, ja '
             + 'sota päättyi vasta 27. syyskuuta 1821.',
@@ -30008,6 +31247,7 @@ export const MAA_KATEGORIAT = {
               + 'ensimmäisenä alkuperäiskansaan kuuluvana. Juárez kuoli '
               + 'sydänkohtaukseen 18. heinäkuuta 1872, vuosi ennen isoisän '
               + 'matkaa.',
+          lyhyt: 'Benito Juárez oli Meksikon ensimmäinen alkuperäiskansaan kuulunut presidentti 1858–1872.',
           selite: 'Benito Juárez oli Meksikon ensimmäinen alkuperäiskansaan '
             + 'kuulunut presidentti, joka johti maata vuodesta 1858 '
             + 'kuolemaansa 18. heinäkuuta 1872 asti.',
@@ -30027,6 +31267,7 @@ export const MAA_KATEGORIAT = {
               + 'tammikuuta 1873. Vaikein osuus on Metlacin rotko, jonka '
               + 'yli rata kaartaa sillalla — sama kohta, jonka José María '
               + 'Velasco maalasi kuuluisaksi.',
+          lyhyt: 'Ferrocarril Mexicanon päärata Mexico Citystä Veracruziin vihittiin tammikuussa 1873.',
           selite: 'Ferrocarril Mexicanon päärata Mexico Citystä Veracruziin '
             + 'vihittiin 1. tammikuuta 1873, ja sen vaikein kohta on '
             + 'Metlacin rotkon ylittävä kaartuva silta.',
@@ -30046,6 +31287,7 @@ export const MAA_KATEGORIAT = {
               + 'punottiin Manila-hampusta, ja miehistön valtaosa oli '
               + 'filippiiniläisiä. Reitti kesti 250 vuotta ja päättyi '
               + 'vuoden 1815 levottomuuksiin.',
+          lyhyt: 'Acapulcon Fuerte de San Diego rakennettiin suojaamaan Manilan galleonien satamaa.',
           selite: 'Acapulcon Fuerte de San Diego rakennettiin suojaamaan '
             + 'Manilan galleonien satamaa; reitti Filippiineiltä Meksikoon '
             + 'oli käytössä vuodesta 1565 vuoteen 1815.',
@@ -30074,6 +31316,7 @@ export const MAA_KATEGORIAT = {
               + 'vuosisatoja myöhemmin atsteekit, jotka löysivät rauniot: '
               + 'Teotihuacán tarkoittaa jumalten syntymäpaikkaa. Kaupungin '
               + 'oma nimi ja kieli ovat yhä tuntemattomia.',
+          lyhyt: 'Teotihuacánissa asui huipussaan noin satatuhatta ihmistä, ja nimen antoivat vasta atsteekit.',
           selite: 'Teotihuacánissa asui huipussaan noin satatuhatta ihmistä, '
             + 'ja sen nimen antoivat vasta atsteekit vuosisatoja kaupungin '
             + 'tuhon jälkeen — asukkaiden oma nimi kaupungille ei ole '
@@ -30094,6 +31337,7 @@ export const MAA_KATEGORIAT = {
               + 'taloudellinen keskus lähes tuhat vuotta, ja rinteitä '
               + 'porrastettiin sadoiksi keinotekoisiksi terasseiksi. Paikka '
               + 'oli helppo puolustaa: laaksosta näkyy joka suuntaan.',
+          lyhyt: 'Monte Albánin aukio rakennettiin tasoitetulle harjanteelle, ja kaupunki oli zapoteekkien keskus.',
           selite: 'Monte Albánin aukio rakennettiin käsin tasoitetulle '
             + 'harjanteelle 400 metriä Oaxacan laakson yläpuolelle, ja '
             + 'kaupunki oli zapoteekkien keskus lähes tuhat vuotta.',
@@ -30113,6 +31357,7 @@ export const MAA_KATEGORIAT = {
               + 'päiväntasausta, mutta se on epätodennäköistä: sama varjo '
               + 'näkyy lähes muuttumattomana useita viikkoja tasausten '
               + 'molemmin puolin, joten päivää ei voi siitä päätellä.',
+          lyhyt: 'Kukulcánin temppelin portaisiin lankeaa päiväntasausten aikaan käärmemäinen varjo.',
           selite: 'Kukulcánin temppelin portaisiin lankeaa päiväntasausten '
             + 'aikaan käärmemäinen varjo, mutta sama ilmiö näkyy useiden '
             + 'viikkojen ajan, joten sillä ei voi määrittää päivää.',
@@ -30134,6 +31379,7 @@ export const MAA_KATEGORIAT = {
               + '1952, että merkit olivat tavuja. Vuoden 1973 '
               + 'Palenque-kokouksessa kolme tutkijaa luki yhdessä '
               + 'iltapäivässä kuuden hallitsijan sukupuun.',
+          lyhyt: 'Dresdenin koodeksi on yksi harvoista säilyneistä mayakäsikirjoituksista.',
           selite: 'Dresdenin koodeksi on yksi harvoista säilyneistä '
             + 'mayakäsikirjoituksista, ja mayakirjoituksen avaimeksi '
             + 'osoittautui lopulta piispa Diego de Landan virheellinen '
@@ -30163,6 +31409,7 @@ export const MAA_KATEGORIAT = {
               + 'homemyrkkyjä lähes kokonaan. Ilman sitä maissiin nojaava '
               + 'ruokavalio sairastuttaa — kuten kävi Euroopassa, jonne '
               + 'menetelmä ei kulkeutunut.',
+          lyhyt: 'Maissin keittäminen kalkkivedessä vapauttaa tryptofaanin ja ehkäisee pellagraa.',
           selite: 'Maissin keittäminen kalkkivedessä vapauttaa jyvän '
             + 'tryptofaanin ja ehkäisee niasiinin puutostautia pellagraa; '
             + 'kuvan alalaidassa on litografian oma painettu nimi.',
@@ -30182,6 +31429,7 @@ export const MAA_KATEGORIAT = {
               + 'seremonioiden asia, ja pavut kelpasivat sekä lahjaksi että '
               + 'veroksi. Papu kasvaa suoraan rungosta paksun kotelon '
               + 'sisällä.',
+          lyhyt: 'Kaakaopavut kelpasivat Mesoamerikassa rahana, ja vuonna 1545 sadalla pavulla sai kalkkunakanan.',
           selite: 'Kaakaopavut kelpasivat Mesoamerikassa rahana, ja vuonna '
             + '1545 kirjatun kurssin mukaan sadalla pavulla sai '
             + 'kalkkunakanan.',
@@ -30201,6 +31449,7 @@ export const MAA_KATEGORIAT = {
               + 'vierailua varten kaiken mitä oli. Suklaa on kuitenkin '
               + 'todennäköisesti lisätty moleen vasta 2000-luvulla, ei '
               + 'siirtomaa-aikana.',
+          lyhyt: 'Mole on nahuatlin sana kastikkeelle, ja Meksikossa niitä on noin viisikymmentä erillistä.',
           selite: 'Mole on nahuatlin mōlli eli kastike, ja Meksikossa on '
             + 'noin viisikymmentä erillistä molea; suklaa lisättiin niihin '
             + 'todennäköisesti vasta 2000-luvulla.',
@@ -30220,6 +31469,7 @@ export const MAA_KATEGORIAT = {
               + 'asiakkaalle valmiin sekoituksen. Meksikossa perinteitä '
               + 'alettiin koota talteen jo 1982, kun pelättiin niiden '
               + 'katoavan.',
+          lyhyt: 'Unesco merkitsi perinteisen meksikolaisen keittiön 2010 aineettoman kulttuuriperinnön luetteloon.',
           selite: 'Unesco merkitsi perinteisen meksikolaisen keittiön 2010 '
             + 'aineettoman kulttuuriperinnön luetteloon, ja kuivattuja '
             + 'chilejä on markkinoilla kymmeniä lajikkeita.',
@@ -30251,6 +31501,7 @@ export const MAA_KATEGORIAT = {
               + 'soittajat laulavat vuorotellen. Ensimmäinen mariachi-äänite '
               + 'tehtiin 1908, ja presidentti Porfirio Díazille soitettiin '
               + '1905. Unesco merkitsi lajin luetteloonsa 2011.',
+          lyhyt: 'Mariachi-yhtyeen rytmin pitävät vihuela ja guitarrón, ja kaikki jäsenet laulavat vuorotellen.',
           selite: 'Mariachi-yhtyeen rytmin pitävät korkeaääninen vihuela ja '
             + 'pyöreäselkäinen bassokitara guitarrón, eikä yhtyeellä ole '
             + 'varsinaista solistia vaan kaikki laulavat vuorotellen.',
@@ -30268,6 +31519,7 @@ export const MAA_KATEGORIAT = {
               + 'tarima, puinen lava, jota tanssija lyö kantapäillään. '
               + 'Laulajat vaihtavat improvisoituja säkeitä. Tunnetuin son '
               + 'jarocho on "La Bamba".',
+          lyhyt: 'Son jarochon soittimiin kuuluu tarima, jota tanssija lyö kantapäillään tanssiessaan.',
           selite: 'Son jarochon soittimiin kuuluu tarima eli puinen lava, '
             + 'jota tanssija lyö kantapäillään, ja lajin tunnetuin kappale '
             + 'on "La Bamba".',
@@ -30285,6 +31537,7 @@ export const MAA_KATEGORIAT = {
               + 'kuvitti José Guadalupe Posada, jonka luurankopiirrokset '
               + 'eli kalaverat tekivät vainajista tavallisia ihmisiä '
               + 'juhlimassa, ratsastamassa ja kinastelemassa.',
+          lyhyt: 'José Guadalupe Posadan kalaverapiirrokset kuvittivat corridoja myyviä lentolehtisiä ennen radiota.',
           selite: 'José Guadalupe Posadan kalaverapiirrokset kuvittivat '
             + 'lentolehtisiä, joilla corridoja myytiin toreilla ennen '
             + 'radiota; kuvan alalaidassa on julkaisun oma teksti.',
@@ -30305,6 +31558,7 @@ export const MAA_KATEGORIAT = {
               + 'guadalajaralainen Jesús González Rubio sävelsi sille '
               + 'vakiosävelmän, ja Anna Pavlova otti sen ohjelmistoonsa '
               + '1919.',
+          lyhyt: 'Jarabe tapatío kiellettiin 1790 kirkonkirouksen uhalla, mistä kasvoi Meksikon kansallistanssi.',
           selite: 'Jarabe tapatío kiellettiin vuoden 1790 julkisen '
             + 'esityksen jälkeen kirkonkirouksen uhalla, mistä tuli sen '
             + 'menestyksen alku ja josta kasvoi Meksikon kansallistanssi.',
@@ -30332,6 +31586,7 @@ export const MAA_KATEGORIAT = {
               + 'olivat tieteelle tuntemattomia vuoteen 1975 asti. Suojelu '
               + 'alkoi 1980, ja 56 000 hehtaarin alue on ollut '
               + 'maailmanperintökohde vuodesta 2008.',
+          lyhyt: 'Monarkkiperhosten muutto on monisukupolvinen, talvehtimisalueet löytyivät tieteelle vasta 1975.',
           selite: 'Monarkkiperhosten muutto on monisukupolvinen — yksikään '
             + 'perhonen ei tee koko kierrosta — ja niiden meksikolaiset '
             + 'talvehtimisalueet löydettiin tieteelle vasta 1975.',
@@ -30351,6 +31606,7 @@ export const MAA_KATEGORIAT = {
               + 'tiheämpi cenotejono muodostaa kaaren, joka seuraa '
               + 'Chicxulubin törmäyskraatterin reunaa — 66 miljoonaa vuotta '
               + 'sitten iskeytyneen meteoriitin jälkeä.',
+          lyhyt: 'Cenote syntyy, kun kalkkikivikatto romahtaa ja paljastaa pohjaveden.',
           selite: 'Cenote syntyy, kun kalkkikivikatto romahtaa ja paljastaa '
             + 'pohjaveden, ja Yucatánissa tiheämpi cenotejono seuraa '
             + 'Chicxulubin törmäyskraatterin reunaa.',
@@ -30369,6 +31625,7 @@ export const MAA_KATEGORIAT = {
               + 'Villejä yksilöitä arvioidaan olevan 50–1 000, ja laji on '
               + 'äärimmäisen uhanalainen. Laboratorioissa se on kuuluisa '
               + 'siitä, että se kasvattaa uudelleen raajan tai osan aivoista.',
+          lyhyt: 'Aksolotli tulee sukukypsäksi käymättä läpi muodonmuutosta ja voi kasvattaa raajan uudelleen.',
           selite: 'Aksolotli tulee sukukypsäksi käymättä läpi '
             + 'muodonmuutosta ja pystyy kasvattamaan uudelleen raajan tai '
             + 'osan aivoistaan, mutta villejä yksilöitä on jäljellä vain '
@@ -30388,6 +31645,7 @@ export const MAA_KATEGORIAT = {
               + 'viileille ylängöille ja talveksi alas kanjoniin, ja '
               + 'yhteisöleikissä rarajipari puupalloa potkitaan '
               + 'tuntikausia jyrkkiä polkuja pitkin.',
+          lyhyt: 'Kuparikanjoni on kuuden rotkon järjestelmä, jossa asuvat rarámurit tunnetaan kestävyysjuoksustaan.',
           selite: 'Kuparikanjoni on kuuden rotkon järjestelmä, joka kattaa '
             + '65 000 neliökilometriä, ja siellä asuvat rarámurit '
             + 'tunnetaan kestävyysjuoksustaan.',
@@ -30453,6 +31711,7 @@ export const MAA_KATEGORIAT = {
               + 'chasqui-juoksijoiden asemia, päivämatkan välein tambo-'
               + 'majataloja ja varastoja. Tiet ja sillat pidettiin kunnossa '
               + 'mita-verotyönä.',
+          lyhyt: 'Sacsayhuamánin muurit Cuzcossa on ladottu ilman laastia niin tiiviisti, ettei terä mahdu väliin.',
           selite: 'Sacsayhuamánin muurit Cuzcossa on ladottu ilman laastia '
             + 'niin tiiviisti, että kivien väliin ei mahdu terää; '
             + 'inkavaltakunta rakennettiin ilman pyörää, rautaa ja '
@@ -30473,6 +31732,7 @@ export const MAA_KATEGORIAT = {
               + 'hopealla. Aarre alkoi virrata Cuzcosta 20. joulukuuta 1532 '
               + 'ja oli koossa 3. toukokuuta 1533. Espanjalaiset opettivat '
               + 'vangilleen shakin.',
+          lyhyt: 'Cajamarcan Cuarto del Rescate on huone, jonka Atahualpa lupasi täyttää kullalla lunnaiksi 1532.',
           selite: 'Cajamarcan Cuarto del Rescate on huone, jonka Atahualpa '
             + 'lupasi täyttää kullalla lunnaiksi vuonna 1532, ja aarre oli '
             + 'koossa toukokuussa 1533.',
@@ -30494,6 +31754,7 @@ export const MAA_KATEGORIAT = {
               + 'alun perin tavoitellut itsenäisyyttä vaan '
               + 'oikeudenmukaisuutta; hänet teloitettiin Cuzcossa '
               + 'toukokuussa 1781.',
+          lyhyt: 'Tungasucan muistomerkki esittää Túpac Amaru II:ta, joka aloitti kapinan marraskuussa 1780.',
           selite: 'Tungasucan muistomerkki esittää Túpac Amaru II:ta, joka '
             + 'vetosi vuosia kirjeitse Andien kansojen puolesta ennen kuin '
             + 'aloitti kapinan marraskuussa 1780.',
@@ -30513,6 +31774,7 @@ export const MAA_KATEGORIAT = {
               + 'Colombian varuskunta luovutti Real Felipen linnakkeen '
               + 'perulaisille. Isoisän matkavuonna 1873 tasavalta oli siis '
               + 'vasta 52-vuotias.',
+          lyhyt: 'Juan Lepianin maalaus esittää hetkeä, jolloin San Martín julisti Perun itsenäiseksi vuonna 1821.',
           selite: 'Juan Lepianin maalaus esittää hetkeä, jolloin José de '
             + 'San Martín julisti Perun itsenäiseksi Limassa 28. heinäkuuta '
             + '1821 — sota jatkui silti Ayacuchon taisteluun 1824 asti.',
@@ -30539,6 +31801,7 @@ export const MAA_KATEGORIAT = {
               + 'eli kaupasta rannikon kalastajakylän Ásperon kanssa: '
               + 'sisämaan puuvillaa vaihdettiin verkkoihin ja kalaan. '
               + 'Meri on 23 kilometrin päässä.',
+          lyhyt: 'Caral on Amerikan vanhin tunnettu kaupunki, noin viisituhatta vuotta vanha.',
           selite: 'Caral on Amerikan vanhin tunnettu kaupunki, noin '
             + 'viisituhatta vuotta vanha, ja se rakennettiin ilman '
             + 'keramiikkaa ja ilman puolustusmuureja.',
@@ -30559,6 +31822,7 @@ export const MAA_KATEGORIAT = {
               + 'Eläinkuviot erottuvat parhaiten noin viidensadan metrin '
               + 'korkeudesta. Drooneilla on 2000-luvulla löytynyt satoja '
               + 'uusia.',
+          lyhyt: 'Nazcan viivat on tehty poistamalla aavikon pinnasta tummia kiviä, ja niitä on yli 1 300 kilometriä.',
           selite: 'Nazcan viivat on tehty poistamalla aavikon pinnasta '
             + 'tummia kiviä, ja vain 10–15 senttimetriä syviä uria on '
             + 'yhteensä yli 1 300 kilometriä.',
@@ -30577,6 +31841,7 @@ export const MAA_KATEGORIAT = {
               + 'ensimmäiseltä vuosituhannelta jaa. Wari-valtakunnasta; '
               + 'inkat käyttivät niitä veroihin, väestölaskentaan, '
               + 'kalenteriin ja sotilasorganisaatioon.',
+          lyhyt: 'Kipu on solmuköysistö, jolla inkat pitivät kirjaa veroista, väestöstä ja kalenterista.',
           selite: 'Kipu on solmuköysistö, jossa luvut merkittiin '
             + 'kymmenjärjestelmän paikkamerkinnällä ja jolla inkat pitivät '
             + 'kirjaa veroista, väestöstä ja kalenterista.',
@@ -30595,6 +31860,7 @@ export const MAA_KATEGORIAT = {
               + 'Etelä-Amerikan tärkeimmistä 1900-luvun lopun '
               + 'arkeologisista löydöistä, ja vuoteen 2007 mennessä '
               + 'kummusta oli kaivettu neljätoista hautaa.',
+          lyhyt: 'Mochekulttuurin muotokuvaruukut esittävät tunnistettavia yksilöitä; Sipánin hauta löytyi 1987.',
           selite: 'Mochekulttuurin muotokuvaruukut esittävät tunnistettavia '
             + 'yksilöitä eri ikäisinä, ja Sipánin herran koskematon hauta '
             + 'löytyi Huaca Rajadasta vuonna 1987.',
@@ -30621,6 +31887,7 @@ export const MAA_KATEGORIAT = {
               + 'liitää lämpöpatsailla. Charles Darwin kertoo katsoneensa '
               + 'kondoreita puoli tuntia näkemättä yhtäkään siivenlyöntiä. '
               + 'Pesä on jopa viidentuhannen metrin korkeudessa.',
+          lyhyt: 'Andienkondorin siipiväli yltää 3,3 metriin, ja lintu liitää suurimman osan matkastaan.',
           selite: 'Andienkondorin siipiväli yltää 3,3 metriin, ja lintu '
             + 'räpyttää siipiään vain noin prosentin lentoajastaan — loput '
             + 'matkasta se liitää lämpöpatsailla.',
@@ -30640,6 +31907,7 @@ export const MAA_KATEGORIAT = {
               + 'aamuisin satoja arapapukaijoja: linnut syövät savea, joka '
               + 'auttaa niitä sietämään ravintonaan olevien siementen '
               + 'myrkkyjä. Maailmanperintökohde 1987.',
+          lyhyt: 'Manún kansallispuisto ulottuu Amazonin tasangolta lähes neljäntuhannen metrin korkeuteen.',
           selite: 'Manún kansallispuisto ulottuu Amazonin tasangolta lähes '
             + 'neljäntuhannen metrin korkeuteen, ja sen jokitörmien '
             + 'savipaljastumilla käy aamuisin satoja arapapukaijoja.',
@@ -30659,6 +31927,7 @@ export const MAA_KATEGORIAT = {
               + 'Kalan päällä elää valtava merilintu- ja hyljekanta. '
               + 'Virran nimesi Alexander von Humboldt, vaikka José de '
               + 'Acosta kuvasi sen 250 vuotta aiemmin.',
+          lyhyt: 'Humboldtin merivirran kumpuaminen nostaa ravinteet pintaan, tuoden viidenneksen kalansaaliista.',
           selite: 'Humboldtin merivirran kumpuaminen nostaa ravinteet '
             + 'pintaan, ja virrasta saadaan 18–20 prosenttia maailman '
             + 'merikalansaaliista — kalan päällä elää valtava '
@@ -30678,6 +31947,7 @@ export const MAA_KATEGORIAT = {
               + 'jatkuvasti uutta kaislaa. Vuoden 1986 myrskyn jälkeen moni '
               + 'saari siirrettiin lähemmäs rantaa; vuonna 2011 saarilla '
               + 'asui noin 1 200 ihmistä.',
+          lyhyt: 'Uros-kansan kelluvat saaret Titicacajärvellä rakennetaan totora-kaislasta, jota lisätään jatkuvasti.',
           selite: 'Uros-kansan kelluvat saaret Titicacajärvellä rakennetaan '
             + 'totora-kaislasta, jota lisätään pinnalle jatkuvasti, koska '
             + 'pohja lahoaa alta.',
@@ -30705,6 +31975,7 @@ export const MAA_KATEGORIAT = {
               + 'chuñoksi yön pakkasessa ja päivän auringossa, jolloin ne '
               + 'säilyvät vuosia. Liman perunakeskus säilyttää 4 870 '
               + 'perunan geenivaraa.',
+          lyhyt: 'Andeilla kasvaa noin kolmetuhatta perunalajiketta, ja ylängöillä ne pakastekuivataan chuñoksi.',
           selite: 'Andeilla kasvaa noin kolmetuhatta perunalajiketta, ja '
             + 'ylängöillä perunat pakastekuivataan chuñoksi yön pakkasessa '
             + 'ja päivän auringossa.',
@@ -30723,6 +31994,7 @@ export const MAA_KATEGORIAT = {
               + 'monissa viljoissa. Kasvi kasvaa metristä kahteen, ja '
               + 'kukinto voi olla vihreä, punainen tai purppura — '
               + 'sadonkorjuun aikaan ylängön pellot ovat ruosteenpunaisia.',
+          lyhyt: 'Kvinoa ei ole vilja vaan revonhäntäkasvien sukulainen, syöty Titicacan altaassa tuhansia vuosia.',
           selite: 'Kvinoa ei ole vilja vaan revonhäntäkasvien sukulainen, ja '
             + 'sen siemeniä on syöty Titicacan altaassa 3 000–4 000 vuotta.',
           lahde: 'Richard H. Moore, Wikimedia Commons (CC BY-SA 4.0)',
@@ -30740,6 +32012,7 @@ export const MAA_KATEGORIAT = {
               + 'laakso sianlihalla ja chincho-yrtillä, Mantaron laakso '
               + 'lampaalla ja Ayacucho. Rannikolla ja Amazonissa sitä ei '
               + 'juuri tehdä, koska sopivaa kiveä ja puuta ei ole.',
+          lyhyt: 'Pachamanca kypsennetään maakuopassa kuumien kivien päällä, ja nimi tarkoittaa ketšuaksi maapataa.',
           selite: 'Pachamanca kypsennetään maakuopassa kuumien kivien '
             + 'päällä, ja nimi tulee ketšuan sanoista pacha, maa, ja manka, '
             + 'pata.',
@@ -30759,6 +32032,7 @@ export const MAA_KATEGORIAT = {
               + '1835, että Chilessä juotiin paljon perulaista piscoa, '
               + 'kunnes tullit synnyttivät sinne oman version. Nimestä '
               + 'kiistellään yhä.',
+          lyhyt: 'Pisco tislataan käyneestä rypälemehusta ja sai nimensä Piscon satamakaupungista.',
           selite: 'Pisco tislataan käyneestä rypälemehusta, ja se sai '
             + 'nimensä Piscon satamakaupungista, josta juomaa vietiin '
             + 'Eurooppaan.',
@@ -30785,6 +32059,7 @@ export const MAA_KATEGORIAT = {
               + 'useimmat tehdään puusta, jota monet pitävät parempana '
               + 'kaikupohjana. Soitin levisi Boliviaan, Ecuadoriin, '
               + 'Pohjois-Chileen ja Luoteis-Argentiinaan asti.',
+          lyhyt: 'Charangossa on tavallisesti kymmenen kieltä, kaikukoppa tehtiin vyötiäisen selkäkilvestä.',
           selite: 'Charangossa on tavallisesti kymmenen kieltä viitenä '
             + 'parina, ja kaikukoppa tehtiin perinteisesti vyötiäisen '
             + 'selkäkilvestä.',
@@ -30802,6 +32077,7 @@ export const MAA_KATEGORIAT = {
               + 'se on ollut afroperulaisen música criollan keskeisin '
               + 'lyömäsoitin 1800-luvun lopulta. Espanjaan se kulki '
               + 'myöhemmin ja päätyi flamencoon.',
+          lyhyt: 'Cajónin soittaja istuu laatikolla ja lyö etulevyä; soitin syntyi Perun rannikolla 1800-luvulla.',
           selite: 'Cajónin soittaja istuu laatikon päällä ja lyö käsin '
             + 'ohutta etulevyä, ja soitin kehittyi Perun rannikon '
             + 'afroperulaisessa yhteisössä 1800-luvulla.',
@@ -30820,6 +32096,7 @@ export const MAA_KATEGORIAT = {
               + 'Robles, kun hän sävelsi 1913 zarzuelaansa "El Cóndor '
               + 'Pasan": siitä on tehty yli neljätuhatta versiota, ja Peru '
               + 'julisti sen kansalliseksi kulttuuriperinnöksi 2004.',
+          lyhyt: 'Siku-panhuilut soitetaan pareittain, koska sävelasteikko on jaettu kahteen soittimeen.',
           selite: 'Siku-panhuilut soitetaan pareittain, ira ja arka, koska '
             + 'sävelasteikko on jaettu kahteen soittimeen eikä kumpikaan '
             + 'pysty soittamaan melodiaa yksin.',
@@ -30840,6 +32117,7 @@ export const MAA_KATEGORIAT = {
               + 'muistuttavat tylppäkärkisiä saksia; ne korvasivat '
               + 'aikanaan litteät kivet, joilla oli sama ääni. Unesco '
               + 'merkitsi tanssin luetteloonsa 2010.',
+          lyhyt: 'Saksitanssin nimen antava soitin on kaksi irrallista metallilevyä, jotka korvasivat aiemmat kivet.',
           selite: 'Saksitanssin nimen antava soitin ei ole sakset vaan '
             + 'kaksi irrallista, noin kahdenkymmenenviiden sentin '
             + 'metallilevyä, jotka korvasivat aikanaan samalta kuulostaneet '
@@ -30902,6 +32180,7 @@ export const MAA_KATEGORIAT = {
               + 'II:n mukaan mikään Uuden maailman sota ei maksanut yhtä '
               + 'monta espanjalaista henkeä; sitä kutsuttiin nimellä Flandes '
               + 'indiano. Mapuchemaa pysyi itsenäisenä vuoteen 1884.',
+          lyhyt: 'Ruca on mapuchejen perinteinen olkikattoinen talo, ja kansan johtaja on lonko.',
           selite: 'Ruca on mapuchejen perinteinen olkikattoinen talo, ja '
             + 'kansan johtaja on lonko, sodan ajaksi valittu johtaja toki eli '
             + '"kirves".',
@@ -30921,6 +32200,7 @@ export const MAA_KATEGORIAT = {
               + 'taistelu 5. huhtikuuta 1818 ratkaisi sodan. Viimeiset '
               + 'kuninkaanmieliset antautuivat vasta Chiloéssa 1826, ja '
               + 'Espanja tunnusti Chilen vuonna 1844.',
+          lyhyt: 'Pedro Subercaseaux’n maalaus esittää Maipún syleilyä O’Higginsin ja San Martínin välillä 1818.',
           selite: 'Pedro Subercaseaux’n maalaus esittää Maipún syleilyä: '
             + 'O’Higgins tervehti San Martínia maan pelastajana heti '
             + '5. huhtikuuta 1818 käydyn ratkaisutaistelun jälkeen.',
@@ -30940,6 +32220,7 @@ export const MAA_KATEGORIAT = {
               + 'Maa raivattiin tulella: vuoden 1863 kuivuutta hyväksi '
               + 'käyttäen poltettiin alercemetsät Puerto Varasin ja Puerto '
               + 'Monttin väliltä. Isoisän matkavuonna muutto oli yhä kesken.',
+          lyhyt: 'Frutillarin siirtokuntamuseon paanuseinäinen talo muistuttaa 1800-luvun siirtolaiskoteja.',
           selite: 'Frutillarin saksalaisen siirtokuntamuseon paanuseinäinen '
             + 'maalaistalo on rakennettu samaan tapaan kuin Llanquihuen '
             + 'rannoille 1800-luvun puolivälissä asettuneiden kodit.',
@@ -30959,6 +32240,7 @@ export const MAA_KATEGORIAT = {
               + 'syntyä ilmasta: talousmalli romahti 1929 ja laitokset '
               + 'autioituivat 1960. Aavikolla on noin 170 tällaista '
               + 'haamukaupunkia.',
+          lyhyt: 'Humberstonen salpietarikaupungin aukio on autio vuodesta 1960, ja se on Unescon perintökohde.',
           selite: 'Humberstonen salpietarikaupungin aukio soittolavoineen on '
             + 'ollut autiona vuodesta 1960, ja kohde otettiin Unescon '
             + 'maailmanperintöluetteloon 2005.',
@@ -30986,6 +32268,7 @@ export const MAA_KATEGORIAT = {
               + 'eurooppalaiset kävivät saarella 1722, patsaat katsoivat yhä '
               + 'sisämaahan; 1800-luvun jälkipuoliskoon mennessä ne olivat '
               + 'kaikki kaatuneet. Chile liitti saaren 9. syyskuuta 1888.',
+          lyhyt: 'Rano Rarakun louhoksen rinteessä seisoo satoja keskeneräisiä moaita.',
           selite: 'Rano Rarakun louhoksen rinteessä seisoo satoja '
             + 'keskeneräisiä moaita, ja lähes puolet saaren yli '
             + 'yhdeksästäsadasta patsaasta on yhä siellä.',
@@ -31005,6 +32288,7 @@ export const MAA_KATEGORIAT = {
               + 'keripukkiin sairastuneen miehistön jalkeille, kun Woodes '
               + 'Rogersin laivat noutivat hänet 2. helmikuuta 1709. Vuonna '
               + '1869 HMS Topazen miehistö asetti saarelle muistolaatan.',
+          lyhyt: 'Vuoden 1795 kartta esittää saariston, jonka Chile nimesi 1966 Robinson Crusoen saareksi.',
           selite: 'Vuoden 1795 kartta esittää Juan Fernándezin saariston '
             + 'Más a Tierraa, jonka Chile nimesi 1966 Robinson Crusoen '
             + 'saareksi Daniel Defoen romaanihahmon mukaan.',
@@ -31024,6 +32308,7 @@ export const MAA_KATEGORIAT = {
               + 'tehtiin kokonaan paikallisesta puusta ja paanuista; '
               + 'kuusitoista niistä on maailmanperintökohteita. Chiloé oli '
               + 'Espanjan viimeinen tukikohta ja antautui 15. tammikuuta 1826.',
+          lyhyt: 'Tenaúnin sinivalkoinen puukirkko on yksi Chiloén maailmanperintökirkoista, tehty kokonaan puusta.',
           selite: 'Tenaúnin sinivalkoinen puukirkko on yksi Chiloén '
             + 'kuudestatoista maailmanperintökirkosta, ja se on rakennettu '
             + 'kokonaan puusta ja paanuista ilman kiveä.',
@@ -31043,6 +32328,7 @@ export const MAA_KATEGORIAT = {
               + 'Lewis perustivat lähetysaseman 1871, ja Bridges laati yli '
               + 'vuosikymmenen työnä kieliopin ja 30 000 sanan sanakirjan '
               + 'yaganin kielestä, joka on kielieristymä ilman sukulaisia.',
+          lyhyt: 'Furlongin kartta merkitsee Tulimaan alkuperäiskansojen asuinpaikat 1900-luvun alusta.',
           selite: 'Charles Wellington Furlongin kartta merkitsee Tulimaan '
             + 'onien, yaganien ja haushien asuinpaikat, jotka hänen '
             + 'retkikuntansa paikansi vuosina 1907–1910.',
@@ -31083,6 +32369,7 @@ export const MAA_KATEGORIAT = {
               + 'ole mitattu koskaan; aineisto viittaa siihen, ettei aavikko '
               + 'saanut merkittävää sadetta vuosina 1570–1971. Sama kuiva '
               + 'ilma tekee taivaasta maailman parhaan tähtitieteelle.',
+          lyhyt: 'Kuun laakso San Pedro de Atacaman lähellä on suola-aavikko, jota käytetään Mars-testeihin.',
           selite: 'Kuun laakso San Pedro de Atacaman lähellä on suolan '
             + 'peittämää aavikkoa, jonka maaperää käytetään Mars-laitteiden '
             + 'testialustana.',
@@ -31102,6 +32389,7 @@ export const MAA_KATEGORIAT = {
               + 'ja päähyöky ylitti Tyynenmeren: Havaijin Hiloon se iski yli '
               + 'kymmenentuhannen kilometrin päässä 10,7 metrin korkuisena. '
               + 'Uhriarviot vaihtelevat tuhannesta kuuteen tuhanteen.',
+          lyhyt: 'Valdivian puutalot painuivat kaduilleen toukokuussa 1960 järistyksessä koko Etelä-Chilessä.',
           selite: 'Valdivian puutalot painuivat kaduilleen 22. toukokuuta '
             + '1960, kun kymmenen minuuttia kestänyt järistys liikutti maata '
             + 'koko Etelä-Chilessä.',
@@ -31119,6 +32407,7 @@ export const MAA_KATEGORIAT = {
               + 'Painen kansallispuisto, perustettu 1959. Nimi on tehuelchen '
               + 'kieltä ja tarkoittaa sinistä; kävijöitä on noin 252 000 '
               + 'vuodessa, ja heistä yli puolet tulee ulkomailta.',
+          lyhyt: 'Torres del Painen kolme graniittitornia kohoavat jäätikköjärven takaa.',
           selite: 'Torres del Painen kolme graniittitornia kohoavat '
             + 'jäätikköjärven takaa, ja puiston nimi tarkoittaa tehuelchen '
             + 'kielellä sinistä.',
@@ -31138,6 +32427,7 @@ export const MAA_KATEGORIAT = {
               + 'ottivat siitä 2020 osanäytteen ja arvioivat vuosilustoja '
               + 'olevan yli viisituhatta — jos arvio pitää, puu on maailman '
               + 'vanhin. Elossa siitä on enää noin 28 prosenttia.',
+          lyhyt: 'Alerce kasvaa Etelä-Chilen sademetsissä hitaasti, ja sitä hakattiin 1800- ja 1900-luvuilla.',
           selite: 'Alerce kasvaa Etelä-Chilen sademetsissä hitaasti mutta '
             + 'pitkään, ja lajia hakattiin voimakkaasti 1800- ja '
             + '1900-luvuilla.',
@@ -31166,6 +32456,7 @@ export const MAA_KATEGORIAT = {
               + 'levinnyt. Koko 1900-luvun sato korjattiin merlot’na. '
               + 'Ranskalainen ampelografi Jean Boursiquot tunnisti lajikkeen '
               + 'omakseen 1994, ja se sai virallisen aseman 1998.',
+          lyhyt: 'Carménèren rypäleterttu kypsyy myöhemmin kuin merlot, ja Chilessä sitä kasvaa enemmän kuin muualla.',
           selite: 'Carménèren rypäleterttu kypsyy pari kolme viikkoa merlot’ta '
             + 'myöhemmin, ja Chilessä lajiketta kasvaa yli 8 800 hehtaaria — '
             + 'enemmän kuin missään muualla.',
@@ -31183,6 +32474,7 @@ export const MAA_KATEGORIAT = {
               + 'jättimäinen painekattila, jossa ateria kypsyy tunnissa. '
               + 'Simpukoista välttämättömiä ovat almeja, cholga ja picoroco. '
               + 'Vanhimmat jäänteet Chiloésta ovat yli 11 000 vuoden takaa.',
+          lyhyt: 'Curanto en hoyo kypsyy maakuopassa kuumien kivien päällä simpukoista, lihasta ja perunaleivistä.',
           selite: 'Curanto en hoyo kypsyy maakuopassa kuumien kivien päällä, '
             + 'ja kerrosten väliin ladotaan simpukoita, lihaa ja '
             + 'perunaleipiä.',
@@ -31201,6 +32493,7 @@ export const MAA_KATEGORIAT = {
               + 'vuonna 1862 — silloin täytteenä oli jauhettua lampaanlihaa '
               + 'ja joskus kanaa, ja maissikerros maustettiin sokerilla, '
               + 'rasvalla ja chilillä.',
+          lyhyt: 'Pastel de choclo kypsennetään savipadassa, ja sen maissikuori ruskistuu uunissa sokerin ansiosta.',
           selite: 'Pastel de choclo kypsennetään ja tarjotaan matalassa '
             + 'savipadassa, ja sen maissikuori ruskistuu uunissa sokerin '
             + 'ansiosta.',
@@ -31218,6 +32511,7 @@ export const MAA_KATEGORIAT = {
               + 'korianteria. Mausteen kotiseutu on Araucanía, mutta '
               + '2000-luvulta lähtien se on levinnyt koko maan keittiöön ja '
               + 'sieltä ammattikokkien käyttöön.',
+          lyhyt: 'Merkén on savustetusta paprikasta jauhettu mapuchekeittiön mauste.',
           selite: 'Merkén on savustetusta cacho de cabra -paprikasta '
             + 'jauhettu mapuchekeittiön mauste, jossa on usein mukana suolaa '
             + 'ja paahdettua korianterinsiementä.',
@@ -31246,6 +32540,7 @@ export const MAA_KATEGORIAT = {
               + 'chilena; maaliskuussa 1879 kirjailija Abelardo Gamarra antoi '
               + 'sille uuden nimen marinera maansa merimiesten kunniaksi. '
               + 'Chilen kansallistanssiksi cueca julistettiin 6.11.1979.',
+          lyhyt: 'Arturo Gordonin maalauksessa zamacuecaa soitetaan harpulla ja kitaralla huoneen keskellä.',
           selite: 'Arturo Gordonin maalauksessa zamacuecaa soitetaan harpulla '
             + 'ja kitaralla, ja tanssi käydään huoneen keskellä muiden '
             + 'katsoessa.',
@@ -31264,6 +32559,7 @@ export const MAA_KATEGORIAT = {
               + 'latinalaisamerikkalaisen taiteilijan yksityisnäyttely siellä. '
               + 'Laulu "Gracias a la vida" syntyi La Pazissa 1966. Parran '
               + 'syntymäpäivä 4. lokakuuta on Chilen muusikoiden päivä.',
+          lyhyt: 'Santiagon Bellavistassa oleva mosaiikki esittää säveltäjä ja folkloristi Violeta Parraa kitaroineen.',
           selite: 'Santiagon Bellavistassa oleva mosaiikki esittää Violeta '
             + 'Parraa kitaroineen; hän oli säveltäjä, folkloristi ja '
             + 'kuvataiteilija samassa työssä.',
@@ -31283,6 +32579,7 @@ export const MAA_KATEGORIAT = {
               + 'siis asenteesta pyhää kohtaan eikä Kiinasta. Perinne juontaa '
               + 'esikolumbiaaniseen Keski-Chileen noin vuosiin 900–1400, ja '
               + 'Unesco otti sen luetteloonsa 2014.',
+          lyhyt: 'Pifilca on yksiääninen puuhuilu, jota baile chinon soittajat puhaltavat vuorotellen.',
           selite: 'Pifilca on yksiääninen puuhuilu, jota baile chinon '
             + 'soittajat puhaltavat vuorotellen niin, että sävel syntyy '
             + 'vasta ryhmässä.',
@@ -31300,6 +32597,7 @@ export const MAA_KATEGORIAT = {
               + 'on maaseudun runolaulun, canto a lo poetan, vakiosäestäjä, '
               + 'ja viime vuosina muutama virtuoosi on alkanut kehittää '
               + 'siitä myös soolosoitinta.',
+          lyhyt: 'Museo Violeta Parran guitarrón kuului Ángel Parralle, ja siinä on kaksikymmentäviisi kieltä.',
           selite: 'Museo Violeta Parran guitarrón kuului Ángel Parralle, ja '
             + 'sen kaksikymmentäviisi kieltä on ryhmitelty viiteen kuoroon '
             + 'sekä neljään erilliseen sivukieleen.',
@@ -31365,6 +32663,7 @@ export const MAA_KATEGORIAT = {
               + 'jatkettiin kaksisataa vuotta. Amiraali Edward Vernon '
               + 'saapui huhtikuussa 1741 viidelläkymmenellä sota-aluksella ja '
               + '25 600 miehellä, epäonnistui San Felipessä ja perääntyi.',
+          lyhyt: 'Castillo San Felipe de Barajas valmistui 1654 ja torjui vuoden 1741 piirityksen.',
           selite: 'Castillo San Felipe de Barajas valmistui 1654, ja sen '
             + 'vallien alla kulkee maanalaisia käytäviä; linnoitus torjui '
             + 'vuoden 1741 piirityksen.',
@@ -31384,6 +32683,7 @@ export const MAA_KATEGORIAT = {
               + 'samana vuonna Suur-Kolumbian, joka perustettiin Cúcutan '
               + 'perustuslailla 1821 ja hajosi 1831; siihen kuuluivat '
               + 'nykyiset Kolumbia, Ecuador, Panama ja Venezuela.',
+          lyhyt: 'José Gil de Castron muotokuva 1825 esittää Simón Bolívarin, joka perusti Suur-Kolumbian.',
           selite: 'José Gil de Castron vuoden 1825 muotokuva esittää Simón '
             + 'Bolívarin, joka johti Boyacán taistelun ja perusti '
             + 'Suur-Kolumbian.',
@@ -31403,6 +32703,7 @@ export const MAA_KATEGORIAT = {
               + '24 000 kuivattua kasvia. Alexander von Humboldt asui Mutisin '
               + 'luona kaksi kuukautta 1801. Aineisto lähetettiin Madridiin '
               + '105 laatikossa — ja unohtui puutarhan työkaluvajaan.',
+          lyhyt: 'Muotokuvassa José Celestino Mutis tutkii kukkaa suurennuslasilla; piirrokset julkaistiin vasta 1952.',
           selite: 'Muotokuvassa José Celestino Mutis tutkii kukkaa '
             + 'suurennuslasilla; hänen retkikuntansa piirrokset julkaistiin '
             + 'vasta 1952 alkaen, ja työ on yhä kesken.',
@@ -31422,6 +32723,7 @@ export const MAA_KATEGORIAT = {
               + 'säännöllinen liikenne alkoi vasta 1845 ja jatkui 1961 asti. '
               + 'Vesistössä tunnetaan 213 kalalajia, joista 55 prosenttia on '
               + 'kotoperäisiä.',
+          lyhyt: '1800-luvun litografia esittää champánia, jokivenettä, jota sauvottiin Magdalenaa ylävirtaan.',
           selite: '1800-luvun litografia esittää champánia, katetulla '
             + 'olkikojulla varustettua jokivenettä, jota sauvottiin '
             + 'Magdalenaa ylävirtaan sisämaahan.',
@@ -31450,6 +32752,7 @@ export const MAA_KATEGORIAT = {
               + 'Jäänteitä on yli kolmensadan neliökilometrin alalla, ja '
               + 'itse puistossa on yli 600 patsasta. Ensimmäisenä niistä '
               + 'kirjoitti espanjalaismunkki Juan de Santa Gertrudis 1756.',
+          lyhyt: 'San Agustínin hautakammion kattokivi lepää kolmen kaiverretun patsaan varassa.',
           selite: 'San Agustínin hautakammion kattokivi lepää kolmen '
             + 'kaiverretun patsaan varassa, ja hahmoissa on sekä ihmisen '
             + 'että eläimen piirteitä.',
@@ -31468,6 +32771,7 @@ export const MAA_KATEGORIAT = {
               + 'punaisella, mustalla ja valkoisella. Kaivauksissa on löytynyt '
               + '162 hypogeumia, ja puiston kammiot ovat 500–800-luvulta. '
               + 'Alue on ollut maailmanperintökohde vuodesta 1995.',
+          lyhyt: 'Tierradentron hautakammion katto ja pilarit on maalattu punaisin, mustin ja valkoisin kuvioin.',
           selite: 'Tierradentron hautakammion katto ja pilarit on maalattu '
             + 'punaisin, mustin ja valkoisin geometrisin kuvioin, ja pilarissa '
             + 'on kaiverrettu kasvot.',
@@ -31487,6 +32791,7 @@ export const MAA_KATEGORIAT = {
               + 'ammuttu lintu putosi portaille; arkeologit saapuivat 1976. '
               + 'Kogit ovat kertoneet käyneensä kaupungissa kaiken aikaa ja '
               + 'kutsuvat sitä nimellä Teyuna.',
+          lyhyt: 'Ciudad Perdidan pyöreä olkikattoinen maja seisoo yhdellä taironan kaivamista kivitasanteista.',
           selite: 'Ciudad Perdidan pyöreä olkikattoinen maja seisoo '
             + 'kivitasanteella, jollaisia tairona kaivoi rinteeseen 169 '
             + 'kappaletta.',
@@ -31505,6 +32810,7 @@ export const MAA_KATEGORIAT = {
               + 'neliökilometrillä. Väki väheni 1100-luvun jälkeen '
               + 'tuntemattomasta syystä ja siirtyi ylemmäs. Zenúille maailma '
               + 'oli suuri punos, ja sama kuvio toistuu heidän kultatöissään.',
+          lyhyt: 'Zenú-kulttuurin korvakorut on tehty puolifiligraanitekniikalla kanavaverkoston kuvioin.',
           selite: 'Zenú-kulttuurin valetut korvakorut on tehty '
             + 'puolifiligraanitekniikalla niin, että metallilangat '
             + 'muodostavat saman punoskuvion kuin kansan kanavaverkosto.',
@@ -31543,6 +32849,7 @@ export const MAA_KATEGORIAT = {
               + 'lintulajeista. Maa on ensimmäinen myös orkidealajien ja '
               + 'kotoperäisten perhosten määrässä, ja siellä on 32 '
               + 'maabiomia ja 314 ekosysteemityyppiä.',
+          lyhyt: 'Andienkalliokukon koiras on tulipunainen, ja sen harjasulat peittävät nokan lähes kokonaan.',
           selite: 'Andienkalliokukon koiras on tulipunainen ja sen '
             + 'harjasulat peittävät nokan lähes kokonaan; laji elää Andien '
             + 'kosteissa vuorimetsissä.',
@@ -31562,6 +32869,7 @@ export const MAA_KATEGORIAT = {
               + 'virran alla. Jokea kutsutaan viiden värin joeksi. '
               + 'Ylätasanko on Andien, llanosin ja Amazonin rajalla, ja siellä '
               + 'elää noin 420 lintulajia.',
+          lyhyt: 'Caño Cristalesin uomassa kasvava Macarenia clavigera värjää veden punaiseksi heinä-marraskuussa.',
           selite: 'Caño Cristalesin uomassa kasvava Macarenia clavigera '
             + 'värjää veden punaiseksi heinäkuun lopusta marraskuuhun.',
           lahde: 'Ricardo Gonzalez Arango, Wikimedia Commons (CC BY-SA 4.0)',
@@ -31578,6 +32886,7 @@ export const MAA_KATEGORIAT = {
               + 'kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. '
               + 'Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja '
               + 'sen latvoissa pesii uhanalainen keltakorvainen aratti.',
+          lyhyt: 'Cocoran laakson vahapalmut kohoavat sumusta yli neljäänkymmeneen metriin.',
           selite: 'Cocoran laakson vahapalmut kohoavat sumusta yli '
             + 'neljänkymmenen metrin korkeuteen, mikä tekee niistä maailman '
             + 'korkeimman yksisirkkaisen kasvin.',
@@ -31596,6 +32905,7 @@ export const MAA_KATEGORIAT = {
               + 'Bogotásta etelään on maailman suurin; siitä tuli '
               + 'kansallispuisto 1977 ja se on ylängön tärkein vesilähde. '
               + 'Tunnuskasvi on frailejón, "iso munkki".',
+          lyhyt: 'Frailejón kerää mehevät karvaiset lehtensä tiiviiseen kierteeseen suojaksi yön pakkaselta.',
           selite: 'Frailejón eli Espeletia kerää mehevät karvaiset lehtensä '
             + 'tiiviiseen kierteeseen, ja kuivuneet lehdet jäävät runkoon '
             + 'suojaamaan kasvia yön pakkaselta.',
@@ -31625,6 +32935,7 @@ export const MAA_KATEGORIAT = {
               + 'tuottaa keskimäärin 11,5 miljoonaa säkkiä vuodessa ja on '
               + 'arabican osalta maailman suurin; kahvin kulttuurimaisema '
               + 'otettiin maailmanperintöluetteloon 2011.',
+          lyhyt: 'Kolumbialainen kahvipensas kasvaa jyrkillä rinteillä, ja kirsikat poimitaan käsin punertuessaan.',
           selite: 'Kolumbialainen kahvipensas kasvaa jyrkillä rinteillä, ja '
             + 'sen kirsikat poimitaan käsin sitä mukaa kuin ne punertuvat.',
           lahde: 'Mfrancoavellaneda, Wikimedia Commons (CC0)',
@@ -31643,6 +32954,7 @@ export const MAA_KATEGORIAT = {
               + 'Vastaavia leipiä ovat Meksikon gordita, El Salvadorin pupusa '
               + 'ja Ecuadorin maissitortilla; täytteenä on juustoa, lihaa tai '
               + 'avokadoa.',
+          lyhyt: 'Arepa de chócolo tehdään tuoreesta maissista juuston ympärille, ja on esikolumbiaanista perua.',
           selite: 'Arepa de chócolo tehdään makeasta tuoreesta maissista ja '
             + 'halkaistaan juuston ympärille; leipä on esikolumbiaanista '
             + 'perua.',
@@ -31662,6 +32974,7 @@ export const MAA_KATEGORIAT = {
               + 'liotetaan suolavedessä ja paahdetaan savipannulla. Tuotannon '
               + 'keskukset ovat San Gil ja Barichara, ja niitä annetaan '
               + 'häälahjaksi.',
+          lyhyt: 'Hormiga culona on lehtileikkurimuurahaisen kuningatar, pyydystetty häälennolla siivet tallella.',
           selite: 'Hormiga culona on lehtileikkurimuurahaisen kuningatar, ja '
             + 'se pyydystetään häälennon aikana siivet vielä tallella.',
           lahde: 'Juliett, Wikimedia Commons (CC BY-SA 3.0)',
@@ -31678,6 +32991,7 @@ export const MAA_KATEGORIAT = {
               + 'ja on perustoimeentulo 236 kunnassa. Sokeriruoko on '
               + 'pinta-alaltaan maan kuudenneksi laajin viljelykasvi kahvin, '
               + 'maissin, riisin, banaanin ja puuvillan jälkeen.',
+          lyhyt: 'Panelakimpaleet valetaan uritettuihin muotteihin, jotta niistä on helppo lohkoa pala kerrallaan.',
           selite: 'Panelakimpaleet valetaan muotteihin uritettuina, jotta '
             + 'niistä on helppo lohkoa pala kerrallaan kuumaan veteen tai '
             + 'kahviin.',
@@ -31724,6 +33038,7 @@ export const MAA_KATEGORIAT = {
               + 'alkuperäiskansoilta. Rytmejä eli "ilmoja" on neljä: son, '
               + 'paseo, merengue ja puya. Unesco pitää lajia kiireellistä '
               + 'suojelua vaativana perintönä.',
+          lyhyt: 'Vallenaton kolmirivinen nappihaitari on saksalaista tekoa, saapui 1800-luvulla Aruban kautta.',
           selite: 'Vallenaton kolmirivinen nappihaitari on saksalaista '
             + 'tekoa, ja soittimia saatiin 1800-luvulla todennäköisesti Aruban '
             + 'ja Curaçaon kautta.',
@@ -31743,6 +33058,7 @@ export const MAA_KATEGORIAT = {
               + 'Joselito Carnavalin hautajaisiin. Unesco otti karnevaalin '
               + 'luetteloonsa Pariisissa 7. marraskuuta 2003. Tunnuslause on '
               + '"sen nauttii, joka sen elää".',
+          lyhyt: 'Marimonda on karnevaalin suosituin hahmo: huppupää pitkine nenineen ja lerpattavine korvineen.',
           selite: 'Marimonda on karnevaalin suosituin hahmo: huppupää, jolla '
             + 'on pitkä nenä, lerpattavat korvat ja kirkkaat vaatteet.',
           lahde: 'Michele Mariani, Wikimedia Commons (CC BY-SA 2.0)',
@@ -31829,6 +33145,7 @@ export const MAA_KATEGORIAT = {
               + 'valloittamaan itäistä Kuubaa. Harvat päälliköt vastasivat '
               + 'kutsuun; Hatuey vangittiin ja teloitettiin 2. helmikuuta '
               + '1512.',
+          lyhyt: 'Baracoan aukiolla seisova pronssirintakuva esittää Hatueyta, Kuuban ensimmäistä kansallissankaria.',
           selite: 'Baracoan aukiolla seisova pronssirintakuva esittää '
             + 'Hatueyta, jota kutsutaan Kuuban ensimmäiseksi '
             + 'kansallissankariksi.',
@@ -31848,6 +33165,7 @@ export const MAA_KATEGORIAT = {
               + 'Orjuus lakkautettiin kuninkaallisella asetuksella 7. '
               + 'lokakuuta 1886 — koko läntisellä pallonpuoliskolla vain '
               + 'Brasilia oli myöhemmin.',
+          lyhyt: 'Manaca Iznagan torni kohoaa Trinidadin sokerilaaksossa, ja sen kello rytmitti viljelmän työpäivän.',
           selite: 'Manaca Iznagan torni kohoaa Trinidadin sokerilaaksossa, ja '
             + 'sen kellolla annettiin merkit viljelmän työpäivän rytmiin.',
           lahde: 'Schwarzenfelder, Wikimedia Commons (CC BY-SA 4.0)',
@@ -31865,6 +33183,7 @@ export const MAA_KATEGORIAT = {
               + 'Céspedesin presidentiksi. Sota oli vilkkaimmillaan juuri '
               + 'vuosina 1872 ja 1873. Se päättyi Zanjónin sopimukseen 10. '
               + 'helmikuuta 1878.',
+          lyhyt: 'La Demajaguan sokeritehtaan kello kutsui orjuutetut työhön ja lokakuussa 1868 koolle kapinaan.',
           selite: 'La Demajaguan sokeritehtaan kello kutsui aiemmin '
             + 'orjuutetut työhön, ja 10. lokakuuta 1868 sillä kutsuttiin '
             + 'koolle kapina.',
@@ -31885,6 +33204,7 @@ export const MAA_KATEGORIAT = {
               + '1873 ja vahvisti Kuuban erottamattomaksi osakseen, '
               + '20-vuotias opiskelija vastasi esseellä ja lähetti sen '
               + 'pääministerille. Hän kaatui Dos Ríosissa 1895.',
+          lyhyt: 'Cienfuegosin marmorimuistomerkki esittää José Martía, jonka runoista sovitettiin Guantanamera.',
           selite: 'Cienfuegosin aukiolla seisova marmorimuistomerkki esittää '
             + 'José Martía, jonka runoista sovitettiin myöhemmin laulun '
             + '"Guantanamera" sanat.',
@@ -31930,6 +33250,7 @@ export const MAA_KATEGORIAT = {
               + 'Hispaniolalta ja Caymansaarilta. Suolla elää yli 900 '
               + 'alkuperäistä kasvilajia, 175 lintulajia ja yli tuhat '
               + 'selkärangatonta lajia.',
+          lyhyt: 'Kuubankrokotiili on pitkäjalkaisin nykykrokotiileista, ja elää luonnonvaraisena vain Zapatan suolla.',
           selite: 'Kuubankrokotiili on pitkäjalkaisin nykyisistä '
             + 'krokotiileista ja elää luonnonvaraisena vain Zapatan suolla.',
           lahde: 'Yelles, Wikimedia Commons (CC BY-SA 3.0)',
@@ -31948,6 +33269,7 @@ export const MAA_KATEGORIAT = {
               + 'lajiutumista: puistossa kasvaa yli 900 kasvilajia ja siellä '
               + 'on suojassa 16 Kuuban 28 kotoperäisestä lajista. Unesco otti '
               + 'alueen luetteloonsa 2001.',
+          lyhyt: 'Humboldtin kansallispuiston sademetsä laskeutuu Baracoan rannikolle, lajistoltaan Karibian rikkain.',
           selite: 'Humboldtin kansallispuiston sademetsä laskeutuu Baracoan '
             + 'rannikolle, ja alue on lajistoltaan Karibian rikkain.',
           lahde: 'Martin Cígler, Wikimedia Commons (CC BY-SA 3.0)',
@@ -31966,6 +33288,7 @@ export const MAA_KATEGORIAT = {
               + 'itäosassa, samoilla '
               + 'kosteilla rinteillä kuin Humboldtin puiston kotoperäinen '
               + 'kasvisto.',
+          lyhyt: 'Polymita pictan kuoressa kiertää musta, ruskea ja valkoinen juova, eikä kahta samanlaista juuri ole.',
           selite: 'Polymita pictan kuoressa kiertää musta, ruskea ja '
             + 'valkoinen juova, eikä kahta samanlaista kuorta juuri ole.',
           lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
@@ -31992,6 +33315,7 @@ export const MAA_KATEGORIAT = {
               + 'Amerikkaan, ja ensimmäinen maininta Kuubasta on vuodelta '
               + '1857 — kuusitoista vuotta ennen isoisän matkaa. Nykyään se on '
               + 'yksi maan kansallisruoista.',
+          lyhyt: 'Ropa vieja on tomaattikastikkeessa haudutettua revittyä naudanlihaa riisin ja papujen kanssa.',
           selite: 'Ropa vieja on tomaattikastikkeessa haudutettua '
             + 'riekaleiksi revittyä naudanlihaa, ja se tarjotaan riisin, '
             + 'papujen ja paistettujen banaaniviipaleiden kanssa.',
@@ -32009,6 +33333,7 @@ export const MAA_KATEGORIAT = {
               + 'tavalliseen papu-riisiruokaan on se, että papu ja riisi '
               + 'kypsennetään samassa padassa papujen keitinveteen. Saaren '
               + 'itäosassa sama ruoka punaisista pavuista on congrí.',
+          lyhyt: 'Moros y cristianos kypsennetään yhdessä padassa, riisi imee mustien papujen keitinveden värin.',
           selite: 'Moros y cristianos kypsennetään yhdessä padassa niin, että '
             + 'riisi imee mustien papujen keitinveden ja värjääntyy siitä.',
           lahde: 'Juan Emilio Prades Bel, Wikimedia Commons (CC BY-SA 4.0)',
@@ -32046,6 +33371,7 @@ export const MAA_KATEGORIAT = {
               + 'orsissa asui hedelmälepakoita, ja Facundon vaimo Amalia '
               + 'ehdotti lepakkoa merkiksi: lukutaidoton asiakas tunnisti '
               + 'kuvan.',
+          lyhyt: 'Havannan Edificio Bacardí valmistui 1930, tunnetuimpia art deco -rakennuksia Amerikassa.',
           selite: 'Havannan Edificio Bacardí valmistui 1930 ja on Latinalaisen '
             + 'Amerikan tunnetuimpia art deco -rakennuksia.',
           lahde: 'Antonio Schubert, Wikimedia Commons (CC BY-SA 2.0)',
@@ -32072,6 +33398,7 @@ export const MAA_KATEGORIAT = {
               + 'Remedios ja Oriente. Sikarin peitelehti, sidos ja täyte voivat tulla eri '
               + 'alueilta. Sikarit ovat yhä maan tärkeimpiä vientituotteita: '
               + '2017 vienti oli 27 prosenttia koko tavaraviennistä.',
+          lyhyt: 'Casa de tabaco on olkikattoinen lato, jossa tupakanlehdet kuivuvat riu\'uilla ennen käymistä.',
           selite: 'Casa de tabaco eli secadero on olkikattoinen lato, jossa '
             + 'tupakanlehdet ripustetaan riu’uille kuivumaan viikoiksi ennen '
             + 'käymistä.',
@@ -32091,6 +33418,7 @@ export const MAA_KATEGORIAT = {
               + 'laakson maailmanperintöluetteloon 1999 sekä luonnon- että '
               + 'kulttuurimaisemana — juuri perinteisen tupakanviljelyn '
               + 'takia.',
+          lyhyt: 'Viñalesin laakson mogotet ovat karstikumpuja, joiden ympärillä kasvatettu tupakka on perintöperuste.',
           selite: 'Viñalesin laakson mogotet ovat karstikumpuja, joiden '
             + 'ympärillä kasvatettu tupakka on maailmanperintökohteen '
             + 'peruste.',
@@ -32108,6 +33436,7 @@ export const MAA_KATEGORIAT = {
               + 'Totalmente a mano — kolme sanaa erottavat siis kaksi eri '
               + 'työtapaa. Sikaria itseään kutsutaan nimellä El Habano, ja '
               + 'tuotantoa ohjaa valtion Cubatabaco.',
+          lyhyt: 'Torcedor kääntää peitelehden sikarin ympärille käsin; kokonaan käsin tehty saa oman merkinnän.',
           selite: 'Torcedor kääntää peitelehden sikarin ympärille kämmenensä '
             + 'ja veitsen avulla; kokonaan käsin tehty sikari saa merkinnän '
             + 'Totalmente a mano.',
@@ -32127,6 +33456,7 @@ export const MAA_KATEGORIAT = {
               + 'ammatin merkitsemistä aineettomaksi kulttuuriperinnöksi. Kun '
               + 'Alonso Menéndez perusti uuden merkin 1935, hän nimesi sen '
               + 'Montecristoksi: Dumas’n romaani oli käärijöiden suosikki.',
+          lyhyt: 'Havannalaisen sikaritehtaan lukija istuu korokkeella käärintäpöytien yläpuolella.',
           selite: 'Havannalaisen sikaritehtaan lukija istuu korokkeellaan '
             + 'käärintäpöytien yläpuolella, ja jokaisella käärijällä on oma '
             + 'numeroitu paikkansa.',
@@ -32166,6 +33496,7 @@ export const MAA_KATEGORIAT = {
               + 'Tanssijat eivät tanssi johdannon aikana vaan aloittavat '
               + 'täsmälleen paseon neljännen tahdin neljännellä iskulla; kun '
               + 'johdanto toistuu, he pysähtyvät juttelemaan.',
+          lyhyt: 'Matanzasin teatteri 1800-luvun puupiirroksessa; kaupungissa esitettiin 1879 ensimmäinen danzón.',
           selite: 'Matanzasin teatteri 1800-luvun puupiirroksessa; samassa '
             + 'kaupungissa esitettiin 1879 ensimmäinen danzóniksi '
             + 'tunnistettu sävellys.',
@@ -32184,6 +33515,7 @@ export const MAA_KATEGORIAT = {
               + '1900-luvun alkuun asti puulaatikoita, cajoneja. Laulaja '
               + 'aloittaa sanattomalla diana-kuviolla ja improvisoi sitten '
               + 'décimoina, kymmenrivisinä säkeistöinä.',
+          lyhyt: 'Claves ovat kaksi kovapuista tikkua, joiden viisi-iskuinen kuvio pitää rumbakokoonpanon koossa.',
           selite: 'Claves ovat kaksi kovapuista tikkua, joiden lyömä '
             + 'viisi-iskuinen kuvio pitää koko rumbakokoonpanon koossa.',
           lahde: 'Hannes Grobe, Wikimedia Commons (CC BY 3.0)',
@@ -32203,6 +33535,7 @@ export const MAA_KATEGORIAT = {
               + 'suosituimmillaan, mutta säkeitä ei tallennettu — kunnes '
               + 'pikakirjoittaja Aida Bode alkoi kirjoittaa niitä muistiin. '
               + 'Kirja ilmestyi 1997.',
+          lyhyt: 'Güiro tehdään kuivatusta kurpitsasta uurteineen; tikulla raapaisten syntyy punton perusrytmi.',
           selite: 'Güiro tehdään kuivatusta kurpitsasta, jonka kylkeen '
             + 'uurretaan urat; tikulla raapaisten siitä syntyy punton '
             + 'perusrytmi.',
@@ -32222,6 +33555,7 @@ export const MAA_KATEGORIAT = {
               + 'koulutusta eikä koskaan kirjoittanut sävellyksiään muistiin, '
               + 'joten useimmat katosivat; noin kaksi tusinaa säilyi, koska '
               + 'ystävät ja oppilaat merkitsivät ne ylös.',
+          lyhyt: 'Santiago de Cuban Casa de la Trova on trovadorien kokoontumispaikka, josta lähti bolero.',
           selite: 'Santiago de Cuban Casa de la Trova on ollut trovadorien '
             + 'kokoontumispaikka, ja samasta kaupungista lähti bolero '
             + '1880-luvulla.',
@@ -32270,6 +33604,7 @@ export const MAA_KATEGORIAT = {
               + 'Kaakkois-Aasiasta. Viti Levun lounaisrannalla on Bourewan '
               + 'kaivausalue, josta on nostettu sekä koristeltuja '
               + 'sirpaleita että simpukasta ja luusta hiottuja helmiä.',
+          lyhyt: 'Bourewan sirpaleen kaarikuviot on painettu märkään saveen hammastetulla leimasimella.',
           selite: 'Bourewan sirpaleen kaarikuviot on painettu savi märkänä '
             + 'hammastetulla leimasimella, joka on lapitakeramiikan '
             + 'tuntomerkki.',
@@ -32290,6 +33625,7 @@ export const MAA_KATEGORIAT = {
               + 'kasvojen rekonstruktio, ja piirteissä on yhtäläisyyksiä '
               + 'polynesialaisiin, fidžiläisiin ja aasialaisiin — mutta ne '
               + 'eivät osu selvästi yhteenkään näistä ryhmistä.',
+          lyhyt: 'Manan kasvorekonstruktio on ainoa esitys lapitakulttuurin ihmisestä, ja se on Fidžin museossa.',
           selite: 'Manan kasvorekonstruktio on ainoa olemassa oleva esitys '
             + 'lapitakulttuurin ihmisestä, ja se on Fidžin museossa.',
           lahde: 'Patrick Nunn, Wikimedia Commons (CC BY-SA 4.0)',
@@ -32309,6 +33645,7 @@ export const MAA_KATEGORIAT = {
               + 'saattoi tuottaa kauppiaalle noin 25 000 dollaria puolessa '
               + 'vuodessa. Fidžiläiset keräsivät ja kuivasivat saaliin, ja '
               + 'maksuksi he saivat usein tuliaseita.',
+          lyhyt: 'Vanua Levu on Fidžin toiseksi suurin saari, jonka santelipuu käynnisti ensimmäisen kauppabuumin.',
           selite: 'Vanua Levu on Fidžin toiseksi suurin saari, ja sen '
             + 'lounaisrannalta löytynyt santelipuu käynnisti saarten '
             + 'ensimmäisen kauppabuumin.',
@@ -32329,6 +33666,7 @@ export const MAA_KATEGORIAT = {
               + 'kaikista vaatimuksistaan Fidžin alueisiin, Laun päälliköt '
               + 'kokoontuivat Lakebaan ja antoivat hänelle helmikuussa 1869 '
               + 'arvonimen Tui Lau, Laun kuningas.',
+          lyhyt: 'Francis H. Duftyn 1870-luvun valokuva esittää Enele Ma’afua, tongalaista prinssiä ja päällikköä.',
           selite: 'Francis H. Duftyn valokuvaamossa 1870-luvulla otettu '
             + 'muotokuva esittää Enele Ma’afua, joka oli yhtä aikaa '
             + 'tongalainen prinssi ja fidžiläinen päällikkö.',
@@ -32376,6 +33714,7 @@ export const MAA_KATEGORIAT = {
               + 'syntyi kukka. Sanonta tagi me uci ’ea tarkoittaa itkeä '
               + 'ollakseen hänen kaltaisensa, ja siitä tehtiin myöhemmin '
               + 'kansanlaulu Tagimoucia ga.',
+          lyhyt: 'Tagimoucian kukassa on karmiininpunainen ulkokehä ja valkoinen sisus, Fidžin kansalliskukka.',
           selite: 'Tagimoucian kukassa on karmiininpunainen ulkokehä ja '
             + 'valkoinen sisus, ja se on Fidžin kansalliskukka.',
           lahde: 'John Game, Wikimedia Commons (CC BY 2.0)',
@@ -32394,6 +33733,7 @@ export const MAA_KATEGORIAT = {
               + 'vain Fidžissä, mutta fossiilit kertovat, että se eli '
               + 'aikoinaan myös Tongassa, kunnes varhaiset asukkaat '
               + 'hävittivät sen sieltä.',
+          lyhyt: 'Kaulaslurin punainen rinta ja tummanvioletti päälaki tekivät höyhenistä kauppatavaraa Samoaan asti.',
           selite: 'Kaulaslurin punainen rinta ja tummanvioletti päälaki '
             + 'tekivät sen höyhenistä kauppatavaraa Samoaan ja Tongaan '
             + 'asti.',
@@ -32412,6 +33752,7 @@ export const MAA_KATEGORIAT = {
               + 'ja napsijat. Naiqoro-salmi on rauhoitettu kalastukselta. '
               + 'Riutta sai nimensä ranskalaisen tutkimusaluksen Astrolaben '
               + 'mukaan, ja vesi on siellä 25–32-asteista.',
+          lyhyt: 'Nahkakorallit ovat pehmeitä koralleja, ja niitä on runsaasti Fidžin riutoilla kivikorallien seassa.',
           selite: 'Nahkakorallit ovat pehmeitä koralleja, ja niitä on '
             + 'Fidžin riutoilla runsaasti kovien kivikorallien seassa.',
           lahde: 'Paul Asman and Jill Lenoble, Wikimedia Commons (CC BY 2.0)',
@@ -32440,6 +33781,7 @@ export const MAA_KATEGORIAT = {
               + 'taaronlehti sekä kalapaketit, joissa on sipulia, '
               + 'valkosipulia ja chiliä. Tärkkelys tulee jamssista, '
               + 'kassavasta ja taarosta.',
+          lyhyt: 'Lovossa ruoka kypsyy hehkuvien kivien päällä lehtien alla, ja uuni peitetään mullalla tunneiksi.',
           selite: 'Lovossa ruoka kypsyy hehkuvien kivien päällä lehtien '
             + 'alla, ja uuni peitetään säkeillä ja mullalla useiksi '
             + 'tunneiksi.',
@@ -32522,6 +33864,7 @@ export const MAA_KATEGORIAT = {
               + 'Sama kuviokieli toistuu myös lapitakeramiikassa, ja '
               + 'tutkijat ovat arvelleet kuvioiden siirtyneen kankaan ja '
               + 'saven välillä kumpaankin suuntaan.',
+          lyhyt: 'Fidžiläisessä masissa kuviot painetaan kaavaimella, ja juhlakankaat ovat metrien mittaisia.',
           selite: 'Fidžiläisessä masissa kuviot painetaan kaavaimella, ja '
             + '1800-luvun juhlakankaat ovat useiden metrien mittaisia.',
           lahde: 'Wmpearl, Wikimedia Commons (CC0)',
@@ -32540,6 +33883,7 @@ export const MAA_KATEGORIAT = {
               + 'Vain ylimyksellä sai olla drua, ja rakentamisen '
               + 'yksinoikeus siirtyi lopulta Laun saarilla asuville '
               + 'tongalaisille veneenrakentajille.',
+          lyhyt: 'Druan pienempi runko pidetään tuulen puolella, ja kääntyessään alus vaihtaa keulan ja perän paikkaa.',
           selite: 'Druan pienempi rungoista pidetään tuulen puolella, ja '
             + 'kääntyessään alus vaihtaa keulan ja perän paikkaa.',
           lahde: 'Szilas, Wikimedia Commons (PD)',
@@ -32558,6 +33902,7 @@ export const MAA_KATEGORIAT = {
               + 'Päällikön talo oli samanlainen mutta suurempi ja '
               + 'korkeammalla, ja kylän henkitalo bure kalou nousi '
               + 'kivistä ja mullasta ladotun pyramidiperustan päälle.',
+          lyhyt: 'Buren seinäkepit kiedotaan kookoskuitunaruun, ja punonta muodostaa samalla seinän kuvion.',
           selite: 'Buren seinäkepit kiedotaan magimagiin eli '
             + 'kookoskuitunaruun, ja punonta muodostaa samalla seinän '
             + 'kuvion.',
@@ -32576,6 +33921,7 @@ export const MAA_KATEGORIAT = {
               + 'oli lyhyt: mies kantoi useampaa kerralla. Nuija oli myös '
               + 'omistajansa arvon merkki, ja arvokkaimpien päähän '
               + 'upotettiin vaaleita luukiekkoja.',
+          lyhyt: 'Ula on heittonuija, jonka pyöreä pää tehdään puun juuripahkasta, siksi sitä sanotaan ananasnuijaksi.',
           selite: 'Ula on heittonuija, jonka pyöreä pää tehdään puun '
             + 'juuripahkasta; muotonsa takia sitä on kutsuttu '
             + 'ananasnuijaksi.',
@@ -32617,6 +33963,7 @@ export const MAA_KATEGORIAT = {
               + 'Ilmiö oli matkailijoiden nähtävyys jo 1902, jolloin '
               + 'Robert Fulton julkaisi siitä ensimmäisen '
               + 'luonnontieteellisen selitysyrityksen.',
+          lyhyt: 'Vilavilairevossa kävelijät ylittävät kuumat kivet paljain jaloin; perinne kuuluu Sawau-heimolle.',
           selite: 'Vilavilairevossa kävelijät ylittävät valkohehkuisiksi '
             + 'kuumennetut kivet paljain jaloin, ja perinne kuuluu vain '
             + 'Beqan Sawau-heimolle.',
@@ -32720,6 +34067,7 @@ export const MAA_KATEGORIAT = {
               + 'siis yksi harvoista paikoista maailmassa, joissa '
               + 'maanviljely keksittiin itsenäisesti, ja Unesco otti sen '
               + 'maailmanperintöluetteloon 2008.',
+          lyhyt: 'Kukin varhaisen maanviljelyn alue kattaa 116 hehtaaria suota Wahgin laaksossa.',
           selite: 'Kukin varhaisen maanviljelyn alue kattaa 116 hehtaaria '
             + 'suota Wahgin laaksossa, ja siellä asuvat nykyään melpaa '
             + 'puhuvat kawelkat.',
@@ -32740,6 +34088,7 @@ export const MAA_KATEGORIAT = {
               + 'Contact. Leahyn päiväkirjat kertovat myös toisesta '
               + 'puolesta: retkikunnan aiheuttamista 41 kuolemasta '
               + 'vuosina 1930–1934, joita tutkittiin 1936.',
+          lyhyt: 'Uuden-Guinean keskiylängöt ovat 1 500–2 000 metrissä, ja pilvipeite piilotti ne 1930-luvulle.',
           selite: 'Uuden-Guinean keskiylängöt ovat 1 500–2 000 metrin '
             + 'korkeudella, ja pilvipeite piilotti laaksoineen '
             + 'satojatuhansia ihmisiä ulkomaailmalta 1930-luvulle asti.',
@@ -32760,6 +34109,7 @@ export const MAA_KATEGORIAT = {
               + 'puolessa päivässä. Paluumatkalla kantajat toivat haavoittuneet '
               + 'paareilla ja hoitivat heitä öisin, ja siitä syntyi nimitys '
               + 'Fuzzy Wuzzy Angels.',
+          lyhyt: 'Kokodan polku kulkee sademetsän läpi Owen Stanleyn vuoriston yli, ylitys kestää useita päiviä.',
           selite: 'Kokodan polku kulkee tiheän sademetsän läpi Owen '
             + 'Stanleyn vuoriston yli, ja sen ylittäminen kestää '
             + 'kävellen useita päiviä.',
@@ -32780,6 +34130,7 @@ export const MAA_KATEGORIAT = {
               + 'laskettiin suoraan Jaba-jokeen. Vuonna 1988 alkoi kapina, '
               + 'kaivos suljettiin 1989, ja kymmenvuotinen konflikti päättyi '
               + '1998 rauhansopimukseen ja autonomiseen hallintoon.',
+          lyhyt: 'Pangunan avolouhoksen koneet olivat 1970-luvulla suurimman kupari- ja kultakaivoksen laitteita.',
           selite: 'Pangunan avolouhoksen kauhakuormaajat olivat 1970-luvun '
             + 'alussa maailman suurimman kupari- ja kultakaivoksen '
             + 'työkoneita, ja kaivos on ollut suljettuna vuodesta 1989.',
@@ -32825,6 +34176,7 @@ export const MAA_KATEGORIAT = {
               + 'paikallisia lainoja: balus tarkoittaa kyyhkyä ja siitä '
               + 'johdettuna lentokonetta, bagarapim rikkoa ja belhat '
               + 'vihaista, kirjaimellisesti kuumaa vatsaa.',
+          lyhyt: 'Sotilashautausmaan portin teksti on kahdella kielellä, joista tok pisin on useamman lukemaa.',
           selite: 'Sotilashautausmaan portilla teksti on kahdella kielellä, '
             + 'ja tok pisin on niistä se, jota useampi papuauusiguinealainen '
             + 'osaa lukea.',
@@ -32846,6 +34198,7 @@ export const MAA_KATEGORIAT = {
               + 'huomauttavat, että nämä ovat tilapäisiä selityksiä eivätkä '
               + 'sanoja. Kuuluisa väite, että helikopteri olisi tok pisiniksi '
               + 'Jeesuksen vatkain, on sen sijaan ulkomaalaisten keksintö.',
+          lyhyt: 'Kiertoilmaus on pidginkielten tavallinen keino, ja tok pisinissä se rakennetaan sanalla bilong.',
           selite: 'Kiertoilmaus on pidginkielten tavallinen keino, ja tok '
             + 'pisinissä se rakennetaan omistusta merkitsevällä sanalla '
             + 'bilong.',
@@ -32865,6 +34218,7 @@ export const MAA_KATEGORIAT = {
               + 'tunnettu saksan pohjalta syntynyt kreolikieli maailmassa. '
               + 'Puhujia on enää kourallinen, ja useimmat heistä asuvat '
               + 'nykyään Australiassa.',
+          lyhyt: 'Unserdeutsch on maailman ainoa saksasta syntynyt kreolikieli, syntynyt lähetysasemilla.',
           selite: 'Unserdeutsch on maailman ainoa saksan pohjalta syntynyt '
             + 'kreolikieli, ja se syntyi Itä-Uuden-Britannian '
             + 'lähetysasemilla.',
@@ -32893,6 +34247,7 @@ export const MAA_KATEGORIAT = {
               + 'D’Albertis halusi sen omistaa. Vuonna 1971 lintu valittiin '
               + 'maan kansallislinnuksi ja se otettiin kansallislippuun, '
               + 'jossa se lentää keltaisella pohjalla.',
+          lyhyt: 'Raggianparatiisilinnun koiras levittää siipensä ja kylkisulkansa soitimella, ja se on maan lipussa.',
           selite: 'Raggianparatiisilinnun koiras levittää siipensä ja '
             + 'kylkisulkansa soitimella, ja juuri tämä lintu on '
             + 'Papua-Uuden-Guinean lipussa.',
@@ -32912,6 +34267,7 @@ export const MAA_KATEGORIAT = {
               + 'ensimmäisen pienellä haulikolla; myöhemmin hän kasvatti '
               + 'loput toukista. Mount Lamingtonin purkaus 1950-luvulla '
               + 'tuhosi suuren osan lajin elinalueesta.',
+          lyhyt: 'Kuningatar Aleksandran linnunsiipi on maailman suurin perhonen, ja sen kauppa on kielletty.',
           selite: 'Kuningatar Aleksandran linnunsiipi on maailman suurin '
             + 'perhonen, ja sen kansainvälinen kauppa on kielletty.',
           lahde: 'Thomon, Wikimedia Commons (CC BY-SA 4.0)',
@@ -32929,6 +34285,7 @@ export const MAA_KATEGORIAT = {
               + 'luontainen vaara on ametistipytoni, joka saalistaa '
               + 'latvustossa. Useimmat puukengurulajit ovat uhanalaisia '
               + 'metsästyksen ja metsien hakkuiden takia.',
+          lyhyt: 'Matschienpuukengurulla on lyhyet takajalat, vahvat etujalat ja pitkä häntä latvustoliikkumiseen.',
           selite: 'Matschienpuukengurulla on lyhyet takajalat, vahvat '
             + 'etujalat ja pitkä häntä, joilla se liikkuu latvustossa.',
           lahde: 'Fred Hsu, Wikimedia Commons (CC BY-SA 3.0)',
@@ -32948,6 +34305,7 @@ export const MAA_KATEGORIAT = {
               + 'muistaa kuningatar Viktoriaa, ja sukuun kuuluu neljä '
               + 'kruunukyyhkylajia, jotka kaikki elävät vain Uuden-Guinean '
               + 'seudulla.',
+          lyhyt: 'Viktoriankruunukyyhkyn viuhkatöyhdön sulat päättyvät valkoiseen; laji on maailman suurin kyyhky.',
           selite: 'Viktoriankruunukyyhkyn viuhkatöyhdön sulat päättyvät '
             + 'valkoisiin kärkiin, ja laji on maailman suurin kyyhky.',
           lahde: 'Taro Taylor, Wikimedia Commons (CC BY 2.0)',
@@ -32975,6 +34333,7 @@ export const MAA_KATEGORIAT = {
               + 'Sen sukulainen aigir kypsyy nopeammin: kuumat kivet '
               + 'pudotetaan suoraan kookosmaitopataan, ja ruoka on valmista '
               + 'puolessa tunnissa.',
+          lyhyt: 'Mumussa ruoka kääritään banaaninlehtiin ja kypsennetään kuumien kivien päällä maakuopassa.',
           selite: 'Mumussa ruoka kääritään banaaninlehtiin ja kypsennetään '
             + 'kuumien kivien päällä maakuopassa useita tunteja.',
           lahde: 'Jay Evennett, Wikimedia Commons (CC BY-SA 4.0)',
@@ -32992,6 +34351,7 @@ export const MAA_KATEGORIAT = {
               + 'letuksi, joskus kookosraasteen kanssa. Jälkiruoka dia on '
               + 'saagosta ja banaanista tehty nyytti, joka höyrytetään '
               + 'banaaninlehdessä.',
+          lyhyt: 'Saagolettu tehdään vedestä ja saagopalmun tärkkelyksestä, rannikon ja jokilaaksojen perusruokana.',
           selite: 'Saagolettu tehdään pelkästä vedestä ja saagopalmun '
             + 'rungosta saadusta tärkkelyksestä, ja se on rannikon ja '
             + 'jokilaaksojen perusruokaa.',
@@ -33013,6 +34373,7 @@ export const MAA_KATEGORIAT = {
               + 'ja kookos. Rannikolla ruoka valmistetaan kookosmaidossa ja '
               + 'kookoskermassa, ylängöillä ei. Sianliha on juhlaruokaa, '
               + 'jota syödään erityisinä päivinä.',
+          lyhyt: 'Kaukau eli bataatti on Papua-Uuden-Guinean ylänköjen tärkein perusruoka viileässä ilmastossa.',
           selite: 'Kaukau eli bataatti on Papua-Uuden-Guinean ylänköjen '
             + 'tärkein perusruoka, ja se kasvaa korkealla viileässä '
             + 'ilmastossa.',
@@ -33031,6 +34392,7 @@ export const MAA_KATEGORIAT = {
               + 'kasvien seassa, joskus vain parikymmentä puuta. Yhdeksän '
               + 'kymmenestä pavusta kasvaa viidessä ylänkömaakunnassa, ja '
               + '95 prosenttia sadosta on pestyä ylänköarabicaa.',
+          lyhyt: 'Papua-Uuden-Guinean kahvisäkki kertoo lastin laadun: raakoja ylängöillä kasvatettuja arabicapapuja.',
           selite: 'Papua-Uuden-Guinean kahvisäkki kertoo lastin laadun: '
             + 'raakoja arabicapapuja, jotka on kasvatettu ylängöillä.',
           lahde: 'Ella Marie, Wikimedia Commons (CC BY 2.0)',
@@ -33072,6 +34434,7 @@ export const MAA_KATEGORIAT = {
               + 'perinteen rinnakkain — ja samalla se on muuttunut '
               + 'kansalliseksi tunnukseksi, jota käytetään maan '
               + 'esittelemiseen ulkomaille.',
+          lyhyt: 'Sing-singissä jokainen ryhmä esiintyy omassa koristelussaan, ja päähineet kertovat alkuperän.',
           selite: 'Sing-singissä jokainen ryhmä esiintyy omassa '
             + 'koristelussaan, ja päähineiden sulat, simpukat ja kasvit '
             + 'kertovat mistä ryhmä on kotoisin.',
@@ -33110,6 +34473,7 @@ export const MAA_KATEGORIAT = {
               + 'miestä voitti kilpailun ensimmäisen palkinnon. Vasta '
               + 'silloin naamioista tuli taidetta ja keho maalattiin '
               + 'valkoiseksi.',
+          lyhyt: 'Asaron mutamiesten naamiot tehdään Asaro-joen savesta, koristeltuina sianhampailla ja simpukoilla.',
           selite: 'Asaron mutamiesten naamiot tehdään Asaro-joen savesta, '
             + 'joka ei halkeile kuivuessaan, ja niitä koristellaan '
             + 'sianhampailla ja simpukoilla.',
@@ -33130,6 +34494,7 @@ export const MAA_KATEGORIAT = {
               + 'sulilla. Eurooppalaiset kohtasivat hulit vasta marraskuussa '
               + '1934, ja kohtaaminen päättyi verilöylyyn: Foxin veljekset '
               + 'surmasivat ainakin viisikymmentä ihmistä.',
+          lyhyt: 'Hulien juhlapäähine tehdään värjätystä ihmisen hiuksesta ja koristellaan paratiisilintujen sulilla.',
           selite: 'Hulien juhlapäähine tehdään värjätystä ihmisen hiuksesta '
             + 'ja koristellaan paratiisilintujen ja astrapioiden sulilla.',
         },
@@ -33176,6 +34541,7 @@ export const MAA_KATEGORIAT = {
               + 'asettuivat ensin kaakkoiseen Santa Cruzin ryhmään, ja '
               + 'vasta myöhemmin kulttuuri levisi takaisin länteen '
               + 'pääsaarille.',
+          lyhyt: 'Santa Cruzin saaret ovat Salomonsaarten kaakkoisin ryhmä, jonne lapitalaiset asettuivat ensin.',
           selite: 'Santa Cruzin saaret ovat Salomonsaarten kaakkoisin '
             + 'ryhmä, ja lapitalaiset asettuivat niille ennen kuin '
             + 'suurille pääsaarille.',
@@ -33198,6 +34564,7 @@ export const MAA_KATEGORIAT = {
               + 'rikkauksista ja Ofirin kaupungista. Toinen retki 1595 '
               + 'yritti perustaa siirtokunnan Nendön saarelle, mutta se '
               + 'epäonnistui tauteihin, ja Mendaña kuoli lokakuussa.',
+          lyhyt: 'Álvaro de Mendaña oli ensimmäinen eurooppalainen, joka näki Salomonsaaret ja nimesi ne.',
           selite: 'Álvaro de Mendaña oli ensimmäinen eurooppalainen, joka '
             + 'näki Salomonsaaret, ja saariston nimi syntyi vasta hänen '
             + 'matkakertomustensa perusteella.',
@@ -33217,6 +34584,7 @@ export const MAA_KATEGORIAT = {
               + 'protektoraatiksi — osaksi juuri siksi, että työvoiman '
               + 'lähde pysyisi muiden siirtomaavaltojen ulottumattomissa. '
               + 'Australia karkotti saarelaisia vuoden 1901 lain nojalla.',
+          lyhyt: 'Malaitan rannikkokylät on rakennettu vedenrajaan, saarelta lähti eniten sopimustyöläisiä.',
           selite: 'Malaitan rannikkokylät on rakennettu aivan vedenrajaan, '
             + 'ja saarelta lähti 1800-luvun lopulla eniten '
             + 'sopimustyöläisiä koko saaristosta.',
@@ -33237,6 +34605,7 @@ export const MAA_KATEGORIAT = {
               + 'valtionpäämiestä edustaa kenraalikuvernööri. '
               + 'Kansallisparlamentti sai oman talon Honiaraan, ja sen '
               + 'kartiokatto näkyy kaupungin ylle kohoavalta kukkulalta.',
+          lyhyt: 'Honiaran kansallisparlamentin rakennus on pyöreä ja kartiokattoinen kukkulalla keskustan yllä.',
           selite: 'Honiaran kansallisparlamentin rakennus on pyöreä ja '
             + 'kartiokattoinen, ja se seisoo kukkulalla kaupungin '
             + 'keskustan yläpuolella.',
@@ -33265,6 +34634,7 @@ export const MAA_KATEGORIAT = {
               + 'hännästä, joka toimii viidentenä raajana kiipeillessä. '
               + 'John Edward Gray kuvasi lajin 1855 ja antoi sille '
               + 'sukunimen Corucia, latinan hohtavasta.',
+          lyhyt: 'Salomoninskinkin häntä on tarttumakykyinen ja toimii viidentenä raajana; laji on suurin skinkki.',
           selite: 'Salomoninskinkin häntä on tarttumakykyinen ja toimii '
             + 'viidentenä raajana, ja laji on maailman suurin skinkki.',
           lahde: 'H. Zell, Wikimedia Commons (CC BY-SA 3.0)',
@@ -33283,6 +34653,7 @@ export const MAA_KATEGORIAT = {
               + 'kohdasta, kolmen itämisreiän luota, hakkaamalla '
               + 'saksillaan. Täysikasvuiseksi menee 40–60 vuotta, ja '
               + 'elinikä voi ylittää kuusikymmentä vuotta.',
+          lyhyt: 'Kookosrapu on maalla elävistä niveljalkaisista suurin, ja hengittää keuhkoelimellä eikä kiduksilla.',
           selite: 'Kookosrapu on maan päällä elävistä niveljalkaisista '
             + 'suurin, ja se hengittää erityisellä keuhkoelimellä eikä '
             + 'kiduksilla.',
@@ -33349,6 +34720,7 @@ export const MAA_KATEGORIAT = {
               + 'asuttuja; asukkaat puhuvat marovoa ja elävät '
               + 'omavaraisviljelystä ja kalastuksesta. Honiarasta pääsee '
               + 'perille tunnissa lentäen tai kymmenessä laivalla.',
+          lyhyt: 'Marovon laguuni on maailman suurin kaksoisvalliriutan sulkema laguuni, 700 neliökilometrin alalla.',
           selite: 'Marovon laguuni on maailman suurin kaksoisvalliriutan '
             + 'sulkema laguuni, ja sen pinta-ala on 700 neliökilometriä.',
           lahde: 'Xplore Dive, Wikimedia Commons (CC BY 2.0)',
@@ -33368,6 +34740,7 @@ export const MAA_KATEGORIAT = {
               + 'korkeuteen. Vuonna 2015 tutkijat löysivät kraatterin '
               + 'sisältä eläviä haita: vasarahaita, silkkihaita ja '
               + 'rauskuja.',
+          lyhyt: 'Kavachin purkaus nostaa tuhkaa ja höyryä satojen metrien korkeuteen; se on noussut saareksi useasti.',
           selite: 'Kavachin purkaus nostaa tuhkaa ja höyryä satojen '
             + 'metrien korkeuteen, ja tulivuori on noussut saareksi ja '
             + 'kulunut pois ainakin kahdeksasti.',
@@ -33388,6 +34761,7 @@ export const MAA_KATEGORIAT = {
               + 'Jack London purjehti alueella 1908 ja vertasi asukkaita '
               + 'Venetsian perustajiin: heidän kätensä ja hartiansa olivat '
               + 'vahvat kanootissa istumisesta, mutta jalat hoikat.',
+          lyhyt: 'Langa Langan laguunin tekosaaret on kasattu hiekkasärkille kivi kerrallaan, ilman viljelymaata.',
           selite: 'Langa Langan laguunin tekosaaret on kasattu '
             + 'hiekkasärkkien päälle kivi kerrallaan, eikä niillä ole '
             + 'viljelymaata lainkaan.',
@@ -33407,6 +34781,7 @@ export const MAA_KATEGORIAT = {
               + '1600 asukkaat päättivät yhdessä teurastaa kaikki siat ja '
               + 'siirtyä kalastukseen, koska siat söivät liikaa ihmisten '
               + 'ruokaa.',
+          lyhyt: 'Tikopian asukkaat ovat kulttuuriltaan polynesialaisia, Polynesian kolmion ulkopuolinen saari.',
           selite: 'Tikopian asukkaat ovat kulttuuriltaan polynesialaisia, '
             + 'ja saari on yksi Polynesian kolmion ulkopuolisista '
             + 'polynesialaisista ulkosaarista.',
@@ -33435,6 +34810,7 @@ export const MAA_KATEGORIAT = {
               + 'Jo 1882 kirjattiin, että '
               + 'kolikoita tehtiin vain sen verran kuin tarvittiin, ja '
               + 'juuri siksi rahan arvo pysyi.',
+          lyhyt: 'Tafuliae koostuu rinnakkaisista simpukkakiekkonaruista, Malaitan arvokkain kastom-rahan muoto.',
           selite: 'Tafuliae koostuu rinnakkaisista simpukkakiekkonaruista, '
             + 'ja se on Malaitan arvokkain kastom-rahan muoto.',
           lahde: 'Simon Pierre Barrette, Wikimedia Commons (CC BY-SA 4.0)',
@@ -33453,6 +34829,7 @@ export const MAA_KATEGORIAT = {
               + 'sitojan. Vyöt olivat saarten arvokkainta omaisuutta, ja '
               + 'niitä on nykyään museokokoelmissa ympäri maailman — '
               + 'esimerkiksi Honolulussa.',
+          lyhyt: 'Punasulkavyön pohjana on kaarnanauha, jonka päälle on ladottu punaisen mesikenttäkkään höyheniä.',
           selite: 'Punasulkavyön pohjana on kaarnanauha, jonka päälle on '
             + 'ladottu punaisen mesikenttäkkään höyheniä suomujen tapaan.',
           lahde: 'Hiart, Wikimedia Commons (CC0)',
@@ -33472,6 +34849,7 @@ export const MAA_KATEGORIAT = {
               + 'vuonna 1905, ja se on siellä yhä esillä. Sama '
               + 'upotustekniikka toistuu keulakuvissa, joissa helmiäinen '
               + 'piirtää silmien ja kasvojen ääriviivat.',
+          lyhyt: 'Salomonsaarelaisessa kalaveistoksessa mustaksi tummennettuun puuhun on upotettu helmiäiskuvioita.',
           selite: 'Salomonsaarelaisessa kalaveistoksessa mustaksi '
             + 'tummennettuun puuhun on upotettu satoja helmiäiskolmioita '
             + 'ja -kiekkoja.',
@@ -33530,6 +34908,7 @@ export const MAA_KATEGORIAT = {
               + '’Are’are-kieltä puhui 1999 noin 17 900 ihmistä, kun '
               + '1970-luvulla puhujia oli 8 000–9 000, joten kieli ja sen '
               + 'mukana musiikkiperinne ovat kasvaneet eivätkä kutistuneet.',
+          lyhyt: '’Are’arejen panhuilut tehdään eripituisista bambuputkista, ja yhtye soittaa useaa huilua yhtä aikaa.',
           selite: '’Are’arejen panhuilut tehdään eripituisista '
             + 'bambuputkista, jotka sidotaan riviin, ja yhtye soittaa '
             + 'useaa huilua yhtä aikaa.',
@@ -33549,6 +34928,7 @@ export const MAA_KATEGORIAT = {
               + 'Ensiksi mainittu ei salli perinteistä musiikkia, koska se '
               + 'yhdistetään esi-isien henkiin — ja siksi panhuiluperinne '
               + 'on säilynyt toisissa kylissä paremmin kuin toisissa.',
+          lyhyt: 'Panhuiluyhtyeet esiintyvät nykyään kansallisjuhlissa, ja soittajat pitävät huiluja pystyssä rivissä.',
           selite: 'Panhuiluyhtyeet esiintyvät nykyään kansallisjuhlissa ja '
             + 'kokouksissa, ja soittajat pitävät huiluja pystyssä rivissä.',
           lahde: 'Jenny Scott, Wikimedia Commons (CC BY 2.0)',
@@ -33569,6 +34949,7 @@ export const MAA_KATEGORIAT = {
               + 'Britanniassa, Australiassa ja Norjassa. Lupaa ei ollut '
               + 'pyydetty keneltäkään, ja levyn kansitiedoissa laulu '
               + 'sanottiin virheellisesti afrikkalaisten pygmien lauluksi.',
+          lyhyt: 'Rorogwela on baegu-kansan kehtolaulu Malaitalta, jossa isoveli lohduttaa orvoksi jäänyttä veljeään.',
           selite: 'Rorogwela on baegu-kansan kehtolaulu Malaitalta, ja '
             + 'siinä isoveli lohduttaa orvoksi jäänyttä pikkuveljeään.',
         },
@@ -33589,6 +34970,7 @@ export const MAA_KATEGORIAT = {
               + 'Honiaran kiinalaiskortteliin. Nykyään kuunnellaan '
               + 'rockia, reggaeta ja sitä, mitä saarilla kutsutaan '
               + 'nimellä island music.',
+          lyhyt: 'Edwin Nanau Sitorin Walkabout long Chinatown on Salomonsaarten epävirallinen kansallislaulu.',
           selite: 'Edwin Nanau Sitorin "Walkabout long Chinatown" on '
             + 'Salomonsaarten epävirallinen kansallislaulu, ja se '
             + 'sävellettiin 1950-luvulla.',
@@ -33648,6 +35030,7 @@ export const MAA_KATEGORIAT = {
               + 'Vaimaca-Pirú sekä nuoripari Tacuavé ja Guyunusa. Kukaan '
               + 'heistä ei palannut. Jälkeläisiä arvioidaan olevan '
               + '160 000–300 000, ja he perustivat 2005 oman neuvostonsa.',
+          lyhyt: 'Montevideon Los Últimos Charrúas -veistos esittää Guyunusaa ja Tacuavéta, vietyinä 1833 Pariisiin.',
           selite: 'Montevideon Los Últimos Charrúas -veistos esittää '
             + 'Guyunusaa ja Tacuavéta, kahta niistä neljästä charrúasta, '
             + 'jotka vietiin vuonna 1833 Pariisiin.',
@@ -33668,6 +35051,7 @@ export const MAA_KATEGORIAT = {
               + 'villikarjan pyynti. Vanhankaupungin mutkittelevat '
               + 'portugalilaiskadut erottuvat yhä espanjalaisen osan '
               + 'suorista linjoista.',
+          lyhyt: 'Colonia del Sacramenton Huokausten katu laskeutuu mukulakivin Río de la Platan rantaan.',
           selite: 'Colonia del Sacramenton Huokausten katu laskeutuu '
             + 'mukulakivetettynä suoraan Río de la Platan rantaan, ja '
             + 'vanhakaupunki on Unescon maailmanperintökohde.',
@@ -33688,6 +35072,7 @@ export const MAA_KATEGORIAT = {
               + '20. tammikuuta 1817, ja syyskuussa 1820 Artigas ratsasti '
               + 'Paraguayhin. Hän eli siellä kuolemaansa 1850 asti eikä '
               + 'palannut koskaan.',
+          lyhyt: 'Juan Manuel Blanesin maalaus esittää isänmaan isänä tunnetun Artigasin linnoituksen edessä.',
           selite: 'Juan Manuel Blanesin maalaus esittää Artigasin '
             + 'Montevideon linnoituksen edessä; hänet tunnetaan Uruguayssa '
             + 'isänmaan isänä.',
@@ -33708,6 +35093,7 @@ export const MAA_KATEGORIAT = {
               + 'Manuel Blanes maalasi kohtauksen 1877 haastateltuaan ensin '
               + 'eloonjääneitä ja tehtyään muistiinpanoja heidän '
               + 'kasvoistaan.',
+          lyhyt: 'Blanesin maalaus Kolmenkymmenenkolmen valasta on uruguaylaisten mieleen syöpynein kuva.',
           selite: 'Blanesin maalaus Kolmenkymmenenkolmen valasta on '
             + 'uruguaylaisten mieleen syöpyneimpiä kuvia, ja taiteilija '
             + 'piirsi hahmojen kasvot elossa olleiden mukaan.',
@@ -33749,6 +35135,7 @@ export const MAA_KATEGORIAT = {
               + 'on 501 metriä — kunnes sotilaallisen karttalaitoksen '
               + 'tutkijat mittasivat Cerro Catedralin uudelleen ja huippu '
               + 'vaihtui. Molemmat jäävät alle Suomen Halticin.',
+          lyhyt: 'Cerro Catedral on niin loiva, että huipulle nousee lammaslaitumia; kalliot ovat prekambrisia.',
           selite: 'Cerro Catedral on niin loiva, että sen huipulle nousee '
             + 'lammaslaitumia; kalliot huipulla ovat prekambrisia.',
           lahde: 'Scheridon, Wikimedia Commons (CC BY-SA 3.0)',
@@ -33767,6 +35154,7 @@ export const MAA_KATEGORIAT = {
               + 'karille tammikuussa 1753; kaikki 316 miestä pelastuivat. '
               + 'Majakka valmistui vasta 1881, ja saarilla lepää maan suurin '
               + 'merileijonakolonia.',
+          lyhyt: 'Cabo Polonion majakka nousi kallioniemelle 1881, ja sen ympärille syntyi ensimmäinen kalastajakylä.',
           selite: 'Cabo Polonion majakka nousi kallioniemelle 1881, ja sen '
             + 'ympärille syntyi ensimmäinen pysyvä kalastaja- ja '
             + 'merileijonanpyytäjäkylä.',
@@ -33786,6 +35174,7 @@ export const MAA_KATEGORIAT = {
               + 'parlamentti hyväksyi 4. syyskuuta 2013 yksimielisesti '
               + 'valas- ja delfiinisuoja-alueen, joka kattaa koko 125 436 '
               + 'neliökilometrin merialueen — ensimmäisenä maailmassa.',
+          lyhyt: 'Eteläisen mustavalaan kanta arvioitiin 2009 noin 13 600 yksilöksi, lähes sukupuuttoon metsästettynä.',
           selite: 'Eteläisen mustavalaan maailmankannaksi arvioitiin '
             + 'vuonna 2009 noin 13 600 yksilöä, kun laji oli aiemmin '
             + 'metsästetty lähes sukupuuttoon.',
@@ -33803,6 +35192,7 @@ export const MAA_KATEGORIAT = {
               + 'on runsaasti butiá-pähkinöitä jo ennen kuin viljelystä on '
               + 'merkkejä. Vuodesta 2017 kaikki maan neljä butiá-lajia ovat '
               + 'suojeltuja: aikuista palmua ei saa kaataa ilman lupaa.',
+          lyhyt: 'Butiá-palmulehdot ovat harvinaisia luontaisia palmusavanneja, hedelmistä tehdään hilloa ja likööriä.',
           selite: 'Butiá-palmulehdot ovat harvinaisia luontaisia '
             + 'palmusavanneja, ja niiden hedelmistä tehdään hilloa ja '
             + 'likööriä.',
@@ -33829,6 +35219,7 @@ export const MAA_KATEGORIAT = {
               + 'palleapihvi entraña, kylkirivi tira de asado ja '
               + 'chinchulines. Keittiö on italialaisten ja espanjalaisten '
               + 'siirtolaisten perua, ei alkuperäiskansojen.',
+          lyhyt: 'Asador on kiinteä osa uruguaylaista pihaa, halot varastoidaan siihen sunnuntaiksi.',
           selite: 'Asador on kiinteä osa uruguaylaista pihaa, ja sen '
             + 'alaosaan varastoidaan halot seuraavaa sunnuntaita varten.',
           lahde: 'Fedaro, Wikimedia Commons (CC BY-SA 3.0)',
@@ -33846,6 +35237,7 @@ export const MAA_KATEGORIAT = {
               + 'oliiveja ja majoneesia, ja täysi annos tulee ranskalaisten '
               + 'sekä kahden salaatin kanssa. Lautasannosta kutsutaan '
               + 'nimellä chivito al plato.',
+          lyhyt: 'Chivito on Uruguayn tunnetuin katuruoka, ja sen kanadalainen muunnos saa paksun pekonisiivun.',
           selite: 'Chivito on Uruguayn tunnetuin katuruoka, ja sen '
             + 'kanadalainen muunnos saa lisäkseen paksun viipaleen '
             + 'pekonia.',
@@ -33883,6 +35275,7 @@ export const MAA_KATEGORIAT = {
               + 'kiloa lihaa yhtä kilon purkkia kohti. Samasta tehtaasta '
               + 'tuli myöhemmin Oxo-liemikuutio ja Fray Bentos '
               + '-säilykeliha; alue on ollut maailmanperintökohde 2015.',
+          lyhyt: 'Fray Bentosin Barrio Anglon laiturinosturit lastasivat lihauutetta, kunnes tehdas suljettiin 1979.',
           selite: 'Fray Bentosin Barrio Anglon laiturinosturit lastasivat '
             + 'lihauutetta ja säilykkeitä Uruguay-joelle, kunnes tehdas '
             + 'suljettiin vuonna 1979.',
@@ -33910,6 +35303,7 @@ export const MAA_KATEGORIAT = {
               + 'maalasi myös gauchoja ja arkea sekä Buenos Airesin '
               + 'keltakuumeen 1871 — teoksen, joka teki hänestä tunnetun '
               + 'koko Río de la Platan alueella.',
+          lyhyt: 'Blanesin gauchoaiheissa pampan ainoa pystysuora on usein risti tai aitatolppa, kansallista kuvastoa.',
           selite: 'Blanesin gauchoaiheissa pampan ainoa pystysuora on '
             + 'usein risti tai aitatolppa, ja niistä tuli osa uruguaylaista '
             + 'kansallista kuvastoa.',
@@ -33928,6 +35322,7 @@ export const MAA_KATEGORIAT = {
               + 'Figarin tuotanto on siksi yhtä paljon muistiinpanoa kuin '
               + 'maalausta — sen aikakauden kuva, jota valokuvia ei ole '
               + 'juuri jäänyt.',
+          lyhyt: 'Pericón on Río de la Platan vanha piiritanssi, jota Figari maalasi yhä uudelleen.',
           selite: 'Pericón on Río de la Platan vanha piiritanssi, jota '
             + 'tanssittiin puiden alla juhannuksesta karnevaaliin ja jonka '
             + 'Figari maalasi yhä uudelleen.',
@@ -33947,6 +35342,7 @@ export const MAA_KATEGORIAT = {
               + 'missä tahansa ja minä tahansa vuosisatana. Hän signeerasi '
               + 'teokset nimikirjaimin, ja Montevideoon jäi hänen ympärilleen '
               + 'kokonainen koulukunta.',
+          lyhyt: 'Torres-Garcían konstruktiivisissa töissä ruudukko on sekä sommitelma että kirjoitusjärjestelmä.',
           selite: 'Torres-Garcían konstruktiivisissa töissä ruudukko on '
             + 'sekä sommitelma että kirjoitusjärjestelmä, jota lukija saa '
             + 'tulkita itse.',
@@ -33967,6 +35363,7 @@ export const MAA_KATEGORIAT = {
               + 'espanjalaiset runoilijat. Hän palasi Montevideoon '
               + 'sairaana ja kuoli 38-vuotiaana, mutta ehti vaikuttaa '
               + 'kokonaiseen sukupolveen.',
+          lyhyt: 'Vibracionismissa kaupungin äänet ja liike puretaan värikentiksi, joita katsotaan yhtä aikaa.',
           selite: 'Vibracionismissa kaupungin äänet ja liike puretaan '
             + 'värikentiksi, joita katsotaan yhtä aikaa eikä '
             + 'peräkkäin.',
@@ -33995,6 +35392,7 @@ export const MAA_KATEGORIAT = {
               + 'löysivät ne ja nostivat Lautréamontin esikuvakseen; '
               + 'kirjan unenomainen kuvakieli vaikutti sekä kirjallisuuteen '
               + 'että kuvataiteeseen.',
+          lyhyt: 'Pariisin Grands Boulevards’n laatta kertoo, että Isidore Ducasse asui ja kuoli talossa.',
           selite: 'Pariisin Grands Boulevards’n sisäpihalla oleva laatta '
             + 'kertoo, että Isidore Ducasse asui ja kuoli talossa; kaiverrus '
             + 'lainaa Maldororin säkeitä.',
@@ -34015,6 +35413,7 @@ export const MAA_KATEGORIAT = {
               + 'poikansa oli kuvanveistäjä. Kirjailijan Montevideon-koti '
               + 'puutarhoineen on nykyään museo, jossa hänen '
               + 'työhuoneensa on säilytetty entisellään.',
+          lyhyt: 'Museo Zorrilla on Juan Zorrilla de San Martínin entinen koti Montevideon Punta Carretasissa.',
           selite: 'Museo Zorrilla on Juan Zorrilla de San Martínin entinen '
             + 'koti Montevideon Punta Carretasissa, ja sen puutarhassa on '
             + 'hänen poikansa veistoksia.',
@@ -34034,6 +35433,7 @@ export const MAA_KATEGORIAT = {
               + 'Amerikan novellin mestarin. Hänen talonsa San Ignaciossa on '
               + 'nykyään museo, jonne pääsee samalta tieltä kuin '
               + 'jesuiittaraunioille.',
+          lyhyt: 'Quiroga poseerasi kotitalonsa ovella Saltossa 1897, ennen muuttoaan Misionesin viidakkoon.',
           selite: 'Quiroga poseerasi kotitalonsa ovella Saltossa vuonna '
             + '1897, muutama vuosi ennen kuin muutti Misionesin '
             + 'viidakkoon.',
@@ -34056,6 +35456,7 @@ export const MAA_KATEGORIAT = {
               + 'annettu kenellekään. Hän kirjoitti myös lastenkirjoja ja '
               + 'oli yksi ensimmäisiä latinalaisamerikkalaisia naisia, jotka '
               + 'saattoivat elää kirjoittamisella.',
+          lyhyt: 'Juana de Ibarbourou sai arvonimensä Montevideon lainsäädäntöpalatsissa 1929, ainoana koskaan.',
           selite: 'Juana de Ibarbourou sai arvonimensä Montevideon '
             + 'lainsäädäntöpalatsissa 1929, eikä sitä ole annettu '
             + 'kenellekään muulle.',
@@ -34117,6 +35518,7 @@ export const MAA_KATEGORIAT = {
               + 'ja orjapyytäjiltä. Jesús de Tavarangueen oli nousemassa '
               + '70 metriä pitkä kirkko, kun kunta karkotettiin 1767; '
               + 'rakennustyö keskeytyi siihen paikkaan.',
+          lyhyt: 'Jesús de Tavarangue ja naapurin Trinidad otettiin Unescon maailmanperintöluetteloon 1993.',
           selite: 'Jesús de Tavarangue ja naapurin Trinidad otettiin '
             + 'Unescon maailmanperintöluetteloon 1993, ja Paraguayn '
             + 'reduktiorauniot ovat alueen parhaiten säilyneitä.',
@@ -34136,6 +35538,7 @@ export const MAA_KATEGORIAT = {
               + 'vastustajiltaan takavarikoiduista kirjoista. Kukaan ei '
               + 'saanut tulla kuutta askelta lähemmäksi, ja hän avasi '
               + 'sisarensa käärimät sikarit itse myrkyn varalta.',
+          lyhyt: 'Francia antoi turvapaikan Uruguayn José Artigasille 1820, joka jäi Paraguayhin loppuiäkseen.',
           selite: 'Francia otti maahansa myös poliittisia pakolaisia: '
             + 'Uruguayn José Artigas sai turvapaikan 1820 kahdensadan '
             + 'miehensä kanssa ja jäi Paraguayhin loppuiäkseen.',
@@ -34156,6 +35559,7 @@ export const MAA_KATEGORIAT = {
               + 'Yhdysvaltojen ja Argentiinan kanssa. Rautatie vihittiin '
               + '1861 — ja se ajoi puulla höyryveturein aina vuoteen 1999 '
               + 'asti.',
+          lyhyt: 'Encarnaciónin ratapihalla ruostuu höyryvetureita Etelä-Amerikan varhaisimmilta rautateiltä.',
           selite: 'Encarnaciónin ratapihalla ruostuu höyryvetureita, jotka '
             + 'kuuluivat Etelä-Amerikan varhaisimpiin rautateihin.',
           lahde: 'Falk2, Wikimedia Commons (CC BY-SA 4.0)',
@@ -34174,6 +35578,7 @@ export const MAA_KATEGORIAT = {
               + 'heinäkuussa 1938 kolme neljäsosaa Chacosta Paraguaylle. '
               + 'Yksi maan vaatimuksen perusteista olivat 1920-luvulla '
               + 'sinne muuttaneet mennoniittasiirtokunnat.',
+          lyhyt: 'Fortín Boquerónin muistopaikalla Chacossa on jäljennös sodan ensimmäisen taistelun haudasta.',
           selite: 'Fortín Boquerónin muistopaikalla Chacon pensaikossa on '
             + 'jäljennös juoksuhaudan linjasta, jossa sodan ensimmäinen '
             + 'suuri taistelu käytiin.',
@@ -34201,6 +35606,7 @@ export const MAA_KATEGORIAT = {
               + 'quebracho-puuta ja palmusaarekkeita. Kuivan Chacon '
               + 'metsäpeite väheni vuosina 2000–2019 arviolta viidenneksen, '
               + 'ja muutos oli suurin juuri Paraguayn puolella.',
+          lyhyt: 'Chacon palmusavannissa vuorottelevat karibepalmut, piikkipensaikko ja heinikko.',
           selite: 'Chacon palmusavannissa vuorottelevat karibepalmut, '
             + 'piikkipensaikko ja heinikko, ja sadekaudella maa muuttuu '
             + 'paikoin läpipääsemättömäksi.',
@@ -34221,6 +35627,7 @@ export const MAA_KATEGORIAT = {
               + 'sopeutunut kuivuuteen: sillä on laajat sivuontelot pölyä '
               + 'vastaan ja pienet sorkat, joilla se pujottelee piikeissä. '
               + 'Yksilöitä arvioidaan olevan noin kolmetuhatta.',
+          lyhyt: 'Taguá on esimerkki Lazarus-taksonista, lajista, joka kuvattiin ensin kuolleeksi ja löytyi elävänä.',
           selite: 'Taguá on esimerkki Lazarus-taksonista eli lajista, joka '
             + 'kuvattiin ensin kuolleeksi ja löytyi sitten elävänä.',
           lahde: 'Laika ac from USA, Wikimedia Commons (CC BY-SA 2.0)',
@@ -34241,6 +35648,7 @@ export const MAA_KATEGORIAT = {
               + 'kaiken. Brasilialainen runoilija Carlos Drummond de '
               + 'Andrade julkaisi jäähyväisrunon koko sanomalehden sivun '
               + 'kokoisena.',
+          lyhyt: 'Guairán putoukset olivat virtaamaltaan maailman suurimpia, ja niistä on säilynyt vain harvoja kuvia.',
           selite: 'Guairán putoukset olivat virtaamaltaan maailman '
             + 'suurimpia, ja vanhoja valokuvia niistä on säilynyt vain '
             + 'muutamia.',
@@ -34260,6 +35668,7 @@ export const MAA_KATEGORIAT = {
               + 'ylittää moninkertaisesti maan oman kulutuksen, joten '
               + 'ylijäämä myydään Brasiliaan ja siirretään kahdella '
               + 'kahdeksansadan kilometrin tasavirtajohdolla.',
+          lyhyt: 'Itaipún ylivuotokouru johtaa tulvavedet padon ohi Paranájokeen; laitos oli 2020 toiseksi suurin.',
           selite: 'Itaipún ylivuotokouru johtaa tulvavedet padon ohi '
             + 'Paraná-jokeen, ja vuonna 2020 laitos oli maailman toiseksi '
             + 'eniten sähköä tuottava vesivoimala.',
@@ -34317,6 +35726,7 @@ export const MAA_KATEGORIAT = {
               + 'chipa so’o lihatäytteellä, chipa manduví '
               + 'maapähkinöistä ja chipa asador, joka kypsennetään tikun '
               + 'ympärillä hiilloksen kuumuudessa.',
+          lyhyt: 'Chipat kypsyvät savitiiliuunissa hehkuvien hiilien päällä, kuori kovaksi ja sisus pehmeäksi.',
           selite: 'Chipat kypsyvät savitiiliuunissa, jonka pohjalle on '
             + 'levitetty hehkuvat hiilet, ja kuoresta tulee kova mutta '
             + 'sisus jää pehmeäksi.',
@@ -34354,6 +35764,7 @@ export const MAA_KATEGORIAT = {
               + 'kesytettiin uudelleen vasta yli sata vuotta myöhemmin. '
               + 'Nykyisin Paraguayn osuus maailman tuotannosta on '
               + 'kymmenesosa.',
+          lyhyt: 'Yerba mate on orjanlaakerin sukuinen pensasmainen puu, jonka lehdet kuivataan savussa.',
           selite: 'Yerba mate on pensasmainen orjanlaakerin sukuinen puu, '
             + 'jonka lehdet kuivataan savussa ennen jauhamista.',
           lahde: 'Mx. Granger, Wikimedia Commons (CC0)',
@@ -34400,6 +35811,7 @@ export const MAA_KATEGORIAT = {
               + 'jekutu, polka kyre’y, polka syryry ja valittava '
               + 'purahéi jahe’o. Maaseudulla polkkaa tanssitaan '
               + 'yhä enemmän kuin guaraniaa.',
+          lyhyt: 'Polca paraguaya on maan yleisin tanssimusiikki, jonka kaksoisrytmi erottaa sen polkasta.',
           selite: 'Polca paraguaya on maan yleisin tanssimusiikki, ja sen '
               + 'kaksoisrytmi erottaa sen eurooppalaisesta polkasta.',
         },
@@ -34417,6 +35829,7 @@ export const MAA_KATEGORIAT = {
               + 'Manuel Ortiz Guerreron kanssa syntyivät India, Cerro Corá '
               + 'ja Panambí Verá. India julistettiin kansallislauluksi '
               + '1944. Flores sävelsi myös kaksitoista sinfoniaa.',
+          lyhyt: 'Altosin kotikylään pystytetty muistomerkki esittää guaranian luojaa José Asunción Floresia.',
           selite: 'Altosin kotikylään pystytetty muistomerkki esittää '
             + 'guaranian luojaa José Asunción Floresia soittimineen.',
           lahde: 'Ulises Icardi, Wikimedia Commons (CC BY-SA 4.0)',
@@ -34437,6 +35850,7 @@ export const MAA_KATEGORIAT = {
               + 'nimi. Häntä on pidetty ensimmäisenä levyttäneenä '
               + 'klassisena kitaristina, joskin varhaisempiakin '
               + 'levytyksiä tunnetaan.',
+          lyhyt: 'Barrios kuoli El Salvadorissa 1944, ja oppilaat kantoivat arkun hautaan vuoden kuumimpana viikkona.',
           selite: 'Barrios kuoli El Salvadorissa 1944, ja hänen oppilaansa '
             + 'kantoivat arkun hautausmaalle vuoden kuumimmalla viikolla.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
@@ -34463,6 +35877,7 @@ export const MAA_KATEGORIAT = {
               + 'joulukuuta 1609 päällikkö Arapysandún maille, tunnetaan '
               + 'tämän barokin pääkaupunkina, ja sen hiippakuntamuseossa on '
               + 'neljä salillista puisia pyhimysveistoksia.',
+          lyhyt: 'Trinidadin kirkon oviaukon yläpuolella on hiekkakiveen veistetty barokkifriisi guaranilaisten työtä.',
           selite: 'Trinidadin kirkon oviaukon yläpuolella on punaiseen '
             + 'hiekkakiveen veistetty barokkifriisi, jonka tekijät olivat '
             + 'guaranilaisia kivenveistäjiä.',
@@ -34480,6 +35895,7 @@ export const MAA_KATEGORIAT = {
               + 'nimi on Don Zenón Páez. Samaa perinnettä jatkavat '
               + 'naapurikylät omilla erikoisaloillaan, ja käsityö myydään '
               + 'edelleen kadunvarsikojuista ostajan katsellessa vieressä.',
+          lyhyt: 'Tobateñalainen seimiasetelma on veistetty yhdestä puunkappaleesta, ja hahmot ovat erikseen tehtyjä.',
           selite: 'Tobateñalainen seimiasetelma on veistetty yhdestä '
             + 'puunkappaleesta, ja hahmot ovat erikseen tehtyjä vaaleampia '
             + 'figuureja.',
@@ -34515,6 +35931,7 @@ export const MAA_KATEGORIAT = {
               + 'sitä pitkin savityöt lähtivät Asunciónin markkinoille. '
               + 'Kesäisin kaupunki täyttyy järvelle tulevista, ja pajat '
               + 'pitävät oviaan auki iltaan asti.',
+          lyhyt: 'Aregúan käsityökatu on savipajojen myyntipaikka, maalatut eläinhahmot houkuttavat ohikulkijoita.',
           selite: 'Aregúan käsityökatu on savipajojen myyntipaikka, ja '
             + 'suuret maalatut eläinhahmot on tehty ohikulkijan silmää '
             + 'varten.',
@@ -34577,6 +35994,7 @@ export const MAA_KATEGORIAT = {
               + 'itseään nimellä Veneciuela, ja maan nimi tulisi siis '
               + 'paikallisesta sanasta. Kumpaakaan selitystä ei ole '
               + 'pystytty todistamaan.',
+          lyhyt: 'Sinamaican laguunin paalutalot ovat samaa rakennustapaa, josta maa sai nimensä.',
           selite: 'Sinamaican laguunin paalutalot ovat samaa rakennustapaa '
             + 'kuin ne, joista maa sai nimensä, ja niiden asukkaat '
             + 'liikkuvat yhä veneellä.',
@@ -34597,6 +36015,7 @@ export const MAA_KATEGORIAT = {
               + 'Corosta etsimään El Doradoa. Vuonna 1546 espanjalainen '
               + 'kuvernööri teloitti Welserien miehet, ja keisari perui '
               + 'valtakirjan.',
+          lyhyt: 'Coron vanhankaupungin savi- ja bahareque-talot ovat Karibian ainutlaatuisin maarakennuskokonaisuus.',
           selite: 'Coron vanhankaupungin savi- ja bahareque-talot ovat '
             + 'Karibian ainutlaatuisin maarakennuskokonaisuus, ja osa '
             + 'kaduista päättyy äkisti Welser-ajan kaavan takia.',
@@ -34616,6 +36035,7 @@ export const MAA_KATEGORIAT = {
               + 'ylikuormaan, ja baskeista tuli rikas maanomistajaluokka: '
               + 'ilmaus un gran cacao tarkoittaa Venezuelassa yhä pilke '
               + 'silmässä merkkihenkilöä.',
+          lyhyt: 'Kaakaopuun palot kasvavat suoraan rungosta; Venezuelan rannikko oli 1700-luvulla kaakaon huippualue.',
           selite: 'Kaakaopuun palot kasvavat suoraan rungosta ja oksista, '
               + 'ja Venezuelan rannikkolaaksot olivat 1700-luvulla '
               + 'maailman arvostetuimpia kaakaon lähteitä.',
@@ -34638,6 +36058,7 @@ export const MAA_KATEGORIAT = {
               + 'espanjalaiset saivat vallan takaisin ja hänet '
               + 'luovutettiin. Itsenäisyys ratkesi vasta Carabobossa 24. '
               + 'kesäkuuta 1821.',
+          lyhyt: 'Arturo Michelena maalasi 1896 Mirandan Cádizin vankilassa; siitä tuli tunnettu maalaus.',
           selite: 'Arturo Michelena maalasi 1896 Mirandan Cádizin La '
             + 'Carracan vankilassa, ja teoksesta tuli Venezuelan '
             + 'tunnetuimpia maalauksia.',
@@ -34667,6 +36088,7 @@ export const MAA_KATEGORIAT = {
               + 'huipulle 18. joulukuuta 1884 reittiä, jonka lintututkija '
               + 'Henry Whiteley oli osoittanut — ja tapasi ylhäällä '
               + 'pemóneja.',
+          lyhyt: 'Roraiman pystysuorat seinämät ovat eristäneet huipun lajiston, ja siellä elää ainutlaatuisia lajeja.',
           selite: 'Roraiman pystysuorat seinämät ovat eristäneet huipun '
             + 'lajiston ympäristöstään, ja siksi siellä elää lajeja, joita '
             + 'ei ole muualla.',
@@ -34686,6 +36108,7 @@ export const MAA_KATEGORIAT = {
               + 'kertomusta ei uskottu ennen kuin espanjalainen rajakomissio '
               + 'vahvisti sen 1756. Alexander von Humboldt ja Aimé Bonpland '
               + 'kartoittivat joen vuonna 1800 kanooteilla.',
+          lyhyt: 'Satelliittikuvassa Orinoco kulkee ylhäällä ja Casiquiare erkanee etelään kohti Amazonin vesistöä.',
           selite: 'Satelliittikuvassa Orinoco kulkee ylhäällä ja Casiquiare '
             + 'erkanee siitä etelään kohti Amazonin vesistöä.',
           lahde: 'Coordenação-Geral de Observação da Terra/INPE, Wikimedia '
@@ -34705,6 +36128,7 @@ export const MAA_KATEGORIAT = {
               + 'vedessä väijyy harvinainen Orinocon krokotiili. '
               + 'Ekoalueesta on suojeltu 105 323 neliökilometriä eli '
               + 'runsas neljännes.',
+          lyhyt: 'Kapybaroista on Venezuelassa tullut paastonajan ruokaa kirkon myönnettyä niille erivapauden.',
           selite: 'Kapybaroista on Venezuelassa tullut paastonajan ruokaa, '
               + 'koska kirkko myönsi kertoman mukaan niiden syömiseen '
               + 'erivapauden.',
@@ -34725,6 +36149,7 @@ export const MAA_KATEGORIAT = {
               + 'jatkuvasti. Sadetta tulee harvoin, mutta joulukuun 1999 '
               + 'rankkasateissa dyynien väliin syntyi neljä lampea, joita '
               + 'puistonvartijat eivät olleet ennen nähneet.',
+          lyhyt: 'Médanos de Coron dyynit ovat Karibian rannikon harvinaisin maisema, kasvina vain piikkipensasta.',
           selite: 'Médanos de Coron dyynit ovat Karibian rannikon '
             + 'harvinaisin maisema, ja niiden kasvillisuus rajoittuu '
             + 'piikkipensaisiin.',
@@ -34768,6 +36193,7 @@ export const MAA_KATEGORIAT = {
               + 'ruoka syntyi orjatyöväen käsissä: isäntäväen jouluaterian '
               + 'tähteistä koottiin oma juhlaruoka. Hallacoja tehdään '
               + 'jouluksi kymmenittäin kerralla.',
+          lyhyt: 'Hallaca sidotaan banaaninlehden sisään ristikkäisellä narulla, joka antaa keitettäessä oman makunsa.',
           selite: 'Hallaca sidotaan banaaninlehden sisään ristikkäisellä '
             + 'narulla, ja lehti antaa keitettäessä ruoalle oman '
             + 'makunsa.',
@@ -34803,6 +36229,7 @@ export const MAA_KATEGORIAT = {
               + 'casabe säilyy kuukausia, ja siksi espanjalaiset ja '
               + 'merenkulkijat ottivat sen mukaansa 1500-luvulla. Unesco '
               + 'lisäsi sen kulttuuriperintöluetteloonsa 2024.',
+          lyhyt: 'Casabe paistuu suurina ympyröinä savisella budarella, ja valmis leipä kuivataan säilyväksi.',
           selite: 'Casabe paistuu suurina ympyröinä savisella budarella, ja '
             + 'valmis leipä kuivataan auringossa säilyväksi.',
           lahde: 'Luisovalles, Wikimedia Commons (CC BY-SA 3.0)',
@@ -34862,6 +36289,7 @@ export const MAA_KATEGORIAT = {
               + 'Pariisiin. Louvren toistuvat käynnit veivät tyylin '
               + 'jälkiromantiikasta impressionismiin. Rojas kuoli '
               + '32-vuotiaana.',
+          lyhyt: 'Rojas maalasi omakuvansa punaisessa baskerissa; aiheina köyhyys, sairaus ja kaupungin arki.',
           selite: 'Rojas maalasi omakuvansa punaisessa baskerissa; hänen '
             + 'aiheensa olivat useimmiten köyhyys, sairaus ja kaupungin '
             + 'arki.',
@@ -34881,6 +36309,7 @@ export const MAA_KATEGORIAT = {
               + 'kuutio, johon katsoja kävelee sisään. Taiteilijan mukaan '
               + 'sisällä on tunne siitä, että on valon pyörteessä ja tuntee '
               + 'tilan ruumiillaan.',
+          lyhyt: 'Penetrable-teokset ovat kineettisen taiteen ääriesimerkki, syntyvät katsojan liikkuessa niissä.',
           selite: 'Penetrable-teokset ovat kineettisen taiteen '
             + 'ääriesimerkki: teos syntyy vasta, kun katsoja liikkuu sen '
             + 'sisällä.',
@@ -34900,6 +36329,7 @@ export const MAA_KATEGORIAT = {
               + 'niistä tunnetuin on Maiquetían lentoaseman mosaiikkilattia '
               + 'vuodelta 1974, jonka värivyöhykkeet muuttuvat sen mukaan, '
               + 'mistä suunnasta niitä katsoo.',
+          lyhyt: 'Maiquetían lentoaseman lattia on Cruz-Diezin teos Ambientación Color Aditivo.',
           selite: 'Maiquetían lentoaseman lattia on Cruz-Diezin teos '
             + 'Ambientación Color Aditivo, ja se on monelle matkustajalle '
             + 'ensimmäinen näky Venezuelasta.',
@@ -34945,6 +36375,7 @@ export const MAA_KATEGORIAT = {
               + 'viisituhatta; tunnetuin on San Francisco de Yaren '
               + 'veljeskunta. Unesco otti perinteen aineettoman '
               + 'kulttuuriperinnön luetteloon vuonna 2012.',
+          lyhyt: 'Yaren paholaisnaamio tehdään paperimassasta ja maalataan kirkkain värein muodon mukaan.',
           selite: 'Yaren paholaisnaamio tehdään paperimassasta ja '
             + 'maalataan kirkkain värein; jokainen veljeskunta tunnistaa '
             + 'omansa muodosta.',
@@ -34983,6 +36414,7 @@ export const MAA_KATEGORIAT = {
               + 'lauletaan kaksiäänisesti rumpujen kanssa. Perinne '
               + 'yhdistää alkuperäiskansojen, espanjalaisia ja '
               + 'afrikkalaisia aineksia samaan juhlaan.',
+          lyhyt: 'Tamunangue on Laran juhlaperinne, jossa seitsemän tanssia esitetään aina samassa järjestyksessä.',
           selite: 'Tamunangue on Laran osavaltion oma juhlaperinne, jossa '
               + 'seitsemän tanssia esitetään aina samassa '
               + 'järjestyksessä.',
@@ -35047,6 +36479,7 @@ export const MAA_KATEGORIAT = {
               + 'aarrematkoillaan ja Vasco da Gama 1498. Kenian rannikkokaistale pysyi '
               + 'muodollisesti Sansibarin sulttaanin maana 12. joulukuuta 1963 asti, '
               + 'jolloin hän luopui siitä samana päivänä kun muu Kenia itsenäistyi.',
+          lyhyt: 'Mombasan vanhankaupungin kujilla on parvekkeita ja ovikaiverruksia kuin Sansibarissa.',
           selite: 'Mombasan vanhankaupungin kujilla on yhä parvekkeita ja '
             + 'ovikaiverruksia, joissa näkyy sama swahilikulttuurin ja Intian '
             + 'valtameren kaupan sekoitus kuin Sansibarissa.',
@@ -35066,6 +36499,7 @@ export const MAA_KATEGORIAT = {
               + 'yli 30 000 työmiestä, enimmäkseen Punjabista ja Gujaratista. '
               + 'Britannian parlamentissa hanketta sanottiin jättimäiseksi '
               + 'hulluudeksi, ja pilkkanimi Lunatic Line jäi elämään.',
+          lyhyt: 'Veturin kyljessä lukee KUR, Kenya and Uganda Railways; nimi vaihtui 1929 rautateiden yhdistyessä.',
           selite: 'Veturin kyljessä lukee KUR, Kenya and Uganda Railways. Radan '
             + 'nimi vaihtui 1929, kun Ugandan rautatie ja Kenian osuus '
             + 'yhdistettiin yhdeksi yhtiöksi.',
@@ -35084,6 +36518,7 @@ export const MAA_KATEGORIAT = {
               + 'kauppakortteli. Juna saapui 30. toukokuuta 1899. Ruttoepidemian jälkeen '
               + 'basaarikatu poltettiin ja rakennettiin uudelleen, ja 1907 Nairobista '
               + 'tuli Mombasan tilalle protektoraatin pääkaupunki.',
+          lyhyt: 'Nairobin keskustan tornit nousevat kosteikon päälle, jota insinöörit pitivät huonosti kuivattuna.',
           selite: 'Nairobin keskustan tornit nousevat Upper Hillin suunnasta '
             + 'katsottuna sen kosteikon päälle, jota rautatieinsinöörit pitivät '
             + 'liian tasaisena ja huonosti kuivattuna.',
@@ -35102,6 +36537,7 @@ export const MAA_KATEGORIAT = {
               + 'swahilinkielisten kantajien huuto raskaan taakan alla, mutta '
               + 'kansanselityksen mukaan se tulee rautatietä rakentaneiden '
               + 'intialaisten työmiesten avunhuudosta Hare Ambe.',
+          lyhyt: 'Jomo Kenyattan muistomerkki Nairobin keskustassa 1991; jalustassa lukevat hänen puheidensa lauseet.',
           selite: 'Jomo Kenyattan muistomerkki Nairobin keskustassa vuonna 1991 '
             + 'kuvattuna; jalustan laatoissa lukevat hänen puheidensa lauseet.',
           lahde: 'Ulli 2mecs, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35126,6 +36562,7 @@ export const MAA_KATEGORIAT = {
               + 'mukaan: kun Nakurun vesi nousi 2013, parvet siirtyivät Bogorialle, '
               + 'jonka rannalla purkautuu kuumia lähteitä. Unesco otti kolmikon '
               + 'maailmanperintöluetteloon 2011.',
+          lyhyt: 'Pikkuflamingot syövät seisten pää veden alla ja siivilöivät sinilevää, mikä värjää höyhenet.',
           selite: 'Pikkuflamingot syövät seisten, pää veden alla, ja siivilöivät '
             + 'nokallaan sinilevää — siitä myös höyhenten vaaleanpunainen väri.',
           lahde: 'Syllabub, Wikimedia Commons (CC BY-SA 3.0)',
@@ -35141,6 +36578,7 @@ export const MAA_KATEGORIAT = {
               + 'joista yhdeksän ei kasva missään muualla. Lintuja on 367 lajia ja '
               + 'perhosia 489. Leopardista on tehty viimeinen virallinen havainto '
               + 'vuonna 1991.',
+          lyhyt: 'Latvusto sulkeutuu Kakamegassa yhtenäiseksi katoksi, ja aukkojen synty on epäselvä.',
           selite: 'Latvusto sulkeutuu Kakamegassa yhtenäiseksi katoksi, ja aukot '
             + 'ovat ruohoisia kenttiä, joiden syntyä ei osata varmasti selittää.',
           lahde: 'User:Doron, Wikimedia Commons (CC BY-SA 3.0)',
@@ -35156,6 +36594,7 @@ export const MAA_KATEGORIAT = {
               + 'jäähtyy hitaammin kuin ympäröivä maa, joten rannalla puhaltaa lähes '
               + 'aina ja myrskyt nousevat äkkiä. Järven keskellä on Central Island, '
               + 'yhä höyryävä tulivuori.',
+          lyhyt: 'Turkanan vesi on sameanvihreää levästä, mistä juontuu lempinimi Jadejärvi.',
           selite: 'Turkanan vesi on sameanvihreää levästä, ja siitä juontuu '
             + 'lempinimi Jadejärvi. Rannat ovat tuulisia ja lähes puuttomia.',
           lahde: 'CaptChandra, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35173,6 +36612,7 @@ export const MAA_KATEGORIAT = {
               + 'istutettu yli 51 miljoonaa ja yli 30 000 naista on saanut koulutuksen '
               + 'metsänhoitoon ja mehiläistarhaukseen. Nobelin rauhanpalkinto tuli '
               + '2004, ensimmäisenä afrikkalaiselle naiselle.',
+          lyhyt: 'Wangari Maathai vuonna 2006 Brasiliassa, jo Nobel-palkittuna ympäristöaktivistina.',
           selite: 'Wangari Maathai vuonna 2006 Brasiliassa pidetyssä '
             + 'konferenssissa. Hän oli tuolloin jo Nobel-palkittu ja maailman '
             + 'tunnetuin afrikkalainen ympäristöaktivisti.',
@@ -35198,6 +36638,7 @@ export const MAA_KATEGORIAT = {
               + 'lehtivihannesta, jonka nimi tarkoittaa viikon venyttämistä. Vuonna '
               + '2017 ruokalaji otettiin Unescon aineettoman kulttuuriperinnön '
               + 'luetteloon — harvinaista ruoalle.',
+          lyhyt: 'Ugali tarjoillaan lautasella omana kimpaleenaan kaalin ja porkkanan kera.',
           selite: 'Ugali tarjoillaan lautasella omana kimpaleenaan; vieressä on '
             + 'kaalia ja porkkanaa, arkisin tavallisin lisuke.',
           lahde: 'Mark Skipper, Wikimedia Commons (CC BY 2.0)',
@@ -35214,6 +36655,7 @@ export const MAA_KATEGORIAT = {
               + 'ravintoloissa. Lisukkeeksi tulee kachumbari, tomaatista ja sipulista '
               + 'tehty raikas salaatti, ja ugalia. Sama ruoka on kansallisruoka myös '
               + 'Tansaniassa.',
+          lyhyt: 'Liha kypsyy hitaasti hiilloksen päällä kokonaisina paloina nairobilaisella grillillä.',
           selite: 'Liha kypsyy hitaasti hiilloksen päällä kokonaisina paloina — '
             + 'nairobilaisen grillin ääressä odotetaan mieluummin kuin kiirehditään.',
           lahde: 'Kengitau254, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35230,6 +36672,7 @@ export const MAA_KATEGORIAT = {
               + 'Suurin osa teestä käsitellään murskaa–revi–kiepauta-menetelmällä, joka '
               + 'antaa vahvan aamuteen maun, ja huutokaupataan julkisesti Mombasassa. '
               + 'Erikoisuus on purppurainen tee, jonka lehdet ovat luonnostaan violetit.',
+          lyhyt: 'Kerichon ylängöllä teepensaat leikataan tasaiseksi matoksi, josta poimitaan vain nuorimmat lehdet.',
           selite: 'Kerichon ylängöllä teepensaat leikataan tasaiseksi matoksi, '
             + 'jonka yli poimija kurottaa vain nuorimmat lehdet ja silmun.',
           lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
@@ -35246,6 +36689,7 @@ export const MAA_KATEGORIAT = {
               + 'vuorokautta ja säilyy kuukauden. Mursikia juodaan häiden '
               + 'myötäjäisneuvottelujen päätteeksi, ja kansainvälisistä kisoista palaava '
               + 'juoksija saa kulauksen jo lentokentällä.',
+          lyhyt: 'Sotet-kalebassi koristellaan nahkahihnoilla ja simpukoilla, ja sitä kannetaan arvostettuna astiana.',
           selite: 'Sotet-kalebassi koristellaan nahkahihnoilla ja simpukoilla, ja '
             + 'sitä kannetaan kädessä kuin astiaa, jolla on oma arvonsa.',
           lahde: 'Antony Trivet, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35282,6 +36726,7 @@ export const MAA_KATEGORIAT = {
               + 'alapuuta vasten, joten yksi mies on samaan aikaan laulaja, kitaristi ja '
               + 'rumpali. Kielet tehtiin ennen naudan jänteistä, nykyään siimasta. '
               + 'Nyatitin lyömä syke on benga-musiikin lähtökohta.',
+          lyhyt: 'Nyatitin soittaja esiintyy koululaisille: vasen käsi näppäilee kieliä, jalka hoitaa rytmin.',
           selite: 'Nyatitin soittaja esiintyy koululaisille: vasen käsi näppäilee '
             + 'kieliä, oikea pitää soitinta paikallaan ja jalka hoitaa rytmin.',
           lahde: 'Onesmo Daniel, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35317,6 +36762,7 @@ export const MAA_KATEGORIAT = {
               + 'Kidjo. Ruotsalainen Hep Stars kuuli sen nairobilaisen hotellin '
               + 'kokilta, joka haki kitaran kesken illallisen, ja levytti laulun '
               + 'Tukholmassa huhtikuussa 1967.',
+          lyhyt: 'Miriam Makeba pukuhuoneessa 1969; hänen Malaika-levytyksensä teki rakkauslaulusta maailmanhitin.',
           selite: 'Miriam Makeba pukuhuoneessa vuonna 1969. Hänen levytyksensä '
             + 'Malaikasta teki swahilinkielisestä rakkauslaulusta maailmanhitin.',
           lahde: 'Rob Mieremet / Nationaal Archief, Wikimedia Commons (public domain)',
@@ -35359,6 +36805,7 @@ export const MAA_KATEGORIAT = {
               + 'Ryunin kahdellakymmenellä metrillä — suurin voittoero matkan '
               + 'olympiahistoriassa — ja otti 5 000 metrillä hopeaa. Münchenissä 1972 '
               + 'tuli vielä estekulta.',
+          lyhyt: 'Kipchoge Keino vuonna 2014, ensimmäisenä urheilijana saanut Olympic Laurel -tunnustuksen 2016.',
           selite: 'Kipchoge Keino vuonna 2014. Hän sai 2016 ensimmäisenä '
             + 'urheilijana olympialiikkeen Olympic Laurel -tunnustuksen.',
           lahde: 'Ralf Roletschek, Wikimedia Commons (CC BY 3.0)',
@@ -35376,6 +36823,7 @@ export const MAA_KATEGORIAT = {
               + 'lähtenyt sen koommin. Hän toi 1990-luvun alussa myös naiset '
               + 'harjoitusryhmiin, ja jouluaaton Shoe4Africa-katujuoksu on maan suurin '
               + 'pelkästään naisten kilpailu.',
+          lyhyt: 'Kukkula, jonka Joseph Thomson merkitsi kymmenenneksi ja joka antoi Itenille nimen.',
           selite: 'Kukkula, jonka Joseph Thomson merkitsi kymmenenneksi ja joka '
             + 'antoi Itenille nimen. Takana avautuu Kerion laakso.',
           lahde: 'Toby Tanser, Wikimedia Commons (CC BY-SA 3.0)',
@@ -35393,6 +36841,7 @@ export const MAA_KATEGORIAT = {
               + 'jänikset vaihtuivat kesken matkan eikä kilpailu ollut avoin. Se ei '
               + 'estänyt sitä olemasta juoksuhistorian puhutuin tunti ja '
               + 'viisikymmentäyhdeksän minuuttia.',
+          lyhyt: 'Kipchoge Wienin Hauptalleella lokakuussa 2019 viimeisellä kahdellasadalla metrillä.',
           selite: 'Kipchoge Wienin Hauptalleella lokakuussa 2019 viimeisellä '
             + 'kahdellasadalla metrillä, jänikset jo väistyneinä.',
           lahde: 'Triathlet 79, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35410,6 +36859,7 @@ export const MAA_KATEGORIAT = {
               + 'ja neljänkymmenenyhden sekunnin rajan; kolme kaikkien aikojen nopeinta '
               + 'juoksua ovat hänen. Sebastian Coe sanoi sitä kisojen parhaaksi '
               + 'suoritukseksi.',
+          lyhyt: 'Lontoon olympiafinaalissa 2012 Rudisha johtaa yksin, koko kenttä juoksee ennätyksiään.',
           selite: 'Lontoon olympiafinaali 2012: Rudisha johtaa kärjessä yksin, ja '
             + 'koko kenttä juoksee hänen perässään henkilökohtaisia ennätyksiään.',
           lahde: 'Paul Rowlett, Wikimedia Commons (CC BY 2.0)',
@@ -35470,6 +36920,7 @@ export const MAA_KATEGORIAT = {
               + 'Kamerunin ja Nigerian välille. Entinen liittokansleri Bismarck pilkkasi '
               + 'seuraajaansa siitä, että tämä vaihtoi housut yhteen nappiin — nimitys '
               + 'Helgoland–Sansibar-sopimus jäi hänen jäljiltään.',
+          lyhyt: 'Richard Kiepertin kartta 1890 näyttää Saksan ja Britannian etupiirit suorina viivoina.',
           selite: 'Richard Kiepertin kartta vuodelta 1890 näyttää Saksan ja '
             + 'Britannian etupiirit kesäkuun sopimusten mukaisina — rajat ovat '
             + 'suoria viivoja, jotka eivät noudata mitään maastossa näkyvää.',
@@ -35489,6 +36940,7 @@ export const MAA_KATEGORIAT = {
               + 'briteiltä haavoittui yksi merimies. Khalid pakeni Saksan konsulaattiin '
               + 'ja sieltä mantereelle. Palanut Ihmeiden talo oli ollut Itä-Afrikan '
               + 'ensimmäinen sähkövalaistu rakennus.',
+          lyhyt: 'The Illustrated London Newsin kuvitus 1896 esittää HMS St Georgea Sansibarin redillä.',
           selite: 'The Illustrated London Newsin kuvitus 5. syyskuuta 1896: HMS St '
             + 'George ja HMS Philomel Sansibarin redillä palatsin edustalla.',
           lahde: 'Fred T. Jane, The Illustrated London News, Wikimedia Commons (public domain)',
@@ -35506,6 +36958,7 @@ export const MAA_KATEGORIAT = {
               + 'Häntä kutsuttiin Mwalimuksi, opettajaksi; patsaita hän kielsi '
               + 'pystyttämästä itsestään ja jätti presidentin paikan vapaaehtoisesti '
               + '1985 — harvinaista koko mantereella.',
+          lyhyt: 'Nyerere valtiovierailulla Alankomaissa 1975; henkilökunta puhutteli häntä nimellä Mzee, vanhus.',
           selite: 'Nyerere valtiovierailulla Alankomaissa marraskuussa 1975. '
             + 'Henkilökunta puhutteli häntä nimellä Mzee, vanhus, ei tittelillä.',
           lahde: 'Rob Mieremet / Anefo, Wikimedia Commons (CC0)',
@@ -35522,6 +36975,7 @@ export const MAA_KATEGORIAT = {
               + 'oli noin 13 000 kiinalaista teknikkoa ja 38 000 afrikkalaista '
               + 'työntekijää. Udzungwan vuoristossa rata kiipeää 158 kilometrin matkalla '
               + '46 sillan ja 18 tunnelin läpi. Nimeksi tuli Uhuru, swahiliksi vapaus.',
+          lyhyt: 'Tazaran veturi Kapiri Mposhin päätepysäkillä Sambiassa; rataa hoitaa kahden maan yhteinen yhtiö.',
           selite: 'Tazaran veturi Kapiri Mposhin päätepysäkillä Sambiassa. Rata '
             + 'kulkee kahden maan halki, mutta sitä hoitaa yksi yhteinen yhtiö.',
           lahde: 'David Brossard, Wikimedia Commons (CC BY-SA 2.0)',
@@ -35546,6 +37000,7 @@ export const MAA_KATEGORIAT = {
               + 'jäljittelevä sana lehmänkellon kilinästä. Ensimmäinen eurooppalainen '
               + 'laskeutui kattilaan 1892, ja maasait paimentavat karjaansa alueella '
               + 'yhä.',
+          lyhyt: 'Seepralauma kraatterin pohjalla, taustalla kattilan reuna, jonka yli eläinten on kiivettävä.',
           selite: 'Seepralauma kraatterin pohjalla; taustalla nousee kattilan '
             + 'reuna, jonka yli eläinten on kiivettävä päästäkseen ulos.',
           lahde: 'Roryjm0, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35561,6 +37016,7 @@ export const MAA_KATEGORIAT = {
               + 'hehkuu vasta pimeässä. Tuore laava on musta tai ruskea, mutta se '
               + 'muuttuu tunneissa tai päivissä lumivalkoiseksi. Maasait ja sonjot '
               + 'kutsuvat vuorta Jumalan vuoreksi.',
+          lyhyt: 'Ol Doinyo Lengai Natronjärven suunnasta; huipun valkoisuus on vanhaa karbonatiittilaavaa, ei lunta.',
           selite: 'Ol Doinyo Lengai Natronjärven suunnasta. Huipun valkoisuus ei '
             + 'ole lunta vaan vanhaa karbonatiittilaavaa.',
           lahde: 'Clem23, Wikimedia Commons (CC BY-SA 3.0)',
@@ -35576,6 +37032,7 @@ export const MAA_KATEGORIAT = {
               + 'Ryhmässä on 30–50 eläintä, ja koiraat pitävät yhtä — ne siistivät '
               + 'toisiaan ja puolustavat ryhmää yhdessä. Paikalliset kutsuvat lajia '
               + 'nimellä kima punju, myrkkyapina, sen voimakkaan hajun takia.',
+          lyhyt: 'Sansibarinpunakolobi Jozanin puistossa; ruosteenpunainen selkä erottaa sen mantereen sukulaisista.',
           selite: 'Sansibarinpunakolobi Jozanin puistossa. Selän ruosteenpunainen '
             + 'turkki ja vaalea häntä erottavat sen mantereen sukulaisista.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35592,6 +37049,7 @@ export const MAA_KATEGORIAT = {
               + 'apinasuku sitten 1923. Ääni on matala honk-bark, haukun ja tööttäyksen '
               + 'välimuoto. Eläimiä on noin 1 800, ja ne mahtuvat 17,7 neliökilometrin '
               + 'metsäsaarekkeisiin Rungwe-vuoren ja Ndundulun ylängöillä.',
+          lyhyt: 'Udzungwan jyrkänteen sademetsää, mistä kipunji löytyi vain kahdesta erillisestä saarekkeesta.',
           selite: 'Udzungwan jyrkänteen sademetsää. Juuri tällaisista '
             + 'ylänkömetsistä kipunji löytyi — ja vain kahdesta erillisestä '
             + 'saarekkeesta.',
@@ -35617,6 +37075,7 @@ export const MAA_KATEGORIAT = {
               + 'tuotannosta on nykyään noin seitsemän prosenttia, kun Indonesia tuottaa '
               + 'kolme neljäsosaa. Mausteita kasvatetaan yhä: kanelia, muskottia, '
               + 'mustapippuria ja kookosta.',
+          lyhyt: 'Vanha kasvitieteellinen taulu vertaa Penangin ja Sansibarin neilikkaa: sama laji, eri muoto.',
           selite: 'Vanha kasvitieteellinen taulu vertaa Penangin ja Sansibarin '
             + 'neilikkaa: sama laji, eri kasvupaikka ja eri muoto.',
           lahde: 'McCormick and Company, Wikimedia Commons (public domain)',
@@ -35662,6 +37121,7 @@ export const MAA_KATEGORIAT = {
               + 'turisteille ja paikallisille. Kivikaupunki itse on Unescon '
               + 'maailmanperintökohde vuodesta 2000, ja sen talot on rakennettu '
               + 'koralliliuskeesta, joka antaa kaduille lämpimän punertavan sävyn.',
+          lyhyt: 'Forodhanin ruokatori sytyttää lamppunsa auringonlaskun jälkeen puiston vanhojen puiden lomassa.',
           selite: 'Forodhanin ruokatori sytyttää lamppunsa heti auringonlaskun '
             + 'jälkeen; myyntipöydät kiertävät puiston vanhoja puita.',
           lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
@@ -35687,6 +37147,7 @@ export const MAA_KATEGORIAT = {
               + 'saada seuraajia, ja Tingatinga-koulusta kasvoi Itä-Afrikan tunnetuin '
               + 'maalaustyyli. Toisen polven maalarit toivat 1990-luvulla mukaan '
               + 'kaupungin: ruuhkaisia katuja, toreja ja perspektiiviä.',
+          lyhyt: 'Tingatinga-koulun kyläkuva: kymmeniä hahmoja, tasainen väripinta ja ääriviiva ilman varjoja.',
           selite: 'Tingatinga-koulun kyläkuva: kymmeniä hahmoja kerralla, tasainen '
             + 'väripinta ja piirretty ääriviiva, ei varjoja.',
           lahde: 'Yanajin33, Wikimedia Commons (CC BY-SA 3.0)',
@@ -35702,6 +37163,7 @@ export const MAA_KATEGORIAT = {
               + 'yli pylvääksi, jota kutsutaan elämänpuuksi ja joka kertoo yhteisöstä; '
               + 'shetani-tyylin henkiolennot ovat kierteisiä ja unenomaisia. Puu on '
               + 'veistäjille elävä aine, ei raaka-aine.',
+          lyhyt: 'Kolme makonde-veistosta 1960-luvulta, kasvot kulmikkaiksi kaiverrettuina.',
           selite: 'Kolme makonde-veistosta 1960-luvulta. Kasvot on kaiverrettu '
             + 'kulmikkaiksi, ja vartalot noudattavat rungon omaa muotoa.',
           lahde: 'MatthiasKabel, Wikimedia Commons (CC BY-SA 3.0)',
@@ -35718,6 +37180,7 @@ export const MAA_KATEGORIAT = {
               + 'vertauskuvina. Talon julkisivussa kulkee kivipenkki baraza, jolla '
               + 'istutaan ja jota pitkin kävellään, kun sade tekee kadusta '
               + 'kulkukelvottoman.',
+          lyhyt: 'Intialaistyylinen ovi Kivikaupungissa: kaartuva yläosa ja rivi isoja messinkinastoja.',
           selite: 'Intialaistyylinen ovi Kivikaupungissa: kaartuva yläosa, '
             + 'läpikaiverrettu koristerivi ja rivi isoja messinkinastoja.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
@@ -35734,6 +37197,7 @@ export const MAA_KATEGORIAT = {
               + 'merkitsi kankaansa tunnuksella ja lisäsi siihen sananlaskun. Lahjaksi '
               + 'annettaessa on syytä lukea teksti tarkkaan: kaikki jinat eivät ole '
               + 'kohteliaisuuksia. Kangat myydään aina pareittain.',
+          lyhyt: 'Kankaita myyntitelineessä, joissa jokaisessa oma reunus ja alareunaan painettu nimeävä lause.',
           selite: 'Kankaita myyntitelineessä. Jokaisessa on oma reunuksensa ja '
             + 'keskikuvionsa, ja alareunaan painettu lause antaa kankaalle nimen.',
           lahde: 'Bukulu Steven, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35770,6 +37234,7 @@ export const MAA_KATEGORIAT = {
               + 'perustettiin saaren toinen musiikkiseura Ikhwani Safaa, joka toimii '
               + 'yhä. Sävelmissä kohtaavat Egypti, Intia, Arabian niemimaa ja '
               + 'Itä-Afrikan omat rytmit.',
+          lyhyt: 'Kivikaupungin musiikkiakatemian soittajia: kanun, viulu ja huilu, sama kokoonpano kuin ennen.',
           selite: 'Kivikaupungin musiikkiakatemian soittajia: edessä kanun, '
             + 'takana viulu ja huilu — sama kokoonpano kuin sata vuotta sitten.',
           lahde: 'David Poussif De Angelis, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35786,6 +37251,7 @@ export const MAA_KATEGORIAT = {
               + 'edeltäjänsä, ja teki taarabista kaikkien kieltä. Hän toi lajiin myös '
               + 'natiki-nimisen tanssiosuuden, jonka esikuva oli intialainen tanssi. '
               + 'Vasta hänen jälkeensä naiset pääsivät miesten laulukerhoihin.',
+          lyhyt: '1920-luvun taarab-yhtye soittaa Stone Townin sisäpihalla gramofonin vieressä.',
           selite: '1920-luvun taarab-yhtye soittaa Stone Townin '
             + 'sisäpihalla gramofonin vieressä. Gramofoni kuuluu ajan '
             + 'kuuntelukulttuuriin; kuva ei väitä sen tallentavan tätä '
@@ -35806,6 +37272,7 @@ export const MAA_KATEGORIAT = {
               + 'Real World julkaisi hänen levynsä Chibite ja Assembly. Zawose hallitsi '
               + 'useita perinnesoittimia ja oli myös arvostettu laulaja. Hän kuoli 2003; '
               + 'tytär Pendo ja tyttärentytär Leah esiintyvät yhä yhdessä.',
+          lyhyt: 'Dar es Salaamista 1984 kerätty peukalopiano, jonka kielekkeet on taottu metallista.',
           selite: 'Dar es Salaamista vuonna 1984 kerätty peukalopiano. Kielekkeet '
             + 'on taottu metallista ja viritetty pituutta muuttamalla.',
           lahde: 'Yanajin33, Wikimedia Commons (CC BY-SA 3.0)',
@@ -35823,6 +37290,7 @@ export const MAA_KATEGORIAT = {
               + 'mantereen laajuiseksi noin 2014, kun Diamond Platnumzin hitti My '
               + 'Number One nousi soittolistoille Nigeriassa, Ghanassa ja '
               + 'Etelä-Afrikassa.',
+          lyhyt: 'Diamond Platnumz esiintyi Cotonoussa Beninissä 2025, osoituksena popmusiikin kantamasta matkasta.',
           selite: 'Diamond Platnumz esiintymässä Cotonoussa Beninissä 2025 — '
             + 'osoitus siitä, kuinka kauas Dar es Salaamin popmusiikki on kulkenut.',
           lahde: 'Gildas Lissassi, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35887,6 +37355,7 @@ export const MAA_KATEGORIAT = {
               + 'isänsä klaanitunnuksen. Kun britit ottivat alueen hallintaansa, he '
               + 'käyttivät kuningaskunnasta sen swahilinkielistä nimeä Uganda — ja siitä '
               + 'tuli koko maan nimi.',
+          lyhyt: 'Kabakan palatsi Kampalan Lubirissa; kuningaskunta lakkautettiin 1967, palautettiin seremoniana 1993.',
           selite: 'Kabakan palatsi Kampalan Lubirissa. Kuningaskunta lakkautettiin '
             + '1967 ja palautettiin seremonialliseksi 1993.',
           lahde: 'NatureDan, Wikimedia Commons (CC BY-SA 3.0)',
@@ -35904,6 +37373,7 @@ export const MAA_KATEGORIAT = {
               + 'muinaisjäänteeksi. Kaivauksissa 1960 nostettiin yli 4 200 '
               + 'keramiikansirua. Perimätieto liittää paikan bachwezeihin, '
               + 'hallitsijoihin joista kerrotaan tarinoina.',
+          lyhyt: 'Katonga-joki Mpigin piirikunnassa; kaivannot kaivettiin joen eteläpuolelle rajan osaksi.',
           selite: 'Katonga-joki Mpigin piirikunnassa. Kaivannot kaivettiin joen '
             + 'eteläpuolelle niin, että joki itse muodosti osan rajaa.',
           lahde: 'Emma Oruk, Wikimedia Commons (CC BY-SA 4.0)',
@@ -35938,6 +37408,7 @@ export const MAA_KATEGORIAT = {
               + 'julistettiin autuaiksi 1920 ja pyhiksi 1964, ja Namugongon '
               + 'muistokirkosta tuli Afrikan suurimman vuosittaisen pyhiinvaelluksen '
               + 'päätepiste.',
+          lyhyt: 'Namugongon marttyyrien basilika valmistui 1973, katto jäljittelee perinteistä ugandalaista majaa.',
           selite: 'Namugongon marttyyrien basilika valmistui 1973. Sveitsiläisen '
             + 'Justus Dahindenin suunnittelema katto jäljittelee perinteistä '
             + 'ugandalaista majaa.',
@@ -35964,6 +37435,7 @@ export const MAA_KATEGORIAT = {
               + 'keuhkokalan tai monnin. Se seisoo kelluvan kasvillisuuden päällä '
               + 'valtavien varpaidensa varassa. Lajia arvioidaan olevan 5 000–8 000 '
               + 'yksilöä, ja Ugandan suot ovat sen tärkeimpiä esiintymisalueita.',
+          lyhyt: 'Kenkänokka Mabamban papyrussuolla on niin liikkumaton, että sen huomaa vasta päätä kääntäessä.',
           selite: 'Kenkänokka Mabamban papyrussuolla Viktorianjärven rannalla. '
             + 'Lintu on niin liikkumaton, että sen löytää usein vasta kun se '
             + 'kääntää päätään.',
@@ -35980,6 +37452,7 @@ export const MAA_KATEGORIAT = {
               + 'sammakoita, matoja ja pieniä kaloja. Se viihtyy kuivalla savannilla '
               + 'mutta pesii kosteammassa, soilla ja jokien varsilla. Kansainvälinen '
               + 'luonnonsuojeluliitto luokittelee sen erittäin uhanalaiseksi.',
+          lyhyt: 'Harmaakruunukurjen kultainen töyhtö on jäykkiä höyheniä; poskessa laikku ja kurkussa punainen pussi.',
           selite: 'Harmaakruunukurjen kultainen töyhtö on jäykkiä, kärjestä '
             + 'levenneitä höyheniä; poskessa on valkoinen laikku ja kurkussa '
             + 'punainen pussi.',
@@ -35997,6 +37470,7 @@ export const MAA_KATEGORIAT = {
               + 'paikalliset ja matkaoppaat väittävät yhdeksääsataa, mikä tekisi siitä '
               + 'Afrikan toiseksi syvimmän. Järvi oli Ugandan 5 000 shillingin setelin '
               + 'kuvana vuosina 2004–2009.',
+          lyhyt: 'Bunyonyin rannat ovat porrastettuja viljelyterasseja, ja järven saaret nousevat jyrkkinä kumpuina.',
           selite: 'Bunyonyin rannat ovat porrastettuja viljelyterasseja, ja järven '
             + 'saaret nousevat vedestä jyrkkinä kumpuina.',
           lahde: 'Yiga Authman, Wikimedia Commons (CC BY-SA 4.0)',
@@ -36013,6 +37487,7 @@ export const MAA_KATEGORIAT = {
               + 'pidettiin pitkään toisen lajin muunnoksena. Suojelualueen sisällä tai '
               + 'sen reunoilla on noin kaksikymmentäseitsemän asuttua enklaavia, ja '
               + 'ympärillä on peltoa joka suunnassa.',
+          lyhyt: 'Kampalasta Jinjaan vievä tie halkoo Mabiran suojelumetsän molemmin puolin.',
           selite: 'Kampalasta Jinjaan vievä tie halkoo Mabiran suojelumetsän. '
             + 'Metsä alkaa suoraan tienpenkasta molemmin puolin.',
           lahde: 'YoTuT, Wikimedia Commons (CC BY 2.0)',
@@ -36069,6 +37544,7 @@ export const MAA_KATEGORIAT = {
               + 'omat nimensä: titanic tehdään kahdesta chapatista, ja kikomandossa '
               + 'chapati leikataan suikaleiksi ja sekoitetaan papuihin — nimi tulee '
               + 'sotilaasta, joka syö nopeasti eikä välitä sotkusta.',
+          lyhyt: 'Rolexin teko alkaa munaseoksen kaatamisesta kuumalle pellille chapatien viereen.',
           selite: 'Rolexin teko alkaa siitä, että munaseos kaadetaan kuumalle '
             + 'pellille; chapatit odottavat vieressä pinossa.',
           lahde: 'Fralian, Wikimedia Commons (CC BY-SA 4.0)',
@@ -36192,6 +37668,7 @@ export const MAA_KATEGORIAT = {
               + 'tunnuksen, koska seuraaja valittiin äidin klaanista. Vanhastaan '
               + 'klaanipäälliköillä oli kabakaan nähden paljon valtaa, joka väheni vasta '
               + 'vähitellen.',
+          lyhyt: 'Nvuma-klaanin veistos Bugandassa; jalustan laattaan on kaiverrettu klaanin tunnus ja alkuperäkylä.',
           selite: 'Nvuma-klaanin veistos Bugandassa. Jalustan laattaan on '
             + 'kaiverrettu klaanin tunnus, päätunnus ja alkuperäkylä.',
           lahde: 'Ivan Visual2, Wikimedia Commons (CC BY-SA 4.0)',
@@ -36208,6 +37685,7 @@ export const MAA_KATEGORIAT = {
               + 'batooroilla, batukuilla, batagwendoilla ja banyabindeilla sekä Kongon '
               + 'bahemoilla. Unesco on ottanut sen kiireellistä suojelua vaativien '
               + 'luetteloon.',
+          lyhyt: 'Toron kuningaskunnan palatsi Fort Portalissa; empaako on batooroiden ja banyoroiden yhteinen tapa.',
           selite: 'Toron kuningaskunnan palatsi Fort Portalissa. Empaako on '
             + 'batooroiden ja banyoroiden yhteinen tapa, ja kuninkaalle on varattu '
             + 'oma kunnianimensä.',
@@ -36225,6 +37703,7 @@ export const MAA_KATEGORIAT = {
               + 'Bunyorossa tavallinen vaate, kunnes arabikauppiaat toivat 1840-luvun '
               + 'alussa puuvillan ja silkin. Se on Ugandan ainoa kohde Unescon '
               + 'aineettoman kulttuuriperinnön luetteloissa.',
+          lyhyt: 'Valmis lubugo-levy kuivumassa; väri tulee puusta itsestään, ja pinta on nahkamainen.',
           selite: 'Valmis lubugo-levy kuivumassa. Väri tulee puusta itsestään, ei '
             + 'värjäyksestä, ja pinta on nahkamainen.',
           lahde: 'Geossegawa, Wikimedia Commons (CC BY-SA 4.0)',
@@ -36239,6 +37718,7 @@ export const MAA_KATEGORIAT = {
               + 'rumpukuvionsa, jolla hänet tunnistettiin. Rumpu ei siis ollut vain '
               + 'soitin vaan tunnus ja tiedotusväline yhtä aikaa, ja kuninkaalliset '
               + 'rummut olivat kuningaskunnan pyhimpiä esineitä.',
+          lyhyt: 'Rumpuvarasto Bugandassa: ngoma-rumpuja eri kokoisina nahkanauhoin puurunkoon kiinnitettynä.',
           selite: 'Rumpuvarasto Bugandassa: ngoma-rumpuja eri kokoisina, kalvot '
             + 'kiinnitettyinä nahkanauhoilla puurunkoon.',
           lahde: 'Nantumbwe J, Wikimedia Commons (CC BY-SA 4.0)',
@@ -36298,6 +37778,7 @@ export const MAA_KATEGORIAT = {
               + 'hallintonsa vuonna 808 Fèsiin, josta hän teki '
               + 'kukoistavan pääkaupungin. Isän hauta on yhä pyhiinvaellus'
               + 'kohde vuorenrinteen kaupungissa, joka kantaa hänen nimeään.',
+          lyhyt: 'Moulay Idriss Zerhoun nousee kahdelle kukkulalle Volubiliksen vieressä pyhäkköineen.',
           selite: 'Moulay Idriss Zerhoun nousee kahdelle kukkulalle '
             + 'Volubiliksen vieressä, ja sen keskellä on vihreäkattoinen '
             + 'pyhäkkö, jossa Idris I on haudattuna.',
@@ -36320,6 +37801,7 @@ export const MAA_KATEGORIAT = {
               + 'seinästä löytyi 1900-luvulla laastikerrosten alta '
               + 'perustamiskirjoitus, jonka mukaan moskeijan rakennutti '
               + 'Dawud ibn Idris vuonna 877.',
+          lyhyt: 'Al-Qarawiyyinin pihalla on kaksi puista lehtimajaa Alhambran leijonapihan mallin mukaan.',
           selite: 'Al-Qarawiyyinin pihalla on kaksi puista lehtimajaa, '
             + 'joiden mallina ovat Alhambran leijonapihan paviljongit; '
             + 'lattia on ladottu zellij-mosaiikista.',
@@ -36342,6 +37824,7 @@ export const MAA_KATEGORIAT = {
               + 'maksetut lunnaat veivät Portugalin lähes vararikkoon, '
               + 'ja kaksi vuotta myöhemmin Espanjan Filip II otti maan '
               + 'haltuunsa.',
+          lyhyt: 'Aikalaispiirros kuvaa taistelujärjestyksen: portugalilaiset neliössä, ratsuväki kaartaa ympäri.',
           selite: 'Aikalaispiirros kuvaa taistelujärjestyksen: '
             + 'portugalilaiset ovat asettuneet neliöön keskelle tasankoa '
             + 'ja marokkolainen ratsuväki kaartaa sen ympäri.',
@@ -36363,6 +37846,7 @@ export const MAA_KATEGORIAT = {
               + 'Marokkolaiset ryöstivät Timbuktun, Djennén ja pääkaupunki '
               + 'Gaon — ja huomasivat, ettei Saharan takaista valtakuntaa '
               + 'voi hallita. Kaupungit menetettiin pian vuoden 1620 jälkeen.',
+          lyhyt: 'El Badin palatsista ovat jäljellä paksut savimuurit ja pihan altaat, joilla pesii kattohaikaroita.',
           selite: 'El Badin palatsista ovat jäljellä vain paksut '
             + 'savimuurit ja pihan altaat; muurien harjalla pesii '
             + 'kattohaikaroita.',
@@ -36405,6 +37889,7 @@ export const MAA_KATEGORIAT = {
               + 'tehdään osuuskunnissa: Essaouiran takamaastossa toimi '
               + 'vuonna 2020 noin kolmesataa pienyritystä. Koneellisesti '
               + 'puristettu öljy maksaa alle puolet osuuskuntien öljystä.',
+          lyhyt: 'Arganin oksat kasvavat matalalle ja tiheään, ja puu kestää kuivuutta joka tappaisi muut.',
           selite: 'Arganin oksat kasvavat matalalle ja tiheään, ja puu '
             + 'kestää kuivuutta, joka tappaisi useimmat muut puut.',
           lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
@@ -36424,6 +37909,7 @@ export const MAA_KATEGORIAT = {
               + 'kanssa ja ruoka kypsennetään kahteen kertaan — sama '
               + 'kaava kuin nyt. Toisen tulkinnan mukaan piiras saapui '
               + 'Tetouaniin osmanien Algeriasta vasta 1830 jälkeen.',
+          lyhyt: 'Warqa-levyt tehdään käsin läiskimällä taikinaa kuumalle pyörylle paperinohueksi lehdeksi.',
           selite: 'Warqa-levyt tehdään käsin: taikinamöykkyä läiskitään '
             + 'kuumalle pyörylle limittäin, kunnes syntyy paperinohut '
             + 'lehti.',
@@ -36443,6 +37929,7 @@ export const MAA_KATEGORIAT = {
               + 'väkevä. Perusvilja on nykyään vehnä ja riisi, mutta '
               + '1900-luvun puoliväliin asti etelässä syötiin ennen '
               + 'kaikkea ohraa.',
+          lyhyt: 'Marokkolaisen maustekaupan mausteet ladotaan kartioiksi peltiastioiden päälle näkyviksi.',
           selite: 'Marokkolaisen maustekaupan mausteet ladotaan '
             + 'kartioiksi peltiastioiden päälle, jotta ostaja näkee värin '
             + 'ja pääsee haistamaan.',
@@ -36462,6 +37949,7 @@ export const MAA_KATEGORIAT = {
               + 'auringonlaskua: keitto, leipää ja taateleita. Samaan '
               + 'vuodenaikaan kuuluu myös bissara, härkäpavuista keitetty '
               + 'sakea sose.',
+          lyhyt: 'Marokkolaisessa hariran kulhossa näkyvät kikherneet, linssit ja tomaatista tuleva punainen liemi.',
           selite: 'Marokkolaisessa hariran kulhossa näkyvät kikherneet, '
             + 'linssit ja ohuet nuudelit sekä tomaatista tuleva punainen '
             + 'liemi.',
@@ -36490,6 +37978,7 @@ export const MAA_KATEGORIAT = {
               + 'Kronikoitsija al-Jazna\'in mukaan kaupungissa oli '
               + 'almohadien aikana 86 parkitsemoa, ja nahkaa vietiin '
               + 'Bagdadiin asti.',
+          lyhyt: 'Chouaran altaat täyttävät korttelin: valkoiset liotusaltaat vasemmalla, pyöreät väriastiat oikealla.',
           selite: 'Chouaran altaat täyttävät kokonaisen korttelin: '
             + 'valkoiset liotusaltaat ovat vasemmalla ja pyöreät '
             + 'väriastiat oikealla.',
@@ -36530,6 +38019,7 @@ export const MAA_KATEGORIAT = {
               + 'ollut rikki sukupolvien ajan, maljat irrotettiin 2004, '
               + 'eikä korjaus ole onnistunut — kukaan ei tiedä varmasti, '
               + 'miten se toimi.',
+          lyhyt: 'Dar al-Maganan julkisivussa on kaksitoista kaari-ikkunaa ulostyöntyvine kannatinpalkkeineen.',
           selite: 'Dar al-Maganan julkisivussa on kaksitoista kaari-ikkunaa '
             + 'ja niiden alla ulos työntyvät puupalkit, jotka kannattivat '
             + 'maljojen suojakattoa.',
@@ -36549,6 +38039,7 @@ export const MAA_KATEGORIAT = {
               + 'rekisteröityä käsityöläistä sekä tuhansia '
               + 'rekisteröimättömiä. Samasta satamasta lähtee myös suurin '
               + 'osa maan sardiinisaaliista.',
+          lyhyt: 'Safin savenvalajien kukkulalla astiat poltetaan valkoisiksi kalkituissa uuneissa.',
           selite: 'Safin savenvalajien kukkulalla astiat poltetaan '
             + 'valkoisiksi kalkituissa uuneissa, joiden polttopuut '
             + 'pinotaan katolle.',
@@ -36662,6 +38153,7 @@ export const MAA_KATEGORIAT = {
               + 'kuudestoistaosa maan setrialasta. Algeriassa laji on '
               + 'taantunut 23 000 hehtaarista alle 15 000:een tulipalojen '
               + 'ja hakkuiden takia.',
+          lyhyt: 'Keski-Atlaksen setrimetsässä sataa talvella lunta ja puiden oksat levittyvät litteiksi katoksiksi.',
           selite: 'Keski-Atlaksen setrimetsässä sataa talvella lunta: '
             + 'puiden oksat levittyvät litteiksi katoksiksi ja maa on '
             + 'valkoisena.',
@@ -36702,6 +38194,7 @@ export const MAA_KATEGORIAT = {
               + 'Talvivieraiden luettelossa on myös siperiankuovi — laji, '
               + 'jota ei ole enää löydetty mistään ja jonka viimeiset '
               + 'säännölliset talvehtimispaikat olivat juuri täällä.',
+          lyhyt: 'Merja Zergan laguuni avautuu merelle kapean suun kautta hiekkasärkkineen.',
           selite: 'Merja Zergan laguuni avautuu merelle kapean suun '
             + 'kautta, ja sen keskellä on laajoja hiekkasärkkiä, jotka '
             + 'paljastuvat laskuvedellä.',
@@ -36721,6 +38214,7 @@ export const MAA_KATEGORIAT = {
               + 'vesimyllyjä, joissa jauhettiin kylän vilja. Alempana '
               + 'rotkossa kasvaa oliivipuita, joita kastellaan samasta '
               + 'joesta.',
+          lyhyt: 'Ouzoudin putoukset syöksyvät punaruskeaa kalliota kolmessa portaassa, alin allas sumun peitossa.',
           selite: 'Ouzoudin putoukset syöksyvät punaruskeaa kalliota '
             + 'pitkin kolmessa portaassa, ja alin allas jää sumun '
             + 'peittoon.',
@@ -36778,6 +38272,7 @@ export const MAA_KATEGORIAT = {
               + 'valtasi Tahertin, ja pakenevat ibadilaiset siirtyivät '
               + 'etelään Saharan reunalle — sieltä alkaa M’zabin '
               + 'kaupunkien tarina.',
+          lyhyt: 'Ghardaïan tori M’zabin laaksossa: talot nousevat kukkulalle kerroksittain moskeijan minareetin alle.',
           selite: 'Ghardaïan tori M’zabin laaksossa: talot nousevat '
             + 'kukkulalle kerroksittain, ja huipulla kohoaa ibadilaisen '
             + 'moskeijan kartiomainen minareetti.',
@@ -36799,6 +38294,7 @@ export const MAA_KATEGORIAT = {
               + 'sopimuksia ja riitoja kolmen vuosisadan ajan. Viimeinen '
               + 'hallitsija oli Hussein Dey, joka lähti maanpakoon '
               + '10. heinäkuuta 1830.',
+          lyhyt: 'Hayreddin kuvattiin 1500-luvun puupiirroksessa panssariin puettuna Algerin kuninkaana.',
           selite: 'Aruj Barbarossan veli Hayreddin kuvattiin 1500-luvun '
             + 'italialaisessa puupiirroksessa panssariin puettuna ja '
             + 'kruunattuna; kuvateksti nimittää hänet Algerin kuninkaaksi.',
@@ -36820,6 +38316,7 @@ export const MAA_KATEGORIAT = {
               + 'vapautti hänet, ja 1855 hän asettui Damaskokseen, jossa '
               + 'hän kirjoitti pääteoksensa Kitab al-Mawaqif ja esti 1860 '
               + 'kaupungin kristityn yhteisön joukkomurhan.',
+          lyhyt: 'Emiiri Abdelkader kuvattiin vanhoilla päivillään Damaskoksessa valkoisessa viitassa kunniamerkein.',
           selite: 'Emiiri Abdelkader kuvattiin vanhoilla päivillään '
             + 'Damaskoksessa valkoisessa viitassa ja rinnassaan monen '
             + 'maan kunniamerkit.',
@@ -36870,6 +38367,7 @@ export const MAA_KATEGORIAT = {
               + 'jättivät yhteisen hakemuksen, ja kuskus otettiin '
               + 'Unescon aineettoman kulttuuriperinnön luetteloon '
               + 'vuonna 2020.',
+          lyhyt: 'Suurimot kosteutetaan ja hierotaan kämmenellä laakeassa vadissa tasakokoisiksi ennen höyrytystä.',
           selite: 'Suurimot kosteutetaan ja hierotaan kämmenellä '
             + 'laakeassa vadissa, kunnes jyvät ovat tasakokoisia; vasta '
             + 'sitten ne höyrytetään.',
@@ -36890,6 +38388,7 @@ export const MAA_KATEGORIAT = {
               + 'maailman johtava taatelilajike, ja Algerian '
               + 'maatalousministeriö on varannut nimen omille '
               + 'taateleilleen.',
+          lyhyt: 'Deglet Nour -taatelit ovat vaaleampia ja ohutkuorisempia kuin muut, myydään usein oksassaan.',
           selite: 'Deglet Nour -taatelit ovat vaaleampia ja ohut'
             + 'kuorisempia kuin useimmat muut lajikkeet, ja ne myydään '
             + 'usein yhä oksassaan.',
@@ -36910,6 +38409,7 @@ export const MAA_KATEGORIAT = {
               + 'häihin ja uskonnollisiin juhlapäiviin, ja sen '
               + 'valmistaminen alusta asti on tapa osoittaa, että vieras '
               + 'on tärkeä.',
+          lyhyt: 'Rechta-lautasella nuudelit ovat pohjalla, kana ja kasvikset päällä, liemi kaadetaan pöydässä.',
           selite: 'Rechta-lautasella nuudelit ovat pohjalla ja kana, '
             + 'kikherneet ja nauriit niiden päällä; liemi kaadetaan '
             + 'vasta pöydässä.',
@@ -36961,6 +38461,7 @@ export const MAA_KATEGORIAT = {
               + 'suvun valtaan ja kantaa samalla sen tuhon siementä. '
               + 'Kylässä ei ollut kirjastoa, joten viimeistelyä varten '
               + 'hänen oli palattava 1378 kotikaupunkiinsa Tunisiin.',
+          lyhyt: 'Ibn Khaldunin rintakuva seisoo Béjaïan kasbahissa, samassa maassa jossa Muqaddimah syntyi.',
           selite: 'Ibn Khaldunin rintakuva seisoo Béjaïan kasbahissa '
             + 'Algeriassa, samassa maassa, jossa Muqaddimah syntyi.',
           lahde: 'Reda Kerbouche, Wikimedia Commons (CC BY-SA 4.0)',
@@ -36983,6 +38484,7 @@ export const MAA_KATEGORIAT = {
               + 'palkinnon saajana. Hän kuoli auto-onnettomuudessa '
               + '4. tammikuuta 1960, ja hänet haudattiin Lourmarinin '
               + 'kylään Etelä-Ranskaan.',
+          lyhyt: 'Camus haudattiin Lourmariniin Etelä-Ranskaan, hautakiveen on hakattu vain nimi ja kaksi vuosilukua.',
           selite: 'Camus haudattiin Lourmariniin Etelä-Ranskaan, ja '
             + 'hautakiveen on hakattu vain nimi ja kaksi vuosilukua.',
           lahde: 'Walter Popp, Wikimedia Commons (CC BY-SA 3.0)',
@@ -37003,6 +38505,7 @@ export const MAA_KATEGORIAT = {
               + 'tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja '
               + 'kirjoitti algerianarabiaksi ja puolusti berberikielten '
               + 'asemaa.',
+          lyhyt: 'Kateb Yacinen passi on esillä museossa, henkilötietosivulla valokuva ja leima Pekingistä.',
           selite: 'Kateb Yacinen passi on esillä museossa: '
             + 'henkilötietosivulla on hänen valokuvansa ja leima '
             + 'Pekingistä, jossa hän kävi kirjailijana.',
@@ -37024,6 +38527,7 @@ export const MAA_KATEGORIAT = {
               + 'Vuonna 1996 hän sai Neustadt-palkinnon, ja 16. kesäkuuta '
               + '2005 hänet valittiin Ranskan akatemiaan ensimmäisenä '
               + 'maghrebilaisena kirjailijana.',
+          lyhyt: 'Tyhjä työpöytä, käsikirjoitus ja kirjat viittaavat Assia Djebarin kaksikieliseen kulttuuripiiriin.',
           selite: 'Tyhjä kirjailijan työpöytä, käsikirjoitus ja kirjat '
             + 'viittaavat Assia Djebarin ranskan- ja arabiankieliseen '
             + 'kulttuuripiiriin. Vihreä akateemikon takki on Académie '
@@ -37057,6 +38561,7 @@ export const MAA_KATEGORIAT = {
               + 'tutuiksi Cheikha Remitti, Cheb Khaled, Cheb Mami ja '
               + 'Cheba Zahouania, ja raïsta tuli 1980-luvulla Algerian '
               + 'tunnetuin vientituote.',
+          lyhyt: 'Cheb Khaled esiintyi Oranissa 2011, samassa kaupungissa jossa raï syntyi lähes sata vuotta aiemmin.',
           selite: 'Cheb Khaled esiintyi Oranissa heinäkuussa 2011 — '
             + 'samassa kaupungissa, jossa raï syntyi lähes sata vuotta '
             + 'aiemmin.',
@@ -37077,6 +38582,7 @@ export const MAA_KATEGORIAT = {
               + 'paheksuttu ja soi suljettujen ovien takana, mutta '
               + '1950-luvun lopulla se oli jo häiden ja juhlien '
               + 'musiikkia.',
+          lyhyt: 'Algerialainen mandole on chaabin tunnussoitin: pitkäkaulainen luuttu, jota soitetaan plektralla.',
           selite: 'Algerialainen mandole on chaabin tunnussoitin: '
             + 'nelinkertaisin kielikuoroin varustettu pitkäkaulainen '
             + 'luuttu, jota soitetaan plektralla.',
@@ -37116,6 +38622,7 @@ export const MAA_KATEGORIAT = {
               + 'on käännetty muun muassa arabiaksi, espanjaksi, '
               + 'ranskaksi ja kreikaksi. Samanniminen albumi ilmestyi '
               + '1991.',
+          lyhyt: 'Idir esiintyi akustisen kitaran kanssa; sovitukset toivat kabyylilaulun eurooppalaisille lavoille.',
           selite: 'Idir esiintyi akustisen kitaran kanssa; hänen '
             + 'sovituksensa toi kabyylilaulun eurooppalaisille lavoille.',
           lahde: 'Suaudeau, Wikimedia Commons (CC BY-SA 3.0)',
@@ -37156,6 +38663,7 @@ export const MAA_KATEGORIAT = {
               + 'Lajilla on poikkeuksellinen lisääntymistapa: siemen '
               + 'syntyy pelkästään siitepölystä, ja emopuu antaa vain '
               + 'ravinnon eikä yhtään omaa geeniä.',
+          lyhyt: 'Saharansypressin runko on kiertynyt ja osin kuollut, mutta latvus vihertää yhä paljaalla kalliolla.',
           selite: 'Saharansypressin runko on kiertynyt ja osin kuollut, '
             + 'mutta latvus vihertää yhä; puu kasvaa paljaalla kalliolla '
             + 'Tassilin ylängöllä.',
@@ -37217,6 +38725,7 @@ export const MAA_KATEGORIAT = {
               + 'lepää päivän kuumuudessa ja liikkuu aamuin illoin, ja '
               + 'vaaran uhatessa se pakenee ylämäkeen — paikaltaan se '
               + 'hyppää yli kahden metrin korkeuteen.',
+          lyhyt: 'Harjalampaan kurkusta riippuu pitkä karvatupsu, ja sarvet kaartuvat ulos, taakse ja sisään.',
           selite: 'Harjalampaan kurkusta ja rinnasta riippuu pitkä '
             + 'karvatupsu, ja sarvet kaartuvat ulos, taakse ja sisään.',
           lahde: 'Krzysztof Kozłowski, Wikimedia Commons (CC BY-SA 4.0)',
@@ -37292,6 +38801,7 @@ export const MAA_KATEGORIAT = {
               + 'aikaan kuin Rooma. Kertomukset on kirjoitettu satoja '
               + 'vuosia tapahtumien jälkeen, eikä paikalta ole löytynyt '
               + 'asutusta 700-luvun eaa. viimeistä neljännestä kauempaa.',
+          lyhyt: 'J. M. W. Turnerin maalaus 1815 kuvaa Didon rakentamassa Karthagoa auringon noustessa.',
           selite: 'J. M. W. Turnerin maalaus vuodelta 1815 kuvaa Didon '
             + 'rakentamassa Karthagoa: satama on kesken, ja aurinko '
             + 'nousee juuri rakennustelineiden takaa.',
@@ -37313,6 +38823,7 @@ export const MAA_KATEGORIAT = {
               + 'lähti vientiin. Toisella vuosisadalla eaa. oliiviöljy '
               + 'nousi viljan rinnalle, ja rikkaus näkyi kaupunkien '
               + 'määrässä.',
+          lyhyt: 'Dominus Juliuksen mosaiikki näyttää maatilan vuoden: keskellä herran talo ja ympärillä maatyöt.',
           selite: 'Dominus Juliuksen mosaiikki näyttää maatilan vuoden: '
             + 'keskellä on herran linnamainen talo ja sen ympärillä '
             + 'kylvö, sadonkorjuu, metsästys ja oliivinpoiminta.',
@@ -37333,6 +38844,7 @@ export const MAA_KATEGORIAT = {
               + 'Palermo, josta tuli uuden maakunnan pääkaupunki. '
               + 'Viimeinen suuri bysanttilaislinnake Taormina kaatui '
               + 'vasta 902 — valloitus kesti siis 75 vuotta.',
+          lyhyt: 'Aghlabidien kultadinaari on ohut ja kevyt, täynnä kufilaista kirjoitusta ilman kuvia.',
           selite: 'Aghlabidien kultadinaari on ohut ja kevyt, ja sen '
             + 'molemmat puolet on täytetty kufilaisella kirjoituksella '
             + 'ilman kuvia.',
@@ -37355,6 +38867,7 @@ export const MAA_KATEGORIAT = {
               + 'islam. Uudistusten takana vaikutti ministeri Khayr '
               + 'al-Din, ja teksti käännettiin ranskaksi ja '
               + 'osmaniturkiksi jo samana vuonna.',
+          lyhyt: 'Khayr al-Din Pasha kuvattiin ratsain sotilaspuvussa ja fetsissä Tunisian uudistusministerinä.',
           selite: 'Khayr al-Din Pasha kuvattiin ratsain sotilaspuvussa ja '
             + 'punaisessa fetsissä; hän oli Tunisian uudistusten '
             + 'keskeisin ministeri.',
@@ -37383,6 +38896,7 @@ export const MAA_KATEGORIAT = {
               + 'Tunisia on nykyään maailman suurin valmiin harissan '
               + 'viejä, ja Unesco otti harissan tiedot, taidot ja tavat '
               + 'aineettoman kulttuuriperinnön luetteloon vuonna 2022.',
+          lyhyt: 'Harissa hierretään kuivatuista chileistä tahnaksi, ja pinnalle kaadetaan sen säilövä oliiviöljy.',
           selite: 'Harissa hierretään kuivatuista chileistä tahnaksi, ja '
             + 'pinnalle kaadetaan oliiviöljyä, joka säilöö sen.',
           lahde: 'Miansari66, Wikimedia Commons (CC0)',
@@ -37401,6 +38915,7 @@ export const MAA_KATEGORIAT = {
               + 'pienellä taakse. Niinpä italialaiseksi luultu öljy on '
               + 'usein peräisin Turkista, Tunisiasta, Marokosta, '
               + 'Espanjasta tai Kreikasta.',
+          lyhyt: 'Oliivitarhat Soussen takamaastossa 1959: puut istutettu tasavälein kuivan maan mukaan.',
           selite: 'Oliivitarhat Soussen takamaastossa vuonna 1959: puut '
             + 'on istutettu tasavälein niin kauas kuin silmä kantaa, '
             + 'koska kuivalla maalla jokainen puu tarvitsee oman alansa.',
@@ -37419,6 +38934,7 @@ export const MAA_KATEGORIAT = {
               + 'keltuainen valu käsille. Muita täytteitä ovat jauheliha, '
               + 'kana, kapris, juusto ja anjovis. Algeriassa ja Libyassa '
               + 'sama ruoka tunnetaan nimellä bourek.',
+          lyhyt: 'Brik tarjoillaan kuumana suoraan paistosta, ja kolmion nurkasta näkyy kokonainen kananmuna.',
           selite: 'Brik tarjoillaan kuumana suoraan paistosta, ja '
             + 'kolmion nurkasta näkyy, että sisällä on kokonainen '
             + 'kananmuna.',
@@ -37468,6 +38984,7 @@ export const MAA_KATEGORIAT = {
               + 'perusrakennuspalikkansa, jota tutkijat ovat verranneet '
               + 'nuottiin. Egyptissä hän kävi 1928, mutta se ei tehnyt '
               + 'samaa.',
+          lyhyt: 'August Macken akvarelli Kairouan III hajottaa kaupungin läpikuultaviksi väripinnoiksi.',
           selite: 'August Macken akvarelli "Kairouan III" on samalta '
             + 'matkalta: kaupunki on hajotettu läpikuultaviksi '
             + 'väripinnoiksi, joista erottuvat muuri, palmu ja kulkija.',
@@ -37533,6 +39050,7 @@ export const MAA_KATEGORIAT = {
               + 'Kylään pääsee TGM-junalla, joka kulkee Tunisista La '
               + 'Marsaan — sama rata, jota pitkin taidemaalarit ovat '
               + 'tulleet sinne sata vuotta.',
+          lyhyt: 'Sidi Bou Saïdin kujilla seinät ovat valkoiset, ovet ja luukut siniset, muureilla bougainvillea.',
           selite: 'Sidi Bou Saïdin kujilla seinät ovat valkoiset ja '
             + 'ovet, ikkunaluukut ja ristikot siniset; muurien yli '
             + 'roikkuu bougainvilleaa.',
@@ -37599,6 +39117,7 @@ export const MAA_KATEGORIAT = {
               + 'transsiin. Vaikka laji ei kuulunut hienoihin saleihin, '
               + 'siitä on tullut yksi Tunisian suosituimmista, ja se on '
               + 'kaupunkien laitamien oma ääni.',
+          lyhyt: 'Kulunut tunisialainen mezoued-säkkipilli lepää pöydällä kaksoisputkineen ja sarvikelloineen.',
           selite: 'Kulunut tunisialainen mezoued-säkkipilli lepää pöydällä, '
             + 'kaksoisputki ja kaksi sarvikelloa näkyvissä.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Met — '
@@ -37618,6 +39137,7 @@ export const MAA_KATEGORIAT = {
               + 'Journo, Hedi Jouini, Fethia Khairi ja Naâma. Brahemin '
               + 'levyt ilmestyvät eurooppalaisella jazzlevymerkillä, ja '
               + 'niissä ud soittaa pianon ja kontrabasson rinnalla.',
+          lyhyt: 'Anouar Brahem soittaa udia jazzkokoonpanossa; sama soitin kuin maloufin orkesterissa, eri musiikki.',
           selite: 'Anouar Brahem soittaa udia jazzkokoonpanossa; soitin '
             + 'on sama kuin maloufin orkesterissa, mutta musiikki eri.',
           lahde: 'Dirk Neven, Wikimedia Commons (CC BY 2.0)',
@@ -37647,6 +39167,7 @@ export const MAA_KATEGORIAT = {
               + 'romahtivat. Kohde siirrettiin uhanalaisten '
               + 'maailmanperintökohteiden listalle 1996 ja poistettiin '
               + 'siltä 2006, kun suolaisuutta oli saatu laskemaan.',
+          lyhyt: 'Ichkeulin matala järvi ja sen yllä kohoava vuori: rantavedessä lintujen ravintokasvillisuutta.',
           selite: 'Ichkeulin matala järvi ja sen yllä kohoava vuori: '
             + 'rantavedessä näkyy vesikasvillisuutta, joka on '
             + 'lintujen ravintoa.',
@@ -37667,6 +39188,7 @@ export const MAA_KATEGORIAT = {
               + 'joka vuosi uudelleen yhteisellä aterialla ja rukouksilla. '
               + 'Pyyntipaikka periytyy usein isältä vanhimmalle pojalle. '
               + 'Unesco merkitsi tavan luetteloonsa 2020.',
+          lyhyt: 'Kerkennahin kalastaja seisoo veneessään matalikolla, jossa pohja näkyy kauas.',
           selite: 'Kerkennahin kalastaja seisoo veneessään matalikolla; '
             + 'saarten ympärillä meri on niin matalaa, että pohja näkyy '
             + 'kauas.',
@@ -37704,6 +39226,7 @@ export const MAA_KATEGORIAT = {
               + 'temppelin tuhoutuessa paenneet papit toivat mukanaan '
               + 'oven ja kiviä, jotka muurattiin rakennukseen. Unesco '
               + 'otti koko saaren maailmanperintöluetteloon vuonna 2023.',
+          lyhyt: 'Houmt Souk on Djerban pääkaupunki, matalaa valkoista asutusta rannalta sisämaahan.',
           selite: 'Houmt Souk on Djerban pääkaupunki: matalaa valkoista '
             + 'asutusta levittäytyy rannalta sisämaahan niin kauas kuin '
             + 'saari riittää.',
@@ -37753,6 +39276,7 @@ export const MAA_KATEGORIAT = {
               + 'tyhjän kalebassin tai papukaijanmunia. Se tarkoitti, ettei '
               + 'kansa, maailma eivätkä jumalat enää halunneet häntä — ja '
               + 'perinne odotti kuninkaan silloin väistyvän omin käsin.',
+          lyhyt: 'Alaafin ottaa rauhallisesti vastaan Oyo Mesi -päälliköt palatsipihalla ratsumiehen odottaessa.',
           selite: 'Alaafin ottaa rauhallisesti vastaan Oyo Mesi -päälliköt '
             + 'palatsipihalla ratsumiehen odottaessa sivulla.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Met — '
@@ -37774,6 +39298,7 @@ export const MAA_KATEGORIAT = {
               + 'kodeissa. Jokainen jaji sai virkamerkiksi malfa-hatun ja '
               + 'punaisen turbaanin, ja heidän oppilaitaan kutsuttiin '
               + 'nimellä ʼyan taru, yhteen kokoontuvat.',
+          lyhyt: 'Pieni käsikirjoitus, kirjoitustarvikkeet ja päähine Nigerian ajami-perinnettä mukailevassa kuvassa.',
           selite: 'Pieni käsikirjoitus, kirjoitustarvikkeet ja päähine '
             + 'Nigerian ajami-perinnettä mukailevassa asetelmassa. '
             + 'Kirjoitus on kuvitusta.',
@@ -37798,6 +39323,7 @@ export const MAA_KATEGORIAT = {
               + 'osallistuivat, ja 1930 koko warrant chief -järjestelmä '
               + 'purettiin ja naisia nimitettiin paikallisiin '
               + 'tuomioistuimiin.',
+          lyhyt: 'Vuoden 1929 naisten sodan muistomerkki; igboksi tapahtuma on Ogu Umunwanyi, naisten sota.',
           selite: 'Vuoden 1929 naisten sodan muistomerkki. Tapahtumia '
             + 'kutsuttiin siirtomaa-arkistoissa mellakaksi, mutta igboksi '
             + 'ne ovat Ogu Umunwanyi, naisten sota.',
@@ -37825,6 +39351,7 @@ export const MAA_KATEGORIAT = {
               + 'kokkikilpailuja, someryöpytystä ja kappaleita, kuten '
               + 'Sister Deborahin Ghana Jollof vuodelta 2016. Riita on '
               + 'leikkimielinen, mutta kukaan ei myönnä häviötä.',
+          lyhyt: 'Nigerialaisen jollofin tunnusmerkki on savuinen pohja, riisin annettua tarttua kiinni.',
           selite: 'Nigerialaisen jollofin tunnusmerkki on savuinen pohja: '
             + 'riisin annetaan tarttua padan pohjaan aivan lopuksi.',
           lahde: 'DromoTetteh, Wikimedia Commons (CC BY-SA 4.0)',
@@ -37842,6 +39369,7 @@ export const MAA_KATEGORIAT = {
               + 'ja valmis liha leikataan suupaloiksi, joiden päälle '
               + 'ripotellaan lisää mausteseosta sekä sipulia ja tomaattia. '
               + 'Myyjää kutsutaan nimellä mai suya, suyan omistaja.',
+          lyhyt: 'Yaji-mausteseos odottaa vartaiden vieressä: liha kierrätetään siinä grillauksen jälkeen.',
           selite: 'Yaji-mausteseos odottaa vartaiden vieressä: valmis liha '
             + 'kierrätetään siinä vielä kerran grillauksen jälkeen.',
           lahde: 'Kambai Akau, Wikimedia Commons (CC BY-SA 4.0)',
@@ -37913,6 +39441,7 @@ export const MAA_KATEGORIAT = {
               + 'rumputyyppiä, ja asantien atumpanilla ja fontomfromilla '
               + 'viesti on kulkenut kolmenkymmenen kilometrin päähän, missä '
               + 'seuraava rumpali on jatkanut sitä eteenpäin.',
+          lyhyt: 'Ìyá ìlù, rumpujen äiti, on dùndún-yhtyeen suurin rumpu, kylkeen kiinnitetyin soivin tiukuin.',
           selite: 'Ìyá ìlù, rumpujen äiti, on dùndún-yhtyeen suurin rumpu; '
             + 'kylkeen kiinnitetyt tiukut soivat lyönnin mukana.',
           lahde: 'Mplanetech, Wikimedia Commons (CC BY-SA 4.0)',
@@ -37931,6 +39460,7 @@ export const MAA_KATEGORIAT = {
               + 'ja esitykset saattoivat jatkua tunteja tauotta. Puhuva '
               + 'rumpu liitettiin kokoonpanoon vasta 1948, ja sähkökitarat '
               + 'ja vahvistimet kasvattivat yhtyeet myöhemmin kymmenpäisiksi.',
+          lyhyt: 'Sèkèrè on kuivattu kurpitsa kaurisimpukkaverkolla; ravistus antaa jùjúlle sihisevän pulssin.',
           selite: 'Sèkèrè on kuivattu kurpitsa, jonka ympärille on punottu '
             + 'kaurisimpukkaverkko; ravistus antaa jùjúlle sen sihisevän '
             + 'pohjapulssin.',
@@ -37950,6 +39480,7 @@ export const MAA_KATEGORIAT = {
               + 'ensimmäisen nigerialaiselle myönnetyn Grammy-ehdokkuuden. '
               + 'Adén yhtyeessä soi kymmenkunta soittajaa, joukossa pedal '
               + 'steel -kitara ja useita puhuvia rumpuja.',
+          lyhyt: 'Laaja 1980-luvun juju-yhtye kitaroineen ja lyömäsoittimineen konserttilavalla, kuvitus.',
           selite: 'Laaja 1980-luvun juju-yhtye kitaroineen ja '
             + 'lyömäsoittimineen tummalla konserttilavalla — lähteisiin '
             + 'perustuva kuvitus, muusikot ovat kuvitteellisia.',
@@ -37998,6 +39529,7 @@ export const MAA_KATEGORIAT = {
               + 'peitetty ohuin viiruin. Löytö sai hallinnon säätämään '
               + 'vientirajoitukset muinaisesineille, mutta yksi pää ehti jo '
               + 'ulos maasta ja on nykyään British Museumissa.',
+          lyhyt: 'Ifessä tehtiin myös terrakottapäitä luonnonmukaisella tyylillä; tämä on Kimbellin taidemuseossa.',
           selite: 'Ifessä tehtiin myös terrakottapäitä samalla '
             + 'luonnonmukaisella tyylillä; tämä on Kimbellin taidemuseossa '
             + 'Yhdysvalloissa.',
@@ -38017,6 +39549,7 @@ export const MAA_KATEGORIAT = {
               + 'Veistoksissa kerrotaan hallitsijan vastaanotosta: '
               + 'kuningatar, saattueen kantajat ja vieraat ovat samassa '
               + 'kuvassa eri kokoisina.',
+          lyhyt: 'Ikeren palatsin oven yksityiskohta British Museumissa; alkuperäiset värit näkyvät uurteissa.',
           selite: 'Ikeren palatsin oven yksityiskohta British Museumissa. '
             + 'Alkuperäiset värit näkyvät yhä puun uurteissa.',
           lahde: '14GTR, Wikimedia Commons (CC0)',
@@ -38053,6 +39586,7 @@ export const MAA_KATEGORIAT = {
               + 'alussa Abeokutan ja Ibadanin naisten iso elinkeino, kun '
               + 'eurooppalaista puuvillakangasta alkoi tulla halvalla '
               + 'markkinoille. Kuviot kulkevat suvussa äidiltä tyttärelle.',
+          lyhyt: 'Abeokutaa pidetään adiren pääkaupunkina; torilla kankaat myydään pinoina, joissa kuviolla on nimi.',
           selite: 'Abeokutaa pidetään adiren pääkaupunkina; torilla kankaat '
             + 'myydään pinoina, joissa jokaisella kuviolla on nimi.',
           lahde: 'Olaniyan Olushola, Wikimedia Commons (CC BY-SA 4.0)',
@@ -38099,6 +39633,7 @@ export const MAA_KATEGORIAT = {
               + 'painoi Things Fall Apartista 1958 kaksituhatta kovakantista '
               + 'kappaletta. Romaania on sittemmin myyty yli kaksikymmentä '
               + 'miljoonaa kappaletta ja käännetty 57 kielelle.',
+          lyhyt: 'Achebe puhumassa Buffalossa 2008; ilman Beattien käyntiä kirjaa ei ehkä olisi syntynyt.',
           selite: 'Achebe puhumassa Buffalossa 2008. Ilman Beattien käyntiä '
             + 'kirjaa ei ehkä olisi: "olisin lannistunut niin, että olisin '
             + 'luultavasti luopunut kokonaan", hän sanoi myöhemmin.',
@@ -38119,6 +39654,7 @@ export const MAA_KATEGORIAT = {
               + 'Present hän omisti tuolloin vielä vankilassa istuneelle '
               + 'Nelson Mandelalle ja käytti sen Etelä-Afrikan '
               + 'rotuerottelun arvosteluun.',
+          lyhyt: 'Soyinka Tukholmassa 2018; hän kirjoittaa jorubalaisesta perinteestä näytelmiensä rakenteeksi.',
           selite: 'Soyinka Tukholmassa 2018. Hän kirjoittaa jorubalaisesta '
             + 'perinteestä ja käyttää sitä myös näytelmiensä rakenteena.',
           lahde: 'Frankie Fouganthin, Wikimedia Commons (CC BY-SA 4.0)',
@@ -38138,6 +39674,7 @@ export const MAA_KATEGORIAT = {
               + 'kirjoitettu pidgininglanniksi. Tutkijoille ne ovat nyt '
               + 'ainutlaatuinen ikkuna aikansa arkeen, ja lukijalle iloa '
               + 'tuottaa niiden vauhdikas, sääntöjä kaihtava kieli.',
+          lyhyt: 'Onitshan torikirjallisuutta mukaileva pöytä kuvitteellisine vihkokansineen ja painokoneineen.',
           selite: 'Onitshan torikirjallisuutta mukaileva pöytä '
             + 'kuvitteellisine vihkokansineen ja painokoneineen — '
             + 'kuvitus.',
@@ -38169,6 +39706,7 @@ export const MAA_KATEGORIAT = {
               + '830, ja 1000-luvulla cordobalainen al-Bakri kuvasi maata '
               + 'tarkemmin. Valtakunta päätyi 1200-luvulla Malin vasalliksi. '
               + 'Nimen otti käyttöön Kultarannikko itsenäistyessään 1957.',
+          lyhyt: 'Kamelikaravaani muinaisen Ghanan valtakunnan kulta- ja suolakaupan piirissä, historiallinen kuvitus.',
           selite: 'Kamelikaravaani muinaisen Ghanan valtakunnan kulta- '
             + 'ja suolakaupan piirissä — historiallinen kuvitus.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Met — '
@@ -38190,6 +39728,7 @@ export const MAA_KATEGORIAT = {
               + 'Britit polttivat palatsin samana vuonna. Nykyinen Manhyian '
               + 'palatsi rakennettiin 1925 kuningas Prempeh I:n paluuta '
               + 'varten.',
+          lyhyt: 'Manhyian palatsi Kumasissa on nykyään museo, ja kuningas asuu viereisessä uudemmassa palatsissa.',
           selite: 'Manhyian palatsi Kumasissa on nykyään museo, ja asantien '
             + 'kuningas asuu sen viereisessä uudemmassa palatsissa.',
           lahde: 'jbdodane, Wikimedia Commons (CC BY 2.0)',
@@ -38208,6 +39747,7 @@ export const MAA_KATEGORIAT = {
               + 'kokeilleet myös Baselin lähetyssaarnaajat ja erään '
               + 'kuvernöörin poika ilmoitti kunnian isälleen. Selvitys '
               + 'päätyi Quarshien kannalle. Hän kuoli jouluaattona 1892.',
+          lyhyt: 'Yksi Tetteh Quarshien alkuperäisistä puista kasvaa yhä Mampongissa, kyltin mukaan istutettuna 1879.',
           selite: 'Yksi Tetteh Quarshien alkuperäisistä puista kasvaa yhä '
             + 'Mampongissa, ja kyltti kertoo istutusvuodeksi 1879.',
           lahde: 'Obruni, Wikimedia Commons (CC BY-SA 3.0)',
@@ -38380,6 +39920,7 @@ export const MAA_KATEGORIAT = {
               + 'punnussarja oli myös käytöstapojen kokoelma. Täysi sarja '
               + 'nosti miehen arvoa, ja pieni sarja annettiin '
               + 'vastanaineelle lahjaksi kaupankäynnin aloittamista varten.',
+          lyhyt: 'Lepakkopunnus Toulousen luonnontieteellisen museon kokoelmasta, mitta-asteikolla kämmenen kokoinen.',
           selite: 'Lepakkopunnus Toulousen luonnontieteellisen museon '
             + 'kokoelmasta; mitta-asteikko kertoo, että esine mahtuu '
             + 'kämmenelle.',
@@ -38425,6 +39966,7 @@ export const MAA_KATEGORIAT = {
               + 'Orkesterien nimet olivat Jazz Kings, Cape Coast Sugar '
               + 'Babies ja Accra Orchestra. Unesco otti highlifen '
               + 'aineettoman kulttuuriperinnön luetteloon 2025.',
+          lyhyt: 'Varhaisen ghanalaisen highlife-tanssiorkesterin esiintyminen 1920-luvun hengessä, kuvitus.',
           selite: 'Varhaisen ghanalaisen highlife-tanssiorkesterin '
             + 'esiintyminen 1920-luvun hengessä — historiallinen '
             + 'kuvitus.',
@@ -38445,6 +39987,7 @@ export const MAA_KATEGORIAT = {
               + 'kanssa; sen jälkeen Mensahia kutsuttiin highlifen '
               + 'kuninkaaksi. Kitarahighlifen puolella E. K. Nyame ja hänen '
               + 'Akan Trio -yhtyeensä julkaisivat yli neljäsataa levyä.',
+          lyhyt: '1950-luvun ghanalainen highlife-tanssiorkesteri soittimineen, kuvitteellinen historiallinen kuvitus.',
           selite: '1950-luvun ghanalainen highlife-tanssiorkesteri '
             + 'soittimineen — historiallinen kuvitus, muusikot ovat '
             + 'kuvitteellisia.',
@@ -38566,6 +40109,7 @@ export const MAA_KATEGORIAT = {
               + 'seuraaja ei ole hänen poikansa vaan hänen sisarensa poika. '
               + 'Suvun sisällä vuorottelevat haarat, joita kutsutaan '
               + 'keittiöiksi, ja kukin esittää vuorollaan oman ehdokkaansa.',
+          lyhyt: 'Akanien äitilinjaisen sukulaisuuden innoittama kuvitus kolmesta naissukupolvesta esineen äärellä.',
           selite: 'Akanien äitilinjaisen sukulaisuuden innoittama kuvitus '
               + 'kolmen sukupolven naisista perhe-esineen äärellä.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Harvard '
@@ -38597,6 +40141,7 @@ export const MAA_KATEGORIAT = {
               + 'eikä wolofiksi, mikä teki hänestä jalosukuisen '
               + 'muukalaisen. Dankin taistelu 1549 hajotti valtakunnan '
               + 'itsenäisiksi kuningaskunniksi.',
+          lyhyt: 'Wolofin suullisen Njaajan Njaay -perinteen innoittama kuvitus perustamisesta, perustaja selin.',
           selite: 'Wolofin suullisen Njaajan Njaay -perinteen innoittama kuvitus '
             + 'valtakunnan perustamisesta; perustaja nähdään selin.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Journal of African '
@@ -38617,6 +40162,7 @@ export const MAA_KATEGORIAT = {
               + 'padotakseen ryöstöretket ja ranskalaisten etenemisen, ja '
               + 'hänen sisarensa Ndaté Yalla Mbodj hallitsi vuodesta 1846. '
               + 'Ranska valloitti Waalon 1855.',
+          lyhyt: 'Ndaté Yalla Mbodjin valtaa ja vastarintaa mukaileva kuvitus: hallitsija katsoo selin tasangolle.',
           selite: 'Ndaté Yalla Mbodjin valtaa ja vastarintaa mukaileva kuvitus: '
             + 'hallitsija katsoo selin Senegaljoen tasangolle.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Michael C. Carlos '
@@ -38657,6 +40203,7 @@ export const MAA_KATEGORIAT = {
               + '1976. Senghor luopui vallasta itse 1980 ja luovutti sen '
               + 'seuraajalleen — harvinaista siihen aikaan. Hänet '
               + 'valittiin ensimmäisenä afrikkalaisena Ranskan akatemiaan.',
+          lyhyt: 'Kuvitteellinen kirjoituspöytä, runokirjat ja Senegalin värit viittaavat Senghorin kahteen rooliin.',
           selite: 'Kuvitteellinen kirjoituspöytä, runokirjat ja Senegalin värit '
             + 'viittaavat runoilija-presidentti Léopold Sédar Senghorin '
             + 'kahteen rooliin.',
@@ -38737,6 +40284,7 @@ export const MAA_KATEGORIAT = {
               + '1902. Sitä tarjotaan juhlissa ja muistotilaisuuksissa, ja '
               + '2000-luvulla se on levinnyt kadunkulmiin uskonnosta '
               + 'riippumatta.',
+          lyhyt: 'Café Touba, kahvipavut ja pitkät djar-hedelmät senegalilaista kahvihetkeä kuvaavassa kuvituksessa.',
           selite: 'Café Touba, kahvipavut ja pitkät kuivat djar-hedelmät '
             + 'senegalilaista kahvihetkeä mukailevassa kuvituksessa.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Heritage Sénégal — '
@@ -38782,6 +40330,7 @@ export const MAA_KATEGORIAT = {
               + 'sormilla kiinni kahvoista. Samaan aikaan soivat toistuva '
               + 'kumbengo-kuvio ja improvisoitu birimintingo — vasen ja '
               + 'oikea käsi tekevät eri asiaa.',
+          lyhyt: 'Kora on perinteisesti jali-sukujen soitin, moderneihin malleihin asennetaan mikrofoni kalebassiin.',
           selite: 'Kora on perinteisesti jali-sukujen soitin, ja moderneihin '
             + 'soittimiin asennetaan nykyään mikrofoni kalebassin sisään.',
           lahde: '4MAPS, Wikimedia Commons (CC BY-SA 4.0)',
@@ -38818,6 +40367,7 @@ export const MAA_KATEGORIAT = {
               + 'esiintymisen kaksitoistavuotiaana ja soitti 1970-luvulla '
               + 'Dakarin suosituimmassa Star Bandissa. Tanssilattialla '
               + 'yleisö palkitsee laulajan kuin griotin.',
+          lyhyt: 'Kolme sabar-rumpalia soittaa pitkiä tappikiristeisiä rumpuja käsin ja kepillä kyläjuhlassa, kuvitus.',
           selite: 'Kolme sabar-rumpalia soittaa pitkiä tappikiristeisiä '
             + 'rumpuja käsin ja kepillä senegalilaisessa kyläjuhlassa — '
             + 'lähteisiin perustuva kuvitus.',
@@ -38867,6 +40417,7 @@ export const MAA_KATEGORIAT = {
               + 'Lyhytelokuva Borom Sarret valmistui 1963, ja La Noire de… '
               + 'oli 1966 ensimmäinen Saharan eteläpuolisen afrikkalaisen '
               + 'ohjaama pitkä elokuva.',
+          lyhyt: 'Sembènen muistomerkki Dakarin yliopistolla; Mandabi 1968 oli ensimmäinen wolofinkielinen elokuva.',
           selite: 'Sembènen muistomerkki Dakarin yliopiston edessä. Hänen '
             + 'elokuvansa Mandabi (1968) oli ensimmäinen wolofinkielinen.',
           lahde: '4MAPS, Wikimedia Commons (CC BY-SA 4.0)',
@@ -38935,6 +40486,7 @@ export const MAA_KATEGORIAT = {
               + 'avautuvat hämärässä niin nopeasti, että liikkeen näkee '
               + 'paljain silmin. Runko varastoi vettä, ja hedelmästä '
               + 'saadaan hapanta jauhetta.',
+          lyhyt: 'Baobabi Thièsin laitamilla; kuivana kautena lehdetön puu paljastaa juurensa taivaalla.',
           selite: 'Baobabi Thièsin laitamilla. Kuivana kautena puu on '
             + 'lehdetön, ja silloin sen "juuret taivaalla" näkyvät '
             + 'parhaiten.',
@@ -38955,6 +40507,7 @@ export const MAA_KATEGORIAT = {
               + 'järvestä jopa kolmetuhatta kerääjää eri puolilta '
               + 'Länsi-Afrikkaa. Syksyn 2022 tulvat veivät värin, mutta '
               + 'vuoteen 2025 mennessä se oli palannut osittain.',
+          lyhyt: 'Leijakameralla otetussa kuvassa suolaveneet ja suolakeot erottuvat järven punaista vasten.',
           selite: 'Leijakameralla otetussa kuvassa suolaveneet ja rannalle '
             + 'kasatut suolakeot erottuvat järven punaista vasten.',
           lahde: 'Jeff Attaway, Wikimedia Commons (CC BY 2.0)',
@@ -39071,6 +40624,7 @@ export const MAA_KATEGORIAT = {
               + '— nimen Tecum Umam säilyttivät kʼicheʼien omat asiakirjat. '
               + 'Guatemala julisti hänet kansallissankariksi 22. maaliskuuta '
               + '1960.',
+          lyhyt: 'Santa Cruz del Quichén patsas esittää Tecun Umania, Guatemalan kansallissankaria vuodesta 1960.',
           selite: 'Santa Cruz del Quichén keskusaukion patsas esittää Tecun '
               + 'Umania, joka on ollut Guatemalan virallinen kansallissankari '
               + 'vuodesta 1960.',
@@ -39090,6 +40644,7 @@ export const MAA_KATEGORIAT = {
               + 'määräsi 1776 pääkaupungin siirrettäväksi nykyiselle '
               + 'paikalleen. Vanhaan kaupunkiin jäi silti väkeä, ja siitä '
               + 'tuli La Antigua Guatemala.',
+          lyhyt: 'Antigua Guatemala oli 1543–1773 kenraalikapteenikunnan pääkaupunki Agua-tulivuoren juurella.',
           selite: 'Antigua Guatemala oli 1543–1773 koko Guatemalan '
               + 'kenraalikapteenikunnan pääkaupunki, ja sen takana kohoaa '
               + 'Agua-tulivuori, joka tuhosi kaupungin edeltäjän 1541.',
@@ -39109,6 +40664,7 @@ export const MAA_KATEGORIAT = {
               + 'Sieltä se kulki keräilijältä toiselle Chicagon '
               + 'Newberry-kirjastoon, ja Adrián Recinos löysi sen sieltä '
               + 'uudelleen 1941. Isoisän matkavuonna kirja oli Euroopassa.',
+          lyhyt: 'Ximénezin käsikirjoituksen ensisivulla Popol Vuhin teksti kulkee kʼicheʼksi ja espanjaksi rinnan.',
           selite: 'Ximénezin käsikirjoituksen ensimmäisellä sivulla Popol '
               + 'Vuhin teksti kulkee kahdessa palstassa: vasemmalla kʼicheʼ, '
               + 'oikealla espanjankielinen käännös.',
@@ -39131,6 +40687,7 @@ export const MAA_KATEGORIAT = {
               + 'kohtaan hän oli suvaitsematon, ja monet joutuivat '
               + 'maanpakoon. Hän kaatui 1885 yrittäessään yhdistää '
               + 'Väli-Amerikan uudelleen.',
+          lyhyt: 'Justo Rufino Barrios johti Guatemalaa 1873–1885 ja siirsi koulut ja väestökirjat kirkolta valtiolle.',
           selite: 'Justo Rufino Barrios johti Guatemalaa 1873–1885, ja hänen '
               + 'liberaaliuudistuksensa siirsivät koulut, avioliitot ja '
               + 'väestökirjanpidon kirkolta valtiolle.',
@@ -39155,6 +40712,7 @@ export const MAA_KATEGORIAT = {
               + 'siellä siksi, että Cocos-laatta painuu rannikon edustalla '
               + 'Karibian laatan alle. Ylänköjen halki kulkeva Motaguan '
               + 'siirros taas on aiheuttanut maan suurimmat maanjäristykset.',
+          lyhyt: 'Fuego on yksi Guatemalan neljästä aktiivisesta tulivuoresta, joka purkaa hehkuvaa ainesta usein.',
           selite: 'Fuego on yksi Guatemalan neljästä aktiivisesta '
               + 'tulivuoresta, ja se purkaa hehkuvaa ainesta useita kertoja '
               + 'tunnissa.',
@@ -39172,6 +40730,7 @@ export const MAA_KATEGORIAT = {
               + 'karstia ja sedimenttikiveä mesotsooiselta '
               + 'liitukaudelta. Nimi tulee mamin sanoista cuchuj ja '
               + 'matán, "se joka koottiin ylivoimalla".',
+          lyhyt: 'Cuchumatanesin ylänkö laskeutuu Huehuetenangoon, Väli-Amerikan korkein tulivuoreton vuoristo.',
           selite: 'Cuchumatanesin ylänkö laskeutuu Huehuetenangon laaksoon, '
               + 'ja se on Väli-Amerikan korkein vuoristo, jossa ei ole '
               + 'tulivuoria.',
@@ -39190,6 +40749,7 @@ export const MAA_KATEGORIAT = {
               + 'josta tehtiin purukumia, xatea eli kukka-asetelmiin '
               + 'myytävää palmunlehteä ja maustepippuria. Vuonna 2005 '
               + 'sertifioitiin kestäväksi 4 500 neliökilometrin hakkuut.',
+          lyhyt: 'Maya-biosfäärialueen metsässä on tuhansia raunioituneita rakennuksia, jotka näkyvät enää kumpuina.',
           selite: 'Maya-biosfäärialueen metsässä on tuhansia raunioituneita '
               + 'rakennuksia, jotka näkyvät enää kumpuina maanpinnalla.',
           lahde: 'Geoff Gallice, Wikimedia Commons (CC BY 2.0)',
@@ -39206,6 +40766,7 @@ export const MAA_KATEGORIAT = {
               + 'suurin osa rannalle munituista munista päätyy silti '
               + 'syötäväksi. Kylässä asuu noin tuhat ihmistä, ja se on myös '
               + 'pääkaupunkilaisten viikonloppuranta.',
+          lyhyt: 'Tortugariossa kuoriutunut merikilpikonnan poikanen lasketaan samalle rannalle, jolle muna munittiin.',
           selite: 'Tortugariossa kuoriutunut merikilpikonnan poikanen '
               + 'lasketaan mereen samalta rannalta, jolle muna oli munittu.',
           lahde: 'DrStockPhoto.com, Wikimedia Commons (CC BY 4.0)',
@@ -39283,6 +40844,7 @@ export const MAA_KATEGORIAT = {
               + 'manteleita. Maissinlehteen kääritty pienempi chuchito on '
               + 'oma lajinsa, ja torstaisin syödään perunataikinasta tehtyjä '
               + 'pacheja.',
+          lyhyt: 'Tamal colorado saa värinsä tomaatista ja annatosta, kypsennettynä maxán-lehden sisällä.',
           selite: 'Tamal colorado saa värinsä tomaatista ja annatosta, ja se '
               + 'kypsennetään banaanin- tai maxán-lehden sisällä.',
           lahde: 'Labarradulce, Wikimedia Commons (CC BY-SA 3.0)',
@@ -39320,6 +40882,7 @@ export const MAA_KATEGORIAT = {
               + 'pidetty polkukangaspuita herkempänä kutojan omille '
               + 'ideoille. Espanjalaiset toivat polkukangaspuut, mutta ne '
               + 'eivät syrjäyttäneet vanhaa tapaa.',
+          lyhyt: 'Kutoja käyttää maya-selkävyökangaspuiden rakennetta mukailevaa kudontavälinettä, kuvitus.',
           selite: 'Kutoja käyttää guatemalalaista '
             + 'maya-selkävyökangaspuiden rakennetta mukailevaa '
             + 'kudontavälinettä — kuvitus.',
@@ -39354,6 +40917,7 @@ export const MAA_KATEGORIAT = {
               + 'yksityiskohtansa, eikä kahta samanlaista synny. Guatemalan '
               + 'kongressissa esitettiin 2011 lakia, joka suojaisi kuviot '
               + 'jäljittelyltä ja auttaisi kutojia elämään työllään.',
+          lyhyt: 'San Antonio Aguas Calientesin huipileissa on omat lintu- ja kukka-aiheet asun tunnistamiseksi.',
           selite: 'San Antonio Aguas Calientesin kylän huipileissa on omat '
               + 'lintu- ja kukka-aiheensa, joista asun kotipaikan tunnistaa.',
           lahde: 'Hubertl, Wikimedia Commons (CC BY-SA 4.0)',
@@ -39371,6 +40935,7 @@ export const MAA_KATEGORIAT = {
               + 'syntyivät. Kutomisen suojelija on Vanha Isoäiti, '
               + 'ensimmäinen kätilö, joka liitetään synnytyksen '
               + 'jumalattareen Chac Cheliin.',
+          lyhyt: 'Chuacruzin kylän seremoniallinen huipil on kudottu juhlakäyttöön, kuvio ympäröi pääaukkoa.',
           selite: 'Chuacruzin kylän seremoniallinen huipil on kudottu '
               + 'juhlakäyttöön, ja sen keskellä oleva kuvio ympäröi '
               + 'pääaukkoa.',
@@ -39418,6 +40983,7 @@ export const MAA_KATEGORIAT = {
               + 'säröäänen, jota kutsutaan nimellä charleo. Nykysoittimissa '
               + 'putket ovat muovia ja kalvo paperia, mutta surina on yhä '
               + 'siinä.',
+          lyhyt: 'Floresissa 1923 soitetun marimban kielten alla riippuvat kaikuputket, joiden kalvo antaa surinan.',
           selite: 'Floresissa 1923 soitetun marimban kielten alla riippuvat '
               + 'puiset kaikuputket, joiden pohjan kalvo saa aikaan '
               + 'charleo-surinan.',
@@ -39436,6 +41002,7 @@ export const MAA_KATEGORIAT = {
               + 'kromaattisen eli kaksirivisen marimban hormigo-puusta. '
               + 'Hänen poikansa esittivät soitinta Buffalossa New Yorkin '
               + 'osavaltiossa 1908, ja niin marimba lähti maailmalle.',
+          lyhyt: 'Kaksirivinen kromaattinen marimba puisine resonaattoreineen, museoesinettä mukaileva kuvitus.',
           selite: 'Kaksirivinen kromaattinen marimba puisine resonaattoreineen — '
             + 'museoesineen rakennetta mukaileva kuvitus.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Smithsonian '
@@ -39454,6 +41021,7 @@ export const MAA_KATEGORIAT = {
               + 'todellisesta kiistasta. Veljeskunnan jäsen Bartolo Sis '
               + 'kirjoitti vuorosanat muistiin 1850, ja Unesco nimesi '
               + 'näytelmän ihmiskunnan mestariteokseksi 2005.',
+          lyhyt: 'Guatemalalainen tun-rumpu, sen H-muotoinen kieliaukko ja kaksi kumipäistä kapulaa, kuvitus.',
           selite: 'Guatemalalainen tun-rumpu, sen H-muotoinen kieliaukko ja '
               + 'kaksi kumipäistä kapulaa — lähteisiin perustuva kuvitus.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: ACEM / MINEDUC '
@@ -39526,6 +41094,7 @@ export const MAA_KATEGORIAT = {
               + 'löydön tiedemaailman tietoon 1884, ja Carnegie-instituutti '
               + 'kaivoi paikan esiin 1941–1942 ja rakensi sen ylle museon. '
               + 'Jälkiä on löydetty vielä neljän metrin syvyydestä.',
+          lyhyt: 'Acahualincan jalanjäljet ovat noin 2 120 vuotta vanhat, säilyneinä Masayan kivettyneen tuhkan alla.',
           selite: 'Acahualincan jalanjäljet ovat noin 2 120 vuotta vanhat, '
               + 'ja ne säilyivät, koska Masayan tuhkakerros kivettyi niiden '
               + 'päälle.',
@@ -39562,6 +41131,7 @@ export const MAA_KATEGORIAT = {
               + 'kompromissin. Pääkaupungiksi se valittiin 1852. Isoisän '
               + 'matkan jälkeisinä vuosina kaupunkia koettelivat suuret '
               + 'tulvat 1876 ja 1885.',
+          lyhyt: 'Managuan katedraali kesti maanjäristyksen 1931, mutta 1972 järistys teki sen käyttökelvottomaksi.',
           selite: 'Managuan vanha katedraali kesti vuoden 1931 '
               + 'maanjäristyksen, koska siitä oli valmiina vasta rautarunko, '
               + 'mutta vuoden 1972 järistys teki siitä käyttökelvottoman.',
@@ -39582,6 +41152,7 @@ export const MAA_KATEGORIAT = {
               + 'espanjaan, mutta lapset kehittivät keskenään oman '
               + 'kielensä. Henkilökunta ei ymmärtänyt sitä ja kutsui '
               + 'kesäkuussa 1986 paikalle kielitieteilijän.',
+          lyhyt: 'Kaksi nicaragualaista nuorta keskustelee viittomakielellä koulun aurinkoisella pihalla, kuvitus.',
           selite: 'Kaksi nicaragualaista nuorta keskustelee '
             + 'viittomakielellä koulun aurinkoisella pihalla — '
             + 'lähteisiin perustuva kuvitus.',
@@ -39676,6 +41247,7 @@ export const MAA_KATEGORIAT = {
               + 'muualla maailmassa: ensimmäinen kuvattiin 1976, kolme '
               + 'lisää 2008 ja kaksi viimeistä vasta 2010. Järvi on ollut '
               + 'suojelualue 1991, ja siitä on kirjattu yli 230 lintulajia.',
+          lyhyt: 'Laguna de Apoyon reunat ovat sammuneen tulivuoren kalderan seinämät, ja järvi on 175 metriä syvä.',
           selite: 'Laguna de Apoyon reunat ovat sammuneen tulivuoren '
               + 'kalderan seinämät, ja järven pohja on 175 metrin syvyydessä.',
           lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
@@ -39720,6 +41292,7 @@ export const MAA_KATEGORIAT = {
               + 'banaaninlehteen, sidotaan narulla tyynymäiseksi mytyksi ja '
               + 'höyrytetään tunteja. Työ vie usein kaksi päivää ja koko '
               + 'perheen.',
+          lyhyt: 'Nacatamal kääritään banaaninlehteen ja sidotaan narulla, joka antaa ruoalle oman tuoksunsa.',
           selite: 'Nacatamal kääritään banaaninlehteen ja sidotaan narulla, '
               + 'ja lehti antaa kypsyessään ruoalle oman tuoksunsa.',
           lahde: 'Arturo Sotillo, Wikimedia Commons (CC BY 2.0)',

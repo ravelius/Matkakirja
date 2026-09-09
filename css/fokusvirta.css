@@ -248,63 +248,147 @@
 /* -------------------------------------------------------------------------
    LUENTAKUVA KARTAN PÄÄLLÄ (js/fokusvirta.js naytaLuentakuva)
    ---------------------------------------------------------------------------
-   Omistaja 9.9.2026: matkakirjan luennan aikana kartan päällä näkyy kuva.
-   Se ei ole kortti eikä kupla — ei rastia, ei nappeja, ei taustaverhoa:
-   sama paperi, sama kuvakehys ja sama kuvatekstirivi kuin kortin kuvilla
-   (.fokusvirta-viite), kevyempänä ja kartan päällä.
+   Omistaja 9.9.2026 klo 13.50 (Raamattu, LUENTAKUVA ISOMPANA, VINOSSA JA
+   ILMAN LAATIKKOA): *"kuva saisi näkyä isompana ainakin tässä
+   työpöytänäkymässä ja kuva saisi näkyä yksinään ilman laatikkoa hieman
+   vinoon käännettynä. kuvan omat ääriviivat riittävät. kuvan alle voisi
+   tehdä oman vaalean laatikon ilman ääriviivoja, missä olisi lyhennetty
+   kuvateksti."*
+
+   EI KEHYSLAATIKKOA. Paneeli itse on läpinäkyvä ja reunukseton: kartalla
+   on kuva ja sen alla erillinen vaalea lappu, ei yhtä laatikkoa jossa
+   molemmat ovat. Kuvan oma paperireuna (.fokusvirta-kuva alla) on ainoa
+   ääriviiva.
+
+   MITAT OVAT MUUTTUJIA, EIVÄT LUKUJA SIELLÄ TÄÄLLÄ. Yksi paikka päättää
+   leveyden, korkeuskaton, kallistuksen ja pienennyksen — työpöytä ja
+   puhelin vaihtavat vain muuttujien arvot:
+
+     --luentakuva-leveys     paneelin leveys (kuva täyttää sen)
+     --luentakuva-korkeus    kuvan korkeuskatto (pystykuva ei karkaa)
+     --luentakuva-kallistus  kierto asteina; js kirjoittaa kaupungin oman
+                             kulman tähän (luentakuvanKallistus)
+     --luentakuva-pienennys  pienen kuvan mittakaava kartan liikkeen jälkeen
+
+   TYÖPÖYTÄ: leveys 38 % näkymästä, katto 640 px (omistaja: kuva oli
+   2000 px:n ruudulla n. 290 px ja liian pieni). PUHELIN: 80 % ruudusta,
+   katto 22 rem — hitusen entistä isompi, mutta kartta näkyy yhä
+   molemmin puolin.
 
    PAIKKA: ankkuri on ALAREUNASSA prosentteina. Matkakirjakortti kasvaa
    ylhäältä alas ja pulun kuplapino alhaalta ylös, joten kuvan paikka on
-   niiden väliin jäävä kaista — kiinteä yläreuna törmäisi pitkään
-   merkintään ja kiinteä alareuna kupliin.
+   niiden väliin jäävä kaista.
 
-   NOUSU JA HÄIPYMINEN ovat pelkkää läpinäkyvyyttä ja pientä siirtoa
-   (.nakyy): vain opacity ja transform liikkuvat, joten kartan rasterointi
-   ei kilpaile animaation kanssa (sama sääntö kuin suurennoksella).
+   NOUSU, KALLISTUS JA PIENENNYS ovat samassa transform-ketjussa
+   (translate → rotate → scale) ja liikkuvat muuttujien kautta, joten
+   vain opacity ja transform animoituvat — kartan rasterointi ei kilpaile
+   animaation kanssa (sama sääntö kuin suurennoksella).
    ------------------------------------------------------------------------- */
 
 .fokusvirta-luentakuva {
+  --luentakuva-leveys: min(80vw, 22rem);
+  --luentakuva-korkeus: min(34vh, 15rem);
+  --luentakuva-kallistus: -2.4deg;
+  --luentakuva-pienennys: 0.45;
+  /* Nousun matka: paneeli ladotaan hieman alempaa ja liukuu paikalleen. */
+  --luentakuva-nousu: 10px;
+  --luentakuva-skaala: 1;
+
   position: absolute;
   left: 50%;
   /* Neljännes ruudun korkeudesta alhaalta: yhden kuplan pino (luennan
      aikainen välihuuto) jää kuvan alapuolelle eikä sen päälle. */
   bottom: 24%;
   z-index: 5;
-  width: min(19rem, calc(100% - 1.2rem));
-  padding: 0.45rem 0.5rem 0.5rem;
-  border-radius: 12px;
-  border: 1px solid rgba(122, 85, 20, 0.32);
-  background: #f5f0e2;
-  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.3);
+  width: var(--luentakuva-leveys);
+  max-width: calc(100% - 1.2rem);
+  /* Kartalla yksinään: ei reunusta, ei pintaa, ei sisennystä. */
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
   color: #211d18;
   text-shadow: none;
   font-family: var(--font-luku);
   opacity: 0;
-  transform: translate(-50%, 10px);
+  /* Kutistuminen tapahtuu ALAREUNAA kohti: pieni kuva jää siihen
+     kaistaan, josta iso lähti, eikä hypähdä ruudun keskelle. */
+  transform-origin: bottom center;
+  transform:
+    translate(-50%, var(--luentakuva-nousu))
+    rotate(var(--luentakuva-kallistus))
+    scale(var(--luentakuva-skaala));
   transition: opacity 400ms ease, transform 400ms ease;
 }
 
 .fokusvirta-luentakuva.nakyy {
+  --luentakuva-nousu: 0px;
   opacity: 1;
-  transform: translate(-50%, 0);
 }
 
-/* Kuvan ikkuna on matalampi kuin kortilla: kuva on kartan päällä eikä
-   saa syödä koko keskikaistaa. */
+/* KARTAN LIIKE JA LUENNAN LOPPU PIENENTÄVÄT (js/fokusvirta.js
+   pienennaLuentakuva). Kuva jää kartalle koko kaupungissaolon ajaksi, ja
+   sen napautus avaa yhä suurennoksen — siksi vain mittakaava muuttuu,
+   ei näkyvyys. */
+.fokusvirta-luentakuva.pieni {
+  --luentakuva-skaala: var(--luentakuva-pienennys);
+}
+
+/* KUVAN OMA PAPERIREUNA on ainoa ääriviiva: ohut kermakaista kuvan
+   ympärillä ja kevyt varjo, kuten kartalle jätetty valokuva. */
+.fokusvirta-luentakuva .fokusvirta-kuva {
+  padding: 0.3rem;
+  border: 0;
+  border-radius: 4px;
+  background: #fbf6ea;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.34);
+}
+
 .fokusvirta-luentakuva .fokusvirta-kuva img {
-  height: min(24vh, 11rem);
+  height: auto;
+  max-height: var(--luentakuva-korkeus);
+  border-radius: 2px;
+  object-fit: cover;
 }
 
-/* Leveällä ruudulla kuva ei kasva ruudun mittaiseksi: kartan pitää näkyä
-   sen molemmin puolin, kuten kortillakin. */
+/* KUVATEKSTI OMASSA VAALEASSA LAATIKOSSAAN, ILMAN ÄÄRIVIIVOJA. Sama
+   seepia/kerma kuin pelin korteilla, pehmeä pyöristys — ja VAIN lyhyt
+   teksti: lähderivi ("Matkakirjan havainnekuva") näkyy vasta
+   suurennoksessa (js/kuvatekstit.js). */
+.fokusvirta-luentakuva .fokusvirta-luentateksti {
+  /* Väli kasvaa leveyden mukana: kallistettu kuva laskeutuu leveällä
+     ruudulla toisesta alakulmastaan alemmas (leveys x tan(kulma) / 2),
+     ja kiinteä väli jättäisi kulman lapun päälle. */
+  margin: calc(0.4rem + var(--luentakuva-leveys) * 0.022) 0 0;
+  padding: 0.4rem 0.6rem;
+  border: 0;
+  border-radius: 10px;
+  background: rgba(245, 240, 226, 0.94);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  font-size: 0.85rem;
+  color: rgba(33, 29, 24, 0.84);
+}
+
+/* Pienessä koossa lappu on lukukelvoton (0,45 × 0,85 rem), joten se
+   häipyy: peukalonkynnen kokoinen valokuva jää kartalle yksin. */
+.fokusvirta-luentakuva.pieni .fokusvirta-luentateksti {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Leveällä ruudulla kuva on selvästi isompi (omistaja 9.9.2026), mutta
+   ei ruudun mittainen: kartan pitää näkyä sen molemmin puolin. */
 @media (min-width: 900px) {
-  .fokusvirta-luentakuva { width: min(24rem, 34%); }
+  .fokusvirta-luentakuva {
+    --luentakuva-leveys: min(38vw, 640px);
+    --luentakuva-korkeus: min(46vh, 26rem);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .fokusvirta-luentakuva {
     transition: none;
-    transform: translate(-50%, 0);
+    --luentakuva-nousu: 0px;
   }
 }
 

@@ -93,6 +93,26 @@ body.paivittyy .app { visibility: hidden; }
   --gap: 0.6rem;
 
   /*
+   * GALLERIOIDEN SELAUSKAISTA (omistaja 9.9.2026 klo 14.15:
+   * *"kaupunkilehden herokuvissa ja muissa vastaavissa gallerioissa on
+   * liian leveä alue mistä kuva siirtyy seuraavaan tai edelliseen
+   * kuvaan. kavenna sitä, jotta kuvan klikkaaminen ja suurentaminen
+   * keskeltä on helpompaa"*).
+   *
+   * Yksi luku kaikille päällekkäisille nuolialueille: lehden kansi- ja
+   * nostogalleria, nähtävyys- ja opaskaruselli, kuvasuurennos
+   * (.arrival-kuva-nuoli) sekä historian hetki ja skandaali
+   * (css/fokusnosto.css .hetki-kuvanuoli/.skandaali-kuvanuoli).
+   * Ennen 32 % ja 30 %; nyt 24 %, jolloin keskiosaa jää 52 % eli yli
+   * puolet — juuri sieltä suurennos avataan.
+   *
+   * SAMA LUKU ON JS:SSÄ (js/galleria.js GALLERIAN_REUNAKAISTA), koska
+   * nuolettomat galleriat (postikorttipino) laskevat vyöhykkeen
+   * osoittimen paikasta. tests/galleria.test.mjs vertaa näitä kahta.
+   */
+  --gallerian-reunakaista: 24%;
+
+  /*
    * LIIKKEEN KÄYRÄT (omistajan linjaus 3.9.2026: *"kaikki kohdat
    * pelissä pyritään animoimaan ja niissä käytetään näitä pehmeitä
    * kiihdytyksiä ja jarrutuksia"*).
@@ -2413,7 +2433,15 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 32%;
+  /*
+   * KAPEA REUNAKAISTA, EI KOLMANNES (omistaja 9.9.2026): leveys tulee
+   * :rootin --gallerian-reunakaista-muuttujasta, jonka pari on
+   * js/galleria.js GALLERIAN_REUNAKAISTA. Varalukua ei kirjoiteta
+   * tähän kahdesti — puuttuva muuttuja jättäisi napin nollan
+   * levyiseksi, ja se näkyisi heti; hiljainen paluu vanhaan 32
+   * prosenttiin ei näkyisi.
+   */
+  width: var(--gallerian-reunakaista);
   height: auto;
   display: flex;
   align-items: center;
@@ -2421,8 +2449,8 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   border-radius: 6px;
   background: transparent;
   box-shadow: none;
-  /* Kosketuslaitteen oma napautusvälähdys pois: nuolialue on kolmannes
-     kuvasta, joten välähdys näkyisi laajana laattana kuvan päällä. */
+  /* Kosketuslaitteen oma napautusvälähdys pois: nuolialue on kuvan
+     reunakaista, joten välähdys näkyisi laattana kuvan päällä. */
   -webkit-tap-highlight-color: transparent;
   color: rgba(255, 250, 240, 0.98);
   text-shadow:
@@ -8151,6 +8179,48 @@ body.flight-active .fact-card {
   animation: card-in 0.32s cubic-bezier(0.2, 1.2, 0.5, 1);
 }
 
+/*
+ * VIERITYSPALKKI EI MUUTA LEHDEN LEVEYTTÄ (omistaja 9.9.2026 klo 14.25,
+ * sanatarkasti: "nyt jos lehteä selaa nuolinäppäimillä niin lehden koko
+ * pomppaa hieman sivun käännön ajaksi. syy on oikeanpuolen
+ * vierityspalkissa joka häviää käännöksen aikana mutta saa samalla
+ * aikaan sivun sisällön leviämisen. voisiko vierityspalkki olla sivun
+ * ulkopuolella tai sitten että se ei häviäisi käännöksen aikana tai sen
+ * häviäminen ei ainakaan muuttaisi lehden sisällön kokoa käännöksen
+ * aikana"; Raamattu: LEHDEN SIVUNKÄÄNTÖ EI SAA POMPAUTTAA SISÄLTÖÄ).
+ *
+ * JUURISYY. Kääntöteatterin kloonit ovat `overflow-y: hidden` (ks.
+ * `.sivunkaanto-sivu .dialog-card` alempana): klooni ei piirrä
+ * vierityspalkkia lainkaan, ja klassisilla palkeilla (työpöytä-Chromium,
+ * Firefox, Windows) palkin 15 px vapautuu tekstille juuri käännön
+ * ajaksi. Mitattu 1600×1000, Lontoon kaupunkilehti: elävän kortin sisus
+ * 943 px, kloonin 958 px — sisältö levisi käännön ajaksi ja kutistui
+ * takaisin, kun teatteri katosi. Sama pomppu uhkasi käännön JÄLKEEN,
+ * jos uusi sivu oli niin lyhyt, ettei elävä kortti enää tarvinnut
+ * palkkia: piirto tapahtuu teatterin alla (js/sivunkaanto.js
+ * valmistele).
+ *
+ * KORJAUS. Palkin tila varataan aina, molemmissa. `scrollbar-gutter:
+ * stable` pätee myös `overflow: hidden` -säiliöön (mitattu Chromiumissa
+ * 9.9.2026: 15 px varattuna kummassakin), joten sama sääntö kattaa
+ * elävän kortin ja kloonin — leveys on sama ennen käännön, sen aikana
+ * ja sen jälkeen (0 px ero).
+ *
+ * SAFARI JA IPAD. Safari ei tunne scrollbar-gutteria ja ohittaa
+ * säännön — eikä tarvitse sitä: sen vierityspalkki on päällekkäinen
+ * (overlay) eikä vie asettelusta tilaa, joten leveys ei pompi siellä
+ * muutenkaan. Sääntö on Chromiumin korjaus, joka ei muuta iPadin
+ * ulkoasua.
+ *
+ * VAIN LEHTI. Sääntö on rajattu saapumislehteen ja sen klooneihin:
+ * muut kortit (laukku, tehtävä, kohtaamiset) eivät käänny, joten
+ * niille varattu kaista olisi turhaa tyhjää oikeassa reunassa.
+ */
+#arrival-dialog > .dialog-card,
+.sivunkaanto-sivu .dialog-card {
+  scrollbar-gutter: stable;
+}
+
 /* Toinen, hieman kiertynyt reunaviiva vahvistaa käsin piirretyn vaikutelman. */
 .dialog-card::before {
   content: "";
@@ -12637,7 +12707,15 @@ button.lukija-nappi.lukee,
   isolation: isolate;
 }
 
-/* Klooni täyttää sivun eikä toista kortin ilmestymisliikettä. */
+/*
+ * Klooni täyttää sivun eikä toista kortin ilmestymisliikettä.
+ *
+ * `overflow-y: hidden` piilottaa palkin, mutta EI saa vapauttaa sen
+ * tilaa tekstille: vierityspalkin kaista varataan kloonillekin
+ * (`scrollbar-gutter: stable`, sääntö `.dialog-card`-lohkon perässä),
+ * jottei sivun leveys pomppaa käännön ajaksi — omistaja 9.9.2026,
+ * Raamattu: LEHDEN SIVUNKÄÄNTÖ EI SAA POMPAUTTAA SISÄLTÖÄ.
+ */
 .sivunkaanto-sivu .dialog-card {
   width: 100% !important;
   max-width: 100% !important;
@@ -21342,6 +21420,75 @@ a.pollo-kasitelinkki:active { color: var(--pollo-muste); }
 @media (prefers-reduced-motion: reduce) {
   .pulu-paikkamerkki,
   .pulu-palaa { transition: none; }
+}
+
+/* ---------------------------------------------------------------------
+   ETSI AARRE -NAPPI KAUPUNGIN LAATAN VIERESSÄ (js/etsi-aarre-nappi.js).
+
+   Omistaja 9.9.2026: *"kun pulun kommentti on tullut, kartalle saisi
+   tulla kaupungin laatan viereen nappi: Etsi aarre, mikä avaisi
+   kaupunkilehden."*
+
+   ANKKURI ON NOLLAN KOKOINEN ja istuu täsmälleen kaupungin kohdalla;
+   skripti kirjoittaa sen transformin joka kehyksellä. Nappi kasvaa
+   ankkurista ALAS OIKEALLE (left/top), jolloin laattaan poltettu nimi ja
+   pisteen osumapinta jäävät sen yläpuolelle — tekstin pituus ei voi
+   siirtää nappia niiden päälle. Siirto ja häivytys ovat eri
+   ominaisuuksia: transformia ei saa siirtää CSS-siirtymällä, koska
+   skripti päivittää sen kehyskohtaisesti.
+   --------------------------------------------------------------------- */
+.etsi-aarre-ankkuri {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+
+.etsi-aarre-ankkuri.nakyy { opacity: 1; }
+/* Kaupunki ajautui ruudun ulkopuolelle: nappi ei saa valehdella paikkaa. */
+.etsi-aarre-ankkuri.hukassa { opacity: 0; pointer-events: none; }
+
+/*
+ * KULTAREUNA, KERMAPOHJA — sama pelin nappityyli kuin kortin "Etsi
+ * kätkö" (.dialog.lehti .arrival-card .dialog-actions button.primary),
+ * mutta kartan päällä pohja on kermaa eikä täyttä kultaa: kultainen
+ * laatikko hukkuisi kartan omiin kultaisiin merkkeihin.
+ */
+.etsi-aarre-nappi {
+  position: absolute;
+  /*
+   * Mitat kaappauksesta (Lontoo pallolaudalla 9.9.2026): laattaan
+   * poltettu nimi kulkee pisteestä oikealle sen omalla rivillään, joten
+   * nappi lasketaan sen ALAPUOLELLE — 0,5 rem jäi nimen kylkeen kiinni.
+   */
+  left: 0.65rem;
+  top: 1rem;
+  min-height: 32px;
+  padding: 0.2rem 0.7rem;
+  border: 1.5px solid #8a6118;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f7ecd2, #ead9ae);
+  color: #2d1f08;
+  font-family: var(--font-otsikko, inherit);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 rgba(255, 245, 220, 0.6);
+  box-shadow: 0 2px 8px rgba(46, 30, 14, 0.28);
+  cursor: pointer;
+}
+
+.etsi-aarre-nappi:hover:not(:disabled) {
+  background: linear-gradient(180deg, #fdf5e2, #f0e2bd);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .etsi-aarre-ankkuri { transition: none; }
 }
 
 /* ---------------------------------------------------------------------

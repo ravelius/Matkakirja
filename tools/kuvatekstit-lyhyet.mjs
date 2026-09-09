@@ -376,7 +376,12 @@ function komentoVie(json) {
     }
     const lisaykset = [];
     for (const era of erat) {
-      const kohde = rivinMukaan.get(era.id) ?? tiivisteet.get(era.tiiviste) ?? null;
+      // Rivinumero kelpaa vain, jos sen kohdalla on SAMA teksti (tiiviste):
+      // aiemmat lisäykset siirtävät rivejä, ja vanha numero voi osua
+      // toisen olion kohdalle. Muuten tiiviste, kun se on yksikäsitteinen.
+      const rivilla = rivinMukaan.get(era.id);
+      const kohde = (rivilla && (!era.tiiviste || rivilla.tiiviste === era.tiiviste))
+        ? rivilla : (tiivisteet.get(era.tiiviste) ?? null);
       if (!kohde) {
         // Idempotenssi: jo lyhennetty kenttä ei ole enää listalla.
         ohitettu += 1;
@@ -390,8 +395,15 @@ function komentoVie(json) {
     lisaykset.sort((a, b) => b.paikka - a.paikka);
     for (const { paikka, lyhyt } of lisaykset) {
       const rivinAlku = lahde.lastIndexOf('\n', paikka - 1) + 1;
-      const sisennys = lahde.slice(rivinAlku, paikka);
-      lahde = `${lahde.slice(0, rivinAlku)}${sisennys}${LYHYT_KENTTA}: ${heittomerkkijono(lyhyt)},\n${lahde.slice(rivinAlku)}`;
+      const edella = lahde.slice(rivinAlku, paikka);
+      if (/^\s*$/.test(edella)) {
+        // Kenttä aloittaa rivin: lyhyt omalle rivilleen samalla sisennyksellä.
+        lahde = `${lahde.slice(0, rivinAlku)}${edella}${LYHYT_KENTTA}: ${heittomerkkijono(lyhyt)},\n${lahde.slice(rivinAlku)}`;
+      } else {
+        // Yksirivinen olio (`kuva: { tiedosto: …, selite: …, lahde: … }`):
+        // lyhyt samalle riville kentän eteen — rivin alkua ei saa toistaa.
+        lahde = `${lahde.slice(0, paikka)}${LYHYT_KENTTA}: ${heittomerkkijono(lyhyt)}, ${lahde.slice(paikka)}`;
+      }
       lisatty += 1;
     }
     writeFileSync(tiedosto, lahde, 'utf8');

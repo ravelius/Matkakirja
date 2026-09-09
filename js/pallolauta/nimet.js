@@ -102,6 +102,7 @@ export function luoNimet({
   let kaupungit = null; // [{ c, lat, lng }] laudan ladontatietue + asteet
   let nimetyt = new Set();
   let laatikot = [];
+  let osumat = [];
   let tulos = { nimia: 0, pudotettu: 0, ehdokkaita: 0 };
 
   /*
@@ -171,6 +172,20 @@ export function luoNimet({
     });
     const datumit = ladottu.nimiot.map((n) => {
       const e = ehdokkaat.find((k) => k.c === n.c);
+      /*
+       * NIMI ON OSA KAUPUNGIN OSUMAPINTAA (omistaja 9.9.2026,
+       * sanatarkasti: *"lisäksi kaupungin nimi saisi olla myös
+       * klikattavaa aluetta"*). Laatikko talletetaan PISTEEN SUHTEEN
+       * (dx0…dy1), koska ladonta ajetaan vain levossa mutta nimi
+       * seuraa pistettään CSS2D:n mukana: osumatesti laskee laatikon
+       * napautuksen hetken ruutupisteestä (`laatikko(p)`), samalla
+       * tavalla kuin noston nimilappu (js/pallolauta/nostot.js
+       * `lappu(p)`).
+       */
+      const r = n.r ?? null;
+      const suhde = r && e ? {
+        dx0: r.x0 - e.x, dy0: r.y0 - e.y, dx1: r.x1 - e.x, dy1: r.y1 - e.y,
+      } : null;
       return {
         avain: `nimi:${n.c.id}`,
         laji: 'nimi',
@@ -185,12 +200,20 @@ export function luoNimet({
         tyylitys: n.tyylitys,
         vali: n.vali,
         laatikko: n.r,
+        // Osumapinta ruutupisteestä p (ks. NIMI ON OSA OSUMAPINTAA).
+        osuma: suhde ? (p) => ({
+          x0: p.x + suhde.dx0, y0: p.y + suhde.dy0, x1: p.x + suhde.dx1, y1: p.y + suhde.dy1,
+        }) : null,
         elementti: nimiElementti,
         asettele: asetteleNimi,
       };
     });
     nimetyt = new Set(datumit.map((d) => d.id));
     laatikot = datumit.map((d) => d.laatikko).filter(Boolean);
+    osumat = datumit.filter((d) => typeof d.osuma === 'function')
+      .map((d) => ({
+        id: d.id, lat: d.lat, lng: d.lng, laatikko: d.osuma,
+      }));
     merkit.aseta('nimet', datumit);
     tulos = { nimia: datumit.length, pudotettu: ladottu.pudotettu, ehdokkaita: ehdokkaat.length };
     return tulos;
@@ -205,6 +228,16 @@ export function luoNimet({
      * väistää. Ladonta itse ei lue tätä eikä muutu tästä.
      */
     laatikot: () => laatikot,
+    /**
+     * OSUMA-API (omistaja 9.9.2026: *"kaupungin nimi saisi olla myös
+     * klikattavaa aluetta"*): ladotut nimet osumatestiä varten,
+     * `[{ id, lat, lng, laatikko(p) }]`. `laatikko(p)` antaa nimen
+     * ruutulaatikon, kun kaupungin piste on ruutupisteessä `p` — sama
+     * muoto kuin noston nimilapulla (js/pallolauta/nostot.js
+     * `lappu(p)`), jotta molemmat kilpailevat samassa vertailussa
+     * (js/pallolauta/lauta.js musteeseenOsunut).
+     */
+    osumat: () => osumat,
     /** Nimettyjen kaupunkien tunnukset (piste vain nimen kanssa). */
     nimetyt: () => nimetyt,
     nimetty: (id) => nimetyt.has(id),

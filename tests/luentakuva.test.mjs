@@ -16,9 +16,15 @@
  *      (`osoite`, `ampari`, `tiedosto`) porrastuvat kuten muualla
  *      talossa (js/fokusvirta.js kuvanOsoite) — uusi kenttä ei saa
  *      alkaa ajautua omaan osoitelogiikkaansa.
- *   3. SELITE JA LÄHDE TULOSTUVAT. CC BY vaatii tekijän maininnan, ja
- *      lähderivi katoaa hiljaa juuri silloin, kun paneeli piirretään
- *      erikseen — siksi se mitataan piirretystä puusta.
+ *   3. KARTALLA ON KUVA JA LYHYT TEKSTI — EI LAATIKKOA EIKÄ LÄHDETTÄ
+ *      (omistaja 9.9.2026 klo 13.50, Raamattu LUENTAKUVA ISOMPANA,
+ *      VINOSSA JA ILMAN LAATIKKOA). Lähderivi on suurennoksen asia, ja
+ *      juuri sellainen sääntö palaa hiljaa takaisin, kun paneelia
+ *      joskus muokataan — siksi sen POISSAOLO mitataan puusta.
+ *   4. KARTAN LIIKE PIENENTÄÄ, EI POISTA. Tämä on omistajan korjaus
+ *      aamun versioon: kuva jää kartalle niin kauan kuin pelaaja on
+ *      samassa kaupungissa, ja vain kaupungista lähtö vie sen. Ero
+ *      näkyy vain tilaluokassa, ei ulkoasussa — testi on ainoa vahti.
  *
  * DOM-osuus ajetaan pienellä omalla puumallilla samaan tapaan kuin
  * tests/lukijanappi.test.mjs ja tests/pollo.test.mjs: Nodessa ei ole
@@ -35,7 +41,8 @@ import assert from 'node:assert/strict';
 
 import {
   fokusvirtaLuentakuva, luentakuvanOsoite, luentakuvanVara,
-  naytaLuentakuva, piilotaLuentakuva,
+  luentakuvanKallistus, naytaLuentakuva, pienennaLuentakuva,
+  piilotaLuentakuva,
 } from '../js/fokusvirta.js';
 import { julisteUrl } from '../js/media.js';
 import { valokuvaUrl, valokuvaVara } from '../js/packs/africa-valokuvat.js';
@@ -78,7 +85,12 @@ class Elementti {
     this.type = '';
     this.decoding = '';
     this.draggable = true;
-    this.style = {};
+    /*
+     * `style.setProperty` on osa mallia, koska paneeli kirjoittaa
+     * kaupungin kallistuskulman css-muuttujaan (js/fokusvirta.js
+     * naytaLuentakuva). Arvot jäävät samaan olioon luettaviksi.
+     */
+    this.style = { setProperty(nimi, arvo) { this[nimi] = String(arvo); } };
   }
 
   get className() { return this.luokat.join(' '); }
@@ -192,6 +204,14 @@ class Elementti {
   }
 }
 
+/*
+ * Dokumentin kuuntelijat ovat OIKEASTI olemassa mallissa: kartan liike
+ * on `pointerdown` dokumentin tasolla (js/fokusvirta.js
+ * kytkeLuentakuvanPienennys), ja juuri se koukku on tämän erän uusi
+ * käytös. Ilman rekisteriä testi ei näkisi sitä lainkaan.
+ */
+const dokumentinKuuntelijat = new Map();
+
 const asiakirja = {
   body: new Elementti('body'),
   createElement: (nimi) => new Elementti(nimi),
@@ -202,9 +222,21 @@ const asiakirja = {
   querySelector: (valitsin) => (valitsin.includes('map-pane')
     ? null : asiakirja.body.querySelector(valitsin)),
   querySelectorAll: (valitsin) => asiakirja.body.querySelectorAll(valitsin),
-  addEventListener: () => {},
-  removeEventListener: () => {},
+  addEventListener: (laji, kasittelija) => {
+    if (!dokumentinKuuntelijat.has(laji)) dokumentinKuuntelijat.set(laji, []);
+    dokumentinKuuntelijat.get(laji).push(kasittelija);
+  },
+  removeEventListener: (laji, kasittelija) => {
+    const lista = dokumentinKuuntelijat.get(laji) ?? [];
+    dokumentinKuuntelijat.set(laji, lista.filter((k) => k !== kasittelija));
+  },
 };
+
+/** Kartan veto: pointerdown, jonka kohde ei ole paneeli eikä suurennos. */
+function kartanVeto(kohde = new Elementti('canvas')) {
+  [...(dokumentinKuuntelijat.get('pointerdown') ?? [])]
+    .forEach((k) => k({ type: 'pointerdown', target: kohde }));
+}
 
 globalThis.document = asiakirja;
 
@@ -220,9 +252,15 @@ globalThis.document = asiakirja;
 const KOEKAUPUNKI = { id: 'sofia', name: 'Sofia' };
 const PAKKI = fokusvirtaKaupungille(KOEKAUPUNKI.id);
 
+/*
+ * Koekuvalla on ERI lyhyt ja pitkä teksti: kartalla näkyy lyhyt,
+ * suurennoksessa pitkä (js/kuvatekstit.js). Jos molemmat olisivat sama
+ * merkkijono, testi ei näkisi kumpaa paneeli oikeasti käyttää.
+ */
 const KOEKUVA = {
   ampari: 'luentakuvat/koe-sofia.jpg',
-  selite: 'Koekuva: torin laita aamulla.',
+  lyhyt: 'Torin laita aamulla.',
+  selite: 'Koekuva: torin laita aamun ensimmäisessä valossa, kojut vielä kiinni.',
   lahde: 'Kuvaaja Koe, Wikimedia Commons (CC BY 4.0)',
 };
 
@@ -297,10 +335,10 @@ test('Commons-tiedosto kulkee median asettajan läpi ja saa varareitin', () => {
 });
 
 /* ---------------------------------------------------------------- */
-/* 3. Paneeli: kuva, selite ja lähde                                 */
+/* 3. Paneeli: kuva ja lyhyt kuvateksti, ei laatikkoa eikä lähdettä  */
 /* ---------------------------------------------------------------- */
 
-test('luentakuva nousee kartan päälle selitteineen ja lähteineen', () => {
+test('luentakuva nousee kartan päälle lyhyen kuvatekstinsä kanssa', () => {
   pakinKanssa(KOEKUVA, () => {
     const ui = tekoUi();
     assert.equal(naytaLuentakuva(ui, KOEKAUPUNKI), true);
@@ -315,15 +353,44 @@ test('luentakuva nousee kartan päälle selitteineen ja lähteineen', () => {
     assert.ok(nappi, 'kuvan pitää olla napautettava');
     const img = nappi.querySelector('img');
     assert.equal(img.getAttribute('src'), julisteUrl(KOEKUVA.ampari));
-    assert.equal(img.alt, KOEKUVA.selite);
+    assert.equal(img.alt, KOEKUVA.lyhyt);
 
-    // Selite ohuena rivinä kuvan alla, lähde sen perässä (CC BY).
-    assert.equal(paneeli.querySelector('.fokusvirta-kuvaselite').textContent, KOEKUVA.selite);
-    assert.equal(paneeli.querySelector('.fokusvirta-kuvalahde').textContent, KOEKUVA.lahde);
+    // Lyhyt kuvateksti omassa laatikossaan kuvan alla.
+    const teksti = paneeli.querySelector('.fokusvirta-luentateksti');
+    assert.ok(teksti, 'lyhyelle kuvatekstille kuuluu oma laatikko');
+    assert.equal(paneeli.querySelector('.fokusvirta-kuvaselite').textContent, KOEKUVA.lyhyt);
+    assert.equal(teksti.textContent, KOEKUVA.lyhyt,
+      'laatikossa ei saa olla muuta kuin lyhyt kuvateksti');
 
     piilotaLuentakuva(ui, { heti: true });
     assert.equal(asiakirja.querySelectorAll('.fokusvirta-luentakuva').length, 0);
     assert.equal(ui.luentakuva, null);
+  });
+});
+
+test('kartalla ei näytetä lähderiviä — se on suurennoksen asia', () => {
+  pakinKanssa({ ...KOEKUVA, lahde: 'Matkakirjan havainnekuva' }, () => {
+    const ui = tekoUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI);
+    assert.equal(ui.luentakuva.querySelectorAll('.fokusvirta-kuvalahde').length, 0,
+      'lähderivi ei kuulu kartalle (omistaja 9.9.2026)');
+    assert.ok(!/havainnekuva/i.test(ui.luentakuva.textContent),
+      'havainnekuvamaininta jää pitkään kuvatekstiin suurennokseen');
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+test('kuva on vinossa: kaupungin oma kulma css-muuttujaan', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = tekoUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI);
+    const kulma = ui.luentakuva.style['--luentakuva-kallistus'];
+    assert.equal(kulma, luentakuvanKallistus(KOEKAUPUNKI.id));
+    const asteet = Number.parseFloat(kulma);
+    assert.ok(asteet <= -1.4 && asteet >= -3.2, `kallistus haarukan ulkona: ${kulma}`);
+    // Deterministinen: sama kaupunki, sama kulma joka kerta.
+    assert.equal(luentakuvanKallistus(KOEKAUPUNKI.id), luentakuvanKallistus(KOEKAUPUNKI.id));
+    piilotaLuentakuva(ui, { heti: true });
   });
 });
 
@@ -337,20 +404,73 @@ test('uusi luenta ei jätä kahta paneelia päällekkäin', () => {
   });
 });
 
-test('havainnekuvan lähderivi saa selitepainikkeen kuten muuallakin', () => {
-  pakinKanssa({ ...KOEKUVA, lahde: 'Matkakirjan havainnekuva' }, () => {
+/* ---------------------------------------------------------------- */
+/* 4. Kartan liike pienentää, kaupungista lähtö poistaa             */
+/* ---------------------------------------------------------------- */
+
+test('kartan veto pienentää kuvan eikä poista sitä', () => {
+  pakinKanssa(KOEKUVA, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
-    const lahde = ui.luentakuva.querySelector('.fokusvirta-kuvalahde');
-    assert.equal(lahde.textContent, 'Matkakirjan havainnekuva');
-    assert.ok(lahde.querySelector('.havainnekuva-selite'),
-      'havainnekuvaselite kulkee saman apurin kautta kuin kortilla');
+    const paneeli = ui.luentakuva;
+    assert.ok(!paneeli.classList.contains('pieni'), 'kuva nousee isona');
+
+    kartanVeto();
+
+    assert.equal(ui.luentakuva, paneeli, 'kuva jää kartalle kartan liikkeestä');
+    assert.equal(asiakirja.querySelectorAll('.fokusvirta-luentakuva').length, 1);
+    assert.ok(paneeli.classList.contains('pieni'), 'kuvan pitää pienentyä');
+    // Kuva on yhä napissa: pienen kuvan napautus avaa suurennoksen.
+    assert.ok(paneeli.querySelector('.fokusvirta-kuva'));
+
+    // Toinen veto ei tee mitään uutta.
+    assert.equal(pienennaLuentakuva(ui), false);
+    assert.equal(ui.luentakuva, paneeli);
+
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+test('napautus kuvaan itseensä ei pienennä (se avaa suurennoksen)', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = tekoUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI);
+    kartanVeto(ui.luentakuva.querySelector('.fokusvirta-kuva'));
+    assert.ok(!ui.luentakuva.classList.contains('pieni'));
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+test('kaupungista lähtö poistaa kuvan myös pienennettynä', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = tekoUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI);
+    kartanVeto();
+    assert.ok(ui.luentakuva.classList.contains('pieni'));
+
+    // vaiennaLivianKaupunkipuhe tekee juuri tämän kaupungista
+    // lähdettäessä.
+    piilotaLuentakuva(ui, { heti: true });
+    assert.equal(ui.luentakuva, null);
+    assert.equal(asiakirja.querySelectorAll('.fokusvirta-luentakuva').length, 0);
+  });
+});
+
+test('paluu samaan kaupunkiin nostaa ison kuvan uudelleen', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = tekoUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI);
+    kartanVeto();
+    piilotaLuentakuva(ui, { heti: true });
+
+    naytaLuentakuva(ui, KOEKAUPUNKI);
+    assert.ok(!ui.luentakuva.classList.contains('pieni'), 'uusi luenta alkaa isolla');
     piilotaLuentakuva(ui, { heti: true });
   });
 });
 
 /* ---------------------------------------------------------------- */
-/* 4. Tuotantodata: kenttä on vapaaehtoinen ja oikean muotoinen      */
+/* 5. Tuotantodata: kenttä on vapaaehtoinen ja oikean muotoinen      */
 /* ---------------------------------------------------------------- */
 
 test('jokaisella pakin luentakuvalla on osoite, selite ja lähde', async () => {

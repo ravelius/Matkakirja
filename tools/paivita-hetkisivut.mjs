@@ -114,6 +114,9 @@ function kuvaLohko(sisennys, hetki, kuva) {
   const rivit = [];
   rivit.push(...kentta(sisennys, 'otsikko', hetki.otsikko));
   rivit.push(`${' '.repeat(sisennys)}osoite: ${hipsuissa(kuva.osoite)},`);
+  // Lyhyt kuvateksti (Raamattu 9.9.2026: lyhyt sivulla, pitkä avatussa
+  // kuvassa) kulkee pakasta sivulle samaa tietä kuin pitkä.
+  if (kuva.lyhyt) rivit.push(...kentta(sisennys, 'lyhyt', kuva.lyhyt));
   rivit.push(...kentta(sisennys, 'selite', kuva.kuvateksti));
   rivit.push(...kentta(sisennys, 'lahde', kuva.lahde));
   return rivit;
@@ -154,6 +157,7 @@ export function sivunLahde(hetki) {
   r.push("          leveys: 'taysi',");
   r.push(`          osoite: ${hipsuissa(paakuva.osoite)},`);
   r.push(...kentta(10, 'teksti', hetki.teksti));
+  if (paakuva.lyhyt) r.push(...kentta(10, 'lyhyt', paakuva.lyhyt));
   r.push(...kentta(10, 'selite', paakuva.kuvateksti));
   r.push(...kentta(10, 'lahde', paakuva.lahde));
   if (loput.length) {

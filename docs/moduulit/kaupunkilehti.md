@@ -209,6 +209,24 @@ parametrilla. Kirjasto (page-flip 2.0.7, MIT) tulee ämpärin
 localStorage `matkakirja-sivunkaanto` = `0`) sivu liukuu kuten ennen.
 Vartijat: `tests/sivunkaanto.test.mjs`, `tools/savukkeet/savuke-sivunkaanto.mjs`.
 
+**Vierityspalkki ei muuta sivun leveyttä** (omistaja 9.9.2026,
+sanatarkasti: *"lehden koko pomppaa hieman sivun käännön ajaksi. syy on
+oikeanpuolen vierityspalkissa joka häviää käännöksen aikana mutta saa
+samalla aikaan sivun sisällön leviämisen"*; Raamattu: LEHDEN
+SIVUNKÄÄNTÖ EI SAA POMPAUTTAA SISÄLTÖÄ). Teatterin kloonit ovat
+`overflow-y: hidden`, joten ne eivät piirrä vierityspalkkia — ja
+klassisilla palkeilla (työpöytä-Chromium, Firefox, Windows) palkin
+15 px vapautui tekstille juuri käännön ajaksi. Mitattu 1600×1000,
+Lontoon lehti: elävän kortin sisus 943 px, kloonin 958 px. Korjaus:
+`#arrival-dialog > .dialog-card` ja `.sivunkaanto-sivu .dialog-card`
+saavat `scrollbar-gutter: stable`, joka varaa kaistan myös
+`overflow: hidden` -säiliössä — leveys on sama ennen kääntöä, sen
+aikana ja sen jälkeen (0 px). Safari ohittaa säännön eikä tarvitse
+sitä: sen overlay-palkki ei vie asettelusta tilaa. Vartija:
+`tools/savukkeet/savuke-lehden-kaanto.mjs` (aja näytöllisenä,
+`xvfb-run -a`, jotta palkit ovat klassiset) ja sääntötesti
+`tests/sivunkaanto.test.mjs`.
+
 ## Kuvat
 
 - Commons-tiedosto, leveys ≥ 1200 px, lisenssi PD/CC0/CC BY/CC BY-SA,
@@ -217,6 +235,15 @@ Vartijat: `tests/sivunkaanto.test.mjs`, `tools/savukkeet/savuke-sivunkaanto.mjs`
   lisenssiin `(PD)`, ei `(public domain)`. Lisenssi käskee nimetä tekijän.
 - Kuvat päätyvät R2-peiliin itsestään: push mainiin käynnistää
   `.github/workflows/peilaa.yml`:n, joka peilaa uudet viittaukset.
+- **Selauskaistat (omistaja 9.9.2026):** herokuvan ja kansikuvien
+  karusellissa edellinen/seuraava on vain kapea reunakaista, 24 % kuvan
+  leveydestä kummallakin puolella; keskimmäinen 52 % avaa suurennoksen.
+  Luku asuu YHDESSÄ paikassa: `js/galleria.js` `GALLERIAN_REUNAKAISTA`
+  ja sen CSS-pari `--gallerian-reunakaista` (css/styles.css `:root`).
+  Nuolialueiden leveyttä ei kirjoiteta tyyleihin lukuna — `width:
+  var(--gallerian-reunakaista)` — eikä vyöhykettä lasketa käsin, vaan
+  `gallerianVyohyke()`-apurilla. Pyyhkäisy ja nuolinapit toimivat kuten
+  ennen. Vartija: `tests/galleria.test.mjs`.
 
 ### Kuvien sietokyky: r2.dev rajoittaa pyyntöjä (429), 6.9.2026
 

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1711';
+const CACHE = 'matkakirja-2026-08-09.1712';
 const SHELL = [
   './',
   './index.html',
@@ -50,6 +50,8 @@ const SHELL = [
   './js/nahtavyydet.js',
   './js/kuvagalleria.js',
   './js/kuvatekstit.js',
+  // Gallerioiden selauskaistat (omistaja 9.9.2026): ui.js tuo staattisesti.
+  './js/galleria.js',
   './js/kohtaamiskuvat-data.js',
   './js/kohtaamiskuvat.js',
   './js/opas.js',
@@ -67,6 +69,8 @@ const SHELL = [
   // Kehittäjän kohtaamislista (5.9.2026): ui.js tuo sen staattisesti.
   './js/kohtaamistesti.js',
   './js/fokusvirta.js',
+  // Kartan "Etsi aarre" -nappi (9.9.2026): fokusvirta tuo sen staattisesti.
+  './js/etsi-aarre-nappi.js',
   './js/fokusniput.js',
   './js/fokuskohteet.js',
   './js/fokuspiste.js',
@@ -590,6 +594,7 @@ const SHELL = [
    * toimittaa sen (js/packs/etusivun-isoisakuvat.js).
    */
   './assets/etusivu/reitti/lontoo.jpg',
+  './assets/etusivu/reitti/pariisi.jpg',
   './assets/etusivu/reitti/kairo.jpg',
   './assets/etusivu/reitti/mumbai.jpg',
   './assets/etusivu/reitti/kolkata.jpg',
