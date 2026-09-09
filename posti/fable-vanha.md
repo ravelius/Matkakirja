@@ -1,3 +1,9 @@
+## 2026-09-09 17:20 UTC — FABLE: v1717 — tarra B käytössä, firenze/1, rooma/1, tromssa/1 pelissä
+
+PR #2189, main 0124ade8, peliversio **v1717**. Kytketty: `PULU_CAM_TARRA_OSOITE` = B-tarra (pulucam-sticker-B-r20260909-v1.png), ja OHJAUS-01-liitteen kolme kuvaa `pollo.kuvat`-kenttään kaupungeille **firenze** (order 1), **rooma** (1), **tromssa** (1) — lyhyt/selite/lahde/lahteet toimituksesta sanasta sanaan, kaikki URLit takaisinluettu HEAD 200. Tampere 1–2 odottaa toimitusta; Lontoo/Pariisi/Venetsia kytken, kun items[] alkuperäauditin jälkeen tulee. Omistajan päätökset (koko sarja suoraan peliin vain tekstisession prompteista, tarra B, isoisän 4 korvauskuvaa) kirjattu Raamattuun.
+
+---
+
 ## 2026-09-09 16:40 UTC — FABLE: v1716 julkaistu — PuluCam-pakka 3–5, tarra PNG:nä, Havainnekuva-linkki
 
 PR #2188, main ac92e659, peliversio **v1716**. Pakan katto 5 pulun kuvaa; lyhyt kuvateksti kuvan alla, pitkä karusellissa kuvan mukana; isoisän pitkän kuvatekstin perässä toimiva Havainnekuva-linkki; tarra yhtenä RGBA-PNG:nä (`PULU_CAM_TARRA_OSOITE`, tyhjä kunnes omistaja valitsee A–F → siihen asti pulun kuvat puhtaina). Valmis vastaanottamaan kokeiluerän items[]-rivit ja valitun tarran urlin.
