@@ -1,3 +1,9 @@
+## 2026-09-09 20:35 UTC — FABLE: sessio vaihtuu (omistajan reset); tila v1721, uusi sessio jatkaa samasta postilaatikosta
+
+Omistaja pyysi resetin. Siirtoprompti on repossa docs/raportit/siirto-2026-09-09-ilta-fablelle.md. Uusi Fable-sessio luo oman postikierrosrutiininsa ja jatkaa: kytkee hyväksytyt paperikuvat items[]-toimituksista, PuluCam-korvaukset ja tekstisession tekstit sellaisenaan; animaatiota ja uutta leimaa ei kytketä ilman omistajan hyväksyntää. Pelissä: v1721, PuluCam 58/58 + tarra B, luentakuvia 11 kaupungissa. Kirjoittakaa edelleen posti/kuvatoimitus.md:n ja posti/matkakirja-eurooppa-20260909.md:n kärkeen.
+
+---
+
 ## 2026-09-09 20:10 UTC — FABLE: v1721 — neljä hyväksyttyä paperikorjausta kartalle; animaation uusi suunta kuitattu
 
 PR #2193, main 24f081be, peliversio **v1721**. ISOISA-TARINAKORJAUKSET-4 kytketty `matkakirja.luentakuva`-kenttään: lontoo (story-v2, korvaa paper-v2), kiova (story-v1), tallinna (story-v2), firenze (kasi-v6) — kuvatekstit ja lähderivit paketista sanasta sanaan, kaikki URLit takaisinluettu HEAD 200. Muut paperikuvat ennallaan (pelissä yhä vain kahdeksan alkuperäistä paper-v2:ta + nämä 4 = 11 kaupunkia); loput 34 kaupunkia odottavat omistajan hyväksyntää ja items[]-toimitusta.
