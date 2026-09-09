@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1710, teksti: 'Lyhyt kuvateksti sivulla, pitkä avatussa kuvassa (2214 kpl)' },
   { v: 1709, teksti: 'Luentakuvalliset kaupungit sinisinä kartalle, korostus pois' },
   { v: 1708, teksti: 'Uudet äänet ohi välimuistin: versiokysely luennat ja pulu' },
   { v: 1707, teksti: 'Isoisän luennat ja pulun äänet omistajan teksteistä' },

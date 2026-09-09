@@ -100,6 +100,7 @@ export const FOKUSKOHTEET_IRN = [
      */
     kuva: {
       tiedosto: 'Persepolis - Apadana 01.jpg',
+      lyhyt: 'Apadanan säilyneet pylväät Persepoliksen terassilla kannattelevat katon palon jälkeen vain taivasta.',
       selite: 'Apadanan säilyneitä pylväitä Persepoliksen terassilla. '
         + 'Katon palon jälkeen ne ovat kannatelleet vain taivasta.',
       lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
@@ -109,6 +110,7 @@ export const FOKUSKOHTEET_IRN = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-persepolis.webp',
       kadonnut: false,
+      lyhyt: 'Apadanan vastaanottosalissa oli 72 pylvästä; katto paloi 331 eaa., ja nyt niitä seisoo neljätoista.',
       selite: 'Apadana oli suurkuninkaan vastaanottosali: kattoa '
         + 'kannatti 72 pylvästä, jokainen '
         + 'kaksikymmentäneljä metriä korkea, ja saliin noustiin kahta '

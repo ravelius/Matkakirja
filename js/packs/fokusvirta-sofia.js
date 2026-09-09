@@ -318,6 +318,7 @@ export const FOKUSVIRTA_SOFIA = {
     aanite: 'assets/audio/puhe-fokus-matkakirja-sofia.mp3',
     kuva: {
       tiedosto: 'BASA-713K-1-52-4-Vasil Levski.JPG',
+      lyhyt: 'Vasil Levski, Vapauden apostoli, hirtettiin Sofiassa 18. helmikuuta 1873.',
       selite: 'Vasil Levski. Bulgarialaiset kutsuvat häntä Vapauden '
         + 'apostoliksi; hänet hirtettiin Sofiassa 18. helmikuuta 1873.',
       lahde: 'Tuntematon kuvaaja, Bulgarian kansallinen arkisto, '
@@ -435,6 +436,7 @@ export const FOKUSVIRTA_SOFIA = {
      */
     kuva: {
       tiedosto: 'Monument-to-Vasil-Levski.jpg',
+      lyhyt: 'Vasil Levskin muistomerkki seisoo teloituspaikalla, 13 metriä korkea balkanilaista graniittia.',
       selite: 'Vasil Levskin muistomerkki Sofiassa. Se seisoo '
         + 'teloituspaikalla ja on 13 metriä korkea, harmaata balkanilaista '
         + 'graniittia.',
@@ -592,6 +594,7 @@ export const FOKUSVIRTA_SOFIA = {
        */
       kuva: {
         tiedosto: 'Sofia statue, Sofia (P1070773).jpg',
+        lyhyt: 'Sofia-patsas Nezavisimost-aukiolla on kahdeksan metriä korkea kuparihahmo 16 metrin jalustalla.',
         selite: 'Sofia-patsas Nezavisimost-aukiolla. Kuparinen hahmo on '
           + 'kahdeksan metriä korkea ja seisoo 16 metrin jalustalla.',
         lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',

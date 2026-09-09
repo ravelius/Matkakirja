@@ -60,6 +60,7 @@ export const FOKUSVIRTA_SISILIA = {
      */
     kuva: {
       ampari: 'herokoe/hero-sisilia-ilta.jpg',
+      lyhyt: 'Monrealen katedraali rakennettiin 1170-luvulla normannien, arabien ja bysanttilaisten käsityönä.',
       selite: 'Monrealen katedraali rakennettiin 1170-luvulla normannien, '
         + 'arabien ja bysanttilaisten käsityönä; vieressä avautuu '
         + 'ristikäytävän puutarha.',

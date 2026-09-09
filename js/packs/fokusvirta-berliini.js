@@ -150,6 +150,7 @@ export const FOKUSVIRTA_BERLIINI = {
       + 'Katso ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-berliini-keskipaiva.png',
+      lyhyt: 'Valtiopäivätalo valmistui 1894; Fosterin lasikupoli nousi katolle 1999 istuntosalin yläpuolelle.',
       selite: 'Valtiopäivätalo valmistui 1894, ja Norman Fosterin '
         + 'lasikupoli nousi sen katolle 1999 — kävijät kiertävät '
         + 'spiraaliramppia istuntosalin yläpuolella.',
@@ -208,6 +209,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-voitonpylvas-loistoaika.webp',
+        lyhyt: 'Voitonpylvään vihkiäiset Königsplatzilla: kullattu Victoria harjalla, sotaväkeä ja juhlayleisöä.',
         selite: 'Voitonpylvään vihkiäiset Königsplatzilla: kullattu '
           + 'Victoria harjalla, sotaväkeä rivissä ja juhlayleisöä koko '
           + 'kentän ympärillä.',
@@ -224,6 +226,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       valokuva: {
         tiedosto: 'Einweihung Siegessaeule Berlin.jpg',
+        lyhyt: 'Voitonpylvään vihkiäiset 2.9.1873; pylväs seisoo vielä alkuperäisellä paikallaan Königsplatzilla.',
         selite: 'Voitonpylvään vihkiäiset 2. syyskuuta 1873. Kuvassa '
           + 'pylväs seisoo vielä alkuperäisellä paikallaan '
           + 'Königsplatzilla.',
@@ -281,6 +284,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       kuva: {
         tiedosto: 'Canalisation von Berlin. Blatt 10.png',
+        lyhyt: 'Lehti Hobrechtin viemäriatlaksesta 1884: mallikuva berliiniläisen vuokratalon viemäröinnistä.',
         selite: 'Lehti Hobrechtin omasta viemäriatlaksesta vuodelta '
           + '1884: mallikuva berliiniläisen vuokratalon viemäröinnistä.',
         lahde: 'James Hobrecht 1884, Wikimedia Commons (public domain)',
@@ -406,6 +410,7 @@ export const FOKUSVIRTA_BERLIINI = {
      */
     kuva: {
       tiedosto: 'NHP 1879 Berlin Sternwarte Nordseite Tafel VI.jpg',
+      lyhyt: 'Berliinin kuninkaallinen tähtitorni pohjoisesta, piirros isoisän ajoilta; talo purettiin 1913.',
       selite: 'Berliinin kuninkaallinen tähtitorni pohjoisesta '
         + 'nähtynä, piirros isoisän ajoilta. Talo purettiin 1913.',
       lahde: 'Trigonometrische Abteilung der Landesaufnahme 1880, '
@@ -638,6 +643,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-archaeopteryx-loistoaika.webp',
+        lyhyt: 'Archaeopteryx lii​tää matalan laguunin yllä, siivissa kynnet ja pitkä höyhenhäntä.',
         selite: 'Archaeopteryx liitämässä matalan laguunin yllä: siivissä '
           + 'kynnet ja perässä pitkä höyhenpeitteinen häntä.',
         lahde: 'Matkakirjan havainnekuva: eläin jurakauden laguunilla',

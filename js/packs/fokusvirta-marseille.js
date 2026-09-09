@@ -233,6 +233,7 @@ export const FOKUSVIRTA_MARSEILLE = {
      */
     kuva: {
       ampari: 'herokoe/hero-marseille-aamu.jpg',
+      lyhyt: 'MuCEM avattiin 2013; kävelysilta yhdistää sen Ludvig XIV:n 1660 rakennuttamaan Fort Saint-Jeaniin.',
       selite: 'MuCEM eli Euroopan ja Välimeren sivilisaatioiden museo '
         + 'avattiin 7. kesäkuuta 2013, ja kävelysilta yhdistää sen Ludvig '
         + 'XIV:n vuonna 1660 rakennuttamaan Fort Saint-Jeaniin.',
@@ -342,6 +343,7 @@ export const FOKUSVIRTA_MARSEILLE = {
        */
       kuva: {
         tiedosto: 'Cap-Morgiou.jpg',
+        lyhyt: 'Cap Morgiou ja Triperien lahti: Cosquerin luolan ainoa sisäänkäynti aukeaa 37 metrin syvyydessä.',
         selite: 'Cap Morgiou ja Triperien kalliolahti Marseillen '
           + 'edustalla: Cosquerin luolan ainoa sisäänkäynti aukeaa tämän '
           + 'veden alla 37 metrin syvyydessä.',
@@ -452,6 +454,7 @@ export const FOKUSVIRTA_MARSEILLE = {
        */
       kuva: {
         tiedosto: 'Aqueduc de Roquefavour 2013.JPG',
+        lyhyt: 'Roquefavourin akvedukti kuljettaa Durance-vettä Arc-laakson yli, maailman korkein kiviakvedukti.',
         selite: 'Roquefavourin akvedukti kantaa Durance-joen vettä '
           + 'Marseilleen Arc-joen laakson yli, ja se on kolmine '
           + 'kerroksineen maailman korkein kiviakvedukti.',
@@ -566,6 +569,7 @@ export const FOKUSVIRTA_MARSEILLE = {
        */
       kuva: {
         tiedosto: 'Marseille Basilique Notre-Dame-de-la-Garde Intérieure Nef Ex-Voto.jpg',
+        lyhyt: 'Notre-Dame de la Garden seinä täynnä merimiesten kiitoslahjoja, alla marmoriset kiitoslaatat.',
         selite: 'Notre-Dame de la Garden seinä on täynnä merimiesten '
           + 'kiitoslahjoja: pieniä maalauksia myrskyistä ja '
           + 'haaksirikoista, alla marmoriset kiitoslaatat.',
@@ -693,6 +697,7 @@ export const FOKUSVIRTA_MARSEILLE = {
      */
     kuva: {
       tiedosto: 'L\'inauguration du canal de Suez, 17 November 1869 Gal18 riou 001f.jpg',
+      lyhyt: 'Suezin kanavan avajaiset Port Saidissa 17.11.1869 Édouard Riou\'n aikalaiskuvassa.',
       selite: 'Suezin kanavan avajaiset Port Saidissa 17. marraskuuta '
         + '1869 Édouard Riou\'n aikalaiskuvassa; taustalla vieraiden '
         + 'laivojen mastot.',

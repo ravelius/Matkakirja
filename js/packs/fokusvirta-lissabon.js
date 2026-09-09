@@ -190,6 +190,7 @@ export const FOKUSVIRTA_LISSABON = {
      */
     kuva: {
       ampari: 'herokoe/hero-lissabon-aamu.png',
+      lyhyt: 'Belémin torni valmistui 1519 vartioimaan Tejon suuta, nelikerroksisena ja tykkibastionilla.',
       selite: 'Belémin torni valmistui 1519 vartioimaan Tejon suuta: '
         + 'nelikerroksinen torni nousee 30 metriin, ja sen bastionin '
         + 'ampuma-aukoista mahtui tulittamaan seitsemäntoista tykkiä.',
@@ -281,6 +282,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: 'Americana 1920 Libraries - Bibliotheca Nacional Rio de Janeiro.jpg',
+        lyhyt: 'Brasilian kansalliskirjasto perustuu Portugalin kirjastoon, tuotu Atlantin yli 1810–11.',
         selite: 'Brasilian kansalliskirjasto Rio de Janeirossa. Sen '
           + 'perustan muodostaa Portugalin kuninkaallinen kirjasto, joka '
           + 'tuotiin Atlantin yli vuosina 1810 ja 1811.',
@@ -465,6 +467,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: 'Maria Severa - Fado-Sängerin.jpg',
+        lyhyt: 'Maria Severa (1820–1846) oli ensimmäinen fadolaulaja, kuolemansa jälkeen myyttinen hahmo.',
         selite: 'Maria Severa (1820–1846) oli ensimmäinen maineeseen '
           + 'noussut fadolaulaja, ja hänestä tuli kuolemansa jälkeen lähes '
           + 'myyttinen hahmo.',
@@ -580,6 +583,7 @@ export const FOKUSVIRTA_LISSABON = {
      */
     kuva: {
       tiedosto: '1755 Lisbon earthquake.jpg',
+      lyhyt: 'Vuoden 1755 kuparipiirros näyttää palavan kaupungin ja hyykyäallon, joka kaataa laivat Tejolla.',
       selite: 'Samana vuonna 1755 tehty kuparipiirros näyttää palavan '
         + 'kaupungin ja hyökyaallon, joka kaataa laivat Tejolla.',
       lahde: 'Tuntematon tekijä 1755, Wikimedia Commons (public domain)',
@@ -813,6 +817,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: 'Biblioteca Joanina Universidade de Coimbra IMG 0664.JPG',
+        lyhyt: 'Joanina-kirjaston sali Coimbrassa: kullatut tammihyllyt ja kuningas João V:n muotokuva keskellä.',
         selite: 'Joanina-kirjaston sali Coimbran yliopistossa: kullatut '
           + 'tammihyllyt kahdessa kerroksessa ja keskellä perustajan, '
           + 'kuningas João V:n, muotokuva.',
@@ -897,6 +902,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: 'Mysovskiy Sergey surfing Nazare.jpg',
+        lyhyt: 'Nazarén Praia do Norten aallot nousevat merenalaisen kanjonin päällä korkeimmiksi Portugalissa.',
         selite: 'Nazarén Praia do Norten aallot nousevat merenalaisen '
           + 'kanjonin päällä korkeammiksi kuin missään muualla Portugalin '
           + 'rannikolla.',
@@ -986,6 +992,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: 'Exploring the Azulejo-Adorned Grand Hall of São Bento Station (55248917165).jpg',
+        lyhyt: 'São Benton aseman odotushallin seinällä on noin 20 000 azulejo-laattaa, 551 neliömetriä.',
         selite: 'São Benton aseman odotushallin seinillä on noin 20 000 '
           + 'azulejo-laattaa, jotka peittävät 551 neliömetriä.',
         lahde: 'Michael Gaylard, Wikimedia Commons (CC BY 4.0)',
@@ -1082,6 +1089,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: '09-06-2017 Harvested cork, Foz do Ribeiro, São Bartolomeu de Messines (1).JPG',
+        lyhyt: 'Irrotettua korkkikuorta Algarvessa; kuori irrotetaan käsin kirveellä rungon vaurioittamatta.',
         selite: 'Irrotettua korkkikuorta pinossa Algarvessa. Kuori '
           + 'irrotetaan käsin kirveellä, jottei rungon alla oleva kerros '
           + 'vaurioidu.',

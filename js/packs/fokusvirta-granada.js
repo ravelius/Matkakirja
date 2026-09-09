@@ -272,6 +272,7 @@ export const FOKUSVIRTA_GRANADA = {
      */
     kuva: {
       ampari: 'herokoe/hero-granada-ilta.jpg',
+      lyhyt: 'Corral del Carbón on 1300-luvulta säilynyt kauppiaiden funduq, ainoa nasridiajalta koko Iberiassa.',
       selite: 'Corral del Carbón on 1300-luvun alkupuolelta säilynyt '
         + 'funduq eli kauppiaiden majatalo ja viljavarasto — ainoa '
         + 'nasridiajalta säilynyt lajissaan koko Iberian niemimaalla.',
@@ -388,6 +389,7 @@ export const FOKUSVIRTA_GRANADA = {
        */
       kuva: {
         tiedosto: 'David Roberts - The Fortress of the Alhambra, Granada - 1967.72 - Fogg Museum.jpg',
+        lyhyt: 'David Robertsin maalaus 1836: linnoitus kukkulallaan, lumihuiput takana, kaupunki alla.',
         selite: 'David Robertsin maalaus vuodelta 1836, neljä vuotta '
           + 'Irvingin kirjan jälkeen: linnoitus kukkulallaan, lumiset '
           + 'huiput takana ja kaupunki sen alla.',
@@ -509,6 +511,7 @@ export const FOKUSVIRTA_GRANADA = {
        */
       kuva: {
         tiedosto: 'Granada - La Alcaicería 1.jpg',
+        lyhyt: 'Alcaicerían holvikäytävä: kipsikaaret ovat vuoden 1843 palon jälkeistä uusarabialaista työtä.',
         selite: 'Alcaicerían holvikäytävä: kipsikaaret ja koristelu ovat '
           + 'vuoden 1843 palon jälkeistä uusarabialaista työtä, eivät '
           + 'silkkitorin omaa.',
@@ -637,6 +640,7 @@ export const FOKUSVIRTA_GRANADA = {
        */
       kuva: {
         tiedosto: 'Granada- View into the lion court of the Alhambra (SM stf113).png',
+        lyhyt: 'Jean Laurentin vedos noin 1865: paviljongin pallomainen kupoli purettiin vasta 1934.',
         selite: 'Jean Laurentin vedos noin vuodelta 1865: pihan perällä '
           + 'olevan paviljongin päällä on pallomainen kupoli, joka '
           + 'purettiin vasta 1934.',
@@ -771,6 +775,7 @@ export const FOKUSVIRTA_GRANADA = {
      */
     kuva: {
       tiedosto: 'Torre de las Infantas, exterior, Murallas de la Medina de la Alhambra 06.jpg',
+      lyhyt: 'Torre de las Infantas ja kehämuuri: rapatun tornin vieressä muurin sullotun maan kerrokset näkyvät.',
       selite: 'Torre de las Infantas ja sen molemmin puolin kehämuuri: '
         + 'rapatun tornin vieressä muurin paljas pinta näyttää sullotun '
         + 'maan vaakakerrokset ja värin.',

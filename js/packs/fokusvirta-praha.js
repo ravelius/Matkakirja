@@ -205,6 +205,7 @@ export const FOKUSVIRTA_PRAHA = {
      */
     kuva: {
       ampari: 'herokoe/hero-praha-kaarlensilta-linna.jpg',
+      lyhyt: 'Kaarlensillan peruskivi 1357; Vltavan ainoa kiinteä ylitys Prahassa aina 1840-luvulle asti.',
       selite: 'Kaarlensillan peruskivi laskettiin vuonna 1357 ja silta '
         + 'valmistui 1400-luvun alussa; se oli Vltavan ainoa kiinteä '
         + 'ylitys Prahassa aina 1840-luvulle asti.',
@@ -281,6 +282,7 @@ export const FOKUSVIRTA_PRAHA = {
        */
       kuva: {
         tiedosto: "Tycho Brahe's Tomb.jpg",
+        lyhyt: 'Tycho Brahen hautakivi Tynin kirkossa Prahan Vanhankaupungin torilla, lähellä astronomista kelloa.',
         selite: 'Tycho Brahen hautakivi Tynin kirkossa Prahan '
           + 'Vanhankaupungin torilla, muutaman askeleen päässä '
           + 'astronomisesta kellosta.',
@@ -369,6 +371,7 @@ export const FOKUSVIRTA_PRAHA = {
        */
       kuva: {
         tiedosto: 'Clementinum baroque library 2.jpg',
+        lyhyt: 'Klementinumin barokkikirjaston sali valmistui vuosien 1709 ja 1726 välillä.',
         selite: 'Klementinumin barokkikirjaston sali, joka valmistui '
           + 'vuosien 1709 ja 1726 välisessä rakennusvaiheessa.',
         lahde: 'Václav Jiroušek, Wikimedia Commons (CC BY-SA 4.0)',
@@ -454,6 +457,7 @@ export const FOKUSVIRTA_PRAHA = {
        */
       kuva: {
         tiedosto: 'Przewalskis horses exposition, Zoo Prague.jpg',
+        lyhyt: 'Przewalskin hevosia Prahan eläintarhassa; kaikki nykyiset polveutuvat eläintarhojen hevosista.',
         selite: 'Przewalskin hevosia Prahan eläintarhassa. Kaikki '
           + 'nykyiset yksilöt polveutuvat kourallisesta eläintarhojen '
           + 'hevosia.',
@@ -561,6 +565,7 @@ export const FOKUSVIRTA_PRAHA = {
      */
     kuva: {
       tiedosto: 'Vertumnus årstidernas gud målad av Giuseppe Arcimboldo 1591 - Skoklosters slott - 91503.jpg',
+      lyhyt: 'Giuseppe Arcimboldon muotokuva keisari Rudolf II:sta 1591, nykyään Skoklosterin linnassa.',
       selite: 'Giuseppe Arcimboldon muotokuva keisari Rudolf II:sta '
         + 'vuodelta 1591. Maalaus on nykyään Skoklosterin linnassa '
         + 'Ruotsissa.',
@@ -731,6 +736,7 @@ export const FOKUSVIRTA_PRAHA = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-karlstejn-loistoaika.webp',
+        lyhyt: 'Pyhän Ristin kappeli: kullatut paneelit, upotetut puolijalokivet, tähtiholvi kynttilänvalossa.',
         selite: 'Pyhän Ristin kappeli: kullatut paneelit, seiniin '
           + 'upotetut puolijalokivet ja tähtiholvi kynttilänvalossa.',
         lahde: 'Matkakirjan havainnekuva: aarrekammio vihkiäisvuonnaan '
@@ -745,6 +751,7 @@ export const FOKUSVIRTA_PRAHA = {
        * kuvassa on linna talvimaisemassa, ei ihmisiä. */
       valokuva: {
         tiedosto: 'Karlštejn in winter.jpg',
+        lyhyt: 'Karlštejnin linna talvella; suuri torni sisältää sen rakennussyyn, Pyhän Ristin kappelin.',
         selite: 'Karlštejnin linna talvella. Suuri torni oikealla '
           + 'sisältää Pyhän Ristin kappelin, jota varten koko linna '
           + 'rakennettiin.',

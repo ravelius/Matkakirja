@@ -219,6 +219,7 @@ export const FOKUSVIRTA_SEVILLA = {
       ampari: 'herokoe/hero-sevilla-aamu.png',
       /* Selite on lehden oman avauskuvan selite lyhennettynä yhdeksi
        * virkkeeksi; yksikään luku ei muutu. */
+      lyhyt: 'Sevillan Giralda rakennettiin minareetiksi 1184–1198, huipulla pronssinen Giraldillo vuodesta 1568.',
       selite: 'Sevillan Giralda rakennettiin almohadien minareetiksi '
         + '1184–1198, ja sen huipulle nostettiin 1568 nelimetrinen, '
         + '1 500 kilon pronssinen tuuliviiri Giraldillo.',
@@ -293,6 +294,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'Ortelius - Maris Pacifici 1589.jpg',
+        lyhyt: 'Orteliuksen Maris Pacifici 1589 on ensimmäinen painettu Tyynenmeren kartta, keskellä Victoria.',
         selite: 'Abraham Orteliuksen Maris Pacifici vuodelta 1589 on '
           + 'ensimmäinen painettu kartta Tyynestämerestä, ja sen keskellä '
           + 'purjehtii Victoria.',
@@ -374,6 +376,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'Coto Doñana marshes.jpg',
+        lyhyt: 'Doñanan suot kevätsateiden jälkeen: Guadalquivirin suisto täyttyy, talvella jopa 200 000 vesilintua.',
         selite: 'Doñanan suot kevätsateiden jälkeen: Guadalquivirin '
           + 'suisto täyttyy vedellä, ja talvella alueella voi olla '
           + 'kaksisataatuhatta vesilintua yhtä aikaa.',
@@ -459,6 +462,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'La feria de Sevilla, de Andrés Cortés y Aguilar (Ayuntamiento de Sevilla).jpg',
+        lyhyt: 'Andrés Cortés y Aguilarin maalaus Sevillan feriasta 1800-luvun puolivälistä, taustalla katedraali.',
         selite: 'Andrés Cortés y Aguilarin maalaus Sevillan feriasta '
           + '1800-luvun puolivälistä: taustalla katedraali, Giralda ja '
           + 'vuonna 1868 purettu Puerta de San Fernando.',
@@ -554,6 +558,7 @@ export const FOKUSVIRTA_SEVILLA = {
      */
     kuva: {
       tiedosto: 'Monte Testaccio Particolare.jpg',
+      lyhyt: 'Monte Testaccion kylki on kerroksittain ladottuja amforan sirpaleita, joista kukkula tehty.',
       selite: 'Monte Testaccion kylki: kerros kerroksen päälle ladottuja '
         + 'amforan sirpaleita, joista kukkula on kokonaan tehty.',
       lahde: 'Flazaza, Wikimedia Commons (CC BY-SA 4.0)',
@@ -794,6 +799,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'Tomb of Christopher Columbus - Cathedral of Seville.JPG',
+        lyhyt: 'Sevillan katedraalin hautamonumentissa neljä airutta kantaa arkkua; hauta kaupungissa vuodesta 1899.',
         selite: 'Sevillan katedraalin hautamonumentissa neljä airutta '
           + 'kantaa arkkua olkapäillään; hauta on ollut kaupungissa '
           + 'vuodesta 1899.',
@@ -892,6 +898,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'Anfiteatro de Itálica (32833418441).jpg',
+        lyhyt: 'Itálican amfiteatterin katsomoa Santiponcessa; jäljellä osa jota ei louhittu rakennuskiveksi.',
         selite: 'Itálican amfiteatterin katsomorakenteita Santiponcessa: '
           + 'jäljellä on se osa, jota ei louhittu rakennuskiveksi.',
         lahde: 'Emilio J. Rodríguez Posada, Wikimedia Commons (CC BY-SA 2.0)',
@@ -1004,6 +1011,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'Lince iberico.jpg',
+        lyhyt: 'Iberianilves Doñanan kansallispuistossa elää vain Iberiassa; vuonna 2002 niitä oli 94.',
         selite: 'Iberianilves Doñanan kansallispuistossa: laji elää vain '
           + 'Iberian niemimaalla, ja vuonna 2002 niitä oli jäljellä 94.',
         lahde: 'Fernando Diz, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1098,6 +1106,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'El aguador de Sevilla, por Diego Velázquez.jpg',
+        lyhyt: 'Sevillan vedenmyyjä on Velázquezin nuoruuden keittiökuvien huippu, maalattu ennen 25 vuoden ikää.',
         selite: 'Sevillan vedenmyyjä on Velázquezin sevillalaiskauden '
           + 'keittiökuvien huippu: savi, lasi ja vesipisara maalattuina '
           + 'ennen kuin tekijä oli täyttänyt kahtakymmentäviittä.',

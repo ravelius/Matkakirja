@@ -240,6 +240,7 @@ export const FOKUSVIRTA_VENETSIA = {
      */
     kuva: {
       ampari: 'herokoe/hero-venetsia-st-marks.jpg',
+      lyhyt: 'Markuksenkirkon parvekkeella kopiot: 1204 tuodut pronssihevoset siirrettiin sisälle 1980-luvulla.',
       selite: 'Markuksenkirkon parvekkeella seisovat nykyään kopiot: '
         + 'vuonna 1204 Konstantinopolista tuodut pronssihevoset '
         + 'siirrettiin 1980-luvun alussa ilmansaasteiden takia kirkon '
@@ -325,6 +326,7 @@ export const FOKUSVIRTA_VENETSIA = {
        */
       kuva: {
         tiedosto: 'Horses of Basilica San Marco bright.jpg',
+        lyhyt: 'Alkuperäiset hevoset basilikan sisällä; kaulapannat 1204 peittämään kuljetuksen katkaisukohdat.',
         selite: 'Alkuperäiset hevoset basilikan sisällä: kaulapannat '
           + 'lisättiin 1204 peittämään kohdat, joista päät katkaistiin '
           + 'kuljetusta varten.',
@@ -431,6 +433,7 @@ export const FOKUSVIRTA_VENETSIA = {
        */
       kuva: {
         tiedosto: 'Le Monde Illustré 1866 - Votazioni a Venezia.jpg',
+        lyhyt: 'Le Monde Illustrén puupiirros 1866: Markuksen asukkaat kulkevat lippurivistossä äänestämään.',
         selite: 'Le Monde Illustrén puupiirros marraskuulta 1866: '
           + 'Markuksen kaupunginosan asukkaat kulkevat lippurivistössä '
           + 'äänestyspaikalle Ateneoon.',
@@ -528,6 +531,7 @@ export const FOKUSVIRTA_VENETSIA = {
        */
       kuva: {
         tiedosto: 'Page from the edition of Virgil printed by Aldus Manutius in 1501.jpg',
+        lyhyt: 'Sivu Manuzion 1501 painamasta ensimmäisestä kursiivilla painetusta kirjasta, reunus käsin maalattu.',
         selite: 'Sivu Aldo Manuzion vuonna 1501 painamasta '
           + 'taskukokoisesta Vergiliuksesta, ensimmäisestä kokonaan '
           + 'kursiivilla painetusta kirjasta; tämän kappaleen reunukset on '
@@ -647,6 +651,7 @@ export const FOKUSVIRTA_VENETSIA = {
      */
     kuva: {
       tiedosto: 'P1030629 Lazzaretto Vecchio (Venice) 01.jpg',
+      lyhyt: 'Lazzaretto Vecchion saari Lidon lähellä eristi ruttosairaat 1423, siitä sana lazaretti.',
       selite: 'Lazzaretto Vecchion saari laguunissa Lidon lähellä: '
         + 'vuodesta 1423 sinne eristettiin ruttoon sairastuneet, ja '
         + 'saaren nimestä on peräisin sana lazaretti.',

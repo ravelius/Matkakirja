@@ -346,6 +346,7 @@ export const FOKUSVIRTA_ODESSA = {
      */
     kuva: {
       ampari: 'herokoe/hero-odessa-keskipaiva.jpg',
+      lyhyt: 'Vorontsovin palatsi rakennettiin 1827–1830 Boffon piirustuksin turkkilaisen linnoituksen paikalle.',
       selite: 'Vorontsovin palatsi ja sen kaareva kolonnadi rakennettiin '
         + '1827–1830 ruhtinas Mihail Vorontsoville sardinialaissyntyisen '
         + 'Francesco Boffon piirustusten mukaan turkkilaisen Hacıbeyn '
@@ -477,6 +478,7 @@ export const FOKUSVIRTA_ODESSA = {
        */
       kuva: {
         tiedosto: 'Потьомкінські сходи 11.jpg',
+        lyhyt: 'Portaikko nousee satamasta kaupunkiin; yläpäässä herttua Richelieun patsas vuoden 1933 graniitista.',
         selite: 'Portaikko nousee satamasta kaupunkiin, ja sen yläpäässä '
           + 'seisoo herttua Richelieun patsas; kivi on vuoden 1933 '
           + 'graniittia, ei alkuperäistä.',
@@ -620,6 +622,7 @@ export const FOKUSVIRTA_ODESSA = {
        */
       kuva: {
         tiedosto: 'Театр оперы и балета. Зал.jpg',
+        lyhyt: 'Vuonna 1887 avatun oopperatalon hevosenkengän katsomo kantaa kuiskauksen viimeiselle riville.',
         selite: 'Vuonna 1887 avatun oopperatalon hevosenkengän muotoinen '
           + 'katsomo kantaa kuiskauksen lavalta viimeiselle riville asti.',
         lahde: 'Alex Levitsky & Dmitry Shamatazhi, Wikimedia Commons '
@@ -742,6 +745,7 @@ export const FOKUSVIRTA_ODESSA = {
        */
       kuva: {
         tiedosto: 'Desert in the Kuyalnik Estuary valley.jpg',
+        lyhyt: 'Kuyalnykin lahden yläpää kuivuu kesäisin suolaerämaaksi, kaupungin tulonlähde keskiajalta asti.',
         selite: 'Kuyalnykin lahden yläpää kuivuu kesäisin suolaerämaaksi, '
           + 'ja pohjalle jäävä suola on ollut kaupungin tulonlähde '
           + 'keskiajalta asti.',
@@ -887,6 +891,7 @@ export const FOKUSVIRTA_ODESSA = {
      */
     kuva: {
       tiedosto: 'The Port Practique, Odessa, Russia, (i.e., Ukraine)-LCCN2001697471.jpg',
+      lyhyt: 'Odessan satama 1890-luvulla: laiturille rakennettu rautatie toi vaunut laivojen viereen.',
       selite: 'Odessan käytännön satama 1890-luvulla: laiturille rakennettu '
         + 'rautatie toi vaunut laivojen viereen, ja kuvan oma kuvateksti '
         + 'on painettu kahdella kielellä.',

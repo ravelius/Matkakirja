@@ -117,6 +117,7 @@ export const FOKUSKOHTEET_AFG = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-bamiyan-loistoaika-v2.jpg',
       kadonnut: true,
+      lyhyt: 'Silkkitien matkalainen näkee kallion jättiläiset ensi kertaa vuoristotaipaleen jälkeen.',
       selite: 'Silkkitien matkalainen saapuu laaksoon päiviä kestäneen '
         + 'vuoristotaipaleen jälkeen ja näkee kallioon maalatut jättiläiset '
         + 'ensimmäistä kertaa. Luolissa elävät munkit, kauppakaravaanit ja '

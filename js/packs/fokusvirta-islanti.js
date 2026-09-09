@@ -59,6 +59,7 @@ export const FOKUSVIRTA_ISLANTI = {
      */
     kuva: {
       ampari: 'herokoe/hero-islanti-keskipaiva.jpg',
+      lyhyt: 'Þingvellirissä kokoontui alþingi 930–1798; laakso on mannerlaattojen railo, suurin Almannagjá.',
       selite: 'Þingvellirin laaksossa kokoontui Islannin alþingi vuodesta '
         + '930 vuoteen 1798, ja laakso on Pohjois-Amerikan ja Euraasian '
         + 'mannerlaattojen railo — sen suurin repeämä Almannagjá on '

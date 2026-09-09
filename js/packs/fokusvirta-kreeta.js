@@ -91,6 +91,7 @@ export const FOKUSVIRTA_KREETA = {
      */
     kuva: {
       ampari: 'herokoe/hero-kreeta-keskipaiva.jpg',
+      lyhyt: 'Koulesin linnoitus valmistui Heraklionin satamansuulle 1540; muurissa yhä Pyhän Markuksen leijona.',
       selite: 'Koulesin linnoitus valmistui Heraklionin satamansuulle 1540 '
         + 'venetsialaisten Rocca a Marena, ja sen muurissa on yhä Pyhän '
         + 'Markuksen leijona.',

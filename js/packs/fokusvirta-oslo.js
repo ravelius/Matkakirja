@@ -318,6 +318,7 @@ export const FOKUSVIRTA_OSLO = {
        */
       kuva: {
         tiedosto: 'Theodor Kittelsen - The Water Sprite - NG.M.00863 - National Museum of Art, Architecture and Design.jpg',
+        lyhyt: 'Theodor Kittelsenin Nøkken (1904) esittää norjalaisten kansantarinoiden veden haltijaa.',
         selite: 'Theodor Kittelsenin Nøkken (1904) esittää veden haltijaa, '
           + 'joka tunnetaan norjalaisista kansantarinoista; Kittelsen tuli '
           + 'tunnetuksi Asbjørnsenin ja Moen satujen kuvittajana.',
@@ -445,6 +446,7 @@ export const FOKUSVIRTA_OSLO = {
        */
       kuva: {
         tiedosto: 'LAROUSSE - H.Chartier (1859-1924) SUÈDE ET NORVÈGE Armes, drapeaux, armee (Sweden and Norway historical Coat of arms, flags 1890s) Nouveau Larousse Illustré Paris 1898-1901 Vol 07 (detail).jpg',
+        lyhyt: 'Ruotsin ja Norjan liput unionin viimeisiltä vuosilta, sama unionimerkki kummankin kannossa.',
         selite: 'Ruotsin ja Norjan liput unionin viimeisiltä vuosilta: '
           + 'kummankin kannossa on sama unionimerkki, jossa maiden värit '
           + 'on jaettu tasan.',
@@ -563,6 +565,7 @@ export const FOKUSVIRTA_OSLO = {
        */
       kuva: {
         tiedosto: 'Jaulas flotantes de salmón, Svolvær, Lofoten, Noruega, 2019-09-05, DD 54.jpg',
+        lyhyt: 'Kelluva merikassi Svolværin edustalla Lofooteilla; katos estaa lintuja pääsemästä kaloihin.',
         selite: 'Kelluva merikassi Lofooteilla Svolværin edustalla: kehä '
           + 'pysyy pinnalla, verkko roikkuu sen alla ja katos estää '
           + 'lintuja pääsemästä kaloihin.',
@@ -719,6 +722,7 @@ export const FOKUSVIRTA_OSLO = {
      */
     kuva: {
       tiedosto: 'Nobellinstituttet Oslo 2012.jpg',
+      lyhyt: 'Norjan Nobel-instituutti perustettiin 1904, talo entinen yksityishuvila vuodelta 1867.',
       selite: 'Norjan Nobel-instituutti perustettiin 1904 avustamaan '
         + 'Nobel-komiteaa, ja sen talo on entinen yksityishuvila vuodelta '
         + '1867.',

@@ -76,6 +76,7 @@ import {
   polloNimilappu,
 } from './ui-apurit.js';
 import { asetaKuva, assetOsoite } from './media.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import {
   asetaKohdeNostot, avaaFokuskohde, avaaKohdeSuurennos, rekisteroiLisakohteet,
@@ -1135,9 +1136,10 @@ export function piirraNostonKuva(
   const nappi = html('button', 'fokusnosto-kuvanappi');
   nappi.type = 'button';
   nappi.title = 'Katso kuva suurempana';
-  nappi.setAttribute('aria-label', `${kuva.selite ?? 'Kuva'} — avaa suurena`);
+  // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  nappi.setAttribute('aria-label', `${kuvatekstiLyhyt(kuva) || 'Kuva'} — avaa suurena`);
   const img = document.createElement('img');
-  img.alt = kuva.selite ?? '';
+  img.alt = kuvatekstiLyhyt(kuva);
   img.decoding = 'async';
   img.draggable = false;
   const piilota = () => { kehys.hidden = true; };
@@ -1152,7 +1154,7 @@ export function piirraNostonKuva(
   kehys.appendChild(nappi);
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.append(
-    html('span', 'fokusnosto-kuvaselite', kuva.selite ?? ''),
+    html('span', 'fokusnosto-kuvaselite', kuvatekstiLyhyt(kuva)),
     taytaLahderivi(html('span', 'fokusnosto-kuvalahde'), kuva.lahde ?? '', kuva),
   );
   kehys.appendChild(teksti);
@@ -1202,10 +1204,11 @@ function piirraNostonKarttaliite(ui, kohde, kartta) {
   const nappi = html('button', 'fokusnosto-liitenappi');
   nappi.type = 'button';
   nappi.title = 'Avaa kartta suurena';
-  nappi.setAttribute('aria-label', `${kartta.selite ?? 'Kartta'} — avaa suurena`);
+  nappi.setAttribute('aria-label', `${kuvatekstiLyhyt(kartta) || 'Kartta'} — avaa suurena`);
   const img = document.createElement('img');
   img.className = 'fokusnosto-liitekuva';
-  img.alt = kartta.selite ?? '';
+  // Liitteessä lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  img.alt = kuvatekstiLyhyt(kartta);
   img.decoding = 'async';
   img.draggable = false;
   asetaNostonKuva(img, kartta, NOSTO_KUVA_PX, () => liite.remove());
@@ -1225,7 +1228,7 @@ function piirraNostonKarttaliite(ui, kohde, kartta) {
   // samalla rivillä (v1040), jotta PD/CC-merkintä kulkee aina mukana.
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.append(
-    html('span', 'fokusnosto-kuvaselite', kartta.selite ?? ''),
+    html('span', 'fokusnosto-kuvaselite', kuvatekstiLyhyt(kartta)),
     taytaLahderivi(html('span', 'fokusnosto-kuvalahde'), kartta.lahde ?? '', kartta),
   );
   kehys.appendChild(teksti);

@@ -145,6 +145,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
       + 'on Lokrum. Katso ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-dubrovnik-kaupunginmuurit.jpg',
+      lyhyt: 'Dubrovnikin muurit kiertävät vanhankaupungin noin 1940 metriä, paikoin 25 m korkeat ja 4–6 m paksut.',
       selite: 'Dubrovnikin kaupunginmuurit kiertävät vanhankaupungin noin '
         + '1 940 metrin matkalta, ne nousevat paikoin 25 metriin ja ovat '
         + 'maan puolella 4–6 metriä paksut.',
@@ -381,6 +382,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
        */
       kuva: {
         tiedosto: 'Sponza Palace, Dubrovnik, 16th century (13) (29858392800).jpg',
+        lyhyt: 'Sponzan palatsin sisäpiha, jossa kauppiaat punnitsivat tavaransa; selvisi 1667 maanjäristyksestä.',
         selite: 'Sponzan palatsin sisäpiha, jossa kauppiaat punnitsivat '
           + 'tavaransa julkisesti. Talo selvisi vuoden 1667 '
           + 'maanjäristyksestä vaurioitta.',
@@ -468,6 +470,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
      */
     kuva: {
       tiedosto: 'Croatia-01664 - Fortress Lovrijenac (10088562716).jpg',
+      lyhyt: 'Lovrijenacin linnake muurin ulkopuolella kalliollaan; portin yllä tasavallan tunnetuin kirjoitus.',
       selite: 'Lovrijenacin linnake omalla kalliollaan muurin '
         + 'ulkopuolella. Sen portin yllä on tasavallan tunnetuin '
         + 'kirjoitus.',
@@ -661,6 +664,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-pulan-areena-loistoaika.webp',
+        lyhyt: 'Areena käytössä: katsomo täynnä, aurinkokatos mastojen varassa ja meri aivan muurin takana.',
         selite: 'Areena käytössä: katsomo täynnä, aurinkokatos '
           + 'pingotettuna mastojen varaan ja meri aivan muurin takana.',
         lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',

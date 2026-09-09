@@ -125,6 +125,7 @@ export const FOKUSKOHTEET_EGY = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-faros-loistoaika-v2.jpg',
       kadonnut: true,
+      lyhyt: 'Viljalaivan kansipoika näkee Faroksen majakan ensi kertaa turvallisen väylän merkkinä.',
       selite: 'Viljalaivan kansipoika näkee Faroksen ensimmäistä kertaa ja '
         + 'kuulee vanhemman merimiehen osoittavan turvallisen väylän. '
         + 'Majakan tuli ei ole heille vain ihme, vaan lupaus siitä, että '
@@ -180,6 +181,7 @@ export const FOKUSKOHTEET_EGY = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-aleksandrian-kirjasto.webp',
       kadonnut: true,
+      lyhyt: 'Aleksandrian kirjasto keräsi papyruskääröjä ja työllisti satoja oppineita; paikkaa ei enää tunneta.',
       selite: 'Aleksandrian kirjasto kokosi papyruskääröjä koko '
         + 'tunnetusta maailmasta, ja sen saleissa työskenteli aikanaan '
         + 'yli sata oppinutta valtion palkkaamana. Keruu oli '
@@ -249,6 +251,7 @@ export const FOKUSKOHTEET_EGY = [
      */
     kuva: {
       tiedosto: 'Great Pyramid of Giza - Pyramid of Khufu.jpg',
+      lyhyt: 'Kheopsin pyramidi Gizassa; sileä kalkkikivikuori on louhittu pois rakenteen sisuksesta.',
       selite: 'Kheopsin pyramidi Gizan tasangolla. Porrastettu pinta on '
         + 'rakenteen sisus: sileä kalkkikivikuori on louhittu pois.',
       lahde: 'Douwe C. van der Zee, Wikimedia Commons (CC BY-SA 4.0)',
@@ -264,6 +267,7 @@ export const FOKUSKOHTEET_EGY = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-gizan-pyramidi-loistoaika-v2.jpg',
       kadonnut: false,
+      lyhyt: 'Kivenhioja viimeistelee saumaa: 2,3 miljoonaa lohkaretta vaati valtavan määrän työtä ja käsiä.',
       selite: 'Kuvituksen kivenhioja tunnustelee sauman sileyttä samalla kun '
         + 'lapsi tuo hänelle vettä. Näkymä palauttaa jättimäisen luvun '
         + 'ihmisen kokoiseksi: 2,3 miljoonaa lohkaretta on tarkoittanut '
@@ -333,6 +337,7 @@ export const FOKUSKOHTEET_EGY = [
      */
     kuva: {
       tiedosto: 'Karnak Temple Great Hypostyle Hall 2014.jpg',
+      lyhyt: 'Karnakin pylvässalin pylväät kannattelevat nykyään vain taivasta, katon sorruttua.',
       selite: 'Karnakin pylvässalin keskikäytävän pylväät. Katto on '
         + 'sortunut, joten pylväät kannattelevat nykyään vain taivasta.',
       lahde: 'Tsyganov Sergey, Wikimedia Commons (CC0)',
@@ -342,6 +347,7 @@ export const FOKUSKOHTEET_EGY = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-karnak.webp',
       kadonnut: false,
+      lyhyt: 'Karnakin 134 pylvästä kannattivat kattoa hämärässä salissa, jonne pääsivät vain papit.',
       selite: 'Karnakin suuressa pylvässalissa on 134 pylvästä '
         + 'kuudessatoista rivissä, ja aikanaan niiden päällä oli katto: '
         + 'sali oli hämärä sisätila, jonka kaikki pinnat oli kaiverrettu '

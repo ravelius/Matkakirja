@@ -644,6 +644,7 @@ export const FOKUSKOHTEET_DEU = [
     lahde: 'en-Wikipedia "Hamburg", johdanto-osa (tarkistettu 27.8.2026).',
     kuva: {
       tiedosto: 'Hamburg, Speicherstadt, Wasserschloss -- 2016 -- 2956.jpg',
+      lyhyt: 'Speicherstadtin tiilivarastot Hampurin satamassa, rakennettu pian isoisän matkan jälkeen.',
       selite: 'Speicherstadtin varastokortteleita Hampurin satamassa. Tiilivarastot '
         + 'nousivat kanavien varsille pian isoisän matkan jälkeen.',
       lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',

@@ -48,6 +48,17 @@
 import * as data from './ihmisen-matka-data.js';
 import { IHMISEN_MATKA_VIRRAT } from './ihmisen-matka-virrat.js';
 import { polloKysy } from '../pollo.js';
+import { kuvatekstiLyhyt } from '../kuvatekstit.js';
+
+/*
+ * LYHYT KORTILLA (js/kuvatekstit.js, omistaja 9.9.2026). Ihmisen matkan
+ * ilmiökuvissa nimet ovat toisin päin kuin muualla pelissä: `kuvateksti`
+ * on se lyhyt yhden rivin teksti ja `selite` pitkä kertova versio. Yhteinen
+ * apuri pitäisi `selitettä` lyhyenä, joten kentät normalisoidaan sille —
+ * uusi `lyhyt` voittaa yhä, ja ilman sitä kortti näyttää täsmälleen saman
+ * tekstin kuin ennen.
+ */
+const ilmionLyhyt = (kuva) => kuvatekstiLyhyt({ lyhyt: kuva?.lyhyt ?? kuva?.kuvateksti });
 
 /**
  * Lisänostojen kuvituskuvat ämpärissä: <juuri>/nosto/<tunnus>.jpg.
@@ -181,11 +192,11 @@ export function kokoaNostot(tapahtumat = [], lisat = []) {
       // ihmisenMatkanPysakit siirsi havainnekuvan `ilmio`-kenttään ja
       // löytökuvan `kuva`-kenttään; alkuperäinen `esine` on tallella.
       kuva: kuvanOsoite(t.ilmio) ?? null,
-      kuvaSelite: t.ilmio?.kuvateksti ?? t.otsikko ?? null,
+      kuvaSelite: ilmionLyhyt(t.ilmio) || t.otsikko || null,
       esine: kuvanOsoite(t.esine) ?? null,
-      esineSelite: t.esine?.selite ?? null,
+      esineSelite: kuvatekstiLyhyt(t.esine) || null,
       kuvaAito: kuvanOsoite(t.kuvaAito) ?? null,
-      kuvaAitoSelite: t.kuvaAito?.selite ?? t.kuvaAito?.kuvateksti ?? null,
+      kuvaAitoSelite: kuvatekstiLyhyt(t.kuvaAito) || null,
       lahde: t.lahde ?? null,
       virta: null,
       juttu: Boolean(t.juttu),
@@ -209,11 +220,11 @@ export function kokoaNostot(tapahtumat = [], lisat = []) {
       // Kuvituskuva kuvaputkelta (tulossa): kunnes se on ämpärissä,
       // kortti näyttää varapaikan (luoNostokortti).
       kuva: kuvanOsoite(l.kuva) ?? nostokuvanOsoite(l.tunnus),
-      kuvaSelite: l.kuva?.kuvateksti ?? l.otsikko ?? null,
+      kuvaSelite: ilmionLyhyt(l.kuva) || l.otsikko || null,
       esine: null,
       esineSelite: null,
       kuvaAito: kuvanOsoite(l.kuvaAito) ?? null,
-      kuvaAitoSelite: l.kuvaAito?.selite ?? l.kuvaAito?.kuvateksti ?? null,
+      kuvaAitoSelite: kuvatekstiLyhyt(l.kuvaAito) || null,
       lahde: l.lahde ?? null,
       virta: l.virta ?? null,
       juttu: false,

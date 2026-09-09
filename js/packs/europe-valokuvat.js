@@ -15,6 +15,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Vaporetto Canal Grande stazione Santa Lucia Venezia.jpg',
         vuosi: '2016',
         lahde: 'CC BY-SA 3.0 (Wolfgang Moroder, Commons)',
+        lyhyt: 'Vaporetto Canal Grandella Venetsiassa vuonna 2016.',
         selite: 'Vaporetto eli vesibussi Canal Grandella Santa Lucian '
           + 'rautatieaseman kohdalla. Venetsiassa julkinen liikenne kulkee '
           + 'vettä pitkin, ja matkustajat seisovat keulassa kuten '
@@ -24,6 +25,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: '(Venice) Palazzo Emo alla Maddalena - Facade on Canal Grande.jpg',
         vuosi: '2012',
         lahde: 'CC BY-SA 4.0 (Didier Descouens, Commons)',
+        lyhyt: 'Palazzo Emo alla Maddalenan julkisivu Canal Granden varrella Venetsiassa 2012.',
         selite: 'Palazzo Emo alla Maddalenan julkisivu Canal Granden varrella. '
           + 'Venetsian palatsit seisovat veteen lyötyjen puupaalujen varassa, '
           + 'joten ne todella nousevat suoraan kanavasta.',
@@ -32,6 +34,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Medico della peste.jpg',
         vuosi: '2022',
         lahde: 'CC BY-SA 4.0 (Cristina.Paveri, Commons)',
+        lyhyt: 'Ruttolääkärin naamio ja karnevaaliasu Venetsiassa vuonna 2022.',
         selite: 'Ruttolääkärin naamio ja karnevaaliasu: valkoinen '
           + 'linnunnokka, musta hattu ja viitta. Alkuperäisessä asussa '
           + 'nokka täytettiin yrteillä, koska taudin uskottiin leviävän '
@@ -42,6 +45,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Gondolas and Piazzetta di San Marco, Venice, Italy-LCCN2001701072.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Gondoliereja Piazzetta di San Marcon edustalla, käsinväritettynä photochrom-vedoksena 1890-luvulla.',
     selite: 'Gondoliereja Piazzetta di San Marcon edustalla — '
       + 'käsinväritetty photochrom-vedos, jollaisia myytiin matkailijoille '
       + 'jo isoisän aikaan. Taustalla dogen palatsi ja Markuksen leijona '
@@ -67,6 +71,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Philippe Alès, Commons (CC BY-SA 3.0)',
 
+        lyhyt: 'Vanhan sataman kalatori Marseillessa vuonna 2013.',
         selite: 'Vanhan sataman kalatori Marseillessa. Saalis myydään laiturilla '
 
           + 'suoraan laatikoista muutaman metrin päässä veneistä, joilla se '
@@ -83,6 +88,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Carl Ha, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Antiikin sataman jäänteet Jardin des Vestiges -puistossa Marseillessa 2024.',
         selite: 'Antiikin sataman jäänteet Jardin des Vestiges -puistossa '
 
           + 'Marseillen keskustassa. Kaivauksissa esiin tulleet muurit ja '
@@ -97,6 +103,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Old Harbor (Vieux-Port), Marseille, France-LCCN2002715100.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Marseillen vanha satama purjelaivojen aikaan 1890-luvulla.',
     selite: 'Vanha satama purjelaivojen aikaan — käsinväritetty '
       + 'photochrom-vedos. Laivat makasivat kylki kyljessä laiturissa, ja '
       + 'lastit purettiin käsivoimin suoraan kadulle.',
@@ -121,6 +128,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Jebulon, Commons (public domain)',
 
+        lyhyt: 'Alhambra ja Sierra Nevada Granadan Albaicínin rinteeltä vuonna 2010.',
         selite: 'Alhambra ja sen takana Sierra Nevada, kuvattuna Granadan '
 
           + 'moskeijan puutarhasta Albaicínin rinteeltä. Huipuilla näkyy '
@@ -137,6 +145,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Alberto-g-rovi, Commons (CC BY 3.0)',
 
+        lyhyt: 'Calle Agua del Albayzín, kapea kuja Granadan Albaicínissa, vuonna 2018.',
         selite: 'Calle Agua del Albayzín, yksi Albaicínin kaupunginosan kapeista '
 
           + 'kujista. Kadut nousevat rinnettä ylös vastapäätä Alhambraa, ja '
@@ -149,6 +158,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Court of the Lions, Alhambra by Juan Laurent.jpg',
     vuosi: '1870-luku',
     lahde: 'Wikimedia Commons (PD)',
+    lyhyt: 'Alhambran leijonapiha Granadassa, Juan Laurentin kuvaamana, 1870-luvulla.',
     selite: 'Leijonapiha Juan Laurentin valokuvaamana isoisän aikaan. '
       + 'Laurent kiersi Espanjaa suurella kamerallaan ja myi vedoksia '
       + 'matkailijoille — moni eurooppalainen näki Alhambran '
@@ -174,6 +184,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Jeremiah Z. Cockroach, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Sukiennicen holvikäytävä Rynek Głównyn keskellä Krakovassa vuonna 2025.',
         selite: 'Sukiennicen holvikäytävä Rynek Głównyn keskellä. Kauppahallin '
 
           + 'läpi kulkee yhä rivi myyntikojuja, joista tavara ojennetaan '
@@ -192,6 +203,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Jakub Hałun, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Wawelin kukkula Veikselin mutkassa Krakovassa vuonna 2020.',
         selite: 'Wawelin kukkula Veikselin mutkassa. Kukkulalla ovat '
 
           + 'kuninkaanlinna ja katedraali, jonka kryptoihin Puolan '
@@ -206,6 +218,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Krakow - Kosciol Maryacki i Sukiennice. 1910 (69699690).jpg',
     vuosi: '1910',
     lahde: 'Wikimedia Commons (PD)',
+    lyhyt: 'Marian kirkko ja Sukiennice Krakovan torilla Itävalta-Unkarin aikana 1910.',
     selite: 'Marian kirkko ja Sukiennice torin laidalla vuonna 1910, '
       + 'jolloin Krakova kuului Itävalta-Unkariin. Torilla seisoo '
       + 'hevosvaunuja — niitä on aukiolla vieläkin, joskin turisteja varten.',
@@ -230,6 +243,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (Buiobuione, Commons)',
 
+        lyhyt: 'Ferhadijan kadun kulttuurienrajamerkki Sarajevossa vuonna 2018.',
         selite: 'Ferhadijan kävelykadulle upotettu merkki "Sarajevo Meeting of '
 
           + 'Cultures". Siitä eteenpäin katukuva vaihtuu ottomaanien '
@@ -248,6 +262,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC0 (David Castor, Commons)',
 
+        lyhyt: 'Ferhadijan katu 1800-luvun julkisivuineen Sarajevossa vuonna 2023.',
         selite: 'Ferhadijan katu ja sen 1800-luvun lopun julkisivut. '
 
           + 'Itävalta-Unkari hallitsi Bosniaa vuodesta 1878, ja Sarajevoon '
@@ -266,6 +281,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY 2.0 (Brenda Annerl, Commons)',
 
+        lyhyt: 'Bosnialainen kahvi džezva-pannusta tarjoiltuna Sarajevossa vuonna 2008.',
         selite: 'Bosnialainen kahvi tarjoillaan džezva-kuparipannussa pienten '
 
           + 'kuppien kanssa. Kuva on kuvaajan Sarajevo-albumista, ja se '
@@ -280,6 +296,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Sarajevo Sebilj and Bascarsija, ca. 1930.jpg',
     vuosi: '1930-luku',
     lahde: 'Wikimedia Commons (PD)',
+    lyhyt: 'Sebiljin vesikioski ja Baščaršijan basaari Sarajevossa 1930-luvulla.',
     selite: 'Sebiljin vesikioski ja Baščaršijan basaari 1930-luvulla. '
       + 'Nykyinen kioski rakennettiin 1891 palaneen tilalle, ja aukio '
       + 'on ollut kauppapaikkana 1400-luvulta asti.',
@@ -304,6 +321,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'dconvertini, Wikimedia Commons (CC BY-SA 2.0)',
 
+        lyhyt: 'Hveririn geoterminen alue Námafjallin juurella Pohjois-Islannissa vuonna 2015.',
         selite: 'Hveririn geoterminen alue Námafjallin juurella '
 
           + 'Pohjois-Islannissa. Höyry nousee suoraan maasta, eikä mikään '
@@ -320,6 +338,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Olga Ernst, Wikimedia Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Almannagjá-kalliojyrkänne Þingvellirin kansallispuistossa vuonna 2022.',
         selite: 'Almannagjá Þingvellirin kansallispuistossa. Kalliojyrkänne '
 
           + 'merkitsee Pohjois-Amerikan ja Euraasian mannerlaattojen rajaa.',
@@ -334,6 +353,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Lögberg eli Lakikallio Þingvellirissä vuonna 2014.',
         selite: 'Lögberg eli Lakikallio Þingvellirissä. Täällä lainlausuja '
 
           + 'seisoi käräjillä, jotka kokoontuivat ensimmäisen kerran vuonna '
@@ -350,6 +370,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'public domain (Cornell University Library, ei tunnettuja tekijänoikeusrajoituksia)',
 
+        lyhyt: 'Þingvellirin rotko Islannissa noin vuonna 1900.',
         selite: 'Þingvellir rotkon läpi kuvattuna noin vuonna 1900. Kuva on '
 
           + 'Frederick W. W. Howellin islantilaiskokoelmasta Cornellin '
@@ -362,6 +383,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'GreatGeysirEruption.jpg',
         vuosi: '2001',
         lahde: 'Andreas Tille, Wikimedia Commons (CC BY-SA 4.0)',
+        lyhyt: 'Suuri Geysir purkautuu Haukadalurin laaksossa Islannissa vuonna 2001.',
         selite: 'Suuri Geysir purkautuu Haukadalurin laaksossa. Se on '
           + 'antanut nimensä kaikille maailman geysireille, mutta ollut '
           + 'enimmäkseen hiljaa 1910-luvulta lähtien; tämä purkaus '
@@ -371,6 +393,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Reykjavík. Fish drying and shark oil station. (4558216609).jpg',
     vuosi: '1900-luvun alku',
     lahde: 'Cornell University Library (ei käyttörajoituksia)',
+    lyhyt: 'Kalankuivauskenttä Reykjavíkin laidalla 1900-luvun alussa.',
     selite: 'Kalankuivauskenttä ja hainmaksaöljyn keittämö Reykjavíkin '
       + 'laidalla. Kuivattu turska oli vuosisatojen ajan Islannin '
       + 'tärkein vientitavara, ja hainmaksaöljyä poltettiin lampuissa '
@@ -396,6 +419,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY 4.0 (Jakub Hałun, Commons)',
 
+        lyhyt: 'Mnisikleous-katu Ateenan Plakan kaupunginosassa vuonna 2024.',
         selite: 'Mnisikleous-katu Plakassa. Kuja nousee portaina Akropoliin '
 
           + 'rinnettä kohti, ja ravintolat kattavat pöytänsä suoraan '
@@ -412,6 +436,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC0 (Rakoon, Commons)',
 
+        lyhyt: 'Bouzoukin soittaja Ateenan kadulla vuonna 2018.',
         selite: 'Bouzoukin soittaja Ateenan kadulla. Pitkäkaulainen kielisoitin '
 
           + 'on kreikkalaisen rebetiko-musiikin tunnusääni, ja sitä kuulee '
@@ -424,6 +449,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Greece, Athens, 5th century BC - Tetradrachm- Owl (reverse) - 1941.296.b - Cleveland Museum of Art.jpg',
         vuosi: '400-luku eaa.',
         lahde: 'CC0 (Cleveland Museum of Art, Commons)',
+        lyhyt: 'Ateenan hopeatetradrakma pöllökuvioineen 400-luvulta eaa.',
         selite: 'Ateenan hopeatetradrakman kääntöpuoli. Pöllö seisoo '
           + 'sivuttain pää katsojaan käännettynä, takanaan oliivinoksa ja '
           + 'kuunsirppi. Rahoja kutsuttiin pöllöiksi, ja niillä maksettiin '
@@ -433,6 +459,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: "Athènes. L' Acropole et le Temple de Thesée LCCN2017658103.jpg",
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Akropolis ja Hefaistoksen temppeli Ateenassa 1890-luvulla.',
     selite: 'Akropolis ja etualalla Hefaistoksen temppeli '
       + 'käsinvärittynä photochrom-vedoksena. Kaupunki oli tuolloin '
       + 'pieni: Ateenassa asui noin 100 000 ihmistä, ja temppelien '
@@ -460,6 +487,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Public domain (Photochrom Print Collection, Library of Congress)',
 
+        lyhyt: 'Trevin lähde Roomassa käsinvärittynä photochrom-vedoksena 1890-luvulta.',
         selite: 'Trevin lähde käsinvärittynä photochrom-vedoksena 1890-luvulta. '
 
           + 'Barokkilähde oli valmistunut jo 1762, joten isoisä näki sen '
@@ -476,6 +504,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (Livioandronico2013, Commons)',
 
+        lyhyt: 'Trevin lähde Roomassa nykyään, koko leveydeltään, vuonna 2015.',
         selite: 'Sama lähde tänään koko leveydeltään. Trevi ei ole erillinen '
 
           + 'muistomerkki vaan Palazzo Polin päätyseinä: palatsi ja lähde on '
@@ -488,6 +517,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'The Colisuem and Meta Sudans, Rome, Italy-LCCN2001700939.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Colosseum ja Meta Sudansin lähdetynkä Roomassa 1890-luvulla.',
     selite: 'Colosseum ja sen edessä Meta Sudans, antiikin '
       + 'suihkulähteen tyngä. Lähde purettiin 1936 kadun tieltä, joten '
       + 'tässä kuvassa näkyy jotain, mitä ei enää ole.',
@@ -509,6 +539,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Knossos fresco of dolphins in queen\'s palace.JPG',
         vuosi: 'noin 1600–1450 eaa. (kuvattu 2015)',
         lahde: 'Paginazero, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Delfiinifresko Knossoksen palatsin kuningattaren huoneessa Kreetalla.',
         selite: 'Delfiinifresko Knossoksen palatsin kuningattaren huoneessa. '
           + 'Siniset delfiinit ui pienten kalojen seassa, ja alareunassa '
           + 'kiertää kiehkurakuvio.',
@@ -522,6 +553,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC0 (Stefan Bellini, Commons)',
 
+        lyhyt: 'Knossoksen suuri portaikko Kreetalla vuonna 2015.',
         selite: 'Knossoksen suuri portaikko, joka yhdisti palatsin itäsiiven '
 
           + 'kerroksia. Samasta kohdasta pääsee sekä ylös että alas, mikä '
@@ -534,6 +566,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Cnossus - room of (?), columns - north entrance - DPLA - 156faa906e3d69e9b9c71702853f1b8a.jpg',
     vuosi: '1900-luvun alku',
     lahde: 'Digital Public Library of America (PD)',
+    lyhyt: 'Knossoksen palatsin pohjoinen sisäänkäynti Kreetalla kaivausten aikaan 1900-luvun alussa.',
     selite: 'Knossoksen pohjoinen sisäänkäynti kaivausten aikaan. Arthur '
       + 'Evans alkoi kaivaa palatsia 1900 ja rakensi osan siitä '
       + 'uudelleen betonista — tapa, jota arkeologit yhä kiistelevät.',
@@ -558,6 +591,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (Giulio Pappa, Commons)',
 
+        lyhyt: 'Etna kohoaa Mascalucian ja Catanian yllä Sisiliassa vuonna 2017.',
         selite: 'Etna kohoaa Mascalucian kattojen takana, aivan Catanian '
 
           + 'kupeessa. Se on Euroopan korkein aktiivinen tulivuori, ja '
@@ -574,6 +608,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (Eleassar, Commons)',
 
+        lyhyt: 'Catanian kalatori Pescheria Sisiliassa vuonna 2018.',
         selite: 'Catanian kalatori Pescheria kaupungin keskustassa. Saalis on '
 
           + 'esillä laatikoissa ja kauppa käydään äänekkäästi — juuri sitä '
@@ -590,6 +625,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (Cayambe, Commons)',
 
+        lyhyt: 'Concordian temppeli Agrigenton Temppelilaaksossa Sisiliassa vuonna 2024.',
         selite: 'Concordian temppeli Agrigenton Temppelilaaksossa. Se '
 
           + 'rakennettiin 400-luvulla eaa. kreikkalaisen siirtokunnan aikaan '
@@ -608,6 +644,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY 2.0 (Allie_Caulfield, Commons)',
 
+        lyhyt: 'San Giovanni degli Eremiti, normannien 1100-luvun kirkko Palermossa, 2009.',
         selite: 'San Giovanni degli Eremiti Palermossa: normannien aikaan '
 
           + '1100-luvulla rakennettu kirkko, jonka katolla on punaisia '
@@ -622,6 +659,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Crupi, Giovanni (1861-1925) - n. 0030 B - Teatro Greco - Taormina - DPLA - 51ed756181740204aed046a9302cef1b (page 8).jpg',
     vuosi: '1890-luku',
     lahde: 'Digital Public Library of America (PD)',
+    lyhyt: 'Taorminan kreikkalainen teatteri Sisiliassa, Giovanni Crupin kuvaamana, 1890-luvulla.',
     selite: 'Taorminan kreikkalainen teatteri Giovanni Crupin kuvaamana. '
       + 'Crupi piti Taorminassa valokuvaamoa ja myi näkymiä '
       + 'matkailijoille — juuri sellaisia, joita isoisä olisi voinut '
@@ -647,6 +685,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (Bernard Gagnon, Commons)',
 
+        lyhyt: 'Dubrovnikin kaupunginmuuri ja sen kävelyreitti vuonna 2019.',
         selite: 'Dubrovnikin kaupunginmuuri, jonka päällä kulkee yhtenäinen '
 
           + 'kävelyreitti vanhankaupungin ympäri. Muuri kuuluu Unescon '
@@ -663,6 +702,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY 2.0 (Les Haines, Commons)',
 
+        lyhyt: 'Dubrovnikin vanhankaupungin katot muurin päältä vuonna 2009.',
         selite: 'Vanhankaupungin katot muurin päältä nähtynä. Kuvaajan mukaan '
 
           + 'kuva on otettu juuri muurikierroksella, ja tiilet asettuvat '
@@ -675,6 +715,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Ragusa, general view, Dalmatia, Austro-Hungary-LCCN2002710782.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Ragusa eli Dubrovnik Itävalta-Unkarin aikaan 1890-luvulla.',
     selite: 'Ragusa — Dubrovnikin vanha nimi — Itävalta-Unkarin aikaan. '
       + 'Kaupunki oli menettänyt itsenäisyytensä 1808, ja vedoksen '
       + 'kyljessä lukee siksi "Austro-Hungary".',
@@ -699,6 +740,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (Matti Blume, Commons)',
 
+        lyhyt: 'Serdican roomalaisajan rauniot Sofian keskustassa vuonna 2018.',
         selite: 'Serdican arkeologinen kompleksi Sofian keskustassa. Roomalaisen '
 
           + 'kaupungin katuja ja muureja kaivettiin esiin keskustan '
@@ -717,6 +759,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC0 (Stolichanin, Commons)',
 
+        lyhyt: 'Vitosha-vuori Sofian keskustasta nähtynä vuonna 2015.',
         selite: 'Vitosha-vuori Sofian keskustasta nähtynä. Vuori nousee heti '
 
           + 'kaupungin eteläpuolella, ja kadun päästä katsoen se näyttää '
@@ -733,6 +776,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 3.0 (Bin im Garten, Commons)',
 
+        lyhyt: 'Julkiset mineraalivesihanat Sofian keskuskylpylän kupeessa vuonna 2012.',
         selite: 'Julkiset mineraalivesihanat Sofian keskuskylpylän kupeessa. '
 
           + 'Lämmin lähdevesi on ilmaista, ja sitä haetaan astioihin — juuri '
@@ -745,6 +789,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Banya Bashi 1900.jpg',
     vuosi: 'noin 1900',
     lahde: 'Wikimedia Commons (PD)',
+    lyhyt: 'Banya Bashin moskeija Sofiassa noin vuonna 1900.',
     selite: 'Banya Bashin moskeija noin vuonna 1900. Se rakennettiin '
       + '1566 kuumien lähteiden päälle — nimi tarkoittaa "monta kylpyä". '
       + 'Bulgaria oli vasta itsenäistynyt, ja Sofiasta tehtiin '
@@ -770,6 +815,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'B.Hawkins.Cornwall, Wikimedia Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Aamusumu Tower Bridgen tornien yllä Lontoossa vuonna 2021.',
         selite: 'Aamusumu nielaisee Tower Bridgen tornit Thamesin yllä. Sillan '
 
           + 'uusgoottilaiset piirteet erottuvat sumusta vain hahmoina.',
@@ -784,6 +830,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'public domain',
 
+        lyhyt: 'Metropolitan Railwayn kaivanto King\'s Crossin lähellä Lontoossa 1861.',
         selite: 'Percy William Justynen piirros helmikuulta 1861 näyttää '
 
           + 'Metropolitan Railwayn kaivannon ja puoliksi valmiin tunnelin '
@@ -802,6 +849,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'mattbuck (category), Wikimedia Commons (CC BY-SA 3.0)',
 
+        lyhyt: 'Baker Streetin metrolaiturit Lontoossa vuonna 2012.',
         selite: 'Baker Streetin Circle- ja Hammersmith & City -laiturit. Asema '
 
           + 'avattiin 1863 osana maailman ensimmäistä metrolinjaa, kymmenen '
@@ -814,6 +862,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Tower Bridge, II. (open), London, England-LCCN2002696928.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Tower Bridge auki höyrylaivalle pian valmistuttuaan 1890-luvulla.',
     selite: 'Tower Bridge auki höyrylaivalle pian valmistumisensa jälkeen — '
               + 'silta vihittiin käyttöön kesäkuussa 1894. Käsinväritetty '
               + 'photochrom-vedos; oikealla häämöttää Lontoon Tower.',
@@ -838,6 +887,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Iain Lees, Wikimedia Commons (CC BY-SA 2.0)',
 
+        lyhyt: 'Advocate\'s Close, kapea kuja Edinburghin vanhassakaupungissa, vuonna 2025.',
         selite: 'Advocate\'s Close, yksi vanhankaupungin kapeista kujista. '
 
           + 'Portaat laskeutuvat Royal Milen kyljestä alas kohti '
@@ -868,6 +918,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Alan Findlay, Wikimedia Commons (CC BY-SA 2.0)',
 
+        lyhyt: 'Kello yhden tykki Edinburghin linnan muurilta vuonna 2011.',
         selite: 'Kello yhden tykki laukeaa Edinburghin linnan muurilta. '
 
           + 'Ensimmäinen laukaus ammuttiin 1861 aikamerkiksi Leithin sataman '
@@ -880,6 +931,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Edinburgh from the castle, Scotland, 1890s.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Näkymä Edinburghin linnan muurilta koilliseen 1890-luvulla.',
     selite: 'Näkymä linnan muurilta koilliseen käsinvärittynä '
               + 'photochrom-vedoksena. Keskellä Walter Scottin muistomerkki, '
               + 'oikealla Waverleyn rautatieaseman katot ja taustalla Calton '
@@ -905,6 +957,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Robert Linsdell, Wikimedia Commons (CC BY 2.0)',
 
+        lyhyt: 'Ha\'penny Bridge Liffey-joen yli Dublinissa vuonna 2015.',
         selite: 'Ha\'penny Bridge kaartuu Liffeyn yli keskellä Dublinia. Se on '
 
           + 'vain yksi joen monista silloista, joita Fogg ei ehtinyt '
@@ -921,6 +974,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Leandro Neumann Ciuffo, Wikimedia Commons (CC BY 2.0)',
 
+        lyhyt: 'Värikkäitä ovia Dublinin georgiaanisilla kaduilla vuonna 2011.',
         selite: 'Dublinilaisia ovia eri väreissä. Georgian ajan talorivit ovat '
 
           + 'muuten toistensa kaltaisia, ja ovi on se mikä erottaa naapurin '
@@ -937,6 +991,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Maurizio Ceol, Wikimedia Commons (CC BY 3.0)',
 
+        lyhyt: 'Oliver St John Gogartyn pubi Dublinin Temple Barissa vuonna 2013.',
         selite: 'Oliver St John Gogartyn pubi Dublinin Temple Barissa, yksi '
 
           + 'kaupungin tunnetuimmista perinnemusiikin paikoista.',
@@ -951,6 +1006,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'public domain (National Library of Ireland, ei tunnettuja tekijänoikeusrajoituksia)',
 
+        lyhyt: 'Sackville Street Dublinissa Nelsonin pylvään aikaan vuonna 1900.',
         selite: 'Sackville Street vuonna 1900: pääposti, raitiovaunuja ja kadun '
 
           + 'keskellä Nelsonin pylväs, jonka isoisä merkitsi muistiin. '
@@ -967,6 +1023,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'John Flanagan, Wikimedia Commons (CC BY 2.0)',
 
+        lyhyt: 'O\'Connell Street ja Spire-neula Dublinissa vuonna 2010.',
         selite: 'O\'Connell Street ja sen keskellä Spire, teräsneula, joka '
 
           + 'pystytettiin Nelsonin pylvään entiselle paikalle. Katu on sama, '
@@ -979,6 +1036,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Sackville Street and O\'Connell Bridge, Dublin. County Dublin, Ireland-LCCN2002717398.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Sackville Street Dublinissa käsinvärittynä photochrom-vedoksena 1890-luvulla.',
     selite: 'Sackville Street O\'Connellin sillalta käsinvärittynä '
               + 'photochrom-vedoksena. Kadun päässä kohoaa Nelsonin pylväs, '
               + 'edessä seisoo Daniel O\'Connellin patsas, ja hevosraitiovaunut '
@@ -1005,6 +1063,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Celette, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Boulevard Saint-Michel Pariisin Haussmann-aikaisella linjalla vuonna 2019.',
         selite: 'Boulevard Saint-Michel kulkee suorana Pariisin 5. ja 6. '
 
           + 'kaupunginosan rajaa. Bulevardi puhkaistiin vanhan kaupungin '
@@ -1023,6 +1082,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Thomas Geoffray, Commons (CC BY-SA 3.0)',
 
+        lyhyt: 'Abbesses\'n metroaseman Guimard-sisäänkäynti Pariisissa vuonna 2014.',
         selite: 'Abbesses\'n metroaseman sisäänkäynti Pariisissa. Hector '
 
           + 'Guimardin suunnittelemat valurautakaaret ja lasikatokset ovat '
@@ -1041,6 +1101,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Robyn Lee, Commons (public domain)',
 
+        lyhyt: 'Les Deux Magots -kahvilan terassi Pariisissa vuonna 2006.',
         selite: 'Les Deux Magots -kahvilan terassi Pariisin 6. kaupunginosassa. '
 
           + 'Pöydät on käännetty kadulle päin, ja juuri tällaiselta paikalta '
@@ -1053,6 +1114,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Notre Dame Gargoyles as rain gutters.jpg',
         vuosi: '2013',
         lahde: 'David.Clay.Photography, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Notre-Damen gargoylet sateella Pariisissa vuonna 2013.',
         selite: 'Notre-Damen gargoylet sateella: vesi virtaa katolta '
           + 'kivihahmojen suun läpi ja kauas seinästä, ettei kivi '
           + 'rapautuisi. Juuri se on gargoylen tehtävä — tornien '
@@ -1062,6 +1124,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Eiffel Tower, full-view looking toward the Trocadero, Exposition Universal, 1900, Paris, France.jpg',
     vuosi: 'noin 1900',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Eiffel-torni Marsin kentältä katsottuna Pariisissa noin vuonna 1900.',
     selite: 'Eiffel-torni Marsin kentältä käsinvärittynä '
               + 'photochrom-vedoksena. Kaaren alta näkyy Trocadéron palatsi, '
               + 'joka rakennettiin vuoden 1878 maailmannäyttelyyn. Torni oli '
@@ -1088,6 +1151,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Sonse, Commons (CC BY 2.0)',
 
+        lyhyt: 'Linjan 28 raitiovaunu Lissabonin Alfamassa vuonna 2019.',
         selite: 'Linjan 28 raitiovaunu Alfamassa, São Vicenten ja Escolas '
 
           + 'Geraisin kadunkulmassa. Vaunut ovat lyhyitä ja kapeita, koska '
@@ -1104,6 +1168,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Jorge Franganillo, Commons (CC BY 2.0)',
 
+        lyhyt: 'Alfaman kattoja Lissabonissa Miradouro das Portas do Solilta vuonna 2024.',
         selite: 'Alfaman kattoja Miradouro das Portas do Solin näköalapaikalta. '
 
           + 'Vaaleat talot ja tiilikatot laskeutuvat rinnettä kohti '
@@ -1117,6 +1182,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Calçada Portuguesa, Lisboa.jpg',
         vuosi: '2012',
         lahde: 'Girassolei, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Portugalilaista mukulakivikuviointia Lissabonin jalkakäytävällä vuonna 2012.',
         selite: 'Portugalilaista mukulakivikuviointia Lissabonin jalkakäytävällä. '
           + 'Mustat ja valkoiset kivet on ladottu kaariksi käsin, ja päällä '
           + 'lepää syksyn lehtiä.',
@@ -1126,6 +1192,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Elevador-Sta-Justa 1902 fotoCarris.jpg',
     vuosi: '1902',
     lahde: 'Wikimedia Commons (PD)',
+    lyhyt: 'Santa Justan hissi Lissabonissa valmistumisvuonnaan 1902.',
     selite: 'Santa Justan hissi valmistumisvuonnaan 1902. Valurautainen '
               + 'torni nostaa ihmiset Baixan kaduilta 45 metriä ylös Chiadon '
               + 'kaupunginosaan. Aluksi hissiä käytti höyrykone, ja 1907 se '
@@ -1152,6 +1219,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'LBM1948, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Madridin Cuatro Torres -tornit Guadarraman vuoriston edessä vuonna 2014.',
         selite: 'Madridin Cuatro Torres -tornit ja niiden takana Guadarraman '
 
           + 'vuoristo. Kaupunki on rakennettu Kastilian ylätasangolle '
@@ -1170,6 +1238,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Daniel Dionne, Commons (CC BY-SA 2.0)',
 
+        lyhyt: 'Plaza Mayor iltavalaistuksessa Madridissa vuonna 2010.',
         selite: 'Plaza Mayor iltavalaistuksessa. Yhtenäinen talorivi ja '
 
           + 'parvekkeet kiertävät aukion joka sivulta, ja aukio pysyy '
@@ -1182,6 +1251,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Puerta del Sol - Reloj.jpg',
         vuosi: '2012',
         lahde: 'Tamorlan, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Real Casa de Correosin kellotorni Puerta del Solilla Madridissa 2012.',
         selite: 'Real Casa de Correosin kellotorni Puerta del Solilla: '
           + 'kaksi kellotaulua ja niiden yllä avoin kupoli, jossa kellot '
           + 'riippuvat. Kelloseppä José Rodríguez Losadan koneisto '
@@ -1192,6 +1262,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Madrid. Plaza Mayor LCCN2017660767.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Plaza Mayor puistoineen Madridissa 1890-luvulla.',
     selite: 'Plaza Mayor käsinvärittynä photochrom-vedoksena. Aukiolla oli '
               + 'tuolloin puisto: puita, käytäviä ja suihkulähde, ja Filip '
               + 'III:n ratsastajapatsas seisoi keskellä istutuksia.',
@@ -1209,6 +1280,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'The cathedral and some roofs over Seville Spain.jpg',
     vuosi: '2012',
     lahde: 'Jebulon, Commons (CC0)',
+    lyhyt: 'Sevillan katedraali ja Giralda-torni Kultaisesta tornista katsottuna vuonna 2012.',
     selite: 'Sevillan katedraali ja Giralda-torni kattojen yli Kultaisesta '
       + 'tornista katsottuna. Torni oli alun perin moskeijan minareetti; '
       + 'kellotapuli ja tuulikukko lisättiin sen päälle vasta 1500-luvulla, '
@@ -1226,6 +1298,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'dronepicr, Commons (CC BY 2.0)',
 
+        lyhyt: 'Ilmakuva Barcelonan Eixamplesta ja Sagrada Famíliasta vuonna 2021.',
         selite: 'Ilmakuva Barcelonan Eixamplesta: Sagrada Família ja sen '
 
           + 'ympärillä korttelien tasainen ruudukko. Korttelien kulmat on '
@@ -1244,6 +1317,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Joe Mabel, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Katukyltit katalaaniksi ja espanjaksi Barcelonassa vuonna 2024.',
         selite: 'Katukylttejä Plaça dels Traginersilla Barcelonassa. Uudempi '
 
           + 'kyltti on katalaaniksi (Carrer del Hostal d\'En Sol), vanha '
@@ -1262,6 +1336,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Maria Rosa Ferré, Commons (CC BY-SA 2.0)',
 
+        lyhyt: 'Barcelonetan hiekkaranta Barcelonassa vuonna 2013.',
         selite: 'Barcelonetan ranta Barcelonassa. Hiekkaranta alkaa aivan '
 
           + 'kaupungin reunasta, ja rannan takaa kohoavat keskustan '
@@ -1274,6 +1349,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Barcelona. Fachada de la Catedral LCCN2017660376.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Barcelonan katedraalin julkisivu käsinvärittynä photochrom-vedoksena 1890-luvulla.',
     selite: 'Katedraalin julkisivu käsinvärittynä photochrom-vedoksena. '
               + 'Julkisivu oli juuri valmistunut: se rakennettiin 1880-luvulla '
               + 'vuonna 1408 piirretyn suunnitelman mukaan. Keskeltä puuttuu '
@@ -1301,6 +1377,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Sumit Surai, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Kanava, silta ja polkupyöriä Amsterdamissa vuonna 2019.',
         selite: 'Kanava, silta ja polkupyöriä Amsterdamissa. Pyörät on jätetty '
 
           + 'sillan kaiteeseen kiinni, ja jalankulkijan kannattaa tosiaan '
@@ -1317,6 +1394,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Ben van Meerendonk / AHF, kokoelma IISG, Commons (CC BY-SA 2.0)',
 
+        lyhyt: 'Katu-urku \'de Arabier\' Museumpleinilla Amsterdamissa vuonna 1951.',
         selite: 'Perleen katu-urku \'de Arabier\' Museumpleinilla Amsterdamissa '
 
           + '15. lokakuuta 1951; lihakaupan poika on pysähtynyt katsomaan. '
@@ -1331,6 +1409,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Mint tower, Amsterdam, Holland-LCCN2001697999.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Munttoren Singel-kanavan päässä Amsterdamissa 1890-luvulla.',
     selite: 'Munttoren eli Rahatorni Singel-kanavan päässä käsinvärittynä '
               + 'photochrom-vedoksena. Rantaan on sidottu lastiveneitä: kanavat '
               + 'olivat tavaraliikenteen valtatie, eivät maisemaa.',
@@ -1356,6 +1435,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Orderinchaos, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Berliinin muurin linja mukulakivirivinä Bernauer Strassella vuonna 2015.',
         selite: 'Kaksinkertainen mukulakivirivi Bernauer Strassella '
 
           + 'Berliini-Mittessä, Strelitzer Strassen risteyksessä. Rivi '
@@ -1374,6 +1454,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Illustratedjc, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Berliinin vihreä Ampelmännchen jalankulkijoiden valossa vuonna 2014.',
         selite: 'Berliinin vihreä Ampelmännchen jalankulkijoiden valossa. '
 
           + 'Hatullinen ukkeli suunniteltiin Itä-Saksassa, ja se jäi '
@@ -1386,6 +1467,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'NHP 1879 Berlin Sternwarte Nordseite Tafel VI.jpg',
         vuosi: '1880',
         lahde: 'Trigonometrische Abteilung der Landesaufnahme, Commons (PD)',
+        lyhyt: 'Berliinin kuninkaallinen tähtitorni, Neptunuksen löytöpaikka, vuonna 1880.',
         selite: 'Berliinin kuninkaallinen tähtitorni pohjoisesta nähtynä, '
           + 'piirros isoisän ajoilta. Kupolin alla oli kaukoputki, jolla '
           + 'Johann Gottfried Galle löysi Neptunuksen syyskuussa 1846 — '
@@ -1396,6 +1478,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Berlin - Potsdamer Platz - um 1900.jpg',
     vuosi: 'noin 1900',
     lahde: 'Wikimedia Commons (PD)',
+    lyhyt: 'Potsdamer Platz Berliinissä noin vuonna 1900.',
     selite: 'Potsdamer Platz noin vuonna 1900: hevosraitiovaunut, ajurit ja '
               + 'jalankulkijat kulkivat samassa risteyksessä sekaisin. Liikenne '
               + 'kävi niin sekavaksi, että Saksan ensimmäinen liikennevalo '
@@ -1421,6 +1504,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Andreas Praefcke, Commons (CC BY 3.0)',
 
+        lyhyt: 'Pöytä Café Bräunerhofissa Wienissä vuonna 2004.',
         selite: 'Pöytä Café Bräunerhofissa Wienissä: kahvikuppi tarjottimella, '
 
           + 'lasi vettä sen vieressä ja sanomalehti telineessään. Juuri tämä '
@@ -1439,6 +1523,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Txllxt TxllxT, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Hochstrahlbrunnen Schwarzenbergplatzilla Wienissä vuonna 2009.',
         selite: 'Hochstrahlbrunnen Schwarzenbergplatzilla. Suihkulähde '
           + 'otettiin käyttöön 24. lokakuuta 1873 juhlistamaan Wienin '
           + 'ensimmäisen vuoristovesijohdon valmistumista — sen, jonka '
@@ -1451,6 +1536,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Gebeinkammer in den Grabgrüften des Wiender Stephansdoms.jpg',
         vuosi: '2016',
         lahde: 'Burkhard Mücke, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Irtonaisia luita Stephansdomin hautaholveissa Wienissä vuonna 2016.',
         selite: 'Kasa irtonaisia luita Stephansdomin hautaholveissa. '
           + 'Kirkon alle haudattiin vuosisatojen ajan, kunnes kaupungin '
           + 'sisälle hautaaminen kiellettiin 1783. Luut koottiin '
@@ -1461,6 +1547,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Opernring, Vienna, Austro-Hungary-LCCN2002708403.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Opernring, osa Wienin Ringstrassea, hevosraitiovaunujen aikaan 1890-luvulla.',
     selite: 'Opernring, osa Ringstrassea, hevosraitiovaunujen aikaan. '
               + 'Bulevardi rakennettiin 1860-luvulla puretun kaupunginmuurin '
               + 'paikalle — siksi se kiertää vanhan keskustan täsmällisenä '
@@ -1486,6 +1573,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Marie-Lan Nguyen, Commons (CC BY 4.0)',
 
+        lyhyt: 'Wengernalpbahnin hammasratarata Bernin Ylängöllä vuonna 2016.',
         selite: 'Wengernalpbahnin juna rinteessä Allmendin ja Wengernalpin '
 
           + 'pysäkkien välillä Bernin Ylängöllä. Rata on hammasratarata: '
@@ -1504,6 +1592,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Photoglob-Wehrli, Sveitsin kansalliskirjasto, Commons (public domain)',
 
+        lyhyt: 'Lehmiä ja alppimaja Eigerin, Mönchin ja Jungfraun edessä noin 1910.',
         selite: 'Lehmiä ja alppimaja Eigerin, Mönchin ja Jungfraun edessä noin '
 
           + 'vuonna 1910. Karja vietiin kesäksi ylös laitumelle ja haettiin '
@@ -1522,6 +1611,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Robertuswiki, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Alppitorvensoittajia Sveitsissä vuonna 2011.',
         selite: 'Alppitorvensoittajia Sveitsissä. Torvi on useita metrejä pitkä '
 
           + 'ja sen matala ääni kantaa laaksosta toiseen; sillä välitettiin '
@@ -1534,6 +1624,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Hospiz Grosser St. Bernhard.JPG',
         vuosi: '2009',
         lahde: 'Joris Egger, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Suuren Sankt Bernhardin hospitsi solassaan vuonna 2009.',
         selite: 'Suuren Sankt Bernhardin hospitsi samannimisessä solassa, '
           + 'lähes 2 500 metrin korkeudessa. Talot seisovat tien molemmin '
           + 'puolin siinä kohdassa, jossa solan ylittäjä tarvitsi suojan, '
@@ -1543,6 +1634,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Barry der Rettungshund.jpg',
         vuosi: '2014',
         lahde: 'PraktikantinNMBE, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Bernhardiinikoira Barry Bernin luonnontieteellisessä museossa vuonna 2014.',
         selite: 'Barry Bernin luonnontieteellisen museon vitriinissä. '
           + 'Koira palveli hospitsissa 1800-luvun alussa, ja sen ansioksi '
           + 'luetaan yli neljäkymmentä pelastettua ihmistä. Kaulassa '
@@ -1553,6 +1645,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'The Rhone Glacier, Glacier Hotel and Furka Road, Valais, Alps of, Switzerland-LCCN2001703310.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Rhônen jäätikkö Alpeilla, käsinväritettynä photochrom-vedoksena, 1890-luvulla.',
     selite: 'Rhônen jäätikkö laskeutuu melkein hotellin taakse. '
               + 'Käsinväritetty photochrom-vedos: matkailijat tulivat Furkan '
               + 'tietä katsomaan jäätä, ja jäätikköön louhittiin joka kesä '
@@ -1577,6 +1670,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Aktron, Commons (CC BY 3.0)',
 
+        lyhyt: 'Kaarlensilta aamu-usvassa Prahassa vuonna 2011.',
         selite: 'Kaarlensilta aamu-usvassa. Sillan kaiteilla seisovat patsaat '
 
           + 'erottuvat sumusta ennen kuin vastaan tulee ketään — juuri se '
@@ -1593,6 +1687,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Jorge Láscar, Commons (CC BY 2.0)',
 
+        lyhyt: 'Astronominen kello Prahan Vanhankaupungin raatihuoneella vuonna 2010.',
         selite: 'Astronominen kello Vanhankaupungin raatihuoneen eteläseinässä. '
 
           + 'Ylempi kehä näyttää auringon ja kuun paikan, ja täyden tunnin '
@@ -1607,6 +1702,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Entrance to castle, Prague, Bohemia, Austro-Hungary-LCCN2002708487.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Prahan linnan portti Hradčanyn aukiolta 1890-luvulla.',
     selite: 'Prahan linnan portti Hradčanyn aukiolta käsinvärittynä '
               + 'photochrom-vedoksena. Katon yllä ei näy vielä torneja: Pyhän '
               + 'Vituksen katedraali oli tuolloin yhä kesken, ja sen länsipääty '
@@ -1634,6 +1730,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Godot13, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Unkarin parlamenttitalo Tonavan Pestin rannalla Budapestissä vuonna 2015.',
         selite: 'Unkarin parlamenttitalo Tonavan Pestin puoleisella rannalla. '
 
           + 'Ketjusillan keskeltä katsottuna se jää vasemmalle. Isoisä ei '
@@ -1649,6 +1746,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Budapest Széchenyi Baths R04.jpg',
         vuosi: '2012',
         lahde: 'Marc Ryckaert, Commons (CC BY 3.0)',
+        lyhyt: 'Széchenyin kylpylän käytävä Budapestissä vuonna 2012.',
         selite: 'Széchenyin kylpylän käytävä päärakennuksen sisällä. Holvikatto, '
           + 'keltaiset seinät ja rivi puisia tuoleja odottavia kylpijöitä '
           + 'varten.',
@@ -1658,6 +1756,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'VarbarlangFotoThalerTamas.jpg',
         vuosi: '2008',
         lahde: 'Thaler Tamas, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Käytävä Budan linnavuoren alla Budapestissä vuonna 2008.',
         selite: 'Käytävä Budan linnavuoren alla. Lämpimät lähteet '
           + 'syövyttivät kallioon onkaloita, ja talojen kellarit '
           + 'louhittiin niiden jatkoksi — vuoren alle syntyi kilometrien '
@@ -1667,6 +1766,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Budapest, Lánchíd a budai hídfőtől nézve, 1873-1880 között. - Fortepan 82081.jpg',
     vuosi: '1870-luku',
     lahde: 'Fortepan / Wikimedia Commons (PD)',
+    lyhyt: 'Ketjusilta Budan puolelta Budapestissa isoisän matkan aikoihin 1870-luvulla.',
     selite: 'Ketjusilta Budan puolelta kuvattuna 1870-luvulla, isoisän '
               + 'matkan aikoihin. Silta valmistui 1849 ja oli Unkarin '
               + 'ensimmäinen kiinteä Tonavan ylitys — sitä ennen joen yli '
@@ -1693,6 +1793,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Leonard Sempoliński, Commons (PD)',
 
+        lyhyt: 'Varsovan vanhankaupungin tori raunioina vuonna 1945.',
         selite: 'Varsovan vanhankaupungin tori vuonna 1945, kuvattuna '
 
           + 'Nowomiejska-kadun suuntaan. Taloista on jäljellä seinänpätkiä '
@@ -1711,6 +1812,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Bernardo Bellotto, Commons (PD)',
 
+        lyhyt: 'Bernardo Bellotton näkymä Varsovaan Pragan puolelta vuodelta 1770.',
         selite: 'Bernardo Bellotton näkymä Varsovaan Pragan puolelta vuodelta '
 
           + '1770, rajattuna vanhaankaupunkiin. Bellotton tarkkoja '
@@ -1725,6 +1827,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Old part of town, Warsaw, Russia (i.e. Warsaw, Poland)-LCCN2001697518.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Varsovan vanhankaupungin tori torimyyntipäivänä 1890-luvulla.',
     selite: 'Vanhankaupungin tori torimyyntipäivänä 1890-luvulla, '
               + 'käsinvärittynä photochrom-vedoksena. Kojujen katokset '
               + 'täyttävät koko aukion. Alkuperäisessä kuvatekstissä lukee '
@@ -1754,6 +1857,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (Diego Delso, Commons)',
 
+        lyhyt: 'Unirii-bulevardi ja parlamenttitalo Bukarestissa vuonna 2016.',
         selite: 'Unirii-bulevardi suihkulähteineen ja sen päässä kohoava '
 
           + 'parlamenttitalo, päiväkirjan "maailman painavin rakennus". '
@@ -1772,6 +1876,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY 2.0 (Ștefan Jurcă, Commons)',
 
+        lyhyt: 'Lipscanin katu Bukarestin vanhassakaupungissa vuonna 2016.',
         selite: 'Lipscanin katu Bukarestin vanhassakaupungissa. Kortteli oli '
 
           + '1800-luvulla kauppiaiden aluetta, ja kadun nimi juontuu '
@@ -1788,6 +1893,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY 2.0 (Emilian Robert Vicol, Commons)',
 
+        lyhyt: 'Micejä eli mititeitä grillissä Bukarestissa vuonna 2010.',
         selite: 'Micejä eli mititeitä grillin päällä. Nämä kuorettomat '
 
           + 'jauhelihamakkarat ovat romanialaista arki- ja katuruokaa, ja ne '
@@ -1800,6 +1906,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'RO B Bucur church 1.jpg',
         vuosi: '2011',
         lahde: 'CC BY-SA 3.0 ro (Andrei Stroe, Commons)',
+        lyhyt: 'Bucurin pieni kirkko Bukarestin nykytalojen välissä vuonna 2011.',
         selite: 'Bucurin kirkko jää nykytalojen väliin: pieni valkoinen '
           + 'rakennus avokuistilla, ja pihamuurin tiilikaaressa riippuu '
           + 'kello. Kaupungin nimen kerrotaan tulevan paimen Bucurista, '
@@ -1809,6 +1916,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Postcard from the Belle Époque with the Romanian Athenaeum and its garden.jpg',
     vuosi: '1900-luvun taite',
     lahde: 'Wikimedia Commons (PD)',
+    lyhyt: 'Romanian Ateneum puutarhoineen Bukarestissa 1900-luvun taitteessa.',
     selite: 'Romanian Ateneum ja sen puutarha käsinvärittynä postikorttina '
               + '1900-luvun taitteessa. Konserttitalo vihittiin vuonna 1888, ja '
               + 'osa rakennusrahoista kerättiin kansalaiskeräyksellä, jonka '
@@ -1833,6 +1941,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Arsenalna station. Kyiv metro.jpg',
         vuosi: '2012',
         lahde: 'Ahernar, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Arsenalnan metroaseman laiturihalli Kiovassa vuonna 2012.',
         selite: 'Arsenalnan aseman laiturihalli Kiovassa. Marmoripilarit ja '
           + 'matala holvi ovat 105 metrin syvyydessä maan alla, ja halli on '
           + 'poikkeuksellisen lyhyt.',
@@ -1846,6 +1955,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Norbert Aepli, Commons (CC BY 3.0)',
 
+        lyhyt: 'Luolaluostari Dneprin puolelta nähtynä Kiovassa vuonna 2005.',
         selite: 'Luolaluostari Dneprin puolelta nähtynä. Kullatut kupolit '
 
           + 'kohoavat vihreän rinteen päällä joen yläpuolella — sama näkymä, '
@@ -1858,6 +1968,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'The Lavra gate, Kiev, Russia, (i.e., Ukraine)-LCCN2001697423.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Kiovan Luolaluostarin porttikirkko 1890-luvulla.',
     selite: 'Luolaluostarin porttikirkko käsinvärittynä '
               + 'photochrom-vedoksena. Kirkko rakennettiin vuosina 1106–1108 '
               + 'luostarin pääportin päälle, ja se on alueen vanhin säilynyt '
@@ -1884,6 +1995,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (George Chernilevsky, Commons)',
 
+        lyhyt: 'Odessan kauppasatama Potjomkinin portaiden juurella vuonna 2016.',
         selite: 'Odessan kauppasatama. Potjomkinin portaat nousevat juuri tältä '
 
           + 'rannalta kaupunkiin, joten meri on Odessassa kirjaimellisesti '
@@ -1900,6 +2012,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Public domain (George Chernilevsky, Commons)',
 
+        lyhyt: 'Odessan ooppera- ja balettiteatteri vuonna 2016.',
         selite: 'Odessan ooppera- ja balettiteatteri, vanhankaupungin tunnetuin '
 
           + 'rakennus. Talo valmistui 1887 wieniläisen Fellner & Helmer '
@@ -1914,6 +2027,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Richelieu Stair, Odessa, Russia, (i.e., Ukraine)-LCCN2001697474.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Potjomkinin portaat, silloin Richelieun portaat, Odessassa 1890-luvulla.',
     selite: 'Portaat alhaalta kuvattuna aikana, jolloin niitä kutsuttiin '
               + 'Richelieun portaiksi. Askelmia oli tuolloin 200; kahdeksan '
               + 'alinta jäi myöhemmin sataman laajennuksen alle, joten nyt '
@@ -1939,6 +2053,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Jorge Láscar, Commons (CC BY 2.0)',
 
+        lyhyt: 'Kremlin muuri ja Spasskajan torni Punaiselta torilta Moskovassa 2014.',
         selite: 'Kremlin muuri ja Spasskajan torni Punaisen torin puolelta. '
 
           + 'Muuri on punaista tiiltä, ei kiveä; se muurattiin 1400-luvun '
@@ -1957,6 +2072,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'A. Savin, Commons (CC BY-SA 3.0)',
 
+        lyhyt: 'Komsomolskajan metroasema Moskovassa vuonna 2015.',
         selite: 'Komsomolskajan asema Moskovan metron kehälinjalla. Pylväsrivit '
 
           + 'kannattavat holvia, katossa on mosaiikkeja ja rivi '
@@ -1971,6 +2087,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Church of St. Basil, Red Square Moscow LCCN2017660946.jpg',
     vuosi: '1890',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Vasili Autuaan kirkko Punaisella torilla Moskovassa noin vuonna 1890.',
     selite: 'Vasili Autuaan kirkko Punaisen torin laidalla noin vuonna '
               + '1890, käsinvärittynä photochrom-vedoksena. Etualalla näkyy '
               + 'Lobnoje mesto, pyöreä kivikoroke, jolta luettiin ääneen '
@@ -1996,6 +2113,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Stan Smolin, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Palatsisilta nostettuna pystyyn Nevan yllä Pietarissa vuonna 2014.',
         selite: 'Palatsisilta nostettuna pystyyn Nevan yllä ja laiva kulkemassa '
 
           + 'alitse. Sillat avataan öisin alusten takia, ja avattuina ne '
@@ -2011,6 +2129,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'RU - Saint Petersburg - Hermitage Museum - 2009-07-18 (4891826564).jpg',
         vuosi: '2014',
         lahde: 'CGP Grey, Commons (CC BY 2.0)',
+        lyhyt: 'Eremitaasin sisustusta Talvipalatsissa Pietarissa vuonna 2014.',
         selite: 'Eremitaasin sisustusta: kullattuja seinälamppuja, valkoisia '
           + 'veistoksia ja koristeltuja pilareita talvipalatsin salissa.',
       },
@@ -2019,6 +2138,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Alexander\'s Column, St. Petersburg, Russia-LCCN2001697508.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Aleksanterin pylväs Palatsiaukiolla Pietarissa 1890-luvulla.',
     selite: 'Aleksanterin pylväs Palatsiaukiolla käsinvärittynä '
               + 'photochrom-vedoksena. Pylväs on yhtä ainoaa '
               + 'graniittilohkaretta ja seisoo pelkän painonsa varassa ilman '
@@ -2045,6 +2165,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Bernt Rostad, Commons (CC BY 2.0)',
 
+        lyhyt: 'Tallinnan kaupunginmuuri ja puolustustornit vuonna 2013.',
         selite: 'Tallinnan kaupunginmuuri ja sen puolustustornit ulkopuolelta '
 
           + 'nähtynä. Punaiset kartiokatot ja vaalea kalkkikivi ovat samat, '
@@ -2061,6 +2182,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Cayambe, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Raatihuoneentorin pohjoislaita Tallinnassa vuonna 2015.',
         selite: 'Raatihuoneentorin pohjoislaita Tallinnassa. Aukiota reunustavat '
 
           + 'kauppiaiden kapeat talot, ja tori on ollut kaupungin '
@@ -2075,6 +2197,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Reval, general view, 1890 - 1900 crop.jpg',
     vuosi: '1890-luku',
     lahde: 'Wikimedia Commons (PD)',
+    lyhyt: 'Reval eli Tallinna, Toompean kallio ja tuomiokirkko, 1890-luvulla.',
     selite: 'Reval — Tallinnan silloinen nimi — käsinvärittynä '
               + 'photochrom-vedoksena. Toompean kallion päällä kohoaa valkoinen '
               + 'Stenbockin talo ja sen takana tuomiokirkon torni. Alhaalla '
@@ -2101,6 +2224,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Alma Pater, Commons (CC BY-SA 3.0)',
 
+        lyhyt: 'Jugendtalon julkisivu Alberta-kadulla Riiassa vuonna 2009.',
         selite: 'Jugendtalon julkisivu Alberta-kadulla Riiassa. Kivikasvot ja '
 
           + 'hahmot kurkistavat ikkunoiden välistä ja räystäiden alta — '
@@ -2119,6 +2243,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Diego Delso, Commons (CC BY-SA 3.0)',
 
+        lyhyt: 'Riian keskustorin hallin sisusta vuonna 2012.',
         selite: 'Riian keskustorin hallin sisusta. Holvikatto kaartuu '
 
           + 'myyntitiskien yllä kuin ylösalaisin käännetty vene, ja '
@@ -2135,6 +2260,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Laima Gūtmane (simka), Commons (CC BY-SA 3.0)',
 
+        lyhyt: 'Latvian laulujuhla Riian Mežaparksin laulukentällä vuonna 2008.',
         selite: 'Latvian laulujuhla Riian Mežaparksin suurella laulukentällä '
 
           + 'vuonna 2008. Ensimmäiset yleiset latvialaiset laulujuhlat '
@@ -2147,6 +2273,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Latvia Riga Cathedral weather cock.jpg',
         vuosi: '2006',
         lahde: 'Wojsyl, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Riian tuomiokirkon kullattu tuulikukko vuonna 2006.',
         selite: 'Tuomiokirkon kullattu kukko tornin huipulla. Riian '
           + 'vanhimmissa kirkontorneissa on ristin sijasta kukko, joka '
           + 'kääntyy tuulen mukaan. Toinen kylki on kullattu ja toinen '
@@ -2157,6 +2284,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Theatre and promenade, Riga, Russia, (i.e., Latvia)-LCCN2001697477.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Riian kaupunginteatteri ja kanavapuisto 1890-luvulla.',
     selite: 'Riian kaupunginteatteri ja sen edessä kanavapuisto, '
               + 'käsinväritetty photochrom-vedos. Puisto kasvaa vanhan '
               + 'vallihaudan päällä: linnoitukset purettiin 1850-luvulla ja '
@@ -2183,6 +2311,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Radosław Botev, Commons (CC BY 3.0 PL)',
 
+        lyhyt: 'Vilnan vanhakaupunki Gediminaksen tornista nähtynä vuonna 2017.',
         selite: 'Vilnan vanhakaupunki Gediminaksen tornista nähtynä. Kattojen '
 
           + 'yli erottuu torni toisensa jälkeen, ja maasto nousee ja laskee '
@@ -2201,6 +2330,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Michał Derela, Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Užupiksen merenneitopatsas Vilnia-joen rannassa vuonna 2024.',
         selite: 'Užupiksen merenneito istuu muurin kolossa Vilnia-joen rannassa, '
 
           + 'aivan sillan vieressä. Pronssiveistos on kaupunginosan '
@@ -2215,6 +2345,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Vilnia, Vostraja Brama. Вільня, Вострая Брама (S. Fleury, 1900).jpg',
     vuosi: '1900',
     lahde: 'Wikimedia Commons (PD)',
+    lyhyt: 'Aamunportti Vilnan vanhassakaupungissa noin vuonna 1900.',
     selite: 'Aamunportti nähtynä vanhankaupungin puolelta, kuvannut '
               + 'Stanisław Filibert Fleury noin 1900. Katu on mukulakiveä, '
               + 'kulkijat pysähtyvät portin alla, ja kappelin ikkunan takana on '
@@ -2241,6 +2372,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (Tarik Kaan Muslu, Commons)',
 
+        lyhyt: 'Şehir Hatları -lautta Bosporinsalmella Istanbulissa vuonna 2020.',
         selite: 'Şehir Hatları -lautta Bosporinsalmella Kadıköyn reitillä. '
 
           + 'Säännöllinen höyrylauttaliikenne salmen yli alkoi 1850-luvulla, '
@@ -2257,6 +2389,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (Biggestkartal, Commons)',
 
+        lyhyt: 'Lokki nappaa ruokaa Bosporin lautalla Istanbulissa vuonna 2018.',
         selite: 'Lokki nappaa palan suoraan matkustajan kädestä Bosporin '
 
           + 'lautalla helmikuussa 2018. Lintujen ruokkiminen kannelta on '
@@ -2273,6 +2406,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 4.0 (Benreis, Commons)',
 
+        lyhyt: 'Simit-kärry Istanbulissa vuonna 2015.',
         selite: 'Simit-kärry Istanbulissa. Seesaminsiemenillä kuorrutettuja '
 
           + 'rinkeleitä myydään kadulla ja laituripäissä vaunuista, ja juuri '
@@ -2289,6 +2423,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC BY-SA 2.5 IT (Giovanni Dall\'Orto, Commons)',
 
+        lyhyt: 'Turkkilainen tee Eyüpin Pierre Loti -kahvilassa Istanbulissa vuonna 2006.',
         selite: 'Turkkilainen tee tarjoillaan tulppaanin muotoisessa, '
 
           + 'korvattomassa lasissa. Kuva on Eyüpin Pierre Loti -kahvilasta '
@@ -2301,6 +2436,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'The Golden Horn, Constantinople, Turkey-LCCN2001699446.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Kultainen sarvi iltavalossa Istanbulissa 1890-luvulla.',
     selite: 'Kultainen sarvi eli Haliç iltavalossa, käsinväritetty '
               + 'photochrom-vedos. Merenlahti työntyy seitsemän kilometriä '
               + 'kaupungin sisään; kuva on otettu lahden yläpään kukkulalta, ja '
@@ -2326,6 +2462,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Näkymä Helsingin Eteläsatamasta Kauppatorille vuonna 2010.',
         selite: 'Näkymä Eteläsatamasta Kauppatorille ja Tuomiokirkolle. Juuri '
 
           + 'tämän eteen laiva kaartaa, ja vaaleat talot nousevat rannasta '
@@ -2342,6 +2479,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Halt tone, Wikimedia Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Helsingin Kauppatori silakkamarkkinoiden aikaan vuonna 2018.',
         selite: 'Kauppatori silakkamarkkinoiden aikaan. Markkinat tuovat '
 
           + 'kalastajien veneet torin laituriin joka lokakuu.',
@@ -2356,6 +2494,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Tuula Sipilä, Wikimedia Commons (CC BY 4.0)',
 
+        lyhyt: 'Raitiovaunuja Mannerheimintiellä Helsingissä vuonna 2022.',
         selite: 'Neljä raitiovaunua peräkkäin Mannerheimintien suoralla, '
 
           + 'kuvattuna Stockmannin edessä olevalta pysäkiltä. Raitiotiet '
@@ -2368,6 +2507,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'The new cathedral, Helsingfors, Russia, i.e., Helsinki, Finland-LCCN2001697412.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Senaatintori ja Nikolainkirkko Helsingissä 1890-luvulla.',
     selite: 'Senaatintori ja Nikolainkirkko käsinvärittynä '
               + 'photochrom-vedoksena. Kirkko valmistui 1852 Carl Ludvig '
               + 'Engelin piirustusten mukaan. Vedoksen kyljessä lukee "Russia": '
@@ -2394,6 +2534,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Finlaysonin alue vuonna 1955. Kuva Veikko Kanninen, Vapriikin kuva-arkisto. (16247336630).jpg',
         vuosi: '1955',
         lahde: 'Museokeskus Vapriikki, Wikimedia Commons (CC BY 2.0)',
+        lyhyt: 'Finlaysonin tehdasalue Tampereella vuonna 1955.',
         selite: 'Finlaysonin tehdasalue ylhäältä vuonna 1955: pitkiä '
           + 'tehdassaleja rinteessä, korkea savupiippu keskellä ja oikealla '
           + 'iso kaari-ikkunainen halli aivan Tammerkosken rannassa.',
@@ -2402,6 +2543,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Finlaysonin sähköveturi Pikku-Pässi 1950-luvulla. Kuva Vapriikin kuva-arkisto. (16408774116).jpg',
         vuosi: '1950-luku',
         lahde: 'Museokeskus Vapriikki, Wikimedia Commons (CC BY 2.0)',
+        lyhyt: 'Finlaysonin sähköveturi Pikku-Pässi Tampereella 1950-luvulla.',
         selite: 'Finlaysonin oma sähköveturi Pikku-Pässi vetämässä '
           + 'kippivaunuja lumisella pihalla. Yläpuolella kulkee tehtaan '
           + 'kuljetinsilta, ja ajolangat riippuvat pylväiden varassa.',
@@ -2410,6 +2552,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Pispala hillside on 1st May 2016.jpg',
         vuosi: '2016',
         lahde: 'Lauren Stevens, Wikimedia Commons (CC BY-SA 4.0)',
+        lyhyt: 'Näkymä Pispalan rinteeltä Näsijärvelle Tampereella vuonna 2016.',
         selite: 'Näkymä Pispalan rinteeltä Näsijärvelle vappuna. Alhaalla '
           + 'on punatiilinen tehdas savupiippuineen, edessä lahti saarineen '
           + 'ja kaukana vastarannalla kaupunki.',
@@ -2418,6 +2561,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Tampere ca 1900-1910. - 14195290548.jpg',
     vuosi: 'noin 1900–1910',
     lahde: 'Åbo Akademi University Library, Wikimedia Commons (CC BY 2.0)',
+    lyhyt: 'Hämeensilta ja Tammerkoski Tampereella noin 1900–1910.',
     selite: 'Hämeensilta ja Tammerkoski Alex Federleyn kuvaamana. Silta on '
       + 'vielä ristikkokaiteinen rautasilta, kaiteella nojaa kaksi miestä '
       + 'lakit päässä, ja kosken takana avautuu Hämeenkatu kivitaloineen. '
@@ -2444,6 +2588,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Näkymä Slussenista Gamla stanin yli Tukholmassa vuonna 2015.',
         selite: 'Näkymä Slussenista Gamla stanin ja Riddarholmenin yli, '
 
           + 'taustalla Kungsholmen ja kaupungintalo. Vettä on joka suuntaan, '
@@ -2460,6 +2605,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Øyvind Holmstad, Wikimedia Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Mårten Trotzigs gränd, Tukholman kapein kuja, vuonna 2015.',
         selite: 'Mårten Trotzigs gränd Gamla stanissa on Tukholman kapein kuja: '
 
           + 'kapeimmillaan seinien väliin jää noin 90 senttiä.',
@@ -2474,6 +2620,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'ArildV, Wikimedia Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Saaristolaivoja Strömkajenilla Tukholmassa vuonna 2025.',
         selite: 'Saaristolaivoja Strömkajenilla aivan keskustan rannassa. Täältä '
 
           + 'valkoiset laivat lähtevät Tukholman saaristoon.',
@@ -2498,6 +2645,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Kungstradgarden, Stockholm, Sweden-LCCN2001700741.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Kungsträdgården eli Kuninkaanpuutarha Tukholmassa 1890-luvulla.',
     selite: 'Kungsträdgården eli Kuninkaanpuutarha käsinvärittynä '
               + 'photochrom-vedoksena. Puisto oli alun perin kuninkaan kaali- '
               + 'ja yrttitarha; 1800-luvulla siitä tuli kaupunkilaisten '
@@ -2523,6 +2671,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Hofi0006, Wikimedia Commons (CC BY-SA 3.0)',
 
+        lyhyt: 'Oslo vuonolta katsottuna kaupungintalon torneineen vuonna 2005.',
         selite: 'Oslo vuonolta katsottuna, keskellä kaupungintalon kaksi tornia. '
 
           + 'Tästä suunnasta kaupunki avautuu laivan kannelta tulijalle.',
@@ -2551,6 +2700,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
 
+        lyhyt: 'Kuninkaanlinna Karl Johans gatenin päässä Oslossa vuonna 2014.',
         selite: 'Det kongelige slott eli kuninkaanlinna Karl Johans gaten '
 
           + 'päässä. Linna rakennettiin 1800-luvun alkupuoliskolla, ja sen '
@@ -2564,6 +2714,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Brown cheese sandwiches and coffee..jpg',
         vuosi: '2006',
         lahde: 'Kristian Bjornard, Commons (CC BY-SA 2.0)',
+        lyhyt: 'Voileipiä ruskeajuustolla ja kahvia Oslossa vuonna 2006.',
         selite: 'Kaksi voileipää ruskeajuustoviipaleineen ja kahvikuppi. Juusto '
           + 'leikataan ohuiksi lastuiksi juustohöylällä, joka on norjalainen '
           + 'keksintö.',
@@ -2573,6 +2724,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Storthings Bygningen (i.e., Stortingsbygningen) Christiania, Norway-LCCN2001699461.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Norjan suurkäräjien talo Oslossa, silloin Christiania, 1890-luvulla.',
     selite: 'Norjan suurkäräjien talo photochrom-vedoksena, kun kaupunki '
               + 'oli vielä Christiania ja maa unionissa Ruotsin kanssa. Talo '
               + 'otettiin käyttöön 5. maaliskuuta 1866, ja sen suunnitteli '
@@ -2600,6 +2752,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'S. Maria Novella te Florence 371 (serietitel), RP-F-00-261.jpg',
         vuosi: '1800-luvun loppu',
         lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        lyhyt: 'Santa Maria Novellan aukio Firenzessä 1800-luvun lopulla.',
         selite: 'Santa Maria Novellan aukio albumiinivedoksella. Kirkon '
           + 'marmorijulkisivu on sama kuin nyt, mutta aukio on tyhjä hiekkakenttä '
           + 'ja sen laidassa seisoo kaksi kääntöpylvästä, joiden ympäri '
@@ -2609,6 +2762,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Binnenplaats van het Palazzo Vecchio te Florence No. 1951 (serietitel), RP-F-00-263.jpg',
         vuosi: '1800-luvun loppu',
         lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        lyhyt: 'Palazzo Vecchion sisäpiha Firenzessä 1800-luvun lopulla.',
         selite: 'Palazzo Vecchion sisäpiha samalta ajalta. Pylväät on koristeltu '
           + 'kullatuin kuvioin, ja keskellä seisoo suihkulähde '
           + 'porraskorokkeella. Piha on tyhjä ja hiljainen.',
@@ -2617,6 +2771,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Beeld in de Bobolituinen in Florence No. 2958 Firenze R. Giardino di Boboli. La Dovizia (Tacca e Salvini) (titel op object), RP-F-2010-169.jpg',
         vuosi: '1800-luvun loppu',
         lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        lyhyt: 'La Dovizia -veistos Firenzen Bobolin puutarhassa 1800-luvun lopulla.',
         selite: 'La Dovizia eli Runsaus Bobolin puutarhassa. Marmorinainen '
           + 'kohottaa kädessään viljalyhdettä ja kantaa toisessa hedelmäkoria, '
           + 'ja taustalla on leikattu pensasseinä. Kuvatekstin mukaan '
@@ -2626,6 +2781,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Flood level florence misericordia.jpg',
         vuosi: '2013',
         lahde: 'Panek, Wikimedia Commons (CC BY-SA 4.0)',
+        lyhyt: 'Arno-tulvan 1966 muistolaatta Firenzen talon seinässä vuonna 2013.',
         selite: 'Marmorilaatta talon seinässä kolmen metrin korkeudella: '
           + '"IL 4 NOVEMBRE 1966 L\'ACQUA DELL\'ARNO ARRIVÒ QUI" — tähän asti '
           + 'Arnon vesi nousi. Vastaavia laattoja on ympäri keskustaa.',
@@ -2634,6 +2790,7 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Firenze, piazza della signoria di notte (2020), 03.jpg',
         vuosi: '2020',
         lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        lyhyt: 'Signorian aukio yöllä Firenzessä vuonna 2020.',
         selite: 'Signorian aukio yöllä. Vasemmalla valaistuna Neptunuksen '
           + 'suihkulähde, keskellä tyhjä kivikenttä ja ympärillä valaistut '
           + 'talorivit — päivällä samassa paikassa on tuhansia ihmisiä.',
@@ -2642,6 +2799,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Gezicht op Florence vanaf de Monte alle Croci FIRENZE Panorama preso dal Monte alle Croci. (titel op object), RP-F-F01093-AV.jpg',
     vuosi: '1800-luvun loppu',
     lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+    lyhyt: 'Firenze Piazzale Michelangelolta Arno-jokineen 1800-luvun lopulla.',
     selite: 'Firenze Monte alle Crocin rinteeltä albumiinivedoksella. Arno '
       + 'kaartaa kuvan halki, Ponte Vecchio ja kolme muuta siltaa erottuvat '
       + 'vasemmalla, ja horisontissa nousevat Palazzo Vecchion torni ja '
@@ -2660,6 +2818,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Bergen.Bryggen.1.jpg',
     vuosi: '2008',
     lahde: 'Erik Christensen, Commons (CC BY-SA 3.0)',
+    lyhyt: 'Bryggen, hansakauppiaiden ranta Bergenissä, vuonna 2008.',
     selite: 'Bryggen eli hansakauppiaiden ranta Bergenissä. Kapeat puutalot '
       + 'seisovat yhä samoilla kivijaloilla kuin keskiajalla, vaikka ranta '
       + 'on palanut ja noussut uudelleen monta kertaa. Kylttien kalannimet '
@@ -2677,6 +2836,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
 
+        lyhyt: 'Pyöräilijöitä Holmens Kanalilla Kööpenhaminassa vuonna 2014.',
         selite: 'Pyöräilijöitä Holmens Kanalilla Kööpenhaminassa. Pyörillä on '
 
           + 'oma kaistansa ajoradan ja jalkakäytävän välissä.',
@@ -2691,6 +2851,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Nyhavnin kanava värillisine taloineen Kööpenhaminassa vuonna 2022.',
         selite: 'Nyhavnin kanava ja sen värilliset talorivit. Laiturissa makaa '
 
           + 'vanhoja puulaivoja, ja kanavan reunalla istuskellaan veden '
@@ -2707,6 +2868,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Johan Wessman / News Oresund, Wikimedia Commons (CC BY 2.0)',
 
+        lyhyt: 'Pølsevogn eli makkaravaunu Kongens Nytorvilla Kööpenhaminassa 2012.',
         selite: 'Pølsevogn eli makkaravaunu Kongens Nytorvilla. Tanskalainen '
 
           + 'katumakkara ostetaan luukulta ja syödään siinä paikassa.',
@@ -2721,6 +2883,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'public domain',
 
+        lyhyt: 'Tivoli-huvipuisto Kööpenhaminassa noin vuonna 1900.',
         selite: 'Tivoli noin vuonna 1900 Peter Elfeltin valokuvaamana. '
 
           + 'Huvipuisto oli silloin ollut auki jo yli puoli vuosisataa.',
@@ -2745,6 +2908,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Royal Theatre, Copenhagen, Denmark-LCCN2001697986.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Kuninkaallinen teatteri Kongens Nytorvilla Kööpenhaminassa 1890-luvulla.',
     selite: 'Kuninkaallinen teatteri Kongens Nytorvin laidalla '
               + 'käsinvärittynä photochrom-vedoksena. Rakennus valmistui 1874, '
               + 'ja juuri tämän talon orkesterissa Carl Nielsen soitti toista '
@@ -2771,6 +2935,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
 
+        lyhyt: 'Inarijärvi heinäkuussa 2017.',
         selite: 'Inarijärvi heinäkuussa. Järvi on Suomen kolmanneksi suurin ja '
 
           + 'täynnä saaria, eikä vastarantaa useimmista paikoista näy.',
@@ -2785,6 +2950,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
 
+        lyhyt: 'Inarintie eli valtatie 4 Inarin kylän läpi vuonna 2021.',
         selite: 'Inarintie eli valtatie 4 kulkee Inarin kylän läpi. Rautatietä '
 
           + 'tänne ei ole, joten matka taittuu maantietä pitkin.',
@@ -2799,6 +2965,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
 
+        lyhyt: 'Keskiyön aurinko Utsjoella toukokuussa 2021.',
         selite: 'Kevään ensimmäinen keskiyön aurinko Utsjoella 17. toukokuuta '
 
           + '2021. Pohjoisimmassa Lapissa aurinko pysyy horisontin '
@@ -2811,6 +2978,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Kultala Ivalojoki.jpg',
     vuosi: '1900',
     lahde: 'Wikimedia Commons (PD)',
+    lyhyt: 'Ivalojoen kulta-aluetta Lapissa noin vuonna 1900.',
     selite: 'Ivalojoen kulta-aluetta noin vuonna 1900. Rannat on kaivettu '
               + 'auki ja puut kaadettu. Valtio rakensi jokivarteen Kultalan '
               + 'kruununaseman kevättalvella 1870, ja parhaimmillaan paikalla '
@@ -2836,6 +3004,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Tromssan silta salmen yli Tromsøyan saarelle vuonna 2019.',
         selite: 'Tromssan silta kaartuu salmen yli mantereen ja Tromsøyan saaren '
 
           + 'välillä. Sitä pitkin kuljetaan kaupunkiin ja pois.',
@@ -2850,6 +3019,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Andrew Shiva / Wikipedia, Wikimedia Commons (CC BY-SA 4.0)',
 
+        lyhyt: 'Tromssan puinen tuomiokirkko, Norjan ainoa laatuaan, vuonna 2016.',
         selite: 'Tromssan tuomiokirkko valmistui 1861 ja on rakennettu puusta. '
 
           + 'Se on Norjan ainoa puinen tuomiokirkko, ja sen torni näkyy '
@@ -2866,6 +3036,7 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'CC0',
 
+        lyhyt: 'Keskiyön aurinko Tromssassa vuonna 2025.',
         selite: 'Keskiyön aurinko Tromssassa, kuvattuna sillalta kello 00.39. '
 
           + 'Kesällä aurinko ei laske lainkaan, ja kaupunki pysyy valoisana '
@@ -2878,6 +3049,7 @@ export const EUROPE_VALOKUVAT = {
     tiedosto: 'Tromsø, with Tromstind, Troms, Norway-LCCN2001700759.jpg',
     vuosi: '1890-luku',
     lahde: 'Library of Congress (PD)',
+    lyhyt: 'Tromssa purjelaivoineen ja Tromsdalstindin huippuineen 1890-luvulla.',
     selite: 'Tromssa käsinvärittynä photochrom-vedoksena: puutaloja '
               + 'rinteessä, purjelaivoja satamassa ja takana Tromsdalstindin '
               + 'lumihuippu. Kaupunkioikeudet Tromssa sai 1794, jolloin siinä '

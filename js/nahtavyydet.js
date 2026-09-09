@@ -29,6 +29,7 @@ import { juttuAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
 import { piirraReaktiot } from './reaktiot.js';
 import { sfx } from './sound.js';
 import { taytaLahderivi } from './tekijakortti.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { esilataaKuvat, html, lahdemerkinta, vuosiluku } from './ui-apurit.js';
 
 /*
@@ -1473,8 +1474,10 @@ export function piirraMatkailijalle(ui, kohde) {
       }, true);
     }
     kotelo.appendChild(kuva);
-    if (tiedot.kuva.selite) {
-      const teksti = html('figcaption', 'kuvateksti', tiedot.kuva.selite);
+    // Sivulla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+    const kuvanLyhyt = kuvatekstiLyhyt(tiedot.kuva);
+    if (kuvanLyhyt) {
+      const teksti = html('figcaption', 'kuvateksti', kuvanLyhyt);
       if (tiedot.kuva.lahde) {
         // Väli tulee CSS:stä (ks. "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
         teksti.appendChild(taytaLahderivi(html('span', 'lehti-kuvalahde'),
@@ -2262,7 +2265,8 @@ export function nahtavyydenKuva(ui, kuva) {
   const kehys = html('figure', 'nahtavyys-kuvakehys');
   const el = document.createElement('img');
   el.className = 'nahtavyys-kuva kulttuuri-kuva-nappi';
-  el.alt = kuva.selite ?? '';
+  // Jutussa lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  el.alt = kuvatekstiLyhyt(kuva);
   // Sama peiliputki ja suurennus kuin nostojen kuvilla.
   ui.varustaNostonKuva(el, kuva, 900);
   /*
@@ -2288,7 +2292,8 @@ export function nahtavyydenKuva(ui, kuva) {
    */
   if (ui.piirraIhmenauha?.(kehys, kuva.nauha)) kehys.classList.add('kuva-nauhalla');
   const teksti = html('figcaption', 'nahtavyys-kuvateksti');
-  if (kuva.selite) teksti.appendChild(html('span', 'nahtavyys-selite', kuva.selite));
+  const lyhytSelite = kuvatekstiLyhyt(kuva);
+  if (lyhytSelite) teksti.appendChild(html('span', 'nahtavyys-selite', lyhytSelite));
   // Lähderivi: pro-tuottajan kuvassa tekijän nimi on painike, joka
   // avaa tekijäsivun (js/tekijakortti.js). Ilman `tekijaId`-kenttää
   // rivi on tavallista tekstiä kuten ennen.
@@ -2348,7 +2353,9 @@ export function nahtavyydenKaruselli(ui, kuvat) {
     if (el) el.replaceWith(uusi); else ikkuna.prepend(uusi);
     el = uusi;
     teksti.replaceChildren();
-    if (kuva.selite) teksti.appendChild(html('span', 'nahtavyys-selite', kuva.selite));
+    // Karusellissa lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+    const lyhyt = kuvatekstiLyhyt(kuva);
+    if (lyhyt) teksti.appendChild(html('span', 'nahtavyys-selite', lyhyt));
     if (kuva.lahde) {
       teksti.appendChild(taytaLahderivi(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva));
     }

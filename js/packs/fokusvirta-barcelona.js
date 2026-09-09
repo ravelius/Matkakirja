@@ -244,6 +244,7 @@ export const FOKUSVIRTA_BARCELONA = {
      */
     kuva: {
       tiedosto: 'Barcelona desde El Carmelo.JPG',
+      lyhyt: 'Cerdàn ruudukon korttelit ovat 113 m sivultaan; laidalla Sagrada Família rakenteilla 1882.',
       selite: 'Cerdàn ruudukon korttelit ovat 113 metriä sivultaan, ja '
         + 'sen laidalla on vuodesta 1882 rakenteilla ollut Sagrada '
         + 'Família.',
@@ -345,6 +346,7 @@ export const FOKUSVIRTA_BARCELONA = {
        */
       kuva: {
         tiedosto: 'Straatgezicht op de Rambla de las flores te Barcelona, RP-F-F01157-AY.jpg',
+        lyhyt: 'Rambla de las Flores 1889: 1859 istutetut plataanit jo kolmikymppisiä, katu kaupungin olohuone.',
         selite: 'Rambla de las Flores vuonna 1889: vuodesta 1859 '
           + 'istutetut plataanit ovat kolmenkymmenen vuoden ikäisiä ja '
           + 'katu on jo kaupungin olohuone.',
@@ -463,6 +465,7 @@ export const FOKUSVIRTA_BARCELONA = {
        */
       kuva: {
         tiedosto: 'Dactylosphaera vitifolii MKL Bd. 13 1890 (128905688).jpg',
+        lyhyt: 'Vuoden 1890 kuvataulu esittää fil·loxeran ja sen imukärsän suurennettuina.',
         selite: 'Vuoden 1890 kuvataulu esittää fil·loxeran siivekkäänä '
           + 'ja siivettömänä sekä imukärsän, jolla eläin tyhjentää '
           + 'viiniköynnöksen juuren — kaikki voimakkaasti suurennettuina.',
@@ -575,6 +578,7 @@ export const FOKUSVIRTA_BARCELONA = {
        */
       kuva: {
         tiedosto: 'EixampleBCN-projecteRovira.jpg',
+        lyhyt: 'Rovira i Triasin voittanut ehdotus 1859: säteittäinen viuhka vanhastakaupungista, ei rakennettu.',
         selite: 'Antoni Rovira i Triasin voittanut kilpailuehdotus '
           + 'vuodelta 1859: vanhastakaupungista säteittäin avautuva '
           + 'viuhka, jota ei koskaan rakennettu.',
@@ -695,6 +699,7 @@ export const FOKUSVIRTA_BARCELONA = {
      */
     kuva: {
       tiedosto: 'Strait of Gibraltar (satellite view).jpg',
+      lyhyt: 'Gibraltarin salmi satelliitista; sen sulkeutuminen kuivatti Välimeren ja avautuminen täytti sen.',
       selite: 'Gibraltarin salmi satelliitista: tämän kapeikon '
         + 'sulkeutuminen kuivatti Välimeren ja sen avautuminen täytti '
         + 'sen takaisin.',

@@ -331,6 +331,7 @@ export const FOKUSKOHTEET_GRC = [
      */
     kuva: {
       tiedosto: 'Maison de Capo d\'Istria sous les murs de Tirynthe Nauplie dans le golfe d\'Argos - Rey Etienne - 1867.jpg',
+      lyhyt: 'Kapodistriaksen talo Tirynsin muurien alla Nafplion luona, Étienne Reyn matkakirjan kuvalaatasta.',
       selite: 'Kapodistriaksen talo Tirynsin muurien alla Nafplion luona. '
         + 'Kuvalaatta Étienne Reyn matkakirjasta, joka kertoo vuosien '
         + '1843–1844 matkasta.',
@@ -601,6 +602,7 @@ export const FOKUSKOHTEET_GRC = [
     // huippukuva ja samalta kuvaajalta kuin Píndoksen kuva yllä.
     kuva: {
       tiedosto: 'Smolikas IMG 0118.jpg',
+      lyhyt: 'Smólikaksen huippu etelästä: kahdentuhannen metrin yläpuolella metsä vaihtuu ruohoon ja kallioon.',
       selite: 'Smólikaksen huippu etelästä nähtynä. Kahdentuhannen metrin '
         + 'yläpuolella metsä loppuu ja jäljelle jää ruohoa ja kalliota; '
         + 'etualan puut ovat balkaninmäntyjä.',
@@ -662,6 +664,7 @@ export const FOKUSKOHTEET_GRC = [
     // Category:Mount Ida (Crete).
     kuva: {
       tiedosto: 'Psiloritis view from Thronos 01.JPG',
+      lyhyt: 'Psilorítis on Kreetan korkein huippu, 2 456 metriä; kyljessä avautuu Idan luola noin 1 500 metrissä.',
       selite: 'Psilorítis on Kreetan korkein huippu, 2 456 metriä, ja sen '
         + 'kyljessä noin 1 500 metrin korkeudessa aukeaa Idan luola.',
       lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
@@ -777,6 +780,7 @@ export const FOKUSKOHTEET_GRC = [
     // Category:Sea of Crete (13 tiedostoa).
     kuva: {
       tiedosto: 'The coast of Crete Sea near Chania. Crete, Greece.jpg',
+      lyhyt: 'Kreetanmeren rantaa Chanián luona; saaren eteläpuolella alkaa jo Libyanmeri.',
       selite: 'Kreetanmeren rantaa Chanián luona Kreetan pohjoisrannikolla. '
         + 'Saaren eteläpuolella alkaa jo toinen meri, Libyanmeri.',
       lahde: 'Ввласенко, Wikimedia Commons (CC BY-SA 3.0)',
@@ -944,6 +948,7 @@ export const FOKUSKOHTEET_GRC = [
     // Category:Struma River in Greece (11 tiedostoa).
     kuva: {
       tiedosto: 'Στρυμόνας - Μπέλλες.jpg',
+      lyhyt: 'Strymónas Serresin tasangolla; taustan Belles-vuoriston harjanteella kulkee Bulgarian raja.',
       selite: 'Strymónas Serresin tasangolla. Taustalla kohoaa Belles- eli '
         + 'Kerkinivuoristo, jonka harjanteella kulkee Bulgarian raja.',
       lahde: 'Makedonas62, Wikimedia Commons (CC BY-SA 4.0)',
@@ -994,6 +999,7 @@ export const FOKUSKOHTEET_GRC = [
      */
     kuva: {
       tiedosto: 'Meriç Nehri ve Meriç Köprüsü 2015.jpg',
+      lyhyt: 'Évros eli Meriç Edirnessä; kivisilta kahdellatoista holvillaan valmistui 1843, ennen isoisän matkaa.',
       selite: 'Évros eli Meriç Edirnessä. Joen yli kaartuu Meriçin '
         + 'kivisilta kahdellatoista holvillaan; se valmistui 1843, '
         + 'kolmisenkymmentä vuotta ennen isoisän matkaa.',
@@ -1047,6 +1053,7 @@ export const FOKUSKOHTEET_GRC = [
      */
     kuva: {
       tiedosto: 'Corinth Canal in 2019.jpg',
+      lyhyt: 'Korintin kanavan kapea vesitie; kannaksen läpi kaivettu ura on kuusi kilometriä pitkä.',
       selite: 'Korintin kanavan kapea vesitie ja sen yli kaartuva silta. '
         + 'Kannaksen läpi kaivettu ura on kuusi kilometriä pitkä.',
       lahde: 'JTE Dimandix, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1081,6 +1088,7 @@ export const FOKUSKOHTEET_GRC = [
     // se kaldera, jonka teksti mainitsee.
     kuva: {
       tiedosto: 'Santorini (Thira), site of the Minoan eruption, Greece - 7 January 2023 - Flickr - SentinelHub.jpg',
+      lyhyt: 'Santorini ylhäältä: purkauksen jättämä kaldera saariryhmän keskellä. Satelliittikuva 7.1.2023.',
       selite: 'Santorini ylhäältä: purkauksen jättämä kaldera avautuu '
         + 'saariryhmän keskellä. Satelliittikuva 7.1.2023.',
       lahde: 'Sentinel Hub / Copernicus Sentinel -aineisto, Wikimedia '
@@ -1141,6 +1149,7 @@ export const FOKUSKOHTEET_GRC = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-delfoi-loistoaika-v2.jpg',
       kadonnut: false,
+      lyhyt: 'Nuori lähettiläs odottaa Pythian vastausta tiellä, jota reunustavat aarreaitat ja pronssipatsaat.',
       selite: 'Kuvituksen nuori lähettiläs toistaa mielessään kotikaupunkinsa '
         + 'kysymystä, sillä Pythian vastausta ei saa pyytää uudelleen vain '
         + 'siksi, ettei siitä pidä. Pyhää tietä reunustavat aarreaitat, '
@@ -1211,6 +1220,7 @@ export const FOKUSKOHTEET_GRC = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-parthenon.webp',
       kadonnut: false,
+      lyhyt: 'Parthenon valmistui 432 eaa. aarreholviksi; sisällä seisoi Feidiaan kultainen Athene Parthenos.',
       selite: 'Parthenon valmistui 432 eaa., ja sen päätykolmiot, '
         + 'metoopit ja friisi olivat alun perin kirkkaasti maalattuja — '
         + 'nykyinen valkoinen marmori on kahdenkymmenenviiden vuosisadan '
@@ -1372,6 +1382,7 @@ export const FOKUSKOHTEET_GRC = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-zeuksen-patsas.webp',
       kadonnut: false,
+      lyhyt: 'Feidiaan 12,4-metrinen Zeus-patsas Olympiassa oli yksi antiikin seitsemästä ihmeestä.',
       selite: 'Feidiaan Zeus-patsas istui Olympian temppelissä kullasta '
         + 'ja norsunluusta tehtynä ja oli 12,4 metriä korkea — yksi '
         + 'antiikin seitsemästä ihmeestä. Kisoihin tulleet kävivät '
@@ -1753,6 +1764,7 @@ export const FOKUSKOHTEET_GRC = [
      */
     kuva: {
       tiedosto: 'Testudo marginata on Evia (Euboea) island, Greece.jpg',
+      lyhyt: 'Reunuskilpikonna Euboialla: raajojen etupuolella suuret suomut, aikuisen kilpi lähes musta.',
       selite: 'Reunuskilpikonna Euboian saarella. Raajojen etupuolta '
         + 'peittävät suuret suomut, ja aikuisen kilpi on lähes musta.',
       lahde: 'kernpanik, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1826,6 +1838,7 @@ export const FOKUSKOHTEET_GRC = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-rodoksen-kolossi.webp',
       kadonnut: true,
+      lyhyt: 'Helioksen 33-metrinen pronssipatsas oli antiikin korkein; maanjäristys kaatoi sen 54 vuodessa.',
       selite: 'Helioksen 33-metrinen pronssipatsas oli kiitosuhri: '
         + 'rodoslaiset pystyttivät sen 280 eaa. ja maksoivat sen myymällä '
         + 'piirittäjänsä jälkeensä jättämät piirityskoneet. Se oli '
@@ -1889,6 +1902,7 @@ export const FOKUSKOHTEET_GRC = [
      */
     kuva: {
       tiedosto: 'Knossos North entrance bull fresco.jpg',
+      lyhyt: 'Knossoksen pohjoinen sisäänkäynti: Arthur Evans pystytti punaiset pylväät uudelleen betonista.',
       selite: 'Palatsin pohjoinen sisäänkäynti kaivettiin esiin '
         + '1900-luvun alussa. Arthur Evans pystytti sen punaiset pylväät '
         + 'uudelleen betonista ja teetti seinään jäljennöksen '
@@ -1904,6 +1918,7 @@ export const FOKUSKOHTEET_GRC = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-knossos.webp',
       kadonnut: false,
+      lyhyt: 'Knossoksen palatsi oli minolaisen Kreetan suurin keskus; tuhoutui noin 1350 eaa.',
       selite: 'Knossoksen palatsi oli minolaisen Kreetan suurin keskus: '
         + 'noin 14 000 neliömetriä pihoja, portaikkoja ja varastoja, '
         + 'joissa seisoi ihmisen kokoisia pithos-ruukkuja. Se oli ennen '
@@ -1963,6 +1978,7 @@ export const FOKUSKOHTEET_GRC = [
      */
     kuva: {
       tiedosto: 'Temple of Hephaestus from ancient agora Athens.jpg',
+      lyhyt: 'Hefaistoksen temppeli seisoo Agoraios Kolonos -kukkulalla antiikin torin laidalla.',
       selite: 'Hefaistoksen temppeli seisoo Agoraios Kolonos '
         + '-kukkulalla antiikin torin laidalla. Kaivetulta agorakentältä '
         + 'nousee sen alapuolella yhä rivi pylväänkantoja.',
@@ -1976,6 +1992,7 @@ export const FOKUSKOHTEET_GRC = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-hefaistoksen-temppeli.webp',
       kadonnut: false,
+      lyhyt: 'Hefaistoksen temppeli valmistui 449–415 eaa.; toimi kirkkona vuoteen 1834, siksi parhaiten säilynyt.',
       selite: 'Hefaistoksen temppeli valmistui 449–415 eaa. ja on '
         + 'antiikin parhaiten säilynyt kreikkalaistemppeli — syy on sen '
         + 'katkeamaton käyttö kirkkona vuoteen 1834. Marmori on kulunut '
@@ -2074,6 +2091,7 @@ export const FOKUSKOHTEET_GRC = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-olympieion-loistoaika-v2.jpg',
       kadonnut: false,
+      lyhyt: 'Isä nostaa tyttärensä laskemaan pylväitä: 104 korinttilaista pylvästä todistaa temppelin valmiiksi.',
       selite: 'Kuvituksen isä nostaa tyttärensä kivelle, jotta tämä voisi '
         + 'laskea pylväitä — tehtävä käy mahdottomaksi jo kauan ennen sataa. '
         + 'Lapselle metsä näyttää jatkuvan loputtomiin; aikuisille 104 '

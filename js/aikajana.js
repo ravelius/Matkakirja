@@ -200,6 +200,7 @@ import { sytytaLyhdyt } from './lyhty.js';
 import { repaleinenPaperi, siemenNimesta } from './pergamentti.js';
 import { rajausTyyli } from './isoisan-valokuvat.js';
 import { taytaLahderivi } from './tekijakortti.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import {
   aloitaSiirtymamusiikki, himmennaSiirtymamusiikki, lopetaSiirtymamusiikki,
   LINSSIN_HILJENNYS,
@@ -4310,12 +4311,14 @@ class Aikajana {
   avauksenKuva(tiedot) {
     const kehys = solmu('figure', 'aikajana-avaus-kuva');
     const kuva = solmu('img');
-    kuva.alt = tiedot.kuvateksti ?? '';
+    // Kortilla lyhyt (js/kuvatekstit.js, omistaja 9.9.2026).
+    const kortinTeksti = kuvatekstiLyhyt(tiedot);
+    kuva.alt = kortinTeksti;
     kuva.decoding = 'async';
     asetaKuva(kuva, tiedot.osoite, tiedot.vara ?? null, () => kehys.remove());
     kehys.appendChild(kuva);
     const selite = solmu('figcaption', 'aikajana-avaus-kuvateksti');
-    if (tiedot.kuvateksti) selite.appendChild(solmu('span', 'aikajana-avaus-kuvanimi', tiedot.kuvateksti));
+    if (kortinTeksti) selite.appendChild(solmu('span', 'aikajana-avaus-kuvanimi', kortinTeksti));
     if (tiedot.lahde) {
       const lahde = solmu('span', 'aikajana-avaus-kuvalahde');
       taytaLahderivi(lahde, tiedot.lahde, tiedot);

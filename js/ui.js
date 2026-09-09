@@ -193,12 +193,18 @@ const wikiGalleryCache = new Map();
  * Sama muunnos kahdelle aineistolle: Tutki-sivun OMAT_GALLERIAT
  * (kenttä `caption`) ja vuorikohteiden VUORIKUVAT (kentät `selite` ja
  * `lahde`, kuten nähtävyysjutuissa).
+ *
+ * KAKSI PITUUTTA KULKEE MUKANA (js/kuvatekstit.js, omistaja 9.9.2026):
+ * `caption` on pitkä versio suurennokselle (openLightbox) ja `lyhyt`
+ * se, mikä näkyy sivulla karusellin alla (paivitaWikiKuvateksti).
+ * Ilman `lyhyt`-kenttää molemmat ovat entinen teksti.
  */
 function kuratoituGalleria(kuvat, leveys = 1200) {
   return kuvat.map((k) => ({
     src: valokuvaUrl(k.tiedosto, leveys),
     vara: valokuvaVara(k.tiedosto, leveys),
-    caption: k.selite ?? k.caption ?? null,
+    caption: kuvatekstiPitka(k) || k.caption || null,
+    lyhyt: kuvatekstiLyhyt(k) || k.caption || null,
     lahde: k.lahde ?? null,
   }));
 }
@@ -213,6 +219,7 @@ async function cachedGallery(title) {
   return wikiGalleryCache.get(title);
 }
 import { sfx, treasureSound } from './sound.js';
+import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 import {
   playPlaceAmbience, stopPlaceStream, stopQuizMusic,
   vaimennaTausta, palautaTausta,
@@ -2738,7 +2745,10 @@ export class UI {
     this.quizKohtaaminenKuva?.addEventListener('click', () => {
       const src = this.quizKohtaaminenKuva.getAttribute('src');
       if (!src) return;
-      const caption = this.quizKohtaaminenSelite?.textContent || null;
+      // Suurennokseen PITKÄ versio (js/kuvatekstit.js); kortilla
+      // näkyvä teksti on lyhyt, ks. naytaKohtaamiskuva.
+      const caption = this.quizKohtaaminenPitka
+        || this.quizKohtaaminenSelite?.textContent || null;
       this.openLightbox(null, this.quizKohtaaminenKuva.alt || 'Kohtaaminen', src,
         [{ src, caption, lahde: caption ? KOHTAAMISKUVAN_LAHDE : null }]);
     });
@@ -12106,7 +12116,14 @@ export class UI {
        * silloin, kun kuvalla ei ole selitettä.
        */
       const teksti = html('p', 'kuvateksti');
-      if (kuvaTiedot.selite) teksti.appendChild(document.createTextNode(kuvaTiedot.selite));
+      /*
+       * POSTIKORTTI ON JO AVATTU KUVA: se aukeaa muistikirjan
+       * pikkukuvasta (fact-valokuva) eikä siitä ole enää omaa
+       * suurennosta, joten tässä näkyy PITKÄ versio ja lähderivi
+       * (js/kuvatekstit.js, omistaja 9.9.2026).
+       */
+      const pitkaTeksti = kuvatekstiPitka(kuvaTiedot);
+      if (pitkaTeksti) teksti.appendChild(document.createTextNode(pitkaTeksti));
       teksti.appendChild(taytaLahderivi(html('span', 'kuvalahde'),
         [tiedot.paikka, kuvaTiedot.vuosi, kuvaTiedot.lahde].filter(Boolean).join(' · '),
         kuvaTiedot));
@@ -12134,7 +12151,7 @@ export class UI {
         : []),
       ...(tiedot.lisat ?? []).map((k) => ({
         ...k,
-        alt: `${k.selite ? k.selite.slice(0, 60) : tiedot.paikka}`,
+        alt: `${kuvatekstiLyhyt(k) ? kuvatekstiLyhyt(k).slice(0, 60) : tiedot.paikka}`,
       })),
       ...(tiedot.uusi
         ? [{
@@ -14078,7 +14095,8 @@ export class UI {
    */
   varustaNostonKuva(kuva, nosto, leveys) {
     kuva.decoding = 'async';
-    kuva.alt = nosto.selite ?? nosto.otsikko;
+    // Sivulla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+    kuva.alt = kuvatekstiLyhyt(nosto) || nosto.otsikko;
     /*
      * Selaimen oma kuvanraahaus keskeyttää osoitintapahtumat
      * (pointercancel), ja sivunvaihtopyyhkäisy kuoli heti kun se alkoi
@@ -14250,8 +14268,9 @@ export class UI {
       if (teos.osoite || teos.ampari) {
         asetaKuva(kuva, teos.osoite ?? julisteUrl(teos.ampari), null);
       } else asetaKuva(kuva, valokuvaSuurennos(teos.tiedosto, 1600), valokuvaUrl(teos.tiedosto, 1600));
-      kuva.alt = teos.otsikko ?? teos.selite ?? '';
-      kuvaselite.textContent = teos.selite ?? '';
+      kuva.alt = teos.otsikko ?? kuvatekstiPitka(teos);
+      // AVATTU KUVA NÄYTTÄÄ AINA PITKÄN (js/kuvatekstit.js).
+      kuvaselite.textContent = kuvatekstiPitka(teos);
       // Lähderivi kootaan joka kuvanvaihdossa uudestaan; taytaLahderivi
       // tyhjentää elementin, joten havainnekuvaselite syntyy mukana.
       taytaLahderivi(kuvalahde, [teos.otsikko, teos.lahde].filter(Boolean).join(' · '), teos);
@@ -14269,7 +14288,7 @@ export class UI {
       kotelo.classList.toggle('kuva-nauhalla', Boolean(nauha));
       reaktiot?.remove();
       reaktiot = piirraReaktiot(kortti, teos.reaktio, {
-        otsikko: teos.reaktioOtsikko ?? teos.otsikko ?? '',
+        otsikko: teos.reaktioOtsikko ?? teos.otsikko ?? kuvatekstiLyhyt(teos),
         luokka: 'reaktiot-suurennos',
       });
       if (laskuri) laskuri.textContent = `${indeksi + 1} / ${lista.length}`;
@@ -14862,6 +14881,9 @@ export class UI {
     if (!juliste) return;
     this.naytaKulttuuriKuva({
       otsikko: juliste.otsikko,
+      // Molemmat pituudet mukaan: katselin näyttää pitkän, mutta
+      // lyhyt kulkee alt-tekstiin (js/kuvatekstit.js).
+      lyhyt: juliste.lyhyt,
       selite: juliste.selite,
       lahde: JULISTE_LAHDE,
       osoite: julisteUrl(juliste.tiedosto),
@@ -14884,6 +14906,9 @@ export class UI {
       {
         otsikko: nosto.otsikko,
         tiedosto: nosto.tiedosto,
+        // Kaksi pituutta kulkee sarjan mukana (js/kuvatekstit.js):
+        // sivulla lyhyt, suurennoksessa pitkä.
+        lyhyt: nosto.lyhyt,
         selite: nosto.selite,
         lahde: nosto.lahde,
         // Pro-tuottajan tekijäsivu kulkee teoskohtaisesti: sarjan
@@ -14924,9 +14949,10 @@ export class UI {
       const teos = teokset[kohdalla];
       asetaKuva(kuva, teoksenOsoite(teos),
         teos.osoite || teos.ampari ? null : valokuvaVara(teos.tiedosto, 900));
-      kuva.alt = teos.selite ?? teos.otsikko ?? nosto.otsikko;
+      kuva.alt = kuvatekstiLyhyt(teos) || teos.otsikko || nosto.otsikko;
       kuva.galleriaTila = { teokset, kohdalla };
-      if (selite) selite.textContent = teos.selite ?? '';
+      // Sivulla lyhyt; pitkä näkyy vasta suurennoksessa.
+      if (selite) selite.textContent = kuvatekstiLyhyt(teos);
       if (lahde) taytaLahderivi(lahde, teos.lahde ?? nosto.lahde ?? '', teos);
       laskuri.textContent = `${kohdalla + 1} / ${teokset.length}`;
     };
@@ -15314,8 +15340,11 @@ export class UI {
     this.wikiKuvateksti.textContent = '';
     this.wikiKuvateksti.hidden = !kuva;
     if (!kuva) return;
-    if (kuva.caption) {
-      this.wikiKuvateksti.appendChild(html('span', 'nahtavyys-selite', kuva.caption));
+    // Sivulla lyhyt, suurennoksessa (openLightbox) pitkä
+    // (js/kuvatekstit.js, ks. kuratoituGalleria).
+    const lyhyt = kuva.lyhyt ?? kuva.caption;
+    if (lyhyt) {
+      this.wikiKuvateksti.appendChild(html('span', 'nahtavyys-selite', lyhyt));
     }
     if (kuva.lahde) {
       // Sama apuri kuin kaikilla muilla lähderiveillä (2.9.2026):
@@ -15472,7 +15501,9 @@ export class UI {
       // Lähde kuvatekstin jatkeeksi samalle riville pienemmällä
       // (23.8.2026): CC BY vaatii tekijän maininnan myös
       // suurennoksessa, jossa kuva on isoimmillaan.
-      kuvateksti.textContent = kohde.caption ?? '';
+      // AVATTU KUVA NÄYTTÄÄ AINA PITKÄN (js/kuvatekstit.js): kuvalistan
+      // `caption` on jo pitkä versio (ks. kuratoituGalleria).
+      kuvateksti.textContent = kuvatekstiPitka(kohde) || kohde.caption || '';
       if (kohde.lahde) {
         kuvateksti.appendChild(taytaLahderivi(html('span', 'lightbox-lahde'),
           kohde.lahde, kohde));
@@ -17013,6 +17044,7 @@ export class UI {
     const selattavat = ryhmat.flatMap((r) => r.kaupungit.filter((id) => voitetut.has(id)));
     const teokset = selattavat.map((cityId) => ({
       otsikko: JULISTEET[cityId].otsikko,
+      lyhyt: JULISTEET[cityId].lyhyt,
       selite: JULISTEET[cityId].selite,
       lahde: JULISTE_LAHDE,
       // Valmis osoite ohittaa Commons-portaikon (ks. naytaKulttuuriKuva).
@@ -18199,9 +18231,16 @@ export class UI {
       kuvio.hidden = true;
       kuva.removeAttribute('src');
     };
-    if (this.quizKohtaaminenSelite) this.quizKohtaaminenSelite.textContent = tiedot.kuvateksti ?? '';
+    /*
+     * KORTILLA LYHYT, AVATUSSA KUVASSA PITKÄ (js/kuvatekstit.js,
+     * omistaja 9.9.2026). Pitkä versio talletetaan kenttään, josta
+     * kuvan suurennos (openLightbox-kuuntelija) lukee sen.
+     */
+    const kortinKuvateksti = kuvatekstiLyhyt(tiedot);
+    this.quizKohtaaminenPitka = kuvatekstiPitka(tiedot) || null;
+    if (this.quizKohtaaminenSelite) this.quizKohtaaminenSelite.textContent = kortinKuvateksti;
     if (this.quizKohtaaminenKuvateksti) {
-      this.quizKohtaaminenKuvateksti.hidden = !tiedot.kuvateksti;
+      this.quizKohtaaminenKuvateksti.hidden = !kortinKuvateksti;
       /*
        * HAVAINNEKUVASELITE MYÖS KOHTAAMISKORTTIIN (1.9.2026). Tämän
        * kortin lähderivi on kiinteää HTML:ää (index.html "Matkakirjan
@@ -18247,7 +18286,7 @@ export class UI {
           btn.classList.add('kuvallinen');
           const img = document.createElement('img');
           img.className = 'quiz-option-kuva';
-          img.alt = kuva.selite ?? '';
+          img.alt = kuvatekstiLyhyt(kuva);
           img.draggable = false;
           img.addEventListener('error', () => { img.hidden = true; });
           asetaKuva(img, valokuvaUrl(kuva.tiedosto, 560), valokuvaVara(kuva.tiedosto, 560));

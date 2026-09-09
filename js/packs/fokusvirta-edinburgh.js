@@ -201,6 +201,7 @@ export const FOKUSVIRTA_EDINBURGH = {
      */
     kuva: {
       ampari: 'herokoe/hero-edinburgh-keskipaiva.png',
+      lyhyt: 'St Gilesin kruunutorni 1400-luvulta; John Knox saarnasi Skotlannin reformaation pääkirkossa.',
       selite: 'St Gilesin katedraalin kruunutorni on kannatellut kivistä '
         + 'kruunuaan 1400-luvulta asti, ja kirkko on Skotlannin '
         + 'reformaation pääkirkko — John Knox saarnasi täällä.',
@@ -299,6 +300,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: 'Greyfriars Bobby (cropped).jpg',
+        lyhyt: 'Bobby noin 1865 otetussa kuvassa; koira kuoli 1872, ja sen muistoksi juomakaivo paljastettiin 1873.',
         selite: 'Bobby noin vuonna 1865 otetussa albumiinivedoksessa. '
           + 'Koira kuoli tammikuussa 1872, ja sen muistoksi pystytetty '
           + 'juomakaivo paljastettiin marraskuussa 1873.',
@@ -403,6 +405,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: "Arthur's Seat coffins, Chambers Street - geograph.org.uk - 2517081 - normalized.jpg",
+        lyhyt: 'Pikkuarkkuja nukkeineen Skotlannin kansallismuseossa; alun perin 17, jäljellä enää kahdeksan.',
         selite: 'Pikkuarkkuja nukkeineen Skotlannin kansallismuseossa. '
           + 'Arkkuja oli alun perin seitsemäntoista, ja niistä on '
           + 'jäljellä kahdeksan.',
@@ -498,6 +501,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: 'Edinburgh Scott Monument 20211019.jpg',
+        lyhyt: 'Scott-monumentti idästä: holvin alla Walter Scottin patsas, etualalla Livingstonen muistomerkki.',
         selite: 'Scott-monumentti idästä nähtynä. Holvin alla istuu '
           + 'Walter Scottin marmoripatsas; etualan pronssi on '
           + 'tutkimusmatkailija David Livingstonen muistomerkki.',
@@ -607,6 +611,7 @@ export const FOKUSVIRTA_EDINBURGH = {
      */
     kuva: {
       tiedosto: 'One OClock Gun.JPG',
+      lyhyt: 'Yhden lyönnin tykki laukeaa linnan valleilta kohti Forthin lahtea, jonne aikamerkki tarkoitettiin.',
       selite: 'Yhden lyönnin tykki laukeaa linnan valleilta. Takana '
         + 'aukeaa Forthin lahti, jonne aikamerkki alun perin '
         + 'tarkoitettiin.',
@@ -834,6 +839,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: 'Orkney Skara Brae.jpg',
+        lyhyt: 'Yksi Skara Braen kaivetuista taloista; keskellä liesi, seinustan kivikalusteet paikoillaan.',
         selite: 'Yksi Skara Braen kaivetuista taloista. Keskellä on '
           + 'liesi, ja seinustan kivikalusteet ovat yhä paikoillaan.',
         lahde: 'Dr. John F. Burka, Wikimedia Commons (CC BY-SA 3.0)',
@@ -942,6 +948,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: 'Joseph Mallord William Turner - Bell Rock Lighthouse - Google Art Project.jpg',
+        lyhyt: 'Bell Rockin majakka myrskyssä; Turner maalasi akvarellin 1819, yhdeksän vuotta valmistumisesta.',
         selite: 'Bell Rockin majakka myrskyssä. J. M. W. Turner maalasi '
           + 'akvarellin 1819, yhdeksän vuotta majakan valmistuttua.',
         lahde: 'J. M. W. Turner 1819, Wikimedia Commons (public domain)',
@@ -1045,6 +1052,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: 'Saint Kilda 20090611 Hirta - Village Bay overview.jpg',
+        lyhyt: 'Village Bay Hirtalla: talorivi ja kivivarastot paikoillaan, vaikka asukkaat lähtivät 1930.',
         selite: 'Village Bay Hirtalla. Kylän talorivi ja rinteiden '
           + 'kivivarastot ovat paikoillaan, vaikka asukkaat lähtivät '
           + 'vuonna 1930.',

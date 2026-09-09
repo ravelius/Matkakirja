@@ -115,6 +115,7 @@ export const FOKUSKOHTEET_JOR = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-petra.webp',
       kadonnut: false,
+      lyhyt: 'Al-Khazneh on säilynyt, mutta 20 000 asukkaan Petra taantui; nyt käy lähes miljoona matkailijaa.',
       selite: 'Al-Khazneh on säilynyt lähes sellaisena kuin se '
         + 'louhittiin, mutta kaupunki sen ympäriltä on kadonnut: '
         + 'Petrassa asui parhaimmillaan arviolta 20 000 ihmistä, ja '

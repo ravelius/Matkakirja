@@ -183,6 +183,7 @@ export const FOKUSVIRTA_WIEN = {
      */
     kuva: {
       ampari: 'herokoe/hero-wien-state-opera.jpg',
+      lyhyt: 'Valtionooppera avasi 1869; lavalla esiinnytty joka ilta tauolla vain vuonna 1945.',
       selite: 'Valtionooppera avasi 1869 Ringstrassen loistorakennusten '
         + 'sarjan, ja sen lavalla on esiinnytty joka ilta pommituksista '
         + '1945 vain kymmenen vuoden tauolla.',
@@ -227,6 +228,7 @@ export const FOKUSVIRTA_WIEN = {
        */
       kuva: {
         tiedosto: 'Machine Gramme.jpg',
+        lyhyt: 'Gramme-kone vuodelta 1873; samanlainen pyörähti Wienin näyttelyssä ensimmäiseksi sähkömoottoriksi.',
         selite: 'Gramme-kone vuodelta 1873. Samanlainen laite pyörähti '
           + 'Wienin näyttelyssä maailman ensimmäiseksi kunnolliseksi '
           + 'sähkömoottoriksi.',
@@ -286,6 +288,7 @@ export const FOKUSVIRTA_WIEN = {
        */
       kuva: {
         tiedosto: 'Aquädukt Liesing- Teil der 1. Wiener Hochquellenleitung 1.jpg',
+        lyhyt: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä; vesi kulkee 95 km painovoiman varassa.',
         selite: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä. '
           + 'Vesi kulkee koko 95 kilometrin matkan painovoiman varassa.',
         lahde: 'Anna Saini, Wikimedia Commons (CC BY-SA 4.0)',
@@ -411,6 +414,7 @@ export const FOKUSVIRTA_WIEN = {
      */
     kuva: {
       osoite: 'assets/kartat/nostot/nosto-rotunde-loistoaika.webp',
+      lyhyt: 'Rotunden sisus näyttelyssä: rautakupoli valoaukkoineen ja osastot suihkulähteen ympärillä.',
       selite: 'Rotunden sisus näyttelyn ollessa auki: rautarakenteinen '
         + 'kupoli valoaukkoineen, lippurivit ja näytteilleasettajien '
         + 'osastot keskussuihkulähteen ympärillä.',
@@ -632,6 +636,7 @@ export const FOKUSVIRTA_WIEN = {
        */
       kartta: {
         osoite: 'assets/kartat/karttaliitteet/liite-maailmannayttely-1873.webp',
+        lyhyt: 'Näyttelyalueen kartta 1873: Rotunde keskellä, teollisuuspalatsin siivet ja oma rautatieasema.',
         selite: 'Näyttelyalueen kartta vuodelta 1873: Rotunde keskellä, '
           + 'teollisuuspalatsin siivet itään ja länteen, sisäänkäynnit '
           + 'Hauptalleelta ja oma rautatieasema pohjoisessa.',

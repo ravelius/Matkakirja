@@ -122,6 +122,7 @@ export const FOKUSKOHTEET_GBR = [
      */
     kuva: {
       tiedosto: 'St Paul\'s Cathedral Dome 2020 Exterior Ground.jpg',
+      lyhyt: 'Christopher Wrenin kupolikirkko Ludgate Hillillä valmistui 1710 palaneen edeltäjänsä paikalle.',
       selite: 'Christopher Wrenin kupolikirkko Ludgate Hillillä. Se '
         + 'valmistui 1710 palaneen keskiaikaisen edeltäjänsä paikalle.',
       lahde: 'Julian Herzog, Wikimedia Commons (CC BY 4.0)',
@@ -144,6 +145,7 @@ export const FOKUSKOHTEET_GBR = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-vanha-st-paul.webp',
       kadonnut: false,
+      lyhyt: 'Kirjapainon oppipoika kuiskaa uutisen toritytölle; sana kulkee nopeammin kuin painokone.',
       selite: 'Kirjapainon oppipoika kuiskaa tuoreen uutisarkin sisällön '
         + 'toritytölle, joka ei osaa lukea mutta tietää heti, kenelle '
         + 'tieto kannattaa myydä. Katedraalin varjossa uutinen kulkee '
@@ -231,6 +233,7 @@ export const FOKUSKOHTEET_GBR = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-crystal-palace-loistoaika-v2.jpg',
       kadonnut: true,
+      lyhyt: 'Lapsi näkee Crystal Palacen valosta tehtynä rakennuksena, jonka sisällä on koko maailmannäyttely.',
       selite: 'Kuvituksen perheen nuorin näkee mäen laelta rakennuksen, joka '
         + 'näyttää olevan tehty lähes kokonaan valosta. Vanhemmille päivä '
         + 'Crystal Palacessa maksaa aikaa ja rahaa, mutta sisällä odottavat '
@@ -297,6 +300,7 @@ export const FOKUSKOHTEET_GBR = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-vanha-london-bridge.webp',
       kadonnut: true,
+      lyhyt: 'Vesimiehen oppipoika ohjaa venettä sillan alitse, jonka päällä ihmiset asuvat ja käyvät kauppaa.',
       selite: 'Vesimiehen oppipoika huomaa virran vetävän venettä kohti '
         + 'liian kapeaa kaarta ja yrittää jäljitellä mestarinsa '
         + 'airoliikettä puoli tahtia myöhässä. Heidän yläpuolellaan '

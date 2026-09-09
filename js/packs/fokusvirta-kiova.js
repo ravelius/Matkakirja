@@ -266,6 +266,7 @@ export const FOKUSVIRTA_KIOVA = {
      */
     kuva: {
       ampari: 'herokoe/hero-kiova-keskipaiva.jpg',
+      lyhyt: 'Kiovan luolaluostarin perusti munkki Antoni 1051; lavra Unescon maailmanperintöä vuodesta 1990.',
       selite: 'Kiovan luolaluostarin perusti kronikoiden mukaan '
         + 'Athos-vuorelta palannut munkki Antoni vuonna 1051, ja '
         + 'maanalaisista käytävistä kasvanut lavra on ollut Unescon '
@@ -337,6 +338,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: 'Aivasovsky Ivan Constantinovich - Chumaks leisure.jpg',
+        lyhyt: 'Tšumakkien kuormasto yöpyy aron laidalla: härkävankkurit piirissä, tavara odottaa nuotion vieressä.',
         selite: 'Tšumakkien kuormasto yöpyy aron laidalla: härkävankkurit '
           + 'seisovat piirissä, ja tavara odottaa aamua nuotion vieressä.',
         lahde: 'Ivan Aivazovsky 1885, Wikimedia Commons (public domain)',
@@ -427,6 +429,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: 'Chernozem.JPG',
+        lyhyt: 'Mustamullan pystyleikkaus: Ukrainassa humuskerros voi olla puolitoista metriä paksu.',
         selite: 'Mustamullan pystyleikkaus näyttää humuskerroksen '
           + 'paksuuden: Ukrainassa mustaa maata on paikoin puolitoista '
           + 'metriä ennen kuin vaaleampi pohja alkaa.',
@@ -528,6 +531,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: 'Ruche Prokopowitsh.jpg',
+        lyhyt: 'Prokopovytšin kehyspesä 1800-luvun oppikirjassa: kehykset nostetaan ulos pesää rikkomatta.',
         selite: 'Prokopovytšin kehyspesä 1800-luvun mehiläishoidon '
           + 'oppikirjan kuvassa: kehykset nostetaan ulos yksitellen, '
           + 'jolloin pesää ei tarvitse rikkoa.',
@@ -672,6 +676,7 @@ export const FOKUSVIRTA_KIOVA = {
      */
     kuva: {
       tiedosto: 'Golden Gate Kiev top 2018 G1.jpg',
+      lyhyt: 'Portin holvin päällä kultakupolinen kirkko näkyi kauas; nykyinen on vuoden 1982 jälleenrakennus.',
       selite: 'Portin holvin päälle rakennetun kirkon kullatut kupolit '
         + 'näkyivät aikanaan kauas kaupungin ulkopuolelle; nykyinen '
         + 'rakennelma on vuoden 1982 jälleenrakennus.',
@@ -934,6 +939,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: '02013 Der "bemalten Keramik" vom Trypillja-Typus am Anfang des 30.Jhs.v. Chr. beim Dorfe Biltsche-Solote, B5.JPG',
+        lyhyt: 'Trypillian kulttuurin maalattua keramiikkaa Biltše-Zolotesta, poltettu kehittyneissä uuneissa.',
         selite: 'Trypillian kulttuurin maalattua keramiikkaa Biltše-Zolotesta: '
           + 'astiat poltettiin kehittyneissä uuneissa jo ennen '
           + 'savenvalajan pyörän yleistymistä muualla.',
@@ -1044,6 +1050,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: 'Історія України-Русі. 1912. Дніпровий поріг ненаситець.jpg',
+        lyhyt: 'Nenasytets eli Kyltyämätön oli koskista suurin, 2,5 km pitkä kivikko kuuluvine kilometrien päähän.',
         selite: 'Nenasytets eli Kyltymätön oli koskista suurin: kaksi ja '
           + 'puoli kilometriä pitkä kivikko, jonka kohina kuului '
           + 'useiden kilometrien päähän.',
@@ -1155,6 +1162,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: 'Oranta-Kyiv.jpg',
+        lyhyt: 'Oranta, rukoileva Neitsyt, on kuusi metriä korkea ja täyttää Pyhän Sofian keskusapsidin.',
         selite: 'Oranta eli rukoileva Neitsyt on kuusi metriä korkea ja '
           + 'täyttää Pyhän Sofian keskusapsidin kultaisella pohjallaan.',
         lahde: 'Wikimedia Commons (public domain)',

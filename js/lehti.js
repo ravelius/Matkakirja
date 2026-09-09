@@ -28,6 +28,7 @@ import {
   sivunOtsikko,
 } from './maalehti.js';
 import { asetaKuva, julisteUrl } from './media.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 // Reaktiolaskurit työhuoneen arviointinäkymään (js/reaktiot.js).
 import {
   REAKTIO_SYMBOLIT, haeReaktiolista, merkitseVirheKorjatuksi,
@@ -2049,7 +2050,8 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
     const kuva = document.createElement('img');
     kuva.decoding = 'async';
     kuva.draggable = false;
-    kuva.alt = teos.selite ?? '';
+    // Sivulla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+    kuva.alt = kuvatekstiLyhyt(teos);
     // Harmaasävy vain aidosti vanhoille (sama sääntö kuin postikortissa).
     if (onVanhaKuva(teos)) kuva.classList.add('vanha-vedos');
     // Ämpärikuvalla (`ampari`) ei ole Commons-polkua eikä varareittiä.
@@ -2059,7 +2061,8 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
       teokset: sarja, kohdalla: indeksi,
     }));
     kotelo.appendChild(kuva);
-    if (teos.selite) {
+    const lyhytTeksti = kuvatekstiLyhyt(teos);
+    if (lyhytTeksti) {
       const teksti = html('figcaption', 'kuvateksti');
       // Rooliotsikko kuvatekstin alkuun: pari luetaan yhtenä juttuna
       // vasemmalta oikealle, eikä lukijan tarvitse päätellä kumpi on kumpi.
@@ -2067,7 +2070,7 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
         teksti.appendChild(html('b', 'lehti-kuva-rooli',
           rooli === 'ennen' ? 'Ennen ' : 'Nyt '));
       }
-      teksti.appendChild(document.createTextNode(teos.selite));
+      teksti.appendChild(document.createTextNode(lyhytTeksti));
       // Väli tulee CSS:n ::before-sisällöstä, ei tekstistä
       // (css/styles.css "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
       if (teos.lahde) {

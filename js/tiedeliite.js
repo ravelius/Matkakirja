@@ -100,6 +100,7 @@ import { asetaNostonKuva } from './fokusnosto.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import { avaaKohdeSuurennos, suljeKohdeSuurennos } from './fokuskohteet.js';
 import { sfx } from './sound.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { lisaaLukijanappi } from './lukija.js';
 
 /** Ilmiökuvan leveys sivulla (sama kuin skandaalin kortilla). */
@@ -156,8 +157,13 @@ const onKuva = (kuva) => Boolean(kuva?.tiedosto || kuva?.osoite);
  * datassa. Varapolku jää silti voimaan: ilman `lyhyt`-kenttää
  * kortissa on entinen selite, joten Ihmisen matkan nostot (joilla
  * paria ei ole) piirtyvät kuten ennenkin.
+ *
+ * YKSI SÄÄNTÖ KOKO PELIIN (omistaja 9.9.2026): sama pari asuu nyt
+ * js/kuvatekstit.js:ssä ja kaikki muutkin piirtopaikat kysyvät sitä
+ * sieltä. Tämä nimi jää Tiedeliitteen omaksi kutsumanimeksi, jotta
+ * liitteen oma koodi ja testit lukevat kuten ennen.
  */
-export const lyhytKuvateksti = (kuva) => kuva?.lyhyt ?? kuva?.selite ?? '';
+export const lyhytKuvateksti = (kuva) => kuvatekstiLyhyt(kuva);
 
 /** Sivullinen pysäkki: keksijä, jolla on juttu — merkkipaalu ei ole. */
 export function onTiedeliitteenSivu(t) {

@@ -225,6 +225,7 @@ export const FOKUSVIRTA_FIRENZE = {
      */
     kuva: {
       ampari: 'herokoe/hero-firenze-ilta.png',
+      lyhyt: 'Palazzo Vecchio nousi 1299 kaupunkivaltion raatihuoneeksi; 94-metrinen torni hallitsee siluettia.',
       selite: 'Palazzo Vecchio nousi 1299 alkaen kaupunkivaltion '
         + 'linnoitetuksi raatihuoneeksi, ja sen 94-metrinen torni '
         + 'hallitsee yhä Firenzen siluettia.',
@@ -325,6 +326,7 @@ export const FOKUSVIRTA_FIRENZE = {
        */
       kuva: {
         tiedosto: 'Gezicht op Florence vanaf de Monte alle Croci FIRENZE Panorama preso dal Monte alle Croci. (titel op object), RP-F-F01093-AV.jpg',
+        lyhyt: 'Monte alle Crocin terassi vuodesta 1869 ja sen alla Firenze albumiinivedoksessa 1800-luvun lopulta.',
         selite: 'Monte alle Crocin rinteelle vuodesta 1869 rakennettu '
           + 'terassi ja sen alla Firenze: joki, sillat, kupoli ja '
           + 'Palazzo Vecchion torni 1800-luvun lopun albumiinivedoksessa.',
@@ -422,6 +424,7 @@ export const FOKUSVIRTA_FIRENZE = {
        */
       kuva: {
         tiedosto: 'PorcellinoFlorence.jpg',
+        lyhyt: 'Mercato Nuovon villisian kuono on hankautunut kirkkaaksi, muu pronssi tummanruskeanvihreää.',
         selite: 'Mercato Nuovon villisian kuono on hankaamisesta '
           + 'kirkas, vaikka muu pronssi on patinoitunut '
           + 'tummanruskeanvihreäksi.',
@@ -524,6 +527,7 @@ export const FOKUSVIRTA_FIRENZE = {
        */
       kuva: {
         tiedosto: 'Atlantic Ocean, Toscanelli, 1474.jpg',
+        lyhyt: 'Toscanellin vuoden 1474 Atlantti nykyisen rannikon päällä: Cathay ja Cippangu Amerikan kohdalla.',
         selite: 'Toscanellin vuoden 1474 Atlantti nykyisen rannikon '
           + 'päälle asetettuna: Cathay ja Cippangu ovat siinä kohdassa, '
           + 'jossa on Amerikka.',
@@ -656,6 +660,7 @@ export const FOKUSVIRTA_FIRENZE = {
      */
     kuva: {
       tiedosto: 'Michelino DanteAndHisPoem.jpg',
+      lyhyt: 'Michelinon maalaus 1465 Firenzen tuomiokirkossa: runoilija, oma kaupunki, helvetin portti.',
       selite: 'Domenico di Michelinon maalaus vuodelta 1465 Firenzen '
         + 'tuomiokirkossa: runoilija pitelee avointa runoelmaansa, '
         + 'oikealla oma kaupunki, vasemmalla helvetin portti.',

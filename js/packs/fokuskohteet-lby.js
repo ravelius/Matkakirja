@@ -119,6 +119,7 @@ export const FOKUSKOHTEET_LBY = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-leptis-magna.webp',
       kadonnut: false,
+      lyhyt: 'Leptis Magna oli komea roomalaiskaupunki, jonka hiekkadyynit peittivät ja siten säilyttivät.',
       selite: 'Leptis Magna oli Rooman Afrikan komeimpia kaupunkeja: '
         + 'marmorista rakennettu Severuksen forum, pylväskatu satamaan '
         + 'ja teatteri meren äärellä. Kaupunki eli oliiviöljystä: Caesar '

@@ -290,6 +290,7 @@ export const FOKUSVIRTA_PIETARI = {
       ampari: 'herokoe/hero-pietari-aamu.png',
       /* Selite on lehden oman avauskuvan selite sellaisenaan; yksikään
        * luku ei muutu. Se on jo yhden virkkeen mittainen. */
+      lyhyt: 'Talvipalatsi valmistui 1762; Aleksanterin pylväs 1834 on yksi 600 tonnin graniittikappale.',
       selite: 'Talvipalatsi valmistui 1762 Bartolomeo Rastrellin '
         + 'piirustuksin, ja sen edustan Aleksanterin pylväs (1834) on '
         + 'nostettu paikalleen yhtenä 600 tonnin graniittikappaleena.',
@@ -404,6 +405,7 @@ export const FOKUSVIRTA_PIETARI = {
        */
       kuva: {
         tiedosto: 'Яйцо "Курочка" (cropped).JPG',
+        lyhyt: 'Vuoden 1885 ensimmäinen keisarillinen pääsiäismuna on ulkoa munan näköinen valkoista emalia.',
         selite: 'Vuoden 1885 ensimmäinen keisarillinen pääsiäismuna on '
           + 'ulkoa valkoista emalia ja munan näköinen; kaikki oleellinen '
           + 'on sen sisällä.',
@@ -513,6 +515,7 @@ export const FOKUSVIRTA_PIETARI = {
        */
       kuva: {
         tiedosto: 'Thunder Stone.jpg',
+        lyhyt: 'Vuoden 1770 kaiverrus näyttää ukkoskiven matkalla: veistetään ja vedetään vinsseillä merelle.',
         selite: 'Vuoden 1770 kaiverrus näyttää ukkoskiven matkalla: '
           + 'kivenhakkaajat veistävät sitä päällä samalla kun sitä '
           + 'vedetään vinsseillä rataa pitkin kohti merta.',
@@ -614,6 +617,7 @@ export const FOKUSVIRTA_PIETARI = {
        */
       kuva: {
         tiedosto: 'Ev. Bernardsky. Pulkovo Observatory in 1855.jpg',
+        lyhyt: 'Kaiverrus 1855 näyttää Pulkovan observatorion kukkulallaan kolmine kupoleineen ja pylväikköineen.',
         selite: 'Kaiverrus vuodelta 1855 näyttää Pulkovan observatorion '
           + 'kukkulallaan: kolme kupolia, pylväikkö ja aita niityn '
           + 'takana.',
@@ -727,6 +731,7 @@ export const FOKUSVIRTA_PIETARI = {
      */
     kuva: {
       tiedosto: 'СПБ. Установка колонн Исаакиевского собора (к 1830). Лит.~1845г 15 e1.jpg',
+      lyhyt: 'Montferrandin litografia näyttää pylväiden noston puutelineissä ennen seinien muurausta.',
       selite: 'Montferrandin oma litografia näyttää pylväiden noston: '
         + 'graniittipylväät pystytettiin valtavissa puutelineissä, ja '
         + 'seinät muurattiin vasta niiden ympärille.',
@@ -997,6 +1002,7 @@ export const FOKUSVIRTA_PIETARI = {
        */
       kuva: {
         tiedosto: 'Kizhi Pogost. The Church of the Transfiguration DSC02646 2200.jpg',
+        lyhyt: 'Kižin kirkastumisen kirkon 22 kupolia nousevat portaittain, runko veistettyä hirttä.',
         selite: 'Kižin kirkastumisen kirkon kaksikymmentäkaksi kupolia '
           + 'nousevat portaittain; runko on veistettyä hirttä ja kupolit '
           + 'haapapaanua.',
@@ -1101,6 +1107,7 @@ export const FOKUSVIRTA_PIETARI = {
        */
       kuva: {
         tiedosto: 'Grand Cascade of Peterhof 01.jpg',
+        lyhyt: 'Suuri kaskadi laskeutuu 16 metrin törmää alas palatsin edestä, antaen paineen suihkuille.',
         selite: 'Suuri kaskadi laskeutuu kuudentoista metrin törmää alas '
           + 'palatsin edestä; sama korkeusero antaa kaikille sen '
           + 'suihkuille paineen.',

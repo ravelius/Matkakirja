@@ -212,6 +212,7 @@ export const FOKUSVIRTA_ROOMA = {
      */
     kuva: {
       tiedosto: 'Ludovico Tuminello - Veduta panoramica della breccia di Porta Pia scattata il 21 settembre 1870.jpg',
+      lyhyt: 'Aukko Aurelianuksen muurissa Porta Pian vieressä; kuva otettiin päivä valtauksen jälkeen 21.9.1870.',
       selite: 'Aukko Aurelianuksen muurissa Porta Pian vieressä. '
         + 'Valokuva on otettu päivä valtauksen jälkeen, 21. syyskuuta '
         + '1870.',
@@ -241,6 +242,7 @@ export const FOKUSVIRTA_ROOMA = {
      */
     kuva: {
       tiedosto: 'Obelisk Saint Peter square Vatican.jpg',
+      lyhyt: 'Pietarinaukion obeliski Vatikaanissa on ainoa Rooman muinaisobeliskeista, joka ei koskaan kaatunut.',
       selite: 'Pietarinaukion obeliski Vatikaanissa. Se on ainoa Rooman '
         + 'muinaisobeliskeista, joka ei ole koskaan kaatunut.',
       lahde: 'Jebulon, Wikimedia Commons (CC0)',
@@ -423,6 +425,7 @@ export const FOKUSVIRTA_ROOMA = {
        */
       kuva: {
         tiedosto: 'Knights of Malta Keyhole, Aventine Hill, Rome (cropped).jpg',
+        lyhyt: 'Näkymä Maltan ritarikunnan avaimenreiästä: sypressikäytävä ja Pietarinkirkon kupoli päässä.',
         selite: 'Näkymä Maltan ritarikunnan portin avaimenreiästä: '
           + 'sypressikäytävä ja sen päässä Pietarinkirkon kupoli.',
         lahde: 'Galen Crout, Wikimedia Commons (CC0)',

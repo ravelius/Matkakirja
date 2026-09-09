@@ -184,6 +184,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
      */
     kuva: {
       ampari: 'herokoe/hero-amsterdam-kanaalikeha.jpg',
+      lyhyt: 'Amsterdamin kanaalikehä alkoi 1613; 1600-luvun kehä on Unescon maailmanperintöä vuodesta 2010.',
       selite: 'Kanaalikehän kaivaminen alkoi 1613 kaupungin '
         + 'suunniteltuna laajennuksena, ja 1600-luvun kehä pääsi '
         + 'Unescon maailmanperintöluetteloon 2010.',
@@ -285,6 +286,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Slijpen van de diamant bij Van Moppes in Amsterdam, Bestanddeelnr 252-0343.jpg',
+        lyhyt: 'Timantin hionta amsterdamilaisessa hiomossa 1932: kivi painetaan pyörivää timanttipölytahkoa vasten.',
         selite: 'Timantin hionta amsterdamilaisessa hiomossa vuonna '
           + '1932: kivi painetaan vaakatasossa pyörivää tahkoa vasten, '
           + 'ja tahkoon on hierottu timanttipölyä.',
@@ -384,6 +386,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Ardea cinerea - Amsterdam.jpg',
+        lyhyt: 'Harmaahaikara kanavan sillan kaiteella Amsterdamissa; kaupungin haikarat elävät ihmisten seassa.',
         selite: 'Harmaahaikara seisoo sillan kaiteella amsterdamilaisen '
           + 'kanavan yllä; kaupungin haikarat elävät ihmisten seassa '
           + 'ympäri vuoden.',
@@ -494,6 +497,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'The wreck of the Amsterdam in the fossil forest at Bulverhythe - geograph.org.uk - 8295766.jpg',
+        lyhyt: 'Amsterdam-laivan runko paljastuu Bulverhythen rannalla vain poikkeuksellisen matalalla vedellä.',
         selite: 'Amsterdam-laivan runko paljastuu Bulverhythen rannalla '
           + 'vain poikkeuksellisen matalan veden aikaan; etualalla '
           + 'näkyy muinaismetsän kantoja.',
@@ -598,6 +602,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
      */
     kuva: {
       tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
+      lyhyt: 'Kellopäädyn hijsbalk-nostopuu on yhä käytössä; talot on rakennettu hieman eteenpäin kallelleen.',
       selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä '
         + 'käytössä, ja talot rakennettiin hieman eteenpäin kallelleen, '
         + 'jottei nostettava tavara kolhisi julkisivua.',
@@ -839,6 +844,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Semper Augustus Tulip 17th century.jpg',
+        lyhyt: 'Semper Augustus oli tulppaanimanian kallein lajike; sen liekkikuvio oli kasvitaudin merkki.',
         selite: 'Semper Augustus oli tulppaanimanian kallein lajike, ja '
           + 'sen valko-punainen liekkikuvio oli kasvitaudin merkki.',
         lahde: 'Tuntematon tekijä ennen vuotta 1640, Wikimedia Commons '
@@ -929,6 +935,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Afsluitdijk 1031.jpg',
+        lyhyt: 'Afsluitdijk erottaa Vattimeren ja makean IJsselmeerin; pato on 32,5 km pitkä ja sen yli kulkee tie.',
         selite: 'Afsluitdijk erottaa Vattimeren ja makean IJsselmeerin: '
           + 'pato on 32,5 kilometriä pitkä ja sen yli kulkee maantie.',
         lahde: 'C messier, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1024,6 +1031,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Leiden Museum Boerhaave single lens microscope 071815 06.jpg',
+        lyhyt: 'Leeuwenhoekin mikroskooppi on kämmenelle mahtuva levy yhdellä itse sulatetulla pallolinssillä.',
         selite: 'Leeuwenhoekin mikroskooppi on kämmenelle mahtuva levy, '
           + 'jonka sisään on puristettu yksi itse sulatettu pallolinssi.',
         lahde: 'Hnapel, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1108,6 +1116,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Boekenkist van Hugo de Groot, NG-KOG-1208.jpg',
+        lyhyt: 'Kirja-arkku, jollaisessa Hugo de Groot kannettiin ulos Loevesteinin linnasta vuonna 1621.',
         selite: 'Kirja-arkku Rijksmuseumin kokoelmassa: tällaisessa '
           + 'arkussa Hugo de Groot kannettiin ulos Loevesteinin '
           + 'linnasta vuonna 1621.',

@@ -213,6 +213,7 @@ export const FOKUSVIRTA_RIIKA = {
      */
     kuva: {
       ampari: 'herokoe/hero-riika-vanhakaupunki.jpg',
+      lyhyt: 'Riian siluetin muodostaa kolme tornia: Pyhän Pietarin kirkko, tuomiokirkko ja Pyhän Jaakobin.',
       selite: 'Riian vanhankaupungin siluetin muodostavat kolme tornia: '
         + '123-metrinen Pyhän Pietarin kirkko, vuonna 1211 perustettu '
         + 'tuomiokirkko ja Pyhän Jaakobin katedraali.',
@@ -288,6 +289,7 @@ export const FOKUSVIRTA_RIIKA = {
        */
       kuva: {
         tiedosto: 'Riga Black Balsam.jpg',
+        lyhyt: 'Riian musta balsami on apteekkari Abraham Kunzen 1752 laatima yrttiuute, sama vuosiluku etiketissä.',
         selite: 'Riian musta balsami on apteekkari Abraham Kunzen vuonna '
           + '1752 laatima yrttiuute, ja sama vuosiluku on yhä sen '
           + 'etiketissä.',
@@ -378,6 +380,7 @@ export const FOKUSVIRTA_RIIKA = {
        */
       kuva: {
         tiedosto: 'Riga. IX Latvian Song Celebration. 1938.png',
+        lyhyt: 'Yhdeksänsiä laulujuhlia vietettiin Riiassa 1938; ensimmäiset olivat samassa kaupungissa 65v aiemmin.',
         selite: 'Yhdeksänsiä laulujuhlia vietettiin Riiassa vuonna 1938; '
           + 'ensimmäiset oli pidetty samassa kaupungissa 65 vuotta '
           + 'aiemmin.',
@@ -455,6 +458,7 @@ export const FOKUSVIRTA_RIIKA = {
        */
       kuva: {
         tiedosto: 'Immeuble art nouveau (Riga) (7561800214).jpg',
+        lyhyt: 'Jugend on noin kolmasosassa Riian keskustan rakennuksista, valmistuivat 1904–1914.',
         selite: 'Jugend on noin kolmasosassa Riian keskustan '
           + 'rakennuksista, ja valtaosa niistä valmistui talouskasvun '
           + 'vuosina 1904–1914.',
@@ -550,6 +554,7 @@ export const FOKUSVIRTA_RIIKA = {
      */
     kuva: {
       tiedosto: 'Jakob Kettler.jpg',
+      lyhyt: 'Herttua Jaakob Kettler hallitsi Kuramaata 1642–1682; pieni herttuakunta piti siirtokuntia kaukana.',
       selite: 'Herttua Jaakob Kettler hallitsi Kuramaata vuodesta 1642 '
         + 'kuolemaansa 1682, ja hänen aikanaan pieni herttuakunta piti '
         + 'siirtokuntia Tobagossa ja Gambiajoella.',
@@ -770,6 +775,7 @@ export const FOKUSVIRTA_RIIKA = {
        */
       kuva: {
         tiedosto: 'Venta Rapid from the left bank.jpg',
+        lyhyt: 'Ventas rumba on matala mutta satoja metrejä leveä, Euroopan leveimmäksi sanottu vesiputous.',
         selite: 'Ventas rumba on vain parin metrin korkuinen mutta '
           + 'leveimmillään satojen metrien levyinen, ja sitä sanotaan '
           + 'Euroopan leveimmäksi vesiputoukseksi.',
@@ -876,6 +882,7 @@ export const FOKUSVIRTA_RIIKA = {
        */
       kuva: {
         tiedosto: 'Cape Kolka aerial photograph.jpg',
+        lyhyt: 'Kolkan niemellä kohtaavat Itämeri ja Riianlahti; niemi jatkuu veden alla matalikkona kauas.',
         selite: 'Kolkan niemellä kohtaavat Itämeri ja Riianlahti, ja niemi '
           + 'jatkuu veden alla matalikkona kauas ulapalle.',
         lahde: 'acediscovery, Wikimedia Commons (CC BY 4.0)',

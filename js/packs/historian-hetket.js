@@ -236,6 +236,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-kolumbus-portugali-1484-lahi-photo-v3.jpg',
+        lyhyt: 'Kolumbus esittelee samat kartat taas, ja Portugalin hovin asiantuntijat torjuvat ne uudelleen.',
         kuvateksti: 'Kolumbus on kantanut samoja karttoja ja laskelmia ovelta '
           + 'toiselle jo vuosia, kun Portugalin hovin asiantuntijat sanovat '
           + 'jälleen ei. Heidän epäilynsä osuu olennaiseen: Kolumbus kuvittelee '
@@ -248,6 +249,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-kolumbus-portugali-1484-kauko-photo-v3.jpg',
+        lyhyt: 'Juhana II:n hovi pitää Kolumbuksen matkaa turhana riskinä; hylätty suunnittelija lähtee Kastiliaan.',
         kuvateksti: 'Kuningas Juhana II:n pöydällä Kolumbuksen suuri unelma '
           + 'näyttää tarpeettomalta riskiltä, sillä Portugali etenee jo Afrikan '
           + 'rannikkoa etelään. Hylätty suunnittelija lähtee Lissabonista '
@@ -322,6 +324,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-kolumbus-santa-fe-1492-lahi-photo-v3.jpg',
+        lyhyt: 'Kuninkaallinen sanansaattaja tavoittaa Kolumbuksen ja kutsuu hänet takaisin sopimaan matkasta.',
         kuvateksti: 'Kuninkaallinen sanansaattaja tavoittaa jo pois lähteneen '
           + 'Kolumbuksen ja kutsuu hänet takaisin Santa Fehen: vuosien torjunnat '
           + 'vaihtuvat viimein suostumukseksi. Hän ei saa vain laivoja, vaan '
@@ -335,6 +338,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-kolumbus-santa-fe-1492-kauko-photo-v3.jpg',
+        lyhyt: 'Huhtikuun 1492 sopimuksessa Kolumbukselle ratkaisee paitsi matka myös hänen tuleva asemansa.',
         kuvateksti: 'Isabella ei tarinan vastaisesti panttaa jalokiviään; '
           + 'rahoitus syntyy hovin neuvotteluista ja kruunun varoista. Huhtikuun '
           + '1492 sopimuksen äärellä Kolumbukselle ratkaisevaa ei ole vain matka '
@@ -408,6 +412,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-kolumbus-palos-1492-lahi-photo-v3.jpg',
+        lyhyt: 'Santa Marían laivapoika kuuntelee Palosin kelloja ennen purjehdusta kohti oletettua Aasiaa.',
         kuvateksti: 'Santa Marían nuori laivapoika kuuntelee Palosin kelloja ja '
           + 'yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. '
           + 'Kolumbus uskoo purjehtivansa Aasiaan; pojan tuntematon matka päätyy '
@@ -421,6 +426,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-kolumbus-palos-1492-kauko-photo-v3.jpg',
+        lyhyt: 'Kolme laivaa katoaa Río Tinton suulle; retki etsii Aasiaa mutta avaa yhteyden Atlantin yli.',
         kuvateksti: 'Rannalle jäävä perhe näkee kolmen pienen laivan katoavan '
           + 'Río Tinton suulle tietämättä, maksetaanko luvattu palkka tai '
           + 'palaako oma mies koskaan. Kolumbuksen retkikunta etsii Aasiaa mutta '
@@ -490,6 +496,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-magalhaes-sanlucar-1519-lahi-photo-v3.jpg',
+        lyhyt: 'Noin 270 lähtijästä vain 18 palaa; Magalhães kuolee matkalla, Elcano tuo viimeisen laivan kotiin.',
         kuvateksti: 'Köyttä kiristävä merimies on yksi noin 270 lähtijästä; '
           + 'kotiin palaa alkuperäisestä joukosta vain 18. Magalhães itse kuolee '
           + 'Filippiineillä, ja Juan Sebastián Elcano tuo viimeisen laivan '
@@ -503,6 +510,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-magalhaes-sanlucar-1519-kauko-photo-v3.jpg',
+        lyhyt: 'Viisi laivaa lähtee Sanlúcarista; lähes kolme vuotta myöhemmin palaa vain uupunut Victoria.',
         kuvateksti: 'Viisi laivaa lähtee, mutta Sanlúcar näkee kahden vuoden ja '
           + 'yhdentoista kuukauden kuluttua palaavan vain Victorian. Sen '
           + 'uupuneet miehet ovat ensimmäiset, jotka ovat kiertäneet maapallon — '
@@ -582,6 +590,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-vasco-da-gama-restelo-1497-lahi-photo-v3.jpg',
+        lyhyt: 'Restelossa polvistuva merimies rukoilee ennemmin kotiinpaluuta kuin Intian rikkauksia.',
         kuvateksti: 'Restelossa polvistuva merimies rukoilee ehkä vähemmän '
           + 'Intian rikkauksia kuin sitä, että näkisi vielä kotinsa. Moni ei '
           + 'näe: da Gaman reitti avaa kaupalle uuden tien, mutta matka maksaa '
@@ -594,6 +603,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-vasco-da-gama-restelo-1497-kauko-photo-v3.jpg',
+        lyhyt: 'Da Gaman lähtö on rannalle sekä lupaus vauraudesta että mahdollinen viimeinen hyvästi.',
         kuvateksti: 'Rannalle jääville lähtö on lupaus vauraudesta ja '
           + 'mahdollinen viimeinen hyvästijättö samassa hetkessä. Kun da Gama '
           + 'palaa, Portugalilla on meritietä Intiaan koskeva vastaus — ja alku '
@@ -666,6 +676,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-cook-endeavour-plymouth-1768-lahi-photo-v3.jpg',
+        lyhyt: 'Endeavourin kansimies katsoo Plymouthia viimeisen kerran ennen tuntemattoman mittaista matkaa.',
         kuvateksti: 'Endeavourin kansimies ottaa viimeisen katseen Plymouthiin '
           + 'ennen matkaa, jonka pituutta kukaan ei osaa luvata. Cook ja Joseph '
           + 'Banks tavoittelevat Venuksen ylikulkua ja uusia kasveja, mutta '
@@ -680,6 +691,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-cook-endeavour-plymouth-1768-kauko-photo-v3.jpg',
+        lyhyt: 'Hiililaivaan pakattu tiede- ja taiteilijaryhmä lähtee kolmivuotiselle Tyynenmeren purjehdukselle.',
         kuvateksti: 'Hiililaivaksi rakennettuun Endeavouriin pakkautuu '
           + 'merimiesten lisäksi tähtitieteilijöitä, luonnontutkijoita, '
           + 'taiteilijoita ja heidän toiveitaan. Heidän kolmivuotinen matkansa '
@@ -755,6 +767,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-trafalgar-victory-1805-lahi-photo-v3.jpg',
+        lyhyt: 'Nelson kysyy vielä vihollislinjan etäisyyttä hetkeä ennen kohtalokasta Trafalgarin taistelua.',
         kuvateksti: 'Nelson kysyy kapteeni Hardylta vielä kerran vihollislinjan '
           + 'etäisyyttä; kumpikin tietää, että suunnitelma vie Victoryn suoraan '
           + 'lähitulitukseen. Hardy selviää päivästä, Nelson ei — heidän '
@@ -768,6 +781,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-trafalgar-victory-1805-kauko-photo-v3.jpg',
+        lyhyt: 'Nuori ruutipoika odottaa Victoryn kannella ensimmäistä laukausta alivoimaisessa laivastossa.',
         kuvateksti: 'Ensimmäistä taisteluaan odottava nuori ruutipoika yrittää '
           + 'lukea vanhempien merimiesten kasvoista, kuinka lähellä ensimmäinen '
           + 'laukaus jo on. Nelsonin 27 alusta käyvät suuremman laivaston '
@@ -781,6 +795,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lehti',
         tiedosto: 'hetki-trafalgar-the-times-1805-lehti-photo-v3.jpg',
+        lyhyt: 'Lontoo lukee samasta uutisesta sekä voiton Napoleonista että Nelsonin kuoleman Trafalgarilla.',
         kuvateksti: 'Lontoolaiset lukevat samasta uutisesta voiton ja '
           + 'menetyksen: Napoleonin laivasto on lyöty, mutta Nelson on kuollut '
           + 'Victoryllä. Merimiesten perheille Collingwoodin lähetys ei ole '
@@ -856,6 +871,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-darwin-galapagos-1835-lahi-photo-v3.jpg',
+        lyhyt: '26-vuotias Darwin tarkkailee Galápagosin kilpikonnaa uteliaana keräilijänä, ei vielä teoreetikkona.',
         kuvateksti: '26-vuotias Darwin katsoo kilpikonnaa vielä uteliaana '
           + 'keräilijänä, ei valmiin teorian isänä. Hän ymmärtää saarten '
           + 'havaintojen merkityksen vasta myöhemmin — osin siksi, ettei aluksi '
@@ -868,6 +884,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-darwin-galapagos-1835-kauko-photo-v3.jpg',
+        lyhyt: 'Beaglen lyhyt pysähdys Galápagosilla kypsyy Darwinin mielessä vuosikymmenten evoluutioteoriaksi.',
         kuvateksti: 'Beaglen miehistölle Galápagos on lyhyt pysähdys veden, '
           + 'ruoan ja näytteiden vuoksi; Darwinille sen viidestä viikosta tulee '
           + 'vuosikymmenten ajatuskumppani. Evoluutioteoria ei synny yhtenä '
@@ -940,6 +957,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-nansen-fram-1893-lahi-photo-v3.jpg',
+        lyhyt: 'Nansen jättää vaimonsa ja vauvansa Kristianiaan lähteäkseen jäädyttämään Framin ahtojäihin.',
         kuvateksti: 'Nansen jättää Kristianiaan Eva-vaimonsa ja vasta muutaman '
           + 'kuukauden ikäisen Liv-tyttärensä eikä voi luvata paluupäivää. Hänen '
           + 'suunnitelmansa on tarkoituksella jäädyttää Fram ahtojäihin — juuri '
@@ -951,6 +969,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-nansen-fram-1893-kauko-photo-v3.jpg',
+        lyhyt: 'Omaiset odottavat Framin uutisia lähes kolme vuotta tietämättä, onnistuuko Nansenin uhkapeli.',
         kuvateksti: 'Rannalla vilkuttavat omaiset joutuvat odottamaan uutisia '
           + 'lähes kolme vuotta. Framin runko kestää jään puristuksen ja koko '
           + 'miehistö palaa, mutta lähdön hetkellä kukaan ei vielä tiedä, onko '
@@ -962,6 +981,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lehti',
         tiedosto: 'hetki-nansen-verdens-gang-1893-lehti-photo-v3.jpg',
+        lyhyt: 'Eva Nansen jää odottamaan miestä, joka lähtee tarkoituksella kadota Jäämeren ahtojäihin.',
         kuvateksti: 'Eva Nansen jää puolen vuoden ikäisen Livin kanssa '
           + 'odottamaan miestä, joka aikoo kadota tarkoituksella Jäämeren '
           + 'ahtojäihin. Lehden lukijalle suunnitelma näyttää lähes '
@@ -1029,6 +1049,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-amundsen-etelanapa-1911-lahi-photo-v3.jpg',
+        lyhyt: 'Amundsenin viisikko saavuttaa etelänavan mutta jättää kirjeen varalta, ettei paluu onnistu.',
         kuvateksti: 'Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre '
           + 'Hassel ja Oscar Wisting tietävät olevansa ensimmäisiä — mutta '
           + 'kotiin on vielä lähes 1 300 kilometriä. He jättävät teltalle '
@@ -1042,6 +1063,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-amundsen-etelanapa-1911-kauko-photo-v3.jpg',
+        lyhyt: 'Amundsenin ryhmä palaa navalta elossa, kun myöhemmin saapuva Scottin ryhmä kuolee paluumatkalla.',
         kuvateksti: 'Lipunnosto kestää hetken; selviytyminen on vaatinut '
           + 'viikkojen kylmyyden ja suunnitelman, jossa osa koirista uhrataan '
           + 'muiden ravinnoksi. Kaikki viisi norjalaista palaavat, kun taas 34 '
@@ -1055,6 +1077,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lehti',
         tiedosto: 'hetki-amundsen-tidens-tegn-1912-lehti-photo-v3.jpg',
+        lyhyt: 'Sähke tekee Amundsenista sankarin, kun taas Scottin ryhmä on yhä vaarallisella paluumatkalla.',
         kuvateksti: 'Lyhyt sähke tekee Roald Amundsenista kansallissankarin, '
           + 'mutta retkikunnan miehille tärkein sana on paluu: kaikki viisi ovat '
           + 'hengissä. Samaan aikaan Robert Scott vetäytyy navalta kohti '
@@ -1124,6 +1147,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-titanic-southampton-1912-lahi-photo-v3.jpg',
+        lyhyt: 'Titaniciin nousee perhe, jonka äiti ja tytär pelastuvat mutta isä jää uhrien joukkoon.',
         kuvateksti: 'Seitsemänvuotias Eva Hart nousee Titaniciin vanhempiensa '
           + 'kanssa, mutta hänen äitinsä Esther pelkää laivaa niin paljon, ettei '
           + 'suostu nukkumaan öisin. Eva ja äiti pelastuvat; isä Benjamin jää '
@@ -1136,6 +1160,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-titanic-southampton-1912-kauko-photo-v3.jpg',
+        lyhyt: 'Kaksi poikaa matkustaa Titanicissa väärällä nimellä; isän kuoltua heidät tunnetaan orpoina lehdissä.',
         kuvateksti: 'Kolmivuotias Michel ja kaksivuotias Edmond matkustavat '
           + 'isänsä kanssa väärällä sukunimellä, äidiltä salaa vietyinä. '
           + 'Haaksirikon jälkeen isä kuolee ja pojat tunnetaan viikkoja vain '
@@ -1149,6 +1174,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lehti',
         tiedosto: 'hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg',
+        lyhyt: 'Radisti Phillips lähettää hätäkutsuja veden noustessa Titanicissa; Bride selviää, Phillips ei.',
         kuvateksti: 'Jack Phillips jatkaa hätäkutsujen lähettämistä, vaikka '
           + 'vesi nousee Titanicin radiohyttiin; Harold Bride vetää pelastusliivin '
           + 'hänen ylleen. Bride selviää kaatuneen pelastusveneen päällä, '
@@ -1227,6 +1253,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-viikinkilaiva-roskilde-1040-lahi-photo-v3.jpg',
+        lyhyt: 'Nuori soutaja lähtee ensi kertaa pitkälle viikinkimatkalle tietämättä, palaako miehistö lainkaan.',
         kuvateksti: 'Kuvan nuori soutaja lähtee ensimmäiselle pitkälle '
           + 'matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina '
           + 'vai ei lainkaan. Kapea pitkälaiva tekee saman aluksen kaikista '
@@ -1240,6 +1267,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-viikinkilaiva-roskilde-1040-kauko-photo-v3.jpg',
+        lyhyt: 'Pitkälaiva kuljettaa kokonaista yhteisöä, sukulaisia ja soutajia, Atlantille ja itään.',
         kuvateksti: 'Vuonon rannalle jäävät eivät näe pelkkää sotalaivaa vaan '
           + 'kokonaisen liikkuvan yhteisön: sukulaisia, velallisia, vapaita '
           + 'miehiä ja ehkä pakotettuja soutajia. Noin 60 airoa antaa alukselle '
@@ -1317,6 +1345,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-rontgen-kasi-1895-lahi-photo-v4.jpg',
+        lyhyt: 'Anna Bertha Röntgen pitää kätensä liikkumatta, kun uusi säteily paljastaa luut sormusten alta.',
         kuvateksti: 'Anna Bertha Röntgen pitää vasenta kättään liikkumatta '
           + 'valokuvalevyllä, vaikka pöydän takana rätisevän laitteen '
           + 'vaikutusta ei voi nähdä eikä tuntea. Arjessa tutut sormukset '
@@ -1329,6 +1358,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-rontgen-kasi-1895-kauko-photo-v4.jpg',
+        lyhyt: 'Röntgen kutsuu vaimonsa salaiseen kokeeseen, josta tulee ensimmäinen kuva ihmisen sisuksista.',
         kuvateksti: 'Röntgen on pitänyt löytönsä lähes kokonaan omana tietonaan '
           + 'ennen kuin pyytää vaimonsa pimeään laboratorioon. Anna Bertha ei '
           + 'voi tietää näkymättömän säteilyn riskejä; hänen osakseen jää '
@@ -1400,6 +1430,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-wright-kitty-hawk-1903-lahi-photo-v3.jpg',
+        lyhyt: 'Wrightin veljekset onnistuvat: Flyer nousee ilmaan kaksitoista sekuntia ennen laskeutumistaan.',
         kuvateksti: 'Orville makaa Flyerin ohjaimissa ja Wilbur juoksee siiven '
           + 'rinnalla niin pitkään kuin pystyy. Kahdentoista sekunnin kuluttua '
           + 'kone osuu hiekkaan, mutta veljekset tietävät jo onnistuneensa '
@@ -1412,6 +1443,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-wright-kitty-hawk-1903-kauko-photo-v3.jpg',
+        lyhyt: 'Ensi kertaa kameraa käyttävä pelastusmies vangitsee Orvillen 36 metrin lennon Kitty Hawkissa.',
         kuvateksti: 'Pelastusasemalla työskentelevä John T. Daniels ei ole '
           + 'koskaan ennen ottanut valokuvaa, kun hän puristaa kameran '
           + 'laukaisupalloa juuri oikealla hetkellä. Hänen levylleen jää '
@@ -1488,6 +1520,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-einstein-patenttitoimisto-1905-lahi-photo-v4.jpg',
+        lyhyt: 'Einstein pohtii valoa ja samanaikaisuutta patenttiviraston työtoverin Bessonin kanssa Bernissä.',
         kuvateksti: 'Michele Besso kuuntelee, kun työtoveri yrittää purkaa valoa '
           + 'ja samanaikaisuutta koskevan pulman arkiseksi ajatuskokeeksi. '
           + 'Patenttivirasto maksaa Einsteinin vuokran; Besso on yksi harvoista, '
@@ -1500,6 +1533,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-einstein-patenttitoimisto-1905-kauko-photo-v4.jpg',
+        lyhyt: 'Virkailija Einstein käsittelee patenttihakemuksia ennen kuin ehtii omaan vuoden 1905 fysiikkaansa.',
         kuvateksti: 'Viraston hakemukset on käsiteltävä ennen kuin oma fysiikka '
           + 'saa tilaa, ja kotona odottavat Mileva sekä vuoden ikäinen Hans '
           + 'Albert. Einstein ei näytä toimiston nerolta vaan yhdeltä '
@@ -1578,6 +1612,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg',
+        lyhyt: 'Howard Carter näkee kynttilän valossa Tutankhamonin haudan eteiskammion ensi kertaa.',
         kuvateksti: 'Howard Carter jää hetkeksi liikkumatta kynttilä kädessään, kun lordi '
           + 'Carnarvon kysyy näkeekö hän mitään. Pienen oviaukon takana on '
           + 'eteiskammio — varsinainen hautakammio avataan vasta kolme kuukautta '
@@ -1589,6 +1624,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg',
+        lyhyt: 'Lady Evelyn Herbert seuraa jännittyneenä, kun yli kolmentuhannen vuoden hiljaisuus rikkoutuu.',
         kuvateksti: 'Lady Evelyn Herbert puristaa kättään rintaansa vasten ja yrittää nähdä '
           + 'isänsä olkapään yli. Carterin kynttilä on ainoa merkki siitä, että yli '
           + 'kolmentuhannen vuoden hiljaisuus on juuri rikkoutumassa.',
@@ -1599,6 +1635,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lehti',
         tiedosto: 'hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
+        lyhyt: 'Brittilehti kuvittaa Carterin löydön piirroksin, ennen kuin varsinaiset valokuvat leviävät.',
         kuvateksti: 'Brittiyleisö näki Carterin kurkistuksen ensin taiteilijan silmin: The '
           + 'Illustrated London News rakensi kuvan Carnarvonin kertomuksesta ja '
           + 'ilmoitti rehellisesti, että kyse oli piirroksesta. Juuri tämä '
@@ -1679,6 +1716,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-schliemann-troija-1873-lahi-photo-v4.jpg',
+        lyhyt: 'Kaivaja ojentaa Troijan löydön Schliemannille, joka jo ajattelee sitä oman maineensa avaimena.',
         kuvateksti: 'Kaivaja ojentaa löydön Heinrich Schliemannille, mutta miehet eivät '
           + 'katso esinettä samalla tavalla: toiselle se on päivän työ, toiselle '
           + 'avain maineeseen. Se, kuka saa päättää aarteen kohtalosta, on jo tässä '
@@ -1690,6 +1728,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-schliemann-troija-1873-kauko-photo-v4.jpg',
+        lyhyt: 'Hisarlıkin kaivajat jatkavat työtään, kun Schliemann kokoaa löydöt omaksi sankaritarinakseen.',
         kuvateksti: 'Hisarlıkin kaivajat jatkavat lapiointia, kun Schliemann kokoaa '
           + 'esineitä peitteen alle. Työmiehet, joiden käsistä löydöt kulkivat, '
           + 'jäävät pian sivuun kertomuksesta, jonka Schliemann kirjoittaa omaksi '
@@ -1765,6 +1804,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-rosettan-kivi-1799-lahi-photo-v4.jpg',
+        lyhyt: 'Sapööri paljastaa Rosettan kiven kolme tekstivyöhykettä, joita kukaan ei vielä osaa lukea.',
         kuvateksti: 'Nuori sapööri pyyhkii rakennuspölyn pois, ja Pierre-François Bouchard '
           + 'tajuaa kolmen tekstivyöhykkeen kertovan saman asian eri merkein. '
           + 'Kumpikaan ei vielä osaa lukea hieroglyfejä, mutta he ymmärtävät '
@@ -1776,6 +1816,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-rosettan-kivi-1799-kauko-photo-v4.jpg',
+        lyhyt: 'Fort Julienin korjaajat kampeavat Rosettan kiven esiin arkisen purkutyön yhteydessä.',
         kuvateksti: 'Fort Julienin korjaajat pysäyttävät työn ja kampeavat raskaan kiven '
           + 'päivänvaloon köysillä ja puulla. Löytö syntyy linnoituksen arkisesta '
           + 'purkutyöstä — ei suunnitellusta aarteenetsinnästä.',
@@ -1786,6 +1827,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lehti',
         tiedosto: 'hetki-rosettan-kivi-1799-lehti-photo-v4.jpg',
+        lyhyt: 'Ranskalaislehti raportoi vuonna 1799 Rosettan kivilöydöstä varovaisena, ilman sensaatio-otsikkoa.',
         kuvateksti: 'Courier de l’Égypte raportoi löydöstä syyskuussa 1799 ilman '
           + 'sensaatio-otsikkoa: kolme kirjoitusjärjestelmää, sama kivipinta ja '
           + 'varovainen toivo avaimesta. Lukijalle ratkaiseva lause piiloutui '
@@ -1865,6 +1907,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-galilei-kaukoputki-1610-lahi-photo-v5.jpg',
+        lyhyt: 'Galilei tähyää Jupiteria kaukoputkella Padovassa ja huomaa valopisteiden vaihtavan paikkaa.',
         kuvateksti: 'Galileo painaa silmänsä kapeaan okulaariin ja yrittää '
           + 'pitää Jupiterin näkökentässä paljain käsin tammikuun kylmyydessä. '
           + 'Valopisteet ovat jälleen vaihtaneet paikkaa: havainto on hiljainen, '
@@ -1880,6 +1923,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-galilei-kaukoputki-1610-kauko-photo-v5.jpg',
+        lyhyt: 'Avustaja kirjaa Galilein havainnot, kunnes toistuva liike paljastaa neljä Jupiterin kuuta.',
         kuvateksti: 'Apulainen yrittää saada Galileon sanelemat pisteet '
           + 'paperille ennen kuin kynttilä tai sormet hyytyvät kylmään. Kun '
           + 'sama työ toistuu yö toisensa jälkeen, valojen liike alkaa näyttää '
@@ -1960,6 +2004,7 @@ export const HISTORIAN_HETKET = [
         rooli: 'lahi',
         versio: 4,
         tiedosto: 'hetki-machu-picchu-1911-lahi-photo-v4.jpg',
+        lyhyt: 'Poika Pablito johdattaa hengästyneen Hiram Binghamin tutulle polulle Machu Picchussa.',
         kuvateksti: 'Pablito vilkaisee olkansa yli varmistaakseen, pysyykö '
           + 'hengästynyt Hiram Bingham perässä. Pojalle märkä polku ja '
           + 'köynnösten alta nouseva kiviseinä ovat tuttuja; vasta vieras '
@@ -1972,6 +2017,7 @@ export const HISTORIAN_HETKET = [
         rooli: 'kauko',
         versio: 5,
         tiedosto: 'hetki-machu-picchu-1911-kauko-photo-v5.jpg',
+        lyhyt: 'Paikallisille perheille Machu Picchun kiviseinät ovat arkea, jonka ulkopuolinen kutsuu löydöksi.',
         kuvateksti: 'Pablito vilkaisee mutaiselta polulta, pysyykö hengästynyt '
           + 'Bingham perässä, samalla kun Richarten ja Álvarezin perheiden '
           + 'päivä jatkuu maissipellolla. Heille kiviseinät eivät ole löytö vaan '
@@ -2051,6 +2097,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-marie-curie-hangaari-1898-lahi-photo-v4.jpg',
+        lyhyt: 'Marie Curie käsittelee tonnikaupalla malmia saadakseen esiin vain hitusen radiumia.',
         kuvateksti: 'Jokainen tankoa kiertävä liike nostaa padasta happamia '
           + 'höyryjä, mutta Marie Curie jatkaa, koska mittari kertoo '
           + 'jäännöksessä olevan jotakin uraania voimakkaampaa. Tuhansien '
@@ -2063,6 +2110,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg',
+        lyhyt: 'Curien pariskunnan laboratorio on kylmä pihavaja, jonka säteilyriskejä kumpikaan ei vielä tunne.',
         kuvateksti: 'Marie ja Pierre Curien laboratorio ei ole loistokas '
           + 'tiedepalatsi vaan kylmä pihavaja, jossa säkit, padat ja '
           + 'mittaukset täyttävät päivän. Kumpikaan ei vielä tiedä, kuinka '
@@ -2132,6 +2180,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-newton-prisma-1666-lahi-photo-v4.jpg',
+        lyhyt: 'Newton päästää yhden valonsäteen prisman läpi ja osoittaa värien piilevän valkoisessa valossa.',
         kuvateksti: 'Newton peittää ikkunan lähes kokonaan ja päästää sisään '
           + 'vain yhden valonsäteen, jotta pieni prisma saa vastata. Seinälle '
           + 'venyvä värijono osoittaa, etteivät värit synny lasissa: valkoinen '
@@ -2143,6 +2192,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-newton-prisma-1666-kauko-photo-v4.jpg',
+        lyhyt: 'Ruton sulkema Cambridge vapauttaa Newtonin kokeilemaan prismaa lapsuudenkotinsa pimeässä huoneessa.',
         kuvateksti: 'Rutto on sulkenut Cambridgen, ja 23-vuotias Newton on '
           + 'palannut lapsuudenkotiinsa vailla professoreita tai '
           + 'laboratoriota. Pimennetty huone, ikkunaluukun reikä ja prisma '
@@ -2216,6 +2266,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-franklin-leija-1752-lahi-photo-v4.jpg',
+        lyhyt: 'Franklin ei odota salaman osuvan leijaan vaan pientä kipinää avaimesta poikansa rystyselle.',
         kuvateksti: 'Franklin ei odota salaman osuvan leijaan; hän odottaa '
           + 'märkää narua pitkin kulkevan varauksen kokoontuvan avaimeen. '
           + 'William näkee pienen kipinän isän rystysellä — juuri tarpeeksi '
@@ -2291,6 +2342,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-lavoisier-laboratorio-1780-lahi-photo-v4.jpg',
+        lyhyt: 'Lavoisierit punnitsevat aineet ennen ja jälkeen reaktion osoittaakseen, ettei massa katoa.',
         kuvateksti: 'Kun vaa\'an neula pysähtyy, Marie-Anne merkitsee luvun '
           + 'ennen seuraavaa vaihetta. Lavoisierien läpimurto ei synny '
           + 'näyttävästä reaktiosta vaan uskosta siihen, että aineet voidaan '
@@ -2302,6 +2354,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg',
+        lyhyt: 'Marie-Anne Lavoisier dokumentoi kokeet, kun Antoine mittaa kaasuja heidän laboratoriossaan.',
         kuvateksti: 'Marie-Anne ei ole vain tarkkailija: hän pitää '
           + 'koepäiväkirjoja, kuvaa laitteet mittakaavaan ja tekee työn '
           + 'ymmärrettäväksi muille. Antoine mittaa kaasuja, mutta heidän '
@@ -2371,6 +2424,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-jenner-rokotus-1796-lahi-photo-v4.jpg',
+        lyhyt: 'Jenner naarmauttaa lehmänrokolla Phippsin pojan käsivarren kokeillakseen rokotusajatustaan.',
         kuvateksti: 'Kahdeksanvuotias James Phipps yrittää pitää käsivartensa '
           + 'liikkumatta, kun Jenner tekee siihen pienen naarmun. Poika ei '
           + 'voi antaa nykyisen kaltaista tietoon perustuvaa suostumusta; '
@@ -2384,6 +2438,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-jenner-rokotus-1796-kauko-photo-v4.jpg',
+        lyhyt: 'Jennerin rokotuskoe nojaa Sarah Nelmesin lehmänrokkoon ja pojan isän lupaan osallistua.',
         kuvateksti: 'Puutarhuri Christopher Phipps seisoo poikansa takana, ja '
           + 'Sarah Nelmesin kädestä saatu lehmänrokkoaine odottaa pöydällä. '
           + 'Toukokuun 1796 hiljainen huone on samalla lääketieteellinen '
@@ -2459,6 +2514,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-faraday-luento-1831-lahi-photo-v4.jpg',
+        lyhyt: 'Faraday saa galvanometrin neulan nytkähtämään ja löytää tavan tehdä magnetismista sähköä.',
         kuvateksti: 'Galvanometrin neula nytkähtää vain silloin, kun Faraday '
           + 'kytkee tai katkaisee virran ensimmäisestä käämistä. Hän on '
           + 'etsinyt vuosia tapaa tehdä magnetismista sähköä; ratkaisu '
@@ -2471,6 +2527,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-faraday-luento-1831-kauko-photo-v4.jpg',
+        lyhyt: 'Faradayn pienen rautarenkaan käämien välinen hetkellinen virta avaa periaatteen muuntajille.',
         kuvateksti: 'Avustajan on ehdittävä merkitä neulan lyhyt liike, ennen '
           + 'kuin se palaa nollaan. Faradayn rautarengas on vain 17 '
           + 'senttimetriä leveä, mutta sen kahden käämin välinen hetkellinen '
@@ -2541,6 +2598,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-pasteur-pullot-1862-lahi-photo-v4.jpg',
+        lyhyt: 'Pasteurin joutsenkaulapullo pysyy kirkkaana, kun taas katkaistu pullo samenee mikrobeista.',
         kuvateksti: 'Ehjässä joutsenkaulapullossa liemi pysyy kirkkaana, '
           + 'vaikka ilma pääsee sisään; katkaistussa se samenee. Pasteur ei '
           + 'näe mikrobeja paljain silmin, mutta pölyviiva lasin mutkassa '
@@ -2552,6 +2610,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-pasteur-pullot-1862-kauko-photo-v4.jpg',
+        lyhyt: 'Viikkoja jatkunut odotus vahvistaa Pasteurin kokeen: elämä ei synny liemeen itsestään.',
         kuvateksti: 'Nuori avustaja on kirjoittanut samoihin pulloihin '
           + 'päivämääriä viikkojen ajan ja odottanut muutosta, jota ei tule. '
           + 'Juuri odottaminen tekee kokeesta vakuuttavan: keitetty liemi ei '
@@ -2622,6 +2681,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-mendelejev-kortit-1869-lahi-photo-v4.jpg',
+        lyhyt: 'Mendelejev jättää alkuainetaulukkoonsa tietoisesti tyhjiä paikkoja tulevia löytöjä varten.',
         kuvateksti: 'Mendelejev siirtää yhtä merkintää ja jättää viereen tyhjän '
           + 'paikan — ei siksi, että työ olisi kesken, vaan koska '
           + 'järjestyksen pitäisi ennustaa vielä tuntematon alkuaine. Rohkein '
@@ -2634,6 +2694,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-mendelejev-kortit-1869-kauko-photo-v4.jpg',
+        lyhyt: 'Mendelejev korjailee luonnoksiaan ja päättää lähettää 200 painosta taulukostaan kollegoille.',
         kuvateksti: 'Tunnettu kertomus alkuainepasianssista on todennäköisesti '
           + 'myöhempi legenda; arkistoon jäivät yliviivatut ryhmittelyt ja '
           + 'jatkuvasti korjatut luonnokset. Kuvan nuori painoapulainen '
@@ -2704,6 +2765,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-edison-lamppu-1879-lahi-photo-v4.jpg',
+        lyhyt: 'Edisonin hiillettyä lankaa palaa 13,5 tuntia, ja työryhmä uskoo löytäneensä kestävän lampun.',
         kuvateksti: 'Charles Batchelor merkitsee vihkoon uuden tunnin, ja '
           + 'Edison uskaltaa viimein nojata lähemmäs haurasta lasia. Hiilletty '
           + 'ompelulanka palaa lopulta 13,5 tuntia — tarpeeksi kauan, että '
@@ -2716,6 +2778,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-edison-lamppu-1879-kauko-photo-v4.jpg',
+        lyhyt: 'Menlo Parkin hehkulamppu syntyy monen työntekijän yhteisenä, valvotun yön saavutuksena.',
         kuvateksti: 'Menlo Parkin valo syntyy monen käsissä: Ludwig Boehm '
           + 'puhaltaa lasin, John Kruesi tekee läpiviennit ja Batchelor '
           + 'käsittelee hiuksenohutta hiililankaa. Edison johtaa koetta, mutta '
@@ -2790,6 +2853,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-fleming-malja-1928-lahi-photo-v4.jpg',
+        lyhyt: 'Fleming huomaa homepesäkkeen ympärillä kirkkaan kehän, jossa bakteerit eivät kasva.',
         kuvateksti: 'Fleming on vähällä siirtää sotkuisen viljelymaljan '
           + 'syrjään, kun homepesäkkeen ympärillä oleva kirkas kehä pysäyttää '
           + 'hänet. Kukaan ei hurraa: hänen edessään ei ole vielä lääke vaan '
@@ -2801,6 +2865,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-fleming-malja-1928-kauko-photo-v4.jpg',
+        lyhyt: 'Flemingin sattuma vaatii vielä Floreyn ja Chainin työn, ennen kuin siitä tulee penisilliini.',
         kuvateksti: 'St Mary\'sin epäjärjestys auttaa sattumaa, mutta havainnon '
           + 'ymmärtäminen vaatii Flemingin pysähtymään sen ääreen. Hän osaa '
           + 'osoittaa homeen tuhoavan bakteereita, muttei tehdä siitä vakaata '
@@ -2872,6 +2937,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-gutenberg-paino-1454-lahi-photo-v4.jpg',
+        lyhyt: 'Latoja-apulainen ladoo painokoneen kirjaimia, kun Gutenbergin Raamattu syntyy metallista.',
         kuvateksti: 'Latoja-apulainen nostaa yhden käänteisen kirjaimen '
           + 'kerrallaan ja tietää, että virhe voi pakottaa avaamaan koko '
           + 'ladelman. Hänen sormiinsa jäävä muste on osa uutta käsityötä, '
@@ -2884,6 +2950,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-gutenberg-paino-1454-kauko-photo-v4.jpg',
+        lyhyt: 'Gutenbergin Raamattu syntyy monen käsiparin vuosien työnä noin 180 kappaleen painoksena.',
         kuvateksti: 'Gutenbergin Raamattu ei synny yhdestä nerokkaasta '
           + 'painalluksesta: kostea paperi, mustepallot, ruuviprässi ja '
           + 'kuivuvat arkit kulkevat monen työntekijän käsien kautta vuosien '
@@ -2961,6 +3028,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
+        lyhyt: 'Neljän miehen ketju niittaa Eiffel-tornia ilman suojakaiteita, joka isku toisen varassa.',
         kuvateksti: 'Kuuma niitti ehtii jäähtyä nopeasti, joten neljän miehen '
           + 'työketju ei saa katketa: yksi lämmittää, toinen pitää '
           + 'paikoillaan, kolmas muotoilee kannan ja neljäs lyö liitoksen '
@@ -2973,6 +3041,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-eiffel-torni-1888-kauko-photo-v4.jpg',
+        lyhyt: 'Eiffel-tornin toinen taso valmistuu, kun tuhannet esivalmistetut osat kootaan yhdeksi torniksi.',
         kuvateksti: 'Elokuussa 1888 toinen taso on viimein koossa, mutta torni '
           + 'jatkuu vielä avonaisena rautaristikkona taivaalle. Alhaalla '
           + 'hevoskuormat tuovat Levallois’ssa millintarkasti esivalmistettuja '
@@ -3046,6 +3115,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-brunel-thames-tunnel-1827-lahi-photo-v4.jpg',
+        lyhyt: 'Kaivaja etenee Thames-tunnelissa muutaman tuuman kerrallaan joen alla tihkuvan veden armoilla.',
         kuvateksti: 'Kaivaja näkee vain oman valurautaisen lokeronsa, '
           + 'irrotettavan tukilaudan ja märkää savea muutaman kymmenen sentin '
           + 'päässä kasvoistaan. Hän saa ottaa maata pois vain noin neljän '
@@ -3058,6 +3128,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-brunel-thames-tunnel-1827-kauko-photo-v4.jpg',
+        lyhyt: 'Nuori Brunel ohjaa kilpeä, joka kaivaa ensimmäistä tunnelia purjehduskelpoisen joen alle.',
         kuvateksti: '21-vuotias Isambard Kingdom Brunel kuuntelee puun, '
           + 'ruuvitunkkien ja veden ääniä, kun kaksitoista kolmikerroksista '
           + 'kehystä siirtyy tuuma tuumalta eteenpäin. Kilven 36 kaivajaa ja '
@@ -3131,6 +3202,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-suezin-kanava-avajaiset-1869-lahi-photo-v4.jpg',
+        lyhyt: 'Nuori köysimies pitää L’Aiglen köyttä irti vedestä Suezin kanavan juhlavissa avajaisissa.',
         kuvateksti: 'Nuoren egyptiläisen köysimiehen tehtävä on arkinen: pitää '
           + 'L’Aiglen kiinnitysköysi poissa vedestä, vaikka kannella seisoo '
           + 'Ranskan keisarinna Eugénie. Hänen ympärillään Port Said on '
@@ -3144,6 +3216,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-suezin-kanava-avajaiset-1869-kauko-photo-v4.jpg',
+        lyhyt: 'L’Aigle johtaa 77 aluksen jonoa Suezin kanavaan, ja hiljainen ranta muuttuu meriväyläksi.',
         kuvateksti: 'L’Aigle kääntyy kanavaan ensimmäisenä, ja sen takana '
           + 'odottaa 77 alusta. Hiekkarannalla lapsi laskee lippuja ja '
           + 'savupiippuja sormillaan; hänelle maailman merireittien muutos on '
@@ -3156,6 +3229,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lehti',
         tiedosto: 'hetki-suezin-kanava-avajaiset-1869-lehti-photo-v4.jpg',
+        lyhyt: 'Kuvittaja lähettää Port Saidista muistiinpanot, joista Lontoossa tehdään avajaisten puukaiverrus.',
         kuvateksti: 'Kuvittaja William Simpson lähetti Port Saidista '
           + 'kenttämuistiinpanot “kaikkien kansojen väkijoukosta”, ja '
           + 'Lontoossa ne muutettiin viikkoja myöhemmin puukaiverrukseksi. '
@@ -3236,6 +3310,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-brooklyn-bridge-1883-lahi-photo-v4.jpg',
+        lyhyt: 'Emily Roebling on kuljettanut työmaan tietoa vuosia, kun hän ylittää valmiin Brooklyn Bridgen.',
         kuvateksti: 'Emily Roebling on vuosien ajan kuljettanut laskelmia ja '
           + 'ohjeita työmaan sekä sukeltajantaudin sairastuttaman '
           + 'Washingtonin välillä. Kun hän ylittää valmiin sillan '
@@ -3249,6 +3324,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-brooklyn-bridge-1883-kauko-photo-v4.jpg',
+        lyhyt: 'Washington Roebling seuraa sillan avajaisia kotoaan, sivussa juhlivasta väkijoukosta.',
         kuvateksti: 'Washington Roebling ei seiso arvovieraiden joukossa vaan '
           + 'seuraa juhlaa kodistaan Columbia Heightsilta. Presidentti, '
           + 'tykkisalva ja väkijoukko ottavat sillan haltuunsa; neljäntoista '
@@ -3261,6 +3337,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lehti',
         tiedosto: 'hetki-brooklyn-bridge-1883-lehti-photo-v4.jpg',
+        lyhyt: 'Brooklyn Daily Eagle juhlii siltaa erikoisnumerossa, mutta Emily Roeblingin työ jää rivien väliin.',
         kuvateksti: 'Brooklyn Daily Eagle rikkoi avajaispäivänä '
           + 'levikkiennätyksensä erikoisnumerolla, joka julisti Brooklynin ja '
           + 'New Yorkin yhdistyneiksi. Lehden suurin uutinen oli silta; rivien '
@@ -3333,6 +3410,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-pietari-perustus-1703-lahi-photo-v4.jpg',
+        lyhyt: 'Sotilaat mittaavat Jänissaarta, jolle tsaari suunnittelee kuutta bastionia keskellä Pohjan sotaa.',
         kuvateksti: 'Sotilaan mittakeppi uppoaa märkään maahan, ja lapioita '
           + 'pitelevät miehet yrittävät nähdä kartasta saman kuusibastionisen '
           + 'linnoituksen kuin tsaari. Heille Jänissaari ei vielä ole '
@@ -3345,6 +3423,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-pietari-perustus-1703-kauko-photo-v4.jpg',
+        lyhyt: 'Toukokuussa 1703 Jänissaarella on vasta soinen maa ja mittanaruja tulevan Pietarin sijaan.',
         kuvateksti: 'Pietarin suunnitelma lupaa kuusi bastionia, mutta '
           + 'toukokuussa 1703 paikalla on vasta soinen saari, mittanaruja ja '
           + 'märkiä maavalleja. Työryhmän on saatava puu- ja maalinnake '
@@ -3418,6 +3497,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-vesuvius-pompeji-79-lahi-photo-v4.jpg',
+        lyhyt: 'Pompejilainen kauppias yrittää pelastaa omaisuutensa hohkakivien alkaessa ropista katolle.',
         kuvateksti: 'Kuvituksen nimetön torikauppias yrittää vielä pelastaa '
           + 'vaa’an ja rahalippaan, kun hänen tyttärensä kuuntelee hohkakivien '
           + 'alkavaa ropinaa katoksella. He eivät tiedä, onko viisaampaa '
@@ -3431,6 +3511,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-vesuvius-pompeji-79-kauko-photo-v4.jpg',
+        lyhyt: 'Plinius vertaa Vesuviuksen pilveä pinjapuuhun, mutta forumilla vertaus ei vielä auta ketään.',
         kuvateksti: 'Plinius vertasi Vesuviuksen päälle kohoavaa pilveä '
           + 'pinjapuuhun: kapea runko levisi korkealla oksistoksi. Forumilla '
           + 'vertaus ei vielä auta ketään. Yksi perhe kokoaa läheisiään, '
@@ -3511,6 +3592,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-konstantinopoli-1453-lahi-photo-v4.jpg',
+        lyhyt: 'Konstantinopolin puolustajat tukkivat yön aikana kanuunan murtaman aukon kivillä ja puulla.',
         kuvateksti: 'Yön aikana puolustajat ovat täyttäneet kanuunoiden '
           + 'murtamaa aukkoa kivillä, tynnyreillä ja puulla. Nuori apumies ei '
           + 'tiedä, kestääkö hänen tukemansa palkki seuraavan laukauksen; '
@@ -3523,6 +3605,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-konstantinopoli-1453-kauko-photo-v4.jpg',
+        lyhyt: 'Kolmen aallon lopullinen hyökkäys päättää Konstantinopolin kuuden viikon piirityksen.',
         kuvateksti: 'Viimeinen hyökkäys tulee kolmessa aallossa. Ensimmäiset '
           + 'väsyttävät puolustajia, toiset kasvattavat painetta ja '
           + 'janitsaarit etenevät viimeisinä. Muurin harjalla kuuden viikon '
@@ -3594,6 +3677,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-lontoon-palo-1666-lahi-photo-v4.jpg',
+        lyhyt: 'Nuori nainen suojaa soitintaan Lontoon suurpalossa veneessä pakenevien tavaroiden joukossa.',
         kuvateksti: 'Samuel Pepys huomasi Thamesilla jotain oudon arkista: '
           + 'lähes joka kolmannessa kotinsa tavaroita kuljettavassa veneessä '
           + 'oli virginal-soitin. Kuvituksen nuori nainen pitää oman '
@@ -3607,6 +3691,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-lontoon-palo-1666-kauko-photo-v4.jpg',
+        lyhyt: 'Thames täyttyy palon tieltä pakenevista veneistä, jotka on lastattu huonekaluilla ja arkuilla.',
         kuvateksti: 'Thames täyttyi veneistä, vuoteista, arkuista ja vedessä '
           + 'kelluvista tavaroista. Pepys kirjoitti kipinöiden polttaneen '
           + 'kasvoja joen toiselle puolelle asti; veneessä jokainen joutui '
@@ -3619,6 +3704,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lehti',
         tiedosto: 'hetki-lontoon-palo-1666-lehti-photo-v4.jpg',
+        lyhyt: 'Palo tuhoaa myös The London Gazetten painopaikan; lehti ilmestyy viikon viiveellä Savoysta.',
         kuvateksti: 'Palo tuhosi myös The London Gazetten painopaikan, ja '
           + 'numero 85 ilmestyi viikon keskeytyksen jälkeen Savoyssa. '
           + 'Virallinen selostus lupasi lukijoille “lyhyen mutta '
@@ -3692,6 +3778,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-berliinin-muuri-1961-lahi-photo-v4.jpg',
+        lyhyt: 'Berliinin muurin ensimmäisenä päivänä poliisi vetää piikkilangan lähellä olevien sisarusten väliin.',
         kuvateksti: 'Bernauer Straßella talon seinä kuului itään mutta '
           + 'jalkakäytävä länteen. Kuvituksen sisarukset ovat yhä '
           + 'huutoetäisyydellä, kun nuori poliisi kiristää lankaa heidän '
@@ -3704,6 +3791,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-berliinin-muuri-1961-kauko-photo-v4.jpg',
+        lyhyt: 'Opiskelijan tie isän luo katkeaa piikkilankaan, kun tuhannet sulkevat Berliinin rajan.',
         kuvateksti: 'Opiskelijan pyörä on samalla kadulla kuin eilen, mutta '
           + 'tie isän luo katkeaa betonipylväisiin ja piikkilankaan. Yli '
           + '10 000 poliisia, sotilasta ja taisteluryhmäläistä sulkee '
@@ -3716,6 +3804,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lehti',
         tiedosto: 'hetki-berliinin-muuri-1961-lehti-photo-v4.jpg',
+        lyhyt: 'BILD tiivistää Berliinin muurin yön otsikkoon panssareista, vaikka mitta on tuttu naapuri.',
         kuvateksti: 'BILD tiivisti 14.8.1961 yön tapahtumat otsikkoon “Berlin — '
           + 'Panzer im Ostsektor”. Panssarit olivat totta, mutta Bernauer '
           + 'Straßella uutisen mitta oli pienempi: tuttu ikkuna, naapurin '
@@ -3786,6 +3875,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-michelangelo-sikstus-1510-lahi-photo-v4.jpg',
+        lyhyt: 'Michelangelo maalaa Sikstuksen kappelin kattoa märän rappauksen ehdoilla, giornata kerrallaan.',
         kuvateksti: 'Freskomaalarilla on vain märän rappauksen verran aikaa. '
           + 'Michelangelo kurottaa päivän uutta giornataa kohti, kun apulainen '
           + 'odottaa värikupin kanssa ja tarkkailee pinnan kuivumista; jos '
@@ -3798,6 +3888,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-michelangelo-sikstus-1510-kauko-photo-v4.jpg',
+        lyhyt: 'Vuonna 1510 Sikstuksen katosta on valmiina vasta puolikas, ja työ etenee alue kerrallaan.',
         kuvateksti: 'Vuonna 1510 vasta katon ensimmäinen puolisko on '
           + 'valmistumassa. Telineellä yksi mies levittää tuoretta '
           + 'pintalaastia, toinen nostaa vettä ja Michelangelo työskentelee '
@@ -3869,6 +3960,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-beethoven-yhdeksas-1824-lahi-photo-v4.jpg',
+        lyhyt: 'Kuuro Beethoven ei kuule Yhdeksännen sinfonian suosionosoituksia, ennen kuin Unger kääntää hänet.',
         kuvateksti: 'Caroline Unger koskettaa Beethovenin hihaa ja kääntää '
           + 'hänet kohti salia. Säveltäjä ei kuule suosionosoituksia; hetken '
           + 'ajan hän joutuu lukemaan oman teoksensa vastaanoton kasvoista, '
@@ -3880,6 +3972,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-beethoven-yhdeksas-1824-kauko-photo-v4.jpg',
+        lyhyt: 'Muusikot seuraavat Umlaufin tahtipuikkoa, jotta kuuron Beethovenin partituuri pysyy koossa.',
         kuvateksti: 'Orkesterin alttoviulisti pitää katseensa Umlaufin '
           + 'tahtipuikossa, vaikka Beethoven merkitsee vieressä tempoja koko '
           + 'kehollaan. Muusikot ovat sopineet seuraavansa varsinaista '
@@ -3950,6 +4043,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-shakespeare-globe-1599-lahi-photo-v4.jpg',
+        lyhyt: 'Poikanäyttelijä esittää Caesarin painajaisunta Globen äänekkäälle pihayleisölle ilman mikrofonia.',
         kuvateksti: 'Nuori poikanäyttelijä astuu Calpurniana näyttämölle, vain '
           + 'käsivarren mitan päähän äänekkäistä pihakatsojista. Hänen on '
           + 'saatava Caesarin paha uni kuuluviin ilman mikrofonia, kulisseja '
@@ -3962,6 +4056,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-shakespeare-globe-1599-kauko-photo-v4.jpg',
+        lyhyt: 'Thomas Platter kuvailee Globen Julius Caesar -esitystä, jossa yleisö syö ja kommentoi vapaasti.',
         kuvateksti: 'Sveitsiläinen Thomas Platter kertoi ylittäneensä Thamesin '
           + 'noin kahdelta ja nähneensä Julius Caesarin viidentoista '
           + 'näyttelijän voimin. Pihalla tarina ei ollut hiljainen pyhä '
@@ -4035,6 +4130,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-mozart-wien-1786-lahi-photo-v4.jpg',
+        lyhyt: 'Anna Storace etsii Mozartin katseesta vihjettä Figaron häiden ensi-illassa Burgtheaterissa.',
         kuvateksti: 'Anna Storace odottaa Susannan seuraavaa repliikkiä ja '
           + 'etsii Mozartin katseesta sisääntulon. Cembalon äärestä johtava '
           + 'säveltäjä voi auttaa vain pienellä nyökkäyksellä — näyttämöllä '
@@ -4047,6 +4143,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-mozart-wien-1786-kauko-photo-v4.jpg',
+        lyhyt: 'Mozart johtaa Figaron häiden ensiesityksiä cembalosta hoviteatterin tiiviin yleisön edessä.',
         kuvateksti: 'Mozart johtaa Figaron kahta ensimmäistä esitystä '
           + 'cembalosta, keskellä laulajia, soittajia ja pienen hoviteatterin '
           + 'tiivistä yleisöä. Parterren nuori nuotinkääntäjä kuulee salin '
@@ -4120,6 +4217,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-luther-wittenberg-1517-lahi-photo-v4.jpg',
+        lyhyt: 'Luther sinetöi teesinsä arkkipiispalle Wittenbergissä ennen uskonpuhdistajan mainetta.',
         kuvateksti: 'Luther sinetöi teesinsä arkkipiispa Albrechtille, ja nuori '
           + 'yliopiston lähetti odottaa oven luona. Kumpikaan ei vielä kanna '
           + '“uskonpuhdistajan” roolia: pöydällä on professorin kutsu '
@@ -4132,6 +4230,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-luther-wittenberg-1517-kauko-photo-v4.jpg',
+        lyhyt: 'Linnankirkon ovi toimii ilmoitustauluna; teesien leviämisen ratkaisee kirjapaino, ei vasara.',
         kuvateksti: 'Linnankirkon ovi toimi yliopiston ilmoitustauluna, joten '
           + 'avustajan kiinnittämä väittelykutsu ei välttämättä pysäytä montaa '
           + 'ohikulkijaa. Emme tiedä varmasti, kiinnitettiinkö juuri nämä '
@@ -4210,6 +4309,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
+        lyhyt: 'Pariisilainen etsii yhä ruutia muskettiinsa, kun Bastiljin portti vihdoin avautuu.',
         kuvateksti: 'Kuvituksen pariisilainen metallityöläinen on kantanut '
           + 'Invalidikirkolta hakemaansa muskettia tuntikausia, mutta ruutia '
           + 'hän etsii yhä. Kun Bastiljin portti viimein avautuu, voitonriemu '
@@ -4222,6 +4322,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v4.jpg',
+        lyhyt: 'Bastiljin sveitsiläinen vartija yrittää kadota pihalle ennen kuin väkijoukko saavuttaa hänet.',
         kuvateksti: 'Vankilan sveitsiläinen sotilas laskee aseensa ja yrittää '
           + 'kadota sisäpihan reunaan ennen kuin virta saavuttaa hänet. '
           + 'Portista tuleville pariisilaisille Bastilji on sortovallan linna; '
@@ -4293,6 +4394,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-olympia-ateena-1896-lahi-photo-v4.jpg',
+        lyhyt: 'Spyridon Louis kuulee Ateenan stadionin huudon ennen maratonin viimeistä kierrosta 1896.',
         kuvateksti: 'Spyridon Louis kuulee stadionin huudon ennen kuin ehtii '
           + 'nähdä marmorikatsomot. Kruununprinssi Konstantin ja prinssi Yrjö '
           + 'juoksevat hänen rinnalleen; 23-vuotiaan vedenkantajan on enää '
@@ -4305,6 +4407,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-olympia-ateena-1896-kauko-photo-v4.jpg',
+        lyhyt: 'Louisin isä etsii poikansa kasvoja väkijoukosta stadionilla Kreikan juhliessa olympiavoittoa.',
         kuvateksti: 'Louisin isä murtautuu radan reunalle ja etsii poikansa '
           + 'pölyisiä kasvoja kahden prinssin välistä. Kuusikymmentätuhantinen '
           + 'stadion juhlii Kreikan voittoa, mutta isälle väkijoukon keskellä '
@@ -4378,6 +4481,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-sibelius-finlandia-1899-lahi-photo-v4.jpg',
+        lyhyt: 'Sibelius johtaa Suomi herää -kuvaelmaa, kun toimittaja pelkää lehtensä lakkauttamista.',
         kuvateksti: 'Jean Sibelius nostaa tahtipuikon viimeiseen kuvaelmaan, '
           + 'mutta eturivin nuori toimittaja kuuntelee myös salin '
           + 'hiljaisuutta. Hänen lehtensä voidaan lakkauttaa seuraavaksi; '
@@ -4390,6 +4494,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-sibelius-finlandia-1899-kauko-photo-v4.jpg',
+        lyhyt: 'Finlandian protesti piilotetaan kuvaelmiin ja musiikkiin niin, ettei sensori voi puuttua siihen.',
         kuvateksti: 'Orkesterin nuotinkääntäjä tietää, ettei illan protestia '
           + 'lausuta suoraan. Se piilotetaan kuuteen historialliseen '
           + 'kuvaelmaan, näyttämön eleisiin ja Sibeliuksen musiikkiin — niin, '
@@ -4467,6 +4572,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lahi',
         tiedosto: 'hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg',
+        lyhyt: 'Méliès katsoo hämmästyneenä, kun Lumièren elokuva saa valkokankaan näyttämään ikkunalta.',
         kuvateksti: 'Georges Méliès nojautuu eteenpäin, kun valkokankaan '
           + 'tehdasportti aukeaa ja ihmiset kävelevät ulos kuin seinä olisi '
           + 'muuttunut ikkunaksi. Taikuri tietää katsovansa uutta temppua, '
@@ -4479,6 +4585,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg',
+        lyhyt: 'Avustaja pitää kameran kammen tasaisena, jotta Lumièren elokuvan ihmiset jatkavat kävelyään.',
         kuvateksti: 'Koneen takana nuori avustaja pitää kammen tasaisena, '
           + 'vaikka 33 katsojan jokainen naurahdus ja henkäys kuuluu pimeässä '
           + 'kellarissa. Jos käsi nykäisee, kuva värisee; jos se pysyy '
@@ -4491,6 +4598,7 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'lehti',
         tiedosto: 'hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg',
+        lyhyt: 'Toimittaja yrittää selittää lukijoille liikkuvaa kuvaa, jota kukaan ei ole ennen nähnyt.',
         kuvateksti: 'Lehden nimetön toimittaja yrittää selittää liikkuvaa kuvaa '
           + 'lukijoille, jotka eivät ole koskaan nähneet sellaista. Hän kutsuu '
           + 'laitetta valokuvauksen ihmeeksi ja takertuu yhteen lähes '

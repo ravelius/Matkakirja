@@ -169,6 +169,7 @@ export const FOKUSVIRTA_LONTOO = {
       + 'kolmentoista ja puolen tonnin kello. Katso ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-lontoo-westminster-thames.jpg',
+      lyhyt: 'Westminsterin palatsi rakennettiin uudelleen 1834 palon jälkeen; Big Ben on lyönyt vuodesta 1859.',
       selite: 'Westminsterin palatsi rakennettiin uudelleen vuoden 1834 '
         + 'palon jälkeen, ja sen kellotornin Big Ben on lyönyt tunteja '
         + 'vuodesta 1859.',
@@ -287,6 +288,7 @@ export const FOKUSVIRTA_LONTOO = {
        */
       kuva: {
         tiedosto: 'Red deer stag roaring in Richmond Park - geograph.org.uk - 3711560.jpg',
+        lyhyt: 'Saksanhirven uros karjuu Richmond Parkissa kiima-aikaan; aidatussa laumassa noin 630 eläintä.',
         selite: 'Saksanhirven uros karjuu Richmond Parkissa kiima-aikaan '
           + 'syksyllä. Aidatun puiston laumassa on noin 630 eläintä.',
         lahde: 'Russel Wills, Wikimedia Commons (CC BY-SA 2.0)',
@@ -478,6 +480,7 @@ export const FOKUSVIRTA_LONTOO = {
      */
     kuva: {
       tiedosto: 'Du Maurier London fog.jpg',
+      lyhyt: 'Hiilikärry ja nuohooja lontoolaisessa sumussa 1889 Punch-lehdessä, isoisän käynnin jälkeen.',
       selite: 'Hiilikärry ja nuohooja lontoolaisessa sumussa vuoden 1889 '
         + 'Punch-lehden kaiverruksessa, kuusitoista vuotta isoisän '
         + 'käynnin jälkeen.',
@@ -682,6 +685,7 @@ export const FOKUSVIRTA_LONTOO = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-sutton-hoo-loistoaika.webp',
+        lyhyt: 'Laivan muoto paljastuu kummun alla puun poissa; hiekka ja niittirivit pitävät mitat tallessa.',
         selite: 'Laivan muoto paljaana kummun alla: puu on poissa, '
           + 'mutta hiekka ja niittirivit pitävät aluksen mitat '
           + 'tallessa.',

@@ -187,6 +187,7 @@ export const FOKUSKOHTEET_ITA = [
      */
     kuva: {
       tiedosto: 'Forum (Pompeii) and the Vesuvio.jpg',
+      lyhyt: 'Pompejin Forum ja Vesuvius; kaivaukset saivat nykymuotonsa Giuseppe Fiorellilta 1860-luvulla.',
       selite: 'Pompejin Forum ja sen takana Vesuvius. Kaivaukset saivat '
         + 'nykyisen tapansa Giuseppe Fiorellilta 1860-luvulla.',
       lahde: 'Commonists, Wikimedia Commons (CC BY-SA 4.0)',
@@ -310,6 +311,7 @@ export const FOKUSKOHTEET_ITA = [
      */
     kuva: {
       tiedosto: 'Albert Bierstadt - The Blue Grotto, Capri - Walters 371565.jpg',
+      lyhyt: 'Sininen luola Caprilla, maalattuna 1850-luvun lopulla ennen isoisän matkaa.',
       selite: 'Sininen luola Caprilla, maalattuna 1850-luvun lopulla — '
         + 'runsaat kymmenen vuotta ennen isoisän matkaa.',
       lahde: 'Albert Bierstadt, Walters Art Museum, Wikimedia Commons '
@@ -725,6 +727,7 @@ export const FOKUSKOHTEET_ITA = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-forum-romanum.webp',
       kadonnut: false,
+      lyhyt: 'Forum oli valtakunnan sydän täynnä temppeleitä ja patsaita; nyt raunioalue keskellä Roomaa.',
       selite: 'Forum oli valtakunnan sydän: temppeleitä, riemukaaria ja '
         + 'kaksi valtavaa basilikaa, joiden pylväskäytävissä hoidettiin '
         + 'Rooman kaupat ja oikeusjutut. Marmori oli maalattua ja '
@@ -833,6 +836,7 @@ export const FOKUSKOHTEET_ITA = [
     ihme: {
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-colosseum-loistoaika-v2.jpg',
       kadonnut: false,
+      lyhyt: 'Katsoja etsii numeroitua paikkaansa areenalla; purjemiehistö kiristää aurinkosuojaa ylhäällä.',
       selite: 'Katsoja puristaa sisäänpääsymerkkiään ja etsii holvikäytävästä '
         + 'omaa numeroitua reittiään: paikka areenalla määräytyy '
         + 'yhteiskunnallisen aseman mukaan. Purjemiehistö kiristää valtavaa '

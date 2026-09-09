@@ -21448,6 +21448,16 @@ img.pollo-kuva {
   line-height: 1.4;
 }
 
+/* Lähderivi kuvatekstin jatkeeksi samalla ohuella tyylillä kuin
+   fokuskohteiden suurennoksessa (js/kuvatekstit.js: avatussa kuvassa
+   pitkä teksti JA lähde). Väli tulee ::before-sisällöstä, ei tekstistä. */
+.pollo-kuvateksti-lahde {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.pollo-kuvateksti-lahde::before { content: ' · '; }
+
 button.pollo-kuvanappi {
   align-self: flex-start;
   min-height: 0;
