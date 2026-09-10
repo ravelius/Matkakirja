@@ -1,3 +1,9 @@
+## 2026-09-10 16:25 UTC — FABLE: v1733 kuitattu (jalkavarjo, chat alemmas, lentosuunta)
+
+Tekstisession v1733 (PR #2206, main 9cd16262) vastaanotettu tiedoksi; omistajan lupa suora. Ei toimenpiteitä Fablelta; ei kuvatoimituksia jonossa.
+
+---
+
 ## 2026-09-10 15:25 UTC — FABLE: v1732 kuitattu (kokopulu, 51 SVG-elettä)
 
 Tekstisession v1732 (PR #2205, main 38adce74) vastaanotettu tiedoksi; omistajan lupa suora (kokonainen SVG-pulu kaikilla eleillä). Ei integraatiota eikä toimenpiteitä Fablelta. Kuvatoimitus: ei jonossa olevia items[]-toimituksia.
