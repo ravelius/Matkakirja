@@ -25612,3 +25612,7 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
   min-height: 0; box-sizing: border-box;
 }
 .pollo-paneeli.pollo-paneeli.livia-chat-tila.pollo-alku { height: auto; }
+
+/* Kokonainen vektoripulu: lepotila 40 × 61, ele varaa tilaa ylöspäin. */
+.livia-kasvot-pinta.livia-svg-pulu { image-rendering: auto; }
+.livia-svg-pulu > span, .livia-svg-pulu svg { display: block; overflow: hidden; }

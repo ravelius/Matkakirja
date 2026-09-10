@@ -1,0 +1,9 @@
+<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Livia — kaikki eleet</title><link rel="stylesheet" href="livia-svg.css"></head><body><main>
+<header><span>MATKAKIRJA / LIVIA</span><h1>Koko pulu. Kaikki eleet.</h1></header>
+<div class="selection"><label>Ele <select id="gesture"></select></label><label>Tunteen voimakkuus <span class="slider"><input id="strength" type="range" min="0" max="100" value="50"><output id="strength-label">50 %</output></span></label></div>
+<div class="views"><section><h2>Pelikoossa</h2><div class="screen"><span class="place">Lissabon</span><div id="actual"></div></div></section><section><h2>Läheltä</h2><div class="zoom" id="zoom"></div></section></div>
+<div class="controls"><button id="play">Toista</button><button id="pause">Pysäytä</button><button id="all" aria-pressed="false">Kaikki peräkkäin</button><label><input id="slow" type="checkbox"> Hitaasti</label></div>
+<label class="timeline">Liikkeen kohta <input id="position" type="range" min="0" max="1000" value="0"><output id="progress">0 %</output></label>
+<p id="description" aria-live="polite"></p><p id="reduced" hidden>Vähennetty liike on käytössä. Asentoja voi katsoa liukusäätimestä.</p>
+<footer><a href="livia-chat.html">Kokeile chatin kanssa</a> · <a href="../">Peliin</a></footer>
+</main><script type="module" src="livia-svg-demo.mjs"></script></body></html>
