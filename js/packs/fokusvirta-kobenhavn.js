@@ -102,6 +102,14 @@ export const FOKUSVIRTA_KOBENHAVN = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 11402c573860ea6849049ddd0d2d041a594eaa3e7c3c8d05932bae0fb4fef452. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kobenhavn-r20260909-paper-v4.jpg",
+      lyhyt: "Kööpenhamina, 1873. Orkesteri sai odottaa omassa tahdissaan.",
+      selite: "Tivolin vanha pari liikkui vähän kerrallaan, niin että katsomiseen jäi aikaa. Puutarhan lamput syttyivät, ja niiden valo löysi lammesta toisen rivin. Pyysin heitä pysähtymään hetkeksi vedosta varten. Se ei näyttänyt muuttavan tanssia kovin paljon. Kaupungissa on paljon rakennettua huvitusta, mutta tähän riittivät kaksi kättä, tuttu askel ja haluttomuus kiirehtiä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Vuodenaika seuraa merkinnän omaa
      * havaintoa: illat huvipuistossa tarkoittavat kesäkautta, ja Tivoli

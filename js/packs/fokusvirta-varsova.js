@@ -193,6 +193,14 @@ export const FOKUSVIRTA_VARSOVA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 d12971a977623ef43895ce1bc6a6a153e91c32b20d822131098d4f097d60f6f7. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-varsova-r20260909-paper-v4.jpg",
+      lyhyt: "Varsova, 1873. Leipuri piti kaupungin omalla kielellään.",
+      selite: "Torin talot seisovat lähekkäin, mutta aamun työ mahtuu niiden eteen. Leipurin pöydässä leivät ovat valmiina ennen kuin virastot ehtivät ryhtyä määräämään päivän asioita. Hän katsoi kameraa vain hetken ja palasi asiakkaansa puoleen. Varsovan karttamerkinnöissä minulla on keisarikunnan väri; tässä kuvassa tahdoin säilyttää myös sen, minkä ihmiset tekevät paikasta itse.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://muzeumwarszawy.pl/en/old-town-new-town-in-warsaw/","https://muzeum.uw.edu.pl/en/the-old-town-square-1916-1918/","https://muzeumwarszawy.pl/obiekt/rzezba-syreny-fontanny-rynku-starego-miasta/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Varsova, syyskuussa 1873. Kirkasta; Veikselillä usvaa '

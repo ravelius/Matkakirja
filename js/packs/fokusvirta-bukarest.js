@@ -177,6 +177,14 @@ export const FOKUSVIRTA_BUKAREST = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 0d1c043fa97375814165c5604b059614ba0ce740984e222c8ef95a7430564220. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bukarest-r20260909-paper-v4.jpg",
+      lyhyt: "Bukarest, 1873. Majatalon pihassa tavara ja matkustaja lepäsivät yhdessä.",
+      selite: "Manucin majatalon parvilta näki pihalle ja toisille parville, joten yksinäisyyttä oli tarjolla lähinnä oven sulkemisen hinnalla. Alhaalla mies oli tehnyt säkeistään vuoteen ja vartioi niitä samalla nukkumalla. Keittiön suunnasta liikkui ruokaa ja tuoksua. Kuvasin ennen alas menemistä. Pylväiden laskeminen olisi voinut odottaa iltaan, mutta en luottanut siihen, että päivällinen tekisi samoin.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://muzeulbucurestiului.ro/expozitia-tematica-hanurile-uitate-ale-bucurestilor/","https://www.hanulluimanuc.ro/"],
+    },
     /* Kaanon, kohta 1 — paikkarivi, teksti ja luenta sellaisinaan. */
     paikkarivi: 'Bukarest, lokakuussa 1873. Ensimmäinen halla; savu nousee '
       + 'suoraan; puntari korkealla.',

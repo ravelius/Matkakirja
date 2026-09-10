@@ -282,6 +282,14 @@ export const FOKUSVIRTA_SOFIA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 26d68fc28ff609aa856198a12e8a0d81f619c7ec210579a0d4ab0d8d02940f67. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sofia-r20260909-paper-v4.jpg",
+      lyhyt: "Sofia, 1873. Maa oli ehtinyt lämmittää veden.",
+      selite: "Nainen piti kannua varovasti, sillä lähteen tarjoilussa ei ollut kylmää vaihtoehtoa. Minareetti ja Vitošan rinne asettuivat kuvan taakse, mutta arjen tärkein rakennelma oli veden ottopaikka. Majataloni pesuvesi oli ollut viileää. Täällä lämpö nousi maasta ilman, että kukaan kantoi paikalle halkoa. Pyysin naista jäämään kuvaan odottamaan kannunsa jäähtymistä. Siitä oli meille molemmille hyötyä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://visitsofia.bg/catalog/en/discover_sofiaEN/Discover_SofiaEN.pdf"],
+    },
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Sofia, elokuussa 1873. Helteistä; tomu ei laskeudu; puntari '
       + 'korkealla.',

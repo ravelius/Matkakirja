@@ -118,6 +118,14 @@ export const FOKUSVIRTA_PRAHA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 67072e87444f8277b3f7318c4d401fb516e3adf6086947115c2b8a55514b9a0e. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-praha-r20260909-paper-v4.jpg",
+      lyhyt: "Praha, 1873. Kiire jäi kellon eteen odottamaan.",
+      selite: "Torin kello ei tyydy numeroihin. Sen kehissä kulkevat taivaankappaleet, ja pienten hahmojen liike saa kokonaisen ihmisjoukon nostamaan päätään yhtä aikaa. Ajurin vaunut odottivat vähän syrjemmässä. Kuvani pysäyttää kellon, mutta ei kerro, kuinka pitkäksi hänen odotuksensa venyi. Minulla oli taskussa tarkempi ajanmittari. Se jäi sillä hetkellä paljon huonommaksi seuralaiseksi.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://prague.eu/en/about-the-old-town-astronomical-clock/","https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi on lokakuu, jotta
      * Praha asettuu Budapestin (marraskuu) ja Lontoon (joulukuu)

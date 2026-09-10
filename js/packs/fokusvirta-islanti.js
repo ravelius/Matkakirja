@@ -23,6 +23,14 @@ export const FOKUSVIRTA_ISLANTI = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 96ad99971a4ad7f243d4a725cc550c17e3ad315ae6c0f2bea1b2425177a69b20. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-islanti-r20260909-paper-v4.jpg",
+      lyhyt: "Reykjavik, 1873. Pyykkipäivä sai lämmön maasta.",
+      selite: "Naiset pitivät pyykin, saippuan ja oman työnsä järjestyksessä samalla kun maa lämmitti veden. Lähteen höyry liikkui tuulen mukana niin, että osa maisemasta katosi hetkeksi näkyvistä. Reykjavikin pienet talot jäivät kauemmas, ja pesupaikka näytti tavalliselta osalta niiden arkea. Asetin kameran sivuun roiskeista. Minulle tämä oli ihme; kuvassa oleville naisille se oli tehtävä, joka piti saada valmiiksi.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://borgarsogusafn.is/en/exhibitions/the-washerwomen-s-walk-a-stroll-into-history"],
+    },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Reykjavik, elokuussa 1873. Tuulista; ei yhtään puuta; '
       + 'puntari matalalla.',

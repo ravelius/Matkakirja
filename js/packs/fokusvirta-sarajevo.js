@@ -184,6 +184,14 @@ export const FOKUSVIRTA_SARAJEVO = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 0e044c6931a207d02f2608832ca2c53dfb46da6ae93e63fabeeea809991cb64a. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sarajevo-r20260909-paper-v4.jpg",
+      lyhyt: "Sarajevo, 1873. Vasara sai levätä kuvan ajan.",
+      selite: "Pyysin kupariseppää odottamaan hetken. Hänen vasaransa jäi käteen, ja puoliksi valmistuneessa astiassa näkyi, kuinka sileästä pinnasta tulee kuvioitua yksi lyönti kerrallaan. Basaarin muiden puotien kilkutus jatkui sillä välin. Olin aamulla juonut samanlaisen pannun kahvia katsomatta pannua lainkaan. Tähän kuvaan annoin astioille niin paljon tilaa kuin pöytä ja kamerani sallivat.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://arhiva.visitsarajevo.ba/2018/04/sarajevo-coppersmiths-masters-of-an-old-craft/?lang=en"],
+    },
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä; '
       + 'puntari korkealla.',

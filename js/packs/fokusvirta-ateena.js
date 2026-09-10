@@ -93,6 +93,14 @@ export const FOKUSVIRTA_ATEENA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 da5ec9e174df3205e6fe9fc0657b37606436b2361f34df00f0917de46184ced3. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-ateena-r20260909-paper-v4.jpg",
+      lyhyt: "Ateena, 1873. Kultakeskustelu jatkui ilman kultaa.",
+      selite: "Kahvilan pöydän ääressä kädet tekivät suurempia liikkeitä kuin kupit. Schliemannin Troijan löydöt olivat antaneet kaupunkiin uuden puheenaiheen, ja kumpikin keskustelija vaikutti tuntevan asian päästä päähän. Pyysin heitä pysähtymään hetkeksi kuvaan. Akropolis ei tarvinnut pyyntöä. Otin mukaan myös sen, jotta näkyisi, kuinka lähellä kahvipöytää täällä on jo valmiiksi vanhaa maailmaa.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.theacropolismuseum.gr/en"],
+    },
     /*
      * KAANON UUSIKSI (Fable, omistajan hyväksyntä 8.9.2026 klo 19.10):
      * Ateena siirtyy samaan kulkuun kuin muut Euroopan kaupungit —

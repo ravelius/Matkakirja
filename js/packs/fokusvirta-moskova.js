@@ -194,6 +194,14 @@ export const FOKUSVIRTA_MOSKOVA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 23ac8b086234601814d5d11bc2ffa19b343e3ddd6463eda4e5022c793c84ea9a. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-moskova-r20260909-paper-v4.jpg",
+      lyhyt: "Moskova, 1873. Suuri kello ja sen irti päässyt pala.",
+      selite: "Kellon kyljestä puuttuva kohta on niin suuri, että sitä voisi luulla tarkoitukselliseksi oveksi. Irronnut pala seisoo vieressä todistamassa toista. Vartija kertoi painosta ja antoi minun kuvata rauhassa. Tsaarinkello on ehtinyt saada maineensa käyttämättä ääntään kertaakaan. Tämän vedoksen tekeminen sujui siksi mainiosti: kohde ei liikkunut, eikä se vaatinut ketään hiljenemään.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.kreml.ru/en-Us/visit-to-kremlin/what-to-see/tsar-kolokol/","https://kremlin-architectural-ensemble.kreml.ru/the-tsar-bell/view/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Moskova, heinäkuussa 1873. Helteistä; kupolit häikäisevät; '

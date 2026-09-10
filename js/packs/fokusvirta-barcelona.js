@@ -192,6 +192,14 @@ export const FOKUSVIRTA_BARCELONA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 3c15e2076c08aae691740861b1a46284d672d5e89edc58a67cefadda8478f132. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-barcelona-r20260909-paper-v4.jpg",
+      lyhyt: "Barcelona, 1873. Tuleva katu kasvoi vielä lehtiä.",
+      selite: "Uuden korttelin viisto kulma avasi kärryille tilaa kääntyä. Sen vieressä maa oli yhä käytössä paljon vanhemmalla tavalla: kaalirivit eivät ottaneet osaa insinöörin suunnitelmaan. Kamerassa mahtuivat samaan kuvaan valmiit seinät ja se, minkä niiden odotetaan syrjäyttävän. Cerdàn piirroksessa kaupunki hengittää väljästi. Toivoin, että työn edetessä muistettaisiin myös ne, joiden puutarha hengittää tässä nyt.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/101603/1/bcn01engp.pdf"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Barcelona, maaliskuussa 1873. Lämmintä jo; satamassa tervan '

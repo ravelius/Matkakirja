@@ -164,6 +164,14 @@ export const FOKUSVIRTA_SEVILLA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 11002a403fe9dbeac5d72fe957d08fe1a85697b4e75dfce49ccf28ab25d0b9a4. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sevilla-r20260909-paper-v4.jpg",
+      lyhyt: "Sevilla, 1873. Palatsimainen tehdas odotti työväkeään.",
+      selite: "Portin koristeet eivät paljastaneet, kuinka monta aamua sen läpi kannettiin samalla tavoin pieni leipä. Nainen ehti istua ennen työhön palaamista. Pyysin luvan kuvaan ja odotin, että hän sai haukkunsa syödyksi. Tupakkatehtaan suuri rakennus jää varmasti matkakirjoihin. Tahdoin säilyttää myös tämän lyhyen tauon, sillä ilman sen jälkeen alkavaa työtä talo olisi pelkkä komea kuori.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://idus.us.es/bitstreams/c159e9ed-623c-49bb-af82-28de9d825634/download"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Sevilla, huhtikuussa 1873. Appelsiinipuut kukassa; puntari '

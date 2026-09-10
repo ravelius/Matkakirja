@@ -202,6 +202,14 @@ export const FOKUSVIRTA_KRAKOVA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 c7c5c4d815e12c0815261e3a9f4ebe9443343dd9060dd701d22e8c0f1f5821fb. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-krakova-r20260909-paper-v4.jpg",
+      lyhyt: "Krakova, 1873. Tuoli odotti, jos sävelmä ei loppuisi.",
+      selite: "Kangashallin luona kauppa jatkuu, vaikka kirkontornin torvi on jo vaiennut. Torikauppias tiesi, ettei minun kannata seisoa odottamassa puuttuvia säveliä, ja tarjosi istuinta. Marian kirkon epätasaiset tornit auttoivat silmää löytämään äänen paikan. Kamerani tallentaa niistä molemmat, mutta antaa saman vastauksen kuin torvensoittaja: jotakin jää kuvan ulkopuolelle.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://ct.mhk.pl/wps/portal/mhmk/main/strona-artefaktu/?artefactId=%7B61040CE7-72DA-4281-A0A3-14D3C075B00B%7D","https://mnk.pl/en/wystawy/the-sukiennice/","https://convention.krakow.pl/english/ccb_en/7973%2Cartykul%2Cthe_cloth_hall.html"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Krakova, kesäkuussa 1873. Poutaa; torilla pölyää; puntari '

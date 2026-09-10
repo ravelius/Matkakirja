@@ -182,6 +182,14 @@ export const FOKUSVIRTA_VENETSIA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 631010de6b1c25991957d02e670a8e83b6f50dc2945d39a087ad0abfb9a3917c. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-venetsia-r20260909-paper-v5.jpg",
+      lyhyt: "Venetsia, 1873. Oven kynnys jatkui veteen.",
+      selite: "Portaiden alin askel katosi kanavaan, ja gondolieri odotti sen edessä niin kuin ajuri odottaisi kuivalla kadulla. Yläkerran ikkuna oli auki. Kuului astian kilahdus, sitten vettä vasten osuvan melan ääni. Kuvasin näkymän ovelta ennen veneeseen nousua. Kaupungin palatsit näyttävät mahtavilta, mutta niiden arkeen pääsee kurkistamaan aivan tavallisen kynnyksen yli.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.veneziaunica.it/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Venetsia, kesäkuussa 1873. Kosteaa; laguuni haisee laskuveden aikaan.',

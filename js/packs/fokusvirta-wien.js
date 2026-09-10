@@ -100,6 +100,14 @@ export const FOKUSVIRTA_WIEN = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 272aba9c4904bb61e5462b54ade8fad9e64a627cec32eb8440f785e3a3f45028. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-wien-r20260909-paper-v4.jpg",
+      lyhyt: "Wien, 1873. Kone teki lehteä ilman mielipidettä.",
+      selite: "Painokoneen vierellä miehet tarkkailivat arkin kulkua niin kuin lääkärit potilaan hengitystä. Maailmannäyttelyn hallissa rauta kantoi sekä työkoneen että suuren katon painoa. Kuvasin hetken, jolloin kaikki näytti olevan järjestyksessä. Lehti valmistuu koneelta valmiina, mutta sen lukijan ajatukset eivät. Sen eron huomasin myöhemmin kahvilassa, en tämän koneen ääressä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://sammlung.wienmuseum.at/en/object/59815-weltausstellung-1873-rotunde-der-ring-vor-der-hebung-nr-3a/","https://www.technischesmuseum.at/presse/women_at_work","https://www.technischesmuseum.at/ausstellung/women_at_work"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi seuraa merkinnän omia
      * faktoja: näyttely avattiin 1.5.1873 ja pörssi kaatui kahdeksan

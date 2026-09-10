@@ -142,6 +142,14 @@ export const FOKUSVIRTA_BERGEN = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 8f941560edf447ee29ea7fb51dc50b7dbaaa95f8a0edb5e0f18541321153a26c. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260909-paper-v4.jpg",
+      lyhyt: "Bergen, 1873. Kuiva kala, märkä vierailija.",
+      selite: "Kauppias piti kapakalaa kädessään sellaisella varmuudella, jota näkee tavallisesti arvopaperien omistajilla. Bryggenin puuvarastot ovat kasvaneet tämän kaupan ympärille. Katon reuna suojasi kalaa ja myyjää, mutta kamerani jalat joutuivat sadeveden puolelle. Odotin hetken, että mies sai tavaransa hyvään asentoon. Kalalla ei näyttänyt olevan enää kiirettä mihinkään.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Bergen, kesäkuussa 1873. Sadetta aamusta iltaan; puntari '

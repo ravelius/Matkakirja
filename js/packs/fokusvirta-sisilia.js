@@ -23,6 +23,14 @@ export const FOKUSVIRTA_SISILIA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 006defd93653adc6dc991baa5532c7ab1725b216e0e59130914ba67314ac0d0f. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sisilia-r20260909-paper-v4.jpg",
+      lyhyt: "Palermo, 1873. Katon tekijät puhuivat monella kädellä.",
+      selite: "Palatinakappelin katon syvennykset tarttuivat valoon eri kohdista, ja seinien mosaiikit vastasivat siihen kullalla. Normannikuninkaan tilaamassa tilassa kohtaavat eri seutujen käsityötaidot. Kamerani joutuu tekemään ilman väriä, mikä on tässä huoneessa selvä puute. Koetin saada puun pienet muodot näkyviin. Yhden katseen nostaminen ylös osoittautui helpoksi; sen palauttaminen alas kesti paljon kauemmin.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.federicosecondo.org/cappella-palatina/"],
+    },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Palermo, toukokuussa 1873. Kuumaa; Etna savuaa horisontissa; '
       + 'puntari korkealla.',

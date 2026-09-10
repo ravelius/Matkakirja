@@ -98,6 +98,14 @@ export const FOKUSVIRTA_DUBROVNIK = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 b28529ab9d7edf924e4e0a91ca58a9f463445f8d748f1efa628213e00f31bf76. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dubrovnik-r20260909-paper-v4.jpg",
+      lyhyt: "Ragusa, 1873. Kivikasvot puhuivat vedellä.",
+      selite: "Suuren Onofrion kaivon sivuissa kasvot antavat veden ohikulkijan ulottuville. Kaupunki on johtanut juotavan veden muurien sisään, vaikka muuten se on nähnyt paljon vaivaa pitääkseen ulkopuolen ulkona. Asetin kameran yhden naamion eteen. Se pysyi vakavana koko valotuksen, mikä helpotti työtäni. Vesi ei pysynyt, mutta sen liike näyttää kuuluvan tähän kasvokuvaan.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://tzdubrovnik.hr/lang/en/get/spomenici/5535/onofrios_fountains.html"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi on syyskuu: merkintä
      * kertoo koko muurikierroksesta, ja Dalmatian kesähelteessä

@@ -252,9 +252,9 @@ globalThis.document = asiakirja;
 /* ---------------------------------------------------------------- */
 
 /**
- * Sofia on koekaupunki: sillä on fokusvirta ja äänitetty luenta, joten
- * se on lähinnä sitä, mitä postista tuleva kuva kohtaa. Kenttä
- * lisätään vain testin ajaksi ja poistetaan lopuksi.
+ * Sofia on koekaupunki: sillä on fokusvirta, äänitetty luenta ja nyt myös
+ * tuotannon luentakuva. Testit vaihtavat kentän vain testin ajaksi ja
+ * palauttavat alkuperäisen kuvan lopuksi.
  */
 const KOEKAUPUNKI = { id: 'sofia', name: 'Sofia' };
 const PAKKI = fokusvirtaKaupungille(KOEKAUPUNKI.id);
@@ -283,11 +283,24 @@ function tekoUi() {
 
 /** Kuva pakkiin vain yhden testin ajaksi. */
 function pakinKanssa(kuva, tyo) {
+  const alkuperainen = PAKKI.matkakirja.luentakuva;
   PAKKI.matkakirja.luentakuva = kuva;
   try {
     return tyo();
   } finally {
-    delete PAKKI.matkakirja.luentakuva;
+    if (alkuperainen === undefined) delete PAKKI.matkakirja.luentakuva;
+    else PAKKI.matkakirja.luentakuva = alkuperainen;
+  }
+}
+
+/** Poista tuotannon kuva vain yhden kuvatonta pakettia testaavan ajon ajaksi. */
+function pakinIlmanKuvaa(tyo) {
+  const alkuperainen = PAKKI.matkakirja.luentakuva;
+  delete PAKKI.matkakirja.luentakuva;
+  try {
+    return tyo();
+  } finally {
+    if (alkuperainen !== undefined) PAKKI.matkakirja.luentakuva = alkuperainen;
   }
 }
 
@@ -296,12 +309,14 @@ function pakinKanssa(kuva, tyo) {
 /* ---------------------------------------------------------------- */
 
 test('pakki ilman luentakuvaa ei tuota elementtiä', () => {
-  const ui = tekoUi();
-  assert.equal(PAKKI.matkakirja.luentakuva, undefined, 'koekaupungilla ei saa olla kuvaa');
-  assert.equal(fokusvirtaLuentakuva(ui, KOEKAUPUNKI), null);
-  assert.equal(naytaLuentakuva(ui, KOEKAUPUNKI), false);
-  assert.equal(asiakirja.querySelectorAll('.fokusvirta-luentakuva').length, 0);
-  assert.ok(!ui.luentakuva, 'kuvatta ei jää paneelia muistiin');
+  pakinIlmanKuvaa(() => {
+    const ui = tekoUi();
+    assert.equal(PAKKI.matkakirja.luentakuva, undefined, 'testipakista poistettu kuva ei saa näkyä');
+    assert.equal(fokusvirtaLuentakuva(ui, KOEKAUPUNKI), null);
+    assert.equal(naytaLuentakuva(ui, KOEKAUPUNKI), false);
+    assert.equal(asiakirja.querySelectorAll('.fokusvirta-luentakuva').length, 0);
+    assert.ok(!ui.luentakuva, 'kuvatta ei jää paneelia muistiin');
+  });
 });
 
 test('pelkkä selite ilman osoitetta ei nosta tyhjää kehystä', () => {
@@ -482,15 +497,20 @@ test('paluu samaan kaupunkiin nostaa ison kuvan uudelleen', () => {
 
 test('jokaisella pakin luentakuvalla on osoite, selite ja lähde', async () => {
   const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+  let maara = 0;
   for (const [id, virta] of Object.entries(FOKUSVIRRAT)) {
     const kuva = virta?.matkakirja?.luentakuva;
     if (!kuva) continue; // kenttä on vapaaehtoinen
+    maara += 1;
     assert.ok(kuva.osoite || kuva.ampari || kuva.tiedosto,
       `${id}: luentakuvalta puuttuu osoite`);
+    assert.ok(String(kuva.lyhyt ?? '').length <= 100,
+      `${id}: lyhyt kuvateksti ylittää 100 merkkiä`);
     assert.ok(String(kuva.selite ?? '').trim(), `${id}: luentakuvalta puuttuu selite`);
     // CC BY vaatii tekijän maininnan; lähde on siksi pakollinen.
     assert.ok(String(kuva.lahde ?? '').trim(), `${id}: luentakuvalta puuttuu lähde`);
   }
+  assert.equal(maara, 45, 'Euroopan kaikilla 45 matkakirjapaikalla pitää olla lopullinen luentakuva');
 });
 
 /* ---------------------------------------------------------------- */

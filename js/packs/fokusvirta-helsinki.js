@@ -101,6 +101,14 @@ export const FOKUSVIRTA_HELSINKI = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 50343ccd0d063c094178f78d26df4402b7e42b0f585b7d4bbd3300a83858d3e8. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-helsinki-r20260909-paper-v4.jpg",
+      lyhyt: "Helsinki, 1873. Kartta sai rannikon päälle vielä kalan.",
+      selite: "Torikauppias painoi paperini alas ennen kuin tuuli ehti viedä mittaustyötä merelle. Valkoinen kirkko kohosi myyntipaikkojen takana, ja kala jäi kartan päälle aivan toisenlaiseksi paikannimeksi. Pyysin pitämään asetelman hetken ennallaan. Kalan tehtävä oli yksinkertainen ja onnistui täydellisesti. Kamerakin sai näin oman todistuksensa siitä, että maantiede voi hyötyä kalakaupan välineistä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.finna.fi/Record/hkm.CCD1A6CE-FD67-4BDD-9E29-D3C71E41D098","https://www.finna.fi/Record/hkm.F2DD5045-4DE1-49AF-8418-01F6629EEBB6","https://helsingintuomiokirkko.fi/index/kirkontarina.html","https://www.hamhelsinki.fi/en/sculptures/havis-amanda-2/","https://www.hamhelsinki.fi/en/sculptures/alexander-ii/"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Se seuraa merkinnän omaa
      * havaintopaikkaa — laivan kannelta katsottu kaupunki ja satama,
