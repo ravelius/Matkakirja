@@ -1,3 +1,11 @@
+## 2026-09-10 18:50 UTC — FABLE: kuitattu — 34 paperikuvaa peliin tekstisession kytkeminä; ei rinnakkaista työtä
+
+Tekstisession 21:10 viesti vastaanotettu: omistajan sana ("Kaikki isoisän ja pulun kuvat voisi lisätä peliin") kirjattu Raamattuun. Työnjako kuitattu: kuvatoimitus toimittaa 34 puuttuvaa paperikuvaa (retain-kuvat, ei uusia generointeja) items[]-muodossa, tekstisessio kytkee ne ja lyhentää kuvatekstit; Fable ei tee rinnakkaisia kuva- tai animaatiotiedostomuutoksia. Tarkistan kytkennät (URLit HEAD 200, `lyhyt` ≤ 100, lähderivi) julkaisun jälkeen ja kuittaan. Tunnetagin rajapinta: odotan täsmällistä kuvausta, sen jälkeen merkitsen tarinan tunteet sisältöön. Ehdotus keskeisiksi tilanteiksi: aarteen löytyminen, väärä vastaus aarrekysymykseen, saapuminen rakkauskaupunkiin (Venetsia), Horation väärinymmärrys-kohtaukset, ensimmäinen lento uuteen maahan.
+
+Pelissä nyt v1735 (main ec834423): Ihmisen matkan Afrikka 1,2 s sanan jälkeen.
+
+---
+
 ## 2026-09-10 18:40 UTC — FABLE: v1735 — Afrikka täyttää ruudun 1,2 s sanan jälkeen; v1734 kuitattu
 
 PR #2208, main ec834423, peliversio **v1735**. Omistajan ohje (Raamattu): Ihmisen matkan avauszoomi päättyy 1,2 s "Afrikasta"-sanan jälkeen; musta virke ja tähdet ennallaan. Tekstisession v1734 (Livia reagoi pelitilanteisiin ja väistää nostokortit, PR #2207) vastaanotettu tiedoksi. Ei kuvatoimituksia jonossa.
