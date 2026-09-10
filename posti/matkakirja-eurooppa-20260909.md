@@ -443,3 +443,20 @@ B-PuluCam-tarra säilyy omana asiana. Vanhat PNG-B-kasvojen lähteet säilyvät 
 - Yksityinen eleiden kokeilusivu v7: https://matkakirja-pulun-animaatiot.sravelius.chatgpt.site . Sama pikselimoduuli kuin pelissä. Käyttäjä voi kokeilla kaikki 45 elettä ryhmittäin. Pelin oma sovitinkoepinta: https://matkakirja.app/docs/livia-pikselit.html .
 
 Toteutus on jo pelissä. Ei erillistä integraatio- tai hyväksyntäodotusta. Mahdolliset käyttäjän seuraavat tyylikorjaukset kohdistetaan tähän pikselimoduuliin; B-tarra ja valokuvasarjat ovat erillisiä.
+
+
+## 2026-09-10 — LIVIAN PALETTI JA SIVUELEET, v1726
+
+Omistajan suora tilaus tässä sessiossa: toteuta musteensininen/harmaa/luonnonvalkoinen paletti, epäsäännöllisempi päälaen siluetti ja lyhyempi pulunnokka. UUSI rajaus: lyhyet animaatiot saavat käyttää myös vasenta sivua (esim. pulla); puhekuplat tulevat vasempaan yläviistoon. Lepo pysyy kompaktina. Poistumiset edelleen vain oikealle tai alas. Tämä korvaa aiemman ehdottoman vasemmalle laajenemisen kiellon.
+
+Toteutus kaikissa 45 pikselieleessä ja puhenokassa. Paletti #263e50 / #f5f2e9 / #b7c3c8. Pään leveys 22 loogista pikseliä, lepo/napin osuma-alue 44 × 44 CSS-pikseliä. Näyttämö nyt 38 × 44 loogista (76 × 88 CSS), oikeaan alakulmaan ankkuroitu; 16 loogista pikseliä vasemmalla vain lyhyelle rekvisiitalle. Läpinäkyvä piirtoalue pointer-events:none. Pää piirretään ensin omaan 22 px leikkausalueeseen, joten vanhat oikealle/alas poistumiset eivät vuoda vasemmalle.
+
+bread: siipi nostaa pullan vasemmalta, tuo sen nokan luo, puraisu ja pulla alas piiloon; manic: maaninen tuijotus vasemmalla olevaa pullaa kohti. puff/sneeze: pienet puhallusviivat vasemmalla kasvojen korkeudella. Muu puhe-, odotus-, audio- ja joutoajan logiikka säilyy. B-PuluCam-tarra ja valokuvat eivät kuulu tähän muutokseen.
+
+PR #2199, tarkastettu lähde 6714ed2fd799c9fb2c9ceda6154614fecfcb64f0, squash mainiin b168d15a8c3db90c103dc28fdf414d3dec430c02. Testit CI 34441192618 SUCCESS. Paikallisesti 2499 testiä: 2486 pass, 13 ennestään skip, 0 fail; kaksoisavaimet, niputus, savukkeet ja standalone kunnossa. Tarkistettu kaikkien 45 klipin lavan rajat/lepo/paluu, sivutilan käyttö, puhenokan silmien säilyminen ja ajastimien elinkaari. Kaikki 32 piirrosasentoa katsottu, myös normaali- ja suurennosnäytteet.
+
+Yksityinen kokeilusivu v8: https://matkakirja-pulun-animaatiot.sravelius.chatgpt.site . Canonical js/livia-pikselit.js ja sivun dist/livia-pikselit.mjs ovat täsmälleen samat. Sivun lähde f4cf3d2f4a1f0db82f65cf258792c279b4d7fd22, julkaisu appgdep_6aa23ff430d88191aaef72bc89729068 SUCCESS. Omistaja saa kokeilla siellä ja suoraan pelissä. Ei erillistä hyväksyntäjonoa tälle muutokselle.
+
+Pelijulkaisu 34441399716 build/deploy SUCCESS. Julkiset js/livia-pikselit.js, css/styles.css ja sw.js palauttivat HTTP 200 ja vastasivat tarkistussummiltaan täsmälleen toimitettua lähdettä. Pelin oma päivitysilmoitus näyttää v1726. Julkaistun oikeaa kasvosovitinta käyttävän docs/livia-pikselit.html-sivun DOM varmisti 44 × 44 napin ja 76 × 88 piirtoalueen; lepo nähty selaimessa. Pullan vaihe 0.30 valittu ja DOM vahvistettu. Myöhempi selaimen vieritys/suurennoksen kaappaus aikakatkaisi, joten sen lopputulosta ei väitetä selainkuvalla varmennetuksi; pullan piirtonäytteet tarkistettu suoraan tuotannon samasta rendereristä. Fyysistä iOS-testiä tai uutta ElevenLabs/serverichat-testiä ei tehty.
+
+Omistajan uusi yleinen työohje 10.9.2026: aina uusia asioita kehittäessä oma toteutus → tarkastus ja tyytyväisyysarvio → korjaus → uusi tarkastus -kierros, kunnes tekijä on itse tyytyväinen. Käytännössä sekä näkyvä lopputulos että toiminta arvioidaan; testien läpäisy yksin ei ole esteettinen hyväksyntä. Tarkistamatta jääneitä osia ei väitetä tarkistetuiksi. Tässä erässä katsottiin ilmeet yhdessä, korjattiin pullan tulo nokan luo ja vahvistettiin uusi piirtoala/paluu. Tämä ohje koskee myös tulevaa kehitystä; Fable kirjaa tarvittaessa kaanoniin/työtapaohjeeseen omalla vastuullaan.
