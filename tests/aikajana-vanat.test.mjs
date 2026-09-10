@@ -38,6 +38,8 @@ import { RANTAMASKI } from '../js/linssit/ihmisen-matka-rantamaski.js';
 import {
   IHMISEN_MATKA_VIRRAT, IHMISEN_MATKA_RETKI, IHMISEN_MATKA_VANHA, IHMISEN_MATKA_VANAT,
 } from '../js/linssit/ihmisen-matka-virrat.js';
+import { IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
+import { kertomuksenVarakesto } from '../js/linssipuhe.js';
 
 const lue = (polku) => readFileSync(new URL(polku, import.meta.url), 'utf8');
 
@@ -133,6 +135,68 @@ test('IHMISEN_MATKA_VANAT.kaista: aineisto ehjä ja omistajan haarukassa', () =>
   assert.ok(KAISTA.alueet.some((a) => a.kerroin >= 2) && KAISTA.alueet.some((a) => a.kerroin < 1));
   // Leveys on kuvituksellinen: aineisto sanoo sen itse.
   assert.match(lue('../js/linssit/ihmisen-matka-virrat.js'), /KUVITUKSELLINEN, EI TIEDEVÄITE/);
+});
+
+
+/*
+ * VANOJEN PÄÄT EIVÄT RÄPSY (Raamattu "IHMISEN MATKA: … VANOJEN PAAT
+ * EIVAT RAPSY", omistaja 10.9.2026 klo 23.00 iPad-kaappauksesta,
+ * sanatarkasti: *"Kuvassa näkyvät ihmis janat räpsivät niiden päissä,
+ * saisiko korjattua pois?"*).
+ *
+ * SYY OLI PÄIVITYSTAHTI, EI PIIRTO. Kaista piirtyy joka kehyksellä,
+ * mutta sen kasvu (uniformi uKuljettu) luettiin kellosta vain 80 ms:n
+ * välein (VIRTOJEN_PAIVITYS_MS). Mitta tälle kaanonilla ja tällä
+ * mallilla, Arabian jaksossa (kello 751 vuotta sekunnissa):
+ *
+ *   80 ms:n askel   pää loikkaa keskimäärin 17 km, enimmillään 118 km
+ *   16,7 ms (kehys) pää liukuu keskimäärin 4 km, enimmillään 25 km
+ *
+ * Kaista on ruudulla 23 px leveä ja 200 km paksu (mitattu savukkeella
+ * 10.9.2026: leveysPx 23,1 Arabian näkymässä), eli 8,7 km/px: vanha
+ * askel siirsi päätä 2 px kerrallaan ja pahimmillaan 14 px, 12 kertaa
+ * sekunnissa — juuri se nytkähdys, joka näkyi PÄISSÄ, kun muu kartta
+ * liukui pehmeästi. Kehyskohtainen päivitys jää alle puolen pikselin.
+ */
+test('vanan pää liukuu kehyksittäin eikä loikkaa 80 ms:n askelin', () => {
+  const VIRRAT_JS = lue('../js/aikajana-virrat.js');
+  // 1. Silmukka ei kuristaa kaistan päivitystä: 80 ms jää maalaukselle.
+  assert.match(VIRRAT_JS, /: vanatKaytossa\n\s*\? 0\n/,
+    'kaistan päivitys on taas 80 ms:n kuristimen takana');
+  assert.match(VIRRAT_JS, /tila\.vanat\?\.paivita\(vuosia, \{ pito: tila\.pito \}\);/);
+
+  // 2. Mitta: paljonko pää etenee yhdellä päivityksellä Arabian jaksossa.
+  const i = IHMISEN_MATKA_KERTOMUS.findIndex((j) => j.id === 'arabia');
+  const jakso = IHMISEN_MATKA_KERTOMUS[i];
+  const seuraava = IHMISEN_MATKA_KERTOMUS[i + 1];
+  const kesto = kertomuksenVarakesto(jakso);
+  const vuottaPerMs = (jakso.vuosia - seuraava.vuosia) / kesto;
+  // Selkärangan kumulatiivinen matka kilometreinä (sama järjestys kuin
+  // varjostimen iMatka, mutta km:eissä — vanaKm on kaaren oma mitta).
+  const matka = [0];
+  const aika = [SELKA[0][2]];
+  for (let k = 1; k < SELKA.length; k += 1) {
+    const a = { lat: SELKA[k - 1][0], lon: SELKA[k - 1][1] };
+    const b = { lat: SELKA[k][0], lon: SELKA[k][1] };
+    matka.push(matka[k - 1] + vanaKm(a, b));
+    aika.push(SELKA[k][2]);
+  }
+  const askel = (ms) => {
+    let maks = 0;
+    for (let t = 0; t + ms <= kesto; t += ms) {
+      const a = jakso.vuosia - vuottaPerMs * t;
+      const b = jakso.vuosia - vuottaPerMs * (t + ms);
+      maks = Math.max(maks, matkaHetkella(matka, aika, b) - matkaHetkella(matka, aika, a));
+    }
+    return maks;
+  };
+  const vanha = askel(80);
+  const kehys = askel(1000 / 60);
+  assert.ok(vanha > 60, `80 ms:n askel oli vain ${Math.round(vanha)} km — mitta muuttui`);
+  assert.ok(kehys < vanha / 3,
+    `kehyskohtainen askel ${Math.round(kehys)} km ei ole murto-osa 80 ms:n askeleesta ${Math.round(vanha)} km`);
+  // Kaistan levyinen loikka on se, joka näkyy räpsynä; kehysaskel jää alle.
+  assert.ok(kehys < KAISTAN_LEVEYS_KM / 4, `kehysaskel ${Math.round(kehys)} km on yli neljänneksen kaistasta`);
 });
 
 /* ------------------------------------------------- 4. kärki kameralle */

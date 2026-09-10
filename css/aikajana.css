@@ -2357,6 +2357,35 @@
 .aikajana-kertomuskuva.esilla { pointer-events: auto; cursor: pointer; }
 
 /*
+ * PULU PIILOSSA LINSSIN AVAUKSESSA (Raamattu "IHMISEN MATKA: AFRIKKA
+ * 0,7 S SANAN JALKEEN, PULU PIILOSSA KUNNES TEKSTI ON ALHAALLA JA
+ * KAVELEE SITTEN OIKEALTA SISAAN…", omistaja 10.9.2026 klo 23.00,
+ * sanatarkasti: *"Pulun pitäisi olla piilossa kunnes tekstit siirtyvät
+ * alareunaan ja siitä parin sekunnin päästä pulu voisi kävellä kartalla
+ * oikeasta reunasta sisään."*).
+ *
+ * KOLME ELEMENTTIÄ, `visibility` EIKÄ `opacity`. Kelluva nappi ja
+ * paneeli elävät kartan kerrosten ulkopuolella (sama syy kuin
+ * body.aikajana-avaus-auki -säännöllä, css/styles.css), ja KASVOT
+ * piirtyvät vielä kolmanteen paikkaan: `.livia-kasvot-pinta` on bodyn
+ * lapsi, joten napin häivytys ei koskisi siihen lainkaan.
+ * `visibility: hidden` valittiin peittävyyden sijasta kahdesta syystä:
+ * kasvokangas jää piirtämättä sen viimeiseen ruutuun, ja livia-eleiden
+ * oma näkyvyystesti (js/livia-eleet.js `nakyy`) lukee juuri tätä —
+ * piilossa oleva pulu ei siis elehdi eikä nuku ruudun ulkopuolella.
+ * Luokan panee ja ottaa js/linssit/ihmisen-matka-esitys.js
+ * (piilotaPulu, naytaPulu), joten se poistuu myös linssin sulkeutuessa.
+ * Sisääntulon kävelyele (walkBack) alkaa vasta luokan poistuttua, joten
+ * se näkyy kokonaan.
+ */
+body.aikajana-pulu-piilossa .pollo-nappi,
+body.aikajana-pulu-piilossa .pollo-paneeli,
+body.aikajana-pulu-piilossa .livia-kasvot-pinta {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*
  * PULUN VÄLIHUOMIO ON VÄLIHUUTO, EI REPLIIKKI (sama sääntö ja sama asu
  * kuin fokusvirran huudahduksella, css/fokusvirta.css): kapeampi,
  * kevyempi ja hieman kallellaan. Ääni soi 0,7 × tasolla kertojan

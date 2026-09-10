@@ -89,11 +89,11 @@
  *      sanaan: avausjakson neljäs lause on "Afrikasta.", ja sen
  *      alkuhetki luetaan aikaleimoista (tai lasketaan merkkiosuutena,
  *      sananHetki). Zoomi ajetaan taaksepäin siitä hetkestä, joten
- *      Afrikka täyttää ruudun REILUN SEKUNNIN (AFRIKAN_VIIVE_MS
- *      = 1,2 s) SEN JÄLKEEN, kun sana kuuluu — Raamattu "IHMISEN
- *      MATKA: AFRIKKA TAYTTAA RUUDUN REILUN SEKUNNIN SANAN JALKEEN"
- *      (omistaja 10.9.2026, sanatarkasti): *"Ihmislinssin animaatiossa
- *      Afrikka saisi tulla ruudulle reilun sekunnin myöhemmin"*. Jos
+ *      Afrikka täyttää ruudun VAJAAN SEKUNNIN (AFRIKAN_VIIVE_MS
+ *      = 0,7 s) SEN JÄLKEEN, kun sana kuuluu — Raamattu "IHMISEN
+ *      MATKA: AFRIKKA 0,7 S SANAN JALKEEN" (omistaja 10.9.2026 klo
+ *      23.00, sanatarkasti): *"Siirrä Afrikan ilmestymistä puoli
+ *      sekuntia aiemmaksi."* (aiempi klo 23.35 linjaus oli 1,2 s). Jos
  *      jakso loppuu ennen sitä, päätepiste jää jakson loppuun.
  *   4. KAMERA KIIHTYY MAROKKOON. Samalla hetkellä (zoomin päätyttyä,
  *      ei siis enää sanan kohdalla) kamera lähtee
@@ -297,13 +297,16 @@ export const TAHTIEN_KERROIN = AVARUUDEN_KORKEUS / 5;
 export const AVARUUDEN_MS = 7000;
 export const AVARUUDEN_MIN_MS = 1200;
 /**
- * AFRIKKA TÄYTTÄÄ RUUDUN REILUN SEKUNNIN SANAN JÄLKEEN (Raamattu,
- * omistaja 10.9.2026 sanatarkasti: *"Ihmislinssin animaatiossa Afrikka
- * saisi tulla ruudulle reilun sekunnin myöhemmin"*). Zoomin päätepiste
- * ei ole enää tasan sanan "Afrikasta" kohdalla vaan tämän verran sen
- * jälkeen; musta virke ja tähtien esiintulo pysyvät ennallaan.
+ * AFRIKKA TÄYTTÄÄ RUUDUN 0,7 S SANAN JÄLKEEN (Raamattu "IHMISEN MATKA:
+ * AFRIKKA 0,7 S SANAN JALKEEN…", omistaja 10.9.2026 klo 23.00
+ * sanatarkasti: *"Siirrä Afrikan ilmestymistä puoli sekuntia
+ * aiemmaksi."*). Zoomin päätepiste ei ole tasan sanan "Afrikasta"
+ * kohdalla vaan tämän verran sen jälkeen; musta virke ja tähtien
+ * esiintulo pysyvät ennallaan. Edellinen arvo oli 1200 ms (10.9.2026
+ * klo 23.35 linjaus *"reilun sekunnin myöhemmin"*), ja omistaja
+ * mittasi sen iPadilla puoli sekuntia liian hitaaksi.
  */
-export const AFRIKAN_VIIVE_MS = 1200;
+export const AFRIKAN_VIIVE_MS = 700;
 /** Osuus zoomista, jonka jälkeen tähdet alkavat häipyä. */
 export const TAHTIEN_HAIVE = 0.55;
 /** Avauksen tumma harso pallon päällä (0 = ei harsoa). */
@@ -326,6 +329,39 @@ export const FEIDIN_OSUUS = 0.45;
 export const LAUSEEN_HAIVE_MS = 340;
 /** Tekstirivin lasku keskeltä alalaitaan (css .aikajana-kertomusteksti). */
 export const TEKSTIN_LASKU_MS = 900;
+/**
+ * PULU PIILOSSA KUNNES TEKSTI ON ALHAALLA — JA KÄVELEE SITTEN OIKEALTA
+ * SISÄÄN (Raamattu "IHMISEN MATKA: AFRIKKA 0,7 S SANAN JALKEEN, PULU
+ * PIILOSSA KUNNES TEKSTI ON ALHAALLA JA KAVELEE SITTEN OIKEALTA
+ * SISAAN…", omistaja 10.9.2026 klo 23.00, sanatarkasti: *"Pulun
+ * pitäisi olla piilossa kunnes tekstit siirtyvät alareunaan ja siitä
+ * parin sekunnin päästä pulu voisi kävellä kartalla oikeasta reunasta
+ * sisään."*).
+ *
+ * Odotus alkaa siitä, kun tekstirivin lasku (TEKSTIN_LASKU_MS) on
+ * valmis — ei jakson alusta.
+ */
+export const PULUN_SISAANTULO_MS = 2000;
+/**
+ * SISÄÄNTULOELE on `walkBack` (js/livia-pikselit.js "Astelen
+ * takaisin", 2,2 s): kävelyele, joka alkaa ruudun oikeasta reunasta
+ * (livianSvgMalli: `walk.direction === -1` → x kulkee reunalta
+ * paikalleen) ja päättyy pulun omalle paikalle. `arrive` olisi
+ * lennähdys, `walkRight` sen vastapari ULOS ruudusta. Ele ajetaan
+ * VAIN livia-eleiden julkisen rajapinnan kautta
+ * (window.matkakirjaPollo.kasvoEleet.toista) — animaatiotiedostot ovat
+ * toisen session omistuksessa.
+ */
+export const PULUN_SISAANTULOELE = 'walkBack';
+/**
+ * Piiloluokka bodylle. CSS (css/aikajana.css) piilottaa sekä napin,
+ * paneelin ETTÄ kasvokankaan `visibility: hidden` -säännöllä: peittävyys
+ * ei riittäisi, koska kasvot piirtyvät napin ULKOPUOLELLA omalle
+ * kankaalleen (.livia-kasvot-pinta on bodyn lapsi). `visibility` on myös
+ * se, jonka livia-eleet itse lukee näkyvyystestissään, joten piilossa
+ * oleva pulu ei elehdi eikä puhu kankaalle.
+ */
+export const PULUN_PIILO_LUOKKA = 'aikajana-pulu-piilossa';
 /**
  * SANA, JOSTA ZOOMI LÄHTEE. Alkuosa riittää: kaanonissa lukee
  * "Afrikasta.", mutta taivutus voi vaihtua ilman että ajoitus rikkoutuu.
@@ -689,7 +725,7 @@ export function pallonOsuusRuudusta(korkeus, fov = 50) {
  *   feidi     mustan häivytys harsoksi, tähdet nousevat samassa tahdissa
  *   piste     hetki, jolloin pallo on näkyvissä pisteenä tähtien keskellä
  *   zoomAlku  zoomin lähtöhetki
- *   zoomKesto zoomin kesto — niin, että zoomi PÄÄTTYY reilun sekunnin
+ *   zoomKesto zoomin kesto — niin, että zoomi PÄÄTTYY 0,7 sekuntia
  *             (AFRIKAN_VIIVE_MS) sanan "Afrikasta" jälkeen
  *   afrikka   hetki, jolloin Afrikka täyttää ruudun: sanan "Afrikasta"
  *             hetki + AFRIKAN_VIIVE_MS (kuitenkin enintään jakson kesto)
@@ -708,7 +744,7 @@ export function pallonOsuusRuudusta(korkeus, fov = 50) {
 export function avauksenVaiheet({ lauseet = [], sana = null, kesto = 0 } = {}) {
   const kaikki = Math.max(1, Number(kesto) || 0);
   const hetki = Number(sana);
-  // Zoomi päättyy AFRIKAN_VIIVE_MS sanan jälkeen, mutta ei jakson yli.
+  // Zoomi päättyy AFRIKAN_VIIVE_MS (0,7 s) sanan jälkeen, mutta ei jakson yli.
   const afrikka = Number.isFinite(hetki) && hetki > 0
     ? Math.min(hetki + AFRIKAN_VIIVE_MS, kaikki)
     : kaikki;
@@ -867,6 +903,15 @@ export function luoEsitys({ ajo }) {
     karjet: [],
     /** Jatkettiinko muistista (ei pimeää, ei avausta). */
     muistista: false,
+    /*
+     * PULUN SISÄÄNTULO (Raamattu PULU PIILOSSA KUNNES TEKSTI ON
+     * ALHAALLA). `puluPiilossa` on tosi linssin avaamisesta siihen asti,
+     * kun pulu kävelee sisään; `puluAjastin` on sisääntulon ajastin ja
+     * `puluTullut` savukkeen mittari.
+     */
+    puluPiilossa: false,
+    puluAjastin: 0,
+    puluTullut: false,
     /*
      * AVARUUSAVAUS: musta pohja pallon alla, tähtitaivas ja zoomin
      * lähtöhetki. Muistista jatkettaessa nämä jäävät nulliksi — pelaaja
@@ -1129,9 +1174,9 @@ export function luoEsitys({ ajo }) {
   }
 
   /**
-   * ZOOMI PÄÄTTYY REILUN SEKUNNIN SANAN "AFRIKASTA" JÄLKEEN (Raamattu
-   * ALKUANIMAATIO + AFRIKKA TAYTTAA RUUDUN REILUN SEKUNNIN SANAN
-   * JALKEEN, omistaja 10.9.2026). Kutsutaan kehyssilmukasta hetkellä
+   * ZOOMI PÄÄTTYY 0,7 SEKUNTIA SANAN "AFRIKASTA" JÄLKEEN (Raamattu
+   * ALKUANIMAATIO + AFRIKKA 0,7 S SANAN JALKEEN, omistaja 10.9.2026
+   * klo 23.00). Kutsutaan kehyssilmukasta hetkellä
    * `zoomAlku` = päätepiste − zoomin kesto — tai viimeistään
    * 'valot'-jakson alkaessa, jos luenta ehti loppua ennen sitä.
    *
@@ -1451,6 +1496,62 @@ export function luoEsitys({ ajo }) {
   /* ------------------------------------------------------------- pulu */
 
   /**
+   * PULU PIILOON KOKO LINSSIN AVAUKSEN AJAKSI (Raamattu PULU PIILOSSA
+   * KUNNES TEKSTI ON ALHAALLA JA KAVELEE SITTEN OIKEALTA SISAAN,
+   * omistaja 10.9.2026 klo 23.00).
+   *
+   * Piilotus tehdään heti ohjaajan syntyessä eli LINSSIÄ AVATTAESSA,
+   * ei vasta Käynnistä-napista: näin pulu ei näy hetkeäkään
+   * aloituskortin ja mustan ruudun välissä. Luokka on bodyssa, koska
+   * kasvokangas (.livia-kasvot-pinta) ei ole linssin juuressa vaan
+   * bodyn lapsi.
+   */
+  const piilotaPulu = () => {
+    if (tila.puluPiilossa) return false;
+    tila.puluPiilossa = true;
+    document.body?.classList.add(PULUN_PIILO_LUOKKA);
+    return true;
+  };
+
+  /**
+   * PULU NÄKYVIIN. `ele: true` kävelyttää sen ruudun oikeasta reunasta
+   * paikalleen (PULUN_SISAANTULOELE) livia-eleiden JULKISEN rajapinnan
+   * kautta; jos rajapintaa ei ole (vanha selain, testi, pulua ei ole
+   * vielä löydetty) tai liike on rajoitettu, pulu vain tulee näkyviin.
+   * Linssin sulkeminen ja muistista jatkaminen käyttävät `ele: false`
+   * -muotoa: silloin pulu palaa ruudulle sellaisenaan.
+   */
+  const naytaPulu = ({ ele = false } = {}) => {
+    clearTimeout(tila.puluAjastin);
+    tila.puluAjastin = 0;
+    if (!tila.puluPiilossa) return false;
+    tila.puluPiilossa = false;
+    document.body?.classList.remove(PULUN_PIILO_LUOKKA);
+    if (!ele) return true;
+    tila.puluTullut = true;
+    // Julkinen rajapinta (js/livia-eleet.js): toista(id) — ei kosketa
+    // animaatiomoduulien sisuksiin.
+    try { globalThis.matkakirjaPollo?.kasvoEleet?.toista?.(PULUN_SISAANTULOELE); } catch { /* ele ei kuulu esitykseen */ }
+    return true;
+  };
+
+  /**
+   * SISÄÄNTULON AJASTUS: tekstin lasku ensin, sitten PULUN_SISAANTULO_MS.
+   * Kutsutaan siitä jaksosta, jonka alkaessa kertojan rivi laskeutuu
+   * ruudun keskeltä alalaitaan (aloitaJakso) — `lasku` on sen liu'un
+   * kesto, jotta odotus alkaa vasta tekstin ollessa perillä.
+   */
+  const ajastaPulunSisaantulo = (lasku = 0) => {
+    if (!tila.puluPiilossa || tila.puluAjastin) return false;
+    if (reduced) { naytaPulu({ ele: false }); return true; }
+    tila.puluAjastin = setTimeout(() => {
+      tila.puluAjastin = 0;
+      naytaPulu({ ele: true });
+    }, Math.max(0, lasku) + PULUN_SISAANTULO_MS);
+    return true;
+  };
+
+  /**
    * PULU PUHUU KERTOJAN PÄÄLLE HILJEMPAA (Raamattu KERTOJA LUKEE KOKO
    * KERTOMUKSEN PUTKEEN, PULU PUHUU HILJEMPAA KERTOJAN PAALLE).
    * Välihuomio ei väistä eikä varaa puhevuoroa (`vaista: false`, sama
@@ -1462,6 +1563,15 @@ export function luoEsitys({ ajo }) {
   const sanoPulu = (jakso) => {
     tila.puluSanottu = true;
     if (!jakso.pulu) return;
+    /*
+     * EI KUPLAA ENNEN SISÄÄNTULOA (omistaja 10.9.2026 klo 23.00): kupla
+     * osoittaa pulun napin viereen, ja piilossa olevan pulun vierestä se
+     * leijuisi tyhjässä. VALINTA: kupla JÄÄ POIS eikä siirry — kaanonin
+     * ensimmäinen välihuomio ('ranta') tulee vasta kuudennessa jaksossa,
+     * kauan sisääntulon jälkeen, joten siirretty kupla vain putkahtaisi
+     * väärän jakson päälle.
+     */
+    if (tila.puluPiilossa) return;
     const vaimennus = luenta.yhtena() ? PULUN_VAIMENNUS_PUTKESSA : LIVIAN_VALIHUOMION_VAIMENNUS;
     const nakyi = polloLinssikupla([jakso.pulu], {
       luokka: 'aikajana-kertomus-pulu',
@@ -1532,6 +1642,14 @@ export function luoEsitys({ ajo }) {
     tekstirivi.classList.toggle('keskella', keskella);
     tekstirivi.classList.toggle('esilla', Boolean(jakso.teksti));
     paivitaTeksti();
+    /*
+     * PULU KÄVELEE SISÄÄN VASTA KUN TEKSTI ON ALHAALLA (Raamattu PULU
+     * PIILOSSA KUNNES TEKSTI ON ALHAALLA JA KAVELEE SITTEN OIKEALTA
+     * SISAAN): odotus alkaa siitä hetkestä, kun rivin lasku on ohi.
+     * Jos teksti ei laskeudu (jakso alkoi jo alhaalta, esim. aikaselaimen
+     * hyppy), odotus alkaa heti.
+     */
+    if (!keskella) ajastaPulunSisaantulo(tila.tekstiViive ? TEKSTIN_LASKU_MS : 0);
 
     if (jakso.vaihe === 'valot') tila.valotOdottaa = true;
     // Kelaus lähtee nykyisestä lukemasta; keskeltä jatkettaessa
@@ -1618,7 +1736,7 @@ export function luoEsitys({ ajo }) {
    *
    * VASTA KUN PALLO ON PERILLÄ (8.9.2026). Ennen valot syttyivät
    * 'afrikka'-jakson alkaessa, koska zoomi oli silloin jo ohi. Nyt
-   * zoomi päättyy vasta reilun sekunnin sanan "Afrikasta" jälkeen ja
+   * zoomi päättyy vasta 0,7 sekuntia sanan "Afrikasta" jälkeen ja
    * jatkuu 'afrikka'-jakson
    * puolelle, joten valot odottavat sen perille tuloa (kehys →
    * valotOdottaa): käyttöliittymä ja musiikki tulevat sillä hetkellä,
@@ -1948,6 +2066,9 @@ export function luoEsitys({ ajo }) {
    */
   function jatkaMuistista(muisti) {
     tila.muistista = true;
+    // Ei avausta eikä sisääntuloa: pelaaja on ollut jo matkalla, ja pulu
+    // palaa ruudulle sellaisenaan.
+    naytaPulu({ ele: false });
     // Ei mustaa, ei tähtiä, ei keskitettyjä lauseita: avaus on ohi.
     tila.avausOhi = true;
     tila.tahtiEsiin = 1;
@@ -1975,6 +2096,13 @@ export function luoEsitys({ ajo }) {
   }
 
   /* ------------------------------------------------------------ julkinen */
+
+  /*
+   * PULU PIILOON HETI LINSSIÄ AVATTAESSA (ks. piilotaPulu): ohjaaja
+   * syntyy silloin, kun linssi kytketään päälle, joten pulu ei ehdi
+   * vilahtaa aloituskortin päällä eikä mustan ruudun alkuun.
+   */
+  piilotaPulu();
 
   return {
     /**
@@ -2050,6 +2178,9 @@ export function luoEsitys({ ajo }) {
       tila.tahdet?.pura();
       tila.tahdet = null;
       clearTimeout(tila.kattoAjastin);
+      // Linssin sulkeminen palauttaa pulun normaalisti näkyviin — ilman
+      // kävelyelettä, joka kuuluu vain esityksen sisääntuloon.
+      naytaPulu({ ele: false });
       palautaKaukaisuus();
       peite.remove();
       tekstirivi.remove();
@@ -2122,6 +2253,9 @@ export function luoEsitys({ ajo }) {
       /** Aikaselaimen veto kesken (kertoja vaiti, kello sormen alla). */
       selaus: Boolean(tila.selaus),
       selauksia: tila.selauksia,
+      /** Pulu piilossa (avaus) ja onko se jo kävellyt sisään. */
+      puluPiilossa: tila.puluPiilossa,
+      puluTullut: tila.puluTullut,
     }),
   };
 }
