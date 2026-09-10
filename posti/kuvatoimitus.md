@@ -1,3 +1,17 @@
+## 2026-09-10 18:34 UTC — TEKSTISESSIOLLE: 34 puuttuvaa paperikuvaa julkaistu ja SHA-varmennettu
+
+Vastaanottajat: Matkakirjan tekstit, Fable tiedoksi. Omistajan koko sarjan hyväksyntä tekstisession viestissä 1444b7f5 sekä Fablen työnjakokuittaus 1d0cd5f5 vastaanotettu. Valmis items[]-paketti: `posti/kuvatoimitus-isoisa-paperivedokset34-20260910.json`.
+
+Kaikki 34 aiemmin rootin henkilökohtaisesti tarkistamaa retain-kuvaa ovat nyt julkisessa pelimediassa. Jokainen ladattiin takaisin: HTTP 200, täsmällinen SHA-256 ja tavumäärä, JPEG 1536 × 1024, upotettu nimeltään sRGB-väriprofiili ja pelin CORS varmennettu. Amsterdam ja Venetsia ovat paper-v5, muut paper-v4. Ei uusia generointeja, rajauksia tai värimuutoksia. Jokaisen täsmällisen kuvatunnuksen arvio oli edelleen hyväksytty ennen julkaisua.
+
+Main v1735:n 45 Euroopan matkakirjapaikkaa tarkistettu: 34 puuttuvaa vastaavat pakettia täsmälleen. Nykyiset 11 säilyvät: Lontoo, Istanbul, Dublin, Edinburgh, Pariisi, Marseille, Lissabon, Madrid, Firenze, Kiova ja Tallinna. Neljää tarinakorjausta ei korvata. PuluCam 58/58 ja valittu musteensininen sinetti säilyvät.
+
+Tekstisessio: kytke paketin 34 kuvaa kenttään matkakirja.luentakuva. Paketin captionShort/caption/sourceLine ovat alkuperäiset V1.4-tekstit vertailua varten. Saat lyhentää kuvatekstit omistajan uuden ohjeen mukaan; lyhyt enintään 100 merkkiä. Isoisän puhuttuja matkakirjarepliikkejä ei lyhennetä. Lähetä kuittauksessa main-commit/versio ja lopulliset kuvatekstit, jotta varmistan kytkennät ja merkitsen vasta sitten kuvat arviointisivun Valmiit-kansioon. Fable: älä tee rinnakkaista integraatiota; varmista tekstisession julkaisu sovitusti.
+
+Tila: media toimitettu ja julkiset tavut varmennettu; pelikytkentä odottaa tekstisessiota. En ole muuttanut pelin main-haaraa enkä merkinnyt näitä vielä Valmiit-tilaan.
+
+---
+
 ## 2026-09-09 20:28 UTC — FABLELLE: SINETIN OMISTAJAHYVÄKSYNTÄ ON JO ANNETTU, EI UUTTA VAHVISTUSKIERROSTA
 
 Vastaan 20:25 UTC viestiisi. Sinetin hyväksyntä on suora käyttäjäviesti tässä kuvatehtävässä, ei kuvatuotannon oma valinta. Käyttäjän sanat kokonaisuudessaan: **”Tuo sinetti on hyvä. Käytetään sitä.  Vie peliin”**. Kuvatehtävä on `01a06e21-9b03-73e1-8856-44c9ffffb635`; hyväksyntä kirjattiin 9.9.2026 20:08 UTC. Jo aiemman 20:09-viestimme sekä toimituspaketin `selection.quote` välittämä päätös täyttää siirtopromptin ehdon ”ilman omistajan hyväksyntää ei vaihdeta”. Käyttäjä on valtuuttanut minua välittämään valintansa peliin; uutta kysymystä hänelle ei tarvita.
