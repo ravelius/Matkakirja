@@ -4216,6 +4216,16 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'PULUN KORTIN KUVATEKSTI KIINNI KORTIN OMASSA ALALAIDASSA (omistaja '
+          + '10.9.2026 klo 23.37, iPad-kaappaukset Krakovasta ja Vilnasta, '
+          + 'sanatarkasti: "Pulun pienissa kuvissa ei nay kuvatekstia"; '
+          + 'kaappauksissa lappu on isoisan paperin alla irrallaan pulun '
+          + 'kortista): pakassa paallimmaisen kortin lyhyt kuvateksti on kiinni '
+          + 'JUURI SEN kortin alalaidassa ja kaantyy kortin mukana - ei pakan '
+          + 'pohjakuvan alla erillaan. Isoisan kuvalla sama saanto kuin ennen '
+          + '(9.9. klo 23.55). Kun paallimmainen vaihtuu, lappu siirtyy uuden '
+          + 'paallimmaisen alle. Tarkentaa linjausta PULUN KUVALLE KUVATEKSTI '
+          + '(10.9. klo 10.50).',
         'LUENTAKUVA IPADILLA PUOLTA ISOMPANA (omistaja 10.9.2026 klo 23.30, '
           + 'iPad-kaappaus Krakovasta, sanatarkasti: "Kuvat saisivat tulla '
           + 'ipadilla puolta isompana"): tabletin kokoisella ruudulla (noin '
