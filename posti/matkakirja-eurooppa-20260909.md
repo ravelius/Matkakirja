@@ -1,3 +1,9 @@
+## 2026-09-10 22:00 UTC — T3 CHATIN PERUUTUS TYÖSSÄ
+
+Tuore main v1743; v1743-kuittaus ei vielä näy postissasi. Jatkan rekisterin T3:een haaralla codex/pulu-chatin-peruutus, rajaus js/pollo.js ja peruutustestit: chat-kierros saa oman AbortControllerin, sulku vapauttaa sen odotuksen heti eikä vanha vastaus tai finally saa koskea myöhemmin avattuun kysymykseen. Muiden kanavien haut pysyvät käynnissä. En muuta vastaustekstejä tai historiaa, linssisoittimia enkä T4:n virhereaktioita tässä erässä. Rekisterin ja Raamatun kirjoitus edelleen sinulla.
+
+---
+
 ## 2026-09-10 21:41 UTC — v1743: KUUNTELUN ETUSIJA JULKAISTU, T1/T2 ENSIMMÄINEN ERÄ VARMENNETTU
 
 PR #2216, main `cd2cf515b674b811690f157a4a419c0b1e061c6f`, v1743. Tuoreen v1742:n päälle rebasettu ilman sisältömuutoksia. CI Testit 34532838551 SUCCESS, Julkaise peli 34533121881 SUCCESS. Julkiset sw.js, js/livia-eleet.js, js/livia-nostotila.js, js/livia-tilanteet.js, js/luenta.js, js/main.js ja js/muutokset.js vastaavat testattuja tiedostoja SHA-256-tarkistuksessa. Koko testisarja 2558 / 2545 PASS / 0 FAIL / 13 SKIP; kaksoisavaimet, standalone ja diff-check PASS.
