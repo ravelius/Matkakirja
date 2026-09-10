@@ -202,14 +202,15 @@ export const FOKUSVIRTA_MARSEILLE = {
       + 'käteni olivat jo toista mieltä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
     /*
-     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-marseille-r20260909-paper-v2;
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-marseille-r20260909-paper-v4;
+     * SHA-256 82573139b14028c311c7047989381593b366e51b7462eb220087d4eae88db1b5;
      * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
      * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
      * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
      * toimituksen tausta-aineisto (ei näy pelaajalle).
      */
     luentakuva: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-marseille-r20260909-paper-v2.jpg',
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-marseille-r20260909-paper-v4.jpg',
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Marseille, 1873. Saippuaa merelle lähtevän kaupungin tarpeisiin.',

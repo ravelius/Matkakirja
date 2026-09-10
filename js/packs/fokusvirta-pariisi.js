@@ -117,14 +117,15 @@ export const FOKUSVIRTA_PARIISI = {
       + '[softly] Toistaiseksi hän esiintyy ilmaiseksi.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
     /*
-     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-pariisi-r20260909-paper-v2;
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-pariisi-r20260909-paper-v4;
+     * SHA-256 55a759868bf735bd36dde99d97298615766696004752ef6ad7aac45d197f2837;
      * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
      * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
      * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
      * toimituksen tausta-aineisto (ei näy pelaajalle).
      */
     luentakuva: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260909-paper-v2.jpg',
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260909-paper-v4.jpg',
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Pariisi, 1873. Ooppera harjoitteli juhlapukuaan.',

@@ -513,6 +513,14 @@ test('jokaisella pakin luentakuvalla on osoite, selite ja lähde', async () => {
   assert.equal(maara, 45, 'Euroopan kaikilla 45 matkakirjapaikalla pitää olla lopullinen luentakuva');
 });
 
+test('alkuerän seitsemän retain-kuvaa käyttää hyväksyttyä paper-v4-versiota', async () => {
+  const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+  for (const id of ['istanbul', 'dublin', 'edinburgh', 'pariisi', 'marseille', 'lissabon', 'madrid']) {
+    assert.match(FOKUSVIRRAT[id].matkakirja.luentakuva.osoite,
+      new RegExp(`-${id}-r20260909-paper-v4\\.jpg$`), id);
+  }
+});
+
 /* ---------------------------------------------------------------- */
 /* 6. Ankkuri kartan kohdassa, saapumisasento ja raahaus             */
 /* ---------------------------------------------------------------- */
