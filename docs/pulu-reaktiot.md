@@ -306,7 +306,7 @@ pätevät vasta mainin kanssa.
 | `chat.vastaus.katkesi` | Chat | js/pollo.js:5645 virherivi "Ajatus katkesi" | virta katkeaa | `hammentynyt` (0,4) | kerran | uusintanappi seuraa | lepo | — | — | D | Katkaise verkko kesken striimin |
 | `chat.virhe` | Chat | js/pollo.js:5710 catch, 5717 virheviesti | pyyntö kaatuu → virherivi | `hammentynyt` (0,5) | kerran | keskeyttää odotuseleen (waitingEnd finally) | `palaa()` | — | — | D | Estä workers.dev route |
 | `chat.virhe.kayttoraja` | Chat | js/pollo.js:5731 päiväraja/kuukausiraja | raja täynnä → virherivi ilman uusintanappia | `vakava` (0,4) | kerran | erottuu tavallisesta virheestä | `palaa()` | — | — | D | Kuluta päiväraja |
-| `chat.peruutus` | Chat | js/pollo.js:4050 `sulje` kesken pyynnön | sulku → pyyntö jää käyntiin | — | ei AbortControlleria: waitingEnd vasta kun fetch päättyy | **aito ristiriita**: chatClose ja waiting päällekkäin (ks. puutelista T3) | — | — | — | D | Kysy ja sulje chat heti |
+| `chat.peruutus` | Chat | js/pollo.js `kysy` (AbortController per kierros) → `sulje` peruu vain oman pyynnön (v1744) | sulku kesken pyynnön → pyyntö perutaan, waitingEnd heti | — | kerran per sulku; muiden kanavien haut jatkuvat | ratkaistu v1744: chatClose ja waitingEnd samassa hetkessä, vanha vastaus tai finally ei koske uuteen kysymykseen | lepo | — | — | K (v1744) | Kysy hidas kysymys, sulje chat, kysy uusi → vanha tulos ei näy (tests: 7 peruutustestiä) |
 | `chat.linkki.matkakirja` | Vastauksen linkki | js/pollo.js:4643 `sidoLinkki` → 4152 `avaaKohde` | napautus → kohde aukeaa | `utelias` (0,4) | kerran per napautus | chat sulkeutuu; chatClose ehtii päälle | lepo | katse linkkiin | mobiilissa vie pois chatista | D | Kysy nähtävyydestä, napauta alleviivausta |
 | `chat.vastaus.kuva` | Vastauksen kuva | js/pollo.js:4328/4475, popup 4212 | kuva latautuu vastaukseen | `utelias` (0,4) | kerran per kuva | sama sääntö kuin linkillä | lepo | katse kuvaan | popup mobiilissa koko leveys | D | Kysy kuvallinen kysymys |
 | `chat.paikka.kartalla` | Kartta + chat | js/pollo.js:5426 `naytaPaikkaKartalla`, 5443 paikkarivi | kysymys tunnistaa paikan → kamera | `utelias` (0,5) | kerran per kysymys | kilpailee odotuseleen kanssa | odotukseen | katse karttaan | — | D | Kysy "Missä Ateena on?" |
@@ -629,7 +629,7 @@ laukaisematta, ei siirretä seuraavaan rakoon.
 | 14 | `lehti.nosto.syvennys` ja `lehti.kartta.suurennus` vs. `kortti.nosto.avaus` | Nostotila (B6) — C ei saa kytkeä toista reaktiota samaan korttiin |
 | 15 | Puhe vs. `chat.avaus` / `chat.sulku` / `chat.odotus.*` / `chat.vastaus.valmis` | Puhe (js/livia-eleet.js:196 ja :126) |
 | 16 | Odotus vs. muut chat-tilanteet | Odotus (js/livia-eleet.js:140 pudottaa kaiken kun `odotukset.size > 0`) |
-| 17 | `chat.peruutus`: `chat.sulku` vs. käynnissä oleva odotus | **Ratkaisematon ristiriita** — vaatii peruutuksen (puutelista T3). Toistaiseksi sulku voittaa eleessä, odotus jää päälle tilassa |
+| 17 | `chat.peruutus`: `chat.sulku` vs. käynnissä oleva odotus | Ratkaistu v1744: sulku peruu pyynnön ja odotuksen samalla hetkellä (T3 tehty) |
 | 18 | Lehti + odotus | Odotus (`scratch`); lehden `glasses` ei laukea odotuksen päällä |
 | 19 | `kupla.saapuminen` (D) vs. `pulu.kommentti.alku` (B) vs. `tarina.kaupunki.kommentti` (E3) | Sama hetki: B kuvaa mekaniikan, E3 kantaa sisältötagin, D:n rivi on pöllökerroksen näkymä. Tagin lähde on E3 |
 | 20 | `aarre.vastaus.vaarin` vs. `kohtaaminen.<id>.vaarin` | Hahmon repliikki (`kohtaaminen.<id>.vaarin`), kun kohtaaminen on olemassa; muuten moottorin tuomio. Vain toinen |
@@ -700,9 +700,12 @@ laukaisematta, ei siirretä seuraavaan rakoon.
   Aarremerkinnän luenta, nostokortin luenta, lehden lukija ja koko
   linssikerros (js/linssipuhe.js, js/linssit/ihmisen-matka-luenta.js)
   jäävät ulos — pulu ei "kuuntele" kertojaa niissä lainkaan.
-- **T3. Chat-pyynnön peruutus puuttuu** (js/pollo.js:4050). Ei
-  AbortControlleria: suljettu chat jättää `waiting`-tilan päälle, kunnes
-  fetch päättyy. Ainoa aito tilaristiriita rekisterissä.
+- **T3. TEHTY v1744** (tekstisessio, PR #2217): `kysy`-kierros omistaa
+  AbortControllerin, `sulje` peruu vain oman pyynnön ja vapauttaa odotuksen
+  heti; `pyyda`/`pyydaStriimi` ottavat valinnaisen signaalin.
+- **T2 osittain v1743** (PR #2216): pulun kuuntelu säilyy odotuksen ja
+  taukojen yli (livia-eleet, livia-nostotila, livia-tilanteet, luenta.js).
+  Erilliset lukija-/linssisoittimet yhä ilman kuuntelua (tekstisession jono).
 - **T4. Virhepolut ovat mykkiä.** `chat.virhe` (5710), `chat.virhe.kayttoraja`
   (5731), `chat.vastaus.varateksti` (5628), `chat.vastaus.katkesi` (5645)
   ja mikrofonin virheet (6136, 6144/6165, 6161) eivät ilmoita mitään;
@@ -823,3 +826,5 @@ käyttäytyy täsmälleen kuten tänään (ei elettä).
 
 10.9.2026 — ensimmäinen kartoitus (Opus-parvi A–F, Fablen katselmus);
 45 kaupungin tunnetagit sisältöön v1741.
+11.9.2026 — T3 tehty (v1744, chat.peruutus K); T2 osittain (v1743,
+kuuntelu säilyy odotuksen ja taukojen yli). Fable.
