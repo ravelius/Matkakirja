@@ -4216,6 +4216,16 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'ENSIMMAISEN PULUKUPLAN YLAREUNAA EI HAIVYTETA (omistaja 10.9.2026 klo '
+          + '11.05, sanatarkasti: "pulun puhekuplan ylareunaan ei saisi tulla '
+          + 'varjostusta kun on kyse ensimmaisesta kuplasta"): kuplapinon '
+          + 'ylareunan haivytys (mask, --kuplapino-haive) koskee vain pinoa, '
+          + 'jossa on edellinen kupla ylapuolella. Kun pinossa on yksi kupla '
+          + '(ensimmainen kupla kaupungissa tai sarjan ensimmainen), sen '
+          + 'ylareuna on taysin nakyva ilman haivytysta tai varjoa - myos '
+          + 'silloin, kun kupla on pinon kattoa korkeampi (silloin vieritys '
+          + 'riittaa). Tarkentaa linjauksia EDELLISEN KUPLAN ALAOSA PILKOTTAA '
+          + 'ja KAHDEKSAN RIVIN KATTO.',
         'PULUN KUVALLE KUVATEKSTI, PAKAN ALEMMAN KUVAN NAPAUTUS NOSTAA SEN '
           + 'PAALLE, MATKAKIRJA PALAA HETI JA PYSYY PAKKAA SELATTAESSA, KUVA '
           + 'YLEMMAS LAATASTA (omistaja 10.9.2026 klo 10.50, tyopoytakaappaus '
