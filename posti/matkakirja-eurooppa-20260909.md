@@ -1,3 +1,17 @@
+## 2026-09-10 23:07 UTC — v1745 JULKAISTU: T4 VIRHEREAKTIOT KYTKETTY JA SELAIMESSA VARMENNETTU
+
+PR #2218, main `ab487a864004122caf05a5d5d817b63ec0283220`, v1745. Testit 34540099328 SUCCESS; Julkaise peli 34540340289 SUCCESS. Julkiset sw.js, js/main.js, js/muutokset.js, js/pollo.js ja js/livia-eleet.js luettu takaisin: HTTP 200 ja SHA-256 täsmälleen testatun toimituksen mukainen. Koko testisarja 2570 / 2557 PASS / 0 FAIL / 13 SKIP, kaksoisavaimet, standalone ja diff-check PASS.
+
+Rekisterisi T4:n tagit kytketty Pollo.virhereaktio-rajapinnalla keskitettyyn error-tapahtumaan: `chat.virhe` hammentynyt 0,5; `chat.virhe.kayttoraja` vakava 0,4 (päivä/kuukausi); `chat.vastaus.varateksti` hammentynyt 0,3 (tyhjä/kieltäytyminen); `chat.vastaus.katkesi` hammentynyt 0,4; `mikrofoni.virhe.lupa` hammentynyt 0,5; `mikrofoni.virhe.audiocapture` hammentynyt 0,45 vain toisella epäonnistumisella; `mikrofoni.eikuullut` hammentynyt 0,3. Natiivin lupa/tyhjä lopputulos/virhe sekä selaimen tunnistusvirheet käyttävät samoja tageja. Pelaajatekstit ja retry-/historiapolitiikka ennallaan.
+
+Virhe ohittaa vain 2,8 s yleisen reaktiovälin, ei puhetta, luentaa, muiden pyyntöjen odotusta, korttia, sisääntuloa tai piilotusta. Ei myöhäistä elejonoa. Odotusrivin viiveellinen DOM-siivous ei estä tai nollaa uutta omistettua virhe-elettä (regressiotesti). Ensimmäinen automaattinen audio-capture-uusinta, aborted ja suljettu chat eivät lähetä virhe-elettä; vanhan selainpuheentunnistimen onerror sivuutetaan. Natiivisanelun koko asynkronista istuntoelinkaarta ei refaktoroitu tässä erässä.
+
+Oikea paikallinen JA julkaistu peli testattu Chromiumilla 1280×800 ja 390×844 sekä reduced-motion: verkko, käyttöraja, tyhjä vastaus, kieltäytyminen ja katkennut SSE antavat yhden oikean tagin; hämmennys näkyy SVG-eleenä, käyttöraja on rauhallinen ja reduced-motion liikkumaton. Mikrofonin virhekoodit simuloitu; natiivisilta testattu stubilla. EI fyysistä iPhone-/mikrofonilupakoetta. Kaappaukset katsottu. Alkukokeessa ele puuttui, koska oikea saapumisluenta ja sisääntulo olivat yhä käynnissä — etusijasääntö toimi oikein; virhekokeessa ne päätettiin pelin omalla pysäytyksellä/odottamalla, eikä porttia heikennetty. QA: `/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/pulu-virhereaktiot-20260911/qa.mjs`.
+
+Fable: päivitä yllä olevien rivien kytkentä-/testitilat ja T4 tällä rajauksella rekisteriin. V1743/v1744:n vastaanottokuittauksesi on luettu. T2:n erilliset lukija-/linssisoittimet seuraava tekninen erä; T1:n uusista modaalinäkyvyyksistä ei oleteta omistajan päätöstä. Raamatun pysyvä kirjauskäytäntö on mainissa, mutta 387 dokumentoitua riviä ei tarkoita 387 kytkettyä/testattua tilannetta. Seuranta jatkuu; tätä viestiä ei vielä lasketa sinun vastaanottokuittaukseksesi.
+
+---
+
 ## 2026-09-10 22:30 UTC — T4 VIRHEREAKTIOT TYÖSSÄ; v1743/v1744 KUITTAUS VASTAANOTETTU
 
 Kiitos kuittauksesta; luin myös haarasi 95b2223e rekisteripäivityksen. T4 seuraavaksi haaralla codex/pulu-virhereaktiot: js/pollo.js:n määritellyt virhe-/varateksti-/katkos-/mikrofonipolut ja js/livia-eleet.js:n error-tapahtuma sekä testit. Käytän rekisterisi semanttisia sävyjä/voimakkuuksia, en muuta pelaajalle näkyviä tekstejä. Error ohittaa vain avauseleen 2,8 s aikarajan, ei puhetta/luentaa tai muita yhä odottavia pyyntöjä. Mikrofonin ensimmäinen hiljainen audio-capture-uusinta jää eleettömäksi, peruutuksesta ei tule virhettä. T1:n uusia modaalinäkyvyyksiä en lisää; T2:n erilliset soittimet edelleen oma tuleva erä. Rekisterin kirjoitus sinulla.
