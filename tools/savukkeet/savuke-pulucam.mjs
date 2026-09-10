@@ -21,7 +21,10 @@
  *      ENSIN (laskuri 1 / 6) ja pitkä kuvateksti vaihtuu kuvan mukana.
  *   5. HAVAINNEKUVA-LINKKI on isoisän pitkän kuvatekstin perässä ja
  *      avaa selitteen; kartan lyhyessä tekstissä sitä ei ole.
- *   6. LYHYT KUVATEKSTI KERTOO PÄÄLLIMMÄISESTÄ KUVASTA.
+ *   6. LYHYT KUVATEKSTI KERTOO PÄÄLLIMMÄISESTÄ KUVASTA — ja se on
+ *      KIINNI JUURI SEN KORTIN ALALAIDASSA, kortin omassa kierretyssä
+ *      lohkossa (omistaja 10.9.2026 klo 23.37). Vain yksi lappu
+ *      kerrallaan; nosto siirtää sen uuden päällimmäisen alle.
  *   7. RAAHAUS SIIRTÄÄ KOKO PAKKAA: kortit liikkuvat täsmälleen yhtä
  *      paljon kuin paneeli.
  *   8. PUHELIN: sama pakka omalla ajolla 430 × 930 -ruudulla.
@@ -52,7 +55,12 @@ const LAUTA = process.argv[3] === 'kartta' ? 'kartta' : 'pallo';
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
 const KAUPUNKI = 'lontoo';
-const TYOPOYTA = { width: 1280, height: 800 };
+/*
+ * ISO RUUTU ON IPAD PYSTYSSÄ (1024 x 1366). Omistajan kaappaukset
+ * 10.9.2026 (Krakova ja Vilna) ovat iPadilta, ja juuri niistä lappu
+ * puuttui pulun kortin alta — savukkeen on katsottava samaa ruutua.
+ */
+const TYOPOYTA = { width: 1024, height: 1366 };
 const PUHELIN = { width: 390, height: 844 };
 
 /**
@@ -226,7 +234,15 @@ async function avaaAjo(viewport) {
 
   /** Pakan ja paneelin tila yhdellä lukemalla. */
   const lue = () => sivu.evaluate(() => {
+    // Kortin KUVA (nappi) ruudulla — laatikot ja limitys luetaan siitä.
     const kortit = [...document.querySelectorAll('.pulucam-kuva')];
+    /*
+     * KERROS ON KÄÄREESSÄ, EI NAPISSA (omistaja 10.9.2026 klo 23.37):
+     * kortti on kääre, jossa ovat kuva ja sen oma lappu. Jos kerros
+     * luettaisiin napista, se olisi aina 0 ja koko nostovartio
+     * vertailisi nollia keskenään.
+     */
+    const kaareet = [...document.querySelectorAll('.pulucam-kortti')];
     const laatikko = (el) => {
       const r = el.getBoundingClientRect();
       return {
@@ -235,6 +251,21 @@ async function avaaAjo(viewport) {
     };
     const paneeli = document.querySelector('.fokusvirta-luentakuva');
     const pohjakortti = document.querySelector('.fokusvirta-luentakuva .fokusvirta-kuva');
+    /*
+     * LAPPU ON PÄÄLLIMMÄISEN KORTIN OMA (omistaja 10.9.2026 klo 23.37,
+     * Raamattu "PULUN KORTIN KUVATEKSTI KIINNI KORTIN OMASSA
+     * ALALAIDASSA"). Näkyviä lappuja saa olla täsmälleen yksi: joko
+     * päällimmäisen pulun kortin oma tai — isoisän kuvan ollessa
+     * päällimmäisenä — paneelin oma kappale.
+     */
+    const nakyy = (el) => Boolean(el) && el.offsetParent !== null
+      && getComputedStyle(el).visibility !== 'hidden'
+      && String(el.textContent).trim() !== '';
+    const paallaKortti = document.querySelector('.pulucam-kortti.pulucam-paalla');
+    const paallaNappi = paallaKortti?.querySelector('.pulucam-kuva') ?? null;
+    const paallaLappu = paallaKortti?.querySelector('.pulucam-lappu') ?? null;
+    const pohjaLappu = paneeli?.querySelector(':scope > .fokusvirta-luentateksti') ?? null;
+    const laput = [...document.querySelectorAll('.pulucam-lappu'), pohjaLappu].filter(nakyy);
     const kerros = (el) => Number(el?.style?.getPropertyValue('--pulucam-kerros') || 0);
     const laatta = document.querySelector('.map-pane [data-kaupunki="lontoo"].city, '
       + '.map-pane [data-kaupunki="lontoo"].city-start');
@@ -246,7 +277,7 @@ async function avaaAjo(viewport) {
       kortteja: kortit.length,
       laatikot: kortit.map(laatikko),
       // Pakan järjestys: kerros 1 on alin, suurin on päällimmäinen.
-      kerrokset: kortit.map(kerros),
+      kerrokset: kaareet.map(kerros),
       pohjanKerros: kerros(pohjakortti),
       // Matkakirjakortti: pakan selaus ei saa kutistaa sitä lapuksi.
       matkakirjaPieni: kortti ? kortti.classList.contains('pieni') : null,
@@ -258,9 +289,27 @@ async function avaaAjo(viewport) {
       zoomAuki: Boolean(document.querySelector('.fokuszoom')),
       // Ennen omistajan tarravalintaa kuvissa EI saa olla merkkiä.
       merkkeja: document.querySelectorAll('.pulucam-merkki').length,
-      // Kartan lyhyt kuvateksti: sen pitää kertoa päällimmäisestä kuvasta.
-      lyhyt: document.querySelector('.fokusvirta-luentakuva .fokusvirta-kuvaselite')
-        ?.textContent ?? null,
+      // Kartan lyhyt kuvateksti: sen pitää kertoa päällimmäisestä kuvasta
+      // ja tulla PÄÄLLIMMÄISEN KORTIN OMASTA lapusta.
+      lyhyt: (nakyy(paallaLappu) ? paallaLappu : (nakyy(pohjaLappu) ? pohjaLappu : null))
+        ?.textContent?.trim() ?? null,
+      // Isoisän oma kappale (näkyy vain isoisän kuvan ollessa päällä).
+      lyhytPohjasta: !nakyy(paallaLappu) && nakyy(pohjaLappu),
+      lappuja: laput.length,
+      // Lappu on kortin OMASSA lohkossa: sama kääre, sama kierto.
+      lappuKortissa: Boolean(paallaLappu) && paallaLappu.closest('.pulucam-kortti') === paallaKortti
+        && paallaLappu.offsetParent === paallaKortti,
+      /*
+       * KIINNI KORTIN ALALAIDASSA: lapun yläreuna on kortin omassa
+       * koordinaatistossa täsmälleen napin alareuna (0 px väliä). Mitta
+       * on kääreen sisällä, joten kierto ei sotke sitä — ja juuri se on
+       * koko vaatimus: lappu kääntyy kortin mukana.
+       */
+      lapunVali: paallaLappu && paallaNappi
+        ? Math.round(paallaLappu.offsetTop - (paallaNappi.offsetTop + paallaNappi.offsetHeight))
+        : null,
+      lapunLeveysero: paallaLappu && paallaNappi
+        ? Math.round(paallaLappu.offsetWidth - paallaNappi.offsetWidth) : null,
       lyhyenLinkkeja: document.querySelectorAll(
         '.fokusvirta-luentakuva .havainnekuva-selite, .fokusvirta-luentakuva .havainnekuva-linkki',
       ).length,
@@ -458,7 +507,10 @@ const mittaaAla = (sivu) => sivu.evaluate(() => {
   const paneeli = document.querySelector('.fokusvirta-luentakuva');
   if (!paneeli) return null;
   const osat = [paneeli, ...document.querySelectorAll('.pulucam-kuva'),
-    ...document.querySelectorAll('.fokusvirta-luentateksti')];
+    ...document.querySelectorAll('.fokusvirta-luentateksti'),
+    // Päällimmäisen kortin oma lappu roikkuu kortin alapuolella
+    // (omistaja 10.9.2026 klo 23.37): sekin kuuluu paneelin alareunaan.
+    ...document.querySelectorAll('.pulucam-kortti.pulucam-paalla .pulucam-lappu')];
   return Math.round(Math.max(...osat.map((el) => el.getBoundingClientRect().bottom)));
 });
 
@@ -527,6 +579,29 @@ vaadi('lyhyt kuvateksti on päällimmäisen kuvan teksti',
   tila.lyhyt === KOEKUVAT.kuvat[KOEKUVAT.kuvat.length - 1].lyhyt, String(tila.lyhyt));
 vaadi('kartan lyhyessä tekstissä ei ole havainnekuvalinkkiä',
   tila.lyhyenLinkkeja === 0, String(tila.lyhyenLinkkeja));
+/*
+ * 3 b b. LAPPU ON KIINNI PULUN KORTIN OMASSA ALALAIDASSA (omistaja
+ * 10.9.2026 klo 23.37, iPad-kaappaukset Krakovasta ja Vilnasta:
+ * *"Pulun pienissä kuvissa ei näy kuvatekstiä"* — lappu oli kiinni
+ * pakan POHJAKUVAN alareunassa, eri kulmassa ja alempana kuin pulun
+ * kortti).
+ */
+tieto('lappu', JSON.stringify({
+  lappuja: tila.lappuja,
+  kortissa: tila.lappuKortissa,
+  vali: tila.lapunVali,
+  leveysero: tila.lapunLeveysero,
+  pohjasta: tila.lyhytPohjasta,
+}));
+vaadi('kartalla näkyy täsmälleen yksi lappu', tila.lappuja === 1, String(tila.lappuja));
+vaadi('lappu on päällimmäisen kortin omassa lohkossa (kääntyy kortin mukana)',
+  tila.lappuKortissa === true, String(tila.lappuKortissa));
+vaadi('lappu on kiinni kortin alalaidassa (ei väliä)', tila.lapunVali === 0,
+  `${tila.lapunVali} px`);
+vaadi('lappu on kortin levyinen', Math.abs(tila.lapunLeveysero ?? 999) <= 1,
+  `${tila.lapunLeveysero} px`);
+vaadi('lappu tulee pulun kortilta eikä isoisän kappaleesta',
+  tila.lyhytPohjasta === false, String(tila.lyhytPohjasta));
 await tyopoyta.kaappaa('pulucam-5-pakka.png');
 
 /*
@@ -562,6 +637,12 @@ vaadi('alemman kortin napautus nosti sen päällimmäiseksi',
   JSON.stringify(selauksenJalkeen.kerrokset));
 vaadi('kuvateksti vaihtui nostetun kuvan tekstiin',
   selauksenJalkeen.lyhyt === KOEKUVAT.kuvat[alinKortti].lyhyt, String(selauksenJalkeen.lyhyt));
+// LAPPU SIIRTYI UUDEN PÄÄLLIMMÄISEN ALLE, eikä vanhaa jäänyt näkyviin.
+vaadi('nostettu kortti kantaa nyt ainoan lapun',
+  selauksenJalkeen.lappuja === 1 && selauksenJalkeen.lappuKortissa === true,
+  JSON.stringify({ lappuja: selauksenJalkeen.lappuja, kortissa: selauksenJalkeen.lappuKortissa }));
+vaadi('lappu on yhä kiinni kortin alalaidassa', selauksenJalkeen.lapunVali === 0,
+  `${selauksenJalkeen.lapunVali} px`);
 vaadi('alemman kortin napautus EI avannut karusellia',
   selauksenJalkeen.zoomAuki === false, String(selauksenJalkeen.zoomAuki));
 vaadi('pakan napautus ei kutistanut matkakirjakorttia',
@@ -616,6 +697,10 @@ vaadi('isoisän kuvan napautus ei avannut karusellia',
   isoisaPaalla.zoomAuki === false, String(isoisaPaalla.zoomAuki));
 vaadi('kuvateksti palasi isoisän kuvan tekstiin',
   isoisaPaalla.lyhyt === KOEKUVAT.luentakuva.lyhyt, String(isoisaPaalla.lyhyt));
+// ISOISÄN LAPPU ON PANEELIN OMA KAPPALE, ja se on nyt se ainoa näkyvä.
+vaadi('isoisän kuvan alla näkyy sen oma lappu — eikä kahta lappua',
+  isoisaPaalla.lyhytPohjasta === true && isoisaPaalla.lappuja === 1,
+  JSON.stringify({ pohjasta: isoisaPaalla.lyhytPohjasta, lappuja: isoisaPaalla.lappuja }));
 vaadi('matkakirjakortti on yhä auki pakan selaamisen jälkeen',
   isoisaPaalla.matkakirjaPieni === false, String(isoisaPaalla.matkakirjaPieni));
 await tyopoyta.kaappaa('pulucam-isoisa-paalla.png');

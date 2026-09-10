@@ -42,7 +42,7 @@ import {
   ESITYKSEN_ALUEET, ESITYKSEN_LAHIKUVA, IHMISEN_MATKA_KUVAT_ESITYKSESSA, KUVAN_OSUUS,
   LOPUN_ASETUS_MS, alueenLaatikko, jaksonTahti, kelauksenPehmennys,
   jaksonRajaus, KARJEN_ETAISYYS_MAX_AST, HAARAN_ETAISYYS_MAX_AST, KARJEN_LIIKE_MIN_AST,
-  AFRIKAN_VIIVE_MS,
+  AFRIKAN_VIIVE_MS, PULUN_SISAANTULO_MS, PULUN_SISAANTULOELE, PULUN_PIILO_LUOKKA,
   AVAUKSEN_SANA, AVARUUDEN_KORKEUS, AVARUUDEN_MS, AVARUUDEN_MIN_MS, LAUSEEN_HAIVE_MS,
   FEIDIN_OSUUS, MUSTAN_OSUUS, TAHTIEN_FEIDI_MS, TAHTIEN_KERROIN, TEKSTIN_LASKU_MS,
   MAROKON_JARRU, MAROKON_POHJA_MS, PULUN_VAIMENNUS_PUTKESSA, PULUN_VARA_MS,
@@ -297,11 +297,73 @@ test('avaus alkaa mustasta ruudusta ilman palloa ja tähtiä', () => {
   assert.match(OHJAAJA, /tila\.tahdet\.paivita\(dt, Math\.min\(tahtienEsiinTulo\(ajat\), haipyy\)\);/);
 });
 
+/*
+ * PULU PIILOSSA AVAUKSESSA JA KÄVELEE SISÄÄN (Raamattu "IHMISEN MATKA:
+ * AFRIKKA 0,7 S SANAN JALKEEN, PULU PIILOSSA KUNNES TEKSTI ON ALHAALLA
+ * JA KAVELEE SITTEN OIKEALTA SISAAN…", omistaja 10.9.2026 klo 23.00).
+ * Itse liike näkyy vain selaimessa; tässä vartioidaan kytkennät, jotka
+ * rikkoutuisivat hiljaa: piilotus linssin avauksessa, sisääntulon
+ * ajoitus, elettä käytetään vain julkisen rajapinnan kautta, ja
+ * sulkeminen palauttaa pulun ilman elettä.
+ */
+test('pulu on piilossa avauksessa ja kävelee sisään tekstin laskun jälkeen', async () => {
+  // 1. PIILOTUS TAPAHTUU JO OHJAAJAN SYNTYESSÄ (linssiä avattaessa),
+  //    ei vasta Käynnistä-napista: pulu ei saa vilahtaa hetkeäkään.
+  assert.match(OHJAAJA, /piilotaPulu\(\);\n\n  return \{/,
+    'piilotaPulu ei ole ohjaajan synnyssä ennen julkista rajapintaa');
+  assert.match(OHJAAJA, /document\.body\?\.classList\.add\(PULUN_PIILO_LUOKKA\);/);
+  assert.equal(PULUN_PIILO_LUOKKA, 'aikajana-pulu-piilossa');
+
+  // 2. CSS piilottaa napin, paneelin JA kasvokankaan — ja nimenomaan
+  //    visibilityllä, jonka livia-eleiden näkyvyystesti lukee.
+  const saanto = new RegExp(
+    `body\\.${PULUN_PIILO_LUOKKA} \\.pollo-nappi,\\s*`
+    + `body\\.${PULUN_PIILO_LUOKKA} \\.pollo-paneeli,\\s*`
+    + `body\\.${PULUN_PIILO_LUOKKA} \\.livia-kasvot-pinta \\{[^}]*visibility: hidden;`,
+  );
+  assert.match(CSS, saanto, 'css ei piilota kaikkia kolmea visibilityllä');
+
+  // 3. SISÄÄNTULO: tekstin lasku ensin (TEKSTIN_LASKU_MS), sitten kaksi
+  //    sekuntia — omistaja: "siitä parin sekunnin päästä".
+  assert.equal(PULUN_SISAANTULO_MS, 2000);
+  assert.match(OHJAAJA, /if \(!keskella\) ajastaPulunSisaantulo\(tila\.tekstiViive \? TEKSTIN_LASKU_MS : 0\);/,
+    'sisääntuloa ei ajasteta siitä jaksosta, jossa teksti laskeutuu alas');
+  assert.match(OHJAAJA, /\}, Math\.max\(0, lasku\) \+ PULUN_SISAANTULO_MS\);/);
+
+  // 4. ELE ON KÄVELY OIKEALTA SISÄÄN ja ajetaan VAIN julkisen
+  //    rajapinnan kautta (js/livia-eleet.js toista).
+  const { LIVIA_SVG_ELEET } = await import('../js/livia-svg.js');
+  const ele = LIVIA_SVG_ELEET.find((e) => e.id === PULUN_SISAANTULOELE);
+  assert.ok(ele, `sisääntuloelettä ${PULUN_SISAANTULOELE} ei ole olemassa`);
+  assert.equal(ele.group, 'Liike');
+  assert.equal(PULUN_SISAANTULOELE, 'walkBack');
+  assert.match(OHJAAJA, /globalThis\.matkakirjaPollo\?\.kasvoEleet\?\.toista\?\.\(PULUN_SISAANTULOELE\);/);
+  assert.ok(!/^import[^;]*livia-(eleet|svg|pikselit|tehosteet)/m.test(OHJAAJA),
+    'ohjaaja tuo livian animaatiomoduulin — ele kuuluu ajaa julkisen rajapinnan kautta');
+
+  // 5. PULUKUPLA EI LAUKEA ENNEN SISÄÄNTULOA (kupla jää pois), ja
+  //    kaanonin ensimmäinen välihuomio tulee joka tapauksessa vasta
+  //    kauan sisääntulon jälkeen (kolmas jakso tuo tekstin alas).
+  assert.match(OHJAAJA, /if \(tila\.puluPiilossa\) return;/);
+  const ensimmainenKupla = IHMISEN_MATKA_KERTOMUS.findIndex((j) => j.pulu);
+  const ensimmainenKohde = IHMISEN_MATKA_KERTOMUS.findIndex((j) => j.kohde);
+  assert.ok(ensimmainenKupla > ensimmainenKohde,
+    `pulukupla (${ensimmainenKupla}) tulisi ennen sisääntuloa (${ensimmainenKohde})`);
+
+  // 6. SULKEMINEN JA MUISTISTA JATKO palauttavat pulun ILMAN elettä.
+  assert.match(OHJAAJA, /naytaPulu\(\{ ele: false \}\);\n      palautaKaukaisuus\(\);/,
+    'pura ei palauta pulua näkyviin');
+  assert.match(OHJAAJA, /tila\.muistista = true;[\s\S]{0,220}naytaPulu\(\{ ele: false \}\);/);
+  assert.match(OHJAAJA, /document\.body\?\.classList\.remove\(PULUN_PIILO_LUOKKA\);/);
+});
+
 test('avauksen vaiheet lasketaan luennan aikaleimoista', () => {
   // Ensimmäinen virke mustalla: musta kestää lauseet[1]:een asti.
   const v = avauksenVaiheet({ lauseet: [0, 3000, 4500, 6000, 7500], sana: 6000, kesto: 8400 });
   assert.equal(v.musta, 3000, 'musta ei kestä ensimmäistä virkettä');
-  // AFRIKKA TULEE REILUN SEKUNNIN SANAN JÄLKEEN (omistaja 10.9.2026).
+  // AFRIKKA TULEE 0,7 s SANAN JÄLKEEN (omistaja 10.9.2026 klo 23.00:
+  // *"Siirrä Afrikan ilmestymistä puoli sekuntia aiemmaksi."*).
+  assert.equal(AFRIKAN_VIIVE_MS, 700, 'Afrikan viive ei ole enää 0,7 s');
   assert.equal(v.afrikka, 6000 + AFRIKAN_VIIVE_MS);
   // Feidaus mahtuu mustan ja päätepisteen väliin eikä syö koko rakoa.
   assert.ok(v.feidi > 0 && v.feidi <= TAHTIEN_FEIDI_MS);
@@ -310,8 +372,8 @@ test('avauksen vaiheet lasketaan luennan aikaleimoista', () => {
   // ZOOMI PÄÄTTYY PÄÄTEPISTEESEEN: alku + kesto = afrikka.
   assert.equal(v.zoomAlku + v.zoomKesto, v.afrikka);
   assert.ok(v.zoomAlku >= v.piste - 1, 'zoomi lähtee ennen kuin pallo on näkyvissä');
-  // VARTIO: sana 5 s kohdalla, jakso 20 s → Afrikka ruudussa 6,2 s kohdalla.
-  assert.equal(avauksenVaiheet({ sana: 5000, kesto: 20000 }).afrikka, 6200);
+  // VARTIO: sana 5 s kohdalla, jakso 20 s → Afrikka ruudussa 5,7 s kohdalla.
+  assert.equal(avauksenVaiheet({ sana: 5000, kesto: 20000 }).afrikka, 5700);
   // VARTIO: sana lähellä loppua → päätepiste ei valu jakson yli.
   for (const sana of [19000, 19500, 19999, 20000]) {
     const loppu = avauksenVaiheet({ lauseet: [0, 2000], sana, kesto: 20000 });

@@ -1918,12 +1918,13 @@ function rakennaLuentakuvanPaneeli(ui, city, kuva) {
    * pakka ladotaan. Ei nappia eikä isoisän kuvaa — ja siksi myöskään
    * ei luennan jälkeistä pienennystä, joka on isoisän kuvan oma kello.
    *
-   * KUVATEKSTILAATIKKO ON SILTI MUKANA, TYHJÄNÄ (omistaja 9.9.2026 klo
-   * 18.50: lyhyt kuvateksti kuuluu PÄÄLLIMMÄISEN kuvan alle). Ilman
-   * sitä pohjattoman pakan kuvilla ei olisi kartalla kuvatekstiä
-   * lainkaan, vaikka kuvat ovat samanlaisia kuvia kuin isoisän
-   * kuvan päällä. Pakka täyttää sen ensimmäisen pulpahduksen yhteydessä
-   * (naytaPuluCamPakka → kuvateksti); tyhjä kappale ei näy (css :empty).
+   * KUVATEKSTILAATIKKO ON SILTI MUKANA, TYHJÄNÄ. Se on ISOISÄN kuvan
+   * lappu (omistaja 10.9.2026 klo 23.37), ja pohjattomassa pakassa
+   * isoisän kuvaa ei ole — kappale jää siis tyhjäksi eikä näy (css
+   * :has-sääntö). Pohjattoman pakan kuvatekstit tulevat korttien
+   * OMISTA lapuista (js/pulucam.js pakanKortti), jotka ovat kiinni
+   * kunkin kortin alalaidassa. Kappale pidetään silti rakenteessa,
+   * jotta kuvallinen ja pohjaton paneeli ovat sama paneeli.
    */
   if (!kuva) {
     const kuvatila = html('div', 'fokusvirta-kuvatila');
@@ -1997,6 +1998,12 @@ function rakennaLuentakuvanPaneeli(ui, city, kuva) {
    * "avattu" muoto — sama sääntö kuin kaikkialla muualla pelissä
    * (js/kuvatekstit.js). Kartalla oleva pikkuteksti ei ole kuvan
    * julkaisupaikka vaan sen otsikko.
+   *
+   * TÄMÄ LAPPU ON ISOISÄN KUVAN LAPPU JA VAIN SEN (omistaja 10.9.2026
+   * klo 23.37). Se näkyy silloin, kun isoisän kuva on kartalla
+   * päällimmäisenä; pulun korteilla on omat lappunsa omissa
+   * kierretyissä lohkoissaan (js/pulucam.js pakanKortti), kiinni
+   * kunkin kortin omassa alalaidassa.
    */
   const kuvateksti = html('p', 'fokusvirta-kuvateksti fokusvirta-luentateksti');
   kuvateksti.appendChild(html('span', 'fokusvirta-kuvaselite', kuvatekstiLyhyt(kuva)));
@@ -2164,11 +2171,27 @@ export function naytaPulunKuvapakka(ui, city) {
      */
     kuvateksti: (k) => {
       if(k&&k!==pohjakuva)ilmoitaLivianTilanne('photo',{cityId:city.id,index:kuvat.indexOf(k)});
-      // Paneelissa on täsmälleen yksi kuvaselite (kuvallinen ja
-      // pohjaton paneeli rakennetaan samasta kohdasta), joten yhden
-      // luokan valitsin riittää eikä tarvitse jälkeläisketjua.
+      /*
+       * ISOISÄN LAPPU ON ISOISÄN LAPPU (omistaja 10.9.2026 klo 23.37,
+       * Raamattu "PULUN KORTIN KUVATEKSTI KIINNI KORTIN OMASSA
+       * ALALAIDASSA"). Paneelin kappale on isoisän KUVAN oma jatke —
+       * se on kiinni isoisän paperin alareunassa — joten siihen ei
+       * enää kirjoiteta pulun kuvan tekstiä: pulun kortilla on oma
+       * lappunsa omassa kierretyssä lohkossaan (js/pulucam.js
+       * pakanKortti). Tässä ratkeaa vain, NÄKYYKÖ isoisän lappu:
+       * näkyy silloin ja vain silloin, kun isoisän kuva on
+       * päällimmäisenä — muuten ruudulla olisi kaksi lappua.
+       *
+       * TEKSTI JÄÄ PAIKALLEEN, VAIN NÄKYVYYS VAIHTUU. Tyhjäksi
+       * kirjoitettu kappale katoaisi taitosta (css :has-sääntö), ja
+       * paneelin korkeus muuttuisi joka nostolla — ankkuri on
+       * paneelin alareunassa, joten kuva hyppisi kartalla.
+       */
       const selite = paneeli.querySelector?.('.fokusvirta-kuvaselite');
-      if (selite) selite.textContent = kuvatekstiLyhyt(k);
+      if (selite) selite.textContent = pohjakuva ? kuvatekstiLyhyt(pohjakuva) : '';
+      const lappu = paneeli.querySelector?.('.fokusvirta-luentateksti');
+      if (pohjakuva && k !== pohjakuva) lappu?.classList?.add?.('pulucam-alla');
+      else lappu?.classList?.remove?.('pulucam-alla');
     },
     raahattu: () => {
       const naytto = ui.luentakuvaAnkkuri;
@@ -2230,6 +2253,31 @@ const LUENTAKUVAN_TEKSTIVARA = 52;
  * yläpuolelle (omistaja 10.9.2026: *"kuva saisi tulla ylemmäs"*).
  */
 const PAKAN_YLITYS_OSUUS = 0.10;
+
+/**
+ * PÄÄLLIMMÄISEN KORTIN LAPPU ROIKKUU KORTIN ALAPUOLELLA.
+ *
+ * Omistaja 10.9.2026 klo 23.37: pulun kortin lyhyt kuvateksti on
+ * kiinni JUURI SEN kortin alalaidassa (js/pulucam.js pakanKortti), eli
+ * se on kortin kääreen sisällä absoluuttisena eikä kasvata paneelin
+ * omaa korkeutta (paneeli.offsetHeight). Ilman tätä varaa ankkuri
+ * jättäisi laatan yläpuolelle vain kuvan ja pakan — ja lappu
+ * laskeutuisi kaupungin laatalle.
+ *
+ * MITTA LUETAAN NÄKYVÄSTÄ LAPUSTA. Piilotetut laput ovat
+ * `display: none`, joten niiden korkeus on 0; vara on siis aina sen
+ * kokoinen kuin ruudulla oikeasti näkyvä lappu. Kun isoisän kuva on
+ * päällimmäisenä, näkyvä lappu on paneelin oma kappale, joka on jo
+ * mitatussa `lisakorkeus`-luvussa — silloin tämä on nolla.
+ */
+function pakanLapunKorkeus(ui) {
+  let suurin = 0;
+  for (const kortti of ui?.pulucamPakka?.kortit ?? []) {
+    const lappu = kortti?.querySelector?.('.pulucam-lappu');
+    suurin = Math.max(suurin, lappu?.offsetHeight ?? 0);
+  }
+  return suurin;
+}
 
 /*
  * PALLON OMA PROJEKTIO ENNEN ARVIOTA (mitattu Chromiumilla 9.9.2026).
@@ -2317,10 +2365,35 @@ function mitoitaLuentakuva(naytto) {
     paneH: h,
     kaupunki,
     kortti: matkakirjakortinLaatikko(pane),
+    /*
+     * PORTAAN RATKAISEE IKKUNAN LEVEYS, EI PANEELIN. Sama mitta kuin
+     * css:n media-ehdoissa (puhelin < 900, tabletti 700–1400 →
+     * LUENTAKUVAN_TABLETTIKERROIN, työpöytä > 1400), jotta ankkuroitu
+     * kuva ja css:n vara-arvo ovat samaa kokoa. Karttapaneeli voi olla
+     * ikkunaa kapeampi (sivupalkki, matkakirjan palsta), ja sen mukaan
+     * porrastaminen antaisi iPadille puhelimen mitat.
+     */
     perusleveys: luentakuvanPerusleveys(w, globalThis.innerWidth ?? w),
     // Kaupungin oma kallistuskulma: kierretty kuva ulottuu
     // alakulmastaan alemmas kuin suora (ks. luentakuvanSijainti).
     kallistus: Number.parseFloat(luentakuvanKallistus(city.id)) || 0,
+    /*
+     * PAKKA ROIKKUU MYÖS SIVUILLE — JA TILA VARATAAN ETUKÄTEEN.
+     *
+     * Pystysuunnan ylitys menee `lisakorkeus`-varana kaupungin
+     * laatalle (pakanYlitys alla), mutta pakan uloin kortti työntyy
+     * yhtä lailla kuvan VASEMMALLE puolelle: juuri se laskeutui
+     * matkakirjakortin kulmalle iPadin vaakaruudulla, kun kuva kasvoi
+     * 1,5-kertaiseksi (mitattu Chromiumilla 10.9.2026).
+     *
+     * EHTO ON KAUPUNGIN KUVALUETTELO, EI RUUDUN TILANNE. Pakka nousee
+     * vasta pulun repliikin jälkeen, sekunteja tämän mittauksen
+     * jälkeen (`puluCamPakassa` on nyt vielä false), mutta ANKKURI
+     * lyödään lukkoon tässä eikä myöhempi uusintamittaus enää siirrä
+     * kuvaa kortin ohi. Sivuttaisvara on siis varattava heti, kun
+     * kaupungilla ylipäätään on pulun kuvia.
+     */
+    pakka: fokusvirtaPulunKuvat(ui, city).length ? PAKAN_YLITYS_OSUUS : 0,
   };
   /*
    * KUVASUHDE ON KUVAN OMA, EI MITATTU LAATIKKO. Mitattu suhde
@@ -2334,7 +2407,8 @@ function mitoitaLuentakuva(naytto) {
     ? img.naturalHeight / img.naturalWidth
     : LUENTAKUVAN_KUVASUHDE;
   /* Pakan alin kortti roikkuu kuvan alapuolella (ks. PAKAN_YLITYS_OSUUS). */
-  const pakanYlitys = (korkeus) => (puluCamPakassa(ui) ? korkeus * PAKAN_YLITYS_OSUUS : 0);
+  const pakanYlitys = (korkeus) => (puluCamPakassa(ui)
+    ? korkeus * PAKAN_YLITYS_OSUUS + pakanLapunKorkeus(ui) : 0);
   const kirjoita = (sijainti) => {
     paneeli.style.setProperty('--luentakuva-leveys', `${Math.round(sijainti.leveys)}px`);
     // Kuvan korkeuskatto on TÄSMÄLLEEN sen luonnollinen korkeus tällä
@@ -2366,6 +2440,26 @@ function mitoitaLuentakuva(naytto) {
   kirjoita(sijainti);
   naytto.kuvasuhde = suhde;
   naytto.sijainti = sijainti;
+  /*
+   * ANKKURI SEURAA UUTTA SOVITUSTA — PAITSI PELAAJAN OMAA SIIRTOA.
+   *
+   * Ensimmäinen sovitus tehdään heti saapumisessa, jolloin
+   * matkakirjakortti on vasta avautumassa (max-height liukuu, teksti
+   * kirjoittuu) eikä pulun pakka ole vielä noussut. Kortin lopullinen
+   * laatikko on siis isompi kuin se, jonka mukaan kuva asetettiin —
+   * ja ilman tätä ankkuri jäisi vanhaan kohtaan, jolloin pakan uloin
+   * kortti laskeutui matkakirjan kulmalle (mitattu Chromiumilla
+   * 10.9.2026, 1280 × 800: kuva jäi 28 px liian vasemmalle).
+   *
+   * Uusintamittaus tehdään kuvan latauduttua, pakan noustessa ja
+   * ruudun koon muuttuessa — joka kerta ankkuri siirtyy sovituksen
+   * mukana. RAAHATTUA KUVAA EI SIIRRETÄ: pelaajan oma valinta voittaa
+   * (Raamattu, LUENTAKUVAA VOI ITSE LIIKUTTAA).
+   */
+  if (naytto.ankkuri && !naytto.raahattu) {
+    const uusi = ruutuLaudalle(ui, { x: sijainti.x, y: sijainti.y }, naytto.mitat);
+    if (uusi) naytto.ankkuri = uusi;
+  }
   return sijainti;
 }
 

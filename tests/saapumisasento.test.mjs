@@ -34,6 +34,8 @@ import {
   laatikotOsuvat, luentakuvanPerusleveys, laudaltaRuudulle, ruudultaLaudalle,
   onRaahaus, LUENTAKUVAN_SIVUSIIRTO, LUENTAKUVAN_VAHIN_PX,
   LUENTAKUVAN_VALI_PX, KAUPUNGIN_LAATTA_PX,
+  LUENTAKUVAN_TABLETTIKERROIN, LUENTAKUVAN_TABLETTI_PX, onTablettiruutu,
+  pakanLaatikko,
 } from '../js/saapumisasento.js';
 
 /** Ruudut, joilla jokainen sääntö on voimassa (tilaus: eri ruutukoot). */
@@ -259,6 +261,137 @@ test('perusleveys noudattaa css:n porrasta (900 px)', () => {
   assert.equal(luentakuvanPerusleveys(1600, 1600), 608);
   assert.equal(luentakuvanPerusleveys(430, 430), 344);
   assert.equal(luentakuvanPerusleveys(0, 0), 0);
+});
+
+/* ---------------------------------------------------------------- */
+/* 2 b. Tabletti: kuva puolta isompana                               */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJA 10.9.2026 klo 23.30 (iPad-kaappaus Krakovasta; Raamattu
+ * LUENTAKUVA IPADILLA PUOLTA ISOMPANA, sanatarkasti): *"Kuvat saisivat
+ * tulla ipadilla puolta isompana"*.
+ *
+ * Kolme asiaa mitataan: kerroin osuu VAIN tablettikaistaan, kuva
+ * tosiaan kasvaa 1,5-kertaiseksi iPadin pystyssä ja vaakassa, eikä
+ * isompikaan kuva peitä matkakirjakorttia tai kaupungin laattaa.
+ */
+
+/** iPadin pysty ja vaaka sekä ne ruudut, joiden pitää pysyä ennallaan. */
+const TABLETTIRUUDUT = [
+  { nimi: 'iPad pysty 1024×1366', w: 1024, h: 1366 },
+  { nimi: 'iPad vaaka 1366×1024', w: 1366, h: 1024 },
+];
+const ENNALLAAN = [
+  { nimi: 'puhelin 390×844', w: 390, h: 844 },
+  { nimi: 'työpöytä 1920×1080', w: 1920, h: 1080 },
+];
+
+/** Perusleveys ilman tablettikerrointa (vanha porras). */
+function porrasIlmanKerrointa(w) {
+  return w >= 900 ? Math.min(w * 0.38, 640) : Math.min(w * 0.8, 352);
+}
+
+test('tablettikaista on 700–1400 px eikä ulotu puhelimeen tai työpöytään', () => {
+  assert.equal(LUENTAKUVAN_TABLETTIKERROIN, 1.5);
+  assert.equal(LUENTAKUVAN_TABLETTI_PX.alku, 700);
+  assert.equal(LUENTAKUVAN_TABLETTI_PX.loppu, 1400);
+  assert.ok(onTablettiruutu(700) && onTablettiruutu(1024) && onTablettiruutu(1400),
+    'kaistan päät tai iPadin pysty jäivät kaistan ulkopuolelle');
+  assert.ok(!onTablettiruutu(699) && !onTablettiruutu(1401),
+    'kaista vuotaa puhelimen tai työpöydän puolelle');
+});
+
+test('luentakuva on tabletilla puolta isompi, puhelimella ja työpöydällä ennallaan', () => {
+  for (const ruutu of TABLETTIRUUDUT) {
+    const nyt = luentakuvanPerusleveys(ruutu.w, ruutu.w);
+    const ennen = porrasIlmanKerrointa(ruutu.w);
+    assert.ok(Math.abs(nyt - ennen * LUENTAKUVAN_TABLETTIKERROIN) < 0.5,
+      `${ruutu.nimi}: leveys ${nyt.toFixed(1)} ei ole 1,5 × entinen ${ennen.toFixed(1)}`);
+  }
+  for (const ruutu of ENNALLAAN) {
+    assert.equal(luentakuvanPerusleveys(ruutu.w, ruutu.w), porrasIlmanKerrointa(ruutu.w),
+      `${ruutu.nimi}: mitta muuttui, vaikka sen piti pysyä ennallaan`);
+  }
+});
+
+test('isompi tablettikuva ei peitä matkakirjakorttia eikä kaupungin laattaa', () => {
+  for (const ruutu of [...TABLETTIRUUDUT, ...ENNALLAAN]) {
+    const k = kortti(ruutu);
+    const kaupunki = kaupunkiRuudulla(ruutu);
+    const sijainti = luentakuvanSijainti({
+      paneW: ruutu.w, paneH: ruutu.h, kaupunki, kortti: k,
+      perusleveys: luentakuvanPerusleveys(ruutu.w, ruutu.w),
+      lisakorkeus: 44,
+      kallistus: -2.4,
+    });
+    const laatikko = luentakuvanLaatikko(sijainti);
+    assert.ok(!laatikotOsuvat(laatikko, k), `${ruutu.nimi}: iso kuva osuu matkakirjakorttiin`);
+    // Kaupungin laatta: kuvan alareunan on jäätävä laatan yläpuolelle
+    // kallistuksen alakulma mukaan luettuna.
+    const kulmavara = (sijainti.leveys * Math.abs(Math.sin((-2.4 * Math.PI) / 180))) / 2;
+    assert.ok(sijainti.y + kulmavara <= kaupunki.y - KAUPUNGIN_LAATTA_PX + 0.5,
+      `${ruutu.nimi}: kuvan alareuna ${(sijainti.y + kulmavara).toFixed(1)} laskeutuu laatalle `
+      + `(piste ${kaupunki.y.toFixed(1)}, laatta ${KAUPUNGIN_LAATTA_PX} px)`);
+    // Kuva pysyy karttapinnalla eikä kasva sen yli.
+    assert.ok(laatikko.x >= -0.5 && laatikko.x + laatikko.w <= ruutu.w + 0.5,
+      `${ruutu.nimi}: kuva vuotaa sivusuunnassa yli pinnan`);
+    assert.ok(laatikko.y >= -0.5, `${ruutu.nimi}: kuva vuotaa yläreunan yli`);
+  }
+});
+
+test('PULU-CAM-pakan ylitys otetaan mukaan kortin väistöön', () => {
+  /*
+   * Mitattu Chromiumilla 10.9.2026 (iPad vaaka 1366 × 1024): paneeli
+   * jäi 4 px matkakirjakortista oikealle, mutta pakan uloin kortti
+   * roikkui 70 px kuvan vasemmalla puolella ja lepäsi kortin kulmalla.
+   * Väistö lasketaan siis pakan verran isommasta laatikosta.
+   */
+  const ruutu = { w: 1366, h: 1024 };
+  const yhteiset = {
+    paneW: ruutu.w, paneH: ruutu.h, kaupunki: kaupunkiRuudulla(ruutu), kortti: kortti(ruutu),
+    perusleveys: luentakuvanPerusleveys(ruutu.w, ruutu.w), lisakorkeus: 44,
+  };
+  const ilman = luentakuvanSijainti(yhteiset);
+  const pakalla = luentakuvanSijainti({ ...yhteiset, pakka: 0.1 });
+  const k = kortti(ruutu);
+  assert.ok(laatikotOsuvat(pakanLaatikko(luentakuvanLaatikko(ilman), 0.1), k),
+    'testin lähtötilanne muuttui: pakka ei enää osuisi korttiin ilman väistöä');
+  assert.ok(!laatikotOsuvat(pakanLaatikko(luentakuvanLaatikko(pakalla), 0.1), k),
+    'pakan uloin kortti jää yhä matkakirjakortin päälle');
+  assert.ok(pakalla.x > ilman.x, 'väistö ei siirtänyt kuvaa kortista poispäin');
+  assert.ok(pakalla.leveys >= ilman.leveys - 0.5, 'väistö kutisti kuvaa turhaan');
+});
+
+test('pakaton kuva ei väisty pakan verran', () => {
+  // Ilman pakkaa laatikko on paneelin oma: sama sijainti kuin ennen.
+  const ruutu = { w: 390, h: 844 };
+  const yhteiset = {
+    paneW: ruutu.w, paneH: ruutu.h, kaupunki: kaupunkiRuudulla(ruutu), kortti: kortti(ruutu),
+    perusleveys: luentakuvanPerusleveys(ruutu.w, ruutu.w), lisakorkeus: 44,
+  };
+  assert.deepEqual(luentakuvanSijainti({ ...yhteiset, pakka: 0 }), luentakuvanSijainti(yhteiset));
+  assert.deepEqual(pakanLaatikko({
+    x: 10, y: 20, w: 100, h: 50,
+  }, 0), { x: 10, y: 20, w: 100, h: 50 });
+});
+
+test('tabletilla kuva kutistuu mahtuvaan, jos 1,5× ei mahdu kaistaan', () => {
+  /*
+   * Kerroin on toive, ei lupaus: matalalla tablettivaakalla, jonka
+   * matkakirjakortti vie ylälaidan, kuvan on kavennuttava. Sääntö on
+   * sama kuin puhelimella — mieluummin pieni kuva kuin peitetty teksti.
+   */
+  const ruutu = { w: 1024, h: 700 };
+  const iso = { x: 8, y: 8, w: 980, h: 380 };
+  const toivottu = luentakuvanPerusleveys(ruutu.w, ruutu.w);
+  const sijainti = luentakuvanSijainti({
+    paneW: ruutu.w, paneH: ruutu.h, kaupunki: kaupunkiRuudulla(ruutu), kortti: iso,
+    perusleveys: toivottu, lisakorkeus: 44,
+  });
+  assert.ok(sijainti.leveys < toivottu, 'ahtaalla tabletilla kuva ei kutistunut');
+  assert.ok(!laatikotOsuvat(luentakuvanLaatikko(sijainti), iso),
+    'kutistettukin tablettikuva peittää matkakirjakortin');
 });
 
 /* ---------------------------------------------------------------- */

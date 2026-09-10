@@ -886,11 +886,41 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
      * päivityksiä — kartta jää pelaajan käsiin sellaisenaan.
      */
     const vuosia = tila.tutkimus ? 0 : lukema();
-    // Hidas laite: väli venyy maalauksen keston mukaan, jottei
-    // maalaus syö koko kehysaikaa (mitattu kontin ohjelmisto-WebGL:llä).
+    /*
+     * VANOJEN PÄÄT EIVÄT SAA RÄPSYÄ (Raamattu "IHMISEN MATKA: … VANOJEN
+     * PAAT EIVAT RAPSY", omistaja 10.9.2026 klo 23.00, iPad-kaappaus
+     * Arabian jaksosta, sanatarkasti: *"Kuvassa näkyvät ihmis janat
+     * räpsivät niiden päissä, saisiko korjattua pois?"*).
+     *
+     * SYY: kaista piirtyy joka kehyksellä (kamera liukuu 60 kertaa
+     * sekunnissa), mutta sen KASVU luettiin kellosta vain 80 ms:n
+     * välein. Vanan pää hyppäsi siis 12 kertaa sekunnissa askelen,
+     * jonka mitta vaihtelee mallin nopeuden mukaan. Mitattu Arabian
+     * jaksossa (kello 751 vuotta sekunnissa, selkäranka, kaanonin oma
+     * kesto — tests/aikajana-vanat.test.mjs laskee saman luvun):
+     *
+     *   80 ms:n askel    pää loikkaa keskimäärin 17 km, enintään 118 km
+     *   kehys (16,7 ms)  pää liukuu keskimäärin 4 km, enintään 25 km
+     *
+     * Arabian näkymässä kaista on 23 px leveä ja 200 km paksu
+     * (savukemittaus 10.9.2026: leveysPx 23,1 → 8,7 km/px), joten
+     * vanha askel siirsi päätä 2 px kerrallaan ja pahimmillaan 14 px.
+     * Muualla kuva ei muutu: vanan runko on paikallaan ja vain pää
+     * liikkuu, ja juuri siksi räpsy näkyi PÄISSÄ.
+     *
+     * KORJAUS: kaistalla päivitys on PELKKÄ UNIFORMI (uKuljettu,
+     * uNyt, sävyt — ei geometriaa, ei maalausta), joten se saa ajaa
+     * joka kehys; askel kutistuu kehysvälin mittaiseksi ja pää liukuu.
+     * 80 ms:n väli jää KALVOMAALAUKSELLE (maalaa), jota varten se
+     * kirjoitettiin: siellä yksi päivitys piirtää 270 000 pikseliä
+     * uudestaan, ja hitaalla laitteella väli venyy maalauksen keston
+     * mukaan (mitattu kontin ohjelmisto-WebGL:llä).
+     */
     const vali = reduced
       ? VIRTOJEN_ASKEL_MS
-      : Math.max(VIRTOJEN_PAIVITYS_MS, PAIVITYSVALIN_KERROIN * (tila.maalausMs ?? 0));
+      : vanatKaytossa
+        ? 0
+        : Math.max(VIRTOJEN_PAIVITYS_MS, PAIVITYSVALIN_KERROIN * (tila.maalausMs ?? 0));
     if (nyt - tila.viimePaivitys >= vali && (vuosia !== tila.viimeNyt)) {
       tila.viimePaivitys = nyt;
       tila.viimeNyt = vuosia;

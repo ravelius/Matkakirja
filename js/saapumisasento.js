@@ -173,10 +173,54 @@ export const LUENTAKUVAN_VAHIN_PX = 96;
 /** Paneelin korkeus / leveys, kun kuvan omaa mittasuhdetta ei tiedetä. */
 export const LUENTAKUVAN_KUVASUHDE = 0.72;
 
+/*
+ * TABLETILLA KUVA ON PUOLTA ISOMPI (omistaja 10.9.2026 klo 23.30,
+ * iPad-kaappaus Krakovasta, Raamattu LUENTAKUVA IPADILLA PUOLTA
+ * ISOMPANA, sanatarkasti: *"Kuvat saisivat tulla ipadilla puolta
+ * isompana"*).
+ *
+ * MIKSI OMA PORRAS EIKÄ ISOMPI OSUUS KAIKILLE. Puhelimella kuva on jo
+ * 80 % ruudusta ja työpöydällä 38 % riittää, koska ruutu on leveä —
+ * väliin jäävä tabletti sai molemmista huonoimman puolen: media-ehto
+ * `min-width: 900px` antoi sille työpöydän KAPEAN osuuden ilman
+ * työpöydän leveyttä, joten 1024 px:n iPadilla kuva jäi pieneksi
+ * lapuksi keskelle karttaa. Kerroin koskee siis VAIN tablettikaistaa;
+ * puhelin (< 700 px) ja työpöytä (> 1400 px) pysyvät entisellään.
+ *
+ * KERROIN ON TOIVE, EI LUPAUS. `luentakuvanSijainti` rajaa leveyden
+ * kaistaan, joka jää matkakirjakortin ja kaupungin laatan väliin: jos
+ * 1,5× ei mahdu, kuva skaalautuu alas mahtuvaan. Kortin tekstiä ei
+ * peitetä missään koossa.
+ */
+
+/** Tablettikaistan rajat pikseleinä (molemmat päät mukaan luettuina). */
+export const LUENTAKUVAN_TABLETTI_PX = Object.freeze({ alku: 700, loppu: 1400 });
+
+/** Kuinka moninkertainen luentakuva on tabletin kokoisella ruudulla. */
+export const LUENTAKUVAN_TABLETTIKERROIN = 1.5;
+
+/**
+ * Onko ruutu tabletin kokoinen (700–1400 px)? Sama ehto kuin
+ * css/fokusvirta.css:n `@media (min-width: 700px) and (max-width: 1400px)`.
+ *
+ * @param {number} ruudunLeveys näkyvän alueen leveys pikseleinä
+ * @returns {boolean}
+ */
+export function onTablettiruutu(ruudunLeveys) {
+  return ruudunLeveys >= LUENTAKUVAN_TABLETTI_PX.alku
+    && ruudunLeveys <= LUENTAKUVAN_TABLETTI_PX.loppu;
+}
+
 /**
  * Luentakuvan TOIVOTTU leveys pikseleinä — sama porras kuin
  * css/fokusvirta.css:n `--luentakuva-leveys`, mutta laskettuna, koska
  * ankkuroitu kuva mitoitetaan js:stä (kortin alle mahtuminen).
+ *
+ * Tablettikerroin kerrotaan porrasta VASTEN eikä sen tilalle: sekä
+ * osuus että katto kasvavat 1,5-kertaisiksi, jolloin iPadin pysty
+ * (1024) ja vaaka (1366) saavat saman puolitoistakertaistuksen —
+ * pelkän osuuden kasvattaminen olisi jäänyt vaakaruudulla kattoon
+ * kiinni ja kuva olisi kasvanut vain 1,2-kertaiseksi.
  *
  * @param {number} paneW karttapaneelin leveys
  * @param {number} [ruudunLeveys] ikkunan leveys (css-media-ehto)
@@ -184,9 +228,10 @@ export const LUENTAKUVAN_KUVASUHDE = 0.72;
  */
 export function luentakuvanPerusleveys(paneW, ruudunLeveys = paneW) {
   if (!(paneW > 0)) return 0;
-  return ruudunLeveys >= 900
+  const porras = ruudunLeveys >= 900
     ? Math.min(paneW * 0.38, 640)
     : Math.min(paneW * 0.8, 352);
+  return onTablettiruutu(ruudunLeveys) ? porras * LUENTAKUVAN_TABLETTIKERROIN : porras;
 }
 
 /** Laatikko { x, y, w, h } sijainnista (ankkuri on ALAREUNAN keskellä). */
@@ -197,6 +242,31 @@ export function luentakuvanLaatikko(sijainti) {
     y: sijainti.y - sijainti.korkeus,
     w: sijainti.leveys,
     h: sijainti.korkeus,
+  };
+}
+
+/**
+ * PULU-CAM-PAKKA ROIKKUU KUVAN REUNOJEN YLI JOKA SUUNTAAN.
+ *
+ * Pakan kortit ovat isoisän kuvan kokoisia ja siirtyvät enintään
+ * `osuus` verran omasta koostaan (js/pulucam.js PULUCAM_ASENNOT,
+ * enimmillään 9 % ja pieni kierto), joten pakallinen kuva peittää
+ * paneelin laatikkoa isomman alan. Matkakirjakortin väistö lasketaan
+ * TÄSTÄ laatikosta — muuten pakan uloin kortti asettuisi kortin
+ * kulman päälle, vaikka paneeli itse jää siitä sivuun (mitattu
+ * Chromiumilla 10.9.2026, iPadin vaakaruutu 1366 × 1024: paneeli jäi
+ * 4 px kortista oikealle, pakka roikkui 70 px sen päällä).
+ *
+ * @param {object} laatikko luentakuvanLaatikko-tulos
+ * @param {number} [osuus] pakan ylitys kuvan omasta koosta
+ * @returns {{x, y, w, h}|null}
+ */
+export function pakanLaatikko(laatikko, osuus = 0) {
+  if (!laatikko) return null;
+  const vx = Math.max(0, osuus || 0) * laatikko.w;
+  const vy = Math.max(0, osuus || 0) * laatikko.h;
+  return {
+    x: laatikko.x - vx, y: laatikko.y - vy, w: laatikko.w + 2 * vx, h: laatikko.h + 2 * vy,
   };
 }
 
@@ -217,6 +287,9 @@ export function laatikotOsuvat(a, b, marginaali = 0) {
  * kartan liike kutistaa kuvan juuri sitä kohti (css transform-origin:
  * bottom center) — pieni kuva jää siihen kartan kohtaan, josta iso
  * lähti.
+ *
+ * KORTIN VÄISTÖ LASKETAAN PAKALLISESTA LAATIKOSTA (`pakka`): PULU-CAM
+ * roikkuu kuvan reunojen yli joka suuntaan (pakanLaatikko).
  *
  * KOLME YRITYSTÄ, TÄSSÄ JÄRJESTYKSESSÄ:
  *   1. Toivottu paikka: kaupungin yläpuolella, keskilinja oikealla.
@@ -247,6 +320,9 @@ export function laatikotOsuvat(a, b, marginaali = 0) {
  * @param {number} [p.kallistus] kuvan kierto asteina: kallistettu
  *   laatikko ulottuu alakulmastaan alemmas kuin suora, ja ilman tätä
  *   kulma laskeutuisi kaupungin nimen päälle
+ * @param {number} [p.pakka] PULU-CAM-pakan ylitys osuutena kuvan
+ *   koosta: kortin väistö lasketaan tämän verran isommasta
+ *   laatikosta (ks. pakanLaatikko)
  * @returns {{x, y, leveys, korkeus, mahtuu, katto}} ankkuri (alareunan
  *   keskipiste), paneelin leveys ja KOKO korkeus (kuva + kuvateksti)
  */
@@ -260,6 +336,7 @@ export function luentakuvanSijainti({
   vahinLeveys = LUENTAKUVAN_VAHIN_PX,
   lisakorkeus = 0,
   kallistus = 0,
+  pakka = 0,
 } = {}) {
   const W = Math.max(1, paneW || 0);
   const H = Math.max(1, paneH || 0);
@@ -303,15 +380,27 @@ export function luentakuvanSijainti({
     return { x, y, leveys, korkeus, mahtuu, katto };
   };
 
+  /* Kortin väistössä kuvan laatikko on pakan verran isompi. */
+  const yli = Math.max(0, pakka || 0);
+  const varjo = (sijainti) => pakanLaatikko(luentakuvanLaatikko(sijainti), yli);
+
   const vapaa = sovita(marginaali, pohja, toivottuX);
   const kortinLaatikko = kortti && kortti.w > 0 && kortti.h > 0 ? kortti : null;
   if (!kortinLaatikko) return vapaa;
-  if (!laatikotOsuvat(luentakuvanLaatikko(vapaa), kortinLaatikko, marginaali)) return vapaa;
+  if (!laatikotOsuvat(varjo(vapaa), kortinLaatikko, marginaali)) return vapaa;
 
-  // 2. Kortin oikealle puolelle samaan korkeuteen.
+  /*
+   * 2. Kortin oikealle puolelle samaan korkeuteen (pakan ylitys mukaan).
+   *
+   * PUOLEN PIKSELIN HIUS: siirto lasketaan niin, että laatikon reuna
+   * osuu TÄSMÄLLEEN kortin reunaan vaadittuine väleineen, ja
+   * liukuluvun pyöristys päättäisi muuten kolikonheitolla, tulkitaanko
+   * kosketus törmäykseksi. Hius vie tulkinnan aina samalle puolelle.
+   */
   const oikealle = sovita(marginaali, pohja,
-    Math.max(toivottuX, kortinLaatikko.x + kortinLaatikko.w + marginaali + vapaa.leveys / 2));
-  if (!laatikotOsuvat(luentakuvanLaatikko(oikealle), kortinLaatikko, marginaali)) return oikealle;
+    Math.max(toivottuX, kortinLaatikko.x + kortinLaatikko.w + marginaali + 0.5
+      + vapaa.leveys * (0.5 + yli)));
+  if (!laatikotOsuvat(varjo(oikealle), kortinLaatikko, marginaali)) return oikealle;
 
   // 3. Kortin ali tai yli — kumpi kaista antaa isomman kuvan.
   const alle = sovita(kortinLaatikko.y + kortinLaatikko.h + marginaali, pohja, toivottuX);
