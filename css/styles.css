@@ -25592,6 +25592,9 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
 .livia-kasvot-pinta.livia-lentonayttamo { position:fixed; right:auto; bottom:auto; width:152px; height:304px; z-index:39; pointer-events:none; overflow:hidden; }
 .livia-lentonayttamo[hidden] { display:none; }
 .livia-lentonayttamo canvas { display:block; mix-blend-mode:normal!important; image-rendering:pixelated; }
+/* Lehti on Pululle sivurooli: piirto pienenee, mutta 48 px chatinappi ja sen
+   kosketusalue säilyvät. Muunnoksen kiintopiste on linnun jalkojen kohdalla. */
+.livia-svg-pulu.livia-lehdessa > span { transform:scale(.72); transform-origin:128px 304px; }
 
 /* Suuri Pulu jää chatin alaoikealle, myös näppäimistön avautuessa.
    Paikka tulee livia-chat-tila.js:n näkyvän ruudun mitoista. */

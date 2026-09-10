@@ -79,6 +79,17 @@ test('kertomus on yksi kaari: tunnukset, vaiheet ja lukemat kunnossa', () => {
   assert.equal(IHMISEN_MATKA_KERTOMUS.filter((j) => j.vaihe === 'hyppy').length, 1);
 });
 
+test('Ihmisen matkan tunnetagit ovat äänettömiä ja käyttävät julkista rajapintaa', async () => {
+  const { livianTunnetaginTiedot } = await import('../js/livia-tilanteet.js');
+  const tagit = IHMISEN_MATKA_KERTOMUS.filter((jakso) => jakso.tunne);
+  assert.ok(tagit.length >= 8, `tunnetageja vain ${tagit.length}`);
+  for (const jakso of tagit) {
+    assert.deepEqual(Object.keys(jakso.tunne).sort(), ['tunne', 'voimakkuus']);
+    assert.ok(livianTunnetaginTiedot(jakso.tunne), jakso.id);
+    assert.ok(!jakso.luenta.includes(`[${jakso.tunne.tunne}]`), `${jakso.id}: tagi vuoti luentaan`);
+  }
+});
+
 test('jokainen kohde on löytöpaikka ja jokainen alue nimetty rajaus', () => {
   for (const jakso of IHMISEN_MATKA_KERTOMUS) {
     if (jakso.kohde) {

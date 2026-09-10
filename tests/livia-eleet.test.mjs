@@ -9,13 +9,13 @@ function liviaTestYmparisto(t){
  let now=1000,id=0;const raf=new Map(),timers=new Map(),observers=[];
  class El extends EventTarget{
   children=[];hidden=false;isConnected=true;style={};textContent='';className='';attrs={};
-  classList={items:new Set(),add:(x)=>this.classList.items.add(x),remove:(x)=>this.classList.items.delete(x),contains:(x)=>this.classList.items.has(x)};
+  classList={items:new Set(),add:(...xs)=>xs.forEach(x=>this.classList.items.add(x)),remove:(...xs)=>xs.forEach(x=>this.classList.items.delete(x)),contains:(x)=>this.classList.items.has(x),toggle:(x,on)=>on?this.classList.items.add(x):this.classList.items.delete(x)};
   ctx={rects:[],clearRect(){this.rects=[];},fillRect(...r){this.rects.push(r);},imageSmoothingEnabled:true};
   append(e){this.children.push(e);e.parent=this;}remove(){this.isConnected=false;if(this.parent)this.parent.children=this.parent.children.filter(x=>x!==this);}
   setAttribute(n,v){this.attrs[n]=v;}getContext(){return this.ctx;}
   querySelector(){return this.children.find(x=>x.className==='pollo-odottaa'&&x.isConnected)||null;}
  }
- const doc=new EventTarget();doc.hidden=false;doc.body=new El();doc.createElement=()=>new El();doc.querySelector=()=>null;
+ const doc=new EventTarget(),lehti=new El();doc.hidden=false;doc.body=new El();doc.createElement=()=>new El();doc.querySelector=()=>null;doc.getElementById=id=>id==='arrival-dialog'?lehti:null;
  const button=new El(),virta=new El(),reduced=new EventTarget();reduced.matches=false;
  const set=(key,value)=>{const before=Object.getOwnPropertyDescriptor(globalThis,key);Object.defineProperty(globalThis,key,{configurable:true,writable:true,value});t.after(()=>before?Object.defineProperty(globalThis,key,before):delete globalThis[key]);};
  set('requestAnimationFrame',fn=>{raf.set(++id,fn);return id;});set('cancelAnimationFrame',id=>raf.delete(id));
@@ -26,7 +26,7 @@ function liviaTestYmparisto(t){
  const tick=ms=>{const end=now+ms;while(now<end){now=Math.min(end,now+20);const rs=[...raf.values()];raf.clear();rs.forEach(f=>f(now));for(const[k,v]of[...timers])if(v.at<=now){timers.delete(k);v.fn();}}};
  const notify=el=>observers.filter(o=>o.el===el).forEach(o=>o.fn());
  const pollo={doc,nappi:button,virta,auki:false,haeUi:()=>({})};
- return{pollo,button,virta,doc,reduced,El,tick,notify,raf,timers};
+ return{pollo,button,virta,doc,lehti,reduced,El,tick,notify,raf,timers};
 }
 
 test('pöllö odottaa poissa, vastaus palaa heti; puhe ja tuho eivät jätä ajastimia',t=>{
@@ -70,6 +70,14 @@ test('piirtopinta ulottuu napista viewportin oikeaan reunaan myös koon vaihtues
  assert.equal(surface.style.left,'218px');assert.equal(surface.style.width,'172px');assert.equal(canvas.style.width,'172px');
  right=340;e.doc.dispatchEvent(new Event('scroll'));assert.equal(surface.style.left,'188px');assert.equal(surface.style.width,'202px');
  c.toista('walkRight');e.tick(2300);assert.equal(canvas.innerHTML.includes('data-part="whole-bird"'),false);c.palaa();e.tick(2400);assert.ok(canvas.innerHTML.includes('data-part="whole-bird"'));
+});
+
+test('Pulu pienenee avoimessa lehdessä mutta chatinappi säilyy ennallaan',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const surface=e.doc.body.children[0];assert.equal(surface.classList.contains('livia-lehdessa'),false);
+ e.lehti.open=true;e.lehti.classList.add('lehti');e.notify(e.lehti);
+ assert.equal(surface.classList.contains('livia-lehdessa'),true);assert.equal(e.button.classList.contains('livia-kasvot-valmis'),true);
+ e.lehti.open=false;e.notify(e.lehti);assert.equal(surface.classList.contains('livia-lehdessa'),false);
 });
 
 test('tilannereaktiot eivät katkaise saapumista, puhetta tai jonota vanhoja kuvia',t=>{
