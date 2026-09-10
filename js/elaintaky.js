@@ -1,3 +1,4 @@
+import { merkitseLivianNosto } from './livia-tilanteet.js';
 /*
  * ELÄINTÄKY — maan eläin kartalla, kortti ja pieni punlöytö.
  *
@@ -638,6 +639,7 @@ export function avaaElaintaky(ui, iso) {
 
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
+  merkitseLivianNosto(kerros,{symboli:'elain',otsikko:taky.otsikko,teksti:taky.teksti});
   document.body.appendChild(kerros);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele eläinkortti' });

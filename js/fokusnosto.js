@@ -1,3 +1,4 @@
+import { merkitseLivianNosto } from './livia-tilanteet.js';
 /*
  * TÄKYNOSTO — kartan kohdemerkistä aukeava lunastuskortti.
  *
@@ -1000,6 +1001,7 @@ function avaaNostonKortti(ui, nosto) {
 
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
+  merkitseLivianNosto(kerros,nosto);
   document.body.appendChild(kerros);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kortti' });

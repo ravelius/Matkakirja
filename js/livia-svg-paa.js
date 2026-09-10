@@ -8,15 +8,16 @@ export function livianSvgPaa(s,{prefix='livia',lean=0,strength=.5}={}) {
  const nearX=61,farX=34+front*8,nearY=42+front*2,farY=46-front*2;
  let lid=f==='smug'?1.06:f==='bored'?1.45:f==='angry'?.5:shock?.05:manic?.02:shy?.45:.66;
  if(f==='yawn')lid=1.35;
+ if(['smile','wink'].includes(f))lid=.35;
  const lookX=f==='glance'?4:f==='disbelief'?-3:shy?3:f==='crumb'||f==='caught'?-3:0;
  const lookY=f==='up'?-3:f==='down'?3:f==='preen'?4:shy?2:0;
  const eyes=(x,y,rx,ry,far)=>{
-  const key=prefix+(far?'far':'near'),closed=sleepy||f==='happy'&&far;
-  const brow=f==='angry'?(far?.5:-.5):shy?(far?-.3:.48):f==='disbelief'?(far?.1:-.5):far?.24:-.28;
+  const key=prefix+(far?'far':'near'),joy=['smile','grin','wink'].includes(f),closed=sleepy||f==='grin'||['happy','wink'].includes(f)&&far;
+  const brow=joy?0:f==='angry'?(far?.5:-.5):shy?(far?-.3:.48):f==='disbelief'?(far?.1:-.5):far?.24:-.28;
   const l=closed?2.2:lid+(f==='disbelief'?(far?-.55:.55):0),edge=y-ry+ry*l;
   const px=x+lookX,py=y+lookY,pr=manic?1.6:shock?2:far?2.1:2.9;
   const heart=`M${px} ${py+4}C${px-9} ${py-1} ${px-5} ${py-8} ${px} ${py-4}C${px+5} ${py-8} ${px+9} ${py-1} ${px} ${py+4}Z`;
-  return `<g><defs><clipPath id="${key}"><ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}"/></clipPath></defs><g clip-path="url(#${key})"><ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="#b8b8a3"/><ellipse cx="${x}" cy="${y+.5}" rx="${rx-1.3}" ry="${ry-1}" fill="${manic?'#dfac51':'#cf9652'}"/>${f==='love'?`<path d="${heart}" fill="#975d65"/>`:`<ellipse cx="${px}" cy="${py}" rx="${pr}" ry="${pr*1.2}" fill="#263840"/><circle cx="${px-.8}" cy="${py-1.2}" r=".8" fill="#eeeadd"/>`}<path d="M${x-rx-2} ${y-ry-2}H${x+rx+2}V${edge+rx*brow}Q${x} ${edge} ${x-rx-2} ${edge-rx*brow}Z" fill="${far?'#92a0a7':'#7b8d97'}"/></g><path d="M${x-rx} ${closed?y:edge-rx*brow}Q${x} ${closed?y+2:edge+1} ${x+rx} ${closed?y:edge+rx*brow}" fill="none" stroke="#536a76" stroke-width="1.3" stroke-linecap="round"/></g>`;
+  return `<g><defs><clipPath id="${key}"><ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}"/></clipPath></defs><g clip-path="url(#${key})"><ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="#b8b8a3"/><ellipse cx="${x}" cy="${y+.5}" rx="${rx-1.3}" ry="${ry-1}" fill="${manic?'#dfac51':'#cf9652'}"/>${f==='love'?`<path d="${heart}" fill="#975d65"/>`:`<ellipse cx="${px}" cy="${py}" rx="${pr}" ry="${pr*1.2}" fill="#263840"/><circle cx="${px-.8}" cy="${py-1.2}" r=".8" fill="#eeeadd"/>`}<path d="M${x-rx-2} ${y-ry-2}H${x+rx+2}V${edge+rx*brow}Q${x} ${edge} ${x-rx-2} ${edge-rx*brow}Z" fill="${far?'#92a0a7':'#7b8d97'}"/></g><path d="M${x-rx} ${closed?y:edge-rx*brow}Q${x} ${closed?(joy?y-5:y+2):edge+1} ${x+rx} ${closed?y:edge+rx*brow}" fill="none" stroke="#536a76" stroke-width="1.3" stroke-linecap="round"/></g>`;
  };
  const mouth=s.mouth||f;
  const gape=mouth==='yawn'?1:mouth==='shock'?.9:mouth==='talk'?.7:mouth==='talkSmall'?.3:['chew','chewManic'].includes(mouth)?.2+(n%2)*.2:0;
@@ -33,6 +34,8 @@ export function livianSvgPaa(s,{prefix='livia',lean=0,strength=.5}={}) {
  ${puff||chew?`<ellipse cx="38" cy="66" rx="${puff?12+strength*3:8+n%2}" ry="10" fill="#a3b0b5"/><ellipse cx="72" cy="65" rx="${puff?12+strength*3:7+n%2}" ry="11" fill="#7b919c"/>`:''}
  ${eyes(farX,farY,(shock?7:5.2)+front*3,shock?10:6.6,true)}${eyes(nearX,nearY,manic?12.5:shock?12:10.2,shock?14:manic?12:10,false)}
  ${beak}
+ ${['smile','grin','wink'].includes(f)?'<path data-part="smile" d="M24 67Q38 71 46 62" fill="none" stroke="#334e5b" stroke-width="1.7" stroke-linecap="round"/>':''}
+ ${s.glasses>0?`<g data-part="glasses" opacity="${Math.min(1,s.glasses*3)}" transform="translate(0 ${(1-s.glasses)*42})" fill="none" stroke="#655a48" stroke-width="2.2"><ellipse cx="${farX}" cy="${farY}" rx="8.5" ry="9"/><ellipse cx="${nearX}" cy="${nearY}" rx="13" ry="12"/><path d="M${farX+8.5} ${farY-2}Q47 37 ${nearX-13} ${nearY-2}M${nearX+13} ${nearY-3}l8-5M${farX-8.5} ${farY-3}l-4-3"/><path d="M${nearX-6} ${nearY-6}l4-2" stroke="#eee9d9" stroke-width="1.5"/></g>`:''}
  ${shy?'<path d="M48 58l5 1M72 57l4 1" stroke="#b28d89" stroke-width="2.5" stroke-linecap="round"/>':''}
  ${['crumb','caught','chew','chewManic'].includes(f)?'<path d="M26 67l3-1 1 3-3 1Z M39 71l2 1-1 2-2-1Z" fill="#c89653"/>':''}
  </g>`;

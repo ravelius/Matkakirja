@@ -1,3 +1,4 @@
+import { ilmoitaLivianTilanne } from './livia-tilanteet.js';
 /*
  * Visan koneisto: tehtävä- ja kaksintaistelukortit, tiimalasi ja
  * vastausten käsittely. Siirretty js/ui.js:stä 17.8.2026 (remontin
@@ -100,6 +101,14 @@ function pelkistaKysymysvaihe(ui, paalle) {
   ui.quizKohtaaminen.hidden = true;
   if (ui.quizVaroitus) ui.quizVaroitus.hidden = true;
   if (ui.quizKohtaaminenKuvateksti) ui.quizKohtaaminenKuvateksti.hidden = true;
+}
+
+const liviaVisaSulut=new WeakMap();
+function liviaVisaJalkiele(ui,oikein){
+ const dialog=ui.quizDialog;if(!dialog?.addEventListener)return;
+ const vanha=liviaVisaSulut.get(dialog);if(vanha)dialog.removeEventListener('close',vanha);
+ const valmis=()=>{liviaVisaSulut.delete(dialog);if(!ui.dead)ilmoitaLivianTilanne(oikein?'success':'retry');};
+ liviaVisaSulut.set(dialog,valmis);dialog.addEventListener('close',valmis,{once:true});
 }
 
 export function renderQuiz(ui) {
@@ -636,6 +645,7 @@ export function answerDuelUi(ui, index) {
       if (!duel) return;
       sfx.play(duel.right ? 'correct' : 'robber');
       natiiviVastaus(Boolean(duel.right));
+      liviaVisaJalkiele(ui,Boolean(duel.right));
       renderQuiz(ui);
       await ui.wait(ui.reducedMotion ? 200 : 900);
       ui.revealShownFor = duel;
@@ -761,6 +771,7 @@ export function timeUp(ui) {
         sfx.play('timeout');
         // Aika loppui = väärä vastaus: putki katkeaa.
         natiiviVastaus(false);
+      liviaVisaJalkiele(ui,false);
         renderQuiz(ui);
         await ui.wait(ui.reducedMotion ? 200 : 900);
         ui.revealShownFor = duel;
@@ -777,6 +788,7 @@ export function timeUp(ui) {
       if (!quiz) return;
       sfx.play('timeout');
       natiiviVastaus(false);
+      liviaVisaJalkiele(ui,false);
       renderQuiz(ui);
       await ui.wait(ui.reducedMotion ? 200 : 900);
       ui.revealShownFor = quiz;
@@ -800,6 +812,7 @@ export function answerQuiz(ui, index) {
       sfx.play(quiz.right ? 'correct' : 'wrong');
       // Tärähdys ja oikeiden vastausten putki (iOS-kuori).
       natiiviVastaus(Boolean(quiz.right));
+      liviaVisaJalkiele(ui,Boolean(quiz.right));
       renderQuiz(ui);
       await ui.wait(ui.reducedMotion ? 200 : 850);
       if (quiz.right && quiz.found) await ui.playTokenReveal(quiz.found);
