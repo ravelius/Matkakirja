@@ -2049,12 +2049,31 @@ const TARKKUUS_JUMI_MS = 5000;
  * puheen aikana se palutuu liikkeen jälkeen. Puheen jälkeen se voi
  * pysyä piilossa."*
  *
- * Rauhoitusaika on se aika, jonka kartan on oltava liikkumatta ennen
- * kuin kortti nousee takaisin auki. Liian lyhyt napsauttaisi kortin
- * esiin kesken vierityksen, liian pitkä jättäisi merkinnän piiloon
- * puoleksi luennaksi.
+ * KORTTI PALAA HETI, EI RAUHOITUSAJAN JÄLKEEN (omistajan tarkennus
+ * 10.9.2026 klo 10.50, sanatarkasti: *"matkakirja saisi tulla heti
+ * takaisin näytölle kun kartan liike loppuu"*). Ensimmäinen versio
+ * odotti puoli sekuntia sormen noston jälkeen, ja se puoli sekuntia
+ * näytti siltä, että teksti on poissa.
+ *
+ * KAKSI MITTAA, KOSKA ELEITÄ ON KAHTA LAJIA:
+ *
+ *   1. SORMI JA HIIRI PÄÄTTYVÄT TAPAHTUMAAN (pointerup, pointercancel,
+ *      touchend). Silloin kelloa ei tarvita lainkaan: paluu ajastetaan
+ *      teknisellä viiveellä, joka vain päästää selaimen oman
+ *      tapahtumajonon (click, liu'un aloitus) edelle.
+ *   2. RULLA JA NIPISTYS EIVÄT PÄÄTY MIHINKÄÄN. Niistä ei tule
+ *      pointerup-tapahtumaa, joten ainoa merkki eleen lopusta on
+ *      hiljaisuus — lyhyt, jottei kortti jää piiloon, mutta riittävä,
+ *      ettei kortti napsahtele rullan naksujen välissä.
  */
-const KORTIN_PALAUTUS_MS = 500;
+const KORTIN_PALAUTUS_MS = 40;
+const KORTIN_HILJAISUUS_MS = 150;
+/*
+ * KELLUVAT KUVAPINNAT KARTAN PÄÄLLÄ (luentakuva pakkoineen ja kuvan
+ * suurennos). Niiden napautus on kuvan selaamista eikä kartan
+ * liikuttamista: kortti ei kutistu eikä kuva pienene.
+ */
+const KUVAPAKAN_PINNAT = '.fokusvirta-luentakuva, .fokuszoom';
 /*
  * Rasterointiruudun yläraja laudan yksiköissä (ks. taydennaTaide).
  *
@@ -2909,7 +2928,19 @@ export class UI {
      * Kuuntelija on kartta-alueella, jonka päällä kortit vain
      * kelluvat, joten kortin oma napautus ei osu tähän.
      */
-    this.mapPane.addEventListener('click', () => this.kutistaKortinLiikkeesta());
+    /*
+     * KUVAPAKKA EI OLE KARTAN LIIKETTÄ (omistaja 10.9.2026: *"matkakirja
+     * ei saisi hävitä näkyvistä jos käyttäjä klikkaa kuvapakasta toisen
+     * kuvan näkyville"*). Luentakuvan paneeli ja kuvan suurennos
+     * kelluvat karttapinnan päällä, joten niiden napautus kuplii tänne
+     * asti — vartio on tässä, koska tämä on se kohta, joka kutistaa
+     * kortin. Sama lista kuin luentakuvan omalla pienennysvartiolla
+     * (js/fokusvirta.js kytkeLuentakuvanPienennys).
+     */
+    this.mapPane.addEventListener('click', (tapahtuma) => {
+      if (tapahtuma.target?.closest?.(KUVAPAKAN_PINNAT)) return;
+      this.kutistaKortinLiikkeesta();
+    });
 
     /*
      * ELEEN LOPPU ON KORTIN PALUUN MERKKI (omistaja 10.9.2026).
@@ -2927,7 +2958,16 @@ export class UI {
       if (this.kortinPalautusAjastin) this.ajastaKortinPalautus();
     };
     const osoitinAlas = () => { this.osoitinAlhaalla = true; liikeVirkisti(); };
-    const osoitinYlos = () => { this.osoitinAlhaalla = false; liikeVirkisti(); };
+    /*
+     * SORMEN NOSTO ON ELEEN LOPPU, JA KORTTI PALAA HETI (omistaja
+     * 10.9.2026). Tässä yhdessä kohdassa tiedetään varmasti, että ele
+     * on ohi — hiljaisuutta ei tarvitse odottaa, vain tapahtumajono
+     * päästetään edelle (KORTIN_PALAUTUS_MS).
+     */
+    const osoitinYlos = () => {
+      this.osoitinAlhaalla = false;
+      if (this.kortinPalautusAjastin) this.ajastaKortinPalautus(KORTIN_PALAUTUS_MS);
+    };
     document.addEventListener('pointerdown', osoitinAlas, true);
     document.addEventListener('pointermove', liikeVirkisti, true);
     document.addEventListener('pointerup', osoitinYlos, true);
@@ -12515,16 +12555,28 @@ export class UI {
   }
 
   /**
-   * Ajastaa kortin paluun auki, kun kartta rauhoittuu.
+   * Ajastaa kortin paluun auki eleen päätyttyä.
    *
-   * Ajastin nollataan jokaisesta uudesta kartan eleestä
-   * (merkitseKartanEle), joten rauhoitusaika lasketaan aina VIIMEISESTÄ
-   * liikkeestä. Kesken olevaa elettä odotetaan lisäksi erikseen:
-   * sormi voi levätä liikkumatta kartalla, eikä kortti saa nousta
-   * kesken raahauksen tai liu'un.
+   * `viive` on oletuksena rullan ja nipistyksen lyhyt hiljaisuus
+   * (KORTIN_HILJAISUUS_MS); sormen nosto antaa tilalle teknisen
+   * viiveen (KORTIN_PALAUTUS_MS), koska silloin eleen loppu on jo
+   * tiedossa eikä hiljaisuutta tarvitse odottaa. Kesken olevaa elettä
+   * odotetaan lisäksi erikseen: sormi voi levätä liikkumatta
+   * kartalla, eikä kortti saa nousta kesken raahauksen tai liu'un.
    */
-  ajastaKortinPalautus() {
+  ajastaKortinPalautus(viive = KORTIN_HILJAISUUS_MS) {
+    /*
+     * NOPEAMPI MAALI VOITTAA. Sormen nosto ajastaa paluun heti
+     * (KORTIN_PALAUTUS_MS), mutta samasta eleestä tulee vielä yksi
+     * "kartan ele" -merkintä perässä (js/kartta.js irrota →
+     * merkitseKartanEle) — ilman tätä vertailua se lykkäisi juuri
+     * ajastetun paluun takaisin hiljaisuuden päähän, ja kortti
+     * näyttäisi taas viipyvän.
+     */
+    const maali = Date.now() + Math.max(0, viive);
+    if (this.kortinPalautusAjastin && (this.kortinPalautusMaali ?? 0) <= maali) return;
     clearTimeout(this.kortinPalautusAjastin);
+    this.kortinPalautusMaali = maali;
     this.kortinPalautusAjastin = setTimeout(() => {
       this.kortinPalautusAjastin = null;
       // Sormi tai liuku yhä kartalla: odotetaan vielä yksi jakso.
@@ -12532,16 +12584,17 @@ export class UI {
         this.ajastaKortinPalautus();
         return;
       }
-      // Luenta ehti loppua rauhoitusajan aikana: kortti jää lapuksi.
+      // Luenta ehti loppua odotuksen aikana: kortti jää lapuksi.
       if (!this.luentaKesken()) return;
       this.asetaPaivakirjanKoko(false);
-    }, KORTIN_PALAUTUS_MS);
+    }, Math.max(0, viive));
   }
 
   /** Peruu odottavan paluun (luenta loppui, tai uusi merkintä tuli). */
   peruKortinPalautus() {
     clearTimeout(this.kortinPalautusAjastin);
     this.kortinPalautusAjastin = null;
+    this.kortinPalautusMaali = 0;
   }
 
   /**

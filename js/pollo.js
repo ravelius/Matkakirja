@@ -3066,6 +3066,13 @@ class Pollo {
   /**
    * Ylivuodon merkki kehykselle: pino on täynnä, joten yläreuna
    * häivytetään (css mask-image) ja loput jäävät vieritettäviksi.
+   *
+   * ENSIMMAISEN KUPLAN YLAREUNAA EI HAIVYTETA (omistaja 10.9.2026:
+   * *"pulun puhekuplan yläreunaan ei saisi tulla varjostusta kun on
+   * kyse ensimmäisestä kuplasta"*). Yksin jäävä kupla voi olla kattoa
+   * korkeampi, jolloin ylivuoto on totta ja maski söisi juuri sen
+   * ensimmäiset rivit. Luokka .pollo-kuplapino-yksin nollaa häivytyksen
+   * (css), ja se palaa heti kun toinen kupla saapuu pinoon.
    */
   paivitaYlivuoto() {
     const pino = this.pino;
@@ -3073,6 +3080,7 @@ class Pollo {
     // Piilotettu kehys mittaa nollaa: silloin ei ole ylivuotoa.
     const yli = !this.pinoKehys.hidden && (pino.scrollHeight ?? 0) - (pino.clientHeight ?? 0) > 1;
     this.pinoKehys.classList.toggle('pollo-kuplapino-yli', yli);
+    pino.classList.toggle('pollo-kuplapino-yksin', this.pinonKuplat().length === 1);
   }
 
   /**

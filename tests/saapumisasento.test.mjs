@@ -33,6 +33,7 @@ import {
   saapumisenPallonKohta, luentakuvanSijainti, luentakuvanLaatikko,
   laatikotOsuvat, luentakuvanPerusleveys, laudaltaRuudulle, ruudultaLaudalle,
   onRaahaus, LUENTAKUVAN_SIVUSIIRTO, LUENTAKUVAN_VAHIN_PX,
+  LUENTAKUVAN_VALI_PX, KAUPUNGIN_LAATTA_PX,
 } from '../js/saapumisasento.js';
 
 /** Ruudut, joilla jokainen sääntö on voimassa (tilaus: eri ruutukoot). */
@@ -131,8 +132,16 @@ test('luentakuva nousee kaupungin yläpuolelle ja keskilinja siirtyy oikealle', 
       perusleveys: luentakuvanPerusleveys(ruutu.w, ruutu.w),
       lisakorkeus: 44,
     });
-    assert.ok(sijainti.y < kaupunki.y,
-      `${ruutu.nimi}: kuvan alareuna ei ole kaupungin pisteen yläpuolella`);
+    /*
+     * KUVA NOUSEE LAATAN YLÄPUOLELLE (omistaja 10.9.2026, sanatarkasti:
+     * *"kuva saisi tulla ylemmäs, ei näin kiinni kaupungin laattaa"*).
+     * Alareunan on jäätävä vähintään laatan korkeuden ja ilmaraon
+     * verran kaupungin pisteen yläpuolelle — kaikilla ruutukoilla.
+     */
+    const varaLaatalle = KAUPUNGIN_LAATTA_PX + LUENTAKUVAN_VALI_PX;
+    assert.ok(sijainti.y <= kaupunki.y - varaLaatalle,
+      `${ruutu.nimi}: kuvan alareuna ${sijainti.y.toFixed(1)} on liian lähellä `
+      + `kaupungin laattaa (piste ${kaupunki.y.toFixed(1)}, vaadittu vara ${varaLaatalle})`);
     assert.ok(sijainti.x > kaupunki.x,
       `${ruutu.nimi}: kuvan keskilinja ei ole kaupungista oikealle`);
     // Siirto 10–20 % näkymän leveydestä — tai reunan pakottama vähemmän.
@@ -216,6 +225,34 @@ test('kallistettu kuva jättää alakulmalleen tilan kaupungin yläpuolelle', ()
   // Alakulma jää yhä kaupungin pisteen yläpuolelle.
   assert.ok(vino.y + kulmavara <= kaupunkiRuudulla(ruutu).y,
     'kallistettu alakulma laskeutuu kaupungin pisteen päälle');
+});
+
+test('laatan vara on laatan korkeus ja ilmarako — ei yhtä lukua', () => {
+  /*
+   * Omistajan kaappaus 10.9.2026 (Marseille): kuvatekstilappu lepäsi
+   * suoraan kaupungin laatan päällä. Väli lasketaan siksi laatan
+   * korkeudesta ja sen päälle jäävästä ilmaraosta, ja sen on
+   * SEURATTAVA laatan kokoa — yksi kiinteä luku vanhenisi heti, kun
+   * laatan mitta muuttuu (js/ui.js city-ellipsi).
+   */
+  assert.ok(KAUPUNGIN_LAATTA_PX > 0 && LUENTAKUVAN_VALI_PX >= 12,
+    'laatan korkeus tai ilmarako puuttuu');
+  const ruutu = { w: 1600, h: 1000 };
+  const kaupunki = kaupunkiRuudulla(ruutu);
+  const yhteiset = {
+    paneW: ruutu.w,
+    paneH: ruutu.h,
+    kaupunki,
+    kortti: null,
+    perusleveys: 200,
+    lisakorkeus: 44,
+  };
+  const oletus = luentakuvanSijainti(yhteiset);
+  const isompiLaatta = luentakuvanSijainti({ ...yhteiset, laatta: KAUPUNGIN_LAATTA_PX + 30 });
+  assert.equal(Math.round(kaupunki.y - oletus.y), KAUPUNGIN_LAATTA_PX + LUENTAKUVAN_VALI_PX,
+    'kuvan alareuna ei jätä laatalle sen korkeutta ja ilmarakoa');
+  assert.equal(Math.round(oletus.y - isompiLaatta.y), 30,
+    'isompi laatta ei nostanut kuvaa saman verran ylemmäs');
 });
 
 test('perusleveys noudattaa css:n porrasta (900 px)', () => {

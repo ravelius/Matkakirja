@@ -8,10 +8,23 @@
  * liikuttaa niin se katoaa pieneksi mutta puheen aikana se palutuu
  * liikkeen jälkeen. Puheen jälkeen se voi pysyä piilossa."*
  *
+ * TARKENNUS 10.9.2026 klo 10.50 (Raamattu, "PULUN KUVALLE KUVATEKSTI,
+ * PAKAN ALEMMAN KUVAN NAPAUTUS NOSTAA SEN PAALLE, MATKAKIRJA PALAA HETI
+ * JA PYSYY PAKKAA SELATTAESSA, KUVA YLEMMAS LAATASTA"), sanatarkasti:
+ * *"matkakirja saisi tulla heti takaisin naytolle kun kartan liike
+ * loppuu."* Rauhoitusaika ei siis ole enaa puoli sekuntia:
+ *
+ *   - SORMI JA HIIRI paattyvat tapahtumaan (pointerup/pointercancel/
+ *     touchend), ja kortti palaa heti — vain tekninen viive
+ *     (KORTIN_PALAUTUS_MS, enintaan 50 ms) paastaa selaimen oman
+ *     tapahtumajonon edelle;
+ *   - RULLA JA NIPISTYS eivat paaty mihinkaan, joten niille jaa lyhyt
+ *     hiljaisuus (KORTIN_HILJAISUUS_MS).
+ *
  * Nelja asiaa, jotka eivat nay diffista eivatka ruutukaappauksesta:
  *
  *   1. LUENNAN AIKANA KUTISTUS ON VALIAIKAINEN. Kortti palaa auki, kun
- *      kartta on ollut rauhassa rauhoitusajan.
+ *      kartta on ollut rauhassa.
  *   2. LUENNAN JALKEEN KUTISTUS JAA VOIMAAN. Tama on omistajan
  *      nimenomainen jatko-osa: puheen jalkeen kortti saa pysya
  *      piilossa, eika lappu saa napsahdella takaisin esiin.
@@ -35,8 +48,9 @@ import { UI } from '../js/ui.js';
 
 const UI_LAHDE = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
 
-/** Rauhoitusaika luetaan lahteesta: testi ei saa ajautua koodista. */
-const RAUHOITUS_MS = Number(UI_LAHDE.match(/const KORTIN_PALAUTUS_MS = (\d+);/)?.[1]);
+/** Molemmat mitat luetaan lahteesta: testi ei saa ajautua koodista. */
+const PALAUTUS_MS = Number(UI_LAHDE.match(/const KORTIN_PALAUTUS_MS = (\d+);/)?.[1]);
+const RAUHOITUS_MS = Number(UI_LAHDE.match(/const KORTIN_HILJAISUUS_MS = (\d+);/)?.[1]);
 
 const odota = (ms) => new Promise((valmis) => { setTimeout(valmis, ms); });
 
@@ -86,19 +100,40 @@ const pieni = (ui) => ui.factCard.classList.contains('pieni');
 
 /* ---------------------------------------------------------------- */
 
-test('luennan aikana kartan liike kutistaa kortin vain rauhoitusajaksi', async () => {
+test('paluu on tekninen viive, ei rauhoitusaika (omistaja 10.9.2026)', () => {
+  assert.ok(PALAUTUS_MS >= 0 && PALAUTUS_MS <= 50,
+    `kortti ei palaa heti: KORTIN_PALAUTUS_MS on ${PALAUTUS_MS} ms`);
+  assert.ok(RAUHOITUS_MS > PALAUTUS_MS && RAUHOITUS_MS <= 200,
+    `rullan hiljaisuus ${RAUHOITUS_MS} ms ei ole lyhyt hiljaisuus`);
+});
+
+test('luennan aikana kortti palaa auki HETI eleen paatyttya', async () => {
   const ui = teeUi(soivaLuenta());
   assert.equal(ui.luentaKesken(), true, 'soiva luenta ei nay kesken olevana');
 
   ui.kutistaKortinLiikkeesta();
   assert.equal(pieni(ui), true, 'kartan liike ei kutistanut korttia lapuksi');
 
-  // Kesken rauhoitusajan kortti on yha lappu: se ei saa napsahdella.
-  await odota(RAUHOITUS_MS / 2);
-  assert.equal(pieni(ui), true, 'kortti palasi auki kesken rauhoitusajan');
+  // Sormi kartalla: kortti pysyy lappuna niin kauan kuin ele jatkuu.
+  ui.osoitinAlhaalla = true;
+  await odota(RAUHOITUS_MS * 2);
+  assert.equal(pieni(ui), true, 'kortti palasi auki kesken eleen');
 
-  await odota(RAUHOITUS_MS);
-  assert.equal(pieni(ui), false, 'kortti ei palannut auki luennan aikana');
+  // Sormen nosto ajastaa paluun teknisella viiveella (js/ui.js
+  // osoitinYlos): kortti on auki heti eika vasta hiljaisuuden paasta.
+  ui.osoitinAlhaalla = false;
+  ui.ajastaKortinPalautus(PALAUTUS_MS);
+  await odota(PALAUTUS_MS + 30);
+  assert.equal(pieni(ui), false, 'kortti ei palannut auki heti eleen loputtua');
+});
+
+test('rulla ja nipistys: kortti palaa lyhyen hiljaisuuden paasta', async () => {
+  const ui = teeUi(soivaLuenta());
+  ui.kutistaKortinLiikkeesta();
+  assert.equal(pieni(ui), true);
+
+  await odota(RAUHOITUS_MS * 2);
+  assert.equal(pieni(ui), false, 'kortti ei palannut auki hiljaisuuden jalkeen');
 });
 
 test('luennan jalkeen kutistunut kortti jaa lapuksi', async () => {
@@ -135,7 +170,7 @@ test('kartan ele kesken lykkaa paluuta, ja sormen nosto paastaa sen lapi', async
   assert.equal(pieni(ui), true, 'kortti nousi kesken raahauksen');
 
   ui.kartanRaahaus = false;        // sormi irti
-  await odota(RAUHOITUS_MS * 2);
+  await odota(RAUHOITUS_MS * 3);
   assert.equal(pieni(ui), false, 'kortti ei palannut auki eleen paatyttya');
 });
 
@@ -165,7 +200,7 @@ test('kartan kutistuskohdat kayttavat yhteista palautusmekanismia', () => {
   assert.doesNotMatch(kartta, /this\.ui\.asetaPaivakirjanKoko\(true\)/,
     'kartta kutistaa kortin palautusmekanismin ohi');
 
-  assert.match(UI_LAHDE, /mapPane\.addEventListener\('click', \(\) => this\.kutistaKortinLiikkeesta\(\)\)/,
+  assert.match(UI_LAHDE, /mapPane\.addEventListener\('click', \(tapahtuma\) => \{[\s\S]{0,240}kutistaKortinLiikkeesta\(\)/,
     'kartan napautus ei kulje palautusmekanismin kautta');
   // Uusi merkinta nollaa ajastimen (uusiFactKey).
   const uusi = UI_LAHDE.match(/uusiFactKey\(key\) \{[\s\S]*?\n  \}/)?.[0] ?? '';
@@ -177,6 +212,16 @@ test('kartan kutistuskohdat kayttavat yhteista palautusmekanismia', () => {
     assert.ok(UI_LAHDE.includes(`document.addEventListener('${tapahtuma}'`),
       `eleen loppua ei kuunnella: ${tapahtuma}`);
   }
+  // Sormen nosto ajastaa paluun teknisella viiveella, ei hiljaisuudella.
+  assert.match(UI_LAHDE, /this\.ajastaKortinPalautus\(KORTIN_PALAUTUS_MS\)/,
+    'eleen loppu ei ajasta kortin paluuta heti');
+  // Kuvapakan napautus ei ole kartan liiketta (omistaja 10.9.2026).
+  assert.match(UI_LAHDE, /KUVAPAKAN_PINNAT = '\.fokusvirta-luentakuva, \.fokuszoom'/,
+    'kuvapakan pintoja ei ole rajattu kartan napautuksesta');
+  const kartta2 = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
+  assert.match(kartta2, /KELLUVA_UI[\s\S]{0,200}fokusvirta-luentakuva/,
+    'luentakuva pakkoineen ei ole kartan kelluva pinta');
+
   const lauta = readFileSync(new URL('../js/pallolauta/lauta.js', import.meta.url), 'utf8');
   assert.match(lauta, /ui\.kutistaKortinLiikkeesta\?\.\(\)/,
     'pallolaudan veto kutistaa kortin palautusmekanismin ohi');

@@ -160,7 +160,8 @@ import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
  * takaisinkutsuina, jottei kehää synny (js/pulucam.js).
  */
 import {
-  naytaPuluCamPakka, piilotaPuluCamPakka, pulunKuvat, puluCamMerkki, puluCamPakassa,
+  naytaPuluCamPakka, nostaPuluCamKortti, piilotaPuluCamPakka, pulunKuvat, puluCamMerkki,
+  puluCamPakassa, PULUCAM_POHJA,
 } from './pulucam.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
@@ -1948,7 +1949,15 @@ function rakennaLuentakuvanPaneeli(ui, city, kuva) {
    * päättyisi suurennokseen. Lippu nollautuu heti, joten seuraava
    * napautus toimii normaalisti.
    */
-  nappi.addEventListener('click', () => {
+  nappi.addEventListener('click', (tapahtuma) => {
+    /*
+     * NAPAUTUS EI OLE KARTAN LIIKETTÄ (omistaja 10.9.2026: *"matkakirja
+     * ei saisi hävitä näkyvistä jos käyttäjä klikkaa kuvapakasta toisen
+     * kuvan näkyville"*). Klikki kuplii karttapinnalle asti, jossa se
+     * kutistaisi matkakirjakortin (js/ui.js mapPane click) — pakan
+     * selaus ei saa viedä tekstiä pelaajan silmistä.
+     */
+    tapahtuma?.stopPropagation?.();
     const naytto = ui.luentakuvaAnkkuri;
     if (naytto?.paneeli === paneeli && naytto.raahattu) { naytto.raahattu = false; return; }
     /*
@@ -2060,6 +2069,13 @@ function pulucamKaruselli(ui, city, pohjakuva) {
  */
 function avaaLuentakuvanKaruselli(ui, city, kuva, nappi) {
   if (!puluCamPakassa(ui)) { avaaSuurennos(ui, [kuva], 0, () => nappi); return; }
+  /*
+   * ISOISÄN KUVA ON PAKASSA YKSI KORTTI MUIDEN JOUKOSSA (omistaja
+   * 10.9.2026). Alla ollessaan sen näkyvän reunan napautus NOSTAA sen
+   * päälle — karuselli aukeaa vasta päällimmäisen kortin napautuksesta,
+   * ja silloin siitä samasta kuvasta.
+   */
+  if (nostaPuluCamKortti(ui, PULUCAM_POHJA)) return;
   const { lista, pulusta } = pulucamKaruselli(ui, city, kuva);
   avaaSuurennos(ui, lista, 0, () => nappi, { pulunKuvasta: pulusta });
 }
@@ -2103,12 +2119,27 @@ export function naytaPulunKuvapakka(ui, city) {
     osoite: (k) => kuvanOsoite(k, LUENTAKUVAN_PX),
     vara: (k) => kuvanVara(k, LUENTAKUVAN_PX),
     /*
-     * NAPAUTUS AVAA KARUSELLIN ISOISÄN KUVASTA. Ankkuriksi annetaan
-     * napautettu kortti, jotta kasvu lähtee siitä kuvasta, jota pelaaja
-     * kosketti — myös silloin, kun karuselli avautuu isoisän kuvaan.
+     * ISOISÄN KUVA PAKAN KORTTINA (omistaja 10.9.2026): pakan piirtäjä
+     * saa sen elementin ja kuvaolion, jotta se voi nostaa sen muiden
+     * päälle ja kirjoittaa sen lyhyen kuvatekstin lappuun. Pohjaton
+     * pakka (kaupungilla ei ole luentakuvaa) ei anna kumpaakaan —
+     * paikanvaraajaa ei voi nostaa eikä selittää.
      */
-    avaa: (i) => avaaSuurennos(ui, lista, 0, () => ui.pulucamPakka?.kortit?.[i] ?? pohja,
-      { pulunKuvasta: pulusta }),
+    pohjakortti: pohjakuva ? paneeli.querySelector?.('.fokusvirta-kuva') ?? null : null,
+    pohjakuva,
+    /*
+     * KARUSELLI ALKAA SIITÄ KUVASTA, JOKA OLI PÄÄLLIMMÄISENÄ
+     * (omistajan täsmennys 10.9.2026, sanatarkasti: *"kun kuvaa
+     * klikkaa, niin juuri se kuva pitää tulla näkyviin täysikokoisena.
+     * eli riippuen siitä mikä kuva on pakan päällimmäisenä pitää aueta
+     * ensimmäisenä karusellissa täydessä koossa"*). Lista on yhä sama
+     * ja samassa järjestyksessä (isoisä ensin) — vain aloituskohta
+     * seuraa pelaajan valintaa.
+     */
+    /* Ankkuriksi napautettu kortti: kasvu lähtee siitä kuvasta, jota
+       pelaaja kosketti. */
+    avaa: (i) => avaaSuurennos(ui, lista, pulusta + i,
+      () => ui.pulucamPakka?.kortit?.[i] ?? pohja, { pulunKuvasta: pulusta }),
     /*
      * LYHYT KUVATEKSTI KERTOO PÄÄLLIMMÄISESTÄ KUVASTA (omistaja
      * 9.9.2026 klo 18.50). Isoisän kuvan teksti jää pakan alle yhdessä
@@ -2172,6 +2203,17 @@ const LUENTAKUVAN_TARKISTUSVALI = 12;
  * heti ensimmäisen ladonnan jälkeen.
  */
 const LUENTAKUVAN_TEKSTIVARA = 52;
+
+/**
+ * PAKAN ALIN KORTTI ULOTTUU KUVAN ALAPUOLELLE.
+ *
+ * PULU-CAM-pakan asennot siirtävät kortteja enintään 10 % kortin
+ * omasta koosta (js/pulucam.js PULUCAM_ASENNOT), ja alaspäin siirtyvä
+ * kortti roikkuu siis kuvan alareunan alla. Ilman tätä varaa juuri se
+ * kortti laskeutuisi kaupungin laatalle, vaikka paneeli itse jää sen
+ * yläpuolelle (omistaja 10.9.2026: *"kuva saisi tulla ylemmäs"*).
+ */
+const PAKAN_YLITYS_OSUUS = 0.10;
 
 /*
  * PALLON OMA PROJEKTIO ENNEN ARVIOTA (mitattu Chromiumilla 9.9.2026).
@@ -2275,6 +2317,8 @@ function mitoitaLuentakuva(naytto) {
   const suhde = img?.naturalWidth > 0 && img?.naturalHeight > 0
     ? img.naturalHeight / img.naturalWidth
     : LUENTAKUVAN_KUVASUHDE;
+  /* Pakan alin kortti roikkuu kuvan alapuolella (ks. PAKAN_YLITYS_OSUUS). */
+  const pakanYlitys = (korkeus) => (puluCamPakassa(ui) ? korkeus * PAKAN_YLITYS_OSUUS : 0);
   const kirjoita = (sijainti) => {
     paneeli.style.setProperty('--luentakuva-leveys', `${Math.round(sijainti.leveys)}px`);
     // Kuvan korkeuskatto on TÄSMÄLLEEN sen luonnollinen korkeus tällä
@@ -2283,7 +2327,10 @@ function mitoitaLuentakuva(naytto) {
     paneeli.style.setProperty('--luentakuva-korkeus', `${Math.ceil(sijainti.leveys * suhde)}px`);
   };
   kirjoita(luentakuvanSijainti({
-    ...yhteiset, kuvasuhde: suhde, lisakorkeus: naytto.lisakorkeus ?? LUENTAKUVAN_TEKSTIVARA,
+    ...yhteiset,
+    kuvasuhde: suhde,
+    lisakorkeus: (naytto.lisakorkeus ?? LUENTAKUVAN_TEKSTIVARA)
+      + pakanYlitys(yhteiset.perusleveys * suhde),
   }));
   /*
    * KUVATEKSTILAATIKON KORKEUS MITATAAN, koska se EI kutistu leveyden
@@ -2297,7 +2344,8 @@ function mitoitaLuentakuva(naytto) {
   const sijainti = luentakuvanSijainti({
     ...yhteiset,
     kuvasuhde: suhde,
-    lisakorkeus: naytto.lisakorkeus ?? LUENTAKUVAN_TEKSTIVARA,
+    lisakorkeus: (naytto.lisakorkeus ?? LUENTAKUVAN_TEKSTIVARA)
+      + pakanYlitys(kuvanKorkeus > 0 ? kuvanKorkeus : yhteiset.perusleveys * suhde),
   });
   kirjoita(sijainti);
   naytto.kuvasuhde = suhde;

@@ -52,8 +52,8 @@ const LAUTA = process.argv[3] === 'kartta' ? 'kartta' : 'pallo';
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
 const KAUPUNKI = 'lontoo';
-const TYOPOYTA = { width: 1280, height: 860 };
-const PUHELIN = { width: 430, height: 930 };
+const TYOPOYTA = { width: 1280, height: 800 };
+const PUHELIN = { width: 390, height: 844 };
 
 /**
  * Koekuvat: pohjakuva (isoisä) ja VIISI pulun kuvaa.
@@ -234,12 +234,28 @@ async function avaaAjo(viewport) {
       };
     };
     const paneeli = document.querySelector('.fokusvirta-luentakuva');
+    const pohjakortti = document.querySelector('.fokusvirta-luentakuva .fokusvirta-kuva');
+    const kerros = (el) => Number(el?.style?.getPropertyValue('--pulucam-kerros') || 0);
+    const laatta = document.querySelector('.map-pane [data-kaupunki="lontoo"].city, '
+      + '.map-pane [data-kaupunki="lontoo"].city-start');
+    const kortti = document.querySelector('.fact-card');
     return {
       luentakuva: Boolean(paneeli),
       paneeli: paneeli ? laatikko(paneeli) : null,
       pieni: Boolean(paneeli?.classList.contains('pieni')),
       kortteja: kortit.length,
       laatikot: kortit.map(laatikko),
+      // Pakan järjestys: kerros 1 on alin, suurin on päällimmäinen.
+      kerrokset: kortit.map(kerros),
+      pohjanKerros: kerros(pohjakortti),
+      // Matkakirjakortti: pakan selaus ei saa kutistaa sitä lapuksi.
+      matkakirjaPieni: kortti ? kortti.classList.contains('pieni') : null,
+      // Kaupungin laatta kartalla (vain tasokartalla on svg-laatta).
+      laatta: laatta ? laatikko(laatta) : null,
+      // Karusellin kuva: sen on oltava se, joka oli pakan päällä.
+      zoomKuva: document.querySelector('.fokuszoom-kuva')?.getAttribute('src') ?? null,
+      zoomLaskuri: document.querySelector('.fokuszoom-laskuri')?.textContent ?? null,
+      zoomAuki: Boolean(document.querySelector('.fokuszoom')),
       // Ennen omistajan tarravalintaa kuvissa EI saa olla merkkiä.
       merkkeja: document.querySelectorAll('.pulucam-merkki').length,
       // Kartan lyhyt kuvateksti: sen pitää kertoa päällimmäisestä kuvasta.
@@ -312,6 +328,140 @@ async function keskitaPakka(sivu, lue, osuusY = 0.5) {
   return lue();
 }
 
+/**
+ * NAPAUTUS KORTIN NÄKYVÄÄN REUNAAN — juuri se ele, jonka pelaaja tekee
+ * (omistaja 10.9.2026: *"jos klikkaa alempana näkyvää kuvaa"*).
+ *
+ * Kohta haetaan selaimen omalla osumatestillä: kortin alalta etsitään
+ * piste, jossa `elementFromPoint` osuu OIKEASTI tähän korttiin eikä sen
+ * päällä olevaan. Ohjelmallinen `click()` menisi läpi vaikka kortti
+ * olisi kokonaan piilossa, eikä se todistaisi mitään.
+ */
+async function nakyvaKohta(sivu, valitsin, i = 0) {
+  return sivu.evaluate(([v, n]) => {
+    const el = [...document.querySelectorAll(v)][n];
+    if (!el) return null;
+    const r = el.getBoundingClientRect();
+    for (let ay = 0.03; ay <= 0.98; ay += 0.02) {
+      for (let ax = 0.03; ax <= 0.98; ax += 0.02) {
+        const x = Math.round(r.left + r.width * ax);
+        const y = Math.round(r.top + r.height * ay);
+        const osuma = document.elementFromPoint(x, y);
+        if (osuma && (osuma === el || el.contains(osuma))) return { x, y };
+      }
+    }
+    return null;
+  }, [valitsin, i]);
+}
+
+/**
+ * Napautus kortin näkyvään reunaan; `pakota` sallii ohjelmallisen
+ * napautuksen, jos kortti on kokonaan muiden alla (viiden kuvan
+ * pakassa keskimmäiset kortit voivat peittyä täysin).
+ */
+async function napautaNakyvaa(sivu, valitsin, i = 0, { pakota = false } = {}) {
+  const kohta = await nakyvaKohta(sivu, valitsin, i);
+  if (kohta) {
+    await sivu.mouse.click(kohta.x, kohta.y);
+    await sivu.waitForTimeout(500);
+    return { ...kohta, ele: 'hiiri' };
+  }
+  if (!pakota) return null;
+  await sivu.evaluate(([v, n]) => {
+    [...document.querySelectorAll(v)][n]?.click();
+  }, [valitsin, i]);
+  await sivu.waitForTimeout(500);
+  return { ele: 'ohjelmallinen' };
+}
+
+/** Pakan alin kortti, jolla on ruudulla näkyvä reuna (tai null). */
+async function alinNakyvaKortti(sivu, kerrokset) {
+  const jarjestys = kerrokset.map((k, i) => ({ k, i })).sort((a, b) => a.k - b.k);
+  for (const { i } of jarjestys.slice(0, -1)) {
+    // eslint-disable-next-line no-await-in-loop
+    const kohta = await nakyvaKohta(sivu, '.pulucam-kuva', i);
+    if (kohta) return { i, kohta };
+  }
+  return null;
+}
+
+/**
+ * RAAHAUSLIPPU POIS. Selain lähettää klikin myös raahauksen
+ * päätteeksi, ja paneeli nielaisee sen tarkoituksella (js/fokusvirta.js
+ * `raahattu`). Savukkeen raahaus on vain kaappauksen keskitys, joten
+ * lippu kuitataan käsin — pelissä sen kuittaa pelaajan seuraava
+ * napautus.
+ */
+const nollaaRaahaus = (sivu) => sivu.evaluate(() => {
+  const naytto = window.matkakirja?.ui?.luentakuvaAnkkuri;
+  if (naytto) naytto.raahattu = false;
+});
+
+/**
+ * KAUPUNGIN LAATTA JA SEN PISTE RUUDULLA.
+ *
+ * Laatta on kartan oma ellipsi (js/ui.js city); sen lisäksi luetaan
+ * kaupungin pisteen ruutupaikka SAMALLA kaavalla kuin peli sen laskee
+ * (js/saapumisasento.js laudaltaRuudulle), jotta mitta on olemassa
+ * myös silloin, kun lauta piirtää kaupungit ilman svg-laattaa.
+ */
+const mittaaLaatta = (sivu) => sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  const kaupunki = game.cityOf();
+  const laatat = [...document.querySelectorAll(`[data-kaupunki="${kaupunki.id}"]`)]
+    .filter((el) => /(^| )(city|city-start|city-gate)( |$)/.test(
+      el.getAttribute('class') ?? '',
+    ));
+  const laatikot = laatat.map((el) => el.getBoundingClientRect()).filter((r) => r.height > 0);
+  const mod = await import('/js/saapumisasento.js');
+  const pane = ui.mapPane.getBoundingClientRect();
+  const piste = mod.laudaltaRuudulle({ x: kaupunki.x, y: kaupunki.y }, ui.nakyvaAlue(),
+    ui.mapPane.clientWidth, ui.mapPane.clientHeight, ui.contentBox?.w ?? 0);
+  return {
+    laatanYlareuna: laatikot.length ? Math.round(Math.min(...laatikot.map((r) => r.top))) : null,
+    laatanKorkeus: laatikot.length ? Math.round(Math.max(...laatikot.map((r) => r.height))) : null,
+    pisteY: piste ? Math.round(pane.top + piste.y) : null,
+    pisteX: piste ? Math.round(pane.left + piste.x) : null,
+  };
+});
+
+/**
+ * PANEELI PAIKALLEEN LEVOSSA OLEVALLE KARTALLE.
+ *
+ * Savuke pakottaa saapumisen kesken kamera-ajoa, joten paneelin
+ * ankkuri lasketaan kartan siitä asennosta, joka sattuu olemaan
+ * ruudulla juuri sillä hetkellä — ja kuva jää ruudun laitaan. Pelissä
+ * ankkuri lasketaan kaupungin kohdalta. Nostetaan siis paneeli ja
+ * pakka uudestaan pelin OMILLA kutsuilla (js/fokusvirta.js), kun
+ * kamera on jo perillä: vasta silloin mitta kaupungin laattaan
+ * tarkoittaa sitä, mitä omistaja kaappauksessaan katsoi.
+ */
+async function nostaPaneeliPaikalleen(sivu, lue) {
+  await sivu.evaluate(async () => {
+    const { ui, game } = window.matkakirja;
+    const kaupunki = game.cityOf();
+    const f = await import('/js/fokusvirta.js');
+    f.naytaLuentakuva(ui, kaupunki);
+    f.naytaPulunKuvapakka(ui, kaupunki);
+  });
+  let tila = await lue();
+  for (let i = 0; i < 60 && tila.kortteja < KOEKUVAT.kuvat.length; i += 1) {
+    await sivu.waitForTimeout(200);
+    tila = await lue();
+  }
+  await sivu.waitForTimeout(500);
+  return lue();
+}
+
+/** Paneelin (kuvatekstilappu ja pakka mukaan lukien) alin reuna. */
+const mittaaAla = (sivu) => sivu.evaluate(() => {
+  const paneeli = document.querySelector('.fokusvirta-luentakuva');
+  if (!paneeli) return null;
+  const osat = [paneeli, ...document.querySelectorAll('.pulucam-kuva'),
+    ...document.querySelectorAll('.fokusvirta-luentateksti')];
+  return Math.round(Math.max(...osat.map((el) => el.getBoundingClientRect().bottom)));
+});
+
 /* ================== TYÖPÖYTÄAJO ================== */
 
 const tyopoyta = await avaaAjo(TYOPOYTA);
@@ -326,7 +476,26 @@ await tyopoyta.kaappaa('pulucam-luenta.png');
 
 /* 2. Kommentin jälkeen pakka. */
 tila = await odotaPakka(tyopoyta.sivu, tyopoyta.lue);
-tila = await keskitaPakka(tyopoyta.sivu, tyopoyta.lue, 0.46);
+
+/*
+ * 2 b. KUVA ON SELVÄSTI KAUPUNGIN LAATAN YLÄPUOLELLA (omistaja
+ * 10.9.2026, työpöytäkaappaus Marseillesta: *"kuva saisi tulla ylemmäs,
+ * ei näin kiinni kaupungin laattaa"*).
+ */
+tila = await nostaPaneeliPaikalleen(tyopoyta.sivu, tyopoyta.lue);
+const ala = await mittaaAla(tyopoyta.sivu);
+const laatta = await mittaaLaatta(tyopoyta.sivu);
+tieto('paneelin alareuna (kuvateksti ja pakka mukana)', `${ala} px`);
+tieto('kaupungin laatta', JSON.stringify(laatta));
+tieto('väli paneelin alareunasta kaupungin pisteeseen', `${laatta.pisteY - ala} px`);
+vaadi('paneeli on kaupungin pisteen yläpuolella laatan korkeuden ja ilmaraon verran',
+  laatta.pisteY - ala >= 34 + 12, `${laatta.pisteY - ala} px`);
+if (laatta.laatanYlareuna != null) {
+  tieto('väli laatan yläreunaan', `${laatta.laatanYlareuna - ala} px`);
+  vaadi('paneelin alareuna on kaupungin laatan yläpuolella',
+    laatta.laatanYlareuna - ala >= 12, `${laatta.laatanYlareuna - ala} px`);
+}
+await tyopoyta.kaappaa('pulucam-laatan-ylapuolella.png');
 tieto('kuplapino', tila.pino.slice(-140) || '(tyhjä)');
 tieto('korttien laatikot', JSON.stringify(tila.laatikot));
 vaadi('pulun kommentti tuli ruudulle', tila.pino.length > 0, '(pino jäi tyhjäksi)');
@@ -360,18 +529,106 @@ vaadi('kartan lyhyessä tekstissä ei ole havainnekuvalinkkiä',
   tila.lyhyenLinkkeja === 0, String(tila.lyhyenLinkkeja));
 await tyopoyta.kaappaa('pulucam-5-pakka.png');
 
+/*
+ * 3 c. PAKAN SELAUS: ALEMMAN KORTIN NAPAUTUS NOSTAA SEN PÄÄLLE
+ * (omistaja 10.9.2026, sanatarkasti: *"kuvia pitäisi voida vaihdella
+ * näytöllä jos klikkaa alempana näkyvää kuvaa"*), KARUSELLI EI AUKEA —
+ * ja MATKAKIRJAKORTTI PYSYY AUKI (*"matkakirja ei saisi hävitä
+ * näkyvistä jos käyttäjä klikkaa kuvapakasta toisen kuvan
+ * näkyville"*).
+ */
+await tyopoyta.sivu.evaluate(() => window.matkakirja.ui.asetaPaivakirjanKoko(false));
+const ennenSelausta = await tyopoyta.lue();
+tieto('kerrokset ennen selausta', JSON.stringify(ennenSelausta.kerrokset));
+vaadi('matkakirjakortti on auki ennen pakan selausta',
+  ennenSelausta.matkakirjaPieni === false, String(ennenSelausta.matkakirjaPieni));
+/*
+ * ALIN KORTTI, JOLLA ON NÄKYVÄ REUNA. Viiden kuvan pakassa keskimmäiset
+ * kortit voivat peittyä kokonaan, eikä peittynyttä korttia voi
+ * napauttaa — pelaajakaan ei voi. Vartio koskee sitä korttia, jonka
+ * reuna oikeasti näkyy.
+ */
+const nakyva = await alinNakyvaKortti(tyopoyta.sivu, ennenSelausta.kerrokset);
+vaadi('pakasta näkyy alemman kortin reuna', Boolean(nakyva), '(yksikään alempi ei näy)');
+const alinKortti = nakyva?.i ?? 0;
+const osumakohta = await napautaNakyvaa(tyopoyta.sivu, '.pulucam-kuva', alinKortti);
+tieto('alemman kortin napautus', JSON.stringify({ kortti: alinKortti, osumakohta }));
+vaadi('alemman kortin näkyvä reuna löytyi ruudulta', Boolean(osumakohta), '(ei osumaa)');
+const selauksenJalkeen = await tyopoyta.lue();
+tieto('kerrokset noston jälkeen', JSON.stringify(selauksenJalkeen.kerrokset));
+tieto('kuvateksti noston jälkeen', String(selauksenJalkeen.lyhyt));
+vaadi('alemman kortin napautus nosti sen päällimmäiseksi',
+  selauksenJalkeen.kerrokset[alinKortti] === Math.max(...selauksenJalkeen.kerrokset),
+  JSON.stringify(selauksenJalkeen.kerrokset));
+vaadi('kuvateksti vaihtui nostetun kuvan tekstiin',
+  selauksenJalkeen.lyhyt === KOEKUVAT.kuvat[alinKortti].lyhyt, String(selauksenJalkeen.lyhyt));
+vaadi('alemman kortin napautus EI avannut karusellia',
+  selauksenJalkeen.zoomAuki === false, String(selauksenJalkeen.zoomAuki));
+vaadi('pakan napautus ei kutistanut matkakirjakorttia',
+  selauksenJalkeen.matkakirjaPieni === false, String(selauksenJalkeen.matkakirjaPieni));
+await tyopoyta.kaappaa('pulucam-selaus-nostettu.png');
+
+/*
+ * 3 d. PÄÄLLIMMÄISEN NAPAUTUS AVAA KARUSELLIN JUURI SIITÄ KUVASTA
+ * (omistajan täsmennys 10.9.2026: *"kun kuvaa klikkaa, niin juuri se
+ * kuva pitää tulla näkyviin täysikokoisena"*).
+ */
+const paallimmaisenSrc = await tyopoyta.sivu.evaluate((i) => {
+  const el = [...document.querySelectorAll('.pulucam-kuva')][i];
+  return el?.querySelector('img')?.getAttribute('src') ?? null;
+}, alinKortti);
+await napautaNakyvaa(tyopoyta.sivu, '.pulucam-kuva', alinKortti);
+await tyopoyta.sivu.waitForTimeout(900);
+const avattu = await tyopoyta.lue();
+tieto('karuselli päällimmäisestä', JSON.stringify({
+  laskuri: avattu.zoomLaskuri, kuva: avattu.zoomKuva, odotettu: paallimmaisenSrc,
+}));
+vaadi('päällimmäisen kortin napautus avasi karusellin', avattu.zoomAuki === true, '(ei auennut)');
+// Karusellin src on absoluuttinen, kortin suhteellinen: verrataan polkua.
+vaadi('karuselli avautui JUURI siitä kuvasta, joka oli pakan päällä',
+  Boolean(avattu.zoomKuva) && avattu.zoomKuva.endsWith(paallimmaisenSrc),
+  `${avattu.zoomKuva} != ${paallimmaisenSrc}`);
+vaadi('laskuri kertoo saman kuvan', avattu.zoomLaskuri === `${alinKortti + 2} / 6`,
+  String(avattu.zoomLaskuri));
+await tyopoyta.kaappaa('pulucam-karuselli-paallimmaisesta.png');
+await tyopoyta.sivu.keyboard.press('Escape');
+await tyopoyta.sivu.waitForTimeout(700);
+
+/*
+ * 3 e. ISOISÄN KUVA ON PAKASSA YKSI KORTTI MUIDEN JOUKOSSA: sen
+ * näkyvän reunan napautus nostaa sen päälle, ja vasta toinen napautus
+ * avaa karusellin — siitä samasta kuvasta (1 / 6).
+ */
+const isoisanEle = await napautaNakyvaa(
+  tyopoyta.sivu, '.fokusvirta-luentakuva .fokusvirta-kuva', 0, { pakota: true },
+);
+tieto('isoisän kuvan napautus', JSON.stringify(isoisanEle));
+const isoisaPaalla = await tyopoyta.lue();
+tieto('isoisän kuva nostettuna', JSON.stringify({
+  pohjanKerros: isoisaPaalla.pohjanKerros,
+  kerrokset: isoisaPaalla.kerrokset,
+  lyhyt: isoisaPaalla.lyhyt,
+}));
+vaadi('isoisän kuvan napautus nosti sen pakan päälle',
+  isoisaPaalla.pohjanKerros === Math.max(isoisaPaalla.pohjanKerros, ...isoisaPaalla.kerrokset),
+  String(isoisaPaalla.pohjanKerros));
+vaadi('isoisän kuvan napautus ei avannut karusellia',
+  isoisaPaalla.zoomAuki === false, String(isoisaPaalla.zoomAuki));
+vaadi('kuvateksti palasi isoisän kuvan tekstiin',
+  isoisaPaalla.lyhyt === KOEKUVAT.luentakuva.lyhyt, String(isoisaPaalla.lyhyt));
+vaadi('matkakirjakortti on yhä auki pakan selaamisen jälkeen',
+  isoisaPaalla.matkakirjaPieni === false, String(isoisaPaalla.matkakirjaPieni));
+await tyopoyta.kaappaa('pulucam-isoisa-paalla.png');
+
 /* 4. Karuselli: päällimmäinen kortti auki, isoisä ensin. */
 /*
- * KAKSI NAPAUTUSTA, KOSKA EDELLINEN ELE OLI RAAHAUS. Selain lähettää
- * klikin myös raahauksen päätteeksi, ja pakka nielaisee sen
- * tarkoituksella (js/pulucam.js `raahattu`) — juuri niin kuin
- * luentakuvakin tekee. Ensimmäinen napautus siis kuluttaa lipun ja
- * toinen avaa karusellin; ilman edeltävää raahausta yksi riittää.
+ * ISOISÄN KUVA ON NYT PAKAN PÄÄLLIMMÄINEN (kohta 3 e), joten sen
+ * napautus avaa karusellin siitä kuvasta — ja juuri se on tämän osion
+ * vartioima järjestys: isoisä ensin, pulun kuvat perässä.
  */
-const napautaPaallimmaista = () => tyopoyta.sivu.evaluate(() => {
-  const kortit = [...document.querySelectorAll('.pulucam-kuva')];
-  kortit[kortit.length - 1]?.click();
-});
+const napautaPaallimmaista = () => napautaNakyvaa(
+  tyopoyta.sivu, '.fokusvirta-luentakuva .fokusvirta-kuva', 0, { pakota: true },
+);
 await napautaPaallimmaista();
 await tyopoyta.sivu.waitForTimeout(400);
 if (!(await tyopoyta.sivu.$('.fokuszoom'))) await napautaPaallimmaista();
@@ -389,6 +646,8 @@ const lueZoom = () => tyopoyta.sivu.evaluate(() => {
     lahde: document.querySelector('.fokuszoom-lahde')?.textContent ?? null,
     nuolia: document.querySelectorAll('.fokuszoom-nuoli').length,
     merkkeja: document.querySelectorAll('.fokuszoom .pulucam-merkki').length,
+    // Sinetti kuuluu vain pulun kuviin: isoisän kuvassa se on piilossa.
+    merkkiPiilossa: document.querySelector('.fokuszoom .pulucam-merkki')?.hidden ?? null,
     linkki: linkki?.textContent ?? null,
     // Linkin on oltava PITKÄN TEKSTIN PERÄSSÄ, ei sen keskellä.
     linkkiViimeisena: Boolean(linkki)
@@ -403,8 +662,13 @@ vaadi('isoisän kuva on ensin', zoom.laskuri === '1 / 6', String(zoom.laskuri));
 vaadi('nuolinapit ovat molempiin suuntiin', zoom.nuolia === 2, String(zoom.nuolia));
 vaadi('isoisän pitkä kuvateksti on karusellissa',
   zoom.selite === KOEKUVAT.luentakuva.selite, String(zoom.selite));
-vaadi('karusellissa ei ole tarraa ennen omistajan valintaa', zoom.merkkeja === 0,
-  String(zoom.merkkeja));
+/*
+ * SINETTI ON KARUSELLISSA YHTENÄ ELEMENTTINÄ, mutta isoisän kuvan
+ * kohdalla piilossa (omistaja valitsi sinetin 9.9.2026; se kuuluu vain
+ * pulun kuviin).
+ */
+vaadi('isoisän kuvassa sinetti on piilossa', zoom.merkkeja === 1 && zoom.merkkiPiilossa === true,
+  JSON.stringify({ merkkeja: zoom.merkkeja, piilossa: zoom.merkkiPiilossa }));
 vaadi('lähderivi on mukana', Boolean(zoom.lahde), String(zoom.lahde));
 /* 5. Havainnekuva-linkki isoisän pitkän kuvatekstin perässä. */
 vaadi('isoisän pitkän tekstin perässä on Havainnekuva-linkki',
@@ -502,6 +766,7 @@ await tyopoyta.sivu.mouse.down();
 await tyopoyta.sivu.mouse.move(keskus.x - 90, keskus.y - 60, { steps: 8 });
 await tyopoyta.sivu.mouse.up();
 await tyopoyta.sivu.waitForTimeout(700);
+await nollaaRaahaus(tyopoyta.sivu);
 const jalkeen = await tyopoyta.lue();
 if (ennen.laatikot.length === KOEKUVAT.kuvat.length
   && jalkeen.laatikot.length === KOEKUVAT.kuvat.length) {
@@ -533,7 +798,49 @@ tieto('puhelin', JSON.stringify({
 vaadi('pakka on kartalla myös puhelimella', puhelimessa.kortteja === KOEKUVAT.kuvat.length,
   String(puhelimessa.kortteja));
 
+/*
+ * PUHELIMELLA SAMA MITTA LAATASTA (omistaja 10.9.2026: kuvan on oltava
+ * laatan yläpuolella KAIKILLA ruutukoilla).
+ */
+puhelimessa = await nostaPaneeliPaikalleen(puhelin.sivu, puhelin.lue);
+const puhelimenAla = await mittaaAla(puhelin.sivu);
+const puhelimenLaatta = await mittaaLaatta(puhelin.sivu);
+tieto('puhelin: paneelin alareuna', `${puhelimenAla} px`);
+tieto('puhelin: kaupungin laatta', JSON.stringify(puhelimenLaatta));
+tieto('puhelin: väli kaupungin pisteeseen', `${puhelimenLaatta.pisteY - puhelimenAla} px`);
+vaadi('puhelimella paneeli on kaupungin pisteen yläpuolella laatan verran',
+  puhelimenLaatta.pisteY - puhelimenAla >= 34 + 12,
+  `${puhelimenLaatta.pisteY - puhelimenAla} px`);
+if (puhelimenLaatta.laatanYlareuna != null) {
+  const vali = puhelimenLaatta.laatanYlareuna - puhelimenAla;
+  tieto('puhelin: väli laatan yläreunaan', `${vali} px`);
+  vaadi('puhelimella paneelin alareuna on laatan yläpuolella', vali >= 12, `${vali} px`);
+}
+await puhelin.kaappaa('pulucam-puhelin-laatta.png');
+
 puhelimessa = await keskitaPakka(puhelin.sivu, puhelin.lue, 0.52);
+await nollaaRaahaus(puhelin.sivu);
+
+/* Pakan selaus toimii myös sormella: alempi kortti nousee päälle. */
+await puhelin.sivu.evaluate(() => window.matkakirja.ui.asetaPaivakirjanKoko(false));
+const puhelinEnnen = await puhelin.lue();
+const puhelimenNakyva = await alinNakyvaKortti(puhelin.sivu, puhelinEnnen.kerrokset);
+vaadi('puhelimella pakasta näkyy alemman kortin reuna', Boolean(puhelimenNakyva),
+  '(yksikään alempi ei näy)');
+const puhelimenAlin = puhelimenNakyva?.i ?? 0;
+await napautaNakyvaa(puhelin.sivu, '.pulucam-kuva', puhelimenAlin);
+const puhelinNosto = await puhelin.lue();
+tieto('puhelin: kerrokset noston jälkeen', JSON.stringify(puhelinNosto.kerrokset));
+vaadi('puhelimella alemman kortin napautus nostaa sen päälle',
+  puhelinNosto.kerrokset[puhelimenAlin] === Math.max(...puhelinNosto.kerrokset),
+  JSON.stringify(puhelinNosto.kerrokset));
+vaadi('puhelimella kuvateksti vaihtui nostetun kuvan tekstiin',
+  puhelinNosto.lyhyt === KOEKUVAT.kuvat[puhelimenAlin].lyhyt, String(puhelinNosto.lyhyt));
+vaadi('puhelimella karuselli ei auennut nostosta', puhelinNosto.zoomAuki === false,
+  String(puhelinNosto.zoomAuki));
+vaadi('puhelimella matkakirjakortti pysyi auki', puhelinNosto.matkakirjaPieni === false,
+  String(puhelinNosto.matkakirjaPieni));
+await puhelin.kaappaa('pulucam-puhelin-selaus.png');
 tieto('puhelin raahauksen jälkeen', JSON.stringify({
   paneeli: puhelimessa.paneeli, laatikot: puhelimessa.laatikot,
 }));
