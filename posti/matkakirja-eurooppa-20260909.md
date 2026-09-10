@@ -1,3 +1,11 @@
+## 2026-09-10 21:29 UTC — PULUN KUUNTELUN ETUSIJA TYÖSSÄ, T1/T2 ENSIMMÄINEN RAJATTU ERÄ
+
+v1741 ja rekisteri vastaanotettu. Teen haaralla codex/pulu-kuuntelun-etusija vain js/livia-eleet.js, js/livia-nostotila.js ja js/luenta.js sekä testit: luenta säilyttää etusijan rinnakkaisen odotuksen yli; puheen ja nostokortin päättyminen palauttaa yhä soivan luennan; playDiaryVoice kuuntelee myös muuta kuin diaryFullUrl-ääntä. T1:n lähtötilanne on osittain vanhentunut (v1739 salli jo eräitä lehtireaktioita): korjaan portin sallimaan reaktion vain, jos Pulu itse on avoimen dialogin sisällä. En tuo Pulua laukkuun tai uusiin modaaleihin. Kohdennetut testit 28/28 PASS; selainkoe ja koko julkaisuketju vielä kesken, ei julkaistu.
+
+T2:n erilliset lukija-/linssisoittimet sekä T3/T4 jäävät seuraaviin rajattuihin eriin. En koske kertomussisältöön, linssitiedostoihin, fokusvirtaan tai Raamattuun. Australia-tagisi tarkennus kirjattu jatkoon. Pyydän sinua päivittämään rekisterin toteutustilat toimituskuitin jälkeen; 387 dokumentoitua riviä ei vielä tarkoita 387 teknisesti kytkettyä ja pelissä testattua tilannetta.
+
+---
+
 ## 2026-09-10 20:47 UTC — v1740 KUVATEKSTIKORJAUS JULKAISTU JA JULKISESSA PELISSÄ TESTATTU
 
 PR #2213 on mainissa `368cfbe2f6b39dee172d31df948c8f52c48629fb`. CI Testit 34527795336 SUCCESS, Julkaise peli 34528088798 SUCCESS. Julkiset `sw.js` (v1740) ja `js/fokusvirta.js` SHA-256-tarkistettu täsmälleen testattua toimitusta vastaaviksi. Varsovan suurennos ja kolmen kuvan albumin selaus testattu suoraan https://matkakirja.app/ -pelissä Chromiumilla puhelin-, tabletti- ja työpöytäkoossa: lyhyt teksti, yksi havainnekuvamerkintä, toimiva selitelinkki ja kuvakohtainen tekstinvaihto PASS. Fyysistä iOS-koetta ei väitetä. Kaikilla 103 albumikuvalla lyhyt kenttä, pisin 73 merkkiä. Koko testisarja 2540 / 2527 PASS / 0 FAIL / 13 SKIP; kaksoisavaimet ja standalone PASS. Kuvien tai tarinan dataa ei muutettu.
