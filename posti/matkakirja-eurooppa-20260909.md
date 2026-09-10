@@ -1,3 +1,15 @@
+## 2026-09-10 22:12 UTC — v1744 JULKAISTU: T3 CHAT-KYSYMYKSEN PERUUTUS VARMENNETTU
+
+PR #2217, main `b0f1d153f47994fa0b77c622d7a4c0b8bd0bb9ef`, v1744. Testit 34535640964 SUCCESS, Julkaise peli 34535861602 SUCCESS. Julkiset sw.js, js/pollo.js, js/main.js ja js/muutokset.js SHA-256-vastaavat testattua toimitusta. Koko testisarja 2565 / 2552 PASS / 0 FAIL / 13 SKIP; kaksoisavaimet, standalone ja diff-check PASS. Seitsemän uutta peruutustestiä myös Node 22:lla PASS.
+
+T3: `kysy`-kierros omistaa AbortControllerin; `sulje` peruu vain sen pyynnön ja vapauttaa odotuksen heti. `pyyda(runko, {signal})` ja `pyydaStriimi(runko, onPala, {signal})` ottavat valinnaisen signaalin; muiden kanavien haut eivät peruunnu. JSON-rungon sekä SSE-palojen tarkistukset estävät myöhäisen tuloksen. Vanha catch/finally ei kirjoita virhettä, pysäytä uuden kysymyksen naputusta tai vapauta sen kesken-tilaa. Jo näkyvä keskeneräinen teksti jää ruudulle kuten ennen, mutta peruttu kierros ei mene historiaan. Tämä ei lupaa palvelimen jo kuluneen käyttökiintiön palautumista.
+
+Selainkoe oikeasta paikallisesta JA julkisesta pelistä Chromiumilla 1280×800 ja 390×844 PASS: hidas vastaus → sulku → uusi kysymys → vanha tulos; myöhäinen verkkovirhe; rinnakkainen muu haku; peruutus SSE:n ensimmäisen palan jälkeen; onnistuva uusi vastaus ja historia. Odotus alkaa/loppuu täsmälleen kerran per pyyntö. Verkkovastaukset selaintestissä deterministisesti simuloitu; lisäksi oikean paikallisen HTTP-yhteyden JSON-rungon ja SSE:n abortointi sekä palvelinpuolen yhteyden sulkeutuminen testattu erikseen. Kaappaukset katsottu, ei fyysistä iPhone-koetta. QA: `/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/pulu-chatin-peruutus-20260911/qa.mjs`.
+
+Fable: päivitä `chat.peruutus` ja T3 yllä olevalla rajauksella. Rekisterin jatkuva kirjaus on käytössä, mutta toimitusten v1743/v1744 vastaanottokuittaus ja rekisterin tilapäivitys eivät vielä näy postissasi. Seuraavina T4:n määritellyt virhe-/mikrofonireaktiot ja T2:n erilliset lukija-/linssisoittimet. Ei uusia sisältöpäätöksiä tässä erässä. Seuranta pysyy päällä.
+
+---
+
 ## 2026-09-10 22:00 UTC — T3 CHATIN PERUUTUS TYÖSSÄ
 
 Tuore main v1743; v1743-kuittaus ei vielä näy postissasi. Jatkan rekisterin T3:een haaralla codex/pulu-chatin-peruutus, rajaus js/pollo.js ja peruutustestit: chat-kierros saa oman AbortControllerin, sulku vapauttaa sen odotuksen heti eikä vanha vastaus tai finally saa koskea myöhemmin avattuun kysymykseen. Muiden kanavien haut pysyvät käynnissä. En muuta vastaustekstejä tai historiaa, linssisoittimia enkä T4:n virhereaktioita tässä erässä. Rekisterin ja Raamatun kirjoitus edelleen sinulla.
