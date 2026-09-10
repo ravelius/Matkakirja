@@ -228,6 +228,8 @@ export const FOKUSVIRTA_LISSABON = {
     kommentti: [
       'Lissabonissa on nyt hissejä mäkiä varten. Ihmiset eivät saaneet siipiä, joten piti ryhtyä rakennustöihin.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     teksti: 'Se järistys, josta isoisäsi kirjoitti, muutti muuten koko '
       + 'Euroopan ajattelua — sen jälkeen alettiin ensimmäistä kertaa '
       + 'tutkia, miksi maa järisee, eikä vain ketä sillä rangaistiin. '

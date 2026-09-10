@@ -236,6 +236,8 @@ export const FOKUSVIRTA_LONTOO = {
     kommentti: [
       'Metro kulkee nyt sähköllä. Minä en vaihtaisi taivasta pehmustettuun penkkiin, Fogg.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (Westminsterin palatsi).
      * Faktat ovat lehden oman avauskuvan selitteestä (js/packs/

@@ -218,6 +218,8 @@ export const FOKUSVIRTA_ATEENA = {
     kommentti: [
       'Schliemannin myöhempi talo on nyt rahamuseo. Isoisä etsi aarretta; minä tarkistan ensin kahvilan pihan.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     kuva: {
       ampari: 'herokoe/hero-ateena-aamu.png',
       selite: 'Parthenon aamuvalossa. Temppeli rakennettiin Athena '

@@ -114,6 +114,8 @@ export const FOKUSVIRTA_KREETA = {
     kommentti: [
       'Kreeta kuuluu nyt Kreikkaan, majakka seisoo yhä. Kalastaja vastasi paremmin kuin isoisän kartta.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, kreeta/kaupunki/avauskuvat): venetsialainen

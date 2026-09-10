@@ -83,6 +83,8 @@ export const FOKUSVIRTA_SISILIA = {
     kommentti: [
       'Kappeli hohtaa yhä. Palermon palatsissa istuu nyt Sisilian parlamentti. Katto ansaitsee edelleen puheenvuoron.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ylpea', voimakkuus: 0.45 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, sisilia/kaupunki/avauskuvat): Monrealen katedraali,

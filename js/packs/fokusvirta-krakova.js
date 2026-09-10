@@ -306,6 +306,8 @@ export const FOKUSVIRTA_KRAKOVA = {
     kommentti: [
       'Torvi soi yhä joka tunti neljään suuntaan. Isoisä odotti loppua; minä arvostan soittajaa, joka osaa lopettaa.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, krakova/avauskuvat, generoitu heroerä 15):

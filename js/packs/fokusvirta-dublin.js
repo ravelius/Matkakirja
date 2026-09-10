@@ -267,6 +267,8 @@ export const FOKUSVIRTA_DUBLIN = {
     kommentti: [
       'Guinnessiä pannaan täällä yhä. Yhdeksäntuhatta vuotta? Minä en lupaisi edes istuvani samalla räystäällä.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'hammastys', voimakkuus: 0.5 },
     teksti: 'Vahtimestarit katsovat kaikkia edelleen kuin varkaita, ja kohta '
       + 'ymmärrät miksi se ei ole ihan väärä vaisto tässä maassa..',
     /*

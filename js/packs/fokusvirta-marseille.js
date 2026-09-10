@@ -262,6 +262,8 @@ export const FOKUSVIRTA_MARSEILLE = {
     kommentti: [
       'Marseillen saippuaa tehdään yhä. Sataman lokit eivät ole kuulleetkaan puhtaasta pöydästä.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi
      * pistettä ensimmäisen virkkeen lopussa on kaanonin oma kirjoitusasu.

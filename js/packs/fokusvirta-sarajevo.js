@@ -317,6 +317,8 @@ export const FOKUSVIRTA_SARAJEVO = {
     kommentti: [
       'Kupariseppiä on basaarissa yhä, ja kahvi tulee pienessä pannussa. Isoisä oppi katsomaan kuppiaan. Hyvä alku.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*
      * Commons 25.8.2026: 5184×3456, CC BY 2.0, Fred Romero, kuvattu
      * 20.8.2019, kategoria Inat kuća; tiedoston oma kuvaus kertoo saman

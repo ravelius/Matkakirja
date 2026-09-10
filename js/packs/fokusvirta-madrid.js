@@ -205,6 +205,8 @@ export const FOKUSVIRTA_MADRID = {
     kommentti: [
       'Las Meninas on yhä Pradossa. Isoisä huomasi vallanvaihdon, minä koiran. Se tiesi, milloin kannattaa maata.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (Kuninkaanlinna). Faktat:
      * linnan valmistumisvuosi, maurilinnan palo ja yli 3 400 huonetta

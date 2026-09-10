@@ -236,6 +236,8 @@ export const FOKUSVIRTA_RIIKA = {
     kommentti: [
       'Laulujuhlat jatkuvat yhä. Isoisä ei ymmärtänyt sanoja, mutta ymmärsi sentään olla puhumatta päälle.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, riika/avauskuvat, heroerä 31): vanhankaupungin

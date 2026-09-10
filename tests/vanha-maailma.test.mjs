@@ -519,11 +519,24 @@ test('suomenkielisistä teksteistä ei puutu ä- ja ö-kirjaimia', async () => {
    */
   const VIERASSANAT = /\b(a[ln][- ])nahda\b/gi;
 
+  /*
+   * TOINEN POIKKEUS: PULUN TUNNETAGI `lammin`.
+   *
+   * Sama sääntö kuin `aani`-kentällä yllä — koodin tunnukset ovat
+   * tarkoituksella umlautittomia. `lammin` on yksi js/livia-tilanteet.js
+   * LIVIAN_TUNTEET -taulun avaimista (eleen tekninen nimi), ja pakit
+   * kirjoittavat sen kenttään `tunne` (tests/pulu-tunteet.test.mjs).
+   * Poikkeus on TAHALLAAN KAPEA: vain tuo yksi kenttäkirjoitusasu.
+   * Proosan "lammin" jää yhä kiinni.
+   */
+  const TUNNETAGIT = /(tunne: ')lammin(')/g;
+
   const kansio = new URL('../js/packs/', import.meta.url).pathname;
   const osumat = [];
   for (const nimi of readdirSync(kansio)) {
     if (!nimi.endsWith('.js')) continue;
-    const s = readFileSync(join(kansio, nimi), 'utf8').replace(VIERASSANAT, '$1—');
+    const s = readFileSync(join(kansio, nimi), 'utf8')
+      .replace(VIERASSANAT, '$1—').replace(TUNNETAGIT, '$1—$2');
     const loydot = [...new Set((s.match(hahmo) ?? []).map((x) => x.toLowerCase()))];
     if (loydot.length) osumat.push(`${nimi}: ${loydot.slice(0, 6).join(', ')}`);
   }

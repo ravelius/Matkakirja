@@ -310,6 +310,8 @@ export const FOKUSVIRTA_PIETARI = {
     kommentti: [
       'Pietari ehti olla Leningradkin. Kesäyö on yhä valoisa. Isoisän kellosta taisi loppua valta.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *

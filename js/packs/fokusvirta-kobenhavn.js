@@ -165,6 +165,8 @@ export const FOKUSVIRTA_KOBENHAVN = {
     kommentti: [
       'Tivoli huvittaa Kööpenhaminaa yhä. Minäkin pidän hitaista tanssijoista. Heidän pöytänsä ovat pitkään vapaina.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (Nyhavn). Faktat ovat lehden
      * oman avauskuvan selitteestä (js/packs/kulttuuri-kategoriat.js,

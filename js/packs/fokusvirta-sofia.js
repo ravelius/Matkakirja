@@ -460,6 +460,8 @@ export const FOKUSVIRTA_SOFIA = {
     kommentti: [
       'Sofia on nyt Bulgarian pääkaupunki. Lähdevettä haetaan yhä. Maa ei ole korottanut hintaa arvonimen takia.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.45 },
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,
      * kuvattu 30.4.2011, kuvaus "Vasil Levski Boulevard with Monument to

@@ -258,6 +258,8 @@ export const FOKUSVIRTA_BARCELONA = {
     kommentti: [
       'Cerdàn viistot kulmat ovat yhä paikallaan. Autoja tuli enemmän kuin kaalia. Minä olisin äänestänyt kaalia.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — repliikin loput kolme virkettä sellaisenaan.
      */

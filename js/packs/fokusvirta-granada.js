@@ -279,6 +279,8 @@ export const FOKUSVIRTA_GRANADA = {
     kommentti: [
       'Sinä tarvitset nyt pääsylipun palatsiin. Minä käyn vain juomassa sen peilikuvan reunasta.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      */

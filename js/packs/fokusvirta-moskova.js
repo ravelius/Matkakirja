@@ -313,6 +313,8 @@ export const FOKUSVIRTA_MOSKOVA = {
     kommentti: [
       'Tsaarinkello vaikenee edelleen. Moskova on nyt pääkaupunki. Minäkin tulen syömään pienemmästä kutsusta.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *

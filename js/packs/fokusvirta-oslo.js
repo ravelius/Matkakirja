@@ -237,6 +237,8 @@ export const FOKUSVIRTA_OSLO = {
     kommentti: [
       'Nimi on nyt Oslo, ja vuonon rannassa kävellään oopperan katolla. Siihen suuntaan kaupunkien pitäisi kasvaa.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ylpea', voimakkuus: 0.45 },
     /* KAANON (Fable) — kuplateksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Ylioppilaat olivat oikeassa — Norja itsenäistyi 1905, ja '
       + 'Kristiania sai takaisin vanhan nimensä Oslo 1925.. Ne omat sadut '

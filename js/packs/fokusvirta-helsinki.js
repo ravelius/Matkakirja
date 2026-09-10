@@ -229,6 +229,8 @@ export const FOKUSVIRTA_HELSINKI = {
     kommentti: [
       'Kirkko on nyt tuomiokirkko. Kauppatorin lokit käyttäisivät isoisän paperipainoa mielellään.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (tuomiokirkko Senaatintorilla)
      * — juuri se valkoinen kirkko, jonka isoisä näki mereltä. Faktat ovat

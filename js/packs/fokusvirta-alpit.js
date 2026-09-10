@@ -82,6 +82,8 @@ export const FOKUSVIRTA_ALPIT = {
     kommentti: [
       'Jäätikkö on vetäytynyt kauas isoisän päivistä. Hänen kivensä saattaa olla tallessa; jää sen alta on poissa.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'vakava', voimakkuus: 0.55 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, alpit/kaupunki/avauskuvat): vuoristorata, joka

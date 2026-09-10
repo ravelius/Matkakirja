@@ -219,6 +219,8 @@ export const FOKUSVIRTA_BERGEN = {
     kommentti: [
       'Bryggenin varastotalot ovat nyt maailmanperintöä. Kala päätyy yhä lautaselle. Kumman suojelu onnistui paremmin?',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
     /* KAANON (Fable) — kuplateksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Bergenissä sataa noin puolet vuoden päivistä, joten isoisäsi '
       + 'osui tavalliseen päivään.. Se kauppalaituri on yhä pystyssä, '

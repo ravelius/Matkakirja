@@ -259,6 +259,8 @@ export const FOKUSVIRTA_FIRENZE = {
     kommentti: [
       'David pääsi sisälle, aukiolle tuli kopio. Fogg, isoisälläsi oli sentään taskut. Patsaan on pärjättävä ilmeellä.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      */

@@ -89,6 +89,8 @@ export const FOKUSVIRTA_TROMSSA = {
     kommentti: [
       'Tromssassa on nyt yliopistokin. Isoisä osui oikeaan: pienestä simpukasta voi alkaa pitkä matka.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, tromssa/kaupunki/avauskuvat): napamuseo 1840-luvun

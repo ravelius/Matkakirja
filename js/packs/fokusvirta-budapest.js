@@ -226,6 +226,8 @@ export const FOKUSVIRTA_BUDAPEST = {
     kommentti: [
       'Nimi mahtui karttaan. Nykyään Rudasissa kylvetään katollakin. Kerrankin ihmisillä on oikea kerros.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (parlamenttitalo). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/

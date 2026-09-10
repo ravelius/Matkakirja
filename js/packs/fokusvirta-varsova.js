@@ -327,6 +327,8 @@ export const FOKUSVIRTA_VARSOVA = {
     kommentti: [
       'Vanhakaupunki rakennettiin sodan jälkeen uudelleen. Isoisä olisi tunnistanut torin. Se oli rakentajien tarkoitus.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'vakava', voimakkuus: 0.55 },
     /* KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. */
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/

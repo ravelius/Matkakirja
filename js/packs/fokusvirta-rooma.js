@@ -268,6 +268,8 @@ export const FOKUSVIRTA_ROOMA = {
     kommentti: [
       'Pantheoniin ostetaan nyt pääsylippu. Katon aukko on yhä avoin, mutta minäkin käyttäydyn siellä kuin vieras.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
     teksti: 'Muurin sisällä pysyttiin viisikymmentäyhdeksän vuotta — vasta '
       + '1929 paavi astui taas Rooman puolelle. Ikkunat on yhä ihan '
       + 'samat.',

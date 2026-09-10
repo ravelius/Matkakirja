@@ -322,6 +322,8 @@ export const FOKUSVIRTA_BUKAREST = {
     kommentti: [
       'Manucin majatalon pihalla syödään edelleen. Isoisä löysi huoneensa korvalla. Minä löydän keittiön samoin.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.55 },
     /*
      * Commons 25.8.2026: 2397×3339, public domain, kuvaus "Photo of
      * Turnul Colței, Bucharest, before the demolition", Category:Turnul

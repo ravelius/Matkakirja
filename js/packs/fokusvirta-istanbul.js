@@ -374,6 +374,8 @@ export const FOKUSVIRTA_ISTANBUL = {
     kommentti: [
       'Tünelin vaunu vie nyt mäen ylös. Isoisä laski mastoja; kantajalta olisin kysynyt, missä saa levätä.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):
      * 640×480, CC BY-SA 4.0, Gryffindor. Juuri se säilynyt käärmeenpää,

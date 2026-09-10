@@ -299,6 +299,8 @@ export const FOKUSVIRTA_KIOVA = {
     kommentti: [
       'Kiova on nyt Ukrainan pääkaupunki. Luostari on kärsinyt sodassa. Tätä isoisän sivua luen hiljaa.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'vakava', voimakkuus: 0.6 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/
      * kulttuuri-kategoriat.js, kiova/avauskuvat): luolaluostari. Juuri

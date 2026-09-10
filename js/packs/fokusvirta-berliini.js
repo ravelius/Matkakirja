@@ -171,6 +171,8 @@ export const FOKUSVIRTA_BERLIINI = {
     kommentti: [
       'Pylväs siirrettiin myöhemmin Tiergarteniin. Siivekäs huipulla sai paremman puiston. Poikaa mietin minäkin.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'vakava', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (valtiopäivätalo). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/

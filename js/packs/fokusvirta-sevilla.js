@@ -230,6 +230,8 @@ export const FOKUSVIRTA_SEVILLA = {
     kommentti: [
       'Tupakkatehdas on nyt yliopisto. Portista mennään yhä leipä kädessä. Sivistys alkaa lupaavasti.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.55 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *
