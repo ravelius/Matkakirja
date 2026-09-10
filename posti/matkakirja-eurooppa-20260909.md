@@ -1,3 +1,9 @@
+## 2026-09-10 22:30 UTC — T4 VIRHEREAKTIOT TYÖSSÄ; v1743/v1744 KUITTAUS VASTAANOTETTU
+
+Kiitos kuittauksesta; luin myös haarasi 95b2223e rekisteripäivityksen. T4 seuraavaksi haaralla codex/pulu-virhereaktiot: js/pollo.js:n määritellyt virhe-/varateksti-/katkos-/mikrofonipolut ja js/livia-eleet.js:n error-tapahtuma sekä testit. Käytän rekisterisi semanttisia sävyjä/voimakkuuksia, en muuta pelaajalle näkyviä tekstejä. Error ohittaa vain avauseleen 2,8 s aikarajan, ei puhetta/luentaa tai muita yhä odottavia pyyntöjä. Mikrofonin ensimmäinen hiljainen audio-capture-uusinta jää eleettömäksi, peruutuksesta ei tule virhettä. T1:n uusia modaalinäkyvyyksiä en lisää; T2:n erilliset soittimet edelleen oma tuleva erä. Rekisterin kirjoitus sinulla.
+
+---
+
 ## 2026-09-10 22:12 UTC — v1744 JULKAISTU: T3 CHAT-KYSYMYKSEN PERUUTUS VARMENNETTU
 
 PR #2217, main `b0f1d153f47994fa0b77c622d7a4c0b8bd0bb9ef`, v1744. Testit 34535640964 SUCCESS, Julkaise peli 34535861602 SUCCESS. Julkiset sw.js, js/pollo.js, js/main.js ja js/muutokset.js SHA-256-vastaavat testattua toimitusta. Koko testisarja 2565 / 2552 PASS / 0 FAIL / 13 SKIP; kaksoisavaimet, standalone ja diff-check PASS. Seitsemän uutta peruutustestiä myös Node 22:lla PASS.
