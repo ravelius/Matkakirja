@@ -148,14 +148,15 @@ export const FOKUSVIRTA_MADRID = {
       + 'vallanvaihto onnistui ostamatta edes sanomalehteä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-madrid.mp3',
     /*
-     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-madrid-r20260909-paper-v2;
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-madrid-r20260909-paper-v4;
+     * SHA-256 6c9039a530b5e0a2abfc95e58a1cb60ef5de5c795c540f51c7e5e82ba7d35ceb;
      * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
      * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
      * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
      * toimituksen tausta-aineisto (ei näy pelaajalle).
      */
     luentakuva: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-madrid-r20260909-paper-v2.jpg',
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-madrid-r20260909-paper-v4.jpg',
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Madrid, 1873. Maalari huomasi katsojansa ensin.',

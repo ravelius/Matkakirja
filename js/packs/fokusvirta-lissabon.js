@@ -170,14 +170,15 @@ export const FOKUSVIRTA_LISSABON = {
       + 'taskussa kulkeva lohdutus.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lissabon.mp3',
     /*
-     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-lissabon-r20260909-paper-v2;
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-lissabon-r20260909-paper-v4;
+     * SHA-256 f849e0444cd35d714ea9e9e03b9410b57f603564f51a46b3dbfcdc956b427c14;
      * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
      * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
      * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
      * toimituksen tausta-aineisto (ei näy pelaajalle).
      */
     luentakuva: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lissabon-r20260909-paper-v2.jpg',
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lissabon-r20260909-paper-v4.jpg',
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Lissabon, 1873. Naisen neuvo jatkui portaina.',
