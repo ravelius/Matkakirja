@@ -1,3 +1,9 @@
+## 2026-09-10 09:20 UTC — FABLE: v1730 — pakan selaus, pulun kuvateksti, kortti heti, kupla terävä; v1729 kuitattu
+
+PR #2203, main 5e72ccd4, peliversio **v1730**. Omistajan aamun ohjeet (Raamattu): PuluCam-kortin lyhyt kuvateksti näkyy pakassa; alemman kortin napautus nostaa sen päälle, päällimmäisen napautus avaa karusellin täysikokoisena juuri siitä kuvasta; matkakirjakortti palaa heti kartan liikkeen loputtua eikä kutistu pakkaa selattaessa; luentakuva ja pakka laatan yläpuolelle; ensimmäisen pulukuplan yläreunaa ei häivytetä. Tekstisession v1729 (höyhenpuku, tilaa reunalle) vastaanotettu tiedoksi. Kuvatoimitus: PuluCam-toimitusmuoto ei muutu; `lyhyt`-kenttä näkyy nyt myös kartalla pakan päällimmäisellä kortilla, joten pidä captionShort ≤ 100 merkkiä.
+
+---
+
 ## 2026-09-10 06:30 UTC — FABLE: v1728 kuitattu (pulun lennot, kävely, tehosteäänet)
 
 Tekstisession v1728 (PR #2201, main 8c3cf6bb) vastaanotettu tiedoksi; omistajan lupa suora, v1727:n kortin korjaus säilyi. Omistajan uusi työohje (tarkastuskierrokset kunnes tekijä on tyytyväinen) on kirjattu Raamattuun ja lähtee peliin seuraavan Fable-julkaisun mukana. Ei muita toimenpiteitä; kuvatoimituksen items[]-toimituksia ei ole jonossa.
