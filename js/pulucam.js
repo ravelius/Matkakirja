@@ -236,24 +236,51 @@ export function puluCamMerkki({ luokka = '', osoite = PULU_CAM_TARRA_OSOITE } = 
 }
 
 /**
- * Yksi pakan kortti: nappi, kuva ja (jos tarra on valittu) PULU-CAM-tarra.
+ * Yksi pakan kortti: KÄÄRE, jonka sisällä ovat nappi, kuva, (jos tarra
+ * on valittu) PULU-CAM-tarra JA KORTIN OMA KUVATEKSTILAPPU.
+ *
+ * KÄÄRE ON OMISTAJAN VAATIMUS, EI RAKENTEEN KORISTE (10.9.2026 klo
+ * 23.37, iPad-kaappaukset Krakovasta ja Vilnasta; Raamattu "PULUN
+ * KORTIN KUVATEKSTI KIINNI KORTIN OMASSA ALALAIDASSA", sanatarkasti:
+ * *"Pulun pienissä kuvissa ei näy kuvatekstiä"*).
+ *
+ * Ennen tätä kartalla oli YKSI lappu, joka oli kiinni PAKAN POHJAKUVAN
+ * (isoisän paperin) alareunassa. Pulun kortti kelluu pakan päällä
+ * omassa kulmassaan ja hieman ylempänä, joten lappu näytti irralliselta
+ * eikä sen kortin omalta. Nyt jokaisella kortilla on oma lappunsa
+ * SAMASSA KIERRETYSSÄ LOHKOSSA kuvan kanssa: lappu kääntyy kortin
+ * mukana, on kiinni juuri sen alalaidassa (margin 0), ja päällimmäisen
+ * vaihtuessa (nosto) näkyvä lappu vaihtuu sen mukana — vain yksi lappu
+ * näkyy kerrallaan (css `.pulucam-paalla`).
+ *
+ * KAKSI ASIAA, JOTKA TÄSTÄ SEURAAVAT:
+ *
+ *   1. NAPPI ON KÄÄREEN SISÄLLÄ, EI KÄÄRE ITSE. `<p>` ei kuulu napin
+ *      sisään (napin sisältö on tekstitason sisältöä), joten kuva ja
+ *      lappu ovat sisaruksia yhteisen kääreen alla — ja kääre kantaa
+ *      asennon, kerroksen ja pulpahduksen, jotka ennen olivat napissa.
+ *   2. NAPAUTUS ON KÄÄREEN NAPAUTUS. Kuuntelija on kääreessä, joten
+ *      napautus LAPPUUN toimii täsmälleen kuten napautus kuvaan
+ *      (nosto tai karuselli) — lappu on osa korttia, ei sen vieressä
+ *      oleva erillinen elementti.
  *
  * @param {object} kuva pakin kuvaolio
  * @param {number} i sijaluku pakassa (asento ja pulpahdusvuoro)
  * @param {(kuva:object)=>?string} osoite osoitteen ratkaisija
  * @param {(kuva:object)=>?string} vara varaosoitteen ratkaisija
- * @returns {Element} `.pulucam-kuva`
+ * @returns {Element} `.pulucam-kortti`
  */
 function pakanKortti(kuva, i, osoite, vara) {
-  const kortti = html('button', 'pulucam-kuva');
-  kortti.type = 'button';
+  const kortti = html('div', 'pulucam-kortti');
+  const nappi = html('button', 'pulucam-kuva');
+  nappi.type = 'button';
   /*
    * NIMILAPPU KERTOO, MITÄ NAPAUTUS TEKEE. Alempi kortti nousee
    * päälle, päällimmäinen avaa karusellin — ja kumpikin teksti
    * kirjoitetaan pakan järjestyksestä (asetaKortinOhje), koska
    * järjestys vaihtuu pelaajan napautuksista.
    */
-  kortti.title = 'Nosta kuva päälle';
+  nappi.title = 'Nosta kuva päälle';
   const img = document.createElement('img');
   // Kartalla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
   img.alt = kuvatekstiLyhyt(kuva);
@@ -265,10 +292,19 @@ function pakanKortti(kuva, i, osoite, vara) {
    * paperin isoisän kuvan päälle.
    */
   asetaKuva(img, osoite(kuva), vara(kuva), () => kortti.remove());
-  kortti.appendChild(img);
+  nappi.appendChild(img);
   // Ilman omistajan valitsemaa tarraa kuva näkyy puhtaana.
   const tarra = puluCamMerkki();
-  if (tarra) kortti.appendChild(tarra);
+  if (tarra) nappi.appendChild(tarra);
+  kortti.appendChild(nappi);
+  /*
+   * KORTIN OMA LAPPU, SAMA ULKOASU KUIN ISOISÄN LAPULLA (vaalea pohja,
+   * alakulmat pyöristetyt, ei yläpyöristystä; css `.pulucam-lappu`).
+   * Teksti on kortin OMA lyhyt kuvateksti eikä pakan tilaa: se
+   * kirjoitetaan kerran eikä muutu, koska kortti ei vaihda kuvaansa.
+   */
+  const lappu = html('p', 'pulucam-lappu', kuvatekstiLyhyt(kuva));
+  kortti.appendChild(lappu);
   return kortti;
 }
 
@@ -301,7 +337,10 @@ function kortinKuva(tila, tunnus) {
  */
 function asetaKortinOhje(el, paalla) {
   if (!el) return;
-  el.title = paalla ? 'Katso kuvat suurempana' : 'Nosta kuva päälle';
+  // Nimilappu kuuluu NAPILLE. Pulun kortti on kääre, jonka sisällä
+  // nappi on; isoisän kortti on itse nappi (js/fokusvirta.js).
+  const nappi = el.querySelector?.('.pulucam-kuva') ?? el;
+  nappi.title = paalla ? 'Katso kuvat suurempana' : 'Nosta kuva päälle';
 }
 
 /**
@@ -321,7 +360,13 @@ function asetaKortinOhje(el, paalla) {
  *     korteille.
  *  3. KUVATEKSTI. Kartalla luetaan aina PÄÄLLIMMÄISEN kuvan lyhyt
  *     teksti (omistaja 9.9. klo 18.50 ja 10.9.), joten teksti
- *     vaihtuu samassa kohdassa kuin kerrokset.
+ *     vaihtuu samassa kohdassa kuin kerrokset. Lappu ei kuitenkaan
+ *     ole pakan yhteinen vaan KORTIN OMA (omistaja 10.9.2026 klo
+ *     23.37): tässä vaihtuu vain se, KENEN lappu näkyy — luokka
+ *     `pulucam-paalla` on päällimmäisellä kortilla ja vain sillä,
+ *     joten ruudulla on aina täsmälleen yksi lappu. Isoisän lapun
+ *     hoitaa `tila.kuvateksti` (js/fokusvirta.js), koska se ei ole
+ *     pakan lapsi vaan paneelin oma kappale.
  */
 function jarjestaPakka(tila) {
   let sija = 0;
@@ -331,6 +376,8 @@ function jarjestaPakka(tila) {
     const el = kortinElementti(tila, tunnus);
     el?.style?.setProperty?.('--pulucam-kerros', String(sija));
     asetaKortinOhje(el, sija === tila.jarjestys.length);
+    if (sija === tila.jarjestys.length) el?.classList?.add?.('pulucam-paalla');
+    else el?.classList?.remove?.('pulucam-paalla');
     if (tunnus === PULUCAM_POHJA) continue;
     const asento = pulucamAsento(pulusija);
     pulusija += 1;
@@ -398,9 +445,11 @@ export function puluCamPaallimmainen(ui) {
  * @param {(i:number)=>void} asetukset.avaa karusellin avaus
  * @param {()=>boolean} [asetukset.raahattu] tosi, jos ele oli raahaus
  * @param {(kuva:object)=>void} [asetukset.kuvateksti] kutsutaan joka
- *   pulpahduksessa PÄÄLLIMMÄISEKSI nousseella kuvalla, jotta kuvan
- *   alla oleva lyhyt kuvateksti kertoo siitä kuvasta, joka on
- *   päällimmäisenä (omistaja 9.9.2026 klo 18.50).
+ *   pulpahduksessa ja nostossa PÄÄLLIMMÄISEKSI nousseella kuvalla.
+ *   Pulun korttien laput ovat korttien omia (pakanKortti), joten tämä
+ *   koskee vain ISOISÄN lappua: se on paneelin oma kappale, ja kutsuja
+ *   päättää siitä, näkyykö se (js/fokusvirta.js naytaPulunKuvapakka;
+ *   omistaja 9.9.2026 klo 18.50 ja 10.9.2026 klo 23.37).
  * @returns {boolean} nousiko pakka
  */
 export function naytaPuluCamPakka(ui, {
@@ -484,6 +533,7 @@ export function piilotaPuluCamPakka(ui) {
    * pakaton paneeli jäisi kantamaan viimeisen pakan järjestystä.
    */
   tila.pohjakortti?.style?.setProperty?.('--pulucam-kerros', '0');
+  tila.pohjakortti?.classList?.remove?.('pulucam-paalla');
   if (tila.pohjakortti) tila.pohjakortti.title = 'Katso kuva suurempana';
   return true;
 }

@@ -9,7 +9,7 @@
  * 3-5 KUVAA, KAKSI KUVATEKSTIA MOLEMMILLE, HAVAINNEKUVA-LINKKI PITKAN
  * LOPUSSA, TARRA YHTENA PNG:NA OMISTAJAN VALINNASTA").
  *
- * KYMMENEN ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ EIVÄTKÄ KAAPPAUKSESTA:
+ * YKSITOISTA ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ EIVÄTKÄ KAAPPAUKSESTA:
  *
  *   1. PAKKA EI NOUSE ENNEN KOMMENTTIA. Kuvat kuuluvat siihen hetkeen,
  *      jossa pulu alkaa puhua — ei luennan alkuun. Sama koukku kuin
@@ -42,6 +42,12 @@
  *  10. HAVAINNEKUVA-LINKKI ON PITKÄN TEKSTIN PERÄSSÄ JA VAIN SIELLÄ.
  *      Lyhyeen tekstiin ei koskaan tule linkkiä, ja lähderivi säilyy
  *      omanaan.
+ *  11. LYHYT KUVATEKSTI ON KIINNI PÄÄLLIMMÄISEN KORTIN OMASSA
+ *      ALALAIDASSA (omistaja 10.9.2026 klo 23.37). Lappu on kortin
+ *      omassa kierretyssä lohkossa, se siirtyy noston mukana uuden
+ *      päällimmäisen alle, ja niitä on ruudulla aina täsmälleen yksi.
+ *      Isoisän lappu on paneelin oma kappale ja näkyy vain isoisän
+ *      kuvan ollessa päällimmäisenä.
  *
  * DOM-osuus ajetaan samalla pienellä puumallilla kuin
  * tests/luentakuva.test.mjs: Nodessa ei ole selainta, eikä repoon oteta
@@ -379,9 +385,40 @@ function pakinKanssa({ luentakuva, kuvat }, tyo) {
   }
 }
 
-/** Paneeli, pakka ja kortit ruudulta. */
+/**
+ * Pakan kortit ruudulta.
+ *
+ * KORTTI ON KÄÄRE, EI NAPPI (omistaja 10.9.2026 klo 23.37, Raamattu
+ * "PULUN KORTIN KUVATEKSTI KIINNI KORTIN OMASSA ALALAIDASSA"):
+ * `.pulucam-kortti` sisältää napin (`.pulucam-kuva`) JA kortin oman
+ * kuvatekstilapun samassa kierretyssä lohkossa. Asento, kerros ja
+ * napautus ovat kääreen, joten testit katsovat sitä.
+ */
 function pakanKortit() {
-  return asiakirja.querySelectorAll('.pulucam-kuva');
+  return asiakirja.querySelectorAll('.pulucam-kortti');
+}
+
+/**
+ * KARTALLA NÄKYVÄ LYHYT KUVATEKSTI — JA VAIN YKSI SELLAINEN.
+ *
+ * Päällimmäisen pulun kortin oma lappu (`.pulucam-lappu` kortissa,
+ * jolla on luokka `pulucam-paalla`), tai isoisän lappu paneelissa
+ * (`.fokusvirta-luentateksti` ilman luokkaa `pulucam-alla`). Kahta ei
+ * saa olla yhtä aikaa: `maara` on se, mitä omistaja laskee ruudulta.
+ */
+function nakyvaLappu(ui) {
+  const laput = pakanKortit()
+    .filter((k) => k.classList.contains('pulucam-paalla'))
+    .map((k) => k.querySelector('.pulucam-lappu'))
+    .filter(Boolean);
+  const pohja = ui?.luentakuva?.querySelector('.fokusvirta-luentateksti') ?? null;
+  const pohjaNakyy = Boolean(pohja) && !pohja.classList.contains('pulucam-alla')
+    && String(pohja.textContent).trim() !== '';
+  return {
+    maara: laput.length + (pohjaNakyy ? 1 : 0),
+    teksti: laput[0]?.textContent ?? (pohjaNakyy ? pohja.textContent : null),
+    pohjasta: laput.length === 0 && pohjaNakyy,
+  };
 }
 
 /* ---------------------------------------------------------------- */
@@ -545,11 +582,15 @@ test('ilman omistajan valitsemaa tarraa pulun kuvat näkyvät puhtaina', () => {
     // HTML-tekstiä.
     assert.match(PULU_CAM_TARRA_OSOITE, /pulu-cam-leima-musteensininen-v1\.png$/);
     const kortti = pakanKortit()[0];
+    const nappi = kortti.querySelector('.pulucam-kuva');
     assert.equal(kortti.querySelectorAll('.pulucam-merkki').length, 1);
     assert.equal(kortti.querySelectorAll('.pulucam-teksti').length, 0);
     assert.ok(puluCamMerkki(), 'osoitteella merkki syntyy');
     assert.equal(puluCamMerkki({ osoite: null }), null, 'ilman osoitetta merkkiä ei synny');
-    assert.equal(kortti.textContent, '', 'kuvan päälle jäi tekstiä');
+    // KUVAN PÄÄLLÄ EI OLE TEKSTIÄ: kortin oma kuvateksti on lappuna
+    // kuvan ALLA (omistaja 10.9.2026 klo 23.37), ei kuvan päällä.
+    assert.equal(nappi.textContent, '', 'kuvan päälle jäi tekstiä');
+    assert.equal(kortti.querySelector('.pulucam-lappu').textContent, PULUN_KUVAT[0].lyhyt);
 
     // Kuvassa itsessään on lyhyt kuvateksti alt-tekstinä (kartalla lyhyt).
     assert.equal(kortti.querySelector('img').alt, PULUN_KUVAT[0].lyhyt);
@@ -686,9 +727,17 @@ test('alemman kortin napautus nostaa sen päälle — karuselli ei aukea', async
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
     await odota(pulucamViive(2) + 120);
 
-    const selite = () => ui.luentakuva.querySelector('.fokusvirta-kuvaselite').textContent;
     const kortit = pakanKortit();
-    assert.equal(selite(), PULUN_KUVAT[2].lyhyt, 'kartalla ei lue päällimmäisen kuvan teksti');
+    /*
+     * LAPPU ON PÄÄLLIMMÄISEN KORTIN OMA (omistaja 10.9.2026 klo 23.37):
+     * kartalla näkyy täsmälleen yksi lyhyt kuvateksti, ja se on juuri
+     * sen kortin lappu, joka on pakan päällimmäisenä.
+     */
+    assert.equal(nakyvaLappu(ui).maara, 1, 'kartalla näkyy useampi kuin yksi lappu');
+    assert.equal(nakyvaLappu(ui).teksti, PULUN_KUVAT[2].lyhyt,
+      'kartalla ei lue päällimmäisen kuvan teksti');
+    assert.equal(kortit[2].querySelector('.pulucam-lappu').parentNode, kortit[2],
+      'lappu ei ole päällimmäisen kortin omassa lohkossa');
 
     /*
      * OMISTAJA 10.9.2026: *"kuvia pitäisi voida vaihdella näytöllä jos
@@ -699,7 +748,11 @@ test('alemman kortin napautus nostaa sen päälle — karuselli ei aukea', async
     assert.equal(asiakirja.querySelectorAll('.fokuszoom').length, 0,
       'alemman kortin napautus avasi karusellin');
     assert.equal(puluCamPaallimmainen(ui).kuva, PULUN_KUVAT[0]);
-    assert.equal(selite(), PULUN_KUVAT[0].lyhyt, 'kuvateksti ei seurannut nostoa');
+    // Lappu siirtyi uuden päällimmäisen alle — eikä vanhaa jäänyt näkyviin.
+    assert.equal(nakyvaLappu(ui).maara, 1, 'nosto jätti kaksi lappua kartalle');
+    assert.equal(nakyvaLappu(ui).teksti, PULUN_KUVAT[0].lyhyt, 'kuvateksti ei seurannut nostoa');
+    assert.ok(kortit[0].classList.contains('pulucam-paalla'));
+    assert.ok(!kortit[2].classList.contains('pulucam-paalla'));
 
     /*
      * PAKKA NÄYTTÄÄ YHÄ PAKALTA: nostettu kortti saa päällimmäisen
@@ -731,15 +784,27 @@ test('isoisän kuva on pakassa yksi kortti: napautus nostaa, toinen avaa', () =>
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
 
     const pohjakortti = ui.luentakuva.querySelector('.fokusvirta-kuva');
-    const selite = () => ui.luentakuva.querySelector('.fokusvirta-kuvaselite').textContent;
-    assert.equal(selite(), PULUN_KUVAT[0].lyhyt);
+    /*
+     * ISOISÄN LAPPU ON PANEELIN OMA KAPPALE ja näkyy vain silloin, kun
+     * isoisän kuva on päällimmäisenä (omistaja 10.9.2026 klo 23.37).
+     * Pulun kortin päällä ollessa kartalla näkyy PULUN kortin oma lappu.
+     */
+    assert.equal(nakyvaLappu(ui).maara, 1);
+    assert.equal(nakyvaLappu(ui).teksti, PULUN_KUVAT[0].lyhyt);
+    assert.equal(nakyvaLappu(ui).pohjasta, false, 'isoisän lappu jäi pulun kortin alle näkyviin');
+    // Teksti jää kappaleeseen (vain näkyvyys vaihtuu), jotta paneelin
+    // korkeus ei muutu nostoissa.
+    assert.equal(ui.luentakuva.querySelector('.fokusvirta-kuvaselite').textContent,
+      POHJAKUVA.lyhyt);
 
     // 1. Isoisän kuva on alla: napautus NOSTAA sen eikä avaa mitään.
     pohjakortti.dispatch('click');
     assert.equal(asiakirja.querySelectorAll('.fokuszoom').length, 0,
       'alla olevan isoisän kuvan napautus avasi karusellin');
     assert.equal(puluCamPaallimmainen(ui).tunnus, PULUCAM_POHJA);
-    assert.equal(selite(), POHJAKUVA.lyhyt, 'kuvateksti ei palannut isoisän kuvaan');
+    assert.equal(nakyvaLappu(ui).maara, 1, 'isoisän noston jälkeen kartalla on kaksi lappua');
+    assert.equal(nakyvaLappu(ui).pohjasta, true, 'isoisän oma lappu ei palannut näkyviin');
+    assert.equal(nakyvaLappu(ui).teksti, POHJAKUVA.lyhyt, 'kuvateksti ei palannut isoisän kuvaan');
 
     // 2. Päällimmäisenä sama napautus avaa karusellin isoisän kuvasta.
     pohjakortti.dispatch('click');
@@ -774,6 +839,81 @@ test('ilman pulun kuvia suurennos on täsmälleen ennallaan', () => {
 });
 
 /* ---------------------------------------------------------------- */
+/* 4 a b. Lappu kiinni PÄÄLLIMMÄISEN KORTIN omassa alalaidassa       */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJA 10.9.2026 klo 23.37 (iPad-kaappaukset Krakovasta ja
+ * Vilnasta; Raamattu "PULUN KORTIN KUVATEKSTI KIINNI KORTIN OMASSA
+ * ALALAIDASSA", sanatarkasti: *"Pulun pienissä kuvissa ei näy
+ * kuvatekstiä"*).
+ *
+ * Kaappauksissa lyhyt kuvateksti kyllä näkyi, mutta se oli kiinni PAKAN
+ * POHJAKUVAN (isoisän paperin) alareunassa. Pulun kortti kelluu pakan
+ * päällä eri kulmassa ja hieman ylempänä, joten lappu näytti
+ * irralliselta eikä sen kortin omalta.
+ *
+ * KOLME ASIAA, JOITA TÄMÄ VALVOO JA JOTKA EIVÄT NÄY KAAPPAUKSESTA:
+ *
+ *   1. LAPPU ON KORTIN OMASSA LOHKOSSA (kääreen lapsi, napin sisar),
+ *      jolloin se kääntyy kortin mukana ja on kortin z-indexin alla —
+ *      ei pakan päällä kelluva erillinen elementti.
+ *   2. LAPPU SIIRTYY NOSTON MUKANA uuden päällimmäisen alle.
+ *   3. VAIN YKSI LAPPU KERRALLAAN, myös silloin kun isoisän kuva on
+ *      päällimmäisenä (silloin näkyy isoisän oma kappale).
+ */
+test('pulun kortin lyhyt kuvateksti on kiinni kortin omassa alalaidassa', async () => {
+  await pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, async () => {
+    const ui = tekoUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI);
+    naytaPulunKuvapakka(ui, KOEKAUPUNKI);
+    await odota(pulucamViive(2) + 120);
+
+    const kortit = pakanKortit();
+    assert.equal(kortit.length, PULUN_KUVAT.length);
+    for (const [i, kortti] of kortit.entries()) {
+      // Kortti on kääre: nappi ensin, lappu heti sen perässä samassa
+      // lohkossa (css antaa lapulle top: 100% ja margin: 0).
+      const lapset = kortti.childNodes.filter((n) => n.nodeType === 1);
+      assert.equal(lapset.length, 2, `kortissa ${i} pitää olla nappi ja lappu`);
+      assert.ok(lapset[0].classList.contains('pulucam-kuva'));
+      assert.ok(lapset[1].classList.contains('pulucam-lappu'));
+      assert.equal(lapset[1].textContent, PULUN_KUVAT[i].lyhyt);
+      // Lappu EI ole paneelin oma kappale eikä pakan lapsi.
+      assert.equal(lapset[1].closest('.pulucam-kortti'), kortti);
+    }
+
+    // 1. Päällimmäisen kortin lappu — ja vain sen.
+    assert.equal(nakyvaLappu(ui).maara, 1);
+    assert.equal(nakyvaLappu(ui).teksti, PULUN_KUVAT[2].lyhyt);
+
+    // 2. Nosto siirtää lapun uuden päällimmäisen alle.
+    kortit[1].dispatch('click');
+    assert.equal(puluCamPaallimmainen(ui).kuva, PULUN_KUVAT[1]);
+    assert.equal(nakyvaLappu(ui).maara, 1, 'nosto jätti kaksi lappua näkyviin');
+    assert.equal(nakyvaLappu(ui).teksti, PULUN_KUVAT[1].lyhyt);
+    assert.ok(kortit[1].classList.contains('pulucam-paalla'));
+    assert.ok(!kortit[2].classList.contains('pulucam-paalla'));
+
+    // 3. Isoisän kuva päälle: näkyvä lappu on isoisän oma kappale.
+    ui.luentakuva.querySelector('.fokusvirta-kuva').dispatch('click');
+    assert.equal(puluCamPaallimmainen(ui).tunnus, PULUCAM_POHJA);
+    assert.equal(nakyvaLappu(ui).maara, 1);
+    assert.equal(nakyvaLappu(ui).pohjasta, true);
+    assert.equal(nakyvaLappu(ui).teksti, POHJAKUVA.lyhyt);
+    assert.equal(pakanKortit().filter((k) => k.classList.contains('pulucam-paalla')).length, 0);
+
+    // 4. Napautus LAPPUUN toimii kuten napautus kuvaan: kortti nousee.
+    kortit[0].querySelector('.pulucam-lappu').parentNode.dispatch('click');
+    assert.equal(puluCamPaallimmainen(ui).kuva, PULUN_KUVAT[0]);
+    assert.equal(nakyvaLappu(ui).teksti, PULUN_KUVAT[0].lyhyt);
+    assert.equal(asiakirja.querySelectorAll('.fokuszoom').length, 0);
+
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+/* ---------------------------------------------------------------- */
 /* 4 b. Kaksi kuvatekstiä ja Havainnekuva-linkki                     */
 /* ---------------------------------------------------------------- */
 
@@ -787,11 +927,28 @@ test('lyhyt kuvateksti kertoo päällimmäisestä kuvasta, ei alle jääneestä'
     assert.equal(selite(), POHJAKUVA.lyhyt);
     assert.notEqual(selite(), POHJAKUVA.selite);
 
-    // Pakan noustessa isoisän kuva jää alle: teksti seuraa päällimmäistä.
+    /*
+     * Pakan noustessa isoisän kuva jää alle, ja kartalla luettava teksti
+     * seuraa päällimmäistä. LAPPU ON PÄÄLLIMMÄISEN KORTIN OMA (omistaja
+     * 10.9.2026 klo 23.37): isoisän kappale jää paikalleen mutta
+     * piiloon, ja näkyvä lappu on sen kortin lappu, joka on päällä.
+     */
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
-    assert.equal(selite(), PULUN_KUVAT[0].lyhyt);
+    assert.equal(nakyvaLappu(ui).maara, 1);
+    assert.equal(nakyvaLappu(ui).teksti, PULUN_KUVAT[0].lyhyt);
     await odota(pulucamViive(2) + 120);
-    assert.equal(selite(), PULUN_KUVAT[2].lyhyt, 'teksti ei seurannut päällimmäistä kuvaa');
+    assert.equal(nakyvaLappu(ui).maara, 1, 'kartalla näkyy useampi kuin yksi lappu');
+    assert.equal(nakyvaLappu(ui).teksti, PULUN_KUVAT[2].lyhyt,
+      'teksti ei seurannut päällimmäistä kuvaa');
+    // Jokaisella kortilla on OMA lappunsa omassa lohkossaan.
+    for (const [i, kortti] of pakanKortit().entries()) {
+      const lappu = kortti.querySelector('.pulucam-lappu');
+      assert.ok(lappu, `kortilta ${i} puuttuu oma lappu`);
+      assert.equal(lappu.textContent, PULUN_KUVAT[i].lyhyt, `kortin ${i} lapussa väärä teksti`);
+      assert.equal(lappu.parentNode, kortti, `kortin ${i} lappu ei ole kortin omassa lohkossa`);
+    }
+    // Isoisän lappu on yhä paneelin oma kappale, tekstinsä kanssa.
+    assert.equal(selite(), POHJAKUVA.lyhyt);
 
     // KARTALLA EI KOSKAAN OLE HAVAINNEKUVA-LINKKIÄ, vaikka päällimmäisen
     // kuvan lähde on havainnekuva (PULUN_KUVAT[2]).
@@ -1045,8 +1202,16 @@ test('ilman luentakuvaa pakka nousee samaan paikkaan ilman pohjakuvaa', () => {
      * pohjattoman pakan kuvilla ei olisi kartalla kuvatekstiä lainkaan.
      */
     assert.equal(paneeli.querySelectorAll('.fokusvirta-luentateksti').length, 1);
-    assert.equal(paneeli.querySelector('.fokusvirta-kuvaselite').textContent,
-      PULUN_KUVAT[0].lyhyt);
+    /*
+     * ISOISÄN KAPPALE JÄÄ TYHJÄKSI, koska isoisän kuvaa ei ole
+     * (omistaja 10.9.2026 klo 23.37: kappale on isoisän kuvan lappu).
+     * Kuvateksti tulee kortin OMASTA lapusta, joka on kiinni juuri sen
+     * kortin alalaidassa — tyhjä kappale ei näy (css :has-sääntö).
+     */
+    assert.equal(paneeli.querySelector('.fokusvirta-kuvaselite').textContent, '');
+    assert.equal(nakyvaLappu(ui).maara, 1);
+    assert.equal(nakyvaLappu(ui).pohjasta, false);
+    assert.equal(nakyvaLappu(ui).teksti, PULUN_KUVAT[0].lyhyt);
 
     // Karuselli alkaa suoraan pulun kuvista.
     pakanKortit()[0].dispatch('click');

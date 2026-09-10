@@ -452,6 +452,18 @@
   display: none;
 }
 
+/* ISOISÄN LAPPU NÄKYY VAIN, KUN ISOISÄN KUVA ON PÄÄLLIMMÄISENÄ
+   (omistaja 10.9.2026 klo 23.37). Pulun kortilla on oma lappunsa
+   kiinni omassa alalaidassaan, ja kahta lappua ei kartalla ole.
+
+   VISIBILITY EIKÄ DISPLAY: kappale pitää paikkansa taitossa, joten
+   paneelin korkeus ei muutu nostoissa — ankkuri on paneelin
+   alareunassa, ja katoava kappale nykäisisi kuvaa alaspäin joka
+   kerta, kun pelaaja selaa pakkaa (js/fokusvirta.js kuvateksti). */
+.fokusvirta-luentakuva .fokusvirta-luentateksti.pulucam-alla {
+  visibility: hidden;
+}
+
 /* Pienessä koossa lappu on lukukelvoton (0,45 × 0,85 rem), joten se
    häipyy: peukalonkynnen kokoinen valokuva jää kartalle yksin. */
 .fokusvirta-luentakuva.pieni .fokusvirta-luentateksti {
@@ -569,7 +581,23 @@
   pointer-events: none;
 }
 
-.pulucam-kuva {
+/* KORTTI ON KUVA JA SEN OMA LAPPU YHDESSÄ LOHKOSSA (omistaja
+   10.9.2026 klo 23.37, iPad-kaappaukset Krakovasta ja Vilnasta;
+   Raamattu "PULUN KORTIN KUVATEKSTI KIINNI KORTIN OMASSA
+   ALALAIDASSA", sanatarkasti: *"Pulun pienissä kuvissa ei näy
+   kuvatekstiä"*).
+
+   Ennen tätä kartalla oli yksi lappu, joka oli kiinni PAKAN
+   POHJAKUVAN (isoisän paperin) alareunassa — pulun kortti kelluu
+   pakan päällä omassa kulmassaan ja hieman ylempänä, joten lappu
+   näytti irralliselta eikä kortin omalta.
+
+   KÄÄRE KANTAA ASENNON, KERROKSEN JA PULPAHDUKSEN, jotka ennen olivat
+   napissa. Kierto koskee siis koko kappaletta: lappu kääntyy kortin
+   mukana, koska se on saman transformin sisällä. Napissa lappu ei voi
+   olla (`<p>` ei kuulu napin sisään), eikä pakan lapsena (silloin se
+   olisi taas irrallinen, eri kulmassa oleva elementti). */
+.pulucam-kortti {
   --pulucam-pomppu: 0.82;
 
   position: absolute;
@@ -579,6 +607,33 @@
   height: 100%;
   box-sizing: border-box;
   z-index: var(--pulucam-kerros, 1);
+  opacity: 0;
+  /* Kääre itse on läpinäkyvä kehys: napautukset ottavat nappi ja
+     lappu (kumpikin pointer-events: auto), jolloin kortin alta
+     näkyvät alemmat kortit saavat omat napautuksensa. */
+  pointer-events: none;
+  transform:
+    translate(var(--pulucam-x, 0%), var(--pulucam-y, 0%))
+    rotate(var(--pulucam-kulma, 0deg))
+    scale(var(--pulucam-pomppu));
+  /* PULPAHDUS: pieni yliheitto (1,56) tekee noususta pomppuavan eikä
+     liukuvan — omistajan sana oli "pulpahtaa". */
+  transition:
+    transform 420ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 220ms ease-out;
+}
+
+.pulucam-kortti.nakyy {
+  --pulucam-pomppu: 1;
+  opacity: 1;
+}
+
+.pulucam-kuva {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
   padding: 0.3rem;
   border: 0;
   border-radius: 4px;
@@ -591,22 +646,55 @@
      karusellin (js/pulucam.js). Osoitin on sama molemmille: pelaajalle
      kortti on kortti, jota napautetaan. */
   cursor: pointer;
-  opacity: 0;
   pointer-events: auto;
-  transform:
-    translate(var(--pulucam-x, 0%), var(--pulucam-y, 0%))
-    rotate(var(--pulucam-kulma, 0deg))
-    scale(var(--pulucam-pomppu));
-  /* PULPAHDUS: pieni yliheitto (1,56) tekee noususta pomppuavan eikä
-     liukuvan — omistajan sana oli "pulpahtaa". */
-  transition:
-    transform 420ms cubic-bezier(0.34, 1.56, 0.64, 1),
-    opacity 220ms ease-out;
 }
 
-.pulucam-kuva.nakyy {
-  --pulucam-pomppu: 1;
-  opacity: 1;
+/* KORTIN OMA KUVATEKSTILAPPU: KIINNI JUURI SEN KORTIN ALALAIDASSA.
+
+   `top: 100%` on kortin alareuna, `margin: 0` pitää lapun kiinni
+   siinä — väliä ei ole, eikä lapulla ole omaa transformia: kierto
+   tulee kääreeltä, joten kuva ja lappu ovat yksi kappale.
+
+   ULKOASU ON SAMA KUIN ISOISÄN LAPULLA (vaalea pohja, alakulmat
+   pyöristetyt, ei yläpyöristystä): pelaajalle lappu on lappu,
+   riippumatta siitä kumman kuvan alla se on.
+
+   VAIN YKSI LAPPU KERRALLAAN. Näkyvissä on päällimmäisen kortin lappu
+   (`.pulucam-paalla`, js/pulucam.js jarjestaPakka) — muut ovat
+   `display: none`, joten ne eivät peitä alempien korttien näkyviä
+   reunoja eivätkä kasvata korkeusvaraa (js/fokusvirta.js
+   pakanLapunKorkeus lukee vain näkyvän). */
+.pulucam-lappu {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+  border: 0;
+  border-radius: 0 0 10px 10px;
+  background: rgba(245, 240, 226, 0.94);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: rgba(33, 29, 24, 0.84);
+  text-align: left;
+  /* Napautus lappuun on napautus korttiin (kuuntelija on kääreessä). */
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.pulucam-kortti.pulucam-paalla > .pulucam-lappu {
+  display: block;
+}
+
+/* Pienessä koossa lappu on lukukelvoton, kuten isoisän lappukin:
+   kartan liike häivyttää sen (sama sääntö kuin
+   `.fokusvirta-luentakuva.pieni .fokusvirta-luentateksti`). */
+.fokusvirta-luentakuva.pieni .pulucam-lappu {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .pulucam-kuva img {
@@ -676,7 +764,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pulucam-kuva {
+  .pulucam-kortti {
     --pulucam-pomppu: 1;
     transition: none;
   }
