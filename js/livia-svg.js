@@ -2,7 +2,7 @@
 import {LIVIA_PIX_ELEET,livianPikseliAsento} from './livia-pikselit.js';
 import {livianSvgPaa} from './livia-svg-paa.js';
 export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
- ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
+ ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['scratch','Pään raapaisu',2600]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
 const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
 const lvEase=n=>{n=lvClamp(n);return n*n*(3-2*n);};
 const lvGate=p=>lvEase((p-.06)/.18)*(1-lvEase((p-.79)/.18));
@@ -19,6 +19,7 @@ export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
   if(['smile','grin','wink','welcome','present'].includes(id))s.frame=id==='welcome'||id==='present'?'smile':id;
   if(id==='glasses'){s.frame=p<.24?'down':'smug';s.glasses=lvEase((p-.12)/.20)*(1-lvEase((p-.78)/.16));}
   if(id==='welcome')s.tilt=Math.sin(p*Math.PI*3)*.4;
+  if(id==='scratch'){s.frame='up';s.tilt=Math.sin(p*Math.PI*14)*.45;}
  }
  return s;
 }
@@ -51,6 +52,7 @@ export function livianSvgMalli(s,{right=0}={}) {
   else if(s.frame==='cover')m.wing='cover';
   else if(s.frame==='preen')m.wing='preen';
   else if(['expert','present','welcome'].includes(id)&&gate>.01)m.wing=id==='welcome'?'shrug':'point';
+  else if(id==='scratch'&&gate>.01)m.wing='scratch';
   else if(id==='glasses'&&(p<.34||p>.76)&&gate>.01)m.wing='shy';
   else if(id==='angry'&&gate>.01)m.wing='spread';
   else if(['disbelief','confused'].includes(id)&&gate>.01)m.wing='shrug';
@@ -71,9 +73,10 @@ function lvWing(kind,side,amount,phase=0) {
  if(kind==='spread'){angle=38+amount*35+Math.sin(phase*6)*amount*8;raised=true;}
  if(kind==='shrug'){angle=34+amount*20;raised=true;}
  if(kind==='point'&&side==='near'){angle=-12;raised=true;}
+ if(kind==='scratch'&&side==='near'){angle=-76+Math.sin(phase*4)*9;raised=true;}
  if(['shade','cover','shy','preen','reach','reachRight'].includes(kind)&&side==='near'){angle=kind==='shade'?-67:kind==='reachRight'?80:kind==='reach'?-110:kind==='preen'?-115:-78;raised=true;}
  if(!raised)return side==='near'?`<path d="M112 136Q128 137 133 150Q135 161 128 171Q116 166 112 151Z" fill="#84959f"/><path d="M119 145Q126 148 130 153L129 157Q123 151 118 150Z M120 155Q126 158 130 163L128 167Q124 162 120 160Z" fill="#4d6472"/>`:'';
- const shift=kind==='shade'?-55:kind==='cover'?-38:kind==='shy'?-16:0;
+ const shift=kind==='scratch'?-44:kind==='shade'?-55:kind==='cover'?-38:kind==='shy'?-16:0;
  return `<g data-part="${side}-wing" transform="translate(${anchor} ${143+shift}) scale(${flip} 1) rotate(${angle})"><path d="M-3 4Q-11-7-4-20L4-38Q7-44 10-37L10-29Q16-42 20-37L17-24Q23-35 26-30L22-17Q29-23 29-17Q23-5 12 3Q4 8-3 4Z" fill="${side==='near'?'#8499a3':'#788e99'}"/><path d="M0-13L8-27M5-7L16-23M10-1L21-15" fill="none" stroke="#506b7a" stroke-width="3.7" stroke-linecap="round"/></g>`;
 }
 function lvFeet(m,s) {

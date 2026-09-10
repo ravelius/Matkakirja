@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1739, teksti: 'Pulu lehden päällä, pysyvät lasit ja odotusreaktiot' },
   { v: 1738, teksti: 'Seitsemän isoisän paperikuvaa lopulliseen v4-versioon' },
   { v: 1737, teksti: 'Pulun tunnetagit, lehtikoko ja Ihmisen matkan reaktiot' },
   { v: 1736, teksti: 'Isoisän paperikuvat kaikissa 45 Euroopan kohteessa' },

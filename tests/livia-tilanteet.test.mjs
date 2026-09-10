@@ -24,7 +24,7 @@ test('luennan reaktiot seuraavat soitinta, eivät seinäkelloa tai vanhaa kaupun
  const a=new EventTarget();a.currentTime=0;a.paused=false;let current=true;const calls=[];
  const off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
  const stop=seuraaLivianKuuntelua(a,()=>current,()=> 'Kirjastossa luin kirjaa.');t.after(stop);
- a.dispatchEvent(new Event('playing'));assert.equal(calls.at(-1)[1].ele,'listen');
+ a.dispatchEvent(new Event('playing'));assert.equal(calls.at(-1)[1].ele,'lookUp');
  a.currentTime=4;a.dispatchEvent(new Event('timeupdate'));assert.equal(calls.length,1);
  a.paused=true;a.dispatchEvent(new Event('pause'));assert.equal(calls.at(-1)[0],'narrationEnd');
  a.currentTime=18;a.dispatchEvent(new Event('timeupdate'));assert.equal(calls.length,2);
