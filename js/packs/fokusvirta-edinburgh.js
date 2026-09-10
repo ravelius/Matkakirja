@@ -239,6 +239,8 @@ export const FOKUSVIRTA_EDINBURGH = {
     kommentti: [
       'Elokuussa täällä on nyt festivaaleja kellareita myöten. Isoisä eksyi kerroksiin; minä valitsen katon.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     teksti: 'Ja se isoisäsi ihmettelemä järjestys — köyhät ylhäällä — '
       + 'johtui savusta: mitä alempana asuit, sitä vähemmän piippuja '
       + 'savusi sun ikkunan alla. Mennään vanhaan kaupunkiin.',

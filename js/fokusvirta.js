@@ -1,4 +1,4 @@
-import { ilmoitaLivianTilanne } from './livia-tilanteet.js';
+import { ilmoitaLivianTilanne, ilmoitaLivianTunne } from './livia-tilanteet.js';
 /*
  * FOKUSMOODIN ANNOSTELUVIRTA — kaupungin esittely kortteina kartan päällä.
  *
@@ -1157,6 +1157,20 @@ export function fokusvirtaSaapumiskupla(ui, city) {
        * naytaPuheenvuoro), koska jokainen kupla on oma äänitiedostonsa.
        */
       if (!kuplat.length) return;
+      /*
+       * PULUN REAKTIOTAGI (Raamattu, PULUN REAKTIOREKISTERI; taulukko
+       * docs/pulu-reaktiot.md). Tagi laukeaa KUPLAN ALUSSA eikä kesken
+       * puheen: tästä hetkestä kupla oikeasti nousee ruudulle, ja
+       * ilmoitus on pelkkä kuvasignaali — se ei koske kuplan tekstiin,
+       * ääneen eikä ajoitukseen.
+       *
+       * VAIN OMA KOMMENTTI. Vanha `maadoitus`-varapolku ja kaupungin
+       * oma saapumisrepliikki (LIVIAN_SAAPUMISET) jäävät ilman tagia:
+       * tunne on kirjoitettu kommenttitekstin sävystä.
+       */
+      const tunnetagi = kentta === 'kommentti'
+        ? fokusvirtaSisalto(ui, city)?.pollo?.tunne : null;
+      if (tunnetagi) ilmoitaLivianTunne(tunnetagi, { lahde: 'fokusvirta', tunnus: city.id });
       const { osat, aani } = livianOsatJaAani(ui, city.id, kentta, kuplat);
       polloPuheenvuoro(osat, {
         jatkuuko: () => !ui.dead && ui.game?.cityOf?.()?.id === city.id,

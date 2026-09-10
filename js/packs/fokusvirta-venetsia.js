@@ -317,6 +317,8 @@ export const FOKUSVIRTA_VENETSIA = {
       'Tässä Venetsia. Hetkinen. Nuo ovat yksityisiä. Hän vain sattui '
       + 'jokaiseen hyvään kuvakulmaan. Sulje albumi.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'rakkaus', voimakkuus: 0.8 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      */

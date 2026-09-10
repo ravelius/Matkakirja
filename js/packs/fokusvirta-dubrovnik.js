@@ -191,6 +191,8 @@ export const FOKUSVIRTA_DUBROVNIK = {
     kommentti: [
       'Onofrion suihkukaivo antaa vettä yhä. Isoisä maistoi kahdesti; minä olisin laskenut nokat ennen juomista.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'utelias', voimakkuus: 0.45 },
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuurit). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/

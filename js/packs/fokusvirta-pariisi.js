@@ -177,6 +177,8 @@ export const FOKUSVIRTA_PARIISI = {
     kommentti: [
       'Leipä kainalossa? Olisin seurannut minäkin. Ooppera valmistui, ja nyt pelkästä talon katsomisestakin maksetaan.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.55 },
     /*
      * Huomio viittaa herokuvan kohteeseen (Eiffel-torni). Faktat:
      * torni rakennettiin vuoden 1889 maailmannäyttelyyn väliaikaiseksi

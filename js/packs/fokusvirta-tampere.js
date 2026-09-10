@@ -359,6 +359,8 @@ export const FOKUSVIRTA_TAMPERE = {
     kommentti: [
       'Nyt Finlaysonilla on ravintoloita. Isoisä seurasi lankaa, minä tarjoilijaa. Molemmilla oli hyvä syy.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *

@@ -205,6 +205,8 @@ export const FOKUSVIRTA_WIEN = {
     kommentti: [
       'Rotunde paloi myöhemmin. Wienin kahvilat jäivät. Isoisä ymmärsi koneita, mutta tuossa hän ymmärsi ihmistä.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.55 },
     /*
      * Huomio viittaa herokuvan kohteeseen (valtionooppera). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/

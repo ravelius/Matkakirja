@@ -351,6 +351,8 @@ export const FOKUSVIRTA_ODESSA = {
     kommentti: [
       'Odessan vanha keskusta on nyt sodan uhkaamaa maailmanperintöä. Näitä portaita katson tänään toisin.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'vakava', voimakkuus: 0.6 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi
      * pistettä ensimmäisen virkkeen lopussa on kaanonin oma kirjoitusasu.

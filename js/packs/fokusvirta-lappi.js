@@ -90,6 +90,8 @@ export const FOKUSVIRTA_LAPPI = {
     kommentti: [
       'Rovaniemelle lennetään nyt joulupukin vuoksi. Joet kohtaavat yhä. Minusta niissäkin olisi matkan aihetta.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, lappi/kaupunki/avauskuvat): Arktikum Ounasjoen

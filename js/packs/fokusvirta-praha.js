@@ -228,6 +228,8 @@ export const FOKUSVIRTA_PRAHA = {
     kommentti: [
       'Kello kokoaa torille väkeä yhä. Nyt kaikilla on kello puhelimessa, ja silti he katsovat tuota. Ymmärrän.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (Kaarlensilta ja linna).
      * Faktat ovat lehden oman avauskuvan selitteestä (js/packs/

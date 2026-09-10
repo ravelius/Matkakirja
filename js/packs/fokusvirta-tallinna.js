@@ -217,6 +217,8 @@ export const FOKUSVIRTA_TALLINNA = {
     kommentti: [
       'Raeapteekki myy yhä marsipaania. Suurempi pala? Se mies osasi kuunnella potilasta.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.55 },
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuuri). Faktat ovat
      * lehden oman avauskuvan selitteestä (js/packs/kulttuuri-kategoriat.js,

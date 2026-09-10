@@ -343,6 +343,8 @@ export const FOKUSVIRTA_TUKHOLMA = {
     kommentti: [
       'Ruotsissa ei enää kruunata kuninkaita. Tyttö tiesi silti olennaisen: näkymä paranee, kun pääsee ylemmäs.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen. Faktat ovat lehden oman
      * avauskuvan selitteestä (js/packs/kulttuuri-kategoriat.js,

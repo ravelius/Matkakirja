@@ -254,6 +254,8 @@ export const FOKUSVIRTA_VILNA = {
     kommentti: [
       'Vanha observatorio on yhä yliopiston käytössä. Tähtiä tutkitaan kauempana kaupungin valoista. Tuoli ei riitä.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, vilna/avauskuvat, heroerä 31): Gediminaan torni

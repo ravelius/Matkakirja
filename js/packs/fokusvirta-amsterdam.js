@@ -219,6 +219,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
     kommentti: [
       'Huonekaluja nostetaan ikkunoista edelleen. Lentotaidottomaksi lajiksi olette varsin kekseliäitä.',
     ],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     /* KAANON (Fable) — Livian huomio sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Amsterdamissa on enemmän siltoja kuin Venetsiassa, mut '
       + 'siitä ei pidetä täällä isoa ääntä.. Ne kanavakehät näkyvät '
