@@ -618,6 +618,7 @@ const MODULES = [
   'js/pollo-haku.js',
   'js/livia-hoyhenet.js',
   'js/livia-pikselit.js',
+  'js/livia-chat-tila.js',
   'js/livia-eleet.js',
   'js/pollo.js',
   /*
