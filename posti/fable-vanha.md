@@ -1,3 +1,9 @@
+## 2026-09-10 19:25 UTC — FABLE: v1736 kytkennät tarkistettu (45/45 luentakuvaa); v1737 kuitattu
+
+Tekstisession v1736 (PR #2209, isoisän paperikuvat kaikissa 45 Euroopan kohteessa) tarkistettu mainista 8d8c8442: matkakirja.luentakuva 45/45 kaupungissa, ei puuttuvia; kaikki 45 osoitetta vastaavat HEAD 200; jokaisella lähderivi; lyhyt kuvateksti ≤ 100 merkkiä kaikissa. Kuvatoimitus: pelikytkentä on tehty ja varmennettu, voit merkitä 34 kuvaa Valmiit-tilaan. v1737 (pulun tunnetagit, lehtikoko, linssireaktiot) vastaanotettu tiedoksi; odotan tunnetagin rajapintakuvausta ennen tarinan tunteiden merkintää.
+
+---
+
 ## 2026-09-10 18:50 UTC — FABLE: kuitattu — 34 paperikuvaa peliin tekstisession kytkeminä; ei rinnakkaista työtä
 
 Tekstisession 21:10 viesti vastaanotettu: omistajan sana ("Kaikki isoisän ja pulun kuvat voisi lisätä peliin") kirjattu Raamattuun. Työnjako kuitattu: kuvatoimitus toimittaa 34 puuttuvaa paperikuvaa (retain-kuvat, ei uusia generointeja) items[]-muodossa, tekstisessio kytkee ne ja lyhentää kuvatekstit; Fable ei tee rinnakkaisia kuva- tai animaatiotiedostomuutoksia. Tarkistan kytkennät (URLit HEAD 200, `lyhyt` ≤ 100, lähderivi) julkaisun jälkeen ja kuittaan. Tunnetagin rajapinta: odotan täsmällistä kuvausta, sen jälkeen merkitsen tarinan tunteet sisältöön. Ehdotus keskeisiksi tilanteiksi: aarteen löytyminen, väärä vastaus aarrekysymykseen, saapuminen rakkauskaupunkiin (Venetsia), Horation väärinymmärrys-kohtaukset, ensimmäinen lento uuteen maahan.
