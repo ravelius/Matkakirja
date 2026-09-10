@@ -1,105 +1,21 @@
 /* Livian lähikasvot: alkuperäinen kokonaispikseleillä piirretty pelihahmo.
- * 22 × 22 lepo, 38 × 44 läpinäkyvä näyttämö. Lyhyet eleet myös vasemmalle.
+ * 44 × 44 aktiivikasvo, 24 × 24 lepo. Liikeradat omassa loogisessa ruudukossa.
  * Omistajan 9.9.2026 hyväksymä pikselisuunta; ei kuvatiedostoja. */
-// Exact integer pixel cells. No tracing, interpolation or image smoothing.
+import { LIVIA_HOYHEN_PALETTI, livianHoyhenkasvo, livianPieniHoyhenkasvo } from './livia-hoyhenet.js';
+// Kokonaispikseleitä: yksi liikeradan yksikkö = kaksi piirron pikseliä.
 export const LIVIA_PIX_W=38, LIVIA_PIX_H=44, LIVIA_PIX_LEFT=16;
 const lpWIDTH=22, lpHEIGHT=LIVIA_PIX_H, lpLEFT=LIVIA_PIX_LEFT;
-export const LIVIA_PIX_PALETTI=[null,'#263e50','#f5f2e9','#b7c3c8'];
+export const LIVIA_PIX_PALETTI=LIVIA_HOYHEN_PALETTI;
+export const LIVIA_PIX_TARKKUUS=2;
 const lpK=1,lpW=2,lpG=3;
 const lpgrid=(height=22,width=lpWIDTH)=>Array.from({length:height},()=>Array(width).fill(0));
 function lpdot(g,x,y,c=lpK){if(y>=0&&y<g.length&&x>=0&&x<g[y].length)g[y][x]=c;}
 function lprect(g,x,y,w,h,c=lpK){for(let j=y;j<y+h;j++)for(let i=x;i<x+w;i++)lpdot(g,i,j,c);}
 function lpline(g,x,y,ex,ey,c=lpK){let dx=Math.abs(ex-x),sx=x<ex?1:-1,dy=-Math.abs(ey-y),sy=y<ey?1:-1,err=dx+dy;for(;;){lpdot(g,x,y,c);if(x===ex&&y===ey)break;let e=2*err;if(e>=dy){err+=dy;x+=sx;}if(e<=dx){err+=dx;y+=sy;}}}
 function lppolygon(g,pts,c){for(let y=0;y<g.length;y++)for(let x=0;x<g[y].length;x++){let inside=false;for(let i=0,j=pts.length-1;i<pts.length;j=i++){const a=pts[i],b=pts[j];if((a[1]>y+.5)!==(b[1]>y+.5)&&(x+.5)<(b[0]-a[0])*(y+.5-a[1])/(b[1]-a[1])+a[0])inside=!inside;}if(inside)lpdot(g,x,y,c);}}
-function lpbase(){
-  const g=lpgrid();
-  // Epäsäännöllinen päälaen siluetti; höyhenet harmaat, silmät luonnonvalkoiset.
-  lppolygon(g,[[10,1],[13,1],[14,0],[17,1],[19,1],[21,3],[22,6],[22,20],[20,22],[11,22],[8,19],[8,16],[5,13],[4,8],[4,5],[6,3]],lpG);
-  lpline(g,9,1,6,3);lpline(g,19,1,21,3);lpline(g,4,4,4,7);lpline(g,21,6,21,16);
-  lpline(g,20,17,21,19);lpline(g,8,19,10,21);return g;
-}
-function lpeyes(g,mood='rest'){
-  lprect(g,5,5,5,6,lpW);lprect(g,12,4,8,7,lpW);
-  if(mood==='blink'){lpline(g,5,8,9,8);lpline(g,12,8,19,8);lpdot(g,18,9);return;}
-  if(mood==='glance'){lpline(g,5,7,9,7);lpline(g,12,6,19,5);lpline(g,12,7,19,6);lprect(g,12,7,2,2);lpline(g,13,10,18,10);lpline(g,13,3,19,2);return;}
-  if(mood==='fluster'){lprect(g,5,5,4,6,lpK);lprect(g,6,6,2,4,lpW);lpdot(g,7,7);lpline(g,12,6,19,7);lprect(g,14,8,2,2);lpline(g,13,10,18,10);lpline(g,12,3,18,5);return;}
-  lpline(g,5,6,9,7);lpline(g,5,7,9,8);lpdot(g,7,8);lpdot(g,8,9);
-  lpline(g,12,6,19,5);lpline(g,12,7,19,6);lprect(g,15,7,2,3);
-  lpline(g,13,10,18,10);lpline(g,12,3,18,1);lpdot(g,19,1);
-}
-function lpbeak(g,open=false){
-  // Lyhyt suora pulunnokka; kärki ei koukistu petolinnun tapaan.
-  lppolygon(g,[[6,10],[8,10],[10,12],[8,14],[3,15],[3,13]],lpK);
-  lpline(g,4,13,7,12,lpG);lprect(g,6,10,2,1,lpW);
-  if(open){lppolygon(g,[[4,16],[9,14],[10,16],[8,18],[5,18]],lpK);lpline(g,6,17,8,16,lpG);}
-  else lpline(g,4,15,8,14);
-}
-function lpnormal(mood='rest',open=false){const g=lpbase();lpeyes(g,mood);lpbeak(g,open);return g;}
-const lprest=lpnormal(),lpblink=lpnormal('blink'),lpglance=lpnormal('glance');
-const lpcrumb=lpnormal(),lpchew=lpnormal('blink',true),lpfluster=lpnormal('fluster'),lpcaught=lpnormal('fluster');
-for(const g of [lpcrumb,lpchew,lpcaught])lpdot(g,2,14,lpW);
-for(const g of [lpfluster,lpcaught]){lpdot(g,20,2,lpG);lpdot(g,20,3,lpG);}
-const lpshock=lpgrid(30);
-lppolygon(lpshock,[[7,6],[20,6],[22,9],[22,28],[20,30],[11,30],[9,26],[4,21],[4,12]],lpG);
-lprect(lpshock,4,5,6,14,lpK);lprect(lpshock,5,6,4,12,lpW);lpdot(lpshock,7,11);
-lprect(lpshock,12,1,9,18,lpK);lprect(lpshock,13,2,7,16,lpW);lpdot(lpshock,16,10);
-lpline(lpshock,13,0,18,0);lpline(lpshock,5,3,8,2);
-lppolygon(lpshock,[[6,18],[9,18],[11,20],[8,22],[3,22],[3,20]],lpK);
-lpline(lpshock,3,21,8,19,lpG);lpdot(lpshock,7,19,lpW);
-lppolygon(lpshock,[[5,23],[10,22],[13,26],[11,29],[5,28]],lpK);
-lpline(lpshock,7,27,10,27,lpG);lpline(lpshock,21,19,21,27);
-const lponlyEyes=lpgrid();
-for(let y=0;y<12;y++)for(let x=4;x<20;x++)if((x>=5&&x<=9&&y>=5&&y<=10)||(x>=12&&x<=19&&y>=4&&y<=11))lponlyEyes[y][x]=lprest[y][x]||lpW;
-
-// Ilmeet vaihtavat silmäluomia, nokkaa ja pään asentoa, eivät koko kuvakkeen kokoa.
-function lpIlme(tunne) {
- const g=lpnormal(); lprect(g,5,1,15,10,lpG);
- lprect(g,5,5,5,6,lpW);lprect(g,12,4,8,7,lpW);
- const pari=(vasen,oikea)=>{vasen(5,5);oikea(12,5);};
- const auki=(x,y)=>{lprect(g,x,y,7,6,lpK);lprect(g,x+1,y+1,5,4,lpW);lpdot(g,x+3,y+3);};
- const littea=(x,y)=>{lpline(g,x,y+2,x+6,y+2);lprect(g,x+3,y+3,2,2);};
- if(tunne==='angry') { lpline(g,5,3,10,6);lpline(g,5,4,10,7);lpline(g,12,6,19,2);lpline(g,12,7,19,3);lprect(g,8,7,2,3);lprect(g,14,7,2,3);lpline(g,5,10,9,10);lpline(g,13,11,18,11); }
- else if(tunne==='embarrassed') {lpline(g,5,6,9,6);lpdot(g,8,7);lpline(g,12,6,19,7);lprect(g,17,8,2,2);lpline(g,5,3,9,4);lpline(g,13,3,18,4);lprect(g,10,12,3,1,lpG);lprect(g,17,12,3,1,lpG);}
- else if(tunne==='bored') {pari(littea,littea);lpline(g,5,11,9,11,lpG);lpline(g,13,12,19,12,lpG);}
- else if(tunne==='sleep') {lpline(g,5,7,9,8);lpline(g,12,8,19,7);lpdot(g,6,8);lpdot(g,17,8);}
- else if(tunne==='manic') {pari(auki,auki);lprect(g,7,7,3,3);lprect(g,14,7,3,3);lpdot(g,8,7,lpW);lpdot(g,15,7,lpW);lpline(g,4,2,9,1);lpline(g,13,1,20,2);}
- else if(tunne==='disbelief') {lprect(g,5,3,5,9);lprect(g,6,4,3,7,lpW);lpdot(g,7,8);lpline(g,12,6,20,5);lprect(g,16,7,2,3);lpline(g,13,11,19,11);lpline(g,12,2,19,0);}
- else if(tunne==='happy'||tunne==='smug') {lpline(g,5,6,7,4);lpline(g,7,4,10,6);lpline(g,12,6,15,3);lpline(g,15,3,19,5);if(tunne==='smug'){lprect(g,14,6,2,3);lpline(g,12,9,19,9);}}
- else if(tunne==='confused') {auki(12,4);lpline(g,5,7,10,7);lpdot(g,8,8);lpline(g,5,3,9,4);lpline(g,13,1,17,0);}
- else if(tunne==='love') {for(const x of[5,13]){lprect(g,x,5,2,2);lprect(g,x+3,5,2,2);lprect(g,x,7,5,2);lprect(g,x+1,9,3,1);lpdot(g,x+2,10);}}
- else if(tunne==='up') {pari(auki,auki);lprect(g,7,6,2,2);lprect(g,14,6,2,2);}
- else if(tunne==='down') {pari(auki,auki);lprect(g,7,9,2,2);lprect(g,14,9,2,2);}
- else lpeyes(g);
- for(let y=0;y<3;y++)for(let x=0;x<lpWIDTH;x++)if(!lprest[y][x])g[y][x]=0;
- return g;
-}
-function lpEdesta() {
- const g=lpgrid();lppolygon(g,[[5,1],[9,1],[10,0],[14,1],[17,1],[21,5],[21,18],[18,22],[4,22],[1,18],[1,5]],lpG);
- lpline(g,4,1,1,4);lpline(g,18,2,21,5);
- lprect(g,3,6,7,7,lpW);lprect(g,12,5,7,8,lpW);lpline(g,0,5,0,16);lpline(g,21,5,21,16);
- lpline(g,3,5,9,7);lpline(g,3,6,9,8);lpline(g,12,7,18,4);lpline(g,12,8,18,5);
- lprect(g,6,8,2,3);lprect(g,13,8,2,3);lpline(g,3,12,8,12);lpline(g,13,12,18,12);
- lppolygon(g,[[9,12],[13,12],[16,15],[11,19],[6,15]],lpK);lpline(g,8,15,14,15,lpG);lprect(g,10,12,3,1,lpW);
- return g;
-}
-function lpProfiili(oikea=false) {
- const g=lpgrid();lppolygon(g,[[11,1],[14,1],[15,0],[19,1],[21,3],[22,6],[22,20],[20,22],[10,22],[8,18],[6,15],[5,7],[7,3]],lpG);
- lpline(g,10,1,6,4);lpline(g,19,1,21,3);lprect(g,9,5,10,7,lpW);lpline(g,5,5,5,8);lpline(g,10,21,8,18);
- lpline(g,9,5,19,3);lpline(g,9,6,19,4);lprect(g,12,6,3,4);lpline(g,9,11,18,11);lpbeak(g);
- return oikea?g.map(row=>[...row].reverse()):g;
-}
-const lpExtra={front:lpEdesta(),left:lpProfiili(),right:lpProfiili(true)};
-for(const mood of['angry','embarrassed','bored','sleep','manic','disbelief','happy','smug','confused','love','up','down'])lpExtra[mood]=lpIlme(mood);
-lpExtra.puff=lpIlme('bored');
-lppolygon(lpExtra.puff,[[1,16],[4,14],[8,15],[11,19],[16,15],[20,14],[22,17],[22,22],[0,22]],lpG);
-lpline(lpExtra.puff,0,16,0,20);lpline(lpExtra.puff,1,21,5,21);lpline(lpExtra.puff,20,15,21,16);lpline(lpExtra.puff,21,17,21,21);lpline(lpExtra.puff,6,16,10,16);lpdot(lpExtra.puff,9,17);
-lpExtra.yawn=lpIlme('sleep');lpbeak(lpExtra.yawn,true);lprect(lpExtra.yawn,4,16,6,5);
-lpExtra.talk=lpnormal('rest',true);lpExtra.talkSmall=lpnormal();lpline(lpExtra.talkSmall,3,17,8,16);lpdot(lpExtra.talkSmall,7,17);
-lpExtra.chewManic=lpIlme('manic');lpbeak(lpExtra.chewManic,true);lpdot(lpExtra.chewManic,2,14,lpW);
-lpExtra.preen=lpnormal('blink');lppolygon(lpExtra.preen,[[12,22],[11,16],[15,11],[18,8],[19,14],[22,18],[22,22]],lpG);lpline(lpExtra.preen,12,20,16,15);lpline(lpExtra.preen,15,21,19,16);lpline(lpExtra.preen,18,21,20,19);
-lpExtra.cover=lpIlme('embarrassed');lppolygon(lpExtra.cover,[[10,22],[9,13],[12,5],[14,4],[14,11],[17,5],[19,6],[17,13],[21,9],[22,11],[20,19],[22,22]],lpG);lpline(lpExtra.cover,10,20,12,11);lpline(lpExtra.cover,14,19,17,11);
-lpExtra.wing=lpnormal();lppolygon(lpExtra.wing,[[17,22],[16,15],[18,11],[20,14],[21,7],[22,7],[22,22]],lpG);lpline(lpExtra.wing,18,19,20,16);
-export const LIVIA_PIX_RUUDUT=Object.freeze({rest:lprest,blink:lpblink,glance:lpglance,crumb:lpcrumb,chew:lpchew,fluster:lpfluster,caught:lpcaught,shock:lpshock,eyes:lponlyEyes,...lpExtra});
+const lpNames=['rest','blink','glance','crumb','chew','fluster','caught','shock','eyes','front','left','right','angry','embarrassed','bored','sleep','manic','disbelief','happy','smug','confused','love','up','down','puff','yawn','talk','talkSmall','chewManic','preen','cover','wing'];
+export const LIVIA_PIX_RUUDUT=Object.freeze(Object.fromEntries(lpNames.map(name=>[name,livianHoyhenkasvo(name)])));
+const lprest=LIVIA_PIX_RUUDUT.rest;
 
 // Kesto sisältää tauot. Vain suuntakohtaiset tulo-/poistumisklipit eivät pääty lepoon.
 export const LIVIA_PIX_ELEET=Object.freeze([
@@ -209,35 +125,35 @@ function lpKoriste(g,fx,phase) {
  if(fx==='snow')for(const[x,y]of[[5,6],[14,11],[18,3]]){const yy=y+phase%5;lpdot(g,x,yy,lpW);lpdot(g,x-1,yy,lpG);lpdot(g,x+1,yy,lpG);lpdot(g,x,yy-1,lpG);lpdot(g,x,yy+1,lpG);}
 }
 export function livianPikselit(s) {
- const out=lpgrid(lpHEIGHT,LIVIA_PIX_W),head=lpgrid(lpHEIGHT);let f=LIVIA_PIX_RUUDUT[s.frame]||lprest;
- if(s.mouth&&f.length===22&&!['front','right','left'].includes(s.frame)){f=f.map(r=>[...r]);const nokka=LIVIA_PIX_RUUDUT[s.mouth]||lprest;for(let y=10;y<22;y++)for(let x=0;x<11;x++)f[y][x]=nokka[y][x];}
- else if(s.mouth&&['front','right','left'].includes(s.frame)){f=f.map(r=>[...r]);if(s.mouth==='talk'){if(s.frame==='front')lprect(f,9,17,5,4,lpK);else if(s.frame==='right')lprect(f,14,16,4,3,lpK);else lprect(f,4,16,4,3,lpK);}}
- const top=lpHEIGHT-f.length+s.y-1;
- for(let y=0;y<f.length;y++)for(let x=0;x<lpWIDTH;x++){
-  if(s.line&&y+top>=lpHEIGHT-1)continue;
-  const shear=s.tilt?Math.round((y-10)/9)*s.tilt:0;
-  if(f[y][x])lpdot(head,x+s.x+shear,y+top,f[y][x]);
- }
- if(s.eyesAhead)for(let y=0;y<lponlyEyes.length;y++)for(let x=0;x<lpWIDTH;x++)if(lponlyEyes[y][x])lpdot(head,x,y+21,lponlyEyes[y][x]);
+ const out=lpgrid(lpHEIGHT,LIVIA_PIX_W),head=lpgrid(lpHEIGHT);
+ if(s.eyesAhead)lpStamp(head,LIVIA_PIX_RUUDUT.eyes,0,21,22,22);
  if(s.owlX!==null&&s.owlX!==undefined){const x=s.owlX;lprect(head,x+4,29,14,12,lpG);lprect(head,x+5,31,5,5,lpW);lprect(head,x+12,31,5,5,lpW);lpdot(head,x+7,33);lpdot(head,x+14,33);lpline(head,x+4,28,x+7,30);lpline(head,x+17,28,x+14,30);lpdot(head,x+10,37);lpdot(head,x+11,38);}
- if(s.line)lprect(head,1,lpHEIGHT-1,21,1,lpK);
- if(s.crumbY!==null&&s.crumbY!==undefined)lpdot(head,2,s.crumbY,lpK);
+ if(s.line)lprect(head,1,lpHEIGHT-1,21,1,5);
+ if(s.crumbY!==null&&s.crumbY!==undefined)lpdot(head,2,s.crumbY,17);
  if(s.fx)lpKoriste(head,s.fx,s.phase||0);
  for(let y=0;y<lpHEIGHT;y++)for(let x=0;x<lpWIDTH;x++)out[y][x+lpLEFT]=head[y][x];
- // Sivurekvisiitta pysyy kasvojen korkeudella, kuplan alapuolella.
  if(s.side?.kind==='bread'){
   const y=29+s.side.y,dx=s.side.x||0;
   const prop=lpgrid(lpHEIGHT,LIVIA_PIX_W);
   lppolygon(prop,[[4,y+6],[7,y+4],[14,y+6],[20,y+9],[19,y+12],[10,y+10],[4,y+9]],lpG);
   lpline(prop,5,y+9,18,y+12);lpline(prop,11,y+7,17,y+9);
-  lppolygon(prop,[[3,y],[5,y-2],[10,y-2],[13,y],[13,y+5],[11,y+7],[4,y+7],[2,y+4]],lpK);
-  lppolygon(prop,[[4,y],[6,y-1],[10,y-1],[12,y+1],[12,y+4],[10,y+6],[5,y+6],[3,y+3]],lpW);
-  lpline(prop,6,y+1,9,y+1,lpG);lpline(prop,9,y+2,7,y+3,lpG);
+  lppolygon(prop,[[3,y],[5,y-2],[10,y-2],[13,y],[13,y+5],[11,y+7],[4,y+7],[2,y+4]],16);
+  lppolygon(prop,[[4,y],[6,y-1],[10,y-1],[12,y+1],[12,y+4],[10,y+6],[5,y+6],[3,y+3]],17);
+  lpline(prop,6,y+1,9,y+1,18);lpline(prop,9,y+2,7,y+3,16);
   if(s.side.bite){lprect(prop,10,y-1,4,3,0);lpdot(prop,9,y,0);lpdot(prop,14,y+5,lpK);}
   for(let yy=0;yy<lpHEIGHT;yy++)for(let xx=0;xx<LIVIA_PIX_W;xx++)if(prop[yy][xx])lpdot(out,xx+dx,yy,prop[yy][xx]);
  }
  if(s.side?.kind==='pfft')for(let i=0;i<3;i++)lpline(out,3+i*2,29+i*4,11+i,31+i*3,lpK);
- return out;
+
+ const detail=lpgrid(lpHEIGHT*2,LIVIA_PIX_W*2),f=livianHoyhenkasvo(s.frame,s.mouth);
+ const top=lpHEIGHT*2-f.length+s.y*2-2;
+ for(let y=0;y<f.length;y++)for(let x=0;x<f[y].length;x++){
+  const yy=y+top;if(s.line&&yy>=lpHEIGHT*2-2)continue;
+  const shear=s.tilt?Math.round((y-20)/18)*s.tilt*2:0;
+  if(f[y][x])lpdot(detail,x+lpLEFT*2+s.x*2+shear,yy,f[y][x]);
+ }
+ for(let y=0;y<lpHEIGHT;y++)for(let x=0;x<LIVIA_PIX_W;x++)if(out[y][x])lprect(detail,x*2,y*2,2,2,out[y][x]);
+ return detail;
 }
 // Koko näyttämö ulottuu oikeaan näytönreunaan, ei vain kuvakkeen reunaan.
 export const LIVIA_STAGE_H=76;
@@ -249,59 +165,54 @@ function lpBird(phase=0){
  lppolygon(g,[[8,12],[11,14],[7,17],[6,15]],lpK);
  if(phase%2){lppolygon(g,[[9,9],[1,3],[0,5],[4,11],[10,12]],lpK);lppolygon(g,[[14,9],[21,2],[21,6],[17,12]],lpK);}
  else{lppolygon(g,[[9,9],[2,12],[0,15],[7,14],[10,11]],lpK);lppolygon(g,[[14,9],[21,13],[20,16],[16,13]],lpK);}
- return g;
+ const detail=lpgrid(36,44);
+ for(let y=0;y<18;y++)for(let x=0;x<22;x++)if(g[y][x]){
+  const c=g[y][x]===lpW?13:g[y][x]===lpK?(x===14&&y===5?14:x<10?5:4):x<13?6:3;
+  lprect(detail,x*2,y*2,2,2,c);
+ }
+ lprect(detail,25,16,4,4,8);lprect(detail,29,17,2,3,11);lpdot(detail,29,10,14);lpdot(detail,28,9,2);lprect(detail,33,11,2,2,2);
+ // Siipijuovat kulkevat levitettyjen lentosulkien mukana.
+ if(phase%2){lpline(detail,6,12,15,21,4);lpline(detail,35,19,40,10,4);}
+ else{lpline(detail,3,29,13,25,4);lpline(detail,34,26,40,29,4);}
+ return detail;
 }
 function lpStamp(out,src,x,y,w,h){
  for(let yy=0;yy<h;yy++)for(let xx=0;xx<w;xx++){const c=src[Math.floor(yy*src.length/h)]?.[Math.floor(xx*src[0].length/w)];if(c)lpdot(out,x+xx,y+yy,c);}
 }
-function lpCompact(frame){
- const g=lpgrid(16,16);
- lppolygon(g,[[7,1],[10,0],[13,1],[15,3],[16,7],[16,14],[14,16],[7,16],[5,13],[4,10],[2,9],[3,5],[5,2]],lpG);
- lpline(g,6,1,3,4);lpline(g,13,1,15,3);lpline(g,5,13,7,15);
- lprect(g,3,4,4,5,lpW);lprect(g,9,3,6,6,lpW);
- if(frame==='sleep'||frame==='blink'){lpline(g,3,6,6,7);lpline(g,9,7,14,6);}
- else{lpline(g,3,4,6,5);lpdot(g,4,6);lpline(g,9,5,14,3);lprect(g,11,5,2,3);lpline(g,9,9,13,9);lpline(g,9,2,12,1);}
- lppolygon(g,[[3,9],[5,8],[7,10],[5,12],[1,12],[1,11]],lpK);lpdot(g,4,9,lpW);lpline(g,2,11,4,10,lpG);
- return g;
-}
 export function livianNayttamo(s,{right=0,compact=false}={}){
- right=Math.max(0,Math.round(right));const width=LIVIA_PIX_W+right,out=lpgrid(LIVIA_STAGE_H,width),dy=LIVIA_STAGE_H-LIVIA_PIX_H;
+ right=Math.max(0,Math.round(right));const width=LIVIA_PIX_W+right,out=lpgrid(LIVIA_STAGE_H*2,width*2),dy=(LIVIA_STAGE_H-LIVIA_PIX_H)*2;
  if(s.flight){
   const f=s.flight,t=f.t;
   if(f.kind==='away'&&t>=1||f.kind==='back'&&t<=0)return out;
   if(f.kind==='splat'){
-   const slip=t<.35?0:Math.round(((t-.35)/.65)**2*70),x=lpLEFT+1,y=38+slip;
-   lpStamp(out,LIVIA_PIX_RUUDUT.front,x,y,21,15);
-   for(const ex of [x+5,x+14]){lpline(out,ex-2,y+4,ex+2,y+8);lpline(out,ex+2,y+4,ex-2,y+8);}
-   if(t<.23){lpline(out,x-5,y+2,x-2,y+4);lpline(out,x-3,y-4,x-1,y-1);lpline(out,x+21,y-3,x+23,y-6);}
+   const slip=t<.35?0:Math.round(((t-.35)/.65)**2*70),x=(lpLEFT+1)*2,y=(38+slip)*2;
+   lpStamp(out,livianHoyhenkasvo('splat'),x,y,42,30);
+   if(t<.23){lpline(out,x-10,y+4,x-4,y+8,5);lpline(out,x-6,y-8,x-2,y-2,5);lpline(out,x+42,y-6,x+46,y-12,5);}
    return out;
   }
   const near=f.kind==='away'?1-t:f.near?.45+t*.55:t;
-  const size=near<.1?1:Math.max(3,Math.round(near*22));
-  const cx=Math.round((width-4)*(1-near)+27*near),cy=Math.round(5*(1-near)+63*near);
-  if(size===1)lpdot(out,cx,cy);
-  else if(f.kind==='glass'&&t>.7){const w=Math.round(13+(t-.7)*50);lpStamp(out,LIVIA_PIX_RUUDUT.front,Math.round(cx-w/2),Math.round(cy-w/2)-12,w,w);}
+  const size=near<.1?1:Math.max(3,Math.round(near*44));
+  const cx=Math.round(((width-4)*(1-near)+27*near)*2),cy=Math.round((5*(1-near)+63*near)*2);
+  if(size===1)lpdot(out,cx,cy,5);
+  else if(f.kind==='glass'&&t>.7){const w=Math.round((13+(t-.7)*50)*2);lpStamp(out,LIVIA_PIX_RUUDUT.front,Math.round(cx-w/2),Math.round(cy-w/2)-24,w,w);}
   else lpStamp(out,lpBird(s.phase),Math.round(cx-size/2),cy-Math.round(size*.4),size,Math.max(2,Math.round(size*.82)));
   return out;
  }
  const base=livianPikselit(s);
  if(s.walk){
-  const t=s.walk.direction===1?s.walk.t:1-s.walk.t,shift=Math.round((right+24)*t);
-  for(let y=0;y<LIVIA_PIX_H;y++)for(let x=0;x<LIVIA_PIX_W;x++)if(base[y][x])lpdot(out,x+shift,y+dy-3,base[y][x]);
-  // Askelten jalat jen při chůzi, pravý okraj řeší až celý viewport.
-  for(const [x,y]of [[26,74-s.phase%2],[33,73+s.phase%2]]){lpline(out,x+shift,y-2,x+shift,y);lpline(out,x+shift,y,x+shift+2,y);}
+  const t=s.walk.direction===1?s.walk.t:1-s.walk.t,shift=Math.round((right+24)*t)*2;
+  for(let y=0;y<base.length;y++)for(let x=0;x<base[y].length;x++)if(base[y][x])lpdot(out,x+shift,y+dy-6,base[y][x]);
+  for(const [x,y]of [[26,74-s.phase%2],[33,73+s.phase%2]]){lpline(out,x*2+shift,(y-2)*2,x*2+shift,y*2,15);lpline(out,x*2+shift,y*2,x*2+shift+4,y*2,15);}
   return out;
  }
- if(compact){
-  // Omat tiiviit kasvot: suuret pikselit ilman suorakaiteeksi leikattua päätä.
-  lpStamp(out,lpCompact(s.frame),LIVIA_PIX_W-16,LIVIA_STAGE_H-16,16,16);
- }else for(let y=0;y<LIVIA_PIX_H;y++)for(let x=0;x<LIVIA_PIX_W;x++)if(base[y][x])lpdot(out,x,y+dy,base[y][x]);
+ if(compact)lpStamp(out,livianPieniHoyhenkasvo(s.frame),LIVIA_PIX_W*2-24,LIVIA_STAGE_H*2-24,24,24);
+ else for(let y=0;y<base.length;y++)for(let x=0;x<base[y].length;x++)if(base[y][x])lpdot(out,x,y+dy,base[y][x]);
  return out;
 }
-export function luoLivianPikselit(canvas,scale=3) {
+export function luoLivianPikselit(canvas,scale=2) {
  if(!Number.isInteger(scale)||scale<1)throw new RangeError('Pikselimittakaavan on oltava positiivinen kokonaisluku.');
  let right=0;const ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas ei ole käytettävissä.');
- function resize(extra=0){right=Math.max(0,Math.ceil(extra/scale));const w=(LIVIA_PIX_W+right)*scale,h=LIVIA_STAGE_H*scale;
+ function resize(extra=0){right=Math.max(0,Math.ceil(extra/(scale*2)));const w=(LIVIA_PIX_W+right)*scale*2,h=LIVIA_STAGE_H*scale*2;
   if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;canvas.style.width=`${w}px`;canvas.style.height=`${h}px`;ctx.imageSmoothingEnabled=false;}}
  function paint(state,{compact=false}={}){ctx.clearRect(0,0,canvas.width,canvas.height);const data=livianNayttamo(state,{right,compact});for(let y=0;y<data.length;y++)for(let x=0;x<data[y].length;x++)if(data[y][x]){ctx.fillStyle=LIVIA_PIX_PALETTI[data[y][x]];ctx.fillRect(x*scale,y*scale,scale,scale);}}
  resize();paint(livianPikseliAsento('blink',0),{compact:true});return{paint,resize};

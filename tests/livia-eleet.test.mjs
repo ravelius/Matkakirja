@@ -31,7 +31,7 @@ function liviaTestYmparisto(t){
 
 test('pöllö odottaa poissa, vastaus palaa heti; puhe ja tuho eivät jätä ajastimia',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);assert.ok(c);
- const canvas=e.doc.body.children[0].children[0];assert.equal(canvas.width,114);assert.equal(canvas.height,228);
+ const canvas=e.doc.body.children[0].children[0];assert.equal(canvas.width,152);assert.equal(canvas.height,304);
  e.tick(5000);assert.equal(e.raf.size,0,'lepo ei pyöritä piirtoa');
  e.pollo.auki=true;e.notify(e.button);
  const row=new e.El();row.className='pollo-odottaa';row.textContent='Käyn kysymässä pöllöltä';e.virta.append(row);e.notify(e.virta);
@@ -67,7 +67,7 @@ test('piirtopinta ulottuu napista viewportin oikeaan reunaan myös koon vaihtues
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);let right=370;
  e.doc.documentElement={clientWidth:390};e.button.getBoundingClientRect=()=>({right,bottom:700});
  c=asennaLivianKasvot(e.pollo);e.tick(5000);const surface=e.doc.body.children[0],canvas=surface.children[0];
- assert.equal(surface.style.left,'256px');assert.equal(surface.style.width,'134px');assert.equal(canvas.width,135);
- right=340;e.doc.dispatchEvent(new Event('scroll'));assert.equal(surface.style.left,'226px');assert.equal(surface.style.width,'164px');
+ assert.equal(surface.style.left,'218px');assert.equal(surface.style.width,'172px');assert.equal(canvas.width,172);
+ right=340;e.doc.dispatchEvent(new Event('scroll'));assert.equal(surface.style.left,'188px');assert.equal(surface.style.width,'202px');
  c.toista('walkRight');e.tick(2300);assert.equal(canvas.ctx.rects.length,0);c.palaa();e.tick(2400);assert.ok(canvas.ctx.rects.length>0);
 });

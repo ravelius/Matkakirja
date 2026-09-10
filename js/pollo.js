@@ -3452,7 +3452,9 @@ class Pollo {
     const oikea = Math.max(PINON_MARGINAALI, leveys - (nappi.left + nappi.width / 2 + karki));
     kehys.style.left = 'auto';
     kehys.style.right = `${Math.round(oikea)}px`;
-    kehys.style.bottom = `${Math.round((ikkuna.innerHeight || 0) - nappi.top + 10)}px`;
+    // Aktiivikasvo ulottuu kompaktin napin yläpuolelle. Kupla jättää sille tilan.
+    const kasvonYlitys = this.nappi?.classList?.contains?.('livia-kasvot-valmis') ? 40 : 0;
+    kehys.style.bottom = `${Math.round((ikkuna.innerHeight || 0) - nappi.top + 10 + kasvonYlitys)}px`;
   }
 
   /**
