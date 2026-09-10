@@ -2317,10 +2317,35 @@ function mitoitaLuentakuva(naytto) {
     paneH: h,
     kaupunki,
     kortti: matkakirjakortinLaatikko(pane),
+    /*
+     * PORTAAN RATKAISEE IKKUNAN LEVEYS, EI PANEELIN. Sama mitta kuin
+     * css:n media-ehdoissa (puhelin < 900, tabletti 700–1400 →
+     * LUENTAKUVAN_TABLETTIKERROIN, työpöytä > 1400), jotta ankkuroitu
+     * kuva ja css:n vara-arvo ovat samaa kokoa. Karttapaneeli voi olla
+     * ikkunaa kapeampi (sivupalkki, matkakirjan palsta), ja sen mukaan
+     * porrastaminen antaisi iPadille puhelimen mitat.
+     */
     perusleveys: luentakuvanPerusleveys(w, globalThis.innerWidth ?? w),
     // Kaupungin oma kallistuskulma: kierretty kuva ulottuu
     // alakulmastaan alemmas kuin suora (ks. luentakuvanSijainti).
     kallistus: Number.parseFloat(luentakuvanKallistus(city.id)) || 0,
+    /*
+     * PAKKA ROIKKUU MYÖS SIVUILLE — JA TILA VARATAAN ETUKÄTEEN.
+     *
+     * Pystysuunnan ylitys menee `lisakorkeus`-varana kaupungin
+     * laatalle (pakanYlitys alla), mutta pakan uloin kortti työntyy
+     * yhtä lailla kuvan VASEMMALLE puolelle: juuri se laskeutui
+     * matkakirjakortin kulmalle iPadin vaakaruudulla, kun kuva kasvoi
+     * 1,5-kertaiseksi (mitattu Chromiumilla 10.9.2026).
+     *
+     * EHTO ON KAUPUNGIN KUVALUETTELO, EI RUUDUN TILANNE. Pakka nousee
+     * vasta pulun repliikin jälkeen, sekunteja tämän mittauksen
+     * jälkeen (`puluCamPakassa` on nyt vielä false), mutta ANKKURI
+     * lyödään lukkoon tässä eikä myöhempi uusintamittaus enää siirrä
+     * kuvaa kortin ohi. Sivuttaisvara on siis varattava heti, kun
+     * kaupungilla ylipäätään on pulun kuvia.
+     */
+    pakka: fokusvirtaPulunKuvat(ui, city).length ? PAKAN_YLITYS_OSUUS : 0,
   };
   /*
    * KUVASUHDE ON KUVAN OMA, EI MITATTU LAATIKKO. Mitattu suhde
@@ -2366,6 +2391,26 @@ function mitoitaLuentakuva(naytto) {
   kirjoita(sijainti);
   naytto.kuvasuhde = suhde;
   naytto.sijainti = sijainti;
+  /*
+   * ANKKURI SEURAA UUTTA SOVITUSTA — PAITSI PELAAJAN OMAA SIIRTOA.
+   *
+   * Ensimmäinen sovitus tehdään heti saapumisessa, jolloin
+   * matkakirjakortti on vasta avautumassa (max-height liukuu, teksti
+   * kirjoittuu) eikä pulun pakka ole vielä noussut. Kortin lopullinen
+   * laatikko on siis isompi kuin se, jonka mukaan kuva asetettiin —
+   * ja ilman tätä ankkuri jäisi vanhaan kohtaan, jolloin pakan uloin
+   * kortti laskeutui matkakirjan kulmalle (mitattu Chromiumilla
+   * 10.9.2026, 1280 × 800: kuva jäi 28 px liian vasemmalle).
+   *
+   * Uusintamittaus tehdään kuvan latauduttua, pakan noustessa ja
+   * ruudun koon muuttuessa — joka kerta ankkuri siirtyy sovituksen
+   * mukana. RAAHATTUA KUVAA EI SIIRRETÄ: pelaajan oma valinta voittaa
+   * (Raamattu, LUENTAKUVAA VOI ITSE LIIKUTTAA).
+   */
+  if (naytto.ankkuri && !naytto.raahattu) {
+    const uusi = ruutuLaudalle(ui, { x: sijainti.x, y: sijainti.y }, naytto.mitat);
+    if (uusi) naytto.ankkuri = uusi;
+  }
   return sijainti;
 }
 

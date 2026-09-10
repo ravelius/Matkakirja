@@ -270,11 +270,13 @@
      --luentakuva-kallistus  kierto asteina; js kirjoittaa kaupungin oman
                              kulman tähän (luentakuvanKallistus)
      --luentakuva-pienennys  pienen kuvan mittakaava kartan liikkeen jälkeen
+     --luentakuva-tablettikerroin  tabletin puolitoistakertaistus (ks. alla)
 
    TYÖPÖYTÄ: leveys 38 % näkymästä, katto 640 px (omistaja: kuva oli
    2000 px:n ruudulla n. 290 px ja liian pieni). PUHELIN: 80 % ruudusta,
    katto 22 rem — hitusen entistä isompi, mutta kartta näkyy yhä
-   molemmin puolin.
+   molemmin puolin. TABLETTI (700–1400 px): sama porras kerrottuna
+   1,5:llä (omistaja 10.9.2026, ks. media-ehto alempana).
 
    PAIKKA: ankkuri on ALAREUNASSA prosentteina. Matkakirjakortti kasvaa
    ylhäältä alas ja pulun kuplapino alhaalta ylös, joten kuvan paikka on
@@ -287,8 +289,12 @@
    ------------------------------------------------------------------------- */
 
 .fokusvirta-luentakuva {
-  --luentakuva-leveys: min(80vw, 22rem);
-  --luentakuva-korkeus: min(34vh, 15rem);
+  /* Kerroin on 1 kaikkialla paitsi tablettikaistalla (media-ehto alla),
+     ja se kertoo sekä leveyden että korkeuskaton — porras pysyy yhtenä
+     lukuna eikä samaa mittaa kirjoiteta kahteen kertaan. */
+  --luentakuva-tablettikerroin: 1;
+  --luentakuva-leveys: calc(min(80vw, 22rem) * var(--luentakuva-tablettikerroin));
+  --luentakuva-korkeus: calc(min(34vh, 15rem) * var(--luentakuva-tablettikerroin));
   --luentakuva-kallistus: -2.4deg;
   --luentakuva-pienennys: 0.45;
   /* Nousun matka: paneeli ladotaan hieman alempaa ja liukuu paikalleen. */
@@ -457,8 +463,29 @@
    ei ruudun mittainen: kartan pitää näkyä sen molemmin puolin. */
 @media (min-width: 900px) {
   .fokusvirta-luentakuva {
-    --luentakuva-leveys: min(38vw, 640px);
-    --luentakuva-korkeus: min(46vh, 26rem);
+    --luentakuva-leveys: calc(min(38vw, 640px) * var(--luentakuva-tablettikerroin));
+    --luentakuva-korkeus: calc(min(46vh, 26rem) * var(--luentakuva-tablettikerroin));
+  }
+}
+
+/*
+ * TABLETILLA PUOLTA ISOMPI (omistaja 10.9.2026 klo 23.30, iPad-kaappaus
+ * Krakovasta; Raamattu LUENTAKUVA IPADILLA PUOLTA ISOMPANA,
+ * sanatarkasti: *"Kuvat saisivat tulla ipadilla puolta isompana"*).
+ *
+ * Kaista 700–1400 px kattaa iPadin pystyn (1024) ja vaakan (1366);
+ * puhelin ja työpöytä jäävät ennalleen. Sääntö muuttaa VAIN kerrointa,
+ * eikä leveyttä kirjoiteta uusiksi: molemmat portaat (puhelimen 80 vw
+ * ja työpöydän 38 vw) lukevat saman muuttujan, joten kumpi tahansa
+ * niistä on voimassa, se kasvaa tällä kaistalla puolitoistakertaiseksi.
+ *
+ * SAMA LUKU ON js/saapumisasento.js:ssä (LUENTAKUVAN_TABLETTIKERROIN,
+ * LUENTAKUVAN_TABLETTI_PX), joka mitoittaa ANKKUROIDUN kuvan; nämä
+ * media-arvot ovat vara sille tapaukselle, ettei näkyvää aluetta ole.
+ */
+@media (min-width: 700px) and (max-width: 1400px) {
+  .fokusvirta-luentakuva {
+    --luentakuva-tablettikerroin: 1.5;
   }
 }
 
