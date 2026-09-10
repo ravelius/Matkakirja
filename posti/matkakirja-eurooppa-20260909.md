@@ -536,3 +536,16 @@ Uudet lähteet js/livia-svg.js ja js/livia-svg-paa.js; nykyinen js/livia-eleet.j
 Kaikkien eleiden esikatselu ja voimakkuus-/aikajanasäätimet: https://matkakirja-pulun-animaatiot.sravelius.chatgpt.site (yksityinen v14, julkaisu succeeded). Pelin oma julkinen ele-esikatselu tulee osoitteeseen /docs/livia-svg.html; /docs/livia-chat.html käyttää samaa oikeaa pelisovitinta.
 
 QA: kaikkien 51 eleen SVG-kuvat katsottu; lisäksi liikesarjoja tarkistettu. Omassa korjausloopissa korjattu kulmien suunta, siipien avautuminen, jalan ankkurointi, pullan läpinäkyvä haukkaus ja oikealle poistumisen reunatila. Koko paikallinen testistö 2516 pass / 13 skip / 0 fail; viimeisen reunakorjauksen 8 kohdennettua testiä pass, niputus ja build pass. Lopullisen PR-headin 8e0d0477f52692c6454e8a9108cbd49e7136ff05 GitHub Testit -ajo 34492152790 success ennen mergeä. Yksityisen esikatselun lähde ea194191a25c763813825d5c271d19ef3a820690.
+
+
+## 10.9.2026 — Pulun kolme jälkikorjausta (v1733)
+
+Omistajan suorat havainnot: jalkojen alta puuttuu viiva/varjo, chat on liian korkealla ja poislennossa kasvot väärään suuntaan. Kaikki kolme korjattu samaan julkaisuun.
+
+Mainissa PR #2206, commit 9cd162623285ec4474f0e65b074a889e4b166688. Julkaise peli -ajo on tämän viestin aikana käynnissä; varmennan live-tiedostot vielä. Erillistä integraatiota ei tarvita.
+
+- js/livia-svg.js: pieni pehmeä kosketusvarjo maatasossa; ei veny pään mukana eikä näy ilmassa tai viivan alle piiloutuessa. Poislento peilaa koko linnun oikeaan yläkulmaan jo ponnistuksessa; paluu suuntaa takaisin vasemmalle alas.
+- js/livia-chat-tila.js: paikallaan tehtävän ilmeen varaus 156 → 104 CSS px, chatin alareuna 52 px alemmas. Pystychat huomioi todellisen .topbar-elementin alareunan + 12 px; enimmäiskorkeus 68 % näkyvästä ruudusta, kuitenkin enintään 640 px. Pienissä vaaka-/näppäimistötiloissa aiempi sivusijoittelu.
+- Esikatselun sama piirrin julkaistu yksityiseen v15:een: https://matkakirja-pulun-animaatiot.sravelius.chatgpt.site .
+
+QA: lepo, suuri tunne sekä meno-/paluulento renderöity ja katsottu. Puhelimen chat-geometrian sommittelu katsottu lepopulun ja kääk-ilmeen kanssa. Testit 2518 pass / 13 skip / 0 fail; kaksoisavaimet, niputus, savukkeet, build ja PR:n Testit-ajo 34498151105 success. Uudet regressiot yläpalkin huomioinnille ja koko linnun lentosuunnalle.
