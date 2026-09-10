@@ -333,8 +333,8 @@ pätevät vasta mainin kanssa.
 Koko E-alueella ei ole yhtäkään `ilmoitaLivianTunne`-kutsua eikä yhtäkään
 `tunne`-kenttää sisällössä (ainoa tagi koko pelissä on
 js/linssit/ihmisen-matka-esitys.js:1546). Poikkeus: 45 kaupungin
-saapumiskommentin tagit merkitään sisältöön v1740:ssä (`pollo.tunne`),
-jolloin niiden Tila on **M/K (v1740)**.
+saapumiskommentin tagit merkitään sisältöön v1741:ssä (`pollo.tunne`),
+jolloin niiden Tila on **M/K (v1741)**.
 
 **E1 Aarteenetsintä — vihjeestä löytöön**
 
@@ -415,61 +415,61 @@ js/livia-tilanteet.js `livianAiheEle`-periaate):
 
 | ID | Näkymä | Tiedosto:kohta | Alku → loppu | Tunne (voim.) | Ajoitus / toisto | Prioriteetti / keskeytys | Paluu | Asusteet / katse | Mobiili / modaali | Tila | Testipolku |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `tarina.kaupunki.kommentti` — yhteiset ehdot | Livian kupla kartalla (kevyt kulku) / pöllön kortti | js/fokusvirta.js `fokusvirtaSaapumiskupla`, `fokusvirtaMerkintaLuettu`; data js/packs/fokusvirta-*.js `pollo.kommentti[0]` | isoisän merkinnän luenta/kirjoitus loppuu → `MERKINNAN_TAUKO_MS` 1400 ms → kupla | kaupunkikohtainen, ks. taulukko alla | kerran per saapuminen (`ui.saapumiskuplaNaytetty`); yksi kupla per kaupunki | EI kertojan luennan päälle — tagi vasta kuplan alussa; `SAAPUMISKUPLA_VAITI` nyt tyhjä. Tekniset ehdot: `pulu.kommentti.alku` (B4) | perustila kuplan sulkeuduttua | katse merkinnästä pelaajaan | kartta, ei modaali; kupla lähtee kelluvasta pulunapista | M/K (v1740) | tests/fokusvirta.test.mjs, tests/luentakuva.test.mjs |
+| `tarina.kaupunki.kommentti` — yhteiset ehdot | Livian kupla kartalla (kevyt kulku) / pöllön kortti | js/fokusvirta.js `fokusvirtaSaapumiskupla`, `fokusvirtaMerkintaLuettu`; data js/packs/fokusvirta-*.js `pollo.kommentti[0]` | isoisän merkinnän luenta/kirjoitus loppuu → `MERKINNAN_TAUKO_MS` 1400 ms → kupla | kaupunkikohtainen, ks. taulukko alla | kerran per saapuminen (`ui.saapumiskuplaNaytetty`); yksi kupla per kaupunki | EI kertojan luennan päälle — tagi vasta kuplan alussa; `SAAPUMISKUPLA_VAITI` nyt tyhjä. Tekniset ehdot: `pulu.kommentti.alku` (B4) | perustila kuplan sulkeuduttua | katse merkinnästä pelaajaan | kartta, ei modaali; kupla lähtee kelluvasta pulunapista | M/K (v1741) | tests/fokusvirta.test.mjs, tests/luentakuva.test.mjs |
 | `tarina.kaupunki.merkinta.alku` | matkakirjakortti | js/ui.js `renderFact`; js/fokusvirta.js `fokusvirtaMatkakirja`; data `matkakirja.teksti` + `luenta` + `aanite` | luenta/kirjoituskone alkaa | `vakava` (0,4) tai — | kerran per saapuminen | **kuuntelutila**: tekninen `narration` hoitaa eleet; sisältötagia EI saa laukaista kesken luennan | narrationEnd | katse kirjaan | kartta + luentakuva (`matkakirja.luentakuva`) | D | tests/luentakuva.test.mjs, tests/luentakuvakartta.test.mjs |
 
 Kaupunkikohtaiset tunnetagit (45 kpl, kentästä `pollo.kommentti[0]`).
 Perustelu = saapumiskommentin sävy sanatarkasti luettuna. Tila
-**M/K (v1740)**: tagit merkitään `pollo.tunne`-kenttään fokusvirta-*.js
+**M/K (v1741)**: tagit merkitään `pollo.tunne`-kenttään fokusvirta-*.js
 -pakkeihin ja js/fokusvirta.js:n kutsu tehdään samassa julkaisussa.
 
 | ID | Tunne (voim.) | Perustelu (kommentin sävy) | Tila |
 | --- | --- | --- | --- |
-| `tarina.ateena.kommentti` | `ilo` (0,5) | rahamuseo vs. "tarkistan ensin kahvilan pihan" — oma agenda, kuiva itseironia | M/K (v1740) |
-| `tarina.sofia.kommentti` | `ilo` (0,45) | "Maa ei ole korottanut hintaa arvonimen takia" — kuiva vitsi | M/K (v1740) |
-| `tarina.istanbul.kommentti` | `lammin` (0,5) | myötätunto kantajalle: "missä saa levätä" | M/K (v1740) |
-| `tarina.rooma.kommentti` | `miettiva` (0,45) | "minäkin käyttäydyn siellä kuin vieras" — nöyrä huomio | M/K (v1740) |
-| `tarina.bukarest.kommentti` | `ilo` (0,55) | ruoka-into: "Minä löydän keittiön samoin" (persous) | M/K (v1740) |
-| `tarina.sarajevo.kommentti` | `lammin` (0,5) | hyväntahtoinen kuittaus isoisälle: "Hyvä alku" | M/K (v1740) |
-| `tarina.madrid.kommentti` | `ilo` (0,5) | "isoisä huomasi vallanvaihdon, minä koiran" — eläinperspektiivi | M/K (v1740) |
-| `tarina.wien.kommentti` | `lammin` (0,55) | "ymmärsi koneita, mutta tuossa hän ymmärsi ihmistä" | M/K (v1740) |
-| `tarina.pariisi.kommentti` | `ilo` (0,55) | "Leipä kainalossa? Olisin seurannut minäkin" — pullapersous | M/K (v1740) |
-| `tarina.berliini.kommentti` | `vakava` (0,5) | poika ja poljettu lehti: "Poikaa mietin minäkin" | M/K (v1740) |
-| `tarina.lontoo.kommentti` | `ylpea` (0,5) | "en vaihtaisi taivasta pehmustettuun penkkiin, Fogg" | M/K (v1740) |
-| `tarina.budapest.kommentti` | `ilo` (0,5) | "Kerrankin ihmisillä on oikea kerros" — nokkava korkeusvitsi | M/K (v1740) |
-| `tarina.dubrovnik.kommentti` | `utelias` (0,45) | "olisin laskenut nokat ennen juomista" — laskeva tarkkailija | M/K (v1740) |
-| `tarina.praha.kommentti` | `miettiva` (0,5) | "silti he katsovat tuota. Ymmärrän." | M/K (v1740) |
-| `tarina.tukholma.kommentti` | `ylpea` (0,5) | "näkymä paranee, kun pääsee ylemmäs" — lintuperspektiivi | M/K (v1740) |
-| `tarina.kobenhavn.kommentti` | `lammin` (0,5) | hitaat tanssijat + "pöydät pitkään vapaina" (murut) | M/K (v1740) |
-| `tarina.helsinki.kommentti` | `ilo` (0,5) | lokit ja silakkapaperipaino — lajitoverikuittaus | M/K (v1740) |
-| `tarina.tallinna.kommentti` | `lammin` (0,55) | "Se mies osasi kuunnella potilasta" | M/K (v1740) |
-| `tarina.sevilla.kommentti` | `ilo` (0,55) | "Portista mennään yhä leipä kädessä. Sivistys alkaa lupaavasti." | M/K (v1740) |
-| `tarina.bergen.kommentti` | `miettiva` (0,45) | "Kumman suojelu onnistui paremmin?" — avoin kysymys | M/K (v1740) |
-| `tarina.amsterdam.kommentti` | `ylpea` (0,5) | "Lentotaidottomaksi lajiksi olette varsin kekseliäitä" | M/K (v1740) |
-| `tarina.dublin.kommentti` | `hammastys` (0,5) | "Yhdeksäntuhatta vuotta?" — aito hämmästys | M/K (v1740) |
-| `tarina.edinburgh.kommentti` | `ylpea` (0,5) | "Isoisä eksyi kerroksiin; minä valitsen katon" | M/K (v1740) |
-| `tarina.lissabon.kommentti` | `ilo` (0,5) | "Ihmiset eivät saaneet siipiä, joten piti ryhtyä rakennustöihin" | M/K (v1740) |
-| `tarina.riika.kommentti` | `lammin` (0,5) | laulujuhlat; "ymmärsi sentään olla puhumatta päälle" | M/K (v1740) |
-| `tarina.barcelona.kommentti` | `ilo` (0,5) | "Minä olisin äänestänyt kaalia" — ruoka voittaa liikenteen | M/K (v1740) |
-| `tarina.firenze.kommentti` | `ilo` (0,5) | "isoisälläsi oli sentään taskut. Patsaan on pärjättävä ilmeellä." | M/K (v1740) |
-| `tarina.venetsia.kommentti` | **`rakkaus` (0,8)** | albumirepliikki: "Nuo ovat yksityisiä … Sulje albumi." (ks. E4; vain tämä TAI albumin kuva 5 samassa käynnissä) | M/K (v1740) |
-| `tarina.marseille.kommentti` | `ilo` (0,5) | "Sataman lokit eivät ole kuulleetkaan puhtaasta pöydästä" | M/K (v1740) |
-| `tarina.oslo.kommentti` | `ylpea` (0,45) | "kävellään oopperan katolla. Siihen suuntaan kaupunkien pitäisi kasvaa." | M/K (v1740) |
-| `tarina.tampere.kommentti` | `ilo` (0,5) | "Isoisä seurasi lankaa, minä tarjoilijaa. Molemmilla oli hyvä syy." | M/K (v1740) |
-| `tarina.vilna.kommentti` | `miettiva` (0,45) | "Tähtiä tutkitaan kauempana kaupungin valoista. Tuoli ei riitä." | M/K (v1740) |
-| `tarina.granada.kommentti` | `lammin` (0,5) | "Minä käyn vain juomassa sen peilikuvan reunasta" | M/K (v1740) |
-| `tarina.kiova.kommentti` | **`vakava` (0,6)** | "Luostari on kärsinyt sodassa. Tätä isoisän sivua luen hiljaa." — päätoimittajan katselmus laski 0,7 → 0,6 | M/K (v1740) |
-| `tarina.krakova.kommentti` | `miettiva` (0,45) | "arvostan soittajaa, joka osaa lopettaa" — katkeava hejnał | M/K (v1740) |
-| `tarina.moskova.kommentti` | `ilo` (0,5) | "Minäkin tulen syömään pienemmästä kutsusta" — ruoka | M/K (v1740) |
-| `tarina.odessa.kommentti` | **`vakava` (0,6)** | "sodan uhkaamaa maailmanperintöä … katson tänään toisin" — katselmus laski 0,7 → 0,6 | M/K (v1740) |
-| `tarina.pietari.kommentti` | `miettiva` (0,5) | Leningrad-maininta + "Isoisän kellosta taisi loppua valta" | M/K (v1740) |
-| `tarina.varsova.kommentti` | `vakava` (0,55) | jälleenrakennus: "Isoisä olisi tunnistanut torin. Se oli rakentajien tarkoitus." | M/K (v1740) |
-| `tarina.kreeta.kommentti` | `lammin` (0,5) | "Kalastaja vastasi paremmin kuin isoisän kartta" | M/K (v1740) |
-| `tarina.sisilia.kommentti` | `ylpea` (0,45) | "Katto ansaitsee edelleen puheenvuoron" | M/K (v1740) |
-| `tarina.islanti.kommentti` | `lammin` (0,5) | "Minä arvostan lämmintä räystästä" — räystäsperspektiivi | M/K (v1740) |
-| `tarina.alpit.kommentti` | `vakava` (0,55) | "Hänen kivensä saattaa olla tallessa; jää sen alta on poissa" — menetys | M/K (v1740) |
-| `tarina.lappi.kommentti` | `utelias` (0,5) | "Joet kohtaavat yhä. Minusta niissäkin olisi matkan aihetta." | M/K (v1740) |
-| `tarina.tromssa.kommentti` | `utelias` (0,5) | "pienestä simpukasta voi alkaa pitkä matka" | M/K (v1740) |
+| `tarina.ateena.kommentti` | `ilo` (0,5) | rahamuseo vs. "tarkistan ensin kahvilan pihan" — oma agenda, kuiva itseironia | M/K (v1741) |
+| `tarina.sofia.kommentti` | `ilo` (0,45) | "Maa ei ole korottanut hintaa arvonimen takia" — kuiva vitsi | M/K (v1741) |
+| `tarina.istanbul.kommentti` | `lammin` (0,5) | myötätunto kantajalle: "missä saa levätä" | M/K (v1741) |
+| `tarina.rooma.kommentti` | `miettiva` (0,45) | "minäkin käyttäydyn siellä kuin vieras" — nöyrä huomio | M/K (v1741) |
+| `tarina.bukarest.kommentti` | `ilo` (0,55) | ruoka-into: "Minä löydän keittiön samoin" (persous) | M/K (v1741) |
+| `tarina.sarajevo.kommentti` | `lammin` (0,5) | hyväntahtoinen kuittaus isoisälle: "Hyvä alku" | M/K (v1741) |
+| `tarina.madrid.kommentti` | `ilo` (0,5) | "isoisä huomasi vallanvaihdon, minä koiran" — eläinperspektiivi | M/K (v1741) |
+| `tarina.wien.kommentti` | `lammin` (0,55) | "ymmärsi koneita, mutta tuossa hän ymmärsi ihmistä" | M/K (v1741) |
+| `tarina.pariisi.kommentti` | `ilo` (0,55) | "Leipä kainalossa? Olisin seurannut minäkin" — pullapersous | M/K (v1741) |
+| `tarina.berliini.kommentti` | `vakava` (0,5) | poika ja poljettu lehti: "Poikaa mietin minäkin" | M/K (v1741) |
+| `tarina.lontoo.kommentti` | `ylpea` (0,5) | "en vaihtaisi taivasta pehmustettuun penkkiin, Fogg" | M/K (v1741) |
+| `tarina.budapest.kommentti` | `ilo` (0,5) | "Kerrankin ihmisillä on oikea kerros" — nokkava korkeusvitsi | M/K (v1741) |
+| `tarina.dubrovnik.kommentti` | `utelias` (0,45) | "olisin laskenut nokat ennen juomista" — laskeva tarkkailija | M/K (v1741) |
+| `tarina.praha.kommentti` | `miettiva` (0,5) | "silti he katsovat tuota. Ymmärrän." | M/K (v1741) |
+| `tarina.tukholma.kommentti` | `ylpea` (0,5) | "näkymä paranee, kun pääsee ylemmäs" — lintuperspektiivi | M/K (v1741) |
+| `tarina.kobenhavn.kommentti` | `lammin` (0,5) | hitaat tanssijat + "pöydät pitkään vapaina" (murut) | M/K (v1741) |
+| `tarina.helsinki.kommentti` | `ilo` (0,5) | lokit ja silakkapaperipaino — lajitoverikuittaus | M/K (v1741) |
+| `tarina.tallinna.kommentti` | `lammin` (0,55) | "Se mies osasi kuunnella potilasta" | M/K (v1741) |
+| `tarina.sevilla.kommentti` | `ilo` (0,55) | "Portista mennään yhä leipä kädessä. Sivistys alkaa lupaavasti." | M/K (v1741) |
+| `tarina.bergen.kommentti` | `miettiva` (0,45) | "Kumman suojelu onnistui paremmin?" — avoin kysymys | M/K (v1741) |
+| `tarina.amsterdam.kommentti` | `ylpea` (0,5) | "Lentotaidottomaksi lajiksi olette varsin kekseliäitä" | M/K (v1741) |
+| `tarina.dublin.kommentti` | `hammastys` (0,5) | "Yhdeksäntuhatta vuotta?" — aito hämmästys | M/K (v1741) |
+| `tarina.edinburgh.kommentti` | `ylpea` (0,5) | "Isoisä eksyi kerroksiin; minä valitsen katon" | M/K (v1741) |
+| `tarina.lissabon.kommentti` | `ilo` (0,5) | "Ihmiset eivät saaneet siipiä, joten piti ryhtyä rakennustöihin" | M/K (v1741) |
+| `tarina.riika.kommentti` | `lammin` (0,5) | laulujuhlat; "ymmärsi sentään olla puhumatta päälle" | M/K (v1741) |
+| `tarina.barcelona.kommentti` | `ilo` (0,5) | "Minä olisin äänestänyt kaalia" — ruoka voittaa liikenteen | M/K (v1741) |
+| `tarina.firenze.kommentti` | `ilo` (0,5) | "isoisälläsi oli sentään taskut. Patsaan on pärjättävä ilmeellä." | M/K (v1741) |
+| `tarina.venetsia.kommentti` | **`rakkaus` (0,8)** | albumirepliikki: "Nuo ovat yksityisiä … Sulje albumi." (ks. E4; vain tämä TAI albumin kuva 5 samassa käynnissä) | M/K (v1741) |
+| `tarina.marseille.kommentti` | `ilo` (0,5) | "Sataman lokit eivät ole kuulleetkaan puhtaasta pöydästä" | M/K (v1741) |
+| `tarina.oslo.kommentti` | `ylpea` (0,45) | "kävellään oopperan katolla. Siihen suuntaan kaupunkien pitäisi kasvaa." | M/K (v1741) |
+| `tarina.tampere.kommentti` | `ilo` (0,5) | "Isoisä seurasi lankaa, minä tarjoilijaa. Molemmilla oli hyvä syy." | M/K (v1741) |
+| `tarina.vilna.kommentti` | `miettiva` (0,45) | "Tähtiä tutkitaan kauempana kaupungin valoista. Tuoli ei riitä." | M/K (v1741) |
+| `tarina.granada.kommentti` | `lammin` (0,5) | "Minä käyn vain juomassa sen peilikuvan reunasta" | M/K (v1741) |
+| `tarina.kiova.kommentti` | **`vakava` (0,6)** | "Luostari on kärsinyt sodassa. Tätä isoisän sivua luen hiljaa." — päätoimittajan katselmus laski 0,7 → 0,6 | M/K (v1741) |
+| `tarina.krakova.kommentti` | `miettiva` (0,45) | "arvostan soittajaa, joka osaa lopettaa" — katkeava hejnał | M/K (v1741) |
+| `tarina.moskova.kommentti` | `ilo` (0,5) | "Minäkin tulen syömään pienemmästä kutsusta" — ruoka | M/K (v1741) |
+| `tarina.odessa.kommentti` | **`vakava` (0,6)** | "sodan uhkaamaa maailmanperintöä … katson tänään toisin" — katselmus laski 0,7 → 0,6 | M/K (v1741) |
+| `tarina.pietari.kommentti` | `miettiva` (0,5) | Leningrad-maininta + "Isoisän kellosta taisi loppua valta" | M/K (v1741) |
+| `tarina.varsova.kommentti` | `vakava` (0,55) | jälleenrakennus: "Isoisä olisi tunnistanut torin. Se oli rakentajien tarkoitus." | M/K (v1741) |
+| `tarina.kreeta.kommentti` | `lammin` (0,5) | "Kalastaja vastasi paremmin kuin isoisän kartta" | M/K (v1741) |
+| `tarina.sisilia.kommentti` | `ylpea` (0,45) | "Katto ansaitsee edelleen puheenvuoron" | M/K (v1741) |
+| `tarina.islanti.kommentti` | `lammin` (0,5) | "Minä arvostan lämmintä räystästä" — räystäsperspektiivi | M/K (v1741) |
+| `tarina.alpit.kommentti` | `vakava` (0,55) | "Hänen kivensä saattaa olla tallessa; jää sen alta on poissa" — menetys | M/K (v1741) |
+| `tarina.lappi.kommentti` | `utelias` (0,5) | "Joet kohtaavat yhä. Minusta niissäkin olisi matkan aihetta." | M/K (v1741) |
+| `tarina.tromssa.kommentti` | `utelias` (0,5) | "pienestä simpukasta voi alkaa pitkä matka" | M/K (v1741) |
 
 **E4 Venetsian rakkauskohtaus**
 
@@ -781,7 +781,7 @@ käyttäytyy täsmälleen kuten tänään (ei elettä).
 
 1. **js/packs/fokusvirta-*.js — `pollo.tunne`** (45 kaupunkia,
    `{ tunne, voimakkuus }`; taulukko sallittu, jos kuplia on useampi:
-   `kommentti[i]` ↔ `tunne[i]`). **Tämä on v1740:n työ** — rinnakkainen
+   `kommentti[i]` ↔ `tunne[i]`). **Tämä on v1741:n työ** — rinnakkainen
    agentti lisää kentät ja js/fokusvirta.js:n kutsun samassa julkaisussa.
    Samalla kaavalla: `matkakirja.tunne` (useimmiten jätetään pois:
    luennan aikana kuunnellaan), `aarremerkinta.tunne` (oletus `vakava`
@@ -822,4 +822,4 @@ käyttäytyy täsmälleen kuten tänään (ei elettä).
 ## Muutosloki
 
 10.9.2026 — ensimmäinen kartoitus (Opus-parvi A–F, Fablen katselmus);
-45 kaupungin tunnetagit sisältöön v1740.
+45 kaupungin tunnetagit sisältöön v1741.
