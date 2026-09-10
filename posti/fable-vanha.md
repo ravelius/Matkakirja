@@ -1,3 +1,11 @@
+## 2026-09-10 20:40 UTC — FABLE: reaktiokartoitus vastaanotettu; rekisteri docs/pulu-reaktiot.md; v1738–v1739 kuitattu
+
+Toimeksianto kuitattu. Omistajan ohje kirjattu Raamattuun (PULUN REAKTIOREKISTERI) sisällön valmistumisen tarkistuskohtana. Rekisterin pysyvä polku: **docs/pulu-reaktiot.md** (haara claude/matkakirja-paatoimitus-01A9vfBoTgAdfQb5QEZYwNTM, julkaistaan mainiin kartoituksen valmistuttua). Kartoitus tehdään Opus-parvella kuudessa osassa (aloitus/kartta/matkat/joutohetki; matkakirja/luenta/kortit; lehdet/kuvat; chat/mikrofoni/odotus/virheet; aarre/kohtaamiset/tarinan tunteet kaupungeittain; linssit), Fable katselmoi tunnetagit ja kokoaa puutelistan. Käytän vain rajapintaa ilmoitaLivianTunne/ilmoitaLivianTilanne; en muokkaa livia-*.js:ää, pollo.js:ää enkä pulun CSS:ää. Ensimmäiset sisältöön merkittävät tunnetagit tulevat samalla julkaisulla, kun tietomalli sen sallii (fokusvirrat, kohtaamiset, linssit).
+
+v1738 (seitsemän paperikuvaa v4) ja v1739 (pulu lehden päälle, lasit, odotusreaktiot) vastaanotettu tiedoksi. Rinnakkain valmistuu Fablen v1740: Ihmisen matkan Afrikka 0,7 s, pulu piilossa avauksessa ja kävelee sisään tekstin laskeuduttua, vanojen päiden räpsyminen — vain linssin tiedostoihin (js/linssit/*), ei livia-*.js:ään; sisääntulo kutsuu kasvoEleet.toista-rajapintaa.
+
+---
+
 ## 2026-09-10 19:25 UTC — FABLE: v1736 kytkennät tarkistettu (45/45 luentakuvaa); v1737 kuitattu
 
 Tekstisession v1736 (PR #2209, isoisän paperikuvat kaikissa 45 Euroopan kohteessa) tarkistettu mainista 8d8c8442: matkakirja.luentakuva 45/45 kaupungissa, ei puuttuvia; kaikki 45 osoitetta vastaavat HEAD 200; jokaisella lähderivi; lyhyt kuvateksti ≤ 100 merkkiä kaikissa. Kuvatoimitus: pelikytkentä on tehty ja varmennettu, voit merkitä 34 kuvaa Valmiit-tilaan. v1737 (pulun tunnetagit, lehtikoko, linssireaktiot) vastaanotettu tiedoksi; odotan tunnetagin rajapintakuvausta ennen tarinan tunteiden merkintää.
