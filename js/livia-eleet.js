@@ -59,6 +59,7 @@ export function asennaLivianKasvot(pollo) {
  let nostoTila=null;
  let lehtiPaalla=false,odotusVuoro=0;
  const odotukset=new Set();
+ const luennat=new Map();
  const lepo=()=>livianSvgAsento('blink',0);
  const nakyy=()=>!doc.hidden&&(!nappi.getClientRects||nappi.getClientRects().length>0)&&!nappi.hidden&&nappi.isConnected&&getComputedStyle(nappi).display!=='none'&&getComputedStyle(nappi).visibility!=='hidden';
  function sijoita(){
@@ -120,25 +121,39 @@ export function asennaLivianKasvot(pollo) {
   piirraNyt(alkoi);kaynnista();return true;
  }
  /** Ei jonoa: vanha kuva tai luenta ei saa reaktiota toisessa kaupungissa. */
+ function jatkaKuunteluaTaiOdotusta(){
+  if(puhe)return;
+  const luenta=[...luennat.values()].at(-1);
+  if(luenta)tilanne('narration',luenta);
+  else if(odotukset.size&&!nostoTila?.onkoAuki())toista(lehtiPaalla?'scratch':'think',{hiljaa:true,omistaja:'waiting'});
+ }
  function tilanne(laji,tiedot={}){
+  if(laji==='narration')luennat.set(tiedot.tunnus,tiedot);
   if(laji==='waiting'){
    odotukset.add(tiedot.tunnus);viimeToimi=performance.now();
-   if(!puhe)toista(lehtiPaalla?'scratch':'think',{hiljaa:true,omistaja:'waiting'});
+   if(!puhe&&!luennat.size)toista(lehtiPaalla?'scratch':'think',{hiljaa:true,omistaja:'waiting'});
    return true;
   }
   if(laji==='waitingEnd'){
    odotukset.delete(tiedot.tunnus);
-   if(!odotukset.size){odotusrivi=null;odotusteksti='';palaa();}
+   if(!odotukset.size){odotusrivi=null;odotusteksti='';
+    if(!puhe&&!luennat.size&&(!nykyinen||nykyinen.omistaja==='waiting'))palaa();
+   }
    return true;
   }
   if(laji==='narrationEnd'||laji==='cardEnd'){
+   if(laji==='narrationEnd'&&!luennat.delete(tiedot.tunnus))return false;
    const omistaja=laji==='cardEnd'?'card':'narration';
    if(nykyinen?.omistaja===omistaja&&(!tiedot.tunnus||nykyinen.tunnus===tiedot.tunnus)){katkaise();piirraNyt(performance.now());kaynnista();}
+   if(laji==='cardEnd'||!nykyinen)jatkaKuunteluaTaiOdotusta();
    return false;
   }
   const nyt=performance.now();
-  if(!nakyy()||odotusrivi||odotukset.size||nykyinen?.group==='Liike'||lepoTila?.flight||lepoTila?.walk)return false;
-  if(doc.querySelector('dialog[open]')&&!['chatOpen','chatClose','microphone','answer','success','retry','emotion','photo'].includes(laji))return false;
+  if(!nakyy()||(laji!=='narration'&&(odotusrivi||odotukset.size))||nykyinen?.group==='Liike'||lepoTila?.flight||lepoTila?.walk)return false;
+  // Reaktio kuuluu vain näkymään, jossa myös Pulu itse on. Pelkkä
+  // modaalin olemassaolo ei estä lehden sisällä näkyvän Pulun kuuntelua.
+  if(doc.querySelector('dialog[open]')&&!nappi.closest?.('dialog[open]'))return false;
+  if(luennat.size&&!['narration','card'].includes(laji))return false;
   if(laji==='narration'&&(puhe||pollo.auki||nostoTila?.onkoAuki()))return false;
   if(laji!=='card'&&nykyinen?.omistaja==='card')return false;
   if(!['card','narration','chatOpen','chatClose','microphone','answer'].includes(laji)&&nyt-viimeTilanne<2800)return false;
@@ -162,14 +177,14 @@ export function asennaLivianKasvot(pollo) {
   const rivi=pollo.auki?pollo.virta?.querySelector('.pollo-odottaa'):null,teksti=rivi?.textContent||'';
   if(rivi===odotusrivi&&teksti===odotusteksti)return;
   const oli=odotusrivi,ele=nykyinen?.id;odotusrivi=rivi;odotusteksti=teksti;
-  if(!rivi){if(oli&&!odotukset.size)palaa();return;}
+  if(!rivi){if(oli&&!odotukset.size&&!luennat.size&&!puhe)palaa();return;}
   if(odotukset.size)return;
-  if(puhe||rivi===oli&&(ele==='flyAway'||lepoTila?.flight))return;
+  if(puhe||luennat.size||rivi===oli&&(ele==='flyAway'||lepoTila?.flight))return;
   toista(livianMietintaEle(teksti),{voimakkuus:livianEleenVoima(livianMietintaEle(teksti),teksti)});
  }
  function rauhallinen(){
   const ui=pollo.haeUi?.();
-  return nakyy()&&!nostoTila?.onkoAuki()&&!pollo.auki&&!odotusrivi&&!puhe&&!ui?.liviaAani&&!ui?.diaryVoice
+  return nakyy()&&!luennat.size&&!nostoTila?.onkoAuki()&&!pollo.auki&&!odotusrivi&&!puhe&&!ui?.liviaAani&&!ui?.diaryVoice
     &&!doc.querySelector('dialog[open], .pollo-kuplapino-kehys:not([hidden])')
     &&!doc.body.classList.contains('aikajana-paalla')&&!doc.body.classList.contains('flight-active')&&!doc.body.classList.contains('kartalento');
  }
@@ -177,9 +192,9 @@ export function asennaLivianKasvot(pollo) {
   clearTimeout(kello);if(kuollut||vahenna?.matches)return;
   kello=setTimeout(()=>{
    const nyt=performance.now(),tauko=nyt-viimeToimi;
-   if(!nykyinen&&!puhe&&nakyy()&&odotukset.size){
+   if(!nykyinen&&!puhe&&!luennat.size&&nakyy()&&odotukset.size){
     toista(lehtiPaalla?'scratch':['think','lookRight','reading'][odotusVuoro++%3],{hiljaa:true,omistaja:'waiting'});
-   }else if(!nykyinen&&!puhe&&nakyy()&&lehtiPaalla&&!pollo.auki&&nyt-viimeEle>=22000){
+   }else if(!nykyinen&&!puhe&&!luennat.size&&nakyy()&&lehtiPaalla&&!pollo.auki&&nyt-viimeEle>=22000){
     toista('scratch',{hiljaa:true});
    }else if(!nykyinen&&!lepoTila&&rauhallinen()&&tauko>=30000&&nyt-viimeEle>=22000){
     if(tauko>=180000)toista('sleep',{nuku:true});
@@ -199,7 +214,7 @@ export function asennaLivianKasvot(pollo) {
  function lehtiMuuttui(){
   const auki=Boolean(lehti?.open&&lehti.classList?.contains('lehti')),muuttui=auki!==lehtiPaalla;
   lehtiPaalla=auki;paikkaMuuttui();
-  if(muuttui){if(auki&&!puhe&&!odotukset.size)toista('glasses',{hiljaa:true});else piirraNyt(performance.now());}
+  if(muuttui){if(auki&&!puhe&&!luennat.size&&!odotukset.size)toista('glasses',{hiljaa:true});else piirraNyt(performance.now());}
  }
  const lehtiVahti=lehti?new MutationObserver(lehtiMuuttui):null;lehtiVahti?.observe(lehti,{attributes:true,attributeFilter:['open','class']});
  const virtaVahti=new MutationObserver(mietintaMuuttui);
@@ -216,7 +231,8 @@ export function asennaLivianKasvot(pollo) {
     if(nykyinen?.id==='flyAway'||lepoTila?.flight||nykyinen?.id==='peek'||nykyinen?.id.startsWith('leave')||nykyinen?.id==='walkRight'||lepoTila?.walk)palaa();
     else if(!nykyinen){lepoTila=null;const teksti=tilat.at(-1)?.teksti||'',ele=livianRepliikinEle(teksti);toista(ele,{voimakkuus:livianEleenVoima(ele,teksti)});}
   }
-  if(!puhe){piirraNyt(performance.now());if(odotusrivi&&!nykyinen)toista(livianMietintaEle(odotusteksti));}
+  if(!puhe){piirraNyt(performance.now());if(oli)jatkaKuunteluaTaiOdotusta();
+   if(!luennat.size&&!odotukset.size&&odotusrivi&&!nykyinen)toista(livianMietintaEle(odotusteksti));}
   kaynnista();
  });
  function tuhoa(){

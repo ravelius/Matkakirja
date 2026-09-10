@@ -92,6 +92,51 @@ test('pyyntöjen odotus reagoi ilman chattia ja kestää rinnakkaiset sekä pitk
  c.tilanne('waitingEnd',{tunnus:b});e.tick(5000);assert.equal(c.tilanne('photo'),true);
 });
 
+test('luenta säilyy odotuksen alun ja lopun yli sekä eleiden välissä',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const a={},b={},surface=e.doc.body.children[0].children[0];
+ assert.equal(c.tilanne('narration',{tunnus:a,ele:'lookUp'}),true);e.tick(800);
+ const pose=surface.innerHTML;
+ c.tilanne('waiting',{tunnus:b});assert.equal(surface.innerHTML,pose);
+ c.tilanne('waitingEnd',{tunnus:b});assert.equal(surface.innerHTML,pose);
+ e.tick(30000);assert.equal(e.raf.size,0,'kuuntelun tauko ei käynnistä taustaelettä');
+ assert.equal(c.tilanne('emotion',{ele:'grin',voimakkuus:.5}),false);
+ c.tilanne('narrationEnd',{tunnus:a});assert.equal(c.tilanne('photo'),true);
+});
+
+test('luenta ohittaa odotuksen, joka jatkuu vasta viimeisen luennan loputtua',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const a={},b={},w={};c.tilanne('waiting',{tunnus:w});
+ assert.equal(c.tilanne('narration',{tunnus:a,ele:'lookUp'}),true);
+ assert.equal(c.tilanne('narration',{tunnus:b,ele:'nod'}),true);e.tick(400);
+ const pose=e.doc.body.children[0].children[0].innerHTML;
+ c.tilanne('narrationEnd',{tunnus:a});assert.equal(e.doc.body.children[0].children[0].innerHTML,pose,'vanha ääni ei katkaise uutta');
+ c.tilanne('narrationEnd',{tunnus:b});assert.ok(e.raf.size,'odotus jatkuu');
+ assert.equal(c.tilanne('photo'),false);
+ c.tilanne('waitingEnd',{tunnus:w});e.tick(4000);assert.equal(c.tilanne('photo'),true);
+});
+
+test('modaalissa kuunnellaan vain jos Pulu on itse sen sisällä',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ e.lehti.open=true;e.lehti.classList.add('lehti');e.doc.querySelector=s=>s==='dialog[open]'?e.lehti:null;
+ assert.equal(c.tilanne('emotion',{ele:'grin',voimakkuus:.5}),false,'peittyvän Pulun ei kuulu reagoida');
+ e.button.closest=()=>e.lehti;
+ const a={};assert.equal(c.tilanne('narration',{tunnus:a,ele:'lookUp'}),true);
+ assert.equal(e.doc.body.children.length,0,'piirtopinta siirtyi samaan modaaliin');
+ e.tick(800);c.tilanne('narrationEnd',{tunnus:a});
+ assert.equal(c.tilanne('card',{symboli:'historia'}),true,'korttiele sallitaan näkyvässä modaalissa');
+});
+
+test('puhe ja nostokortti palauttavat yhä soivan luennan kuuntelun',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const a={},speech={};c.tilanne('narration',{tunnus:a,ele:'lookUp'});
+ ilmoitaLivianKasvopuhe(speech,true,'Kääk!');e.tick(5000);
+ ilmoitaLivianKasvopuhe(speech,false);assert.ok(e.raf.size,'puheen jälkeen jatketaan kuuntelua');
+ assert.equal(c.tilanne('card',{symboli:'historia'}),true);e.tick(3000);
+ c.tilanne('cardEnd');assert.ok(e.raf.size,'kortin jälkeen jatketaan kuuntelua');
+ c.tilanne('narrationEnd',{tunnus:a});e.tick(40);assert.equal(e.raf.size,0);
+});
+
 test('tilannereaktiot eivät katkaise saapumista, puhetta tai jonota vanhoja kuvia',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);
  assert.equal(c.tilanne('photo'),false,'pöllön vaihto saa loppua');e.tick(5000);
@@ -102,6 +147,7 @@ test('tilannereaktiot eivät katkaise saapumista, puhetta tai jonota vanhoja kuv
  const token={};ilmoitaLivianKasvopuhe(token,true,'Kääk!');
  assert.equal(c.tilanne('narration',{ele:'glasses'}),false);
  assert.equal(c.tilanne('photo'),false,'kuvan hymy ei peitä kääk-ilmettä');
+ c.tilanne('narrationEnd');
  ilmoitaLivianKasvopuhe(token,false);e.tick(3000);
  assert.equal(c.tilanne('card',{symboli:'tekniikka'}),true);e.tick(1800);
  const markup=e.doc.body.children[0].children[0].innerHTML;assert.ok(markup.includes('data-part="glasses"'));

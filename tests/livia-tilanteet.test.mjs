@@ -32,6 +32,20 @@ test('luennan reaktiot seuraavat soitinta, eivät seinäkelloa tai vanhaa kaupun
  current=false;a.currentTime=40;a.dispatchEvent(new Event('timeupdate'));assert.equal(calls.length,3);
  stop();a.dispatchEvent(new Event('playing'));assert.equal(calls.length,4,'irrotettu soitin ei reagoi');
 });
+test('lyhyt tauko ja puskurointi palauttavat kuuntelun heti, eivät monista playing-elettä',t=>{
+ const a=new EventTarget();a.currentTime=0;a.paused=false;const calls=[];
+ const off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
+ const stop=seuraaLivianKuuntelua(a,()=>true);t.after(stop);
+ a.dispatchEvent(new Event('playing'));
+ for(const event of ['pause','waiting','stalled']){
+  a.currentTime+=1;a.dispatchEvent(new Event(event));
+  assert.equal(calls.at(-1)[0],'narrationEnd');
+  a.dispatchEvent(new Event('playing'));assert.equal(calls.at(-1)[0],'narration');
+  const count=calls.length;a.dispatchEvent(new Event('playing'));assert.equal(calls.length,count);
+ }
+ a.dispatchEvent(new Event('ended'));const count=calls.length;
+ a.dispatchEvent(new Event('playing'));assert.equal(calls.length,count);
+});
 test('iPhonen nostokortti jättää suuren ilmeen ja otsakepalkin näkyviin',()=>{
  for(const [width,height,safe]of [[390,844,34],[393,852,34],[375,667,0],[430,932,34]]){
   const feet=height-safe-61;

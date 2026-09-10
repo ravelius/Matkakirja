@@ -55,7 +55,9 @@ export function seuraaLivianKuuntelua(audio,voimassa,haeTeksti=()=> ''){
   if(aika-viime<12)return;viime=aika;
   ilmoitaLivianTilanne('narration',{ele:vuoro++===0?'lookUp':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti:haeTeksti()}),tunnus:audio});
  };
- const alkoi=()=>{soi=true;reagoi();};
+ // Tauolta tai puskuroinnista paluu palauttaa kuuntelutilan heti,
+ // vaikka edellisestä eleestä olisi kulunut alle 12 sekuntia.
+ const alkoi=()=>{if(!soi)viime=-Infinity;soi=true;reagoi();};
  const tauko=()=>{soi=false;ilmoitaLivianTilanne('narrationEnd',{tunnus:audio});};
  const events={playing:alkoi,timeupdate:reagoi,pause:tauko,waiting:tauko,stalled:tauko,error:tauko,ended:lopeta,emptied:lopeta};
  function lopeta(){tauko();for(const[n,f]of Object.entries(events))audio.removeEventListener(n,f);}
