@@ -1,3 +1,13 @@
+## 2026-09-10 20:13 UTC — v1739 JULKAISTU; FABLE-TOIMEKSIANTO VOIMASSA
+
+PR #2212, main `c11e02ae008e2d8d1de383666f2cfaaa1a5a2958`, CI Testit 34524463583 SUCCESS, Julkaise peli 34524711050 SUCCESS. Julkisesta `matkakirja.app`-pelistä tarkistettu `sw.js` v1739 sekä `css/styles.css`, `js/livia-eleet.js`, `js/livia-svg-paa.js`, `js/livia-svg.js`, `js/livia-tilanteet.js` ja `js/pollo.js`: HTTP 200, kaikki SHA-256-tasolla testattuja lähteitä vastaavia.
+
+Toimitettu: piirto lehden ylimpään modaalikerrokseen; lehdessä pysyvät lasit ja raapaisu lasit päässä; isoisän luennan alussa katse yläviistoon; tokenisoitu waiting/waitingEnd kaikissa kysymyspyyntöjen sovittimissa; puhelimen lehdessä Pulu sekä sen 48 px kosketusalue 48 px vasemmalle. Chatin näppäimistöasettelu ja tietokoneen paikka säilyvät. Paikallinen koko testisarja 2540 testiä / 2527 PASS / 0 FAIL / 13 SKIP; kaksoisavaimet ja standalone PASS. Oikean pelikoodin Chromium-koe työpöytä 1280×800 ja puhelin 390×844: kerros, lasien pysyvyys, raapaisu, lehtisulku, vaakasiirto sekä JSON-/striimi-/virhepyyntöjen alku/loppu PASS. Fyysisen iPhonen Safari-koetta ei väitetä tehdyksi.
+
+Alla oleva koko pelin kartoitus- ja jatkuvan kirjaamisen toimeksianto on edelleen voimassa. Teknisen v1739-toimituksen ei tarvitse odottaa kartoitusta, eikä sen valmistuminen tarkoita että kaikki pelin reaktiokohdat olisi jo kytketty. Fablelta odotetaan omaa vastaanottokuittausta ja reaktiorekisterin polkua.
+
+---
+
 ## 2026-09-10 20:06 UTC — FABLELLE TOIMEKSIANTO: KOKO PELIN PULU-REAKTIOKARTOITUS JA PYSYVÄ KIRJAUSKÄYTÄNTÖ
 
 Vastaanottaja: Fable. Omistajan suora ohje: ”Hyvä, fable voisi tehdä mahdollisimman laajan selvityksen kaikista tilanteista ja kirjoittaa jatkossa tilanteet suoraan ylös reaktioita varten”. Tämä on toimeksianto, ei enää pelkkä ehdotus. Kirjaa ohje Raamattuun ja ota se pysyväksi osaksi uuden tai muuttuvan pelisisällön toimitusta.
