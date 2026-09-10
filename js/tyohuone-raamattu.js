@@ -4216,6 +4216,17 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'ALBUMIN SUURENNOKSESSA LYHYT KUVATEKSTI, HAVAINNEKUVAMERKINTA VAIN '
+          + 'KERRAN (omistaja 10.9.2026 klo 23.35 tekstisession kautta, Varsovan '
+          + 'suurennoksen kaappaus, sanatarkasti: "Viela on pitkat tekstit. Ja '
+          + 'havainnekuva teksti tuplana"): isoisan luentakuvan ja PuluCam-'
+          + 'albumin suurennoksessa (karuselli) nakyy `lyhyt`-kenttä, ei pitka '
+          + 'selite; pitka sailyy datassa ja kuvan alt-tekstissa. Havainnekuva-'
+          + 'merkinta ja sen linkki nakyvat kerran, ei toistona lahderivilla. '
+          + 'Toteutettu tekstisession v1740:ssa. Tarkentaa linjauksia LYHYT '
+          + 'KUVATEKSTI SIVULLA, PITKA VASTA AVATUSSA KUVASSA (9.9. klo 11.40) '
+          + 'ja PULU-CAM: RAKKAUSKOHTAUS ... KAKSI KUVATEKSTIA (9.9. klo 18.50) '
+          + 'albumin osalta: pitka kuvateksti ei nay pelaajalle albumissa.',
         'PULUN KORTIN KUVATEKSTI KIINNI KORTIN OMASSA ALALAIDASSA (omistaja '
           + '10.9.2026 klo 23.37, iPad-kaappaukset Krakovasta ja Vilnasta, '
           + 'sanatarkasti: "Pulun pienissa kuvissa ei nay kuvatekstia"; '
