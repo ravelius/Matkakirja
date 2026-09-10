@@ -1069,7 +1069,9 @@ export async function avaaPallolauta(ui) {
     if (!vetoAlku) return;
     if (Math.abs(e.clientX - vetoAlku.x) > 6 || Math.abs(e.clientY - vetoAlku.y) > 6) {
       vetoAlku = null;
-      ui.asetaPaivakirjanKoko?.(true);
+      // Sama mekanismi kuin tasokartalla: luennan aikana kortti palaa
+      // auki, kun veto loppuu (js/ui.js kutistaKortinLiikkeesta).
+      ui.kutistaKortinLiikkeesta?.();
     }
   });
   const vetoLoppu = () => { vetoAlku = null; };

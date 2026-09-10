@@ -3974,8 +3974,10 @@ test('päiväkirjalla on kaksi kokoa: koko merkintä ja yhden rivin lappu', () =
   assert.doesNotMatch(saannot, /\.fact-teksti-rivi \.fact-text \{[^}]*max-height/,
     'merkinnän tekstiin on palannut rivikatto');
 
-  // Kartan napautus kutistaa kortin yhden rivin lapuksi.
-  assert.match(ui, /mapPane\.addEventListener\('click', \(\) => this\.asetaPaivakirjanKoko\(true\)\)/,
+  // Kartan napautus kutistaa kortin yhden rivin lapuksi — luennan
+  // aikana saman mekanismin kautta, joka nostaa kortin takaisin auki
+  // (ks. tests/paivakirjan-palautus.test.mjs).
+  assert.match(ui, /mapPane\.addEventListener\('click', \(\) => this\.kutistaKortinLiikkeesta\(\)\)/,
     'kartan napautus ei kutista päiväkirjaa yhdelle riville');
 
   // Uusi merkintä avaa kortin: avain vaihdetaan vain uusiFactKeyssä.

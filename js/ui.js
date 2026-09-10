@@ -2041,6 +2041,21 @@ const TARKKUUS_LEPO_MS = 1600;
 // yhtään tapahtumaa (ks. tarkkuusOdotus).
 const TARKKUUS_JUMI_MS = 5000;
 /*
+ * MATKAKIRJAKORTIN PALUU KARTAN LIIKKEEN JÄLKEEN (omistaja 10.9.2026,
+ * Raamattu "MATKAKIRJAKORTTI AUKEAA SAAPUMISESSA JA PALAA AUKI LUENNAN
+ * AJAN KARTAN LIIKKEEN JALKEEN"): *"Matkakirjan teksti saisi aina aueta
+ * kun tullaan uuteen paikkaan ja se saisi pysyä auki niin kauan kuin
+ * puhe kestää. Jos karttaa liikuttaa niin se katoaa pieneksi mutta
+ * puheen aikana se palutuu liikkeen jälkeen. Puheen jälkeen se voi
+ * pysyä piilossa."*
+ *
+ * Rauhoitusaika on se aika, jonka kartan on oltava liikkumatta ennen
+ * kuin kortti nousee takaisin auki. Liian lyhyt napsauttaisi kortin
+ * esiin kesken vierityksen, liian pitkä jättäisi merkinnän piiloon
+ * puoleksi luennaksi.
+ */
+const KORTIN_PALAUTUS_MS = 500;
+/*
  * Rasterointiruudun yläraja laudan yksiköissä (ks. taydennaTaide).
  *
  * Ruudun koko lasketaan pikselibudjetista (1100 px / mittakaava), ja
@@ -2717,6 +2732,8 @@ export class UI {
     this.factCard.addEventListener('click', (e) => {
       if (!this.factCard.classList.contains('pieni')) return;
       e.stopPropagation();
+      // Pelaaja avasi lapun itse: odottava paluu on tarpeeton.
+      this.peruKortinPalautus();
       this.asetaPaivakirjanKoko(false);
     });
     // Sama näppäimistöltä: kutistuneena kortilla on role="button" ja
@@ -2892,7 +2909,30 @@ export class UI {
      * Kuuntelija on kartta-alueella, jonka päällä kortit vain
      * kelluvat, joten kortin oma napautus ei osu tähän.
      */
-    this.mapPane.addEventListener('click', () => this.asetaPaivakirjanKoko(true));
+    this.mapPane.addEventListener('click', () => this.kutistaKortinLiikkeesta());
+
+    /*
+     * ELEEN LOPPU ON KORTIN PALUUN MERKKI (omistaja 10.9.2026).
+     * Kuuntelijat ovat dokumentissa eivätkä kartassa, koska sama
+     * kortti kutistuu kolmelta laudalta: tasokartan raahaus, nipistys
+     * ja rullapanorointi (js/kartta.js) sekä pallolaudan veto
+     * (js/pallolauta/lauta.js). Yksi paikka, joka tietää milloin
+     * pelaajan sormi on kartalla — ja rauhoitusaika lasketaan aina
+     * viimeisestä liikkeestä, ei ensimmäisestä.
+     *
+     * Kaikki työ on ajastimen takana: ilman odottavaa paluuta nämä
+     * kuuntelijat eivät tee mitään kehysbudjettia syövää.
+     */
+    const liikeVirkisti = () => {
+      if (this.kortinPalautusAjastin) this.ajastaKortinPalautus();
+    };
+    const osoitinAlas = () => { this.osoitinAlhaalla = true; liikeVirkisti(); };
+    const osoitinYlos = () => { this.osoitinAlhaalla = false; liikeVirkisti(); };
+    document.addEventListener('pointerdown', osoitinAlas, true);
+    document.addEventListener('pointermove', liikeVirkisti, true);
+    document.addEventListener('pointerup', osoitinYlos, true);
+    document.addEventListener('pointercancel', osoitinYlos, true);
+    document.addEventListener('touchend', osoitinYlos, true);
 
     /*
      * KARTAN +/- -PAINIKKEET ON POISTETTU (omistajan tilaus
@@ -4937,6 +4977,9 @@ export class UI {
    */
   merkitseKartanEle() {
     this.kartanEleHetki = performance.now();
+    // Matkakirjakortin paluu lasketaan viimeisestä liikkeestä: niin
+    // kauan kuin karttaa liikutetaan, kortti pysyy lappuna.
+    if (this.kortinPalautusAjastin) this.ajastaKortinPalautus();
   }
 
   /**
@@ -12371,6 +12414,9 @@ export class UI {
     this.merkintaJatko = null;
     if (lukijaLukee(this.factKuuntele)) pysaytaLukija();
     if (this.factText) this.factText.scrollTop = 0;
+    // Uusi merkintä nollaa myös kartan liikkeestä odottavan paluun:
+    // edellisen merkinnän ajastin ei saa avata korttia uuden alla.
+    this.peruKortinPalautus();
     this.asetaPaivakirjanKoko(false);
     this.paivitaJatkuuVihje?.();
   }
@@ -12413,6 +12459,89 @@ export class UI {
       this.factCard.removeAttribute('aria-label');
     }
     this.paivitaJatkuuVihje?.();
+  }
+
+  /**
+   * Onko matkakirjan luenta kesken juuri nyt?
+   *
+   * Kaksi lukijaa saman kaiuttimen takana: tuotettu äänite
+   * (`this.diaryVoice`, js/luenta.js playDiaryVoice) ja laitteen oma
+   * puhesyntetisaattori (js/lukija.js, kaiutinnappi factKuuntele).
+   * Kumpi tahansa äänessä tarkoittaa, että merkintää luetaan.
+   *
+   * Pysähtynyt soitin luetaan lopuksi VAIN jos se ehti soida: luenta
+   * alkaa pienellä viiveellä, ja silloin soitin on paused mutta
+   * currentTime on nolla. Sama erottelu kuin luennanLoppuun-vahdissa —
+   * lauserajan häivytys pysäyttää äänen ilman 'ended'-tapahtumaa.
+   */
+  luentaKesken() {
+    if (lukijaLukee(this.factKuuntele)) return true;
+    const aani = this.diaryVoice;
+    if (!aani) return false;
+    if (aani.ended || aani.error) return false;
+    if (aani.paused && aani.currentTime > 0) return false;
+    return true;
+  }
+
+  /**
+   * KARTAN LIIKE KUTISTAA KORTIN — JA LUENNAN AIKANA SE PALAA.
+   *
+   * Tämä on se yksi paikka, jota kaikki kartan kutistuskohdat
+   * kutsuvat (js/kartta.js raahaus, nipistys ja rullapanorointi,
+   * js/pallolauta/lauta.js veto sekä mapPanen napautus). Logiikka on
+   * tässä eikä neljänä kopiona: jos luenta on kesken, kutistus on vain
+   * väliaikainen väistyminen, ja kortti nousee takaisin auki kun
+   * kartta on ollut rauhassa KORTIN_PALAUTUS_MS millisekuntia.
+   *
+   * PELAAJAN NAPAUTUS KARTTAAN ON LIIKETTÄ (omistajan tulkinta
+   * hyväksytty 10.9.2026): napautus kutistaa kortin kuten ennenkin,
+   * mutta luennan aikana kortti palaa siitä samalla tavalla kuin
+   * raahauksesta — puhe ja teksti kuuluvat yhteen. Lapun oma napautus
+   * sen sijaan on pelaajan oma valinta avata kortti, eikä se kulje
+   * tämän kautta lainkaan.
+   *
+   * Saapumisen kamera-ajo tai pallon lentolinja EI kutsu tätä: ne
+   * eivät ole pelaajan omaa panorointia, joten juuri avattu merkintä
+   * ei kutistu saapumislennon alla.
+   */
+  kutistaKortinLiikkeesta() {
+    this.asetaPaivakirjanKoko(true);
+    if (!this.luentaKesken()) {
+      // Puheen jälkeen kutistunut kortti saa jäädä lapuksi.
+      this.peruKortinPalautus();
+      return;
+    }
+    this.ajastaKortinPalautus();
+  }
+
+  /**
+   * Ajastaa kortin paluun auki, kun kartta rauhoittuu.
+   *
+   * Ajastin nollataan jokaisesta uudesta kartan eleestä
+   * (merkitseKartanEle), joten rauhoitusaika lasketaan aina VIIMEISESTÄ
+   * liikkeestä. Kesken olevaa elettä odotetaan lisäksi erikseen:
+   * sormi voi levätä liikkumatta kartalla, eikä kortti saa nousta
+   * kesken raahauksen tai liu'un.
+   */
+  ajastaKortinPalautus() {
+    clearTimeout(this.kortinPalautusAjastin);
+    this.kortinPalautusAjastin = setTimeout(() => {
+      this.kortinPalautusAjastin = null;
+      // Sormi tai liuku yhä kartalla: odotetaan vielä yksi jakso.
+      if (this.osoitinAlhaalla || this.osoitinKartalla || this.kartanRaahaus) {
+        this.ajastaKortinPalautus();
+        return;
+      }
+      // Luenta ehti loppua rauhoitusajan aikana: kortti jää lapuksi.
+      if (!this.luentaKesken()) return;
+      this.asetaPaivakirjanKoko(false);
+    }, KORTIN_PALAUTUS_MS);
+  }
+
+  /** Peruu odottavan paluun (luenta loppui, tai uusi merkintä tuli). */
+  peruKortinPalautus() {
+    clearTimeout(this.kortinPalautusAjastin);
+    this.kortinPalautusAjastin = null;
   }
 
   /**
