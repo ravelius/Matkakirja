@@ -101,6 +101,10 @@ export const KONTEKSTIN_ENIMMAISPITUUS = 5000;
  */
 let paikkanaytto = null;
 
+function tarkistaPyynnonPeruutus(signal) {
+  if (signal?.aborted) throw signal.reason ?? new DOMException('Pyyntö peruttu', 'AbortError');
+}
+
 /**
  * Kytkee paikkanäytön. Kutsuja on js/pulu-paikka.js.
  *
@@ -1579,7 +1583,7 @@ async function sisainenMikkiRajat() {
   }
 }
 
-class Pollo {
+export class Pollo {
   /**
    * @param {() => object|null} haeUi palauttaa nykyisen UI-olion.
    *   Getteri eikä suora viittaus, koska uusi peli luo uuden UI:n.
@@ -1665,6 +1669,7 @@ class Pollo {
      */
     this.luentaVirta = null;
     this.luettuun = 0;
+    this.kysymysPyynto = null;
     /*
      * KUPLAPINO (omistajan tilaus 3.9.2026, ks. varmistaPino).
      * `pinoKehys` on kelluva säiliö, `pino` sen vieritettävä sisus.
@@ -4052,6 +4057,11 @@ class Pollo {
     // jäädä naputtamaan suljetun paneelin takana. Kello ei soi, koska
     // vastaus ei valmistunut.
     this.lopetaNaputus();
+    // Vain tämän chat-kierroksen pyyntö perutaan. Muiden näkymien
+    // haut käyttävät samoja sovittimia mutta eivät tätä ohjainta.
+    const pyynto = this.kysymysPyynto;
+    this.kysymysPyynto = null;
+    pyynto?.peru();
     // Ambienssi takaisin täyteen voimaansa. Purku tapahtuu kaikilla
     // sulkupoluilla (Esc, ulkopuolinen napautus, lehden sulkeutuminen),
     // koska ne kaikki kulkevat tämän kautta.
@@ -5060,22 +5070,26 @@ class Pollo {
    * viesti, ja peli jatkuu. Verkkovirhe on täysin normaali tilanne
    * puhelimessa eikä se ole pelin vika.
    */
-  async pyyda(runko) {
+  async pyyda(runko, { signal } = {}) {
     const lopetaOdotus=aloitaLivianOdotus({lahde:runko?.tehtava||'kysymys'});
+    signal?.addEventListener('abort',lopetaOdotus,{once:true});
     try {
+    tarkistaPyynnonPeruutus(signal);
     const vastaus = await fetch(this.palvelin, {
       method: 'POST',
       headers: this.otsakkeet(),
       body: JSON.stringify(runko),
+      signal,
     });
     const data = await vastaus.json().catch(() => ({}));
+    tarkistaPyynnonPeruutus(signal);
     if (!vastaus.ok) {
       const virhe = new Error(data?.virhe ?? 'virhe');
       virhe.viesti = data?.viesti ?? null;
       throw virhe;
     }
     return data;
-    } finally { lopetaOdotus(); }
+    } finally { signal?.removeEventListener('abort',lopetaOdotus);lopetaOdotus(); }
   }
 
   /**
@@ -5107,14 +5121,19 @@ class Pollo {
    *
    * @returns {Promise<{vastaus: string, jatkot: string[], katkesi: boolean}>}
    */
-  async pyydaStriimi(runko, onPala) {
+  async pyydaStriimi(runko, onPala, { signal } = {}) {
     const lopetaOdotus=aloitaLivianOdotus({lahde:runko?.tehtava||'kysymys'});
+    signal?.addEventListener('abort',lopetaOdotus,{once:true});
+    let lukija;
     try {
+    tarkistaPyynnonPeruutus(signal);
     const vastaus = await fetch(this.palvelin, {
       method: 'POST',
       headers: this.otsakkeet({ accept: 'text/event-stream' }),
       body: JSON.stringify({ ...runko, striimi: true }),
+      signal,
     });
+    tarkistaPyynnonPeruutus(signal);
     if (!vastaus.ok) {
       const data = await vastaus.json().catch(() => ({}));
       const virhe = new Error(data?.virhe ?? 'virhe');
@@ -5124,6 +5143,7 @@ class Pollo {
     const laji = vastaus.headers?.get?.('content-type') ?? '';
     if (!/text\/event-stream/i.test(laji) || typeof vastaus.body?.getReader !== 'function') {
       const data = await vastaus.json().catch(() => ({}));
+      tarkistaPyynnonPeruutus(signal);
       return {
         vastaus: String(data?.vastaus ?? ''),
         jatkot: Array.isArray(data?.jatkot) ? data.jatkot : [],
@@ -5135,7 +5155,7 @@ class Pollo {
       };
     }
 
-    const lukija = vastaus.body.getReader();
+    lukija = vastaus.body.getReader();
     const purkaja = new TextDecoder();
     let jono = '';
     let kertynyt = '';
@@ -5144,10 +5164,12 @@ class Pollo {
     for (;;) {
       // eslint-disable-next-line no-await-in-loop
       const { value, done } = await lukija.read();
+      tarkistaPyynnonPeruutus(signal);
       if (done) break;
       jono += purkaja.decode(value, { stream: true });
       let raja = jono.indexOf('\n\n');
       while (raja >= 0) {
+        tarkistaPyynnonPeruutus(signal);
         const tapahtuma = polloTapahtuma(jono.slice(0, raja));
         jono = jono.slice(raja + 2);
         raja = jono.indexOf('\n\n');
@@ -5196,7 +5218,7 @@ class Pollo {
     return {
       vastaus: kertynyt, jatkot: [], paikka: null, katkesi: true, lopullinen: false, syy: 'katkesi',
     };
-    } finally { lopetaOdotus(); }
+    } finally { lukija?.releaseLock();signal?.removeEventListener('abort',lopetaOdotus);lopetaOdotus(); }
   }
 
   /* --- striimin äänet ---------------------------------------------- */
@@ -5540,6 +5562,14 @@ class Pollo {
       viesti = this.lisaaViesti('pollo', '');
       return viesti;
     };
+    const ohjain = new AbortController();
+    const pyynto = { peru: () => {
+      ohjain.abort();
+      odotus.remove();
+      this.nollaaTyhjaTila();
+      this.asetaKesken(false);
+    } };
+    this.kysymysPyynto = pyynto;
     try {
       let tulos = null;
       let striimattiin = false;
@@ -5549,6 +5579,7 @@ class Pollo {
       if (polloStriimiTuettu()) {
         striimattiin = true;
         tulos = await this.pyydaStriimi(runko, (kertynyt) => {
+          if (ohjain.signal.aborted) return;
           kertyma = kertynyt;
           /*
            * PUHE JA NAPUTUS SOIVAT KERROKSINA (omistajan tarkennus
@@ -5565,13 +5596,13 @@ class Pollo {
           // Näkymä on jo ankkuroitu: uusi teksti syö varattua tyhjää
           // alhaalta, joten virran vierityskohta ei muutu riviäkään.
           this.paivitaTyhjaTila();
-        });
+        }, { signal: ohjain.signal });
       } else {
         /*
          * VARAPOLKU: vastaus tulee kerralla. Naputusta ei soiteta —
          * mitään ei kirjoiteta vähitellen, joten naputus olisi valhe.
          */
-        const data = await this.pyyda(runko);
+        const data = await this.pyyda(runko, { signal: ohjain.signal });
         tulos = {
           vastaus: String(data?.vastaus ?? ''),
           jatkot: Array.isArray(data?.jatkot) ? data.jatkot : [],
@@ -5581,6 +5612,7 @@ class Pollo {
           syy: data?.syy ?? null,
         };
       }
+      if (ohjain.signal.aborted) return;
       // Naputus loppuu ennen kelloa, ei sen kanssa päällekkäin.
       this.lopetaNaputus();
       const raaka = String(tulos?.vastaus ?? '').trim();
@@ -5712,6 +5744,8 @@ class Pollo {
         kirjaaLivianLokiin('pollo', puhdas);
       }
     } catch (virhe) {
+      // Sulku ei ole virhe eikä myöhäinen vastaus kuulu uuteen chattiin.
+      if (ohjain.signal.aborted) return;
       // Virhe katkaisee naputuksen ja kesken jääneen luennan heti eikä
       // soita kelloa.
       this.lopetaNaputus();
@@ -5733,8 +5767,12 @@ class Pollo {
       }
     } finally {
       // Vikaverkko: mikään polku ei saa jättää naputusta soimaan.
-      this.lopetaNaputus();
-      this.asetaKesken(false);
+      // Vanha peruutettu kierros ei saa purkaa uuden kierroksen tilaa.
+      if (this.kysymysPyynto === pyynto) {
+        this.kysymysPyynto = null;
+        this.lopetaNaputus();
+        this.asetaKesken(false);
+      }
     }
   }
 
