@@ -302,10 +302,10 @@ pätevät vasta mainin kanssa.
 | `chat.odotus.pitka` | Sama | js/pollo.js:1434 mietintärivi, 1386 `MIETINNAN_JATKOVIIVE` 6000 | 6 s → rivi vaihtuu `pitkat`-repliikkiin | `hammentynyt` (0,3) | kerran, ei toistoa | ei saa keskeyttää odotuselettä | — | — | — | D | Throttle 3G, kysy pitkä kysymys |
 | `chat.vastaus.striimi.alku` | Chat | js/pollo.js:5155 `lopetaOdotus` + 5537 `avaaKupla` | 1. pala → kupla | `utelias` (0,4) | kerran per vastaus | waitingEnd → `palaa()` | lepo | katse kuplaan | — | K (vain waitingEnd) | Kysy ja katso ensimmäistä palaa |
 | `chat.vastaus.valmis` | Chat | js/pollo.js:5688 (`answer`, js/livia-eleet.js:132) | teksti valmis → ele repliikin sävystä | `ylpea` / `lammin` (0,5) | kerran; vain aito vastaus | ei varatekstille eikä katkenneelle | lepo | — | — | K | Kysy onnistuva kysymys |
-| `chat.vastaus.varateksti` | Chat | js/pollo.js:5628 (`varateksti`/`syy`) | worker kieltäytyy | `hammentynyt` (0,3) | kerran | `answer` on nimenomaan estetty tässä | lepo | — | — | D | Kysy kysymys, johon worker kieltäytyy |
-| `chat.vastaus.katkesi` | Chat | js/pollo.js:5645 virherivi "Ajatus katkesi" | virta katkeaa | `hammentynyt` (0,4) | kerran | uusintanappi seuraa | lepo | — | — | D | Katkaise verkko kesken striimin |
-| `chat.virhe` | Chat | js/pollo.js:5710 catch, 5717 virheviesti | pyyntö kaatuu → virherivi | `hammentynyt` (0,5) | kerran | keskeyttää odotuseleen (waitingEnd finally) | `palaa()` | — | — | D | Estä workers.dev route |
-| `chat.virhe.kayttoraja` | Chat | js/pollo.js:5731 päiväraja/kuukausiraja | raja täynnä → virherivi ilman uusintanappia | `vakava` (0,4) | kerran | erottuu tavallisesta virheestä | `palaa()` | — | — | D | Kuluta päiväraja |
+| `chat.vastaus.varateksti` | Chat | js/pollo.js:5628 (`varateksti`/`syy`) | worker kieltäytyy | hammentynyt (0,3) | kerran | `answer` on nimenomaan estetty tässä | lepo | — | — | K/T (v1745) | Kysy kysymys, johon worker kieltäytyy |
+| `chat.vastaus.katkesi` | Chat | js/pollo.js:5645 virherivi "Ajatus katkesi" | virta katkeaa | hammentynyt (0,4) | kerran | uusintanappi seuraa | lepo | — | — | K/T (v1745) | Katkaise verkko kesken striimin |
+| `chat.virhe` | Chat | js/pollo.js:5710 catch, 5717 virheviesti | pyyntö kaatuu → virherivi | hammentynyt (0,5) | kerran | keskeyttää odotuseleen (waitingEnd finally) | `palaa()` | — | — | K/T (v1745) | Estä workers.dev route |
+| `chat.virhe.kayttoraja` | Chat | js/pollo.js:5731 päiväraja/kuukausiraja | raja täynnä → virherivi ilman uusintanappia | vakava (0,4) | kerran | erottuu tavallisesta virheestä | `palaa()` | — | — | K/T (v1745) | Kuluta päiväraja |
 | `chat.peruutus` | Chat | js/pollo.js `kysy` (AbortController per kierros) → `sulje` peruu vain oman pyynnön (v1744) | sulku kesken pyynnön → pyyntö perutaan, waitingEnd heti | — | kerran per sulku; muiden kanavien haut jatkuvat | ratkaistu v1744: chatClose ja waitingEnd samassa hetkessä, vanha vastaus tai finally ei koske uuteen kysymykseen | lepo | — | — | K (v1744) | Kysy hidas kysymys, sulje chat, kysy uusi → vanha tulos ei näy (tests: 7 peruutustestiä) |
 | `chat.linkki.matkakirja` | Vastauksen linkki | js/pollo.js:4643 `sidoLinkki` → 4152 `avaaKohde` | napautus → kohde aukeaa | `utelias` (0,4) | kerran per napautus | chat sulkeutuu; chatClose ehtii päälle | lepo | katse linkkiin | mobiilissa vie pois chatista | D | Kysy nähtävyydestä, napauta alleviivausta |
 | `chat.vastaus.kuva` | Vastauksen kuva | js/pollo.js:4328/4475, popup 4212 | kuva latautuu vastaukseen | `utelias` (0,4) | kerran per kuva | sama sääntö kuin linkillä | lepo | katse kuvaan | popup mobiilissa koko leveys | D | Kysy kuvallinen kysymys |
@@ -316,9 +316,9 @@ pätevät vasta mainin kanssa.
 | `mikrofoni.alku` | Sanelu | js/pollo.js:5776 `merkitseMikki` → `microphone`; natiivi 5829 | napautus → listen | `jannitys` (0,4) | kerran per sanelu | ei toistu osittaisista | lepo | katse pelaajaan | iOS-sanelupalkki muuttaa viewportin | K | Napauta mikkiä ja puhu |
 | `mikrofoni.kuuntelu` | Tilarivi | js/pollo.js:5971 käynnistys, 5947 `onaudiostart`, 5852 sanelu-alkoi, 5938 `onresult` | "Käynnistän…" → "Kuuntelen…" → teksti | — | perusteltu hiljaisuus: pulu ei elehdi puhujan päälle; `mikrofoni.alku` kattaa | — | — | katse jää pelaajaan | — | D | Napauta mikkiä ja seuraa tilariviä |
 | `mikrofoni.loppu` | Sanelu | js/pollo.js:5953 `onend` → 6067 `lopetaSanelu`; 5904/2188 ei-tuettu → kirjoitustila | lopetus → kysy | — | `chat.kysymys.lahetys` ottaa vuoron; mikitön laite ei näytä nappia | `merkitseMikki(false)` ei laukaise mitään | — | — | `oikaiseNakyma` 5761 | D | Paina "Lopeta"; aja ilman SpeechRecognitionia |
-| `mikrofoni.eikuullut` | Tilarivi | js/pollo.js:5966 / 6161 (`no-speech`), muu virhe 6178 | hiljaisuus → "En kuullut mitään" | `hammentynyt` (0,3) | kerran per yritys | — | lepo | — | — | D | Napauta mikkiä ja ole hiljaa |
-| `mikrofoni.virhe.lupa` | Tilarivi | js/pollo.js:6136 (`not-allowed`) | lupa evätty → kirjoitustila | `hammentynyt` (0,5) | kerran | vaihtaa kirjoitustilaan | lepo | — | selaimen lupakysely päällä | D | Estä mikrofonilupa selaimessa |
-| `mikrofoni.virhe.audiocapture` | Tilarivi | js/pollo.js:6144 (hiljainen uusinta 400 ms), 6165 diagnoosi | 2. epäonnistuminen → "Mikrofonia ei löytynyt (…)" | `hammentynyt` (0,45) | vain toisella kerralla, ei uusinnasta | ensimmäinen yritys hiljainen | lepo | — | iOS-erikoistapaus | D | Varaa mikki toiselle sovellukselle |
+| `mikrofoni.eikuullut` | Tilarivi | js/pollo.js:5966 / 6161 (`no-speech`), muu virhe 6178 | hiljaisuus → "En kuullut mitään" | hammentynyt (0,3) | kerran per yritys | — | lepo | — | — | K/T (v1745) | Napauta mikkiä ja ole hiljaa |
+| `mikrofoni.virhe.lupa` | Tilarivi | js/pollo.js:6136 (`not-allowed`) | lupa evätty → kirjoitustila | hammentynyt (0,5) | kerran | vaihtaa kirjoitustilaan | lepo | — | selaimen lupakysely päällä | K/T (v1745) | Estä mikrofonilupa selaimessa |
+| `mikrofoni.virhe.audiocapture` | Tilarivi | js/pollo.js:6144 (hiljainen uusinta 400 ms), 6165 diagnoosi | 2. epäonnistuminen → "Mikrofonia ei löytynyt (…)" | hammentynyt (0,45) | vain toisella kerralla, ei uusinnasta | ensimmäinen yritys hiljainen | lepo | — | iOS-erikoistapaus | K/T (v1745) | Varaa mikki toiselle sovellukselle |
 | `kupla.vihje` / `kupla.lisavihje` | Kartta, chat kiinni | js/pollo.js:2340 `naytaVihje`, 2414 lisävihje → 2969 `kasvoEleet.kupla` | kupla ilmestyy → repliikin ele | `utelias` (0,4) | kerran per kupla | odotusrivi estää (js/livia-eleet.js:205) | lepo | — | linssi estää kokonaan | K | Jätä valinta tekemättä, odota vihjettä |
 | `kupla.vihje.valikko` | Hampurilaisnappi | js/pollo.js:2374 (pinon ohi) | kupla ylös | `utelias` (0,4) | ei kulje `lisaaPinoon` → EI elettä | tekninen puute (ks. puutelista) | — | — | — | D | Laukaise valikkovihje |
 | `kupla.saapuminen` | Kaupunki | js/pollo.js:2464 `naytaSaapumiskupla` | luennan jälkeen | `lammin` (0,5) | kerran per saapuminen | linssi jonottaa (`lykkaaLinssiin` 3176); sama hetki kuin `pulu.kommentti.alku` (B4) | lepo | — | chat auki: vain virtaan | K | Saavu uuteen kaupunkiin |
@@ -706,7 +706,10 @@ laukaisematta, ei siirretä seuraavaan rakoon.
 - **T2 osittain v1743** (PR #2216): pulun kuuntelu säilyy odotuksen ja
   taukojen yli (livia-eleet, livia-nostotila, livia-tilanteet, luenta.js).
   Erilliset lukija-/linssisoittimet yhä ilman kuuntelua (tekstisession jono).
-- **T4. Virhepolut ovat mykkiä.** `chat.virhe` (5710), `chat.virhe.kayttoraja`
+- **T4. TEHTY v1745** (tekstisessio, PR #2218): virhetagit keskitetyllä
+  error-tapahtumalla (Pollo.virhereaktio); ohittaa vain 2,8 s reaktiovälin,
+  ei puhetta, luentaa tai odotusta. Alkuperäinen puute:
+- **T4 (vanha). Virhepolut ovat mykkiä.** `chat.virhe` (5710), `chat.virhe.kayttoraja`
   (5731), `chat.vastaus.varateksti` (5628), `chat.vastaus.katkesi` (5645)
   ja mikrofonin virheet (6136, 6144/6165, 6161) eivät ilmoita mitään;
   `answer` on nimenomaan estetty näissä eikä korvaavaa tilannetta ole.
@@ -827,4 +830,5 @@ käyttäytyy täsmälleen kuten tänään (ei elettä).
 10.9.2026 — ensimmäinen kartoitus (Opus-parvi A–F, Fablen katselmus);
 45 kaupungin tunnetagit sisältöön v1741.
 11.9.2026 — T3 tehty (v1744, chat.peruutus K); T2 osittain (v1743,
-kuuntelu säilyy odotuksen ja taukojen yli). Fable.
+kuuntelu säilyy odotuksen ja taukojen yli); T4 tehty (v1745, 7 virheriviä
+K/T). Fable.
