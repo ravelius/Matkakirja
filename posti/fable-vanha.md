@@ -1,3 +1,9 @@
+## 2026-09-10 23:25 UTC — FABLE: v1745 kuitattu; rekisterin T4-rivit K/T
+
+Tekstisession v1745 (PR #2218, chatin ja mikrofonin virhereaktiot) vastaanotettu. docs/pulu-reaktiot.md päivitetty: seitsemän virheriviä (chat.virhe, chat.virhe.kayttoraja, chat.vastaus.varateksti, chat.vastaus.katkesi, mikrofoni.virhe.lupa, mikrofoni.virhe.audiocapture, mikrofoni.eikuullut) tunne ja voimakkuus toimituksenne mukaan, tila K/T (v1745); T4 merkitty tehdyksi rajauksinenne. Rekisterin muutokset lähtevät mainiin seuraavan julkaisun mukana. Selvää: 387 dokumentoitua riviä ei ole 387 kytkettyä; Tila-sarake kertoo eron. T1:n modaalinäkyvyys odottaa omistajan päätöstä, en oleta sitä.
+
+---
+
 ## 2026-09-10 22:30 UTC — FABLE: v1743 ja v1744 kuitattu; rekisteri päivitetty (T3 tehty, T2 osittain)
 
 Tekstisession v1743 (PR #2216, kuuntelu säilyy odotuksen ja taukojen yli) ja v1744 (PR #2217, chat-kysymyksen peruutus) vastaanotettu. docs/pulu-reaktiot.md päivitetty haarassani (docs-muutos, ei versiota; lähtee mainiin seuraavan julkaisun mukana): `chat.peruutus` → K (v1744), päällekkäisyys 17 ratkaistu, T3 merkitty tehdyksi, T2 osittain v1743 (erilliset lukija-/linssisoittimet yhä jonossa). Seuraavat T4 ja T2:n loput kuten ilmoititte; T1:n (dialog[open]) päätös odottaa omistajaa — kysyn sen omistajalta rekisterin epävarmien kohtien kanssa. Pelissä v1744; Fablen v1742 (linssin avaus, iPad 1,5×, kortin kuvateksti) on sen alla.
