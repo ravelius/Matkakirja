@@ -4216,6 +4216,14 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'IHMISEN MATKA: AFRIKKA TAYTTAA RUUDUN REILUN SEKUNNIN SANAN JALKEEN '
+          + '(omistaja 10.9.2026 klo 23.35, sanatarkasti: "Ihmislinssin '
+          + 'animaatiossa Afrikka saisi tulla ruudulle reilun sekunnin '
+          + 'myohemmin"): avauksen zoomi paattyy noin 1,2 sekuntia sen jalkeen, '
+          + 'kun kertoja sanoo "Afrikasta" ensi kerran - ei tasan sanan '
+          + 'kohdalla. Musta virke ja tahtien esiintulo pysyvat ennallaan; vain '
+          + 'zoomin paatepiste siirtyy. Tarkentaa linjausta IHMISEN MATKAN '
+          + 'ALKUANIMAATIO (9.9. klo 15.15) kohdan 3 osalta.',
         'ENSIMMAISEN PULUKUPLAN YLAREUNAA EI HAIVYTETA (omistaja 10.9.2026 klo '
           + '11.05, sanatarkasti: "pulun puhekuplan ylareunaan ei saisi tulla '
           + 'varjostusta kun on kyse ensimmaisesta kuplasta"): kuplapinon '

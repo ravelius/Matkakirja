@@ -52,7 +52,7 @@
  * (js/aikajana-virrat.js asetaPito, js/aikajana-vanat.js paivita):
  * piirretty vana ei enää lyhene, mutta kasvaa yhä normaalisti.
  *
- * ── AVAUS: MUSTA VIRKE, PISTE TÄHDISSÄ, AFRIKKA SANAN KOHDALLA ────
+ * ── AVAUS: MUSTA VIRKE, PISTE TÄHDISSÄ, AFRIKKA SANAN JÄLKEEN ─────
  *
  * Raamattu "IHMISEN MATKAN ALKUANIMAATIO: ENSIMMAINEN VIRKE MUSTALLE,
  * PALLO TAHTIEN KESKELLA PISTEENA, AFRIKKA TAYTTAA RUUDUN KUN SE
@@ -89,8 +89,14 @@
  *      sanaan: avausjakson neljäs lause on "Afrikasta.", ja sen
  *      alkuhetki luetaan aikaleimoista (tai lasketaan merkkiosuutena,
  *      sananHetki). Zoomi ajetaan taaksepäin siitä hetkestä, joten
- *      Afrikka täyttää ruudun TASAN silloin kun sana kuuluu.
- *   4. KAMERA KIIHTYY MAROKKOON. Samalla hetkellä kamera lähtee
+ *      Afrikka täyttää ruudun REILUN SEKUNNIN (AFRIKAN_VIIVE_MS
+ *      = 1,2 s) SEN JÄLKEEN, kun sana kuuluu — Raamattu "IHMISEN
+ *      MATKA: AFRIKKA TAYTTAA RUUDUN REILUN SEKUNNIN SANAN JALKEEN"
+ *      (omistaja 10.9.2026, sanatarkasti): *"Ihmislinssin animaatiossa
+ *      Afrikka saisi tulla ruudulle reilun sekunnin myöhemmin"*. Jos
+ *      jakso loppuu ennen sitä, päätepiste jää jakson loppuun.
+ *   4. KAMERA KIIHTYY MAROKKOON. Samalla hetkellä (zoomin päätyttyä,
+ *      ei siis enää sanan kohdalla) kamera lähtee
  *      hitaasti kohti ensimmäistä kohdetta (Jebel Irhoud), kiihtyy ja
  *      jarruttaa juuri ennen perille tuloa (marokonPehmennys). Ajon
  *      kesto luetaan luennasta: perillä ollaan kun 'jebel-irhoud'-
@@ -289,6 +295,14 @@ export const TAHTIEN_KERROIN = AVARUUDEN_KORKEUS / 5;
  */
 export const AVARUUDEN_MS = 7000;
 export const AVARUUDEN_MIN_MS = 1200;
+/**
+ * AFRIKKA TÄYTTÄÄ RUUDUN REILUN SEKUNNIN SANAN JÄLKEEN (Raamattu,
+ * omistaja 10.9.2026 sanatarkasti: *"Ihmislinssin animaatiossa Afrikka
+ * saisi tulla ruudulle reilun sekunnin myöhemmin"*). Zoomin päätepiste
+ * ei ole enää tasan sanan "Afrikasta" kohdalla vaan tämän verran sen
+ * jälkeen; musta virke ja tähtien esiintulo pysyvät ennallaan.
+ */
+export const AFRIKAN_VIIVE_MS = 1200;
 /** Osuus zoomista, jonka jälkeen tähdet alkavat häipyä. */
 export const TAHTIEN_HAIVE = 0.55;
 /** Avauksen tumma harso pallon päällä (0 = ei harsoa). */
@@ -674,8 +688,10 @@ export function pallonOsuusRuudusta(korkeus, fov = 50) {
  *   feidi     mustan häivytys harsoksi, tähdet nousevat samassa tahdissa
  *   piste     hetki, jolloin pallo on näkyvissä pisteenä tähtien keskellä
  *   zoomAlku  zoomin lähtöhetki
- *   zoomKesto zoomin kesto — niin, että zoomi PÄÄTTYY sanaan "Afrikasta"
- *   afrikka   sanan "Afrikasta" hetki jakson luennassa
+ *   zoomKesto zoomin kesto — niin, että zoomi PÄÄTTYY reilun sekunnin
+ *             (AFRIKAN_VIIVE_MS) sanan "Afrikasta" jälkeen
+ *   afrikka   hetki, jolloin Afrikka täyttää ruudun: sanan "Afrikasta"
+ *             hetki + AFRIKAN_VIIVE_MS (kuitenkin enintään jakson kesto)
  *
  * Kaikki ovat millisekunteja AVAUSJAKSON alusta. Aikaleimojen
  * puuttuessa luvut lasketaan merkkiosuuksista (lauseidenHetket,
@@ -691,7 +707,10 @@ export function pallonOsuusRuudusta(korkeus, fov = 50) {
 export function avauksenVaiheet({ lauseet = [], sana = null, kesto = 0 } = {}) {
   const kaikki = Math.max(1, Number(kesto) || 0);
   const hetki = Number(sana);
-  const afrikka = Number.isFinite(hetki) && hetki > 0 ? Math.min(hetki, kaikki) : kaikki;
+  // Zoomi päättyy AFRIKAN_VIIVE_MS sanan jälkeen, mutta ei jakson yli.
+  const afrikka = Number.isFinite(hetki) && hetki > 0
+    ? Math.min(hetki + AFRIKAN_VIIVE_MS, kaikki)
+    : kaikki;
   const toinen = Number(lauseet?.[1]);
   // Musta kestää ensimmäisen virkkeen, mutta zoomille on jäätävä tilaa.
   const musta = Math.max(0, Math.min(
@@ -1109,10 +1128,10 @@ export function luoEsitys({ ajo }) {
   }
 
   /**
-   * ZOOMI PÄÄTTYY SANAAN "AFRIKASTA" (Raamattu ALKUANIMAATIO: *"afrikka
-   * täyttää koko peli-ikkunan sillä hetkellä kun lukija mainitsee
-   * afrikan ensimmäistä kertaa"*). Kutsutaan kehyssilmukasta hetkellä
-   * `zoomAlku` = sanan hetki − zoomin kesto — tai viimeistään
+   * ZOOMI PÄÄTTYY REILUN SEKUNNIN SANAN "AFRIKASTA" JÄLKEEN (Raamattu
+   * ALKUANIMAATIO + AFRIKKA TAYTTAA RUUDUN REILUN SEKUNNIN SANAN
+   * JALKEEN, omistaja 10.9.2026). Kutsutaan kehyssilmukasta hetkellä
+   * `zoomAlku` = päätepiste − zoomin kesto — tai viimeistään
    * 'valot'-jakson alkaessa, jos luenta ehti loppua ennen sitä.
    *
    * @param {number} [kesto] zoomin kesto (avauksenVaiheet.zoomKesto)
@@ -1595,7 +1614,8 @@ export function luoEsitys({ ajo }) {
    *
    * VASTA KUN PALLO ON PERILLÄ (8.9.2026). Ennen valot syttyivät
    * 'afrikka'-jakson alkaessa, koska zoomi oli silloin jo ohi. Nyt
-   * zoomi lähtee vasta sanasta "Afrikasta" ja jatkuu 'afrikka'-jakson
+   * zoomi päättyy vasta reilun sekunnin sanan "Afrikasta" jälkeen ja
+   * jatkuu 'afrikka'-jakson
    * puolelle, joten valot odottavat sen perille tuloa (kehys →
    * valotOdottaa): käyttöliittymä ja musiikki tulevat sillä hetkellä,
    * kun Afrikka täyttää ruudun.
@@ -1636,8 +1656,9 @@ export function luoEsitys({ ajo }) {
    * marokossa ja sen vauhti voi kiihtyä loppua kohden kunnes hidastaa
    * juuri ennen kuin saapuu perille kun marokon teksti alkaa"*).
    *
-   * Ajo alkaa sillä hetkellä, kun Afrikka täyttää ruudun (sanan
-   * "Afrikasta" kohdalla, ks. sytytaValot) ja kestää tasan siihen asti,
+   * Ajo alkaa sillä hetkellä, kun Afrikka täyttää ruudun (reilun
+   * sekunnin sanan "Afrikasta" jälkeen, ks. sytytaValot) eikä siis
+   * mene zoomin kanssa päällekkäin; se kestää tasan siihen asti,
    * kun ensimmäisen kohteen jakso alkaa. Käyrä on marokonPehmennys eikä
    * laudan oma trapetsi: hidas lähtö, kiihtyvä keskiosa, jarrutus juuri
    * ennen perille tuloa.
