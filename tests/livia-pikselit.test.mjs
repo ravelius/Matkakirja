@@ -1,14 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { LIVIA_PIX_ELEET, LIVIA_PIX_RUUDUT, LIVIA_PIX_W, LIVIA_PIX_H, livianPikseliAsento, livianPikselit } from '../js/livia-pikselit.js';
+import { LIVIA_PIX_ELEET, LIVIA_PIX_RUUDUT, LIVIA_PIX_W, LIVIA_PIX_H, LIVIA_PIX_LEFT, livianPikseliAsento, livianPikselit } from '../js/livia-pikselit.js';
 import { livianMietintaEle, livianRepliikinEle } from '../js/livia-eleet.js';
 import { ilmoitaLivianKasvopuhe, livianKasvopuheenTila, kuunteleLivianKasvopuhetta, seuraaLivianKasvoAanitetta, lopetaLivianKasvoAanite, seuraaLivianKasvoLausumaa } from '../js/livia-puhetila.js';
 
-test('pikselisarjan kaikki 45 liikettä pysyvät kapealla lavalla, ja lepo varaa vain 22 × 22',()=>{
+test('pikselisarjan kaikki 45 liikettä pysyvät lavalla, ja lepo varaa vain 22 × 22',()=>{
  assert.equal(LIVIA_PIX_ELEET.length,45);assert.equal(new Set(LIVIA_PIX_ELEET.map(x=>x.id)).size,45);
  const rest=livianPikseliAsento('blink',0),restPix=livianPikselit(rest);
- assert.equal(LIVIA_PIX_W,22);assert.equal(LIVIA_PIX_H,44);
+ assert.equal(LIVIA_PIX_W,38);assert.equal(LIVIA_PIX_H,44);
  assert.ok(restPix.slice(0,21).flat().every(x=>x===0));
+ assert.ok(restPix.every(r=>r.slice(0,LIVIA_PIX_LEFT).every(v=>v===0)));
+ for(const id of ['bread','manic','puff','sneeze'])assert.ok(Array.from({length:99},(_,i)=>livianPikselit(livianPikseliAsento(id,(i+1)/100))).some(p=>p.some(r=>r.slice(0,LIVIA_PIX_LEFT).some(Boolean))),id+' käyttää lyhyesti vasenta sivua');
  for(const clip of LIVIA_PIX_ELEET){
   if(!['arrive','crash','emerge','handoff'].includes(clip.id))assert.deepEqual(livianPikseliAsento(clip.id,0),rest);
   if(!clip.id.startsWith('leave'))assert.deepEqual(livianPikseliAsento(clip.id,1),rest);
@@ -16,7 +18,7 @@ test('pikselisarjan kaikki 45 liikettä pysyvät kapealla lavalla, ja lepo varaa
   for(let i=0;i<=120;i++){
    const s=livianPikseliAsento(clip.id,i/120),pix=livianPikselit(s);
    assert.ok(Number.isInteger(s.x)&&s.x>=0,clip.id+' ei saa lähteä vasemmalle');assert.ok(Number.isInteger(s.y));
-   assert.equal(pix.length,44);assert.ok(pix.every(r=>r.length===22&&r.every(v=>Number.isInteger(v)&&v>=0&&v<=3)));
+   assert.equal(pix.length,44);assert.ok(pix.every(r=>r.length===38&&r.every(v=>Number.isInteger(v)&&v>=0&&v<=3)));
    if(JSON.stringify(pix)!==JSON.stringify(restPix))changed=true;
   }
   assert.ok(changed,clip.id+' on todellinen ele');
