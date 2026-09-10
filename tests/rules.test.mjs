@@ -3976,9 +3976,12 @@ test('päiväkirjalla on kaksi kokoa: koko merkintä ja yhden rivin lappu', () =
 
   // Kartan napautus kutistaa kortin yhden rivin lapuksi — luennan
   // aikana saman mekanismin kautta, joka nostaa kortin takaisin auki
-  // (ks. tests/paivakirjan-palautus.test.mjs).
-  assert.match(ui, /mapPane\.addEventListener\('click', \(\) => this\.kutistaKortinLiikkeesta\(\)\)/,
+  // (ks. tests/paivakirjan-palautus.test.mjs). Kartan päällä kelluvan
+  // kuvapakan napautus EI ole kartan napautus (omistaja 10.9.2026).
+  assert.match(ui, /mapPane\.addEventListener\('click', \(tapahtuma\) => \{/,
     'kartan napautus ei kutista päiväkirjaa yhdelle riville');
+  assert.match(ui, /if \(tapahtuma\.target\?\.closest\?\.\(KUVAPAKAN_PINNAT\)\) return;/,
+    'kuvapakan napautus kutistaa matkakirjakortin');
 
   // Uusi merkintä avaa kortin: avain vaihdetaan vain uusiFactKeyssä.
   assert.equal((ui.match(/this\.factKey = key;/g) ?? []).length, 1,

@@ -145,8 +145,21 @@ export function saapumisenPallonKohta({
  */
 export const LUENTAKUVAN_SIVUSIIRTO = 0.15;
 
-/** Kuvan alareunan väli kaupungin pisteeseen pikseleinä. */
-export const LUENTAKUVAN_VALI_PX = 20;
+/**
+ * KUVA NOUSEE LAATAN YLÄPUOLELLE, EI SEN VIEREEN (omistaja 10.9.2026,
+ * työpöytäkaappaus Marseillesta, sanatarkasti: *"kuva saisi tulla
+ * ylemmäs, ei näin kiinni kaupungin laattaa"*).
+ *
+ * Kaupungin piste on LAATAN KESKIPISTE: laatta (js/ui.js city-ellipsi
+ * kehineen) ulottuu siitä ylöskin, ja kaappauksessa kuvatekstilappu
+ * lepäsi suoraan sen päällä. Alareunan väli lasketaan siksi kahdesta
+ * osasta — laatan oma korkeus ja sen päälle jäävä ilmarako — eikä
+ * yhdestä luvusta, jotta laatan koon muuttuessa väli muuttuu mukana.
+ */
+export const KAUPUNGIN_LAATTA_PX = 34;
+
+/** Kuvan alareunan ilmarako laatan yläpuolelle pikseleinä. */
+export const LUENTAKUVAN_VALI_PX = 12;
 
 /** Reunusta, jota kuva ei ylitä missään suunnassa. */
 export const LUENTAKUVAN_MARGINAALI_PX = 12;
@@ -223,7 +236,9 @@ export function laatikotOsuvat(a, b, marginaali = 0) {
  * @param {number} [p.perusleveys] toivottu leveys (luentakuvanPerusleveys)
  * @param {number} [p.kuvasuhde] paneelin korkeus / leveys
  * @param {number} [p.marginaali] reunavara
- * @param {number} [p.vali] väli kaupungin pisteeseen
+ * @param {number} [p.vali] ilmarako laatan yläreunan ja kuvan väliin
+ * @param {number} [p.laatta] kaupungin laatan korkeus ruudulla; kuvan
+ *   alareuna jää tämän ja `vali`:n verran kaupungin pisteen yläpuolelle
  * @param {number} [p.sivusiirto] keskilinjan siirto oikealle (osuus)
  * @param {number} [p.vahinLeveys] pienin leveys ennen alas painumista
  * @param {number} [p.lisakorkeus] kuvan alle jäävä kiinteä osa (lyhyen
@@ -240,6 +255,7 @@ export function luentakuvanSijainti({
   perusleveys, kuvasuhde = LUENTAKUVAN_KUVASUHDE,
   marginaali = LUENTAKUVAN_MARGINAALI_PX,
   vali = LUENTAKUVAN_VALI_PX,
+  laatta = KAUPUNGIN_LAATTA_PX,
   sivusiirto = LUENTAKUVAN_SIVUSIIRTO,
   vahinLeveys = LUENTAKUVAN_VAHIN_PX,
   lisakorkeus = 0,
@@ -251,8 +267,8 @@ export function luentakuvanSijainti({
   const toivottu = perusleveys > 0 ? perusleveys : luentakuvanPerusleveys(W, W);
   const kx = Number.isFinite(kaupunki?.x) ? kaupunki.x : W / 2;
   const ky = Number.isFinite(kaupunki?.y) ? kaupunki.y : H * SAAPUMISEN_KAUPUNKI.y;
-  // Kuvan alareuna kaupungin pisteen YLÄPUOLELLE.
-  const pohja = Math.min(H - marginaali, ky - vali);
+  // Kuvan alareuna kaupungin LAATAN yläpuolelle (ks. KAUPUNGIN_LAATTA_PX).
+  const pohja = Math.min(H - marginaali, ky - Math.max(0, laatta || 0) - vali);
   const toivottuX = kx + sivusiirto * W;
   const leveysKatto = Math.min(toivottu, W - 2 * marginaali);
   const vahin = Math.min(vahinLeveys, leveysKatto);

@@ -3148,7 +3148,12 @@ export class Kartta extends NukkuvaKartta {
      */
     // Linssin ilmiöpaneeli on raahattava (js/aikajana.js kytkeRaahaus):
     // kartta ei saa lähteä mukaan eikä kaapata osoitinta.
+    // Luentakuva pakkoineen on raahattava ja selattava (js/fokusvirta.js,
+    // js/pulucam.js): kartta ei saa lähteä sen eleistä mukaan eikä
+    // kutistaa matkakirjakorttia, kun pelaaja selaa kuvapakkaa
+    // (omistaja 10.9.2026).
     const KELLUVA_UI = '.fokusvirta-kortti, .fokusvirta-kupla, .fokuszoom, '
+      + '.fokusvirta-luentakuva, '
       + '.fokus-maataulu, .fokuskohde-popup, .aikajana-ilmio';
     /** Alkaako ele kartan päällä kelluvalta pinnalta? */
     const kelluvaltaPinnalta = (e) => Boolean(e?.target?.closest?.(KELLUVA_UI));

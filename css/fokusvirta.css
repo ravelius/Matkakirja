@@ -388,6 +388,13 @@
    ei kermanväristä paperireunaa, ei ääriviivaa — pelkkä kevyt varjo,
    joka nostaa valokuvan kartan päälle. */
 .fokusvirta-luentakuva .fokusvirta-kuva {
+  /* ISOISÄN KUVA ON PAKAN ALIN KORTTI (omistaja 10.9.2026): sen
+     napautus nostaa sen pulun kuvien päälle, joten sillä on oltava
+     sama kerrosmuuttuja kuin korteilla (js/pulucam.js jarjestaPakka).
+     Ilman `position` z-index ei tekisi mitään. Oletus 0 pitää kuvan
+     pakan alla silloin, kun pakkaa ei ole nostettu. */
+  position: relative;
+  z-index: var(--pulucam-kerros, 0);
   padding: 0;
   border: 0;
   border-radius: 2px;
@@ -414,6 +421,14 @@
      samana kappaleena — lapulla ei ole omaa transformia. Yläkulmat
      jäävät suoriksi, alakulmat pyöristyvät: lappu on kuvan jatke. */
   margin: 0;
+  /* LAPPU ON PAKAN PÄÄLLÄ (omistaja 10.9.2026: *"pulun kuvasta puuttuu
+     kuvateksti"*). Pakan kortit siirtyvät asennoissaan alaspäin
+     enintään 10 % kuvan korkeudesta (js/pulucam.js PULUCAM_ASENNOT),
+     ja alin kortti peittäisi juuri sen kaistan, jossa lappu on. Kerros
+     on korkeampi kuin yhdelläkään kortilla (kuusi kuvaa, kerrokset
+     1–6), joten teksti näkyy aina — myös kun pakkaa selataan. */
+  position: relative;
+  z-index: 20;
   padding: 0.4rem 0.6rem;
   border: 0;
   border-radius: 0 0 10px 10px;
@@ -545,7 +560,10 @@
      kuvaan, joka näkyy kehyksettä (omistaja 9.9.2026). */
   background: #fbf6ea;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.34);
-  cursor: zoom-in;
+  /* Alempi kortti nousee napautuksesta päälle, päällimmäinen avaa
+     karusellin (js/pulucam.js). Osoitin on sama molemmille: pelaajalle
+     kortti on kortti, jota napautetaan. */
+  cursor: pointer;
   opacity: 0;
   pointer-events: auto;
   transform:

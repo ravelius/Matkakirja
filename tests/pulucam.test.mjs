@@ -56,9 +56,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  PULUCAM_ASENNOT, PULUCAM_KATTO, PULUCAM_TARRA_KATTO_PX, PULUCAM_TARRA_OSUUS,
-  PULUCAM_VALIT_MS, PULU_CAM_TARRA_OSOITE, puluCamMerkki, pulucamAsento, pulucamViive,
-  pulunKuvat,
+  PULUCAM_ASENNOT, PULUCAM_KATTO, PULUCAM_POHJA, PULUCAM_TARRA_KATTO_PX, PULUCAM_TARRA_OSUUS,
+  PULUCAM_VALIT_MS, PULU_CAM_TARRA_OSOITE, puluCamMerkki, puluCamPaallimmainen, pulucamAsento,
+  pulucamViive, pulunKuvat,
 } from '../js/pulucam.js';
 
 /* ---------------------------------------------------------------- */
@@ -502,10 +502,21 @@ test('viisi kuvaa pulpahtaa yksitellen, kukin omaan kulmaansa ja paikkaansa', as
       assert.equal(kortti.style['--pulucam-kulma'], `${asento.kulma}deg`, `kulma ${i}`);
       assert.equal(kortti.style['--pulucam-x'], `${asento.x}%`, `x ${i}`);
       assert.equal(kortti.style['--pulucam-y'], `${asento.y}%`, `y ${i}`);
-      // Päällimmäisenä viimeisenä pulpahtanut.
-      assert.equal(kortti.style['--pulucam-kerros'], String(i + 1));
+      /*
+       * PÄÄLLIMMÄISENÄ VIIMEKSI PULPAHTANUT — ja kerros 1 on ISOISÄN
+       * KUVA, joka on pakassa alin kortti (omistaja 10.9.2026): sen
+       * napautus nostaa sen muiden päälle, joten sillä on oltava oma
+       * kerroksensa samassa jonossa.
+       */
+      assert.equal(kortti.style['--pulucam-kerros'], String(i + 2));
       assert.ok(kortti.classList.contains('nakyy'), `kortti ${i} ei noussut näkyviin`);
     });
+
+    // Isoisän kuva on pakan alin kortti, ja pakan päällimmäinen on
+    // viimeksi pulpahtanut kuva.
+    const pohjakortti = ui.luentakuva.querySelector('.fokusvirta-kuva');
+    assert.equal(pohjakortti.style['--pulucam-kerros'], '1');
+    assert.equal(puluCamPaallimmainen(ui).kuva, VIISI_KUVAA[4]);
 
     // Kulmat ja paikat ovat oikeasti eri: pakan pitää näyttää pakalta.
     const kulmat = new Set(kortit.map((k) => k.style['--pulucam-kulma']));
@@ -602,37 +613,54 @@ function pitkaTeksti(kerros) {
     .trim();
 }
 
+/** Ensimmäisen kortin kerros (z-index) pakan järjestyksessä. */
+function kortti0Kerros(kortit) {
+  return kortit[0].style['--pulucam-kerros'];
+}
+
 /** Karusellin pitkän tekstin perässä oleva Havainnekuva-linkki. */
 function havainnekuvanLinkki(kerros) {
   return kerros.querySelector('.fokuszoom-selite')?.querySelector('.havainnekuva-linkki') ?? null;
 }
 
-test('päällimmäisen kuvan napautus avaa karusellin isoisän kuvasta', () => {
-  pakinKanssa({ luentakuva: POHJAKUVA, kuvat: VIISI_KUVAA }, () => {
+test('päällimmäisen kortin napautus avaa karusellin JUURI SIITÄ kuvasta', async () => {
+  await pakinKanssa({ luentakuva: POHJAKUVA, kuvat: VIISI_KUVAA }, async () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
+    await odota(pulucamViive(4) + 120);
 
-    pakanKortit()[0].dispatch('click');
+    /*
+     * OMISTAJAN TÄSMENNYS 10.9.2026: *"kun kuvaa klikkaa, niin juuri se
+     * kuva pitää tulla näkyviin täysikokoisena. eli riippuen siitä mikä
+     * kuva on pakan päällimmäisenä pitää aueta ensimmäisenä
+     * karusellissa täydessä koossa."* Karusellin JÄRJESTYS on yhä
+     * isoisä ensin — vain aloituskohta seuraa pakan päällimmäistä.
+     */
+    const kortit = pakanKortit();
+    kortit[kortit.length - 1].dispatch('click');
     const kerros = asiakirja.querySelectorAll('.fokuszoom')[0];
     assert.ok(kerros, 'karuselli ei auennut');
 
-    // 1 isoisän kuva + 5 pulun kuvaa, ja ISOISÄ ENSIN.
-    assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '1 / 6');
-    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite);
+    // 1 isoisän kuva + 5 pulun kuvaa, ja auki on PÄÄLLIMMÄINEN (6/6).
+    assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '6 / 6');
+    assert.equal(pitkaTeksti(kerros), VIISI_KUVAA[4].selite);
     // Lähderivi kulkee jokaisella kuvalla (CC BY) ja säilyy omanaan.
-    assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, POHJAKUVA.lahde);
+    assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, VIISI_KUVAA[4].lahde);
     // Nuolinapit kumpaankin suuntaan.
     assert.equal(kerros.querySelectorAll('.fokuszoom-nuoli').length, 2);
 
-    // Tarra B on karusellissa yhtenä elementtinä, mutta isoisän kuvan
-    // kohdalla piilossa (tarra kuuluu vain pulun kuviin).
+    // Tarra on karusellissa yhtenä elementtinä, pulun kuvassa näkyvissä.
     const merkit = kerros.querySelectorAll('.pulucam-merkki');
     assert.equal(merkit.length, 1);
-    assert.equal(merkit[0].hidden, true, 'isoisän kuvassa tarra on piilossa');
+    assert.equal(merkit[0].hidden, false, 'pulun kuvassa tarra näkyy');
 
-    // Seuraavat kuvat ovat PULUN kuvia toimituksen järjestyksessä, ja
-    // PITKÄ KUVATEKSTI VAIHTUU KUVAN MUKANA.
+    // Seuraava kierros vie ympäri: isoisä ensin, sitten pulun kuvat
+    // toimituksen järjestyksessä — ja PITKÄ TEKSTI VAIHTUU MUKANA.
+    nappain('ArrowRight');
+    assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '1 / 6');
+    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite);
+    assert.equal(merkit[0].hidden, true, 'isoisän kuvassa tarra on piilossa');
     for (let i = 0; i < VIISI_KUVAA.length; i += 1) {
       nappain('ArrowRight');
       assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, `${i + 2} / 6`);
@@ -640,9 +668,6 @@ test('päällimmäisen kuvan napautus avaa karusellin isoisän kuvasta', () => {
       assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, VIISI_KUVAA[i].lahde);
       assert.equal(merkit[0].hidden, false, `pulun kuvassa ${i} tarra näkyy`);
     }
-    // Pyörii ympäri takaisin isoisään.
-    nappain('ArrowRight');
-    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite);
 
     suljeSuurennos(ui);
     assert.equal(asiakirja.querySelectorAll('.fokuszoom').length, 0);
@@ -653,13 +678,70 @@ test('päällimmäisen kuvan napautus avaa karusellin isoisän kuvasta', () => {
   });
 });
 
-test('isoisän kuvan napautus avaa saman karusellin, kun pakka on päällä', () => {
+test('alemman kortin napautus nostaa sen päälle — karuselli ei aukea', async () => {
+  await pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, async () => {
+    const ui = tekoUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI);
+    naytaPulunKuvapakka(ui, KOEKAUPUNKI);
+    await odota(pulucamViive(2) + 120);
+
+    const selite = () => ui.luentakuva.querySelector('.fokusvirta-kuvaselite').textContent;
+    const kortit = pakanKortit();
+    assert.equal(selite(), PULUN_KUVAT[2].lyhyt, 'kartalla ei lue päällimmäisen kuvan teksti');
+
+    /*
+     * OMISTAJA 10.9.2026: *"kuvia pitäisi voida vaihdella näytöllä jos
+     * klikkaa alempana näkyvää kuvaa."* Alemman kortin napautus NOSTAA
+     * sen — karuselli ei aukea, ja kuvateksti vaihtuu mukana.
+     */
+    kortit[0].dispatch('click');
+    assert.equal(asiakirja.querySelectorAll('.fokuszoom').length, 0,
+      'alemman kortin napautus avasi karusellin');
+    assert.equal(puluCamPaallimmainen(ui).kuva, PULUN_KUVAT[0]);
+    assert.equal(selite(), PULUN_KUVAT[0].lyhyt, 'kuvateksti ei seurannut nostoa');
+
+    /*
+     * PAKKA NÄYTTÄÄ YHÄ PAKALTA: nostettu kortti saa päällimmäisen
+     * asennon, ja väliin jääneet siirtyvät yhden verran. Asentoja on
+     * yhtä monta kuin kortteja, eikä kahta korttia jää päällekkäin.
+     */
+    assert.equal(kortit[0].style['--pulucam-kulma'], `${pulucamAsento(2).kulma}deg`);
+    assert.equal(kortti0Kerros(kortit), '4', 'nostettu kortti ei ole päällimmäinen kerros');
+    const paikat = new Set(kortit.map((k) => `${k.style['--pulucam-x']},${k.style['--pulucam-y']}`));
+    assert.equal(paikat.size, 3, 'nosto latoi kaksi korttia päällekkäin');
+
+    // Nyt sama kortti on päällimmäinen: napautus avaa karusellin JUURI
+    // SIITÄ kuvasta (2 / 4, isoisä on listalla ensimmäisenä).
+    kortit[0].dispatch('click');
+    const kerros = asiakirja.querySelectorAll('.fokuszoom')[0];
+    assert.ok(kerros, 'päällimmäisen kortin napautus ei avannut karusellia');
+    assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '2 / 4');
+    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[0].selite);
+
+    suljeSuurennos(ui);
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+test('isoisän kuva on pakassa yksi kortti: napautus nostaa, toinen avaa', () => {
   pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
 
-    ui.luentakuva.querySelector('.fokusvirta-kuva').dispatch('click');
+    const pohjakortti = ui.luentakuva.querySelector('.fokusvirta-kuva');
+    const selite = () => ui.luentakuva.querySelector('.fokusvirta-kuvaselite').textContent;
+    assert.equal(selite(), PULUN_KUVAT[0].lyhyt);
+
+    // 1. Isoisän kuva on alla: napautus NOSTAA sen eikä avaa mitään.
+    pohjakortti.dispatch('click');
+    assert.equal(asiakirja.querySelectorAll('.fokuszoom').length, 0,
+      'alla olevan isoisän kuvan napautus avasi karusellin');
+    assert.equal(puluCamPaallimmainen(ui).tunnus, PULUCAM_POHJA);
+    assert.equal(selite(), POHJAKUVA.lyhyt, 'kuvateksti ei palannut isoisän kuvaan');
+
+    // 2. Päällimmäisenä sama napautus avaa karusellin isoisän kuvasta.
+    pohjakortti.dispatch('click');
     const kerros = asiakirja.querySelectorAll('.fokuszoom')[0];
     assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '1 / 4');
     assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite);
@@ -724,8 +806,15 @@ test('Havainnekuva-linkki on pitkän tekstin perässä vain havainnekuvilla', ()
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
+    /*
+     * Karuselli avautuu PÄÄLLIMMÄISESTÄ kuvasta (omistaja 10.9.2026),
+     * eli ensimmäisestä pulun kuvasta — isoisän kuvaan siirrytään
+     * nuolella taaksepäin, koska se on listan ensimmäinen.
+     */
     pakanKortit()[0].dispatch('click');
     const kerros = asiakirja.querySelectorAll('.fokuszoom')[0];
+    assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '2 / 4');
+    nappain('ArrowLeft');
 
     /*
      * ISOISÄN KUVASSA LINKKI ON AINA (lähde "Matkakirjan havainnekuva"),
