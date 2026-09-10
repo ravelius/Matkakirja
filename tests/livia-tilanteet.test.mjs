@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {livianAiheEle,seuraaLivianKuuntelua,kuunteleLivianTilanteita} from '../js/livia-tilanteet.js';
+import {LIVIAN_TUNTEET,ilmoitaLivianTunne,livianAiheEle,livianTunnetaginTiedot,seuraaLivianKuuntelua,kuunteleLivianTilanteita} from '../js/livia-tilanteet.js';
 import {livianNostoAsettelu} from '../js/livia-nostotila.js';
 test('kaikilla nostoluokilla on reaktio; vakava sisältö voittaa hymyn',()=>{
  for(const symboli of ['huuto','elain','silma','historia','luonto','ruoka','kulttuuri','tekniikka','kauppa','sana','merenkulku','urheilu','kaupunki','ihme','hetki'])assert.ok(livianAiheEle({symboli}));
@@ -9,6 +9,16 @@ test('kaikilla nostoluokilla on reaktio; vakava sisältö voittaa hymyn',()=>{
  assert.equal(livianAiheEle({symboli:'tekniikka'}),'glasses');
  assert.equal(livianAiheEle({symboli:'ruoka',teksti:'Kaupunki kärsi nälänhädästä.'}),'listen');
  assert.equal(livianAiheEle({symboli:'kulttuuri',teksti:'Hän kuoli sodassa.'}),'listen');
+});
+test('ulkoinen tunnetagi on vain tunne ja rajattu voimakkuus',t=>{
+ assert.deepEqual(Object.keys(LIVIAN_TUNTEET),['utelias','lammin','ilo','hammastys','miettiva','vakava','ylpea','rakkaus','hammentynyt','jannitys']);
+ assert.deepEqual(livianTunnetaginTiedot({tunne:' UTELIAS ',voimakkuus:1.4}),{tunne:'utelias',voimakkuus:1,ele:'lookUp'});
+ assert.deepEqual(livianTunnetaginTiedot({tunne:'lammin'}),{tunne:'lammin',voimakkuus:.5,ele:'smile'});
+ assert.equal(livianTunnetaginTiedot({tunne:'tuntematon',voimakkuus:.4}),null);
+ assert.equal(livianTunnetaginTiedot({tunne:'ilo',voimakkuus:'paljon'}),null);
+ const calls=[],off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
+ assert.deepEqual(ilmoitaLivianTunne({tunne:'ilo',voimakkuus:.7},{lahde:'koe',teksti:'ei kuulu tagiin'}),{tunne:'ilo',voimakkuus:.7,ele:'grin'});
+ assert.equal(calls[0][0],'emotion');assert.equal(calls[0][1].lahde,'koe');assert.equal(calls[0][1].ele,'grin');
 });
 test('luennan reaktiot seuraavat soitinta, eivät seinäkelloa tai vanhaa kaupunkia',t=>{
  const a=new EventTarget();a.currentTime=0;a.paused=false;let current=true;const calls=[];

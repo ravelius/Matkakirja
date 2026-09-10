@@ -63,6 +63,8 @@ export function asennaLivianKasvot(pollo) {
   if(kuollut)return;const rect=nappi.getBoundingClientRect?.()||{right:152,bottom:304};
   const viewport=doc.documentElement?.clientWidth||rect.right;
   const gap=Math.max(0,viewport-rect.right);
+  const lehti=doc.getElementById?.('arrival-dialog'),lehdessa=Boolean(lehti?.open&&lehti.classList?.contains('lehti'));
+  pinta.classList[lehdessa?'add':'remove']('livia-lehdessa');
   kasvot.resize(gap);pinta.style.left=`${rect.right-152}px`;pinta.style.top=`${rect.bottom-304}px`;
   pinta.style.width=`${152+gap}px`;pinta.style.height='304px';pinta.hidden=!nakyy();
  }
@@ -124,14 +126,14 @@ export function asennaLivianKasvot(pollo) {
   if(laji!=='card'&&nyt-viimeTilanne<2800)return false;
   if(puhe&&laji!=='photo')return false;
   if(puhe&&laji==='photo'&&nykyinen&&!['blink','talk','smile','present','welcome'].includes(nykyinen.id))return false;
-  const ele=laji==='card'?livianAiheEle(tiedot):laji==='narration'?tiedot.ele:
+  const ele=laji==='card'?livianAiheEle(tiedot):laji==='narration'||laji==='emotion'?tiedot.ele:
    laji==='photo'?(tiedot.cityId==='venetsia'?'love':'present'):
    laji==='chatOpen'?'welcome':laji==='chatClose'?'wink':laji==='microphone'?'listen':
    laji==='answer'?(livianRepliikinEle(tiedot.teksti)==='blink'?'smile':livianRepliikinEle(tiedot.teksti)):
    laji==='success'?'grin':laji==='retry'?'nod':null;
   if(!ele)return false;
   viimeTilanne=nyt;viimeToimi=nyt;
-  return toista(ele,{hiljaa:true,omistaja:laji,tunnus:tiedot.tunnus,voimakkuus:laji==='narration'?.25:livianEleenVoima(ele)});
+  return toista(ele,{hiljaa:true,omistaja:laji,tunnus:tiedot.tunnus,voimakkuus:laji==='narration'?.25:laji==='emotion'?tiedot.voimakkuus:livianEleenVoima(ele)});
  }
  function palaa(){
   const s=nykyinen?livianSvgAsento(nykyinen.id,osuus,{voimakkuus:nykyinen.voimakkuus}):lepoTila;
@@ -170,6 +172,8 @@ export function asennaLivianKasvot(pollo) {
   const n=nakyy();if(!n){katkaise();piirra(lepo());}else{paikkaMuuttui();if(!oliNakyva)saapuminen();}oliNakyva=n;
   if(Boolean(pollo.auki)!==auki){auki=Boolean(pollo.auki);odotusrivi=null;odotusteksti='';if(!puhe)tilanne(auki?'chatOpen':'chatClose');mietintaMuuttui();}
  });
+ const lehti=doc.getElementById?.('arrival-dialog')??null;
+ const lehtiVahti=lehti?new MutationObserver(paikkaMuuttui):null;lehtiVahti?.observe(lehti,{attributes:true,attributeFilter:['open','class']});
  const virtaVahti=new MutationObserver(mietintaMuuttui);
  const kokoVahti=typeof ResizeObserver==='function'?new ResizeObserver(paikkaMuuttui):null;kokoVahti?.observe(nappi);
  function liikeAsetus(){katkaise();lepoTila=null;piirra(lepo());ajasta();if(!vahenna?.matches)kaynnista();}
@@ -188,7 +192,7 @@ export function asennaLivianKasvot(pollo) {
   kaynnista();
  });
  function tuhoa(){
-  if(kuollut)return;kuollut=true;irrotaTilanteet();nostoTila?.tuhoa();chatTila?.tuhoa();katkaise();clearTimeout(kello);irrotaPuhe();nappiVahti.disconnect();virtaVahti.disconnect();pinta.remove();nappi.classList.remove('livia-kasvot-valmis');
+  if(kuollut)return;kuollut=true;irrotaTilanteet();nostoTila?.tuhoa();chatTila?.tuhoa();katkaise();clearTimeout(kello);irrotaPuhe();nappiVahti.disconnect();lehtiVahti?.disconnect();virtaVahti.disconnect();pinta.remove();nappi.classList.remove('livia-kasvot-valmis');
   doc.removeEventListener('pointerdown',toiminta,true);doc.removeEventListener('keydown',toiminta,true);doc.removeEventListener('visibilitychange',tausta);vahenna?.removeEventListener('change',liikeAsetus);globalThis.removeEventListener?.('pagehide',tausta);globalThis.removeEventListener?.('resize',paikkaMuuttui);doc.removeEventListener('scroll',paikkaMuuttui,true);nappi.removeEventListener('transitionend',paikkaMuuttui);doc.removeEventListener(AANIVALINTA_TAPAHTUMA,vaienna);kokoVahti?.disconnect();
  }
  const irrotaTilanteet=kuunteleLivianTilanteita(tilanne);

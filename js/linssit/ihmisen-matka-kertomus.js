@@ -49,6 +49,8 @@
  *   luenta    sama teksti ElevenLabs-tageilla (Viisas Kertoja, eleven_v3)
  *   pulu      pulun välihuomio jakson jälkeen (luetaan pulun äänellä,
  *             kupla pieni, ei pysäytä kertomusta), tai null
+ *   tunne     Pulun äänetön reaktio `{ tunne, voimakkuus }`. Tekninen
+ *             ele ratkaistaan js/livia-tilanteet.js:ssä; tagia ei lueta.
  *
  * YKSI YHTENÄINEN LUENTA (omistaja 8.9.2026: *"nyt jokainen kohtaus on
  * generoitu erillisenä kohtana, niin kertojan äänensävy hyppii liikaa"*
@@ -67,6 +69,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   {
     id: 'avaus', vaihe: 'pimea', kohde: null, alue: null, vuosia: 300000,
     maisema: null,
+    tunne: { tunne: 'utelias', voimakkuus: 0.42 },
     teksti: 'Tiedätkö, mistä ihmiset lähtivät liikkeelle? Ei kukaan heistäkään '
       + 'tiennyt. He vain lähtivät. Afrikasta. Kaikki meistä.',
     luenta: '[curious] Tiedätkö, mistä ihmiset lähtivät liikkeelle? [softly] Ei '
@@ -86,6 +89,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   {
     id: 'jebel-irhoud', vaihe: 'matka', kohde: 'jebel-irhoud', alue: null, vuosia: 300000,
     maisema: 'savanni',
+    tunne: { tunne: 'lammin', voimakkuus: 0.4 },
     teksti: '…on löydetty vanhimmat luut ihmisistä, joilla oli jo samanlaiset '
       + 'kasvot kuin meillä. Jos yksi heistä kävelisi vastaan kadulla, et '
       + 'kääntyisi katsomaan. Kukaan täällä ei tiennyt olevansa ensimmäinen '
@@ -119,6 +123,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   {
     id: 'ranta', vaihe: 'matka', kohde: 'pinnacle-point', alue: null, vuosia: 164000,
     maisema: 'meren-ranta',
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     teksti: 'Kului pitkä aika, ennen kuin joku käveli etelän rantaan asti. '
       + 'Rannasta löytyi ruokaa, joka ei juokse karkuun: simpukoita. Siitä '
       + 'lähtien meri on ollut ihmiselle tie, ei este.',
@@ -185,6 +190,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   {
     id: 'australia', vaihe: 'matka', kohde: 'madjedbebe', alue: null, vuosia: 65000,
     maisema: 'rannikkomeri',
+    tunne: { tunne: 'hammastys', voimakkuus: 0.72 },
     teksti: 'Ja sitten tehtiin jotain, mitä kukaan ei ollut ennen tehnyt: '
       + 'lähdettiin meren yli, vaikka toista rantaa ei näkynyt. Perillä oli '
       + 'Sahul, nykyinen Australia. Se oli ihmisen ensimmäinen merimatka '
@@ -198,6 +204,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   {
     id: 'denisova', vaihe: 'matka', kohde: 'denisova', alue: null, vuosia: 50000,
     maisema: 'luola',
+    tunne: { tunne: 'hammentynyt', voimakkuus: 0.56 },
     teksti: 'Pohjoisessa, Altain vuorilla, on luola, jossa asui kolmenlaisia '
       + 'ihmisiä: denisovalaisia, neandertalilaisia ja heidän yhteisiä lapsiaan. '
       + 'Meidän esi-isiemme esineitä löytyy samasta luolasta melkein heti heidän '
@@ -223,6 +230,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   {
     id: 'beringia', vaihe: 'matka', kohde: 'beringia', alue: null, vuosia: 22000,
     maisema: 'tundratuuli',
+    tunne: { tunne: 'jannitys', voimakkuus: 0.66 },
     teksti: 'Seuraavaksi ylitettiin meri, jota ei enää ollut. Jääkausi oli '
       + 'sitonut vettä jäätiköihin, ja meri oli laskenut niin alas, että '
       + 'Beringinsalmen tilalla oli kuivaa ruohomaata. Sitä pitkin käveltiin '
@@ -284,6 +292,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   {
     id: 'chauvet', vaihe: 'matka', kohde: 'chauvet', alue: null, vuosia: 36000,
     maisema: 'luola',
+    tunne: { tunne: 'rakkaus', voimakkuus: 0.48 },
     teksti: 'Ranskassa joku laskeutui luolan pimeyteen ja maalasi seinään '
       + 'hevosia, sarvikuonoja ja leijonia. Ne ovat siellä vieläkin, samassa '
       + 'asennossa. Kuka hän oli, sitä ei tiedä kukaan. Mutta hän oli '
@@ -321,6 +330,7 @@ export const IHMISEN_MATKA_KERTOMUS = [
   {
     id: 'loppu', vaihe: 'loppu', kohde: null, alue: 'maailma', vuosia: 0,
     maisema: 'hiljainen-tuuli',
+    tunne: { tunne: 'lammin', voimakkuus: 0.44 },
     teksti: 'Kukaan matkalla ei tiennyt olevansa matkalla. Jokainen vain siirsi '
       + 'leirinsä seuraavan rannan taakse. Kolmesataatuhatta vuotta, ja tässä me '
       + 'olemme.',

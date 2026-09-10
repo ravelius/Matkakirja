@@ -194,6 +194,7 @@ import { karkiHetkella } from '../aikajana-vanat.js';
 import { luoTahtitaivas } from '../pallolauta/tahdet.js';
 import { kulmaEro } from './ihmisen-matka-kortti.js';
 import { rajauksenLeveys, vananRajaus } from './ihmisen-matka-tutkimus.js';
+import { ilmoitaLivianTunne } from '../livia-tilanteet.js';
 
 /** Lauta, jonka koordinaatistoon nimetyt alueet projisoidaan. */
 const LAUTA = 'maailmankartta';
@@ -1542,6 +1543,9 @@ export function luoEsitys({ ajo }) {
     if (jakso.vaihe !== 'hyppy' || tila.kelauksenAlku === null) kirjoitaKello(tahti.alku);
 
     aloitaLuenta(jakso, { alkukohta: kulunut, hyppy });
+    if (jakso.tunne) ilmoitaLivianTunne(jakso.tunne, {
+      lahde: 'ihmisen-matka', tunnus: jakso.id,
+    });
 
     /*
      * KAMERAN KESTO LASKETAAN VARAKESTOSTA eikä äänitteestä: ajo on

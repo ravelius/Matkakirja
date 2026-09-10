@@ -4,6 +4,27 @@ export function ilmoitaLivianTilanne(laji,tiedot={}) {
  for(const f of liviaTilanneKuulijat){try{f(laji,tiedot);}catch{/* ele ei estä peliä */}}
 }
 export function kuunteleLivianTilanteita(f){liviaTilanneKuulijat.add(f);return()=>liviaTilanneKuulijat.delete(f);}
+
+/**
+ * Sisällön julkinen tunnetagirajapinta. Tarinaan kirjoitetaan vain
+ * `{ tunne: 'utelias', voimakkuus: 0.6 }`: eleen tekninen nimi jää tänne,
+ * eikä tagi koskaan päädy puhetekstiin tai ruudulla näkyvään tekstiin.
+ */
+export const LIVIAN_TUNTEET=Object.freeze({
+ utelias:'lookUp',lammin:'smile',ilo:'grin',hammastys:'disbelief',
+ miettiva:'think',vakava:'listen',ylpea:'expert',rakkaus:'love',
+ hammentynyt:'confused',jannitys:'doubleTake',
+});
+export function livianTunnetaginTiedot(tagi={}){
+ const tunne=String(tagi?.tunne??'').trim().toLocaleLowerCase('fi-FI');
+ const ele=LIVIAN_TUNTEET[tunne],luku=tagi?.voimakkuus===undefined?.5:Number(tagi.voimakkuus);
+ if(!ele||!Number.isFinite(luku))return null;
+ return Object.freeze({tunne,voimakkuus:Math.max(0,Math.min(1,luku)),ele});
+}
+export function ilmoitaLivianTunne(tagi,tiedot={}){
+ const tunne=livianTunnetaginTiedot(tagi);if(!tunne)return null;
+ ilmoitaLivianTilanne('emotion',{...tiedot,...tunne});return tunne;
+}
 export function merkitseLivianNosto(kerros,tiedot){liviaNostoTiedot.set(kerros,tiedot);}
 export function livianNostonTiedot(kerros){return liviaNostoTiedot.get(kerros)||{};}
 /** Aiheen sävy voittaa luokan: vakavaa tarinaa ei tervehditä virneellä. */
