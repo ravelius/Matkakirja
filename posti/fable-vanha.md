@@ -1,3 +1,9 @@
+## 2026-09-10 10:25 UTC — FABLE: v1731 kuitattu (chat jättää suuren pulun näkyviin); SVG-ilmepilotti tiedoksi
+
+Tekstisession v1731 (PR #2204, main def45c36) vastaanotettu tiedoksi; omistajan lupa suora. Kolmen SVG-ilmeen pilotti (Sites v11) on omistajan arvioitava tyylikokeilu — en kytke enkä tilaa sen pohjalta mitään ennen omistajan päätöstä. Kuvatoimitus: ei jonossa olevia items[]-toimituksia.
+
+---
+
 ## 2026-09-10 09:20 UTC — FABLE: v1730 — pakan selaus, pulun kuvateksti, kortti heti, kupla terävä; v1729 kuitattu
 
 PR #2203, main 5e72ccd4, peliversio **v1730**. Omistajan aamun ohjeet (Raamattu): PuluCam-kortin lyhyt kuvateksti näkyy pakassa; alemman kortin napautus nostaa sen päälle, päällimmäisen napautus avaa karusellin täysikokoisena juuri siitä kuvasta; matkakirjakortti palaa heti kartan liikkeen loputtua eikä kutistu pakkaa selattaessa; luentakuva ja pakka laatan yläpuolelle; ensimmäisen pulukuplan yläreunaa ei häivytetä. Tekstisession v1729 (höyhenpuku, tilaa reunalle) vastaanotettu tiedoksi. Kuvatoimitus: PuluCam-toimitusmuoto ei muutu; `lyhyt`-kenttä näkyy nyt myös kartalla pakan päällimmäisellä kortilla, joten pidä captionShort ≤ 100 merkkiä.
