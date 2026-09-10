@@ -523,3 +523,16 @@ https://matkakirja.app/docs/livia-chat.html
 Selaimessa 1363 × 936 viewportissa chatin alareuna oli 746 px ja kasvolle varatun alueen yläreuna 760 px. Napin alareuna chatissa 916 px; sulkemisen jälkeen se palautui 851,203 px:iin, koko pysyi 48 × 48. Näyttämön oikea reuna oli kummassakin 1363 px eli ruudun reunassa. Kuvakaappauksessa Pulu näkyi paneelin alla. Aktiivieleen kuvakaappaus ehti takaisin lepoasentoon; en väitä siitä saatua pysäytyskuvaa suuresta eleestä. Geometria ja renderöijän aktiivikoko tarkastettu lähteestä sekä testeillä. Fyysistä iPhonea tai koko kaupungin chatkulkua ei testattu tässä selaimessa; aloituskaupungin valinnan aiempi etenemispulma säilyi erillisenä havaintona.
 
 Fablelle tiedoksi: chatkorjaus on toimitettu eikä tarvitse rinnakkaista integraatiota. Omistaja arvioi kolmen SVG-ilmeen tyylin esikatselussa ennen kaikkien eleiden siirtoa tähän piirtoon. Kuvat, kaupunkitekstit, PuluCam-B-tarra ja ElevenLabs-luennat säilyvät. Ei uusia kuvatuotantotilauksia.
+
+
+## 10.9.2026 — KOKOPULU, kaikki 51 elettä (v1732)
+
+Omistaja hyväksyi kokonaisen SVG-pulun ja tilasi sillä kaikki eleet. Uusimmat ohjaukset toteutettu: pään kasvu näyttää kumartumiselta kohti kameraa; tunteen voimakkuus ohjaa lähestymistä, vartalon kallistusta ja siipiä. Siivet osallistuvat nolostumiseen, tuohtumiseen, epäuskoon, asiantuntijan painotukseen ja pullaan kurottamiseen. Levossa pieni kokonainen lintu. Lennossa, kävelyssä ja törmäyksissä koko lintu liikkuu yhdessä, ilman ilmeen päänskaalausta.
+
+Toimitettu suoraan mainiin PR #2205: https://github.com/ravelius/Matkakirja/pull/2205 . Main-commit 38adce742caec8bd454bf00c07ae2381b54efe49, peliversio 1732. GitHub Pagesin Julkaise peli -ajo 34492441811 on tämän viestin kirjoitushetkellä käynnissä; live-toimituksen tarkistus jatkuu tässä sessiossa. Tätä ei tarvitse integroida uudelleen.
+
+Uudet lähteet js/livia-svg.js ja js/livia-svg-paa.js; nykyinen js/livia-eleet.js käyttää niitä. Vanha 51 eleen aikajana, repliikki-/odotus-/puheomistus ja tehosteäänet säilyvät. Tunnetta voi ohjata toista(id,{voimakkuus:0..1}); repliikille on maltillinen oletus. Chat auki pulla sijoitetaan oikealle. v1731:n chat-varaus säilyy. Molemmat oikealle poistumiset ottavat huomioon viewportin koko reunatilan.
+
+Kaikkien eleiden esikatselu ja voimakkuus-/aikajanasäätimet: https://matkakirja-pulun-animaatiot.sravelius.chatgpt.site (yksityinen v14, julkaisu succeeded). Pelin oma julkinen ele-esikatselu tulee osoitteeseen /docs/livia-svg.html; /docs/livia-chat.html käyttää samaa oikeaa pelisovitinta.
+
+QA: kaikkien 51 eleen SVG-kuvat katsottu; lisäksi liikesarjoja tarkistettu. Omassa korjausloopissa korjattu kulmien suunta, siipien avautuminen, jalan ankkurointi, pullan läpinäkyvä haukkaus ja oikealle poistumisen reunatila. Koko paikallinen testistö 2516 pass / 13 skip / 0 fail; viimeisen reunakorjauksen 8 kohdennettua testiä pass, niputus ja build pass. Lopullisen PR-headin 8e0d0477f52692c6454e8a9108cbd49e7136ff05 GitHub Testit -ajo 34492152790 success ennen mergeä. Yksityisen esikatselun lähde ea194191a25c763813825d5c271d19ef3a820690.
