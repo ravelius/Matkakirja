@@ -1,3 +1,13 @@
+## 2026-09-10 21:15 UTC — FABLE: v1741 — reaktiorekisteri ja 45 tunnetagia mainissa; v1740 kuitattu; puutelista tekstisessiolle
+
+PR #2214, main 96bed91c, peliversio **v1741**. docs/pulu-reaktiot.md: 387 tilanneriviä kuudelta osa-alueelta, sovitussäännöt (puhe/luenta > odotus > kortti > tunnetagi > taustaele), 10 epävarmaa kohtaa omistajalle ja priorisoitu puutelista. Sisältöön `pollo.tunne` 45 EU-kaupunkiin (Fablen katselmus: ≥ 0,7 vain Venetsia; Kiova ja Odessa vakava 0,6) ja kytkentä saapumiskommenttiin js/fokusvirta.js:ssä ilmoitaLivianTunne-rajapinnalla — ei muutoksia livia-*.js:ään tai pollo.js:ään.
+
+**Tekstisessiolle (puutelistan kärki, docs/pulu-reaktiot.md "Puutelista"):** T1 js/livia-eleet.js dialog[open]-portti estää kaikki reaktiot lehdessä, laukussa, saapumiskortissa ja visassa; T2 seuraaLivianKuuntelua kytketty vain matkakirjaluentaan (aarremerkintä, nostokortit, lehden lukija ja linssiluenta ilman kuuntelua); T3 chat-pyynnön peruutus puuttuu (waiting jää päälle suljetussa chatissa); T4 virhepolut mykkiä (chat.virhe, käyttöraja, katkennut striimi, mikrofonin virheet); lisäksi Ihmisen matkan australia-tagi 0,72 → 0,68 (sisällössä, tekstisession kertomustiedosto). Tilanne-ID → funktio -lista tiedostoittain rekisterissä.
+
+v1740 (albumin lyhyt kuvateksti suurennoksessa, havainnekuvamerkintä kerran) vastaanotettu; omistajan linjaus kirjattu Raamattuun. Seuraava Fable-julkaisu: Ihmisen matkan Afrikka 0,7 s, pulu piilossa avauksessa ja kävelee sisään (walkBack-ele rajapinnan kautta), vanojen päiden räpsy (päivitystahti 80 ms → kehys), luentakuva iPadilla 1,5×, pulun kortin kuvateksti kiinni kortin omassa alalaidassa.
+
+---
+
 ## 2026-09-10 20:40 UTC — FABLE: reaktiokartoitus vastaanotettu; rekisteri docs/pulu-reaktiot.md; v1738–v1739 kuitattu
 
 Toimeksianto kuitattu. Omistajan ohje kirjattu Raamattuun (PULUN REAKTIOREKISTERI) sisällön valmistumisen tarkistuskohtana. Rekisterin pysyvä polku: **docs/pulu-reaktiot.md** (haara claude/matkakirja-paatoimitus-01A9vfBoTgAdfQb5QEZYwNTM, julkaistaan mainiin kartoituksen valmistuttua). Kartoitus tehdään Opus-parvella kuudessa osassa (aloitus/kartta/matkat/joutohetki; matkakirja/luenta/kortit; lehdet/kuvat; chat/mikrofoni/odotus/virheet; aarre/kohtaamiset/tarinan tunteet kaupungeittain; linssit), Fable katselmoi tunnetagit ja kokoaa puutelistan. Käytän vain rajapintaa ilmoitaLivianTunne/ilmoitaLivianTilanne; en muokkaa livia-*.js:ää, pollo.js:ää enkä pulun CSS:ää. Ensimmäiset sisältöön merkittävät tunnetagit tulevat samalla julkaisulla, kun tietomalli sen sallii (fokusvirrat, kohtaamiset, linssit).
