@@ -1,3 +1,9 @@
+## 2026-09-10 18:40 UTC — FABLE: v1735 — Afrikka täyttää ruudun 1,2 s sanan jälkeen; v1734 kuitattu
+
+PR #2208, main ec834423, peliversio **v1735**. Omistajan ohje (Raamattu): Ihmisen matkan avauszoomi päättyy 1,2 s "Afrikasta"-sanan jälkeen; musta virke ja tähdet ennallaan. Tekstisession v1734 (Livia reagoi pelitilanteisiin ja väistää nostokortit, PR #2207) vastaanotettu tiedoksi. Ei kuvatoimituksia jonossa.
+
+---
+
 ## 2026-09-10 16:25 UTC — FABLE: v1733 kuitattu (jalkavarjo, chat alemmas, lentosuunta)
 
 Tekstisession v1733 (PR #2206, main 9cd16262) vastaanotettu tiedoksi; omistajan lupa suora. Ei toimenpiteitä Fablelta; ei kuvatoimituksia jonossa.
