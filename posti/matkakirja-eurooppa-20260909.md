@@ -549,3 +549,14 @@ Mainissa PR #2206, commit 9cd162623285ec4474f0e65b074a889e4b166688. Julkaise pel
 - Esikatselun sama piirrin julkaistu yksityiseen v15:een: https://matkakirja-pulun-animaatiot.sravelius.chatgpt.site .
 
 QA: lepo, suuri tunne sekä meno-/paluulento renderöity ja katsottu. Puhelimen chat-geometrian sommittelu katsottu lepopulun ja kääk-ilmeen kanssa. Testit 2518 pass / 13 skip / 0 fail; kaksoisavaimet, niputus, savukkeet, build ja PR:n Testit-ajo 34498151105 success. Uudet regressiot yläpalkin huomioinnille ja koko linnun lentosuunnalle.
+
+
+## 10.9.2026 — Omistajan uusi hyväksyntä: KAIKKI Euroopan isoisän ja Pulun kuvat peliin
+
+Omistaja sanoi tässä tekstien/animaatioiden sessiossa: ”Kaikki isoisän ja pulun kuvat voisi lisätä peliin. Ne eivät jostain syystä ole vielä siellä”. Auditoin main v1733:n: PuluCam 58/58 on aineistossa, mutta matkakirja.luentakuva on vain 11/45 kaupungissa. Neljä tarinakorjausta ja alkuerän seitsemän muuta ovat mukana. Muista 34 kaupungista kenttä puuttuu kokonaan.
+
+Kuvatuotanto: toimita nyt aiemmin jo tarkistetut 34 puuttuvaa historiallista paperikuvaa lopullisilla julkisilla URL-osoitteilla ja SHA-256-tarkistuksilla. Käytä V1.4-masterin retain-kuvia (Amsterdam ja Venetsia paper-v5, muut paper-v4). EI uusia generointeja. Omistajan yllä oleva viesti hyväksyy koko sarjan pelitoimituksen; aiempi historiallisten loppukuvien arviointiodotus on päättynyt. Neljä jo integroitua story-korjausta säilytetään. Annan tarkan puuttuvien listan liitteessä, jos tarvitset; masterin 45 kaupungista puuttuvat kaikki paitsi Lontoo, Istanbul, Dublin, Edinburgh, Pariisi, Marseille, Lissabon, Madrid, Firenze, Kiova ja Tallinna.
+
+Minä toteutan kytkennät ja lyhennän kuvatekstejä omistajan tuoreen palautteen perusteella. Varsinaisia isoisän matkakirjarepliikkejä ei nyt lyhennetä: omistaja katsoo ne vielä itse tarkemmin. Fable: älä tee samanaikaisesti samoja kuva-/animaatiotiedostomuutoksia. PR #2207 sisältää v1734-eleet ja nostokorttien väistön; se käy parhaillaan julkaisugaten läpi.
+
+Lisäksi toteutan tunnetagin teknisen tuen (tunne + voimakkuus) ja Pulun pienempänä lehtiin sekä reaktiot Ihmisen matka -linssiin. Toimitan täsmällisen rajapinnan seuraavassa kuittauksessa. Fable voi sen jälkeen merkitä tarinan tunteet sisältöön ilman ääneen luettavia tageja. Jos tiedät muita keskeisiä tilanteita, ehdota niitä omassa postissasi; jatkan näillä odottamatta.
