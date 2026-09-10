@@ -2069,7 +2069,7 @@ function pulucamKaruselli(ui, city, pohjakuva) {
  * päällä — muuten entinen yhden kuvan suurennos.
  */
 function avaaLuentakuvanKaruselli(ui, city, kuva, nappi) {
-  if (!puluCamPakassa(ui)) { avaaSuurennos(ui, [kuva], 0, () => nappi); return; }
+  if (!puluCamPakassa(ui)) { avaaSuurennos(ui, [kuva], 0, () => nappi, { lyhytTeksti: true }); return; }
   /*
    * ISOISÄN KUVA ON PAKASSA YKSI KORTTI MUIDEN JOUKOSSA (omistaja
    * 10.9.2026). Alla ollessaan sen näkyvän reunan napautus NOSTAA sen
@@ -2078,7 +2078,7 @@ function avaaLuentakuvanKaruselli(ui, city, kuva, nappi) {
    */
   if (nostaPuluCamKortti(ui, PULUCAM_POHJA)) return;
   const { lista, pulusta } = pulucamKaruselli(ui, city, kuva);
-  avaaSuurennos(ui, lista, 0, () => nappi, { pulunKuvasta: pulusta });
+  avaaSuurennos(ui, lista, 0, () => nappi, { pulunKuvasta: pulusta, lyhytTeksti: true });
 }
 
 /**
@@ -2140,7 +2140,7 @@ export function naytaPulunKuvapakka(ui, city) {
     /* Ankkuriksi napautettu kortti: kasvu lähtee siitä kuvasta, jota
        pelaaja kosketti. */
     avaa: (i) => avaaSuurennos(ui, lista, pulusta + i,
-      () => ui.pulucamPakka?.kortit?.[i] ?? pohja, { pulunKuvasta: pulusta }),
+      () => ui.pulucamPakka?.kortit?.[i] ?? pohja, { pulunKuvasta: pulusta, lyhytTeksti: true }),
     /*
      * LYHYT KUVATEKSTI KERTOO PÄÄLLIMMÄISESTÄ KUVASTA (omistaja
      * 9.9.2026 klo 18.50). Isoisän kuvan teksti jää pakan alle yhdessä
@@ -2781,12 +2781,13 @@ export function suljeSuurennos(ui) {
  *   kasvaa ja mihin se kutistuu — indeksin mukaan, koska selaus voi
  *   vaihtaa kuvaa ja silloin myös paluupaikka vaihtuu.
  * @param {object} [asetukset]
+ * @param {boolean} [asetukset.lyhytTeksti] albumissa lyhyt myös suurennoksessa
  * @param {number} [asetukset.pulunKuvasta] listan indeksi, josta alkaen
  *   kuvat ovat PULUN kuvia ja saavat PULU-CAM-merkin (js/pulucam.js).
  *   Ilman tätä suurennos on riviltä riville entinen — merkkiä ei ole,
  *   eikä kuvatila saa ylimääräistä kuorta.
  */
-function avaaSuurennos(ui, lista, alku, ankkuri, { pulunKuvasta = -1 } = {}) {
+function avaaSuurennos(ui, lista, alku, ankkuri, { pulunKuvasta = -1, lyhytTeksti = false } = {}) {
   if (typeof document === 'undefined' || !lista?.length) return;
   suljeSuurennos(ui);
   lataaTyyli();
@@ -2831,7 +2832,7 @@ function avaaSuurennos(ui, lista, alku, ankkuri, { pulunKuvasta = -1 } = {}) {
     const kuva = lista[i];
     // Merkki kuuluu vain pulun kuviin, ei isoisän kuvaan.
     if (puluCam) puluCam.hidden = i < pulunKuvasta;
-    // AVATTU KUVA NÄYTTÄÄ AINA PITKÄN (js/kuvatekstit.js).
+    // Pitkä kuvaus säilyy saavutettavana vaihtoehtotekstinä.
     img.alt = kuvatekstiPitka(kuva);
     asetaKuva(img, kuvanOsoite(kuva, 320), kuvanVara(kuva, 320), null);
     /*
@@ -2846,21 +2847,17 @@ function avaaSuurennos(ui, lista, alku, ankkuri, { pulunKuvasta = -1 } = {}) {
       if (kerros.isConnected && lista[i] === kuva) img.src = iso.src;
     }, { once: true });
     iso.src = kuvanSuurennos(kuva);
-    selite.textContent = kuvatekstiPitka(kuva);
+    // Isoisän ja Pulun albumissa lyhyt myös suurennoksessa (omistaja 10.9.).
+    // Muiden tietokorttien pitkien selitteiden sääntö ei muutu.
+    selite.textContent = lyhytTeksti ? kuvatekstiLyhyt(kuva) : kuvatekstiPitka(kuva);
     /*
-     * HAVAINNEKUVA-LINKKI PITKÄN TEKSTIN PERÄÄN (omistaja 9.9.2026 klo
-     * 18.50, Raamattu PULU-CAM: … HAVAINNEKUVA-LINKKI PITKAN LOPUSSA).
-     * Linkki syntyy tässä eikä kuvan rakennuksessa, koska KARUSELLISSA
-     * PITKÄ TEKSTI VAIHTUU KUVAN MUKANA: seuraavan kuvan lähde voi olla
-     * eri, ja edellisen kuvan linkki jäisi selittämään väärää kuvaa.
-     * `selite.textContent`-sijoitus yllä tyhjentää elementin, joten
-     * vanha linkki katoaa samalla eikä niitä kerry kahta.
-     *
-     * KARTALLA NÄKYVÄ LYHYT TEKSTI EI SAA LINKKIÄ. Se ladotaan aivan
-     * toisaalla (rakennaLuentakuvanPaneeli, pakan kuvateksti-kutsu), ja
-     * omistajan sääntö on nimenomaan: linkki vain avatussa kuvassa.
+     * Yksi Havainnekuva-linkki kuvatekstin perään (omistaja 10.9.).
+     * Jos lähderivillä on muutakin tietoa, linkitys hoidetaan siellä.
+     * Kuvanvaihto rakentaa tekstin ja linkin uudestaan; kartan pienessä
+     * kuvatekstissä linkkiä ei edelleenkään näytetä.
      */
-    const linkki = havainnekuvaLinkki(kuva.lahde ?? '', kuva);
+    const pelkkaMerkinta = !kuva.tekijaId && /^\s*Matkakirjan\s+(?:havainnekuva|kuvitus)\s*[.]?\s*$/iu.test(kuva.lahde ?? '');
+    const linkki = pelkkaMerkinta ? havainnekuvaLinkki(kuva.lahde ?? '', kuva) : null;
     if (linkki) {
       selite.appendChild(document.createTextNode(' '));
       selite.appendChild(linkki);
@@ -2868,7 +2865,10 @@ function avaaSuurennos(ui, lista, alku, ankkuri, { pulunKuvasta = -1 } = {}) {
     // Lähderivi kirjoitetaan uudestaan joka kuvanvaihdossa, joten
     // havainnekuvaselite on rakennettava samalla — taytaLahderivi
     // tyhjentää elementin ja kokoaa sen uudelleen.
-    taytaLahderivi(lahde, kuva.lahde ?? '', kuva);
+    // Pelkkä havainnekuvamerkintä ei toistu linkin alla. Varsinaiset
+    // tekijä-, lisenssi- ja lähdetiedot säilyvät omalla rivillään.
+    taytaLahderivi(lahde, pelkkaMerkinta ? '' : kuva.lahde ?? '', kuva);
+    lahde.hidden = Boolean(pelkkaMerkinta);
     laskuri.textContent = lista.length > 1 ? `${i + 1} / ${lista.length}` : '';
   };
   nayta();
