@@ -660,8 +660,8 @@ tieto('karuselli', JSON.stringify(zoom));
 vaadi('karuselli aukesi', zoom.auki === true, JSON.stringify(zoom));
 vaadi('isoisän kuva on ensin', zoom.laskuri === '1 / 6', String(zoom.laskuri));
 vaadi('nuolinapit ovat molempiin suuntiin', zoom.nuolia === 2, String(zoom.nuolia));
-vaadi('isoisän pitkä kuvateksti on karusellissa',
-  zoom.selite === KOEKUVAT.luentakuva.selite, String(zoom.selite));
+vaadi('isoisän lyhyt kuvateksti on karusellissa',
+  zoom.selite === KOEKUVAT.luentakuva.lyhyt, String(zoom.selite));
 /*
  * SINETTI ON KARUSELLISSA YHTENÄ ELEMENTTINÄ, mutta isoisän kuvan
  * kohdalla piilossa (omistaja valitsi sinetin 9.9.2026; se kuuluu vain
@@ -669,7 +669,7 @@ vaadi('isoisän pitkä kuvateksti on karusellissa',
  */
 vaadi('isoisän kuvassa sinetti on piilossa', zoom.merkkeja === 1 && zoom.merkkiPiilossa === true,
   JSON.stringify({ merkkeja: zoom.merkkeja, piilossa: zoom.merkkiPiilossa }));
-vaadi('lähderivi on mukana', Boolean(zoom.lahde), String(zoom.lahde));
+vaadi('havainnekuvamerkintä ei toistu lähderivillä', zoom.lahde === '', String(zoom.lahde));
 /* 5. Havainnekuva-linkki isoisän pitkän kuvatekstin perässä. */
 vaadi('isoisän pitkän tekstin perässä on Havainnekuva-linkki',
   zoom.linkki === 'Havainnekuva' && zoom.linkkiViimeisena === true, JSON.stringify(zoom));
@@ -718,8 +718,8 @@ await tyopoyta.sivu.waitForTimeout(700);
 const pulunKuva = await lueZoom();
 tieto('karusellin toinen kuva', JSON.stringify(pulunKuva));
 vaadi('toinen kuva on pulun kuva', pulunKuva.laskuri === '2 / 6', String(pulunKuva.laskuri));
-vaadi('pitkä kuvateksti vaihtui kuvan mukana',
-  pulunKuva.selite === KOEKUVAT.kuvat[0].selite, String(pulunKuva.selite));
+vaadi('lyhyt kuvateksti vaihtui kuvan mukana',
+  pulunKuva.selite === KOEKUVAT.kuvat[0].lyhyt, String(pulunKuva.selite));
 vaadi('"Pulun kamera" ei saa Havainnekuva-linkkiä', pulunKuva.linkki === null,
   String(pulunKuva.linkki));
 await tyopoyta.kaappaa('pulucam-karuselli.png');

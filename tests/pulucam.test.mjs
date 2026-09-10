@@ -644,7 +644,7 @@ test('päällimmäisen kortin napautus avaa karusellin JUURI SIITÄ kuvasta', as
 
     // 1 isoisän kuva + 5 pulun kuvaa, ja auki on PÄÄLLIMMÄINEN (6/6).
     assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '6 / 6');
-    assert.equal(pitkaTeksti(kerros), VIISI_KUVAA[4].selite);
+    assert.equal(pitkaTeksti(kerros), VIISI_KUVAA[4].lyhyt);
     // Lähderivi kulkee jokaisella kuvalla (CC BY) ja säilyy omanaan.
     assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, VIISI_KUVAA[4].lahde);
     // Nuolinapit kumpaankin suuntaan.
@@ -659,13 +659,14 @@ test('päällimmäisen kortin napautus avaa karusellin JUURI SIITÄ kuvasta', as
     // toimituksen järjestyksessä — ja PITKÄ TEKSTI VAIHTUU MUKANA.
     nappain('ArrowRight');
     assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '1 / 6');
-    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite);
+    assert.equal(pitkaTeksti(kerros), POHJAKUVA.lyhyt);
     assert.equal(merkit[0].hidden, true, 'isoisän kuvassa tarra on piilossa');
     for (let i = 0; i < VIISI_KUVAA.length; i += 1) {
       nappain('ArrowRight');
       assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, `${i + 2} / 6`);
-      assert.equal(pitkaTeksti(kerros), VIISI_KUVAA[i].selite, `pitkä teksti ${i}`);
-      assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, VIISI_KUVAA[i].lahde);
+      assert.equal(pitkaTeksti(kerros), VIISI_KUVAA[i].lyhyt, `lyhyt teksti ${i}`);
+      assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent,
+        i === 2 ? '' : VIISI_KUVAA[i].lahde);
       assert.equal(merkit[0].hidden, false, `pulun kuvassa ${i} tarra näkyy`);
     }
 
@@ -716,7 +717,7 @@ test('alemman kortin napautus nostaa sen päälle — karuselli ei aukea', async
     const kerros = asiakirja.querySelectorAll('.fokuszoom')[0];
     assert.ok(kerros, 'päällimmäisen kortin napautus ei avannut karusellia');
     assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '2 / 4');
-    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[0].selite);
+    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[0].lyhyt);
 
     suljeSuurennos(ui);
     piilotaLuentakuva(ui, { heti: true });
@@ -744,7 +745,7 @@ test('isoisän kuva on pakassa yksi kortti: napautus nostaa, toinen avaa', () =>
     pohjakortti.dispatch('click');
     const kerros = asiakirja.querySelectorAll('.fokuszoom')[0];
     assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '1 / 4');
-    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite);
+    assert.equal(pitkaTeksti(kerros), POHJAKUVA.lyhyt);
 
     suljeSuurennos(ui);
     piilotaLuentakuva(ui, { heti: true });
@@ -765,7 +766,7 @@ test('ilman pulun kuvia suurennos on täsmälleen ennallaan', () => {
     assert.equal(kerros.querySelectorAll('.pulucam-merkki').length, 0);
     assert.equal(kerros.querySelectorAll('.fokuszoom-kuvatila').length, 0,
       'kuvatilan kuori syntyy vain karusellissa');
-    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite);
+    assert.equal(pitkaTeksti(kerros), POHJAKUVA.lyhyt);
 
     suljeSuurennos(ui);
     piilotaLuentakuva(ui, { heti: true });
@@ -801,7 +802,7 @@ test('lyhyt kuvateksti kertoo päällimmäisestä kuvasta, ei alle jääneestä'
   });
 });
 
-test('Havainnekuva-linkki on pitkän tekstin perässä vain havainnekuvilla', () => {
+test('albumissa on lyhyt teksti ja yksi havainnekuvamerkintä, lähdetiedot säilyvät', () => {
   pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
@@ -828,20 +829,25 @@ test('Havainnekuva-linkki on pitkän tekstin perässä vain havainnekuvilla', ()
     // Perässä: linkki on selitteen viimeinen elementti.
     const selite = kerros.querySelector('.fokuszoom-selite');
     assert.equal(selite.childNodes[selite.childNodes.length - 1], linkki);
-    assert.equal(pitkaTeksti(kerros), POHJAKUVA.selite, 'linkki söi pitkän tekstin');
+    assert.equal(pitkaTeksti(kerros), POHJAKUVA.lyhyt, 'linkki söi lyhyen tekstin');
     // Lähderivi säilyy ennallaan omanaan.
-    assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, POHJAKUVA.lahde);
+    assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, '');
+    assert.equal(kerros.querySelector('.fokuszoom-lahde').hidden, true);
+    assert.equal(kerros.querySelectorAll('.havainnekuva-selite').length, 1,
+      'havainnekuvamerkintä kahdentui');
 
     // PULUN KUVA ILMAN HAVAINNEKUVALÄHDETTÄ EI SAA LINKKIÄ.
     nappain('ArrowRight');
-    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[0].selite);
+    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[0].lyhyt);
     assert.equal(havainnekuvanLinkki(kerros), null,
       '"Pulun kamera" ei ole havainnekuva — linkkiä ei saa olla');
+    assert.equal(kerros.querySelector('.fokuszoom-lahde').hidden, false);
+    assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, PULUN_KUVAT[0].lahde);
 
     // PULUN KUVA, JONKA LÄHDE SEN SANOO, SAA LINKIN.
     nappain('ArrowRight');
     nappain('ArrowRight');
-    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[2].selite);
+    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[2].lyhyt);
     assert.ok(havainnekuvanLinkki(kerros),
       'havainnekuvalähteinen pulun kuva jäi ilman linkkiä');
 
@@ -1046,7 +1052,7 @@ test('ilman luentakuvaa pakka nousee samaan paikkaan ilman pohjakuvaa', () => {
     pakanKortit()[0].dispatch('click');
     const kerros = asiakirja.querySelectorAll('.fokuszoom')[0];
     assert.equal(kerros.querySelector('.fokuszoom-laskuri').textContent, '1 / 3');
-    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[0].selite);
+    assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[0].lyhyt);
 
     suljeSuurennos(ui);
     piilotaLuentakuva(ui, { heti: true });

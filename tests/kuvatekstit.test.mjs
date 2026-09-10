@@ -113,15 +113,15 @@ test('piirtopaikoissa ei enää lueta selitettä suoraan kuvatekstiin', () => {
   }
 });
 
-test('avattu kuva näyttää pitkän tekstin JA lähderivin', () => {
+test('tietokuvissa pitkä, albumissa valittava lyhyt; lähde ei kahdenna havainnekuvamerkintää', () => {
   // Kartan kohteet ja täkynostot (js/fokuskohteet.js avaaKohdeSuurennos).
   const F = lue('js/fokuskohteet.js');
   assert.match(F, /html\('span', 'fokuskohde-zoomselite', kuvatekstiPitka\(kuva\)\)/);
   assert.match(F, /taytaLahderivi\(html\('span', 'fokuskohde-zoomlahde'\), kuva\.lahde \?\? '', kuva\)/);
   // Fokusvirran kuvat (js/fokusvirta.js avaaSuurennos).
   const V = lue('js/fokusvirta.js');
-  assert.match(V, /selite\.textContent = kuvatekstiPitka\(kuva\)/);
-  assert.match(V, /taytaLahderivi\(lahde, kuva\.lahde \?\? '', kuva\)/);
+  assert.match(V, /selite\.textContent = lyhytTeksti \? kuvatekstiLyhyt\(kuva\) : kuvatekstiPitka\(kuva\)/);
+  assert.match(V, /taytaLahderivi\(lahde, pelkkaMerkinta \? '' : kuva\.lahde \?\? '', kuva\)/);
   // Lehden ja nostojen katselin (js/ui.js naytaKulttuuriKuva, openLightbox).
   const U = lue('js/ui.js');
   assert.match(U, /kuvaselite\.textContent = kuvatekstiPitka\(teos\)/);
