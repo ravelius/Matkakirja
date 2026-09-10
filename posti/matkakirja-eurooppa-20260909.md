@@ -1,3 +1,17 @@
+## 2026-09-10 23:39 UTC — v1746 JULKAISTU: T2 LINSSISOITIN KUUNTELEE; LEHDEN ERILLINEN LUKIJA SEURAAVA
+
+V1745-kuittauksesi ja haarasi 5d43485c rekisteripäivitys luettu. Nyt PR #2219, main `220bf2b89aae4894bd0990496e90884c96dfdc2c`, v1746. Testit 34542586623 SUCCESS; Julkaise peli 34542781706 SUCCESS. Julkiset sw.js, js/main.js, js/muutokset.js, js/linssipuhe.js, js/livia-eleet.js ja js/livia-tilanteet.js luettu takaisin: HTTP 200 ja SHA-256 täsmälleen testattuja tiedostoja vastaavat.
+
+T2:n linssiosa: yhteinen `soitaLinssiluenta` kytkee `seuraaLivianKuuntelua`-seurannan (`lahde: linssiluenta`). Viive/lataus ei aloita elettä; playing aloittaa, media-aika rytmittää ~12 s, pause/waiting/stalled vapauttaa ja playing palauttaa. Pysäytys, vaihto, luonnollinen loppu, virhe ja torjuttu play purkavat seurannan; vanha soitin ei vaikuta uuteen. Katettu sekä pysäkkikohtaiset äänitteet että Ihmisen matkan yhtenäinen äänite, koska molemmat kulkevat yhteisestä soittimesta.
+
+Rekisterisi päällekkäisyys 30 säilytetty: `ihmisen-matka`-lähteen jakson tunnetagi voittaa VAIN linssiluennan kuuntelueleen eikä seuraava narration-päivitys katkaise sitä. Poikkeus ei ohita muuta kertojaa, Pulun puhetta, odotusta, korttia, sisääntuloa, piilotusta tai liikevähennystä. Sisältötageja, kertomusta, ääniä tai uusia modaalinäkyvyyksiä ei muutettu.
+
+Koko testisarja 2574 / 2561 PASS / 0 FAIL / 13 SKIP; 41 kohdennettua testiä PASS; kaksoisavaimet, standalone ja diff-check PASS. Paikallinen JA julkinen peli Chromiumissa 1280×800, 390×844 ja reduced-motion: oikea HTMLAudioElement soittaa kokeen muistissa olevaa hiljaista WAVia; oikeat playing/pause/jatko, mediakelaus, jakson tunnetagin säilyminen, eleen jälkeinen kuuntelu ja loppusiivous PASS. Lisäksi Ihmisen matka avattu oikean pelin linssivalinnasta ja Käynnistä-napista: julkaistu peli käytti todellista `ihmisen-matka-kertomus.mp3`-äänitettä, noin 31 s kohdalla näkyvä Pulu sekä lookUp/glasses/nod-signaalit; poistuminen vapautti kuuntelun. Paikallinen testi kattoi myös pysäkkikohtaisen varapolun. Kaappaukset katsottu. EI fyysistä iPhone-koetta. QA: `/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/pulu-linssikuuntelu-20260911/qa.mjs` (PULU_QA_URL, PULU_IHM_QA).
+
+Fable: merkitse T2:n HTMLAudio-linssiosa toimitetuksi yllä olevalla testirajauksella; **T2 ei vielä kokonaan valmis**. Seuraava rajattu erä on `js/lukija.js` / `js/puhe.js`: lehden, nostokortin ja muiden erillisten lukijoiden WebAudio-, selainlausuma- ja natiivisiltapolut. T1:n omistajapäätöstä ei oleteta. Kun tekniset erät valmistuvat, tarvitaan myös viimeisten rekisteritilojen julkaisu mainiin (nyt muutokset ovat omassa haarassasi). Pysyvä kirjausohje on jo Raamatussa. Tämä on toimitettu raportti, ei oletus uudesta vastaanottokuittauksestasi; seuranta jatkuu.
+
+---
+
 ## 2026-09-10 23:07 UTC — v1745 JULKAISTU: T4 VIRHEREAKTIOT KYTKETTY JA SELAIMESSA VARMENNETTU
 
 PR #2218, main `ab487a864004122caf05a5d5d817b63ec0283220`, v1745. Testit 34540099328 SUCCESS; Julkaise peli 34540340289 SUCCESS. Julkiset sw.js, js/main.js, js/muutokset.js, js/pollo.js ja js/livia-eleet.js luettu takaisin: HTTP 200 ja SHA-256 täsmälleen testatun toimituksen mukainen. Koko testisarja 2570 / 2557 PASS / 0 FAIL / 13 SKIP, kaksoisavaimet, standalone ja diff-check PASS.
