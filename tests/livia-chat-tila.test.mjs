@@ -46,3 +46,10 @@ test('avaus, näppäimistö ja sulkeminen palauttavat paikan ilman muutoskehää
  const end=writes;vv.dispatchEvent(new Event('resize'));win.dispatchEvent(new Event('resize'));
  assert.equal(writes,end,'irrotetut kuuntelijat eivät muuta paikkoja');
 });
+
+ test('pystychat jää yläpalkin alle ja lähelle kokopulua',()=>{
+ const a=livianChatAsettelu({width:390,height:844,safe:{top:59,bottom:34},headerBottom:116});
+ assert.ok(a.paneeli.top>=128);
+ assert.equal(a.nappi.top+a.nappi.height-a.paneeli.top-a.paneeli.height,118);
+ assert.ok(a.paneeli.height<=844*.68);
+ });

@@ -1,17 +1,17 @@
-/* Chat jättää tilan suurelle kasvolle. Mitat ovat CSS-pikseleitä;
+/* Chat jättää tilan kokopulun suurimmalle ilmeelle. Mitat ovat CSS-pikseleitä;
  * visualViewport pitää myös näppäimistön yläpuolen käytettävissä. */
-export function livianChatAsettelu({x=0,y=0,width,height,safe={}}) {
+export function livianChatAsettelu({x=0,y=0,width,height,safe={},headerBottom=0}) {
  const s={top:0,right:0,bottom:0,left:0,...safe};
  const sivulla=height<480;
  const right=x+width-Math.max(sivulla?24:42,s.right+24),bottom=y+height-s.bottom-20;
  const nappi={left:right-48,top:bottom-48,width:48,height:48};
- // 88 px kasvo + kääk-ilmeen venymä ja kömpelön laskeutumisen pomppu.
- const kasvo={left:right-88,top:bottom-156,width:88,height:156};
+ // Kokopulun suurin paikallaan tehtävä ilme mahtuu 104 px:n korkeuteen.
+ const kasvo={left:right-88,top:bottom-104,width:88,height:104};
  const panelRight=sivulla?kasvo.left-14:right-12;
  const panelBottom=sivulla?bottom:kasvo.top-14;
- const panelTop=y+Math.max(sivulla?12:72,s.top+12);
+ const panelTop=Math.max(y+Math.max(sivulla?12:96,s.top+12),sivulla?0:headerBottom+12);
  const panelLeft=Math.max(x+s.left+12,panelRight-384);
- const panelHeight=Math.max(0,Math.min(640,panelBottom-panelTop));
+ const panelHeight=Math.max(0,Math.min(640,sivulla?640:height*.68,panelBottom-panelTop));
  return {nappi,kasvo,sivulla,paneeli:{left:panelLeft,top:panelBottom-panelHeight,
   width:Math.max(0,panelRight-panelLeft),height:panelHeight}};
 }
@@ -40,7 +40,7 @@ export function asennaLivianChatTila(pollo,paikkaMuuttui=()=>{}) {
   for(const edge of ['top','right','bottom','left'])safe[edge]=parseFloat(css.getPropertyValue(`--livia-safe-${edge}`))||0;
   const layoutHeight=win.innerHeight||doc.documentElement.clientHeight;
   const a=livianChatAsettelu({x:vv?.offsetLeft||0,y:vv?.offsetTop||0,
-   width:vv?.width||doc.documentElement.clientWidth,height:vv?.height||layoutHeight,safe});
+   width:vv?.width||doc.documentElement.clientWidth,height:vv?.height||layoutHeight,safe,headerBottom:doc.querySelector?.('.topbar')?.getBoundingClientRect?.().bottom||0});
   aseta(nappi,keysN[0],a.nappi.left);aseta(nappi,keysN[1],a.nappi.top);
   aseta(paneeli,keysP[0],a.paneeli.left);aseta(paneeli,keysP[1],layoutHeight-a.paneeli.top-a.paneeli.height);
   aseta(paneeli,keysP[2],a.paneeli.width);aseta(paneeli,keysP[3],a.paneeli.height);
