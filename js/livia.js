@@ -109,6 +109,8 @@ export function onLivianSekoilua(teksti) {
 export function soitaLivianTehoste(laji) {
   const ohjelma = LIVIAN_TEHOSTEET[laji];
   if (!ohjelma) return false;
+  // Pikselihahmo ajoittaa omat lyhyet äänensä liikkeeseen: ei toista raitaa päälle.
+  if (typeof document !== 'undefined' && document.querySelector?.('.livia-lentonayttamo')) return true;
   for (const [nimi, viive] of ohjelma) {
     try {
       sfx.play(nimi, { viive });

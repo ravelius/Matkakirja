@@ -980,3 +980,15 @@ test('kesken jäänyt luenta ei ala itsestään paluussa', () => {
   assert.match(lukija, /lisaaTaustaVaimennus\(\{ hiljenna: taustaHiljennaLukija \}\)/,
     'lukijalle ei saa antaa automaattista paluuta');
 });
+
+test('Pulun eleääni tarvitsee eleen, tuottaa PCM-lähteen ja on peruttavissa',async t=>{
+ const old=Object.getOwnPropertyDescriptor(globalThis,'document');
+ const doc=new EventTarget();Object.defineProperty(globalThis,'document',{configurable:true,writable:true,value:doc});
+ t.after(()=>old?Object.defineProperty(globalThis,'document',old):delete globalThis.document);
+ const{sfx,ctx}=await lataaSfx();t.mock.method(sfx,'loadRealSamples',()=>{});
+ assert.equal(sfx.play('liviaEle',{kind:'land'}),undefined);assert.equal(ctx.aloitetut.length,0);
+ doc.dispatchEvent(new Event('pointerdown'));
+ const stop=sfx.play('liviaEle',{kind:'land',voima:.4});assert.equal(typeof stop,'function');assert.ok(ctx.aloitetut.includes('bufferSource'));stop();stop();
+ const n=ctx.aloitetut.length;sfx.enabled=false;assert.equal(sfx.play('liviaEle',{kind:'flap'}),undefined);assert.equal(ctx.aloitetut.length,n);
+ sfx.enabled=true;sfx.saneluTauko=true;assert.equal(sfx.play('liviaEle',{kind:'flap'}),undefined);assert.equal(ctx.aloitetut.length,n);
+});

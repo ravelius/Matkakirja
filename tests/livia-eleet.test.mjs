@@ -31,15 +31,15 @@ function liviaTestYmparisto(t){
 
 test('pöllö odottaa poissa, vastaus palaa heti; puhe ja tuho eivät jätä ajastimia',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);assert.ok(c);
- const canvas=e.button.children[0].children[0];assert.equal(canvas.width,76);assert.equal(canvas.height,88);
+ const canvas=e.doc.body.children[0].children[0];assert.equal(canvas.width,114);assert.equal(canvas.height,228);
  e.tick(5000);assert.equal(e.raf.size,0,'lepo ei pyöritä piirtoa');
  e.pollo.auki=true;e.notify(e.button);
  const row=new e.El();row.className='pollo-odottaa';row.textContent='Käyn kysymässä pöllöltä';e.virta.append(row);e.notify(e.virta);
- e.tick(3000);assert.equal(canvas.ctx.rects.length,0,'pöllöretki odottaa ruudun ulkopuolella');assert.equal(e.raf.size,0,'odotus ei kuluta ruutuja');
+ e.tick(3300);assert.equal(canvas.ctx.rects.length,0,'pöllöretki odottaa ruudun ulkopuolella');assert.equal(e.raf.size,0,'odotus ei kuluta ruutuja');
  row.remove();e.notify(e.virta);assert.ok(e.raf.size>0,'paluuta ei viivytetä valmiin klipin loppuun');e.tick(2200);assert.ok(canvas.ctx.rects.length>0);
  const token={};ilmoitaLivianKasvopuhe(token,true,'Selvennys');e.tick(3300);assert.ok(e.raf.size>0,'jatkuva ääni pitää nokan liikkeessä');
  ilmoitaLivianKasvopuhe(token,false);e.tick(40);assert.equal(e.raf.size,0,'äänen loppu pysäyttää nokan');
- c.tuhoa();assert.equal(e.raf.size,0);assert.equal(e.timers.size,0);assert.equal(e.button.children.length,0);
+ c.tuhoa();assert.equal(e.raf.size,0);assert.equal(e.timers.size,0);assert.equal(e.doc.body.children.length,0);
  ilmoitaLivianKasvopuhe(token,true,'myöhässä');assert.equal(e.raf.size,0);ilmoitaLivianKasvopuhe(token,false);
 });
 
@@ -49,4 +49,25 @@ test('taustalle siirtyminen ja vähennetty liike pysäyttävät eleet, uni herä
  e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));e.reduced.matches=true;e.reduced.dispatchEvent(new Event('change'));assert.equal(c.toista('crash'),false);assert.equal(e.raf.size,0);assert.equal(e.timers.size,0);
  e.reduced.matches=false;e.reduced.dispatchEvent(new Event('change'));e.tick(230000);assert.equal(e.raf.size,0,'nukkuva pulu lepää paikallaan');
  e.doc.dispatchEvent(new Event('pointerdown'));assert.ok(e.raf.size>0,'kosketus herättää');e.tick(2400);assert.equal(e.raf.size,0);
+});
+
+test('äänet osuvat eleeseen, mykistys peruu hännän ja puhe vaimentaa tehosteen',async t=>{
+ const{sfx,AANIVALINTA_TAPAHTUMA}=await import('../js/sound.js');
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t),calls=[];let stopped=0;
+ t.mock.method(sfx,'play',(name,opts)=>{calls.push({name,...opts});return()=>stopped++;});
+ c=asennaLivianKasvot(e.pollo);e.tick(5000);calls.length=0;
+ c.toista('glassCrash');e.tick(1620);assert.ok(calls.some(x=>x.kind==='glass'));assert.equal(calls.filter(x=>x.kind==='glass').length,1);
+ const before=stopped;e.doc.dispatchEvent(new Event(AANIVALINTA_TAPAHTUMA));assert.ok(stopped>before);
+ calls.length=0;const token={};ilmoitaLivianKasvopuhe(token,true,'pulla');c.toista('bread');e.tick(1800);
+ assert.ok(calls.length>0&&calls.every(x=>x.voima<=.42*.25));ilmoitaLivianKasvopuhe(token,false);
+ calls.length=0;c.toista('walkRight',{hiljaa:true});e.tick(2400);assert.equal(calls.length,0);
+});
+
+test('piirtopinta ulottuu napista viewportin oikeaan reunaan myös koon vaihtuessa',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);let right=370;
+ e.doc.documentElement={clientWidth:390};e.button.getBoundingClientRect=()=>({right,bottom:700});
+ c=asennaLivianKasvot(e.pollo);e.tick(5000);const surface=e.doc.body.children[0],canvas=surface.children[0];
+ assert.equal(surface.style.left,'256px');assert.equal(surface.style.width,'134px');assert.equal(canvas.width,135);
+ right=340;e.doc.dispatchEvent(new Event('scroll'));assert.equal(surface.style.left,'226px');assert.equal(surface.style.width,'164px');
+ c.toista('walkRight');e.tick(2300);assert.equal(canvas.ctx.rects.length,0);c.palaa();e.tick(2400);assert.ok(canvas.ctx.rects.length>0);
 });

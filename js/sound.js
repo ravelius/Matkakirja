@@ -11,6 +11,7 @@
 const STORAGE_KEY = 'matkakirja-aani';
 const VANHA_STORAGE_KEY = 'afrikan-tahti-sound';
 
+import { livianEleaaniNaytteet } from './livia-tehosteet.js';
 import { valittuAani, jaaAlku } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { AANI_JUURI, haeAani } from './media.js';
@@ -1070,6 +1071,21 @@ class Sound {
     osc.stop(t0 + dur + 0.05);
   }
 
+  /** Kertaluonteinen, heti peruttava ja omaa äänivalintaa noudattava eleääni. */
+  pikseliEle({kind,voima=1}={}) {
+    if(!eleNahty||!this.enabled||this.taustaTauko||this.saneluTauko)return;
+    const ctx=this.ensureContext();if(!ctx||ctx.state!=='running')return;
+    this.liviaPuskurit??=new Map();
+    if(!this.liviaPuskurit.has(kind)){
+      const data=livianEleaaniNaytteet(kind,ctx.sampleRate);if(!data.length)return;
+      const b=ctx.createBuffer(1,data.length,ctx.sampleRate);b.getChannelData(0).set(data);this.liviaPuskurit.set(kind,b);
+    }
+    const src=ctx.createBufferSource(),gain=ctx.createGain();src.buffer=this.liviaPuskurit.get(kind);
+    gain.gain.value=Math.max(0,Math.min(1,voima));src.connect(gain).connect(this.bus);
+    let ended=false;src.onended=()=>{ended=true;src.disconnect();gain.disconnect();};src.start();
+    return()=>{if(ended)return;ended=true;gain.gain.cancelScheduledValues(ctx.currentTime);gain.gain.setValueAtTime(gain.gain.value,ctx.currentTime);gain.gain.linearRampToValueAtTime(0,ctx.currentTime+.012);try{src.stop(ctx.currentTime+.016);}catch{}};
+  }
+
   // --- pelin äänet --------------------------------------------------------
 
 
@@ -1081,7 +1097,7 @@ class Sound {
     const real = REAL_PLAYERS[name];
     if (real && real(this, asetukset)) return;
     const sound = SOUNDS[name];
-    if (sound) sound(this, asetukset);
+    if (sound) return sound(this, asetukset);
   }
 
   /**
@@ -1602,6 +1618,7 @@ const AMBIENCE_EVENTS = {
 export const AMBIENCE_TYPES = Object.keys(AMBIENCES);
 
 const SOUNDS = {
+  liviaEle: (s,options) => s.pikseliEle(options),
   // Käyttöliittymä
   // Kysymyskortin avaus ilman verkkoa: paperi ja pehmeä kello.
   quizOpen: (s) => {
