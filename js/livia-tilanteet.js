@@ -45,22 +45,22 @@ export function livianAiheEle({symboli='',otsikko='',teksti=''}={}){
  return ({huuto:'disbelief',silma:'lookUp',historia:'glasses',luonto:'tilt',ruoka:'smile',kulttuuri:'smile',tekniikka:'glasses',kauppa:'expert',sana:'glasses',merenkulku:'lookUp',urheilu:'grin',kaupunki:'present',ihme:'disbelief',hetki:'glasses'})[symboli]||'listen';
 }
 /** Todellinen soittimen aika: tauko, puskurointi ja vaihto eivät jätä elejonoa. */
-export function seuraaLivianKuuntelua(audio,voimassa,haeTeksti=()=> ''){
+export function seuraaLivianKuuntelua(audio,voimassa,haeTeksti=()=> '',{lahde}={}){
  if(!audio?.addEventListener)return()=>{};
- let viime=-Infinity,vuoro=0,soi=false;
+ let viime=-Infinity,vuoro=0,soi=false,elossa=true;
  const reagoi=()=>{
-  if(!soi||audio.paused||audio.ended||!voimassa())return;
+  if(!elossa||!soi||audio.paused||audio.ended||!voimassa())return;
   const aika=Number(audio.currentTime)||0;
   if(aika<viime)viime=-Infinity;
   if(aika-viime<12)return;viime=aika;
-  ilmoitaLivianTilanne('narration',{ele:vuoro++===0?'lookUp':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti:haeTeksti()}),tunnus:audio});
+  ilmoitaLivianTilanne('narration',{ele:vuoro++===0?'lookUp':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti:haeTeksti()}),tunnus:audio,...(lahde?{lahde}:{})});
  };
  // Tauolta tai puskuroinnista paluu palauttaa kuuntelutilan heti,
  // vaikka edellisestä eleestä olisi kulunut alle 12 sekuntia.
- const alkoi=()=>{if(!soi)viime=-Infinity;soi=true;reagoi();};
+ const alkoi=()=>{if(!elossa)return;if(!soi)viime=-Infinity;soi=true;reagoi();};
  const tauko=()=>{soi=false;ilmoitaLivianTilanne('narrationEnd',{tunnus:audio});};
  const events={playing:alkoi,timeupdate:reagoi,pause:tauko,waiting:tauko,stalled:tauko,error:tauko,ended:lopeta,emptied:lopeta};
- function lopeta(){tauko();for(const[n,f]of Object.entries(events))audio.removeEventListener(n,f);}
+ function lopeta(){if(!elossa)return;elossa=false;tauko();for(const[n,f]of Object.entries(events))audio.removeEventListener(n,f);}
  for(const[n,f]of Object.entries(events))audio.addEventListener(n,f);
  return lopeta;
 }

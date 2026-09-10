@@ -149,6 +149,7 @@ export function asennaLivianKasvot(pollo) {
    return false;
   }
   const nyt=performance.now();
+  const jaksonTunne=laji==='emotion'&&tiedot.lahde==='ihmisen-matka';
   // Virherivi on jo korvannut odotusrivin, vaikka MutationObserver
   // ei vielä olisi ehtinyt päivittää vanhaa DOM-viitettä.
   if(laji==='error')mietintaMuuttui();
@@ -156,10 +157,15 @@ export function asennaLivianKasvot(pollo) {
   // Reaktio kuuluu vain näkymään, jossa myös Pulu itse on. Pelkkä
   // modaalin olemassaolo ei estä lehden sisällä näkyvän Pulun kuuntelua.
   if(doc.querySelector('dialog[open]')&&!nappi.closest?.('dialog[open]'))return false;
-  if(luennat.size&&!['narration','card'].includes(laji))return false;
+  // Rekisterin poikkeus: Ihmisen matkan jakson tunne kuuluu alkuun,
+  // linssikertojan kuuntelueleet täyttävät vain sen välit.
+  if(luennat.size&&!['narration','card'].includes(laji)&&
+    !(jaksonTunne&&[...luennat.values()].every(x=>x.lahde==='linssiluenta')))return false;
+  if(laji==='narration'&&tiedot.lahde==='linssiluenta'&&
+    nykyinen?.omistaja==='emotion'&&nykyinen.lahde==='ihmisen-matka')return false;
   if(laji==='narration'&&(puhe||pollo.auki||nostoTila?.onkoAuki()))return false;
   if(laji!=='card'&&nykyinen?.omistaja==='card')return false;
-  if(!['card','narration','chatOpen','chatClose','microphone','answer','error'].includes(laji)&&nyt-viimeTilanne<2800)return false;
+  if(!jaksonTunne&&!['card','narration','chatOpen','chatClose','microphone','answer','error'].includes(laji)&&nyt-viimeTilanne<2800)return false;
   if(puhe&&laji!=='photo')return false;
   if(puhe&&laji==='photo'&&nykyinen&&!['blink','talk','smile','present','welcome'].includes(nykyinen.id))return false;
   const ele=laji==='card'?livianAiheEle(tiedot):['narration','emotion','error'].includes(laji)?tiedot.ele:
@@ -169,7 +175,7 @@ export function asennaLivianKasvot(pollo) {
    laji==='success'?'grin':laji==='retry'?'nod':null;
   if(!ele)return false;
   viimeTilanne=nyt;viimeToimi=nyt;
-  return toista(ele,{hiljaa:true,omistaja:laji,tunnus:tiedot.tunnus,voimakkuus:laji==='narration'?.25:['emotion','error'].includes(laji)?tiedot.voimakkuus:livianEleenVoima(ele)});
+  return toista(ele,{hiljaa:true,omistaja:laji,tunnus:tiedot.tunnus,lahde:tiedot.lahde,voimakkuus:laji==='narration'?.25:['emotion','error'].includes(laji)?tiedot.voimakkuus:livianEleenVoima(ele)});
  }
  function palaa(){
   const s=nykyinen?livianSvgAsento(nykyinen.id,osuus,{voimakkuus:nykyinen.voimakkuus}):lepoTila;

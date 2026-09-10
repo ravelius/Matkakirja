@@ -58,7 +58,10 @@
 
 import { puheVoima } from './aani-ehdokkaat.js';
 import { luentaKytkinPaalla, merkitsePuhuja, vapautaPuhuja } from './luenta.js';
+import { seuraaLivianKuuntelua } from './livia-tilanteet.js';
 import { KEKSINTO_KUVAJUURI } from './linssit/keksinnot.js';
+
+const pulunKuuntelut = new WeakMap();
 
 /**
  * Luentojen kansio ämpärissä: muotokuvien sisarkansio. Sama juuri kuin
@@ -449,6 +452,8 @@ export function pysaytaLinssiluenta(ui) {
   const audio = ui.linssiluenta;
   ui.linssiluenta = null;
   if (!audio) return false;
+  pulunKuuntelut.get(audio)?.();
+  pulunKuuntelut.delete(audio);
   try {
     audio.pause();
     audio.removeAttribute('src');
@@ -521,6 +526,11 @@ export function soitaLinssiluenta(ui, t, {
   audio.preload = 'auto';
   audio.volume = puheVoima();
   ui.linssiluenta = audio;
+  // Yhteinen soitin kattaa myös Ihmisen matkan yhtenäisen äänitteen.
+  // Vain todellinen playing aloittaa eleen; lataus/viive eivät puhu.
+  const lopetaKuuntelu = seuraaLivianKuuntelua(audio, () => ui.linssiluenta === audio,
+    () => t ? luennanTeksti(t) : '', { lahde: 'linssiluenta' });
+  pulunKuuntelut.set(audio, lopetaKuuntelu);
   // Kirjanpito kaikkiin luentoihin: taustalle menevä peli hiljentää
   // myös tämän (js/luenta.js taustaHiljennaLuennat).
   (ui.luennat ??= new Set()).add(audio);
@@ -529,6 +539,8 @@ export function soitaLinssiluenta(ui, t, {
   // kun soitto ei koskaan käynnisty.
   merkitsePuhuja(ui, audio);
   const vapaaksi = () => {
+    lopetaKuuntelu();
+    pulunKuuntelut.delete(audio);
     ui.luennat?.delete(audio);
     if (ui.linssiluenta === audio) ui.linssiluenta = null;
   };
