@@ -149,6 +149,9 @@ export function asennaLivianKasvot(pollo) {
    return false;
   }
   const nyt=performance.now();
+  // Virherivi on jo korvannut odotusrivin, vaikka MutationObserver
+  // ei vielä olisi ehtinyt päivittää vanhaa DOM-viitettä.
+  if(laji==='error')mietintaMuuttui();
   if(!nakyy()||(laji!=='narration'&&(odotusrivi||odotukset.size))||nykyinen?.group==='Liike'||lepoTila?.flight||lepoTila?.walk)return false;
   // Reaktio kuuluu vain näkymään, jossa myös Pulu itse on. Pelkkä
   // modaalin olemassaolo ei estä lehden sisällä näkyvän Pulun kuuntelua.
@@ -156,17 +159,17 @@ export function asennaLivianKasvot(pollo) {
   if(luennat.size&&!['narration','card'].includes(laji))return false;
   if(laji==='narration'&&(puhe||pollo.auki||nostoTila?.onkoAuki()))return false;
   if(laji!=='card'&&nykyinen?.omistaja==='card')return false;
-  if(!['card','narration','chatOpen','chatClose','microphone','answer'].includes(laji)&&nyt-viimeTilanne<2800)return false;
+  if(!['card','narration','chatOpen','chatClose','microphone','answer','error'].includes(laji)&&nyt-viimeTilanne<2800)return false;
   if(puhe&&laji!=='photo')return false;
   if(puhe&&laji==='photo'&&nykyinen&&!['blink','talk','smile','present','welcome'].includes(nykyinen.id))return false;
-  const ele=laji==='card'?livianAiheEle(tiedot):laji==='narration'||laji==='emotion'?tiedot.ele:
+  const ele=laji==='card'?livianAiheEle(tiedot):['narration','emotion','error'].includes(laji)?tiedot.ele:
    laji==='photo'?(tiedot.cityId==='venetsia'?'love':'present'):
    laji==='chatOpen'?'welcome':laji==='chatClose'?'wink':laji==='microphone'?'listen':
    laji==='answer'?(livianRepliikinEle(tiedot.teksti)==='blink'?'smile':livianRepliikinEle(tiedot.teksti)):
    laji==='success'?'grin':laji==='retry'?'nod':null;
   if(!ele)return false;
   viimeTilanne=nyt;viimeToimi=nyt;
-  return toista(ele,{hiljaa:true,omistaja:laji,tunnus:tiedot.tunnus,voimakkuus:laji==='narration'?.25:laji==='emotion'?tiedot.voimakkuus:livianEleenVoima(ele)});
+  return toista(ele,{hiljaa:true,omistaja:laji,tunnus:tiedot.tunnus,voimakkuus:laji==='narration'?.25:['emotion','error'].includes(laji)?tiedot.voimakkuus:livianEleenVoima(ele)});
  }
  function palaa(){
   const s=nykyinen?livianSvgAsento(nykyinen.id,osuus,{voimakkuus:nykyinen.voimakkuus}):lepoTila;
@@ -177,7 +180,7 @@ export function asennaLivianKasvot(pollo) {
   const rivi=pollo.auki?pollo.virta?.querySelector('.pollo-odottaa'):null,teksti=rivi?.textContent||'';
   if(rivi===odotusrivi&&teksti===odotusteksti)return;
   const oli=odotusrivi,ele=nykyinen?.id;odotusrivi=rivi;odotusteksti=teksti;
-  if(!rivi){if(oli&&!odotukset.size&&!luennat.size&&!puhe)palaa();return;}
+  if(!rivi){if(oli&&!odotukset.size&&!luennat.size&&!puhe&&(!nykyinen?.omistaja||nykyinen.omistaja==='waiting'))palaa();return;}
   if(odotukset.size)return;
   if(puhe||luennat.size||rivi===oli&&(ele==='flyAway'||lepoTila?.flight))return;
   toista(livianMietintaEle(teksti),{voimakkuus:livianEleenVoima(livianMietintaEle(teksti),teksti)});

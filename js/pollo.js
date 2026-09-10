@@ -48,7 +48,7 @@
  * sisään, ei pöllön puhetta ulos.
  */
 
-import { aloitaLivianOdotus } from './livia-tilanteet.js';
+import { aloitaLivianOdotus, ilmoitaLivianTilanne, livianTunnetaginTiedot } from './livia-tilanteet.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { haeValmiskysymykset } from './packs/pollo-kysymykset.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
@@ -5467,6 +5467,14 @@ export class Pollo {
     return this.lisaaViesti('paikkarivi', `Näytän kartalla: ${nimi}`);
   }
 
+  /** Rekisterin virhetagit: ei uutta tekstiä eikä myöhäistä elejonoa. */
+  virhereaktio(tilanneId, voimakkuus, tunne = 'hammentynyt') {
+    if (!this.auki) return;
+    ilmoitaLivianTilanne('error', {
+      tilanneId, ...livianTunnetaginTiedot({ tunne, voimakkuus }),
+    });
+  }
+
   /**
    * Yksi kysymys pöllölle.
    *
@@ -5709,6 +5717,8 @@ export class Pollo {
        */
       if (striimattiin && !tulos?.katkesi) sfx.play('typeBell');
       const puhdas = poistaKasiteMerkinnat(teksti);
+      if (tulos?.katkesi) this.virhereaktio('chat.vastaus.katkesi', 0.4);
+      else if (varateksti) this.virhereaktio('chat.vastaus.varateksti', 0.3);
       /*
        * LUENTA. Striimissä se on jo käynnissä ja tarvitsee vain lopun
        * (paataLuenta lukee viimeisen vajaan virkkeen ja päättää jonon).
@@ -5764,6 +5774,9 @@ export class Pollo {
        */
       if (virhe?.message !== 'paivaraja' && virhe?.message !== 'kuukausiraja') {
         this.naytaUusinta(kysymys, jatko);
+        this.virhereaktio('chat.virhe', 0.5);
+      } else {
+        this.virhereaktio('chat.virhe.kayttoraja', 0.4, 'vakava');
       }
     } finally {
       // Vikaverkko: mikään polku ei saa jättää naputusta soimaan.
@@ -5876,12 +5889,14 @@ export class Pollo {
         this.merkitseMikki(false);
         this.saneluTila.textContent = 'Mikrofonin käyttö ei ole sallittu.';
         this.vaihdaTilaan('kirjoitus');
+        this.virhereaktio('mikrofoni.virhe.lupa', 0.5);
         return;
       }
     } catch (virhe) {
       this.natiiviSanelussa = false;
       this.merkitseMikki(false);
       this.saneluTila.textContent = virhe?.message ?? 'Sanelu ei käynnisty juuri nyt.';
+      this.virhereaktio('mikrofoni.eikuullut', 0.3);
       return;
     }
     // Nappia on voitu napauttaa uudestaan lupien odotuksen aikana.
@@ -5907,13 +5922,19 @@ export class Pollo {
       const teksti = String(tieto?.teksti ?? this.puhuttu).trim();
       this.paataNatiiviSanelu();
       if (teksti) this.kysy(teksti);
-      else this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
+      else {
+        this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
+        this.virhereaktio('mikrofoni.eikuullut', 0.3);
+      }
     });
     kuuntele('sanelu-keskeytyi', (tieto) => {
       const teksti = String(tieto?.teksti ?? this.puhuttu).trim();
       this.paataNatiiviSanelu();
       if (teksti) this.kysy(teksti);
-      else this.saneluTila.textContent = 'Sanelu keskeytyi. Yritä uudelleen.';
+      else {
+        this.saneluTila.textContent = 'Sanelu keskeytyi. Yritä uudelleen.';
+        this.virhereaktio('mikrofoni.eikuullut', 0.3);
+      }
     });
     kuuntele('sanelu-virhe', (tieto) => {
       this.paataNatiiviSanelu();
@@ -5923,8 +5944,10 @@ export class Pollo {
     try {
       await natiivi.sanelu.aloita({ kieli: PUHE_KIELI });
     } catch (virhe) {
+      const odotti = this.natiiviSanelussa;
       this.paataNatiiviSanelu();
       this.saneluTila.textContent = virhe?.message ?? 'Sanelu ei käynnisty juuri nyt.';
+      if (odotti) this.virhereaktio('mikrofoni.eikuullut', 0.3);
     }
   }
 
@@ -5974,6 +5997,7 @@ export class Pollo {
     } catch {
       this.saneluTila.textContent = 'Sanelu ei käynnisty tässä selaimessa.';
       this.vaihdaTilaan('kirjoitus');
+      this.virhereaktio('mikrofoni.eikuullut', 0.3);
       return;
     }
     tunnistin.lang = PUHE_KIELI;
@@ -5996,7 +6020,9 @@ export class Pollo {
         this.saneluTila.textContent = SANELU_KUUNTELEE;
       }
     };
-    tunnistin.onerror = (tapahtuma) => this.saneluVirhe(tapahtuma?.error);
+    tunnistin.onerror = (tapahtuma) => {
+      if (this.tunnistin === tunnistin) this.saneluVirhe(tapahtuma?.error);
+    };
     tunnistin.onend = () => {
       // Äänet takaisin heti kun mikrofoni on vapaa (ks. kova äänitauko).
       this.suljeMikkiKanava();
@@ -6010,6 +6036,7 @@ export class Pollo {
       else if (this.saneluTila.textContent === SANELU_KUUNTELEE
         || this.saneluTila.textContent === SANELU_KAYNNISTYY) {
         this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
+        this.virhereaktio('mikrofoni.eikuullut', 0.3);
       }
     };
     this.tunnistin = tunnistin;
@@ -6169,6 +6196,7 @@ export class Pollo {
     if (koodi === 'not-allowed' || koodi === 'service-not-allowed') {
       this.saneluTila.textContent = 'Mikrofonin käyttö ei ole sallittu.';
       this.vaihdaTilaan('kirjoitus');
+      this.virhereaktio('mikrofoni.virhe.lupa', 0.5);
       return;
     }
     if (koodi === 'audio-capture') {
@@ -6199,13 +6227,16 @@ export class Pollo {
         this.saneluTila.textContent = `Mikrofonia ei löytynyt (${diagnoosi}).`;
       });
       this.vaihdaTilaan('kirjoitus');
+      this.virhereaktio('mikrofoni.virhe.audiocapture', 0.45);
       return;
     }
     if (koodi === 'no-speech') {
       this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
+      this.virhereaktio('mikrofoni.eikuullut', 0.3);
       return;
     }
     this.saneluTila.textContent = viesti || 'Sanelu ei onnistunut. Voit myös kirjoittaa.';
+    if (koodi !== 'aborted') this.virhereaktio('mikrofoni.eikuullut', 0.3);
   }
 }
 
