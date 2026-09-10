@@ -498,3 +498,28 @@ Yksityinen esikatselu julkaistu Sites v10: https://matkakirja-pulun-animaatiot.s
 Kaupunkitekstit, valokuvat, B-tarra ja ElevenLabs-äänet säilyvät. Fable voi kirjata uuden höyhenvärityksen ja suuremman piirtoresoluution kaanoniin omalla vastuullaan. Sovittu Git-postikanava säilyy; ei rinnakkaisia kuvatuotantotilauksia.
 
 Julkaisun varmennus: squash-merge 21bd90215bd32a03522cdd164a7fcda6af37ad89. PR Testit-run 34454884783 ja Julkaise peli -run 34455180539 onnistuivat. Tuotannon js/livia-pikselit.js, js/livia-hoyhenet.js, js/pollo.js, js/livia-eleet.js, js/livia-tehosteet.js, js/sound.js, css/styles.css ja sw.js palauttivat HTTP 200 ja vastasivat SHA-256-tarkistussummiltaan lähdettä. Pelin päivitysilmoitus näyttää v1729. Selain-DOM demosivulla varmisti 48 × 48 napin, 304 px korkean näyttämön ja oikean reunan täsmälleen viewportin reunaan (1348 px); napin oikea reuna siirtyi edellisen version 901:stä 877:ään, eli 24 px vasemmalle. Uusi kompakti lepoilme katsottu selaimen kuvakaappauksessa. Tietäjä valittiin ja toistettiin. Suurennoksen vieritys aikakatkaisi selaimen ohjaimessa, joten siitä ei väitetä uutta selainkuvaa; aktiiviset ilmeet on katsottu saman renderöijän paikallisista vaihekuvista. Pääpelin alkuvalinta ei tässä selaimessa edennyt kaupunkiin ennen päivitystä; koko kaupunkinäkymän / fyysisen iPhonen puhekuplaväliä ei väitetä testatuksi. Tähän liittyvä rajattu havainto Fablelle, ei laajennettu tehtävää aloituskulun remontiksi.
+
+
+## 10.9.2026 — Kolmen SVG-ilmeen pilotti ja varsinaisen chat-paneelin tilakorjaus (v1731)
+
+Omistaja hyväksyi pikselirajoituksesta luopuvan pienen ilmekokeilun ja pyysi samalla korjaamaan chatin alle jäävän suuren kasvon. Toteutin ensin sovitut kolme ilmettä: lepo, omahyväinen tietäjä ja nolostuminen. En muuntanut kaikkia 51 pelianimaatiota SVG:ksi tässä erässä.
+
+SVG-kokeilu on yksityisessä esikatselussa Sites v11:
+https://matkakirja-pulun-animaatiot.sravelius.chatgpt.site
+Vertailu edelliseen pikseliversioon: saman sivuston /pikseli-v10.html.
+Lähdecommit 6cb036bf552b39128e116f25efb8e64a2edf7210; onnistunut julkaisu appgdep_6aa276053e38819199eeb87796dd7ca0. Uudet tiedostot dist/svg-face.mjs, dist/svg-app.mjs ja dist/svg.css. SVG on alkuperäistä koodilla piirrettyä vektorigrafiikkaa, ei rasterikuvaa. Harmaat höyhenpinnat, oikean puolen varjo, vihreänvioletti kaula, lyhyempi nokka, oranssit iirikset ja muutama sulankärki. Ei mustaa ulkoreunaa. Lepo on pieni; aktiivinen pää suurenee. Silmät, luomet ja nokka ovat erillisiä osia, nyt mukana pään kallistus sekä räpäytys. Vähennetty liike ja taustalle siirtyminen pysäyttävät liikkeen.
+
+Oma tarkastuskierros: renderöin ilmeet isona ja pienessä koossa pergamenttitaustalle, lyhensin liian pitkää nokkaa ja erotin tietäjän sekä nolostumisen luomet ja katseen suunnan. Uudet kuvat tarkastettu uudelleen. Tämä on omistajan arvioitava tyylipilotti; nykyisen pelin 51 animaatiota, äänet ja toiminnallinen sovitin säilyvät.
+
+Varsinainen chattikorjaus on jo pelissä v1731, PR https://github.com/ravelius/Matkakirja/pull/2204
+Squash-merge def45c369b989c892ecf5a334b17df3a3862ad42. PR:n Testit 34460183705 ja Pagesin Julkaise peli 34460501272 onnistuivat.
+
+V1729 nosti vain puhekuplapinoa, ei varsinaista .pollo-paneeli-chatia. Nyt js/livia-chat-tila.js varaa aktiivikasvolle 88 × 156 CSS-pikselin alueen, joka sisältää kääk-venymän ja laskeutumisen pompun. Chat jää 14 px tämän alueen yläpuolelle ja hieman vasemmalle. Pulu laskee chatin ajaksi alemmas. Alle 480 px korkuisessa näkyvässä viewportissa (näppäimistö/vaaka) chat sijoittuu kasvon vasemmalle puolelle. visualViewportin koko ja siirtymä sekä safe-area huomioidaan. Sulkeminen palauttaa CSS:n tavallisen 48 × 48 ankkurin ja vapauttaa kuuntelijat tuhottaessa. Alkutervehdyksen sisältökorkeus sekä myöhempi kiinteä chatkorkeus säilyvät. Ei pelkkää z-indexin nostoa.
+
+Paikalliset 2525 testiä: 2512 hyväksyttyä, 13 ohitettua, 0 epäonnistunutta. Yhdeksän asettelutapausta (pieni puhelin, iPhone-mitat, 464 px leveä näkymä, näppäimistöt, vaaka, tabletti, työpöytä, siirtynyt/zoomattu viewport) sekä avaus–päivitys–sulkeminen–purku ilman MutationObserver-kehää. Kaksoisavaimet, niputus, savukkeet ja standalone läpi. Uusi moduuli on offline-listassa sekä niputuksessa ennen livia-eleet.js:ää.
+
+Tuotannon js/livia-chat-tila.js, js/livia-eleet.js, css/styles.css, sw.js ja docs/livia-chat.html HTTP 200, SHA-256 täsmää paikalliseen lähteeseen. Julkinen rajattu käyttöliittymäkoe:
+https://matkakirja.app/docs/livia-chat.html
+Selaimessa 1363 × 936 viewportissa chatin alareuna oli 746 px ja kasvolle varatun alueen yläreuna 760 px. Napin alareuna chatissa 916 px; sulkemisen jälkeen se palautui 851,203 px:iin, koko pysyi 48 × 48. Näyttämön oikea reuna oli kummassakin 1363 px eli ruudun reunassa. Kuvakaappauksessa Pulu näkyi paneelin alla. Aktiivieleen kuvakaappaus ehti takaisin lepoasentoon; en väitä siitä saatua pysäytyskuvaa suuresta eleestä. Geometria ja renderöijän aktiivikoko tarkastettu lähteestä sekä testeillä. Fyysistä iPhonea tai koko kaupungin chatkulkua ei testattu tässä selaimessa; aloituskaupungin valinnan aiempi etenemispulma säilyi erillisenä havaintona.
+
+Fablelle tiedoksi: chatkorjaus on toimitettu eikä tarvitse rinnakkaista integraatiota. Omistaja arvioi kolmen SVG-ilmeen tyylin esikatselussa ennen kaikkien eleiden siirtoa tähän piirtoon. Kuvat, kaupunkitekstit, PuluCam-B-tarra ja ElevenLabs-luennat säilyvät. Ei uusia kuvatuotantotilauksia.
