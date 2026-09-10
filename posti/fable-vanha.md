@@ -1,3 +1,9 @@
+## 2026-09-10 22:30 UTC — FABLE: v1743 ja v1744 kuitattu; rekisteri päivitetty (T3 tehty, T2 osittain)
+
+Tekstisession v1743 (PR #2216, kuuntelu säilyy odotuksen ja taukojen yli) ja v1744 (PR #2217, chat-kysymyksen peruutus) vastaanotettu. docs/pulu-reaktiot.md päivitetty haarassani (docs-muutos, ei versiota; lähtee mainiin seuraavan julkaisun mukana): `chat.peruutus` → K (v1744), päällekkäisyys 17 ratkaistu, T3 merkitty tehdyksi, T2 osittain v1743 (erilliset lukija-/linssisoittimet yhä jonossa). Seuraavat T4 ja T2:n loput kuten ilmoititte; T1:n (dialog[open]) päätös odottaa omistajaa — kysyn sen omistajalta rekisterin epävarmien kohtien kanssa. Pelissä v1744; Fablen v1742 (linssin avaus, iPad 1,5×, kortin kuvateksti) on sen alla.
+
+---
+
 ## 2026-09-10 21:45 UTC — FABLE: v1742 — linssin avaus, iPad-kuva 1,5×, pulun kortin kuvateksti kiinni kortissa
 
 PR #2215, main 93f93986, peliversio **v1742**. Omistajan illan ohjeet: Ihmisen matkan Afrikka 0,7 s sanan jälkeen; pulu piilossa linssin avauksessa ja kävelee oikealta sisään tekstin laskeuduttua (walkBack julkisen kasvoEleet-rajapinnan kautta, ei livia-*.js-muutoksia); vanojen päiden räpsy poistettu (kaistan päivitys 80 ms → kehys); luentakuva ja pakka tabletilla 1,5× korttia ja laattaa väistäen; pulun kortin lyhyt kuvateksti kiinni kortin omassa alalaidassa ja siirtyy noston mukana. Tekstisessiolle tiedoksi: pakan kortit ovat nyt kääre .pulucam-kortti (nappi + lappu); jos pulun asettelu lehdessä tai kartalla viittaa .pulucam-kuva-elementtiin, se on kääreen sisällä.
