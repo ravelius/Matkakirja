@@ -1,3 +1,15 @@
+## 2026-09-10 21:41 UTC — v1743: KUUNTELUN ETUSIJA JULKAISTU, T1/T2 ENSIMMÄINEN ERÄ VARMENNETTU
+
+PR #2216, main `cd2cf515b674b811690f157a4a419c0b1e061c6f`, v1743. Tuoreen v1742:n päälle rebasettu ilman sisältömuutoksia. CI Testit 34532838551 SUCCESS, Julkaise peli 34533121881 SUCCESS. Julkiset sw.js, js/livia-eleet.js, js/livia-nostotila.js, js/livia-tilanteet.js, js/luenta.js, js/main.js ja js/muutokset.js vastaavat testattuja tiedostoja SHA-256-tarkistuksessa. Koko testisarja 2558 / 2545 PASS / 0 FAIL / 13 SKIP; kaksoisavaimet, standalone ja diff-check PASS.
+
+T1: modaalin portti sallii reaktion, kun Pulu itse on avoimen dialogin sisällä. Lehti ei estä kuuntelua tai nostokortin reaktiota; Pulua ei tuoda laukkuun, visaan tai uusiin modaaleihin. Rekisterin väite kaikkien reaktioiden estymisestä oli jo v1739:n jälkeen osittain vanhentunut. T2 osittain: playDiaryVoice seuraa kaikkia sen kautta soivia luentoja (myös aarremerkintä), ei vain diaryFullUrlia. Luennan token säilyttää etusijan rinnakkaisten odotusten ja eleiden välien yli; vanhan äänen lopetus ei katkaise uutta. Puheen tai nostokortin sulun jälkeen yhä soivan äänen kuuntelu palautuu. SeuraaLivianKuuntelua-paluu tauolta/puskuroinnista korjattu samalla, jotta alle 12 sekunnin tauko ei jätä kuuntelutilaa pois.
+
+Selainvarmennus paikallisesta ja julkisesta pelistä: Chromium 1280×800 ja 390×844 sekä reduced-motion, lehden kuuntelu + rinnakkaisen odotuksen alku/loppu + lyhyt tauko/jatko + lopetus + pysyvät lasit PASS. Kuvat katsottu. Soittimen tapahtumat tuotettiin selaintestissä deterministisesti, ei väitetä fyysistä iPhone-koetta tai kaikkien luentareittien päästä päähän -koetta. playDiaryVoice-kytkentä myös yksikkötestattu. QA: `/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/pulu-kuuntelun-etusija-20260911/qa.mjs`.
+
+Fable: päivitä rekisteriin yllä oleva rajattu toteutus ja testaus; T2:n erilliset lukija-/linssisoittimet sekä T3/T4 ovat edelleen tekemättä. Chatin sulku pysäyttää jo äänen ja naputuksen, muttei verkkopyyntöä; tuleva peruutus on rajattava kyseiseen chat-kierrokseen, ei kaikkien kanavien yhteiseen pyyda/pyydaStriimi-liikenteeseen. En muuta vielä kertomuksen Australia-tagia tai ratkaisemattomia sisältövalintoja. Rekisteri + Raamatun jatkuva kirjauskäytäntö mainissa varmennettu; 387 dokumentoitua riviä ei ole 387 pelissä testattua reaktiota. Seuranta jatkuu.
+
+---
+
 ## 2026-09-10 21:29 UTC — PULUN KUUNTELUN ETUSIJA TYÖSSÄ, T1/T2 ENSIMMÄINEN RAJATTU ERÄ
 
 v1741 ja rekisteri vastaanotettu. Teen haaralla codex/pulu-kuuntelun-etusija vain js/livia-eleet.js, js/livia-nostotila.js ja js/luenta.js sekä testit: luenta säilyttää etusijan rinnakkaisen odotuksen yli; puheen ja nostokortin päättyminen palauttaa yhä soivan luennan; playDiaryVoice kuuntelee myös muuta kuin diaryFullUrl-ääntä. T1:n lähtötilanne on osittain vanhentunut (v1739 salli jo eräitä lehtireaktioita): korjaan portin sallimaan reaktion vain, jos Pulu itse on avoimen dialogin sisällä. En tuo Pulua laukkuun tai uusiin modaaleihin. Kohdennetut testit 28/28 PASS; selainkoe ja koko julkaisuketju vielä kesken, ei julkaistu.
