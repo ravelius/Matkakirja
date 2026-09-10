@@ -1,0 +1,16 @@
+<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Pulun chatin sijoittelu</title><link rel="stylesheet" href="../css/styles.css"><style>
+html,body{height:100%;overflow:hidden}body{display:block;background:#e6d9bb;color:#352e24;font:16px system-ui;margin:0;padding:24px}main{display:block;max-width:500px;height:auto;margin:0}h1{font-size:24px}button{font:inherit}.controls{display:flex;gap:8px;flex-wrap:wrap}.controls button{padding:9px;background:#fff8e5;border:1px solid #9b8966;border-radius:8px}.pollo-virta{padding:14px;overflow:auto;flex:1;min-height:0}.pollo-syote{flex-shrink:0}p{line-height:1.5}.pollo-paneeli[hidden]{display:none}.pollo-nappi[hidden]{display:none}.pollo-paneeli header{padding:12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #b8a88a}.pollo-paneeli header button{padding:5px 9px}a{color:inherit}
+</style></head><body><main><h1>Pulu ja keskustelu</h1><p>Sama sijoittelu ja kasvosovitin kuin pelissä. Keskustelun tulee jättää suuri kasvo näkyviin.</p><div class="controls"><button id="open">Avaa keskustelu</button><button id="shock">Kääk!</button><button id="land">Kömpelö laskeutuminen</button></div><p><a href="../">Palaa peliin</a></p></main>
+<button id="pulu" class="pollo-nappi pollo-kelluu pollo-kelluu-kartalla" aria-label="Pulun keskustelu" aria-expanded="false"><span class="viiva-ikoni">?</span></button>
+<section id="panel" class="pollo-paneeli pollo-paneeli-kelluu pollo-paneeli-kartalla" hidden aria-label="Pulun keskustelu"><header><strong>Pulu</strong><button id="close" aria-label="Sulje keskustelu">×</button></header><div class="pollo-virta" id="flow"><p>Keskustelun esimerkki. Kasvoni kuuluvat tuohon alaoikealle.</p><p>Voit avata näppäimistön alareunan kentästä ja kokeilla, jäävätkö kasvot näkyviin.</p><div class="controls"><button id="panel-shock">Kääk!</button><button id="panel-land">Laskeudu</button></div></div><div class="pollo-syote"><label for="input">Kokeile näppäimistöä</label><input id="input" class="pollo-kentta" placeholder="Kirjoita tähän…"></div></section>
+<script type="module">
+import{asennaLivianKasvot}from'../js/livia-eleet.js';
+const byId=id=>document.getElementById(id);
+const pollo={doc:document,nappi:byId('pulu'),paneeli:byId('panel'),virta:byId('flow'),auki:false,haeUi:()=>({})};
+const face=asennaLivianKasvot(pollo);
+function chat(open){pollo.auki=open;pollo.paneeli.hidden=!open;pollo.nappi.setAttribute('aria-expanded',String(open));document.body.classList.toggle('pollo-auki',open);}
+byId('open').onclick=()=>chat(true);byId('close').onclick=()=>chat(false);pollo.nappi.onclick=()=>chat(!pollo.auki);
+byId('shock').onclick=byId('panel-shock').onclick=()=>face.toista('shock',{hiljaa:true});
+byId('land').onclick=byId('panel-land').onclick=()=>face.toista('clumsyLand',{hiljaa:true});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')chat(false);});
+</script></body></html>

@@ -25592,3 +25592,23 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
 .livia-kasvot-pinta.livia-lentonayttamo { position:fixed; right:auto; bottom:auto; width:152px; height:304px; z-index:39; pointer-events:none; overflow:hidden; }
 .livia-lentonayttamo[hidden] { display:none; }
 .livia-lentonayttamo canvas { display:block; mix-blend-mode:normal!important; image-rendering:pixelated; }
+
+/* Suuri Pulu jää chatin alaoikealle, myös näppäimistön avautuessa.
+   Paikka tulee livia-chat-tila.js:n näkyvän ruudun mitoista. */
+.pollo-paneeli {
+  --livia-safe-top: env(safe-area-inset-top, 0px);
+  --livia-safe-right: env(safe-area-inset-right, 0px);
+  --livia-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --livia-safe-left: env(safe-area-inset-left, 0px);
+}
+.pollo-nappi.pollo-kelluu.livia-kasvot-valmis.livia-chat-nappi {
+  position: fixed; left: var(--livia-chat-nappi-x); top: var(--livia-chat-nappi-y);
+  right: auto; bottom: auto; transform: none;
+}
+.pollo-paneeli.pollo-paneeli.livia-chat-tila {
+  left: var(--livia-chat-x); right: auto; top: auto;
+  bottom: var(--livia-chat-alareuna); width: var(--livia-chat-leveys);
+  height: var(--livia-chat-korkeus); max-height: var(--livia-chat-korkeus);
+  min-height: 0; box-sizing: border-box;
+}
+.pollo-paneeli.pollo-paneeli.livia-chat-tila.pollo-alku { height: auto; }
