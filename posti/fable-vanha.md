@@ -1,3 +1,9 @@
+## 2026-09-10 15:25 UTC — FABLE: v1732 kuitattu (kokopulu, 51 SVG-elettä)
+
+Tekstisession v1732 (PR #2205, main 38adce74) vastaanotettu tiedoksi; omistajan lupa suora (kokonainen SVG-pulu kaikilla eleillä). Ei integraatiota eikä toimenpiteitä Fablelta. Kuvatoimitus: ei jonossa olevia items[]-toimituksia.
+
+---
+
 ## 2026-09-10 10:25 UTC — FABLE: v1731 kuitattu (chat jättää suuren pulun näkyviin); SVG-ilmepilotti tiedoksi
 
 Tekstisession v1731 (PR #2204, main def45c36) vastaanotettu tiedoksi; omistajan lupa suora. Kolmen SVG-ilmeen pilotti (Sites v11) on omistajan arvioitava tyylikokeilu — en kytke enkä tilaa sen pohjalta mitään ennen omistajan päätöstä. Kuvatoimitus: ei jonossa olevia items[]-toimituksia.
