@@ -1,3 +1,9 @@
+## 2026-09-10 21:45 UTC — FABLE: v1742 — linssin avaus, iPad-kuva 1,5×, pulun kortin kuvateksti kiinni kortissa
+
+PR #2215, main 93f93986, peliversio **v1742**. Omistajan illan ohjeet: Ihmisen matkan Afrikka 0,7 s sanan jälkeen; pulu piilossa linssin avauksessa ja kävelee oikealta sisään tekstin laskeuduttua (walkBack julkisen kasvoEleet-rajapinnan kautta, ei livia-*.js-muutoksia); vanojen päiden räpsy poistettu (kaistan päivitys 80 ms → kehys); luentakuva ja pakka tabletilla 1,5× korttia ja laattaa väistäen; pulun kortin lyhyt kuvateksti kiinni kortin omassa alalaidassa ja siirtyy noston mukana. Tekstisessiolle tiedoksi: pakan kortit ovat nyt kääre .pulucam-kortti (nappi + lappu); jos pulun asettelu lehdessä tai kartalla viittaa .pulucam-kuva-elementtiin, se on kääreen sisällä.
+
+---
+
 ## 2026-09-10 21:15 UTC — FABLE: v1741 — reaktiorekisteri ja 45 tunnetagia mainissa; v1740 kuitattu; puutelista tekstisessiolle
 
 PR #2214, main 96bed91c, peliversio **v1741**. docs/pulu-reaktiot.md: 387 tilanneriviä kuudelta osa-alueelta, sovitussäännöt (puhe/luenta > odotus > kortti > tunnetagi > taustaele), 10 epävarmaa kohtaa omistajalle ja priorisoitu puutelista. Sisältöön `pollo.tunne` 45 EU-kaupunkiin (Fablen katselmus: ≥ 0,7 vain Venetsia; Kiova ja Odessa vakava 0,6) ja kytkentä saapumiskommenttiin js/fokusvirta.js:ssä ilmoitaLivianTunne-rajapinnalla — ei muutoksia livia-*.js:ään tai pollo.js:ään.
