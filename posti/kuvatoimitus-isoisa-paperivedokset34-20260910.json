@@ -1,0 +1,1477 @@
+{
+  "batchId": "ISOISA-PAPERIVEDOKSET-34-20260910",
+  "status": "media-published-public-bytes-verified-awaiting-text-session-game-integration",
+  "integrationOwner": "Matkakirjan tekstit",
+  "ownerAuthorizationMailboxCommit": "1444b7f5c90689611c0c21700ba8ee110000da32",
+  "sourceEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+  "instructions": [
+    "Add matkakirja.luentakuva only for these 34 previously missing cities. Preserve the 11 existing historical slots, especially the four story corrections, all 58 PuluCam photos and the selected blue ink stamp.",
+    "Text session implements the game integration and may shorten captions under the latest owner instruction. These fields retain the original V1.4 source captions; captionShort maps to lyhyt (maximum 100 characters), caption to selite, sourceLine to lahde.",
+    "Do not shorten or rewrite spoken grandfather travelbook lines. Fable must not make parallel image or animation changes.",
+    "These are the previously root-inspected retain images: Amsterdam and Venice paper-v5, the others paper-v4. No new generation or replacement of approved originals.",
+    "Public media verification is distinct from integration. Report exact main commit/version and final captions after integration."
+  ],
+  "items": [
+    {
+      "id": "matkakirja-eurooppa-1873-barcelona-r20260909-paper-v4",
+      "cityId": "barcelona",
+      "city": "Barcelona",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-barcelona-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-barcelona-r20260909-paper-v4.jpg",
+      "sha256": "3c15e2076c08aae691740861b1a46284d672d5e89edc58a67cefadda8478f132",
+      "bytes": 677514,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Barcelona, 1873. Tuleva katu kasvoi vielä lehtiä.",
+      "caption": "Uuden korttelin viisto kulma avasi kärryille tilaa kääntyä. Sen vieressä maa oli yhä käytössä paljon vanhemmalla tavalla: kaalirivit eivät ottaneet osaa insinöörin suunnitelmaan. Kamerassa mahtuivat samaan kuvaan valmiit seinät ja se, minkä niiden odotetaan syrjäyttävän. Cerdàn piirroksessa kaupunki hengittää väljästi. Toivoin, että työn edetessä muistettaisiin myös ne, joiden puutarha hengittää tässä nyt.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/101603/1/bcn01engp.pdf"
+      ],
+      "reconstructionNotes": "Cerdàn suunnitelma hyväksyttiin 1859; muurit purettiin 1860 ja 20 metrin viisteet muodostivat risteysten kahdeksankulmaisen tilan.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/barcelona/prompt.md",
+        "originalPromptSha256": "5cd4206ca72a56bba2267acd7909258fafd78038363f9f6cc77ed934d6cabb67",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-barcelona-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:31:03.730Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 677514,
+        "sha256": "3c15e2076c08aae691740861b1a46284d672d5e89edc58a67cefadda8478f132"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-granada-r20260909-paper-v4",
+      "cityId": "granada",
+      "city": "Granada",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-granada-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-granada-r20260909-paper-v4.jpg",
+      "sha256": "f12be85587f38c11c04ad5d94945111033f1da546be5ccb1b0f34bc3264c4745",
+      "bytes": 649234,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Granada, 1873. Comaresin torni toisessa rakennusaineessa.",
+      "caption": "Myrttipihan altaassa torni jatkui alaspäin, vaikka tiesin maan olevan siellä jo käytössä. Palatsin kaaret ja myrttipensaat asettuivat veteen tarkemmin kuin oma kynäni olisi niitä jäljentänyt. Odotin liikkeen laantumista ennen valotusta. Alhambrassa vesi kuljettaa viileyttä ja ääntä, mutta tällä pihalla se tekee lisäksi kopion koko rakennuksesta. Työ valmistuu aina uudestaan, maksutta.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.alhambra-patronato.es/wp-content/uploads/2019/02/Conservacion_y_gestion_cultural.pdf"
+      ],
+      "reconstructionNotes": "Patronaton lähdekuva ohjaa Myrttipihan pitkää allasta, matalia myrttireunoja, pohjoisportiikkia ja Comaresin tornia.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/granada/prompt.md",
+        "originalPromptSha256": "08a892e96673cda7808aa834f7a5c50329ae847172400d44a1b9a7ca082bfa9f",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-granada-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:31:11.590Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 649234,
+        "sha256": "f12be85587f38c11c04ad5d94945111033f1da546be5ccb1b0f34bc3264c4745"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-sevilla-r20260909-paper-v4",
+      "cityId": "sevilla",
+      "city": "Sevilla",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-sevilla-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sevilla-r20260909-paper-v4.jpg",
+      "sha256": "11002a403fe9dbeac5d72fe957d08fe1a85697b4e75dfce49ccf28ab25d0b9a4",
+      "bytes": 627200,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Sevilla, 1873. Palatsimainen tehdas odotti työväkeään.",
+      "caption": "Portin koristeet eivät paljastaneet, kuinka monta aamua sen läpi kannettiin samalla tavoin pieni leipä. Nainen ehti istua ennen työhön palaamista. Pyysin luvan kuvaan ja odotin, että hän sai haukkunsa syödyksi. Tupakkatehtaan suuri rakennus jää varmasti matkakirjoihin. Tahdoin säilyttää myös tämän lyhyen tauon, sillä ilman sen jälkeen alkavaa työtä talo olisi pelkkä komea kuori.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://idus.us.es/bitstreams/c159e9ed-623c-49bb-af82-28de9d825634/download"
+      ],
+      "reconstructionNotes": "Sevillan yliopiston aineisto ohjaa Real Fábrica de Tabacosin barokkijulkisivua ja työpaikkakäyttöä; henkilöt ovat rekonstruktio.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/sevilla/prompt.md",
+        "originalPromptSha256": "03a256ac9b64a94e3334041913836c62007868e0c08428367b9a2965ced09e33",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-sevilla-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:31:17.930Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 627200,
+        "sha256": "11002a403fe9dbeac5d72fe957d08fe1a85697b4e75dfce49ccf28ab25d0b9a4"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-amsterdam-r20260909-paper-v5",
+      "cityId": "amsterdam",
+      "city": "Amsterdam",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-amsterdam-r20260909-paper-v5.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-amsterdam-r20260909-paper-v5.jpg",
+      "sha256": "a60ae0db42cc9aa50492ba93713bd65cd4ef683f5d115e15ff4b307e9df03193",
+      "bytes": 640991,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Amsterdam, 1873. Tuoli saapui omasta ikkunastaan.",
+      "caption": "Kattokoukku piti köyttä, köysi piti tuolia ja kaksi miestä piti tilanteesta huolta. Kapeassa kanavatalossa ikkuna oli saanut ulko-oven tehtävän. Tuoli pysähtyi hetkeksi nousunsa aikana, mikä sopi kameralleni paremmin kuin jatkuva liike. Miehet neuvoivat toisilleen suuntaa. Kaluste itse suhtautui kaikkeen hyvin arvokkaasti, niin kuin ei olisi odottanutkaan joutuvansa käyttämään portaita.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/hoisting-paintings"
+      ],
+      "reconstructionNotes": "Rijksmuseum vahvistaa kirjalliset lähteet köysinostojen käytöstä 1800-luvulla; kanavatalo ja muutto ovat rekonstruktio.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/amsterdam/prompt.md",
+        "originalPromptSha256": "473177f830d9824d37ff0ea898b8f09ab4ff755fee7162da3477e04521dfc487",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-amsterdam-r20260909-paper-v5",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:31:24.277Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 640991,
+        "sha256": "a60ae0db42cc9aa50492ba93713bd65cd4ef683f5d115e15ff4b307e9df03193"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-berliini-r20260909-paper-v4",
+      "cityId": "berliini",
+      "city": "Berliini",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-berliini-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-berliini-r20260909-paper-v4.jpg",
+      "sha256": "b4fdaf1a8bce9cc8371dc837ff71ed4ca62fcdfa50ae8eb43a13c819944fcac7",
+      "bytes": 562338,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Berliini, 1873. Pylväs katsoi voittoja, poika maahan.",
+      "caption": "Voitonpylvään tykinputket olivat päätyneet koristeiksi korkealle, mutta sanomalehti pysyi tukevasti mudassa. Poika kumartui kokoamaan numeroitaan, kun aikuiset jatkoivat pylvään katsomista. Kameran näkökenttä oli tässä hyödyllinen: siihen mahtui sekä suuren juhlan kohde että pieni työ sen juurella. Jälkimmäinen vaati pojalta enemmän välitöntä rohkeutta kuin kukaan ohikulkijoista näytti huomaavan.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://search.smb.museum/object/obj-968409?involved=Anton+von+Werner&page=2",
+        "https://www.smb.museum/nachrichten/detail/schenkung-von-alicja-kwade-skulptur-goldelse-fuer-den-skulpturengarten-der-neuen-nationalgalerie/"
+      ],
+      "reconstructionNotes": "SMB vahvistaa pylvään vihkimisen 2.9.1873; alkuperäisessä Königsplatzin pylväässä oli kolme rumpua. Reichstagia ei ollut.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/berliini/prompt.md",
+        "originalPromptSha256": "de66aba00174a2bd7fa536350562f9e76f1e7322691da69d9f84abce5762f21c",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-berliini-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:31:31.357Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 562338,
+        "sha256": "b4fdaf1a8bce9cc8371dc837ff71ed4ca62fcdfa50ae8eb43a13c819944fcac7"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-praha-r20260909-paper-v4",
+      "cityId": "praha",
+      "city": "Praha",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-praha-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-praha-r20260909-paper-v4.jpg",
+      "sha256": "67072e87444f8277b3f7318c4d401fb516e3adf6086947115c2b8a55514b9a0e",
+      "bytes": 615846,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Praha, 1873. Kiire jäi kellon eteen odottamaan.",
+      "caption": "Torin kello ei tyydy numeroihin. Sen kehissä kulkevat taivaankappaleet, ja pienten hahmojen liike saa kokonaisen ihmisjoukon nostamaan päätään yhtä aikaa. Ajurin vaunut odottivat vähän syrjemmässä. Kuvani pysäyttää kellon, mutta ei kerro, kuinka pitkäksi hänen odotuksensa venyi. Minulla oli taskussa tarkempi ajanmittari. Se jäi sillä hetkellä paljon huonommaksi seuralaiseksi.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://prague.eu/en/about-the-old-town-astronomical-clock/",
+        "https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/"
+      ],
+      "reconstructionNotes": "Prahan virallinen matkailuorganisaatio vahvistaa 1865 korjauksen, Mánesin kalenterikiekon ja kellon osat. Aukion hahmot ovat rekonstruktio.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/praha/prompt.md",
+        "originalPromptSha256": "c38ffc876ad4a4f343ccac68be961c66cd97fe9effb602184b683af639800c40",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-praha-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:31:37.736Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 615846,
+        "sha256": "67072e87444f8277b3f7318c4d401fb516e3adf6086947115c2b8a55514b9a0e"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-wien-r20260909-paper-v4",
+      "cityId": "wien",
+      "city": "Wien",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-wien-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-wien-r20260909-paper-v4.jpg",
+      "sha256": "272aba9c4904bb61e5462b54ade8fad9e64a627cec32eb8440f785e3a3f45028",
+      "bytes": 593986,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Wien, 1873. Kone teki lehteä ilman mielipidettä.",
+      "caption": "Painokoneen vierellä miehet tarkkailivat arkin kulkua niin kuin lääkärit potilaan hengitystä. Maailmannäyttelyn hallissa rauta kantoi sekä työkoneen että suuren katon painoa. Kuvasin hetken, jolloin kaikki näytti olevan järjestyksessä. Lehti valmistuu koneelta valmiina, mutta sen lukijan ajatukset eivät. Sen eron huomasin myöhemmin kahvilassa, en tämän koneen ääressä.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://sammlung.wienmuseum.at/en/object/59815-weltausstellung-1873-rotunde-der-ring-vor-der-hebung-nr-3a/",
+        "https://www.technischesmuseum.at/presse/women_at_work",
+        "https://www.technischesmuseum.at/ausstellung/women_at_work"
+      ],
+      "reconstructionNotes": "Wien Museumin 1872 Rotunda-kuvat ja Technisches Museumin 1873 näyttelyaineisto ohjaavat rautarakennetta. V2 korvaa liian lasihallimaisen v1:n; alkuperäinen säilyy.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/wien/prompt.md",
+        "originalPromptSha256": "b6a82eb98663bebe5a4a62f81518c385df40deacd63e6f8208eff12827df03cf",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-wien-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:31:43.599Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 593986,
+        "sha256": "272aba9c4904bb61e5462b54ade8fad9e64a627cec32eb8440f785e3a3f45028"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-budapest-r20260909-paper-v4",
+      "cityId": "budapest",
+      "city": "Budapest",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-budapest-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-budapest-r20260909-paper-v4.jpg",
+      "sha256": "7335500faf52cd93ed400d5fe167db8ca8d971a2a90131352935baca81916800",
+      "bytes": 619741,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Budapest, 1873. Kupolin alla kartta sai odottaa.",
+      "caption": "Rudasin kylpylän kupoli päästää päivänvalon pieninä kohtina sisään. Niiden alla vesi liikahtaa hitaasti, eikä kukaan näytä tarvitsevan siltä kiireisempää vastausta. Turkkilaisen kylpylän seinät ovat nähneet kaupunkien nimiä ennen tätä marraskuista yhdistämistäkin. Asetin kameran altaan ulkopuolelle. Höyry teki ääriviivoille saman kuin lämmin vesi ajatuksilleni: kumpikaan ei pysynyt aivan yhtä terävänä.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.rudasfurdo.hu/en/past-and-present",
+        "https://fortepan.hu/en/photos/?id=252393",
+        "https://fortepan.hu/en/photos/?id=82594"
+      ],
+      "reconstructionNotes": "Official Rudas history confirms the 16th-century Turkish core, approximately 10 m dome on eight pillars, and octagonal pool; the later 1896 swimming pool is excluded.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/budapest/prompt.md",
+        "originalPromptSha256": "c16ffe33c58feef8cbebb01ded86d0d05ea43d03f3e31dff222bb9286ddb757b",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-budapest-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:31:50.614Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 619741,
+        "sha256": "7335500faf52cd93ed400d5fe167db8ca8d971a2a90131352935baca81916800"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-varsova-r20260909-paper-v4",
+      "cityId": "varsova",
+      "city": "Varsova",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-varsova-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-varsova-r20260909-paper-v4.jpg",
+      "sha256": "d12971a977623ef43895ce1bc6a6a153e91c32b20d822131098d4f097d60f6f7",
+      "bytes": 587399,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Varsova, 1873. Leipuri piti kaupungin omalla kielellään.",
+      "caption": "Torin talot seisovat lähekkäin, mutta aamun työ mahtuu niiden eteen. Leipurin pöydässä leivät ovat valmiina ennen kuin virastot ehtivät ryhtyä määräämään päivän asioita. Hän katsoi kameraa vain hetken ja palasi asiakkaansa puoleen. Varsovan karttamerkinnöissä minulla on keisarikunnan väri; tässä kuvassa tahdoin säilyttää myös sen, minkä ihmiset tekevät paikasta itse.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://muzeumwarszawy.pl/en/old-town-new-town-in-warsaw/",
+        "https://muzeum.uw.edu.pl/en/the-old-town-square-1916-1918/",
+        "https://muzeumwarszawy.pl/obiekt/rzezba-syreny-fontanny-rynku-starego-miasta/"
+      ],
+      "reconstructionNotes": "Museum evidence supports a dense trading square with stalls; Hegel's Mermaid fountain dates to 1855 and is therefore period-correct.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/varsova/prompt.md",
+        "originalPromptSha256": "3994d5d5f5d47768e1640b824c973b912fe41b0399b709f804aa9626ba4282d0",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-varsova-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:31:56.584Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 587399,
+        "sha256": "d12971a977623ef43895ce1bc6a6a153e91c32b20d822131098d4f097d60f6f7"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-krakova-r20260909-paper-v4",
+      "cityId": "krakova",
+      "city": "Krakova",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-krakova-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-krakova-r20260909-paper-v4.jpg",
+      "sha256": "c7c5c4d815e12c0815261e3a9f4ebe9443343dd9060dd701d22e8c0f1f5821fb",
+      "bytes": 580752,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Krakova, 1873. Tuoli odotti, jos sävelmä ei loppuisi.",
+      "caption": "Kangashallin luona kauppa jatkuu, vaikka kirkontornin torvi on jo vaiennut. Torikauppias tiesi, ettei minun kannata seisoa odottamassa puuttuvia säveliä, ja tarjosi istuinta. Marian kirkon epätasaiset tornit auttoivat silmää löytämään äänen paikan. Kamerani tallentaa niistä molemmat, mutta antaa saman vastauksen kuin torvensoittaja: jotakin jää kuvan ulkopuolelle.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://ct.mhk.pl/wps/portal/mhmk/main/strona-artefaktu/?artefactId=%7B61040CE7-72DA-4281-A0A3-14D3C075B00B%7D",
+        "https://mnk.pl/en/wystawy/the-sukiennice/",
+        "https://convention.krakow.pl/english/ccb_en/7973%2Cartykul%2Cthe_cloth_hall.html"
+      ],
+      "reconstructionNotes": "Krieger circa-1870 museum photograph and official museum chronology anchor the pre-1875 massing; current arcades date to the 1875-79 reconstruction and are excluded.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/krakova/prompt.md",
+        "originalPromptSha256": "9b3ed4f5d245636121fa8f9b378d69035434965a5857b28be8971c322306be3b",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-krakova-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:32:02.816Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 580752,
+        "sha256": "c7c5c4d815e12c0815261e3a9f4ebe9443343dd9060dd701d22e8c0f1f5821fb"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-alpit-r20260909-paper-v4",
+      "cityId": "alpit",
+      "city": "Alpit",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-alpit-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-alpit-r20260909-paper-v4.jpg",
+      "sha256": "77cf29773de1ea5a2cd13a4b2272546cab541b5bafe82eaa1291bf10a34a8027",
+      "bytes": 651442,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Grindelwald, 1873. Jään hiljaisuudessa oli halkeamia.",
+      "caption": "Opas pysyi sivummalla ja antoi minun katsella jäätikön reunaa. Kallion ja jään raja ei ollut yhtä siisti kuin karttaan piirretty viiva: siinä oli kiviä, vettä ja syvyyksiä, joiden pohjaa en nähnyt. Panin kameran riittävän kauas. Jään sisältä kuuluva rasahdus ei tallennu vedokseen. Sen vuoksi kirjoitan tähän muistutuksen, että kuva oli hiljaisempi kuin paikka itse.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.swissinfo.ch/eng/archive-science/scientists-paint-a-glacial-picture/33663410",
+        "https://www.swissinfo.ch/eng/archive-science/marking-glacial-change-on-grindelwald-s-trail/2185012"
+      ],
+      "reconstructionNotes": "1855-61 photographs document the Lower Grindelwald Glacier reaching the valley floor near its mid-century maximum and beginning retreat; exact crevasses and peaks are a plausible 1873 reconstruction.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round5/sol-north/alpit/prompt.txt",
+        "originalPromptSha256": "7645b3c2ba27c0553005131bcdddcb279d21d76fb2b2b8c7c0f6940e71ed5277",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-alpit-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round5/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:32:08.792Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 651442,
+        "sha256": "77cf29773de1ea5a2cd13a4b2272546cab541b5bafe82eaa1291bf10a34a8027"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-venetsia-r20260909-paper-v5",
+      "cityId": "venetsia",
+      "city": "Venetsia",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-venetsia-r20260909-paper-v5.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-venetsia-r20260909-paper-v5.jpg",
+      "sha256": "631010de6b1c25991957d02e670a8e83b6f50dc2945d39a087ad0abfb9a3917c",
+      "bytes": 654290,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Venetsia, 1873. Oven kynnys jatkui veteen.",
+      "caption": "Portaiden alin askel katosi kanavaan, ja gondolieri odotti sen edessä niin kuin ajuri odottaisi kuivalla kadulla. Yläkerran ikkuna oli auki. Kuului astian kilahdus, sitten vettä vasten osuvan melan ääni. Kuvasin näkymän ovelta ennen veneeseen nousua. Kaupungin palatsit näyttävät mahtavilta, mutta niiden arkeen pääsee kurkistamaan aivan tavallisen kynnyksen yli.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.veneziaunica.it/"
+      ],
+      "reconstructionNotes": "Source-informed Venetian canal reconstruction; individual inn facade is plausible, not measured.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-south/venetsia/prompt.txt",
+        "originalPromptSha256": "d2795c48d53a71e345ffcd3fd6cf506c4e4dea58965cc2092da7733b756fa01a",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-venetsia-r20260909-paper-v5",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:32:15.086Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 654290,
+        "sha256": "631010de6b1c25991957d02e670a8e83b6f50dc2945d39a087ad0abfb9a3917c"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-rooma-r20260909-paper-v4",
+      "cityId": "rooma",
+      "city": "Rooma",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-rooma-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260909-paper-v4.jpg",
+      "sha256": "9593b80d1767f1094356307caa157412837bb9be2a7631bd1a1b1e2e35003469",
+      "bytes": 608583,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Rooma, 1873. Katto antoi sateelle luvan.",
+      "caption": "Pantheonin katon aukko on avoin taivaalle, ja sen alta lattia saa päivän sään suoraan nähtäväkseen. Seinien syvennyksissä valo pysyy toisenlaisena kuin keskellä salia. Asetin kameran kuivalle kohdalle ja odotin, että sade erottuisi lattian pinnassa. Roomassa rakennuksia on muutettu moneen tehtävään. Tämän talon kirkas pyöreä silmä katsoo edelleen ylöspäin, tehtävästä riippumatta.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.pantheonroma.com/en/pantheon-history/"
+      ],
+      "reconstructionNotes": "Official source confirms rain through nearly nine-metre oculus and floor drainage.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-south/rooma/prompt.txt",
+        "originalPromptSha256": "78e0f6df20e013bba6bea2cc65e2863e0a261a8e6f8820408831217ed3617bbd",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-rooma-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:32:22.062Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 608583,
+        "sha256": "9593b80d1767f1094356307caa157412837bb9be2a7631bd1a1b1e2e35003469"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-sisilia-r20260909-paper-v4",
+      "cityId": "sisilia",
+      "city": "Sisilia",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-sisilia-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sisilia-r20260909-paper-v4.jpg",
+      "sha256": "006defd93653adc6dc991baa5532c7ab1725b216e0e59130914ba67314ac0d0f",
+      "bytes": 640367,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Palermo, 1873. Katon tekijät puhuivat monella kädellä.",
+      "caption": "Palatinakappelin katon syvennykset tarttuivat valoon eri kohdista, ja seinien mosaiikit vastasivat siihen kullalla. Normannikuninkaan tilaamassa tilassa kohtaavat eri seutujen käsityötaidot. Kamerani joutuu tekemään ilman väriä, mikä on tässä huoneessa selvä puute. Koetin saada puun pienet muodot näkyviin. Yhden katseen nostaminen ylös osoittautui helpoksi; sen palauttaminen alas kesti paljon kauemmin.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.federicosecondo.org/cappella-palatina/"
+      ],
+      "reconstructionNotes": "Mosaics and muqarnas ceiling shown together; ornament is generative reconstruction.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-south/sisilia/prompt.txt",
+        "originalPromptSha256": "f9c7a9a7b338fca0c6fba8cd0c652ead015c21222bb6d501c148cdb360d36866",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-sisilia-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:32:28.126Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 640367,
+        "sha256": "006defd93653adc6dc991baa5532c7ab1725b216e0e59130914ba67314ac0d0f"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-ateena-r20260909-paper-v4",
+      "cityId": "ateena",
+      "city": "Ateena",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-ateena-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-ateena-r20260909-paper-v4.jpg",
+      "sha256": "da5ec9e174df3205e6fe9fc0657b37606436b2361f34df00f0917de46184ced3",
+      "bytes": 656842,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Ateena, 1873. Kultakeskustelu jatkui ilman kultaa.",
+      "caption": "Kahvilan pöydän ääressä kädet tekivät suurempia liikkeitä kuin kupit. Schliemannin Troijan löydöt olivat antaneet kaupunkiin uuden puheenaiheen, ja kumpikin keskustelija vaikutti tuntevan asian päästä päähän. Pyysin heitä pysähtymään hetkeksi kuvaan. Akropolis ei tarvinnut pyyntöä. Otin mukaan myös sen, jotta näkyisi, kuinka lähellä kahvipöytää täällä on jo valmiiksi vanhaa maailmaa.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.theacropolismuseum.gr/en"
+      ],
+      "reconstructionNotes": "Frankish Tower retained for 1873; foreground cafe is plausible reconstruction.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-south/ateena/prompt.txt",
+        "originalPromptSha256": "77553262ca51fd027a19ff1f42e50962fe2c069db2bad3ee2afad7ab3bf43719",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-ateena-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:32:35.104Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 656842,
+        "sha256": "da5ec9e174df3205e6fe9fc0657b37606436b2361f34df00f0917de46184ced3"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-kreeta-r20260909-paper-v4",
+      "cityId": "kreeta",
+      "city": "Kreeta",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-kreeta-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kreeta-r20260909-paper-v4.jpg",
+      "sha256": "247f297a608718fda5cd4bbf0a1d2182846197ff86686341e2bf5de32b2d8af5",
+      "bytes": 607519,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Hania, 1873. Verkko vaati korjausta valtakunnasta riippumatta.",
+      "caption": "Kalastajan sormet löysivät verkosta rikkinäisen kohdan nopeammin kuin silmäni. Sataman toisella puolella majakka seisoi venetsialaisten aloittamassa ja egyptiläisten muuttamassa hahmossaan. Kreeta on nyt sulttaanin aluetta, mutta veneen paluu riippuu valosta ja verkon kunto sen korjaajasta. Kuvasin nämä kaksi työtä samaan näkymään. Mies ei pitänyt kumpaakaan arvoituksena.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.chaniatourism.gr/monument/the-egyptian-lighthouse/",
+        "https://chaniahistory.gr/en/lighthouse/",
+        "https://www.chaniatourism.gr/neighborhood/venetian-harbor/"
+      ],
+      "reconstructionNotes": "Official sources confirm breakwater-end position, 1830-40 Egyptian reconstruction and octagonal, polygonal, circular tower stages; later east stair/parapet excluded.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-south/kreeta/prompt.txt",
+        "originalPromptSha256": "8cf5fd795e0ae85a686374ccbd322daa8a3a9bdc4d71d24213e7d2e8c0179092",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-kreeta-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:32:40.961Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 607519,
+        "sha256": "247f297a608718fda5cd4bbf0a1d2182846197ff86686341e2bf5de32b2d8af5"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-dubrovnik-r20260909-paper-v4",
+      "cityId": "dubrovnik",
+      "city": "Dubrovnik",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-dubrovnik-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dubrovnik-r20260909-paper-v4.jpg",
+      "sha256": "b28529ab9d7edf924e4e0a91ca58a9f463445f8d748f1efa628213e00f31bf76",
+      "bytes": 703183,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Ragusa, 1873. Kivikasvot puhuivat vedellä.",
+      "caption": "Suuren Onofrion kaivon sivuissa kasvot antavat veden ohikulkijan ulottuville. Kaupunki on johtanut juotavan veden muurien sisään, vaikka muuten se on nähnyt paljon vaivaa pitääkseen ulkopuolen ulkona. Asetin kameran yhden naamion eteen. Se pysyi vakavana koko valotuksen, mikä helpotti työtäni. Vesi ei pysynyt, mutta sen liike näyttää kuuluvan tähän kasvokuvaan.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://tzdubrovnik.hr/lang/en/get/spomenici/5535/onofrios_fountains.html"
+      ],
+      "reconstructionNotes": "Sixteen-sided fountain and mask spouts; exact mask carvings reconstructed.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-south/dubrovnik/prompt.txt",
+        "originalPromptSha256": "44ca08c649bab2d60492b2fb83ba412fa997f30f3171c6db016647fd86c959ef",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-dubrovnik-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:32:47.373Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 703183,
+        "sha256": "b28529ab9d7edf924e4e0a91ca58a9f463445f8d748f1efa628213e00f31bf76"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-sarajevo-r20260909-paper-v4",
+      "cityId": "sarajevo",
+      "city": "Sarajevo",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-sarajevo-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sarajevo-r20260909-paper-v4.jpg",
+      "sha256": "0e044c6931a207d02f2608832ca2c53dfb46da6ae93e63fabeeea809991cb64a",
+      "bytes": 681771,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Sarajevo, 1873. Vasara sai levätä kuvan ajan.",
+      "caption": "Pyysin kupariseppää odottamaan hetken. Hänen vasaransa jäi käteen, ja puoliksi valmistuneessa astiassa näkyi, kuinka sileästä pinnasta tulee kuvioitua yksi lyönti kerrallaan. Basaarin muiden puotien kilkutus jatkui sillä välin. Olin aamulla juonut samanlaisen pannun kahvia katsomatta pannua lainkaan. Tähän kuvaan annoin astioille niin paljon tilaa kuin pöytä ja kamerani sallivat.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://arhiva.visitsarajevo.ba/2018/04/sarajevo-coppersmiths-masters-of-an-old-craft/?lang=en"
+      ],
+      "reconstructionNotes": "Official tourism history documents the old coppersmith guild and Kazandziluk.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-south/sarajevo/prompt.txt",
+        "originalPromptSha256": "221e1803413bd58efcdf5fccd9569c9f5730c730fe9ca75aaf9b084eb54d929d",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-sarajevo-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:32:53.168Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 681771,
+        "sha256": "0e044c6931a207d02f2608832ca2c53dfb46da6ae93e63fabeeea809991cb64a"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-sofia-r20260909-paper-v4",
+      "cityId": "sofia",
+      "city": "Sofia",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-sofia-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sofia-r20260909-paper-v4.jpg",
+      "sha256": "26d68fc28ff609aa856198a12e8a0d81f619c7ec210579a0d4ab0d8d02940f67",
+      "bytes": 680603,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Sofia, 1873. Maa oli ehtinyt lämmittää veden.",
+      "caption": "Nainen piti kannua varovasti, sillä lähteen tarjoilussa ei ollut kylmää vaihtoehtoa. Minareetti ja Vitošan rinne asettuivat kuvan taakse, mutta arjen tärkein rakennelma oli veden ottopaikka. Majataloni pesuvesi oli ollut viileää. Täällä lämpö nousi maasta ilman, että kukaan kantoi paikalle halkoa. Pyysin naista jäämään kuvaan odottamaan kannunsa jäähtymistä. Siitä oli meille molemmille hyötyä.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://visitsofia.bg/catalog/en/discover_sofiaEN/Discover_SofiaEN.pdf"
+      ],
+      "reconstructionNotes": "Banya Bashi dates to 1576; 1913 bath and Nevsky excluded.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-south/sofia/prompt.txt",
+        "originalPromptSha256": "689f1b91664646106f4b6582455c87c94a50bc57885d299ff8fb6089cf88f87c",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-sofia-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:32:59.249Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 680603,
+        "sha256": "26d68fc28ff609aa856198a12e8a0d81f619c7ec210579a0d4ab0d8d02940f67"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-bukarest-r20260909-paper-v4",
+      "cityId": "bukarest",
+      "city": "Bukarest",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-bukarest-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bukarest-r20260909-paper-v4.jpg",
+      "sha256": "0d1c043fa97375814165c5604b059614ba0ce740984e222c8ef95a7430564220",
+      "bytes": 718497,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Bukarest, 1873. Majatalon pihassa tavara ja matkustaja lepäsivät yhdessä.",
+      "caption": "Manucin majatalon parvilta näki pihalle ja toisille parville, joten yksinäisyyttä oli tarjolla lähinnä oven sulkemisen hinnalla. Alhaalla mies oli tehnyt säkeistään vuoteen ja vartioi niitä samalla nukkumalla. Keittiön suunnasta liikkui ruokaa ja tuoksua. Kuvasin ennen alas menemistä. Pylväiden laskeminen olisi voinut odottaa iltaan, mutta en luottanut siihen, että päivällinen tekisi samoin.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://muzeulbucurestiului.ro/expozitia-tematica-hanurile-uitate-ale-bucurestilor/",
+        "https://www.hanulluimanuc.ro/"
+      ],
+      "reconstructionNotes": "Museum describes open wooden galleries, posts, broad stairs, shops and rooms around inn courts.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-south/bukarest/prompt.txt",
+        "originalPromptSha256": "aae4e9a810798cb6528ce3777afb79a886db56a29ca0d5c3e3f8f911354954ac",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-bukarest-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:33:05.367Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 718497,
+        "sha256": "0d1c043fa97375814165c5604b059614ba0ce740984e222c8ef95a7430564220"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-odessa-r20260909-paper-v4",
+      "cityId": "odessa",
+      "city": "Odessa",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-odessa-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-odessa-r20260909-paper-v4.jpg",
+      "sha256": "b9e4b3ce330402d3b7a4504c7f1bb16333076b755adad6142768650b5ed3b911",
+      "bytes": 757754,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Odessa, 1873. Portailla kuorma näytti todellisen painonsa.",
+      "caption": "Alhaalta katsottuna portaat levittävät kaupunkia sataman ylle kuin näyttämöä. Vehnäsäkkien kantajat tekevät siinä työtä, jonka ylhäällä kävelevä herra voi sivuuttaa yhdellä katseella. Minä tarvitsin pysähdyksen puolivälissä, vaikka kannoin vain omia tavaroitani. Asetin kameran niin, että kuvaan jäivät sekä leveät askelmat että kuormat niiden lähellä. Pelkkä komeus olisi kertonut tästä paikasta liian vähän.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://whc.unesco.org/document/196047",
+        "https://whc.unesco.org/en/list/1703"
+      ],
+      "reconstructionNotes": "Prymorsky Stairs completed 1837-1841; low-rise 19th-century port ensemble and grain cargo context.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-south/odessa/prompt.txt",
+        "originalPromptSha256": "2c688de7a7797ccd2bf00e225748aeaffa6d0361f8cebe5b5e2bc20dfa28f8eb",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-odessa-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:33:11.477Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 757754,
+        "sha256": "b9e4b3ce330402d3b7a4504c7f1bb16333076b755adad6142768650b5ed3b911"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-moskova-r20260909-paper-v4",
+      "cityId": "moskova",
+      "city": "Moskova",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-moskova-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-moskova-r20260909-paper-v4.jpg",
+      "sha256": "23ac8b086234601814d5d11bc2ffa19b343e3ddd6463eda4e5022c793c84ea9a",
+      "bytes": 553589,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Moskova, 1873. Suuri kello ja sen irti päässyt pala.",
+      "caption": "Kellon kyljestä puuttuva kohta on niin suuri, että sitä voisi luulla tarkoitukselliseksi oveksi. Irronnut pala seisoo vieressä todistamassa toista. Vartija kertoi painosta ja antoi minun kuvata rauhassa. Tsaarinkello on ehtinyt saada maineensa käyttämättä ääntään kertaakaan. Tämän vedoksen tekeminen sujui siksi mainiosti: kohde ei liikkunut, eikä se vaatinut ketään hiljenemään.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.kreml.ru/en-Us/visit-to-kremlin/what-to-see/tsar-kolokol/",
+        "https://kremlin-architectural-ensemble.kreml.ru/the-tsar-bell/view/"
+      ],
+      "reconstructionNotes": "Bell raised to its pedestal in 1836; 11.5-ton detached fragment shown beside the opening; Ivan the Great complex at side.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/moskova/prompt.md",
+        "originalPromptSha256": "c3040258e55ca6be4d709ed604e186e7cf433dab705ff4c910ece4e598bd505c",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-moskova-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:33:17.897Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 553589,
+        "sha256": "23ac8b086234601814d5d11bc2ffa19b343e3ddd6463eda4e5022c793c84ea9a"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-pietari-r20260909-paper-v4",
+      "cityId": "pietari",
+      "city": "Pietari",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-pietari-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pietari-r20260909-paper-v4.jpg",
+      "sha256": "eb860339dcbf2606da93b13ccdeb423c6d8e17dae68b1bc6951005cd2a5d8e4e",
+      "bytes": 538335,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Pietari, 1873. Neva ei näyttänyt kellonaikaa.",
+      "caption": "Rantakadun penkillä olisi ollut tilaa istua loppuun koko ilta, jos illalla olisi ollut selvempi loppu. Vaalea taivas jäi palatsien ikkunoihin ja joen pintaan. Päivänvarjo näytti tässä valossa tarpeelliselta vielä silloinkin, kun kello neuvoi aivan muuta. Kuvasin kaupungin ilman varsinaista yötä. Kameralle sellainen järjestely sopii hyvin; minun seuraavan aamuni voinnista en ollut yhtä varma.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.loc.gov/pictures/resource/ppmsc.03878",
+        "https://hermitagemuseum.org/panorama/pano_37/?floorNum=1&lng=en"
+      ],
+      "reconstructionNotes": "Single eastward Palace Embankment geography: Neva left, Winter Palace facade right, opposite bank deliberately featureless.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-west/pietari/prompt.md",
+        "originalPromptSha256": "f11b6e3a9dd18a53086a22165fff9dcd877a5a316215cfe923f89be2b0c73ed3",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-pietari-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:33:23.760Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 538335,
+        "sha256": "eb860339dcbf2606da93b13ccdeb423c6d8e17dae68b1bc6951005cd2a5d8e4e"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-helsinki-r20260909-paper-v4",
+      "cityId": "helsinki",
+      "city": "Helsinki",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-helsinki-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-helsinki-r20260909-paper-v4.jpg",
+      "sha256": "50343ccd0d063c094178f78d26df4402b7e42b0f585b7d4bbd3300a83858d3e8",
+      "bytes": 663922,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Helsinki, 1873. Kartta sai rannikon päälle vielä kalan.",
+      "caption": "Torikauppias painoi paperini alas ennen kuin tuuli ehti viedä mittaustyötä merelle. Valkoinen kirkko kohosi myyntipaikkojen takana, ja kala jäi kartan päälle aivan toisenlaiseksi paikannimeksi. Pyysin pitämään asetelman hetken ennallaan. Kalan tehtävä oli yksinkertainen ja onnistui täydellisesti. Kamerakin sai näin oman todistuksensa siitä, että maantiede voi hyötyä kalakaupan välineistä.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.finna.fi/Record/hkm.CCD1A6CE-FD67-4BDD-9E29-D3C71E41D098",
+        "https://www.finna.fi/Record/hkm.F2DD5045-4DE1-49AF-8418-01F6629EEBB6",
+        "https://helsingintuomiokirkko.fi/index/kirkontarina.html",
+        "https://www.hamhelsinki.fi/en/sculptures/havis-amanda-2/",
+        "https://www.hamhelsinki.fi/en/sculptures/alexander-ii/"
+      ],
+      "reconstructionNotes": "Landward Market Square geography follows Charles Riis 1870 stereograph; cathedral details follow Eugen Hoffers 1866; later Havis Amanda and Alexander II absent.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-north/helsinki/prompt.txt",
+        "originalPromptSha256": "c25e48691186cad2f6ea77dcb19ced249e43401d41cec0ba98de9d45cf670e6c",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-helsinki-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:33:30.057Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 663922,
+        "sha256": "50343ccd0d063c094178f78d26df4402b7e42b0f585b7d4bbd3300a83858d3e8"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-tampere-r20260909-paper-v4",
+      "cityId": "tampere",
+      "city": "Tampere",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-tampere-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tampere-r20260909-paper-v4.jpg",
+      "sha256": "befc56ce08b1a5ca27e2c989d199bfe8cd26f9ca3860110867c5319366aa2506",
+      "bytes": 606334,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Tampere, 1873. Katkennut lanka ja kädet, jotka osaavat jatkaa.",
+      "caption": "Tehtaan koneiden vierellä ihminen näyttää ensin pieneltä. Sitten lanka katkeaa, ja koneen koko ei auta sitä millään tavoin takaisin yhteen. Työntekijän sormet tekivät solmun ennen kuin olin kunnolla ymmärtänyt, mistä piti ottaa kiinni. Kuvasin hänet lankansa kanssa. Koskesta saa käyttövoimaa ja raudasta koneita; tämän taidon hankkimiseen täytyy ilmeisesti käyttää kokonainen ihminen.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.finna.fi/Search/Results?lookfor=Finlayson+tehdas+kehruusali&type=AllFields"
+      ],
+      "reconstructionNotes": "Pre-1882 belt-driven spinning hall in tall-window daylight; no electric lighting or modern factory features.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round5/sol-north/tampere/prompt.txt",
+        "originalPromptSha256": "c4f79f7fce07ae2b0df41cfb0735f1acac87d01f04bc22033aeaa368ef7632f6",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-tampere-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round5/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:33:37.405Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 606334,
+        "sha256": "befc56ce08b1a5ca27e2c989d199bfe8cd26f9ca3860110867c5319366aa2506"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-riika-r20260909-paper-v4",
+      "cityId": "riika",
+      "city": "Riika",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-riika-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-riika-r20260909-paper-v4.jpg",
+      "sha256": "1b41ffdf4d9afc2de9c6b267f39fe9028c14a45b4861b1cae4aa5e0a0c25ce12",
+      "bytes": 571282,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Riika, 1873. Kuoro hengitti kaupungin kokoiseksi.",
+      "caption": "Laulajien kasvot olivat erilaisia, mutta heidän seuraava hengenvetonsa kuului yhteen. Riian laulujuhlat ovat tuoneet paikalle väkeä, joka ei olisi muuten ehkä seissyt saman äänen sisällä. Pyysin pientä joukkoa pysähtymään kuvaan. Vieressäni laulanut mies ei pyyhkinyt poskeaan, enkä pyytänyt häntä tekemään sitä. Kameralla saa talteen ilmeen; siitä lähtenyt ääni täytyy muistaa itse.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.dziesmusvetki.lv/lv/zinas/pirmajiem-dziesmu-svetkiem-veltita-izstade-rlb/",
+        "https://www.dziesmusvetki.lv/en/about-the-celebration/the-song-and-dance-celebration/"
+      ],
+      "reconstructionNotes": "First festival held in Riga 26-29 June 1873 with about 1,000 singers; frame intentionally shows only a few rows.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-north/riika/prompt.txt",
+        "originalPromptSha256": "c98c688d1a5dab88b555b3a596d9b8227eb400a0365e2d48cecf9fad6eb06a7a",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-riika-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:33:43.614Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 571282,
+        "sha256": "1b41ffdf4d9afc2de9c6b267f39fe9028c14a45b4861b1cae4aa5e0a0c25ce12"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-vilna-r20260909-paper-v4",
+      "cityId": "vilna",
+      "city": "Vilna",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-vilna-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-vilna-r20260909-paper-v4.jpg",
+      "sha256": "bbc6d613a504b26f946499b66a2591a7f1fe69cf825e8b4e8650e828850a6ba7",
+      "bytes": 617121,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Vilna, 1873. Auringolla oli pilkkuja, tutkijalla teetä.",
+      "caption": "Observatorion pöydällä valokuva auringonpilkuista näytti ensi silmäyksellä vialliselta vedokselta. Vika olikin huomattavasti kauempana, jos sitä viaksi sopii kutsua. Kaukoputki odotti, että pilvet väistyisivät, ja tuoli sai sillä välin tehdä osuutensa tutkimuksesta. Ikkunan takana Vilnan tornit osoittivat samaan suuntaan eri tarkoituksissa. Kuvasin pöydän, sillä se tuntui mukavalta paikalta aloittaa taivaan selvittäminen.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.muziejus.vu.lt/en/departments/observatory-of-ideas",
+        "https://www.knygynas.vu.lt/kitos-knygos/vadovas-po-senaja-vu-astronomijos-observatorija"
+      ],
+      "reconstructionNotes": "Old observatory operated 1753-1883 and pioneered permanent sunspot photography; period instrument, plate, chair and tea shown.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-north/vilna/prompt.txt",
+        "originalPromptSha256": "3aa35277dde6a4888604edb9b49af37a319c2c29ef9e0e049d29408a01cbc56c",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-vilna-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:33:49.637Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 617121,
+        "sha256": "bbc6d613a504b26f946499b66a2591a7f1fe69cf825e8b4e8650e828850a6ba7"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-tukholma-r20260909-paper-v4",
+      "cityId": "tukholma",
+      "city": "Tukholma",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-tukholma-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tukholma-r20260909-paper-v4.jpg",
+      "sha256": "1f9b347b206601084be2d69240d731c6b705ff75167d97444a6ef38182639702",
+      "bytes": 648299,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Tukholma, 1873. Selostaja sai kyydin parhaaseen katsomoon.",
+      "caption": "Kruunajaisväen hatut muodostivat eteeni uuden kaupungin, jonka yli en nähnyt. Lapsi nousi aikuisen hartioille ja alkoi kertoa, mitä niiden takana tapahtui. Kuvasin tämän oman pienen katsomon sillä välin, kun kuningas sai varsinaisen huomion. Saarten kaupunki juhlii tänään Oskaria. Minun vedokseeni jäävät ne kaksi ihmistä, joiden avulla juhla tuli näkyväksi myös taaempana seisoville.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.kungligaslotten.se/english/list-of-swedish-monarchs/oskar-ii.html",
+        "https://www.kungligaslotten.se/vara-besoksmal/kungliga-slottet/skattkammaren.html"
+      ],
+      "reconstructionNotes": "Oscar II crowned in Stockholm Cathedral in 1873, Sweden's last coronation.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-north/tukholma/prompt.txt",
+        "originalPromptSha256": "eac771b01e6efd6c82914bcd1ffd5b52dd58376fe2426441b3046faf8814b57a",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-tukholma-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:33:55.399Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 648299,
+        "sha256": "1f9b347b206601084be2d69240d731c6b705ff75167d97444a6ef38182639702"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-oslo-r20260909-paper-v4",
+      "cityId": "oslo",
+      "city": "Oslo",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-oslo-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-oslo-r20260909-paper-v4.jpg",
+      "sha256": "256890fd6fcbe4fdda283a028e93cd739d9c73406df7fac4fcee895365339349",
+      "bytes": 754373,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Christiania, 1873. Metsä valmistautui lähtemään laivalla.",
+      "caption": "Lankut odottivat rannassa suorina pinoina, aivan kuin metsä olisi saanut ennen merimatkaa kunnollisen kasvatuksen. Sataman takana kohoavat talot näyttävät kiveltä, mutta niiden vauraus kulkee usein tätä kautta puuna. Kuvasin lastausta ennen kuin laiva peitti pinoja näkyvistä. Vedessä kellui pieni lastu. Se kertoi tuoksullaan lähtöpaikastaan tarkemmin kuin yksikään rahtipaperi, jonka olin nähnyt.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.oslobilder.no/search?page=10&query=%22havna%22"
+      ],
+      "reconstructionNotes": "Official Oslo image portal includes Christiania harbor views from 1870-1880; timber cargo and sailing vessel emphasized.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-north/oslo/prompt.txt",
+        "originalPromptSha256": "fc4337221ef8bf770e940990811a3cacf9b1119a13e72dbd059caed287060e85",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-oslo-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:34:01.569Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 754373,
+        "sha256": "256890fd6fcbe4fdda283a028e93cd739d9c73406df7fac4fcee895365339349"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-bergen-r20260909-paper-v4",
+      "cityId": "bergen",
+      "city": "Bergen",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-bergen-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260909-paper-v4.jpg",
+      "sha256": "8f941560edf447ee29ea7fb51dc50b7dbaaa95f8a0edb5e0f18541321153a26c",
+      "bytes": 714375,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Bergen, 1873. Kuiva kala, märkä vierailija.",
+      "caption": "Kauppias piti kapakalaa kädessään sellaisella varmuudella, jota näkee tavallisesti arvopaperien omistajilla. Bryggenin puuvarastot ovat kasvaneet tämän kaupan ympärille. Katon reuna suojasi kalaa ja myyjää, mutta kamerani jalat joutuivat sadeveden puolelle. Odotin hetken, että mies sai tavaransa hyvään asentoon. Kalalla ei näyttänyt olevan enää kiirettä mihinkään.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"
+      ],
+      "reconstructionNotes": "Bryggen timber warehouses and centuries-old stockfish trade grounded in Hanseatic Museum source.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-north/bergen/prompt.txt",
+        "originalPromptSha256": "96a2f4eb02e24c9710be40221cf23551d17a47d712a989575889576e57185dba",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-bergen-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:34:07.489Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 714375,
+        "sha256": "8f941560edf447ee29ea7fb51dc50b7dbaaa95f8a0edb5e0f18541321153a26c"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-kobenhavn-r20260909-paper-v4",
+      "cityId": "kobenhavn",
+      "city": "Kööpenhamina",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-kobenhavn-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kobenhavn-r20260909-paper-v4.jpg",
+      "sha256": "11402c573860ea6849049ddd0d2d041a594eaa3e7c3c8d05932bae0fb4fef452",
+      "bytes": 815565,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Kööpenhamina, 1873. Orkesteri sai odottaa omassa tahdissaan.",
+      "caption": "Tivolin vanha pari liikkui vähän kerrallaan, niin että katsomiseen jäi aikaa. Puutarhan lamput syttyivät, ja niiden valo löysi lammesta toisen rivin. Pyysin heitä pysähtymään hetkeksi vedosta varten. Se ei näyttänyt muuttavan tanssia kovin paljon. Kaupungissa on paljon rakennettua huvitusta, mutta tähän riittivät kaksi kättä, tuttu askel ja haluttomuus kiirehtiä.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens"
+      ],
+      "reconstructionNotes": "Tivoli avattiin 1843. Nykyinen Peacock/Pantomime Theatre valmistui vasta 1874 eikä näy. Nykyinen Tivoli Lake muotoiltiin 1887 vanhasta vallihaudasta, joten kuvassa näkyy vain kapea vanhan vallihaudan reuna.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-north/kobenhavn/prompt.txt",
+        "originalPromptSha256": "63e586fd0e047f3c0e98a07b4aeca392cc9014aa837060ad8660c5ea88ca4c7f",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-kobenhavn-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:34:13.687Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 815565,
+        "sha256": "11402c573860ea6849049ddd0d2d041a594eaa3e7c3c8d05932bae0fb4fef452"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-lappi-r20260909-paper-v4",
+      "cityId": "lappi",
+      "city": "Rovaniemi",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-lappi-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lappi-r20260909-paper-v4.jpg",
+      "sha256": "6ea4e301acf72241adab27536312e22cd9417fa89f82e128ab880048710ec9eb",
+      "bytes": 738147,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Rovaniemi, 1873. Matkatavara sidottiin tien sijasta veneeseen.",
+      "caption": "Veneen kuorma sidottiin matalaksi, jotta se kulkisi vakaasti joella. Rannassa odottava nainen katseli seuraavaa matkaa yläjuoksun suuntaan. Ounasjoen ja Kemijoen seudulla veden ääreen asettunut talo on samalla reitin varrella. Kuvasin veneen ennen lähtöä ja jätin talon savun mukaan. Se kertoi käytössä olevasta paikasta, mitä pelkkä pieni neliö kartassa ei osaa sanoa.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://historia.rovaniemi.fi/historia/roieng24-27.pdf",
+        "https://www.finna.fi/Record/museovirasto.56B7F05404DF17550CEC4C1D3FD888DD",
+        "https://lapinkavijat.rovaniemi.fi/lapinportti/concorde.htm"
+      ],
+      "reconstructionNotes": "Rovaniemen historia-aineisto vahvistaa 1840–1870-lukujen saha- ja uittotalouden sekä jokien roolin kulkuväylinä; Finna-kuva ankkuroi Rovaniemen ja Kemijoen maiseman.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-north/lappi/prompt.txt",
+        "originalPromptSha256": "1d8ebc1a93a943026dfb175788b511b669fa1318c9fe36bc37e139e0696e9a54",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-lappi-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:34:19.667Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 738147,
+        "sha256": "6ea4e301acf72241adab27536312e22cd9417fa89f82e128ab880048710ec9eb"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-tromssa-r20260909-paper-v4",
+      "cityId": "tromssa",
+      "city": "Tromssa",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-tromssa-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tromssa-r20260909-paper-v4.jpg",
+      "sha256": "bda006756bc34bd4103f0fe5a4a713b07c84362e618525fc08d175c7195f3d4d",
+      "bytes": 614779,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Tromssa, 1873. Pieni simpukka ja suuri kysymys samassa huoneessa.",
+      "caption": "Museon pöydällä simpukka ja luu saivat paikan vierekkäin ilman, että suurempi olisi vienyt pienemmältä arvoa. Tromssan satamasta tuodaan näytteitä pohjoisen meriltä; osa tavarasta alkaa tuottaa kysymyksiä siinä missä muu lasti rahaa. Ikkunan mastot muistuttivat, ettei keräämiseen tarvita pelkkää kaappia vaan myös matka. Kuvasin pöydän sellaisenaan. Sen järjestys oli minusta hyvä alku museolle.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://en.uit.no/om/historie",
+        "https://uit.no/ressurs/uit/mediebok/Labyrint0412/Labyrint_2012-04_web.pdf",
+        "https://uit.no/tmu/samlinger/samling?p_document_id=667875"
+      ],
+      "reconstructionNotes": "UiT vahvistaa museon perustamisen lokakuussa 1872 ja sen toiminnan helmikuusta 1873 baptistikirkon ullakolla Strandskilletissä; oma rakennus tuli vasta 1894.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/sol-north/tromssa/prompt.txt",
+        "originalPromptSha256": "50fd6fa60d7eb7cc56c42c568eb602953ec7e3a3dadc6fc24a5d33f738d711b4",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-tromssa-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round6/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:34:25.781Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 614779,
+        "sha256": "bda006756bc34bd4103f0fe5a4a713b07c84362e618525fc08d175c7195f3d4d"
+      }
+    },
+    {
+      "id": "matkakirja-eurooppa-1873-islanti-r20260909-paper-v4",
+      "cityId": "islanti",
+      "city": "Islanti",
+      "order": 1,
+      "fileName": "matkakirja-eurooppa-1873-islanti-r20260909-paper-v4.jpg",
+      "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-islanti-r20260909-paper-v4.jpg",
+      "sha256": "96ad99971a4ad7f243d4a725cc550c17e3ad315ae6c0f2bea1b2425177a69b20",
+      "bytes": 652528,
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "mime": "image/jpeg",
+      "iccProfile": "sRGB",
+      "captionShort": "Reykjavik, 1873. Pyykkipäivä sai lämmön maasta.",
+      "caption": "Naiset pitivät pyykin, saippuan ja oman työnsä järjestyksessä samalla kun maa lämmitti veden. Lähteen höyry liikkui tuulen mukana niin, että osa maisemasta katosi hetkeksi näkyvistä. Reykjavikin pienet talot jäivät kauemmas, ja pesupaikka näytti tavalliselta osalta niiden arkea. Asetin kameran sivuun roiskeista. Minulle tämä oli ihme; kuvassa oleville naisille se oli tehtävä, joka piti saada valmiiksi.",
+      "sourceLine": "Matkakirjan havainnekuva",
+      "sources": [
+        "https://borgarsogusafn.is/en/exhibitions/the-washerwomen-s-walk-a-stroll-into-history"
+      ],
+      "reconstructionNotes": "Reykjavik Museum of Photography documents washerwomen at Laugardalur's hot springs; exact people and viewpoint are reconstructed.",
+      "promptProvenance": {
+        "originalPromptPath": "output/europe-travelbook-1873-20260909/aged-paper-round5/sol-north/islanti/prompt.txt",
+        "originalPromptSha256": "d12a1bc1de5f7dcabf5e13942387e9c6bbeb6f43a645b2fd0fcbcbffdcf50fd6",
+        "masterEdition": "EUROOPPA-KUVAOHJAUS-20260909-V1.4",
+        "masterAssetId": "matkakirja-eurooppa-1873-islanti-r20260909-paper-v4",
+        "productionManifestPath": "output/europe-travelbook-1873-20260909/aged-paper-round5/verified-production-manifest.json"
+      },
+      "existingAssetDecision": "retain",
+      "newGeneration": false,
+      "publicVerification": {
+        "checkedAt": "2026-09-10T18:34:31.587Z",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "bytes": 652528,
+        "sha256": "96ad99971a4ad7f243d4a725cc550c17e3ad315ae6c0f2bea1b2425177a69b20"
+      }
+    }
+  ],
+  "gameIntegrationVerified": false,
+  "createdAt": "2026-09-10T18:34:57.068786+00:00",
+  "publiclyVerifiedCount": 34,
+  "mediaDeliveryComplete": true,
+  "integrationNotes": "Matkakirjan tekstit owns the 34 game bindings and any owner-authorized caption shortening. Original V1.4 captions are preserved in this delivery for comparison. The map caption limit remains 100 characters."
+}
