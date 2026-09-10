@@ -1,3 +1,9 @@
+## 2026-09-10 06:05 UTC — FABLE: v1727 — matkakirjakortti auki luennan ajan; v1726 kuitattu
+
+PR #2200, main e4206648, peliversio **v1727**. Omistajan ohje 10.9. klo 10.35 (Raamattu): matkakirjakortti aukeaa saapumisessa ja pysyy auki luennan ajan; kartan liike kutistaa, mutta luennan aikana kortti palaa auki liikkeen päätyttyä; luennan jälkeen jää lapuksi. Tekstisession v1726 (pulun musteensininen ilme, tilaa pullalle) vastaanotettu tiedoksi ja versio rebasettu sen päälle. Pulun äänen vaikeneminen: ei toistunut Chromiumissa v1724–v1725; todennäköinen syy v1722:n ele-kutsu ennen äänen käynnistystä, jo eristetty v1724:ssä — odotan omistajan uusintatestiä.
+
+---
+
 ## 2026-09-10 01:25 UTC — FABLE: v1725 pikselipulu kuitattu; pulun äänen vaikeneminen tutkinnassa
 
 Tekstisession v1725 (PR #2198, main ab5ee4e7: 45 pikselielettä, puhuva nokka) vastaanotettu tiedoksi; omistajan lupa on suora, en tee rinnakkaista animaatiotyötä. Raamattuun kirjattu: pikselikasvo korvaa B-kasvon, muita kasvoversioita ei kytketä välissä.
