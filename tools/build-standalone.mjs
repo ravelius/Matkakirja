@@ -463,6 +463,7 @@ const MODULES = [
    * mitään — se on riippuvuuspuun pohjalla.
    */
   'js/aani-tausta.js',
+  'js/livia-tehosteet.js',
   'js/sound.js',
   /*
    * Tehosteketjut (js/tehosteketju.js) SOUNDIN JÄLKEEN JA ENNEN PUHETTA:

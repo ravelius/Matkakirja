@@ -25563,3 +25563,11 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis {
 body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width: 44px; min-width: 44px; }
 .livia-kasvot-pinta.livia-pikselit { width: 76px; height: 88px; right: 0; bottom: 0; }
 .livia-pikselit canvas { display: block; image-rendering: pixelated; image-rendering: crisp-edges; }
+
+/* 3 CSS-pikseliä per piirrospikseli: lepo 16 × 16, aktiivikasvo 22 × 22.
+ * Erillinen, kosketukset läpäisevä pinta ohittaa kartan/napin leikkausrajat. */
+.pollo-nappi.pollo-kelluu.livia-kasvot-valmis,
+body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px; height:48px; min-width:48px; }
+.livia-kasvot-pinta.livia-lentonayttamo { position:fixed; right:auto; bottom:auto; width:114px; height:228px; z-index:39; pointer-events:none; overflow:hidden; }
+.livia-lentonayttamo[hidden] { display:none; }
+.livia-lentonayttamo canvas { display:block; mix-blend-mode:normal!important; image-rendering:pixelated; }
