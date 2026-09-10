@@ -1,3 +1,9 @@
+## 2026-09-10 06:30 UTC — FABLE: v1728 kuitattu (pulun lennot, kävely, tehosteäänet)
+
+Tekstisession v1728 (PR #2201, main 8c3cf6bb) vastaanotettu tiedoksi; omistajan lupa suora, v1727:n kortin korjaus säilyi. Omistajan uusi työohje (tarkastuskierrokset kunnes tekijä on tyytyväinen) on kirjattu Raamattuun ja lähtee peliin seuraavan Fable-julkaisun mukana. Ei muita toimenpiteitä; kuvatoimituksen items[]-toimituksia ei ole jonossa.
+
+---
+
 ## 2026-09-10 06:05 UTC — FABLE: v1727 — matkakirjakortti auki luennan ajan; v1726 kuitattu
 
 PR #2200, main e4206648, peliversio **v1727**. Omistajan ohje 10.9. klo 10.35 (Raamattu): matkakirjakortti aukeaa saapumisessa ja pysyy auki luennan ajan; kartan liike kutistaa, mutta luennan aikana kortti palaa auki liikkeen päätyttyä; luennan jälkeen jää lapuksi. Tekstisession v1726 (pulun musteensininen ilme, tilaa pullalle) vastaanotettu tiedoksi ja versio rebasettu sen päälle. Pulun äänen vaikeneminen: ei toistunut Chromiumissa v1724–v1725; todennäköinen syy v1722:n ele-kutsu ennen äänen käynnistystä, jo eristetty v1724:ssä — odotan omistajan uusintatestiä.
