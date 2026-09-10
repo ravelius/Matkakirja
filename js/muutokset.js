@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1745, teksti: 'Pulu reagoi chatin ja mikrofonin virhetilanteisiin' },
   { v: 1744, teksti: 'Chatin sulku peruu kysymyksen ja Pulun odotuksen' },
   { v: 1743, teksti: 'Pulun kuuntelu säilyy odotuksen ja taukojen yli' },
   { v: 1742, teksti: 'Linssin avaus, iPad-kuva 1,5×, kortin kuvateksti kiinni' },

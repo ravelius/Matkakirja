@@ -137,6 +137,27 @@ test('puhe ja nostokortti palauttavat yhä soivan luennan kuuntelun',t=>{
  c.tilanne('narrationEnd',{tunnus:a});e.tick(40);assert.equal(e.raf.size,0);
 });
 
+test('virhe ohittaa avauksen aikarajan, muttei odotusta, puhetta tai luentaa',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const error={ele:'confused',voimakkuus:.4},w={},a={},speech={};
+ c.tilanne('chatOpen');assert.equal(c.tilanne('error',error),true);
+ c.tilanne('waiting',{tunnus:w});assert.equal(c.tilanne('error',error),false);
+ c.tilanne('waitingEnd',{tunnus:w});assert.equal(c.tilanne('error',error),true);
+ c.tilanne('narration',{tunnus:a,ele:'lookUp'});assert.equal(c.tilanne('error',error),false);
+ c.tilanne('narrationEnd',{tunnus:a});ilmoitaLivianKasvopuhe(speech,true);
+ assert.equal(c.tilanne('error',error),false);ilmoitaLivianKasvopuhe(speech,false);
+ assert.equal(c.tilanne('error',error),true);
+});
+test('poistuneen odotusrivin viive ei estä tai nollaa uutta virhe-elettä',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ e.pollo.auki=true;e.notify(e.button);
+ const row=new e.El();row.className='pollo-odottaa';row.textContent='Tarkistan tiedon';e.virta.append(row);e.notify(e.virta);
+ row.remove(); // DOM muuttui, mutta sen observer ei ole vielä ajossa.
+ assert.equal(c.tilanne('error',{ele:'confused',voimakkuus:.5}),true);
+ e.tick(400);const pose=e.doc.body.children[0].children[0].innerHTML;
+ e.notify(e.virta);assert.equal(e.doc.body.children[0].children[0].innerHTML,pose);
+ assert.ok(e.raf.size,'virheen ele jatkuu odotusrivin siivouksen yli');
+});
 test('tilannereaktiot eivät katkaise saapumista, puhetta tai jonota vanhoja kuvia',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);
  assert.equal(c.tilanne('photo'),false,'pöllön vaihto saa loppua');e.tick(5000);

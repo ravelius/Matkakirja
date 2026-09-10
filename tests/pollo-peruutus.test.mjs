@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {Pollo} from '../js/pollo.js';
 import {kuunteleLivianTilanteita} from '../js/livia-tilanteet.js';
+import {sfx} from '../js/sound.js';
 
 const viive=()=>{let resolve;const promise=new Promise(r=>resolve=r);return {promise,resolve};};
 const asiakas=()=>Object.assign(Object.create(Pollo.prototype),{palvelin:'https://example.invalid',otsakkeet:()=>({})});
@@ -56,9 +57,12 @@ test('tavallinen JSON ja kokonainen SSE toimivat ilman peruutussignaalia',async 
 
 function chat(t){
  t.mock.timers.enable({apis:['setTimeout']});
+ t.mock.method(sfx,'play',()=>{});
  const p=asiakas(),rows=[];p.rows=rows;
  Object.assign(p,{kentta:{},saneluTila:{},ehdotukset:{replaceChildren(){}},kaytetytTarjonnat:new Set(),virta:{querySelectorAll:()=>[]},historia:[],paneeli:{classList:{remove(){}}},nappi:{setAttribute(){},classList:{remove(){}}},aaniPaalla:false,auki:true,naputusStop:0});
- for(const key of ['poistaValmiit','suljeKuvapopup','nollaaTyhjaTila','viritaTyhjaTila','ankkuroiYlos','lopetaSanelu','peruLuenta','merkitseAuki','oikaiseNakyma','paivitaTyhjaTila','aloitaNaputus'])p[key]=()=>{};
+ for(const key of ['poistaValmiit','suljeKuvapopup','nollaaTyhjaTila','viritaTyhjaTila','ankkuroiYlos','lopetaSanelu','peruLuenta','merkitseAuki','oikaiseNakyma','paivitaTyhjaTila','aloitaNaputus','korostaLinkit','naytaJatkot','liitaVastausKuva','liitaPoimintaNapit','lueVastaus','suljeMikkiKanava','purkaSaneluKuulijat','merkitseMikki'])p[key]=()=>{};
+ p.sailytaVieritys=fn=>fn();p.taytaVastaus=(row,text)=>{row.textContent=text;};p.poimiLinkit=()=>[];p.paataLuenta=()=>false;
+ p.naytaUusinta=()=>{p.uusinnat=(p.uusinnat||0)+1;};p.vaihdaTilaan=tila=>{p.tila=tila;};p.keraaMikkiDiagnoosi=async()=> 'koe';
  p.kysymysAvain=()=>'';p.konteksti=()=>'';p.naytaPaikkaKartalla=()=>null;
  p.asetaKesken=value=>{p.kesken=value;};p.lopetaNaputus=()=>{p.naputusStop++;};p.syotaLuennalle=()=>false;
  p.lisaaViesti=(laji,text)=>{const row={laji,textContent:text,isConnected:true,remove(){this.isConnected=false;}};rows.push(row);return row;};
@@ -86,4 +90,44 @@ test('JSON-varapolun peruutus ei kirjoita myöhäistä vastausta',async t=>{
  const pending=p.kysy('Kysymys');p.sulje();assert.equal(signal.aborted,true);
  wait.resolve({vastaus:'Myöhäinen'});await pending;
  assert.deepEqual(p.historia,[]);assert.equal(p.rows.some(x=>x.laji==='pollo'),false);
+});
+
+test('chatin virhepolut lähettävät yhden rekisterin tagin odotuksen päätyttyä',async t=>{
+ const p=chat(t),events=tapahtumat(t);let reply;
+ t.mock.method(globalThis,'fetch',()=>reply());
+ for(const [response,id,power,mood,retry] of [
+  [()=>Promise.reject(new Error('verkko')),'chat.virhe',.5,'hammentynyt',true],
+  [()=>Response.json({virhe:'paivaraja'},{status:429}),'chat.virhe.kayttoraja',.4,'vakava',false],
+  [()=>Response.json({virhe:'kuukausiraja'},{status:429}),'chat.virhe.kayttoraja',.4,'vakava',false],
+  [()=>Response.json({vastaus:''}),'chat.vastaus.varateksti',.3,'hammentynyt',true],
+  [()=>Response.json({vastaus:'Varateksti',syy:'kieltaytyi'}),'chat.vastaus.varateksti',.3,'hammentynyt',false],
+  [()=>new Response(sse('Osittainen'),{headers:{'content-type':'text/event-stream'}}),'chat.vastaus.katkesi',.4,'hammentynyt',true],
+ ]){
+  reply=response;events.length=0;p.uusinnat=0;await p.kysy('Koekysymys');
+  assert.deepEqual(events.map(x=>x.laji),['waiting','waitingEnd','error']);
+  assert.equal(events[2].tilanneId,id);assert.equal(events[2].voimakkuus,power);assert.equal(events[2].tunne,mood);
+  assert.equal(p.uusinnat>0,retry);assert.deepEqual(p.historia,[]);assert.equal(p.kesken,false);
+ }
+ reply=()=>Response.json({vastaus:'Aito vastaus'});events.length=0;await p.kysy('Onnistuva kysymys');
+ assert.deepEqual(events.map(x=>x.laji),['waiting','waitingEnd']);assert.equal(p.historia.length,2);
+});
+
+test('mikrofonin lupa, toinen kaappausvirhe ja hiljaisuus saavat eri voimakkuudet',async t=>{
+ const p=chat(t),events=tapahtumat(t);
+ p.saneluVirhe('audio-capture');assert.equal(events.length,0,'ensimmäinen automaattinen uusinta on hiljainen');
+ p.saneluVirhe('audio-capture');assert.equal(events.at(-1).tilanneId,'mikrofoni.virhe.audiocapture');assert.equal(events.at(-1).voimakkuus,.45);
+ p.saneluVirhe('not-allowed');assert.equal(events.at(-1).tilanneId,'mikrofoni.virhe.lupa');assert.equal(events.at(-1).voimakkuus,.5);
+ p.saneluVirhe('no-speech');assert.equal(events.at(-1).tilanneId,'mikrofoni.eikuullut');assert.equal(events.at(-1).voimakkuus,.3);
+ const count=events.length;p.saneluVirhe('aborted');assert.equal(events.length,count);
+ p.auki=false;p.saneluVirhe('network');assert.equal(events.length,count,'suljettuun chattiin ei myöhäistä elettä');
+ await Promise.resolve();
+});
+
+test('natiivisanelun epäämä lupa ja tyhjä lopputulos käyttävät samoja tageja',async t=>{
+ const p=chat(t),events=tapahtumat(t),listeners=new Map();p.saneluKuulijat=[];
+ await p.aloitaNatiiviSanelu({sanelu:{luvat:async()=>({kunnossa:false})}});
+ assert.equal(events.at(-1).tilanneId,'mikrofoni.virhe.lupa');events.length=0;
+ const native={sanelu:{luvat:async()=>({kunnossa:true}),aloita:async()=>{}},kuuntele:(key,fn)=>{listeners.set(key,fn);return()=>listeners.delete(key);}};
+ await p.aloitaNatiiviSanelu(native);listeners.get('sanelu-valmis')({teksti:''});
+ assert.equal(events.length,1);assert.equal(events[0].tilanneId,'mikrofoni.eikuullut');
 });
