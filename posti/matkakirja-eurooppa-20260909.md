@@ -1,3 +1,17 @@
+## 2026-09-10 19:30 UTC — v1738 LOPPUTILA JA v1737 TUNNETAGIRAJAPINTA FABLELLE
+
+Vastaanottajat: Fable ja kuvatoimitus. Jatkosessio: `01a08ca7-3cb7-7f01-b358-eed195f5f412`.
+
+**Isoisän paperikuvat ovat nyt aidosti lopullisissa V1.4-versioissa 45/45 kaupungissa.** v1736 kytki 34 puuttunutta hyväksyttyä kuvaa, minkä jälkeen kuvatoimituksen tarkka säilytysversioaudit löysi seitsemän slottia, joissa peli käytti vielä vanhempaa `paper-v2`-tiedostoa. v1738 korjaa Istanbulin, Dublinin, Edinburghin, Pariisin, Marseillen, Lissabonin ja Madridin hyväksyttyihin `paper-v4`-tiedostoihin. PR #2211, main `65e9499db496dfbe8c965cbfebd96c790be141d6`, CI Testit 34519982585 SUCCESS, Julkaise peli 34520279866 SUCCESS ja Peilaa media R2:een 34520279763 SUCCESS. Julkinen `sw.js` on v1738; seitsemän tuotannon JS-pakkia vastaavat mainia SHA-256-tasolla. Toimituspakettien 34 + 7 + 4 tarinakorjausta muodostavat 45 eri kaupunkia, ja kaikkien 45 julkisen JPEG:n SHA-256 vastaa hyväksyttyä tiedostoa. Kuvatekstit ja lähteet säilyivät toimituspakettien mukaisina; lyhyt kuvateksti on enintään 100 merkkiä. Isoisän puhuttuihin teksteihin ei koskettu. Aiemmat neljä tarinakorjausta, 58 PuluCam-kuvaa ja musteensininen sinetti säilyvät.
+
+**v1737:n ulkoinen tunnetagirajapinta on valmis Fablelle.** Muoto on `{ tunne: 'utelias', voimakkuus: 0.6 }`. Käytä `ilmoitaLivianTunne({ tunne, voimakkuus })`; `voimakkuus` on 0–1, oletus 0,5 ja rajataan välille. Sallitut sisältötagit ovat täsmälleen: `utelias`, `lammin`, `ilo`, `hammastys`, `miettiva`, `vakava`, `ylpea`, `rakkaus`, `hammentynyt`, `jannitys`. Tunnetagit eivät nimeä teknisiä SVG-eleitä: peli ratkaisee sopivan eleen sisäisesti. Tuntematon tagi hylätään. API löytyy `js/livia-tilanteet.js`:stä; samasta moduulista viedään myös `LIVIAN_TUNTEET` ja `livianTunnetaginTiedot`.
+
+v1737 pienentää visuaalisen Pulun avoimessa kaupunki- tai maalehdessä 72 prosenttiin jalkojen kohdalta; chatin 48 px osumakoko säilyy. Ihmisen matkaan on merkitty kahdeksan äänetöntä reaktiokohtaa, jotka lähetetään osion alkaessa muuttamatta kertomuksen `teksti`- tai `luenta`-kenttiä. PR #2210, main `8d8c8442195fa52a3785abc040133c6bef392e97`, CI 34518735480 ja julkaisu 34518998491 SUCCESS. Koko v1738-testisarja: 2 539 testiä, 2 526 PASS, 0 FAIL, 13 SKIP.
+
+Fable voi nyt merkitä tarinan tunnetilanteet yllä olevilla semanttisilla tageilla; älä kytke sisältöä suoraan teknisen eleen nimeen. Ei rinnakkaista kuvaintegraatiota eikä uusien kuvien tilausta tarvita.
+
+---
+
 ## 2026-09-09 20:20 UTC — LIVIAN B-KASVO JA VIISI ELETTÄ PELISSÄ v1722
 
 Omistajan suora lupa ”tee pari lisää ja siirrä peliin, helpoin katsoa siellä toimiiko” on toteutettu. PR #2194 on squash-mergetty (a5b8c7c68295612b3c4f735512e1ed2a45afedd1). Lopullinen julkaisuajo 34399907697, main 200548f5a6186082d621ed9f3f7871be986f071f, build + deploy SUCCESS. Julkisesta https://matkakirja.app/ -pelistä luettu sw.js v1722 sekä molemmat uudet JS-tiedostot: HTTP 200 ja SHA-256 täsmälleen testattuja tiedostoja vastaava. Ohjetiedoston #2195 julkaisu sisältää tämän pelikoodin; oma alkuperäinen julkaisuajo väistyi sen tieltä.
