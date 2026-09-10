@@ -16,7 +16,7 @@ function cancelAll(){all=false;$('all').setAttribute('aria-pressed','false');}
 function run(){
  if(document.hidden||reduced.matches)return;
  stop();playing=true;$('pause').textContent='Pysäytä';const start=performance.now(),from=phase,duration=current().duration*($('slow').checked?2.5:1);
- const tick=now=>{phase=Math.min(1,from+(now-start)/duration);if(now-last>=30||phase>=1){paint();last=now;}if(phase<1)raf=requestAnimationFrame(tick);else{stop();if(all){timer=setTimeout(()=>{const i=LIVIA_SVG_ELEET.findIndex(e=>e.id===selected);if(i===LIVIA_SVG_ELEET.length-1){cancelAll();$('description').textContent='Kaikki 51 elettä näytetty.';}else choose(LIVIA_SVG_ELEET[i+1].id);},450);}}};
+ const tick=now=>{phase=Math.min(1,from+(now-start)/duration);if(now-last>=30||phase>=1){paint();last=now;}if(phase<1)raf=requestAnimationFrame(tick);else{stop();if(all){timer=setTimeout(()=>{const i=LIVIA_SVG_ELEET.findIndex(e=>e.id===selected);if(i===LIVIA_SVG_ELEET.length-1){cancelAll();$('description').textContent=`Kaikki ${LIVIA_SVG_ELEET.length} elettä näytetty.`;}else choose(LIVIA_SVG_ELEET[i+1].id);},450);}}};
  raf=requestAnimationFrame(tick);
 }
 function choose(id){stop();selected=id;$('gesture').value=id;strength=livianEleenVoima(id);$('strength').value=Math.round(strength*100);phase=reduced.matches?.45:0;$('description').textContent=current().label;paint();run();}

@@ -1,19 +1,26 @@
 /* Kokonainen Livia: sama eleaikajana, optinen lähestyminen ja siipien eleet. */
 import {LIVIA_PIX_ELEET,livianPikseliAsento} from './livia-pikselit.js';
 import {livianSvgPaa} from './livia-svg-paa.js';
-export const LIVIA_SVG_ELEET=LIVIA_PIX_ELEET;
+export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
+ ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
 const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
 const lvEase=n=>{n=lvClamp(n);return n*n*(3-2*n);};
 const lvGate=p=>lvEase((p-.06)/.18)*(1-lvEase((p-.79)/.18));
 const lvRound=n=>Math.round(n*1000)/1000;
-const lvEmotion={shock:1,embarrassed:.6,angry:.9,bored:.3,puff:.72,manic:1,expert:.65,disbelief:.8,confused:.55,happy:.65,love:.65,facepalm:.6,doubleTake:.75,bread:.85};
+const lvEmotion={shock:1,embarrassed:.6,angry:.9,bored:.3,puff:.72,manic:1,expert:.65,disbelief:.8,confused:.55,happy:.65,smile:.35,grin:.6,wink:.3,welcome:.35,present:.5,glasses:.38,love:.65,facepalm:.6,doubleTake:.75,bread:.85};
 export function livianEleenVoima(id,text='') {
  let strength=lvEmotion[id]??.35;
  if(/!{2,}|aivan mahdoton|todellakaan|kääk!/iu.test(text))strength+=.15;
  return lvClamp(strength);
 }
 export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
- return {...livianPikseliAsento(id,p),ele:id,p:lvClamp(p),voimakkuus:lvClamp(voimakkuus)};
+ const s={...livianPikseliAsento(id,p),ele:id,p:lvClamp(p),voimakkuus:lvClamp(voimakkuus)};
+ if(p>.08&&p<.94){
+  if(['smile','grin','wink','welcome','present'].includes(id))s.frame=id==='welcome'||id==='present'?'smile':id;
+  if(id==='glasses'){s.frame=p<.24?'down':'smug';s.glasses=lvEase((p-.12)/.20)*(1-lvEase((p-.78)/.16));}
+  if(id==='welcome')s.tilt=Math.sin(p*Math.PI*3)*.4;
+ }
+ return s;
 }
 export function livianSvgMalli(s,{right=0}={}) {
  const id=s.ele||'',p=lvClamp(s.p??0),strength=lvClamp(s.voimakkuus??livianEleenVoima(id));
@@ -43,7 +50,8 @@ export function livianSvgMalli(s,{right=0}={}) {
   if(s.frame==='wing')m.wing='shade';
   else if(s.frame==='cover')m.wing='cover';
   else if(s.frame==='preen')m.wing='preen';
-  else if(id==='expert'&&gate>.01)m.wing='point';
+  else if(['expert','present','welcome'].includes(id)&&gate>.01)m.wing=id==='welcome'?'shrug':'point';
+  else if(id==='glasses'&&(p<.34||p>.76)&&gate>.01)m.wing='shy';
   else if(id==='angry'&&gate>.01)m.wing='spread';
   else if(['disbelief','confused'].includes(id)&&gate>.01)m.wing='shrug';
   else if(['embarrassed','facepalm'].includes(id)&&gate>.01)m.wing='shy';
@@ -110,7 +118,7 @@ export function livianSvgKuva(s,{right=0,prefix='livia'}={}) {
  const m=livianSvgMalli(s,{right}),width=152+right;
  // The contact shadow belongs to the ground, not to the leaning or flying body.
  const contact=m.visible&&!s.flight&&!s.line&&m.y<=304?lvClamp((m.y-290)/12):0;
- const shadow=contact?`<defs><radialGradient id="${prefix}ground"><stop stop-color="#635b4e" stop-opacity=".32"/><stop offset=".55" stop-color="#635b4e" stop-opacity=".18"/><stop offset="1" stop-color="#635b4e" stop-opacity="0"/></radialGradient></defs><ellipse data-part="ground-shadow" cx="${lvRound(m.x)}" cy="301.8" rx="16" ry="2" fill="url(#${prefix}ground)" opacity="${lvRound(contact)}"/>`:'';
+ const shadow=contact?`<defs><radialGradient id="${prefix}ground"><stop stop-color="#635b4e" stop-opacity=".58"/><stop offset=".55" stop-color="#635b4e" stop-opacity=".32"/><stop offset="1" stop-color="#635b4e" stop-opacity="0"/></radialGradient></defs><ellipse data-part="ground-shadow" cx="${lvRound(m.x)}" cy="301" rx="19" ry="2.8" fill="url(#${prefix}ground)" opacity="${lvRound(contact)}"/>`:'';
  let markup=m.visible?shadow+lvBird(s,m,prefix)+lvProps(s,m,prefix):'';
  if(s.owlX!==null&&s.owlX!==undefined){const ox=128+(right+80)*s.owlX/24;markup+=`<g transform="translate(${ox-14} 267)" fill="#73654f"><path d="M0 3L4-3L11 2L20-3L23 3V23Q12 35 0 23Z"/><circle cx="7" cy="10" r="5" fill="#e8ddc4"/><circle cx="17" cy="10" r="5" fill="#e8ddc4"/><circle cx="7" cy="10" r="2"/><circle cx="17" cy="10" r="2"/><path d="M9 15h6l-3 5Z" fill="#e8ddc4"/></g>`;}
  if(s.line)markup+=`<path d="M94 303H${Math.min(width,152)}" stroke="#988d79" stroke-width="1.3" stroke-linecap="round"/>`;

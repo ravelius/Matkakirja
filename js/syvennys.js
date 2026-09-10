@@ -1,3 +1,4 @@
+import { merkitseLivianNosto } from './livia-tilanteet.js';
 /*
  * SYVENNYSTARINAT KARTALLA — fokusvirran täkytarinat kohdemerkkeinä.
  *
@@ -194,6 +195,7 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
 
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
+  merkitseLivianNosto(kerros,{...taky,symboli:tiedot?.symboli});
   document.body.appendChild(kerros);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele tarina' });

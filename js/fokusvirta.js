@@ -1,3 +1,4 @@
+import { ilmoitaLivianTilanne } from './livia-tilanteet.js';
 /*
  * FOKUSMOODIN ANNOSTELUVIRTA — kaupungin esittely kortteina kartan päällä.
  *
@@ -2148,6 +2149,7 @@ export function naytaPulunKuvapakka(ui, city) {
      * havainnekuvaselitys kuuluu vain avattuun kuvaan.
      */
     kuvateksti: (k) => {
+      if(k&&k!==pohjakuva)ilmoitaLivianTilanne('photo',{cityId:city.id,index:kuvat.indexOf(k)});
       // Paneelissa on täsmälleen yksi kuvaselite (kuvallinen ja
       // pohjaton paneeli rakennetaan samasta kohdasta), joten yhden
       // luokan valitsin riittää eikä tarvitse jälkeläisketjua.

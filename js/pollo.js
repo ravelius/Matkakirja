@@ -5677,6 +5677,7 @@ class Pollo {
        * vastaus entiseen tapaan.
        */
       if (!this.paataLuenta(kertyma)) this.lueVastaus(puhdas);
+      if(!varateksti&&!tulos?.katkesi)this.kasvoEleet?.tilanne('answer',{teksti:puhdas});
       /*
        * HISTORIAAN VAIN AITO VASTAUS (omistajan vikailmoitus 6.9.2026).
        *
@@ -5764,6 +5765,7 @@ class Pollo {
    */
   merkitseMikki(kuuntelee) {
     const paalla = Boolean(kuuntelee);
+    if(paalla&&!this.mikki.classList.contains('kuuntelee'))this.kasvoEleet?.tilanne('microphone');
     /*
      * SANELUN LOPPU JOHTAA NÄKYMÄN GEOMETRIAN UUDELLEEN (18.8.2026,
      * kartan tilaperheen kolmas kierros — omistajan kaappauksessa

@@ -607,6 +607,7 @@ const MODULES = [
   'js/nahtavyydet.js',
   'js/opas.js',
   // M6: luenta ennen visaa (visa tuo kertojafunktiot).
+  'js/livia-tilanteet.js',
   'js/luenta.js',
   /*
    * Viisas Pöllö ENNEN visaa: visa.js tuo POLLO_AARREn (pöllö korvaa
@@ -621,6 +622,7 @@ const MODULES = [
   'js/livia-chat-tila.js',
   'js/livia-svg-paa.js',
   'js/livia-svg.js',
+  'js/livia-nostotila.js',
   'js/livia-eleet.js',
   'js/pollo.js',
   /*

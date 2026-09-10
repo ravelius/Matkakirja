@@ -71,3 +71,19 @@ test('piirtopinta ulottuu napista viewportin oikeaan reunaan myös koon vaihtues
  right=340;e.doc.dispatchEvent(new Event('scroll'));assert.equal(surface.style.left,'188px');assert.equal(surface.style.width,'202px');
  c.toista('walkRight');e.tick(2300);assert.equal(canvas.innerHTML.includes('data-part="whole-bird"'),false);c.palaa();e.tick(2400);assert.ok(canvas.innerHTML.includes('data-part="whole-bird"'));
 });
+
+test('tilannereaktiot eivät katkaise saapumista, puhetta tai jonota vanhoja kuvia',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);
+ assert.equal(c.tilanne('photo'),false,'pöllön vaihto saa loppua');e.tick(5000);
+ assert.equal(c.tilanne('chatOpen'),true);e.tick(3100);
+ assert.equal(c.tilanne('photo',{cityId:'marseille'}),true);
+ assert.equal(c.tilanne('photo',{cityId:'venetsia'}),false,'nopeat kortit eivät käynnistä elettä uudelleen');e.tick(4000);
+ assert.equal(e.raf.size,0,'hylättyä kuvaa ei soiteta myöhemmin');
+ const token={};ilmoitaLivianKasvopuhe(token,true,'Kääk!');
+ assert.equal(c.tilanne('narration',{ele:'glasses'}),false);
+ assert.equal(c.tilanne('photo'),false,'kuvan hymy ei peitä kääk-ilmettä');
+ ilmoitaLivianKasvopuhe(token,false);e.tick(3000);
+ assert.equal(c.tilanne('card',{symboli:'tekniikka'}),true);e.tick(1800);
+ const markup=e.doc.body.children[0].children[0].innerHTML;assert.ok(markup.includes('data-part="glasses"'));
+ c.tilanne('cardEnd');e.tick(40);assert.equal(e.raf.size,0,'kortin sulku lopettaa sen eleen');
+});
