@@ -23,7 +23,8 @@ export function livianSvgMalli(s,{right=0}={}) {
   x:128+(s.x||0)*4,y:302+(moving?(s.y||0)*4:0),headY:moving?0:(s.y||0)*2,headAngle:(s.tilt||0)*(3+5*strength),scale:.56,angle:0,squash:1,visible:true,
   flight:Boolean(s.flight),walking:Boolean(s.walk),mirror:s.walk?.direction===1,face:s.frame||'rest',wing:'fold',wingAmount:0};
  if(s.walk){const t=s.walk.direction===1?s.walk.t:1-s.walk.t;m.x=128+(right+96)*t;m.y=302-2*Math.sin(p*Math.PI*14);if(t>=1)m.visible=false;}
- if(['arrive','crash','owl'].includes(id)&&!s.flight&&!s.walk){const edge=id==='arrive'?1-lvEase((p-.08)/.46):id==='crash'?1-lvEase((p-.05)/.24):lvClamp((s.x||0)/24);m.x=128+(right+100)*edge;}
+ if(['arrive','crash','owl','leaveRight'].includes(id)&&!s.flight&&!s.walk){const edge=id==='arrive'?1-lvEase((p-.08)/.46):id==='crash'?1-lvEase((p-.05)/.24):lvClamp((s.x||0)/24);m.x=128+(right+100)*edge;}
+ if(id==='leaveRight'&&p>=1)m.visible=false;
  if(s.flight){
   const f=s.flight,t=lvClamp(f.t);m.face='rest';m.wing='flap';m.wingAmount=Math.sin(p*Math.PI*22);
   if(f.kind==='away'||f.kind==='back'){

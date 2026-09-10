@@ -24,8 +24,10 @@ test('voimakas tunne tuo päätä lähemmäs; jalat ja liikkumisen mittasuhteet 
 });
 test('oikealle poistuminen saavuttaa näytön reunan ja paluu jatkuu samassa hahmossa',()=>{
  for(const right of [24,42,120]){
-  const away=livianSvgMalli(livianSvgAsento('walkRight',1),{right});
-  assert.ok(away.x>152+right);assert.equal(away.visible,false);
+  for(const id of ['walkRight','leaveRight']){
+   const away=livianSvgMalli(livianSvgAsento(id,1),{right});
+   assert.ok(away.x>152+right,id);assert.equal(away.visible,false,id);
+  }
   const back=livianSvgMalli(livianSvgAsento('walkBack',1),{right});
   assert.equal(back.visible,true);assert.equal(back.x,128);
  }
