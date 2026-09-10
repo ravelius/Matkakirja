@@ -2383,6 +2383,43 @@ test('supistetun pinon katto jättää edellisen kuplan alaosan näkyviin', () =
   assert.match(lahde, /classList\.toggle\('pollo-kuplapino-kurkistus', kurkistaa\)/);
 });
 
+/*
+ * ENSIMMAISEN PULUKUPLAN YLAREUNAA EI HAIVYTETA (omistaja 10.9.2026:
+ * *"pulun puhekuplan yläreunaan ei saisi tulla varjostusta kun on
+ * kyse ensimmäisestä kuplasta"*). Ainoa kupla voi olla kattoa (8 riviä)
+ * korkeampi, jolloin ylivuoto on totta ja maski leikkaisi juuri sen
+ * ensimmäiset rivit. Vartio pitää huolen, että nollaus on olemassa,
+ * että se voittaa sekä ylivuodon että kurkistuksen, ja että luokka
+ * seuraa kuplien määrää.
+ */
+test('yksin jäävän kuplan yläreunaa ei häivytetä', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  // Nollaus on olemassa ja koskee myös molempia häivyttäviä tiloja.
+  const lohko = css.match(
+    /((?:\.pollo-kuplapino[^{]*pollo-kuplapino-yksin[^{]*,\s*)*[^{]*pollo-kuplapino-yksin[^{]*)\{\s*--kuplapino-haive: 0px;/,
+  );
+  assert.ok(lohko, 'yksin jäävän kuplan häivytyksen nollausta ei löydy css:stä');
+  const valitsimet = lohko[1];
+  assert.match(valitsimet, /\.pollo-kuplapino-yli \.pollo-kuplapino\.pollo-kuplapino-laaja\.pollo-kuplapino-yksin/,
+    'ylivuodon häivytys jää voimaan yksinäiselle kuplalle');
+  assert.match(valitsimet, /\.pollo-kuplapino\.pollo-kuplapino-kurkistus\.pollo-kuplapino-yksin/,
+    'kurkistuksen häivytys jää voimaan yksinäiselle kuplalle');
+  // Järjestys ratkaisee: nollaus on häivyttävien sääntöjen JÄLKEEN,
+  // joten yhtä painava valitsin voittaa.
+  assert.ok(css.indexOf('--kuplapino-haive: 0px;\n}') > css.indexOf('--kuplapino-haive: 2.6rem;'),
+    'nollaus on ennen ylivuodon häivytystä — sääntöjärjestys kumoaisi sen');
+  assert.ok(css.indexOf('--kuplapino-haive: 0px;\n}') > css.indexOf('--kuplapino-haive: 2.2rem;'),
+    'nollaus on ennen kurkistuksen häivytystä — sääntöjärjestys kumoaisi sen');
+  // Luokka seuraa kuplien määrää ja asetetaan samassa mittauksessa kuin
+  // ylivuoto, joten häivytys palaa heti toisen kuplan saapuessa.
+  assert.match(
+    lahde,
+    /this\.pinoKehys\.classList\.toggle\('pollo-kuplapino-yli', yli\);\n\s*pino\.classList\.toggle\('pollo-kuplapino-yksin', this\.pinonKuplat\(\)\.length === 1\);/,
+    'yksin-luokkaa ei aseteta ylivuodon mittauksen yhteydessä',
+  );
+});
+
 test('tervehdys on lyhyt ja sen ydin lihavoidaan', () => {
   const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
   const ydin = lahde.match(/const TERVEHDYS_YDIN = '([^']+)'/)?.[1] ?? '';

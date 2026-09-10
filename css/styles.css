@@ -20374,6 +20374,27 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
 }
 
 /*
+ * ENSIMMAISEN PULUKUPLAN YLAREUNAA EI HAIVYTETA (omistaja 10.9.2026,
+ * sanatarkasti: *"pulun puhekuplan yläreunaan ei saisi tulla
+ * varjostusta kun on kyse ensimmäisestä kuplasta"*).
+ *
+ * Yksin jäävä kupla voi olla kattoa (8 riviä) korkeampi, jolloin
+ * js/pollo.js paivitaYlivuoto merkitsee ylivuodon ja häivytys söisi
+ * kuplan ENSIMMÄISET rivit — pelaajalle se näyttää varjostukselta
+ * ainoan kuplan yläreunassa, vaikka mitään ei ole vielä väistynyt.
+ * Kun pinossa on vain yksi kupla, ei siis ole mitään mikä olisi
+ * häivytettävä: yläreuna on kokonaan näkyvissä ja pitkä kupla jää
+ * vieritettäväksi ilman maskia. Luokan asettaa paivitaYlivuoto
+ * (.pollo-kuplapino-yksin), ja häivytys palaa heti kun toinen kupla
+ * saapuu pinoon.
+ */
+.pollo-kuplapino.pollo-kuplapino-yksin,
+.pollo-kuplapino-yli .pollo-kuplapino.pollo-kuplapino-laaja.pollo-kuplapino-yksin,
+.pollo-kuplapino.pollo-kuplapino-kurkistus.pollo-kuplapino-yksin {
+  --kuplapino-haive: 0px;
+}
+
+/*
  * HÄIPYVÄ SLIVERI EI OTA NAPAUTUSTA VASTAAN (7.9.2026 ilta). Supistetun
  * pinon vanhat kuplat ovat puoliksi leikattuja ja puoliksi
  * läpinäkyviä; napautus niihin avaisi chatin vahingossa. Ele menee
