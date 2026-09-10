@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1735, teksti: 'Ihmisen matka: Afrikka täyttää ruudun sekunnin sanan jälkeen' },
   { v: 1734, teksti: 'Pulu reagoi tarinoihin, kuviin ja nostokortteihin' },
   { v: 1733, teksti: 'Pulun jalkavarjo, chat alemmas ja poislennon suunta' },
   { v: 1732, teksti: 'Kokopulun 51 elettä, lähestyminen ja siipien tunteet' },
