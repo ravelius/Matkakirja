@@ -5,6 +5,14 @@ export function ilmoitaLivianTilanne(laji,tiedot={}) {
 }
 export function kuunteleLivianTilanteita(f){liviaTilanneKuulijat.add(f);return()=>liviaTilanneKuulijat.delete(f);}
 
+/** Pyynnön elinkaari toimii myös ilman näkyvää chatin odotusriviä.
+ * Kukin pyyntö omistaa oman tunnuksensa; lopetus on idempotentti. */
+export function aloitaLivianOdotus(tiedot={}){
+ const tunnus={};let valmis=false;
+ ilmoitaLivianTilanne('waiting',{...tiedot,tunnus});
+ return()=>{if(valmis)return;valmis=true;ilmoitaLivianTilanne('waitingEnd',{tunnus});};
+}
+
 /**
  * Sisällön julkinen tunnetagirajapinta. Tarinaan kirjoitetaan vain
  * `{ tunne: 'utelias', voimakkuus: 0.6 }`: eleen tekninen nimi jää tänne,
@@ -45,7 +53,7 @@ export function seuraaLivianKuuntelua(audio,voimassa,haeTeksti=()=> ''){
   const aika=Number(audio.currentTime)||0;
   if(aika<viime)viime=-Infinity;
   if(aika-viime<12)return;viime=aika;
-  ilmoitaLivianTilanne('narration',{ele:vuoro++===0?'listen':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti:haeTeksti()}),tunnus:audio});
+  ilmoitaLivianTilanne('narration',{ele:vuoro++===0?'lookUp':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti:haeTeksti()}),tunnus:audio});
  };
  const alkoi=()=>{soi=true;reagoi();};
  const tauko=()=>{soi=false;ilmoitaLivianTilanne('narrationEnd',{tunnus:audio});};

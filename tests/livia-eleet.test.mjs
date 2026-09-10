@@ -11,7 +11,7 @@ function liviaTestYmparisto(t){
   children=[];hidden=false;isConnected=true;style={};textContent='';className='';attrs={};
   classList={items:new Set(),add:(...xs)=>xs.forEach(x=>this.classList.items.add(x)),remove:(...xs)=>xs.forEach(x=>this.classList.items.delete(x)),contains:(x)=>this.classList.items.has(x),toggle:(x,on)=>on?this.classList.items.add(x):this.classList.items.delete(x)};
   ctx={rects:[],clearRect(){this.rects=[];},fillRect(...r){this.rects.push(r);},imageSmoothingEnabled:true};
-  append(e){this.children.push(e);e.parent=this;}remove(){this.isConnected=false;if(this.parent)this.parent.children=this.parent.children.filter(x=>x!==this);}
+  append(e){if(e.parent)e.parent.children=e.parent.children.filter(x=>x!==e);this.children.push(e);e.parent=this;}remove(){this.isConnected=false;if(this.parent)this.parent.children=this.parent.children.filter(x=>x!==this);}
   setAttribute(n,v){this.attrs[n]=v;}getContext(){return this.ctx;}
   querySelector(){return this.children.find(x=>x.className==='pollo-odottaa'&&x.isConnected)||null;}
  }
@@ -77,7 +77,19 @@ test('Pulu pienenee avoimessa lehdessä mutta chatinappi säilyy ennallaan',t=>{
  const surface=e.doc.body.children[0];assert.equal(surface.classList.contains('livia-lehdessa'),false);
  e.lehti.open=true;e.lehti.classList.add('lehti');e.notify(e.lehti);
  assert.equal(surface.classList.contains('livia-lehdessa'),true);assert.equal(e.button.classList.contains('livia-kasvot-valmis'),true);
+ assert.equal(surface.parent,e.lehti,'piirros on modaalin ylimmässä kerroksessa');
+ e.tick(12000);assert.match(surface.children[0].innerHTML,/data-part="glasses"/,'lasit pysyvät eleen päätyttyä');
+ c.toista('scratch');e.tick(1000);assert.match(surface.children[0].innerHTML,/data-part="glasses"/);
  e.lehti.open=false;e.notify(e.lehti);assert.equal(surface.classList.contains('livia-lehdessa'),false);
+ e.tick(3000);assert.equal(surface.parent,e.doc.body);assert.doesNotMatch(surface.children[0].innerHTML,/data-part="glasses"/);
+});
+
+test('pyyntöjen odotus reagoi ilman chattia ja kestää rinnakkaiset sekä pitkät pyynnöt',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const a={},b={};c.tilanne('waiting',{tunnus:a});assert.ok(e.raf.size);
+ c.tilanne('waiting',{tunnus:b});e.tick(4000);c.tilanne('waitingEnd',{tunnus:a});
+ e.tick(15000);assert.equal(c.tilanne('photo'),false,'toisen pyynnön odotus jatkuu');
+ c.tilanne('waitingEnd',{tunnus:b});e.tick(5000);assert.equal(c.tilanne('photo'),true);
 });
 
 test('tilannereaktiot eivät katkaise saapumista, puhetta tai jonota vanhoja kuvia',t=>{

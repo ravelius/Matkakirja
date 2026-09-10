@@ -48,6 +48,7 @@
  * sisään, ei pöllön puhetta ulos.
  */
 
+import { aloitaLivianOdotus } from './livia-tilanteet.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { haeValmiskysymykset } from './packs/pollo-kysymykset.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
@@ -5060,6 +5061,8 @@ class Pollo {
    * puhelimessa eikä se ole pelin vika.
    */
   async pyyda(runko) {
+    const lopetaOdotus=aloitaLivianOdotus({lahde:runko?.tehtava||'kysymys'});
+    try {
     const vastaus = await fetch(this.palvelin, {
       method: 'POST',
       headers: this.otsakkeet(),
@@ -5072,6 +5075,7 @@ class Pollo {
       throw virhe;
     }
     return data;
+    } finally { lopetaOdotus(); }
   }
 
   /**
@@ -5104,6 +5108,8 @@ class Pollo {
    * @returns {Promise<{vastaus: string, jatkot: string[], katkesi: boolean}>}
    */
   async pyydaStriimi(runko, onPala) {
+    const lopetaOdotus=aloitaLivianOdotus({lahde:runko?.tehtava||'kysymys'});
+    try {
     const vastaus = await fetch(this.palvelin, {
       method: 'POST',
       headers: this.otsakkeet({ accept: 'text/event-stream' }),
@@ -5149,6 +5155,7 @@ class Pollo {
         if (tapahtuma.laji === 'pala') {
           const teksti = String(tapahtuma.data?.teksti ?? '');
           if (teksti) {
+            lopetaOdotus();
             kertynyt += teksti;
             onPala?.(kertynyt);
           }
@@ -5189,6 +5196,7 @@ class Pollo {
     return {
       vastaus: kertynyt, jatkot: [], paikka: null, katkesi: true, lopullinen: false, syy: 'katkesi',
     };
+    } finally { lopetaOdotus(); }
   }
 
   /* --- striimin äänet ---------------------------------------------- */

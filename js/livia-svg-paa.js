@@ -9,7 +9,7 @@ export function livianSvgPaa(s,{prefix='livia',lean=0,strength=.5}={}) {
  let lid=f==='smug'?1.06:f==='bored'?1.45:f==='angry'?.5:shock?.05:manic?.02:shy?.45:.66;
  if(f==='yawn')lid=1.35;
  if(['smile','wink'].includes(f))lid=.35;
- const lookX=f==='glance'?4:f==='disbelief'?-3:shy?3:f==='crumb'||f==='caught'?-3:0;
+ const lookX=f==='up'?-3:f==='glance'?4:f==='disbelief'?-3:shy?3:f==='crumb'||f==='caught'?-3:0;
  const lookY=f==='up'?-3:f==='down'?3:f==='preen'?4:shy?2:0;
  const eyes=(x,y,rx,ry,far)=>{
   const key=prefix+(far?'far':'near'),joy=['smile','grin','wink'].includes(f),closed=sleepy||f==='grin'||['happy','wink'].includes(f)&&far;
