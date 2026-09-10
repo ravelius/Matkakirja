@@ -42,6 +42,7 @@ import {
   ESITYKSEN_ALUEET, ESITYKSEN_LAHIKUVA, IHMISEN_MATKA_KUVAT_ESITYKSESSA, KUVAN_OSUUS,
   LOPUN_ASETUS_MS, alueenLaatikko, jaksonTahti, kelauksenPehmennys,
   jaksonRajaus, KARJEN_ETAISYYS_MAX_AST, HAARAN_ETAISYYS_MAX_AST, KARJEN_LIIKE_MIN_AST,
+  AFRIKAN_VIIVE_MS,
   AVAUKSEN_SANA, AVARUUDEN_KORKEUS, AVARUUDEN_MS, AVARUUDEN_MIN_MS, LAUSEEN_HAIVE_MS,
   FEIDIN_OSUUS, MUSTAN_OSUUS, TAHTIEN_FEIDI_MS, TAHTIEN_KERROIN, TEKSTIN_LASKU_MS,
   MAROKON_JARRU, MAROKON_POHJA_MS, PULUN_VAIMENNUS_PUTKESSA, PULUN_VARA_MS,
@@ -289,26 +290,36 @@ test('avauksen vaiheet lasketaan luennan aikaleimoista', () => {
   // Ensimmäinen virke mustalla: musta kestää lauseet[1]:een asti.
   const v = avauksenVaiheet({ lauseet: [0, 3000, 4500, 6000, 7500], sana: 6000, kesto: 8400 });
   assert.equal(v.musta, 3000, 'musta ei kestä ensimmäistä virkettä');
-  assert.equal(v.afrikka, 6000);
-  // Feidaus mahtuu mustan ja sanan väliin eikä syö koko rakoa.
+  // AFRIKKA TULEE REILUN SEKUNNIN SANAN JÄLKEEN (omistaja 10.9.2026).
+  assert.equal(v.afrikka, 6000 + AFRIKAN_VIIVE_MS);
+  // Feidaus mahtuu mustan ja päätepisteen väliin eikä syö koko rakoa.
   assert.ok(v.feidi > 0 && v.feidi <= TAHTIEN_FEIDI_MS);
-  assert.equal(v.feidi, (v.afrikka - v.musta) * FEIDIN_OSUUS);
+  assert.equal(v.feidi, Math.min(TAHTIEN_FEIDI_MS, (v.afrikka - v.musta) * FEIDIN_OSUUS));
   assert.equal(v.piste, v.musta + v.feidi);
-  // ZOOMI PÄÄTTYY SANAAN: alku + kesto = sanan hetki.
+  // ZOOMI PÄÄTTYY PÄÄTEPISTEESEEN: alku + kesto = afrikka.
   assert.equal(v.zoomAlku + v.zoomKesto, v.afrikka);
   assert.ok(v.zoomAlku >= v.piste - 1, 'zoomi lähtee ennen kuin pallo on näkyvissä');
-  // Ilman lauseita musta on osuus matkasta sanaan.
+  // VARTIO: sana 5 s kohdalla, jakso 20 s → Afrikka ruudussa 6,2 s kohdalla.
+  assert.equal(avauksenVaiheet({ sana: 5000, kesto: 20000 }).afrikka, 6200);
+  // VARTIO: sana lähellä loppua → päätepiste ei valu jakson yli.
+  for (const sana of [19000, 19500, 19999, 20000]) {
+    const loppu = avauksenVaiheet({ lauseet: [0, 2000], sana, kesto: 20000 });
+    assert.ok(loppu.afrikka <= 20000, `afrikka ${loppu.afrikka} > kesto`);
+    assert.ok(loppu.zoomAlku + loppu.zoomKesto <= 20000);
+  }
+  // Ilman lauseita musta on osuus matkasta päätepisteeseen.
   const ilman = avauksenVaiheet({ sana: 6000, kesto: 8400 });
-  assert.equal(ilman.musta, 6000 * MUSTAN_OSUUS);
+  assert.equal(ilman.musta, (6000 + AFRIKAN_VIIVE_MS) * MUSTAN_OSUUS);
   // Lyhyt äänite: zoomille jää aina vähimmäisaikansa, eikä musta syö sitä.
   const lyhyt = avauksenVaiheet({ lauseet: [0, 900], sana: 1000, kesto: 1200 });
+  assert.equal(lyhyt.afrikka, 1200, 'lyhyt jakso katkaisee viiveen');
   assert.equal(lyhyt.zoomKesto, AVARUUDEN_MIN_MS);
-  assert.ok(lyhyt.musta <= Math.max(0, 1000 - AVARUUDEN_MIN_MS));
+  assert.ok(lyhyt.musta <= Math.max(0, lyhyt.afrikka - AVARUUDEN_MIN_MS));
   // Pitkä äänite: zoomi ei veny yli katon.
   const pitka = avauksenVaiheet({ lauseet: [0, 2000], sana: 60000, kesto: 90000 });
   assert.equal(pitka.zoomKesto, AVARUUDEN_MS);
-  assert.equal(pitka.zoomAlku + pitka.zoomKesto, 60000);
-  // Ei sanaa lainkaan: vaiheet mahtuvat silti jakson sisään.
+  assert.equal(pitka.zoomAlku + pitka.zoomKesto, 60000 + AFRIKAN_VIIVE_MS);
+  // Ei sanaa lainkaan: vaiheet mahtuvat silti jakson sisään (ei viivettä).
   const eiSanaa = avauksenVaiheet({ lauseet: [0, 2000], kesto: 8000 });
   assert.equal(eiSanaa.afrikka, 8000);
   assert.ok(eiSanaa.zoomAlku + eiSanaa.zoomKesto <= 8000);
@@ -322,11 +333,14 @@ test('kaanonin avaus: musta, piste ja zoomi osuvat oikeisiin lauseisiin', () => 
   const v = avauksenVaiheet({ lauseet: hetket, sana: sananHetki(avaus.teksti, AVAUKSEN_SANA, kesto), kesto });
   // Musta kestää tasan ensimmäisen virkkeen ("Tiedätkö, mistä…?").
   assert.equal(Math.round(v.musta), Math.round(hetket[1]));
-  // Pallo on esillä pisteenä ennen kuin kertoja sanoo "Afrikasta".
+  // Pallo on esillä pisteenä ennen kuin Afrikka täyttää ruudun.
   assert.ok(v.piste < v.afrikka, `${v.piste} vs ${v.afrikka}`);
+  // Päätepiste on reilun sekunnin sanan jäljessä (tai jakson lopussa).
+  const sanaHetki = sananHetki(avaus.teksti, AVAUKSEN_SANA, kesto);
+  assert.equal(v.afrikka, Math.min(sanaHetki + AFRIKAN_VIIVE_MS, kesto));
   // Zoomi on nopea (omistaja: "zoomautua nopeasti") muttei räpsähdys.
   assert.ok(v.zoomKesto >= AVARUUDEN_MIN_MS && v.zoomKesto < 4000, `${Math.round(v.zoomKesto)} ms`);
-  // Ja se päättyy sanaan, ei ala siitä.
+  // Ja se päättyy päätepisteeseen, ei ala siitä.
   assert.equal(Math.round(v.zoomAlku + v.zoomKesto), Math.round(v.afrikka));
 });
 
