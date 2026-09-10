@@ -137,6 +137,22 @@ test('puhe ja nostokortti palauttavat yhä soivan luennan kuuntelun',t=>{
  c.tilanne('narrationEnd',{tunnus:a});e.tick(40);assert.equal(e.raf.size,0);
 });
 
+test('Ihmisen matkan jakson tunne voittaa vain linssiluennan kuuntelun',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const a={},b={},speech={},n={tunnus:a,ele:'lookUp',lahde:'linssiluenta'};
+ const tunne={ele:'grin',voimakkuus:.5,lahde:'ihmisen-matka'};
+ assert.equal(c.tilanne('narration',n),true);
+ assert.equal(c.tilanne('emotion',tunne),true,'jakson alun tagi saa vuoron myös alle 2,8 s edellisestä');
+ assert.equal(c.tilanne('narration',n),false,'kuuntelu ei katkaise jakson elettä');
+ e.tick(3500);assert.equal(c.tilanne('narration',n),true,'kuuntelu täyttää eleen jälkeiset välit');
+ assert.equal(c.tilanne('emotion',{...tunne,lahde:'muu'}),false);
+ c.tilanne('narration',{tunnus:b,ele:'lookUp'});
+ assert.equal(c.tilanne('emotion',tunne),false,'toinen kertoja ei menetä etusijaa');
+ c.tilanne('narrationEnd',{tunnus:b});
+ ilmoitaLivianKasvopuhe(speech,true);assert.equal(c.tilanne('emotion',tunne),false);
+ ilmoitaLivianKasvopuhe(speech,false);c.tilanne('narrationEnd',{tunnus:a});
+});
+
 test('virhe ohittaa avauksen aikarajan, muttei odotusta, puhetta tai luentaa',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
  const error={ele:'confused',voimakkuus:.4},w={},a={},speech={};
