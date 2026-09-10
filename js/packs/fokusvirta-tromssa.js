@@ -24,6 +24,14 @@ export const FOKUSVIRTA_TROMSSA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 bda006756bc34bd4103f0fe5a4a713b07c84362e618525fc08d175c7195f3d4d. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tromssa-r20260909-paper-v4.jpg",
+      lyhyt: "Tromssa, 1873. Pieni simpukka ja suuri kysymys samassa huoneessa.",
+      selite: "Museon pöydällä simpukka ja luu saivat paikan vierekkäin ilman, että suurempi olisi vienyt pienemmältä arvoa. Tromssan satamasta tuodaan näytteitä pohjoisen meriltä; osa tavarasta alkaa tuottaa kysymyksiä siinä missä muu lasti rahaa. Ikkunan mastot muistuttivat, ettei keräämiseen tarvita pelkkää kaappia vaan myös matka. Kuvasin pöydän sellaisenaan. Sen järjestys oli minusta hyvä alku museolle.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://en.uit.no/om/historie","https://uit.no/ressurs/uit/mediebok/Labyrint0412/Labyrint_2012-04_web.pdf","https://uit.no/tmu/samlinger/samling?p_document_id=667875"],
+    },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Tromssa, heinäkuussa 1873. Aurinko ei laske; satamassa '
       + 'hylkeenpyytäjiä; puntari korkealla.',

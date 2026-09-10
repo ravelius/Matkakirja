@@ -41,6 +41,14 @@ export const FOKUSVIRTA_KREETA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 247f297a608718fda5cd4bbf0a1d2182846197ff86686341e2bf5de32b2d8af5. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kreeta-r20260909-paper-v4.jpg",
+      lyhyt: "Hania, 1873. Verkko vaati korjausta valtakunnasta riippumatta.",
+      selite: "Kalastajan sormet löysivät verkosta rikkinäisen kohdan nopeammin kuin silmäni. Sataman toisella puolella majakka seisoi venetsialaisten aloittamassa ja egyptiläisten muuttamassa hahmossaan. Kreeta on nyt sulttaanin aluetta, mutta veneen paluu riippuu valosta ja verkon kunto sen korjaajasta. Kuvasin nämä kaksi työtä samaan näkymään. Mies ei pitänyt kumpaakaan arvoituksena.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.chaniatourism.gr/monument/the-egyptian-lighthouse/","https://chaniahistory.gr/en/lighthouse/","https://www.chaniatourism.gr/neighborhood/venetian-harbor/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi. */
     paikkarivi: 'Kreeta, huhtikuussa 1873. Lämmintä; vuorilla vielä lunta; '

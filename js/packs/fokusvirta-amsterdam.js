@@ -135,6 +135,14 @@ export const FOKUSVIRTA_AMSTERDAM = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 a60ae0db42cc9aa50492ba93713bd65cd4ef683f5d115e15ff4b307e9df03193. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-amsterdam-r20260909-paper-v5.jpg",
+      lyhyt: "Amsterdam, 1873. Tuoli saapui omasta ikkunastaan.",
+      selite: "Kattokoukku piti köyttä, köysi piti tuolia ja kaksi miestä piti tilanteesta huolta. Kapeassa kanavatalossa ikkuna oli saanut ulko-oven tehtävän. Tuoli pysähtyi hetkeksi nousunsa aikana, mikä sopi kameralleni paremmin kuin jatkuva liike. Miehet neuvoivat toisilleen suuntaa. Kaluste itse suhtautui kaikkeen hyvin arvokkaasti, niin kuin ei olisi odottanutkaan joutuvansa käyttämään portaita.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/hoisting-paintings"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Amsterdam, toukokuussa 1873. Tuulista; kanavat väreilevät; '

@@ -215,6 +215,14 @@ export const FOKUSVIRTA_GRANADA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 f12be85587f38c11c04ad5d94945111033f1da546be5ccb1b0f34bc3264c4745. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-granada-r20260909-paper-v4.jpg",
+      lyhyt: "Granada, 1873. Comaresin torni toisessa rakennusaineessa.",
+      selite: "Myrttipihan altaassa torni jatkui alaspäin, vaikka tiesin maan olevan siellä jo käytössä. Palatsin kaaret ja myrttipensaat asettuivat veteen tarkemmin kuin oma kynäni olisi niitä jäljentänyt. Odotin liikkeen laantumista ennen valotusta. Alhambrassa vesi kuljettaa viileyttä ja ääntä, mutta tällä pihalla se tekee lisäksi kopion koko rakennuksesta. Työ valmistuu aina uudestaan, maksutta.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.alhambra-patronato.es/wp-content/uploads/2019/02/Conservacion_y_gestion_cultural.pdf"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Granada, huhtikuussa 1873. Kirkasta; Sierra Nevadalla lunta; '

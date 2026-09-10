@@ -160,6 +160,14 @@ export const FOKUSVIRTA_OSLO = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 256890fd6fcbe4fdda283a028e93cd739d9c73406df7fac4fcee895365339349. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-oslo-r20260909-paper-v4.jpg",
+      lyhyt: "Christiania, 1873. Metsä valmistautui lähtemään laivalla.",
+      selite: "Lankut odottivat rannassa suorina pinoina, aivan kuin metsä olisi saanut ennen merimatkaa kunnollisen kasvatuksen. Sataman takana kohoavat talot näyttävät kiveltä, mutta niiden vauraus kulkee usein tätä kautta puuna. Kuvasin lastausta ennen kuin laiva peitti pinoja näkyvistä. Vedessä kellui pieni lastu. Se kertoi tuoksullaan lähtöpaikastaan tarkemmin kuin yksikään rahtipaperi, jonka olin nähnyt.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.oslobilder.no/search?page=10&query=%22havna%22"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Kristiania, heinäkuussa 1873. Valoisaa myöhään; vuono tyyni; '

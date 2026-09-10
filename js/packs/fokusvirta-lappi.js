@@ -30,6 +30,14 @@ export const FOKUSVIRTA_LAPPI = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 6ea4e301acf72241adab27536312e22cd9417fa89f82e128ab880048710ec9eb. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lappi-r20260909-paper-v4.jpg",
+      lyhyt: "Rovaniemi, 1873. Matkatavara sidottiin tien sijasta veneeseen.",
+      selite: "Veneen kuorma sidottiin matalaksi, jotta se kulkisi vakaasti joella. Rannassa odottava nainen katseli seuraavaa matkaa yläjuoksun suuntaan. Ounasjoen ja Kemijoen seudulla veden ääreen asettunut talo on samalla reitin varrella. Kuvasin veneen ennen lähtöä ja jätin talon savun mukaan. Se kertoi käytössä olevasta paikasta, mitä pelkkä pieni neliö kartassa ei osaa sanoa.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://historia.rovaniemi.fi/historia/roieng24-27.pdf","https://www.finna.fi/Record/museovirasto.56B7F05404DF17550CEC4C1D3FD888DD","https://lapinkavijat.rovaniemi.fi/lapinportti/concorde.htm"],
+    },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Rovaniemi, syyskuussa 1873. Ensimmäinen ruska; yöllä '
       + 'revontulet; puntari korkealla.',

@@ -172,6 +172,14 @@ export const FOKUSVIRTA_ROOMA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 9593b80d1767f1094356307caa157412837bb9be2a7631bd1a1b1e2e35003469. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260909-paper-v4.jpg",
+      lyhyt: "Rooma, 1873. Katto antoi sateelle luvan.",
+      selite: "Pantheonin katon aukko on avoin taivaalle, ja sen alta lattia saa päivän sään suoraan nähtäväkseen. Seinien syvennyksissä valo pysyy toisenlaisena kuin keskellä salia. Asetin kameran kuivalle kohdalle ja odotin, että sade erottuisi lattian pinnassa. Roomassa rakennuksia on muutettu moneen tehtävään. Tämän talon kirkas pyöreä silmä katsoo edelleen ylöspäin, tehtävästä riippumatta.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
+    },
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät; '
       + 'puntari matalalla.',

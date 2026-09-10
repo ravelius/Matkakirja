@@ -230,6 +230,14 @@ export const FOKUSVIRTA_ODESSA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 b9e4b3ce330402d3b7a4504c7f1bb16333076b755adad6142768650b5ed3b911. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-odessa-r20260909-paper-v4.jpg",
+      lyhyt: "Odessa, 1873. Portailla kuorma näytti todellisen painonsa.",
+      selite: "Alhaalta katsottuna portaat levittävät kaupunkia sataman ylle kuin näyttämöä. Vehnäsäkkien kantajat tekevät siinä työtä, jonka ylhäällä kävelevä herra voi sivuuttaa yhdellä katseella. Minä tarvitsin pysähdyksen puolivälissä, vaikka kannoin vain omia tavaroitani. Asetin kameran niin, että kuvaan jäivät sekä leveät askelmat että kuormat niiden lähellä. Pelkkä komeus olisi kertonut tästä paikasta liian vähän.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://whc.unesco.org/document/196047","https://whc.unesco.org/en/list/1703"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Odessa, elokuussa 1873. Kuumaa; merituuli vasta illalla; '

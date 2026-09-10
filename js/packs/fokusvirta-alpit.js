@@ -23,6 +23,14 @@ export const FOKUSVIRTA_ALPIT = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 77cf29773de1ea5a2cd13a4b2272546cab541b5bafe82eaa1291bf10a34a8027. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-alpit-r20260909-paper-v4.jpg",
+      lyhyt: "Grindelwald, 1873. Jään hiljaisuudessa oli halkeamia.",
+      selite: "Opas pysyi sivummalla ja antoi minun katsella jäätikön reunaa. Kallion ja jään raja ei ollut yhtä siisti kuin karttaan piirretty viiva: siinä oli kiviä, vettä ja syvyyksiä, joiden pohjaa en nähnyt. Panin kameran riittävän kauas. Jään sisältä kuuluva rasahdus ei tallennu vedokseen. Sen vuoksi kirjoitan tähän muistutuksen, että kuva oli hiljaisempi kuin paikka itse.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.swissinfo.ch/eng/archive-science/scientists-paint-a-glacial-picture/33663410","https://www.swissinfo.ch/eng/archive-science/marking-glacial-change-on-grindelwald-s-trail/2185012"],
+    },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Grindelwald, heinäkuussa 1873. Kylmää keskellä kesää; '
       + 'puntari korkealla.',

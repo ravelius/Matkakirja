@@ -26,6 +26,6 @@ test('pallon piste: luentakuva sinisenä, muut ennallaan; tarkistuskorostus noll
     assert.equal(vari, joukko.has(id) ? LUENTAKUVAN_VARI : KAUPUNKIPISTEEN_VARI, id);
   }
   // Käyty/alku-värit ovat pelin tilaa ja jäävät (kaupunki ilman luentakuvaa).
-  const ilman = Object.keys(FOKUSVIRRAT).find((id) => !joukko.has(id));
+  const ilman = 'kuvaton-koekaupunki';
   assert.notEqual(kaupunkipisteenVari({ id: ilman, kayty: true }), KAUPUNKIPISTEEN_VARI);
 });

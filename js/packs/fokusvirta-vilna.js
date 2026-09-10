@@ -146,6 +146,14 @@ export const FOKUSVIRTA_VILNA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 bbc6d613a504b26f946499b66a2591a7f1fe69cf825e8b4e8650e828850a6ba7. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-vilna-r20260909-paper-v4.jpg",
+      lyhyt: "Vilna, 1873. Auringolla oli pilkkuja, tutkijalla teetä.",
+      selite: "Observatorion pöydällä valokuva auringonpilkuista näytti ensi silmäyksellä vialliselta vedokselta. Vika olikin huomattavasti kauempana, jos sitä viaksi sopii kutsua. Kaukoputki odotti, että pilvet väistyisivät, ja tuoli sai sillä välin tehdä osuutensa tutkimuksesta. Ikkunan takana Vilnan tornit osoittivat samaan suuntaan eri tarkoituksissa. Kuvasin pöydän, sillä se tuntui mukavalta paikalta aloittaa taivaan selvittäminen.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.muziejus.vu.lt/en/departments/observatory-of-ideas","https://www.knygynas.vu.lt/kitos-knygos/vadovas-po-senaja-vu-astronomijos-observatorija"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Vilna, kesäkuussa 1873. Poutaa; kirkonkellot kuuluvat '

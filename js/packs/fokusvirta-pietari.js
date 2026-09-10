@@ -192,6 +192,14 @@ export const FOKUSVIRTA_PIETARI = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 eb860339dcbf2606da93b13ccdeb423c6d8e17dae68b1bc6951005cd2a5d8e4e. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pietari-r20260909-paper-v4.jpg",
+      lyhyt: "Pietari, 1873. Neva ei näyttänyt kellonaikaa.",
+      selite: "Rantakadun penkillä olisi ollut tilaa istua loppuun koko ilta, jos illalla olisi ollut selvempi loppu. Vaalea taivas jäi palatsien ikkunoihin ja joen pintaan. Päivänvarjo näytti tässä valossa tarpeelliselta vielä silloinkin, kun kello neuvoi aivan muuta. Kuvasin kaupungin ilman varsinaista yötä. Kameralle sellainen järjestely sopii hyvin; minun seuraavan aamuni voinnista en ollut yhtä varma.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.loc.gov/pictures/resource/ppmsc.03878","https://hermitagemuseum.org/panorama/pano_37/?floorNum=1&lng=en"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Pietari, kesäkuussa 1873. Valkeat yöt; ei tule pimeää; '

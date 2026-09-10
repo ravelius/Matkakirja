@@ -107,6 +107,14 @@ export const FOKUSVIRTA_BUDAPEST = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 7335500faf52cd93ed400d5fe167db8ca8d971a2a90131352935baca81916800. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-budapest-r20260909-paper-v4.jpg",
+      lyhyt: "Budapest, 1873. Kupolin alla kartta sai odottaa.",
+      selite: "Rudasin kylpylän kupoli päästää päivänvalon pieninä kohtina sisään. Niiden alla vesi liikahtaa hitaasti, eikä kukaan näytä tarvitsevan siltä kiireisempää vastausta. Turkkilaisen kylpylän seinät ovat nähneet kaupunkien nimiä ennen tätä marraskuista yhdistämistäkin. Asetin kameran altaan ulkopuolelle. Höyry teki ääriviivoille saman kuin lämmin vesi ajatuksilleni: kumpikaan ei pysynyt aivan yhtä terävänä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.rudasfurdo.hu/en/past-and-present","https://fortepan.hu/en/photos/?id=252393","https://fortepan.hu/en/photos/?id=82594"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi seuraa merkinnän omaa
      * faktaa: kaupunkia "ei vielä eilen ollut", ja yhdistyminen astui

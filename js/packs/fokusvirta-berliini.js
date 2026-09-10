@@ -98,6 +98,14 @@ export const FOKUSVIRTA_BERLIINI = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 b4fdaf1a8bce9cc8371dc837ff71ed4ca62fcdfa50ae8eb43a13c819944fcac7. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-berliini-r20260909-paper-v4.jpg",
+      lyhyt: "Berliini, 1873. Pylväs katsoi voittoja, poika maahan.",
+      selite: "Voitonpylvään tykinputket olivat päätyneet koristeiksi korkealle, mutta sanomalehti pysyi tukevasti mudassa. Poika kumartui kokoamaan numeroitaan, kun aikuiset jatkoivat pylvään katsomista. Kameran näkökenttä oli tässä hyödyllinen: siihen mahtui sekä suuren juhlan kohde että pieni työ sen juurella. Jälkimmäinen vaati pojalta enemmän välitöntä rohkeutta kuin kukaan ohikulkijoista näytti huomaavan.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://search.smb.museum/object/obj-968409?involved=Anton+von+Werner&page=2","https://www.smb.museum/nachrichten/detail/schenkung-von-alicja-kwade-skulptur-goldelse-fuer-den-skulpturengarten-der-neuen-nationalgalerie/"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma; sääkommentti on isoisän havainto
      * eikä mitattu väite. Kuukausi sopii merkinnän työmaakuvaan:

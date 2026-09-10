@@ -135,6 +135,14 @@ export const FOKUSVIRTA_RIIKA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 1b41ffdf4d9afc2de9c6b267f39fe9028c14a45b4861b1cae4aa5e0a0c25ce12. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-riika-r20260909-paper-v4.jpg",
+      lyhyt: "Riika, 1873. Kuoro hengitti kaupungin kokoiseksi.",
+      selite: "Laulajien kasvot olivat erilaisia, mutta heidän seuraava hengenvetonsa kuului yhteen. Riian laulujuhlat ovat tuoneet paikalle väkeä, joka ei olisi muuten ehkä seissyt saman äänen sisällä. Pyysin pientä joukkoa pysähtymään kuvaan. Vieressäni laulanut mies ei pyyhkinyt poskeaan, enkä pyytänyt häntä tekemään sitä. Kameralla saa talteen ilmeen; siitä lähtenyt ääni täytyy muistaa itse.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.dziesmusvetki.lv/lv/zinas/pirmajiem-dziesmu-svetkiem-veltita-izstade-rlb/","https://www.dziesmusvetki.lv/en/about-the-celebration/the-song-and-dance-celebration/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Riika, heinäkuussa 1873. Lämmintä; joella pellavan haju; '

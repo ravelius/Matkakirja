@@ -214,6 +214,14 @@ export const FOKUSVIRTA_TAMPERE = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 befc56ce08b1a5ca27e2c989d199bfe8cd26f9ca3860110867c5319366aa2506. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tampere-r20260909-paper-v4.jpg",
+      lyhyt: "Tampere, 1873. Katkennut lanka ja kädet, jotka osaavat jatkaa.",
+      selite: "Tehtaan koneiden vierellä ihminen näyttää ensin pieneltä. Sitten lanka katkeaa, ja koneen koko ei auta sitä millään tavoin takaisin yhteen. Työntekijän sormet tekivät solmun ennen kuin olin kunnolla ymmärtänyt, mistä piti ottaa kiinni. Kuvasin hänet lankansa kanssa. Koskesta saa käyttövoimaa ja raudasta koneita; tämän taidon hankkimiseen täytyy ilmeisesti käyttää kokonainen ihminen.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.finna.fi/Search/Results?lookfor=Finlayson+tehdas+kehruusali&type=AllFields"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Tampere, elokuussa 1873. Viileä aamu; koski kohisee yöllä; '
