@@ -4216,6 +4216,15 @@ export const RAAMATTU = {
           + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
           + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
           + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
+        'LUENTAKUVA IPADILLA PUOLTA ISOMPANA (omistaja 10.9.2026 klo 23.30, '
+          + 'iPad-kaappaus Krakovasta, sanatarkasti: "Kuvat saisivat tulla '
+          + 'ipadilla puolta isompana"): tabletin kokoisella ruudulla (noin '
+          + '700-1400 px leveys, pysty ja vaaka) isoisan luentakuva ja sen '
+          + 'paalla oleva PuluCam-pakka ovat 1,5-kertaiset nykyiseen verrattuna; '
+          + 'kuva ei silti saa peittaa matkakirjakorttia eika kaupungin laattaa '
+          + '(saapumisasento pysyy: kaupunki alakolmanneksessa, kuva sen '
+          + 'ylapuolella hieman oikealla). Puhelin ja tyopoyta ennallaan. '
+          + 'Tarkentaa linjausta LUENTAKUVA ISOMPANA, VINOSSA JA ILMAN LAATIKKOA.',
         'PULUN REAKTIOREKISTERI: JOKAINEN PELITILANNE KIRJATAAN REAKTIOTA VARTEN '
           + '(omistaja 10.9.2026 klo 23.05 tekstisession kautta, sanatarkasti: '
           + '"Hyva, fable voisi tehda mahdollisimman laajan selvityksen kaikista '
