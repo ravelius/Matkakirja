@@ -573,7 +573,7 @@ test('päiväkirja on laatikossa ja kutistuu vedosta myös pallolla (omistaja 5.
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /doc\.body\.classList\.add\('pallolauta-paalla'\);/);
   assert.match(lauta, /doc\.body\.classList\.remove\('pallolauta-paalla'\);/);
-  assert.match(lauta, /ui\.asetaPaivakirjanKoko\?\.\(true\);/);
+  assert.match(lauta, /ui\.kutistaKortinLiikkeesta\?\.\(\);/);
   const css = lue('../css/styles.css');
   assert.match(css, /body\.pallolauta-paalla \.fact-card::before \{/);
   assert.match(css, /body\.pallolauta-paalla \.fact-card\.pieni::before \{ opacity: 0; \}/);

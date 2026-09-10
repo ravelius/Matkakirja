@@ -111,6 +111,7 @@ ajavat vain pallolla) sekä
 | savuke-lehtiotsikko | Lehden tarttuva nimiö, ylähampurilainen (sijainti + tasaus), sisällyslevy (ylös/ulkosulku/Etusivu-rivi), iPadin paperikaista |
 | savuke-esilataus | Kuvakarusellien esilataus (nähtävyys, nostogalleria, katselin, lightboxin pikselimitoitus) |
 | savuke-matkakirjakulma | MATKAKIRJASTA-kortti aina vasemmassa yläkulmassa |
+| savuke-matkakirjakortti | Matkakirjakortti aukeaa saapumisessa ja PALAA AUKI luennan ajan kartan liikkeen jälkeen (omistaja 10.9.2026): Lontooseen saavutaan `?lauta=kartta`-laudalla, luennan aikana raahaus kutistaa kortin lapuksi ja sormen noston jälkeen se palaa auki rauhoitusajassa (js/ui.js KORTIN_PALAUTUS_MS), kun taas luennan päätyttyä (stopDiaryVoice) sama raahaus jättää kortin lapuksi. Ämpäri Noden kautta (NODE_USE_ENV_PROXY=1); kaappaukset `matkakirjakortti-{saapuminen,raahaus,palasi,luennan-jalkeen}.png` |
 | savuke-kartta-tila | Kartan geometria ei jää vanhaksi: lehden sulun sovitus, kesken jääneen nipistyksen hylkäys (jumivahti + yhden sormen kosketus). `--lauta pallo` (NODE_USE_ENV_PROXY=1, ämpäri Noden kautta) ajaa samat vartiot LINSSIKARTAN kuoressa pallolaudalla (tallenne Ateenassa, maatiedot-linssi laukusta) ja lopuksi Sulje palauttaa pallon: svg#board tyhjä, kartta lepotilassa (pallolauta vaihe 4) |
 | savuke-maapilleri | Maapillerin siivous (yksi pilleri, destroy, orpo) |
 | savuke-maaselain | Maatiedot-tila: kirjanappi, pilleri, valinnan purku |

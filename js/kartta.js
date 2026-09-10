@@ -3409,7 +3409,7 @@ export class Kartta extends NukkuvaKartta {
       // päätöstapahtumaa, ele hylätään (ks. ajastaNipistysVahti).
       ajastaNipistysVahti();
       // Kartta lähtee kahden sormen alla liikkeelle: päiväkirja riviksi.
-      this.ui.asetaPaivakirjanKoko(true);
+      this.ui.kutistaKortinLiikkeesta();
       this.kuori.style.transition = '';
     };
 
@@ -3799,7 +3799,7 @@ export class Kartta extends NukkuvaKartta {
         this.ui.kartanRaahaus = true;
         document.body.classList.add('kartta-raahaus');
         // Kartta lähtee liikkeelle: päiväkirja yhdelle riville.
-        this.ui.asetaPaivakirjanKoko(true);
+        this.ui.kutistaKortinLiikkeesta();
       }
       this.ui.merkitseKartanEle();
       // Sisältö seuraa sormia: sormet ylös, kartta ylös. Pystysuunta
@@ -4194,9 +4194,10 @@ export class Kartta extends NukkuvaKartta {
          * — ja vain kerran eleen aikana (omistajan toive: kortti ei saa
          * napsahdella kesken vierityksen). Tämä haara on kynnyksen
          * takana ja suoritetaan eleessä täsmälleen kerran, ja
-         * asetaPaivakirjanKoko palaa saman tien, jos lappu on jo pieni.
+         * kutistaKortinLiikkeesta palaa saman tien, jos lappu on jo
+         * pieni — ja luennan aikana se ajastaa kortin paluun auki.
          */
-        this.ui.asetaPaivakirjanKoko(true);
+        this.ui.kutistaKortinLiikkeesta();
       }
       // Nopeusnäyte liukua varten; vanhat putoavat ikkunan takaa pois.
       naytteet.push({ t: e.timeStamp || performance.now(), x: e.clientX, y: e.clientY });

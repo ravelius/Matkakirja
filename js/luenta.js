@@ -522,6 +522,20 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
   });
   audio.volume = puheVoima();
   pehmeaLoppu(ui, audio);
+  /*
+   * LUENNAN LOPPU PERUU MATKAKIRJAKORTIN PALUUN (omistaja 10.9.2026:
+   * *"Puheen jälkeen se voi pysyä piilossa"*). Kartan liike on voinut
+   * ajastaa kortin nousemaan takaisin auki (js/ui.js
+   * kutistaKortinLiikkeesta); kun puhe loppuu, ajastin sammutetaan ja
+   * kutistunut kortti jää lapuksi. Tarkistus on luennan oma eikä
+   * pelkkä tapahtuma: 'error' voi johtaa varareittiin, joka jatkaa
+   * lukemista, eikä silloin peruta mitään.
+   */
+  const luennanLoppuVahti = () => {
+    if (!ui.luentaKesken?.()) ui.peruKortinPalautus?.();
+  };
+  audio.addEventListener('ended', luennanLoppuVahti);
+  audio.addEventListener('error', luennanLoppuVahti);
   ui.diaryVoice = audio;
   // Kirjanpito kaikista luennoista: pysäytys hiljentää myös sellaisen
   // äänen, joka ei enää ole diaryVoice mutta soi yhä.
@@ -807,6 +821,8 @@ export function luennanLoppuun(ui, { katto = 60000 } = {}) {
 export function stopDiaryVoice(ui) {
   ui.diaryVoice = null;
   ui.luentaTauolla = null;
+  // Puhe on ohi: kartan liikkeen ajastama kortin paluu perutaan.
+  ui.peruKortinPalautus?.();
   // Laitteen lukija on saman kaiuttimen takana kuin generoitu äänite,
   // joten "luenta kiinni" tarkoittaa myös sitä.
   if (lukijaLukee(ui.factKuuntele)) pysaytaLukija();
@@ -836,6 +852,7 @@ export function haivytaLuenta(ui, kestoMs = 700) {
   // Irrotetaan heti, jotta seuraava luenta saa alkaa puhtaalta pöydältä.
   ui.diaryVoice = null;
   ui.luentaTauolla = null;
+  ui.peruKortinPalautus?.();
   // Puhevuoro samassa hetkessä: häivytys on hyvästely eikä saa estää
   // seuraavan paikan ensimmäistä repliikkiä (ks. luovutaPuhevuoro).
   luovutaPuhevuoro(audio);
