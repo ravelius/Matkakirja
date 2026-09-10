@@ -56,11 +56,11 @@ export function asennaLivianKasvot(pollo) {
  const lepo=()=>livianPikseliAsento('blink',0);
  const nakyy=()=>!doc.hidden&&(!nappi.getClientRects||nappi.getClientRects().length>0)&&!nappi.hidden&&nappi.isConnected&&getComputedStyle(nappi).display!=='none'&&getComputedStyle(nappi).visibility!=='hidden';
  function sijoita(){
-  if(kuollut)return;const rect=nappi.getBoundingClientRect?.()||{right:114,bottom:228};
+  if(kuollut)return;const rect=nappi.getBoundingClientRect?.()||{right:152,bottom:304};
   const viewport=doc.documentElement?.clientWidth||rect.right;
   const gap=Math.max(0,viewport-rect.right);
-  kasvot.resize(gap);pinta.style.left=`${rect.right-114}px`;pinta.style.top=`${rect.bottom-228}px`;
-  pinta.style.width=`${114+gap}px`;pinta.style.height='228px';pinta.hidden=!nakyy();
+  kasvot.resize(gap);pinta.style.left=`${rect.right-152}px`;pinta.style.top=`${rect.bottom-304}px`;
+  pinta.style.width=`${152+gap}px`;pinta.style.height='304px';pinta.hidden=!nakyy();
  }
  const piirra=s=>{if(!kuollut){viimeAsento=s;sijoita();kasvot.paint(s,{compact:!nykyinen&&!puhe&&!s.flight&&!s.walk&&s.y<5});}};
  function vaienna(){for(const stop of aaniPois)stop?.();aaniPois=[];}
