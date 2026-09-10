@@ -1,25 +1,25 @@
 /* Livian lähikasvot: alkuperäinen kokonaispikseleillä piirretty pelihahmo.
- * 22 × 22 lepo, 22 × 44 läpinäkyvä näyttämö. Lisätila vain ylös.
+ * 22 × 22 lepo, 38 × 44 läpinäkyvä näyttämö. Lyhyet eleet myös vasemmalle.
  * Omistajan 9.9.2026 hyväksymä pikselisuunta; ei kuvatiedostoja. */
 // Exact integer pixel cells. No tracing, interpolation or image smoothing.
-export const LIVIA_PIX_W=22, LIVIA_PIX_H=44;
-const lpWIDTH=LIVIA_PIX_W, lpHEIGHT=LIVIA_PIX_H;
-export const LIVIA_PIX_PALETTI=[null,'#171717','#ffffff','#898989'];
+export const LIVIA_PIX_W=38, LIVIA_PIX_H=44, LIVIA_PIX_LEFT=16;
+const lpWIDTH=22, lpHEIGHT=LIVIA_PIX_H, lpLEFT=LIVIA_PIX_LEFT;
+export const LIVIA_PIX_PALETTI=[null,'#263e50','#f5f2e9','#b7c3c8'];
 const lpK=1,lpW=2,lpG=3;
-const lpgrid=(height=22)=>Array.from({length:height},()=>Array(lpWIDTH).fill(0));
-function lpdot(g,x,y,c=lpK){if(y>=0&&y<g.length&&x>=0&&x<lpWIDTH)g[y][x]=c;}
+const lpgrid=(height=22,width=lpWIDTH)=>Array.from({length:height},()=>Array(width).fill(0));
+function lpdot(g,x,y,c=lpK){if(y>=0&&y<g.length&&x>=0&&x<g[y].length)g[y][x]=c;}
 function lprect(g,x,y,w,h,c=lpK){for(let j=y;j<y+h;j++)for(let i=x;i<x+w;i++)lpdot(g,i,j,c);}
 function lpline(g,x,y,ex,ey,c=lpK){let dx=Math.abs(ex-x),sx=x<ex?1:-1,dy=-Math.abs(ey-y),sy=y<ey?1:-1,err=dx+dy;for(;;){lpdot(g,x,y,c);if(x===ex&&y===ey)break;let e=2*err;if(e>=dy){err+=dy;x+=sx;}if(e<=dx){err+=dx;y+=sy;}}}
-function lppolygon(g,pts,c){for(let y=0;y<g.length;y++)for(let x=0;x<lpWIDTH;x++){let inside=false;for(let i=0,j=pts.length-1;i<pts.length;j=i++){const a=pts[i],b=pts[j];if((a[1]>y+.5)!==(b[1]>y+.5)&&(x+.5)<(b[0]-a[0])*(y+.5-a[1])/(b[1]-a[1])+a[0])inside=!inside;}if(inside)lpdot(g,x,y,c);}}
+function lppolygon(g,pts,c){for(let y=0;y<g.length;y++)for(let x=0;x<g[y].length;x++){let inside=false;for(let i=0,j=pts.length-1;i<pts.length;j=i++){const a=pts[i],b=pts[j];if((a[1]>y+.5)!==(b[1]>y+.5)&&(x+.5)<(b[0]-a[0])*(y+.5-a[1])/(b[1]-a[1])+a[0])inside=!inside;}if(inside)lpdot(g,x,y,c);}}
 function lpbase(){
   const g=lpgrid();
-  // Crown and neck cropped: the area belongs to lpeyes and short pigeon lpbeak.
-  lppolygon(g,[[9,0],[22,0],[22,22],[10,22],[8,19],[8,16],[5,13],[4,8],[4,5],[6,2]],lpW);
-  lpline(g,8,0,5,3);lpline(g,4,4,4,7);lpline(g,21,6,21,16);
+  // Epäsäännöllinen päälaen siluetti; höyhenet harmaat, silmät luonnonvalkoiset.
+  lppolygon(g,[[10,1],[13,1],[14,0],[17,1],[19,1],[21,3],[22,6],[22,20],[20,22],[11,22],[8,19],[8,16],[5,13],[4,8],[4,5],[6,3]],lpG);
+  lpline(g,9,1,6,3);lpline(g,19,1,21,3);lpline(g,4,4,4,7);lpline(g,21,6,21,16);
   lpline(g,20,17,21,19);lpline(g,8,19,10,21);return g;
 }
 function lpeyes(g,mood='rest'){
-  lprect(g,5,4,15,7,lpW);
+  lprect(g,5,5,5,6,lpW);lprect(g,12,4,8,7,lpW);
   if(mood==='blink'){lpline(g,5,8,9,8);lpline(g,12,8,19,8);lpdot(g,18,9);return;}
   if(mood==='glance'){lpline(g,5,7,9,7);lpline(g,12,6,19,5);lpline(g,12,7,19,6);lprect(g,12,7,2,2);lpline(g,13,10,18,10);lpline(g,13,3,19,2);return;}
   if(mood==='fluster'){lprect(g,5,5,4,6,lpK);lprect(g,6,6,2,4,lpW);lpdot(g,7,7);lpline(g,12,6,19,7);lprect(g,14,8,2,2);lpline(g,13,10,18,10);lpline(g,12,3,18,5);return;}
@@ -28,11 +28,11 @@ function lpeyes(g,mood='rest'){
   lpline(g,13,10,18,10);lpline(g,12,3,18,1);lpdot(g,19,1);
 }
 function lpbeak(g,open=false){
-  lppolygon(g,[[4,10],[7,9],[10,11],[8,13],[2,15],[0,16],[1,13]],lpK);
-  lppolygon(g,[[4,11],[7,10],[8,11],[5,12],[2,14],[1,14]],lpG);
-  lprect(g,5,10,2,1,lpW);lpdot(g,6,11,lpK);lpline(g,1,15,8,12);
-  if(open){lppolygon(g,[[2,16],[8,14],[10,15],[8,18],[4,19]],lpK);lpline(g,4,18,8,17,lpG);}
-  else{lpline(g,2,16,7,15);lpline(g,7,15,9,13);lpdot(g,2,17);}
+  // Lyhyt suora pulunnokka; kärki ei koukistu petolinnun tapaan.
+  lppolygon(g,[[6,10],[8,10],[10,12],[8,14],[3,15],[3,13]],lpK);
+  lpline(g,4,13,7,12,lpG);lprect(g,6,10,2,1,lpW);
+  if(open){lppolygon(g,[[4,16],[9,14],[10,16],[8,18],[5,18]],lpK);lpline(g,6,17,8,16,lpG);}
+  else lpline(g,4,15,8,14);
 }
 function lpnormal(mood='rest',open=false){const g=lpbase();lpeyes(g,mood);lpbeak(g,open);return g;}
 const lprest=lpnormal(),lpblink=lpnormal('blink'),lpglance=lpnormal('glance');
@@ -40,11 +40,11 @@ const lpcrumb=lpnormal(),lpchew=lpnormal('blink',true),lpfluster=lpnormal('flust
 for(const g of [lpcrumb,lpchew,lpcaught])lpdot(g,2,14,lpW);
 for(const g of [lpfluster,lpcaught]){lpdot(g,20,2,lpG);lpdot(g,20,3,lpG);}
 const lpshock=lpgrid(30);
-lppolygon(lpshock,[[7,6],[22,6],[22,30],[11,30],[9,26],[4,21],[4,12]],lpW);
+lppolygon(lpshock,[[7,6],[20,6],[22,9],[22,28],[20,30],[11,30],[9,26],[4,21],[4,12]],lpG);
 lprect(lpshock,4,5,6,14,lpK);lprect(lpshock,5,6,4,12,lpW);lpdot(lpshock,7,11);
 lprect(lpshock,12,1,9,18,lpK);lprect(lpshock,13,2,7,16,lpW);lpdot(lpshock,16,10);
 lpline(lpshock,13,0,18,0);lpline(lpshock,5,3,8,2);
-lppolygon(lpshock,[[6,18],[9,18],[11,20],[7,22],[3,22],[1,24],[1,21]],lpK);
+lppolygon(lpshock,[[6,18],[9,18],[11,20],[8,22],[3,22],[3,20]],lpK);
 lpline(lpshock,3,21,8,19,lpG);lpdot(lpshock,7,19,lpW);
 lppolygon(lpshock,[[5,23],[10,22],[13,26],[11,29],[5,28]],lpK);
 lpline(lpshock,7,27,10,27,lpG);lpline(lpshock,21,19,21,27);
@@ -53,7 +53,8 @@ for(let y=0;y<12;y++)for(let x=4;x<20;x++)if((x>=5&&x<=9&&y>=5&&y<=10)||(x>=12&&
 
 // Ilmeet vaihtavat silmäluomia, nokkaa ja pään asentoa, eivät koko kuvakkeen kokoa.
 function lpIlme(tunne) {
- const g=lpnormal(); lprect(g,5,1,15,10,lpW);
+ const g=lpnormal(); lprect(g,5,1,15,10,lpG);
+ lprect(g,5,5,5,6,lpW);lprect(g,12,4,8,7,lpW);
  const pari=(vasen,oikea)=>{vasen(5,5);oikea(12,5);};
  const auki=(x,y)=>{lprect(g,x,y,7,6,lpK);lprect(g,x+1,y+1,5,4,lpW);lpdot(g,x+3,y+3);};
  const littea=(x,y)=>{lpline(g,x,y+2,x+6,y+2);lprect(g,x+3,y+3,2,2);};
@@ -69,26 +70,28 @@ function lpIlme(tunne) {
  else if(tunne==='up') {pari(auki,auki);lprect(g,7,6,2,2);lprect(g,14,6,2,2);}
  else if(tunne==='down') {pari(auki,auki);lprect(g,7,9,2,2);lprect(g,14,9,2,2);}
  else lpeyes(g);
+ for(let y=0;y<3;y++)for(let x=0;x<lpWIDTH;x++)if(!lprest[y][x])g[y][x]=0;
  return g;
 }
 function lpEdesta() {
- const g=lpgrid();lppolygon(g,[[4,0],[18,0],[21,4],[21,18],[18,22],[4,22],[1,18],[1,4]],lpW);
- lpline(g,3,0,0,4);lpline(g,19,0,21,3);lpline(g,0,5,0,16);lpline(g,21,5,21,16);
+ const g=lpgrid();lppolygon(g,[[5,1],[9,1],[10,0],[14,1],[17,1],[21,5],[21,18],[18,22],[4,22],[1,18],[1,5]],lpG);
+ lpline(g,4,1,1,4);lpline(g,18,2,21,5);
+ lprect(g,3,6,7,7,lpW);lprect(g,12,5,7,8,lpW);lpline(g,0,5,0,16);lpline(g,21,5,21,16);
  lpline(g,3,5,9,7);lpline(g,3,6,9,8);lpline(g,12,7,18,4);lpline(g,12,8,18,5);
  lprect(g,6,8,2,3);lprect(g,13,8,2,3);lpline(g,3,12,8,12);lpline(g,13,12,18,12);
  lppolygon(g,[[9,12],[13,12],[16,15],[11,19],[6,15]],lpK);lpline(g,8,15,14,15,lpG);lprect(g,10,12,3,1,lpW);
  return g;
 }
 function lpProfiili(oikea=false) {
- const g=lpgrid();lppolygon(g,[[10,0],[22,0],[22,22],[9,22],[8,18],[6,15],[5,7],[7,2]],lpW);
- lpline(g,9,0,5,4);lpline(g,5,5,5,8);lpline(g,10,21,8,18);
+ const g=lpgrid();lppolygon(g,[[11,1],[14,1],[15,0],[19,1],[21,3],[22,6],[22,20],[20,22],[10,22],[8,18],[6,15],[5,7],[7,3]],lpG);
+ lpline(g,10,1,6,4);lpline(g,19,1,21,3);lprect(g,9,5,10,7,lpW);lpline(g,5,5,5,8);lpline(g,10,21,8,18);
  lpline(g,9,5,19,3);lpline(g,9,6,19,4);lprect(g,12,6,3,4);lpline(g,9,11,18,11);lpbeak(g);
  return oikea?g.map(row=>[...row].reverse()):g;
 }
 const lpExtra={front:lpEdesta(),left:lpProfiili(),right:lpProfiili(true)};
 for(const mood of['angry','embarrassed','bored','sleep','manic','disbelief','happy','smug','confused','love','up','down'])lpExtra[mood]=lpIlme(mood);
 lpExtra.puff=lpIlme('bored');
-lppolygon(lpExtra.puff,[[1,16],[4,14],[8,15],[11,19],[16,15],[20,14],[22,17],[22,22],[0,22]],lpW);
+lppolygon(lpExtra.puff,[[1,16],[4,14],[8,15],[11,19],[16,15],[20,14],[22,17],[22,22],[0,22]],lpG);
 lpline(lpExtra.puff,0,16,0,20);lpline(lpExtra.puff,1,21,5,21);lpline(lpExtra.puff,20,15,21,16);lpline(lpExtra.puff,21,17,21,21);lpline(lpExtra.puff,6,16,10,16);lpdot(lpExtra.puff,9,17);
 lpExtra.yawn=lpIlme('sleep');lpbeak(lpExtra.yawn,true);lprect(lpExtra.yawn,4,16,6,5);
 lpExtra.talk=lpnormal('rest',true);lpExtra.talkSmall=lpnormal();lpline(lpExtra.talkSmall,3,17,8,16);lpdot(lpExtra.talkSmall,7,17);
@@ -111,7 +114,7 @@ const lpStep=(p,stops)=>{let result=stops[0][1];for(const[at,value]of stops){if(
 const lpRamp=(p,a,b,from,to)=>Math.round(from+(to-from)*Math.max(0,Math.min(1,(p-a)/(b-a))));
 const lpPulse=(p,n=8)=>Math.floor(p*n)%2;
 export function livianPikseliAsento(id,p=0) {
- p=Math.max(0,Math.min(1,p));const s={frame:'rest',x:0,y:0,line:false,crumbY:null,eyesAhead:false,tilt:0,fx:null,phase:p===1?0:Math.floor(p*12),owlX:null};
+ p=Math.max(0,Math.min(1,p));const s={frame:'rest',x:0,y:0,line:false,crumbY:null,eyesAhead:false,tilt:0,fx:null,phase:p===1?0:Math.floor(p*12),owlX:null,side:null};
  const tulot=['arrive','crash','emerge','handoff'],poistumiset=['leaveRight','leaveDown'];
  if(p===0&&!tulot.includes(id)||p===1&&!poistumiset.includes(id))return s;
  const seq=(stops)=>{s.frame=lpStep(p,[[0,'rest'],...stops,[.94,'rest']]);};
@@ -128,8 +131,8 @@ export function livianPikseliAsento(id,p=0) {
  if(id==='embarrassed'){seq([[.12,'embarrassed'],[.50,'down'],[.62,'embarrassed']]);if(p>.2&&p<.8)s.y=1;}
  if(id==='angry'){seq([[.1,'angry'],[.77,'blink'],[.85,'angry']]);if(p>.25&&p<.60){s.y=-lpPulse(p,15);s.fx='anger';}}
  if(id==='bored')seq([[.12,'bored'],[.42,'glance'],[.57,'bored'],[.80,'blink']]);
- if(id==='puff'){seq([[.12,'puff'],[.65,'talk'],[.72,'fluster'],[.85,'rest']]);if(p>.25&&p<.64)s.y=-lpPulse(p,15);if(p>=.65&&p<.80)s.fx='pfft';}
- if(id==='manic'){seq([[.12,'manic'],[.82,'caught']]);if(p>.2&&p<.8){s.y=-lpPulse(p,20);s.fx='bread';}}
+ if(id==='puff'){seq([[.12,'puff'],[.65,'talk'],[.72,'fluster'],[.85,'rest']]);if(p>.25&&p<.64)s.y=-lpPulse(p,15);if(p>=.65&&p<.80)s.side={kind:'pfft'};}
+ if(id==='manic'){seq([[.12,'manic'],[.82,'caught']]);if(p>.2&&p<.8){s.y=-lpPulse(p,20);s.side={kind:'bread',y:0,bite:false};}}
  if(id==='expert'){seq([[.13,'smug'],[.54,'front'],[.68,'smug']]);if(p>.2&&p<.82)s.y=-2;}
  if(id==='disbelief')seq([[.13,'disbelief'],[.51,'blink'],[.57,'disbelief'],[.8,'front']]);
  if(id==='confused'){seq([[.15,'confused'],[.79,'blink']]);if(p>.3&&p<.7){s.tilt=1;s.fx='question';}}
@@ -142,13 +145,13 @@ export function livianPikseliAsento(id,p=0) {
  if(id==='reading'){seq([[.13,'down'],[.3,'glance'],[.47,'down'],[.63,'confused'],[.83,'blink']]);s.y=p>.13&&p<.80?2:0;}
  if(id==='crumb'||id==='bread'){
   seq([[.08,id==='bread'?'manic':'crumb'],[.22,'chew'],[.31,'crumb'],[.39,id==='bread'?'chewManic':'chew'],[.46,'caught'],[.63,'blink'],[.69,'caught'],[.74,'fluster'],[.86,'rest']]);
-  if(p>=.63&&p<.69)s.y=-lpPulse(p,60);if(p>=.74&&p<.87)s.crumbY=lpRamp(p,.74,.87,35,44);if(id==='bread'&&p>.08&&p<.22)s.fx='bread';
+  if(p>=.63&&p<.69)s.y=-lpPulse(p,60);if(p>=.74&&p<.87)s.crumbY=lpRamp(p,.74,.87,35,44);if(id==='bread'&&p>.08&&p<.74){s.side={kind:'bread',x:p<.3?lpRamp(p,.16,.3,0,6):lpRamp(p,.4,.5,6,0),y:p<.22?lpRamp(p,.08,.22,17,0):p>.46?lpRamp(p,.46,.74,0,18):0,bite:p>=.22};}
  }
  if(id==='preen')seq([[.1,'down'],[.23,'preen'],[.36,'down'],[.46,'preen'],[.62,'preen'],[.78,'smug']]);
  if(id==='yawn')seq([[.12,'bored'],[.32,'yawn'],[.71,'sleep'],[.86,'blink']]);
  if(id==='sleep'){seq([[.1,'bored'],[.24,'blink'],[.34,'bored'],[.45,'sleep'],[.86,'fluster']]);if(p>.45&&p<.86){s.y=3;s.tilt=1;s.fx='z';}}
  if(id==='wake'){seq([[.0,'sleep'],[.20,'shock'],[.40,'front'],[.56,'smug']]);if(p>.2&&p<.4)s.y=-2;}
- if(id==='sneeze'){seq([[.12,'up'],[.32,'confused'],[.46,'yawn'],[.57,'blink'],[.71,'fluster']]);if(p>.46&&p<.57){s.y=-2;s.fx='pfft';}}
+ if(id==='sneeze'){seq([[.12,'up'],[.32,'confused'],[.46,'yawn'],[.57,'blink'],[.71,'fluster']]);if(p>.46&&p<.57){s.y=-2;s.side={kind:'pfft'};}}
  if(id==='wind'){seq([[.1,'glance'],[.25,'blink'],[.68,'fluster']]);if(p>.2&&p<.75){s.tilt=1;s.x=lpPulse(p,15);s.fx='wind';}}
  if(id==='rain'){seq([[.1,'up'],[.33,'wing'],[.78,'angry']]);if(p>.15&&p<.8)s.fx='rain';}
  if(id==='sun'){seq([[.12,'up'],[.3,'blink'],[.50,'wing'],[.78,'bored']]);if(p>.14&&p<.8)s.fx='sun';}
@@ -189,25 +192,40 @@ function lpKoriste(g,fx,phase) {
  if(fx==='snow')for(const[x,y]of[[5,6],[14,11],[18,3]]){const yy=y+phase%5;lpdot(g,x,yy,lpW);lpdot(g,x-1,yy,lpG);lpdot(g,x+1,yy,lpG);lpdot(g,x,yy-1,lpG);lpdot(g,x,yy+1,lpG);}
 }
 export function livianPikselit(s) {
- const out=lpgrid(lpHEIGHT);let f=LIVIA_PIX_RUUDUT[s.frame]||lprest;
+ const out=lpgrid(lpHEIGHT,LIVIA_PIX_W),head=lpgrid(lpHEIGHT);let f=LIVIA_PIX_RUUDUT[s.frame]||lprest;
  if(s.mouth&&f.length===22&&!['front','right','left'].includes(s.frame)){f=f.map(r=>[...r]);const nokka=LIVIA_PIX_RUUDUT[s.mouth]||lprest;for(let y=10;y<22;y++)for(let x=0;x<11;x++)f[y][x]=nokka[y][x];}
  else if(s.mouth&&['front','right','left'].includes(s.frame)){f=f.map(r=>[...r]);if(s.mouth==='talk'){if(s.frame==='front')lprect(f,9,17,5,4,lpK);else if(s.frame==='right')lprect(f,14,16,4,3,lpK);else lprect(f,4,16,4,3,lpK);}}
  const top=lpHEIGHT-f.length+s.y-1;
  for(let y=0;y<f.length;y++)for(let x=0;x<lpWIDTH;x++){
   if(s.line&&y+top>=lpHEIGHT-1)continue;
   const shear=s.tilt?Math.round((y-10)/9)*s.tilt:0;
-  if(f[y][x])lpdot(out,x+s.x+shear,y+top,f[y][x]);
+  if(f[y][x])lpdot(head,x+s.x+shear,y+top,f[y][x]);
  }
- if(s.eyesAhead)for(let y=0;y<lponlyEyes.length;y++)for(let x=0;x<lpWIDTH;x++)if(lponlyEyes[y][x])lpdot(out,x,y+21,lponlyEyes[y][x]);
- if(s.owlX!==null&&s.owlX!==undefined){const x=s.owlX;lprect(out,x+4,29,14,12,lpG);lprect(out,x+5,31,5,5,lpW);lprect(out,x+12,31,5,5,lpW);lpdot(out,x+7,33);lpdot(out,x+14,33);lpline(out,x+4,28,x+7,30);lpline(out,x+17,28,x+14,30);lpdot(out,x+10,37);lpdot(out,x+11,38);}
- if(s.line)lprect(out,1,lpHEIGHT-1,21,1,lpK);
- if(s.crumbY!==null&&s.crumbY!==undefined)lpdot(out,2,s.crumbY,lpK);
- if(s.fx)lpKoriste(out,s.fx,s.phase||0);return out;
+ if(s.eyesAhead)for(let y=0;y<lponlyEyes.length;y++)for(let x=0;x<lpWIDTH;x++)if(lponlyEyes[y][x])lpdot(head,x,y+21,lponlyEyes[y][x]);
+ if(s.owlX!==null&&s.owlX!==undefined){const x=s.owlX;lprect(head,x+4,29,14,12,lpG);lprect(head,x+5,31,5,5,lpW);lprect(head,x+12,31,5,5,lpW);lpdot(head,x+7,33);lpdot(head,x+14,33);lpline(head,x+4,28,x+7,30);lpline(head,x+17,28,x+14,30);lpdot(head,x+10,37);lpdot(head,x+11,38);}
+ if(s.line)lprect(head,1,lpHEIGHT-1,21,1,lpK);
+ if(s.crumbY!==null&&s.crumbY!==undefined)lpdot(head,2,s.crumbY,lpK);
+ if(s.fx)lpKoriste(head,s.fx,s.phase||0);
+ for(let y=0;y<lpHEIGHT;y++)for(let x=0;x<lpWIDTH;x++)out[y][x+lpLEFT]=head[y][x];
+ // Sivurekvisiitta pysyy kasvojen korkeudella, kuplan alapuolella.
+ if(s.side?.kind==='bread'){
+  const y=29+s.side.y,dx=s.side.x||0;
+  const prop=lpgrid(lpHEIGHT,LIVIA_PIX_W);
+  lppolygon(prop,[[4,y+6],[7,y+4],[14,y+6],[20,y+9],[19,y+12],[10,y+10],[4,y+9]],lpG);
+  lpline(prop,5,y+9,18,y+12);lpline(prop,11,y+7,17,y+9);
+  lppolygon(prop,[[3,y],[5,y-2],[10,y-2],[13,y],[13,y+5],[11,y+7],[4,y+7],[2,y+4]],lpK);
+  lppolygon(prop,[[4,y],[6,y-1],[10,y-1],[12,y+1],[12,y+4],[10,y+6],[5,y+6],[3,y+3]],lpW);
+  lpline(prop,6,y+1,9,y+1,lpG);lpline(prop,9,y+2,7,y+3,lpG);
+  if(s.side.bite){lprect(prop,10,y-1,4,3,0);lpdot(prop,9,y,0);lpdot(prop,14,y+5,lpK);}
+  for(let yy=0;yy<lpHEIGHT;yy++)for(let xx=0;xx<LIVIA_PIX_W;xx++)if(prop[yy][xx])lpdot(out,xx+dx,yy,prop[yy][xx]);
+ }
+ if(s.side?.kind==='pfft')for(let i=0;i<3;i++)lpline(out,3+i*2,29+i*4,11+i,31+i*3,lpK);
+ return out;
 }
 export function luoLivianPikselit(canvas,scale=2) {
  if(!Number.isInteger(scale)||scale<1)throw new RangeError('Pikselimittakaavan on oltava positiivinen kokonaisluku.');
- canvas.width=lpWIDTH*scale;canvas.height=lpHEIGHT*scale;canvas.style.width=`${canvas.width}px`;canvas.style.height=`${canvas.height}px`;
+ canvas.width=LIVIA_PIX_W*scale;canvas.height=lpHEIGHT*scale;canvas.style.width=`${canvas.width}px`;canvas.style.height=`${canvas.height}px`;
  const ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas ei ole käytettävissä.');ctx.imageSmoothingEnabled=false;
- function paint(state){ctx.clearRect(0,0,canvas.width,canvas.height);const data=livianPikselit(state);for(let y=0;y<lpHEIGHT;y++)for(let x=0;x<lpWIDTH;x++)if(data[y][x]){ctx.fillStyle=LIVIA_PIX_PALETTI[data[y][x]];ctx.fillRect(x*scale,y*scale,scale,scale);}}
+ function paint(state){ctx.clearRect(0,0,canvas.width,canvas.height);const data=livianPikselit(state);for(let y=0;y<lpHEIGHT;y++)for(let x=0;x<LIVIA_PIX_W;x++)if(data[y][x]){ctx.fillStyle=LIVIA_PIX_PALETTI[data[y][x]];ctx.fillRect(x*scale,y*scale,scale,scale);}}
  paint(livianPikseliAsento('blink',0));return{paint};
 }

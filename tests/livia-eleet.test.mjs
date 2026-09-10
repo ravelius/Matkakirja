@@ -31,7 +31,7 @@ function liviaTestYmparisto(t){
 
 test('pöllö odottaa poissa, vastaus palaa heti; puhe ja tuho eivät jätä ajastimia',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);assert.ok(c);
- const canvas=e.button.children[0].children[0];assert.equal(canvas.width,44);assert.equal(canvas.height,88);
+ const canvas=e.button.children[0].children[0];assert.equal(canvas.width,76);assert.equal(canvas.height,88);
  e.tick(5000);assert.equal(e.raf.size,0,'lepo ei pyöritä piirtoa');
  e.pollo.auki=true;e.notify(e.button);
  const row=new e.El();row.className='pollo-odottaa';row.textContent='Käyn kysymässä pöllöltä';e.virta.append(row);e.notify(e.virta);

@@ -25558,8 +25558,8 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis {
 .pollo-nappi .livia-kasvot-pinta canvas { mix-blend-mode: normal !important; }
 .pollo-nappi.livia-kasvot-valmis:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-/* Pikselilähikasvo: 44 px leveä lepotila, lisätila vain ylös. */
+/* Pikselilähikasvo: lepo ja osuma-alue 44 px. Lyhyet eleet myös vasemmalle. */
 .pollo-nappi.pollo-kelluu.livia-kasvot-valmis,
 body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width: 44px; min-width: 44px; }
-.livia-kasvot-pinta.livia-pikselit { width: 44px; height: 88px; right: 0; bottom: 0; }
+.livia-kasvot-pinta.livia-pikselit { width: 76px; height: 88px; right: 0; bottom: 0; }
 .livia-pikselit canvas { display: block; image-rendering: pixelated; image-rendering: crisp-edges; }
