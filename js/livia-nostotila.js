@@ -33,8 +33,9 @@ export function asennaLivianNostoTila(pollo,pinta,reagoi,muuttui){
   pinta.classList.toggle('livia-nosto-nakyva',on);
   const uusi=seuraavat.at(-1);
   if(on&&uusi&&!kortit.includes(uusi))reagoi('card',livianNostonTiedot(uusi));
-  if(!seuraavat.length&&kortit.length)reagoi('cardEnd');
+  const sulkeutui=!seuraavat.length&&kortit.length;
   kortit=seuraavat;
+  if(sulkeutui)reagoi('cardEnd');
  }
  function koko(){paivita();muuttui();}
  const vahti=new MutationObserver(paivita);vahti.observe(doc.body,{childList:true});

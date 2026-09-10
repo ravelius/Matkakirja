@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1743, teksti: 'Pulun kuuntelu säilyy odotuksen ja taukojen yli' },
   { v: 1742, teksti: 'Linssin avaus, iPad-kuva 1,5×, kortin kuvateksti kiinni' },
   { v: 1741, teksti: 'Pulun reaktiorekisteri ja 45 kaupungin tunnetagit' },
   { v: 1740, teksti: 'Albumiin lyhyet kuvatekstit ja yksi havainnekuvamerkintä' },

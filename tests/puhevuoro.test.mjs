@@ -91,6 +91,20 @@ const lue = (polku) => readFileSync(new URL(polku, import.meta.url), 'utf8');
 const uusiUi = () => ({ dead: false });
 const odota = (ms) => new Promise((ok) => { setTimeout(ok, ms); });
 
+test('Pulu kuuntelee myös muuta kuin matkakirjan pääluenta-URLia', async t => {
+  const { kuunteleLivianTilanteita } = await import('../js/livia-tilanteet.js');
+  const ui = uusiUi(), tapahtumat = [];
+  ui.diaryFullUrl = 'assets/audio/eri-matkakirja.mp3';
+  const off = kuunteleLivianTilanteita((laji, tiedot) => tapahtumat.push({ laji, ...tiedot }));
+  const audio = playDiaryVoice(ui, 'assets/audio/puhe-fokus-aarremerkinta-riika.mp3');
+  t.after(() => { audio.laukaise('ended'); vapautaPuhuja(ui, audio); off(); });
+  audio.paused = false; audio.laukaise('playing');
+  assert.equal(tapahtumat.at(-1)?.laji, 'narration');
+  assert.equal(tapahtumat.at(-1)?.tunnus, audio);
+  audio.paused = true; audio.laukaise('pause');
+  assert.equal(tapahtumat.at(-1)?.laji, 'narrationEnd');
+});
+
 /* ---------- 1. yksi vuorokirjanpito ---------- */
 
 test('puhujaAanessa kertoo roolin ja unohtaa vapautetun', () => {
