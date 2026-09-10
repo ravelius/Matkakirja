@@ -25,6 +25,7 @@ export function livianSvgMalli(s,{right=0}={}) {
  if(s.walk){const t=s.walk.direction===1?s.walk.t:1-s.walk.t;m.x=128+(right+96)*t;m.y=302-2*Math.sin(p*Math.PI*14);if(t>=1)m.visible=false;}
  if(['arrive','crash','owl','leaveRight'].includes(id)&&!s.flight&&!s.walk){const edge=id==='arrive'?1-lvEase((p-.08)/.46):id==='crash'?1-lvEase((p-.05)/.24):lvClamp((s.x||0)/24);m.x=128+(right+100)*edge;}
  if(id==='leaveRight'&&p>=1)m.visible=false;
+ if(id==='flyAway'&&p>0)m.mirror=true;
  if(s.flight){
   const f=s.flight,t=lvClamp(f.t);m.face='rest';m.wing='flap';m.wingAmount=Math.sin(p*Math.PI*22);
   if(f.kind==='away'||f.kind==='back'){
@@ -107,7 +108,10 @@ function lvProps(s,m,prefix){
 export function livianSvgKuva(s,{right=0,prefix='livia'}={}) {
  right=Math.max(0,Number.isFinite(right)?right:0);prefix=prefix.replace(/[^a-zA-Z0-9_-]/g,'');
  const m=livianSvgMalli(s,{right}),width=152+right;
- let markup=m.visible?lvBird(s,m,prefix)+lvProps(s,m,prefix):'';
+ // The contact shadow belongs to the ground, not to the leaning or flying body.
+ const contact=m.visible&&!s.flight&&!s.line&&m.y<=304?lvClamp((m.y-290)/12):0;
+ const shadow=contact?`<defs><radialGradient id="${prefix}ground"><stop stop-color="#635b4e" stop-opacity=".32"/><stop offset=".55" stop-color="#635b4e" stop-opacity=".18"/><stop offset="1" stop-color="#635b4e" stop-opacity="0"/></radialGradient></defs><ellipse data-part="ground-shadow" cx="${lvRound(m.x)}" cy="301.8" rx="16" ry="2" fill="url(#${prefix}ground)" opacity="${lvRound(contact)}"/>`:'';
+ let markup=m.visible?shadow+lvBird(s,m,prefix)+lvProps(s,m,prefix):'';
  if(s.owlX!==null&&s.owlX!==undefined){const ox=128+(right+80)*s.owlX/24;markup+=`<g transform="translate(${ox-14} 267)" fill="#73654f"><path d="M0 3L4-3L11 2L20-3L23 3V23Q12 35 0 23Z"/><circle cx="7" cy="10" r="5" fill="#e8ddc4"/><circle cx="17" cy="10" r="5" fill="#e8ddc4"/><circle cx="7" cy="10" r="2"/><circle cx="17" cy="10" r="2"/><path d="M9 15h6l-3 5Z" fill="#e8ddc4"/></g>`;}
  if(s.line)markup+=`<path d="M94 303H${Math.min(width,152)}" stroke="#988d79" stroke-width="1.3" stroke-linecap="round"/>`;
  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} 304" width="${width}" height="304" overflow="hidden" aria-hidden="true" data-livia-visible="${m.visible}">${markup}</svg>`;

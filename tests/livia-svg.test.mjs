@@ -41,3 +41,8 @@ test('kasvopuhe säilyttää tunnetilan silmissä ja voimakkuus pysyy rajattuna'
  assert.equal(livianSvgAsento('shock',.4,{voimakkuus:99}).voimakkuus,1);
  assert.equal(livianSvgAsento('shock',.4,{voimakkuus:NaN}).voimakkuus,0);
 });
+
+ test('poislento kääntää koko linnun kohti oikeaa yläkulmaa, paluu takaisin',()=>{
+ for(const p of [.08,.2,.5,.85])assert.equal(livianSvgMalli(livianSvgAsento('flyAway',p)).mirror,true);
+ assert.equal(Boolean(livianSvgMalli(livianSvgAsento('flyBack',.3)).mirror),false);
+ });

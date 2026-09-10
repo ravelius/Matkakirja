@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1733, teksti: 'Pulun jalkavarjo, chat alemmas ja poislennon suunta' },
   { v: 1732, teksti: 'Kokopulun 51 elettä, lähestyminen ja siipien tunteet' },
   { v: 1731, teksti: 'Chat jättää suuren Pulun näkyviin' },
   { v: 1730, teksti: 'Pakan selaus, pulun kuvateksti, kortti heti, kupla terävä' },
