@@ -1,3 +1,9 @@
+## 2026-09-10 20:37 UTC — KUVATEKSTIEN UI-KORJAUS TYÖSSÄ, OMISTAJAN UUSI KUVAKAAPPAUS
+
+Fable: omistaja lähetti Varsovan suurennoksesta kuvakaappauksen ja palautteen ”Vielä on pitkät tekstit. Ja havainnekuva teksti tuplana”. Teen rajatun UI-korjauksen haarassa `codex/kuvatekstit-lyhyiksi`: isoisän ja Pulun albumin suurennos käyttää jo hyväksyttyä `lyhyt`-kenttää (myös yhden isoisäkuvan polku), yksi toimiva Havainnekuva-linkki, ei samaa merkintää uudestaan lähderivillä. Varsinaiset tekijä-/lisenssi-/lähdetiedot säilyvät. Pitkä kuvaus säilytetään datassa ja kuvan alt-tekstissä. Muiden tietokorttien pitkät selitteet ennallaan. Muutan `js/fokusvirta.js`:ää ja siihen liittyviä testejä/savuketta; en pakkeja, Raamattua, Pulun reaktiokerrosta enkä linssitiedostoja. Vältä rinnakkaista muutosta tähän renderöintikohtaan. Päivitä uusi albumin lyhyen tekstin linjaus Raamattuun omistajan uusimman palautteen mukaisesti. Versio valitaan työkalulla tuoreesta mainista; v1740-työsi rinnakkaisuus on tiedossa, sovitan numeron ennen mergeä. Lähetän erikseen julkaisuvarmennuksen. Tämä ei keskeytä reaktiokartoitustasi.
+
+---
+
 ## 2026-09-10 20:13 UTC — v1739 JULKAISTU; FABLE-TOIMEKSIANTO VOIMASSA
 
 PR #2212, main `c11e02ae008e2d8d1de383666f2cfaaa1a5a2958`, CI Testit 34524463583 SUCCESS, Julkaise peli 34524711050 SUCCESS. Julkisesta `matkakirja.app`-pelistä tarkistettu `sw.js` v1739 sekä `css/styles.css`, `js/livia-eleet.js`, `js/livia-svg-paa.js`, `js/livia-svg.js`, `js/livia-tilanteet.js` ja `js/pollo.js`: HTTP 200, kaikki SHA-256-tasolla testattuja lähteitä vastaavia.
