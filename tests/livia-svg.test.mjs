@@ -3,11 +3,49 @@ import assert from 'node:assert/strict';
 import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva,livianSvgMalli,livianEleenVoima} from '../js/livia-svg.js';
 
 test('kaikki nykyiset eleet piirtyvät kokonaisella SVG-pululla ilman virheellisiä koordinaatteja',()=>{
- assert.equal(LIVIA_SVG_ELEET.length,65);
+ assert.equal(LIVIA_SVG_ELEET.length,68);
  for(const e of LIVIA_SVG_ELEET)for(const p of [0,.1,.25,.43,.6,.8,.95,1]){
   const s=livianSvgAsento(e.id,p),svg=livianSvgKuva(s,{right:42,prefix:'qa'});
   assert.match(svg,/^<svg /);assert.doesNotMatch(svg,/NaN|Infinity|undefined|<image|<canvas/);
   if(livianSvgMalli(s,{right:42}).visible)assert.match(svg,/data-part="whole-bird"/);
+ }
+});
+test('chatin pikapyrähdyksillä on sovitut kestot ja vaakasuora vakioskaalainen rata',()=>{
+ assert.equal(LIVIA_SVG_ELEET.find(e=>e.id==='chatDashOut')?.duration,300);
+ assert.equal(LIVIA_SVG_ELEET.find(e=>e.id==='chatDashBack')?.duration,100);
+ for(const right of [0,42,120]){
+  const rest=livianSvgMalli(livianSvgAsento('chatDashOut',0),{right});
+  const edge=livianSvgMalli(livianSvgAsento('chatDashOut',.55),{right});
+  const backStart=livianSvgMalli(livianSvgAsento('chatDashBack',0),{right});
+  const backEnd=livianSvgMalli(livianSvgAsento('chatDashBack',1),{right});
+  assert.equal(rest.x,128);assert.equal(rest.y,302);assert.equal(rest.scale,.56);
+  assert.equal(edge.x,128+right+96);assert.ok(edge.x>152+right);assert.equal(edge.visible,false);
+  assert.equal(backStart.x,edge.x);assert.equal(backStart.visible,false);
+  assert.equal(backEnd.x,128);assert.equal(backEnd.y,302);assert.equal(backEnd.scale,.56);
+  assert.equal(backEnd.angle,0);assert.equal(backEnd.visible,true);assert.equal(Boolean(backEnd.mirror),false);
+  assert.equal(backEnd.wing,'fold');assert.equal(backEnd.wingAmount,0);
+ }
+});
+test('chatin pölyjen ravistelu pysyy lepoankkurissa, jättää kasvot puheelle ja päättyy neutraalina',()=>{
+ assert.equal(LIVIA_SVG_ELEET.find(e=>e.id==='chatDustOff')?.duration,1400);
+ const s=livianSvgAsento('chatDustOff',.45),m=livianSvgMalli({...s,mouth:'talk'});
+ assert.equal(m.x,128);assert.equal(m.y,302);assert.equal(m.scale,.56);assert.equal(m.face,s.frame);
+ assert.equal(m.wing,'spread');assert.match(livianSvgKuva({...s,mouth:'talk'}),/data-part="chat-dust"/);
+ assert.match(livianSvgKuva({...s,mouth:'talk'}),/data-part="chat-dust-speck"/);
+ const end=livianSvgMalli(livianSvgAsento('chatDustOff',1));
+ assert.equal(end.x,128);assert.equal(end.y,302);assert.equal(end.angle,0);assert.equal(end.wing,'fold');
+ assert.doesNotMatch(livianSvgKuva(livianSvgAsento('chatDustOff',1)),/data-part="chat-dust"/);
+});
+test('chatista poistumisen vauhtipilvi jää lähtökohtaan ja häipyy linnusta riippumatta',()=>{
+ const middle=livianSvgKuva(livianSvgAsento('chatDashOut',.4),{right:80,prefix:'dashqa'});
+ const birdGone=livianSvgKuva(livianSvgAsento('chatDashOut',.7),{right:80,prefix:'dashqa'});
+ assert.match(middle,/data-part-chat-dash="chatDashOut"/);
+ assert.match(middle,/data-part="chat-speed-cloud" transform="translate\(128 302\)"/);
+ assert.match(middle,/data-part="chat-dash-streak"/);
+ assert.doesNotMatch(birdGone,/data-part="whole-bird"/);
+ assert.match(birdGone,/data-part="chat-speed-cloud"/);
+ for(const id of ['chatDashOut','chatDashBack'])for(const p of [0,.11,.4,.55,.8,1]){
+  assert.doesNotMatch(livianSvgKuva(livianSvgAsento(id,p),{right:120}),/NaN|Infinity|undefined/);
  }
 });
 test('pullariemu näyttää kiljahduksen, kolme pienenevää haukkua ja tyytyväisen pureskelun',()=>{

@@ -32,6 +32,36 @@ function liviaTestYmparisto(t){
  return{pollo,button,virta,doc,lehti,reduced,El,tick,notify,raf,timers};
 }
 
+for(const viive of [0,40,120,320,3000])test(`chatin vastaus ${viive} ms lähdöstä palauttaa heti ja puistelee vastauspuheen aikana`,t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);e.pollo.auki=true;e.notify(e.button);
+ const canvas=e.doc.body.children[0].children[0],tunnus={},puhe={};
+ assert.equal(c.tilanne('waiting',{tunnus,lahde:'vastaus'}),true,'kysymys lähtee ilman DOM-riviä');
+ e.tick(viive);
+ const x=svg=>Number(svg.match(/data-part="whole-bird"[^>]* transform="translate\(([\d.-]+)/)?.[1]);
+ const ennen=x(canvas.innerHTML);
+ assert.equal(c.tilanne('waitingAnswer',{tunnus:{},teksti:'vanha'}),false);
+ assert.equal(c.tilanne('waitingAnswer',{tunnus,teksti:'Vastaus'}),true);
+ if(viive<165)assert.ok(Math.abs(x(canvas.innerHTML)-ennen)<1,'paluu kääntyy nykyisestä paikasta, ei hyppää ensin reunaan');
+ c.tilanne('waitingEnd',{tunnus});ilmoitaLivianKasvopuhe(puhe,true,'Tässä vastaus');
+ e.tick(120);assert.match(canvas.innerHTML,/data-part="whole-bird"/,'kotona viimeistään 120 ms vastauksesta');
+ e.tick(280);assert.match(canvas.innerHTML,/data-part="chat-dust"/,'pölypuistelu jatkuu puheen rinnalla');
+ assert.equal(c.tilanne('waitingAnswer',{tunnus,teksti:'sama'}),false);
+ e.tick(1500);assert.match(canvas.innerHTML,/data-part="book"/,'puistelun jälkeen kirjaan');
+ ilmoitaLivianKasvopuhe(puhe,false);
+});
+
+test('pikalahdön pilvi jää hetkeksi, reduced motion ja peruutus eivät jätä myöhäistä puistelua',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);e.pollo.auki=true;e.notify(e.button);
+ const canvas=e.doc.body.children[0].children[0],a={};c.tilanne('waiting',{tunnus:a,lahde:'vastaus'});e.tick(180);
+ assert.doesNotMatch(canvas.innerHTML,/data-part="whole-bird"/);assert.match(canvas.innerHTML,/data-part="chat-speed-cloud"/);
+ e.tick(160);assert.doesNotMatch(canvas.innerHTML,/data-part="chat-speed-cloud"/);assert.equal(e.raf.size,0);
+ c.tilanne('waitingAnswer',{tunnus:a,teksti:'Vastaus'});c.tilanne('waitingEnd',{tunnus:a});e.tick(180);e.pollo.auki=false;c.tilanne('chatClose');e.tick(2000);
+ assert.doesNotMatch(canvas.innerHTML,/data-part="chat-dust"|data-part="book"/,'chatin sulku katkaisee puistelun ja jatkokirjan');
+ e.pollo.auki=true;e.reduced.matches=true;const b={};c.tilanne('waiting',{tunnus:b,lahde:'vastaus'});assert.equal(e.doc.body.children[0].style.opacity,'0');
+ c.tilanne('waitingAnswer',{tunnus:b,teksti:'Vastaus'});c.tilanne('waitingEnd',{tunnus:b});assert.equal(e.doc.body.children[0].style.opacity,'1');assert.equal(e.raf.size,0);assert.doesNotMatch(canvas.innerHTML,/data-part="chat-dust"|data-part="chat-speed-cloud"/);
+ c.tuhoa();assert.equal(e.timers.size,0);
+});
+
 test('pullamaksu omistaa syömisen kiitoskuplan ja luennan yli, kerran per ostos',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
  const canvas=e.doc.body.children[0].children[0],ostos={},luenta={},puhe={};
