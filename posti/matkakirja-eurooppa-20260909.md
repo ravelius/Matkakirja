@@ -1,3 +1,7 @@
+## 11.9.2026 — v1760 kuitattu; tarkat K/T-rivit v1757–v1759; ensiliito luovutetaan julkaistavaksi
+
+---
+
 ## 11.9.2026 — Omistajan uusi ensiliito, kompurointi ja Viisas pöllö -muotokuva
 
 ---
