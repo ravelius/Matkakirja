@@ -2,7 +2,6 @@
 
 import { MUUTOKSET } from './muutokset.js';
 import { kehittajanKerroinTeksti, saadaKehittajanKerrointa } from './kehittajan-voimat.js';
-import { KUUNTELUN_ASKEL_S, TEHOSTEKETJUT, kuunteleTehosteketjut } from './tehosteketju.js';
 import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
@@ -10,14 +9,12 @@ import {
   asennaValikonSulkuvartija,
   asetaKehittajaMaailma, asetaKehittajaTila, asetaLautaValinta,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, lautaValinta,
-  laatuAinaPaalla, asetaLaatuAina,
-  asetaLaattakerros, laattakerrosPaalla, asetaPallovektorit, pallovektoritValittu,
-  nollaaPallonKaatumiset, pallonKaatumiset, palloTurvatilassa,
 } from './ui-apurit.js';
 // Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
 import { asetaMittari, mittariPaalla } from './karttamittari.js';
-// Ilmepaketti (omistaja 5.9.2026): kehittäjäkytkin ja kirjastojen esilataus.
-import { asetaIlmePaketti, esilataaIlme, ilmePakettiPaalla } from './ilme.js';
+// Ilmepaketti (omistaja 5.9.2026): kirjastojen esilataus. Kytkin poistui
+// rattaasta 11.9.2026 ja paketti on oletuksena pois (js/ilme.js).
+import { esilataaIlme } from './ilme.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import {
@@ -35,14 +32,15 @@ import {
 } from './siirtymamusiikki.js';
 import {
   AANITILA_TAPAHTUMA, kertojaTila, asetaKertojaTila,
+  asetaPulunVoima, asetaPuheVoima, asetaTehosteVoima,
+  puheVoima, pulunVoima, tehosteVoima,
 } from './aani-ehdokkaat.js';
 import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
-import { asennaPollo, polloGeneroiEhdotukset } from './pollo.js';
+// Pulun soiva repliikki seuraa pulun omaa liukua (js/liviapuhe.js).
+import { paivitaPulunVoima } from './liviapuhe.js';
+import { asennaPollo } from './pollo.js';
 // Sähkejärjestelmä: retkikunta, sähkeet ja kaveriapu (js/sahke.js).
 import { kytkeSahke, nollaaSahke } from './sahke.js';
-import { asetaSivunkaanto, sivunkaantoPaalla } from './sivunkaanto.js';
-// Mediamittari (kehittäjävalikon media-rivi): kuvien lataustilasto.
-import { mediaLukemat } from './media.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
   asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset, puheenNopeus,
@@ -675,6 +673,89 @@ for (const tiedot of AANIKYTKIMET) {
   rivi.addEventListener('click', () => kaannaAani(tiedot.avain));
   kertojaValikko.appendChild(rivi);
 }
+/*
+ * KOLME VOIMAKKUUSLIUKUA: ÄÄNITEHOSTEET, PULUN ÄÄNI JA LUKIJA
+ * (omistaja 11.9.2026 klo 13.30, sanatarkasti: *"ja ääni säätimiin
+ * voisi tuoda mukaan äänitehosteet pulun ja lukijan omat äänen
+ * voimakkuus säätimet"*).
+ *
+ * Jokainen liuku on 0–100 % ja tallentuu omalle avaimelleen
+ * (js/aani-ehdokkaat.js): matkakirja-voima-tehosteet,
+ * matkakirja-voima-pulu ja matkakirja-puhevoima. `input` eikä
+ * `change`: säädön pitää kuulua sormen alla — juuri niin oikea taso
+ * löytyy.
+ *
+ * MUUTOS VAIKUTTAA HETI, MYÖS KESKEN SOIVAN ÄÄNEN:
+ *
+ *   tehosteet  js/sound.js masterketju (paivitaTehosteVoima) — kaikki
+ *              tehosteet, äänitesiivut, pulun tehosteet ja äänimaisema.
+ *   pulu       js/liviapuhe.js paivitaPulunVoima — soiva repliikki
+ *              lasketaan uudestaan perustasosta ja vaimennuksesta.
+ *   lukija     soivat luennat saavat uuden tason suoraan (kaikki muut
+ *              paitsi pulun äänite asettavat volumen tasan puheVoimaan,
+ *              ks. js/luenta.js, js/linssipuhe.js, js/ui.js); seuraavat
+ *              luennat lukevat arvon itse.
+ */
+const AANIVOIMAT = [
+  {
+    avain: 'tehosteet',
+    lue: tehosteVoima,
+    aseta: (arvo) => {
+      asetaTehosteVoima(arvo);
+      sfx.paivitaTehosteVoima();
+    },
+  },
+  {
+    avain: 'pulu',
+    lue: pulunVoima,
+    aseta: (arvo) => {
+      asetaPulunVoima(arvo);
+      paivitaPulunVoima();
+    },
+  },
+  {
+    avain: 'lukija',
+    lue: puheVoima,
+    aseta: (arvo) => {
+      asetaPuheVoima(arvo);
+      paivitaSoivatLuennat();
+    },
+  },
+];
+
+/**
+ * Soivan luennan taso uusiksi ilman että kertoja katkeaa. Pulun oma
+ * äänite ohitetaan: sillä on oma liukunsa ja oma kertoimensa.
+ */
+function paivitaSoivatLuennat() {
+  const luennat = ui?.luennat;
+  if (!luennat) return;
+  for (const audio of luennat) {
+    if (audio === ui?.liviaAani) continue;
+    try {
+      audio.volume = puheVoima();
+    } catch {
+      /* selain ei kelpuuta arvoa — seuraava luenta lukee sen itse */
+    }
+  }
+}
+
+for (const voima of AANIVOIMAT) {
+  const liuku = document.getElementById(`voima-${voima.avain}`);
+  const lukema = document.getElementById(`voima-${voima.avain}-arvo`);
+  if (!liuku) continue;
+  const nayta = () => {
+    const prosentti = Math.round(voima.lue() * 100);
+    liuku.value = String(prosentti);
+    if (lukema) lukema.textContent = `${prosentti} %`;
+  };
+  nayta();
+  liuku.addEventListener('input', () => {
+    voima.aseta(Number(liuku.value) / 100);
+    nayta();
+  });
+}
+
 /*
  * Kytkin voi kääntyä myös matkakirjakortin kaiuttimesta (js/ui.js):
  * valikko kuulee siitä tapahtumana eikä jää näyttämään vanhaa tilaa.
@@ -1518,9 +1599,17 @@ function paivitaPuheSaadin() {
  * #kehittaja-valikko-kotelo). Näkyy VAIN kehittäjätilassa, ja
  * yläpalkkiin jää siitä yksi kuvake — omistajan sääntö *"yläpalkissa
  * saa olla vain YKSI nappi"* (27.8.2026) pysyy siis voimassa, vaikka
- * kytkimiä on nyt neljä.
+ * valikossa on useampi rivi.
  *
- * NELJÄ TOIMINTOA:
+ * VIVUT KARSITTIIN 11.9.2026 (omistaja, sanatarkasti: *"nämä kaikki
+ * napit voisi ottaa pois ja jättää noihin asetuksiin, paitsi tuon
+ * ilmeen voi ottaa pois päältä"*). Pois lähtivät etusivupallo,
+ * tarkkuus liikkeessä, pallon laattakerros, pallon vektoriviivat,
+ * pallon turvatila, ilme, sivunkääntö, kysymykset, tehosteketjut,
+ * kohtaamiset ja media. Asetukset itse jäivät koodiin nykyisin
+ * oletuksin ja osoiteparametrein — vain napit ja kuuntelijat lähtivät.
+ *
+ * JÄLJELLE JÄÄNEET:
  *
  *   maailma     Maailmanäkymä: koko lauta ja kohdekaupunkien laatat
  *               näkyviin (lento- ja maareitit eivät), sumennus pois ja
@@ -1540,17 +1629,14 @@ function paivitaPuheSaadin() {
  *   tummennus aina päällä"* — naapurimaiden varjoa ei ole enää
  *   kummassakaan tilassa, joten kytkimellä ei ollut mitään
  *   kytkettävää; ks. js/maatummennus.js.)
- *   kysymykset  Pöllön kysymysehdotukset heti nykyiselle näkymälle,
- *               myös uudelleen jo generoidulle (js/pollo.js
- *               generoiEhdotuksetHeti). Sama polku kuin sivunvaihdolla:
- *               odotusrivi ilmestyy ja tulokset tulevat sen tilalle.
+ *   äänisäätimet ja pallolauta (piilossa) — ks. omat lohkonsa alla.
  *
  * TILA NÄKYY VALIKOSSA: kytkinrivin aria-pressed kultaa nimen, ja
  * rivin oikeassa laidassa lukee "päällä" tai "pois".
  *
  * MIKÄÄN NÄISTÄ EI VAADI SIVULATAUSTA. Maailmakytkin elää valmiin
- * kartan päällä (js/ui.js paivitaFokusKerros), mittari on oma
- * moduulinsa, ja pöllö on pystyssä koko pelin ajan.
+ * kartan päällä (js/ui.js paivitaFokusKerros) ja mittari on oma
+ * moduulinsa.
  */
 const kehittajaValikkoKotelo = document.getElementById('kehittaja-valikko-kotelo');
 const kehittajaValikkoNappi = document.getElementById('kehittaja-valikko-btn');
@@ -1558,17 +1644,6 @@ const kehittajaValikko = document.getElementById('kehittaja-valikko');
 const kehittajaVihje = document.getElementById('kehittaja-valikko-vihje');
 const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
-/*
- * MEDIAMITTARI (omistajan bugiraportti 6.9.2026 klo 01.09: *"Kartalla
- * pisteitä jotka eivät toimi"*). Rivi ei ole kytkin vaan lukema:
- * onnistuneet / uudelleenyritetyt / lopullisesti epäonnistuneet kuvat
- * tässä istunnossa (js/media.js mediaLukemat). Kun r2.dev rajoittaa
- * pyyntöjä (429), keskimmäinen luku kasvaa — ja jos oikeanpuolimmainen
- * kasvaa, kuvia jäi oikeasti saamatta.
- */
-const mediaNappi = document.getElementById('kehittaja-media-btn');
-// Sivunkääntö (StPageFlip): paluuoptio vanhaan sivupinoon, ks. index.html.
-const sivunkaantoNappi = document.getElementById('kehittaja-sivunkaanto-btn');
 /*
  * PALLOLAUTA (omistaja 5.9.2026: *"Voisiko pallon vaihtaa pelin kartaksi
  * suoraan?"* — Raamattu KARTTAPALLO ON PELILAUTA). Vipu on palautusoptio
@@ -1582,57 +1657,15 @@ const sivunkaantoNappi = document.getElementById('kehittaja-sivunkaanto-btn');
  */
 const pallolautaNappi = document.getElementById('kehittaja-pallolauta-btn');
 /*
- * ETUSIVUN ESIRENDERÖITY PALLO (omistaja 5.9.2026, pallolauta vaihe 5a;
- * oletukseksi aallossa 1D). Oma lohkonsa: vipu kääntää yhden lipun
- * (js/ui-apurit.js, viety ulos js/etusivupallo.js:stä) ja etusivu
- * rakentuu uudestaan seuraavassa piirrossa — sivulatausta ei tarvita,
- * koska kerros syntyy ja purkautuu renderIntron koukusta. OLETUS ON
- * PÄÄLLÄ pallolaudalla; vipu on poiskytkin, sama kuin ?etusivupallo=0.
+ * ILMEPAKETIN ESILATAUS (omistaja 5.9.2026). Rattaan "ilme"-kytkin
+ * poistettiin 11.9.2026 ja paketti on nyt OLETUKSENA POIS (js/ilme.js,
+ * omistaja: *"tuon ilmeen voi ottaa pois päältä, se ei sovi
+ * tyylillisesti peliin täysin"*). Esilataus jää paikalleen: se lataa
+ * vain päällä olevien lippujen kirjastot, joten oletustilassa se ei
+ * hae mitään — ja jos liput kytketään takaisin localStoragesta, jo
+ * ensimmäinen reitti piirtyy ilmeen kanssa. Vasta load-tapahtuman
+ * JÄLKEEN, ettei ämpärin hidas vastaus siirrä loadia.
  */
-const etusivupalloNappi = document.getElementById('kehittaja-etusivupallo-kytkin');
-/*
- * Moduuli haetaan DYNAAMISESTI eikä tuoda staattisesti: js/etusivupallo.js
- * ei ole yhden tiedoston version nipussa (dist jää vanhaan etusivuun),
- * ja staattinen tuonti jättäisi sinne määrittelemättömän nimen. Haku
- * käynnistyy vasta kun kehittäjävalikko avataan.
- */
-let etusivupalloApurit = null;
-let etusivupalloHaku = null;
-const lataaEtusivupalloApurit = () => (etusivupalloHaku ??= import('./etusivupallo.js')
-  .then((m) => { etusivupalloApurit = m; return m; })
-  .catch(() => null));
-/*
- * KARTTAPALLON TURVATILA (pallolauta vaihe 5c, karttapallo.md luku 6):
- * kaksi kaatumista peräkkäin sulkee pallon tältä laitteelta, ja peli
- * kertoo sen yhdellä rivillä. Tämä nappi on se "kehittäjän/pelaajan
- * vipu", joka nollaa laskurin ja antaa pallolle uuden yrityksen.
- */
-const palloTurvatilaNappi = document.getElementById('kehittaja-pallo-turvatila-btn');
-/* Tarkkuus myös liikkeessä — kokeiluvipu (js/ui-apurit.js laatuAinaPaalla). */
-const laatuAinaNappi = document.getElementById('kehittaja-laatu-aina-kytkin');
-/*
- * PALLON KAKSI KERROSTA — vianrajaus ilman osoiteriviä (vika v1649,
- * omistaja 6.9.2026: *"kartta alkoi täristämään"*, oire vain iOS-kuoressa).
- * Kuoressa ei voi kirjoittaa ?laattakerros=0 tai ?vektorit=0, joten
- * kytkimet ovat täällä ja valinta jää laitteen muistiin
- * (js/ui-apurit.js). Oletukset (molemmat päällä) tulevat kerroksilta
- * itseltään; tässä nipussa ne ovat tosia, koska pallon moduulit
- * ladataan laiskasti eikä niiden vakioita voi tuoda.
- */
-const laattakerrosNappi = document.getElementById('kehittaja-laattakerros-kytkin');
-const pallovektoritNappi = document.getElementById('kehittaja-pallovektorit-kytkin');
-/*
- * ILMEPAKETTI (omistaja 5.9.2026, kartoituksen TOP 6 kohta 6): musteviiva,
- * karhea kehys ja kynäkorostus. Kytkin kääntää kolme lippua kerralla
- * (js/ilme.js asetaIlmePaketti) eikä vaadi sivulatausta: liput luetaan
- * jokaisessa piirrossa, joten seuraava reitti, kortti ja selite
- * noudattavat uutta tilaa. Kirjastot esiladataan joutilaana, jotta jo
- * ensimmäinen reitti piirtyy ilmeen kanssa — mutta vasta sivun
- * load-tapahtuman JÄLKEEN: skriptitagi ennen sitä siirtäisi loadia
- * (ja palvelutyöntekijän rekisteröintiä) niin kauan kuin ämpäri
- * vastaa hitaasti tai ei lainkaan.
- */
-const ilmeNappi = document.getElementById('kehittaja-ilme-btn');
 const esilataaIlmeJoutilaana = () => {
   const joutilaana = globalThis.requestIdleCallback ?? ((f) => setTimeout(f, 2500));
   joutilaana(() => { esilataaIlme().catch(() => {}); });
@@ -1686,7 +1719,6 @@ if (musiikkiLiuku) {
   musiikkiLiuku.addEventListener('click', (e) => e.stopPropagation());
   musiikkiLiuku.addEventListener('pointerdown', (e) => e.stopPropagation());
 }
-const polloGenerointiNappi = document.getElementById('kehittaja-pollo-btn');
 /*
  * MUSIIKIN KAKSI RIVIÄ (omistajan tilaus 2.9.2026).
  *
@@ -1729,20 +1761,8 @@ function merkitseKytkin(nappi, paalla) {
   if (tila) tila.textContent = paalla ? 'päällä' : 'pois';
 }
 
-/** Mediamittarin rivin teksti: onnistui / uusinta / epäonnistui. */
-function paivitaMediarivi() {
-  if (!mediaNappi) return;
-  const { onnistui, uusinta, epaonnistui } = mediaLukemat();
-  const tila = mediaNappi.querySelector('.kehittaja-kytkin-tila');
-  if (tila) tila.textContent = `${onnistui} ✓ · ${uusinta} ↻ · ${epaonnistui} ✗`;
-  mediaNappi.title = `Kuvat tässä istunnossa: ${onnistui} latautui, ${uusinta} vaati `
-    + `uusinnan, ${epaonnistui} jäi saamatta. Uusinnat kertovat ämpärin (r2.dev) `
-    + 'purskerajoituksesta — napauta päivittääksesi lukemat.';
-}
-
 function paivitaKehittajaValikko() {
   if (kehittajaValikkoKotelo) kehittajaValikkoKotelo.hidden = !kehittajaTilaPaalla();
-  paivitaMediarivi();
   const maailma = kehittajaMaailmaPaalla();
   merkitseKytkin(maailmaNappi, maailma);
   if (maailmaNappi) {
@@ -1762,19 +1782,6 @@ function paivitaKehittajaValikko() {
       : 'Laitemittari on pois — kytke päälle mitataksesi kartan sujuvuutta '
         + 'tällä laitteella (sama kuin ?mittari=1)';
   }
-  if (polloGenerointiNappi) {
-    polloGenerointiNappi.title = 'Generoi pöllön kysymysehdotukset heti tälle näkymälle '
-      + '(myös uudelleen jo generoidulle)';
-  }
-  const sivunkaanto = sivunkaantoPaalla();
-  merkitseKytkin(sivunkaantoNappi, sivunkaanto);
-  if (sivunkaantoNappi) {
-    sivunkaantoNappi.title = sivunkaanto
-      ? 'Sivunkääntö on PÄÄLLÄ: lehti kääntyy kuin kirja (StPageFlip ämpäristä) '
-        + '— kytke pois palataksesi vanhaan liukuun'
-      : 'Sivunkääntö on pois: lehden sivut liukuvat kuten ennen — kytke päälle '
-        + 'saadaksesi kirjamaisen käännön';
-  }
   const pallolauta = lautaValinta() === 'pallo';
   merkitseKytkin(pallolautaNappi, pallolauta);
   /*
@@ -1790,86 +1797,6 @@ function paivitaKehittajaValikko() {
         + '(sivu ladataan uudestaan; sama kuin ?lauta=kartta)'
       : 'Pallolauta on pois: pelin lauta on tasokartta — kytke päälle pelataksesi '
         + 'karttapallolla (sivu ladataan uudestaan; sama kuin ?lauta=pallo)';
-  }
-  if (etusivupalloNappi && !etusivupalloApurit && kehittajaTilaPaalla()) {
-    void lataaEtusivupalloApurit().then(() => paivitaKehittajaValikko());
-  }
-  const etusivupallo = Boolean(etusivupalloApurit?.etusivupalloPaalla());
-  merkitseKytkin(etusivupalloNappi, etusivupallo);
-  if (etusivupalloNappi) {
-    etusivupalloNappi.title = etusivupallo
-      ? 'Etusivun pallo on PÄÄLLÄ (oletus pallolaudalla): avaussivun kartan '
-        + 'tilalla esirenderöity sumennettu pallo, jonka päällä lentokone '
-        + 'piirtää punaista viivaa Lontoosta Aasiaan, eikä tasokarttaa alusteta '
-        + 'lainkaan — kytke pois palataksesi vanhaan etusivun pienoiskarttaan'
-      : 'Etusivun pallo on pois: avaussivulla on vanha pienoiskartta — kytke '
-        + 'päälle nähdäksesi esirenderöidyn pallon, koneen ja isoisän '
-        + 'aikalaiskuvat (oletus pallolaudalla; sama kuin ?etusivupallo=1)';
-  }
-  const laatuAina = laatuAinaPaalla();
-  merkitseKytkin(laatuAinaNappi, laatuAina);
-  if (laatuAinaNappi) {
-    laatuAinaNappi.title = laatuAina
-      ? 'Tarkkuus liikkeessä on PÄÄLLÄ (kokeilu): pallo pitää levon laattatason ja '
-        + 'pikselisuhteen myös vierityksessä — kytke pois, jos vieritys nykii '
-        + '(sivu ladataan uudestaan; sama kuin ?laatu=aina)'
-      : 'Tarkkuus liikkeessä on pois (oletus): liikkeessä pallo piirtää karkeammin '
-        + 'ja tarkentuu levossa — kytke päälle kokeillaksesi täyttä tarkkuutta '
-        + 'myös vierityksessä (sivu ladataan uudestaan)';
-  }
-  const laattakerros = laattakerrosPaalla(globalThis, true);
-  merkitseKytkin(laattakerrosNappi, laattakerros);
-  if (laattakerrosNappi) {
-    laattakerrosNappi.title = laattakerros
-      ? 'Pallon laattakerros on PÄÄLLÄ (oletus): pallon pinta piirretään pyramidin '
-        + 'laatoista laatta kerrallaan, jolloin liikkeessä on sama tarkkuus kuin '
-        + 'levossa — kytke pois palataksesi kirjaston omaan laattamoottoriin '
-        + '(sivu ladataan uudestaan; sama kuin ?laattakerros=0)'
-      : 'Pallon laattakerros on POIS: pinta tulee kirjaston laattamoottorista ja '
-        + 'tarkentuu vasta levossa — kytke päälle palataksesi oletukseen '
-        + '(sivu ladataan uudestaan)';
-  }
-  const pallovektorit = pallovektoritValittu(globalThis, true);
-  merkitseKytkin(pallovektoritNappi, pallovektorit);
-  if (pallovektoritNappi) {
-    pallovektoritNappi.title = pallovektorit
-      ? 'Pallon vektoriviivat ovat PÄÄLLÄ (oletus): rantaviiva ja maiden rajat '
-        + 'piirtyvät laattojen päälle tasan pikselin levyisinä — kytke pois, jos '
-        + 'haluat nähdä pelkät poltetut laatat (sivu ladataan uudestaan; sama '
-        + 'kuin ?vektorit=0)'
-      : 'Pallon vektoriviivat ovat POIS: ranta ja rajat tulevat vain laattojen '
-        + 'musteesta — kytke päälle palataksesi oletukseen (sivu ladataan uudestaan)';
-  }
-  /*
-   * KARTTAPALLON TURVATILA (pallolauta vaihe 5c): laskuri kertoo, montako
-   * kertaa pallo on kaatunut peräkkäin tällä laitteella; kahden jälkeen
-   * pallo avataan KEVENNETTYNÄ (laattakerros pois). Nappi on nollain eikä
-   * kytkin — "päällä" tarkoittaa, että turvatila on kevennyksessä.
-   *
-   * EI ENÄÄ TASOKARTTAA (omistaja 7.9.2026): turvatila ei vaihda lautaa,
-   * koska vanha kartta on pois käytöstä (js/ui-apurit.js
-   * VANHA_KARTTA_KAYTOSSA).
-   */
-  const turvatila = palloTurvatilassa();
-  merkitseKytkin(palloTurvatilaNappi, turvatila);
-  if (palloTurvatilaNappi) {
-    palloTurvatilaNappi.title = turvatila
-      ? 'Karttapallo avataan KEVENNETTYNÄ tällä laitteella (laattakerros pois): '
-        + 'se kaatui kahdesti peräkkäin. Napauta nollataksesi laskurin ja '
-        + 'yrittääksesi täyttä palloa uudelleen (sivu ladataan uudestaan)'
-      : `Karttapallon kaatumislaskuri: ${pallonKaatumiset()}. Kahden peräkkäisen `
-        + 'kaatumisen jälkeen pallo avataan kevennettynä ja peli kertoo siitä '
-        + 'rivillä; napautus nollaa laskurin';
-  }
-  const ilme = ilmePakettiPaalla();
-  merkitseKytkin(ilmeNappi, ilme);
-  if (ilmeNappi) {
-    ilmeNappi.title = ilme
-      ? 'Ilmepaketti on PÄÄLLÄ: reitti piirtyy musteviivana, selitteellä on käsin '
-        + 'piirretty kehys ja pöllön korostus on kynällä — kytke pois nähdäksesi '
-        + 'entisen ilmeen (liput matkakirja-ilme-musteviiva/-karhea/-korostus)'
-      : 'Ilmepaketti on pois: peli näyttää entiseltä — kytke päälle, niin '
-        + 'seuraava reitti, kortti ja selite saavat ilmeen (ei sivulatausta)';
   }
   merkitseSiirtymamusiikki();
   if (siirtymaMusiikkiNappi) {
@@ -1945,15 +1872,6 @@ mittariNappi?.addEventListener('click', () => {
   else naytaKehittajaVihje('Mittari kytketty: näkyy kartalla — lataa sivu uudelleen.');
 });
 
-sivunkaantoNappi?.addEventListener('click', () => {
-  const halutaan = !sivunkaantoPaalla();
-  asetaSivunkaanto(halutaan);
-  paivitaKehittajaValikko();
-  // Vaikuttaa seuraavaan käännökseen heti: kirjasto ladataan lehden
-  // avautuessa, lippu luetaan joka käännöksellä (js/sivunkaanto.js).
-  naytaKehittajaVihje(halutaan ? 'Sivunkääntö päällä: lehti kääntyy kuin kirja.' : 'Sivunkääntö pois: vanha liuku.');
-});
-
 pallolautaNappi?.addEventListener('click', () => {
   const halutaan = lautaValinta() !== 'pallo';
   asetaLautaValinta(halutaan ? 'pallo' : 'kartta');
@@ -1963,83 +1881,6 @@ pallolautaNappi?.addEventListener('click', () => {
   const osoite = new URL(location.href);
   osoite.searchParams.delete('lauta');
   setTimeout(() => { location.href = osoite.href; }, 350);
-});
-
-etusivupalloNappi?.addEventListener('click', () => {
-  void lataaEtusivupalloApurit().then((moduuli) => {
-    if (!moduuli) {
-      naytaKehittajaVihje('Etusivun palloa ei ole tässä versiossa (yhden tiedoston peli).');
-      return;
-    }
-    const halutaan = !moduuli.etusivupalloPaalla();
-    moduuli.asetaEtusivupallo(halutaan);
-    paivitaKehittajaValikko();
-    /*
-     * Etusivu rakentuu koukusta (js/ui.js renderIntro): pyydetään piirto,
-     * niin kerros syntyy tai purkautuu heti ilman sivulatausta. KOKO
-     * PIIRTO eikä pelkkä renderIntro (aalto 1D): pallolaudalla tasokartta
-     * on lepotilassa etusivun takia, ja pois kytkettäessä se herää tästä
-     * kutsusta (js/ui.js paivitaPallolauta) — muuten ylälohkoon jäisi
-     * pelkkä pergamentti.
-     */
-    ui?.render?.();
-    naytaKehittajaVihje(halutaan
-      ? 'Etusivun pallo päälle: näkyy avaussivulla (uusi peli tai sivun lataus).'
-      : 'Etusivun pallo pois: vanha etusivun pienoiskartta.');
-  });
-});
-
-laatuAinaNappi?.addEventListener('click', () => {
-  const halutaan = !laatuAinaPaalla();
-  asetaLaatuAina(halutaan);
-  paivitaKehittajaValikko();
-  naytaKehittajaVihje(halutaan ? 'Tarkkuus liikkeessä päälle — ladataan sivu…' : 'Tarkkuus liikkeessä pois — ladataan sivu…');
-  const osoite = new URL(location.href);
-  osoite.searchParams.delete('laatu');
-  setTimeout(() => { location.href = osoite.href; }, 350);
-});
-
-laattakerrosNappi?.addEventListener('click', () => {
-  const halutaan = !laattakerrosPaalla(globalThis, true);
-  asetaLaattakerros(halutaan);
-  paivitaKehittajaValikko();
-  naytaKehittajaVihje(halutaan ? 'Laattakerros päälle — ladataan sivu…' : 'Laattakerros pois — ladataan sivu…');
-  // URL-parametri pois, muuten se jäisi voittamaan muistetun valinnan.
-  const osoite = new URL(location.href);
-  osoite.searchParams.delete('laattakerros');
-  setTimeout(() => { location.href = osoite.href; }, 350);
-});
-
-pallovektoritNappi?.addEventListener('click', () => {
-  const halutaan = !pallovektoritValittu(globalThis, true);
-  asetaPallovektorit(halutaan);
-  paivitaKehittajaValikko();
-  naytaKehittajaVihje(halutaan ? 'Vektoriviivat päälle — ladataan sivu…' : 'Vektoriviivat pois — ladataan sivu…');
-  const osoite = new URL(location.href);
-  osoite.searchParams.delete('vektorit');
-  setTimeout(() => { location.href = osoite.href; }, 350);
-});
-
-palloTurvatilaNappi?.addEventListener('click', () => {
-  const oliTurvatilassa = palloTurvatilassa();
-  nollaaPallonKaatumiset();
-  paivitaKehittajaValikko();
-  if (!oliTurvatilassa) {
-    naytaKehittajaVihje('Kaatumislaskuri nollattu.');
-    return;
-  }
-  // Kevennys purkautuu vasta käynnistyksessä (laattakerros luetaan silloin).
-  naytaKehittajaVihje('Karttapallo täydellä laadulla — ladataan sivu…');
-  setTimeout(() => { location.reload(); }, 350);
-});
-
-ilmeNappi?.addEventListener('click', () => {
-  const halutaan = !ilmePakettiPaalla();
-  asetaIlmePaketti(halutaan);
-  paivitaKehittajaValikko();
-  naytaKehittajaVihje(halutaan
-    ? 'Ilmepaketti päälle: näkyy seuraavassa reitissä, kortissa ja selitteessä.'
-    : 'Ilmepaketti pois: uudet piirrot ilman musteviivaa, kehystä ja kynää.');
 });
 
 siirtymaMusiikkiNappi?.addEventListener('click', () => {
@@ -2091,56 +1932,6 @@ aikajanaNappi?.addEventListener('click', async () => {
     : 'Aikajana ei lähtenyt (linssi puuttuu tai lauta ei ole maailmankartta).');
 });
 document.addEventListener('aikajana-tila', merkitseAikajana);
-
-polloGenerointiNappi?.addEventListener('click', () => {
-  const tulos = polloGeneroiEhdotukset();
-  naytaKehittajaVihje({
-    ok: 'Kysymyksiä generoidaan…',
-    'ei-pollo': 'Pöllöä ei ole vielä asennettu.',
-    'ei-loydetty': 'Pöllöä ei ole vielä löydetty aarteena.',
-    'ei-palvelinta': 'Pöllöpalvelinta ei ole kytketty.',
-    kesken: 'Edellinen vastaus on kesken.',
-  }[tulos] ?? 'Generointi ei lähtenyt.');
-});
-
-/*
- * TEHOSTEKETJUJEN KUUNTELU (omistajan päätös 5.9.2026, Tuna 1.1.3):
- * testiääni ensin suoraan ja sitten jokaisen ketjun läpi, jotta ketjut
- * voi kuunnella iPhonella ratasvalikosta. Kirjasto latautuu laiskasti
- * ämpäristä; ilman sitä soi vain suora ääni ja vihje kertoo syyn.
- */
-document.getElementById('kehittaja-tehosteketjut-btn')?.addEventListener('click', (e) => {
-  e.stopPropagation();
-  naytaKehittajaVihje('Ladataan tehosteketjuja…');
-  kuunteleTehosteketjut().then((tulos) => {
-    naytaKehittajaVihje({
-      ok: `Suora → ${TEHOSTEKETJUT.join(' → ')} (${String(KUUNTELUN_ASKEL_S).replace('.', ',')} s välein)`,
-      'aanet-pois': 'Pelin äänet ovat pois — kytke ne päälle asetuksista.',
-      'ei-kirjastoa': 'Tuna ei latautunut (offline tai yhden tiedoston versio): vain suora ääni.',
-    }[tulos] ?? 'Kuuntelu ei lähtenyt.');
-  });
-});
-
-/*
- * KOHTAAMISLISTA (omistajan tilaus 5.9.2026): kaikki aarrekohtaamiset
- * maanosittain, ja rivin napautus avaa kohtaamisen hiekkalaatikossa —
- * pelitila ei muutu (js/kohtaamistesti.js). Valikko suljetaan, koska
- * lehti täyttää ruudun; muut rattaan rivit ovat säätimiä ja jäävät auki.
- */
-mediaNappi?.addEventListener('click', (e) => {
-  e.stopPropagation();
-  paivitaMediarivi();
-  const { onnistui, uusinta, epaonnistui } = mediaLukemat();
-  naytaKehittajaVihje(epaonnistui > 0
-    ? `${epaonnistui} kuvaa jäi saamatta (${uusinta} uusintaa) — ämpäri rajoittaa tai kuva puuttuu.`
-    : `${onnistui} kuvaa ladattu, ${uusinta} uusinnalla. Ei menetettyjä kuvia.`);
-});
-
-document.getElementById('kehittaja-kohtaamiset-btn')?.addEventListener('click', (e) => {
-  e.stopPropagation();
-  suljeKehittajaValikko();
-  window.matkakirja?.ui?.avaaKohtaamistesti();
-});
 
 paivitaKehittajaValikko();
 

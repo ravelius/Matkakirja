@@ -1177,26 +1177,81 @@ export function asetaKertojaTila(tila) {
   ilmoitaAanitila();
 }
 
-// Puheen voimakkuus: yksi yleinen säätö kaikkiin luentoihin (intro,
-// saapumiset, kuuntele-napit) — luentoja ei eritellä (omistajan päätös).
+/*
+ * KOLME ÄÄNEN VOIMAKKUUTTA: LUKIJA, ÄÄNITEHOSTEET JA PULU (omistaja
+ * 11.9.2026 klo 13.30, sanatarkasti: *"ja ääni säätimiin voisi tuoda
+ * mukaan äänitehosteet pulun ja lukijan omat äänen voimakkuus
+ * säätimet"*).
+ *
+ * KOLME ERILLISTÄ AVAINTA, KOLME ERILLISTÄ LIUKUA (päävalikon Äänet).
+ * Jokainen on 0–1 ja jokainen vaikuttaa omaan lajiinsa:
+ *
+ *   lukija       matkakirja-puhevoima (entinen yksi yleinen säätö,
+ *                oletus 0,9): kertojan luennat ja kuuntele-napit
+ *                (js/luenta.js, js/linssipuhe.js, js/ui.js).
+ *   tehosteet    matkakirja-voima-tehosteet (oletus 1): js/sound.js
+ *                masterketju — kaikki tehosteet ja pulun tehosteet.
+ *   pulu         matkakirja-voima-pulu (oletus 1): pulun omat
+ *                puheäänitteet (js/liviapuhe.js soitaLivianAani).
+ *
+ * Nolla on sallittu arvo (täysi hiljaisuus), joten lukemassa ei enää
+ * ole 0,1:n alarajaa — tyhjä tai kelvoton arvo palauttaa oletuksen.
+ * Jokainen asetus ilmoittaa muutoksesta AANITILA_TAPAHTUMAlla, jotta
+ * soiva ääni ja valikon lukema päivittyvät heti.
+ */
 const PUHEVOIMA_AVAIN = 'matkakirja-puhevoima';
+export const TEHOSTEVOIMA_AVAIN = 'matkakirja-voima-tehosteet';
+export const PULUNVOIMA_AVAIN = 'matkakirja-voima-pulu';
 
-export function puheVoima() {
+/** Luettu 0–1; tyhjä, kelvoton tai lukukelvoton avain = oletus. */
+function lueVoima(avain, oletus) {
   try {
-    const arvo = Number(localStorage.getItem(PUHEVOIMA_AVAIN));
-    if (Number.isFinite(arvo) && arvo > 0) return Math.min(1, Math.max(0.1, arvo));
+    const raaka = localStorage.getItem(avain);
+    if (raaka === null || raaka === '') return oletus;
+    const arvo = Number(raaka);
+    if (!Number.isFinite(arvo)) return oletus;
+    return Math.min(1, Math.max(0, arvo));
   } catch {
-    /* yksityinen selaustila — oletus kelpaa */
+    return oletus; // yksityinen selaustila — oletus kelpaa
   }
-  return 0.9;
 }
 
-export function asetaPuheVoima(arvo) {
+/** Tallennus rajoihin 0–1 ja heräte kuuntelijoille. */
+function tallennaVoima(avain, arvo) {
+  const rajattu = Math.min(1, Math.max(0, Number(arvo) || 0));
   try {
-    localStorage.setItem(PUHEVOIMA_AVAIN, String(arvo));
+    localStorage.setItem(avain, String(rajattu));
   } catch {
     /* ei säily */
   }
+  ilmoitaAanitila();
+  return rajattu;
+}
+
+export function puheVoima() {
+  return lueVoima(PUHEVOIMA_AVAIN, 0.9);
+}
+
+export function asetaPuheVoima(arvo) {
+  return tallennaVoima(PUHEVOIMA_AVAIN, arvo);
+}
+
+/** Äänitehosteiden voimakkuus (js/sound.js masterketju). */
+export function tehosteVoima() {
+  return lueVoima(TEHOSTEVOIMA_AVAIN, 1);
+}
+
+export function asetaTehosteVoima(arvo) {
+  return tallennaVoima(TEHOSTEVOIMA_AVAIN, arvo);
+}
+
+/** Pulun puheäänitteiden voimakkuus (js/liviapuhe.js). */
+export function pulunVoima() {
+  return lueVoima(PULUNVOIMA_AVAIN, 1);
+}
+
+export function asetaPulunVoima(arvo) {
+  return tallennaVoima(PULUNVOIMA_AVAIN, arvo);
 }
 
 /** Kaikki valinnat kerralla (Kopioi valinnat -nappia varten). */

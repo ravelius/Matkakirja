@@ -187,8 +187,10 @@ if (AMPARI_TOIMII) {
   vaadi('2. konteksti on käynnissä eleen jälkeen', ketjut.tila === 'running', String(ketjut.tila));
   vaadi('2. ketjut eivät tuota virheitä sivulle', tila.virheet.length === 0, tila.virheet.join(' | '));
 
+  // Kuuntelunappi poistettiin rattaasta 11.9.2026 (omistaja: *"nämä
+  // kaikki napit voisi ottaa pois"*) — kuuntelu ajetaan moduulista.
   const nappi = await sivu.evaluate(() => Boolean(document.getElementById('kehittaja-tehosteketjut-btn')));
-  vaadi('3. kuuntelunappi on ratasvalikossa', nappi);
+  vaadi('3. kuuntelunappia ei enää ole rattaassa', !nappi);
   const kuuntelu = await sivu.evaluate(async () => {
     const m = await import('/js/tehosteketju.js');
     const tulos = await m.kuunteleTehosteketjut();

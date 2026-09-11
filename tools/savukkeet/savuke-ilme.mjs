@@ -346,11 +346,15 @@ if (AMPARI_TOIMII) {
   const ilmeSolmuja = await sivu.evaluate(() => document.querySelectorAll('.ilme-karhea, .rough-annotation, .ilme-muste, .ilme-korostettu').length);
   vaadi('liput pois: kirjastoja ei ladata eikä ilme-elementtejä synny',
     tila.vendor.length === 0 && ilmeSolmuja === 0, JSON.stringify({ vendor: tila.vendor, ilmeSolmuja }));
-  const kytkin = await sivu.evaluate(() => {
-    const nappi = document.getElementById('kehittaja-ilme-btn');
-    return { on: Boolean(nappi), tila: nappi?.querySelector('.kehittaja-kytkin-tila')?.textContent };
+  // KYTKIN POISTETTIIN RATTAASTA 11.9.2026 ja paketti on oletuksena pois
+  // (omistaja: *"tuon ilmeen voi ottaa pois päältä, se ei sovi
+  // tyylillisesti peliin täysin"*): napin tilalla tarkistetaan oletus.
+  const kytkin = await sivu.evaluate(async () => {
+    const m = await import('/js/ilme.js');
+    return { nappi: Boolean(document.getElementById('kehittaja-ilme-btn')), paketti: m.ilmePakettiPaalla() };
   });
-  vaadi('kehittäjävalikon ilme-kytkin näyttää tilan "pois"', kytkin.on && kytkin.tila === 'pois', JSON.stringify(kytkin));
+  vaadi('ilme-kytkintä ei ole rattaassa ja paketti on oletuksena pois',
+    !kytkin.nappi && kytkin.paketti === false, JSON.stringify(kytkin));
   vaadi('ei sivuvirheitä (liput pois)', tila.virheet.length === 0, tila.virheet.slice(0, 3).join(' | '));
   await ctx.close();
 }

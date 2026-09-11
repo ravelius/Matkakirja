@@ -556,6 +556,54 @@ button, .brand, .turn-pill, .fact-card h2 {
 .paavalikko .kertoja-valikko .tappa { display: none; }
 
 /*
+ * KOLME VOIMAKKUUSLIUKUA ÄÄNIKYTKINTEN ALLA (omistaja 11.9.2026:
+ * *"ja ääni säätimiin voisi tuoda mukaan äänitehosteet pulun ja
+ * lukijan omat äänen voimakkuus säätimet"*). Sama riviasu kuin
+ * kytkimillä: nimi vasemmalla, lukema oikeassa laidassa — väliin
+ * liuku, joka saa kaiken jäljelle jäävän tilan.
+ */
+.paavalikko .aanivoimat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.3rem;
+}
+
+.paavalikko .aanivoima {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.18rem 0.45rem;
+}
+
+.paavalikko .aanivoima-nimi {
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: rgba(230, 214, 184, 0.78);
+  min-width: 6.4rem;
+}
+
+.paavalikko .aanivoima-liuku {
+  width: 100%;
+  min-width: 4.5rem;
+  margin: 0;
+  accent-color: var(--kulta, #eab84e);
+}
+
+.paavalikko .aanivoima-arvo {
+  min-width: 3rem;
+  text-align: right;
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  color: var(--kulta, #eab84e);
+  font-variant-numeric: tabular-nums;
+}
+
+/*
  * PELILAUDAN VALINTA (omistaja 5.9.2026: *"pelissä periaatteessa voisi
  * olla lopulta kytkin, millä pelaaja voisi valita haluaako pelata
  * pallonäkymässä vai sillä meidän vanhalla kartalla"*). Rivit ovat

@@ -575,9 +575,12 @@ test('turvatila: kaksi kaatumista peräkkäin avaa pallon kevennettynä', () => 
   assert.match(lauta, /if \(uudelleenrakennuksia < 1\) \{/, 'yksi uudelleenrakennus ennen varapolkua');
   assert.match(lauta, /ui\.pallolautaVarapolku\?\.\(\)/);
   assert.match(lauta, /nollaaPallonKaatumiset\(\), PALLON_TURVATILAN_UNOHDUS_MS/);
-  // Kehittäjän/pelaajan vipu nollaa laskurin.
-  assert.match(lue('../index.html'), /id="kehittaja-pallo-turvatila-btn"/);
-  assert.match(lue('../js/main.js'), /palloTurvatilaNappi\?\.addEventListener\('click'/);
+  // Nollausnappi lähti rattaasta 11.9.2026 (omistaja: *"nämä kaikki
+  // napit voisi ottaa pois"*); laskuri unohtuu itsestään ajan kanssa
+  // (PALLON_TURVATILAN_UNOHDUS_MS) ja nollain on yhä moduulissa.
+  assert.doesNotMatch(lue('../index.html'), /id="kehittaja-pallo-turvatila-btn"/);
+  assert.doesNotMatch(lue('../js/main.js'), /palloTurvatilaNappi/);
+  assert.match(lue('../js/ui-apurit.js'), /export function nollaaPallonKaatumiset/);
 });
 
 test('hover-raycast pois kosketuslaitteilla, napautus säilyy', () => {
@@ -609,8 +612,8 @@ test('tarkkuus liikkeessä -kokeiluvipu (omistaja 5.9.2026: "kokeile pyörisikö
   // pakotus (pakotaPallonLaatu), joka voi kytkeytyä kesken istunnon.
   assert.match(pallo, /const aina = \(\) => laatuAinaPaalla\(ikkuna\) \|\| laatuPakotukset > 0;/);
   assert.match(pallo, /if \(aina\(\)\) lepoon = true;/);
-  const html = lue('../index.html');
-  assert.match(html, /kehittaja-laatu-aina-kytkin/);
+  // Vipu lähti rattaasta 11.9.2026; asetus on yhä muistissa ja URL:ssä.
+  assert.doesNotMatch(lue('../index.html'), /kehittaja-laatu-aina-kytkin/);
 });
 
 /*

@@ -821,18 +821,22 @@ test('moduuli on SHELLissä muttei yhden tiedoston nipussa', () => {
     'dist jää vanhaan etusivun karttaan (omistajan tilaus: erä ei koske dist-versiota)');
 });
 
-test('kehittäjävalikossa on oma vipu ja se kääntää lipun ilman sivulatausta', () => {
+/*
+ * VIPU POIS RATTAASTA 11.9.2026 (omistaja, sanatarkasti: *"nämä kaikki
+ * napit voisi ottaa pois ja jättää noihin asetuksiin"*). Asetus itse
+ * jäi koodiin nykyisellä oletuksellaan ja osoiteparametrilla
+ * ?etusivupallo=0/1 — vain nappi ja sen kuuntelija lähtivät.
+ */
+test('kehittäjävalikossa ei ole enää etusivupallon vipua, asetus jäi', async () => {
   const html = lue('../index.html');
-  assert.match(html, /id="kehittaja-etusivupallo-kytkin"/);
-  assert.match(html, /kehittaja-kytkin-nimi">etusivupallo</);
+  assert.doesNotMatch(html, /id="kehittaja-etusivupallo-kytkin"/);
   const main = lue('../js/main.js');
-  assert.match(main, /etusivupalloNappi\?\.addEventListener\('click'/);
-  assert.match(main, /import\('\.\/etusivupallo\.js'\)/,
-    'main.js hakee moduulin dynaamisesti — staattinen tuonti rikkoisi dist-version');
-  // Koko piirto eikä pelkkä renderIntro: pois kytkettäessä tasokartan on
-  // herättävä lepotilasta, jotta vanha pienoiskartta palaa ilman sivulatausta.
-  assert.match(main, /ui\?\.render\?\.\(\)/, 'vipu piirtää pelin heti uudelleen');
-  assert.match(main, /poiskytkin/, 'vivun teksti kertoo uuden oletuksen');
+  assert.doesNotMatch(main, /etusivupalloNappi/);
+  assert.doesNotMatch(main, /import\('\.\/etusivupallo\.js'\)/,
+    'nappi lähti, joten dynaamista hakuakaan ei enää tehdä');
+  const { etusivupalloPaalla, asetaEtusivupallo } = await import('../js/etusivupallo.js');
+  assert.equal(typeof etusivupalloPaalla, 'function', 'asetus on yhä koodissa');
+  assert.equal(typeof asetaEtusivupallo, 'function');
 });
 
 /*

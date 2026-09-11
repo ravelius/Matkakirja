@@ -764,13 +764,16 @@ test('pulun perustaso on kertojan alapuolella ja yhdessä paikassa', () => {
   assert.ok(LIVIAN_PERUSTASO > 0 && LIVIAN_PERUSTASO < 1,
     `perustason on oltava kertojan alle: ${LIVIAN_PERUSTASO}`);
   const puhe = lue('../js/liviapuhe.js');
-  // Kaikki pulun äänet kulkevat saman kertoimen kautta.
+  // Kaikki pulun äänet kulkevat saman kertoimen kautta. PULULLA ON OMA
+  // LIUKU 11.9.2026 alkaen (omistaja: *"pulun ja lukijan omat äänen
+  // voimakkuus säätimet"*), joten kerroin on pulunVoima eikä puheVoima.
   assert.match(puhe,
-    /audio\.volume = Math\.max\(0, Math\.min\(1, puheVoima\(\) \* LIVIAN_PERUSTASO \* vaimennus\)\);/);
-  // Vain häivytys koskee voimakkuuteen muualla (se laskee omasta
-  // lähtöarvostaan), joten perustaso asetetaan tasan kerran.
-  assert.equal((puhe.match(/audio\.volume = puheVoima\(\)/g) ?? []).length, 1,
-    'pulun perustaso asetetaan tasan yhdessä paikassa');
+    /audio\.volume = Math\.max\(0, Math\.min\(1, pulunVoima\(\) \* LIVIAN_PERUSTASO \* vaimennus\)\);/);
+  assert.doesNotMatch(puhe, /puheVoima/, 'lukijan liuku ei enää säädä pulua');
+  // Vain häivytys ja liu'un päivitys koskevat voimakkuuteen muualla;
+  // perustaso lasketaan samasta kaavasta (paivitaPulunVoima).
+  assert.equal((puhe.match(/pulunVoima\(\) \* LIVIAN_PERUSTASO/g) ?? []).length, 2,
+    'perustason kaava on sama soitossa ja liu\'un päivityksessä');
   // Kertoja asettaa oman tasonsa ilman kerrointa: vertailukohta on se.
   const luenta = lue('../js/luenta.js');
   assert.match(luenta, /audio\.volume = puheVoima\(\);/);

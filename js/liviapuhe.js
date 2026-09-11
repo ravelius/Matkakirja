@@ -93,7 +93,7 @@ import { seuraaLivianKasvoAanitetta, lopetaLivianKasvoAanite } from './livia-puh
  * on hiljainen — kupla toimii ilman ääntä täsmälleen kuten ennen.
  */
 
-import { puheVoima } from './aani-ehdokkaat.js';
+import { pulunVoima } from './aani-ehdokkaat.js';
 import {
   luentaKytkinPaalla, luovutaPuhevuoro, merkitsePuhuja, PUHUJA_PULU, puhujaAanessa,
   vapautaPuhuja,
@@ -364,18 +364,34 @@ export const LIVIAN_LINSSILAHTEET = {
  * sanatarkasti: *"Pulun ääni on vähän voimakkaampi kuin kertojan, sitä
  * voisi laskea koko pelissä hieman"*).
  *
- * Kertoja soi pelin yleisellä puhevoimalla sellaisenaan (js/luenta.js
- * playDiaryVoice: `audio.volume = puheVoima()`), ja pulu soi samalla
- * luvulla — mutta sen käheä, nopea ja tagitettu ääni kuulostaa
- * voimakkaammalta kuin kertojan tasainen luenta. Tämä kerroin laskee
- * KAIKKI pulun äänitteet saman verran kertojan alle: yksi luku, ei
- * kutsupaikkakohtaisia säätöjä.
+ * Kertoja soi pelin lukijaliu'un tasolla sellaisenaan (js/luenta.js
+ * playDiaryVoice), ja pulu soi oman liukunsa tasolla — mutta sen
+ * käheä, nopea ja tagitettu ääni kuulostaa voimakkaammalta kuin
+ * kertojan tasainen luenta. Tämä kerroin laskee KAIKKI pulun
+ * äänitteet saman verran alle: yksi luku, ei kutsupaikkakohtaisia
+ * säätöjä. Liu'ut erotettiin 11.9.2026 (omistaja: *"pulun ja lukijan
+ * omat äänen voimakkuus säätimet"*).
  *
  * Vaimennukset (huudahdus, linssin välihuomio) kertovat TÄHÄN lukuun,
  * eivät korvaa sitä — välihuuto on siis yhä suhteessa yhtä paljon
  * hiljaisempi kuin ennenkin.
  */
 export const LIVIAN_PERUSTASO = 0.8;
+
+/*
+ * SOIVA REPLIIKKI JA PULUN OMA LIUKU (omistaja 11.9.2026). Päävalikon
+ * "Pulun ääni" -liuku kutsuu paivitaPulunVoimaa jokaisella
+ * liikahduksella, jotta säätö kuuluu sormen alla eikä vasta seuraavassa
+ * repliikissä. Muistissa on vain viimeksi aloitettu äänite ja sen
+ * kutsupaikkakohtainen vaimennus — perustaso lasketaan aina uudestaan.
+ */
+let soivaPulu = null;
+
+export function paivitaPulunVoima() {
+  const audio = soivaPulu?.audio;
+  if (!audio || audio.ended || audio.paused) return;
+  audio.volume = Math.max(0, Math.min(1, pulunVoima() * LIVIAN_PERUSTASO * soivaPulu.vaimennus));
+}
 
 /**
  * VÄLIHUOMION VAIMENNUS: pulu soi kertojan päälle hiljempaa eikä
@@ -1012,8 +1028,13 @@ export function soitaLivianAani(ui, lahde, indeksi,
   const audio = new Audio(url);
   audio.preload = 'auto';
   // Perustaso on kertojan alapuolella (LIVIAN_PERUSTASO); kutsupaikan
-  // vaimennus kertoo siihen eikä korvaa sitä.
-  audio.volume = Math.max(0, Math.min(1, puheVoima() * LIVIAN_PERUSTASO * vaimennus));
+  // vaimennus kertoo siihen eikä korvaa sitä. PULULLA ON OMA LIUKU
+  // (omistaja 11.9.2026: *"pulun ja lukijan omat äänen voimakkuus
+  // säätimet"*), joten kertojan puhevoima ei enää säädä pulua.
+  audio.volume = Math.max(0, Math.min(1, pulunVoima() * LIVIAN_PERUSTASO * vaimennus));
+  // Soiva repliikki seuraa liukua heti: vaimennus talteen, jotta taso
+  // voidaan laskea uudestaan kesken äänitteen (paivitaPulunVoima).
+  soivaPulu = { audio, vaimennus };
   ui.liviaAani = audio;
   seuraaLivianKasvoAanitetta(audio, teksti);
   // Kirjanpito kaikkiin luentoihin: taustalle menevä peli hiljentää
