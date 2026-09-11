@@ -6,8 +6,8 @@ tarkistukset). Ei poikkeuksia vaikeaankaan ongelmaan. Parvina saa ajaa.
 Fablemax-agenttityyppi on poistettu 7.9.2026.
 
 Täsmennys (omistaja 11.9.2026, tekstisession kautta): yllä oleva koskee
-Clauden agentteja. ChatGPT/Codex-sessio ("tekstisessio") saa käyttää Solia
-ja muita kevyempiä agenttimalleja; molemmat pääsessiot delegoivat rajatut
+Clauden agentteja. ChatGPT/Codex-sessio ("tekstisessio") saa käyttää Solia,
+Terraa ja Lunaa (kevyemmät agenttimallit); molemmat pääsessiot delegoivat rajatut
 tehtävät kevyimmälle riittävän kyvykkäälle mallille, kun se säästää
 kokonaiskäyttöä laadusta tinkimättä (Raamattu, Ydinajatus).
 
