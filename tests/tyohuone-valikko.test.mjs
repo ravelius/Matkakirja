@@ -132,7 +132,15 @@ test('hammasratasvalikossa on Raamattu ja Kehittäjälehti', () => {
   const valikko = html.slice(alku, loppu);
   assert.ok(valikko.includes('id="raamattu-lehti-btn"'), 'Raamattu-nappi puuttuu rattaasta');
   assert.ok(valikko.includes('id="kehittajalehti-btn"'), 'Kehittäjälehti-nappi puuttuu rattaasta');
-  assert.match(valikko, /<p class="valikko-otsikko">Työhuone<\/p>/);
+  /*
+   * EI OTSIKKOA, POHJIMMAISENA (omistaja 11.9.2026: *"raamattu ja
+   * kehittäjälehti saisivat olla alimmaisina listassa"* ja *"työhuone
+   * otsikkoa ei tarvitse olla"*).
+   */
+  assert.doesNotMatch(valikko, /<p class="valikko-otsikko">Työhuone<\/p>/,
+    'Työhuone-otsikko on palannut valikkoon');
+  assert.ok(valikko.indexOf('id="kehittaja-tyohuone"') > valikko.indexOf('id="kehittaja-vivut"'),
+    'työhuoneen napit eivät ole valikon alimmaisina');
   // Molemmat ovat samaa viivaikoninappityyliä kuin ennen.
   const napit = [...valikko.matchAll(/id="(raamattu-lehti-btn|kehittajalehti-btn)"[^>]*class="([^"]+)"/g)];
   assert.equal(napit.length, 2, 'nappien luokkia ei löytynyt');

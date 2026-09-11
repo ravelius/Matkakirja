@@ -52,7 +52,17 @@ test('ambienssi ja siirtymämusiikki kertovat tasonsa kehittäjän kertoimella',
   // vartioi tests/musiikin-kerroin.test.mjs.
   assert.match(lue('../js/siirtymamusiikki.js'), /raidanTaso = [\s\S]{0,160}musiikinKerroin\(\)/);
   const html = lue('../index.html');
-  assert.match(html, /kehittaja-saadin" data-laji="tausta"/);
+  /*
+   * TAUSTAÄÄNI ON LIUKU MUIDEN ÄÄNENTASOJEN JOUKOSSA (omistaja
+   * 11.9.2026: *"taustaääni on oudosti erillään muista
+   * äänisäätimistä"*). Entinen +/- kerroinaskellin poistui
+   * kehittäjälohkosta; kerroin ja sen kuuntelijat ovat ennallaan.
+   */
+  assert.match(html, /class="aanivoima" data-liuku="tausta"/);
+  assert.match(html, /id="voima-tausta"[\s\S]{0,200}type="range"/);
+  assert.doesNotMatch(html, /data-laji="tausta"/,
+    'taustaäänellä on taas kaksi säädintä — kerroinaskellin ja liuku');
+  assert.match(lue('../js/main.js'), /avain: 'tausta'[\s\S]{0,200}asetaKehittajanKerroin\('tausta', arvo\)/);
   // Musiikin rivi on nyt liuku 0–100 eikä +/- askellin (omistaja 9.9.2026).
   assert.match(html, /id="kehittaja-musiikki-liuku"[\s\S]{0,200}type="range"/);
   assert.doesNotMatch(html, /data-laji="musiikki"/,

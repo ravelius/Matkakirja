@@ -173,7 +173,6 @@ import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
 import { livianKorostetutKaupungit } from './liviapuhe.js';
-import { luentakuvallisetKaupungit } from './packs/fokusvirrat.js';
 // Fokusmoodin annosteluvirta (js/fokusvirta.js). Kytkentä on kaksi
 // kutsua: saapumisen laukaisin renderissä ja lehtilukko openArrivalissa.
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
@@ -7112,7 +7111,6 @@ export class UI {
      */
     // Kehien listat kerran, ei kaupunkia kohti (ks. alempaa).
     const tarkistettavat = livianKorostetutKaupungit();
-    const luentakuvalliset = luentakuvallisetKaupungit();
     for (const c of board.cities) {
       const wobble = `rotate(${vary(`city:rot:${c.id}`, 12).toFixed(1)} ${c.x} ${c.y})`;
       /*
@@ -7196,15 +7194,15 @@ export class UI {
        * falseksi, kun kaupungit on käyty läpi.
        */
       /*
-       * LUENTAKUVAKEHÄ (omistaja 9.9.2026 klo 12.20: *"Voisit nyt merkata
-       * eri värillä sellaiset kaupungit, joissa tällaiset kuvat on. Muut
-       * värimerkinnät voi nollata kartalta."*): kaupunki, jonka pakissa on
-       * matkakirja.luentakuva, saa sinisen kehän (sama mekaniikka kuin
-       * tarkistuskehällä, css .city-luentakuva). Tarkistuskehä on
-       * nollattu (LIVIAN_KOROSTUS_KAYTOSSA false).
+       * SININEN LUENTAKUVAKEHÄ POISTETTU (omistaja 11.9.2026: *"siniset
+       * kaupunkilaatat voi palauttaa takaisin alkuperäiseen väriin"*).
+       * Se oli 9.9.2026 tehty työmerkintä siitä, missä isoisän
+       * luentakuva jo oli; kuvia on nyt kaikissa 45 kaupungissa, joten
+       * merkintä ei erottanut enää mitään. Tarkistuskehän mekaniikka
+       * jää (LIVIAN_KOROSTUS_KAYTOSSA on epätosi, joten sekin on
+       * käytännössä nollattu).
        */
-      const kehanLuokka = luentakuvalliset.has(c.id) ? 'city-luentakuva'
-        : (tarkistettavat.has(c.id) ? 'city-tarkistus' : null);
+      const kehanLuokka = tarkistettavat.has(c.id) ? 'city-tarkistus' : null;
       if (kehanLuokka) {
         const tr = base + 5.2;
         el('ellipse', {

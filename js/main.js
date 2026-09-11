@@ -1,7 +1,7 @@
 // Käynnistys: aloitusruutu, pelin luonti, tallennus ja dialogit.
 
 import { MUUTOKSET } from './muutokset.js';
-import { kehittajanKerroinTeksti, saadaKehittajanKerrointa } from './kehittajan-voimat.js';
+import { asetaKehittajanKerroin, kehittajanKerroin } from './kehittajan-voimat.js';
 import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
@@ -138,7 +138,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1768';
+const APP_VERSION = '2026-08-09.1769';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -720,6 +720,27 @@ const AANIVOIMAT = [
       asetaPuheVoima(arvo);
       paivitaSoivatLuennat();
     },
+  },
+  /*
+   * TAUSTAÄÄNET MUIDEN JOUKKOON (omistaja 11.9.2026, sanatarkasti:
+   * *"taustaääni on oudosti erillään muista äänisäätimistä"*).
+   *
+   * Kaupungin äänimaisemalla oli kehittäjälohkossa oma +/- askellin
+   * (×0,25…×3,0), eikä se näyttänyt äänentasolta lainkaan. Nyt se on
+   * sama 0–100 %:n liuku kuin muutkin: 100 % on PELIN OMA TASO (kerroin
+   * 1,0) ja 0 % hiljaisuus. Kerroin, tallennus ja kuuntelijat ovat
+   * ennallaan (js/kehittajan-voimat.js), joten soiva äänimaisema
+   * seuraa liukua ilman katkoa.
+   *
+   * YLI YHDEN MENEVÄ KOROTUS ei ole liu'ulla saatavissa — se oli
+   * kuulokokeen apu, ja sen saa yhä localStoragesta
+   * (matkakirja-dev-voima-tausta) tai kuuntelemalla kaupunkia sen
+   * omalla tasolla.
+   */
+  {
+    avain: 'tausta',
+    lue: () => Math.min(1, kehittajanKerroin('tausta')),
+    aseta: (arvo) => asetaKehittajanKerroin('tausta', arvo),
   },
 ];
 
@@ -1683,25 +1704,6 @@ const esilataaIlmeJoutilaana = () => {
 if (document.readyState === 'complete') esilataaIlmeJoutilaana();
 else window.addEventListener('load', esilataaIlmeJoutilaana, { once: true });
 /*
- * KEHITTÄJÄN VOIMAKKUUSSÄÄTIMET (omistaja 3.9.2026): taustaääni ja
- * taustamusiikki, +/- askelittain pelin nykyiseen tasoon nähden.
- * Kerroin ja tallennus ovat js/kehittajan-voimat.js:ssä; ambienssi ja
- * siirtymämusiikki kuuntelevat sitä itse.
- */
-for (const saadin of document.querySelectorAll('.kehittaja-saadin[data-laji]')) {
-  const laji = saadin.dataset.laji;
-  const arvo = saadin.querySelector('.kehittaja-saadin-arvo');
-  const nayta = () => { if (arvo) arvo.textContent = kehittajanKerroinTeksti(laji); };
-  nayta();
-  for (const nappi of saadin.querySelectorAll('.kehittaja-saadin-nappi')) {
-    nappi.addEventListener('click', (e) => {
-      e.stopPropagation();
-      saadaKehittajanKerrointa(laji, Number(nappi.dataset.suunta) || 1);
-      nayta();
-    });
-  }
-}
-/*
  * TAUSTAMUSIIKIN LIUKU (omistaja 9.9.2026, sanatarkasti: *"Saisiko
  * säätimen niin, että se oikeasti toimisi ja sen pystyisi säätämään
  * todella isolla välillä, niin, että musiikin saisi oikeasti säädettyä
@@ -1714,10 +1716,19 @@ for (const saadin of document.querySelectorAll('.kehittaja-saadin[data-laji]')) 
  */
 const musiikkiLiuku = document.getElementById('kehittaja-musiikki-liuku');
 if (musiikkiLiuku) {
-  const lukema = musiikkiLiuku.closest('.kehittaja-saadin')?.querySelector('.kehittaja-saadin-arvo');
+  const lukema = document.getElementById('kehittaja-musiikki-arvo');
   const naytaLiuku = () => {
     musiikkiLiuku.value = String(musiikinLiuku());
-    if (lukema) lukema.textContent = musiikinLiuunTeksti();
+    /*
+     * LUKEMA ON PROSENTTI KUTEN NAAPUREILLA (omistaja 11.9.2026:
+     * *"taustaääni on oudosti erillään muista äänisäätimistä"*).
+     * Desibelilukema (`35 · −23 dB`) oli kuulokokeen apu ja teki
+     * rivistä erinäköisen kuin muut; se jää hiirivihjeeseen.
+     */
+    if (lukema) {
+      lukema.textContent = `${musiikinLiuku()} %`;
+      lukema.title = musiikinLiuunTeksti();
+    }
   };
   naytaLiuku();
   musiikkiLiuku.addEventListener('input', (e) => {

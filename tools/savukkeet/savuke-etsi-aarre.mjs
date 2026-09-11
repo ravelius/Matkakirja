@@ -11,9 +11,11 @@
  *      kartalla ei ole .etsi-aarre-nappia.
  *   2. KOMMENTIN JÄLKEEN NAPPI: kupla ruudulle → nappi ilmestyy, ja
  *      siinä lukee "Etsi aarre".
- *   3. NAPPI ON LAATAN VIERESSÄ: napin keskipiste on kaupungin pisteen
- *      oikealla puolella ja alapuolella, muutaman kymmenen pikselin
- *      päässä — ei pisteen eikä nimen päällä.
+ *   3. NAPPI ON LUKITTU NIMEN ALLE: napin keskipiste on kaupungin
+ *      pisteen KOHDALLA vaakasuunnassa ja sen alapuolella, muutaman
+ *      kymmenen pikselin päässä — ei pisteen eikä nimen päällä
+ *      (omistaja 11.9.2026: *"etsi aarre nappi pitäisi lukita
+ *      paikoilleen kohdekaupungin nimen alapuolelle"*).
  *   4. PAINALLUS AVAA KAUPUNKILEHDEN ETUSIVUN ja nappi väistyy —
  *      EI aarrekysymystä eikä tietovisaa (omistaja 9.9.2026 klo 16.30:
  *      *"sen pitäisi avata siis kaupunkilehti, eikä mennä suoraan
@@ -202,7 +204,7 @@ vaadi('nappi ilmestyy kommentin jälkeen', tila.nappi === 'Etsi aarre',
   JSON.stringify(tila.nappi));
 vaadi('nappi on noussut näkyviin', tila.nakyy === true, JSON.stringify(tila.nakyy));
 
-/* 3. Nappi on laatan vieressä: pisteen oikealla ja alapuolella. */
+/* 3. Nappi on lukittu nimen alle: pisteen kohdalla ja sen alapuolella. */
 const paikka = await sivu.evaluate(() => {
   const { ui, game } = window.matkakirja;
   const kaupunki = game.cityOf();
@@ -219,10 +221,11 @@ const paikka = await sivu.evaluate(() => {
   };
 });
 if (paikka.nappi) {
-  const dx = paikka.nappi.x - paikka.piste.x;
+  // Keskipiste, ei vasen reuna: nappi on keskitetty ankkuriin (−50 %).
+  const dx = paikka.nappi.x + paikka.nappi.width / 2 - paikka.piste.x;
   const dy = paikka.nappi.y - paikka.piste.y;
   tieto('napin siirtymä pisteestä', `dx ${Math.round(dx)} px, dy ${Math.round(dy)} px`);
-  vaadi('nappi on pisteen oikealla puolella', dx > 4, `dx ${Math.round(dx)}`);
+  vaadi('nappi on pisteen kohdalla vaakasuunnassa', Math.abs(dx) < 12, `dx ${Math.round(dx)}`);
   vaadi('nappi on pisteen alapuolella', dy > 0, `dy ${Math.round(dy)}`);
   vaadi('nappi on lähellä laattaa', Math.hypot(dx, dy) < 120,
     `etäisyys ${Math.round(Math.hypot(dx, dy))} px`);

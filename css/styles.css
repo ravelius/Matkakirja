@@ -21674,12 +21674,21 @@ a.pollo-kasitelinkki:active { color: var(--pollo-muste); }
 .etsi-aarre-nappi {
   position: absolute;
   /*
-   * Mitat kaappauksesta (Lontoo pallolaudalla 9.9.2026): laattaan
-   * poltettu nimi kulkee pisteestä oikealle sen omalla rivillään, joten
-   * nappi lasketaan sen ALAPUOLELLE — 0,5 rem jäi nimen kylkeen kiinni.
+   * NAPPI ON LUKITTU KAUPUNGIN NIMEN ALLE (omistaja 11.9.2026,
+   * kaappaus Tampereelta: *"etsi aarre nappi pitäisi lukita
+   * paikoilleen kohdekaupungin nimen alapuolelle"*). Ennen se kasvoi
+   * ankkurista alas OIKEALLE (left 0,65 rem), jolloin se istui nimen
+   * kyljessä vinosti eikä sen alla.
+   *
+   * Vaakakeskitys tulee omasta muunnoksesta: ankkuri on nollan
+   * kokoinen kaupungin pisteessä, joten −50 % napin omasta leveydestä
+   * asettaa sen keskilinjan täsmälleen pisteen kohdalle riippumatta
+   * siitä, kuinka pitkä teksti napissa on. Pystysuunnassa 2 rem
+   * jättää laattaan poltetun nimirivin napin yläpuolelle.
    */
-  left: 0.65rem;
-  top: 1rem;
+  left: 0;
+  top: 2rem;
+  transform: translateX(-50%);
   min-height: 32px;
   padding: 0.2rem 0.7rem;
   border: 1.5px solid #8a6118;

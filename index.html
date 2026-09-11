@@ -164,30 +164,6 @@
           <div id="kehittaja-valikko" class="paavalikko kehittaja-valikko" hidden>
             <!-- KEHITTÄJÄN RYHMÄT (Työhuone ja Kehittäjä) NÄKYVÄT VAIN
                  KEHITTÄJÄTILASSA; äänentasot näkyvät aina. -->
-            <div id="kehittaja-tyohuone" class="kehittaja-ryhma" hidden>
-              <!-- TYÖHUONE: KAKSI NAPPIA (omistaja 11.9.2026, sanatarkasti:
-                   "saisiko kuvan otsikot yhdistettyä niin että jäljelle jäisi
-                   vain raamattu sekä kehittäjä lehti, minkä alle tulisi nuo
-                   kaikki muut jutut mitkä jäävät raamatun ulkopuolelle" ja
-                   "samalla raamatun ja kehittäjälehden voisi siirtää
-                   hammasratas valikon alle").
-
-                   Nämä olivat 15.8.–11.9.2026 hampurilaisvalikon
-                   #kehittaja-kotelossa seitsemänä eri nappina. Kehittäjälehden
-                   alla ovat nyt Tilannelehti, Poiminnat, Tilastot, Grafiikka,
-                   Lukijoilta, Musiikki ja Lukijaääni — samat ikonit ja samat
-                   avaukset (js/tyohuone-kehittajalehti.js). Ryhmä on valikon
-                   alussa, koska nämä ovat komentoja eivätkä kytkimiä. -->
-              <p class="valikko-otsikko">Työhuone</p>
-              <button id="raamattu-lehti-btn" class="ghost tyohuone-nappi" type="button">
-                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4.5h6.5v15H6.6A1.6 1.6 0 0 1 5 17.9z"/><path d="M19 4.5h-6.5v15h4.9a1.6 1.6 0 0 0 1.6-1.6z"/></svg></span>
-                <span>Raamattu</span>
-              </button>
-              <button id="kehittajalehti-btn" class="ghost tyohuone-nappi" type="button">
-                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 5.5h15v13h-15z"/><path d="M7.5 9.5h6M7.5 12.5h9M7.5 15.5h9"/></svg></span>
-                <span>Kehittäjälehti</span>
-              </button>
-            </div>
             <!-- ÄÄNENTASOT RATTAASEEN (omistaja 11.9.2026 klo 14.35,
                  sanatarkasti: *"kaikki äänentason säätimet kuuluvat
                  hammasrattaan alle"*). Kolme voimakkuusliukua olivat
@@ -222,20 +198,29 @@
                        min="0" max="100" step="1" value="90" />
                 <b id="voima-lukija-arvo" class="aanivoima-arvo" aria-live="polite">90 %</b>
               </div>
-            </div>
-            <!-- TAUSTAMUSIIKIN SÄÄDIN (omistaja 9.9.2026: *"Saisiko säätimen
-                 niin, että se oikeasti toimisi ja sen pystyisi säätämään
-                 todella isolla välillä"*). Liuku 0–100, käyrä
-                 (x/100)^2,5 (js/musiikkivalitsin.js musiikinVahvistus):
-                 0 = hiljaisuus, oletus 35. Entinen +/- kerroinaskellin oli
-                 lineaarinen ja sen alaraja ×0,25 vain −12 dB. -->
-            <div class="kehittaja-saadin kehittaja-liuku" data-liuku="musiikki"
-                 role="group" aria-label="Taustamusiikin voimakkuus">
-              <span class="kehittaja-kytkin-nimi">Taustamusiikki</span>
-              <input id="kehittaja-musiikki-liuku" class="kehittaja-liuku-vipu" type="range"
-                     min="0" max="100" step="1" value="35"
-                     aria-label="Taustamusiikin voimakkuus" />
-              <span class="kehittaja-saadin-arvo" aria-live="polite">35 &middot; &minus;23 dB</span>
+              <!-- TAUSTAMUSIIKKI JA TAUSTAÄÄNET SAMASSA LISTASSA MUIDEN
+                   KANSSA (omistaja 11.9.2026: *"taustaääni on oudosti
+                   erillään muista äänisäätimistä"*). Molemmat olivat
+                   omina rivityyleinään liu'un alapuolella: musiikilla oli
+                   `35 · −23 dB` -lukema ja taustaäänellä kehittäjän
+                   +/- kerroinaskellin. Nyt kaikki viisi ovat samaa
+                   .aanivoima-riviä ja lukema on prosentti; musiikin
+                   käyrä (js/musiikkivalitsin.js) ja taustaäänen kerroin
+                   (js/kehittajan-voimat.js) ovat ennallaan pinnan alla. -->
+              <div class="aanivoima" data-liuku="musiikki">
+                <label class="aanivoima-nimi" for="kehittaja-musiikki-liuku">Taustamusiikki</label>
+                <input id="kehittaja-musiikki-liuku" class="aanivoima-liuku" type="range"
+                       min="0" max="100" step="1" value="35"
+                       aria-label="Taustamusiikin voimakkuus" />
+                <b id="kehittaja-musiikki-arvo" class="aanivoima-arvo" aria-live="polite">35 %</b>
+              </div>
+              <div class="aanivoima" data-liuku="tausta">
+                <label class="aanivoima-nimi" for="voima-tausta">Taustaäänet</label>
+                <input id="voima-tausta" class="aanivoima-liuku" type="range"
+                       min="0" max="100" step="1" value="100"
+                       aria-label="Kaupungin äänimaiseman voimakkuus" />
+                <b id="voima-tausta-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
+              </div>
             </div>
             <div id="kehittaja-vivut" class="kehittaja-ryhma" hidden>
               <p class="valikko-otsikko">Kehittäjä</p>
@@ -245,14 +230,6 @@
                 <span class="kehittaja-kytkin-nimi">maailma</span>
                 <span class="kehittaja-kytkin-tila">pois</span>
               </button>
-              <!-- Kehittäjän voimakkuussäätimet (omistaja 3.9.2026): kerroin
-                   pelin omaan tasoon, +/- askelittain (js/kehittajan-voimat.js). -->
-              <div class="kehittaja-saadin" data-laji="tausta" role="group" aria-label="Taustaäänen voimakkuus">
-                <span class="kehittaja-kytkin-nimi">taustaääni</span>
-                <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="-1" aria-label="Taustaäänen voimakkuus hiljemmalle">&minus;</button>
-                <span class="kehittaja-saadin-arvo" aria-live="polite">×1,0</span>
-                <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="1" aria-label="Taustaäänen voimakkuus kovemmalle">+</button>
-              </div>
               <button id="kehittaja-mittari-btn" class="ghost kehittaja-kytkin"
                       type="button" aria-pressed="false">
                 <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 17.5a7.5 7.5 0 1 1 15 0"/><path d="m12 17.5 3.6-5.2"/><path d="M12 5.5v1.6M5.6 8.2l1.2 1.1M18.4 8.2l-1.2 1.1"/></svg></span>
@@ -297,6 +274,34 @@
                    tässä ("laita kartta näkyviin" / "lataa sivu uudelleen"),
                    ja generointi sen, lähtikö haku. -->
               <p id="kehittaja-valikko-vihje" class="kehittaja-valikko-vihje" hidden></p>
+            </div>
+            <div id="kehittaja-tyohuone" class="kehittaja-ryhma" hidden>
+              <!-- TYÖHUONE: KAKSI NAPPIA (omistaja 11.9.2026, sanatarkasti:
+                   "saisiko kuvan otsikot yhdistettyä niin että jäljelle jäisi
+                   vain raamattu sekä kehittäjä lehti, minkä alle tulisi nuo
+                   kaikki muut jutut mitkä jäävät raamatun ulkopuolelle" ja
+                   "samalla raamatun ja kehittäjälehden voisi siirtää
+                   hammasratas valikon alle").
+
+                   Nämä olivat 15.8.–11.9.2026 hampurilaisvalikon
+                   #kehittaja-kotelossa seitsemänä eri nappina. Kehittäjälehden
+                   alla ovat nyt Tilannelehti, Poiminnat, Tilastot, Grafiikka,
+                   Lukijoilta, Musiikki ja Lukijaääni — samat ikonit ja samat
+                   avaukset (js/tyohuone-kehittajalehti.js).
+
+                   RYHMÄ ON VALIKON POHJALLA JA ILMAN OTSIKKOA (omistaja
+                   11.9.2026: *"raamattu ja kehittäjälehti saisivat olla
+                   alimmaisina listassa"* ja *"työhuone otsikkoa ei
+                   tarvitse olla"*). Nämä ovat kaksi harvoin painettavaa
+                   komentoa, joten ne eivät kuulu äänentasojen edelle. -->
+              <button id="raamattu-lehti-btn" class="ghost tyohuone-nappi" type="button">
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4.5h6.5v15H6.6A1.6 1.6 0 0 1 5 17.9z"/><path d="M19 4.5h-6.5v15h4.9a1.6 1.6 0 0 0 1.6-1.6z"/></svg></span>
+                <span>Raamattu</span>
+              </button>
+              <button id="kehittajalehti-btn" class="ghost tyohuone-nappi" type="button">
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 5.5h15v13h-15z"/><path d="M7.5 9.5h6M7.5 12.5h9M7.5 15.5h9"/></svg></span>
+                <span>Kehittäjälehti</span>
+              </button>
             </div>
           </div>
         </div>

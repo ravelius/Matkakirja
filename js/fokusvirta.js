@@ -2601,6 +2601,37 @@ function paivitaLuentakuvanPaikka(naytto) {
   if (!paikka) return;
   solmu.style.setProperty('--luentakuva-x', `${paikka.x.toFixed(1)}px`);
   solmu.style.setProperty('--luentakuva-y', `${paikka.y.toFixed(1)}px`);
+  solmu.style.setProperty('--luentakuva-karttaskaala',
+    kartanMittakaava(naytto).toFixed(3));
+}
+
+/**
+ * PIENI KUVA ON KARTAN KOKOINEN (omistaja 11.9.2026, kaappaus
+ * Madridista: *"pienennetyt kuvat saisi jäädä kartalla pienemmiksi ja
+ * pysyä kartan kokoon suhteutettuna, eli pienenevät jos zoomataan ulos
+ * kartalla"*).
+ *
+ * ISO KUVA EI SKAALAUDU. Luennan ajan kuva on merkintä, jota luetaan —
+ * sen pitää pysyä luettavan kokoisena riippumatta siitä, mihin kartta
+ * on zoomattu. Vasta pienennetty kuva on kartan esine (valokuva, joka
+ * jäi sen kaupungin päälle), ja se kutistuu ja kasvaa kartan mukana.
+ *
+ * SUHDE, EI ABSOLUUTTINEN MITTA: vertailukohta on se mittakaava, jolla
+ * kartta oli kuvan noustessa, joten kuva näyttää silloiselta itseltään
+ * niin kauan kuin zoomiin ei kosketa. RAJAT pitävät sen käytettävänä:
+ * maailmanlaajuisessa yleiskuvassa kuva ei saa kadota pisteeksi eikä
+ * syvässä zoomissa peittää kaupunkia.
+ */
+const KARTTASKAALAN_RAJAT = Object.freeze({ alin: 0.4, ylin: 1.8 });
+
+function kartanMittakaava(naytto) {
+  const paneeli = naytto?.paneeli;
+  if (!paneeli?.classList?.contains('pieni')) return 1;
+  const nyt = naytto.ui?.nakyvaAlue?.()?.skaala;
+  const perus = naytto.perusSkaala;
+  if (!(nyt > 0) || !(perus > 0)) return 1;
+  return Math.min(KARTTASKAALAN_RAJAT.ylin,
+    Math.max(KARTTASKAALAN_RAJAT.alin, nyt / perus));
 }
 
 /**
@@ -2716,6 +2747,8 @@ export function ankkuroiLuentakuva(ui, city, paneeli, nappi) {
   if (!pane) return false;
   const naytto = {
     ui, city, paneeli, nappi, pane, mitat: null, ankkuri: null, kehys: 0, raahattu: false,
+    // Kartan mittakaava kuvan noustessa: pienen kuvan vertailukohta.
+    perusSkaala: ui?.nakyvaAlue?.()?.skaala ?? 0,
   };
   const sijainti = mitoitaLuentakuva(naytto);
   if (!sijainti) return false;
