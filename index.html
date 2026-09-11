@@ -156,48 +156,72 @@
         -->
         <div id="kehittaja-valikko-kotelo" class="kehittaja-valikko-kotelo" hidden>
           <button id="kehittaja-valikko-btn" class="ghost" type="button"
-                  title="Kehittäjän työkalut" aria-label="Kehittäjän työkalut"
+                  title="Äänentasot ja asetukset" aria-label="Äänentasot ja asetukset"
                   aria-haspopup="true" aria-expanded="false"
                   aria-controls="kehittaja-valikko">
             <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 9.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6z"/><path d="M19.3 14.1a1.4 1.4 0 0 0 .3 1.6l.1.1a1.7 1.7 0 1 1-2.4 2.4l-.1-.1a1.4 1.4 0 0 0-1.6-.3 1.4 1.4 0 0 0-.9 1.3v.2a1.7 1.7 0 0 1-3.4 0v-.1a1.4 1.4 0 0 0-.9-1.3 1.4 1.4 0 0 0-1.6.3l-.1.1a1.7 1.7 0 1 1-2.4-2.4l.1-.1a1.4 1.4 0 0 0 .3-1.6 1.4 1.4 0 0 0-1.3-.9h-.2a1.7 1.7 0 0 1 0-3.4h.1a1.4 1.4 0 0 0 1.3-.9 1.4 1.4 0 0 0-.3-1.6l-.1-.1a1.7 1.7 0 1 1 2.4-2.4l.1.1a1.4 1.4 0 0 0 1.6.3h.1a1.4 1.4 0 0 0 .9-1.3v-.2a1.7 1.7 0 0 1 3.4 0v.1a1.4 1.4 0 0 0 .9 1.3 1.4 1.4 0 0 0 1.6-.3l.1-.1a1.7 1.7 0 1 1 2.4 2.4l-.1.1a1.4 1.4 0 0 0-.3 1.6v.1a1.4 1.4 0 0 0 1.3.9h.2a1.7 1.7 0 0 1 0 3.4h-.1a1.4 1.4 0 0 0-1.3.9z"/></svg></span>
           </button>
           <div id="kehittaja-valikko" class="paavalikko kehittaja-valikko" hidden>
-            <!-- TYÖHUONE: KAKSI NAPPIA (omistaja 11.9.2026, sanatarkasti:
-                 "saisiko kuvan otsikot yhdistettyä niin että jäljelle jäisi
-                 vain raamattu sekä kehittäjä lehti, minkä alle tulisi nuo
-                 kaikki muut jutut mitkä jäävät raamatun ulkopuolelle" ja
-                 "samalla raamatun ja kehittäjälehden voisi siirtää
-                 hammasratas valikon alle").
+            <!-- KEHITTÄJÄN RYHMÄT (Työhuone ja Kehittäjä) NÄKYVÄT VAIN
+                 KEHITTÄJÄTILASSA; äänentasot näkyvät aina. -->
+            <div id="kehittaja-tyohuone" class="kehittaja-ryhma" hidden>
+              <!-- TYÖHUONE: KAKSI NAPPIA (omistaja 11.9.2026, sanatarkasti:
+                   "saisiko kuvan otsikot yhdistettyä niin että jäljelle jäisi
+                   vain raamattu sekä kehittäjä lehti, minkä alle tulisi nuo
+                   kaikki muut jutut mitkä jäävät raamatun ulkopuolelle" ja
+                   "samalla raamatun ja kehittäjälehden voisi siirtää
+                   hammasratas valikon alle").
 
-                 Nämä olivat 15.8.–11.9.2026 hampurilaisvalikon
-                 #kehittaja-kotelossa seitsemänä eri nappina. Kehittäjälehden
-                 alla ovat nyt Tilannelehti, Poiminnat, Tilastot, Grafiikka,
-                 Lukijoilta, Musiikki ja Lukijaääni — samat ikonit ja samat
-                 avaukset (js/tyohuone-kehittajalehti.js). Ryhmä on valikon
-                 alussa, koska nämä ovat komentoja eivätkä kytkimiä. -->
-            <p class="valikko-otsikko">Työhuone</p>
-            <button id="raamattu-lehti-btn" class="ghost tyohuone-nappi" type="button">
-              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4.5h6.5v15H6.6A1.6 1.6 0 0 1 5 17.9z"/><path d="M19 4.5h-6.5v15h4.9a1.6 1.6 0 0 0 1.6-1.6z"/></svg></span>
-              <span>Raamattu</span>
-            </button>
-            <button id="kehittajalehti-btn" class="ghost tyohuone-nappi" type="button">
-              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 5.5h15v13h-15z"/><path d="M7.5 9.5h6M7.5 12.5h9M7.5 15.5h9"/></svg></span>
-              <span>Kehittäjälehti</span>
-            </button>
-            <p class="valikko-otsikko">Kehittäjä</p>
-            <button id="kehittaja-maailma-btn" class="ghost kehittaja-kytkin"
-                    type="button" aria-pressed="false">
-              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M4.5 12h15"/><path d="M12 4.5a11 11 0 0 1 0 15 11 11 0 0 1 0-15z"/></svg></span>
-              <span class="kehittaja-kytkin-nimi">maailma</span>
-              <span class="kehittaja-kytkin-tila">pois</span>
-            </button>
-            <!-- Kehittäjän voimakkuussäätimet (omistaja 3.9.2026): kerroin
-                 pelin omaan tasoon, +/- askelittain (js/kehittajan-voimat.js). -->
-            <div class="kehittaja-saadin" data-laji="tausta" role="group" aria-label="Taustaäänen voimakkuus">
-              <span class="kehittaja-kytkin-nimi">taustaääni</span>
-              <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="-1" aria-label="Taustaäänen voimakkuus hiljemmalle">&minus;</button>
-              <span class="kehittaja-saadin-arvo" aria-live="polite">×1,0</span>
-              <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="1" aria-label="Taustaäänen voimakkuus kovemmalle">+</button>
+                   Nämä olivat 15.8.–11.9.2026 hampurilaisvalikon
+                   #kehittaja-kotelossa seitsemänä eri nappina. Kehittäjälehden
+                   alla ovat nyt Tilannelehti, Poiminnat, Tilastot, Grafiikka,
+                   Lukijoilta, Musiikki ja Lukijaääni — samat ikonit ja samat
+                   avaukset (js/tyohuone-kehittajalehti.js). Ryhmä on valikon
+                   alussa, koska nämä ovat komentoja eivätkä kytkimiä. -->
+              <p class="valikko-otsikko">Työhuone</p>
+              <button id="raamattu-lehti-btn" class="ghost tyohuone-nappi" type="button">
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4.5h6.5v15H6.6A1.6 1.6 0 0 1 5 17.9z"/><path d="M19 4.5h-6.5v15h4.9a1.6 1.6 0 0 0 1.6-1.6z"/></svg></span>
+                <span>Raamattu</span>
+              </button>
+              <button id="kehittajalehti-btn" class="ghost tyohuone-nappi" type="button">
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 5.5h15v13h-15z"/><path d="M7.5 9.5h6M7.5 12.5h9M7.5 15.5h9"/></svg></span>
+                <span>Kehittäjälehti</span>
+              </button>
+            </div>
+            <!-- ÄÄNENTASOT RATTAASEEN (omistaja 11.9.2026 klo 14.35,
+                 sanatarkasti: *"kaikki äänentason säätimet kuuluvat
+                 hammasrattaan alle"*). Kolme voimakkuusliukua olivat
+                 11.9.2026 aamupäivän hampurilaisen Äänet-osiossa; sinne
+                 jäivät vain päälle/pois-kytkimet (Kertoja, Musiikki,
+                 Äänimaisema). Taustamusiikin liuku tuli samaan ryhmään
+                 viereisestä kehittäjälohkosta — se on äänentaso siinä
+                 missä muutkin, eikä sillä ole kehittäjäehtoa.
+
+                 RYHMÄ NÄKYY AINA, MYÖS ILMAN KEHITTÄJÄTILAA: juuri siksi
+                 ratas itse on nyt pelaajan valikko (js/main.js
+                 paivitaKehittajaValikko piilottaa vain .kehittaja-ryhmät).
+                 Tunnisteet ja kytkennät ovat entiset (js/main.js
+                 AANIVOIMAT ja musiikkiliuku), joten tallennus ei muutu. -->
+            <p class="valikko-otsikko">Äänentasot</p>
+            <div id="aanivoimat" class="aanivoimat">
+              <div class="aanivoima">
+                <label class="aanivoima-nimi" for="voima-tehosteet">Äänitehosteet</label>
+                <input id="voima-tehosteet" class="aanivoima-liuku" type="range"
+                       min="0" max="100" step="1" value="100" />
+                <b id="voima-tehosteet-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
+              </div>
+              <div class="aanivoima">
+                <label class="aanivoima-nimi" for="voima-pulu">Pulun ääni</label>
+                <input id="voima-pulu" class="aanivoima-liuku" type="range"
+                       min="0" max="100" step="1" value="100" />
+                <b id="voima-pulu-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
+              </div>
+              <div class="aanivoima">
+                <label class="aanivoima-nimi" for="voima-lukija">Lukija</label>
+                <input id="voima-lukija" class="aanivoima-liuku" type="range"
+                       min="0" max="100" step="1" value="90" />
+                <b id="voima-lukija-arvo" class="aanivoima-arvo" aria-live="polite">90 %</b>
+              </div>
             </div>
             <!-- TAUSTAMUSIIKIN SÄÄDIN (omistaja 9.9.2026: *"Saisiko säätimen
                  niin, että se oikeasti toimisi ja sen pystyisi säätämään
@@ -207,56 +231,73 @@
                  lineaarinen ja sen alaraja ×0,25 vain −12 dB. -->
             <div class="kehittaja-saadin kehittaja-liuku" data-liuku="musiikki"
                  role="group" aria-label="Taustamusiikin voimakkuus">
-              <span class="kehittaja-kytkin-nimi">taustamusiikki</span>
+              <span class="kehittaja-kytkin-nimi">Taustamusiikki</span>
               <input id="kehittaja-musiikki-liuku" class="kehittaja-liuku-vipu" type="range"
                      min="0" max="100" step="1" value="35"
                      aria-label="Taustamusiikin voimakkuus" />
               <span class="kehittaja-saadin-arvo" aria-live="polite">35 &middot; &minus;23 dB</span>
             </div>
-            <button id="kehittaja-mittari-btn" class="ghost kehittaja-kytkin"
-                    type="button" aria-pressed="false">
-              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 17.5a7.5 7.5 0 1 1 15 0"/><path d="m12 17.5 3.6-5.2"/><path d="M12 5.5v1.6M5.6 8.2l1.2 1.1M18.4 8.2l-1.2 1.1"/></svg></span>
-              <span class="kehittaja-kytkin-nimi">mittari</span>
-              <span class="kehittaja-kytkin-tila">pois</span>
-            </button>
-            <!-- Pelilauta: karttapallo vai tasokartta (omistaja 5.9.2026,
-                 Raamattu KARTTAPALLO ON PELILAUTA). Vipu tallentaa
-                 valinnan laitteelle (js/ui-apurit.js lautaValinta) ja
-                 lataa sivun uudestaan — lauta valitaan käynnistyksessä.
-                 Sama valinta URL-parametrilla ?lauta=pallo|kartta.
+            <div id="kehittaja-vivut" class="kehittaja-ryhma" hidden>
+              <p class="valikko-otsikko">Kehittäjä</p>
+              <button id="kehittaja-maailma-btn" class="ghost kehittaja-kytkin"
+                      type="button" aria-pressed="false">
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M4.5 12h15"/><path d="M12 4.5a11 11 0 0 1 0 15 11 11 0 0 1 0-15z"/></svg></span>
+                <span class="kehittaja-kytkin-nimi">maailma</span>
+                <span class="kehittaja-kytkin-tila">pois</span>
+              </button>
+              <!-- Kehittäjän voimakkuussäätimet (omistaja 3.9.2026): kerroin
+                   pelin omaan tasoon, +/- askelittain (js/kehittajan-voimat.js). -->
+              <div class="kehittaja-saadin" data-laji="tausta" role="group" aria-label="Taustaäänen voimakkuus">
+                <span class="kehittaja-kytkin-nimi">taustaääni</span>
+                <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="-1" aria-label="Taustaäänen voimakkuus hiljemmalle">&minus;</button>
+                <span class="kehittaja-saadin-arvo" aria-live="polite">×1,0</span>
+                <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="1" aria-label="Taustaäänen voimakkuus kovemmalle">+</button>
+              </div>
+              <button id="kehittaja-mittari-btn" class="ghost kehittaja-kytkin"
+                      type="button" aria-pressed="false">
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 17.5a7.5 7.5 0 1 1 15 0"/><path d="m12 17.5 3.6-5.2"/><path d="M12 5.5v1.6M5.6 8.2l1.2 1.1M18.4 8.2l-1.2 1.1"/></svg></span>
+                <span class="kehittaja-kytkin-nimi">mittari</span>
+                <span class="kehittaja-kytkin-tila">pois</span>
+              </button>
+              <!-- Pelilauta: karttapallo vai tasokartta (omistaja 5.9.2026,
+                   Raamattu KARTTAPALLO ON PELILAUTA). Vipu tallentaa
+                   valinnan laitteelle (js/ui-apurit.js lautaValinta) ja
+                   lataa sivun uudestaan — lauta valitaan käynnistyksessä.
+                   Sama valinta URL-parametrilla ?lauta=pallo|kartta.
 
-                 PIILOSSA 7.9.2026 (omistaja: "eikä se olisi myöskään
-                 kytkettävissä päälle"): vanha kartta on pois käytöstä,
-                 joten vivulla ei ole toista lautaa vaihdettavaksi.
-                 js/main.js pitää sen piilossa niin kauan kuin
-                 js/ui-apurit.js VANHA_KARTTA_KAYTOSSA on epätosi. -->
-            <button id="kehittaja-pallolauta-btn" class="ghost kehittaja-kytkin"
-                    type="button" aria-pressed="false" hidden>
-              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4.4 12h15.2"/><path d="M12 4c-3 2.2-3 13.8 0 16M12 4c3 2.2 3 13.8 0 16"/></svg></span>
-              <span class="kehittaja-kytkin-nimi">pallolauta</span>
-              <span class="kehittaja-kytkin-tila">pois</span>
-            </button>
-            <!-- VIVUT POIS RATTAASTA (omistaja 11.9.2026 klo 13.30,
-                 sanatarkasti: *"nämä kaikki napit voisi ottaa pois ja
-                 jättää noihin asetuksiin, paitsi tuon ilmeen voi ottaa
-                 pois päältä, se ei sovi tyylillisesti peliin täysin"*).
-                 Poistetut rivit: etusivupallo, tarkkuus liikkeessä,
-                 pallon laattakerros, pallon vektoriviivat, pallon
-                 turvatila, ilme, sivunkääntö, kysymykset, tehosteketjut,
-                 kohtaamiset ja media. ASETUKSET ITSE JÄIVÄT KOODIIN
-                 nykyisin oletuksin ja osoiteparametrein (?etusivupallo=0,
-                 ?laatu=aina, ?laattakerros=0, ?vektorit=0 jne.) — vain
-                 napit ja niiden kuuntelijat lähtivät. -->
-            <!-- Siirtymämusiikin mittari, aikajanalinssin kytkin ja
-                 varamusiikki poistettiin rattaasta 4.9.2026 (omistaja:
-                 "kehittäjätilan rattaasta voi ottaa tuon linssin,
-                 siirtymämusiikin ja varamusiikin pois"). Linssi
-                 käynnistyy pelissä linssivalitsimesta; js/main.js:n
-                 käsittelijät ovat null-turvallisia. -->
-            <!-- Yhden rivin vihje: mittarin kytkentä kertoo tuloksensa
-                 tässä ("laita kartta näkyviin" / "lataa sivu uudelleen"),
-                 ja generointi sen, lähtikö haku. -->
-            <p id="kehittaja-valikko-vihje" class="kehittaja-valikko-vihje" hidden></p>
+                   PIILOSSA 7.9.2026 (omistaja: "eikä se olisi myöskään
+                   kytkettävissä päälle"): vanha kartta on pois käytöstä,
+                   joten vivulla ei ole toista lautaa vaihdettavaksi.
+                   js/main.js pitää sen piilossa niin kauan kuin
+                   js/ui-apurit.js VANHA_KARTTA_KAYTOSSA on epätosi. -->
+              <button id="kehittaja-pallolauta-btn" class="ghost kehittaja-kytkin"
+                      type="button" aria-pressed="false" hidden>
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4.4 12h15.2"/><path d="M12 4c-3 2.2-3 13.8 0 16M12 4c3 2.2 3 13.8 0 16"/></svg></span>
+                <span class="kehittaja-kytkin-nimi">pallolauta</span>
+                <span class="kehittaja-kytkin-tila">pois</span>
+              </button>
+              <!-- VIVUT POIS RATTAASTA (omistaja 11.9.2026 klo 13.30,
+                   sanatarkasti: *"nämä kaikki napit voisi ottaa pois ja
+                   jättää noihin asetuksiin, paitsi tuon ilmeen voi ottaa
+                   pois päältä, se ei sovi tyylillisesti peliin täysin"*).
+                   Poistetut rivit: etusivupallo, tarkkuus liikkeessä,
+                   pallon laattakerros, pallon vektoriviivat, pallon
+                   turvatila, ilme, sivunkääntö, kysymykset, tehosteketjut,
+                   kohtaamiset ja media. ASETUKSET ITSE JÄIVÄT KOODIIN
+                   nykyisin oletuksin ja osoiteparametrein (?etusivupallo=0,
+                   ?laatu=aina, ?laattakerros=0, ?vektorit=0 jne.) — vain
+                   napit ja niiden kuuntelijat lähtivät. -->
+              <!-- Siirtymämusiikin mittari, aikajanalinssin kytkin ja
+                   varamusiikki poistettiin rattaasta 4.9.2026 (omistaja:
+                   "kehittäjätilan rattaasta voi ottaa tuon linssin,
+                   siirtymämusiikin ja varamusiikin pois"). Linssi
+                   käynnistyy pelissä linssivalitsimesta; js/main.js:n
+                   käsittelijät ovat null-turvallisia. -->
+              <!-- Yhden rivin vihje: mittarin kytkentä kertoo tuloksensa
+                   tässä ("laita kartta näkyviin" / "lataa sivu uudelleen"),
+                   ja generointi sen, lähtikö haku. -->
+              <p id="kehittaja-valikko-vihje" class="kehittaja-valikko-vihje" hidden></p>
+            </div>
           </div>
         </div>
         <!-- Varusteet: kartan linssivalitsin. Kotelo on piilossa, kunnes
@@ -301,38 +342,16 @@
           -->
           <div id="paavalikko" class="paavalikko" hidden>
             <!-- Kertojan äänet: mykistys / ei kertojaa / lyhyt / pitkä.
-                 Rivit rakennetaan js/main.js:ssä. -->
+                 Rivit rakennetaan js/main.js:ssä.
+
+                 VAIN PÄÄLLE/POIS-KYTKIMET (omistaja 11.9.2026 klo 14.35:
+                 *"kaikki äänentason säätimet kuuluvat hammasrattaan
+                 alle"*). Kolme voimakkuusliukua muuttivat samana päivänä
+                 hammasratasvalikon Äänentasot-ryhmään; tänne jäi se, mikä
+                 on kytkin eikä taso. -->
             <div class="kertoja-kotelo">
               <p class="valikko-otsikko">Äänet</p>
               <div id="kertoja-valikko" class="kertoja-valikko"></div>
-              <!-- KOLME VOIMAKKUUSLIUKUA (omistaja 11.9.2026 klo 13.30,
-                   sanatarkasti: *"ja ääni säätimiin voisi tuoda mukaan
-                   äänitehosteet pulun ja lukijan omat äänen voimakkuus
-                   säätimet"*). Jokainen 0–100 % ja oma laiteavaimensa
-                   (js/aani-ehdokkaat.js): äänitehosteet → js/sound.js
-                   masterketju, pulu → js/liviapuhe.js äänitteet, lukija
-                   → puheVoima (luennat ja kuuntele-napit). Säätö kuuluu
-                   heti, myös kesken soivan äänen. -->
-              <div id="aanivoimat" class="aanivoimat">
-                <div class="aanivoima">
-                  <label class="aanivoima-nimi" for="voima-tehosteet">Äänitehosteet</label>
-                  <input id="voima-tehosteet" class="aanivoima-liuku" type="range"
-                         min="0" max="100" step="1" value="100" />
-                  <b id="voima-tehosteet-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
-                </div>
-                <div class="aanivoima">
-                  <label class="aanivoima-nimi" for="voima-pulu">Pulun ääni</label>
-                  <input id="voima-pulu" class="aanivoima-liuku" type="range"
-                         min="0" max="100" step="1" value="100" />
-                  <b id="voima-pulu-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
-                </div>
-                <div class="aanivoima">
-                  <label class="aanivoima-nimi" for="voima-lukija">Lukija</label>
-                  <input id="voima-lukija" class="aanivoima-liuku" type="range"
-                         min="0" max="100" step="1" value="90" />
-                  <b id="voima-lukija-arvo" class="aanivoima-arvo" aria-live="polite">90 %</b>
-                </div>
-              </div>
             </div>
             <!--
               PELILAUTA: KARTTAPALLO VAI VANHA KARTTA (omistaja

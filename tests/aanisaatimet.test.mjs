@@ -21,8 +21,10 @@
  *     pulunVoima × LIVIAN_PERUSTASO × vaimennus — eikä lukijan liuku
  *     enää säädä pulua.
  *
- * Lisäksi tarkistetaan, että liu'ut ovat pelaajan äänivalikossa
- * (index.html, päävalikon Äänet) ja kytketty js/main.js:ssä.
+ * Lisäksi tarkistetaan, että liu'ut ovat HAMMASRATASVALIKON
+ * Äänentasot-ryhmässä (omistaja 11.9.2026 klo 14.35: *"kaikki äänentason
+ * säätimet kuuluvat hammasrattaan alle"*), että ratas näkyy myös
+ * pelaajalle ja että hampurilaisen Äänet-osioon jäivät vain kytkimet.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -224,24 +226,34 @@ test('pulun äänite soi pulun omalla liu\'ulla', () => {
   assert.doesNotThrow(() => paivitaPulunVoima());
 });
 
-/* ── 4. liu'ut pelaajan äänivalikossa ────────────────────────────── */
+/* ── 4. liu'ut hammasratasvalikon Äänentasot-ryhmässä ───────────── */
 
-test('kolme liukua Äänet-osiossa: nimi, prosenttilukema ja kytkentä', () => {
+/** Hammasratasvalikon sisältö index.html:stä. */
+function ratasvalikko(html) {
+  const alku = html.indexOf('id="kehittaja-valikko"');
+  const loppu = html.indexOf('id="paavalikko"');
+  assert.ok(alku > 0 && loppu > alku, 'hammasratasvalikkoa ei löydy');
+  return html.slice(alku, loppu);
+}
+
+test('kolme liukua Äänentasot-ryhmässä: nimi, prosenttilukema ja kytkentä', () => {
   const html = lue('../index.html');
-  // Liu'ut ovat PELAAJAN äänivalikossa (päävalikon Äänet), eivät
-  // kehittäjän rattaassa: rajataan tarkistus siihen osioon.
-  const valikko = html.slice(html.indexOf('id="kertoja-valikko"'), html.indexOf('valikko-alarivi'));
+  const ratas = ratasvalikko(html);
+  assert.match(ratas, /<p class="valikko-otsikko">Äänentasot<\/p>/,
+    'Äänentasot-otsikko puuttuu rattaasta');
   for (const [tunnus, nimi] of [
     ['voima-tehosteet', 'Äänitehosteet'],
     ['voima-pulu', 'Pulun ääni'],
     ['voima-lukija', 'Lukija'],
   ]) {
-    assert.match(valikko, new RegExp(`id="${tunnus}"[\\s\\S]{0,200}type="range"`),
-      `${tunnus} puuttuu äänivalikosta`);
-    assert.match(valikko, new RegExp(`for="${tunnus}">${nimi}<`), `${tunnus}: label puuttuu`);
-    assert.match(valikko, new RegExp(`id="${tunnus}-arvo"`), `${tunnus}: prosenttilukema puuttuu`);
+    assert.match(ratas, new RegExp(`id="${tunnus}"[\\s\\S]{0,200}type="range"`),
+      `${tunnus} puuttuu hammasratasvalikosta`);
+    assert.match(ratas, new RegExp(`for="${tunnus}">${nimi}<`), `${tunnus}: label puuttuu`);
+    assert.match(ratas, new RegExp(`id="${tunnus}-arvo"`), `${tunnus}: prosenttilukema puuttuu`);
   }
   assert.match(html, /min="0" max="100" step="1" value="90"/, 'lukijan oletus 90 %');
+  // Taustamusiikin liuku tuli samaan ryhmään kehittäjän lohkosta.
+  assert.match(ratas, /id="kehittaja-musiikki-liuku"/, 'taustamusiikin liuku puuttuu');
 
   const main = lue('../js/main.js');
   assert.match(main, /asetaTehosteVoima\(arvo\);/);
@@ -255,4 +267,39 @@ test('kolme liukua Äänet-osiossa: nimi, prosenttilukema ja kytkentä', () => {
 
   const css = lue('../css/styles.css');
   assert.match(css, /\.paavalikko \.aanivoima \{/, 'liu\'uilla on dialogin rivien tyyli');
+});
+
+test('ratas näkyy pelaajalle: vain kehittäjäryhmät piiloutuvat', () => {
+  const html = lue('../index.html');
+  const ratas = ratasvalikko(html);
+  // Äänentasot EIVÄT ole kehittäjäryhmässä: liu'ut ovat ryhmälaatikoiden välissä.
+  const tyohuone = ratas.indexOf('id="kehittaja-tyohuone"');
+  const vivut = ratas.indexOf('id="kehittaja-vivut"');
+  const aanet = ratas.indexOf('id="aanivoimat"');
+  assert.ok(tyohuone > 0 && vivut > 0 && aanet > 0, 'ryhmät puuttuvat rattaasta');
+  assert.ok(tyohuone < aanet && aanet < vivut,
+    'Äänentasot kuuluvat Työhuoneen ja kehittäjän vipujen väliin');
+  assert.match(ratas, /id="kehittaja-tyohuone" class="kehittaja-ryhma" hidden/);
+  assert.match(ratas, /id="kehittaja-vivut" class="kehittaja-ryhma" hidden/);
+
+  const main = lue('../js/main.js');
+  assert.match(main, /kehittajaValikkoKotelo\.hidden = false;/,
+    'ratas ei saa enää kadota kehittäjätilan mukana');
+  assert.match(main,
+    /for \(const ryhma of kehittajaRyhmat\) ryhma\.hidden = !kehittajaTilaPaalla\(\);/,
+    'kehittäjäryhmät piiloutuvat valikon sisällä');
+
+  const css = lue('../css/styles.css');
+  assert.match(css, /\.kehittaja-valikko \.kehittaja-ryhma \{/, 'ryhmällä on oma ladelma');
+});
+
+test('hampurilaisen Äänet-osioon jäivät vain päälle/pois-kytkimet', () => {
+  const html = lue('../index.html');
+  const alku = html.indexOf('id="paavalikko"');
+  const paavalikko = html.slice(alku);
+  for (const tunnus of ['voima-tehosteet', 'voima-pulu', 'voima-lukija', 'aanivoimat']) {
+    assert.ok(!paavalikko.includes(`id="${tunnus}"`),
+      `${tunnus} on yhä hampurilaisvalikossa`);
+  }
+  assert.match(paavalikko, /id="kertoja-valikko"/, 'kertojan kytkinrivit jäivät paikalleen');
 });
