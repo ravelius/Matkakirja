@@ -1,3 +1,36 @@
+## 2026-09-12 00:50 UTC — FABLE: v1786 julkaistu — muu-luokittelu valmis, 9 teidan 16:sta oli nakymatonta
+
+**v1786** (main `68148606`, PR 2276). Pyytamanne merkkiluokittelu on tehty kokonaan.
+
+**Vika oli isompi kuin 21:30 UTC:n viestissani.** `muu`-riveja ei ollut 120 vaan **202**: ensimmainen laskentani luki vain `maastokohteet-*.js`-pakit, ja `fokuskohteet-*.js` jai siita pois. Naista **98:lla ei ollut myoskaan omaa `symboli`-kenttaa**, ja juuri ne katosivat kartalta kokonaan; loput 104 piirtyivat symboli-kentan varassa, mutta tyyppi oli silti vaara.
+
+**Teidan 16 kohteestanne yhdeksan oli kokonaan nakymattomia.** Ne piirtyvat nyt, eli niiden kuvat myos nakyvat:
+
+| kohde | uusi tyyppi | oliko kartalla |
+|---|---|---|
+| Eisriesenwelt (AUT) | vuori | **ei ollut** |
+| Moherin kalliot (IRL) | vuori | **ei ollut** |
+| Kuurinkynnäs (LTU) | vuori | **ei ollut** |
+| Krimmlin vesiputoukset (AUT) | joki | **ei ollut** |
+| Reininputous (CHE) | joki | **ei ollut** |
+| Moravský kras (CZE) | vuori | **ei ollut** |
+| Møns Klint (DNK) | vuori | **ei ollut** |
+| Ontikan klintti (EST) | vuori | **ei ollut** |
+| Aukštaitijan puisto (LTU) | jarvi | **ei ollut** |
+| Belogradtšikin kalliot (BGR) | vuori | oli |
+| Blidinjen puisto (BIH) | vuori | oli |
+| Crystal Palace (GBR) | tekniikka | oli |
+| Halikarnassoksen mausoleumi (TUR) | historia | oli |
+| Pergamonin alttari (TUR) | historia | oli |
+| Rodoksen kolossi (GRC) | historia | oli |
+| Voronețin luostari (ROU) | kulttuuri | oli |
+
+Luokittelu tehtiin jokaisen rivin oman tekstin perusteella, eika yhtaan uutta tyyppia keksitty — uusi tyyppi olisi uusi karttasymboli eli omistajan ulkoasupaatos. Luonnossa tyyppi valittiin sen mukaan, minka MERKIN se kartalle antaa: maanmuodot vuoreksi, putoukset ja suistot joeksi, jarvet ja saaret omikseen, rannikot mereksi.
+
+**Yksi asia kuvatekstien kannalta.** 98 uutta merkkia toi 98 uutta nimiota (1565 → 1663), ja kaksi maailman ahtainta rypasta joutui viimeiseen olkeensa. Singapore ratkesi lyhentamalla Pulau Ubinin nimion muotoon "Ubin"; Ita-Timorissa jaa yksi limitys, joka on nimetty ja perusteltu `tests/nimiolimitys.test.mjs`:ssa mittauksineen. Jos toimitatte kuvia erittain tiheille alueille (Singapore, Ita-Timor, Malta, Monaco), kertokaa — siella nimion pituudella on oikeasti valia.
+
+Vartija `tests/nostomerkit.test.mjs` kaatuu nyt, jos `muu` palaa aineistoon, ja se lukee molemmat pakkiperheet.
+
 ## 2026-09-12 00:05 UTC — FABLE: v1783, v1784 ja v1785 julkaistu — PR 2273 mukana, muu-luokittelu työn alla
 
 Kolme julkaisua edellisen kuittauksen jälkeen; kaikki mainissa, CI vihreä.
