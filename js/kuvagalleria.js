@@ -790,12 +790,32 @@ export function verkossa() {
   return globalThis.navigator?.onLine !== false;
 }
 
+/*
+ * GALLERIA ON KYTKETTY POIS KOKO PELISTÄ (omistaja 11.9.2026,
+ * kaappaus Istanbulin lehdestä, sanatarkasti: *"Kytke lisää kuvia
+ * tästä kohteesta toiminto pois kaikkialta pelistä"*).
+ *
+ * Nappi oli lehtijutun ja kaupunkikartan alla uloskäynti avoimiin
+ * kokoelmiin, joiden kuvia kukaan ei ole valinnut lehteen. Se on nyt
+ * pois kaikkialta: `galleriaNappi` palauttaa null, ja molemmat
+ * kutsujat (js/nahtavyydet.js kohdekortti ja kaupunkikartta) osaavat
+ * jo tämän paluuarvon — se oli offline-polku, joten mitään muuta ei
+ * tarvinnut muuttaa.
+ *
+ * MODUULI JÄÄ PAIKALLEEN. Haku, luottamusrivi ja gallerian oma näkymä
+ * ovat koskemattomat: jos omistaja haluaa galleria takaisin, tämä
+ * vakio kääntyy todeksi eikä mitään tarvitse rakentaa uudelleen.
+ */
+export const KUVAGALLERIA_KAYTOSSA = false;
+
 /**
- * Gallerian avausnappi. Palauttaa null ilman verkkoa: silloin galleria
- * jää yksinkertaisesti pois näkyvistä, eikä pelaajalle tarjota nappia,
- * joka ei voi toimia (offline-lupaus, ks. PEILISÄÄNTÖ).
+ * Gallerian avausnappi. Palauttaa null, kun galleria on kytketty pois
+ * tai verkkoa ei ole: silloin galleria jää yksinkertaisesti pois
+ * näkyvistä, eikä pelaajalle tarjota nappia, joka ei voi toimia
+ * (offline-lupaus, ks. PEILISÄÄNTÖ).
  */
 export function galleriaNappi(ui, kohde, teksti = 'Lisää kuvia tästä kohteesta') {
+  if (!KUVAGALLERIA_KAYTOSSA) return null;
   if (!verkossa()) return null;
   const nappi = html('button', 'kuvagalleria-nappi', teksti);
   nappi.type = 'button';

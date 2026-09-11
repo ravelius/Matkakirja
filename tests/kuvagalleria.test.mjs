@@ -456,3 +456,16 @@ test('ilman verkkoa galleria jää pois näkyvistä', () => {
     else delete globalThis.navigator;
   }
 });
+
+/* ---------------------------------------------------------------- */
+/* Galleria pois koko pelistä (omistaja 11.9.2026)                   */
+/* ---------------------------------------------------------------- */
+
+test('galleriaNappi ei anna nappia, kun galleria on kytketty pois', async () => {
+  const { galleriaNappi, KUVAGALLERIA_KAYTOSSA } = await import('../js/kuvagalleria.js');
+  assert.equal(KUVAGALLERIA_KAYTOSSA, false,
+    'omistaja 11.9.2026: "Kytke lisää kuvia tästä kohteesta toiminto pois kaikkialta pelistä"');
+  // Verkko kunnossa — nappi jää silti pois, ja molemmilta kutsupaikoilta.
+  assert.equal(galleriaNappi({}, { nimi: 'Istanbul', wiki: 'Istanbul' }), null);
+  assert.equal(galleriaNappi({}, { nimi: 'Istanbul' }, 'Lisää kuvia tästä kaupungista'), null);
+});
