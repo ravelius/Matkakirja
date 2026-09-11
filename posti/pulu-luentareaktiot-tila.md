@@ -1,29 +1,43 @@
 # Pulu — yhteinen tilakortti
 
-Päivitetty 11.9.2026. Ylläpitäjä Codex. Kokonaisuuden julkaisuvastaava Fable (kuitattu 11:20 UTC; v1760 bb3bf9d0), integraatio-QA ja julkinen readback Codex.
+Päivitetty 11.9.2026. Ylläpitäjä Codex. Julkaisuvastaava Fable; Codex yhteensovitus, integraatio-QA ja julkinen readback.
 
 ## Julkaistu ja takaisinluettu
 
-- v1757 / PR2227 / main1f154831: luentareaktioiden sovitin ja Marseille6/6 + loppunauru. Pages34586623327 SUCCESS. Julkinen luonnollinen luenta6/6, neutraali lopuksi, 0JS-virhettä. 2642pass/0fail/13skip.
-- v1758 / PR2234 / main278f1a4f: lehtiaiheet/sävy, aarteen yksi ilo, pankkiapu, laukku auki/kiinni, pitkän odotuksen yksi ele ja rauhallinen joutovalikoima. Pages34587530069 SUCCESS, julkinen SHA-täsmäys+todelliset UI-polut normaalilla/vähennetyllä liikkeellä. 2654pass/0fail/13skip.
-- v1759 / PR2235 / main81bb0006: visa viimeinen yritys/lukitus/rosvovoitto/-tappio; kävely/laiva/jumi/lento/linssi; vakava visa/lehtireaktio ohittaa vain yleisen cooldownin (puhe-/luenta-/modaaliportit ennallaan). Pages34588814933 SUCCESS; 5 julkista SHA-täsmäystä. Aito julkinen visa4polkua+nopea5msvaroitus→lukitus pose-reference PASS; matkat4näkyvääelettä PASS; linssi event PASS mutta 400tp Tietäjätaso-puhe voittaa näkyvän eleen; nopea Ruoka→Kaupunki548ms vakava listen korvaa manic-posen PASS; Marseille6/6+neutraali PASS, kaikissa0JSvirhettä. 2664pass/0fail/13skip, CI34588541893 SUCCESS.
+- v1757 / PR2227 / main1f154831: Marseille-luentareaktiot 6/6 + loppunauru. Pages34586623327 SUCCESS, julkinen luonnollinen luenta6/6, neutraali lopuksi, 0JS-virhettä. 2642pass/0fail/13skip.
+- v1758 / PR2234 / main278f1a4f: lehtiaiheet/sävy, yksi aarreilo, pankkiapu, laukku, pitkä odotus ja rauhalliset joutoeleet. Pages34587530069 SUCCESS, julkiset SHA:t + todelliset UI-polut normal/reduced. 2654pass/0fail/13skip.
+- v1759 / PR2235 / main81bb0006: visan viimeinen yritys/lukitus/rosvovoitto/-tappio ja matkat. Pages34588814933 SUCCESS, viiden tiedoston SHA:t, julkiset visa4polkua+nopea5msvaroitus→lukitus, matkat4elettä, nopea Ruoka→Kaupunki548ms, Marseille6/6+neutraali PASS; 0JSvirhettä. Linssistä K/event, EI näkyvän eleen T:tä (samanaikainen Tietäjätaso-puhe voittaa). 2664pass/0fail/13skip.
+- v1762 / PR2238 +2241 / main7b13f8a4: kiireinen ensiliito valintakartalle, puhe lennossa, pieni kompurointi, index4 Viisas Pöllö -muotokuva. Pages34594802873 SUCCESS; 8 julkista SHA-täsmäystä, myös alpha-PNG. Public ilman overlaytä 10/10: audio-on, normal393, koko muotokuva, reduced320, earlyAPI, näkyvän canvas-kohteen valinta, hidden/pagehide/destroy, reduce kesken liidon; 0JSvirhettä. Avaus-1 soi ennen laskua; 3 media-lisäajoa 22–28ms pyyntö→playing. Ensimmäinen epäonnistuminen ei toistunut; hitaan metadatan ajastinreuna erillinen huomio.
 
-## Aktiivinen erä / tiedosto-omistajuus
+## Julkaisuvalmis
 
-Codex: **PR #2238 READY / julkaisuvalmis, EI vielä julkaistu.** Head b016bdad8647a8ba41a631ec80b8854b04676e54, testattu puu a1dc5b72217d75c94d8f1cee04f4b0ed10951cd5. Pulu kiirehtii kaukaisuudesta, tervehtii lennossa ja kompuroi hieman laskeutuessaan. 2672 pass / 0 fail / 13 skip, CI 34591412393 SUCCESS. Oikea Chrome-ensipelipolku: native playing +938 ms liidon alusta, 1723 ms ennen laskua. Varhainen valinta sekä näkyvän canvas-kohteen klikki, hidden/pagehide/destroy ja reduced-motion päälle kesken liidon PASS; ei myöhäisiä kuplia/ääniä, 0 JS-virhettä. Marseille-regressio 6/6 + neutraali PASS. Fable versionoi/yhdistää/julkaisee itsenäisesti heti porttien jälkeen; ei traileririippuvuutta.
+PR2239 READY, remote49c03c2484ce6a5f24748b12193387cbbc02d8e8, testattu puu f662b1f171c844f0fe392297d31d8373a0a53711 v1762-pohjalla. Vain visa.js + tests/pulu-kohtaamistagit.test.mjs. Producer f0d98f2d nyt mainissa. 2745pass/0fail/13skip, CI34596083456 SUCCESS. Kairo tervehdys/väärä vastaus ja Praha kaaritervehdys/laataton kaariaarre: neljä aitoa Game/UI-polkua, tagi+pose+dedupe, 0JSvirhettä. Muut kaupunkitagit K/yksikkötestit, EI kaikkien selain-T. Seuraava siirto Fable: versionosto/yhdistäminen/julkaisu.
 
-Muotokuva: uusi läpinäkyvä 512×768 PNG assets/tietaja/viisas-pollo-muotokuva-v1.png vain canonical avaus index4:n vieressä, jalusta ja nimiteksti. Alkuperäinen säilytetty, vanha avatar ennallaan. JPEG-koepakkaus EI käytössä. Koko kohtaus ja 320 px reduced-motion silmätarkistettu. UI:ssa vain destroy-siivous ja aloitaKartalta-siirtymän stopIntroVoice; ei renderFact-muutosta.
+## Aktiivinen erä: aloituslento ja traileriväistö
 
-Codex: erillinen **PR #2239 DRAFT**, head ac67bd9d7992c1ec793cb1cb6082d09007b1a395, vain visa.js + testit. Vaatii Fablen sisältöcommitin f0d98f2dde3bb5781221f6b875a9b8c459b3d2d0 mainiin ensin. Yhteiskoe 2676 pass / 0 fail / 13 skip, CI 34591898382 SUCCESS. Aidot Kairon tervehdys/väärä vastaus ja Prahan kaaritervehdys/laataton kaariaarre: oikea tagi, näkyvä pose, yksi tapahtuma, rerender hiljainen, 0 JS-virhettä. K/T vain näille neljälle polulle; muut tagit K/yksikkötestit. Ei estä #2238:n julkaisua.
+Omistajan uusin rajaus: valintakartan ensiliito säilyy, mutta Pulu poissa Ateenaan lennon ja pikaesittelyn ajan; paluu vasta esittelyn jälkeen. Isoisän luennan jälkeinen Kantsuu klikata -kupla pois.
+Codex omistaa livia-eleet/svg/tilanteet sekä livia.js:n kuplapoiston ja minimaalisen ui.js startFlight-elinkaaren/saapumiskuplien odotuksen; EI renderFact/fokusvirta/luenta/trailerituottajan edittejä.
+Sopimus: startFlight {vaihe:alku|loppu|peru,tunnus,kaupunki,odottaaTraileria}; trailer {kirjaimet|loppu|peru,sama traileritunnus}; paluu seuraavasta matkakirja-narrationista traileriloppu jälkeen tai 3s varalla. Piilotus säilyy vaiheiden välissä, stale/peru eivät palauta.
+Tuottaja ja peru kuitattu Fable d0277098, mainv1762. Codex-ehdokas yhteensovituksessa ja aidon ensipelipolun QA edessä. EI valmis/julkaistu vielä.
 
-Fable: uusi saapumistraileri ja js/ui.js renderFact, fokusvirta/luenta, iskulauseet ja kaksi äänitehostetta; ks oma11:20UTComistajuuskuittaus. Codex väistö erillisenä eränä tuottajan jälkeen.
+## Seuraava erä: kuplat ja chat
 
-## Rajapinta / seuraava luovutus
+Omistajan täsmätilaus 03bdc65a + jatkot tässä keskustelussa:
+- kupla piiloon 3s PUHEEN lopusta tai kartan todellisesta liikkeestä;
+- pieni plus-mini-kupla Pulun vas.yllä palauttaa viimeisen kuplan; Pulu avaa yhä chatin;
+- automaattiset kuplaviestit pois chatin näkymähistoriasta, varsinaiset viestit ja data säilyvät;
+- kaikki nykyiset odotustekstit täsmämäpätään tarkoitukseen sopiviin eleisiin, muutama uusi tarvittaessa;
+- pöllöltä kysymisessä käynti asioilla, paluu vastauksen kera; kysymyskohtainen elinkaari;
+- tietäväinen rauhallinen chat-perusilme/kirjan selailu ja sisältöön sidotut reaktiot.
+Codex-agentit: pollo.js/pulunCSS-kuplakytkennät, eleet/svg/tilanteet-chat, read-only kaikkien tekstien kartoitus. Ei tarinatekstin/äänien generointia. EI vielä valmis/julkaistu.
 
-Trailerin kirjaimet/loppu + seuraava matkakirja-narration sopivat. Codex pyysi c771ec6f:ssä lisäksi trailer{vaihe:peru,tunnus,kaupunki} kaupunginvaihtoon/tuhoon/aborttiin; tavallinen skip on loppu. Sama token kaikkialla, vanha loppu ei käynnistä uuden trailerin 3s-paluuajastinta. Odotetaan Fable-kuittausta/tuottajan committia ennen väistöjulkaisua.
+## Fable ja muut rajat
 
-Tarkat rekisterin K/T-rivit toimitettu oman postitiedoston 64fda2cc-viestissä; neljän uusimman viestin puuttuneet tekstiosat korjattu postitiedostoon tämän tilapäivityksen yhteydessä. Fable päivittää rekisterin. Muiden kaupunkien sisältötagit/kohdistus Fablella saapumisversion jälkeen. Kaikkia dokumentoituja D-rivejä ei kuitata toteutetuiksi.
+Fable: Raamattu/reaktiorekisteri/sisältö/saapumistraileri/fokusvirta/luenta. Rekisterin tarkat v1757–1759 K/T-rivit omassa postissa64fda2cc (korjattu sisältö tiedostoon03fb933e).
+Fablen 13:25UTC uusi45toisen luentakuvan tilaus reititetty olemassa olevalle kuvatuotantotehtävälle omistajuuden varmistamiseen, EI käynnistetty tässä Pulu-tehtävässä.
+Kaikkia rekisterin D-rivejä ei kuitata toteutetuiksi.
 
-## Avoin tekninen huomio
+## Avoimet laatuhuomiot
 
-Standalone rakentuu, niputus-/viitevartijat läpi, DOM-ready-rakennekoe käynnistää pelin/Pulun0JSvirheellä. Virallinen load-event savuke EI läpäise: 30s timeout ulkoisessa äänivarareitissä. Fable kirjasi erilliseksi asiaksi; ei väitetä hyväksytyksi.
+Standalone rakentuu ja DOM-ready-rakennekoe käynnistää pelin/Pulun0JSvirheellä; virallinen load-event savuke30s ulkoisen äänen aikakatkaisu edelleen erillinen, ei väitetä läpäistyksi.
+Hidas Pulu-audio ilman metadataa voi ylittyvän kuplan lukuajan jälkeen peruuntua seuraavan rivin tieltä. Public4uusintaaPASS; rajattu event-pohjainen lisäodotus ehdotus, ei lähdekorjausta tässä erässä.
