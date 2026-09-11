@@ -1,0 +1,160 @@
+/*
+ * NOSTO AUKEAA KUVA EDELLÄ (js/nostokuva.js).
+ *
+ * Omistaja 11.9.2026: nosto avautuu ensin pelkkänä lähes koko ruudun
+ * kokoisena kuvana, jonka alla on lyhyt kuvateksti ja "Lisää"-nappi.
+ * Napista varsinainen nosto latoutuu SAMAN kuvan ympärille — kuva ei
+ * saa liikkua pikseliäkään.
+ *
+ * TÄMÄN TIEDOSTON TEHTÄVÄ ON OLLA TIELTÄ POIS. Kuvan laatikko tulee
+ * inline-pikseleinä js/nostokuva.js:stä, ja kortin paikka samoin;
+ * tässä varmistetaan vain, ettei mikään ladonta (flex, margin,
+ * max-height) pääse muuttamaan kuvan mittaa vaiheiden välillä.
+ */
+
+/* ── KORTTI ─────────────────────────────────────────────────────── */
+
+/*
+ * Kortti irrotetaan sekä kohdemerkin ankkuroinnista (.fokuskohde-popup
+ * position: absolute) että nostokerroksen flex-keskityksestä: paikka
+ * on ruudun koordinaateissa, ja vain js/nostokuva.js kirjoittaa sen.
+ */
+.nostokuva-kortti {
+  position: fixed;
+  z-index: 47;
+  /* Leveys, korkeuskatto, left ja top tulevat js/nostokuva.js:stä. */
+  margin: 0;
+  animation: none;
+  transform: none;
+  opacity: 1;
+}
+
+/*
+ * Avausliike jää pois: kortti on kuvan kehys, ja kuvan on oltava
+ * paikallaan ensimmäisestä kehyksestä alkaen (transform/opacity
+ * -siirtymä .fokusnosto-kortissa liikuttaisi kuvaa 12 px).
+ */
+.fokusnosto-kortti.nostokuva-kortti { transition: none; }
+
+/*
+ * VIERITYSPALKIN KAISTA VARATAAN JO VAIHEESSA 1. Vaiheessa 2 sisältö
+ * vierittyy, ja klassinen vierityspalkki kaventaisi sisältöä juuri
+ * vaiheenvaihdossa — keskitetty kuva liukuisi vasemmalle. Kaista on
+ * nyt yhtä leveä molemmissa vaiheissa, ja js/nostokuva.js laskee sen
+ * kortin leveyteen.
+ */
+.nostokuva-kortti .fokusnosto-sisalto,
+.nostokuva-kortti .fokuskohde-sisalto { scrollbar-gutter: stable; }
+
+/*
+ * VAIHEESSA 1 NÄKYY VAIN KUVA, KUVATEKSTI JA "LISÄÄ" — ja sulku.
+ * Lukijan kaiutin (js/lukija.js) lisätään korttiin sisällön jälkeen,
+ * eikä se ole vaiheen 1 hallintapainike.
+ */
+.nostokuva-vaihe1 .lukija-nappi { display: none; }
+
+/* Kerros ei tummene vaiheessa 1: kartan pitää näkyä kuvan takaa. */
+.nostokuva-kortti .fokusnosto-ylarivi { margin-top: 0; }
+
+/* ── KUVAKEHYS ──────────────────────────────────────────────────── */
+
+.nostokuva-kehys {
+  /* Kehys kutistuu kuvan levyiseksi, joten kuvateksti alkaa ja
+     päättyy kuvan reunoihin (sama sääntö kuin .fokusnosto-kuva). */
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 0.55rem;
+}
+
+.nostokuva-nappi {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nostokuva-nappi-zoom { cursor: zoom-in; }
+
+button.nostokuva-nappi:hover:not(:disabled),
+button.nostokuva-nappi:focus-visible { background: transparent; }
+
+.nostokuva-nappi:focus { outline: none; }
+
+.nostokuva-nappi:focus-visible {
+  outline: 2px solid #9c6b17;
+  outline-offset: 2px;
+}
+
+/*
+ * KUVAN LAATIKKO ON LUKOSSA. Leveys ja korkeus tulevat inline-tyylinä
+ * js/nostokuva.js:stä; mikään tässä ei saa rajata niitä (ei
+ * max-width: 100%, ei max-height: 42vh), koska rajaus laskisi
+ * ladonnasta ja voisi muuttua vaiheiden välillä.
+ */
+.nostokuva-img {
+  display: block;
+  margin: 0;
+  border-radius: 6px;
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  object-fit: contain;
+  background: rgba(122, 85, 20, 0.1);
+}
+
+.nostokuva-nappi:hover .nostokuva-img,
+.nostokuva-nappi:focus-visible .nostokuva-img {
+  border-color: rgba(122, 85, 20, 0.62);
+}
+
+/* ── KUVATEKSTI JA "LISÄÄ" ──────────────────────────────────────── */
+
+.nostokuva-selite {
+  display: block;
+  /* Teksti ei saa määrätä kehyksen leveyttä: kehys on kuvan levyinen
+     (fit-content), ja teksti taittuu sen sisään. */
+  width: 0;
+  min-width: 100%;
+  margin: 0.35rem 0 0;
+  color: rgba(33, 29, 24, 0.82);
+  font-family: var(--font-luku);
+  font-size: 0.84rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.nostokuva-lahde {
+  display: block;
+  margin-top: 0.1rem;
+  color: rgba(33, 29, 24, 0.56);
+  font-size: 0.72rem;
+}
+
+.nostokuva-lisaa {
+  display: block;
+  margin: 0.55rem auto 0.1rem;
+  min-height: 40px;
+  padding: 0.35rem 1.6rem;
+  border: 1px solid rgba(122, 85, 20, 0.45);
+  border-radius: 8px;
+  background: rgba(250, 246, 235, 0.96);
+  color: #5c3f0e;
+  font-family: var(--font-type);
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nostokuva-lisaa:hover:not(:disabled),
+.nostokuva-lisaa:focus-visible {
+  background: #fffaf0;
+  color: #3d2a07;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nostokuva-kortti { animation: none; transition: none; }
+}

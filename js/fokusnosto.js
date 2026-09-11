@@ -84,6 +84,7 @@ import {
   rekisteroiMaanKohteet, suljeFokuskohde, suljeKohdeSuurennos,
 } from './fokuskohteet.js';
 import { NOSTOSYM_TYYPIT, nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
+import { nostokuvaAloita } from './nostokuva.js';
 import { fokuskohteet } from './packs/fokuskohteet-grc.js';
 /*
  * NELJÄN MAAN POOLIT ASUVAT NYT KAUPUNKIEN OMISSA PAKETEISSA (v1301).
@@ -912,7 +913,14 @@ export function nostonTaitto(nosto) {
   return nosto?.taitto === 'lehti' ? 'lehti' : 'kortti';
 }
 
-function piirraNostonSisus(ui, sisalto, nosto) {
+/**
+ * @param {Element|null} [valmisKuva] KUVA EDELLÄ -AVAUKSEN valmis
+ *   kuvakehys (js/nostokuva.js): `undefined` piirtää kuvan kuten ennen,
+ *   elementti sijoittaa juuri sen kehyksen (sama kuva, sama elementti,
+ *   ei uutta latausta), ja `null` jättää kuvan pois — se on peruttu
+ *   kuvaesittely, jonka kuva ei latautunut.
+ */
+function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
   nostoLataaTyyli();
   const looppi = nostonTaitto(nosto) === 'lehti';
   if (looppi) {
@@ -934,7 +942,8 @@ function piirraNostonSisus(ui, sisalto, nosto) {
   } else {
     sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', nosto.otsikko));
   }
-  if (nosto.kuva) piirraNostonKuva(ui, sisalto, nosto.kuva);
+  if (valmisKuva) sisalto.appendChild(valmisKuva);
+  else if (nosto.kuva && valmisKuva === undefined) piirraNostonKuva(ui, sisalto, nosto.kuva);
   const teksti = html('div', looppi ? 'fokusnosto-teksti looppi-leipa' : 'fokusnosto-teksti');
   for (const kappale of jaaKappaleiksi(nosto.teksti)) {
     teksti.appendChild(html('p', '', kappale));
@@ -994,15 +1003,37 @@ function avaaNostonKortti(ui, nosto) {
   // Ylärivi on kohdemallin yhteinen: aihesymboli ja luokan nimi —
   // sama rivi kuin kartan kohdekortissa ja eläintäyllä (YHTENÄINEN
   // KOHDEMALLI: erot ovat sisällön laajuus ja aihesymboli).
-  sisalto.appendChild(nostosymKortinYlarivi(
+  const ylarivi = () => nostosymKortinYlarivi(
     NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto', 'fokusnosto-ylarivi',
-  ));
-  piirraNostonSisus(ui, sisalto, nosto);
-
+  );
+  const latoNosto = (kotelo, kuvakehys) => {
+    kotelo.appendChild(ylarivi());
+    piirraNostonSisus(ui, kotelo, nosto, kuvakehys);
+  };
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
-  merkitseLivianNosto(kerros,nosto);
+  merkitseLivianNosto(kerros, nosto);
+  /*
+   * KERROS DOMIIN ENNEN KUVAESITTELYÄ: js/nostokuva.js mittaa kortin
+   * ja kuvan oikeista ruutulaatikoista, eikä irrallisella elementillä
+   * ole laatikkoa lainkaan.
+   */
   document.body.appendChild(kerros);
+  /*
+   * KUVA EDELLÄ (omistaja 11.9.2026, js/nostokuva.js). Kuvallinen
+   * nosto avautuu ensin pelkkänä isona kuvana, ja "Lisää" latoo
+   * varsinaisen noston SAMAN kuvan ympärille. Kuvaton nosto aukeaa
+   * suoraan tekstikorttina kuten ennenkin.
+   */
+  const kaksivaihe = nosto.kuva ? nostokuvaAloita({
+    kortti,
+    sisalto,
+    kuva: nosto.kuva,
+    aseta: (img, leveys, onVirhe) => asetaNostonKuva(img, nosto.kuva, leveys, onVirhe),
+    avaaSuurennos: (nappi) => avaaKohdeSuurennos(ui, nosto.kuva, () => nappi, 'fokusnostoZoom'),
+    latoNosto,
+  }) : null;
+  if (!kaksivaihe) latoNosto(sisalto, undefined);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kortti' });
 
@@ -1088,7 +1119,12 @@ export function suljeNostonKortti(ui) {
   // kartan päälle, kun kortti sen alta katoaa.
   suljeKohdeSuurennos(ui, 'fokusnostoZoom');
   if (typeof document !== 'undefined') {
-    for (const vanha of document.querySelectorAll('.fokusnosto-kerros')) vanha.remove();
+    for (const vanha of document.querySelectorAll('.fokusnosto-kerros')) {
+      // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js): kortti
+      // katoaa DOMista, mutta resize-kuuntelija jäisi elämään.
+      vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
+      vanha.remove();
+    }
   }
 }
 
