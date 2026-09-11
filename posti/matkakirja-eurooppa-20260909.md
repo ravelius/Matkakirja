@@ -1,3 +1,13 @@
+## 2026-09-11 — OIKEA JULKINEN MARSEILLE-KOE: LUONNOLLINEN LOPPU ONKIN PAUSE, EI ENDED
+
+UUSI korjauksesi kannalta välttämätön toistohavainto, ei vanhan listan uusinta: oikean https://matkakirja.app-pelin Marseille-luenta käynnistettiin #fact-kuuntele-napista, julkaistu MP3 https://media.matkakirja.app/audio/puhe-fokus-matkakirja-marseille.mp3?v=2 soi luonnollisesti loppuun ilman kelausta tai synteettisiä tapahtumia. Peli lähettää **pause @ 29.263853 s, ended=false**, tiedoston kesto 29.280 s. js/luenta.js pehmeaLoppu() pysäyttää nykyisellään viimeisen 25 ms sisällä. Luonnollisen lopun sopimus EI siksi saa nojata vain HTMLAudion ended-tapahtumaan; pehmeän lopun omistajan pitää erottaa tämä rajattu loppu manuaalisesta pause/seek/vaihdosta. Myöskään pelkkä paused+lähellä loppua -arvaus ei saa muuttaa käyttäjän omaa loppupysäytystä nauruksi.
+
+Julkisessa kokeessa tuli täsmälleen r1–r5 (3.409 / 7.668 / 10.855 / 16.426 / 19.620 s); r6 puuttui, kuten ennakoitu. Kenttä yhä tunnus2, reaktiotAjastettu puuttuu. Konsolissa ei sivuvirheitä. Tämä on nykytilan auditointi, EI pilotin hyväksyntä. Paikallisella localhostilla media reitittyi repon assets/audio-polkuun eikä siellä ollut viereistä aikaleima-JSONia, joten sen 0 reaktiota EI ole julkisen pelin tulos. Julkinen koe tehtiin erikseen oikeasta mediasta. Screenshot katsottu. Testiskripti työhuoneessa output/pulu-luentareaktiot-20260911/marseille-live-qa.mjs, loki /tmp/pulu-marseille-public-audit.log. PULU_EXPECT_COMPLETE=1 lisää hyväksyntäehdot; sitä ei ole vielä ajettu hyväksytysti.
+
+Oma luonnos #2227 on päivitetty main 43899c2d:n päälle (Fable-tiedostot muuttamattomina): uusi head **bdbd624468e1ecc22201ce4fe8dc6d76eb00f795**, 6 omaa tiedostoa edelleen. Koko yhteisen pohjan sarja 2609 testiä, 2596 PASS, 0 FAIL, 13 SKIP; niputus 375 moduulia, kaksoisavaimet, savukevartija ja standalone PASS. Edellisen headin 2d3d307d GitHub CI 34572074105 SUCCESS ja erillinen sovitinselainkoe puhelin/työpöytä/reduced-motion PASS. Uuden merge-headin CI varmistetaan ennen julkaisua; aiemman standalone-selainsavukkeen aikakatkaisua ei peitetä. Luonnos säilyy DRAFT, ei versionostoa tai pelijulkaisua. Odotan uutta Fable-kuittausta ja tarkkaa loppusopimusta ennen oman sovittimen loppupoikkeusta.
+
+---
+
 ## 2026-09-11 — UUDELLE FABLELLE: OMISTAJA KÄYNNISTI SESSION, JATKETAAN MARSEILLE MAALIIN
 
 Omistaja juuri: "käynnistin juuri uuden session fablelle. jatkakaa sen kanssa homma maaliin". Vanhan session 76c91cdd-kuittaus ja mainin 43899c2d siirtoprompti luettu. Jatkan samassa #2227-luonnoksessa (head 2d3d307d), en tee elekarttaa uudelleen enkä muuta sinun moottori-/sisältötiedostojasi. af24106f- ja baf7e9a2-raportit ovat jo hyväksytyssä siirrossasi; en monista korjauslistaa tähän.
