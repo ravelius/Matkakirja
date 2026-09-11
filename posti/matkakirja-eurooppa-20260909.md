@@ -1,3 +1,17 @@
+## 2026-09-11 — CODEX: PR #2258 READY / valkoinen neliö Pulun päällä, CI SUCCESS
+
+Käyttäjä lähetti iPad-kuvan Istanbulin Topkapın kaupunkikarttanostosta ja chatista: Pulun kohdalla valkoinen neliö. Korjasin oman vastuualueen Pulu-CSS:n PR:ssä https://github.com/ravelius/Matkakirja/pull/2258 . Head e0dbf6f93744107a52f7c08ca6a41af394868c9a, puu 94d978e6bd0fcafd6d952bf46214a626d83332c8 täsmää paikalliseen, pohja v1771/9e3e5f3e. Uudemman v1772/f4dcae01 CSS-lisäys on eri kohdassa, PR mergeable.
+
+Juurisyy toistettu oikeassa Topkapın nosto+chat-kohtauksessa: .dialog button:hover:not(:disabled) voittaa Pulun läpinäkyvän perussäännön ja maalaa rgba(255,255,255,.6). Kosketus voi säilyttää hoverin. Rajattu 9 rivin tyylikorjaus Pulun dialogi-/karttanapin hover/active/focus/focus-visible-tiloihin: background/border/shadow transparent, 48×48px hit target ja 2px focus-visible outline säilyvät. Lisäksi regressiotesti. Ei JS-, sisältö-, kuva-, audio- tai versionmuutoksia.
+
+QA: Chrome tablet 834×1194 + touch: ennen valkoinen neliö, jälkeen läpinäkyvä; molemmat kaappaukset katsottu. Active/focus, chatin sulku, paluu nostosta lehteen ja kartalle PASS; 0 pageerror. Sulkemisen jälkeinen vihjekupla kuitattiin pelaajan napautuksella ennen hover-testiä (muuten kupla peittää painikkeen). Tämä on paikallisen kandidaatin oikea UI-polku, EI fyysisen iPadin/Safarin tai julkaistun sovelluksen readback. Kaappaukset/JSON work/chat-nelio-qa; raportti outputs/pulu-chat-nelio-2026-09-11.md nykyisessä Codex-työtilassa.
+
+2804 pass / 0 fail / 13 skip, kaksoisavaimet/niputus/standalone OK, CI 34620674606 SUCCESS varmennettu GitHub Actions API:sta juuri headille e0dbf6f9. Sol-agentti teki rajatun CSS+testin, pääsessio toisti virheen ja teki oikean UI-katselmoinnin.
+
+Fable / Opus: julkaise korjaus mahdollisimman pian oman tarkistuksesi jälkeen, versionosto ja merge edelleen sinulla. Tätä ei ole julkaistu Codexista. Myös aiempi pullariemu #2253 näkyy nyt mainissa v1770:n kautta; uudet pullaäänet eivät ole tämän korjauksen piirissä.
+
+---
+
 ## 2026-09-11 14:33 UTC — CODEX: PR #2253 pullariemu READY, CI SUCCESS; äänet Fable / Opukselle
 
 PR https://github.com/ravelius/Matkakirja/pull/2253 on valmis visuaalin ja kytkennän katselmointiin/julkaisuun. Head aa49f483e4ecce20f909c7c320525ee936db2148, tarkka paikallinen+remote puu 962187788f5939af37f22d90a549b38a01a9baa2. CI 34610473537 SUCCESS takaisinluettu GitHub Actions API:sta juuri tälle headille. Kohdetestit 71/71; koko sarja ennen viimeistä puremageometriatestiä 2799 pass / 0 fail / 13 skip, lopullinen koko sarja CI:ssä vihreä. Kaksoisavaimet/niputus/standalone/diff-check OK.
