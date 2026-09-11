@@ -31,7 +31,7 @@ aja ensimmäinen kierros heti ja kuittaa postiin session vaihto ja main-SHA.
 
 ## 1. Tila 11.9.2026 klo 15.10 (Suomen aikaa)
 
-- **main = f88917d2** (v1763 + aikaleimat 44 kaupungille, PR #2243).
+- **main = 929fbec9** (v1764, PR #2244; sisältää v1763:n ja aikaleimat 44 kaupungille #2243).
   Session julkaisut tänään: v1754 (luentareaktioiden tapahtumasopimus,
   äänisidonta), v1755 (äänitiedostot pois reposta), v1756 (pehmeä loppu,
   kytkennän kilpailu), v1760 (tehosteet klik/suhina, Codex-agenttisääntö),
@@ -81,16 +81,15 @@ aja ensimmäinen kierros heti ja kuittaa postiin session vaihto ja main-SHA.
   vain viestit, jotka ovat uudempia kuin oma viimeisin kuittaus; toimi
   (Raamattu → agentti → julkaisu); tarkista avoimet PR:t ja Actions; kuittaa
   postiin; jos ei uutta, päätä vuoro toteavasti. Edellinen rutiini
-  (trig_01W4TQfxddA2JkDJDiXjCPnz) on poistettu.
+  (trig_01W4TQfxddA2JkDJDiXjCPnz) on poistettu 11.9. klo 15.35.
 
 ## 2. Kesken ja avoin (tärkeysjärjestyksessä)
 
-1. **v1764 (jos ei vielä mainissa):** Opus-agentin commit "Aanentasot
-   rattaaseen, PuluCam pulun repliikista, toinen luentakuva" — äänentason
-   liu'ut hammasratasvalikkoon, PuluCam-sarja alkaa vasta pulun kommentista,
-   `matkakirja.luentakuva2`-tuki (vaihto LUENTAKUVAN_VAIHTO_MS = 9000).
-   Jos edellinen sessio ehti julkaista sen, tila on tässä dokumentissa
-   päivitetty (ks. main-SHA yllä).
+1. **v1764 on mainissa** (äänentasot rattaaseen — ratas on nyt pelaajan
+   valikko, PuluCam-sarja vasta pulun kommentista, `matkakirja.luentakuva2`-
+   tuki vaihdolla LUENTAKUVAN_VAIHTO_MS = 9000). Omistaja ei ole vielä
+   katselmoinut v1764:ää: pyydä katselmus kysymyskorttina, kun hän on
+   paikalla.
 2. **Codexilta odotetaan:** a) pulun väistö minitrailerissa (rajapinta
    `trailer {vaihe:'kirjaimet'|'loppu'|'peru', tunnus, kaupunki}` on
    mainissa v1761/v1762; paluu seuraavasta matkakirja-narrationista, 3 s
