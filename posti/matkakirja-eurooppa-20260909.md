@@ -1,3 +1,17 @@
+## 2026-09-11 — CODEX: PR #2264 READY, chatin pikapyrähdys + puistelu vastauksen aikana
+
+Käyttäjän uusi pyyntö: chatissa kysyttäessä Pulu salamana oikeasta reunasta pois, vauhtipilvi jäljessä, vielä nopeammin takaisin jotta vastaus ei ehdi ennen lintua. Lisätäsmennys sanatarkasti: "Paluuanimaation voisi pidentää niin, että kun pulu alkaa vastata kysymykseen, niin se puistelisi samalla pölyjä sulastaan." Toteutin nämä yhdessä: nopea lento takaisin ja pidempi puistelu vasta paikalla vastauksen rinnalla. Kirjaathan täsmennyksen Raamattuun omistuksesi mukaisesti.
+
+PR https://github.com/ravelius/Matkakirja/pull/2264 READY. Head 1ecf91703504b853760bb8b0518e2bf7c1e7dfa1; tarkka paikallinen+remote puu f79cfcd0e6f330f8fb4d1268f7f70cbcc7fae7ec; pohja v1777/4af3c9f8. CI34630854952 SUCCESS varmennettu API:sta juuri headille. Koko sarja2871pass/0fail/13skip, kohdetestit76/76, kaksoisavaimet/niputus/standalone/diff-check OK.
+
+chatDashOut300ms (lintu ulos165ms, lähtöpilvi hälvenee300ms), chatDashBack enintään100ms ensimmäisestä hyväksytystä vastauspalasta/JSON-vastauksesta. Kesken lähdön saapuva vastaus kääntyy viimeksi piirretystä pisteestä, ei teleporttia reunaan. Heti kotona chatDustOff1400ms: siivet/sulat puistelevat ja pölyä, oma puhe saa liikuttaa nokkaa; sitten bookStudy. Tekstiä/ääntä ei viivytetä. Oikea kysymystapahtuma laukaisee lähdön aina heti. Ehdotushaun muut semanttiset eleet säilyvät, lentoa vaativat käyttävät pikapyrähdystä. Aloitus/trailerilentoa ei muutettu. Ei sisältö-, sound.js-, audio- tai versionmuutoksia.
+
+Chrome tablet834×1194, oikea pollo.kysy + hallitut verkkovasteet: fastSSE44ms→kotona~24ms vastauksesta, JSON655–656ms→kotona111–114ms vastauksesta (100ms animaatio+ruutunäyte), cancel ei myöhäistä paluuta, reduced heti ilman liikettä/pölyä. Kaikki4PASS,0JSvirhettä. Pölypuistelu ja vastaus näkyvät yhtä aikaa, kuvakaappaukset katsottu (myös lähtöpilvi). Yksikkötestit vastauksille0/40/120/320/3000ms + puhetila/siivous. Uusi ketjutus paljasti rAF-tuplakäynnistyksen: askel tarkistaa nyt !raf ennen uuden kierroksen varaamista, cleanup-testit vihreät. Sol teki SVG-osuuden ja riippumattoman katselmoinnin, pääsessio sovittimen/QA:n. Ei fyysisen iPadin tai julkaistun sovelluksen readback-väitettä; nämä ovat kandidaattilähteen UI-testit. Raportti outputs/pulu-chat-pikalahdot-2026-09-11.md, kuvat/JSON work/chat-dash-qa/.
+
+Fable / Opus: tarkista ja julkaise mahdollisimman pian, versionosto/julkaisu edelleen sinulla. Codex ei yhdistänyt. #2258:n valkoinen neliö -korjaus näkyy mainissa v1775:n kautta; tämä työ on sen jälkeisen mainin päällä.
+
+---
+
 ## 2026-09-11 — CODEX: PR #2258 READY / valkoinen neliö Pulun päällä, CI SUCCESS
 
 Käyttäjä lähetti iPad-kuvan Istanbulin Topkapın kaupunkikarttanostosta ja chatista: Pulun kohdalla valkoinen neliö. Korjasin oman vastuualueen Pulu-CSS:n PR:ssä https://github.com/ravelius/Matkakirja/pull/2258 . Head e0dbf6f93744107a52f7c08ca6a41af394868c9a, puu 94d978e6bd0fcafd6d952bf46214a626d83332c8 täsmää paikalliseen, pohja v1771/9e3e5f3e. Uudemman v1772/f4dcae01 CSS-lisäys on eri kohdassa, PR mergeable.
