@@ -135,7 +135,7 @@ export function asennaLivianKasvot(pollo) {
   if(doc.hidden||!pollo.auki||!nakyy()){tyhjennaChatOdotus({lepoon:true});return false;}
   if(vahenna?.matches){tyhjennaChatOdotus();pinta.style.transition='opacity 180ms ease';pinta.style.opacity='1';piirra(livianSvgAsento('bookStudy',.42));return true;}
   if(!tila.lahti){tyhjennaChatOdotus();return toista('bookStudy',{hiljaa:true,omistaja:'chatAnswer'});}
-  chatOdotus=null;lepoTila=null;pinta.style.transition='';pinta.style.opacity='';
+  chatOdotus=null;lepoTila=null;pinta.style.transition='';pinta.style.opacity='1';
   return toista('flyBack',{hiljaa:true,omistaja:'chatAnswer',duration:1500,fromProgress:.18,valmis:()=>{if(pollo.auki&&!doc.hidden)toista('bookStudy',{hiljaa:true,omistaja:'chatAnswer'});}});
  }
  function yritaPitkaaOdotusta(){

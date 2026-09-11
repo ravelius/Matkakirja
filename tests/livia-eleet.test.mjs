@@ -149,6 +149,7 @@ test('chatpyyntö lähtee tekstin mukaan ja vain saman tokenin vastaus tuo takai
  row.textContent='No nyt kesti. Pöllöllä on pitkä puheenvuoro..';e.notify(e.virta);e.tick(5000);assert.doesNotMatch(canvas.innerHTML,/data-part="whole-bird"/,'pitkä teksti ei laukaise ennenaikaista paluuta');
  assert.equal(c.tilanne('waitingAnswer',{tunnus:stale,teksti:'väärä'}),false);assert.doesNotMatch(canvas.innerHTML,/data-part="whole-bird"/);
  assert.equal(c.tilanne('waitingAnswer',{tunnus:a,teksti:'Tässä on vastaus.'}),true);c.tilanne('waitingEnd',{tunnus:a});const puhe={};ilmoitaLivianKasvopuhe(puhe,true,'Tässä on vastaus.');e.tick(6000);assert.match(canvas.innerHTML,/data-part="whole-bird"/,'oikean tokenin vastaus tuo Pulun takaisin');assert.match(canvas.innerHTML,/data-part="book"/,'kirja pysyy näkyvissä koko jatkuvan vastauspuheen');ilmoitaLivianKasvopuhe(puhe,false);
+ assert.equal(e.doc.body.children[0].style.opacity,'1','normaalikin paluu purkaa poissaolohäivytyksen');
 });
 
 test('chatodotuksen peruutus, uusi pyyntö, piilotus ja reduced motion eivät palauta vanhaa lintua',t=>{
