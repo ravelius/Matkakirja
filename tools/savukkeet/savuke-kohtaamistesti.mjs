@@ -186,10 +186,10 @@ async function aja(lauta, { taysi }) {
     };
   });
 
-  // 1. Nappi avaa lehden.
+  // 1. Lehti aukeaa ui:n kautta (ratasvalikon nappi poistettiin 11.9.2026,
+  // omistaja: *"nämä kaikki napit voisi ottaa pois"*).
   await sivu.evaluate(() => {
-    document.getElementById('kehittaja-valikko-btn')?.click();
-    document.getElementById('kehittaja-kohtaamiset-btn')?.click();
+    window.matkakirja?.ui?.avaaKohtaamistesti();
   });
   await odota(sivu, () => Boolean(document.getElementById('kohtaamistesti-dialog')?.open));
   if (taysi) {

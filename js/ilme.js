@@ -24,12 +24,16 @@
  *                     tekstille animoituna (pöllön lehtivinkki, sähkeen
  *                     kysymysrivi).
  *
- * Liput 'musteviiva', 'karhea' ja 'korostus' ovat laitteen omia
- * asetuksia (localStorage, sama kaava kuin js/ui-apurit.js:n
- * kehittäjäkytkimillä): puuttuva avain = päällä, '0' = pois.
- * Kehittäjävalikon "ilme"-kytkin (index.html, js/main.js) kääntää
- * kaikki kolme kerralla; yksittäisen lipun voi sammuttaa avaimella
- * matkakirja-ilme-<lippu> = '0'.
+ * OLETUS ON POIS 11.9.2026 ALKAEN (omistaja, sanatarkasti: *"tuon
+ * ilmeen voi ottaa pois päältä, se ei sovi tyylillisesti peliin
+ * täysin"* — Raamattu, KEHITTAJAVALIKON VIVUT POIS…). Liput
+ * 'musteviiva', 'karhea' ja 'korostus' ovat yhä laitteen omia
+ * asetuksia (localStorage), mutta kaava kääntyi: puuttuva avain =
+ * POIS, ja vain '1' kytkee lipun päälle. Vanha '0' tarkoittaa yhä
+ * poissa, joten aiemmin päällä ollut ilme sammuu itsestään
+ * (avaintahan ei silloin ollut) — erillistä siivousta ei tarvita.
+ * Kehittäjävalikon "ilme"-kytkin poistettiin samalla; yksittäisen
+ * lipun saa kokeiluun avaimella matkakirja-ilme-<lippu> = '1'.
  *
  * ── SÄÄNNÖT KAIKILLE VALMIILLE KIRJASTOILLE (Raamattu, VALMIIT
  * KIRJASTOT: STPAGEFLIP ENSIN; kartoituksen luku 10) ────────────────
@@ -94,15 +98,15 @@ export const ILME_UUSINTAVIIVE_MS = 60_000;
 
 const lippuMuisti = new Map();
 
-/** Lippu päällä? Puuttuva avain = päällä; vain '0' sammuttaa. */
+/** Lippu päällä? Puuttuva avain = POIS (oletus); vain '1' kytkee. */
 export function ilmePaalla(lippu) {
   if (!(lippu in ILME_LIPUT)) return false;
   if (lippuMuisti.has(lippu)) return lippuMuisti.get(lippu);
-  let paalla = true;
+  let paalla = false;
   try {
-    paalla = localStorage.getItem(ILME_AVAIN + lippu) !== '0';
+    paalla = localStorage.getItem(ILME_AVAIN + lippu) === '1';
   } catch {
-    paalla = true; // yksityinen selaus: oletus on päällä
+    paalla = false; // yksityinen selaus: oletus on pois
   }
   lippuMuisti.set(lippu, paalla);
   return paalla;
@@ -112,14 +116,14 @@ export function asetaIlme(lippu, paalla) {
   if (!(lippu in ILME_LIPUT)) return;
   lippuMuisti.set(lippu, Boolean(paalla));
   try {
-    if (paalla) localStorage.removeItem(ILME_AVAIN + lippu);
-    else localStorage.setItem(ILME_AVAIN + lippu, '0');
+    if (paalla) localStorage.setItem(ILME_AVAIN + lippu, '1');
+    else localStorage.removeItem(ILME_AVAIN + lippu);
   } catch {
     /* yksityinen selaus: tila jää vain tälle istunnolle */
   }
 }
 
-/** Koko paketti päällä = jokainen lippu päällä (kehittäjävalikon kytkin). */
+/** Koko paketti päällä = jokainen lippu päällä (oletuksena ei yksikään). */
 export function ilmePakettiPaalla() {
   return Object.keys(ILME_LIPUT).every(ilmePaalla);
 }

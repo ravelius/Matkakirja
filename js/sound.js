@@ -12,12 +12,18 @@ const STORAGE_KEY = 'matkakirja-aani';
 const VANHA_STORAGE_KEY = 'afrikan-tahti-sound';
 
 import { livianEleaaniNaytteet } from './livia-tehosteet.js';
-import { valittuAani, jaaAlku } from './aani-ehdokkaat.js';
+import { valittuAani, jaaAlku, tehosteVoima } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { AANI_JUURI, haeAani } from './media.js';
 
 // Ambienssin ristihäivytys ja tapahtumien väli. Väli on tarkoituksella pitkä
 // ja epäsäännöllinen: säännöllinen ääni alkaa kuulua kellona.
+/*
+ * Masterketjun perustaso. Hillitty kokonaistaso: syntetisoitu ääni
+ * antaa anteeksi paljon enemmän hiljaisena kuin kovana. Pelaajan
+ * äänitehosteliuku (js/aani-ehdokkaat.js tehosteVoima) kertoo tähän.
+ */
+const MASTER_PERUSTASO = 0.24;
 const AMBIENCE_FADE = 2;
 const AMBIENCE_EVENT_MIN = 8000;
 const AMBIENCE_EVENT_MAX = 30000;
@@ -446,10 +452,10 @@ class Sound {
 
       // Masteriketju: kaikki äänet → kompressori → ulos. Kompressori pitää
       // päällekkäiset äänet kasassa ilman että kokonaisvoimakkuus nousee.
-      // Hillitty kokonaistaso: syntetisoitu ääni antaa anteeksi paljon
-      // enemmän hiljaisena kuin kovana.
+      // Perustaso on MASTER_PERUSTASO; pelaajan äänitehosteliuku kertoo
+      // siihen (paivitaTehosteVoima päivittää soivan ketjun heti).
       this.master = this.ctx.createGain();
-      this.master.gain.value = 0.24;
+      this.master.gain.value = MASTER_PERUSTASO * tehosteVoima();
       const comp = this.ctx.createDynamicsCompressor();
       comp.threshold.value = -20;
       comp.knee.value = 26;
@@ -1186,6 +1192,19 @@ class Sound {
       }
     }
     return iskut;
+  }
+
+  /**
+   * ÄÄNITEHOSTEIDEN LIUKU (omistaja 11.9.2026: *"ääni säätimiin voisi
+   * tuoda mukaan äänitehosteet pulun ja lukijan omat äänen voimakkuus
+   * säätimet"*). Kaikki tämän moduulin äänet — syntetisoidut tehosteet,
+   * äänitesiivut (playSlice), pulun tehosteet ja äänimaisema — kulkevat
+   * masterketjun läpi, joten yksi kerroin riittää. Muutos kuuluu heti:
+   * päävalikon liuku kutsuu tätä jokaisella liikahduksella.
+   */
+  paivitaTehosteVoima() {
+    if (!this.master) return;
+    this.master.gain.value = MASTER_PERUSTASO * tehosteVoima();
   }
 
   /**

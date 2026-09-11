@@ -450,11 +450,13 @@ export function puluCamPaallimmainen(ui) {
  *   koskee vain ISOISÄN lappua: se on paneelin oma kappale, ja kutsuja
  *   päättää siitä, näkyykö se (js/fokusvirta.js naytaPulunKuvapakka;
  *   omistaja 9.9.2026 klo 18.50 ja 10.9.2026 klo 23.37).
+ * @param {boolean} [asetukset.heti] kaikki kortit kerralla ilman
+ *   pulpahdusviiveitä (isojen keskikuvien sarjan jälkeen, 11.9.2026)
  * @returns {boolean} nousiko pakka
  */
 export function naytaPuluCamPakka(ui, {
   pohja, kuvat, osoite, vara, avaa, raahattu = () => false, kuvateksti = null,
-  pohjakortti = null, pohjakuva = null,
+  pohjakortti = null, pohjakuva = null, heti = false,
 } = {}) {
   if (!ui || !pohja || !kuvat?.length) return false;
   piilotaPuluCamPakka(ui);
@@ -513,7 +515,13 @@ export function naytaPuluCamPakka(ui, {
       globalThis.requestAnimationFrame?.(nayta);
       ajastimet.push(setTimeout(nayta, 50));
     };
-    const viive = pulucamViive(i);
+    /*
+     * KAIKKI KORTIT HETI (omistaja 11.9.2026, Raamattu SAAPUMISEN UUSI
+     * JARJESTYS…): isojen keskikuvien sarjan jälkeen pakka nousee
+     * kartalle valmiina — pulpahdusvälit näyttäisivät samat kuvat
+     * toiseen kertaan. Muissa kutsuissa välit ovat ennallaan.
+     */
+    const viive = heti ? 0 : pulucamViive(i);
     if (viive <= 0) nosta();
     else ajastimet.push(setTimeout(nosta, viive));
   });

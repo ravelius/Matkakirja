@@ -336,3 +336,62 @@ test('puhevuoro on yksi kirjanpito, ei kahta', () => {
   assert.match(puhe, /if \(vaista && puhujaAanessa\(PUHUJA_PULU\)\) return null;/);
   assert.match(puhe, /if \(vaista\) merkitsePuhuja\(ui, audio, PUHUJA_PULU\);/);
 });
+
+/* ---------- 4. lyhennetty luenta pysähtyy lauserajaan ---------- */
+
+/*
+ * MATKAKIRJAN TILAPÄINEN LYHENNYS (omistaja 11.9.2026, Raamattu
+ * SAAPUMISEN UUSI JARJESTYS…): kortin teksti ja luenta päättyvät kaksi
+ * lausetta ennen loppua. Luenta katkaistaan äänitteestä, joten
+ * pysäytyskohta on lauseraja — ja jos äänitteelle on tarkistetut
+ * aikaleimat, ne voittavat hiljaisuusarvion.
+ */
+test('aikaleimojen lauserajat voittavat hiljaisuusarvion', async () => {
+  const { lopetuksenLauseraja } = await import('../js/luenta.js');
+  const teksti = 'Eka lause. Toka lause. Kolmas lause. Neljäs lause.';
+  // Lauseiden alkuajat millisekunteina (kuten aikaleimatiedostossa).
+  const rajat = { teksti, lauseet: [0, 2000, 4200, 6100] };
+  const lyhyt = 'Eka lause. Toka lause.';
+  const osuus = lyhyt.length / teksti.length;
+  // Kaksi lausetta pois: pysäytys kolmannen lauseen alkuun (4,2 s)
+  // pienellä marginaalilla.
+  assert.equal(lopetuksenLauseraja(rajat, osuus), 4.2 - 0.15);
+  // Yksi lause pois: pysäytys neljännen alkuun.
+  const yksiPois = 'Eka lause. Toka lause. Kolmas lause.'.length / teksti.length;
+  assert.equal(lopetuksenLauseraja(rajat, yksiPois), 6.1 - 0.15);
+});
+
+test('ilman aikaleimoja tarkkaa rajaa ei arvata — silloin käytetään hiljaisuusarviota', async () => {
+  const { lopetuksenLauseraja } = await import('../js/luenta.js');
+  const teksti = 'Eka lause. Toka lause. Kolmas lause.';
+  assert.equal(lopetuksenLauseraja(null, 0.5), null, 'ilman tiedostoa ei rajaa');
+  assert.equal(lopetuksenLauseraja({ teksti, lauseet: [] }, 0.5), null);
+  // Koko teksti mukana: ei pysäytystä lainkaan.
+  assert.equal(lopetuksenLauseraja({ teksti, lauseet: [0, 1000, 2000] }, 1), null);
+  // Varapolku on hiljaisuusarvio, ei arvaus — ja se on luennan omassa
+  // koodissa yksi paikka.
+  const luenta = lue('../js/luenta.js');
+  assert.match(luenta, /return tarkka == null \? lauseTauko\(ui, url, osuus\) : tarkka;/);
+});
+
+test('lyhennetty luenta ei teeskentele luonnollista loppua', () => {
+  const luenta = lue('../js/luenta.js');
+  /*
+   * `matkakirja:luenta-loppu` on VAIN pehmeaLopun luonnollinen haara
+   * (js/luentareaktiot.js). Katkaistu luenta häivytetään ja jätetään
+   * tauolle — jos se lähettäisi lopputapahtuman, pulun jälkireaktio ja
+   * tekstisession narrationEnd luulisivat merkinnän luetuksi loppuun.
+   */
+  const lyhennys = luenta.slice(luenta.indexOf('const rajanHaku'),
+    luenta.indexOf('KERTOJA EI ALA PULUN PÄÄLLE'));
+  assert.ok(lyhennys.includes('haivytaAani(ui, audio)'),
+    'pysäytys häivyttää eikä katkaise töksähtäen');
+  assert.ok(!lyhennys.includes('LUENNAN_LOPPU_TAPAHTUMA'),
+    'katkaisu ei saa lähettää luonnollisen lopun tapahtumaa');
+  assert.equal((luenta.match(/dispatchEvent\(new Event\(LUENNAN_LOPPU_TAPAHTUMA\)\)/g) ?? []).length,
+    1, 'lopputapahtuma lähtee täsmälleen yhdestä paikasta (pehmeaLoppu)');
+  // Kutsupaikka ui.js:ssä välittää lyhennetyn osuuden luennalle.
+  const ui = lue('../js/ui.js');
+  assert.match(ui, /playDiaryVoice\(this, virtaAanite, \{ viive: 1000, lopetaOsuuteen \}\)/);
+  assert.match(ui, /merkinta\.teksti\.length \/ merkinta\.tekstiKoko\.length/);
+});

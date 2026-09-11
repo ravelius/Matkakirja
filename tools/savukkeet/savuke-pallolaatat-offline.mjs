@@ -520,14 +520,17 @@ vaadi('6. turvatila: kahden kaatumisen jälkeen käynnistys avaa tasokartan ja k
     && turvatila.turvatila === true && turvatila.ilmoitettu,
   JSON.stringify(turvatila));
 
+// Nollausnappi poistettiin rattaasta 11.9.2026 (omistaja: *"nämä kaikki
+// napit voisi ottaa pois"*); nollain itse on yhä js/ui-apurit.js:ssä.
 const vipu = await sivu.evaluate(async () => {
-  const nappi = document.getElementById('kehittaja-pallo-turvatila-btn');
-  if (!nappi) return { nappi: false };
-  nappi.click();
+  const m = await import('/js/ui-apurit.js');
+  m.nollaaPallonKaatumiset();
   await new Promise((r) => setTimeout(r, 150));
-  return { nappi: true, kaatumiset: localStorage.getItem('matkakirja-pallo-kaatumiset') };
+  return { nappi: Boolean(document.getElementById('kehittaja-pallo-turvatila-btn')),
+    kaatumiset: localStorage.getItem('matkakirja-pallo-kaatumiset') };
 });
-vaadi('   ratasvalikon vipu nollaa laskurin', vipu.nappi && vipu.kaatumiset === null, JSON.stringify(vipu));
+vaadi('   nollain tyhjentää laskurin (nappia ei enää ole)',
+  !vipu.nappi && vipu.kaatumiset === null, JSON.stringify(vipu));
 
 if (virheet.length) tieto('sivun virheet (viisi ensimmäistä)', virheet.slice(0, 5).join(' | '));
 

@@ -299,6 +299,7 @@ const MODULES = [
   'js/packs/maastokohteet-zwe.js',
   'js/packs/maastokohteet.js',
   'js/packs/fokusvirrat.js',
+  'js/packs/iskulauseet.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).
   'js/uutiset.js',
@@ -614,6 +615,12 @@ const MODULES = [
    * lukee FOKUSVIRRAT-taulun (listalla jo ylempänä) sekä
    * js/livia-tilanteet.js:n ja js/media.js:n.
    */
+  /*
+   * Lauseiden jako ja matkakirjan tilapäinen lyhennys (11.9.2026):
+   * tuojia ovat luentareaktiot, luenta ja fokusvirta — siksi ennen
+   * niitä. Ei tuo mitään itse.
+   */
+  'js/lausejako.js',
   'js/luentareaktiot.js',
   // M6: luenta ennen visaa (visa tuo kertojafunktiot).
   'js/luenta.js',
@@ -669,6 +676,14 @@ const MODULES = [
    */
   'js/tyohuone-musiikki.js',
   /*
+   * Työhuoneen kaksi uutta moduulia (11.9.2026) ennen lehteä: lehti.js
+   * tuo molemmat staattisesti. Kehittäjälehti on pelkkä rivitaulukko ja
+   * Raamatun muokkaus lukee vain ui-apurit ja ehdotukset — molemmat jo
+   * yllä.
+   */
+  'js/tyohuone-kehittajalehti.js',
+  'js/tyohuone-raamattu-muokkaus.js',
+  /*
    * Kevyen kulun nimetyt lehtitehtävät ENNEN maalehteä (maalehti tuo
    * sivun tehtäväpiirron staattisesti). Moduulin omat riippuvuudet —
    * ui-apurit, julisteet, fokusvirrat, natiivi ja äänet — ovat kaikki
@@ -702,6 +717,12 @@ const MODULES = [
    * ovat kaikki jo yllä.
    */
   'js/pulucam.js',
+  /*
+   * Minitraileri ENNEN fokusvirtaa (fokusvirta tuo sen staattisesti
+   * siivotakseen sen kaupungista lähdettäessä). Tuo vain ui-apurit,
+   * median, valokuvat ja kulttuurikategoriat — kaikki jo yllä.
+   */
+  'js/saapumistraileri.js',
   'js/fokusvirta.js',
   /*
    * Laattapyramidin lataaja ennen kameraa: kamera lukee siitä arkin
@@ -932,6 +953,9 @@ const bundle = MODULES.map((file) => `// ===== ${file} =====\n${stripModuleSynta
 const STYLES = [
   'css/styles.css',
   'css/fokusvirta.css',
+  // Kaupungin minitraileri (11.9.2026): js/saapumistraileri.js lataa
+  // tämän selaimessa itse, yhden tiedoston versiossa se liitetään tähän.
+  'css/saapumistraileri.css',
   'css/fokuskohteet.css',
   'css/fokusnosto.css',
   // Sähkepinta on osa peruspeliä (js/ui.js ja js/main.js tuovat

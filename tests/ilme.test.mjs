@@ -35,6 +35,14 @@ function muistilla(alku = {}) {
   return arvot;
 }
 
+/*
+ * Liput ovat 11.9.2026 alkaen OLETUKSENA POIS, joten kirjastopolkuja
+ * koettelevat testit kytkevät ne itse päälle ('1' jokaiselle avaimelle).
+ */
+const KAIKKI_PAALLA = () => Object.fromEntries(
+  Object.keys(ILME_LIPUT).map((lippu) => [ILME_AVAIN + lippu, '1']),
+);
+
 /** Tekaistu dokumentti: kirjaa luodut skriptit ja antaa laukaista load/error. */
 function tekoDokumentti({ moduuliskripti = true } = {}) {
   const skriptit = [];
@@ -62,41 +70,50 @@ test.afterEach(() => {
   nollaaIlmeMuisti();
 });
 
-test('liput: puuttuva avain on päällä, vain "0" sammuttaa, kytkin kääntää kaikki', () => {
+/*
+ * OLETUS ON POIS 11.9.2026 ALKAEN (omistaja, sanatarkasti: *"tuon
+ * ilmeen voi ottaa pois päältä, se ei sovi tyylillisesti peliin
+ * täysin"*): puuttuva avain = pois, vain '1' kytkee. Vanha '0' jää
+ * poissaoloksi, joten aiemmin päällä ollut ilme sammuu itsestään.
+ */
+test('liput: puuttuva avain on pois, vain "1" kytkee, paketti kääntää kaikki', () => {
   const arvot = muistilla();
   assert.deepEqual(Object.keys(ILME_LIPUT), ['musteviiva', 'karhea', 'korostus']);
-  for (const lippu of Object.keys(ILME_LIPUT)) assert.equal(ilmePaalla(lippu), true, lippu);
+  for (const lippu of Object.keys(ILME_LIPUT)) assert.equal(ilmePaalla(lippu), false, lippu);
   assert.equal(ilmePaalla('tuntematon'), false, 'tuntematon lippu ei ole koskaan päällä');
-  assert.equal(ilmePakettiPaalla(), true);
-
-  asetaIlme('korostus', false);
-  assert.equal(arvot.get(`${ILME_AVAIN}korostus`), '0', 'pois = "0" avaimessa');
-  assert.equal(ilmePaalla('korostus'), false);
-  assert.equal(ilmePaalla('musteviiva'), true, 'muut liput eivät muutu');
-  assert.equal(ilmePakettiPaalla(), false, 'yksikin pois = paketti pois');
+  assert.equal(ilmePakettiPaalla(), false);
 
   asetaIlme('korostus', true);
-  assert.equal(arvot.has(`${ILME_AVAIN}korostus`), false, 'päällä = avain poistetaan');
+  assert.equal(arvot.get(`${ILME_AVAIN}korostus`), '1', 'päällä = "1" avaimessa');
+  assert.equal(ilmePaalla('korostus'), true);
+  assert.equal(ilmePaalla('musteviiva'), false, 'muut liput eivät muutu');
+  assert.equal(ilmePakettiPaalla(), false, 'yksikin pois = paketti pois');
 
-  asetaIlmePaketti(false);
-  assert.deepEqual([...arvot.keys()].sort(), ['musteviiva', 'karhea', 'korostus'].map((l) => ILME_AVAIN + l).sort());
+  asetaIlme('korostus', false);
+  assert.equal(arvot.has(`${ILME_AVAIN}korostus`), false, 'pois = avain poistetaan');
+
   asetaIlmePaketti(true);
+  assert.deepEqual([...arvot.keys()].sort(), ['musteviiva', 'karhea', 'korostus'].map((l) => ILME_AVAIN + l).sort());
+  assert.equal(ilmePakettiPaalla(), true);
+  asetaIlmePaketti(false);
   assert.equal(arvot.size, 0);
 
-  // Kelvoton arvo palauttaa oletuksen (sama linja kuin fokusmoodilla).
+  // Vanha '0' ja mikä tahansa muu kelvoton arvo = oletus eli pois.
+  muistilla({ [`${ILME_AVAIN}karhea`]: '0' });
+  assert.equal(ilmePaalla('karhea'), false, 'vanha poiskytkentä pysyy poissa');
   muistilla({ [`${ILME_AVAIN}karhea`]: 'joo' });
-  assert.equal(ilmePaalla('karhea'), true);
+  assert.equal(ilmePaalla('karhea'), false);
 });
 
-test('liput: yksityinen selaus (localStorage heittää) = kaikki päällä', () => {
+test('liput: yksityinen selaus (localStorage heittää) = kaikki pois', () => {
   globalThis.localStorage = {
     getItem: () => { throw new Error('SecurityError'); },
     setItem: () => { throw new Error('SecurityError'); },
     removeItem: () => { throw new Error('SecurityError'); },
   };
   nollaaIlmeMuisti();
-  assert.equal(ilmePakettiPaalla(), true);
-  assert.doesNotThrow(() => asetaIlmePaketti(false));
+  assert.equal(ilmePakettiPaalla(), false);
+  assert.doesNotThrow(() => asetaIlmePaketti(true));
 });
 
 test('osoitteet: kolme kirjastoa ämpärin vendor/-polusta, versiot kiinni, ei CDN:ää koodissa', () => {
@@ -163,7 +180,7 @@ test('lataus: laiska, memoized, virhehaara jäähyllä ja puuttuva globaali on v
 });
 
 test('ilmeKirjasto: lippu pois ja yhden tiedoston versio eivät lataa mitään; virhe on null', async () => {
-  muistilla({ [`${ILME_AVAIN}karhea`]: '0' });
+  muistilla({ ...KAIKKI_PAALLA(), [`${ILME_AVAIN}karhea`]: '0' });
   const { doc, skriptit } = tekoDokumentti();
   assert.equal(await ilmeKirjasto('karhea', doc), null, 'lippu pois → null');
   assert.equal(skriptit.length, 0, 'lippu pois → ei skriptiä');
@@ -182,6 +199,7 @@ test('ilmeKirjasto: lippu pois ja yhden tiedoston versio eivät lataa mitään; 
   // Esilataus kunnioittaa lippuja ja nielee virheet.
   nollaaIlmeMuisti();
   const esi = tekoDokumentti();
+  // (karhea on '0', muut '1')
   const tulos = esilataaIlme(esi.doc);
   assert.equal(esi.skriptit.length, 2, 'karhea pois: vain kaksi skriptiä');
   esi.skriptit.forEach((s) => s.laukaise('error'));
@@ -189,7 +207,7 @@ test('ilmeKirjasto: lippu pois ja yhden tiedoston versio eivät lataa mitään; 
 });
 
 test('reduced motion: musteviiva ei piirry eikä lataa, apurit palauttavat null ilman DOM:ia', () => {
-  muistilla();
+  muistilla(KAIKKI_PAALLA());
   globalThis.matchMedia = () => ({ matches: true });
   assert.equal(ilmeLiikeVahennetty(), true);
   const { doc, skriptit } = tekoDokumentti();

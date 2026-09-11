@@ -41,7 +41,7 @@ import {
   livianKuplanAjastin, pysaytaLivianAani, soitaLivianAani,
 } from './liviapuhe.js';
 import { luennanLoppuun } from './luenta.js';
-import { polloAvauskupla, polloKuplatPois, polloSaapumiskupla } from './pollo.js';
+import { polloAvauskupla, polloKuplatPois, polloSaapumiskupla, polloLivianEnsiliito, peruPolloLivianEnsiliito } from './pollo.js';
 import { sfx } from './sound.js';
 import { ETUSIVUN_KOHTEET, linssiEstaa } from './ui-apurit.js';
 
@@ -211,6 +211,9 @@ const AVAUKSEN_VIIVE = 900;
  * ruutu vain seisoisi tyhjänä pidempään.
  */
 export const LIVIAN_AVAUKSEN_VIIVE_MS = 1500;
+// Yhteensopivuusvienti vanhoille ajoitustesteille/työkaluille. Uusi
+// ensiliitopolku ei lisää tätä 1500 ms: ensimmäinen repliikki alkaa
+// AVAUKSEN_VIIVEEN (900 ms) kohdalla jo lennossa, ja toinen odottaa laskua.
 
 /** Tauko kuplien välissä: uusi repliikki saa oman ilmestymisensä. */
 const KUPLIEN_VALI = 280;
@@ -230,6 +233,9 @@ let avausAjastin = null;
 let avausNakyi = false;
 /** Se käyttöliittymä, jossa sarja soi — äänen pysäytys tarvitsee sen. */
 let avauksenUi = null;
+let avausLiitoValmis = false;
+let avausLiidonJalkeinen = null;
+let avausPiilotus = null;
 
 /** Onko avausesittely jo nähty tällä laitteella? */
 export function livianAvausNahty() {
@@ -292,10 +298,27 @@ export function naytaLivianAvaus(ui) {
   if (ui.game?.phase !== 'pickstart') return false;
   if (avausKesken || livianAvausNahty()) return false;
   avausKesken = true;
+  avausLiitoValmis = false;
+  avausLiidonJalkeinen = null;
   avauksenUi = ui;
+  if (typeof document !== 'undefined') {
+    avausPiilotus=()=>{if(document.hidden)lopetaAvaus();};
+    document.addEventListener('visibilitychange',avausPiilotus);
+    globalThis.addEventListener?.('pagehide',lopetaAvaus);
+  }
   clearTimeout(avausAjastin);
-  const viive = AVAUKSEN_VIIVE + (ui.reducedMotion ? 0 : LIVIAN_AVAUKSEN_VIIVE_MS);
-  avausAjastin = setTimeout(() => naytaRepliikki(ui, 0), viive);
+  const laskeutui=()=>{
+    if (!avausKesken || ui.dead || ui.game?.phase !== 'pickstart') return;
+    avausLiitoValmis = true;
+    if (avausLiidonJalkeinen !== null) {
+      const i=avausLiidonJalkeinen;avausLiidonJalkeinen=null;
+      avausAjastin=setTimeout(()=>naytaRepliikki(ui,i),KUPLIEN_VALI);
+    }
+  };
+  if (!polloLivianEnsiliito(laskeutui, { reducedMotion: ui.reducedMotion })) laskeutui();
+  // Ensimmäinen tuttu repliikki alkaa, kun kaukainen Pulu on jo
+  // tunnistettavissa. Reduced motionissa ei tule liikettä eikä viivettä.
+  avausAjastin = setTimeout(() => naytaRepliikki(ui, 0), ui.reducedMotion ? 0 : AVAUKSEN_VIIVE);
   return true;
 }
 
@@ -314,8 +337,10 @@ function naytaRepliikki(ui, i) {
   }
   const { teksti } = rivi;
   const nakyi = polloAvauskupla(teksti, {
-    // Lennähdys kuuluu sarjan avaukseen: Livia saapuu kerran.
-    lennahda: i === 0,
+    // Ensiliito omistaa saapumisliikkeen; kupla ei aloita sitä uudestaan.
+    lennahda: false,
+    // Canonical avauksen viides repliikki lupaa Viisaan Pöllön oppaaksi.
+    muotokuva: rivi.indeksi === 4,
     kuittaus: () => seuraavaRepliikki(ui, i + 1),
   });
   if (!nakyi) {
@@ -371,6 +396,7 @@ function seuraavaRepliikki(ui, i) {
   clearTimeout(avausAjastin);
   avausAjastin = null;
   if (!avausKesken) return;
+  if (!avausLiitoValmis) { avausLiidonJalkeinen = i; return; }
   if (i >= livianAvausSarja().length) {
     // Sarja päättyi itsestään: viimeinen repliikki saa puhua loppuun.
     lopetaAvaus({ vaienna: false });
@@ -397,6 +423,10 @@ function lopetaAvaus({ vaienna = true } = {}) {
   if (avausNakyi) soitaLivianTehoste('lahtee');
   avausNakyi = false;
   if (vaienna) pysaytaLivianAani(avauksenUi);
+  if(avausPiilotus){document.removeEventListener('visibilitychange',avausPiilotus);globalThis.removeEventListener?.('pagehide',lopetaAvaus);avausPiilotus=null;}
+  peruPolloLivianEnsiliito();
+  avausLiitoValmis = false;
+  avausLiidonJalkeinen = null;
   avauksenUi = null;
   polloKuplatPois();
 }

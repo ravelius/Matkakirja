@@ -31,6 +31,13 @@ export const KAARI_PAKETIT = {
   kohteet: [
     {
       id: 'praha',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: tulipaloyö ja savu portailla painavat repliikin
+       * vakavaksi.
+       */
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Praha — kynttilä tyhjässä talossa',
       saapuminen: 'Kultaisen kujan talot ovat niin pieniä, että löin pääni '
@@ -97,6 +104,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'istanbul',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       kuva: 'assets/kohtaamiset/kohtaaminen-istanbul.jpg',
       mykistetyt: [],
       otsikko: 'Istanbul — upotettu palatsi',
@@ -135,6 +144,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'wien',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "kolme lyhtyä alas, kaksi ylös" on avoin uhka.
+       */
+      tunneKohtaaminen: { tunne: 'jannitys', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Wien — luiden holvit kirkon alla',
       saapuminen: 'Maailmannäyttelyn rotunda kohosi Praterissa suurempana '
@@ -199,6 +214,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'venetsia',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: Venetsia on Livian rakkauskohtaus (rekisteri E2).
+       */
+      tunneKohtaaminen: { tunne: 'rakkaus', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Venetsia — naamio sillan kaiteella',
       saapuminen: 'Vesi nousi yöllä kaduille, ja aamulla torilla '
@@ -240,6 +261,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'budapest',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Budapest — hengittävä labyrintti',
       saapuminen: 'Saavuin kaupunkiin, jota ei viime vuonna ollut: Buda, Pest '
@@ -304,6 +327,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'lontoo',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: Leila vertaa kuvakulmia, ei kerro isoisästä (rekisteri
+       * E2).
+       */
+      tunneKohtaaminen: { tunne: 'utelias', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Lontoo — valo löytää kadun',
       /*
@@ -374,6 +404,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'pariisi',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Pariisi — kirja joka odotti rannalla',
       saapuminen: 'Seinen rannalla tein sen, mitä suvussamme ei osata: '
@@ -412,6 +444,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'berliini',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: Lotte ei tiedä mitä vieras etsi — havaintokirja avaa
+       * arvoituksen.
+       */
+      tunneKohtaaminen: { tunne: 'utelias', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Berliini — kaukoputki joka katsoi tyhjää',
       saapuminen: 'Tähtitornin kupoli oli raollaan, vaikka yö oli pilvinen, '
@@ -449,6 +488,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'rooma',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "Luulin että pyydät encorea" — juhlavalot ja hymy.
+       */
+      tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       /*
        * KUVA JÄÄ TOISTAISEKSI ENNALLEEN, VAIKKA HENKILÖ VAIHTUI.
        * Tiedosto assets/kohtaamiset/kohtaaminen-rooma.jpg esittää
@@ -528,6 +573,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'madrid',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: kolmastoista lyönti on viesti, jota Pilar punnitsee
+       * (rekisteri E2).
+       */
+      tunneKohtaaminen: { tunne: 'miettiva', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Madrid — kolmastoista lyönti',
       saapuminen: 'Puerta del Solin kello löi keskiyön, ja laskin lyönnit '
@@ -565,6 +617,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'ateena',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "Mistä sait tuon luonnoksen?" on tarkka kysymys, ei
+       * lämpö; aarre päättyy auki jäävään "kumpi piirsi ensin?".
+       */
+      tunneKohtaaminen: { tunne: 'utelias', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'miettiva', voimakkuus: 0.5 },
       // Kohtaamiskuva (Opus 3:n pilotti 10.8.2026): näkyy kohtaamis-
       // kortilla tekstin oikealla puolella.
       /*
@@ -650,6 +709,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'lissabon',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Lissabon — laatta jota ei poltettu loppuun',
       saapuminen: 'Belémin vartija vannoi, ettei torni ole siirtynyt '
@@ -688,6 +749,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'amsterdam',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "yksi hyvin painava nojatuoli" — kuiva työmaahuumori.
+       */
+      tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Amsterdam — väärä kerros',
       /*
@@ -764,6 +831,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'dublin',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * aarre: lantti on lyöty vuonna, jota ei vielä ollut — aitoa
+       * hämmästystä.
+       */
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'hammastys', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Dublin — lantti joka odotti maksajaansa',
       saapuminen: 'Ylitin joen sillalla, josta perittiin puolen pennin maksu. '
@@ -807,6 +881,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'edinburgh',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Edinburgh — sekunnin ero',
       saapuminen: 'Linnan tykki jyrähti täsmälleen yhdeltä, ja kellot '
@@ -843,6 +919,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'barcelona',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Barcelona — lohikäärme ja tuore ruusu',
       saapuminen: 'Kävelin goottilaiskorttelin kujia, kunnes taivas oli enää '
@@ -881,6 +959,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'granada',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Granada — kouru jota ei ole kartassa',
       /*
@@ -944,6 +1024,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'marseille',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "Sinä ja puolet laiturista" — kuiva vitsi.
+       */
+      tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Marseille — saari josta palataan tarinoissa',
       /*
@@ -1012,6 +1098,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'varsova',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: sodan varjossa oleva kaupunki (rekisteri E2).
+       */
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Varsova — eränumero varastokirjassa',
       /*
@@ -1114,6 +1206,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'krakova',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Krakova — sävel joka katkeaa kesken',
       saapuminen: 'Tornista nousi torvensoitto ja katkesi kesken sävelen, '
@@ -1149,6 +1243,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'alpit',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: koira keskeyttää vastauksen ja Anselm nauraa.
+       */
+      tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Alpit — laukku jota kukaan ei kaivannut',
       /*
@@ -1228,6 +1328,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'sisilia',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Sisilia — nukke jonka tarinaa ei esitetty',
       saapuminen: 'Rannan mustia paasia kalastajat sanovat kykloopin '
@@ -1268,6 +1370,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'kreeta',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Kreeta — lanka joka jatkuu pimeään',
       saapuminen: 'Vuoren rinteessä luola haarautui käytäviksi, ja opas '
@@ -1303,6 +1407,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'dubrovnik',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: mereltä piirretty profiili ja käytännön ehdotus
+       * (rekisteri E2).
+       */
+      tunneKohtaaminen: { tunne: 'utelias', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Dubrovnik — ranta näkyy vain mereltä',
       /*
@@ -1373,6 +1484,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'sarajevo',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: sodan varjossa oleva kaupunki (rekisteri E2).
+       */
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       kuva: 'assets/kohtaamiset/kohtaaminen-sarajevo.jpg',
       mykistetyt: [],
       otsikko: 'Sarajevo — kaivo joka kutsuu takaisin',
@@ -1417,6 +1534,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'sofia',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       kuva: 'assets/kohtaamiset/kohtaaminen-sofia.jpg',
       otsikko: 'Sofia — lähde joka kirjattiin sata vuotta',
@@ -1456,6 +1575,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'bukarest',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       kuva: 'assets/kohtaamiset/kohtaaminen-bukarest.jpg',
       mykistetyt: [],
       otsikko: 'Bukarest — paimenen kirkonkello',
@@ -1494,6 +1615,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'kiova',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: sodan varjossa oleva kaupunki (rekisteri E2); "sinä
+       * katsoit uutta rakennusta, kirjasi mies raunioita".
+       */
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Kiova — väärä kerros',
       saapuminen: 'Istuin piirtämään portin raunioita kirjaani; pieni tyttö '
@@ -1557,6 +1685,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'odessa',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: sodan varjossa oleva kaupunki (rekisteri E2) — torin
+       * kepeys ei kumoa sitä.
+       */
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Odessa — kuitti väärältä puolelta',
       /*
@@ -1636,6 +1771,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'moskova',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "tämä on meidän surumme: kello, joka ei saanut ääntä".
+       */
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Moskova — kello joka ei koskaan soinut',
       saapuminen: 'Kellotornin juurella seisoi kello, joka on liian suuri '
@@ -1671,6 +1812,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'pietari',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "Tänne ei kävellä" — torjuva avaus, joka vasta
+       * myöhemmin pehmenee.
+       */
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Pietari — yö väärällä rannalla',
       /*
@@ -1750,6 +1898,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'helsinki',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Helsinki — maa joka nousee merestä',
       saapuminen: 'Kuninkaanportin rappusilla poika onki ilman koukkua; '
@@ -1784,6 +1934,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'tallinna',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: ['kohtaaminen', 'aarre'],
       otsikko: 'Tallinna — juhla keskeytyy',
       saapuminen: 'Ostin päänsärkyyni jauheen apteekista, joka on seissyt '
@@ -1856,6 +2008,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'riika',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Riika — kukko joka näki tuulen',
       saapuminen: 'Nostin hattuani kirkontornille, ja tuuli vei sen — '
@@ -1893,6 +2047,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'vilna',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Vilna — susi joka ulvoi sadan äänellä',
       saapuminen: 'Tornin kivijalassa, sammaleen alla, istui pieni rautainen '
@@ -1933,6 +2089,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'tukholma',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Tukholma — luukku talossa jossa ei ole ovea',
       saapuminen: 'Vanhassakaupungissa kuja kapeni niin, että hartiat hipoivat '
@@ -1969,6 +2127,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'oslo',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: Oskar katsoo piirrosta "uudestaan, vakavana" — teksti
+       * sanoo sävyn itse.
+       */
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Oslo — laiva mullan alla',
       /*
@@ -2066,6 +2231,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'kobenhavn',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "Tuossa junassa matkustaa yksi ihminen liikaa".
+       */
+      tunneKohtaaminen: { tunne: 'jannitys', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Kööpenhamina — valot palavat kahdesti',
       /*
@@ -2149,6 +2320,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'lappi',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: ['kohtaaminen', 'aarre'],
       otsikko: 'Lappi — jäljet eivät odota',
       saapuminen: 'Taivas syttyi. Vihreä liekki juoksi taivaanrannasta toiseen '
@@ -2208,6 +2381,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'tromssa',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "Kello on kaksi yöllä. Tietenkin joku tulee nyt
+       * kyselemään" — kuiva huumori.
+       */
+      tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: ['kohtaaminen', 'aarre'],
       otsikko: 'Tromssa — työvuoro ilman yötä',
       saapuminen: 'Aurinko ei laskenut. Se vieri taivaanrannan yli kuin '
@@ -2271,6 +2451,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'islanti',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "Tällä säällä sinä etsit aarretta?" — kuiva vitsi
+       * myrskyssä.
+       */
+      tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.45 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       mykistetyt: [],
       otsikko: 'Islanti — kello jota lähde ei lue',
       /*
@@ -2347,6 +2534,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'aden',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Aden — kaupunki maljan pohjalla',
@@ -2384,6 +2573,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'ankara',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Ankara — vuohien valkoinen kulta',
@@ -2425,6 +2616,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'bagdad',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Bagdad — kirjurien kaupunki',
@@ -2464,6 +2657,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'damaskos',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Damaskos — kangas joka sai kaupungin nimen',
@@ -2501,6 +2696,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'doha',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Doha — purjeet jotka odottavat tuulta',
@@ -2543,6 +2740,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'dubai',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * aarre: lukutaidoton isoisä rasvasi lippaan joka kuukausi —
+       * liikuttava, ei uhkaava.
+       */
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'lammin', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Dubai — lahti joka ylitetään soutaen',
@@ -2583,6 +2787,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'halab',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Halab — saippua joka kypsyy vuosia',
@@ -2623,6 +2829,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'isfahan',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * aarre: "joku istuu iltaisin siellä, missä ei pitäisi olla ketään".
+       */
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'jannitys', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Isfahan — kaiku joka lauloi loppuun',
@@ -2662,6 +2874,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'izmir',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Izmir — viikunoiden satama',
@@ -2699,6 +2913,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'jerusalem',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       nimi: 'Elias',
@@ -2741,6 +2957,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'kairo',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "se oli oikeassa silloin kun kaikki muut mitat
+       * valehtelivat" — suvun ylpeys viivasta.
+       */
+      tunneKohtaaminen: { tunne: 'ylpea', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Kairo — joen mitta',
@@ -2781,6 +3004,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'kapadokia',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: käytävä pelasti suvun, "kun maan päällä ei ollut
+       * turvaa".
+       */
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Kapadokia — kaupunki maan alla',
@@ -2825,6 +3055,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'kuwait',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Kuwait — kaupunki joka juo merestä tuodun joen',
@@ -2865,6 +3097,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'luxor',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: Ahmed "puhuu hiljaa" säilytettäväksi jätetystä
+       * salaisuudesta.
+       */
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Luxor — laakso joka vartioi kuninkaitaan',
@@ -2902,6 +3141,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'masqat',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Masqat — kahden linnoituksen satama',
@@ -2946,6 +3187,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'medina',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "Kirjasi mies sotki tämän kuvion" — epäilevä katse,
+       * joka vasta pehmenee.
+       */
+      tunneKohtaaminen: { tunne: 'miettiva', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Medina — kuvio joka jäi kesken',
@@ -3009,6 +3257,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'mekka',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * aarre: "saattakoon se nyt sinut" on siunaus, ei varoitus.
+       */
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'lammin', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       nimi: 'Bilal',
@@ -3048,6 +3302,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'mosul',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Mosul — kangas ohuempi kuin aamu-usva',
@@ -3086,6 +3342,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'nikosia',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: "Oletko varma, että pidät edes sivua oikein päin?" —
+       * nokkava kiusoittelu.
+       */
+      tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Nikosia — väärältä puolelta',
@@ -3149,6 +3412,12 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'persepolis',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * aarre: "kolme aamua sitten koko lauma pysähtyi tähän".
+       */
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'jannitys', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Persepolis — kulkue joka ei koskaan pääty',
@@ -3190,6 +3459,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'petra',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Petra — kallioon veistetty aarrekammio',
@@ -3232,6 +3503,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'riad',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Riad — savilinnojen kaupunki',
@@ -3272,6 +3545,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'rubalkhali',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: jälkien lukeminen askel askeleelta; aarre: "se, joka
+       * peittää jälkiä, aikoo palata".
+       */
+      tunneKohtaaminen: { tunne: 'utelias', voimakkuus: 0.55 },
+      tunneAarre: { tunne: 'jannitys', voimakkuus: 0.6 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Rub al-Khali — hiekka joka laulaa',
@@ -3312,6 +3592,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'salalah',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Salalah — rannikko joka vihertyy',
@@ -3354,6 +3636,13 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'sana',
+      /*
+       * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
+       * kohtaaminen: ikkuna, jolle ei löydy aukkoa koko kaupungista — Hamza
+       * on mitannut itse.
+       */
+      tunneKohtaaminen: { tunne: 'miettiva', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Sanaa — tornitalojen kaupunki',
@@ -3395,6 +3684,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'siinai',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Siinai — kirjasto vuorten sylissä',
@@ -3434,6 +3725,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'tabriz',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Tabriz — basaari jolla ei näy loppua',
@@ -3476,6 +3769,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'teheran',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Teheran — sali joka on tehty peileistä',
