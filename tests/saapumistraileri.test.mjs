@@ -29,6 +29,7 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 import {
   naytaSaapumistraileri, piilotaSaapumistraileri, trailerinKuvat,
@@ -490,4 +491,29 @@ test('moduuli ja sen tyyli ovat esilataus- ja niputuslistoilla', async () => {
   assert.match(nippu, /'css\/saapumistraileri\.css',/);
   // Traileri ennen fokusvirtaa: fokusvirta tuo sen staattisesti.
   assert.ok(nippu.indexOf("'js/saapumistraileri.js'") < nippu.indexOf("'js/fokusvirta.js'"));
+});
+
+/* ---------------------------------------------------------------- */
+/* Kuvan koko ja lähtevän kuvan häipyminen (omistaja 11.9.2026)      */
+/* ---------------------------------------------------------------- */
+
+test('kuva täyttää annetun leveyden eikä jää omaan pikselikokoonsa', () => {
+  const css = readFileSync(new URL('../css/saapumistraileri.css', import.meta.url), 'utf8');
+  const lohko = css.slice(css.indexOf('.saapumistraileri-kuva img {'));
+  // Kommentit pois: ne puhuvat vanhasta säännöstä eivätkä ole sääntöjä.
+  const saanto = lohko.slice(0, lohko.indexOf('}')).replace(/\/\*[\s\S]*?\*\//g, '');
+  assert.match(saanto, /width:\s*92vw/,
+    'omistaja 11.9.2026: "Kuvat tulevat liian pieninä" — leveys on annettava');
+  assert.doesNotMatch(saanto, /width:\s*auto/, 'width: auto jättää pienen kuvan pieneksi');
+  assert.match(saanto, /max-height:\s*80vh/, 'korkeuskatto puuttuu: pystykuva karkaisi ruudun yli');
+});
+
+test('lähtevä kuva häipyy liukuessaan eikä jää ruudun laitaan', () => {
+  const css = readFileSync(new URL('../css/saapumistraileri.css', import.meta.url), 'utf8');
+  const lohko = css.slice(css.indexOf('.saapumistraileri-kuva.ulos {'));
+  const saanto = lohko.slice(0, lohko.indexOf('}'));
+  assert.match(saanto, /opacity:\s*0/,
+    'omistaja 11.9.2026: "edellinen jää sivuun näkymään"');
+  assert.match(saanto, /opacity var\(--traileri-ulos\)/,
+    'häivytyksen on kestettävä koko liu\'un ajan, ei 260 ms');
 });

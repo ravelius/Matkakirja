@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 1774, teksti: 'Napakalotit: oikea kartta molemmille navoille' },
+  { v: 1774, teksti: 'Napakalotit ja trailerin isommat kuvat' },
   { v: 1773, teksti: 'Kuvagalleria pois koko pelistä' },
   { v: 1772, teksti: 'Kuva ja Etsi aarre pienenevät kartan tahdissa' },
   { v: 1771, teksti: 'Etelänavalta julisteen painatusteksti pois' },

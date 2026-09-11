@@ -4327,6 +4327,16 @@ export const RAAMATTU = {
           + 'tilauksen 23.8.2026. Moduuli js/kuvagalleria.js jaa paikalleen ja '
           + 'vakio KUVAGALLERIA_KAYTOSSA on epatosi: galleria saadaan takaisin '
           + 'yhdella vaihdolla, jos omistaja niin haluaa. Toteutettu v1773.',
+        'MINITRAILERIN KUVAT ISOINA, LAHTEVA HAIPYY (omistaja 11.9.2026, '
+          + 'iPad-kaappaus Tallinnasta, sanatarkasti: "Kuvat tulevat liian '
+          + 'pienina ja edellinen jaa sivuun nakymaan"): trailerin herokuva '
+          + 'tayttaa annetun leveyden (92 vw) myos silloin, kun alkuperaiskuva '
+          + 'on sita pienempi - aiemmin width: auto jatti kuvan omaan '
+          + 'pikselikokoonsa ja iPadilla se nakyi noin 60 %:n levyisena. '
+          + 'Lisaksi ulos liukuva kuva haipyy liukunsa ajan lapinakyvaksi, '
+          + 'joten laitaan ei jaa puolikasta kuvaa uuden rinnalle; kuvien '
+          + 'limitys itse sailyy. Tarkentaa linjausta SAAPUMISEN UUSI '
+          + 'JARJESTYS. Toteutettu v1775.',
         'KARTAN ESINEET PIENENEVAT KARTAN TAHDISSA (omistaja 11.9.2026, '
           + 'kaappaus maailmanakymasta, sanatarkasti: "Valokuvat ja etsi aarre '
           + 'teksti eivat pienene kartan kanssa samaa tahtia ja jaavat liian '
