@@ -495,10 +495,10 @@ fokuskaupunkia; Tukholmalla ja Sofialla myös `sahketehtava`).
 
 | ID | Näkymä | Tiedosto:kohta | Alku → loppu | Tunne (voim.) | Ajoitus / toisto | Prioriteetti / keskeytys | Paluu | Asusteet / katse | Mobiili / modaali | Tila | Testipolku |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `kohtaaminen.<id>.tervehdys` — yhteiset ehdot (41 + 8 riviä) | visakortin sivu 1 | js/visa.js `renderQuiz` → `tervehdys`; js/packs/tarinakaari.js / js/packs/kohtaamiset.js | tervehdys kirjoittuu → "Aloita peli" | oletus **`lammin` (0,5)**; poikkeukset alla | kerran per pakka+kaupunki (`ui.kohtaamisetNahty`) | ei kertojan luennan päälle (kertoja ei lue tervehdystä); tagi kuplan alussa | perustila | katse hahmon kuvaan (js/kohtaamiskuvat-data.js) | modaali, kuva iso; sivulla 2 kuva kutistuu | D | tests/kohtaamistesti.test.mjs, tests/kohtaamisbriefit.test.mjs |
-| `kohtaaminen.<id>.loyto` — yhteiset ehdot | tuloskortti | js/visa.js `renderQuiz` (`quiz.explore` tai `quiz.found` → `kohtaaminen.loyto`) | hahmon repliikki löydöstä; Lontoossa myös `loytoLuenta` (ääni) | **`ilo` (0,7)** | kerran per kysymys; luenta vain kerran (`ui.loytoLuentaFor`) | jos luenta soi, tagi ENNEN luentaa, ei kesken | perustila | katse hahmoon | modaali | D | tests/kohtaamistesti.test.mjs |
-| `kohtaaminen.<id>.tyhja` — yhteiset ehdot | tuloskortti | js/visa.js (`kohtaaminen.tyhja`) | "Tyhjä…" | `miettiva` (0,45) | kerran; ei lueta ääneen | ei `hammentynyt`: oikea vastaus meni silti oikein | perustila | — | modaali | D | tests/kohtaamistesti.test.mjs |
-| `kohtaaminen.<id>.vaarin` — yhteiset ehdot | tuloskortti | js/visa.js (`kohtaaminen.vaarin`) | lohdutusrepliikki | `hammentynyt` (0,4) | kerran; ei lueta ääneen | sama tagi kuin `aarre.vastaus.vaarin` — vain toinen laukaistaan | perustila | — | modaali | D | tests/kohtaamistesti.test.mjs |
+| `kohtaaminen.<id>.tervehdys` — yhteiset ehdot (41 + 8 riviä) | visakortin sivu 1 | js/visa.js `renderQuiz` → `tervehdys`; js/packs/tarinakaari.js / js/packs/kohtaamiset.js | tervehdys kirjoittuu → "Aloita peli" | oletus **`lammin` (0,5)**; poikkeukset alla | kerran per pakka+kaupunki (`ui.kohtaamisetNahty`) | ei kertojan luennan päälle (kertoja ei lue tervehdystä); tagi kuplan alussa | perustila | katse hahmon kuvaan (js/kohtaamiskuvat-data.js) | modaali, kuva iso; sivulla 2 kuva kutistuu | **M** | tests/kohtaamistesti.test.mjs, tests/kohtaamisbriefit.test.mjs |
+| `kohtaaminen.<id>.loyto` — yhteiset ehdot | tuloskortti | js/visa.js `renderQuiz` (`quiz.explore` tai `quiz.found` → `kohtaaminen.loyto`) | hahmon repliikki löydöstä; Lontoossa myös `loytoLuenta` (ääni) | **`ilo` (0,7)** | kerran per kysymys; luenta vain kerran (`ui.loytoLuentaFor`) | jos luenta soi, tagi ENNEN luentaa, ei kesken | perustila | katse hahmoon | modaali | **M** | tests/kohtaamistesti.test.mjs |
+| `kohtaaminen.<id>.tyhja` — yhteiset ehdot | tuloskortti | js/visa.js (`kohtaaminen.tyhja`) | "Tyhjä…" | `miettiva` (0,45) | kerran; ei lueta ääneen | ei `hammentynyt`: oikea vastaus meni silti oikein | perustila | — | modaali | **M** | tests/kohtaamistesti.test.mjs |
+| `kohtaaminen.<id>.vaarin` — yhteiset ehdot | tuloskortti | js/visa.js (`kohtaaminen.vaarin`) | lohdutusrepliikki | `hammentynyt` (0,4) | kerran; ei lueta ääneen | sama tagi kuin `aarre.vastaus.vaarin` — vain toinen laukaistaan | perustila | — | modaali | **M** | tests/kohtaamistesti.test.mjs |
 | `kohtaaminen.kuva.avaus` | kohtaamiskuva suurennoksena | js/visa.js `ui.naytaKohtaamiskuva`; js/kohtaamiskuvat-data.js; js/kuvatekstit.js | kuva avataan koko näytölle | `utelias` (0,45) | joka avauksella, mutta enintään kerran per kortti | ei kilpaile tervehdyksen kanssa | perustila | katse kuvaan | lightbox | D | tests/kohtaamiskuvat.test.mjs, tests/kuvasuurennos.test.mjs |
 | `kohtaaminen.varmistus` | varmistuskysymys | js/packs/fokusvirta-*.js `kohtaaminen.varmistus` | dialogi ("Haluatko varmasti tavata Dafnin juuri nyt?") | `jannitys` (0,5) | kerran per painallus | — | perustila | — | modaali | D | tests/fokusvirta.test.mjs |
 | `kohtaaminen.piste` | kartan vihreä piste | js/fokuspiste.js; js/fokusvirta.js `fokusvirtaKohtaaminenPisteessa`; data `kohtaamispiste` | piste syttyy kartalle | `ilo` (0,55) | kerran per kaupunki; sammuu kun aarre on avattu | ei toistu joka piirrolla | perustila | katse pisteeseen | kartta | D | tests/fokusvirta.test.mjs |
@@ -920,10 +920,24 @@ käyttäytyy täsmälleen kuten tänään (ei elettä).
    merkkijonoliitoksella (`kohtaaminen['tunne' + Nimi]`). Oletukset
    annetaan js/visa.js:ssä vakioina → kentät kirjoitetaan vain
    poikkeuksiin (E2:n taulukko).
+   **TEHTY 11.9.2026 (Fable):** kaikki neljä kenttää on kirjoitettu
+   kaikille kahdeksalle kaupungille — omistajan prioriteetti "Pulu
+   valmiiksi kaikissa pelitilanteissa" voittaa "vain poikkeuksiin",
+   jottei yksikään repliikki jää vaille tagia, jos js/visa.js:n vakiot
+   joskus muuttuvat. Poikkeukset ovat E2:n taulukon mukaiset, muut
+   oletuksia (löytö ilo 0,7 · tyhjä miettiva 0,45 · väärin hammentynyt
+   0,4). Perustelu on jokaisen kaupungin kommentissa;
+   tests/kohtaamistagit.test.mjs vartioi kattavuutta ja taulukkoa.
 3. **js/tyohuone-kehitys-data.js — `KAARI_PAKETIT.kohteet[i]`:
    `tunneKohtaaminen`, `tunneAarre`** (41 kaarikohdetta). js/packs/
    tarinakaari.js kopioi kohteen sellaisenaan, joten kentät ovat pelissä
    ilman muutoksia hakemistoon; työhuoneen esikatselu ei riko.
+   **TEHTY 11.9.2026 (Fable):** kentät on kirjoitettu kaikille 69
+   kohteelle (41 Euroopan kohdetta + 28 Lähi-idän kohdetta; jokaisella
+   on sekä kohtaamis- että aarreteksti). Oletukset kohtaaminen lammin
+   0,5 ja aarre vakava 0,55; sodan varjossa olevat kiova, odessa,
+   varsova ja sarajevo saavat vakavan 0,55. Muut poikkeamat on
+   perusteltu kohteen kommentissa repliikin sanoista.
 4. **Ihmisen matkan 14 jaksoa ilman tagia**: afrikka, siirtyma-afrikka,
    omo, levantti, arabia, intian-rannat (ehdotettu hiljaisuus),
    napapiiri, white-sands, chile, aikahyppy (ehdotettu hiljaisuus),
