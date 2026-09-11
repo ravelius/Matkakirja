@@ -10,7 +10,14 @@ import { asennaLivianChatTila } from './livia-chat-tila.js';
 import { livianYlinDialogi, livianDialogiSalliiReaktion, seuraaLivianDialogeja } from './livia-dialogitila.js';
 
 /** Jo näkyvä täytelause määrää liikkeen. Ei uutta repliikkiä tai arvontaa. */
+const LIVIAN_MIETINTAELEET=new Map(Object.entries({
+ 'Hetki, pululla pulla suussa..':'crumb','Odotas, sulka jäi mustepulloon..':'preen','Kaivan sähkeitä, siellä oli jotain tästä..':'peek','Hetkinen, lento vastatuuleen..':'wind','Annas kun mietin. Tai ei — kysyn joltain viisaammalta..':'flyAway','Odota, järjestän ajatukseni oksalle..':'think','Muistan lukeneeni tästä. Mistäs se nyt olikaan..':'think','Setä tiesi tästä jotain. Mietin hetken..':'think','Pieni hetki, untuvia sähkekoneessa..':'preen','Katsotaas. Nokka kirjaan, siipi kartalle..':'bookStudy','Hetki vain, kynä on väärässä siivessä..':'confused','Odotas, luen omat muistiinpanoni. Käsiala on kanan..':'reading','Hetkinen, kirjastonhoitaja on pöllö ja pöllö nukkuu päivisin..':'listen','Pieni hetki, arkiston ovi on jumissa..':'confused','Hetki, tarkistan asian kahdesta paikasta..':'think','Odotas, pudotin muistiinpanot katolle..':'flyAway','Pieni hetki, tästä on jossain sähke..':'peek','Nokka kiinni, minä ajattelen..':'think','Hetkinen, siivet ovat vielä märät sateesta..':'rain','Odota, tämä vaatii kaksi kierrosta tornin ympäri..':'flyAway','Annas kun kaivan tämän muistista. Siellä on ruuhkaa..':'think','Pieni hetki, pulla ensin ja tieto sitten..':'crumb','Hetki vain, kartta on väärinpäin..':'confused','Odotas, luen sen pienellä painetun kohdan..':'bookStudy','Katsotaas, mistä tämä lankakerä alkaa..':'think','Hetkinen, kysyn asiaa oikealta linnulta..':'flyAway','Pieni hetki, arkiston hyllyt ovat minua korkeammalla..':'peek','Odota, tässä on kaksi vastausta ja minä valitsen paremman..':'think','Hetki, murut pois kirjan päältä..':'crumb','Annas kun istun alas. Tämä on istumakysymys..':'think','Pieni hetki, sähkekone rätisee taas..':'scratch','Odotas, muistin juuri jotain ja unohdin sen..':'confused','Hetkinen, tämä osui johonkin minkä olen itse nähnyt..':'think','Katson tästä ikkunasta, näkyisikö vastaus..':'lookRight','Pieni hetki, järjestän faktat riviin..':'think','Hetki, tuuli vei yhden sivun..':'wind',
+ 'Hyvä kysymys. Käyn kysymässä pöllöltä, pieni hetki..':'flyAway','Tää on pöllön heiniä. Vien viestin, palaan pian..':'flyAway','Minä tiedän kenelle tämä kuuluu. Käyn lentämässä..':'flyAway','Otan tämän kysymyksen mukaani. Kaksi kaartoa ja palaan..':'flyAway','Tämän minä tiedän. Tai tiedän kenen luota se löytyy..':'flyAway','Hyvä että kysyit. Käyn hakemassa tarkan luvun..':'flyAway','Tästä on kirjoitettu. Etsin mistä..':'bookStudy','Sopiva kysymys minulle. Hetki, tarkistan etten muista väärin..':'think','Tuohon on vastaus. Se on vain hieman kaukana..':'flyAway',
+ 'No nyt kesti. Pöllöllä on pitkä puheenvuoro..':'listen','Vieläkin menossa. Vastatuuli oli luvattua kovempi..':'wind','Kohta tulee. Arkistossa oli enemmän pölyä kuin muistin..':'sneeze','Kestää vielä. Löysin matkalta kaksi mielenkiintoista sivupolkua..':'flyAway','Pian. Sain vastauksen, mutta se oli väärään kysymykseen..':'confused','Vielä hetki. Tämä on isompi asia kuin miltä se näytti..':'think','Anteeksi viive. Pöllö puhuu hitaasti ja pitkästi..':'listen',
+}));
+export const onkoLivianTarkkaMietinta=teksti=>LIVIAN_MIETINTAELEET.has(String(teksti).trim());
 export function livianMietintaEle(teksti='') {
+ const tarkka=LIVIAN_MIETINTAELEET.get(String(teksti).trim());if(tarkka)return tarkka;
  if(/pulla|pullalla|mur[uui]/iu.test(teksti))return 'crumb';
  if(/sulki|sulka|siiven alla|kynä.*siiv/iu.test(teksti))return 'preen';
  if(/mär|sade/iu.test(teksti))return 'rain';
@@ -65,15 +72,74 @@ export function asennaLivianKasvot(pollo) {
  let nostoTila=null;
  let lehtiPaalla=false,lasitPuettu=false,lehtiVuoro=0,odotusVuoro=0;
  let ensiliito=false;
+ let alkulento=null;
+ let traileri=null;
+ let chatOdotus=null;
  const odotukset=new Set();
  const pitkatOdotukset=new Map();
  const luennat=new Map();
  // Vain viimeisen luennan rajattu loppupoikkeus. Ei jonoa eikä ajastinta:
  // vastaanotto sulkeutuu 500 ms:ssa, jo alkanut ele saa oman kestonsa.
  let luennanLoppu=null;
+ const kohtausPiilossa=()=>Boolean(alkulento||traileri);
+ function piilotaKohtaukseen(){katkaise();lepoTila=null;pinta.style.transition='none';pinta.style.opacity='0';}
+ function palautaKohtauksesta(){pinta.style.transition=vahenna?.matches?'opacity 180ms ease':'';pinta.style.opacity='1';lepoTila=null;}
+ function tyhjennaTraileri({palauta=false}={}){if(traileri?.ajastin)clearTimeout(traileri.ajastin);traileri=null;if(palauta&&!alkulento)palautaKohtauksesta();}
+ function tyhjennaAlkulento({palauta=false}={}){if(alkulento?.ajastin)clearTimeout(alkulento.ajastin);alkulento=null;if(palauta&&!traileri)palautaKohtauksesta();}
+ function palaaAlkulennosta(){if(!alkulento||doc.hidden)return false;tyhjennaAlkulento();palautaKohtauksesta();if(vahenna?.matches){piirra(lepo());return true;}return nakyy()?toista('trailerBack',{hiljaa:true,omistaja:'startFlight'}):(piirra(lepo()),false);}
+ function palaaTrailerista(){
+  if(!traileri||doc.hidden)return false;const tila=traileri;tyhjennaTraileri();palautaKohtauksesta();
+  if(vahenna?.matches){pinta.style.opacity='1';piirra(lepo());return true;}
+  if(!nakyy()||odotukset.size||odotusrivi){piirra(lepo());return false;}
+  return toista('trailerBack',{hiljaa:true,omistaja:'trailer',tunnus:tila.tunnus});
+ }
+ function traileritilanne(tiedot){
+  const vaihe=tiedot?.vaihe,tunnus=tiedot?.tunnus;if(!tunnus)return false;
+  if(vaihe==='kirjaimet'){
+   if(traileri?.tunnus===tunnus)return false;
+   const jatkaaAlkulennosta=Boolean(alkulento);tyhjennaAlkulento();tyhjennaTraileri();traileri={tunnus,luenta:null,loppui:false,ajastin:0};
+   if(jatkaaAlkulennosta){piilotaKohtaukseen();return true;}
+   if(vahenna?.matches){pinta.style.transition='opacity 180ms ease';pinta.style.opacity='0';return true;}
+   if(!nakyy()){lepoTila=livianSvgAsento('trailerFlee',1);piirra(lepoTila);return false;}
+   return toista('trailerFlee',{hiljaa:true,omistaja:'trailer',tunnus});
+  }
+  if(!traileri||traileri.tunnus!==tunnus)return false;
+  if(vaihe==='peru'){katkaise();tyhjennaTraileri({palauta:true});piirra(lepo());return true;}
+  if(vaihe!=='loppu')return false;
+  traileri.loppui=true;
+  if(traileri.luenta)return palaaTrailerista();
+  if(traileri.ajastin)return false;
+  traileri.ajastin=setTimeout(()=>{if(traileri?.tunnus===tunnus){traileri.ajastin=0;palaaTrailerista();}},3000);return true;
+ }
+ function alkulentotilanne(tiedot){
+  const vaihe=tiedot?.vaihe,tunnus=tiedot?.tunnus;if(!tunnus)return false;
+  if(vaihe==='alku'){
+   if(alkulento?.tunnus===tunnus)return false;
+   alkulento={tunnus,loppui:false,luenta:null,ajastin:0};tyhjennaTraileri();piilotaKohtaukseen();return true;
+  }
+  if(!alkulento||alkulento.tunnus!==tunnus)return false;
+  if(vaihe==='peru'){katkaise();tyhjennaAlkulento({palauta:true});piirra(lepo());return true;}
+  if(vaihe==='loppu'){alkulento.loppui=true;if(tiedot.odottaaTraileria===false&&!alkulento.ajastin)alkulento.ajastin=setTimeout(()=>{if(alkulento?.tunnus===tunnus){alkulento.ajastin=0;palaaAlkulennosta();}},3000);return true;}
+  return false;
+ }
  function peruPitkaOdotus(tunnus){const tila=pitkatOdotukset.get(tunnus);if(tila?.ajastin)clearTimeout(tila.ajastin);pitkatOdotukset.delete(tunnus);}
+ function tyhjennaChatOdotus({lepoon=false}={}){
+  const tila=chatOdotus;chatOdotus=null;if(!tila)return false;
+  if(nykyinen?.omistaja?.startsWith('chatWait'))katkaise();
+  if(lepoon){pinta.style.transition='';pinta.style.opacity='';lepoTila=null;piirra(lepo());}
+  return true;
+ }
+ function chatVastaus(tiedot){
+  if(!chatOdotus||chatOdotus.tunnus!==tiedot?.tunnus||chatOdotus.vastattu)return false;
+  const tila=chatOdotus;tila.vastattu=true;odotukset.delete(tila.tunnus);peruPitkaOdotus(tila.tunnus);odotusrivi=null;odotusteksti='';
+  if(doc.hidden||!pollo.auki||!nakyy()){tyhjennaChatOdotus({lepoon:true});return false;}
+  if(vahenna?.matches){tyhjennaChatOdotus();pinta.style.transition='opacity 180ms ease';pinta.style.opacity='1';piirra(livianSvgAsento('bookStudy',.42));return true;}
+  if(!tila.lahti){tyhjennaChatOdotus();return toista('bookStudy',{hiljaa:true,omistaja:'chatAnswer'});}
+  chatOdotus=null;lepoTila=null;pinta.style.transition='';pinta.style.opacity='1';
+  return toista('flyBack',{hiljaa:true,omistaja:'chatAnswer',duration:1500,fromProgress:.18,valmis:()=>{if(pollo.auki&&!doc.hidden)toista('bookStudy',{hiljaa:true,omistaja:'chatAnswer'});}});
+ }
  function yritaPitkaaOdotusta(){
-  if(nykyinen||puhe||luennat.size||!nakyy()||vahenna?.matches)return false;
+  if(chatOdotus||nykyinen||puhe||luennat.size||!nakyy()||vahenna?.matches)return false;
   const rivi=[...pitkatOdotukset].find(([tunnus,tila])=>odotukset.has(tunnus)&&tila.valmis&&!tila.esitetty);
   if(!rivi)return false;
   const onnistui=toista('confused',{hiljaa:true,omistaja:'waiting',voimakkuus:.3});
@@ -110,6 +176,10 @@ export function asennaLivianKasvot(pollo) {
   pinta.hidden=!nappiNakyy()||Boolean(ylin&&nappi.closest?.('dialog[open]')!==ylin);
  }
  const piirra=s=>{if(!kuollut){viimeAsento=s;sijoita();
+  // Kohtaus omistaa myös suorat piirrot: puhe, napin näkyvyys ja
+  // taustalta paluu eivät saa palauttaa levossa olevaa lintua sen alle.
+  // Vain jo alkanut trailerin väistö saa näkyä matkallaan pois.
+  if(kohtausPiilossa()&&!(nykyinen?.omistaja==='trailer'&&nykyinen.id==='trailerFlee'))pinta.style.opacity='0';
   const lasit=!lasitPuettu&&s.ele==='glasses'&&s.p<.32?Math.max(0,Math.min(1,(s.p-.12)/.20)):1;
   if(lehtiPaalla&&lasit>=1)lasitPuettu=true;
   kasvot.paint(lehtiPaalla?{...s,glasses:lasit}:s);
@@ -146,7 +216,8 @@ export function asennaLivianKasvot(pollo) {
     osuus=Math.min(1,(nykyinen.fromProgress||0)+(nyt-alkoi)/nykyinen.duration);iskut();
     if(osuus>=1){
       const valmis=nykyinen;nykyinen=null;
-      if(['leaveRight','leaveDown','flyAway','walkRight'].includes(valmis.id))lepoTila=livianSvgAsento(valmis.id,1);
+      if(['leaveRight','leaveDown','flyAway','walkRight','trailerFlee'].includes(valmis.id))lepoTila=livianSvgAsento(valmis.id,1);
+      if(valmis.id==='bookStudy'&&puhe)lepoTila=livianSvgAsento('bookStudy',.5);
       if(valmis.nuku)lepoTila={...lepo(),frame:'sleep',y:3,tilt:1};
       if(valmis.jatko)jatkoAjastin=setTimeout(()=>toista(valmis.jatko,{hiljaa:valmis.hiljaa}),800);
       // Kortti saa yhden avauseleen. Sen jälkeen yhä soiva lukija
@@ -163,6 +234,7 @@ export function asennaLivianKasvot(pollo) {
  function toista(id,asetukset={}){
   if(id==='owl')id='flyAway';
   const ele=LIVIA_SVG_ELEET.find(e=>e.id===id);if(!ele||kuollut)return false;
+  if(kohtausPiilossa()&&!['startFlight','trailer'].includes(asetukset.omistaja))return false;
   katkaise();lepoTila=null;
   if(!nakyy()||(vahenna?.matches&&asetukset.omistaja!=='reaction')){piirraNyt(performance.now());return false;}
   nykyinen={...ele,voimakkuus:livianEleenVoima(id),...asetukset};osuus=asetukset.fromProgress||0;aaniIndeksi=0;alkoi=performance.now();viimeEle=alkoi;viimePiirto=-Infinity;
@@ -184,6 +256,10 @@ export function asennaLivianKasvot(pollo) {
  }
  function tilanne(laji,tiedot={}){
   if(kuollut)return false;
+  if(laji==='startFlight')return alkulentotilanne(tiedot);
+  if(laji==='trailer')return traileritilanne(tiedot);
+  if(laji==='waitingAnswer')return chatVastaus(tiedot);
+  if(laji==='chatClose')tyhjennaChatOdotus({lepoon:true});
   if(['chatOpen','microphone','waiting','card'].includes(laji)){
    peruLoppu();
    if(nykyinen?.omistaja==='reaction'){katkaise();piirraNyt(performance.now());}
@@ -195,6 +271,8 @@ export function asennaLivianKasvot(pollo) {
    }
    if(nykyinen?.omistaja==='reaction'&&(uusi||nykyinen.luentaTunnus!==tiedot.tunnus))katkaise();
    luennat.set(tiedot.tunnus,tiedot);
+   if(traileri&&tiedot.lahde==='matkakirja'&&!traileri.luenta){if(traileri.ajastin)clearTimeout(traileri.ajastin);traileri.ajastin=0;traileri.luenta=tiedot.tunnus;if(traileri.loppui)palaaTrailerista();}
+   if(alkulento?.loppui&&tiedot.lahde==='matkakirja'&&!alkulento.luenta){if(alkulento.ajastin)clearTimeout(alkulento.ajastin);alkulento.ajastin=0;alkulento.luenta=tiedot.tunnus;palaaAlkulennosta();}
   }
   if(laji==='reactionEnd'){
    if(luennanLoppu?.tunnus===tiedot.luentaTunnus)peruLoppu();
@@ -221,18 +299,29 @@ export function asennaLivianKasvot(pollo) {
   if(laji==='waiting'){
    odotukset.add(tiedot.tunnus);viimeToimi=performance.now();
    if(!pitkatOdotukset.has(tiedot.tunnus)){pitkatOdotukset.set(tiedot.tunnus,{ajastin:0,valmis:false,esitetty:false});ajastaPitkaOdotus(tiedot.tunnus);}
+   if(pollo.auki){
+    const oliPoissa=Boolean(chatOdotus?.lahti||lepoTila?.flight||nykyinen?.id==='flyAway');
+    if(chatOdotus&&chatOdotus.tunnus!==tiedot.tunnus){
+     if(oliPoissa){chatOdotus={tunnus:tiedot.tunnus,lahti:true,vastattu:false};return true;}
+     tyhjennaChatOdotus();
+    }
+    chatOdotus={tunnus:tiedot.tunnus,lahti:oliPoissa,vastattu:false};return true;
+   }
    if(!puhe&&!luennat.size)toista(lehtiPaalla?'scratch':'think',{hiljaa:true,omistaja:'waiting'});
    return true;
   }
   if(laji==='waitingEnd'){
    odotukset.delete(tiedot.tunnus);
    peruPitkaOdotus(tiedot.tunnus);
+   if(chatOdotus?.tunnus===tiedot.tunnus&&!chatOdotus.vastattu)tyhjennaChatOdotus({lepoon:true});
    if(!odotukset.size){odotusrivi=null;odotusteksti='';
     if(!puhe&&!luennat.size&&(!nykyinen||nykyinen.omistaja==='waiting'))palaa();
    }
    return true;
   }
   if(laji==='narrationEnd'||laji==='cardEnd'){
+   const trailerinLuenta=laji==='narrationEnd'&&traileri?.luenta===tiedot.tunnus;
+   const lennonJalkeinenLuenta=laji==='narrationEnd'&&alkulento?.loppui&&alkulento.luenta===tiedot.tunnus;
    if(laji==='narrationEnd'){
     const viimeinen=[...luennat.values()].at(-1);
     if(luennanLoppu?.tunnus===tiedot.tunnus){
@@ -250,6 +339,8 @@ export function asennaLivianKasvot(pollo) {
    if(nykyinen?.omistaja===omistaja&&(!tiedot.tunnus||nykyinen.tunnus===tiedot.tunnus)){katkaise();piirraNyt(performance.now());kaynnista();}
    if(laji==='cardEnd'||!nykyinen)jatkaKuunteluaTaiOdotusta();
    if(!nykyinen)piirraNyt(performance.now());
+   if(trailerinLuenta)palaaTrailerista();
+   if(lennonJalkeinenLuenta)palaaAlkulennosta();
    return false;
   }
   const nyt=performance.now();
@@ -303,6 +394,16 @@ export function asennaLivianKasvot(pollo) {
   if(rivi===odotusrivi&&teksti===odotusteksti)return;
   const oli=odotusrivi,ele=nykyinen?.id;odotusrivi=rivi;odotusteksti=teksti;
   if(!rivi){if(oli&&!odotukset.size&&!luennat.size&&!puhe&&(!nykyinen?.omistaja||nykyinen.omistaja==='waiting'))palaa();return;}
+  if(chatOdotus&&odotukset.has(chatOdotus.tunnus)){
+   if(chatOdotus.lahti)return;
+   const odotusele=livianMietintaEle(teksti);
+   if(odotusele==='flyAway'){
+    chatOdotus.lahti=true;
+    if(vahenna?.matches){katkaise();lepoTila=livianSvgAsento('flyAway',1);pinta.style.transition='opacity 180ms ease';pinta.style.opacity='0';}
+    else toista('flyAway',{hiljaa:true,omistaja:'chatWaiting',tunnus:chatOdotus.tunnus});
+   }else if(!puhe&&!luennat.size)toista(odotusele,{hiljaa:true,omistaja:'chatWaiting',tunnus:chatOdotus.tunnus});
+   return;
+  }
   if(odotukset.size)return;
   if(puhe||luennat.size||rivi===oli&&(ele==='flyAway'||lepoTila?.flight))return;
   toista(livianMietintaEle(teksti),{voimakkuus:livianEleenVoima(livianMietintaEle(teksti),teksti)});
@@ -317,7 +418,7 @@ export function asennaLivianKasvot(pollo) {
   clearTimeout(kello);if(kuollut||vahenna?.matches)return;
   kello=setTimeout(()=>{
    const nyt=performance.now(),tauko=nyt-viimeToimi;
-   if(!nykyinen&&!puhe&&!luennat.size&&nakyy()&&odotukset.size){
+   if(!chatOdotus&&!nykyinen&&!puhe&&!luennat.size&&nakyy()&&odotukset.size){
     toista(lehtiPaalla?'scratch':['think','lookRight','reading'][odotusVuoro++%3],{hiljaa:true,omistaja:'waiting'});
    }else if(!nykyinen&&!puhe&&!luennat.size&&nakyy()&&lehtiPaalla&&!pollo.auki&&nyt-viimeEle>=22000){
     toista(['scratch','eyeRub'][lehtiVuoro++%2],{hiljaa:true});
@@ -332,7 +433,7 @@ export function asennaLivianKasvot(pollo) {
  function saapuminen(){if(!ensisaapuminen){ensisaapuminen=true;toista('handoff');}else toista(++paluuVuoro%7===0?'glassCrash':'clumsyLand');}
  const nappiVahti=new MutationObserver(()=>{
   chatTila?.paivita();nostoTila?.paivita();
-  const n=nappiNakyy();if(!nakyy()){peruLoppu();ensiliito=false;katkaise();piirra(lepo());}else{paikkaMuuttui();if(!oliNakyva)saapuminen();}oliNakyva=n;
+  const n=nappiNakyy();if(!nakyy()){peruLoppu();ensiliito=false;katkaise();piirra(lepo());}else{paikkaMuuttui();if(!oliNakyva&&!kohtausPiilossa())saapuminen();}oliNakyva=n;
   if(Boolean(pollo.auki)!==auki){auki=Boolean(pollo.auki);odotusrivi=null;odotusteksti='';
    if(auki){peruLoppu();if(nykyinen?.omistaja==='reaction'){katkaise();piirraNyt(performance.now());}}
    if(!puhe)tilanne(auki?'chatOpen':'chatClose');mietintaMuuttui();if(!nykyinen)piirraNyt(performance.now());}
@@ -359,15 +460,18 @@ export function asennaLivianKasvot(pollo) {
   oliNakyva=nappiNakyy();chatTila?.paivita();piirra(lepo());
   // Yhä oikeasti soiva oma puhe saa jatkaa nokkaa, ei vanhaa elettä.
   piirraNyt(performance.now());if(puhe)kaynnista();
+  if(kohtausPiilossa())piilotaKohtaukseen();
  });
  const virtaVahti=new MutationObserver(mietintaMuuttui);
  const kokoVahti=typeof ResizeObserver==='function'?new ResizeObserver(paikkaMuuttui):null;kokoVahti?.observe(nappi);
  function liikeAsetus(){
+  if(chatOdotus?.lahti){katkaise();lepoTila=livianSvgAsento('flyAway',1);pinta.style.transition='none';pinta.style.opacity='0';ajasta();return;}
+  if(kohtausPiilossa()){piilotaKohtaukseen();ajasta();return;}
   if(nykyinen?.omistaja==='opening'){const valmis=nykyinen.valmis;katkaise();lepoTila=null;piirraNyt(performance.now());valmis?.();ajasta();return;}
   katkaise();lepoTila=null;piirraNyt(performance.now());ajasta();if(!vahenna?.matches)kaynnista();
  }
  function tausta(){
-  if(doc.hidden){peruLoppu();tauotaPitkatOdotukset();ensiliito=false;katkaise();piirra(lepo());}else{puhe=livianKasvopuheenTila().length>0;puheAlku=performance.now();jatkaPitkiaOdotuksia();piirraNyt(performance.now());kaynnista();}
+  if(doc.hidden){peruLoppu();tauotaPitkatOdotukset();ensiliito=false;katkaise();piirra(lepo());if(kohtausPiilossa())piilotaKohtaukseen();}else{puhe=livianKasvopuheenTila().length>0;puheAlku=performance.now();jatkaPitkiaOdotuksia();if(traileri?.loppui)palaaTrailerista();else if(alkulento?.loppui&&alkulento.luenta)palaaAlkulennosta();else if(kohtausPiilossa())piilotaKohtaukseen();else{piirraNyt(performance.now());kaynnista();}}
   viimeToimi=performance.now();
  }
  const irrotaPuhe=kuunteleLivianKasvopuhetta(tilat=>{
@@ -375,22 +479,26 @@ export function asennaLivianKasvot(pollo) {
   if(puhe)peruLoppu();
   if(puhe&&['narration','reaction'].includes(nykyinen?.omistaja))katkaise();
   if(puhe&&!oli){puheAlku=performance.now();
+    if(chatOdotus?.lahti)return;
+    if(nykyinen?.omistaja==='chatAnswer')return;
     if(nykyinen?.id==='flyAway'||lepoTila?.flight||nykyinen?.id==='peek'||nykyinen?.id.startsWith('leave')||nykyinen?.id==='walkRight'||lepoTila?.walk)palaa();
     else if(!nykyinen){lepoTila=null;const teksti=tilat.at(-1)?.teksti||'',ele=livianRepliikinEle(teksti);toista(ele,{voimakkuus:livianEleenVoima(ele,teksti)});}
   }
-  if(!puhe){piirraNyt(performance.now());if(oli)jatkaKuunteluaTaiOdotusta();
+  if(!puhe){if(chatOdotus?.lahti){katkaise();lepoTila=livianSvgAsento('flyAway',1);pinta.style.opacity='0';return;}if(lepoTila?.ele==='bookStudy')lepoTila=null;piirraNyt(performance.now());if(oli)jatkaKuunteluaTaiOdotusta();
    if(!luennat.size&&!odotukset.size&&odotusrivi&&!nykyinen)toista(livianMietintaEle(odotusteksti));}
   kaynnista();
  });
+ const chatTausta=()=>{if(doc.hidden)tyhjennaChatOdotus({lepoon:true});};
+ const chatPagehide=()=>tyhjennaChatOdotus({lepoon:true});
  function tuhoa(){
-  if(kuollut)return;kuollut=true;irrotaTilanteet();irrotaDialogit();nostoTila?.tuhoa();chatTila?.tuhoa();katkaise();clearTimeout(kello);for(const tunnus of [...pitkatOdotukset.keys()])peruPitkaOdotus(tunnus);irrotaPuhe();nappiVahti.disconnect();lehtiVahti?.disconnect();virtaVahti.disconnect();pinta.remove();nappi.classList.remove('livia-kasvot-valmis');
-  doc.removeEventListener('pointerdown',toiminta,true);doc.removeEventListener('keydown',toiminta,true);doc.removeEventListener('visibilitychange',tausta);vahenna?.removeEventListener('change',liikeAsetus);globalThis.removeEventListener?.('pagehide',tausta);globalThis.removeEventListener?.('resize',paikkaMuuttui);doc.removeEventListener('scroll',paikkaMuuttui,true);nappi.removeEventListener('transitionend',paikkaMuuttui);doc.removeEventListener(AANIVALINTA_TAPAHTUMA,vaienna);kokoVahti?.disconnect();
+  if(kuollut)return;kuollut=true;irrotaTilanteet();irrotaDialogit();nostoTila?.tuhoa();chatTila?.tuhoa();tyhjennaChatOdotus();tyhjennaAlkulento();tyhjennaTraileri();katkaise();clearTimeout(kello);for(const tunnus of [...pitkatOdotukset.keys()])peruPitkaOdotus(tunnus);irrotaPuhe();nappiVahti.disconnect();lehtiVahti?.disconnect();virtaVahti.disconnect();pinta.remove();nappi.classList.remove('livia-kasvot-valmis');
+  doc.removeEventListener('pointerdown',toiminta,true);doc.removeEventListener('keydown',toiminta,true);doc.removeEventListener('visibilitychange',tausta);doc.removeEventListener('visibilitychange',chatTausta);vahenna?.removeEventListener('change',liikeAsetus);globalThis.removeEventListener?.('pagehide',tausta);globalThis.removeEventListener?.('pagehide',chatPagehide);globalThis.removeEventListener?.('resize',paikkaMuuttui);doc.removeEventListener('scroll',paikkaMuuttui,true);nappi.removeEventListener('transitionend',paikkaMuuttui);doc.removeEventListener(AANIVALINTA_TAPAHTUMA,vaienna);kokoVahti?.disconnect();
  }
  const irrotaTilanteet=kuunteleLivianTilanteita(tilanne);
  nostoTila=asennaLivianNostoTila(pollo,pinta,tilanne,paikkaMuuttui);
  nappiVahti.observe(nappi,{attributes:true,attributeFilter:['hidden','class','aria-expanded','style']});
  if(pollo.virta)virtaVahti.observe(pollo.virta,{childList:true,subtree:true,characterData:true});
- doc.addEventListener('pointerdown',toiminta,true);doc.addEventListener('keydown',toiminta,true);doc.addEventListener('visibilitychange',tausta);vahenna?.addEventListener('change',liikeAsetus);globalThis.addEventListener?.('pagehide',tausta);globalThis.addEventListener?.('resize',paikkaMuuttui);doc.addEventListener('scroll',paikkaMuuttui,true);nappi.addEventListener('transitionend',paikkaMuuttui);doc.addEventListener(AANIVALINTA_TAPAHTUMA,vaienna);
+ doc.addEventListener('pointerdown',toiminta,true);doc.addEventListener('keydown',toiminta,true);doc.addEventListener('visibilitychange',tausta);doc.addEventListener('visibilitychange',chatTausta);vahenna?.addEventListener('change',liikeAsetus);globalThis.addEventListener?.('pagehide',tausta);globalThis.addEventListener?.('pagehide',chatPagehide);globalThis.addEventListener?.('resize',paikkaMuuttui);doc.addEventListener('scroll',paikkaMuuttui,true);nappi.addEventListener('transitionend',paikkaMuuttui);doc.addEventListener(AANIVALINTA_TAPAHTUMA,vaienna);
   chatTila?.paivita();oliNakyva=nappiNakyy();if(oliNakyva)saapuminen();lehtiMuuttui();ajasta();mietintaMuuttui();
  return{
   ensiliito(valmis,{reducedMotion=false}={}){

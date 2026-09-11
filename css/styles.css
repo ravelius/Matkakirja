@@ -20544,6 +20544,51 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
   color: #16130f;
 }
 
+/* Viimeksi piiloutuneen puhekuplan palautus, erillään chatinapista. */
+.pollo-kuplapalautus {
+  position: fixed;
+  z-index: 42;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #46331f;
+  font: 700 1rem/1 serif;
+  cursor: pointer;
+}
+.pollo-kuplapalautus::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 1.45rem;
+  height: 1.3rem;
+  border: 1px solid rgba(122, 85, 20, 0.42);
+  border-radius: 0.75rem 0.75rem 0.3rem 0.75rem;
+  background: rgba(245, 240, 226, 0.96);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.22);
+}
+.pollo-kuplapalautus { text-shadow: 0 0 0 #46331f; }
+.pollo-kuplapalautus { justify-items: end; align-items: end; padding: 0 0.42rem 0.17rem 0; }
+.pollo-kuplapalautus { isolation: isolate; }
+.pollo-kuplapalautus::before { z-index: -1; }
+.pollo-kuplapalautus[hidden] { display: none; }
+/* Yleinen button:hover on tätä valitsinta vahvempi. Osuma-alue pysyy
+   läpinäkyvänä; vain ::before piirtää varsinaisen minikuplan. */
+button.pollo-kuplapalautus,
+button.pollo-kuplapalautus:hover:not(:disabled),
+button.pollo-kuplapalautus:active:not(:disabled) {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+.pollo-kuplapalautus:hover::before,
+.pollo-kuplapalautus:focus-visible::before { background: #fffaf0; }
+
 /* Pieni kärki alaspäin kohti pöllönappia. */
 .pollo-vihje::after {
   content: '';

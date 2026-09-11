@@ -48,7 +48,7 @@
  * sisään, ei pöllön puhetta ulos.
  */
 
-import { aloitaLivianOdotus, ilmoitaLivianTilanne, livianTunnetaginTiedot } from './livia-tilanteet.js';
+import { aloitaLivianOdotus, ilmoitaLivianTilanne, kuunteleLivianTilanteita, livianTunnetaginTiedot } from './livia-tilanteet.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { haeValmiskysymykset } from './packs/pollo-kysymykset.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
@@ -58,6 +58,7 @@ import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { asennaLivianKasvot } from './livia-eleet.js';
+import { kuunteleLivianKasvopuheenElinkaarta } from './livia-puhetila.js';
 import { livianDialogikoti, seuraaLivianDialogeja } from './livia-dialogitila.js';
 import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 // Napautusnielu: kuplan sulkeva klikkaus ei saa vuotaa kartalle
@@ -920,6 +921,12 @@ const PUHEENVUORON_SANAVIIVE = 55;
 const PUHEENVUORON_VIIVE_ALA = 1800;
 const PUHEENVUORON_VIIVE_YLA = 4200;
 
+/** Hiljaisen kuplan saavutettava lukuaika ennen kolmen sekunnin häivytystä. */
+export function pulunKuplanPiilotusviive(teksti) {
+  const lukuaika = Math.min(12000, Math.max(3200, String(teksti ?? '').length * 78));
+  return lukuaika + 3000;
+}
+
 /*
  * === LINSSIN AIKANA LIVIA ODOTTAA VUOROAAN ==========================
  * === (omistajan tilaus 4.9.2026) ====================================
@@ -1678,6 +1685,11 @@ export class Pollo {
      */
     this.pinoKehys = null;
     this.pino = null;
+    this.kuplaPiilotusAjastin = null;
+    this.viimeisinPiilotettuKupla = null;
+    this.kuplaPalautus = null;
+    this.puluPuhuu = false;
+    this.kuplaPuhetilat = new Map();
     /*
      * Osiin jaettu puheenvuoro (naytaPuheenvuoro): ajastimen kahva ja
      * jonon tila. null tarkoittaa, ettei sarjaa ole kesken.
@@ -1694,6 +1706,8 @@ export class Pollo {
     // Sanelu on ensisijainen syöttötapa; näppäimistö on varalla.
     this.tila = saneluTuettu() ? 'sanelu' : 'kirjoitus';
     this.rakenna();
+    this.seuraaKuplapuhetta();
+    this.seuraaKohtauspiilotusta();
     this.seuraaPaneelinKokoa();
     this.seuraaNakymaa();
     this.seuraaSulkemista();
@@ -2298,6 +2312,7 @@ export class Pollo {
   paivitaNakyvyys(korosta = false) {
     const nakyy = this.nakyyko();
     this.nappi.hidden = !nakyy;
+    this.paivitaKuplanPalautus();
     if (!nakyy && this.auki) this.sulje();
     // Nappi piiloon: kuplilla ei ole enää mitään mihin osoittaa, joten
     // koko pino väistyy — myös puheenvuorot (ks. tyhjennaPino) ja
@@ -2693,8 +2708,138 @@ export class Pollo {
     this.doc.body.appendChild(kehys);
     this.pinoKehys = kehys;
     this.pino = pino;
+    this.varmistaKuplanPalautus();
     this.paivitaPinonKorkeus({ heti: true });
     return pino;
+  }
+
+  /** Pieni pluskupla palauttaa viimeisimmän automaattisen puhekuplan. */
+  varmistaKuplanPalautus() {
+    if (this.kuplaPalautus) return this.kuplaPalautus;
+    const nappi = polloElementti('button', 'pollo-kuplapalautus', '+');
+    nappi.type = 'button';
+    nappi.hidden = true;
+    nappi.setAttribute('aria-label', 'Näytä viimeisin Pulun puhekupla');
+    const nielaise = (e) => { e.stopPropagation(); e.preventDefault(); };
+    nappi.addEventListener('pointerdown', nielaise);
+    nappi.addEventListener('click', (e) => {
+      nielaise(e);
+      this.palautaViimeisinKupla();
+    });
+    this.doc.body.appendChild(nappi);
+    this.kuplaPalautus = nappi;
+    return nappi;
+  }
+
+  kuplaKonteksti() {
+    try { return this.kysymysAvain(); } catch { return ''; }
+  }
+
+  peruKuplanPiilotus() {
+    clearTimeout(this.kuplaPiilotusAjastin);
+    this.kuplaPiilotusAjastin = null;
+  }
+
+  kuplaPuheOdottaa() {
+    return [...this.kuplaPuhetilat.values()].some((tila) => tila === 'odottaa');
+  }
+
+  ajastaKuplanPiilotus(viive = 3000) {
+    this.peruKuplanPiilotus();
+    const kupla = this.pinonKuplat().filter((k) => k.dataset?.laji === 'puhe').at(-1);
+    if (!kupla || this.auki || this.puluPuhuu || this.kuplaPuheOdottaa()) return;
+    this.kuplaPiilotusAjastin = setTimeout(() => {
+      this.kuplaPiilotusAjastin = null;
+      if (!this.puluPuhuu && !this.kuplaPuheOdottaa() && kupla.isConnected) this.piilotaPuhekuplat();
+    }, Math.max(0, viive));
+  }
+
+  seuraaKuplapuhetta() {
+    this.irrotaKuplapuhe = kuunteleLivianKasvopuheenElinkaarta(({ tunnus, vaihe }) => {
+      const puhui = this.puluPuhuu;
+      if (vaihe === 'loppu') this.kuplaPuhetilat.delete(tunnus);
+      else this.kuplaPuhetilat.set(tunnus, vaihe);
+      this.puluPuhuu = [...this.kuplaPuhetilat.values()].some((tila) => tila === 'puhuu');
+      const odottaa = this.kuplaPuheOdottaa();
+      if (this.puluPuhuu || odottaa) this.peruKuplanPiilotus();
+      else if (puhui || vaihe === 'loppu') this.ajastaKuplanPiilotus(3000);
+    });
+  }
+
+  piilotaPuhekuplat() {
+    this.peruKuplanPiilotus();
+    const puheet = this.pinonKuplat().filter((k) => k.dataset?.laji === 'puhe');
+    const viimeinen = puheet.at(-1);
+    if (!viimeinen) return false;
+    viimeinen.remove();
+    this.poistaKuplat(puheet.slice(0, -1));
+    this.viimeisinPiilotettuKupla = { kupla: viimeinen, konteksti: this.kuplaKonteksti() };
+    this.paivitaPinonNakyvyys();
+    const palautus = this.varmistaKuplanPalautus();
+    palautus.hidden = false;
+    this.paivitaKuplanPalautus();
+    this.asetaPinonPaikka();
+    return true;
+  }
+
+  palautaViimeisinKupla() {
+    const muistettu = this.viimeisinPiilotettuKupla;
+    if (!muistettu || muistettu.konteksti !== this.kuplaKonteksti() || this.auki) {
+      this.unohdaPiilotettuKupla();
+      return false;
+    }
+    this.viimeisinPiilotettuKupla = null;
+    this.kuplaPalautus.hidden = true;
+    this.lisaaPinoon(muistettu.kupla);
+    this.ajastaKuplanPiilotus(pulunKuplanPiilotusviive(muistettu.kupla.textContent));
+    return true;
+  }
+
+  unohdaPiilotettuKupla() {
+    this.viimeisinPiilotettuKupla = null;
+    if (this.kuplaPalautus) this.kuplaPalautus.hidden = true;
+  }
+
+  paivitaKuplanPalautus() {
+    if (!this.kuplaPalautus) return;
+    const peittyy = this.auki || this.nappi.hidden || linssiEstaa(this.doc)
+      || Boolean(this.doc.querySelector?.('dialog[open]'));
+    this.kuplaPalautus.hidden = !this.viimeisinPiilotettuKupla || peittyy;
+    if (!this.kuplaPalautus.hidden) this.asetaPinonPaikka();
+  }
+
+  tuhoaKuplamuisti() {
+    this.peruKuplanPiilotus();
+    this.irrotaKuplapuhe?.();
+    this.irrotaKuplapuhe = null;
+    this.irrotaKohtauspiilotus?.();
+    this.irrotaKohtauspiilotus = null;
+    this.irrotaKarttapiilotus?.();
+    this.irrotaKarttapiilotus = null;
+    this.viimeisinPiilotettuKupla = null;
+    this.kuplaPuhetilat.clear();
+    this.kuplaPalautus?.remove?.();
+    this.kuplaPalautus = null;
+  }
+
+  seuraaKohtauspiilotusta() {
+    this.irrotaKohtauspiilotus = kuunteleLivianTilanteita((laji, tiedot = {}) => {
+      if ((laji === 'startFlight' && tiedot.vaihe === 'alku')
+        || (laji === 'trailer' && tiedot.vaihe === 'kirjaimet')) this.tyhjennaPinoHeti();
+    });
+  }
+
+  /** Lennon ja trailerin kohtausraja ei jätä edes poistumisfeidiä ruudulle. */
+  tyhjennaPinoHeti() {
+    this.peruKuplanPiilotus();
+    this.unohdaPiilotettuKupla();
+    this.peruPuheenvuoro();
+    if (this.vihje) this.vihje.hidden = true;
+    for (const kupla of this.pinonKuplat()) {
+      kupla.polloKuittaus = null;
+      kupla.remove();
+    }
+    this.paivitaPinonNakyvyys();
   }
 
   /* --- pinon laajuus: viimeisin kupla vai koko historia ------------ */
@@ -2951,6 +3096,10 @@ export class Pollo {
    * hoitaa vieritys pohjaan (vierita).
    */
   lisaaPinoon(kupla) {
+    if (kupla.dataset?.laji === 'puhe') {
+      this.unohdaPiilotettuKupla();
+      this.peruKuplanPiilotus();
+    }
     const pino = this.varmistaPino();
     const vanhat = this.pinonKuplat();
     const vaha = this.vahaLiiketta();
@@ -3064,6 +3213,9 @@ export class Pollo {
       }
     }
     this.kuplanAani();
+    if (kupla.dataset?.laji === 'puhe' && !this.puluPuhuu && !this.kuplaPuheOdottaa()) {
+      this.ajastaKuplanPiilotus(pulunKuplanPiilotusviive(kupla.textContent));
+    }
   }
 
   /**
@@ -3177,6 +3329,8 @@ export class Pollo {
    * vaikka pelaaja ei halunnut lukea puheenvuoroa kuplina.
    */
   tyhjennaPino() {
+    this.peruKuplanPiilotus();
+    this.unohdaPiilotettuKupla();
     this.peruPuheenvuoro();
     if (this.vihje) this.vihje.hidden = true;
     this.poistaKuplat(this.pinonKuplat());
@@ -3459,7 +3613,8 @@ export class Pollo {
    */
   asetaPinonPaikka() {
     const kehys = this.pinoKehys;
-    if (!kehys || kehys.hidden) return;
+    const palautus = this.kuplaPalautus;
+    if ((!kehys || kehys.hidden) && (!palautus || palautus.hidden)) return;
     const ikkuna = this.doc.defaultView ?? window;
     const nappi = this.ankkuriLaatikko(this.nappi, ikkuna);
     /*
@@ -3477,11 +3632,20 @@ export class Pollo {
     const leveys = ikkuna.innerWidth || 0;
     const karki = PINON_KARJEN_SIIRTO;
     const oikea = Math.max(PINON_MARGINAALI, leveys - (nappi.left + nappi.width / 2 + karki));
-    kehys.style.left = 'auto';
-    kehys.style.right = `${Math.round(oikea)}px`;
+    if (kehys) {
+      kehys.style.left = 'auto';
+      kehys.style.right = `${Math.round(oikea)}px`;
+    }
     // Aktiivikasvo ulottuu kompaktin napin yläpuolelle. Kupla jättää sille tilan.
     const kasvonYlitys = this.nappi?.classList?.contains?.('livia-kasvot-valmis') ? 40 : 0;
-    kehys.style.bottom = `${Math.round((ikkuna.innerHeight || 0) - nappi.top + 10 + kasvonYlitys)}px`;
+    const alareuna = Math.round((ikkuna.innerHeight || 0) - nappi.top + 10 + kasvonYlitys);
+    if (kehys) kehys.style.bottom = `${alareuna}px`;
+    if (palautus) {
+      // 44 px osuma-alue jää kokonaan Pulun chat-osuman vasemmalle
+      // yläpuolelle; vain sen oikea alanurkka näyttää minikuplan.
+      palautus.style.left = `${Math.max(6, Math.round(nappi.left - 46))}px`;
+      palautus.style.top = `${Math.max(6, Math.round(nappi.top - 46))}px`;
+    }
   }
 
   /**
@@ -3722,10 +3886,9 @@ export class Pollo {
      * muuten pelin alun kuplat katoaisivat historiasta.
      */
     kirjaaLivianLokiin('kupla', teksti);
-    if (!this.virta) return null;
-    const viesti = this.lisaaViesti('pollo', teksti);
-    viesti.classList.add('pollo-kuplaviesti');
-    return viesti;
+    // Oma-aloitteinen karttakupla ei ole keskusteluviesti. Sana jää
+    // lokiin ja kuplapinon palautukseen, mutta ei chatin näkyvään virtaan.
+    return null;
   }
 
   /**
@@ -3746,17 +3909,18 @@ export class Pollo {
     const loki = Array.isArray(this.aiempiLoki) ? this.aiempiLoki : [];
     if (!loki.length) return 0;
     const eka = this.virta.firstChild;
+    let lisatty = 0;
     for (const merkinta of loki) {
+      if (merkinta.r === 'kupla') continue;
       const rooli = merkinta.r === 'kayttaja' ? 'kayttaja' : 'pollo';
       const viesti = polloElementti(
         'p', `pollo-viesti pollo-${rooli} pollo-historiaviesti`, merkinta.t,
       );
-      // Puhekupla näkyy chatissa kuplana myös historiassa.
-      if (merkinta.r === 'kupla') viesti.classList.add('pollo-kuplaviesti');
       this.virta.insertBefore(viesti, eka);
+      lisatty += 1;
     }
     this.virta.scrollTop = this.virta.scrollHeight;
-    return loki.length;
+    return lisatty;
   }
 
   /**
@@ -3773,6 +3937,7 @@ export class Pollo {
     // ettei keskustelu jää leijumaan siirtymän päälle.
     seuraaLivianDialogeja(this.doc, (ylin, edellinen) => {
       this.kiinnita();
+      this.paivitaKuplanPalautus();
       if (this.auki && (edellinen && !edellinen.open || ylin && !livianDialogikoti(this.doc))) this.sulje();
       else this.tarkistaKonteksti();
     });
@@ -3816,6 +3981,37 @@ export class Pollo {
    */
   seuraaSulkemista() {
     if (typeof this.doc.addEventListener !== 'function') return;
+    let karttaveto = null;
+    const kartalla = (kohde) => Boolean(kohde?.closest?.('#board, .kartta-kuori, .pallolauta'));
+    const karttaAlkoi = (e) => {
+      karttaveto = kartalla(e.target)
+        ? { id: e.pointerId, x: e.clientX, y: e.clientY, piilotettu: false } : null;
+    };
+    const karttaLiikkui = (e) => {
+      if (!karttaveto || karttaveto.id !== e.pointerId || karttaveto.piilotettu) return;
+      if (Math.hypot(e.clientX - karttaveto.x, e.clientY - karttaveto.y) < KUPLAN_NAPAUTUSSADE_PX) return;
+      karttaveto.piilotettu = true;
+      this.piilotaPuhekuplat();
+    };
+    const lopetaKarttaveto = (e) => {
+      if (karttaveto?.id === e.pointerId) karttaveto = null;
+    };
+    const karttaRullasi = (e) => {
+      if (kartalla(e.target) && (Math.abs(e.deltaX) + Math.abs(e.deltaY) > 0)) this.piilotaPuhekuplat();
+    };
+    this.doc.addEventListener('pointerdown', karttaAlkoi, true);
+    this.doc.addEventListener('pointermove', karttaLiikkui, true);
+    this.doc.addEventListener('pointerup', lopetaKarttaveto, true);
+    this.doc.addEventListener('pointercancel', lopetaKarttaveto, true);
+    this.doc.addEventListener('wheel', karttaRullasi, { capture: true, passive: true });
+    this.irrotaKarttapiilotus = () => {
+      karttaveto = null;
+      this.doc.removeEventListener('pointerdown', karttaAlkoi, true);
+      this.doc.removeEventListener('pointermove', karttaLiikkui, true);
+      this.doc.removeEventListener('pointerup', lopetaKarttaveto, true);
+      this.doc.removeEventListener('pointercancel', lopetaKarttaveto, true);
+      this.doc.removeEventListener('wheel', karttaRullasi, true);
+    };
     this.doc.addEventListener('pointerdown', (e) => {
       /*
        * KARTAN LIIKE SUPISTAA KUPLANÄKYMÄN (omistaja 7.9.2026: *"kun
@@ -5094,6 +5290,12 @@ export class Pollo {
       virhe.viesti = data?.viesti ?? null;
       throw virhe;
     }
+    const vastausteksti = String(data?.vastaus ?? '').trim();
+    if (runko?.tehtava === 'vastaus' && vastausteksti && !data?.syy && lopetaOdotus.tunnus) {
+      ilmoitaLivianTilanne('waitingAnswer', {
+        tunnus: lopetaOdotus.tunnus, lahde: 'chat', teksti: vastausteksti,
+      });
+    }
     return data;
     } finally { signal?.removeEventListener('abort',lopetaOdotus);lopetaOdotus(); }
   }
@@ -5130,7 +5332,15 @@ export class Pollo {
   async pyydaStriimi(runko, onPala, { signal } = {}) {
     const lopetaOdotus=aloitaLivianOdotus({lahde:runko?.tehtava||'kysymys'});
     signal?.addEventListener('abort',lopetaOdotus,{once:true});
-    let lukija;
+    let lukija, vastausIlmoitettu = false;
+    const ilmoitaVastaus = (teksti) => {
+      const sisalto = String(teksti ?? '').trim();
+      if (vastausIlmoitettu || runko?.tehtava !== 'vastaus' || !sisalto || !lopetaOdotus.tunnus) return;
+      vastausIlmoitettu = true;
+      ilmoitaLivianTilanne('waitingAnswer', {
+        tunnus: lopetaOdotus.tunnus, lahde: 'chat', teksti: sisalto,
+      });
+    };
     try {
     tarkistaPyynnonPeruutus(signal);
     const vastaus = await fetch(this.palvelin, {
@@ -5150,6 +5360,7 @@ export class Pollo {
     if (!/text\/event-stream/i.test(laji) || typeof vastaus.body?.getReader !== 'function') {
       const data = await vastaus.json().catch(() => ({}));
       tarkistaPyynnonPeruutus(signal);
+      if (!data?.syy) ilmoitaVastaus(data?.vastaus);
       return {
         vastaus: String(data?.vastaus ?? ''),
         jatkot: Array.isArray(data?.jatkot) ? data.jatkot : [],
@@ -5183,6 +5394,7 @@ export class Pollo {
         if (tapahtuma.laji === 'pala') {
           const teksti = String(tapahtuma.data?.teksti ?? '');
           if (teksti) {
+            ilmoitaVastaus(teksti);
             lopetaOdotus();
             kertynyt += teksti;
             onPala?.(kertynyt);
@@ -6532,6 +6744,7 @@ export function polloPaivitaNakyvyys(korosta = false) {
  */
 export function asennaPollo(haeUi, asetukset = {}) {
   if (typeof document === 'undefined') return null;
+  nykyinenPollo?.tuhoaKuplamuisti?.();
   nykyinenPollo = new Pollo(haeUi, asetukset);
   /*
    * ALANAPPIRIVI ON USEIN PIIRRETTY JO ENNEN ASENNUSTA.

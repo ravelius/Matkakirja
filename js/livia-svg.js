@@ -3,7 +3,9 @@ import {LIVIA_PIX_ELEET,livianPikseliAsento} from './livia-pikselit.js';
 import {livianSvgPaa} from './livia-svg-paa.js';
 export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
  Object.freeze({id:'glideIn',label:'Kiireinen ensiliito kartalta',duration:2700,group:'Liike'}),
- ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['scratch','Pään raapaisu',2600],['eyeRub','Lasit ylös ja silmien hieraisu',5200],['chuckle','Hiljainen naurunpyrskähdys',2500]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
+ Object.freeze({id:'trailerFlee',label:'Väistö trailerin tieltä',duration:1200,group:'Liike'}),
+ Object.freeze({id:'trailerBack',label:'Varovainen paluu trailerista',duration:1700,group:'Liike'}),
+ ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['bookStudy','Tietäväinen kirjan selaus',4200],['scratch','Pään raapaisu',2600],['eyeRub','Lasit ylös ja silmien hieraisu',5200],['chuckle','Hiljainen naurunpyrskähdys',2500]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
 const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
 const lvEase=n=>{n=lvClamp(n);return n*n*(3-2*n);};
 const lvGate=p=>lvEase((p-.06)/.18)*(1-lvEase((p-.79)/.18));
@@ -17,6 +19,8 @@ export function livianEleenVoima(id,text='') {
 export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
  const s={...livianPikseliAsento(id,p),ele:id,p:lvClamp(p),voimakkuus:lvClamp(voimakkuus)};
  if(id==='glideIn')s.flight={kind:'opening',t:lvEase(p)};
+ if(id==='trailerFlee')s.flight={kind:'trailerAway',t:lvEase(p)};
+ if(id==='trailerBack')s.flight={kind:'trailerBack',t:lvEase(p)};
  if(id==='chuckle'&&p>.12&&p<.86){
   const syke=Math.sin((p-.12)/.74*Math.PI*6),voima=s.voimakkuus;
   s.frame='grin';s.mouth=syke>0?'talk':'talkSmall';
@@ -26,6 +30,9 @@ export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
   s.glasses=1;
   s.glassesLift=22*lvEase((p-.10)/.18)*(1-lvEase((p-.70)/.18));
   s.frame=p>.30&&p<.68?'blink':'rest';
+ }
+ if(id==='bookStudy'){
+  s.frame='smug';s.glasses=1;s.gazeDown=true;s.pageTurn=Math.sin(lvClamp((p-.18)/.64)*Math.PI);
  }
  if(p>.08&&p<.94){
   if(['smile','grin','wink','welcome','present'].includes(id))s.frame=id==='welcome'||id==='present'?'smile':id;
@@ -53,6 +60,11 @@ export function livianSvgMalli(s,{right=0}={}) {
    m.x=(152+right-8)*(1-near)+128*near;m.y=25*(1-near)+284*near;
    m.scale=.56*Math.max(.018,near);m.angle=(1-near)*-20;
    if(f.kind==='away'&&t>=1||f.kind==='back'&&t<=0)m.visible=false;
+  } else if(f.kind==='trailerAway'){
+   const near=1-t;m.x=128-72*t;m.y=284-205*t-32*Math.sin(Math.PI*t);m.scale=.56*Math.max(.06,near);m.angle=-18*t;m.face='shock';
+   if(t>=1)m.visible=false;
+  } else if(f.kind==='trailerBack'){
+   m.x=56+72*t;m.y=79+223*t-22*Math.sin(Math.PI*t);m.scale=.034+.526*t;m.angle=-18*(1-t);m.face=t<.72?'glance':'smug';
   } else if(f.kind==='glass'){
    m.x=128;m.y=25+230*t;m.scale=.015+.55*t+.16*lvEase((t-.68)/.32);m.face=t>.8?'shock':'front';
   } else if(f.kind==='splat'){
@@ -131,7 +143,7 @@ function lvProps(s,m,prefix){
  if(s.crumbY!==null&&s.crumbY!==undefined)out+=`<path d="M${x-34} ${y-36+(s.crumbY-35)*4}l4 1-2 4-3-1Z" fill="#c18b48"/>`;
  if(s.side?.kind==='pfft')out+=`<path d="M${x-47} ${y-46}q-16-10-22-4m20 8q-15 2-23 12" fill="none" stroke="#9b9c91" stroke-width="1.6" stroke-linecap="round"/>`;
  const fy=y-108,phase=s.phase||0;
- if(m.id==='reading'&&m.gate>.1)out+=`<g transform="translate(${x-66} ${y-33}) rotate(-12)"><path d="M0 0L18 2L33-2L35 21L18 24L1 20Z" fill="#daceaf"/><path d="M18 2v22m-13-17l9 1m-9 4l9 1m8-6l7-2m-7 8l8-2" stroke="#9a8c73" stroke-width="1"/></g>`;
+ if((m.id==='reading'&&m.gate>.1)||m.id==='bookStudy')out+=`<g data-part="book" transform="translate(${x-66} ${y-33}) rotate(${-12+(s.pageTurn||0)*3})"><path d="M0 0L18 2L33-2L35 21L18 24L1 20Z" fill="#daceaf"/><path d="M18 2v22m-13-17l9 1m-9 4l9 1m8-6l7-2m-7 8l8-2" stroke="#9a8c73" stroke-width="1"/>${s.pageTurn?`<path d="M18 2q${9*s.pageTurn} 9 0 22" fill="none" stroke="#b8aa8e" stroke-width="1"/>`:''}</g>`;
  if(s.fx==='hearts')for(let i=0;i<2;i++)out+=`<path transform="translate(${x-42+i*38} ${fy-(phase+i)%3*5}) scale(.7)" d="M0 10C-20-2-9-17 0-7C9-17 20-2 0 10Z" fill="#a97078"/>`;
  if(s.fx==='stars'||s.flight?.kind==='splat')for(let i=0;i<3;i++)out+=`<path d="M${x-36+i*29} ${fy-5+i%2*9}l3 5 6 1-5 4 1 6-5-3-5 3 1-6-5-4 6-1Z" fill="#bca362"/>`;
  if(['dots','question','z'].includes(s.fx))out+=`<text x="${x-20}" y="${fy-4}" font-family="Georgia,serif" font-size="${s.fx==='z'?16:22}" fill="#657780">${s.fx==='dots'?'.'.repeat(phase%3+1):s.fx==='question'?'?':s.fx==='z'?'z Z':'♯'}</text>`;

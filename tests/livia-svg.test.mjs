@@ -3,12 +3,22 @@ import assert from 'node:assert/strict';
 import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva,livianSvgMalli,livianEleenVoima} from '../js/livia-svg.js';
 
 test('kaikki nykyiset eleet piirtyvät kokonaisella SVG-pululla ilman virheellisiä koordinaatteja',()=>{
- assert.equal(LIVIA_SVG_ELEET.length,61);
+ assert.equal(LIVIA_SVG_ELEET.length,64);
  for(const e of LIVIA_SVG_ELEET)for(const p of [0,.1,.25,.43,.6,.8,.95,1]){
   const s=livianSvgAsento(e.id,p),svg=livianSvgKuva(s,{right:42,prefix:'qa'});
   assert.match(svg,/^<svg /);assert.doesNotMatch(svg,/NaN|Infinity|undefined|<image|<canvas/);
   if(livianSvgMalli(s,{right:42}).visible)assert.match(svg,/data-part="whole-bird"/);
  }
+});
+test('trailerin väistö poistuu ja varovainen paluu päätyy täsmälleen lepoankkuriin',()=>{
+ const poissa=livianSvgMalli(livianSvgAsento('trailerFlee',1));assert.equal(poissa.visible,false);
+ const alku=livianSvgMalli(livianSvgAsento('trailerBack',0)),loppu=livianSvgMalli(livianSvgAsento('trailerBack',1));
+ assert.ok(alku.scale<.05);assert.equal(loppu.x,128);assert.equal(loppu.y,302);assert.equal(loppu.scale,.56);assert.ok(Math.abs(loppu.angle)<1e-9);
+});
+test('tietäväinen vastaus pitää lasit ja kirjan sekä kääntää sivua rauhallisesti',()=>{
+ const alku=livianSvgAsento('bookStudy',.2),keskella=livianSvgAsento('bookStudy',.5),loppu=livianSvgAsento('bookStudy',.9);
+ assert.equal(keskella.glasses,1);assert.equal(keskella.frame,'smug');assert.ok(keskella.pageTurn>alku.pageTurn&&keskella.pageTurn>loppu.pageTurn);
+ assert.match(livianSvgKuva(keskella),/data-part="book"/);
 });
 test('kiireinen ensiliito jatkuu ilman laskuhyppyä ja ottaa kaksi haparoivaa askelta',()=>{
  const pohja=livianSvgAsento('glideIn',0),ennen=livianSvgMalli({...pohja,flight:{kind:'opening',t:.7799}}),jalkeen=livianSvgMalli({...pohja,flight:{kind:'opening',t:.7801}});
