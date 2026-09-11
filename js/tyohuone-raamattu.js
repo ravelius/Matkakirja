@@ -4276,8 +4276,13 @@ export const RAAMATTU = {
           + 'reaktiorekisteriin. 5) Perusilmeet ja pelisynkronointi ensin; '
           + 'asennot (kadet puuhkassa), vaatteet, hatut, rekvisiitta ja '
           + 'harvinaiset paluut (kuumailmapallo, laskuvarjo, vain turvalliseen '
-          + 'joutokohtaan) myohemmin. Sisalto: Fable; eleet ja ajoitusmoottori: '
-          + 'tekstisessio; aikaleimatyokalu ja luennan tapahtumat: Fable.',
+          + 'joutokohtaan) myohemmin. Tyonjako (tarkennettu 11.9.2026 klo 09.30 '
+          + 'tekstisession kanssa): sisalto, ajoitusmoottori js/luentareaktiot.js, '
+          + 'js/luenta.js-kytkenta, aikaleimatyokalu ja kohdistusajot: Fable; '
+          + 'reaction-tapahtuman ele-sovitin ja paluu ylaviistokatseeseen '
+          + '(js/livia-*.js): tekstisessio. Tekninen sopimus (tapahtumakentat, '
+          + 'luonnollinen loppu, aikaleimojen validointi ja aanisidonta) asuu '
+          + 'docs/pulu-reaktiot.md:n osiossa Luentareaktiot.',
         'PUHELIMEN LEHDESSA PULU OIKEAAN REUNAAN; PULU REAGOI ARTIKKELIN CHATISSA '
           + 'JA CHAT LAHEMMAS PULUA (omistaja 11.9.2026 aamu tekstisession kautta, '
           + 'kaksi iPhone-kaappausta Marseillesta): 1) puhelimen (enintaan 600 px) '
