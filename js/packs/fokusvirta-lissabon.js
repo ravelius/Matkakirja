@@ -220,6 +220,13 @@ export const FOKUSVIRTA_LISSABON = {
       'https://imovel2.patrimoniocultural.gov.pt/detalhes.php?code=19448470',
       ],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lissabon-r20260911-paper2-v1.jpg",
+      lyhyt: "Lissabon, 1873. Meri löytyi portaan ja kattojen välistä.",
+      selite: "Pysähdyin Alfaman porrastasanteelle kartta kädessä. Kattojen välistä näkyi Tejo, vaikka reitti oli jälleen epäselvä. Ylös ja alas annetut neuvot olivat molemmat toimineet. Kartta jäi lohdutukseksi.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.patrimoniocultural.gov.pt/wp-content/uploads/2024/08/ER4.pdf","https://imovel2.patrimoniocultural.gov.pt/detalhes.php?code=19448470"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

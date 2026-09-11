@@ -172,6 +172,13 @@ export const FOKUSVIRTA_SEVILLA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://idus.us.es/bitstreams/c159e9ed-623c-49bb-af82-28de9d825634/download"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sevilla-r20260911-paper2-v1.jpg",
+      lyhyt: "Sevilla, 1873. Huivi solmittiin ennen paluuta työn ääreen.",
+      selite: "Nainen sitoi huivinsa ja kulki tehtaan sisäpihalle. Työpöydät odottivat kaarien alla, ja appelsiinipuut täyttivät pihan. Pieni aamiainen oli jo syöty. Suuri rakennus käynnistyi monista tällaisista aamuista.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://personales.us.es/alporu/fabricatabaco/cigarreras_sevilla.htm","https://idus.us.es/bitstreams/c159e9ed-623c-49bb-af82-28de9d825634/download"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Sevilla, huhtikuussa 1873. Appelsiinipuut kukassa; puntari '

@@ -126,6 +126,13 @@ export const FOKUSVIRTA_PRAHA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://prague.eu/en/about-the-old-town-astronomical-clock/","https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-praha-r20260911-paper2-v1.jpg",
+      lyhyt: "Praha, 1873. Ajurin kellossa puoli tuntia oli aivan tavallinen määrä.",
+      selite: "Torin koneisto oli vienyt huomioni ja taskukello unohtui. Ajuri odotti vaunujensa vieressä ja tarkisti omaansa. Hänen hevosensa suhtautui aikaan rauhallisemmin kuin hän. Palasin paikalle puoli tuntia eri käsitystä myöhemmin.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://prague.eu/en/about-the-old-town-astronomical-clock/"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi on lokakuu, jotta
      * Praha asettuu Budapestin (marraskuu) ja Lontoon (joulukuu)

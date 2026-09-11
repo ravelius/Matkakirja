@@ -143,6 +143,13 @@ export const FOKUSVIRTA_AMSTERDAM = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/hoisting-paintings"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-amsterdam-r20260911-paper2-v1.jpg",
+      lyhyt: "Amsterdam, 1873. Tuoli pääsi sisään, portaat jäivät sivuun.",
+      selite: "Tuoli oli vedetty ikkunasta kolmanteen kerrokseen. Kaksi miestä ohjasi sen jaloilleen, ja köysi lepäsi lattialla. Kapea porras nousi aivan vieressä. Kaluste oli saapunut selkä edellä mutta arvokkaasti.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/hoisting-paintings","https://www.amsterdam.nl/stadsarchief/canon/windows/12/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Amsterdam, toukokuussa 1873. Tuulista; kanavat väreilevät; '

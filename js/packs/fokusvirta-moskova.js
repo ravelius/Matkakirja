@@ -202,6 +202,13 @@ export const FOKUSVIRTA_MOSKOVA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.kreml.ru/en-Us/visit-to-kremlin/what-to-see/tsar-kolokol/","https://kremlin-architectural-ensemble.kreml.ru/the-tsar-bell/view/"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-moskova-r20260911-paper2-v1.jpg",
+      lyhyt: "Moskova, 1873. Pieni kello sai aikaan sen, mihin suuri ei pystynyt.",
+      selite: "Majatalon pieni käsikello helähti pöydän ääressä. Sen ääni toi minut käytävältä suoraan lämpimän ruoan luo. Kremlissä näkemäni jättiläinen oli kuuluisampi ja monin verroin raskaampi. Illalla vaikutusvalta mitattiin kuitenkin sillä, kuka sai vieraan istumaan.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.kreml.ru/en-Us/visit-to-kremlin/what-to-see/tsar-kolokol/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Moskova, heinäkuussa 1873. Helteistä; kupolit häikäisevät; '

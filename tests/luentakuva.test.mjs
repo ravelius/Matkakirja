@@ -258,6 +258,8 @@ globalThis.document = asiakirja;
  */
 const KOEKAUPUNKI = { id: 'sofia', name: 'Sofia' };
 const PAKKI = fokusvirtaKaupungille(KOEKAUPUNKI.id);
+// Nämä testit käyttävät yhden kuvan testipakkia; kuvasarja testataan erikseen.
+delete PAKKI.matkakirja.luentakuva2;
 
 /*
  * Koekuvalla on ERI lyhyt ja pitkä teksti: kartalla näkyy lyhyt,

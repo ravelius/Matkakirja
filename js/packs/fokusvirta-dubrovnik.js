@@ -106,6 +106,13 @@ export const FOKUSVIRTA_DUBROVNIK = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://tzdubrovnik.hr/lang/en/get/spomenici/5535/onofrios_fountains.html"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dubrovnik-r20260911-paper2-v1.jpg",
+      lyhyt: "Ragusa, 1873. Muuri piti meren ulkona ja näkyvissä.",
+      selite: "Muurin harjalta meri täytti melkein koko näkökentän. Kiveys pysyi jalkojen alla ja pieni purje kulki alhaalla rannikon suuntaan. Kaupunki oli rakentanut veden ulkopuolelleen huolellisesti. Katseelle se jätti portin auki.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://tzdubrovnik.hr/lang/en/get/spomenici/5535/onofrios_fountains.html"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi on syyskuu: merkintä
      * kertoo koko muurikierroksesta, ja Dalmatian kesähelteessä

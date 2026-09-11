@@ -253,6 +253,13 @@ export const FOKUSVIRTA_ISTANBUL = {
       'https://archives.saltresearch.org/handle/123456789/204674',
       ],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-istanbul-r20260911-paper2-v1.jpg",
+      lyhyt: "Konstantinopoli, 1873. Kantaja ehti matkaan ennen kuin mastot tulivat lasketuiksi.",
+      selite: "Galatan mäki avasi salmelle näkymän, jossa mastot sekoittuivat sumuun. Aloitin niiden laskemisen, mutta kantaja oli jo nostanut arkun selkäänsä. Hän katosi alas viettävälle kadulle ennen kuin pääsin varmaan lukuun. Satama jatkoi sillä välin oman määränsä kasvattamista.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.metmuseum.org/art/collection/search/263021","https://archives.saltresearch.org/handle/123456789/204674"],
+    },
     /*
      * AIKALAISPIIRROS, HAETTU JA VARMENNETTU ERIKSEEN (ks. tiedoston
      * alku). Commonsin imageinfo 25.8.2026: 800×591, public domain

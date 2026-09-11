@@ -309,6 +309,8 @@ const { HAVAINNEKUVA_LINKKI_TEKSTI } = await import('../js/havainnekuva.js');
 
 const KOEKAUPUNKI = { id: 'sofia', name: 'Sofia' };
 const PAKKI = fokusvirtaKaupungille(KOEKAUPUNKI.id);
+// Nämä testit käyttävät yhden kuvan testipakkia; kuvasarja testataan erikseen.
+delete PAKKI.matkakirja.luentakuva2;
 
 /** Isoisän luentakuva: pakan pohja. */
 const POHJAKUVA = {

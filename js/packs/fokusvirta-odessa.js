@@ -238,6 +238,13 @@ export const FOKUSVIRTA_ODESSA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://whc.unesco.org/document/196047","https://whc.unesco.org/en/list/1703"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-odessa-r20260911-paper2-v1.jpg",
+      lyhyt: "Odessa, 1873. Merituuli nousi portaat ilman lepoa tai tullia.",
+      selite: "Ylhäällä puistokäytävällä herrat liikuttivat lähinnä kävelykeppejään. Portaat laskivat satamaan, jossa laivojen ja kuormien työ jatkui. Illan merituuli tarttui takinhelmoihin ja kulki koko matkan yhdellä hengenvedolla. Siltä ei kysytty papereita eikä lastin arvoa.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://whc.unesco.org/en/list/1703","https://whc.unesco.org/document/196047"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Odessa, elokuussa 1873. Kuumaa; merituuli vasta illalla; '

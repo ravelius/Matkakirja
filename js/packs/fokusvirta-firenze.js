@@ -247,6 +247,13 @@ export const FOKUSVIRTA_FIRENZE = {
         'https://www.visittuscany.com/en/ideas/michelangelos-david-some-facts-you-might-not-know/',
       ],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-firenze-r20260911-paper2-v1.jpg",
+      lyhyt: "Firenze, 1873. Illan hiljaisuudessa katsoin Davidin suuntaan.",
+      selite: "Palasin aukiolle illalla, kun väkeä oli vähemmän. Muutama ihminen kulki jo pois pitkien varjojen yli. Jäin katsomaan Davidin suuntaan kuvan ulkopuolelle. Hiljaisuudessa kivi vaikutti entistä enemmän ihmiseltä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/","https://www.galleriaaccademiafirenze.it/la-galleria/"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

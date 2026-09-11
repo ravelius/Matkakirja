@@ -109,6 +109,13 @@ export const FOKUSVIRTA_HELSINKI = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.finna.fi/Record/hkm.CCD1A6CE-FD67-4BDD-9E29-D3C71E41D098","https://www.finna.fi/Record/hkm.F2DD5045-4DE1-49AF-8418-01F6629EEBB6","https://helsingintuomiokirkko.fi/index/kirkontarina.html","https://www.hamhelsinki.fi/en/sculptures/havis-amanda-2/","https://www.hamhelsinki.fi/en/sculptures/alexander-ii/"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-helsinki-r20260911-paper2-v1.jpg",
+      lyhyt: "Helsinki, 1873. Suomenlahti löytyi kartasta myös rasvajälkenä.",
+      selite: "Torilta lähdettyäni avasin kartan ja tutkin silakan jättämää jälkeä. Tuuli oli taittanut paperia, mutta rasvainen kohta pysyi Suomenlahden päällä. Pidin kartasta kiinni molemmin käsin sataman näkyessä taustalla. Paikallistieto oli tahraista mutta täsmällistä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.finna.fi/Record/hkm.CCD1A6CE-FD67-4BDD-9E29-D3C71E41D098","https://helsingintuomiokirkko.fi/index/kirkontarina.html"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Se seuraa merkinnän omaa
      * havaintopaikkaa — laivan kannelta katsottu kaupunki ja satama,

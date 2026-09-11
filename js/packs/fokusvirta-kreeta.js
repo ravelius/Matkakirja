@@ -49,6 +49,13 @@ export const FOKUSVIRTA_KREETA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.chaniatourism.gr/monument/the-egyptian-lighthouse/","https://chaniahistory.gr/en/lighthouse/","https://www.chaniatourism.gr/neighborhood/venetian-harbor/"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kreeta-r20260911-paper2-v1.jpg",
+      lyhyt: "Hania, 1873. Karttaan piirtyi valo ilman valtakunnan väriä.",
+      selite: "Istuin satamakivelle ja avasin kartan polvelleni. Majakan pieni valo kuului merellä niille, jotka tarvitsivat sitä, vaikka torni oli vaihtanut hallitsijaa useammin kuin käyttötarkoitusta. Piirsin valon paikalleen ilman valtakunnan väriä. Veneet lepäsivät sen edessä hiljaisina.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://chaniahistory.gr/en/lighthouse/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi. */
     paikkarivi: 'Kreeta, huhtikuussa 1873. Lämmintä; vuorilla vielä lunta; '

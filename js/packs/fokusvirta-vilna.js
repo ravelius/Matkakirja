@@ -154,6 +154,13 @@ export const FOKUSVIRTA_VILNA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.muziejus.vu.lt/en/departments/observatory-of-ideas","https://www.knygynas.vu.lt/kitos-knygos/vadovas-po-senaja-vu-astronomijos-observatorija"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-vilna-r20260911-paper2-v1.jpg",
+      lyhyt: "Vilna, 1873. Pilvien väistyessä tuoli ehti palvella tiedettä.",
+      selite: "Tutkija jäi ikkunalle odottamaan pilvien väistymistä, mutta kaukoputki ei kiirehtinyt. Minä istuin teekuppi kädessä ja katselin Vilnan kirkontorneja, jotka osoittivat taivaalle kukin omalla tavallaan. Taivaan tutkiminen näytti sillä hetkellä vaativan ennen kaikkea kärsivällisyyttä. Hyvä tuoli osoittautui laitoksen hiljaiseksi apuvälineeksi.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.muziejus.vu.lt/en/departments/observatory-of-ideas"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Vilna, kesäkuussa 1873. Poutaa; kirkonkellot kuuluvat '

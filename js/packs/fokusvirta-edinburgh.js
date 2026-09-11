@@ -228,6 +228,13 @@ export const FOKUSVIRTA_EDINBURGH = {
       'https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/history/',
       ],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-edinburgh-r20260911-paper2-v1.jpg",
+      lyhyt: "Edinburgh, 1873. Sukat riippuivat kuilun yllä ilman huimausta.",
+      selite: "Pyykkinaru kulki kapean kujan yli. Sukat riippuivat korkealla, ja ikkunoita jatkui niiden alapuolella. Seisoin ylemmällä askelmalla ja katsoin alas. Kaupungin korkeudet eivät mahtuneet yhdelle kartta-arkille.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://canmore.org.uk/site/52499/edinburgh-old-town"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

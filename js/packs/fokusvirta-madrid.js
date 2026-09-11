@@ -195,6 +195,13 @@ export const FOKUSVIRTA_MADRID = {
       'https://www.museodelprado.es/en/museum/history-of-the-museum',
       ],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-madrid-r20260911-paper2-v1.jpg",
+      lyhyt: "Madrid, 1873. Tasavalta sai kahvilassa enemmän puhetta kuin kahvi.",
+      selite: "Pradon hiljaisen salin jälkeen kahvila oli täynnä mielipiteitä. Kaksi herraa järjesti uutta tasavaltaa käsillään kupin yli. Kuuntelin pöydän laidalta ja annoin vallan vaihtua ilman sanomalehteä. Kahvi ehti jäähtyä ennen väittelyä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.museodelprado.es/en/museum/history-of-the-museum"],
+    },
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */

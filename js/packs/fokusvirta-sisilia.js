@@ -31,6 +31,13 @@ export const FOKUSVIRTA_SISILIA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.federicosecondo.org/cappella-palatina/"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sisilia-r20260911-paper2-v1.jpg",
+      lyhyt: "Palermo, 1873. Niska väsyi ennen kuin kysymykset loppuivat.",
+      selite: "Istuin hetkeksi, sillä pitkään ylöspäin katsominen tuntui jo niskassa. Mosaiikit, pylväät ja veistetty puu kertoivat monen käsityöperinteen kohtaamisesta. Kuninkaan nimi oli helppo kuulla. Niiden käsien nimiä, jotka tekivät työn, olisin kuunnellut kauemmin.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.federicosecondo.org/la-cappella-palatina/","https://www.federicosecondo.org/wp-content/uploads/2025/02/palatina_eng.pdf"],
+    },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Palermo, toukokuussa 1873. Kuumaa; Etna savuaa horisontissa; '
       + 'puntari korkealla.',

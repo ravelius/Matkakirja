@@ -185,6 +185,13 @@ export const FOKUSVIRTA_BUKAREST = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://muzeulbucurestiului.ro/expozitia-tematica-hanurile-uitate-ale-bucurestilor/","https://www.hanulluimanuc.ro/"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bukarest-r20260911-paper2-v1.jpg",
+      lyhyt: "Bukarest, 1873. Keittiön tuoksu voitti pylväiden laskemisen.",
+      selite: "Parven kaide johti katseen alas keittiön avoimelle ovelle. Kun padan kansi nousi, höyry ehti luokseni ennen ruokalajia. Jätin pylväät kesken ja lähdin portaita alas. Majatalossa oikea suunta löytyi tällä kertaa nenällä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://muzeulbucurestiului.ro/expozitia-tematica-hanurile-uitate-ale-bucurestilor/","https://www.hanulluimanuc.ro/"],
+    },
     /* Kaanon, kohta 1 — paikkarivi, teksti ja luenta sellaisinaan. */
     paikkarivi: 'Bukarest, lokakuussa 1873. Ensimmäinen halla; savu nousee '
       + 'suoraan; puntari korkealla.',

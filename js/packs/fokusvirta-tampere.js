@@ -222,6 +222,13 @@ export const FOKUSVIRTA_TAMPERE = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.finna.fi/Search/Results?lookfor=Finlayson+tehdas+kehruusali&type=AllFields"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tampere-r20260911-paper2-v1.jpg",
+      lyhyt: "Tampere, 1873. Koneiden voima kulki työntekijöiden sormien kautta.",
+      selite: "Nainen oli palannut kehruukoneensa ääreen. Pitkät konerivit täyttivät salin, mutta jokainen lanka tarvitsi silti käsiä. Kirjoitin muistikirjaan, mitä olin nähnyt. Tehtaan voimaa ei voinut laskea ilman työntekijöitä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.finna.fi/Search/Results?lookfor=Finlayson+tehdas+kehruusali&type=AllFields"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Tampere, elokuussa 1873. Viileä aamu; koski kohisee yöllä; '

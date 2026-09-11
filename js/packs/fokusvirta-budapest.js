@@ -115,6 +115,13 @@ export const FOKUSVIRTA_BUDAPEST = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.rudasfurdo.hu/en/past-and-present","https://fortepan.hu/en/photos/?id=252393","https://fortepan.hu/en/photos/?id=82594"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-budapest-r20260911-paper2-v1.jpg",
+      lyhyt: "Budapest, 1873. Kartan kolme nimeä joutuivat saman ympyrän sisään.",
+      selite: "Aamiaispöydässä vanha kartta jakoi kaupungin vielä kolmeen osaan. Ikkunan takana Tonava piti oman suuntansa ja Ketjusilta yhdisti rannat. Piirsin rajojen ympärille uutta järjestystä ilman sanoja. Marraskuu oli ehtinyt yhdistää kaupungin nopeammin kuin kartantekijä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.rudasfurdo.hu/en/past-and-present","https://fortepan.hu/en/photos/?id=252393"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi seuraa merkinnän omaa
      * faktaa: kaupunkia "ei vielä eilen ollut", ja yhdistyminen astui

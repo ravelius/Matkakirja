@@ -31,6 +31,13 @@ export const FOKUSVIRTA_ISLANTI = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://borgarsogusafn.is/en/exhibitions/the-washerwomen-s-walk-a-stroll-into-history"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-islanti-r20260911-paper2-v1.jpg",
+      lyhyt: "Reykjavik, 1873. Paita palasi puhtaana, saari jäi suureksi kysymykseksi.",
+      selite: "Kuljin kuumilta lähteiltä takaisin kohti Reykjavikin pieniä taloja. Tuuli tarttui takkiin ja puhtaan paidan kaulukseen. Tien ympärillä maa avautui niin laajana, ettei mikään puu katkaissut näkymää. Kaulukseni oli selkeämpi kuin käsitykseni saaresta.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://borgarsogusafn.is/en/exhibitions/the-washerwomen-s-walk-a-stroll-into-history"],
+    },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Reykjavik, elokuussa 1873. Tuulista; ei yhtään puuta; '
       + 'puntari matalalla.',

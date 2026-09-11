@@ -250,6 +250,13 @@ export const FOKUSVIRTA_KIOVA = {
         'https://whc.unesco.org/en/list/527/',
       ],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kiova-r20260911-paper2-v1.jpg",
+      lyhyt: "Kiova, 1873. Luolasta tuotu liekki löysi päivänvalon.",
+      selite: "Luolien jälkeen päivänvalo tuntui suuremmalta kuin ennen. Kivireunalla paloi vielä pieni liekki, ja muut pyhiinvaeltajat kulkivat jo portailla. Lavran kupolit nousivat Dneprin ylle, kastanjat kukkivat niiden ympärillä. Tuli ei ollut enää tarpeen, mutta sen valo muistutti luolassa saadusta avusta.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://whc.unesco.org/en/list/527/"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

@@ -168,6 +168,13 @@ export const FOKUSVIRTA_OSLO = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.oslobilder.no/search?page=10&query=%22havna%22"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-oslo-r20260911-paper2-v1.jpg",
+      lyhyt: "Christiania, 1873. Vedestä nostettu lastu tuoksui yhä metsältä.",
+      selite: "Kumarruin laiturilta ja nostin vedestä pienen puulastun. Lankkupinot ja purjelaiva jäivät taustalle. Lastu oli jo satamassa, mutta sen pinta tuntui tuoreelta. Metsän matka oli alkanut.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.oslobilder.no/search?page=10&query=%22havna%22"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Kristiania, heinäkuussa 1873. Valoisaa myöhään; vuono tyyni; '

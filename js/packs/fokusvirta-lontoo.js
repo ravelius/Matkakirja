@@ -193,6 +193,13 @@ export const FOKUSVIRTA_LONTOO = {
         'https://www.heritagefund.org.uk/news/worlds-oldest-known-underground-carriage-be-restored',
       ],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-r20260911-paper2-v1.jpg",
+      lyhyt: "Lontoo, 1873. Perille päästiin nopeasti; yskä astui laiturille mukana.",
+      selite: "Metropolitanin juna jäi puhkumaan laiturin reunaan, vaikka matkustajat olivat jo nousseet pois. Savu seurasi meitä vaunusta ja teki kaasulampuista epävarmoja. Nostin nenäliinan suulle ennen kuin ehdin laskea laukkua kunnolla maahan. Matka oli nopea, mutta keuhkot näyttivät haluavan antaa oman lausuntonsa.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.ltmuseum.co.uk/collections/stories/transport/metropolitan-line","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/97","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/33362"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

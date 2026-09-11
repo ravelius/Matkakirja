@@ -106,6 +106,13 @@ export const FOKUSVIRTA_BERLIINI = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://search.smb.museum/object/obj-968409?involved=Anton+von+Werner&page=2","https://www.smb.museum/nachrichten/detail/schenkung-von-alicja-kwade-skulptur-goldelse-fuer-den-skulpturengarten-der-neuen-nationalgalerie/"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-berliini-r20260911-paper2-v1.jpg",
+      lyhyt: "Berliini, 1873. Mudasta noussut lehti vaihtui kolikkoon.",
+      selite: "Juhlavieraat olivat jo kulkeneet lehden yli. Poimin myyjältä mudan tahriman numeron ja annoin kolikon. Paksut voitonotsikot jäivät paperin toiselle puolelle. Tässä kaupassa tärkein uutinen mahtui kahden käden väliin.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://search.smb.museum/object/obj-968409?involved=Anton+von+Werner&page=2"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma; sääkommentti on isoisän havainto
      * eikä mitattu väite. Kuukausi sopii merkinnän työmaakuvaan:

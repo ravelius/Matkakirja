@@ -38,6 +38,13 @@ export const FOKUSVIRTA_LAPPI = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://historia.rovaniemi.fi/historia/roieng24-27.pdf","https://www.finna.fi/Record/museovirasto.56B7F05404DF17550CEC4C1D3FD888DD","https://lapinkavijat.rovaniemi.fi/lapinportti/concorde.htm"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lappi-r20260911-paper2-v1.jpg",
+      lyhyt: "Rovaniemi, 1873. Seuraava talo löytyi savusta, ei kartasta.",
+      selite: "Nainen oli astunut veneeseen ja katsoi jo kohti seuraavaa taloa. Rannalta noussut savu kertoi hänelle reitin paremmin kuin oma karttani. Sidottu kuorma pysyi matalana keskellä venettä. Ounasjoen ja Kemijoen vesi ei ollut täällä raja vaan tie.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://historia.rovaniemi.fi/historia/roieng24-27.pdf","https://www.finna.fi/Record/museovirasto.56B7F05404DF17550CEC4C1D3FD888DD"],
+    },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Rovaniemi, syyskuussa 1873. Ensimmäinen ruska; yöllä '
       + 'revontulet; puntari korkealla.',

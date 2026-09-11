@@ -290,6 +290,13 @@ export const FOKUSVIRTA_SOFIA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://visitsofia.bg/catalog/en/discover_sofiaEN/Discover_SofiaEN.pdf"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sofia-r20260911-paper2-v1.jpg",
+      lyhyt: "Sofia, 1873. Majatalon kylmä vesi sai vuoren näyttämään viisaammalta.",
+      selite: "Majatalossa maksettu pesuvesi ei ollut ehtinyt ottaa oppia kaupungin lähteestä. Kokeilin sitä kädellä ja katsoin ikkunasta Vitošan suuntaan. Kattojen takana lämmin höyry nousi ilman halkoja. Matkailu oli taas järjestänyt mukavuudet väärään osoitteeseen.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://visitsofia.bg/catalog/en/discover_sofiaEN/Discover_SofiaEN.pdf"],
+    },
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Sofia, elokuussa 1873. Helteistä; tomu ei laskeudu; puntari '
       + 'korkealla.',

@@ -201,6 +201,13 @@ export const FOKUSVIRTA_VARSOVA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://muzeumwarszawy.pl/en/old-town-new-town-in-warsaw/","https://muzeum.uw.edu.pl/en/the-old-town-square-1916-1918/","https://muzeumwarszawy.pl/obiekt/rzezba-syreny-fontanny-rynku-starego-miasta/"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-varsova-r20260911-paper2-v1.jpg",
+      lyhyt: "Varsova, 1873. Leipä kulki kadulla helpommin kuin raja kartalla.",
+      selite: "Lähdin torilta tuore leipä kainalossa ja kartta toisessa kädessä. Viraston ovella keisarillinen tunnus kertoi yhden tarinan kaupungista. Kadulla puhuttu kieli ja aamiaiseni kertoivat toisen. Ihmiset jatkoivat matkaa, vaikka kartan viiva pysyi paikallaan.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://muzeumwarszawy.pl/en/old-town-new-town-in-warsaw/","https://muzeumwarszawy.pl/dzieje-kamienic/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Varsova, syyskuussa 1873. Kirkasta; Veikselillä usvaa '
