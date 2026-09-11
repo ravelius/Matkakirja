@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1764, teksti: 'Äänentasot rattaaseen, PuluCam pulun repliikistä, kuva 2' },
   { v: 1763, teksti: 'Luentareaktiot 44 kaupunkiin; rekisterin tilat' },
   { v: 1762, teksti: 'Kehittäjävalikko siistiksi, äänisäätimet, ensiliito' },
   { v: 1761, teksti: 'Saapuminen: minitraileri, isot kuvat, lyhennetty merkintä' },

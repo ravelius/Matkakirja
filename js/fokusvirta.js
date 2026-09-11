@@ -1848,9 +1848,33 @@ export function luentakuvanKallistus(tunnus) {
  * kartalle tyhjän kehyksen.
  */
 export function fokusvirtaLuentakuva(ui, city) {
-  const kuva = fokusvirtaSisalto(ui, city)?.matkakirja?.luentakuva;
-  if (!kuva) return null;
-  return (kuva.osoite || kuva.ampari || kuva.tiedosto) ? kuva : null;
+  return fokusvirtaLuentakuvat(ui, city)[0] ?? null;
+}
+
+/**
+ * KAUPUNGIN ISOISÄN KUVAT JÄRJESTYKSESSÄ (`luentakuva`, `luentakuva2`).
+ *
+ * Omistaja 11.9.2026 klo 14.35, sanatarkasti: *"isoisan kertomuksiin
+ * voisi generoida toisen kuvan lisaa kaikkiin euroopan kaupunkeihin …
+ * kuva saisi vaihtua uuden lyhennetyn puheen puolivalissa"*. Toinen
+ * kenttä on VAPAAEHTOINEN ja täsmälleen samaa muotoa kuin ensimmäinen;
+ * ilman sitä lista on yhden mittainen ja kaikki toimii kuten ennen.
+ *
+ * Kuva kelpaa vain jos sillä on jokin kolmesta osoitelähteestä
+ * (`osoite`, `ampari`, `tiedosto`) — pelkkä selite ilman kuvaa jättäisi
+ * kartalle tyhjän kehyksen.
+ *
+ * @returns {Array<object>} 0–2 kuvaa
+ */
+export function fokusvirtaLuentakuvat(ui, city) {
+  const matkakirja = fokusvirtaSisalto(ui, city)?.matkakirja;
+  return [matkakirja?.luentakuva, matkakirja?.luentakuva2]
+    .filter((kuva) => kuva && (kuva.osoite || kuva.ampari || kuva.tiedosto));
+}
+
+/** Kaupungin TOINEN isoisän luentakuva, tai null. */
+export function fokusvirtaLuentakuva2(ui, city) {
+  return fokusvirtaLuentakuvat(ui, city)[1] ?? null;
 }
 
 /**
@@ -1885,15 +1909,24 @@ export function luentakuvanVara(kuva) {
  */
 export function esilataaLuentakuva(ui, city) {
   if (typeof Image === 'undefined' || !city || !ui?.game?.pack) return false;
-  const kuva = fokusvirtaLuentakuva(ui, city);
-  if (!kuva) return false;
+  /*
+   * MOLEMMAT ISOISÄN KUVAT SAMALLA KERTAA (omistaja 11.9.2026 klo
+   * 14.35). Kakkoskuva vaihtuu ruudulle yhdeksän sekunnin kohdalla
+   * luennasta — verkosta haettuna se ilmestyisi vasta kauan sen
+   * jälkeen, joten se pyydetään samassa saapumisrenderissä kuin
+   * ensimmäinen.
+   */
+  const kuvat = fokusvirtaLuentakuvat(ui, city);
+  if (!kuvat.length) return false;
   const avain = `${ui.game.pack.id}:${city.id}`;
   ui.luentakuvaVarasto ??= new Map();
   if (ui.luentakuvaVarasto.has(avain)) return false;
-  const esi = new Image();
-  esi.decoding = 'async';
-  esi.src = luentakuvanOsoite(kuva);
-  ui.luentakuvaVarasto.set(avain, esi);
+  ui.luentakuvaVarasto.set(avain, kuvat.map((kuva) => {
+    const esi = new Image();
+    esi.decoding = 'async';
+    esi.src = luentakuvanOsoite(kuva);
+    return esi;
+  }));
   // Vanhimmat pois katon ylittyessä: nekin ovat jo selaimen omassa
   // välimuistissa, eikä peli tarvitse niitä enää oliona.
   while (ui.luentakuvaVarasto.size > LUENTAKUVAVARASTON_KATTO) {
@@ -1914,13 +1947,19 @@ export function esilataaLuentakuva(ui, city) {
  *
  * @returns {boolean} nousiko kuva ruudulle
  */
-export function naytaLuentakuva(ui, city) {
+export function naytaLuentakuva(ui, city, { kuva: valittu = null } = {}) {
   if (typeof document === 'undefined' || !ui || !city) return false;
   // Edellinen kuva pois ilman häivytystä: uusi luenta ei odota vanhan
   // poistumista, eikä kahta paneelia saa olla yhtä aikaa.
   piilotaLuentakuva(ui, { heti: true });
-  const kuva = fokusvirtaLuentakuva(ui, city);
+  /*
+   * KARTALLE JÄÄ VIIMEKSI NÄYTETTY ISOISÄN KUVA (omistaja 11.9.2026 klo
+   * 14.35: kuva vaihtuu luennan puolivälissä). Sarja kertoo lopettaessaan,
+   * kumpi kuva oli ruudulla; ilman valintaa tämä on entinen ensimmäinen.
+   */
+  const kuva = valittu ?? fokusvirtaLuentakuva(ui, city);
   if (!kuva) return false;
+  ui.luentakuvaNyt = kuva;
   return Boolean(rakennaLuentakuvanPaneeli(ui, city, kuva));
 }
 
@@ -2121,8 +2160,15 @@ export function fokusvirtaPulunKuvat(ui, city) {
  */
 function pulucamKaruselli(ui, city, pohjakuva) {
   const kuvat = fokusvirtaPulunKuvat(ui, city);
-  const lista = pohjakuva ? [pohjakuva, ...kuvat] : [...kuvat];
-  return { lista, pulusta: pohjakuva ? 1 : 0 };
+  /*
+   * KAKSI ISOISÄN KUVAA, JOS NIITÄ ON (omistaja 11.9.2026 klo 14.35).
+   * Karuselli näyttää molemmat samassa järjestyksessä kuin luenta:
+   * kuva 1, kuva 2, sitten pulun kuvat. Kartalla päällimmäisenä on
+   * viimeksi näytetty, mutta lista on aina koko sarja.
+   */
+  const pohjat = pohjakuva ? fokusvirtaLuentakuvat(ui, city) : [];
+  const isoisa = pohjat.length ? pohjat : (pohjakuva ? [pohjakuva] : []);
+  return { lista: [...isoisa, ...kuvat], pulusta: isoisa.length };
 }
 
 /**
@@ -2130,7 +2176,15 @@ function pulucamKaruselli(ui, city, pohjakuva) {
  * päällä — muuten entinen yhden kuvan suurennos.
  */
 function avaaLuentakuvanKaruselli(ui, city, kuva, nappi) {
-  if (!puluCamPakassa(ui)) { avaaSuurennos(ui, [kuva], 0, () => nappi, { lyhytTeksti: true }); return; }
+  if (!puluCamPakassa(ui)) {
+    // Ilman pakkaa karusellissa ovat isoisän omat kuvat (yksi tai kaksi),
+    // ja se aukeaa siitä kuvasta, joka kartalla oli näkyvissä.
+    const pohjat = fokusvirtaLuentakuvat(ui, city);
+    const lista = pohjat.length ? pohjat : [kuva];
+    avaaSuurennos(ui, lista, Math.max(0, lista.indexOf(kuva)), () => nappi,
+      { lyhytTeksti: true });
+    return;
+  }
   /*
    * ISOISÄN KUVA ON PAKASSA YKSI KORTTI MUIDEN JOUKOSSA (omistaja
    * 10.9.2026). Alla ollessaan sen näkyvän reunan napautus NOSTAA sen
@@ -2139,7 +2193,8 @@ function avaaLuentakuvanKaruselli(ui, city, kuva, nappi) {
    */
   if (nostaPuluCamKortti(ui, PULUCAM_POHJA)) return;
   const { lista, pulusta } = pulucamKaruselli(ui, city, kuva);
-  avaaSuurennos(ui, lista, 0, () => nappi, { pulunKuvasta: pulusta, lyhytTeksti: true });
+  avaaSuurennos(ui, lista, Math.max(0, lista.indexOf(kuva)), () => nappi,
+    { pulunKuvasta: pulusta, lyhytTeksti: true });
 }
 
 /**
@@ -2167,15 +2222,22 @@ export function naytaPulunKuvapakka(ui, city, { heti = false } = {}) {
    * ISO KESKISARJA OMISTAA PAKAN NOSTON (omistaja 11.9.2026, Raamattu
    * SAAPUMISEN UUSI JARJESTYS…). Kuvat käydään ensin läpi isoina keskellä
    * ruutua, ja pakka nousee kartalle vasta sarjan lopuksi — pieneen
-   * kokoon (naytaLuentakuvasarja → nostaPieniPakka). Siksi kaksi porttia:
-   * kesken sarjan pulun kommentti ei nosta pakkaa etuajassa, eikä jo
-   * noussutta pakkaa nosteta toista kertaa (nosto purkaisi `pieni`-tilan
-   * ja kuva pomppaisi isoksi).
+   * kokoon (naytaLuentakuvasarja → nostaPieniPakka).
+   *
+   * TÄMÄ SAMA HETKI ALOITTAA PULUCAM-KUVAT (omistaja 11.9.2026 klo
+   * 14.35, sanatarkasti: *"pulcam kuvat tulevat vasta kun pulun oma
+   * repliikki alkaa"*). Kesken sarjan kutsu ei siis nosta pakkaa
+   * etuajassa vaan käynnistää pulun oman kuvasarjan keskellä ruutua;
+   * pakka nousee vasta sen jälkeen. Jo noussutta pakkaa ei nosteta
+   * toista kertaa (nosto purkaisi `pieni`-tilan ja kuva pomppaisi
+   * isoksi).
    */
-  if (ui.luentakuvasarja || (puluCamPakassa(ui) && !heti)) return false;
+  if (ui.luentakuvasarja) return aloitaPuluCamSarja(ui, city);
+  if (puluCamPakassa(ui) && !heti) return false;
   const kuvat = fokusvirtaPulunKuvat(ui, city);
   if (!kuvat.length) return false;
-  const pohjakuva = fokusvirtaLuentakuva(ui, city);
+  // Kartalla on viimeksi näytetty isoisän kuva (kuva 2, jos sellainen on).
+  const pohjakuva = ui.luentakuvaNyt ?? fokusvirtaLuentakuva(ui, city);
   const paneeli = ui.luentakuva ?? rakennaLuentakuvanPaneeli(ui, city, pohjakuva);
   if (!paneeli) return false;
   // Pakan koti on kuvatila (nappi ja sen `overflow: hidden` eivät kelpaa).
@@ -2845,6 +2907,9 @@ export function piilotaLuentakuva(ui, { heti = false } = {}) {
   ui.luentakuvaAjastin = null;
   const paneeli = ui.luentakuva;
   ui.luentakuva = null;
+  // Viimeksi näytetty isoisän kuva on paneelin oma tieto: se lähtee
+  // paneelin mukana, tai seuraava kaupunki perisi edellisen valinnan.
+  ui.luentakuvaNyt = null;
   if (!paneeli) return;
   // Ankkurisolmu lähtee paneelin mukana: tyhjä piste jäisi muuten
   // karttapinnalle jokaisen luennan jäljiltä.
@@ -2889,10 +2954,18 @@ export function piilotaLuentakuva(ui, { heti = false } = {}) {
  *     kokoon. Ilman läpäisyä napautus jäisi päällykseen eikä kartta
  *     liikkuisi lainkaan.
  *
- *  4. PAKKA NOUSEE VAIN KERRAN. Pulun kommentti nostaa pakan omasta
- *     kohdastaan (fokusvirtaSaapumiskupla → naytaPulunKuvapakka), ja
- *     sarja nostaa sen lopuksi. Portti on nostossa itsessään, ei
+ *  4. PAKKA NOUSEE VAIN KERRAN, JA VASTA SARJAN JÄLKEEN. Pulun kommentti
+ *     ei enää nosta pakkaa kartalle (fokusvirtaSaapumiskupla →
+ *     naytaPulunKuvapakka), vaan ALOITTAA PuluCam-kuvien ison sarjan
+ *     (aloitaPuluCamSarja) — omistaja 11.9.2026 klo 14.35: *"pulcam
+ *     kuvat tulevat vasta kun pulun oma repliikki alkaa"*. Pakka nousee
+ *     pienenä vasta sarjan lopuksi. Portti on nostossa itsessään, ei
  *     kutsupaikoissa — muuten järjestys ratkaisisi lopputuloksen.
+ *
+ *  5. ISOISÄN KUVALLA ON KAKSI KELLOA. Luennan ajan se pysyy suurena;
+ *     puolivälissä (LUENTAKUVAN_VAIHTO_MS) se vaihtuu kakkoskuvaksi, jos
+ *     pakissa on `matkakirja.luentakuva2`. Ilman PuluCam-kuvia sarja
+ *     päättyy 6 s luennan päättymisestä, ei 6 s kuvan avautumisesta.
  */
 
 /** Kuinka kauan yksi iso kuva on ruudulla ennen seuraavaa (omistaja: 4 s). */
@@ -2906,6 +2979,36 @@ export const ISON_KUVAN_RISTIHAIVE_MS = 500;
 
 /** Koko sarjan häipyminen ruudulta. */
 export const ISON_KUVAN_POISTUMA_MS = 700;
+
+/**
+ * ISOISÄN KUVA VAIHTUU LUENNAN PUOLIVÄLISSÄ (omistaja 11.9.2026 klo
+ * 14.35, sanatarkasti: *"kuva saisi vaihtua uuden lyhennetyn puheen
+ * puolivalissa. voi kayttaa keskimaaraista aikaa, niin ei tarvitse
+ * jokaiselle luennalle laskea aikaa erikseen"*).
+ *
+ * YKSI VAKIO KAIKILLE, EI LUENTAKOHTAISTA LASKENTAA. Marseillen
+ * lyhennetty luenta päättyy 17,8 s kohdalla, joten puoliväli on noin
+ * 9 s — ja se on omistajan päätöksellä kaikkien kaupunkien mitta.
+ * Ajastin lähtee isoisän kuvan avautumisesta eli luennan alusta.
+ */
+export const LUENTAKUVAN_VAIHTO_MS = 9000;
+
+/** Isoisän kahden kuvan ristihäivytys (omistaja: pehmeä vaihto). */
+export const LUENTAKUVAN_RISTIHAIVE_MS = 600;
+
+/** Kuinka usein sarja kysyy, onko luenta yhä kesken. */
+const SARJAN_LUENTAVAHTI_MS = 250;
+
+/**
+ * Kuinka kauan luennan annetaan KÄYNNISTYÄ ennen kuin sarja tulkitsee,
+ * ettei luentaa tule lainkaan (mykistys, kertojatila 'ei', puuttuva
+ * äänite). Luenta lähtee sekunnin viiveellä, joten katto on reilusti
+ * sen yli.
+ */
+const SARJAN_LUENNAN_ALKUKATTO_MS = 4000;
+
+/** Varoventtiili: luentaa ei odoteta tätä pidempään. */
+const SARJAN_LUENNAN_KATTO_MS = 180000;
 
 /**
  * Sarjan yksi ruutu: kuva, PULU-CAM-sinetti ja lyhyt kuvateksti.
@@ -2942,6 +3045,20 @@ function isonKuvanRuutu(kuva, pulusta) {
 /**
  * SARJA RUUDULLE (js/ui.js renderFact, luennan alkaessa).
  *
+ * KULKU (omistaja 11.9.2026 klo 14.35, sanatarkasti: *"pulcam kuvat
+ * tulevat vasta kun pulun oma repliikki alkaa"*):
+ *
+ *   1. Isoisän luentakuva avautuu keskelle ruutua luennan alkaessa ja
+ *      PYSYY suurena koko luennan ajan.
+ *   2. Kakkoskuva (`matkakirja.luentakuva2`) vaihtuu tilalle
+ *      LUENTAKUVAN_VAIHTO_MS:n kohdalla — ristihäivytyksellä, kuvateksti
+ *      kuvan mukana. Ilman kenttää ensimmäinen kuva jää.
+ *   3. PuluCam-kuvien sarja alkaa VASTA pulun oman kommentin alkaessa
+ *      (fokusvirtaSaapumiskupla → naytaPulunKuvapakka → aloitaPuluCamSarja),
+ *      4 s välein, ja viimeinen häipyy 6 s kuluttua pieneksi pakaksi.
+ *   4. Ilman PuluCam-kuvia isoisän kuva pienenee 6 s LUENNAN
+ *      PÄÄTTYMISESTÄ (vahtiLuennanLoppua, ui.luentaKesken).
+ *
  * Ilman isoisän luentakuvaa sarjaa ei ole: silloin kartta saa entisen
  * kohtelunsa (naytaLuentakuva, joka ilman kuvaa ei tee mitään) ja pulun
  * pakka nousee kommentin mukana kuten ennen.
@@ -2950,31 +3067,41 @@ function isonKuvanRuutu(kuva, pulusta) {
  */
 export function naytaLuentakuvasarja(ui, city) {
   if (typeof document === 'undefined' || !ui || !city) return false;
-  const pohjakuva = fokusvirtaLuentakuva(ui, city);
-  if (!pohjakuva) return naytaLuentakuva(ui, city);
+  const pohjakuvat = fokusvirtaLuentakuvat(ui, city);
+  if (!pohjakuvat.length) return naytaLuentakuva(ui, city);
   // Edellisen kaupungin jäljet pois (myös kesken jäänyt sarja).
   piilotaLuentakuva(ui, { heti: true });
   lataaTyyli();
 
-  const lista = [pohjakuva, ...fokusvirtaPulunKuvat(ui, city)];
   const kehys = html('div', 'fokusvirta-isokuva');
   kehys.setAttribute('role', 'group');
   kehys.setAttribute('aria-label', `${city.name}: matkakirjan kuva`);
   document.body.appendChild(kehys);
 
   const ajastimet = [];
-  const tila = { kehys, ajastimet, city };
+  const tila = {
+    kehys, ajastimet, city,
+    // Kartalle jäävä kuva: vaihtuu kakkoskuvaan puolivälissä.
+    pohjakuva: pohjakuvat[0],
+    puluAlkoi: false,
+    loppuAjastin: 0,
+  };
   ui.luentakuvasarja = tila;
-  const aja = (viive, tyo) => ajastimet.push(setTimeout(() => {
-    if (ui.luentakuvasarja === tila) tyo();
-  }, Math.max(0, viive)));
+  ui.luentakuvaNyt = pohjakuvat[0];
+  const aja = (viive, tyo) => {
+    const ajastin = setTimeout(() => {
+      if (ui.luentakuvasarja === tila) tyo();
+    }, Math.max(0, viive));
+    ajastimet.push(ajastin);
+    return ajastin;
+  };
 
   const nayta = () => { if (kehys.isConnected) kehys.classList.add('nakyy'); };
   globalThis.requestAnimationFrame?.(nayta);
   ajastimet.push(setTimeout(nayta, 50));
 
   let edellinen = null;
-  const vaihda = (kuva, pulusta) => {
+  const vaihda = (kuva, pulusta, haive = ISON_KUVAN_RISTIHAIVE_MS) => {
     const ruutu = isonKuvanRuutu(kuva, pulusta);
     /*
      * KAMERAN KLIK JOKAISELLE SARJAN KUVALLE (omistaja 11.9.2026 klo
@@ -2992,17 +3119,89 @@ export function naytaLuentakuvasarja(ui, city) {
     // Ristihäivytys: vanha jää hetkeksi uuden alle ja häipyy.
     if (vanha) {
       vanha.classList.remove('nakyy');
-      ajastimet.push(setTimeout(() => vanha.remove(), ISON_KUVAN_RISTIHAIVE_MS));
+      ajastimet.push(setTimeout(() => vanha.remove(), haive));
     }
   };
+  tila.vaihda = vaihda;
+  tila.aja = aja;
 
-  lista.forEach((kuva, i) => {
-    if (i === 0) vaihda(kuva, false);
-    else aja(i * ISON_KUVAN_VAIHTO_MS, () => vaihda(kuva, true));
-  });
-  aja((lista.length - 1) * ISON_KUVAN_VAIHTO_MS + ISON_KUVAN_LOPPU_MS,
-    () => paataLuentakuvasarja(ui));
+  vaihda(pohjakuvat[0], false);
+
+  /*
+   * TOINEN KUVA PUOLIVÄLISSÄ. Kuvateksti vaihtuu kuvan mukana, koska
+   * koko ruutu (kuva + figcaption) rakennetaan uudestaan — ja kartalle
+   * jäävä kuva on tästä eteenpäin kakkoskuva.
+   */
+  if (pohjakuvat[1]) {
+    aja(LUENTAKUVAN_VAIHTO_MS, () => {
+      tila.pohjakuva = pohjakuvat[1];
+      ui.luentakuvaNyt = pohjakuvat[1];
+      vaihda(pohjakuvat[1], false, LUENTAKUVAN_RISTIHAIVE_MS);
+    });
+  }
+
+  /*
+   * LUENNAN LOPPU ON ISOISÄN KUVAN KELLO (omistaja 11.9.2026 klo 14.35:
+   * *"Ilman PuluCam-kuvia isoisan kuva pienenee 6 s luennan
+   * paattymisesta"*). Vahti kysyy ui.luentaKeskeniltä eikä ota
+   * luennanLoppuun-lupausta: luenta lähtee vasta sekunnin viiveellä,
+   * joten sarjan alkaessa soitinta ei vielä ole. Ilman luentaa (mykistys,
+   * kertojatila 'ei', puuttuva äänite) alkukatto päästää kellon käyntiin.
+   */
+  const vahtiLuennanLoppua = (kulunut = 0, alkanut = false) => {
+    if (ui.luentakuvasarja !== tila || tila.puluAlkoi) return;
+    const kesken = ui.luentaKesken?.() === true;
+    const onAlkanut = alkanut || kesken;
+    const loppui = (onAlkanut && !kesken)
+      || (!onAlkanut && kulunut >= SARJAN_LUENNAN_ALKUKATTO_MS)
+      || kulunut >= SARJAN_LUENNAN_KATTO_MS;
+    if (loppui) {
+      tila.loppuAjastin = aja(ISON_KUVAN_LOPPU_MS, () => paataLuentakuvasarja(ui));
+      return;
+    }
+    ajastimet.push(setTimeout(
+      () => vahtiLuennanLoppua(kulunut + SARJAN_LUENTAVAHTI_MS, onAlkanut),
+      SARJAN_LUENTAVAHTI_MS,
+    ));
+  };
+  vahtiLuennanLoppua();
+
   kytkeSarjanKartanLiike(ui, tila);
+  return true;
+}
+
+/**
+ * PULUCAM-KUVAT KESKELLE RUUTUA — PULUN OMASTA REPLIIKISTÄ.
+ *
+ * Omistaja 11.9.2026 klo 14.35, sanatarkasti: *"pulcam kuvat tulevat
+ * vasta kun pulun oma repliikki alkaa"*. Kutsupaikka on se yksi kohta,
+ * jossa kommentti oikeasti nousee ruudulle (fokusvirtaSaapumiskupla →
+ * naytaPulunKuvapakka), joten sarja ja kupla lähtevät samasta hetkestä.
+ *
+ * Ensimmäinen pulun kuva tulee heti kommentin alkaessa, loput 4 s
+ * välein, ja viimeinen häipyy 6 s kuluttua pieneksi pakaksi. Isoisän
+ * kuvan oma kello (6 s luennan lopusta) perutaan tässä: kuvia on vielä
+ * katsottavana. Jos kommentti alkaisi luennan ollessa kesken, sarja
+ * alkaa silti kommentista — se on omistajan hetki.
+ *
+ * @returns {boolean} alkoiko pulun sarja
+ */
+export function aloitaPuluCamSarja(ui, city) {
+  const tila = ui?.luentakuvasarja;
+  if (!tila || tila.puluAlkoi) return false;
+  if (city && tila.city?.id !== city.id) return false;
+  const kuvat = fokusvirtaPulunKuvat(ui, tila.city);
+  if (!kuvat.length) return false;
+  tila.puluAlkoi = true;
+  // Isoisän kuvan pienennyskello pois: pulun kuvat vievät sarjan loppuun.
+  clearTimeout(tila.loppuAjastin);
+  tila.loppuAjastin = 0;
+  kuvat.forEach((kuva, i) => {
+    if (i === 0) tila.vaihda(kuva, true);
+    else tila.aja(i * ISON_KUVAN_VAIHTO_MS, () => tila.vaihda(kuva, true));
+  });
+  tila.aja((kuvat.length - 1) * ISON_KUVAN_VAIHTO_MS + ISON_KUVAN_LOPPU_MS,
+    () => paataLuentakuvasarja(ui));
   return true;
 }
 
@@ -3049,7 +3248,7 @@ export function piilotaLuentakuvasarja(ui) {
 export function paataLuentakuvasarja(ui, { heti = false } = {}) {
   const tila = ui?.luentakuvasarja;
   if (!tila) return false;
-  const { kehys, city } = tila;
+  const { kehys, city, pohjakuva } = tila;
   // Nollaus ENNEN paneelin rakennusta: naytaLuentakuva siivoaa vanhan
   // paneelin piilotaLuentakuvalla, joka muuten veisi tämän sarjan
   // mukanaan kesken päätöksen.
@@ -3062,7 +3261,7 @@ export function paataLuentakuvasarja(ui, { heti = false } = {}) {
     kehys.classList.remove('nakyy');
     setTimeout(poista, ISON_KUVAN_POISTUMA_MS);
   }
-  nostaPieniPakka(ui, city);
+  nostaPieniPakka(ui, city, pohjakuva);
   return true;
 }
 
@@ -3071,11 +3270,13 @@ export function paataLuentakuvasarja(ui, { heti = false } = {}) {
  * kerralla päälle ja kaikki pienessä koossa. Napautus avaa yhä
  * karusellin koko ruudulle entiseen tapaan (avaaSuurennos).
  */
-function nostaPieniPakka(ui, city) {
+function nostaPieniPakka(ui, city, pohjakuva = null) {
   if (!ui || ui.dead || !city) return false;
   // Pelaaja on voinut lähteä kaupungista sarjan aikana.
   if (ui.game?.cityOf?.()?.id !== city.id) return false;
-  if (!naytaLuentakuva(ui, city)) return false;
+  // Kartalle jää se isoisän kuva, joka oli viimeksi ruudulla (kuva 2,
+  // jos vaihto ehti tapahtua) — karuselli näyttää silti molemmat.
+  if (!naytaLuentakuva(ui, city, { kuva: pohjakuva })) return false;
   naytaPulunKuvapakka(ui, city, { heti: true });
   pienennaLuentakuva(ui);
   return true;
