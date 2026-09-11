@@ -60,7 +60,7 @@ import {
   LEPOKERROS_NAYTTEITA, LEPOKERROS_SYVYYSSIIRTO, THREE_CLAMP, THREE_LINEAR,
   THREE_LINEAR_MIPMAP_LINEAR, lepokerroksenAlue, lepokerroksenKerrokset, lepokerroksenLaattakatto,
   lepokerroksenSilmat, lepokerroksenSuunnitelma, lepokerroksenTasoRiittaa, lepokerroksenVerkko,
-  luoLaattakerros, luoLepokerroksenAjoitus, pinnanPiste,
+  luoLaattakerros, luoLepokerroksenAjoitus, pinnanPiste, pyramidinKarttaAla,
 } from './pallolaatat.js';
 
 export {
@@ -86,7 +86,7 @@ export {
   LEPOKERROS_TERAVYYS, LEPOKERROS_TIHEYSOSUUS, LEPOKERROS_VARA_AST, lepokerroksenAlue,
   lepokerroksenKerrokset, lepokerroksenLaatat, lepokerroksenLaattakatto, lepokerroksenSilmat,
   lepokerroksenSuunnitelma, lepokerroksenTaso, lepokerroksenTasoRiittaa, lepokerroksenUV,
-  lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste,
+  lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste, pyramidinKarttaAla,
 } from './pallolaatat.js';
 
 const R2 = 'https://media.matkakirja.app/';
@@ -1778,9 +1778,13 @@ function luoLepokerros({ pallo, kotelo, ikkuna, renderer, laattataso = () => NaN
     // Ruudun tarve: laitepikseleitä astetta kohti keskellä (fov on pystykulma).
     const suhde = renderer?.getPixelRatio?.() ?? (ikkuna.devicePixelRatio || 1);
     const tarvePxAste = (LEPOKERROS_MITTAMATKA_PX * suhde) / Math.abs(keski.lat - alas.lat);
-    const rajaus = pyramidi.rajaus ?? pyramidi.arkki;
-    const latMax = Math.min(NAPAKANNEN_LEVEYS, laudaltaAsteiksi(PALLO_LAUTA, 0, rajaus.y)?.lat ?? 90);
-    const latMin = Math.max(-NAPAKANNEN_LEVEYS, laudaltaAsteiksi(PALLO_LAUTA, 0, rajaus.y + rajaus.h)?.lat ?? -90);
+    // Kartta-ala on arkin KARTTA, ei koko arkki: alakehys (painajanrivi,
+    // kompassiruusu, kaksoisviiva) jää pois — ks. pyramidinKarttaAla.
+    const { latMin, latMax } = pyramidinKarttaAla({
+      pyramidi,
+      yLat: (y) => laudaltaAsteiksi(PALLO_LAUTA, 0, y)?.lat ?? (y < 0 ? 90 : -90),
+      naparaja: NAPAKANNEN_LEVEYS,
+    });
     const alue = lepokerroksenAlue(naytteet, pov.lng, { latMin, latMax });
     if (!alue) return luovuta('ei näytteitä pallolla');
     const laudanY = (lat) => projisoiLaudalle(PALLO_LAUTA, pov.lng, lat)?.y ?? NaN;

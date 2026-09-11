@@ -7,7 +7,7 @@ import {
   LEPOKERROS_RUUDUKKO_MIN, LEPOKERROS_SYVYYSSIIRTO, LAATU_KAUKORAJA, NAPAKANNEN_KOROTUS, PALLO_LAUTA,
   lepokerroksenAlue, lepokerroksenKerrokset, lepokerroksenLaatat, lepokerroksenLaattakatto,
   lepokerroksenSilmat, lepokerroksenSuunnitelma, lepokerroksenTaso, lepokerroksenTasoRiittaa,
-  lepokerroksenUV, lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste,
+  lepokerroksenUV, lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste, pyramidinKarttaAla,
 } from '../js/pallo.js';
 import { projisoiLaudalle, laudaltaAsteiksi } from '../js/fokusmitat.js';
 import { PALLO_KORKEUS_MIN } from '../js/pallolauta/kamera.js';
@@ -409,4 +409,35 @@ test('E0: laattakerroksen apurit ovat js/pallolaatat.js:ssä, pallo.js vie ne ed
   assert.ok(!/from '\.\/pallo\.js'/.test(laatat), 'js/pallolaatat.js ei saa tuoda js/pallo.js:ää');
   const tuonnit = [...laatat.matchAll(/^import [\s\S]*?from '([^']+)';$/gm)].map((m) => m[1]);
   assert.deepEqual(tuonnit.sort(), ['./fokusmitat.js', './laattapyramidi.js']);
+});
+
+/*
+ * KARTTA-ALA ILMAN ARKIN ALAKEHYSTÄ (omistaja 11.9.2026: *"Siinä näkyy
+ * vielä se vanhan kartan teksti"*). Pyramidin `rajaus` ulottuu arkin
+ * alamarginaalin yli, jossa ovat kaksoisviivakehys, kompassiruusu ja
+ * rivit "Painettu Matkakirjan kustantamossa MDCCCLXXIII" / "©
+ * Matkakirja". Lepo- ja laattakerros piirsivät ne pallon pinnalle
+ * Etelämantereen ympärille; polttotyökalu (tools/tee-pallolaatat.mjs
+ * julisteenLeveysvali) on aina vähentänyt `kehys.ala`:n. Nyt sama raja
+ * on molemmilla.
+ */
+const YLAT = (y) => laudaltaAsteiksi(PALLO_LAUTA, 0, y)?.lat ?? (y < 0 ? 90 : -90);
+
+test('kartta-ala jättää arkin alakehyksen pois: painajanrivi ei tule pallolle', () => {
+  const pyramidi = { rajaus: RAJAUS, arkki: ARKKI, kehys: { yla: 232, ala: 240 } };
+  const kanssa = pyramidinKarttaAla({ pyramidi, yLat: YLAT });
+  const ilman = pyramidinKarttaAla({ pyramidi: { ...pyramidi, kehys: null }, yLat: YLAT });
+  // Alakehys on julisteessa 240 lautayksikköä = noin 4,5 astetta.
+  assert.ok(kanssa.latMin > ilman.latMin, 'alakehys nostaa etelärajaa');
+  assert.ok(Math.abs(kanssa.latMin - (-61.47)) < 0.1, `etelaraja ${kanssa.latMin}`);
+  assert.ok(Math.abs(ilman.latMin - (-66)) < 0.1, `ilman kehysta ${ilman.latMin}`);
+  // Pohjoisessa kartta ulottuu rajauksen yläreunaan (84 N) kuten poltossa.
+  assert.ok(Math.abs(kanssa.latMax - 84) < 0.1, `pohjoisraja ${kanssa.latMax}`);
+});
+
+test('kartta-ala ei ylitä napakansia', () => {
+  const pyramidi = { rajaus: RAJAUS, arkki: ARKKI, kehys: { ala: 240 } };
+  const a = pyramidinKarttaAla({ pyramidi, yLat: YLAT, naparaja: 50 });
+  assert.equal(a.latMax, 50);
+  assert.equal(a.latMin, -50);
 });
