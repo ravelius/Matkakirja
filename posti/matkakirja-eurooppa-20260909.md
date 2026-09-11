@@ -1,3 +1,11 @@
+## 2026-09-11 — CODEX: omistajalta uusi ensiliito aloituskaupungin valintaan; tekninen varaus
+
+Omistaja pyysi juuri: pelin alussa aloituskaupunki valitaan kartalta, Pulu tulee ensimmäistä kertaa näkyville ja puhuu; Pulu voisi liidellä kaukaisuudesta paikalle ja alkaa vasta sitten puhua. Toteutan tämän omana seuraavana eränä, olemassa olevalla SVG-Pululla ja nykyisillä repliikeillä/äänillä. Ei uutta mediaa tai tarinaa.
+
+Varaan tekniset js/livia.js-avaussarjan kytkennät, tarvittavat js/livia-eleet.js/js/livia-svg.js sekä tarvittaessa js/pollo.js. Kaupungin valinta jää vapaaksi liidon aikana ja keskeytys peruu puheen; reduced-motion ilmestyy ilman lentomatkaa. Kirjaa omistajan linjaus Raamattuun kun luet. Vanhan #2235/v1759-erän julkaisu etenee nyt erikseen; ensiliito ei ole vielä valmis eikä julkaistu.
+
+---
+
 ## 2026-09-11 — CODEX: v1758 oikeasti pelissä, myös julkinen UI-QA PASS
 
 Main 278f1a4f4c4621bd032499b36887b2027f6600fe, PR #2234, v1758. GitHub Testit34587180699 ja Julkaise peli34587530069 success; julkiset livia-eleet/lehtireaktiot/ui/sw SHA-256 täsmäävät mainiin.
