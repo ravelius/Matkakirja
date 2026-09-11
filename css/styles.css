@@ -761,11 +761,13 @@ button, .brand, .turn-pill, .fact-card h2 {
  * KEHITTÄJÄN HAMMASRATASVALIKKO (omistajan tilaus 29.8.2026,
  * index.html #kehittaja-valikko-kotelo).
  *
- * Kotelo näkyy vain kehittäjätilassa, joten se ei saa varata ylärivistä
- * tilaa muilta: `hidden` piilottaa sen kokonaan, ja `flex: 0 0 auto`
- * estää sitä venymästä kun se on näkyvissä. Ylärivissä on siis yhä
- * kehittäjänkin silmissä vain YKSI kuvake (omistajan sääntö
- * 27.8.2026) — kytkimet asuvat sen alla.
+ * RATAS ON 11.9.2026 ALKAEN PELAAJAN VALIKKO (omistaja klo 14.35:
+ * *"kaikki äänentason säätimet kuuluvat hammasrattaan alle"*). Kotelo
+ * on siis aina näkyvissä; kehittäjätilaa vaativat ryhmät
+ * (.kehittaja-ryhma) piilotetaan valikon SISÄLLÄ, joten pelaaja näkee
+ * vain Äänentasot. `flex: 0 0 auto` estää koteloa venymästä, ja
+ * ylärivissä on yhä vain YKSI kuvake (omistajan sääntö 27.8.2026) —
+ * säätimet ja kytkimet asuvat sen alla.
  *
  * Pudotusvalikko lainaa hampurilaisen tyylin sellaisenaan
  * (index.html: class="paavalikko kehittaja-valikko"), joten kaksi
@@ -799,6 +801,52 @@ button, .brand, .turn-pill, .fact-card h2 {
  * hetkellinen levy mittarin päällä, kuten pudotusvalikon kuuluukin.
  */
 .kehittaja-valikko { z-index: 10000; }
+
+/*
+ * RYHMÄ ON OMA PYSTYRIVINSÄ. Valikko on pystysuuntainen flex-lista,
+ * joten ryhmälaatikon pitää latoa lapsensa samalla tavalla — muuten
+ * Työhuoneen napit asettuisivat vierekkäin. Ryhmä on olemassa vain
+ * piilotusta varten: kehittäjätilan ryhmät katoavat `hidden`-lipulla
+ * (js/main.js paivitaKehittajaValikko), äänentasot jäävät.
+ */
+.kehittaja-valikko .kehittaja-ryhma {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.55rem;
+}
+
+.kehittaja-valikko .kehittaja-ryhma[hidden] { display: none; }
+
+/*
+ * TAUSTAMUSIIKKI ON ÄÄNENTASO MUIDEN JOUKOSSA (omistaja 11.9.2026 klo
+ * 14.35). Liuku peri kehittäjäsäätimen ison nimikkeen; Äänentasot-ryhmässä
+ * se ladotaan samalla mitalla kuin kolme muuta liukua, jotta nimet,
+ * liu'ut ja lukemat ovat samoissa sarakkeissa.
+ */
+.kehittaja-valikko #aanivoimat + .kehittaja-liuku {
+  padding: 0.18rem 0.45rem;
+  gap: 0.5rem;
+}
+
+.kehittaja-valikko #aanivoimat + .kehittaja-liuku .kehittaja-kytkin-nimi {
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  color: rgba(230, 214, 184, 0.78);
+  min-width: 6.4rem;
+}
+
+.kehittaja-valikko #aanivoimat + .kehittaja-liuku .kehittaja-saadin-arvo {
+  font-size: 0.72rem;
+}
+
+/* Neljä nimeä samaan sarakkeeseen: pisin niistä on "Taustamusiikki". */
+.kehittaja-valikko .aanivoima-nimi,
+.kehittaja-valikko #aanivoimat + .kehittaja-liuku .kehittaja-kytkin-nimi {
+  min-width: 7.4rem;
+}
 
 /*
  * Kolme saraketta: kuvake, nimi ja tila. Nimi vie jäljelle jäävän

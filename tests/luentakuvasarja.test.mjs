@@ -238,6 +238,8 @@ const asiakirja = {
 };
 
 globalThis.document = asiakirja;
+// Suurennos esilataa kuvansa Image-oliolla (sama tynkä kuin pulucam-testissä).
+globalThis.Image = function Image() { return new Elementti('img'); };
 
 /** Kartan veto: pointerdown, jonka kohde ei ole sarja eikä paneeli. */
 function kartanVeto() {
@@ -248,7 +250,8 @@ function kartanVeto() {
 
 const {
   naytaLuentakuvasarja, paataLuentakuvasarja, piilotaLuentakuva,
-  ISON_KUVAN_VAIHTO_MS, ISON_KUVAN_LOPPU_MS,
+  naytaPulunKuvapakka,
+  ISON_KUVAN_VAIHTO_MS, ISON_KUVAN_LOPPU_MS, LUENTAKUVAN_VAIHTO_MS,
 } = await import('../js/fokusvirta.js');
 const { fokusvirtaKaupungille } = await import('../js/packs/fokusvirrat.js');
 const { sfx } = await import('../js/sound.js');
@@ -260,10 +263,37 @@ const { sfx } = await import('../js/sound.js');
 const KOEKAUPUNKI = { id: 'dubrovnik', name: 'Dubrovnik' };
 const PAKKI = fokusvirtaKaupungille(KOEKAUPUNKI.id);
 
-function tekoUi(kaupunki = KOEKAUPUNKI) {
-  return {
+/*
+ * LUENTA ON NYT OSA SARJAN KELLOA (omistaja 11.9.2026 klo 14.35):
+ * isoisän kuva pysyy suurena luennan ajan, ja ilman PuluCam-kuvia se
+ * pienenee 6 s luennan päättymisestä. Teko-ui:lla on siksi sama
+ * `luentaKesken`-kahva kuin oikealla (js/ui.js), ja testi kääntää sen.
+ */
+function tekoUi(kaupunki = KOEKAUPUNKI, { luenta = true } = {}) {
+  const ui = {
     game: { pack: { id: 'maailmankartta' }, player: {}, cityOf: () => kaupunki },
+    luentaaKesken: luenta,
+    luentaKesken: () => ui.luentaaKesken,
   };
+  return ui;
+}
+
+/*
+ * KELLON KELAUS NELJÄNNESSEKUNNIN ASKELIN. Luennan loppua vartioidaan
+ * ketjutetulla setTimeoutilla (js/fokusvirta.js vahtiLuennanLoppua), ja
+ * Noden valeajastin ajaa ticking aikana syntyneet ajastimet vasta
+ * seuraavalla tickillä — yksi iso tick näkisi siis vain yhden kyselyn.
+ * Askelittainen kelaus vastaa oikeaa kelloa.
+ */
+function kelaa(t, ms, askel = 250) {
+  for (let jaljella = ms; jaljella > 0; jaljella -= askel) {
+    t.mock.timers.tick(Math.min(askel, jaljella));
+  }
+}
+
+/** Pulun kommentin hetki: sama kutsu kuin fokusvirtaSaapumiskuplassa. */
+function pulunKommentti(ui, kaupunki = KOEKAUPUNKI) {
+  return naytaPulunKuvapakka(ui, kaupunki);
 }
 
 /*
@@ -285,7 +315,7 @@ const paneelit = () => asiakirja.body.querySelectorAll('.fokusvirta-luentakuva')
 /* 2. Sarjan ajastus                                                 */
 /* ---------------------------------------------------------------- */
 
-test('isoisä → pulucam → pieni pakka, 4 s välein ja 6 s lopuksi', (t) => {
+test('isoisän kuva pysyy suurena koko luennan ajan', (t) => {
   t.mock.timers.enable({ apis: ['setTimeout'] });
   const ui = tekoUi();
   assert.equal(naytaLuentakuvasarja(ui, KOEKAUPUNKI), true);
@@ -299,30 +329,69 @@ test('isoisä → pulucam → pieni pakka, 4 s välein ja 6 s lopuksi', (t) => {
   assert.ok(isot()[0].querySelector('.fokusvirta-isokuva-teksti'),
     'lyhyt kuvateksti kiinni kuvan alalaidassa');
 
-  // Ensimmäinen PuluCam-kuva neljän sekunnin kuluttua.
-  t.mock.timers.tick(ISON_KUVAN_VAIHTO_MS);
+  /*
+   * NELJÄ SEKUNTIA EI ENÄÄ VAIHDA MITÄÄN (omistaja 11.9.2026 klo 14.35:
+   * *"pulcam kuvat tulevat vasta kun pulun oma repliikki alkaa"*).
+   */
+  kelaa(t, ISON_KUVAN_VAIHTO_MS);
+  assert.equal(isot().length, 1, 'PuluCam ei ala luennan aikana');
+  kelaa(t, 30000);
+  assert.equal(isot().length, 1, 'isoisä pysyy suurena niin kauan kuin luenta');
+  assert.equal(paneelit().length, 0, 'pakka ei nouse kesken luennan');
+
+  siivoa(ui);
+  t.mock.timers.reset();
+});
+
+test('pulun kommentti aloittaa PuluCam-sarjan: 4 s välein ja 6 s lopuksi', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  assert.equal(naytaLuentakuvasarja(ui, KOEKAUPUNKI), true);
+  t.mock.timers.tick(60);
+
+  // Luenta loppuu, ja kommentti tulee pian sen perään.
+  ui.luentaaKesken = false;
+  t.mock.timers.tick(1000);
+  assert.equal(paneelit().length, 0, 'kuusi sekuntia ei ole vielä kulunut');
+
+  // Ensimmäinen PuluCam-kuva tulee heti kommentin alkaessa.
+  assert.equal(pulunKommentti(ui), true, 'kommentti aloittaa sarjan');
+  t.mock.timers.tick(60);
   assert.equal(isot().length, 2, 'vanha ruutu jää hetkeksi ristihäivytykseen');
   assert.equal(isot().at(-1).querySelectorAll('.pulucam-merkki').length, 1,
     'pulun kuvassa on PULU-CAM-sinetti');
 
   // Loput pulun kuvat, kukin neljän sekunnin välein.
-  const kuvia = 1 + (PAKKI.pollo?.kuvat?.length ?? 0);
-  for (let i = 2; i < kuvia; i += 1) t.mock.timers.tick(ISON_KUVAN_VAIHTO_MS);
+  const pulunKuvia = PAKKI.pollo.kuvat.length;
+  for (let i = 1; i < pulunKuvia; i += 1) t.mock.timers.tick(ISON_KUVAN_VAIHTO_MS);
   assert.equal(paneelit().length, 0, 'pakka ei nouse ennen viimeistä kuvaa');
 
   // Kuusi sekuntia viimeisen jälkeen: iso häipyy, pieni pakka kartalle.
   t.mock.timers.tick(ISON_KUVAN_LOPPU_MS);
   assert.equal(paneelit().length, 1, 'kartalle jää kuvapakka');
   assert.ok(paneelit()[0].classList.contains('pieni'), 'pakka jää PIENEEN kokoon');
-  assert.equal(paneelit()[0].querySelectorAll('.pulucam-kortti').length,
-    PAKKI.pollo.kuvat.length, 'kaikki kortit heti mukana, ei pulpahdusviiveitä');
+  assert.equal(paneelit()[0].querySelectorAll('.pulucam-kortti').length, pulunKuvia,
+    'kaikki kortit heti mukana, ei pulpahdusviiveitä');
   assert.ok(ui.luentakuva, 'paneeli jää muistiin kartan omaksi kuvaksi');
 
   siivoa(ui);
   t.mock.timers.reset();
 });
 
-test('ilman pulun kuvia isoisän kuva jää pieneksi kuuden sekunnin kuluttua', (t) => {
+test('kommentti kesken luennan aloittaa sarjan silti', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  // Luenta on yhä kesken — kommentin hetki on silti sarjan hetki.
+  assert.equal(pulunKommentti(ui), true);
+  t.mock.timers.tick(60);
+  assert.equal(isot().at(-1).querySelectorAll('.pulucam-merkki').length, 1);
+  siivoa(ui);
+  t.mock.timers.reset();
+});
+
+test('ilman pulun kuvia isoisän kuva pienenee 6 s LUENNAN lopusta', (t) => {
   const kuvat = PAKKI.pollo.kuvat;
   delete PAKKI.pollo.kuvat;
   t.mock.timers.enable({ apis: ['setTimeout'] });
@@ -331,9 +400,16 @@ test('ilman pulun kuvia isoisän kuva jää pieneksi kuuden sekunnin kuluttua', 
     assert.equal(naytaLuentakuvasarja(ui, KOEKAUPUNKI), true);
     t.mock.timers.tick(60);
     assert.equal(isot().length, 1);
-    t.mock.timers.tick(ISON_KUVAN_LOPPU_MS - 100);
+
+    // Pitkäkin luenta pitää kuvan suurena.
+    kelaa(t, 20000);
+    assert.equal(paneelit().length, 0, 'kello lähtee vasta luennan lopusta');
+
+    ui.luentaaKesken = false;
+    // Vahti huomaa lopun neljännessekunnissa, sitten kuusi sekuntia.
+    kelaa(t, 250 + ISON_KUVAN_LOPPU_MS - 400);
     assert.equal(paneelit().length, 0, 'kuusi sekuntia on kuusi sekuntia');
-    t.mock.timers.tick(200);
+    kelaa(t, 800);
     assert.equal(paneelit().length, 1);
     assert.ok(paneelit()[0].classList.contains('pieni'));
     assert.equal(paneelit()[0].querySelectorAll('.pulucam-kortti').length, 0);
@@ -342,6 +418,124 @@ test('ilman pulun kuvia isoisän kuva jää pieneksi kuuden sekunnin kuluttua', 
     PAKKI.pollo.kuvat = kuvat;
     t.mock.timers.reset();
   }
+});
+
+test('ilman luentaa kello lähtee alkukatosta eikä kuva jää roikkumaan', (t) => {
+  const kuvat = PAKKI.pollo.kuvat;
+  delete PAKKI.pollo.kuvat;
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  try {
+    // Mykistys, kertojatila 'ei' tai puuttuva äänite: luentaa ei tule.
+    const ui = tekoUi(KOEKAUPUNKI, { luenta: false });
+    naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+    t.mock.timers.tick(60);
+    kelaa(t, 4000 + ISON_KUVAN_LOPPU_MS + 500);
+    assert.equal(paneelit().length, 1, 'kuva pienenee myös ilman luentaa');
+    siivoa(ui);
+  } finally {
+    PAKKI.pollo.kuvat = kuvat;
+    t.mock.timers.reset();
+  }
+});
+
+/* ---------------------------------------------------------------- */
+/* 2b. Toinen luentakuva luennan puolivälissä                        */
+/* ---------------------------------------------------------------- */
+
+/*
+ * Omistaja 11.9.2026 klo 14.35, sanatarkasti: *"isoisan kertomuksiin
+ * voisi generoida toisen kuvan lisaa kaikkiin euroopan kaupunkeihin …
+ * kuva saisi vaihtua uuden lyhennetyn puheen puolivalissa. voi kayttaa
+ * keskimaaraista aikaa"*.
+ */
+const KUVA2 = {
+  osoite: 'https://media.matkakirja.app/matkakirja/koe-luentakuva-2.jpg',
+  lyhyt: 'Toinen kuva: satama aamulla.',
+  selite: 'Koekuva toista luentakuvaa varten.',
+  lahde: 'Koe',
+};
+
+/** Ajaa tehtävän pakin `luentakuva2`-kentän kanssa ja siivoaa perässä. */
+function kakkoskuvanKanssa(tyo) {
+  PAKKI.matkakirja.luentakuva2 = KUVA2;
+  try { tyo(); } finally { delete PAKKI.matkakirja.luentakuva2; }
+}
+
+/*
+ * Päällimmäisen ison ruudun kuva tunnistetaan ALT-tekstistä: `src`
+ * asetetaan sitkeän latauksen kautta (js/media.js) eli epäsynkronisesti,
+ * mutta alt ja kuvateksti kirjoitetaan heti ruutua rakennettaessa.
+ */
+const ylinKuva = () => isot().at(-1).querySelector('.fokusvirta-isokuva-kuva').alt;
+
+test('vakio on 9 s: keskimääräinen puoliväli, yksi luku kaikille', () => {
+  assert.equal(LUENTAKUVAN_VAIHTO_MS, 9000);
+});
+
+test('toinen kuva vaihtuu 9 s kohdalla, kuvateksti mukana', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  kakkoskuvanKanssa(() => {
+    const ui = tekoUi();
+    naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+    t.mock.timers.tick(60);
+    assert.notEqual(ylinKuva(), KUVA2.lyhyt, 'ensin kuva 1');
+
+    t.mock.timers.tick(LUENTAKUVAN_VAIHTO_MS - 500);
+    assert.notEqual(ylinKuva(), KUVA2.lyhyt, 'ei vaihdu etuajassa');
+
+    t.mock.timers.tick(600);
+    assert.equal(ylinKuva(), KUVA2.lyhyt, 'puolivälissä kuva 2');
+    assert.equal(isot().at(-1).querySelector('.fokusvirta-isokuva-teksti').textContent,
+      KUVA2.lyhyt, 'kuvateksti vaihtui kuvan mukana');
+    assert.equal(isot().at(-1).querySelectorAll('.pulucam-merkki').length, 0,
+      'isoisän kakkoskuva ei ole PuluCam-kuva');
+
+    // Kartalle jää viimeksi näytetty kuva eli kuva 2.
+    ui.luentaaKesken = false;
+    kelaa(t, 250 + ISON_KUVAN_LOPPU_MS + 200);
+    const kartalla = paneelit()[0]?.querySelector('img');
+    assert.equal(kartalla?.alt, KUVA2.lyhyt, 'pieneen pakkaan jää kuva 2');
+    siivoa(ui);
+  });
+  t.mock.timers.reset();
+});
+
+test('ilman luentakuva2-kenttää mikään ei vaihdu', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  const eka = ylinKuva();
+  t.mock.timers.tick(LUENTAKUVAN_VAIHTO_MS + 1000);
+  assert.equal(isot().length, 1, 'yksi kuva, ei vaihtoa');
+  assert.equal(ylinKuva(), eka);
+  siivoa(ui);
+  t.mock.timers.reset();
+});
+
+test('karusellissa ovat molemmat isoisän kuvat ja sitten PuluCam', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  kakkoskuvanKanssa(() => {
+    const ui = tekoUi();
+    naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+    t.mock.timers.tick(60 + LUENTAKUVAN_VAIHTO_MS);
+    ui.luentaaKesken = false;
+    pulunKommentti(ui);
+    const pulunKuvia = PAKKI.pollo.kuvat.length;
+    t.mock.timers.tick((pulunKuvia - 1) * ISON_KUVAN_VAIHTO_MS + ISON_KUVAN_LOPPU_MS + 60);
+
+    const kortit = asiakirja.body.querySelectorAll('.pulucam-kortti');
+    assert.equal(kortit.length, pulunKuvia, 'pakka nousi kartalle');
+    kortit.at(-1).dispatch('click');
+    const kerros = asiakirja.body.querySelectorAll('.fokuszoom')[0];
+    assert.ok(kerros, 'karuselli ei auennut');
+    // Kaksi isoisän kuvaa + pulun kuvat, ja auki on päällimmäinen.
+    const laskuri = kerros.querySelector('.fokuszoom-laskuri').textContent;
+    assert.equal(laskuri, `${2 + pulunKuvia} / ${2 + pulunKuvia}`);
+    siivoa(ui);
+    for (const el of asiakirja.body.querySelectorAll('.fokuszoom')) el.remove();
+  });
+  t.mock.timers.reset();
 });
 
 /* ---------------------------------------------------------------- */
@@ -421,7 +615,12 @@ test('kameran klik soi jokaiselle sarjan kuvalle', (t) => {
   assert.equal(tehosteet.filter((n) => n === 'pulu.kamera-klik').length, 1,
     'isoisän kuva avautuu keskelle: yksi laukaisin');
 
-  for (let i = 1; i < kuvia; i += 1) {
+  // Sarja alkaa pulun kommentista: ensimmäinen PuluCam-kuva heti, loput 4 s välein.
+  ui.luentaaKesken = false;
+  pulunKommentti(ui);
+  assert.equal(tehosteet.filter((n) => n === 'pulu.kamera-klik').length, 2,
+    'kommentin ensimmäinen PuluCam-kuva: klik');
+  for (let i = 2; i < kuvia; i += 1) {
     t.mock.timers.tick(ISON_KUVAN_VAIHTO_MS);
     assert.equal(tehosteet.filter((n) => n === 'pulu.kamera-klik').length, i + 1,
       `PuluCam-kuva ${i} vaihtuu tilalle: klik`);

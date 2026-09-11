@@ -1593,10 +1593,18 @@ function paivitaPuheSaadin() {
 
 /*
  * OMA TOINEN HAMPURILAINEN, SYMBOLINA HAMMASRATAS (index.html
- * #kehittaja-valikko-kotelo). Näkyy VAIN kehittäjätilassa, ja
- * yläpalkkiin jää siitä yksi kuvake — omistajan sääntö *"yläpalkissa
- * saa olla vain YKSI nappi"* (27.8.2026) pysyy siis voimassa, vaikka
- * valikossa on useampi rivi.
+ * #kehittaja-valikko-kotelo). Yläpalkkiin jää siitä yksi kuvake —
+ * omistajan sääntö *"yläpalkissa saa olla vain YKSI nappi"*
+ * (27.8.2026) pysyy siis voimassa, vaikka valikossa on useampi rivi.
+ *
+ * RATAS ON PELAAJAN VALIKKO 11.9.2026 ALKAEN (omistaja klo 14.35,
+ * sanatarkasti: *"kaikki äänentason säätimet kuuluvat hammasrattaan
+ * alle"*). Äänentasot kuuluvat pelaajalle, joten koko rattaan
+ * piilottaminen kehittäjätilan taakse veisi ne pelaajalta — kotelo on
+ * nyt aina näkyvissä, ja kehittäjätilaa vaativat ryhmät piilotetaan
+ * valikon SISÄLLÄ (#kehittaja-tyohuone ja #kehittaja-vivut,
+ * class="kehittaja-ryhma"). Pelaaja näkee siis vain Äänentasot-ryhmän:
+ * äänitehosteet, pulun ääni, lukija ja taustamusiikki.
  *
  * VIVUT KARSITTIIN 11.9.2026 (omistaja, sanatarkasti: *"nämä kaikki
  * napit voisi ottaa pois ja jättää noihin asetuksiin, paitsi tuon
@@ -1639,6 +1647,11 @@ const kehittajaValikkoKotelo = document.getElementById('kehittaja-valikko-kotelo
 const kehittajaValikkoNappi = document.getElementById('kehittaja-valikko-btn');
 const kehittajaValikko = document.getElementById('kehittaja-valikko');
 const kehittajaVihje = document.getElementById('kehittaja-valikko-vihje');
+/*
+ * Kehittäjätilan ryhmät rattaan sisällä (Työhuone ja Kehittäjä);
+ * Äänentasot-ryhmä ei ole tällä listalla, joten se näkyy aina.
+ */
+const kehittajaRyhmat = [...document.querySelectorAll('.kehittaja-ryhma')];
 const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
 /*
@@ -1759,7 +1772,12 @@ function merkitseKytkin(nappi, paalla) {
 }
 
 function paivitaKehittajaValikko() {
-  if (kehittajaValikkoKotelo) kehittajaValikkoKotelo.hidden = !kehittajaTilaPaalla();
+  /*
+   * Ratas itse on pelaajan valikko (Äänentasot), joten kotelo ei enää
+   * katoa kehittäjätilan mukana — vain kehittäjän omat ryhmät katoavat.
+   */
+  if (kehittajaValikkoKotelo) kehittajaValikkoKotelo.hidden = false;
+  for (const ryhma of kehittajaRyhmat) ryhma.hidden = !kehittajaTilaPaalla();
   const maailma = kehittajaMaailmaPaalla();
   merkitseKytkin(maailmaNappi, maailma);
   if (maailmaNappi) {
