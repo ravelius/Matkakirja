@@ -33,7 +33,15 @@
  */
 
 export const KEHITTAJAN_VOIMA_LAJIT = /** @type {const} */ (['tausta']);
-export const KEHITTAJAN_VOIMA_MIN = 0.25;
+/*
+ * ALARAJA ON NOLLA ELI AITO HILJAISUUS (omistaja 11.9.2026:
+ * *"taustaääni on oudosti erillään muista äänisäätimistä"*). Taustaääni
+ * on nyt tavallinen 0–100 %:n liuku muiden äänentasojen joukossa
+ * (index.html #aanivoimat), ja silloin sen pitää vaieta kokonaan kuten
+ * tehosteiden, pulun ja lukijan liukujen. Entinen 0,25 oli +/-
+ * askeltimen alaraja, jossa hiljaisinkin asento oli vain −12 dB.
+ */
+export const KEHITTAJAN_VOIMA_MIN = 0;
 export const KEHITTAJAN_VOIMA_MAX = 3;
 export const KEHITTAJAN_VOIMA_ASKEL = 0.1;
 export const KEHITTAJAN_VOIMA_AVAIN = 'matkakirja-dev-voima-';

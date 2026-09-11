@@ -296,7 +296,11 @@
   --luentakuva-leveys: calc(min(80vw, 22rem) * var(--luentakuva-tablettikerroin));
   --luentakuva-korkeus: calc(min(34vh, 15rem) * var(--luentakuva-tablettikerroin));
   --luentakuva-kallistus: -2.4deg;
-  --luentakuva-pienennys: 0.45;
+  /* PIENI KUVA ON PIENEMPI KUIN ENNEN (omistaja 11.9.2026:
+     *"pienennetyt kuvat saisi jäädä kartalla pienemmiksi"*). Entinen
+     0,45 jätti kartalle vielä ison lapun; kartan mittakaava kertautuu
+     tähän päälle (--luentakuva-karttaskaala). */
+  --luentakuva-pienennys: 0.3;
   /* Nousun matka: paneeli ladotaan hieman alempaa ja liukuu paikalleen. */
   --luentakuva-nousu: 10px;
   --luentakuva-skaala: 1;
@@ -362,8 +366,18 @@
      kehyksellä; siirtymä jäisi ikuisesti jälkeen liikkuvasta
      kohteesta (mitattu Chromiumilla 9.9.2026: kuva jäi paikalleen
      kartan kulmaan, koska jokainen kehys aloitti 400 ms:n siirtymän
-     alusta). Nousu, kallistus ja pienennys animoituvat paneelissa. */
-  transform: translate(var(--luentakuva-x, 50%), var(--luentakuva-y, 76%));
+     alusta). Nousu, kallistus ja pienennys animoituvat paneelissa.
+
+     KARTAN MITTAKAAVA ON TÄSSÄ, EI PANEELISSA (omistaja 11.9.2026,
+     kaappaus Madridista: *"pienennetyt kuvat saisi jäädä kartalla
+     pienemmiksi ja pysyä kartan kokoon suhteutettuna, eli pienenevät
+     jos zoomataan ulos kartalla"*). Skripti kirjoittaa suhteen
+     kehyksittäin (js/fokusvirta.js paivitaLuentakuvanPaikka), joten se
+     kuuluu samaan siirtymättömään solmuun kuin paikkakin — paneelissa
+     se aloittaisi 400 ms:n siirtymän joka kehyksellä. */
+  transform:
+    translate(var(--luentakuva-x, 50%), var(--luentakuva-y, 76%))
+    scale(var(--luentakuva-karttaskaala, 1));
 }
 
 .fokusvirta-luentakuva.ankkuroitu {

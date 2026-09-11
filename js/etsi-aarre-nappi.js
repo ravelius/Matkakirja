@@ -101,8 +101,38 @@ function napinNakymanKeskus(ui) {
   return { x: alue.x + alue.w / 2, y: alue.y + alue.h / 2, skaala: alue.skaala };
 }
 
+/**
+ * PALLON OMA PROJEKTIO, KUN PALLO ON HEREILLÄ (omistajan vika
+ * 11.9.2026, kaappaus Tampereelta: *"etsi aarre nappi pitäisi lukita
+ * paikoilleen kohdekaupungin nimen alapuolelle. nyt se liikkuu
+ * kartalla jos karttaa panoroi"*).
+ *
+ * Yllä oleva kaava on TASON kaava: se olettaa, että laudan piste
+ * kuvautuu ruudulle vakiokertoimella. Pallolla se pitää paikkansa vain
+ * näkymän keskellä, ja mitä kauemmas kaupunki panoroidaan, sitä
+ * enemmän nappi karkaa laatastaan — pelaajan silmissä nappi "liikkuu
+ * kartalla". Pallo osaa kertoa saman pisteen ruutupaikan tarkasti
+ * (`pallo.getScreenCoords`), ja isoisän luentakuva käyttää jo sitä
+ * (js/fokusvirta.js lautaRuudulle).
+ *
+ * TÄSSÄ EI SILTI OLE TUONTIA: kahvat luetaan ui-oliosta, joten
+ * tiedoston alussa kuvattu tuontirengas (fokusvirta → tämä moduuli)
+ * ei synny. Ilman palloa tai sen kahvoja palataan tason kaavaan.
+ */
+function pallonRuutupaikka(ui, city) {
+  const lauta = ui?.pallolautaPaalla?.() ? ui.pallolauta : null;
+  if (!lauta?.pallo?.getScreenCoords || typeof lauta.asteet !== 'function') return null;
+  const asteet = lauta.asteet(city);
+  if (!asteet) return null;
+  const p = lauta.pallo.getScreenCoords(asteet.lat, asteet.lon, 0);
+  if (!p || !Number.isFinite(p.x) || !Number.isFinite(p.y)) return null;
+  return { x: p.x, y: p.y };
+}
+
 /** Ankkurin ruutupaikka näkyvästä alueesta; null jos mittaa ei ole. */
 function ruutupaikka(ui, city, mitat) {
+  const tarkka = pallonRuutupaikka(ui, city);
+  if (tarkka) return tarkka;
   const tila = napinNakymanKeskus(ui);
   if (!tila || !(tila.skaala > 0) || !mitat?.w || !mitat?.h) return null;
   /*

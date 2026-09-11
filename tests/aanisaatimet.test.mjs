@@ -272,13 +272,18 @@ test('kolme liukua Äänentasot-ryhmässä: nimi, prosenttilukema ja kytkentä',
 test('ratas näkyy pelaajalle: vain kehittäjäryhmät piiloutuvat', () => {
   const html = lue('../index.html');
   const ratas = ratasvalikko(html);
-  // Äänentasot EIVÄT ole kehittäjäryhmässä: liu'ut ovat ryhmälaatikoiden välissä.
+  /*
+   * ÄÄNENTASOT ENSIN, TYÖHUONE POHJALLA (omistaja 11.9.2026:
+   * *"raamattu ja kehittäjälehti saisivat olla alimmaisina listassa"*).
+   * Liu'ut eivät ole kehittäjäryhmässä, vaan ne avaavat valikon ja
+   * näkyvät myös ilman kehittäjätilaa.
+   */
   const tyohuone = ratas.indexOf('id="kehittaja-tyohuone"');
   const vivut = ratas.indexOf('id="kehittaja-vivut"');
   const aanet = ratas.indexOf('id="aanivoimat"');
   assert.ok(tyohuone > 0 && vivut > 0 && aanet > 0, 'ryhmät puuttuvat rattaasta');
-  assert.ok(tyohuone < aanet && aanet < vivut,
-    'Äänentasot kuuluvat Työhuoneen ja kehittäjän vipujen väliin');
+  assert.ok(aanet < vivut && vivut < tyohuone,
+    'järjestys on Äänentasot → kehittäjän vivut → Raamattu ja Kehittäjälehti');
   assert.match(ratas, /id="kehittaja-tyohuone" class="kehittaja-ryhma" hidden/);
   assert.match(ratas, /id="kehittaja-vivut" class="kehittaja-ryhma" hidden/);
 

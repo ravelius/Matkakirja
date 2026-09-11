@@ -489,9 +489,24 @@ test('moduulissa ei ole lautahaaraa eikä omaa tyylitiedostoa', () => {
    * renkaan, joka kaataa koko pelin käynnistyksen (TDZ).
    */
   assert.ok(!lahde.includes("from './pulu-paikka.js'"), 'pulu-paikka sulkisi tuontirenkaan');
-  for (const kielletty of ['pallolauta/', 'kartta.js', 'getScreenCoords']) {
-    assert.ok(!lahde.includes(kielletty), `lautakohtaista polkua ei saa olla: ${kielletty}`);
+  for (const kielletty of ['pallolauta/', 'kartta.js']) {
+    assert.ok(!lahde.includes(kielletty), `lautakohtaista tuontia ei saa olla: ${kielletty}`);
   }
+  /*
+   * PALLON TARKKA PROJEKTIO LUETAAN UI-OLIOSTA, EI TUONNISTA (omistajan
+   * vika 11.9.2026: *"etsi aarre nappi pitäisi lukita paikoilleen
+   * kohdekaupungin nimen alapuolelle. nyt se liikkuu kartalla jos
+   * karttaa panoroi"*). Tason kaava piti paikkansa vain näkymän
+   * keskellä; pallolla nappi karkasi laatastaan panoroitaessa. Kahva on
+   * ui.pallolauta, joten tuontirengas ei silti synny — ja ilman palloa
+   * palataan samaan laudasta riippumattomaan kaavaan.
+   */
+  assert.ok(lahde.includes('ui.pallolauta'), 'tarkka paikka luetaan ui-oliosta');
+  assert.ok(!lahde.includes("import") || !/import[^\n]*pallolauta/.test(lahde),
+    'pallolautaa ei saa tuoda moduuliin');
+  const tarkka = lahde.indexOf('function pallonRuutupaikka');
+  const taso = lahde.indexOf('function ruutupaikka');
+  assert.ok(tarkka > 0 && taso > tarkka, 'tason kaava on yhä olemassa varapolkuna');
   // Tyylit ovat css/styles.css:ssä, joka on ainoa sivulle linkitetty
   // tyylitiedosto — uusi tiedosto pitäisi muistaa myös nipussa.
   const css = lue('css/styles.css');
