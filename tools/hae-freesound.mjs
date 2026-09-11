@@ -63,8 +63,12 @@ import { fileURLToPath } from 'node:url';
 import { leikkaaHiljaisuusSuodatin, viimeistelySuodatin } from './generoi-tehosteet.mjs';
 import { julkinenJuuri, tulkitseLoudnorm } from './generoi-siirtymamusiikki.mjs';
 import {
-  hakusuodatin, lisenssiNimi, listanKansiot, lueTehostelista, MAISEMALISTA, manifestirivi,
-  PULULISTA, valitseParas,
+  AANILAHTEET, AVAIMETTOMAT_LAHTEET, ehdokkaanPaate, haeEhdokkaat, jarjestaEhdokkaat,
+  KAIKKI_LAHTEET, noudaEhdokas, tehosteenLahteet,
+} from './aanilahteet.mjs';
+import {
+  hakusuodatin, listanKansiot, lueTehostelista, MAISEMALISTA, manifestirivi,
+  PULULISTA,
 } from './tehostelista.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -92,14 +96,23 @@ const avainNimi = AVAIN_NIMET.find((n) => (process.env[n] ?? '').trim());
 const AVAIN = avainNimi ? process.env[avainNimi].trim() : '';
 
 if (!AVAIN) {
-  console.error('Freesoundin avainta ei löytynyt ympäristöstä.');
+  /*
+   * AVAIMETON AJO EI ENÄÄ KAADU (omistajan päätös 11.9.2026: *"Lisää
+   * ilmaisia lähteitä rinnalle"*). Wikimedia Commons ja Kenneyn
+   * CC0-paketit toimivat ilman mitään avainta, joten puuttuva
+   * Freesound-avain pudottaa yhden lähteen — se ei ole syy jättää
+   * kahta muuta hakematta. Ajo kertoo sen selvästi, koska hiljaa
+   * kutistunut hakujoukko olisi juuri se vika, jota ei huomaa.
+   */
+  console.error('Freesoundin avainta ei löytynyt ympäristöstä — Freesound jää pois.');
   console.error(`Etsittiin nimillä: ${AVAIN_NIMET.join(', ')}`);
+  console.error(`Käytettävissä ilman avainta: ${AVAIMETTOMAT_LAHTEET.join(', ')}.`);
   console.error('');
-  console.error('Aseta se repon salaisuuksiin (Settings > Secrets and variables >');
-  console.error('Actions) ja välitä työnkulussa env-lohkossa. Älä koskaan aja');
-  console.error('tätä niin, että avain näkyy komentorivillä — komentorivit');
-  console.error('päätyvät lokeihin.');
-  process.exit(1);
+  console.error('Avain asetetaan repon salaisuuksiin (Settings > Secrets and');
+  console.error('variables > Actions) ja välitetään työnkulussa env-lohkossa.');
+  console.error('Älä koskaan aja tätä niin, että avain näkyy komentorivillä —');
+  console.error('komentorivit päätyvät lokeihin.');
+  console.error('');
 }
 
 // --- valitsimet ----------------------------------------------------------------
@@ -141,6 +154,29 @@ const minKesto = Number(valitsin('min-kesto', '20'));
 const maxKesto = Number(valitsin('max-kesto', '600'));
 
 /*
+ * LÄHTEET (omistajan päätös 11.9.2026: *"Lisää ilmaisia lähteitä
+ * rinnalle"*). Oletus on kaikki, joihin on pääsy: ilman
+ * Freesound-avainta jäljelle jäävät Commons ja Kenney. `--lahteet`
+ * ottaa pilkkulistan, ja tuntematon nimi kaataa ajon heti eikä
+ * kutistu hiljaa pois hakujoukosta.
+ */
+const kaytettavissa = KAIKKI_LAHTEET.filter((l) => !AANILAHTEET[l].avain || AVAIN);
+const pyydetytLahteet = (valitsin('lahteet') ?? '').split(',').map((x) => x.trim()).filter(Boolean);
+for (const l of pyydetytLahteet) {
+  if (!KAIKKI_LAHTEET.includes(l)) {
+    console.error(`Tuntematon lähde "${l}". Tunnetut: ${KAIKKI_LAHTEET.join(', ')}.`);
+    process.exit(1);
+  }
+}
+const SALLITUT = pyydetytLahteet.length
+  ? pyydetytLahteet.filter((l) => kaytettavissa.includes(l))
+  : kaytettavissa;
+if (!SALLITUT.length) {
+  console.error('Yhtään lähdettä ei ole käytettävissä — Freesound vaatii avaimen.');
+  process.exit(1);
+}
+
+/*
  * Listan ajon vakiot ovat TÄSSÄ eivätkä tiedoston lopussa oman
  * osionsa kanssa, koska haara alla kutsuu ajoa heti: moduulitason
  * `const` ei ole vielä olemassa, jos se on kutsun alapuolella.
@@ -180,91 +216,73 @@ if (lippu('lista') || lippu('pulu') || lippu('maisemat')) {
 
 if (!haku) {
   console.error('käyttö: node tools/hae-freesound.mjs --kori <nimi> | --haku "<sanat>"');
+  console.error('        [--lahteet freesound,commons,kenney] [--salli-musiikki]');
   console.error('        node tools/hae-freesound.mjs --pulu [--tunnus <tunnus>] [--kuiva]');
   console.error('        node tools/hae-freesound.mjs --maisemat [--tunnus <tunnus>] [--kuiva]');
   console.error(`korit: ${Object.keys(KORIT).join(', ')}`);
   process.exit(1);
 }
 
-// --- haku ----------------------------------------------------------------------
-
-// Lisenssien nimitaulukko asuu tools/tehostelista.mjs:ssä, jotta se on
-// yksi eikä kaksi: molemmat ajotavat lukevat samasta paikasta.
-
-const parametrit = new URLSearchParams({
-  query: haku,
-  page_size: String(Math.min(150, Math.max(maara * 3, 15))),
-  token: AVAIN,
-  fields: 'id,name,username,license,previews,duration,avg_rating,num_ratings,url',
-  // Vain CC0 ja CC BY, ja kesto järkevissä rajoissa. Kolmen sekunnin
-  // napsahdus ei kelpaa taustaääneksi, eikä puolen tunnin nauhoitus
-  // ole ladattavissa puhelimella.
-  filter: `license:("Creative Commons 0" OR "Attribution") duration:[${minKesto} TO ${maxKesto}]`,
-  sort: 'rating_desc',
-});
-
-console.log(`Haku: ${haku}`);
-console.log(`Avain löytyi ympäristömuuttujasta ${avainNimi} (arvoa ei tulosteta).`);
-console.log(`Rajaus: CC0 tai CC BY, kesto ${minKesto}–${maxKesto} s.\n`);
-
-let data = null;
-for (let yritys = 0; yritys < 4 && !data; yritys++) {
-  try {
-    const vastaus = await fetch(`https://freesound.org/apiv2/search/text/?${parametrit}`, {
-      signal: AbortSignal.timeout(20000),
-    });
-    if (vastaus.ok) {
-      data = await vastaus.json();
-      break;
-    }
-    if (vastaus.status === 401) {
-      console.error('Freesound vastasi 401: avain ei kelpaa.');
-      console.error(`Tarkista salaisuuden ${avainNimi} arvo osoitteessa`);
-      console.error('https://freesound.org/apiv2/apply/');
-      process.exit(1);
-    }
-    if (vastaus.status === 429) {
-      console.error(`Kiintiö täynnä (429), odotetaan… (yritys ${yritys + 1}/4)`);
-    } else if (vastaus.status < 500) {
-      console.error(`Freesound vastasi ${vastaus.status}.`);
-      process.exit(1);
-    }
-  } catch (virhe) {
-    console.error(`Haku ei onnistunut: ${virhe.message} (yritys ${yritys + 1}/4)`);
-  }
-  if (!data) await new Promise((r) => { setTimeout(r, 3000 * (yritys + 1)); });
-}
-
-if (!data) {
-  console.error('Hakua ei saatu läpi neljällä yrityksellä.');
-  process.exit(1);
-}
+// --- ehdokashaku (kaikista sallituista lähteistä) ------------------------------
 
 /*
- * Esikuuntelu-mp3 on se osoite, jota peli käyttää: alkuperäinen
- * tiedosto voi olla pakkaamaton wav, jota ei ladata puhelimeen.
- * Ilman previews-kenttää osuma on hyödytön, joten se karsitaan.
+ * EHDOKASTILA HAKEE KAIKISTA SALLITUISTA LÄHTEISTÄ (omistajan päätös
+ * 11.9.2026). Tämä on se tila, jossa IHMINEN valitsee kuuntelemalla —
+ * ja juuri siksi sen on tarjottava koko valikoima eikä yhden palvelun
+ * osuutta siitä. Lisenssirajaus ja pisteytys ovat samat kuin listan
+ * ajossa (tools/aanilahteet.mjs), joten ehdokas, jota ei voi käyttää,
+ * ei päädy kuunneltavaksi lainkaan.
  */
-const ehdokkaat = (data.results ?? [])
-  .map((o) => ({
-    url: o.previews?.['preview-hq-mp3'] ?? o.previews?.['preview-lq-mp3'] ?? null,
-    nimi: `${o.name} — ${o.username}, ${lisenssiNimi(o.license)}`,
-    kesto: Math.round(o.duration ?? 0),
-    arvio: o.num_ratings >= 3 ? Number((o.avg_rating ?? 0).toFixed(1)) : null,
-    sivu: o.url,
-  }))
-  .filter((o) => o.url)
-  .slice(0, maara);
+const ehdokasTehoste = {
+  tunnus: 'ehdokkaat',
+  kuvaus: haku,
+  hakusanat: [haku],
+  kestoMin: minKesto,
+  kestoMax: maxKesto,
+  /*
+   * MUSIIKKI POIS OLETUKSENA. Korit ovat äänimaisemia, ja Commonsin
+   * ääniaineistosta iso osa on vapaasti lisensoitua MUSIIKKIA: haku
+   * "ocean waves shore surf" palauttaa sieltä ensimmäisenä viisi
+   * surf rock -kappaletta. Kuunneltavaksi tarjottu kappale on
+   * hukkaan mennyt ehdokaspaikka. `--salli-musiikki` ottaa rajauksen
+   * pois, jos musiikkia nimenomaan haetaan.
+   */
+  poisTagit: lippu('salli-musiikki') ? [] : ['music', 'song', 'speech', 'voice', 'isrc'],
+};
 
-console.log(`${data.count ?? 0} osumaa, ${ehdokkaat.length} ehdokasta:\n`);
+console.log(`Haku: ${haku}`);
+console.log(`Lähteet: ${SALLITUT.map((l) => AANILAHTEET[l].nimi).join(', ')}`);
+if (AVAIN) console.log(`Freesoundin avain löytyi muuttujasta ${avainNimi} (arvoa ei tulosteta).`);
+console.log(`Rajaus: kaupalliseen käyttöön kelpaava lisenssi (CC0, PD tai CC BY), `
+  + `kesto ${minKesto}–${maxKesto} s.\n`);
+
+const loydetyt = await haeEhdokkaat(ehdokasTehoste, {
+  lahteet: SALLITUT, avain: AVAIN, loki: (rivi) => console.error(rivi),
+});
+const parhaat = jarjestaEhdokkaat(loydetyt, ehdokasTehoste).slice(0, maara);
+
+const ehdokkaat = parhaat.map(({ ehdokas, pisteet }) => ({
+  lahde: ehdokas.lahde,
+  url: ehdokas.latausUrl,
+  nimi: `${ehdokas.nimi} — ${ehdokas.tekija}, ${ehdokas.lisenssi}`,
+  kesto: Math.round(ehdokas.kesto ?? 0),
+  arvio: ehdokas.arvioita >= 3 ? Number(ehdokas.arvio.toFixed(1)) : null,
+  sivu: ehdokas.sivu,
+  pisteet,
+}));
+
+console.log(`${loydetyt.length} osumaa, ${ehdokkaat.length} ehdokasta:\n`);
 for (const e of ehdokkaat) {
   const arvio = e.arvio === null ? 'ei arvioita' : `${e.arvio}/5`;
-  console.log(`  ${String(e.kesto).padStart(4)} s  ${arvio.padEnd(11)} ${e.nimi}`);
-  console.log(`            ${e.url}`);
+  console.log(`  ${String(e.kesto).padStart(4)} s  ${arvio.padEnd(11)} `
+    + `${e.lahde.padEnd(10)} ${e.nimi}`);
+  console.log(`            ${e.url ?? e.sivu}`);
 }
 
 if (ulos) {
-  writeFileSync(ulos, `${JSON.stringify({ haku, kori, ehdokkaat }, null, 2)}\n`);
+  writeFileSync(ulos, `${JSON.stringify({
+    haku, kori, lahteet: SALLITUT, ehdokkaat,
+  }, null, 2)}\n`);
   console.log(`\nKirjoitettu ${ulos}.`);
 }
 
@@ -326,59 +344,23 @@ function vaadiGitignore(polku) {
   }
 }
 
-/** Yksi hakukierros Freesoundiin, neljä yritystä kuten ehdokashaussa. */
-async function haeKerran(sanat, tehoste) {
-  const p = new URLSearchParams({
-    query: sanat,
-    page_size: '30',
-    token: AVAIN,
-    fields: 'id,name,username,license,previews,duration,avg_rating,num_ratings,num_downloads,url',
-    filter: hakusuodatin(tehoste),
-    sort: 'rating_desc',
-  });
-  for (let yritys = 0; yritys < 4; yritys += 1) {
-    try {
-      // eslint-disable-next-line no-await-in-loop
-      const vastaus = await fetch(`https://freesound.org/apiv2/search/text/?${p}`, {
-        signal: AbortSignal.timeout(20000),
-      });
-      if (vastaus.ok) return (await vastaus.json()).results ?? [];
-      if (vastaus.status === 401) throw new Error('Freesound vastasi 401: avain ei kelpaa.');
-      if (vastaus.status < 500 && vastaus.status !== 429) {
-        console.error(`   Freesound vastasi ${vastaus.status} haulle "${sanat}".`);
-        return [];
-      }
-    } catch (virhe) {
-      if (/401/.test(virhe.message)) throw virhe;
-      console.error(`   haku "${sanat}" ei onnistunut: ${virhe.message} (${yritys + 1}/4)`);
-    }
-    // eslint-disable-next-line no-await-in-loop
-    await new Promise((r) => { setTimeout(r, 3000 * (yritys + 1)); });
-  }
-  return [];
-}
+/*
+ * HAKU JA LATAUS ASUVAT tools/aanilahteet.mjs:SSÄ.
+ *
+ * Ennen 11.9.2026 täällä oli oma Freesound-kutsu, omat
+ * uudelleenyritykset ja oma esikatselulataus. Nyt lähteitä on kolme
+ * (Freesound, Wikimedia Commons, Kenneyn CC0-paketit), ja jokainen
+ * niistä palauttaa saman muotoisen ehdokkaan — jos haku asuisi täällä,
+ * jokainen uusi lähde tarkoittaisi uutta haaraa myös latauksessa,
+ * pisteytyksessä ja manifestirivissä.
+ *
+ * Se, mitä TÄMÄ tiedosto yhä tekee, on ketjun loppupää: valitun äänen
+ * leikkaus, tason mittaus ja korjaus, vienti ämpäriin ja manifesti.
+ */
 
-/** Kaikki tehosteen hakusanat läpi, osumat yhteen ja kaksoiskappaleet pois. */
-async function haeOsumat(tehoste) {
-  const nahdyt = new Map();
-  for (const sanat of tehoste.hakusanat) {
-    // eslint-disable-next-line no-await-in-loop
-    for (const osuma of await haeKerran(sanat, tehoste)) {
-      if (!nahdyt.has(osuma.id)) nahdyt.set(osuma.id, osuma);
-    }
-  }
-  return [...nahdyt.values()];
-}
-
-/** Esikatselu-mp3 levylle. Alkuperäinen voi olla wav, jota ei ladata puhelimeen. */
-async function lataaEsikatselu(osuma, kohde) {
-  const url = osuma.previews?.['preview-hq-mp3'] ?? osuma.previews?.['preview-lq-mp3'];
-  if (!url) throw new Error(`osumalla ${osuma.id} ei ole esikatselua`);
-  const vastaus = await fetch(url, { signal: AbortSignal.timeout(60000) });
-  if (!vastaus.ok) throw new Error(`esikatselun lataus ${vastaus.status}: ${url}`);
-  const data = Buffer.from(await vastaus.arrayBuffer());
-  writeFileSync(kohde, data);
-  return data.length;
+/** Ehdokkaan tiedosto levylle; Kenneyllä se puretaan jo muistissa olevasta paketista. */
+async function lataaEhdokas(ehdokas, kohde) {
+  return noudaEhdokas(ehdokas, kohde, { kirjoita: writeFileSync });
 }
 
 /**
@@ -503,7 +485,9 @@ async function ajaLista({
   const julkinenManifesti = `${julkinenJuuri()}${manifestiAvain}`;
 
   console.log(`Tehostelista: ${listapolku}`);
-  console.log(`Avain löytyi ympäristömuuttujasta ${avainNimi} (arvoa ei tulosteta).`);
+  console.log(`Lähteet: ${SALLITUT.map((l) => AANILAHTEET[l].nimi).join(', ')}`);
+  if (AVAIN) console.log(`Freesoundin avain löytyi muuttujasta ${avainNimi} (arvoa ei tulosteta).`);
+  else console.log('Freesoundin avainta ei ole — haku tehdään avaimettomista lähteistä.');
   console.log(`Ämpärin kansio: ${lista.amparinKansio}/  taso ${lista.tavoiteLufs} LUFS`);
   console.log(`Levylle: ${listanKansiot(lista).kohdekansio}/  hiljaisuuden leikkaus: `
     + `${lista.leikkaaHiljaisuus === false ? 'ei' : 'kyllä'}`);
@@ -542,36 +526,51 @@ async function ajaLista({
   let virheita = 0;
   try {
     for (const tehoste of tehosteet) {
+      const lahteet = tehosteenLahteet(tehoste, { sallitut: SALLITUT, lista });
       console.log(`── ${tehoste.tunnus}  (${tehoste.kuvaus})`);
       console.log(`   haku: ${tehoste.hakusanat.join(' | ')}`);
-      console.log(`   rajaus: ${hakusuodatin(tehoste)}`);
+      console.log(`   lähteet: ${lahteet.join(', ') || '(ei yhtään)'}`);
+      console.log(`   rajaus (Freesound): ${hakusuodatin(tehoste)}`);
 
       // eslint-disable-next-line no-await-in-loop
-      const osumat = await haeOsumat(tehoste);
-      const valinta = valitseParas(osumat, tehoste);
+      const osumat = await haeEhdokkaat(tehoste, {
+        lahteet, avain: AVAIN, loki: (rivi) => console.error(rivi),
+      });
+      const kelpaavat = jarjestaEhdokkaat(osumat, tehoste);
+      const valinta = kelpaavat[0];
       if (!valinta) {
         console.error(`   VIRHE: ei yhtään kelvollista osumaa (${osumat.length} haettua).`);
         virheita += 1;
         continue;
       }
-      const o = valinta.osuma;
-      const lisenssi = lisenssiNimi(o.license);
-      console.log(`   valinta: "${o.name}" — ${o.username}, ${lisenssi}`);
-      console.log(`   ${o.duration.toFixed(2)} s, arvio ${(o.avg_rating ?? 0).toFixed(1)}/5 `
-        + `(${o.num_ratings ?? 0} kpl), ${o.num_downloads ?? 0} latausta, `
-        + `pisteet ${valinta.pisteet} (${JSON.stringify(valinta.osat)})`);
-      console.log(`   ${o.url}`);
+      const e = valinta.ehdokas;
+      const laskut = osumat.reduce((k, x) => ({ ...k, [x.lahde]: (k[x.lahde] ?? 0) + 1 }), {});
+      console.log(`   osumia lähteittäin: ${JSON.stringify(laskut)} → `
+        + `${kelpaavat.length} kelvollista`);
+      console.log(`   valinta: "${e.nimi}" — ${e.tekija}, ${e.lisenssi} `
+        + `[${AANILAHTEET[e.lahde]?.nimi ?? e.lahde}]`);
+      console.log(`   ${(e.kesto ?? 0).toFixed(2)} s, pisteet ${valinta.pisteet} `
+        + `(${JSON.stringify(valinta.osat)})`);
+      console.log(`   ${e.sivu}`);
+      /*
+       * KAKSI SEURAAVAKSI PARASTA LOKIIN. Kone valitsi kärjen luvuista
+       * eikä korvalla, ja kuuntelija haluaa tietää, mitä se hylkäsi —
+       * ilman tätä huonon osuman korjaus on uusi arvaus hakusanoista.
+       */
+      for (const muu of kelpaavat.slice(1, 3)) {
+        console.log(`   seuraava: ${muu.pisteet}  "${muu.ehdokas.nimi}" [${muu.ehdokas.lahde}]`);
+      }
 
       if (kuiva) {
-        rivit.push(manifestirivi(tehoste, valinta, { kesto: o.duration }));
+        rivit.push(manifestirivi(tehoste, valinta, { kesto: e.kesto ?? 0 }));
         console.log('');
         continue;
       }
 
-      const raaka = join(raakakansio, `raaka-${tehoste.tunnus}.mp3`);
+      const raaka = join(raakakansio, `raaka-${tehoste.tunnus}.${ehdokkaanPaate(e)}`);
       const kohde = join(kohdekansio, `${tehoste.tunnus}.mp3`);
       // eslint-disable-next-line no-await-in-loop
-      const tavut = await lataaEsikatselu(o, raaka);
+      const tavut = await lataaEhdokas(e, raaka);
       const tulos = normalisoi(raaka, kohde, tyokansio, viimeistely);
       console.log(`   lataus ${(tavut / 1024).toFixed(0)} kt → leikkaus `
         + `${tulos.leikattu.toFixed(2)} s, taso ${tulos.mitattu.taso == null ? `huippu ${tulos.mitattu.huippu.toFixed(1)} dBFS` : `${tulos.mitattu.taso.toFixed(1)} LUFS`}, `

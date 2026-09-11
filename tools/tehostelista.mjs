@@ -30,6 +30,11 @@ import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import {
+  AANILAHTEET, jarjestaEhdokkaat, KAIKKI_LAHTEET, lisenssiNimi, normalisoiFreesound,
+  pisteytaEhdokas, SALLITUT_LISENSSIT, vaatiiAttribuution,
+} from './aanilahteet.mjs';
+
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Pulun tehostelistan oletuspolku. */
@@ -60,54 +65,20 @@ export function listanKansiot(lista) {
   };
 }
 
-/**
- * Freesoundin lisenssiosoitteet luettavaan muotoon. Sama taulukko kuin
- * hae-freesound.mjs:ssä; tuntematon osoite palautuu sellaisenaan, jottei
- * manifestiin päädy tyhjää lisenssikenttää.
- */
-export const LISENSSIT = {
-  'http://creativecommons.org/publicdomain/zero/1.0/': 'CC0',
-  'https://creativecommons.org/publicdomain/zero/1.0/': 'CC0',
-  'http://creativecommons.org/licenses/by/4.0/': 'CC BY 4.0',
-  'https://creativecommons.org/licenses/by/4.0/': 'CC BY 4.0',
-  'http://creativecommons.org/licenses/by/3.0/': 'CC BY 3.0',
-  'https://creativecommons.org/licenses/by/3.0/': 'CC BY 3.0',
-};
-
-/** Lisenssin luettava nimi. */
-export const lisenssiNimi = (url) => LISENSSIT[url] ?? url;
-
-/** Vaatiiko lisenssi tekijän nimeämisen? CC0 ei, CC BY vaatii. */
-export const vaatiiAttribuution = (nimi) => !/^CC0/.test(String(nimi ?? ''));
-
-/** Freesoundin filter-syntaksissa sallitut lisenssinimet. */
-export const SALLITUT_LISENSSIT = ['Creative Commons 0', 'Attribution'];
-
-/**
- * Yhden tehosteen lisenssisuodatin Freesoundin filter-syntaksissa.
- * Järjestys on listasta: CC0 ensin, koska se on ensisijainen.
- */
-export function lisenssisuodatin(tehoste) {
-  const nimet = tehoste?.lisenssit?.length ? tehoste.lisenssit : SALLITUT_LISENSSIT;
-  return `license:(${nimet.map((n) => `"${n}"`).join(' OR ')})`;
-}
-
-/**
- * Koko hakusuodatin: lisenssit, kestorajat ja poissuljetut tagit.
+/*
+ * LISENSSIT JA HAKUSUODATIN ASUVAT NYT tools/aanilahteet.mjs:SSÄ.
  *
- * POISSULJETUT TAGIT (`poisTagit`) ovat äänimaisemien takia: omistaja
- * tilasi *nauhoitettuja paikkoja*, ja Freesoundin haku "ocean waves
- * ambience" palauttaa myös meditaatiomusiikkia ja podcast-pätkiä, joissa
- * aallot ovat taustalla. Rajaus tehdään palvelimen puolella samasta
- * syystä kuin lisenssirajaus: jälkikäteen suodattava haku näyttäisi
- * siltä, ettei kelvollista aineistoa ole. Ilman kenttää suodatin on
- * kirjaimelleen entinen (pulun tehosteet).
+ * Omistajan päätös 11.9.2026 (*"Lisää ilmaisia lähteitä rinnalle"*)
+ * toi Freesoundin rinnalle Wikimedia Commonsin ja Kenneyn CC0-paketit.
+ * Lisenssirajaus on se kohta, joka ratkaisee saako ääntä käyttää
+ * kaupallisessa pelissä — ja se saa olla vain YHDESSÄ paikassa, tai se
+ * rapistuu lähteiden välillä eri tahtiin. Nämä nimet ovat entisellään
+ * täällä, jotta kutsupaikkoja ei tarvinnut muuttaa.
  */
-export function hakusuodatin(tehoste) {
-  const perus = `${lisenssisuodatin(tehoste)} duration:[${tehoste.kestoMin} TO ${tehoste.kestoMax}]`;
-  const pois = (tehoste?.poisTagit ?? []).map((t) => `-tag:${t}`).join(' ');
-  return pois ? `${perus} ${pois}` : perus;
-}
+export {
+  hakusuodatin, LISENSSIT, lisenssisuodatin,
+} from './aanilahteet.mjs';
+export { lisenssiNimi, SALLITUT_LISENSSIT, vaatiiAttribuution };
 
 /**
  * Listan muototarkistus. Palauttaa virheet listana — tyhjä lista
@@ -141,6 +112,26 @@ export function tarkistaTehostelista(data) {
     }
   };
   tarkistaTagit(data.poisTagit, 'lista');
+  /*
+   * LÄHTEET (omistajan päätös 11.9.2026: *"Lisää ilmaisia lähteitä
+   * rinnalle"*). Lista saa kertoa per tehoste tai koko listalle, mistä
+   * lähteistä haetaan; oletus on KAIKKI. Tuntematon nimi on kirjoitus-
+   * virhe, ja se pitää kaatua tässä eikä näkyä hiljaisena puuttuvana
+   * lähteenä ajon lokissa.
+   */
+  const tarkistaLahteet = (arvo, nimi) => {
+    if (arvo === undefined) return;
+    if (!Array.isArray(arvo) || !arvo.length) {
+      virheet.push(`${nimi}: lahteet pitää olla ei-tyhjä lista`);
+      return;
+    }
+    for (const l of arvo) {
+      if (!KAIKKI_LAHTEET.includes(l)) {
+        virheet.push(`${nimi}: tuntematon lähde "${l}" (tunnetut: ${KAIKKI_LAHTEET.join(', ')})`);
+      }
+    }
+  };
+  tarkistaLahteet(data.lahteet, 'lista');
   const etuliite = typeof data.peliavainEtuliite === 'string' && data.peliavainEtuliite
     ? data.peliavainEtuliite : 'pulu';
   if (!/^[a-z-]+$/.test(etuliite)) virheet.push('peliavainEtuliite ei ole pienaakkosia');
@@ -182,6 +173,7 @@ export function tarkistaTehostelista(data) {
       virheet.push(`${nimi}: kestoMin ja kestoMax puuttuvat tai ovat väärin päin`);
     }
     tarkistaTagit(t?.poisTagit, nimi);
+    tarkistaLahteet(t?.lahteet, nimi);
     if (!Array.isArray(t?.lisenssit) || !t.lisenssit.length) {
       virheet.push(`${nimi}: lisenssit puuttuvat`);
     } else {
@@ -212,88 +204,103 @@ export function lueTehostelista(polku = PULULISTA) {
   if (virheet.length) {
     throw new Error(`${polku} ei kelpaa:\n  ${virheet.join('\n  ')}`);
   }
-  if (!Array.isArray(data.poisTagit) || !data.poisTagit.length) return data;
+  const listanPois = Array.isArray(data.poisTagit) && data.poisTagit.length
+    ? data.poisTagit : null;
+  const listanLahteet = Array.isArray(data.lahteet) && data.lahteet.length
+    ? data.lahteet : null;
+  if (!listanPois && !listanLahteet) return data;
   return {
     ...data,
-    tehosteet: data.tehosteet.map((t) => (t.poisTagit ? t : { ...t, poisTagit: data.poisTagit })),
+    tehosteet: data.tehosteet.map((t) => ({
+      ...t,
+      ...(listanPois && !t.poisTagit ? { poisTagit: listanPois } : {}),
+      ...(listanLahteet && !t.lahteet ? { lahteet: listanLahteet } : {}),
+    })),
   };
 }
 
 /**
- * OSUMAN PISTEYTYS: arvosana, lataukset ja kesto.
+ * OSUMAN PISTEYTYS — entinen nimi, uusi koneisto.
  *
- * Kone ei kuuntele, joten valinta on tehtävä luvuista. Kolme lukua ja
- * kolme syytä:
+ * Pisteytys itse asuu nyt tools/aanilahteet.mjs:ssä, koska se on
+ * kaikille lähteille yhteinen (omistajan päätös 11.9.2026: *"Lisää
+ * ilmaisia lähteitä rinnalle"*). Tämä on se sama kutsu Freesoundin
+ * raa'alle hakutulokselle: osuma normalisoidaan yhteiseen muotoon ja
+ * pisteytetään sillä.
  *
- *  - ARVOSANA (paino 3) kertoo, mitä kuuntelijat ovat äänestä mieltä.
- *    Alle kolmen arvion keskiarvo on kohinaa — silloin käytetään
- *    neutraalia 3/5 eikä nollaa, jottei arvioimaton mutta hyvä ääni
- *    putoa pelkästään tuoreutensa takia.
- *  - LATAUKSET (paino 2) on hitaampi mutta rehellisempi mittari: moni
- *    on ottanut äänen käyttöön oikeassa työssä. Logaritmi, koska ero
- *    10:n ja 100:n välillä merkitsee, ero 10 000:n ja 20 000:n ei.
- *  - KESTO (paino 1) suosii haarukan keskikohtaa. Rajojen laidoilla
- *    oleva osuma on tyypillisesti joko katkaistu tai sisältää jotain
- *    muuta perään.
+ * `osat.lataukset` on jäljellä entisellä nimellään — Freesoundilla
+ * suosioluku ON latausmäärä, ja vanha nimi on lokissa ja manifestissa.
  */
 export function pisteytaOsuma(osuma, tehoste) {
-  const arvioita = Number(osuma?.num_ratings ?? 0);
-  const arvio = arvioita >= 3 ? Number(osuma?.avg_rating ?? 0) : 3;
-  const arviopisteet = 3 * (Math.max(0, Math.min(5, arvio)) / 5);
-
-  const lataukset = Math.max(0, Number(osuma?.num_downloads ?? 0));
-  const latauspisteet = 2 * Math.min(1, Math.log10(1 + lataukset) / 4);
-
-  const keskikohta = (tehoste.kestoMin + tehoste.kestoMax) / 2;
-  const puolikas = (tehoste.kestoMax - tehoste.kestoMin) / 2 || 1;
-  const kesto = Number(osuma?.duration ?? 0);
-  const kestopisteet = Math.max(0, 1 - Math.abs(kesto - keskikohta) / puolikas);
-
+  const { pisteet, osat } = pisteytaEhdokas(normalisoiFreesound(osuma), tehoste);
   return {
-    pisteet: Number((arviopisteet + latauspisteet + kestopisteet).toFixed(3)),
+    pisteet,
     osat: {
-      arvio: Number(arviopisteet.toFixed(3)),
-      lataukset: Number(latauspisteet.toFixed(3)),
-      kesto: Number(kestopisteet.toFixed(3)),
+      arvio: osat.arvio,
+      lataukset: osat.suosio,
+      kesto: osat.kesto,
+      osuvuus: osat.osuvuus,
+      kerroin: osat.kerroin,
     },
   };
 }
 
 /**
- * Paras osuma tehosteelle, tai null jos kelvollisia ei ole.
+ * Paras Freesound-osuma tehosteelle, tai null jos kelvollisia ei ole.
  *
  * Ilman esikuuntelu-mp3:a osuma on hyödytön: alkuperäinen tiedosto voi
  * olla pakkaamaton wav, jota ei ladata puhelimeen. Kestorajojen
  * ulkopuolelle jäävä osuma karsitaan vielä täällä, vaikka rajaus on jo
  * tehty palvelimen puolella — hakusuodatin pyöristää sekunteihin.
+ *
+ * MONILÄHTEINEN AJO KÄYTTÄÄ tools/aanilahteet.mjs:n
+ * valitseParasEhdokas-funktiota; tämä on sen Freesound-muotoinen
+ * kutsu, ja palauttaa `osuma`-kentässä yhä alkuperäisen hakutuloksen.
  */
 export function valitseParas(osumat, tehoste) {
-  const kelpaavat = (osumat ?? [])
-    .filter((o) => o?.previews?.['preview-hq-mp3'] || o?.previews?.['preview-lq-mp3'])
-    .filter((o) => Number(o.duration) >= tehoste.kestoMin * 0.8
-      && Number(o.duration) <= tehoste.kestoMax * 1.2)
-    .map((o) => ({ osuma: o, ...pisteytaOsuma(o, tehoste) }));
-  if (!kelpaavat.length) return null;
-  kelpaavat.sort((a, b) => b.pisteet - a.pisteet);
-  return kelpaavat[0];
+  const raa = new Map();
+  const ehdokkaat = (osumat ?? []).map((o) => {
+    const e = normalisoiFreesound(o);
+    raa.set(`${e.lahde}:${e.id}`, o);
+    return e;
+  });
+  const paras = jarjestaEhdokkaat(ehdokkaat, tehoste)[0];
+  if (!paras) return null;
+  return {
+    osuma: raa.get(`${paras.ehdokas.lahde}:${paras.ehdokas.id}`),
+    ehdokas: paras.ehdokas,
+    pisteet: paras.pisteet,
+    osat: paras.osat,
+  };
 }
 
-/** Manifestirivi valitusta osumasta — tasan ne kentät, jotka peli ja lisenssi vaativat. */
+/**
+ * Manifestirivi valitusta osumasta — tasan ne kentät, jotka peli ja
+ * lisenssi vaativat, plus LÄHDE.
+ *
+ * Lähde on manifestissa kahdesta syystä. Kuuntelija haluaa tietää,
+ * mistä huono osuma tuli (ja mikä lähde kannattaa rajata pois seuraavassa
+ * ajossa), ja attribuutioteksti nimeää palvelun: CC BY vaatii tekijän
+ * JA lähteen. `freesoundId` on jäljellä entisellä nimellään, koska
+ * vanhat manifestirivit ämpärissä kantavat sitä.
+ */
 export function manifestirivi(tehoste, valinta, { kesto }) {
-  const o = valinta.osuma;
-  const lisenssi = lisenssiNimi(o.license);
+  const e = valinta.ehdokas ?? normalisoiFreesound(valinta.osuma);
+  const palvelu = AANILAHTEET[e.lahde]?.nimi ?? e.lahde;
   return {
     tunnus: tehoste.tunnus,
     tiedosto: `${tehoste.tunnus}.mp3`,
     kuvaus: tehoste.kuvaus,
-    freesoundId: o.id,
-    nimi: o.name,
-    tekija: o.username,
-    lisenssi,
-    attribuutio: vaatiiAttribuution(lisenssi)
-      ? `"${o.name}" — ${o.username}, Freesound (${lisenssi})`
+    lahde: e.lahde,
+    lahdeId: e.id,
+    ...(e.lahde === 'freesound' ? { freesoundId: Number(e.id) } : {}),
+    nimi: e.nimi,
+    tekija: e.tekija,
+    lisenssi: e.lisenssi,
+    attribuutio: vaatiiAttribuution(e.lisenssi)
+      ? `"${e.nimi}" — ${e.tekija}, ${palvelu} (${e.lisenssi})`
       : null,
-    sivu: o.url,
+    sivu: e.sivu,
     kesto: Number(kesto.toFixed(2)),
     pisteet: valinta.pisteet,
   };

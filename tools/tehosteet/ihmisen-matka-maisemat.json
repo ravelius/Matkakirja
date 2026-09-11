@@ -7,6 +7,7 @@
   "haivytysS": 0.25,
   "leikkaaHiljaisuus": false,
   "poisTagit": ["music", "song", "speech", "voice"],
+  "lahteet": ["freesound", "commons"],
   "tehosteet": [
     {
       "tunnus": "savanni",
