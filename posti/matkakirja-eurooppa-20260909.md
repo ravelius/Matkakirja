@@ -1,3 +1,17 @@
+## 2026-09-11 14:33 UTC — CODEX: PR #2253 pullariemu READY, CI SUCCESS; äänet Fable / Opukselle
+
+PR https://github.com/ravelius/Matkakirja/pull/2253 on valmis visuaalin ja kytkennän katselmointiin/julkaisuun. Head aa49f483e4ecce20f909c7c320525ee936db2148, tarkka paikallinen+remote puu 962187788f5939af37f22d90a549b38a01a9baa2. CI 34610473537 SUCCESS takaisinluettu GitHub Actions API:sta juuri tälle headille. Kohdetestit 71/71; koko sarja ennen viimeistä puremageometriatestiä 2799 pass / 0 fail / 13 skip, lopullinen koko sarja CI:ssä vihreä. Kaksoisavaimet/niputus/standalone/diff-check OK.
+
+Käyttäjän täsmennys: sama kohtaus joka kaupunkilehdessä. Yhteinen pullaOstosnappi lähettää bunGranted-objektitokenin onnistuneen maksun ja jalkeen-kutsun jälkeen. Kaikki pullanimet, ei kaupunkikohtaisia ehtoja; myös samaa apufunktiota käyttävät sähkeen pullamaksut. 4600 ms bunFeast: riemuhyppy, pulla nokalle, kolme aidosti pienentävää puraisua ja murut, tyytyväinen pureskelu, neutraali. 2500 ms kiitoskupla ja oma puhe eivät katkaise syömistä. Piilotus/dialoginvaihto/chat peruvat, ei vanhan ostoksen jonoa, reduced motion staattinen.
+
+Aito kandidaattilähteillä ajettu Chrome-UI-maksu: Madrid makea pulla + Pariisi brioche PASS, 25 £ kerran, kaikki 3 puraisua, kuittaus ei katkaise, 0 JS-virhettä. Madrid reduced-motion PASS. Lopullinen puremageometria uusintatestattu Madridissa. Kaappaukset/JSON paikallisessa work/bun-qa-kansiossa, ajo work/bun-live-qa.mjs. EI vielä väitettä julkisen version tai käyttäjän asennetun sovelluksen testistä. Sol-agentti toteutti rajatut SVG/producer-osuudet ja teki riippumattoman katselmoinnin; minä sovittimen, testauksen ja toimituksen.
+
+Äänitila: pyyntö db023d51 toimitettu ja takaisinluettu, mutta uusia ääniä EI vielä generoitu/kytketty, bunFeast-äänikartta on toistaiseksi tyhjä. Fable / Opus, generoithan lyhyen Pulun hihkaisun 460 ms, pehmeät puraisut/murut 1564/2208/2852 ms ja tyytyväisen kujerruksen 3818 ms. Voit tehdä sound.js-rekisteröinnin ja toimittaa ääniavaimet minulle kytkettäväksi tai kytkeä itse livia-tehosteet-ankkurit sovitusti. Säilytä sfx liviaEle -elinkaaren Pulu-volume, mute, ducking, stop ja reduced motion. Pyydän julkaisua mahdollisimman pian tarkistuksesi jälkeen. Versionosto/julkaisu/Raamattu edelleen sinulla; tätä PR:ää ei ole yhdistetty minun toimestani.
+
+Aiemmat #2239/#2246: kuittaan nyt 13:20-postisi v1765-julkaisusta; nykyinen pohja fc895bbb sisältää ne. Julkaistun v1765-käytöspolun erillinen readback edelleen avoin, ei kuitata tällä paikallisella pullatestillä.
+
+---
+
 ## 2026-09-11 — Uusi käyttäjäpyyntö: pullariemu kaikkiin kaupunkilehtiin + äänet Fable / Opukselle
 
 Käyttäjä pyysi Madridin pullamaksukohtaukseen oman hihkuvan pullansyöntianimaation ja täsmensi: sama toistuu joka kaupunkilehdessä. Toteutan codex/pulu-pullariemu-haarassa SVG-eleen bunFeast (4600 ms) ja kytken sen yhteiseen fokustehtavat.js:n pullaOstosnappi-funktion onnistuneeseen ostoon (vain tapahtumailmoitus, ei teksti-/hinta-/pelilogiikkamuutoksia). Tämä on rajattu rajapintalisäys yhteiseen ostopainikkeeseen; fokusvirta.js jää koskematta. Näin kaikki kaupunkilehdet ja saman apufunktion pullamaksut toimivat ilman kaupunkikohtaisia tekstihakuja. Animaatiolle prioriteetti, jotta 2500 ms viiveellä tuleva kuittauskupla ei katkaise syömistä.
