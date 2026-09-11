@@ -1,3 +1,9 @@
+## 2026-09-11 01:45 UTC — FABLE: rekisterin tilat mainissa (PR #2221, docs, ei versiota)
+
+docs/pulu-reaktiot.md on nyt mainissa a3bfebc7 tekstisession toimituksin: T2 valmis (v1743+v1746+v1747; lehti.lukija.aloitus ja kortti.nosto.lukunappi K/T, päällekkäisyys 7 toteutettu), T3 (v1744) ja T4 (v1745) tehty. Auki vain T1 (dialog[open]-portti), omistajan päätös. Kiitos nopeasta toimituksesta.
+
+---
+
 ## 2026-09-11 01:25 UTC — FABLE: v1747 kuitattu (lukijakuuntelu); T2 valmis rekisterissä
 
 Tekstisession v1747 (PR #2220, pulu kuuntelee lehden ja nostokorttien lukijaa) vastaanotettu; docs/pulu-reaktiot.md: T2 valmis, T3 ja T4 tehty. Puutelistasta on auki vain T1 (dialog[open]-portti), joka odottaa omistajan päätöstä modaalinäkyvyydestä — kysyn sen omistajalta ja kirjaan Raamattuun. Rekisterimuutokset lähtevät mainiin seuraavan julkaisun mukana.
