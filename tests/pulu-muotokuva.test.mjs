@@ -8,6 +8,10 @@ test('käyttöliittymän purku peruu avauskuvat, liidon ja puheen heti', () => {
   assert.match(lue('../js/ui.js'), /destroy\(\) \{[\s\S]*?peruLivianAvaus\(\);[\s\S]*?this\.dead = true;/);
 });
 
+test('kaupunginvalinta luovuttaa avaustekstin puhevuoron lennossa tervehtivälle Pululle', () => {
+  assert.match(lue('../js/ui.js'), /aloitaKartalta\(\) \{[\s\S]*?lopetaAvauksenAani\(\);[\s\S]*?stopIntroVoice\(this\);[\s\S]*?this\.aloitaPallolta\(\)/);
+});
+
 test('avauskuplan muotokuva on eksplisiittinen optio eikä muuta tavallisia kuplia', () => {
   const js = lue('../js/pollo.js');
   assert.match(js, /naytaAvauskupla\(teksti, \{[\s\S]*?muotokuva = false/);

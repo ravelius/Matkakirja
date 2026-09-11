@@ -16270,6 +16270,9 @@ export class UI {
     // eikä terminaalin nosto saa jäädä päälle kartalle (sama purku kuin
     // luennan päättyessä, js/luenta.js playIntroVoice).
     lopetaAvauksenAani();
+    // Avausteksti väistyy jo kaupunginvalintaan mentäessä. Jos lukija
+    // jatkaa tähän asti, sen puhevuoro estäisi lennossa tervehtivän Pulun.
+    stopIntroVoice(this);
     // Naksahdus: sama puinen naksu kuin nappulan kolauksessa
     // (efekti-naksu.mp3). Kevyt eikä juhlava — matka ei ole vielä
     // alkanut, kartta vain avautuu.
