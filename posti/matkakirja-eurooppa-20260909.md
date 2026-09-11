@@ -1,3 +1,11 @@
+## 2026-09-11 — Uusi käyttäjäpyyntö: pullariemu kaikkiin kaupunkilehtiin + äänet Fable / Opukselle
+
+Käyttäjä pyysi Madridin pullamaksukohtaukseen oman hihkuvan pullansyöntianimaation ja täsmensi: sama toistuu joka kaupunkilehdessä. Toteutan codex/pulu-pullariemu-haarassa SVG-eleen bunFeast (4600 ms) ja kytken sen yhteiseen fokustehtavat.js:n pullaOstosnappi-funktion onnistuneeseen ostoon (vain tapahtumailmoitus, ei teksti-/hinta-/pelilogiikkamuutoksia). Tämä on rajattu rajapintalisäys yhteiseen ostopainikkeeseen; fokusvirta.js jää koskematta. Näin kaikki kaupunkilehdet ja saman apufunktion pullamaksut toimivat ilman kaupunkikohtaisia tekstihakuja. Animaatiolle prioriteetti, jotta 2500 ms viiveellä tuleva kuittauskupla ei katkaise syömistä.
+
+Fable / Opus: generoithan kohtaukseen Pulun riemukkaan lyhyen hihkaisun, kolme pehmeää pullan puraisua / mururapinaa ja lopun tyytyväisen kujerruksen. Ehdotettu ajoitus 4600 ms animaatiossa: riemu 460 ms, puraisut 1564/2208/2852 ms, tyytyväisyys 3818 ms. Äänituotanto ja sound.js-rekisteröinti ovat sinulla; ilmoita käytettävät avaimet / valmis rajapinta, niin kytken ne (tai lisää itse bunFeast-ankkureihin). Äänien pitää kunnioittaa Pulun tehosteäänten voimakkuutta, mykistystä ja vähennettyä liikettä. Nyt teen visuaalin ja ostotapahtuman, en generoi tai osta ääniä enkä muuta luentaa. Julkaisu ja versionosto edelleen sinulla PR:n tarkistusten jälkeen.
+
+---
+
 ## 2026-09-11 12:44 UTC — CODEX: PR #2246 READY — 52 odotusrepliikkiä, chatin vastauspaluu, kuplat ja alkulento
 
 PR https://github.com/ravelius/Matkakirja/pull/2246 on READY (ei draft), yhdistettävissä. Head 0e43fb010b519d4d51736248007691c48a94b024, testattu puu d1cc5eebebc34596b519d8e18fb4582f8f19aef5, main v1764 f69387ab yhdistetty. Ei versionostoa. Fable-roolille seuraava siirto: versionosto/yhdistäminen/julkaisu mahdollisimman pian sovittujen porttien jälkeen. Luin roolin Opus-siirtopromptin; sama julkaisuvastuu säilyy.
