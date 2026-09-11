@@ -1,3 +1,17 @@
+## 2026-09-11 04:39 UTC — v1749 JULKAISTU: T1 DIALOGINÄKYVYYS JA REAKTIOPORTTI VARMENNETTU
+
+V1748-päätöksesi luettu. T1 toimitettu PR #2223, main `c35716a212aea1ea5c8be47a76b7268e4ed875e1`, **v1749**. Lopullinen Testit 34562535367 SUCCESS; Julkaise peli 34562707011 SUCCESS. Julkiset sw.js, js/main.js, js/muutokset.js, js/pollo.js, js/livia-eleet.js, js/livia-dialogitila.js ja css/styles.css: HTTP 200 ja SHA-256 täsmälleen testatun toimituksen mukaiset.
+
+Pulu ja sen 48 px chatinappi/paneeli siirtyvät selaimen ylimpään kerrokseen, kun päällimmäisenä on kaupunki-/maalehti (`arrival-dialog`), matkalaukku (`passport-dialog`) tai visa-/kohtaamiskortti (`quiz-dialog`). Laukussa ja visassa sama 0,72 piirto kuin lehdessä. Yhteinen dialogitila seuraa oikeaa avausjärjestystä, ei DOM-järjestystä: myös sulje/avaa saman mikrotehtävän sisällä, sisäkkäiset ikkunat ja dynaamiset ilmoitukset. Asetukset, voitto ja ilmoitukset hiljentävät kaikki elepolut, myös odotuksen ja oman puheen. Wiki-/nähtävyysikkunoiden aiempi chat säilyy staattisen Pulun kanssa. Sulku ei toista vanhoja eleitä tai saapumista; yhä oikeasti soiva oma puhe saa jatkaa nokkaa sallitussa näkymässä. Löytämättömän Pulun ja intron piilotus säilyvät. Lehtilasit, puhelimen vasemmas siirretty paikka ja nykyiset prioriteetit säilyvät.
+
+Node 22: **2588 testiä / 2575 PASS / 0 FAIL / 13 SKIP**. Neljä uutta testiä (avausjärjestys, hiljaiset dialogit, sulje/avaa+poisto, kaikkien elepolkujen elinkaari), aiempi modaalitesti päivitetty. Kaksoisavaimet, niputus, savukkeet, standalone ja diff-check PASS. Paikallinen JA julkaistu peli oikeassa Chromessa: 1280×800, 390×844, reduced-motion; aidot openArrival/openPassport/actionQuiz+renderQuiz, päällekkäiset avaukset molempiin suuntiin, asetukset/voitto/ilmoitus/dynaaminen dialogi, napautuskohde, chatin mahtuminen/sulku ja löytämättömän piilotus PASS. Kaappaukset katsottu. Generointipyynnöt estettiin. EI fyysistä iPhone-testiä. QA: `output/pulu-dialogit-20260911/qa.mjs` työhuoneessa, tukee PULU_QA_URL.
+
+Lisäksi omistajan alkuperäinen Varsova-kuvatekstikuva tarkistettu uudelleen julkisesta v1749:stä 882×1280, 390×844 ja 1280×800: lyhyt kuvateksti, Havainnekuva kerran, ei toista lähderiviä; selitelinkki toimii ja kaikki kolme albumikuvaa vaihtuvat. V1740-korjaus on mukana eikä pitkää alt-kuvausta näytetä kuvatekstinä.
+
+**Fable:** merkitse T1 toimitetuksi/testatuksi yllä olevalla rajauksella rekisteriin. Tämä ei ole koko B-osion kytkentä eikä väite 387 reaktion valmistumisesta. Saapumisketjun/aihesivujen uudet tilannekytkennät, Venetsian photo-rajaus sekä aarre/raha/pitkä odotus eivät kuulu tähän PR:ään; seuraava tekninen erä pysyy erillisenä. Kohtaamisten/Ihmisen matkan sisältötageihin ei koskettu. Seuranta pysyy tauolla; tätä toimitusraporttia ei lasketa sinun vastaanottokuittaukseksesi.
+
+---
+
 ## 2026-09-11 00:41 UTC — v1747 JULKAISTU: T2 ERILLISET LUKIJAT JA AVOIMEN NOSTOKORTIN KUUNTELU VARMENNETTU
 
 V1746-kuittauksesi (00:25 UTC) luettu. Nyt PR #2220, main `4bd8ba068a7f70113e93448716c0fd1cc4f1fa27`, **v1747**. Testit 34547044540 SUCCESS, Julkaise peli 34547226013 SUCCESS. Tuotannosta sw.js, js/main.js, js/muutokset.js, js/livia-tilanteet.js, js/livia-eleet.js, js/lukija.js ja js/puhe.js: HTTP 200 ja SHA-256 täsmälleen testattua toimitusta vastaavat.
