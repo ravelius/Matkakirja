@@ -1011,7 +1011,7 @@ export const FOKUSKOHTEET_GRC = [
     nimi: 'Korintin kanava',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'tekniikka',
-    tyyppi: 'muu',
+    tyyppi: 'tekniikka',
     kysymykset: [
       'Kuljetaanko kanavan läpi vielä nykyään?',
       'Miksi kaivaminen onnistui vasta 1800-luvulla?',
@@ -1100,7 +1100,7 @@ export const FOKUSKOHTEET_GRC = [
     nimi: 'Delfoi',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Miksi oraakkelin vastaukset olivat niin moniselitteisiä?',
       'Kuka sai tulla kysymään neuvoa Delfoista?',
@@ -1181,7 +1181,7 @@ export const FOKUSKOHTEET_GRC = [
     nimi: 'Akropolis',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Miksi Parthenon rakennettiin juuri kalliolle?',
       'Mitä Akropoliilla tehtiin ennen temppeleitä?',
@@ -1335,7 +1335,7 @@ export const FOKUSKOHTEET_GRC = [
   {
     id: 'olympia',
     nimi: 'Olympia',
-    tyyppi: 'muu',
+    tyyppi: 'urheilu',
     symboli: 'urheilu',
     kysymykset: [
       'Mitä lajeja antiikin kisoissa kilpailtiin?',
@@ -1478,7 +1478,7 @@ export const FOKUSKOHTEET_GRC = [
   {
     id: 'epidauros',
     nimi: 'Epidauros',
-    tyyppi: 'muu',
+    tyyppi: 'kulttuuri',
     symboli: 'kulttuuri',
     kysymykset: [
       'Miten sairaita hoidettiin Asklepioksen pyhäkössä?',
@@ -1655,7 +1655,7 @@ export const FOKUSKOHTEET_GRC = [
      */
     id: 'pikkupollo',
     nimi: 'Pikkupöllö',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     symboli: 'elain',
     /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
     nappi: 'Ateena löi tunnuksensa hopeaan — mallina 22-senttinen lintu, '
@@ -1719,7 +1719,7 @@ export const FOKUSKOHTEET_GRC = [
      */
     id: 'reunuskilpikonna',
     nimi: 'Reunuskilpikonna',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     symboli: 'elain',
     /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
     nappi: 'Maa oli liian kova pesäkuopalle — naaras kasteli sen itse ja '
@@ -1809,7 +1809,7 @@ export const FOKUSKOHTEET_GRC = [
      */
     id: 'rodoksen-kolossi',
     nimi: 'Rodoksen kolossi',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miten noin iso pronssipatsas ylipäätään rakennettiin?',
@@ -1863,7 +1863,7 @@ export const FOKUSKOHTEET_GRC = [
      */
     id: 'knossos',
     nimi: 'Knossoksen palatsi',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Mihin palatsin valtavia saviruukkuja käytettiin?',
@@ -1943,7 +1943,7 @@ export const FOKUSKOHTEET_GRC = [
      */
     id: 'antiikin-agora',
     nimi: 'Antiikin agora',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Mitä agoralla tehtiin tavallisena päivänä?',
@@ -2034,7 +2034,7 @@ export const FOKUSKOHTEET_GRC = [
   {
     id: 'olympieion',
     nimi: 'Olympieion',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Mihin temppelin marmori lopulta päätyi?',

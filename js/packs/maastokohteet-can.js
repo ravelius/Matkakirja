@@ -247,7 +247,7 @@ export const MAASTOKOHTEET_CAN = [
   {
     id: 'dinosaur-provincial-park',
     nimi: 'Dinosaur Provincial Park',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä on badland-maasto?',
       'Montako dinosauruslajia puistosta on löydetty?',

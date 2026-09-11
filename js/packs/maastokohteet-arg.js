@@ -293,7 +293,7 @@ export const MAASTOKOHTEET_ARG = [
   {
     id: 'ischigualasto',
     nimi: 'Ischigualasto',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mitä nimi Ischigualasto tarkoittaa?',
       'Miksi paleontologit tulivat tänne?',
@@ -321,7 +321,7 @@ export const MAASTOKOHTEET_ARG = [
   {
     id: 'peritomoreno',
     nimi: 'Perito Moreno -jäätikkö',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kenen mukaan jäätikkö on nimetty?',
       'Miksi juuri tämä jäätikkö oli pitkään tasapainossa?',

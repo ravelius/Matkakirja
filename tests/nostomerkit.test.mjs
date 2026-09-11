@@ -15,7 +15,7 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { MAASTOKOHTEET } from '../js/packs/maastokohteet.js';
 
 /** KOHDE_TYYPPISYMBOLIT-taulun avaimet js/fokuskohteet.js:stä. */
@@ -45,17 +45,17 @@ function aineistonTyypit() {
 }
 
 /*
- * TIEDOSSA OLEVA AUKKO, JOTA EI OLE VIELÄ RATKAISTU.
+ * AUKKO ON UMMESSA (11.9.2026).
  *
- * `muu` on yleistyyppi, jolla on aineistossa 120 riviä eikä yhtään
- * symbolia. Se on sama hiljainen katoaminen kuin järvellä oli, mutta
- * korjaus ei ole yhtä itsestään selvä: järvi kuuluu ilmeisesti
- * luontoon, kun taas `muu` tarkoittaa eri riveillä eri asioita, ja
- * 120 uutta merkkiä kartalle on sisältöpäätös eikä korjaus. Rivit
- * käydään läpi erikseen ja luokitellaan; siihen asti tyyppi on tässä
- * nimeltä mainittuna, jotta aukko on näkyvä eikä unohdu.
+ * `muu` oli yleistyyppi, jolla oli aineistossa 202 riviä eikä yhtään
+ * symbolia — 98 niistä ilman omaa `symboli`-kenttää, eli ne eivät
+ * piirtyneet kartalle lainkaan. Jokainen rivi luettiin ja luokiteltiin
+ * omaan tekstiinsä nojaten johonkin taulun tuntemaan tyyppiin, joten
+ * lista on nyt tyhjä. Se pidetään tässä tyhjänä eikä poisteta, jotta
+ * seuraava aukko saa saman näkyvän paikan — ja jotta alla oleva
+ * vartija kertoo, jos `muu` yrittää palata.
  */
-const RATKAISEMATTOMAT = new Set(['muu']);
+const RATKAISEMATTOMAT = new Set();
 
 test('jokainen aineiston nostotyyppi tuntee karttamerkkinsä', () => {
   const tunnetut = tunnetutTyypit();
@@ -70,4 +70,28 @@ test('jokainen aineiston nostotyyppi tuntee karttamerkkinsä', () => {
 
 test('järvi on luontokategoriassa kuten joki ja meri', () => {
   assert.ok(tunnetutTyypit().has('jarvi'), 'jarvi puuttuu KOHDE_TYYPPISYMBOLIT-taulusta');
+});
+
+/*
+ * `muu` EI SAA PALATA. Yleistyyppi ei ole karttamerkki: se on aukko,
+ * joka näyttää aineistossa siistiltä mutta katoaa kartalta hiljaa.
+ * Uusi nosto kuuluu johonkin taulun tuntemaan tyyppiin — tai jos ei
+ * kuulu, taulu (ja sen myötä karttasymboli) on päätettävä erikseen.
+ */
+test('yleistyyppi muu ei ole palannut aineistoon', () => {
+  assert.equal(aineistonTyypit().has('muu'), false,
+    'tyyppi `muu` on takaisin aineistossa — se ei piirry kartalle');
+  /*
+   * Sama myös fokuskohteet-pakeista, joita MAASTOKOHTEET ei kata:
+   * `muu` asui 11.9.2026 asti molemmissa tiedostoperheissä, ja
+   * tuontilista tuntee vain toisen. Luetaan siis lähdetiedostot.
+   */
+  const hakemisto = new URL('../js/packs/', import.meta.url);
+  const osumat = [];
+  for (const nimi of readdirSync(hakemisto)) {
+    if (!nimi.endsWith('.js')) continue;
+    const lahde = readFileSync(new URL(nimi, hakemisto), 'utf8');
+    if (/^\s*tyyppi: 'muu',\s*$/m.test(lahde)) osumat.push(nimi);
+  }
+  assert.deepEqual(osumat, [], `tyyppi \`muu\` löytyi pakeista: ${osumat.join(', ')}`);
 });

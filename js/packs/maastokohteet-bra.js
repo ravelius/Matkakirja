@@ -323,7 +323,7 @@ export const MAASTOKOHTEET_BRA = [
   {
     id: 'lencoismaranhenses',
     nimi: 'Lençóis Maranhenses',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi dyynien väliin syntyy järviä?',
       'Onko Lençóis aavikko?',

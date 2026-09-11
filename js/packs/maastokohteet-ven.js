@@ -139,7 +139,7 @@ export const MAASTOKOHTEET_VEN = [
   {
     id: 'saltoangel',
     nimi: 'Salto Ángel',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Kuinka korkea maailman korkein vesiputous on?',
       'Kenen mukaan putous on nimetty?',
@@ -224,7 +224,7 @@ export const MAASTOKOHTEET_VEN = [
   {
     id: 'guacharonluola',
     nimi: 'Guácharon luola',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mikä lintu luolassa asuu?',
       'Kuka tutki luolan vuonna 1799?',
@@ -307,7 +307,7 @@ export const MAASTOKOHTEET_VEN = [
   {
     id: 'morrocoy',
     nimi: 'Morrocoy',
-    tyyppi: 'muu',
+    tyyppi: 'meri',
     kysymykset: [
       'Millaisista osista Morrocoyn puisto koostuu?',
       'Mikä puistoa uhkaa?',

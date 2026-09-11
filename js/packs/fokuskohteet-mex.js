@@ -71,7 +71,7 @@ export const FOKUSKOHTEET_MEX = [
      */
     id: 'templo-mayor',
     nimi: 'Templo Mayor',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi temppeli rakennettiin seitsemän kertaa päällekkäin?',

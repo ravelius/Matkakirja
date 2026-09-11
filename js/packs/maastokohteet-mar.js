@@ -270,7 +270,7 @@ export const MAASTOKOHTEET_MAR = [
   {
     id: 'ergchebbi',
     nimi: 'Erg Chebbi',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mitä sana erg tarkoittaa?',
       'Mikä oli Sijilmassa?',

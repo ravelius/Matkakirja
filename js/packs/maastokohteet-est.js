@@ -577,7 +577,7 @@ export const MAASTOKOHTEET_EST = [
   {
     id: 'ontika',
     nimi: 'Ontikan klintti',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuinka pitkälle Baltian klintti ulottuu?',
       'Mikä on Viron korkein vesiputous?',

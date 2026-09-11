@@ -308,7 +308,7 @@ export const MAASTOKOHTEET_SDN = [
   {
     id: 'dinder',
     nimi: 'Dinder',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä on maya?',
       'Miksi puiston asukkaat katosivat 1880-luvulla?',

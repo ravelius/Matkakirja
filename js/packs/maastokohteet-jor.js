@@ -260,7 +260,7 @@ export const MAASTOKOHTEET_JOR = [
     id: 'wadirum',
     nimi: 'Wadi Rum',
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mistä Wadi Rum on saanut nimensä?',
       'Mikä on Jordanian korkein kohta?',

@@ -188,7 +188,7 @@ export const MAASTOKOHTEET_URY = [
   {
     id: 'cabopolonio',
     nimi: 'Cabo Polonio',
-    tyyppi: 'muu',
+    tyyppi: 'meri',
     kysymykset: [
       'Miten Cabo Polonioon pääsee?',
       'Mistä paikan nimi tulee?',
@@ -268,7 +268,7 @@ export const MAASTOKOHTEET_URY = [
   {
     id: 'quebradadeloscuervos',
     nimi: 'Quebrada de los Cuervos',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mitä rotkon nimi tarkoittaa?',
       'Mikä lintualue rotko on?',

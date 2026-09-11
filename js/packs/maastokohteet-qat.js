@@ -202,7 +202,7 @@ export const MAASTOKOHTEET_QAT = [
     nimi: 'Al Reem',
     // Suojelualue ei ole vuori eikä meri: tyyppi 'muu' + symboli 'luonto'.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä on biosfäärialue?',
       'Miksi kasvillisuus on täällä tiheämpää kuin muualla?',
@@ -255,7 +255,7 @@ export const MAASTOKOHTEET_QAT = [
     nimi: 'Al Thakhira',
     // Mangrovelahti ei ole vuori eikä meri: 'muu' + 'luonto'.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'meri',
     kysymykset: [
       'Mihin mangrovemetsää tarvitaan?',
       'Mitä Lorimerin luettelo oli?',

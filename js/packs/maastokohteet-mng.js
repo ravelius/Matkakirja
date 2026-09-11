@@ -60,7 +60,7 @@ export const MAASTOKOHTEET_MNG = [
     // Vanjärven mallin mukaan (js/packs/fokuskohteet-tur.js) — kortin
     // ylärivi näyttää silloin luokan Luonto eikä väärää otsaketta.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mitä mongolin sana gov\' tarkoittaa?',
       'Miksi Gobista löytyy dinosauruksen munia?',
@@ -170,7 +170,7 @@ export const MAASTOKOHTEET_MNG = [
   {
     id: 'bayanzag',
     nimi: 'Bayanzag',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä löytö teki paikan kuuluisaksi?',
       'Kuka antoi kallioille niiden lisänimen?',
@@ -196,7 +196,7 @@ export const MAASTOKOHTEET_MNG = [
   {
     id: 'hustain-nuruu',
     nimi: 'Hustain nuruu',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä on tahi?',
       'Milloin puisto perustettiin?',

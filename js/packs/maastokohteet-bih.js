@@ -92,7 +92,7 @@ export const MAASTOKOHTEET_BIH = [
   {
     id: 'blidinje',
     nimi: 'Blidinjen puisto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     symboli: 'luonto',
     kysymykset: [
       'Mikä stećak on?',

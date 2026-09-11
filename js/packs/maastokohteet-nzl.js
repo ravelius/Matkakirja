@@ -150,7 +150,7 @@ export const MAASTOKOHTEET_NZL = [
   {
     id: 'waitomon-kiiltomatoluola',
     nimi: 'Waitomon luola',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä valo luolan katossa hohtaa?',
       'Kuka johdatti tutkijat luolaan?',

@@ -215,7 +215,7 @@ export const MAASTOKOHTEET_ECU = [
   {
     id: 'yasuni',
     nimi: 'Yasuní',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Ketkä elävät puistossa eristyksissä?',
       'Mitä Yasuní-ITT-aloite lupasi?',

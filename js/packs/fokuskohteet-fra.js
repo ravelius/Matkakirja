@@ -78,7 +78,7 @@ export const FOKUSKOHTEET_FRA = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Tuileries',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi palatsia ei rakennettu uudelleen, vaikka muurit jäivät pystyyn?',
@@ -178,7 +178,7 @@ export const FOKUSKOHTEET_FRA = [
   {
     id: 'bastilji',
     nimi: 'Bastilji',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi juuri Bastiljista tuli vallankumouksen vertauskuva?',

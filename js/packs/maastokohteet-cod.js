@@ -155,7 +155,7 @@ export const MAASTOKOHTEET_COD = [
     id: 'boyoman-putoukset',
     nimi: 'Boyoman putoukset',
     nimio: 'Boyoma',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Montako koskea putoussarjaan kuuluu?',
       'Miten wagenya-kalastajat pyytävät kalaa koskissa?',

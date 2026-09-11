@@ -130,7 +130,7 @@ export const MAASTOKOHTEET_ZWE = [
   {
     id: 'matobo',
     nimi: 'Matobo',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miten pyöreät graniittikummut syntyivät?',
       'Miksi leopardeja on täällä niin paljon?',
@@ -158,7 +158,7 @@ export const MAASTOKOHTEET_ZWE = [
   {
     id: 'mana-pools',
     nimi: 'Mana Pools',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Miksi eläimet kerääntyvät tänne kuivalla kaudella?',
       'Mitä kävi puiston sarvikuonoille?',
@@ -184,7 +184,7 @@ export const MAASTOKOHTEET_ZWE = [
   {
     id: 'hwange',
     nimi: 'Hwange',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Kuinka suuri puisto on?',
       'Mitä juottopaikoilla tapahtui 2013?',
@@ -209,7 +209,7 @@ export const MAASTOKOHTEET_ZWE = [
   {
     id: 'chinhoyin-luolat',
     nimi: 'Chinhoyin luolat',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mitä nimi Chirorodziva tarkoittaa?',
       'Miksi luolien metsästä ei saanut kaataa puita?',

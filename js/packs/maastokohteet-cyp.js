@@ -316,7 +316,7 @@ export const MAASTOKOHTEET_CYP = [
     // Niemi ei ole vuori eikä meri: tyyppi 'muu' + symboli 'luonto'
     // (sama sopimus kuin ARE:n Rub al-Khalilla).
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'meri',
     kysymykset: [
       'Mikä oli niemen antiikinaikainen nimi?',
       'Miten merenalaiset luolat syntyvät kalkkikiveen?',

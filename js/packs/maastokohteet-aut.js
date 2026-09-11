@@ -395,7 +395,7 @@ export const MAASTOKOHTEET_AUT = [
   {
     id: 'eisriesenwelt',
     nimi: 'Eisriesenwelt',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi jää ei sula kesällä?',
       'Miksi paikalliset eivät menneet luolaan?',
@@ -522,7 +522,7 @@ export const MAASTOKOHTEET_AUT = [
     id: 'krimmlin-vesiputoukset',
     nimi: 'Krimmlin vesiputoukset',
     nimio: 'Krimml',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Kuinka paljon virtaama vaihtelee vuodenajan mukaan?',
       'Minne putouksen vesi lopulta päätyy?',

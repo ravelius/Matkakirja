@@ -146,7 +146,7 @@ export const MAASTOKOHTEET_CUB = [
   {
     id: 'vinalesin-laakso',
     nimi: 'Viñalesin laakso',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mikä mogote on?',
       'Miksi tupakka viljellään täällä käsin?',

@@ -326,7 +326,7 @@ export const MAASTOKOHTEET_PER = [
   {
     id: 'colcan-kanjoni',
     nimi: 'Colcan kanjoni',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuinka syvä kanjoni on?',
       'Mitä andenes tarkoittaa?',

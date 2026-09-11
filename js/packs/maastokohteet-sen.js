@@ -192,7 +192,7 @@ export const MAASTOKOHTEET_SEN = [
     id: 'djoudjin-lintupuisto',
     nimi: 'Djoudjin lintupuisto',
     nimio: 'Djoudj',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Kuinka monta lintulajia Djoudjissa on havaittu?',
       'Mikä kasvi vei puiston uhanalaisten kohteiden listalle?',
@@ -306,7 +306,7 @@ export const MAASTOKOHTEET_SEN = [
     id: 'saloumin-suisto',
     nimi: 'Saloumin suisto',
     nimio: 'Saloum',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Kuinka suuri Saloumin kansallispuisto on?',
       'Mitä puiston vesialueilla kasvatetaan?',

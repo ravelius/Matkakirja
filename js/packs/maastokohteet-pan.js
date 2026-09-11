@@ -344,7 +344,7 @@ export const MAASTOKOHTEET_PAN = [
   {
     id: 'helmisaaret',
     nimi: 'Helmisaaret',
-    tyyppi: 'muu',
+    tyyppi: 'saari',
     kysymykset: [
       'Mistä Contadoran nimi tulee?',
       'Mikä on saariryhmän suurin saari?',

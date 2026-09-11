@@ -66,7 +66,7 @@ export const FOKUSKOHTEET_ZWE = [
      */
     id: 'suuri-zimbabwe',
     nimi: 'Suuri Zimbabwe',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miten muurit pysyvät pystyssä ilman laastia?',

@@ -208,7 +208,7 @@ export const MAASTOKOHTEET_CMR = [
   {
     id: 'rhumsiki',
     nimi: 'Rhumsiki',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mistä Rhumsikin maisema syntyy?',
       'Miten kylän ennustaja lukee tulevaisuuden?',

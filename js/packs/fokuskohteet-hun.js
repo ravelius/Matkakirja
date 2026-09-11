@@ -451,7 +451,7 @@ export const FOKUSKOHTEET_HUN = [
   {
     id: 'balaton',
     nimi: 'Balaton',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     symboli: 'luonto',
     nappi: 'Keski-Euroopan suurin järvi',
     kysymykset: [
@@ -490,7 +490,7 @@ export const FOKUSKOHTEET_HUN = [
   {
     id: 'hortobagy',
     nimi: 'Hortobágy',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     symboli: 'luonto',
     nappi: 'Aro, jonka yllä ei ole aitaa',
     kysymykset: [
@@ -524,7 +524,7 @@ export const FOKUSKOHTEET_HUN = [
   {
     id: 'tokaj',
     nimi: 'Tokaj',
-    tyyppi: 'muu',
+    tyyppi: 'ruoka',
     symboli: 'ruoka',
     nappi: 'Kuninkaiden viini',
     kysymykset: [
@@ -556,7 +556,7 @@ export const FOKUSKOHTEET_HUN = [
   {
     id: 'pannonhalma',
     nimi: 'Pannonhalma',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     nappi: 'Luostari, joka on ollut paikallaan tuhat vuotta',
     kysymykset: [
@@ -589,7 +589,7 @@ export const FOKUSKOHTEET_HUN = [
     nimi: 'Aggtelekin luolat',
     // Puhujan akustiikka kortilla (js/tehosteketju.js): luolan kaiku.
     akustiikka: 'luola',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     symboli: 'luonto',
     nappi: 'Luola, jossa pidetään konsertteja',
     kysymykset: [
@@ -621,7 +621,7 @@ export const FOKUSKOHTEET_HUN = [
   {
     id: 'holloko',
     nimi: 'Hollókő',
-    tyyppi: 'muu',
+    tyyppi: 'kulttuuri',
     symboli: 'kulttuuri',
     nappi: 'Kylä, joka rakennettiin uudelleen vanhaan malliin',
     kysymykset: [

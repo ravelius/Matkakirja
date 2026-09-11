@@ -164,7 +164,7 @@ export const MAASTOKOHTEET_LBR = [
     id: 'sapon-puisto',
     nimi: 'Sapon puisto',
     nimio: 'Sapo',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Kuinka suuri Sapon kansallispuisto oli perustettaessa?',
       'Minkä kansan mukaan puisto on nimetty?',

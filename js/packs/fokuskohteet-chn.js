@@ -62,7 +62,7 @@ export const FOKUSKOHTEET_CHN = [
      */
     id: 'yuanmingyuan',
     nimi: 'Yuanmingyuan',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi puutarhoihin rakennettiin eurooppalaisia palatseja?',

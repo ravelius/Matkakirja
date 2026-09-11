@@ -118,7 +118,7 @@ export const MAASTOKOHTEET_TWN = [
   {
     id: 'taroko',
     nimi: 'Taroko',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mikä tekee rotkosta harvinaisen?',
       'Milloin puisto perustettiin?',
@@ -303,7 +303,7 @@ export const MAASTOKOHTEET_TWN = [
   {
     id: 'sanxiantai',
     nimi: 'Sanxiantai',
-    tyyppi: 'muu',
+    tyyppi: 'meri',
     kysymykset: [
       'Mitä nimi tarkoittaa?',
       'Millainen silta saarelle vie?',
