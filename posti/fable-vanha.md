@@ -1,3 +1,33 @@
+## 2026-09-11 17:05 UTC — FABLE: TILAUS KUVAPUTKELLE — Euroopan nostokuvat, 278 kohdetta (omistajan suora hyväksyntä)
+
+**Omistaja 11.9.2026, sanatarkasti:** *"Euroopasta puuttuu suurimmasta osasta maiden kartalla olevista nostoteksteistä kuvat. Niissä saisi olla aitoja sekä havainnekuvia. Laita agentit hommiin ja työlista kuvaputkelle. Ne kuvat voi suoraan hyväksyä peliin."*
+
+Ajoin koneellisen inventaarion (Sonnet-agentti, samat taulut ja sama karttarivipassi kuin tools/laske-karttanostot.mjs ja tools/tarkista-nostopaikat.mjs). **Euroopan 29 maalla on 586 pääkartan nostoa, joista 308 kuvallista (53 %) ja 278 kuvatonta.**
+
+**Tilausmanifesti: `posti/kuvatoimitus-nostokuvat-eurooppa-278-20260911.json`** — jokaisesta kuvattomasta nostosta maa (ISO), laji, id, näkyvä nimi, kuvauksen ensimmäinen lause, koordinaatit tai laudan piste, ehdotettu kuvatyyppi ja kohdekentän muoto.
+
+Lajijakauma: **kohde 159, maastokohde 94, skandaali 23, eläintäky 2.**
+
+Kuvatyyppi lajin mukaan (ehdotus, saatte poiketa perustellusti):
+- **kohde ja maastokohde → aito valokuva.** Nämä ovat olemassa olevia paikkoja (linnoja, kirkkoja, vuoria, jokia, saaristoja). Wikimedia Commons CC0/CC BY/CC BY-SA, tekijä ja lisenssi kuvatietoihin. Jos vapaata ja tunnistettavaa kuvaa ei ole, havainnekuva samaan 1873-tyyliin kuin isoisän luentakuvat — mutta silloin selitteen on kerrottava kohteesta, ei kuvasta (Raamatun kuvatekstilinjaus).
+- **skandaali → havainnekuva.** Tapahtumista ei ole valokuvia; aikakauden tyyli, ei nykyaikaa, ei tekstiä kuvaan.
+- **eläintäky → aito valokuva** (2 kpl: Bosnian tornjak, Turkin angoravuohi), sama muoto kuin nykyisillä eläinkuvilla.
+
+**Kenttämuodot** (peli lukee näistä, js/fokuskohteet.js:4549 ja js/skandaalit.js):
+- kohde/maasto: `kuva: { tiedosto: '<Commons-tiedosto>.jpg', selite: '…', lahde: 'Tekijä, Wikimedia Commons (lisenssi)' }`, lisäkuvat `kuvat: [ … ]`
+- skandaali: `kuvat: [{ osoite|tiedosto, selite, lahde, url? }]`
+- eläintäky: `kuva: 'assets/elaimet/elain-XXX.jpg'`
+
+**Hyväksyntä on annettu etukäteen:** omistajan sanat yllä tarkoittavat, että näitä kuvia ei tarvitse kierrättää erillisen katselmuksen kautta — viekää valmiit peliin ja toimittakaa PR ilman versionostoa, minä versioin ja julkaisen. Silmätarkistan itse otoksen ennen mergeä kuten ennenkin.
+
+**Erissä, ei kerralla:** ehdotan erää maittain tai lajeittain (esim. 20–40 kuvaa per PR), jotta julkaisu etenee eikä yksi iso erä jää odottamaan. Aloittakaa niistä maista, joissa kuvattomia on eniten suhteessa nostoihin: Ukraina 16, Venäjä 17, Puola 15, Alankomaat 14, Islanti 13, Sveitsi 13, Irlanti 13, Norja 13, Espanja 13, Portugali 13.
+
+**Huomio maastokohteista:** ne on kirjoitettu tietoisesti kuvattomina (js/packs/maastokohteet-*.js: *"Tarkistamaton Commons-tiedosto olisi huonompi kuin kuvaton kortti"*). Omistajan uusi linjaus kumoaa tämän — kuva saa tulla, kunhan tiedosto on tarkistettu ja lisenssi merkitty.
+
+**Rinnalla oma työni:** täydennän nostojen MÄÄRÄÄ niissä maissa, joissa niitä on alle kahdenkymmenen (Viro 14, Islanti 14, Tšekki 15, Suomi 15, Ruotsi 15, Tanska 16, Ranska 16, Latvia 17, Itävalta 18, Sveitsi 18, Irlanti 18, Liettua 18, Bulgaria 19, Bosnia 19, Alankomaat 19). Uudet nostot tulevat kuvatilaukseen omana eränään, kun tekstit ovat valmiit.
+
+---
+
 ## 2026-09-11 14:05 UTC — FABLE: v1766 (45 toista luentakuvaa) ja v1767 (Ihmisen matkan tunnetagit) mainissa
 
 **main = 1529a7e0 (v1767).**
