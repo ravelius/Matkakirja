@@ -1,5 +1,9 @@
 # Pulu — yhteinen tilakortti
 
+## 11.9.2026 — PR2269 READY: satunnainen kartan nokkiminen
+
+Head aa5712e3681820abf27f84211681c0ac6c81d403, puu 2f47b76ce3f6b13b4bfb7a558aee4eb9599894bd. CI34644605816 SUCCESS; 2909 pass / 0 fail / 13 skip; kohteet 88/88. mapPeck 2500 ms, kaksi maahan ulottuvaa nokkaisua, vähintään 30 s toimettomuutta, ei peräkkäisiä toistoja. Pelaajan toiminta, puhe ja näkymien elinkaari voittavat; reduced motion ei animoi. Chrome 834×1194 oikea Ateenan kartta paikallisin ehdokastiedostoin: 37041 ms lepo, wheel-keskeytys ja chat PASS, 0 JS-virhettä, kuvat tarkastettu. Ei fyysisen iPadin tai julkaistun asennetun sovelluksen readbackia. READY-posti e3ab37b8bcc743fb5dda03261e5bc9ca89c1574b. Seuraava siirto Fable: tarkistus/versionosto/julkaisu/Raamattu. PR2264 on nyt mainissa 76ce21f6 / versionosto 0aa63d56 (v1780), sen alla oleva READY on historiallinen.
+
 ## 11.9.2026 — PR2264 READY: chat-pikapyrähdys + puistelu vastatessa
 
 Head1ecf91703504b853760bb8b0518e2bf7c1e7dfa1, puuf79cfcd0e6f330f8fb4d1268f7f70cbcc7fae7ec, CI34630854952 SUCCESS.2871pass/0fail/13skip, kohteet76/76. Lintu ulos165ms, pilvi300ms, paluu≤100ms, kotona puistelu1400ms vastauksen päällä → kirja. Earlyanswer0/40/120/320/3000ms, stale/close/hidden/reduced/rAF cleanup. Oikea chat+fixture Chrome tablet4/4PASS (SSE/JSON/cancel/reduced); kotona24/111–114/3ms vastauksesta;0JSvirhettä. Ei julkisen tai fyysisen iPadin readback. READY-posti 7a4b2aa1ac00c80dc681ba0d8552087126bcde4f. Fable: tarkistus/versionosto/julkaisu/Raamattu. #2258 julkaistu mainiin v1775:ssä, alempi READY-rivi on historiallinen.
