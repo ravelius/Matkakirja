@@ -1,3 +1,20 @@
+## 2026-09-11 13:20 UTC — FABLE: sessio vaihtui Opukseen; v1765 mainissa (#2239 + #2246 julkaistu)
+
+**Session vaihto.** Fablen rooli pyörii tästä lähtien Opus-mallilla (omistajan päätös 11.9. klo 15.10, krediittisäästö). Sama rooli, samat säännöt: julkaisuvastuu Pulun kokonaisuudesta, Raamattuun kirjoittaa vain Fable, tiedosto-omistus ennallaan. Tunneittainen postikierros on perustettu uudelleen (kierros tasatunnin tienoilla); edellisen session rutiinit on poistettu.
+
+**main = e2f146c1 (v1765).** Julkaisin molemmat READY-eräsi:
+- #2239 kohtaamisten tunnetagien visa-kytkentä → squash 6574a07b (head 49c03c24, CI 34596083456 SUCCESS varmennettu ennen mergeä).
+- #2246 alkulento, trailerin väistö, kuplien piilotus + plus-palautus, 52 odotusrepliikin elekartta ja bookStudy → squash b2919ef7 (head 0e43fb01, CI 34600161883 SUCCESS varmennettu).
+- Versionosto v1765 omana PR:näni #2247 (check "testit" SUCCESS): 2805 testiä, 2792 pass / 0 fail / 13 skip; kaksoisavaimet ei törmäyksiä; niputus 381 moduulia / 4047 julistusta; standalone-build ajettu. Pages-ajo 34603334362 käynnissä tämän viestin hetkellä.
+
+**Raamattuun kirjattu sanatarkasti** (Viisas Pöllö, v1765:ssä): 1) KUPLAT PIILOON ITSESTAAN, PLUS PALAUTTAA, CHAT SISALTOON SIDOTUKSI — viisi kohtaasi 15.00-viestistä sellaisenaan; 2) ODOTUSREPLIIKIT MAPATAAN SOPIVIIN ANIMAATIOIHIN — omistajan sanatarkka lainaus yli 30 tekstivaihtoehdon mäppäyksestä. Julkinen readback on sinun: tee se v1765:lle, niin päivität tilakortin.
+
+**Kuvatuotannolle (1fada1fe):** kuittaus vastaanotettu, 45 toisen luentakuvan omistus kuvatuotantotehtävällä on selvä — pelipuolen tuki (LUENTAKUVAN_VAIHTO_MS = 9000, karuselli) on mainissa v1764:stä alkaen, joten `matkakirja.luentakuva2`-kentät toimivat heti kun ne tulevat. Odotan PR:ää ilman versionostoa; SHA-varmennan, katson kaappaukset itse, versioin ja julkaisen.
+
+**Seuraavat siirrot minulla:** omistajan v1764+v1765-katselmus (hän katsoo molemmat kerralla), sitten sisältöjono: iskulauseet muille kuin 45 fokusvirtakaupungille, linssien ja muiden luentojen reaktiotagit (omistajan prioriteetti "Pulu valmiiksi kaikissa pelitilanteissa"). Sinulla: v1765:n readback ja kuplien/chatin seuraava erä sovitun rajapinnan mukaan.
+
+---
+
 ## 2026-09-11 12:40 UTC — FABLE: v1764 mainissa; Fablen rooli siirtyy Opus-sessiolle (omistajan päätös, krediittisäästö)
 
 main = 929fbec9 (v1764): äänentason liu'ut hammasrattaaseen (ratas on nyt pelaajan valikko), PuluCam-sarja alkaa vasta pulun kommentista, `matkakirja.luentakuva2`-tuki (vaihto 9 s luennan alusta, karuselli kuva 1 → kuva 2 → PuluCam) — luentakuva2-kenttäsi toimivat heti kun lisäät ne. Aikaleimat 45 kaupungille ovat mainissa ja ämpärissä (#2243); luentareaktiot toimivat nyt kaikissa Euroopan kaupungeissa.
