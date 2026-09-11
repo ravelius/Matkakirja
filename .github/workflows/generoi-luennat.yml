@@ -13,6 +13,18 @@
 #                              vaatii mpg123-decoder + lamejs
 #                              (hännän hiljaisuusmittaus + paddaus).
 #   tools/generoi-luennat.mjs  kaupunkien matkakirjaluennat.
+#   tools/kohdista-luennat.mjs AIKALEIMAT valmiille matkakirjaluennalle
+#                              (ei generoi ääntä; toiminto: kohdista).
+#
+# KOHDISTUS EI ÄÄNITÄ MITÄÄN. `toiminto: kohdista` hakee olemassa
+# olevalle mp3:lle sanakohtaiset aikaleimat ElevenLabsin pakotetulla
+# kohdistuksella (POST /v1/forced-alignment) ja kirjoittaa tiedoston
+# assets/aikaleimat/puhe-fokus-matkakirja-<id>.aikaleimat.json. Peli
+# tarvitsee sen, jotta pulu voi reagoida luennan SISÄLLÄ oikeassa
+# sanassa (js/luentareaktiot.js; Raamattu PULU REAGOI TEKSTIN SISALLA).
+# Tiedosto viedään ämpäriin heti työkalusta oikealla sisältötyypillä
+# (application/json) — vie-aanet.yml veisi koko assets/audio-kansion
+# audio/mpeg-tyyppisenä, joten aikaleimat asuvat omassa kansiossaan.
 #
 # SYÖTE ON YHÄ PELKKIÄ KAUPUNKIAVAIMIA ("madrid wien" tai
 # "madrid,wien" — työkalu erottelee kummallakin; pilkullinen lista
@@ -63,6 +75,15 @@ on:
         description: Generoi myös etusivun ja avauslennon luennat
         type: boolean
         default: false
+      toiminto:
+        description: >-
+          "generoi" (oletus) äänittää yllä annetut kaupungit.
+          "kohdista" EI ÄÄNITÄ: se hakee valmiille matkakirjaluennoille
+          sanakohtaiset aikaleimat (pulun luentareaktiot) ja vie ne
+          ämpäriin. Kaupungit annetaan silloin kentässä "kaupungit".
+        type: choice
+        options: [generoi, kohdista]
+        default: generoi
       kaaret:
         description: >-
           Tarinakaarien luennat (tools/generoi-kaari.mjs --mykistetyt):
@@ -122,10 +143,33 @@ jobs:
         run: node tools/generoi-avaus.mjs
 
       - name: Generoi kaupunkiluennat
-        if: ${{ inputs.kaupungit != '' }}
+        if: ${{ inputs.kaupungit != '' && inputs.toiminto != 'kohdista' }}
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
         run: node tools/generoi-luennat.mjs ${{ inputs.kaupungit }}
+
+      # Kuiva ajo ensin: väärä kaupunkiavain tai ankkuri, jota ei löydy
+      # luentatekstistä, paljastuu ilman yhtäkään API-kutsua.
+      - name: Tarkista kohdistus kuivana
+        if: ${{ inputs.toiminto == 'kohdista' }}
+        env:
+          KAUPUNGIT: ${{ inputs.kaupungit }}
+        run: node tools/kohdista-luennat.mjs --kuiva --kaupungit "$KAUPUNGIT"
+
+      - name: Kohdista aikaleimat ja vie ämpäriin
+        if: ${{ inputs.toiminto == 'kohdista' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          KAUPUNGIT: ${{ inputs.kaupungit }}
+          # Samat nimet ja sama endpoint-tyyli kuin vie-aanet.yml:ssä.
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: node tools/kohdista-luennat.mjs --vie --kaupungit "$KAUPUNGIT"
 
       - name: Generoi kaariluennat
         if: ${{ inputs.kaaret != '' }}
@@ -134,9 +178,16 @@ jobs:
         run: node tools/generoi-kaari.mjs --mykistetyt ${{ inputs.kaaret }}
 
       - name: Committoi tuotos omalle haaralleen
+        env:
+          TOIMINTO: ${{ inputs.toiminto }}
         run: |
           set -euo pipefail
-          git add assets/audio
+          # Kohdistusajo tuottaa JSONia, ei äänitteitä.
+          if [ "${TOIMINTO:-generoi}" = "kohdista" ]; then
+            git add assets/aikaleimat
+          else
+            git add assets/audio
+          fi
           if git diff --cached --quiet; then
             echo "::error::Yhtään tiedostoa ei syntynyt eikä muuttunut."
             exit 1
@@ -145,6 +196,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           haara="claude/luennat-${{ github.run_number }}"
           git checkout -b "$haara"
-          git commit -m "Luennat: ${{ inputs.avaus == true && 'avaus ' || '' }}${{ inputs.kaupungit }}${{ inputs.kaaret != '' && ' kaaret: ' || '' }}${{ inputs.kaaret }}"
+          git commit -m "${{ inputs.toiminto == 'kohdista' && 'Aikaleimat: ' || 'Luennat: ' }}${{ inputs.avaus == true && 'avaus ' || '' }}${{ inputs.kaupungit }}${{ inputs.kaaret != '' && ' kaaret: ' || '' }}${{ inputs.kaaret }}"
           git push -u origin "$haara"
           echo "Valmis. Haara: $haara — kuuntele luennat ja tee PR."

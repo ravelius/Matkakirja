@@ -607,6 +607,13 @@ const MODULES = [
   // M4: nähtävyydet ennen opasta (opas tuo sen apurit).
   'js/nahtavyydet.js',
   'js/opas.js',
+  /*
+   * Pulun luentareaktiot ENNEN luentaa: js/luenta.js tuo
+   * kytkeMatkakirjanReaktiot-funktion staattisesti, ja moduuli itse
+   * lukee FOKUSVIRRAT-taulun (listalla jo ylempänä) sekä
+   * js/livia-tilanteet.js:n ja js/media.js:n.
+   */
+  'js/luentareaktiot.js',
   // M6: luenta ennen visaa (visa tuo kertojafunktiot).
   'js/luenta.js',
   /*

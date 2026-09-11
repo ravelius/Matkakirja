@@ -193,6 +193,30 @@ export const FOKUSVIRTA_MARSEILLE = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT — PILOTTI (omistaja 11.9.2026, Raamattu
+     * PULU REAGOI TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot").
+     * Ankkuri on katkelma luentatekstistä sanasta sanaan; hetki lasketaan
+     * äänitteen sanakohtaisista aikaleimoista (forced alignment), ei
+     * merkkimäärästä. Tarkoitus: myotailee | epailee | torjuu | huvittuu |
+     * hammastyy | vakavoituu. siirtyma = ms ankkurin viimeisen sanan
+     * lopusta. Hiljaiset osuudet: "sillä hän oli juuri auttanut laivan
+     * köysissä" (selitys, pulu kuuntelee).
+     */
+    reaktiot: [
+      { id: 'marseille.r1', ankkuri: 'saippuaa tiiliskivinä', tarkoitus: 'huvittuu', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Saippua tiilinä on ensimmäinen pieni hymy, ei vielä nauru.' },
+      { id: 'marseille.r2', ankkuri: 'pesisi vaikka koko maailman', tarkoitus: 'epailee', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Kauppiaan ylisana: pulu pudistaa päätään.' },
+      { id: 'marseille.r3', ankkuri: 'kyntensä olivat mustat', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Ristiriita: saippuakauppiaan mustat kynnet.' },
+      { id: 'marseille.r4', ankkuri: 'Ostin palan.', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
+        perustelu: 'Lyhyt päätös, pieni nyökkäys.' },
+      { id: 'marseille.r5', ankkuri: 'Terva, kala ja suolavesi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Hajuluettelo seuraa majataloon: pulu huvittuu.' },
+      { id: 'marseille.r6', ankkuri: 'käteni olivat jo toista mieltä', tarkoitus: 'huvittuu', voimakkuus: 0.6, siirtyma: 120,
+        perustelu: 'Loppuvitsi: nauru merkinnän päätteeksi.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Marseillen satamassa myytiin saippuaa tiiliskivinä. '
       + 'Kauppias vakuutti, että niillä pesisi vaikka koko maailman. Hänen '
