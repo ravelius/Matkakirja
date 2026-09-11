@@ -26,10 +26,12 @@
  * (.mp3 → .aikaleimat.json) ja pitää kyselyversion mukana, joten
  * uusittu äänite ja sen aikaleimat pysyvät parina.
  *
- * REPOKOPIO EI OLE assets/audio-KANSIOSSA TAHALLAAN: .github/workflows/
- * vie-aanet.yml synkronoi koko assets/audio-kansion ämpäriin
- * `--content-type audio/mpeg`, ja JSON menisi siitä läpi äänitteenä.
- * Vienti tehdään siksi tässä työkalussa (oikea sisältötyyppi) tai
+ * REPOKOPIO EI OLE assets/audio-KANSIOSSA TAHALLAAN: se kansio ei ole
+ * enää versionhallinnassa lainkaan (omistajan linjaus 11.9.2026: äänet
+ * vain ämpärissä), ja äänivienti käyttää sisältötyyppiä
+ * `audio/mpeg`, josta JSON menisi läpi äänitteenä. Aikaleimat ovat
+ * pelidataa: repokopio asuu assets/aikaleimat-kansiossa ja vienti
+ * tehdään tässä työkalussa (oikea sisältötyyppi) tai
  * .github/workflows/generoi-luennat.yml:n `toiminto: kohdista` -ajossa.
  *
  * TIEDOSTOMUOTO ON VERSIO 2 (11.9.2026): AJAT SIDOTAAN ÄÄNITTEESEEN.
@@ -323,20 +325,18 @@ async function haeKohdistus(aanidata, teksti, avain) {
 }
 
 /**
- * Äänite ämpäristä; repon kopio on varareitti. Sama kahden portaan malli
- * kuin pelissä (js/media.js).
+ * Äänite ämpäristä. VARAREITTIÄ EI OLE: äänitiedostot eivät ole enää
+ * repossa (omistajan linjaus 11.9.2026, äänet vain ämpärissä), joten
+ * repon kopiota ei voi kokeilla. Sama tilanne kuin pelissä (js/media.js
+ * aaniUrl) — ämpäri on ainoa lähde, ja sen pettäessä ajo kaatuu tähän
+ * eikä kirjoita puolivalmista aikaleimatiedostoa.
  */
 async function haeAanite(tyo) {
   const vastaus = await fetch(tyo.aaniOsoite, { signal: AbortSignal.timeout(120000) })
     .catch(() => null);
   if (vastaus?.ok) return Buffer.from(await vastaus.arrayBuffer());
-  const paikallinen = join(JUURI, tyo.aaniPolku);
-  try {
-    return readFileSync(paikallinen);
-  } catch {
-    throw new Error(`äänitettä ei saatu: ${tyo.aaniOsoite} (HTTP ${vastaus?.status ?? '—'}) `
-      + `eikä ${tyo.aaniPolku} ole repossa`);
-  }
+  throw new Error(`äänitettä ei saatu ämpäristä: ${tyo.aaniOsoite} `
+    + `(HTTP ${vastaus?.status ?? '—'})`);
 }
 
 /** Vie tiedosto ämpäriin (sama komento kuin muissa työkaluissa). */

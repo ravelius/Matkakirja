@@ -131,8 +131,8 @@
  * Valmiit mp3:t EIVÄT mene repoon. Ne kirjoitetaan media/-puolelle
  * (.gitignoressa, tarkistetaan ennen ensimmäistäkään maksullista
  * kutsua) ja viedään ämpäriin samalla aws s3 cp -komennolla ja
- * samoilla neljällä salaisuudella kuin tools/generoi-tehosteet.mjs ja
- * vie-aanet.yml. TÄMÄ TYÖKALU VIE ITSE — ajo ei committoi mitään.
+ * samoilla neljällä salaisuudella kuin tools/generoi-tehosteet.mjs.
+ * TÄMÄ TYÖKALU VIE ITSE — ajo ei committoi mitään.
  *
  * KANSIO TULEE KAARESTA eikä tästä tiedostosta: keksinnöillä
  * aikajana/keksinnot/puhe/ (js/linssipuhe.js LINSSILUENTA_JUURI),
@@ -1015,7 +1015,7 @@ function tarkista(kohde, kestoMax = KESTO_MAX_S) {
   return { pituus, taso, virheet };
 }
 
-/** Vie valmis luenta ämpäriin (sama komento kuin vie-aanet.yml). */
+/** Vie valmis luenta ämpäriin (sama komento kuin muissakin ääniajoissa). */
 function vieAmpariin(kohde, nimi, kansio, tyyppi = 'audio/mpeg') {
   const tili = process.env.R2_ACCOUNT_ID;
   const ampari = process.env.R2_BUCKET;

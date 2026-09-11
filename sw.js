@@ -646,30 +646,22 @@ const SHELL = [
   './assets/varusteet/varuste-keksinnot.jpg',
   './assets/varusteet/varuste-ihmisen-matka.jpg',
   /*
-   * ÄÄNTEN YDINSETTI — ainoat äänitiedostot, jotka esiladataan.
+   * ÄÄNITIEDOSTOJA EI OLE TÄLLÄ LISTALLA (omistajan linjaus 11.9.2026:
+   * *"repossa ei saa olla äänitiedostoja, kaikki vain ämpärissä"*).
    *
    * Tällä listalla oli 16.8.2026 asti 420 äänitiedostoa eli noin 200 Mt,
    * ja ne haettiin joka asennuksessa. Niistä 195 Mt oli luentoja, joista
-   * yksittäinen pelaaja kuulee murto-osan: peli latasi jokaiselle
-   * kaikkien maanosien kertojaäänet, myös niiden kaupunkien, joihin hän
-   * ei koskaan matkusta.
+   * yksittäinen pelaaja kuulee murto-osan. Sen jälkeen listalle jäi
+   * ydinsetti (huudahdukset ja tehosteet) repon omasta polusta — nyt
+   * sekin on poissa, koska assets/audio ei ole enää versionhallinnassa.
    *
-   * Loput jaellaan nyt ämpäristä (js/media.js aaniUrl) ja tallentuvat
-   * AANICACHEen sinä hetkenä kun ne ensi kerran soivat — sama malli kuin
-   * valokuvilla. Omistajan linjaus 16.8.2026: OFFLINE-PELAUS EI OLE
-   * TAVOITE, joten välimuisti on nopeutta varten eikä lupaus.
-   *
-   * Ydinsettiin jäävät kaksi lajia, joilla myöhästyminen kuuluisi:
-   * pääaarteen huudahdukset (sama repliikki kuin kortilla — muiden
-   * aarteiden huudahdukset ovat kahden sanan mittaisia eikä niitä
-   * lueta ääneen) ja käyttöliittymän lyhyet tehosteet (alempana).
-   * Ne EIVÄT kulje ämpärin kautta, koska silloin peli
-   * pyytäisi eri osoitetta kuin minkä tämä lista esilatasi — sääntö on
-   * js/media.js:n YDINAANI, ja nämä kaksi listaa kuuluvat yhteen.
+   * Ydinsetti esiladataan silti, mutta ämpärin osoitteista omaan
+   * äänikoriinsa: ks. YDINAANET ja install-käsittelijä alempana. Loput
+   * äänet tallentuvat AANICACHEen sinä hetkenä kun ne ensi kerran soivat
+   * — sama malli kuin valokuvilla. Omistajan linjaus 16.8.2026:
+   * OFFLINE-PELAUS EI OLE TAVOITE, joten välimuisti on nopeutta varten
+   * eikä lupaus.
    */
-  './assets/audio/huudahdus-star-1.mp3',
-  './assets/audio/huudahdus-star-2.mp3',
-  './assets/audio/huudahdus-star-3.mp3',
   // Kohtaamiskuvat (kohtaamiskortti + kätkötulos, pilotti 10.8.2026).
   './assets/kohtaamiset/kohtaaminen-ateena.jpg',
   './assets/kohtaamiset/kohtaaminen-sofia.jpg',
@@ -1403,31 +1395,6 @@ const SHELL = [
   './assets/kartat/soul-varikartta.png',
   './assets/kartat/shanghai-varikartta.png',
   './assets/kartat/venetsia-keskusta.png',
-  // Käyttöliittymän lyhyet tehosteet — ydinsetin toinen puolisko
-  // (ks. huudahdusten kohdalla oleva selitys).
-  './assets/audio/efekti-klik.mp3',
-  './assets/audio/efekti-paperi.mp3',
-  './assets/audio/efekti-kolikot.mp3',
-  './assets/audio/efekti-oikein.mp3',
-  './assets/audio/efekti-vaarin.mp3',
-  './assets/audio/efekti-pyyhkaisy.mp3',
-  './assets/audio/efekti-askel.mp3',
-  './assets/audio/efekti-saapuminen.mp3',
-  './assets/audio/efekti-laiva.mp3',
-  './assets/audio/efekti-lento.mp3',
-  './assets/audio/efekti-vihje.mp3',
-  './assets/audio/efekti-tikitys.mp3',
-  './assets/audio/efekti-aikaloppui.mp3',
-  './assets/audio/efekti-kaanto.mp3',
-  './assets/audio/efekti-naksu.mp3',
-  './assets/audio/efekti-zoom.mp3',
-  './assets/audio/efekti-tahti.mp3',
-  './assets/audio/efekti-jalokivi.mp3',
-  './assets/audio/efekti-rosvo.mp3',
-  './assets/audio/efekti-tyhja.mp3',
-  './assets/audio/efekti-jumissa.mp3',
-  './assets/audio/efekti-vuoro.mp3',
-  './assets/audio/efekti-voitto.mp3',
   // Liput (tools/fetch-flags.mjs) — pieniä ja tarvitaan heti saapumiskortilla.
   './assets/liput/algeria.png',
   './assets/liput/austria.png',
@@ -1529,14 +1496,16 @@ const SHELL = [
  *
  * SAMA KOSKEE NYT ÄÄNIÄ (omistajan linjaus 16.8.2026). Luennat,
  * visamusiikki ja viritysäänet tulevat ämpäristä ja tallentuvat
- * AANICACHEen ensimmäisellä kuuntelulla; esilatauksessa on enää
- * ydinsetti (huudahdukset ja tehosteet), joka on osa MEDIA-erää kuten
- * ennenkin. Peli itse ja kartat haetaan yhä kokonaan etukäteen.
+ * AANICACHEen ensimmäisellä kuuntelulla. Esilatauksessa on enää
+ * ydinsetti (huudahdukset ja tehosteet), ja 11.9.2026 alkaen sekin
+ * haetaan ämpäristä omaan äänikoriinsa (ks. YDINAANET) — repossa ei ole
+ * enää yhtään äänitiedostoa. Peli itse ja kartat haetaan yhä kokonaan
+ * etukäteen.
  */
 // Linssikuvat kuuluvat samaan erään: yölinssin kuva on satoja kilotavuja,
 // eikä sen katkennut lataus saa kaataa koko asennusta. Ilman tätä rivi
 // päätyisi YDIMEEN, jossa yksikin virhe vie pelin ilman välimuistia.
-const MEDIAA = (osoite) => /\/assets\/(liput|audio|linssit)\//.test(osoite);
+const MEDIAA = (osoite) => /\/assets\/(liput|linssit)\//.test(osoite);
 const YDIN = SHELL.filter((o) => !MEDIAA(o));
 const MEDIA = SHELL.filter(MEDIAA);
 
@@ -1550,6 +1519,80 @@ const MEDIA = SHELL.filter(MEDIAA);
  */
 const medianIsanta = (isanta) => isanta === 'media.matkakirja.app' || isanta.endsWith('.r2.dev');
 
+/*
+ * ÄÄNTEN JUURI. Sama osoite kuin js/media.js AANI_JUURI, mutta omana
+ * vakionaan: palvelutyöntekijä ei voi tuoda pelin moduuleita (se
+ * ladataan klassisena skriptinä, jotta vanhat selaimet saavat
+ * päivityksen), joten osoite toistuu tässä. tests/sw-aanet.test.mjs
+ * vartioi, etteivät juuret pääse eriytymään.
+ */
+const AANI_JUURI = 'https://media.matkakirja.app/audio/';
+
+/*
+ * ÄÄNTEN YDINSETTI — ainoat äänet, jotka esiladataan.
+ *
+ * Kaksi lajia, joilla myöhästyminen kuuluisi: käyttöliittymän lyhyet
+ * tehosteet (kuuluvat samalla hetkellä kun sormi osuu laattaan) ja
+ * pääaarteen huudahdukset (sama repliikki kuin kortilla). Yhteensä
+ * noin 1,3 Mt, eli asennus pysyy kevyenä.
+ *
+ * Nimet ovat samat kuin pelin poluissa (js/sound.js, js/ui-apurit.js):
+ * assets/audio/<nimi> on enää tunniste, ja js/media.js aaniUrl kääntää
+ * sen juuri tähän osoitteeseen. Jos jokin näistä joskus äänitetään
+ * uusiksi (js/media.js UUSITUT_AANET), peli pyytää kyselyversiollisen
+ * osoitteen eikä tämä esilataus osu — silloin ääni vain haetaan
+ * verkosta ensimmäisellä soitolla, mikä on oikea käytös eikä vika.
+ */
+const YDINAANET = [
+  'huudahdus-star-1.mp3',
+  'huudahdus-star-2.mp3',
+  'huudahdus-star-3.mp3',
+  'efekti-klik.mp3',
+  'efekti-paperi.mp3',
+  'efekti-kolikot.mp3',
+  'efekti-oikein.mp3',
+  'efekti-vaarin.mp3',
+  'efekti-pyyhkaisy.mp3',
+  'efekti-askel.mp3',
+  'efekti-saapuminen.mp3',
+  'efekti-laiva.mp3',
+  'efekti-lento.mp3',
+  'efekti-vihje.mp3',
+  'efekti-tikitys.mp3',
+  'efekti-aikaloppui.mp3',
+  'efekti-kaanto.mp3',
+  'efekti-naksu.mp3',
+  'efekti-zoom.mp3',
+  'efekti-tahti.mp3',
+  'efekti-jalokivi.mp3',
+  'efekti-rosvo.mp3',
+  'efekti-tyhja.mp3',
+  'efekti-jumissa.mp3',
+  'efekti-vuoro.mp3',
+  'efekti-voitto.mp3',
+].map((nimi) => `${AANI_JUURI}${nimi}`);
+
+/*
+ * Ydinsetin esilataus äänikoriin (AANICACHE, sama kori josta
+ * fetch-käsittelijä palvelee ämpärin audio/-pyynnöt).
+ *
+ * Nouto tehdään fetchillä mode: 'cors' kuten kuvakorissa: cache.addAll
+ * kaatuisi koko erään yhdestä virheestä, ja ilman cors-tilaa vastaus
+ * olisi opaakki eikä kelpaisi koriin. Asennus EI saa kaatua, jos ääni
+ * jää saamatta — ydinsetti on nopeutta varten, ei asennuksen ehto,
+ * joten jokainen virhe niellään erikseen.
+ */
+async function esilataaYdinaanet() {
+  const kori = await caches.open(AANICACHE);
+  await Promise.all(YDINAANET.map(async (osoite) => {
+    try {
+      if (await kori.match(osoite)) return;
+      const vastaus = await fetch(osoite, { mode: 'cors' });
+      if (vastaus.ok && vastaus.status === 200) await kori.put(osoite, vastaus);
+    } catch { /* ääni jää hakematta nyt, haetaan ensimmäisellä soitolla */ }
+  }));
+}
+
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE)
@@ -1562,6 +1605,9 @@ self.addEventListener('install', (event) => {
         await Promise.all(MEDIA.map((osoite) => cache
           .add(new Request(osoite, { cache: 'reload' }))
           .catch(() => {})));
+        // Äänten ydinsetti ämpäristä omaan koriinsa — ei tähän
+        // versiokoriin, koska äänet eivät vanhene version mukana.
+        await esilataaYdinaanet().catch(() => {});
       })
       .then(() => self.skipWaiting()),
   );

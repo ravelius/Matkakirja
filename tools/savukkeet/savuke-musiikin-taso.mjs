@@ -74,9 +74,12 @@ const sivu = await ctx.newPage();
 sivu.on('pageerror', (v) => console.log(`HUOM  ${String(v.message ?? v).slice(0, 160)}`));
 
 /*
- * Musiikki tulee ämpärin audio/-kansiosta, ja samat tiedostot ovat
- * repossa: tarjoillaan ne levyltä, jottei mittaus riipu verkosta.
- * Muut peilipyynnöt haetaan oikeasti ja välimuistitetaan.
+ * Musiikki tulee ämpärin audio/-kansiosta. Äänitiedostot EIVÄT ole enää
+ * repossa (linjaus 11.9.2026), mutta paikallinen assets/audio voi olla
+ * generointiajon jäljiltä olemassa — jos raita löytyy levyltä, se
+ * tarjoillaan sieltä (mittaus ei silloin riipu verkosta). Muuten, ja
+ * kaikille muille peilipyynnöille, haetaan oikeasti ja
+ * välimuistitetaan.
  */
 const valimuisti = new Map();
 await sivu.route(/media\.matkakirja\.app|r2\.dev/, async (reitti) => {
