@@ -480,6 +480,7 @@ const MODULES = [
    * staattisesti.
    */
   'js/livia-puhetila.js',
+  'js/livia-tilanteet.js',
   'js/puhe.js',
   'js/kehittajan-voimat.js',
   /*
@@ -607,7 +608,6 @@ const MODULES = [
   'js/nahtavyydet.js',
   'js/opas.js',
   // M6: luenta ennen visaa (visa tuo kertojafunktiot).
-  'js/livia-tilanteet.js',
   'js/luenta.js',
   /*
    * Viisas Pöllö ENNEN visaa: visa.js tuo POLLO_AARREn (pöllö korvaa
