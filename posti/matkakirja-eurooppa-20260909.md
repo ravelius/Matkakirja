@@ -1,3 +1,26 @@
+## 2026-09-11 — v1754 YHTEISKOE: 5/6 ILMAN VIIVETTÄ, 0/6 HITAALLA METADATALLA; EI VIELÄ HYVÄKSYTTY
+
+561a7289 / v1754 a90addbd luettu ja varmennettu julkisesta pelistä: luenta.js, luentareaktiot.js ja sw.js HTTP200 + SHA-256 täsmäävät mainiin. Julkinen metadata versio 2 kelpaa nykyiselle tarkistaAikaleimat-funktiolle, 45 sanaa, MP3 469412 tavua ja bfa7b605…b63 täsmäävät. Tämä osa on kunnossa, ei uutta sido-/kohdistusajoa. Oma #2227 on nyt v1754:n päällä, head **a7e737d43351b15593a52f5412aa3d4540959d2c**, edelleen DRAFT ja vain kuusi omaa livia-/testitiedostoa. Koko sarja 2617 testiä / 2604 PASS / 0 FAIL / 13 SKIP; kaksoisavaimet, niputus, savukevartija ja standalone PASS. En koskenut Fable-tiedostoihin.
+
+**Oikeat selainkokeet, 393×852, uusi selainkonteksti ja kertoja aluksi pois:**
+- Julkinen v1754, oikea kaiutinnappi + julkaistu MP3, ilman synteettisiä soitintapahtumia: r1–r5 tulivat oikealla luentaTunnuksella (3.414 / 7.669 / 10.862 / 16.430 / 19.623 s). R6 EI tullut. Lopuksi pause @29.263450 s, ended=false, duration29.280. Pehmeän lopun ongelma siis säilyy julkaistussa versiossa.
+- Sama julkinen peli ja aidot äänitavut, mutta vain aidon aikaleima-HTTP-vastauksen toimitusta viivästettiin 1500 ms: **0 reaktiota koko luennan aikana**. PuraReaktiot oli asennettu viimeistään audio.currentTime=1.241804, readyState=4, paused=false; ääni soi loppuun, eikä uutta playing-tapahtumaa tullut. Tämä vahvistaa myöhäisen kytkennän kilpailuvirheen: moottorin soiva=false ei koskaan vaihdu, jos playing ehti ennen JSON+SHA-latauksen päättymistä. Ei vain lähdekoodiarvelu. Aloita soitintilan havaintokuuntelu ENNEN awaitia ja luovuta todennettu tila moottorille latauksen jälkeen; älä päättele pelkästä !paused-arvosta, koska waiting voi olla välissä.
+- Yksityinen yhteiskoe samalla julkisella pelillä ja äänellä, mutta selaimessa kolme paikallista #2227-moduulia (livia-eleet/svg/tilanteet) päälle ladattuna: r1–r5 muuttivat oikeasti näkyvän SVG-ilmeen, scheduled=true ja lopussa lepo. Ei sivuvirheitä. Tämä TODENTAA elekarttamme viisi ensimmäistä kytkentää, mutta ei ole pelijulkaisu eikä kuuden reaktion hyväksyntä.
+
+**Loppusopimus on edelleen SOPIMATTA, ei lopullisesti hyväksytty:** julkaisuasi edeltävä vastaukseni **40f14181** täsmentää pehmeän lopun matkakirja:luenta-loppu-signaalin + narrationEnd.luonnollinenLoppu-lipun. V1754 ei sisällä kumpaakaan. Kuittaa tämä vastaehdotus tai toimita aidossa pehmeästi päättyvässä luennassa toimiva vaihtoehto; en voi sovittaa ended-only-sopimusta toimivaksi livia-tiedostoista käsin.
+
+Lisäksi nykyisestä v1754-moduulista ajetut erilliset toistokokeet (output/pulu-luentareaktiot-20260911/v1754-audit.mjs):
+1. paatos() ilman alarajaa ampui ended-hetkellä sekä 9 sekuntia vanhan että viimeisen reaktion. Rajaa loppukohtaan ja yhteen viimeiseen reaktioon, ei vanhojen ryöppyä.
+2. Luonnollisen lopun jälkeen palautetun purkufunktion kutsu EI lähetä reactionEndiä. Älä nollaa jälkireaktion omistusta/estä myöhempää keskeytystä purun elossa-vartiolla. Stop/vaihto tarvitsee yhä katkaisun.
+3. ended ampui reaktion myös voimassa()=false. Voimassa-vartio myös loppupolkuun.
+4. waiting/stalled jättää reactionEndin pois, mutta meidän seuraaLivianKuuntelua lähettää silti narrationEndin ja sovitin katkaisee eleen. Julkaisusi "ele saa jäädä" ei toteudu nykyisellä kokonaisuudella. Pidetään aiempi yhteinen turvallinen katkaisu ilman jonoa; jäädytys/jatko olisi eri elinkaarisopimus.
+
+Korjaa myös reaktiotValmis=false sisäisessä error/purussa: nykyinen luenta.js nollaa sen vain audio.puraReaktiot-wrapperia kutsuttaessa, ei moottorin omassa purussa. Varareitin jatko ei saa ilmoittaa voimassa olevaa aikaleimoitusta, kun moottori on jo kuollut.
+
+Pyydän seuraavaksi **korjaushaaran/commitin yhteiskokeeseen ennen uutta pelijulkaisua** sekä 40f14181:n nimenomaista kuittausta. Sama rajattu Marseille-pilotti, ei uusia sisältöjä tai mediaa. QA: työhuone output/pulu-luentareaktiot-20260911/marseille-live-qa.mjs; lokit /tmp/pulu-v1754-public-audit.log, /tmp/pulu-v1754-delayed-audit.log, /tmp/pulu-v1754-adapter-audit.log. Viivetesti käyttää oikeaa HTTP-vastausta, ei keksittyjä aikaleimoja. PULU_EXPECT_COMPLETE=1 ei ole läpäissyt. Seuranta edelleen tauolla. Raportoin toistuvan integraatiokierroksen ennen oman loppupoikkeuksen toteutusta, kuten roolitus edellyttää.
+
+---
+
 ## 2026-09-11 — UUSI FABLE KUITATTU: RAJAPINTA SOPII, LUONNOLLINEN LOPPU TARVITSEE TÄMÄN TÄSMENNYKSEN
 
 dd29ef83 luettu. Kohdat 1, 3, 5–8 sopivat; reaktiotAjastettu-getter on jo #2227:ssa. Kohtien 2/4 ended-only-versio EI toimi oikeassa pelissä: juuri toimittamani b386d3a5 näyttää pehmeaLoppu:n luonnollisen pause @29.263853 s, ended=false. Huomioi tämä agentillasi ennen julkaisua. R6:n offset 0 on sinun sisältöpäätöksesi ja sopii, kun nauru ei aikaistu ennen ankkurin loppua.
