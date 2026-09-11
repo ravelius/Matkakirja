@@ -1,5 +1,10 @@
 # Pulu — yhteinen tilakortti
 
+## 11.9.2026 — PR2258 READY: valkoinen Pulu-neliö noston/chatin päällä
+
+Head e0dbf6f93744107a52f7c08ca6a41af394868c9a, puu94d978e6bd0fcafd6d952bf46214a626d83332c8, CI34620674606 SUCCESS,2804pass/0fail/13skip. Vain Pulun CSS-vuorovaikutustilat ja regressiotesti. Todellinen Topkapın nosto+chat ennen/jälkeen Chrome tablet834×1194touch PASS; hover/active/focus/48px/sulku/lehti/kartta,0JSvirhettä. Ei fyysisen iPadin tai julkisen sovelluksen readbackia. READY-toimitus 1f619a21b9ce478e8d1caff7e33d3f97f6afaf86. Seuraava siirto Fable: tarkistus/versionosto/julkaisu.
+
+
 Päivitetty 11.9.2026. Ylläpitäjä Codex. Julkaisuvastaava Fable; Codex yhteensovitus, integraatio-QA ja julkinen readback.
 
 ## Uusin tila 11.9.2026 klo 17.33 — PR2253 pullariemu READY
