@@ -18,6 +18,14 @@
  * ensimmäinen veto palauttaa pelaajan sallitulle alueelle. Palaa-nappi
  * on olemassa juuri siksi, ettei paluu jäisi sen varaan.
  *
+ * OMISTAJAN PÄÄTÖS 11.9.2026 (iPad, Vilna → Kernavė-nosto): *"Vain
+ * sijaintikysymyksistä."* Kamera siirtyy VAIN, kun pelaajan kysymys
+ * kysyy sijaintia (onPaikkakysymys); nostokortin valmiskysymys
+ * ("Miksi Kernavėä sanotaan Liettuan Troijaksi?") ei liikuta karttaa
+ * lainkaan, vaikka paikka ratkeaisi — merkki saa syttyä, kamera ei
+ * lähde. Eikä ajo koskaan zoomaa ULOS siitä, mitä pelaaja jo katsoo
+ * (ajonLeveys, tarvitaankoAjo).
+ *
  * ── KOLME OSAA ────────────────────────────────────────────────────
  *
  *  1. PAIKAN TUNNISTUS. Kohde ratkaistaan ENSIN pelin omista
@@ -84,15 +92,44 @@ export const MERKIN_IKA_MS = 60000;
  * NÄKYVÄ LEVEYS KOHTEEN TYYPIN MUKAAN (lautayksikköä ruudun leveydellä;
  * maailmankartta on 12000 yksikköä = 360°).
  *
- * Kaupunki saa saapumisnäkymän luokkaa olevan lähikuvan — sen mitä
- * pelaaja näkee laskeutuessaan kaupunkiin (js/pallolauta/kamera.js
- * PALLOLAUDAN_SAAPUMISLEVEYS 240). Vuori, joki ja meri ovat isoja
- * muotoja: niistä ei näe mitään, jos kamera menee kaupungin
- * korkeuteen, joten ne saavat oman väljemmän portaansa.
+ * OMISTAJAN HAVAINTO 11.9.2026 (iPad): pelaaja oli Vilnassa, avasi
+ * Kernavė-noston ja kartta zoomasi ULOS koko Euroopan mittaan
+ * (*"Kartta zoomaa näin kauaksi vaikka olimme juuri lähellä itse
+ * paikkaa."*). Syy oli tässä taulussa: Kernavėn tyyppi on `historia`,
+ * jota taulu ei tuntenut, joten leveydeksi tuli alueoletus 600 yks
+ * (18° leveyssuunnassa) — kaksi ja puoli kertaa väljempi kuin
+ * saapumisnäkymä (240, js/pallolauta/kamera.js).
+ *
+ * JAKO ON NYT KAKSIOSAINEN, ja se on johdettu AINEISTOSTA (kaikki
+ * js/packs/maastokohteet*.js ja js/fokuskohteet.js esiintyvät tyypit;
+ * tests/pollo-paikka.test.mjs kaatuu, jos aineistoon ilmestyy tyyppi,
+ * jota tämä taulu ei tunne):
+ *
+ *   PISTEMÄISET NOSTOT saavat kohteen oman lähikuvan (320). Nämä ovat
+ *   yksittäisiä paikkoja kartalla — linnavuori, kirkko, tehdas, tori,
+ *   satama, eläinlaji, sana, ruokalaji: historia, kulttuuri, muu,
+ *   tekniikka, saari, elain, sana, kauppa, merenkulku, ruoka, kohde.
+ *
+ *   LAAJAT MUODOT saavat väljemmän portaan, koska niistä ei näe mitään
+ *   kaupungin korkeudelta: maa, meri, vuoristo, alue, joki — ja niiden
+ *   välissä vuori ja järvi, jotka ovat yhtä huippua tai rantaviivaa
+ *   isompia mutta eivät mantereen mittaisia.
  */
 export const PAIKAN_LEVEYDET = {
+  // Pistemäiset: kaupunki ja sen sisällä olevat nostot.
   kaupunki: 260,
   kohde: 320,
+  historia: 320,
+  kulttuuri: 320,
+  muu: 320,
+  tekniikka: 320,
+  saari: 320,
+  elain: 320,
+  sana: 320,
+  kauppa: 320,
+  merenkulku: 320,
+  ruoka: 320,
+  // Laajat muodot.
   vuori: 700,
   jarvi: 700,
   alue: 1200,
@@ -101,8 +138,12 @@ export const PAIKAN_LEVEYDET = {
   vuoristo: 1800,
   maa: 2600,
 };
-/** Tuntematon tyyppi: kaupungin ja alueen väliltä. */
-export const PAIKAN_OLETUSLEVEYS = 600;
+/**
+ * Tuntematon tyyppi on todennäköisimmin yksittäinen paikka, joten
+ * oletus on KOHTEEN lähikuva eikä alueen väljyys. Vanha oletus (600)
+ * oli Kernavė-vian juurisyy: tuntematon tyyppi zoomasi ulos.
+ */
+export const PAIKAN_OLETUSLEVEYS = 320;
 
 /* ================================================================
  * 1. NIMIHAKU — PUHTAAT FUNKTIOT
@@ -260,6 +301,58 @@ export function kelpaakoAsteet(lat, lon) {
 /** Näkyvä leveys kohteen tyypin mukaan. */
 export function paikanLeveys(tyyppi) {
   return PAIKAN_LEVEYDET[String(tyyppi ?? '').toLowerCase()] ?? PAIKAN_OLETUSLEVEYS;
+}
+
+/**
+ * AJO EI SAA KOSKAAN ZOOMATA ULOS SIITÄ, MITÄ PELAAJA JO KATSOO.
+ *
+ * Omistajan havainto 11.9.2026: kamera oli Vilnan yllä ja lensi
+ * Kernavėen koko Euroopan mittakaavassa. Vaikka tyyppitaulu on nyt
+ * kunnossa, sama voi toistua aina kun pelaaja katsoo kaupunkia
+ * lähempää kuin tyypin oma porras — joten pyydetystä ja nykyisestä
+ * leveydestä otetaan aina PIENEMPI. Lähentää saa, loitontaa ei.
+ */
+export function ajonLeveys(pyydetty, nykyinen) {
+  if (!(pyydetty > 0)) return nykyinen > 0 ? nykyinen : pyydetty;
+  if (!(nykyinen > 0)) return pyydetty;
+  return Math.min(pyydetty, nykyinen);
+}
+
+/** Kuinka lähelle näkymän reunaa kohde saa jäädä ja silti "näkyä". */
+const NAKYMAN_SISAOSA = 0.3;
+
+/**
+ * Onko kohde jo mukavasti näkyvissä?
+ *
+ * Mitataan näkymän KESKIOSASTA (30 % keskipisteestä kumpaankin
+ * suuntaan) eikä reunoista: aivan ruudun laidassa oleva piste on
+ * teknisesti näkyvissä mutta ei löydy pelaajan silmällä.
+ *
+ * `jakso` on laudan leveys kiertävällä laudalla (maailmankartta
+ * toistuu); ilman sitä päivämäärärajan takana oleva kohde näyttäisi
+ * olevan maailman toisella puolen.
+ */
+export function kohdeNakymassa(kohde, alue, jakso = 0) {
+  if (!kohde || !alue || !(alue.w > 0) || !(alue.h > 0)) return false;
+  if (!Number.isFinite(kohde.x) || !Number.isFinite(kohde.y)) return false;
+  let dx = kohde.x - (alue.x + alue.w / 2);
+  if (jakso > 0) dx -= Math.round(dx / jakso) * jakso;
+  const dy = kohde.y - (alue.y + alue.h / 2);
+  return Math.abs(dx) <= alue.w * NAKYMAN_SISAOSA
+    && Math.abs(dy) <= alue.h * NAKYMAN_SISAOSA;
+}
+
+/**
+ * Tarvitaanko ajoa lainkaan?
+ *
+ * Ei tarvita, jos kohde on jo näkyvissä EIKÄ lähentämiselle ole
+ * tarvetta (pyydetty leveys on yhtä suuri tai väljempi kuin nykyinen).
+ * Silloin kamera saa jäädä rauhaan ja merkki syttyy paikalleen.
+ */
+export function tarvitaankoAjo(kohde, alue, pyydetty, jakso = 0) {
+  if (!alue || !(alue.w > 0)) return true;
+  if (!kohdeNakymassa(kohde, alue, jakso)) return true;
+  return pyydetty > 0 && pyydetty < alue.w;
 }
 
 /* ================================================================
@@ -682,7 +775,20 @@ function teeMerkki(nimi) {
 }
 
 /**
- * Näyttää paikan: kamera-ajo, merkki ja Palaa-nappi.
+ * Näyttää paikan: merkki, tarvittaessa kamera-ajo ja Palaa-nappi.
+ *
+ * KARTTA LENTÄÄ VAIN SIJAINTIKYSYMYKSISTÄ (omistajan päätös 11.9.2026,
+ * sanatarkasti: *"Vain sijaintikysymyksistä."*). Pelaaja oli Vilnassa,
+ * avasi Kernavė-noston ja napautti kortin valmiskysymystä *"Miksi
+ * Kernavėä sanotaan Liettuan Troijaksi?"* — ja kartta lensi
+ * Rovaniemeltä Sofiaan ulottuvaan näkymään. Kysymys ei kysynyt
+ * sijaintia, joten kameraa ei olisi pitänyt liikuttaa lainkaan.
+ *
+ * Sääntö on nyt yksiselitteinen: KAMERA SIIRTYY VAIN, jos pelaajan oma
+ * kysymys on sijaintikysymys (`onPaikkakysymys`). Workerin
+ * `paikka`-kenttä ei enää yksin riitä lennoksi — MERKKI saa yhä syttyä
+ * kartalle siitäkin, koska merkki ei vie pelaajaa mihinkään. Kun ajoa
+ * ei tehdä, Palaa-nappia ei myöskään tehdä: ei ole mitään mistä palata.
  *
  * @returns {{nimi: string}|null} näytetty paikka, tai null jos näyttöä
  *   ei tehty (kohdetta ei ratkennut, karttaa ei ole)
@@ -699,6 +805,19 @@ export function naytaPaikka({
   if (!pane || !kamera?.ajaKamera) return null;
   const alku = lahtonakyma(ui);
   if (!alku) return null;
+
+  /*
+   * AJETAANKO LAINKAAN? Kolme ehtoa, kaikkien on täytyttävä:
+   *   1. pelaajan kysymys on sijaintikysymys (omistajan päätös),
+   *   2. kohde ei ole jo valmiiksi näkymän keskiosassa oikeassa
+   *      mittakaavassa (tarvitaankoAjo), ja
+   *   3. ajon leveys ei koskaan loitonna nykyisestä (ajonLeveys).
+   */
+  const pyydettyLeveys = paikanLeveys(kohde.tyyppi);
+  const alue = ui.nakyvaAlue?.();
+  const ajetaan = onPaikkakysymys(kysymys)
+    && tarvitaankoAjo(kohde, alue, pyydettyLeveys, ui.contentBox?.w ?? 0);
+  const ajoLeveys = ajonLeveys(pyydettyLeveys, alku.leveys);
 
   /*
    * LÄHTÖNÄKYMÄ ON SE, JOSTA PULU LÄHTI — EI EDELLISEN NÄYTÖN MAALI.
@@ -722,46 +841,55 @@ export function naytaPaikka({
     poistui: false,
     vanhentunut: false,
   };
-  naytto.nappi = teePalaaNappi(naytto);
+  // Palaa-nappi on vain ajolle: ilman ajoa ei ole mitään mistä palata.
+  if (ajetaan) naytto.nappi = teePalaaNappi(naytto);
   pane.appendChild(naytto.merkki);
-  pane.appendChild(naytto.nappi);
+  if (naytto.nappi) pane.appendChild(naytto.nappi);
   nykyinenNaytto = naytto;
   paivitaMerkki(naytto);
   seuraa(naytto);
 
   /*
-   * AJO ON PELIN OMA (Raamattu, KAMERA PELIN KÄSISSÄ). Kohde voi olla
-   * valloitetun alueen ulkopuolella — Sparta on Kreikassa, mutta
-   * Babylon voi olla maassa, jossa pelaaja ei ole käynyt. Ajo ei kysy
-   * sitä keneltäkään, koska KÄSIN liikuttelun raja (js/kartta.js
-   * rajaaKasinPan) on voimassa ennallaan heti seuraavasta sormieleestä
-   * — ajo ei muuta rajaa, se vain ohittaa sen kerran.
+   * ILMAN AJOA NÄYTTÖ ON PELKKÄ MERKKI. Kamera jää täsmälleen siihen,
+   * mitä pelaaja katsoo: merkki syttyy heti eikä fokuslukkoa avata.
    */
-  kameraVapaaksi(ui, true);
-  void kamera.ajaKamera(
-    { x: kohde.x, y: kohde.y, leveys: paikanLeveys(kohde.tyyppi) },
-    { kesto: PAIKKA_AJO_MS, sovita: true },
-  ).then(() => {
-    if (nykyinenNaytto !== naytto) return;
-    // Lukko takaisin heti, kun pelaaja tarttuu karttaan (ks. kameraVapaaksi).
-    palautaRajatKosketuksesta(naytto);
-    // Merkki nousee esiin vasta perillä: kesken lennon ruudulla on
-    // pelkkä liike, kuten muissakin kamera-ajoissa.
+  if (!ajetaan) {
     naytto.merkki.classList.add('esilla');
-    const nyt = lahtonakyma(ui);
+  } else {
     /*
-     * PALAA-NAPPI VAIN JOS ON MIHIN PALATA. Jos kohde oli jo ruudulla
-     * samassa mittakaavassa, kamera ei liikkunut minnekään — nappi
-     * olisi silloin pelkkä kaluste, joka ei tee mitään.
+     * AJO ON PELIN OMA (Raamattu, KAMERA PELIN KÄSISSÄ). Kohde voi olla
+     * valloitetun alueen ulkopuolella — Sparta on Kreikassa, mutta
+     * Babylon voi olla maassa, jossa pelaaja ei ole käynyt. Ajo ei kysy
+     * sitä keneltäkään, koska KÄSIN liikuttelun raja (js/kartta.js
+     * rajaaKasinPan) on voimassa ennallaan heti seuraavasta sormieleestä
+     * — ajo ei muuta rajaa, se vain ohittaa sen kerran.
      */
-    if (nyt && nakymaPalasi(nyt, naytto.alku)) {
-      naytto.nappi.remove();
-      naytto.nappi = null;
-      return;
-    }
-    naytto.poistui = true;
-    naytto.nappi.classList.add('esilla');
-  });
+    kameraVapaaksi(ui, true);
+    void kamera.ajaKamera(
+      { x: kohde.x, y: kohde.y, leveys: ajoLeveys },
+      { kesto: PAIKKA_AJO_MS, sovita: true },
+    ).then(() => {
+      if (nykyinenNaytto !== naytto) return;
+      // Lukko takaisin heti, kun pelaaja tarttuu karttaan (ks. kameraVapaaksi).
+      palautaRajatKosketuksesta(naytto);
+      // Merkki nousee esiin vasta perillä: kesken lennon ruudulla on
+      // pelkkä liike, kuten muissakin kamera-ajoissa.
+      naytto.merkki.classList.add('esilla');
+      const nyt = lahtonakyma(ui);
+      /*
+       * PALAA-NAPPI VAIN JOS ON MIHIN PALATA. Jos kohde oli jo ruudulla
+       * samassa mittakaavassa, kamera ei liikkunut minnekään — nappi
+       * olisi silloin pelkkä kaluste, joka ei tee mitään.
+       */
+      if (nyt && nakymaPalasi(nyt, naytto.alku)) {
+        naytto.nappi?.remove();
+        naytto.nappi = null;
+        return;
+      }
+      naytto.poistui = true;
+      naytto.nappi?.classList.add('esilla');
+    });
+  }
 
   /*
    * MERKKI ON VÄLIAIKAINEN (omistajan tilaus: häipyy Palaa-napista tai
