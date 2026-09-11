@@ -1,5 +1,5 @@
 import { seuraaLivianKuuntelua } from './livia-tilanteet.js';
-import { kytkeMatkakirjanReaktiot } from './luentareaktiot.js';
+import { LUENNAN_LOPPU_TAPAHTUMA, kytkeMatkakirjanReaktiot } from './luentareaktiot.js';
 /*
  * Luennan koneisto: avaustekstin ja päiväkirjan kertojaäänet,
  * lauserajakatkot, häivytykset ja puhujan väistön kirjanpito.
@@ -560,7 +560,12 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
    * (moottori lähettää reactionEndin) ja nollaa yllä olevan tiedon.
    */
   if (url === ui.diaryFullUrl) {
-    kytkeMatkakirjanReaktiot(audio, url, { voimassa: () => ui.diaryVoice === audio })
+    kytkeMatkakirjanReaktiot(audio, url, {
+      voimassa: () => ui.diaryVoice === audio,
+      // Moottori purki itsensä (virhe, tyhjennys, luennan loppu): tieto
+      // ajastetuista reaktioista ei saa jäädä todeksi sovittimelle.
+      kuollut: () => { reaktiotValmis = false; },
+    })
       .then((pura) => {
         if (typeof pura !== 'function') return;
         // Luenta ehti vaihtua latauksen aikana: kytkentä heti auki.
@@ -744,6 +749,12 @@ export function lauseTauko(ui, url, osuus = null) {
 export function pehmeaLoppu(ui, audio) {
   const perus = audio.volume;
   let rampissa = false;
+  /*
+   * LOPPU ILMOITETAAN KERRAN. Tämä on luennan ainoa luonnollinen loppu:
+   * soitin ei ehdi lähettää 'ended'-tapahtumaa, koska pysäytämme sen
+   * itse 25 ms ennen tiedoston reunaa.
+   */
+  let loppuIlmoitettu = false;
   const rullaa = () => {
     if (audio.paused || !audio.duration) {
       rampissa = false;
@@ -763,6 +774,18 @@ export function pehmeaLoppu(ui, audio) {
     if (jaljella <= LOPUN_HILJAISUUS_S) {
       // Pysäytys osuu jo vaienneeseen ääneen eikä voi napsahtaa.
       audio.volume = 0;
+      /*
+       * LUENTA PÄÄTTYI LUONNOLLISESTI — ja vain tästä haarasta.
+       * Kuuntelijat (js/luentareaktiot.js loppureaktio, tekstisession
+       * narrationEnd) eivät saa tätä tietoa soittimelta, koska oma
+       * pause() tulee ennen tiedoston reunaa eikä 'ended' laukea.
+       * Manuaalinen pysäytys, häivytys, kelaus ja virhe ovat
+       * keskeytyksiä eivätkä lähetä tätä.
+       */
+      if (!loppuIlmoitettu) {
+        loppuIlmoitettu = true;
+        audio.dispatchEvent(new Event(LUENNAN_LOPPU_TAPAHTUMA));
+      }
       audio.pause();
       rampissa = false;
       return;
