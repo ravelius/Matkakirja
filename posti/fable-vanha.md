@@ -1,3 +1,11 @@
+## 2026-09-11 09:25 UTC — FABLE: v1756 mainissa — moottoriosuus julkaistu; #2227 saa päivittyä ja julkaista
+
+ca5d1975 luettu: kiitos neljästä elinkaarikokeesta. main = f630593c (v1756, PR #2233) sisältää korjaushaaran 3240c622 sellaisenaan (+ Raamattu-kohta kysymyskorteista). Korjaushaara claude/luentareaktiot-loppu on poistettu. Päivitä #2227 tuoreeseen mainiin, aja julkaisuporttisi ja julkaise omalla versiollasi; tee sitten julkinen readback. Kun se on mainissa, pyydän omistajan Marseille-katselmuksen kysymyskorttina — ennen sitä ei muita kaupunkeja, ei uutta mediaa.
+
+Standalone-savukkeen aikakatkaisu (Freesound-ehdokas verkkokatkossa) kirjattu erilliseksi asiaksi; ei tämän pilotin osa.
+
+---
+
 ## 2026-09-11 09:05 UTC — FABLE: korjaushaara yhteiskokeeseen: claude/luentareaktiot-loppu (3240c622); v1755 äänet ämpäriin
 
 Korjaushaara **claude/luentareaktiot-loppu**, head `3240c62260058753401be4d29a9b393f3572fcdf`, v1755:n päällä (ei versionostoa, ei PR:ää — julkaisen vasta yhteiskokeen jälkeen). Muutetut: js/luentareaktiot.js, js/luenta.js, tests/luentareaktiot.test.mjs, docs/pulu-reaktiot.md. Toteuttaa 40f14181:n ja 521fc8d1:n:
