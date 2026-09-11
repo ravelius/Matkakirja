@@ -4319,6 +4319,23 @@ export const RAAMATTU = {
           + 'paluu VASTAUKSEN KERA; keskeytetty tai vanhentunut vastaus ei tuo '
           + 'Pulua takaisin. Toteutettu Codexin eralla (#2246), julkaistu '
           + 'v1765:ssa.',
+        'KARTAN ESINEET PIENENEVAT KARTAN TAHDISSA (omistaja 11.9.2026, '
+          + 'kaappaus maailmanakymasta, sanatarkasti: "Valokuvat ja etsi aarre '
+          + 'teksti eivat pienene kartan kanssa samaa tahtia ja jaavat liian '
+          + 'isoiksi zoomatessa ulos"): pienen luentakuvan alaraja laskettiin '
+          + '0,4:sta 0,12:een, joten kuva kutistuu peukalonkynneksi '
+          + 'maailmanakymassa, ja Etsi aarre -nappi sai saman mittakaavan '
+          + '(alaraja 0,45, koska se on tekstia ja osumapinta, ylaraja 1,2). '
+          + 'Molempien vertailukohta on se kartan mittakaava, jolla esine tuli '
+          + 'ruudulle. Tarkentaa linjausta PIENENNETTY LUENTAKUVA KARTAN '
+          + 'MITTAKAAVASSA. Toteutettu v1772.',
+        'PARAS LOPPUTULOS RATKAISEE NAPA-ALUEILLA (omistaja 11.9.2026 '
+          + 'kysymyskorttiin vastaten, sanatarkasti: "Tarkein etta lopputulos on '
+          + 'mahdollisimman hyva. Muulla ei valia"): napojen korjauksessa ei '
+          + 'valita halvinta vaan paras jalki - molemmille navoille piirretaan '
+          + 'oma karttakuva atsimutaalisessa projektiossa samassa 1873-tyylissa '
+          + '(pohjoinen 80-90 astetta, etela 60-90 astetta eli koko '
+          + 'Etelamanner) yksivarisen napakannen tilalle.',
         'PIENENNETTY LUENTAKUVA KARTAN MITTAKAAVASSA (omistaja 11.9.2026, '
           + 'kaappaus Madridista, sanatarkasti: "pienennetyt kuvat saisi jaada '
           + 'kartalla pienemminksi ja pysya kartan kokoon suhteutettuna, eli '

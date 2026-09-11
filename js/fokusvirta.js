@@ -2618,11 +2618,18 @@ function paivitaLuentakuvanPaikka(naytto) {
  *
  * SUHDE, EI ABSOLUUTTINEN MITTA: vertailukohta on se mittakaava, jolla
  * kartta oli kuvan noustessa, joten kuva näyttää silloiselta itseltään
- * niin kauan kuin zoomiin ei kosketa. RAJAT pitävät sen käytettävänä:
- * maailmanlaajuisessa yleiskuvassa kuva ei saa kadota pisteeksi eikä
- * syvässä zoomissa peittää kaupunkia.
+ * niin kauan kuin zoomiin ei kosketa.
+ *
+ * ALARAJA ON MATALA, KOSKA KUVAN PITÄÄ PIENENTYÄ KARTAN TAHDISSA
+ * (omistaja 11.9.2026, kaappaus maailmanäkymästä: *"Valokuvat ja etsi
+ * aarre teksti eivät pienene kartan kanssa samaa tahtia ja jäävät liian
+ * isoiksi zoomatessa ulos"*). Ensimmäinen raja 0,4 tuli vastaan jo
+ * mannernäkymässä, ja siitä eteenpäin kuva kasvoi kartan rinnalla
+ * suhteessa suuremmaksi — juuri se, mistä omistaja huomautti. Nyt
+ * alaraja on 0,12: maailmanäkymässä kuva on peukalonkynsi kaupunkinsa
+ * päällä, mutta ei katoa pisteeksi eikä lakkaa olemasta napautettava.
  */
-const KARTTASKAALAN_RAJAT = Object.freeze({ alin: 0.4, ylin: 1.8 });
+const KARTTASKAALAN_RAJAT = Object.freeze({ alin: 0.12, ylin: 1.8 });
 
 function kartanMittakaava(naytto) {
   const paneeli = naytto?.paneeli;

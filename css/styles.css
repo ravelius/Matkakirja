@@ -21661,6 +21661,20 @@ a.pollo-kasitelinkki:active { color: var(--pollo-muste); }
   transition: opacity 320ms ease;
 }
 
+/*
+ * NAPPI ON KARTAN KOKOINEN (omistaja 11.9.2026: *"Valokuvat ja etsi
+ * aarre teksti eivät pienene kartan kanssa samaa tahtia ja jäävät liian
+ * isoiksi zoomatessa ulos"*). Skripti kirjoittaa suhteen ankkuriin
+ * kehyksittäin (js/etsi-aarre-nappi.js napinMittakaava); mittakaava on
+ * omassa kääreessään, jotta ankkurin oma translate ei sekoitu siihen.
+ * transform-origin on ankkurin piste eli kaupungin kohta, joten nappi
+ * kutistuu laattaansa kohti eikä karkaa sivuun.
+ */
+.etsi-aarre-ankkuri > * {
+  transform: scale(var(--etsi-aarre-skaala, 1));
+  transform-origin: 0 0;
+}
+
 .etsi-aarre-ankkuri.nakyy { opacity: 1; }
 /* Kaupunki ajautui ruudun ulkopuolelle: nappi ei saa valehdella paikkaa. */
 .etsi-aarre-ankkuri.hukassa { opacity: 0; pointer-events: none; }
