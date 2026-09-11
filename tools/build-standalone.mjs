@@ -623,6 +623,7 @@ const MODULES = [
   'js/livia-svg-paa.js',
   'js/livia-svg.js',
   'js/livia-nostotila.js',
+  'js/livia-dialogitila.js',
   'js/livia-eleet.js',
   'js/pollo.js',
   /*

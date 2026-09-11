@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { asennaLivianKasvot } from '../js/livia-eleet.js';
 import { ilmoitaLivianKasvopuhe } from '../js/livia-puhetila.js';
+import { livianDialogikoti, seuraaLivianDialogeja } from '../js/livia-dialogitila.js';
 
 // Pieni DOM- ja kellosovitin: testataan pelin odotus/puhe/piilotus-elinkaarta,
 // ei piirtofunktion kopiota. Soittimet eivät vaadi verkkoa tai uusia ääniä.
@@ -15,7 +16,7 @@ function liviaTestYmparisto(t){
   setAttribute(n,v){this.attrs[n]=v;}getContext(){return this.ctx;}
   querySelector(){return this.children.find(x=>x.className==='pollo-odottaa'&&x.isConnected)||null;}
  }
- const doc=new EventTarget(),lehti=new El();doc.hidden=false;doc.body=new El();doc.createElement=()=>new El();doc.querySelector=()=>null;doc.getElementById=id=>id==='arrival-dialog'?lehti:null;
+ const doc=new EventTarget(),lehti=new El();lehti.id='arrival-dialog';lehti.localName='dialog';doc.hidden=false;doc.body=new El();doc.createElement=()=>new El();doc.querySelector=()=>null;doc.getElementById=id=>id==='arrival-dialog'?lehti:null;
  const button=new El(),virta=new El(),reduced=new EventTarget();reduced.matches=false;
  const set=(key,value)=>{const before=Object.getOwnPropertyDescriptor(globalThis,key);Object.defineProperty(globalThis,key,{configurable:true,writable:true,value});t.after(()=>before?Object.defineProperty(globalThis,key,before):delete globalThis[key]);};
  set('requestAnimationFrame',fn=>{raf.set(++id,fn);return id;});set('cancelAnimationFrame',id=>raf.delete(id));
@@ -24,7 +25,7 @@ function liviaTestYmparisto(t){
  set('MutationObserver',class{constructor(fn){this.fn=fn;observers.push(this);}observe(el){this.el=el;}disconnect(){this.el=null;}});
  t.mock.method(performance,'now',()=>now);
  const tick=ms=>{const end=now+ms;while(now<end){now=Math.min(end,now+20);const rs=[...raf.values()];raf.clear();rs.forEach(f=>f(now));for(const[k,v]of[...timers])if(v.at<=now){timers.delete(k);v.fn();}}};
- const notify=el=>observers.filter(o=>o.el===el).forEach(o=>o.fn());
+ const notify=(el,rs=[])=>observers.filter(o=>o.el===el).forEach(o=>o.fn(rs));
  const pollo={doc,nappi:button,virta,auki:false,haeUi:()=>({})};
  return{pollo,button,virta,doc,lehti,reduced,El,tick,notify,raf,timers};
 }
@@ -119,12 +120,44 @@ test('luenta ohittaa odotuksen, joka jatkuu vasta viimeisen luennan loputtua',t=
 test('modaalissa kuunnellaan vain jos Pulu on itse sen sisällä',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
  e.lehti.open=true;e.lehti.classList.add('lehti');e.doc.querySelector=s=>s==='dialog[open]'?e.lehti:null;
+ e.doc.querySelectorAll=()=>[e.lehti];
  assert.equal(c.tilanne('emotion',{ele:'grin',voimakkuus:.5}),false,'peittyvän Pulun ei kuulu reagoida');
  e.button.closest=()=>e.lehti;
  const a={};assert.equal(c.tilanne('narration',{tunnus:a,ele:'lookUp'}),true);
  assert.equal(e.doc.body.children.length,0,'piirtopinta siirtyi samaan modaaliin');
  e.tick(800);c.tilanne('narrationEnd',{tunnus:a});
  assert.equal(c.tilanne('card',{symboli:'historia'}),true,'korttiele sallitaan näkyvässä modaalissa');
+});
+
+test('T1 sallii kolme dialogia, muu modaali katkaisee myös odotuksen ja oman puheen',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);
+ const dialogs=['passport-dialog','quiz-dialog','rules-dialog','wiki-dialog'].map(id=>Object.assign(new e.El(),{id,localName:'dialog'}));
+ dialogs.unshift(e.lehti);e.doc.querySelectorAll=s=>s==='dialog[open]'?dialogs.filter(d=>d.open):[];
+ let host=null;e.button.closest=()=>host;
+ const off=seuraaLivianDialogeja(e.doc,()=>{host=livianDialogikoti(e.doc);});t.after(off);
+ c=asennaLivianKasvot(e.pollo);e.tick(5000);const surface=e.doc.body.children[0];
+ function toggle(id,open) {
+  const d=dialogs.find(d=>d.id===id),oldValue=d.open?'':null;d.open=open;
+  e.notify(e.doc.body,[{type:'attributes',attributeName:'open',target:d,oldValue}]);e.notify(e.button);
+ }
+ for(const id of ['arrival-dialog','passport-dialog','quiz-dialog']) {
+  toggle(id,true);assert.equal(surface.parent.id,id);assert.equal(surface.hidden,false);
+  assert.equal(c.tilanne('card',{symboli:'historia'}),true);e.tick(3500);
+  const wait={};c.tilanne('waiting',{tunnus:wait});assert.ok(e.raf.size);
+  toggle('rules-dialog',true);assert.equal(e.raf.size,0);assert.equal(surface.hidden,true);
+  assert.equal(c.toista('grin'),false);assert.equal(c.tilanne('card',{symboli:'historia'}),false);
+  const speech={};ilmoitaLivianKasvopuhe(speech,true,'Kääk!');e.tick(26000);
+  assert.equal(e.raf.size,0,'odotus ja puhe eivät ohita dialogiporttia');
+  ilmoitaLivianKasvopuhe(speech,false);c.tilanne('waitingEnd',{tunnus:wait});
+  toggle('rules-dialog',false);assert.equal(surface.parent.id,id);assert.equal(surface.hidden,false);
+  assert.equal(e.raf.size,0,'sulkeminen ei toista vanhaa elettä tai saapumista');
+  toggle(id,false);
+ }
+ toggle('wiki-dialog',true);assert.equal(surface.hidden,false,'aiempi chat saa staattisen pulun');
+ assert.equal(c.toista('grin'),false);assert.equal(e.raf.size,0);
+ toggle('wiki-dialog',false);assert.equal(surface.parent,e.doc.body);
+ e.button.hidden=true;e.notify(e.button);toggle('quiz-dialog',true);
+ assert.equal(surface.hidden,true,'löytämätön tai intron piilottama pulu ei ilmesty dialogissa');
 });
 
 test('puhe ja nostokortti palauttavat yhä soivan luennan kuuntelun',t=>{

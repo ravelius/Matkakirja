@@ -58,6 +58,7 @@ import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { asennaLivianKasvot } from './livia-eleet.js';
+import { livianDialogikoti, seuraaLivianDialogeja } from './livia-dialogitila.js';
 import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 // Napautusnielu: kuplan sulkeva klikkaus ei saa vuotaa kartalle
 // (ks. sidoKuplanNapautus). Apuri asuu ui-apureissa, koska sama vuoto
@@ -2221,19 +2222,9 @@ export class Pollo {
    * palaavat alanappirivin keskimmäiseen paikkaan.
    */
   kiinnitysKohde() {
-    /*
-     * Myös artikkeli-ikkunat (Lue lisää -wiki ja nähtävyysarkki) ovat
-     * modaaleja, ja pöllön pitää olla saatavilla niissäkin (omistaja
-     * 13.8.2026: "Pöllö saisi olla sivussa näkyvissä näissä myös").
-     * Järjestys on pinojärjestys: wiki voi aueta nähtävyyden tai
-     * lehden päälle, joten se tarkistetaan ensin — pöllön on asuttava
-     * PÄÄLLIMMÄISESSÄ modaalissa ollakseen napautettavissa.
-     */
-    for (const id of ['wiki-dialog', 'nahtavyys-dialog', 'arrival-dialog']) {
-      const dialogi = this.doc.getElementById(id);
-      if (dialogi?.open) return dialogi;
-    }
-    return this.ankkuri?.isConnected ? this.ankkuri : this.doc.body;
+    // T1: lehti, matkalaukku ja visa/kohtaaminen. Wiki- ja nähtävyys-
+    // ikkunoissa aiempi chat säilyy, mutta eleet ovat hiljaisia.
+    return livianDialogikoti(this.doc) || (this.ankkuri?.isConnected ? this.ankkuri : this.doc.body);
   }
 
   /**
@@ -3758,18 +3749,11 @@ export class Pollo {
     // (ks. kiinnitysKohde): avautuminen siirtää napin ikkunan sisään,
     // sulkeutuminen palauttaa sen — ja sulkee auki jääneen paneelin,
     // ettei keskustelu jää leijumaan siirtymän päälle.
-    for (const id of ['arrival-dialog', 'wiki-dialog', 'nahtavyys-dialog']) {
-      const dialogi = this.doc.getElementById(id);
-      if (!dialogi) continue;
-      new MutationObserver(() => {
-        this.kiinnita();
-        if (!dialogi.open && this.auki) this.sulje();
-        // Juttuikkunan avautuminen lehden päälle on uusi tilanne
-        // (kysymysAvain): paneeli seuraa perässä, joten myös tarjonnan
-        // pitää — muuten jutun päällä näkyvät lehden kysymykset.
-        else this.tarkistaKonteksti();
-      }).observe(dialogi, { attributes: true, attributeFilter: ['open'] });
-    }
+    seuraaLivianDialogeja(this.doc, (ylin, edellinen) => {
+      this.kiinnita();
+      if (this.auki && (edellinen && !edellinen.open || ylin && !livianDialogikoti(this.doc))) this.sulje();
+      else this.tarkistaKonteksti();
+    });
     /*
      * LEHDEN SIVUNVAIHTO on tilanteen vaihdos siinä missä ikkunan
      * avautuminen, mutta se ei liikuta yhtään dialogia eikä lähetä omaa
