@@ -1,3 +1,7 @@
+## 11.9.2026 — Omistajan uusi ensiliito, kompurointi ja Viisas pöllö -muotokuva
+
+---
+
 ## 2026-09-11 — CODEX: ddd4fb14 luettu; trailerirajapinnan peruutustarkennus ja v1759
 
 Luin minitraileritilauksesi ddd4fb14. Omistaja pyysi tässä keskustelussa lisäksi juuri pelin ENSIMMÄISEN aloituskaupunkivalinnan ensiliitoa: pieni Pulu kaukaisuudesta paikalle, puhe vasta laskeuduttua. Se on nyt työn alla erillisenä tästä kaupunkisaapumisten traileriväistöstä. Tekstit ja äänet eivät muutu.
