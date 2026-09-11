@@ -494,7 +494,32 @@ export function naytaPuluCamPakka(ui, {
     kortti.addEventListener('click', (tapahtuma) => {
       tapahtuma?.stopPropagation?.();
       if (raahattu()) return;
-      if (nostaPuluCamKortti(ui, i)) return;
+      /*
+       * PIENI PAKKA AUKEAA ENSIN VIUHKAKSI (omistaja 11.9.2026:
+       * *"Kun mini kuvapinoa klikkaa niin kuvat saisivat levittyä
+       * enemmän viuhkan muotoon jotta klikkaaminen ja siirtyminen
+       * tiettyyn kuvaan olisi helpompi"*). Peukalonkynnen kokoisessa
+       * pinossa kortit ovat muutaman pikselin päässä toisistaan, joten
+       * ensimmäinen napautus ei voi tarkoittaa "tämä kuva" — se
+       * tarkoittaa "näytä pino".
+       *
+       * LUOKKA LUETAAN PANEELISTA, EI TUODA FUNKTIOTA: js/fokusvirta.js
+       * tuo tämän moduulin, ja paluusuuntainen tuonti sulkisi renkaan.
+       */
+      const paneeli = ui?.luentakuva;
+      if (paneeli?.classList?.contains?.('pieni')
+        && !paneeli.classList.contains('levitetty')) {
+        paneeli.classList.add('levitetty');
+        return;
+      }
+      /*
+       * LEVITETYSSÄ VIUHKASSA KORTIN NAPAUTUS VIE SUORAAN KOKO
+       * RUUDULLE (omistaja: *"sitten kun kuvaa klikkaa se tulisi vasta
+       * täydelle ruudulle"*) — nosto päällimmäiseksi on pinon ele, ja
+       * viuhkassa jokainen kortti on jo erikseen näkyvissä.
+       */
+      if (!paneeli?.classList?.contains?.('levitetty')
+        && nostaPuluCamKortti(ui, i)) return;
       avaa?.(i);
     });
     tila.kortit.push(kortti);

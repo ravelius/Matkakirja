@@ -2171,11 +2171,47 @@ function pulucamKaruselli(ui, city, pohjakuva) {
   return { lista: [...isoisa, ...kuvat], pulusta: isoisa.length };
 }
 
+/*
+ * KOLME VAIHETTA: PIENI PAKKA → LEVITETTY VIUHKA → KOKO RUUTU
+ * (omistaja 11.9.2026, sanatarkasti: *"Kuvapino saisi näkyä vielä
+ * paljon pienempänä ja sitten kun sitä klikkaa, kuvapino saisi
+ * suurentua jotta sopiva kuva olisi helpompi valita pinosta ja sitten
+ * kun kuvaa klikkaa se tulisi vasta täydelle ruudulle. Jos karttaa
+ * vierittää niin kuvapino pienentäisi taas varsin pieneksi, vain vähän
+ * pelinappulaa korkeammaksi"*).
+ *
+ * Ensimmäinen napautus pieneen pakkaan EI enää avaa suurennosta vaan
+ * levittää pakan: peukalonkynnen kokoisesta pinosta ei voi valita
+ * kuvaa, ja koko ruudun suurennos oli siihen liian iso askel. Vasta
+ * levitetyssä viuhkassa kortin napautus vie karuselliin.
+ *
+ * Levitys on luokka paneelissa, ei oma mittakaavansa: kartan
+ * mittakaava (--luentakuva-karttaskaala) kertautuu siihen kuten
+ * pienennykseenkin, joten viuhka on kartan kokoinen.
+ *
+ * @returns {boolean} otettiinko napautus levitykseen
+ */
+export function levitaPuluCamPakka(ui) {
+  const paneeli = ui?.luentakuva;
+  if (!paneeli?.classList) return false;
+  if (!paneeli.classList.contains('pieni')) return false;
+  if (paneeli.classList.contains('levitetty')) return false;
+  paneeli.classList.add('levitetty');
+  return true;
+}
+
+/** Viuhka kiinni: kartan liike ja kaupungin vaihto kokoavat pakan. */
+export function kokoaPuluCamPakka(ui) {
+  ui?.luentakuva?.classList?.remove?.('levitetty');
+}
+
 /**
  * Isoisän luentakuvan napautus: yhteinen karuselli, jos pakka on
  * päällä — muuten entinen yhden kuvan suurennos.
  */
 function avaaLuentakuvanKaruselli(ui, city, kuva, nappi) {
+  // Pieni pakka aukeaa ensin viuhkaksi (ks. KOLME VAIHETTA yllä).
+  if (levitaPuluCamPakka(ui)) return;
   if (!puluCamPakassa(ui)) {
     // Ilman pakkaa karusellissa ovat isoisän omat kuvat (yksi tai kaksi),
     // ja se aukeaa siitä kuvasta, joka kartalla oli näkyvissä.
@@ -2821,7 +2857,15 @@ function kytkeLuentakuvanPienennys(ui, paneeli) {
   if (typeof document?.addEventListener !== 'function') return;
   const kasittele = (tapahtuma) => {
     if (tapahtuma.target?.closest?.('.fokusvirta-luentakuva, .fokuszoom')) return;
-    if (ui.luentakuva === paneeli) pienennaLuentakuva(ui);
+    if (ui.luentakuva !== paneeli) return;
+    /*
+     * VIUHKA KIINNI MYÖS SILLOIN, KUN PAKKA ON JO PIENI. pienennaLuentakuva
+     * on idempotentti eikä tee toisella kutsulla mitään, joten levityksen
+     * purku on tässä erikseen — muuten avattu viuhka jäisi auki kartan
+     * liikkuessa (omistaja 11.9.2026).
+     */
+    kokoaPuluCamPakka(ui);
+    pienennaLuentakuva(ui);
   };
   document.addEventListener('pointerdown', kasittele);
   ui.luentakuvaSulku = () => document.removeEventListener('pointerdown', kasittele);
@@ -2853,6 +2897,10 @@ export function pienennaLuentakuva(ui) {
   clearTimeout(ui.luentakuvaAjastin);
   ui.luentakuvaAjastin = null;
   paneeli.classList.add('pieni');
+  // Kartan liike kokoaa myös levitetyn viuhkan (omistaja 11.9.2026:
+  // *"Jos karttaa vierittää niin kuvapino pienentäisi taas varsin
+  // pieneksi"*).
+  paneeli.classList.remove('levitetty');
   return true;
 }
 
