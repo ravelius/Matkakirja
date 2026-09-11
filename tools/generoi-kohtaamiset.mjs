@@ -19,7 +19,7 @@
  * allowlist" -virhe tulee omasta putkesta vaikka verkko on auki.
  */
 
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -114,8 +114,13 @@ for (const id of kaupungit) {
     }
     const polku = resolve(JUURI, `assets/audio/puhe-kohtaaminen-${id}-${nimi}.mp3`);
     const data = Buffer.from(await vastaus.arrayBuffer());
+    // assets/audio ei ole enää repossa (omistajan linjaus 11.9.2026:
+    // äänet vain ämpärissä), joten kansio voi puuttua tyhjästä
+    // checkoutista — luodaan se ennen kirjoitusta.
+    mkdirSync(dirname(polku), { recursive: true });
     writeFileSync(polku, data);
     console.log(`${id}/${nimi}: ${(data.length / 1024).toFixed(0)} kt → ${polku}`);
   }
 }
-console.log('Valmis. Muista: tiedostot repoon ja avain kiertoon.');
+console.log('Valmis. Tiedostot ovat paikallisessa assets/audio-kansiossa (ei repoon,');
+console.log('linjaus 11.9.2026) — vie ne ämpäriin. Muista myös avain kiertoon.');

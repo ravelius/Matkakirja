@@ -71,3 +71,12 @@ pyramidi-poltto/
 # kaupungin wiki-nimi). Välimuisti, ei aineisto — tarkistin hakee
 # puuttuvat itse. Ks. tools/tarkista-laudan-pisteet.mjs.
 tools/.valimuisti/
+
+# ÄÄNITIEDOSTOT EIVÄT OLE REPOSSA (omistajan linjaus 11.9.2026:
+# "repossa ei saa olla äänitiedostoja, kaikki vain ämpärissä").
+# Generointityökalut (tools/generoi-*.mjs, tools/hae-viritysaanet.mjs)
+# kirjoittavat yhä tähän kansioon paikallisesti, ja Actions-ajo vie
+# tuotoksen suoraan ämpäriin (media.matkakirja.app/audio/) — ämpäri on
+# äänitteiden ainoa varasto, repo vain työpöytä. Peli hakee kaikki
+# omat äänensä ämpäristä (js/media.js aaniUrl).
+assets/audio/*.mp3

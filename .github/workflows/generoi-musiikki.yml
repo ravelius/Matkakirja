@@ -65,21 +65,28 @@
 # — tulostaa jokaisen raidan kohdetiedoston, keston ja koko promptin.
 # Avainta ei tarvita. Kannattaa ajaa, kun promptia on muutettu.
 #
-# TUOTOS EI MENE SUORAAN MAINIIN. Ajo committoi uudet mp3:t omalle
-# haaralleen (claude/musiikki-<ajonumero>) ja jättää ne PR:ää varten:
-# musiikki KUUNNELLAAN ennen julkaisua (looppiraidoilta sauma,
-# aarreraidoilta se että aihe on kuultavasti sama).
+# TUOTOS MENEE SUORAAN ÄMPÄRIIN, EI REPOON (omistajan linjaus
+# 11.9.2026: *"repossa ei saa olla äänitiedostoja, kaikki vain
+# ämpärissä"*). Ajo generoi raidat, vie ne ämpärin `audio/`-kansioon ja
+# liittää samat tiedostot ajon artefaktiksi — kuuntelu tehdään siitä
+# artefaktista, ei PR:stä. mp3:ia ei committoida mihinkään.
 #
-# MIKSI REPON KAUTTA EIKÄ SUORAAN ÄMPÄRIIN (ero
-# generoi-siirtymamusiikki.yml:ään, joka ei committoi mitään): PELIN
-# POLKU RATKAISEE. Paletin neljä soittokohtaa pyytävät polkua
-# `assets/audio/musa-*.mp3`, jonka js/media.js `aaniUrl` kääntää ämpärin
-# `audio/`-kansioksi — sinne .github/workflows/vie-aanet.yml vie
-# tiedostot, kun PR on mergetty. Siirtymäraidat taas kokeilevat ensin
-# ämpärin `aanet/`-kansiota, joten niille suora vienti on lyhin tie.
-# Kansio `aanet/` olisi paletille umpikuja: yksikään paletin soittokohta
-# ei kysy sitä. Musiikkia ei esiladata service workerissa, joten mp3 ei
-# kasvata asennusta.
+# KUUNTELUSÄÄNTÖ. UUSI raita ei kuulu pelissä ennen kuin pelidata
+# viittaa siihen (esim. js/media.js MUSIIKIN_PAATE tai
+# js/kaupunkimusiikki.js), joten sen voi viedä huoletta ja kuunnella
+# rauhassa. SAMANNIMISEN raidan uusinta sen sijaan korvaa ämpärin
+# tiedoston heti ja kuuluu pelaajille — siksi uusinnat tehdään harkiten,
+# ja niiden yhteydessä nostetaan js/media.js UUSITUT_AANET -kyselyversio
+# samassa PR:ssä, jossa pelidata muuttuu (muuten välimuistit soittavat
+# vanhaa raitaa viikkoja).
+#
+# PELIN POLKU RATKAISEE KANSION (ero generoi-siirtymamusiikki.yml:ään).
+# Paletin neljä soittokohtaa pyytävät polkua `assets/audio/musa-*.mp3`,
+# jonka js/media.js `aaniUrl` kääntää ämpärin `audio/`-kansioksi — sinne
+# tämä ajo vie. Siirtymäraidat taas kokeilevat ensin ämpärin
+# `aanet/`-kansiota. Kansio `aanet/` olisi paletille umpikuja: yksikään
+# paletin soittokohta ei kysy sitä. Musiikkia ei esiladata service
+# workerissa, joten mp3 ei kasvata asennusta.
 #
 # KUN RAIDAT OVAT ÄMPÄRISSÄ (HTTP 200 osoitteesta
 # <ämpäri>/audio/musa-pohja-lyria.mp3 ja kolme muuta), käännä pelin
@@ -87,12 +94,13 @@
 # rivi ja koskee kaikkia neljää polkua sekä työhuoneen kuuntelulehteä.
 #
 # JOS MUSIIKKIRAJAPINTA EI OLE AUKI TÄLLÄ AVAIMELLA, ajo kaatuu
-# työkalun tulostamaan HTTP-virheeseen (401/403) eikä committoi mitään.
+# työkalun tulostamaan HTTP-virheeseen (401/403) eikä vie mitään.
 # Pelikytkennät ovat silloinkin jo paikallaan ja hiljenevät siististi:
 # puuttuva mp3 ei riko yhtään äänipolkua.
 #
 # Salaisuudet ovat tämän repon Actions-asetuksissa: GOOGLE_API_KEY
-# (Lyria) ja ELEVEN_API_KEY (vertailu). Avain ei koskaan tulostu lokiin
+# (Lyria), ELEVEN_API_KEY (vertailu) ja R2:n neljä (R2_ACCOUNT_ID,
+# R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET). Avain ei koskaan tulostu lokiin
 # (työkalu ei tulosta sitä, eikä tämä ajo echoa sitä) — GitHub peittää
 # secretit lokista joka tapauksessa, mutta siihen ei nojata.
 
@@ -121,8 +129,10 @@ on:
         default: 'lyria'
         options: ['lyria', 'eleven']
 
+# Ajo ei kirjoita enää repoon (mp3:t menevät ämpäriin), joten
+# lukuoikeus riittää.
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: generoi-musiikki
@@ -165,20 +175,49 @@ jobs:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: node tools/generoi-musiikki.mjs ${{ inputs.raidat }} --moottori ${{ inputs.moottori || 'lyria' }}
 
-      - name: Committoi tuotos omalle haaralleen
+      # Kuuntelukopio ajon liitteenä. Tämä on ENNEN vientiä: jos vienti
+      # kaatuu, raidat ovat silti kuunneltavissa eikä kallista
+      # generointia tarvitse toistaa.
+      - name: Liitä raidat ajoon kuuntelua varten
+        uses: actions/upload-artifact@v4
+        with:
+          name: musiikki-${{ github.run_number }}
+          path: assets/audio/*.mp3
+          retention-days: 14
+          if-no-files-found: error
+
+      - name: Vie raidat ämpäriin
+        env:
+          # Samat nimet ja sama endpoint-tyyli kuin muissakin
+          # ääniajoissa (generoi-tehosteet.yml, generoi-pulu.yml).
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita, jotka
+          # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
         run: |
           set -euo pipefail
-          git add assets/audio
-          if git diff --cached --quiet; then
-            echo "::error::Yhtään tiedostoa ei syntynyt eikä muuttunut."
+          # Kansio on tyhjä checkoutissa (assets/audio ei ole repossa),
+          # joten jokainen täällä oleva mp3 on tämän ajon tuotos. Tyhjä
+          # kansio menisi sync-komennosta läpi vihreänä eikä veisi
+          # mitään — ja vihreä ajo, joka ei vienyt mitään, on pahempi
+          # kuin punainen.
+          maara=$(find assets/audio -type f -name '*.mp3' | wc -l)
+          echo "Vietäviä raitoja: $maara"
+          if [ "$maara" -eq 0 ]; then
+            echo "::error::Yhtään raitaa ei syntynyt — ei vietävää."
             exit 1
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          haara="claude/musiikki-${{ github.run_number }}"
-          git checkout -b "$haara"
-          git commit -m "Musiikki (${{ inputs.moottori || 'lyria' }}): ${{ inputs.raidat }}"
-          git push -u origin "$haara"
-          echo "Valmis. Haara: $haara — kuuntele raidat ja tee PR."
-          echo "Kun PR on mainissa ja vie-aanet.yml on vienyt raidat ämpärin audio/-kansioon,"
-          echo "käännä js/media.js MUSIIKIN_PAATE = '-lyria'."
+          # SAMANNIMINEN RAITA KORVAUTUU ÄMPÄRISSÄ HETI, ks. ajon alun
+          # kuuntelusääntö: uusi nimi on vaaraton, uusinta ei.
+          aws s3 sync assets/audio \
+            "s3://${{ secrets.R2_BUCKET }}/audio" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --no-progress \
+            --content-type audio/mpeg \
+            --cache-control "public, max-age=2592000"
+          echo "Valmis. Raidat ovat ämpärin audio/-kansiossa ja ajon artefaktissa."
+          echo "Kuuntele artefaktista; kun raidat kelpaavat, käännä"
+          echo "js/media.js MUSIIKIN_PAATE = '-lyria'."

@@ -133,10 +133,10 @@ const LAJIEN_TIEDOT = {
  * MUSIIKKIPALETTI
  * ------------------------------------------------------------------
  *
- * Neljä raitaa, jotka menevät moottorilta repoon sellaisenaan
- * (tools/generoi-musiikki.mjs) ja ämpäriin vie-aanet.yml:n mukana.
- * Soitto-osoite lasketaan aina aaniUrl:llä, joka valitsee ämpärin tai
- * repon polun peilin tilan mukaan (js/media.js).
+ * Neljä raitaa, jotka moottori kirjoittaa paikalliseen assets/audio-
+ * kansioon (tools/generoi-musiikki.mjs) ja Actions-ajo vie suoraan
+ * ämpäriin. Soitto-osoite lasketaan aina aaniUrl:llä, joka osoittaa
+ * ämpäriin (js/media.js) — repossa ei ole äänitiedostoja.
  *
  * TIEDOSTONIMI TULEE KYTKIMESTÄ. Rivit antavat vain raidan tunnuksen
  * (`musa-pohja`), ja js/media.js `musaPolku` liittää siihen
@@ -288,9 +288,9 @@ export const TUNTEMATTOMAT_LAJIT = MUSIIKKILAJIT.filter((laji) => !LAJIEN_TIEDOT
  * Lehden koko raitaluettelo yhtenä taulukkona.
  *
  * Kenttä `ampari` on valmis R2-osoite (tai null) ja `oma` repon polku
- * muodossa assets/audio/… (tai null). Soitto-osoitteet lasketaan vasta
- * pyydettäessä (raidanOsoitteet), koska aaniUrl:n vastaus riippuu peilin
- * tilasta, joka voi vaihtua kesken istunnon.
+ * muodossa assets/audio/… (tai null) — tunniste, ei tiedoston sijainti.
+ * Soitto-osoitteet lasketaan vasta pyydettäessä (raidanOsoitteet), jotta
+ * osoitesääntö asuu yhdessä paikassa (js/media.js aaniUrl).
  */
 export const MUSIIKKISIVUN_RAIDAT = [
   ...MUSIIKKILAJIT.map((laji) => {
@@ -313,7 +313,7 @@ export const MUSIIKKISIVUN_RAIDAT = [
     nimi: raita.id,
     osasto: 'paletti',
     kaytto: raita.kaytto,
-    // Paletin raidat ovat repon omia: ämpäriosoite on aaniUrl:n
+    // Paletin raidat ovat pelin omia: ämpäriosoite on aaniUrl:n
     // audio/-polku, joka lasketaan vasta soitettaessa.
     ampari: null,
     oma: musaPolku(raita.tunnus),
@@ -323,7 +323,7 @@ export const MUSIIKKISIVUN_RAIDAT = [
     nimi: raita.nimi,
     osasto: 'kaupunki',
     kaytto: raita.kaytto,
-    // Sama polku kuin paletilla: repon assets/audio, josta aaniUrl
+    // Sama tunniste kuin paletilla (assets/audio/…), josta aaniUrl
     // tekee ämpärin audio/-osoitteen soitettaessa.
     ampari: null,
     oma: musaPolku(raita.tunnus),
@@ -356,7 +356,7 @@ export const MUSIIKKISIVUN_RAIDAT = [
 
 /**
  * Raidan soitto-osoitteet siinä järjestyksessä, jossa peli ne kokeilee:
- * ämpärin aanet/ ensin, repon oma polku (aaniUrl → ämpärin audio/) perään.
+ * ämpärin aanet/ ensin, pelin oma äänite (aaniUrl → ämpärin audio/) perään.
  */
 export function raidanOsoitteet(raita) {
   return [raita.ampari, raita.oma ? aaniUrl(raita.oma) : null].filter(Boolean);

@@ -11,8 +11,10 @@ import assert from 'node:assert/strict';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
+import { execFileSync } from 'node:child_process';
+
 import {
-  PEILI_JUURI, peiliKuvaPolku, peiliAaniPolku, aaniOsoite, onPeilista,
+  PEILI_JUURI, peiliKuvaPolku, peiliAaniPolku, aaniOsoite, aaniUrl, onPeilista,
   asetaKuva, peiliPetti, peiliKaytossa, nollaaPeili, peilinLaji, AANI_JUURI,
   KUVAN_YRITYKSET, nollaaKuvajono,
 } from '../js/media.js';
@@ -96,9 +98,56 @@ test('aaniOsoite koskee vain peilattuja lähteitä', () => {
   // Pages-sivustosta.
   assert.ok(aaniOsoite(freesound).startsWith(AANI_JUURI));
   assert.ok(onPeilista(aaniOsoite(freesound)));
-  // Repon omat tiedostot eivät kulje peilin kautta.
-  assert.equal(aaniOsoite('assets/audio/efekti-klik.mp3'), 'assets/audio/efekti-klik.mp3');
+  // Pelin oma äänite kulkee ämpärin audio/-kansion kautta: repossa ei
+  // ole äänitiedostoja (omistajan linjaus 11.9.2026), joten
+  // assets/audio-polku on pelkkä tunniste eikä osoite mihinkään.
+  assert.equal(aaniOsoite('assets/audio/efekti-klik.mp3'),
+    `${AANI_JUURI}audio/efekti-klik.mp3`);
+  // Tunniste itse ei ole peilistä — vasta siitä laskettu osoite on.
   assert.equal(onPeilista('assets/audio/efekti-klik.mp3'), false);
+  assert.equal(onPeilista(aaniOsoite('assets/audio/efekti-klik.mp3')), true);
+});
+
+test('YDINSETILLÄ EI OLE POIKKEUSTA: tehoste ja huudahdus tulevat ämpäristä', () => {
+  /*
+   * Vanha sääntö (16.8.2026) piti tehosteet ja huudahdukset repon
+   * polussa, koska palvelutyöntekijä esilatasi juuri ne. Omistaja
+   * kumosi sen 11.9.2026: repossa ei ole äänitiedostoja lainkaan, joten
+   * repon polku olisi 404 ja ydinsetin nopeus hoidetaan esilataamalla
+   * sw.js:ssä samat osoitteet ämpäristä.
+   */
+  nollaaPeili();
+  for (const polku of [
+    'assets/audio/efekti-klik.mp3',
+    './assets/audio/huudahdus-star-1.mp3',
+    'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
+  ]) {
+    assert.ok(aaniUrl(polku).startsWith(`${AANI_JUURI}audio/`), polku);
+  }
+  // Katkaisija ei koske omaan äänitteeseen: sammutettu peili ei voi
+  // pudottaa sitä polkuun, jota ei ole olemassa.
+  for (let i = 0; i < 5; i += 1) peiliPetti('aanet');
+  assert.equal(peiliKaytossa('aanet'), false);
+  assert.equal(aaniUrl('assets/audio/efekti-klik.mp3'),
+    `${AANI_JUURI}audio/efekti-klik.mp3`);
+  nollaaPeili();
+});
+
+test('VARTIO: repossa ei ole yhtään äänitiedostoa', () => {
+  /*
+   * Omistajan linjaus 11.9.2026, sanatarkasti: *"repossa ei saa olla
+   * äänitiedostoja, kaikki vain ämpärissä"*. Tiedostolista luetaan
+   * gitiltä eikä levyltä: paikallinen assets/audio on työkalujen
+   * työpöytä (.gitignore) ja saa hyvin olla täynnä mp3:ia — vain
+   * versionhallintaan päätynyt äänitiedosto on virhe.
+   */
+  const juuri = new URL('..', import.meta.url).pathname;
+  const tiedostot = execFileSync('git', ['ls-files', 'assets'], {
+    cwd: juuri, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024,
+  }).split('\n').filter(Boolean);
+  const aanet = tiedostot.filter((t) => /\.(mp3|wav|ogg|m4a)$/i.test(t));
+  assert.deepEqual(aanet, [],
+    `äänitiedostoja repossa: ${aanet.slice(0, 5).join(', ')} (varasto on ämpäri)`);
 });
 
 test('katkaisija sammuttaa peilin kolmen virheen jälkeen', () => {

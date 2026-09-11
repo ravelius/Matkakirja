@@ -66,8 +66,8 @@
  *     asynkroninen eikä pysäytä animaatiota; 404 tulee omaa tahtiaan
  *     ja päätyy `error`-käsittelijään.
  *   - Kaksi porrasta, kuten pelin muillakin omilla äänitteillä:
- *     ämpärin `aanet/`-kansio ensin, `audio/`-kansio (vie-aanet.yml)
- *     perään. Jos kumpikaan ei vastaa, laji merkitään PUUTTUVAKSI
+ *     ämpärin `aanet/`-kansio ensin, ämpärin `audio/`-kansio perään.
+ *     Kumpikin on ämpärissä: repossa ei ole äänitiedostoja. Jos kumpikaan ei vastaa, laji merkitään PUUTTUVAKSI
  *     PYSYVÄSTI — seuraava siirto ei enää yritä, eikä peli kuluta
  *     verkkoa 404-sarjaan joka heitolla.
  *   - `peiliPetti()`-katkaisijaa EI kutsuta: puuttuva oma äänite ei
@@ -121,9 +121,9 @@
  *                  valitsi Lyrian (5.9.2026 ilta, "ota lyra musiikit
  *                  kayttoon peliin ja poista vanha"); ElevenLabsin
  *                  raidat eivat ole enaa pelissa.
- *   VIENTI         Generoitu raita menee `assets/audio/`-kansioon,
- *                  jolloin .github/workflows/vie-aanet.yml vie sen
- *                  ämpärin `audio/`-kansioon automaattisesti pushissa.
+ *   VIENTI         Generoitu raita menee paikalliseen
+ *                  `assets/audio/`-kansioon (ei repoon), josta
+ *                  Actions-ajo vie sen ämpärin `audio/`-kansioon.
  *                  Peli osaa MOLEMMAT polut (ks. RAIDAT alla), joten
  *                  käsin ämpärin `aanet/`-kansioon viety raita kelpaa
  *                  myös — ja se on nopeampi tie, jos raita tulee
@@ -158,8 +158,8 @@ import {
  * YKSI TAULUKKO KAIKILLE LAJEILLE, KAKSI POLKUA KUHUNKIN.
  *
  * `ampari` on omistajan tilauksessa nimetty polku: R2-juuri +
- * aanet/<tiedosto>. `oma` on repon oma polku, josta vie-aanet.yml
- * tekee ämpärin audio/-osoitteen (js/media.js aaniUrl). Järjestys on
+ * aanet/<tiedosto>. `oma` on pelin oma tunniste, josta js/media.js
+ * aaniUrl tekee ämpärin audio/-osoitteen. Järjestys on
  * tilauksen mukainen: aanet/ ensin.
  *
  * `ryhma` kertoo, mihin raita on tehty: `siirtyma` on matkan lyhyt

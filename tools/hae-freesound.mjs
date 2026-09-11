@@ -429,7 +429,7 @@ function normalisoi(lahde, kohde, tyokansio, { tavoiteLufs, haivytys, leikkaa })
   };
 }
 
-/** Vie tiedosto ämpäriin (sama aws s3 cp kuin vie-aanet.yml). */
+/** Vie tiedosto ämpäriin (sama aws s3 cp kuin muissakin ääniajoissa). */
 function vieAmpariin(polku, avain, tyyppi) {
   const tili = process.env.R2_ACCOUNT_ID;
   const ampari = process.env.R2_BUCKET;

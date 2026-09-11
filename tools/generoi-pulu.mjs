@@ -1118,7 +1118,7 @@ function tarkista(kohde) {
   return { pituus, taso, virheet };
 }
 
-/** Vie valmis tiedosto ämpäriin (sama komento kuin vie-aanet.yml). */
+/** Vie valmis tiedosto ämpäriin (sama komento kuin muissakin ääniajoissa). */
 function vieAmpariin(kohde, nimi, kansio, tyyppi = 'audio/mpeg') {
   const tili = process.env.R2_ACCOUNT_ID;
   const ampari = process.env.R2_BUCKET;

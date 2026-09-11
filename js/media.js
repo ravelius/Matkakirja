@@ -58,28 +58,20 @@ export const AANI_JUURI = R2_JUURI;
  * Jälkimmäinen syntyi siitä, että sw.js esilatasi joka asennuksessa 420
  * äänitiedostoa, yhteensä noin 200 megatavua — ja niistä 195 Mt oli
  * luentoja, joista yksittäinen pelaaja kuulee murto-osan. Nyt esiladataan
- * vain ydinsetti (alla) ja loput haetaan ämpäristä sitä mukaa kuin niitä
- * kuunnellaan. Vienti: .github/workflows/vie-aanet.yml.
+ * vain pieni ydinsetti (tehosteet ja huudahdukset, sw.js) ja loput
+ * haetaan ämpäristä sitä mukaa kuin niitä kuunnellaan.
+ *
+ * EI ÄÄNITIEDOSTOJA REPOSSA (omistajan linjaus 11.9.2026): assets/audio
+ * ei ole enää versionhallinnassa, vaan ämpäri on äänitteiden ainoa
+ * varasto. Generointityökalut kirjoittavat paikalliseen assets/audio-
+ * kansioon (.gitignore) ja Actions-ajo vie tuotoksen suoraan ämpäriin.
+ * Siksi repon polku EI ole enää varareitti: polkua ei yksinkertaisesti
+ * ole olemassa julkaistussa pelissä.
  *
  * OFFLINE-PELAUS EI OLE TAVOITE (omistajan linjaus 16.8.2026):
  * verkkoyhteyden saa olettaa, ja välimuisti on nopeutta varten.
  */
 const AANI_ALIPOLKU = 'audio/';
-
-/*
- * YDINSETTI: esiladataan asennuksessa ja soitetaan repon omasta polusta.
- *
- * Nämä kaksi lajia ovat pelin nopeimmat äänet: tehoste kuuluu samalla
- * hetkellä kun sormi osuu laattaan, ja huudahdus samalla hetkellä kun
- * aarre paljastuu. Verkkohaku ehtisi juuri ja juuri myöhästyä, ja
- * myöhästynyt tehoste on pahempi kuin ei tehostetta lainkaan. Yhteensä
- * ne ovat 39 tiedostoa ja noin 1,3 Mt, eli asennus pysyy kevyenä.
- *
- * Ydinsetti EI kulje ämpärin kautta lainkaan — muuten sw.js:n
- * esilataama kopio jäisi käyttämättä, koska peli pyytäisi eri osoitetta.
- * Nämä tiedostot jäävät siis repoon myös silloin, kun loput poistetaan.
- */
-const YDINAANI = /^(?:efekti|huudahdus)-/;
 
 /**
  * Repon oman äänitiedoston nimi polusta, tai null jos polku ei osoita
@@ -97,21 +89,22 @@ export function omaAaniPolku(polku) {
 }
 
 /**
- * Repon oman äänitiedoston osoite: ämpäri ensin, repon polku varalla.
+ * Repon oman äänitteen soitto-osoite: AINA ämpäristä.
  *
  * TÄMÄ ON PELIN AINOA PAIKKA, jossa assets/audio-polusta tehdään
- * soitettava osoite. Kutsuja säilyttää alkuperäisen polun ja siirtyy
- * siihen, jos ämpäri pettää (onPeilista + peiliPetti('aanet') kuten
- * äänimaisemilla) — varareitti toimii niin kauan kuin tiedosto on vielä
- * repossa.
+ * soitettava osoite. Polku `assets/audio/x.mp3` on enää TUNNISTE, ei
+ * tiedoston sijainti: mp3:t eivät ole repossa (linjaus 11.9.2026),
+ * joten varareittiä repon polkuun ei ole eikä peilin katkaisija
+ * (peiliKaytossa/peiliPetti) koske tähän — sammutettu peili palauttaisi
+ * osoitteen, jossa ei ole mitään.
  *
- * Ydinsetti ja katkaisijan sammuttama peili palauttavat polun
- * sellaisenaan, jolloin tiedosto tulee pelin omasta välimuistista.
+ * Myös tehosteet ja huudahdukset kulkevat tätä kautta: niiden nopeus
+ * hoidetaan sw.js:n esilatauksella ämpärin osoitteista, ei erillisellä
+ * repon kopiolla (vanha ydinsetti-poikkeus kumottu 11.9.2026).
  */
 export function aaniUrl(polku) {
   const nimi = omaAaniPolku(polku);
-  if (!nimi || YDINAANI.test(nimi)) return polku;
-  if (!peiliKaytossa('aanet')) return polku;
+  if (!nimi) return polku;
   const versio = UUSITUT_AANET[nimi];
   return `${AANI_JUURI}${AANI_ALIPOLKU}${nimi}${versio ? `?v=${versio}` : ''}`;
 }
@@ -136,8 +129,9 @@ export function aaniUrl(polku) {
  * moottorilla `lyria` ja raidat vastaavat ämpäristä (HTTP 200
  * osoitteista `<ämpäri>audio/musa-pohja-lyria.mp3`,
  * `…/musa-visa-2-lyria.mp3`, `…/musa-aarre-lyria.mp3` ja
- * `…/musa-paaaarre-lyria.mp3` — työnkulun PR mergetään ensin, koska
- * vie-aanet.yml vie ne vasta silloin), vaihda arvoksi '-lyria'.
+ * `…/musa-paaaarre-lyria.mp3` — generoi-musiikki.yml vie ne ämpäriin
+ * heti ajossa, joten PR:ää ei tarvitse odottaa), vaihda arvoksi
+ * '-lyria'.
  * Ennen sitä arvo on '' ja vanhat raidat soivat: puuttuva tiedosto
  * hiljentäisi paletin, ja hiljainen peli näyttää rikkinäiseltä.
  */
@@ -158,7 +152,8 @@ export function musaPolku(nimi) {
  * r2.dev-reuna, sw:n äänikori) pitävät ääntä osoitteen perusteella
  * jopa 30 vrk, joten SAMALLA NIMELLÄ korvattu äänite jäisi pelaajilla
  * vanhaksi viikoiksi. Nimi pysyy nimisäännön takia samana molemmin
- * puolin (ks. vie-aanet.yml), ja tuoreus hoidetaan kyselyversiolla:
+ * puolin (assets/audio/x.mp3 → audio/x.mp3), ja tuoreus hoidetaan
+ * kyselyversiolla:
  * kun äänite äänitetään uusiksi, sen numero nousee tässä. Ämpäri
  * ohittaa kyselyn, välimuistit näkevät uuden osoitteen.
  *
@@ -581,16 +576,16 @@ export function nollaaPeili() {
 
 /**
  * Äänitteen osoite peilistä, jos se on peilattu. Peilissä ovat sekä
- * Freesoundin ja archive.orgin äänitteet (aanet/) että repon omat
- * äänitiedostot ydinsettiä lukuun ottamatta (audio/, ks. aaniUrl).
- * Muut osoitteet palautuvat sellaisenaan.
+ * Freesoundin ja archive.orgin äänitteet (aanet/) että pelin omat
+ * äänitteet (audio/, ks. aaniUrl). Muut osoitteet palautuvat
+ * sellaisenaan.
  */
 export function aaniOsoite(url) {
   if (!url) return url;
-  // Repon oma äänitiedosto kulkee oman sääntönsä kautta (audio/), ja se
-  // osaa jättää ydinsetin rauhaan. Ilman tätä haaraa jokainen
-  // soittokohta joutuisi valitsemaan kahden funktion väliltä sen
-  // mukaan, mistä ääni sattuu tulemaan.
+  // Pelin oma äänite kulkee oman sääntönsä kautta (audio/, ei
+  // katkaisijaa). Ilman tätä haaraa jokainen soittokohta joutuisi
+  // valitsemaan kahden funktion väliltä sen mukaan, mistä ääni sattuu
+  // tulemaan.
   if (omaAaniPolku(url)) return aaniUrl(url);
   if (!peiliKaytossa('aanet')) return url;
   // peiliAaniPolku tunnistaa itse, mitkä osoitteet ovat peilissä:
@@ -604,8 +599,14 @@ export function aaniOsoite(url) {
 /**
  * Hakee äänitteen puskuriin peilistä ja putoaa tarvittaessa
  * alkuperäiseen lähteeseen. Palauttaa saman kuin fetch.
+ *
+ * PELIN OMALLA ÄÄNITTEELLÄ EI OLE ALKUPERÄISTÄ LÄHDETTÄ: se syntyy
+ * täällä ja asuu vain ämpärissä (linjaus 11.9.2026). Repon polkuun
+ * putoaminen olisi toinen 404 — ja kolme sellaista sulkisi äänipeilin
+ * myös äänimaisemilta, joilla varareitti oikeasti on.
  */
 export async function haeAani(url) {
+  if (omaAaniPolku(url)) return fetch(aaniUrl(url));
   const peili = aaniOsoite(url);
   if (peili !== url) {
     /*

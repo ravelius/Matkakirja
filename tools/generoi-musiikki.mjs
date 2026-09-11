@@ -92,20 +92,21 @@
  * raita saman leikkurin läpi — ei rakentaa tänne toista.
  *
  * ------------------------------------------------------------------
- * VIENTI: REPON KAUTTA, EI SUORAAN ÄMPÄRIIN
+ * VIENTI: PAIKALLISEEN KANSIOON, SIITÄ ÄMPÄRIIN
  * ------------------------------------------------------------------
  *
- * Paletin raita kirjoitetaan `assets/audio/`-kansioon. Sieltä
- * .github/workflows/vie-aanet.yml vie sen ämpärin `audio/`-kansioon —
- * ja juuri sitä polkua peli hakee (js/media.js `aaniUrl`:
- * assets/audio/x.mp3 → <ämpäri>/audio/x.mp3). Siirtymäraidat menevät
- * ämpärin `aanet/`-kansioon, koska peli kokeilee niille ensin sitä
- * polkua; paletille aanet/ olisi umpikuja, koska yksikään paletin
- * soittokohta ei kysy sitä.
+ * Paletin raita kirjoitetaan paikalliseen `assets/audio/`-kansioon,
+ * joka EI ole repossa (omistajan linjaus 11.9.2026: äänet vain
+ * ämpärissä; kansio on .gitignoressa). Sieltä
+ * .github/workflows/generoi-musiikki.yml vie raidat ämpärin
+ * `audio/`-kansioon — ja juuri sitä polkua peli hakee (js/media.js
+ * `aaniUrl`: assets/audio/x.mp3 → <ämpäri>/audio/x.mp3).
+ * Siirtymäraidat menevät ämpärin `aanet/`-kansioon, koska peli
+ * kokeilee niille ensin sitä polkua; paletille aanet/ olisi umpikuja,
+ * koska yksikään paletin soittokohta ei kysy sitä.
  *
- * Ero on siis pelin polussa eikä maun asia. Sivutuotteena paletti
- * KUUNNELLAAN ennen julkaisua: työnkulku jättää mp3:t omalle
- * haaralleen PR:ää varten.
+ * Ero on siis pelin polussa eikä maun asia. Paletti KUUNNELLAAN ennen
+ * julkaisua ajon artefaktista, ei PR:stä — mp3:ia ei committoida.
  *
  * RAJAPINNAT
  *   Lyria (oletus):  tools/lyria.mjs — Gemini API, malli lyria-3.5,
@@ -133,7 +134,7 @@
  */
 
 import { spawnSync } from 'node:child_process';
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -591,6 +592,10 @@ async function haeElevenLabsista(raita, avain, kohde) {
     throw new Error(`HTTP ${vastaus.status}: ${(await vastaus.text()).slice(0, 400)}`);
   }
   const data = Buffer.from(await vastaus.arrayBuffer());
+  // assets/audio ei ole enää repossa (omistajan linjaus 11.9.2026:
+  // äänet vain ämpärissä), joten kansio voi puuttua tyhjästä
+  // checkoutista — luodaan se ennen kirjoitusta.
+  mkdirSync(dirname(kohde), { recursive: true });
   writeFileSync(kohde, data);
   return data.length;
 }
@@ -670,10 +675,11 @@ async function main() {
     process.exit(virheita ? 1 : 0);
   }
   if (virheita) process.exit(1);
-  console.log('Valmis. Muista: tiedostot repoon ja KUUNTELE ne ennen julkaisua —');
-  console.log('looppiraidoilta sauma, aarreraidoilta se että aihe on kuultavasti sama.');
+  console.log('Valmis. Tiedostot ovat paikallisessa assets/audio-kansiossa (ei repoon) —');
+  console.log('KUUNTELE ne ennen julkaisua: looppiraidoilta sauma, aarreraidoilta se');
+  console.log('että aihe on kuultavasti sama. Actions-ajo vie ne ämpäriin.');
   if (liput.moottori === 'lyria') {
-    console.log('Kun raidat ovat ämpärissä (vie-aanet.yml → audio/musa-*-lyria.mp3),');
+    console.log('Kun raidat ovat ämpärissä (audio/musa-*-lyria.mp3),');
     console.log("käännä js/media.js MUSIIKIN_PAATE = '-lyria'.");
   }
 }

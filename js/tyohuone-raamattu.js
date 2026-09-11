@@ -6417,6 +6417,21 @@ export const RAAMATTU = {
       otsikko: 'Äänet ja luennat',
       tila: 'luonnos',
       kohdat: [
+        'EI AANITIEDOSTOJA REPOSSA, KAIKKI VAIN AMPARISSA (omistaja '
+          + '11.9.2026 klo 11.05, sanatarkasti: "repossa ei saa olla '
+          + 'aanitiedostoja, kaikki vain amparissa"): assets/audio-kansion '
+          + 'mp3:t poistetaan reposta (git-historiaa ei kirjoiteta uusiksi) ja '
+          + 'peli hakee KAIKKI omat aanitteet - myos tehosteet ja huudahdukset - '
+          + 'amparista media.matkakirja.app/audio/. Tama KUMOAA 16.8.2026 '
+          + 'linjauksen repossa asuvasta ydinsetista: ydinsetin nopeus '
+          + 'hoidetaan esilataamalla se service workerin koriin amparista, ei '
+          + 'repon polusta. Generointityokalut (luennat, kaaret, kohtaamiset, '
+          + 'huudahdukset, musiikki) kirjoittavat paikalliseen assets/audio-'
+          + 'kansioon, joka on .gitignoressa, ja Actions-ajot vievat tuotoksen '
+          + 'suoraan ampariin - mp3:ia ei committoida haaroihin eika PR:iin. '
+          + 'Repon polkua ei ole enaa varareittina; amparin pettaessa aani jaa '
+          + 'soimatta (peili on ainoa lahde). Tarkentaa linjauksia KAIKKI '
+          + 'SISALTO AMPARISTA (18.8.) ja KAIKKI UUSI MEDIA AMPARIIN (21.8.).',
         'Viisas Kertoja lukee saapumiset, kohtaamiset ja '
           + 'aarretekstit. Luenta = teksti sanasta sanaan; arvottavia '
           + 'pulmia ei lueta.',
@@ -6828,6 +6843,13 @@ export const RAAMATTU = {
       otsikko: 'Tuotantotalous (kehitystyo)',
       tila: 'kirjattu 31.8.2026 (omistajan tilaus samana iltana)',
       kohdat: [
+        'KYSYMYKSET OMISTAJALLE AINA KYSYMYSKORTTINA (omistaja 11.9.2026 klo '
+          + '12.10, sanatarkasti: "Jos sinulla tulee minulle kysyttavaa, niin tee '
+          + 'aina kysymyskortit. Muuten menee minulta ohi."): Fable ei koskaan '
+          + 'jata kysymysta pelkkaan tekstivastaukseen - jokainen omistajan '
+          + 'paatosta vaativa asia esitetaan AskUserQuestion-korttina '
+          + 'vaihtoehtoineen. Tyosessiot (Opus/Sonnet) eivat kysy omistajalta '
+          + 'lainkaan (roolitus 10.8.2026); ne raportoivat Fablelle.',
         'FABLEMAXIA SAASTELIAASTI (omistaja 31.8.2026, sanatarkka: '
           + '"Kayta fablemaxia mahdollisimman saasteliaasti. Se '
           + 'kuluttaa lahes 100 kertaa enemman kuin opus"): '

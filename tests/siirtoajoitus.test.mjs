@@ -263,7 +263,7 @@ test('kolme raitaa omilla poluillaan ämpärin aanet-kansiossa', () => {
     assert.match(MUSA, new RegExp(`aanet/siirtyma-${laji}-lyria\\.mp3`),
       `raidan ${laji} ämpäripolku puuttuu`);
     assert.match(MUSA, new RegExp(`assets/audio/siirtyma-${laji}-lyria\\.mp3`),
-      `raidan ${laji} varapolku (vie-aanet.yml) puuttuu`);
+      `raidan ${laji} varapolku (ämpärin audio/, aaniUrl) puuttuu`);
   }
 });
 

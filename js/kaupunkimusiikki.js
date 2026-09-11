@@ -34,8 +34,9 @@
  *    (`musa-kaupunki-<id>.mp3`), ja tests/kaupunkimusiikki.test.mjs
  *    kaatuu, jos taulut eroavat.
  * 3. Aja työnkulku "Generoi musiikki" (raidat: `<id>` tai
- *    `kaupungit`), kuuntele raita PR:ssä ja merge — vie-aanet.yml vie
- *    sen ämpärin audio/-kansioon, jota peli hakee.
+ *    `kaupungit`) — ajo vie raidan ämpärin audio/-kansioon, jota peli
+ *    hakee, ja liittää sen ajon artefaktiksi. Kuuntele artefaktista;
+ *    mp3:ia ei committoida (äänet eivät ole repossa, 11.9.2026).
  *
  * Puuttuva raita ei riko mitään: jos tiedostoa ei ole ämpärissä (404),
  * pohjavire jatkaa soimistaan eikä pelaaja huomaa mitään.

@@ -24,7 +24,7 @@
 # kirjoittaa media/-kansioon, joka on .gitignoressa — se tarkistetaan
 # koneellisesti ennen ensimmäistäkään maksullista kutsua — ja vie
 # tiedostot sieltä ämpärin aanet/tehosteet/-kansioon samalla
-# aws s3 cp -komennolla kuin vie-aanet.yml. Peli hakee tasan sen polun,
+# aws s3 cp -komennolla kuin muutkin ääniajot. Peli hakee tasan sen polun,
 # joten tehosteet ovat pelissä heti ajon jälkeen ilman julkaisua.
 #
 # KUUNTELE VARIANTIT AJON JÄLKEEN. Ajo tarkistaa koneellisesti keston
@@ -38,7 +38,7 @@
 # Salaisuudet ovat tämän repon Actions-asetuksissa eivätkä koskaan
 # täällä: ELEVEN_API_KEY (sama kuin generoi-musiikki.yml ja
 # generoi-siirtymamusiikki.yml) sekä neljä R2-salaisuutta (samat kuin
-# vie-aanet.yml ja peilaa.yml):
+# muut ääniajot ja peilaa.yml):
 #   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
 # Avain ei tulostu lokiin: työkalu ei tulosta sitä eikä tämä ajo echoa
 # sitä — GitHub peittää secretit joka tapauksessa, mutta siihen ei nojata.
@@ -78,7 +78,7 @@ jobs:
     timeout-minutes: 30
     env:
       # Vienti on työkalun sisällä, mutta salaisuudet tulevat tästä —
-      # samat nimet ja sama endpoint-tyyli kuin vie-aanet.yml:ssä.
+      # samat nimet ja sama endpoint-tyyli kuin muissakin ääniajoissa.
       AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: auto
