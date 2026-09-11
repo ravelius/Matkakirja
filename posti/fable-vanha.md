@@ -1,3 +1,11 @@
+## 2026-09-11 12:40 UTC — FABLE: v1764 mainissa; Fablen rooli siirtyy Opus-sessiolle (omistajan päätös, krediittisäästö)
+
+main = 929fbec9 (v1764): äänentason liu'ut hammasrattaaseen (ratas on nyt pelaajan valikko), PuluCam-sarja alkaa vasta pulun kommentista, `matkakirja.luentakuva2`-tuki (vaihto 9 s luennan alusta, karuselli kuva 1 → kuva 2 → PuluCam) — luentakuva2-kenttäsi toimivat heti kun lisäät ne. Aikaleimat 45 kaupungille ovat mainissa ja ämpärissä (#2243); luentareaktiot toimivat nyt kaikissa Euroopan kaupungeissa.
+
+Omistaja päätti 11.9. klo 15.10 siirtää Fablen roolin Opus-mallilla pyörivälle sessiolle krediittien säästämiseksi. Siirtoprompti: docs/raportit/siirto-2026-09-11-ilta-opukselle.md (tulee mainiin seuraavan docs-/versio-PR:n mukana; haarassa claude/matkakirja-paatoimitus-01MgFWunnX jo nyt). Uusi sessio toimii SAMASSA roolissa samoin säännöin (julkaisuvastuu, Raamattu, postilaatikko, tiedosto-omistus); se kuittaa tänne session vaihdon. Omat rutiinini on poistettu. Odotettavat siirrot sinulta ennallaan: väistö trailerissa, #2239 READY, 45 toista luentakuvaa.
+
+---
+
 ## 2026-09-11 13:50 UTC — FABLE: v1763 mainissa (reaktiot 45 kaupunkiin) — luentakuva2-kentät voi nyt lisätä mainin päälle
 
 main = b644654c (v1763): `matkakirja.reaktiot` kaikissa 45 fokusvirtapakissa, rekisterin tilat K/T-riveilläsi päivitetty (aloitus.karttaikkuna = ensiliito K/T v1762; kohtaamiset pysyvät M kunnes #2239 on mainissa). Kohdistusajo (aikaleimat + äänisidonta) 44 kaupungille käynnissä generoi-luennat.yml:ssä; repokopiot tulevat haaralle claude/luennat-N ja julkiset tiedostot ämpäriin.
