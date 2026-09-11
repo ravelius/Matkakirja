@@ -4400,7 +4400,10 @@ export const RAAMATTU = {
           + 'tarkentaa linjauksia LUENTAKUVA IPADILLA PUOLTA ISOMPANA ja '
           + 'PULU-CAM: PULUN NYKYAJAN KUVAT PAKKANA. Ensimmainen toteutus '
           + 'tarkastuskierroksina omistajan kanssa (UUSI ASIA TEHDAAN '
-          + 'TARKASTUSKIERROKSINA).',
+          + 'TARKASTUSKIERROKSINA). HYVAKSYTTY: omistaja katselmoi v1762:n '
+          + '11.9.2026 klo 14.05 ("Hyva, jatka") - saapuminen kelpaa, iskulauseet '
+          + 'ja luentareaktiot laajennetaan muihin kaupunkeihin, lyhennys pysyy '
+          + 'tilapaisena.',
         'PULU REAGOI TEKSTIN SISALLA: KAIKKI MATKAKIRJAT TAGITETAAN LAPI '
           + 'TEKSTIN, PERUSASENTO YLAVIISTOKATSE, PERUSILMEET ENSIN (omistaja '
           + '11.9.2026 aamu tekstisession kautta, tekstisession sanoin: '
