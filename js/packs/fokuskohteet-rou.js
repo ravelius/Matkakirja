@@ -676,6 +676,59 @@ export const FOKUSKOHTEET_ROU = [
         + 'Commons (public domain)',
     },
   },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — YKSI KOHDE LISÄÄ. Omistaja 11.9.2026:
+   * *"Agentit voisivat tarkastaa myös muut Euroopan maat että
+   * kaikissa tarpeeksi nostoja."* Tavoite on vähintään 20 pääkartan
+   * nostoa per Euroopan maa; Romania oli 19:ssä.
+   *
+   * Kohde on kaukana Bukarestin laatasta (128 lautayksikköä), joten se
+   * on pääkartan merkki eikä valu kohdekartalle. Kuvaton nosto: sama
+   * linja kuin muissa tämän erän kohteissa (js/packs/maastokohteet-aut.js),
+   * kuvat tilataan erikseen. Faktat en-Wikipediasta 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'voronet',
+    nimi: 'Voronețin luostari',
+    symboli: 'kulttuuri',
+    tyyppi: 'muu',
+    kysymykset: [
+      'Miten seinämaalaukset ovat kestäneet ulkona?',
+      'Mikä Bukovina on?',
+    ],
+    korostukset: ['eksonarteksi|eksonarteksin', 'Moldova|Moldovan'],
+    nappi: 'Kirkko, jonka ulkoseinät on maalattu täyteen',
+    // 25.6631 E / 47.5175 N — en-Wikipedia "Voroneț Monastery"
+    laudat: {
+      maailmankartta: { x: 6688.8, y: 1496.7 },
+    },
+    teksti: 'Voronețin luostari on keskiaikainen luostari Voronețin kylässä, '
+      + 'joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on '
+      + 'yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon '
+      + 'rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, '
+      + 'ja työhön meni kolme kuukautta ja kolme viikkoa.\n\n'
+      + 'Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien '
+      + 'freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa '
+      + 'azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. '
+      + 'Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan '
+      + 'metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin '
+      + 'eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on '
+      + 'kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti '
+      + 'freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit '
+      + 'keltaisia, ruskeita ja vihreitä lasitettuja keramiikkakiekkoja, joissa on '
+      + 'Moldovan vaakunan leijona ja alkuhärän pää sekä länsieurooppalaisesta '
+      + 'kirjallisuudesta lainattuja olentoja, kuten kaksipyrstöisiä merenneitoja.\n\n'
+      + 'Luostari oli tunnettu myös kalligrafiakoulustaan, jossa papit ja munkit '
+      + 'opettelivat lukemaan, kirjoittamaan ja kääntämään. Koulusta on peräisin '
+      + 'kaksi kuuluisaa romaniankielistä raamatunkäännöstä, 1871 löydetty '
+      + 'Voronețin koodeksi ja 1882 löydetty Voronețin psalttari; molemmat ovat '
+      + 'nykyään Romanian akatemian hallussa. Luostari autioitui pian vuoden 1775 '
+      + 'jälkeen, kun Habsburgit liittivät pohjoisen Moldovan itseensä, ja '
+      + 'munkkiyhteisö palasi vasta 1991. Kirkko kuuluu Unescon maailmanperintöön '
+      + 'osana Moldovan maalattuja kirkkoja.',
+    lahde: 'en-Wikipedia "Voroneț Monastery", johdanto-osa sekä osiot "History" '
+      + 'ja "Church" (tarkistettu 11.9.2026).',
+  },
 ];
 
 const ROU_TUNNUKSITTAIN = new Map(FOKUSKOHTEET_ROU.map((k) => [k.id, k]));

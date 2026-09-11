@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1777, teksti: 'Romania ja Portugali 20 karttanostoon' },
   { v: 1776, teksti: 'Euroopan karttanostot vähintään 20 per maa' },
   { v: 1775, teksti: 'Pulun valkoinen neliö pois dialogeista' },
   { v: 1774, teksti: 'Napakalotit, isommat trailerikuvat, kuvapino' },
