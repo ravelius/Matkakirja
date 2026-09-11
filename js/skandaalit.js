@@ -60,6 +60,7 @@ import {
 } from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { asetaNostonKuva, piirraNostonKuva } from './fokusnosto.js';
+import { nostokuvaAloita } from './nostokuva.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
@@ -197,13 +198,44 @@ export function avaaSkandaali(ui, iso, skandaali) {
   kortti.appendChild(sulje);
 
   const sisalto = html('div', 'fokusnosto-sisalto');
-  // Kohdemallin yhteinen ylärivi: aihesymboli ja luokan nimi.
-  sisalto.appendChild(nostosymKortinYlarivi('huuto', 'fokusnosto-ylarivi'));
-  piirraSkandaalinSisus(ui, sisalto, iso, skandaali);
+  const latoSkandaali = (kotelo, kuvakehys) => {
+    // Kohdemallin yhteinen ylärivi: aihesymboli ja luokan nimi.
+    kotelo.appendChild(nostosymKortinYlarivi('huuto', 'fokusnosto-ylarivi'));
+    piirraSkandaalinSisus(ui, kotelo, iso, skandaali, kuvakehys);
+  };
 
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
+  /*
+   * KERROS DOMIIN ENNEN KUVAESITTELYÄ: js/nostokuva.js mittaa kortin ja
+   * kuvan oikeista ruutulaatikoista, eikä irrallisella elementillä ole
+   * laatikkoa lainkaan.
+   */
   document.body.appendChild(kerros);
+  /*
+   * KUVA EDELLÄ (omistaja 11.9.2026, js/nostokuva.js). Kuvallinen
+   * skandaali avautuu ensin pelkkänä isona kuvana — GALLERIASSA SEN
+   * ENSIMMÄISENÄ KUVANA, ilman nuolia — ja "Lisää" latoo lisälehden
+   * SAMAN kuvan ympärille. Nuolet ja laskuri ilmaantuvat silloin saman
+   * kuvan päälle (ks. piirraSkandaalinGalleria). Kuvaton skandaali
+   * aukeaa suoraan tekstikorttina kuten ennenkin.
+   */
+  const paakuva = skandaalinKuvat(skandaali)[0] ?? null;
+  let kuvakehysRef = null;
+  const kaksivaihe = paakuva ? nostokuvaAloita({
+    kortti,
+    sisalto,
+    kuva: paakuva,
+    aseta: (img, leveys, onVirhe) => asetaNostonKuva(img, paakuva, leveys, onVirhe),
+    // Suurennos näyttää sen kuvan, joka on kohdalla — galleria
+    // kirjoittaa valintansa kuvakehykseen (kehys.nostokuvaKuva).
+    avaaSuurennos: (nappi) => avaaKohdeSuurennos(
+      ui, kuvakehysRef?.nostokuvaKuva ?? paakuva, () => nappi, 'skandaaliZoom',
+    ),
+    latoNosto: latoSkandaali,
+  }) : null;
+  kuvakehysRef = kaksivaihe?.kehys ?? null;
+  if (!kaksivaihe) latoSkandaali(sisalto, undefined);
   // Kaiutin kortin otsikkoriville (omistaja 6.9.2026, juuri tästä
   // kortista: "Kaikissa missä on tekstiä, saisi olla striimi lukijan
   // symboli") — js/lukija.js lisaaLukijanappi.
@@ -273,8 +305,14 @@ export function avaaSkandaali(ui, iso, skandaali) {
  * Vanha `skandaali-ingressi` -luokka jäi pois: ingressi on nyt lehden
  * ingressi eikä leipätekstin ensimmäinen kappale, joten sen sekä oma
  * paikkansa taitossa että oma luokkansa vaihtuivat.
+ *
+ * @param {Element|null} [valmisKuva] KUVA EDELLÄ -avauksen valmis
+ *   kuvakehys (js/nostokuva.js): `undefined` piirtää kuvat kuten ennen,
+ *   elementti ottaa juuri sen kehyksen gallerian pääkuvaksi, ja `null`
+ *   jättää pääkuvan pois — se on peruttu kuvaesittely, jonka kuva ei
+ *   latautunut.
  */
-function piirraSkandaalinSisus(ui, sailio, iso, skandaali) {
+function piirraSkandaalinSisus(ui, sailio, iso, skandaali, valmisKuva) {
   skandaaliLataaTyyli();
   sailio.appendChild(html('p', 'looppi-nimio', 'Lisälehti'));
   const paivays = [skandaali.paikka, skandaali.vuosi].filter(Boolean).join(' · ');
@@ -283,7 +321,7 @@ function piirraSkandaalinSisus(ui, sailio, iso, skandaali) {
   for (const kappale of jaaKappaleiksi(skandaali.kortti ?? '')) {
     sailio.appendChild(html('p', 'looppi-ingressi', kappale));
   }
-  piirraSkandaalinKuvat(ui, sailio, skandaali);
+  piirraSkandaalinKuvat(ui, sailio, skandaali, valmisKuva);
   const teksti = html('div', 'fokusnosto-teksti looppi-leipa');
   for (const kappale of jaaKappaleiksi(skandaali.teksti ?? '')) {
     teksti.appendChild(html('p', '', kappale));
@@ -322,14 +360,26 @@ export function skandaalinKuvat(skandaali) {
  * isona, nuolet ja laskuri kuvan päällä, kuvateksti ja lähderivi
  * vaihtuvat kuvan mukana.
  */
-function piirraSkandaalinKuvat(ui, sailio, skandaali) {
-  const kuvat = skandaalinKuvat(skandaali);
+function piirraSkandaalinKuvat(ui, sailio, skandaali, valmisKuva) {
+  const kaikki = skandaalinKuvat(skandaali);
+  if (!kaikki.length) return;
+  /*
+   * PERUTTU KUVAESITTELY VIE VAIN PÄÄKUVAN. Kuvaesittely peruuntuu, kun
+   * gallerian ENSIMMÄINEN kuva ei latautunut (js/nostokuva.js peru);
+   * sarjan loput kuvat ovat silti olemassa, joten ne ladotaan tavalliseen
+   * tapaan eikä koko sarja katoa yhden puuttuvan tiedoston takia.
+   */
+  const kuvat = valmisKuva === null ? kaikki.slice(1) : kaikki;
   if (!kuvat.length) return;
-  if (kuvat.length === 1) {
+  if (kuvat.length === 1 && !valmisKuva) {
     piirraNostonKuva(ui, sailio, kuvat[0], 'fokusnosto-kuva', SKANDAALI_KUVA_PX, 'skandaaliZoom');
     return;
   }
-  piirraSkandaalinGalleria(ui, sailio, skandaali, kuvat);
+  if (kuvat.length === 1) {
+    sailio.appendChild(valmisKuva);
+    return;
+  }
+  piirraSkandaalinGalleria(ui, sailio, skandaali, kuvat, valmisKuva ?? undefined);
 }
 
 /**
@@ -341,28 +391,58 @@ function piirraSkandaalinKuvat(ui, sailio, skandaali) {
  * seuraava näytetään; jos yksikään ei lataudu, koko kehys piiloutuu
  * eikä kortille jää tyhjää laatikkoa lupaamaan kuvaa, jota ei ole.
  */
-function piirraSkandaalinGalleria(ui, sailio, skandaali, kuvat) {
+function piirraSkandaalinGalleria(ui, sailio, skandaali, kuvat, valmisKehys) {
   const jaljella = [...kuvat];
-  const kehys = html('figure', 'fokusnosto-kuva skandaali-kuva');
-  const nappi = html('button', 'fokusnosto-kuvanappi');
-  nappi.type = 'button';
-  nappi.title = 'Katso kuva suurempana';
-  const img = document.createElement('img');
-  img.decoding = 'async';
-  img.draggable = false;
-  nappi.appendChild(img);
-  kehys.appendChild(nappi);
+  /*
+   * VALMIS KUVAKEHYS ON GALLERIAN PÄÄKUVA (js/nostokuva.js).
+   *
+   * Vaiheessa 1 kortissa on pelkkä sarjan ENSIMMÄINEN kuva isona,
+   * lyhyt kuvateksti ja "Lisää" — ei nuolia. Vaiheessa 2 galleria
+   * rakennetaan SAMAN kehyksen ympärille: sama figure, sama nappi,
+   * sama img ja sama src, joten kuva ei liiku eikä lataudu uudestaan.
+   * Nuolet ja laskuri ilmaantuvat kuvan päälle, ja kuvatekstin sekä
+   * lähderivin paikan ottavat kehyksen omat rivit (.nostokuva-teksti,
+   * .nostokuva-lahde), joita selaus päivittää kuvan mukana.
+   */
+  const kehys = valmisKehys
+    ?? html('figure', 'fokusnosto-kuva skandaali-kuva');
+  const nappi = valmisKehys
+    ? valmisKehys.querySelector('.nostokuva-nappi')
+    : html('button', 'fokusnosto-kuvanappi');
+  const img = valmisKehys
+    ? valmisKehys.querySelector('.nostokuva-img')
+    : document.createElement('img');
+  if (valmisKehys) kehys.classList.add('skandaali-kuva');
+  else {
+    nappi.type = 'button';
+    nappi.title = 'Katso kuva suurempana';
+    img.decoding = 'async';
+    img.draggable = false;
+    nappi.appendChild(img);
+    kehys.appendChild(nappi);
+  }
 
-  const kuvateksti = html('figcaption', 'fokusnosto-kuvateksti');
-  const selite = html('span', 'fokusnosto-kuvaselite');
-  const lahderivi = html('span', 'fokusnosto-kuvalahde');
-  kuvateksti.append(selite, lahderivi);
-  kehys.appendChild(kuvateksti);
+  const selite = valmisKehys
+    ? valmisKehys.querySelector('.nostokuva-teksti')
+    : html('span', 'fokusnosto-kuvaselite');
+  const lahderivi = valmisKehys
+    ? valmisKehys.querySelector('.nostokuva-lahde')
+    : html('span', 'fokusnosto-kuvalahde');
+  if (!valmisKehys) {
+    const kuvateksti = html('figcaption', 'fokusnosto-kuvateksti');
+    kuvateksti.append(selite, lahderivi);
+    kehys.appendChild(kuvateksti);
+  }
 
   const laskuri = html('span', 'skandaali-kuvalaskuri');
   let kohdalla = 0;
 
-  const nayta = () => {
+  /**
+   * @param {boolean} [lataa] `false` jättää kuvan koskematta: valmis
+   *   kehys näyttää jo oikeaa kuvaa, eikä src:ää saa kirjoittaa
+   *   uudestaan (selain lataisi kuvan ja se välähtäisi).
+   */
+  const nayta = (lataa = true) => {
     if (!jaljella.length) {
       kehys.hidden = true;
       return;
@@ -383,6 +463,10 @@ function piirraSkandaalinGalleria(ui, sailio, skandaali, kuvat) {
     taytaLahderivi(lahderivi, kuva.lahde ?? '', kuva);
     laskuri.textContent = jaljella.length > 1 ? `${kohdalla + 1} / ${jaljella.length}` : '';
     laskuri.hidden = jaljella.length < 2;
+    // Suurennos näyttää sen kuvan, joka on kohdalla — myös silloin kun
+    // napin avaa js/nostokuva.js (ks. avaaSkandaali avaaSuurennos).
+    kehys.nostokuvaKuva = kuva;
+    if (!lataa) return;
     asetaNostonKuva(img, kuva, SKANDAALI_KUVA_PX, () => {
       const paikka = jaljella.indexOf(kuva);
       if (paikka < 0) return;
@@ -391,15 +475,18 @@ function piirraSkandaalinGalleria(ui, sailio, skandaali, kuvat) {
       nayta();
     });
   };
-  nayta();
+  nayta(!valmisKehys);
 
   // Napautus suurentaa, kuten kortin muillakin kuvilla; suurennos saa
-  // sen kuvan, joka on kohdalla.
-  nappi.addEventListener('click', (tapahtuma) => {
-    tapahtuma.stopPropagation();
-    if (!jaljella.length) return;
-    avaaKohdeSuurennos(ui, jaljella[kohdalla], () => nappi, 'skandaaliZoom');
-  });
+  // sen kuvan, joka on kohdalla. Valmiilla kehyksellä kuuntelija on jo
+  // paikallaan (js/nostokuva.js) eikä sitä saa lisätä toista kertaa.
+  if (!valmisKehys) {
+    nappi.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      if (!jaljella.length) return;
+      avaaKohdeSuurennos(ui, jaljella[kohdalla], () => nappi, 'skandaaliZoom');
+    });
+  }
 
   const nuoli = (luokka, merkki, nimi, suunta) => {
     const nap = html('button', `skandaali-kuvanuoli ${luokka}`, merkki);
@@ -486,7 +573,11 @@ export function suljeSkandaali(ui) {
   // syvennystarinalla (js/syvennys.js suljeSyvennys).
   suljeKohdeSuurennos(ui, 'skandaaliZoom');
   if (typeof document === 'undefined') return;
-  for (const vanha of document.querySelectorAll('.skandaali-kerros')) vanha.remove();
+  for (const vanha of document.querySelectorAll('.skandaali-kerros')) {
+    // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
+    vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
+    vanha.remove();
+  }
 }
 
 /* ==================== KYTKENTÄ ==================== */

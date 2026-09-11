@@ -53,10 +53,11 @@ import { kaupunginJuliste } from './packs/julisteet.js';
 import { FOKUSVIRRAT } from './packs/fokusvirrat.js';
 import { SYVENNYSPAIKAT } from './packs/syvennyspaikat.js';
 import {
-  rekisteroiLisakohteet, rekisteroiMaanKohteet, suljeKohdeSuurennos,
+  avaaKohdeSuurennos, rekisteroiLisakohteet, rekisteroiMaanKohteet, suljeKohdeSuurennos,
 } from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
-import { piirraNostonKuva } from './fokusnosto.js';
+import { asetaNostonKuva, piirraNostonKuva } from './fokusnosto.js';
+import { nostokuvaAloita } from './nostokuva.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
@@ -189,14 +190,36 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
   kortti.appendChild(sulje);
 
   const sisalto = html('div', 'fokusnosto-sisalto');
-  // Kohdemallin yhteinen ylärivi: aihesymboli ja luokan nimi.
-  sisalto.appendChild(nostosymKortinYlarivi(tiedot?.symboli, 'fokusnosto-ylarivi'));
-  piirraSyvennysSisus(ui, sisalto, cityId, taky);
+  const latoSyvennys = (kotelo, kuvakehys) => {
+    // Kohdemallin yhteinen ylärivi: aihesymboli ja luokan nimi.
+    kotelo.appendChild(nostosymKortinYlarivi(tiedot?.symboli, 'fokusnosto-ylarivi'));
+    piirraSyvennysSisus(ui, kotelo, cityId, taky, kuvakehys);
+  };
 
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
   merkitseLivianNosto(kerros,{...taky,symboli:tiedot?.symboli});
+  /*
+   * KERROS DOMIIN ENNEN KUVAESITTELYÄ: js/nostokuva.js mittaa kortin ja
+   * kuvan oikeista ruutulaatikoista, eikä irrallisella elementillä ole
+   * laatikkoa lainkaan.
+   */
   document.body.appendChild(kerros);
+  /*
+   * KUVA EDELLÄ (omistaja 11.9.2026, js/nostokuva.js). Kuvallinen
+   * tarina avautuu ensin pelkkänä isona kuvana, ja "Lisää" latoo
+   * varsinaisen kortin SAMAN kuvan ympärille. Kuvaton tarina aukeaa
+   * suoraan tekstikorttina kuten ennenkin.
+   */
+  const kaksivaihe = taky.kuva ? nostokuvaAloita({
+    kortti,
+    sisalto,
+    kuva: taky.kuva,
+    aseta: (img, leveys, onVirhe) => asetaNostonKuva(img, taky.kuva, leveys, onVirhe),
+    avaaSuurennos: (nappi) => avaaKohdeSuurennos(ui, taky.kuva, () => nappi, 'syvennysZoom'),
+    latoNosto: latoSyvennys,
+  }) : null;
+  if (!kaksivaihe) latoSyvennys(sisalto, undefined);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele tarina' });
 
@@ -240,11 +263,20 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
  * TYYLI LADATAAN TÄSSÄ, koska osiona kutsuttaessa korttia ei avata
  * lainkaan eikä avaaSyvennys ehdi ladata sitä: luokat ovat samat
  * (fokusnosto.css, fokusvirta.css), joten myös tyylin on oltava.
+ *
+ * @param {Element|null} [valmisKuva] KUVA EDELLÄ -avauksen valmis
+ *   kuvakehys (js/nostokuva.js): `undefined` piirtää kuvan kuten ennen,
+ *   elementti sijoittaa juuri sen kehyksen (sama kuva, sama elementti,
+ *   ei uutta latausta), ja `null` jättää kuvan pois — se on peruttu
+ *   kuvaesittely, jonka kuva ei latautunut.
  */
-function piirraSyvennysSisus(ui, sailio, cityId, taky) {
+function piirraSyvennysSisus(ui, sailio, cityId, taky, valmisKuva) {
   syvennysLataaTyyli();
   sailio.appendChild(html('h3', 'fokusnosto-kortti-otsikko', taky.otsikko ?? taky.nappi));
-  if (taky.kuva) piirraNostonKuva(ui, sailio, taky.kuva, 'fokusnosto-kuva', 800, 'syvennysZoom');
+  if (valmisKuva) sailio.appendChild(valmisKuva);
+  else if (taky.kuva && valmisKuva === undefined) {
+    piirraNostonKuva(ui, sailio, taky.kuva, 'fokusnosto-kuva', 800, 'syvennysZoom');
+  }
   const teksti = html('div', 'fokusnosto-teksti');
   for (const kappale of jaaKappaleiksi(taky.teksti ?? '')) {
     teksti.appendChild(html('p', '', kappale));
@@ -327,7 +359,12 @@ export function suljeSyvennys(ui) {
   // täkynostolla (js/fokusnosto.js suljeNostonKortti).
   suljeKohdeSuurennos(ui, 'syvennysZoom');
   if (typeof document === 'undefined') return;
-  for (const vanha of document.querySelectorAll('.syvennys-kerros')) vanha.remove();
+  for (const vanha of document.querySelectorAll('.syvennys-kerros')) {
+    // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js): kortti
+    // katoaa DOMista, mutta resize-kuuntelija jäisi elämään.
+    vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
+    vanha.remove();
+  }
 }
 
 /* ==================== KYTKENTÄ ==================== */
