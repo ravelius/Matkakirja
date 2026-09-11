@@ -11,7 +11,10 @@ export function kuunteleLivianTilanteita(f){liviaTilanneKuulijat.add(f);return()
 export function aloitaLivianOdotus(tiedot={}){
  const tunnus={};let valmis=false;
  ilmoitaLivianTilanne('waiting',{...tiedot,tunnus});
- return()=>{if(valmis)return;valmis=true;ilmoitaLivianTilanne('waitingEnd',{tunnus});};
+ const lopeta=()=>{if(valmis)return;valmis=true;ilmoitaLivianTilanne('waitingEnd',{tunnus});};
+ // Tuottaja voi sitoa hyväksytyn vastauksen samaan pyyntöön ilman että
+ // nykyinen kutsuttava, idempotentti lopetusrajapinta muuttuu.
+ lopeta.tunnus=tunnus;return lopeta;
 }
 
 /**

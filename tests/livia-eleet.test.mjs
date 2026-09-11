@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { asennaLivianKasvot, valitseLivianTaustaEle } from '../js/livia-eleet.js';
+import { asennaLivianKasvot, livianMietintaEle, onkoLivianTarkkaMietinta, valitseLivianTaustaEle } from '../js/livia-eleet.js';
+import { LIVIAN_MIETINNAT } from '../js/pollo.js';
+import { LIVIA_SVG_ELEET } from '../js/livia-svg.js';
 import { ilmoitaLivianKasvopuhe } from '../js/livia-puhetila.js';
 import { livianDialogikoti, seuraaLivianDialogeja } from '../js/livia-dialogitila.js';
 
@@ -43,6 +45,65 @@ test('ensiliito kaartaa kaukaa, puhe ei katkaise sitä ja peruutus sekä reduced
  assert.equal(valmis,2,'piilotettu välilehti peruu valmistumisen');assert.equal(e.raf.size,0);
 });
 
+test('aloituslento piilottaa heti, luovuttaa trailerille ja paluu alkaa luennan alussa',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);const canvas=e.doc.body.children[0].children[0];
+ const pinta=e.doc.body.children[0],lento={},traileri={},luenta={};assert.equal(c.tilanne('startFlight',{vaihe:'alku',tunnus:lento,kaupunki:'ateena'}),true);
+ assert.equal(pinta.style.opacity,'0','Pulu piiloutuu synkronisesti ennen alkulentoa');assert.equal(c.toista('shock'),false,'idle tai muu ele ei riko kohtauksen omistusta');
+ const puhe={};ilmoitaLivianKasvopuhe(puhe,true,'Sinähän olet ihan hiessä.');assert.equal(pinta.style.opacity,'0','puhekuuntelija ei tuo Pulua lennon päälle');ilmoitaLivianKasvopuhe(puhe,false);
+ assert.equal(c.tilanne('startFlight',{vaihe:'loppu',tunnus:lento}),true);
+ assert.equal(c.tilanne('trailer',{vaihe:'kirjaimet',tunnus:traileri}),true);assert.equal(pinta.style.opacity,'0','omistus siirtyy ilman välähdystä');
+ assert.equal(c.tilanne('trailer',{vaihe:'loppu',tunnus:traileri}),true);e.tick(2000);
+ c.tilanne('narration',{tunnus:luenta,lahde:'matkakirja',ele:'lookUp'});assert.equal(pinta.style.opacity,'1');e.tick(700);assert.match(canvas.innerHTML,/data-part="whole-bird"/,'varovainen paluu alkaa isoisän luennan alussa');
+ c.tilanne('narrationEnd',{tunnus:luenta});
+});
+
+test('trailerin fallback, peruutus, stale token, reduced motion ja piilotus eivät vuoda',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);const a={},b={};
+ c.tilanne('trailer',{vaihe:'kirjaimet',tunnus:a});e.tick(1300);c.tilanne('trailer',{vaihe:'loppu',tunnus:a});e.tick(2990);assert.equal(e.raf.size,0);e.tick(30);assert.ok(e.raf.size,'3 s fallback aloittaa paluun');e.tick(1800);
+ c.tilanne('trailer',{vaihe:'kirjaimet',tunnus:b});assert.equal(c.tilanne('trailer',{vaihe:'peru',tunnus:a}),false,'stale token on hiljainen');assert.equal(c.tilanne('trailer',{vaihe:'peru',tunnus:b}),true);e.tick(5000);assert.equal(e.timers.size,1,'vain adapterin normaali taustakello jää');
+ e.reduced.matches=true;c.tilanne('trailer',{vaihe:'kirjaimet',tunnus:a});assert.equal(e.doc.body.children[0].style.opacity,'0');c.tilanne('trailer',{vaihe:'loppu',tunnus:a});e.tick(3010);assert.equal(e.doc.body.children[0].style.opacity,'1');
+ e.reduced.matches=false;c.tilanne('trailer',{vaihe:'kirjaimet',tunnus:b});e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));e.tick(4000);assert.equal(e.raf.size,0);assert.equal(e.doc.body.children[0].style.opacity,'0');e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));assert.equal(e.doc.body.children[0].style.opacity,'0','aktiivinen kohtaus säilyttää piilotuksen taustatauon yli');assert.equal(c.tilanne('trailer',{vaihe:'peru',tunnus:b}),true);assert.equal(e.doc.body.children[0].style.opacity,'1');c.tuhoa();assert.equal(e.timers.size,0);
+});
+
+test('trailerin piilotus kestää puhepiirron ja peru katkaisee keskeneräisen väistön',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const token={},speech={};const pinta=e.doc.body.children[0];
+ c.tilanne('trailer',{vaihe:'kirjaimet',tunnus:token});e.tick(1300);
+ ilmoitaLivianKasvopuhe(speech,true,'Tervetuloa');e.tick(100);
+ assert.equal(pinta.style.opacity,'0','oma puhe ei paljasta lintua trailerin aikana');
+ ilmoitaLivianKasvopuhe(speech,false);
+ c.tilanne('trailer',{vaihe:'peru',tunnus:token});
+ const toinen={};c.tilanne('trailer',{vaihe:'kirjaimet',tunnus:toinen});e.tick(300);
+ assert.ok(e.raf.size,'väistö on yhä kesken');
+ c.tilanne('trailer',{vaihe:'peru',tunnus:toinen});
+ const asento=pinta.children[0].innerHTML;e.tick(1500);
+ assert.equal(e.raf.size,0,'peruttu väistö ei jatka rAF-silmukkaa');
+ assert.equal(pinta.style.opacity,'1');assert.equal(pinta.children[0].innerHTML,asento);
+});
+
+test('saapumisen oma puhe ei muuta varapaluuta staattiseksi ilmestymiseksi',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const lento={},traileri={},speech={};const pinta=e.doc.body.children[0];
+ c.tilanne('startFlight',{vaihe:'alku',tunnus:lento});
+ c.tilanne('trailer',{vaihe:'kirjaimet',tunnus:traileri});
+ c.tilanne('trailer',{vaihe:'loppu',tunnus:traileri});
+ ilmoitaLivianKasvopuhe(speech,true,'Tervetuloa Ateenaan');e.tick(3010);
+ assert.equal(pinta.style.opacity,'1');const eka=pinta.children[0].innerHTML;
+ e.tick(450);assert.notEqual(pinta.children[0].innerHTML,eka,'Pulu palaa liikkeellä vaikka oma tervehdys soi');
+ ilmoitaLivianKasvopuhe(speech,false);
+});
+
+test('traileriton aloituslento vapautuu lennon jälkeisen matkakirjaluennan alusta',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);const pinta=e.doc.body.children[0],canvas=pinta.children[0],lento={},luenta={};
+ c.tilanne('startFlight',{vaihe:'alku',tunnus:lento});e.tick(1300);
+ c.tilanne('narration',{tunnus:luenta,lahde:'matkakirja',ele:'lookUp'});c.tilanne('narrationEnd',{tunnus:luenta});e.tick(2000);
+ assert.equal(pinta.style.opacity,'0','lennon aikana päättynyt luenta ei vapauta');
+ c.tilanne('startFlight',{vaihe:'loppu',tunnus:lento});c.tilanne('narration',{tunnus:luenta,lahde:'matkakirja',ele:'lookUp'});e.tick(600);assert.match(canvas.innerHTML,/data-part="whole-bird"/);
+ c.tilanne('narrationEnd',{tunnus:luenta});
+ const ilmanTraileria={};c.tilanne('startFlight',{vaihe:'alku',tunnus:ilmanTraileria});e.tick(1300);c.tilanne('startFlight',{vaihe:'loppu',tunnus:ilmanTraileria,odottaaTraileria:false});e.tick(2990);assert.equal(e.raf.size,0);e.tick(30);assert.ok(e.raf.size,'UI:n varmistama traileriton lento saa 3 s fallbackin');e.tick(1800);
+ const peruttu={};c.tilanne('startFlight',{vaihe:'alku',tunnus:peruttu});assert.equal(c.tilanne('startFlight',{vaihe:'peru',tunnus:lento}),false);assert.equal(c.tilanne('startFlight',{vaihe:'peru',tunnus:peruttu}),true);e.tick(5000);assert.equal(e.raf.size,0);
+});
+
 test('visan lukitus voittaa nopean varoituksen mutta ei puhetta, luentaa tai odotusta',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
  const varoitus={lahde:'visa',tunnus:'aarre.kysymys.viimeinenYritys',ele:'doubleTake',voimakkuus:.6};
@@ -79,6 +140,46 @@ test('pöllö odottaa poissa, vastaus palaa heti; puhe ja tuho eivät jätä aja
  ilmoitaLivianKasvopuhe(token,false);e.tick(40);assert.equal(e.raf.size,0,'äänen loppu pysäyttää nokan');
  c.tuhoa();assert.equal(e.raf.size,0);assert.equal(e.timers.size,0);assert.equal(e.doc.body.children.length,0);
  ilmoitaLivianKasvopuhe(token,true,'myöhässä');assert.equal(e.raf.size,0);ilmoitaLivianKasvopuhe(token,false);
+});
+
+test('chatpyyntö lähtee tekstin mukaan ja vain saman tokenin vastaus tuo takaisin',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);e.pollo.auki=true;e.notify(e.button);
+ const row=new e.El();row.className='pollo-odottaa';row.textContent='Hyvä kysymys. Käyn kysymässä pöllöltä, pieni hetki..';e.virta.append(row);
+ const a={},stale={};c.tilanne('waiting',{tunnus:a,lahde:'kysymys'});e.notify(e.virta);e.tick(3300);const canvas=e.doc.body.children[0].children[0];assert.doesNotMatch(canvas.innerHTML,/data-part="whole-bird"/);
+ row.textContent='No nyt kesti. Pöllöllä on pitkä puheenvuoro..';e.notify(e.virta);e.tick(5000);assert.doesNotMatch(canvas.innerHTML,/data-part="whole-bird"/,'pitkä teksti ei laukaise ennenaikaista paluuta');
+ assert.equal(c.tilanne('waitingAnswer',{tunnus:stale,teksti:'väärä'}),false);assert.doesNotMatch(canvas.innerHTML,/data-part="whole-bird"/);
+ assert.equal(c.tilanne('waitingAnswer',{tunnus:a,teksti:'Tässä on vastaus.'}),true);c.tilanne('waitingEnd',{tunnus:a});const puhe={};ilmoitaLivianKasvopuhe(puhe,true,'Tässä on vastaus.');e.tick(6000);assert.match(canvas.innerHTML,/data-part="whole-bird"/,'oikean tokenin vastaus tuo Pulun takaisin');assert.match(canvas.innerHTML,/data-part="book"/,'kirja pysyy näkyvissä koko jatkuvan vastauspuheen');ilmoitaLivianKasvopuhe(puhe,false);
+});
+
+test('chatodotuksen peruutus, uusi pyyntö, piilotus ja reduced motion eivät palauta vanhaa lintua',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);e.pollo.auki=true;e.notify(e.button);
+ const row=new e.El();row.className='pollo-odottaa';row.textContent='Tää on pöllön heiniä. Vien viestin, palaan pian..';e.virta.append(row);
+ const a={},b={};c.tilanne('waiting',{tunnus:a});e.notify(e.virta);e.tick(3300);c.tilanne('waiting',{tunnus:b});c.tilanne('waitingEnd',{tunnus:a});assert.equal(c.tilanne('waitingAnswer',{tunnus:a}),false);
+ const puhe={};ilmoitaLivianKasvopuhe(puhe,true,'Vanha puhe');e.tick(100);assert.doesNotMatch(e.doc.body.children[0].children[0].innerHTML,/data-part="whole-bird"/,'puhe ei palauta aktiivisesti poissa olevaa Pulua');ilmoitaLivianKasvopuhe(puhe,false);e.tick(100);assert.equal(e.doc.body.children[0].style.opacity,'0','myöskään puheen loppu ei palauta ennen vastausta');
+ e.reduced.matches=true;e.reduced.dispatchEvent(new Event('change'));assert.equal(e.doc.body.children[0].style.opacity,'0','liikeasetuksen vaihto ei palauta poissa olevaa');
+ c.tilanne('waitingEnd',{tunnus:b});e.tick(2000);assert.equal(e.raf.size,0,'peruutus siivoaa ilman myöhäistä paluuta');
+ const r={};c.tilanne('waiting',{tunnus:r});e.notify(e.virta);assert.equal(e.doc.body.children[0].style.opacity,'0');assert.equal(c.tilanne('waitingAnswer',{tunnus:r,teksti:'Valmis'}),true);c.tilanne('waitingEnd',{tunnus:r});assert.equal(e.doc.body.children[0].style.opacity,'1');
+ const h={};e.reduced.matches=false;c.tilanne('waiting',{tunnus:h});e.notify(e.virta);e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));assert.equal(c.tilanne('waitingAnswer',{tunnus:h}),false);e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));e.tick(3000);assert.equal(e.raf.size,0);
+});
+
+test('ehdotushaun token vaihtuu kysymystokeniin katkaisematta kesken olevaa poislentoa',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);e.pollo.auki=true;e.notify(e.button);
+ const row=new e.El();row.className='pollo-odottaa';row.textContent='Tuohon on vastaus. Se on vain hieman kaukana..';e.virta.append(row);
+ const ehdotukset={},kysymys={};c.tilanne('waiting',{tunnus:ehdotukset,lahde:'ehdotukset'});e.notify(e.virta);e.tick(400);
+ c.tilanne('waiting',{tunnus:kysymys,lahde:'vastaus'});e.tick(3000);const canvas=e.doc.body.children[0].children[0];assert.doesNotMatch(canvas.innerHTML,/data-part="whole-bird"/,'uusi token ei pysäytä jo alkanutta lähtöä');
+ c.tilanne('waitingEnd',{tunnus:ehdotukset});assert.equal(c.tilanne('waitingAnswer',{tunnus:ehdotukset}),false);assert.equal(c.tilanne('waitingAnswer',{tunnus:kysymys,teksti:'Valmis'}),true);c.tilanne('waitingEnd',{tunnus:kysymys});e.tick(2200);assert.match(canvas.innerHTML,/data-part="book"/);
+});
+
+test('kaikki kriittiset mietintärivit käyttävät täsmällistä semantiikkaa',()=>{
+ assert.equal(livianMietintaEle('Katsotaas. Nokka kirjaan, siipi kartalle..'),'bookStudy');
+ assert.equal(livianMietintaEle('Hetkinen, kirjastonhoitaja on pöllö ja pöllö nukkuu päivisin..'),'listen');
+ assert.equal(livianMietintaEle('Kohta tulee. Arkistossa oli enemmän pölyä kuin muistin..'),'sneeze');
+ assert.equal(livianMietintaEle('Pieni hetki, sähkekone rätisee taas..'),'scratch');
+ assert.equal(livianMietintaEle('täysin uusi odotusteksti'),'glance');
+});
+test('kaikki 52 canonical-mietintäriviä ovat täsmäkartassa ja eleet rekisterissä',()=>{
+ const rivit=Object.values(LIVIAN_MIETINNAT).flat(),eleet=new Set(LIVIA_SVG_ELEET.map(e=>e.id));assert.equal(rivit.length,52);assert.equal(new Set(rivit).size,52);
+ for(const teksti of rivit){assert.equal(onkoLivianTarkkaMietinta(teksti),true,teksti);assert.ok(eleet.has(livianMietintaEle(teksti)),teksti);}
 });
 
 test('taustalle siirtyminen ja vähennetty liike pysäyttävät eleet, uni herää kosketuksesta',t=>{
@@ -326,10 +427,9 @@ test('T1 sallii kolme dialogia, muu modaali katkaisee myös odotuksen ja oman pu
  }
  toggle('wiki-dialog',true);assert.equal(surface.hidden,false,'aiempi chat saa staattisen pulun');
  assert.equal(c.toista('grin'),false);assert.equal(e.raf.size,0);
- e.pollo.auki=true;e.notify(e.button);const kysymys={};c.tilanne('waiting',{tunnus:kysymys});
- assert.ok(e.raf.size,'artikkelin oma chat reagoi kysymykseen heti');e.tick(7000);
- let jatkui=false;for(let i=0;i<36;i++){e.tick(250);jatkui ||= e.raf.size>0;}
- assert.ok(jatkui,'pitkä odotus jatkaa eleitä myös ensimmäisen eleen jälkeen');
+ e.pollo.auki=true;e.notify(e.button);const rivi=new e.El();rivi.className='pollo-odottaa';rivi.textContent='Tästä on kirjoitettu. Etsin mistä..';e.virta.append(rivi);const kysymys={};c.tilanne('waiting',{tunnus:kysymys});e.notify(e.virta);
+ assert.ok(e.raf.size,'artikkelin oma chat reagoi näkyvän rivin semantiikkaan');e.tick(7000);
+ rivi.textContent='Vielä hetki. Tämä on isompi asia kuin miltä se näytti..';e.notify(e.virta);assert.ok(e.raf.size,'pitkä odotusrivi vaihtaa paikallisen eleen sisällön mukana');
  c.tilanne('waitingEnd',{tunnus:kysymys});e.pollo.auki=false;e.notify(e.button);
  assert.equal(e.raf.size,0,'chatin sulku palauttaa artikkelin hiljaisuuden');
  toggle('wiki-dialog',false);assert.equal(surface.parent,e.doc.body);

@@ -104,12 +104,14 @@ test('chatin virhepolut lähettävät yhden rekisterin tagin odotuksen päätytt
   [()=>new Response(sse('Osittainen'),{headers:{'content-type':'text/event-stream'}}),'chat.vastaus.katkesi',.4,'hammentynyt',true],
  ]){
   reply=response;events.length=0;p.uusinnat=0;await p.kysy('Koekysymys');
-  assert.deepEqual(events.map(x=>x.laji),['waiting','waitingEnd','error']);
-  assert.equal(events[2].tilanneId,id);assert.equal(events[2].voimakkuus,power);assert.equal(events[2].tunne,mood);
+  const osittainen=id==='chat.vastaus.katkesi';
+  assert.deepEqual(events.map(x=>x.laji),osittainen
+    ? ['waiting','waitingAnswer','waitingEnd','error'] : ['waiting','waitingEnd','error']);
+  const virhe=events.at(-1);assert.equal(virhe.tilanneId,id);assert.equal(virhe.voimakkuus,power);assert.equal(virhe.tunne,mood);
   assert.equal(p.uusinnat>0,retry);assert.deepEqual(p.historia,[]);assert.equal(p.kesken,false);
  }
  reply=()=>Response.json({vastaus:'Aito vastaus'});events.length=0;await p.kysy('Onnistuva kysymys');
- assert.deepEqual(events.map(x=>x.laji),['waiting','waitingEnd']);assert.equal(p.historia.length,2);
+ assert.deepEqual(events.map(x=>x.laji),['waiting','waitingAnswer','waitingEnd']);assert.equal(p.historia.length,2);
 });
 
 test('mikrofonin lupa, toinen kaappausvirhe ja hiljaisuus saavat eri voimakkuudet',async t=>{

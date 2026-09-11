@@ -18,10 +18,11 @@
  *     sarjasta (livianAvausSarja) — teksti jää kaanoniin.
  *
  *  2. TUURAUSPALJASTUS. Ensimmäisessä kohdemaassa selviää, ettei pöllö
- *     ehdikään paikalle: Livia joutuu tuuraamaan. Kolmen kuplan sarja
- *     KORVAA sen saapumisen maadoituskuplan, ja se tulee vain
- *     ensimmäisellä saapumisella koskaan. Kaksi ensimmäistä kuplaa
- *     tulevat ENNEN isoisän luentaa ja kolmas VASTA sen jälkeen
+ *     ehdikään paikalle: Livia joutuu tuuraamaan. Äänirekisterin
+ *     kolmesta kaanonialkiosta kaksi ensimmäistä KORVAAVAT sen
+ *     saapumisen maadoituskuplan, ja sarja tulee vain
+ *     ensimmäisellä saapumisella koskaan. Kaksi näytettävää kuplaa
+ *     tulevat ENNEN isoisän luentaa, jonka jälkeen sarja päättyy
  *     (omistaja 7.9.2026, PULUN UUSI RYTMI ATEENASSA). Avauksen viides
  *     repliikki lupaa pöllön oppaaksi, joten nämä kaksi ovat sama
  *     kaari — älä muuta toista muuttamatta toista.
@@ -44,6 +45,7 @@ import { luennanLoppuun } from './luenta.js';
 import { polloAvauskupla, polloKuplatPois, polloSaapumiskupla, polloLivianEnsiliito, peruPolloLivianEnsiliito } from './pollo.js';
 import { sfx } from './sound.js';
 import { ETUSIVUN_KOHTEET, linssiEstaa } from './ui-apurit.js';
+import { kuunteleLivianTilanteita } from './livia-tilanteet.js';
 
 /* ------------------------------------------------------------------ *
  * Livian ääniefektit
@@ -475,18 +477,18 @@ export function peruLivianAvaus() {
  *   2. ISOISÄN LUENTA. Se alkaa VASTA kuplien jälkeen (js/ui.js
  *      asetaMerkinnanLuenta lykkää sen, aloitaLykattyLuenta päästää sen
  *      liikkeelle) ja pulu on koko luennan ajan hiljaa.
- *   3. KOLMAS KUPLA LUENNAN JÄLKEEN: ohje kaupungin napauttamiseen.
- *      Sarja odottaa luennan päättymistä (js/luenta.js luennanLoppuun);
- *      ilman luentaa odotus on yhden kuplan vähimmäislukuajan mittainen.
+ *   3. Sarja odottaa luennan päättymistä (js/luenta.js luennanLoppuun)
+ *      ja päättyy ilman uutta kuplaa. Ilman luentaa odotus on yhden
+ *      kuplan vähimmäislukuajan mittainen.
  *
  * Aiempi 5.9.2026 tilaus (pöllön kaksi ohjekuplaa pulun suuhun, "Siinä
  * lukee: Tervetuloa Kreikkaan") KUMOUTUU tällä: uudet kuplat korvaavat
  * ne edelleen, mutta sanoin, jotka omistaja kirjoitti 7.9.2026.
  *
  * PAIKAN NIMI TULEE APUREISTA (js/ui-apurit.js maahanMuoto ja
- * paikkaaMuoto): "Ateenaan" ja "Ateenaa". Ilman nimeä toivotus on
- * pelkkä "Tervetuloa." ja ohje puhuu "kaupungista" — kaanoni ei saa
- * rikkoutua puuttuvaan taivutukseen.
+ * paikkaaMuoto): "Ateenaan" näytettävään kuplaan ja "Ateenaa" vain
+ * vanhan ääniavaimen rekisteriin. Ilman nimeä toivotus on pelkkä
+ * "Tervetuloa." — kaanoni ei saa rikkoutua puuttuvaan taivutukseen.
  */
 export function livianPaljastus({ paikkaan = '', paikkaa = '' } = {}) {
   const tervetuloa = paikkaan ? `Tervetuloa ${paikkaan}.` : 'Tervetuloa.';
@@ -494,6 +496,8 @@ export function livianPaljastus({ paikkaan = '', paikkaa = '' } = {}) {
   return [
     'Kääk, apua! Pöllö on matkoilla, mutta ei hätää, tuuraan häntä sen aikaa.',
     `${tervetuloa} Kuunnellaan, mitä isoisä on kirjoittanut tästä paikasta.`,
+    // Säilyy kaanonisessa äänirekisterissä vanhalla indeksillään, mutta
+    // ei kuulu pelissä näytettävään sarjaan (naytaLivianPaljastus).
     `Kantsuu klikata ${kohde} kartalta, jos meinaat löytää aarteen.`,
   ];
 }
@@ -502,16 +506,15 @@ export function livianPaljastus({ paikkaan = '', paikkaa = '' } = {}) {
 export const LIVIAN_PALJASTUS = livianPaljastus();
 
 /**
- * ISOISÄN LUENTA TULEE TÄHÄN VÄLIIN: indeksi on sen kuplan numero,
- * joka sanotaan vasta luennan jälkeen. Kaksi ensimmäistä tulevat ennen
- * luentaa, tämä sen perään.
+ * ISOISÄN LUENTA TULEE TÄHÄN: indeksi on ennen luentaa näytettävien
+ * kuplien määrä. Sarja päättyy luennan jälkeen ilman uutta kuplaa.
  */
 export const LIVIAN_LUENNAN_PAIKKA = 2;
 
 /**
- * Kuinka kauan kolmas kupla odottaa, jos luentaa ei ole (kertoja pois,
- * mykistys, puuttuva äänite). Yhden kuplan vähimmäislukuaika on lyhin
- * tauko, joka ruudulla vielä tuntuu tauolta.
+ * Kuinka kauan sarjan päättyminen odottaa, jos luentaa ei ole (kertoja
+ * pois, mykistys, puuttuva äänite). Yhden kuplan vähimmäislukuaika on
+ * lyhin tauko, joka ruudulla vielä tuntuu tauolta.
  */
 const LUENNAN_VARAVIIVE = LUKUAIKA_VAHINTAAN;
 
@@ -522,6 +525,38 @@ const LUENNAN_VARAVIIVE = LUKUAIKA_VAHINTAAN;
  *   localStorage.removeItem('matkakirja-livia-paljastus')
  */
 export const LIVIA_PALJASTUS_TALLE = 'matkakirja-livia-paljastus';
+
+/** Purkaa mahdollisen trailerinalaisen saapumiskuplaodotuksen. */
+export function peruLivianTraileriodotus(ui) {
+  const odotus = ui?.livianTraileriodotus;
+  if (!odotus) return false;
+  ui.livianTraileriodotus = null;
+  odotus.irrota?.();
+  return true;
+}
+
+/**
+ * Siirtää saapumiskuplat aktiivisen trailerin oikean lopun taakse.
+ * Token estää vanhan trailerin tapahtumaa vapauttamasta uuden kaupungin
+ * kuplia. Peru ja kaupunginvaihto purkavat odotuksen ilman jatkoa.
+ */
+export function odotaLivianTraileria(ui, cityId, jatka) {
+  peruLivianTraileriodotus(ui);
+  const traileri = ui?.saapumistraileri;
+  if (!traileri?.tunnus) return false;
+  const odotus = { tunnus: traileri.tunnus, kaupunki: cityId, irrota: null };
+  odotus.irrota = kuunteleLivianTilanteita((laji, tiedot = {}) => {
+    if (laji !== 'trailer' || tiedot.tunnus !== odotus.tunnus) return;
+    if (tiedot.vaihe !== 'loppu' && tiedot.vaihe !== 'peru') return;
+    if (ui.livianTraileriodotus !== odotus) return;
+    peruLivianTraileriodotus(ui);
+    if (tiedot.vaihe === 'peru' || ui.dead) return;
+    if (ui.game?.cityOf?.()?.id !== odotus.kaupunki) return;
+    jatka();
+  });
+  ui.livianTraileriodotus = odotus;
+  return true;
+}
 
 /** Kuinka usein paljastus kysyy, onko linssi jo suljettu (ks. paljastusRepliikki). */
 const PALJASTUKSEN_LINSSIVALI = 700;
@@ -604,7 +639,12 @@ export function naytaLivianPaljastus(ui, { jalkeen = null, paikkaan = '', paikka
   } catch {
     /* yksityinen selaus: istunnon lippu kantaa loppumatkan */
   }
-  paljastusRepliikki(ui, city.id, 0, jalkeen, livianPaljastus({ paikkaan, paikkaa }),
+  // Näytetään vain kaksi ennen luentaa kuuluvaa kuplaa. Kaanonilistan
+  // kolmas alkio säilyy äänityökalun vanhana paljastus-3-avaimena,
+  // jotta olemassa olevien äänien indeksit eivät siirry.
+  const repliikit = livianPaljastus({ paikkaan, paikkaa })
+    .slice(0, LIVIAN_LUENNAN_PAIKKA);
+  paljastusRepliikki(ui, city.id, 0, jalkeen, repliikit,
     { paikkaan, paikkaa });
   return true;
 }
@@ -616,10 +656,10 @@ export function naytaLivianPaljastus(ui, { jalkeen = null, paikkaan = '', paikka
  * on olemassa vain äänitetylle variantille (js/liviapuhe.js
  * LIVIAN_AANITETTY_PALJASTUS), muualla kupla puhuu ilman ääntä.
  *
- * LUENTA TULEE KUPLIEN 2 JA 3 VÄLIIN (LIVIAN_LUENNAN_PAIKKA): toisen
- * kuplan lukuajan jälkeen isoisän luenta päästetään liikkeelle ja
- * sarja jää odottamaan sen loppua (odotaLuenta). Pulu on siis hiljaa
- * koko luennan ajan, kuten omistaja tilasi.
+ * LUENTA TULEE KUPLAN 2 JÄLKEEN (LIVIAN_LUENNAN_PAIKKA): toisen kuplan
+ * lukuajan jälkeen isoisän luenta päästetään liikkeelle ja sarja jää
+ * odottamaan sen loppua (odotaLuenta). Pulu on siis hiljaa koko luennan
+ * ajan, kuten omistaja tilasi.
  */
 function paljastusRepliikki(ui, cityId, i, jalkeen, repliikit = LIVIAN_PALJASTUS, variantti = {}) {
   clearTimeout(paljastusAjastin);
@@ -660,8 +700,8 @@ function paljastusRepliikki(ui, cityId, i, jalkeen, repliikit = LIVIAN_PALJASTUS
   /*
    * SAMA JATKO NAPAUTUKSELLE JA AJASTIMELLE. Luennan edellä oleva
    * kupla ei saa ohittaa luentaa silloinkaan kun pelaaja napauttaa sen
-   * pois: napautus vain päästää luennan liikkeelle aiemmin, ja kolmas
-   * kupla odottaa yhä sen loppua (odotaLuenta). Ilman tätä napautus
+   * pois: napautus vain päästää luennan liikkeelle aiemmin, ja sarjan
+   * päättyminen odottaa yhä sen loppua (odotaLuenta). Ilman tätä napautus
    * jättäisi luennan lykkäykseensä eikä isoisää luettaisi lainkaan.
    */
   const jatka = i === LIVIAN_LUENNAN_PAIKKA - 1
@@ -720,17 +760,17 @@ function vapautaLuenta(ui) {
 }
 
 /**
- * PULU ON HILJAA LUENNAN AJAN: kolmas kupla odottaa, että isoisän
+ * PULU ON HILJAA LUENNAN AJAN: sarjan päättyminen odottaa, että isoisän
  * luenta on päättynyt (js/luenta.js luennanLoppuun kuuntelee sekä
  * ended/error-tapahtuman että pysähtyneen soittimen).
  *
  * Ilman luentaa — kertoja pois, mykistys tai puuttuva äänite — odotus
- * on yhden kuplan vähimmäislukuajan mittainen, jottei ohje läväytä
- * heti toisen kuplan perään.
+ * on yhden kuplan vähimmäislukuajan mittainen, jotta jälkikuplat eivät
+ * ala heti toisen kuplan perään.
  */
 function odotaLuenta(ui, cityId, jatka) {
   // Napautus voi tuoda tänne, vaikka ajastin on yhä pystyssä: sarja ei
-  // saa haarautua kahdeksi (kaksi kolmatta kuplaa).
+  // saa haarautua kahdeksi (kaksi sarjan päättävää jatkoa).
   clearTimeout(paljastusAjastin);
   paljastusAjastin = null;
   if (ui.dead || ui.game?.cityOf?.()?.id !== cityId) {

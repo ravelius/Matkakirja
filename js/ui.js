@@ -44,7 +44,7 @@ import {
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
-import { ilmoitaLivianTunne } from './livia-tilanteet.js';
+import { ilmoitaLivianTilanne, ilmoitaLivianTunne } from './livia-tilanteet.js';
 // Kehittäjän kohtaamislista (omistaja 5.9.2026): oma moduulinsa, joka
 // hoitaa lehden, hiekkalaatikon ja pelin kloonauksen kokonaan itse.
 import { avaaKohtaamistesti } from './kohtaamistesti.js';
@@ -148,8 +148,8 @@ import { kuvavinkkiOsio } from './kuvavinkki.js';
  */
 import {
   livianPaljastusOdottaa, naytaLivianAvaus, naytaLivianPaljastus, nollaaLivianVihjeet,
-  paivitaMannerivihje,
-  peruLivianAvaus,
+  odotaLivianTraileria, paivitaMannerivihje,
+  peruLivianAvaus, peruLivianTraileriodotus,
 } from './livia.js';
 // Viiden symbolin reaktionappi sisällön kylkeen (js/reaktiot.js).
 // ui.js tarvitsee tästä kuvasuurennoksen napin ja litteiden
@@ -4421,6 +4421,8 @@ export class UI {
     // Ensiliidon kupla, ääni ja piilotuskuuntelijat kuuluvat tälle
     // näkymälle: uusi peli ei odota niiden seuraavaa ajastinkierrosta.
     peruLivianAvaus();
+    peruLivianTraileriodotus(this);
+    this.paataAloituslennonSignaali('peru');
     // Laudan purku vie linssikerroksetkin (lauta.linssit.pura).
     this.pallolinssi = null;
     this.pallolauta?.pura();
@@ -11865,12 +11867,6 @@ export class UI {
    */
   async doPickStart(city) {
     const { game } = this;
-    /*
-     * Livian avausesittely väistyy heti, kun pelaaja tekee valintansa
-     * (omistaja 29.8.2026: kuplat eivät estä valintaa). Kaupungin voi
-     * napauttaa kesken minkä tahansa repliikin.
-     */
-    peruLivianAvaus();
     const portti = (city.links ?? []).length > 0;
     // Ei ääniefektiä lähtövalinnassa (omistajan päätös 10.8.2026):
     // moottoriääni feidautuu sisään vasta lentokalvolla.
@@ -11879,6 +11875,15 @@ export class UI {
     // kuin kohdemaan kartta aukeaa.
     const lontoo = game.board.cityById.get(ALOITUSLENNON_LAHTO);
     if (lontoo && lontoo.id !== city.id) {
+      // Pulun piilotus alkaa samassa synkronisessa napautusketjussa,
+      // ennen avaussarjan purkua, verhoa tai ensimmäistä odotusta.
+      this.aloitaAloituslennonSignaali(city.id);
+      /*
+       * Livian avausesittely väistyy heti, kun pelaaja tekee valintansa
+       * (omistaja 29.8.2026: kuplat eivät estä valintaa). Kaupungin voi
+       * napauttaa kesken minkä tahansa repliikin.
+       */
+      peruLivianAvaus();
       /*
        * NAKSAHDUS ENSIMMÄISENÄ RIVINÄ (omistajan pelitesti 25.8.2026
        * iPhonella: *"kun klikkaa Atenaa, niin ei kuulu mitään ääntä"*).
@@ -11944,7 +11949,10 @@ export class UI {
       if (kartalento) {
         this.naytaAloitusverho();
         await this.wait(ALOITUSVERHO_SISAAN_MS);
-        if (this.dead) return;
+        if (this.dead) {
+          this.paataAloituslennonSignaali('peru');
+          return;
+        }
         /*
          * Arkki on nyt läpinäkymätön: lauta saa lakata maalautumasta
          * sen alla (css/styles.css body.lauta-arkin-alla). Vasta tässä
@@ -12019,6 +12027,14 @@ export class UI {
             'Lontoo', city.name, line,
             { dx: city.x - lontoo.x, dy: city.y - lontoo.y },
           );
+          // Liikeherkkyydessä animateFlight palaa ilman kohtauksen
+          // saapumis-renderiä. Se on onnistunut oikopolku, ei peruutus:
+          // actionPickStartin render on jo avannut mahdollisen trailerin.
+          if (this.reducedMotion && !this.dead) {
+            this.paataAloituslennonSignaali('loppu', {
+              odottaaTraileria: Boolean(this.saapumistraileri),
+            });
+          }
         }
       } finally {
         clearTimeout(this.lentoPuheAjastin);
@@ -12026,10 +12042,31 @@ export class UI {
         // poikkeukseen. Tavallisella polulla se on jo poistettu
         // (aloituslentoSisalla) ja tämä palaa heti.
         await this.piilotaAloitusverho();
+        // Tavallinen polku päätti signaalin saapumisen renderissä.
+        // Jos suoritus katkesi sitä ennen, sama token perutaan tässä.
+        this.paataAloituslennonSignaali('peru');
       }
       return;
     }
+    peruLivianAvaus();
     this.doAction(() => game.actionPickStart(city.id, portti ? 0 : null));
+  }
+
+  /** Aloituslennon yksi tunnus yhdistää alun, lopun ja peruutuksen. */
+  aloitaAloituslennonSignaali(kaupunki) {
+    this.paataAloituslennonSignaali('peru');
+    const tila = { tunnus: {}, kaupunki };
+    this.aloituslentoSignaali = tila;
+    ilmoitaLivianTilanne('startFlight', { vaihe: 'alku', ...tila });
+  }
+
+  /** Päättää aktiivisen aloituslentosignaalin tasan kerran. */
+  paataAloituslennonSignaali(vaihe, tiedot = {}) {
+    const tila = this.aloituslentoSignaali;
+    if (!tila) return false;
+    this.aloituslentoSignaali = null;
+    ilmoitaLivianTilanne('startFlight', { vaihe, ...tila, ...tiedot });
+    return true;
   }
 
 
@@ -19961,7 +19998,12 @@ export class UI {
     this.hideFlightLine();
     // Ulos astuttaessa päiväkirja pääsee ääneen: lennon ajaksi lykätty
     // saapumismerkintä alkaa kirjoittua ja soida vasta nyt.
-    if (!this.dead) this.render();
+    if (!this.dead) {
+      this.render();
+      this.paataAloituslennonSignaali('loppu', {
+        odottaaTraileria: Boolean(this.saapumistraileri),
+      });
+    }
     // Kartan bittikartta täydennetään vasta tässä: lennon aikana
     // rasterointi olisi jumittanut kalvon animaation ja puheen ajastimen.
     this.taydennaTaide?.({ heti: true });
@@ -20408,6 +20450,8 @@ export class UI {
    * ja kolmas kupla odottaa luennan lopun omassa sarjassaan.
    */
   saapumisenKuplat(kohde) {
+    const cityId = kohde?.id;
+    if (odotaLivianTraileria(this, cityId, () => this.saapumisenKuplat(kohde))) return;
     const maa = this.kaupunginMaanNimi(kohde?.id);
     const paikka = paikassaMuoto(kohde?.name);
     // Ilman maata tai kaupunkia lause jäisi puolikkaaksi — silloin
@@ -20421,6 +20465,10 @@ export class UI {
     const naytaKuplat = (viive) => {
       this.saapumisKuplaAjastin = setTimeout(() => {
         if (this.dead) return;
+        // Traileri voi syntyä vasta sen jälkeen, kun 1 s ajastin jo
+        // asetettiin. Tarkista portti uudelleen juuri ennen kuin yksikään
+        // Pulun teksti tai ääni voisi alkaa.
+        if (odotaLivianTraileria(this, cityId, () => this.saapumisenKuplat(kohde))) return;
         /*
          * LIVIAN TUURAUSPALJASTUS ENSIN (omistaja 29.8.2026): aivan
          * ensimmäisessä kohdemaassa Livia kertoo kahdella kuplalla,
@@ -21377,6 +21425,9 @@ export class UI {
      */
     this.luennanLykkays = livianPaljastusOdottaa(this);
     this.render();
+    this.paataAloituslennonSignaali('loppu', {
+      odottaaTraileria: Boolean(this.saapumistraileri),
+    });
     // Arkki pois: kartta on jo valmiissa rajauksessaan sen takana.
     await this.piilotaAloitusverho();
     if (this.dead) return;

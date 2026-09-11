@@ -21,7 +21,7 @@ test('Livian viisi elettä palaavat lepoilmeeseen eivätkä lähde vasemmalle', 
 
 test('mietintäliike seuraa näkyvän lauseen aihetta', () => {
   assert.equal(livianMietintaEle('Hyvä kysymys. Käyn kysymässä pöllöltä, pieni hetki..'),'flyAway');
-  assert.equal(livianMietintaEle('No nyt kesti. Pöllöllä on pitkä puheenvuoro..'),'flyAway');
+  assert.equal(livianMietintaEle('No nyt kesti. Pöllöllä on pitkä puheenvuoro..'),'listen');
   assert.equal(livianMietintaEle('Hetki, pululla pulla suussa..'),'crumb');
   assert.equal(livianMietintaEle('Hetki, murut pois kirjan päältä..'),'crumb');
   assert.equal(livianMietintaEle('Pieni hetki, arkiston hyllyt ovat minua korkeammalla..'),'peek');
