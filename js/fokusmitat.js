@@ -317,6 +317,42 @@ export function projisoiLaudalle(lauta, lon, lat) {
  * lehdessä) kulkee arvon perässä samoin kuin siellä.
  */
 
+/*
+ * ===== KARTUUTSI PALLOLLA (omistaja 11.9.2026 ilta) ================
+ *
+ * Sanatarkasti: *"Pelistä on muuten hävinnyt pallokartan uudistuksen
+ * myötä maan nimi ja infolaatikko ja linkki maalehteen. Ne olivat ennen
+ * vasemmassa alakulmassa. Ne saisi palauttaa näkyviin."*
+ *
+ * MIKSI NE KATOSIVAT. Kartuutsi, maataulu ja sen maalehtilinkki eivät
+ * ole koskaan olleet omaa koodiaan — ne ovat tämän tiedoston
+ * elementtejä, ja niiden AINOA ehto oli maan ikkuna (FOKUS_POHJAT,
+ * js/ui.js paivitaMaanIkkuna). Kun pallosta tuli pelilauta, tasokartta
+ * jäi nukkumaan sen alle (js/kartta.js lepotila), ja `paivitaFokusPohja`
+ * palaa nukkuvalla kartalla heti — `fokusPohjaBbox` jää siis pysyvästi
+ * nulliksi, eikä yksikään ehto enää täyty. Lisäksi laudan purku
+ * (js/ui.js puraLauta) nollaa kalusteet. Poisto oli siis sivuvaikutus,
+ * ei päätös, ja korjaus on antaa kartuutsille pallolaudan oma ehto.
+ *
+ * MAA LUETAAN SAMASTA TAULUSTA kuin kartan kohteet ja maan korostus
+ * (js/fokuskohteet.js nykyinenIso, js/maanaariviivat.js): pelaajan
+ * kaupunki → pack.map.cityCountry. Taulua ei tuoda fokuskohteista,
+ * koska se on niputuksessa VASTA tämän jälkeen (tools/build-standalone.mjs)
+ * — sama yhden rivin haku tehdään tässä.
+ *
+ * KAKSI TILAA EIVÄT OLE PELITILOJA, täsmälleen kuten tasokartalla
+ * (js/ui.js maanIkkuna): lähtökaupungin valinnassa matkaajalla ei ole
+ * maata, ja aloituslennon aikana kohdemaan nimi paljastaisi määränpään
+ * ennen kuin kone on perillä. Katselutila (?lauta=) ei ole peli.
+ */
+export function pallolaudanMaa(ui) {
+  if (!ui.pallolauta || ui.katselu) return null;
+  if (ui.game?.phase === 'pickstart' || ui.aloituslentoKesken) return null;
+  const city = ui.game?.cityOf?.();
+  if (!city) return null;
+  return ui.game?.pack?.map?.cityCountry?.[city.id] ?? null;
+}
+
 /** Maan nimi laudan omasta taulusta, versaaleina kartuutsiin. */
 function maanNimi(ui, iso) {
   return ui.game?.pack?.map?.countryShapes?.[iso]?.nimi ?? iso;
@@ -424,6 +460,14 @@ function rakenna(ui) {
 
   const sailio = luo('div', 'fokusmitat');
   sailio.hidden = true;
+  /*
+   * AVAIN NOLLILLE UUDEN SÄILIÖN MYÖTÄ. Elementit ovat juuri syntyneet
+   * tyhjinä, joten vanha `fokusMitatAvain` väittäisi tekstien olevan
+   * jo paikallaan ja kartuutsi jäisi tyhjäksi. Säiliö voidaan rakentaa
+   * uudelleen ilman nollausta esimerkiksi silloin, kun karttaruudun
+   * sisältö on vaihtunut alta (pallolauta, linssikartta).
+   */
+  ui.fokusMitatAvain = null;
 
   /*
    * KARTUUTSI: suomenkielinen nimi, viiva ja sen alla MAAN OMA NIMI
@@ -1994,11 +2038,13 @@ function paivitaTaulunPohja(ui) {
  */
 function ajaFokusmitat(ui) {
   if (!ui.mapPane) return;
-  const pohja = ui.fokusPohjaBbox ?? null;
-  const iso = pohja ? ui.fokuskarttaAvain : null;
+  const pallolla = Boolean(ui.pallolauta);
+  const pohja = pallolla ? null : (ui.fokusPohjaBbox ?? null);
+  const iso = pallolla ? pallolaudanMaa(ui) : (pohja ? ui.fokuskarttaAvain : null);
   // Näkyvissä vain kun maan ikkuna on tiedossa (js/ui.js
-  // paivitaMaanIkkuna lukee sen FOKUS_POHJAT-taulusta).
-  const nakyy = Boolean(pohja && iso && FOKUS_POHJAT[iso]);
+  // paivitaMaanIkkuna lukee sen FOKUS_POHJAT-taulusta); pallolaudalla
+  // riittää maa, koska ikkunataulua ei ole (ks. KARTUUTSI PALLOLLA).
+  const nakyy = pallolla ? Boolean(iso) : Boolean(pohja && iso && FOKUS_POHJAT[iso]);
   const sailio = ui.fokusmitatSailio?.isConnected ? ui.fokusmitatSailio : rakenna(ui);
   if (!nakyy) {
     if (!sailio.hidden) {
@@ -2038,6 +2084,20 @@ function ajaFokusmitat(ui) {
     taytaMaataulu(ui, iso);
   }
 
+  /*
+   * PALLOLAUDALLA VAIN KARTUUTSI JA MAATAULU. Mittajana ja
+   * asteviivaimet lukevat tasokartan viewBoxin ja sen projektion
+   * (mittaaPerusta, laskeMittajana); pallolla ne valehtelisivat, ja
+   * pallon oma mittakaava on kameran asia. Poistuminen on siis tässä
+   * eikä ehdoissa: säiliö, kartuutsi ja taulu ovat jo ajan tasalla.
+   */
+  if (pallolla) {
+    if (ui.fokusJana) ui.fokusJana.hidden = true;
+    if (ui.fokusViivaimet) ui.fokusViivaimet.hidden = true;
+    paivitaTaulunPohja(ui);
+    paivitaMaatauluHuntu(ui);
+    return;
+  }
   // Neliönapin paikka ja taulun alareuna mitataan joka päivityksellä:
   // ruudun leveys (ja sen myötä kartuutsin kirjasinkoko) sekä
   // karttaruudun korkeus voivat vaihtua kesken pelin.

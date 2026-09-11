@@ -164,6 +164,152 @@ export function puraMaanRenkaat(data, iso) {
  * @param {string} iso    ISO A3
  * @param {Function} asteet laudan käännös ({x, y}) → {lat, lon}
  */
+/*
+ * Kuinka kaukana saari saa olla mantereesta ja silti kuulua samaan
+ * saapumisrajaukseen: osuus laatikon pidemmästä sivusta. Kreikan saaret
+ * ja Ahvenanmaa mahtuvat, Ranskan Guayana ja Havaiji eivät.
+ */
+const SAARIVARA = 0.2;
+
+/** Renkaan laatikko (ja keskikohta) laudan yksiköissä. */
+function renkaanLaatikko(rengas) {
+  let x0 = Infinity;
+  let x1 = -Infinity;
+  let y0 = Infinity;
+  let y1 = -Infinity;
+  for (const [x, y] of rengas) {
+    if (x < x0) x0 = x;
+    if (x > x1) x1 = x;
+    if (y < y0) y0 = y;
+    if (y > y1) y1 = y;
+  }
+  return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+}
+
+/** Kahden laatikon yhdiste. */
+function yhdista(a, b) {
+  const x0 = Math.min(a.x, b.x);
+  const y0 = Math.min(a.y, b.y);
+  const x1 = Math.max(a.x + a.w, b.x + b.w);
+  const y1 = Math.max(a.y + a.h, b.y + b.h);
+  return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+}
+
+/** Laatikoiden etäisyys (0, jos ne leikkaavat). */
+function etaisyys(a, b) {
+  const dx = Math.max(0, Math.max(a.x - (b.x + b.w), b.x - (a.x + a.w)));
+  const dy = Math.max(0, Math.max(a.y - (b.y + b.h), b.y - (a.y + a.h)));
+  return Math.hypot(dx, dy);
+}
+
+/**
+ * Yhden maan LAUTALAATIKKO (bbox laudan yksiköissä) tai null.
+ *
+ * MIHIN SITÄ TARVITAAN. Saapumisrajaus (omistaja 11.9.2026,
+ * sanatarkasti: *"Kartta saisi muuten zoomautuu niin kun saavutaan
+ * uuteen kaupunkiin niin että maa näkyy mahdollisimman isoksi
+ * zoomattuna näytöllä"*) tarvitsee kameralle laatikon, ei renkaita:
+ * js/pallolauta/kamera.js `kameranKohde` osaa sovittaa bboxin ruutuun
+ * MOLEMPIIN suuntiin. Laatikko lasketaan SAMASTA aineistosta kuin maan
+ * vahvistettu ääriviiva, jottei kamera rajaa eri maata kuin mikä
+ * ruudulla korostuu.
+ *
+ * SAUMA PURETAAN KUTEN ASTEKÄÄNNÖKSESSÄ. Lauta kiertää (Millerin
+ * lieriö, leveys `data.lauta.leveys`), joten sauman yli ulottuvan maan
+ * renkaat ovat laudan eri laidoissa: pelkkä min/max antaisi Venäjälle
+ * ja Fidžille koko maailman levyisen laatikon. Jokainen rengas avataan
+ * siksi yhtenäiseksi (peräkkäiset pisteet pidetään lähekkäin) ja
+ * siirretään laudan levyn monikerroilla lähimmäksi ankkuria — sama
+ * periaate kuin `rengasAsteiksi`-funktiolla, mutta laudan yksiköissä.
+ *
+ * MERENTAKAISET OSAT EIVÄT KUULU RAJAUKSEEN. Aineiston FRA sisältää
+ * Guayanan ja Réunionin, USA Havaijin ja Alaskan: koko maan min/max
+ * zoomaisi saapuessa puoleen maailmaan, eli tekisi täsmälleen
+ * päinvastoin kuin tilaus pyytää. Rajaus kasvatetaan siksi SIITÄ
+ * MANTEREESTA, jossa pelaaja on: ankkuriksi otetaan `kohta`n sisältävä
+ * (tai lähin) rengas, ja siihen liitetään ne renkaat, jotka ovat
+ * enintään SAARIVARAn päässä kasvavasta laatikosta. Kreikan saaristo ja
+ * Ahvenanmaa tulevat mukaan, Havaiji ei.
+ *
+ * @param {object} data assets/data/maapolygonit.json
+ * @param {string} iso  ISO A3
+ * @param {object} [valinnat]
+ * @param {?{x: number, y: number}} [valinnat.kohta] pelaajan paikka laudalla
+ * @returns {?{x: number, y: number, w: number, h: number}}
+ */
+export function maanLautalaatikko(data, iso, { kohta = null } = {}) {
+  const renkaat = puraMaanRenkaat(data, iso);
+  if (!renkaat.length) return null;
+  const leveys = data?.lauta?.leveys > 0 ? data.lauta.leveys : 12000;
+  const puoli = leveys / 2;
+  // Rengas yhtenäiseksi: peräkkäiset pisteet eivät saa hypätä laudan yli.
+  const avaa = (rengas) => {
+    const ulos = [];
+    let kierto = 0;
+    let edellinen = null;
+    for (const [x, y] of rengas) {
+      if (edellinen !== null) {
+        while (x + kierto - edellinen > puoli) kierto -= leveys;
+        while (x + kierto - edellinen < -puoli) kierto += leveys;
+      }
+      edellinen = x + kierto;
+      ulos.push([edellinen, y]);
+    }
+    return ulos;
+  };
+  const palat = renkaat.map((r) => {
+    const avattu = avaa(r);
+    return { laatikko: renkaanLaatikko(avattu), pisteita: avattu.length };
+  });
+  /*
+   * ANKKURI. Pelaajan paikan sisältävä rengas voittaa; jos paikkaa ei
+   * ole tai se ei osu yhteenkään, otetaan pisteikkäin (suurin) rengas —
+   * saarivaltiolla se on pääsaari.
+   */
+  const osuu = (l, p) => p.x >= l.x && p.x <= l.x + l.w && p.y >= l.y && p.y <= l.y + l.h;
+  let ankkuri = null;
+  if (kohta && Number.isFinite(kohta.x) && Number.isFinite(kohta.y)) {
+    for (const pala of palat) {
+      // Sauman yli: kohta siirretään renkaan viereen ennen vertailua.
+      let siirto = 0;
+      const keski = pala.laatikko.x + pala.laatikko.w / 2;
+      while (kohta.x + siirto - keski > puoli) siirto -= leveys;
+      while (kohta.x + siirto - keski < -puoli) siirto += leveys;
+      if (osuu(pala.laatikko, { x: kohta.x + siirto, y: kohta.y })
+        && (!ankkuri || pala.pisteita > ankkuri.pisteita)) ankkuri = pala;
+    }
+  }
+  if (!ankkuri) for (const pala of palat) if (!ankkuri || pala.pisteita > ankkuri.pisteita) ankkuri = pala;
+  if (!ankkuri) return null;
+
+  // Kaikki renkaat ankkurin viereen (sauman purku) ja laatikot talteen.
+  const ankkuriX = ankkuri.laatikko.x + ankkuri.laatikko.w / 2;
+  const muut = [];
+  for (const pala of palat) {
+    if (pala === ankkuri) continue;
+    let siirto = 0;
+    const keski = pala.laatikko.x + pala.laatikko.w / 2;
+    while (keski + siirto - ankkuriX > puoli) siirto -= leveys;
+    while (keski + siirto - ankkuriX < -puoli) siirto += leveys;
+    muut.push({ ...pala.laatikko, x: pala.laatikko.x + siirto });
+  }
+  let laatikko = { ...ankkuri.laatikko };
+  let kasvoi = true;
+  while (kasvoi) {
+    kasvoi = false;
+    const vara = SAARIVARA * Math.max(laatikko.w, laatikko.h);
+    for (let i = muut.length - 1; i >= 0; i -= 1) {
+      if (etaisyys(laatikko, muut[i]) <= vara) {
+        laatikko = yhdista(laatikko, muut[i]);
+        muut.splice(i, 1);
+        kasvoi = true;
+      }
+    }
+  }
+  if (!(laatikko.w > 0) || !(laatikko.h > 0)) return null;
+  return laatikko;
+}
+
 export function maanRenkaatAsteina(data, iso, asteet) {
   if (typeof asteet !== 'function') return [];
   const ulos = [];

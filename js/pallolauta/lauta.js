@@ -70,12 +70,12 @@ import {
 } from '../pallo.js';
 import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
 import {
-  lataaMaapolygonit, nollaaPallonMaakorostus, paivitaPallonMaakorostus,
+  lataaMaapolygonit, maanLautalaatikko, nollaaPallonMaakorostus, paivitaPallonMaakorostus,
 } from '../maanaariviivat.js';
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
 import { livianKorostetutKaupungit } from '../liviapuhe.js';
 import { asemoiFokuskohde, kohteidenNykyinenIso } from '../fokuskohteet.js';
-import { laudaltaAsteiksi } from '../fokusmitat.js';
+import { laudaltaAsteiksi, nollaaFokusmitat, paivitaFokusmitat } from '../fokusmitat.js';
 import { packById } from '../pack.js';
 import { pixelOf, pointAlong, posKey } from '../rules.js';
 import {
@@ -1561,6 +1561,31 @@ export async function avaaPallolauta(ui) {
     heraa();
     const { game } = ui;
     const oma = game.cityOf?.();
+    /*
+     * KEHITTÄJÄN MAAILMANÄKYMÄSSÄ NAPAUTUS ON SAAPUMINEN (omistaja
+     * 11.9.2026 ilta). Muissa tapauksissa kamera vain sukeltaa
+     * kaupungin ylle SAMALLA leveydellä, jotta pelaaja voi katsoa
+     * laattoja siirtymättä — mutta maailmanäkymässä napautus siirtää
+     * matkaajan, ja silloin sama "jää siihen leveyteen, jossa jo
+     * olet" jätti kameran maailmankuvaan. Tämä haara siis OHITTAA
+     * paikallaanpysyvän zoomin ja jättää kameran teleporttihaaralle
+     * (paivita), joka ajaa saapumisrajauksen uudessa maassa.
+     */
+    const maailmahyppy = kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu
+      && !(oma && oma.id === city.id)
+      && !(game.phase === 'move' && !game.player?.isBot
+        && game.moveOptions?.().some((opt) => opt.city?.id === city.id));
+    if (maailmahyppy) {
+      /*
+       * KAMERAA EI AJETA TÄSTÄ. Siirto on pelin toimi (doAction), joten
+       * pelaajan maa vaihtuu vasta sen jälkeen — tästä laukaistu ajo
+       * rajaisi vielä LÄHTÖMAAN laatikon (mitattu: Ateenasta Sofiaan
+       * hypättäessä kamera jäi Kreikkaan). Saapumisrajauksen ajaa
+       * teleporttihaara `paivita`ssa, joka näkee jo uuden paikan.
+       */
+      ui.doKehittajaSiirto(city);
+      return true;
+    }
     void kamera.ajaKamera({ x: city.x, y: city.y, leveys: kamera.kameranTila()?.leveys }, {});
     if (oma && oma.id === city.id) {
       ui.avaaTutkinta(city);
@@ -1569,10 +1594,6 @@ export async function avaaPallolauta(ui) {
     if (game.phase === 'move' && !game.player?.isBot) {
       const kohde = game.moveOptions?.().find((opt) => opt.city?.id === city.id);
       if (kohde) { ui.doMove(kohde.key); return true; }
-    }
-    if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu) {
-      ui.doKehittajaSiirto(city);
-      return true;
     }
     return true;
   };
@@ -2154,6 +2175,16 @@ export async function avaaPallolauta(ui) {
     const kohteet = lento ? [] : kohdevalinta();
     const valinta = lento ? lento.valinta : ui.matkareittienValinta();
     const posAvain = pos ? posKey(pos) : '';
+    /*
+     * MAAN KARTUUTSI, MAATAULU JA MAALEHTILINKKI VASEMPAAN ALANURKKAAN
+     * (omistaja 11.9.2026 ilta; js/fokusmitat.js osio "KARTUUTSI
+     * PALLOLLA"). Kutsu on ENNEN avaintarkistusta, koska kalusteet
+     * voidaan nollata laudan alta (js/ui.js puraLauta, linssikartan
+     * sulku) ilman että pelin tila muuttuu — silloin sama avain palaisi
+     * eivätkä ne palaisi koskaan. Työ on mikrotehtävä ja palaa heti,
+     * jos maa ei vaihtunut (paivitaFokusmitat).
+     */
+    paivitaFokusmitat(ui);
     const avain = [
       [...kaydyt].sort().join(','), posAvain, liikkuu ? 'liikkuu' : '',
       kohteet.map((k) => k.key).join(','), valinta.avain, ui.lentoKaari?.b ?? '',
@@ -2208,11 +2239,63 @@ export async function avaaPallolauta(ui) {
      */
     if (!liikkuu && !lento && pos) {
       if (nappulanPaikka !== null && nappulanPaikka !== posAvain) {
-        void kamera.kotiin({ kesto: PALLOKAMERAN_AJO_MS });
+        void saavu({ kesto: PALLOKAMERAN_AJO_MS });
       }
       nappulanPaikka = posAvain;
     }
   };
+
+  /*
+   * ===== SAAPUMISRAJAUS: MAA MAHDOLLISIMMAN ISONA =================
+   *
+   * OMISTAJA 11.9.2026 ilta, sanatarkasti: *"Kartta saisi muuten
+   * zoomautuu niin kun saavutaan uuteen kaupunkiin niin että maa näkyy
+   * mahdollisimman isoksi zoomattuna näytöllä. Normaali pelissä tämä
+   * tulee jo mutta kehittäjä näkymään tämä pitää lisätä kun maailma
+   * tila on päällä."*
+   *
+   * MIKÄ OLI ENNEN. Saapumisajo (kamera.kotiin) vei kaupungin ylle
+   * KIINTEÄLLÄ leveydellä (PALLOLAUDAN_SAAPUMISLEVEYS 240 yksikköä,
+   * noin 7°). Kreikan kokoisella maalla se sattuu olemaan suunnilleen
+   * maan kokoinen — siitä omistajan havainto *"normaalissa pelissä
+   * tämä tulee jo"* — mutta Bulgarialle se on liian väljä ja
+   * Ranskalle liian tiukka, eikä kehittäjän maailmanäkymässä laukea
+   * mikään, koska kaupungin napautus jätti kameran siihen leveyteen,
+   * jossa se jo oli (napautaKaupunki).
+   *
+   * MITEN NYT. Rajaus on MAAN LAATIKKO laudan yksiköissä, luettuna
+   * samasta aineistosta kuin maan vahvistettu ääriviiva
+   * (js/maanaariviivat.js maanLautalaatikko). Kamera sovittaa laatikon
+   * ruutuun molempiin suuntiin (js/pallolauta/kamera.js kameranKohde),
+   * joten pystynäytöllä rajaa korkeus ja vaakanäytöllä leveys — juuri
+   * siksi kiinteä leveys ei voinut tehdä tätä oikein.
+   *
+   * LAATIKKO MUISTETAAN MAATA KOHTI. Aineisto puretaan kerran (1,4 MB
+   * on jo ladattu korostusta varten) ja tulos jää muistiin laudan
+   * ajaksi; sama maa ei laske laatikkoa kahdesti. Muisti on
+   * maakohtainen, koska yhden maan kaupungit ovat samalla mantereella
+   * — merentakaiset osat karsii maanLautalaatikko itse.
+   *
+   * TUNTEMATON MAA EI RIKO MITÄÄN: ilman laatikkoa kamera.kotiin ajaa
+   * entisen kaupunkinäkymän (kamera.js).
+   */
+  const maalaatikot = new Map();
+  const saapumisrajaus = async () => {
+    const iso = kohteidenNykyinenIso(ui);
+    if (!iso) return null;
+    if (maalaatikot.has(iso)) return maalaatikot.get(iso);
+    const data = await lataaMaapolygonit();
+    const pos = ui.game?.player?.pos ?? null;
+    const kohta = pos && ui.game?.board ? pixelOf(ui.game.board, pos) : null;
+    const laatikko = data ? maanLautalaatikko(data, iso, { kohta }) : null;
+    maalaatikot.set(iso, laatikko);
+    return laatikko;
+  };
+
+  /** Saapumisajo: maan laatikko ruutuun, tai entinen kaupunkinäkymä. */
+  const saavu = async ({ kesto = 0 } = {}) => kamera.kotiin({
+    kesto, bbox: await saapumisrajaus(),
+  });
 
   /** Pelin paikan (pos) piste ruudulla (kotelon px) — nopan lähtö. */
   const ruutupiste = (pos) => {
@@ -2268,6 +2351,8 @@ export async function avaaPallolauta(ui) {
      */
     siirtymat,
     paivita,
+    /** Saapumisajo: maan laatikko ruutuun (ks. saapumisrajaus). */
+    saavu,
     ruutupiste,
     ruudulla,
     merkitseNappulanPaikka,
@@ -2364,6 +2449,9 @@ export async function avaaPallolauta(ui) {
       // Maakorostuksen muisti on moduulitasolla (yksi pallo
       // kerrallaan): seuraava lauta latoo korostuksen alusta.
       nollaaPallonMaakorostus();
+      // Kartuutsi ja maataulu ovat karttaruudun lapsia (js/fokusmitat.js),
+      // eivät pallon kuoressa: ne on poistettava erikseen.
+      nollaaFokusmitat(ui);
       pallo._destructor?.();
       kuori.remove();
       lauta.linssikartta?.pura();
