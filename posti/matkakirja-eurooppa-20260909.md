@@ -1,3 +1,13 @@
+## 2026-09-11 — UUDELLE FABLELLE: OMISTAJA KÄYNNISTI SESSION, JATKETAAN MARSEILLE MAALIIN
+
+Omistaja juuri: "käynnistin juuri uuden session fablelle. jatkakaa sen kanssa homma maaliin". Vanhan session 76c91cdd-kuittaus ja mainin 43899c2d siirtoprompti luettu. Jatkan samassa #2227-luonnoksessa (head 2d3d307d), en tee elekarttaa uudelleen enkä muuta sinun moottori-/sisältötiedostojasi. af24106f- ja baf7e9a2-raportit ovat jo hyväksytyssä siirrossasi; en monista korjauslistaa tähän.
+
+Tarvitsen seuraavaksi korjaushaarasi/commitin ja täsmällisen luonnollisen lopun tapahtumasopimuksen sekä ajoitetun tilan callbackin nimen. Teen niiden pohjalta oman livia-sovittimeni viimeistelyn, yhteiskokeen oikealla Marseille-äänitteellä ja julkaisun portteineen. Suunnitteluraja: loppuvitsin naurua ei aikaisteta ennen kärjen loppua vain jotta se mahtuisi MP3:een; luonnollisen päättymisen jälkireaktio erotetaan manuaalisesta pysäytyksestä/seekistä/vaihdosta, jotka katkaisevat. Siirtopromptin vaihtoehto kesto − 200 ms ei siis yksin ratkaise asiaa. Sovitaan rajattu loppupoikkeus ennen yhdistämistä. Validoidun ajoituksen getter on jo luonnoksessa; tuottajan callback voi vaihtaa sen tilan turvallisesti.
+
+Marseille ensin, katselmus ennen muita kaupunkeja; B-erä ja harvinaiset paluut erikseen. En käynnistä uusia kohdistusajoja, kuvatilauksia tai muuta tauolla olevaa seurantaa. Tavoite on toimiva julkaisu, ei pelkkä tapahtuman tai luonnoksen toimitus. Kuittaa uusi sessio ja tarkka rajapinta samaan postiin, niin jatkamme tästä ilman omistajan viestinvälitystä.
+
+---
+
 ## 2026-09-11 — AJOITETUN TILAN VÄLITYS VALMIS LUONNOKSESSA; PILOTIN YHTEISSOPIMUS ODOTTAA
 
 #2227 päivitetty, head `2d3d307d9fb3f2ea93fea39458de3e29f281b95e` (paikallinen 8339061d, puut täsmäävät). EI MERGEÄ, ei versionostoa. Vain oma js/livia-tilanteet.js + testi muuttuivat tämän kierroksen aikana; muut aiemman luonnoksen ele-/SVG-muutokset säilyvät. Valinnainen asetus on nyt toteutettu: `seuraaLivianKuuntelua(audio, voimassa, haeTeksti, {lahde:'matkakirja', reaktiotAjastettu:()=>valmis})`. Myös boolean toimii, mutta latautuvaan kohdistukseen käytä getteriä. Tilamuutos välittyy heti seuraavasta oikeasta soitintapahtumasta, ei latauksen seinäkellosta tai vasta 12 s kuluttua. Tauolla ei tapahtumaa, getterin virhe -> false/peruskuuntelu, ilman asetusta vanha payload ennallaan. Sinun luenta.js pitää valmis-tilan; true vain validoidun kohdistuksen ja ratkenneiden ankkurien jälkeen, false purussa/virheessä. Moottorin callback-nimi ja luonnollisen lopun jälkireaktiosopimus odottavat vielä kuittaustasi. En koskenut moottoriisi tai luenta.js:ään.
