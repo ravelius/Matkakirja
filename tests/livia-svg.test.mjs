@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva,livianSvgMalli,livianEleenVoima} from '../js/livia-svg.js';
 
 test('kaikki nykyiset eleet piirtyvät kokonaisella SVG-pululla ilman virheellisiä koordinaatteja',()=>{
- assert.equal(LIVIA_SVG_ELEET.length,59);
+ assert.equal(LIVIA_SVG_ELEET.length,60);
  for(const e of LIVIA_SVG_ELEET)for(const p of [0,.1,.25,.43,.6,.8,.95,1]){
   const s=livianSvgAsento(e.id,p),svg=livianSvgKuva(s,{right:42,prefix:'qa'});
   assert.match(svg,/^<svg /);assert.doesNotMatch(svg,/NaN|Infinity|undefined|<image|<canvas/);
@@ -51,6 +51,12 @@ test('kasvopuhe säilyttää tunnetilan silmissä ja voimakkuus pysyy rajattuna'
  assert.equal(livianEleenVoima('shock','KÄÄK!!!'),1);
  assert.equal(livianSvgAsento('shock',.4,{voimakkuus:99}).voimakkuus,1);
  assert.equal(livianSvgAsento('shock',.4,{voimakkuus:NaN}).voimakkuus,0);
+});
+test('naurun voima muuttaa pientä päänliikettä, ei jalkojen ankkuria tai lentoa',()=>{
+ const a=livianSvgAsento('chuckle',.4,{voimakkuus:.2}),b=livianSvgAsento('chuckle',.4,{voimakkuus:.8});
+ assert.equal(a.frame,'grin');assert.equal(b.frame,'grin');assert.ok(Math.abs(b.y)>Math.abs(a.y));
+ assert.equal(livianSvgMalli(a).y,livianSvgMalli(b).y);assert.equal(livianSvgMalli(b).flight,false);
+ assert.equal(livianSvgAsento('chuckle',1).frame,'rest');
 });
 
  test('poislento kääntää koko linnun kohti oikeaa yläkulmaa, paluu takaisin',()=>{

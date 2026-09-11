@@ -118,6 +118,89 @@ test('matkakirjan katse pysyy koko luennan, palautuu sisääntulon ja peittymise
  c.tilanne('narration',{tunnus:a,ele:'nod',lahde:'matkakirja'});assert.match(canvas.innerHTML,/data-gaze="up-left"/);
  c.tilanne('narrationEnd',{tunnus:a});assert.doesNotMatch(canvas.innerHTML,/data-gaze="up-left"/);
 });
+test('tekstireaktio kuuluu vain oikealle luennalle, perusnyökkäys ei keskeytä ja tauko/seek purkavat',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const canvas=e.doc.body.children[0].children[0],a={},b={};
+ const r={lahde:'matkakirja',luentaTunnus:a,tunnus:'marseille.r6',tarkoitus:'huvittuu',voimakkuus:.6};
+ const n={tunnus:a,lahde:'matkakirja',ele:'nod',reaktiotAjastettu:true};
+ assert.equal(c.tilanne('reaction',r),false,'ilman luentaa ei reaktiota');
+ c.tilanne('narration',n);assert.equal(e.raf.size,0,'ajastetun pilotin perusnyökkäys on hiljainen');
+ assert.equal(c.tilanne('reaction',{...r,luentaTunnus:b}),false);
+ assert.equal(c.tilanne('reaction',r),true);e.tick(500);const pose=canvas.innerHTML;
+ assert.equal(c.tilanne('reaction',r),false,'sama tapahtuma ei aloita uudestaan');
+ assert.equal(c.tilanne('narration',n),false);assert.equal(canvas.innerHTML,pose);
+ assert.equal(c.tilanne('reactionEnd',{luentaTunnus:b}),false);assert.equal(canvas.innerHTML,pose);
+ assert.equal(c.tilanne('reactionEnd',{luentaTunnus:a}),true);assert.match(canvas.innerHTML,/data-gaze="up-left"/);assert.equal(e.raf.size,0);
+ assert.equal(c.tilanne('reaction',r),true,'seekin jälkeen sallitaan oikeasti uudelleen saavutettu kohta');e.tick(500);
+ c.tilanne('narrationEnd',{tunnus:a});assert.equal(e.raf.size,0);assert.doesNotMatch(canvas.innerHTML,/data-gaze="up-left"/);
+ assert.equal(c.tilanne('reaction',r),false,'myöhäinen osuma ei herätä päättynyttä ääntä');
+ c.tilanne('narration',n);c.tilanne('reaction',r);e.tick(3000);assert.match(canvas.innerHTML,/data-gaze="up-left"/);assert.equal(e.raf.size,0);
+ c.tilanne('reaction',r);c.tilanne('narration',{...n,tunnus:b});assert.equal(e.raf.size,0,'äänenvaihto lopettaa vanhan eleen');
+ assert.equal(c.tilanne('reaction',r),false);c.tilanne('narrationEnd',{tunnus:a});c.tilanne('narrationEnd',{tunnus:b});
+});
+test('tekstireaktio väistää puhetta, chattia ja korttia ilman paluujonoa; reduced-motion on staattinen',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const canvas=e.doc.body.children[0].children[0],a={},speech={};
+ const r={lahde:'matkakirja',luentaTunnus:a,tunnus:'marseille.r6',tarkoitus:'huvittuu',voimakkuus:.6};
+ const n={tunnus:a,lahde:'matkakirja',ele:'nod',reaktiotAjastettu:true};
+ c.tilanne('narration',n);c.tilanne('reaction',r);ilmoitaLivianKasvopuhe(speech,true,'Hei!');
+ assert.equal(c.tilanne('reaction',r),false);ilmoitaLivianKasvopuhe(speech,false);e.tick(3500);assert.match(canvas.innerHTML,/data-gaze="up-left"/);
+ c.tilanne('reaction',r);e.pollo.auki=true;e.notify(e.button);assert.equal(e.raf.size,0);assert.equal(c.tilanne('reaction',r),false);
+ e.pollo.auki=false;e.notify(e.button);c.tilanne('narration',n);assert.equal(e.raf.size,0);
+ c.tilanne('card',{symboli:'historia'});assert.equal(c.tilanne('reaction',r),false);c.tilanne('cardEnd');
+ e.reduced.matches=true;e.reduced.dispatchEvent(new Event('change'));c.tilanne('narration',n);
+ assert.equal(c.tilanne('reaction',r),true);const pose=canvas.innerHTML;assert.equal(e.raf.size,0);
+ e.tick(800);assert.equal(canvas.innerHTML,pose);c.tilanne('reactionEnd',{luentaTunnus:a});assert.match(canvas.innerHTML,/data-gaze="up-left"/);
+ c.tilanne('reaction',r);e.tick(3000);assert.match(canvas.innerHTML,/data-gaze="up-left"/);assert.equal(e.raf.size,0);
+ c.tilanne('reaction',r);e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));e.tick(3000);
+ e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));assert.match(canvas.innerHTML,/data-gaze="up-left"/);
+ c.tilanne('narrationEnd',{tunnus:a});c.tuhoa();assert.equal(e.timers.size,0);
+});
+for(const jarjestys of ['luenta ensin','reaktio ensin','tavallinen reaktio ennen loppua'])for(const reduced of [false,true])test(`loppunauru valmistuu: ${jarjestys}, reduced=${reduced}`,t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);e.reduced.matches=reduced;c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const canvas=e.doc.body.children[0].children[0],a={paused:false,ended:false};
+ const r={lahde:'matkakirja',luentaTunnus:a,tunnus:'marseille.r6',tarkoitus:'huvittuu',voimakkuus:.6,jalkireaktio:true};
+ c.tilanne('narration',{tunnus:a,lahde:'matkakirja',reaktiotAjastettu:true});
+ const end=()=>c.tilanne('narrationEnd',{tunnus:a,luonnollinenLoppu:true});
+ if(jarjestys==='luenta ensin'){a.paused=a.ended=true;end();assert.equal(c.tilanne('reaction',r),true);}
+ else if(jarjestys==='reaktio ensin'){a.ended=true;assert.equal(c.tilanne('reaction',r),true);end();a.paused=true;}
+ else{assert.equal(c.tilanne('reaction',{...r,jalkireaktio:false}),true);e.tick(20);a.paused=true;end();}
+ e.tick(600);assert.notEqual(canvas.innerHTML,'');assert.doesNotMatch(canvas.innerHTML,/data-gaze="up-left"/);
+ const pose=canvas.innerHTML;c.tilanne('narrationEnd',{tunnus:a,luonnollinenLoppu:true});assert.equal(canvas.innerHTML,pose,'kaksoisloppu ei katkaise');
+ if(!reduced)assert.ok(e.raf.size,'nauru jatkuu yli 500 ms vastaanottoikkunan');else assert.equal(e.raf.size,0);
+ e.tick(3000);assert.equal(e.raf.size,0);assert.notEqual(canvas.innerHTML,pose,'ele palautuu lepoon');
+ assert.equal(c.tilanne('reaction',r),false,'ei myöhäistä uusintaa');c.tuhoa();assert.equal(e.timers.size,0);
+});
+for(const viive of [0,500,501])test(`jälkireaktion vastaanottoikkuna ${viive} ms, vain yksi`,t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);const a={paused:false};
+ const r={lahde:'matkakirja',luentaTunnus:a,tunnus:'r6',tarkoitus:'huvittuu',voimakkuus:.6,jalkireaktio:true};
+ c.tilanne('narration',{tunnus:a,lahde:'matkakirja',reaktiotAjastettu:true});a.paused=true;c.tilanne('narrationEnd',{tunnus:a,luonnollinenLoppu:true});
+ e.tick(viive);assert.equal(c.tilanne('reaction',r),viive<=500);
+ assert.equal(c.tilanne('reaction',{...r,tunnus:'r7'}),false);assert.equal(c.tilanne('reaction',{...r,luentaTunnus:{}}),false);
+});
+for(const katkaisu of ['reactionEnd','tauko','uusi luenta','puhe','chat','kortti','piilossa','tuho'])test(`loppuikkuna ei palaudu katkaisun jälkeen: ${katkaisu}`,t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);const a={paused:false};
+ const r={lahde:'matkakirja',luentaTunnus:a,tunnus:'r6',tarkoitus:'huvittuu',voimakkuus:.6,jalkireaktio:true};
+ c.tilanne('narration',{tunnus:a,lahde:'matkakirja',reaktiotAjastettu:true});a.paused=true;c.tilanne('narrationEnd',{tunnus:a,luonnollinenLoppu:true});
+ if(katkaisu==='reactionEnd')c.tilanne('reactionEnd',{luentaTunnus:a});
+ if(katkaisu==='tauko')c.tilanne('narrationEnd',{tunnus:a});
+ if(katkaisu==='uusi luenta')c.tilanne('narration',{tunnus:{},lahde:'matkakirja',reaktiotAjastettu:true});
+ if(katkaisu==='puhe'){const p={};ilmoitaLivianKasvopuhe(p,true);ilmoitaLivianKasvopuhe(p,false);}
+ if(katkaisu==='chat'){e.pollo.auki=true;e.notify(e.button);e.pollo.auki=false;e.notify(e.button);}
+ if(katkaisu==='kortti'){c.tilanne('card',{symboli:'historia'});c.tilanne('cardEnd');}
+ if(katkaisu==='piilossa'){e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));}
+ if(katkaisu==='tuho')c.tuhoa();
+ assert.equal(c.tilanne('reaction',r),false);c.tilanne('narrationEnd',{tunnus:a,luonnollinenLoppu:true});
+ assert.equal(c.tilanne('reaction',r),false,'myöhäinen kaksoisloppu ei avaa ikkunaa');
+});
+test('luonnollisesti päättynyt jälkiele on yhä katkaistavissa oikealla tunnuksella',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);const a={},b={};
+ const r={lahde:'matkakirja',luentaTunnus:a,tunnus:'r6',tarkoitus:'huvittuu',voimakkuus:.6,jalkireaktio:true};
+ c.tilanne('narration',{tunnus:a,lahde:'matkakirja',reaktiotAjastettu:true});c.tilanne('narrationEnd',{tunnus:a,luonnollinenLoppu:true});
+ assert.equal(c.tilanne('reaction',r),true);e.tick(700);
+ assert.equal(c.tilanne('reactionEnd',{luentaTunnus:b}),false);assert.ok(e.raf.size);
+ assert.equal(c.tilanne('reactionEnd',{luentaTunnus:a}),true);assert.equal(e.raf.size,0);
+});
 test('lehtilasit eivät katoa uuden lasieleen alussa, hieraisussa tai levossa; sulku riisuu heti',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
  const surface=e.doc.body.children[0],canvas=surface.children[0];

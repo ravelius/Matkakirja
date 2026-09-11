@@ -33,6 +33,16 @@ export function ilmoitaLivianTunne(tagi,tiedot={}){
  const tunne=livianTunnetaginTiedot(tagi);if(!tunne)return null;
  ilmoitaLivianTilanne('emotion',{...tiedot,...tunne});return tunne;
 }
+/** Fablen tekstikohtainen tarkoitus; ei avainsana-arvontaa tai ääntä. */
+export function livianLuentareaktionTiedot({tarkoitus,voimakkuus}={}){
+ if(typeof voimakkuus!=='number'||!Number.isFinite(voimakkuus)||voimakkuus<=0)return null;
+ const voima=Math.min(1,voimakkuus);
+ const kartta={myotailee:'nod',epailee:'shake',torjuu:'shake',
+  huvittuu:voima<.4?'smile':voima<.55?'grin':'chuckle',
+  hammastyy:voima<.65?'doubleTake':'disbelief',vakavoituu:'listen'};
+ const ele=Object.hasOwn(kartta,tarkoitus)?kartta[tarkoitus]:null;
+ return ele?{ele,voimakkuus:voima}:null;
+}
 export function merkitseLivianNosto(kerros,tiedot){liviaNostoTiedot.set(kerros,tiedot);}
 export function livianNostonTiedot(kerros){return liviaNostoTiedot.get(kerros)||{};}
 /** Aiheen sävy voittaa luokan: vakavaa tarinaa ei tervehditä virneellä. */
@@ -45,9 +55,9 @@ export function livianAiheEle({symboli='',otsikko='',teksti=''}={}){
  return ({huuto:'disbelief',silma:'lookUp',historia:'glasses',luonto:'tilt',ruoka:'smile',kulttuuri:'smile',tekniikka:'glasses',kauppa:'expert',sana:'glasses',merenkulku:'lookUp',urheilu:'grin',kaupunki:'present',ihme:'disbelief',hetki:'glasses'})[symboli]||'listen';
 }
 /** Yksi kertojan vuoro riippumatta siitä, mikä äänitekniikka soittaa. */
-export function luoLivianKuunteluvuoro(tunnus={}, {lahde}={}){
- let viime=-Infinity,vuoro=0,soi=false,elossa=true;
- const tauko=()=>{if(!soi)return;soi=false;ilmoitaLivianTilanne('narrationEnd',{tunnus});};
+export function luoLivianKuunteluvuoro(tunnus={}, {lahde,reaktiotAjastettu}={}){
+ let viime=-Infinity,vuoro=0,soi=false,elossa=true,viimeAjastettu=null;
+ const tauko=(luonnollinenLoppu=false)=>{if(!soi)return;soi=false;ilmoitaLivianTilanne('narrationEnd',{tunnus,...(luonnollinenLoppu?{luonnollinenLoppu:true}:{})});};
  return {
   paivita(paalla,aika=performance.now()/1000,teksti=''){
    if(!elossa)return;
@@ -56,13 +66,18 @@ export function luoLivianKuunteluvuoro(tunnus={}, {lahde}={}){
    if(!soi){viime=-Infinity;soi=true;}
    aika=Number(aika)||0;
    if(aika<viime)viime=-Infinity;
-   if(aika-viime<12)return;viime=aika;
+   // Kohdistus latautuu asynkronisesti. Tuottaja omistaa validoinnin;
+   // lukija välittää tilan seuraavasta oikeasta äänitapahtumasta eikä
+   // odota 12 s sykliä. Getterin virhe palauttaa peruskuuntelun.
+   let ajastettu=false;
+   try{ajastettu=(typeof reaktiotAjastettu==='function'?reaktiotAjastettu():reaktiotAjastettu)===true;}catch{/* turvallinen peruskuuntelu */}
+   if(aika-viime<12&&ajastettu===viimeAjastettu)return;viime=aika;viimeAjastettu=ajastettu;
    // Isoisää kuunnellaan katse yläviistossa, ei pueta laseja tai
    // näytellä tekstin avainsanoja. Lehden/lukijan aiemmat eleet säilyvät.
    const ele=vuoro++===0?'lookUp':lahde==='matkakirja'?'nod':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti});
-   ilmoitaLivianTilanne('narration',{ele,tunnus,...(lahde?{lahde}:{})});
+   ilmoitaLivianTilanne('narration',{ele,tunnus,...(lahde?{lahde}:{}),...(reaktiotAjastettu===undefined?{}:{reaktiotAjastettu:ajastettu})});
   },
-  lopeta(){if(!elossa)return;elossa=false;tauko();},
+  lopeta(luonnollinenLoppu=false){if(!elossa)return;elossa=false;tauko(luonnollinenLoppu===true);},
  };
 }
 
@@ -74,8 +89,11 @@ export function seuraaLivianKuuntelua(audio,voimassa,haeTeksti=()=> '',asetukset
  const reagoi=()=>{if(elossa&&soi&&!audio.paused&&!audio.ended&&voimassa())vuoro.paivita(true,audio.currentTime,haeTeksti());};
  const alkoi=()=>{if(!elossa)return;soi=true;reagoi();};
  const tauko=()=>{soi=false;vuoro.paivita(false);};
- const events={playing:alkoi,timeupdate:reagoi,pause:tauko,waiting:tauko,stalled:tauko,error:tauko,ended:lopeta,emptied:lopeta};
- function lopeta(){if(!elossa)return;elossa=false;vuoro.lopeta();for(const[n,f]of Object.entries(events))audio.removeEventListener(n,f);}
+ // Pehmeän lopun omistaja lähettää tämän ENNEN omaa pausea.
+ // Käyttäjän pausea tai lähellä loppua olevaa currentTimea ei arvata lopuksi.
+ const paattyi=()=>lopeta(voimassa()===true);
+ const events={playing:alkoi,timeupdate:reagoi,pause:tauko,waiting:tauko,stalled:tauko,error:tauko,ended:paattyi,'matkakirja:luenta-loppu':paattyi,emptied:lopeta};
+ function lopeta(luonnollinenLoppu=false){if(!elossa)return;elossa=false;soi=false;vuoro.lopeta(luonnollinenLoppu===true);for(const[n,f]of Object.entries(events))audio.removeEventListener(n,f);}
  for(const[n,f]of Object.entries(events))audio.addEventListener(n,f);
  return lopeta;
 }

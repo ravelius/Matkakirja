@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {LIVIAN_TUNTEET,ilmoitaLivianTunne,livianAiheEle,livianTunnetaginTiedot,seuraaLivianKuuntelua,kuunteleLivianTilanteita} from '../js/livia-tilanteet.js';
+import {LIVIAN_TUNTEET,ilmoitaLivianTunne,livianAiheEle,livianTunnetaginTiedot,livianLuentareaktionTiedot,seuraaLivianKuuntelua,kuunteleLivianTilanteita} from '../js/livia-tilanteet.js';
 import {livianNostoAsettelu} from '../js/livia-nostotila.js';
 test('kaikilla nostoluokilla on reaktio; vakava sisältö voittaa hymyn',()=>{
  for(const symboli of ['huuto','elain','silma','historia','luonto','ruoka','kulttuuri','tekniikka','kauppa','sana','merenkulku','urheilu','kaupunki','ihme','hetki'])assert.ok(livianAiheEle({symboli}));
@@ -19,6 +19,14 @@ test('ulkoinen tunnetagi on vain tunne ja rajattu voimakkuus',t=>{
  const calls=[],off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
  assert.deepEqual(ilmoitaLivianTunne({tunne:'ilo',voimakkuus:.7},{lahde:'koe',teksti:'ei kuulu tagiin'}),{tunne:'ilo',voimakkuus:.7,ele:'grin'});
  assert.equal(calls[0][0],'emotion');assert.equal(calls[0][1].lahde,'koe');assert.equal(calls[0][1].ele,'grin');
+});
+test('luentareaktion semantiikka ja voimakkuus erottavat hymyn, virneen ja naurun',()=>{
+ for(const [tarkoitus,voimakkuus,ele]of [['myotailee',.3,'nod'],['epailee',.5,'shake'],['torjuu',.7,'shake'],['huvittuu',.35,'smile'],['huvittuu',.45,'grin'],['huvittuu',.6,'chuckle'],['hammastyy',.4,'doubleTake'],['hammastyy',.8,'disbelief'],['vakavoituu',.5,'listen']]){
+  assert.deepEqual(livianLuentareaktionTiedot({tarkoitus,voimakkuus}),{ele,voimakkuus});
+ }
+ for(const tarkoitus of ['tuntematon','toString','__proto__'])assert.equal(livianLuentareaktionTiedot({tarkoitus,voimakkuus:.5}),null);
+ for(const voimakkuus of [undefined,null,0,-1,'0.5',NaN,Infinity])assert.equal(livianLuentareaktionTiedot({tarkoitus:'huvittuu',voimakkuus}),null);
+ assert.equal(livianLuentareaktionTiedot({tarkoitus:'huvittuu',voimakkuus:9}).voimakkuus,1);
 });
 test('luennan reaktiot seuraavat soitinta, eivät seinäkelloa tai vanhaa kaupunkia',t=>{
  const a=new EventTarget();a.currentTime=0;a.paused=false;let current=true;const calls=[];
@@ -63,4 +71,37 @@ test('isoisän luenta ei vaihda laseihin tai tekstin avainsanojen tunne-eleisiin
  for(const time of [12,24,36,48]){a.currentTime=time;a.dispatchEvent(new Event('timeupdate'));}
  assert.deepEqual(calls.map(x=>x.ele),['lookUp','nod','nod','nod','nod']);
  assert.ok(calls.every(x=>x.lahde==='matkakirja'));
+});
+test('asynkronisen kohdistuksen tila välittyy heti oikeasta soitintapahtumasta, ei latauksen seinäkellosta',t=>{
+ const a=new EventTarget();a.currentTime=0;a.paused=false;let valmis=false,rikki=false;const calls=[];
+ const off=kuunteleLivianTilanteita((kind,data)=>calls.push({kind,data}));t.after(off);
+ const stop=seuraaLivianKuuntelua(a,()=>true,()=>'',{lahde:'matkakirja',reaktiotAjastettu:()=>{if(rikki)throw Error('metadata');return valmis;}});t.after(stop);
+ a.dispatchEvent(new Event('playing'));assert.equal(calls.at(-1).data.reaktiotAjastettu,false);
+ valmis=true;assert.equal(calls.length,1,'pelkkä latauksen valmistuminen ei esitä soittoa');
+ a.currentTime=.3;a.dispatchEvent(new Event('timeupdate'));assert.equal(calls.at(-1).data.reaktiotAjastettu,true);assert.equal(calls.length,2);
+ a.currentTime=.5;a.dispatchEvent(new Event('timeupdate'));assert.equal(calls.length,2,'muuttumaton tila ei monista tapahtumaa');
+ rikki=true;a.currentTime=.7;a.dispatchEvent(new Event('timeupdate'));assert.equal(calls.at(-1).data.reaktiotAjastettu,false);
+ a.paused=true;a.dispatchEvent(new Event('pause'));rikki=false;const n=calls.length;
+ a.currentTime=.8;a.dispatchEvent(new Event('timeupdate'));assert.equal(calls.length,n,'tauko ei välitä reaktiotilaa');
+ a.paused=false;a.dispatchEvent(new Event('playing'));assert.equal(calls.at(-1).data.reaktiotAjastettu,true);
+ stop();const count=calls.length;a.dispatchEvent(new Event('playing'));assert.equal(calls.length,count);
+});
+for(const loppu of ['ended','matkakirja:luenta-loppu'])test(`${loppu}: luonnollinen loppu välittyy kerran ja irrottaa kaikki kuuntelijat`,t=>{
+ const a=new EventTarget();a.paused=false;a.currentTime=29.26;const calls=[],listeners=new Set();
+ const add=a.addEventListener.bind(a),remove=a.removeEventListener.bind(a);
+ a.addEventListener=(n,f)=>{listeners.add(n);add(n,f);};a.removeEventListener=(n,f)=>{listeners.delete(n);remove(n,f);};
+ const off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
+ const stop=seuraaLivianKuuntelua(a,()=>true,()=>'',{lahde:'matkakirja'});t.after(stop);
+ a.dispatchEvent(new Event('playing'));a.dispatchEvent(new Event(loppu));
+ assert.deepEqual(calls.at(-1),['narrationEnd',{tunnus:a,luonnollinenLoppu:true}]);assert.equal(listeners.size,0);
+ a.paused=true;for(const n of ['pause','ended','matkakirja:luenta-loppu','playing','timeupdate'])a.dispatchEvent(new Event(n));
+ stop();assert.equal(calls.length,2,'autopause ja kaksoisloppu eivät katkaise jälkielettä');
+});
+for(const tapa of ['pause','waiting','stalled','error','emptied','purku','vanha'])test(`${tapa}: ei luonnollisen lopun poikkeusta edes loppurajalla`,t=>{
+ const a=new EventTarget();a.paused=false;a.currentTime=29.279;a.duration=29.280;let valid=true;const calls=[];
+ const off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
+ const stop=seuraaLivianKuuntelua(a,()=>valid);t.after(stop);a.dispatchEvent(new Event('playing'));
+ if(tapa==='purku')stop();else if(tapa==='vanha'){valid=false;a.dispatchEvent(new Event('ended'));}else a.dispatchEvent(new Event(tapa));
+ assert.deepEqual(calls.at(-1),['narrationEnd',{tunnus:a}]);
+ if(['pause','waiting','stalled','error'].includes(tapa)){a.dispatchEvent(new Event('ended'));assert.equal(calls.length,2);}
 });
