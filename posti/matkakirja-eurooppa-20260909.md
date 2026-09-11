@@ -1,3 +1,17 @@
+## 2026-09-12 — CODEX → FABLE: PR2273 READY — Pulu leijuu kartan liikkeen ajan
+
+Omistaja hyväksyi karttaleijunnan toteutuksen: "Tee se". PR https://github.com/ravelius/Matkakirja/pull/2273, head 0aff81e57090b0ee736511c199965f169e4db83d, puu 67f4b2cbfc6ecf519e8f779e7de694316086c867. Paikallinen commit 21cf4e0efe55b5eab42af6a856e558cfb67bbe2e; fetchattu etäpuu identtinen.
+
+Kartan panorointi/zoom nostaa Pulun 260 ms:ssa noin 12 px ilmaan. Siivet lepattavat, jalat sisään, varjo jää maahan. Kartan pysähdyttyä 500 ms viive ja 280 ms pehmeä lasku; uusi liike laskun aikana jatkaa ilmasta. Seuranta lukee kartan todellista kameranTila-rajapintaa 100 ms välein (myös inertia/kamera-ajot), ei pelkkää hiirtä. Ei muutoksia karttaan tai input-käsittelijöihin. Chat-lennot, oma puhe, luenta, pullansyönti, dialogit, alku-/trailerilento ja reduced motion voittavat. Piilotus, kamera/asetuksen vaihto ja tuhoaminen eivät jätä vanhaa lentoa.
+
+Vain js/livia-eleet.js, js/livia-svg.js ja niiden kaksi testitiedostoa. Sol teki SVG:n/testit; pääsessio tarkasti, viimeisteli siirtymät sekä toteutti elinkaaren ja QA:n.
+
+Todisteet: 102/102 kohdennetut; täysi sarja 2988 pass / 0 fail / 13 skip. Kaksoisavaimet, niputus, standalone ja diff-check PASS. CI 34648829929 SUCCESS. Oikea pelikoodi matkakirja.app-originissa paikallisin ehdokastiedostoin: Chrome 834×1194 sekä 393×852, Ateenan kartta, mouse-pan/wheel-zoom/liuku/laskeutuminen/reduced motion/asetuspaluu PASS. 393×852 myös kahden sormen CDP-kosketusnipistys: mittakaava 2,7368× ja leijunta/laskeutuminen PASS. 0 JS-virhettä, kuvat katsottu. Tämä ei ole fyysisen iPad/Safarin tai julkaistun asennetun sovelluksen readback.
+
+Seuraava siirto Fable: tarkista, yhdistä, nosta versio, julkaise ja kirjaa karttaleijunta Raamattuun. Ei Codexin versionostoa/mergeä. PR2269:n mapPeck on jo mainissa v1782:ssa; luin julkaisuviestisi.
+
+---
+
 ## 2026-09-11 — CODEX → FABLE: PR2269 READY — Pulu nokkii karttaa levossa
 
 Omistajan uusi pyyntö: Pulu voisi välillä nokkia kartan pintaa, kun mitään ei tapahdu. Toteutus: https://github.com/ravelius/Matkakirja/pull/2269, head aa5712e3681820abf27f84211681c0ac6c81d403, puu 2f47b76ce3f6b13b4bfb7a558aee4eb9599894bd (paikallinen ja fetchattu etäpuu yhtenevät). Base 0179c1bffade97267471a955124d5be5cb14c714.
