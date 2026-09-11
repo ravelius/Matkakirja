@@ -4246,6 +4246,14 @@ export const RAAMATTU = {
           + '(saapumisasento pysyy: kaupunki alakolmanneksessa, kuva sen '
           + 'ylapuolella hieman oikealla). Puhelin ja tyopoyta ennallaan. '
           + 'Tarkentaa linjausta LUENTAKUVA ISOMPANA, VINOSSA JA ILMAN LAATIKKOA.',
+        'PUHELIMEN LEHDESSA PULU OIKEAAN REUNAAN; PULU REAGOI ARTIKKELIN CHATISSA '
+          + 'JA CHAT LAHEMMAS PULUA (omistaja 11.9.2026 aamu tekstisession kautta, '
+          + 'kaksi iPhone-kaappausta Marseillesta): 1) puhelimen (enintaan 600 px) '
+          + 'lehdessa suljettu pulu ja sen 48 px nappi ovat oikeassa reunassa '
+          + '(noin 80 px oikeammalla kuin ennen); KORVAA 10.9. toiveen 48 px '
+          + 'vasemmalle. 2) Pulu reagoi myos nahtavyysikkunassa (artikkelin '
+          + 'oma chat) esitettyyn kysymykseen, ja chat-ikkuna avautuu lahemmas '
+          + 'pulua. Toteutettu tekstisession v1750-v1751:ssa.',
         'PULU REAGOI MYOS LEHDESSA, LAUKUSSA JA VISASSA; AARRE YKSI ISO ELE; RAHA '
           + 'VAIN PANKKIAPU; PITKA ODOTUS KERRAN (omistaja 11.9.2026 klo 09.30, '
           + 'vastaukset reaktiorekisterin epavarmiin kohtiin): 1) Avoin dialogi ei '

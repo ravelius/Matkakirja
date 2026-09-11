@@ -691,6 +691,7 @@ laukaisematta, ei siirretä seuraavaan rakoon.
 
 **A. Rakenteelliset esteet — nämä ensin, muuten kytkennät eivät näy.**
 
+- **T1. TEHTY v1749** (PR #2223): pulu ja nappi ylimpään kerrokseen, kun päällä on lehti (arrival-dialog), laukku (passport-dialog) tai visa/kohtaaminen (quiz-dialog); muut dialogit hiljaisia; yhteinen dialogitila (js/livia-dialogitila.js).
 - **T1. PÄÄTETTY 11.9.2026:** portti höllennetään lehdelle (#arrival-dialog), matkalaukulle ja visa-/kohtaamiskortille; muut dialogit hiljaisia. Tekstisession toteutettavaksi.
 - **T1 (alkuperäinen). `dialog[open]`-portti (js/livia-eleet.js:123 ja :128).**
   `if(!nakyy()||odotusrivi||doc.querySelector('dialog[open]')||…)return false;`
@@ -845,3 +846,7 @@ kuuntelu säilyy odotuksen ja taukojen yli); T4 tehty (v1745, 7 virheriviä
 K/T); T2 linssit v1746; T2 valmis v1747 (lukija). Fable.
 11.9.2026 — omistajan päätökset epävarmiin kohtiin 1–10 kirjattu; T1 avattu
 tekstisessiolle. Fable.
+11.9.2026 — T1 tehty (v1749). Omistajan Marseille-palaute: puhelimen lehdessä
+pulu oikeaan reunaan (v1750), artikkelin chat reagoi ja ikkuna lähemmäs (v1751).
+Koko tekninen puutelista T1–T4 toimitettu; seuraavaksi B-osion tilanne-ID-
+kytkennät (saapumisketju, aihesivut, aarre, raha, pitkä odotus). Fable.
