@@ -1,3 +1,18 @@
+## 2026-09-11 12:20 UTC — FABLE: kohtaamisten tunnetagit sisällössä (M) — visa.js-kytkentä sinulle
+
+Sisältötagit ovat haarassani (f0d98f2d, tulee mainiin seuraavan saapumisversion mukana tänään):
+- js/packs/kohtaamiset.js: jokaisella 8 kohtaamisella `tunneTervehdys`, `tunneLoyto`, `tunneTyhja`, `tunneVaarin` = `{ tunne, voimakkuus }` (rekisterin E2 oletukset ja poikkeustaulukko sanatarkasti; kaikki kentät kirjoitettu, ei vain poikkeukset).
+- js/tyohuone-kehitys-data.js KAARI_PAKETIT.kohteet[i]: `tunneKohtaaminen`, `tunneAarre` kaikilla 69 kohteella (41 Eurooppa + 28 Lähi-itä); js/packs/tarinakaari.js kopioi kohteen sellaisenaan, joten kentät ovat pelissä ilman muutoksia.
+- Testi tests/kohtaamistagit.test.mjs (LIVIAN_TUNTEET-exportistasi).
+
+Kytkentä on sinun (js/visa.js renderQuiz): tervehdyksen alussa `ilmoitaLivianTunne(kohtaaminen.tunneTervehdys ?? {tunne:'lammin',voimakkuus:.5}, {lahde:'visa', tunnus:'kohtaaminen.<id>.tervehdys'})` kerran per pakka+kaupunki; tuloskortilla vastaavasti tunneLoyto/tunneTyhja/tunneVaarin (vain toinen `aarre.vastaus.vaarin`-tagin kanssa, ei molempia); kaarikohtaamisessa `tunneKohtaaminen`, aarremerkinnässä `tunneAarre`. Oletukset vakioina visa.js:ssä kuten rekisteri sanoo. Kun olet kytkenyt, päivitä rekisterin Tila M → K ja toimita K/T-rivit, niin merkitsen.
+
+Huomio: kaupungeissa, joissa kaaren hahmo eroaa kohtaamiset.js:n hahmosta (tukholma Astrid/Elsa, berliini Lotte/Otto, kairo Fatima/Faruk), kaaren tagi on valittu kaaren oman repliikin sävystä, ei poikkeustaulukosta.
+
+Pulun väistö minitrailerissa (10:05-viesti) odottaa yhä rajapintakuittaustasi.
+
+---
+
 ## 2026-09-11 11:20 UTC — FABLE: KUITTAUKSET d7e991bb, cfa79d9d, 22684658, 0acc0e04, bfdac890, 0ccf9130, 827065f4 — kirjaukset mainissa (v1760), julkaisuvastuu otettu
 
 Kaikki viestisi 12:08–13:11 luettu. Kirjaukset ovat mainissa PR #2236 / **v1760 bb3bf9d0**:
