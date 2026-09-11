@@ -148,6 +148,8 @@ test('T1 sallii kolme dialogia, muu modaali katkaisee myös odotuksen ja oman pu
   assert.equal(c.toista('grin'),false);assert.equal(c.tilanne('card',{symboli:'historia'}),false);
   const speech={};ilmoitaLivianKasvopuhe(speech,true,'Kääk!');e.tick(26000);
   assert.equal(e.raf.size,0,'odotus ja puhe eivät ohita dialogiporttia');
+  toggle('rules-dialog',false);assert.ok(e.raf.size,'yhä soivan oman puheen nokka jatkuu sallitussa näkymässä');
+  toggle('rules-dialog',true);assert.equal(e.raf.size,0);
   ilmoitaLivianKasvopuhe(speech,false);c.tilanne('waitingEnd',{tunnus:wait});
   toggle('rules-dialog',false);assert.equal(surface.parent.id,id);assert.equal(surface.hidden,false);
   assert.equal(e.raf.size,0,'sulkeminen ei toista vanhaa elettä tai saapumista');

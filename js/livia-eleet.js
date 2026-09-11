@@ -235,6 +235,8 @@ export function asennaLivianKasvot(pollo) {
   // Uusi näkymä ei saa edellisen kortin elettä tai paluulennon häntää.
   katkaise();lepoTila=null;viimeToimi=performance.now();
   oliNakyva=nappiNakyy();chatTila?.paivita();piirra(lepo());
+  // Yhä oikeasti soiva oma puhe saa jatkaa nokkaa, ei vanhaa elettä.
+  if(puhe)kaynnista();
  });
  const virtaVahti=new MutationObserver(mietintaMuuttui);
  const kokoVahti=typeof ResizeObserver==='function'?new ResizeObserver(paikkaMuuttui):null;kokoVahti?.observe(nappi);
