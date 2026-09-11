@@ -55,8 +55,8 @@ export function livianAiheEle({symboli='',otsikko='',teksti=''}={}){
  return ({huuto:'disbelief',silma:'lookUp',historia:'glasses',luonto:'tilt',ruoka:'smile',kulttuuri:'smile',tekniikka:'glasses',kauppa:'expert',sana:'glasses',merenkulku:'lookUp',urheilu:'grin',kaupunki:'present',ihme:'disbelief',hetki:'glasses'})[symboli]||'listen';
 }
 /** Yksi kertojan vuoro riippumatta siitä, mikä äänitekniikka soittaa. */
-export function luoLivianKuunteluvuoro(tunnus={}, {lahde}={}){
- let viime=-Infinity,vuoro=0,soi=false,elossa=true;
+export function luoLivianKuunteluvuoro(tunnus={}, {lahde,reaktiotAjastettu}={}){
+ let viime=-Infinity,vuoro=0,soi=false,elossa=true,viimeAjastettu=null;
  const tauko=()=>{if(!soi)return;soi=false;ilmoitaLivianTilanne('narrationEnd',{tunnus});};
  return {
   paivita(paalla,aika=performance.now()/1000,teksti=''){
@@ -66,11 +66,16 @@ export function luoLivianKuunteluvuoro(tunnus={}, {lahde}={}){
    if(!soi){viime=-Infinity;soi=true;}
    aika=Number(aika)||0;
    if(aika<viime)viime=-Infinity;
-   if(aika-viime<12)return;viime=aika;
+   // Kohdistus latautuu asynkronisesti. Tuottaja omistaa validoinnin;
+   // lukija välittää tilan seuraavasta oikeasta äänitapahtumasta eikä
+   // odota 12 s sykliä. Getterin virhe palauttaa peruskuuntelun.
+   let ajastettu=false;
+   try{ajastettu=(typeof reaktiotAjastettu==='function'?reaktiotAjastettu():reaktiotAjastettu)===true;}catch{/* turvallinen peruskuuntelu */}
+   if(aika-viime<12&&ajastettu===viimeAjastettu)return;viime=aika;viimeAjastettu=ajastettu;
    // Isoisää kuunnellaan katse yläviistossa, ei pueta laseja tai
    // näytellä tekstin avainsanoja. Lehden/lukijan aiemmat eleet säilyvät.
    const ele=vuoro++===0?'lookUp':lahde==='matkakirja'?'nod':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti});
-   ilmoitaLivianTilanne('narration',{ele,tunnus,...(lahde?{lahde}:{})});
+   ilmoitaLivianTilanne('narration',{ele,tunnus,...(lahde?{lahde}:{}),...(reaktiotAjastettu===undefined?{}:{reaktiotAjastettu:ajastettu})});
   },
   lopeta(){if(!elossa)return;elossa=false;tauko();},
  };

@@ -72,3 +72,17 @@ test('isoisän luenta ei vaihda laseihin tai tekstin avainsanojen tunne-eleisiin
  assert.deepEqual(calls.map(x=>x.ele),['lookUp','nod','nod','nod','nod']);
  assert.ok(calls.every(x=>x.lahde==='matkakirja'));
 });
+test('asynkronisen kohdistuksen tila välittyy heti oikeasta soitintapahtumasta, ei latauksen seinäkellosta',t=>{
+ const a=new EventTarget();a.currentTime=0;a.paused=false;let valmis=false,rikki=false;const calls=[];
+ const off=kuunteleLivianTilanteita((kind,data)=>calls.push({kind,data}));t.after(off);
+ const stop=seuraaLivianKuuntelua(a,()=>true,()=>'',{lahde:'matkakirja',reaktiotAjastettu:()=>{if(rikki)throw Error('metadata');return valmis;}});t.after(stop);
+ a.dispatchEvent(new Event('playing'));assert.equal(calls.at(-1).data.reaktiotAjastettu,false);
+ valmis=true;assert.equal(calls.length,1,'pelkkä latauksen valmistuminen ei esitä soittoa');
+ a.currentTime=.3;a.dispatchEvent(new Event('timeupdate'));assert.equal(calls.at(-1).data.reaktiotAjastettu,true);assert.equal(calls.length,2);
+ a.currentTime=.5;a.dispatchEvent(new Event('timeupdate'));assert.equal(calls.length,2,'muuttumaton tila ei monista tapahtumaa');
+ rikki=true;a.currentTime=.7;a.dispatchEvent(new Event('timeupdate'));assert.equal(calls.at(-1).data.reaktiotAjastettu,false);
+ a.paused=true;a.dispatchEvent(new Event('pause'));rikki=false;const n=calls.length;
+ a.currentTime=.8;a.dispatchEvent(new Event('timeupdate'));assert.equal(calls.length,n,'tauko ei välitä reaktiotilaa');
+ a.paused=false;a.dispatchEvent(new Event('playing'));assert.equal(calls.at(-1).data.reaktiotAjastettu,true);
+ stop();const count=calls.length;a.dispatchEvent(new Event('playing'));assert.equal(calls.length,count);
+});
