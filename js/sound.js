@@ -1446,6 +1446,25 @@ const PULUN_TEHOSTEET = {
    */
   'pulu.kamera-klik': { tunnus: 'kamera-laukaisin', kesto: 0.8, voima: 1 },
   'pulu.kirjain-suhina': { tunnus: 'kirjain-suhina', kesto: 1.4, voima: 0.8 },
+  /*
+   * PULLARIEMU (omistaja 11.9.2026 tekstisession kautta: oma hihkuva
+   * pullansyöntianimaatio joka kaupunkilehteen; ele bunFeast
+   * js/livia-eleet.js). Kohtaus on 4600 ms, ja siinä on kolme ääntä:
+   * riemuhihkaisu alussa, sama puraisu kolmesti (1564/2208/2852 ms) ja
+   * tyytyväinen lopetus.
+   *
+   * LOPETUKSEEN EI OMAA ÄÄNTÄ: `pulu.kujerrus` on juuri se tyytyväinen
+   * kujerrus, joka kohtauksen loppuun kuuluu, ja yksi ääni vähemmän on
+   * yksi kuunneltava ja ämpäriin vietävä vähemmän. Puraisu on yksi
+   * äänite kolmesti, koska kolme eri puraisua kuulostaisi kolmelta eri
+   * suulta.
+   *
+   * VOIMAT: hihkaisu on kohtauksen huippu mutta lyhyt (0,9), puraisu
+   * jää pehmeäksi (0,7) — se soi kolmesti, ja täydellä voimalla
+   * rapina alkaisi hallita koko kohtausta.
+   */
+  'pulu.pulla-riemu': { tunnus: 'pulla-riemu', kesto: 0.9, voima: 0.9 },
+  'pulu.pulla-puraisu': { tunnus: 'pulla-puraisu', kesto: 0.8, voima: 0.7 },
 };
 
 // Mitkä äänet soivat oikeasta äänitteestä ja miten siivu otetaan.
