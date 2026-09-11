@@ -31,20 +31,20 @@
  * ovat kartan kerrosjärjestyksen ja savukkeiden yhteistä sanastoa —
  * uudelleennimeäminen olisi ollut isompi muutos kuin itse tilaus.
  *
- * === NÄKYVYYS: PELAAJAN OMA ZOOMIALUE (omistajan tarkennus 31.8.2026)
+ * === NÄKYVYYS: KAIKISSA MITTAKAAVOISSA (omistaja 11.9.2026) ========
  *
- * *"tummennukset riittää tehdä siihen tasoon mitä peli antaa
- * normaalistikin pelaajan zoomata ulos sekä kaikki sitä lähemmät.
- * kehittäjätilassa kun zoomataan enemmän ulos, niin silloin
- * tummennuksia ei tarvita."*
+ * Kerroksella oli 31.8.2026 alkaen uloszoomausraja: *"tummennukset
+ * riittää tehdä siihen tasoon mitä peli antaa normaalistikin pelaajan
+ * zoomata ulos sekä kaikki sitä lähemmät. kehittäjätilassa kun
+ * zoomataan enemmän ulos, niin silloin tummennuksia ei tarvita."*
  *
- * Raja EI ole kovakoodattu mittakaava vaan pelin oma uloszoomauksen
- * pohja: js/kartta.js `pelaajanUloinSkaala()` laskee sen maan
- * ikkunasta samalla kaavalla kuin `fokusZoomMinimi` — sama laatikko,
- * sama ULOSZOOMAUS_KERROIN. Ääriviiva on päällä siitä mittakaavasta
- * ylöspäin. Kehittäjän maailmanäkymä ohittaa rajan kamerassa mutta ei
- * täällä: kun kartta on loitonnettu pelaajan rajaa kauemmas, viiva
- * jää pois.
+ * SE SÄÄNTÖ KOSKI PINTAA, EI VIIVAA. Kerroksesta on sittemmin jäljellä
+ * vain pelaajan maan kehä, ja omistajan sana 11.9.2026 on *"Peli voisi
+ * piirtää vahvemmalla AINA kyseisen valtion rajat jossa pelaaja on"* —
+ * myös kehittäjän maailmatilassa, jossa zoomataan pelaajan uloimman
+ * tason ulkopuolelle. Harso kauempaa oli ruma; ohut kehä ei ole, ja
+ * juuri kaukaa se kertoo parhaiten missä maassa ollaan. Rajaa ei siis
+ * enää ole; ainoa poikkeus on avauslento (ks. alempana).
  *
  * === ELEKÄYTÖS: KERROS EI VÄISTY LAINKAAN ==========================
  *
@@ -296,22 +296,16 @@ function tunniste(ui) {
   if (ui.aloituslentoKesken) return null;
   const iso = ui.fokuskarttaAvain || kohteidenNykyinenIso(ui);
   if (!iso) return null;
-  const raja = ui.kartta?.pelaajanUloinSkaala?.();
   /*
-   * MAA ILMAN IKKUNAA ON NÄKYVYYSRAJATON. `pelaajanUloinSkaala`
-   * lasketaan maan ikkunasta (js/kartta.js), joten ikkunattomalle
-   * maalle se on 0 — silloin ei ole myöskään sitä uloszoomauksen
-   * pohjaa, jonka ulkopuolella kerros aikanaan sammutettiin
-   * (*"tummennukset riittää tehdä siihen tasoon mitä peli antaa
-   * normaalistikin pelaajan zoomata ulos"*). Viiva on silloin päällä
-   * kaikissa mittakaavoissa, mikä on tasan se, mitä 11.9.2026:n
-   * *"aina"* tarkoittaa.
+   * EI NÄKYVYYSRAJAA MISSÄÄN MITTAKAAVASSA. Kerros peri aikanaan
+   * uloszoomausrajan tummennuksilta (*"tummennukset riittää tehdä
+   * siihen tasoon mitä peli antaa normaalistikin pelaajan zoomata
+   * ulos"*, omistaja 31.8.2026), mutta se sääntö koski PINTAA, ei
+   * viivaa: harso kauempaa oli ruma, ohut kehä ei ole. Nyt kerroksen
+   * ainoa sisältö on pelaajan maan kehä, ja omistajan sana on *"aina"*
+   * (11.9.2026) — myös kehittäjän maailmatilassa, jossa zoomataan
+   * pelaajan uloimman tason ulkopuolelle.
    */
-  if (!(raja > 0)) return { iso, avain: iso };
-  const skaala = ui.nakyvaAlue?.()?.skaala;
-  if (!(skaala > 0)) return null;
-  // Pieni sietovara: pelaajan uloin taso itse kuuluu mukaan.
-  if (!(skaala >= raja * 0.999)) return null;
   return { iso, avain: iso };
 }
 
