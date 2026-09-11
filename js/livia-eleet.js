@@ -58,7 +58,7 @@ export function asennaLivianKasvot(pollo) {
  let puhe=false,puheAlku=0,lepoTila=null,auki=Boolean(pollo.auki),oliNakyva=false,ensisaapuminen=false,paluuVuoro=0;
  let aaniPois=[],aaniIndeksi=0,viimeAsento=null,viimeTilanne=-Infinity;
  let nostoTila=null;
- let lehtiPaalla=false,odotusVuoro=0;
+ let lehtiPaalla=false,lasitPuettu=false,lehtiVuoro=0,odotusVuoro=0;
  const odotukset=new Set();
  const luennat=new Map();
  const lepo=()=>livianSvgAsento('blink',0);
@@ -79,7 +79,8 @@ export function asennaLivianKasvot(pollo) {
   pinta.hidden=!nappiNakyy()||Boolean(ylin&&nappi.closest?.('dialog[open]')!==ylin);
  }
  const piirra=s=>{if(!kuollut){viimeAsento=s;sijoita();
-  const lasit=s.ele==='glasses'&&s.p<.32?Math.max(0,Math.min(1,(s.p-.12)/.20)):1;
+  const lasit=!lasitPuettu&&s.ele==='glasses'&&s.p<.32?Math.max(0,Math.min(1,(s.p-.12)/.20)):1;
+  if(lehtiPaalla&&lasit>=1)lasitPuettu=true;
   kasvot.paint(lehtiPaalla?{...s,glasses:lasit}:s);
  }};
  function vaienna(){for(const stop of aaniPois)stop?.();aaniPois=[];}
@@ -96,6 +97,12 @@ export function asennaLivianKasvot(pollo) {
  function katkaise(){cancelAnimationFrame(raf);clearTimeout(jatkoAjastin);raf=0;nykyinen=null;vaienna();}
  function piirraNyt(nyt){
   let s=nykyinen?livianSvgAsento(nykyinen.id,osuus,{voimakkuus:nykyinen.voimakkuus}):(lepoTila||lepo());
+  // Kuuntelu on tila, ei 2,4 sekunnin välähdys. Myös sisääntulon
+  // aikana alkanut luenta näkyy heti liikkeen päätyttyä. Ei elejonoa.
+  if([...luennat.values()].at(-1)?.lahde==='matkakirja'&&nakyy()&&!puhe&&!pollo.auki&&!nostoTila?.onkoAuki()
+    &&(!nykyinen||nykyinen.omistaja==='narration')&&!s.flight&&!s.walk){
+   s={...s,gazeUp:true,glasses:0};
+  }
   // Nokan liike on rytmitetty ele, ei foneemikohtainen huulisynkka.
   if(puhe&&nakyy()&&!s.flight&&!s.walk&&s.x===0&&s.y<5&&!['shock','puff','cover','preen','chew','chewManic','yawn'].includes(s.frame)){
     s={...s,mouth:livianSvgAsento('talk',((nyt-puheAlku)%1500)/1500).frame};
@@ -124,7 +131,7 @@ export function asennaLivianKasvot(pollo) {
   if(id==='owl')id='flyAway';
   const ele=LIVIA_SVG_ELEET.find(e=>e.id===id);if(!ele||kuollut)return false;
   katkaise();lepoTila=null;
-  if(!nakyy()||vahenna?.matches){piirra(lepo());return false;}
+  if(!nakyy()||vahenna?.matches){piirraNyt(performance.now());return false;}
   nykyinen={...ele,voimakkuus:livianEleenVoima(id),...asetukset};osuus=asetukset.fromProgress||0;aaniIndeksi=0;alkoi=performance.now();viimeEle=alkoi;viimePiirto=-Infinity;
   piirraNyt(alkoi);kaynnista();return true;
  }
@@ -154,6 +161,7 @@ export function asennaLivianKasvot(pollo) {
    const omistaja=laji==='cardEnd'?'card':'narration';
    if(nykyinen?.omistaja===omistaja&&(!tiedot.tunnus||nykyinen.tunnus===tiedot.tunnus)){katkaise();piirraNyt(performance.now());kaynnista();}
    if(laji==='cardEnd'||!nykyinen)jatkaKuunteluaTaiOdotusta();
+   if(!nykyinen)piirraNyt(performance.now());
    return false;
   }
   const nyt=performance.now();
@@ -209,7 +217,7 @@ export function asennaLivianKasvot(pollo) {
    if(!nykyinen&&!puhe&&!luennat.size&&nakyy()&&odotukset.size){
     toista(lehtiPaalla?'scratch':['think','lookRight','reading'][odotusVuoro++%3],{hiljaa:true,omistaja:'waiting'});
    }else if(!nykyinen&&!puhe&&!luennat.size&&nakyy()&&lehtiPaalla&&!pollo.auki&&nyt-viimeEle>=22000){
-    toista('scratch',{hiljaa:true});
+    toista(['scratch','eyeRub'][lehtiVuoro++%2],{hiljaa:true});
    }else if(!nykyinen&&!lepoTila&&rauhallinen()&&tauko>=30000&&nyt-viimeEle>=22000){
     if(tauko>=180000)toista('sleep',{nuku:true});
     else{const id=['blink','turn','preen','bored','glance','puff','crumb','tilt','lookUp','lookDown','doubleTake','facepalm','sneeze','leaveDown','walkRight','flyAway'][tyhjaVuoro++%16];toista(id,{hiljaa:true,jatko:id==='leaveDown'?'emerge':id==='walkRight'?'walkBack':id==='flyAway'?'flyBack':null});}
@@ -227,8 +235,17 @@ export function asennaLivianKasvot(pollo) {
  const lehti=doc.getElementById?.('arrival-dialog')??null;
  function lehtiMuuttui(){
   const auki=Boolean(lehti?.open&&lehti.classList?.contains('lehti')),muuttui=auki!==lehtiPaalla;
-  lehtiPaalla=auki;paikkaMuuttui();
-  if(muuttui){if(auki&&!puhe&&!luennat.size&&!odotukset.size)toista('glasses',{hiljaa:true});else piirraNyt(performance.now());}
+  if(muuttui){lasitPuettu=false;lehtiVuoro=0;
+   if(!auki&&['eyeRub','glasses'].includes(nykyinen?.id))katkaise();
+  }
+  lehtiPaalla=auki;
+  // Pukeminen käynnistyy vain kerran. Myöhemmät glasses-korttieleet
+  // eivät riisu valmiiksi päässä olevia laseja hetkeksikään.
+  if(muuttui&&auki&&!puhe&&!luennat.size&&!odotukset.size){
+   if(toista('glasses',{hiljaa:true}))return;
+  }
+  paikkaMuuttui();
+  if(muuttui)piirraNyt(performance.now());
  }
  const lehtiVahti=lehti?new MutationObserver(lehtiMuuttui):null;lehtiVahti?.observe(lehti,{attributes:true,attributeFilter:['open','class']});
  const irrotaDialogit=seuraaLivianDialogeja(doc,()=>{
@@ -236,13 +253,13 @@ export function asennaLivianKasvot(pollo) {
   katkaise();lepoTila=null;viimeToimi=performance.now();
   oliNakyva=nappiNakyy();chatTila?.paivita();piirra(lepo());
   // Yhä oikeasti soiva oma puhe saa jatkaa nokkaa, ei vanhaa elettä.
-  if(puhe)kaynnista();
+  piirraNyt(performance.now());if(puhe)kaynnista();
  });
  const virtaVahti=new MutationObserver(mietintaMuuttui);
  const kokoVahti=typeof ResizeObserver==='function'?new ResizeObserver(paikkaMuuttui):null;kokoVahti?.observe(nappi);
- function liikeAsetus(){katkaise();lepoTila=null;piirra(lepo());ajasta();if(!vahenna?.matches)kaynnista();}
+ function liikeAsetus(){katkaise();lepoTila=null;piirraNyt(performance.now());ajasta();if(!vahenna?.matches)kaynnista();}
  function tausta(){
-  if(doc.hidden){katkaise();piirra(lepo());}else{puhe=livianKasvopuheenTila().length>0;puheAlku=performance.now();kaynnista();}
+  if(doc.hidden){katkaise();piirra(lepo());}else{puhe=livianKasvopuheenTila().length>0;puheAlku=performance.now();piirraNyt(performance.now());kaynnista();}
   viimeToimi=performance.now();
  }
  const irrotaPuhe=kuunteleLivianKasvopuhetta(tilat=>{

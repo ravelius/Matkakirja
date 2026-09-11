@@ -57,7 +57,10 @@ export function luoLivianKuunteluvuoro(tunnus={}, {lahde}={}){
    aika=Number(aika)||0;
    if(aika<viime)viime=-Infinity;
    if(aika-viime<12)return;viime=aika;
-   ilmoitaLivianTilanne('narration',{ele:vuoro++===0?'lookUp':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti}),tunnus,...(lahde?{lahde}:{})});
+   // Isoisää kuunnellaan katse yläviistossa, ei pueta laseja tai
+   // näytellä tekstin avainsanoja. Lehden/lukijan aiemmat eleet säilyvät.
+   const ele=vuoro++===0?'lookUp':lahde==='matkakirja'?'nod':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti});
+   ilmoitaLivianTilanne('narration',{ele,tunnus,...(lahde?{lahde}:{})});
   },
   lopeta(){if(!elossa)return;elossa=false;tauko();},
  };
