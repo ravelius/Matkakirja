@@ -25,6 +25,14 @@
   --traileri-kirjain-ulos: 450ms;
   --traileri-iskulause: 600ms;
 
+  /*
+   * KUVAN KATOT YHDESSA PAIKASSA (omistaja 11.9.2026 klo 22.26,
+   * iPad-kaappaus: *"herokuva on yha liian pieni"*). Sama kaksikko
+   * ohjaa seka kuvakoteloa etta kuvaa, jotta ne eivat voi erkaantua.
+   */
+  --traileri-leveyskatto: 96vw;
+  --traileri-korkeuskatto: 92vh;
+
   position: fixed;
   inset: 0;
   z-index: 90;
@@ -64,8 +72,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 92vw;
-  max-height: 80vh;
+  max-width: var(--traileri-leveyskatto);
+  max-height: var(--traileri-korkeuskatto);
   opacity: 0;
   transform: translateX(115vw);
   transition:
@@ -97,16 +105,30 @@
    .fokusvirta-isokuva): kaikki neljä reunaa sulavat mustaan, jolloin
    kuvalla ei ole kehystä vaan häive. */
 .saapumistraileri-kuva img {
-  /* LEVEYS ANNETAAN, EI VAIN KATOTA (omistaja 11.9.2026: *"Kuvat tulevat
-     liian pieninä"*). `width: auto` jätti kuvan omaan pikselikokoonsa,
-     joten iPadilla lehden herokuva näkyi noin 60 %:n levyisenä vaikka
-     tilaa oli 92 vw. Nyt leveys on 92 vw ja korkeus seuraa kuvasuhdetta;
-     max-height ja object-fit pitävät huolen siitä, ettei pystykuva
-     karkaa ruudun yli. */
-  width: 92vw;
+  /* KUVA NIIN ISONA KUIN SE MAHTUU — JA LAATIKKO TASAN KUVAN KOKOINEN.
+     (omistaja 11.9.2026 klo 22.26, iPad-kaappaus: *"herokuva on yha
+     liian pieni"*.)
+
+     Vanha sääntö `width: 92vw; max-height: 80vh; object-fit: contain`
+     MITTASI oikein mutta NÄYTTI väärin: kun korkeuskatto puri, laatikko
+     jäi 92 vw:n levyiseksi ja contain kutisti KUVAN sen sisään. Mitattu
+     Chromiumilla 11.9.2026: iPad vaakatasossa 1194 × 834 laatikko 92,0 %
+     ruudun leveydestä mutta maalattu kuva vain 83,8 % — ja reunahäive
+     osui tyhjään laatikkoon eikä kuvan reunaan.
+
+     Nyt leveys lasketaan MOLEMMISTA katoista: se on pienempi kahdesta,
+     leveyskatto tai se leveys, joka mahtuu korkeuskattoon kuvasuhteella.
+     Silloin `height: auto` osuu aina korkeuskaton alle, laatikko on
+     täsmälleen kuvan kokoinen eikä contain kutista mitään. Kuvasuhteen
+     kirjoittaa skripti (js/saapumistraileri.js) kuvan latatessa; 1.5 on
+     lehden herokuvien oma 3:2 ja kelpaa siihen asti. */
+  width: min(
+    var(--traileri-leveyskatto),
+    calc(var(--traileri-korkeuskatto) * var(--traileri-kuvasuhde, 1.5))
+  );
   height: auto;
-  max-width: 92vw;
-  max-height: 80vh;
+  max-width: var(--traileri-leveyskatto);
+  max-height: var(--traileri-korkeuskatto);
   border-radius: 18px;
   object-fit: contain;
   -webkit-mask-image:
