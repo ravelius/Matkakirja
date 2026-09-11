@@ -1,5 +1,10 @@
 # Pulu — yhteinen tilakortti
 
+## 11.9.2026 — PR2264 READY: chat-pikapyrähdys + puistelu vastatessa
+
+Head1ecf91703504b853760bb8b0518e2bf7c1e7dfa1, puuf79cfcd0e6f330f8fb4d1268f7f70cbcc7fae7ec, CI34630854952 SUCCESS.2871pass/0fail/13skip, kohteet76/76. Lintu ulos165ms, pilvi300ms, paluu≤100ms, kotona puistelu1400ms vastauksen päällä → kirja. Earlyanswer0/40/120/320/3000ms, stale/close/hidden/reduced/rAF cleanup. Oikea chat+fixture Chrome tablet4/4PASS (SSE/JSON/cancel/reduced); kotona24/111–114/3ms vastauksesta;0JSvirhettä. Ei julkisen tai fyysisen iPadin readback. READY-posti 7a4b2aa1ac00c80dc681ba0d8552087126bcde4f. Fable: tarkistus/versionosto/julkaisu/Raamattu. #2258 julkaistu mainiin v1775:ssä, alempi READY-rivi on historiallinen.
+
+
 ## 11.9.2026 — PR2258 READY: valkoinen Pulu-neliö noston/chatin päällä
 
 Head e0dbf6f93744107a52f7c08ca6a41af394868c9a, puu94d978e6bd0fcafd6d952bf46214a626d83332c8, CI34620674606 SUCCESS,2804pass/0fail/13skip. Vain Pulun CSS-vuorovaikutustilat ja regressiotesti. Todellinen Topkapın nosto+chat ennen/jälkeen Chrome tablet834×1194touch PASS; hover/active/focus/48px/sulku/lehti/kartta,0JSvirhettä. Ei fyysisen iPadin tai julkisen sovelluksen readbackia. READY-toimitus 1f619a21b9ce478e8d1caff7e33d3f97f6afaf86. Seuraava siirto Fable: tarkistus/versionosto/julkaisu.
