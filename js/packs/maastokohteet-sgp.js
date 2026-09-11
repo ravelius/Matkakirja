@@ -111,6 +111,14 @@ export const MAASTOKOHTEET_SGP = [
   {
     id: 'pulau-ubin',
     nimi: 'Pulau Ubin',
+    /*
+     * LYHYT NIMIÖ, KOSKA SINGAPORE ON TÄYNNÄ. Maan yhdeksän merkkiä
+     * mahtuu noin 15 x 17 lautayksikön alalle, ja tämä kymmenes nimiö
+     * työnsi Bukit Timahin alakyljelle Haw Par Villan päälle (erän M20
+     * mittaus tässä tiedostossa: yhdeksäs oli maan yläraja). Saaren
+     * arkinimi on Ubin, joten lyhennys ei ole keksitty.
+     */
+    nimio: 'Ubin',
     tyyppi: 'saari',
     kysymykset: [
       'Mitä saaren nimi tarkoittaa?',

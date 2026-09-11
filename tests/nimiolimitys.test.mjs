@@ -66,8 +66,24 @@ const onPoltettu = (tunnus, tiiviste) => luettelo[tunnus] === tiiviste;
  * kuuluvat päätoimitukselle. Lista on siksi nimetty ja perusteltu
  * tässä, ja SEN PITÄÄ LYHENTYÄ: jokainen muu pari kaataa testin yhä.
  */
+/*
+ * YKSI TIEDOSSA OLEVA LIMITYS, MITATTU EIKÄ SIEDETTY VAHINGOSSA.
+ *
+ * `muu`-tyypin luokittelu (11.9.2026) toi kartalle 98 merkkiä, jotka
+ * olivat siihen asti pudonneet pois hiljaa. Kaksi maailman ahtainta
+ * ryvästä joutui siitä viimeiseen olkeensa. Singapore ratkesi
+ * lyhentämällä Pulau Ubinin nimiön saaren arkinimeen "Ubin"
+ * (js/packs/maastokohteet-sgp.js) — limityksiä 1 → 0.
+ *
+ * ITÄ-TIMORIA EI RATKAISE NIMIÖN PITUUS. Kansallispuiston merkki vie
+ * eläintäyn oikean kyljen, joten täky siirtyy yläkyljelle Baguian
+ * päälle; este on SYMBOLIN paikka eikä tekstin leveys, ja lyhyempi
+ * nimiö mitattiin ("Konis Santana" ja "Konis") tuloksella 1 → 1.
+ * Loput keinot — merkin siirto pois oikeasta paikastaan tai noston
+ * poisto — ovat huonompia kuin yksi limitys. Kaikki muut parit
+ * kaatavat tämän testin yhä.
+ */
 const ODOTTAVAT_LIMITYKSET = new Set([
-  '[sama maa] SGP/haw-par-villa + SGP/bukit-timah',
   '[eläintäky] TLS/baguia + TLS/elaintaky-TLS',
 ]);
 
