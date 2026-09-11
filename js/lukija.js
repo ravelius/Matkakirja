@@ -1,4 +1,5 @@
 import { ilmoitaLivianKasvopuhe, seuraaLivianKasvoLausumaa } from './livia-puhetila.js';
+import { luoLivianKuunteluvuoro, seuraaLivianKuuntelulausumaa } from './livia-tilanteet.js';
 /*
  * LUKIJA — sivun teksti ääneen laitteen omalla puheäänellä.
  *
@@ -1366,8 +1367,10 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
  */
 function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null, persoona = 'kertoja') {
   const merkki = {};
+  const kuuntelu = persoona === 'pollo' ? null : luoLivianKuunteluvuoro(merkki, { lahde: 'lukija' });
   const loppui = () => {
     if (ajossa?.merkki !== merkki) return;
+    kuuntelu?.lopeta();
     ilmoitaLivianKasvopuhe(merkki, false);
     ajossa = null;
     merkitseTila(nappi, false);
@@ -1389,6 +1392,7 @@ function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null, persoona = 'ke
       kunLoppuu,
       lopeta: () => {
         irrota?.(); irrotaAlku?.();
+        kuuntelu?.lopeta();
         ilmoitaLivianKasvopuhe(merkki, false);
         try {
           natiivi.luenta.pysayta()?.catch?.(() => {});
@@ -1399,8 +1403,10 @@ function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null, persoona = 'ke
     };
     const natiiviLoppui = () => { irrota?.(); irrotaAlku?.(); loppui(); };
     irrota = natiivi.kuuntele?.('luenta-loppui', natiiviLoppui) ?? null;
-    if (persoona === 'pollo') irrotaAlku = natiivi.kuuntele?.('luenta-alkoi', () => {
-      if (ajossa?.merkki === merkki) ilmoitaLivianKasvopuhe(merkki, true, puhuttava);
+    irrotaAlku = natiivi.kuuntele?.('luenta-alkoi', () => {
+      if (ajossa?.merkki !== merkki) return;
+      if (kuuntelu) kuuntelu.paivita(true, undefined, puhuttava);
+      else ilmoitaLivianKasvopuhe(merkki, true, puhuttava);
     }) ?? null;
     try {
       Promise.resolve(natiivi.luenta.puhu(puhuttava, LUENNAN_KIELI)).then((tulos) => {
@@ -1445,13 +1451,19 @@ function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null, persoona = 'ke
     lausuma.lang = LUENNAN_KIELI;
     if (aani) lausuma.voice = aani;
     const valmis = () => {
+      if (tila.peruttu || tila.lausuma !== lausuma) return;
       tila.kasvoStop?.();
-      if (tila.peruttu) return;
       puhuPala();
     };
     lausuma.onend = valmis;
-    lausuma.onerror = valmis;
-    tila.kasvoStop = seuraaLivianKasvoLausumaa(lausuma, persoona);
+    lausuma.onerror = () => {
+      if (tila.peruttu || tila.lausuma !== lausuma) return;
+      kuuntelu?.paivita(false);
+      valmis();
+    };
+    tila.kasvoStop = kuuntelu
+      ? seuraaLivianKuuntelulausumaa(lausuma, kuuntelu, () => ajossa?.merkki === merkki)
+      : seuraaLivianKasvoLausumaa(lausuma, persoona);
     tila.lausuma = lausuma;
     synth.speak(lausuma);
   };
@@ -1462,6 +1474,7 @@ function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null, persoona = 'ke
     kunLoppuu,
     lopeta: () => {
       tila.peruttu = true;
+      kuuntelu?.lopeta();
       tila.kasvoStop?.();
       // Kuulijat irti ensin: peruminen laukaisee onend/onerror, eikä se
       // saa käynnistää seuraavaa palaa.
@@ -1531,9 +1544,11 @@ export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
 
   const merkki = {};
   const palat = [];
+  const kuuntelu = persoona === 'pollo' ? null : luoLivianKuunteluvuoro(merkki, { lahde: 'lukija' });
   const tila = { peruttu: false, lausuma: null, lepaa: true, paatetty: false };
   const loppui = () => {
     if (ajossa?.merkki !== merkki) return;
+    kuuntelu?.lopeta();
     ilmoitaLivianKasvopuhe(merkki, false);
     ajossa = null;
     merkitseTila(nappi, false);
@@ -1545,6 +1560,7 @@ export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
     if (!palat.length) {
       // Jono tyhjeni: joko odotetaan lisää tai luenta on valmis.
       tila.lepaa = true;
+      kuuntelu?.paivita(false);
       if (tila.paatetty) loppui();
       return;
     }
@@ -1553,13 +1569,19 @@ export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
     lausuma.lang = LUENNAN_KIELI;
     if (aani) lausuma.voice = aani;
     const valmis = () => {
+      if (tila.peruttu || tila.lausuma !== lausuma) return;
       tila.kasvoStop?.();
-      if (tila.peruttu) return;
       puhuPala();
     };
     lausuma.onend = valmis;
-    lausuma.onerror = valmis;
-    tila.kasvoStop = seuraaLivianKasvoLausumaa(lausuma, persoona);
+    lausuma.onerror = () => {
+      if (tila.peruttu || tila.lausuma !== lausuma) return;
+      kuuntelu?.paivita(false);
+      valmis();
+    };
+    tila.kasvoStop = kuuntelu
+      ? seuraaLivianKuuntelulausumaa(lausuma, kuuntelu, () => ajossa?.merkki === merkki)
+      : seuraaLivianKasvoLausumaa(lausuma, persoona);
     tila.lausuma = lausuma;
     synth.speak(lausuma);
   };
@@ -1571,6 +1593,7 @@ export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
     kunLoppuu: vapautaVaisto,
     lopeta: () => {
       tila.peruttu = true;
+      kuuntelu?.lopeta();
       tila.kasvoStop?.();
       // Jono tyhjäksi, jottei peruttu luenta jatku seuraavasta palasta.
       palat.length = 0;

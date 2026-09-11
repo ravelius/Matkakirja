@@ -44,23 +44,46 @@ export function livianAiheEle({symboli='',otsikko='',teksti=''}={}){
  if(symboli==='elain')return /lintu|linnut|kyyhky|pulu/iu.test(s)?'grin':/hevonen|hevos|varsa/iu.test(s)?'doubleTake':'tilt';
  return ({huuto:'disbelief',silma:'lookUp',historia:'glasses',luonto:'tilt',ruoka:'smile',kulttuuri:'smile',tekniikka:'glasses',kauppa:'expert',sana:'glasses',merenkulku:'lookUp',urheilu:'grin',kaupunki:'present',ihme:'disbelief',hetki:'glasses'})[symboli]||'listen';
 }
-/** Todellinen soittimen aika: tauko, puskurointi ja vaihto eivät jätä elejonoa. */
-export function seuraaLivianKuuntelua(audio,voimassa,haeTeksti=()=> '',{lahde}={}){
- if(!audio?.addEventListener)return()=>{};
+/** Yksi kertojan vuoro riippumatta siitä, mikä äänitekniikka soittaa. */
+export function luoLivianKuunteluvuoro(tunnus={}, {lahde}={}){
  let viime=-Infinity,vuoro=0,soi=false,elossa=true;
- const reagoi=()=>{
-  if(!elossa||!soi||audio.paused||audio.ended||!voimassa())return;
-  const aika=Number(audio.currentTime)||0;
-  if(aika<viime)viime=-Infinity;
-  if(aika-viime<12)return;viime=aika;
-  ilmoitaLivianTilanne('narration',{ele:vuoro++===0?'lookUp':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti:haeTeksti()}),tunnus:audio,...(lahde?{lahde}:{})});
+ const tauko=()=>{if(!soi)return;soi=false;ilmoitaLivianTilanne('narrationEnd',{tunnus});};
+ return {
+  paivita(paalla,aika=performance.now()/1000,teksti=''){
+   if(!elossa)return;
+   if(!paalla){tauko();return;}
+   // Paluu tauolta reagoi heti; virkkeiden välinen sauma ei ole tauko.
+   if(!soi){viime=-Infinity;soi=true;}
+   aika=Number(aika)||0;
+   if(aika<viime)viime=-Infinity;
+   if(aika-viime<12)return;viime=aika;
+   ilmoitaLivianTilanne('narration',{ele:vuoro++===0?'lookUp':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti}),tunnus,...(lahde?{lahde}:{})});
+  },
+  lopeta(){if(!elossa)return;elossa=false;tauko();},
  };
- // Tauolta tai puskuroinnista paluu palauttaa kuuntelutilan heti,
- // vaikka edellisestä eleestä olisi kulunut alle 12 sekuntia.
- const alkoi=()=>{if(!elossa)return;if(!soi)viime=-Infinity;soi=true;reagoi();};
- const tauko=()=>{soi=false;ilmoitaLivianTilanne('narrationEnd',{tunnus:audio});};
+}
+
+/** Todellinen soittimen aika: tauko, puskurointi ja vaihto eivät jätä elejonoa. */
+export function seuraaLivianKuuntelua(audio,voimassa,haeTeksti=()=> '',asetukset={}){
+ if(!audio?.addEventListener)return()=>{};
+ const vuoro=luoLivianKuunteluvuoro(audio,asetukset);
+ let soi=false,elossa=true;
+ const reagoi=()=>{if(elossa&&soi&&!audio.paused&&!audio.ended&&voimassa())vuoro.paivita(true,audio.currentTime,haeTeksti());};
+ const alkoi=()=>{if(!elossa)return;soi=true;reagoi();};
+ const tauko=()=>{soi=false;vuoro.paivita(false);};
  const events={playing:alkoi,timeupdate:reagoi,pause:tauko,waiting:tauko,stalled:tauko,error:tauko,ended:lopeta,emptied:lopeta};
- function lopeta(){if(!elossa)return;elossa=false;tauko();for(const[n,f]of Object.entries(events))audio.removeEventListener(n,f);}
+ function lopeta(){if(!elossa)return;elossa=false;vuoro.lopeta();for(const[n,f]of Object.entries(events))audio.removeEventListener(n,f);}
  for(const[n,f]of Object.entries(events))audio.addEventListener(n,f);
  return lopeta;
+}
+
+/** Selaimen puheääni: ei ajastinta tai speak()-kutsusta arvattua alkua.
+ * Sama vuoro jatkuu lausumasta seuraavaan; lukija omistaa sen lopetuksen. */
+export function seuraaLivianKuuntelulausumaa(lausuma,vuoro,voimassa=()=>true){
+ let elossa=true,alkoi=false;
+ const reagoi=()=>{if(elossa&&alkoi&&voimassa())vuoro.paivita(true,undefined,lausuma.text);};
+ lausuma.onstart=lausuma.onresume=()=>{alkoi=true;reagoi();};
+ lausuma.onboundary=reagoi;
+ lausuma.onpause=()=>{if(!elossa||!voimassa())return;alkoi=false;vuoro.paivita(false);};
+ return()=>{elossa=false;lausuma.onstart=lausuma.onresume=lausuma.onpause=lausuma.onboundary=null;};
 }
