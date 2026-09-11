@@ -240,11 +240,11 @@ export const FOKUSVIRTA_ATEENA = {
      * paikkaa ovat varattuja (LIVIAN_VARATTU), jotta numerointi on sama
      * kuin muissa kaupungeissa.
      *
-     * SAAPUMISKUPLA VAIKENEE YHÄ ATEENASSA (js/fokusvirta.js
-     * SAAPUMISKUPLA_VAITI): aloituskaupungin saapumisessa on jo kaksi
-     * ohjekuplaa, eikä kolmas saa peittää niitä. Kupla odottaa siis
-     * omistajan päätöstä siitä, sallitaanko se aloituskaupungissa —
-     * teksti on kirjoitettu ja äänite voidaan generoida jo nyt.
+     * SAAPUMISKUPLA ON KÄYTÖSSÄ MYÖS ATEENASSA. Vaiennus purettiin, kun
+     * aloituskaupungin ohjekuplat väistyivät saapumisen uuden
+     * järjestyksen tieltä (Raamattu: SAAPUMISEN UUSI JARJESTYS):
+     * js/fokusvirta.js SAAPUMISKUPLA_VAITI on tyhjä joukko, joten tämä
+     * kupla näkyy samalla tavalla kuin muissa kaupungeissa.
      */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
