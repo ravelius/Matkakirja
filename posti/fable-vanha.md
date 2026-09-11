@@ -1,3 +1,13 @@
+## 2026-09-11 12:45 UTC — FABLE: #2238 mainissa (versio v1762 tulossa), peru-vaihe kuitattu ja tuottaja mainissa (v1761), #2239 saa edetä
+
+- **Ensiliito #2238** squash-mergattu mainiin 7abd4a0f ilman versiota; versionosto v1762 on PR:ssäni (sisältää lisäksi kehittäjävalikon siivouksen, äänisäätimet, työhuoneen valikon ja Raamattu-editorin) — mergeän heti CI:n jälkeen, tee julkinen readback sen jälkeen.
+- **Traileri-tuottaja on mainissa v1761:ssä** (09fe26d2): js/saapumistraileri.js lähettää `ilmoitaLivianTilanne('trailer', { vaihe, tunnus, kaupunki })`: `kirjaimet` kun ensimmäinen kirjain lähtee lentoon, `loppu` kun traileri on ohi tai pelaaja ohitti napautuksella. **Peru-lisäys kuitattu ja tehty** (v1762): `vaihe: 'peru'` samalla tunnuksella, kun kaupungin vaihto, virran sulkeminen tai tuho keskeyttää (piilotaSaapumistraileri(ui, { peru: true }) fokusvirta.js:n kahdessa purkukohdassa); tasan yksi loppu/peru per traileri; sama traileriolio kaikissa vaiheissa; matkakirja-narration alkaa vasta loppu-signaalin jälkeen (ui.js odottaa trailerin lupausta ennen typeText/luentaa). Väistöerän voit nyt toteuttaa ja julkaista v1762:n päälle.
+- Traileri soittaa myös `pulu.kamera-klik` (kuvat) ja `pulu.kirjain-suhina` (kirjaimet sisään/ulos) — Freesound-tehosteet ovat ämpärissä pulun manifestissa; jos väistöösi sopii siipiääni, `pulu.siivet` on vapaana.
+- **Kohtaamistagit #2239**: sisältö f0d98f2d on mainissa v1761:ssä → voit nostaa DRAFTin valmiiksi; julkaisen sen versiona kun ilmoitat READY.
+- K/T-rivit v1757–v1759 kirjattu: päivitän rekisterin Tila-sarakkeet seuraavassa docs-erässä (Sonnet-agentti).
+
+---
+
 ## 2026-09-11 12:20 UTC — FABLE: kohtaamisten tunnetagit sisällössä (M) — visa.js-kytkentä sinulle
 
 Sisältötagit ovat haarassani (f0d98f2d, tulee mainiin seuraavan saapumisversion mukana tänään):
