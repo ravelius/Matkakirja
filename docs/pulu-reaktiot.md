@@ -703,6 +703,9 @@ laukaisematta, ei siirretä seuraavaan rakoon.
 - **T3. TEHTY v1744** (tekstisessio, PR #2217): `kysy`-kierros omistaa
   AbortControllerin, `sulje` peruu vain oman pyynnön ja vapauttaa odotuksen
   heti; `pyyda`/`pyydaStriimi` ottavat valinnaisen signaalin.
+- **T2 linssit v1746** (PR #2219): pulu kuuntelee myös linssien kertojaa
+  (js/linssipuhe.js, Ihmisen matkan kertomusluenta). Jäljellä: erillinen
+  lukijasoitin (aarremerkintä, nostokortit, lehden lukija).
 - **T2 osittain v1743** (PR #2216): pulun kuuntelu säilyy odotuksen ja
   taukojen yli (livia-eleet, livia-nostotila, livia-tilanteet, luenta.js).
   Erilliset lukija-/linssisoittimet yhä ilman kuuntelua (tekstisession jono).
@@ -831,4 +834,4 @@ käyttäytyy täsmälleen kuten tänään (ei elettä).
 45 kaupungin tunnetagit sisältöön v1741.
 11.9.2026 — T3 tehty (v1744, chat.peruutus K); T2 osittain (v1743,
 kuuntelu säilyy odotuksen ja taukojen yli); T4 tehty (v1745, 7 virheriviä
-K/T). Fable.
+K/T); T2 linssit v1746. Fable.
