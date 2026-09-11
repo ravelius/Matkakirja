@@ -223,6 +223,13 @@ export const FOKUSVIRTA_GRANADA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.alhambra-patronato.es/wp-content/uploads/2019/02/Conservacion_y_gestion_cultural.pdf"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-granada-r20260911-paper2-v1.jpg",
+      lyhyt: "Granada, 1873. Sormi särki heijastuksen, vesi rakensi sen takaisin.",
+      selite: "Myrttipihan altaan pinta oli hetken toinen palatsi. Kosketin sitä sormenpäällä, ja kaaret hajosivat renkaiksi. Jäin odottamaan veden tyyntymistä altaan kivireunalle. Vähitellen valo rakensi julkisivun uudelleen ilman yhtäkään työmiestä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.alhambra-patronato.es/wp-content/uploads/2019/02/Conservacion_y_gestion_cultural.pdf","https://www.alhambra-patronato.es/en/recomendacion-lectura/la-acequia-real-de-la-alhambra"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Granada, huhtikuussa 1873. Kirkasta; Sierra Nevadalla lunta; '

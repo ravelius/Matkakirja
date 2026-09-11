@@ -210,6 +210,13 @@ export const FOKUSVIRTA_KRAKOVA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://ct.mhk.pl/wps/portal/mhmk/main/strona-artefaktu/?artefactId=%7B61040CE7-72DA-4281-A0A3-14D3C075B00B%7D","https://mnk.pl/en/wystawy/the-sukiennice/","https://convention.krakow.pl/english/ccb_en/7973%2Cartykul%2Cthe_cloth_hall.html"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-krakova-r20260911-paper2-v1.jpg",
+      lyhyt: "Krakova, 1873. Leipä oli sylissä, puuttuva sävel yhä ilmassa.",
+      selite: "Istuin kauppiaan tarjoamalla tuolilla leipä sylissäni ja katsoin Marian kirkon torneihin. Sävelmä oli jo katkennut, mutta korva odotti yhä jatkoa. Torin työ jatkui ympärilläni tavalliseen tapaan. Minä jäin vielä hetkeksi kuuntelemaan sitä, mitä kaupunki ei sanonut.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://muzeumkrakowa.pl/en/exhibitions/krakow-sounds-melodies-words","https://mnk.pl/en/wystawy/the-sukiennice/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Krakova, kesäkuussa 1873. Poutaa; torilla pölyää; puntari '

@@ -32,6 +32,13 @@ export const FOKUSVIRTA_TROMSSA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://en.uit.no/om/historie","https://uit.no/ressurs/uit/mediebok/Labyrint0412/Labyrint_2012-04_web.pdf","https://uit.no/tmu/samlinger/samling?p_document_id=667875"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tromssa-r20260911-paper2-v1.jpg",
+      lyhyt: "Tromssa, 1873. Sama meri toi satamaan saaliin ja museoon kysymykset.",
+      selite: "Museon ullakko oli vaatimaton, mutta ikkunasta näkyvä satama suuri. Pyyntilaivojen mastot nousivat vaaleaan kesäyöhön. Hyllyjen luut ja kivet olivat tulleet samalta mereltä, joka ruokki kaupunkia. Katsoin ulos ja ymmärsin, miksi uteliaisuudelle tarvitaan täällä kokonainen museo.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://en.uit.no/om/historie","https://uit.no/ressurs/uit/mediebok/Labyrint0412/Labyrint_2012-04_web.pdf"],
+    },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Tromssa, heinäkuussa 1873. Aurinko ei laske; satamassa '
       + 'hylkeenpyytäjiä; puntari korkealla.',

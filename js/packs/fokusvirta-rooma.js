@@ -180,6 +180,13 @@ export const FOKUSVIRTA_ROOMA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260911-paper2-v1.jpg",
+      lyhyt: "Rooma, 1873. Uusi virkamies kulki vanhan keisarin ohi.",
+      selite: "Sateen kiillottamalla kadulla uusi virkamies kantoi paperinsa kuivina. Kivinen keisari seisoi seinäsyvennyksessä ilman asiakirjoja tai kiirettä. Rooma oli vaihtanut pääkaupungin tehtävään, mutta kaikki sen hallitsijat eivät olleet poistuneet. He vain hoitivat virkansa eri aineesta.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
+    },
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät; '
       + 'puntari matalalla.',

@@ -190,6 +190,13 @@ export const FOKUSVIRTA_VENETSIA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.veneziaunica.it/"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-venetsia-r20260911-paper2-v1.jpg",
+      lyhyt: "Venetsia, 1873. Aamiaiskuppi kuului kanavalle asti.",
+      selite: "Gondoli kulki hiljaa kapeaa kanavaa. Gondolieri työnsi melaa, ja talojen seinät nousivat veden reunasta. Avoimella ikkunalla näkyi pieni kuppi. Lusikan kilahdus tuntui kuuluvan veneeseen saakka.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.veneziaunica.it/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Venetsia, kesäkuussa 1873. Kosteaa; laguuni haisee laskuveden aikaan.',

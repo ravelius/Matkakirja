@@ -200,6 +200,13 @@ export const FOKUSVIRTA_PIETARI = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.loc.gov/pictures/resource/ppmsc.03878","https://hermitagemuseum.org/panorama/pano_37/?floorNum=1&lng=en"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pietari-r20260911-paper2-v1.jpg",
+      lyhyt: "Pietari, 1873. Kello päätti päivän, valo ei.",
+      selite: "Kirjoitin päivän tapahtumat loppuun avoimen ikkunan ääressä. Kello oli jo pitkällä, mutta Neva ja vastarannan julkisivut säilyivät vaaleina. Kynttilälle ei ollut vielä työtä. Lisäsin muistikirjaan yhden rivin siitä, ettei päivä itse suostunut lopettamaan.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.loc.gov/pictures/resource/ppmsc.03878","https://hermitagemuseum.org/panorama/pano_37/?floorNum=1&lng=en"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Pietari, kesäkuussa 1873. Valkeat yöt; ei tule pimeää; '

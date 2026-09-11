@@ -110,6 +110,13 @@ export const FOKUSVIRTA_KOBENHAVN = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kobenhavn-r20260911-paper2-v1.jpg",
+      lyhyt: "Kööpenhamina, 1873. Lamput ehtivät veteen ennen tähtiä.",
+      selite: "Tivolin pienet öljylamput sytytettiin yksi kerrallaan, eikä ilta kiirehtinyt niiden edelle. Vallihaudan vesi kokosi liekeistä oman, katkonaisen tähtitaivaansa. Vanha pari jäi puiden alle niin pieneksi, että heidän askeleensa saattoi viimein unohtaa. Huvitusten joukossa katsoin pisimpään vettä, joka ei ollut maksanut pääsymaksua.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens","https://www.tivoli.dk/haven/fyrvaerkeri"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Vuodenaika seuraa merkinnän omaa
      * havaintoa: illat huvipuistossa tarkoittavat kesäkautta, ja Tivoli

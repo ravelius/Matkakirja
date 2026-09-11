@@ -101,6 +101,13 @@ export const FOKUSVIRTA_ATEENA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.theacropolismuseum.gr/en"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-ateena-r20260911-paper2-v1.jpg",
+      lyhyt: "Ateena, 1873. Kahviraha kelpasi ilman kertomusta alkuperästään.",
+      selite: "Keskustelu Troijan kullasta jatkui pöydän toisessa päässä, mutta oma osuuteni supistui yhteen kolikkoon. Laskin sen kupin viereen, ja isäntä ojensi kätensä kysymättä löydön historiaa. Pölyn takana Akropolis piti arvonsa ilman selitystä. Kahvi osoittautui helpommaksi kaupaksi kuin muinaisuus.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.theacropolismuseum.gr/en"],
+    },
     /*
      * KAANON UUSIKSI (Fable, omistajan hyväksyntä 8.9.2026 klo 19.10):
      * Ateena siirtyy samaan kulkuun kuin muut Euroopan kaupungit —

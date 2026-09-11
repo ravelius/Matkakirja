@@ -200,6 +200,13 @@ export const FOKUSVIRTA_BARCELONA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/101603/1/bcn01engp.pdf"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-barcelona-r20260911-paper2-v1.jpg",
+      lyhyt: "Barcelona, 1873. Kärryt kääntyivät, kaali jatkoi kasvuaan.",
+      selite: "Kaksi kärryä mahtui kääntymään uuden korttelin viistetyllä kulmalla. Etualalla kaalirivi kasvoi tulevan kadun paikalla. Piirsin kulman paperiin ja katsoin viljelystä. Kaupunki ja sato käyttivät hetken samaa maata.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/101603/1/bcn01engp.pdf"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Barcelona, maaliskuussa 1873. Lämmintä jo; satamassa tervan '

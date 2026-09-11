@@ -257,6 +257,13 @@ export const FOKUSVIRTA_MARSEILLE = {
       'https://www.musee-orsay.fr/sites/default/files/2021-10/feuilletage_cinema_2.pdf',
       ],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-marseille-r20260911-paper2-v1.jpg",
+      lyhyt: "Marseille, 1873. Sataman jäljet irtosivat käsistä vasta majatalossa.",
+      selite: "Majatalon pieni pesuvati sai vastustajikseen tervan, kalan ja suolaveden. Laskin uuden saippuapalan sen reunalle ja käärin hihat. Satamasta tuotu laukku ja köysi jäivät odottamaan tuolille, vaikka niiden haju ei näyttänyt aikovan odottaa. Maailma jäi pesemättä, mutta käsissä muutos näkyi jo.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://collections.musees.marseille.fr/","https://www.musee-orsay.fr/sites/default/files/2021-10/feuilletage_cinema_2.pdf"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

@@ -169,6 +169,13 @@ export const FOKUSVIRTA_TALLINNA = {
         'https://visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/174823/town-hall-pharmacy',
       ],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tallinna-r20260911-paper2-v1.jpg",
+      lyhyt: "Reval, 1873. Marsipaani kului, paperi siirtyi taskuun.",
+      selite: "Söin apteekkarin leikkaamaa marsipaania heti Raatihuoneentorilla. Pidin pientä palaa toisessa kädessä ja työnsin kääreen taskuun. Mantelin tuoksu seurasi ulos apteekista. Hoito maistui paremmalta kuin sen tulos.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://raeapteek.ee/en/our-story/","https://raekoda.tallinn.ee/en/the-building/"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

@@ -288,6 +288,13 @@ export const FOKUSVIRTA_TUKHOLMA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.kungligaslotten.se/english/list-of-swedish-monarchs/oskar-ii.html","https://www.kungligaslotten.se/vara-besoksmal/kungliga-slottet/skattkammaren.html"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tukholma-r20260911-paper2-v1.jpg",
+      lyhyt: "Tukholma, 1873. Satamassa vesi jatkoi juhlaa ilman selostajaa.",
+      selite: "Kruunajaiskadun tungos jäi taakse, kun palasin satamaan. Saarten välissä valo välkkyi, ja pienet alukset kulkivat omia reittejään. Ketjut ja veneet täyttivät hiljaisen laiturin. Tytön selostusta olisin silti kuunnellut mielelläni.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.kungligaslotten.se/english/list-of-swedish-monarchs/oskar-ii.html"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi seuraa oppitunnin faktoja:
      * Oscar II kruunattiin Storkyrkanissa 12. toukokuuta 1873 (sv-Wikipedia

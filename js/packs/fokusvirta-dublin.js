@@ -258,6 +258,13 @@ export const FOKUSVIRTA_DUBLIN = {
       'https://www.dublincity.ie/sites/default/files/media/file-uploads/2018-05/Liberties_LAP.pdf',
       ],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dublin-r20260911-paper2-v1.jpg",
+      lyhyt: "Dublin, 1873. Kysymys pysäytti kärryt hetkeksi.",
+      selite: "Mies pysähtyi kärrynsä viereen panimon pihalla. Hän katsoi kysyjää pitkään, kun tynnyrit odottivat ympärillä. Työ ei näyttänyt loppuvan. Yhdeksäntuhannen vuoden vuokrasopimus teki vastauksesta tarpeettoman.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.dublincity.ie/sites/default/files/2020-10/hoyd-volume-1.pdf","https://www.dublincity.ie/sites/default/files/media/file-uploads/2018-05/Liberties_LAP.pdf"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

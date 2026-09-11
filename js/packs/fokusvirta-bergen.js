@@ -150,6 +150,13 @@ export const FOKUSVIRTA_BERGEN = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260911-paper2-v1.jpg",
+      lyhyt: "Bergen, 1873. Katon alla kala pysyi kuivempana kuin vieras.",
+      selite: "Sade valui Bryggenin katoksen reunalta. Kapakalalla oli kuiva paikka puuseinän vieressä, mutta takkini kiilsi vedestä. Seisoin hetken kalan rinnalla ja ymmärsin kaupungin arvojärjestyksen. Kauppatavara oli suojassa.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Bergen, kesäkuussa 1873. Sadetta aamusta iltaan; puntari '

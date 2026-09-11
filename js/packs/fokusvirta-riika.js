@@ -143,6 +143,13 @@ export const FOKUSVIRTA_RIIKA = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.dziesmusvetki.lv/lv/zinas/pirmajiem-dziesmu-svetkiem-veltita-izstade-rlb/","https://www.dziesmusvetki.lv/en/about-the-celebration/the-song-and-dance-celebration/"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-riika-r20260911-paper2-v1.jpg",
+      lyhyt: "Riika, 1873. Yleisö kuuli kuoron yhteisen hengityksen.",
+      selite: "Seisoin yleisön keskellä, kun laulajat vetivät henkeä yhtä aikaa. Lava täyttyi ihmisistä ja seuraava ääni tuntui kaupungin kokoiselta. Vieressä mies kuunteli kyynel poskellaan. Hän ei pyyhkinyt sitä pois.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.dziesmusvetki.lv/lv/zinas/pirmajiem-dziesmu-svetkiem-veltita-izstade-rlb/","https://www.dziesmusvetki.lv/en/about-the-celebration/the-song-and-dance-celebration/"],
+    },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Riika, heinäkuussa 1873. Lämmintä; joella pellavan haju; '

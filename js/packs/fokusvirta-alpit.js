@@ -31,6 +31,13 @@ export const FOKUSVIRTA_ALPIT = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.swissinfo.ch/eng/archive-science/scientists-paint-a-glacial-picture/33663410","https://www.swissinfo.ch/eng/archive-science/marking-glacial-change-on-grindelwald-s-trail/2185012"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-alpit-r20260911-paper2-v1.jpg",
+      lyhyt: "Grindelwald, 1873. Rasahdus siirsi sekä kiven että miehen kauemmas.",
+      selite: "Olin pannut kiven jäätikön reunalle odottamaan liikettä. Pitkä rasahdus jään sisältä riitti todisteeksi, jota kivi ei ollut antanut. Nostin sen mukaani ja astuin nopeasti taaksepäin. Vuoren hiljaisuus ei enää tuntunut samalta kuin hetkeä aiemmin.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.swissinfo.ch/eng/archive-science/scientists-paint-a-glacial-picture/33663410","https://www.swissinfo.ch/eng/archive-science/marking-glacial-change-on-grindelwald-s-trail/2185012"],
+    },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Grindelwald, heinäkuussa 1873. Kylmää keskellä kesää; '
       + 'puntari korkealla.',

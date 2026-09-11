@@ -192,6 +192,13 @@ export const FOKUSVIRTA_SARAJEVO = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://arhiva.visitsarajevo.ba/2018/04/sarajevo-coppersmiths-masters-of-an-old-craft/?lang=en"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sarajevo-r20260911-paper2-v1.jpg",
+      lyhyt: "Sarajevo, 1873. Aamukahvin pannussa näkyi nyt jokainen vasaranjälki.",
+      selite: "Viereisessä puodissa kahvi kaadettiin pannusta, jonka pinta oli täynnä pieniä iskuja. Aamulla olin huomannut vain juoman. Nyt näin, kuinka sepän vasara oli jäänyt astiaan kuviona. Basaarin kilkutus jatkui kupin takana.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://arhiva.visitsarajevo.ba/2018/04/sarajevo-coppersmiths-masters-of-an-old-craft/?lang=en"],
+    },
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä; '
       + 'puntari korkealla.',

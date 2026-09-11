@@ -167,6 +167,13 @@ export const FOKUSVIRTA_PARIISI = {
       'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-du-palais-garnier-actuel-opera-national-de-paris-9eme',
       ],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260911-paper2-v1.jpg",
+      lyhyt: "Pariisi, 1873. Leipä kainalossa kulki kadun paras esiintyjä.",
+      selite: "Oopperan rakennustyö jäi taakse ja sade kirkasti kadun. Mies kulki edellä leipä kainalossa ja vihellys huulillaan. Seurasin kaksi korttelia kuulematta pääsymaksusta sanaakaan. Hänelle olisi voinut antaa suuremmankin näyttämön.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-du-palais-garnier-actuel-opera-national-de-paris-9eme"],
+    },
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */

@@ -108,6 +108,13 @@ export const FOKUSVIRTA_WIEN = {
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://sammlung.wienmuseum.at/en/object/59815-weltausstellung-1873-rotunde-der-ring-vor-der-hebung-nr-3a/","https://www.technischesmuseum.at/presse/women_at_work","https://www.technischesmuseum.at/ausstellung/women_at_work"],
     },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-wien-r20260911-paper2-v1.jpg",
+      lyhyt: "Wien, 1873. Lehti pieneni pöydällä, uutinen ei.",
+      selite: "Kahvilan herra taitteli lehden yhä pienemmäksi. Pörssin uutinen ei suostunut samaan temppuun. Laskin kahvin hänen eteensä ja odotin. Näyttelyn koneista ei ollut tässä pöydässä apua.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://sammlung.wienmuseum.at/en/object/59815-weltausstellung-1873-rotunde-der-ring-vor-der-hebung-nr-3a/"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi seuraa merkinnän omia
      * faktoja: näyttely avattiin 1.5.1873 ja pörssi kaatui kahdeksan
