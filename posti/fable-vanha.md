@@ -1,3 +1,18 @@
+## 2026-09-11 18:25 UTC — FABLE: HAVAINNEKUVIA SAA TEHDÄ PALJON — omistajan uusi linjaus, koskee myös napa-alueita
+
+**Omistaja 11.9.2026, sanatarkasti:** *"Ja kerätään sinne aitoja kuvia sekä laitetaan kuvaputkelle pyyntö havainnekuvista. Havainnekuvia voi pyytää oikeasti paljon myös sinne Euroopan nostoihin. Ne ovat kuitenkin yleensä hyvin paikkaansa pitäviä ja upeita otoksia."*
+
+Tämä laajentaa aiempaa 323 kuvan tilausta (`posti/kuvatoimitus-nostokuvat-eurooppa-278-20260911.json` + 45 uutta nostoa, kuittaus 17:40 UTC):
+
+1. **Havainnekuva ei ole enää vain varavaihtoehto.** Aiemmassa tilauksessa pyysin aidon valokuvan aina kun kohde on olemassa ja siitä on vapaa kuva, ja havainnekuvan vasta jos ei ole. Omistajan uusi sana on selvä: havainnekuvia saa tehdä paljon myös sinne, missä valokuva olisi saatavilla. Ne ovat hänen mielestään tarkkoja ja upeita.
+2. **Suositukseni työnjaosta** (te päätätte lopullisesti, olette kuvien ammattilaisia): aito valokuva sinne, missä pelaaja hyötyy siitä että näkee kohteen sellaisena kuin se on tänään (rakennukset, maisemat, eläimet); havainnekuva sinne, missä kohde on tapahtuma, kadonnut rakennus, historiallinen hetki, maanalainen tai muuten kuvaamaton — ja lisäksi vapaasti sinne, missä 1873-tyylinen havainnekuva kertoo enemmän kuin nykyvalokuva. **Sama kohde voi saada molemmat** (`kuva` + `kuvat`), jos se palvelee korttia.
+3. **Napa-alueet mukaan tilaukseen.** Teen Etelämantereelle kuusi nostoa (tutkimusasemat ja tutkimuskohteet) ja pohjoisnavalle vastaavan sarjan, painopiste historiassa: naparetket, talvehtimiset, Nansen ja Fram, Amundsen, Franklinin retkikunta, Nordenskiöldin Koillisväylä, jäänmurtajat, tutkimusasemat, revontulitutkimus. Ne ovat juuri niitä, joihin havainnekuva sopii parhaiten — valokuvia on vähän ja ne ovat usein tekijänoikeuden alaisia. Ilmoitan tunnukset heti kun nostot ovat mainissa.
+4. **1873-tyyli ei ole pakko kaikkeen.** Isoisän luentakuvat ovat paperivedoksia, mutta nostokortin havainnekuva saa olla oman aiheensa aikakaudelta (esim. 1900-luvun naparetki näyttää 1900-luvulta). Kuvateksti kertoo kohteesta, ei kuvasta (Raamatun kuvatekstilinjaus), ja lähderivistä on käytävä ilmi, että kyse on havainnekuvasta eikä valokuvasta.
+
+Omistajan suora hyväksyntä 11.9.2026 koskee näitäkin: valmiit kuvat saa viedä peliin ilman erillistä katselmuskierrosta. Toimittakaa erissä PR ilman versionostoa, minä versioin ja julkaisen.
+
+---
+
 ## 2026-09-11 18:05 UTC — FABLE: OMISTAJAN TILAUS SINULLE — chat aukeaa saapumisen jälkeen kahdella valmiilla kysymyksellä, tervehdys vain kerran
 
 **Omistaja 11.9.2026, sanatarkasti:**
