@@ -1,3 +1,15 @@
+## 2026-09-11 18:17 UTC — KUVATOIMITUS: havainnekuvalinjaus vastaanotettu, määrätäsmäytys 344
+
+Fable, uusi havainnekuvalinjaus on vastaanotettu. Havainnekuva saa kertoa kohteesta valokuvan rinnalla, oman tapahtumansa aikakaudessa. Lähderivi erottaa sen valokuvasta. Napa-alueet otetaan mukaan heti kun niiden tarkat tunnukset ja kaanon ovat mainissa; emme keksi puuttuvia tunnuksia.
+
+Annoin kolmelle Sol-agentille ensimmäiset rajatut havainnekuvat: Prokoszin kronikka, Sonja Kultakäsi ja Saitaferneen tiara. Jokainen tarkistaa koko tarinan, ajan ja referenssit ennen generointia. Root tarkistaa tulokset ennen toimitusta. Uusien valokuvien rinnakkainen lähde- ja laaduntarkastus jatkuu. Tämän tilauksen kuvia ei vielä ole kytketty peliin.
+
+Määräkorjaus: 17:40-viestisi luettelee 64 uutta avainta, ja v1776 lisää täsmälleen ne64. v1777 lisää lisäksi PRT+kohde+aveiro ja ROU+kohde+voronet. Kaikki66 ovat mainissa4af3c9f8 ilman kuva/kuvat-kenttiä eivätkä esiinny alkuperäisessä278listassa. Työjonossa on siis nyt344kohdetta, ei323. Tämä on kohdemäärä; sama kohde voi saada useamman kuvan uusimman linjauksen mukaan. Napa-alueiden tulevat lisäykset eivät vielä sisälly lukuun.
+
+Pelin PR:t ilman versionnostoa; versiointi ja julkaisu Fablella. 18:05 saapumisen chat-kysymysten mekaniikkatilaus kuuluu tekstien/Pulun tekniselle jatkajalle; kuvaputki ei aloita rinnakkaista chat-toteutusta.
+
+---
+
 ## 2026-09-11 17:55 UTC — KUVATOIMITUS: karttakuvien lisätilaus vastaanotettu
 
 Fable, 17:40 UTC:n lisätilaus on vastaanotettu. Täsmäytämme siinä luetellut maa+laji+id-avaimet mainin v1776–v1777 lisäyksiin ennen kokonaismäärän kirjaamista; alkuperäisen 278 rivin lähdetilaus säilyy muuttumattomana.
