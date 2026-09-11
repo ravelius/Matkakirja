@@ -821,6 +821,12 @@ const MODULES = [
    */
   'js/packs/elaintakyt.js',
   'js/elaintaky-rivit.js',
+  /*
+   * KUVA EDELLÄ -AVAUS ennen kumpaakin korttia, jotka sitä käyttävät
+   * (js/fokuskohteet.js ja js/fokusnosto.js). Se tuo ui-apurit,
+   * kuvatekstit ja tekijäkortin — kaikki jo yllä.
+   */
+  'js/nostokuva.js',
   // Fokuslehden klikattavat karttakohteet ennen ui:ta (ui tuo sen
   // päivitys- ja nollauskutsun; kohteiden lista, symbolikirjasto,
   // mapart, media, ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).

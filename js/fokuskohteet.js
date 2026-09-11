@@ -114,6 +114,7 @@ import {
   html, jaaKappaleiksi, linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu,
   suurennoksenMitat,
 } from './ui-apurit.js';
+import { nostokuvaAloita, nostokuvaKortissa } from './nostokuva.js';
 import { piirraReaktiot } from './reaktiot.js';
 import { lisaaLukijanappi } from './lukija.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
@@ -4047,6 +4048,8 @@ export function suljeFokuskohde(ui) {
   ui.fokuskohdeAuki = null;
   asetaAkustiikka(null);
   auki.merkki?.classList.remove('auki');
+  // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
+  auki.popup?.nostokuvaPurku?.();
   auki.popup?.remove();
   if (auki.purku) auki.purku();
 }
@@ -4130,6 +4133,13 @@ function asetaKohteenPaikka(ui) {
   // Pelaajan raahaama kortti pysyy siinä, mihin se raahattiin
   // (raahausTaiSulku) — automaattinen asemointi ei kilpaile käden kanssa.
   if (auki.raahattu) return;
+  /*
+   * KUVA EDELLÄ -KORTTI EI SEURAA MERKKIÄÄN (omistaja 11.9.2026). Sen
+   * paikan omistaa js/nostokuva.js, jonka koko lupaus on ettei kuva
+   * liiku: merkin viereen asemointi siirtäisi kuvaa aina, kun kamera
+   * pysähtyy tai ikkuna vaihtaa kokoa.
+   */
+  if (nostokuvaKortissa(auki.popup)) return;
   const koti = auki.popup.offsetParent ?? auki.popup.parentNode;
   const pane = koti?.getBoundingClientRect?.();
   if (!pane || !(pane.width > 0)) return;
@@ -4541,18 +4551,36 @@ export function matkakirjanIhme(nimi) {
   };
 }
 
-function piirraKohdeKuvat(ui, sisalto, kohde) {
+/**
+ * Kortin kuvat järjestyksessä, kaksoiskappaleet karsittuna.
+ *
+ * VIETY OMAKSI FUNKTIOKSEEN 11.9.2026 (KUVA EDELLÄ -avaus): avaaja
+ * tarvitsee kortin PÄÄKUVAN — listan ensimmäisen — jo ennen kuin
+ * sisus ladotaan, eikä samaa valintaa saa olla kahdessa paikassa.
+ */
+export function kohteenKuvalista(kohde) {
   const nahty = new Set();
   // Kadonneen ihmeen kuva on kortin ENSIMMÄINEN kuva (ks. lohkon alku):
   // kortti avaa suoraan sen, mitä paikalla ei enää ole.
-  const ihme = kohde.ihme?.kadonnut ? kohteenIhmekuva(kohde) : null;
-  const lista = [ihme, kohde.kuva, ...(Array.isArray(kohde.kuvat) ? kohde.kuvat : [])]
+  const ihme = kohde?.ihme?.kadonnut ? kohteenIhmekuva(kohde) : null;
+  return [ihme, kohde?.kuva, ...(Array.isArray(kohde?.kuvat) ? kohde.kuvat : [])]
     .filter((kuva) => {
       const tunnus = kuva?.tiedosto ?? kuva?.osoite;
       if (!tunnus || nahty.has(tunnus)) return false;
       nahty.add(tunnus);
       return true;
     });
+}
+
+/**
+ * @param {Element|null} [valmisKuva] KUVA EDELLÄ -avauksen valmis
+ *   kuvakehys (js/nostokuva.js) kortin ENSIMMÄISEN kuvan tilalle:
+ *   `undefined` piirtää kuvat kuten ennen, elementti sijoittaa juuri
+ *   sen kehyksen (sama kuva, sama elementti, ei uutta latausta), ja
+ *   `null` jättää pääkuvan pois (kuvaesittely peruttiin).
+ */
+function piirraKohdeKuvat(ui, sisalto, kohde, valmisKuva) {
+  const lista = kohteenKuvalista(kohde);
   /*
    * "KOE IHME" ENSIMMÄISEN KUVAN ALLE eikä otsikon alle (omistajan
    * tilaus 27.8.2026 ilta). Nappi asuu siinä kohdassa, jossa poistettu
@@ -4562,7 +4590,11 @@ function piirraKohdeKuvat(ui, sisalto, kohde) {
    * lupaus katoaisi kokonaan, jos kuva jäisi lataamatta.
    */
   lista.forEach((kuva, i) => {
-    piirraKohdeKuva(ui, sisalto, kuva);
+    if (i === 0 && valmisKuva !== undefined) {
+      if (valmisKuva) sisalto.appendChild(valmisKuva);
+    } else {
+      piirraKohdeKuva(ui, sisalto, kuva);
+    }
     if (i === 0) piirraKortinIhmenappi(ui, sisalto, kohde);
   });
   if (!lista.length) piirraKortinIhmenappi(ui, sisalto, kohde);
@@ -5534,10 +5566,10 @@ function piirraKohdeYlarivi(kohde) {
  * koska se pitää kortin rungon (avaaFokuskohde) luettavana. Rivit ovat
  * täsmälleen entiset ja entisessä järjestyksessä.
  */
-function piirraKohteenSisus(ui, sailio, kohde) {
+function piirraKohteenSisus(ui, sailio, kohde, valmisKuva) {
   // Kuvat ja niiden mukana "Koe ihme" -nappi: nappi piirtyy kortin
   // ENSIMMÄISEN kuvan alle (piirraKohdeKuvat), ei otsikon alle.
-  piirraKohdeKuvat(ui, sailio, kohde);
+  piirraKohdeKuvat(ui, sailio, kohde, valmisKuva);
   piirraKohdeTeksti(ui, sailio, kohde);
   piirraKohdeKysymykset(ui, sailio, kohde);
   piirraKierrosnappi(ui, sailio, kohde);
@@ -5627,6 +5659,17 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
     // (ks. raahausTaiSulku): puretaan ennen painike-ehtoa.
     popup.puraEle?.();
     if (tapahtuma.target?.closest?.('button, a')) return;
+    /*
+     * KUVA EDELLÄ -KORTTIA EI RAAHATA: kortti on kuvan kehys, ja
+     * raahaus kirjoittaisi sen offsetLeft/offsetTop-paikan päälle
+     * paikan, jonka js/nostokuva.js laskee ruudun koordinaateissa.
+     * Napautus kortin päällä sulkee yhä (sama sopimus kuin ennen).
+     */
+    if (nostokuvaKortissa(popup)) {
+      sfx.play('paper');
+      suljeFokuskohde(ui);
+      return;
+    }
     raahausTaiSulku(ui, popup, tapahtuma);
   });
 
@@ -5641,11 +5684,38 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
   popup.appendChild(sulje);
 
   const sisalto = html('div', 'fokuskohde-sisalto');
-  sisalto.appendChild(piirraKohdeYlarivi(kohde));
-  sisalto.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
-  piirraKohteenSisus(ui, sisalto, kohde);
+  const latoKohde = (kotelo, kuvakehys) => {
+    kotelo.appendChild(piirraKohdeYlarivi(kohde));
+    kotelo.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
+    piirraKohteenSisus(ui, kotelo, kohde, kuvakehys);
+  };
   popup.appendChild(sisalto);
   koti.appendChild(popup);
+  /*
+   * KUVA EDELLÄ (omistaja 11.9.2026, js/nostokuva.js). Kuvallinen
+   * nosto avautuu ensin pelkkänä lähes koko ruudun kokoisena kuvana,
+   * jonka alla on lyhyt kuvateksti ja "Lisää"-nappi; napista kortti
+   * latoutuu SAMAN kuvan ympärille eikä kuva liiku pikseliäkään.
+   * Kuvaton kohde aukeaa suoraan tekstikorttina kuten ennenkin.
+   *
+   * KUTSU ON VASTA SEN JÄLKEEN, KUN KORTTI ON DOMISSA: kuvaesittely
+   * mittaa oikeita ruutulaatikoita, eikä irrallisella elementillä ole
+   * sellaista.
+   */
+  const paakuva = kohteenKuvalista(kohde)[0] ?? null;
+  const kaksivaihe = paakuva ? nostokuvaAloita({
+    kortti: popup,
+    sisalto,
+    kuva: paakuva,
+    aseta: (img, leveys, onVirhe) => asetaKohdeKuva(img, paakuva, leveys, onVirhe),
+    avaaSuurennos: (nappi) => avaaKohdeSuurennos(ui, paakuva, () => nappi),
+    koristele: (nappi, kehys) => {
+      if (paakuva.nauha) kehys.classList.add('fokuskohde-kuva-nauhalla');
+      piirraIhmenauha(nappi, paakuva.nauha);
+    },
+    latoNosto: latoKohde,
+  }) : null;
+  if (!kaksivaihe) latoKohde(sisalto, undefined);
   // Kaiutin kortin otsikkoriville (omistaja 6.9.2026: "Kaikissa missä
   // on tekstiä, saisi olla striimi lukijan symboli") — js/lukija.js
   // lisaaLukijanappi. Kutsu on sisällön JÄLKEEN: teksitön kortti (pelkkä
