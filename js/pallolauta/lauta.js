@@ -69,9 +69,12 @@ import {
   pallonOmatPisteet, pallonPiste, rakennaPallo, webglTuettu,
 } from '../pallo.js';
 import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
+import {
+  lataaMaapolygonit, nollaaPallonMaakorostus, paivitaPallonMaakorostus,
+} from '../maanaariviivat.js';
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
 import { livianKorostetutKaupungit } from '../liviapuhe.js';
-import { asemoiFokuskohde } from '../fokuskohteet.js';
+import { asemoiFokuskohde, kohteidenNykyinenIso } from '../fokuskohteet.js';
 import { laudaltaAsteiksi } from '../fokusmitat.js';
 import { packById } from '../pack.js';
 import { pixelOf, pointAlong, posKey } from '../rules.js';
@@ -2173,6 +2176,25 @@ export async function avaaPallolauta(ui) {
     paivitaPisteet();
     pyydaLadonta();
     /*
+     * PELAAJAN MAAN RAJA VAHVEMMALLA (omistaja 11.9.2026, sanatarkasti:
+     * *"Peli voisi piirtää vahvemmalla aina kyseisen valtion rajat
+     * jossa pelaaja on"*).
+     *
+     * Korostus seuraa pelaajaa eikä ole valikkokytkin, joten se
+     * päivitetään TÄSTÄ eikä omasta tapahtumastaan: `paivita` ajetaan
+     * aina kun pelin tila muuttuu (avaimessa on pelaajan paikka), ja
+     * maa luetaan samasta taulusta kuin kartan kohteet
+     * (js/fokuskohteet.js nykyinenIso). Sama maa palaa ilman työtä
+     * (js/maanaariviivat.js).
+     */
+    paivitaPallonMaakorostus({
+      vektorit,
+      // Avauslento on kartan niukin hetki: ei korostusta lennon ajaksi.
+      iso: lento ? null : kohteidenNykyinenIso(ui),
+      asteet: pallonAsteet,
+      lataa: lataaMaapolygonit,
+    });
+    /*
      * KAMERA SEURAA TELEPORTTIA. Siirron kuljettaja kirjaa perillä
      * paikkansa (merkitseNappulanPaikka), joten tavallinen siirto ei
      * osu tähän — kamera jää sinne minne saatto sen vei (omistaja
@@ -2339,6 +2361,9 @@ export async function avaaPallolauta(ui) {
       noppaTakaisin();
       lauta.linssit?.pura();
       vektorit?.pura();
+      // Maakorostuksen muisti on moduulitasolla (yksi pallo
+      // kerrallaan): seuraava lauta latoo korostuksen alusta.
+      nollaaPallonMaakorostus();
       pallo._destructor?.();
       kuori.remove();
       lauta.linssikartta?.pura();
