@@ -5,6 +5,9 @@ export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
  Object.freeze({id:'glideIn',label:'Kiireinen ensiliito kartalta',duration:2700,group:'Liike'}),
  Object.freeze({id:'trailerFlee',label:'Väistö trailerin tieltä',duration:1200,group:'Liike'}),
  Object.freeze({id:'trailerBack',label:'Varovainen paluu trailerista',duration:1700,group:'Liike'}),
+ Object.freeze({id:'chatDashOut',label:'Salamana chatista',duration:300,group:'Liike'}),
+ Object.freeze({id:'chatDashBack',label:'Salamana takaisin chattiin',duration:100,group:'Liike'}),
+ Object.freeze({id:'chatDustOff',label:'Pölyt pois sulista',duration:1400,group:'Pelitilanne'}),
  Object.freeze({id:'bunFeast',label:'Riemukas pullapalkinto',duration:4600,group:'Pelitilanne'}),
  ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['bookStudy','Tietäväinen kirjan selaus',4200],['scratch','Pään raapaisu',2600],['eyeRub','Lasit ylös ja silmien hieraisu',5200],['chuckle','Hiljainen naurunpyrskähdys',2500]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
 const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
@@ -35,6 +38,8 @@ export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
  if(id==='glideIn')s.flight={kind:'opening',t:lvEase(p)};
  if(id==='trailerFlee')s.flight={kind:'trailerAway',t:lvEase(p)};
  if(id==='trailerBack')s.flight={kind:'trailerBack',t:lvEase(p)};
+ if(id==='chatDashOut')s.flight={kind:'chatDashOut',t:lvEase(lvClamp(p/.55))};
+ if(id==='chatDashBack')s.flight={kind:'chatDashBack',t:lvEase(p)};
  if(id==='chuckle'&&p>.12&&p<.86){
   const syke=Math.sin((p-.12)/.74*Math.PI*6),voima=s.voimakkuus;
   s.frame='grin';s.mouth=syke>0?'talk':'talkSmall';
@@ -80,6 +85,11 @@ export function livianSvgMalli(s,{right=0}={}) {
    if(t>=1)m.visible=false;
   } else if(f.kind==='trailerBack'){
    m.x=56+72*t;m.y=79+223*t-22*Math.sin(Math.PI*t);m.scale=.034+.526*t;m.angle=-18*(1-t);m.face=t<.72?'glance':'smug';
+  } else if(f.kind==='chatDashOut'||f.kind==='chatDashBack'){
+   const d=right+96,back=f.kind==='chatDashBack';
+   m.x=128+d*(back?1-t:t);m.y=302;m.scale=.56;m.angle=t===1&&back?0:(back?1-t:t)*-8;m.mirror=!back;
+   if(f.kind==='chatDashOut'&&t>=1||f.kind==='chatDashBack'&&t<=0)m.visible=false;
+   if(f.kind==='chatDashBack'&&t>=1){m.wing='fold';m.wingAmount=0;}
   } else if(f.kind==='glass'){
    m.x=128;m.y=25+230*t;m.scale=.015+.55*t+.16*lvEase((t-.68)/.32);m.face=t>.8?'shock':'front';
   } else if(f.kind==='splat'){
@@ -114,6 +124,11 @@ export function livianSvgMalli(s,{right=0}={}) {
   m.wingAmount=gate*(.25+.75*strength);
   if(['shade','cover','preen'].includes(m.wing))m.wingAmount=1;
  }
+ if(id==='chatDustOff'&&p>0&&p<1){
+  const dustGate=lvEase(p/.12)*(1-lvEase((p-.82)/.18));
+  m.wing='spread';m.wingAmount=dustGate*(.58+.16*Math.sin(p*Math.PI*14));
+  m.angle=dustGate*Math.sin(p*Math.PI*18)*2.4;
+ }
  if(id==='wind')m.bodyLean+=8*gate;
  return m;
 }
@@ -146,9 +161,22 @@ function lvBird(s,m,prefix){
  // Foot anchors stay fixed. The chest leans and the neck is occluded as the head approaches the camera.
  const body=`<g transform="rotate(${m.bodyLean} 109 177)"><path d="M122 156L139 171L131 172L137 175L122 174L113 163Z" fill="#546b7a"/><path d="M87 137Q97 127 115 133Q131 137 132 152Q134 170 117 175Q100 178 89 165Q82 154 87 137Z" fill="#97a5ac"/><path d="M89 141Q98 134 105 137Q96 147 96 158Q97 170 109 175Q96 171 89 162Q84 152 89 141Z" fill="#b1bcc0"/><path d="M117 135Q132 140 132 154Q134 171 117 175L110 172Q119 161 117 135Z" fill="#738895"/></g>`;
  const head=`<g data-part="approach" transform="translate(${-8*m.lean} ${8*m.lean+down+m.headY}) rotate(${m.headAngle} 105 146) translate(105 146) scale(${lvRound(m.headScale)}) translate(-105 -146)"><g transform="translate(44 61) scale(1 .87)">${livianSvgPaa(headState,{prefix,lean:m.lean,strength:m.strength})}</g></g>`;
- return `<g data-part="whole-bird" transform="translate(${lvRound(m.x)} ${lvRound(m.y)}) rotate(${lvRound(m.angle)}) scale(${lvRound(m.scale*(m.mirror?-1:1))} ${lvRound(m.scale*m.squash)}) translate(-108 -188)">
+ const dashPart=s.flight?.kind==='chatDashOut'||s.flight?.kind==='chatDashBack'?` data-part-chat-dash="${s.flight.kind}"`:'';
+ return `<g data-part="whole-bird"${dashPart} transform="translate(${lvRound(m.x)} ${lvRound(m.y)}) rotate(${lvRound(m.angle)}) scale(${lvRound(m.scale*(m.mirror?-1:1))} ${lvRound(m.scale*m.squash)}) translate(-108 -188)">
  ${lvFeet(m,s)}${lvWing(m.wing,'far',m.wingAmount,m.p*12)}${body}${head}${lvWing(m.wing,'near',m.wingAmount,m.p*12)}
  </g>`;
+}
+function lvChatDashFx(s,m){
+ if(s.flight?.kind!=='chatDashOut'||s.p<=.1||s.p>=1)return '';
+ const opacity=lvClamp((s.p-.1)/.15)*(1-lvEase((s.p-.72)/.28));
+ if(opacity<=0)return '';
+ return `<g data-part="chat-speed-cloud" transform="translate(128 302)" opacity="${lvRound(opacity)}" fill="none" stroke="#a5a79f" stroke-linecap="round"><path d="M-21-31q-18-6-21 6q-16 1-13 13q-12 7 1 15q10 8 23 1q13 7 23-1q10-8-1-15q3-12-12-13q-2-6-10-7" fill="#dedbcf" fill-opacity=".72" stroke-width="1.4"/><path data-part="chat-dash-streak" d="M-62-20h27M-72-7h35M-59 7h25" stroke="#929b9b" stroke-width="2"/></g>`;
+}
+function lvChatDustFx(s){
+ if(s.ele!=='chatDustOff'||s.p<=.08||s.p>=.92)return '';
+ const opacity=lvEase((s.p-.08)/.14)*(1-lvEase((s.p-.72)/.20));
+ const spread=lvRound(8+24*lvEase((s.p-.08)/.70));
+ return `<g data-part="chat-dust" transform="translate(128 302)" opacity="${lvRound(opacity)}" fill="#c8c1b0"><circle cx="${-28-spread}" cy="-34" r="3.2"/><circle cx="${25+spread}" cy="-45" r="2.4"/><circle cx="${-18-spread*.6}" cy="-68" r="1.8"/><path data-part="chat-dust-speck" d="M${31+spread*.7}-67l3-2m-${65+spread*1.4} 12l-3-2" fill="none" stroke="#a9a18e" stroke-width="1.5" stroke-linecap="round"/></g>`;
 }
 function lvProps(s,m,prefix){
  let out='';const x=m.x,y=m.y;
@@ -186,7 +214,7 @@ export function livianSvgKuva(s,{right=0,prefix='livia'}={}) {
  // The contact shadow belongs to the ground, not to the leaning or flying body.
  const contact=m.visible&&!s.flight&&!s.line&&m.y<=304?lvClamp((m.y-290)/12):0;
  const shadow=contact?`<defs><radialGradient id="${prefix}ground"><stop stop-color="#635b4e" stop-opacity=".58"/><stop offset=".55" stop-color="#635b4e" stop-opacity=".32"/><stop offset="1" stop-color="#635b4e" stop-opacity="0"/></radialGradient></defs><ellipse data-part="ground-shadow" cx="${lvRound(m.x)}" cy="301" rx="19" ry="2.8" fill="url(#${prefix}ground)" opacity="${lvRound(contact)}"/>`:'';
- let markup=m.visible?shadow+lvBird(s,m,prefix)+lvProps(s,m,prefix):'';
+ let markup=(m.visible?shadow+lvBird(s,m,prefix)+lvProps(s,m,prefix):'')+lvChatDashFx(s,m)+lvChatDustFx(s);
  if(s.owlX!==null&&s.owlX!==undefined){const ox=128+(right+80)*s.owlX/24;markup+=`<g transform="translate(${ox-14} 267)" fill="#73654f"><path d="M0 3L4-3L11 2L20-3L23 3V23Q12 35 0 23Z"/><circle cx="7" cy="10" r="5" fill="#e8ddc4"/><circle cx="17" cy="10" r="5" fill="#e8ddc4"/><circle cx="7" cy="10" r="2"/><circle cx="17" cy="10" r="2"/><path d="M9 15h6l-3 5Z" fill="#e8ddc4"/></g>`;}
  if(s.line)markup+=`<path d="M94 303H${Math.min(width,152)}" stroke="#988d79" stroke-width="1.3" stroke-linecap="round"/>`;
  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} 304" width="${width}" height="304" overflow="${s.flight?.kind==='opening'?'visible':'hidden'}" aria-hidden="true" data-livia-visible="${m.visible}">${markup}</svg>`;
