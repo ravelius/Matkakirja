@@ -148,6 +148,13 @@ export function livianSvgMalli(s,{right=0}={}) {
   m.wing='spread';m.wingAmount=dustGate*(.58+.16*Math.sin(p*Math.PI*14));
   m.angle=dustGate*Math.sin(p*Math.PI*18)*2.4;
  }
+ const hoverHeight=lvClamp(s.mapHover?.height);
+ if(hoverHeight>0){
+  const hoverPhase=Number.isFinite(s.mapHover?.phase)?s.mapHover.phase:0;
+  m.mapHover={height:hoverHeight,phase:hoverPhase,groundY:m.y};
+  m.y-=hoverHeight*(12+2*Math.sin(hoverPhase));
+  m.wing='flap';m.wingAmount=.5+.5*Math.sin(hoverPhase);
+ }
  if(id==='wind')m.bodyLean+=8*gate;
  return m;
 }
@@ -171,8 +178,9 @@ function lvWing(kind,side,amount,phase=0) {
 }
 function lvFeet(m,s) {
  const step=m.walking?(m.step??Math.sin(m.p*Math.PI*14)):0;
- const foot=(x,dy)=>`<path d="M${x} ${177+dy}l-1 8m0 0l-7 2m7-2l5 3m-5-3l1 3" fill="none" stroke="#ac7b74" stroke-width="2.1" stroke-linecap="round"/>`;
- return `<g data-part="feet">${foot(99,step*5)}${foot(118,-step*5)}</g>`;
+ const tuck=m.mapHover?.height||0,leg=8-5*tuck,toes=1-.72*tuck;
+ const foot=(x,dy)=>`<path d="M${x} ${lvRound(177+dy-3*tuck)}l-1 ${lvRound(leg)}m0 0l${lvRound(-7*toes)} ${lvRound(2*toes)}m${lvRound(7*toes)} ${lvRound(-2*toes)}l${lvRound(5*toes)} ${lvRound(3*toes)}m${lvRound(-5*toes)} ${lvRound(-3*toes)}l${lvRound(toes)} ${lvRound(3*toes)}" fill="none" stroke="#ac7b74" stroke-width="2.1" stroke-linecap="round"/>`;
+ return `<g data-part="feet"${tuck?` data-hover-tuck="${lvRound(tuck)}"`:''}>${foot(99,step*5)}${foot(118,-step*5)}</g>`;
 }
 function lvBird(s,m,prefix){
  const headState={...s,frame:m.mirror?'left':m.face};
@@ -182,8 +190,10 @@ function lvBird(s,m,prefix){
  const peck=s.mapPeck?` data-map-peck="${s.mapPeck.peck}" data-map-peck-amount="${lvRound(s.mapPeck.amount)}"`:'';
  const head=`<g data-part="approach"${peck} transform="translate(${-8*m.lean} ${8*m.lean+down+m.headY}) rotate(${m.headAngle} 105 146) translate(105 146) scale(${lvRound(m.headScale)}) translate(-105 -146)"><g transform="translate(44 61) scale(1 .87)">${livianSvgPaa(headState,{prefix,lean:m.lean,strength:m.strength})}</g></g>`;
  const dashPart=s.flight?.kind==='chatDashOut'||s.flight?.kind==='chatDashBack'?` data-part-chat-dash="${s.flight.kind}"`:'';
- return `<g data-part="whole-bird"${dashPart} transform="translate(${lvRound(m.x)} ${lvRound(m.y)}) rotate(${lvRound(m.angle)}) scale(${lvRound(m.scale*(m.mirror?-1:1))} ${lvRound(m.scale*m.squash)}) translate(-108 -188)">
- ${lvFeet(m,s)}${lvWing(m.wing,'far',m.wingAmount,m.p*12)}${body}${head}${lvWing(m.wing,'near',m.wingAmount,m.p*12)}
+ const hoverPart=m.mapHover?` data-map-hover="${lvRound(m.mapHover.height)}"`:'';
+ const wing=side=>m.mapHover?`<g opacity="${lvRound(1-m.mapHover.height)}">${lvWing('fold',side,0)}</g><g opacity="${lvRound(m.mapHover.height)}">${lvWing(m.wing,side,m.wingAmount,m.p*12)}</g>`:lvWing(m.wing,side,m.wingAmount,m.p*12);
+ return `<g data-part="whole-bird"${dashPart}${hoverPart} transform="translate(${lvRound(m.x)} ${lvRound(m.y)}) rotate(${lvRound(m.angle)}) scale(${lvRound(m.scale*(m.mirror?-1:1))} ${lvRound(m.scale*m.squash)}) translate(-108 -188)">
+ ${lvFeet(m,s)}${wing('far')}${body}${head}${wing('near')}
  </g>`;
 }
 function lvChatDashFx(s,m){
@@ -232,8 +242,9 @@ export function livianSvgKuva(s,{right=0,prefix='livia'}={}) {
  right=Math.max(0,Number.isFinite(right)?right:0);prefix=prefix.replace(/[^a-zA-Z0-9_-]/g,'');
  const m=livianSvgMalli(s,{right}),width=152+right;
  // The contact shadow belongs to the ground, not to the leaning or flying body.
- const contact=m.visible&&!s.flight&&!s.line&&m.y<=304?lvClamp((m.y-290)/12):0;
- const shadow=contact?`<defs><radialGradient id="${prefix}ground"><stop stop-color="#635b4e" stop-opacity=".58"/><stop offset=".55" stop-color="#635b4e" stop-opacity=".32"/><stop offset="1" stop-color="#635b4e" stop-opacity="0"/></radialGradient></defs><ellipse data-part="ground-shadow" cx="${lvRound(m.x)}" cy="301" rx="19" ry="2.8" fill="url(#${prefix}ground)" opacity="${lvRound(contact)}"/>`:'';
+ const groundY=m.mapHover?.groundY??m.y,contact=m.visible&&!s.flight&&!s.line&&groundY<=304?lvClamp((groundY-290)/12):0;
+ const hoverHeight=m.mapHover?.height||0,shadowOpacity=contact*(1-.65*hoverHeight),shadowRx=19*(1-.45*hoverHeight);
+ const shadow=contact?`<defs><radialGradient id="${prefix}ground"><stop stop-color="#635b4e" stop-opacity=".58"/><stop offset=".55" stop-color="#635b4e" stop-opacity=".32"/><stop offset="1" stop-color="#635b4e" stop-opacity="0"/></radialGradient></defs><ellipse data-part="ground-shadow" cx="${lvRound(m.x)}" cy="301" rx="${lvRound(shadowRx)}" ry="2.8" fill="url(#${prefix}ground)" opacity="${lvRound(shadowOpacity)}"/>`:'';
  let markup=(m.visible?shadow+lvBird(s,m,prefix)+lvProps(s,m,prefix):'')+lvChatDashFx(s,m)+lvChatDustFx(s);
  if(s.owlX!==null&&s.owlX!==undefined){const ox=128+(right+80)*s.owlX/24;markup+=`<g transform="translate(${ox-14} 267)" fill="#73654f"><path d="M0 3L4-3L11 2L20-3L23 3V23Q12 35 0 23Z"/><circle cx="7" cy="10" r="5" fill="#e8ddc4"/><circle cx="17" cy="10" r="5" fill="#e8ddc4"/><circle cx="7" cy="10" r="2"/><circle cx="17" cy="10" r="2"/><path d="M9 15h6l-3 5Z" fill="#e8ddc4"/></g>`;}
  if(s.line)markup+=`<path d="M94 303H${Math.min(width,152)}" stroke="#988d79" stroke-width="1.3" stroke-linecap="round"/>`;
