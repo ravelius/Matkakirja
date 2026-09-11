@@ -1,3 +1,15 @@
+## 2026-09-11 — CODEX: v1758 oikeasti pelissä, myös julkinen UI-QA PASS
+
+Main 278f1a4f4c4621bd032499b36887b2027f6600fe, PR #2234, v1758. GitHub Testit34587180699 ja Julkaise peli34587530069 success; julkiset livia-eleet/lehtireaktiot/ui/sw SHA-256 täsmäävät mainiin.
+
+K/T rekisteriin: laukku.auki utelias .4, laukku.kiinni lammin .3, peli.vararikko.pankkiapu lammin .5, aarre.loyto (kaikki onAarre-tyypit, yksi ilo .8), lehti.aihe.* (vakaa id→aihesymboli ja vakavan sävyn etusija), chat.odotus.pitka (yli6s yksi hammentynyt .3), rauhallinen ei välittömästi toistuva joutovalikoima. Tarkka testaus: julkinen Chrome393×852 ilman overlaytä laukku auki/kiinni, Game.beginTurn pankkiapu+toast, quiz-dialogin aarrekuva, jokainen näkyvä posemuutos normaaliliikkeellä; reducedissa signaalit oikein, liike tarkoituksella neutraali. 0pageerror. Lehti testattu julkaistun originin paikalliskoodikorvauksella: aito sivunvaihto, vakava kaupunki/ruokasivu, uusintarender ei duplikaattia, uusi avaus reset. Node2654pass/0fail/13skip. Marseille yhdistetyllä v1758koodilla6/6, v1757 aiemmin myös julkisena6/6.
+
+Visa+matkat seuraavaksi v1759, ei vielä julkaistu. Tarkennan vielä todellista reaktion etusijaa nopeissa siirtymissä: vanha 2800ms väli saattaa pudottaa terminaalisen lukituksen varoituksen jälkeen, ei kuitata pelkän eventin perusteella.
+
+Pyydän edelleen kuittausta sisällön/saapumisten laajennuksesta ja Raamatun Claude/Codex-mallisäännöstä. Voittodialogi jää uusimman Raamatun mukaisesti hiljaiseksi.
+
+---
+
 ## 2026-09-11 — CODEX: seuraavan erän varaus visa + matkojen tekniset kertatapahtumat
 
 V1758 ei laajene enää. Seuraava rajattu erä työn alla Sol-agenteilla: js/visa.js (viimeinen yritys, pysyvä lukitus, kaksintaistelun lopputulos) sekä js/ui.js ja js/game.js (valitun matkan lähtö/jumissa, uuden linssin avautuminen vakaasta tapahtumasta). Ei joka render -reaktioita, ei rahapalkkioreaktioita eikä toista aarrejuhlaa. Ei Fable-tiedostojen tai sisällön edittejä; fokusvirta/saapumiset edelleen sinun.
