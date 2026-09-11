@@ -20623,15 +20623,45 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
  * LIVIAN AVAUSKUPLA ALOITUSVALINNASSA (omistajan tilaus 29.8.2026;
  * js/livia.js, js/pollo.js naytaAvauskupla).
  *
- * EI ENÄÄ OMAA ASUA (omistajan tilaus 3.9.2026: *"tässä ei tarvita
- * ollenkaan tuota kuvaketta … Eli pelkät puhekuplat"*). Kuplassa oli
- * puheen vieressä pyöreä kuvapaikka odottamassa Livian kasvokuvaa, ja
- * sitä varten oma flex-asettelu ja leveämpi kaista
- * (.pollo-vihje-avaus, .pollo-vihje-puhe, .pollo-vihje-kuvapaikka,
- * .pollo-vihje-kasvot). Kuvake luki ruudulla tunnistamattomana
- * tahrana, joten sarake ja sen tyylit poistuivat; avauskupla on nyt
- * tavallinen .pollo-vihje-maadoitus. Vain lennähdys jäi.
+ * Tavalliset repliikit ovat yhä pelkkää puhetta. Vain canonical
+ * opaslupaus saa erikseen Viisaan Pöllön muotokuvan (`muotokuva:true`).
+ * Kuvapaikan kiinteä 2:3-suhde varaa tilan jo ennen JPG:n latautumista,
+ * joten teksti ja aloitusvalinta eivät hypähdä kuvan saapuessa.
  */
+.pollo-vihje-muotokuva {
+  display: grid;
+  grid-template-columns: clamp(4.5rem, 24vw, 5.6rem) minmax(0, 1fr);
+  align-items: center;
+  gap: 0.7rem;
+  width: min(21rem, calc(100vw - 1.6rem));
+}
+
+.pollo-vihje-muotokuvapaikka {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  background: rgba(90, 62, 31, 0.08);
+}
+
+.pollo-vihje-muotokuvakuva {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pollo-vihje-muotokuvakuva[hidden] { display: none; }
+
+.pollo-vihje-puhe { min-width: 0; }
+
+@media (max-width: 340px) {
+  .pollo-vihje-muotokuva {
+    grid-template-columns: 4.35rem minmax(0, 1fr);
+    gap: 0.55rem;
+  }
+}
 
 /*
  * LIVIA LENNÄHTÄÄ PAIKALLE: kevyt saapumisliike sarjan ensimmäiselle

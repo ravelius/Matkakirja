@@ -2493,13 +2493,16 @@ export class Pollo {
    * jättäisi muuten koko sarjan pois. Paikannuksen varapaikka hoitaa
    * ankkurin (ks. ankkuriLaatikko).
    *
-   * KUVAPAIKKA JA NIMILAPPU POISTETTU (omistajan tilaus 3.9.2026:
+   * KUVAPAIKKA JA NIMILAPPU POISTETTU tavallisista repliikeistä
+   * (omistajan tilaus 3.9.2026:
    * *"tässä ei tarvita ollenkaan tuota kuvaketta eikä tuota riviä,
    * missä lukee viisas pöllö yliviivattuna pulu. Eli pelkät
    * puhekuplat."*). Puheen vieressä oli viivapöllö odottamassa
    * Livian omaa kasvokuvaa; ruudulla se jäi tunnistamattomaksi
    * tahraksi ja söi kuplan leveydestä oman sarakkeensa. Nyt kupla on
-   * pelkkää puhetta, kuten muutkin pinon kuplat.
+   * pelkkää puhetta, kuten muutkin pinon kuplat. Yksi eksplisiittinen
+   * poikkeus on Viisaan Pöllön oma muotokuva opaslupauksen vieressä:
+   * js/livia.js antaa vain sille asetuksen `muotokuva`.
    *
    * NAPAUTUS VIE ETEENPÄIN: kuittaus-takaisinkutsu kerrotaan
    * napautussopimukselle (sidoKuplanNapautus), joka sulkee kuplan ja
@@ -2509,9 +2512,12 @@ export class Pollo {
    * @param {object} [asetukset]
    * @param {boolean} [asetukset.lennahda] kevyt saapumisliike (sarjan avaus).
    * @param {(() => void)|null} [asetukset.kuittaus] pelaajan napautus kuplaan.
+   * @param {boolean} [asetukset.muotokuva] Viisaan Pöllön opaslupauksen kuva.
    * @returns {boolean} näkyikö kupla.
    */
-  naytaAvauskupla(teksti, { lennahda = false, kuittaus = null } = {}) {
+  naytaAvauskupla(teksti, {
+    lennahda = false, kuittaus = null, muotokuva = false,
+  } = {}) {
     if (!teksti) return false;
     /*
      * LINSSIN PORTTI ILMAN JONOA: avausrepliikit kuuluvat
@@ -2530,8 +2536,24 @@ export class Pollo {
     // paikalle kerran, seuraavat repliikit saavat pinon oman
     // ilmestymisliikkeen.
     if (lennahda) kupla.classList.add('pollo-vihje-lennahtaa');
+    const puhe = polloElementti('div', muotokuva ? 'pollo-vihje-puhe' : '');
     for (const kappale of jaaKappaleiksi(teksti)) {
-      kupla.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
+      puhe.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
+    }
+    if (muotokuva) {
+      kupla.classList.add('pollo-vihje-muotokuva');
+      const kuvapaikka = polloElementti('span', 'pollo-vihje-muotokuvapaikka');
+      const kuva = polloElementti('img', 'pollo-vihje-muotokuvakuva');
+      kuva.src = 'assets/tietaja/viisas-pollo-muotokuva-v1.png';
+      kuva.alt = 'Viisas Pöllö';
+      kuva.width = 512;
+      kuva.height = 768;
+      kuva.decoding = 'async';
+      kuva.addEventListener('error', () => { kuva.hidden = true; }, { once: true });
+      kuvapaikka.appendChild(kuva);
+      kupla.append(kuvapaikka, puhe);
+    } else {
+      kupla.appendChild(puhe);
     }
     kupla.polloKuittaus = kuittaus;
     this.lisaaPinoon(kupla);
@@ -6412,6 +6434,16 @@ export function polloSaapumiskupla(teksti, asetukset = {}) {
  */
 export function polloAvauskupla(teksti, asetukset = {}) {
   return Boolean(nykyinenPollo?.naytaAvauskupla(teksti, asetukset));
+}
+
+/** Ensimmäisen aloitusvalinnan tekninen saapumisliike; ei luo kuplaa. */
+export function polloLivianEnsiliito(valmis, asetukset = {}) {
+  return Boolean(nykyinenPollo?.kasvoEleet?.ensiliito(valmis, asetukset));
+}
+
+/** Peruu keskeneräisen ensiliidon ilman valmistumiskutsua. */
+export function peruPolloLivianEnsiliito() {
+  nykyinenPollo?.kasvoEleet?.peruEnsiliito();
 }
 
 /**

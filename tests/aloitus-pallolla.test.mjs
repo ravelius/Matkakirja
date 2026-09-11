@@ -380,13 +380,15 @@ test('valittavan kaupungin nimi tulee merkistä, ei nimikerroksesta', () => {
  * 1,5 sek myöhemmin"*. Lisäviive on VAIN ensimmäisen kuplan edessä:
  * kuplien keskinäinen rytmi (KUPLIEN_VALI, lukuaika) on ennallaan.
  */
-test('Livian avaus alkaa 1,5 s myöhemmin, rytmi ennallaan', () => {
+test('Livian ensitervehdys alkaa lennossa ja seuraava odottaa laskua, rytmi ennallaan', () => {
   assert.equal(LIVIAN_AVAUKSEN_VIIVE_MS, 1500);
   const livia = lue('../js/livia.js');
   assert.match(livia, /const AVAUKSEN_VIIVE = 900;/);
-  assert.match(livia, /const viive = AVAUKSEN_VIIVE \+ \(ui\.reducedMotion \? 0 : LIVIAN_AVAUKSEN_VIIVE_MS\);/,
-    'reduced motion: ei lisäviivettä');
-  assert.match(livia, /avausAjastin = setTimeout\(\(\) => naytaRepliikki\(ui, 0\), viive\);/);
+  assert.match(livia, /polloLivianEnsiliito\(laskeutui, \{ reducedMotion: ui\.reducedMotion \}\)/);
+  assert.match(livia, /setTimeout\(\(\) => naytaRepliikki\(ui, 0\), ui\.reducedMotion \? 0 : AVAUKSEN_VIIVE\)/,
+    'ensimmäinen kupla alkaa lennossa; reduced motionissa heti');
+  assert.match(livia, /if \(!avausLiitoValmis\) \{ avausLiidonJalkeinen = i; return; \}/,
+    'toinen repliikki ei ohita laskua');
   // Kuplien keskinäinen rytmi ei muuttunut: lukuaika ohjaa yhä sarjaa.
   // (7.9.2026: lukuaika on VÄHIMMÄISAIKA — sitä pidempi äänite venyttää
   // kuplaa, js/liviapuhe.js livianKuplanAjastin.)

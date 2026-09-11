@@ -3,12 +3,19 @@ import assert from 'node:assert/strict';
 import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva,livianSvgMalli,livianEleenVoima} from '../js/livia-svg.js';
 
 test('kaikki nykyiset eleet piirtyvät kokonaisella SVG-pululla ilman virheellisiä koordinaatteja',()=>{
- assert.equal(LIVIA_SVG_ELEET.length,60);
+ assert.equal(LIVIA_SVG_ELEET.length,61);
  for(const e of LIVIA_SVG_ELEET)for(const p of [0,.1,.25,.43,.6,.8,.95,1]){
   const s=livianSvgAsento(e.id,p),svg=livianSvgKuva(s,{right:42,prefix:'qa'});
   assert.match(svg,/^<svg /);assert.doesNotMatch(svg,/NaN|Infinity|undefined|<image|<canvas/);
   if(livianSvgMalli(s,{right:42}).visible)assert.match(svg,/data-part="whole-bird"/);
  }
+});
+test('kiireinen ensiliito jatkuu ilman laskuhyppyä ja ottaa kaksi haparoivaa askelta',()=>{
+ const pohja=livianSvgAsento('glideIn',0),ennen=livianSvgMalli({...pohja,flight:{kind:'opening',t:.7799}}),jalkeen=livianSvgMalli({...pohja,flight:{kind:'opening',t:.7801}});
+ assert.ok(Math.abs(ennen.y-jalkeen.y)<1,'laskukaaren rajalla ei hypätä');
+ const a=livianSvgMalli(livianSvgAsento('glideIn',.80)),b=livianSvgMalli(livianSvgAsento('glideIn',.86));
+ assert.equal(a.walking,true);assert.notEqual(Math.sign(a.step),Math.sign(b.step));
+ const loppu=livianSvgMalli(livianSvgAsento('glideIn',1));assert.equal(loppu.y,302);assert.ok(Math.abs(loppu.angle)<1e-9);
 });
 test('yläviistoon katselu nostaa vasemmalle osoittavan nokan, lasit käyvät otsalla ja palaavat',()=>{
  const svg=livianSvgKuva({...livianSvgAsento('blink',0),gazeUp:true});
