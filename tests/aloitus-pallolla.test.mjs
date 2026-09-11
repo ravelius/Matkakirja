@@ -171,8 +171,13 @@ test('valintanäkymä on kiinteä: Välimeren keskipiste ja pallo ruudun korkuis
   assert.doesNotMatch(lauta, /ALOITUSVALINNAN_KUPLAVARA_PX|ALOITUSVALINNAN_MARGINAALI = /,
     'kuplavara ja laatikkomarginaali poistuivat kiinteän rajauksen myötä');
   assert.match(lauta, /^ {4}aloitusnakyma,$/m, 'lauta vie näkymän ulos ui.js:lle');
-  assert.match(ui, /if \(this\.game\.phase === 'pickstart'\) lauta\.aloitusnakyma\(\);\n\s*else lauta\.kamera\.kotiin\(\);/,
-    'avaaPallolauta ei kutsu kotiin-ajoa ennen kuin matkaajalla on paikka');
+  /*
+   * Saapumisajo on 11.9.2026 lähtien `lauta.saavu` (maan laatikko
+   * ruutuun, js/pallolauta/lauta.js saapumisrajaus) — se kutsuu yhä
+   * kamera.kotiin-ajoa, mutta vasta kun matkaajalla on paikka.
+   */
+  assert.match(ui, /if \(this\.game\.phase === 'pickstart'\) lauta\.aloitusnakyma\(\);\n[^\n]*\n\s*else void lauta\.saavu\(\);/,
+    'avaaPallolauta ei kutsu saapumisajoa ennen kuin matkaajalla on paikka');
 });
 
 /*

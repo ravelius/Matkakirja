@@ -4251,7 +4251,8 @@ export class UI {
      * pergamenttiarkin takana kamera ei enää liiku.
      */
     if (this.game.phase === 'pickstart') lauta.aloitusnakyma();
-    else lauta.kamera.kotiin();
+    // Saapumisrajaus: maa mahdollisimman isona (js/pallolauta/lauta.js).
+    else void lauta.saavu();
     this.render();
     return true;
   }

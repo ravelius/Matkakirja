@@ -314,6 +314,53 @@ test('pitkä odotus reagoi kerran, ei herää päättyneenä eikä keskeytä lue
  c.tuhoa();assert.equal(e.timers.size,0,'odotus-, tausta- tai paluuajastimia ei vuoda purussa');c=null;
 });
 
+test('karttakameran liike nostaa, jatkuu inertian ajan ja laskeutuu vasta pysähdyttyä',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t),tila={x:0,y:0,skaala:1},kamera={kameranTila:()=>tila};
+ e.pollo.haeUi=()=>({kamera:()=>kamera});c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const canvas=e.doc.body.children[0].children[0];assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+ e.doc.dispatchEvent(new Event('pointermove'));e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/,'pelkkä osoitin ei ole karttaliike');
+ tila.x+=10;e.tick(160);assert.match(canvas.innerHTML,/data-map-hover/);
+ for(let i=0;i<10;i++){tila.x+=3;e.tick(100);assert.match(canvas.innerHTML,/data-map-hover/,'kamera liikkuu ilman uutta pointer-eventtiä');}
+ e.tick(400);assert.match(canvas.innerHTML,/data-map-hover/,'puolen sekunnin rauhoittumisviive');
+ // Uusi zoom kesken laskeutumisen jatkaa samaa lentoa, ei käy maassa.
+ e.tick(220);tila.skaala=1.1;e.tick(100);assert.match(canvas.innerHTML,/data-map-hover/);
+ e.tick(900);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);assert.equal(e.raf.size,0,'lepotila ei pyöritä rAF:ia');
+ c.tuhoa();assert.equal(e.timers.size,0);assert.equal(e.raf.size,0);
+});
+
+for(const este of ['chat','speech','narration','bun','dialog','hidden','reduced','flight'])test(`karttaleijunta väistää eikä jonotu: ${este}`,t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t),tila={x:0,y:0,skaala:1},kamera={kameranTila:()=>tila};
+ e.pollo.haeUi=()=>({kamera:()=>kamera});c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const canvas=e.doc.body.children[0].children[0],puhe={},luenta={},lento={};
+ tila.x=10;e.tick(200);assert.match(canvas.innerHTML,/data-map-hover/);
+ if(este==='chat'){e.pollo.auki=true;e.notify(e.button);c.tilanne('waiting',{tunnus:{},lahde:'vastaus'});}
+ if(este==='speech')ilmoitaLivianKasvopuhe(puhe,true,'Hei');
+ if(este==='narration')c.tilanne('narration',{tunnus:luenta,lahde:'matkakirja',reaktiotAjastettu:true});
+ if(este==='bun')c.tilanne('bunGranted',{tunnus:{}});
+ if(este==='dialog')e.doc.querySelector=()=>({open:true});
+ if(este==='hidden'){e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));}
+ if(este==='reduced'){e.reduced.matches=true;e.reduced.dispatchEvent(new Event('change'));}
+ if(este==='flight')c.tilanne('startFlight',{tunnus:lento,vaihe:'alku'});
+ e.tick(100);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+ for(let i=0;i<10;i++){tila.x+=4;e.tick(100);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/,'liikkuvakaan kamera ei ohita tärkeämpää tilaa');}
+ if(este==='speech')ilmoitaLivianKasvopuhe(puhe,false);
+ if(este==='narration')c.tilanne('narrationEnd',{tunnus:luenta});
+ if(este==='hidden'){e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));}
+ if(este==='reduced'){e.reduced.matches=false;e.reduced.dispatchEvent(new Event('change'));}
+ if(este==='flight')c.tilanne('startFlight',{tunnus:lento,vaihe:'peru'});
+ e.tick(5000);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/,'vanhaa liikettä ei jonoteta');
+ c.tuhoa();assert.equal(e.timers.size,0);assert.equal(e.raf.size,0);
+});
+
+test('karttakameran vaihto ja numeerinen värinä eivät laukaise leijuntaa',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);let tila={x:0,y:0,skaala:1},kamera={kameranTila:()=>tila};
+ e.pollo.haeUi=()=>({kamera:()=>kamera});c=asennaLivianKasvot(e.pollo);e.tick(5000);const canvas=e.doc.body.children[0].children[0];
+ for(let i=0;i<20;i++){tila.x+=.001;tila.skaala+=.000001;e.tick(100);}
+ assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+ kamera={kameranTila:()=>({x:200,y:300,skaala:4})};e.tick(1000);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/,'uuden kameran ensimmäinen kuva on vertailupiste');
+ kamera={kameranTila:()=>null};e.tick(300);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+});
+
 test('taustaeleet ovat neutraaleja eivätkä toistu heti',()=>{
  const neutraalit=new Set(['blink','turn','preen','glance','tilt','lookUp','lookDown','mapPeck']);
  for(const edellinen of neutraalit)for(const arpa of [0,.25,.5,.999]){
