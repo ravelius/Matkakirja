@@ -411,11 +411,31 @@ function normalisoi(lahde, kohde, tyokansio, { tavoiteLufs, haivytys, leikkaa })
     '-af', `loudnorm=I=${tavoiteLufs}:TP=-1:LRA=11:print_format=json`,
     '-f', 'null', '-',
   ]).loki;
-  const mitattu = tulkitseLoudnorm(mittausLoki);
-  if (!mitattu) {
-    throw new Error(`loudnormin mittaus ei tuottanut lukua:\n${mittausLoki.slice(-800)}`);
+  let mitattu = tulkitseLoudnorm(mittausLoki);
+  let korjaus;
+  if (mitattu) {
+    korjaus = tavoiteLufs - mitattu.taso;
+  } else {
+    /*
+     * HYVIN LYHYT ISKU EI ANNA INTEGROITUA TASOA. EBU R128 porttaa
+     * hiljaisuuden pois ja mittaa 400 ms lohkoissa; alle puolen
+     * sekunnin kameran klik (11.9.2026, "Nice Camera click" 0,75 s →
+     * leikattuna vähemmän) palautti input_i = -inf ja ajo kaatui.
+     * Silloin taso asetetaan huipun mukaan: max_volume nostetaan
+     * −1 dBFS:ään. Iskulla huippu on se, mikä kuuluu, joten tulos on
+     * käytännössä sama kuin muilla iskuilla.
+     */
+    const huippuLoki = ajaKomento('ffmpeg', [
+      '-hide_banner', '-v', 'info', '-i', wav, '-af', 'volumedetect', '-f', 'null', '-',
+    ]).loki;
+    const osuma = huippuLoki.match(/max_volume:\s*(-?[\d.]+) dB/);
+    if (!osuma) {
+      throw new Error(`loudnormin mittaus ei tuottanut lukua eikä huippua löytynyt:\n${mittausLoki.slice(-800)}`);
+    }
+    const huippu = Number(osuma[1]);
+    korjaus = -1 - huippu;
+    mitattu = { taso: null, huippu, kirjo: 0, huipunMukaan: true };
   }
-  const korjaus = tavoiteLufs - mitattu.taso;
 
   ajaKomento('ffmpeg', [
     '-y', '-v', 'error', '-i', wav,
@@ -554,7 +574,7 @@ async function ajaLista({
       const tavut = await lataaEsikatselu(o, raaka);
       const tulos = normalisoi(raaka, kohde, tyokansio, viimeistely);
       console.log(`   lataus ${(tavut / 1024).toFixed(0)} kt → leikkaus `
-        + `${tulos.leikattu.toFixed(2)} s, taso ${tulos.mitattu.taso.toFixed(1)} LUFS, `
+        + `${tulos.leikattu.toFixed(2)} s, taso ${tulos.mitattu.taso == null ? `huippu ${tulos.mitattu.huippu.toFixed(1)} dBFS` : `${tulos.mitattu.taso.toFixed(1)} LUFS`}, `
         + `korjaus ${tulos.korjaus.toFixed(2)} dB → ${tulos.valmis.toFixed(2)} s`);
 
       if (tulos.valmis < tehoste.kestoMin * 0.5) {
