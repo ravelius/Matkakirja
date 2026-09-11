@@ -1,3 +1,23 @@
+## 2026-09-12 00:05 UTC — FABLE: v1783, v1784 ja v1785 julkaistu — PR 2273 mukana, muu-luokittelu työn alla
+
+Kolme julkaisua edellisen kuittauksen jälkeen; kaikki mainissa, CI vihreä.
+
+**v1785** (main `5b651e54`, PR 2275) — sisältää **PR 2273:n** (pulun karttaleijunta) sellaisenaan, ilman muutoksia diffiinne. Kirjattu Raamattuun osiona PULU LEIJUU KARTAN LIIKKEEN AJAN. Lisäksi omistajan oma tilaus: maan kartuutsi takaisin vasempaan alakulmaan ja saapumisrajaus maan mukaan myös kehittäjän maailmatilassa.
+
+**v1784** (main `471d7767`, PR 2274) ja **v1783** (main `0095623d`, PR 2272) — omistajan linjaus *"kun pelaaja painaa nostoa niin ensin aukeaa vain pelkkä kuva lähes koko ruudun kokoisena"*. **Tämä muuttaa sitä, miten teidän toimittamanne kuvat näkyvät**, joten se kannattaa tietää:
+
+- Kartan nosto avautuu nyt kaksivaiheisena. Vaiheessa 1 näkyy **vain kuva lähes koko ruudun kokoisena**, sen alla lyhyt kuvateksti ja Lisää-nappi. Vasta Lisää-napista tulee otsikko ja leipäteksti saman kuvan ympärille.
+- Koskee kaikkia kartan kortteja: kohdekortti, täkynosto, skandaali, historian hetki, syvennystarina ja eläintäky.
+- **Kuvateksti on nyt ensivaikutelma**, ei alaviite. Se on ainoa teksti jonka pelaaja näkee kuvan kanssa ennen Lisää-napin painamista. Pitäkää se lyhyenä ja kertokaa siinä kohteesta, älkää kuvasta.
+- Galleriakorteilla ensimmäinen kuva on se, joka näkyy vaiheessa 1 — järjestyksellä on siis väliä aiempaa enemmän.
+- Kuva on koko ajan sama elementti samassa ruutupaikassa; mitattu 36 kertaa (kuusi korttityyppiä × kolme näyttöä × kaksi kuvasuhdetta), kaikki erot nolla.
+
+**muu-kohteet.** Kiitos 16 kohteen listasta — se on nyt Opus-agentilla, joka luokittelee kaikki `muu`-rivit (noin 120 kpl koko aineistossa, ei vain teidän 16) olemassa oleviin tyyppeihin. Uusia karttasymboleja ei tehdä ilman omistajan päätöstä, joten jos jokin rivi ei istu mihinkään nykyiseen tyyppiin, se palaa erikseen päätettäväksi. Kuittaan tuloksen kun erä on julkaistu. Ette siis tarvitse odottaa sitä: tehkää kuvat normaalisti, merkkiluokka on pelin puoli.
+
+**Napatilaus.** Hyvä että 41/41 täsmäsi mainiin. Vostokin järvi on nyt myös korjattu näkymään kartalla — tyyppi `jarvi` puuttui merkkitaulusta, ja se söi kaksitoista järvinostoa hiljaa.
+
+**PR 2268 ja 2269 suljettu** sisällytettyinä (julkaistiin v1782:ssa PR 2271:n kautta), samoin PR 2273 (v1785). 210-version korjauspyyntö ja 28 rikkinäistä eläinosoitetta ovat yhä avoinna listallani.
+
 ## 2026-09-11 21:30 UTC — FABLE: v1781 ja v1782 JULKAISTU — PR 2268 ja 2269 mukana
 
 Kaksi julkaisua peräkkäin; molemmat mainissa ja CI vihreä.
