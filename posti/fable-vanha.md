@@ -1,3 +1,34 @@
+## 2026-09-11 17:40 UTC — FABLE: kuvatilaus kasvoi — 45 uutta nostoa mainissa (v1776), yhteensä 323 kuvatonta
+
+Täydensin Euroopan nostojen MÄÄRÄN samalla kun te aloitatte kuvat: **v1776 (main 97f562d6)** nostaa viisitoista maata kahteenkymmeneen pääkartan nostoon. Uudet 45 nostoa ovat tarkoituksella **kuvattomia** — ne kuuluvat samaan tilaukseen kuin aiemmat 278, joten työlista on nyt **323 kuvaa**.
+
+Uudet tunnukset maittain (kaikki laji `kohde` paitsi viimeinen, joka on skandaali):
+
+- **FIN** saimaa · koli · saimaankanava · hameenlinna · ruotsinsalmi · kultala
+- **SWE** vanern · kalmarinlinna · karlskrona · lundintuomiokirkko · tornionjoki · salanhopeakaivos
+- **EST** peipsi · emajogi · kaali · haapsalu · rakvere · ontika · lahemaa
+- **ISL** snaefellsjokull · dettifoss · myvatn · vatnajokull · grimsey · skalholt
+- **CZE** tabor · olomouc · jachymov · moravskykras · boubin · lednice
+- **DNK** tollundin-mies · egeskov · mons-klint · lindholm-hoje · billund
+- **FRA** avignonin-paavinpalatsi · chambord · douaumont · bayeux-seinavaate · millaun-silta
+- **LVA** ventas-rumba · kolkan-niemi · aglona · gluckin-raamattumuseo
+- **AUT** erzberg · bregenzin-jarvinayttamo · krimmlin-vesiputoukset
+- **CHE** rutli · landwasserin-viadukti · reininputous
+- **IRL** croagh-patrick · dun-aonghasa · glendalough
+- **LTU** klaipeda · puntukas · aukstaitija
+- **BGR** nesebar · belogradtsik
+- **BIH** blidinje · bobovac
+- **NLD** afsluitdijk · maastricht
+- **ISL, skandaali** baskivainot-1615 (haaksirikkoiset baskivalaanpyytäjät 1615) — tämä on ainoa uusi skandaali ja kaipaa havainnekuvan, ei valokuvaa.
+
+Nämä ovat pääosin tunnettuja paikkoja, joista Commonsissa on hyvää vapaata kuvamateriaalia (Saimaa, Koli, Vänern, Mývatn, Chambord, Millau, Croagh Patrick…), joten aitoja valokuvia pitäisi löytyä helposti. Sama sääntö kuin aiemmassa tilauksessa: kohteet ja maastokohteet aitoina valokuvina, skandaalit havainnekuvina, tekijä ja lisenssi kuvatietoihin. Omistajan suora hyväksyntä 11.9.2026 koskee näitäkin.
+
+Ajantasaisen listan saa suoraan mainista: kuvaton nosto on se, jolla ei ole `kuva`- eikä `kuvat`-kenttää (js/packs/maastokohteet-*.js, fokuskohteet-*.js, skandaalit.js). Manifesti `posti/kuvatoimitus-nostokuvat-eurooppa-278-20260911.json` pätee edelleen 278:n osalta.
+
+Romania ja Portugali ovat vielä 19:ssä; täydennän ne seuraavassa erässä ja ilmoitan tänne, jos kuvia tulee lisää.
+
+---
+
 ## 2026-09-11 17:05 UTC — FABLE: TILAUS KUVAPUTKELLE — Euroopan nostokuvat, 278 kohdetta (omistajan suora hyväksyntä)
 
 **Omistaja 11.9.2026, sanatarkasti:** *"Euroopasta puuttuu suurimmasta osasta maiden kartalla olevista nostoteksteistä kuvat. Niissä saisi olla aitoja sekä havainnekuvia. Laita agentit hommiin ja työlista kuvaputkelle. Ne kuvat voi suoraan hyväksyä peliin."*
