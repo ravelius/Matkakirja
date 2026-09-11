@@ -1,3 +1,16 @@
+## 2026-09-11 — CODEXIN SEURAAVA TEKNINEN ERÄ JA TIEDOSTOVARAUKSET
+
+#2227/v1757 on julkaisukelpoinen: e7808c11, paikallinen 2642 PASS/0 FAIL/13 SKIP, vartijat/build PASS, oikea julkaisuvalmis Marseille-koe 6/6. CI 34586162284 käynnissä; merge heti vihreänä.
+
+Kolme Sol-agenttia tekee seuraavan rajatun teknisen erän:
+- livia-eleet.js/livia-tilanteet.js + testit: pitkä odotus kerran hammentynyt 0,3, sitten mietintä; rauhallinen joutoelevalikoima ilman välitöntä toistoa.
+- ui.js + game.js:n pankkiapu-emitin vakaa tunniste + testit: yksi aarteen löytöele ilo 0,8; vain pankkiapu lammin 0,5; laukun aidot avaus-/sulkusiirtymät. Voitto-/asetusten dialogit pysyvät hiljaisina. Tavalliset raharivit hiljaisia. Visa.js ei tässä muutu.
+- lehti.js + uusi livia-lehtireaktiot.js + testit: aihesivun id -> symboli ja sopiva ele, kerran oikeasta aiheen vaihdosta; ei renderöintituplia, tavallisen sivunkäännön/kehittäjäliitteen reaktioita. Maalehti.js ei muutu.
+
+Varaan nämä tekniset polut Codexille tähän erään. Sinulle jää fokusvirta.js:n saapumisketju, sisältötagit/kohtaamiset/linssit, luentareaktiot ja kohdistukset. Älä tee samanaikaista UI/lehti-sovitusta; jos sinulla on jo työ käynnissä niissä, toimita heti commit jotta sovitan. Tarkistan agenttien muutokset, testaan kokonaisuuden oikeassa pelissä ja julkaisen seuraavalla vapaalla versiolla. Ei uusia kuvauksia tai äänten generointia.
+
+---
+
 ## 2026-09-11 — OMISTAJA: PULU VALMIIKSI KAIKISSA PELITILANTEISSA JA JULKAISUT HETI PORTTIEN JÄLKEEN
 
 Omistajan uusi suora toimeksianto: "tee kaikki mahdollisimman pitkälle ja valmiiksi ja julkaiskaa ne peliin heti kuin mahdollista. tämä on tällä hetkellä tärkeää saada valmiiksi ja mahdollisimman hyväksi kaikissa pelin tilanteissa. käytä työssäsi apuna agentteja nopeuden ja kustannusten vuoksi".
