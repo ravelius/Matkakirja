@@ -93,6 +93,15 @@ export const MAASTOKOHTEET_POL = [
       + 'huippu on Puolan korkein piste ja kuuluu Puolan vuorten kruunuun; kaksi muuta ovat '
       + 'Slovakian puolella.',
     lahde: 'en-Wikipedia "Rysy", johdanto-osa (tarkistettu 29.8.2026).',
+    kuva: {
+      tiedosto: 'Rysy 006.JPG',
+      selite: 'Rysyn huipulta avautuu näkymä Czarny Staw pod Rysami- ja Morskie Oko -järville.',
+      lahde: 'Milan Bališin, Wikimedia Commons (CC BY-SA 4.0)',
+      tekija: 'Milan Bališin',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rysy_006.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
   },
   {
     id: 'sniezka',
@@ -113,6 +122,15 @@ export const MAASTOKOHTEET_POL = [
       + 'korkein kohta ja koko Sudeettien katto. Rajan toisella puolella sama huippu on Tšekin '
       + 'korkein piste.',
     lahde: 'en-Wikipedia "Sněžka", johdanto-osa (tarkistettu 29.8.2026).',
+    kuva: {
+      tiedosto: 'Śnieżka (Sněžka, Schneekoppe) in winter 2020, Karkonosze mountains 04.jpg',
+      selite: 'Śnieżkan luminen huippu ja sen observatorio erottuvat Karkonoszevuoriston talvimaisemassa.',
+      lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
+      tekija: 'Pudelek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C5%9Anie%C5%BCka_(Sn%C4%9B%C5%BEka,_Schneekoppe)_in_winter_2020,_Karkonosze_mountains_04.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
   },
   {
     id: 'itameri',
@@ -142,6 +160,15 @@ export const MAASTOKOHTEET_POL = [
     lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
       + '"Subdivisions", "Middle Ages" ja "Economy"; laivan osalta "Vasa (ship)", johdanto-osa '
       + '(tarkistettu 1.9.2026).',
+    kuva: {
+      tiedosto: 'Mierzeja Helska i Kuźnica z samolotu.Hel Peninsula and Kuznica from airplane. - panoramio.jpg',
+      selite: 'Ilmakuvassa Helin kapea niemimaa erottaa Gdańskinlahden avomerestä Puolan Itämeren-rannikolla.',
+      lahde: 'Guntars Mednis, Wikimedia Commons (CC BY-SA 3.0)',
+      tekija: 'Guntars Mednis',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mierzeja_Helska_i_Ku%C5%BAnica_z_samolotu.Hel_Peninsula_and_Kuznica_from_airplane._-_panoramio.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
   },
   {
     id: 'veiksel',
@@ -169,6 +196,15 @@ export const MAASTOKOHTEET_POL = [
       + 'Varsovan halki.',
     lahde: 'en-Wikipedia "Vistula", johdanto-osa sekä osiot "Delta" ja "Channel changes" '
       + '(tarkistettu 1.9.2026).',
+    kuva: {
+      tiedosto: 'VistulaKrakow.JPG',
+      selite: 'Veiksel virtaa Krakovan halki rantakäytävien ja rakennusten välissä.',
+      lahde: 'Mark A. Wilson, Wikimedia Commons (Public domain)',
+      tekija: 'Mark A. Wilson',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:VistulaKrakow.JPG',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    },
   },
   {
     id: 'odra',
@@ -228,6 +264,15 @@ export const MAASTOKOHTEET_POL = [
       + 'maailmanperintökohteeksi se merkittiin joulukuussa 1997.',
     lahde: 'en-Wikipedia "Malbork Castle", johdanto-osa ja osio "Origins" '
       + '(tarkistettu 6.9.2026).',
+    kuva: {
+      tiedosto: 'Nogat river and Malbork Castle in the afternoon.jpg',
+      selite: 'Malborkin laaja punatiilinen linnakokonaisuus kohoaa Nogatjoen vehreältä rannalta Pohjois-Puolassa.',
+      lahde: 'DerHexer, Wikimedia Commons (CC BY-SA 3.0)',
+      tekija: 'DerHexer',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nogat_river_and_Malbork_Castle_in_the_afternoon.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
   },
   {
     id: 'auschwitz',
@@ -430,4 +475,3 @@ export const MAASTOKOHTEET_POL = [
       + '(tarkistettu 6.9.2026).',
   },
 ];
-
