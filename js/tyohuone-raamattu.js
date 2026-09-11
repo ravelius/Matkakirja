@@ -6843,6 +6843,13 @@ export const RAAMATTU = {
       otsikko: 'Tuotantotalous (kehitystyo)',
       tila: 'kirjattu 31.8.2026 (omistajan tilaus samana iltana)',
       kohdat: [
+        'KYSYMYKSET OMISTAJALLE AINA KYSYMYSKORTTINA (omistaja 11.9.2026 klo '
+          + '12.10, sanatarkasti: "Jos sinulla tulee minulle kysyttavaa, niin tee '
+          + 'aina kysymyskortit. Muuten menee minulta ohi."): Fable ei koskaan '
+          + 'jata kysymysta pelkkaan tekstivastaukseen - jokainen omistajan '
+          + 'paatosta vaativa asia esitetaan AskUserQuestion-korttina '
+          + 'vaihtoehtoineen. Tyosessiot (Opus/Sonnet) eivat kysy omistajalta '
+          + 'lainkaan (roolitus 10.8.2026); ne raportoivat Fablelle.',
         'FABLEMAXIA SAASTELIAASTI (omistaja 31.8.2026, sanatarkka: '
           + '"Kayta fablemaxia mahdollisimman saasteliaasti. Se '
           + 'kuluttaa lahes 100 kertaa enemman kuin opus"): '

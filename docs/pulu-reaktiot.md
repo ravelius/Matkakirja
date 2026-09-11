@@ -83,14 +83,55 @@ kuplan tai jakson alussa, ei kesken puheen" matkakirjaluentojen osalta.)*
   tekstisessio (livia-eleet).
 - **reactionEnd** `{ lahde: 'matkakirja', luentaTunnus: <audio>, kaupunki }`
   lähetetään, kun ele on katkaistava: kelaus (seeking/seeked), tauko
-  (pause), virhe, soittimen tyhjennys, kytkennän purku sekä luennan
-  vaihtuminen (`voimassa()` epätosi). Tyhjiä loppuja ei lähetetä — vain
-  jos jokin reaktio on ehditty ampua.
-- **Luonnollinen loppu:** `ended`-tapahtumassa ammutaan vielä ampumatta
-  jääneet reaktiot, joiden hetki on enintään `LOPPUVARA_MS` = 500 ms
-  päässä, kentällä `jalkireaktio: true` — eikä `reactionEndiä` lähetetä,
-  jolloin sovitin saa antaa loppuvitsin eleen valmistua äänitteen jo
-  vaiettua. Muissa reaktioissa `jalkireaktio: false`.
+  (pause), **puskurointi (waiting/stalled)**, virhe, soittimen tyhjennys,
+  kytkennän purku sekä luennan vaihtuminen (`voimassa()` epätosi).
+  Tyhjiä loppuja ei lähetetä — vain jos jokin reaktio on ehditty ampua.
+  Puskurointi katkaisee eleen samalla tavalla kuin tauko (11.9.2026):
+  `seuraaLivianKuuntelua` lähettää niissä narrationEndin ja sovitin
+  katkaisee eleen joka tapauksessa, joten jonoa ei jätetä odottamaan
+  pausea, joka ei ehkä koskaan tule.
+- **Luonnollinen loppu EI OLE `ended`** (selainkoe Marseillessa
+  11.9.2026): js/luenta.js `pehmeaLoppu` vaimentaa lopun ja kutsuu
+  `audio.pause()` 25 ms ennen tiedoston reunaa, joten peli lähettää
+  pausen ja `ended` jää epätodeksi. Siksi pehmeaLoppu lähettää tuosta ja
+  VAIN tuosta haarasta tapahtuman `matkakirja:luenta-loppu`
+  (`LUENNAN_LOPPU_TAPAHTUMA`, js/luentareaktiot.js); manuaalinen
+  pysäytys, häivytys, kelaus ja virhe ovat keskeytyksiä eivätkä lähetä
+  sitä. Moottori käsittelee tuon tapahtuman ja natiivin `ended`in
+  samalla käsittelijällä, kerran:
+  - ammutaan **tasan yksi** reaktio: viimeisin ampumaton rivi, jonka
+    hetki on `LOPPUVARA_MS` = 500 ms sisällä nykyhetkestä **molempiin
+    suuntiin**, kentällä `jalkireaktio: true`. Vanhempia ampumatta
+    jääneitä ei pureta ryöppynä (ne on kuultu ilman reaktiota).
+    Muissa reaktioissa `jalkireaktio: false`.
+  - `reactionEndiä` EI lähetetä, ja kuuntelijat irrotetaan ennen kuin
+    lopun jälkeinen automaattinen `pause` ehtii tulla — sovitin saa
+    antaa loppuvitsin eleen valmistua äänitteen jo vaiettua.
+  - jos `voimassa()` on epätosi, ei ammuta mitään; ele katkaistaan.
+  - purkukutsu (stopDiaryVoice, haivytaLuenta, kaupungin vaihto)
+    lähettää `reactionEndin` MYÖS luonnollisesti päättyneelle luennalle,
+    jos ele oli yhä käynnissä. "Kuuntelijat irti" tapahtuu kerran,
+    "reactionEnd jos käynnissä" jokaisella purkukutsulla.
+  - tekstisession `seuraaLivianKuuntelua` lähettää samasta tapahtumasta
+    `narrationEnd { tunnus, luonnollinenLoppu: true }` (heidän osuutensa,
+    #2227).
+- **Kytkennän kilpailu:** aikaleimojen lataus ja äänisidonnan SHA-256
+  kestävät satoja millisekunteja, ja soitin ehtii lähettää
+  `playing`-tapahtumansa ennen kytkentää (koe 1500 ms viiveellä: 0/6
+  reaktiota, koska moottori jäi odottamaan playingiä, jota ei enää
+  tullut). Siksi `kytkeMatkakirjanReaktiot` aloittaa **esikuuntelijan jo
+  ennen awaitia**: se kirjaa viimeisimmän todellisen tilan (`playing` →
+  soiva; pause/waiting/stalled/error → ei soiva; ended/emptied/luenta-
+  loppu → kuollut) ja luovuttaa sen moottorille (`soiva`-asetus).
+  Soiva-tilassa kytketty moottori sovittaa tilan nykyhetkeen ampumatta
+  mitään. Esikuuntelija irrotetaan aina, myös null-paluussa ja
+  virheessä; pelkkä `!audio.paused` ei kelpaa, koska puskuroiva soitin
+  ei ole tauolla.
+- **kuollut-callback:** moottori kutsuu asetusta `kuollut` kerran, kun se
+  purkaa itsensä sisäisesti (virhe, tyhjennys, `voimassa()` epätosi,
+  luonnollinen loppu). js/luenta.js nollaa siitä `reaktiotValmis`-tiedon;
+  kutsujan oma purku (`audio.puraReaktiot`) nollaa sen itse eikä laukaise
+  callbackia.
 - **reaktiotAjastettu:** luenta välittää
   `seuraaLivianKuuntelua(..., { lahde: 'matkakirja', reaktiotAjastettu:
   () => boolean })`. Tosi vasta kun aikaleimat on ladattu, tarkistettu ja
