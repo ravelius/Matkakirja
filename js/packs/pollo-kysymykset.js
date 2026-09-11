@@ -8,14 +8,26 @@
  * MUOTO. Avain on kaupunki-id (sama kuin laudan cities-listassa) ja
  * konteksti:
  *
- *   'laatta' — kaupunkilaatta kartalla, pelaaja seisoo kaupungissa
- *   'lehti'  — kaupungin oma lehti on auki
+ *   'laatta'     — kaupunkilaatta kartalla, pelaaja seisoo kaupungissa
+ *   'lehti'      — kaupungin oma lehti on auki
+ *   'saapuminen' — pelaaja on juuri saapunut uuteen fokusvirtakaupunkiin,
+ *                  kuullut isoisän merkinnän ja pulun kommentin, ja avaa
+ *                  chatin (omistajan tilaus 11.9.2026)
  *
- * Jokaisessa tilanteessa on täsmälleen 5 kysymystä. Säännöt:
+ * Kysymysmäärä: 'laatta' ja 'lehti' 5 kysymystä, 'saapuminen' TASAN 2.
+ * Säännöt:
  *
  *   - suomeksi, pelaajan äänellä, enintään 70 merkkiä
  *   - aiheet pelin omasta aineistosta (kulttuurinostot, nähtävyysjutut,
  *     maatiedot) tai yleistiedosta, jotta pöllöllä on mistä vastata
+ *   - 'saapuminen' on tiukempi: kysymykset nousevat JUURI SEN KAUPUNGIN
+ *     omista saapumisteksteistä (js/packs/fokusvirta-<id>.js) —
+ *     toinen isoisän merkinnästä (`matkakirja.teksti`), toinen pulun
+ *     repliikistä (`pollo.kommentti`). Ei yleisiä turistikysymyksiä
+ *     eikä kysymystä, jonka vastaus on jo suoraan merkinnässä sanottu:
+ *     kysymys tarttuu yksityiskohtaan ja kysyy siitä jotain lisää.
+ *     Kaikilla 45 Euroopan fokusvirtakaupungilla on tämä lohko;
+ *     tests/pollo-valmiskysymykset.test.mjs valvoo sitä koneellisesti.
  *   - EI visavastauksia paljastavia eikä juonispoilereita (Raamatun
  *     pöllölinjaus: pöllö on tiedon hahmo, ei tarinan)
  *
@@ -33,6 +45,10 @@
 
 export const POLLO_VALMISKYSYMYKSET = {
   firenze: {
+    saapuminen: [
+      'Miten David saatiin lopulta siirrettyä sisätiloihin?',
+      'Milloin aukiolle pystytetty Davidin kopio tehtiin?',
+    ],
     laatta: [
       'Miksi Ponte Vecchion päällä on taloja?',
       'Mikä teki Medici-suvusta niin mahtavan?',
@@ -50,6 +66,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   tampere: {
+    saapuminen: [
+      'Miten Tammerkosken voima siirrettiin tehtaan koneisiin?',
+      'Mitä Finlaysonin vanhoissa tehdassaleissa tehdään nyt?',
+    ],
     laatta: [
       'Miksi Tampere syntyi juuri kosken partaalle?',
       'Kuka oli James Finlayson?',
@@ -101,6 +121,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   pariisi: {
+    saapuminen: [
+      'Miksi uuden oopperatalon rakentaminen kesti niin kauan?',
+      'Onko oopperatalon alla oikeasti järvi?',
+    ],
     laatta: [
       'Miksi Eiffel-torni rakennettiin?',
       'Miksi Pariisia sanotaan valojen kaupungiksi?',
@@ -118,6 +142,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   helsinki: {
+    saapuminen: [
+      'Keitä ne kirkon katon kaksitoista veistosta esittävät?',
+      'Myydäänkö Kauppatorilla yhä kalaa suoraan veneistä?',
+    ],
     laatta: [
       'Miksi Helsinki siirrettiin nykyiselle paikalleen?',
       'Miksi Suomenlinna rakennettiin?',
@@ -134,6 +162,10 @@ export const POLLO_VALMISKYSYMYKSET = {
     ],
   },
   lontoo: {
+    saapuminen: [
+      'Miten maanalaisen radan savu saatiin pois tunneleista?',
+      'Milloin Lontoon metro vaihtoi höyrystä sähköön?',
+    ],
     laatta: [
       'Miksi Lontoo syntyi juuri Thamesin mutkaan?',
       'Mikä Big Ben oikeastaan on?',
@@ -151,6 +183,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   istanbul: {
+    saapuminen: [
+      'Milloin Galatan mäen tunneli saatiin valmiiksi?',
+      'Onko Tünel yhä maailman lyhimpiä metroja?',
+    ],
     laatta: [
       'Miksi Istanbul on kahdella mantereella?',
       'Miksi kaupungin nimi vaihtui Konstantinopolista?',
@@ -168,6 +204,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   dublin: {
+    saapuminen: [
+      'Onko se 9 000 vuoden vuokrasopimus yhä voimassa?',
+      'Kuinka paljon panimo tekee Guinnessiä nykyään päivässä?',
+    ],
     laatta: [
       'Miksi Dublinia sanotaan Joycen kaupungiksi?',
       'Mitä Bloomsday-päivänä juhlitaan?',
@@ -185,6 +225,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   edinburgh: {
+    saapuminen: [
+      'Miksi Edinburghin vanhakaupunki kasvoi noin korkeaksi?',
+      'Mitä kaupungin maanalaisissa kujissa nykyään tehdään?',
+    ],
     laatta: [
       'Miksi Edinburghin linna seisoo kalliolla?',
       'Mikä Royal Mile on?',
@@ -202,6 +246,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   marseille: {
+    saapuminen: [
+      'Mistä Marseillen saippua oikein keitetään?',
+      'Mitä Marseillen satamasta lähtee ja saapuu nykyään?',
+    ],
     laatta: [
       'Miksi kreikkalaiset perustivat kaupungin juuri tänne?',
       'Kuinka vanha Marseille on?',
@@ -219,6 +267,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   lissabon: {
+    saapuminen: [
+      'Miten Baixan talot rakennettiin kestämään järistystä?',
+      'Kuinka monta hissiä ja köysirataa kaupungissa on?',
+    ],
     laatta: [
       'Mitä Lissabonissa tapahtui vuonna 1755?',
       'Miksi kaupunki rakennettiin uudelleen puuhäkkien varaan?',
@@ -235,7 +287,18 @@ export const POLLO_VALMISKYSYMYKSET = {
     ],
   },
 
+  sevilla: {
+    saapuminen: [
+      'Miksi tupakkatehtaasta rakennettiin niin palatsimainen?',
+      'Milloin tupakkatehtaasta tehtiin yliopisto?',
+    ],
+  },
+
   madrid: {
+    saapuminen: [
+      'Miksi Velázquez maalasi itsensä keskelle taulua?',
+      'Mitä taulun iso koira kertoo hovin arjesta?',
+    ],
     laatta: [
       'Miksi Madridista tehtiin Espanjan pääkaupunki?',
       'Kuinka korkealla Madrid sijaitsee?',
@@ -253,6 +316,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   barcelona: {
+    saapuminen: [
+      'Miten Cerdà päätyi juuri viistettyihin korttelikulmiin?',
+      'Mitä Eixamplen alueen vanhoille pelloille tapahtui?',
+    ],
     laatta: [
       'Miksi Barcelonan kortteleista on leikattu kulmat pois?',
       'Mikä Ramblas-katu on?',
@@ -270,6 +337,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   granada: {
+    saapuminen: [
+      'Mistä Alhambran kaikki vesi oikein johdettiin sinne?',
+      'Kuinka moni käy Alhambrassa nykyään vuoden aikana?',
+    ],
     laatta: [
       'Miksi Granadassa saa yhä tapaksen juoman mukana?',
       'Mitä Granadassa tapahtui vuonna 1492?',
@@ -287,6 +358,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   amsterdam: {
+    saapuminen: [
+      'Miksi Amsterdamin talot rakennettiin noin kapeiksi?',
+      'Miten huonekalu nostetaan ikkunasta sisään nykyään?',
+    ],
     laatta: [
       'Miksi Amsterdam rakennettiin kanavien varaan?',
       'Miksi talot nojaavat eteenpäin kadulle?',
@@ -304,6 +379,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   berliini: {
+    saapuminen: [
+      'Minkä sotien tykeistä voitonpylvään putket otettiin?',
+      'Miksi voitonpylväs piti siirtää Tiergarteniin?',
+    ],
     laatta: [
       'Miksi Berliini jaettiin kahtia?',
       'Milloin Berliinin muuri murtui?',
@@ -321,6 +400,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   praha: {
+    saapuminen: [
+      'Mitä kaikkea Prahan astronominen kello oikeasti näyttää?',
+      'Kuinka vanha kellokoneisto on, ja onko se alkuperäinen?',
+    ],
     laatta: [
       'Miksi Prahaa sanotaan sadan tornin kaupungiksi?',
       'Kuka Kaarle IV oli?',
@@ -338,6 +421,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   wien: {
+    saapuminen: [
+      'Miten Wienin pörssiromahdus vaikutti maailmannäyttelyyn?',
+      'Milloin ja miten Rotunden jättikupoli tuhoutui?',
+    ],
     laatta: [
       'Miksi Wienistä tuli musiikin pääkaupunki?',
       'Mikä Hofburg on?',
@@ -355,6 +442,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   budapest: {
+    saapuminen: [
+      'Mistä Rudasin kylpylän turkkilainen kupoli on peräisin?',
+      'Paljonko Budapestissä on yhä toiminnassa kylpylöitä?',
+    ],
     laatta: [
       'Milloin Budasta ja Pestistä tuli yksi kaupunki?',
       'Miksi Budapestissa on niin paljon kylpylöitä?',
@@ -372,6 +463,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   varsova: {
+    saapuminen: [
+      'Miten puolan kieltä pidettiin yllä Venäjän vallan alla?',
+      'Minkä kuvien mukaan vanhakaupunki rakennettiin uudelleen?',
+    ],
     laatta: [
       'Miten Varsova koottiin uudelleen raunioista?',
       'Kuka Fryderyk Chopin oli?',
@@ -389,6 +484,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   krakova: {
+    saapuminen: [
+      'Miksi Marian kirkon torvensoitto katkeaa kesken?',
+      'Kuka torvea soittaa nykyään ja kuinka usein?',
+    ],
     laatta: [
       'Miksi Krakova oli ennen Puolan pääkaupunki?',
       'Mikä Wawelin linna on?',
@@ -406,6 +505,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   alpit: {
+    saapuminen: [
+      'Miksi jäätikön jää näyttää siniseltä syvältä?',
+      'Kuinka paljon Grindelwaldin jäätikkö on vetäytynyt?',
+    ],
     laatta: [
       'Miten Alpit syntyivät?',
       'Kuinka korkea Mont Blanc on?',
@@ -423,6 +526,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   venetsia: {
+    saapuminen: [
+      'Miksi Venetsian talot on rakennettu suoraan veteen?',
+      'Keitä noissa kanavan palatseissa asuu nykyään?',
+    ],
     laatta: [
       'Miksi Venetsia rakennettiin keskelle laguunia?',
       'Mikä Canal Grande on?',
@@ -440,6 +547,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   rooma: {
+    saapuminen: [
+      'Minne Pantheonin lattialle satanut vesi valuu?',
+      'Miksi Pantheon säilyi, kun muut temppelit hävisivät?',
+    ],
     laatta: [
       'Kuinka vanha Rooma on kaupunkina?',
       'Mikä Colosseum oli aikanaan?',
@@ -457,6 +568,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   sisilia: {
+    saapuminen: [
+      'Miten kreikkalaiset ja arabit päätyivät samaan kappeliin?',
+      'Kuinka kauan Palermon palatsi on ollut vallan talona?',
+    ],
     laatta: [
       'Miksi Sisiliassa on niin monta valloittajan jälkeä?',
       'Mikä Etna on?',
@@ -474,6 +589,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   ateena: {
+    saapuminen: [
+      'Mihin Schliemannin löytämä Troijan kulta lopulta päätyi?',
+      'Miksi Schliemannin talosta tuli juuri rahamuseo?',
+    ],
     laatta: [
       'Miksi Akropolis rakennettiin juuri tuolle kalliolle?',
       'Mitä antiikin agoralla tehtiin päivisin?',
@@ -491,6 +610,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   kreeta: {
+    saapuminen: [
+      'Mitä Hanian majakasta on venetsialaisten omaa työtä?',
+      'Milloin ja miten Kreeta liittyi Kreikkaan?',
+    ],
     laatta: [
       'Keitä minolaiset olivat?',
       'Mikä Minotauroksen taru oikeastaan kertoo?',
@@ -508,6 +631,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   dubrovnik: {
+    saapuminen: [
+      'Mistä Onofrion suihkukaivon vesi tuotiin kaupunkiin?',
+      'Ovatko kaikki kuusitoista kivikasvoa yhä tallella?',
+    ],
     laatta: [
       'Miksi Dubrovnikin ympärillä on noin paksut muurit?',
       'Miksi kaupunkia kutsuttiin ennen Ragusaksi?',
@@ -525,6 +652,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   sarajevo: {
+    saapuminen: [
+      'Mikä on sen pienen kahvipannun oikea nimi?',
+      'Kuinka vanha Sarajevon basaarikortteli on?',
+    ],
     laatta: [
       'Miksi Sarajevo rakennettiin kapeaan jokilaaksoon?',
       'Miksi kaupungissa on itämainen ja wieniläinen puoli?',
@@ -542,6 +673,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   sofia: {
+    saapuminen: [
+      'Kuinka kuumana Sofian lähdevesi nousee maasta?',
+      'Mihin sofialaiset käyttävät sitä lähdevettä nykyään?',
+    ],
     laatta: [
       'Miksi Sofian vaakunassa lukee kasvaa mutta ei vanhene?',
       'Mikä vuori kohoaa aivan Sofian eteläpuolella?',
@@ -559,6 +694,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   bukarest: {
+    saapuminen: [
+      'Kuka oli Manuc, joka rakennutti tuon majatalon?',
+      'Mitä ruokaa Bukarestin vanhoissa majataloissa tarjottiin?',
+    ],
     laatta: [
       'Miksi Bukarestia sanottiin aikoinaan Idän Pariisiksi?',
       'Mistä romanian kieli on peräisin?',
@@ -576,6 +715,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   kiova: {
+    saapuminen: [
+      'Miksi pyhiinvaeltajat menivät juuri luostarin luoliin?',
+      'Miten Kiovan luostaria suojellaan nykyään?',
+    ],
     laatta: [
       'Kuinka vanha kaupunki Kiova on?',
       'Mikä joki Dnepr on?',
@@ -593,6 +736,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   odessa: {
+    saapuminen: [
+      'Kuinka monta askelmaa Odessan portaissa oikeastaan on?',
+      'Miksi Odessan keskusta otettiin maailmanperintölistalle?',
+    ],
     laatta: [
       'Miksi Odessa perustettiin juuri Mustanmeren rannalle?',
       'Kuinka vanha kaupunki Odessa on?',
@@ -610,6 +757,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   moskova: {
+    saapuminen: [
+      'Miten Tsaarinkello ehti haljeta ennen ensimmäistä lyöntiä?',
+      'Milloin pääkaupunki siirtyi Pietarista takaisin Moskovaan?',
+    ],
     laatta: [
       'Miksi Punaisella torilla on noin värikäs kirkko?',
       'Mikä Kreml oikeastaan on?',
@@ -627,6 +778,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   pietari: {
+    saapuminen: [
+      'Miksi Pietarin kesäyö ei pimene kunnolla lainkaan?',
+      'Kuinka monta kertaa Pietarin nimi on vaihtunut?',
+    ],
     laatta: [
       'Miksi Pietari rakennettiin keskelle soista suistoa?',
       'Kuka Pietari Suuri oli?',
@@ -644,6 +799,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   tallinna: {
+    saapuminen: [
+      'Mitä muita lääkkeitä Raeapteekissa myytiin 1800-luvulla?',
+      'Kuinka kauan Raeapteekki on ollut samalla paikalla?',
+    ],
     laatta: [
       'Miksi Tallinnan vanhakaupunki on säilynyt näin ehjänä?',
       'Mikä hansakaupunki oli?',
@@ -661,6 +820,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   riika: {
+    saapuminen: [
+      'Kuinka monta laulajaa ensimmäisillä laulujuhlilla oli?',
+      'Miksi laulujuhlista tuli Baltiassa niin tärkeät?',
+    ],
     laatta: [
       'Miksi Riika perustettiin juuri Väinäjoen suulle?',
       'Miksi Riiassa on niin paljon jugend-taloja?',
@@ -678,6 +841,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   vilna: {
+    saapuminen: [
+      'Mitä auringonpilkut oikeastaan ovat?',
+      'Kuinka vanha Vilnan yliopiston observatorio on?',
+    ],
     laatta: [
       'Miksi Vilna kasvoi kahden joen yhtymäkohtaan?',
       'Kuinka monta kirkkoa Vilnassa on?',
@@ -694,7 +861,18 @@ export const POLLO_VALMISKYSYMYKSET = {
     ],
   },
 
+  bergen: {
+    saapuminen: [
+      'Mihin asti kuivatulla turskalla saattoi täällä maksaa?',
+      'Milloin Bryggen pääsi maailmanperintöluetteloon?',
+    ],
+  },
+
   tukholma: {
+    saapuminen: [
+      'Millaiset Oskar II:n kruunajaiset olivat vuonna 1873?',
+      'Miksi Ruotsi luopui kuninkaan kruunajaisista?',
+    ],
     laatta: [
       'Kuinka monelle saarelle Tukholma on rakennettu?',
       'Mikä Gamla stan on?',
@@ -712,6 +890,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   oslo: {
+    saapuminen: [
+      'Minne Christianian lankut matkasivat myytäviksi?',
+      'Miksi oopperatalon katolle saa kävellä?',
+    ],
     laatta: [
       'Miksi Oslo rakennettiin vuonon perukkaan?',
       'Milloin kaupunki sai takaisin nimen Oslo?',
@@ -729,6 +911,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   kobenhavn: {
+    saapuminen: [
+      'Kuka perusti Tivolin ja millä perusteella?',
+      'Mikä Tivolin laitteista on vanhin yhä käytössä?',
+    ],
     laatta: [
       'Miksi Kööpenhamina rakennettiin salmen rannalle?',
       'Mitä kaupungin nimi tarkoittaa?',
@@ -746,6 +932,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   lappi: {
+    saapuminen: [
+      'Miten puutavaraa uitettiin Kemijokea pitkin alas?',
+      'Miten joulupukki päätyi asumaan juuri Rovaniemelle?',
+    ],
     laatta: [
       'Mikä kaamos on?',
       'Miksi revontulet syttyvät taivaalle?',
@@ -763,6 +953,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   tromssa: {
+    saapuminen: [
+      'Minkä eläimen luu museon pöydällä on voinut olla?',
+      'Miksi maailman pohjoisin yliopisto on juuri Tromssassa?',
+    ],
     laatta: [
       'Missä napapiiri kulkee?',
       'Miksi Tromssassa on lämpimämpää kuin yhtä pohjoisessa?',
@@ -780,6 +974,10 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   islanti: {
+    saapuminen: [
+      'Kuinka kuumaa vettä noista lähteistä nousee?',
+      'Miten koko kaupunki saatiin lämpiämään maan lämmöllä?',
+    ],
     laatta: [
       'Miksi Islannissa on niin paljon tulivuoria?',
       'Mistä sana geysir on saanut alkunsa?',
@@ -1944,7 +2142,7 @@ export const POLLO_VALMISKYSYMYKSET = {
  * uudelleengeneroituun) muuttamatta kutsujaa.
  *
  * @param {string} kaupunkiId laudan kaupunki-id (esim. 'firenze')
- * @param {'laatta'|'lehti'} konteksti missä pelaaja on
+ * @param {'laatta'|'lehti'|'saapuminen'} konteksti missä pelaaja on
  * @returns {string[]} kysymykset, tai tyhjä lista jos niitä ei ole
  */
 export function haeValmiskysymykset(kaupunkiId, konteksti) {
