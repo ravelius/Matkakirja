@@ -909,7 +909,7 @@ export function vaiennaLivianKaupunkipuhe(ui) {
    */
   piilotaLuentakuva(ui);
   // Kesken jäänyt minitraileri ei saa jäädä uuden kaupungin päälle.
-  piilotaSaapumistraileri(ui);
+  piilotaSaapumistraileri(ui, { peru: true });
   /*
    * ETSI AARRE -NAPPI LÄHTEE SAMASSA (omistaja 9.9.2026): nappi kuuluu
    * sen kaupungin kommenttiin, jonka jälkeen se nousi, eikä se saa jäädä
@@ -1351,7 +1351,7 @@ function lataaTyyli() {
 export function suljeFokusvirta(ui) {
   // Minitraileri on kartan päällys eikä kortti, mutta sama sulku vie
   // senkin: fokusvirran sulkeminen on aina paluu karttaan.
-  piilotaSaapumistraileri(ui);
+  piilotaSaapumistraileri(ui, { peru: true });
   ui.fokusvirtaKortti?.remove();
   ui.fokusvirtaKortti = null;
   if (ui.fokusvirtaAsemointi) {

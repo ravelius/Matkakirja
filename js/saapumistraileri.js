@@ -256,7 +256,7 @@ function lataaTrailerinTyyli() {
  *
  * @returns {boolean} oliko traileri ruudulla
  */
-export function piilotaSaapumistraileri(ui) {
+export function piilotaSaapumistraileri(ui, { peru = false } = {}) {
   const tila = ui?.saapumistraileri;
   if (!tila) return false;
   ui.saapumistraileri = null;
@@ -269,10 +269,17 @@ export function piilotaSaapumistraileri(ui) {
    * ohitus ja kaupungin vaihdon siivous — kulkevat tämän saman
    * funktion kautta, joten portti kuuluu tänne eikä kutsupaikkoihin.
    */
+  /*
+   * PERU EROTETAAN LOPUSTA (tekstisession pyyntö 11.9.2026): kaupungin
+   * vaihto, virran sulkeminen tai tuho keskeyttää esityksen, eikä pulun
+   * 3 s:n varapaluu saa ilmestyä uuteen kaupunkiin vanhasta trailerista.
+   * Pelaajan napautusohitus on tavallinen loppu. Sama tunnus kaikissa
+   * vaiheissa; vanhan tunnuksen loppu ei vaikuta uudempaan.
+   */
   if (!tila.loppuIlmoitettu) {
     tila.loppuIlmoitettu = true;
     ilmoitaLivianTilanne('trailer', {
-      vaihe: 'loppu', tunnus: tila.tunnus, kaupunki: tila.kaupunki,
+      vaihe: peru ? 'peru' : 'loppu', tunnus: tila.tunnus, kaupunki: tila.kaupunki,
     });
   }
   // Lupaus ratkeaa aina: kutsuja odottaa sitä ennen luentaa.
