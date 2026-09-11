@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1771, teksti: 'Etelänavalta julisteen painatusteksti pois' },
   { v: 1770, teksti: 'Pulun pullariemu kaikkiin kaupunkilehtiin' },
   { v: 1769, teksti: 'Kartan pieni kuva, äänentasot, valikko, Etsi aarre' },
   { v: 1768, teksti: 'Ihmisen matkan tunnetagit rekisterin mukaisiksi' },

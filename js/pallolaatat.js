@@ -220,6 +220,40 @@ export function lepokerroksenAlue(naytteet, keskiLng, {
   return { lat0, lat1, lon0: keskiLng + lon0, lon1: keskiLng + lon1, naytteita: n };
 }
 
+/*
+ * KARTTA-ALA ON ARKIN KARTTA, EI KOKO ARKKI (vika 11.9.2026, omistaja
+ * sanatarkasti: *"Maapallon ylä- ja alaosan voisi piirtää
+ * oikeanlaiseksi. Siinä näkyy vielä se vanhan kartan teksti."*).
+ *
+ * MITATTU SYY. Pyramidin `rajaus` ulottuu arkin ALAKEHYKSEN yli: sen
+ * alareuna on 66,0° S, mutta kartta loppuu jo 61,47° S:ään ja väliin jää
+ * julisteen alamarginaali — kaksoisviivakehys, kompassiruusu ja rivit
+ * "Painettu Matkakirjan kustantamossa MDCCCLXXIII" / "© Matkakirja".
+ * Poltetut pallolaatat osaavat tämän (tools/tee-pallolaatat.mjs
+ * julisteenLeveysvali vähentää `kehys.ala`:n ja täyttää alapuolen
+ * merellä ja jäällä), mutta lepo- ja laattakerros rajasivat pelkkään
+ * `rajaus`-laatikkoon ja piirsivät marginaalin pallon pinnalle: 900 ×
+ * 900 px:n napanäkymässä kompassiruusu ja painajanrivi näkyivät
+ * Etelämantereen ympärillä (mitattu Chromium-kaappauksella 11.9.2026,
+ * ja SAMA näkymä ilman kerrosta ?laattakerros=0 oli puhdas).
+ *
+ * Pohjoisessa vähennystä ei tehdä: siellä kartta ulottuu rajauksen
+ * yläreunaan (84° N, Huippuvuoret ja Frans Joosefin maa) — sama
+ * päättely kuin polttotyökalussa.
+ *
+ * @param {object} p.pyramidi  pyramidi.json (rajaus/arkki, kehys)
+ * @param {function} p.yLat    arkin y (lautayksikköä) → leveysaste
+ * @param {number} p.naparaja  napakansien leveysaste (NAPAKANNEN_LEVEYS)
+ * @returns {{ latMin: number, latMax: number }}
+ */
+export function pyramidinKarttaAla({ pyramidi, yLat, naparaja = 90 }) {
+  const rajaus = pyramidi?.rajaus ?? pyramidi?.arkki ?? { y: 0, h: 0 };
+  const alakehys = Number(pyramidi?.kehys?.ala) || 0;
+  const latMax = Math.min(naparaja, yLat(rajaus.y));
+  const latMin = Math.max(-naparaja, yLat(rajaus.y + rajaus.h - alakehys));
+  return { latMin, latMax };
+}
+
 /** Laattakatto ruudun laitepikseleistä (ks. LEPOKERROS_KATTOKERROIN). */
 export function lepokerroksenLaattakatto(pikseleita, laatta = 512) {
   const tarve = Math.ceil((LEPOKERROS_KATTOKERROIN * Math.max(0, pikseleita)) / (laatta * laatta));
@@ -1319,9 +1353,7 @@ export function luoLaattakerros({
     for (let j = 0; j < N; j += 1) {
       for (let i = 0; i < N; i += 1) naytteet.push(osuma((W * i) / (N - 1), (H * j) / (N - 1)));
     }
-    const rajaus = pyramidi.rajaus ?? pyramidi.arkki;
-    const latMax = Math.min(naparaja, yLat(rajaus.y));
-    const latMin = Math.max(-naparaja, yLat(rajaus.y + rajaus.h));
+    const { latMin, latMax } = pyramidinKarttaAla({ pyramidi, yLat, naparaja });
     const raaka = lepokerroksenAlue(naytteet, pov.lng, { latMin, latMax, vara: 0 });
     if (!raaka) return luovuta('ei näytteitä pallolla');
     /*
