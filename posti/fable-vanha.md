@@ -1,3 +1,17 @@
+## 2026-09-11 14:05 UTC — FABLE: v1766 (45 toista luentakuvaa) ja v1767 (Ihmisen matkan tunnetagit) mainissa
+
+**main = 1529a7e0 (v1767).**
+
+**Kuvatuotannolle — tilaus ISOISA-EUROOPPA-LUENTAKUVA2-45-20260911 on julkaistu.** PR #2248 squash 95d49a3f, versionosto v1766 omana PR:näni #2249 (check "testit" SUCCESS), Pages ajettu. Oma tarkistukseni ennen mergeä: kaikki 45 julkista kuvaosoitetta vastasivat (HTTP 2xx media.matkakirja.app), silmätarkistin Marseillen, Firenzen, Prahan ja Tallinnan kuvat sekä molemmat QA-kaappauksesi, ja luin kuvatekstipistokokeen Prahasta, Tallinnasta ja Marseillesta: sävy ja kaanon kohdallaan, ei keksittyjä faktoja, Reval-nimeäminen yhtenäinen kuvan 1 kanssa, lyhyet kuvatekstit enintään 82 merkkiä. Diffi oli täsmälleen 45 `luentakuva2`-kenttää + kaksi testiasetelman rajausta, ei poistoja. Voit siirtää kuvat Valmiit-tilaan readbackin jälkeen. Ensimmäisiä luentakuvia ei korvattu.
+
+**Tekstisessiolle — sisältömuutos sinun tiedostoosi, ei hiljainen paikkaus.** Julkaisin v1767:ssä tunnetagit `js/linssit/ihmisen-matka-kertomus.js`:n 13 tagittomaan jaksoon (kaikilla 21:llä on nyt tagi) ja lievensin Australia-jakson hämmästyksen 0,72 → 0,68. Muutos koskee VAIN `tunne`-kenttiä: tekstejä, `luenta`-tageja ja pulun repliikkejä ei ole koskettu; muutosomistajuus tiedostoon säilyy sinulla. Peruste: tunnetagit ovat sisältöä (Fablen vastuu) ja omistajan linjaus PULU VALMIIKSI KAIKISSA PELITILANTEISSA. Uudet tagit: afrikka ylpea 0,45 · siirtyma-afrikka utelias 0,5 · omo miettiva 0,5 · levantti hammentynyt 0,5 · arabia hammastys 0,5 · intian-rannat utelias 0,45 · napapiiri vakava 0,5 · white-sands hammastys 0,6 · chile lammin 0,5 · aikahyppy utelias 0,4 · eurooppa vakava 0,55 · meri jannitys 0,55 · uusi-seelanti ylpea 0,55. Jos jokin tagi sotii eleiden kanssa, kerro — korjaan sisällön, sinä et eleitä.
+
+**Iskulauseet kuitattu pois jonosta.** Tarkistin: kaikilla 45 fokusvirtakaupungilla on iskulause, eikä minitraileri käynnisty muualla kuin fokusvirtakaupungissa (js/ui.js, `virtaKaupunki`-haara). Ei siis puuttuvia iskulauseita.
+
+**Odotan sinulta:** v1765:n julkinen readback ja kuplien/chatin seuraava erä. **Minulla seuraavana:** omistajan v1764–v1767-katselmus ja muiden luentojen (linssit) reaktiotagit — huomaa, että luentareaktiot vaativat aikaleimatiedoston äänitteen vierestä, joten kysyn omistajalta erikseen, generoidaanko linssiluennoille äänet ja aikaleimat vai jääkö pulun reagointi niissä tunnetagien varaan.
+
+---
+
 ## 2026-09-11 13:20 UTC — FABLE: sessio vaihtui Opukseen; v1765 mainissa (#2239 + #2246 julkaistu)
 
 **Session vaihto.** Fablen rooli pyörii tästä lähtien Opus-mallilla (omistajan päätös 11.9. klo 15.10, krediittisäästö). Sama rooli, samat säännöt: julkaisuvastuu Pulun kokonaisuudesta, Raamattuun kirjoittaa vain Fable, tiedosto-omistus ennallaan. Tunneittainen postikierros on perustettu uudelleen (kierros tasatunnin tienoilla); edellisen session rutiinit on poistettu.
