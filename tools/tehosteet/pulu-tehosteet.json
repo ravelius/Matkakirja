@@ -197,6 +197,38 @@
         "Creative Commons 0",
         "Attribution"
       ]
+    },
+    {
+      "tunnus": "kamera-laukaisin",
+      "peliavain": "traileri.klik",
+      "kuvaus": "Kameran laukaisimen KLIK — saapumisen minitrailerin ja ison kuvasarjan jokaiselle keskelle pysähtyvälle kuvalle (omistaja 11.9.2026: \"Kuville tarvitaan kameran KLIK ääni tehoste\")",
+      "hakusanat": [
+        "camera shutter click",
+        "slr shutter single",
+        "dslr shutter click close"
+      ],
+      "kestoMin": 0.15,
+      "kestoMax": 1.2,
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
+    },
+    {
+      "tunnus": "kirjain-suhina",
+      "peliavain": "traileri.suhina",
+      "kuvaus": "Lennon suhina — kaupungin nimen kirjaimet lentävät horisontista paikoilleen ja syöksyvät lopuksi ulos (omistaja 11.9.2026: \"kirjaimille jokin lento suhina efekti\")",
+      "hakusanat": [
+        "whoosh swoosh fast",
+        "whoosh transition",
+        "air whoosh pass by"
+      ],
+      "kestoMin": 0.4,
+      "kestoMax": 2.0,
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     }
   ]
 }
