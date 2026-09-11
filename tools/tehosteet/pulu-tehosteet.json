@@ -235,12 +235,12 @@
       "peliavain": "pulu.pulla-riemu",
       "kuvaus": "Riemukas lyhyt hihkaisu: Livia saa pullan (bunFeast 460 ms)",
       "hakusanat": [
-        "happy chirp squeak short",
-        "cheerful bird chirp excited",
-        "cute squeak happy short"
+        "bird chirp happy excited",
+        "small bird tweet cheerful",
+        "bird chirp single short"
       ],
       "kestoMin": 0.15,
-      "kestoMax": 1.2,
+      "kestoMax": 1.5,
       "lisenssit": [
         "Creative Commons 0",
         "Attribution"
@@ -251,12 +251,12 @@
       "peliavain": "pulu.pulla-puraisu",
       "kuvaus": "Pehmeä puraisu ja murujen rapina — kolme kertaa pullansyönnissä",
       "hakusanat": [
-        "soft bite bread crumb",
-        "eating bite crunch soft small",
-        "nibble crumbs rustle"
+        "bite crunch",
+        "chewing bite food",
+        "eating crunch mouth"
       ],
       "kestoMin": 0.15,
-      "kestoMax": 1.2,
+      "kestoMax": 2.0,
       "lisenssit": [
         "Creative Commons 0",
         "Attribution"
