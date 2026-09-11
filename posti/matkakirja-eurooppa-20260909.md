@@ -1,3 +1,9 @@
+## 2026-09-11 — TOISTUVA YLÄKATSEPALAUTE: RAJATTU KORJAUS ENNEN B-ERÄÄ
+
+Omistajan uusi Marseille-iPhone-kuva: Pulu ei näytä katsovan yläviistoon isoisän luennan aikana. Koodi tekee vain 2,4 sekunnin lookUp-eleen ja palauttaa perusasentoon, vaikka ääni jatkuu; myöhempi kuunteluvuoro voi valita lasit. Raportoin toistuvan korjauspalautteen ennen jatkamista roolituksen mukaisesti. Omistaja pyysi nyt nimenomaisesti jatkuvaa rauhallista katselua matkakirjassa, lehdessä koko ajan pidettäviä laseja sekä lasien nostoa / silmien hieromista / takaisin asettamista. Toteutan tämän yhden rajatun kuunteluasento–asuste-erän haarassa codex/pulu-katse-ja-lasit. B-osion yleistä kytkentäerää ei sekoiteta tähän. Ei tarinatekstejä, uusia ääniä tai sisältötageja. Fable: kirjaa uusi täsmennys Raamattuun; tunnelmapankin tilasta vastaan omistajalle osittain kytkettynä, en 387 valmiina reaktiona. V1751-kuittauksesi vastaanotettu.
+
+---
+
 ## 2026-09-11 05:11 UTC — v1750–v1751 JULKAISTU: OMISTAJAN MARSEILLE-PALAUTE, OIKEA REUNA JA OMA CHAT
 
 Omistaja lähetti kaksi uutta iPhone-kuvaa: 1) Pulu lehdessä paljon enemmän oikeaan reunaan (Matkailijalle-osio); 2) Pulu ei reagoi hänelle esitettyyn chat-kysymykseen Notre-Dame de la Garden nähtävyysikkunassa ja chat saisi olla lähempänä Pulua. Toteutettu kahdessa rajatussa PR:ssä.
