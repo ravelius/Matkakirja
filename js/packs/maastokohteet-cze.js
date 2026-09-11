@@ -394,4 +394,181 @@ export const MAASTOKOHTEET_CZE = [
     lahde: 'en-Wikipedia "Děčín", johdanto-osa sekä osiot "Etymology" ja '
       + '"Geography" (tarkistettu 2.9.2026).',
   },
+  /* ================================================================
+   * NOSTOERÄ 11.9.2026 — KUUSI KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Suomesta puuttuu lisäksi myös nostoja …
+   * Agentit voisivat tarkastaa myös muut Euroopan maat että kaikissa
+   * tarpeeksi nostoja."* Päätoimittajan tavoite on 20 pääkartan nostoa
+   * per Euroopan maa; Tšekki oli neljässätoista.
+   *
+   * TŠEKISSÄ ON YKSI PELIKAUPUNKI (Praha). Lähin uusi merkki on Tábor
+   * 31 lautayksikön päässä siitä, joten yksikään näistä ei jää
+   * kaupunkikaton alle (js/fokuskohteet.js) — kaikki kuusi ovat
+   * pääkartan merkkejä. Prahan omat nähtävyydet jätettiin siksi pois:
+   * ne kuuluvat kaupunkilehden kohdekartalle.
+   *
+   * KUVATON ERÄ. Faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'tabor',
+    nimi: 'Tábor',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mistä kaupunki sai nimensä?',
+      'Mikä Jordán on?',
+    ],
+    korostukset: ['taboriitti|taboriiteiksi'],
+    nappi: 'Hussilaisten oma kaupunki',
+    // 14.6578 E / 49.4144 N — en-Wikipedia "Tábor"
+    laudat: {
+      maailmankartta: { x: 6321.9, y: 1415.6 },
+    },
+    teksti: 'Tábor on Etelä-Böömissä Lužnice-joen varrella, noin seitsemänkymmentä kilometriä '
+      + 'Prahasta etelään. Sen perustivat keväällä 1420 hussilaisliikkeen jyrkimmät kannattajat '
+      + '— luultavasti Petr Hromádka Jistebnicestä ja hänen toverinsa — ja he nimesivät '
+      + 'paikkansa Raamatun Taborinvuoren mukaan. Alkuperäinen nimi oli Hradiště hory Tábor. '
+      + 'Kaupunki antoi nimen myös liikkeelle itselleen: hussilaisten radikaalia siipeä alettiin '
+      + 'kutsua taboriiteiksi. Vanhakaupunki nousi joen yläpuoliselle kukkulalle, koska sitä oli '
+      + 'helppo puolustaa, ja linnoitetusta asutuksesta tuli tukikohta, josta hussilaiset '
+      + 'lähtivät voittoisille retkilleen. Tšekin sana tábor, leiri, on lainattu kaupungin '
+      + 'nimestä eikä toisin päin. Keskellä kaupunkia on Jordánin tekojärvi, joka padottiin '
+      + 'vuonna 1492 ja nimettiin Jordan-joen mukaan; se on Keski-Euroopan vanhin tekoallas.',
+    lahde: 'en-Wikipedia "Tábor", johdanto-osa sekä osiot "Etymology", "Geography" ja '
+      + '"History" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'olomouc',
+    nimi: 'Olomoucin Kolminaisuus',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Miksi patsas pystytettiin?',
+      'Mitä sen tekijöille tapahtui?',
+    ],
+    korostukset: ['elohopea|elohopeayhdisteitä'],
+    nappi: 'Patsas, joka vei tekijänsä',
+    // 17.2508 E / 49.5939 N — en-Wikipedia "Holy Trinity Column, Olomouc"
+    laudat: {
+      maailmankartta: { x: 6408.4, y: 1407.8 },
+    },
+    teksti: 'Olomoucin Pyhän Kolminaisuuden pylväs rakennettiin vuosina 1716–1754. Se on '
+      + 'kiitos ruttoepidemian päättymisestä — tauti vaivasi Määriä vuosina 1713–1715 — ja '
+      + 'samalla kaupungin ylpeyden osoitus: jokainen taiteilija ja mestari oli Olomoucin '
+      + 'asukas, ja lähes kaikki kuvatut pyhimykset liittyvät kaupunkiin jollain tavalla. Se on '
+      + 'Tšekin suurin barokin veistosryhmä ja pääsi maailmanperintöluetteloon vuonna 2000. '
+      + 'Työmaa oli tekijöilleen kova. Ensimmäisenä kuoli Wenzel Render, joka oli keksinyt koko '
+      + 'ajatuksen, suunnitellut pylvään, rakentanut sen ensimmäisen vaiheen ja osallistunut '
+      + 'sen rahoittamiseen; eivätkä hänen seuraajansa Franz Thoneck, Johann Wenzel Rokický ja '
+      + 'Augustin Scholtz eläneet näkemään työn valmiina. Veistokset aloitti Phillip Sattler, ja '
+      + 'hänen kuoltuaan Andreas Zahner teki seitsemässä vuodessa 18 veistosta ja 9 reliefiä '
+      + 'ennen kuin kuoli itsekin. Kultaseppä Simon Forstner sai työnsä valmiiksi mutta menetti '
+      + 'terveytensä käyttäessään kullauksessa myrkyllisiä elohopeayhdisteitä. Vihkiäisissä '
+      + 'vuonna 1754 olivat läsnä keisarinna Maria Teresia ja hänen puolisonsa Frans I.',
+    lahde: 'en-Wikipedia "Holy Trinity Column, Olomouc", johdanto-osa ja osio "History" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'jachymov',
+    nimi: 'Jáchymov',
+    tyyppi: 'kauppa',
+    kysymykset: [
+      'Miten dollari sai nimensä?',
+      'Mitä muuta laaksosta on kaivettu?',
+    ],
+    korostukset: ['tolari|tolari'],
+    nappi: 'Laakso, joka antoi dollarille nimen',
+    // 12.9294 E / 50.3736 N — en-Wikipedia "Jáchymov"
+    laudat: {
+      maailmankartta: { x: 6264.3, y: 1373.9 },
+    },
+    teksti: 'Malmivuorten laaksossa löydettiin hopeaa vuonna 1512, ja Steffan Schlick perusti '
+      + 'sinne 1516 kaivoskylän nimeltä Joachimsthal, Pyhän Joakimin laakso. Väkeä tuli niin '
+      + 'paljon, että vuonna 1534 se oli Böömin kuningaskunnan toiseksi suurin kaupunki, ja '
+      + 'Schlickin suvusta tuli yksi maan rikkaimmista — kunnes Ferdinand I otti '
+      + 'kaivosoikeuden itselleen 1528. Vuodesta 1520 Schlickit löivät laaksossa suuria '
+      + 'hopearahoja, joita kutsuttiin nimellä joachimsthaler. Nimi lyheni saksassa muotoon '
+      + 'Thaler ja tšekissä muotoon tolari, ja hollannin daalderin ja dalerin kautta siitä tuli '
+      + 'lopulta sana dollari. Kaivostyö ei loppunut hopeaan: Jáchymov oli maailman '
+      + 'ensimmäinen ja pitkään ainoa paikka, josta louhittiin radiumia, ja vuonna 1525 avattu '
+      + 'Svornostin kaivos on Euroopan vanhin yhä käytössä oleva kaivos. Alue kuuluu '
+      + 'maailmanperintöluetteloon osana Malmivuorten kaivosaluetta.',
+    lahde: 'en-Wikipedia "Jáchymov", johdanto-osa ja osio "History" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'moravskykras',
+    nimi: 'Moravský kras',
+    tyyppi: 'muu',
+    kysymykset: [
+      'Miten Macochan kuilu syntyi?',
+      'Mihin Punkva-joki katoaa?',
+    ],
+    korostukset: ['Macocha|Macochan'],
+    nappi: 'Tuhat luolaa ja 138 metrin kuilu',
+    // 16.7283 E / 49.3719 N — en-Wikipedia "Moravian Karst"
+    laudat: {
+      maailmankartta: { x: 6390.9, y: 1417.4 },
+    },
+    teksti: 'Brnon pohjoispuolella on karstimaisema, jonka alla on noin 1 100 luolaa ja '
+      + 'rotkoa noin 92 neliökilometrin alueella. Tunnetuin kohta ei ole luola vaan reikä: '
+      + 'Macochan kuilu on 138 metriä syvä ja syntyi, kun luolasalin katto romahti. Kuilun '
+      + 'pohjalla Punkva-joki painuu maan alle ja jatkaa matkaansa Punkvan luolaston läpi; '
+      + 'pinnalla siitä näkyy vain kaksi pientä lampea. Luolastoja on avattu yleisölle viisi, '
+      + 'ja niistä Punkvan luolat löysi Karel Absolon. Muut ovat Balcarka, Kateřinská, '
+      + 'Výpustek sekä Sloupsko-šošůvské ja siihen liittyvä Kůlna. Osaa luolista ei ole avattu '
+      + 'matkailijoille lainkaan vaan ainoastaan tutkimuskäyttöön.',
+    lahde: 'en-Wikipedia "Moravian Karst", johdanto-osa (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'boubin',
+    nimi: 'Boubín',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Milloin metsä rauhoitettiin?',
+      'Kuinka korkea vuori on?',
+    ],
+    korostukset: ['aarniometsä|aarniometsä'],
+    nappi: 'Aarniometsä, joka rauhoitettiin 1858',
+    // 13.8161 E / 48.9781 N — en-Wikipedia "Boubín"
+    laudat: {
+      maailmankartta: { x: 6293.9, y: 1434.4 },
+    },
+    teksti: 'Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli '
+      + 'kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, '
+      + 'Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis '
+      + 'viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää '
+      + 'pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan '
+      + 'vanhimmista suojelualueista.',
+    lahde: 'en-Wikipedia "Boubín", johdanto-osa (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'lednice',
+    nimi: 'Lednice ja Valtice',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kuka suunnitteli koko maiseman?',
+      'Mikä yhdistää linnoja toisiinsa?',
+    ],
+    korostukset: ['maisemapuisto|maisemapuiston'],
+    nappi: 'Yhden suvun suunnittelema maisema',
+    // 16.8022 E / 48.8017 N — Lednicen ja Valticen välinen alue
+    // Etelä-Määrissä; en-Wikipedia "Lednice–Valtice Cultural Landscape"
+    laudat: {
+      maailmankartta: { x: 6393.4, y: 1442.0 },
+    },
+    teksti: 'Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili '
+      + 'tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta '
+      + '1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja '
+      + '1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna '
+      + 'laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin '
+      + 'hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; '
+      + 'Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni '
+      + 'palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän '
+      + 'uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella '
+      + 'puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: '
+      + 'Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin '
+      + 'sopimus vuonna 1919 siirsi Valticen Tšekkoslovakialle. Alue liitettiin '
+      + 'maailmanperintöluetteloon 1996.',
+    lahde: 'en-Wikipedia "Lednice–Valtice Cultural Landscape", johdanto-osa ja osio '
+      + '"17th–19th centuries" (tarkistettu 11.9.2026).',
+  },
 ];

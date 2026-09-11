@@ -442,4 +442,134 @@ export const MAASTOKOHTEET_CHE = [
     lahde: 'en-Wikipedia "Gruyères", johdanto-osa ja osio "Geography" '
       + '(tarkistettu 2.9.2026).',
   },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — KOLME KOHDETTA LISÄÄ. Omistaja 11.9.2026:
+   * *"Agentit voisivat tarkastaa myös muut Euroopan maat että
+   * kaikissa tarpeeksi nostoja."* Tavoite on vähintään 20 pääkartan
+   * nostoa per Euroopan maa; Sveitsi oli 17:ssä.
+   *
+   * Kaikki kolme ovat kaukana Alppien laatasta (lähinkin Reininputous
+   * 43 lautayksikköä), joten ne ovat pääkartan merkkejä. Kuvaton erä;
+   * faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'rutli',
+    nimi: 'Rütlin niitty',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miksi niitystä tuli kansallinen symboli vasta 1700-luvulla?',
+      'Mitä Rütlillä tapahtui heinäkuussa 1940?',
+    ],
+    korostukset: ['Rütlischwur|Rütlischwurin'],
+    nappi: 'Niitty, jolla valan kerrotaan vannotun',
+    // 8.5936 E / 46.9689 N — Seelisberg, Uri; en-Wikipedia "Rütli"
+    laudat: {
+      maailmankartta: { x: 6119.8, y: 1519.8 },
+    },
+    teksti: 'Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin '
+      + 'kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä '
+      + 'historiankirjoituksessa se on Rütlischwurin paikka: valan, joka '
+      + 'merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään '
+      + 'kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä '
+      + 'tai jalan Seelisbergistä.\n\n'
+      + 'Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan '
+      + 'myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, '
+      + 'mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä '
+      + 'tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna '
+      + '1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi '
+      + 'Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät '
+      + 'isänmaallisen Rütlilied-laulun.\n\n'
+      + 'Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische '
+      + 'Gemeinnützige Gesellschaft, koska paikalle aiottiin rakentaa hotelli. '
+      + 'Seura luovutti maan valaliitolle ehdolla, ettei sitä saa myydä ja että '
+      + 'hoito jää seuralle.\n\n'
+      + 'Heinäkuun 25. päivänä 1940 kenraali Henri Guisan kutsui Sveitsin '
+      + 'armeijan komentajat Rütlille ja piti puheen, joka tunnetaan nimellä '
+      + 'Rütlirapport. Siinä hän esitteli Reduit-strategian ja sanoi, ettei '
+      + 'Sveitsi antautuisi hyökkääjälle. Vuodesta 1860 seura on järjestänyt '
+      + 'niityllä juhlan elokuun ensimmäisenä päivänä, joka on vuodesta 1994 '
+      + 'ollut virallinen vapaapäivä.',
+    lahde: 'en-Wikipedia "Rütli", johdanto-osa ja osio "History" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'landwasserin-viadukti',
+    nimi: 'Landwasserin viadukti',
+    nimio: 'Landwasser',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Miksi kaarre on niin jyrkkä?',
+      'Mihin junat katoavat heti sillan jälkeen?',
+    ],
+    korostukset: ['kaari|kaarta'],
+    nappi: 'Kaartuva silta, joka päättyy kallion sisään',
+    // 9.6753 E / 46.68 N — Schmitten–Filisur, Graubünden;
+    // en-Wikipedia "Landwasser Viaduct"
+    laudat: {
+      maailmankartta: { x: 6155.8, y: 1532.0 },
+    },
+    teksti: 'Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta '
+      + 'Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin '
+      + 'kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder '
+      + 'rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja '
+      + 'liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan '
+      + 'Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta '
+      + 'noin 140.\n\n'
+      + 'Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — '
+      + 'pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä '
+      + 'metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään '
+      + 'kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta '
+      + 'on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella '
+      + 'kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.\n\n'
+      + 'Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, '
+      + '63 kilometrin päässä Thusisista. Tiefencastelin ja Alvaneun suunnasta '
+      + 'tuleva matkustaja näkee sen jo kaukaa. Ensin ylitetään Schmittentobelin '
+      + 'viadukti, ja kun juna kaartaa Landwasserin sillalle, matkustaja näkee '
+      + 'oman junansa keulan katoavan suoraan kallioon: sillan kaakkoinen '
+      + 'maatuki liittyy Landwasserin tunneliin.\n\n'
+      + 'Vuonna 2009 viadukti kunnostettiin ensimmäistä kertaa rakentamisensa '
+      + 'jälkeen.',
+    lahde: 'en-Wikipedia "Landwasser Viaduct", johdanto-osa sekä osiot '
+      + '"Location" ja "Technical details" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'reininputous',
+    nimi: 'Reininputous',
+    nimio: 'Rheinfall',
+    tyyppi: 'muu',
+    kysymykset: [
+      'Kuinka paljon virtaama vaihtelee vuoden mittaan?',
+      'Miksi putouksen keskellä oleva kallio ei kulu?',
+    ],
+    korostukset: ['kalkkikivi|kalkkikiven'],
+    nappi: 'Euroopan voimakkain vesiputous',
+    // 8.6153 E / 47.6778 N — Neuhausen am Rheinfall;
+    // en-Wikipedia "Rhine Falls"
+    laudat: {
+      maailmankartta: { x: 6120.5, y: 1489.9 },
+    },
+    teksti: 'Reininputous on Ylä-Reinin vesiputous Sveitsissä ja Euroopan '
+      + 'voimakkain. Se on Schaffhausenin ja Zürichin kantonien rajalla '
+      + 'Neuhausen am Rheinfallin ja Laufen-Uhwiesenin välissä, noin kolme '
+      + 'kilometriä Schaffhausenin kaupungista etelään ja aivan Saksan rajan '
+      + 'tuntumassa.\n\n'
+      + 'Putous on 150 metriä leveä ja 23 metriä korkea. Talvikuukausina '
+      + 'keskimääräinen virtaama on 250 kuutiometriä sekunnissa ja kesällä 600. '
+      + 'Suurin koskaan mitattu oli 1 250 kuutiometriä sekunnissa vuonna 1965 '
+      + 'ja pienin 95 kuutiometriä vuonna 1921. Sveitsin korkein putous ei ole '
+      + 'tämä vaan Mürrenbachin putous, 417 metriä.\n\n'
+      + 'Putous syntyi viime jääkaudella noin 14 000–17 000 vuotta sitten, kun '
+      + 'kulutusta kestävät kivilajit kavensivat uomaa. Joen reitti on vaihtunut '
+      + 'monta kertaa: vielä noin 132 000 vuotta sitten Rein virtasi '
+      + 'Schaffhausenista länteen Klettgaun laaksoon, ja vanha uoma täyttyi '
+      + 'soralla. Würm-jäätiköitymisen aikana joki työntyi etelään nykyiselle '
+      + 'reitilleen kovan myöhäisjuran kalkkikiven päälle, ja kun vesi kulutti '
+      + 'vuoroin kalkkikiveä ja vanhaa pehmeää soraa, putous syntyi.\n\n'
+      + 'Keskellä putousta kohoava kallio Rheinfallfelsen on jäänne '
+      + 'alkuperäisestä kalkkikivijyrkänteestä. Se on kulunut hyvin vähän, '
+      + 'koska Bodenjärvestä tulee Reiniin vain niukasti kiintoainesta. Kallion '
+      + 'kivi on noin 150 miljoonaa vuotta vanhaa.',
+    lahde: 'en-Wikipedia "Rhine Falls", johdanto-osa ja osio "Geology" '
+      + '(tarkistettu 11.9.2026).',
+  },
 ];

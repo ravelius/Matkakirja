@@ -967,15 +967,47 @@ viuhahdusefektejä yms. **Näitä ei generoida.**"*
 Viimeinen lause erottaa tämän kaikesta muusta tällä sivulla: nämä
 **haetaan valmiina äänitteinä Freesoundista**, eivät ElevenLabsilta.
 
-### Lähde ja lisenssit
+### Lähteet ja lisenssit (monilähteinen 11.9.2026 alkaen)
+
+Omistajan päätös 11.9.2026, sanatarkasti: *"Lisää ilmaisia lähteitä
+rinnalle."* Freesoundin rinnalla haetaan samaan putkeen kaksi muuta
+ilmaista lähdettä. Syy on laatu: kone valitsee luvuista eikä korvalla,
+ja yhden lähteen paras mitattu osuma voi silti olla väärä ääni
+(riemuääneksi tuli ensin *"Cute Computer Squeak"* ja sitten *"Upset
+Bird Chirp"*).
+
+| lähde | avain | mitä sieltä saa | miten |
+|---|---|---|---|
+| **Freesound** | kyllä (`FREESOUND_API`) | laaja kirjasto, arvosanat ja latausmäärät | rajapintahaku, lisenssirajaus palvelimen puolella |
+| **Wikimedia Commons** | **ei** | nauhoitettuja maisemia ja yksittäisiä ääniä, PD/CC0/CC BY | MediaWiki Action API, OR-muotoinen kysely + `filetype:audio` |
+| **Kenney** (kenney.nl) | **ei** | käsin tehdyt CC0-pelipaketit: UI, iskut, ovet, kirjat, sarjakuva | pakettisivulta zipin osoite, zip kerran muistiin, sisältö hakemistosta |
+
+Lisenssirajaus on yhdessä paikassa (`tools/aanilahteet.mjs`) ja se
+ajetaan **jokaiselle** lähteelle heti haun jälkeen — Freesoundilla
+lisäksi palvelimen puolella, kuten ennenkin.
+
+Commonsista karsitaan lisäksi **ääntämisnäytteet** (Wikisanakirja ja
+Lingua Libre: `Nl-boing.ogg`, `LL-Q1860 (eng)-…`). Ne ovat ihmisiä
+sanomassa yhden sanan mikrofoniin, ja juuri siksi ne osuvat hakusanaan
+täydellisesti — kuivassa ajossa 11.9.2026 hollantilainen ääntämässä
+sanan *boing* voitti sarjakuvavieterin.
 
 | asia | ratkaisu |
 |---|---|
-| lähde | Freesound, esikatselu-mp3 (`preview-hq-mp3`) |
-| lisenssit | **vain CC0 ja CC BY** — rajaus palvelimen puolella `license:("Creative Commons 0" OR "Attribution")`, ei jälkikäteen |
-| attribuutio | CC BY vaatii nimeämisen; tekijä, lisenssi, Freesoundin id ja sivu kirjataan manifestiin ja tulostetaan ajon lopuksi |
-| ei kelpaa | CC BY-NC ja Sampling+ — ne eivät koskaan päädy hakuun asti |
+| kelpaa | **CC0, public domain ja CC BY** |
+| ei kelpaa | CC BY-NC, CC BY-ND, Sampling+, **ja CC BY-SA** — share-alike tarttuu johdannaiseen, ja ajo leikkaa ja normalisoi äänen eli tekee siitä johdannaisen |
+| tuntematon lisenssi | ei kelpaa: lähde voi lisätä uuden lisenssin milloin tahansa |
+| attribuutio | CC BY vaatii nimeämisen; **lähde**, tekijä, lisenssi, id ja sivu kirjataan manifestiin ja tulostetaan ajon lopuksi |
 | taso ja muoto | −14 LUFS, mp3, mono, 128 kbps, 44,1 kHz; hiljaisuus leikattu päistä, 20 ms häivytykset |
+
+**Miksi juuri nämä kolme.** Pixabay ja Mixkit selvitettiin ja jäivät
+pois: Pixabaylla **ei ole äänirajapintaa** (API tuntee vain kuvat ja
+videot) ja sen käyttöehdot kieltävät ohjelmallisen keruun; Mixkitin
+ehdot kieltävät sekä koneellisen latauksen että sen jakelun, mitä tämä
+putki tekee tuloksellaan (ääni ämpärissä julkisen osoitteen takana).
+Perustelut lähde-URLeineen ovat `tools/aanilahteet.mjs`:n
+otsikkokommentissa, ja `tests/aanilahteet.test.mjs` kaatuu, jos
+kumpikaan nimi ilmestyy lähderekisteriin.
 
 Taso on tarkoituksella paljon kovempi kuin generoitujen tehosteiden
 −30 LUFS: nämä ovat lyhyitä iskuja eivätkä taustaa. Lopullisen
@@ -992,6 +1024,8 @@ tuoda ne tuomatta samalla API-avainta lukevaa hakutyökalua.
 ```
 # koko lista: hae, normalisoi, vie ämpäriin ja kirjoita manifesti
 node tools/hae-freesound.mjs --pulu
+# vain yhdestä lähteestä (esim. kun Freesoundin osuma oli huono)
+node tools/hae-freesound.mjs --pulu --kuiva --lahteet commons,kenney
 # vain yksi tunnus uusiksi (huono osuma vaihtoon) — manifesti täydentyy
 node tools/hae-freesound.mjs --pulu --tunnus siivet-lento
 # pelkkä haku ja valinta, ei latausta eikä vientiä
@@ -1007,17 +1041,42 @@ liittää keskusteluun. Salaisuudet: `FREESOUND_API` (tai jokin
 vaihtoehtoinen kirjoitusasu) **ja** neljä R2-salaisuutta
 `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`,
 `R2_BUCKET` — samat kuin muillakin ääniajoilla. Ajo tarkistaa ne nimeltä
-ennen kuin mitään haetaan. Uusia salaisuuksia ei tarvita.
+ennen kuin mitään haetaan. **Uusia salaisuuksia ei tarvita**: Commons ja
+Kenney toimivat ilman avainta (Commons vaatii vain tunnistautuvan
+User-Agentin, joka on työkalussa). Jos Freesoundin avain puuttuu, ajo ei
+enää kaadu vaan hakee kahdesta muusta ja sanoo sen lokissa.
+
+Lähteitä voi rajata: työnkulun syöte `lahteet` (esim. `commons` tai
+`freesound,kenney`) tai komentorivillä `--lahteet`. Lista voi kertoa
+oman rajauksensa: äänimaisemat ajavat vain Freesoundin ja Commonsin,
+koska Kenneyssä ei ole minuutin mittaisia maisemia.
 
 Kone valitsee jokaiselle tunnukselle **yhden** osuman kolmesta
-mitattavasta luvusta: arvosana (paino 3; alle kolme arviota on kohinaa,
-jolloin käytetään neutraalia 3/5), lataukset (paino 2, logaritmisesti)
-ja kesto (paino 1, haarukan keskikohta parhaana). **Kuuntele tulos ajon
-jälkeen** — kone ei kuuntele, ja huonon osuman vaihtaa `--tunnus`-ajolla.
+mitattavasta luvusta ja yhdestä kertoimesta:
+
+- **arvosana** (paino 3; alle kolme arviota on kohinaa, jolloin
+  neutraali 3/5 — sama koskee lähteitä, joissa arvioita ei ole),
+- **suosio** (paino 2, logaritmisesti) **lähteen omalla asteikolla**:
+  Freesoundissa 10 000 latausta on täydet pisteet, Commonsissa 20
+  käyttöä wikeissä. Ilman lähdekohtaista asteikkoa Freesound voittaisi
+  jokaisen vertailun pelkällä mittakaavallaan.
+- **kesto** (paino 1, haarukan keskikohta parhaana),
+- **osuvuus kertoimena** (0,3 + 0,7 × osuvuus): puhuuko osuman nimi
+  samasta asiasta kuin hakusana. Tämä on 11.9.2026 lisätty ja se on
+  koko muutoksen tärkein osa — *"Cute Computer Squeak"* sai täydet
+  pisteet arvosanasta, latauksista ja kestosta, eikä yhtään
+  osuvuudesta. Kerroin sanoo sen, mikä on totta: suosio ratkaisee
+  osuvien äänten kesken eikä niiden ohi.
+
+Ajon loki kertoo osumamäärät lähteittäin ja kaksi seuraavaksi parasta
+ehdokasta. **Kuuntele tulos ajon jälkeen** — kone ei kuuntele, ja
+huonon osuman vaihtaa `--tunnus`-ajolla (tai rajaamalla lähteen
+`--lahteet`-valitsimella).
 
 Ämpäriin syntyy `aanet/tehosteet/pulu/<tunnus>.mp3` ja
-`aanet/tehosteet/pulu/manifesti.json` (tunnus, tiedosto, Freesoundin
-id, nimi, tekijä, lisenssi, attribuutioteksti, sivu, kesto, pisteet).
+`aanet/tehosteet/pulu/manifesti.json` (tunnus, tiedosto, **lähde**,
+lähteen id, nimi, tekijä, lisenssi, attribuutioteksti, sivu, kesto,
+pisteet; Freesound-riveillä myös entinen `freesoundId`).
 Repoon ei jää mitään: työkalu kirjoittaa `media/tehosteet-pulu/`-kansioon,
 joka on `.gitignoressa`, ja se tarkistetaan koneellisesti.
 

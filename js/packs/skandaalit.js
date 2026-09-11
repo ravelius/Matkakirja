@@ -3358,6 +3358,62 @@ export const SKANDAALIT = {
         oikea: 0,
       },
     },
+    /*
+     * NOSTOERÄ 11.9.2026: Islannilla oli kaksi skandaalia, kiintiö on
+     * 2–3, ja maa tarvitsi lisää pääkartan merkkejä (omistaja
+     * 11.9.2026: kaikkiin Euroopan maihin tarpeeksi nostoja). Paikka
+     * Æðeyn ja Sandeyrin kohdalla Ísafjarðardjúpissa on 110
+     * lautayksikön päässä laudan Islanti-kaupungista.
+     * Lähde: en.wikipedia.org: Slaying of the Basques
+     */
+    {
+      id: 'baskivainot-1615',
+      otsikko: 'Ísafjarðardjúp 1615 — käräjät, jotka tuomitsivat haaksirikkoiset',
+      nimio: 'Baskivainot 1615',
+      vuosi: '1615',
+      paikka: 'Æðey ja Sandeyri, Ísafjarðardjúp',
+      lat: 66.1, lon: -22.66,
+      kortti: 'Kolmekymmentäkaksi haaksirikkoista valaanpyytäjää tapettiin kahdessa '
+        + 'erässä kolmen viikon aikana — ja välissä pidettiin käräjät, jotka '
+        + 'julistivat heidät lainsuojattomiksi. Kyse ei ollut sodasta vaan '
+        + 'kuivatusta kalasta. Tämä on viimeinen dokumentoitu joukkosurma Islannin '
+        + 'historiassa.',
+      teksti: 'Baskilaiset olivat rakentaneet 1500-luvun alkupuoliskolla maailman '
+        + 'ensimmäisen suuren valaanpyyntiteollisuuden Newfoundlandiin, ja 1600-luvun '
+        + 'alkuun mennessä pyynti oli yltänyt Islantiin. Vuosi 1615 oli saarella '
+        + 'vaikea: jäät pysyivät rannoissa pitkälle kesään ja karjaa kuoli paljon. '
+        + 'Keskikesällä Reykjarfjörðuriin Länsivuonoilla saapui kolme baskilaista '
+        + 'pyyntialusta, ja aluksi molemmat osapuolet hyötyivät sopimuksestaan.'
+        + '\n\nSyyskuun lopulla, kun laivat olivat lähdössä kotiin, myrsky ajoi ne '
+        + 'kallioille ja murskasi ne. Noin kahdeksankymmentä miestä selvisi maihin. '
+        + 'Kapteenit Pedro de Aguirre ja Esteban de Telleria talvehtivat Vatneyrissä '
+        + 'Patreksfjörðurissa ja pääsivät kotiin seuraavana vuonna. Martín de '
+        + 'Villafrancan miehistö jakautui kahtia: toinen puoli lähti '
+        + 'Ísafjarðardjúpiin, toinen Bolungarvíkiin ja sieltä Þingeyriin.'
+        + '\n\nRiita alkoi pikkuvarkaudesta. Þingeyrissä joukko meni tyhjään '
+        + 'kauppiaantaloon ja otti kuivattua kalaa. Kostoksi islantilaiset '
+        + 'hyökkäsivät 5. lokakuuta yöllä majaan, jossa baskit nukkuivat, ja '
+        + 'tappoivat neljätoista; vain nuori García pääsi pakoon. Ruumiit '
+        + 'silvottiin ja upotettiin mereen. Oppinut Jón Guðmundsson kirjoitti, että '
+        + 'heidät oli häväisty ja upotettu kuin pahimmat pakanat eikä kuin '
+        + 'viattomat kristityt.'
+        + '\n\nKolme päivää myöhemmin Ari Magnússon kutsui käräjät koolle Súðavíkiin, '
+        + 'ja kaksitoista tuomaria julisti kaikki baskit lainsuojattomiksi. '
+        + 'Lokakuun 13. päivänä Ari Magnússonin joukot tappoivat vielä kahdeksantoista '
+        + 'kalastamassa ollutta miestä Æðeyssä ja Sandeyrissä. Tuomio siis kirjoitettiin '
+        + 'ensin ja tapettiin sitten.',
+      lahde: 'en-Wikipedia "Slaying of the Basques", johdanto-osa sekä osiot '
+        + '"Background" ja "Massacre". Tarkistettu 11.9.2026.',
+      visa: {
+        kysymys: 'Mikä laukaisi ensimmäisen verityön Þingeyrissä?',
+        vaihtoehdot: [
+          'Baskit kieltäytyivät maksamaan satamamaksua',
+          'Baskit yrittivät ryöstää kirkon hopeat',
+          'Baskit ottivat kuivattua kalaa tyhjästä kauppiaantalosta',
+        ],
+        oikea: 2,
+      },
+    },
   ],
   ITA: [
     /*

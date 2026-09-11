@@ -415,4 +415,220 @@ export const MAASTOKOHTEET_EST = [
     lahde: 'en-Wikipedia "Struve Geodetic Arc", johdanto-osa ja osio "Chain/Estonia" '
       + '(tarkistettu 2.9.2026).',
   },
+  /* ================================================================
+   * NOSTOERÄ 11.9.2026 — SEITSEMÄN KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Suomesta puuttuu lisäksi myös nostoja …
+   * Agentit voisivat tarkastaa myös muut Euroopan maat että kaikissa
+   * tarpeeksi nostoja."* Päätoimittajan tavoite on 20 pääkartan nostoa
+   * per Euroopan maa; Viro oli kolmessatoista ja koko Euroopan
+   * heikoimpia.
+   *
+   * VIROSSA ON YKSI PELIKAUPUNKI (Tallinna). Lähin uusi merkki on
+   * Haapsalu 67 lautayksikön päässä siitä, joten yksikään näistä ei jää
+   * kaupunkikaton alle (js/fokuskohteet.js) — kaikki seitsemän ovat
+   * pääkartan merkkejä. Tallinnan omia nähtävyyksiä ei siksi otettu
+   * mukaan lainkaan: ne kuuluvat kaupunkilehden kohdekartalle.
+   *
+   * PEIPSIJÄRVI ON TYYPPIÄ 'meri' EIKÄ 'jarvi' — perustelu on kirjattu
+   * js/packs/maastokohteet-gha.js:n Voltajärvi-kortissa.
+   *
+   * KUVATON ERÄ. Faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'peipsi',
+    nimi: 'Peipsijärvi',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mitä järven jäällä tapahtui vuonna 1242?',
+      'Mihin Peipsin vedet lopulta laskevat?',
+    ],
+    korostukset: ['jäätaistelu|jäätaistelu'],
+    nappi: 'Euroopan suurin rajajärvi',
+    // 27.5 E / 58.7 N — järvialtaan pohjoisosa Viron puolella;
+    // en-Wikipedia "Lake Peipus" ei anna yhtä keskipistettä
+    laudat: {
+      maailmankartta: { x: 6750.0, y: 989.8 },
+    },
+    teksti: 'Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä '
+      + 'valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, '
+      + 'Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys '
+      + 'vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on '
+      + 'oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja '
+      + 'niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista '
+      + 'suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. '
+      + '5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja '
+      + 'Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa '
+      + '"tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille '
+      + 'itämerensuomalaisille.',
+    lahde: 'en-Wikipedia "Lake Peipus", johdanto-osa ja osio "Name" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'emajogi',
+    nimi: 'Emajoki',
+    tyyppi: 'joki',
+    kysymykset: [
+      'Miksi Tartto syntyi juuri tähän kohtaan?',
+      'Mikä lodi oli?',
+    ],
+    korostukset: ['lodi|lodi'],
+    nappi: 'Viron ainoa purjehduskelpoinen joki',
+    // 27.15 E / 58.45 N — alajuoksu Kavastun ja Praagan välillä;
+    // en-Wikipedia "Emajõgi", osio "Course"
+    laudat: {
+      maailmankartta: { x: 6738.3, y: 1002.0 },
+    },
+    teksti: 'Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki '
+      + 'Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on '
+      + 'Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen '
+      + 'joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei '
+      + 'sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon '
+      + 'läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös '
+      + 'esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja '
+      + 'paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja '
+      + 'vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: '
+      + 'Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni '
+      + 'jokiproomu tai purjealus, joka kesti myös Peipsin.',
+    lahde: 'en-Wikipedia "Emajõgi", johdanto-osa sekä osiot "Course" ja "History" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'kaali',
+    nimi: 'Kaalin kraatterit',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka todisti kraatterin syntytavan?',
+      'Kuinka kova isku oli?',
+    ],
+    korostukset: ['Ivan Reinvald|Ivan Reinvald'],
+    nappi: 'Meteoriitti osui asuttuun seutuun',
+    // 22.6697 E / 58.3722 N — en-Wikipedia "Kaali crater"
+    laudat: {
+      maailmankartta: { x: 6589.0, y: 1005.8 },
+    },
+    teksti: 'Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin '
+      + 'tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. '
+      + 'jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi '
+      + 'harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen '
+      + '1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes '
+      + 'Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. '
+      + 'Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki '
+      + 'kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin '
+      + 'järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin '
+      + 'säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin '
+      + 'verran, ja metsä paloi kuuden kilometrin säteellä.',
+    lahde: 'en-Wikipedia "Kaali crater", johdanto-osa sekä osiot "Formation" ja "Effects" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'haapsalu',
+    nimi: 'Haapsalu',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kuka perusti mutakylpylän?',
+      'Mistä Haapsalun nimi tulee?',
+    ],
+    korostukset: ['mutahoitola|mutahoitolan'],
+    nappi: 'Piispanlinna ja mutakylpylä',
+    // 23.5417 E / 58.9439 N — en-Wikipedia "Haapsalu"
+    laudat: {
+      maailmankartta: { x: 6618.1, y: 977.9 },
+    },
+    teksti: 'Haapsalu on kylpyläkaupunki Viron länsirannikolla. Nimi tulee sanoista haab eli '
+      + 'haapa ja salu, joka vanhassa merkityksessään tarkoitti metsäistä saarta. Ruotsiksi ja '
+      + 'saksaksi kaupunki oli pitkään Hapsal, ja se oli 1200-luvulta 1900-luvun alkupuolelle '
+      + 'asti rannikkoruotsalaisten keskuspaikka. Ensimmäinen maininta on vuodelta 1279, jolloin '
+      + 'kaupunki sai oikeutensa ja siitä tuli Saare-Lääne piispakunnan pääpaikka seuraavaksi '
+      + 'kolmeksi vuosisadaksi; piispanlinna on yhä pystyssä, ja sen kirkko on Viron suurin '
+      + 'yksilaivainen. Foggin aikaan kaupunki eli kuitenkin aivan muusta. Sotilaslääkäri Carl '
+      + 'Abraham Hunnius perusti vuonna 1825 ensimmäisen mutahoitolan, ja tieto parantavasta '
+      + 'merimudasta levisi nopeasti Pietarin varakkaaseen väkeen ja muualle keisarikuntaan — '
+      + 'hoidoissa kävi myös keisarillinen Romanovien perhe.',
+    lahde: 'en-Wikipedia "Haapsalu", johdanto-osa sekä osiot "History" ja "Healing by sea mud" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'rakvere',
+    nimi: 'Rakvere',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mitä Tarvanpea tarkoittaa?',
+      'Kuka rakensi Vallimäen kivilinnan?',
+    ],
+    korostukset: ['Tarvanpea|Tarvanpea'],
+    nappi: 'Uroshärän pää Vallimäellä',
+    // 26.3556 E / 59.3472 N — en-Wikipedia "Rakvere"
+    laudat: {
+      maailmankartta: { x: 6711.9, y: 958.1 },
+    },
+    teksti: 'Rakvere on Länsi-Virumaan pääkaupunki noin sadan kilometrin päässä Tallinnasta. '
+      + 'Vanhin nimi on Tarvanpea, "uroshärän pää", ja se mainitaan ensimmäisen kerran vuonna '
+      + '1226 Henrikin Liivinmaan kronikassa. Tanskalaiset kirjasivat paikan 1252 muotoon '
+      + 'Wesenbergh, ja sillä nimellä kaupunki tunnettiin 1900-luvun alkuun asti; Novgorodin '
+      + 'ensimmäinen kronikka puhuu vuonna 1268 Rakovorista. Samana vuonna, 18. helmikuuta, '
+      + 'kaupungin lähellä käytiin Wesenbergin taistelu, jossa vastakkain olivat tanskalaiset ja '
+      + 'saksalaiset ritarit paikallisine joukkoineen sekä Novgorodin ja Pihkvan voimat. '
+      + 'Kuningas Erik VI Menved antoi Rakverelle Lyypekin oikeudet 12. kesäkuuta 1302. Kun '
+      + 'kuningas myi Tanskan Viron Liivinmaan ritarikunnalle 1346, Vallimäen vanhan '
+      + 'linnavuoren päälle nousi suuri kivilinna torneineen ja pihoineen.',
+    lahde: 'en-Wikipedia "Rakvere", johdanto-osa sekä osiot "Name" ja "History" (tarkistettu '
+      + '11.9.2026).',
+  },
+  {
+    id: 'ontika',
+    nimi: 'Ontikan klintti',
+    tyyppi: 'muu',
+    kysymykset: [
+      'Kuinka pitkälle Baltian klintti ulottuu?',
+      'Mikä on Viron korkein vesiputous?',
+    ],
+    korostukset: ['klintti|klintti'],
+    nappi: 'Kalkkikiviseinä Suomenlahden rannalla',
+    // 27.2417 E / 59.4425 N — Ontika, Kohtlan kunta, Ida-Virumaa;
+    // en-Wikipedia "Baltic Klint", osio "Geography"
+    laudat: {
+      maailmankartta: { x: 6741.4, y: 953.4 },
+    },
+    teksti: 'Viron pohjoisrannikkoa reunustaa kalkkikivinen jyrkänne, jota kutsutaan Baltian '
+      + 'klintiksi. Se on eroosion paljastama porras, joka ulottuu noin 1 200 kilometrin '
+      + 'matkan Ruotsin Öölannista mannerjalustan ja Viron Osmussaaren ja Suur-Pakrin kautta '
+      + 'Paldiskiin, sieltä Suomenlahden etelärantaa ja Nevaa myöten Laatokan eteläpuolelle, '
+      + 'missä se katoaa nuorempien kerrostumien alle. Korkeimmillaan klintti on juuri '
+      + 'Ontikassa Kohtlan kunnassa Ida-Virumaalla: 55,6 metriä merenpinnasta. Jyrkänteen '
+      + 'halkovat lukuisat joet, ja moni niistä putoaa reunan yli — korkein putous on '
+      + 'Valasten 25 metriä. Muoto ei ole valmis: klintti perääntyy yhä, ja Gotlannissa '
+      + 'peräytymisvauhdiksi on 1900-luvulla mitattu 0,15–0,78 senttiä vuodessa. Viron rahassa '
+      + 'klintti on ollut kahdesti, vuoden 1928 50 kroonin ja vuoden 1992 100 kroonin setelin '
+      + 'kääntöpuolella.',
+    lahde: 'en-Wikipedia "Baltic Klint", johdanto-osa ja osio "Geography" (tarkistettu '
+      + '11.9.2026).',
+  },
+  {
+    id: 'lahemaa',
+    nimi: 'Lahemaa',
+    tyyppi: 'elain',
+    kysymykset: [
+      'Mistä Lahemaa on saanut nimensä?',
+      'Mitä eläimiä metsissä elää?',
+    ],
+    korostukset: ['keidassuo|keidassoita'],
+    nappi: 'Lahtien maa ja sen kartanot',
+    // 25.8 E / 59.55 N — puistoalueen keskiosa; en-Wikipedia
+    // "Lahemaa National Park" ei anna yhtä keskipistettä
+    laudat: {
+      maailmankartta: { x: 6693.3, y: 948.0 },
+    },
+    teksti: 'Lahemaa tarkoittaa lahtien maata, ja nimi on ansaittu: rannikolta työntyy mereen '
+      + 'neljä niemeä — Juminda, Pärispea, Käsmu ja Vergi — ja niiden väliin jää neljä lahtea. '
+      + 'Alue on 747 neliökilometriä, josta lähes 275 on merta, ja se on Viron suurin puisto ja '
+      + 'yksi Euroopan suurimmista kansallispuistoista. Metsää on yli seitsemänkymmentä '
+      + 'prosenttia, ja sen seassa on keidassoita, joista Laukasoon suojelualue on noin '
+      + 'seitsemäntuhatta vuotta vanha. Puistossa elää villisikoja, saksanhirviä, susia, '
+      + 'karhuja ja ilveksiä, ja kivinen rantaviiva on kurkien vuosittainen levähdyspaikka '
+      + 'matkalla kohti Bosporia ja Egyptiä. Alueella on neljä kartanoa: Palmse, Vihula, Kolga '
+      + 'ja barokkinen Sagadi. Puisto perustettiin vasta 1971, ja se oli koko silloisen '
+      + 'Neuvostoliiton ensimmäinen kansallispuisto.',
+    lahde: 'en-Wikipedia "Lahemaa National Park", johdanto-osa ja osio "History" (tarkistettu '
+      + '11.9.2026).',
+  },
 ];

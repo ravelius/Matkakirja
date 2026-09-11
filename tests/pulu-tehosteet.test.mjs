@@ -143,7 +143,17 @@ test('Livia soittaa vain tunnuksia, jotka sound.js tuntee', () => {
 
 test('paras osuma valitaan arvosanasta, latauksista ja kestosta', () => {
   const tehoste = { tunnus: 'koe', kestoMin: 1, kestoMax: 3 };
-  const perus = { previews: { 'preview-hq-mp3': 'x' }, duration: 2 };
+  /*
+   * LISENSSI KUULUU NYT OSUMAAN (11.9.2026). Rajaus tehdään myös
+   * valinnassa eikä enää pelkästään Freesoundin filter-parametrilla:
+   * monilähteisessä haussa Commons ja Kenney eivät osaa rajata
+   * palvelimen puolella, ja sääntö saa olla vain yhdessä paikassa.
+   */
+  const perus = {
+    previews: { 'preview-hq-mp3': 'x' },
+    duration: 2,
+    license: 'http://creativecommons.org/publicdomain/zero/1.0/',
+  };
   const heikko = {
     ...perus, id: 1, avg_rating: 2, num_ratings: 20, num_downloads: 10,
   };
@@ -166,6 +176,11 @@ test('paras osuma valitaan arvosanasta, latauksista ja kestosta', () => {
   assert.equal(valitseParas([{ ...vahva, previews: {} }], tehoste), null);
   assert.equal(valitseParas([{ ...vahva, duration: 20 }], tehoste), null);
   assert.equal(valitseParas([], tehoste), null);
+
+  // Kelvoton tai puuttuva lisenssi ei pääse läpi edes täydellä
+  // arvosanalla — kaupallinen peli ei voi käyttää sitä lainkaan.
+  assert.equal(valitseParas([{ ...vahva, license: 'http://creativecommons.org/licenses/by-nc/3.0/' }], tehoste), null);
+  assert.equal(valitseParas([{ ...vahva, license: undefined }], tehoste), null);
 });
 
 test('manifestirivi kirjaa lisenssin ja CC BY:n attribuution', () => {

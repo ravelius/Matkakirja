@@ -397,4 +397,102 @@ export const MAASTOKOHTEET_LTU = [
     lahde: 'en-Wikipedia "Ninth Fort", johdanto-osa sekä osiot "History" ja "Museum" '
       + '(tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — KOLME KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Agentit voisivat tarkastaa myös muut
+   * Euroopan maat että kaikissa tarpeeksi nostoja."* Liettuassa oli
+   * pääkartalla 17 merkkiä, ja tavoite on vähintään kaksikymmentä.
+   * Kaikki kolme ovat kaukana Vilnasta (lähin 60 lautayksikköä), joten
+   * ne ovat pääkartan merkkejä. Kohteet ovat eri paikkakunnilla kuin
+   * pakin aiemmat nostot: Klaipėda rannikolla, Puntukas Anykščiaissa
+   * ja Aukštaitijan kansallispuisto koillisessa. Kuvaton erä.
+   * ============================================================== */
+  {
+    id: 'klaipeda',
+    nimi: 'Klaipėda',
+    tyyppi: 'kaupunki',
+    kysymykset: [
+      'Miksi satama ei jäädy?',
+      'Mistä nimi Memel tulee?',
+    ],
+    nappi: 'Liettuan ainoa satama',
+    // 21.13 E / 55.71 N — en-Wikipedia "Klaipėda"
+    laudat: {
+      maailmankartta: { x: 6537.7, y: 1132.7 },
+      europe: { x: 616.9, y: 428.4 },
+    },
+    teksti: 'Klaipėda on Liettuan kolmanneksi suurin kaupunki ja maan ainoa merkittävä '
+      + 'merisatama. Se on myös Baltian maiden vilkkain satama, ja sen etu on yksinkertainen: '
+      + 'satama ei jäädy talvella. Kaupunki on Akmena-Danė-joen suulla siinä kohdassa, jossa '
+      + 'Kuurinlahti avautuu Itämerelle. Asukkaita on noin 161 000 (2025).\n\n'
+      + 'Saksalainen ritarikunta rakensi paikalle linnoituksen nimeltä Memelburg vuonna 1252, '
+      + 'ja nimi lyheni myöhemmin muotoon Memel. Kaupunkioikeudet Lyypekin mallin mukaan '
+      + 'myönnettiin 1254 tai 1258, ja oikeudet saaneita kaupunkeja oli ritarikunnan valtiossa '
+      + 'vain kolme.\n\n'
+      + 'Ensimmäisen maailmansodan jälkeen alue irrotettiin Saksasta, ja vuoden 1923 '
+      + 'Klaipėdan kapina toi sen Liettuan hallintaan. Saksa esitti uhkavaatimuksen 20. '
+      + 'maaliskuuta 1939, ja Liettua luovutti alueen kahta päivää myöhemmin. Toisen '
+      + 'maailmansodan lopussa kaupunki oli raunioina: kun neuvostojoukot saapuivat 28. '
+      + 'tammikuuta 1945, asukkaita oli jäljellä noin viisikymmentä.\n\n'
+      + 'Nykyään Klaipėda elää kalastuksesta ja merenkulusta, ja kesällä siellä vietetään '
+      + 'vuosittaista merijuhlaa.',
+    lahde: 'en-Wikipedia "Klaipėda" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'puntukas',
+    nimi: 'Puntukas',
+    tyyppi: 'sana',
+    kysymykset: [
+      'Mistä kivi on tullut Liettuaan?',
+      'Keitä olivat Darius ja Girėnas?',
+    ],
+    nappi: 'Kivi, jonka piru pudotti',
+    // 25.0928 E / 55.4944 N — en-Wikipedia "Puntukas" (Anykščiain eteläpuoli)
+    laudat: {
+      maailmankartta: { x: 6669.8, y: 1142.8 },
+      europe: { x: 693, y: 434.1 },
+    },
+    teksti: 'Puntukas on Liettuan toiseksi suurin siirtolohkare: 6,9 metriä pitkä, 6,7 leveä '
+      + 'ja 5,7 syvä, painoltaan noin 446 tonnia. Se makaa Šventoji-joen vasemmalla rannalla '
+      + 'noin viisi kilometriä Anykščiaista etelään. Kivi oli maan suurin siihen asti, kunnes '
+      + 'Barstyčiain lohkare löytyi vuonna 1957.\n\n'
+      + 'Kivilaji on rapakivigraniittia. Jäätikkö kuljetti lohkareen paikalleen viime '
+      + 'jääkauden aikana, ja lähtöpaikka on todennäköisesti Suomi.\n\n'
+      + 'Antanas Baranauskasin runoelma Anykščių šilelis kertoo kivestä tarinan: piru oli '
+      + 'kantamassa sitä murskatakseen Anykščiain kirkon, mutta kukon kiekaisu ajoi sen '
+      + 'takaisin maan alle, ja jäljelle jäi vain kivi.\n\n'
+      + 'Vuonna 1943, Saksan miehityksen aikana, kuvanveistäjä Bronius Pundzius hakkasi '
+      + 'kiveen salaa reliefin lentäjistä Steponas Dariuksesta ja Stasys Girėnasista. He '
+      + 'olivat lentäneet Atlantin yli New Yorkista kohti Kaunasia 15. heinäkuuta 1933. '
+      + 'Reliefi vaurioitui vuonna 1945 ja kunnostettiin 1970-luvun puolivälissä.',
+    lahde: 'en-Wikipedia "Puntukas" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'aukstaitija',
+    nimi: 'Aukštaitijan puisto',
+    tyyppi: 'muu',
+    kysymykset: [
+      'Kuinka syvä Tauragnas-järvi on?',
+      'Miksi puistossa kasvaa niin monta lajia?',
+    ],
+    nappi: 'Liettuan vanhin kansallispuisto',
+    // 26.0 E / 55.4 N — puiston keskivaiheilta; en-Wikipedia "Aukštaitija National Park"
+    laudat: {
+      maailmankartta: { x: 6700, y: 1147.2 },
+      europe: { x: 710.4, y: 436.6 },
+    },
+    teksti: 'Aukštaitijan kansallispuisto perustettiin vuonna 1974, ja se on Liettuan viidestä '
+      + 'kansallispuistosta vanhin. Se sijaitsee maan koillisosassa noin sadan kilometrin '
+      + 'päässä Vilnasta pohjoiseen ja on pinta-alaltaan 410,56 neliökilometriä.\n\n'
+      + 'Yli seitsemänkymmentä prosenttia puistosta on metsää, enimmäkseen mäntyä. Vanhimmat '
+      + 'puut ovat noin kahdensadan vuoden ikäisiä.\n\n'
+      + 'Vettä on paljon: puistossa on 126 järveä, yhteensä noin 59,3 neliökilometriä. Suurin '
+      + 'niistä on Kretuonas, 8,29 neliökilometriä, ja alueella on myös Tauragnas, Liettuan '
+      + 'syvin järvi, jonka syvyys on 60,5 metriä.\n\n'
+      + 'Puisto kattaa alle prosentin Liettuan pinta-alasta, mutta siellä tavataan 59 '
+      + 'prosenttia maan kasvilajeista. Liettuan punaisessa kirjassa suojeltuja lajeja on '
+      + 'puistossa 64 kasvia, kahdeksan sienilajia ja 48 lintulajia.',
+    lahde: 'en-Wikipedia "Aukštaitija National Park" (tarkistettu 11.9.2026).',
+  },
 ];

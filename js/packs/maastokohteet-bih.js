@@ -73,5 +73,81 @@ export const MAASTOKOHTEET_BIH = [
       + 'kaikkein vähiten — kapea kaistale Neumin kohdalla.',
     lahde: 'en-Wikipedia "Adriatic Sea", johdanto-osa (tarkistettu 29.8.2026).',
   },
+  /* ================================================================
+   * ERÄ 11.9.2026 — KAKSI KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Agentit voisivat tarkastaa myös muut
+   * Euroopan maat että kaikissa tarpeeksi nostoja."* Bosnia ja
+   * Hertsegovinalla oli pääkartalla 18 merkkiä, ja tavoite on
+   * vähintään kaksikymmentä. Blidinje on 42,2 ja Bobovac 35,5
+   * lautayksikön päässä lähimmästä pelikaupungista, joten kumpikin on
+   * pääkartan merkki. Aiheiksi valittiin keskiajan rakennusperintö ja
+   * ylängön luonto: kumpikaan ei ota kantaa 1990-luvun sodan
+   * kysymyksiin eikä kuvaa väkivaltaa. Počitelj oli ensin erän
+   * kolmas ehdokas, mutta sen nimiö olisi työntänyt Neumin nimiön
+   * Stonin muurien päälle (tools/tarkista-nimiolimitys.mjs), joten
+   * tilalle valittiin Blidinje. Kuvaton erä, kuten pakin muutkin
+   * kohteet.
+   * ============================================================== */
+  {
+    id: 'blidinje',
+    nimi: 'Blidinjen puisto',
+    tyyppi: 'muu',
+    symboli: 'luonto',
+    kysymykset: [
+      'Mikä stećak on?',
+      'Miksi munika kasvaa juuri täällä?',
+    ],
+    nappi: 'Ylängön luonnonpuisto',
+    // 17,6167 E / 43,6167 N — en-Wikipedia "Blidinje Nature Park"
+    // (43°37'N 17°37'E), ylängön keskivaiheilta.
+    laudat: {
+      maailmankartta: { x: 6420.6, y: 1658.4 },
+      europe: { x: 549.4, y: 746.5 },
+    },
+    teksti: 'Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin '
+      + 'välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-'
+      + 'eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 '
+      + 'metristä 2 228 metriin.\n\n'
+      + 'Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 '
+      + 'neliökilometriä.\n\n'
+      + 'Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole '
+      + 'vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin '
+      + 'välillä.\n\n'
+      + 'Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat '
+      + 'Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan '
+      + 'rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja '
+      + 'Čvrsnican rinteellä toimii Risovacin hiihtokeskus.',
+    lahde: 'en-Wikipedia "Blidinje Nature Park" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'bobovac',
+    nimi: 'Bobovac',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Ketä mausoleumiin haudattiin?',
+      'Miksi kuninkaan istuin siirtyi Jajceen?',
+    ],
+    nappi: 'Bosnian kuninkaiden linna',
+    // 18,2388 E / 44,1379 N — en-Wikipedia "Bobovac" (Varešin lähellä)
+    laudat: {
+      maailmankartta: { x: 6441.3, y: 1637.1 },
+      europe: { x: 561.4, y: 732.8 },
+    },
+    teksti: 'Bobovac on keskiaikaisen linnan raunio Varešin lähellä Keski-Bosniassa. Linna '
+      + 'rakennettiin Bosnian paanin Stjepan II:n hallituskaudella, ja ensimmäinen kirjallinen '
+      + 'maininta siitä on vuodelta 1349.\n\n'
+      + 'Se oli 1300- ja 1400-luvuilla Bosnian hallitsijoiden linnoitettu pääpaikka. Hallintoa '
+      + 'hoidettiin myös Sutjeskan kuninkaankartanossa, mutta Bobovac oli niistä kahdesta se, '
+      + 'jota pystyi puolustamaan.\n\n'
+      + 'Kaivauksissa on erotettu kolme palatsia — suuri palatsi, ylempi palatsi ja '
+      + 'sivupalatsi — kolmella eri terassitasolla. Rakennustyyli on goottilainen, ja osassa '
+      + 'on romaanis-goottilaisia piirteitä. Mausoleumin viidestä haudasta on löytynyt '
+      + 'yhdeksän vainajaa: kuninkaat Dabiša, Ostoja, Ostojić, Tvrtko II ja Tomaš sekä '
+      + 'naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso kuningatar Dorothea.\n\n'
+      + 'Kuningas Stjepan Tomašević siirsi istuimensa Jajceen osmanien painostaessa, ja '
+      + 'osmanit valtasivat Bobovacin vuonna 1463. Raunio on Bosnia ja Hertsegovinan '
+      + 'kansallinen muistomerkki.',
+    lahde: 'en-Wikipedia "Bobovac" (tarkistettu 11.9.2026).',
+  },
 ];
-

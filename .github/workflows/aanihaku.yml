@@ -13,7 +13,9 @@
 #
 # ── TILA 1: ehdokkaat (oletus) ────────────────────────────────────────
 #
-# Tulokset tulevat ajon lokiin ja artefaktina. Peliin ne otetaan
+# Ehdokkaat haetaan KAIKISTA sallituista lähteistä, koska tämä on se
+# tila, jossa ihminen valitsee kuuntelemalla — yhden palvelun osuus
+# valikoimasta ei riitä. Tulokset tulevat ajon lokiin ja artefaktina. Peliin ne otetaan
 # äänistudion kautta ("Tuo valinnat"), ei automaattisesti: äänen
 # valinta on kuuntelupäätös, jota kone ei voi tehdä.
 #
@@ -53,7 +55,31 @@
 # sitä kuulostaako ääni siivenräpytykseltä. Huonon osuman vaihtaa
 # ajamalla saman työnkulun uudestaan syötteellä `tunnus`.
 #
-# LISENSSIT. Vain CC0 ja CC BY, rajaus Freesoundin filter-parametrilla.
+# ── LÄHTEET (omistajan päätös 11.9.2026) ──────────────────────────────
+#
+# Omistajan valinta sanatarkasti: *"Lisää ilmaisia lähteitä rinnalle."*
+# Freesoundin rinnalla haetaan nyt samaan putkeen:
+#
+#   1. FREESOUND           — avain vaaditaan (salaisuus, ks. alla)
+#   2. WIKIMEDIA COMMONS   — EI AVAINTA, MediaWiki-rajapinta
+#   3. KENNEY (CC0-paketit)— EI AVAINTA, paketit ladataan zipeinä
+#
+# UUSIA SALAISUUKSIA EI TARVITA. Kumpikin uusi lähde toimii ilman
+# avainta; Commons vaatii vain tunnistautuvan User-Agentin, joka on
+# työkalussa (tools/aanilahteet.mjs WIKI_TUNNISTE). Jos Freesoundin
+# avain puuttuu, ajo EI enää kaadu vaan hakee kahdesta muusta ja
+# sanoo sen lokissa.
+#
+# Syötteellä `lahteet` voi rajata ajon yhteen lähteeseen (esim.
+# "commons" tai "freesound,kenney"); tyhjä = kaikki käytettävissä
+# olevat. Lista voi myös kertoa oman rajauksensa (äänimaisemat ajavat
+# vain Freesoundin ja Commonsin — Kenneyssä ei ole minuutin maisemia).
+#
+# LISENSSIT. Vain CC0, public domain ja CC BY. CC BY-SA jätetään pois
+# tahallaan: ajo leikkaa ja normalisoi äänen, eli tekee siitä
+# johdannaisen, eikä peliin oteta ehtoa joka voi koskea peliä itseään.
+# Rajaus on tools/aanilahteet.mjs:ssä ja se ajetaan jokaiselle
+# lähteelle — Freesoundilla lisäksi palvelimen puolella.
 # CC BY vaatii attribuution, ja se kirjataan manifestiin (tekijä,
 # lisenssi, Freesoundin id ja sivu) — ajon loki listaa ne myös erikseen.
 #
@@ -67,7 +93,7 @@
 #   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
 # Jos jokin puuttuu, ajo kertoo sen nimeltä ennen kuin mitään haetaan.
 
-name: Äänihaku (Freesound)
+name: Äänihaku (Freesound, Commons, Kenney)
 
 on:
   workflow_dispatch:
@@ -100,6 +126,10 @@ on:
         default: '600'
       tunnus:
         description: '[listat] Vain tämä tunnus (esim. siivet-lento tai savanni). Tyhjä = koko lista.'
+        required: false
+        default: ''
+      lahteet:
+        description: 'Lähteet pilkuilla (freesound, commons, kenney). Tyhjä = kaikki käytettävissä olevat.'
         required: false
         default: ''
       kuiva:
@@ -191,6 +221,9 @@ jobs:
           args="--maara ${{ inputs.maara }}"
           args="$args --min-kesto ${{ inputs.min-kesto }}"
           args="$args --max-kesto ${{ inputs.max-kesto }}"
+          if [ -n "${{ inputs.lahteet }}" ]; then
+            args="$args --lahteet ${{ inputs.lahteet }}"
+          fi
           if [ -n "${{ inputs.haku }}" ]; then
             args="$args --haku '${{ inputs.haku }}'"
           elif [ -n "${{ inputs.kori }}" ]; then
@@ -202,6 +235,9 @@ jobs:
         if: inputs.tila == 'pulu-tehosteet'
         run: |
           args="--pulu --ulos ehdokkaat.json"
+          if [ -n "${{ inputs.lahteet }}" ]; then
+            args="$args --lahteet ${{ inputs.lahteet }}"
+          fi
           if [ -n "${{ inputs.tunnus }}" ]; then
             args="$args --tunnus ${{ inputs.tunnus }}"
           fi
@@ -216,6 +252,9 @@ jobs:
         if: inputs.tila == 'ihmisen-matka-maisemat'
         run: |
           args="--maisemat --ulos ehdokkaat.json"
+          if [ -n "${{ inputs.lahteet }}" ]; then
+            args="$args --lahteet ${{ inputs.lahteet }}"
+          fi
           if [ -n "${{ inputs.tunnus }}" ]; then
             args="$args --tunnus ${{ inputs.tunnus }}"
           fi

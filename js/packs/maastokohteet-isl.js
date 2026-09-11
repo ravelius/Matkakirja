@@ -373,4 +373,187 @@ export const MAASTOKOHTEET_ISL = [
       + 'Pohjois-Afrikassa ja Intiassa.',
     lahde: 'en-Wikipedia "Laki", johdanto-osa ja osio "1783 eruption" (tarkistettu 2.9.2026).',
   },
+  /* ================================================================
+   * NOSTOERÄ 11.9.2026 — KUUSI KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Suomesta puuttuu lisäksi myös nostoja …
+   * Agentit voisivat tarkastaa myös muut Euroopan maat että kaikissa
+   * tarpeeksi nostoja."* Päätoimittajan tavoite on 20 pääkartan nostoa
+   * per Euroopan maa; Islanti oli kolmessatoista.
+   *
+   * ISLANNISSA ON YKSI PELIKAUPUNKI (laudan "Islanti"). Lähin uusi
+   * merkki on Skálholt 43 lautayksikön päässä siitä, joten yksikään
+   * näistä ei jää kaupunkikaton alle (js/fokuskohteet.js) — kaikki
+   * kuusi ovat pääkartan merkkejä.
+   *
+   * MÝVATN ON TYYPPIÄ 'meri' EIKÄ 'jarvi' — perustelu on kirjattu
+   * js/packs/maastokohteet-gha.js:n Voltajärvi-kortissa.
+   *
+   * KUVATON ERÄ. Faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'snaefellsjokull',
+    nimi: 'Snæfellsjökull',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Mikä romaani teki vuoresta kuuluisan?',
+      'Mitä huipun jäälle on tapahtunut?',
+    ],
+    korostukset: ['Jules Verne|Jules Vernen'],
+    nappi: 'Portti maan keskipisteeseen',
+    // −23.776 E / 64.808 N — en-Wikipedia "Snæfellsjökull"
+    laudat: {
+      maailmankartta: { x: 5040.8, y: 676.6 },
+    },
+    teksti: 'Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, '
+      + 'Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. '
+      + 'Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on '
+      + 'Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa '
+      + 'Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon '
+      + 'sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin '
+      + 'kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun '
+      + 'kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett '
+      + 'näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. '
+      + 'Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja '
+      + '10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa '
+      + 'jäätön.',
+    lahde: 'en-Wikipedia "Snæfellsjökull", johdanto-osa ja osio "Geology" (tarkistettu '
+      + '11.9.2026).',
+  },
+  {
+    id: 'dettifoss',
+    nimi: 'Dettifoss',
+    tyyppi: 'joki',
+    kysymykset: [
+      'Miksi putouksen vesi on harmaata?',
+      'Mitä nimi Dettifoss tarkoittaa?',
+    ],
+    korostukset: ['Jökulsárgljúfur|Jökulsárgljúfur-rotkoon'],
+    nappi: 'Rotkoon syöksyvä jäätikköjoki',
+    // −16.3844 E / 65.8144 N — en-Wikipedia "Dettifoss"
+    laudat: {
+      maailmankartta: { x: 5287.2, y: 621.8 },
+    },
+    teksti: 'Dettifoss putoaa Koillis-Islannissa Jökulsá á Fjöllum -joessa, joka tulee '
+      + 'Vatnajökullin jäätiköltä ja kerää vetensä laajalta alueelta. Putous on sata metriä '
+      + 'leveä ja pudottaa veden 44 metriä alas Jökulsárgljúfur-rotkoon. Virtaamaltaan se on '
+      + 'Islannin toiseksi suurin putous Urriðafossin jälkeen, keskimäärin 193 kuutiometriä '
+      + 'sekunnissa, ja kun virtaama kerrotaan pudotuskorkeudella, sitä on pidetty Euroopan '
+      + 'toiseksi väkevimpänä putouksena heti Reininputousten jälkeen. Vesi ei ole kirkasta '
+      + 'vaan harmaanvalkoista: jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Nimi on '
+      + 'suora kuvaus siitä, mitä siinä tapahtuu — islannin detta tarkoittaa putoamista tai '
+      + 'romahtamista ja foss putousta. Säveltäjä Jón Leifs teki putouksesta oman '
+      + 'orkesteriteoksensa.',
+    lahde: 'en-Wikipedia "Dettifoss", johdanto-osa ja osio "In media" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'myvatn',
+    nimi: 'Mývatn',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mistä järvi on saanut nimensä?',
+      'Miksi sorsia on juuri täällä niin paljon?',
+    ],
+    korostukset: ['valekraatteri|valekraattereita'],
+    nappi: 'Sääskien järvi ja sen sorsat',
+    // −17.0 E / 65.6 N — järven keskiosa; en-Wikipedia "Mývatn"
+    laudat: {
+      maailmankartta: { x: 5266.7, y: 633.6 },
+    },
+    teksti: 'Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi '
+      + 'tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä '
+      + 'surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu '
+      + 'ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja '
+      + 'sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: '
+      + 'pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi '
+      + 'syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema '
+      + 'on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa '
+      + 'kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta '
+      + 'ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin '
+      + 'suojelualueeksi.',
+    lahde: 'en-Wikipedia "Mývatn", johdanto-osa sekä osiot "Geography" ja "Birds" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'vatnajokull',
+    nimi: 'Vatnajökull',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Kuinka paksua jää on?',
+      'Mikä jäätikkötulva on?',
+    ],
+    korostukset: ['jäätikkötulva|jäätikkötulvina'],
+    nappi: 'Jäätikkö, jonka alla palaa tuli',
+    // −16.8 E / 64.4 N — jäätikön keskiosa; en-Wikipedia "Vatnajökull"
+    laudat: {
+      maailmankartta: { x: 5273.3, y: 698.5 },
+    },
+    teksti: 'Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on '
+      + '7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä '
+      + 'Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain '
+      + 'Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja '
+      + 'paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. '
+      + 'Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja '
+      + 'sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret '
+      + 'sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät '
+      + 'ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä '
+      + 'muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.',
+    lahde: 'en-Wikipedia "Vatnajökull", johdanto-osa sekä osiot "Size", "Volcanoes" ja '
+      + '"In culture" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'grimsey',
+    nimi: 'Grímsey',
+    tyyppi: 'saari',
+    kysymykset: [
+      'Miksi napapiirin merkki pitää siirtää?',
+      'Kuinka moni saarella asuu?',
+    ],
+    korostukset: ['napapiiri|napapiiri'],
+    nappi: 'Saari napapiirin päällä',
+    // −18.0142 E / 66.5442 N — en-Wikipedia "Grímsey"
+    laudat: {
+      maailmankartta: { x: 5232.9, y: 581.4 },
+    },
+    teksti: 'Grímsey on pieni saari neljänkymmenen kilometrin päässä Islannin pohjoisrannikolta, '
+      + 'ja sen yli kulkee napapiiri. Se on Islannin pohjoisin asuttu paikka: ainoa kylä on '
+      + 'Sandvík, ja asukkaita oli vuonna 2021 viisikymmentäseitsemän. Pinta-alaa on 5,3 '
+      + 'neliökilometriä ja korkeinta kohtaa 105 metriä, ja rannat ovat jyrkkiä kallioseiniä '
+      + 'lounaisrantaa lukuun ottamatta — juuri siksi saarelle tullaan katsomaan lunneja ja '
+      + 'muita merilintuja. Napapiiri ei pysy paikallaan: Maan akselin pitkäaikainen heilahtelu '
+      + 'siirtää sitä pohjoiseen noin 14,5 metriä vuodessa. Saarelle on pystytetty pysyvät '
+      + 'merkit napapiirin paikoista vuosina 1717, 1817 ja 1917, ja vuonna 2017 sen kohdalle '
+      + 'asetettiin kahdeksan tonnin kivipallo, jota siirretään sitä mukaa kuin viiva liikkuu. '
+      + 'Napapiiri on kulkenut Grímseyn yli vuodesta 1750, ja noin vuonna 2047 se ohittaa saaren '
+      + 'pohjoispuolelta.',
+    lahde: 'en-Wikipedia "Grímsey", johdanto-osa sekä osiot "Geography" ja "Arctic Circle" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'skalholt',
+    nimi: 'Skálholt',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Milloin Skálholtiin tuli piispanistuin?',
+      'Kuka teloitettiin täällä vuonna 1550?',
+    ],
+    korostukset: ['Jón Arason|Jón Arason'],
+    nappi: 'Piispanistuin, jossa teloitettiin piispa',
+    // −20.527 E / 64.128 N — en-Wikipedia "Skálholt"
+    laudat: {
+      maailmankartta: { x: 5149.1, y: 713.1 },
+    },
+    teksti: 'Skálholt Hvítá-joen varrella Etelä-Islannissa oli kahdeksan vuosisadan ajan yksi '
+      + 'saaren tärkeimmistä paikoista. Piispanistuin perustettiin siihen vuonna 1056, ja '
+      + 'vuoteen 1785 asti se oli Hólarin ohella Islannin toinen hiippakuntakeskus — siis '
+      + 'kulttuurin ja politiikan keskus yhtä lailla kuin kirkon. Samana vuonna 1056 sinne '
+      + 'perustettiin maan ensimmäinen virallinen koulu, Skálholtsskóli, kouluttamaan pappeja. '
+      + 'Keskiajalla paikka oli kokonainen kylä: piispantalo, katedraali, koulu, laaja '
+      + 'maanviljelys, paja ja katolisen ajan luostari sekä asuntolat opettajille ja väelle. '
+      + 'Adam Bremeniläinen kuvasi sitä noin vuonna 1075 Islannin "suurimmaksi kaupungiksi". '
+      + 'Katolisen ajan loppu piirtyi tänne: vuonna 1550 viimeinen katolinen piispa Jón Arason '
+      + 'teloitettiin Skálholtissa kahden poikansa kanssa, ja samana vuonna hävitettiin myös '
+      + 'pyhän Þorlákurin reliikkiarkku.',
+    lahde: 'en-Wikipedia "Skálholt", osio "History" (tarkistettu 11.9.2026).',
+  },
 ];

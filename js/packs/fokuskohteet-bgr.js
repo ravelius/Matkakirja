@@ -908,6 +908,81 @@ export const FOKUSKOHTEET_BGR = [
       lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
     },
   },
+  /* ================================================================
+   * ERÄ 11.9.2026 — KAKSI KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Agentit voisivat tarkastaa myös muut
+   * Euroopan maat että kaikissa tarpeeksi nostoja."* Bulgarialla oli
+   * pääkartalla 18 merkkiä, ja tavoite on vähintään kaksikymmentä.
+   * Nesebar on 76 ja Belogradtšikin kalliot 43 lautayksikön päässä
+   * lähimmästä pelikaupungista, joten kumpikin on pääkartan merkki
+   * eikä kuulu kohdekartalle. Kuvaton erä: tarkistamaton
+   * Commons-tiedosto olisi huonompi kuin kuvaton kortti.
+   * ============================================================== */
+  {
+    id: 'nesebar',
+    nimi: 'Nesebar',
+    tyyppi: 'kaupunki',
+    kysymykset: [
+      'Mikä doorilainen siirtokunta oli?',
+      'Miksi kirkkoja on niin monta?',
+    ],
+    korostukset: ['Mesambria|Mesambria'],
+    nappi: 'Kirkkojen niemikaupunki',
+    // 27,7333 E / 42,6583 N — en-Wikipedia "Nesebar" (42°39′N 27°44′E).
+    laudat: {
+      maailmankartta: { x: 6757.8, y: 1697.2 },
+      europe: { x: 743.7, y: 771.7 },
+    },
+    teksti: 'Nesebar on pienelle niemelle rakennettu vanha kaupunki Mustanmeren rannalla '
+      + 'Burgasin alueella. Unesco otti sen maailmanperintöluetteloon vuonna 1983, ja syy on '
+      + 'kerrostumissa: samalla kalliolla on kolmen vuosituhannen jäljet päällekkäin.\n\n'
+      + 'Ensin paikalla oli traakialainen asutus. 500-luvun eaa. alussa Megarasta tulleet '
+      + 'kreikkalaiset perustivat siirtokunnan nimeltä Mesambria, joka oli Mustanmeren '
+      + 'rannikon ainoa doorilainen siirtokunta ja merkittävä kauppapaikka. Vuodesta 71 eaa. '
+      + 'kaupunki oli Rooman vallan alla mutta säilytti etuoikeutensa, muun muassa oikeuden '
+      + 'lyödä omaa rahaa.\n\n'
+      + 'Bysantin aikana Nesebar oli linnoitus, josta bysanttilaiset ja bulgarialaiset '
+      + 'kiistelivät toistuvasti: kaani Krum valtasi sen vuonna 812, ja myöhemmin se palasi '
+      + 'Bysantille. Tsaari Ivan Aleksanterin kaudella (1331—1371) kaupunki kukoisti, kunnes '
+      + 'ristiretkeläiset valtasivat sen 1366.\n\n'
+      + 'Kaupungissa ja sen ympäristössä on säilynyt kokonaan tai osittain neljäkymmentä '
+      + 'kirkkoa, vanhimmat 400—500-luvuilta. Osmanivalta vuodesta 1453 hiljensi kaupungin, '
+      + 'ja 1800-luvun puutalot antoivat sille nykyisen ilmeensä. Asukkaita on noin 13 600.',
+    lahde: 'en-Wikipedia "Nesebar" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'belogradtsik',
+    nimi: 'Belogradtšikin kalliot',
+    nimio: 'Belogradtšik',
+    tyyppi: 'muu',
+    symboli: 'luonto',
+    kysymykset: [
+      'Mistä kallioiden punainen väri tulee?',
+      'Miten linnoitus käyttää kallioita?',
+    ],
+    nappi: 'Kivihahmojen rinne',
+    // 22,685 E / 43,6208 N — en-Wikipedia "Belogradchik Rocks"
+    // (43°37′15″N 22°41′06″E).
+    laudat: {
+      maailmankartta: { x: 6589.5, y: 1658.2 },
+      europe: { x: 646.8, y: 746.4 },
+    },
+    teksti: 'Belogradtšikin kalliot ovat hiekkakivestä ja konglomeraatista muodostunut '
+      + 'kivimuodostelmien joukko Luoteis-Bulgariassa Vidinin alueella, Balkanvuorten '
+      + 'länsirinteillä. Muodostumat jatkuvat noin viidenkymmenen neliökilometrin alalla '
+      + 'Rabišan kylältä idän suuntaan Belotintsiin, ja korkeimmat kalliot kohoavat jopa '
+      + 'kahteensataan metriin.\n\n'
+      + 'Ruosteenpunaisen värin antaa rautaoksidi; osa hiekkakivistä on vaaleampia. '
+      + 'Muodostuminen alkoi permikaudella noin 230 miljoonaa vuotta sitten ja jatkui trias- '
+      + 'ja jurakaudella.\n\n'
+      + 'Kalliot on totuttu näkemään hahmoina, ja monilla on oma nimensä: Aadam ja Eeva, '
+      + 'Madonna, Karhu, Koulutyttö ja Dervissi.\n\n'
+      + 'Belogradtšikin linnoitus on rakennettu niin, että kalliot ovat osa sen puolustusta: '
+      + 'muurit yhdistävät kivimuodostumia toisiinsa. Alue julistettiin luonnonmuistomerkiksi '
+      + 'vuonna 1949 ja liitettiin maan luonnonmuistomerkkien rekisteriin 1987.',
+    lahde: 'en-Wikipedia "Belogradchik Rocks" (tarkistettu 11.9.2026).',
+  },
 ];
 
 const BGR_TUNNUKSITTAIN = new Map(FOKUSKOHTEET_BGR.map((k) => [k.id, k]));

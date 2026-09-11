@@ -26,11 +26,12 @@ const KAIKKI = MAAT.flatMap((iso) => SKANDAALIT[iso].map((s) => ({ iso, ...s }))
 /*
  * LUVUT KASVAVAT ERÄ KERRALLAAN. 29 maata / 83 skandaalia oli Euroopan
  * tilanne; erä M2 (Oseania, 6.9.2026) toi AUS, FJI, NZL, PNG ja SLB
- * kahdella skandaalilla kukin.
+ * kahdella skandaalilla kukin. Nostoerä 11.9.2026 täydensi Islannin
+ * kahdesta kolmeen (baskivainot-1615), joten luku on 250.
  */
 test('skandaaleja on 193 kappaletta 84 maassa, 2–3 per maa', () => {
   assert.equal(MAAT.length, 112, 'maita on 112');
-  assert.equal(KAIKKI.length, 249, 'skandaaleja on 249');
+  assert.equal(KAIKKI.length, 250, 'skandaaleja on 250');
   for (const iso of MAAT) {
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);
     const n = SKANDAALIT[iso].length;

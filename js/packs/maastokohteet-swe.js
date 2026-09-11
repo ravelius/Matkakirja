@@ -433,4 +433,191 @@ export const MAASTOKOHTEET_SWE = [
     lahde: 'en-Wikipedia "Ale\'s Stones", johdanto-osa sekä osiot "Function" ja '
       + '"Excavations" (tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * NOSTOERÄ 11.9.2026 — KUUSI KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Suomesta puuttuu lisäksi myös nostoja …
+   * Agentit voisivat tarkastaa myös muut Euroopan maat että kaikissa
+   * tarpeeksi nostoja."* Päätoimittajan tavoite on 20 pääkartan nostoa
+   * per Euroopan maa; Ruotsi oli neljässätoista.
+   *
+   * RUOTSISSA ON YKSI PELIKAUPUNKI (Tukholma), ja etäisyys mitattiin
+   * siihen. Lähin uusi merkki on Salan hopeakaivos 57 lautayksikön
+   * päässä — moninkertaisesti yli kaupunkikaton säteen
+   * (js/fokuskohteet.js), joten kaikki kuusi ovat pääkartan merkkejä.
+   * Samasta syystä tähän erään EI otettu Drottningholmia eikä Vasa-
+   * laivan hylkypaikkaa: kumpikin on Tukholman laatan kyljessä.
+   *
+   * VÄNERN ON TYYPPIÄ 'meri' EIKÄ 'jarvi' — perustelu on kirjattu
+   * js/packs/maastokohteet-gha.js:n Voltajärvi-kortissa.
+   *
+   * KUVATON ERÄ. Faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'vanern',
+    nimi: 'Vänern',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Miksi järvessä elää merieläimiä?',
+      'Mihin Vänernin vedet laskevat?',
+    ],
+    korostukset: ['Klarälven|Klarälven'],
+    nappi: 'Euroopan unionin suurin järvi',
+    // 13.5 E / 58.9 N — järvialtaan keskiosa; en-Wikipedia "Vänern"
+    // ei anna yhtä keskipistettä
+    laudat: {
+      maailmankartta: { x: 6283.3, y: 980.0 },
+    },
+    teksti: 'Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi '
+      + 'suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja '
+      + 'Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 '
+      + 'metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on '
+      + 'vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin '
+      + 'luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin '
+      + 'suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka '
+      + 'ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja '
+      + 'kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta '
+      + 'vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.',
+    lahde: 'en-Wikipedia "Vänern", johdanto-osa ja osio "History" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'kalmarinlinna',
+    nimi: 'Kalmarin linna',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mikä Kalmarin unioni oli?',
+      'Miksi linnaa sanottiin valtakunnan avaimeksi?',
+    ],
+    korostukset: ['Kalmarin unioni|Kalmarin unioni'],
+    nappi: 'Valtakunnan avain Tanskan rajalla',
+    // 16.3567 E / 56.6608 N — en-Wikipedia "Kalmar Castle"
+    laudat: {
+      maailmankartta: { x: 6378.6, y: 1087.9 },
+    },
+    teksti: 'Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna '
+      + '1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa '
+      + 'kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin '
+      + 'Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman '
+      + 'hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa '
+      + 'puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset '
+      + 'haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta '
+      + 'renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, '
+      + 'jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi '
+      + 'lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja '
+      + 'katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä '
+      + 'renessanssilinnana.',
+    lahde: 'en-Wikipedia "Kalmar Castle", johdanto-osa ja osio "History" (tarkistettu '
+      + '11.9.2026).',
+  },
+  {
+    id: 'karlskrona',
+    nimi: 'Karlskrona',
+    tyyppi: 'merenkulku',
+    kysymykset: [
+      'Miksi laivasto muutti pois Tukholmasta?',
+      'Mikä on maan pisin puurakennus?',
+    ],
+    korostukset: ['jäätön|jäätön'],
+    nappi: 'Laivastokaupunki, joka ei jäädy',
+    // 15.5869 E / 56.1612 N — en-Wikipedia "Karlskrona Naval Base"
+    laudat: {
+      maailmankartta: { x: 6352.9, y: 1111.6 },
+    },
+    teksti: 'Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI '
+      + 'lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle '
+      + 'rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto '
+      + 'tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin '
+      + 'päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — '
+      + 'se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. '
+      + 'Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma '
+      + '1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa '
+      + 'sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on '
+      + 'maan pisin puurakennus.',
+    lahde: 'en-Wikipedia "Karlskrona Naval Base", johdanto-osa ja osio "History" (tarkistettu '
+      + '11.9.2026).',
+  },
+  {
+    id: 'lundintuomiokirkko',
+    nimi: 'Lundin tuomiokirkko',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kenen maassa kirkko rakennettiin?',
+      'Mitä kirkolle tehtiin 1800-luvulla?',
+    ],
+    korostukset: ['astronominen kello|astronominen kello'],
+    nappi: 'Pohjolan mahtavin romaaninen kirkko',
+    // 13.1931 E / 55.7047 N — en-Wikipedia "Lund Cathedral"
+    laudat: {
+      maailmankartta: { x: 6273.1, y: 1133.0 },
+    },
+    teksti: 'Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista '
+      + 'kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen '
+      + 'väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja '
+      + 'kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle '
+      + 'Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian '
+      + 'vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. '
+      + 'Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja '
+      + 'hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli '
+      + 'Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä '
+      + 'tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua '
+      + 'täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten '
+      + 'Helgo Zettervall johdossa — Zettervall purki koko länsipään torneineen ja rakensi sen '
+      + 'omien piirustustensa mukaan uudestaan. Työ valmistui vasta 1893.',
+    lahde: 'en-Wikipedia "Lund Cathedral", johdanto-osa (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'tornionjoki',
+    nimi: 'Tornionjoki',
+    tyyppi: 'joki',
+    kysymykset: [
+      'Mistä Tornionjoki saa alkunsa?',
+      'Miksi joki on myös raja?',
+    ],
+    korostukset: ['Torneträsk|Torneträsk-järvestä'],
+    nappi: 'Joki, joka on myös valtakunnanraja',
+    // 23.7 E / 66.3 N — joen keskijuoksu Ruotsin puolella; en-Wikipedia
+    // "Torne (Finnish and Swedish river)" ei anna yhtä keskipistettä
+    laudat: {
+      maailmankartta: { x: 6623.3, y: 595.0 },
+    },
+    teksti: 'Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 '
+      + 'kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan '
+      + 'raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa '
+      + 'Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin '
+      + 'suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 '
+      + 'neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla '
+      + 'lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja '
+      + 'vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.',
+    lahde: 'en-Wikipedia "Torne (Finnish and Swedish river)", johdanto-osa ja osio "Geography" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'salanhopeakaivos',
+    nimi: 'Salan hopeakaivos',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Kuinka paljon hopeaa kaivoksesta tuli?',
+      'Miksi Salan ympärillä on niin monta patoa?',
+    ],
+    korostukset: ['rikastushiekka|rikastushiekasta'],
+    nappi: 'Kruunun hopea-aitta',
+    // 16.6028 E / 59.9206 N — en-Wikipedia "Sala Silver Mine"
+    laudat: {
+      maailmankartta: { x: 6386.8, y: 929.7 },
+    },
+    teksti: 'Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta '
+      + 'vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta '
+      + 'siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan '
+      + 'piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin '
+      + 'viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja '
+      + 'noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli '
+      + 'kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi '
+      + 'valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen '
+      + 'vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen '
+      + 'viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja '
+      + 'sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympäristön järvet, padot ja kanavat '
+      + 'rakennettiin tuottamaan vesivoimaa pumppuihin, nostokoneisiin ja sulattoon.',
+    lahde: 'en-Wikipedia "Sala Silver Mine", johdanto-osa sekä osiot "Geology" ja "History" '
+      + '(tarkistettu 11.9.2026).',
+  },
 ];
