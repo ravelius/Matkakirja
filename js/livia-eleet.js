@@ -255,6 +255,9 @@ export function asennaLivianKasvot(pollo) {
   const visanKertatunne=laji==='emotion'&&tiedot.lahde==='visa'&&[
    'aarre.kysymys.viimeinenYritys','aarre.lukittui','aarre.rosvo.voitto','aarre.rosvo.tappio',
   ].includes(tiedot.tunnus);
+  // Nopea siirtymä ruoasta sotahistoriaan ei jätä virnettä vakavan
+  // sivun päälle. Muut sivunvaihdot noudattavat normaalia eleväliä.
+  const vakavaLehti=laji==='emotion'&&tiedot.lahde==='lehti'&&tiedot.tunne==='vakava';
   // Virherivi on jo korvannut odotusrivin, vaikka MutationObserver
   // ei vielä olisi ehtinyt päivittää vanhaa DOM-viitettä.
   if(laji==='error')mietintaMuuttui();
@@ -272,7 +275,7 @@ export function asennaLivianKasvot(pollo) {
    if(!nykyinen||nykyinen.omistaja==='narration'){katkaise();piirraNyt(nyt);}
    return true;
   }
-  if(!jaksonTunne&&!visanKertatunne&&!['card','narration','chatOpen','chatClose','microphone','answer','error'].includes(laji)&&nyt-viimeTilanne<2800)return false;
+  if(!jaksonTunne&&!visanKertatunne&&!vakavaLehti&&!['card','narration','chatOpen','chatClose','microphone','answer','error'].includes(laji)&&nyt-viimeTilanne<2800)return false;
   if(puhe&&laji!=='photo')return false;
   if(puhe&&laji==='photo'&&nykyinen&&!['blink','talk','smile','present','welcome'].includes(nykyinen.id))return false;
   const ele=laji==='card'?livianAiheEle(tiedot):['narration','emotion','error'].includes(laji)?tiedot.ele:

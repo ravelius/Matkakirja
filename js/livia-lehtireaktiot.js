@@ -91,7 +91,7 @@ export function reagoiLivianLehtisivuun(ui, { kategoria, sivu, tila, omistaja, n
   if (!tunne) return null;
 
   viimeSivu.set(ui, tunniste);
-  const tiedot = { ...tunne, ele, symboli: aihe.symboli, aiheId: aihe.id, sivu, omistaja };
+  const tiedot = { ...tunne, ele, lahde: 'lehti', tunnus: tunniste, symboli: aihe.symboli, aiheId: aihe.id, sivu, omistaja };
   ilmoitaLivianTilanne('emotion', tiedot);
   return tiedot;
 }
