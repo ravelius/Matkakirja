@@ -30,6 +30,19 @@ function liviaTestYmparisto(t){
  return{pollo,button,virta,doc,lehti,reduced,El,tick,notify,raf,timers};
 }
 
+test('ensiliito kaartaa kaukaa, puhe ei katkaise sitä ja peruutus sekä reduced motion ovat siistejä',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const canvas=e.doc.body.children[0].children[0];let valmis=0;
+ assert.equal(c.ensiliito(()=>valmis++),true);assert.match(canvas.innerHTML,/scale\(0\.07 0\.07\)/,'alkaa pienenä yläkartalta');
+ e.tick(900);const puhe={};ilmoitaLivianKasvopuhe(puhe,true,'Hei, odotas kaveri.');
+ assert.ok(e.raf.size,'avauspuhe ei katkaise omistettua liitoa');e.tick(2300);assert.equal(valmis,1);assert.match(canvas.innerHTML,/scale\(0\.56 0\.56\)/);
+ ilmoitaLivianKasvopuhe(puhe,false);
+ assert.equal(c.ensiliito(()=>valmis++),true);e.tick(400);c.peruEnsiliito();e.tick(4000);assert.equal(valmis,1,'peruttu liito ei kutsu myöhäistä kuplaa');
+ assert.equal(c.ensiliito(()=>valmis++,{reducedMotion:true}),true);assert.equal(valmis,2,'vähennetty liike valmistuu heti');assert.equal(e.raf.size,0);
+ assert.equal(c.ensiliito(()=>valmis++),true);e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));e.tick(4000);
+ assert.equal(valmis,2,'piilotettu välilehti peruu valmistumisen');assert.equal(e.raf.size,0);
+});
+
 test('visan lukitus voittaa nopean varoituksen mutta ei puhetta, luentaa tai odotusta',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
  const varoitus={lahde:'visa',tunnus:'aarre.kysymys.viimeinenYritys',ele:'doubleTake',voimakkuus:.6};

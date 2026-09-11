@@ -4411,6 +4411,9 @@ export class UI {
   }
 
   destroy() {
+    // Ensiliidon kupla, ääni ja piilotuskuuntelijat kuuluvat tälle
+    // näkymälle: uusi peli ei odota niiden seuraavaa ajastinkierrosta.
+    peruLivianAvaus();
     // Laudan purku vie linssikerroksetkin (lauta.linssit.pura).
     this.pallolinssi = null;
     this.pallolauta?.pura();

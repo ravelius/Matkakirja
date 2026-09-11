@@ -882,6 +882,7 @@ const SHELL = [
   './assets/kartat/miniatyyrit/tokio-uenon-puisto.webp',
   './assets/kartat/miniatyyrit/tokio-shitamachi-museo.webp',
   './assets/tietaja/viisas-pollo.jpg',
+  './assets/tietaja/viisas-pollo-muotokuva-v1.png',
   /*
    * Tietäjätasojen muotokuvat (18.8.2026): matkalaukun rivin kuvake,
    * tasonnousun juhlakupla ja tasogallerian ruudukko. Kymmenen pientä

@@ -2,6 +2,7 @@
 import {LIVIA_PIX_ELEET,livianPikseliAsento} from './livia-pikselit.js';
 import {livianSvgPaa} from './livia-svg-paa.js';
 export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
+ Object.freeze({id:'glideIn',label:'Kiireinen ensiliito kartalta',duration:2700,group:'Liike'}),
  ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['scratch','Pään raapaisu',2600],['eyeRub','Lasit ylös ja silmien hieraisu',5200],['chuckle','Hiljainen naurunpyrskähdys',2500]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
 const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
 const lvEase=n=>{n=lvClamp(n);return n*n*(3-2*n);};
@@ -15,6 +16,7 @@ export function livianEleenVoima(id,text='') {
 }
 export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
  const s={...livianPikseliAsento(id,p),ele:id,p:lvClamp(p),voimakkuus:lvClamp(voimakkuus)};
+ if(id==='glideIn')s.flight={kind:'opening',t:lvEase(p)};
  if(id==='chuckle'&&p>.12&&p<.86){
   const syke=Math.sin((p-.12)/.74*Math.PI*6),voima=s.voimakkuus;
   s.frame='grin';s.mouth=syke>0?'talk':'talkSmall';
@@ -55,6 +57,17 @@ export function livianSvgMalli(s,{right=0}={}) {
    m.x=128;m.y=25+230*t;m.scale=.015+.55*t+.16*lvEase((t-.68)/.32);m.face=t>.8?'shock':'front';
   } else if(f.kind==='splat'){
    m.x=123;m.y=271+140*lvEase((t-.3)/.7);m.scale=.70;m.squash=.57;m.face='fluster';m.wing='spread';m.wingAmount=1;
+  } else if(f.kind==='opening'){
+   // Kiireinen mutta luettava perspektiivikaari. Viimeinen viidennes on
+   // pieni kahden askeleen haparointi, ei törmäys tai kaatuminen.
+   const u=lvClamp(t/.78);m.x=26+(128-26)*u;m.y=38+(302-38)*u-48*Math.sin(Math.PI*u);
+   m.scale=.07+.49*u;m.angle=-20*(1-u)+8*Math.sin(Math.PI*u);
+   if(t>.78){const land=(t-.78)/.22,wobble=Math.sin(land*Math.PI*2)*(1-land);
+    m.x=128+4*Math.sin(land*Math.PI*4)*(1-land);m.y=302-3*Math.abs(Math.sin(land*Math.PI*2))*(1-land);
+    m.angle=8*wobble;m.squash=1-.08*Math.max(0,Math.sin(land*Math.PI));
+    m.face=land<.62?'fluster':'smug';m.wing=land<.48?'spread':'fold';m.wingAmount=land<.48?.35*(1-land):0;
+    m.walking=true;m.step=Math.sin(land*Math.PI*4)*(1-land);
+   }
   }
  }
  if(!s.flight){
@@ -95,7 +108,7 @@ function lvWing(kind,side,amount,phase=0) {
  return `<g data-part="${side}-wing" transform="translate(${anchor} ${143+shift}) scale(${flip} 1) rotate(${angle})"><path d="M-3 4Q-11-7-4-20L4-38Q7-44 10-37L10-29Q16-42 20-37L17-24Q23-35 26-30L22-17Q29-23 29-17Q23-5 12 3Q4 8-3 4Z" fill="${side==='near'?'#8499a3':'#788e99'}"/><path d="M0-13L8-27M5-7L16-23M10-1L21-15" fill="none" stroke="#506b7a" stroke-width="3.7" stroke-linecap="round"/></g>`;
 }
 function lvFeet(m,s) {
- const step=m.walking?Math.sin(m.p*Math.PI*14):0;
+ const step=m.walking?(m.step??Math.sin(m.p*Math.PI*14)):0;
  const foot=(x,dy)=>`<path d="M${x} ${177+dy}l-1 8m0 0l-7 2m7-2l5 3m-5-3l1 3" fill="none" stroke="#ac7b74" stroke-width="2.1" stroke-linecap="round"/>`;
  return `<g data-part="feet">${foot(99,step*5)}${foot(118,-step*5)}</g>`;
 }
@@ -140,7 +153,7 @@ export function livianSvgKuva(s,{right=0,prefix='livia'}={}) {
  let markup=m.visible?shadow+lvBird(s,m,prefix)+lvProps(s,m,prefix):'';
  if(s.owlX!==null&&s.owlX!==undefined){const ox=128+(right+80)*s.owlX/24;markup+=`<g transform="translate(${ox-14} 267)" fill="#73654f"><path d="M0 3L4-3L11 2L20-3L23 3V23Q12 35 0 23Z"/><circle cx="7" cy="10" r="5" fill="#e8ddc4"/><circle cx="17" cy="10" r="5" fill="#e8ddc4"/><circle cx="7" cy="10" r="2"/><circle cx="17" cy="10" r="2"/><path d="M9 15h6l-3 5Z" fill="#e8ddc4"/></g>`;}
  if(s.line)markup+=`<path d="M94 303H${Math.min(width,152)}" stroke="#988d79" stroke-width="1.3" stroke-linecap="round"/>`;
- return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} 304" width="${width}" height="304" overflow="hidden" aria-hidden="true" data-livia-visible="${m.visible}">${markup}</svg>`;
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} 304" width="${width}" height="304" overflow="${s.flight?.kind==='opening'?'visible':'hidden'}" aria-hidden="true" data-livia-visible="${m.visible}">${markup}</svg>`;
 }
 let lvSerial=0;
 export function luoLivianSvg(element) {
