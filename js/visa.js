@@ -111,6 +111,40 @@ const LIVIA_VISA_TUNTEET=Object.freeze({
  rosvoVoitto:Object.freeze({tunnus:'aarre.rosvo.voitto',tunne:'ilo',voimakkuus:.65}),
  rosvoTappio:Object.freeze({tunnus:'aarre.rosvo.tappio',tunne:'vakava',voimakkuus:.55}),
 });
+
+const KOHTAAMISEN_OLETUSTUNTEET=Object.freeze({
+ tervehdys:Object.freeze({tunne:'lammin',voimakkuus:.5}),
+ loyto:Object.freeze({tunne:'ilo',voimakkuus:.7}),
+ tyhja:Object.freeze({tunne:'miettiva',voimakkuus:.45}),
+ vaarin:Object.freeze({tunne:'hammentynyt',voimakkuus:.4}),
+ aarre:Object.freeze({tunne:'ilo',voimakkuus:.7}),
+});
+
+/** Sisältötagi tai E2:n vakaa oletus; tuottajadata saa tulla myöhemmin. */
+export function kohtaamisenTunnetagi(laji,{kohtaaminen=null,kaariTarina=null}={}){
+ const kentta=laji==='tervehdys'&&kaariTarina?'tunneKohtaaminen'
+   :laji==='aarre'?'tunneAarre'
+     :({tervehdys:'tunneTervehdys',loyto:'tunneLoyto',tyhja:'tunneTyhja',vaarin:'tunneVaarin'}[laji]);
+ const lahde=(laji==='aarre'||(laji==='tervehdys'&&kaariTarina))?kaariTarina:kohtaaminen;
+ const tagi=kentta?lahde?.[kentta]:null;
+ if(tagi&&typeof tagi.tunne==='string'&&Number.isFinite(tagi.voimakkuus))return tagi;
+ return KOHTAAMISEN_OLETUSTUNTEET[laji]??null;
+}
+
+/** Tulos kerran per visaolio+laji; lukko ja pääaarteen paljastus omistavat hetkensä. */
+export function ilmoitaKohtaamisenTunne(ui,quiz,laji,sisalto={}){
+ if(!quiz||ui?.dead||quiz.aarreLukittui)return null;
+ // playTokenReveal tuottaa saman hetken suuremman aarreilon.
+ if(laji==='loyto'&&quiz.found)return null;
+ const tagi=kohtaamisenTunnetagi(laji,sisalto);
+ if(!tagi)return null;
+ let ilmoitetut=liviaVisaTilanteet.get(quiz);
+ if(!ilmoitetut){ilmoitetut=new Set();liviaVisaTilanteet.set(quiz,ilmoitetut);}
+ const avain=`kohtaaminen:${laji}`;
+ if(ilmoitetut.has(avain))return null;
+ ilmoitetut.add(avain);
+ return ilmoitaLivianTunne(tagi,{lahde:'visa',tunnus:`kohtaaminen.${quiz.cityId}.${laji}`});
+}
 /** Yksi merkityksellinen siirtymä kerran saman visa- tai kaksintaisteluolion aikana. */
 export function ilmoitaLivianVisaTilanne(ui,kohde,laji){
  const tagi=LIVIA_VISA_TUNTEET[laji];
@@ -150,6 +184,7 @@ export function renderQuiz(ui) {
   // valokuva, lippu) pitävät omat kehyshahmonsa.
   const kohtaaminen = !quiz.kind ? (KOHTAAMISET[quiz.cityId] ?? null) : null;
   const tervehdysAvain = `${game.pack.id}:${quiz.cityId}`;
+  const tervehdysEnsiKerta = !ui.kohtaamisetNahty.has(tervehdysAvain);
   /*
    * Tarinakaaren kohtaaminen syrjäyttää tavallisen tervehdyksen:
    * kaupungin ensimmäisessä aarrevisassa puhuu kaaren henkilö, ja
@@ -158,6 +193,7 @@ export function renderQuiz(ui) {
    * heti perään toisessa visassa.
    */
   const kaariTarina = quiz.kaari ? (TARINAKAARI[quiz.cityId] ?? null) : null;
+  const kaariAarre = quiz.kaari ? kaariTarina?.aarre : null;
   /*
    * MONESKO YRITYS (game.kaariYritysLuku): luku näkyy otsikkorivillä
    * ("yritys 2/2") ja ratkaisee, nouseeko tervehdyssivulle viimeisen
@@ -332,6 +368,10 @@ export function renderQuiz(ui) {
         return;
       }
       ui.kohtaamisetNahty.add(tervehdysAvain);
+      // Viimeisen yrityksen vakava varoitus voittaa tervehdyksen sävyn.
+      if (tervehdysEnsiKerta && !viimeinenYritys) {
+        ilmoitaKohtaamisenTunne(ui, quiz, 'tervehdys', { kohtaaminen, kaariTarina });
+      }
       /*
        * KERTOJA EI ENÄÄ LUE TERVEHDYSTÄ (omistajan tilaus 18.8.2026:
        * "Ota kertojan ääni pois ... siitä hetkestä, kun pelaaja menee
@@ -462,7 +502,6 @@ export function renderQuiz(ui) {
          * kaaren aarreteksti sulkee tarinan ja kertoja lukee sen —
          * sama pari kuin laatan paljastuksessa (playTokenReveal).
          */
-        const kaariAarre = quiz.kaari ? TARINAKAARI[quiz.cityId]?.aarre : null;
         body.appendChild(html('strong', '', kaariAarre
           ? `Kätkö löytyi! +${EXPLORE_REWARD} puntaa.`
           : `Oikein! Löytöpalkkio +${EXPLORE_REWARD} puntaa.`));
@@ -536,6 +575,14 @@ export function renderQuiz(ui) {
             ? kohtaaminen.loyto
             : kohtaaminen.tyhja;
         if (repliikki) body.appendChild(html('span', 'kohtaaminen-repliikki', repliikki));
+        const tuloslaji = !quiz.right
+          ? 'vaarin'
+          : (quiz.explore || quiz.found) ? 'loyto' : 'tyhja';
+        // Kaaren henkilö omistaa tämän visan; mahdollinen kaupungin
+        // perustietue ei saa tuottaa toista tunnetta samaan korttiin.
+        if (!kaariTarina) {
+          ilmoitaKohtaamisenTunne(ui, quiz, tuloslaji, { kohtaaminen });
+        }
         /*
          * Löytöhetken sananvaihto luetaan ääneen (omistajan rajaus
          * 7.8.2026: hahmon ja pelaajan lyhyt dialogi, "nyt kiireesti
@@ -555,6 +602,9 @@ export function renderQuiz(ui) {
             );
           }
         }
+      }
+      if (quiz.right && quiz.explore && kaariAarre) {
+        ilmoitaKohtaamisenTunne(ui, quiz, 'aarre', { kaariTarina });
       }
       if (quiz.fact) body.appendChild(html('span', 'muted', quiz.fact));
       const quizSource = ui.sourceLine(quiz.source);
