@@ -4439,6 +4439,7 @@ export const RAAMATTU = {
           + 'linjausta POLLON VALMISKYSYMYKSET: valmiskysymykset palaavat '
           + 'kayttoon tassa rajatussa tilanteessa (24.8.2026 kytkin koski '
           + 'laatta- ja lehtitilanteita).',
+        'PELAAJAN MAAN RAJAT VAHVEMMALLA (omistaja 11.9.2026 ilta, sanatarkasti: "Peli voisi piirtaa vahvemmalla aina kyseisen valtion rajat jossa pelaaja on"): sen valtion aariviiva, jossa pelaaja parhaillaan on, piirretaan muita rajoja vahvempana, jotta pelaaja nakee yhdella silmayksella missa maassa ollaan. Tama EI ole nykyisen rajaviivaston saatoa: poltettu viivasto on pelkka murtoviivasto, joka ei tunne yhtaakaan valtiota (tools/fokuskartta/rajat.mjs), joten korostus vaatii oman valtiokohtaisen aariviiva-aineiston. Korostus seuraa pelaajan sijaintia automaattisesti eika ole valikkokytkin.',
         'NAPA-ALUEET PARHAALLA MAHDOLLISELLA JALJELLA, POHJOISNAVALLE OMAT '
           + 'NOSTOT, HAVAINNEKUVIA PALJON (omistaja 11.9.2026, kaksi '
           + 'iPhone-kaappausta napanakymista, sanatarkasti: "Rajat nakyvat yha. '
