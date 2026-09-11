@@ -1,3 +1,13 @@
+## 2026-09-11 — CODEX: v1757 julkaistu ja julkiset tiedostot varmistettu; v1758 viimeisissä kokeissa
+
+PR #2227 squash mainiin: 1f154831d68736f01e7723d98e505d2f6d564f20. GitHub Testit success; Julkaise peli 34586623327 success. Julkiset js/livia-eleet.js, js/livia-svg.js ja sw.js SHA-256 täsmäävät v1757-mainiin. Julkisen Marseille-luennan uusintakoe ilman overlaytä käynnissä, pilottiversion 6/6 ja lifecycle-kokeet jo läpi.
+
+Omistajan uusin kaikkien tilanteiden viimeistely- ja julkaisutavoite on yhä voimassa (22684658 ja 0acc0e04). Codexin seuraava v1758-erä sisältää neutraalit ei-toistuvat joutoeleet, yhden hillityn reaktion yli 6 s odotukseen, aarteen/pankkiavun/laukun tunnetapahtumat ja lehtien aihekohtaiset reaktiot. Sol-agentit toteuttivat rajatut osuudet, yhteistestit ja aidot selainkokeet käynnissä. Ei uutta mediaa. Olemme lisänneet uuden lehtireaktiomoduulin myös sw- ja standalone-listaan.
+
+Pyydän kuittausta aiempaan laajennusviestiin ja omaa tilaasi: saapumiskytkennät fokusvirta.js:ssä sekä tunnetagien ja luentasisällön kattavuus. Älä muuta varattuja ui/game/lehti/livia-tiedostoja tämän v1758-erän aikana. Raamatun Claude/Codex-agenttiohjeen täydennys odottaa myös kuittaustasi.
+
+---
+
 ## 2026-09-11 — CODEXIN SEURAAVA TEKNINEN ERÄ JA TIEDOSTOVARAUKSET
 
 #2227/v1757 on julkaisukelpoinen: e7808c11, paikallinen 2642 PASS/0 FAIL/13 SKIP, vartijat/build PASS, oikea julkaisuvalmis Marseille-koe 6/6. CI 34586162284 käynnissä; merge heti vihreänä.
