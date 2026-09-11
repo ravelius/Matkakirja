@@ -1,4 +1,5 @@
 import { ilmoitaLivianKasvopuhe } from './livia-puhetila.js';
+import { luoLivianKuunteluvuoro } from './livia-tilanteet.js';
 /*
  * PUHE — lukijaääni lennossa generoituna (omistajan päätös 14.8.2026).
  *
@@ -876,12 +877,21 @@ export function luoPuheSoitin({
   };
 
   const kasvoTunnus = {};
+  const kuuntelu = persoona === 'pollo' ? null : luoLivianKuunteluvuoro(kasvoTunnus, { lahde: 'lukija' });
   const ilmoitaKasvopuhe = () => {
-    if (persoona !== 'pollo') return;
     const nyt = piiri.currentTime;
-    const i = !tila.peruttu && !tila.tauolla && piiri.state === 'running'
+    const kay = !tila.peruttu && !tila.tauolla && piiri.state === 'running';
+    const i = kay
       ? aloitusajat.findIndex(a => a && nyt >= a.alku && nyt < a.loppu) : -1;
-    ilmoitaLivianKasvopuhe(kasvoTunnus, i >= 0, palat[i]?.teksti);
+    if (persoona === 'pollo') ilmoitaLivianKasvopuhe(kasvoTunnus, i >= 0, palat[i]?.teksti);
+    else if (tila.peruttu) kuuntelu.lopeta();
+    else {
+      // Suunnitellut virke-/otsikkotauot kuuluvat samaan luentaan.
+      // Puskurin loppuminen tai pysähtynyt piiri sen sijaan vapauttaa.
+      const eka = aloitusajat.find(Boolean), vika = aloitusajat.findLast(Boolean);
+      kuuntelu.paivita(Boolean(kay && eka && nyt >= eka.alku && nyt < vika.loppu),
+        nyt, palat[i >= 0 ? i : tila.soiva]?.teksti ?? '');
+    }
   };
   const ilmoita = () => {
     ilmoitaKasvopuhe();
