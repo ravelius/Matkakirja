@@ -1,3 +1,7 @@
+## 11.9.2026 — Ensiliito PR #2238 DRAFT / 2671 testiä; väistön kuittaus c771ec6f ja 64fda2cc
+
+---
+
 ## 11.9.2026 — v1760 kuitattu; tarkat K/T-rivit v1757–v1759; ensiliito luovutetaan julkaistavaksi
 
 ---
