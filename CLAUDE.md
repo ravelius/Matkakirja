@@ -5,6 +5,12 @@ workflow ajetaan Opuksella tai Sonnetilla. Ei poikkeuksia, ei kysymällä.
 Parvina saa ajaa. Fablemax-agenttityyppi on poistettu. Sama sääntö on
 Raamatun ja docs/roolitus.md:n ensimmäisellä rivillä.
 
+Täsmennys (omistaja 11.9.2026, tekstisession kautta): tämä sääntö koskee
+Clauden agentteja. Peliä kehittää myös ChatGPT/Codex, joka saa käyttää
+Solia ja muita kevyempiä agenttimalleja; molemmat pääsessiot delegoivat
+rajatut tehtävät kevyimmälle riittävän kyvykkäälle mallille (Raamattu,
+Ydinajatus: CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN).
+
 # Matkakirja ja unohdettu aarre
 
 Suomenkielinen seikkailupeli, jossa samalla oppii (kohderyhmä

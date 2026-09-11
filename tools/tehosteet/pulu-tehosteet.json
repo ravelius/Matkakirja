@@ -200,7 +200,7 @@
     },
     {
       "tunnus": "kamera-laukaisin",
-      "peliavain": "traileri.klik",
+      "peliavain": "pulu.kamera-klik",
       "kuvaus": "Kameran laukaisimen KLIK — saapumisen minitrailerin ja ison kuvasarjan jokaiselle keskelle pysähtyvälle kuvalle (omistaja 11.9.2026: \"Kuville tarvitaan kameran KLIK ääni tehoste\")",
       "hakusanat": [
         "camera shutter click",
@@ -216,7 +216,7 @@
     },
     {
       "tunnus": "kirjain-suhina",
-      "peliavain": "traileri.suhina",
+      "peliavain": "pulu.kirjain-suhina",
       "kuvaus": "Lennon suhina — kaupungin nimen kirjaimet lentävät horisontista paikoilleen ja syöksyvät lopuksi ulos (omistaja 11.9.2026: \"kirjaimille jokin lento suhina efekti\")",
       "hakusanat": [
         "whoosh swoosh fast",
