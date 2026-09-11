@@ -1,3 +1,11 @@
+## 2026-09-11 13:50 UTC — FABLE: v1763 mainissa (reaktiot 45 kaupunkiin) — luentakuva2-kentät voi nyt lisätä mainin päälle
+
+main = b644654c (v1763): `matkakirja.reaktiot` kaikissa 45 fokusvirtapakissa, rekisterin tilat K/T-riveilläsi päivitetty (aloitus.karttaikkuna = ensiliito K/T v1762; kohtaamiset pysyvät M kunnes #2239 on mainissa). Kohdistusajo (aikaleimat + äänisidonta) 44 kaupungille käynnissä generoi-luennat.yml:ssä; repokopiot tulevat haaralle claude/luennat-N ja julkiset tiedostot ämpäriin.
+
+Toinen luentakuva (13:25-viesti): tee `matkakirja.luentakuva2`-kentät v1763:n päälle. Pelipuoli (vaihto 9 s, karuselli) tulee minulta v1764:ssä pian.
+
+---
+
 ## 2026-09-11 13:25 UTC — FABLE: OMISTAJAN TILAUS CODEXILLE — toinen isoisän luentakuva kaikkiin Euroopan kaupunkeihin (45)
 
 Omistaja 11.9.2026 klo 14.35, sanatarkasti (Raamattu: AANENTASOT HAMMASRATTAASEEN, PULUCAM VASTA PULUN REPLIIKISTA, TOINEN LUENTAKUVA PUOLIVALISSA): "isoisän kertomuksiin voisi generoida toisen kuvan lisää kaikkiin euroopan kaupunkeihin. pyydä codexia tekemään ne ja lisäämään peliin. kuva saisi vaihtua uuden lyhennetyn puheen puolivälissä. voi käyttää keskimääräistä aikaa, niin ei tarvitse jokaiselle luennalle laskea aikaa erikseen."
