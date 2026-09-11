@@ -1,0 +1,229 @@
+{
+  "versio": 2,
+  "kaupunki": "pariisi",
+  "teksti": "Pariisin uusi oopperatalo on yhä kesken, mutta mahtaako sisällä enää tapahtua mitään seinien veroista? Kultaa, pylväitä, marmoria. Kokonainen rakennus parhaissa juhlatamineissaan. Paluumatkalla seurasin kaksi korttelia miestä, joka vihelsi leipä kainalossa. Jos hänelle annettaisiin tuo talo, menisin kuuntelemaan. Toistaiseksi hän esiintyy ilmaiseksi.",
+  "tekstiSha256": "6961fbca20ed1947014501eeb94291659fc906fe3aece1daf0b35904d8f4779a",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-pariisi.mp3",
+    "versio": 2,
+    "tavut": 483622,
+    "sha256": "c148e110430088deeceec7d97e89fdea74549fe6ff1f00bdf48a04db372cc22e"
+  },
+  "kesto": 30119,
+  "sanat": [
+    {
+      "sana": "Pariisin",
+      "alku": 79,
+      "loppu": 599
+    },
+    {
+      "sana": "uusi",
+      "alku": 659,
+      "loppu": 919
+    },
+    {
+      "sana": "oopperatalo",
+      "alku": 1059,
+      "loppu": 1759
+    },
+    {
+      "sana": "on",
+      "alku": 1819,
+      "loppu": 1959
+    },
+    {
+      "sana": "yhä",
+      "alku": 2000,
+      "loppu": 2159
+    },
+    {
+      "sana": "kesken",
+      "alku": 2279,
+      "loppu": 2779
+    },
+    {
+      "sana": "mutta",
+      "alku": 3579,
+      "loppu": 3779
+    },
+    {
+      "sana": "mahtaako",
+      "alku": 3859,
+      "loppu": 4360
+    },
+    {
+      "sana": "sisällä",
+      "alku": 4420,
+      "loppu": 4799
+    },
+    {
+      "sana": "enää",
+      "alku": 4839,
+      "loppu": 5119
+    },
+    {
+      "sana": "tapahtua",
+      "alku": 5159,
+      "loppu": 5699
+    },
+    {
+      "sana": "mitään",
+      "alku": 5759,
+      "loppu": 6139
+    },
+    {
+      "sana": "seinien",
+      "alku": 6259,
+      "loppu": 6699
+    },
+    {
+      "sana": "veroista",
+      "alku": 6779,
+      "loppu": 7299
+    },
+    {
+      "sana": "Kultaa",
+      "alku": 8960,
+      "loppu": 9500
+    },
+    {
+      "sana": "pylväitä",
+      "alku": 9699,
+      "loppu": 10300
+    },
+    {
+      "sana": "marmoria",
+      "alku": 10599,
+      "loppu": 11199
+    },
+    {
+      "sana": "Kokonainen",
+      "alku": 12159,
+      "loppu": 12619
+    },
+    {
+      "sana": "rakennus",
+      "alku": 12699,
+      "loppu": 13199
+    },
+    {
+      "sana": "parhaissa",
+      "alku": 13239,
+      "loppu": 13739
+    },
+    {
+      "sana": "juhlatamineissaan",
+      "alku": 13840,
+      "loppu": 14920
+    },
+    {
+      "sana": "Paluumatkalla",
+      "alku": 16719,
+      "loppu": 17359
+    },
+    {
+      "sana": "seurasin",
+      "alku": 17440,
+      "loppu": 17859
+    },
+    {
+      "sana": "kaksi",
+      "alku": 17899,
+      "loppu": 18180
+    },
+    {
+      "sana": "korttelia",
+      "alku": 18239,
+      "loppu": 18719
+    },
+    {
+      "sana": "miestä",
+      "alku": 18779,
+      "loppu": 19119
+    },
+    {
+      "sana": "joka",
+      "alku": 19199,
+      "loppu": 19379
+    },
+    {
+      "sana": "vihelsi",
+      "alku": 19520,
+      "loppu": 19919
+    },
+    {
+      "sana": "leipä",
+      "alku": 19979,
+      "loppu": 20260
+    },
+    {
+      "sana": "kainalossa",
+      "alku": 20319,
+      "loppu": 20959
+    },
+    {
+      "sana": "Jos",
+      "alku": 22479,
+      "loppu": 22619
+    },
+    {
+      "sana": "hänelle",
+      "alku": 22659,
+      "loppu": 22939
+    },
+    {
+      "sana": "annettaisiin",
+      "alku": 23019,
+      "loppu": 23680
+    },
+    {
+      "sana": "tuo",
+      "alku": 23779,
+      "loppu": 23959
+    },
+    {
+      "sana": "talo",
+      "alku": 24059,
+      "loppu": 24319
+    },
+    {
+      "sana": "menisin",
+      "alku": 24939,
+      "loppu": 25319
+    },
+    {
+      "sana": "kuuntelemaan",
+      "alku": 25379,
+      "loppu": 26059
+    },
+    {
+      "sana": "Toistaiseksi",
+      "alku": 27979,
+      "loppu": 28619
+    },
+    {
+      "sana": "hän",
+      "alku": 28680,
+      "loppu": 28799
+    },
+    {
+      "sana": "esiintyy",
+      "alku": 28879,
+      "loppu": 29399
+    },
+    {
+      "sana": "ilmaiseksi",
+      "alku": 29479,
+      "loppu": 30119
+    }
+  ],
+  "lauseet": [
+    79,
+    8960,
+    12159,
+    16719,
+    22479,
+    27979
+  ],
+  "luotu": "2026-09-11T12:04:09.913Z"
+}

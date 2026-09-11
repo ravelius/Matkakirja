@@ -1,0 +1,228 @@
+{
+  "versio": 2,
+  "kaupunki": "barcelona",
+  "teksti": "Barcelonan uusista kortteleista on leikattu kulmat pois. Ensin epäilin muuraria, sitten näin kahden kärryn mahtuvan kääntymään. Insinööri Cerdà on piirtänyt kaupunkilaisille tilaa hengittää. Yhden tulevan kadun paikalla kasvoi vielä kaalia. Toivoin sille hyvää satoa: se ei tiennyt, että oli muuttumassa liikenteeksi.",
+  "tekstiSha256": "fdb3780173eb8adadfb2a62ee822a96d73bc9af70280fff830185665451a6924",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-barcelona.mp3",
+    "versio": 2,
+    "tavut": 445170,
+    "sha256": "b3efdb4866ad5d6cc886aed3f6784cf3509582d999dd3e00543e337fd5942ebf"
+  },
+  "kesto": 27719,
+  "sanat": [
+    {
+      "sana": "Barcelonan",
+      "alku": 140,
+      "loppu": 759
+    },
+    {
+      "sana": "uusista",
+      "alku": 799,
+      "loppu": 1120
+    },
+    {
+      "sana": "kortteleista",
+      "alku": 1220,
+      "loppu": 1860
+    },
+    {
+      "sana": "on",
+      "alku": 1899,
+      "loppu": 1979
+    },
+    {
+      "sana": "leikattu",
+      "alku": 2000,
+      "loppu": 2519
+    },
+    {
+      "sana": "kulmat",
+      "alku": 2579,
+      "loppu": 2980
+    },
+    {
+      "sana": "pois",
+      "alku": 3039,
+      "loppu": 3439
+    },
+    {
+      "sana": "Ensin",
+      "alku": 5039,
+      "loppu": 5299
+    },
+    {
+      "sana": "epäilin",
+      "alku": 5339,
+      "loppu": 5699
+    },
+    {
+      "sana": "muuraria",
+      "alku": 5799,
+      "loppu": 6339
+    },
+    {
+      "sana": "sitten",
+      "alku": 7319,
+      "loppu": 7579
+    },
+    {
+      "sana": "näin",
+      "alku": 7639,
+      "loppu": 7779
+    },
+    {
+      "sana": "kahden",
+      "alku": 7899,
+      "loppu": 8279
+    },
+    {
+      "sana": "kärryn",
+      "alku": 8340,
+      "loppu": 8720
+    },
+    {
+      "sana": "mahtuvan",
+      "alku": 8779,
+      "loppu": 9179
+    },
+    {
+      "sana": "kääntymään",
+      "alku": 9300,
+      "loppu": 9880
+    },
+    {
+      "sana": "Insinööri",
+      "alku": 11739,
+      "loppu": 12199
+    },
+    {
+      "sana": "Cerdà",
+      "alku": 12279,
+      "loppu": 12819
+    },
+    {
+      "sana": "on",
+      "alku": 12880,
+      "loppu": 13000
+    },
+    {
+      "sana": "piirtänyt",
+      "alku": 13059,
+      "loppu": 13480
+    },
+    {
+      "sana": "kaupunkilaisille",
+      "alku": 13559,
+      "loppu": 14559
+    },
+    {
+      "sana": "tilaa",
+      "alku": 14619,
+      "loppu": 14939
+    },
+    {
+      "sana": "hengittää",
+      "alku": 14979,
+      "loppu": 15639
+    },
+    {
+      "sana": "Yhden",
+      "alku": 17420,
+      "loppu": 17699
+    },
+    {
+      "sana": "tulevan",
+      "alku": 17799,
+      "loppu": 18159
+    },
+    {
+      "sana": "kadun",
+      "alku": 18260,
+      "loppu": 18559
+    },
+    {
+      "sana": "paikalla",
+      "alku": 18619,
+      "loppu": 19279
+    },
+    {
+      "sana": "kasvoi",
+      "alku": 19340,
+      "loppu": 19699
+    },
+    {
+      "sana": "vielä",
+      "alku": 19779,
+      "loppu": 19979
+    },
+    {
+      "sana": "kaalia",
+      "alku": 20100,
+      "loppu": 20579
+    },
+    {
+      "sana": "Toivoin",
+      "alku": 22539,
+      "loppu": 22920
+    },
+    {
+      "sana": "sille",
+      "alku": 22979,
+      "loppu": 23199
+    },
+    {
+      "sana": "hyvää",
+      "alku": 23239,
+      "loppu": 23520
+    },
+    {
+      "sana": "satoa",
+      "alku": 23619,
+      "loppu": 24000
+    },
+    {
+      "sana": "se",
+      "alku": 25260,
+      "loppu": 25359
+    },
+    {
+      "sana": "ei",
+      "alku": 25439,
+      "loppu": 25559
+    },
+    {
+      "sana": "tiennyt",
+      "alku": 25579,
+      "loppu": 25920
+    },
+    {
+      "sana": "että",
+      "alku": 25979,
+      "loppu": 26139
+    },
+    {
+      "sana": "oli",
+      "alku": 26180,
+      "loppu": 26319
+    },
+    {
+      "sana": "muuttumassa",
+      "alku": 26379,
+      "loppu": 26939
+    },
+    {
+      "sana": "liikenteeksi",
+      "alku": 27019,
+      "loppu": 27719
+    }
+  ],
+  "lauseet": [
+    140,
+    5039,
+    11739,
+    17420,
+    22539
+  ],
+  "luotu": "2026-09-11T12:04:43.998Z"
+}

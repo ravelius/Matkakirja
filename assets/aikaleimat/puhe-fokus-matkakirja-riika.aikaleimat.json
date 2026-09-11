@@ -1,0 +1,244 @@
+{
+  "versio": 2,
+  "kaupunki": "riika",
+  "teksti": "Riikaan on tullut laulajia Latvian ensimmäisille suurille laulujuhlille. Luulin ensin kuulevani monta kuoroa, kunnes äänet ottivat saman hengenvedon. En ymmärtänyt sanoja. Viereinen mies lauloi kyynel poskellaan eikä pyyhkinyt sitä pois. Olin merkinnyt karttaan sataman ja kirkot. Kaupungin tärkein rakennus olikin hetken ajan tehty ihmisäänistä.",
+  "tekstiSha256": "54f46cef096963b53c38a3224b7a9017a9bc05a8b899ab2e805af2b6f174320d",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-riika.mp3",
+    "versio": 2,
+    "tavut": 471919,
+    "sha256": "b20292d7c38644048eb7837e89cacc9c0b88dbea26618dfd76373ced4491507d"
+  },
+  "kesto": 29420,
+  "sanat": [
+    {
+      "sana": "Riikaan",
+      "alku": 239,
+      "loppu": 719
+    },
+    {
+      "sana": "on",
+      "alku": 759,
+      "loppu": 859
+    },
+    {
+      "sana": "tullut",
+      "alku": 899,
+      "loppu": 1120
+    },
+    {
+      "sana": "laulajia",
+      "alku": 1199,
+      "loppu": 1779
+    },
+    {
+      "sana": "Latvian",
+      "alku": 1919,
+      "loppu": 2379
+    },
+    {
+      "sana": "ensimmäisille",
+      "alku": 2440,
+      "loppu": 3139
+    },
+    {
+      "sana": "suurille",
+      "alku": 3259,
+      "loppu": 3659
+    },
+    {
+      "sana": "laulujuhlille",
+      "alku": 3779,
+      "loppu": 4659
+    },
+    {
+      "sana": "Luulin",
+      "alku": 6179,
+      "loppu": 6460
+    },
+    {
+      "sana": "ensin",
+      "alku": 6519,
+      "loppu": 6799
+    },
+    {
+      "sana": "kuulevani",
+      "alku": 6920,
+      "loppu": 7419
+    },
+    {
+      "sana": "monta",
+      "alku": 7480,
+      "loppu": 7739
+    },
+    {
+      "sana": "kuoroa",
+      "alku": 7879,
+      "loppu": 8319
+    },
+    {
+      "sana": "kunnes",
+      "alku": 8800,
+      "loppu": 9119
+    },
+    {
+      "sana": "äänet",
+      "alku": 9220,
+      "loppu": 9500
+    },
+    {
+      "sana": "ottivat",
+      "alku": 9559,
+      "loppu": 9979
+    },
+    {
+      "sana": "saman",
+      "alku": 10039,
+      "loppu": 10319
+    },
+    {
+      "sana": "hengenvedon",
+      "alku": 10399,
+      "loppu": 11079
+    },
+    {
+      "sana": "En",
+      "alku": 12559,
+      "loppu": 12639
+    },
+    {
+      "sana": "ymmärtänyt",
+      "alku": 12719,
+      "loppu": 13199
+    },
+    {
+      "sana": "sanoja",
+      "alku": 13259,
+      "loppu": 13659
+    },
+    {
+      "sana": "Viereinen",
+      "alku": 15000,
+      "loppu": 15399
+    },
+    {
+      "sana": "mies",
+      "alku": 15500,
+      "loppu": 15739
+    },
+    {
+      "sana": "lauloi",
+      "alku": 15819,
+      "loppu": 16159
+    },
+    {
+      "sana": "kyynel",
+      "alku": 16219,
+      "loppu": 16520
+    },
+    {
+      "sana": "poskellaan",
+      "alku": 16639,
+      "loppu": 17359
+    },
+    {
+      "sana": "eikä",
+      "alku": 17459,
+      "loppu": 17680
+    },
+    {
+      "sana": "pyyhkinyt",
+      "alku": 17739,
+      "loppu": 18219
+    },
+    {
+      "sana": "sitä",
+      "alku": 18279,
+      "loppu": 18500
+    },
+    {
+      "sana": "pois",
+      "alku": 18559,
+      "loppu": 18939
+    },
+    {
+      "sana": "Olin",
+      "alku": 21139,
+      "loppu": 21299
+    },
+    {
+      "sana": "merkinnyt",
+      "alku": 21359,
+      "loppu": 21819
+    },
+    {
+      "sana": "karttaan",
+      "alku": 21879,
+      "loppu": 22419
+    },
+    {
+      "sana": "sataman",
+      "alku": 22479,
+      "loppu": 22979
+    },
+    {
+      "sana": "ja",
+      "alku": 23039,
+      "loppu": 23079
+    },
+    {
+      "sana": "kirkot",
+      "alku": 23199,
+      "loppu": 23679
+    },
+    {
+      "sana": "Kaupungin",
+      "alku": 25319,
+      "loppu": 25760
+    },
+    {
+      "sana": "tärkein",
+      "alku": 25799,
+      "loppu": 26219
+    },
+    {
+      "sana": "rakennus",
+      "alku": 26299,
+      "loppu": 26819
+    },
+    {
+      "sana": "olikin",
+      "alku": 26879,
+      "loppu": 27219
+    },
+    {
+      "sana": "hetken",
+      "alku": 27260,
+      "loppu": 27619
+    },
+    {
+      "sana": "ajan",
+      "alku": 27699,
+      "loppu": 28039
+    },
+    {
+      "sana": "tehty",
+      "alku": 28079,
+      "loppu": 28479
+    },
+    {
+      "sana": "ihmisäänistä",
+      "alku": 28599,
+      "loppu": 29420
+    }
+  ],
+  "lauseet": [
+    239,
+    6179,
+    12559,
+    15000,
+    21139,
+    25319
+  ],
+  "luotu": "2026-09-11T12:04:42.501Z"
+}

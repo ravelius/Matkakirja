@@ -1,0 +1,218 @@
+{
+  "versio": 2,
+  "kaupunki": "sisilia",
+  "teksti": "Palermon palatsikappelissa seinät hohtavat kultaa ja puukatto näyttää puusta veistetyltä luolastolta. Normannien kuningas teetti sen, mutta kädet tulivat monesta maailmasta: kreikkalaisia mosaiikkeja, arabialaista veistotyötä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi mainittiin monta kertaa. Tekijöiden nimiä olisin kuunnellut kauemmin.",
+  "tekstiSha256": "78016f39822d19124510e3cc8613662116810d29aa20ca3eadfae629e0c5d335",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-sisilia.mp3",
+    "versio": 2,
+    "tavut": 464396,
+    "sha256": "150b0e5b8c0b375a3409fbfc157656d4ae38ccef9b40e3bcf6099d670ee5f24f"
+  },
+  "kesto": 28940,
+  "sanat": [
+    {
+      "sana": "Palermon",
+      "alku": 179,
+      "loppu": 680
+    },
+    {
+      "sana": "palatsikappelissa",
+      "alku": 719,
+      "loppu": 1699
+    },
+    {
+      "sana": "seinät",
+      "alku": 1779,
+      "loppu": 2139
+    },
+    {
+      "sana": "hohtavat",
+      "alku": 2200,
+      "loppu": 2700
+    },
+    {
+      "sana": "kultaa",
+      "alku": 2759,
+      "loppu": 3319
+    },
+    {
+      "sana": "ja",
+      "alku": 3599,
+      "loppu": 3699
+    },
+    {
+      "sana": "puukatto",
+      "alku": 3759,
+      "loppu": 4279
+    },
+    {
+      "sana": "näyttää",
+      "alku": 4299,
+      "loppu": 4739
+    },
+    {
+      "sana": "puusta",
+      "alku": 4819,
+      "loppu": 5119
+    },
+    {
+      "sana": "veistetyltä",
+      "alku": 5179,
+      "loppu": 5819
+    },
+    {
+      "sana": "luolastolta",
+      "alku": 5879,
+      "loppu": 6659
+    },
+    {
+      "sana": "Normannien",
+      "alku": 8139,
+      "loppu": 8679
+    },
+    {
+      "sana": "kuningas",
+      "alku": 8739,
+      "loppu": 9220
+    },
+    {
+      "sana": "teetti",
+      "alku": 9239,
+      "loppu": 9599
+    },
+    {
+      "sana": "sen",
+      "alku": 9679,
+      "loppu": 9840
+    },
+    {
+      "sana": "mutta",
+      "alku": 10439,
+      "loppu": 10619
+    },
+    {
+      "sana": "kädet",
+      "alku": 10719,
+      "loppu": 11079
+    },
+    {
+      "sana": "tulivat",
+      "alku": 11119,
+      "loppu": 11439
+    },
+    {
+      "sana": "monesta",
+      "alku": 11500,
+      "loppu": 11819
+    },
+    {
+      "sana": "maailmasta",
+      "alku": 11920,
+      "loppu": 12539
+    },
+    {
+      "sana": "kreikkalaisia",
+      "alku": 13759,
+      "loppu": 14440
+    },
+    {
+      "sana": "mosaiikkeja",
+      "alku": 14519,
+      "loppu": 15259
+    },
+    {
+      "sana": "arabialaista",
+      "alku": 15699,
+      "loppu": 16340
+    },
+    {
+      "sana": "veistotyötä",
+      "alku": 16420,
+      "loppu": 17139
+    },
+    {
+      "sana": "Katselin",
+      "alku": 18859,
+      "loppu": 19279
+    },
+    {
+      "sana": "ylös",
+      "alku": 19340,
+      "loppu": 19619
+    },
+    {
+      "sana": "kunnes",
+      "alku": 19879,
+      "loppu": 20159
+    },
+    {
+      "sana": "niska",
+      "alku": 20239,
+      "loppu": 20499
+    },
+    {
+      "sana": "väsyi",
+      "alku": 20559,
+      "loppu": 21000
+    },
+    {
+      "sana": "Kuninkaan",
+      "alku": 22680,
+      "loppu": 23139
+    },
+    {
+      "sana": "nimi",
+      "alku": 23180,
+      "loppu": 23439
+    },
+    {
+      "sana": "mainittiin",
+      "alku": 23500,
+      "loppu": 24039
+    },
+    {
+      "sana": "monta",
+      "alku": 24100,
+      "loppu": 24379
+    },
+    {
+      "sana": "kertaa",
+      "alku": 24420,
+      "loppu": 24920
+    },
+    {
+      "sana": "Tekijöiden",
+      "alku": 26539,
+      "loppu": 27059
+    },
+    {
+      "sana": "nimiä",
+      "alku": 27079,
+      "loppu": 27519
+    },
+    {
+      "sana": "olisin",
+      "alku": 27599,
+      "loppu": 27939
+    },
+    {
+      "sana": "kuunnellut",
+      "alku": 27979,
+      "loppu": 28459
+    },
+    {
+      "sana": "kauemmin",
+      "alku": 28519,
+      "loppu": 28940
+    }
+  ],
+  "lauseet": [
+    179,
+    8139,
+    18859,
+    22680,
+    26539
+  ],
+  "luotu": "2026-09-11T12:05:12.806Z"
+}

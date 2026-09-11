@@ -1,0 +1,224 @@
+{
+  "versio": 2,
+  "kaupunki": "kreeta",
+  "teksti": "Hanian sataman majakan aloittivat venetsialaiset ja korjasivat egyptiläiset. Nyt kaupunki kuuluu sulttaanille. Kalastaja selvitti minulle kaikki kolme ja paikkasi samalla verkkoaan. Kun kysyin, kenen majakka siis on, hän osoitti merelle. Niiden, jotka tarvitsevat sitä. Piirsin karttaani valon ilman valtakunnan väriä.",
+  "tekstiSha256": "c5cd21f81a6ef2ec6dc102b8792b0c454469ba322d8892b375b4b034b75b7865",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-kreeta.mp3",
+    "versio": 2,
+    "tavut": 458127,
+    "sha256": "6665ad756956aca0b94726037bbb6fb411476b61b04512e46066ca3fc0612c34"
+  },
+  "kesto": 28519,
+  "sanat": [
+    {
+      "sana": "Hanian",
+      "alku": 79,
+      "loppu": 479
+    },
+    {
+      "sana": "sataman",
+      "alku": 579,
+      "loppu": 1000
+    },
+    {
+      "sana": "majakan",
+      "alku": 1079,
+      "loppu": 1559
+    },
+    {
+      "sana": "aloittivat",
+      "alku": 1599,
+      "loppu": 2159
+    },
+    {
+      "sana": "venetsialaiset",
+      "alku": 2200,
+      "loppu": 3159
+    },
+    {
+      "sana": "ja",
+      "alku": 3419,
+      "loppu": 3519
+    },
+    {
+      "sana": "korjasivat",
+      "alku": 3559,
+      "loppu": 4179
+    },
+    {
+      "sana": "egyptiläiset",
+      "alku": 4259,
+      "loppu": 5219
+    },
+    {
+      "sana": "Nyt",
+      "alku": 6819,
+      "loppu": 6980
+    },
+    {
+      "sana": "kaupunki",
+      "alku": 7059,
+      "loppu": 7559
+    },
+    {
+      "sana": "kuuluu",
+      "alku": 7639,
+      "loppu": 7999
+    },
+    {
+      "sana": "sulttaanille",
+      "alku": 8079,
+      "loppu": 8939
+    },
+    {
+      "sana": "Kalastaja",
+      "alku": 10279,
+      "loppu": 10760
+    },
+    {
+      "sana": "selvitti",
+      "alku": 10819,
+      "loppu": 11219
+    },
+    {
+      "sana": "minulle",
+      "alku": 11279,
+      "loppu": 11519
+    },
+    {
+      "sana": "kaikki",
+      "alku": 11639,
+      "loppu": 11960
+    },
+    {
+      "sana": "kolme",
+      "alku": 12039,
+      "loppu": 12359
+    },
+    {
+      "sana": "ja",
+      "alku": 12759,
+      "loppu": 12859
+    },
+    {
+      "sana": "paikkasi",
+      "alku": 12899,
+      "loppu": 13359
+    },
+    {
+      "sana": "samalla",
+      "alku": 13420,
+      "loppu": 13719
+    },
+    {
+      "sana": "verkkoaan",
+      "alku": 13779,
+      "loppu": 14439
+    },
+    {
+      "sana": "Kun",
+      "alku": 16399,
+      "loppu": 16520
+    },
+    {
+      "sana": "kysyin",
+      "alku": 16600,
+      "loppu": 16979
+    },
+    {
+      "sana": "kenen",
+      "alku": 17059,
+      "loppu": 17299
+    },
+    {
+      "sana": "majakka",
+      "alku": 17359,
+      "loppu": 17760
+    },
+    {
+      "sana": "siis",
+      "alku": 17819,
+      "loppu": 18079
+    },
+    {
+      "sana": "on",
+      "alku": 18159,
+      "loppu": 18279
+    },
+    {
+      "sana": "hän",
+      "alku": 18899,
+      "loppu": 19020
+    },
+    {
+      "sana": "osoitti",
+      "alku": 19079,
+      "loppu": 19459
+    },
+    {
+      "sana": "merelle",
+      "alku": 19520,
+      "loppu": 19979
+    },
+    {
+      "sana": "Niiden",
+      "alku": 21719,
+      "loppu": 22039
+    },
+    {
+      "sana": "jotka",
+      "alku": 22159,
+      "loppu": 22399
+    },
+    {
+      "sana": "tarvitsevat",
+      "alku": 22479,
+      "loppu": 23139
+    },
+    {
+      "sana": "sitä",
+      "alku": 23199,
+      "loppu": 23519
+    },
+    {
+      "sana": "Piirsin",
+      "alku": 25719,
+      "loppu": 26119
+    },
+    {
+      "sana": "karttaani",
+      "alku": 26180,
+      "loppu": 26760
+    },
+    {
+      "sana": "valon",
+      "alku": 26819,
+      "loppu": 27199
+    },
+    {
+      "sana": "ilman",
+      "alku": 27279,
+      "loppu": 27559
+    },
+    {
+      "sana": "valtakunnan",
+      "alku": 27639,
+      "loppu": 28180
+    },
+    {
+      "sana": "väriä",
+      "alku": 28239,
+      "loppu": 28519
+    }
+  ],
+  "lauseet": [
+    79,
+    6819,
+    10279,
+    16399,
+    21719,
+    25719
+  ],
+  "luotu": "2026-09-11T12:05:10.958Z"
+}

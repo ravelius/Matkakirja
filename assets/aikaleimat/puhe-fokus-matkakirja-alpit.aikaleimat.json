@@ -1,0 +1,259 @@
+{
+  "versio": 2,
+  "kaupunki": "alpit",
+  "teksti": "Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Panin kiven reunalle ja odotin, mutta kivi ei suostunut todistajaksi. Sitten sisältä kuului pitkä rasahdus. Siirsin sekä kiven että itseni kauemmas. Alpeilla on syytä erottaa toisistaan hiljaisuus ja se, ettei vuori vielä puhu.",
+  "tekstiSha256": "a7974c6bfde3b03db43bcd47afb7fbb339fd120942da808fc9d6ca0acbb60bea",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-alpit.mp3",
+    "versio": 2,
+    "tavut": 495325,
+    "sha256": "6a55f116d956021b1e1f08d92b2324540320bd1712702fdf0da43347d6c3d24a"
+  },
+  "kesto": 30840,
+  "sanat": [
+    {
+      "sana": "Grindelwaldin",
+      "alku": 99,
+      "loppu": 799
+    },
+    {
+      "sana": "jäätikössä",
+      "alku": 899,
+      "loppu": 1579
+    },
+    {
+      "sana": "oli",
+      "alku": 1819,
+      "loppu": 2000
+    },
+    {
+      "sana": "sinistä",
+      "alku": 2019,
+      "loppu": 2500
+    },
+    {
+      "sana": "niin",
+      "alku": 2559,
+      "loppu": 2720
+    },
+    {
+      "sana": "syvällä",
+      "alku": 2819,
+      "loppu": 3299
+    },
+    {
+      "sana": "ettei",
+      "alku": 3639,
+      "loppu": 3899
+    },
+    {
+      "sana": "taivas",
+      "alku": 4000,
+      "loppu": 4380
+    },
+    {
+      "sana": "ylettynyt",
+      "alku": 4420,
+      "loppu": 4960
+    },
+    {
+      "sana": "siihen",
+      "alku": 5039,
+      "loppu": 5460
+    },
+    {
+      "sana": "Opas",
+      "alku": 7079,
+      "loppu": 7339
+    },
+    {
+      "sana": "sanoi",
+      "alku": 7419,
+      "loppu": 7719
+    },
+    {
+      "sana": "jään",
+      "alku": 7779,
+      "loppu": 8059
+    },
+    {
+      "sana": "liikkuvan",
+      "alku": 8119,
+      "loppu": 8739
+    },
+    {
+      "sana": "Panin",
+      "alku": 10279,
+      "loppu": 10519
+    },
+    {
+      "sana": "kiven",
+      "alku": 10639,
+      "loppu": 10920
+    },
+    {
+      "sana": "reunalle",
+      "alku": 11019,
+      "loppu": 11479
+    },
+    {
+      "sana": "ja",
+      "alku": 11619,
+      "loppu": 11679
+    },
+    {
+      "sana": "odotin",
+      "alku": 11739,
+      "loppu": 12159
+    },
+    {
+      "sana": "mutta",
+      "alku": 12799,
+      "loppu": 12979
+    },
+    {
+      "sana": "kivi",
+      "alku": 13099,
+      "loppu": 13359
+    },
+    {
+      "sana": "ei",
+      "alku": 13439,
+      "loppu": 13539
+    },
+    {
+      "sana": "suostunut",
+      "alku": 13639,
+      "loppu": 14119
+    },
+    {
+      "sana": "todistajaksi",
+      "alku": 14179,
+      "loppu": 14920
+    },
+    {
+      "sana": "Sitten",
+      "alku": 16899,
+      "loppu": 17180
+    },
+    {
+      "sana": "sisältä",
+      "alku": 17260,
+      "loppu": 17639
+    },
+    {
+      "sana": "kuului",
+      "alku": 17699,
+      "loppu": 18100
+    },
+    {
+      "sana": "pitkä",
+      "alku": 18159,
+      "loppu": 18500
+    },
+    {
+      "sana": "rasahdus",
+      "alku": 18619,
+      "loppu": 19260
+    },
+    {
+      "sana": "Siirsin",
+      "alku": 21039,
+      "loppu": 21379
+    },
+    {
+      "sana": "sekä",
+      "alku": 21439,
+      "loppu": 21619
+    },
+    {
+      "sana": "kiven",
+      "alku": 21719,
+      "loppu": 22039
+    },
+    {
+      "sana": "että",
+      "alku": 22279,
+      "loppu": 22500
+    },
+    {
+      "sana": "itseni",
+      "alku": 22600,
+      "loppu": 22939
+    },
+    {
+      "sana": "kauemmas",
+      "alku": 23019,
+      "loppu": 23600
+    },
+    {
+      "sana": "Alpeilla",
+      "alku": 25399,
+      "loppu": 25840
+    },
+    {
+      "sana": "on",
+      "alku": 25859,
+      "loppu": 25959
+    },
+    {
+      "sana": "syytä",
+      "alku": 26039,
+      "loppu": 26319
+    },
+    {
+      "sana": "erottaa",
+      "alku": 26399,
+      "loppu": 26859
+    },
+    {
+      "sana": "toisistaan",
+      "alku": 26939,
+      "loppu": 27519
+    },
+    {
+      "sana": "hiljaisuus",
+      "alku": 27579,
+      "loppu": 28399
+    },
+    {
+      "sana": "ja",
+      "alku": 28680,
+      "loppu": 28779
+    },
+    {
+      "sana": "se",
+      "alku": 28840,
+      "loppu": 28979
+    },
+    {
+      "sana": "ettei",
+      "alku": 29579,
+      "loppu": 29899
+    },
+    {
+      "sana": "vuori",
+      "alku": 29959,
+      "loppu": 30279
+    },
+    {
+      "sana": "vielä",
+      "alku": 30340,
+      "loppu": 30559
+    },
+    {
+      "sana": "puhu",
+      "alku": 30679,
+      "loppu": 30840
+    }
+  ],
+  "lauseet": [
+    99,
+    7079,
+    10279,
+    16899,
+    21039,
+    25399
+  ],
+  "luotu": "2026-09-11T12:05:16.877Z"
+}

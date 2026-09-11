@@ -1,0 +1,218 @@
+{
+  "versio": 2,
+  "kaupunki": "lontoo",
+  "teksti": "Lontoossa on pantu höyryveturi maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Merkillinen kansa, me englantilaiset: jos helvettiin vedettäisiin kiskot, kysyisimme ensimmäiseksi, onko ensimmäisessä luokassa pehmustetut penkit. Perille päästiin nopeasti. Yskä saapui mukana.",
+  "tekstiSha256": "373693ca72c612e7b4aac7bda9d05e66676b5ff291b3e75c8de9824e6e4a78cf",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-lontoo.mp3",
+    "versio": 2,
+    "tavut": 441408,
+    "sha256": "5c6169a5081fe80e8f6964ce0f2716f3bf12a665ed854dad6ce55a12d5f49f37"
+  },
+  "kesto": 27500,
+  "sanat": [
+    {
+      "sana": "Lontoossa",
+      "alku": 79,
+      "loppu": 719
+    },
+    {
+      "sana": "on",
+      "alku": 740,
+      "loppu": 839
+    },
+    {
+      "sana": "pantu",
+      "alku": 879,
+      "loppu": 1199
+    },
+    {
+      "sana": "höyryveturi",
+      "alku": 1240,
+      "loppu": 2000
+    },
+    {
+      "sana": "maan",
+      "alku": 2039,
+      "loppu": 2279
+    },
+    {
+      "sana": "alle",
+      "alku": 2379,
+      "loppu": 2659
+    },
+    {
+      "sana": "ja",
+      "alku": 2939,
+      "loppu": 3019
+    },
+    {
+      "sana": "matkustajat",
+      "alku": 3079,
+      "loppu": 3679
+    },
+    {
+      "sana": "sen",
+      "alku": 3699,
+      "loppu": 3919
+    },
+    {
+      "sana": "savuun",
+      "alku": 3980,
+      "loppu": 4439
+    },
+    {
+      "sana": "Vastapäinen",
+      "alku": 5980,
+      "loppu": 6579
+    },
+    {
+      "sana": "herra",
+      "alku": 6639,
+      "loppu": 6839
+    },
+    {
+      "sana": "luki",
+      "alku": 6920,
+      "loppu": 7139
+    },
+    {
+      "sana": "lehteään",
+      "alku": 7219,
+      "loppu": 7779
+    },
+    {
+      "sana": "vaikka",
+      "alku": 8139,
+      "loppu": 8340
+    },
+    {
+      "sana": "katosi",
+      "alku": 8420,
+      "loppu": 8779
+    },
+    {
+      "sana": "välillä",
+      "alku": 8840,
+      "loppu": 9139
+    },
+    {
+      "sana": "näkyvistä",
+      "alku": 9199,
+      "loppu": 9859
+    },
+    {
+      "sana": "Merkillinen",
+      "alku": 11439,
+      "loppu": 12039
+    },
+    {
+      "sana": "kansa",
+      "alku": 12139,
+      "loppu": 12519
+    },
+    {
+      "sana": "me",
+      "alku": 12619,
+      "loppu": 12719
+    },
+    {
+      "sana": "englantilaiset",
+      "alku": 12759,
+      "loppu": 13500
+    },
+    {
+      "sana": "jos",
+      "alku": 14420,
+      "loppu": 14539
+    },
+    {
+      "sana": "helvettiin",
+      "alku": 14579,
+      "loppu": 15119
+    },
+    {
+      "sana": "vedettäisiin",
+      "alku": 15179,
+      "loppu": 15799
+    },
+    {
+      "sana": "kiskot",
+      "alku": 15859,
+      "loppu": 16279
+    },
+    {
+      "sana": "kysyisimme",
+      "alku": 16760,
+      "loppu": 17260
+    },
+    {
+      "sana": "ensimmäiseksi",
+      "alku": 17319,
+      "loppu": 18059
+    },
+    {
+      "sana": "onko",
+      "alku": 18559,
+      "loppu": 18779
+    },
+    {
+      "sana": "ensimmäisessä",
+      "alku": 18840,
+      "loppu": 19479
+    },
+    {
+      "sana": "luokassa",
+      "alku": 19559,
+      "loppu": 19979
+    },
+    {
+      "sana": "pehmustetut",
+      "alku": 20100,
+      "loppu": 20680
+    },
+    {
+      "sana": "penkit",
+      "alku": 20779,
+      "loppu": 21199
+    },
+    {
+      "sana": "Perille",
+      "alku": 23319,
+      "loppu": 23639
+    },
+    {
+      "sana": "päästiin",
+      "alku": 23699,
+      "loppu": 24059
+    },
+    {
+      "sana": "nopeasti",
+      "alku": 24100,
+      "loppu": 24719
+    },
+    {
+      "sana": "Yskä",
+      "alku": 26459,
+      "loppu": 26759
+    },
+    {
+      "sana": "saapui",
+      "alku": 26819,
+      "loppu": 27239
+    },
+    {
+      "sana": "mukana",
+      "alku": 27279,
+      "loppu": 27500
+    }
+  ],
+  "lauseet": [
+    79,
+    5980,
+    11439,
+    23319,
+    26459
+  ],
+  "luotu": "2026-09-11T12:04:13.506Z"
+}

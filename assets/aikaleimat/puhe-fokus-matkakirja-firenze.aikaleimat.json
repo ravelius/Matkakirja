@@ -1,0 +1,265 @@
+{
+  "versio": 2,
+  "kaupunki": "firenze",
+  "teksti": "Firenzen David seisoo aukiolla ilman rihman kiertämää, ja minä hikoilen liivissä. Patsas aiotaan siirtää sisälle sateelta suojaan. Kolmensadan vuoden jälkeen tämä lienee kohtuullista. Katselin sen suurta kättä ja omaani. Minun käteni osaa lähinnä piirtää käden. Palasin illalla, kun aukiolla oli vähemmän väkeä. Kivi vaikutti silloin vielä enemmän ihmiseltä.",
+  "tekstiSha256": "4e3f156dac7ddb4d4c3aabb6b3f524366f03661a8a5ccf8fe6ac2e52d068e29a",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-firenze.mp3",
+    "versio": 2,
+    "tavut": 505356,
+    "sha256": "111c0ba4d471e01abe750a8ec87298dfd2aa16ea8114ce6b0044af193971b0fd"
+  },
+  "kesto": 30279,
+  "sanat": [
+    {
+      "sana": "Firenzen",
+      "alku": 140,
+      "loppu": 699
+    },
+    {
+      "sana": "David",
+      "alku": 740,
+      "loppu": 1120
+    },
+    {
+      "sana": "seisoo",
+      "alku": 1159,
+      "loppu": 1559
+    },
+    {
+      "sana": "aukiolla",
+      "alku": 1639,
+      "loppu": 2079
+    },
+    {
+      "sana": "ilman",
+      "alku": 2139,
+      "loppu": 2359
+    },
+    {
+      "sana": "rihman",
+      "alku": 2419,
+      "loppu": 2799
+    },
+    {
+      "sana": "kiertämää",
+      "alku": 2859,
+      "loppu": 3419
+    },
+    {
+      "sana": "ja",
+      "alku": 3919,
+      "loppu": 3980
+    },
+    {
+      "sana": "minä",
+      "alku": 4019,
+      "loppu": 4219
+    },
+    {
+      "sana": "hikoilen",
+      "alku": 4239,
+      "loppu": 4719
+    },
+    {
+      "sana": "liivissä",
+      "alku": 4799,
+      "loppu": 5379
+    },
+    {
+      "sana": "Patsas",
+      "alku": 6859,
+      "loppu": 7159
+    },
+    {
+      "sana": "aiotaan",
+      "alku": 7199,
+      "loppu": 7559
+    },
+    {
+      "sana": "siirtää",
+      "alku": 7619,
+      "loppu": 8000
+    },
+    {
+      "sana": "sisälle",
+      "alku": 8119,
+      "loppu": 8539
+    },
+    {
+      "sana": "sateelta",
+      "alku": 8599,
+      "loppu": 9039
+    },
+    {
+      "sana": "suojaan",
+      "alku": 9139,
+      "loppu": 9679
+    },
+    {
+      "sana": "Kolmensadan",
+      "alku": 11079,
+      "loppu": 11679
+    },
+    {
+      "sana": "vuoden",
+      "alku": 11739,
+      "loppu": 12019
+    },
+    {
+      "sana": "jälkeen",
+      "alku": 12139,
+      "loppu": 12579
+    },
+    {
+      "sana": "tämä",
+      "alku": 12639,
+      "loppu": 12819
+    },
+    {
+      "sana": "lienee",
+      "alku": 12880,
+      "loppu": 13219
+    },
+    {
+      "sana": "kohtuullista",
+      "alku": 13279,
+      "loppu": 14099
+    },
+    {
+      "sana": "Katselin",
+      "alku": 15679,
+      "loppu": 16100
+    },
+    {
+      "sana": "sen",
+      "alku": 16159,
+      "loppu": 16319
+    },
+    {
+      "sana": "suurta",
+      "alku": 16379,
+      "loppu": 16719
+    },
+    {
+      "sana": "kättä",
+      "alku": 16799,
+      "loppu": 17139
+    },
+    {
+      "sana": "ja",
+      "alku": 17180,
+      "loppu": 17279
+    },
+    {
+      "sana": "omaani",
+      "alku": 17379,
+      "loppu": 17779
+    },
+    {
+      "sana": "Minun",
+      "alku": 19180,
+      "loppu": 19399
+    },
+    {
+      "sana": "käteni",
+      "alku": 19500,
+      "loppu": 19819
+    },
+    {
+      "sana": "osaa",
+      "alku": 19879,
+      "loppu": 20119
+    },
+    {
+      "sana": "lähinnä",
+      "alku": 20180,
+      "loppu": 20459
+    },
+    {
+      "sana": "piirtää",
+      "alku": 20579,
+      "loppu": 21020
+    },
+    {
+      "sana": "käden",
+      "alku": 21139,
+      "loppu": 21479
+    },
+    {
+      "sana": "Palasin",
+      "alku": 23519,
+      "loppu": 23879
+    },
+    {
+      "sana": "illalla",
+      "alku": 23959,
+      "loppu": 24219
+    },
+    {
+      "sana": "kun",
+      "alku": 24299,
+      "loppu": 24439
+    },
+    {
+      "sana": "aukiolla",
+      "alku": 24539,
+      "loppu": 24939
+    },
+    {
+      "sana": "oli",
+      "alku": 25000,
+      "loppu": 25119
+    },
+    {
+      "sana": "vähemmän",
+      "alku": 25180,
+      "loppu": 25539
+    },
+    {
+      "sana": "väkeä",
+      "alku": 25579,
+      "loppu": 26039
+    },
+    {
+      "sana": "Kivi",
+      "alku": 27659,
+      "loppu": 27879
+    },
+    {
+      "sana": "vaikutti",
+      "alku": 27939,
+      "loppu": 28379
+    },
+    {
+      "sana": "silloin",
+      "alku": 28459,
+      "loppu": 28779
+    },
+    {
+      "sana": "vielä",
+      "alku": 28859,
+      "loppu": 29099
+    },
+    {
+      "sana": "enemmän",
+      "alku": 29179,
+      "loppu": 29539
+    },
+    {
+      "sana": "ihmiseltä",
+      "alku": 29639,
+      "loppu": 30279
+    }
+  ],
+  "lauseet": [
+    140,
+    6859,
+    11079,
+    15679,
+    19180,
+    23519,
+    27659
+  ],
+  "luotu": "2026-09-11T12:04:45.883Z"
+}

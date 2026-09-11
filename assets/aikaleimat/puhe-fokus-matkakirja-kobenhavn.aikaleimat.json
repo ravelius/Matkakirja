@@ -1,0 +1,253 @@
+{
+  "versio": 2,
+  "kaupunki": "kobenhavn",
+  "teksti": "Kööpenhaminan Tivolissa näin vanhan pariskunnan tanssivan niin hitaasti, että orkesteri ehti edelle. He eivät lähteneet sen perään. Puistossa sytytettiin lamppuja, ja lampi sai oman tähtitaivaansa ennen oikeaa. Olin tullut katsomaan huvituksia. En arvannut, että paras niistä olisi kaksi ihmistä, joilla ei ollut enää tarvetta pysyä tahdissa.",
+  "tekstiSha256": "7a5eaac71dd4ba013a60ea650d2ae0f47664abae0d262c67951c9d10f33a13a3",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-kobenhavn.mp3",
+    "versio": 2,
+    "tavut": 437647,
+    "sha256": "500e6a6a19fb6524d8ead5e18d9b7d2a820916094e5ff1216fe2f300ad0a42aa"
+  },
+  "kesto": 27260,
+  "sanat": [
+    {
+      "sana": "Kööpenhaminan",
+      "alku": 140,
+      "loppu": 899
+    },
+    {
+      "sana": "Tivolissa",
+      "alku": 939,
+      "loppu": 1459
+    },
+    {
+      "sana": "näin",
+      "alku": 1500,
+      "loppu": 1679
+    },
+    {
+      "sana": "vanhan",
+      "alku": 1759,
+      "loppu": 2059
+    },
+    {
+      "sana": "pariskunnan",
+      "alku": 2159,
+      "loppu": 2799
+    },
+    {
+      "sana": "tanssivan",
+      "alku": 2879,
+      "loppu": 3399
+    },
+    {
+      "sana": "niin",
+      "alku": 3439,
+      "loppu": 3679
+    },
+    {
+      "sana": "hitaasti",
+      "alku": 3740,
+      "loppu": 4299
+    },
+    {
+      "sana": "että",
+      "alku": 4679,
+      "loppu": 4859
+    },
+    {
+      "sana": "orkesteri",
+      "alku": 4940,
+      "loppu": 5519
+    },
+    {
+      "sana": "ehti",
+      "alku": 5559,
+      "loppu": 5859
+    },
+    {
+      "sana": "edelle",
+      "alku": 5920,
+      "loppu": 6319
+    },
+    {
+      "sana": "He",
+      "alku": 7799,
+      "loppu": 7879
+    },
+    {
+      "sana": "eivät",
+      "alku": 7919,
+      "loppu": 8179
+    },
+    {
+      "sana": "lähteneet",
+      "alku": 8260,
+      "loppu": 8699
+    },
+    {
+      "sana": "sen",
+      "alku": 8720,
+      "loppu": 8920
+    },
+    {
+      "sana": "perään",
+      "alku": 8979,
+      "loppu": 9380
+    },
+    {
+      "sana": "Puistossa",
+      "alku": 11000,
+      "loppu": 11519
+    },
+    {
+      "sana": "sytytettiin",
+      "alku": 11599,
+      "loppu": 12219
+    },
+    {
+      "sana": "lamppuja",
+      "alku": 12319,
+      "loppu": 12859
+    },
+    {
+      "sana": "ja",
+      "alku": 13359,
+      "loppu": 13439
+    },
+    {
+      "sana": "lampi",
+      "alku": 13500,
+      "loppu": 13819
+    },
+    {
+      "sana": "sai",
+      "alku": 13880,
+      "loppu": 14099
+    },
+    {
+      "sana": "oman",
+      "alku": 14179,
+      "loppu": 14380
+    },
+    {
+      "sana": "tähtitaivaansa",
+      "alku": 14479,
+      "loppu": 15399
+    },
+    {
+      "sana": "ennen",
+      "alku": 15479,
+      "loppu": 15699
+    },
+    {
+      "sana": "oikeaa",
+      "alku": 15779,
+      "loppu": 16279
+    },
+    {
+      "sana": "Olin",
+      "alku": 17959,
+      "loppu": 18139
+    },
+    {
+      "sana": "tullut",
+      "alku": 18180,
+      "loppu": 18399
+    },
+    {
+      "sana": "katsomaan",
+      "alku": 18459,
+      "loppu": 18920
+    },
+    {
+      "sana": "huvituksia",
+      "alku": 18979,
+      "loppu": 19699
+    },
+    {
+      "sana": "En",
+      "alku": 21279,
+      "loppu": 21379
+    },
+    {
+      "sana": "arvannut",
+      "alku": 21439,
+      "loppu": 21879
+    },
+    {
+      "sana": "että",
+      "alku": 21959,
+      "loppu": 22100
+    },
+    {
+      "sana": "paras",
+      "alku": 22219,
+      "loppu": 22519
+    },
+    {
+      "sana": "niistä",
+      "alku": 22600,
+      "loppu": 22920
+    },
+    {
+      "sana": "olisi",
+      "alku": 22979,
+      "loppu": 23239
+    },
+    {
+      "sana": "kaksi",
+      "alku": 23299,
+      "loppu": 23659
+    },
+    {
+      "sana": "ihmistä",
+      "alku": 23739,
+      "loppu": 24200
+    },
+    {
+      "sana": "joilla",
+      "alku": 24699,
+      "loppu": 24959
+    },
+    {
+      "sana": "ei",
+      "alku": 25059,
+      "loppu": 25159
+    },
+    {
+      "sana": "ollut",
+      "alku": 25219,
+      "loppu": 25399
+    },
+    {
+      "sana": "enää",
+      "alku": 25479,
+      "loppu": 25719
+    },
+    {
+      "sana": "tarvetta",
+      "alku": 25779,
+      "loppu": 26279
+    },
+    {
+      "sana": "pysyä",
+      "alku": 26340,
+      "loppu": 26739
+    },
+    {
+      "sana": "tahdissa",
+      "alku": 26799,
+      "loppu": 27260
+    }
+  ],
+  "lauseet": [
+    140,
+    7799,
+    11000,
+    17959,
+    21279
+  ],
+  "luotu": "2026-09-11T12:04:23.330Z"
+}

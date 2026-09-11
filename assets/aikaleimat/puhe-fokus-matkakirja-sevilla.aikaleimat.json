@@ -1,0 +1,218 @@
+{
+  "versio": 2,
+  "kaupunki": "sevilla",
+  "teksti": "Sevillan tupakkatehdas näyttää palatsilta, mutta sen portista kulkee aamuisin kuningattarien sijasta työväkeä. Nainen sitoi huivinsa, otti viimeisen haukun leivästä ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. Olin aikonut kirjoittaa suuresta rakennuksesta. Kirjoitankin siitä, miten pienellä aamiaisella sitä pidetään käynnissä.",
+  "tekstiSha256": "530b094fd431850486771ed58d9e3e8173526140c8db4fefaafcc699d950732f",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-sevilla.mp3",
+    "versio": 2,
+    "tavut": 453111,
+    "sha256": "f025f6cd3ad0cbdbfa5baec70bd1df5c3a7d68a857bf018a7b96f81bbdc19bed"
+  },
+  "kesto": 28199,
+  "sanat": [
+    {
+      "sana": "Sevillan",
+      "alku": 199,
+      "loppu": 639
+    },
+    {
+      "sana": "tupakkatehdas",
+      "alku": 699,
+      "loppu": 1500
+    },
+    {
+      "sana": "näyttää",
+      "alku": 1559,
+      "loppu": 1939
+    },
+    {
+      "sana": "palatsilta",
+      "alku": 1979,
+      "loppu": 2679
+    },
+    {
+      "sana": "mutta",
+      "alku": 3419,
+      "loppu": 3639
+    },
+    {
+      "sana": "sen",
+      "alku": 3699,
+      "loppu": 3819
+    },
+    {
+      "sana": "portista",
+      "alku": 3899,
+      "loppu": 4380
+    },
+    {
+      "sana": "kulkee",
+      "alku": 4440,
+      "loppu": 4779
+    },
+    {
+      "sana": "aamuisin",
+      "alku": 4839,
+      "loppu": 5359
+    },
+    {
+      "sana": "kuningattarien",
+      "alku": 5519,
+      "loppu": 6239
+    },
+    {
+      "sana": "sijasta",
+      "alku": 6299,
+      "loppu": 6719
+    },
+    {
+      "sana": "työväkeä",
+      "alku": 6779,
+      "loppu": 7439
+    },
+    {
+      "sana": "Nainen",
+      "alku": 9380,
+      "loppu": 9639
+    },
+    {
+      "sana": "sitoi",
+      "alku": 9699,
+      "loppu": 9979
+    },
+    {
+      "sana": "huivinsa",
+      "alku": 10059,
+      "loppu": 10619
+    },
+    {
+      "sana": "otti",
+      "alku": 11259,
+      "loppu": 11479
+    },
+    {
+      "sana": "viimeisen",
+      "alku": 11539,
+      "loppu": 11979
+    },
+    {
+      "sana": "haukun",
+      "alku": 12059,
+      "loppu": 12359
+    },
+    {
+      "sana": "leivästä",
+      "alku": 12460,
+      "loppu": 12899
+    },
+    {
+      "sana": "ja",
+      "alku": 12939,
+      "loppu": 13039
+    },
+    {
+      "sana": "katosi",
+      "alku": 13079,
+      "loppu": 13420
+    },
+    {
+      "sana": "sisään",
+      "alku": 13479,
+      "loppu": 13939
+    },
+    {
+      "sana": "Pihalta",
+      "alku": 15639,
+      "loppu": 15960
+    },
+    {
+      "sana": "tuli",
+      "alku": 16000,
+      "loppu": 16159
+    },
+    {
+      "sana": "appelsiininkukkien",
+      "alku": 16219,
+      "loppu": 17280
+    },
+    {
+      "sana": "tuoksu",
+      "alku": 17340,
+      "loppu": 17799
+    },
+    {
+      "sana": "Olin",
+      "alku": 19359,
+      "loppu": 19520
+    },
+    {
+      "sana": "aikonut",
+      "alku": 19559,
+      "loppu": 19919
+    },
+    {
+      "sana": "kirjoittaa",
+      "alku": 19979,
+      "loppu": 20600
+    },
+    {
+      "sana": "suuresta",
+      "alku": 20680,
+      "loppu": 21059
+    },
+    {
+      "sana": "rakennuksesta",
+      "alku": 21119,
+      "loppu": 21979
+    },
+    {
+      "sana": "Kirjoitankin",
+      "alku": 23920,
+      "loppu": 24579
+    },
+    {
+      "sana": "siitä",
+      "alku": 24639,
+      "loppu": 24939
+    },
+    {
+      "sana": "miten",
+      "alku": 25299,
+      "loppu": 25599
+    },
+    {
+      "sana": "pienellä",
+      "alku": 25659,
+      "loppu": 26000
+    },
+    {
+      "sana": "aamiaisella",
+      "alku": 26159,
+      "loppu": 26959
+    },
+    {
+      "sana": "sitä",
+      "alku": 27019,
+      "loppu": 27219
+    },
+    {
+      "sana": "pidetään",
+      "alku": 27279,
+      "loppu": 27739
+    },
+    {
+      "sana": "käynnissä",
+      "alku": 27799,
+      "loppu": 28199
+    }
+  ],
+  "lauseet": [
+    199,
+    9380,
+    15639,
+    19359,
+    23920
+  ],
+  "luotu": "2026-09-11T12:04:31.622Z"
+}

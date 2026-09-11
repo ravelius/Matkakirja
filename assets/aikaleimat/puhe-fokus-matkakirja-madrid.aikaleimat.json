@@ -1,0 +1,238 @@
+{
+  "versio": 2,
+  "kaupunki": "madrid",
+  "teksti": "Pradossa pysähdyin tauluun, jossa pieni prinsessa saa kaiken huomion ja suuri koira makaa välittämättä siitä. Maalari katsoo suoraan minuun. Peilissä seisoo kuningaspari, mutta minä olen saanut parhaan paikan, aivan heidän edestään. Madridin kahviloissa väitellään uudesta tasavallasta. Tässä huoneessa vallanvaihto onnistui ostamatta edes sanomalehteä.",
+  "tekstiSha256": "1eb047bc6f8a0c261466460b1181bde0bf5095393147cda6e39a69371ee1e553",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-madrid.mp3",
+    "versio": 2,
+    "tavut": 470666,
+    "sha256": "c0db56e33aa8c1a6cf29fd01d3ff482a6b96aea3b91ed851a453ae9f36a36810"
+  },
+  "kesto": 29319,
+  "sanat": [
+    {
+      "sana": "Pradossa",
+      "alku": 99,
+      "loppu": 579
+    },
+    {
+      "sana": "pysähdyin",
+      "alku": 680,
+      "loppu": 1159
+    },
+    {
+      "sana": "tauluun",
+      "alku": 1279,
+      "loppu": 1719
+    },
+    {
+      "sana": "jossa",
+      "alku": 1799,
+      "loppu": 2079
+    },
+    {
+      "sana": "pieni",
+      "alku": 2259,
+      "loppu": 2480
+    },
+    {
+      "sana": "prinsessa",
+      "alku": 2579,
+      "loppu": 3099
+    },
+    {
+      "sana": "saa",
+      "alku": 3199,
+      "loppu": 3379
+    },
+    {
+      "sana": "kaiken",
+      "alku": 3439,
+      "loppu": 3779
+    },
+    {
+      "sana": "huomion",
+      "alku": 3879,
+      "loppu": 4379
+    },
+    {
+      "sana": "ja",
+      "alku": 4819,
+      "loppu": 4900
+    },
+    {
+      "sana": "suuri",
+      "alku": 4960,
+      "loppu": 5219
+    },
+    {
+      "sana": "koira",
+      "alku": 5359,
+      "loppu": 5719
+    },
+    {
+      "sana": "makaa",
+      "alku": 5879,
+      "loppu": 6179
+    },
+    {
+      "sana": "välittämättä",
+      "alku": 6239,
+      "loppu": 6879
+    },
+    {
+      "sana": "siitä",
+      "alku": 6980,
+      "loppu": 7359
+    },
+    {
+      "sana": "Maalari",
+      "alku": 9139,
+      "loppu": 9539
+    },
+    {
+      "sana": "katsoo",
+      "alku": 9579,
+      "loppu": 9920
+    },
+    {
+      "sana": "suoraan",
+      "alku": 10019,
+      "loppu": 10439
+    },
+    {
+      "sana": "minuun",
+      "alku": 10479,
+      "loppu": 10859
+    },
+    {
+      "sana": "Peilissä",
+      "alku": 12179,
+      "loppu": 12559
+    },
+    {
+      "sana": "seisoo",
+      "alku": 12659,
+      "loppu": 13000
+    },
+    {
+      "sana": "kuningaspari",
+      "alku": 13079,
+      "loppu": 13779
+    },
+    {
+      "sana": "mutta",
+      "alku": 14779,
+      "loppu": 14960
+    },
+    {
+      "sana": "minä",
+      "alku": 15039,
+      "loppu": 15199
+    },
+    {
+      "sana": "olen",
+      "alku": 15239,
+      "loppu": 15420
+    },
+    {
+      "sana": "saanut",
+      "alku": 15479,
+      "loppu": 15799
+    },
+    {
+      "sana": "parhaan",
+      "alku": 15859,
+      "loppu": 16219
+    },
+    {
+      "sana": "paikan",
+      "alku": 16319,
+      "loppu": 16680
+    },
+    {
+      "sana": "aivan",
+      "alku": 17399,
+      "loppu": 17659
+    },
+    {
+      "sana": "heidän",
+      "alku": 17719,
+      "loppu": 17979
+    },
+    {
+      "sana": "edestään",
+      "alku": 18039,
+      "loppu": 18619
+    },
+    {
+      "sana": "Madridin",
+      "alku": 20600,
+      "loppu": 21039
+    },
+    {
+      "sana": "kahviloissa",
+      "alku": 21159,
+      "loppu": 21799
+    },
+    {
+      "sana": "väitellään",
+      "alku": 21859,
+      "loppu": 22459
+    },
+    {
+      "sana": "uudesta",
+      "alku": 22519,
+      "loppu": 22879
+    },
+    {
+      "sana": "tasavallasta",
+      "alku": 22979,
+      "loppu": 23739
+    },
+    {
+      "sana": "Tässä",
+      "alku": 25539,
+      "loppu": 25819
+    },
+    {
+      "sana": "huoneessa",
+      "alku": 25879,
+      "loppu": 26359
+    },
+    {
+      "sana": "vallanvaihto",
+      "alku": 26439,
+      "loppu": 27079
+    },
+    {
+      "sana": "onnistui",
+      "alku": 27159,
+      "loppu": 27739
+    },
+    {
+      "sana": "ostamatta",
+      "alku": 27819,
+      "loppu": 28340
+    },
+    {
+      "sana": "edes",
+      "alku": 28420,
+      "loppu": 28619
+    },
+    {
+      "sana": "sanomalehteä",
+      "alku": 28680,
+      "loppu": 29319
+    }
+  ],
+  "lauseet": [
+    99,
+    9139,
+    12179,
+    20600,
+    25539
+  ],
+  "luotu": "2026-09-11T12:04:06.074Z"
+}

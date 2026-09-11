@@ -1,0 +1,239 @@
+{
+  "versio": 2,
+  "kaupunki": "tampere",
+  "teksti": "Tammerkoski tekee töitä kahden järven välissä. Sen partaalla puuvilla muuttuu langaksi ja miehet rahakkaiksi. Finlaysonin tehtaassa nainen näytti, kuinka katkennut lanka yhdistetään. Minun sormissani se katkesi uudestaan. Hän sitoi sen katsomatta ja palasi koneelleen. Merkitsen muistiin: tehtaan voimaa mitatessa pitäisi laskea myös sormet.",
+  "tekstiSha256": "73e7502cc529df7d344a0a2a9091bb67b718f610968ccaf11ea76841380b8665",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-tampere.mp3",
+    "versio": 2,
+    "tavut": 468158,
+    "sha256": "fc51df8f5eca24d2079fa809b799e87db2a2e7a6288556ad06090428327706dc"
+  },
+  "kesto": 29180,
+  "sanat": [
+    {
+      "sana": "Tammerkoski",
+      "alku": 159,
+      "loppu": 759
+    },
+    {
+      "sana": "tekee",
+      "alku": 839,
+      "loppu": 1199
+    },
+    {
+      "sana": "töitä",
+      "alku": 1240,
+      "loppu": 1599
+    },
+    {
+      "sana": "kahden",
+      "alku": 1639,
+      "loppu": 1959
+    },
+    {
+      "sana": "järven",
+      "alku": 2019,
+      "loppu": 2379
+    },
+    {
+      "sana": "välissä",
+      "alku": 2440,
+      "loppu": 2979
+    },
+    {
+      "sana": "Sen",
+      "alku": 4119,
+      "loppu": 4319
+    },
+    {
+      "sana": "partaalla",
+      "alku": 4360,
+      "loppu": 4859
+    },
+    {
+      "sana": "puuvilla",
+      "alku": 4980,
+      "loppu": 5420
+    },
+    {
+      "sana": "muuttuu",
+      "alku": 5480,
+      "loppu": 5900
+    },
+    {
+      "sana": "langaksi",
+      "alku": 5960,
+      "loppu": 6519
+    },
+    {
+      "sana": "ja",
+      "alku": 6779,
+      "loppu": 6839
+    },
+    {
+      "sana": "miehet",
+      "alku": 6920,
+      "loppu": 7259
+    },
+    {
+      "sana": "rahakkaiksi",
+      "alku": 7359,
+      "loppu": 8099
+    },
+    {
+      "sana": "Finlaysonin",
+      "alku": 9679,
+      "loppu": 10319
+    },
+    {
+      "sana": "tehtaassa",
+      "alku": 10380,
+      "loppu": 10979
+    },
+    {
+      "sana": "nainen",
+      "alku": 11019,
+      "loppu": 11359
+    },
+    {
+      "sana": "näytti",
+      "alku": 11420,
+      "loppu": 11779
+    },
+    {
+      "sana": "kuinka",
+      "alku": 11800,
+      "loppu": 12000
+    },
+    {
+      "sana": "katkennut",
+      "alku": 12059,
+      "loppu": 12519
+    },
+    {
+      "sana": "lanka",
+      "alku": 12599,
+      "loppu": 12899
+    },
+    {
+      "sana": "yhdistetään",
+      "alku": 12979,
+      "loppu": 13639
+    },
+    {
+      "sana": "Minun",
+      "alku": 15059,
+      "loppu": 15239
+    },
+    {
+      "sana": "sormissani",
+      "alku": 15319,
+      "loppu": 15960
+    },
+    {
+      "sana": "se",
+      "alku": 16020,
+      "loppu": 16100
+    },
+    {
+      "sana": "katkesi",
+      "alku": 16159,
+      "loppu": 16579
+    },
+    {
+      "sana": "uudestaan",
+      "alku": 16659,
+      "loppu": 17279
+    },
+    {
+      "sana": "Hän",
+      "alku": 18639,
+      "loppu": 18799
+    },
+    {
+      "sana": "sitoi",
+      "alku": 18859,
+      "loppu": 19180
+    },
+    {
+      "sana": "sen",
+      "alku": 19219,
+      "loppu": 19359
+    },
+    {
+      "sana": "katsomatta",
+      "alku": 19459,
+      "loppu": 20299
+    },
+    {
+      "sana": "ja",
+      "alku": 20340,
+      "loppu": 20439
+    },
+    {
+      "sana": "palasi",
+      "alku": 20479,
+      "loppu": 20779
+    },
+    {
+      "sana": "koneelleen",
+      "alku": 20840,
+      "loppu": 21420
+    },
+    {
+      "sana": "Merkitsen",
+      "alku": 23500,
+      "loppu": 23939
+    },
+    {
+      "sana": "muistiin",
+      "alku": 23979,
+      "loppu": 24499
+    },
+    {
+      "sana": "tehtaan",
+      "alku": 25779,
+      "loppu": 26219
+    },
+    {
+      "sana": "voimaa",
+      "alku": 26340,
+      "loppu": 26739
+    },
+    {
+      "sana": "mitatessa",
+      "alku": 26799,
+      "loppu": 27539
+    },
+    {
+      "sana": "pitäisi",
+      "alku": 27599,
+      "loppu": 28000
+    },
+    {
+      "sana": "laskea",
+      "alku": 28059,
+      "loppu": 28500
+    },
+    {
+      "sana": "myös",
+      "alku": 28559,
+      "loppu": 28799
+    },
+    {
+      "sana": "sormet",
+      "alku": 28879,
+      "loppu": 29180
+    }
+  ],
+  "lauseet": [
+    159,
+    4119,
+    9679,
+    15059,
+    18639,
+    23500
+  ],
+  "luotu": "2026-09-11T12:04:51.963Z"
+}

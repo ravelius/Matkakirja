@@ -1,0 +1,239 @@
+{
+  "versio": 2,
+  "kaupunki": "ateena",
+  "teksti": "Ateenassa puhuttiin Troijasta löydetystä kullasta kuin jokainen olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Kummallakaan ei ollut kultaa näyttää. Akropoliin pylväät kohosivat pölyn takaa; ne eivät tarvinneet enää mainosta. Kaivoin taskustani kolikon kahvia varten. Sen alkuperästä isäntä ei kysynyt mitään.",
+  "tekstiSha256": "07f3cb62fe8352d31c21bb873a16e97aa5fc1fa6b1f1b345d2e60df1aeb84aa2",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-ateena.mp3",
+    "versio": 2,
+    "tavut": 484876,
+    "sha256": "bcb51b6caedd68a90d43045e9c1374b4a29e311b43c157b03b606f47261678ae"
+  },
+  "kesto": 30199,
+  "sanat": [
+    {
+      "sana": "Ateenassa",
+      "alku": 99,
+      "loppu": 639
+    },
+    {
+      "sana": "puhuttiin",
+      "alku": 680,
+      "loppu": 1120
+    },
+    {
+      "sana": "Troijasta",
+      "alku": 1179,
+      "loppu": 1679
+    },
+    {
+      "sana": "löydetystä",
+      "alku": 1719,
+      "loppu": 2200
+    },
+    {
+      "sana": "kullasta",
+      "alku": 2319,
+      "loppu": 2879
+    },
+    {
+      "sana": "kuin",
+      "alku": 3299,
+      "loppu": 3480
+    },
+    {
+      "sana": "jokainen",
+      "alku": 3519,
+      "loppu": 4059
+    },
+    {
+      "sana": "olisi",
+      "alku": 4119,
+      "loppu": 4360
+    },
+    {
+      "sana": "ollut",
+      "alku": 4380,
+      "loppu": 4599
+    },
+    {
+      "sana": "kaivamassa",
+      "alku": 4659,
+      "loppu": 5420
+    },
+    {
+      "sana": "Kahvilan",
+      "alku": 6920,
+      "loppu": 7319
+    },
+    {
+      "sana": "isäntä",
+      "alku": 7339,
+      "loppu": 7659
+    },
+    {
+      "sana": "piti",
+      "alku": 7739,
+      "loppu": 7899
+    },
+    {
+      "sana": "Schliemannia",
+      "alku": 8000,
+      "loppu": 8539
+    },
+    {
+      "sana": "nerona",
+      "alku": 8639,
+      "loppu": 9019
+    },
+    {
+      "sana": "asiakas",
+      "alku": 9699,
+      "loppu": 10179
+    },
+    {
+      "sana": "varkaana",
+      "alku": 10239,
+      "loppu": 10840
+    },
+    {
+      "sana": "Kummallakaan",
+      "alku": 12239,
+      "loppu": 12939
+    },
+    {
+      "sana": "ei",
+      "alku": 13039,
+      "loppu": 13139
+    },
+    {
+      "sana": "ollut",
+      "alku": 13179,
+      "loppu": 13439
+    },
+    {
+      "sana": "kultaa",
+      "alku": 13500,
+      "loppu": 13880
+    },
+    {
+      "sana": "näyttää",
+      "alku": 13960,
+      "loppu": 14519
+    },
+    {
+      "sana": "Akropoliin",
+      "alku": 16500,
+      "loppu": 17059
+    },
+    {
+      "sana": "pylväät",
+      "alku": 17159,
+      "loppu": 17619
+    },
+    {
+      "sana": "kohosivat",
+      "alku": 17699,
+      "loppu": 18139
+    },
+    {
+      "sana": "pölyn",
+      "alku": 18219,
+      "loppu": 18500
+    },
+    {
+      "sana": "takaa",
+      "alku": 18559,
+      "loppu": 18959
+    },
+    {
+      "sana": "ne",
+      "alku": 20180,
+      "loppu": 20259
+    },
+    {
+      "sana": "eivät",
+      "alku": 20279,
+      "loppu": 20519
+    },
+    {
+      "sana": "tarvinneet",
+      "alku": 20579,
+      "loppu": 21139
+    },
+    {
+      "sana": "enää",
+      "alku": 21180,
+      "loppu": 21399
+    },
+    {
+      "sana": "mainosta",
+      "alku": 21459,
+      "loppu": 22059
+    },
+    {
+      "sana": "Kaivoin",
+      "alku": 23500,
+      "loppu": 23840
+    },
+    {
+      "sana": "taskustani",
+      "alku": 23899,
+      "loppu": 24479
+    },
+    {
+      "sana": "kolikon",
+      "alku": 24519,
+      "loppu": 24979
+    },
+    {
+      "sana": "kahvia",
+      "alku": 25139,
+      "loppu": 25519
+    },
+    {
+      "sana": "varten",
+      "alku": 25579,
+      "loppu": 26039
+    },
+    {
+      "sana": "Sen",
+      "alku": 27879,
+      "loppu": 28019
+    },
+    {
+      "sana": "alkuperästä",
+      "alku": 28079,
+      "loppu": 28739
+    },
+    {
+      "sana": "isäntä",
+      "alku": 28799,
+      "loppu": 29179
+    },
+    {
+      "sana": "ei",
+      "alku": 29260,
+      "loppu": 29340
+    },
+    {
+      "sana": "kysynyt",
+      "alku": 29420,
+      "loppu": 29819
+    },
+    {
+      "sana": "mitään",
+      "alku": 29899,
+      "loppu": 30199
+    }
+  ],
+  "lauseet": [
+    99,
+    6920,
+    12239,
+    16500,
+    23500,
+    27879
+  ],
+  "luotu": "2026-09-11T12:03:47.942Z"
+}

@@ -1,0 +1,243 @@
+{
+  "versio": 2,
+  "kaupunki": "krakova",
+  "teksti": "Krakovan Marian kirkon tornista soi torvi ja vaikeni kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi tuolia. Hän oli kuullut saman katkoksen koko ikänsä eikä aikonut odottaa enää. Ostin leivän ja jäin silti. Kun kaupunki jättää jotakin sanomatta, korva ei tahdo lähteä muualle.",
+  "tekstiSha256": "f47992ff966a18a3f43393987a8805bf353d5f7b3cac9718675469d533a3f45f",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-krakova.mp3",
+    "versio": 2,
+    "tavut": 418421,
+    "sha256": "da4b3b9bb876ae211cd85f46b188691be59d3bdf4ecb1501b9d0e19da1e43b26"
+  },
+  "kesto": 26059,
+  "sanat": [
+    {
+      "sana": "Krakovan",
+      "alku": 140,
+      "loppu": 620
+    },
+    {
+      "sana": "Marian",
+      "alku": 719,
+      "loppu": 1120
+    },
+    {
+      "sana": "kirkon",
+      "alku": 1159,
+      "loppu": 1539
+    },
+    {
+      "sana": "tornista",
+      "alku": 1559,
+      "loppu": 2119
+    },
+    {
+      "sana": "soi",
+      "alku": 2299,
+      "loppu": 2500
+    },
+    {
+      "sana": "torvi",
+      "alku": 2539,
+      "loppu": 2899
+    },
+    {
+      "sana": "ja",
+      "alku": 3379,
+      "loppu": 3419
+    },
+    {
+      "sana": "vaikeni",
+      "alku": 3480,
+      "loppu": 3899
+    },
+    {
+      "sana": "kesken",
+      "alku": 3980,
+      "loppu": 4299
+    },
+    {
+      "sana": "sävelmän",
+      "alku": 4380,
+      "loppu": 4899
+    },
+    {
+      "sana": "Odotin",
+      "alku": 6480,
+      "loppu": 6819
+    },
+    {
+      "sana": "loppua",
+      "alku": 6859,
+      "loppu": 7259
+    },
+    {
+      "sana": "niin",
+      "alku": 7299,
+      "loppu": 7480
+    },
+    {
+      "sana": "kauan",
+      "alku": 7559,
+      "loppu": 7859
+    },
+    {
+      "sana": "että",
+      "alku": 7919,
+      "loppu": 8239
+    },
+    {
+      "sana": "torikauppias",
+      "alku": 8300,
+      "loppu": 9039
+    },
+    {
+      "sana": "tarjosi",
+      "alku": 9079,
+      "loppu": 9439
+    },
+    {
+      "sana": "tuolia",
+      "alku": 9500,
+      "loppu": 9899
+    },
+    {
+      "sana": "Hän",
+      "alku": 11539,
+      "loppu": 11639
+    },
+    {
+      "sana": "oli",
+      "alku": 11699,
+      "loppu": 11840
+    },
+    {
+      "sana": "kuullut",
+      "alku": 11899,
+      "loppu": 12239
+    },
+    {
+      "sana": "saman",
+      "alku": 12300,
+      "loppu": 12599
+    },
+    {
+      "sana": "katkoksen",
+      "alku": 12659,
+      "loppu": 13259
+    },
+    {
+      "sana": "koko",
+      "alku": 13299,
+      "loppu": 13500
+    },
+    {
+      "sana": "ikänsä",
+      "alku": 13619,
+      "loppu": 14039
+    },
+    {
+      "sana": "eikä",
+      "alku": 14519,
+      "loppu": 14719
+    },
+    {
+      "sana": "aikonut",
+      "alku": 14799,
+      "loppu": 15139
+    },
+    {
+      "sana": "odottaa",
+      "alku": 15179,
+      "loppu": 15599
+    },
+    {
+      "sana": "enää",
+      "alku": 15679,
+      "loppu": 15960
+    },
+    {
+      "sana": "Ostin",
+      "alku": 17699,
+      "loppu": 17979
+    },
+    {
+      "sana": "leivän",
+      "alku": 18039,
+      "loppu": 18539
+    },
+    {
+      "sana": "ja",
+      "alku": 18600,
+      "loppu": 18659
+    },
+    {
+      "sana": "jäin",
+      "alku": 18739,
+      "loppu": 18979
+    },
+    {
+      "sana": "silti",
+      "alku": 19039,
+      "loppu": 19379
+    },
+    {
+      "sana": "Kun",
+      "alku": 21319,
+      "loppu": 21439
+    },
+    {
+      "sana": "kaupunki",
+      "alku": 21539,
+      "loppu": 21939
+    },
+    {
+      "sana": "jättää",
+      "alku": 22000,
+      "loppu": 22359
+    },
+    {
+      "sana": "jotakin",
+      "alku": 22399,
+      "loppu": 22799
+    },
+    {
+      "sana": "sanomatta",
+      "alku": 22899,
+      "loppu": 23500
+    },
+    {
+      "sana": "korva",
+      "alku": 24399,
+      "loppu": 24779
+    },
+    {
+      "sana": "ei",
+      "alku": 24859,
+      "loppu": 24920
+    },
+    {
+      "sana": "tahdo",
+      "alku": 25019,
+      "loppu": 25279
+    },
+    {
+      "sana": "lähteä",
+      "alku": 25340,
+      "loppu": 25719
+    },
+    {
+      "sana": "muualle",
+      "alku": 25779,
+      "loppu": 26059
+    }
+  ],
+  "lauseet": [
+    140,
+    6480,
+    11539,
+    17699,
+    21319
+  ],
+  "luotu": "2026-09-11T12:04:58.963Z"
+}

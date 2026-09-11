@@ -1,0 +1,223 @@
+{
+  "versio": 2,
+  "kaupunki": "bergen",
+  "teksti": "Bergenin Bryggenissä puutalot seisovat kylki kyljessä, ja niiden välissä tuoksuu kapakala. Kauppias näytti kuivattua turskaa kuin hopeaharkkoa. Sillä on täällä maksettu paljon muutakin kuin päivällinen. Sade rummutti kattoa, kala pysyi kuivana ja minä en. Kaupungin arvojärjestys selvisi minulle ilman tulkkia.",
+  "tekstiSha256": "9d9e8edae09f052a496d10d3c9d31d5afca38c1b5073e6a446be17b68c5ff85c",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-bergen.mp3",
+    "versio": 2,
+    "tavut": 441408,
+    "sha256": "1696d30149a365857878360bd592147644275f8c5307b08b7a3f06d29097846f"
+  },
+  "kesto": 27479,
+  "sanat": [
+    {
+      "sana": "Bergenin",
+      "alku": 199,
+      "loppu": 680
+    },
+    {
+      "sana": "Bryggenissä",
+      "alku": 719,
+      "loppu": 1480
+    },
+    {
+      "sana": "puutalot",
+      "alku": 1719,
+      "loppu": 2159
+    },
+    {
+      "sana": "seisovat",
+      "alku": 2200,
+      "loppu": 2700
+    },
+    {
+      "sana": "kylki",
+      "alku": 2740,
+      "loppu": 3079
+    },
+    {
+      "sana": "kyljessä",
+      "alku": 3139,
+      "loppu": 3720
+    },
+    {
+      "sana": "ja",
+      "alku": 4259,
+      "loppu": 4319
+    },
+    {
+      "sana": "niiden",
+      "alku": 4380,
+      "loppu": 4639
+    },
+    {
+      "sana": "välissä",
+      "alku": 4699,
+      "loppu": 5059
+    },
+    {
+      "sana": "tuoksuu",
+      "alku": 5119,
+      "loppu": 5539
+    },
+    {
+      "sana": "kapakala",
+      "alku": 5619,
+      "loppu": 6259
+    },
+    {
+      "sana": "Kauppias",
+      "alku": 8079,
+      "loppu": 8519
+    },
+    {
+      "sana": "näytti",
+      "alku": 8559,
+      "loppu": 8880
+    },
+    {
+      "sana": "kuivattua",
+      "alku": 8960,
+      "loppu": 9479
+    },
+    {
+      "sana": "turskaa",
+      "alku": 9579,
+      "loppu": 10099
+    },
+    {
+      "sana": "kuin",
+      "alku": 10199,
+      "loppu": 10460
+    },
+    {
+      "sana": "hopeaharkkoa",
+      "alku": 10500,
+      "loppu": 11519
+    },
+    {
+      "sana": "Sillä",
+      "alku": 13159,
+      "loppu": 13380
+    },
+    {
+      "sana": "on",
+      "alku": 13420,
+      "loppu": 13479
+    },
+    {
+      "sana": "täällä",
+      "alku": 13539,
+      "loppu": 13779
+    },
+    {
+      "sana": "maksettu",
+      "alku": 13840,
+      "loppu": 14359
+    },
+    {
+      "sana": "paljon",
+      "alku": 14399,
+      "loppu": 14659
+    },
+    {
+      "sana": "muutakin",
+      "alku": 14759,
+      "loppu": 15219
+    },
+    {
+      "sana": "kuin",
+      "alku": 15319,
+      "loppu": 15479
+    },
+    {
+      "sana": "päivällinen",
+      "alku": 15599,
+      "loppu": 16260
+    },
+    {
+      "sana": "Sade",
+      "alku": 18020,
+      "loppu": 18219
+    },
+    {
+      "sana": "rummutti",
+      "alku": 18359,
+      "loppu": 18779
+    },
+    {
+      "sana": "kattoa",
+      "alku": 18840,
+      "loppu": 19359
+    },
+    {
+      "sana": "kala",
+      "alku": 20039,
+      "loppu": 20259
+    },
+    {
+      "sana": "pysyi",
+      "alku": 20299,
+      "loppu": 20620
+    },
+    {
+      "sana": "kuivana",
+      "alku": 20719,
+      "loppu": 21180
+    },
+    {
+      "sana": "ja",
+      "alku": 21859,
+      "loppu": 21919
+    },
+    {
+      "sana": "minä",
+      "alku": 22000,
+      "loppu": 22219
+    },
+    {
+      "sana": "en",
+      "alku": 22299,
+      "loppu": 22519
+    },
+    {
+      "sana": "Kaupungin",
+      "alku": 24459,
+      "loppu": 24899
+    },
+    {
+      "sana": "arvojärjestys",
+      "alku": 24979,
+      "loppu": 25739
+    },
+    {
+      "sana": "selvisi",
+      "alku": 25799,
+      "loppu": 26219
+    },
+    {
+      "sana": "minulle",
+      "alku": 26260,
+      "loppu": 26599
+    },
+    {
+      "sana": "ilman",
+      "alku": 26659,
+      "loppu": 26899
+    },
+    {
+      "sana": "tulkkia",
+      "alku": 27000,
+      "loppu": 27479
+    }
+  ],
+  "lauseet": [
+    199,
+    8079,
+    13159,
+    18020,
+    24459
+  ],
+  "luotu": "2026-09-11T12:04:33.354Z"
+}

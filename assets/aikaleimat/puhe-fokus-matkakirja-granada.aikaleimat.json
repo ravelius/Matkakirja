@@ -1,0 +1,243 @@
+{
+  "versio": 2,
+  "kaupunki": "granada",
+  "teksti": "Alhambran palatsi kohoaa Granadan yllä, mutta sen hienoin rakennusaine on vesi. Kapeissa uomissa se kulkee pihalta toiselle ja puhuu niin hiljaa, että minäkin vaikenin. Altaassa näin palatsin toistamiseen. Toinen oli tehty pelkästä valosta ja särkyi, kun kastoin sormeni veteen. Odotin, kunnes se rakentui takaisin.",
+  "tekstiSha256": "b6c0c22970c59e4a98b089b6e8f2c2828b0cd659709519f98ed3d7139fb416db",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-granada.mp3",
+    "versio": 2,
+    "tavut": 440155,
+    "sha256": "269874e6186fcd7efb127e412490957b6c1861d1d6a9ba10e1cd72c30dae62e9"
+  },
+  "kesto": 27420,
+  "sanat": [
+    {
+      "sana": "Alhambran",
+      "alku": 119,
+      "loppu": 699
+    },
+    {
+      "sana": "palatsi",
+      "alku": 799,
+      "loppu": 1259
+    },
+    {
+      "sana": "kohoaa",
+      "alku": 1339,
+      "loppu": 1740
+    },
+    {
+      "sana": "Granadan",
+      "alku": 1819,
+      "loppu": 2359
+    },
+    {
+      "sana": "yllä",
+      "alku": 2440,
+      "loppu": 2740
+    },
+    {
+      "sana": "mutta",
+      "alku": 3579,
+      "loppu": 3799
+    },
+    {
+      "sana": "sen",
+      "alku": 3859,
+      "loppu": 4059
+    },
+    {
+      "sana": "hienoin",
+      "alku": 4099,
+      "loppu": 4519
+    },
+    {
+      "sana": "rakennusaine",
+      "alku": 4579,
+      "loppu": 5359
+    },
+    {
+      "sana": "on",
+      "alku": 5559,
+      "loppu": 5659
+    },
+    {
+      "sana": "vesi",
+      "alku": 5759,
+      "loppu": 6059
+    },
+    {
+      "sana": "Kapeissa",
+      "alku": 7919,
+      "loppu": 8359
+    },
+    {
+      "sana": "uomissa",
+      "alku": 8479,
+      "loppu": 8899
+    },
+    {
+      "sana": "se",
+      "alku": 8960,
+      "loppu": 9079
+    },
+    {
+      "sana": "kulkee",
+      "alku": 9139,
+      "loppu": 9559
+    },
+    {
+      "sana": "pihalta",
+      "alku": 9619,
+      "loppu": 9979
+    },
+    {
+      "sana": "toiselle",
+      "alku": 10079,
+      "loppu": 10599
+    },
+    {
+      "sana": "ja",
+      "alku": 10819,
+      "loppu": 10920
+    },
+    {
+      "sana": "puhuu",
+      "alku": 10979,
+      "loppu": 11259
+    },
+    {
+      "sana": "niin",
+      "alku": 11340,
+      "loppu": 11539
+    },
+    {
+      "sana": "hiljaa",
+      "alku": 11599,
+      "loppu": 12039
+    },
+    {
+      "sana": "että",
+      "alku": 12479,
+      "loppu": 12639
+    },
+    {
+      "sana": "minäkin",
+      "alku": 12719,
+      "loppu": 13099
+    },
+    {
+      "sana": "vaikenin",
+      "alku": 13199,
+      "loppu": 13699
+    },
+    {
+      "sana": "Altaassa",
+      "alku": 15659,
+      "loppu": 16079
+    },
+    {
+      "sana": "näin",
+      "alku": 16119,
+      "loppu": 16299
+    },
+    {
+      "sana": "palatsin",
+      "alku": 16340,
+      "loppu": 16760
+    },
+    {
+      "sana": "toistamiseen",
+      "alku": 16819,
+      "loppu": 17539
+    },
+    {
+      "sana": "Toinen",
+      "alku": 18920,
+      "loppu": 19199
+    },
+    {
+      "sana": "oli",
+      "alku": 19260,
+      "loppu": 19379
+    },
+    {
+      "sana": "tehty",
+      "alku": 19439,
+      "loppu": 19719
+    },
+    {
+      "sana": "pelkästä",
+      "alku": 19779,
+      "loppu": 20199
+    },
+    {
+      "sana": "valosta",
+      "alku": 20299,
+      "loppu": 20760
+    },
+    {
+      "sana": "ja",
+      "alku": 21279,
+      "loppu": 21319
+    },
+    {
+      "sana": "särkyi",
+      "alku": 21439,
+      "loppu": 21920
+    },
+    {
+      "sana": "kun",
+      "alku": 22079,
+      "loppu": 22199
+    },
+    {
+      "sana": "kastoin",
+      "alku": 22299,
+      "loppu": 22760
+    },
+    {
+      "sana": "sormeni",
+      "alku": 22819,
+      "loppu": 23219
+    },
+    {
+      "sana": "veteen",
+      "alku": 23260,
+      "loppu": 23699
+    },
+    {
+      "sana": "Odotin",
+      "alku": 25639,
+      "loppu": 25959
+    },
+    {
+      "sana": "kunnes",
+      "alku": 26059,
+      "loppu": 26299
+    },
+    {
+      "sana": "se",
+      "alku": 26359,
+      "loppu": 26439
+    },
+    {
+      "sana": "rakentui",
+      "alku": 26500,
+      "loppu": 26959
+    },
+    {
+      "sana": "takaisin",
+      "alku": 27019,
+      "loppu": 27420
+    }
+  ],
+  "lauseet": [
+    119,
+    7919,
+    15659,
+    18920,
+    25639
+  ],
+  "luotu": "2026-09-11T12:04:55.338Z"
+}

@@ -1,0 +1,239 @@
+{
+  "versio": 2,
+  "kaupunki": "varsova",
+  "teksti": "Kartassani Varsova kuuluu Venäjälle. Torin leipuri sanoi olevansa puolalainen ja kopautti leipää, jotta kuulisin sen olevan tuoretta. Talot olivat vieri vieressä kuin kuuntelemassa. Viraston kyltissä kirjaimet olivat venäläisiä, mutta aamiaiseni sain puolaksi. Karttaan voi vetää rajan yhdellä liikkeellä. Ihmiset eivät siirry kynän mukana.",
+  "tekstiSha256": "718773556689299affff385d2455fa17b64dc1a9fd238dc97e5748cc1726929c",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-varsova.mp3",
+    "versio": 2,
+    "tavut": 451439,
+    "sha256": "c16cce1f7a92622a22e6a5459dfd82f4b26bd0a152a825cb9f428e46628b76b9"
+  },
+  "kesto": 28139,
+  "sanat": [
+    {
+      "sana": "Kartassani",
+      "alku": 159,
+      "loppu": 740
+    },
+    {
+      "sana": "Varsova",
+      "alku": 779,
+      "loppu": 1259
+    },
+    {
+      "sana": "kuuluu",
+      "alku": 1299,
+      "loppu": 1620
+    },
+    {
+      "sana": "Venäjälle",
+      "alku": 1699,
+      "loppu": 2339
+    },
+    {
+      "sana": "Torin",
+      "alku": 3839,
+      "loppu": 4099
+    },
+    {
+      "sana": "leipuri",
+      "alku": 4159,
+      "loppu": 4579
+    },
+    {
+      "sana": "sanoi",
+      "alku": 4619,
+      "loppu": 4880
+    },
+    {
+      "sana": "olevansa",
+      "alku": 4920,
+      "loppu": 5380
+    },
+    {
+      "sana": "puolalainen",
+      "alku": 5420,
+      "loppu": 6019
+    },
+    {
+      "sana": "ja",
+      "alku": 6159,
+      "loppu": 6259
+    },
+    {
+      "sana": "kopautti",
+      "alku": 6299,
+      "loppu": 6779
+    },
+    {
+      "sana": "leipää",
+      "alku": 6859,
+      "loppu": 7259
+    },
+    {
+      "sana": "jotta",
+      "alku": 7339,
+      "loppu": 7579
+    },
+    {
+      "sana": "kuulisin",
+      "alku": 7639,
+      "loppu": 8059
+    },
+    {
+      "sana": "sen",
+      "alku": 8139,
+      "loppu": 8260
+    },
+    {
+      "sana": "olevan",
+      "alku": 8319,
+      "loppu": 8559
+    },
+    {
+      "sana": "tuoretta",
+      "alku": 8639,
+      "loppu": 9239
+    },
+    {
+      "sana": "Talot",
+      "alku": 11079,
+      "loppu": 11340
+    },
+    {
+      "sana": "olivat",
+      "alku": 11359,
+      "loppu": 11639
+    },
+    {
+      "sana": "vieri",
+      "alku": 11739,
+      "loppu": 11979
+    },
+    {
+      "sana": "vieressä",
+      "alku": 12039,
+      "loppu": 12479
+    },
+    {
+      "sana": "kuin",
+      "alku": 12519,
+      "loppu": 12779
+    },
+    {
+      "sana": "kuuntelemassa",
+      "alku": 12840,
+      "loppu": 13619
+    },
+    {
+      "sana": "Viraston",
+      "alku": 15119,
+      "loppu": 15559
+    },
+    {
+      "sana": "kyltissä",
+      "alku": 15659,
+      "loppu": 16180
+    },
+    {
+      "sana": "kirjaimet",
+      "alku": 16239,
+      "loppu": 16680
+    },
+    {
+      "sana": "olivat",
+      "alku": 16719,
+      "loppu": 16979
+    },
+    {
+      "sana": "venäläisiä",
+      "alku": 17039,
+      "loppu": 17659
+    },
+    {
+      "sana": "mutta",
+      "alku": 18459,
+      "loppu": 18699
+    },
+    {
+      "sana": "aamiaiseni",
+      "alku": 18760,
+      "loppu": 19459
+    },
+    {
+      "sana": "sain",
+      "alku": 19579,
+      "loppu": 19799
+    },
+    {
+      "sana": "puolaksi",
+      "alku": 19859,
+      "loppu": 20399
+    },
+    {
+      "sana": "Karttaan",
+      "alku": 22359,
+      "loppu": 22799
+    },
+    {
+      "sana": "voi",
+      "alku": 22859,
+      "loppu": 22999
+    },
+    {
+      "sana": "vetää",
+      "alku": 23039,
+      "loppu": 23359
+    },
+    {
+      "sana": "rajan",
+      "alku": 23439,
+      "loppu": 23719
+    },
+    {
+      "sana": "yhdellä",
+      "alku": 23819,
+      "loppu": 24100
+    },
+    {
+      "sana": "liikkeellä",
+      "alku": 24180,
+      "loppu": 24799
+    },
+    {
+      "sana": "Ihmiset",
+      "alku": 26379,
+      "loppu": 26760
+    },
+    {
+      "sana": "eivät",
+      "alku": 26819,
+      "loppu": 27059
+    },
+    {
+      "sana": "siirry",
+      "alku": 27119,
+      "loppu": 27479
+    },
+    {
+      "sana": "kynän",
+      "alku": 27539,
+      "loppu": 27819
+    },
+    {
+      "sana": "mukana",
+      "alku": 27879,
+      "loppu": 28139
+    }
+  ],
+  "lauseet": [
+    159,
+    3839,
+    11079,
+    15119,
+    22359,
+    26379
+  ],
+  "luotu": "2026-09-11T12:05:08.137Z"
+}

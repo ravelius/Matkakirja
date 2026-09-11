@@ -1,0 +1,234 @@
+{
+  "versio": 2,
+  "kaupunki": "lappi",
+  "teksti": "Rovaniemellä Ounasjoki tuo vetensä Kemijokeen kuin matkustaja suurempaan veneeseen. Rannassa sidottiin kuormaa, ja kauppapuodissa puhuttiin yläjuoksun puista. Olin piirtänyt joet rajoiksi. Täällä ne olivat teitä. Veneeseen astuva nainen tiesi seuraavan talon savusta, ei kartasta. Lisäsin rannalle talon ja jätin savulle tilaa nousta.",
+  "tekstiSha256": "a35a4a58ae3b058114a3e31adab4db7a6df7abc74ebb3bd00d735067ea1b631c",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-lappi.mp3",
+    "versio": 2,
+    "tavut": 483622,
+    "sha256": "5cd7c9416d5027cb2db694bdeeb3cd0da8488cd4755e7fbebfd4597265d8d3c9"
+  },
+  "kesto": 30139,
+  "sanat": [
+    {
+      "sana": "Rovaniemellä",
+      "alku": 159,
+      "loppu": 899
+    },
+    {
+      "sana": "Ounasjoki",
+      "alku": 939,
+      "loppu": 1620
+    },
+    {
+      "sana": "tuo",
+      "alku": 1779,
+      "loppu": 1939
+    },
+    {
+      "sana": "vetensä",
+      "alku": 2000,
+      "loppu": 2379
+    },
+    {
+      "sana": "Kemijokeen",
+      "alku": 2500,
+      "loppu": 3220
+    },
+    {
+      "sana": "kuin",
+      "alku": 3379,
+      "loppu": 3539
+    },
+    {
+      "sana": "matkustaja",
+      "alku": 3599,
+      "loppu": 4199
+    },
+    {
+      "sana": "suurempaan",
+      "alku": 4319,
+      "loppu": 4819
+    },
+    {
+      "sana": "veneeseen",
+      "alku": 4900,
+      "loppu": 5579
+    },
+    {
+      "sana": "Rannassa",
+      "alku": 7199,
+      "loppu": 7559
+    },
+    {
+      "sana": "sidottiin",
+      "alku": 7639,
+      "loppu": 8139
+    },
+    {
+      "sana": "kuormaa",
+      "alku": 8220,
+      "loppu": 8739
+    },
+    {
+      "sana": "ja",
+      "alku": 9059,
+      "loppu": 9139
+    },
+    {
+      "sana": "kauppapuodissa",
+      "alku": 9199,
+      "loppu": 10019
+    },
+    {
+      "sana": "puhuttiin",
+      "alku": 10059,
+      "loppu": 10599
+    },
+    {
+      "sana": "yläjuoksun",
+      "alku": 10699,
+      "loppu": 11300
+    },
+    {
+      "sana": "puista",
+      "alku": 11420,
+      "loppu": 11960
+    },
+    {
+      "sana": "Olin",
+      "alku": 14079,
+      "loppu": 14279
+    },
+    {
+      "sana": "piirtänyt",
+      "alku": 14319,
+      "loppu": 14779
+    },
+    {
+      "sana": "joet",
+      "alku": 14859,
+      "loppu": 15179
+    },
+    {
+      "sana": "rajoiksi",
+      "alku": 15279,
+      "loppu": 15859
+    },
+    {
+      "sana": "Täällä",
+      "alku": 17180,
+      "loppu": 17479
+    },
+    {
+      "sana": "ne",
+      "alku": 17520,
+      "loppu": 17579
+    },
+    {
+      "sana": "olivat",
+      "alku": 17600,
+      "loppu": 17939
+    },
+    {
+      "sana": "teitä",
+      "alku": 18000,
+      "loppu": 18440
+    },
+    {
+      "sana": "Veneeseen",
+      "alku": 20119,
+      "loppu": 20579
+    },
+    {
+      "sana": "astuva",
+      "alku": 20619,
+      "loppu": 20959
+    },
+    {
+      "sana": "nainen",
+      "alku": 21020,
+      "loppu": 21340
+    },
+    {
+      "sana": "tiesi",
+      "alku": 21399,
+      "loppu": 21699
+    },
+    {
+      "sana": "seuraavan",
+      "alku": 21760,
+      "loppu": 22239
+    },
+    {
+      "sana": "talon",
+      "alku": 22340,
+      "loppu": 22559
+    },
+    {
+      "sana": "savusta",
+      "alku": 22659,
+      "loppu": 23139
+    },
+    {
+      "sana": "ei",
+      "alku": 23920,
+      "loppu": 24039
+    },
+    {
+      "sana": "kartasta",
+      "alku": 24100,
+      "loppu": 24739
+    },
+    {
+      "sana": "Lisäsin",
+      "alku": 26719,
+      "loppu": 27059
+    },
+    {
+      "sana": "rannalle",
+      "alku": 27139,
+      "loppu": 27599
+    },
+    {
+      "sana": "talon",
+      "alku": 27659,
+      "loppu": 28459
+    },
+    {
+      "sana": "ja",
+      "alku": 28519,
+      "loppu": 28579
+    },
+    {
+      "sana": "jätin",
+      "alku": 28639,
+      "loppu": 28899
+    },
+    {
+      "sana": "savulle",
+      "alku": 29000,
+      "loppu": 29439
+    },
+    {
+      "sana": "tilaa",
+      "alku": 29500,
+      "loppu": 29779
+    },
+    {
+      "sana": "nousta",
+      "alku": 29840,
+      "loppu": 30139
+    }
+  ],
+  "lauseet": [
+    159,
+    7199,
+    14079,
+    17180,
+    20119,
+    26719
+  ],
+  "luotu": "2026-09-11T12:05:19.294Z"
+}

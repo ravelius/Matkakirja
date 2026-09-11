@@ -1,0 +1,243 @@
+{
+  "versio": 2,
+  "kaupunki": "amsterdam",
+  "teksti": "Amsterdamin kanavan varrella tuoli matkusti kolmanteen kerrokseen talon ulkopuolta. Se riippui katon koukusta, ja kaksi miestä komensi sitä köysillä. Portaat ovat kuulemma liian kapeat. Tuoli meni ikkunasta sisään selkä edellä, arvokkaasti kuin piispa vaunuihin. Näissä kapeissa taloissa täytyy harkita tarkkaan sekä kalustonsa että riitansa.",
+  "tekstiSha256": "26dd8646f42f5f484d92a3f67880a10199559ac86d8a6352f845fac6e07c238a",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-amsterdam.mp3",
+    "versio": 2,
+    "tavut": 482368,
+    "sha256": "8dfb0bce9cd0b20516d8c3bcda337b133722caeb395361510ad902548d869b33"
+  },
+  "kesto": 30039,
+  "sanat": [
+    {
+      "sana": "Amsterdamin",
+      "alku": 219,
+      "loppu": 899
+    },
+    {
+      "sana": "kanavan",
+      "alku": 1019,
+      "loppu": 1399
+    },
+    {
+      "sana": "varrella",
+      "alku": 1500,
+      "loppu": 2019
+    },
+    {
+      "sana": "tuoli",
+      "alku": 2339,
+      "loppu": 2619
+    },
+    {
+      "sana": "matkusti",
+      "alku": 2679,
+      "loppu": 3119
+    },
+    {
+      "sana": "kolmanteen",
+      "alku": 3240,
+      "loppu": 3779
+    },
+    {
+      "sana": "kerrokseen",
+      "alku": 3859,
+      "loppu": 4500
+    },
+    {
+      "sana": "talon",
+      "alku": 4619,
+      "loppu": 4859
+    },
+    {
+      "sana": "ulkopuolta",
+      "alku": 4980,
+      "loppu": 5699
+    },
+    {
+      "sana": "Se",
+      "alku": 7239,
+      "loppu": 7319
+    },
+    {
+      "sana": "riippui",
+      "alku": 7399,
+      "loppu": 7819
+    },
+    {
+      "sana": "katon",
+      "alku": 7919,
+      "loppu": 8220
+    },
+    {
+      "sana": "koukusta",
+      "alku": 8319,
+      "loppu": 8939
+    },
+    {
+      "sana": "ja",
+      "alku": 9340,
+      "loppu": 9399
+    },
+    {
+      "sana": "kaksi",
+      "alku": 9460,
+      "loppu": 9760
+    },
+    {
+      "sana": "miestä",
+      "alku": 9840,
+      "loppu": 10279
+    },
+    {
+      "sana": "komensi",
+      "alku": 10399,
+      "loppu": 10840
+    },
+    {
+      "sana": "sitä",
+      "alku": 10899,
+      "loppu": 11119
+    },
+    {
+      "sana": "köysillä",
+      "alku": 11159,
+      "loppu": 11819
+    },
+    {
+      "sana": "Portaat",
+      "alku": 13460,
+      "loppu": 13880
+    },
+    {
+      "sana": "ovat",
+      "alku": 13920,
+      "loppu": 14099
+    },
+    {
+      "sana": "kuulemma",
+      "alku": 14179,
+      "loppu": 14539
+    },
+    {
+      "sana": "liian",
+      "alku": 14599,
+      "loppu": 14859
+    },
+    {
+      "sana": "kapeat",
+      "alku": 14960,
+      "loppu": 15479
+    },
+    {
+      "sana": "Tuoli",
+      "alku": 17279,
+      "loppu": 17500
+    },
+    {
+      "sana": "meni",
+      "alku": 17559,
+      "loppu": 17719
+    },
+    {
+      "sana": "ikkunasta",
+      "alku": 17799,
+      "loppu": 18279
+    },
+    {
+      "sana": "sisään",
+      "alku": 18379,
+      "loppu": 18799
+    },
+    {
+      "sana": "selkä",
+      "alku": 18920,
+      "loppu": 19279
+    },
+    {
+      "sana": "edellä",
+      "alku": 19340,
+      "loppu": 19680
+    },
+    {
+      "sana": "arvokkaasti",
+      "alku": 20439,
+      "loppu": 21180
+    },
+    {
+      "sana": "kuin",
+      "alku": 21239,
+      "loppu": 21439
+    },
+    {
+      "sana": "piispa",
+      "alku": 21600,
+      "loppu": 22019
+    },
+    {
+      "sana": "vaunuihin",
+      "alku": 22079,
+      "loppu": 22699
+    },
+    {
+      "sana": "Näissä",
+      "alku": 24699,
+      "loppu": 25039
+    },
+    {
+      "sana": "kapeissa",
+      "alku": 25100,
+      "loppu": 25619
+    },
+    {
+      "sana": "taloissa",
+      "alku": 25680,
+      "loppu": 26079
+    },
+    {
+      "sana": "täytyy",
+      "alku": 26180,
+      "loppu": 26559
+    },
+    {
+      "sana": "harkita",
+      "alku": 26619,
+      "loppu": 27099
+    },
+    {
+      "sana": "tarkkaan",
+      "alku": 27159,
+      "loppu": 27799
+    },
+    {
+      "sana": "sekä",
+      "alku": 27859,
+      "loppu": 28039
+    },
+    {
+      "sana": "kalustonsa",
+      "alku": 28159,
+      "loppu": 28819
+    },
+    {
+      "sana": "että",
+      "alku": 29179,
+      "loppu": 29439
+    },
+    {
+      "sana": "riitansa",
+      "alku": 29539,
+      "loppu": 30039
+    }
+  ],
+  "lauseet": [
+    219,
+    7239,
+    13460,
+    17279,
+    24699
+  ],
+  "luotu": "2026-09-11T12:04:35.385Z"
+}
