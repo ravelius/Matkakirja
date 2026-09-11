@@ -415,7 +415,11 @@ test('vaihe 6: pelaajan asetusrivi on päävalikossa, samalla avaimella ja samal
   const html = lue('../index.html');
   const main = lue('../js/main.js');
   // Rivi on PELAAJAN valikossa (#paavalikko), ei kehittäjävalikossa.
-  const paavalikko = html.slice(html.indexOf('id="paavalikko"'), html.indexOf('id="kehittaja-kotelo"'));
+  // Loppuraja oli #kehittaja-kotelo, kunnes se poistettiin
+  // hampurilaisesta 11.9.2026 (työhuoneen napit siirtyivät rattaaseen).
+  // Pohjarivi on valikon viimeinen lohko, joten se rajaa saman alueen.
+  const paavalikko = html.slice(html.indexOf('id="paavalikko"'),
+    html.indexOf('class="valikko-pohjarivi"'));
   assert.ok(paavalikko.includes('id="lauta-valikko"'), 'lauta-valikko puuttuu päävalikosta');
   assert.ok(paavalikko.includes('id="lauta-vihje"'), 'vaihdon vihjerivi puuttuu');
   assert.match(paavalikko, /<p class="valikko-otsikko">Pelilauta<\/p>/);

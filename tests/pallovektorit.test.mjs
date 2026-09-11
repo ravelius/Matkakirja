@@ -383,13 +383,13 @@ test('kytkimet: laattakerros ja vektorit myös muistista, ratasvalikosta', async
   asetaPallovektorit(true, win);
   assert.equal(laattakerrosPaalla(win, false), true, 'muistettu päällä voittaa oletuksen');
   assert.equal(pallovektoritValittu(win, false), true);
-  // Napit ovat ratasvalikossa ja kytketty; valinta ei jää osoitteen alle.
+  // NAPIT POIS RATTAASTA 11.9.2026 (omistaja: *"nämä kaikki napit voisi
+  // ottaa pois ja jättää noihin asetuksiin"*). Asetukset itse jäivät
+  // nykyisin oletuksin ja osoiteparametrein ?laattakerros= / ?vektorit=.
   const html = lue('../index.html');
-  assert.match(html, /id="kehittaja-laattakerros-kytkin"/);
-  assert.match(html, /id="kehittaja-pallovektorit-kytkin"/);
+  assert.doesNotMatch(html, /id="kehittaja-laattakerros-kytkin"/);
+  assert.doesNotMatch(html, /id="kehittaja-pallovektorit-kytkin"/);
   const main = lue('../js/main.js');
-  assert.match(main, /asetaLaattakerros\(halutaan\);/);
-  assert.match(main, /asetaPallovektorit\(halutaan\);/);
-  assert.match(main, /osoite\.searchParams\.delete\('laattakerros'\);/);
-  assert.match(main, /osoite\.searchParams\.delete\('vektorit'\);/);
+  assert.doesNotMatch(main, /asetaLaattakerros\(/);
+  assert.doesNotMatch(main, /asetaPallovektorit\(/);
 });

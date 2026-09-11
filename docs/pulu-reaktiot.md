@@ -161,7 +161,7 @@ lajin `trailer`, kentät:
 
 | Kenttä | Arvo |
 | --- | --- |
-| `vaihe` | `'kirjaimet'` (ensimmäinen kirjain lähtee lentoon) tai `'loppu'` |
+| `vaihe` | `'kirjaimet'` (ensimmäinen kirjain lähtee lentoon), `'loppu'` (traileri ohi tai pelaaja ohitti napautuksella) tai `'peru'` (kaupungin vaihto, virran sulkeminen tai tuho keskeytti; ei varapaluuta) |
 | `tunnus` | trailerin oma olio, sama koko trailerin ajan (parita alku ja loppu tällä, älä kaupungilla) |
 | `kaupunki` | kaupungin id (esim. `marseille`) |
 

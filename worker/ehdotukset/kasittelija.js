@@ -58,6 +58,19 @@ export const KUVA_TYYPIT = {
 export const KUVIA_ENINTAAN = 3;
 export const KUVAN_KATTO = 8 * 1024 * 1024;
 export const TEKSTIN_KATTO = 4000;
+
+/*
+ * RAAMATUN MUUTOSLÄHETYS (omistaja 11.9.2026: Raamattu muokattavaksi
+ * pelissä). Työhuoneen Raamattu-lehti lähettää muuttuneet kohdat
+ * vanhoine ja uusine teksteineen samaa reittiä kuin lukijoiden
+ * ehdotukset. Yksi Raamatun kohta voi olla parin tuhannen merkin
+ * mittainen ja lähetyksessä voi olla useita kohtia kahtena versiona,
+ * joten 4000 merkin katto katkaisisi lähetyksen kesken lauseen.
+ * Laji on ainoa tapa saada isompi katto, eikä se avaa mitään muuta:
+ * lähetys menee samaan yksityiseen ämpäriin kuin kaikki muutkin.
+ */
+export const RAAMATUN_LAJI = 'raamattu';
+export const RAAMATUN_TEKSTIN_KATTO = 120000;
 export const KENTAN_KATTO = 200;
 export const LISTAN_KATTO = 200;
 
@@ -250,7 +263,12 @@ async function laheta(pyynto, env, kors, apurit) {
     return vastaa({ ok: true, kansio: null }, kors);
   }
 
-  const teksti = tekstikentta(lomake, 'teksti');
+  // Vain 'raamattu' kelpaa lajiksi tällä reitillä: kuvavinkin ja
+  // kuvapalautteen lajit syntyvät omalla reitillään, eikä niitä saa
+  // voida väittää lomakekentällä.
+  const laji = kentta(lomake, 'laji', 40) === RAAMATUN_LAJI ? RAAMATUN_LAJI : '';
+  const teksti = tekstikentta(lomake, 'teksti',
+    laji === RAAMATUN_LAJI ? RAAMATUN_TEKSTIN_KATTO : TEKSTIN_KATTO);
   const sivu = kentta(lomake, 'sivu');
   const tarkenne = kentta(lomake, 'tarkenne', 500);
   const nimimerkki = kentta(lomake, 'nimimerkki', 80);
@@ -340,6 +358,10 @@ async function laheta(pyynto, env, kors, apurit) {
     versio: pro ? 2 : 1,
     aikaleima: nyt.toISOString(),
     kansio,
+    // Laji erottaa työhuoneen Raamatun muutokset lukijan ehdotuksesta
+    // (Lukijoilta-lehti ryhmittelee ne omaksi ryhmäkseen). Tyhjä =
+    // tavallinen ehdotus, kuten kaikissa vanhoissa meta.jsoneissa.
+    laji,
     sivu,
     tarkenne,
     teksti,

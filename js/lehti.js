@@ -57,8 +57,12 @@ import {
   aloitaSivunVeto, kaannaSivu, lataaSivunkaanto, sivunkaantoMahdollinen,
 } from './sivunkaanto.js';
 import { taytaLahderivi } from './tekijakortti.js';
+import { kehittajalehdenSivut } from './tyohuone-kehittajalehti.js';
 import { musiikkiSivut } from './tyohuone-musiikki.js';
 import { RAAMATTU } from './tyohuone-raamattu.js';
+import {
+  onRaamatunMuutos, piirraRaamatunKentta, piirraRaamatunLahetys,
+} from './tyohuone-raamattu-muokkaus.js';
 import { TESTATTAVAA, TILANNE, TUOREET } from './tyohuone-tilanne.js';
 import { raamatunTaulusivu, tilastoSivut } from './tyohuone-tilastot.js';
 import {
@@ -880,16 +884,36 @@ export function avaaKehittajaLehti(ui, otsikko, sivut) {
   naytaTutkiSivu(ui, 1, { heti: true });
 }
 
+/*
+ * RAAMATUN SIVU MUOKKAUSKENTTINÄ (omistaja 11.9.2026).
+ *
+ * Jokainen kohta on oma kenttänsä, ja sivun lopussa on "Lähetä
+ * muutokset". Kentät eivät kirjoita RAAMATTU-olioon mitään: muutos
+ * elää istunnon luonnoksessa ja lähtee ehdotusworkerille
+ * (js/tyohuone-raamattu-muokkaus.js). Piirto on sivun oma `rakenna`,
+ * koska nostomalli latoisi kohdat pelkkänä luettavana tekstinä.
+ */
+function piirraRaamatunSivu(kohde, { osio, kohdat, johdanto = null }) {
+  if (johdanto) kohde.appendChild(html('p', 'periaate-teksti', johdanto));
+  const kentat = html('div', 'raamattu-kentat');
+  for (const { kohta, teksti } of kohdat) {
+    piirraRaamatunKentta(kentat, { osio, kohta, teksti });
+  }
+  kohde.appendChild(kentat);
+  piirraRaamatunLahetys(kohde, RAAMATTU);
+}
+
 /** Raamattu lehtenä: johdanto + jokainen osio omana sivunaan. */
 export function avaaRaamattuLehti(ui) {
   const sivut = [{
     id: 'raamattu-johdanto',
     nimi: 'Raamattu',
     yksipalsta: true,
-    nostot: [{
-      otsikko: `Päivitetty ${RAAMATTU.paivitetty}`,
-      teksti: RAAMATTU.johdanto,
-    }],
+    rakenna: (kohde) => piirraRaamatunSivu(kohde, {
+      osio: 'Johdanto',
+      johdanto: `Päivitetty ${RAAMATTU.paivitetty}`,
+      kohdat: [{ kohta: 'johdanto', teksti: RAAMATTU.johdanto }],
+    }),
   }, ...RAAMATTU.osiot.flatMap((osio, i) => {
     // Valmiusaste värichippinä otsikossa "Tila:"-rivin sijaan.
     const valmis = (osio.tila ?? '').startsWith('hyväksytty');
@@ -898,11 +922,11 @@ export function avaaRaamattuLehti(ui) {
       nimi: osio.otsikko,
       yksipalsta: true,
       tagi: { teksti: valmis ? 'valmis' : 'kesken', luokka: valmis ? 'valmis' : 'kesken' },
-      // Tyhjä rivi kohtien välissä = oma kappale taitossa
-      // (jaaKappaleiksi kunnioittaa kirjoittajan kappalerajoja).
-      nostot: [{
-        teksti: (osio.kohdat ?? []).join('\n\n'),
-      }],
+      // Kohdat ovat muokattavia kenttiä, eivät luettavaa leipätekstiä.
+      rakenna: (kohde) => piirraRaamatunSivu(kohde, {
+        osio: osio.otsikko,
+        kohdat: (osio.kohdat ?? []).map((teksti, j) => ({ kohta: j, teksti })),
+      }),
     };
     /*
      * Aarteet ja tutki kätkö -pelit saavat osionsa perään pelidatasta
@@ -913,6 +937,34 @@ export function avaaRaamattuLehti(ui) {
     return taulu ? [sivu, taulu] : [sivu];
   })];
   avaaKehittajaLehti(ui, 'Raamattu', sivut);
+}
+
+/**
+ * KEHITTÄJÄLEHTI: työhuoneen toinen nappi (omistaja 11.9.2026).
+ *
+ * Yksi sivu, jolla ovat entiset työhuoneen napit riveinä. Rivi kutsuu
+ * täsmälleen samaa avausta kuin poistettu nappi — logiikkaa ei ole
+ * kahdennettu. Lukijaäänen säädindialogi asuu js/main.js:ssä (se on
+ * lomake index.html:ssä), joten sen rivi kulkee main.js:n
+ * rekisteröimän koukun kautta samalla kehittäjätilan ehdolla kuin
+ * entinen #puhe-saadin-btn.
+ *
+ * HUOM NIMET: avaaKehittajaLehti (iso L) on yllä oleva YLEINEN
+ * liitelehden avaus, jota jokainen kehittäjän lehti käyttää;
+ * avaaKehittajalehti (pieni l) on TÄMÄ yksi nimetty lehti.
+ */
+export function avaaKehittajalehti(ui) {
+  const avaa = {
+    tilanne: () => avaaTilanneLehti(ui),
+    poiminnat: () => avaaPoiminnatLehti(ui),
+    tilastot: () => avaaTilastoLehti(ui),
+    grafiikka: () => avaaGrafiikkaLehti(ui),
+    lukijoilta: () => avaaLukijoiltaLehti(ui),
+    musiikki: () => avaaMusiikkiLehti(ui),
+    lukijaaani: () => window.matkakirjaTyohuone?.avaaLukijaaani?.(),
+  };
+  const piilota = kehittajaTilaPaalla() ? [] : ['lukijaaani'];
+  avaaKehittajaLehti(ui, 'Kehittäjälehti', kehittajalehdenSivut(avaa, { piilota }));
 }
 
 /*
@@ -1476,15 +1528,50 @@ function reaktioSivut(ui, kohteet, avain) {
   return [yhteenveto, virheet];
 }
 
+/**
+ * RAAMATUN MUUTOKSET OMANA RYHMÄNÄÄN (omistaja 11.9.2026).
+ *
+ * Työhuoneesta lähetetyt Raamatun muutokset tulevat samasta jonosta
+ * kuin lukijoiden ehdotukset, mutta ne ovat eri asia: Fable poimii ne
+ * postikierroksella ja kirjoittaa Raamattuun sanatarkasti. Siksi ne
+ * saavat oman ryhmäsivunsa eivätkä huku lukijoiden ehdotusten sekaan.
+ */
+function raamatunMuutosSivut(muutokset) {
+  if (!muutokset.length) return [];
+  const etusivu = {
+    id: 'lukijoilta-raamattu',
+    nimi: 'Raamatun muutokset',
+    yksipalsta: true,
+    nostot: [{
+      otsikko: `${muutokset.length} lähetystä`,
+      teksti: 'Työhuoneen Raamattu-lehdestä lähetetyt muutokset. Jokainen '
+        + 'sivu kertoo osion, kohdan numeron sekä vanhan ja uuden tekstin. '
+        + 'Vain Fable kirjoittaa js/tyohuone-raamattu.js:ään.',
+    }],
+  };
+  const sivut = muutokset.map((e, i) => ({
+    id: `lukijoilta-raamattu-${i}`,
+    nimi: `${ehdotusAika(e.aikaleima)} · Raamattu`,
+    yksipalsta: true,
+    nostot: [{ otsikko: 'Raamatun muutokset', teksti: lukijoiltaTiedot(e) }],
+  }));
+  return [etusivu, ...sivut];
+}
+
 /** Ehdotuslistasta lehden sivut: etusivu + yksi sivu per ehdotus. */
 function lukijoiltaSivut(ehdotukset, avain) {
+  // Raamatun muutokset ovat oma ryhmänsä lehden lopussa, joten etusivun
+  // luku ja sivut kertovat vain lukijoiden omista ehdotuksista.
+  const raamatut = ehdotukset.filter(onRaamatunMuutos);
+  const lukijoilta = ehdotukset.filter((e) => !onRaamatunMuutos(e));
   const etusivu = {
     id: 'lukijoilta-etusivu',
     nimi: 'Lukijoilta',
     yksipalsta: true,
     nostot: [{
-      otsikko: `${ehdotukset.length} ehdotusta`,
-      teksti: ehdotukset.length
+      otsikko: `${lukijoilta.length} ehdotusta`
+        + (raamatut.length ? ` · ${raamatut.length} Raamatun muutosta` : ''),
+      teksti: lukijoilta.length
         ? 'Uusin ensin. Yksi ehdotus sivua kohti: kuvat, teksti, '
           + 'sivuehdotus ja lähettäjän tiedot. Sähköposti näkyy vain '
           + 'täällä — sitä ei viedä peliin eikä repoon.\n\n'
@@ -1494,7 +1581,7 @@ function lukijoiltaSivut(ehdotukset, avain) {
         : 'Yhtään ehdotusta ei ole vielä tullut.',
     }],
   };
-  const sivut = ehdotukset.map((e, i) => ({
+  const sivut = lukijoilta.map((e, i) => ({
     id: `lukijoilta-${i}`,
     nimi: `${ehdotusAika(e.aikaleima)} · ${e.nimimerkki || 'Nimetön'}`,
     yksipalsta: true,
@@ -1508,7 +1595,7 @@ function lukijoiltaSivut(ehdotukset, avain) {
       })),
     ],
   }));
-  return [etusivu, ...sivut];
+  return [etusivu, ...sivut, ...raamatunMuutosSivut(raamatut)];
 }
 
 /**

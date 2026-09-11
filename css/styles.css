@@ -556,6 +556,54 @@ button, .brand, .turn-pill, .fact-card h2 {
 .paavalikko .kertoja-valikko .tappa { display: none; }
 
 /*
+ * KOLME VOIMAKKUUSLIUKUA ÄÄNIKYTKINTEN ALLA (omistaja 11.9.2026:
+ * *"ja ääni säätimiin voisi tuoda mukaan äänitehosteet pulun ja
+ * lukijan omat äänen voimakkuus säätimet"*). Sama riviasu kuin
+ * kytkimillä: nimi vasemmalla, lukema oikeassa laidassa — väliin
+ * liuku, joka saa kaiken jäljelle jäävän tilan.
+ */
+.paavalikko .aanivoimat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.3rem;
+}
+
+.paavalikko .aanivoima {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.18rem 0.45rem;
+}
+
+.paavalikko .aanivoima-nimi {
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: rgba(230, 214, 184, 0.78);
+  min-width: 6.4rem;
+}
+
+.paavalikko .aanivoima-liuku {
+  width: 100%;
+  min-width: 4.5rem;
+  margin: 0;
+  accent-color: var(--kulta, #eab84e);
+}
+
+.paavalikko .aanivoima-arvo {
+  min-width: 3rem;
+  text-align: right;
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  color: var(--kulta, #eab84e);
+  font-variant-numeric: tabular-nums;
+}
+
+/*
  * PELILAUDAN VALINTA (omistaja 5.9.2026: *"pelissä periaatteessa voisi
  * olla lopulta kytkin, millä pelaaja voisi valita haluaako pelata
  * pallonäkymässä vai sillä meidän vanhalla kartalla"*). Rivit ovat
@@ -22038,6 +22086,84 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
 .tyohuone-nappi[aria-pressed='true']::after {
   content: '●';
   opacity: 1;
+}
+
+/* ── KEHITTÄJÄLEHDEN RIVIT (omistaja 11.9.2026) ───────────────────
+ * Työhuoneen seitsemän nappia siirtyivät hampurilaisvalikosta
+ * Kehittäjälehden etusivulle. Rivi on sama .tyohuone-nappi kuin
+ * valikossa, mutta sen sisällä on kaksi riviä tekstiä: nimi ja
+ * yhden lauseen selite, jotta lehti kertoo mihin rivi vie. */
+.kehittajalehti-rivit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.kehittajalehti-rivi { align-items: flex-start; }
+
+.kehittajalehti-rivi .viiva-ikoni { margin-top: 0.15rem; }
+
+.kehittajalehti-teksti {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.kehittajalehti-nimi { font-size: 0.98rem; }
+
+.kehittajalehti-selite {
+  font-size: 0.76rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+/* ── RAAMATUN MUOKKAUSKENTÄT (omistaja 11.9.2026) ─────────────────
+ * *"pystyykö raamatun muuttamaan niin että voisin itse editoida
+ * jokaisen sivun tekstejä"*. Kenttä näyttää lepotilassa lehden
+ * leipätekstiltä: ei kehystä, ei taustaa, sama kirjasin. Vasta
+ * aktiivinen kenttä saa hennon kehyksen, jotta muokkauskohta
+ * erottuu. Korkeus kasvaa sisällön mukaan
+ * (js/tyohuone-raamattu-muokkaus.js mitoittaa). */
+.raamattu-kentat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+textarea.raamattu-kentta {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.25rem 0.35rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.55;
+  resize: vertical;
+  overflow: hidden;
+}
+
+textarea.raamattu-kentta:hover { border-color: rgba(198, 158, 82, 0.25); }
+
+textarea.raamattu-kentta:focus {
+  outline: none;
+  border-color: rgba(198, 158, 82, 0.6);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.raamattu-lahetys {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.raamattu-lahetys-tulos {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
 }
 
 .puhe-saadin-rivi {

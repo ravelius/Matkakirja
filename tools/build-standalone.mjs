@@ -676,6 +676,14 @@ const MODULES = [
    */
   'js/tyohuone-musiikki.js',
   /*
+   * Työhuoneen kaksi uutta moduulia (11.9.2026) ennen lehteä: lehti.js
+   * tuo molemmat staattisesti. Kehittäjälehti on pelkkä rivitaulukko ja
+   * Raamatun muokkaus lukee vain ui-apurit ja ehdotukset — molemmat jo
+   * yllä.
+   */
+  'js/tyohuone-kehittajalehti.js',
+  'js/tyohuone-raamattu-muokkaus.js',
+  /*
    * Kevyen kulun nimetyt lehtitehtävät ENNEN maalehteä (maalehti tuo
    * sivun tehtäväpiirron staattisesti). Moduulin omat riippuvuudet —
    * ui-apurit, julisteet, fokusvirrat, natiivi ja äänet — ovat kaikki

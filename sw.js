@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1761';
+const CACHE = 'matkakirja-2026-08-09.1762';
 const SHELL = [
   './',
   './index.html',
@@ -304,6 +304,8 @@ const SHELL = [
   // nämä ovat pelin omia moduuleja: ui.js tuo ne staattisesti, joten
   // ilman esilatausta koko peli jäisi offline käynnistymättä.
   './js/tyohuone-raamattu.js',
+  './js/tyohuone-raamattu-muokkaus.js',
+  './js/tyohuone-kehittajalehti.js',
   './js/tyohuone-tilanne.js',
   './js/tyohuone-pelit.js',
   './js/tyohuone-tilastot.js',

@@ -197,13 +197,19 @@ test('js/ui.js:n render ei tallenna eikä leimaa kohtaamistestissä', () => {
     'passin leimausta ei ole suljettu kohtaamistestin lipulla');
 });
 
-test('kehittäjän ratasvalikossa on Kohtaamiset-nappi ja lehden dialogi', () => {
+/*
+ * NAPPI POIS RATTAASTA 11.9.2026 (omistaja: *"nämä kaikki napit voisi
+ * ottaa pois"*). Kohtaamistesti itse jäi: lehti aukeaa ui:n kautta
+ * (avaaKohtaamistesti), ja sen dialogi on yhä index.html:ssä.
+ */
+test('kohtaamistestin dialogi on yhä, ratasvalikon nappi ei', () => {
   const html = readFileSync(join(JUURI, 'index.html'), 'utf8');
-  assert.match(html, /id="kehittaja-kohtaamiset-btn"/);
+  assert.doesNotMatch(html, /id="kehittaja-kohtaamiset-btn"/);
   assert.match(html, /id="kohtaamistesti-dialog"/);
   assert.match(html, /id="kohtaamistesti-sisalto"/);
   assert.match(html, /id="kohtaamistesti-suodatin"/);
   const main = readFileSync(join(JUURI, 'js/main.js'), 'utf8');
-  assert.match(main, /kehittaja-kohtaamiset-btn/);
-  assert.match(main, /avaaKohtaamistesti/);
+  assert.doesNotMatch(main, /kehittaja-kohtaamiset-btn/);
+  const ui = readFileSync(join(JUURI, 'js/ui.js'), 'utf8');
+  assert.match(ui, /avaaKohtaamistesti/, 'lehti aukeaa yhä ui:n kautta');
 });

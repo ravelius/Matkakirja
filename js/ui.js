@@ -51,7 +51,8 @@ import { avaaKohtaamistesti } from './kohtaamistesti.js';
 // Remontin M5a: lehden sivukoneisto.
 import {
   avaaGrafiikkaLehti,
-  avaaKehittajaLehti, avaaLukijoiltaLehti, avaaMaalehti, avaaMusiikkiLehti,
+  avaaKehittajaLehti, avaaKehittajalehti, avaaLukijoiltaLehti, avaaMaalehti,
+  avaaMusiikkiLehti,
   avaaPoiminnatLehti,
   avaaRaamattuLehti,
   avaaSisallysvalikko,
@@ -14976,6 +14977,10 @@ export class UI {
   piirraIhmenauha(isanta, teksti) { return piirraIhmenauha(isanta, teksti); }
 
   avaaRaamattuLehti() { return avaaRaamattuLehti(this); }
+
+  /* Työhuoneen toinen nappi (omistaja 11.9.2026): entiset seitsemän
+     työhuoneen nappia yhden lehden riveinä. */
+  avaaKehittajalehti() { return avaaKehittajalehti(this); }
 
   avaaTilanneLehti() { return avaaTilanneLehti(this); }
 

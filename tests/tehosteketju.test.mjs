@@ -345,10 +345,12 @@ test('moduuli on kuoressa, niputuksessa oikealla kohdalla, lähdesivulla ja rata
   assert.ok(rivi, 'lähdesivulta puuttuu Tuna');
   assert.match(rivi.lisenssi, /MIT/);
   assert.match(rivi.tekija, /DinahMoe AB & Oskar Eriksson/);
-  assert.match(lue('index.html'), /id="kehittaja-tehosteketjut-btn"/);
-  const main = lue('js/main.js');
-  assert.match(main, /kehittaja-tehosteketjut-btn/);
-  assert.match(main, /kuunteleTehosteketjut\(\)/);
+  // KUUNTELUNAPPI POIS RATTAASTA 11.9.2026 (omistaja: *"nämä kaikki
+  // napit voisi ottaa pois"*). Ketjut itse jäivät peliin (js/puhe.js,
+  // js/fokuskohteet.js), ja kuuntelun voi yhä ajaa savukkeella.
+  assert.doesNotMatch(lue('index.html'), /id="kehittaja-tehosteketjut-btn"/);
+  assert.doesNotMatch(lue('js/main.js'), /kehittaja-tehosteketjut-btn/);
+  assert.match(lue('js/puhe.js'), /tehosteketju\(piiri, nimi, suora\)/, 'ketju on yhä käytössä');
 });
 
 test('radion suoraa lähetystä ei reititetä ketjuun (se ei kulje Web Audion läpi)', () => {
