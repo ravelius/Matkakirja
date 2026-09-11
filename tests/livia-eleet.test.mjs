@@ -315,10 +315,36 @@ test('pitkä odotus reagoi kerran, ei herää päättyneenä eikä keskeytä lue
 });
 
 test('taustaeleet ovat neutraaleja eivätkä toistu heti',()=>{
- const neutraalit=new Set(['blink','turn','preen','glance','tilt','lookUp','lookDown']);
+ const neutraalit=new Set(['blink','turn','preen','glance','tilt','lookUp','lookDown','mapPeck']);
  for(const edellinen of neutraalit)for(const arpa of [0,.25,.5,.999]){
   const ele=valitseLivianTaustaEle(edellinen,arpa);assert.ok(neutraalit.has(ele));assert.notEqual(ele,edellinen);
  }
+});
+
+for(const tapahtuma of ['pointerdown','keydown','wheel','pointermove','speech','narration','chat','dialog','reduced','hidden'])test(`kartan nokkiminen alkaa vasta levossa ja väistää: ${tapahtuma}`,t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);t.mock.method(Math,'random',()=>.999);
+ c=asennaLivianKasvot(e.pollo);const canvas=e.doc.body.children[0].children[0];
+ e.tick(31000);assert.doesNotMatch(canvas.innerHTML,/data-map-peck=/);
+ e.tick(1600);assert.match(canvas.innerHTML,/data-map-peck=/,'aito taustakello valitsee uuden eleen');
+ const puhe={};
+ if(tapahtuma==='speech')ilmoitaLivianKasvopuhe(puhe,true,'Hei');
+ else if(tapahtuma==='narration')c.tilanne('narration',{tunnus:{},lahde:'matkakirja',reaktiotAjastettu:true});
+ else if(tapahtuma==='chat'){e.pollo.auki=true;e.notify(e.button);}
+ else if(tapahtuma==='dialog')e.doc.querySelector=()=>({open:true});
+ else if(tapahtuma==='reduced'){e.reduced.matches=true;e.reduced.dispatchEvent(new Event('change'));}
+ else if(tapahtuma==='hidden'){e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));}
+ else {const ev=new Event(tapahtuma);if(tapahtuma==='pointermove')Object.defineProperty(ev,'buttons',{value:1});e.doc.dispatchEvent(ev);}
+ e.tick(40);assert.doesNotMatch(canvas.innerHTML,/data-map-peck=/,'pelaajan toiminta voittaa nokkimisen');
+ if(tapahtuma==='speech')ilmoitaLivianKasvopuhe(puhe,false);
+ e.tick(25000);assert.doesNotMatch(canvas.innerHTML,/data-map-peck=/,'ei myöhäistä jatkoa tai välitöntä uusintaa');
+ c.tuhoa();assert.equal(e.raf.size,0);assert.equal(e.timers.size,0);
+});
+
+test('jatkuva kartan raahaus ja zoomaus pitävät nokkimisen poissa',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);t.mock.method(Math,'random',()=>.999);c=asennaLivianKasvot(e.pollo);
+ const canvas=e.doc.body.children[0].children[0];
+ for(let i=0;i<8;i++){e.tick(10000);const ev=new Event(i%2?'wheel':'pointermove');Object.defineProperty(ev,'pointerType',{value:'touch'});e.doc.dispatchEvent(ev);assert.doesNotMatch(canvas.innerHTML,/data-map-peck=/);}
+ e.tick(29000);assert.doesNotMatch(canvas.innerHTML,/data-map-peck=/);
 });
 
 test('luenta säilyy odotuksen alun ja lopun yli sekä eleiden välissä',t=>{
