@@ -152,6 +152,7 @@ const SHELL = [
   './js/geo.js',
   './js/saa.js',
   './js/maakayrat.js',
+  './js/maanaariviivat.js',
   './js/maatummennus.js',
   './js/uutiset.js',
   './js/packs/maailmankartta.js',

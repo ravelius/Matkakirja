@@ -100,6 +100,9 @@
  * ilmoitusta. Sama koskee maata, jolle aineistossa ei ole polygonia.
  */
 
+import { kohteidenNykyinenIso } from './fokuskohteet.js';
+import { lataaMaapolygonit } from './maanaariviivat.js';
+
 const TUMMENNUS_NS = 'http://www.w3.org/2000/svg';
 
 /**
@@ -143,23 +146,15 @@ const TUMMENNUS_NS = 'http://www.w3.org/2000/svg';
  */
 const TUMMENNUS_VIIVA = 2;
 
-let polygoniLupaus = null;
-
-/**
- * Aineisto kerran per istunto; epäonnistunut haku palauttaa null ja
- * seuraava tarve yrittää uudestaan (siksi lupaus nollataan virheessä).
- * Sanasta sanaan sama malli kuin js/maakayrat.js lataaMaakayrat.
+/*
+ * AINEISTON HAKU MUUTTI js/maanaariviivat.js:ään 11.9.2026, kun
+ * pallolauta alkoi piirtää saman maan ääriviivan pinnalleen: kaksi
+ * lautaa lukee saman tiedoston, ja LUPAUS ON JAETTAVA — muuten
+ * pallolla ja kartalla olisi kaksi hakua samaan 1,4 megatavuun. Vienti
+ * jatkuu tästä, jotta vanhat kutsujat ja savukkeet näkevät sen
+ * entisessä osoitteessaan.
  */
-export function lataaMaapolygonit() {
-  polygoniLupaus ??= fetch('assets/data/maapolygonit.json')
-    .then((v) => (v.ok ? v.json() : null))
-    .catch(() => null)
-    .then((data) => {
-      if (!data?.maat) polygoniLupaus = null;
-      return data?.maat ? data : null;
-    });
-  return polygoniLupaus;
-}
+export { lataaMaapolygonit };
 
 /**
  * Yhden maan renkaat SVG-polun d-merkkijonoksi.
@@ -281,10 +276,38 @@ export function paivitaMaatummennus(ui) {
  * molemmissa tiloissa, eikä kytkintä ole enää olemassa.
  */
 function tunniste(ui) {
-  const iso = ui.fokuskarttaAvain;
+  /*
+   * MAA ON PELAAJAN MAA, EI MAALEHDEN IKKUNA (omistaja 11.9.2026:
+   * *"Peli voisi piirtää vahvemmalla aina kyseisen valtion rajat jossa
+   * pelaaja on"*).
+   *
+   * `fokuskarttaAvain` tulee maan ikkunataulusta (js/packs/fokus-grc.js
+   * FOKUS_POHJAT), jossa on vain Euroopan 39 maata — sen ulkopuolella
+   * kerros oli pimeänä, vaikka polygoni oli aineistossa (134 maata).
+   * Ikkuna on yhä ENSISIJAINEN, koska se on sama tieto jota kartan muut
+   * kerrokset käyttävät; puuttuessaan maa luetaan laudan omasta
+   * kaupunki–maa-taulusta samalla päättelyllä kuin kartan kohteet
+   * (js/fokuskohteet.js nykyinenIso).
+   *
+   * AVAUSLENTO EI SAA KOROSTUSTA: lento on kartan niukin hetki
+   * (js/kartta.js aloituslennonNiukkuus), eikä kohdemaan kehä saa
+   * ilmestyä harson läpi ennen laskeutumista.
+   */
+  if (ui.aloituslentoKesken) return null;
+  const iso = ui.fokuskarttaAvain || kohteidenNykyinenIso(ui);
   if (!iso) return null;
   const raja = ui.kartta?.pelaajanUloinSkaala?.();
-  if (!(raja > 0)) return null;
+  /*
+   * MAA ILMAN IKKUNAA ON NÄKYVYYSRAJATON. `pelaajanUloinSkaala`
+   * lasketaan maan ikkunasta (js/kartta.js), joten ikkunattomalle
+   * maalle se on 0 — silloin ei ole myöskään sitä uloszoomauksen
+   * pohjaa, jonka ulkopuolella kerros aikanaan sammutettiin
+   * (*"tummennukset riittää tehdä siihen tasoon mitä peli antaa
+   * normaalistikin pelaajan zoomata ulos"*). Viiva on silloin päällä
+   * kaikissa mittakaavoissa, mikä on tasan se, mitä 11.9.2026:n
+   * *"aina"* tarkoittaa.
+   */
+  if (!(raja > 0)) return { iso, avain: iso };
   const skaala = ui.nakyvaAlue?.()?.skaala;
   if (!(skaala > 0)) return null;
   // Pieni sietovara: pelaajan uloin taso itse kuuluu mukaan.
