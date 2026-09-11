@@ -33,6 +33,16 @@ export function ilmoitaLivianTunne(tagi,tiedot={}){
  const tunne=livianTunnetaginTiedot(tagi);if(!tunne)return null;
  ilmoitaLivianTilanne('emotion',{...tiedot,...tunne});return tunne;
 }
+/** Fablen tekstikohtainen tarkoitus; ei avainsana-arvontaa tai ääntä. */
+export function livianLuentareaktionTiedot({tarkoitus,voimakkuus}={}){
+ if(typeof voimakkuus!=='number'||!Number.isFinite(voimakkuus)||voimakkuus<=0)return null;
+ const voima=Math.min(1,voimakkuus);
+ const kartta={myotailee:'nod',epailee:'shake',torjuu:'shake',
+  huvittuu:voima<.4?'smile':voima<.55?'grin':'chuckle',
+  hammastyy:voima<.65?'doubleTake':'disbelief',vakavoituu:'listen'};
+ const ele=Object.hasOwn(kartta,tarkoitus)?kartta[tarkoitus]:null;
+ return ele?{ele,voimakkuus:voima}:null;
+}
 export function merkitseLivianNosto(kerros,tiedot){liviaNostoTiedot.set(kerros,tiedot);}
 export function livianNostonTiedot(kerros){return liviaNostoTiedot.get(kerros)||{};}
 /** Aiheen sävy voittaa luokan: vakavaa tarinaa ei tervehditä virneellä. */

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {LIVIAN_TUNTEET,ilmoitaLivianTunne,livianAiheEle,livianTunnetaginTiedot,seuraaLivianKuuntelua,kuunteleLivianTilanteita} from '../js/livia-tilanteet.js';
+import {LIVIAN_TUNTEET,ilmoitaLivianTunne,livianAiheEle,livianTunnetaginTiedot,livianLuentareaktionTiedot,seuraaLivianKuuntelua,kuunteleLivianTilanteita} from '../js/livia-tilanteet.js';
 import {livianNostoAsettelu} from '../js/livia-nostotila.js';
 test('kaikilla nostoluokilla on reaktio; vakava sisältö voittaa hymyn',()=>{
  for(const symboli of ['huuto','elain','silma','historia','luonto','ruoka','kulttuuri','tekniikka','kauppa','sana','merenkulku','urheilu','kaupunki','ihme','hetki'])assert.ok(livianAiheEle({symboli}));
@@ -19,6 +19,14 @@ test('ulkoinen tunnetagi on vain tunne ja rajattu voimakkuus',t=>{
  const calls=[],off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
  assert.deepEqual(ilmoitaLivianTunne({tunne:'ilo',voimakkuus:.7},{lahde:'koe',teksti:'ei kuulu tagiin'}),{tunne:'ilo',voimakkuus:.7,ele:'grin'});
  assert.equal(calls[0][0],'emotion');assert.equal(calls[0][1].lahde,'koe');assert.equal(calls[0][1].ele,'grin');
+});
+test('luentareaktion semantiikka ja voimakkuus erottavat hymyn, virneen ja naurun',()=>{
+ for(const [tarkoitus,voimakkuus,ele]of [['myotailee',.3,'nod'],['epailee',.5,'shake'],['torjuu',.7,'shake'],['huvittuu',.35,'smile'],['huvittuu',.45,'grin'],['huvittuu',.6,'chuckle'],['hammastyy',.4,'doubleTake'],['hammastyy',.8,'disbelief'],['vakavoituu',.5,'listen']]){
+  assert.deepEqual(livianLuentareaktionTiedot({tarkoitus,voimakkuus}),{ele,voimakkuus});
+ }
+ for(const tarkoitus of ['tuntematon','toString','__proto__'])assert.equal(livianLuentareaktionTiedot({tarkoitus,voimakkuus:.5}),null);
+ for(const voimakkuus of [undefined,null,0,-1,'0.5',NaN,Infinity])assert.equal(livianLuentareaktionTiedot({tarkoitus:'huvittuu',voimakkuus}),null);
+ assert.equal(livianLuentareaktionTiedot({tarkoitus:'huvittuu',voimakkuus:9}).voimakkuus,1);
 });
 test('luennan reaktiot seuraavat soitinta, eivät seinäkelloa tai vanhaa kaupunkia',t=>{
  const a=new EventTarget();a.currentTime=0;a.paused=false;let current=true;const calls=[];

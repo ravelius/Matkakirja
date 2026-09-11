@@ -2,12 +2,12 @@
 import {LIVIA_PIX_ELEET,livianPikseliAsento} from './livia-pikselit.js';
 import {livianSvgPaa} from './livia-svg-paa.js';
 export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
- ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['scratch','Pään raapaisu',2600],['eyeRub','Lasit ylös ja silmien hieraisu',5200]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
+ ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['scratch','Pään raapaisu',2600],['eyeRub','Lasit ylös ja silmien hieraisu',5200],['chuckle','Hiljainen naurunpyrskähdys',2500]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
 const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
 const lvEase=n=>{n=lvClamp(n);return n*n*(3-2*n);};
 const lvGate=p=>lvEase((p-.06)/.18)*(1-lvEase((p-.79)/.18));
 const lvRound=n=>Math.round(n*1000)/1000;
-const lvEmotion={shock:1,embarrassed:.6,angry:.9,bored:.3,puff:.72,manic:1,expert:.65,disbelief:.8,confused:.55,happy:.65,smile:.35,grin:.6,wink:.3,welcome:.35,present:.5,glasses:.38,love:.65,facepalm:.6,doubleTake:.75,bread:.85};
+const lvEmotion={shock:1,embarrassed:.6,angry:.9,bored:.3,puff:.72,manic:1,expert:.65,disbelief:.8,confused:.55,happy:.65,smile:.35,grin:.6,chuckle:.6,wink:.3,welcome:.35,present:.5,glasses:.38,love:.65,facepalm:.6,doubleTake:.75,bread:.85};
 export function livianEleenVoima(id,text='') {
  let strength=lvEmotion[id]??.35;
  if(/!{2,}|aivan mahdoton|todellakaan|kääk!/iu.test(text))strength+=.15;
@@ -15,6 +15,11 @@ export function livianEleenVoima(id,text='') {
 }
 export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
  const s={...livianPikseliAsento(id,p),ele:id,p:lvClamp(p),voimakkuus:lvClamp(voimakkuus)};
+ if(id==='chuckle'&&p>.12&&p<.86){
+  const syke=Math.sin((p-.12)/.74*Math.PI*6),voima=s.voimakkuus;
+  s.frame='grin';s.mouth=syke>0?'talk':'talkSmall';
+  s.y=-Math.abs(syke)*voima*1.6;s.tilt=syke*voima*.55;
+ }
  if(id==='eyeRub'){
   s.glasses=1;
   s.glassesLift=22*lvEase((p-.10)/.18)*(1-lvEase((p-.70)/.18));
