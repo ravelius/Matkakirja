@@ -1,5 +1,9 @@
 # Pulu — yhteinen tilakortti
 
+## 12.9.2026 — PR2273 READY: karttaleijunta
+
+Head 0aff81e57090b0ee736511c199965f169e4db83d, puu 67f4b2cbfc6ecf519e8f779e7de694316086c867. CI34648829929 SUCCESS; 2988 pass / 0 fail / 13 skip; kohteet 102/102. Pulu nousee kameran liikkeestä (100 ms lukevat näytteet, myös inertia), 260 ms nosto noin 12 px, jalat sisään/siivet/maahan jäävä varjo. Pysähdyttyä 500 ms viive + 280 ms lasku; uusi liike jatkaa ilmasta. Tärkeämmät kohtaukset, puhe, chat, luenta, pulla ja reduced motion voittavat; elinkaaren siivous. Chrome oikea peli paikallisin ehdokastiedostoin 834×1194 ja 393×852 pan/wheel/laskeutuminen/reduced PASS; 393×852 lisäksi kahden sormen kosketusnipistys PASS; 0 JS-virhettä, kuvat katsottu. Ei fyysisen iPad/Safarin tai julkaistun asennetun sovelluksen readbackia. READY-posti ca0d3651e94a3989ac466e84a4a06e6a4a6f5e15. Seuraava siirto Fable: tarkistus/versionosto/julkaisu/Raamattu. PR2269 on jo mainissa v1782 / fbc94b8c; sen alla oleva READY on historiallinen.
+
 ## 11.9.2026 — PR2269 READY: satunnainen kartan nokkiminen
 
 Head aa5712e3681820abf27f84211681c0ac6c81d403, puu 2f47b76ce3f6b13b4bfb7a558aee4eb9599894bd. CI34644605816 SUCCESS; 2909 pass / 0 fail / 13 skip; kohteet 88/88. mapPeck 2500 ms, kaksi maahan ulottuvaa nokkaisua, vähintään 30 s toimettomuutta, ei peräkkäisiä toistoja. Pelaajan toiminta, puhe ja näkymien elinkaari voittavat; reduced motion ei animoi. Chrome 834×1194 oikea Ateenan kartta paikallisin ehdokastiedostoin: 37041 ms lepo, wheel-keskeytys ja chat PASS, 0 JS-virhettä, kuvat tarkastettu. Ei fyysisen iPadin tai julkaistun asennetun sovelluksen readbackia. READY-posti e3ab37b8bcc743fb5dda03261e5bc9ca89c1574b. Seuraava siirto Fable: tarkistus/versionosto/julkaisu/Raamattu. PR2264 on nyt mainissa 76ce21f6 / versionosto 0aa63d56 (v1780), sen alla oleva READY on historiallinen.
