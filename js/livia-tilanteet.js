@@ -1,5 +1,6 @@
 /* Pelitilanteiden kuvasignaali. Ei käynnistä tai pysäytä puhetta. */
 const liviaTilanneKuulijat=new Set(),liviaNostoTiedot=new WeakMap();
+export const LIVIAN_PITKAN_ODOTUKSEN_VIIVE=6000;
 export function ilmoitaLivianTilanne(laji,tiedot={}) {
  for(const f of liviaTilanneKuulijat){try{f(laji,tiedot);}catch{/* ele ei estä peliä */}}
 }

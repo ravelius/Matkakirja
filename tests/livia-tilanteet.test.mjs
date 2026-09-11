@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {LIVIAN_TUNTEET,ilmoitaLivianTunne,livianAiheEle,livianTunnetaginTiedot,livianLuentareaktionTiedot,seuraaLivianKuuntelua,kuunteleLivianTilanteita} from '../js/livia-tilanteet.js';
+import {LIVIAN_PITKAN_ODOTUKSEN_VIIVE,LIVIAN_TUNTEET,ilmoitaLivianTunne,livianAiheEle,livianTunnetaginTiedot,livianLuentareaktionTiedot,seuraaLivianKuuntelua,kuunteleLivianTilanteita} from '../js/livia-tilanteet.js';
 import {livianNostoAsettelu} from '../js/livia-nostotila.js';
+test('pitkän odotuksen raja vastaa chatin kuuden sekunnin rajaa',()=>assert.equal(LIVIAN_PITKAN_ODOTUKSEN_VIIVE,6000));
 test('kaikilla nostoluokilla on reaktio; vakava sisältö voittaa hymyn',()=>{
  for(const symboli of ['huuto','elain','silma','historia','luonto','ruoka','kulttuuri','tekniikka','kauppa','sana','merenkulku','urheilu','kaupunki','ihme','hetki'])assert.ok(livianAiheEle({symboli}));
  assert.equal(livianAiheEle({symboli:'elain',otsikko:'Valkoinen hevonen syntyy tummana'}),'doubleTake');

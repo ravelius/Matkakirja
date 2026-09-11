@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1758, teksti: 'Pulu eläytyy lehtiin, löytöihin ja odotukseen' },
   { v: 1757, teksti: 'Pulu reagoi matkakirjan kohtiin ja nauraa loppuvitsille' },
   { v: 1756, teksti: 'Luentareaktiot: pehmeä loppu ja kytkennän kilpailu' },
   { v: 1755, teksti: 'Äänitiedostot pois reposta: kaikki ämpäristä' },

@@ -1414,7 +1414,10 @@ export class Game {
     if (this.needsAid(p)) {
       p.money += STRANDED_AID;
       this.say(p.id, `${p.name} on jumissa ilman rahaa ja saa pankilta ${STRANDED_AID} puntaa.`);
-      this.emit('aid', `${p.name} sai pankilta ${STRANDED_AID} puntaa`, { icon: 'kukkaro' });
+      this.emit('aid', `${p.name} sai pankilta ${STRANDED_AID} puntaa`, {
+        icon: 'kukkaro',
+        tilanne: 'peli.vararikko.pankkiapu',
+      });
     }
 
     // Kun vaihtoehtoja ei ole — esimerkiksi sisämaan kaupungissa tai kesken

@@ -29,6 +29,7 @@ import {
 } from './maalehti.js';
 import { asetaKuva, julisteUrl } from './media.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
+import { aloitaLivianLehtikierros, reagoiLivianLehtisivuun } from './livia-lehtireaktiot.js';
 // Reaktiolaskurit työhuoneen arviointinäkymään (js/reaktiot.js).
 import {
   REAKTIO_SYMBOLIT, haeReaktiolista, merkitseVirheKorjatuksi,
@@ -201,6 +202,7 @@ export async function openWiki(ui, cityId) {
  * kohdat mene rikki.
  */
 export function rakennaSivut(ui, cityId) {
+  aloitaLivianLehtikierros(ui);
   /*
    * Maaosasto takaisin etusivun palstaan: piirraMaaEtusivu siirtää
    * elementin karttasivulle, ja ilman palautusta seuraava kaupunki,
@@ -559,6 +561,14 @@ export function piirraTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) 
   else if (kategoria?.numerot) piirraMaaNumerotSivu(ui, kategoria);
   else piirraKategoria(ui, kategoria);
   ui.arrivalKategoria.hidden = !kategoria;
+  reagoiLivianLehtisivuun(ui, {
+    kategoria,
+    sivu: i,
+    tila: ui.lehtitila.tutkiTila,
+    omistaja: ui.lehtitila.tutkiTila === 'maa'
+      ? ui.lehtitila.tutkiMaaLehti : ui.lehtitila.arrivalShownFor,
+    nakyva: Boolean(kategoria),
+  });
   /*
    * Mediarivi maalehden ensimmäiselle sivulle myös silloin, kun
    * maalla ei ole korkokarttaa.
@@ -705,6 +715,7 @@ export function jatkaLehdenLuentaa(ui) {
 export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
   const maa = ui.game?.pack?.map?.countryShapes?.[iso];
   if (!maa) return;
+  aloitaLivianLehtikierros(ui);
   // Maalehti vaihtaa sisällön JO AUKI OLEVAAN dialogiin, joten
   // lukija.js:n keskitetty ponnahdusikkunasääntö ei näe avausta —
   // kaupunkilehden luenta vaiennetaan tässä (omistajan tilaus
