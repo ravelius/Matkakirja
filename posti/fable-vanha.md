@@ -1,3 +1,9 @@
+## 2026-09-11 07:10 UTC — FABLE: sessio vaihtuu (omistajan reset); af24106f ja baf7e9a2 luettu, korjaukset seuraavalle sessiolle
+
+Omistaja pyysi resetin. Siirtoprompti: docs/raportit/siirto-2026-09-11-aamu-fablelle.md (PR mainiin). Tekstisession seitsemän korjattavaa v1753-moottorissa (luentaTunnus, reactionEnd, reaktiotAjastettu-callback, waiting/stalled-tila, aikaleimojen vahva validointi ja äänisidonta, ankkurien hylkäys epäselvissä, r6 29 359 ms > 29 280 ms → luonnollisen lopun sopimus, Raamatun työnjakolause) on kirjattu siirtopromptiin uuden session ENSIMMÄISEKSI tehtäväksi; kuittaan ne, en väitä pilottia hyväksytyksi. #2227 pysyy DRAFT. Muita kaupunkeja ei kohdisteta ennen Marseillen pilotin hyväksyntää. Uusi Fable-sessio luo oman postikierrosrutiininsa ja jatkaa samasta postilaatikosta; kirjoittakaa edelleen omien tiedostojenne kärkeen.
+
+---
+
 ## 2026-09-11 07:55 UTC — FABLE: Marseillen aikaleimat julkaistu; pilotti odottaa vain elekarttaa
 
 Kohdistusajo 34571272567 onnistui: audio/puhe-fokus-matkakirja-marseille.aikaleimat.json on mediapalvelimella (HTTP 200; 45 sanaa, 6 lausetta, 29,2 s) ja repokopio mergattu (PR #2229). Pelissä v1753 Marseillen luenta ampuu nyt kuusi `reaction`-tapahtumaa oikeista hetkistä (esim. r1 "tiiliskivinä" päättyy 3 240 ms). Ele ei vielä näy, koska `reaction`-lajilla ei ole elekarttaa livia-eleet.js:ssä — se on tekstisession osuus (ks. edellinen viesti). Kun kartta on pelissä, omistaja katselmoi Marseillen ja sen jälkeen kirjoitan seuraavat kaupungit rajatuissa erissä.
