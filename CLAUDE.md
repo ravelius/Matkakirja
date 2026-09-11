@@ -7,7 +7,7 @@ Raamatun ja docs/roolitus.md:n ensimmäisellä rivillä.
 
 Täsmennys (omistaja 11.9.2026, tekstisession kautta): tämä sääntö koskee
 Clauden agentteja. Peliä kehittää myös ChatGPT/Codex, joka saa käyttää
-Solia ja muita kevyempiä agenttimalleja; molemmat pääsessiot delegoivat
+Solia, Terraa ja Lunaa (kevyemmät agenttimallit); molemmat pääsessiot delegoivat
 rajatut tehtävät kevyimmälle riittävän kyvykkäälle mallille (Raamattu,
 Ydinajatus: CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN).
 

@@ -299,6 +299,33 @@ export async function lataaLuentareaktiot(kaupunkiId, url, { teksti = null } = {
 }
 
 /**
+ * LUENNAN LAUSERAJAT TARKKOINA AIKOINA (js/luenta.js `lopetaOsuuteen`).
+ *
+ * Matkakirjan tilapäinen lyhennys (Raamattu, SAAPUMISEN UUSI JARJESTYS…)
+ * pysäyttää luennan lauserajaan. Rajan voi arvata äänen hiljaisuuksista
+ * (js/luenta.js lauseTauko), mutta jos tälle äänitteelle on tarkistetut
+ * aikaleimat, ne VOITTAVAT arvion: niissä lauseiden alkuajat ovat
+ * mitattuja eivätkä pääteltyjä.
+ *
+ * Sama lataus ja sama tarkistus kuin reaktioilla — tiedosto haetaan
+ * kerran per osoite ja kelpaa vain juuri tähän äänitteeseen ja tähän
+ * tekstiin sidottuna.
+ *
+ * @param {string} url äänitteen polku
+ * @returns {Promise<?{lauseet:number[], teksti:string}>} alkuajat (ms)
+ */
+export async function luennanLauserajat(url) {
+  const kaupunki = kaupunkiOsoitteesta(url);
+  if (!kaupunki) return null;
+  const merkinta = FOKUSVIRRAT[kaupunki]?.matkakirja;
+  if (!merkinta?.teksti) return null;
+  const data = await lataaLuentareaktiot(kaupunki, url, { teksti: merkinta.teksti });
+  const lauseet = data?.lauseet;
+  if (!Array.isArray(lauseet) || !lauseet.length) return null;
+  return { lauseet, teksti: data.teksti ?? merkinta.teksti };
+}
+
+/**
  * Kehittäjän kone: varoitukset näkyviin vain siellä. Ilman selaimen
  * `location`-oliota (testit, palvelutyöntekijä) ollaan hiljaa — vartio
  * ankkureista on testissä, ei konsolissa.

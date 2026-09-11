@@ -182,8 +182,14 @@ import {
   fokusvirtaLehtivinkki, fokusvirtaSisalto,
   fokusvirtaHuudahdus, fokusvirtaUusiKulku,
   fokusvirtaSaapumiskupla, nollaaFokuskuvat, vaiennaLivianKaupunkipuhe,
-  naytaLuentakuva,
+  naytaLuentakuvasarja,
 } from './fokusvirta.js';
+/*
+ * KAUPUNGIN MINITRAILERI (omistaja 11.9.2026): kolme herokuvaa ja nimi
+ * ennen isoisän ääntä. Luenta ja kirjoituskone odottavat sen lupausta
+ * (renderFact).
+ */
+import { naytaSaapumistraileri } from './saapumistraileri.js';
 
 const wikiGalleryCache = new Map();
 
@@ -12801,9 +12807,6 @@ export class UI {
         } else {
           this.naytaFactValokuva(null);
         }
-        this.typeText(this.factText, merkinta.teksti, 'fact', () => {
-          fokusvirtaMerkintaLuettu(this, virtaKaupunki);
-        });
         const virranMerkinta = fokusvirtaSisalto(this, virtaKaupunki)?.matkakirja;
         /*
          * AARREMERKINTÄ EI PERI SAAPUMISMERKINNÄN ÄÄNITETTÄ (omistajan
@@ -12824,12 +12827,29 @@ export class UI {
         } else {
           this.factKuuntele.hidden = true;
         }
+        /*
+         * LUENTA PÄÄTTYY SAMAAN KOHTAAN KUIN TEKSTI (omistaja 11.9.2026,
+         * Raamattu SAAPUMISEN UUSI JARJESTYS…). Kortin teksti on
+         * lyhennetty kaksi lausetta (js/fokusvirta.js
+         * lyhennettyMerkinta), ja luenta pysäytetään samaan lauserajaan
+         * — äänitettä ei äänitetä uusiksi, vaan osuus kertoo, mihin
+         * kohtaan puhetta lyhennetty teksti päättyy.
+         */
+        const lopetaOsuuteen = merkinta.lyhennetty && merkinta.tekstiKoko?.length
+          ? merkinta.teksti.length / merkinta.tekstiKoko.length : null;
         // Kertoja lukee koko merkinnän tai ei mitään ('lyhyt' poistettu
         // 3.9.2026, ks. js/aani-ehdokkaat.js kertojaTila).
-        this.asetaMerkinnanLuenta(virtaAanite ? () => {
+        const luentatehtava = virtaAanite ? () => {
           if (kertojaTila() === 'ei') stopDiaryVoice(this);
-          else playDiaryVoice(this, virtaAanite, { viive: 1000 });
-        } : null);
+          else playDiaryVoice(this, virtaAanite, { viive: 1000, lopetaOsuuteen });
+        } : null;
+        /*
+         * Luentatehtävä talteen HETI, mutta ilman aloitusta: kaiutin ja
+         * kertojakytkin toimivat jo trailerin aikana, eikä edellisen
+         * kaupungin merkintä jää kytkimen taakse. Aloitus tulee
+         * trailerin jälkeen (aloitaMerkinta).
+         */
+        this.asetaMerkinnanLuenta(luentatehtava, { aloita: false });
         /*
          * ISOISÄ ALOITTAA, PULU HUUTAA VÄLIIN (omistaja 8.9.2026: *"ota
          * kaikki pulun alustukset pois."*). Luenta lähtee siis heti
@@ -12838,17 +12858,67 @@ export class UI {
          * lopussa. Kommentti tulee yhä kirjoituskoneen lopusta
          * (fokusvirtaMerkintaLuettu).
          */
-        fokusvirtaHuudahdus(this, virtaKaupunki);
         /*
-         * LUENTAKUVA KARTAN PÄÄLLE (omistaja 9.9.2026, Raamattu
-         * POSTILAATIKOSTA TULEE LUENTAKUVIA KARTAN PAALLE). Kuva nousee
-         * SAMASTA HETKESTÄ kuin luenta lähtee — siksi kutsu on tässä,
-         * välihuudon vieressä, eikä kirjoituskoneen lopussa. Kortti
-         * pysyy kuvattomana (yllä oleva sääntö): luentakuva on kartalla,
-         * ei kortilla, ja se poistuu luennan päättyessä. Ilman pakin
-         * `matkakirja.luentakuva`-kenttää tämä ei tee mitään.
+         * MERKINTÄ ALKAA YHDESTÄ PAIKASTA: kirjoituskone, luenta,
+         * välihuuto ja luentakuvasarja lähtevät samasta hetkestä.
+         * Aiemmin ne olivat tässä suoraan; nyt ne ovat funktiossa,
+         * koska minitraileri (alla) siirtää koko hetkeä eteenpäin.
          */
-        naytaLuentakuva(this, virtaKaupunki);
+        const aloitaMerkinta = () => {
+          // Traileri kestää sekunteja: pelaaja on voinut sillä välin
+          // lähteä kaupungista, aloittaa uuden pelin tai saada uuden
+          // merkinnän korttiin.
+          if (this.dead || this.factKey !== merkinta.avain) return;
+          if (this.game.cityOf?.()?.id !== virtaKaupunki.id) return;
+          this.typeText(this.factText, merkinta.teksti, 'fact', () => {
+            fokusvirtaMerkintaLuettu(this, virtaKaupunki);
+          });
+          this.asetaMerkinnanLuenta(luentatehtava);
+          /*
+           * ISOISÄ ALOITTAA, PULU HUUTAA VÄLIIN (omistaja 8.9.2026:
+           * *"ota kaikki pulun alustukset pois."*). Luenta lähtee siis
+           * heti ylläolevasta kutsusta, ja välihuudon ajoitus lasketaan
+           * sen kestosta — siksi tämä kutsu on tässä eikä
+           * kirjoituskoneen lopussa. Kommentti tulee yhä
+           * kirjoituskoneen lopusta (fokusvirtaMerkintaLuettu).
+           */
+          fokusvirtaHuudahdus(this, virtaKaupunki);
+          /*
+           * ISOT KUVAT KESKELLE, SARJANA (omistaja 11.9.2026, Raamattu
+           * SAAPUMISEN UUSI JARJESTYS…). Kuva nousee SAMASTA HETKESTÄ
+           * kuin luenta lähtee — siksi kutsu on tässä, välihuudon
+           * vieressä. Isoisän kuva avautuu keskelle ruutua, PuluCamin
+           * kuvat seuraavat 4 s välein, ja lopuksi kartalle jää pieni
+           * kuvapakka. Ilman pakin `matkakirja.luentakuva`-kenttää tämä
+           * ei tee mitään.
+           */
+          naytaLuentakuvasarja(this, virtaKaupunki);
+        };
+        /*
+         * KAUPUNGIN MINITRAILERI ENNEN ISOISÄN ÄÄNTÄ (omistaja
+         * 11.9.2026, sanatarkasti: *"ennen isoisan kertomusta tulee
+         * kaupungin mini esittely kolmen kuvan ja nimen voimin"*).
+         *
+         * KERRAN PER PAKKI JA KAUPUNKI: kortti piirtyy samassa
+         * kaupungissa uudelleen (aikataulurivi, laatan ratkeaminen),
+         * eikä traileri saa alkaa alusta joka kerta — muisti on sama
+         * avain kuin saapumiskuplalla ja välihuudolla. Katselutilassa
+         * ja lehti auki ei traileria: silloin ruudulla on jo jokin muu
+         * näkymä, jonka päälle koko ruudun päällys ei kuulu. Lehden
+         * tunnistus on DIALOGIN TILA eikä `arrivalShownFor`: se jää
+         * osoittamaan viimeksi avattuun kaupunkiin (null suljettaessa,
+         * ei undefined), joten sillä ei voi kysyä "onko lehti auki".
+         */
+        const trailerAvain = `${game.pack.id}:${virtaKaupunki.id}`;
+        this.trailerNaytetty ??= new Set();
+        const trailerSaa = !this.katselu && !this.trailerNaytetty.has(trailerAvain)
+          && !this.arrivalDialog?.open;
+        if (trailerSaa) {
+          this.trailerNaytetty.add(trailerAvain);
+          void naytaSaapumistraileri(this, virtaKaupunki).then(aloitaMerkinta);
+        } else {
+          aloitaMerkinta();
+        }
         return;
       }
       if (virtaKaupunki && fokusvirtaLukitseeLehden(this, virtaKaupunki)) {

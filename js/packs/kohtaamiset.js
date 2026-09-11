@@ -14,6 +14,15 @@
  *   tyhja     — repliikki, kun kätkö on tyhjä
  *   vaarin    — repliikki väärästä vastauksesta
  *
+ * Tunnetagit (11.9.2026, docs/pulu-reaktiot.md E2 kohta 2):
+ * tunneTervehdys, tunneLoyto, tunneTyhja ja tunneVaarin ovat muotoa
+ * { tunne, voimakkuus } ja kertovat, miten Livia reagoi kuhunkin
+ * repliikkiin (js/livia-tilanteet.js LIVIAN_TUNTEET). Rekisteri sallii
+ * kenttien puuttua — oletus tulisi silloin koodista — mutta omistajan
+ * linjaus 11.9.2026 ("Pulu valmiiksi kaikissa pelitilanteissa") on
+ * täysi kattavuus, joten kaikki neljä kenttää on kirjoitettu jokaiselle
+ * kaupungille. Perustelu on kunkin kaupungin kommentissa.
+ *
  * Tämä on esityskerros: pelimoottori ei tunne kohtaamisia, joten
  * vanhat tallennukset ja muut kaupungit toimivat ennallaan. Muut
  * kysymysmuodot (väittämä, valokuvaaja, tullimies, portti) pitävät
@@ -106,6 +115,20 @@ export const KOHTAAMISET = {
       + 'tuhat ihmistä tunnissa — joku ehti ensin."',
     vaarin: 'Leila kääntää puhelimen takaisin itseensä päin: "Ei vielä. '
       + 'Minäkin palasin tähän kolmesti ennen kuin sain valon oikein."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Leila vertaa
+     * kuvakulmia eikä kerro isoisästä: "Tämä on sama kulma" on
+     * uteliaisuutta, ei lämpöä (rekisterin poikkeus).
+     *
+     * Repliikkien tagit ovat rekisterin oletukset ja istuvat sanoihin: löytö
+     * on pelin suuri hetki (ilo 0,7), "Tyhjä…" jää pohtimaan eikä moiti
+     * oikeaa vastausta (miettiva 0,45) ja väärä vastaus saa lohduttavan "Ei
+     * vielä" (hammentynyt 0,4).
+     */
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.55 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
   /*
    * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
@@ -142,6 +165,20 @@ export const KOHTAAMISET = {
       + 'täällä kaiken, mikä ei ole kiinni kalliossa."',
     vaarin: 'Mara työntää kajakin irti kivestä: "Ei tänään. Ranta on '
       + 'huomennakin samassa paikassa."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: "Se on piirretty
+     * mereltä … niin viedään sinut samaan kohtaan" — mereltä piirretty kuva
+     * ja käytännön ehdotus (rekisterin poikkeus).
+     *
+     * Repliikkien tagit ovat rekisterin oletukset ja istuvat sanoihin: löytö
+     * on pelin suuri hetki (ilo 0,7), "Tyhjä…" jää pohtimaan eikä moiti
+     * oikeaa vastausta (miettiva 0,45) ja väärä vastaus saa lohduttavan "Ei
+     * vielä" (hammentynyt 0,4).
+     */
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
   odessa: {
     hahmo: 'torimyyjä Iryna',
@@ -156,6 +193,20 @@ export const KOHTAAMISET = {
       + 'täällä on siivottu monta kertaa."',
     vaarin: 'Iryna kääntää kuitin oikein päin: "Ei vielä. Paperi ei mene '
       + 'mihinkään, ja minä olen tässä huomennakin."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: "Vanhaa paperia" ja
+     * kirja käsissä "varovasti kuin munakenno" — oletusarvo osuu (rekisterin
+     * poikkeustaulukko vahvistaa sen).
+     *
+     * Repliikkien tagit ovat rekisterin oletukset ja istuvat sanoihin: löytö
+     * on pelin suuri hetki (ilo 0,7), "Tyhjä…" jää pohtimaan eikä moiti
+     * oikeaa vastausta (miettiva 0,45) ja väärä vastaus saa lohduttavan "Ei
+     * vielä" (hammentynyt 0,4).
+     */
+    tunneTervehdys: { tunne: 'lammin', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
   kairo: {
     hahmo: 'kirjakauppias Faruk',
@@ -172,6 +223,20 @@ export const KOHTAAMISET = {
       + 'Mutta basaarissa mikään ei katoa lopullisesti."',
     vaarin: 'Faruk sulkee kirjansa pehmeästi: "Ei vielä, ystäväni. '
       + 'Tee odottaa silloinkin."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: ainoa tervehdys,
+     * joka nimeää isoisän kirjan ja "kartan, jota ei ollut muilla"
+     * (rekisterin poikkeus).
+     *
+     * Repliikkien tagit ovat rekisterin oletukset ja istuvat sanoihin: löytö
+     * on pelin suuri hetki (ilo 0,7), "Tyhjä…" jää pohtimaan eikä moiti
+     * oikeaa vastausta (miettiva 0,45) ja väärä vastaus saa lohduttavan "Ei
+     * vielä" (hammentynyt 0,4).
+     */
+    tunneTervehdys: { tunne: 'jannitys', voimakkuus: 0.6 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
   tukholma: {
     hahmo: 'höyrylaivan konemestari Elsa',
@@ -190,6 +255,20 @@ export const KOHTAAMISET = {
       + 'palaa."',
     vaarin: 'Elsa naurahtaa: "Ei vielä. Koneen kanssa on sama '
       + 'juttu: opettele ensin, painele vasta sitten."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: "mies kysyi koneesta
+     * enemmän kuin maisemasta" — konemestari arvostaa asiantuntijaa
+     * (rekisterin poikkeus).
+     *
+     * Repliikkien tagit ovat rekisterin oletukset ja istuvat sanoihin: löytö
+     * on pelin suuri hetki (ilo 0,7), "Tyhjä…" jää pohtimaan eikä moiti
+     * oikeaa vastausta (miettiva 0,45) ja väärä vastaus saa lohduttavan "Ei
+     * vielä" (hammentynyt 0,4).
+     */
+    tunneTervehdys: { tunne: 'ylpea', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
   /*
    * LUONNOS 5.9.2026, Fable tarkistaa.
@@ -239,6 +318,20 @@ export const KOHTAAMISET = {
       + 'joka viikko, ja on käyty kauan."',
     vaarin: 'Pilar kääntyy takaisin koneiston puoleen: "Ei vielä. Kello '
       + 'ei kiirehdi, enkä minäkään."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: "Odota. Ensin
+     * kerrot, mistä sait tuon kirjan." — epäluulo, ei lämpö (rekisterin
+     * poikkeus).
+     *
+     * Repliikkien tagit ovat rekisterin oletukset ja istuvat sanoihin: löytö
+     * on pelin suuri hetki (ilo 0,7), "Tyhjä…" jää pohtimaan eikä moiti
+     * oikeaa vastausta (miettiva 0,45) ja väärä vastaus saa lohduttavan "Ei
+     * vielä" (hammentynyt 0,4).
+     */
+    tunneTervehdys: { tunne: 'miettiva', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
   venetsia: {
     hahmo: 'naamiontekijä Lucia',
@@ -254,6 +347,20 @@ export const KOHTAAMISET = {
       + 'käy täällä kaikessa, myös kätköissä."',
     vaarin: 'Lucia palaa naamionsa ääreen: "Ei tänään. Cartapesta kuivuu '
       + 'hitaasti, ja niin kuivuu tietokin."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Venetsia on Livian
+     * rakkauskohtaus; matalampi kuin albumissa, koska kohtaaminen on eri
+     * hetki (rekisterin poikkeus).
+     *
+     * Repliikkien tagit ovat rekisterin oletukset ja istuvat sanoihin: löytö
+     * on pelin suuri hetki (ilo 0,7), "Tyhjä…" jää pohtimaan eikä moiti
+     * oikeaa vastausta (miettiva 0,45) ja väärä vastaus saa lohduttavan "Ei
+     * vielä" (hammentynyt 0,4).
+     */
+    tunneTervehdys: { tunne: 'rakkaus', voimakkuus: 0.55 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
   berliini: {
     hahmo: 'posetiivari Otto',
@@ -272,5 +379,18 @@ export const KOHTAAMISET = {
       + 'ja rakennettu niin monesti, että kätköt vaihtavat paikkaa."',
     vaarin: 'Otto tarttuu kampeen: "Ei vielä, nuori ystävä. '
       + 'Laatikkokin oppi sävelensä rulla kerrallaan."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: posetiivi ja isoisän
+     * muisto samassa repliikissä — lämpimin tervehdys (rekisterin poikkeus).
+     *
+     * Repliikkien tagit ovat rekisterin oletukset ja istuvat sanoihin: löytö
+     * on pelin suuri hetki (ilo 0,7), "Tyhjä…" jää pohtimaan eikä moiti
+     * oikeaa vastausta (miettiva 0,45) ja väärä vastaus saa lohduttavan "Ei
+     * vielä" (hammentynyt 0,4).
+     */
+    tunneTervehdys: { tunne: 'lammin', voimakkuus: 0.6 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
 };

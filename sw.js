@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1760';
+const CACHE = 'matkakirja-2026-08-09.1761';
 const SHELL = [
   './',
   './index.html',
@@ -9,6 +9,8 @@ const SHELL = [
   './css/kohtaamiskuvat.css',
   // Fokusmoodin annostelukortti lataa oman tyylinsä itse (js/fokusvirta.js).
   './css/fokusvirta.css',
+  // Kaupungin minitraileri lataa oman tyylinsä itse (js/saapumistraileri.js).
+  './css/saapumistraileri.css',
   './css/fokuskohteet.css',
   './css/fokusnosto.css',
   // Sähkepinta lataa oman tyylinsä itse (js/sahke.js).
@@ -64,6 +66,11 @@ const SHELL = [
   './js/havainnekuva.js',
   './js/reaktiot.js',
   './js/tekijakortti.js',
+  /*
+   * Matkakirjan lauseiden jako ja tilapäinen lyhennys (11.9.2026):
+   * luentareaktiot, luenta ja fokusvirta tuovat sen staattisesti.
+   */
+  './js/lausejako.js',
   // Pulun luentareaktiot (11.9.2026): luenta.js tuo sen staattisesti.
   './js/luentareaktiot.js',
   './js/luenta.js',
@@ -71,6 +78,8 @@ const SHELL = [
   // Kehittäjän kohtaamislista (5.9.2026): ui.js tuo sen staattisesti.
   './js/kohtaamistesti.js',
   './js/fokusvirta.js',
+  // Kaupungin minitraileri (11.9.2026): ui.js ja fokusvirta tuovat sen.
+  './js/saapumistraileri.js',
   // Kartan "Etsi aarre" -nappi (9.9.2026): fokusvirta tuo sen staattisesti.
   './js/etsi-aarre-nappi.js',
   // PULU-CAM-pakka isoisän luentakuvan päälle (9.9.2026): fokusvirta tuo
@@ -348,6 +357,7 @@ const SHELL = [
   './js/packs/saatiedot.js',
   './js/packs/kohtaamiset.js',
   './js/packs/fokusvirrat.js',
+  './js/packs/iskulauseet.js',
   './js/packs/fokuskohteet-grc.js',
   './js/packs/fokusvirta-ateena.js',
   './js/packs/fokuskohteet-bgr.js',
