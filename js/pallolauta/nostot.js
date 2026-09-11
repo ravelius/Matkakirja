@@ -37,9 +37,10 @@
  */
 
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
+import { MAASTOKOHTEET_ATA } from '../packs/maastokohteet-ata.js';
 import {
-  LEHDEN_VAHIN_OSUUS, avaaFokuskohde, kohteidenNykyinenIso, maanKohdemerkit, maanKohdetiedot,
-  naapurienPoltetutMerkit, suljeFokuskohde,
+  LEHDEN_VAHIN_OSUUS, avaaFokuskohde, kohdeMerkinLadonta, kohteidenNykyinenIso, maanKohdemerkit,
+  maanKohdetiedot, naapurienPoltetutMerkit, suljeFokuskohde,
 } from '../fokuskohteet.js';
 import { ELAINTAKY_NAKYY_ASTETTA, avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenSiirto } from '../fokuspiste.js';
@@ -57,6 +58,40 @@ import { sovitteleLaput } from './sovittelu.js';
 
 /** Eläviä nostoja pallolla enintään kerrallaan (karttapallo.md luku 6). */
 export const NOSTOJEN_KATTO = 40;
+/*
+ * ══ ETELÄMANNER: NOSTO ASTEINA, EI LAUDAN PISTEENÄ ════════════════
+ *
+ * OMISTAJA 11.9.2026, sanatarkasti: *"Etelä-Mantereelle tehdään myös
+ * omia nostoja, koska se on mielenkiintoinen tutkimuspaikka."*
+ *
+ * Kaikki muut merkit tällä kerroksella tulevat LAUDAN pisteestä ja
+ * kääntyvät asteiksi `asteet(kohta)`-funktiolla. Etelämantereella
+ * lautapistettä ei ole eikä voi olla: pelin juliste on Millerin
+ * lieriöprojektiota ja loppuu 61,47° S:ään, joten etelänapa
+ * projisoituisi riville 7611, kun laudan korkeus on 5399. Piste jäisi
+ * laudan ULKOPUOLELLE — ei epätarkasti vaan kokonaan.
+ *
+ * PALLOLLA ALUE ON OLEMASSA: napakalotit (js/pallo.js NAPAKALOTIT)
+ * piirtävät 60°–90° S omana karttanaan. Siksi nostodata saa antaa
+ * paikan SUORAAN asteina (`asteet: { lat, lon }`,
+ * js/packs/maastokohteet-ata.js), ja tämä kerros lukee sen
+ * sellaisenaan. Muuta se ei vaadi: merkki, napautus ja tietokortti
+ * ovat samat rivit kuin muillakin nostoilla, koska kerros käsittelee
+ * kaikkia merkkejä lat/lng-pareina tästä eteenpäin.
+ *
+ * TASOKARTALLA MERKKIÄ EI OLE, eikä se ole poikkeus: js/fokuskohteet.js
+ * kohdeKarttarivit ottaa mukaan vain rivit, joilla on äärellinen
+ * `laudat[lauta]`-piste, joten `asteet`-nosto putoaa samasta seulasta
+ * kuin kartan ulkopuolelle jäävät hetket aina. Ei riviä, ei merkkiä,
+ * ei rikkinäistä kohtaa.
+ */
+/**
+ * Etelämantereen nostot näkyvät samalla portilla kuin eläintäyt:
+ * vasta kun näkymä on kaventunut tähän pituusasteeseen, eli kun
+ * manner täyttää ruudun. Yleiskuvassa kuusi merkkiä napalla olisi
+ * rykelmä eikä kartta.
+ */
+export const ETELAMANNER_NAKYY_ASTETTA = 90;
 /**
  * Merkin mitta ruudulla: kirjaston yksikkö → px niin, että nimiö on
  * kartan kohdenimiön kokoinen (js/karttanimet.js KOKO.kohde 8,5 px,
@@ -327,6 +362,35 @@ export function luoNostot({
           lunastettu: Boolean(game.elaintakyLunastettu?.(t.iso)),
           poltettu: onPoltettu(t.tunnus, tiiviste),
           avaa: () => { if (!ui.busy) avaaElaintaky(ui, t.iso); },
+        });
+      }
+    }
+    /*
+     * Etelämanner (ks. lohko tiedoston alussa): paikka luetaan
+     * kohteen omasta `asteet`-kentästä eikä laudalta. Merkki ei ole
+     * koskaan poltettu — laattapyramidi on julisteen projektiota,
+     * josta Etelämanner puuttuu — joten se on aina elävä H-merkki.
+     */
+    if (asteita <= ETELAMANNER_NAKYY_ASTETTA && !liikkuu) {
+      for (const kohde of MAASTOKOHTEET_ATA) {
+        const a = kohde.asteet;
+        if (!Number.isFinite(a?.lat) || !Number.isFinite(a?.lon)) continue;
+        const lado = kohdeMerkinLadonta(ui, kohde);
+        if (!lado.symboli) continue;
+        rivit.push({
+          avain: `ata:${kohde.id}`,
+          id: kohde.id,
+          perhe: 'nosto',
+          lat: a.lat,
+          lng: a.lon,
+          nimi: lado.nimi ?? kohde.nimi,
+          nimioNakyy: Boolean(lado.nimi),
+          kategoria: lado.symboli,
+          symLaji: lado.laji,
+          puoli: 'oikea',
+          aihe: nostosymPaakategoria(lado.symboli),
+          poltettu: false,
+          avaa: (ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri }),
         });
       }
     }

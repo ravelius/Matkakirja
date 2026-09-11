@@ -15,10 +15,23 @@
 # (tee-pallovektorit.yml), jotta rantaviiva osuu laatoissa ja kalotissa
 # samaan kohtaan.
 #
+# LIITOSSÄVY HAETAAN AJON AIKANA JULKAISTUISTA PALLOLAATOISTA. Kalotin
+# meri ankkuroidaan siihen sävyyn, joka laatoissa on kalotin kehän
+# kohdalla — ilman sitä napa näkyy kiekkona (omistaja 11.9.2026: *"Rajat
+# näkyvät yhä."*, mitattu ero 9–12 luminanssiyksikköä). Ajo pysähtyy,
+# jos sävyä ei saada mitattua.
+#
 # UUSI AJO = UUSI VERSIO. Kuvat ovat selaimessa vuoden välimuistissa
 # (immutable), joten samaan polkuun ei koskaan kirjoiteta eri sisältöä.
 # Ajon jälkeen js/pallo.js:n NAPAKALOTTI_VERSIO vaihdetaan tähän
 # versioon — ilman sitä peli näyttää yhä vanhaa kuvaa.
+#
+# KUVAMUOTO ON WEBP (11.9.2026). Paperin rae on kohinaa, jota häviötön
+# PNG ei pakkaa: 2048 px:n eteläkalotti oli PNG:nä 4,58 Mt ja on
+# webp q88 -pakattuna 0,26 Mt. Siksi eteläkalotti piirretään nyt
+# oletuksena 4096 px:iin (0,93 Mt) ja pohjoinen 2048:aan — perustelut
+# ja mittaukset tools/tee-napakalotit.mjs:n alussa. Vanha PNG-erä jää
+# koskematta omaan versiokansioonsa.
 name: Tee napakalotit
 
 on:
@@ -28,12 +41,24 @@ on:
         description: 'Ämpärin kansio julisteet/pallo/napakalotit/<versio>/ (tyhjä = tämän päivän päivä + a, esim. 2026-09-11a)'
         required: false
         default: ''
-      koko:
-        description: 'Kuvan sivu pikseleinä (potenssi kahdesta)'
+      koko_pohjoinen:
+        description: 'Pohjoiskalotin sivu pikseleinä (kattaa 80-90 astetta)'
         required: false
         default: '2048'
         type: choice
         options: ['1024', '2048', '4096']
+      koko_etela:
+        description: 'Eteläkalotin sivu pikseleinä (kattaa 60-90 astetta, siis kolme kertaa leveamman kaistan)'
+        required: false
+        default: '4096'
+        type: choice
+        options: ['2048', '4096', '8192']
+      laatu:
+        description: 'webp-laatu (alfa aina 100)'
+        required: false
+        default: '88'
+        type: choice
+        options: ['82', '88', '92']
       ylinaytto:
         description: 'Ylinäytteistys piirrossa (2 = piirretään kaksinkertaisena ja kutistetaan)'
         required: false
@@ -111,7 +136,9 @@ jobs:
       - name: Kuiva ajo (suunnitelma)
         if: inputs.kuiva == 'kylla'
         run: |
-          node tools/tee-napakalotit.mjs --ne=ne-data --kuiva --koko=${{ inputs.koko }} \
+          node tools/tee-napakalotit.mjs --ne=ne-data --kuiva \
+            --koko-pohjoinen=${{ inputs.koko_pohjoinen }} --koko-etela=${{ inputs.koko_etela }} \
+            --laatu=${{ inputs.laatu }} \
             ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
 
       - name: Asenna sharp ja piirrä kalotit
@@ -120,12 +147,18 @@ jobs:
           set -euo pipefail
           npm install --no-save --no-fund --no-audit sharp
           node tools/tee-napakalotit.mjs --ne=ne-data --ulos=napakalotit-ulos \
-            --koko=${{ inputs.koko }} --ylinaytto=${{ inputs.ylinaytto }} \
+            --koko-pohjoinen=${{ inputs.koko_pohjoinen }} --koko-etela=${{ inputs.koko_etela }} \
+            --laatu=${{ inputs.laatu }} --ylinaytto=${{ inputs.ylinaytto }} \
             ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
           ls -la napakalotit-ulos
           # Kuvassa ON oltava alfakanava (reunan häivytys) — ilman sitä
-          # liitos laattoihin näkyisi kiekon reunana.
-          node -e "const s=require('sharp');(async()=>{for(const p of ['pohjoinen','etela']){const m=await s('napakalotit-ulos/'+p+'.png').metadata();console.log(p,m.width+'x'+m.height,'alfa',m.hasAlpha);if(!m.hasAlpha||m.width!==m.height){console.log('::error::'+p+': väärä kuva');process.exit(1);}}})()"
+          # liitos laattoihin näkyisi kiekon reunana. Muoto on webp.
+          node -e "const s=require('sharp');(async()=>{for(const p of ['pohjoinen','etela']){const m=await s('napakalotit-ulos/'+p+'.webp').metadata();console.log(p,m.format,m.width+'x'+m.height,'alfa',m.hasAlpha);if(m.format!=='webp'||!m.hasAlpha||m.width!==m.height){console.log('::error::'+p+': väärä kuva');process.exit(1);}}})()"
+          # LIITOSSÄVY ON OLTAVA MITATTU JULKAISTUISTA LAATOISTA. Jos
+          # ämpäri ei vastannut, työkalu käyttää varalukua — ja juuri se
+          # sävyero näkyi navalla kiekkona (ks. tools/tee-napakalotit.mjs
+          # LIITOSSÄVY). Silloin ajo pysäytetään eikä mitään viedä.
+          node -e "const j=require('./napakalotit-ulos/kalotit.json');for(const k of j.kalotit){console.log(k.puoli,'liitossävy',k.liitossavy,'mitattu',k.liitossavyMitattu,'siirto',k.liitossiirto);if(!k.liitossavyMitattu){console.log('::error::'+k.puoli+': liitossävyä ei saatu laatoista');process.exit(1);}}"
 
       # KATSO KUVAT AJON JÄLKEEN. Ajo tarkistaa mitat ja alfan, ei sitä
       # miltä jäätikkö näyttää. Artefakti on tätä varten.
@@ -144,9 +177,9 @@ jobs:
           kansio="$(cat napakalotit-ulos/kansio.txt)"
           # Kuvat: pitkä välimuisti, versio on polussa.
           for p in pohjoinen etela; do
-            aws s3 cp "napakalotit-ulos/$p.png" "s3://${R2_BUCKET}/${kansio}$p.png" \
+            aws s3 cp "napakalotit-ulos/$p.webp" "s3://${R2_BUCKET}/${kansio}$p.webp" \
               --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
-              --no-progress --content-type image/png \
+              --no-progress --content-type image/webp \
               --cache-control 'public, max-age=31536000, immutable'
           done
           # Luettelo viimeisenä (kuten laatoilla ja vektoreilla).

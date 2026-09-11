@@ -2,13 +2,17 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  NAPAKALOTTI, NAPAKALOTTI_VERSIO, NAPAKANNEN_LEVEYS, kalotinAsteet, kalotinKuvapiste,
+  NAPAKALOTTI, NAPAKALOTTI_PAATE, NAPAKALOTTI_RENDER_ORDER, NAPAKALOTTI_VERSIO,
+  NAPAKANNEN_LEVEYS, kalotinAsteet, kalotinKuvapiste,
   kalotinUv, kalotinVerkko, napakalotinUrl, pallonPiste,
 } from '../js/pallo.js';
+import { VEKTORIT_RENDER_ORDER } from '../js/pallovektorit.js';
 import {
-  HAIVE_AST, JAA_ASTEIKKO, MAAN_SADE, kalotinKuvaan, kalottienKansio,
-  leikkaustaulu, leveyspiirinLeikkaukset, merenAlalla, meriIndeksi, napavarjostus,
-  piirraJana, reunanPeitto, siirraPinnalla, taulunRivi,
+  HAIVE_AST, JAA_ASTEIKKO, KOKO_PUOLITTAIN, LAATU_OLETUS, LIITOS_KAISTA,
+  LIITOS_LAATTATASO, LIITOS_NAYTTEET, LIITOS_VARA, MAAN_SADE, kalotinKuvaan,
+  kalottienKansio, laattaKoordinaatit, laattojenLiitossavy, leikkaustaulu,
+  leveyspiirinLeikkaukset, liitoskaistanLeveydet, merenAlalla, meriIndeksi,
+  napavarjostus, piirraJana, reunanPeitto, siirraPinnalla, taulunRivi,
 } from '../tools/tee-napakalotit.mjs';
 import { varjostusPisteessa, VALO } from '../tools/fokuskartta/maastovarjo.js';
 
@@ -250,7 +254,7 @@ test('kalotin osoite on versioitu ja ämpärissä', () => {
   for (const puoli of PUOLET) {
     const url = napakalotinUrl(puoli);
     assert.match(url, /^https:\/\/media\.matkakirja\.app\/julisteet\/pallo\/napakalotit\//);
-    assert.ok(url.endsWith(`/${puoli}.png`));
+    assert.ok(url.endsWith(`/${puoli}.webp`), `kalotin kuva on webp, ei ${url}`);
     assert.ok(url.includes(NAPAKALOTTI_VERSIO));
   }
   assert.match(NAPAKALOTTI_VERSIO, /^\d{4}-\d{2}-\d{2}[a-z]$/);
@@ -462,4 +466,141 @@ test('työnkulku ja työkalu ovat samaa mieltä ämpärin polusta', () => {
   // Salaisuudet tarkistetaan ennen vientiä, kuten muissakin vientiajoissa.
   assert.match(tyonkulku, /R2_ACCESS_KEY_ID/);
   assert.match(tyonkulku, /R2_BUCKET/);
+});
+
+/* ============================================ liitossävy (11.9.2026) */
+
+/*
+ * OMISTAJA 11.9.2026: *"Rajat näkyvät yhä."* Mitattu syy oli, että
+ * kalotin meri oli 9–12 luminanssiyksikköä tummempi kuin laatta sen
+ * alla: laatoissa ei ole napojen leveyksillä karttaa lainkaan vaan
+ * tasainen täytemeri, ja kalotin oikea batymetria on sitä tummempi.
+ * Nämä testit vartioivat sitä koneistoa, joka ankkuroi kalotin meren
+ * laattojen sävyyn (tools/tee-napakalotit.mjs LIITOSSÄVY).
+ */
+
+test('liitoskaista on kalotin kehältä napaan päin, ei ulos', () => {
+  for (const puoli of PUOLET) {
+    const k = NAPAKALOTTI[puoli];
+    const latit = liitoskaistanLeveydet(puoli);
+    assert.equal(latit.length, LIITOS_NAYTTEET.leveyksia);
+    for (const lat of latit) {
+      // Napaa kohti = itseisarvo kasvaa, mutta enintään kaistan verran.
+      assert.ok(Math.abs(lat) > Math.abs(k.reuna), `${puoli} ${lat}`);
+      assert.ok(Math.abs(lat) < Math.abs(k.reuna) + LIITOS_KAISTA + 1e-9, `${puoli} ${lat}`);
+      // Sama pallonpuolisko kuin kalotti.
+      assert.equal(Math.sign(lat), k.merkki);
+      // Kaista on kalotin kuvan sisällä (r < 1).
+      assert.ok(kalotinKuvapiste(puoli, lat, 0).r < 1);
+    }
+  }
+});
+
+test('liitoskaista ulottuu kohtaan, jossa kuva on jo täysin peittävä', () => {
+  // Muuten kohdesävy mitattaisiin vain häivytyskaistalta, jossa kalotti
+  // ei vielä määrää sävyä — ja askel osuisi juuri kaistan sisäreunaan.
+  assert.ok(LIITOS_KAISTA > HAIVE_AST);
+});
+
+test('laattaKoordinaatit on Web Mercator: päiväntasaaja keskellä', () => {
+  const a = laattaKoordinaatit(0, 0, 2);
+  assert.ok(Math.abs(a.x - 2) < 1e-9);
+  assert.ok(Math.abs(a.y - 2) < 1e-9);
+  assert.equal(a.n, 4);
+  // Pohjoinen on pienempi y, itä suurempi x.
+  assert.ok(laattaKoordinaatit(60, 0, 4).y < laattaKoordinaatit(0, 0, 4).y);
+  assert.ok(laattaKoordinaatit(0, 90, 4).x > laattaKoordinaatit(0, 0, 4).x);
+});
+
+test('liitossävy luetaan laatoista juuri liitoskaistan kohdalta', async () => {
+  const pyydetyt = [];
+  const sharp = () => ({
+    raw: () => ({
+      toBuffer: async () => ({
+        // Yksi pikseli riittää: kaikki näytteet osuvat samaan.
+        data: Uint8Array.from([120, 130, 140, 255]),
+        info: { width: 1, height: 1, channels: 4 },
+      }),
+    }),
+  });
+  const hae = async (url) => { pyydetyt.push(url); return { ok: true, arrayBuffer: async () => new ArrayBuffer(4) }; };
+  const savy = await laattojenLiitossavy({ puoli: 'pohjoinen', sharp, hae, hiljaa: true });
+  assert.deepEqual(savy, [120, 130, 140]);
+  assert.ok(pyydetyt.length > 0);
+  for (const url of pyydetyt) {
+    assert.ok(url.startsWith('https://media.matkakirja.app/julisteet/pallo/laatat/'), url);
+    assert.match(url, new RegExp(`/${LIITOS_LAATTATASO}/\\d+/\\d+\\.jpg$`), url);
+  }
+});
+
+test('liitossävy palauttaa nullin, jos laattoja ei saada — varaluku jää käyttöön', async () => {
+  const sharp = () => { throw new Error('ei pitäisi kutsua'); };
+  const hae = async () => null;
+  const savy = await laattojenLiitossavy({ puoli: 'etela', sharp, hae, hiljaa: true });
+  assert.equal(savy, null);
+  for (const puoli of PUOLET) {
+    assert.equal(LIITOS_VARA[puoli].length, 3);
+    for (const kanava of LIITOS_VARA[puoli]) {
+      assert.ok(kanava > 150 && kanava < 240, `${puoli} ${kanava}`);
+    }
+  }
+});
+
+test('peli ottaa yksivärisen kannen pois, kun kalotti on paikallaan', () => {
+  const pallo = lue('../js/pallo.js');
+  /*
+   * Kansi ja kalotti ovat SAMASSA renderOrderissa (vektorien alla),
+   * kaikki napakappaleet ovat origossa eikä kalotti kirjoita syvyyttä:
+   * piirtojärjestys ei siis ratkaise, kumpi jää päälle. Mitattu
+   * 11.9.2026 etelänavalta, jossa kansi voitti. Varakappale otetaan
+   * siksi pois näkyvistä — eikä kalottia nosteta vektorien yli.
+   */
+  assert.match(pallo, /for \(const k of kannet\[puoli\]\) k\.visible = false;/);
+  assert.match(pallo, /const kannet = \{ pohjoinen: \[\], etela: \[\] \};/);
+  assert.doesNotMatch(pallo, /verkko\.renderOrder = 1;/);
+});
+
+/* ============================ zoom: kalotti vektoriviivan ALLE (11.9.2026) */
+
+/*
+ * OMISTAJA 11.9.2026: *"Niin se saisi piirtyä hyvin, myös silloin kun
+ * sitä zoomaan."* Lähikuvan terävyys tulee rantaviivasta, joka on
+ * pallolla vektori (js/pallovektorit.js) — mutta vain jos kalotti
+ * piirtyy sen ALLE. Läpinäkyvien jono ratkaistaan renderOrderilla,
+ * joten tämä on numeroiden eikä silmän asia.
+ */
+test('napakansi ja kalotti piirtyvät vektoriviivan alle mutta laattojen päälle', () => {
+  assert.ok(NAPAKALOTTI_RENDER_ORDER < VEKTORIT_RENDER_ORDER,
+    'kalotti peittäisi rantaviivan: renderOrder on vektorikerroksen päällä');
+  // Laatat ja lepokerros ovat ≤ −1 (js/pallolaatat.js, js/pallo.js).
+  assert.ok(NAPAKALOTTI_RENDER_ORDER > -1,
+    'kalotti jäisi laattojen ja lepokerroksen alle');
+  const pallo = lue('../js/pallo.js');
+  // Molemmat verkot — yksivärinen kansi JA karttakalotti — saavat luvun.
+  const osumat = pallo.match(/renderOrder = NAPAKALOTTI_RENDER_ORDER/g) ?? [];
+  assert.equal(osumat.length, 2, 'kansi ja kalotti eivät molemmat saa renderOrderia');
+});
+
+test('kalottikuvat ovat webp ja eteläkalotti on pohjoista tarkempi', () => {
+  assert.equal(NAPAKALOTTI_PAATE, 'webp');
+  const tyokalu = lue('../tools/tee-napakalotit.mjs');
+  assert.match(tyokalu, /\.webp\(\{ quality: laatu, alphaQuality: 100/,
+    'alfa on kirjoitettava häviöttömästi, tai reunan häivytys rakeistuu');
+  assert.match(tyokalu, /\$\{puoli\}\.webp/);
+  // Eteläkalotti kattaa 60–90° eli kolme kertaa leveämmän kaistan kuin
+  // pohjoinen (80–90°): samalla sivulla se olisi kolmasosan tarkkuudesta.
+  const asteita = (puoli) => Math.abs(NAPAKALOTTI[puoli].merkki * 90 - NAPAKALOTTI[puoli].reuna);
+  const pxAste = (puoli) => KOKO_PUOLITTAIN[puoli] / 2 / asteita(puoli);
+  assert.ok(pxAste('etela') >= 60, `eteläkalotti ${pxAste('etela')} px/aste`);
+  assert.ok(pxAste('pohjoinen') >= 60, `pohjoiskalotti ${pxAste('pohjoinen')} px/aste`);
+  assert.ok(KOKO_PUOLITTAIN.etela > KOKO_PUOLITTAIN.pohjoinen);
+  assert.ok(LAATU_OLETUS >= 82 && LAATU_OLETUS <= 95);
+});
+
+test('työnkulku vie kalotit webp:nä ja tarkistaa alfan', () => {
+  const tyonkulku = lue('../.github/workflows/tee-napakalotit.yml');
+  assert.match(tyonkulku, /--content-type image\/webp/);
+  assert.match(tyonkulku, /napakalotit-ulos\/\$p\.webp/);
+  assert.match(tyonkulku, /koko_etela:/);
+  assert.match(tyonkulku, /m\.format!=='webp'/);
 });

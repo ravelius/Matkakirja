@@ -2,7 +2,8 @@
  * NAPAKALOTIT — pohjoisnavan ja etelänavan oma kartta pallolle.
  *
  *   node tools/tee-napakalotit.mjs --ne=<kansio> [--ulos=<kansio>]
- *        [--versio=2026-09-11a] [--koko=2048] [--ylinaytto=2] [--kuiva]
+ *        [--versio=2026-09-11b] [--koko=2048] [--koko-etela=4096]
+ *        [--laatu=88] [--ylinaytto=2] [--kuiva]
  *        [--vain=pohjoinen|etela]
  *
  * === MIKSI TÄMÄ ON OLEMASSA =========================================
@@ -79,7 +80,28 @@
  * (pohjoinen 80°, etelä 60°, kansi 83,7°). Näin liitos laattoihin ei
  * ole viiva vaan ristihäivytys, jonka alla on julisteen oma kartta.
  *
- * Tulos: <ulos>/pohjoinen.png, <ulos>/etela.png, <ulos>/kalotit.json ja
+ * === KUVAMUOTO ON WEBP, JA SE RATKAISEE MYÖS TARKKUUDEN ============
+ *
+ * Mitattu 11.9.2026 samasta ajosta: eteläkalotti 2048 px PNG:nä on
+ * 4 578 493 tavua ja pohjoinen 4 843 805 — häviötön pakkaus ei pure
+ * paperin rakeeseen, joka on tarkoituksella kohinaa. Sama eteläkuva
+ * webp q88 -pakattuna on 260–300 kt eli noin kuudestoista osa, ja
+ * alfa (reunan häivytys) säilyy tarkkana, kun alphaQuality on 100.
+ *
+ * Siksi kuvat kirjoitetaan webp:nä — ja koska tavu ei enää ole este,
+ * eteläkalotti voidaan piirtää 4096 px:iin (webp 930 592 tavua, yhä
+ * viidesosa entisestä 2048 px:n PNG:stä). Se kaksinkertaistaa
+ * tarkkuuden 34 → 68 kuvapikseliin leveysastetta kohti. Pohjoinen
+ * kattaa vain 80°–90°, joten 2048 px riittää siellä 102 px/asteeseen:
+ * `--koko-<puoli>` antaa kummallekin oman sivun.
+ *
+ * PIDEMMÄLLE EI KANNATA MENNÄ: korkeus tulee 3 kaariminuutin
+ * ruudukosta (0,05° ≈ 5,5 km) ja rantaviiva 1:10M-vektorista, joten
+ * 4096 px:ssä on jo noin kolme kuvapikseliä korkeusnäytettä kohti.
+ * Lähikuvan terävyys tulee vektorista, joka piirtyy kalotin PÄÄLLE
+ * (js/pallo.js NAPAKALOTTI_RENDER_ORDER).
+ *
+ * Tulos: <ulos>/pohjoinen.webp, <ulos>/etela.webp, <ulos>/kalotit.json ja
  * <ulos>/kansio.txt. Työnkulku .github/workflows/tee-napakalotit.yml vie
  * kansion polkuun julisteet/pallo/napakalotit/<versio>/.
  *
@@ -99,7 +121,7 @@ import { RANTATYYLI } from './fokuskartta/maailmapiirto.js';
 import {
   M_PER_AST, VALO, bilineaarinenKorkeus, varjonVoimakkuus,
 } from './fokuskartta/maastovarjo.js';
-import { NAPAKALOTTI, kalotinAsteet } from '../js/pallo.js';
+import { NAPAKALOTTI, PALLO_LAATAT, kalotinAsteet } from '../js/pallo.js';
 
 const TAMA = fileURLToPath(import.meta.url);
 const RAD = Math.PI / 180;
@@ -109,6 +131,15 @@ export const MAAN_SADE = 6371000;
 export const RUUTU = 0.05;
 /** Kuvan sivun pituus pikseleinä (potenssi kahdesta: mipmapit selaimessa). */
 export const KOKO_OLETUS = 2048;
+/**
+ * Kuvan sivu puolittain, kun `--koko-<puoli>` ei kerro muuta.
+ * Eteläkalotti kattaa kolme kertaa leveämmän kaistan (60°–90°) kuin
+ * pohjoinen (80°–90°), joten sama sivu antaisi sille kolmasosan
+ * tarkkuudesta — ks. tiedoston alku, KUVAMUOTO ON WEBP.
+ */
+export const KOKO_PUOLITTAIN = Object.freeze({ pohjoinen: 2048, etela: 4096 });
+/** webp-laatu (alfa kirjoitetaan aina häviöttömästi, alphaQuality 100). */
+export const LAATU_OLETUS = 88;
 /** Ylinäytteistys: piirto tehdään tällä kertoimella ja kutistetaan. */
 export const YLINAYTTO_OLETUS = 2;
 /** Reunan häivytyskaistan leveys asteina. */
@@ -120,6 +151,68 @@ export const HAIVE_AST = 1.5;
  * mukana.
  */
 export const PAPERI_MITTA = 1;
+
+/*
+ * ======== LIITOSSÄVY: KALOTIN MERI SOVITETAAN LAATTOIHIN ============
+ *
+ * OMISTAJA 11.9.2026, kaksi iPhone-kaappausta molemmilta navoilta:
+ * *"Rajat näkyvät yhä."* Kuvissa navalla on tasainen kiekko, jonka
+ * reuna erottuu selvänä kaarena.
+ *
+ * MITATTU SYY (11.9.2026 illalla, pikseli pikseliltä samoilta lat/lon-
+ * pisteiltä: kalottikuva vs. julkaistu pallolaatta z6, ks.
+ * tools/savukkeet/savuke-napakalotit.mjs). Kalotti EI jää lataamatta
+ * eikä sen UV ole väärin — kuva on pelissä oikein päin ja oikealla
+ * paikalla. Se on liian TUMMA:
+ *
+ *   pohjoinen 81,5° / 82,5° / 83,5° N:  kalotti 8,8 / 9,7 / 9,9
+ *                                        luminanssiyksikköä laattoja
+ *                                        tummempi (mediaani 7,6…10,3)
+ *   etelä     62° / 64° S:              kalotti 11,6 / 10,6 tummempi
+ *
+ * Ja syy siihen on se, että LAATOISSA EI OLE NIILLÄ LEVEYKSILLÄ
+ * KARTTAA. Pelin juliste loppuu noin 79,6° N:ään ja ~61,5° S:ään, ja
+ * tools/tee-pallolaatat.mjs täyttää sen ulkopuolen TASAISELLA
+ * merisävyllä (MERI_SAVY, sarakkeittain mitattu ja tasoitettu). Kalotti
+ * taas piirtää oikean batymetrian: Jäämeri on 3000–4500 m syvä, ja
+ * julisteen oma syvyysporrastus (piirto.js lerpSyvyys) maalaa sen
+ * kymmenisen yksikköä tummemmaksi kuin matala täytesävy. Kalotti on
+ * siis OIKEASSA ja laatta on täytettä — mutta silmä näkee vain sen,
+ * että napalla on tummempi kiekko, jonka kehä on terävä: kuvan alfa on
+ * täysi jo HAIVE_AST asteen jälkeen, joten tummuusero iskee sisään
+ * yhtenä askeleena (mitattu askel pohjoisessa 81,5°:ssa).
+ *
+ * KORJAUS: kalotin MEREN sävy siirretään niin, että kalotin oma meri
+ * liitoskaistalla (LIITOS_KAISTA astetta kehältä sisäänpäin) on
+ * KESKIMÄÄRIN täsmälleen sen sävyinen kuin laatta saman kaistan alla.
+ * Siirto on vakio koko kuvassa, joten batymetrian sisäiset suhteet
+ * (Lomonosovin selänne, Gakkelin harju, mannerjalusta) säilyvät
+ * sellaisinaan — vain koko meren ankkuri siirtyy.
+ *
+ * SIIRTO KOSKEE VAIN MERTA. Eteläkalotin jää on ankkuroitu laattojen
+ * omaan jääsävyyn (JAA_ASTEIKKO alkaa JAA_SAVY:stä), ja mittaus 72° S
+ * vahvisti sen istuvan (kalotti 209,8 vs. laatta 203,7): jos jäätäkin
+ * siirrettäisiin, syntyisi uusi ero mannerjään ja täytejään väliin.
+ *
+ * KOHDESÄVY MITATAAN JULKAISTUISTA LAATOISTA, EI ARVATA. Työkalu hakee
+ * liitoskaistan laatat ämpäristä ja lukee niiden keskisävyn. Jos verkko
+ * ei vastaa, käytetään 11.9.2026 mitattuja varalukuja (LIITOS_VARA) ja
+ * sanotaan se ääneen ajon lokissa.
+ */
+/** Liitoskaista: näin monta astetta kalotin kehältä napaan päin. */
+export const LIITOS_KAISTA = 3;
+/** Laattataso, jolta kohdesävy luetaan (z6 = koko maailma 64 × 64 laattaa). */
+export const LIITOS_LAATTATASO = 6;
+/** Näytteitä liitoskaistalta: leveysasteita × pituusasteita. */
+export const LIITOS_NAYTTEET = { leveyksia: 5, pituuksia: 24 };
+/**
+ * Varasävyt, jos laattoja ei saada verkosta (mitattu 11.9.2026
+ * julkaistuista laatoista z6, liitoskaistan keskiarvo).
+ */
+export const LIITOS_VARA = Object.freeze({
+  pohjoinen: Object.freeze([210.4, 200.1, 173.9]),
+  etela: Object.freeze([198.8, 192.5, 173.9]),
+});
 
 /**
  * Etelämantereen jää. Alin sävy on täsmälleen se, jolla laatat
@@ -207,6 +300,89 @@ export function reunanPeitto(r, haive) {
   if (r <= 1 - haive || haive <= 0) return 1;
   const t = (1 - r) / haive;
   return t * t * (3 - 2 * t);
+}
+
+/* ------------------------------------------------ liitossävy ------- */
+
+/**
+ * Liitoskaistan leveysasteet: `LIITOS_KAISTA` astetta kalotin kehältä
+ * napaan päin, tasavälein. Kummallakin navalla sisäänpäin on navan
+ * merkin suuntaan.
+ */
+export function liitoskaistanLeveydet(puoli, n = LIITOS_NAYTTEET.leveyksia) {
+  const k = NAPAKALOTTI[puoli];
+  if (!k) throw new Error(`tuntematon napakalotti: ${puoli}`);
+  const ulos = [];
+  for (let i = 0; i < n; i += 1) {
+    ulos.push(k.reuna + k.merkki * LIITOS_KAISTA * ((i + 0.5) / n));
+  }
+  return ulos;
+}
+
+/**
+ * Web Mercator -laattakoordinaatit (kelluvat, laattoina) pinnan
+ * pisteelle. Sama kaava kuin kirjaston laattamoottorilla.
+ */
+export function laattaKoordinaatit(lat, lon, taso = LIITOS_LAATTATASO) {
+  const n = 2 ** taso;
+  const s = Math.sin(lat * RAD);
+  return {
+    x: ((lon + 180) / 360) * n,
+    y: (0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI)) * n,
+    n,
+  };
+}
+
+/**
+ * Julkaistujen pallolaattojen keskisävy kalotin liitoskaistalla.
+ * Palauttaa `[r, g, b]` tai null, jos laattoja ei saada.
+ *
+ * Laatat ovat ämpärissä samassa polussa, jota peli käyttää
+ * (js/pallo.js PALLO_LAATAT), joten kohde on TÄSMÄLLEEN se kuva, jonka
+ * päälle kalotti pelissä liimataan.
+ */
+export async function laattojenLiitossavy({
+  puoli, sharp, hae = fetch, juuri = PALLO_LAATAT, taso = LIITOS_LAATTATASO, hiljaa = false,
+}) {
+  const kori = new Map();
+  const laatta = async (tx, ty) => {
+    const avain = `${tx}/${ty}`;
+    if (!kori.has(avain)) {
+      kori.set(avain, (async () => {
+        const v = await hae(`${juuri}${taso}/${tx}/${ty}.jpg`).catch(() => null);
+        if (!v?.ok) return null;
+        const puskuri = Buffer.from(await v.arrayBuffer());
+        return sharp(puskuri).raw().toBuffer({ resolveWithObject: true }).catch(() => null);
+      })());
+    }
+    return kori.get(avain);
+  };
+  let R = 0; let G = 0; let B = 0; let n = 0;
+  for (const lat of liitoskaistanLeveydet(puoli)) {
+    for (let i = 0; i < LIITOS_NAYTTEET.pituuksia; i += 1) {
+      const lon = (360 * i) / LIITOS_NAYTTEET.pituuksia - 180;
+      const t = laattaKoordinaatit(lat, lon, taso);
+      const tx = Math.min(t.n - 1, Math.max(0, Math.floor(t.x)));
+      const ty = Math.min(t.n - 1, Math.max(0, Math.floor(t.y)));
+      // eslint-disable-next-line no-await-in-loop
+      const L = await laatta(tx, ty);
+      if (!L) continue;
+      const { data, info } = L;
+      const px = Math.min(info.width - 1, Math.floor((t.x - tx) * info.width));
+      const py = Math.min(info.height - 1, Math.floor((t.y - ty) * info.height));
+      const o = (py * info.width + px) * info.channels;
+      R += data[o]; G += data[o + 1]; B += data[o + 2]; n += 1;
+    }
+  }
+  if (!n) {
+    if (!hiljaa) console.log(`  ${puoli}: laattoja ei saatu — käytetään varasävyä`);
+    return null;
+  }
+  const savy = [R / n, G / n, B / n];
+  if (!hiljaa) {
+    console.log(`  ${puoli}: laattojen liitossävy ${savy.map((v) => v.toFixed(1)).join(', ')} (${n} näytettä)`);
+  }
+  return savy;
 }
 
 /* --------------------------------------- meri leveyspiireittäin ---- */
@@ -340,7 +516,7 @@ export function piirraJana(peitto, N, x0, y0, x1, y1, leveys) {
  */
 export function piirraKalotti({
   puoli, korkeus, indeksi, rannikot, koko = KOKO_OLETUS, ylinaytto = YLINAYTTO_OLETUS,
-  jaatayte = false,
+  jaatayte = false, liitossavy = null,
 }) {
   const k = NAPAKALOTTI[puoli];
   const napa = k.merkki * 90;
@@ -354,6 +530,15 @@ export function piirraKalotti({
   ];
   const P = PAPERI_MITTA;
   const haive = HAIVE_AST / span;
+  /*
+   * Liitoskaista kuvan säteessä: r = 1 on kehä (reuna-leveysaste) ja
+   * r = 0 napa, joten LIITOS_KAISTA astetta kehältä sisäänpäin on
+   * tämän säteen ja kehän välinen rengas.
+   */
+  const liitosR0 = 1 - LIITOS_KAISTA / span;
+  /** Merkintä merestä: siirto koskee vain merta (ks. LIITOSSÄVY). */
+  const meripikseli = new Uint8Array(N * N);
+  let liitosR = 0; let liitosG = 0; let liitosB = 0; let liitosN = 0;
   // Rinnevarjon näyteväli: ruudukon oma väli metreinä (ks. tiedoston alku).
   const askelM = RUUTU * M_PER_AST;
   const taulu = leikkaustaulu(indeksi, {
@@ -410,7 +595,33 @@ export function piirraKalotti({
         g = t(c[1] * (1 - varjo * 0.12));
         b = t(c[2] * (1 - varjo * 0.3));
       }
+      if (vesi) {
+        meripikseli[iy * N + ix] = 1;
+        if (a.r >= liitosR0) { liitosR += r; liitosG += g; liitosB += b; liitosN += 1; }
+      }
       data[i] = r; data[i + 1] = g; data[i + 2] = b; data[i + 3] = Math.round(peitto * 255);
+    }
+  }
+
+  /*
+   * MEREN ANKKURI LAATTOIHIN (ks. LIITOSSÄVY tiedoston alussa). Siirto
+   * on vakio: batymetrian sisäiset erot säilyvät, vain koko meren sävy
+   * nousee siihen, mitä laatoissa on kalotin alla. Tehdään ENNEN
+   * rantaviivaa, jotta muste ei vaalene siirron mukana.
+   */
+  let liitossiirto = null;
+  if (liitossavy && liitosN) {
+    liitossiirto = [
+      liitossavy[0] - liitosR / liitosN,
+      liitossavy[1] - liitosG / liitosN,
+      liitossavy[2] - liitosB / liitosN,
+    ];
+    for (let p = 0; p < N * N; p += 1) {
+      if (!meripikseli[p]) continue;
+      const o = p * 4;
+      data[o] += liitossiirto[0];
+      data[o + 1] += liitossiirto[1];
+      data[o + 2] += liitossiirto[2];
     }
   }
 
@@ -446,7 +657,7 @@ export function piirraKalotti({
   };
   sekoita(usva, [74, 52, 33], 0.18);
   sekoita(muste, [58, 40, 25], 0.85);
-  return { data, N };
+  return { data, N, liitossiirto };
 }
 
 /** Kalotin kuvapiste PIKSELEINÄ (kalotinKuvapiste kuvan kokoon skaalattuna). */
@@ -506,15 +717,20 @@ async function paa() {
   const kuiva = argv.includes('--kuiva');
   const neKansio = lippu('--ne') ?? 'ne-data';
   const ulos = lippu('--ulos') ?? 'napakalotit-ulos';
-  const koko = Number(lippu('--koko') ?? KOKO_OLETUS);
+  const kokoYhteinen = lippu('--koko');
+  const laatu = Number(lippu('--laatu') ?? LAATU_OLETUS);
+  // Kuvan sivu puolittain: --koko-etela voittaa --koon, joka voittaa taulun.
+  const sivu = (puoli) => Number(
+    lippu(`--koko-${puoli}`) ?? kokoYhteinen ?? KOKO_PUOLITTAIN[puoli] ?? KOKO_OLETUS,
+  );
   const ylinaytto = Number(lippu('--ylinaytto') ?? YLINAYTTO_OLETUS);
   const vain = lippu('--vain');
   const versio = lippu('--versio') || `${new Date().toISOString().slice(0, 10)}a`;
   const puolet = (vain ? [vain] : ['pohjoinen', 'etela']).filter((p) => NAPAKALOTTI[p]);
   if (!puolet.length) throw new Error(`--vain: pohjoinen tai etela (${vain})`);
-  console.log(`napakalotit ${versio}: ${puolet.join(', ')}, ${koko} px `
-    + `(piirto ${koko * ylinaytto} px), reunat `
-    + `${puolet.map((p) => `${p} ${NAPAKALOTTI[p].reuna}°`).join(', ')} → ${kalottienKansio(versio)}`);
+  console.log(`napakalotit ${versio}: webp q${laatu}, ylinäytto ${ylinaytto}; `
+    + `${puolet.map((p) => `${p} ${NAPAKALOTTI[p].reuna}° ${sivu(p)} px`).join(', ')}`
+    + ` → ${kalottienKansio(versio)}`);
   if (kuiva) { console.log('Kuiva ajo: ei lueta aineistoa eikä kirjoiteta.'); return; }
 
   const sharp = (await import('sharp')).default;
@@ -525,8 +741,11 @@ async function paa() {
   const tiedot = [];
   for (const puoli of puolet) {
     const alkoi = Date.now();
+    const koko = sivu(puoli);
     const aineisto = await keraaKalotti({ puoli, neKansio, renkaat });
-    const { data, N } = piirraKalotti({
+    const kohde = await laattojenLiitossavy({ puoli, sharp }).catch(() => null);
+    const liitossavy = kohde ?? LIITOS_VARA[puoli].slice();
+    const { data, N, liitossiirto } = piirraKalotti({
       puoli,
       korkeus: aineisto.korkeus,
       indeksi: aineisto.indeksi,
@@ -534,25 +753,42 @@ async function paa() {
       koko,
       ylinaytto,
       jaatayte: puoli === 'etela',
+      liitossavy,
     });
-    const polku = join(ulos, `${puoli}.png`);
-    await sharp(Buffer.from(data.buffer, data.byteOffset, data.byteLength), {
+    const polku = join(ulos, `${puoli}.webp`);
+    /*
+     * WEBP JA TÄYSI ALFA. Kuvan uloin kehä liukuu läpinäkyväksi, ja
+     * juuri se liuku on liitos laattoihin: alphaQuality 100 pitää sen
+     * häviöttömänä, vaikka väri pakataan. Ks. tiedoston alku.
+     */
+    const tulos = await sharp(Buffer.from(data.buffer, data.byteOffset, data.byteLength), {
       raw: { width: N, height: N, channels: 4 },
     })
       .resize(koko, koko, { kernel: 'lanczos3' })
-      .png({ compressionLevel: 9 })
+      .webp({ quality: laatu, alphaQuality: 100, effort: 6 })
       .toFile(polku);
     const s = Math.round((Date.now() - alkoi) / 1000);
-    console.log(`${puoli}: ${polku} (${koko}×${koko}, rantaviivoja `
-      + `${aineisto.rannikot.length}, ${s} s)`);
+    const kt = Math.round((tulos.size ?? 0) / 1024);
+    console.log(`${puoli}: ${polku} (${koko}×${koko}, ${kt} kt, rantaviivoja `
+      + `${aineisto.rannikot.length}, liitossiirto `
+      + `${liitossiirto ? liitossiirto.map((v) => v.toFixed(1)).join(', ') : 'ei'}, ${s} s)`);
     tiedot.push({
-      puoli, reuna: NAPAKALOTTI[puoli].reuna, koko, tiedosto: `${puoli}.png`,
+      puoli,
+      reuna: NAPAKALOTTI[puoli].reuna,
+      koko,
+      laatu,
+      tavuja: tulos.size ?? null,
+      tiedosto: `${puoli}.webp`,
+      liitossavy: liitossavy.map((v) => +v.toFixed(1)),
+      liitossavyMitattu: Boolean(kohde),
+      liitossiirto: liitossiirto ? liitossiirto.map((v) => +v.toFixed(2)) : null,
     });
   }
   writeFileSync(join(ulos, 'kalotit.json'), `${JSON.stringify({
     versio,
     projektio: 'atsimutaalinen ekvidistantti, napa keskellä, 0° ylös',
     haiveAst: HAIVE_AST,
+    liitosKaista: LIITOS_KAISTA,
     ylinaytto,
     kalotit: tiedot,
     lahteet: [
