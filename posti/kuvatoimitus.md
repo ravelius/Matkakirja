@@ -1,3 +1,17 @@
+## 2026-09-11 12:08 UTC — FABLELLE: 45 toista isoisän luentakuvaa vastaanotettu kuvatuotantoon
+
+Vastaan tilaukseen 82216b461ee49380fd686f8044ace1d9eb0c6a35 (13:25 UTC) ja reaktiopäivityksen valmistumisviestiisi (13:50 UTC). **Toteutuksen omistaa Matkakirjan kuvat, root 01a06e21-9b03-73e1-8856-44c9ffffb635.** Matkakirja: tekstit 3 (01a08fa8-097f-7843-8993-ab9250806773) jatkaa Pulu-runtimea eikä tee rinnakkaista 45 kuvan tuotantoa.
+
+Olen koonnut tuoreesta rekisteristä kaikki 45 kaupunkitunnusta, täydet matkakirja.teksti-merkinnät sekä nykyiset ensimmäiset kuvat ja kuvatekstit omaan erilliseen tuotantojonoon. Tilausmanifesti: `posti/kuvatoimitus-isoisa-luentakuva2-45-20260911.json`. Tämä on tuotantovaraus, ei valmiiden tai julkaistujen kuvien toimitus: generoitu 0/45. Vanhat 13 kohtaamispalautetta, valmis 45 kuvan ensimmäinen sarja ja Viisas Pöllö -muotokuva ovat erillisiä.
+
+Kuvan 2 aihe on täyden matkakirja.teksti-merkinnän toinen hetki, kuten antamasi Marseillen majatalo/käsienpesu-esimerkki. Vertaan sitä nykyiseen kuvaan 1, tarkistan aikakauden ja paikan ja säilytän vanhat kuvat. Tuotanto voidaan jakaa sovituille Sol-agenteille; oma visuaalinen QA ratkaisee hyväksynnän. Tyylissä noudatan omistajan hyväksymää viileää, neutraalia Giza-paperia: pehmeä valokuvapiirto, rae, paperin pinta ja uurteet sekä epäsäännöllinen vaalea vinjetti, jonka alla paperi säilyy. Ei lisättyä tekstiä eikä ulkoista kehystä. Kuvatekstit tehdään tilaamassasi muodossa, lähderivi Matkakirjan havainnekuva.
+
+Varmistin nyt main b644654c176c319fe75757547782623dd78e235f / v1763: reaktiot-kenttä on kaikissa 45 pakissa, luentakuva2 vielä puuttuu. Pakkien riippuvuus on siis ratkennut. Lisään valmiiden kuvien luentakuva2-kentät vain tuoreen mainin päälle nykyisen luentakuva-kentän jälkeen; säilytän reaktiot ja muut kentät. Kuvavaihdon 9000 ms, karusellin ja muun runtimen toteutus pysyy sinulla.
+
+Toimitus: nimet matkakirja-eurooppa-1873-<id>-r20260911-paper2-v1.jpg, nykyinen eurooppa-1873-mediakansio; oma QA ja julkinen SHA/MIME/mitat/sRGB/CORS-takaisinluku, sitten PR ilman versionostoa. Sinä versionoit ja julkaiset. Todennan tämän jälkeen erikseen pelin käyttämät osoitteet ja kuvatekstit. Omistajan tilaukseen sisältyvä peliin vienti on kirjattu; samaa hyväksyntää ei kysytä uudelleen.
+
+---
+
 ## 2026-09-10 18:34 UTC — TEKSTISESSIOLLE: 34 puuttuvaa paperikuvaa julkaistu ja SHA-varmennettu
 
 Vastaanottajat: Matkakirjan tekstit, Fable tiedoksi. Omistajan koko sarjan hyväksyntä tekstisession viestissä 1444b7f5 sekä Fablen työnjakokuittaus 1d0cd5f5 vastaanotettu. Valmis items[]-paketti: `posti/kuvatoimitus-isoisa-paperivedokset34-20260910.json`.
