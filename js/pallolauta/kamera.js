@@ -109,6 +109,34 @@ export const PALLOLAUDAN_LAUTA = 'maailmankartta';
  * (~7°, ~1300 px Z8:aa) terävänä. Kalibroidaan omistajan laitteella.
  */
 export const PALLOLAUDAN_SAAPUMISLEVEYS = 240;
+/*
+ * SAAPUMISRAJAUKSEN MARGINAALI (omistaja 11.9.2026 ilta, sanatarkasti:
+ * *"Kartta saisi muuten zoomautuu niin kun saavutaan uuteen kaupunkiin
+ * niin että maa näkyy mahdollisimman isoksi zoomattuna näytöllä"*).
+ *
+ * "Mahdollisimman isona" tarkoittaa maan laatikkoa ruutuun sovitettuna
+ * MOLEMMISSA suunnissa (kameranKohde laskee korkeusehdon leveydeksi
+ * kuvasuhteella), joten marginaali on pieni: se on vain se rako, joka
+ * estää maan rajaa osumasta kiinni ruudun laitaan ja kartuutsiin.
+ * Osuus laatikon sivusta joka reunalla.
+ */
+export const SAAPUMISRAJAUKSEN_MARGINAALI = 0.05;
+/*
+ * SAAPUMISRAJAUKSEN KATTO lautayksikköinä (2000 = 60° pituuspiiriä).
+ *
+ * PALLO EI OLE KARTTA. Venäjä on 171° leveä ja Yhdysvallat 121°:
+ * kumpaakaan ei voi näyttää pallolta kokonaan, koska pallosta näkyy
+ * kerrallaan vajaa puolikas ja reunaa kohti maa litistyy olemattomiin.
+ * "Maa mahdollisimman isona" ei siis voi tarkoittaa niitä — rajaus
+ * karkaisi maailmankuvaksi, jossa saapumiskaupunki on piste.
+ *
+ * KATTO ON KAMERAN RAJA, EI MAKUASIA: 60 astetta on se, minkä yli
+ * pallon kaarevuus alkaa syödä laatikon reunoja. Sen ylittävä maa saa
+ * entisen kaupunkinäkymän (PALLOLAUDAN_SAAPUMISLEVEYS), joka on
+ * pelattava. Pelin 112 maasta katon ylittää viisi: RUS, USA, CAN, GRL
+ * ja CHN (mitattu 11.9.2026).
+ */
+export const SAAPUMISRAJAUKSEN_MAX = 2000;
 /**
  * Siirtonäkymän lähin leveys (siirtoZoomiKerroin): ennakkozoomi vie
  * SIIRTOZOOMIN_LAHENNYS kertaa lähemmäs, mutta ei tämän alle. Puolet
@@ -474,10 +502,26 @@ export function luoPallokamera({
    * Pelaajan paikan ylle saapumisnäkymään (kesto 0 = heti). Paikka on
    * kaupunki tai reitin välipiste — sama pixelOf kuin tasokartalla.
    */
-  const kotiin = ({ kesto = 0 } = {}) => {
+  const kotiin = ({ kesto = 0, bbox = null } = {}) => {
     const { game } = ui ?? {};
     const pos = game?.player?.pos;
     if (!pos || !game.board) return Promise.resolve(false);
+    /*
+     * MAAN LAATIKKO VOITTAA KIINTEÄN SAAPUMISLEVEYDEN (omistaja
+     * 11.9.2026 ilta: maa mahdollisimman isona). Laatikko tulee
+     * kutsujalta (js/pallolauta/lauta.js saapumisrajaus), koska se
+     * asuu maapolygoniaineistossa eikä kamera lataa aineistoja.
+     * Ilman laatikkoa — tuntematon maa, aineisto ei latautunut —
+     * jäljelle jää entinen kaupunkinäkymä, eli mikään ei mene rikki.
+     */
+    if (bbox?.w > 0 && bbox?.h > 0) {
+      // Sama kaava kuin kameranKohde: kumpi suunta on tiukempi.
+      const vara = 1 + 2 * SAAPUMISRAJAUKSEN_MARGINAALI;
+      const tarve = Math.max(bbox.w * vara, (bbox.h * vara * ruudunLeveys()) / ruudunKorkeus());
+      if (tarve <= SAAPUMISRAJAUKSEN_MAX) {
+        return ajaKamera({ bbox, marginaali: SAAPUMISRAJAUKSEN_MARGINAALI }, { kesto });
+      }
+    }
     const kohta = pixelOf(game.board, pos);
     if (!Number.isFinite(kohta?.x)) return Promise.resolve(false);
     return ajaKamera(

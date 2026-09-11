@@ -461,7 +461,21 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false, omaKam
        * kamera.js tunnistaa liikkumattoman ajon ja kirjoittaa näkymän
        * kerralla (ks. js/pallolauta/avaus.js, LOPPUKORKEUS).
        */
-      if (lento) void kamera.kotiin({ kesto: PALLOKAMERAN_AJO_MS });
+      /*
+       * SAAPUMISRAJAUS: MAA MAHDOLLISIMMAN ISONA (omistaja 11.9.2026
+       * ilta; js/pallolauta/lauta.js saapumisrajaus).
+       *
+       * AVAUSLENTO PITÄÄ OMAN MAALINSA (`omaKamera`). Sen suunnitelma
+       * päättyy täsmälleen saapumisasentoon (js/pallolauta/avaus.js,
+       * Raamattu 9.9.2026: kaupunki alimmassa kolmanneksessa), ja tämä
+       * ajo on siellä tarkoituksella NOLLA-AJO — maan rajaus nykäisisi
+       * kuvaa heti laskeutumisen päälle. Pelin omissa lennoissa
+       * kamera rajaa maan.
+       */
+      if (lento) {
+        if (omaKamera) void kamera.kotiin({ kesto: PALLOKAMERAN_AJO_MS });
+        else void lauta.saavu({ kesto: PALLOKAMERAN_AJO_MS });
+      }
     },
   };
 }
