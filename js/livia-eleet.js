@@ -7,6 +7,7 @@ import { sfx, AANIVALINTA_TAPAHTUMA } from './sound.js';
 import { livianEleaaniIskut } from './livia-tehosteet.js';
 import { kuunteleLivianKasvopuhetta, livianKasvopuheenTila } from './livia-puhetila.js';
 import { asennaLivianChatTila } from './livia-chat-tila.js';
+import { livianYlinDialogi, livianDialogiSalliiReaktion, seuraaLivianDialogeja } from './livia-dialogitila.js';
 
 /** Jo näkyvä täytelause määrää liikkeen. Ei uutta repliikkiä tai arvontaa. */
 export function livianMietintaEle(teksti='') {
@@ -61,7 +62,8 @@ export function asennaLivianKasvot(pollo) {
  const odotukset=new Set();
  const luennat=new Map();
  const lepo=()=>livianSvgAsento('blink',0);
- const nakyy=()=>!doc.hidden&&(!nappi.getClientRects||nappi.getClientRects().length>0)&&!nappi.hidden&&nappi.isConnected&&getComputedStyle(nappi).display!=='none'&&getComputedStyle(nappi).visibility!=='hidden';
+ const nappiNakyy=()=>!doc.hidden&&(!nappi.getClientRects||nappi.getClientRects().length>0)&&!nappi.hidden&&nappi.isConnected&&getComputedStyle(nappi).display!=='none'&&getComputedStyle(nappi).visibility!=='hidden';
+ const nakyy=()=>nappiNakyy()&&livianDialogiSalliiReaktion(doc,nappi);
  function sijoita(){
   if(kuollut)return;const rect=nappi.getBoundingClientRect?.()||{right:152,bottom:304};
   const viewport=doc.documentElement?.clientWidth||rect.right;
@@ -70,8 +72,11 @@ export function asennaLivianKasvot(pollo) {
   const kohde=nappi.closest?.('dialog[open]')|| (lehdessa?lehti:doc.body);
   if((pinta.parentNode||pinta.parent)!==kohde)kohde.append(pinta);
   pinta.classList[lehdessa?'add':'remove']('livia-lehdessa');
+  pinta.classList[['passport-dialog','quiz-dialog'].includes(kohde.id)?'add':'remove']('livia-dialogissa');
   kasvot.resize(gap);pinta.style.left=`${rect.right-152}px`;pinta.style.top=`${rect.bottom-304}px`;
-  pinta.style.width=`${152+gap}px`;pinta.style.height='304px';pinta.hidden=!nakyy();
+  const ylin=livianYlinDialogi(doc);
+  pinta.style.width=`${152+gap}px`;pinta.style.height='304px';
+  pinta.hidden=!nappiNakyy()||Boolean(ylin&&nappi.closest?.('dialog[open]')!==ylin);
  }
  const piirra=s=>{if(!kuollut){viimeAsento=s;sijoita();
   const lasit=s.ele==='glasses'&&s.p<.32?Math.max(0,Math.min(1,(s.p-.12)/.20)):1;
@@ -92,7 +97,7 @@ export function asennaLivianKasvot(pollo) {
  function piirraNyt(nyt){
   let s=nykyinen?livianSvgAsento(nykyinen.id,osuus,{voimakkuus:nykyinen.voimakkuus}):(lepoTila||lepo());
   // Nokan liike on rytmitetty ele, ei foneemikohtainen huulisynkka.
-  if(puhe&&!s.flight&&!s.walk&&s.x===0&&s.y<5&&!['shock','puff','cover','preen','chew','chewManic','yawn'].includes(s.frame)){
+  if(puhe&&nakyy()&&!s.flight&&!s.walk&&s.x===0&&s.y<5&&!['shock','puff','cover','preen','chew','chewManic','yawn'].includes(s.frame)){
     s={...s,mouth:livianSvgAsento('talk',((nyt-puheAlku)%1500)/1500).frame};
   }
   piirra({...s,propsRight:Boolean(pollo.auki)});
@@ -157,9 +162,6 @@ export function asennaLivianKasvot(pollo) {
   // ei vielä olisi ehtinyt päivittää vanhaa DOM-viitettä.
   if(laji==='error')mietintaMuuttui();
   if(!nakyy()||(laji!=='narration'&&(odotusrivi||odotukset.size))||nykyinen?.group==='Liike'||lepoTila?.flight||lepoTila?.walk)return false;
-  // Reaktio kuuluu vain näkymään, jossa myös Pulu itse on. Pelkkä
-  // modaalin olemassaolo ei estä lehden sisällä näkyvän Pulun kuuntelua.
-  if(doc.querySelector('dialog[open]')&&!nappi.closest?.('dialog[open]'))return false;
   // Rekisterin poikkeus: Ihmisen matkan jakson tunne kuuluu alkuun,
   // linssikertojan kuuntelueleet täyttävät vain sen välit.
   if(luennat.size&&!['narration','card'].includes(laji)&&
@@ -219,7 +221,7 @@ export function asennaLivianKasvot(pollo) {
  function saapuminen(){if(!ensisaapuminen){ensisaapuminen=true;toista('handoff');}else toista(++paluuVuoro%7===0?'glassCrash':'clumsyLand');}
  const nappiVahti=new MutationObserver(()=>{
   chatTila?.paivita();nostoTila?.paivita();
-  const n=nakyy();if(!n){katkaise();piirra(lepo());}else{paikkaMuuttui();if(!oliNakyva)saapuminen();}oliNakyva=n;
+  const n=nappiNakyy();if(!nakyy()){katkaise();piirra(lepo());}else{paikkaMuuttui();if(!oliNakyva)saapuminen();}oliNakyva=n;
   if(Boolean(pollo.auki)!==auki){auki=Boolean(pollo.auki);odotusrivi=null;odotusteksti='';if(!puhe)tilanne(auki?'chatOpen':'chatClose');mietintaMuuttui();}
  });
  const lehti=doc.getElementById?.('arrival-dialog')??null;
@@ -229,6 +231,13 @@ export function asennaLivianKasvot(pollo) {
   if(muuttui){if(auki&&!puhe&&!luennat.size&&!odotukset.size)toista('glasses',{hiljaa:true});else piirraNyt(performance.now());}
  }
  const lehtiVahti=lehti?new MutationObserver(lehtiMuuttui):null;lehtiVahti?.observe(lehti,{attributes:true,attributeFilter:['open','class']});
+ const irrotaDialogit=seuraaLivianDialogeja(doc,()=>{
+  // Uusi näkymä ei saa edellisen kortin elettä tai paluulennon häntää.
+  katkaise();lepoTila=null;viimeToimi=performance.now();
+  oliNakyva=nappiNakyy();chatTila?.paivita();piirra(lepo());
+  // Yhä oikeasti soiva oma puhe saa jatkaa nokkaa, ei vanhaa elettä.
+  if(puhe)kaynnista();
+ });
  const virtaVahti=new MutationObserver(mietintaMuuttui);
  const kokoVahti=typeof ResizeObserver==='function'?new ResizeObserver(paikkaMuuttui):null;kokoVahti?.observe(nappi);
  function liikeAsetus(){katkaise();lepoTila=null;piirra(lepo());ajasta();if(!vahenna?.matches)kaynnista();}
@@ -248,7 +257,7 @@ export function asennaLivianKasvot(pollo) {
   kaynnista();
  });
  function tuhoa(){
-  if(kuollut)return;kuollut=true;irrotaTilanteet();nostoTila?.tuhoa();chatTila?.tuhoa();katkaise();clearTimeout(kello);irrotaPuhe();nappiVahti.disconnect();lehtiVahti?.disconnect();virtaVahti.disconnect();pinta.remove();nappi.classList.remove('livia-kasvot-valmis');
+  if(kuollut)return;kuollut=true;irrotaTilanteet();irrotaDialogit();nostoTila?.tuhoa();chatTila?.tuhoa();katkaise();clearTimeout(kello);irrotaPuhe();nappiVahti.disconnect();lehtiVahti?.disconnect();virtaVahti.disconnect();pinta.remove();nappi.classList.remove('livia-kasvot-valmis');
   doc.removeEventListener('pointerdown',toiminta,true);doc.removeEventListener('keydown',toiminta,true);doc.removeEventListener('visibilitychange',tausta);vahenna?.removeEventListener('change',liikeAsetus);globalThis.removeEventListener?.('pagehide',tausta);globalThis.removeEventListener?.('resize',paikkaMuuttui);doc.removeEventListener('scroll',paikkaMuuttui,true);nappi.removeEventListener('transitionend',paikkaMuuttui);doc.removeEventListener(AANIVALINTA_TAPAHTUMA,vaienna);kokoVahti?.disconnect();
  }
  const irrotaTilanteet=kuunteleLivianTilanteita(tilanne);
@@ -256,7 +265,7 @@ export function asennaLivianKasvot(pollo) {
  nappiVahti.observe(nappi,{attributes:true,attributeFilter:['hidden','class','aria-expanded','style']});
  if(pollo.virta)virtaVahti.observe(pollo.virta,{childList:true,subtree:true,characterData:true});
  doc.addEventListener('pointerdown',toiminta,true);doc.addEventListener('keydown',toiminta,true);doc.addEventListener('visibilitychange',tausta);vahenna?.addEventListener('change',liikeAsetus);globalThis.addEventListener?.('pagehide',tausta);globalThis.addEventListener?.('resize',paikkaMuuttui);doc.addEventListener('scroll',paikkaMuuttui,true);nappi.addEventListener('transitionend',paikkaMuuttui);doc.addEventListener(AANIVALINTA_TAPAHTUMA,vaienna);
-  chatTila?.paivita();oliNakyva=nakyy();if(oliNakyva)saapuminen();lehtiMuuttui();ajasta();mietintaMuuttui();
+  chatTila?.paivita();oliNakyva=nappiNakyy();if(oliNakyva)saapuminen();lehtiMuuttui();ajasta();mietintaMuuttui();
  return{
   kupla(teksti,{saapuu=false}={}){viimeToimi=performance.now();if(odotusrivi)return;if(nykyinen?.id==='handoff')return;const ele=saapuu?'clumsyLand':livianRepliikinEle(teksti);toista(ele,{voimakkuus:livianEleenVoima(ele,teksti)});},
   tilanne,toista,palaa,tuhoa,eleet:LIVIA_SVG_ELEET,
