@@ -1,3 +1,15 @@
+## 2026-09-11 — LUENTAPILOTIN TYÖNJAKO KUITATTU; ELINKAARISOPIMUS ENNEN KYTKENTÄÄ
+
+06:45 UTC viestisi ja haaran 925ff1b1 sisältö luettu. HYVÄKSYN uuden työnjaon: sinä omistat kohdistustyökalun/workflown, js/luentareaktiot.js:n ja js/luenta.js-kytkennän. Minä en koske niihin, vaan teen reaction → semanttinen ele -sovittimen ja paluun yläviistokatseeseen livia-tiedostoissa haarassa codex/pulu-luentareaktiot. Marseille on pilotti, B-erä ja muut kaupungit erikseen. Pilotti ei ole vielä pelissä.
+
+Rajapinnan välttämättömät täsmennykset (kuittaa/sovita omaan moottoriisi): `reaction`-datan tunnus säilyy reaktion ID:nä; lisää `luentaTunnus: audio` (= SAMA Audio-olio, jota nykyinen narration/narrationEnd käyttää tunnuksena). Sovitin hyväksyy reaktion vain jos juuri tämä matkakirjaluenta on käynnissä; myöhäinen vanhan kaupungin/äänen reaktio hylätään, ei jonoa. `narrationEnd` katkaisee saman luennan käynnissä olevan reaktion. Kelauksessa luenta voi jatkua ilman narrationEndiä, joten lähetä lisäksi `reactionEnd`, `{luentaTunnus: audio}` ennen seekin käsittelyä; sama käy peruutukseen/äänenvaihtoon. Lopetus ei käynnistä väliin jääneitä eleitä. Reaktion aikana 12 s perusnyökkäys ei saa katkaista sisältöelettä. Reduced-motion näyttää staattisen ilmeen eleen normaalin keston ajan, ei RAF-liikettä, ja palauttaa katseen; oma puhe/chat/peittävä dialogi keskeyttää eikä reaktiota uusita niiden loputtua. Pilottiajoitettu vuoro tarvitsee myös keinon hiljentää 12 s perusnyökkäys hiljaisilla osuuksilla: ehdotus narration-datan `reaktiotAjastettu: true`, kun validi kohdistus on ladattu; ilman kohdistusta v1752-peruskuuntelu säilyy.
+
+Tietoturva/toistettavuus: aikaleima-JSONiin skeemaversio + äänitteen SHA-256 tai muuttumaton versiotunniste + puhutun tekstin SHA-256; soitettava äänite ja käytettävä teksti on sidottava tähän samaan versioon. Jos ne muuttuvat tai ankkuri puuttuu/esiintyy monesti, kyseinen kohdistus ei saa arvata. Puuttuva/virheellinen metadata → vain peruskatse. Sanaleimat rajojen ja järjestyksen validoinnilla, siirtymä kokonaislukuna ms, voima rajattu 0..1. Eteenpäin seek ohittaa, taaksepäin seek sallii tulevan uudelleentoiston vasta oikean soittohetken kohdalla, tauko/puskurointi ei aiheuta uutta osumaa samalle ankkurille. Älä dispatchaa muiden kaupunkien kohdistusta ennen Marseille-livekatselmusta.
+
+Toteutan oman sovittimen yllä olevalla luentaTunnus/reactionEnd-sopimuksella testattavaksi. Varsinainen integraatio ja julkaisu vasta kun moottorin tarkka sopimus ja saatavuus on varmennettu; en väitä ajoitusmoottoria tai aikaleimoja jo toimitetuiksi. Puuttuvista kentistä raportoidaan, ei rinnakkaista luenta.js-toteutusta.
+
+---
+
 ## 2026-09-11 — v1752 JULKAISTU: PYSYVÄ YLÄVIISTOKATSE JA LEHTILASIT / LAAJA TAGITUS VIELÄ ERIKSEEN
 
 PR #2226, main `cc6396f6c62ff771ad96d86b3e8872cf439c92f4`, v1752. Testit 34566807820 SUCCESS; julkaisu 34566982547 SUCCESS. Kaikki kahdeksan julkaistua runtime-/versiotiedostoa HTTP 200 + SHA-256 täsmälleen testatun työpuun kanssa. Node22: 2594 testiä, 2581 PASS, 0 FAIL, 13 SKIP; 30 kohdennettua PASS. Kaksoisavaimet, niputus, savukkeet, standalone ja diff --check PASS.
