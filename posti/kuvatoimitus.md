@@ -1,3 +1,24 @@
+## 2026-09-11 — Omistajan pyytämä kaikkien kuvakansioiden Jatkoon-auditointi: toimituspuutteet
+
+Omistaja havaitsi Karttanostoissa 43 Jatkoon / 56 Valmiit ja Kuvituskuvissa 162 Jatkoon / 2 Valmiit, ja pyysi tarkistamaan muutkin kansiot. Tarkistimme kaikkien pääkatalogin kansioiden jokaisen Jatkoon-kuvan sekä Karttanostojen kaikki 99 aktiivista kuvaa nykyiseen mainiin 0179c1bf ja julkaistuihin JS-pakkoihin ja kuvatiedostoihin. Tämä ei ole kaikkien muiden kansioiden aiempien Valmiit-kuvien uusi täydellinen auditointi.
+
+Löytyi 323 jo käytössä olevaa hyväksyttyä kuvaa, joiden tilamerkintä oli vanhentunut. Kaikki 323 on nyt korjattu Valmiit-tilaan ja takaisinluettu onnistuneesti. Karttanostoissa 17 aiempaa Valmiit-kuvaa oli vailla pelikytkentää; palautimme ne Jatkoon-tilaan. Hyväksyntä säilyy, eikä kuvia poistettu tai generoitu uudelleen.
+
+Liite `posti/kuvatoimitus-toimituspuutteet-20260911.json` yksilöi 210 yhä selvittämätöntä hyväksyttyä versiota:
+
+- Karttanostot 59: 49:ltä puuttuu kuva kaanonriviltä, 10:n tilalla on toinen aktiivinen versio. Älä aktivoi vanhoja vaihtoehtoja automaattisesti.
+- Kuvituskuvat 20 ja miniatyyrit 35: hyväksytty versio ei ole nykyisessä julkaistussa pakassa.
+- Eläimet 28: nykyisen vakaan tunnuksen ratkaisema `/kohtaamiset/elaimet/elain-xxx.jpg` palauttaa jokaisessa HTTP 404. Hyväksytyt tarkat lähdeosoitteet ja SHA:t ovat liitteessä. Tämä on kiireellisin korjaus.
+- Aarteet 9: vaalean tähtiaarteen sijasta live-peli käyttää edelleen vanhaa geneeristä tähtikuvaa.
+- Ennen/nyt 18, loistoaika 16, lehtikannet 12, historian hetket 1, Ihmisen matkan varuste 1 ja keksintöaikajanan varuste 1: hyväksytylle kuvalle ei löydy nykyistä pelikytkentää.
+- Kohtaamiset 10: hyväksytty versio ei ole aktiivinen. Lontoon Mina/Theo odottaa kaanonpäätöstä Leila-tarinaan; Prahasta on jo toinen aktiivinen versio. Älä kytke kaikkia vaihtoehtoja yhtä aikaa.
+
+Pyydän ottamaan tämän listan pelin toimituskorjaukseen, ensin 28 rikkinäistä eläinosoitetta. Kerro, mitkä muut kohteet kytket suoraan ja mitkä tarvitsevat uuden toimituserän kuvapuolelta. Älä generoi jo hyväksyttyjä kuvia uudelleen. PR #2268:n Prokosz/Saitafernes/Sonja sekä seuraavan erän uudet versiot menevät vanhojen ehdokkaiden edelle; sovita listat yhteen ilman tuplakytkentöjä. Fable hoitaa edelleen versionnoston ja julkaisun. Kuvapuoli merkitsee Valmiit vasta julkaistun tarkan kuvan varmennuksen jälkeen.
+
+Paikalliset täydet per-kuva-todisteet: `output/karttanostot-status-audit-20260911/`. Liitteessä on julkiset kohdeosoitteet, tarkat asset-id:t, lähdetiedot ja löydetty kytkentä. Se ei sisällä yksityisen arviointisivun käyttöavaimia.
+
+---
+
 ## 2026-09-11 20:22 UTC — Kuvatoimitus: ensimmäinen 12 karttakuvan erä PR #2268, valmis teidän versiointiin
 
 PR: https://github.com/ravelius/Matkakirja/pull/2268
