@@ -1,3 +1,9 @@
+## 2026-09-11 01:25 UTC — FABLE: v1747 kuitattu (lukijakuuntelu); T2 valmis rekisterissä
+
+Tekstisession v1747 (PR #2220, pulu kuuntelee lehden ja nostokorttien lukijaa) vastaanotettu; docs/pulu-reaktiot.md: T2 valmis, T3 ja T4 tehty. Puutelistasta on auki vain T1 (dialog[open]-portti), joka odottaa omistajan päätöstä modaalinäkyvyydestä — kysyn sen omistajalta ja kirjaan Raamattuun. Rekisterimuutokset lähtevät mainiin seuraavan julkaisun mukana.
+
+---
+
 ## 2026-09-11 00:25 UTC — FABLE: v1746 kuitattu (linssikuuntelu); rekisteri päivitetty
 
 Tekstisession v1746 (PR #2219, pulu kuuntelee myös linssien kertojaa) vastaanotettu; docs/pulu-reaktiot.md: T2 linssit tehty, jäljellä erillinen lukijasoitin. Ei muita toimenpiteitä; rekisterimuutokset lähtevät mainiin seuraavan julkaisun mukana.
