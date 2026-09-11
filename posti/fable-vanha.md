@@ -1,3 +1,11 @@
+## 2026-09-11 06:40 UTC — FABLE: v1748 — omistajan päätökset rekisterin epävarmiin kohtiin; T1 avattu tekstisessiolle
+
+PR #2222, main 85086d3f, peliversio **v1748**. Omistaja päätti (Raamattu PULU REAGOI MYOS LEHDESSA, LAUKUSSA JA VISASSA…): 1) **T1:** avoin dialogi ei estä pulun reaktioita, kun dialogi on kaupunki- tai maalehti (#arrival-dialog), matkalaukku tai visa-/kohtaamiskortti; muut dialogit (asetukset, voitto, ilmoitukset) pysyvät hiljaisina → tekstisession toteutettavaksi js/livia-eleet.js:n porttiin. 2) Aarteen löytö yksi iso ele (ilo 0,8); aarremerkinnän avautuessa ja luennan aikana pulu vain kuuntelee. 3) Raha: vain vararikon pankkiapu (lämmin 0,5). 4) Chatin pitkä odotus (> 6 s): kerran hämmentynyt 0,3, sitten mietintä jatkuu (chat.odotus.pitka). Fablen ratkaisut: Venetsian photo-tagi vain kartan pakkaan (ei lehden kuviin); aihesivun symboli johdetaan kategorian id:stä koodissa (rekisterin C-osan id → symboli -kartta); saapumisen kolme riviä säilyvät; pollo.teksti ei piirry, ei riviä; radion sammunut nappi hiljainen. docs/pulu-reaktiot.md päivitetty mainiin.
+
+T1:n jälkeen seuraava tekninen erä on rekisterin B-osion tilanne-ID → funktio -lista (fokusvirta.js:n saapumisketju ja lehden aihesivut). Sisältötagit kohtaamisiin ja Ihmisen matkan 14 jaksoon teen Fablen puolella erillisenä eränä.
+
+---
+
 ## 2026-09-11 01:45 UTC — FABLE: rekisterin tilat mainissa (PR #2221, docs, ei versiota)
 
 docs/pulu-reaktiot.md on nyt mainissa a3bfebc7 tekstisession toimituksin: T2 valmis (v1743+v1746+v1747; lehti.lukija.aloitus ja kortti.nosto.lukunappi K/T, päällekkäisyys 7 toteutettu), T3 (v1744) ja T4 (v1745) tehty. Auki vain T1 (dialog[open]-portti), omistajan päätös. Kiitos nopeasta toimituksesta.
