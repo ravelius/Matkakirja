@@ -25596,11 +25596,11 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
    kosketusalue säilyvät. Muunnoksen kiintopiste on linnun jalkojen kohdalla. */
 .livia-svg-pulu.livia-lehdessa > span,
 .livia-svg-pulu.livia-dialogissa > span { transform:scale(.72); transform-origin:128px 304px; }
-/* Puhelimen lehdessä myös kosketuskohde siirtyy linnun mukana vasemmalle.
+/* Puhelimen lehdessä Pulu ja kosketuskohde lähelle oikeaa reunaa (11.9.2026).
    Avoin chat säilyttää näppäimistön huomioivan oman asettelunsa. */
 @media (max-width: 600px) {
   #arrival-dialog.lehti[open] .pollo-nappi.pollo-kelluu.livia-kasvot-valmis:not(.livia-chat-nappi) {
-    right:calc(2.6rem + 48px + env(safe-area-inset-right, 0px));
+    right:calc(.6rem + env(safe-area-inset-right, 0px));
   }
 }
 
