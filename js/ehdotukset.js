@@ -224,6 +224,13 @@ export async function postita(polku, lomake) {
  */
 export async function lahetaEhdotus(ehdotus) {
   const lomake = new FormData();
+  /*
+   * LAJI (11.9.2026): tavallinen lukijan ehdotus jättää kentän
+   * tyhjäksi; työhuoneen Raamattu-lehti lähettää 'raamattu', jolloin
+   * worker sallii pidemmän tekstin ja Lukijoilta-lehti ryhmittelee
+   * lähetyksen omaksi ryhmäkseen.
+   */
+  lomake.append('laji', ehdotus.laji ?? '');
   lomake.append('teksti', ehdotus.teksti ?? '');
   lomake.append('sivu', ehdotus.sivu ?? '');
   lomake.append('tarkenne', ehdotus.tarkenne ?? '');

@@ -1557,7 +1557,6 @@ kehittajaLomake.addEventListener('submit', (e) => {
  * avaamisesta (js/puhe.js lukee sen varapolkuna).
  */
 const puheDialog = document.getElementById('puhe-dialog');
-const puheSaadinNappi = document.getElementById('puhe-saadin-btn');
 const puhePersoonaValinta = document.getElementById('puhe-persoona');
 const puheAaniValinta = document.getElementById('puhe-aani');
 const puheOhjeKentta = document.getElementById('puhe-ohje');
@@ -1578,17 +1577,15 @@ const PUHE_NAYTTEET = {
     + 'kohta on yli tuhat kuusisataa metriä.',
 };
 
-/** Napin näkyvyys seuraa kehittäjätilaa. */
+/**
+ * Kehittäjän näkymien näkyvyys seuraa kehittäjätilaa.
+ *
+ * Hampurilaisvalikon #kehittaja-kotelo poistui 11.9.2026 (omistaja:
+ * hampurilainen pysyy samana riippumatta kehittäjätilasta), joten
+ * täällä on enää hammasratasvalikko — Lukijaäänen rivi elää
+ * Kehittäjälehdessä ja tarkistaa saman ehdon itse.
+ */
 function paivitaPuheSaadin() {
-  if (puheSaadinNappi) puheSaadinNappi.hidden = !kehittajaTilaPaalla();
-  // Työhuone (omistajan tilaus 15.8.2026, laajennettu 18.8.2026):
-  // Raamattu, Tilannelehti, Tilastot, Grafiikka, Lukijoilta ja
-  // Lukijaääni tyylinappeina — vain vivun takana. Erillistä työhuonesivustoa ei
-  // enää ole. Kiintiöpalkit olivat nappien alla v982 asti; ne ovat
-  // nyt Tilastot-lehden Kiintiöt-sivulla (omistaja 21.8.2026).
-  const kehittajaKotelo = document.getElementById('kehittaja-kotelo');
-  if (kehittajaKotelo) kehittajaKotelo.hidden = !kehittajaTilaPaalla();
-  // Hammasratasvalikko on samaa lajia: näkyvissä vain vivun takana.
   paivitaKehittajaValikko();
 }
 
@@ -1935,28 +1932,23 @@ document.addEventListener('aikajana-tila', merkitseAikajana);
 
 paivitaKehittajaValikko();
 
+/*
+ * TYÖHUONE KAHTENA NAPPINA HAMMASRATTAAN ALLA (omistaja 11.9.2026).
+ *
+ * Ennen tässä oli kahdeksan käsittelijää hampurilaisvalikon
+ * #kehittaja-kotelon napeille. Nyt nappeja on kaksi ja ne asuvat
+ * rattaassa; Tilannelehti, Poiminnat, Tilastot, Grafiikka,
+ * Lukijoilta, Musiikki ja Lukijaääni avautuvat Kehittäjälehden
+ * riveiltä (js/tyohuone-kehittajalehti.js), jotka kutsuvat samoja
+ * ui-funktioita kuin poistetut napit.
+ */
 document.getElementById('raamattu-lehti-btn')?.addEventListener('click', () => {
+  suljeKehittajaValikko();
   window.matkakirja?.ui?.avaaRaamattuLehti();
 });
-document.getElementById('tilanne-lehti-btn')?.addEventListener('click', () => {
-  window.matkakirja?.ui?.avaaTilanneLehti();
-});
-document.getElementById('poiminnat-lehti-btn')?.addEventListener('click', () => {
-  window.matkakirja?.ui?.avaaPoiminnatLehti();
-});
-document.getElementById('tilastot-lehti-btn')?.addEventListener('click', () => {
-  window.matkakirja?.ui?.avaaTilastoLehti();
-});
-document.getElementById('lukijoilta-lehti-btn')?.addEventListener('click', () => {
-  window.matkakirja?.ui?.avaaLukijoiltaLehti();
-});
-document.getElementById('grafiikka-lehti-btn')?.addEventListener('click', () => {
-  window.matkakirja?.ui?.avaaGrafiikkaLehti();
-});
-// Musiikki-lehti (omistajan tilaus 3.9.2026): pelin taustamusiikit
-// kuunneltavaksi yhdeltä sivulta — js/tyohuone-musiikki.js.
-document.getElementById('musiikki-lehti-btn')?.addEventListener('click', () => {
-  window.matkakirja?.ui?.avaaMusiikkiLehti();
+document.getElementById('kehittajalehti-btn')?.addEventListener('click', () => {
+  suljeKehittajaValikko();
+  window.matkakirja?.ui?.avaaKehittajalehti();
 });
 
 /** Täyttää kentät valitun lukijan tallennetuista säädöistä. */
@@ -2002,11 +1994,25 @@ function tallennaPuheKentat() {
   tallennaPuheAsetukset(kaikki);
 }
 
-if (puheDialog && puheSaadinNappi) {
-  puheSaadinNappi.addEventListener('click', () => {
-    lataaPuheKentat();
-    puheDialog.showModal();
-  });
+if (puheDialog) {
+  /*
+   * LUKIJAÄÄNI KEHITTÄJÄLEHDEN RIVILTÄ (omistaja 11.9.2026).
+   *
+   * Säädindialogi on index.html:n lomake ja sen kentät asuvat tässä
+   * tiedostossa, joten lehti ei voi avata sitä suoraan. Koukku on oma
+   * globaalinsa eikä window.matkakirja-olion kenttä: uusi peli korvaa
+   * matkakirja-olion kokonaan (window.matkakirja = { game, ui, sfx }),
+   * ja koukun pitää säilyä pelin vaihtuessa — sama ratkaisu kuin
+   * pöllöllä (window.matkakirjaPollo).
+   */
+  window.matkakirjaTyohuone = {
+    ...(window.matkakirjaTyohuone ?? {}),
+    avaaLukijaaani: () => {
+      if (!kehittajaTilaPaalla()) return;
+      lataaPuheKentat();
+      puheDialog.showModal();
+    },
+  };
   puhePersoonaValinta.addEventListener('change', lataaPuheKentat);
   puheAaniValinta.addEventListener('change', tallennaPuheKentat);
   puheOhjeKentta.addEventListener('change', tallennaPuheKentat);
