@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1782, teksti: 'Karttakuvia Puolaan ja Ukrainaan, pulu nokkii karttaa' },
   { v: 1781, teksti: 'Pelaajan maan raja, arktiset nostot, trailerin koko' },
   { v: 1780, teksti: 'Napakalotit: liitossävy laatoista, Etelämantereen nostot' },
   { v: 1779, teksti: 'Trailerin kuva täyteen kokoon, letterbox pois' },
