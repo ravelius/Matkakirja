@@ -165,6 +165,33 @@ test('oikealle poistuminen saavuttaa näytön reunan ja paluu jatkuu samassa hah
  assert.equal(livianSvgMalli(livianSvgAsento('flyAway',1)).visible,false);
  assert.equal(livianSvgMalli(livianSvgAsento('flyBack',1)).visible,true);
 });
+test('karttaleijunta on nollakorkeudella täsmälleen lepoasento',()=>{
+ const rest=livianSvgAsento('blink',0);
+ assert.deepEqual(livianSvgMalli({...rest,mapHover:{height:0,phase:12}}),livianSvgMalli(rest));
+ assert.equal(livianSvgKuva({...rest,mapHover:{height:0,phase:12}}),livianSvgKuva(rest));
+ assert.doesNotMatch(livianSvgKuva({...rest,mapHover:{height:0,phase:12}}),/data-map-hover/);
+});
+test('karttaleijunta nostaa Pulua ja liikuttaa siipiä pehmeästi vaiheen mukana',()=>{
+ const rest=livianSvgAsento('blink',0),ground=livianSvgMalli(rest);
+ const low=livianSvgMalli({...rest,mapHover:{height:.5,phase:0}});
+ const high=livianSvgMalli({...rest,mapHover:{height:1,phase:0}});
+ assert.equal(low.y,ground.y-6);assert.equal(high.y,ground.y-12);
+ assert.equal(high.wing,'flap');assert.notEqual(high.wingAmount,livianSvgMalli({...rest,mapHover:{height:1,phase:Math.PI/2}}).wingAmount);
+ assert.match(livianSvgKuva({...rest,mapHover:{height:1,phase:0}}),/data-map-hover="1"/);
+});
+test('karttaleijunta vetää jalat sisään korkeuden mukana',()=>{
+ const rest=livianSvgKuva(livianSvgAsento('blink',0));
+ const hover=livianSvgKuva({...livianSvgAsento('blink',0),mapHover:{height:1,phase:0}});
+ assert.doesNotMatch(rest,/data-hover-tuck/);assert.match(hover,/data-part="feet" data-hover-tuck="1"/);
+ assert.match(rest,/M99 177l-1 8/);assert.match(hover,/M99 174l-1 3/);
+});
+test('karttaleijunnan kosketusvarjo pysyy maassa mutta pienenee ja haalistuu',()=>{
+ const rest=livianSvgAsento('blink',0),hover={...rest,mapHover:{height:1,phase:Math.PI/2}};
+ const restSvg=livianSvgKuva(rest,{prefix:'shadowqa'}),hoverSvg=livianSvgKuva(hover,{prefix:'shadowqa'});
+ assert.match(restSvg,/data-part="ground-shadow" cx="128" cy="301" rx="19" ry="2.8"[^>]+opacity="1"/);
+ assert.match(hoverSvg,/data-part="ground-shadow" cx="128" cy="301" rx="10.45" ry="2.8"[^>]+opacity="0.35"/);
+ assert.equal(livianSvgMalli(hover).y,288);
+});
 test('kasvopuhe säilyttää tunnetilan silmissä ja voimakkuus pysyy rajattuna',()=>{
  const s=livianSvgAsento('angry',.43),before=livianSvgKuva(s),talk=livianSvgKuva({...s,mouth:'talk'});
  assert.notEqual(before,talk);assert.equal(s.frame,'angry');
