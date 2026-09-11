@@ -1035,7 +1035,12 @@ export class Game {
   tarkistaLinssikynnys(player, ennen, jalkeen) {
     for (const tunnus of tarkistaKynnys(this, player, ennen, jalkeen)) {
       this.say(player.id, `${player.name} on nähnyt maailmaa niin paljon, että sai uuden linssin (${jalkeen} tp).`);
-      this.emit('aid', 'Uusi linssi', { icon: 'suurennuslasi', linssi: tunnus, sub: 'Kokemus avasi uuden katselutavan' });
+      this.emit('aid', 'Uusi linssi', {
+        icon: 'suurennuslasi',
+        linssi: tunnus,
+        sub: 'Kokemus avasi uuden katselutavan',
+        tilanne: 'peli.linssi.avautui',
+      });
     }
   }
 
@@ -1565,7 +1570,10 @@ export class Game {
     this.say(p.id, `${p.name} heitti ${die}.`);
     if (this.moves.size === 0) {
       this.say(p.id, `${p.name} ei pysty liikkumaan ja jää paikalleen.`);
-      this.emit('stuck', `${p.name} ei pysty liikkumaan`, { icon: 'estetty' });
+      this.emit('stuck', `${p.name} ei pysty liikkumaan`, {
+        icon: 'estetty',
+        tilanne: 'matka.jumissa',
+      });
       this.endTurn();
       return { ok: true, moved: false, die };
     }

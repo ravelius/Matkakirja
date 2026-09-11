@@ -42,6 +42,8 @@ test('vakava sisältö voittaa aiheen tavallisen sävyn', () => {
   assert.equal(tapahtumat[0].tiedot.tunne, 'vakava');
   assert.equal(tapahtumat[0].tiedot.voimakkuus, .5);
   assert.equal(tapahtumat[0].tiedot.ele, 'listen');
+  assert.equal(tapahtumat[0].tiedot.lahde, 'lehti');
+  assert.equal(tapahtumat[0].tiedot.tunnus, 'kaupunki:krakova:1:ruoka');
 });
 
 test('saman näkyvän sivun uusintapiirto vaimennetaan, uusi sivu reagoi', () => {

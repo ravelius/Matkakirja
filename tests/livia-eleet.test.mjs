@@ -30,6 +30,30 @@ function liviaTestYmparisto(t){
  return{pollo,button,virta,doc,lehti,reduced,El,tick,notify,raf,timers};
 }
 
+test('visan lukitus voittaa nopean varoituksen mutta ei puhetta, luentaa tai odotusta',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const varoitus={lahde:'visa',tunnus:'aarre.kysymys.viimeinenYritys',ele:'doubleTake',voimakkuus:.6};
+ const lukko={lahde:'visa',tunnus:'aarre.lukittui',ele:'listen',voimakkuus:.6};
+ assert.equal(c.tilanne('emotion',varoitus),true);e.tick(20);
+ assert.equal(c.tilanne('emotion',lukko),true,'pysyvä lukko korvaa myös alle 2,8 s vanhan varoituksen');
+ assert.equal(c.tilanne('emotion',{...lukko,lahde:'muu'}),false,'poikkeus ei koske muita tuottajia');
+ assert.equal(c.tilanne('emotion',{...lukko,tunnus:'muu'}),false,'poikkeus ei koske tavallisia visaeleitä');
+ const odotus={};c.tilanne('waiting',{tunnus:odotus});assert.equal(c.tilanne('emotion',lukko),false);c.tilanne('waitingEnd',{tunnus:odotus});
+ const audio={};c.tilanne('narration',{tunnus:audio,ele:'lookUp',lahde:'matkakirja'});assert.equal(c.tilanne('emotion',lukko),false);c.tilanne('narrationEnd',{tunnus:audio});
+ const puhe={};ilmoitaLivianKasvopuhe(puhe,true);assert.equal(c.tilanne('emotion',lukko),false);ilmoitaLivianKasvopuhe(puhe,false);
+ e.doc.hidden=true;assert.equal(c.tilanne('emotion',lukko),false);
+});
+
+test('vakava lehtisivu korvaa tuoreen iloeleen mutta ei ohita luentaa',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ assert.equal(c.tilanne('emotion',{lahde:'lehti',tunne:'ilo',ele:'manic',voimakkuus:.55}),true);e.tick(20);
+ const vakava={lahde:'lehti',tunne:'vakava',ele:'listen',voimakkuus:.5};
+ assert.equal(c.tilanne('emotion',vakava),true,'vakava sävy voittaa myös nopeassa sivunvaihdossa');
+ assert.equal(c.tilanne('emotion',{...vakava,lahde:'muu'}),false);
+ assert.equal(c.tilanne('emotion',{lahde:'lehti',tunne:'ilo',ele:'grin',voimakkuus:.5}),false,'ilo ei peitä vakavaa aihetta heti');
+ const audio={};c.tilanne('narration',{tunnus:audio,ele:'lookUp',lahde:'matkakirja'});assert.equal(c.tilanne('emotion',vakava),false);
+});
+
 test('pöllö odottaa poissa, vastaus palaa heti; puhe ja tuho eivät jätä ajastimia',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);assert.ok(c);
  const canvas=e.doc.body.children[0].children[0];assert.equal(canvas.style.width,'152px');assert.equal(canvas.style.height,'304px');

@@ -1,4 +1,4 @@
-import { ilmoitaLivianTilanne } from './livia-tilanteet.js';
+import { ilmoitaLivianTilanne, ilmoitaLivianTunne } from './livia-tilanteet.js';
 /*
  * Visan koneisto: tehtävä- ja kaksintaistelukortit, tiimalasi ja
  * vastausten käsittely. Siirretty js/ui.js:stä 17.8.2026 (remontin
@@ -104,6 +104,23 @@ function pelkistaKysymysvaihe(ui, paalle) {
 }
 
 const liviaVisaSulut=new WeakMap();
+const liviaVisaTilanteet=new WeakMap();
+const LIVIA_VISA_TUNTEET=Object.freeze({
+ viimeinenYritys:Object.freeze({tunnus:'aarre.kysymys.viimeinenYritys',tunne:'jannitys',voimakkuus:.6}),
+ lukittui:Object.freeze({tunnus:'aarre.lukittui',tunne:'vakava',voimakkuus:.6}),
+ rosvoVoitto:Object.freeze({tunnus:'aarre.rosvo.voitto',tunne:'ilo',voimakkuus:.65}),
+ rosvoTappio:Object.freeze({tunnus:'aarre.rosvo.tappio',tunne:'vakava',voimakkuus:.55}),
+});
+/** Yksi merkityksellinen siirtymä kerran saman visa- tai kaksintaisteluolion aikana. */
+export function ilmoitaLivianVisaTilanne(ui,kohde,laji){
+ const tagi=LIVIA_VISA_TUNTEET[laji];
+ if(!tagi||!kohde||ui?.dead)return null;
+ let ilmoitetut=liviaVisaTilanteet.get(kohde);
+ if(!ilmoitetut){ilmoitetut=new Set();liviaVisaTilanteet.set(kohde,ilmoitetut);}
+ if(ilmoitetut.has(laji))return null;
+ ilmoitetut.add(laji);
+ return ilmoitaLivianTunne(tagi,{lahde:'visa',tunnus:tagi.tunnus});
+}
 function liviaVisaJalkiele(ui,oikein){
  const dialog=ui.quizDialog;if(!dialog?.addEventListener)return;
  const vanha=liviaVisaSulut.get(dialog);if(vanha)dialog.removeEventListener('close',vanha);
@@ -342,6 +359,7 @@ export function renderQuiz(ui) {
         if (ui.quizVaroitus) {
           ui.quizVaroitus.textContent = viimeinenYritys ? VIIMEISEN_YRITYKSEN_VAROITUS : '';
           ui.quizVaroitus.hidden = !viimeinenYritys;
+          if (viimeinenYritys) ilmoitaLivianVisaTilanne(ui,quiz,'viimeinenYritys');
         }
         ui.quizAloita.textContent = viimeinenYritys
           ? VIIMEISEN_YRITYKSEN_NAPPI : 'Aloita peli';
@@ -645,6 +663,7 @@ export function answerDuelUi(ui, index) {
       if (!duel) return;
       sfx.play(duel.right ? 'correct' : 'robber');
       natiiviVastaus(Boolean(duel.right));
+      ilmoitaLivianVisaTilanne(ui,duel,duel.right?'rosvoVoitto':'rosvoTappio');
       liviaVisaJalkiele(ui,Boolean(duel.right));
       renderQuiz(ui);
       await ui.wait(ui.reducedMotion ? 200 : 900);
@@ -771,7 +790,8 @@ export function timeUp(ui) {
         sfx.play('timeout');
         // Aika loppui = väärä vastaus: putki katkeaa.
         natiiviVastaus(false);
-      liviaVisaJalkiele(ui,false);
+        ilmoitaLivianVisaTilanne(ui,duel,'rosvoTappio');
+        liviaVisaJalkiele(ui,false);
         renderQuiz(ui);
         await ui.wait(ui.reducedMotion ? 200 : 900);
         ui.revealShownFor = duel;
@@ -788,6 +808,7 @@ export function timeUp(ui) {
       if (!quiz) return;
       sfx.play('timeout');
       natiiviVastaus(false);
+      if(quiz.aarreLukittui)ilmoitaLivianVisaTilanne(ui,quiz,'lukittui');
       liviaVisaJalkiele(ui,false);
       renderQuiz(ui);
       await ui.wait(ui.reducedMotion ? 200 : 900);
@@ -812,6 +833,7 @@ export function answerQuiz(ui, index) {
       sfx.play(quiz.right ? 'correct' : 'wrong');
       // Tärähdys ja oikeiden vastausten putki (iOS-kuori).
       natiiviVastaus(Boolean(quiz.right));
+      if(quiz.aarreLukittui)ilmoitaLivianVisaTilanne(ui,quiz,'lukittui');
       liviaVisaJalkiele(ui,Boolean(quiz.right));
       renderQuiz(ui);
       await ui.wait(ui.reducedMotion ? 200 : 850);
