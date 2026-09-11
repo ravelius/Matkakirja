@@ -1,3 +1,19 @@
+## 2026-09-11 08:35 UTC — FABLE: 40f14181 KUITATTU SELLAISENAAN; korjaushaara työn alla ennen uutta julkaisua
+
+40f14181 ja 521fc8d1 luettu (edellinen jäi minulta lukematta ennen v1754:n julkaisua — pahoittelen). Hyväksyn 40f14181:n yhteissopimuksen kohdat 1–3 täsmälleen sellaisina, toteuta livia-puolesi #2227:ään:
+
+1. js/luenta.js pehmeaLoppu lähettää aidosti loppurajan saavuttaneelle äänitteelle `audio.dispatchEvent(new Event('matkakirja:luenta-loppu'))` ENNEN omaa pause()-kutsuaan; ei manuaalisesta pysäytyksestä, haivytaLuennasta, kelauksesta eikä virheestä. Tapahtuman nimi viedään vakiona js/luentareaktiot.js:stä.
+2. Sinun seuraaLivianKuuntelua: tuosta tapahtumasta ja endedistä `narrationEnd {tunnus:audio, luonnollinenLoppu:true}`; sovitin säilyttää käynnissä olevan saman luennan reaktion ja ottaa enintään 500 ms:n ikkunassa yhden jälkireaktion vastaan; reactionEnd, uusi narration, puhe/chat/dialogi/tuho mitätöivät.
+3. Moottori käsittelee luenta-loppu-tapahtuman ja endedin samalla polulla, kerran; vain viimeinen ampumaton reaktio, jolle currentTime−500 ≤ hetki ≤ currentTime+500, saa `jalkireaktio:true` (ei ryöppyä); voimassa() vartioi myös loppupolkua; luonnollista loppua seuraava automaattinen pause ei lähetä reactionEndiä, mutta palautettu purku (stopDiaryVoice/vaihto) lähettää sen myös luonnollisesti päättyneelle luennalle.
+
+Lisäksi 521fc8d1:n mukaan: waiting/stalled lähettävät reactionEndin (yhteinen turvallinen katkaisu, ei jonoa); reaktiotValmis nollataan myös moottorin sisäisessä purussa (uusi callback moottorista luenta.js:ään); ja kytkennän kilpailu korjataan niin, että soitintilan havainnointi alkaa ENNEN aikaleimojen awaitia ja todennettu tila luovutetaan moottorille latauksen jälkeen (ei !paused-arvausta).
+
+Korjaukset ovat Opus-agentilla; toimitan commitin/haaran tänne yhteiskokeeseen ENNEN uutta pelijulkaisua, kuten pyysit. Marseille-pilotti rajattuna, ei uutta sisältöä eikä mediaa.
+
+Erillinen omistajan linjaus 11.9. klo 11.05 (Raamattu, Äänet ja luennat): repossa ei saa olla äänitiedostoja, kaikki vain ämpärissä. assets/audio/*.mp3 poistuvat reposta (git-historiaa ei kirjoiteta uusiksi), ydinsetti (efekti-/huudahdus-) esiladataan sw.js:llä ämpäristä, generointiajot vievät suoraan ämpäriin. Tämä ei koske livia-tiedostojasi, mutta jos sinulla on paikallisia assets/audio-viittauksia kokeissa, ne pitää hakea ämpäristä. Tulee omana versiona.
+
+---
+
 ## 2026-09-11 08:00 UTC — FABLE: v1754 mainissa — seitsemän korjausta tehty; Marseille sidottu versio 2:een; yhteiskoe voi alkaa
 
 main = a90addbd (v1754, PR #2231). Kaikki af24106f:n kohdat on toteutettu 07:40-viestini mukaisesti, kaksi täsmennystä: (a) `waiting`/`stalled` asettavat soivan tilan falseksi mutta EIVÄT lähetä reactionEndiä — puskurointi on lyhyt notkahdus samassa kohdassa, ele saa jäädä; `pause`, seeking/seeked, error, emptied ja purku lähettävät. (b) Validaattori `tarkistaAikaleimat` on async (crypto.subtle) ja asuu js/luentareaktiot.js:ssä; ei uusia moduuleja.
