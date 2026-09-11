@@ -214,7 +214,7 @@ Osa-alueen A rivit `saapuminen.kommentti`, `saapuminen.valihuuto`,
 | `kortti.nosto.sulku` | kartta | js/fokusnosto.js:1082 `suljeNostonKortti` → js/livia-nostotila.js:39 | kortti pois → `cardEnd` | — | paluu perusasentoon, ei uutta elettä | pulu palaa omalle paikalleen kartalla | — | — | — | K js/livia-nostotila.js:39 | `tests/nostot-kartalla.test.mjs` |
 | `kortti.nosto.linssiportti` | kartta | js/fokusnosto.js:881, 975 `linssiEstaa` | napautus linssin aikana → ei mitään | — | linssin aikana kaikki muu on kiinni | linssi voittaa | — | — | — | D | `node --test tests/linssikartta.test.mjs` |
 | `kortti.nosto.kohdenappi` | kortti → kohdekortti | js/fokusnosto.js:992 | "Katso kartalla" → nosto kiinni, kohde auki | — | siirtymä kortista toiseen, tunne kuuluu kohdekortille | `cardEnd` + uusi `card` peräkkäin — ei kahta elettä | — | — | — | D | selain: nosto, jolla on karttakohde |
-| `kortti.nosto.lukunappi` | kortti | js/fokusnosto.js:1007 → js/lukija.js:2147 | "Kuuntele kortti" → luenta | — | luennan aikana kuunnellaan, kuten matkakirjalla | uusi kortti pysäyttää edellisen luennan (js/lukija.js:2161) | — | — | — | D | selain: paina kaiutinta nostokortilla |
+| `kortti.nosto.lukunappi` | kortti | js/fokusnosto.js:1007 → js/lukija.js:2147 | "Kuuntele kortti" → luenta | — | luennan aikana kuunnellaan, kuten matkakirjalla | lukija kuunteluvuorossa (lahde: lukija); avoin nostokortti ei estä kuuntelua (v1747) | — | — | — | K/T (v1747) | selain: paina kaiutinta nostokortilla |
 | `kortti.nosto.kysymys` | kortti → visa | js/fokusnosto.js:1257 `piirraNostonKysymykset` → js/visa.js:110 | vastaus → `success`/`retry` | `ilo` (0,6) / `miettiva` (0,4) | kerran per vastaus | visa on modaali; ele kortin ulkopuolella | — | katse pelaajaan | modaali | K js/visa.js:110 | `node --test tests/fokusvirta.test.mjs` |
 
 **B7 Isoisän aarremerkintä matkakirjakorttiin**
@@ -281,7 +281,7 @@ vain lehden kautta avautuvista nostokorteista ja visasta.
 | `lehti.nosto.syvennys` | Nostokortti / syvennys lehden sivulta | js/syvennys.js:198, js/fokusnosto.js:1004 | kortti auki | aiheen mukaan (`livianAiheEle`) | kerran per kortti | `merkitseLivianNosto` + js/livia-nostotila.js hoitaa; sama polku kuin `kortti.nosto.avaus` (B6) | lepo | — | nostotila | K | Aihesivu → nosto → kortti |
 | `lehti.wiki.luelisaa` | "Lue lisää aiheesta" | js/maalehti.js:1143 | — | — | Vie pois pelistä (wikiartikkeli) — ei elettä | — | — | — | — | D | — |
 | `lehti.maaliite.avaus` | "Suomi-liite" viimeiseltä sivulta | js/lehti.js:1645 | maalehti aukeaa | — | Sama tapahtuma kuin `lehti.maalehti.avaus`; ei kahta elettä | — | — | — | — | D | Lontoo → viimeinen sivu → Britannia-liite |
-| `lehti.lukija.aloitus` | Kaiuttimen luenta lehden sivulla | js/lehti.js:663 `varustaLukija` | — | — | Kertojan luennan aikana pulu KUUNTELEE (tekninen `narration`), ei tunnetagia | — | — | — | — | D (tekninen) | Paina kaiutinta: pulu nyökkää `seuraaLivianKuuntelua`-rytmissä |
+| `lehti.lukija.aloitus` | Kaiuttimen luenta lehden sivulla | js/lehti.js:663 `varustaLukija` | — | — | Kertojan luennan aikana pulu KUUNTELEE (tekninen `narration`), ei tunnetagia | lukija (WebAudio, SpeechSynthesis, natiivisilta) kuunteluvuorossa; lataus ei aloita elettä (v1747) | — | — | — | K/T (v1747) | Paina kaiutinta: pulu nyökkää `seuraaLivianKuuntelua`-rytmissä |
 
 ### D. Chat, kysymisreitit, mikrofoni ja odotus
 
@@ -619,7 +619,7 @@ laukaisematta, ei siirretä seuraavaan rakoon.
 | 4 | `pulu.kommentti.alku` vs. `etsiaarre.nappi.nousu` vs. `pakka.nousu` (sama koukku js/fokusvirta.js:1160–1181) | `pulu.kommentti.alku`. Pakka ja nappi ajastetaan ensimmäisen kuplan jälkeen tai jätetään tagittomiksi |
 | 5 | Luennan loppu vs. `luentakuva.pienennys.luennanloppu` vs. kortin palautuksen peruutus | Hiljaisuus — kaikki kolme ovat teknisiä; tunne kuuluu vasta kommentille |
 | 6 | `pakka.nousu` vs. luennan pienennyskello | Pakka (js/fokusvirta.js:2625 `puluCamPakassa`); kartan liike kutistaa molemmat yhdessä |
-| 7 | `kortti.nosto.avaus` vs. käynnissä oleva luenta | Kortti voittaa yhden kerran (pulu siirtyy kortin viereen), sen jälkeen palataan kuunteluun |
+| 7 | `kortti.nosto.avaus` vs. käynnissä oleva luenta | Toteutettu v1747: kortin avausele kerran, sen jälkeen yhä soiva lukija jatkaa kuuntelua avoimen kortin vieressä. Alkuperäinen: Kortti voittaa yhden kerran (pulu siirtyy kortin viereen), sen jälkeen palataan kuunteluun |
 | 8 | `matkakirja.aarremerkinta.avaus` vs. `pulu.kommentti.alku` | Aarremerkintä (isoisän suuri hetki) |
 | 9 | Linssi vs. kaikki kartan tilanteet | Linssi. `linssiEstaa` sulkee nostokortit ja pysäyttää kommentin kellon |
 | 10 | Kaupungista lähtö vs. mikä tahansa kesken oleva ketju | Lähtö (`vaiennaLivianKaupunkipuhe`, js/fokusvirta.js:858) |
