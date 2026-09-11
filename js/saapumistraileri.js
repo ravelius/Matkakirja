@@ -288,6 +288,27 @@ export function piilotaSaapumistraileri(ui, { peru = false } = {}) {
 }
 
 /**
+ * KUVAN OMA KUVASUHDE KOTELON MUUTTUJAAN (--traileri-kuvasuhde).
+ *
+ * Luku kirjoitetaan heti, jos kuva on jo välimuistissa, ja uudestaan
+ * latauksen valmistuttua. Varareitin kuva laukaisee oman load-tapahtumansa,
+ * joten kuuntelija jää paikalleen koko trailerin ajaksi.
+ *
+ * @param {HTMLElement} kotelo
+ * @param {HTMLImageElement} img
+ */
+function merkitseKuvasuhde(kotelo, img) {
+  const merkitse = () => {
+    const leveys = Number(img.naturalWidth) || 0;
+    const korkeus = Number(img.naturalHeight) || 0;
+    if (!leveys || !korkeus) return;
+    kotelo.style.setProperty('--traileri-kuvasuhde', String(leveys / korkeus));
+  };
+  img.addEventListener('load', merkitse);
+  merkitse();
+}
+
+/**
  * MINITRAILERI RUUDULLE (js/ui.js renderFact, ennen kirjoituskonetta).
  *
  * @param {object} ui
@@ -316,6 +337,15 @@ export function naytaSaapumistraileri(ui, city) {
     img.draggable = false;
     img.alt = '';
     asetaKuva(img, trailerinKuvanOsoite(kuva), trailerinKuvanVara(kuva));
+    /*
+     * KUVASUHDE CSS:LLE (omistaja 11.9.2026 klo 22.26: *"herokuva on
+     * yhä liian pieni"*). Css laskee kuvan leveyden pienempänä kahdesta
+     * — leveyskatto tai korkeuskattoon mahtuva leveys — ja tarvitsee
+     * siihen kuvan oman suhteen. Ilman tätä lukua css käyttää lehden
+     * herokuvien 3:2-oletusta, jolloin poikkeava kuva jäisi joko
+     * korkeuskaton yli tai turhan pieneksi.
+     */
+    merkitseKuvasuhde(kotelo, img);
     kotelo.appendChild(img);
     kuvatila.appendChild(kotelo);
     return kotelo;

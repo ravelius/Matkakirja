@@ -502,10 +502,11 @@ test('kuva täyttää annetun leveyden eikä jää omaan pikselikokoonsa', () =>
   const lohko = css.slice(css.indexOf('.saapumistraileri-kuva img {'));
   // Kommentit pois: ne puhuvat vanhasta säännöstä eivätkä ole sääntöjä.
   const saanto = lohko.slice(0, lohko.indexOf('}')).replace(/\/\*[\s\S]*?\*\//g, '');
-  assert.match(saanto, /width:\s*92vw/,
+  assert.match(saanto, /width:\s*min\(/,
     'omistaja 11.9.2026: "Kuvat tulevat liian pieninä" — leveys on annettava');
   assert.doesNotMatch(saanto, /width:\s*auto/, 'width: auto jättää pienen kuvan pieneksi');
-  assert.match(saanto, /max-height:\s*80vh/, 'korkeuskatto puuttuu: pystykuva karkaisi ruudun yli');
+  assert.match(saanto, /max-height:\s*var\(--traileri-korkeuskatto\)/,
+    'korkeuskatto puuttuu: pystykuva karkaisi ruudun yli');
 });
 
 test('lähtevä kuva häipyy liukuessaan eikä jää ruudun laitaan', () => {
@@ -516,4 +517,64 @@ test('lähtevä kuva häipyy liukuessaan eikä jää ruudun laitaan', () => {
     'omistaja 11.9.2026: "edellinen jää sivuun näkymään"');
   assert.match(saanto, /opacity var\(--traileri-ulos\)/,
     'häivytyksen on kestettävä koko liu\'un ajan, ei 260 ms');
+});
+
+/* ---------------------------------------------------------------- */
+/* Kuva niin isona kuin se mahtuu (omistaja 11.9.2026 klo 22.26)     */
+/* ---------------------------------------------------------------- */
+
+test('kuvan leveys lasketaan MOLEMMISTA katoista — ei pelkästä leveydestä', () => {
+  const css = readFileSync(new URL('../css/saapumistraileri.css', import.meta.url), 'utf8');
+  const lohko = css.slice(css.indexOf('.saapumistraileri-kuva img {'));
+  const saanto = lohko.slice(0, lohko.indexOf('}')).replace(/\/\*[\s\S]*?\*\//g, '');
+  /*
+   * MIKSI TÄMÄ ON SÄÄNTÖ EIKÄ MAKUASIA. Pelkkä `width: <katto>vw`
+   * yhdessä korkeuskaton ja object-fit: containin kanssa MITTAA
+   * oikein mutta NÄYTTÄÄ väärin: laatikko jää leveyskattoon ja
+   * contain kutistaa kuvan sen sisään. Mitattu Chromiumilla
+   * 11.9.2026 iPadin vaakaruudulla 1194 × 834: laatikko 92,0 %
+   * ruudun leveydestä, maalattu kuva vain 83,8 %.
+   */
+  assert.match(saanto, /width:\s*min\(/,
+    'leveyden on oltava pienempi kahdesta katosta, ei pelkkä leveyskatto');
+  assert.match(saanto, /var\(--traileri-leveyskatto\)/);
+  assert.match(saanto, /var\(--traileri-korkeuskatto\)\s*\*\s*var\(--traileri-kuvasuhde/,
+    'korkeuskatto on muutettava leveydeksi kuvasuhteella');
+  assert.match(saanto, /max-width:\s*var\(--traileri-leveyskatto\)/);
+  assert.match(saanto, /max-height:\s*var\(--traileri-korkeuskatto\)/);
+  assert.doesNotMatch(saanto, /width:\s*auto/, 'width: auto jättää kuvan omaan pikselikokoonsa');
+});
+
+test('katot ovat vähintään 96 vw ja 92 vh ja kotelo käyttää samoja', () => {
+  const css = readFileSync(new URL('../css/saapumistraileri.css', import.meta.url), 'utf8');
+  const katot = css.slice(css.indexOf('.saapumistraileri {'), css.indexOf('.saapumistraileri.ohitettu'));
+  const leveys = /--traileri-leveyskatto:\s*(\d+(?:\.\d+)?)vw/.exec(katot);
+  const korkeus = /--traileri-korkeuskatto:\s*(\d+(?:\.\d+)?)vh/.exec(katot);
+  assert.ok(leveys && korkeus, 'katot puuttuvat päällyksen muuttujista');
+  assert.ok(Number(leveys[1]) >= 96,
+    `omistaja 11.9.2026: "herokuva on yhä liian pieni" — leveyskatto ${leveys?.[1]}vw`);
+  assert.ok(Number(korkeus[1]) >= 92, `korkeuskatto ${korkeus?.[1]}vh on liian matala`);
+  const kotelo = css.slice(css.indexOf('.saapumistraileri-kuva {'));
+  const saanto = kotelo.slice(0, kotelo.indexOf('}'));
+  assert.match(saanto, /max-width:\s*var\(--traileri-leveyskatto\)/,
+    'kotelo ei saa olla kuvaa ahtaampi — muuten se rajaisi kuvan');
+  assert.match(saanto, /max-height:\s*var\(--traileri-korkeuskatto\)/);
+});
+
+test('skripti kirjoittaa kuvan oman kuvasuhteen koteloon', () => {
+  const ui = tekoUi();
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  const kotelot = traileri()[0].querySelectorAll('.saapumistraileri-kuva');
+  assert.ok(kotelot.length, 'koteloita pitää olla');
+  const kotelo = kotelot[0];
+  const img = kotelo.querySelector('IMG');
+  assert.ok(img, 'kotelossa on kuva');
+  assert.equal(kotelo.style['--traileri-kuvasuhde'], undefined,
+    'lataamattomasta kuvasta ei saa kirjoittaa nollasuhdetta');
+  img.naturalWidth = 1536;
+  img.naturalHeight = 1024;
+  img.dispatch('load');
+  assert.equal(kotelo.style['--traileri-kuvasuhde'], String(1536 / 1024),
+    'css laskee leveyden korkeuskatosta tällä luvulla');
+  piilotaSaapumistraileri(ui);
 });
