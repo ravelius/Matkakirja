@@ -387,5 +387,56 @@ export const MAASTOKOHTEET_PRT = [
     lahde: 'en-Wikipedia "Óbidos, Portugal", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — YKSI KOHDE LISÄÄ. Omistaja 11.9.2026:
+   * *"Agentit voisivat tarkastaa myös muut Euroopan maat että
+   * kaikissa tarpeeksi nostoja."* Tavoite on vähintään 20 pääkartan
+   * nostoa per Euroopan maa; Portugali oli 19:ssä.
+   *
+   * Kohde on kaukana Lissabonin laatasta (76 lautayksikköä) ja yli 19
+   * yksikön päässä lähimmästä olemassa olevasta merkistä, joten se on
+   * pääkartan merkki eikä valu kohdekartalle. Kuvaton nosto kuten muut
+   * tämän tiedoston kohteet; faktat en-Wikipediasta 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'aveiro',
+    nimi: 'Aveiro',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mihin moliceiro-veneitä alun perin käytettiin?',
+      'Miksi kaupungin satama meni kerran kiinni?',
+    ],
+    korostukset: ['moliceiro|moliceiro-veneet', 'laguuni|laguunin'],
+    nappi: 'Portugalin Venetsia ja sen levänkeruuveneet',
+    // -8.6538 E / 40.6443 N — en-Wikipedia "Aveiro, Portugal"
+    laudat: {
+      maailmankartta: { x: 5544.9, y: 1777.5 },
+    },
+    teksti: 'Aveiro on kaupunki ja kunta Portugalin keskiosassa, Atlantin rannalla '
+      + 'Ria de Aveiron laguunin äärellä. Sitä kutsutaan Portugalin Venetsiaksi, '
+      + 'koska kaupungin halki kulkee kanavaverkosto ja kanavilla liikkuu veneitä. '
+      + 'Vuonna 2021 asukkaita oli 80 880.\n\n'
+      + 'Kaupunki eli pitkään suolasta ja merenkulusta. Roomalaiset ottivat täältä '
+      + 'suolaa, ja keskiajalla paikka oli kauppakeskus: se on mainittu asiakirjassa '
+      + '26. tammikuuta 959, kreivitär Mumadona Diasin testamentissa, jossa seudun '
+      + 'vanha nimi Alauario et Salinas tarkoittaa suunnilleen lintujen '
+      + 'kokoontumispaikkaa ja suuria suoloja. Kaupungin nimi juontuu latinan '
+      + 'muodosta Averius ja sitä kautta kelttiläisestä sanasta aber, joensuu.\n\n'
+      + 'Talvella 1575 ankara myrsky sulki sataman suun ja kasvatti Atlantin puolelle '
+      + 'riuttamaisen hiekkasärkän. Kauppa metalleilla ja kaakeleilla loppui, laguunin '
+      + 'vedet seisahtuivat, ja seurasi talouskriisi, väen väheneminen ja '
+      + 'siirtolaisuus. Vasta vuonna 1808 valmistuneet keinotekoiset kanavat avasivat '
+      + 'kulun uudelleen, ja kaupunki alkoi kasvaa.\n\n'
+      + 'Aveiron tunnus ovat matalat, kirkkaiksi maalatut moliceiro-veneet. Niillä '
+      + 'kerättiin laguunista moliço-merilevää, jota käytettiin pelloilla lannoitteena '
+      + 'ennen keinolannoitteita. Nykyään samat veneet kuljettavat kanavilla '
+      + 'matkailijoita. Suolatuotanto on hiipunut, ja jäljellä on enää muutama '
+      + 'suola-allas. Kaupungin vanhassa keskustassa on runsaasti 1900-luvun alun '
+      + 'Arte Nova -arkkitehtuuria, jonka rakennuttivat Brasiliasta rikastuneet '
+      + 'suvut, ja sen tärkein vanha rakennus on 1400-luvun Jeesuksen luostari, jossa '
+      + 'on kuningas Afonso V:n tyttären pyhän Joanan hauta.',
+    lahde: 'en-Wikipedia "Aveiro, Portugal", johdanto-osa sekä osiot "History", '
+      + '"Geography", "Economy" ja "Architecture" (tarkistettu 11.9.2026).',
+  },
 ];
 
