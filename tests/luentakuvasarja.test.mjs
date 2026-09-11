@@ -251,6 +251,7 @@ const {
   ISON_KUVAN_VAIHTO_MS, ISON_KUVAN_LOPPU_MS,
 } = await import('../js/fokusvirta.js');
 const { fokusvirtaKaupungille } = await import('../js/packs/fokusvirrat.js');
+const { sfx } = await import('../js/sound.js');
 
 /*
  * DUBROVNIK ON KOEKAUPUNKI: sillä on isoisän luentakuva JA kolme pulun
@@ -391,6 +392,44 @@ test('päättynyt sarja ei pääty toiseen kertaan', (t) => {
   t.mock.timers.tick(60);
   assert.equal(paataLuentakuvasarja(ui, { heti: true }), true);
   assert.equal(paataLuentakuvasarja(ui, { heti: true }), false);
+  siivoa(ui);
+  t.mock.timers.reset();
+});
+
+/* ---------------------------------------------------------------- */
+/* 4. Kameran klik jokaiselle sarjan kuvalle                         */
+/* ---------------------------------------------------------------- */
+
+/*
+ * Omistaja 11.9.2026 klo 12.55 (Raamattu, MINITRAILERIN LISAYKSET),
+ * sanatarkasti: *"Kuville tarvitaan kameran KLIK aani tehoste"*.
+ * Sarjassa kuvat vaihtuvat neljän sekunnin välein, ja klik kuuluu
+ * VAIHDON hetkeen — myös isoisän ensimmäiseen kuvaan, joka aukeaa
+ * keskelle ilman ajastinta. Soittoportti on sama kuin minitrailerilla
+ * (js/saapumistraileri.js soitaKameranKlik → js/sound.js sfx).
+ */
+test('kameran klik soi jokaiselle sarjan kuvalle', (t) => {
+  const tehosteet = [];
+  t.mock.method(sfx, 'play', (nimi) => { tehosteet.push(nimi); });
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  const kuvia = 1 + (PAKKI.pollo?.kuvat?.length ?? 0);
+  assert.ok(kuvia > 1, 'koekaupungilla on isoisän kuva ja pulun kuvia');
+
+  naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  assert.equal(tehosteet.filter((n) => n === 'pulu.kamera-klik').length, 1,
+    'isoisän kuva avautuu keskelle: yksi laukaisin');
+
+  for (let i = 1; i < kuvia; i += 1) {
+    t.mock.timers.tick(ISON_KUVAN_VAIHTO_MS);
+    assert.equal(tehosteet.filter((n) => n === 'pulu.kamera-klik').length, i + 1,
+      `PuluCam-kuva ${i} vaihtuu tilalle: klik`);
+  }
+
+  // Sarjan loppu (pieni pakka) ei enää laukaise kameraa.
+  t.mock.timers.tick(ISON_KUVAN_LOPPU_MS);
+  assert.equal(tehosteet.filter((n) => n === 'pulu.kamera-klik').length, kuvia);
   siivoa(ui);
   t.mock.timers.reset();
 });

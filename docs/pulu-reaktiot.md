@@ -145,6 +145,49 @@ kuplan tai jakson alussa, ei kesken puheen" matkakirjaluentojen osalta.)*
 - **Pilotti:** Marseille (js/packs/fokusvirta-marseille.js, 6 reaktiota,
   1 hiljainen osuus). Seuraavat erät vasta pilotin katselmuksen jälkeen.
 
+## Saapumistraileri — tilannetapahtumat ja tehosteet
+
+*(Omistaja 11.9.2026 klo 12.55; Raamattu MINITRAILERIN LISAYKSET: PULUN
+VAISTO, KAMERAN KLIK, SUHINA JA ISKULAUSE, sanatarkasti: "Kirjainten
+tullessa pulu voisi tehda vaistoliikkeen pois ruudulta ja palata
+varovaisen tunnustellen takaisin naytolle kun isoisan kertomus alkaa …
+Kuville tarvitaan kameran KLIK aani tehoste ja kirjaimille jokin lento
+suhina efekti.")*
+
+Minitraileri (js/saapumistraileri.js) **kertoo tilanteensa** eikä ohjaa
+pulua: vaisto pois ruudulta ja varovainen paluu ovat livia-sovittimen
+(tekstisessio) päätöksiä. Traileri lähettää `ilmoitaLivianTilanne`illa
+lajin `trailer`, kentät:
+
+| Kenttä | Arvo |
+| --- | --- |
+| `vaihe` | `'kirjaimet'` (ensimmäinen kirjain lähtee lentoon) tai `'loppu'` |
+| `tunnus` | trailerin oma olio, sama koko trailerin ajan (parita alku ja loppu tällä, älä kaupungilla) |
+| `kaupunki` | kaupungin id (esim. `marseille`) |
+
+- **Ajoitus:** `kirjaimet` samalla hetkellä kun nimi nostetaan lentoon
+  (≈ 0–50 ms trailerin alusta), `loppu` kun traileri päättyy itsestään,
+  kun pelaaja ohittaa sen napautuksella TAI kun kaupungin vaihto purkaa
+  sen. Pari tulee **tasan kerran** per traileri; kuvaton kaupunki ei saa
+  traileria eikä lähetä kumpaakaan tapahtumaa.
+- **Paluu näytölle** ei ole trailerin tapahtuma: isoisän kertomuksen
+  alku näkyy sovittimelle tavalliseen tapaan `narration`-tapahtumana
+  (js/livia-tilanteet.js), joka seuraa trailerin loppua.
+- **Tehosteet** soivat pulun omalla portilla (js/sound.js `sfx.play`,
+  taulu `PULUN_TEHOSTEET`), joten mykistys, äänitila ja taustatauko
+  pätevät ja lataamaton äänite on hiljaisuus:
+  `pulu.kamera-klik` jokaiselle keskelle pysähtyvälle kuvalle — trailerin
+  kolme kuvaa ja isojen kuvien sarja (js/fokusvirta.js: isoisän kuva ja
+  jokainen PuluCam-kuva) — ja `pulu.kirjain-suhina` kerran kun kirjaimet
+  lähtevät lentoon ja kerran kun ne syöksyvät ulos (ei kirjaimittain;
+  ohitettu traileri ei suhise toista kertaa).
+- **Iskulause** (js/packs/iskulauseet.js) feidautuu nimen alle puoli
+  sekuntia viimeisen kirjaimen laskeuduttua ja häipyy kirjainten syöksyn
+  kanssa. Se on pelkkää tekstiä eikä kuulu pulun reaktioihin.
+- **Testipolku:** tests/saapumistraileri.test.mjs (tapahtumapari,
+  tehosteiden määrä, iskulause) ja tests/luentakuvasarja.test.mjs
+  (klik jokaiselle sarjan kuvalle).
+
 ## Rivin muoto
 
 | ID | Näkymä | Tiedosto:kohta | Alku → loppu | Tunne (voim.) | Ajoitus / toisto | Prioriteetti / keskeytys | Paluu | Asusteet / katse | Mobiili / modaali | Tila | Testipolku |

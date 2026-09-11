@@ -111,7 +111,7 @@ import { MATKAKIRJAN_LYHENNYS_LAUSEITA, lyhennaLauseita } from './lausejako.js';
  * odottaa sen lupauksen — mutta se SIIVOAA sen: kaupungista lähtö on
  * täällä, ja ruudulle jäänyt traileri peittäisi uuden kaupungin.
  */
-import { piilotaSaapumistraileri } from './saapumistraileri.js';
+import { piilotaSaapumistraileri, soitaKameranKlik } from './saapumistraileri.js';
 // Kartan oma "Etsi aarre" -nappi: nousee kommentin jälkeen, lähtee
 // kaupungista lähdettäessä (js/etsi-aarre-nappi.js).
 import { naytaEtsiAarreNappi, piilotaEtsiAarreNappi } from './etsi-aarre-nappi.js';
@@ -2976,6 +2976,13 @@ export function naytaLuentakuvasarja(ui, city) {
   let edellinen = null;
   const vaihda = (kuva, pulusta) => {
     const ruutu = isonKuvanRuutu(kuva, pulusta);
+    /*
+     * KAMERAN KLIK JOKAISELLE SARJAN KUVALLE (omistaja 11.9.2026 klo
+     * 12.55: *"Kuville tarvitaan kameran KLIK aani tehoste"*) — sama
+     * portti kuin minitrailerilla, jotta isoisän kuva ja PuluCamin
+     * kuvat kuulostavat samalta laukaisimelta.
+     */
+    soitaKameranKlik();
     kehys.appendChild(ruutu);
     const esiin = () => { if (ruutu.isConnected) ruutu.classList.add('nakyy'); };
     globalThis.requestAnimationFrame?.(esiin);

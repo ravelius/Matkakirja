@@ -2,6 +2,9 @@ import { html } from './ui-apurit.js';
 import { julisteUrl, asetaKuva } from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
+import { ISKULAUSEET } from './packs/iskulauseet.js';
+import { ilmoitaLivianTilanne } from './livia-tilanteet.js';
+import { sfx } from './sound.js';
 
 /*
  * KAUPUNGIN MINITRAILERI — kolme herokuvaa ja nimi ennen isoisän ääntä.
@@ -36,7 +39,19 @@ import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
  *     Lupaus ratkeaa myös ohituksesta ja siivouksesta, jottei mikään
  *     jää odottamaan traileria, joka on jo poissa.
  *
- *  3. LIIKE ON VAIN TRANSFORMIA JA OPACITYÄ. Sama sääntö kuin kartan
+ *  3. TEHOSTEET, ISKULAUSE JA PULUN TILANNETAPAHTUMAT OVAT SAMAA
+ *     TILAUSTA (Raamattu: MINITRAILERIN LISAYKSET: PULUN VAISTO,
+ *     KAMERAN KLIK, SUHINA JA ISKULAUSE, omistaja 11.9.2026 klo 12.55,
+ *     sanatarkasti: *"Kirjainten tullessa pulu voisi tehda
+ *     vaistoliikkeen pois ruudulta ja palata varovaisen tunnustellen
+ *     takaisin naytolle kun isoisan kertomus alkaa. … Kuville tarvitaan
+ *     kameran KLIK aani tehoste ja kirjaimille jokin lento suhina
+ *     efekti. Kaupungin nimen alle voisi feidautua kaupungin isku
+ *     lause"*). Pulun oma vaisto on tekstisession puolella: traileri
+ *     vain KERTOO tilanteensa (ilmoitaLivianTilanne 'trailer'), eikä
+ *     tiedä mitään pulun eleistä.
+ *
+ *  4. LIIKE ON VAIN TRANSFORMIA JA OPACITYÄ. Sama sääntö kuin kartan
  *     kamera-ajossa ja kuvasuurennoksessa: asettelu tehdään kerran ja
  *     liike jätetään kompositorille. Kirjainten lento on perspektiivi-
  *     kehyksen sisällä translate3d:llä, jolloin ne suurenevat
@@ -63,6 +78,11 @@ export const NIMEN_LENTO_MS = 650;
 export const NIMEN_ULOS_PORRAS_MS = 20;
 /** Kirjainten syöksy katsojan ohi ulos ruudusta (ms). */
 export const NIMEN_ULOS_MS = 450;
+
+/** Iskulauseen häivytys näkyviin viimeisen kirjaimen laskeuduttua (ms). */
+export const ISKULAUSEEN_VIIVE_MS = 500;
+/** Iskulauseen oma häivytys (ms) — se ei lennä, se vain feidaa. */
+export const ISKULAUSEEN_FEIDI_MS = 600;
 
 /** Ohituksen häivytys (ms). */
 export const TRAILERIN_OHITUS_MS = 200;
@@ -151,6 +171,66 @@ function nimenKirjaimet(nimi) {
   return kotelo;
 }
 
+/**
+ * KAUPUNGIN ISKULAUSE NIMEN ALLE (js/packs/iskulauseet.js).
+ *
+ * Puuttuva avain ei ole virhe vaan hiljaisuus: silloin trailerissa on
+ * pelkkä nimi, kuten ennenkin.
+ *
+ * @param {{id:string}} city
+ * @returns {string} iskulause tai tyhjä
+ */
+export function trailerinIskulause(city) {
+  const rivi = ISKULAUSEET[city?.id];
+  return typeof rivi === 'string' ? rivi.trim() : '';
+}
+
+/**
+ * MILLOIN ISKULAUSE FEIDAUTUU: puoli sekuntia VIIMEISEN kirjaimen
+ * laskeuduttua. Viimeinen kirjain lähtee porrastuksensa verran muita
+ * myöhemmin ja lentää oman lentoaikansa — siksi viive lasketaan nimen
+ * pituudesta eikä käsin kirjoitetusta luvusta.
+ *
+ * @param {string} nimi
+ * @returns {number} ms trailerin alusta
+ */
+export function iskulauseenViive(nimi) {
+  const merkkeja = Math.max(1, [...String(nimi ?? '')].length);
+  return (merkkeja - 1) * NIMEN_PORRAS_MS + NIMEN_LENTO_MS + ISKULAUSEEN_VIIVE_MS;
+}
+
+/*
+ * TEHOSTEET SAMALLA PORTILLA KUIN PULUN OMAT ÄÄNET (js/sound.js sfx,
+ * taulu PULUN_TEHOSTEET). Portti kunnioittaa mykistystä, äänitilaa ja
+ * taustataukoa itsestään, ja lataamaton äänite on hiljaisuus eikä
+ * virhe. try/catch on tässä siksi, että traileri on tervehdys: ääni ei
+ * saa koskaan kaataa saapumista (eikä testiajoa, jossa WebAudiota ei
+ * ole).
+ */
+function trailerinTehoste(nimi) {
+  try {
+    sfx.play(nimi);
+  } catch {
+    /* hiljaisuus riittää */
+  }
+}
+
+/**
+ * KAMERAN LAUKAISIMEN KLIK yhdelle keskelle pysähtyneelle kuvalle.
+ *
+ * Sama tehoste soi trailerin kolmelle kuvalle ja isoisän/PuluCamin
+ * isolle kuvasarjalle (js/fokusvirta.js), joten portti on yksi ja
+ * sama — omistaja tilasi KLIKin "kuville", ei yhdelle näkymälle.
+ */
+export function soitaKameranKlik() {
+  trailerinTehoste('pulu.kamera-klik');
+}
+
+/** Kirjainten lennon suhina (sisään kerran, ulos kerran). */
+function soitaKirjaintenSuhina() {
+  trailerinTehoste('pulu.kirjain-suhina');
+}
+
 /** Trailerin oma tyylitiedosto sivulle (sama kaava kuin fokusvirralla). */
 const TRAILERIN_TYYLIN_TUNNUS = 'saapumistraileri-tyyli';
 
@@ -183,6 +263,18 @@ export function piilotaSaapumistraileri(ui) {
   for (const t of tila.ajastimet) clearTimeout(t);
   tila.irrota?.();
   tila.kehys?.remove?.();
+  /*
+   * LOPPU ILMOITETAAN TASAN KERRAN (sopimus tekstisession kanssa).
+   * Kaikki kolme poistumistietä — traileri loppuun asti, napautuksen
+   * ohitus ja kaupungin vaihdon siivous — kulkevat tämän saman
+   * funktion kautta, joten portti kuuluu tänne eikä kutsupaikkoihin.
+   */
+  if (!tila.loppuIlmoitettu) {
+    tila.loppuIlmoitettu = true;
+    ilmoitaLivianTilanne('trailer', {
+      vaihe: 'loppu', tunnus: tila.tunnus, kaupunki: tila.kaupunki,
+    });
+  }
   // Lupaus ratkeaa aina: kutsuja odottaa sitä ennen luentaa.
   tila.ratkaise?.(true);
   return true;
@@ -222,7 +314,21 @@ export function naytaSaapumistraileri(ui, city) {
     return kotelo;
   });
   const nimi = nimenKirjaimet(city.name);
-  kehys.append(kuvatila, nimi);
+  /*
+   * NIMI JA ISKULAUSE SAMAAN PYSTYRIVIIN. Päällys on keskittävä flex,
+   * joten ilman omaa koteloa iskulause asettuisi nimen VIEREEN eikä
+   * sen alle.
+   */
+  const teksti = html('div', 'saapumistraileri-teksti');
+  teksti.appendChild(nimi);
+  const iskulause = trailerinIskulause(city);
+  const iskurivi = iskulause
+    ? html('div', 'saapumistraileri-iskulause', iskulause) : null;
+  if (iskurivi) {
+    iskurivi.setAttribute('aria-hidden', 'true');
+    teksti.appendChild(iskurivi);
+  }
+  kehys.append(kuvatila, teksti);
   /*
    * KOTI ON BODY, EI KARTTAPINTA. Traileri on koko ruudun päällys
    * (position: fixed), ja karttapinnalla on omat muunnoksensa —
@@ -233,8 +339,15 @@ export function naytaSaapumistraileri(ui, city) {
 
   let ratkaise = null;
   const lupaus = new Promise((ok) => { ratkaise = ok; });
+  /*
+   * TUNNUS ON OLIO, EI MERKKIJONO: sama traileri voi alkaa samassa
+   * kaupungissa uudestaan, ja kuulijan (pulun sovitin) on tunnistettava
+   * ALKU ja LOPPU pareiksi ilman laskuria.
+   */
+  const tunnus = {};
   const tila = {
     kehys, ajastimet, ratkaise, irrota: null,
+    tunnus, kaupunki: city.id, loppuIlmoitettu: false,
   };
   ui.saapumistraileri = tila;
 
@@ -263,13 +376,36 @@ export function naytaSaapumistraileri(ui, city) {
 
   // Nimi lähtee lentoon heti ensimmäisen kuvan mukana ja jää paikalleen
   // kaikkien kuvien ajaksi (omistaja: yksi nimi, kolme kuvaa).
-  const nostaNimi = () => nimi.classList.add('nakyy');
+  let kirjaimetLahtivat = false;
+  const nostaNimi = () => {
+    nimi.classList.add('nakyy');
+    // Kaksi herätystä (rAF ja 50 ms) nostavat saman nimen; suhina ja
+    // tilannetapahtuma kuuluvat silti vain ensimmäiselle kirjaimelle.
+    if (kirjaimetLahtivat) return;
+    kirjaimetLahtivat = true;
+    soitaKirjaintenSuhina();
+    ilmoitaLivianTilanne('trailer', {
+      vaihe: 'kirjaimet', tunnus, kaupunki: city.id,
+    });
+  };
   globalThis.requestAnimationFrame?.(nostaNimi);
   aja(50, nostaNimi);
 
+  // Iskulause feidautuu nimen alle vasta kun viimeinen kirjain on
+  // laskeutunut (omistaja: *"Kaupungin nimen alle voisi feidautua
+  // kaupungin isku lause"*) ja häipyy kirjainten syöksyn mukana.
+  if (iskurivi) aja(iskulauseenViive(city.name), () => iskurivi.classList.add('nakyy'));
+
   kuvaKotelot.forEach((kotelo, i) => {
     const alku = i * KUVAN_VUORO_MS;
-    const keskita = () => kotelo.classList.add('keskella');
+    let klikattu = false;
+    const keskita = () => {
+      kotelo.classList.add('keskella');
+      // Kuva on nyt paikallaan keskellä: kameran laukaisin.
+      if (klikattu) return;
+      klikattu = true;
+      soitaKameranKlik();
+    };
     if (alku <= 0) {
       globalThis.requestAnimationFrame?.(keskita);
       aja(50, keskita);
@@ -282,8 +418,12 @@ export function naytaSaapumistraileri(ui, city) {
   });
 
   // Viimeisen kuvan lähtiessä kirjaimet syöksyvät samaa rataa ulos.
-  aja(kuvat.length * KUVAN_VUORO_MS - TRAILERIN_LIMITYS_MS,
-    () => { nimi.classList.add('ulos'); });
+  aja(kuvat.length * KUVAN_VUORO_MS - TRAILERIN_LIMITYS_MS, () => {
+    nimi.classList.add('ulos');
+    // Iskulause ei lennä mukana, se vain feidaa pois.
+    iskurivi?.classList.add('ulos');
+    soitaKirjaintenSuhina();
+  });
   aja(trailerinKesto(kuvat.length), () => piilotaSaapumistraileri(ui));
 
   return lupaus;

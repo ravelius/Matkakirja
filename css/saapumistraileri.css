@@ -23,6 +23,7 @@
   --traileri-ulos: 600ms;
   --traileri-kirjain: 650ms;
   --traileri-kirjain-ulos: 450ms;
+  --traileri-iskulause: 600ms;
 
   position: fixed;
   inset: 0;
@@ -106,6 +107,19 @@
   mask-composite: intersect;
 }
 
+/* NIMI JA ISKULAUSE SAMASSA PYSTYRIVISSÄ KUVIEN PÄÄLLÄ. Kotelo on
+   pystysuora, jotta iskulause asettuu nimen ALLE eikä sen viereen. */
+.saapumistraileri-teksti {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 96vw;
+  pointer-events: none;
+}
+
 /* KAUPUNGIN NIMI HARVENNETUIN KAPITAALEIN KUVIEN KESKELLÄ. Nimi on
    kuvien PÄÄLLÄ ja pysyy paikallaan kaikkien kolmen kuvan ajan. */
 .saapumistraileri-nimi {
@@ -136,6 +150,39 @@
   color: #fff;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
   pointer-events: none;
+}
+
+/* KAUPUNGIN ISKULAUSE NIMEN ALLA (omistaja 11.9.2026 klo 12.55,
+   sanatarkasti: *"Kaupungin nimen alle voisi feidautua kaupungin isku
+   lause"*). Sama väri ja sama varjo kuin nimellä, mutta pienemmällä ja
+   hillitymmin harvennetulla kirjasimella — iskulause on kuiskaus nimen
+   alla, ei toinen otsikko. Se EI lennä: se vain häipyy näkyviin ja
+   pois, myös silloin kun kirjaimet syöksyvät. Ajoitus tulee skriptiltä
+   (js/saapumistraileri.js iskulauseenViive): puoli sekuntia viimeisen
+   kirjaimen laskeuduttua. */
+.saapumistraileri-iskulause {
+  margin-top: 0.6em;
+  max-width: 92vw;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  text-indent: 0.09em;
+  font-family: var(--font-otsikko, var(--font-luku, serif));
+  font-size: clamp(0.9rem, 2.6vw, 1.4rem);
+  line-height: 1.3;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity var(--traileri-iskulause, 600ms) ease;
+  pointer-events: none;
+}
+
+.saapumistraileri-iskulause.nakyy { opacity: 1; }
+
+/* Kirjainten syöksyn kanssa yhtä aikaa pois — feidaten, ei lentäen. */
+.saapumistraileri-iskulause.ulos {
+  opacity: 0;
+  transition: opacity var(--traileri-kirjain-ulos) ease-in;
 }
 
 /* KIRJAIN LENTÄÄ HORISONTISTA: se alkaa 2500 px katsojasta poispäin ruudun

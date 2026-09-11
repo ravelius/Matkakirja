@@ -32,9 +32,13 @@ import assert from 'node:assert/strict';
 
 import {
   naytaSaapumistraileri, piilotaSaapumistraileri, trailerinKuvat,
-  trailerinKesto, TRAILERIN_KUVIA, NIMEN_PORRAS_MS,
+  trailerinKesto, TRAILERIN_KUVIA, NIMEN_PORRAS_MS, NIMEN_LENTO_MS,
+  ISKULAUSEEN_VIIVE_MS, iskulauseenViive, trailerinIskulause,
 } from '../js/saapumistraileri.js';
 import { KULTTUURI_KATEGORIAT } from '../js/packs/kulttuuri-kategoriat.js';
+import { ISKULAUSEET } from '../js/packs/iskulauseet.js';
+import { kuunteleLivianTilanteita } from '../js/livia-tilanteet.js';
+import { sfx } from '../js/sound.js';
 
 /* ---------------------------------------------------------------- */
 /* Pieni DOM-malli                                                   */
@@ -300,7 +304,179 @@ test('liikkeen vähennys merkitään luokkana, jotta css voi jättää liikkeen'
 });
 
 /* ---------------------------------------------------------------- */
-/* 5. Moduuli on listoilla                                           */
+/* 5. Iskulause nimen alla                                           */
+/* ---------------------------------------------------------------- */
+
+/*
+ * Omistaja 11.9.2026 klo 12.55 (Raamattu, MINITRAILERIN LISAYKSET),
+ * sanatarkasti: *"Kaupungin nimen alle voisi feidautua kaupungin isku
+ * lause"*. Iskulause on PAKIN varassa: kaupunki jolle Fable ei ole
+ * vielä kirjoittanut lausetta saa trailerin ilman sitä — ja juuri se
+ * portti pitää 141 iskulauseetonta kaupunkia ennallaan.
+ */
+test('iskulause piirtyy nimen alle kun se on pakissa', () => {
+  const ui = tekoUi();
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  const kehys = traileri()[0];
+  const rivi = kehys.querySelector('.saapumistraileri-iskulause');
+  assert.ok(rivi, 'iskulause nousee ruudulle');
+  assert.equal(rivi.textContent, ISKULAUSEET[KOEKAUPUNKI.id]);
+  assert.equal(rivi.getAttribute('aria-hidden'), 'true',
+    'nimi luetaan ruudunlukijalle kerran, iskulause on koriste');
+  // Nimi ja iskulause samassa pystyrivissä (css asettaa lauseen ALLE).
+  const teksti = kehys.querySelector('.saapumistraileri-teksti');
+  assert.ok(teksti, 'nimelle ja iskulauseelle on yhteinen kotelo');
+  assert.ok(teksti.querySelector('.saapumistraileri-nimi'));
+  assert.equal(teksti.childNodes.at(-1), rivi, 'iskulause on nimen jälkeen');
+  piilotaSaapumistraileri(ui);
+});
+
+test('ilman iskulausetta traileri näyttää pelkän nimen', () => {
+  const ui = tekoUi();
+  const kaupunki = { id: 'kairo', name: 'Kairo' };
+  assert.equal(trailerinIskulause(kaupunki), '', 'koekaupungilla ei ole iskulausetta');
+  naytaSaapumistraileri(ui, kaupunki);
+  const kehys = traileri()[0];
+  assert.equal(kehys.querySelectorAll('.saapumistraileri-iskulause').length, 0);
+  assert.ok(kehys.querySelector('.saapumistraileri-nimi'), 'nimi on silti paikallaan');
+  piilotaSaapumistraileri(ui);
+});
+
+test('iskulause feidautuu vasta viimeisen kirjaimen laskeuduttua', (t) => {
+  // Viive lasketaan nimen pituudesta: viimeinen kirjain lähtee
+  // porrastuksensa verran myöhemmin ja lentää oman lentoaikansa.
+  assert.equal(iskulauseenViive('Marseille'),
+    8 * NIMEN_PORRAS_MS + NIMEN_LENTO_MS + ISKULAUSEEN_VIIVE_MS);
+
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  const rivi = traileri()[0].querySelector('.saapumistraileri-iskulause');
+  t.mock.timers.tick(iskulauseenViive(KOEKAUPUNKI.name) - 100);
+  assert.ok(!rivi.classList.contains('nakyy'), 'ei ennen viimeistä kirjainta');
+  t.mock.timers.tick(200);
+  assert.ok(rivi.classList.contains('nakyy'), 'feidaus näkyviin');
+
+  // Kirjainten syöksyn hetkellä iskulause häipyy mukana — feidaten.
+  t.mock.timers.tick(trailerinKesto(trailerinKuvat(KOEKAUPUNKI).length));
+  assert.ok(rivi.classList.contains('ulos'));
+  piilotaSaapumistraileri(ui);
+  t.mock.timers.reset();
+});
+
+/* ---------------------------------------------------------------- */
+/* 6. Pulun tilannetapahtumat ja tehosteet                           */
+/* ---------------------------------------------------------------- */
+
+/** Kerää trailerin tilannetapahtumat testin ajaksi. */
+function kerraaTrailerit(t) {
+  const lista = [];
+  const irrota = kuunteleLivianTilanteita((laji, tiedot) => {
+    if (laji === 'trailer') lista.push(tiedot);
+  });
+  t.after(irrota);
+  return lista;
+}
+
+/** Mockaa soittoportti (js/sound.js sfx) ja kerää tehostenimet. */
+function kerraaTehosteet(t) {
+  const lista = [];
+  t.mock.method(sfx, 'play', (nimi) => { lista.push(nimi); });
+  return lista;
+}
+
+test('kirjaimet ja loppu ilmoitetaan kerran koko trailerin ajalta', (t) => {
+  const tapahtumat = kerraaTrailerit(t);
+  kerraaTehosteet(t);
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  assert.deepEqual(tapahtumat.map((x) => x.vaihe), ['kirjaimet'],
+    'pulu saa vaistoliikkeen juuri kun ensimmäinen kirjain lähtee lentoon');
+  const { tunnus } = tapahtumat[0];
+  assert.equal(typeof tunnus, 'object');
+  assert.equal(tapahtumat[0].kaupunki, KOEKAUPUNKI.id);
+
+  t.mock.timers.tick(trailerinKesto(trailerinKuvat(KOEKAUPUNKI).length) + 100);
+  assert.deepEqual(tapahtumat.map((x) => x.vaihe), ['kirjaimet', 'loppu']);
+  assert.equal(tapahtumat[1].tunnus, tunnus, 'sama tunnus koko trailerin ajan');
+  assert.equal(tapahtumat[1].kaupunki, KOEKAUPUNKI.id);
+
+  // Siivous jälkikäteen ei saa lähettää toista loppua.
+  piilotaSaapumistraileri(ui);
+  assert.equal(tapahtumat.filter((x) => x.vaihe === 'loppu').length, 1);
+  t.mock.timers.reset();
+});
+
+test('ohitus ja kaupungin vaihto päättävät tapahtumaparin tasan kerran', (t) => {
+  const tapahtumat = kerraaTrailerit(t);
+  kerraaTehosteet(t);
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+
+  // Napautus kesken trailerin.
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  traileri()[0].dispatch('pointerdown');
+  t.mock.timers.tick(500);
+  assert.deepEqual(tapahtumat.map((x) => x.vaihe), ['kirjaimet', 'loppu']);
+
+  // Kaupungin vaihto (purku) kesken seuraavan trailerin.
+  tapahtumat.length = 0;
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  piilotaSaapumistraileri(ui);
+  assert.deepEqual(tapahtumat.map((x) => x.vaihe), ['kirjaimet', 'loppu']);
+  t.mock.timers.reset();
+});
+
+test('kuvaton kaupunki ei lähetä tilannetapahtumia eikä soita mitään', async (t) => {
+  const tapahtumat = kerraaTrailerit(t);
+  const tehosteet = kerraaTehosteet(t);
+  const ui = tekoUi();
+  assert.equal(await naytaSaapumistraileri(ui, { id: 'ei-tallaista', name: 'Ei mitään' }), false);
+  assert.deepEqual(tapahtumat, []);
+  assert.deepEqual(tehosteet, []);
+});
+
+test('kameran klik jokaiselle kuvalle, suhina sisään ja ulos', (t) => {
+  kerraaTrailerit(t);
+  const tehosteet = kerraaTehosteet(t);
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  const kuvia = trailerinKuvat(KOEKAUPUNKI).length;
+  assert.equal(kuvia, 3);
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  // Ensimmäinen kuva on keskellä ja kirjaimet lähtevät: yksi klik, yksi
+  // suhina — vaikka nosto herätetään kahdesti (rAF ja 50 ms).
+  assert.deepEqual(tehosteet, ['pulu.kirjain-suhina', 'pulu.kamera-klik']);
+
+  t.mock.timers.tick(trailerinKesto(kuvia) + 100);
+  assert.equal(tehosteet.filter((n) => n === 'pulu.kamera-klik').length, kuvia,
+    'klik jokaiselle keskelle pysähtyvälle kuvalle');
+  assert.equal(tehosteet.filter((n) => n === 'pulu.kirjain-suhina').length, 2,
+    'suhina kerran sisään ja kerran ulos — ei kirjaimittain');
+  t.mock.timers.reset();
+});
+
+test('ohitus ei soita uutta suhinaa', (t) => {
+  kerraaTrailerit(t);
+  const tehosteet = kerraaTehosteet(t);
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  traileri()[0].dispatch('pointerdown');
+  t.mock.timers.tick(trailerinKesto(3) + 1000);
+  assert.equal(tehosteet.filter((n) => n === 'pulu.kirjain-suhina').length, 1,
+    'ohitettu traileri ei syöksy ulos eikä suhise uudestaan');
+  t.mock.timers.reset();
+});
+
+/* ---------------------------------------------------------------- */
+/* 7. Moduuli on listoilla                                           */
 /* ---------------------------------------------------------------- */
 
 test('moduuli ja sen tyyli ovat esilataus- ja niputuslistoilla', async () => {
