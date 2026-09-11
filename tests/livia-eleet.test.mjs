@@ -104,6 +104,31 @@ test('luenta säilyy odotuksen alun ja lopun yli sekä eleiden välissä',t=>{
  assert.equal(c.tilanne('emotion',{ele:'grin',voimakkuus:.5}),false);
  c.tilanne('narrationEnd',{tunnus:a});assert.equal(c.tilanne('photo'),true);
 });
+test('matkakirjan katse pysyy koko luennan, palautuu sisääntulon ja peittymisen jälkeen ja loppuu taukoon',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);
+ const canvas=e.doc.body.children[0].children[0],a={};
+ assert.equal(c.tilanne('narration',{tunnus:a,ele:'lookUp',lahde:'matkakirja'}),false,'sisääntulo saa valmistua');
+ e.tick(6000);assert.match(canvas.innerHTML,/data-gaze="up-left"/);
+ e.tick(30000);assert.match(canvas.innerHTML,/data-gaze="up-left"/);assert.equal(e.raf.size,0,'pysyvä asento ei kuluta kehyksiä');
+ assert.doesNotMatch(canvas.innerHTML,/data-part="glasses"/);
+ e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));assert.doesNotMatch(canvas.innerHTML,/data-gaze="up-left"/);
+ e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));assert.match(canvas.innerHTML,/data-gaze="up-left"/);
+ e.reduced.matches=true;e.reduced.dispatchEvent(new Event('change'));assert.match(canvas.innerHTML,/data-gaze="up-left"/);assert.equal(e.raf.size,0);
+ c.tilanne('narrationEnd',{tunnus:a});assert.doesNotMatch(canvas.innerHTML,/data-gaze="up-left"/);
+ c.tilanne('narration',{tunnus:a,ele:'nod',lahde:'matkakirja'});assert.match(canvas.innerHTML,/data-gaze="up-left"/);
+ c.tilanne('narrationEnd',{tunnus:a});assert.doesNotMatch(canvas.innerHTML,/data-gaze="up-left"/);
+});
+test('lehtilasit eivät katoa uuden lasieleen alussa, hieraisussa tai levossa; sulku riisuu heti',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const surface=e.doc.body.children[0],canvas=surface.children[0];
+ e.lehti.open=true;e.lehti.classList.add('lehti');e.notify(e.lehti);e.tick(6000);
+ c.toista('glasses');assert.match(canvas.innerHTML,/data-part="glasses"[^>]+translate\(0 0\)/);
+ e.tick(6000);c.toista('eyeRub');e.tick(2600);
+ assert.match(canvas.innerHTML,/data-part="rubEyes"/);assert.match(canvas.innerHTML,/translate\(0 -22\)/);
+ e.tick(4000);assert.match(canvas.innerHTML,/data-part="glasses"[^>]+translate\(0 0\)/);
+ c.toista('eyeRub');e.tick(2000);e.lehti.open=false;e.notify(e.lehti);
+ assert.doesNotMatch(canvas.innerHTML,/data-part="glasses"|data-part="rubEyes"/);
+});
 
 test('luenta ohittaa odotuksen, joka jatkuu vasta viimeisen luennan loputtua',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);

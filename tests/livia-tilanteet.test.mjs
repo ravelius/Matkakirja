@@ -55,3 +55,12 @@ test('iPhonen nostokortti jättää suuren ilmeen ja otsakepalkin näkyviin',()=
  const a=livianNostoAsettelu({width:844,height:390,headerBottom:82,birdBottom:370,birdLeft:700});
  assert.ok(844-a.right<=686);assert.ok(a.height>=270,'matalalla ruudulla kortti väistää sivulle');
 });
+test('isoisän luenta ei vaihda laseihin tai tekstin avainsanojen tunne-eleisiin',t=>{
+ const a=new EventTarget();a.currentTime=0;a.paused=false;const calls=[];
+ const off=kuunteleLivianTilanteita((kind,s)=>{if(kind==='narration')calls.push(s);});t.after(off);
+ const stop=seuraaLivianKuuntelua(a,()=>true,()=> 'Leipä, rakkaus ja kuolema',{lahde:'matkakirja'});t.after(stop);
+ a.dispatchEvent(new Event('playing'));
+ for(const time of [12,24,36,48]){a.currentTime=time;a.dispatchEvent(new Event('timeupdate'));}
+ assert.deepEqual(calls.map(x=>x.ele),['lookUp','nod','nod','nod','nod']);
+ assert.ok(calls.every(x=>x.lahde==='matkakirja'));
+});

@@ -541,7 +541,7 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
   // Myös aarremerkinnät ja muut saman lukijan luennat kuuluvat Pululle.
   // Matkakirjan tekstiä ei käytetä toisen äänitteen tunnelman lähteenä.
   seuraaLivianKuuntelua(audio,()=>ui.diaryVoice===audio,
-    ()=>url===ui.diaryFullUrl?ui.factText?.textContent||'':'');
+    ()=>url===ui.diaryFullUrl?ui.factText?.textContent||'':'',{lahde:'matkakirja'});
   // Kirjanpito kaikista luennoista: pysäytys hiljentää myös sellaisen
   // äänen, joka ei enää ole diaryVoice mutta soi yhä.
   (ui.luennat ??= new Set()).add(audio);

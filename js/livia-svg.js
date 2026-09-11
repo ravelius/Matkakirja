@@ -2,7 +2,7 @@
 import {LIVIA_PIX_ELEET,livianPikseliAsento} from './livia-pikselit.js';
 import {livianSvgPaa} from './livia-svg-paa.js';
 export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
- ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['scratch','Pään raapaisu',2600]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
+ ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['scratch','Pään raapaisu',2600],['eyeRub','Lasit ylös ja silmien hieraisu',5200]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
 const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
 const lvEase=n=>{n=lvClamp(n);return n*n*(3-2*n);};
 const lvGate=p=>lvEase((p-.06)/.18)*(1-lvEase((p-.79)/.18));
@@ -15,6 +15,11 @@ export function livianEleenVoima(id,text='') {
 }
 export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
  const s={...livianPikseliAsento(id,p),ele:id,p:lvClamp(p),voimakkuus:lvClamp(voimakkuus)};
+ if(id==='eyeRub'){
+  s.glasses=1;
+  s.glassesLift=22*lvEase((p-.10)/.18)*(1-lvEase((p-.70)/.18));
+  s.frame=p>.30&&p<.68?'blink':'rest';
+ }
  if(p>.08&&p<.94){
   if(['smile','grin','wink','welcome','present'].includes(id))s.frame=id==='welcome'||id==='present'?'smile':id;
   if(id==='glasses'){s.frame=p<.24?'down':'smug';s.glasses=lvEase((p-.12)/.20)*(1-lvEase((p-.78)/.16));}
@@ -53,6 +58,7 @@ export function livianSvgMalli(s,{right=0}={}) {
   else if(s.frame==='preen')m.wing='preen';
   else if(['expert','present','welcome'].includes(id)&&gate>.01)m.wing=id==='welcome'?'shrug':'point';
   else if(id==='scratch'&&gate>.01)m.wing='scratch';
+  else if(id==='eyeRub'&&gate>.01)m.wing=p>.30&&p<.68?'rubEyes':'liftGlasses';
   else if(id==='glasses'&&(p<.34||p>.76)&&gate>.01)m.wing='shy';
   else if(id==='angry'&&gate>.01)m.wing='spread';
   else if(['disbelief','confused'].includes(id)&&gate>.01)m.wing='shrug';
@@ -67,6 +73,10 @@ export function livianSvgMalli(s,{right=0}={}) {
 }
 
 function lvWing(kind,side,amount,phase=0) {
+ if(['rubEyes','liftGlasses'].includes(kind)&&side==='near'){
+  const dx=kind==='rubEyes'?Math.sin(phase*3)*2:0,dy=kind==='rubEyes'?Math.cos(phase*3)*1.2:-12;
+  return `<g data-part="${kind}" transform="translate(${lvRound(dx)} ${lvRound(dy)})"><path d="M117 140Q132 131 122 112L113 100Q115 93 109 92L105 88Q101 87 102 93L97 91Q93 93 99 97L96 98Q94 101 102 103L109 106Q107 122 112 135Z" fill="#8499a3"/><path d="M102 95l8 5m-8 0l8 4m3 5q-2 12 5 19" fill="none" stroke="#506b7a" stroke-width="2.2" stroke-linecap="round"/></g>`;
+ }
  const anchor=side==='near'?121:88,flip=side==='near'?1:-1;
  let angle=0,raised=false;
  if(kind==='flap'){angle=25+amount*65;raised=true;}
