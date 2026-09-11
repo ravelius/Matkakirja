@@ -3,12 +3,46 @@ import assert from 'node:assert/strict';
 import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva,livianSvgMalli,livianEleenVoima} from '../js/livia-svg.js';
 
 test('kaikki nykyiset eleet piirtyvät kokonaisella SVG-pululla ilman virheellisiä koordinaatteja',()=>{
- assert.equal(LIVIA_SVG_ELEET.length,68);
+ assert.equal(LIVIA_SVG_ELEET.length,69);
  for(const e of LIVIA_SVG_ELEET)for(const p of [0,.1,.25,.43,.6,.8,.95,1]){
   const s=livianSvgAsento(e.id,p),svg=livianSvgKuva(s,{right:42,prefix:'qa'});
   assert.match(svg,/^<svg /);assert.doesNotMatch(svg,/NaN|Infinity|undefined|<image|<canvas/);
   if(livianSvgMalli(s,{right:42}).visible)assert.match(svg,/data-part="whole-bird"/);
  }
+});
+test('kartan pinnan nokkiminen tekee kaksi erillistä lempeää nokkaisua jalat paikallaan',()=>{
+ const ele=LIVIA_SVG_ELEET.find(e=>e.id==='mapPeck');
+ assert.equal(ele?.duration,2500);
+ const samples=[0,.12,.27,.42,.47,.52,.67,.82,1].map(p=>livianSvgAsento('mapPeck',p));
+ const models=samples.map(s=>livianSvgMalli(s));
+ assert.equal(samples[2].mapPeck.peck,1);assert.equal(samples[6].mapPeck.peck,2);
+ assert.ok(samples[2].mapPeck.amount>.99);assert.ok(samples[6].mapPeck.amount>.84);
+ assert.equal(samples[4].mapPeck.amount,0,'nokkaisujen välissä pää käy selvästi ylhäällä');
+ // Nokankarki on paa-SVG:ssa (19,68). Down-ilmeen oma +8 asteen kierto
+ // tapahtuu ensin pisteen (57,74) ympäri, sitten sisempi translate/scale,
+ // ulompi pään kierto pisteen (105,146) ympäri ja lopuksi koko linnun skaala.
+ const beakWorldY=m=>{
+  const rad=d=>d*Math.PI/180,twist=rad(8),x0=19-57,y0=68-74;
+  const x1=57+x0*Math.cos(twist)-y0*Math.sin(twist);
+  const y1=74+x0*Math.sin(twist)+y0*Math.cos(twist);
+  const x2=44+x1,y2=61+y1*.87,a=rad(m.headAngle),dx=x2-105,dy=y2-146;
+  const y3=146+dx*Math.sin(a)+dy*Math.cos(a)+m.headY;
+  return 302+.56*(y3-188);
+ };
+ assert.ok(models[2].headAngle<0&&Math.abs(beakWorldY(models[2])-300)<1.25&&beakWorldY(models[2])<301.5,'ensimmäinen nokka osuu kartan pintaan mutta ei sen alle');
+ assert.ok(models[6].headAngle<0&&Math.abs(beakWorldY(models[6])-301)<.1,'toinenkin nokka osuu kartan pintaan');
+ for(const i of [0,4,8]){
+  assert.equal(models[i].x,128);assert.equal(models[i].y,302);assert.equal(models[i].scale,.56);
+ }
+ const svgs=samples.map(s=>livianSvgKuva(s,{prefix:'peckqa'}));
+ const feet=svgs.map(svg=>svg.match(/<g data-part="feet">.*?<\/g>/)?.[0]);
+ assert.ok(feet.every(markup=>markup===feet[0]),'jalkojen SVG-ankkurit eivät liiku');
+ assert.match(svgs[2],/data-map-peck="1" data-map-peck-amount="1"/);
+ assert.match(svgs[6],/data-map-peck="2" data-map-peck-amount="1"/);
+ for(const svg of svgs)assert.doesNotMatch(svg,/NaN|Infinity|undefined|<image|<canvas/);
+ const start=models[0],end=models[8];
+ assert.deepEqual({x:end.x,y:end.y,headY:end.headY,headAngle:end.headAngle,bodyLean:end.bodyLean,face:end.face,wing:end.wing},
+  {x:start.x,y:start.y,headY:start.headY,headAngle:start.headAngle,bodyLean:start.bodyLean,face:start.face,wing:start.wing});
 });
 test('chatin pikapyrähdyksillä on sovitut kestot ja vaakasuora vakioskaalainen rata',()=>{
  assert.equal(LIVIA_SVG_ELEET.find(e=>e.id==='chatDashOut')?.duration,300);

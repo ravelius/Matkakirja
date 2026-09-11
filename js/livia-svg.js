@@ -8,6 +8,7 @@ export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
  Object.freeze({id:'chatDashOut',label:'Salamana chatista',duration:300,group:'Liike'}),
  Object.freeze({id:'chatDashBack',label:'Salamana takaisin chattiin',duration:100,group:'Liike'}),
  Object.freeze({id:'chatDustOff',label:'Pölyt pois sulista',duration:1400,group:'Pelitilanne'}),
+ Object.freeze({id:'mapPeck',label:'Kartan pinnan nokkiminen',duration:2500,group:'Pelitilanne'}),
  Object.freeze({id:'bunFeast',label:'Riemukas pullapalkinto',duration:4600,group:'Pelitilanne'}),
  ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['bookStudy','Tietäväinen kirjan selaus',4200],['scratch','Pään raapaisu',2600],['eyeRub','Lasit ylös ja silmien hieraisu',5200],['chuckle','Hiljainen naurunpyrskähdys',2500]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
 const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
@@ -34,6 +35,16 @@ export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
    s.mouth=Math.sin((t-.7)*Math.PI*18)>0?'talkSmall':'rest';
    s.feast={phase:'chew',chew:Math.sin((t-.7)*Math.PI*18)};
   }
+ }
+ if(id==='mapPeck'){
+  // Kaksi rauhallista, toisistaan erottuvaa nokkaisua. Lyhyt väli tekee
+  // liikkeestä uteliaan eikä mekaanista edestakaista pumppausta.
+  const first=s.p>.12&&s.p<.42?Math.sin((s.p-.12)/.30*Math.PI):0;
+  const second=s.p>.52&&s.p<.82?Math.sin((s.p-.52)/.30*Math.PI):0;
+  const amount=Math.max(0,first,second);
+  s.frame=amount>.08?'down':'rest';
+  s.gazeDown=amount>.08;
+  s.mapPeck={amount,peck:first>second?1:second>0?2:0};
  }
  if(id==='glideIn')s.flight={kind:'opening',t:lvEase(p)};
  if(id==='trailerFlee')s.flight={kind:'trailerAway',t:lvEase(p)};
@@ -69,6 +80,14 @@ export function livianSvgMalli(s,{right=0}={}) {
   x:128+(s.x||0)*4,y:302+(moving?(s.y||0)*4:0),headY:moving?0:(s.y||0)*2,headAngle:(s.tilt||0)*(3+5*strength),scale:.56,angle:0,squash:1,visible:true,
   flight:Boolean(s.flight),walking:Boolean(s.walk),mirror:s.walk?.direction===1,face:s.frame||'rest',wing:'fold',wingAmount:0};
  if(id==='bunFeast'&&s.feast?.hop){m.y-=7*Math.abs(s.feast.hop);m.angle=2.5*Math.sin(p/.2*Math.PI*2);}
+ if(id==='mapPeck'&&s.mapPeck){
+  const amount=lvClamp(s.mapPeck.amount);
+  // Vartalo joustaa vain vähän: varsinainen nokkaisu syntyy kaulan ja pään
+  // liikkeestä, joten jalkojen polut ja koko linnun ankkuri eivät liiku.
+  // Paa-moduulin vasemmalle osoittava nokka laskee negatiivisella kierrolla.
+  // Huipussa nokankarki (19,68) osuu koko SVG:n maailmassa y~=300:aan.
+  m.headY=16.1*amount;m.headAngle=-65*amount;m.bodyLean=4*amount;
+ }
  if(s.walk){const t=s.walk.direction===1?s.walk.t:1-s.walk.t;m.x=128+(right+96)*t;m.y=302-2*Math.sin(p*Math.PI*14);if(t>=1)m.visible=false;}
  if(['arrive','crash','owl','leaveRight'].includes(id)&&!s.flight&&!s.walk){const edge=id==='arrive'?1-lvEase((p-.08)/.46):id==='crash'?1-lvEase((p-.05)/.24):lvClamp((s.x||0)/24);m.x=128+(right+100)*edge;}
  if(id==='leaveRight'&&p>=1)m.visible=false;
@@ -160,7 +179,8 @@ function lvBird(s,m,prefix){
  const down=s.frame==='sleep'?10:s.frame==='preen'?8:0;
  // Foot anchors stay fixed. The chest leans and the neck is occluded as the head approaches the camera.
  const body=`<g transform="rotate(${m.bodyLean} 109 177)"><path d="M122 156L139 171L131 172L137 175L122 174L113 163Z" fill="#546b7a"/><path d="M87 137Q97 127 115 133Q131 137 132 152Q134 170 117 175Q100 178 89 165Q82 154 87 137Z" fill="#97a5ac"/><path d="M89 141Q98 134 105 137Q96 147 96 158Q97 170 109 175Q96 171 89 162Q84 152 89 141Z" fill="#b1bcc0"/><path d="M117 135Q132 140 132 154Q134 171 117 175L110 172Q119 161 117 135Z" fill="#738895"/></g>`;
- const head=`<g data-part="approach" transform="translate(${-8*m.lean} ${8*m.lean+down+m.headY}) rotate(${m.headAngle} 105 146) translate(105 146) scale(${lvRound(m.headScale)}) translate(-105 -146)"><g transform="translate(44 61) scale(1 .87)">${livianSvgPaa(headState,{prefix,lean:m.lean,strength:m.strength})}</g></g>`;
+ const peck=s.mapPeck?` data-map-peck="${s.mapPeck.peck}" data-map-peck-amount="${lvRound(s.mapPeck.amount)}"`:'';
+ const head=`<g data-part="approach"${peck} transform="translate(${-8*m.lean} ${8*m.lean+down+m.headY}) rotate(${m.headAngle} 105 146) translate(105 146) scale(${lvRound(m.headScale)}) translate(-105 -146)"><g transform="translate(44 61) scale(1 .87)">${livianSvgPaa(headState,{prefix,lean:m.lean,strength:m.strength})}</g></g>`;
  const dashPart=s.flight?.kind==='chatDashOut'||s.flight?.kind==='chatDashBack'?` data-part-chat-dash="${s.flight.kind}"`:'';
  return `<g data-part="whole-bird"${dashPart} transform="translate(${lvRound(m.x)} ${lvRound(m.y)}) rotate(${lvRound(m.angle)}) scale(${lvRound(m.scale*(m.mirror?-1:1))} ${lvRound(m.scale*m.squash)}) translate(-108 -188)">
  ${lvFeet(m,s)}${lvWing(m.wing,'far',m.wingAmount,m.p*12)}${body}${head}${lvWing(m.wing,'near',m.wingAmount,m.p*12)}
