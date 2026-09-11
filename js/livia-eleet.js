@@ -63,7 +63,7 @@ export function asennaLivianKasvot(pollo) {
  const luennat=new Map();
  const lepo=()=>livianSvgAsento('blink',0);
  const nappiNakyy=()=>!doc.hidden&&(!nappi.getClientRects||nappi.getClientRects().length>0)&&!nappi.hidden&&nappi.isConnected&&getComputedStyle(nappi).display!=='none'&&getComputedStyle(nappi).visibility!=='hidden';
- const nakyy=()=>nappiNakyy()&&livianDialogiSalliiReaktion(doc,nappi);
+ const nakyy=()=>nappiNakyy()&&livianDialogiSalliiReaktion(doc,nappi,Boolean(pollo.auki));
  function sijoita(){
   if(kuollut)return;const rect=nappi.getBoundingClientRect?.()||{right:152,bottom:304};
   const viewport=doc.documentElement?.clientWidth||rect.right;

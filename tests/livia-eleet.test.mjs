@@ -157,6 +157,12 @@ test('T1 sallii kolme dialogia, muu modaali katkaisee myös odotuksen ja oman pu
  }
  toggle('wiki-dialog',true);assert.equal(surface.hidden,false,'aiempi chat saa staattisen pulun');
  assert.equal(c.toista('grin'),false);assert.equal(e.raf.size,0);
+ e.pollo.auki=true;e.notify(e.button);const kysymys={};c.tilanne('waiting',{tunnus:kysymys});
+ assert.ok(e.raf.size,'artikkelin oma chat reagoi kysymykseen heti');e.tick(7000);
+ let jatkui=false;for(let i=0;i<36;i++){e.tick(250);jatkui ||= e.raf.size>0;}
+ assert.ok(jatkui,'pitkä odotus jatkaa eleitä myös ensimmäisen eleen jälkeen');
+ c.tilanne('waitingEnd',{tunnus:kysymys});e.pollo.auki=false;e.notify(e.button);
+ assert.equal(e.raf.size,0,'chatin sulku palauttaa artikkelin hiljaisuuden');
  toggle('wiki-dialog',false);assert.equal(surface.parent,e.doc.body);
  e.button.hidden=true;e.notify(e.button);toggle('quiz-dialog',true);
  assert.equal(surface.hidden,true,'löytämätön tai intron piilottama pulu ei ilmesty dialogissa');

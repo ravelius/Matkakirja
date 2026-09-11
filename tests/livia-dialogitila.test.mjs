@@ -12,7 +12,7 @@ function ymparisto(t) {
   takeRecords() { const rs=pending;pending=[];return rs; }
   disconnect() { disconnected=true; }
  }});
- const dialogs=['arrival-dialog','passport-dialog','quiz-dialog','rules-dialog','winner-dialog','wiki-dialog','event-dialog']
+ const dialogs=['arrival-dialog','passport-dialog','quiz-dialog','rules-dialog','winner-dialog','wiki-dialog','event-dialog','nahtavyys-dialog']
   .map(id=>({id,localName:'dialog',open:false,isConnected:true}));
  const doc={body:{},querySelectorAll:()=>dialogs.filter(d=>d.open&&d.isConnected)};
  const changes=[],off=seuraaLivianDialogeja(doc,(a,b)=>changes.push([a?.id,b?.id]));t.after(off);
@@ -51,4 +51,15 @@ test('saman tehtävän sulje-avaa nostaa dialogin kärkeen, poistettu dialogi ei
  assert.equal(livianYlinDialogi(e.doc).id,'arrival-dialog');
  e.dialogs[0].isConnected=false;assert.equal(livianYlinDialogi(e.doc).id,'quiz-dialog');
  e.off();assert.equal(e.disconnected(),true);
+});
+
+test('oma chat saa reagoida nähtävyydessä ja wikissä, ei muissa hiljaisissa ikkunoissa',t=>{
+ const e=ymparisto(t),nappi={closest:()=>livianYlinDialogi(e.doc)};
+ for(const id of ['nahtavyys-dialog','wiki-dialog','rules-dialog','winner-dialog','event-dialog']) {
+  e.set(id,true);e.flush();
+  assert.equal(livianDialogiSalliiReaktion(e.doc,nappi),false);
+  assert.equal(livianDialogiSalliiReaktion(e.doc,nappi,true),['nahtavyys-dialog','wiki-dialog'].includes(id));
+  assert.equal(livianDialogiSalliiReaktion(e.doc,{closest:()=>null},true),false,'peittyvä Pulu ei saa lupaa');
+  e.set(id,false);e.flush();
+ }
 });

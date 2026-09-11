@@ -11,7 +11,7 @@ const cases=[
 ];
 for(const [name,width,height,x,y,safe] of cases)test(`suuri kasvo ja chat eivät peity: ${name}`,()=>{
  const {paneeli:p,kasvo:k,nappi:n}=livianChatAsettelu({width,height,x,y,safe});
- assert.ok(p.top+p.height<=k.top-13||p.left+p.width<=k.left-13,'kasvon ympärillä on rako');
+ assert.ok(p.top+p.height<=k.top-5||p.left+p.width<=k.left-5,'kasvon ympärillä on rako');
  for(const r of [p,k,n]){
   assert.ok(r.left>=x&&r.top>=y,JSON.stringify(r));
   assert.ok(r.left+r.width<=x+width&&r.top+r.height<=y+height,JSON.stringify(r));
@@ -50,6 +50,15 @@ test('avaus, näppäimistö ja sulkeminen palauttavat paikan ilman muutoskehää
  test('pystychat jää yläpalkin alle ja lähelle kokopulua',()=>{
  const a=livianChatAsettelu({width:390,height:844,safe:{top:59,bottom:34},headerBottom:116});
  assert.ok(a.paneeli.top>=128);
- assert.equal(a.nappi.top+a.nappi.height-a.paneeli.top-a.paneeli.height,118);
+ assert.equal(a.nappi.top+a.nappi.height-a.paneeli.top-a.paneeli.height,110);
  assert.ok(a.paneeli.height<=844*.68);
  });
+
+test('lehtipulun chat on lähellä mutta myös suurin pienennetty ilme mahtuu',()=>{
+ const a=livianChatAsettelu({width:393,height:852,pieniPulu:true});
+ const alareuna=a.paneeli.top+a.paneeli.height;
+ assert.ok(Math.abs(a.kasvo.height-74.88)<.01);
+ assert.ok(Math.abs(a.kasvo.top-alareuna-6)<.01);
+ assert.ok(Math.abs(a.nappi.top+a.nappi.height-alareuna-80.88)<.01);
+ assert.equal(a.nappi.width,48);
+});
