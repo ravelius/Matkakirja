@@ -389,5 +389,195 @@ export const MAASTOKOHTEET_FIN = [
     lahde: 'en-Wikipedia "Battle of Bomarsund", johdanto-osa sekä osiot "Background", "First '
       + 'battle" ja "Second battle" (tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * NOSTOERÄ 11.9.2026 — KUUSI KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026 (sanatarkasti): *"Suomesta puuttuu lisäksi myös
+   * nostoja, niitä on siis liian vähän. Agentit voisivat tarkastaa myös
+   * muut Euroopan maat että kaikissa tarpeeksi nostoja."*
+   * Päätoimittajan tavoite: jokaisessa Euroopan maassa vähintään 20
+   * pääkartan nostoa. Suomi oli neljäntoista merkin varassa.
+   *
+   * PAIKAT MITATTIIN KOLMEEN PELIKAUPUNKIIN (Helsinki, Tampere,
+   * Rovaniemi). Lähin uusi merkki on Hämeen linna 29 lautayksikön
+   * päässä Helsingistä — reilusti yli kaupunkikaton säteen
+   * (KAUPUNGIN_KOHDALLA_SADE 7, KAUPUNKIKATON_SADE 8,
+   * js/fokuskohteet.js), joten kaikki kuusi ovat pääkartan merkkejä.
+   *
+   * JÄRVI ON TYYPPIÄ 'meri' EIKÄ 'jarvi'. Syy on koko kohdeperheen
+   * sopimus, ja se on perusteltu auki js/packs/maastokohteet-gha.js:n
+   * Voltajärvi-kortissa: tyyppiä 'jarvi' ei ole symbolitaulussa, ja
+   * sen käyttö pudottaisi merkin symbolin nulliksi.
+   *
+   * KUVATON ERÄ kuten muutkin maastokohteet: kortti kantaa tekstin ja
+   * lähteen. Kuvat tilataan erikseen kuvaputkelta. Faktat on
+   * tarkistettu en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'saimaa',
+    nimi: 'Saimaa',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Miksi saimaannorppa elää vain täällä?',
+      'Mihin Saimaan vedet laskevat?',
+    ],
+    korostukset: ['saimaannorppa|saimaannorppa'],
+    nappi: 'Suomen suurin järvi',
+    // 28.15 E / 61.35 N — Haukiveden ja Pihlajaveden seutu; en-Wikipedia
+    // "Saimaa" ei anna järvelle yhtä keskipistettä, joten piste on
+    // valittu järvialtaan keskeltä Savonlinnan luoteispuolelta.
+    laudat: {
+      maailmankartta: { x: 6771.7, y: 857.7 },
+    },
+    teksti: 'Saimaa on noin 4 279 neliökilometrin järvi Kaakkois-Suomessa: maan suurin ja '
+      + 'Euroopan neljänneksi suurin luonnollinen makean veden järvi. Se syntyi jääkauden '
+      + 'sulamisvesistä, ja noin kuusituhatta vuotta sitten muinainen Saimaa — silloin lähes '
+      + '9 000 neliökilometriä — purkautui äkillisesti uudesta lasku-uomasta ja jätti '
+      + 'jälkeensä tuhansia neliökilometrejä uutta soistuvaa maata. Nykyään vedet lähtevät '
+      + 'Vuoksea myöten Laatokkaan. Järvi on saarten ja kapeiden salmien sokkelo, jonka jokainen '
+      + 'osa on oma vetensä: Orivesi, Puruvesi, Haukivesi, Yövesi, Pihlajavesi, Pyhäselkä. '
+      + 'Ulkoministeriön englanninkielisen esittelyn mukaan alueella on 14 000 saarta ja '
+      + 'enemmän rantaviivaa pinta-alaa kohti kuin missään muualla maailmassa, yhteensä lähes '
+      + '15 000 kilometriä. Rannoilla ovat Lappeenranta, Imatra, Savonlinna, Mikkeli, Varkaus ja '
+      + 'Joensuu. Järvessä elää kaksi lajia, joita ei ole missään muualla: uhanalainen '
+      + 'saimaannorppa ja saimaanlohi.',
+    lahde: 'en-Wikipedia "Saimaa", johdanto-osa sekä osiot "History", "Topography" ja '
+      + '"Natural resources" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'koli',
+    nimi: 'Koli',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Kuka maalasi Kolin kuuluisaksi?',
+      'Mitä Ukko-Kolilta näkyy?',
+    ],
+    korostukset: ['kaskiviljely|kaskiviljelyyn'],
+    nappi: 'Kansallismaisema Pielisen rannalla',
+    // 29.79 E / 63.1 N — en-Wikipedia "Koli National Park"
+    laudat: {
+      maailmankartta: { x: 6826.3, y: 767.4 },
+    },
+    teksti: 'Koli on metsäisten vaarojen jono Pielisen länsirannalla Pohjois-Karjalassa. '
+      + 'Huipun nimi on Ukko-Koli, ja siltä avautuu itään laaja näkymä järvelle. Paikka oli '
+      + 'aikanaan pakanallinen uhripaikka ja myöhemmin kaskiviljelyyn raivattua maata; '
+      + 'kansallispuiston kolmestakymmenestä neliökilometristä osa pidetään yhä avoimena '
+      + 'niittämällä ja laiduntamalla suomalaisilla lehmä- ja lammasroduilla, koska '
+      + 'perinnemaiseman kasvillisuus katoaisi muuten. Maalarit löysivät Kolin 1800-luvulla, ja '
+      + 'sitä on sen jälkeen kutsuttu yhdeksi Suomen komeimmista luonnonnäkymistä: Jean '
+      + 'Sibelius, Juhani Aho ja Eero Järnefelt hakivat siitä aiheensa, ja Järnefeltin vuonna '
+      + '1911 A. W. Finchin ja Ilmari Aallon kanssa maalaama suuri maisema roikkuu Helsingin '
+      + 'rautatieaseman ravintolassa. Vaarojen kyljissä on myös luolia, joista tunnetuin on '
+      + '34 metriä pitkä Pirunkirkko.',
+    lahde: 'en-Wikipedia "Koli National Park", johdanto-osa ja osio "Attractions" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'saimaankanava',
+    nimi: 'Saimaan kanava',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Kuinka korkealle kanava nostaa laivan?',
+      'Mihin kaupunkiin kanava aikanaan päättyi?',
+    ],
+    korostukset: ['sulku|sulkua'],
+    nappi: 'Kahdeksan sulkua Saimaalta merelle',
+    // 28.2733 E / 61.0786 N — kanavan pohjoispää Lauritsalassa
+    // Lappeenrannassa; en-Wikipedia "Saimaa Canal", osio "Topography"
+    laudat: {
+      maailmankartta: { x: 6775.8, y: 871.5 },
+    },
+    teksti: 'Kun isoisäsi matkusti, kanava oli uusi: se rakennettiin vuosina 1845–1856 ja '
+      + 'avattiin 7. syyskuuta 1856. Väylä yhdistää Saimaan Suomenlahteen Viipurin kohdalla, ja '
+      + 'sen pohjoispää on Lauritsalassa Lappeenrannassa. Pituutta on 42,9 kilometriä. Matkalla '
+      + 'on kahdeksan sulkua, jotka nostavat laivan merenpinnasta Saimaan tasolle 75,7 metriä; '
+      + 'korkein yksittäinen nosto on Mälkiän 12,4 metriä. Kanava oli avain koko sisämaahan: '
+      + 'sen kautta pääsee Suomen järvialueen 120 toisiinsa liittyvään järveen, ja Saimaan '
+      + 'syväväyliä on 814 kilometriä aina Kuopioon asti. Talvisin kanava on kiinni. Se '
+      + 'peruskorjattiin ja levennettiin vuosina 1963–1968, ja nykyinen "saimax"-mitta sallii '
+      + 'enintään 82,5 metriä pitkän ja 12,6 metriä leveän aluksen.',
+    lahde: 'en-Wikipedia "Saimaa Canal", johdanto-osa sekä osiot "Topography", "Dimensions", '
+      + '"Locks" ja "History" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'hameenlinna',
+    nimi: 'Hämeen linna',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miksi linnan ikä on kiistanalainen?',
+      'Mitä linnassa tehtiin 1800-luvulla?',
+    ],
+    korostukset: ['vankila|vankila'],
+    nappi: 'Linna, josta tehtiin vankila',
+    // 24.4573 E / 61.0 N — en-Wikipedia "Häme Castle"
+    laudat: {
+      maailmankartta: { x: 6648.6, y: 875.5 },
+    },
+    teksti: 'Hämeen linna seisoo Hämeenlinnassa Vanajaveden rannalla — alun perin saarella, '
+      + 'nykyään rannalla. Siinä on keskustorni ja sitä kiertävä muuri vallihautoineen; '
+      + 'tornissa oli alkujaan viisi tornia, joista kaksi erottuu yhä, ja muurissa on '
+      + 'porttirakennus, kahdeksankulmainen tiilitorni ja pyöreä tykkitorni. Alaosat ovat '
+      + 'harmaakiveä, yläosat punatiiltä. Ikä on kiistanalainen: perinne liittää linnan Birger '
+      + 'jaarlin toiseen ristiretkeen ja siis 1200-luvun puoliväliin, mutta kaivauksista ei ole '
+      + 'löytynyt mitään, joka varmasti olisi 1320-lukua vanhempaa, eikä vuoden 1308 '
+      + 'kuninkaallinen asiakirja tunne Hämeestä kuin yhden linnan. Foggin matkan aikaan linna '
+      + 'ei ollut linna lainkaan: Suomen sodan jälkeen siitä tehtiin vankila, ja vankilana se '
+      + 'oli vuoteen 1953. Museo siitä tuli vasta 1979.',
+    lahde: 'en-Wikipedia "Häme Castle", johdanto-osa ja osio "History" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'ruotsinsalmi',
+    nimi: 'Ruotsinsalmi',
+    tyyppi: 'merenkulku',
+    kysymykset: [
+      'Kuinka suuri taistelu Ruotsinsalmi oli?',
+      'Minkä sodan taistelu lopetti?',
+    ],
+    korostukset: ['Kotka|Kotkan'],
+    nappi: 'Itämeren suurin meritaistelu',
+    // 26.95 E / 60.4667 N — salmi nykyisen Kotkan edustalla;
+    // en-Wikipedia "Battle of Svensksund"
+    laudat: {
+      maailmankartta: { x: 6731.7, y: 902.4 },
+    },
+    teksti: 'Suomenlahdella nykyisen Kotkan edustalla käytiin 9. ja 10. heinäkuuta 1790 '
+      + 'toinen Ruotsinsalmen taistelu. Ruotsin merivoimat löivät Venäjän laivaston niin '
+      + 'perusteellisesti, että se lopetti vuosien 1788–1790 Venäjän ja Ruotsin välisen sodan. '
+      + 'Taistelu on Ruotsin suurin merivoitto ja suurin meritaistelu, joka Itämerellä on '
+      + 'koskaan käyty; alusten lukumäärällä mitattuna se kuuluu koko maailmanhistorian '
+      + 'suurimpien meritaistelujen joukkoon. Isoisäsi aikaan taistelusta oli kulunut '
+      + 'runsaat kahdeksankymmentä vuotta, ja Kotkan edustan salmi oli yhä merenkulkijoiden '
+      + 'muistissa.',
+    lahde: 'en-Wikipedia "Battle of Svensksund", johdanto-osa (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'kultala',
+    nimi: 'Kultala',
+    tyyppi: 'kauppa',
+    kysymykset: [
+      'Mistä Lapin kulta löytyi ensimmäisenä?',
+      'Kuka sai luvan huuhtoa kultaa?',
+    ],
+    korostukset: ['kruununasema|kruununasema'],
+    nappi: 'Lapin kultaryntäys 1870',
+    // 26.6 E / 68.4 N — Ivalojoen ja Sotajoen yhtymäkohdan seutu
+    // Inarissa; en-Wikipedia "Lapland Gold Rush", osio "The rush"
+    laudat: {
+      maailmankartta: { x: 6720.0, y: 476.2 },
+    },
+    teksti: 'Tämä on uutinen, joka on juuri nyt tuore. Norjalainen geologi Tellef Dahll löysi '
+      + '1860-luvulla kultaa Tenojoesta ja huomasi lupaavimpien paikkojen olevan Suomen '
+      + 'puolella. Suomi näki nälkää, ja vuorihallitus lähetti 1868 insinööri Conrad Lihrin '
+      + 'johtaman retkikunnan pohjoiseen; syyskuussa se löysi kultaa Ivalojoesta Inarista. '
+      + 'Aleksanteri II vahvisti huhtikuussa 1870 lain, joka luopui hallitsijan yksinoikeudesta '
+      + 'jalometalleihin ja avasi huuhdonnan jokaiselle "kunnolliselle" suuriruhtinaskunnan ja '
+      + 'Venäjän keisarikunnan miehelle. Saman kevään ja kesän aikana noin viisisataa '
+      + 'kullankaivajaa hiihti, käveli ja souti satoja kilometrejä Ivalojoen ja Sotajoen '
+      + 'yhtymäkohtaan. Sinne perustettiin Kultalan kruununasema, jossa viranomaiset '
+      + 'myönsivät valtaukset ja ostivat kullan; asemalla oli myös järjestyksenvalvojat ja '
+      + 'kartoittajat. Ryntäys kesti vain muutaman vuoden.',
+    lahde: 'en-Wikipedia "Lapland Gold Rush", johdanto-osa sekä osiot "Background" ja '
+      + '"The rush" (tarkistettu 11.9.2026).',
+  },
 ];
 
