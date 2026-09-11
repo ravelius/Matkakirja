@@ -214,7 +214,7 @@ Osa-alueen A rivit `saapuminen.kommentti`, `saapuminen.valihuuto`,
 | `kortti.nosto.sulku` | kartta | js/fokusnosto.js:1082 `suljeNostonKortti` → js/livia-nostotila.js:39 | kortti pois → `cardEnd` | — | paluu perusasentoon, ei uutta elettä | pulu palaa omalle paikalleen kartalla | — | — | — | K js/livia-nostotila.js:39 | `tests/nostot-kartalla.test.mjs` |
 | `kortti.nosto.linssiportti` | kartta | js/fokusnosto.js:881, 975 `linssiEstaa` | napautus linssin aikana → ei mitään | — | linssin aikana kaikki muu on kiinni | linssi voittaa | — | — | — | D | `node --test tests/linssikartta.test.mjs` |
 | `kortti.nosto.kohdenappi` | kortti → kohdekortti | js/fokusnosto.js:992 | "Katso kartalla" → nosto kiinni, kohde auki | — | siirtymä kortista toiseen, tunne kuuluu kohdekortille | `cardEnd` + uusi `card` peräkkäin — ei kahta elettä | — | — | — | D | selain: nosto, jolla on karttakohde |
-| `kortti.nosto.lukunappi` | kortti | js/fokusnosto.js:1007 → js/lukija.js:2147 | "Kuuntele kortti" → luenta | — | luennan aikana kuunnellaan, kuten matkakirjalla | uusi kortti pysäyttää edellisen luennan (js/lukija.js:2161) | — | — | — | D | selain: paina kaiutinta nostokortilla |
+| `kortti.nosto.lukunappi` | kortti | js/fokusnosto.js:1007 → js/lukija.js:2147 | "Kuuntele kortti" → luenta | — | luennan aikana kuunnellaan, kuten matkakirjalla | lukija kuunteluvuorossa (lahde: lukija); avoin nostokortti ei estä kuuntelua (v1747) | — | — | — | K/T (v1747) | selain: paina kaiutinta nostokortilla |
 | `kortti.nosto.kysymys` | kortti → visa | js/fokusnosto.js:1257 `piirraNostonKysymykset` → js/visa.js:110 | vastaus → `success`/`retry` | `ilo` (0,6) / `miettiva` (0,4) | kerran per vastaus | visa on modaali; ele kortin ulkopuolella | — | katse pelaajaan | modaali | K js/visa.js:110 | `node --test tests/fokusvirta.test.mjs` |
 
 **B7 Isoisän aarremerkintä matkakirjakorttiin**
@@ -281,7 +281,7 @@ vain lehden kautta avautuvista nostokorteista ja visasta.
 | `lehti.nosto.syvennys` | Nostokortti / syvennys lehden sivulta | js/syvennys.js:198, js/fokusnosto.js:1004 | kortti auki | aiheen mukaan (`livianAiheEle`) | kerran per kortti | `merkitseLivianNosto` + js/livia-nostotila.js hoitaa; sama polku kuin `kortti.nosto.avaus` (B6) | lepo | — | nostotila | K | Aihesivu → nosto → kortti |
 | `lehti.wiki.luelisaa` | "Lue lisää aiheesta" | js/maalehti.js:1143 | — | — | Vie pois pelistä (wikiartikkeli) — ei elettä | — | — | — | — | D | — |
 | `lehti.maaliite.avaus` | "Suomi-liite" viimeiseltä sivulta | js/lehti.js:1645 | maalehti aukeaa | — | Sama tapahtuma kuin `lehti.maalehti.avaus`; ei kahta elettä | — | — | — | — | D | Lontoo → viimeinen sivu → Britannia-liite |
-| `lehti.lukija.aloitus` | Kaiuttimen luenta lehden sivulla | js/lehti.js:663 `varustaLukija` | — | — | Kertojan luennan aikana pulu KUUNTELEE (tekninen `narration`), ei tunnetagia | — | — | — | — | D (tekninen) | Paina kaiutinta: pulu nyökkää `seuraaLivianKuuntelua`-rytmissä |
+| `lehti.lukija.aloitus` | Kaiuttimen luenta lehden sivulla | js/lehti.js:663 `varustaLukija` | — | — | Kertojan luennan aikana pulu KUUNTELEE (tekninen `narration`), ei tunnetagia | lukija (WebAudio, SpeechSynthesis, natiivisilta) kuunteluvuorossa; lataus ei aloita elettä (v1747) | — | — | — | K/T (v1747) | Paina kaiutinta: pulu nyökkää `seuraaLivianKuuntelua`-rytmissä |
 
 ### D. Chat, kysymisreitit, mikrofoni ja odotus
 
@@ -302,11 +302,11 @@ pätevät vasta mainin kanssa.
 | `chat.odotus.pitka` | Sama | js/pollo.js:1434 mietintärivi, 1386 `MIETINNAN_JATKOVIIVE` 6000 | 6 s → rivi vaihtuu `pitkat`-repliikkiin | `hammentynyt` (0,3) | kerran, ei toistoa | ei saa keskeyttää odotuselettä | — | — | — | D | Throttle 3G, kysy pitkä kysymys |
 | `chat.vastaus.striimi.alku` | Chat | js/pollo.js:5155 `lopetaOdotus` + 5537 `avaaKupla` | 1. pala → kupla | `utelias` (0,4) | kerran per vastaus | waitingEnd → `palaa()` | lepo | katse kuplaan | — | K (vain waitingEnd) | Kysy ja katso ensimmäistä palaa |
 | `chat.vastaus.valmis` | Chat | js/pollo.js:5688 (`answer`, js/livia-eleet.js:132) | teksti valmis → ele repliikin sävystä | `ylpea` / `lammin` (0,5) | kerran; vain aito vastaus | ei varatekstille eikä katkenneelle | lepo | — | — | K | Kysy onnistuva kysymys |
-| `chat.vastaus.varateksti` | Chat | js/pollo.js:5628 (`varateksti`/`syy`) | worker kieltäytyy | `hammentynyt` (0,3) | kerran | `answer` on nimenomaan estetty tässä | lepo | — | — | D | Kysy kysymys, johon worker kieltäytyy |
-| `chat.vastaus.katkesi` | Chat | js/pollo.js:5645 virherivi "Ajatus katkesi" | virta katkeaa | `hammentynyt` (0,4) | kerran | uusintanappi seuraa | lepo | — | — | D | Katkaise verkko kesken striimin |
-| `chat.virhe` | Chat | js/pollo.js:5710 catch, 5717 virheviesti | pyyntö kaatuu → virherivi | `hammentynyt` (0,5) | kerran | keskeyttää odotuseleen (waitingEnd finally) | `palaa()` | — | — | D | Estä workers.dev route |
-| `chat.virhe.kayttoraja` | Chat | js/pollo.js:5731 päiväraja/kuukausiraja | raja täynnä → virherivi ilman uusintanappia | `vakava` (0,4) | kerran | erottuu tavallisesta virheestä | `palaa()` | — | — | D | Kuluta päiväraja |
-| `chat.peruutus` | Chat | js/pollo.js:4050 `sulje` kesken pyynnön | sulku → pyyntö jää käyntiin | — | ei AbortControlleria: waitingEnd vasta kun fetch päättyy | **aito ristiriita**: chatClose ja waiting päällekkäin (ks. puutelista T3) | — | — | — | D | Kysy ja sulje chat heti |
+| `chat.vastaus.varateksti` | Chat | js/pollo.js:5628 (`varateksti`/`syy`) | worker kieltäytyy | hammentynyt (0,3) | kerran | `answer` on nimenomaan estetty tässä | lepo | — | — | K/T (v1745) | Kysy kysymys, johon worker kieltäytyy |
+| `chat.vastaus.katkesi` | Chat | js/pollo.js:5645 virherivi "Ajatus katkesi" | virta katkeaa | hammentynyt (0,4) | kerran | uusintanappi seuraa | lepo | — | — | K/T (v1745) | Katkaise verkko kesken striimin |
+| `chat.virhe` | Chat | js/pollo.js:5710 catch, 5717 virheviesti | pyyntö kaatuu → virherivi | hammentynyt (0,5) | kerran | keskeyttää odotuseleen (waitingEnd finally) | `palaa()` | — | — | K/T (v1745) | Estä workers.dev route |
+| `chat.virhe.kayttoraja` | Chat | js/pollo.js:5731 päiväraja/kuukausiraja | raja täynnä → virherivi ilman uusintanappia | vakava (0,4) | kerran | erottuu tavallisesta virheestä | `palaa()` | — | — | K/T (v1745) | Kuluta päiväraja |
+| `chat.peruutus` | Chat | js/pollo.js `kysy` (AbortController per kierros) → `sulje` peruu vain oman pyynnön (v1744) | sulku kesken pyynnön → pyyntö perutaan, waitingEnd heti | — | kerran per sulku; muiden kanavien haut jatkuvat | ratkaistu v1744: chatClose ja waitingEnd samassa hetkessä, vanha vastaus tai finally ei koske uuteen kysymykseen | lepo | — | — | K (v1744) | Kysy hidas kysymys, sulje chat, kysy uusi → vanha tulos ei näy (tests: 7 peruutustestiä) |
 | `chat.linkki.matkakirja` | Vastauksen linkki | js/pollo.js:4643 `sidoLinkki` → 4152 `avaaKohde` | napautus → kohde aukeaa | `utelias` (0,4) | kerran per napautus | chat sulkeutuu; chatClose ehtii päälle | lepo | katse linkkiin | mobiilissa vie pois chatista | D | Kysy nähtävyydestä, napauta alleviivausta |
 | `chat.vastaus.kuva` | Vastauksen kuva | js/pollo.js:4328/4475, popup 4212 | kuva latautuu vastaukseen | `utelias` (0,4) | kerran per kuva | sama sääntö kuin linkillä | lepo | katse kuvaan | popup mobiilissa koko leveys | D | Kysy kuvallinen kysymys |
 | `chat.paikka.kartalla` | Kartta + chat | js/pollo.js:5426 `naytaPaikkaKartalla`, 5443 paikkarivi | kysymys tunnistaa paikan → kamera | `utelias` (0,5) | kerran per kysymys | kilpailee odotuseleen kanssa | odotukseen | katse karttaan | — | D | Kysy "Missä Ateena on?" |
@@ -316,9 +316,9 @@ pätevät vasta mainin kanssa.
 | `mikrofoni.alku` | Sanelu | js/pollo.js:5776 `merkitseMikki` → `microphone`; natiivi 5829 | napautus → listen | `jannitys` (0,4) | kerran per sanelu | ei toistu osittaisista | lepo | katse pelaajaan | iOS-sanelupalkki muuttaa viewportin | K | Napauta mikkiä ja puhu |
 | `mikrofoni.kuuntelu` | Tilarivi | js/pollo.js:5971 käynnistys, 5947 `onaudiostart`, 5852 sanelu-alkoi, 5938 `onresult` | "Käynnistän…" → "Kuuntelen…" → teksti | — | perusteltu hiljaisuus: pulu ei elehdi puhujan päälle; `mikrofoni.alku` kattaa | — | — | katse jää pelaajaan | — | D | Napauta mikkiä ja seuraa tilariviä |
 | `mikrofoni.loppu` | Sanelu | js/pollo.js:5953 `onend` → 6067 `lopetaSanelu`; 5904/2188 ei-tuettu → kirjoitustila | lopetus → kysy | — | `chat.kysymys.lahetys` ottaa vuoron; mikitön laite ei näytä nappia | `merkitseMikki(false)` ei laukaise mitään | — | — | `oikaiseNakyma` 5761 | D | Paina "Lopeta"; aja ilman SpeechRecognitionia |
-| `mikrofoni.eikuullut` | Tilarivi | js/pollo.js:5966 / 6161 (`no-speech`), muu virhe 6178 | hiljaisuus → "En kuullut mitään" | `hammentynyt` (0,3) | kerran per yritys | — | lepo | — | — | D | Napauta mikkiä ja ole hiljaa |
-| `mikrofoni.virhe.lupa` | Tilarivi | js/pollo.js:6136 (`not-allowed`) | lupa evätty → kirjoitustila | `hammentynyt` (0,5) | kerran | vaihtaa kirjoitustilaan | lepo | — | selaimen lupakysely päällä | D | Estä mikrofonilupa selaimessa |
-| `mikrofoni.virhe.audiocapture` | Tilarivi | js/pollo.js:6144 (hiljainen uusinta 400 ms), 6165 diagnoosi | 2. epäonnistuminen → "Mikrofonia ei löytynyt (…)" | `hammentynyt` (0,45) | vain toisella kerralla, ei uusinnasta | ensimmäinen yritys hiljainen | lepo | — | iOS-erikoistapaus | D | Varaa mikki toiselle sovellukselle |
+| `mikrofoni.eikuullut` | Tilarivi | js/pollo.js:5966 / 6161 (`no-speech`), muu virhe 6178 | hiljaisuus → "En kuullut mitään" | hammentynyt (0,3) | kerran per yritys | — | lepo | — | — | K/T (v1745) | Napauta mikkiä ja ole hiljaa |
+| `mikrofoni.virhe.lupa` | Tilarivi | js/pollo.js:6136 (`not-allowed`) | lupa evätty → kirjoitustila | hammentynyt (0,5) | kerran | vaihtaa kirjoitustilaan | lepo | — | selaimen lupakysely päällä | K/T (v1745) | Estä mikrofonilupa selaimessa |
+| `mikrofoni.virhe.audiocapture` | Tilarivi | js/pollo.js:6144 (hiljainen uusinta 400 ms), 6165 diagnoosi | 2. epäonnistuminen → "Mikrofonia ei löytynyt (…)" | hammentynyt (0,45) | vain toisella kerralla, ei uusinnasta | ensimmäinen yritys hiljainen | lepo | — | iOS-erikoistapaus | K/T (v1745) | Varaa mikki toiselle sovellukselle |
 | `kupla.vihje` / `kupla.lisavihje` | Kartta, chat kiinni | js/pollo.js:2340 `naytaVihje`, 2414 lisävihje → 2969 `kasvoEleet.kupla` | kupla ilmestyy → repliikin ele | `utelias` (0,4) | kerran per kupla | odotusrivi estää (js/livia-eleet.js:205) | lepo | — | linssi estää kokonaan | K | Jätä valinta tekemättä, odota vihjettä |
 | `kupla.vihje.valikko` | Hampurilaisnappi | js/pollo.js:2374 (pinon ohi) | kupla ylös | `utelias` (0,4) | ei kulje `lisaaPinoon` → EI elettä | tekninen puute (ks. puutelista) | — | — | — | D | Laukaise valikkovihje |
 | `kupla.saapuminen` | Kaupunki | js/pollo.js:2464 `naytaSaapumiskupla` | luennan jälkeen | `lammin` (0,5) | kerran per saapuminen | linssi jonottaa (`lykkaaLinssiin` 3176); sama hetki kuin `pulu.kommentti.alku` (B4) | lepo | — | chat auki: vain virtaan | K | Saavu uuteen kaupunkiin |
@@ -619,7 +619,7 @@ laukaisematta, ei siirretä seuraavaan rakoon.
 | 4 | `pulu.kommentti.alku` vs. `etsiaarre.nappi.nousu` vs. `pakka.nousu` (sama koukku js/fokusvirta.js:1160–1181) | `pulu.kommentti.alku`. Pakka ja nappi ajastetaan ensimmäisen kuplan jälkeen tai jätetään tagittomiksi |
 | 5 | Luennan loppu vs. `luentakuva.pienennys.luennanloppu` vs. kortin palautuksen peruutus | Hiljaisuus — kaikki kolme ovat teknisiä; tunne kuuluu vasta kommentille |
 | 6 | `pakka.nousu` vs. luennan pienennyskello | Pakka (js/fokusvirta.js:2625 `puluCamPakassa`); kartan liike kutistaa molemmat yhdessä |
-| 7 | `kortti.nosto.avaus` vs. käynnissä oleva luenta | Kortti voittaa yhden kerran (pulu siirtyy kortin viereen), sen jälkeen palataan kuunteluun |
+| 7 | `kortti.nosto.avaus` vs. käynnissä oleva luenta | Toteutettu v1747: kortin avausele kerran, sen jälkeen yhä soiva lukija jatkaa kuuntelua avoimen kortin vieressä. Alkuperäinen: Kortti voittaa yhden kerran (pulu siirtyy kortin viereen), sen jälkeen palataan kuunteluun |
 | 8 | `matkakirja.aarremerkinta.avaus` vs. `pulu.kommentti.alku` | Aarremerkintä (isoisän suuri hetki) |
 | 9 | Linssi vs. kaikki kartan tilanteet | Linssi. `linssiEstaa` sulkee nostokortit ja pysäyttää kommentin kellon |
 | 10 | Kaupungista lähtö vs. mikä tahansa kesken oleva ketju | Lähtö (`vaiennaLivianKaupunkipuhe`, js/fokusvirta.js:858) |
@@ -629,7 +629,7 @@ laukaisematta, ei siirretä seuraavaan rakoon.
 | 14 | `lehti.nosto.syvennys` ja `lehti.kartta.suurennus` vs. `kortti.nosto.avaus` | Nostotila (B6) — C ei saa kytkeä toista reaktiota samaan korttiin |
 | 15 | Puhe vs. `chat.avaus` / `chat.sulku` / `chat.odotus.*` / `chat.vastaus.valmis` | Puhe (js/livia-eleet.js:196 ja :126) |
 | 16 | Odotus vs. muut chat-tilanteet | Odotus (js/livia-eleet.js:140 pudottaa kaiken kun `odotukset.size > 0`) |
-| 17 | `chat.peruutus`: `chat.sulku` vs. käynnissä oleva odotus | **Ratkaisematon ristiriita** — vaatii peruutuksen (puutelista T3). Toistaiseksi sulku voittaa eleessä, odotus jää päälle tilassa |
+| 17 | `chat.peruutus`: `chat.sulku` vs. käynnissä oleva odotus | Ratkaistu v1744: sulku peruu pyynnön ja odotuksen samalla hetkellä (T3 tehty) |
 | 18 | Lehti + odotus | Odotus (`scratch`); lehden `glasses` ei laukea odotuksen päällä |
 | 19 | `kupla.saapuminen` (D) vs. `pulu.kommentti.alku` (B) vs. `tarina.kaupunki.kommentti` (E3) | Sama hetki: B kuvaa mekaniikan, E3 kantaa sisältötagin, D:n rivi on pöllökerroksen näkymä. Tagin lähde on E3 |
 | 20 | `aarre.vastaus.vaarin` vs. `kohtaaminen.<id>.vaarin` | Hahmon repliikki (`kohtaaminen.<id>.vaarin`), kun kohtaaminen on olemassa; muuten moottorin tuomio. Vain toinen |
@@ -700,10 +700,21 @@ laukaisematta, ei siirretä seuraavaan rakoon.
   Aarremerkinnän luenta, nostokortin luenta, lehden lukija ja koko
   linssikerros (js/linssipuhe.js, js/linssit/ihmisen-matka-luenta.js)
   jäävät ulos — pulu ei "kuuntele" kertojaa niissä lainkaan.
-- **T3. Chat-pyynnön peruutus puuttuu** (js/pollo.js:4050). Ei
-  AbortControlleria: suljettu chat jättää `waiting`-tilan päälle, kunnes
-  fetch päättyy. Ainoa aito tilaristiriita rekisterissä.
-- **T4. Virhepolut ovat mykkiä.** `chat.virhe` (5710), `chat.virhe.kayttoraja`
+- **T3. TEHTY v1744** (tekstisessio, PR #2217): `kysy`-kierros omistaa
+  AbortControllerin, `sulje` peruu vain oman pyynnön ja vapauttaa odotuksen
+  heti; `pyyda`/`pyydaStriimi` ottavat valinnaisen signaalin.
+- **T2 TEHTY v1747** (PR #2220): pulu kuuntelee myös lehden ja nostokorttien
+  lukijaa (erillinen lukijasoitin). Koko T2 valmis.
+- **T2 linssit v1746** (PR #2219): pulu kuuntelee myös linssien kertojaa
+  (js/linssipuhe.js, Ihmisen matkan kertomusluenta). Jäljellä: erillinen
+  lukijasoitin (aarremerkintä, nostokortit, lehden lukija).
+- **T2 osittain v1743** (PR #2216): pulun kuuntelu säilyy odotuksen ja
+  taukojen yli (livia-eleet, livia-nostotila, livia-tilanteet, luenta.js).
+  Erilliset lukija-/linssisoittimet yhä ilman kuuntelua (tekstisession jono).
+- **T4. TEHTY v1745** (tekstisessio, PR #2218): virhetagit keskitetyllä
+  error-tapahtumalla (Pollo.virhereaktio); ohittaa vain 2,8 s reaktiovälin,
+  ei puhetta, luentaa tai odotusta. Alkuperäinen puute:
+- **T4 (vanha). Virhepolut ovat mykkiä.** `chat.virhe` (5710), `chat.virhe.kayttoraja`
   (5731), `chat.vastaus.varateksti` (5628), `chat.vastaus.katkesi` (5645)
   ja mikrofonin virheet (6136, 6144/6165, 6161) eivät ilmoita mitään;
   `answer` on nimenomaan estetty näissä eikä korvaavaa tilannetta ole.
@@ -823,3 +834,6 @@ käyttäytyy täsmälleen kuten tänään (ei elettä).
 
 10.9.2026 — ensimmäinen kartoitus (Opus-parvi A–F, Fablen katselmus);
 45 kaupungin tunnetagit sisältöön v1741.
+11.9.2026 — T3 tehty (v1744, chat.peruutus K); T2 osittain (v1743,
+kuuntelu säilyy odotuksen ja taukojen yli); T4 tehty (v1745, 7 virheriviä
+K/T); T2 linssit v1746; T2 valmis v1747 (lukija). Fable.
