@@ -1,3 +1,27 @@
+## 2026-09-11 18:05 UTC — FABLE: OMISTAJAN TILAUS SINULLE — chat aukeaa saapumisen jälkeen kahdella valmiilla kysymyksellä, tervehdys vain kerran
+
+**Omistaja 11.9.2026, sanatarkasti:**
+
+> "Sen jälkeen, kun on tultu uuteen kaupunkiin ja isoisän ja pulun puheet kuultu, niin jos klikkaa pulun chatin auki, niin siellä saisi olla pari valmiiksi mietittyä kysymystä jo heti valmiina, mitä pululta voisi kysyä liittyen pulun ja isoisän teksteihin uudessa kaupungissa. Aiemmat tekstit saisivat olla vieritettynä ylös piiloon, jotta chattiboksi aukeaisi tyhjänä, niin että siinä näkyisi vain ne uudet vaihtoehtokysymykset."
+
+> "Myös se pulun ensimmäinen viesti, että kysy minulta mitä vain ja näin poispäin, niin se saisi tulla näkyviin vain ensimmäisen saapumiskaupungin kohdalla pelin alussa, mutta ei enää sen jälkeen koskaan."
+
+**Työnjako:** mekaniikka on sinun (js/pollo.js, chatin CSS), sisältö minun. Kirjasin linjauksen Raamattuun.
+
+### Sinun osuutesi (kolme asiaa)
+
+1. **Saapumisen valmiskysymykset.** Kun pelaaja on saapunut uuteen kaupunkiin ja isoisän luenta sekä pulun kommentti on kuultu, chatin avaus näyttää kaksi valmista kysymystä. Pakassa on jo koneisto tähän: `js/packs/pollo-kysymykset.js` (`POLLO_VALMISKYSYMYKSET`, avain kaupunki-id, konteksti `laatta`/`lehti`) ja `js/pollo.js` `naytaValmiit`. Ehdotan **uutta kontekstia `saapuminen`**, jossa on tasan kaksi kysymystä viiden sijaan — kirjoitan ne kaupungeittain ja ilmoitan, kun ne ovat mainissa. Huomaa lippu `VALMISKYSYMYKSET_KAYTOSSA = false` (omistaja 24.8.: *"pöllön valmiskysymykset hetkeksi pois"*): se koski laatta- ja lehtitilanteita, ja tämä uusi tilanne on omistajan uusi tilaus — tee `saapuminen`-konteksti niin, ettei vanhan lipun kääntäminen ole edellytys.
+2. **Chat aukeaa tyhjänä.** Vanhat viestit vieritetään pois näkyvistä (historia ei katoa, se on yläpuolella), jotta avautuvassa laatikossa näkyvät vain uudet kysymysvaihtoehdot.
+3. **Avausrepliikki vain kerran.** "Kysy minulta mitä vain" näkyy VAIN pelin ensimmäisessä saapumiskaupungissa. Sama muistisääntö kuin muillakin kerran-koskaan-kupilla (laitekohtainen avain), jotta se ei palaa uudella pelikerralla saman laitteen pelaajalle.
+
+### Minun osuuteni
+
+Kirjoitan jokaiselle 45 Euroopan fokusvirtakaupungille kaksi kysymystä, jotka nousevat **juuri sen kaupungin** `matkakirja.teksti`-merkinnästä ja pulun `kommentti`-repliikistä — eivät yleisiä turistikysymyksiä. Mitta enintään 70 merkkiä, pelaajan äänellä, ei visavastauksia eikä juonispoilereita (sama sääntö kuin nykyisillä valmiskysymyksillä). Ilmoitan tänne, kun kenttä on mainissa, ja kerron tarkan rakenteen — jos haluat toisen muodon (esim. kysymykset suoraan fokusvirtapakkiin `matkakirja.chatkysymykset`-kenttänä), sano ennen kuin aloitan, niin teen sen niin.
+
+Julkaisu kuten ennenkin: toimita PR ilman versionostoa, minä versioin ja julkaisen.
+
+---
+
 ## 2026-09-11 17:40 UTC — FABLE: kuvatilaus kasvoi — 45 uutta nostoa mainissa (v1776), yhteensä 323 kuvatonta
 
 Täydensin Euroopan nostojen MÄÄRÄN samalla kun te aloitatte kuvat: **v1776 (main 97f562d6)** nostaa viisitoista maata kahteenkymmeneen pääkartan nostoon. Uudet 45 nostoa ovat tarkoituksella **kuvattomia** — ne kuuluvat samaan tilaukseen kuin aiemmat 278, joten työlista on nyt **323 kuvaa**.
