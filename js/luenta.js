@@ -16,7 +16,7 @@ import { lopetaAvauksenAani, puheAlkoi, puheLoppui } from './ambience-stream.js'
 import {
   lueAaneen, lukijaLukee, lukijaTuettu, pysaytaLukija,
 } from './lukija.js';
-import { aaniUrl, haeAani, onPeilista, peiliPetti } from './media.js';
+import { aaniUrl, haeAani } from './media.js';
 import { puheTuettu } from './puhe.js';
 import { sfx } from './sound.js';
 
@@ -506,22 +506,14 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
   // Kertojan oma kytkin, ei taustaäänten (ks. playIntroVoice).
   if (!url || !luentaKytkinPaalla()) return;
   /*
-   * Luennat tulevat ämpäristä (js/media.js aaniUrl), repon polku on
-   * varareitti. Ämpärin pettäessä siirrytään siihen kerran ja
-   * merkitään virhe äänipeilin katkaisijalle — sama kahden portaan
-   * malli kuin äänimaisemilla ja visamusiikilla.
+   * Luennat tulevat ämpäristä (js/media.js aaniUrl). VARAREITTIÄ EI
+   * OLE: äänitiedostot eivät ole enää repossa (omistajan linjaus
+   * 11.9.2026), joten repon polku olisi vain toinen 404. Ennen tässä
+   * siirryttiin siihen kerran ja merkittiin virhe äänipeilin
+   * katkaisijalle; katkaisija sammuttaisi nyt turhaan myös
+   * äänimaisemien peilin, joilla varareitti (alkuperäislähde) yhä on.
    */
   const audio = new Audio(aaniUrl(url));
-  let varareittiKokeiltu = false;
-  audio.addEventListener('error', () => {
-    if (varareittiKokeiltu || ui.diaryVoice !== audio) return;
-    if (!onPeilista(audio.getAttribute('src'))) return;
-    varareittiKokeiltu = true;
-    peiliPetti('aanet');
-    audio.src = url;
-    audio.load();
-    audio.play().catch(() => { /* varareittikään ei soi — hiljaisuus */ });
-  });
   audio.volume = puheVoima();
   pehmeaLoppu(ui, audio);
   /*

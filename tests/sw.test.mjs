@@ -497,3 +497,49 @@ test('pallon laatat: oma pysyvä kori, katto, esilataus ja vanhan kansion siivou
     'sw.js:n LAATTAKANSIO ja js/pallo.js:n PALLO_LAATTAKANSIO ovat eri kansiot — '
     + 'activate siivoaisi juuri käytössä olevat laatat');
 });
+
+/*
+ * ÄÄNTEN YDINSETTI ON SW:N JA MEDIA.JS:N YHTEINEN ASIA.
+ *
+ * Repossa ei ole äänitiedostoja (omistajan linjaus 11.9.2026), joten
+ * palvelutyöntekijä esilataa ydinsetin ämpärin osoitteista omaan
+ * äänikoriinsa. Osoite lasketaan sw.js:ssä omasta vakiostaan, koska
+ * klassinen worker-skripti ei voi tuoda js/media.js:ää — ja juuri
+ * siksi juuret voisivat eriytyä huomaamatta: peli pyytäisi yhtä
+ * osoitetta ja esilataus täyttäisi toisen. Nämä testit vartioivat, että
+ * ne pysyvät samana.
+ */
+test('sw.js:n äänijuuri on sama kuin js/media.js AANI_JUURI', async () => {
+  const { AANI_JUURI, aaniUrl } = await import('../js/media.js');
+  const osuma = /^const AANI_JUURI = '([^']+)';$/m.exec(sw);
+  assert.ok(osuma, 'sw.js:stä ei löydy AANI_JUURI-vakiota');
+  assert.equal(osuma[1], `${AANI_JUURI}audio/`);
+  // Ja osoite on tasan se, jonka peli itse laskee.
+  assert.equal(`${osuma[1]}efekti-klik.mp3`, aaniUrl('assets/audio/efekti-klik.mp3'));
+});
+
+test('ydinsetti esiladataan ämpäristä eikä repon polusta', () => {
+  const lista = /const YDINAANET = \[([^\]]+)\]/.exec(sw);
+  assert.ok(lista, 'sw.js:stä ei löydy YDINAANET-listaa');
+  const nimet = [...lista[1].matchAll(/'([^']+)'/g)].map((m) => m[1]);
+  assert.ok(nimet.length >= 20, `ydinsetissä on vain ${nimet.length} ääntä`);
+  assert.ok(nimet.every((n) => /^(efekti|huudahdus)-[\w-]+\.mp3$/.test(n)),
+    'ydinsetissä on muuta kuin tehosteita ja huudahduksia');
+  // Nouto on cors-fetch omaan koriin: cache.addAll kaatuisi koko erään
+  // yhdestä virheestä, eikä opaakki vastaus kelpaisi koriin lainkaan.
+  assert.match(sw, /async function esilataaYdinaanet\(\)/);
+  assert.match(sw, /caches\.open\(AANICACHE\)/);
+  assert.match(sw, /fetch\(osoite, \{ mode: 'cors' \}\)/);
+  // Asennus ei saa kaatua ydinsettiin: se on nopeutta varten.
+  assert.match(sw, /await esilataaYdinaanet\(\)\.catch\(\(\) => \{\}\);/);
+  // Eikä yksikään äänitiedosto saa palata SHELL-listalle.
+  assert.deepEqual(SHELL.filter((p) => /\.(mp3|wav|ogg|m4a)$/i.test(p)), [],
+    'SHELLissä on äänitiedostoja — ne eivät ole enää repossa');
+});
+
+test('ämpärin audio/-pyynnöt palvellaan äänikorista ensin', () => {
+  // Kerran kuultu ääni toimii offline: fetch-käsittelijä ohjaa sekä
+  // audio/ (pelin oma) että aanet/ (peilattu maisema) äänikoriin.
+  assert.match(sw, /medianIsanta\(osoite\.hostname\) && \/\^\\\/\(\?:audio\|aanet\)\\\/\/\.test\(osoite\.pathname\)/);
+  assert.match(sw, /event\.respondWith\(aaniPeilista\(event\.request\)\)/);
+});

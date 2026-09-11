@@ -25,7 +25,7 @@
  * Avain kierrätetään ajon jälkeen — ei talteen minnekään.
  */
 
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
@@ -191,7 +191,12 @@ for (const tyo of tyot) {
     console.error(`  VAROITUS: hiljaisuuspaddaus epäonnistui (${virhe.message}) — `
       + 'kirjoitetaan ilman; mallin oma tauko on jo mitattu hiljaiseksi.');
   }
-  writeFileSync(resolve(JUURI, tyo.tiedosto), valmis);
+  const kohde = resolve(JUURI, tyo.tiedosto);
+  // assets/audio ei ole enää repossa (omistajan linjaus 11.9.2026:
+  // äänet vain ämpärissä), joten kansio voi puuttua tyhjästä
+  // checkoutista — luodaan se ennen kirjoitusta.
+  mkdirSync(dirname(kohde), { recursive: true });
+  writeFileSync(kohde, valmis);
   console.log(`  kirjoitettu (${(valmis.length / 1024).toFixed(0)} kt${valmis !== tavut ? ', häntään lisätty ~0,7 s hiljaisuutta' : ''})`);
 }
 console.log('Valmis. Kuuntele molemmat ennen julkaisua.');

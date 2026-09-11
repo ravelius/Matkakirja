@@ -116,8 +116,8 @@
  * on .gitignoressa, ks. tarkistus alla) ja viedään sieltä ämpärin
  * `aanet/`-kansioon — Raamatun linjaus "kaikki aina ämpäriin", ja
  * juuri se polku, jonka peli kokeilee ensimmäisenä. Vienti on sama
- * aws s3 cp -komento ja samat neljä salaisuutta kuin
- * .github/workflows/vie-aanet.yml:ssä ja peilaa.yml:ssä.
+ * aws s3 cp -komento ja samat neljä salaisuutta kuin muissakin
+ * ääniajoissa ja .github/workflows/peilaa.yml:ssä.
  *
  * API-avain luetaan vain ympäristöstä (GOOGLE_API_KEY Lyrialle,
  * ELEVEN_API_KEY vertailumoottorille) eikä sitä
@@ -698,7 +698,7 @@ function tarkista(kohde, raita) {
   };
 }
 
-/** Vie valmis raita ämpärin aanet/-kansioon (sama komento kuin vie-aanet.yml). */
+/** Vie valmis raita ämpärin aanet/-kansioon (sama komento kuin muissakin ääniajoissa). */
 function vieAmpariin(kohde, nimi) {
   const tili = process.env.R2_ACCOUNT_ID;
   const ampari = process.env.R2_BUCKET;

@@ -63,7 +63,7 @@
 #
 # SALAISUUDET. Ehdokashaku tarvitsee vain Freesoundin avaimen.
 # Pulu-tehosteet tarvitsee sen LISÄKSI neljä R2-salaisuutta (samat kuin
-# vie-aanet.yml ja generoi-tehosteet.yml):
+# generoi-tehosteet.yml ja muut ääniajot):
 #   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
 # Jos jokin puuttuu, ajo kertoo sen nimeltä ennen kuin mitään haetaan.
 
@@ -137,7 +137,7 @@ jobs:
       FREESOUND_TOKEN: ${{ secrets.FREESOUND_TOKEN }}
       FREESOUND: ${{ secrets.FREESOUND }}
       # Vienti on työkalun sisällä, mutta salaisuudet tulevat tästä —
-      # samat nimet ja sama endpoint-tyyli kuin vie-aanet.yml:ssä.
+      # samat nimet ja sama endpoint-tyyli kuin muissakin ääniajoissa.
       AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: auto

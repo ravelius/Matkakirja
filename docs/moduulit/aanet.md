@@ -187,9 +187,9 @@ node tools/generoi-musiikki.mjs kaupungit --kuiva
 node tools/generoi-musiikki.mjs ateena --moottori lyria
 ```
 
-Vienti kulkee kuten paletilla: ajo committoi mp3:n haaralle
-`claude/musiikki-<ajonumero>`, ja mergen jälkeen `vie-aanet.yml` vie sen
-ämpärin `audio/`-kansioon. Työhuoneen Musiikki-lehden **Kaupunkiraidat**-
+Vienti kulkee kuten paletilla: ajo vie mp3:n suoraan ämpärin
+`audio/`-kansioon ja liittää sen ajon artefaktiksi kuuntelua varten
+(mp3:ia ei committoida). Työhuoneen Musiikki-lehden **Kaupunkiraidat**-
 osasto (Paletti-sivu) kertoo, onko raita jo ämpärissä, ja soittaa sen.
 
 ## Musiikki kohtauksittain — inventaario (5.9.2026 yö)
@@ -297,9 +297,9 @@ node tools/generoi-musiikki.mjs alueet --kuiva
 node tools/generoi-musiikki.mjs tilat --kuiva
 ```
 
-Vienti kulkee kuten paletilla: ajo committoi mp3:t haaralle
-`claude/musiikki-<ajonumero>`, ja mergen jälkeen `vie-aanet.yml` vie ne
-ämpärin `audio/`-kansioon. Työhuoneen Musiikki-lehden osastot
+Vienti kulkee kuten paletilla: ajo vie mp3:t suoraan ämpärin
+`audio/`-kansioon ja liittää ne ajon artefaktiksi kuuntelua varten
+(mp3:ia ei committoida). Työhuoneen Musiikki-lehden osastot
 **Alueraidat** ja **Näkymien raidat** (Paletti-sivu) lukevat rivit
 pelin omista tauluista, joten uusi raita näkyy siellä ilman muutoksia.
 
@@ -431,18 +431,38 @@ valikon Musiikki-kytkin pois → äänimaiseman nauha etenee ja taso pysyy
 yli nollan, kytkin päälle → raita palaa) ja
 `tools/savuke-etusivun-aani.mjs` (valikossa on kolme kytkintä).
 
-## Vienti
+## Vienti ja jakelu
 
-1. Ensisijainen: raita ämpärin `aanet/`-kansioon (ei mediaa repoon,
-   Raamatun "kaikki aina ämpäriin").
-2. Vaihtoehto: `assets/audio/`-kansioon, jolloin
-   `.github/workflows/vie-aanet.yml` vie sen ämpärin `audio/`-kansioon.
-   Peli osaa molemmat polut.
+**EI ÄÄNITIEDOSTOJA REPOSSA (omistajan linjaus 11.9.2026, sanatarkasti:
+*"repossa ei saa olla äänitiedostoja, kaikki vain ämpärissä"*).**
+`assets/audio` on .gitignoressa: se on generointityökalujen paikallinen
+työpöytä, ei varasto. Varasto on ämpäri `media.matkakirja.app`.
 
-Järjestys koskee **siirtymä- ja linssiraitoja**: juuri niille peli
-kokeilee ensin `aanet/`-polkua. Musiikkipaletti kulkee aina kohdan 2
-kautta, koska sen soittokohdat pyytävät `assets/audio/`-polkua eivätkä
-kysy `aanet/`-kansiota lainkaan (ks. Generointi → Musiikkipaletti).
+- **Peli hakee kaikki omat äänensä ämpäristä.** `js/media.js aaniUrl`
+  kääntää tunnisteen `assets/audio/x.mp3` osoitteeksi
+  `<ämpäri>/audio/x.mp3` — poikkeuksetta ja peilin katkaisijasta
+  riippumatta. Repon polkua ei ole, joten varareittiä siihen ei ole.
+- **Ydinsetti esiladataan ämpäristä.** Tehosteet ja huudahdukset
+  (`sw.js` `YDINAANET`) noudetaan asennuksessa `mode: 'cors'`
+  -pyynnöillä äänikoriin `AANICACHE`. Yksikin epäonnistunut nouto ei
+  kaada asennusta: ydinsetti on nopeutta varten, ei asennuksen ehto.
+- **Generointi vie suoraan ämpäriin.** Työkalu kirjoittaa paikalliseen
+  `assets/audio`-kansioon ja Actions-ajo (`generoi-luennat.yml`,
+  `generoi-musiikki.yml`) vie tuotoksen `aws s3 sync` -komennolla
+  ämpärin `audio/`-kansioon. mp3:ia ei committoida mihinkään.
+- **Kuuntelu tapahtuu ajon artefaktista.** Sama tuotos liitetään ajoon
+  `actions/upload-artifact` -liitteenä (säilytys 14 vrk).
+- **Kuuntelusääntö.** UUSI tiedosto ei kuulu pelissä ennen kuin pelidata
+  viittaa siihen, joten sen voi viedä huoletta. SAMANNIMISEN äänitteen
+  uusinta sen sijaan korvaa ämpärin tiedoston heti — siksi uusinnat
+  tehdään harkiten ja `js/media.js UUSITUT_AANET` -kyselyversio
+  nostetaan samassa PR:ssä, jossa pelidata muuttuu.
+
+Kaksi ämpärikansiota, kaksi asiaa: `aanet/` on ulkopuolelta peilattu
+äänimaisema (nimi lasketaan lähdeosoitteesta) ja `audio/` pelin oma
+äänite (nimi sama kuin tunnisteessa). Siirtymä- ja linssiraidoille peli
+kokeilee ensin `aanet/`-polkua ja vasta sitten `audio/`-polkua;
+musiikkipaletti kysyy vain `audio/`-polkua.
 
 Puuttuva raita ei aiheuta virhettä: soitto lähtee optimistina ja 404
 merkitsee lajin hiljaiseksi. Kehittäjävalikon rivi "siirtymämusiikki"
@@ -493,8 +513,8 @@ jää viemättä.
 
 Tiedostot kirjoitetaan `media/`-kansioon (.gitignoressa, tarkistetaan
 ennen ensimmäistäkään maksullista kutsua) ja viedään sieltä ämpärin
-`aanet/`-kansioon samalla `aws s3 cp` -komennolla kuin
-`vie-aanet.yml`. Lopuksi ajo tulostaa julkiset osoitteet ja
+`aanet/`-kansioon samalla `aws s3 cp` -komennolla kuin muutkin
+ääniajot. Lopuksi ajo tulostaa julkiset osoitteet ja
 HEAD-tarkistuksen. Raakatuotos jää talteen kansioon
 `media/siirtymamusiikki-raaka/`, joten loopin voi leikata uudelleen
 ilman uutta kutsua.
@@ -553,11 +573,11 @@ promptissa, ja kelvottoman paletin raidan päättää kuuntelija PR:ssä
 eikä mittari. Jos sauma joskus naksahtaa, oikea korjaus on ajaa raita
 saman leikkurin läpi — ei rakentaa toista.
 
-**Vienti kulkee repon kautta, ei suoraan ämpäriin.** Raita
-kirjoitetaan `assets/audio/`-kansioon, ajo committoi sen haaralle
-`claude/musiikki-<ajonumero>`, ja kun PR on mainissa,
-`.github/workflows/vie-aanet.yml` vie tiedoston ämpärin
-`audio/`-kansioon. Juuri sitä polkua peli hakee: `js/media.js`
+**Vienti menee suoraan ämpäriin, ei repon kautta.** Raita
+kirjoitetaan paikalliseen `assets/audio/`-kansioon (.gitignore), ja
+`.github/workflows/generoi-musiikki.yml` vie sen samassa ajossa ämpärin
+`audio/`-kansioon sekä liittää ajon artefaktiksi kuuntelua varten.
+Juuri sitä polkua peli hakee: `js/media.js`
 `aaniUrl` kääntää `assets/audio/x.mp3` → `<ämpäri>/audio/x.mp3`.
 Ämpärin `aanet/`-kansio olisi paletille umpikuja — yksikään paletin
 soittokohta ei kysy sitä (toisin kuin siirtymäraidat, jotka kokeilevat
@@ -736,8 +756,11 @@ hereillä.
 hiljainen ilman virhettä. Palvelutyöntekijän äänipeili (`sw.js`
 `aaniPeilista`) noutaa `mode: 'cors'` ja palauttaa CORS-vastauksen, joten
 lupa saadaan myös välimuistista — sw.js:ään ei tarvittu muutosta.
-Varapolku on repon oma `assets/audio/…` eli samaa alkuperää. Visan
-ulkopuoliselle lähteelle (Freesound) lupaa ei pyydetä.
+Varapolkua repon omaan `assets/audio/…`-kansioon EI enää ole:
+äänitiedostot eivät ole repossa (11.9.2026), joten pelin oman raidan
+ainoa lähde on ämpäri ja 404 merkitsee raidan puuttuvaksi. Visan
+ulkopuoliselle lähteelle (Freesound) CORS-lupaa ei pyydetä, ja sille
+alkuperäislähde on yhä varareitti.
 
 ### Käyrä ja oletus
 
@@ -884,9 +907,11 @@ väistön: puhujalaskuri nostaa ambienssin väistön, ja koska väistö menee
 myös ulkoisille väistäjille, **linssin oma raita hiljenee samalla**
 (`js/siirtymamusiikki.js lajinVaisto` sivuuttaa vain oman
 linssihiljennyksensä, ei puheen väistöä). Soitin on oma eikä
-`playDiaryVoice`, koska tuo yrittää peilin pettäessä repon
-`assets/audio`-varareittiä ja kutsuisi `peiliPetti('aanet')` — puuttuva
-luenta kaataisi äänipeilin katkaisijan koko istunnoksi. Puuttuva
+`playDiaryVoice`, koska tuo oli sidottu matkakirjakortin omaan
+soittimeen ja väistöön. (Vanha perustelu — `playDiaryVoice` yritti
+peilin pettäessä repon `assets/audio`-varareittiä ja kutsui
+`peiliPetti('aanet')` — ei enää päde: varareitti poistettiin
+11.9.2026, kun äänitiedostot poistuivat reposta.) Puuttuva
 tiedosto (404) on hiljainen, ei virhe.
 
 **Generointi.** `tools/generoi-linssiluennat.mjs`, sama resepti kuin
@@ -981,7 +1006,7 @@ Ajo tehdään **työnkulussa** `.github/workflows/aanihaku.yml`
 liittää keskusteluun. Salaisuudet: `FREESOUND_API` (tai jokin
 vaihtoehtoinen kirjoitusasu) **ja** neljä R2-salaisuutta
 `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`,
-`R2_BUCKET` — samat kuin `vie-aanet.yml`:llä. Ajo tarkistaa ne nimeltä
+`R2_BUCKET` — samat kuin muillakin ääniajoilla. Ajo tarkistaa ne nimeltä
 ennen kuin mitään haetaan. Uusia salaisuuksia ei tarvita.
 
 Kone valitsee jokaiselle tunnukselle **yhden** osuman kolmesta

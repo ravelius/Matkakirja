@@ -18,7 +18,7 @@
  * tehdään ajon jälkeen käsin, kun tiedostot on tarkistettu.
  */
 
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -75,6 +75,10 @@ async function generoi(teksti, polku, nimi) {
     process.exit(1);
   }
   const data = Buffer.from(await vastaus.arrayBuffer());
+  // assets/audio ei ole enää repossa (omistajan linjaus 11.9.2026:
+  // äänet vain ämpärissä), joten kansio voi puuttua tyhjästä
+  // checkoutista — luodaan se ennen kirjoitusta.
+  mkdirSync(dirname(polku), { recursive: true });
   writeFileSync(polku, data);
   console.log(`${nimi}: ${(data.length / 1024).toFixed(0)} kt → ${polku}`);
 }

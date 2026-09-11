@@ -30,8 +30,8 @@
 # tarvitsee sen, jotta pulu voi reagoida luennan SISÄLLÄ oikeassa
 # sanassa (js/luentareaktiot.js; Raamattu PULU REAGOI TEKSTIN SISALLA).
 # Tiedosto viedään ämpäriin heti työkalusta oikealla sisältötyypillä
-# (application/json) — vie-aanet.yml veisi koko assets/audio-kansion
-# audio/mpeg-tyyppisenä, joten aikaleimat asuvat omassa kansiossaan.
+# (application/json), ja se — toisin kuin mp3:t — committoidaan yhä
+# haaralle: aikaleimat ovat pelidataa, eivät äänitteitä.
 #
 # SYÖTE ON YHÄ PELKKIÄ KAUPUNKIAVAIMIA ("madrid wien" tai
 # "madrid,wien" — työkalu erottelee kummallakin; pilkullinen lista
@@ -53,12 +53,22 @@
 # `aanite`-kenttä ja työkalun kohdetiedosto eivät täsmää. Avainta ei
 # tarvita. Kannattaa ajaa ennen oikeaa ajoa, kun kaupunkilista on uusi.
 #
-# TUOTOS EI MENE SUORAAN MAINIIN. Ajo committoi uudet mp3:t omalle
-# haaralleen (claude/luennat-<ajonumero>) ja jättää ne PR:ää varten:
-# luennat KUUNNELLAAN ennen julkaisua (generoi-avaus.mjs:n oma sääntö
-# "Kuuntele molemmat ennen julkaisua"), ja mp3 assets/audio-kansiossa
-# vaatii versionoston harkintoineen (sw-esilataus vai R2). Kun PR
-# mergetään, vie-aanet.yml vie tiedostot R2:een automaattisesti.
+# MP3:T MENEVÄT SUORAAN ÄMPÄRIIN, EIVÄT REPOON (omistajan linjaus
+# 11.9.2026: *"repossa ei saa olla äänitiedostoja, kaikki vain
+# ämpärissä"*). Ajo äänittää, vie tuotoksen ämpärin `audio/`-kansioon ja
+# liittää samat tiedostot ajon artefaktiksi — luennat KUUNNELLAAN siitä
+# artefaktista (generoi-avaus.mjs:n oma sääntö "Kuuntele molemmat ennen
+# julkaisua"), ei PR:stä. Aikaleimat (assets/aikaleimat) committoidaan
+# haaralle kuten ennenkin.
+#
+# KUUNTELUSÄÄNTÖ. UUSI äänite ei kuulu pelissä ennen kuin pelidata
+# viittaa siihen (fokusvirran `aanite`-kenttä tai saapumisen luenta),
+# joten sen voi viedä huoletta ja kuunnella rauhassa. SAMANNIMISEN
+# luennan uusinta sen sijaan korvaa ämpärin tiedoston heti ja kuuluu
+# pelaajille — siksi uusinnat tehdään harkiten, ja niiden yhteydessä
+# nostetaan js/media.js UUSITUT_AANET -kyselyversio samassa PR:ssä,
+# jossa pelidata muuttuu (muuten selaimen, reunan ja service workerin
+# välimuistit soittavat vanhaa luentaa viikkoja).
 #
 # Salaisuus on tämän repon Actions-asetuksissa: ELEVEN_API_KEY.
 # Avain ei koskaan tulostu lokiin (työkalut eivät tulosta sitä, eikä
@@ -171,7 +181,8 @@ jobs:
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
           KAUPUNGIT: ${{ inputs.kaupungit }}
-          # Samat nimet ja sama endpoint-tyyli kuin vie-aanet.yml:ssä.
+          # Samat nimet ja sama endpoint-tyyli kuin muissakin
+          # ääniajoissa (generoi-tehosteet.yml, generoi-pulu.yml).
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: auto
@@ -203,17 +214,60 @@ jobs:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
         run: node tools/generoi-kaari.mjs --mykistetyt ${{ inputs.kaaret }}
 
-      - name: Committoi tuotos omalle haaralleen
+      # Kuuntelukopio ajon liitteenä. Tämä on ENNEN vientiä: jos vienti
+      # kaatuu, luennat ovat silti kuunneltavissa eikä kallista
+      # äänitystä tarvitse toistaa.
+      - name: Liitä luennat ajoon kuuntelua varten
+        if: ${{ inputs.toiminto == 'generoi' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: luennat-${{ github.run_number }}
+          path: assets/audio/*.mp3
+          retention-days: 14
+          if-no-files-found: error
+
+      - name: Vie luennat ämpäriin
+        if: ${{ inputs.toiminto == 'generoi' }}
         env:
-          TOIMINTO: ${{ inputs.toiminto }}
+          # Samat nimet ja sama endpoint-tyyli kuin muissakin
+          # ääniajoissa (generoi-tehosteet.yml, generoi-pulu.yml).
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita, jotka
+          # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
         run: |
           set -euo pipefail
-          # Kohdistus- ja sidonta-ajo tuottavat JSONia, ei äänitteitä.
-          if [ "${TOIMINTO:-generoi}" = "kohdista" ] || [ "${TOIMINTO:-generoi}" = "sido" ]; then
-            git add assets/aikaleimat
-          else
-            git add assets/audio
+          # Kansio on tyhjä checkoutissa (assets/audio ei ole repossa),
+          # joten jokainen täällä oleva mp3 on tämän ajon tuotos. Tyhjä
+          # kansio menisi sync-komennosta läpi vihreänä eikä veisi
+          # mitään — ja vihreä ajo, joka ei vienyt mitään, on pahempi
+          # kuin punainen.
+          maara=$(find assets/audio -type f -name '*.mp3' | wc -l)
+          echo "Vietäviä luentoja: $maara"
+          if [ "$maara" -eq 0 ]; then
+            echo "::error::Yhtään luentaa ei syntynyt — ei vietävää."
+            exit 1
           fi
+          # SAMANNIMINEN LUENTA KORVAUTUU ÄMPÄRISSÄ HETI, ks. ajon alun
+          # kuuntelusääntö: uusi nimi on vaaraton, uusinta ei.
+          aws s3 sync assets/audio \
+            "s3://${{ secrets.R2_BUCKET }}/audio" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --no-progress \
+            --content-type audio/mpeg \
+            --cache-control "public, max-age=2592000"
+          echo "Valmis. Luennat ovat ämpärin audio/-kansiossa ja ajon artefaktissa."
+
+      # Aikaleimat ovat pelidataa eivätkä äänitteitä: ne committoidaan
+      # haaralle kuten ennenkin, ja mp3:t eivät koskaan.
+      - name: Committoi aikaleimat omalle haaralleen
+        if: ${{ inputs.toiminto == 'kohdista' || inputs.toiminto == 'sido' }}
+        run: |
+          set -euo pipefail
+          git add assets/aikaleimat
           if git diff --cached --quiet; then
             echo "::error::Yhtään tiedostoa ei syntynyt eikä muuttunut."
             exit 1
@@ -222,6 +276,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           haara="claude/luennat-${{ github.run_number }}"
           git checkout -b "$haara"
-          git commit -m "${{ inputs.toiminto == 'kohdista' && 'Aikaleimat: ' || inputs.toiminto == 'sido' && 'Aikaleimat (sidonta): ' || 'Luennat: ' }}${{ inputs.avaus == true && 'avaus ' || '' }}${{ inputs.kaupungit }}${{ inputs.kaaret != '' && ' kaaret: ' || '' }}${{ inputs.kaaret }}"
+          git commit -m "${{ inputs.toiminto == 'kohdista' && 'Aikaleimat: ' || 'Aikaleimat (sidonta): ' }}${{ inputs.kaupungit }}"
           git push -u origin "$haara"
-          echo "Valmis. Haara: $haara — kuuntele luennat ja tee PR."
+          echo "Valmis. Haara: $haara — tee PR."

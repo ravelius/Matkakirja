@@ -48,7 +48,7 @@
  * allowlist" -virhe tulee omasta putkesta vaikka verkko on auki.
  */
 
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -225,7 +225,15 @@ for (const tyo of tyot) {
   }
   const polku = resolve(JUURI, tyo.polku);
   const data = Buffer.from(await vastaus.arrayBuffer());
+  // assets/audio ei ole enää repossa (omistajan linjaus 11.9.2026:
+  // äänet vain ämpärissä), joten kansio voi puuttua tyhjästä
+  // checkoutista — luodaan se ennen kirjoitusta.
+  mkdirSync(dirname(polku), { recursive: true });
   writeFileSync(polku, data);
   console.log(`${id}: ${(data.length / 1024).toFixed(0)} kt → ${polku}`);
 }
-console.log(`Valmis, ${tyot.length} tiedostoa. Muista: tiedostot repoon ja kuuntele ne ennen julkaisua.`);
+// Tiedostot jäävät paikalliseen assets/audio-kansioon (ei repoon,
+// linjaus 11.9.2026): Actions-ajo vie ne ämpäriin ja liittää ajon
+// artefaktiksi, josta luennat kuunnellaan.
+console.log(`Valmis, ${tyot.length} tiedostoa paikallisessa assets/audio-kansiossa.`);
+console.log('Kuuntele ne ennen julkaisua — ämpäriin vienti hoituu Actions-ajossa.');

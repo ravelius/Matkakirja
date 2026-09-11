@@ -65,7 +65,7 @@
  * (.gitignoressa, tarkistetaan ennen ensimmäistäkään maksullista
  * kutsua) ja viedään ämpärin `aanet/tehosteet/`-kansioon samalla
  * `aws s3 cp` -komennolla ja samoilla neljällä salaisuudella kuin
- * musiikkityökalu ja vie-aanet.yml. Peli hakee tasan sen polun
+ * musiikkityökalu. Peli hakee tasan sen polun
  * (js/tehosteet.js TEHOSTE_JUURI).
  *
  * API-avain luetaan VAIN ympäristöstä (ELEVEN_API_KEY) eikä sitä
@@ -384,7 +384,7 @@ function tarkista(kohde, tehoste) {
   };
 }
 
-/** Vie valmis tehoste ämpäriin (sama komento kuin vie-aanet.yml). */
+/** Vie valmis tehoste ämpäriin (sama komento kuin muissakin ääniajoissa). */
 function vieAmpariin(kohde, nimi) {
   const tili = process.env.R2_ACCOUNT_ID;
   const ampari = process.env.R2_BUCKET;

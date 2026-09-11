@@ -8,6 +8,7 @@
 import http from 'node:http';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
+import { aaniUrl } from '../js/media.js';
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -15,17 +16,41 @@ const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('..', import.meta.url).pathname;
 const KANSIO = join(JUURI, 'assets/audio');
-const oletukset = readdirSync(KANSIO)
+
+/*
+ * ÄÄNITIEDOSTOT EIVÄT OLE REPOSSA (omistajan linjaus 11.9.2026): kansio
+ * assets/audio on paikallinen työpöytä (.gitignore) ja voi hyvin puuttua
+ * kokonaan. Mittaus ei saa kaatua siihen hiljaa, joten puuttuva kansio
+ * on tyhjä lista ja nimeltä pyydetty tiedosto haetaan ämpäristä.
+ */
+const paikalliset = existsSync(KANSIO) ? readdirSync(KANSIO) : [];
+const oletukset = paikalliset
   .filter((n) => /^(musa-|siirtyma-|linssi-|intro-puhe|huudahdus-)/.test(n) && n.endsWith('.mp3'));
 const tiedostot = process.argv.slice(2).length ? process.argv.slice(2) : oletukset;
+if (!tiedostot.length) {
+  console.error(`Ei mitattavaa: ${KANSIO} on tyhjä tai puuttuu, eikä tiedostoja annettu.`);
+  console.error('Anna nimet argumentteina — ne haetaan ämpäristä, jos paikallista kopiota ei ole.');
+  process.exit(1);
+}
 
 /* Ulkoiset osoitteet haetaan Nodella ja tarjoillaan omasta juuresta:
- * selaimen fetch ei pääse peiliin CORSin yli. */
+ * selaimen fetch ei pääse peiliin CORSin yli. Sama reitti kelpaa pelin
+ * omalle äänitteelle, jota ei ole levyllä: sen ämpäriosoite lasketaan
+ * samalla säännöllä kuin pelissä (js/media.js aaniUrl), jotta työkalu
+ * mittaa tasan sen tiedoston, jonka pelaajakin kuulee. */
 const ulkoiset = new Map();
-for (const [i, nimi] of tiedostot.entries()) {
-  if (!/^https?:/.test(nimi)) continue;
+for (const [i, rivi] of tiedostot.entries()) {
+  const nimi = typeof rivi === 'string' ? rivi : rivi.nimi;
+  const paikallinen = !/^https?:/.test(nimi) && existsSync(join(KANSIO, nimi));
+  if (paikallinen) continue;
+  const lahde = /^https?:/.test(nimi) ? nimi : aaniUrl(`assets/audio/${nimi}`);
   const polku = `/ulko/${i}.mp3`;
-  ulkoiset.set(polku, Buffer.from(await (await fetch(nimi)).arrayBuffer()));
+  const vastaus = await fetch(lahde);
+  if (!vastaus.ok) {
+    console.error(`${nimi}: ei löydy levyltä eikä ämpäristä (HTTP ${vastaus.status}) — ${lahde}`);
+    process.exit(1);
+  }
+  ulkoiset.set(polku, Buffer.from(await vastaus.arrayBuffer()));
   tiedostot[i] = { osoite: polku, nimi };
 }
 
