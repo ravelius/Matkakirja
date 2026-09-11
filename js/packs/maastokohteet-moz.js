@@ -134,7 +134,7 @@ export const MAASTOKOHTEET_MOZ = [
   {
     id: 'gorongosa',
     nimi: 'Gorongosa',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Kenelle puisto alun perin perustettiin?',
       'Mitä sisällissota teki eläinkannoille?',

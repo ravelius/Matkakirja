@@ -497,7 +497,7 @@ export const MAASTOKOHTEET_CZE = [
   {
     id: 'moravskykras',
     nimi: 'Moravský kras',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miten Macochan kuilu syntyi?',
       'Mihin Punkva-joki katoaa?',

@@ -64,7 +64,7 @@ export const FOKUSKOHTEET_SYR = [
      */
     id: 'belin-temppeli',
     nimi: 'Belin temppeli',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi temppelin piha oli näin suuri?',

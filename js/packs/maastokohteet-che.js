@@ -536,7 +536,7 @@ export const MAASTOKOHTEET_CHE = [
     id: 'reininputous',
     nimi: 'Reininputous',
     nimio: 'Rheinfall',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Kuinka paljon virtaama vaihtelee vuoden mittaan?',
       'Miksi putouksen keskellä oleva kallio ei kulu?',

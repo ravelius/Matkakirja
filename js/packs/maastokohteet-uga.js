@@ -152,7 +152,7 @@ export const MAASTOKOHTEET_UGA = [
   {
     id: 'murchison',
     nimi: 'Murchisonin putoukset',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Kuinka kapeasta raosta Niili puristuu?',
       'Miksi putouksia kutsutaan myös Kabalegan putouksiksi?',
@@ -262,7 +262,7 @@ export const MAASTOKOHTEET_UGA = [
   {
     id: 'kidepo',
     nimi: 'Kidepon laakso',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Miksi Kidepon kaksi laaksoa ovat erilaisia?',
       'Mikä on Kanangorok?',

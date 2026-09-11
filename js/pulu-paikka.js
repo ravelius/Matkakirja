@@ -129,6 +129,13 @@ export const PAIKAN_LEVEYDET = {
   kauppa: 320,
   merenkulku: 320,
   ruoka: 320,
+  /*
+   * URHEILU tuli tauluun 11.9.2026, kun yleistyyppi `muu` purettiin
+   * (202 riviä luokiteltiin oikeisiin tyyppeihinsä). Areena, stadion
+   * ja painikenttä ovat yksittäisiä paikkoja kuten muutkin tämän
+   * lohkon tyypit, joten leveys on sama kohteen lähikuva.
+   */
+  urheilu: 320,
   // Laajat muodot.
   vuori: 700,
   jarvi: 700,

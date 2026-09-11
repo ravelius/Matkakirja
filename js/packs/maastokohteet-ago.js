@@ -187,7 +187,7 @@ export const MAASTOKOHTEET_AGO = [
     id: 'kalandulan-putoukset',
     nimi: 'Kalandulan putoukset',
     nimio: 'Kalandula',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Missä joessa putoukset ovat?',
       'Millä nimellä ne tunnettiin ennen?',

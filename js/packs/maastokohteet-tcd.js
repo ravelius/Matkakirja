@@ -134,7 +134,7 @@ export const MAASTOKOHTEET_TCD = [
   {
     id: 'gueltadarchei',
     nimi: 'Guelta d\'Archei',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä on guelta?',
       'Miten krokotiilit päätyivät keskelle Saharaa?',
@@ -160,7 +160,7 @@ export const MAASTOKOHTEET_TCD = [
   {
     id: 'alobankaari',
     nimi: 'Aloban kaari',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miten luonnonkaari syntyy?',
       'Mikä on maailman pisin luonnonkaari?',
@@ -185,7 +185,7 @@ export const MAASTOKOHTEET_TCD = [
   {
     id: 'ounianga',
     nimi: 'Ouniangan järvet',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Miksi järvet eivät kuivu, vaikka sadetta ei tule?',
       'Mitä Yoa-järven pohjasedimentti kertoo?',
@@ -214,7 +214,7 @@ export const MAASTOKOHTEET_TCD = [
   {
     id: 'zakouma',
     nimi: 'Zakouma',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Miksi puiston norsukanta romahti?',
       'Mikä on kordofaninkirahvi?',
@@ -242,7 +242,7 @@ export const MAASTOKOHTEET_TCD = [
   {
     id: 'lakefitri',
     nimi: 'Fitri',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Mikä on Ramsar-kosteikko?',
       'Mistä Fitri saa vetensä?',
@@ -270,7 +270,7 @@ export const MAASTOKOHTEET_TCD = [
   {
     id: 'manda',
     nimi: 'Manda',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä on jättiläisseeprantilooppi?',
       'Miksi eläimet näkyvät vain kuivana kautena?',
@@ -324,7 +324,7 @@ export const MAASTOKOHTEET_TCD = [
   {
     id: 'irojarvi',
     nimi: 'Iro',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Mikä on törmäyskraatteri?',
       'Miksi järvi katoaa joka vuosi?',

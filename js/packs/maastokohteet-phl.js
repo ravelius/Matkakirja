@@ -222,7 +222,7 @@ export const MAASTOKOHTEET_PHL = [
     // Kumpuja ei lasketa vuoriksi eikä maastokiintiössä ole tilaa:
     // tyyppi 'muu' + symboli 'luonto'.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi kummut muuttuvat ruskeiksi?',
       'Mistä kummut ovat syntyneet?',
@@ -251,7 +251,7 @@ export const MAASTOKOHTEET_PHL = [
     id: 'tubbataha',
     nimi: 'Tubbataha',
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'meri',
     kysymykset: [
       'Mitä nimi Tubbataha tarkoittaa?',
       'Miten atolli on syntynyt?',
@@ -279,7 +279,7 @@ export const MAASTOKOHTEET_PHL = [
     id: 'puerto-princesan-joki',
     nimi: 'Maanalainen joki',
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Miksi luolan syvimpiin osiin ei pääse?',
       'Mitä luolasta löytyi vuonna 2010?',

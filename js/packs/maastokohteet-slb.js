@@ -172,7 +172,7 @@ export const MAASTOKOHTEET_SLB = [
   {
     id: 'tetepare',
     nimi: 'Tetepare',
-    tyyppi: 'muu',
+    tyyppi: 'saari',
     kysymykset: [
       'Miksi saari hylättiin 1800-luvun puolivälissä?',
       'Mitä uutta saaren joista on löydetty?',

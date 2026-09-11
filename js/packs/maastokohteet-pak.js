@@ -301,7 +301,7 @@ export const MAASTOKOHTEET_PAK = [
     // Ylänkö ei ole vuori-, joki- eikä meriotsakkeen kohde ja
     // maastokiintiö on jo täynnä: tyyppi 'muu' + symboli 'luonto'.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mitä nimi Deosai tarkoittaa?',
       'Minkä eläimen takia puisto perustettiin?',

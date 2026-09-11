@@ -67,7 +67,7 @@ export const MAASTOKOHTEET_ARE = [
     // Vanjärven mallin mukaan (js/packs/fokuskohteet-tur.js) — kortin
     // ylärivi näyttää silloin luokan Luonto eikä väärää otsaketta.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Keitä Liwan keitailla asui ennen öljyä?',
       'Kuinka korkeaksi dyyni voi kasvaa?',

@@ -137,7 +137,7 @@ export const MAASTOKOHTEET_AFG = [
     // tilaa: tyyppi 'muu' + symboli 'luonto' kuten maan naapuripakin
     // Araljärvellä (js/packs/maastokohteet-uzb.js).
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Mikä pitää järvien veden paikallaan?',
       'Mistä nimi Band-e Amir tulee?',

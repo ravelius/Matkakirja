@@ -212,7 +212,7 @@ export const MAASTOKOHTEET_GRL = [
   {
     id: 'gronlannin-jaatikko',
     nimi: 'Grönlannin jäätikkö',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuinka paksu jäätikkö on paksuimmillaan?',
       'Mitä jäätikön alta löytyy?',
@@ -316,7 +316,7 @@ export const MAASTOKOHTEET_GRL = [
   {
     id: 'koillis-gronlannin-kansallispuisto',
     nimi: 'Koillis-Grönlannin kansallispuisto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuinka moni maailman valtio on tätä puistoa pienempi?',
       'Milloin puisto sai nykyisen kokonsa?',

@@ -181,7 +181,7 @@ export const MAASTOKOHTEET_THA = [
   {
     id: 'khao-yai',
     nimi: 'Khao Yai',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Milloin puisto perustettiin?',
       'Mikä on puiston korkein vuori?',

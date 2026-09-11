@@ -217,7 +217,7 @@ export const MAASTOKOHTEET_NGA = [
   {
     id: 'zumarock',
     nimi: 'Zuma Rock',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mikä on inselberg?',
       'Miksi kallio on setelissä?',
@@ -278,7 +278,7 @@ export const MAASTOKOHTEET_NGA = [
   {
     id: 'yankari',
     nimi: 'Yankari',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä on lämmin lähde?',
       'Miksi puisto menetti kansallispuiston asemansa?',
@@ -306,7 +306,7 @@ export const MAASTOKOHTEET_NGA = [
   {
     id: 'kainji',
     nimi: 'Kainji',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä on tekoallas?',
       'Mitä leijonien suojelualue tarkoittaa?',

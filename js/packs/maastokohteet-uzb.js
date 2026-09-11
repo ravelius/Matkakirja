@@ -63,7 +63,7 @@ export const MAASTOKOHTEET_UZB = [
     // 'luonto' Vanjärven mallin mukaan (js/packs/fokuskohteet-tur.js)
     // — kortin ylärivi näyttää silloin luokan Luonto.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Minne kokonainen järvi voi kadota?',
       'Mitä järven paljastuneelta pohjalta löytyy?',

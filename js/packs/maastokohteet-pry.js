@@ -319,7 +319,7 @@ export const MAASTOKOHTEET_PRY = [
   {
     id: 'guairanputoukset',
     nimi: 'Guairán putoukset',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Miksi putoukset katosivat?',
       'Kuinka korkeat Guairán putoukset olivat?',

@@ -900,8 +900,10 @@ function varmistaKohdekerros(ui) {
  *      lehdellä — tämä voittaa tyyppijohdon, koska kierros on
  *      napautuksen varsinainen lupaus);
  *   3. TYYPPIJOHTO alla olevasta taulusta;
- *   4. muuten null → vanha piste (tyypit `kaupunki` ja `muu` JÄÄVÄT
- *      pisteiksi — kaupunki on paikka eikä kategoria).
+ *   4. muuten null → vanha piste. Tänne ei enää putoa yhtään
+ *      aineiston riviä: yleistyyppi `muu` purettiin 11.9.2026 (202
+ *      riviä luettiin ja luokiteltiin tämän taulun tuntemiin
+ *      tyyppeihin), ja sen paluuta vartioi tests/nostomerkit.test.mjs.
  *
  * Vihreä tuikkiva kohtaamispiste (js/fokuspiste.js) EI saa symbolia —
  * sen erilaisuus on sen merkki (Raamattu).
@@ -942,6 +944,14 @@ const KOHDE_TYYPPISYMBOLIT = {
   saari: 'luonto',
   joki: 'luonto',
   jarvi: 'luonto',
+  /*
+   * `muu` EI OLE TÄSSÄ EIKÄ TULE. Yleistyyppi oli sama hiljainen
+   * katoaminen kuin järvellä: 11.9.2026 aineistossa oli 202 `muu`-
+   * riviä, joista 98:lla ei ollut omaa `symboli`-kenttääkään, eli ne
+   * eivät piirtyneet kartalle lainkaan. Rivit luettiin yksitellen ja
+   * luokiteltiin tämän taulun tyyppeihin — `muu` ei siis kaipaa omaa
+   * symbolia vaan on poissa aineistosta, ja testi valvoo sitä.
+   */
   multimedia: 'silma',
   historia: 'historia',
   ruoka: 'ruoka',

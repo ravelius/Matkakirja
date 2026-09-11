@@ -187,7 +187,7 @@ export const MAASTOKOHTEET_VUT = [
   {
     id: 'ambrym',
     nimi: 'Ambrym',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mitä laavajärvi on?',
       'Kuka nimesi Benbow-vuoren?',
@@ -243,7 +243,7 @@ export const MAASTOKOHTEET_VUT = [
   {
     id: 'gaua',
     nimi: 'Gaua',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Mikä on Vanuatun suurin järvi?',
       'Milloin Gharat purkautui viimeksi?',
@@ -271,7 +271,7 @@ export const MAASTOKOHTEET_VUT = [
   {
     id: 'torresinsaaret',
     nimi: 'Torresin saaret',
-    tyyppi: 'muu',
+    tyyppi: 'saari',
     kysymykset: [
       'Mikä Torresin hauta on?',
       'Kuinka monta saarta ryhmään kuuluu?',
@@ -325,7 +325,7 @@ export const MAASTOKOHTEET_VUT = [
   {
     id: 'epi',
     nimi: 'Epi',
-    tyyppi: 'muu',
+    tyyppi: 'saari',
     kysymykset: [
       'Mikä eläin elää Lamen Bayn riutoilla?',
       'Miksi Epillä puhutaan niin montaa kieltä?',

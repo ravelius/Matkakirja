@@ -158,7 +158,7 @@ export const FOKUSKOHTEET_ITA = [
     nimi: 'Pompeji',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Mitä kaivauksissa on löytynyt talojen sisältä?',
       'Kaivetaanko Pompejia vielä nykyään?',
@@ -323,7 +323,7 @@ export const FOKUSKOHTEET_ITA = [
     nimi: 'Cinque Terre',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'meri',
     kysymykset: [
       'Mitä terasseilla kasvatetaan?',
       'Miten kylät ovat säilyneet ennallaan?',
@@ -538,7 +538,7 @@ export const FOKUSKOHTEET_ITA = [
     nimi: 'Comojärvi',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Mikä Adda-jäätikkö oli?',
       'Mihin silkkiteollisuus järveltä katosi?',
@@ -680,7 +680,7 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'forum-romanum',
     nimi: 'Forum Romanum',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi Forum jäi lopulta autioksi?',
@@ -776,7 +776,7 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'colosseum',
     nimi: 'Colosseum',
-    tyyppi: 'muu',
+    tyyppi: 'urheilu',
     symboli: 'urheilu',
     kysymykset: [
       'Kuka maksoi Colosseumin rakentamisen?',

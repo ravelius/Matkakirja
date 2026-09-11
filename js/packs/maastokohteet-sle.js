@@ -134,7 +134,7 @@ export const MAASTOKOHTEET_SLE = [
     id: 'tiwain-saari',
     nimi: 'Tiwain suojelualue',
     nimio: 'Tiwai',
-    tyyppi: 'muu',
+    tyyppi: 'saari',
     kysymykset: [
       'Kuinka monta kädellislajia Tiwailla elää?',
       'Kuka luovutti puolet saaresta naapuripäällikölle?',
@@ -164,7 +164,7 @@ export const MAASTOKOHTEET_SLE = [
     id: 'outamba-kilimi',
     nimi: 'Outamba-Kilimi',
     nimio: 'Outamba',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mistä puiston kaksi osaa ovat saaneet nimensä?',
       'Minkä eläimen takia alue valittiin suojeltavaksi?',
@@ -194,7 +194,7 @@ export const MAASTOKOHTEET_SLE = [
     id: 'golan-sademetsa',
     nimi: 'Golan sademetsä',
     nimio: 'Gola',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Kuinka suuri Golan kansallispuisto on?',
       'Milloin puisto perustettiin lailla?',

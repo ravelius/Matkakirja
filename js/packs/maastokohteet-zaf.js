@@ -190,7 +190,7 @@ export const MAASTOKOHTEET_ZAF = [
   {
     id: 'kruger',
     nimi: 'Kruger',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Milloin alue rauhoitettiin ensimmäisen kerran?',
       'Kuinka pitkä puisto on pohjoisesta etelään?',
@@ -241,7 +241,7 @@ export const MAASTOKOHTEET_ZAF = [
   {
     id: 'cape-agulhas',
     nimi: 'Cape Agulhas',
-    tyyppi: 'muu',
+    tyyppi: 'meri',
     kysymykset: [
       'Missä Atlantti ja Intian valtameri kohtaavat?',
       'Miksi niemi on saanut nimen "neulojen niemi"?',
@@ -315,7 +315,7 @@ export const MAASTOKOHTEET_ZAF = [
   {
     id: 'vredefortin-kraatteri',
     nimi: 'Vredefortin kraatteri',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuinka suuri kraatteri oli syntyessään?',
       'Mikä todisti törmäyksen 1961?',
@@ -341,7 +341,7 @@ export const MAASTOKOHTEET_ZAF = [
   {
     id: 'isimangaliso',
     nimi: 'iSimangaliso',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Mitä nimi iSimangaliso tarkoittaa?',
       'Kuinka pitkälle rannikolle puisto ulottuu?',

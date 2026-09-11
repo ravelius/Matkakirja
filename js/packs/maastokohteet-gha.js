@@ -179,7 +179,7 @@ export const MAASTOKOHTEET_GHA = [
     id: 'kakumin-puisto',
     nimi: 'Kakumin puisto',
     nimio: 'Kakum',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Kuka teki aloitteen Kakumin suojelemisesta?',
       'Kuinka pitkä puiston latvuspolku on?',
@@ -233,7 +233,7 @@ export const MAASTOKOHTEET_GHA = [
     id: 'molen-puisto',
     nimi: 'Molen puisto',
     nimio: 'Mole',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Kuinka suuri Molen kansallispuisto on?',
       'Mitä Molen norsut tekevät puille?',

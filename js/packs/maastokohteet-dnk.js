@@ -479,7 +479,7 @@ export const MAASTOKOHTEET_DNK = [
   {
     id: 'mons-klint',
     nimi: 'Møns Klint',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuinka korkealle jyrkänne nousee merestä?',
       'Milloin kalliot pääsivät maailmanperintöluetteloon?',

@@ -102,7 +102,7 @@ export const MAASTOKOHTEET_FJI = [
   {
     id: 'taveunin-pituuspiiri',
     nimi: 'Taveuni',
-    tyyppi: 'muu',
+    tyyppi: 'saari',
     kysymykset: [
       'Mikä viiva kulkee saaren yli?',
       'Kuinka monta tulivuorenkartiota saarella on?',

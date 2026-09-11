@@ -275,7 +275,7 @@ export const MAASTOKOHTEET_ETH = [
   {
     id: 'danakil',
     nimi: 'Danakilin syvänne',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi Danakilissa on paksut suolakerrokset?',
       'Mikä Dallol on?',
@@ -332,7 +332,7 @@ export const MAASTOKOHTEET_ETH = [
   {
     id: 'balenpuisto',
     nimi: 'Balen kansallispuisto',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä eläin on etiopiansusi?',
       'Mitä kahvilla on tekemistä Balen metsien kanssa?',

@@ -209,7 +209,7 @@ export const MAASTOKOHTEET_EGY = [
   {
     id: 'wadialhitan',
     nimi: 'Wadi al-Hitan',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     symboli: 'luonto',
     kysymykset: [
       'Mitä valaan fossiileissa on jäljellä maaeläimestä?',

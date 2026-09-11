@@ -268,7 +268,7 @@ export const MAASTOKOHTEET_KEN = [
   {
     id: 'hellsgate',
     nimi: "Hell's Gate",
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuka antoi rotkolle sen nimen?',
       'Mitä Olkariassa tehdään?',

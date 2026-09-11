@@ -65,7 +65,7 @@ export const FOKUSKOHTEET_IRN = [
      */
     id: 'apadana',
     nimi: 'Apadana',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Ketä salin portaiden reliefit esittävät?',

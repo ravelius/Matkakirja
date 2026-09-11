@@ -249,7 +249,7 @@ export const MAASTOKOHTEET_KWT = [
     nimi: 'Kubbar',
     // Pieni hiekkasaari suojelukohteena: 'muu' + 'luonto'.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'saari',
     kysymykset: [
       'Mikä on tärkeä lintualue?',
       'Miksi korallit viihtyvät matalassa lahdessa?',
@@ -276,7 +276,7 @@ export const MAASTOKOHTEET_KWT = [
     nimi: 'Umm al Maradim',
     // Pieni hiekkasaari: 'muu' + 'luonto'.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'saari',
     kysymykset: [
       'Miksi helmenpyytäjät palasivat saarelle joka ilta?',
       'Miksi juuri tämä saari on maan sateisin?',
@@ -363,7 +363,7 @@ export const MAASTOKOHTEET_KWT = [
     // Pieni ulkosaari ei ole tässä pakissa maastomerkki vaan kohde:
     // tyyppi 'muu' + symboli 'luonto', kuten Kubbar ja Umm al Maradim.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'saari',
     kysymykset: [
       'Mistä saaren nimi tulee?',
       'Kuinka kaukana se on mantereesta?',

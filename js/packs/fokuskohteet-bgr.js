@@ -282,7 +282,7 @@ export const FOKUSKOHTEET_BGR = [
     nimi: 'Rilan luostari',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'kulttuuri',
-    tyyppi: 'muu',
+    tyyppi: 'kulttuuri',
     kysymykset: [
       'Miten luostari selvisi osmanivallan läpi?',
       'Mitä munkit tekevät luostarissa nykyään?',
@@ -481,7 +481,7 @@ export const FOKUSKOHTEET_BGR = [
     nimi: 'Ruusulaakso',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miten ruusuöljyä valmistetaan?',
       'Miksi juuri tämä laakso sopii ruusuille?',
@@ -533,7 +533,7 @@ export const FOKUSKOHTEET_BGR = [
     kattoVapaa: true,
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'kulttuuri',
-    tyyppi: 'muu',
+    tyyppi: 'kulttuuri',
     kysymykset: [
       'Kuka maalasi Boyanan freskot?',
       'Miten 1200-luvun maalaukset ovat säilyneet?',
@@ -591,7 +591,7 @@ export const FOKUSKOHTEET_BGR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Jogurtti',
-    tyyppi: 'muu',
+    tyyppi: 'ruoka',
     symboli: 'ruoka',
     kysymykset: [
       'Mitä bakteeri tekee maidolle?',
@@ -685,7 +685,7 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'madara',
     nimi: 'Madaran ratsastaja',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Keitä kaanit Tervel ja Krum olivat?',
@@ -732,7 +732,7 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'srebarna',
     nimi: 'Srebarna',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     symboli: 'elain',
     kysymykset: [
       'Kuinka suureksi kiharapelikaani kasvaa?',
@@ -879,7 +879,7 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'moskeijat',
     nimi: 'Sofian moskeijat',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
     nappi: 'Ukkosmyrsky peitti yön, jona seitsemän moskeijaa räjähti',
@@ -955,7 +955,7 @@ export const FOKUSKOHTEET_BGR = [
     id: 'belogradtsik',
     nimi: 'Belogradtšikin kalliot',
     nimio: 'Belogradtšik',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     symboli: 'luonto',
     kysymykset: [
       'Mistä kallioiden punainen väri tulee?',

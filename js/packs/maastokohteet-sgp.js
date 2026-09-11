@@ -111,7 +111,7 @@ export const MAASTOKOHTEET_SGP = [
   {
     id: 'pulau-ubin',
     nimi: 'Pulau Ubin',
-    tyyppi: 'muu',
+    tyyppi: 'saari',
     kysymykset: [
       'Mitä saaren nimi tarkoittaa?',
       'Mihin saaren graniittia käytettiin?',
@@ -258,7 +258,7 @@ export const MAASTOKOHTEET_SGP = [
     // Kosteikko ei ole vuori eikä meri: tyyppi 'muu' + symboli 'luonto'.
     symboli: 'luonto',
     nimi: 'Sungei Buloh',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mistä alueen linnut tulevat talveksi?',
       'Miten kosteikosta tuli luonnonsuojelualue?',

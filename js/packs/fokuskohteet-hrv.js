@@ -720,7 +720,7 @@ export const FOKUSKOHTEET_HRV = [
   {
     id: 'plitvicen-jarvet',
     nimi: 'Plitvicen järvet',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     /*
      * Symboli kuratoitu: tyyppi `muu` jättäisi merkin ilman kategoriaa
      * ja siten ilman nimiötä (js/fokuskohteet.js kohteenSymboli), ja

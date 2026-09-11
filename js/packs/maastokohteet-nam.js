@@ -130,7 +130,7 @@ export const MAASTOKOHTEET_NAM = [
   {
     id: 'spitzkoppe',
     nimi: 'Spitzkoppe',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuinka vanhaa graniitti on?',
       'Kuka on maalannut kallioiden kuvat?',
@@ -182,7 +182,7 @@ export const MAASTOKOHTEET_NAM = [
   {
     id: 'fish-riverin-kanjoni',
     nimi: 'Fish Riverin kanjoni',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuinka syvä kanjoni on?',
       'Miksi joki katoaa suurimman osan vuodesta?',
@@ -207,7 +207,7 @@ export const MAASTOKOHTEET_NAM = [
   {
     id: 'etosha',
     nimi: 'Etosha',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mitä nimi Etosha tarkoittaa?',
       'Milloin alue rauhoitettiin ja kenen määräyksestä?',
@@ -235,7 +235,7 @@ export const MAASTOKOHTEET_NAM = [
   {
     id: 'sossusvlei',
     nimi: 'Sossusvlei',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi dyynit ovat punaisia?',
       'Mistä autiomaan kasvit saavat vetensä?',
@@ -285,7 +285,7 @@ export const MAASTOKOHTEET_NAM = [
   {
     id: 'hoban-meteoriitti',
     nimi: 'Hoban meteoriitti',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi meteoriitti ei jättänyt kraatteria?',
       'Kuka sen löysi ja miten?',

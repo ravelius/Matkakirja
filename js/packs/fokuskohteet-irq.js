@@ -59,7 +59,7 @@ export const FOKUSKOHTEET_IRQ = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Riippupuutarhat',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miten vesi olisi saatu nostettua puutarhojen huipulle?',
@@ -154,7 +154,7 @@ export const FOKUSKOHTEET_IRQ = [
      */
     id: 'ishtarin-portti',
     nimi: 'Ishtarin portti',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi sininen väri oli babylonialaisille niin tärkeä?',
@@ -227,7 +227,7 @@ export const FOKUSKOHTEET_IRQ = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Sanheribin palatsi',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Mitä George Smith löysi Niniven savitauluista?',

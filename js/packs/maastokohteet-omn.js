@@ -282,7 +282,7 @@ export const MAASTOKOHTEET_OMN = [
     nimi: 'Sharqiyan hiekat',
     // Aavikko ei ole vuori eikä meri: tyyppi 'muu' + symboli 'luonto'.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi aavikko kiinnostaa tutkijoita?',
       'Mistä aavikko sai nimensä?',
@@ -336,7 +336,7 @@ export const MAASTOKOHTEET_OMN = [
     nimi: 'Musandam',
     // Vuonomainen niemimaa ei ole vuori eikä meri: 'muu' + 'luonto'.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'meri',
     kysymykset: [
       'Miksi Musandamiin ei pääse Omanista maitse?',
       'Mikä kieli on kumzari?',

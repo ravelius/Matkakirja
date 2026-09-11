@@ -216,7 +216,7 @@ export const MAASTOKOHTEET_KAZ = [
   {
     id: 'charynin-kanjoni',
     nimi: 'Charynin kanjoni',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuinka syvä kanjoni on?',
       'Mikä on Linnojen laakso?',
@@ -241,7 +241,7 @@ export const MAASTOKOHTEET_KAZ = [
   {
     id: 'altyn-emel',
     nimi: 'Altyn-Emel',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi dyyni laulaa?',
       'Mikä on Besshatyrin hautakenttä?',
@@ -323,7 +323,7 @@ export const MAASTOKOHTEET_KAZ = [
   {
     id: 'saryarka',
     nimi: 'Saryarka',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mitä nimi Saryarka tarkoittaa?',
       'Miksi kosteikot ovat linnuille tärkeitä?',
