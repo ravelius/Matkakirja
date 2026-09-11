@@ -10,9 +10,11 @@ Päivitetty 11.9.2026. Ylläpitäjä Codex. Kokonaisuuden julkaisuvastaava Fable
 
 ## Aktiivinen erä / tiedosto-omistajuus
 
-Codex: omistajan uusin aloituskaupungin ensiliito. Pulu kiirehtii kaukaisuudesta, tervehtii JO LENNON AIKANA ja kompuroi hieman laskeutuessaan. Tekninen js/livia.js/js/livia-eleet.js/js/livia-svg.js + pollo.js bridge. Kaupunkivalinta/peruutus/tausta/vähennetty liike testataan. Kaanonrepliikit ennallaan.
+Codex: **PR #2238 READY / julkaisuvalmis, EI vielä julkaistu.** Head b016bdad8647a8ba41a631ec80b8854b04676e54, testattu puu a1dc5b72217d75c94d8f1cee04f4b0ed10951cd5. Pulu kiirehtii kaukaisuudesta, tervehtii lennossa ja kompuroi hieman laskeutuessaan. 2672 pass / 0 fail / 13 skip, CI 34591412393 SUCCESS. Oikea Chrome-ensipelipolku: native playing +938 ms liidon alusta, 1723 ms ennen laskua. Varhainen valinta sekä näkyvän canvas-kohteen klikki, hidden/pagehide/destroy ja reduced-motion päälle kesken liidon PASS; ei myöhäisiä kuplia/ääniä, 0 JS-virhettä. Marseille-regressio 6/6 + neutraali PASS. Fable versionoi/yhdistää/julkaisee itsenäisesti heti porttien jälkeen; ei traileririippuvuutta.
 
-Codex: omistajan nimenomaisesti tilaama uusi Viisas pöllö -muotokuva jalustalla ja nimitekstillä, vain canonical avaus index4:n vieressä. Kuva generoitu/silmätarkistettu, alkuperäinen säilytetty, JPEG512x768. Erillinen assets/tietaja/viisas-pollo-muotokuva-v1.jpg, EI olemassa olevan avatarin korvausta. NaytaAvauskupla/CSS/SW-integraatio työn alla. Tämä uusi tilaus sallii vain tämän uuden median aiemman pilotin rajauksesta poiketen.
+Muotokuva: uusi läpinäkyvä 512×768 PNG assets/tietaja/viisas-pollo-muotokuva-v1.png vain canonical avaus index4:n vieressä, jalusta ja nimiteksti. Alkuperäinen säilytetty, vanha avatar ennallaan. JPEG-koepakkaus EI käytössä. Koko kohtaus ja 320 px reduced-motion silmätarkistettu. UI:ssa vain destroy-siivous ja aloitaKartalta-siirtymän stopIntroVoice; ei renderFact-muutosta.
+
+Codex: erillinen **PR #2239 DRAFT**, head ac67bd9d7992c1ec793cb1cb6082d09007b1a395, vain visa.js + testit. Vaatii Fablen sisältöcommitin f0d98f2dde3bb5781221f6b875a9b8c459b3d2d0 mainiin ensin. Yhteiskoe 2676 pass / 0 fail / 13 skip, CI 34591898382 SUCCESS. Aidot Kairon tervehdys/väärä vastaus ja Prahan kaaritervehdys/laataton kaariaarre: oikea tagi, näkyvä pose, yksi tapahtuma, rerender hiljainen, 0 JS-virhettä. K/T vain näille neljälle polulle; muut tagit K/yksikkötestit. Ei estä #2238:n julkaisua.
 
 Fable: uusi saapumistraileri ja js/ui.js renderFact, fokusvirta/luenta, iskulauseet ja kaksi äänitehostetta; ks oma11:20UTComistajuuskuittaus. Codex väistö erillisenä eränä tuottajan jälkeen.
 
@@ -20,7 +22,7 @@ Fable: uusi saapumistraileri ja js/ui.js renderFact, fokusvirta/luenta, iskulaus
 
 Trailerin kirjaimet/loppu + seuraava matkakirja-narration sopivat. Codex pyysi c771ec6f:ssä lisäksi trailer{vaihe:peru,tunnus,kaupunki} kaupunginvaihtoon/tuhoon/aborttiin; tavallinen skip on loppu. Sama token kaikkialla, vanha loppu ei käynnistä uuden trailerin 3s-paluuajastinta. Odotetaan Fable-kuittausta/tuottajan committia ennen väistöjulkaisua.
 
-Tarkat rekisterin K/T-rivit kootaan seuraavaksi, Fable päivittää rekisterin. Muiden kaupunkien sisältötagit/kohdistus Fablella saapumisversion jälkeen. Kaikkia dokumentoituja D-rivejä ei kuitata toteutetuiksi.
+Tarkat rekisterin K/T-rivit toimitettu oman postitiedoston 64fda2cc-viestissä; neljän uusimman viestin puuttuneet tekstiosat korjattu postitiedostoon tämän tilapäivityksen yhteydessä. Fable päivittää rekisterin. Muiden kaupunkien sisältötagit/kohdistus Fablella saapumisversion jälkeen. Kaikkia dokumentoituja D-rivejä ei kuitata toteutetuiksi.
 
 ## Avoin tekninen huomio
 
