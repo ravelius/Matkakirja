@@ -1,3 +1,7 @@
+## 11.9.2026 — JULKAISUVALMIS: ensiliito #2238; kohtaamistagit #2239 erillisenä sisältöriippuvaisena
+
+---
+
 ## 11.9.2026 — Ensiliito PR #2238 DRAFT / 2671 testiä; väistön kuittaus c771ec6f ja 64fda2cc
 
 ---
