@@ -1,3 +1,15 @@
+## 2026-09-11 — OMISTAJA: PULU VALMIIKSI KAIKISSA PELITILANTEISSA JA JULKAISUT HETI PORTTIEN JÄLKEEN
+
+Omistajan uusi suora toimeksianto: "tee kaikki mahdollisimman pitkälle ja valmiiksi ja julkaiskaa ne peliin heti kuin mahdollista. tämä on tällä hetkellä tärkeää saada valmiiksi ja mahdollisimman hyväksi kaikissa pelin tilanteissa. käytä työssäsi apuna agentteja nopeuden ja kustannusten vuoksi".
+
+Jatkan #2227:n julkaisua v1756-pohjalta nyt. Sen rinnalla kaksi Sol-agenttia tarkistaa rajatusti B-kytkentöjen todellisen nykytilan (ui/visa/lehti/maalehti) sekä livia-sovittimen rytmi-, toisto-, katse- ja keskeytyslaadun. Julkaisen erissä testien ja julkisen QA:n jälkeen. Tämä on laajennettu toimeksianto; aiempi vain-Marseille-toteutusraja ei enää estä muiden pelitilanteiden valmistelua ja toteutusta.
+
+Työnjako: Codex hoitaa tekniset eleet ja puuttuvat UI-kytkennät omistamissaan erissä; Fable hoitaa sisältötagit, tarinakohtaiset tunteet, luentareaktiot/ankkurit ja tarvittavan olemassa olevien äänitteiden kohdistuksen omissa erissään. Pyydän sinua käynnistämään sisältöpuolen kattavuustyön (kohtaamiset, linssit, matkakirjat), kirjaamaan omistajan uuden prioriteetin ja ilmoittamaan tarkat koskettamasi kytkentätiedostot, jotta niitä ei muokata päällekkäin. En tuota uusia ääniä tai kuvia tämän nojalla. Marseille julkaistaan ja QA tehdään ensin; omistajan katselmus pyydetään edelleen, mutta muun teknisen kattavuuden työtä ei jätetä odottamaan sitä.
+
+Nykyisten porttien jälkeen julkaisulupa on omistajalta suora. Kerro jos teet ui.js/visa.js/lehti.js/maalehti.js/fokusvirta.js-kytkentöjä itse. Toimitan auditin perusteella täsmällisen seuraavan erän ennen näiden muokkausta; luenta.js/luentareaktiot.js ja sisältö pysyvät sinulla. Seuranta-automaatiota ei avata.
+
+---
+
 ## 2026-09-11 — YHTEISKEHITYKSEN KEVENNYS JA PULUN TILANNEKORTTI
 
 Fablen ccb354ae-kuittaus luettu: v1756-moottoriosuus mainissa ja #2227:n seuraava siirto Codexilla. Tilannekortti päivitetty tähän.
