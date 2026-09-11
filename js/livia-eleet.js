@@ -78,6 +78,7 @@ export function asennaLivianKasvot(pollo) {
  const odotukset=new Set();
  const pitkatOdotukset=new Map();
  const luennat=new Map();
+ const syodytPullat=new WeakSet();
  // Vain viimeisen luennan rajattu loppupoikkeus. Ei jonoa eikä ajastinta:
  // vastaanotto sulkeutuu 500 ms:ssa, jo alkanut ele saa oman kestonsa.
  let luennanLoppu=null;
@@ -205,7 +206,7 @@ export function asennaLivianKasvot(pollo) {
    s={...s,gazeUp:true,glasses:0};
   }
   // Nokan liike on rytmitetty ele, ei foneemikohtainen huulisynkka.
-  if(puhe&&nakyy()&&!s.flight&&!s.walk&&s.x===0&&s.y<5&&!['shock','puff','cover','preen','chew','chewManic','yawn'].includes(s.frame)){
+  if(puhe&&nykyinen?.omistaja!=='bunGranted'&&nakyy()&&!s.flight&&!s.walk&&s.x===0&&s.y<5&&!['shock','puff','cover','preen','chew','chewManic','yawn'].includes(s.frame)){
     s={...s,mouth:livianSvgAsento('talk',((nyt-puheAlku)%1500)/1500).frame};
   }
   piirra({...s,propsRight:Boolean(pollo.auki)});
@@ -222,7 +223,7 @@ export function asennaLivianKasvot(pollo) {
       if(valmis.jatko)jatkoAjastin=setTimeout(()=>toista(valmis.jatko,{hiljaa:valmis.hiljaa}),800);
       // Kortti saa yhden avauseleen. Sen jälkeen yhä soiva lukija
       // kuunnellaan myös kortin ollessa auki (rekisterin päällekkäisyys 7).
-      if(valmis.omistaja==='card')jatkaKuunteluaTaiOdotusta();
+      if(['card','bunGranted'].includes(valmis.omistaja))jatkaKuunteluaTaiOdotusta();
       else if(valmis.omistaja==='waiting')yritaPitkaaOdotusta();
       valmis.valmis?.();
     }
@@ -236,7 +237,7 @@ export function asennaLivianKasvot(pollo) {
   const ele=LIVIA_SVG_ELEET.find(e=>e.id===id);if(!ele||kuollut)return false;
   if(kohtausPiilossa()&&!['startFlight','trailer'].includes(asetukset.omistaja))return false;
   katkaise();lepoTila=null;
-  if(!nakyy()||(vahenna?.matches&&asetukset.omistaja!=='reaction')){piirraNyt(performance.now());return false;}
+  if(!nakyy()||(vahenna?.matches&&!['reaction','bunGranted'].includes(asetukset.omistaja))){piirraNyt(performance.now());return false;}
   nykyinen={...ele,voimakkuus:livianEleenVoima(id),...asetukset};osuus=asetukset.fromProgress||0;aaniIndeksi=0;alkoi=performance.now();viimeEle=alkoi;viimePiirto=-Infinity;
   if(vahenna?.matches){
    // Yksi staattinen ilme, ei jatkuvaa piirtoa. Sama elinkaari katkaisee
@@ -249,7 +250,7 @@ export function asennaLivianKasvot(pollo) {
  }
  /** Ei jonoa: vanha kuva tai luenta ei saa reaktiota toisessa kaupungissa. */
  function jatkaKuunteluaTaiOdotusta(){
-  if(puhe)return;
+  if(puhe||nykyinen?.omistaja==='bunGranted')return;
   const luenta=[...luennat.values()].at(-1);
   if(luenta)tilanne('narration',luenta);
   else if(odotukset.size&&!nostoTila?.onkoAuki())toista(lehtiPaalla?'scratch':'think',{hiljaa:true,omistaja:'waiting'});
@@ -259,10 +260,20 @@ export function asennaLivianKasvot(pollo) {
   if(laji==='startFlight')return alkulentotilanne(tiedot);
   if(laji==='trailer')return traileritilanne(tiedot);
   if(laji==='waitingAnswer')return chatVastaus(tiedot);
+  if(laji==='bunGranted'){
+   // Maksutapahtuma, ei repliikin ruokasanan tulkinta. Jokainen ostos
+   // esitetään kerran tässä näkymässä; piiloon jäänyttä ei jonoteta.
+   const tunnus=tiedot.tunnus;
+   if(!tunnus||typeof tunnus!=='object'||syodytPullat.has(tunnus))return false;
+   syodytPullat.add(tunnus);
+   if(!nakyy()||kohtausPiilossa()||pollo.auki||odotukset.size||odotusrivi||lepoTila?.flight||lepoTila?.walk)return false;
+   peruLoppu();viimeTilanne=performance.now();viimeToimi=viimeTilanne;
+   return toista('bunFeast',{omistaja:'bunGranted',tunnus});
+  }
   if(laji==='chatClose')tyhjennaChatOdotus({lepoon:true});
   if(['chatOpen','microphone','waiting','card'].includes(laji)){
    peruLoppu();
-   if(nykyinen?.omistaja==='reaction'){katkaise();piirraNyt(performance.now());}
+   if(['reaction','bunGranted'].includes(nykyinen?.omistaja)){katkaise();piirraNyt(performance.now());}
   }
   if(laji==='narration'){
    const uusi=!luennat.has(tiedot.tunnus)||luennanLoppu?.tunnus!==tiedot.tunnus||luennanLoppu?.aika!==null;
@@ -289,7 +300,7 @@ export function asennaLivianKasvot(pollo) {
    if(!r||typeof tiedot.tunnus!=='string'||!tiedot.tunnus||tiedot.lahde!=='matkakirja'||!tiedot.luentaTunnus
     ||(tiedot.jalkireaktio===true?!jalki:!aktiivinen||tiedot.luentaTunnus.paused||tiedot.luentaTunnus.ended)
     ||!nakyy()||puhe||pollo.auki||nostoTila?.onkoAuki()||odotusrivi||odotukset.size
-    ||nykyinen?.group==='Liike'||nykyinen?.omistaja==='card'||lepoTila?.flight||lepoTila?.walk)return false;
+    ||nykyinen?.group==='Liike'||['card','bunGranted'].includes(nykyinen?.omistaja)||lepoTila?.flight||lepoTila?.walk)return false;
    if(nykyinen?.omistaja==='reaction'&&nykyinen.tunnus===tiedot.tunnus&&nykyinen.luentaTunnus===tiedot.luentaTunnus)return false;
    if(jalki){loppu.aika??=nyt;loppu.kaytetty=true;}
    else if(loppu?.aika===null)loppu.sallittu=true;
@@ -343,6 +354,9 @@ export function asennaLivianKasvot(pollo) {
    if(lennonJalkeinenLuenta)palaaAlkulennosta();
    return false;
   }
+  // Kiitoskupla ja käynnissä olevan luennan eleet eivät keskeytä
+  // puraisuja. Yllä käsitellään silti luennan/odotuksen elinkaari.
+  if(nykyinen?.omistaja==='bunGranted')return false;
   const nyt=performance.now();
   const jaksonTunne=laji==='emotion'&&tiedot.lahde==='ihmisen-matka';
   // Visan varoitus ja lopputulos ovat saman tilanteen peräkkäisiä
@@ -508,7 +522,7 @@ export function asennaLivianKasvot(pollo) {
    return toista('glideIn',{hiljaa:true,omistaja:'opening',valmis});
   },
   peruEnsiliito(){if(!ensiliito&&nykyinen?.omistaja!=='opening')return;ensiliito=false;katkaise();piirra(lepo());},
-  kupla(teksti,{saapuu=false}={}){viimeToimi=performance.now();if(odotusrivi||nykyinen?.omistaja==='opening')return;if(nykyinen?.id==='handoff')return;const ele=saapuu?'clumsyLand':livianRepliikinEle(teksti);toista(ele,{voimakkuus:livianEleenVoima(ele,teksti)});},
+  kupla(teksti,{saapuu=false}={}){viimeToimi=performance.now();if(odotusrivi||['opening','bunGranted'].includes(nykyinen?.omistaja))return;if(nykyinen?.id==='handoff')return;const ele=saapuu?'clumsyLand':livianRepliikinEle(teksti);toista(ele,{voimakkuus:livianEleenVoima(ele,teksti)});},
   tilanne,toista,palaa,tuhoa,eleet:LIVIA_SVG_ELEET,
  };
 }

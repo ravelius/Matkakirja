@@ -5,6 +5,7 @@ export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
  Object.freeze({id:'glideIn',label:'Kiireinen ensiliito kartalta',duration:2700,group:'Liike'}),
  Object.freeze({id:'trailerFlee',label:'Väistö trailerin tieltä',duration:1200,group:'Liike'}),
  Object.freeze({id:'trailerBack',label:'Varovainen paluu trailerista',duration:1700,group:'Liike'}),
+ Object.freeze({id:'bunFeast',label:'Riemukas pullapalkinto',duration:4600,group:'Pelitilanne'}),
  ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['bookStudy','Tietäväinen kirjan selaus',4200],['scratch','Pään raapaisu',2600],['eyeRub','Lasit ylös ja silmien hieraisu',5200],['chuckle','Hiljainen naurunpyrskähdys',2500]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
 const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
 const lvEase=n=>{n=lvClamp(n);return n*n*(3-2*n);};
@@ -18,6 +19,19 @@ export function livianEleenVoima(id,text='') {
 }
 export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
  const s={...livianPikseliAsento(id,p),ele:id,p:lvClamp(p),voimakkuus:lvClamp(voimakkuus)};
+ if(id==='bunFeast'){
+  const t=s.p;
+  s.frame=t===0||t===1?'rest':t<.2?'grin':t<.9?'smile':'rest';
+  if(t>0&&t<.2){s.mouth='talk';s.feast={phase:'squeal',hop:Math.sin(t/.2*Math.PI)};}
+  else if(t>=.2&&t<.7){
+   const bites=t>=.62?3:t>=.48?2:t>=.34?1:0;
+   s.mouth=bites&&Math.sin((t-.2)*Math.PI*22)>0?'talkSmall':'rest';
+   s.feast={phase:'bite',grab:lvEase((t-.2)/.1),bites};
+  } else if(t>=.7&&t<.9){
+   s.mouth=Math.sin((t-.7)*Math.PI*18)>0?'talkSmall':'rest';
+   s.feast={phase:'chew',chew:Math.sin((t-.7)*Math.PI*18)};
+  }
+ }
  if(id==='glideIn')s.flight={kind:'opening',t:lvEase(p)};
  if(id==='trailerFlee')s.flight={kind:'trailerAway',t:lvEase(p)};
  if(id==='trailerBack')s.flight={kind:'trailerBack',t:lvEase(p)};
@@ -49,6 +63,7 @@ export function livianSvgMalli(s,{right=0}={}) {
  const m={id,p,strength,gate,lean,headScale:1/(1-.48*lean),bodyLean:-9*lean,
   x:128+(s.x||0)*4,y:302+(moving?(s.y||0)*4:0),headY:moving?0:(s.y||0)*2,headAngle:(s.tilt||0)*(3+5*strength),scale:.56,angle:0,squash:1,visible:true,
   flight:Boolean(s.flight),walking:Boolean(s.walk),mirror:s.walk?.direction===1,face:s.frame||'rest',wing:'fold',wingAmount:0};
+ if(id==='bunFeast'&&s.feast?.hop){m.y-=7*Math.abs(s.feast.hop);m.angle=2.5*Math.sin(p/.2*Math.PI*2);}
  if(s.walk){const t=s.walk.direction===1?s.walk.t:1-s.walk.t;m.x=128+(right+96)*t;m.y=302-2*Math.sin(p*Math.PI*14);if(t>=1)m.visible=false;}
  if(['arrive','crash','owl','leaveRight'].includes(id)&&!s.flight&&!s.walk){const edge=id==='arrive'?1-lvEase((p-.08)/.46):id==='crash'?1-lvEase((p-.05)/.24):lvClamp((s.x||0)/24);m.x=128+(right+100)*edge;}
  if(id==='leaveRight'&&p>=1)m.visible=false;
@@ -94,6 +109,7 @@ export function livianSvgMalli(s,{right=0}={}) {
   else if(['disbelief','confused'].includes(id)&&gate>.01)m.wing='shrug';
   else if(['embarrassed','facepalm'].includes(id)&&gate>.01)m.wing='shy';
   else if(['bread','manic'].includes(id)&&s.side)m.wing=s.propsRight?'reachRight':'reach';
+  else if(id==='bunFeast'&&s.feast){m.wing=s.feast.phase==='squeal'?'spread':s.feast.phase==='bite'?'reach':'fold';}
   else if(s.frame==='shock')m.wing='spread';
   m.wingAmount=gate*(.25+.75*strength);
   if(['shade','cover','preen'].includes(m.wing))m.wingAmount=1;
@@ -136,6 +152,14 @@ function lvBird(s,m,prefix){
 }
 function lvProps(s,m,prefix){
  let out='';const x=m.x,y=m.y;
+ if(m.id==='bunFeast'&&s.feast?.phase==='bite'){
+  const grab=lvClamp(s.feast.grab),bites=Math.max(0,Math.min(3,s.feast.bites||0));
+  const bx=76+23*grab,by=286-35*grab,scale=1-bites*.105;
+  // Jokainen puraisu etenee sisäänpäin, ei jo syödyn reunan ulkopuolelle.
+  let cuts='';for(const[cx,cy]of[[16,-6],[12,5],[5,-4]].slice(0,bites))cuts+=`<circle cx="${cx}" cy="${cy}" r="7" fill="black"/>`;
+  out+=`<g data-part="bun-feast" data-bites="${bites}" transform="translate(${lvRound(bx)} ${lvRound(by)}) scale(${lvRound(scale)})"><defs><mask id="${prefix}bun-bites"><rect x="-20" y="-22" width="52" height="44" fill="white"/>${cuts}</mask></defs><g mask="url(#${prefix}bun-bites)"><ellipse cx="0" cy="0" rx="19" ry="13" fill="#d59a50"/><path d="M-16 2Q-13-12 0-10Q14-13 17 2Q13 13 0 12Q-14 13-16 2Z" fill="#e7bd76"/><path d="M-10-2Q-7-9 0-6Q7-10 11-2M-8 5Q0 9 9 4" fill="none" stroke="#b8783e" stroke-width="2" stroke-linecap="round"/></g></g>`;
+  if(bites>0){const burst=lvClamp(1-Math.abs((s.p-[.34,.48,.62][bites-1])/.035));for(let i=0;i<3;i++)out+=`<path data-part="bun-crumb" d="M${lvRound(91+i*7)} ${lvRound(250+Math.sin(i*2.1)*4+burst*8)}l3 1-1 3-3-1Z" fill="#c18b48" opacity="${lvRound(burst)}"/>`;}
+ }
  if(s.side?.kind==='bread'){
   const bx=s.propsRight?x+12:x-80+(s.side.x||0)*2,by=y-50+(s.side.y||0)*1.5;
   out+=`<g transform="translate(${bx} ${by}) scale(${s.propsRight?.62:1})"><defs><mask id="${prefix}bite"><rect x="-8" y="-25" width="60" height="60" fill="white"/>${s.side.bite?'<circle cx="35" cy="-11" r="7" fill="black"/><circle cx="41" cy="0" r="7" fill="black"/>':''}</mask></defs><g mask="url(#${prefix}bite)"><path d="M0 9C-3-4 4-14 18-14C32-16 41-7 40 7Q38 21 20 20Q2 22 0 9Z" fill="#c18b48"/><ellipse cx="20" cy="1" rx="18" ry="13" fill="#e0b875"/><path d="M11 4C9-9 34-8 32 5C30 15 15 15 15 5C15 0 25-1 25 5" fill="none" stroke="#ab743f" stroke-width="2.5" stroke-linecap="round"/></g></g>`;

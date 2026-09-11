@@ -32,6 +32,42 @@ function liviaTestYmparisto(t){
  return{pollo,button,virta,doc,lehti,reduced,El,tick,notify,raf,timers};
 }
 
+test('pullamaksu omistaa syömisen kiitoskuplan ja luennan yli, kerran per ostos',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const canvas=e.doc.body.children[0].children[0],ostos={},luenta={},puhe={};
+ c.tilanne('narration',{tunnus:luenta,lahde:'lukija',ele:'lookUp'});
+ assert.equal(c.tilanne('bunGranted',{tunnus:ostos}),true);e.tick(1200);
+ assert.match(canvas.innerHTML,/data-part="bun-feast"/);
+ assert.equal(c.tilanne('bunGranted',{tunnus:ostos}),false,'sama maksutoken ei käynnisty uudestaan');
+ e.tick(1300);c.kupla('Makea pulla. Sukuni kantoi kuninkaiden kirjeitä.');
+ ilmoitaLivianKasvopuhe(puhe,true,'Tämä kelpaa maksuksi');e.tick(80);
+ assert.match(canvas.innerHTML,/data-part="bun-feast" data-bites="2"/,'2500 ms kuittaus ei katkaise eikä aloita syömistä alusta');
+ ilmoitaLivianKasvopuhe(puhe,false);
+ c.tilanne('narration',{tunnus:luenta,lahde:'lukija',ele:'lookUp'});e.tick(350);
+ assert.match(canvas.innerHTML,/data-part="bun-feast" data-bites="3"/,'puheen loppu ei vaihda kesken kuuntelueleeseen');
+ e.tick(1800);assert.doesNotMatch(canvas.innerHTML,/data-part="bun-feast"/);
+ c.tilanne('narrationEnd',{tunnus:luenta});
+ assert.equal(c.tilanne('bunGranted',{tunnus:ostos}),false,'myöhempi saman tapahtuman toisto pysyy hiljaisena');
+});
+
+test('pullariemu ei jonotu piilosta, keskeytyy chatissa ja reduced motion näyttää staattisen pullan',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const canvas=e.doc.body.children[0].children[0],piilo={};e.doc.hidden=true;
+ assert.equal(c.tilanne('bunGranted',{tunnus:piilo}),false);e.doc.hidden=false;
+ assert.equal(c.tilanne('bunGranted',{tunnus:piilo}),false,'taustalla annettu pulla ei jonotu');
+ assert.equal(c.tilanne('bunGranted',{}),false);
+ assert.equal(c.tilanne('bunGranted',{tunnus:{}}),true);e.tick(1200);
+ c.tilanne('chatOpen');e.tick(40);assert.doesNotMatch(canvas.innerHTML,/data-part="bun-feast"/);
+ e.reduced.matches=true;assert.equal(c.tilanne('bunGranted',{tunnus:{}}),true);
+ assert.match(canvas.innerHTML,/data-part="bun-feast"/);assert.equal(e.raf.size,0,'ei jatkuvaa liikettä');
+ const staattinen=canvas.innerHTML;e.tick(2500);c.kupla('Merci, croissant!');assert.equal(canvas.innerHTML,staattinen);
+ e.tick(2200);assert.doesNotMatch(canvas.innerHTML,/data-part="bun-feast"/);
+ e.reduced.matches=false;c.tilanne('bunGranted',{tunnus:{}});e.tick(1200);
+ e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));e.tick(5000);
+ assert.equal(e.raf.size,0);assert.doesNotMatch(canvas.innerHTML,/data-part="bun-feast"/);
+ c.tuhoa();assert.equal(e.timers.size,0);
+});
+
 test('ensiliito kaartaa kaukaa, puhe ei katkaise sitä ja peruutus sekä reduced motion ovat siistejä',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
  const canvas=e.doc.body.children[0].children[0];let valmis=0;

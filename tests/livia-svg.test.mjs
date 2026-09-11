@@ -3,13 +3,44 @@ import assert from 'node:assert/strict';
 import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva,livianSvgMalli,livianEleenVoima} from '../js/livia-svg.js';
 
 test('kaikki nykyiset eleet piirtyvät kokonaisella SVG-pululla ilman virheellisiä koordinaatteja',()=>{
- assert.equal(LIVIA_SVG_ELEET.length,64);
+ assert.equal(LIVIA_SVG_ELEET.length,65);
  for(const e of LIVIA_SVG_ELEET)for(const p of [0,.1,.25,.43,.6,.8,.95,1]){
   const s=livianSvgAsento(e.id,p),svg=livianSvgKuva(s,{right:42,prefix:'qa'});
   assert.match(svg,/^<svg /);assert.doesNotMatch(svg,/NaN|Infinity|undefined|<image|<canvas/);
   if(livianSvgMalli(s,{right:42}).visible)assert.match(svg,/data-part="whole-bird"/);
  }
 });
+test('pullariemu näyttää kiljahduksen, kolme pienenevää haukkua ja tyytyväisen pureskelun',()=>{
+ const ele=LIVIA_SVG_ELEET.find(e=>e.id==='bunFeast');
+ assert.equal(ele.duration,4600);
+ const alku=livianSvgKuva(livianSvgAsento('bunFeast',0));
+ const kiljahdus=livianSvgAsento('bunFeast',.1),hyppy=livianSvgMalli(kiljahdus);
+ assert.equal(kiljahdus.feast.phase,'squeal');assert.equal(kiljahdus.mouth,'talk');
+ assert.equal(hyppy.wing,'spread');assert.ok(hyppy.y<302);
+ for(const [p,bites] of [[.25,0],[.35,1],[.49,2],[.63,3]]){
+  const s=livianSvgAsento('bunFeast',p),svg=livianSvgKuva(s,{prefix:'bunqa'});
+  assert.equal(s.feast.bites,bites);assert.match(svg,new RegExp(`data-part="bun-feast" data-bites="${bites}"`));
+  assert.doesNotMatch(svg,/NaN|Infinity|undefined/);
+ }
+ const chew=livianSvgAsento('bunFeast',.8),chewSvg=livianSvgKuva(chew);
+ assert.equal(chew.feast.phase,'chew');assert.equal(chew.frame,'smile');
+ assert.doesNotMatch(chewSvg,/data-part="bun-feast"|data-part="bun-crumb"/);
+ const loppu=livianSvgKuva(livianSvgAsento('bunFeast',1));
+ assert.doesNotMatch(alku,/data-part="bun-feast"|data-part="bun-crumb"/);
+ assert.doesNotMatch(loppu,/data-part="bun-feast"|data-part="bun-crumb"/);
+ assert.equal(livianSvgAsento('bunFeast',1).frame,'rest');
+});
+test('jokainen puremamaski poistaa aidosti uuden osan pullan sisältä',()=>{
+ const svg=livianSvgKuva(livianSvgAsento('bunFeast',.65),{prefix:'biteqa'});
+ const mask=svg.match(/<mask id="biteqabun-bites">(.*?)<\/mask>/)?.[1];assert.ok(mask);
+ const cuts=[...mask.matchAll(/<circle cx="([\d.-]+)" cy="([\d.-]+)" r="([\d.-]+)"/g)].map(m=>m.slice(1).map(Number));
+ assert.equal(cuts.length,3);
+ for(let i=0;i<cuts.length;i++){
+  const[x,y]=cuts[i];assert.ok((x/19)**2+(y/13)**2<1,'puraisun keskus osuu pullaan');
+  assert.ok(cuts.slice(0,i).every(([a,b,r])=>Math.hypot(x-a,y-b)>r),'uusi puraisu ei jää aiempaan reikään');
+ }
+});
+
 test('trailerin väistö poistuu ja varovainen paluu päätyy täsmälleen lepoankkuriin',()=>{
  const poissa=livianSvgMalli(livianSvgAsento('trailerFlee',1));assert.equal(poissa.visible,false);
  const alku=livianSvgMalli(livianSvgAsento('trailerBack',0)),loppu=livianSvgMalli(livianSvgAsento('trailerBack',1));
