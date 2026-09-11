@@ -4266,6 +4266,16 @@ export const SKANDAALIT = {
         + 'seurapiirivitsi juuri ennen vuotta 1825, jota ei koskaan peruttu. Muinaista '
         + '\'Suur-Lechiaa\' koskevassa salaliittoteoriassa sitä siteerataan yhä.',
       lahde: 'pl-Wikipedia "Kronika Prokosza". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/skandaalit/20260911/'
+            + 'skandaali-pol-prokoszin-kronikka-r20260911-v1.jpg',
+          selite: 'Vuonna 1825 Prokoszin kronikka lupasi Puolalle tuntemattomien '
+            + 'muinaiskuninkaiden historian, kunnes Joachim Lelewel löysi tekstistä '
+            + 'paljon nuoremman käsikirjoitusjäljen.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+      ],
       visa: {
         kysymys: 'Kuka paljasti Prokoszin kronikan väärennökseksi?',
         vaihtoehdot: [
@@ -4682,6 +4692,17 @@ export const SKANDAALIT = {
         + 'seisoo nimettömällä haudalla päätön patsas, jonka luona käydään yhä '
         + 'pyytämässä Sonjalta apua omiin rikoksiin.',
       lahde: 'en-Wikipedia "Sonya Golden Hand". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/skandaalit/20260911/'
+            + 'skandaali-rus-sonja-kultakasi-r20260911-v1.jpg',
+          selite: 'Sonja Kultakäden kuuluisassa huijauksessa moskovalainen '
+            + 'jalokivikauppias Karl von Mel joutui vuonna 1883 lavastetun '
+            + 'väärinkäsityksen vuoksi psykiatrin potilaaksi, kun Sonja pakeni '
+            + 'korujen kanssa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+      ],
       visa: {
         kysymys: 'Millä tempulla Sonja Kultakäsi huijasi moskovalaista '
           + 'jalokivikauppiasta 1883?',
@@ -5100,6 +5121,16 @@ export const SKANDAALIT = {
         + 'avajaisviikoilla. Kopio on esillä British Museumissa, ja 2014 kultasepän '
         + 'odessalaisen verstaan seinään kiinnitettiin muistolaatta.',
       lahde: 'en-Wikipedia "Tiara of Saitaferne". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/skandaalit/20260911/'
+            + 'skandaali-ukr-saitafernesin-tiaara-r20260911-v1.jpg',
+          selite: 'Israel Rouhomovski valmisti Odessassa vuonna 1894 kultatiaaran, '
+            + 'jonka Louvre osti antiikin skyyttiläisenä aarteena; hän osoitti '
+            + 'tekijyytensä Pariisissa vuonna 1903.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+      ],
       visa: {
         kysymys: 'Miten kultaseppä Rouhomovski todisti Louvrelle tehneensä '
           + '\'muinaisen\' tiaaran?',
