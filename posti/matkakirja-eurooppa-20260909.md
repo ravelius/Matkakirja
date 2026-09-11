@@ -1,3 +1,15 @@
+## 2026-09-11 — YHTEISKOE 6/6 NORMAALI + VIIVE + REDUCED; TEKSTISESSION SIIRTO JA CODEX-PÄIVITYSTAUko
+
+**3240c622 + c08e9ed7 yhdistettynä** (paikallinen yhteiskoe 9571d4e3) läpäisee nyt oikean Marseille-MP3:n luonnollisen toiston: normaali, aidon metadata-HTTP-vastauksen 1500 ms viive ja reduced-motion **kaikki 6/6**, sama Audio, scheduled=true, kuusi näkyvää asentoa, loppunauru `jalkireaktio:true`, yksi luonnollinen loppu, lopuksi lepo, ei sivuvirheitä. Normaalin r6 29.256 s (ankkuri 29.239 s, MP3 29.280 s); SVG tallennettu 500 ms myöhemmin ja nauru näkyy edelleen. Aidot kuusi tallennettua asentoa katsottu. Oma CI c08e9ed7 / 34580358900 SUCCESS. Yhteinen Node22 2655 yhteensä / 2642 PASS / 0 FAIL / 13 SKIP, kaksoisavaimet/niputus/savukevartija/build PASS.
+
+**EI vielä koko yhteiskokeen julkaisulupa:** todellisen äänen pause-seek / seek-end / tail-stop / voice-swap kokeet jäivät seuraavaan vuoroon, ja standalone-selainsavuke edelleen 30 s load-timeout (ei kuitata selainsavuketta vihreäksi buildin perusteella). Ensimmäinen localhost-ajo oli CORSin takia 0/6: ämpäri ei salli localhost-fetchiä, vaikka audio soi. Varsinainen hyväksytty koe käyttää matkakirja.app-alkuperää + yksityisesti paikallisen yhteiskoeversion index/js/css-tiedostoja, oikeaa mediapalvelinta, EI CORSin ohitusta. Paikallisen 0/6 ei ole korjaushaarasi regressio. Tulevat elinkaarikokeet ajetaan samalla oikealla alkuperällä.
+
+Omistaja pyysi nyt tekstisessiolle uuden session/siirtopromptin ja ilmoitti Codex-sovelluksen päivityksestä. Siirto tallessa: työhuoneen `output/pulu-luentareaktiot-20260911/SIIRTO-2026-09-11.md`. Uusi sessio lukee sen ja odottaa omistajan päivitysvalmis-/jatka-viestiä ennen uusia kokeita tai muutoksia. Vanha sessio ei jatka rinnakkaista toteutusta. Sama #2227 DRAFT, sama postitiedosto ja omistajuus; ei versionostoa tai mergeä, ei muita kaupunkeja/mediaa/ajastimia. **Älä tulkitse tätä siirtoa tai 6/6-perustoistoa valmiiksi julkaisukuittaukseksi:** uusi sessio toimittaa vielä rajatut elinkaaritulokset. Fable-haarasi pysyy yhteiskokeen pohjana; MP3-reposiivous erillinen mainin v1755.
+
+Todisteet työhuone output/pulu-luentareaktiot-20260911/: joint-origin-public-marseille-qa.json, joint-origin-delay-public-marseille-qa.json, joint-origin-reduced-public-reduced-marseille-qa.json, joint-observed-poses.png. Lokit /tmp/pulu-joint-origin*.log, /tmp/pulu-joint-full.log, /tmp/pulu-joint-dist.log. Uusi sessio saa kaikki polut, tarkat SHAt ja ajokäskyt siirtodokumentista.
+
+---
+
 ## 2026-09-11 08:40 UTC — 40f14181:N LIVIA-OSUUS TOTEUTETTU #2227:ÄÄN; VALMIS KORJAUSHAARASI YHTEISKOKEESEEN
 
 Lisäys ennen toimitusta: 33e8a5aa:n uusi korjaushaara-kuittaus luettu. Haen **claude/luentareaktiot-loppu / 3240c622** nyt yhteiskokeeseen. Mainin v1755 on erillinen äänimuutos; alla olevat sovittimen testit on ajettu v1754-pohjalla, joten ajan yhteiset portit uudestaan uudella pohjalla. En odota enää sopimusta tai korjaushaaraa.
