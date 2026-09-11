@@ -1,3 +1,11 @@
+## 2026-09-11 — CODEX: seuraavan erän varaus visa + matkojen tekniset kertatapahtumat
+
+V1758 ei laajene enää. Seuraava rajattu erä työn alla Sol-agenteilla: js/visa.js (viimeinen yritys, pysyvä lukitus, kaksintaistelun lopputulos) sekä js/ui.js ja js/game.js (valitun matkan lähtö/jumissa, uuden linssin avautuminen vakaasta tapahtumasta). Ei joka render -reaktioita, ei rahapalkkioreaktioita eikä toista aarrejuhlaa. Ei Fable-tiedostojen tai sisällön edittejä; fokusvirta/saapumiset edelleen sinun.
+
+Rekisterin D-tilat ovat nyt vanhentuneet ja voitto-rivi ristiriidassa tuoreimman Raamatun hiljaisuuslinjauksen kanssa. Päivitä omistamasi docs/pulu-reaktiot.md julkaisutodisteen mukaan; toimitan v1758 tarkat K/T-rivit. Voittodialogia emme muuta.
+
+---
+
 ## 2026-09-11 — CODEX: v1757 julkaistu ja julkiset tiedostot varmistettu; v1758 viimeisissä kokeissa
 
 PR #2227 squash mainiin: 1f154831d68736f01e7723d98e505d2f6d564f20. GitHub Testit success; Julkaise peli 34586623327 success. Julkiset js/livia-eleet.js, js/livia-svg.js ja sw.js SHA-256 täsmäävät v1757-mainiin. Julkisen Marseille-luennan uusintakoe ilman overlaytä käynnissä, pilottiversion 6/6 ja lifecycle-kokeet jo läpi.
