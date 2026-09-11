@@ -1,3 +1,18 @@
+## 11.9.2026 — Omistajan uusi kuplien piilotus/plus-palautus ja chatin sisällönmukaiset eleet
+
+Omistajan uudet suorat täsmennykset tässä keskustelussa:
+1. Pulun puhekuplat piiloutuvat itsestään 3 s PUHEEN LOPUTTUA tai karttaa liikutettaessa.
+2. Pulun vasemmassa yläkulmassa pieni plus-ikoni omassa mini-puhekuplassa palauttaa puhekuplan näkyviin. Pulu itse avaa yhä chatin.
+3. Automaattiset Pulun puhekuplat pois näkyvistä chatin historiassa; varsinaiset kysymys/vastaus-viestit ja tallennettu data säilyvät.
+4. Chatin "kysyn pöllöltä, pieni hetki" -odotuksessa Pulu käy nopeasti jossain ja palaa VASTAUKSEN KERA.
+5. Reaktiot chatissa eivät nyt vastaa sisältöä. Pulu saa olla tietäväisemmän näköinen ja selailla kirjaa chatin aikana; sisältöön/puheeseen sidotut reaktiot, ei irrallinen satunnaisilme.
+
+Codex toteuttaa nämä erillisenä seuraavana teknisenä eränä pollo.js/pulun CSS + livia-eleet/svg/tilanteet (rajatut Sol-agentit). En tee uusia tarinatekstejä tai mediaa. Alkulentopiilotus+traileriväistö ja Kantsuu-kuplanpoisto valmistuvat ensin omaksi PR:ksi. Kirjaa käyttäjän linjaukset Raamattuun. Julkaisuvastuu säilyy sinulla.
+
+Lisäkuittaus: #2239 remote49c03c24 CI34596083456 SUCCESS. v1762 koko public-ensipelikoesarjan uusinta 10/10, 0 JS-virhettä, ilman overlaytä: audio-on, normaaliliito, index4muotokuva, reduced320, varhainen API-valinta, näkyvä canvasvalinta, hidden/pagehide/destroy, reduced kesken liidon. Avaus-1 soi ennen laskua; lisäksi 3 native-mediauusintaa onnistui 22–28ms käynnistysviiveellä. Yksittäinen aiempi epäonnistuminen sopii hitaaseen hakuun: nykyinen kupla-ajastin voi ohittaa audion jos metadata ei valmistu ~3.8s:ssa. Se on rajattu jatkolaatuhuomio, ei tässä muutettu lähdettä.
+
+---
+
 ## 11.9.2026 — #2239 READY v1762-pohjalla; 2745 testiä ja neljä aitoa kohtaamispolkua läpi
 
 Kohtaamistagien PR #2239 on READY ja päivitetty v1762-mainin 7b13f8a4 päälle non-force merge-commitilla 49c03c2484ce6a5f24748b12193387cbbc02d8e8. Testattu puu f662b1f171c844f0fe392297d31d8373a0a53711 vastaa paikallista 8a2738a5-puuta. Vain visa.js + tests/pulu-kohtaamistagit.test.mjs. 2745 pass / 0 fail / 13 skip (2758 testiä), 78 s. Uusittu oikea Chrome Game/UI/renderQuiz: Kairo tervehdys ja väärä vastaus; Praha kaaritervehdys ja laataton kaariaarre; kaikki neljä oikea tagi+näkyvä pose kerran, rerender hiljainen, 0 JS-virhettä. Uusi CI34596083456 vielä käynnissä tämän viestin hetkellä. Julkaise heti sen onnistuttua oman versionostosi kautta; ei muita riippuvuuksia.
