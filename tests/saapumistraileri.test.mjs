@@ -35,6 +35,7 @@ import {
   naytaSaapumistraileri, piilotaSaapumistraileri, trailerinKuvat,
   trailerinKesto, TRAILERIN_KUVIA, NIMEN_PORRAS_MS, NIMEN_LENTO_MS,
   ISKULAUSEEN_VIIVE_MS, iskulauseenViive, trailerinIskulause,
+  trailerinNakyma,
 } from '../js/saapumistraileri.js';
 import { KULTTUURI_KATEGORIAT } from '../js/packs/kulttuuri-kategoriat.js';
 import { ISKULAUSEET } from '../js/packs/iskulauseet.js';
@@ -169,20 +170,78 @@ class Elementti {
   }
 }
 
+/*
+ * DOKUMENTIN JA IKKUNAN TAPAHTUMAT OVAT OIKEITA (11.9.2026).
+ * Traileri kuuntelee näkyvyyden vaihtoa, bfcache-paluuta ja näkymän
+ * koon muutosta mitatakseen ruudun uudelleen — no-op-kuuntelija ei
+ * voisi valvoa juuri sitä regressiota, jonka takia tämä on tehty.
+ */
+const dokumentinKuuntelijat = new Map();
 const asiakirja = {
   body: new Elementti('body'),
   head: new Elementti('head'),
+  documentElement: { clientWidth: 0, clientHeight: 0 },
+  hidden: false,
   createElement: (nimi) => new Elementti(nimi),
   createTextNode: (teksti) => new Teksti(teksti),
   getElementById: () => null,
   // Ei linkkiä styles.css:ään: tyylin lataus palaa saman tien.
   querySelector: () => null,
   querySelectorAll: (valitsin) => asiakirja.body.querySelectorAll(valitsin),
-  addEventListener: () => {},
-  removeEventListener: () => {},
+  addEventListener: (laji, fn) => {
+    if (!dokumentinKuuntelijat.has(laji)) dokumentinKuuntelijat.set(laji, []);
+    dokumentinKuuntelijat.get(laji).push(fn);
+  },
+  removeEventListener: (laji, fn) => {
+    dokumentinKuuntelijat.set(laji, (dokumentinKuuntelijat.get(laji) ?? []).filter((k) => k !== fn));
+  },
 };
 
 globalThis.document = asiakirja;
+
+const ikkunanKuuntelijat = new Map();
+globalThis.addEventListener = (laji, fn) => {
+  if (!ikkunanKuuntelijat.has(laji)) ikkunanKuuntelijat.set(laji, []);
+  ikkunanKuuntelijat.get(laji).push(fn);
+};
+globalThis.removeEventListener = (laji, fn) => {
+  ikkunanKuuntelijat.set(laji, (ikkunanKuuntelijat.get(laji) ?? []).filter((k) => k !== fn));
+};
+
+const nakyvanKuuntelijat = new Map();
+globalThis.visualViewport = {
+  width: 0,
+  height: 0,
+  scale: 1,
+  addEventListener: (laji, fn) => {
+    if (!nakyvanKuuntelijat.has(laji)) nakyvanKuuntelijat.set(laji, []);
+    nakyvanKuuntelijat.get(laji).push(fn);
+  },
+  removeEventListener: (laji, fn) => {
+    nakyvanKuuntelijat.set(laji, (nakyvanKuuntelijat.get(laji) ?? []).filter((k) => k !== fn));
+  },
+};
+
+/** Kuinka moni kuuntelija on nyt kiinni (irrotuksen vartiointi). */
+const kuuntelijoita = () => [dokumentinKuuntelijat, ikkunanKuuntelijat, nakyvanKuuntelijat]
+  .reduce((summa, taulu) => summa + [...taulu.values()].reduce((n, l) => n + l.length, 0), 0);
+
+const laukaise = (taulu, laji) => [...(taulu.get(laji) ?? [])].forEach((fn) => fn({ type: laji }));
+
+/**
+ * RUUTU JA ASETTELUVIEWPORTTI ERIKSEEN — juuri se tila, jossa vika on.
+ * WKWebView jättää sovellusvaihdon jälkeen ASETTELUviewportin vanhaan
+ * kapeaan mittaan, kun ruutu (visualViewport, innerWidth) on yhä oikea.
+ */
+const asetaRuutu = ({ asettelu, ruutu, zoomi = 1 }) => {
+  asiakirja.documentElement.clientWidth = asettelu[0];
+  asiakirja.documentElement.clientHeight = asettelu[1];
+  globalThis.visualViewport.width = ruutu[0];
+  globalThis.visualViewport.height = ruutu[1];
+  globalThis.visualViewport.scale = zoomi;
+  globalThis.innerWidth = ruutu[0];
+  globalThis.innerHeight = ruutu[1];
+};
 
 const KOEKAUPUNKI = { id: 'marseille', name: 'Marseille' };
 const tekoUi = () => ({ game: { cityOf: () => KOEKAUPUNKI } });
@@ -545,15 +604,16 @@ test('kuvan leveys lasketaan MOLEMMISTA katoista — ei pelkästä leveydestä',
   assert.doesNotMatch(saanto, /width:\s*auto/, 'width: auto jättää kuvan omaan pikselikokoonsa');
 });
 
-test('katot ovat vähintään 96 vw ja 92 vh ja kotelo käyttää samoja', () => {
+test('katot ovat vähintään 96 % ja 92 % mitatusta ruudusta ja kotelo käyttää samoja', () => {
   const css = readFileSync(new URL('../css/saapumistraileri.css', import.meta.url), 'utf8');
   const katot = css.slice(css.indexOf('.saapumistraileri {'), css.indexOf('.saapumistraileri.ohitettu'));
-  const leveys = /--traileri-leveyskatto:\s*(\d+(?:\.\d+)?)vw/.exec(katot);
-  const korkeus = /--traileri-korkeuskatto:\s*(\d+(?:\.\d+)?)vh/.exec(katot);
-  assert.ok(leveys && korkeus, 'katot puuttuvat päällyksen muuttujista');
-  assert.ok(Number(leveys[1]) >= 96,
-    `omistaja 11.9.2026: "herokuva on yhä liian pieni" — leveyskatto ${leveys?.[1]}vw`);
-  assert.ok(Number(korkeus[1]) >= 92, `korkeuskatto ${korkeus?.[1]}vh on liian matala`);
+  const leveys = /--traileri-leveyskatto:\s*calc\(var\(--traileri-ruutu-leveys\)\s*\*\s*(\d*\.?\d+)\)/.exec(katot);
+  const korkeus = /--traileri-korkeuskatto:\s*calc\(var\(--traileri-ruutu-korkeus\)\s*\*\s*(\d*\.?\d+)\)/.exec(katot);
+  assert.ok(leveys && korkeus,
+    'katot on laskettava MITATUSTA ruudusta (--traileri-ruutu-*), ei vw/vh-yksiköistä');
+  assert.ok(Number(leveys[1]) >= 0.96,
+    `omistaja 11.9.2026: "herokuva on yhä liian pieni" — leveyskatto ${leveys?.[1]}`);
+  assert.ok(Number(korkeus[1]) >= 0.92, `korkeuskatto ${korkeus?.[1]} on liian matala`);
   const kotelo = css.slice(css.indexOf('.saapumistraileri-kuva {'));
   const saanto = kotelo.slice(0, kotelo.indexOf('}'));
   assert.match(saanto, /max-width:\s*var\(--traileri-leveyskatto\)/,
@@ -577,4 +637,179 @@ test('skripti kirjoittaa kuvan oman kuvasuhteen koteloon', () => {
   assert.equal(kotelo.style['--traileri-kuvasuhde'], String(1536 / 1024),
     'css laskee leveyden korkeuskatosta tällä luvulla');
   piilotaSaapumistraileri(ui);
+});
+
+/* ---------------------------------------------------------------- */
+/* Ruudun mitta ja paluu toisesta sovelluksesta                      */
+/* (omistaja 11.9.2026 klo 23.18)                                    */
+/* ---------------------------------------------------------------- */
+
+/*
+ * JUURISYY, JOTA NÄMÄ VARTIOIVAT. Omistaja 11.9.2026 klo 23.18,
+ * sanatarkasti: *"Nyt taas näkyy kuvat pienempänä vaikka välissä näkyi
+ * isompana. Syy on ilmeisesti siinä jos käyn toisessa apissa ja palaan
+ * matkakirjaan niin sitten kuvien koko muuttuu pienemmäksi"*.
+ *
+ * WKWebView jättää sovellusvaihdon jälkeen ASETTELUVIEWPORTIN vanhaan
+ * kapeaan mittaan, kunnes joku pakottaa laskennan uusiksi. `96vw` on
+ * 96 % viewportista — ei ruudusta — joten koko traileri kutistui sen
+ * mukana. Mitattu Chromiumilla 11.9.2026: 834 × 1194 ruudulla, jonka
+ * asetteluviewportti oli jäänyt 480 px:iin, maalattu kuva oli 461 px
+ * eli 55,2 % ruudusta (sama luku kuin omistajan kaappauksessa);
+ * korjattuna 801 px eli 96,0 %.
+ *
+ * Siksi mitta MITATAAN ja kirjoitetaan pikseleinä, ja se uusitaan aina
+ * kun sivu palaa näkyviin tai näkymä muuttuu.
+ */
+
+test('mitattu ruutu voittaa vanhentuneen asetteluviewportin', () => {
+  asetaRuutu({ asettelu: [480, 700], ruutu: [834, 1194] });
+  assert.deepEqual(trailerinNakyma(globalThis), { leveys: 834, korkeus: 1194 },
+    'jumiutunut asetteluviewportti ei saa kutistaa traileria');
+
+  asetaRuutu({ asettelu: [834, 1194], ruutu: [834, 1194] });
+  assert.deepEqual(trailerinNakyma(globalThis), { leveys: 834, korkeus: 1194 });
+});
+
+test('nipistyszoomissa visuaalinen mitta jätetään huomiotta', () => {
+  // Zoomattuna visuaalinen viewportti on tarkoituksella pienempi kuin
+  // ruutu; jos se voittaisi, traileri kutistuisi zoomin mukana.
+  asetaRuutu({ asettelu: [1024, 1366], ruutu: [400, 600], zoomi: 2.5 });
+  assert.deepEqual(trailerinNakyma(globalThis), { leveys: 1024, korkeus: 1366 });
+  asetaRuutu({ asettelu: [834, 1194], ruutu: [834, 1194] });
+});
+
+test('ilman visualViewporttia mitta tulee innerWidthista', () => {
+  const nakyva = globalThis.visualViewport;
+  delete globalThis.visualViewport;
+  try {
+    asiakirja.documentElement.clientWidth = 0;
+    asiakirja.documentElement.clientHeight = 0;
+    globalThis.innerWidth = 1366;
+    globalThis.innerHeight = 1024;
+    assert.deepEqual(trailerinNakyma(globalThis), { leveys: 1366, korkeus: 1024 });
+  } finally {
+    globalThis.visualViewport = nakyva;
+    asetaRuutu({ asettelu: [834, 1194], ruutu: [834, 1194] });
+  }
+});
+
+test('traileri kirjoittaa mitatun ruudun heti kehykseensä', () => {
+  asetaRuutu({ asettelu: [834, 1194], ruutu: [834, 1194] });
+  const ui = tekoUi();
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  const kehys = traileri()[0];
+  assert.equal(kehys.style['--traileri-ruutu-leveys'], '834px');
+  assert.equal(kehys.style['--traileri-ruutu-korkeus'], '1194px');
+  piilotaSaapumistraileri(ui);
+});
+
+test('paluu toisesta sovelluksesta mittaa ruudun uudelleen', () => {
+  asetaRuutu({ asettelu: [834, 1194], ruutu: [834, 1194] });
+  const ui = tekoUi();
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  const kehys = traileri()[0];
+  // ENNEN: oikea mitta.
+  assert.equal(kehys.style['--traileri-ruutu-leveys'], '834px');
+
+  // Sovellusvaihto: asetteluviewportti jää 480 px:iin, ruutu on yhä 834.
+  asetaRuutu({ asettelu: [480, 700], ruutu: [834, 1194] });
+  laukaise(dokumentinKuuntelijat, 'visibilitychange');
+  assert.equal(kehys.style['--traileri-ruutu-leveys'], '834px',
+    'paluussa mitta on ruutu, ei jumiutunut asetteluviewportti (461 px vs. 801 px)');
+  assert.equal(kehys.style['--traileri-ruutu-korkeus'], '1194px');
+  piilotaSaapumistraileri(ui);
+});
+
+test('bfcache-paluu (pageshow) mittaa ruudun uudelleen', () => {
+  asetaRuutu({ asettelu: [480, 700], ruutu: [480, 700] });
+  const ui = tekoUi();
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  const kehys = traileri()[0];
+  assert.equal(kehys.style['--traileri-ruutu-leveys'], '480px');
+  asetaRuutu({ asettelu: [480, 700], ruutu: [1194, 834] });
+  laukaise(ikkunanKuuntelijat, 'pageshow');
+  assert.equal(kehys.style['--traileri-ruutu-leveys'], '1194px');
+  assert.equal(kehys.style['--traileri-ruutu-korkeus'], '834px');
+  piilotaSaapumistraileri(ui);
+});
+
+test('näkymän koon muutos (kääntö, visualViewport) mittaa uudelleen', () => {
+  asetaRuutu({ asettelu: [834, 1194], ruutu: [834, 1194] });
+  const ui = tekoUi();
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  const kehys = traileri()[0];
+
+  asetaRuutu({ asettelu: [1194, 834], ruutu: [1194, 834] });
+  laukaise(ikkunanKuuntelijat, 'orientationchange');
+  assert.equal(kehys.style['--traileri-ruutu-leveys'], '1194px');
+
+  asetaRuutu({ asettelu: [1366, 1024], ruutu: [1366, 1024] });
+  laukaise(ikkunanKuuntelijat, 'resize');
+  assert.equal(kehys.style['--traileri-ruutu-leveys'], '1366px');
+
+  asetaRuutu({ asettelu: [1024, 1366], ruutu: [1024, 1366] });
+  laukaise(nakyvanKuuntelijat, 'resize');
+  assert.equal(kehys.style['--traileri-ruutu-korkeus'], '1366px');
+  piilotaSaapumistraileri(ui);
+});
+
+test('paluu merkitsee myös kuvasuhteet uudelleen', () => {
+  asetaRuutu({ asettelu: [834, 1194], ruutu: [834, 1194] });
+  const ui = tekoUi();
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  const kotelo = traileri()[0].querySelectorAll('.saapumistraileri-kuva')[0];
+  const img = kotelo.querySelector('IMG');
+  // Taustassa purettu ja uudelleen ladattu kuva: mitta on olemassa,
+  // mutta yksikään load-tapahtuma ei enää tule. Paluu kirjoittaa sen.
+  delete kotelo.style['--traileri-kuvasuhde'];
+  img.naturalWidth = 1600;
+  img.naturalHeight = 900;
+  laukaise(dokumentinKuuntelijat, 'visibilitychange');
+  assert.equal(kotelo.style['--traileri-kuvasuhde'], String(1600 / 900));
+  piilotaSaapumistraileri(ui);
+});
+
+test('siivous irrottaa kaikki näkymäkuuntelijat', () => {
+  const pohja = kuuntelijoita();
+  const ui = tekoUi();
+  naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  assert.ok(kuuntelijoita() > pohja, 'trailerin pitää kuunnella näkymää');
+  piilotaSaapumistraileri(ui);
+  assert.equal(kuuntelijoita(), pohja,
+    'poistunut traileri ei saa jäädä kuuntelemaan näkymää');
+});
+
+test('kellon mukaan päättynyt traileri suljetaan paluussa eikä jää välitilaan', async () => {
+  asetaRuutu({ asettelu: [834, 1194], ruutu: [834, 1194] });
+  const ui = tekoUi();
+  const lupaus = naytaSaapumistraileri(ui, KOEKAUPUNKI);
+  const tila = ui.saapumistraileri;
+  assert.ok(tila.kesto > 0, 'trailerilla on kesto kellossa mitattuna');
+  /*
+   * TAUSTALLA AJASTIMET EIVÄT LAUKEA. Jos iOS jättää ne kokonaan
+   * laukaisematta, traileri jäisi ruudulle ja luenta odottaisi
+   * lupausta ikuisesti — siksi paluu tarkistaa kellon.
+   */
+  tila.alku = Date.now() - tila.kesto - 1;
+  laukaise(dokumentinKuuntelijat, 'visibilitychange');
+  assert.equal(traileri().length, 0, 'kellon mukaan ohi mennyt traileri poistuu paluussa');
+  assert.equal(await lupaus, true, 'lupauksen on ratkettava, tai luenta ei ala koskaan');
+});
+
+test('trailerin mitat eivät saa palata vw/vh-yksiköihin', () => {
+  const css = readFileSync(new URL('../css/saapumistraileri.css', import.meta.url), 'utf8');
+  const ilmanKommentteja = css.replace(/\/\*[\s\S]*?\*\//g, '');
+  const rivit = ilmanKommentteja.split('\n')
+    .filter((rivi) => /\d\s*v[wh]\b/.test(rivi))
+    .map((rivi) => rivi.trim());
+  /*
+   * Ainoa sallittu vw/vh on ruutumuuttujien VARAMITTA: se on voimassa
+   * vain siihen asti, kunnes skripti on ehtinyt mitata ruudun (ja
+   * testien DOM-mallissa, jossa mittaa ei ole). Kaikki muu vw/vh
+   * kutistuisi taas vanhentuneen asetteluviewportin mukana.
+   */
+  const sallitut = rivit.filter((rivi) => /^--traileri-ruutu-(leveys|korkeus):\s*100v[wh];$/.test(rivi));
+  assert.deepEqual(rivit, sallitut,
+    `vw/vh karkasi takaisin trailerin mittoihin: ${rivit.filter((r) => !sallitut.includes(r)).join(' | ')}`);
 });

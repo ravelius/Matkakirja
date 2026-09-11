@@ -26,15 +26,42 @@
   --traileri-iskulause: 600ms;
 
   /*
+   * RUUDUN MITTA TULEE MITATTUNA, EI vw/vh-YKSIKKÖNÄ (omistaja
+   * 11.9.2026 klo 23.18, iPad-kaappaus: *"Nyt taas näkyy kuvat
+   * pienempänä … Syy on ilmeisesti siinä jos käyn toisessa apissa ja
+   * palaan matkakirjaan"*).
+   *
+   * WKWebView jättää toisesta sovelluksesta palatessa ASETTELU-
+   * VIEWPORTIN vanhaan, kapeampaan mittaan — sama vika, jota js/ui.js
+   * (mittaaNakyma, vahdiNakymanKokoa) on paikannut lehdelle ja
+   * kartalle kolmesti. Silloin `vw` ja `vh` eivät ole ruudun mitta
+   * vaan vanhentuneen viewportin mitta, ja koko traileri kutistuu sen
+   * mukana. Mitattu Chromiumilla vanhentuneella 480 px:n asettelu-
+   * viewportilla 834 px:n ruudulla: kuva 461 px = 55 % ruudusta.
+   *
+   * Siksi skripti (js/saapumistraileri.js paivitaTrailerinMitat)
+   * kirjoittaa ruudun mitan pikseleinä näihin kahteen muuttujaan ja
+   * uusii luvun aina kun sivu palaa näkyviin tai näkymä muuttuu.
+   * vw/vh jää vain varamitaksi ensimmäiseen ruutuun (ja testeihin),
+   * eikä yhtäkään trailerin mittaa saa enää kirjoittaa suoraan
+   * vw/vh-yksikköinä — muuten se karkaa taas omille teilleen.
+   */
+  --traileri-ruutu-leveys: 100vw;
+  --traileri-ruutu-korkeus: 100vh;
+
+  /*
    * KUVAN KATOT YHDESSA PAIKASSA (omistaja 11.9.2026 klo 22.26,
    * iPad-kaappaus: *"herokuva on yha liian pieni"*). Sama kaksikko
    * ohjaa seka kuvakoteloa etta kuvaa, jotta ne eivat voi erkaantua.
    */
-  --traileri-leveyskatto: 96vw;
-  --traileri-korkeuskatto: 92vh;
+  --traileri-leveyskatto: calc(var(--traileri-ruutu-leveys) * 0.96);
+  --traileri-korkeuskatto: calc(var(--traileri-ruutu-korkeus) * 0.92);
 
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: var(--traileri-ruutu-leveys);
+  height: var(--traileri-ruutu-korkeus);
   z-index: 90;
   display: flex;
   align-items: center;
@@ -75,7 +102,7 @@
   max-width: var(--traileri-leveyskatto);
   max-height: var(--traileri-korkeuskatto);
   opacity: 0;
-  transform: translateX(115vw);
+  transform: translateX(calc(var(--traileri-ruutu-leveys) * 1.15));
   transition:
     transform var(--traileri-liuku) cubic-bezier(0.33, 0, 0.2, 1),
     opacity 260ms ease;
@@ -94,7 +121,7 @@
    mutta laidassa ei roiku puolikasta kuvaa. */
 .saapumistraileri-kuva.ulos {
   opacity: 0;
-  transform: translateX(-115vw);
+  transform: translateX(calc(var(--traileri-ruutu-leveys) * -1.15));
   transition:
     transform var(--traileri-ulos) cubic-bezier(0.6, 0, 0.75, 1),
     opacity var(--traileri-ulos) cubic-bezier(0.6, 0, 0.75, 1);
@@ -150,7 +177,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 96vw;
+  max-width: calc(var(--traileri-ruutu-leveys) * 0.96);
   pointer-events: none;
 }
 
@@ -170,8 +197,8 @@
   white-space: nowrap;
   align-items: center;
   justify-content: center;
-  max-width: 96vw;
-  padding: 0 2vw;
+  max-width: calc(var(--traileri-ruutu-leveys) * 0.96);
+  padding: 0 calc(var(--traileri-ruutu-leveys) * 0.02);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.35em;
@@ -179,7 +206,10 @@
      harvennuksella pitää nimen optisesti keskellä. */
   text-indent: 0.175em;
   font-family: var(--font-otsikko, var(--font-luku, serif));
-  font-size: min(clamp(2.4rem, 9vw, 7rem), calc(88vw / (var(--nimen-merkit, 8) * 1.1)));
+  font-size: min(
+    clamp(2.4rem, calc(var(--traileri-ruutu-leveys) * 0.09), 7rem),
+    calc(var(--traileri-ruutu-leveys) * 0.88 / (var(--nimen-merkit, 8) * 1.1))
+  );
   line-height: 1.1;
   color: #fff;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
@@ -196,13 +226,13 @@
    kirjaimen laskeuduttua. */
 .saapumistraileri-iskulause {
   margin-top: 0.6em;
-  max-width: 92vw;
+  max-width: calc(var(--traileri-ruutu-leveys) * 0.92);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   text-indent: 0.09em;
   font-family: var(--font-otsikko, var(--font-luku, serif));
-  font-size: clamp(0.9rem, 2.6vw, 1.4rem);
+  font-size: clamp(0.9rem, calc(var(--traileri-ruutu-leveys) * 0.026), 1.4rem);
   line-height: 1.3;
   color: #fff;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
