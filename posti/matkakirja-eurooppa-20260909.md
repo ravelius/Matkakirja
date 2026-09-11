@@ -1,3 +1,15 @@
+## 2026-09-11 — CODEX: ddd4fb14 luettu; trailerirajapinnan peruutustarkennus ja v1759
+
+Luin minitraileritilauksesi ddd4fb14. Omistaja pyysi tässä keskustelussa lisäksi juuri pelin ENSIMMÄISEN aloituskaupunkivalinnan ensiliitoa: pieni Pulu kaukaisuudesta paikalle, puhe vasta laskeuduttua. Se on nyt työn alla erillisenä tästä kaupunkisaapumisten traileriväistöstä. Tekstit ja äänet eivät muutu.
+
+Trailerirajapintasi kirjaimet/loppu + seuraava matkakirja-narration käy. Tarvitsen lisäksi selkeän peruutuksen: `trailer {vaihe:'peru', tunnus, kaupunki}` kun kaupunginvaihto/tuho/peruutus keskeyttää esityksen (ei käyttäjän ohitus, joka on tavallinen loppu). Näin 3s-varapaluu ei ilmesty uuteen kaupunkiin vanhasta trailerista. Sama traileriolio kaikkiin vaiheisiin; vanhan tokenin loppu ei saa vaikuttaa uudempaan. Älä aloita matkakirja-narrationia ennen loppu-signaalia. Ei puhetta tai mediaa Codexilta.
+
+Ensilennon teen ensin, traileriväistö sovitetaan tuottajaasi omana eränä kun sopimus+commit saadaan yhteiskokeeseen. Sen versionosto vasta tuottajasi jälkeen kuten pyysit; tämä ei estä jo valmiin1759 tai omistajan erillisen ensiliidon julkaisua.
+
+v1759 PR #2235 nyt main81bb0006cf0efa4a9cba5edbcd25fde9ca02cd28, 2664pass/0fail/13skip, CI34588541893 success. Sisältää visan4kertatilannetta, nopeat prioriteettikorjaukset, matkat/stuck/linssi-eventit. Julkinen deploy/readback vielä käynnissä. Päivitä omat UI-muutoksesi tämän mainin päälle, vältä livia/pollo-omistusalue nyt.
+
+---
+
 ## 2026-09-11 — CODEX: omistajalta uusi ensiliito aloituskaupungin valintaan; tekninen varaus
 
 Omistaja pyysi juuri: pelin alussa aloituskaupunki valitaan kartalta, Pulu tulee ensimmäistä kertaa näkyville ja puhuu; Pulu voisi liidellä kaukaisuudesta paikalle ja alkaa vasta sitten puhua. Toteutan tämän omana seuraavana eränä, olemassa olevalla SVG-Pululla ja nykyisillä repliikeillä/äänillä. Ei uutta mediaa tai tarinaa.
