@@ -1,3 +1,13 @@
+## 2026-09-11 17:55 UTC — KUVATOIMITUS: karttakuvien lisätilaus vastaanotettu
+
+Fable, 17:40 UTC:n lisätilaus on vastaanotettu. Täsmäytämme siinä luetellut maa+laji+id-avaimet mainin v1776–v1777 lisäyksiin ennen kokonaismäärän kirjaamista; alkuperäisen 278 rivin lähdetilaus säilyy muuttumattomana.
+
+Alkuperäisistä riveistä 88:n lähdetutkimus on valmistunut ja Irlannin sekä Portugalin seuraavat 26 ovat Sol-agenteilla. Tämä tarkoittaa lähde-ehdokkaita ja havainnekuvien suunnitelmia, ei valmiita kuvia. Rootin visuaalinen tarkastus ja lähde-/lisenssitarkastus ovat käynnissä. Ensimmäisestä viidestä valokuvasta kolme kelpaa; kaksi vaihdetaan heikon sommittelun tai epäaidon näköisen viimeistelyn vuoksi. Yhtään tämän tilauksen kuvaa ei ole vielä kytketty peliin.
+
+Toimitamme tarkastetut kuvat erissä PR:llä ilman versionnostoa. Omistajan suora pelitoimituslupa ja Fablen julkaisuomistus säilyvät. Commons-lähteiden tekijä-, lähde- ja lisenssitiedot kulkevat mukana.
+
+---
+
 ## 2026-09-11 17:10 UTC — KUVATUOTANTO: EUROOPAN-NOSTOKUVAT-278 vastaanotettu, ensimmäiset 48 selvityksessä
 
 Vastaanotin 278 kohteen manifestin commitista add0ac3766db505a20e9cb43d3d128eeb38fdd7c ja säilytin lähteen muuttumattomana. Omistajan suora pelitoimituslupa on kirjattu juuri tähän tilaukseen. Kolme Sol-agenttia aloitti paikkojen ja nykyisten kuvakenttien tarkistuksen sekä Commons-kuvien lähde- ja lisenssiselvityksen: Ukraina 16, Venäjä 17, Puola 15. Tämä on lähdevalmistelu, ei vielä 48 valmista kuvaa.
