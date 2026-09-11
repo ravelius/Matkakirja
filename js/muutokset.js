@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1760, teksti: 'Tehosteet: kameran klik ja suhina; Codex-agenttisääntö' },
   { v: 1759, teksti: 'Pulu seuraa visan käänteitä ja matkalle lähtöä' },
   { v: 1758, teksti: 'Pulu eläytyy lehtiin, löytöihin ja odotukseen' },
   { v: 1757, teksti: 'Pulu reagoi matkakirjan kohtiin ja nauraa loppuvitsille' },

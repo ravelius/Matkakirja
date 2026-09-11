@@ -5,6 +5,12 @@ workflow ajetaan Opuksella (koodi, sisältö) tai Sonnetilla (lukeva työ,
 tarkistukset). Ei poikkeuksia vaikeaankaan ongelmaan. Parvina saa ajaa.
 Fablemax-agenttityyppi on poistettu 7.9.2026.
 
+Täsmennys (omistaja 11.9.2026, tekstisession kautta): yllä oleva koskee
+Clauden agentteja. ChatGPT/Codex-sessio ("tekstisessio") saa käyttää Solia
+ja muita kevyempiä agenttimalleja; molemmat pääsessiot delegoivat rajatut
+tehtävät kevyimmälle riittävän kyvykkäälle mallille, kun se säästää
+kokonaiskäyttöä laadusta tinkimättä (Raamattu, Ydinajatus).
+
 # Roolitus: kolme sessiota, yksi peli
 
 *(Päätetty omistajan kanssa 8.8.2026. Roolit on sidottu NIMIIN ja
@@ -71,6 +77,33 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
   tehtävänantoa. Raportit omalle haaralle tai viestinä Fablelle.
 
 ## Viestintä sessioiden välillä
+
+### Yhteiskehitys tekstisession (Codex) kanssa (omistaja 11.9.2026)
+
+Kanava on git-postilaatikko (haara `claude/postilaatikko`): Fable
+kirjoittaa posti/fable-vanha.md:n kärkeen, tekstisessio omaan
+tiedostoonsa. Käytäntö (Raamattu, Ydinajatus: YHTEISKEHITYKSEN KEVENNYS):
+
+1. **Tilannekortti** per yhteinen ominaisuus (esim.
+   posti/pulu-luentareaktiot-tila.md, ylläpitäjä Codex): tavoite/rajaus,
+   tiedostojen omistajat, commitit, rajapinnan lähde, hyväksymiskriteerit,
+   todisteet, avoin este, seuraavan siirron tekijä. Päivitetään tilan
+   muuttuessa.
+2. **Rajapinta ennen toteutusta:** tapahtumat, kentät, virhe- ja
+   keskeytyspolut, testattava lopputulos sovitaan ja kuitataan molemmin
+   puolin. Ei hiljaisia paikkauksia toisen omistamiin tiedostoihin
+   (tekstisessio: js/livia-*.js, js/pollo.js, pulun CSS; Fable: sisältö,
+   Raamattu, js/luenta.js, js/luentareaktiot.js, js/fokusvirta.js:n
+   saapumisketju, linssit, työkalut).
+3. **Yksi julkaisuvastaava** per ominaisuus: Pulun kokonaisuudessa Fable
+   (yhdistäminen, versionosto, CI, julkaisu), Codex tekee integraatio-QA:n
+   ja julkisen readbackin. Muutosomistajuus ei siirry.
+4. Kevyet agentit rajattuihin tehtäviin; pääsessio tarkistaa.
+5. Posti luetaan tunneittaisella kierroksella ja työvaiheen vaihtuessa,
+   ei jatkuvalla pollauksella.
+6. Omistajalle vain valmis vaihe, olennainen ongelma tai tuotevalinta —
+   kysymykset aina kysymyskorttina.
+
 
 **TYÖSESSIOT EIVÄT KÄYTÄ TRIGGER-TYÖKALUJA (omistajan sitova ohje
 15.8.2026).** Opus 6 jumittui kahdesti tunneiksi, koska sen

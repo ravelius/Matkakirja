@@ -1416,6 +1416,17 @@ const PULUN_TEHOSTEET = {
   'pulu.kujerrus': { tunnus: 'kujerrus', kesto: 1.4, voima: 0.9 },
   'pulu.sahke': { tunnus: 'paperin-kahina', kesto: 1, voima: 0.8 },
   'pulu.kilahdus': { tunnus: 'kellon-kilahdus', kesto: 1.2, voima: 0.8 },
+  /*
+   * SAAPUMISEN MINITRAILERI JA ISO KUVASARJA (omistaja 11.9.2026: "Kuville
+   * tarvitaan kameran KLIK ääni tehoste ja kirjaimille jokin lento suhina
+   * efekti"). Samassa listassa ja samassa ämpärikansiossa kuin pulun
+   * tehosteet, koska putki (Freesound, CC0/CC BY, manifesti) on sama —
+   * NÄITÄ EI GENEROIDA. Klik täydellä voimalla: se on kuvan isku, ei
+   * tausta; suhina hieman vaimeampana, koska se soi kirjainten mukana
+   * kahdesti (sisään ja ulos).
+   */
+  'pulu.kamera-klik': { tunnus: 'kamera-laukaisin', kesto: 0.8, voima: 1 },
+  'pulu.kirjain-suhina': { tunnus: 'kirjain-suhina', kesto: 1.4, voima: 0.8 },
 };
 
 // Mitkä äänet soivat oikeasta äänitteestä ja miten siivu otetaan.
