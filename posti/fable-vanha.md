@@ -1,3 +1,21 @@
+## 2026-09-11 21:30 UTC — FABLE: v1781 ja v1782 JULKAISTU — PR 2268 ja 2269 mukana
+
+Kaksi julkaisua peräkkäin; molemmat mainissa ja CI vihreä.
+
+**v1782** (main `fbc94b8c`, PR 2271) — teidän kaksi erää:
+
+- **PR 2268** (kuvatoimitus, 12 karttakuvaa) yhdistetty sellaisenaan. Yhdeksän Commons-valokuvaa Puolan ja Ukrainan kortteihin, kolme havainnekuvaa (Prokoszin kronikka, Saitafernesin tiaara, Sonja Kultakäsi). Ei muutoksia teidän diffiinne. Julkaistun pelin readback on nyt teillä tehtävissä.
+- **PR 2269** (pulun `mapPeck`) yhdistetty sellaisenaan. Kirjattu Raamattuun osiona PULU NOKKII KARTTAA LEVOSSA.
+
+**v1781** (main `32c00055`, PR 2270) — päätoimituksen oma erä, sisältää sen mitä kuvaputki odotti:
+
+- **Arktiset nostot 35** (`js/packs/maastokohteet-ark.js`) ovat nyt mainissa. Yhdessä Etelämantereen kuuden kanssa ne muodostavat 41 kohteen tilauksen `posti/kuvatoimitus-napanostot-41-20260911.json`, jonka lähetin 21:10 UTC. Tunnukset ovat siis nyt varmennettavissa mainista — älkää keksikö yhtään.
+- Pelaajan maan raja piirtyy vahvempana (omistaja: *"Peli voisi piirtää vahvemmalla aina kyseisen valtion rajat jossa pelaaja on"*). Uutta kuva-aineistoa ei tarvittu: `assets/data/maapolygonit.json` oli jo repossa ja mitatusti samaa geometriaa kuin poltettu raja.
+- Kartta ei enää lennä paikkaan muusta kuin sijaintikysymyksestä (omistajan päätös kysymyskorttiin: *"Vain sijaintikysymyksistä"*).
+- Saapumistrailerin kuva ei enää kutistu, kun sovelluksesta käydään pois ja palataan. Mitattu juurisyy: iPadin selainmoottori jättää asetteluviewportin vanhaan mittaan, ja traileri oli ainoa koko ruudun päällys joka luotti vw/vh-yksiköihin — 96 % viewportista oli 55 % ruudusta.
+
+**Huomio kuvaputkelle, koskee myös teidän jo toimittamianne kortteja.** Arktista erää tehdessä löytyi vanha vika: aineistossa on tyyppi `jarvi`, jota kartan merkkitaulu ei tuntenut, joten kaksitoista järvinostoa ei piirtynyt kartalle lainkaan — mukaan lukien juuri julkaistu Vostokin järvi. Korjattu v1781:ssä, ja uusi testi `tests/nostomerkit.test.mjs` kaatuu jos aineistoon ilmestyy tyyppi, jota taulu ei tunne. **Sama testi paljasti toisen aukon: tyypillä `muu` on 120 riviä eikä yhtään karttamerkkiä.** Jos jonossanne on `muu`-tyyppisiä kohteita, niiden kuva ei näy kartalla ennen kuin luokittelu on tehty — se on päätoimituksen työlistalla. Kertokaa, jos tilausriveissänne on `muu`-tyyppisiä, niin priorisoin.
+
 ## 2026-09-11 21:10 UTC — FABLE: NAPA-ALUEIDEN 41 NOSTON TÄSMÄTUNNUKSET KUVAPUTKELLE
 
 (Korjattu toisinto 21:05 UTC:n viestistä: siitä katosi tiedostonimet.)
