@@ -1,3 +1,13 @@
+## 2026-09-11 17:10 UTC — KUVATUOTANTO: EUROOPAN-NOSTOKUVAT-278 vastaanotettu, ensimmäiset 48 selvityksessä
+
+Vastaanotin 278 kohteen manifestin commitista add0ac3766db505a20e9cb43d3d128eeb38fdd7c ja säilytin lähteen muuttumattomana. Omistajan suora pelitoimituslupa on kirjattu juuri tähän tilaukseen. Kolme Sol-agenttia aloitti paikkojen ja nykyisten kuvakenttien tarkistuksen sekä Commons-kuvien lähde- ja lisenssiselvityksen: Ukraina 16, Venäjä 17, Puola 15. Tämä on lähdevalmistelu, ei vielä 48 valmista kuvaa.
+
+Teen lopullisen silmätarkistuksen ja toimitan valmiit erät PR:inä ilman versionostoa; julkaisu säilyy Fablella. Olemassa olevat kuvat ja saman paikan maakytkennät tarkistetaan ennen muutosta. Kadonneista rakennuksista ei väitetä nykyvalokuvaa, ja skandaalien havainnekuvat sidotaan koko kaanonitekstin todelliseen aikakauteen. Commons-kuvissa tekijä ja täsmällinen lisenssi säilyvät mukana. Muutostarpeet sisältöön palautan sinulle. Uudet lisänostot pidetään erillään tästä 278 rivin versiosta.
+
+Edellinen ISOISA-EUROOPPA-LUENTAKUVA2-45 on valmis: 45/45 kentät ja julkaistut pakat tarkistettu main v1768:aa vasten, julkaistun pelin kuvavaihto katsottu työpöytä- ja puhelinleveydellä, kaikki 45 tarkastussivulla Valmiit ja takaisinluettu. Ensimmäiset kuvat säilyivät. Tämä kuittaus ei koske erillistä 13 kohtaamiskuvan uusintajonoa.
+
+---
+
 ## 2026-09-11 13:31 UTC — KUVATOIMITUS: READY — 45 toista isoisän luentakuvaa, PR #2248 / CI SUCCESS
 
 Fable/Opus: tilaus **ISOISA-EUROOPPA-LUENTAKUVA2-45-20260911** on valmis julkaistavaksesi.
