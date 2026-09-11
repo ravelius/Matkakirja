@@ -1,0 +1,157 @@
+# Napakalotit: pohjoisnavan ja etelänavan oma kartta atsimutaalisessa
+# projektiossa (tools/tee-napakalotit.mjs) ja vienti ämpäriin polkuun
+# julisteet/pallo/napakalotit/<versio>/pohjoinen.png ja etela.png.
+# Peli kiinnittää kuvat napakansien tilalle (js/pallo.js NAPAKALOTIT).
+#
+# OMISTAJA 11.9.2026, sanatarkasti: *"Maapallon ylä- ja alaosan voisi
+# piirtää oikeanlaiseksi. Siinä näkyy vielä se vanhan kartan teksti.
+# Pohjoisnavalta taas puuttuu kokonaan kartta ihan yläosasta.
+# Etelänavalta taas pitää piirtää vähän isompi alue."*
+#
+# AJO ON PUOLI MINUUTTIA. Korkeusaineisto (3 kaariminuuttia) on repossa
+# (tools/korkeusaineisto/), ja ainoa verkosta haettava on Natural
+# Earthin ne_10m_ocean — sama tiedosto samasta osoitteesta kuin
+# laattapyramidilla (generoi-pyramidi.yml) ja pallon vektoriviivoilla
+# (tee-pallovektorit.yml), jotta rantaviiva osuu laatoissa ja kalotissa
+# samaan kohtaan.
+#
+# UUSI AJO = UUSI VERSIO. Kuvat ovat selaimessa vuoden välimuistissa
+# (immutable), joten samaan polkuun ei koskaan kirjoiteta eri sisältöä.
+# Ajon jälkeen js/pallo.js:n NAPAKALOTTI_VERSIO vaihdetaan tähän
+# versioon — ilman sitä peli näyttää yhä vanhaa kuvaa.
+name: Tee napakalotit
+
+on:
+  workflow_dispatch:
+    inputs:
+      versio:
+        description: 'Ämpärin kansio julisteet/pallo/napakalotit/<versio>/ (tyhjä = tämän päivän päivä + a, esim. 2026-09-11a)'
+        required: false
+        default: ''
+      koko:
+        description: 'Kuvan sivu pikseleinä (potenssi kahdesta)'
+        required: false
+        default: '2048'
+        type: choice
+        options: ['1024', '2048', '4096']
+      ylinaytto:
+        description: 'Ylinäytteistys piirrossa (2 = piirretään kaksinkertaisena ja kutistetaan)'
+        required: false
+        default: '2'
+        type: choice
+        options: ['1', '2', '3']
+      kuiva:
+        description: 'Kuiva ajo: vain suunnitelma, ei kuvia eikä vientiä'
+        required: false
+        default: 'ei'
+        type: choice
+        options: ['ei', 'kylla']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tee-napakalotit-${{ inputs.versio || 'oletus' }}
+  cancel-in-progress: false
+
+jobs:
+  tee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista että salaisuudet ovat tallessa
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${R2_ACCOUNT_ID:-}" ]         || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]             || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            exit 1
+          fi
+
+      - name: Tarkista repon korkeusaineisto
+        run: |
+          set -euo pipefail
+          A=tools/korkeusaineisto/etopo-3kaariminuuttia.bin.gz
+          [ -f "$A" ] || { echo "::error::Korkeusaineisto puuttuu reposta"; exit 1; }
+          echo "korkeusaineisto $(du -h "$A" | cut -f1)"
+
+      # SAMA OSOITE KUIN LAATTAPYRAMIDILLA (generoi-pyramidi.yml jobi
+      # "aineisto"). Kalotin rantaviivan ja maa/meri-jaon on tultava
+      # samasta tiedostosta kuin laattoihin poltetun, tai liitos näkyisi.
+      - name: Hae Natural Earth
+        run: |
+          set -euo pipefail
+          mkdir -p ne-data
+          curl -sSL --retry 3 --max-time 300 -o ne-data/ne_10m_ocean.geojson \
+            "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_ocean.geojson"
+          head -c 40 ne-data/ne_10m_ocean.geojson | grep -q '"FeatureCollection"' \
+            || { echo "::error::ladattu tiedosto ei ole GeoJSON-kokoelma"; exit 1; }
+          ls -la ne-data
+
+      - name: Kuiva ajo (suunnitelma)
+        if: inputs.kuiva == 'kylla'
+        run: |
+          node tools/tee-napakalotit.mjs --ne=ne-data --kuiva --koko=${{ inputs.koko }} \
+            ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
+
+      - name: Asenna sharp ja piirrä kalotit
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          npm install --no-save --no-fund --no-audit sharp
+          node tools/tee-napakalotit.mjs --ne=ne-data --ulos=napakalotit-ulos \
+            --koko=${{ inputs.koko }} --ylinaytto=${{ inputs.ylinaytto }} \
+            ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
+          ls -la napakalotit-ulos
+          # Kuvassa ON oltava alfakanava (reunan häivytys) — ilman sitä
+          # liitos laattoihin näkyisi kiekon reunana.
+          node -e "const s=require('sharp');(async()=>{for(const p of ['pohjoinen','etela']){const m=await s('napakalotit-ulos/'+p+'.png').metadata();console.log(p,m.width+'x'+m.height,'alfa',m.hasAlpha);if(!m.hasAlpha||m.width!==m.height){console.log('::error::'+p+': väärä kuva');process.exit(1);}}})()"
+
+      # KATSO KUVAT AJON JÄLKEEN. Ajo tarkistaa mitat ja alfan, ei sitä
+      # miltä jäätikkö näyttää. Artefakti on tätä varten.
+      - name: Talteen tarkistusta varten
+        if: inputs.kuiva != 'kylla'
+        uses: actions/upload-artifact@v4
+        with:
+          name: napakalotit
+          path: napakalotit-ulos
+          retention-days: 14
+
+      - name: Vie kalotit ämpäriin
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          kansio="$(cat napakalotit-ulos/kansio.txt)"
+          # Kuvat: pitkä välimuisti, versio on polussa.
+          for p in pohjoinen etela; do
+            aws s3 cp "napakalotit-ulos/$p.png" "s3://${R2_BUCKET}/${kansio}$p.png" \
+              --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+              --no-progress --content-type image/png \
+              --cache-control 'public, max-age=31536000, immutable'
+          done
+          # Luettelo viimeisenä (kuten laatoilla ja vektoreilla).
+          aws s3 cp napakalotit-ulos/kalotit.json "s3://${R2_BUCKET}/${kansio}kalotit.json" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --no-progress --content-type application/json --cache-control 'public, max-age=3600'
+          echo "Viety: ${kansio}"
+          echo "Muista vaihtaa js/pallo.js NAPAKALOTTI_VERSIO → $(basename "$kansio")"
