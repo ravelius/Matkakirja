@@ -526,6 +526,19 @@ test('karusellissa ovat molemmat isoisän kuvat ja sitten PuluCam', (t) => {
 
     const kortit = asiakirja.body.querySelectorAll('.pulucam-kortti');
     assert.equal(kortit.length, pulunKuvia, 'pakka nousi kartalle');
+    /*
+     * KOLME VAIHETTA (omistaja 11.9.2026): pieni pakka aukeaa
+     * ensimmäisestä napautuksesta VIUHKAKSI, ja vasta viuhkassa kortin
+     * napautus vie koko ruudulle. Peukalonkynnen kokoisesta pinosta ei
+     * voi valita kuvaa, joten ensimmäinen napautus ei voi tarkoittaa
+     * "tämä kuva".
+     */
+    const paneeli = asiakirja.body.querySelectorAll('.fokusvirta-luentakuva')[0];
+    assert.ok(paneeli.classList.contains('pieni'), 'pakka on pienenä kartalla');
+    kortit.at(-1).dispatch('click');
+    assert.ok(paneeli.classList.contains('levitetty'), 'ensimmäinen napautus levittää viuhkan');
+    assert.equal(asiakirja.body.querySelectorAll('.fokuszoom').length, 0,
+      'viuhkan avaus ei saa viedä suoraan koko ruudulle');
     kortit.at(-1).dispatch('click');
     const kerros = asiakirja.body.querySelectorAll('.fokuszoom')[0];
     assert.ok(kerros, 'karuselli ei auennut');

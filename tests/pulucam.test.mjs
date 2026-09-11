@@ -60,6 +60,7 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 import {
   PULUCAM_ASENNOT, PULUCAM_KATTO, PULUCAM_POHJA, PULUCAM_TARRA_KATTO_PX, PULUCAM_TARRA_OSUUS,
@@ -1249,4 +1250,42 @@ test('jokaisella pakin pulun kuvalla on osoite, selite ja lähde', async () => {
       assert.ok(String(kuva.lahde ?? '').trim(), `${id}: pulun kuvalta puuttuu lähde`);
     }
   }
+});
+
+/* ---------------------------------------------------------------- */
+/* Kolme vaihetta: pieni pino → levitetty viuhka → koko ruutu        */
+/* (omistaja 11.9.2026)                                              */
+/* ---------------------------------------------------------------- */
+
+test('pieni pakka aukeaa napautuksesta viuhkaksi, ei suoraan suurennokseen', () => {
+  const lahde = readFileSync(new URL('../js/pulucam.js', import.meta.url), 'utf8');
+  const kohta = lahde.indexOf("kortti.addEventListener('click'");
+  assert.ok(kohta > 0, 'kortin napautuskäsittelijää ei löydy');
+  const runko = lahde.slice(kohta, kohta + 1600);
+  assert.match(runko, /contains\?\.\('pieni'\)/, 'pientä tilaa ei tunnisteta');
+  assert.match(runko, /classList\.add\('levitetty'\)/, 'napautus ei levitä pakkaa');
+  // Levitetyssä viuhkassa nosto päällimmäiseksi ei enää tule väliin.
+  assert.match(runko, /!paneeli\?\.classList\?\.contains\?\.\('levitetty'\)\s*\n?\s*&&\s*nostaPuluCamKortti/,
+    'levitetyssä viuhkassa kortin napautus ei vie suoraan karuselliin');
+});
+
+test('kartan liike kokoaa viuhkan ja pienentää pakan', () => {
+  const lahde = readFileSync(new URL('../js/fokusvirta.js', import.meta.url), 'utf8');
+  assert.match(lahde, /export function kokoaPuluCamPakka/, 'viuhkan kokoaja puuttuu');
+  const kohta = lahde.indexOf('function kytkeLuentakuvanPienennys');
+  const runko = lahde.slice(kohta, kohta + 1400);
+  assert.match(runko, /kokoaPuluCamPakka\(ui\)/,
+    'kartan liike ei kokoa levitettyä viuhkaa');
+  assert.match(runko, /pienennaLuentakuva\(ui\)/, 'kartan liike ei pienennä pakkaa');
+});
+
+test('viuhkan mitat ovat css:ssä ja pieni pakka on peukalonkynsi', () => {
+  const css = readFileSync(new URL('../css/fokusvirta.css', import.meta.url), 'utf8');
+  assert.match(css, /--luentakuva-pienennys:\s*0\.16/,
+    'omistaja 11.9.2026: "Kuvapino saisi näkyä vielä paljon pienempänä"');
+  assert.match(css, /\.fokusvirta-luentakuva\.pieni\.levitetty \{[\s\S]{0,120}--luentakuva-skaala:\s*var\(--luentakuva-levitys/,
+    'levitetyllä pakalla ei ole omaa mittakaavaa');
+  assert.match(css, /--pulucam-viuhka:\s*3\.4/, 'viuhkakerroin puuttuu');
+  assert.match(css, /calc\(var\(--pulucam-x, 0%\) \* var\(--pulucam-viuhka, 1\)\)/,
+    'kortin siirtymä ei kulje viuhkakertoimen kautta');
 });

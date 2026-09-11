@@ -60,7 +60,7 @@ import {
   LEPOKERROS_NAYTTEITA, LEPOKERROS_SYVYYSSIIRTO, THREE_CLAMP, THREE_LINEAR,
   THREE_LINEAR_MIPMAP_LINEAR, lepokerroksenAlue, lepokerroksenKerrokset, lepokerroksenLaattakatto,
   lepokerroksenSilmat, lepokerroksenSuunnitelma, lepokerroksenTasoRiittaa, lepokerroksenVerkko,
-  luoLaattakerros, luoLepokerroksenAjoitus, pinnanPiste, pyramidinKarttaAla,
+  luoLaattakerros, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste, pyramidinKarttaAla,
 } from './pallolaatat.js';
 
 export {
@@ -1398,6 +1398,155 @@ export const NAPAKANSI_POHJOINEN = '#c9c2af';
 /** Etelän kansi = napajään sävy laatoissa (JAA_SAVY 220,214,198). */
 export const NAPAKANSI_ETELA = '#dcd6c6';
 
+/*
+ * ======== NAPAKALOTIT: KANNEN TILALLE OMA KARTTA ====================
+ *
+ * OMISTAJA 11.9.2026, sanatarkasti: *"Maapallon ylä- ja alaosan voisi
+ * piirtää oikeanlaiseksi. Siinä näkyy vielä se vanhan kartan teksti.
+ * Pohjoisnavalta taas puuttuu kokonaan kartta ihan yläosasta.
+ * Etelänavalta taas pitää piirtää vähän isompi alue."* Painatusteksti
+ * on korjattu v1771:ssä; tässä on se kartta, jota navoilta puuttui.
+ *
+ * MIKSI OMA KUVA EIKÄ LAATTA. Pelin juliste on Miller-projektiossa ja
+ * laatat Web Mercatorissa: kumpikaan ei ulotu navalle (Mercator loppuu
+ * 85,05°:een ja juliste jo 84,0° N:ään ja 61,47° S:ään). Napaa ei siis
+ * voi laatoittaa millään tarkkuudella — se on projektion reikä, ei
+ * tarkkuuskysymys. Siksi kummallekin navalle piirretään OMA
+ * ATSIMUTAALINEN kuva (tools/tee-napakalotit.mjs), jossa napa on
+ * keskellä ja kuvassa ei ole reikää lainkaan.
+ *
+ * KUVAN ALA ON ISOMPI KUIN KANNEN. Pohjoinen kalotti kattaa 80°–90° ja
+ * eteläinen 60°–90° eli selvästi enemmän kuin kannen 83,7° — kaksi
+ * syytä: (1) omistaja pyysi etelään *"vähän isomman alueen"*, ja koko
+ * Etelämanner mahtuu vasta 60°:sta alkaen; (2) kuvan ULKOREUNA ON
+ * HÄIVYTETTY LÄPINÄKYVÄKSI, ja häivytyskaista tarvitsee laattoja
+ * allensa — muuten liitos näkyisi saumana. Kalotti siis ylittää
+ * laattojen kanssa 80°–83,7° (pohjoinen) ja 60°–83,7° (etelä), ja
+ * niillä leveyksillä sen alla on juliste, johon se liukuu.
+ *
+ * VANHA YKSIVÄRINEN KANSI JÄÄ VARAKSI. Kuva haetaan ämpäristä; jos
+ * verkko on poikki tai polku 404, kalottia ei lisätä ja pallo piirtyy
+ * täsmälleen kuten ennen (yksivärinen kansi 83,7°:sta napaan).
+ */
+/** Kalottikuvien versio ämpärissä (uusi ajo = uusi versio, ks. työnkulku). */
+export const NAPAKALOTTI_VERSIO = '2026-09-11a';
+/**
+ * Kalottien ala: `reuna` on kuvan ULKOKEHÄN leveysaste ja `merkki`
+ * navan etumerkki. Samat luvut lukee työkalu (tools/tee-napakalotit.mjs),
+ * joten kuva ja pinta eivät voi olla eri mieltä kuvan alasta.
+ */
+export const NAPAKALOTTI = Object.freeze({
+  pohjoinen: Object.freeze({ reuna: 80, merkki: 1 }),
+  etela: Object.freeze({ reuna: -60, merkki: -1 }),
+});
+/** Kalotin kuva ämpärissä. */
+export const napakalotinUrl = (puoli) => `${R2}julisteet/pallo/napakalotit/${NAPAKALOTTI_VERSIO}/${puoli}.png`;
+
+/**
+ * Pinnan pisteen paikka KALOTIN KUVASSA yksikköruudussa: x oikealle,
+ * y ALASPÄIN (kuvan oma suunta), kuvan keskus (0,5, 0,5) on napa ja
+ * ympyrän kehä (r = 1) on `reuna`-leveysaste.
+ *
+ * PROJEKTIO ON ATSIMUTAALINEN EKVIDISTANTTI: etäisyys kuvan keskustasta
+ * on suoraan verrannollinen navan etäisyyteen asteina. Nollameridiaani
+ * on YLÖSPÄIN kummassakin kuvassa.
+ *
+ * KIERTOSUUNTA ON ERI NAVOILLA ERI, eikä se ole makuasia: kuvaa
+ * katsotaan pallon ULKOPUOLELTA. Pohjoisnavan päältä katsottuna
+ * pituusaste kasvaa VASTAPÄIVÄÄN (90° E on vasemmalla), etelänavan alta
+ * katsottuna MYÖTÄPÄIVÄÄN. Väärä suunta antaisi peilikuvan, joka ei
+ * näytä virheeltä vaan väärältä kartalta — tests/napakalotit.test.mjs
+ * todistaa suunnan kolmion kiertosuunnasta pallolla (ei silmällä).
+ */
+export function kalotinKuvapiste(puoli, lat, lon) {
+  const k = NAPAKALOTTI[puoli];
+  if (!k) throw new Error(`tuntematon napakalotti: ${puoli}`);
+  const napa = k.merkki * 90;
+  const r = (napa - lat) / (napa - k.reuna);
+  // Kulma myötäpäivään ylöspäin osoittavasta nollameridiaanista.
+  const kulma = (k.merkki > 0 ? -lon : lon) * (Math.PI / 180);
+  return {
+    x: 0.5 + 0.5 * r * Math.sin(kulma),
+    y: 0.5 - 0.5 * r * Math.cos(kulma),
+    r,
+  };
+}
+
+/**
+ * Kuvapisteen (x, y yksikköruudussa, y alaspäin) leveys- ja pituusaste:
+ * `kalotinKuvapiste`:n käänteisfunktio. Työkalu piirtää kuvan tällä —
+ * kuva ja UV:t tulevat siis samasta kaavasta kumpaankin suuntaan.
+ */
+export function kalotinAsteet(puoli, x, y) {
+  const k = NAPAKALOTTI[puoli];
+  if (!k) throw new Error(`tuntematon napakalotti: ${puoli}`);
+  const dx = 2 * x - 1;
+  const dy = 2 * y - 1;
+  const r = Math.hypot(dx, dy);
+  const kulma = (Math.atan2(dx, -dy) * 180) / Math.PI;
+  const napa = k.merkki * 90;
+  return { lat: napa - r * (napa - k.reuna), lon: k.merkki > 0 ? -kulma : kulma, r };
+}
+
+/**
+ * Kalotin UV kuvassa. Sama kuin `kalotinKuvapiste`, mutta v on
+ * käännetty: WebGL:n tekstuurin origo on vasemmassa ALAnurkassa, kun
+ * kuvan origo on vasemmassa YLÄnurkassa (flipY, sama sääntö kuin
+ * lepokerroksella, js/pallolaatat.js lepokerroksenUV).
+ */
+export function kalotinUv(puoli, lat, lon) {
+  const p = kalotinKuvapiste(puoli, lat, lon);
+  return { u: p.x, v: 1 - p.y };
+}
+
+/**
+ * Kalotin verkko: napa keskellä, `kehia` rengasta reunalle ja
+ * `sektoreita` sektoria kehän ympäri. Paikat pallon pinnalta
+ * (pallonPiste), normaali säteen suunta, UV kalotin kuvasta.
+ *
+ * PITUUSASTE KIERTÄÄ NAVAN MERKIN SUUNTAAN (`merkki`), jolloin
+ * kolmioiden kiertosuunta on kummallakin navalla sama kuin kirjaston
+ * omilla laattaverkoilla — etupuoli ulospäin, ei yhtään käännettyä
+ * kolmiota. Sama temppu kuin lepokerroksella: rivi etelään, sarake
+ * itään; etelässä rivi kulkee pohjoiseen, joten sarake kulkee länteen.
+ */
+export function kalotinVerkko({
+  puoli, sade, kehia = 40, sektoreita = 128,
+}) {
+  const k = NAPAKALOTTI[puoli];
+  if (!k) throw new Error(`tuntematon napakalotti: ${puoli}`);
+  const napa = k.merkki * 90;
+  const kohtia = (kehia + 1) * (sektoreita + 1);
+  const paikat = new Float32Array(kohtia * 3);
+  const normaalit = new Float32Array(kohtia * 3);
+  const uvt = new Float32Array(kohtia * 2);
+  let i = 0;
+  for (let iy = 0; iy <= kehia; iy += 1) {
+    const lat = napa + ((k.reuna - napa) * iy) / kehia;
+    for (let ix = 0; ix <= sektoreita; ix += 1) {
+      const lon = k.merkki * ((360 * ix) / sektoreita) - 180 * k.merkki;
+      const p = pallonPiste(lat, lon, sade);
+      const n = pallonPiste(lat, lon, 1);
+      paikat[i * 3] = p.x; paikat[i * 3 + 1] = p.y; paikat[i * 3 + 2] = p.z;
+      normaalit[i * 3] = n.x; normaalit[i * 3 + 1] = n.y; normaalit[i * 3 + 2] = n.z;
+      const uv = kalotinUv(puoli, lat, lon);
+      uvt[i * 2] = uv.u; uvt[i * 2 + 1] = uv.v;
+      i += 1;
+    }
+  }
+  const indeksit = [];
+  for (let iy = 0; iy < kehia; iy += 1) {
+    for (let ix = 0; ix < sektoreita; ix += 1) {
+      const a = iy * (sektoreita + 1) + ix + 1;
+      const b = iy * (sektoreita + 1) + ix;
+      const c = (iy + 1) * (sektoreita + 1) + ix;
+      const d = (iy + 1) * (sektoreita + 1) + ix + 1;
+      indeksit.push(a, b, d, b, c, d);
+    }
+  }
+  return { paikat, normaalit, uvt, indeksit };
+}
+
 /**
  * THREE:n konstruktorit elävästä pallosta. Globe.gl 2.46:n UMD-paketti
  * ei vie THREE:a mihinkään globaaliin (se käyttää `window.THREE`ä vain,
@@ -1459,7 +1608,7 @@ export function asennaNapakannet(pallo, ikkuna = globalThis) {
     const kolmi = kolmiulotteinen(pallo);
     // Vaaditaan laattaverkko: pelkän pohjapallon materiaali on
     // valaisematon, ja kansi näkyisi tummana kiekkona (ks. yllä).
-    if (kolmi?.laatatValmiit) { purkaja = lisaaNapakannet(kolmi, pallo.getGlobeRadius()); return; }
+    if (kolmi?.laatatValmiit) { purkaja = lisaaNapakannet(kolmi, pallo.getGlobeRadius(), ikkuna); return; }
     if (++yritys < 100) ikkuna.setTimeout(yrita, 100);
   };
   yrita();
@@ -1467,7 +1616,7 @@ export function asennaNapakannet(pallo, ikkuna = globalThis) {
 }
 
 /** Kaksi kantta × (peittävä + häivyttyvä reuna) pallon ryhmään. */
-function lisaaNapakannet(kolmi, sade) {
+function lisaaNapakannet(kolmi, sade, ikkuna = globalThis) {
   const { Mesh, SphereGeometry, LaattaMateriaali, juuri } = kolmi;
   const asteina = (a) => (a * Math.PI) / 180;
   const tehdyt = [];
@@ -1497,10 +1646,68 @@ function lisaaNapakannet(kolmi, sade) {
   kansi(false, NAPAKANSI_POHJOINEN, true);
   kansi(true, NAPAKANSI_ETELA, false);
   kansi(true, NAPAKANSI_ETELA, true);
+
+  /*
+   * KARTTAKALOTTI KANNEN PÄÄLLE (ks. NAPAKALOTIT yllä). Kuva haetaan
+   * ämpäristä; verkko ja tekstuuri syntyvät vasta kun kuva on ladattu,
+   * joten 404 tai katkennut verkko EI jätä palloa tyhjäksi eikä heitä
+   * virhettä — silloin näkyy yksivärinen kansi kuten ennen.
+   *
+   * Kalotti on kannen yläpuolella (KOROTUS + 0,001) ja piirretään
+   * läpinäkyvänä, koska sen uloin kehä on häivytetty alfalla
+   * laattoihin. `depthWrite: false` on samasta syystä kuin häivekannella:
+   * läpinäkyvä reuna ei saa kirjoittaa syvyyttä laattojen päälle.
+   */
+  let purettu = false;
+  const kalotti = (puoli) => {
+    if (!kolmi.Texture || !kolmi.BufferGeometry || !kolmi.BufferAttribute) return;
+    const Kuva = ikkuna.Image;
+    if (!Kuva) return;
+    const kuva = new Kuva();
+    // Sama CORS-lupa kuin lepokerroksen laatoilla: ilman sitä tekstuuri
+    // olisi tahrittu eikä kelpaisi WebGL:lle.
+    kuva.crossOrigin = 'anonymous';
+    kuva.decoding = 'async';
+    kuva.onerror = () => {};
+    kuva.onload = () => {
+      // Purettu sillä välin kun kuva latautui: ei lisätä mitään.
+      if (purettu) return;
+      const puskurit = kalotinVerkko({ puoli, sade: sade * (NAPAKANNEN_KOROTUS + 0.001) });
+      const geometria = new kolmi.BufferGeometry();
+      geometria.setAttribute('position', new kolmi.BufferAttribute(puskurit.paikat, 3));
+      geometria.setAttribute('normal', new kolmi.BufferAttribute(puskurit.normaalit, 3));
+      geometria.setAttribute('uv', new kolmi.BufferAttribute(puskurit.uvt, 2));
+      geometria.setIndex(puskurit.indeksit);
+      const tekstuuri = new kolmi.Texture(kuva);
+      const malli = kolmi.tekstuurimalli;
+      // Sama väriavaruus kuin laatoilla — muuten sävy hyppäisi saumassa.
+      if (malli && 'colorSpace' in malli) tekstuuri.colorSpace = malli.colorSpace;
+      else if (malli && 'encoding' in malli) tekstuuri.encoding = malli.encoding;
+      tekstuuri.minFilter = THREE_LINEAR_MIPMAP_LINEAR;
+      tekstuuri.magFilter = THREE_LINEAR;
+      tekstuuri.wrapS = THREE_CLAMP;
+      tekstuuri.wrapT = THREE_CLAMP;
+      tekstuuri.needsUpdate = true;
+      const materiaali = new LaattaMateriaali({
+        map: tekstuuri, transparent: true, depthWrite: false,
+      });
+      const verkko = new Mesh(geometria, materiaali);
+      verkko.userData.napakalotti = puoli;
+      verkko.raycast = () => {};
+      juuri.add(verkko);
+      tehdyt.push(verkko);
+    };
+    kuva.src = napakalotinUrl(puoli);
+  };
+  kalotti('pohjoinen');
+  kalotti('etela');
+
   return () => {
+    purettu = true;
     for (const verkko of tehdyt) {
       juuri.remove(verkko);
       verkko.geometry?.dispose?.();
+      verkko.material?.map?.dispose?.();
       verkko.material?.dispose?.();
     }
     tehdyt.length = 0;

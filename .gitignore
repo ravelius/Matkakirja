@@ -80,3 +80,10 @@ tools/.valimuisti/
 # äänitteiden ainoa varasto, repo vain työpöytä. Peli hakee kaikki
 # omat äänensä ämpäristä (js/media.js aaniUrl).
 assets/audio/*.mp3
+
+# Napakalottien piirtokansio (tools/tee-napakalotit.mjs): kaksi
+# monen megatavun PNG:tä ja Natural Earthin nouto. Varasto on ämpäri,
+# ei repo — työnkulku .github/workflows/tee-napakalotit.yml vie kuvat
+# polkuun julisteet/pallo/napakalotit/<versio>/.
+napakalotit-ulos/
+ne-data/

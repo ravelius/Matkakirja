@@ -78,12 +78,18 @@
   transform: translateX(0);
 }
 
+/* LÄHTEVÄ KUVA HÄIPYY MENNESSÄÄN (omistaja 11.9.2026, iPad-kaappaus
+   Tallinnasta: *"Kuvat tulevat liian pieninä ja edellinen jää sivuun
+   näkymään"*). Kuvat limittyvät tarkoituksella (TRAILERIN_LIMITYS_MS),
+   mutta täydellä peitolla lähtevä kuva näkyi vielä ruudun laidassa
+   uuden kuvan rinnalla. Nyt se haalistuu liukuessaan: liike on sama,
+   mutta laidassa ei roiku puolikasta kuvaa. */
 .saapumistraileri-kuva.ulos {
-  opacity: 1;
+  opacity: 0;
   transform: translateX(-115vw);
   transition:
     transform var(--traileri-ulos) cubic-bezier(0.6, 0, 0.75, 1),
-    opacity 260ms ease;
+    opacity var(--traileri-ulos) cubic-bezier(0.6, 0, 0.75, 1);
 }
 
 /* KUVA MAHDOLLISIMMAN ISONA, REUNAT PEHMEÄSTI HÄIVYTETTYINÄ. Sama
@@ -91,7 +97,13 @@
    .fokusvirta-isokuva): kaikki neljä reunaa sulavat mustaan, jolloin
    kuvalla ei ole kehystä vaan häive. */
 .saapumistraileri-kuva img {
-  width: auto;
+  /* LEVEYS ANNETAAN, EI VAIN KATOTA (omistaja 11.9.2026: *"Kuvat tulevat
+     liian pieninä"*). `width: auto` jätti kuvan omaan pikselikokoonsa,
+     joten iPadilla lehden herokuva näkyi noin 60 %:n levyisenä vaikka
+     tilaa oli 92 vw. Nyt leveys on 92 vw ja korkeus seuraa kuvasuhdetta;
+     max-height ja object-fit pitävät huolen siitä, ettei pystykuva
+     karkaa ruudun yli. */
+  width: 92vw;
   height: auto;
   max-width: 92vw;
   max-height: 80vh;

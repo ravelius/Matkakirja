@@ -296,11 +296,14 @@
   --luentakuva-leveys: calc(min(80vw, 22rem) * var(--luentakuva-tablettikerroin));
   --luentakuva-korkeus: calc(min(34vh, 15rem) * var(--luentakuva-tablettikerroin));
   --luentakuva-kallistus: -2.4deg;
-  /* PIENI KUVA ON PIENEMPI KUIN ENNEN (omistaja 11.9.2026:
-     *"pienennetyt kuvat saisi jäädä kartalla pienemmiksi"*). Entinen
-     0,45 jätti kartalle vielä ison lapun; kartan mittakaava kertautuu
-     tähän päälle (--luentakuva-karttaskaala). */
-  --luentakuva-pienennys: 0.3;
+  /* PIENI KUVA ON PEUKALONKYNSI (omistaja 11.9.2026, kaksi vaihetta:
+     ensin *"pienennetyt kuvat saisi jäädä kartalla pienemmiksi"* ja
+     sitten *"Kuvapino saisi näkyä vielä paljon pienempänä … vain vähän
+     pelinappulaa korkeammaksi"*). 0,45 → 0,30 → 0,16; kartan mittakaava
+     kertautuu tähän päälle (--luentakuva-karttaskaala). */
+  --luentakuva-pienennys: 0.16;
+  /* Levitetty pakka: napautus suurentaa pinon valittavaksi. */
+  --luentakuva-levitys: 0.78;
   /* Nousun matka: paneeli ladotaan hieman alempaa ja liukuu paikalleen. */
   --luentakuva-nousu: 10px;
   --luentakuva-skaala: 1;
@@ -401,6 +404,35 @@
    ei näkyvyys. */
 .fokusvirta-luentakuva.pieni {
   --luentakuva-skaala: var(--luentakuva-pienennys);
+}
+
+/* KOLME VAIHETTA KARTALLA (omistaja 11.9.2026, sanatarkasti:
+   *"Kuvapino saisi näkyä vielä paljon pienempänä ja sitten kun sitä
+   klikkaa, kuvapino saisi suurentua jotta sopiva kuva olisi helpompi
+   valita pinosta ja sitten kun kuvaa klikkaa se tulisi vasta täydelle
+   ruudulle. Jos karttaa vierittää niin kuvapino pienentäisi taas varsin
+   pieneksi, vain vähän pelinappulaa korkeammaksi"* ja *"Kun mini
+   kuvapinoa klikkaa niin kuvat saisivat levittyä enemmän viuhkan
+   muotoon jotta klikkaaminen ja siirtyminen tiettyyn kuvaan olisi
+   helpompi"*):
+
+     1. PIENI     kartan esine, peukalonkynsi kaupungin päällä
+     2. LEVITETTY napautus suurentaa pinon ja levittää kuvat viuhkaksi
+     3. KOKO RUUTU kuvan napautus levitetyssä pinossa avaa suurennoksen
+
+   Kartan vieritys palauttaa vaiheeseen 1 (js/fokusvirta.js
+   kytkeLuentakuvanPienennys). Levitys ei ole oma mittakaavansa kartan
+   zoomista riippumatta: --luentakuva-karttaskaala kertautuu tähänkin,
+   joten viuhka on kartan kokoinen kuten pinokin. */
+.fokusvirta-luentakuva.pieni.levitetty {
+  --luentakuva-skaala: var(--luentakuva-levitys);
+}
+
+.fokusvirta-luentakuva.levitetty .pulucam-pakka {
+  /* Viuhka: samat asennot kerrottuna. Kulma kasvaa loivemmin kuin
+     siirtymä, jotta kuvat eivät käänny kyljelleen vaan aukeavat. */
+  --pulucam-viuhka: 3.4;
+  --pulucam-viuhka-kulma: 1.8;
 }
 
 /* ISOISÄN KUVASSA EI OLE KEHYSTÄ (omistaja 9.9.2026, sanatarkasti:
@@ -626,9 +658,15 @@
      lappu (kumpikin pointer-events: auto), jolloin kortin alta
      näkyvät alemmat kortit saavat omat napautuksensa. */
   pointer-events: none;
+  /* VIUHKAKERROIN (omistaja 11.9.2026): pakassa kerroin on 1 ja kuvat
+     ovat limittäin; levitetyssä pakassa kerroin kasvaa ja samat asennot
+     venyvät viuhkaksi, jolloin jokainen kuva on erikseen osoitettavissa.
+     Asennot pysyvät prosentteina eivätkä muutu — vain kerroin muuttuu. */
   transform:
-    translate(var(--pulucam-x, 0%), var(--pulucam-y, 0%))
-    rotate(var(--pulucam-kulma, 0deg))
+    translate(
+      calc(var(--pulucam-x, 0%) * var(--pulucam-viuhka, 1)),
+      calc(var(--pulucam-y, 0%) * var(--pulucam-viuhka, 1)))
+    rotate(calc(var(--pulucam-kulma, 0deg) * var(--pulucam-viuhka-kulma, 1)))
     scale(var(--pulucam-pomppu));
   /* PULPAHDUS: pieni yliheitto (1,56) tekee noususta pomppuavan eikä
      liukuvan — omistajan sana oli "pulpahtaa". */
