@@ -296,6 +296,7 @@ export function piilotaSaapumistraileri(ui, { peru = false } = {}) {
  *
  * @param {HTMLElement} kotelo
  * @param {HTMLImageElement} img
+ * @returns {() => void} sama merkintä uudelleen ajettavaksi (paluuvahti)
  */
 function merkitseKuvasuhde(kotelo, img) {
   const merkitse = () => {
@@ -306,6 +307,70 @@ function merkitseKuvasuhde(kotelo, img) {
   };
   img.addEventListener('load', merkitse);
   merkitse();
+  return merkitse;
+}
+
+/**
+ * RUUDUN OIKEA MITTA PIKSELEINÄ — EI vw/vh.
+ *
+ * JUURISYY (omistaja 11.9.2026 klo 23.18, iPad-kaappaus Bukarestin
+ * trailerista, sanatarkasti: *"Nyt taas näkyy kuvat pienempänä vaikka
+ * välissä näkyi isompana. Syy on ilmeisesti siinä jos käyn toisessa
+ * apissa ja palaan matkakirjaan niin sitten kuvien koko muuttuu
+ * pienemmäksi"*).
+ *
+ * WKWebView jättää toisesta sovelluksesta palatessa ASETTELUVIEWPORTIN
+ * vanhaan, kapeampaan mittaan, kunnes joku pakottaa laskennan uusiksi.
+ * Sama vika on raportoitu ja paikattu pelissä jo kolmesti muualla
+ * (js/ui.js mittaaNakyma 13.8.2026, vahdiNakymanKokoa 18.8.2026 ja
+ * 23.8.2026) — ja juuri siksi lehti ja kartta MITTAAVAT näkymänsä
+ * sen sijaan että luottaisivat vw/vh-yksiköihin. Traileri oli ainoa
+ * koko ruudun päällys, joka luotti: `96vw` on 96 % VIEWPORTISTA, ei
+ * ruudusta, joten vanhentunut viewportti kutisti koko trailerin.
+ *
+ * Mittaus on sama ristiintarkistus kuin js/ui.js:ssä: zoomaamattomana
+ * visuaalinen viewportti kertoo laitteen todellisen koon, ja suurempi
+ * kahdesta voittaa — vanhentunut asetteluviewportti on aina PIENEMPI
+ * kuin ruutu. Nipistyszoomissa (scale ≠ 1) visuaalinen mitta on
+ * tarkoituksella pienempi, joten se jätetään silloin huomiotta.
+ *
+ * @param {object} [ikkuna] vain testejä varten
+ * @returns {{leveys:number, korkeus:number}} 0 = ei kelvollista mittaa
+ */
+export function trailerinNakyma(ikkuna = globalThis) {
+  const juuri = ikkuna?.document?.documentElement ?? null;
+  const nakyva = ikkuna?.visualViewport ?? null;
+  const zoomaton = !nakyva || Math.abs((nakyva.scale ?? 1) - 1) < 0.05;
+  const asetteluL = Math.round(Number(juuri?.clientWidth) || 0);
+  const asetteluK = Math.round(Number(juuri?.clientHeight) || 0);
+  const visuaaliL = Math.round(
+    (zoomaton ? Number(nakyva?.width) || 0 : 0) || Number(ikkuna?.innerWidth) || 0);
+  const visuaaliK = Math.round(
+    (zoomaton ? Number(nakyva?.height) || 0 : 0) || Number(ikkuna?.innerHeight) || 0);
+  return {
+    leveys: Math.max(asetteluL, visuaaliL),
+    korkeus: Math.max(asetteluK, visuaaliK),
+  };
+}
+
+/**
+ * MITATTU RUUTU TRAILERIN MUUTTUJIIN (css/saapumistraileri.css).
+ *
+ * Kaikki trailerin mitat — päällyksen koko, kuvan katot, nimen
+ * kirjasinkoko ja liukujen matka — lasketaan näistä kahdesta luvusta,
+ * joten yksi kirjoitus riittää koko esitykseen. Mittaamaton ruutu
+ * (0 × 0, esimerkiksi testin DOM-mallissa) jätetään kirjoittamatta:
+ * silloin css:n oma vw/vh-varamitta jää voimaan.
+ *
+ * @param {HTMLElement} kehys
+ * @returns {boolean} kirjoitettiinko mitta
+ */
+export function paivitaTrailerinMitat(kehys, ikkuna = globalThis) {
+  const { leveys, korkeus } = trailerinNakyma(ikkuna);
+  if (!kehys?.style || !leveys || !korkeus) return false;
+  kehys.style.setProperty('--traileri-ruutu-leveys', `${leveys}px`);
+  kehys.style.setProperty('--traileri-ruutu-korkeus', `${korkeus}px`);
+  return true;
 }
 
 /**
@@ -330,6 +395,14 @@ export function naytaSaapumistraileri(ui, city) {
   const kuvatila = html('div', 'saapumistraileri-kuvat');
   const ajastimet = [];
 
+  /*
+   * RUUDUN MITTA HETI ENSIMMÄISEEN PIIRTOON. Ilman tätä ensimmäinen
+   * ruutu piirtyisi css:n vw/vh-varamitalla — eli juuri sillä
+   * vanhentuneella viewportilla, jota vastaan tämä on tehty.
+   */
+  paivitaTrailerinMitat(kehys);
+  const kuvasuhteet = [];
+
   const kuvaKotelot = kuvat.map((kuva) => {
     const kotelo = html('div', 'saapumistraileri-kuva');
     const img = document.createElement('img');
@@ -345,7 +418,7 @@ export function naytaSaapumistraileri(ui, city) {
      * herokuvien 3:2-oletusta, jolloin poikkeava kuva jäisi joko
      * korkeuskaton yli tai turhan pieneksi.
      */
-    merkitseKuvasuhde(kotelo, img);
+    kuvasuhteet.push(merkitseKuvasuhde(kotelo, img));
     kotelo.appendChild(img);
     kuvatila.appendChild(kotelo);
     return kotelo;
@@ -382,9 +455,15 @@ export function naytaSaapumistraileri(ui, city) {
    * ALKU ja LOPPU pareiksi ilman laskuria.
    */
   const tunnus = {};
+  /*
+   * ESITYKSEN KELLO. Ajastimet eivät ole kello: taustalla ne eivät
+   * laukea lainkaan ja paluussa ne laukeavat kerralla. Alkuhetki ja
+   * kesto kertovat, onko esitys oikeasti jo ohi (paluuNakyviin).
+   */
   const tila = {
     kehys, ajastimet, ratkaise, irrota: null,
     tunnus, kaupunki: city.id, loppuIlmoitettu: false,
+    alku: Date.now(), kesto: trailerinKesto(kuvat.length),
   };
   ui.saapumistraileri = tila;
 
@@ -402,14 +481,70 @@ export function naytaSaapumistraileri(ui, city) {
   };
   kehys.addEventListener('pointerdown', ohita);
   kehys.addEventListener('click', ohita);
-  tila.irrota = () => {
-    kehys.removeEventListener('pointerdown', ohita);
-    kehys.removeEventListener('click', ohita);
-  };
 
   const aja = (viive, tyo) => ajastimet.push(setTimeout(() => {
     if (ui.saapumistraileri === tila) tyo();
   }, Math.max(0, viive)));
+
+  /*
+   * NÄKYMÄN UUSINTAMITTAUS (omistajan bugiraportti 11.9.2026 klo 23.18:
+   * *"jos käyn toisessa apissa ja palaan matkakirjaan niin sitten
+   * kuvien koko muuttuu pienemmäksi"*).
+   *
+   * Mitta luetaan uudestaan aina kun näkymä voi olla toinen kuin
+   * hetki sitten: kääntö, ikkunan koon muutos, visuaalisen viewportin
+   * asettuminen, bfcache-paluu (pageshow) ja paluu näkyviin. Sama
+   * kirjoitus on idempotentti, joten turha ajo on halpa ja ajamatta
+   * jättäminen kallis.
+   *
+   * Samalla kuvasuhteet merkitään uudelleen: jos kuva ehti vaihtua
+   * varareitille tai purkautua muistista taustassa, suhde on nyt
+   * kuvan oma eikä css:n 3:2-oletus.
+   */
+  const paivitaMitat = () => {
+    if (ui.saapumistraileri !== tila) return;
+    paivitaTrailerinMitat(kehys);
+    for (const merkitse of kuvasuhteet) merkitse();
+  };
+
+  /*
+   * PALUU NÄKYVIIN: MITTA UUSIKSI JA KELLO TARKISTETAAN.
+   *
+   * a) WKWebView oikaisee viewporttinsa vasta hetken päästä, joten
+   *    mitta otetaan heti ja uudestaan 400 ja 1600 ms päästä — sama
+   *    pari kuin js/ui.js:n taustapaluun sovituksessa.
+   * b) Taustalla ajastimet eivät laukea. Jos traileri on kellon
+   *    mukaan jo ohi, se päätetään heti eikä jätetä ruudulle
+   *    odottamaan jäätyneitä ajastimiaan — luenta odottaa lupausta.
+   */
+  const paluuNakyviin = () => {
+    if (ui.saapumistraileri !== tila) return;
+    if (document.hidden) return;
+    if (Date.now() - tila.alku >= tila.kesto) {
+      piilotaSaapumistraileri(ui);
+      return;
+    }
+    paivitaMitat();
+    aja(400, paivitaMitat);
+    aja(1600, paivitaMitat);
+  };
+
+  const ikkuna = globalThis;
+  ikkuna.addEventListener?.('resize', paivitaMitat);
+  ikkuna.addEventListener?.('orientationchange', paivitaMitat);
+  ikkuna.addEventListener?.('pageshow', paluuNakyviin);
+  ikkuna.visualViewport?.addEventListener?.('resize', paivitaMitat);
+  document.addEventListener('visibilitychange', paluuNakyviin);
+
+  tila.irrota = () => {
+    kehys.removeEventListener('pointerdown', ohita);
+    kehys.removeEventListener('click', ohita);
+    ikkuna.removeEventListener?.('resize', paivitaMitat);
+    ikkuna.removeEventListener?.('orientationchange', paivitaMitat);
+    ikkuna.removeEventListener?.('pageshow', paluuNakyviin);
+    ikkuna.visualViewport?.removeEventListener?.('resize', paivitaMitat);
+    document.removeEventListener('visibilitychange', paluuNakyviin);
+  };
 
   // Nimi lähtee lentoon heti ensimmäisen kuvan mukana ja jää paikalleen
   // kaikkien kuvien ajaksi (omistaja: yksi nimi, kolme kuvaa).
