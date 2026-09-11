@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1773, teksti: 'Kuvagalleria pois koko pelistä' },
   { v: 1772, teksti: 'Kuva ja Etsi aarre pienenevät kartan tahdissa' },
   { v: 1771, teksti: 'Etelänavalta julisteen painatusteksti pois' },
   { v: 1770, teksti: 'Pulun pullariemu kaikkiin kaupunkilehtiin' },

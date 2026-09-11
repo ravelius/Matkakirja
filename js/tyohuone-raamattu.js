@@ -4319,6 +4319,14 @@ export const RAAMATTU = {
           + 'paluu VASTAUKSEN KERA; keskeytetty tai vanhentunut vastaus ei tuo '
           + 'Pulua takaisin. Toteutettu Codexin eralla (#2246), julkaistu '
           + 'v1765:ssa.',
+        'KUVAGALLERIA POIS KOKO PELISTA (omistaja 11.9.2026, kaappaus '
+          + 'Istanbulin lehdesta, sanatarkasti: "Kytke lisaa kuvia tasta '
+          + 'kohteesta toiminto pois kaikkialta pelista"): nappi "Lisaa kuvia '
+          + 'tasta kohteesta" (nahtavyyskortti) ja "Lisaa kuvia tasta '
+          + 'kaupungista" (kaupunkikartta) eivat enaa nay missaan. Kumoaa '
+          + 'tilauksen 23.8.2026. Moduuli js/kuvagalleria.js jaa paikalleen ja '
+          + 'vakio KUVAGALLERIA_KAYTOSSA on epatosi: galleria saadaan takaisin '
+          + 'yhdella vaihdolla, jos omistaja niin haluaa. Toteutettu v1773.',
         'KARTAN ESINEET PIENENEVAT KARTAN TAHDISSA (omistaja 11.9.2026, '
           + 'kaappaus maailmanakymasta, sanatarkasti: "Valokuvat ja etsi aarre '
           + 'teksti eivat pienene kartan kanssa samaa tahtia ja jaavat liian '
