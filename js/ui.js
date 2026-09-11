@@ -19449,11 +19449,21 @@ export class UI {
      */
     const musiikki = maitse ? 'jalan' : 'laiva';
     this.run(() => game.actionMove(key), {
-      after: () => this.animatePawn(
+      after: (result) => {
+        // Lähtö kuuluu vain kaupungista alkavaan valittuun matkaan.
+        // Reitin varren automaattijatko ei saa uutta tunnetta joka heitolla.
+        if (result?.ok && from.type === 'city') {
+          ilmoitaLivianTunne(
+            { tunne: 'ilo', voimakkuus: maitse ? 0.4 : 0.45 },
+            { lahde: 'matka', tunnus: maitse ? 'matka.kavely.lahto' : 'matka.laiva.lahto' },
+          );
+        }
+        return this.animatePawn(
         player, from, path,
         maitse ? jalkamatkanAskel(path.length) : STEP_MS,
         { saatto: true, maitse, musiikki },
-      ),
+        );
+      },
     });
   }
 
@@ -19470,10 +19480,20 @@ export class UI {
     const from = player.pos;
     const lahto = from.type === 'city' ? game.board.cityById.get(from.city) : null;
     const kohde = game.board.cityById.get(destination);
+    const kelvollinenLento = !this.busy && !this.dead && game.phase === 'action'
+      && game.airportDestinations().includes(destination);
     const suunta = lahto && kohde ? { dx: kohde.x - lahto.x, dy: kohde.y - lahto.y } : null;
     // Repliikki arvotaan ennen siirtoa, jotta rng-kutsu osuu samaan kohtaan
     // riippumatta siitä, näytetäänkö animaatio.
     const line = game.flightLine(destination);
+    // Todellinen ja kelvollinen lentovalinta reagoi ennen kalvoa, joka
+    // tarkoituksella sulkee kaikki uudet tilannereaktiot matkan ajaksi.
+    if (kelvollinenLento) {
+      ilmoitaLivianTunne(
+        { tunne: 'jannitys', voimakkuus: 0.5 },
+        { lahde: 'matka', tunnus: 'matka.lento.lahto' },
+      );
+    }
     // Kalvollisella lennolla kohteen äänimaisema odottaa kalvon loppuun.
     if (game.pack.id === 'maailma') {
       sfx.play('flight');
@@ -21933,6 +21953,16 @@ export class UI {
         ilmoitaLivianTunne(
           { tunne: 'lammin', voimakkuus: 0.5 },
           { lahde: 'peli', tunnus: event.tilanne },
+        );
+      } else if (event.tilanne === 'matka.jumissa') {
+        ilmoitaLivianTunne(
+          { tunne: 'hammentynyt', voimakkuus: 0.45 },
+          { lahde: 'matka', tunnus: event.tilanne },
+        );
+      } else if (event.tilanne === 'peli.linssi.avautui') {
+        ilmoitaLivianTunne(
+          { tunne: 'ilo', voimakkuus: 0.65 },
+          { lahde: 'peli', tunnus: event.tilanne, linssi: event.linssi },
         );
       }
       await this.wait(this.reducedMotion ? 0 : TOAST_MS[event.kind] ?? TOAST_MS.default);
