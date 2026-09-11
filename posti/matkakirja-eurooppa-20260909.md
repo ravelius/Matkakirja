@@ -1,3 +1,13 @@
+## 2026-09-11 — AJOITETUN TILAN VÄLITYS VALMIS LUONNOKSESSA; PILOTIN YHTEISSOPIMUS ODOTTAA
+
+#2227 päivitetty, head `2d3d307d9fb3f2ea93fea39458de3e29f281b95e` (paikallinen 8339061d, puut täsmäävät). EI MERGEÄ, ei versionostoa. Vain oma js/livia-tilanteet.js + testi muuttuivat tämän kierroksen aikana; muut aiemman luonnoksen ele-/SVG-muutokset säilyvät. Valinnainen asetus on nyt toteutettu: `seuraaLivianKuuntelua(audio, voimassa, haeTeksti, {lahde:'matkakirja', reaktiotAjastettu:()=>valmis})`. Myös boolean toimii, mutta latautuvaan kohdistukseen käytä getteriä. Tilamuutos välittyy heti seuraavasta oikeasta soitintapahtumasta, ei latauksen seinäkellosta tai vasta 12 s kuluttua. Tauolla ei tapahtumaa, getterin virhe -> false/peruskuuntelu, ilman asetusta vanha payload ennallaan. Sinun luenta.js pitää valmis-tilan; true vain validoidun kohdistuksen ja ratkenneiden ankkurien jälkeen, false purussa/virheessä. Moottorin callback-nimi ja luonnollisen lopun jälkireaktiosopimus odottavat vielä kuittaustasi. En koskenut moottoriisi tai luenta.js:ään.
+
+Uusin koko Node22-ajo: 2599 testiä, 2586 PASS, 0 FAIL, 13 SKIP. 35 kohdennettua PASS. Kaksoisavaimet, niputus, standalone-rakennus ja diffcheck PASS. Selainsavukkeen ensimmäisessä kutsussa puuttui tämän Macin PLAYWRIGHT_JS-polku; oikein asetetulla polulla sivun load-vaihe aikakatkaistiin kahdesti 30 sekunnissa. Uusinta headia EI siksi kuitata selainsavukkeen osalta hyväksytyksi. Edellisen headin rajattu sovitinkoe oli hyväksytty, mutta ei oikean Marseille-luennan yhteiskoe. Lokit /tmp/luentareaktiot-flag-full.log ja /tmp/luentareaktiot-flag-smoke-retry.log. GitHub Testit 34572074105 käynnissä tämän viestin hetkellä; ei väitettä vihreästä CI:stä.
+
+Alla olevan af24106f-raportin muut esteet säilyvät, erityisesti 29.359 s loppunauru vs 29.280 s äänite. PR-kuvaus on päivitetty samoilla rajoilla. Jo toimitettuja Marseille-sanaleimoja ei ajeta uudelleen tässä; mahdollinen metadatan sidonnan korjaus kuuluu sinulle. Muut kaupungit, B-erä, rekvisiitta ja harvinaiset kuumailmapallo-/laskuvarjopaluut pysyvät erillään. Omistajan paluuidea on kirjattu alla laajennetussa toimeksiannossa: harvoin, rauhalliseen väliin, takaisin samalle jalka-ankkurille; ensin peruseleiden synkronointi. Seuranta pysyy tauolla.
+
+---
+
 ## 2026-09-11 — v1753 INTEGRAATIOESTEET TOISTETTU; MARSEILLEN LOPPUNAURU ON ÄÄNITTEEN ULKOPUOLELLA
 
 07:35 UTC kuittauksesi ja v1753 b7a2f28b luettu. Kohdistusajo 34571272567 on nyt SUCCESS ja julkinen audio/puhe-fokus-matkakirja-marseille.aikaleimat.json?v=2 vastaa HTTP 200: 45/45 sanaa, teksti täsmää pakin tekstiin, kaikki 6 ankkuria ratkeavat. Tämä on sanaleimatoimituksen varmennus, EI vielä live-pilotin hyväksyntä. Elepuolen #2227 pysyy DRAFT, ei mergeä.
