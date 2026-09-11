@@ -149,11 +149,37 @@ function ruutupaikka(ui, city, mitat) {
   };
 }
 
+/*
+ * NAPPI PIENENEE KARTAN MUKANA (omistaja 11.9.2026, kaappaus
+ * maailmanäkymästä: *"Valokuvat ja etsi aarre teksti eivät pienene
+ * kartan kanssa samaa tahtia ja jäävät liian isoiksi zoomatessa
+ * ulos"*).
+ *
+ * Nappi on kartan esine kaupungin laatan vieressä, joten sen pitää
+ * kutistua kuten laatankin. Vertailukohta on se mittakaava, jolla
+ * kartta oli napin ilmestyessä: kaupunkinäkymässä nappi on täysi, ja
+ * ulos zoomatessa se pienenee samassa suhteessa.
+ *
+ * ALARAJA ON KORKEAMPI KUIN KUVALLA (0,45 vs. 0,12): nappi on TEKSTIÄ
+ * ja osumapinta, eikä kumpikaan saa mennä luettavan ja napautettavan
+ * alle. Yläraja 1,2 estää sen kasvamisen syvässä zoomissa.
+ */
+const NAPIN_SKAALAN_RAJAT = Object.freeze({ alin: 0.45, ylin: 1.2 });
+
+export function napinMittakaava(naytto) {
+  const nyt = naytto?.ui?.nakyvaAlue?.()?.skaala;
+  const perus = naytto?.perusSkaala;
+  if (!(nyt > 0) || !(perus > 0)) return 1;
+  return Math.min(NAPIN_SKAALAN_RAJAT.ylin, Math.max(NAPIN_SKAALAN_RAJAT.alin, nyt / perus));
+}
+
 /** Kirjoittaa ankkurin muunnoksen ja häivyttää ruudun ulkopuolella. */
 function paivitaPaikka(naytto) {
   const paikka = ruutupaikka(naytto.ui, naytto.city, naytto.mitat);
   if (!paikka) return;
   const { x, y } = paikka;
+  // Testien kevyt DOM-malli ei tunne setPropertyä; paikka on tärkeämpi kuin mittakaava.
+  naytto.ankkuri.style.setProperty?.('--etsi-aarre-skaala', napinMittakaava(naytto).toFixed(3));
   naytto.ankkuri.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
   /*
    * Ruudun ulkopuolella nappi ei näyttäisi mitään, ja pallolla se on
@@ -277,6 +303,8 @@ export function naytaEtsiAarreNappi(ui, city) {
     ankkuri,
     nappi,
     mitat: { w: pane.clientWidth ?? 0, h: pane.clientHeight ?? 0 },
+    // Kartan mittakaava napin ilmestyessä: pienenemisen vertailukohta.
+    perusSkaala: ui?.nakyvaAlue?.()?.skaala ?? 0,
     kehys: 0,
   };
 

@@ -513,3 +513,31 @@ test('moduulissa ei ole lautahaaraa eikä omaa tyylitiedostoa', () => {
   assert.ok(css.includes('.etsi-aarre-nappi {'), 'napin tyyli on css/styles.css:ssä');
   assert.ok(css.includes('.etsi-aarre-ankkuri {'), 'ankkurin tyyli on css/styles.css:ssä');
 });
+
+/* ---------------------------------------------------------------- */
+/* 7. Nappi pienenee kartan mukana                                   */
+/* ---------------------------------------------------------------- */
+
+test('napin mittakaava seuraa kartan zoomia rajojensa sisällä', async () => {
+  const { napinMittakaava } = await import('../js/etsi-aarre-nappi.js');
+  const naytto = (skaala, perus) => ({ ui: { nakyvaAlue: () => ({ skaala }) }, perusSkaala: perus });
+  // Sama zoom kuin napin ilmestyessä: täysi koko.
+  assert.equal(napinMittakaava(naytto(2, 2)), 1);
+  // Ulos zoomattaessa nappi pienenee samassa suhteessa kuin kartta.
+  assert.equal(napinMittakaava(naytto(1, 2)), 0.5);
+  // Maailmanäkymä: alaraja pitää tekstin luettavana ja osumapinnan napautettavana.
+  assert.equal(napinMittakaava(naytto(0.05, 2)), 0.45);
+  // Syvä zoom ei kasvata nappia rajattomasti.
+  assert.equal(napinMittakaava(naytto(20, 2)), 1.2);
+  // Puuttuva mitta ei saa kutistaa nappia olemattomiin.
+  assert.equal(napinMittakaava(naytto(0, 2)), 1);
+  assert.equal(napinMittakaava({}), 1);
+});
+
+test('ankkurin lapsi kantaa mittakaavan, ei ankkuri itse', () => {
+  const css = lue('css/styles.css');
+  assert.match(css, /\.etsi-aarre-ankkuri > \* \{[\s\S]{0,160}scale\(var\(--etsi-aarre-skaala, 1\)\)/,
+    'mittakaava puuttuu ankkurin lapselta');
+  const lahde = lue('js/etsi-aarre-nappi.js');
+  assert.match(lahde, /--etsi-aarre-skaala/, 'skripti ei kirjoita mittakaavaa');
+});
