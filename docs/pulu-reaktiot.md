@@ -31,12 +31,41 @@ tekee tekstisessio tämän rekisterin puutelistasta.)*
   tarinassa. Voimakkuus tavallisesti 0,3–0,6; ≥ 0,7 vain suurissa
   hetkissä (aarteen löytö, Venetsian rakkaus, ensimmäinen saapuminen
   uuteen maanosaan, linssin huippukohta).
-- Kertojan luennan aikana pulu kuuntelee (tekninen `narration`), ei
-  reagoi tarinan tunteisiin päälle. Tunnetagi laukeaa kuplan tai
-  jakson alussa, ei kesken puheen.
+- Kertojan luennan aikana pulun perusasento on yläviistokatse; matkakirja-
+  luennoissa tekstikohtaiset reaktiot (ks. Luentareaktiot). Kuplan tunnetagi
+  laukeaa kuplan alussa.
 - Odotus, kortti ja taustaele eivät saa käynnistää ristiriitaisia
   reaktioita; vanhentunutta elettä ei jonoteta. Hiljennys ja vähennetty
   liike huomioidaan teknisessä kerroksessa.
+
+## Luentareaktiot (tekstin sisällä) — skeema ja pilotti
+
+*(Omistaja 11.9.2026: kaikki matkakirjat tagitetaan läpi tekstin; Raamattu
+PULU REAGOI TEKSTIN SISALLA. Korvaa toimituslinjan kohdan "tunnetagi laukeaa
+kuplan tai jakson alussa, ei kesken puheen" matkakirjaluentojen osalta.)*
+
+- **Perusasento** luennan aikana: rauhallinen yläviistokatse (v1752).
+  Sen päälle tulee tekstikohtaan ajoitettu yksi reaktio ja paluu.
+- **Data** (pakki, `matkakirja.reaktiot[]`): `{ id, ankkuri, tarkoitus,
+  voimakkuus, siirtyma, perustelu }`. `ankkuri` = katkelma luentatekstistä
+  sanasta sanaan; `tarkoitus` ∈ myotailee · epailee · torjuu · huvittuu ·
+  hammastyy · vakavoituu; `voimakkuus` 0–1; `siirtyma` ms ankkurin
+  viimeisen sanan lopusta. Hiljaiset osuudet kirjataan kommenttiin.
+- **Ajoitus:** äänitteen sanakohtaiset aikaleimat
+  (`audio/puhe-fokus-matkakirja-<id>.aikaleimat.json`, ElevenLabs forced
+  alignment olemassa olevalle mp3:lle, ei uutta generointia). Ankkurin
+  hetki = ankkurin viimeisen sanan loppu + siirtymä. Jos aikaleimoja ei ole,
+  reaktioita ei ammuta (ei merkkimääräarvioita).
+- **Tapahtuma** (Fable, js/luenta.js): `ilmoitaLivianTilanne('reaction',
+  { lahde: 'matkakirja', tunnus: id, tarkoitus, voimakkuus, kaupunki })`
+  oikean `audio.currentTime`-kellon mukaan; tauko pysäyttää, kelaus ei
+  ammu väliin jääneitä; kaupungin/äänen vaihto mitätöi. Eleen valinta ja
+  paluu perusasentoon: tekstisessio (livia-eleet).
+- **Sävyohje:** tavallinen kohta 0,3–0,4, vitsi 0,45–0,6, hurja asia
+  0,6–0,8; enintään noin yksi reaktio per virke; ei nyökkäys/pudistus
+  vuorotellen. Selittävät sivulauseet hiljaisia.
+- **Pilotti:** Marseille (js/packs/fokusvirta-marseille.js, 6 reaktiota,
+  1 hiljainen osuus). Seuraavat erät vasta pilotin katselmuksen jälkeen.
 
 ## Rivin muoto
 
