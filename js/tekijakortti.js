@@ -196,7 +196,25 @@ export function taytaLahderivi(el, lahde, kohde = {}) {
   const teksti = String(lahde ?? '');
   const id = kohde?.tekijaId;
   if (!id || !ehdotusKaytossa()) {
-    el.textContent = teksti;
+    const linkit = [
+      { nimi: 'Wikimedia Commons', url: kohde?.lahdeUrl },
+      { nimi: String(kohde?.lisenssi ?? '').trim(), url: kohde?.lisenssiUrl },
+    ].filter(({ nimi, url }) => nimi && url && teksti.includes(nimi));
+    if (!linkit.length) {
+      el.textContent = teksti;
+      return merkitseHavainnekuva(el, teksti, kohde);
+    }
+    linkit.sort((a, b) => teksti.indexOf(a.nimi) - teksti.indexOf(b.nimi));
+    el.replaceChildren();
+    let alku = 0;
+    for (const linkki of linkit) {
+      const kohta = teksti.indexOf(linkki.nimi, alku);
+      if (kohta < alku) continue;
+      if (kohta > alku) el.appendChild(document.createTextNode(teksti.slice(alku, kohta)));
+      el.appendChild(ulkoinenLinkki(linkki));
+      alku = kohta + linkki.nimi.length;
+    }
+    if (alku < teksti.length) el.appendChild(document.createTextNode(teksti.slice(alku)));
     return merkitseHavainnekuva(el, teksti, kohde);
   }
 

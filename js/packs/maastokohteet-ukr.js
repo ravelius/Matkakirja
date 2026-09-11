@@ -81,6 +81,15 @@ export const MAASTOKOHTEET_UKR = [
       + 'pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota '
       + 'ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.',
     lahde: 'en-Wikipedia "Hoverla", johdanto-osa (tarkistettu 29.8.2026).',
+    kuva: {
+      tiedosto: 'Views of Hoverla 02.jpg',
+      selite: 'Hoverlan vihreä polonyna-rinne nousee kohti Ukrainan korkeinta huippua Tšornohoran vuoristossa.',
+      lahde: 'Dmytro Petishkin, Wikimedia Commons (CC BY 4.0)',
+      tekija: 'Dmytro Petishkin',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Views_of_Hoverla_02.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    },
   },
   {
     id: 'mustameri',
@@ -102,6 +111,15 @@ export const MAASTOKOHTEET_UKR = [
       + 'Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan '
       + 'maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.',
     lahde: 'en-Wikipedia "Black Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    kuva: {
+      tiedosto: 'Port of Odessa 2016 G3.jpg',
+      selite: 'Odesan satama avautuu Mustallemerelle; laivat, hinaajat ja nosturit kertovat meren merkityksestä Ukrainan liikenteelle.',
+      lahde: 'George Chernilevsky, Wikimedia Commons (CC BY-SA 4.0)',
+      tekija: 'George Chernilevsky',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Port_of_Odessa_2016_G3.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
   },
   {
     id: 'asovanmeri',
@@ -123,6 +141,15 @@ export const MAASTOKOHTEET_UKR = [
       + 'rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti '
       + 'Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.',
     lahde: 'en-Wikipedia "Sea of Azov", johdanto-osa (tarkistettu 29.8.2026).',
+    kuva: {
+      tiedosto: 'Frozen Sea of Azov near Kamianka village Crimea Ukraine (1).jpg',
+      selite: 'Asovanmeren halkeillut jääkenttä levittäytyy Kamjansken edustalla Krimillä ja havainnollistaa matalan sisämeren talvista jäätymistä.',
+      lahde: 'Vedomosti-dzha, Wikimedia Commons (CC BY-SA 4.0)',
+      tekija: 'Vedomosti-dzha',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Frozen_Sea_of_Azov_near_Kamianka_village_Crimea_Ukraine_(1).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
   },
   {
     id: 'dnepr',
@@ -145,6 +172,15 @@ export const MAASTOKOHTEET_UKR = [
       + 'neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan '
       + 'neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.',
     lahde: 'en-Wikipedia "Dnieper", johdanto-osa (tarkistettu 29.8.2026).',
+    kuva: {
+      tiedosto: 'Dniepr river in Kyiv.jpg',
+      selite: 'Leveä Dnepr halkoo Kiovaa; sillat, jokisatama ja kaupungin siluetti näyttävät joen mittakaavan Ukrainan pääkaupungissa.',
+      lahde: 'Dmitry A. Mottl, Wikimedia Commons (CC BY-SA 3.0)',
+      tekija: 'Dmitry A. Mottl',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dniepr_river_in_Kyiv.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
   },
   {
     id: 'dnestr',
@@ -445,4 +481,3 @@ export const MAASTOKOHTEET_UKR = [
       + '(tarkistettu 6.9.2026).',
   },
 ];
-
