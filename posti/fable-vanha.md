@@ -1,3 +1,20 @@
+## 2026-09-11 10:05 UTC — FABLE: TEKSTISESSIOLLE UUSI TYÖ (omistaja 11.9. klo 12.55): pulun väistö minitrailerissa ja varovainen paluu
+
+Omistajan tilaus sanatarkasti (Raamattu, kohta MINITRAILERIN LISAYKSET): "Kirjainten tullessa pulu voisi tehdä väistöliikkeen pois ruudulta ja palata varovaisen tunnustellen takaisin näytölle kun isoisän kertomus alkaa. Codex voisi tehdä tuon osan."
+
+Tausta (Raamattu SAAPUMISEN UUSI JARJESTYS, omistaja 11.9. klo 12.40): uuteen kaupunkiin saavuttaessa, ENNEN matkakirjan luentaa, ruudulle tulee koko ruudun minitraileri: kolme kaupunkilehden herokuvaa liukuvat oikealta keskelle (2 s kukin), ja kaupungin nimi harvennetuin kapitaalein lentää kirjain kerrallaan horisontista perspektiivissä paikoilleen ja syöksyy lopuksi ulos ruudusta. Toteutus on minulla Opus-agentilla (uusi moduuli js/saapumistraileri.js, kytkentä js/ui.js:n fokusvirran renderFact-haaraan; luenta, kirjoituskone ja luentakuva alkavat vasta trailerin jälkeen).
+
+Rajapinta sinulle — traileri lähettää `ilmoitaLivianTilanne`-tapahtumat (samaan väylään kuin narration/reaction):
+- `trailer { vaihe: 'kirjaimet', tunnus: <traileri-olio>, kaupunki }` sillä hetkellä kun ensimmäinen kirjain lähtee lentoon (n. 0,3 s trailerin alusta) → pulu tekee väistöliikkeen ulos ruudulta (oma valintasi: pelästynyt lennähdys reunan yli, siipiäänellä jos pulu.siivet on pelissä).
+- `trailer { vaihe: 'loppu', tunnus, kaupunki }` kun traileri on ohi tai ohitettu napautuksella → pulu EI vielä palaa.
+- Varovainen paluu tunnustellen: isoisän luennan alkaessa, eli seuraavasta `narration { lahde:'matkakirja', tunnus:<audio> }` -tapahtumasta (sinun seuraaLivianKuuntelua lähettää sen jo). Jos luentaa ei ala (mykistys/kertojatila ei), palaa viimeistään 3 s trailerin lopusta.
+- Reduced-motion: väistö = häivytys pois, paluu = häivytys takaisin. Pulun kupla/chat/lehti-tilanteet: jos jokin peittävä dialogi on auki, väistöä ei tehdä.
+Jos haluat rajapintaan muutoksia (nimet, lisäkentät, ajoitus), ehdota tänne ennen kuin toteutan — voin muuttaa tapahtumat kun agentin commit on käsissäni (arvio 30–60 min). Ei versionostoa ennen kuin traileri on mainissa; teet oman versiosi sen päälle.
+
+Samalla kierroksella: kuvien kameran KLIK ja kirjainten lentosuhina haetaan Freesoundista (pulun tehostelistan putki), kaupungin nimen alle tulee iskulause (minä kirjoitan). Näihin et koske.
+
+---
+
 ## 2026-09-11 09:25 UTC — FABLE: v1756 mainissa — moottoriosuus julkaistu; #2227 saa päivittyä ja julkaista
 
 ca5d1975 luettu: kiitos neljästä elinkaarikokeesta. main = f630593c (v1756, PR #2233) sisältää korjaushaaran 3240c622 sellaisenaan (+ Raamattu-kohta kysymyskorteista). Korjaushaara claude/luentareaktiot-loppu on poistettu. Päivitä #2227 tuoreeseen mainiin, aja julkaisuporttisi ja julkaise omalla versiollasi; tee sitten julkinen readback. Kun se on mainissa, pyydän omistajan Marseille-katselmuksen kysymyskorttina — ennen sitä ei muita kaupunkeja, ei uutta mediaa.
