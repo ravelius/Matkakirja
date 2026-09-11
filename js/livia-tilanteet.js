@@ -57,7 +57,7 @@ export function livianAiheEle({symboli='',otsikko='',teksti=''}={}){
 /** Yksi kertojan vuoro riippumatta siitä, mikä äänitekniikka soittaa. */
 export function luoLivianKuunteluvuoro(tunnus={}, {lahde,reaktiotAjastettu}={}){
  let viime=-Infinity,vuoro=0,soi=false,elossa=true,viimeAjastettu=null;
- const tauko=()=>{if(!soi)return;soi=false;ilmoitaLivianTilanne('narrationEnd',{tunnus});};
+ const tauko=(luonnollinenLoppu=false)=>{if(!soi)return;soi=false;ilmoitaLivianTilanne('narrationEnd',{tunnus,...(luonnollinenLoppu?{luonnollinenLoppu:true}:{})});};
  return {
   paivita(paalla,aika=performance.now()/1000,teksti=''){
    if(!elossa)return;
@@ -77,7 +77,7 @@ export function luoLivianKuunteluvuoro(tunnus={}, {lahde,reaktiotAjastettu}={}){
    const ele=vuoro++===0?'lookUp':lahde==='matkakirja'?'nod':vuoro%2?'nod':livianAiheEle({symboli:'sana',teksti});
    ilmoitaLivianTilanne('narration',{ele,tunnus,...(lahde?{lahde}:{}),...(reaktiotAjastettu===undefined?{}:{reaktiotAjastettu:ajastettu})});
   },
-  lopeta(){if(!elossa)return;elossa=false;tauko();},
+  lopeta(luonnollinenLoppu=false){if(!elossa)return;elossa=false;tauko(luonnollinenLoppu===true);},
  };
 }
 
@@ -89,8 +89,11 @@ export function seuraaLivianKuuntelua(audio,voimassa,haeTeksti=()=> '',asetukset
  const reagoi=()=>{if(elossa&&soi&&!audio.paused&&!audio.ended&&voimassa())vuoro.paivita(true,audio.currentTime,haeTeksti());};
  const alkoi=()=>{if(!elossa)return;soi=true;reagoi();};
  const tauko=()=>{soi=false;vuoro.paivita(false);};
- const events={playing:alkoi,timeupdate:reagoi,pause:tauko,waiting:tauko,stalled:tauko,error:tauko,ended:lopeta,emptied:lopeta};
- function lopeta(){if(!elossa)return;elossa=false;vuoro.lopeta();for(const[n,f]of Object.entries(events))audio.removeEventListener(n,f);}
+ // Pehmeän lopun omistaja lähettää tämän ENNEN omaa pausea.
+ // Käyttäjän pausea tai lähellä loppua olevaa currentTimea ei arvata lopuksi.
+ const paattyi=()=>lopeta(voimassa()===true);
+ const events={playing:alkoi,timeupdate:reagoi,pause:tauko,waiting:tauko,stalled:tauko,error:tauko,ended:paattyi,'matkakirja:luenta-loppu':paattyi,emptied:lopeta};
+ function lopeta(luonnollinenLoppu=false){if(!elossa)return;elossa=false;soi=false;vuoro.lopeta(luonnollinenLoppu===true);for(const[n,f]of Object.entries(events))audio.removeEventListener(n,f);}
  for(const[n,f]of Object.entries(events))audio.addEventListener(n,f);
  return lopeta;
 }

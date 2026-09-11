@@ -86,3 +86,22 @@ test('asynkronisen kohdistuksen tila välittyy heti oikeasta soitintapahtumasta,
  a.paused=false;a.dispatchEvent(new Event('playing'));assert.equal(calls.at(-1).data.reaktiotAjastettu,true);
  stop();const count=calls.length;a.dispatchEvent(new Event('playing'));assert.equal(calls.length,count);
 });
+for(const loppu of ['ended','matkakirja:luenta-loppu'])test(`${loppu}: luonnollinen loppu välittyy kerran ja irrottaa kaikki kuuntelijat`,t=>{
+ const a=new EventTarget();a.paused=false;a.currentTime=29.26;const calls=[],listeners=new Set();
+ const add=a.addEventListener.bind(a),remove=a.removeEventListener.bind(a);
+ a.addEventListener=(n,f)=>{listeners.add(n);add(n,f);};a.removeEventListener=(n,f)=>{listeners.delete(n);remove(n,f);};
+ const off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
+ const stop=seuraaLivianKuuntelua(a,()=>true,()=>'',{lahde:'matkakirja'});t.after(stop);
+ a.dispatchEvent(new Event('playing'));a.dispatchEvent(new Event(loppu));
+ assert.deepEqual(calls.at(-1),['narrationEnd',{tunnus:a,luonnollinenLoppu:true}]);assert.equal(listeners.size,0);
+ a.paused=true;for(const n of ['pause','ended','matkakirja:luenta-loppu','playing','timeupdate'])a.dispatchEvent(new Event(n));
+ stop();assert.equal(calls.length,2,'autopause ja kaksoisloppu eivät katkaise jälkielettä');
+});
+for(const tapa of ['pause','waiting','stalled','error','emptied','purku','vanha'])test(`${tapa}: ei luonnollisen lopun poikkeusta edes loppurajalla`,t=>{
+ const a=new EventTarget();a.paused=false;a.currentTime=29.279;a.duration=29.280;let valid=true;const calls=[];
+ const off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
+ const stop=seuraaLivianKuuntelua(a,()=>valid);t.after(stop);a.dispatchEvent(new Event('playing'));
+ if(tapa==='purku')stop();else if(tapa==='vanha'){valid=false;a.dispatchEvent(new Event('ended'));}else a.dispatchEvent(new Event(tapa));
+ assert.deepEqual(calls.at(-1),['narrationEnd',{tunnus:a}]);
+ if(['pause','waiting','stalled','error'].includes(tapa)){a.dispatchEvent(new Event('ended'));assert.equal(calls.length,2);}
+});
