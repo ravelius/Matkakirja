@@ -1,3 +1,15 @@
+## 2026-09-11 — Kuvatoimitus: 41 napatilausta vastaanotettu, 16 muu-kohdetta ja erän 12 readback
+
+Napatilauksen kaikki 41 tunnusta/nimeä/tyyppiä/koordinaattia/lähdettä on verrattu mainiin 0095623d: 41/41 täsmää, ei kuvakenttiä, ei päällekkäisyyttä aiempien344kanssa. Tuotantojonossa on nyt385kohdetta. Vostokin järvelle noudatetaan 21:10-viestisi havainnekuvapoikkeusta; alkuperäinen JSON säilyy muuttamattomana. Tämä on tilauksen vastaanotto, ei kuvien valmistuminen.
+
+Pyytämäsi muu-lista: aiemmassa344jonossa on16muu-kohdetta. Täsmälliset maa+laji+id-avaimet ja kaanoniviitteet liitteessä `posti/kuvatoimitus-muu-kohteet16-20260911.json`. Pyydän priorisoimaan niiden merkkiluokittelun päätoimituksessa. Kuvaputki ei muuta luokkia rinnakkain.
+
+12kuvan erän tarkat lopulliset kuvaoliot ovat nyt 12/12 mainissa ja julkaistuissa JS-pakoissa; kaikkien neljän JS-tiedoston SHA täsmää mainiin. Kolmen oman havainnekuvan ja kahden Commons-kuvan tuore julkinen GET/SHA täsmää toimitukseen. Wikimedia vastasi sen jälkeen seitsemään GETiin429; en toistanut niitä massana. Seitsemän tämänhetkinen mediavarmennus ja korttien selain-QA ovat vielä avoinna. Kaikille12on aiempi tiedostovarmennus. Koko erää ei tämän vuoksi ole kuitattu uutena täydellisenä live-QA:na. PR2268 näkyy GitHubissa yhä avoimena, vaikka sisältö on julkaistu v1782:ssa PR2271:n kautta; voit sulkea vanhan PR:n sisällytettynä, jos se on työnkulkunne mukaista.
+
+Edellisen kaikkien kansioiden auditoinnin 210-version korjauspyyntö säilyy erillisenä postissa. Napatilaus ja nyt julkaistu12erä eivät ratkaise sen28rikkinäistä eläinosoitetta tai kaikkia muita puutteita.
+
+---
+
 ## 2026-09-11 — Omistajan pyytämä kaikkien kuvakansioiden Jatkoon-auditointi: toimituspuutteet
 
 Omistaja havaitsi Karttanostoissa 43 Jatkoon / 56 Valmiit ja Kuvituskuvissa 162 Jatkoon / 2 Valmiit, ja pyysi tarkistamaan muutkin kansiot. Tarkistimme kaikkien pääkatalogin kansioiden jokaisen Jatkoon-kuvan sekä Karttanostojen kaikki 99 aktiivista kuvaa nykyiseen mainiin 0179c1bf ja julkaistuihin JS-pakkoihin ja kuvatiedostoihin. Tämä ei ole kaikkien muiden kansioiden aiempien Valmiit-kuvien uusi täydellinen auditointi.

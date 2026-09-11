@@ -1,0 +1,360 @@
+{
+  "generatedAt": "2026-09-12",
+  "gameCommit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+  "queueSource": "../production-queue.json",
+  "queueCount": 344,
+  "mappingSummary": {
+    "rowCount": 344,
+    "rowsWithTyyppiSchema": 318,
+    "rowsWithoutTyyppiSchema": 26,
+    "withoutTyyppiByLaji": {
+      "skandaali": 24,
+      "elaintaky": 2
+    },
+    "mappedRowsWithTyyppi": 318,
+    "muuCount": 16,
+    "note": "tyyppi belongs to maasto/kohde records. The 24 skandaali and 2 elaintaky queue rows use separate canonical schemas and are not candidates for tyyppi=muu."
+  },
+  "markerImplication": "Fable 21:30 UTC reports that tyyppi=muu has no map marker. These current 344-queue rows therefore need prioritization or marker handling.",
+  "items": [
+    {
+      "key": "AUT:kohde:eisriesenwelt",
+      "maa": "AUT",
+      "laji": "kohde",
+      "id": "eisriesenwelt",
+      "nimi": "Eisriesenwelt",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/maastokohteet-aut.js",
+        "line": 396,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/maastokohteet-aut.js",
+          "line": 396,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "IRL:kohde:moherin-kalliot",
+      "maa": "IRL",
+      "laji": "kohde",
+      "id": "moherin-kalliot",
+      "nimi": "Moherin kalliot",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/maastokohteet-irl.js",
+        "line": 339,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/maastokohteet-irl.js",
+          "line": 339,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "LTU:kohde:kuurinkynnas",
+      "maa": "LTU",
+      "laji": "kohde",
+      "id": "kuurinkynnas",
+      "nimi": "Kuurinkynnäs",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/maastokohteet-ltu.js",
+        "line": 240,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/maastokohteet-ltu.js",
+          "line": 240,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "GBR:kohde:crystal-palace",
+      "maa": "GBR",
+      "laji": "kohde",
+      "id": "crystal-palace",
+      "nimi": "Crystal Palace",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/fokuskohteet-gbr.js",
+        "line": 191,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/fokuskohteet-gbr.js",
+          "line": 191,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "TUR:kohde:halikarnassos",
+      "maa": "TUR",
+      "laji": "kohde",
+      "id": "halikarnassos",
+      "nimi": "Halikarnassoksen mausoleumi",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/fokuskohteet-tur.js",
+        "line": 1184,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/fokuskohteet-tur.js",
+          "line": 1184,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "TUR:kohde:pergamonin-alttari",
+      "maa": "TUR",
+      "laji": "kohde",
+      "id": "pergamonin-alttari",
+      "nimi": "Pergamonin alttari",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/fokuskohteet-tur.js",
+        "line": 1457,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/fokuskohteet-tur.js",
+          "line": 1457,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "GRC:kohde:rodoksen-kolossi",
+      "maa": "GRC",
+      "laji": "kohde",
+      "id": "rodoksen-kolossi",
+      "nimi": "Rodoksen kolossi",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/fokuskohteet-grc.js",
+        "line": 1810,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/fokuskohteet-grc.js",
+          "line": 1810,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "AUT:kohde:krimmlin-vesiputoukset",
+      "maa": "AUT",
+      "laji": "kohde",
+      "id": "krimmlin-vesiputoukset",
+      "nimi": "Krimmlin vesiputoukset",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/maastokohteet-aut.js",
+        "line": 522,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/maastokohteet-aut.js",
+          "line": 522,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "BGR:kohde:belogradtsik",
+      "maa": "BGR",
+      "laji": "kohde",
+      "id": "belogradtsik",
+      "nimi": "Belogradtšikin kalliot",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/fokuskohteet-bgr.js",
+        "line": 955,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/fokuskohteet-bgr.js",
+          "line": 955,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "BIH:kohde:blidinje",
+      "maa": "BIH",
+      "laji": "kohde",
+      "id": "blidinje",
+      "nimi": "Blidinjen puisto",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/maastokohteet-bih.js",
+        "line": 93,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/maastokohteet-bih.js",
+          "line": 93,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "CHE:kohde:reininputous",
+      "maa": "CHE",
+      "laji": "kohde",
+      "id": "reininputous",
+      "nimi": "Reininputous",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/maastokohteet-che.js",
+        "line": 536,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/maastokohteet-che.js",
+          "line": 536,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "CZE:kohde:moravskykras",
+      "maa": "CZE",
+      "laji": "kohde",
+      "id": "moravskykras",
+      "nimi": "Moravský kras",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/maastokohteet-cze.js",
+        "line": 498,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/maastokohteet-cze.js",
+          "line": 498,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "DNK:kohde:mons-klint",
+      "maa": "DNK",
+      "laji": "kohde",
+      "id": "mons-klint",
+      "nimi": "Møns Klint",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/maastokohteet-dnk.js",
+        "line": 480,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/maastokohteet-dnk.js",
+          "line": 480,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "EST:kohde:ontika",
+      "maa": "EST",
+      "laji": "kohde",
+      "id": "ontika",
+      "nimi": "Ontikan klintti",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/maastokohteet-est.js",
+        "line": 578,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/maastokohteet-est.js",
+          "line": 578,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "LTU:kohde:aukstaitija",
+      "maa": "LTU",
+      "laji": "kohde",
+      "id": "aukstaitija",
+      "nimi": "Aukštaitijan puisto",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/maastokohteet-ltu.js",
+        "line": 472,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/maastokohteet-ltu.js",
+          "line": 472,
+          "tyyppi": "muu"
+        }
+      ]
+    },
+    {
+      "key": "ROU:kohde:voronet",
+      "maa": "ROU",
+      "laji": "kohde",
+      "id": "voronet",
+      "nimi": "Voronețin luostari",
+      "canon": {
+        "commit": "0095623d95b68e2a28ca53e2be32301174cc5e26",
+        "file": "js/packs/fokuskohteet-rou.js",
+        "line": 691,
+        "tyyppi": "muu"
+      },
+      "matchCount": 1,
+      "matches": [
+        {
+          "file": "js/packs/fokuskohteet-rou.js",
+          "line": 691,
+          "tyyppi": "muu"
+        }
+      ]
+    }
+  ],
+  "unresolved": [],
+  "ambiguous": [],
+  "scopeNote": "All 318 maasto/kohde queue rows were mapped to the pinned game commit. The other 26 queue rows are 24 skandaali and 2 elaintaky records, whose canonical schemas do not use tyyppi."
+}
