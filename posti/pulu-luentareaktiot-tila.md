@@ -1,21 +1,27 @@
-# Pulu: Marseillen luentareaktiot — yhteinen tilannekortti
+# Pulu — yhteinen tilakortti
 
-Päivitetty 11.9.2026. Ylläpitäjä: Codex; Fable toimittaa muutokset omaan git-postiinsa.
-Tämä kortti on nykytila, postit ovat historia. Säilytetään claude/postilaatikko-haaralla, ei mergeä pelin mainiin.
+Päivitetty 11.9.2026. Ylläpitäjä Codex. Kokonaisuuden julkaisuvastaava Fable (kuitattu 11:20 UTC; v1760 bb3bf9d0), integraatio-QA ja julkinen readback Codex.
 
-- Tavoite: kuusi tekstikohtaista reaktiota oikean Marseille-äänitteen tahtiin, hiljainen sivulause ja hallittu loppu/keskeytys.
-- Rajaus: vain Marseille; muut kaupungit omistajan katselmuksen jälkeen. Ei uusia ääniä, kuvia, kohdistuksia tai asusteita.
-- Fable omistaa: luenta.js, luentareaktiot.js, tarina, kohdistustyökalut ja reaktiorekisteri.
-- Codex omistaa: livia-eleet.js, livia-svg.js, livia-tilanteet.js ja niiden testit.
-- Julkaisuvastuu: Fablelle ehdotettu koko ominaisuuden koordinointi, kuittaus puuttuu. Voimassa oleva järjestys: Fable julkaisee oman moottoriosuutensa; Codex päivittää ja julkaisee oman PR:n porttien jälkeen.
-- Main: f630593c0b591499e2a9a348121c49dac3f2512f / v1756, PR #2233; Fable-moottorikorjaus mainissa, julkaisu ilmoitettu Fablen viestissä ccb354ae. Codexin julkinen readback vielä tekemättä.
-- Codex: DRAFT PR #2227, remote c08e9ed7e35794f301fb126eac6c21f4d5b3a65e, CI 34580358900 SUCCESS.
-- Fable-korjaus: 3240c62260058753401be4d29a9b393f3572fcdf sisältyy Fablen mukaan v1756:een; korjaushaara poistettu.
-- Yhteiskoe: 9571d4e3e5a22cdb77593bdea46421a05267b6d9.
-- Rajapinta: Fablen korjaushaaran docs/pulu-reaktiot.md + hyväksytty 40f14181-sopimus. reaction.luentaTunnus=sama Audio; matkakirja:luenta-loppu ennen luonnollista pausea; narrationEnd.luonnollinenLoppu; yksi jälkireaktio 500 ms vastaanottoikkunassa, reactionEnd/uusi luenta katkaisee.
-- Hyväksytty yhteiskoe: oikea alkuperä + aito media; normaali, metadata +1500 ms ja reduced-motion 6/6. pause-seek, seek-end, tail-stop, voice-swap PASS. Node22 2642 PASS / 0 FAIL / 13 SKIP.
-- Todisteet: ca5d19757c16c7e52960067fb6a293653566029e, posti/matkakirja-eurooppa-20260909.md; paikalliset JSON/PNG-polut siinä.
-- Avoin raja: standalone-selainsavukkeen 30 s load-timeout EI PASS; Freesound-varareitin toisto auditissa. Buildin läpäisy ei kuittaa selainsavuketta. Fable kirjasi erilliseksi asiaksi pilotin ulkopuolelle viestissä ccb354ae.
-- Seuraava siirto: Codex, Fablen ccb354ae-julkaisukuittauksen valtuuttamana: tuore main, #2227:n päivitys, versionosto/testit/CI, julkaisu, julkisten tiedostojen readback ja oikean pelin QA.
-- Valmis vasta: molemmat osat julkaistu, julkinen peli todennettu ja omistajan Marseille-katselmus tehty. Tästä ei vielä ole kuittausta.
-- Seuranta: automaatio PAUSED; ei lyhyen välin pollausta.
+## Julkaistu ja takaisinluettu
+
+- v1757 / PR2227 / main1f154831: luentareaktioiden sovitin ja Marseille6/6 + loppunauru. Pages34586623327 SUCCESS. Julkinen luonnollinen luenta6/6, neutraali lopuksi, 0JS-virhettä. 2642pass/0fail/13skip.
+- v1758 / PR2234 / main278f1a4f: lehtiaiheet/sävy, aarteen yksi ilo, pankkiapu, laukku auki/kiinni, pitkän odotuksen yksi ele ja rauhallinen joutovalikoima. Pages34587530069 SUCCESS, julkinen SHA-täsmäys+todelliset UI-polut normaalilla/vähennetyllä liikkeellä. 2654pass/0fail/13skip.
+- v1759 / PR2235 / main81bb0006: visa viimeinen yritys/lukitus/rosvovoitto/-tappio; kävely/laiva/jumi/lento/linssi; vakava visa/lehtireaktio ohittaa vain yleisen cooldownin (puhe-/luenta-/modaaliportit ennallaan). Pages34588814933 SUCCESS; 5 julkista SHA-täsmäystä. Aito julkinen visa4polkua+nopea5msvaroitus→lukitus pose-reference PASS; matkat4näkyvääelettä PASS; linssi event PASS mutta 400tp Tietäjätaso-puhe voittaa näkyvän eleen; nopea Ruoka→Kaupunki548ms vakava listen korvaa manic-posen PASS; Marseille6/6+neutraali PASS, kaikissa0JSvirhettä. 2664pass/0fail/13skip, CI34588541893 SUCCESS.
+
+## Aktiivinen erä / tiedosto-omistajuus
+
+Codex: omistajan uusin aloituskaupungin ensiliito. Pulu kiirehtii kaukaisuudesta, tervehtii JO LENNON AIKANA ja kompuroi hieman laskeutuessaan. Tekninen js/livia.js/js/livia-eleet.js/js/livia-svg.js + pollo.js bridge. Kaupunkivalinta/peruutus/tausta/vähennetty liike testataan. Kaanonrepliikit ennallaan.
+
+Codex: omistajan nimenomaisesti tilaama uusi Viisas pöllö -muotokuva jalustalla ja nimitekstillä, vain canonical avaus index4:n vieressä. Kuva generoitu/silmätarkistettu, alkuperäinen säilytetty, JPEG512x768. Erillinen assets/tietaja/viisas-pollo-muotokuva-v1.jpg, EI olemassa olevan avatarin korvausta. NaytaAvauskupla/CSS/SW-integraatio työn alla. Tämä uusi tilaus sallii vain tämän uuden median aiemman pilotin rajauksesta poiketen.
+
+Fable: uusi saapumistraileri ja js/ui.js renderFact, fokusvirta/luenta, iskulauseet ja kaksi äänitehostetta; ks oma11:20UTComistajuuskuittaus. Codex väistö erillisenä eränä tuottajan jälkeen.
+
+## Rajapinta / seuraava luovutus
+
+Trailerin kirjaimet/loppu + seuraava matkakirja-narration sopivat. Codex pyysi c771ec6f:ssä lisäksi trailer{vaihe:peru,tunnus,kaupunki} kaupunginvaihtoon/tuhoon/aborttiin; tavallinen skip on loppu. Sama token kaikkialla, vanha loppu ei käynnistä uuden trailerin 3s-paluuajastinta. Odotetaan Fable-kuittausta/tuottajan committia ennen väistöjulkaisua.
+
+Tarkat rekisterin K/T-rivit kootaan seuraavaksi, Fable päivittää rekisterin. Muiden kaupunkien sisältötagit/kohdistus Fablella saapumisversion jälkeen. Kaikkia dokumentoituja D-rivejä ei kuitata toteutetuiksi.
+
+## Avoin tekninen huomio
+
+Standalone rakentuu, niputus-/viitevartijat läpi, DOM-ready-rakennekoe käynnistää pelin/Pulun0JSvirheellä. Virallinen load-event savuke EI läpäise: 30s timeout ulkoisessa äänivarareitissä. Fable kirjasi erilliseksi asiaksi; ei väitetä hyväksytyksi.
