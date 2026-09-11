@@ -56,11 +56,48 @@ kuplan tai jakson alussa, ei kesken puheen" matkakirjaluentojen osalta.)*
   alignment olemassa olevalle mp3:lle, ei uutta generointia). Ankkurin
   hetki = ankkurin viimeisen sanan loppu + siirtymä. Jos aikaleimoja ei ole,
   reaktioita ei ammuta (ei merkkimääräarvioita).
-- **Tapahtuma** (Fable, js/luenta.js): `ilmoitaLivianTilanne('reaction',
-  { lahde: 'matkakirja', tunnus: id, tarkoitus, voimakkuus, kaupunki })`
-  oikean `audio.currentTime`-kellon mukaan; tauko pysäyttää, kelaus ei
-  ammu väliin jääneitä; kaupungin/äänen vaihto mitätöi. Eleen valinta ja
-  paluu perusasentoon: tekstisessio (livia-eleet).
+- **Aikaleimatiedosto on versio 2 ja SIDOTTU ÄÄNITTEESEEN** (11.9.2026):
+  `{ versio: 2, kaupunki, teksti, tekstiSha256, aani: { nimi, versio,
+  tavut, sha256 }, kesto, sanat, lauseet, luotu }`. Peli hakee soivan
+  äänitteen samaa reittiä kuin soitto ja vertaa SHA-256:ta ja tavumäärää
+  tiedoston lukuihin; teksti on oltava merkilleen pakin `matkakirja.teksti`
+  ja sanat sen sanat. Yksikin poikkeama → reaktioita ei ammuta lainkaan
+  (vanhat ajat uuden äänitteen päällä osuisivat viereiseen lauseeseen).
+  Sama validaattori ajetaan työkalussa ennen kirjoitusta ja vientiä;
+  `tools/kohdista-luennat.mjs --sido` sitoo vanhan kohdistuksen
+  äänitteeseen ilman uutta ElevenLabs-ajoa (workflow: `toiminto: sido`).
+- **Ankkuri on yksikäsitteinen:** ankkuri, joka osuu luentatekstiin
+  useammin kuin kerran, hylätään (kumpi osuma olisi oikea?) — samoin
+  tyhjä tai toistuva reaktio-ID (toistuvasta molemmat), ei-kokonaisluku
+  `siirtyma`, äänitteen ulkopuolelle jäävä hetki ja `voimakkuus`, joka ei
+  ole välillä 0 < v ≤ 1 (ei enää rajata clampilla). Kuiva ajo ja
+  tests/luentareaktiot.test.mjs vartioivat samaa sääntöä.
+- **Tapahtuma** (Fable, js/luentareaktiot.js): `ilmoitaLivianTilanne('reaction',
+  { lahde: 'matkakirja', tunnus: <reaktion id>, luentaTunnus: <audio>,
+  tarkoitus, voimakkuus, kaupunki, jalkireaktio })` oikean
+  `audio.currentTime`-kellon mukaan. `luentaTunnus` on SAMA Audio-olio,
+  jonka `seuraaLivianKuuntelua` antaa `narration`-tapahtuman tunnukseksi —
+  siitä sovitin tietää, mihin luentakertaan reaktio kuuluu. Tauko,
+  puskurointi ja kelaus eivät ammu väliin jääneitä: soiton jatkuessa tila
+  sovitetaan nykyhetkeen. Eleen valinta ja paluu perusasentoon:
+  tekstisessio (livia-eleet).
+- **reactionEnd** `{ lahde: 'matkakirja', luentaTunnus: <audio>, kaupunki }`
+  lähetetään, kun ele on katkaistava: kelaus (seeking/seeked), tauko
+  (pause), virhe, soittimen tyhjennys, kytkennän purku sekä luennan
+  vaihtuminen (`voimassa()` epätosi). Tyhjiä loppuja ei lähetetä — vain
+  jos jokin reaktio on ehditty ampua.
+- **Luonnollinen loppu:** `ended`-tapahtumassa ammutaan vielä ampumatta
+  jääneet reaktiot, joiden hetki on enintään `LOPPUVARA_MS` = 500 ms
+  päässä, kentällä `jalkireaktio: true` — eikä `reactionEndiä` lähetetä,
+  jolloin sovitin saa antaa loppuvitsin eleen valmistua äänitteen jo
+  vaiettua. Muissa reaktioissa `jalkireaktio: false`.
+- **reaktiotAjastettu:** luenta välittää
+  `seuraaLivianKuuntelua(..., { lahde: 'matkakirja', reaktiotAjastettu:
+  () => boolean })`. Tosi vasta kun aikaleimat on ladattu, tarkistettu ja
+  vähintään yksi ankkuri on ratkennut; sovitin voi antaa tarkkaan
+  ajastetun reaktion voittaa yleisen kuuntelueleen.
+- **Työnjako:** moottori, luenta.js ja kohdistus Fable; livia-sovitin
+  tekstisessio.
 - **Sävyohje:** tavallinen kohta 0,3–0,4, vitsi 0,45–0,6, hurja asia
   0,6–0,8; enintään noin yksi reaktio per virke; ei nyökkäys/pudistus
   vuorotellen. Selittävät sivulauseet hiljaisia.

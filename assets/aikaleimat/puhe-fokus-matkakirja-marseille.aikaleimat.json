@@ -1,6 +1,14 @@
 {
-  "versio": 1,
+  "versio": 2,
+  "kaupunki": "marseille",
   "teksti": "Marseillen satamassa myytiin saippuaa tiiliskivinä. Kauppias vakuutti, että niillä pesisi vaikka koko maailman. Hänen kyntensä olivat mustat, sillä hän oli juuri auttanut laivan köysissä. Ostin palan. Terva, kala ja suolavesi seurasivat minua majataloon. Maailma ei suostunut pesuun yhdellä yrittämällä, mutta käteni olivat jo toista mieltä.",
+  "tekstiSha256": "4320eece41e963124c42d50c41cf65b41875bdd5b646dfcccfb192900a696551",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-marseille.mp3",
+    "versio": 2,
+    "tavut": 469412,
+    "sha256": "bfa7b605763b7b818489c1ce39d47e9f1497c5536cd64c9d7e7fb08914f08b63"
+  },
   "kesto": 29239,
   "sanat": [
     {
@@ -236,5 +244,6 @@
     15639,
     17779,
     23439
-  ]
+  ],
+  "luotu": "2026-09-11T07:40:00.074Z"
 }

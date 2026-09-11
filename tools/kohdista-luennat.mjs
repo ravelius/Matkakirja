@@ -32,14 +32,36 @@
  * Vienti tehdään siksi tässä työkalussa (oikea sisältötyyppi) tai
  * .github/workflows/generoi-luennat.yml:n `toiminto: kohdista` -ajossa.
  *
+ * TIEDOSTOMUOTO ON VERSIO 2 (11.9.2026): AJAT SIDOTAAN ÄÄNITTEESEEN.
+ *
+ * Versio 1 kertoi vain sanat ja ajat. Se ei kertonut, MIHIN mp3:een ne
+ * oli kohdistettu — ja uusiksi äänitetty luenta jätti vanhat ajat
+ * paikoilleen, jolloin pulu olisi nauranut viereiselle lauseelle ilman
+ * että mikään ilmoittaisi virheestä. Versio 2 kantaa mukanaan tekstin
+ * SHA-256:n ja äänitteen nimen, kyselyversion (js/media.js
+ * UUSITUT_AANET), tavumäärän ja SHA-256:n. Peli tarkistaa ne ennen
+ * kuin ampuu yhtään reaktiota (js/luentareaktiot.js
+ * tarkistaAikaleimat) — sama validaattori ajetaan täällä ennen
+ * kirjoitusta ja vientiä.
+ *
  * Käyttö:
  *   ELEVEN_API_KEY=... node tools/kohdista-luennat.mjs --kaupungit marseille
  *   ELEVEN_API_KEY=... node tools/kohdista-luennat.mjs --kaikki --vie
  *   node tools/kohdista-luennat.mjs --kaupungit marseille --kuiva
+ *   node tools/kohdista-luennat.mjs --sido --kaupungit marseille [--vie]
  *
  * Kuiva ajo ei tarvitse avainta eikä verkkoa: se kertoo mistä teksti
  * tulee, mitä osoitteita käytettäisiin ja löytyvätkö pakin reaktioiden
- * ankkurit tekstistä sanasta sanaan. Avainta ei tulosteta koskaan.
+ * ankkurit tekstistä sanasta sanaan TÄSMÄLLEEN KERRAN. Avainta ei
+ * tulosteta koskaan.
+ *
+ * SIDONTA (--sido) EI KUTSU ELEVENLABSIA LAINKAAN. Se lukee repossa jo
+ * olevan aikaleimatiedoston (versio 1 tai 2), hakee äänitteen ja
+ * kirjoittaa version 2 kentät tuoreina — teksti ja sanat säilyvät
+ * sellaisinaan. Näin vanha kohdistus saadaan sidottua äänitteeseen
+ * ilman uutta maksullista kohdistusajoa. Jos repotiedoston teksti tai
+ * sanat eivät vastaa pakkia, sidonta hylätään: silloin tarvitaan uusi
+ * kohdistus eikä leimaa vanhan päälle.
  *
  * HUOM konttiympäristössä: Noden fetch ei lue ympäristön proxyä ilman
  * lippua — aja NODE_USE_ENV_PROXY=1 (tai anna työkalun käynnistää
@@ -51,7 +73,10 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { aaniUrl } from '../js/media.js';
+import {
+  AIKALEIMOJEN_VERSIO, laskeSha256, tarkistaAikaleimat, tekstinSha256,
+} from '../js/luentareaktiot.js';
+import { UUSITUT_AANET, aaniUrl } from '../js/media.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import {
   PAKOTETUN_OSOITE, jaksonJasennys, karsiTagit, normalisoiAlignment, sovitaMerkit,
@@ -70,8 +95,12 @@ if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
   process.exit(ajo.status ?? 1);
 }
 
-/** Aikaleimatiedoston muoto; peli tarkistaa tämän (js/luentareaktiot.js). */
-export const AIKALEIMOJEN_VERSIO = 1;
+/*
+ * Aikaleimatiedoston muoto ja sen tarkistus tulevat PELISTÄ
+ * (js/luentareaktiot.js): yksi sääntö, jota työkalu ja peli eivät voi
+ * tulkita eri tavoin. Työkalu vain kirjoittaa sen mukaisen tiedoston.
+ */
+export { AIKALEIMOJEN_VERSIO };
 
 /** Repon kansio, johon aikaleimat kirjoitetaan (ei assets/audio, ks. yllä). */
 export const AIKALEIMAKANSIO = 'assets/aikaleimat';
@@ -103,6 +132,7 @@ export function kohdistusTyo(id) {
     teksti,
     /* Sama kenttä kuin pelissä; kuiva ajo paljastaa eron heti. */
     kentta: merkinta.aanite ?? null,
+    aaniNimi: nimi,
     aaniPolku: `assets/audio/${nimi}`,
     aaniOsoite: aaniUrl(`assets/audio/${nimi}`),
     kohde: `${AIKALEIMAKANSIO}/puhe-fokus-matkakirja-${id}.aikaleimat.json`,
@@ -150,6 +180,42 @@ export function etsiAnkkuri(sanat, ankkuri) {
 }
 
 /**
+ * MONTAKO KERTAA ankkuri osuu sanalistaan?
+ *
+ * Peli (js/luentareaktiot.js ratkaiseAnkkurit) hylkää ankkurin, joka
+ * osuu useammin kuin kerran: kumpi osuma olisi se oikea? Sama
+ * tarkistus tehdään täällä, jotta sisällön virhe näkyy jo kuivassa
+ * ajossa eikä vasta pelin hiljaisuutena.
+ */
+export function laskeAnkkurinOsumat(sanat, ankkuri) {
+  const haku = sanoiksi(ankkuri);
+  if (!haku.length) return 0;
+  let osumia = 0;
+  for (let i = 0; i + haku.length <= sanat.length; i += 1) {
+    let osuu = true;
+    for (let j = 0; j < haku.length; j += 1) {
+      if (sanat[i + j] !== haku[j]) { osuu = false; break; }
+    }
+    if (osuu) osumia += 1;
+  }
+  return osumia;
+}
+
+/**
+ * ÄÄNITTEEN TUNNUSLUVUT aikaleimatiedoston `aani`-kenttään: nimi,
+ * kyselyversio (js/media.js UUSITUT_AANET; 0 = ei uusittu), tavumäärä
+ * ja SHA-256. Peli laskee samat luvut soivasta tiedostosta ja vertaa.
+ */
+export async function aanenTunnusluvut(tyo, aanidata) {
+  return {
+    nimi: tyo.aaniNimi,
+    versio: UUSITUT_AANET[tyo.aaniNimi] ?? 0,
+    tavut: aanidata.length,
+    sha256: await laskeSha256(aanidata),
+  };
+}
+
+/**
  * AIKALEIMAT KOHDISTUKSEN VASTAUKSESTA. Puhdas funktio: syötteenä
  * puhdistettu teksti ja kummankin päätteen vastausrunko, ulos
  * tiedoston sisältö.
@@ -158,7 +224,7 @@ export function etsiAnkkuri(sanat, ankkuri) {
  * vastauksen `words`-listasta: näin tiedoston sanat vastaavat tarkasti
  * pakin tekstiä, jota vasten ankkurit kirjoitetaan.
  */
-export function aikaleimoiksi(teksti, vastaus) {
+export async function aikaleimoiksi(teksti, vastaus, { kaupunki, aani }) {
   const kohdistus = normalisoiAlignment(vastaus);
   const merkit = kohdistus?.characters ?? [];
   const alut = kohdistus?.character_start_times_seconds ?? [];
@@ -187,7 +253,54 @@ export function aikaleimoiksi(teksti, vastaus) {
    */
   const kesto = Math.max(...loput.map(ms).filter(Number.isFinite));
   return {
-    versio: AIKALEIMOJEN_VERSIO, teksti, kesto, sanat, lauseet,
+    versio: AIKALEIMOJEN_VERSIO,
+    kaupunki,
+    teksti,
+    tekstiSha256: await tekstinSha256(teksti),
+    aani,
+    kesto,
+    sanat,
+    lauseet,
+    luotu: new Date().toISOString(),
+  };
+}
+
+/**
+ * SIDONTA ILMAN UUTTA KOHDISTUSTA (--sido).
+ *
+ * Repossa oleva aikaleimatiedosto (versio 1 tai 2) säilyttää tekstinsä
+ * ja sanansa; kaikki muu kirjoitetaan tuoreena versio 2:n mukaiseksi.
+ * Teksti ja sanat tarkistetaan pakkia vasten ENNEN sidontaa: jos ne
+ * ovat eriytyneet, ajat on kohdistettu johonkin muuhun kuin siihen,
+ * mitä peli nyt näyttää, eikä leimaa lyödä vanhan päälle.
+ */
+export async function sidoAikaleimat(tyo, aani) {
+  const polku = join(JUURI, tyo.kohde);
+  let vanha;
+  try {
+    vanha = JSON.parse(readFileSync(polku, 'utf8'));
+  } catch (virhe) {
+    throw new Error(`repotiedostoa ei voi lukea (${tyo.kohde}): ${virhe.message}`);
+  }
+  if (vanha?.teksti !== tyo.teksti) {
+    throw new Error('repotiedoston teksti ei vastaa pakin tekstiä — tarvitaan uusi kohdistus');
+  }
+  const sanat = Array.isArray(vanha.sanat) ? vanha.sanat : [];
+  const omat = sanat.map((s) => normalisoiSana(s?.sana));
+  const odotetut = sanoiksi(tyo.teksti);
+  if (omat.length !== odotetut.length || odotetut.some((w, i) => w !== omat[i])) {
+    throw new Error('repotiedoston sanat eivät vastaa tekstiä — tarvitaan uusi kohdistus');
+  }
+  return {
+    versio: AIKALEIMOJEN_VERSIO,
+    kaupunki: tyo.id,
+    teksti: vanha.teksti,
+    tekstiSha256: await tekstinSha256(vanha.teksti),
+    aani,
+    kesto: vanha.kesto,
+    sanat,
+    lauseet: Array.isArray(vanha.lauseet) ? vanha.lauseet : [],
+    luotu: new Date().toISOString(),
   };
 }
 
@@ -251,12 +364,15 @@ function vieAmpariin(polku, nimi) {
 
 /** Lippujen luku; kaupunkilista sietää pilkun ja välilyönnin. */
 export function lueLiput(argv) {
-  const liput = { kaupungit: [], kaikki: false, kuiva: false, vienti: false };
+  const liput = {
+    kaupungit: [], kaikki: false, kuiva: false, vienti: false, sidonta: false,
+  };
   for (let i = 0; i < argv.length; i += 1) {
     const pala = argv[i];
     if (pala === '--kaikki') liput.kaikki = true;
     else if (pala === '--kuiva') liput.kuiva = true;
     else if (pala === '--vie') liput.vienti = true;
+    else if (pala === '--sido') liput.sidonta = true;
     else if (pala === '--kaupungit') {
       i += 1;
       liput.kaupungit.push(...String(argv[i] ?? '').split(/[,\s]+/).filter(Boolean));
@@ -281,6 +397,7 @@ async function main() {
   if (!pyydetyt.length) {
     console.error('Anna kaupungit: node tools/kohdista-luennat.mjs --kaupungit marseille');
     console.error('Kaikki 45: --kaikki. Kuiva ajo ilman avainta ja verkkoa: --kuiva.');
+    console.error('Pelkkä äänisidonta ilman kohdistusta: --sido (ei tarvitse avainta).');
     process.exit(1);
   }
 
@@ -298,6 +415,8 @@ async function main() {
 
   if (liput.kuiva) {
     console.log('KUIVA AJO (--kuiva) — APIa ei kutsuta, tiedostoja ei kirjoiteta.');
+    console.log(`Tiedostomuoto: versio ${AIKALEIMOJEN_VERSIO} (teksti ja äänite sidottu SHA-256:een).`);
+    console.log('Pelkän sidonnan saa ilman kohdistusta: --sido (lukee repotiedoston, hakee äänitteen).');
     for (const tyo of tyot) {
       const sanat = sanoiksi(tyo.teksti);
       console.log(`${tyo.id}: ${tyo.teksti.length} merkkiä, ${sanat.length} sanaa`);
@@ -309,9 +428,13 @@ async function main() {
       }
       for (const reaktio of tyo.reaktiot) {
         const paikka = etsiAnkkuri(sanat, reaktio.ankkuri);
+        const osumia = laskeAnkkurinOsumat(sanat, reaktio.ankkuri);
         const tarkoitusOk = REAKTION_TARKOITUKSET.includes(reaktio.tarkoitus);
-        if (paikka < 0 || !tarkoitusOk) {
-          console.error(`  ${reaktio.id}: ${paikka < 0 ? `ankkuria "${reaktio.ankkuri}" ei löydy tekstistä` : `tuntematon tarkoitus ${reaktio.tarkoitus}`}`);
+        if (paikka < 0 || osumia !== 1 || !tarkoitusOk) {
+          const syy = paikka < 0 ? `ankkuria "${reaktio.ankkuri}" ei löydy tekstistä`
+            : osumia !== 1 ? `ankkuri "${reaktio.ankkuri}" osuu ${osumia} kertaa — peli hylkää sen`
+              : `tuntematon tarkoitus ${reaktio.tarkoitus}`;
+          console.error(`  ${reaktio.id}: ${syy}`);
           puuttuvia += 1;
         } else {
           console.log(`  ${reaktio.id}: ankkuri sanoissa ${paikka + 1}–${paikka + sanoiksi(reaktio.ankkuri).length} (${reaktio.tarkoitus})`);
@@ -331,7 +454,8 @@ async function main() {
   }
 
   const avain = process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY;
-  if (!avain) {
+  // Sidonta ei kutsu APIa lainkaan: se vain lukee, laskee ja kirjoittaa.
+  if (!avain && !liput.sidonta) {
     console.error('ELEVEN_API_KEY puuttuu ympäristöstä — kohdistusta ei voi tehdä.');
     console.error('Kuivan ajon saa ilman avainta: node tools/kohdista-luennat.mjs --kaupungit … --kuiva');
     process.exit(1);
@@ -341,19 +465,31 @@ async function main() {
   let virheita = 0;
   for (const tyo of tyot) {
     try {
-      const aani = await haeAanite(tyo);
-      const vastaus = await haeKohdistus(aani, tyo.teksti, avain);
-      const data = aikaleimoiksi(tyo.teksti, vastaus);
+      const aanidata = await haeAanite(tyo);
+      const aani = await aanenTunnusluvut(tyo, aanidata);
+      const data = liput.sidonta
+        ? await sidoAikaleimat(tyo, aani)
+        : await aikaleimoiksi(tyo.teksti, await haeKohdistus(aanidata, tyo.teksti, avain),
+          { kaupunki: tyo.id, aani });
+      /*
+       * VALIDAATTORI ENNEN KIRJOITUSTA. Sama funktio kuin pelissä: jos
+       * tiedosto ei kelpaisi pelille, se ei saa päätyä reposta ämpäriin
+       * vaan ajo kaatuu tähän.
+       */
+      const tulos = await tarkistaAikaleimat(data, { teksti: tyo.teksti, aani });
+      if (!tulos.ok) throw new Error(`aikaleimat eivät kelpaa: ${tulos.syy}`);
       const polku = join(JUURI, tyo.kohde);
       writeFileSync(polku, `${JSON.stringify(data, null, 2)}\n`);
-      console.log(`${tyo.id}: ${data.sanat.length} sanaa, ${data.lauseet.length} lausetta, `
-        + `kesto ${(data.kesto / 1000).toFixed(1)} s → ${tyo.kohde}`);
-      // Ankkurit tarkistetaan myös oikeassa ajossa: löytymätön ankkuri
-      // olisi muuten hiljainen reaktio pelissä.
+      console.log(`${tyo.id}: ${liput.sidonta ? 'sidottu, ' : ''}${data.sanat.length} sanaa, `
+        + `${data.lauseet.length} lausetta, kesto ${(data.kesto / 1000).toFixed(1)} s → ${tyo.kohde}`);
+      console.log(`  ääni  ${aani.nimi} v${aani.versio}, ${aani.tavut} tavua, sha256 ${aani.sha256}`);
+      // Ankkurit tarkistetaan myös oikeassa ajossa: löytymätön tai
+      // kahdesti osuva ankkuri olisi muuten hiljainen reaktio pelissä.
       const sanat = data.sanat.map((s) => normalisoiSana(s.sana));
       for (const reaktio of tyo.reaktiot) {
-        if (etsiAnkkuri(sanat, reaktio.ankkuri) < 0) {
-          console.error(`  ${reaktio.id}: ankkuria "${reaktio.ankkuri}" ei löydy aikaleimoista.`);
+        const osumia = laskeAnkkurinOsumat(sanat, reaktio.ankkuri);
+        if (osumia !== 1) {
+          console.error(`  ${reaktio.id}: ankkuri "${reaktio.ankkuri}" osuu aikaleimoihin ${osumia} kertaa.`);
           virheita += 1;
         }
       }
@@ -368,7 +504,8 @@ async function main() {
   }
   console.log(virheita
     ? `Valmis, mutta ${virheita} virhettä.`
-    : `Valmis, ${tyot.length} aikaleimatiedostoa${liput.vienti ? ' ja vienti' : ''}.`);
+    : `Valmis, ${tyot.length} ${liput.sidonta ? 'sidottua ' : ''}aikaleimatiedostoa`
+      + `${liput.vienti ? ' ja vienti' : ''}.`);
   process.exit(virheita ? 1 : 0);
 }
 

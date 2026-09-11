@@ -539,10 +539,20 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
   audio.addEventListener('ended', luennanLoppuVahti);
   audio.addEventListener('error', luennanLoppuVahti);
   ui.diaryVoice = audio;
+  /*
+   * ONKO TÄLLÄ LUENNALLA AJASTETTUJA REAKTIOITA? Sovitin
+   * (js/livia-eleet.js) kysyy sitä, jotta se voi antaa tarkkaan
+   * ajastetun reaktion voittaa yleisen kuuntelueleen. Tieto on
+   * epätosi siihen asti, kunnes aikaleimat on ladattu, tarkistettu ja
+   * vähintään yksi ankkuri on ratkennut — ei siis heti kytkennän
+   * yrityksestä.
+   */
+  let reaktiotValmis = false;
   // Myös aarremerkinnät ja muut saman lukijan luennat kuuluvat Pululle.
   // Matkakirjan tekstiä ei käytetä toisen äänitteen tunnelman lähteenä.
-  seuraaLivianKuuntelua(audio,()=>ui.diaryVoice===audio,
-    ()=>url===ui.diaryFullUrl?ui.factText?.textContent||'':'',{lahde:'matkakirja'});
+  seuraaLivianKuuntelua(audio, () => ui.diaryVoice === audio,
+    () => (url === ui.diaryFullUrl ? ui.factText?.textContent || '' : ''),
+    { lahde: 'matkakirja', reaktiotAjastettu: () => reaktiotValmis });
   /*
    * PULU REAGOI LUENNAN SISÄLLÄ (Raamattu: PULU REAGOI TEKSTIN SISALLA,
    * docs/pulu-reaktiot.md "Luentareaktiot"). Vain matkakirjaluenta —
@@ -551,9 +561,25 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
    * (tools/kohdista-luennat.mjs). Ilman niitä ei tehdä mitään: arvattu
    * hetki osuisi väärään sanaan. Lataus on asynkroninen eikä saa kaataa
    * luentaa, joten virheet nielaistaan täällä.
+   *
+   * PURKU JÄÄ SOITTIMEEN (`audio.puraReaktiot`), koska luennan
+   * pysäyttäjä ei ole tämä kohta vaan stopDiaryVoice tai haivytaLuenta
+   * — ja ne näkevät vain soittimen. Purku katkaisee myös eleen
+   * (moottori lähettää reactionEndin) ja nollaa yllä olevan tiedon.
    */
   if (url === ui.diaryFullUrl) {
     kytkeMatkakirjanReaktiot(audio, url, { voimassa: () => ui.diaryVoice === audio })
+      .then((pura) => {
+        if (typeof pura !== 'function') return;
+        // Luenta ehti vaihtua latauksen aikana: kytkentä heti auki.
+        if (ui.diaryVoice !== audio) { pura(); return; }
+        audio.puraReaktiot = () => {
+          audio.puraReaktiot = null;
+          reaktiotValmis = false;
+          pura();
+        };
+        reaktiotValmis = true;
+      })
       .catch(() => { /* reaktiot ovat lisä, eivät luennan ehto */ });
   }
   // Kirjanpito kaikista luennoista: pysäytys hiljentää myös sellaisen
@@ -848,6 +874,10 @@ export function stopDiaryVoice(ui) {
   // Kaikki luennat kiinni — myös mahdollinen myöhästelijä, joka ei
   // enää ollut diaryVoice mutta soi yhä.
   for (const audio of [...(ui.luennat ?? [])]) {
+    // Pulun luentareaktiot ensin auki: moottori lähettää eleen
+    // katkaisevan reactionEndin ja irrottaa kuuntelijansa ennen kuin
+    // soitin pysähtyy (js/luentareaktiot.js).
+    audio.puraReaktiot?.();
     audio.pause();
     audio.removeAttribute('src');
     // Vapautus ennen tyhjennystä: muuten laskuri jäisi plussalle eikä
@@ -868,6 +898,10 @@ export function haivytaLuenta(ui, kestoMs = 700) {
     stopDiaryVoice(ui);
     return;
   }
+  // Pulun reaktiot katkaistaan heti eikä vasta häivytyksen lopussa:
+  // pelaaja on jo lähtenyt tästä kohdasta, eikä ele saa jäädä päälle
+  // odottamaan pausea (js/luentareaktiot.js reactionEnd).
+  audio.puraReaktiot?.();
   // Irrotetaan heti, jotta seuraava luenta saa alkaa puhtaalta pöydältä.
   ui.diaryVoice = null;
   ui.luentaTauolla = null;

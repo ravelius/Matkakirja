@@ -214,7 +214,13 @@ export const FOKUSVIRTA_MARSEILLE = {
         perustelu: 'Lyhyt päätös, pieni nyökkäys.' },
       { id: 'marseille.r5', ankkuri: 'Terva, kala ja suolavesi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Hajuluettelo seuraa majataloon: pulu huvittuu.' },
-      { id: 'marseille.r6', ankkuri: 'käteni olivat jo toista mieltä', tarkoitus: 'huvittuu', voimakkuus: 0.6, siirtyma: 120,
+      { id: 'marseille.r6', ankkuri: 'käteni olivat jo toista mieltä', tarkoitus: 'huvittuu', voimakkuus: 0.6, siirtyma: 0,
+        /*
+         * Siirtymä 0, ei 120: viimeinen sana loppuu 29 239 ms ja äänite
+         * 29 280 ms, joten +120 ms olisi tiedoston lopun jälkeen
+         * (tekstisession mittaus 11.9.2026). Nauru saa silti valmistua
+         * äänitteen loputtua: luonnollisen lopun sääntö, docs/pulu-reaktiot.md.
+         */
         perustelu: 'Loppuvitsi: nauru merkinnän päätteeksi.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */

@@ -161,8 +161,12 @@ export function musaPolku(nimi) {
  * puolin (ks. vie-aanet.yml), ja tuoreus hoidetaan kyselyversiolla:
  * kun äänite äänitetään uusiksi, sen numero nousee tässä. Ämpäri
  * ohittaa kyselyn, välimuistit näkevät uuden osoitteen.
+ *
+ * Taulu on exportattu, koska aikaleimatiedosto kantaa saman numeron
+ * mukanaan (tools/kohdista-luennat.mjs, kenttä `aani.versio`): siitä
+ * näkee yhdellä silmäyksellä, minkä äänitepolven ajat tiedostossa ovat.
  */
-const UUSITUT_AANET = {
+export const UUSITUT_AANET = {
   // 28.8.2026: avaus ja avauslento uusiksi (nimetön perillinen,
   // sinä-muoto).
   'intro-puhe.mp3': 2,
