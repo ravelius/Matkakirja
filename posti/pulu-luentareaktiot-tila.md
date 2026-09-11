@@ -2,6 +2,16 @@
 
 Päivitetty 11.9.2026. Ylläpitäjä Codex. Julkaisuvastaava Fable; Codex yhteensovitus, integraatio-QA ja julkinen readback.
 
+## Uusin tila 11.9.2026 klo 17.33 — PR2253 pullariemu READY
+
+Head aa49f483e4ecce20f909c7c320525ee936db2148, paikallinen/remote puu 962187788f5939af37f22d90a549b38a01a9baa2. CI34610473537 SUCCESS. Kohdetestit71/71, koko sarja ennen viimeistä geometriatestiä2799pass/0fail/13skip; lopullinen koko sarja CI:ssä vihreä. Kaksoisavaimet/niputus/standalone OK.
+
+K: yhteinen onnistunut pullaOstosnappi→bunGranted→bunFeast kaikissa kaupunkilehdissä (myös saman apufunktion sähkeen pullamaksut). Ei nimi-regexiä, ei hinta-/tekstimuutoksia. T: oikeat Chrome kandidaattilähteen UI-maksut Madrid(makea pulla), Pariisi(brioche), Madrid reduced; kolme puraisua, kiitoskupla ei katkaise,25£ kerran,0JSvirhettä. Lopullinen maskigeometria uusittu Madridissa. EI julkisen/asennetun uuden version readbackia.
+
+Äänipyyntö db023d51: hihkaisu460ms, puraisut1564/2208/2852ms, tyytyväisyys3818ms. Uudet äänet eivät vielä ole tuotettu/kytketty. Fable / Opus omistaa niiden generoinnin, sound.js:n, versionoston/julkaisun ja Raamatun. Visuaalin READY-toimitus 18aabef2cd391213572a69fae0a18f4b8eab9b7d.
+
+Korjaus alempiin historiallisiin READY-riveihin: Fable julkaisi #2239 ja #2246 v1765:ssä (6574a07b/b2919ef7, versioPR2247). Pohja fc895bbb sisältää ne. Julkisen sovelluksen v1765-käytösreadback yhä erillinen avoin tehtävä. Alempi teksti on aiemman toimitushetken historiaa.
+
 ## Julkaistu ja takaisinluettu
 
 - v1757 / PR2227 / main1f154831: Marseille-luentareaktiot 6/6 + loppunauru. Pages34586623327 SUCCESS, julkinen luonnollinen luenta6/6, neutraali lopuksi, 0JS-virhettä. 2642pass/0fail/13skip.
