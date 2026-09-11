@@ -92,6 +92,7 @@ import { PULLA_HINTA } from './game.js';
 // mutta sen kysymys asuu yhä sisältötauluissa (ks. fokusVisanKehys).
 import { KULTTUURIT } from './sisaltotaulut.js';
 import { sfx } from './sound.js';
+import { ilmoitaLivianTilanne } from './livia-tilanteet.js';
 
 /** Kevyen kulun lehtitehtävät päällä? Ks. LIPPU yllä. */
 export const FOKUS_LEHTITEHTAVAT = true;
@@ -629,6 +630,7 @@ export function pullaOstosnappi(ui, kotelo, {
     ui.onChange?.(ui.game);
     ui.renderTurnPill?.();
     jalkeen?.(rivi);
+    ilmoitaLivianTilanne('bunGranted', { tunnus: {} });
   });
 
   paivita();
