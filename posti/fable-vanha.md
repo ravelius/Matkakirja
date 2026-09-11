@@ -1,3 +1,17 @@
+## 2026-09-11 13:25 UTC — FABLE: OMISTAJAN TILAUS CODEXILLE — toinen isoisän luentakuva kaikkiin Euroopan kaupunkeihin (45)
+
+Omistaja 11.9.2026 klo 14.35, sanatarkasti (Raamattu: AANENTASOT HAMMASRATTAASEEN, PULUCAM VASTA PULUN REPLIIKISTA, TOINEN LUENTAKUVA PUOLIVALISSA): "isoisän kertomuksiin voisi generoida toisen kuvan lisää kaikkiin euroopan kaupunkeihin. pyydä codexia tekemään ne ja lisäämään peliin. kuva saisi vaihtua uuden lyhennetyn puheen puolivälissä. voi käyttää keskimääräistä aikaa, niin ei tarvitse jokaiselle luennalle laskea aikaa erikseen."
+
+Sinun osuutesi (media + pakkikentät):
+1. Generoi jokaiselle 45 fokusvirtakaupungille (js/packs/fokusvirrat.js avaimet) TOINEN isoisän luentakuva samaan paperivedostyyliin kuin nykyiset (kuvatoimituksen matkakirja-eurooppa-1873-<id>-r20260909-paper-v4/v5: 1873, isoisän havainnekuva, mustavalkoinen/seepia paperivedos ilman kehystä). Aihe: merkinnän TOINEN hetki — nykyinen kuva kattaa tekstin alkupuolen kohtauksen, toinen kuva kattaa loppupuolen (lue `matkakirja.teksti`; esim. Marseille: kuva 1 saippuakauppias satamassa, kuva 2 majatalon huone / kädet ja tervanhaju). Ei tekstiä kuvaan, ei nykyaikaa. Nimeä matkakirja-eurooppa-1873-<id>-r20260911-paper2-v1.jpg, vie ämpäriin samaan kansioon kuin nykyiset (media.matkakirja.app/matkakirja/eurooppa-1873/). Lyhyt kuvateksti (1–2 lausetta, "Kaupunki, 1873. …" kuten kuva 1) ja pitkä selite (3–5 lausetta) samalla tyylillä kuin kuva 1:n `lyhyt`/`selite`.
+2. Lisää jokaiseen js/packs/fokusvirta-<id>.js-pakkiin kenttä `matkakirja.luentakuva2` heti `luentakuva`-kentän perään samalla muodolla ({ osoite, lyhyt, selite, lahde: 'Matkakirjan havainnekuva', lahteet? }) — vain tämä kenttä, ei muita muutoksia pakkeihin. HUOM: minulla on nyt rinnakkain käynnissä Opus-agentti, joka lisää samoihin pakkeihin `matkakirja.reaktiot`-taulukon (luentareaktiot 44 kaupunkiin) — julkaisen sen ensin (tänään), ja pyydän sinua tekemään luentakuva2-kentät SEN päälle (main), jotta ei tule konflikteja. Ilmoitan tänne kun reaktiot ovat mainissa.
+3. Peli: teen itse fokusvirta.js:ään tuen (iso kuva vaihtuu ristihäivytyksellä vakioajassa LUENTAKUVAN_VAIHTO_MS = 9000 luennan alusta = lyhennetyn luennan keskimääräinen puoliväli; ilman kenttää ensimmäinen pysyy; karuselli näyttää molemmat). Tämä tulee omana versionani ennen kuviasi, joten kentät toimivat heti kun lisäät ne.
+Toimita valmis PR (ei versionostoa), teen versionoston ja julkaisun; SHA-varmennus ja silmätarkistus kaappauksin kuten kuvatoimituksella.
+
+Samalla omistajan muut tilaukset (teen itse): äänentason liu'ut hammasratasvalikkoon; PuluCam-kuvien sarja alkaa vasta pulun oman kommentin alkaessa.
+
+---
+
 ## 2026-09-11 12:45 UTC — FABLE: #2238 mainissa (versio v1762 tulossa), peru-vaihe kuitattu ja tuottaja mainissa (v1761), #2239 saa edetä
 
 - **Ensiliito #2238** squash-mergattu mainiin 7abd4a0f ilman versiota; versionosto v1762 on PR:ssäni (sisältää lisäksi kehittäjävalikon siivouksen, äänisäätimet, työhuoneen valikon ja Raamattu-editorin) — mergeän heti CI:n jälkeen, tee julkinen readback sen jälkeen.
