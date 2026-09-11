@@ -28,6 +28,7 @@ import {
   fokusvirtaTila, normalisoiSahketeksti, sahkePalkkio, sisaltohakemisto,
   tulkitseVapaaSahke,
 } from '../js/fokusvirta.js';
+import { MATKAKIRJAN_LYHENNYS_LAUSEITA, lyhennaLauseita } from '../js/lausejako.js';
 // Vapaan vastauksen oikeat vastaukset asuvat välityspalvelimella eivätkä
 // pelissä; taulu luetaan tänne vain sen tarkistamiseksi, että pelidatan
 // tehtävätunnukset ja palvelimen taulu pysyvät synkassa.
@@ -754,8 +755,20 @@ test('fokusvirtakaupungin matkakirjateksti ei vaihdu laatan ratkettua', () => {
     // Laatta paikallaan: merkintä on virran oma.
     game.tokens.set(cityId, 'topaz');
     const ennen = fokusvirtaMatkakirja(ui, city);
-    assert.equal(ennen?.teksti, virta.matkakirja.teksti,
+    /*
+     * TILAPÄINEN LYHENNYS (omistaja 11.9.2026, Raamattu SAAPUMISEN UUSI
+     * JARJESTYS…): kortin teksti on pakin teksti kaksi lausetta
+     * lyhyempänä, ja KOKO teksti kulkee mukana kentässä `tekstiKoko`
+     * (luenta pysäytetään siitä lasketulla osuudella). Vertailu tehdään
+     * samalla apurilla kuin lyhennys, jottei testi kirjoita sääntöä
+     * toiseen kertaan — paluu entiseen (kytkin 0) menee tästä läpi
+     * sellaisenaan.
+     */
+    assert.equal(ennen?.tekstiKoko, virta.matkakirja.teksti,
       `${cityId}: virran merkintä ei tule korttiin ennen laatan ratkaisua`);
+    assert.equal(ennen?.teksti,
+      lyhennaLauseita(virta.matkakirja.teksti, MATKAKIRJAN_LYHENNYS_LAUSEITA),
+      `${cityId}: kortin teksti ei ole lyhennetty sovitulla säännöllä`);
 
     // Laatta ratkaistu: sama avain, sama teksti, sama kuva. Avain on
     // yhtä tärkeä kuin teksti — sen vaihtuminen kirjoittaisi kortin

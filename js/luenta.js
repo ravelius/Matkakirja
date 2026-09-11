@@ -1,5 +1,8 @@
 import { seuraaLivianKuuntelua } from './livia-tilanteet.js';
-import { LUENNAN_LOPPU_TAPAHTUMA, kytkeMatkakirjanReaktiot } from './luentareaktiot.js';
+import {
+  LUENNAN_LOPPU_TAPAHTUMA, kytkeMatkakirjanReaktiot, luennanLauserajat,
+} from './luentareaktiot.js';
+import { lauseitaMerkkeihin } from './lausejako.js';
 /*
  * Luennan koneisto: avaustekstin ja päiväkirjan kertojaäänet,
  * lauserajakatkot, häivytykset ja puhujan väistön kirjanpito.
@@ -500,7 +503,9 @@ export function lueKertojana(ui, teksti, { viive = 0, onLoppu = null } = {}) {
   };
 }
 
-export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, viive = 0 } = {}) {
+export function playDiaryVoice(ui, url, {
+  ekaLauseeseen = false, osuus = null, viive = 0, lopetaOsuuteen = null,
+} = {}) {
   stopDiaryVoice(ui);
   if (ui.radioModuuli && !ui.radioModuuli.luentaSallittu()) return;
   // Kertojan oma kytkin, ei taustaäänten (ks. playIntroVoice).
@@ -587,8 +592,26 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
   // jotta se pariutuu varmasti vapautuksen kanssa myös silloin kun
   // soitto ei koskaan käynnisty.
   merkitsePuhuja(ui, audio);
-  if (ekaLauseeseen) {
-    lauseTauko(ui, url, osuus).then((raja) => {
+  /*
+   * PYSÄYTYS LAUSERAJAAN — KAKSI SYYTÄ, YKSI KONEISTO.
+   *
+   *   `ekaLauseeseen`  vanha lyhyt kertojatila: raja haetaan
+   *                    ensimmäisen virkkeen kohdalta.
+   *   `lopetaOsuuteen` matkakirjan tilapäinen lyhennys (omistaja
+   *                    11.9.2026): raja haetaan siitä kohdasta, johon
+   *                    lyhennetty teksti päättyy — ei ensimmäisen
+   *                    virkkeen jälkeen.
+   *
+   * Molemmissa häivytys alkaa ennen rajaa ja soitin jää tauolle. TÄMÄ
+   * EI OLE LUENNAN LOPPU: `matkakirja:luenta-loppu` lähtee vain
+   * pehmeaLopun luonnollisesta haarasta (js/luentareaktiot.js),
+   * eikä katkaistu luenta saa teeskennellä loppuneensa. Pulun
+   * kuuntelu päättyy soittimen pauseen kuten tauossakin.
+   */
+  const rajanHaku = ekaLauseeseen ? lauseTauko(ui, url, osuus)
+    : (lopetaOsuuteen == null ? null : lopetuksenRaja(ui, url, lopetaOsuuteen));
+  if (rajanHaku) {
+    rajanHaku.then((raja) => {
       if (ui.diaryVoice !== audio || raja == null) return;
       const vahti = () => {
         if (audio.jatkettu) {
@@ -737,6 +760,58 @@ export function lauseTauko(ui, url, osuus = null) {
     ui.lauseTauot.set(avain, lupaus);
   }
   return ui.lauseTauot.get(avain);
+}
+
+/**
+ * Marginaali ennen tarkkaa lauserajaa (s): aikaleima on seuraavan
+ * lauseen ENSIMMÄISEN sanan alku, ja häivytys saa alkaa hitusen ennen
+ * sitä, jottei uuden lauseen ensitavu vilahda kuuluviin.
+ */
+const AIKALEIMAN_MARGINAALI_S = 0.15;
+
+/**
+ * LYHENNETYN LUENNAN PYSÄYTYSKOHTA (playDiaryVoice `lopetaOsuuteen`).
+ *
+ * AIKALEIMAT VOITTAVAT ARVION. Jos äänitteelle on tarkistetut
+ * sanakohtaiset aikaleimat (js/luentareaktiot.js), niissä on myös
+ * lauseiden alkuajat: pysäytys osuu silloin täsmälleen sen lauseen
+ * alkuun, joka jää pois. Ilman aikaleimoja palataan hiljaisuusarvioon
+ * (lauseTauko), joka etsii lähimmän vähintään 0,3 s hengähdyksen
+ * osuuden kohdalta.
+ *
+ * @param {object} ui
+ * @param {string} url äänitteen polku
+ * @param {number} osuus lyhennetyn tekstin merkkiosuus koko tekstistä
+ * @returns {Promise<?number>} pysäytyshetki sekunteina
+ */
+function lopetuksenRaja(ui, url, osuus) {
+  return luennanLauserajat(url).then((rajat) => {
+    const tarkka = lopetuksenLauseraja(rajat, osuus);
+    return tarkka == null ? lauseTauko(ui, url, osuus) : tarkka;
+  }).catch(() => lauseTauko(ui, url, osuus));
+}
+
+/**
+ * PYSÄYTYSHETKI AIKALEIMOISTA — puhdas funktio, ei verkkoa.
+ *
+ * Lyhennetty teksti päättyy tiettyyn merkkiin; sitä vastaava
+ * lauseiden määrä kertoo, MONESKO lause jää ensimmäisenä pois, ja sen
+ * alkuaika on pysäytyskohta. Marginaali vedetään siitä taaksepäin,
+ * jottei pois jäävän lauseen ensitavu vilahda kuuluviin.
+ *
+ * @param {?{lauseet:number[], teksti:string}} rajat aikaleimatiedosto
+ * @param {number} osuus lyhennetyn tekstin merkkiosuus
+ * @returns {?number} pysäytyshetki sekunteina, tai null (ei tietoa)
+ */
+export function lopetuksenLauseraja(rajat, osuus) {
+  if (!rajat || !Array.isArray(rajat.lauseet) || !rajat.teksti) return null;
+  if (!Number.isFinite(osuus) || osuus <= 0 || osuus >= 1) return null;
+  const merkkeja = Math.round(osuus * rajat.teksti.length);
+  const lauseita = lauseitaMerkkeihin(rajat.teksti, merkkeja);
+  const aika = rajat.lauseet[lauseita];
+  // Viimeinen lause mukana (tai kelvoton aika): ei pysäytystä.
+  if (!Number.isFinite(aika) || aika <= 0) return null;
+  return Math.max(0, aika / 1000 - AIKALEIMAN_MARGINAALI_S);
 }
 
 /**

@@ -772,8 +772,10 @@ test('moduuli on esilatauslistassa ja niputuksessa', () => {
     'luentareaktiot ennen luentaa: luenta.js tuo sen staattisesti');
   assert.ok(nippu.indexOf("'js/packs/fokusvirrat.js'") < nippu.indexOf("'js/luentareaktiot.js'"),
     'fokusvirrat ennen luentareaktioita');
+  // Tuonti on monirivinen (11.9.2026: mukaan tuli luennanLauserajat
+  // matkakirjan tilapäistä lyhennystä varten) — vartio katsoo nimiä.
   assert.match(lue('js/luenta.js'),
-    /import \{ LUENNAN_LOPPU_TAPAHTUMA, kytkeMatkakirjanReaktiot \} from '\.\/luentareaktiot\.js';/);
+    /LUENNAN_LOPPU_TAPAHTUMA, kytkeMatkakirjanReaktiot, luennanLauserajat,\s*\} from '\.\/luentareaktiot\.js';/);
   // Sovittimen sopimus: luenta kertoo, onko tälle luennalle ajastettuja
   // reaktioita, ja purkaa ne pysäytettäessä.
   const luenta = lue('js/luenta.js');

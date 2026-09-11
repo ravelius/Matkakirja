@@ -2366,3 +2366,112 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
   background: none;
   box-shadow: none;
 }
+
+/* ===================================================================
+   ISOT KUVAT KESKELLÄ RUUTUA (js/fokusvirta.js naytaLuentakuvasarja)
+   -------------------------------------------------------------------
+   Omistaja 11.9.2026 klo 12.40 (Raamattu, SAAPUMISEN UUSI JARJESTYS:
+   KAUPUNGIN MINITRAILERI, ISOT KUVAT KESKELLA, LYHENNETTY MERKINTA),
+   sanatarkasti: *"isoisan kuva saisi aueta keskelle sivua niin isolla
+   kuin mahdollista ja haivyta kuvan reunat lapinakyviksi ja kulmista
+   hieman enemman pyoristetysti. Pulucamin kuvat tulisivat samalla
+   tavalla."*
+
+   KOLME EROA kartan luentakuvaan:
+     - PAIKKA on ruudun keskus, ei laudan piste: sarja saa peittää
+       matkakirjakortin (Raamattu 11.9.), joka jää auki sen alle.
+     - KALLISTUSTA EI OLE. Vino valokuva on pöydälle jätetty kuva
+       kartalla; keskellä ruutua se olisi virhe. Pakassa kallistus
+       säilyy ennallaan.
+     - REUNAT HÄIVYTETÄÄN läpinäkyviksi maskilla (kaikki neljä reunaa,
+       n. 7 %) ja kulmat ovat aiempaa pyöreämmät (22 px).
+
+   NAPAUTUKSET LÄPI: päällys ei ota osoitintapahtumia, jotta kartan
+   liike päättää sarjan (js/fokusvirta.js kytkeSarjanKartanLiike).
+   =================================================================== */
+.fokusvirta-isokuva {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+
+.fokusvirta-isokuva.nakyy { opacity: 1; }
+
+/* Ruudut ovat päällekkäin: ristihäivytys on kahden opacityn vaihto. */
+.fokusvirta-isokuva-ruutu {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 92vw;
+  max-height: 78vh;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.fokusvirta-isokuva-ruutu.nakyy { opacity: 1; }
+
+.fokusvirta-isokuva-kotelo {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 92vw;
+}
+
+/* KUVA NIIN ISONA KUIN MAHTUU, KUVASUHDE SÄILYEN. Reunat sulavat
+   läpinäkyviksi molempien suuntien maskeilla; WebKit tarvitsee oman
+   etuliitteensä. Kehystä ei ole (Raamattu 9.9.). */
+.fokusvirta-isokuva-kuva {
+  width: auto;
+  height: auto;
+  max-width: 92vw;
+  max-height: 78vh;
+  border-radius: 22px;
+  object-fit: contain;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%);
+  mask-image:
+    linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+/* Lyhyt kuvateksti kiinni kuvan alalaidassa, kuten kartalla. */
+.fokusvirta-isokuva-teksti {
+  margin: -0.6rem 0 0;
+  max-width: min(92vw, 46rem);
+  padding: 0.45rem 0.75rem;
+  border-radius: 0 0 12px 12px;
+  background: rgba(245, 240, 226, 0.94);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  font-family: var(--font-luku);
+  font-size: 0.95rem;
+  color: rgba(33, 29, 24, 0.84);
+  text-align: center;
+}
+
+/* PULU-CAM-sinetti isossa kuvassa: sama merkki kuin pakan korteissa,
+   oikeassa yläkulmassa, mitta ruudun mukaan. */
+.pulucam-merkki.pulucam-merkki-iso {
+  right: 0.8rem;
+  top: 0.8rem;
+  bottom: auto;
+  width: clamp(56px, 9vw, 160px);
+}
+
+/* LIIKE VÄHENNETTY: samat ajat, ristihäivytys ilman liikettä — tässä
+   liikettä ei ole muutenkaan, joten vain kestot jäävät. */
+@media (prefers-reduced-motion: reduce) {
+  .fokusvirta-isokuva,
+  .fokusvirta-isokuva-ruutu { transition-duration: 500ms; }
+}

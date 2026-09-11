@@ -1,0 +1,197 @@
+/* =========================================================================
+   KAUPUNGIN MINITRAILERI (js/saapumistraileri.js)
+   -------------------------------------------------------------------------
+   Omistaja 11.9.2026 klo 12.40 (Raamattu, SAAPUMISEN UUSI JARJESTYS:
+   KAUPUNGIN MINITRAILERI, ISOT KUVAT KESKELLA, LYHENNETTY MERKINTA),
+   sanatarkasti: *"Ne kolme kuvaa voisivat liukua oikealta vasemmalle
+   pysahtyen keskelle ruutua kahden sekunnin ajaksi. Liut menisi tutulla
+   nopeutus hidastus kiihdytyksilla"* ja *"kirjaimet voisivat lentaa ruudun
+   keskelta kaukaa horisontista tullen oikeille paikoilleen"*.
+
+   VAIN TRANSFORM JA OPACITY LIIKKUVAT. Sama sääntö kuin kartan kamera-ajossa
+   ja kuvasuurennoksessa: asettelu tehdään kerran, liike jätetään
+   kompositorille. Kirjainten kasvu tulee PERSPEKTIIVISTÄ eikä skaalasta —
+   kaukana oleva kirjain on pieni, koska se on kaukana.
+
+   KESTOT OVAT SAMAT LUVUT KUIN js/saapumistraileri.js:ssä. Ajastimet ja
+   siirtymät on pidettävä samassa tahdissa: skripti päättää MILLOIN luokka
+   vaihtuu, css MITEN vaihto näyttää.
+   ========================================================================= */
+
+.saapumistraileri {
+  --traileri-liuku: 700ms;
+  --traileri-ulos: 600ms;
+  --traileri-kirjain: 650ms;
+  --traileri-kirjain-ulos: 450ms;
+
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  /* Traileri on tervehdys eikä valikko: napautus missä tahansa ohittaa. */
+  cursor: pointer;
+  /* Kirjainten lento tulee "horisontista": yhteinen katselupiste ruudun
+     keskellä, jolloin kaikki kirjaimet lentävät samaa rataa. */
+  perspective: 900px;
+  perspective-origin: 50% 50%;
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+/* Napautus ohittaa: koko päällys häipyy 200 ms:ssä (skripti poistaa sen). */
+.saapumistraileri.ohitettu {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.saapumistraileri-kuvat {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* KUVA LIUKUU OIKEALTA KESKELLE JA VASEMMALLE ULOS. Alkuasento on ruudun
+   oikean reunan takana; `keskella` tuo sen paikalleen ja `ulos` vie sen
+   vasemmalle. Molemmissa liukuvat nopeutus–hidastus-käyrät. */
+.saapumistraileri-kuva {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 92vw;
+  max-height: 80vh;
+  opacity: 0;
+  transform: translateX(115vw);
+  transition:
+    transform var(--traileri-liuku) cubic-bezier(0.33, 0, 0.2, 1),
+    opacity 260ms ease;
+}
+
+.saapumistraileri-kuva.keskella {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.saapumistraileri-kuva.ulos {
+  opacity: 1;
+  transform: translateX(-115vw);
+  transition:
+    transform var(--traileri-ulos) cubic-bezier(0.6, 0, 0.75, 1),
+    opacity 260ms ease;
+}
+
+/* KUVA MAHDOLLISIMMAN ISONA, REUNAT PEHMEÄSTI HÄIVYTETTYINÄ. Sama
+   maskikaava kuin isoisän isossa keskikuvassa (css/fokusvirta.css
+   .fokusvirta-isokuva): kaikki neljä reunaa sulavat mustaan, jolloin
+   kuvalla ei ole kehystä vaan häive. */
+.saapumistraileri-kuva img {
+  width: auto;
+  height: auto;
+  max-width: 92vw;
+  max-height: 80vh;
+  border-radius: 18px;
+  object-fit: contain;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%);
+  mask-image:
+    linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+/* KAUPUNGIN NIMI HARVENNETUIN KAPITAALEIN KUVIEN KESKELLÄ. Nimi on
+   kuvien PÄÄLLÄ ja pysyy paikallaan kaikkien kolmen kuvan ajan. */
+.saapumistraileri-nimi {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  /* NIMI YHDELLE RIVILLE. Harvennetut kapitaalit levittävät nimen
+     leveäksi, ja rivitys pudotti viimeisen kirjaimen omalle rivilleen
+     (mitattu Chromiumilla 1024 px:n ruudulla). Kirjasinkoko lasketaan
+     siksi nimen PITUUDESTA: skripti kirjoittaa kirjainmäärän
+     muuttujaan --nimen-merkit, ja koko on pienempi kahdesta — ruudun
+     mukainen enimmäiskoko tai se, mikä mahtuu yhdelle riville. */
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 96vw;
+  padding: 0 2vw;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  /* Harvennus jättää viimeisen kirjaimen jälkeen välin: siirto puolella
+     harvennuksella pitää nimen optisesti keskellä. */
+  text-indent: 0.175em;
+  font-family: var(--font-otsikko, var(--font-luku, serif));
+  font-size: min(clamp(2.4rem, 9vw, 7rem), calc(88vw / (var(--nimen-merkit, 8) * 1.1)));
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+/* KIRJAIN LENTÄÄ HORISONTISTA: se alkaa 2500 px katsojasta poispäin ruudun
+   keskeltä ja tulee omalle paikalleen suureten perspektiivin mukaan.
+   Porrastus (--kirjaimen-viive) tulee skriptiltä, 90 ms/kirjain. */
+.saapumistraileri-kirjain {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 0, -2500px);
+  transition:
+    transform var(--traileri-kirjain) cubic-bezier(0.16, 0.84, 0.44, 1) var(--kirjaimen-viive, 0ms),
+    opacity 320ms ease var(--kirjaimen-viive, 0ms);
+}
+
+.saapumistraileri-vali {
+  width: 0.4em;
+}
+
+.saapumistraileri-nimi.nakyy .saapumistraileri-kirjain {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* LOPUKSI KAIKKI SAMAA RATAA ULOS: kirjaimet jatkavat katsojaa kohti
+   (translateZ +600 px), jolloin ne suurenevat ja katoavat ruudun ohi
+   lähes yhtä aikaa (porrastus 20 ms). */
+.saapumistraileri-nimi.ulos .saapumistraileri-kirjain {
+  opacity: 0;
+  transform: translate3d(0, 0, 600px);
+  transition:
+    transform var(--traileri-kirjain-ulos) cubic-bezier(0.6, 0, 0.9, 0.4) var(--kirjaimen-ulosviive, 0ms),
+    opacity var(--traileri-kirjain-ulos) ease-in var(--kirjaimen-ulosviive, 0ms);
+}
+
+/*
+ * LIIKE VÄHENNETTY: SAMAT AJAT, EI LIIKETTÄ (omistajan sääntö koko pelissä).
+ * Kuvat vaihtuvat ristihäivytyksellä ja nimi tulee näkyviin häivytyksellä —
+ * porrastus säilyy, jotta rytmi on sama kuin liikkeellisessä versiossa.
+ *
+ * Luokka tulee skriptiltä (js/saapumistraileri.js liikeVahennetty), jotta
+ * sama sääntö pätee myös silloin kun media-kysely ei ole käytettävissä.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .saapumistraileri-kuva,
+  .saapumistraileri-kuva.ulos { transform: none; }
+  .saapumistraileri-kuva.ulos { opacity: 0; }
+  .saapumistraileri-kirjain,
+  .saapumistraileri-nimi.nakyy .saapumistraileri-kirjain,
+  .saapumistraileri-nimi.ulos .saapumistraileri-kirjain { transform: none; }
+}
+
+.saapumistraileri.liike-vahennetty .saapumistraileri-kuva,
+.saapumistraileri.liike-vahennetty .saapumistraileri-kuva.ulos { transform: none; }
+.saapumistraileri.liike-vahennetty .saapumistraileri-kuva.ulos { opacity: 0; }
+.saapumistraileri.liike-vahennetty .saapumistraileri-kirjain,
+.saapumistraileri.liike-vahennetty .saapumistraileri-nimi.nakyy .saapumistraileri-kirjain,
+.saapumistraileri.liike-vahennetty .saapumistraileri-nimi.ulos .saapumistraileri-kirjain {
+  transform: none;
+}
