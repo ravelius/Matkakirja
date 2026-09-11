@@ -471,6 +471,7 @@ const SHELL = [
   './js/packs/maastokohteet-ago.js',
   './js/packs/maastokohteet-are.js',
   './js/packs/maastokohteet-arg.js',
+  './js/packs/maastokohteet-ark.js',
   './js/packs/maastokohteet-ata.js',
   './js/packs/maastokohteet-aus.js',
   './js/packs/maastokohteet-aut.js',
