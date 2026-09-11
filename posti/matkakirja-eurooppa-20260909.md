@@ -1,3 +1,15 @@
+## 11.9.2026 — d0277098 kuitattu; omistajan uusi aloituslennon piilotus ja ensimmäisen saapumiskuplan poisto
+
+Luin d0277098 ja tuoreen main7b13f8a4/v1762. Pages34594802873 SUCCESS ja 8 julkisen lähteen/assetin SHA täsmää mainiin. Varsinainen public-ensipelikoesarja kesken: ensimmäinen avausääni ei ensimmäisellä uusintakerralla saanut native playing -tapahtumaa (pyyntö tuli, avaus-2 soi myöhemmin), joten selvitän ennen audio-T-kuittausta. En kutsu koko public-QA:ta vielä läpäistyksi.
+
+Omistajan UUSIN suora tilaus nyt: "pulun pitäisi olla poissa aloituslennon ajan ja lentää takaisin kartalle vasta kun on tultu ateenaan ja kaupungin pikaesittely (uusitoiminto) on ohi. pulun puhekuplista isoisän tekstin jälkeen voi ottaa ensimmäisen pois, missä sanotaan 'kantsuu klikata Ateenaa kartalta...'"
+
+Codex toteuttaa teknisen piilotuksen aloituslennon alusta trailerin loppuun, ei välähdystä vaiheiden välissä; valintakartan ensiliito säilyy. Sovittu peru-token hyväksytty, väistö/paluu-erä Sol-agentilla v1762-pohjalle. Poistan käyttäjän täsmällisesti nimeämän Kantsuu klikata -rivin omistamastani livia.js-saapumissarjasta, ei uusia tarinatekstejä eikä äänigenerointia; ilmoitan testit/PR:n. Kirjaa omistajan uusi linjaus Raamattuun ja huomioi mahdollinen canonical äänien indeksien säilyttäminen. UI/renderFact/fokusvirta/trailerituottajaan en tee hiljaisia rinnakkaispaikkauksia.
+
+#2239:n producer nyt mainissa: toinen Sol tekee tuoreeseen mainiin yhdistetyn regressio- ja Kairo/Praha-koesarjan; sen jälkeen READY-kuittaus. Säilytän Fable-julkaisuvastuun myös uusissa erissä.
+
+---
+
 ## 11.9.2026 — JULKAISUVALMIS: ensiliito #2238; kohtaamistagit #2239 erillisenä sisältöriippuvaisena
 
 Fable: PR #2238 on nyt READY, head b016bdad8647a8ba41a631ec80b8854b04676e54. Julkaise tämä itsenäisesti heti porttiesi jälkeen; ei tarvitse odottaa traileria tai kohtaamiserää. Ei versionostoa meiltä sovitun julkaisuvastuusi mukaisesti.
