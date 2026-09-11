@@ -31,12 +31,41 @@ tekee tekstisessio tämän rekisterin puutelistasta.)*
   tarinassa. Voimakkuus tavallisesti 0,3–0,6; ≥ 0,7 vain suurissa
   hetkissä (aarteen löytö, Venetsian rakkaus, ensimmäinen saapuminen
   uuteen maanosaan, linssin huippukohta).
-- Kertojan luennan aikana pulu kuuntelee (tekninen `narration`), ei
-  reagoi tarinan tunteisiin päälle. Tunnetagi laukeaa kuplan tai
-  jakson alussa, ei kesken puheen.
+- Kertojan luennan aikana pulun perusasento on yläviistokatse; matkakirja-
+  luennoissa tekstikohtaiset reaktiot (ks. Luentareaktiot). Kuplan tunnetagi
+  laukeaa kuplan alussa.
 - Odotus, kortti ja taustaele eivät saa käynnistää ristiriitaisia
   reaktioita; vanhentunutta elettä ei jonoteta. Hiljennys ja vähennetty
   liike huomioidaan teknisessä kerroksessa.
+
+## Luentareaktiot (tekstin sisällä) — skeema ja pilotti
+
+*(Omistaja 11.9.2026: kaikki matkakirjat tagitetaan läpi tekstin; Raamattu
+PULU REAGOI TEKSTIN SISALLA. Korvaa toimituslinjan kohdan "tunnetagi laukeaa
+kuplan tai jakson alussa, ei kesken puheen" matkakirjaluentojen osalta.)*
+
+- **Perusasento** luennan aikana: rauhallinen yläviistokatse (v1752).
+  Sen päälle tulee tekstikohtaan ajoitettu yksi reaktio ja paluu.
+- **Data** (pakki, `matkakirja.reaktiot[]`): `{ id, ankkuri, tarkoitus,
+  voimakkuus, siirtyma, perustelu }`. `ankkuri` = katkelma luentatekstistä
+  sanasta sanaan; `tarkoitus` ∈ myotailee · epailee · torjuu · huvittuu ·
+  hammastyy · vakavoituu; `voimakkuus` 0–1; `siirtyma` ms ankkurin
+  viimeisen sanan lopusta. Hiljaiset osuudet kirjataan kommenttiin.
+- **Ajoitus:** äänitteen sanakohtaiset aikaleimat
+  (`audio/puhe-fokus-matkakirja-<id>.aikaleimat.json`, ElevenLabs forced
+  alignment olemassa olevalle mp3:lle, ei uutta generointia). Ankkurin
+  hetki = ankkurin viimeisen sanan loppu + siirtymä. Jos aikaleimoja ei ole,
+  reaktioita ei ammuta (ei merkkimääräarvioita).
+- **Tapahtuma** (Fable, js/luenta.js): `ilmoitaLivianTilanne('reaction',
+  { lahde: 'matkakirja', tunnus: id, tarkoitus, voimakkuus, kaupunki })`
+  oikean `audio.currentTime`-kellon mukaan; tauko pysäyttää, kelaus ei
+  ammu väliin jääneitä; kaupungin/äänen vaihto mitätöi. Eleen valinta ja
+  paluu perusasentoon: tekstisessio (livia-eleet).
+- **Sävyohje:** tavallinen kohta 0,3–0,4, vitsi 0,45–0,6, hurja asia
+  0,6–0,8; enintään noin yksi reaktio per virke; ei nyökkäys/pudistus
+  vuorotellen. Selittävät sivulauseet hiljaisia.
+- **Pilotti:** Marseille (js/packs/fokusvirta-marseille.js, 6 reaktiota,
+  1 hiljainen osuus). Seuraavat erät vasta pilotin katselmuksen jälkeen.
 
 ## Rivin muoto
 
@@ -691,6 +720,7 @@ laukaisematta, ei siirretä seuraavaan rakoon.
 
 **A. Rakenteelliset esteet — nämä ensin, muuten kytkennät eivät näy.**
 
+- **T1. TEHTY v1749** (PR #2223): pulu ja nappi ylimpään kerrokseen, kun päällä on lehti (arrival-dialog), laukku (passport-dialog) tai visa/kohtaaminen (quiz-dialog); muut dialogit hiljaisia; yhteinen dialogitila (js/livia-dialogitila.js).
 - **T1. PÄÄTETTY 11.9.2026:** portti höllennetään lehdelle (#arrival-dialog), matkalaukulle ja visa-/kohtaamiskortille; muut dialogit hiljaisia. Tekstisession toteutettavaksi.
 - **T1 (alkuperäinen). `dialog[open]`-portti (js/livia-eleet.js:123 ja :128).**
   `if(!nakyy()||odotusrivi||doc.querySelector('dialog[open]')||…)return false;`
@@ -845,3 +875,7 @@ kuuntelu säilyy odotuksen ja taukojen yli); T4 tehty (v1745, 7 virheriviä
 K/T); T2 linssit v1746; T2 valmis v1747 (lukija). Fable.
 11.9.2026 — omistajan päätökset epävarmiin kohtiin 1–10 kirjattu; T1 avattu
 tekstisessiolle. Fable.
+11.9.2026 — T1 tehty (v1749). Omistajan Marseille-palaute: puhelimen lehdessä
+pulu oikeaan reunaan (v1750), artikkelin chat reagoi ja ikkuna lähemmäs (v1751).
+Koko tekninen puutelista T1–T4 toimitettu; seuraavaksi B-osion tilanne-ID-
+kytkennät (saapumisketju, aihesivut, aarre, raha, pitkä odotus). Fable.

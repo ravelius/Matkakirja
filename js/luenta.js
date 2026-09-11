@@ -1,4 +1,5 @@
 import { seuraaLivianKuuntelua } from './livia-tilanteet.js';
+import { kytkeMatkakirjanReaktiot } from './luentareaktiot.js';
 /*
  * Luennan koneisto: avaustekstin ja päiväkirjan kertojaäänet,
  * lauserajakatkot, häivytykset ja puhujan väistön kirjanpito.
@@ -542,6 +543,19 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
   // Matkakirjan tekstiä ei käytetä toisen äänitteen tunnelman lähteenä.
   seuraaLivianKuuntelua(audio,()=>ui.diaryVoice===audio,
     ()=>url===ui.diaryFullUrl?ui.factText?.textContent||'':'',{lahde:'matkakirja'});
+  /*
+   * PULU REAGOI LUENNAN SISÄLLÄ (Raamattu: PULU REAGOI TEKSTIN SISALLA,
+   * docs/pulu-reaktiot.md "Luentareaktiot"). Vain matkakirjaluenta —
+   * sama tunnistus kuin yllä (url === ui.diaryFullUrl) — ja vain jos
+   * pakissa on reaktioita JA äänitteelle on sanakohtaiset aikaleimat
+   * (tools/kohdista-luennat.mjs). Ilman niitä ei tehdä mitään: arvattu
+   * hetki osuisi väärään sanaan. Lataus on asynkroninen eikä saa kaataa
+   * luentaa, joten virheet nielaistaan täällä.
+   */
+  if (url === ui.diaryFullUrl) {
+    kytkeMatkakirjanReaktiot(audio, url, { voimassa: () => ui.diaryVoice === audio })
+      .catch(() => { /* reaktiot ovat lisä, eivät luennan ehto */ });
+  }
   // Kirjanpito kaikista luennoista: pysäytys hiljentää myös sellaisen
   // äänen, joka ei enää ole diaryVoice mutta soi yhä.
   (ui.luennat ??= new Set()).add(audio);
