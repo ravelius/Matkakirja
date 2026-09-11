@@ -1,3 +1,21 @@
+## 2026-09-11 12:44 UTC — CODEX: PR #2246 READY — 52 odotusrepliikkiä, chatin vastauspaluu, kuplat ja alkulento
+
+PR https://github.com/ravelius/Matkakirja/pull/2246 on READY (ei draft), yhdistettävissä. Head 0e43fb010b519d4d51736248007691c48a94b024, testattu puu d1cc5eebebc34596b519d8e18fb4582f8f19aef5, main v1764 f69387ab yhdistetty. Ei versionostoa. Fable-roolille seuraava siirto: versionosto/yhdistäminen/julkaisu mahdollisimman pian sovittujen porttien jälkeen. Luin roolin Opus-siirtopromptin; sama julkaisuvastuu säilyy.
+
+Omistajan uusin tilaus sanatarkasti Raamattuun: "niitä kysyn pöllöltä tekstivaihtoehtoja on varmaan yli 30kpl. ne voisi mäpätä tiettyihin animaatioihin jotka sopivat parhaiten ja tarvittaessa tehdä muutaman uuden animaation."
+
+Toteutus: kaikki 52 nykyistä repliikkiä (36 yleistä, 9 vastaus-, 7 pitkää) täsmällisessä elekartassa + kattavuustesti, uusi bookStudy (kirja, lasit, hillitty sivunkääntö). Pyyntökohtainen lähtö/pitkä poissaolo/vastauspaluu, ehdotushaun ja heti seuraavan kysymyksen kilpailu sekä puheen alku/loppu, hidden/pagehide/reduced/close/peru/stale-vastaus suojattu. Pitkän repliikin vaihtuminen ei tuo asioille lähtenyttä Pulua takaisin. JSON-varatekstiä ei merkitä aidoksi vastaukseksi; SSE ensimmäinen sisältöpala tuo takaisin, myöhempi virhe säilyttää virhereaktion.
+
+Samassa PR:ssä aiemmin tilatut aloituslennon ja trailerin piilotus/paluu, Kantsuu klikata -ohjeen poisto vain näkyvästä sarjasta (ääniavaimet säilyvät), kupla pois 3 s puheen lopusta tai kartan liikkeestä, pieni plus palauttaa saman kontekstin viimeisen kuplan (läpinäkyvä44px osuma-alue), automaattiset kuplat pois näkyvästä chathistoriasta ilman loki-/keskusteludatan poistoa. Pulu avaa yhä chatin.
+
+Portit: 2786 pass / 0 fail / 13 skip (2799 total), CI34600161883 SUCCESS täsmälleen yllä olevalle headille; kaksoisavaimet/niputus/standalone-build/diff-check PASS ja etäpuu täsmää paikalliseen. Aito normal alkuvalinta→lento→Ateena-traileri→kaksi kuplaa→isoisän luonnollinen loppu PASS:571näytettä ei Pulua/kuplaa ennen traileriloppua,0JSerror. Reduced/ohitus/destroy3/3 aiemmalla integraatiolla. Aidon Ateena-kartan veto/plus-hover/kuplan palautus/Pulu-chat PASS ja kuvat katsottu. Todellisen UI:n fixture-chat4/4 PASS (SSE, JSON, reduced, closecancel;9s vaste):poissa yli6s, sama kysymystoken tuo vastauksen mukana kirjan kanssa, keskeytetty ei palaa myöhässä,0JSerror. Fixture testaa UI-elinkaarta, ei tuotanto-AI:n vastauslaatua.
+
+Omistus säilyi: ei fokusvirta/luenta/saapumistraileri-tuottajan/sisällön/Raamatun edittejä; ui.js vain startFlight ja kuplien traileriodotus. Ei uutta rasterimediaa tai ääntä. PR2239 on edelleen erikseen READY49c03c24/CI34596083456SUCCESS ja odottaa sinun julkaisua. 45 toisen luentakuvan toimitus on kuvatuotantotehtävän vastuulla (kuittaus1fada1fe), ei päällekkäistä media-ajoa tässä.
+
+Tätä erää ei ole vielä julkaistu eikä julkista readbackia ole tehty. Tarkka K/T: aloituslento/traileriväistö K/T yllä olevilla poluilla; chat-odotus52 K/yksikkö, vastauspaluu T neljällä fixturepolulla; kuplamuisti K/T Ateena. Ei väitettä kaikkien pelitilanteiden tai kaikkien kaupunkien visuaalisesta T-kattavuudesta.
+
+---
+
 ## 11.9.2026 — Omistajan uusi kuplien piilotus/plus-palautus ja chatin sisällönmukaiset eleet
 
 Omistajan uudet suorat täsmennykset tässä keskustelussa:
