@@ -51,11 +51,13 @@ export const AIKALEIMOJEN_VERSIO = 2;
  * LUONNOLLINEN LOPPU (sopimus tekstisession kanssa, 11.9.2026).
  *
  * Merkinnän viimeinen reaktio osuu usein viimeiseen sanaan, ja
- * äänitteen häntä loppuu siihen paikkaan. Soitin ehtii lähettää
- * `ended`-tapahtuman ennen kuin viimeinen `timeupdate` osuu hetkeen —
- * ja ilman tätä varaa loppuvitsi jäisi ampumatta juuri siinä kohdassa,
- * johon se on kirjoitettu. Puoli sekuntia riittää: sitä pidempi varaa
- * alkaisi ampua reaktioita, joita luennassa ei enää kuultu.
+ * äänitteen häntä loppuu siihen paikkaan. Luenta ehtii loppua ennen
+ * kuin viimeinen `timeupdate` osuu hetkeen — ja ilman tätä varaa
+ * loppuvitsi jäisi ampumatta juuri siinä kohdassa, johon se on
+ * kirjoitettu. Puoli sekuntia riittää MOLEMPIIN SUUNTIIN: sitä pidempi
+ * varaa alkaisi ampua reaktioita, joita luennassa ei enää kuultu.
+ * Lopussa ammutaan enintään YKSI reaktio (paatos alla) — vanhoja
+ * ampumatta jääneitä ei pureta ryöppynä viimeiseen hetkeen.
  *
  * Jälkireaktio merkitään tapahtumaan (`jalkireaktio: true`), jotta
  * sovitin saa antaa sen valmistua äänitteen jo loputtua. Manuaalinen
@@ -63,6 +65,26 @@ export const AIKALEIMOJEN_VERSIO = 2;
  * tapaan (`reactionEnd`).
  */
 export const LOPPUVARA_MS = 500;
+
+/**
+ * LUENNAN LUONNOLLINEN LOPPU EI OLE `ended` (selainkoe 11.9.2026).
+ *
+ * js/luenta.js pehmeaLoppu vaimentaa viimeisen hetken ja kutsuu
+ * `audio.pause()` 25 ms ennen tiedoston reunaa, jottei pysäytys
+ * napsahda. Soitin ei siis koskaan lähetä `ended`-tapahtumaa
+ * matkakirjaluennasta: peli lähettää pausen ja `ended` jää epätodeksi,
+ * eikä viimeiseen sanaan kirjoitettu loppureaktio ampuisi ikinä.
+ *
+ * Siksi pehmeaLoppu lähettää TÄSTÄ JA VAIN TÄSTÄ polusta oman
+ * tapahtumansa juuri ennen pausea. Manuaalinen pysäytys, häivytys,
+ * kelaus ja virhe eivät sitä lähetä — ne ovat keskeytyksiä, eivät
+ * loppuja. Nimi on täällä vakiona, jotta luenta.js ja moottori eivät
+ * voi eriytyä kirjoitusasusta.
+ *
+ * Tekstisession seuraaLivianKuuntelua lähettää samasta tapahtumasta
+ * `narrationEnd { tunnus, luonnollinenLoppu: true }` (#2227).
+ */
+export const LUENNAN_LOPPU_TAPAHTUMA = 'matkakirja:luenta-loppu';
 
 /**
  * KELAUKSEN TUNTOMERKKI. Tavallinen `timeupdate` tulee noin neljä
@@ -399,10 +421,15 @@ export function ratkaiseAnkkurit(reaktiot, aikaleimat) {
  *
  * @param {HTMLAudioElement|EventTarget} audio soiva luenta
  * @param {Array<object>} lista ratkaiseAnkkurit-tulos
- * @param {{kaupunki?:string, voimassa?:function():boolean}} [asetukset]
+ * @param {{kaupunki?:string, voimassa?:function():boolean, soiva?:boolean,
+ *   kuollut?:function():void}} [asetukset] `soiva` kertoo todennetun
+ *   soittotilan kytkentähetkellä (ks. kytkeMatkakirjanReaktiot);
+ *   `kuollut` kutsutaan kerran, kun moottori purkaa itsensä.
  * @returns {function():void} purku
  */
-export function kytkeLuentareaktiot(audio, lista, { kaupunki = null, voimassa = () => true } = {}) {
+export function kytkeLuentareaktiot(audio, lista, {
+  kaupunki = null, voimassa = () => true, soiva: alkutila = false, kuollut = null,
+} = {}) {
   if (!audio?.addEventListener || !Array.isArray(lista) || !lista.length) return () => {};
   const rivit = [...lista].sort((a, b) => a.hetki - b.hetki);
   const ammuttu = new Array(rivit.length).fill(false);
@@ -414,7 +441,7 @@ export function kytkeLuentareaktiot(audio, lista, { kaupunki = null, voimassa = 
    * Pelkkä `audio.paused` ei riitä: puskuroiva soitin ei ole pausella,
    * mutta kello seisoo silti.
    */
-  let soiva = false;
+  let soiva = alkutila === true;
   /*
    * ELE ON KÄYNNISSÄ, kunnes sovittimelle on kerrottu sen loppuneen.
    * Tyhjiä reactionEnd-viestejä ei lähetetä joka tauolla — sovitin
@@ -453,7 +480,7 @@ export function kytkeLuentareaktiot(audio, lista, { kaupunki = null, voimassa = 
   const reagoi = () => {
     if (!elossa) return;
     // Luenta on vaihtunut tai pysäytetty toisaalla: ele pois ja kytkentä auki.
-    if (!voimassa()) { purku(); return; }
+    if (!voimassa()) { sisainenPurku(); return; }
     // Tauko ja puskurointi eivät ammu: pysähtynyt kello ei etene.
     if (!soiva || audio.paused || audio.ended) { edellinen = nyt(); return; }
     const t = nyt();
@@ -479,7 +506,7 @@ export function kytkeLuentareaktiot(audio, lista, { kaupunki = null, voimassa = 
    */
   const alkoi = () => {
     if (!elossa) return;
-    if (!voimassa()) { purku(); return; }
+    if (!voimassa()) { sisainenPurku(); return; }
     soiva = true;
     const t = nyt();
     sovita(t);
@@ -493,26 +520,46 @@ export function kytkeLuentareaktiot(audio, lista, { kaupunki = null, voimassa = 
    * on jo siirtynyt pois siitä kohdasta, johon reaktio kuului.
    */
   const kelaus = () => { paataReaktio(); edellinen = null; };
+  /*
+   * TAUKO JA PUSKUROINTI KATKAISEVAT ELEEN SAMALLA TAVALLA (selainkoe
+   * 11.9.2026). Aiemmin waiting/stalled jätti eleen päälle "lyhyenä
+   * notkahduksena", mutta tekstisession seuraaLivianKuuntelua lähettää
+   * niissä narrationEndin ja sovitin katkaisee eleen joka tapauksessa.
+   * Yhteinen turvallinen katkaisu on selvempi kuin jono, joka jäisi
+   * odottamaan pausea, joka ei ehkä koskaan tule.
+   */
   const tauko = () => { soiva = false; paataReaktio(); edellinen = nyt(); };
-  /* Puskurointi on lyhyt notkahdus samassa kohdassa: ele saa jäädä. */
-  const puskuri = () => { soiva = false; edellinen = nyt(); };
-  const virhe = () => { soiva = false; purku(); };
+  const virhe = () => { soiva = false; sisainenPurku(); };
 
   /*
-   * LUENNAN LUONNOLLINEN LOPPU. Ampumatta jääneet reaktiot, joiden
-   * hetki on enintään LOPPUVARA_MS päässä, ammutaan vielä
-   * jälkireaktioina — ja reactionEndiä EI lähetetä, jotta sovitin saa
-   * antaa eleen valmistua äänitteen jo vaiettua.
+   * LUENNAN LUONNOLLINEN LOPPU — sama käsittely `ended`-tapahtumalle ja
+   * pehmeaLopun lähettämälle LUENNAN_LOPPU_TAPAHTUMAlle (vain toinen
+   * niistä tulee, ja irrotaKuuntelijat estää kaksoiskäsittelyn).
+   *
+   * AMMUTAAN TASAN YKSI. Vanha versio ampui ryöppynä kaikki ampumatta
+   * jääneet (myös yhdeksän sekuntia vanhan) — loppuvara on tarkoitettu
+   * viimeiselle, juuri ja juuri myöhästyneelle reaktiolle, joten
+   * ehtona on ±LOPPUVARA_MS nykyhetkestä ja osumista otetaan viimeisin.
+   *
+   * KUUNTELIJAT IRTI ENSIN: luonnollista loppua seuraa aina soittimen
+   * automaattinen `pause`, eikä se saa lähettää reactionEndiä kesken
+   * jälkireaktion. reaktioKaynnissa-tilaa EI nollata — jos ele on
+   * käynnissä, myöhempi purkukutsu (stopDiaryVoice, haivytaLuenta,
+   * kaupungin vaihto) katkaisee sen kuten ennenkin.
    */
   const paatos = () => {
     if (!elossa) return;
-    const raja = nyt() + LOPPUVARA_MS;
-    for (let i = 0; i < rivit.length; i += 1) {
-      if (ammuttu[i] || rivit[i].hetki > raja) continue;
+    irrotaKuuntelijat();
+    // Luenta on jo vaihtunut toisaalla: ele pois eikä mitään ammuta.
+    if (!voimassa()) { paataReaktio(); ilmoitaKuollut(); return; }
+    const t = nyt();
+    for (let i = rivit.length - 1; i >= 0; i -= 1) {
+      if (ammuttu[i]) continue;
+      if (rivit[i].hetki < t - LOPPUVARA_MS || rivit[i].hetki > t + LOPPUVARA_MS) continue;
       ammu(i, true);
+      break;
     }
-    reaktioKaynnissa = false;
-    purku();
+    ilmoitaKuollut();
   };
 
   const tapahtumat = {
@@ -521,21 +568,61 @@ export function kytkeLuentareaktiot(audio, lista, { kaupunki = null, voimassa = 
     seeking: kelaus,
     seeked: kelaus,
     pause: tauko,
-    waiting: puskuri,
-    stalled: puskuri,
+    waiting: tauko,
+    stalled: tauko,
     error: virhe,
     ended: paatos,
-    emptied: purku,
+    [LUENNAN_LOPPU_TAPAHTUMA]: paatos,
+    emptied: () => sisainenPurku(),
   };
 
-  function purku() {
+  /*
+   * KAKSI ERI ASIAA, EI YHTÄ. "Kuuntelijat irti" tapahtuu kerran, kun
+   * moottori lakkaa seuraamasta soitinta; "reactionEnd jos käynnissä"
+   * tapahtuu aina, kun joku pyytää purkua. Luonnollisesti päättynyt
+   * luenta on jo irrottanut kuuntelijansa, mutta sen jälkireaktio on
+   * yhä päällä — ja sen katkaisu on nimenomaan purkukutsun tehtävä.
+   */
+  function irrotaKuuntelijat() {
     if (!elossa) return;
     elossa = false;
-    paataReaktio();
     for (const [nimi, f] of Object.entries(tapahtumat)) audio.removeEventListener(nimi, f);
   }
 
+  /* Kutsujalle (js/luenta.js reaktiotValmis) kerrotaan kerran. */
+  let kuollutIlmoitettu = false;
+  function ilmoitaKuollut() {
+    if (kuollutIlmoitettu) return;
+    kuollutIlmoitettu = true;
+    if (typeof kuollut === 'function') kuollut();
+  }
+
+  /* Moottorin oma purku: virhe, tyhjennys tai vanhentunut kytkentä. */
+  function sisainenPurku() {
+    if (!elossa) return;
+    irrotaKuuntelijat();
+    paataReaktio();
+    ilmoitaKuollut();
+  }
+
+  /* Kutsujan purku: toimii myös luonnollisesti päättyneelle luennalle. */
+  function purku() {
+    irrotaKuuntelijat();
+    paataReaktio();
+  }
+
   for (const [nimi, f] of Object.entries(tapahtumat)) audio.addEventListener(nimi, f);
+  /*
+   * SOITIN SOI JO KYTKETTÄESSÄ (kilpailun korjaus, ks.
+   * kytkeMatkakirjanReaktiot): uutta `playing`-tapahtumaa ei enää tule,
+   * joten tila sovitetaan nykyhetkeen heti — ampumatta mitään, koska
+   * latauksen aikana ohi menneet hetket on jo kuultu ilman reaktiota.
+   */
+  if (soiva) {
+    const t = nyt();
+    sovita(t);
+    edellinen = t;
+  }
   return purku;
 }
 
@@ -547,21 +634,61 @@ export function kytkeLuentareaktiot(audio, lista, { kaupunki = null, voimassa = 
  * hyväksyttyjä aikaleimoja ei tehdä mitään — myöskään verkkopyyntöä ei
  * lähetetä, jos pakissa ei ole yhtään reaktiota.
  *
+ * KYTKENNÄN KILPAILU (selainkoe 11.9.2026). Aikaleimojen lataus ja
+ * äänisidonnan SHA-256 kestävät satoja millisekunteja; sinä aikana
+ * soitin on jo lähettänyt `playing`-tapahtumansa. Moottori jäi siis
+ * odottamaan `playing`iä, jota ei enää tullut, eikä ampunut yhtään
+ * reaktiota (koe 1500 ms viiveellä: 0/6). Siksi soittimen tilaa
+ * TARKKAILLAAN JO ENNEN AWAITIA kevyellä esikuuntelijalla, ja moottori
+ * saa todennetun tilan mukaansa. Pelkkä `!audio.paused` ei kelpaisi:
+ * puskuroiva soitin ei ole tauolla, mutta kello seisoo silti.
+ *
  * @param {HTMLAudioElement} audio soiva luenta
  * @param {string} url äänitteen polku (assets/audio/…)
- * @param {{voimassa?:function():boolean}} [asetukset]
+ * @param {{voimassa?:function():boolean, kuollut?:function():void}} [asetukset]
  * @returns {Promise<?function():void>} purku tai null
  */
-export async function kytkeMatkakirjanReaktiot(audio, url, { voimassa = () => true } = {}) {
+export async function kytkeMatkakirjanReaktiot(audio, url, { voimassa = () => true, kuollut = null } = {}) {
   const kaupunki = kaupunkiOsoitteesta(url);
   if (!kaupunki) return null;
   const merkinta = FOKUSVIRRAT[kaupunki]?.matkakirja;
   const reaktiot = merkinta?.reaktiot;
   if (!Array.isArray(reaktiot) || !reaktiot.length) return null;
-  const aikaleimat = await lataaLuentareaktiot(kaupunki, url, { teksti: merkinta?.teksti });
-  // Luenta on voinut vaihtua tai loppua latauksen aikana.
-  if (!aikaleimat || !voimassa() || audio.ended) return null;
-  const rivit = ratkaiseAnkkurit(reaktiot, aikaleimat);
-  if (!rivit.length) return null;
-  return kytkeLuentareaktiot(audio, rivit, { kaupunki, voimassa });
+
+  /*
+   * ESIKUUNTELIJA. Kirjaa vain viimeisimmän todellisen tilan — ei ammu
+   * eikä muista historiaa. `kuollut` tarkoittaa, ettei tähän luentaan
+   * kannata enää kytkeytyä lainkaan.
+   */
+  const tila = { soiva: false, kuollut: false };
+  const esi = {
+    playing: () => { tila.soiva = true; },
+    pause: () => { tila.soiva = false; },
+    waiting: () => { tila.soiva = false; },
+    stalled: () => { tila.soiva = false; },
+    error: () => { tila.soiva = false; },
+    ended: () => { tila.soiva = false; tila.kuollut = true; },
+    emptied: () => { tila.soiva = false; tila.kuollut = true; },
+    // Luenta ehti loppua luonnollisesti jo latauksen aikana: sen
+    // jälkireaktio olisi myöhässä koko äänitteen verran.
+    [LUENNAN_LOPPU_TAPAHTUMA]: () => { tila.soiva = false; tila.kuollut = true; },
+  };
+  for (const [nimi, f] of Object.entries(esi)) audio.addEventListener?.(nimi, f);
+  const irrotaEsi = () => {
+    for (const [nimi, f] of Object.entries(esi)) audio.removeEventListener?.(nimi, f);
+  };
+
+  try {
+    const aikaleimat = await lataaLuentareaktiot(kaupunki, url, { teksti: merkinta?.teksti });
+    // Luenta on voinut vaihtua tai loppua latauksen aikana.
+    if (!aikaleimat || !voimassa() || tila.kuollut || audio.ended) return null;
+    const rivit = ratkaiseAnkkurit(reaktiot, aikaleimat);
+    if (!rivit.length) return null;
+    return kytkeLuentareaktiot(audio, rivit, {
+      kaupunki, voimassa, soiva: tila.soiva, kuollut,
+    });
+  } finally {
+    // Esikuuntelija irtoaa aina — myös null-paluussa ja virheessä.
+    irrotaEsi();
+  }
 }

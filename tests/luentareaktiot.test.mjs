@@ -35,9 +35,9 @@ import { fileURLToPath } from 'node:url';
 
 import { kuunteleLivianTilanteita } from '../js/livia-tilanteet.js';
 import {
-  AIKALEIMOJEN_VERSIO, LOPPUVARA_MS, REAKTION_TARKOITUKSET, aikaleimojenOsoite,
-  kaupunkiOsoitteesta, kytkeLuentareaktiot, lataaLuentareaktiot, ratkaiseAnkkurit,
-  tarkistaAikaleimat,
+  AIKALEIMOJEN_VERSIO, LOPPUVARA_MS, LUENNAN_LOPPU_TAPAHTUMA, REAKTION_TARKOITUKSET,
+  aikaleimojenOsoite, kaupunkiOsoitteesta, kytkeLuentareaktiot, kytkeMatkakirjanReaktiot,
+  lataaLuentareaktiot, ratkaiseAnkkurit, tarkistaAikaleimat,
 } from '../js/luentareaktiot.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { aaniUrl } from '../js/media.js';
@@ -350,31 +350,189 @@ test('voimassa() epätosi purkaa kytkennän ja katkaisee eleen', (t) => {
   assert.equal(osumat.length, 1, 'kuuntelijat on irrotettu lopullisesti');
 });
 
-test('luennan luonnollinen loppu ampuu jälkireaktion eikä lähetä reactionEndiä', (t) => {
+/*
+ * MARSEILLEN OIKEA LOPPU (selainkoe 11.9.2026): peli pysäyttää luennan
+ * itse 25 ms ennen tiedoston reunaa (js/luenta.js pehmeaLoppu), joten
+ * 'ended' ei tule lainkaan — luenta lähettää LUENNAN_LOPPU_TAPAHTUMAn
+ * ja heti sen jälkeen automaattisen 'pause'-tapahtuman.
+ */
+for (const loppu of [LUENNAN_LOPPU_TAPAHTUMA, 'ended']) {
+  test(`luonnollinen loppu (${loppu}) ampuu tasan yhden jälkireaktion`, (t) => {
+    const { osumat, loput } = kuuntele(t);
+    const a = soitin();
+    const purku = kytkeLuentareaktiot(a, [
+      // Yhdeksän sekuntia vanha, ampumatta jäänyt rivi: se on kuultu
+      // ilman reaktiota eikä saa purkautua lopussa ryöppynä.
+      { id: 'marseille.r4', hetki: 20000, tarkoitus: 'epailee', voimakkuus: 0.4 },
+      { id: 'marseille.r6', hetki: 29239, tarkoitus: 'huvittuu', voimakkuus: 0.6 },
+    ], { kaupunki: 'marseille' });
+    /*
+     * Moottori on kytketty kesken luennan (aikaleimojen lataus kesti),
+     * joten r4:n hetki on mennyt ohi ampumattomana. Se on kuultu ilman
+     * reaktiota eikä saa purkautua lopussa r6:n seurana.
+     */
+    a.aja(29.1);
+    assert.equal(osumat.length, 0, 'ennen hetkeä ei ammuta');
+
+    a.currentTime = 29.263;
+    if (loppu === 'ended') a.ended = true;
+    a.dispatchEvent(new Event(loppu));
+    assert.deepEqual(osumat.map((o) => o.tunnus), ['marseille.r6'],
+      'vain viimeinen, loppuvaran sisällä oleva rivi ammutaan');
+    assert.equal(osumat[0].jalkireaktio, true);
+    assert.equal(osumat[0].luentaTunnus, a);
+    assert.equal(loput.length, 0, 'jälkireaktio saa valmistua äänitteen jälkeen');
+
+    // Luonnollista loppua seuraa aina soittimen oma pause: se ei saa
+    // katkaista juuri ammuttua jälkireaktiota.
+    a.paused = true;
+    a.dispatchEvent(new Event('pause'));
+    assert.equal(loput.length, 0, 'automaattinen pause ei lähetä reactionEndiä');
+    a.ended = false;
+    a.paused = false;
+    a.aja(30);
+    assert.equal(osumat.length, 1, 'kuuntelijat irtosivat lopussa');
+
+    // …mutta stopDiaryVoice/haivytaLuenta (purku) katkaisee eleen myös
+    // luonnollisesti päättyneeltä luennalta.
+    purku();
+    assert.equal(loput.length, 1, 'purku lähettää reactionEndin lopun jälkeenkin');
+    assert.equal(loput[0].luentaTunnus, a);
+    purku();
+    assert.equal(loput.length, 1, 'sama loppu ei toistu');
+  });
+}
+
+test('luonnollinen loppu ei ammu, jos luenta on jo vaihtunut (voimassa epätosi)', (t) => {
   const { osumat, loput } = kuuntele(t);
   const a = soitin();
-  // Marseillen loppuvitsi: hetki on äänitteen kesto-metadatan (29239 ms)
-  // tuntumassa, ja soitin ehtii 'ended'-tapahtumaan ennen viimeistä
-  // timeupdatea.
+  let voimassa = true;
   kytkeLuentareaktiot(a, [
-    { id: 'marseille.r6', hetki: 29359, tarkoitus: 'huvittuu', voimakkuus: 0.6 },
-  ], { kaupunki: 'marseille' });
+    { id: 'r6', hetki: 29239, tarkoitus: 'huvittuu', voimakkuus: 0.6 },
+  ], { kaupunki: 'marseille', voimassa: () => voimassa });
+  a.currentTime = 29.0;
   a.dispatchEvent(new Event('playing'));
-  a.aja(29.1);
-  assert.equal(osumat.length, 0, 'ennen hetkeä ei ammuta');
+  voimassa = false;
+  a.currentTime = 29.263;
+  a.dispatchEvent(new Event(LUENNAN_LOPPU_TAPAHTUMA));
+  assert.equal(osumat.length, 0, 'vanhentunut kytkentä ei ammu lopussakaan');
+  assert.equal(loput.length, 0, 'eikä tyhjää loppua lähetetä');
+  voimassa = true;
+  a.aja(29.3);
+  assert.equal(osumat.length, 0, 'kuuntelijat on irrotettu');
+});
 
-  a.currentTime = 29.28;
-  a.ended = true;
-  a.dispatchEvent(new Event('ended'));
-  assert.equal(osumat.length, 1, 'loppuvara ampuu viimeisen reaktion');
-  assert.equal(osumat[0].tunnus, 'marseille.r6');
-  assert.equal(osumat[0].jalkireaktio, true);
-  assert.equal(osumat[0].luentaTunnus, a);
-  assert.equal(loput.length, 0, 'jälkireaktio saa valmistua äänitteen jälkeen');
+test('waiting ja stalled katkaisevat eleen kuten tauko', (t) => {
+  const { osumat, loput } = kuuntele(t);
+  for (const laji of ['waiting', 'stalled']) {
+    const a = soitin();
+    kytkeLuentareaktiot(a, [
+      { id: `r-${laji}`, hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 },
+    ], { kaupunki: 'marseille' });
+    a.dispatchEvent(new Event('playing'));
+    a.aja(1.1);
+    assert.equal(osumat.at(-1).tunnus, `r-${laji}`);
+    a.dispatchEvent(new Event(laji));
+    assert.equal(loput.at(-1).luentaTunnus, a, `${laji} lähettää reactionEndin`);
+  }
+  assert.equal(loput.length, 2);
+});
 
-  a.ended = false;
-  a.aja(30);
-  assert.equal(osumat.length, 1, 'kuuntelijat irtosivat lopussa');
+test('kuollut-callback kerrotaan kerran, kun moottori purkaa itsensä', (t) => {
+  kuuntele(t);
+  const kokeet = {
+    error: (a) => a.dispatchEvent(new Event('error')),
+    emptied: (a) => a.dispatchEvent(new Event('emptied')),
+    loppu: (a) => a.dispatchEvent(new Event(LUENNAN_LOPPU_TAPAHTUMA)),
+  };
+  for (const [nimi, laukaise] of Object.entries(kokeet)) {
+    let kuollut = 0;
+    const a = soitin();
+    kytkeLuentareaktiot(a, [{ id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 }],
+      { kuollut: () => { kuollut += 1; } });
+    laukaise(a);
+    assert.equal(kuollut, 1, `${nimi} kertoo kuolemasta kerran`);
+    laukaise(a);
+    assert.equal(kuollut, 1, `${nimi} ei kerro kahdesti`);
+  }
+
+  // Luennan vaihtuminen kesken soiton: purku tapahtuu osumalla.
+  let kuollut = 0;
+  let voimassa = true;
+  const b = soitin();
+  kytkeLuentareaktiot(b, [{ id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 }],
+    { voimassa: () => voimassa, kuollut: () => { kuollut += 1; } });
+  b.dispatchEvent(new Event('playing'));
+  voimassa = false;
+  b.aja(1.1);
+  assert.equal(kuollut, 1, 'voimassa-false kertoo kuolemasta');
+
+  // Kutsujan oma purku ei ole moottorin kuolema: luenta.js nollaa
+  // tiedon itse puraReaktiot-kääreessään.
+  let kuollutC = 0;
+  const c = soitin();
+  const pura = kytkeLuentareaktiot(c, [{ id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 }],
+    { kuollut: () => { kuollutC += 1; } });
+  pura();
+  assert.equal(kuollutC, 0);
+});
+
+/*
+ * KYTKENNÄN KILPAILU (selainkoe 11.9.2026, 1500 ms viive: 0/6
+ * reaktiota). Aikaleimojen lataus ja äänisidonta kestävät, ja soitin
+ * ehtii lähettää 'playing'-tapahtumansa ennen kuin moottori on
+ * kytketty. Uutta 'playing'iä ei enää tule, joten tila on annettava
+ * moottorille mukaan.
+ */
+test('kytkentä kesken soiton: ohitetut sovitetaan, myöhemmät ammutaan', (t) => {
+  const { osumat } = kuuntele(t);
+  const a = soitin();
+  a.currentTime = 5;
+  const purku = kytkeLuentareaktiot(a, [
+    { id: 'r1', hetki: 2000, tarkoitus: 'huvittuu', voimakkuus: 0.3 },
+    { id: 'r2', hetki: 6000, tarkoitus: 'epailee', voimakkuus: 0.4 },
+  ], { kaupunki: 'marseille', soiva: true });
+  t.after(purku);
+  // Ei yhtään 'playing'-tapahtumaa: kytkentä tapahtui soiton aikana.
+  a.aja(6.2);
+  assert.deepEqual(osumat.map((o) => o.tunnus), ['r2'],
+    'ennen kytkentää ohitettua hetkeä ei ammuta jälkikäteen');
+});
+
+test('kytkeMatkakirjanReaktiot: soitto alkaa latauksen aikana eikä reaktioita menetetä', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  t.after(() => { globalThis.fetch = vanhaFetch; });
+  const { osumat } = kuuntele(t);
+  const teksti = FOKUSVIRRAT.marseille.matkakirja.teksti;
+  const data = aikaleimat(teksti);
+  // Aikaleimavastaus jää odottamaan porttia: sillä aikaa soitin alkaa soida.
+  let avaa;
+  const portti = new Promise((r) => { avaa = r; });
+  globalThis.fetch = async (osoite) => {
+    if (String(osoite).includes('.aikaleimat.json')) {
+      await portti;
+      return { ok: true, status: 200, json: async () => data };
+    }
+    return { ok: true, status: 200, arrayBuffer: async () => new Uint8Array(AANI).buffer };
+  };
+
+  const rivit = ratkaiseAnkkurit(FOKUSVIRRAT.marseille.matkakirja.reaktiot, data);
+  assert.ok(rivit.length >= 2, 'Marseillen pakista pitää ratketa hetkiä');
+  const viimeinen = rivit.at(-1);
+
+  const a = soitin();
+  a.currentTime = (viimeinen.hetki - 1000) / 1000;
+  const lupaus = kytkeMatkakirjanReaktiot(a, 'assets/audio/puhe-fokus-matkakirja-marseille.mp3', {});
+  // Soitto alkaa kesken latauksen — tämä on se tapahtuma, joka ennen katosi.
+  a.dispatchEvent(new Event('playing'));
+  avaa();
+  const purku = await lupaus;
+  assert.equal(typeof purku, 'function', 'kytkentä syntyy');
+  t.after(purku);
+
+  a.aja((viimeinen.hetki + 100) / 1000);
+  assert.deepEqual(osumat.map((o) => o.tunnus), [viimeinen.id],
+    'latauksen aikana alkanut soitto ampuu yhä myöhemmät reaktiot');
 });
 
 test('loppu, tyhjennys ja purku irrottavat kuuntelijat', (t) => {
@@ -615,7 +773,7 @@ test('moduuli on esilatauslistassa ja niputuksessa', () => {
   assert.ok(nippu.indexOf("'js/packs/fokusvirrat.js'") < nippu.indexOf("'js/luentareaktiot.js'"),
     'fokusvirrat ennen luentareaktioita');
   assert.match(lue('js/luenta.js'),
-    /import \{ kytkeMatkakirjanReaktiot \} from '\.\/luentareaktiot\.js';/);
+    /import \{ LUENNAN_LOPPU_TAPAHTUMA, kytkeMatkakirjanReaktiot \} from '\.\/luentareaktiot\.js';/);
   // Sovittimen sopimus: luenta kertoo, onko tälle luennalle ajastettuja
   // reaktioita, ja purkaa ne pysäytettäessä.
   const luenta = lue('js/luenta.js');
