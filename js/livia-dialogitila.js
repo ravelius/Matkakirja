@@ -53,7 +53,10 @@ export function livianDialogikoti(doc) {
  const ylin = livianYlinDialogi(doc);
  return LIVIAN_NAPPIDIALOGIT.has(ylin?.id) ? ylin : null;
 }
-export function livianDialogiSalliiReaktion(doc, nappi) {
+export function livianDialogiSalliiReaktion(doc, nappi, chatAuki=false) {
  const ylin = livianYlinDialogi(doc);
- return !ylin || LIVIAN_REAKTIODIALOGIT.has(ylin.id) && nappi.closest?.('dialog[open]') === ylin;
+ // Hiljainen artikkeli ei hiljennä pelaajan omaa keskustelua Pulun kanssa.
+ // Poikkeus koskee vain ikkunoita, joissa chat on jo käytettävissä.
+ return !ylin || (LIVIAN_REAKTIODIALOGIT.has(ylin.id) || chatAuki && LIVIAN_NAPPIDIALOGIT.has(ylin.id))
+  && nappi.closest?.('dialog[open]') === ylin;
 }

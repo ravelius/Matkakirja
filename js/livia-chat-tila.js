@@ -1,14 +1,16 @@
 /* Chat jättää tilan kokopulun suurimmalle ilmeelle. Mitat ovat CSS-pikseleitä;
  * visualViewport pitää myös näppäimistön yläpuolen käytettävissä. */
-export function livianChatAsettelu({x=0,y=0,width,height,safe={},headerBottom=0}) {
+export function livianChatAsettelu({x=0,y=0,width,height,safe={},headerBottom=0,pieniPulu=false}) {
  const s={top:0,right:0,bottom:0,left:0,...safe};
  const sivulla=height<480;
  const right=x+width-Math.max(sivulla?24:42,s.right+24),bottom=y+height-s.bottom-20;
  const nappi={left:right-48,top:bottom-48,width:48,height:48};
- // Kokopulun suurin paikallaan tehtävä ilme mahtuu 104 px:n korkeuteen.
- const kasvo={left:right-88,top:bottom-104,width:88,height:104};
- const panelRight=sivulla?kasvo.left-14:right-12;
- const panelBottom=sivulla?bottom:kasvo.top-14;
+ // Pieni lehtipulu tarvitsee vain 72 % korkeudesta. Täyden linnun
+ // vara jätti chatin tarpeettoman kauas myös nähtävyyden päällä.
+ const kasvoKorkeus=104*(pieniPulu ? .72 : 1);
+ const kasvo={left:right-88,top:bottom-kasvoKorkeus,width:88,height:kasvoKorkeus};
+ const panelRight=sivulla?kasvo.left-6:right-12;
+ const panelBottom=sivulla?bottom:kasvo.top-6;
  const panelTop=Math.max(y+Math.max(sivulla?12:96,s.top+12),sivulla?0:headerBottom+12);
  const panelLeft=Math.max(x+s.left+12,panelRight-384);
  const panelHeight=Math.max(0,Math.min(640,sivulla?640:height*.68,panelBottom-panelTop));
@@ -39,8 +41,11 @@ export function asennaLivianChatTila(pollo,paikkaMuuttui=()=>{}) {
   const vv=win.visualViewport,css=win.getComputedStyle(paneeli),safe={};
   for(const edge of ['top','right','bottom','left'])safe[edge]=parseFloat(css.getPropertyValue(`--livia-safe-${edge}`))||0;
   const layoutHeight=win.innerHeight||doc.documentElement.clientHeight;
+  const lehti=doc.getElementById?.('arrival-dialog');
+  const pieniPulu=Boolean(lehti?.open&&lehti.classList?.contains('lehti'))||
+   ['passport-dialog','quiz-dialog'].includes(nappi.closest?.('dialog[open]')?.id);
   const a=livianChatAsettelu({x:vv?.offsetLeft||0,y:vv?.offsetTop||0,
-   width:vv?.width||doc.documentElement.clientWidth,height:vv?.height||layoutHeight,safe,headerBottom:doc.querySelector?.('.topbar')?.getBoundingClientRect?.().bottom||0});
+   width:vv?.width||doc.documentElement.clientWidth,height:vv?.height||layoutHeight,safe,pieniPulu,headerBottom:doc.querySelector?.('.topbar')?.getBoundingClientRect?.().bottom||0});
   aseta(nappi,keysN[0],a.nappi.left);aseta(nappi,keysN[1],a.nappi.top);
   aseta(paneeli,keysP[0],a.paneeli.left);aseta(paneeli,keysP[1],layoutHeight-a.paneeli.top-a.paneeli.height);
   aseta(paneeli,keysP[2],a.paneeli.width);aseta(paneeli,keysP[3],a.paneeli.height);
