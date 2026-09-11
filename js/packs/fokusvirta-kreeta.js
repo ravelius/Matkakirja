@@ -65,6 +65,31 @@ export const FOKUSVIRTA_KREETA = {
      * tyyli kuin muissa paketeissa. Yksikään sana, välimerkki tai
      * sanajärjestys ei muutu.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: majakan rakentajien luettelo (selittävä
+     * tausta).
+     */
+    reaktiot: [
+      { id: 'kreeta.r1', ankkuri: 'kuuluu sulttaanille', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Kolmas valtakunta samalle majakalle.' },
+      { id: 'kreeta.r2', ankkuri: 'paikkasi samalla verkkoaan', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Historia kerrotaan työn ohessa.' },
+      { id: 'kreeta.r3', ankkuri: 'hän osoitti merelle', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Vastaus ei ollut kartalla.' },
+      { id: 'kreeta.r4', ankkuri: 'jotka tarvitsevat sitä', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Kalastajan vastaus on merkinnän ydin.' },
+      { id: 'kreeta.r5', ankkuri: 'ilman valtakunnan väriä', tarkoitus: 'myotailee', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Isoisä merkitsee valon ilman lippua.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Hanian sataman majakan aloittivat venetsialaiset ja '
       + 'korjasivat egyptiläiset. Nyt kaupunki kuuluu sulttaanille. Kalastaja '

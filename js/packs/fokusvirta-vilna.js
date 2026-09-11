@@ -170,6 +170,29 @@ export const FOKUSVIRTA_VILNA = {
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: valokuvan esittely ja "Tutkija odotti pilvien
+     * väistymistä" (taustaa).
+     */
+    reaktiot: [
+      { id: 'vilna.r1', ankkuri: 'silläkin on tahroja', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Aurinko ei olekaan virheetön.' },
+      { id: 'vilna.r2', ankkuri: 'kukin omalla tavallaan', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Tornit osoittavat taivaaseen eri suuntiin.' },
+      { id: 'vilna.r3', ankkuri: 'Joimme teetä', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
+        perustelu: 'Odotus kuluu rauhassa.' },
+      { id: 'vilna.r4', ankkuri: 'vain hyvän tuolin', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Loppuvitsi tieteen vaatimuksista.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Vilnan observatoriossa näytettiin valokuvaa '
       + 'auringonpilkuista. Olin pitänyt aurinkoa virheettömänä valaisimena, '

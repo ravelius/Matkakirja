@@ -161,6 +161,31 @@ export const FOKUSVIRTA_LISSABON = {
      * (docs/moduulit/tarinakaari.md, luku 7). Neljä tagia, alku ja loppu
      * eri sävyssä.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Siellä portailla istuva nainen neuvoi
+     * ylöspäin" (neuvon ensimmäinen puoli).
+     */
+    reaktiot: [
+      { id: 'lissabon.r1', ankkuri: 'kuin hallitsijan jakaukseksi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Suorat kadut vertautuvat hiustenjakaukseen.' },
+      { id: 'lissabon.r2', ankkuri: 'Eksyin silti heti', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Isoisä nauraa itselleen.' },
+      { id: 'lissabon.r3', ankkuri: 'toinen neuvoi alas', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Vastakkaiset neuvot ovat merkinnän vitsi.' },
+      { id: 'lissabon.r4', ankkuri: 'molemmista suunnista', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Molemmat olivat oikeassa: yllätys.' },
+      { id: 'lissabon.r5', ankkuri: 'taskussa kulkeva lohdutus', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Hiljainen päätös kartasta.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Baixan kadut vedettiin järistyksen jälkeen suoriksi '
       + 'kuin hallitsijan jakaukseksi. Eksyin silti heti, kun poikkesin '

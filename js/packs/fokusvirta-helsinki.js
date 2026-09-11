@@ -123,6 +123,29 @@ export const FOKUSVIRTA_HELSINKI = {
       + 'silakalla ennen kuin ehdin auttaa. Nyt kartassani on Suomenlahden '
       + 'kohdalla täsmällinen rasvajälki. Harvoin olen saanut yhtä luotettavaa '
       + 'paikallistietoa.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: apostolit katolla ja kalakauppiaan vaaka
+     * (rinnakkaiskuva, pulu kuuntelee).
+     */
+    reaktiot: [
+      { id: 'helsinki.r1', ankkuri: 'vaikutti vakavalta', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Apostolit ja kalavaaka samassa vakavuudessa.' },
+      { id: 'helsinki.r2', ankkuri: 'paikoilleen silakalla', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Silakka paperipainona yllättää.' },
+      { id: 'helsinki.r3', ankkuri: 'täsmällinen rasvajälki', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Kartta sai oman merkkinsä: hiljainen hyväksyntä.' },
+      { id: 'helsinki.r4', ankkuri: 'luotettavaa paikallistietoa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Loppuvitsi rasvatahrasta paikallistietona.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Helsingin valkoisen kirkon katolla apostolit katsovat '
       + 'merelle. Alhaalla torilla kalakauppias katseli vaakaa. Kummankin työ '

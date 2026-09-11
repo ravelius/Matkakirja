@@ -108,6 +108,31 @@ export const FOKUSVIRTA_PARIISI = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Paluumatkalla seurasin kaksi korttelia miestä"
+     * (kuljetus kohtaukseen).
+     */
+    reaktiot: [
+      { id: 'pariisi.r1', ankkuri: 'seinien veroista', tarkoitus: 'epailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Isoisä epäilee, riittääkö sisältö kuorelle.' },
+      { id: 'pariisi.r2', ankkuri: 'Kultaa, pylväitä, marmoria', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Luettelo ylellisyyttä tyrmistyttää.' },
+      { id: 'pariisi.r3', ankkuri: 'parhaissa juhlatamineissaan', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Talo puettuna juhlavaatteisiin naurattaa.' },
+      { id: 'pariisi.r4', ankkuri: 'menisin kuuntelemaan', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Isoisän puoltava arvio vihellyksestä.' },
+      { id: 'pariisi.r5', ankkuri: 'esiintyy ilmaiseksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Loppuvitsi oopperatalon kustannuksella.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Pariisin uusi oopperatalo on yhä kesken, mutta mahtaako '
       + 'sisällä enää tapahtua mitään seinien veroista? Kultaa, pylväitä, '

@@ -188,6 +188,29 @@ export const FOKUSVIRTA_SEVILLA = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Olin aikonut kirjoittaa suuresta
+     * rakennuksesta" (aikeen toteaminen).
+     */
+    reaktiot: [
+      { id: 'sevilla.r1', ankkuri: 'kuningattarien sijasta työväkeä', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Palatsin portista kulkee työväki.' },
+      { id: 'sevilla.r2', ankkuri: 'viimeisen haukun leivästä', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Pieni arkinen ele huomataan.' },
+      { id: 'sevilla.r3', ankkuri: 'appelsiininkukkien tuoksu', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
+        perustelu: 'Hetki hengähtää tuoksuun.' },
+      { id: 'sevilla.r4', ankkuri: 'pienellä aamiaisella', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Merkinnän kääntävä huomio: tehdas käy leivänpalasta.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Sevillan tupakkatehdas näyttää palatsilta, mutta sen '
       + 'portista kulkee aamuisin kuningattarien sijasta työväkeä. Nainen '

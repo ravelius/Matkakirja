@@ -254,6 +254,31 @@ export const FOKUSVIRTA_ODESSA = {
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
      * loppu eri sävyssä.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: ei erikseen hiljaisia osuuksia (jokainen virke
+     * saa reaktion).
+     */
+    reaktiot: [
+      { id: 'odessa.r1', ankkuri: 'kokonainen valtakunta', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Portaiden mittakaava on liioitteleva.' },
+      { id: 'odessa.r2', ankkuri: 'lepäämään puolivälissä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Yksi matkustaja ei jaksa valtakunnan portaita.' },
+      { id: 'odessa.r3', ankkuri: 'vain kävelykeppiään', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Työn ja joutilaisuuden ero samassa kuvassa.' },
+      { id: 'odessa.r4', ankkuri: 'yhdellä hengenvedolla', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Tuuli tekee sen, mikä ihmiseltä ei onnistu.' },
+      { id: 'odessa.r5', ankkuri: 'pysäyttänyt tullissa', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Loppuvitsi tullin rajoista.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Odessan portaat on tehty niin leveiksi, että niitä '
       + 'pitkin voisi saapua kokonainen valtakunta. Minä saavuin yksin ja '

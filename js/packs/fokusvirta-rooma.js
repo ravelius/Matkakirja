@@ -202,6 +202,29 @@ export const FOKUSVIRTA_ROOMA = {
      * eikä mikään muu hajoa (js/fokusvirta.js lukee kentän vain
      * kytkintä varten).
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Rooma on nyt Italian pääkaupunki..."
+     * (selittävä sivulause, pulu kuuntelee).
+     */
+    reaktiot: [
+      { id: 'rooma.r1', ankkuri: 'josta satoi sisään', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Katto, jossa on reikä tarkoituksella.' },
+      { id: 'rooma.r2', ankkuri: 'sade löysi paikkansa', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Rauhallinen havainto hidastaa hetken.' },
+      { id: 'rooma.r3', ankkuri: 'tohdi huomauttaa katosta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Kuivaa huumoria kaksituhatvuotiaan talon kustannuksella.' },
+      { id: 'rooma.r4', ankkuri: 'kysymättä sen nimeä', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Hiljainen päätös merkinnän lopuksi.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Rooman Pantheonin katossa on pyöreä aukko, josta satoi '
       + 'sisään. Seisoin kuivassa ja katselin, kuinka sade löysi paikkansa '

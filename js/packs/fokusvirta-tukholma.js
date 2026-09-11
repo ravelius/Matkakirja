@@ -302,6 +302,29 @@ export const FOKUSVIRTA_TUKHOLMA = {
       + 'kadonneen kengän. Kuningas jäi lyhyelle maininnalle. Satamaan '
       + 'palatessa saarten välissä välkkyi vesi. Suosittelisin samaa '
       + 'selostajaa myös valtakunnan asioihin.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: tytön luettelo ja "Satamaan palatessa saarten
+     * välissä välkkyi vesi" (havainnot).
+     */
+    reaktiot: [
+      { id: 'tukholma.r1', ankkuri: 'lähinnä toisten hattuja', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Kruunajaisista näkyi vain hattuja.' },
+      { id: 'tukholma.r2', ankkuri: 'selosti meille lopuille', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Tyttö ottaa selostajan tehtävän: nyökkäys.' },
+      { id: 'tukholma.r3', ankkuri: 'lyhyelle maininnalle', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Kuningas jää tytön kertomuksessa sivuosaan.' },
+      { id: 'tukholma.r4', ankkuri: 'valtakunnan asioihin', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Loppuvitsi: selostaja suositellaan valtiollisiin tehtäviin.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Tukholmassa kruunattiin Oskar, mutta minun kohdalleni '
       + 'osui lähinnä toisten hattuja. Pieni tyttö nousi isänsä hartioille ja '

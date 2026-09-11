@@ -42,6 +42,29 @@ export const FOKUSVIRTA_SISILIA = {
       + 'väsyi. Kuninkaan nimi mainittiin monta kertaa. Tekijöiden nimiä '
       + 'olisin kuunnellut kauemmin.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Normannien kuningas teetti sen, mutta kädet
+     * tulivat monesta maailmasta..." (selittävä luettelo).
+     */
+    reaktiot: [
+      { id: 'sisilia.r1', ankkuri: 'veistetyltä luolastolta', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Kultainen kappeli ja puinen luolasto samassa.' },
+      { id: 'sisilia.r2', ankkuri: 'kunnes niska väsyi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Katseleminen käy työstä.' },
+      { id: 'sisilia.r3', ankkuri: 'mainittiin monta kertaa', tarkoitus: 'epailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Kuninkaan nimi toistuu liikaa.' },
+      { id: 'sisilia.r4', ankkuri: 'olisin kuunnellut kauemmin', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Merkinnän päätös: tekijät jäivät nimettömiksi.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Palermon palatsikappelissa seinät hohtavat kultaa ja '
       + 'puukatto näyttää puusta veistetyltä luolastolta. Normannien kuningas '

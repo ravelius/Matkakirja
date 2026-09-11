@@ -171,6 +171,29 @@ export const FOKUSVIRTA_EDINBURGH = {
      * luentaprosessi: ruututeksti = luentateksti sanasta sanaan).
      * Kolme tagia, alku ja loppu eri sävyssä.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Menin portaita alas ja tulin ulos korkealla"
+     * (liikkeen kuvaus).
+     */
+    reaktiot: [
+      { id: 'edinburgh.r1', ankkuri: 'toisen kadun katto', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Kaupunki on kerroksissa: hämmästys.' },
+      { id: 'edinburgh.r2', ankkuri: 'vähäisintäkään huimausta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Sukat kuilun yllä eivät pelkää.' },
+      { id: 'edinburgh.r3', ankkuri: 'musta kallio', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Linnan kallio vakavoittaa kuvan.' },
+      { id: 'edinburgh.r4', ankkuri: 'toinen arkki päälle', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Loppuvitsi kartanpiirtäjän ongelmasta.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Edinburghissa katu saattaa olla toisen kadun katto. '
       + 'Menin portaita alas ja tulin ulos korkealla jonkun ikkunan '

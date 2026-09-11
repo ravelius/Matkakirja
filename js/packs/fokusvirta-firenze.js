@@ -189,6 +189,31 @@ export const FOKUSVIRTA_FIRENZE = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Patsas aiotaan siirtää sisälle" ja "Palasin
+     * illalla" (selitys ja siirtymä).
+     */
+    reaktiot: [
+      { id: 'firenze.r1', ankkuri: 'minä hikoilen liivissä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Alaston patsas ja pukuun puettu matkustaja.' },
+      { id: 'firenze.r2', ankkuri: 'lienee kohtuullista', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Kolmensadan vuoden odotus kuitataan kuivasti.' },
+      { id: 'firenze.r3', ankkuri: 'suurta kättä ja omaani', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Vertailu hiljentää.' },
+      { id: 'firenze.r4', ankkuri: 'piirtää käden', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Isoisä vähättelee omaa taitoaan.' },
+      { id: 'firenze.r5', ankkuri: 'enemmän ihmiseltä', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Merkinnän hiljainen päätös.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Firenzen David seisoo aukiolla ilman rihman kiertämää, '
       + 'ja minä hikoilen liivissä. Patsas aiotaan siirtää sisälle sateelta '

@@ -158,6 +158,28 @@ export const FOKUSVIRTA_AMSTERDAM = {
      * LUENTA = sama teksti tunnetagein (Raamattu, luentaprosessi):
      * neljä tagia, alku ja loppu eri sävyssä, yksikään sana ei vaihdu.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Se riippui katon koukusta" (tekninen selitys).
+     */
+    reaktiot: [
+      { id: 'amsterdam.r1', ankkuri: 'talon ulkopuolta', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Huonekalu nousee ulkokautta kolmanteen kerrokseen.' },
+      { id: 'amsterdam.r2', ankkuri: 'kuulemma liian kapeat', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Kuulopuhe portaista herättää epäilyn.' },
+      { id: 'amsterdam.r3', ankkuri: 'kuin piispa vaunuihin', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Merkinnän paras vertaus.' },
+      { id: 'amsterdam.r4', ankkuri: 'kalustonsa että riitansa', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Loppuvitsi kapeiden talojen elämästä.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Amsterdamin kanavan varrella tuoli matkusti kolmanteen '
       + 'kerrokseen talon ulkopuolta. Se riippui katon koukusta, ja kaksi '

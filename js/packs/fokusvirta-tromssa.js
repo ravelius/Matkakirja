@@ -44,6 +44,29 @@ export const FOKUSVIRTA_TROMSSA = {
       + 'Sama meri ruokkii täällä sekä vatsan että uteliaisuuden. Jälkimmäinen '
       + 'vaikutti pohjattomalta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Tromssaan on perustettu museo" ja "Ikkunasta
+     * näkyi pyyntilaivojen mastoja" (tausta ja havainto).
+     */
+    reaktiot: [
+      { id: 'tromssa.r1', ankkuri: 'ei tavallisesti maksa', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Luut ja kivet eivät kuulu rahtiin.' },
+      { id: 'tromssa.r2', ankkuri: 'törmääväni uimassa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Merkinnän vitsi tuntemattomasta eläimestä.' },
+      { id: 'tromssa.r3', ankkuri: 'vatsan että uteliaisuuden', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Meren kaksi antia todetaan tyytyväisenä.' },
+      { id: 'tromssa.r4', ankkuri: 'vaikutti pohjattomalta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Loppuvitsi uteliaisuuden määrästä.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Tromssaan on perustettu museo. Satamasta tuodaan sinne '
       + 'pohjoisen luita ja kiviä, asioita joista laivanvarustaja ei '

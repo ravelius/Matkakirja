@@ -205,6 +205,31 @@ export const FOKUSVIRTA_VENETSIA = {
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
      * loppu eri sävyssä.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: ei erikseen hiljaisia osuuksia (jokainen virke
+     * saa reaktion).
+     */
+    reaktiot: [
+      { id: 'venetsia.r1', ankkuri: 'saattaa olla meri', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Oven takana oleva meri on outo ajatus.' },
+      { id: 'venetsia.r2', ankkuri: 'mennä kaupunkiin uimaan', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Merkinnän paras vitsi.' },
+      { id: 'venetsia.r3', ankkuri: 'ihailtavan suorana', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Gondolieri ei naura ääneen, isoisä huomaa sen.' },
+      { id: 'venetsia.r4', ankkuri: 'lusikan osuvan kahvikuppiin', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Hiljaisuus kantaa yläkerran aamiaisen.' },
+      { id: 'venetsia.r5', ankkuri: 'kuuntelemaan niiden aamiaista', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Päätöslause saa hiljaisen nyökkäyksen.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Venetsiassa oven takana saattaa olla meri. Astuin '
       + 'aamulla majatalon portaille ja olin mennä kaupunkiin uimaan. '

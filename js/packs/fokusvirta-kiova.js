@@ -196,6 +196,30 @@ export const FOKUSVIRTA_KIOVA = {
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Seurasin kynttilöitä luoliin" (siirtymä).
+     */
+    reaktiot: [
+      { id: 'kiova.r1', ankkuri: 'menevät maan alle', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Kupolit ylhäällä, pyhiinvaellus alhaalla.' },
+      { id: 'kiova.r2', ankkuri: 'sytytti sen omastaan', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Vieras jakaa liekkinsä sanattomasti.' },
+      { id: 'kiova.r3', ankkuri: 'Kaksi liekkiä', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Jakaminen ei vähentänyt mitään.' },
+      { id: 'kiova.r4', ankkuri: 'siirtää omaisuutta', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Pankkiiri-isoisä tunnistaa oman alansa.' },
+      { id: 'kiova.r5', ankkuri: 'Tämän haluan muistaa', tarkoitus: 'myotailee', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Hiljainen päätös merkinnän lopuksi.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Kiovan luostarin kupolit näkyvät kauas Dneprille, mutta '
       + 'pyhiinvaeltajat menevät maan alle. Seurasin kynttilöitä luoliin. Kun '

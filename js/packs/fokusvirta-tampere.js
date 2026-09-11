@@ -239,6 +239,31 @@ export const FOKUSVIRTA_TAMPERE = {
      * loppu eri sävyssä. Suuraakkosia ei tekstissä ole, joten
      * kirjoitusasun sovituksia ei tarvita.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Finlaysonin tehtaassa nainen näytti, kuinka
+     * katkennut lanka yhdistetään" (opastus).
+     */
+    reaktiot: [
+      { id: 'tampere.r1', ankkuri: 'tekee töitä kahden järven', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Koski esitellään työntekijänä.' },
+      { id: 'tampere.r2', ankkuri: 'miehet rahakkaiksi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Kuiva huomio siitä, kuka rikastuu.' },
+      { id: 'tampere.r3', ankkuri: 'se katkesi uudestaan', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Isoisä epäonnistuu omissa sormissaan.' },
+      { id: 'tampere.r4', ankkuri: 'sitoi sen katsomatta', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Työntekijän taito hämmästyttää.' },
+      { id: 'tampere.r5', ankkuri: 'laskea myös sormet', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Merkinnän vakava johtopäätös.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Tammerkoski tekee töitä kahden järven välissä. Sen '
       + 'partaalla puuvilla muuttuu langaksi ja miehet rahakkaiksi. '

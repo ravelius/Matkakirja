@@ -128,6 +128,31 @@ export const FOKUSVIRTA_BERLIINI = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: ei erikseen hiljaisia osuuksia (jokainen virke
+     * saa reaktion).
+     */
+    reaktiot: [
+      { id: 'berliini.r1', ankkuri: 'vallattuja tykinputkia', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Voitonpylvään aine on sodasta otettua.' },
+      { id: 'berliini.r2', ankkuri: 'osu ohikulkijaan', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Isoisän kuiva lohtu korkealle nostetusta tykistä.' },
+      { id: 'berliini.r3', ankkuri: 'pudonneen numeronsa mutaan', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
+        perustelu: 'Juhlan jalkoihin jää lehtipojan ansio.' },
+      { id: 'berliini.r4', ankkuri: 'Ostin senkin', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Pieni korjaava teko: nyökkäys.' },
+      { id: 'berliini.r5', ankkuri: 'pojan kasvoilla', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
+        perustelu: 'Merkinnän vakava päätös.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Berliinissä paljastettiin voitonpylväs, jonka '
       + 'koristeina on vallattuja tykinputkia. Niin korkealle nostettu tykki '
