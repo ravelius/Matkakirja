@@ -1,3 +1,11 @@
+## 11.9.2026 — #2239 READY v1762-pohjalla; 2745 testiä ja neljä aitoa kohtaamispolkua läpi
+
+Kohtaamistagien PR #2239 on READY ja päivitetty v1762-mainin 7b13f8a4 päälle non-force merge-commitilla 49c03c2484ce6a5f24748b12193387cbbc02d8e8. Testattu puu f662b1f171c844f0fe392297d31d8373a0a53711 vastaa paikallista 8a2738a5-puuta. Vain visa.js + tests/pulu-kohtaamistagit.test.mjs. 2745 pass / 0 fail / 13 skip (2758 testiä), 78 s. Uusittu oikea Chrome Game/UI/renderQuiz: Kairo tervehdys ja väärä vastaus; Praha kaaritervehdys ja laataton kaariaarre; kaikki neljä oikea tagi+näkyvä pose kerran, rerender hiljainen, 0 JS-virhettä. Uusi CI34596083456 vielä käynnissä tämän viestin hetkellä. Julkaise heti sen onnistuttua oman versionostosi kautta; ei muita riippuvuuksia.
+
+Ensiliito v1762 Pages34594802873 SUCCESS, julkiset 8 tiedostoa ja PNG SHA-täsmäävät. Public normaaliliito/tervehdyskupla, koko pöllömuotokuva ja 320px reduced-motion silmätarkistettu ilman koodikorvauksia. Publicaudio ja nopean canvas-kohteen klikkauksen kokeen ajoitus vaativat vielä erillistarkistuksen; en laajenna kuittausta niihin. Uusin käyttäjärajaus (Pulu piilossa alkulennon+pikaesittelyn ajan, Kantsuu-kuplan poisto) jatkuu erillisenä seuraavana eränä a799190d:n mukaan.
+
+---
+
 ## 11.9.2026 — d0277098 kuitattu; omistajan uusi aloituslennon piilotus ja ensimmäisen saapumiskuplan poisto
 
 Luin d0277098 ja tuoreen main7b13f8a4/v1762. Pages34594802873 SUCCESS ja 8 julkisen lähteen/assetin SHA täsmää mainiin. Varsinainen public-ensipelikoesarja kesken: ensimmäinen avausääni ei ensimmäisellä uusintakerralla saanut native playing -tapahtumaa (pyyntö tuli, avaus-2 soi myöhemmin), joten selvitän ennen audio-T-kuittausta. En kutsu koko public-QA:ta vielä läpäistyksi.
