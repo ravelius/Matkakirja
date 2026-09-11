@@ -1,3 +1,24 @@
+## 2026-09-11 21:05 UTC — FABLE: NAPA-ALUEIDEN 41 NOSTON TÄSMÄTUNNUKSET KUVAPUTKELLE
+
+Kuvatoimitus pyysi 20:22 UTC: *"lähetä niiden sekä arktisen sarjan täsmätunnukset ja painotukset kun ehdit."* Tässä ne.
+
+**Tilaus: ** — 41 kohdetta, ei päällekkäisyyttä 344 rivin Eurooppa-jonon kanssa.
+
+- **Etelämanner 6** (, mainissa v1780 / 0179c1bf): ata-etelanapa-asema, ata-vostokin-jarvi, ata-kuivat-laaksot, ata-rossin-jaahylly, ata-deception-island, ata-vernadski
+- **Arktis 35** (, tulossa v1781:ssä): ark-pohjoisnapa, ark-fram, ark-andree, ark-erebus-terror, ark-beechey, ark-luoteisvayla, ark-vega, ark-maud, ark-italia, ark-ny-alesund, ark-cape-columbia, ark-papanin, ark-nautilus, ark-arktika, ark-barneo, ark-lomonosov, ark-huippuvuoret, ark-siemenholvi, ark-pyramiden, ark-novaja-zemlja, ark-frans-josefin-maa, ark-ellesmere, ark-alert, ark-gronlannin-jaatikko, ark-camp-century, ark-ilulissat, ark-merijaa, ark-thule, ark-nenetsit, ark-saamelaiset, ark-wrangel, ark-kuolan-syvareika, ark-norilsk, ark-magneettinen-napa, ark-utqiagvik
+
+**Painotus tyypeittäin** (json-rivillä kentässä ):
+
+- *historia, kulttuuri, merenkulku* → **havainnekuva ensisijainen**. Nämä ovat tapahtumia ja kadonneita hetkiä: Andréen vetypallo 1897, Erebus ja Terror, Beechey Islandin kolme hautaa, Punainen teltta, SP-1:n jäälautta, Thulen kulttuuri. Valokuvaa niistä ei ole tai se on huono; havainnekuva oman tapahtumansa aikakaudessa on juuri se mitä omistaja tarkoitti *"hyvin paikkaansa pitäviä ja upeita otoksia"*.
+- *tekniikka* → **valokuva ensisijainen, havainnekuva rinnalle**. Asemat ja laitteet ovat olemassa ja kuvattuja (Ny-Ålesund, Siemenholvi, Alert, Amundsen–Scott), mutta Camp Century ja Nautilus navan alla kaipaavat havainnekuvan.
+- *meri, saari, vuori, jarvi, elain, kauppa* → **valokuva ensisijainen**. Nämä ovat paikkoja, jotka on kuvattu: Ilulissat, Huippuvuoret, Wrangel, Grönlannin jäätikkö. Vostokin järvi on poikkeus — se on neljän kilometrin jään alla, joten siihen havainnekuva.
+
+**Reunaehdot.** Yhdelläkään rivillä ei ole - eikä -kenttää, joten kaikki 41 ovat kuvattomia. Napa-alueen nostot sijoitetaan -kentällä eivätkä ne näy tasokartalla lainkaan — kuva näkyy siis vain pallolla ja nostokortissa. Jokaisella rivillä on -kenttä (en-Wikipedian artikkeli, tarkistettu 11.9.2026); käyttäkää sitä lähtökohtana älkääkä keksikö tunnuksia.
+
+**Havainnekuvien aikakausi.** Sama sääntö kuin muualla: havainnekuva saa olla oman aiheensa ajalta eikä sen tarvitse olla 1873-paperivedos. Naparetkien kuvat siis 1890–1930-luvun ilmeellä, SP-1 vuoden 1937 ilmeellä, Nautilus 1958. Lähderivistä on käytävä ilmi, että kyse on havainnekuvasta.
+
+Kuittaan v1781:n julkaistun version ja main-SHA:n erikseen, kun PR #2270 on mergetty.
+
 ## 2026-09-11 18:25 UTC — FABLE: HAVAINNEKUVIA SAA TEHDÄ PALJON — omistajan uusi linjaus, koskee myös napa-alueita
 
 **Omistaja 11.9.2026, sanatarkasti:** *"Ja kerätään sinne aitoja kuvia sekä laitetaan kuvaputkelle pyyntö havainnekuvista. Havainnekuvia voi pyytää oikeasti paljon myös sinne Euroopan nostoihin. Ne ovat kuitenkin yleensä hyvin paikkaansa pitäviä ja upeita otoksia."*
