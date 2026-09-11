@@ -1564,6 +1564,24 @@ test('puhekuplissa ei ole nimilappua eikä pöllökuvaketta', () => {
   assert.doesNotMatch(css, /\.pollo-vihje-kuvapaikka\s*\{/, 'kuvapaikan tyyli on palannut');
 });
 
+test('Pulun näkymätön osuma-alue ei saa painikelaattaa dialogissa eikä kartalla', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const saanto = css.match(
+    /\.dialog button\.pollo-nappi\.pollo-kelluu\.livia-kasvot-valmis:is\(([^)]*)\),\nbutton\.pollo-nappi\.pollo-kelluu\.pollo-kelluu-kartalla\.livia-kasvot-valmis:is\(([^)]*)\) \{([^}]*)\}/,
+  );
+  assert.ok(saanto, 'Pulun dialogi- ja karttatilojen rajattua nollausta ei löydy');
+  for (const tila of [':hover', ':active', ':focus', ':focus-visible']) {
+    assert.ok(saanto[1].includes(tila) && saanto[2].includes(tila),
+      `Pulun ${tila}-tila puuttuu dialogin tai kartan nollauksesta`);
+  }
+  assert.match(saanto[3], /background:\s*transparent;/);
+  assert.match(saanto[3], /border-color:\s*transparent;/);
+  assert.match(saanto[3], /box-shadow:\s*none;/);
+  assert.match(css,
+    /\.pollo-nappi\.livia-kasvot-valmis:focus-visible \{ outline: 2px solid var\(--accent\); outline-offset: 2px; \}/,
+    'näppäimistöfokuksen näkyvä rengas puuttuu');
+});
+
 /*
  * PINOON MAHTUU USEA KUPLA (omistajan tilaus 3.9.2026: *"puhekuplien
  * korkeutta pitää kasvattaa, jotta useampi kupla mahtuu kerralla

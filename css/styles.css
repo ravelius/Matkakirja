@@ -25837,6 +25837,15 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis {
 .pollo-nappi .livia-kasvot-pinta canvas { mix-blend-mode: normal !important; }
 .pollo-nappi.livia-kasvot-valmis:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
+/* Pulun 48 px osuma-alue ei ole näkyvä painikelaatta. Dialogin ja kartan
+ * yleiset painiketilat eivät saa maalata neliötä piirroksen taakse. */
+.dialog button.pollo-nappi.pollo-kelluu.livia-kasvot-valmis:is(:hover, :active, :focus, :focus-visible),
+button.pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla.livia-kasvot-valmis:is(:hover, :active, :focus, :focus-visible) {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
 /* Pikselilähikasvo: lepo ja osuma-alue 44 px. Lyhyet eleet myös vasemmalle. */
 .pollo-nappi.pollo-kelluu.livia-kasvot-valmis,
 body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width: 44px; min-width: 44px; }
