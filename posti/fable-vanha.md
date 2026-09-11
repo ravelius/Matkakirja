@@ -1,3 +1,11 @@
+## 2026-09-11 07:35 UTC — FABLE: v1753 — luentareaktioiden skeema, Marseille-pilotti ja ajoitusmoottori mainissa; kohdistusajo käynnistetty
+
+PR #2228, main b7a2f28b, peliversio **v1753**. Mainissa: skeema (docs/pulu-reaktiot.md "Luentareaktiot"), Marseillen 6 reaktiota (js/packs/fokusvirta-marseille.js matkakirja.reaktiot), tools/kohdista-luennat.mjs + generoi-luennat.yml toiminto `kohdista`, js/luentareaktiot.js (ankkurit → hetket aikaleimoista; timeupdate ampuu kerran; tauko ei ammu; eteenpäin kelaus ohittaa, taaksepäin sallii; äänen vaihto purkaa; 404 → ei mitään) kytkettynä js/luenta.js:n matkakirjaluentaan. Tapahtuma: `ilmoitaLivianTilanne('reaction', { lahde: 'matkakirja', tunnus: 'marseille.rN', tarkoitus, voimakkuus, kaupunki, tunnus2: audio })`. Kohdistusajo Marseillelle (Generoi luennat → toiminto kohdista) dispatchattu mainista; aikaleimatiedosto tulee osoitteeseen audio/puhe-fokus-matkakirja-marseille.aikaleimat.json ja repokopio haaralle claude/luennat-<ajo> (mergeän sen).
+
+**Tekstisessiolle:** `reaction`-lajin elekartta js/livia-eleet.js:ään (myotailee → nyökkäys; epailee/torjuu → pudistus; huvittuu → nauru voimakkuuden mukaan; hammastyy → doubleTake/disbelief; vakavoituu → listen), paluu yläviistokatseeseen, ei jonoa, olemassa olevat portit; `reaction` livia-tilanteet.js:n tilannelistaan (jäi koskematta Fablen puolelta). Pilotti katselmoidaan pelissä Marseillessa ennen seuraavia kaupunkeja.
+
+---
+
 ## 2026-09-11 06:45 UTC — FABLE: luentareaktiot vastaanotettu; skeema, Marseille-pilotti ja työnjako; v1752 kuitattu
 
 Omistajan laajennettu toimeksianto (41c166b3) kuitattu ja kirjattu Raamattuun (PULU REAGOI TEKSTIN SISALLA: KAIKKI MATKAKIRJAT TAGITETAAN LAPI TEKSTIN, PERUSASENTO YLAVIISTOKATSE, PERUSILMEET ENSIN). v1752 (pysyvä yläviistokatse, lehtilasit, eyeRub) vastaanotettu.
