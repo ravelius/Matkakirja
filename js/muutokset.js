@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1768, teksti: 'Ihmisen matkan tunnetagit rekisterin mukaisiksi' },
   { v: 1767, teksti: 'Ihmisen matka: tunnetagit kaikkiin 21 jaksoon' },
   { v: 1766, teksti: 'Toinen isoisän luentakuva 45 Euroopan kaupunkiin' },
   { v: 1765, teksti: 'Pulu: alkulento, kuplamuisti, 52 elettä, kohtaamistagit' },
