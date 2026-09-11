@@ -134,7 +134,7 @@ export const FOKUSKOHTEET_TUR = [
     nimi: 'Troija',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Kuinka pitkälle kaivaukset ovat ehtineet nykyään?',
       'Mitä Priamoksen aarteelle tapahtui löydön jälkeen?',
@@ -175,7 +175,7 @@ export const FOKUSKOHTEET_TUR = [
     nimi: 'Efesos',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Miksi kaupunki lopulta hylättiin?',
       'Minne temppelin löydöt vietiin?',
@@ -244,7 +244,7 @@ export const FOKUSKOHTEET_TUR = [
     akustiikka: 'luola',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Asuuko kallokolotaloissa vielä ihmisiä?',
       'Kuinka syvälle maanalaiset kaupungit ulottuvat?',
@@ -289,7 +289,7 @@ export const FOKUSKOHTEET_TUR = [
     nimio: 'Pamukkale',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Saako terasseilla vielä kävellä?',
       'Miksi antiikin kaupunki rakennettiin juuri tähän?',
@@ -540,7 +540,7 @@ export const FOKUSKOHTEET_TUR = [
     nimi: 'Göbekli Tepe',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Ketkä pylväät pystyttivät?',
       'Miksi kaivauksia tehdään niin hitaasti?',
@@ -624,7 +624,7 @@ export const FOKUSKOHTEET_TUR = [
     nimi: 'Vanjärvi',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Mistä järven vesi tulee, jos se ei laske mihinkään?',
       'Millainen kala inci kefali on?',
@@ -816,7 +816,7 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'kapalicarsi',
     nimi: 'Kapalıçarşı',
-    tyyppi: 'muu',
+    tyyppi: 'kauppa',
     symboli: 'kauppa',
     kysymykset: [
       'Mitä basaarissa myydään nykyään?',
@@ -910,7 +910,7 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'vanin-kissa',
     nimi: 'Vanin kissa',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     symboli: 'elain',
     kysymykset: [
       'Miksi kissa oppi uimaan?',
@@ -979,7 +979,7 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'kirkpinar',
     nimi: 'Kırkpınar',
-    tyyppi: 'muu',
+    tyyppi: 'urheilu',
     symboli: 'urheilu',
     kysymykset: [
       'Miksi painijat öljyävät itsensä?',
@@ -1069,7 +1069,7 @@ export const FOKUSKOHTEET_TUR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Dolmabahçe',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
     nappi: 'Sulttaanin äiti läimäytti Ranskan keisarinnaa',
@@ -1120,7 +1120,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     id: 'yaren',
     nimi: 'Eskikaraağaç',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     symboli: 'elain',
     /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
     nappi: 'Haikara palasi Afrikasta samalle kalastajalle — joka kevät',
@@ -1186,7 +1186,7 @@ export const FOKUSKOHTEET_TUR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Mausoleumi',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi hautaa kutsutaan mausoleumiksi?',
@@ -1261,7 +1261,7 @@ export const FOKUSKOHTEET_TUR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Hippodromi',
-    tyyppi: 'muu',
+    tyyppi: 'urheilu',
     symboli: 'urheilu',
     kysymykset: [
       'Miksi vaunukilpailut olivat kaupungille niin tärkeitä?',
@@ -1355,7 +1355,7 @@ export const FOKUSKOHTEET_TUR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Kaupunginmuurit',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miten Konstantinopoli lopulta vallattiin, jos muuri kesti?',
@@ -1456,7 +1456,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     id: 'pergamonin-alttari',
     nimi: 'Pergamonin alttari',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi Pergamonin kuninkaat rakensivat näin suuresti?',

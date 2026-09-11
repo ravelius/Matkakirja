@@ -76,7 +76,7 @@ export const MAASTOKOHTEET_SAU = [
     // Vanjärven mallin mukaan (js/packs/fokuskohteet-tur.js) — kortin
     // ylärivi näyttää silloin luokan Luonto eikä väärää otsaketta.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi aavikon nimi on Tyhjä neljännes?',
       'Voiko aavikon poikki matkustaa?',

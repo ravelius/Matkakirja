@@ -166,7 +166,7 @@ export const FOKUSKOHTEET_BIH = [
     nimio: 'Blagajin luostari',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Keitä dervissit olivat?',
       'Miksi luostari rakennettiin juuri kallion juureen?',
@@ -285,7 +285,7 @@ export const FOKUSKOHTEET_BIH = [
     nimi: 'Višegrad',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Mistä romaani Drinan silta kertoo?',
       'Mitä suurvisiirin työhön kuului?',
@@ -517,7 +517,7 @@ export const FOKUSKOHTEET_BIH = [
     akustiikka: 'luola',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miten luolaeläin tulee toimeen ilman valoa?',
       'Miksi luolan suusta puhaltaa kylmää?',
@@ -558,7 +558,7 @@ export const FOKUSKOHTEET_BIH = [
     nimi: 'Hutovo Blato',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'elain',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä Ramsar-kosteikko on?',
       'Mitä lintuja täällä levähtää?',

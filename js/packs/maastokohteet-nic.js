@@ -269,7 +269,7 @@ export const MAASTOKOHTEET_NIC = [
   {
     id: 'somoton-kanjoni',
     nimi: 'Somoton kanjoni',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mikä joki saa alkunsa kanjonin suulla?',
       'Miksi kanjoni löydettiin vasta 2004?',

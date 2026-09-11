@@ -66,7 +66,7 @@ export const FOKUSKOHTEET_TUN = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Karthagon satama',
-    tyyppi: 'muu',
+    tyyppi: 'merenkulku',
     symboli: 'merenkulku',
     kysymykset: [
       'Miksi sotasatama piti piilottaa kauppasataman taakse?',

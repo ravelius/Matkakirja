@@ -244,7 +244,7 @@ export const MAASTOKOHTEET_CHN = [
     id: 'zhangjiajie',
     nimi: 'Zhangjiajie',
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi pylväät eivät ole karstia?',
       'Mikä on Bailongin hissi?',

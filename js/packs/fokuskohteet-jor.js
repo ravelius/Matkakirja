@@ -63,7 +63,7 @@ export const FOKUSKOHTEET_JOR = [
      */
     id: 'al-khazneh',
     nimi: 'Al-Khazneh',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi hautaa kutsutaan aarrekammioksi?',

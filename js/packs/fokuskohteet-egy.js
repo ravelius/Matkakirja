@@ -89,7 +89,7 @@ export const FOKUSKOHTEET_EGY = [
      */
     id: 'faroksen-majakka',
     nimi: 'Faroksen majakka',
-    tyyppi: 'muu',
+    tyyppi: 'merenkulku',
     symboli: 'merenkulku',
     kysymykset: [
       'Miten majakan valo saatiin näkymään näin kauas?',
@@ -151,7 +151,7 @@ export const FOKUSKOHTEET_EGY = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Suuri kirjasto',
-    tyyppi: 'muu',
+    tyyppi: 'sana',
     symboli: 'sana',
     kysymykset: [
       'Mistä kirjasto sai käsikirjoituksensa?',
@@ -218,7 +218,7 @@ export const FOKUSKOHTEET_EGY = [
      */
     id: 'gizan-suuri-pyramidi',
     nimi: 'Kheopsin pyramidi',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Mihin pyramidin valkoinen kuori joutui?',
@@ -301,7 +301,7 @@ export const FOKUSKOHTEET_EGY = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Pylvässali',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miten sali valaistiin, kun katto oli paikallaan?',

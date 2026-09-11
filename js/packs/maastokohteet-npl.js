@@ -242,7 +242,7 @@ export const MAASTOKOHTEET_NPL = [
   {
     id: 'bardiya',
     nimi: 'Bardiyan kansallispuisto',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Miksi puisto on Nepalin koskemattomin?',
       'Mikä joki rajaa puistoa idässä?',

@@ -119,7 +119,7 @@ export const MAASTOKOHTEET_CHL = [
   {
     id: 'atacama',
     nimi: 'Atacama',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi Atacamassa ei sada?',
       'Miksi Marsin laitteita testataan täällä?',

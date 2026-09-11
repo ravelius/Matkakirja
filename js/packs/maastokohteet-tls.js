@@ -225,7 +225,7 @@ export const MAASTOKOHTEET_TLS = [
   {
     id: 'nino-konis-santana',
     nimi: 'Nino Konis Santana',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Kenen mukaan puisto on nimetty?',
       'Mikä on Korallikolmio?',

@@ -106,7 +106,7 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Branin linna',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'sana',
-    tyyppi: 'muu',
+    tyyppi: 'sana',
     kysymykset: [
       'Missä Vlad Seivästäjä sitten asui?',
       'Kuka linnassa on oikeasti asunut?',
@@ -186,7 +186,7 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Peleșin linna',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Mistä linnan oma sähkö tuotettiin?',
       'Ketkä työmaalla noita kieliä puhuivat?',
@@ -226,7 +226,7 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Transfăgărășan',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'tekniikka',
-    tyyppi: 'muu',
+    tyyppi: 'tekniikka',
     kysymykset: [
       'Mikä linna tien varrella on?',
       'Miksi reitti vedettiin juuri tähän kohtaan vuoristoa?',
@@ -275,7 +275,7 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Tonavan suisto',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Milloin pelikaanit saapuvat suistoon?',
       'Miten suistossa liikutaan?',
@@ -319,7 +319,7 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Iloinen hautausmaa',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'kulttuuri',
-    tyyppi: 'muu',
+    tyyppi: 'kulttuuri',
     kysymykset: [
       'Kuka ristit veistää nykyään?',
       'Millaisia runot ovat sanoiltaan?',
@@ -392,7 +392,7 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Rautaportti',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Minne Ada Kalehin asukkaat muuttivat?',
       'Kulkevatko laivat rotkon läpi nykyään?',
@@ -473,7 +473,7 @@ export const FOKUSKOHTEET_ROU = [
     nimio: 'Sarmizegetusa',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Keitä daakialaiset olivat?',
       'Mitä pyhäkön kalenterista tiedetään?',
@@ -517,7 +517,7 @@ export const FOKUSKOHTEET_ROU = [
     akustiikka: 'luola',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'tekniikka',
-    tyyppi: 'muu',
+    tyyppi: 'tekniikka',
     kysymykset: [
       'Kuinka syvällä maanalainen järvi on?',
       'Millaista kaivoksessa on käydä?',
@@ -563,7 +563,7 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Corvinin linna',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Mitkä ovat Romanian seitsemän ihmettä?',
       'Kuka linnan rakennutti?',
@@ -642,7 +642,7 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'comaneci',
     nimi: 'Nadia Comăneci',
-    tyyppi: 'muu',
+    tyyppi: 'urheilu',
     symboli: 'urheilu',
     /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
     nappi: 'Tulostaulu ei osannut näyttää täyttä kymppiä — se näytti 1.00',
@@ -691,7 +691,7 @@ export const FOKUSKOHTEET_ROU = [
     id: 'voronet',
     nimi: 'Voronețin luostari',
     symboli: 'kulttuuri',
-    tyyppi: 'muu',
+    tyyppi: 'kulttuuri',
     kysymykset: [
       'Miten seinämaalaukset ovat kestäneet ulkona?',
       'Mikä Bukovina on?',

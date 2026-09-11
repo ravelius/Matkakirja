@@ -338,7 +338,7 @@ export const MAASTOKOHTEET_IRL = [
   {
     id: 'moherin-kalliot',
     nimi: 'Moherin kalliot',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mistä kallioiden nimi tulee?',
       'Miksi vanha linnoitus purettiin?',

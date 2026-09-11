@@ -162,7 +162,7 @@ export const MAASTOKOHTEET_MDG = [
   {
     id: 'tsingy-de-bemaraha',
     nimi: 'Tsingy de Bemaraha',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mitä sana tsingy tarkoittaa?',
       'Miksi kiviaavikon läpi ei voi kävellä?',
@@ -188,7 +188,7 @@ export const MAASTOKOHTEET_MDG = [
   {
     id: 'baobabien-kuja',
     nimi: 'Baobabien kuja',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi puut seisovat yksinään keskellä aukeaa?',
       'Mitä renala tarkoittaa?',
@@ -214,7 +214,7 @@ export const MAASTOKOHTEET_MDG = [
   {
     id: 'isalo',
     nimi: 'Isalo',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mikä on syövyttänyt kanjonit hiekkakiveen?',
       'Ketkä hautaavat vainajansa näihin kallioihin?',
@@ -239,7 +239,7 @@ export const MAASTOKOHTEET_MDG = [
   {
     id: 'andasibe-mantadia',
     nimi: 'Andasibe-Mantadia',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä eläin on indri?',
       'Miksi puistosta on tullut saareke?',
@@ -264,7 +264,7 @@ export const MAASTOKOHTEET_MDG = [
   {
     id: 'ranomafana',
     nimi: 'Ranomafana',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä lemuri löydettiin täältä tieteelle uutena?',
       'Mistä puiston nimi tulee?',

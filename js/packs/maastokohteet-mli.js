@@ -246,7 +246,7 @@ export const MAASTOKOHTEET_MLI = [
     id: 'baoulen-mutka',
     nimi: 'Baoulén mutka',
     nimio: 'Baoulé',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Mistä Baoulén mutkan puisto tunnetaan?',
       'Mikä uhanalainen apina puistossa elää?',

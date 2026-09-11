@@ -263,7 +263,7 @@ export const MAASTOKOHTEET_BOL = [
   {
     id: 'salardeuyuni',
     nimi: 'Salar de Uyuni',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miksi satelliitit tarvitsevat tätä paikkaa?',
       'Mistä suola-aavikko syntyi?',

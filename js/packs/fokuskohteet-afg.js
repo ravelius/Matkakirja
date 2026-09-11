@@ -71,7 +71,7 @@ export const FOKUSKOHTEET_AFG = [
      */
     id: 'bamiyanin-buddhat',
     nimi: 'Bamiyanin buddhat',
-    tyyppi: 'muu',
+    tyyppi: 'kulttuuri',
     symboli: 'kulttuuri',
     kysymykset: [
       'Miksi patsaat veistettiin juuri tähän laaksoon?',

@@ -303,7 +303,7 @@ export const MAASTOKOHTEET_LBY = [
   {
     id: 'idehanubari',
     nimi: 'Ubarin hiekkameri',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mikä on erg?',
       'Miten hiekkameren keskellä voi olla järviä?',

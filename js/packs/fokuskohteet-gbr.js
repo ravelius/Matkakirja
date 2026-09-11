@@ -80,7 +80,7 @@ export const FOKUSKOHTEET_GBR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'St Paulin kirkko',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi torninhuippua ei rakennettu takaisin?',
@@ -190,7 +190,7 @@ export const FOKUSKOHTEET_GBR = [
      */
     id: 'crystal-palace',
     nimi: 'Crystal Palace',
-    tyyppi: 'muu',
+    tyyppi: 'tekniikka',
     symboli: 'tekniikka',
     kysymykset: [
       'Miten näin suuri lasirakennus saatiin pystyyn 39 viikossa?',
@@ -260,7 +260,7 @@ export const FOKUSKOHTEET_GBR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'London Bridge',
-    tyyppi: 'muu',
+    tyyppi: 'tekniikka',
     symboli: 'tekniikka',
     kysymykset: [
       'Millaista oli asua sillalla?',

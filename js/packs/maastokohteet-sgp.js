@@ -111,7 +111,15 @@ export const MAASTOKOHTEET_SGP = [
   {
     id: 'pulau-ubin',
     nimi: 'Pulau Ubin',
-    tyyppi: 'muu',
+    /*
+     * LYHYT NIMIÖ, KOSKA SINGAPORE ON TÄYNNÄ. Maan yhdeksän merkkiä
+     * mahtuu noin 15 x 17 lautayksikön alalle, ja tämä kymmenes nimiö
+     * työnsi Bukit Timahin alakyljelle Haw Par Villan päälle (erän M20
+     * mittaus tässä tiedostossa: yhdeksäs oli maan yläraja). Saaren
+     * arkinimi on Ubin, joten lyhennys ei ole keksitty.
+     */
+    nimio: 'Ubin',
+    tyyppi: 'saari',
     kysymykset: [
       'Mitä saaren nimi tarkoittaa?',
       'Mihin saaren graniittia käytettiin?',
@@ -258,7 +266,7 @@ export const MAASTOKOHTEET_SGP = [
     // Kosteikko ei ole vuori eikä meri: tyyppi 'muu' + symboli 'luonto'.
     symboli: 'luonto',
     nimi: 'Sungei Buloh',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mistä alueen linnut tulevat talveksi?',
       'Miten kosteikosta tuli luonnonsuojelualue?',

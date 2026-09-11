@@ -63,7 +63,7 @@ export const FOKUSKOHTEET_LBY = [
      */
     id: 'leptis-magna',
     nimi: 'Leptis Magna',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi Septimius Severus panosti juuri kotikaupunkiinsa?',

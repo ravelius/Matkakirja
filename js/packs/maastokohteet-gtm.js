@@ -283,7 +283,7 @@ export const MAASTOKOHTEET_GTM = [
   {
     id: 'semuc-champey',
     nimi: 'Semuc Champey',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Mihin Cahabón-joki katoaa?',
       'Mitä Semuc Champey tarkoittaa?',

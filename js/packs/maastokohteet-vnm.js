@@ -138,7 +138,7 @@ export const MAASTOKOHTEET_VNM = [
   {
     id: 'phong-nha',
     nimi: 'Phong Nha',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuinka monta luolaa puistossa on?',
       'Mikä on maailman suurin luola?',

@@ -239,7 +239,7 @@ export const MAASTOKOHTEET_LTU = [
   {
     id: 'kuurinkynnas',
     nimi: 'Kuurinkynnäs',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Mikä pitää kynnäksen olemassa?',
       'Ketkä jakavat maailmanperintökohteen?',
@@ -471,7 +471,7 @@ export const MAASTOKOHTEET_LTU = [
   {
     id: 'aukstaitija',
     nimi: 'Aukštaitijan puisto',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Kuinka syvä Tauragnas-järvi on?',
       'Miksi puistossa kasvaa niin monta lajia?',

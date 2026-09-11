@@ -343,7 +343,7 @@ export const MAASTOKOHTEET_USA = [
   {
     id: 'mammothin-luola',
     nimi: 'Mammothin luola',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Kuinka pitkä luolasto on?',
       'Miksi luolasto on niin vakaa?',
