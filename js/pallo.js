@@ -1427,9 +1427,75 @@ export const NAPAKANSI_ETELA = '#dcd6c6';
  * VANHA YKSIVÄRINEN KANSI JÄÄ VARAKSI. Kuva haetaan ämpäristä; jos
  * verkko on poikki tai polku 404, kalottia ei lisätä ja pallo piirtyy
  * täsmälleen kuten ennen (yksivärinen kansi 83,7°:sta napaan).
+ *
+ * SÄVY TULEE LAATOILTA, EI KALOTIN OMASTA TOTUUDESTA (omistaja
+ * 11.9.2026: *"Rajat näkyvät yhä."*). Laatoissa ei ole napojen
+ * leveyksillä karttaa lainkaan: juliste loppuu ~79,6° N:ään ja
+ * ~61,5° S:ään, ja loppu on tasaista täytemerta. Kalotti piirtää
+ * oikean batymetrian, joka on sitä täytettä 9–12 luminanssiyksikköä
+ * tummempi — ja se ero näkyi kiekkona, jonka kehä erottui kaarena.
+ * Kalotin meri ankkuroidaan siksi POLTOSSA laattojen liitossävyyn
+ * (tools/tee-napakalotit.mjs LIITOSSÄVY); peli ei säädä sävyjä.
+ *
+ * KANSI OTETAAN POIS NÄKYVISTÄ, KUN KUVA ON PAIKALLAAN. Kansi on
+ * varakappale eikä pohjamaali: se on läpinäkymätön eikä kalotti
+ * kirjoita syvyyttä (depthWrite: false), joten pelkkä sama
+ * renderOrder ei takaa, kumpi jää päälle. Mitattu 11.9.2026
+ * etelänavalta: kansi piirtyi kalotin PÄÄLLE, ja koska etelänapa on
+ * suunnatun valon varjopuolella, se näkyi siellä tummana kiekkona
+ * (keskisävy 183,1 vs. kalotin 188,3) — ja sen päällä vain
+ * vektorirantaviiva. Ks. lisaaNapakannet.
+ *
+ * ── KALOTTI ZOOMATESSA (omistaja 11.9.2026, sanatarkasti: *"Niin se
+ * saisi piirtyä hyvin, myös silloin kun sitä zoomaan."*) ────────────
+ *
+ * Kaksi muutosta, ja kumpikin on MITATTU eikä arvattu (mittaukset
+ * tools/tee-napakalotit.mjs:n ajoista 11.9.2026):
+ *
+ *  1. VEKTORIVIIVA KALOTIN PÄÄLLE. Rantaviiva on pallolla vektori
+ *     (js/pallovektorit.js), joka on tasan puoli laitepikseliä leveä
+ *     joka korkeudella — ja sen aineisto ulottuu napaan asti. Kalotti
+ *     kuitenkin PEITTI sen: vektorikerroksen renderOrder on −0,5 ja
+ *     kalotin oli oletus 0, joten läpinäkyvien jonossa kalotti
+ *     maalattiin viivan päälle. Etelämantereen rantaviiva ja
+ *     jäähyllyn reuna olivat siksi lähikuvassa pelkkää venytettyä
+ *     kuvapikseliä, vaikka terävä viiva oli jo olemassa. Kansi ja
+ *     kalotti saavat nyt renderOrderin −0,75: laattojen ja
+ *     lepokerroksen (≤ −1) päälle mutta vektoriviivan (−0,5) alle.
+ *     Tämä on koko zoom-korjauksen tärkein osa ja maksaa nolla tavua.
+ *
+ *  2. KUVA ON WEBP, EI PNG. Paperin rae, hypsometria ja rinnevarjo
+ *     ovat kohinaa, jota häviötön PNG ei pakkaa: eteläkalotti oli
+ *     2048 px:n PNG:nä 4,58 Mt (pohjoinen 4,84 Mt). Sama kuva webp
+ *     q88 -pakattuna on 0,29 Mt eli 16 kertaa pienempi, ja tiedosto
+ *     on alfansa puolesta sama (alphaQuality 100, reunan häivytys
+ *     säilyy). Kun tavu ei enää ole este, kuvan sivu voi kasvaa:
+ *     4096 px:n eteläkalotti on webp:nä 0,93 Mt — yhä viidesosa
+ *     entisen 2048 px:n PNG:stä, mutta kaksinkertainen tarkkuus
+ *     (34 → 68 kuvapikseliä leveysastetta kohti). Pohjoiskalotti jää
+ *     2048:aan: se kattaa vain 80°–90°, jolloin 2048 px on jo 102
+ *     px/aste. Kokojen valinta on työkalun lippuja (--koko-etela),
+ *     joten kuvaa ei tarvitse kasvattaa molemmista päistä.
+ *
+ * KAKSITASOISTA KALOTTIA EI TEHTY, ja syy on aineistossa: korkeus
+ * tulee ETOPOn 3 kaariminuutin ruudukosta (tools/korkeusaineisto,
+ * 0,05° ≈ 5,5 km) ja rantaviiva Natural Earthin 1:10M-aineistosta.
+ * 4096 px:n kalotissa on jo noin kolme kuvapikseliä jokaista
+ * korkeusnäytettä kohti — tarkempi kuva ei enää sisältäisi uutta
+ * tietoa, vain suurennettua interpolaatiota. Terävyys, jonka silmä
+ * lähikuvassa näkee, on RANTAVIIVA, ja se saadaan kohdasta 1
+ * ilmaiseksi ja ilman rajaa.
  */
-/** Kalottikuvien versio ämpärissä (uusi ajo = uusi versio, ks. työnkulku). */
-export const NAPAKALOTTI_VERSIO = '2026-09-11a';
+/**
+ * Kalottikuvien versio ämpärissä (uusi ajo = uusi versio, ks. työnkulku).
+ *
+ * 2026-09-11b on WEBP-erä (ks. yllä kohta 2): polku on eri, joten
+ * vanha PNG-erä jää koskematta selainten vuoden välimuistiin. Ennen
+ * kuin työnkulku on ajettu tähän versioon, kuva 404 ja pallo piirtyy
+ * yksivärisellä kannella kuten ennen kalotteja — sama varapolku kuin
+ * katkenneella verkolla.
+ */
+export const NAPAKALOTTI_VERSIO = '2026-09-11b';
 /**
  * Kalottien ala: `reuna` on kuvan ULKOKEHÄN leveysaste ja `merkki`
  * navan etumerkki. Samat luvut lukee työkalu (tools/tee-napakalotit.mjs),
@@ -1439,8 +1505,17 @@ export const NAPAKALOTTI = Object.freeze({
   pohjoinen: Object.freeze({ reuna: 80, merkki: 1 }),
   etela: Object.freeze({ reuna: -60, merkki: -1 }),
 });
+/** Kalottikuvien tiedostopääte (webp, ks. NAPAKALOTTI_VERSIO kohta 2). */
+export const NAPAKALOTTI_PAATE = 'webp';
 /** Kalotin kuva ämpärissä. */
-export const napakalotinUrl = (puoli) => `${R2}julisteet/pallo/napakalotit/${NAPAKALOTTI_VERSIO}/${puoli}.png`;
+export const napakalotinUrl = (puoli) => `${R2}julisteet/pallo/napakalotit/${NAPAKALOTTI_VERSIO}/${puoli}.${NAPAKALOTTI_PAATE}`;
+/**
+ * Napakannen ja -kalotin paikka läpinäkyvien jonossa: laattojen ja
+ * lepokerroksen (≤ −1) päälle mutta VEKTORIVIIVOJEN (−0,5) alle, jotta
+ * rantaviiva näkyy kalotin päällä terävänä joka korkeudella
+ * (js/pallovektorit.js VEKTORIT_RENDER_ORDER).
+ */
+export const NAPAKALOTTI_RENDER_ORDER = -0.75;
 
 /**
  * Pinnan pisteen paikka KALOTIN KUVASSA yksikköruudussa: x oikealle,
@@ -1620,6 +1695,8 @@ function lisaaNapakannet(kolmi, sade, ikkuna = globalThis) {
   const { Mesh, SphereGeometry, LaattaMateriaali, juuri } = kolmi;
   const asteina = (a) => (a * Math.PI) / 180;
   const tehdyt = [];
+  /** Kannet puolittain, jotta kalotti voi piilottaa korvaamansa kannen. */
+  const kannet = { pohjoinen: [], etela: [] };
   const kansi = (etela, savy, haive) => {
     const pituus = asteina(90 - NAPAKANNEN_LEVEYS + (haive ? NAPAKANNEN_HAIVE : 0));
     // Kalotin theta lasketaan pohjoisnavasta (+Y): etelä on toisessa päässä.
@@ -1635,12 +1712,14 @@ function lisaaNapakannet(kolmi, sade, ikkuna = globalThis) {
       materiaali.depthWrite = false;
     }
     const verkko = new Mesh(muoto, materiaali);
+    verkko.renderOrder = NAPAKALOTTI_RENDER_ORDER;
     verkko.userData.napakansi = true;
     // Kansi ei ota kosketusta vastaan: pelin merkit ja onGlobeClick
     // toimivat kuten ennen (kirjasto säteenjäljittää pallon lapsia).
     verkko.raycast = () => {};
     juuri.add(verkko);
     tehdyt.push(verkko);
+    kannet[etela ? 'etela' : 'pohjoinen'].push(verkko);
   };
   kansi(false, NAPAKANSI_POHJOINEN, false);
   kansi(false, NAPAKANSI_POHJOINEN, true);
@@ -1692,10 +1771,29 @@ function lisaaNapakannet(kolmi, sade, ikkuna = globalThis) {
         map: tekstuuri, transparent: true, depthWrite: false,
       });
       const verkko = new Mesh(geometria, materiaali);
+      // Vektoriviivan alle (ks. NAPAKALOTTI_RENDER_ORDER): rantaviiva
+      // piirtyy kalotin päälle eikä katoa sen alle.
+      verkko.renderOrder = NAPAKALOTTI_RENDER_ORDER;
       verkko.userData.napakalotti = puoli;
       verkko.raycast = () => {};
       juuri.add(verkko);
       tehdyt.push(verkko);
+      /*
+       * KANSI POIS, KUN KARTTA ON PAIKALLAAN (mitattu 11.9.2026).
+       * Yksivärinen kansi on VARAKAPPALE sille, ettei kuvaa saada; kun
+       * kuva on ladattu, kansi on sen alla turhana ja haitallisena.
+       * Etelänavan kaappauksessa se piirtyi kalotin PÄÄLLE — napa on
+       * suunnatun valon varjopuolella, joten kansi näkyi siellä tummana
+       * kiekkona (mitattu keskisävy 183,1 vs. kalotin 188,3), ja sen
+       * päällä oli vain vektorirantaviiva. Kansi ja kalotti ovat
+       * SAMASSA renderOrderissa (NAPAKALOTTI_RENDER_ORDER: vektorien
+       * alla), ja kaikki napakappaleet ovat origossa — THREE ei siis
+       * erota niitä etäisyydelläkään. Kalotti ei myöskään kirjoita
+       * syvyyttä (depthWrite: false). Piirtojärjestys ei siis ole
+       * takeeksi mistään, eikä kalottia pidä nostaa vektorien yli
+       * senkään vuoksi: varakappale otetaan yksinkertaisesti pois.
+       */
+      for (const k of kannet[puoli]) k.visible = false;
     };
     kuva.src = napakalotinUrl(puoli);
   };

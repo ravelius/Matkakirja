@@ -192,6 +192,12 @@ const NIPUTTAMATTOMAT = new Set([
   'js/packs/linssi-topografia.js',
   'js/packs/linssi-tuulet.js',
   'js/packs/linssi-yokartta.js',
+  // Etelämantereen nostot: ainoa tuoja on js/pallolauta/nostot.js, ja
+  // koko pallolauta on niputuksen ulkopuolella (yhden tiedoston versio
+  // pelaa tasokartalla). Paketti jää siis samalla perusteella pois kuin
+  // linssien aineistot — SHELLissä se on, jotta pallolauta saa sen
+  // verkosta ja välimuistista kuten muutkin moduulinsa.
+  'js/packs/maastokohteet-ata.js',
   // Koelaudat poistettiin pelin rekisteristä (js/pack.js) — tiedostot
   // jäävät repoon mahdollista myöhempää käyttöä varten.
   'js/packs/istanbul-questions.js',
