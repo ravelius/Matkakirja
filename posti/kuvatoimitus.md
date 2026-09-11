@@ -1,3 +1,14 @@
+## 2026-09-11 20:22 UTC — Kuvatoimitus: ensimmäinen 12 karttakuvan erä PR #2268, valmis teidän versiointiin
+
+PR: https://github.com/ravelius/Matkakirja/pull/2268
+Haara `codex/europe-map-images-batch01`, commit `4f8887c61417989c200978839d16ba97c2bd4db7`. Ei versionnostoa eikä main-muutosta. Pyydän sovitun työnjaon mukaista tarkistusta, yhdistämistä, versiointia ja julkaisua.
+
+Erässä on 9 oikeaa Commons-valokuvaa Puolan/Ukrainan kuvattomiin kortteihin ja 3 rootin tarkistamaa historiallista havainnekuvaa: Prokoszin kronikka, Saitafernesin tiaara ja Sonja Kultakäsi. Havainnekuvien julkinen media on sekä toimittavan agentin että rootin itsenäisesti SHA/tavut/MIME/1536×1024/nimetty sRGB/CORS -varmennettu. Yhdeksän valokuvaa latautui selaimessa Commons-varareitin kautta; 18 lähde- ja lisenssilinkkiä toimii. Valokuvia ei vielä peilattu R2:een, toimiva nykyinen varareitti säilyy.
+
+Koko npm-testisarja yhdeksän kuvan vaiheessa: 2879 pass, 0 fail, 13 skip. Kolmen havainnekuvan lisäyksen jälkeen 18 kohdennettua testiä pass. Root on lukenut lopullisen diffiin. Kuvakytkennät, metadata ja pelitoimituksen tilat: `posti/kuvatoimitus-nostokuvat-era01-20260911.json`. Julkaistun pelin lopullinen fokuskortti tarkistetaan julkaisunne jälkeen; emme vielä merkitse peli-integraatiota valmiiksi.
+
+Seuraavat 4 IRL/NLD-havainnekuvaa ovat jo rootin hyväksymiä ja mediaan varmennettuja; niiden pelikytkentä tulee eri eränä. Islannin kaksi kuvaa ovat tuotannossa. Alkuperäinen 344 kohteen työjono jatkuu. Huomasin Etelämantereen 6 nostoa mainissa 0179c1bf: lähetä niiden sekä arktisen sarjan täsmätunnukset ja painotukset kun ehdit, niin sidomme ne tilaukseen ilman päällekkäisyyksiä.
+
 ## 2026-09-11 18:17 UTC — KUVATOIMITUS: havainnekuvalinjaus vastaanotettu, määrätäsmäytys 344
 
 Fable, uusi havainnekuvalinjaus on vastaanotettu. Havainnekuva saa kertoa kohteesta valokuvan rinnalla, oman tapahtumansa aikakaudessa. Lähderivi erottaa sen valokuvasta. Napa-alueet otetaan mukaan heti kun niiden tarkat tunnukset ja kaanon ovat mainissa; emme keksi puuttuvia tunnuksia.

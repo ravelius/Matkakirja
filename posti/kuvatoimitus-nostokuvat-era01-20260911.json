@@ -1,0 +1,139 @@
+{
+  "orderId": "EUROOPAN-NOSTOKUVAT-278-20260911",
+  "batch": "01",
+  "prUrl": "https://github.com/ravelius/Matkakirja/pull/2268",
+  "headSha": "4f8887c61417989c200978839d16ba97c2bd4db7",
+  "rootReviewed": true,
+  "gameIntegrated": false,
+  "records": [
+    {
+      "key": "POL:maasto:rysy",
+      "filename": "Rysy 006.JPG",
+      "author": "Milan Bališin",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "POL:maasto:sniezka",
+      "filename": "Śnieżka (Sněžka, Schneekoppe) in winter 2020, Karkonosze mountains 04.jpg",
+      "author": "Pudelek",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "POL:maasto:itameri",
+      "filename": "Mierzeja Helska i Kuźnica z samolotu.Hel Peninsula and Kuznica from airplane. - panoramio.jpg",
+      "author": "Guntars Mednis",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "key": "POL:maasto:veiksel",
+      "filename": "VistulaKrakow.JPG",
+      "author": "Mark A. Wilson",
+      "license": "Public domain"
+    },
+    {
+      "key": "POL:kohde:malbork",
+      "filename": "Nogat river and Malbork Castle in the afternoon.jpg",
+      "author": "DerHexer",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "key": "UKR:maasto:hoverla",
+      "filename": "Views of Hoverla 02.jpg",
+      "author": "Dmytro Petishkin",
+      "license": "CC BY 4.0"
+    },
+    {
+      "key": "UKR:maasto:mustameri",
+      "filename": "Port of Odessa 2016 G3.jpg",
+      "author": "George Chernilevsky",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "UKR:maasto:asovanmeri",
+      "filename": "Frozen Sea of Azov near Kamianka village Crimea Ukraine (1).jpg",
+      "author": "Vedomosti-dzha",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "UKR:maasto:dnepr",
+      "filename": "Dniepr river in Kyiv.jpg",
+      "author": "Dmitry A. Mottl",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "key": "POL:skandaali:skandaali-prokoszin-kronikka",
+      "recordId": "prokoszin-kronikka",
+      "filename": "skandaali-pol-prokoszin-kronikka-r20260911-v1.jpg",
+      "source": "Matkakirjan havainnekuva"
+    },
+    {
+      "key": "UKR:skandaali:skandaali-saitafernesin-tiaara",
+      "recordId": "saitafernesin-tiaara",
+      "filename": "skandaali-ukr-saitafernesin-tiaara-r20260911-v1.jpg",
+      "source": "Matkakirjan havainnekuva"
+    },
+    {
+      "key": "RUS:skandaali:skandaali-sonja-kultakasi",
+      "recordId": "sonja-kultakasi",
+      "filename": "skandaali-rus-sonja-kultakasi-r20260911-v1.jpg",
+      "source": "Matkakirjan havainnekuva"
+    }
+  ],
+  "illustrationDelivery": [
+    {
+      "key": "POL|skandaali|skandaali-prokoszin-kronikka",
+      "url": "https://media.matkakirja.app/skandaalit/20260911/skandaali-pol-prokoszin-kronikka-r20260911-v1.jpg",
+      "sha256": "cc6354180a250cfcbb21bb6abf469c10909d32556f065e9891e8778ce0286cab",
+      "bytes": 720195
+    },
+    {
+      "key": "UKR|skandaali|skandaali-saitafernesin-tiaara",
+      "url": "https://media.matkakirja.app/skandaalit/20260911/skandaali-ukr-saitafernesin-tiaara-r20260911-v1.jpg",
+      "sha256": "2aa12eb5db77cd8ce33fdd97ec95bafdcc5dfdc5fff487d0ecda1edd80f805a3",
+      "bytes": 672811
+    },
+    {
+      "key": "RUS|skandaali|skandaali-sonja-kultakasi",
+      "url": "https://media.matkakirja.app/skandaalit/20260911/skandaali-rus-sonja-kultakasi-r20260911-v1.jpg",
+      "sha256": "7acfa27756a69d5a8e39b2ddc2e1d31636f456eef8890c303b6cd17dd7a995fb",
+      "bytes": 724739
+    }
+  ],
+  "validation": [
+    {
+      "command": "node --test tests/skandaalikuvat-batch01.test.mjs tests/skandaalit.test.mjs tests/havainnekuva.test.mjs",
+      "result": "pass",
+      "tests": 18,
+      "note": "Täsmätesti varmistaa kolmen URLin, kuvatekstin ja lähderivin oikean tietueen sekä sen, että kukin URL esiintyy skandaaliaineistossa vain kerran."
+    },
+    {
+      "command": "node --check js/tekijakortti.js && node --check js/packs/maastokohteet-pol.js && node --check js/packs/maastokohteet-ukr.js",
+      "result": "pass"
+    },
+    {
+      "command": "node --test tests/maastokuvien-lahdelinkit.test.mjs tests/fokusvirta.test.mjs",
+      "result": "pass",
+      "tests": 44
+    },
+    {
+      "command": "git diff --check",
+      "result": "pass"
+    },
+    {
+      "command": "npm test",
+      "result": "pass",
+      "tests": 2892,
+      "passed": 2879,
+      "failed": 0,
+      "skipped": 13,
+      "durationMs": 76701.81925,
+      "note": "Koko sarja ajettiin välilyönnittömästä /tmp-työpuusta; aiemmat Matkakirja%202-polkuvirheet poistuivat testejä muuttamatta."
+    }
+  ],
+  "browserQa": {
+    "photosLoaded": 9,
+    "sourceLinks": 18,
+    "consoleErrors": 0,
+    "scope": "actual production modules in local browser harness; live game QA after release"
+  }
+}
