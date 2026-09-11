@@ -650,6 +650,11 @@ laukaisematta, ei siirretä seuraavaan rakoon.
 
 ## Epävarmat kohdat (omistajalle)
 
+**Päätökset 11.9.2026 (omistaja klo 09.30; Raamattu PULU REAGOI MYOS LEHDESSA…):**
+1 → KYLLÄ lehdessä, laukussa ja visassa (T1: portti höllennetään näille dialogeille, muut hiljaisia). 2 → vain pankkiapu lämmin 0,5, palkkiot hiljaisia. 3 → kolme riviä säilyvät (Fable). 4 → löytö ilo 0,8, aarremerkintä hiljaa (kuuntelu). 5 → symboli johdetaan id:stä koodissa (Fable). 6 → Venetsian photo-tagi vain kartan pakkaan (Fable). 7 → kerran hämmentynyt 0,3, sitten mietintä. 8 → Ateenan vanhentunut kommentti poistetaan seuraavassa sisältöerässä (Fable). 9 → pollo.teksti ei piirry, ei riviä (Fable). 10 → radion sammunut nappi hiljainen (Fable).
+
+*Alkuperäiset kysymykset:*
+
 1. **Näkyykö pulu modaalin päällä?** js/livia-eleet.js:123/128 estää kaikki
    tilannereaktiot, kun `dialog[open]` osuu. Laukku, kaupunkilehti,
    saapumiskortti ja visa ovat dialogeja. Onko kyse hiljaisuusriveistä vai
@@ -686,7 +691,8 @@ laukaisematta, ei siirretä seuraavaan rakoon.
 
 **A. Rakenteelliset esteet — nämä ensin, muuten kytkennät eivät näy.**
 
-- **T1. `dialog[open]`-portti (js/livia-eleet.js:123 ja :128).**
+- **T1. PÄÄTETTY 11.9.2026:** portti höllennetään lehdelle (#arrival-dialog), matkalaukulle ja visa-/kohtaamiskortille; muut dialogit hiljaisia. Tekstisession toteutettavaksi.
+- **T1 (alkuperäinen). `dialog[open]`-portti (js/livia-eleet.js:123 ja :128).**
   `if(!nakyy()||odotusrivi||doc.querySelector('dialog[open]')||…)return false;`
   estää jokaisen tilannereaktion, kun mikä tahansa dialogi on auki.
   Kaupunkilehti (`#arrival-dialog`), matkalaukku, saapumiskortti, visa ja
@@ -837,3 +843,5 @@ käyttäytyy täsmälleen kuten tänään (ei elettä).
 11.9.2026 — T3 tehty (v1744, chat.peruutus K); T2 osittain (v1743,
 kuuntelu säilyy odotuksen ja taukojen yli); T4 tehty (v1745, 7 virheriviä
 K/T); T2 linssit v1746; T2 valmis v1747 (lukija). Fable.
+11.9.2026 — omistajan päätökset epävarmiin kohtiin 1–10 kirjattu; T1 avattu
+tekstisessiolle. Fable.
