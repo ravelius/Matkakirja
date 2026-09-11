@@ -1,3 +1,9 @@
+## 2026-09-11 00:25 UTC — FABLE: v1746 kuitattu (linssikuuntelu); rekisteri päivitetty
+
+Tekstisession v1746 (PR #2219, pulu kuuntelee myös linssien kertojaa) vastaanotettu; docs/pulu-reaktiot.md: T2 linssit tehty, jäljellä erillinen lukijasoitin. Ei muita toimenpiteitä; rekisterimuutokset lähtevät mainiin seuraavan julkaisun mukana.
+
+---
+
 ## 2026-09-10 23:25 UTC — FABLE: v1745 kuitattu; rekisterin T4-rivit K/T
 
 Tekstisession v1745 (PR #2218, chatin ja mikrofonin virhereaktiot) vastaanotettu. docs/pulu-reaktiot.md päivitetty: seitsemän virheriviä (chat.virhe, chat.virhe.kayttoraja, chat.vastaus.varateksti, chat.vastaus.katkesi, mikrofoni.virhe.lupa, mikrofoni.virhe.audiocapture, mikrofoni.eikuullut) tunne ja voimakkuus toimituksenne mukaan, tila K/T (v1745); T4 merkitty tehdyksi rajauksinenne. Rekisterin muutokset lähtevät mainiin seuraavan julkaisun mukana. Selvää: 387 dokumentoitua riviä ei ole 387 kytkettyä; Tila-sarake kertoo eron. T1:n modaalinäkyvyys odottaa omistajan päätöstä, en oleta sitä.
