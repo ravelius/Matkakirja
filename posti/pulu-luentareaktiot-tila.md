@@ -13,28 +13,24 @@ Päivitetty 11.9.2026. Ylläpitäjä Codex. Julkaisuvastaava Fable; Codex yhteen
 
 PR2239 READY, remote49c03c2484ce6a5f24748b12193387cbbc02d8e8, testattu puu f662b1f171c844f0fe392297d31d8373a0a53711 v1762-pohjalla. Vain visa.js + tests/pulu-kohtaamistagit.test.mjs. Producer f0d98f2d nyt mainissa. 2745pass/0fail/13skip, CI34596083456 SUCCESS. Kairo tervehdys/väärä vastaus ja Praha kaaritervehdys/laataton kaariaarre: neljä aitoa Game/UI-polkua, tagi+pose+dedupe, 0JSvirhettä. Muut kaupunkitagit K/yksikkötestit, EI kaikkien selain-T. Seuraava siirto Fable: versionosto/yhdistäminen/julkaisu.
 
-## Aktiivinen erä: aloituslento ja traileriväistö
+## Julkaisuvalmis: PR2246 — alkulento, kuplamuisti ja chat
 
-Omistajan uusin rajaus: valintakartan ensiliito säilyy, mutta Pulu poissa Ateenaan lennon ja pikaesittelyn ajan; paluu vasta esittelyn jälkeen. Isoisän luennan jälkeinen Kantsuu klikata -kupla pois.
-Codex omistaa livia-eleet/svg/tilanteet sekä livia.js:n kuplapoiston ja minimaalisen ui.js startFlight-elinkaaren/saapumiskuplien odotuksen; EI renderFact/fokusvirta/luenta/trailerituottajan edittejä.
-Sopimus: startFlight {vaihe:alku|loppu|peru,tunnus,kaupunki,odottaaTraileria}; trailer {kirjaimet|loppu|peru,sama traileritunnus}; paluu seuraavasta matkakirja-narrationista traileriloppu jälkeen tai 3s varalla. Piilotus säilyy vaiheiden välissä, stale/peru eivät palauta.
-Tuottaja ja peru kuitattu Fable d0277098, mainv1762. Codex-ehdokas yhteensovituksessa ja aidon ensipelipolun QA edessä. EI valmis/julkaistu vielä.
+READY, remote 0e43fb010b519d4d51736248007691c48a94b024, paikallinen f7f82648, testattu puu d1cc5eebebc34596b519d8e18fb4582f8f19aef5. Main v1764 f69387ab yhdistetty; ei versionostoa. CI34600161883 SUCCESS, 2786pass/0fail/13skip; kaksoisavaimet/niputus/standalone-build/diff-check PASS. Etäpuu takaisinluettu identtiseksi.
 
-## Seuraava erä: kuplat ja chat
+Omistajan tilaukset toteutettu: Pulu poissa aloituslennon ja Ateenan pikaesittelyn ajan; traileriväistö ja varovainen paluu, kuplat trailerilopun taakse; Kantsuu-ohje pois näkyvästä sarjasta ääniavaimia siirtämättä. Kuplat piiloon3s puheenlopusta/karttavedosta, plusmini palauttaa viimeisen saman kontekstin kuplan, Pulu avaa chatin. Automaattiset kuplaviestit pois näkymähistoriasta, data säilyy.
 
-Omistajan täsmätilaus 03bdc65a + jatkot tässä keskustelussa:
-- kupla piiloon 3s PUHEEN lopusta tai kartan todellisesta liikkeestä;
-- pieni plus-mini-kupla Pulun vas.yllä palauttaa viimeisen kuplan; Pulu avaa yhä chatin;
-- automaattiset kuplaviestit pois chatin näkymähistoriasta, varsinaiset viestit ja data säilyvät;
-- kaikki nykyiset odotustekstit täsmämäpätään tarkoitukseen sopiviin eleisiin, muutama uusi tarvittaessa;
-- pöllöltä kysymisessä käynti asioilla, paluu vastauksen kera; kysymyskohtainen elinkaari;
-- tietäväinen rauhallinen chat-perusilme/kirjan selailu ja sisältöön sidotut reaktiot.
-Codex-agentit: pollo.js/pulunCSS-kuplakytkennät, eleet/svg/tilanteet-chat, read-only kaikkien tekstien kartoitus. Ei tarinatekstin/äänien generointia. EI vielä valmis/julkaistu.
+Kaikki52 odotusrepliikkiä exact-elekartassa (36yleistä/9vastaus/7pitkää), uusi bookStudy+lasit. Pyyntökohtainen lähtö/vastauspaluu, ehdotushaku→kysymys-race, speech start/end, hidden/pagehide, reduced, close/peru/stale suojattu. Fallback-JSON ei laukaise hyväksyttyä vastausta; SSE voi palata ensimmäisestä sisältöpalasta. Ei sanakohtaisen forced alignmentin väitettä.
+
+K/T: aito v1764-normal alkuvalinta→lento→traileri→paljastus2kuplaa→isoisän luonnollinen loppu PASS571näytettä,0ennen­aikaista lintua/kuplaa,0JSvirhettä; reduced/skip/destroy3/3 aiemmalla integraatiolla. Aito Ateena-kartta veto/hover44px/kuplan näkyvä palautus/Pulu-chat PASS. Fixture-chat4/4 SSE/JSON/reduced/closecancel:9s vaste, poissa yli6s, oikea token tuo vastauksen mukana kirjan kanssa, ei myöhäistä paluuta perutusta;0JSvirhettä. Tuotanto-AI:n sisältölaatua ei testattu fixturellä. Kaikkien52 rivien K, ei52 erillisen selaintilanteen T-väitettä.
+
+Rajaus: Codex livia-eleet/svg/tilanteet/puhetila/livia.js/pollo/pulunCSS, ui.js vain startFlight ja saapumiskuplaportti. Ei renderFact/fokusvirta/luenta/saapumistraileri-tuottajan/sisältö-/Raamattu-edittejä. Ei uutta rasterimediaa/ääntä.
+READY-toimitus Fablelle 0a5010db1198ec0e0851d86dfd2059c1080155cc, varsinainen tiedostosisältö takaisinluettu.
+Seuraava siirto Fable: versionosto/yhdistäminen/julkaisu. EI vielä julkaistu eikä julkista readbackia tälle erälle.
 
 ## Fable ja muut rajat
 
 Fable: Raamattu/reaktiorekisteri/sisältö/saapumistraileri/fokusvirta/luenta. Rekisterin tarkat v1757–1759 K/T-rivit omassa postissa64fda2cc (korjattu sisältö tiedostoon03fb933e).
-Fablen 13:25UTC uusi45toisen luentakuvan tilaus reititetty olemassa olevalle kuvatuotantotehtävälle omistajuuden varmistamiseen, EI käynnistetty tässä Pulu-tehtävässä.
+Fablen45toisen luentakuvan tilauksen omistaa olemassa oleva kuvatuotantotehtävä; kuittaus1fada1fe. EI käynnistetty päällekkäistä media-ajoa tässä Pulu-tehtävässä.
 Kaikkia rekisterin D-rivejä ei kuitata toteutetuiksi.
 
 ## Avoimet laatuhuomiot
