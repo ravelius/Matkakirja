@@ -61,6 +61,7 @@ import {
   avaaKohdeSuurennos, rekisteroiLisakohteet, rekisteroiMaanKohteet,
 } from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
+import { nostokuvaAloita } from './nostokuva.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { taytaLahderivi } from './tekijakortti.js';
@@ -186,13 +187,47 @@ export function avaaHetki(ui, iso, hetki) {
   kortti.appendChild(sulje);
 
   const sisalto = html('div', 'fokusnosto-sisalto');
-  // Kohdemallin yhteinen ylärivi: aihesymboli ja luokan nimi.
-  sisalto.appendChild(nostosymKortinYlarivi('hetki', 'fokusnosto-ylarivi'));
-  piirraHetkenSisus(ui, sisalto, iso, hetki);
+  const latoHetki = (kotelo, kuvakehys) => {
+    // Kohdemallin yhteinen ylärivi: aihesymboli ja luokan nimi.
+    kotelo.appendChild(nostosymKortinYlarivi('hetki', 'fokusnosto-ylarivi'));
+    piirraHetkenSisus(ui, kotelo, iso, hetki, kuvakehys);
+  };
 
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
+  /*
+   * KERROS DOMIIN ENNEN KUVAESITTELYÄ: js/nostokuva.js mittaa kortin ja
+   * kuvan oikeista ruutulaatikoista, eikä irrallisella elementillä ole
+   * laatikkoa lainkaan.
+   */
   document.body.appendChild(kerros);
+  /*
+   * KUVA EDELLÄ (omistaja 11.9.2026, js/nostokuva.js). Hetki avautuu
+   * ensin pelkkänä isona kuvana — sarjan ENSIMMÄISENÄ, ilman nuolia —
+   * ja "Lisää" latoo kortin SAMAN kuvan ympärille. Nuolet ja laskuri
+   * ilmaantuvat silloin saman kuvan päälle (ks. piirraHetkenKuvat).
+   */
+  const paakuva = hetkenKuvat(hetki)[0] ?? null;
+  let kuvakehysRef = null;
+  const kaksivaihe = paakuva ? nostokuvaAloita({
+    kortti,
+    sisalto,
+    kuva: paakuva,
+    aseta: (img, leveys, onVirhe) => {
+      // Hetken kuvat ovat ämpärin valmiita osoitteita: ei thumb-putkea
+      // eikä varareittiä, joten virhe luovuttaa heti (ks. hetkenKuvat).
+      img.addEventListener('error', () => onVirhe(), { once: true });
+      img.src = paakuva.osoite;
+    },
+    // Suurennos näyttää sen kuvan, joka on kohdalla — galleria
+    // kirjoittaa valintansa kuvakehykseen (kehys.nostokuvaKuva).
+    avaaSuurennos: (nappi) => avaaKohdeSuurennos(
+      ui, kuvakehysRef?.nostokuvaKuva ?? paakuva, () => nappi, 'hetkiZoom',
+    ),
+    latoNosto: latoHetki,
+  }) : null;
+  kuvakehysRef = kaksivaihe?.kehys ?? null;
+  if (!kaksivaihe) latoHetki(sisalto, undefined);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele hetki' });
 
@@ -236,8 +271,14 @@ export function avaaHetki(ui, iso, hetki) {
  * Erotettu omaksi funktiokseen samasta syystä kuin skandaalilla: sama
  * sisus latoutuu joko oman kortin ylärivin alle tai osiona
  * yhdistetyllä lehdellä (js/fokuskohteet.js piirraRyhmanOsiot).
+ *
+ * @param {Element|null} [valmisKuva] KUVA EDELLÄ -avauksen valmis
+ *   kuvakehys (js/nostokuva.js): `undefined` piirtää kuvat kuten ennen,
+ *   elementti ottaa juuri sen kehyksen gallerian pääkuvaksi, ja `null`
+ *   jättää pääkuvan pois — kuvaesittely peruttiin, koska kuva ei
+ *   latautunut.
  */
-function piirraHetkenSisus(ui, sailio, iso, hetki) {
+function piirraHetkenSisus(ui, sailio, iso, hetki, valmisKuva) {
   hetkiLataaTyyli();
   sailio.appendChild(html('h3', 'fokusnosto-kortti-otsikko', hetki.otsikko));
   /*
@@ -252,7 +293,7 @@ function piirraHetkenSisus(ui, sailio, iso, hetki) {
     metarivi.textContent = meta;
     sailio.appendChild(metarivi);
   }
-  piirraHetkenKuvat(ui, sailio, hetki);
+  piirraHetkenKuvat(ui, sailio, hetki, valmisKuva);
   const teksti = html('div', 'fokusnosto-teksti');
   for (const kappale of jaaKappaleiksi(hetki.teksti ?? '')) {
     teksti.appendChild(html('p', '', kappale));
@@ -274,32 +315,66 @@ function piirraHetkenSisus(ui, sailio, iso, hetki) {
  * lähikuva ja kaukokuva, joten nuolet ovat aina näkyvissä; neljällä
  * hetkellä kolmas kuva on aikakauden lehtisivu, ja laskuri sanoo "1 / 3".
  */
-function piirraHetkenKuvat(ui, sailio, hetki) {
-  const kuvat = hetkenKuvat(hetki);
+function piirraHetkenKuvat(ui, sailio, hetki, valmisKuva) {
+  const kaikki = hetkenKuvat(hetki);
+  if (!kaikki.length) return;
+  /*
+   * PERUTTU KUVAESITTELY VIE VAIN PÄÄKUVAN (sama sääntö kuin
+   * skandaalilla): sarjan loput kuvat ovat olemassa, joten ne ladotaan
+   * tavalliseen tapaan eikä koko sarja katoa yhden puuttuvan takia.
+   */
+  const kuvat = valmisKuva === null ? kaikki.slice(1) : kaikki;
   if (!kuvat.length) return;
 
-  const kehys = html('figure', 'fokusnosto-kuva hetki-kuva');
-  const nappi = html('button', 'fokusnosto-kuvanappi');
-  nappi.type = 'button';
-  nappi.title = 'Katso kuva suurempana';
-  const img = document.createElement('img');
-  img.decoding = 'async';
-  img.loading = 'lazy';
-  img.draggable = false;
-  img.addEventListener('error', () => { kehys.hidden = true; }, { once: true });
-  nappi.appendChild(img);
-  kehys.appendChild(nappi);
+  /*
+   * VALMIS KUVAKEHYS ON GALLERIAN PÄÄKUVA (js/nostokuva.js): sama
+   * figure, sama nappi, sama img ja sama src kuin vaiheessa 1 — kuva ei
+   * liiku eikä lataudu uudestaan, ja nuolet, laskuri sekä kuvatekstin
+   * päivitys tulevat sen ympärille.
+   */
+  const kehys = valmisKuva ?? html('figure', 'fokusnosto-kuva hetki-kuva');
+  const nappi = valmisKuva
+    ? valmisKuva.querySelector('.nostokuva-nappi')
+    : html('button', 'fokusnosto-kuvanappi');
+  const img = valmisKuva
+    ? valmisKuva.querySelector('.nostokuva-img')
+    : document.createElement('img');
+  if (valmisKuva) kehys.classList.add('hetki-kuva');
+  else {
+    nappi.type = 'button';
+    nappi.title = 'Katso kuva suurempana';
+    img.decoding = 'async';
+    img.loading = 'lazy';
+    img.draggable = false;
+    img.addEventListener('error', () => { kehys.hidden = true; }, { once: true });
+    nappi.appendChild(img);
+    kehys.appendChild(nappi);
+  }
 
-  const teksti = html('figcaption', 'fokusnosto-kuvateksti');
-  const selite = html('span', 'fokusnosto-kuvaselite');
-  const lahde = html('span', 'fokusnosto-kuvalahde');
-  teksti.append(selite, lahde);
-  kehys.appendChild(teksti);
+  const selite = valmisKuva
+    ? valmisKuva.querySelector('.nostokuva-teksti')
+    : html('span', 'fokusnosto-kuvaselite');
+  const lahde = valmisKuva
+    ? valmisKuva.querySelector('.nostokuva-lahde')
+    : html('span', 'fokusnosto-kuvalahde');
+  if (!valmisKuva) {
+    const teksti = html('figcaption', 'fokusnosto-kuvateksti');
+    teksti.append(selite, lahde);
+    kehys.appendChild(teksti);
+  }
 
   let kohdalla = 0;
-  const nayta = () => {
+  /**
+   * @param {boolean} [lataa] `false` jättää kuvan koskematta: valmis
+   *   kehys näyttää jo oikeaa kuvaa, eikä src:ää saa kirjoittaa
+   *   uudestaan (selain lataisi kuvan ja se välähtäisi).
+   */
+  const nayta = (lataa = true) => {
     const kuva = kuvat[kohdalla];
-    img.src = kuva.osoite;
+    // Suurennos näyttää sen kuvan, joka on kohdalla — myös silloin kun
+    // napin avaa js/nostokuva.js (ks. avaaHetki avaaSuurennos).
+    kehys.nostokuvaKuva = kuva;
+    if (lataa) img.src = kuva.osoite;
     // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js;
     // avaaKohdeSuurennos saa kuvatiedon sellaisenaan).
     img.alt = kuvatekstiLyhyt(kuva) || hetki.otsikko;
@@ -313,7 +388,7 @@ function piirraHetkenKuvat(ui, sailio, hetki) {
      */
     taytaLahderivi(lahde, kuva.lahde ?? 'Matkakirjan havainnekuva', kuva);
   };
-  nayta();
+  nayta(!valmisKuva);
 
   /*
    * NAPAUTUS SUURENTAA (omistajan raportti 30.8.2026: kaikki popupien
@@ -323,10 +398,14 @@ function piirraHetkenKuvat(ui, sailio, hetki) {
    * Koko sarja menee mukaan, joten suurennoksesta voi selata toiseen
    * kuvaan ilman että kortille pitää palata.
    */
-  nappi.addEventListener('click', (tapahtuma) => {
-    tapahtuma.stopPropagation();
-    avaaKohdeSuurennos(ui, kuvat[kohdalla], () => nappi, 'hetkiZoom');
-  });
+  // Valmiilla kehyksellä kuuntelija on jo paikallaan (js/nostokuva.js)
+  // eikä sitä saa lisätä toista kertaa.
+  if (!valmisKuva) {
+    nappi.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      avaaKohdeSuurennos(ui, kuvat[kohdalla], () => nappi, 'hetkiZoom');
+    });
+  }
 
   if (kuvat.length > 1) {
     const laskuri = html('span', 'hetki-kuvalaskuri');
@@ -415,7 +494,11 @@ export function suljeHetki(ui) {
   if (ui) ui.hetkiKortti = null;
   auki?.purku?.();
   if (typeof document === 'undefined') return;
-  for (const vanha of document.querySelectorAll('.hetki-kerros')) vanha.remove();
+  for (const vanha of document.querySelectorAll('.hetki-kerros')) {
+    // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
+    vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
+    vanha.remove();
+  }
 }
 
 /* ==================== KYTKENTÄ ==================== */

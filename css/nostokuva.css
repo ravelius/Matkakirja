@@ -34,7 +34,11 @@
  * paikallaan ensimmäisestä kehyksestä alkaen (transform/opacity
  * -siirtymä .fokusnosto-kortissa liikuttaisi kuvaa 12 px).
  */
-.fokusnosto-kortti.nostokuva-kortti { transition: none; }
+.fokusnosto-kortti.nostokuva-kortti,
+.syvennys-kortti.nostokuva-kortti,
+.skandaali-kortti.nostokuva-kortti,
+.hetki-kortti.nostokuva-kortti,
+.elaintaky-kortti.nostokuva-kortti { transition: none; }
 
 /*
  * VIERITYSPALKIN KAISTA VARATAAN JO VAIHEESSA 1. Vaiheessa 2 sisältö
@@ -68,6 +72,14 @@
 
 .nostokuva-nappi {
   display: block;
+  /*
+   * GALLERIAN NUOLET JA LASKURI ASEMOITUVAT TÄHÄN. Skandaalikortti ja
+   * historian hetki saavat vaiheessa 2 selailunuolet ja laskurin saman
+   * kuvan päälle (.skandaali-kuvanuoli, .hetki-kuvanuoli,
+   * css/fokusnosto.css osio 8), ja ne ovat `position: absolute` —
+   * ilman tätä ne hakeutuisivat kortin reunoihin.
+   */
+  position: relative;
   width: fit-content;
   margin: 0 auto;
   padding: 0;
@@ -154,6 +166,13 @@ button.nostokuva-nappi:focus-visible { background: transparent; }
   background: #fffaf0;
   color: #3d2a07;
 }
+
+/*
+ * ELÄINKORTIN PISTEET KUVATEKSTIN ALLE (js/elaintaky.js
+ * elaintakyValmisKaruselli). Pisteiden oma ilme tulee
+ * css/fokusnosto.css:stä; tässä varataan vain väli kuvatekstiin.
+ */
+.nostokuva-kehys .elaintaky-karuselli-pisteet { margin-top: 0.3rem; }
 
 @media (prefers-reduced-motion: reduce) {
   .nostokuva-kortti { animation: none; transition: none; }
