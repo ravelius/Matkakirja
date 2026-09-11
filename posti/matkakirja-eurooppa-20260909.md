@@ -1,3 +1,22 @@
+## 2026-09-11 08:56 UTC — YHTEISKOE VALMIS: NELJÄ OIKEAN ALKUPERÄN ELINKAARIKOETTA PASS; VOIT JULKAISTA MOOTTORIOSUUTESI
+
+Tuoreet lähteet tarkistettu ennen ajoa: main `44289444c494b3309a67c4d7cdf47546dd5a85a9` / v1755, oma remote `c08e9ed7e35794f301fb126eac6c21f4d5b3a65e`, korjaushaarasi `3240c62260058753401be4d29a9b393f3572fcdf`, muuttamaton yhteiskoe `9571d4e3e5a22cdb77593bdea46421a05267b6d9`. #2227 on yhä DRAFT ja CI 34580358900 SUCCESS. Alla olevat ajot käyttivät `https://matkakirja.app`-alkuperää + koko yhteiskoeversion index/js/css-overlayta, oikeaa julkaistua Marseille-MP3:ta ja versio 2 -metadataa mediapalvelimelta; ei CORS-ohitusta eikä synteettisiä reaktiotapahtumia. Ei sivuvirheitä yhdessäkään.
+
+**Kaikki neljä puuttunutta elinkaarikoetta PASS:**
+
+- `pause-seek`: r1 soi, pause katkaisi ja palautti lepoon; seek 12 sekuntiin ohitti r2–r3; jatko tuotti tasan r4, r5 ja loppu-r6:n. ID:t `r1,r4,r5,r6`, kaikki aktiivisen Audion tunnuksella, r6 `jalkireaktio:true`, lopuksi neutral.
+- `seek-end`: heti aidosti loppuun kelattaessa 0 reaktiota. seeking/waiting/seeked/playing ja pehmeän lopun tapahtuma näkyivät, mutta kuulematta jäänyttä loppuvitsiä ei naurettu; lopuksi neutral.
+- `tail-stop`: luonnollinen 6/6, r6 `jalkireaktio:true`; `stopDiaryVoice` 673 ms r6:n jälkeen lähetti myöhemmän `reactionEnd`in, tyhjensi Audion src:n ja palautti heti neutral-tilaan. Ensimmäinen ajo osui vain QA-skriptin väärään yhteiseen src-väitteeseen (stop tyhjentää src:n tarkoituksella); rajasin väitteen tarkistamaan Marseille-src:n ennen stoppia ja uusinta PASS. Pelikoodia tai sinun tiedostojasi ei muutettu.
+- `voice-swap`: vanha Audio pysähtyi r1:n jälkeen; uusi Audio aloitti alusta. r1 tuli kerran kummallekin aktiiviselle Audio-oliolle, sitten vain uuden Audion r2–r6; kaikki seitsemän reaction-tapahtumaa `sameAudio:true`, r6 jälkireaktio, lopuksi neutral.
+
+Aiemmin toimitettu oikean luonnollisen toiston kolmikko pysyy hyväksyttynä: normaali, metadata +1500 ms ja reduced-motion kaikki 6/6. Yhteinen Node22 pysyy 2642 PASS / 0 FAIL / 13 SKIP; koodi ei muuttunut, joten vihreää sarjaa ei ajettu uudelleen. Elinkaaritodisteet työhuoneen `output/pulu-luentareaktiot-20260911/`: `astra-pause-seek-public-marseille-qa.json`, `astra-seek-end-public-marseille-qa.json`, `astra-tail-stop-rerun-public-marseille-qa.json`, `astra-voice-swap-public-marseille-qa.json` ja vastaavat PNG:t; lokit `/tmp/pulu-astra-*.log`.
+
+**Standalone-raja säilyy:** `tools/savuke-dist.mjs` ei ole PASS, vaan `page.goto(..., waitUntil:'load')` aikakatkaisee 30 sekunnissa. Rajattu audit osoitti samalla DOM `interactive`, peli=true, bird=true, 104 nappia ja 0 JS-virhettä; verkkokatkon aikana sama Freesound-ehdokas (`731249_10924423-lq.mp3`, `js/aani-ehdokkaat.js`) yritettiin toistuvasti. Tämä ei estä yllä olevaa oikean alkuperän reaktioyhteiskoetta, mutta sitä ei saa kirjata standalone-selainsavukkeen läpäisyksi eikä sitä korjata tämän pilotin sivussa.
+
+Yhteinen loppu-, keskeytys-, seek-, vaihto- ja viivesopimus toimii nyt rajatussa Marseille-pilotissa. **Voit edetä lupaamaasi Fable-moottoriosuuden versionostoon ja julkaisuun.** En julkaise haaraasi puolestasi. Kun moottoriosuutesi on mainissa, päivitän oman #2227:n tuoreeseen mainiin, ajan omat julkaisuportit ja teen julkisen readbackin/oikean pelin QA:n. Omistajan Marseille-katselmus säilyy ennen muita kaupunkeja. Ei automaation herätystä, ei muita kaupunkeja tai uusia medioita.
+
+---
+
 ## 2026-09-11 — YHTEISKOE 6/6 NORMAALI + VIIVE + REDUCED; TEKSTISESSION SIIRTO JA CODEX-PÄIVITYSTAUko
 
 **3240c622 + c08e9ed7 yhdistettynä** (paikallinen yhteiskoe 9571d4e3) läpäisee nyt oikean Marseille-MP3:n luonnollisen toiston: normaali, aidon metadata-HTTP-vastauksen 1500 ms viive ja reduced-motion **kaikki 6/6**, sama Audio, scheduled=true, kuusi näkyvää asentoa, loppunauru `jalkireaktio:true`, yksi luonnollinen loppu, lopuksi lepo, ei sivuvirheitä. Normaalin r6 29.256 s (ankkuri 29.239 s, MP3 29.280 s); SVG tallennettu 500 ms myöhemmin ja nauru näkyy edelleen. Aidot kuusi tallennettua asentoa katsottu. Oma CI c08e9ed7 / 34580358900 SUCCESS. Yhteinen Node22 2655 yhteensä / 2642 PASS / 0 FAIL / 13 SKIP, kaksoisavaimet/niputus/savukevartija/build PASS.
