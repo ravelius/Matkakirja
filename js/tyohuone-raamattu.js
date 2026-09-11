@@ -4308,7 +4308,16 @@ export const RAAMATTU = {
           + 'Raamattuun sanatarkasti (omistajan sana); vain Fable kirjoittaa '
           + 'tiedostoon. 2) Tyohuoneen valikossa vain kaksi nappia: Raamattu ja '
           + 'Kehittajalehti; Kehittajalehden alle Tilannelehti, Poiminnat, '
-          + 'Tilastot, Grafiikka, Lukijoilta, Musiikki ja Lukijaaani.',
+          + 'Tilastot, Grafiikka, Lukijoilta, Musiikki ja Lukijaaani. '
+          + '3) Tarkennus (omistaja 11.9.2026 klo 13.55, sanatarkasti: "samalla '
+          + 'raamatun ja kehittajalehden voisi siirtaa hammasratas valikon alle. '
+          + 'nain hampurilainen pysyisi muuttumattomana riippumatta siita onko '
+          + 'kehittaja tila paalla vai ei. ja jos kehittajalehdessa on jotain '
+          + 'vanhentuneita sivuja, joita ei enaa tarvita, niin ne voi ottaa '
+          + 'suoraan pois. ja samalla voi jarkeistaa ja yhtenaistaa sivuja"): '
+          + 'Raamattu ja Kehittajalehti asuvat hammasratasvalikossa '
+          + '(nakyvat vain kehittajatilassa), hampurilainen on aina sama; '
+          + 'vanhentuneet kehittajasivut poistetaan ja loput yhtenaistetaan.',
         'KEHITTAJAVALIKON VIVUT POIS, ILME POIS PAALTA, AANISAATIMIIN TEHOSTEET, '
           + 'PULU JA LUKIJA (omistaja 11.9.2026 klo 13.30, kaappaus kehittajavalikosta, '
           + 'sanatarkasti: "nama kaikki napit voisi ottaa pois ja jattaa noihin '
