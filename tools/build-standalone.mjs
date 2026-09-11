@@ -299,6 +299,7 @@ const MODULES = [
   'js/packs/maastokohteet-zwe.js',
   'js/packs/maastokohteet.js',
   'js/packs/fokusvirrat.js',
+  'js/packs/iskulauseet.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).
   'js/uutiset.js',
