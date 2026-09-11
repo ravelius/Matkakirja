@@ -18,6 +18,7 @@
  */
 
 import { el } from './mapart.js';
+import { rengasAsteiksi } from './maanaariviivat.js';
 import { sfx } from './sound.js';
 import { MAATIEDOT } from './sisaltotaulut.js';
 import { TOAST_MS, html } from './ui-apurit.js';
@@ -44,18 +45,11 @@ const VERTAILUVARIT = [
  * funktionaan, jotta sen voi ajaa Nodessa ilman selainta
  * (tests/maapolygonit-pallolla.test.mjs).
  *
- * KIERTÄVÄN LAUDAN SAUMA. Maailmankartta jatkuu reunan yli, ja
- * laudan käännös (js/fokusmitat.js laudaltaAsteiksi) kietoo
- * pituusasteen aina välille [−180°, 180°]. Rengas, joka kulkee
- * sauman yli, saisi siis keskelleen 360 asteen hypyn — pallolla se
- * piirtyisi vyönä maailman ympäri. Hyppy puretaan kulkemalla rengas
- * läpi ja pitämällä peräkkäiset pisteet lähekkäin (`kierto`), minkä
- * jälkeen koko rengas siirretään takaisin niin, että sen keskikohta
- * on välillä [−180°, 180°]. Silloin YKSIKÄÄN RENKAAN SIVU ei ylitä
- * 180 asteen pituuseroa, ja Aleuttien kaltainen sauman ylittävä
- * saarijono jää yhdeksi ehjäksi kappaleeksi hieman ±180 asteen yli —
- * pallolla se on sama piste, mutta kolmiointi ei enää kierrä väärin
- * päin maailman ympäri.
+ * KIERTÄVÄN LAUDAN SAUMA puretaan `rengasAsteiksi`-apurissa, joka
+ * MUUTTI js/maanaariviivat.js:ään 11.9.2026: pelaajan maan korostus
+ * pallolla kääntää täsmälleen samanlaisia laudan renkaita asteiksi,
+ * eikä sauman purkua saa kirjoittaa kahdesti. Perustelut ja mittaus
+ * ovat siellä.
  *
  * JOKAINEN RENGAS ON OMA MONIKULMIONSA (MultiPolygon), koska laudan
  * aineisto ei erottele saaria ja reikiä: renkaat piirretään
@@ -64,49 +58,6 @@ const VERTAILUVARIT = [
 
 /** Maakerroksen korkeus pallon pinnasta — pelin merkkien tasalla. */
 export const MAAPOLYGONIN_KORKEUS = 0.004;
-
-/**
- * Yksi rengas (laudan pisteitä) asteiksi ja saumasta ehjäksi.
- * Palauttaa GeoJSON-renkaan [[lon, lat], …] suljettuna, tai null jos
- * pisteitä ei kertynyt kolmiollista.
- */
-function rengasAsteiksi(rengas, asteet) {
-  const pisteet = [];
-  let edellinen = null;
-  let kierto = 0;
-  for (const [x, y] of rengas) {
-    const a = asteet({ x, y });
-    const lat = a?.lat;
-    const raaka = a?.lon ?? a?.lng;
-    if (!Number.isFinite(lat) || !Number.isFinite(raaka)) continue;
-    if (edellinen !== null) {
-      while (raaka + kierto - edellinen > 180) kierto -= 360;
-      while (raaka + kierto - edellinen < -180) kierto += 360;
-    }
-    const lon = raaka + kierto;
-    edellinen = lon;
-    pisteet.push([lon, lat]);
-  }
-  if (pisteet.length < 3) return null;
-  // Rengas keskelle maailmaa: kierron purku on saattanut viedä sen
-  // kokonaan sauman toiselle puolelle.
-  let pieninLon = pisteet[0][0];
-  let suurinLon = pisteet[0][0];
-  for (const [lon] of pisteet) {
-    if (lon < pieninLon) pieninLon = lon;
-    if (lon > suurinLon) suurinLon = lon;
-  }
-  const keski = (pieninLon + suurinLon) / 2;
-  let siirto = 0;
-  while (keski + siirto > 180) siirto -= 360;
-  while (keski + siirto < -180) siirto += 360;
-  if (siirto) for (const p of pisteet) p[0] += siirto;
-  // GeoJSON sulkee renkaan; laudan aineistossa osa on auki.
-  const eka = pisteet[0];
-  const vika = pisteet[pisteet.length - 1];
-  if (eka[0] !== vika[0] || eka[1] !== vika[1]) pisteet.push([eka[0], eka[1]]);
-  return pisteet;
-}
 
 /**
  * Laudan maamuodot pallon monikulmioiksi.

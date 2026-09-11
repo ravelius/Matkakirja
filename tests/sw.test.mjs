@@ -198,6 +198,10 @@ const NIPUTTAMATTOMAT = new Set([
   // linssien aineistot — SHELLissä se on, jotta pallolauta saa sen
   // verkosta ja välimuistista kuten muutkin moduulinsa.
   'js/packs/maastokohteet-ata.js',
+  // Arktisen alueen nostot: sama peruste kuin Etelämantereella yllä —
+  // ainoa tuoja on js/pallolauta/nostot.js, ja pallolauta on
+  // niputuksen ulkopuolella. SHELLissä paketti on.
+  'js/packs/maastokohteet-ark.js',
   // Koelaudat poistettiin pelin rekisteristä (js/pack.js) — tiedostot
   // jäävät repoon mahdollista myöhempää käyttöä varten.
   'js/packs/istanbul-questions.js',

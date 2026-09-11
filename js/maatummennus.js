@@ -31,20 +31,20 @@
  * ovat kartan kerrosjärjestyksen ja savukkeiden yhteistä sanastoa —
  * uudelleennimeäminen olisi ollut isompi muutos kuin itse tilaus.
  *
- * === NÄKYVYYS: PELAAJAN OMA ZOOMIALUE (omistajan tarkennus 31.8.2026)
+ * === NÄKYVYYS: KAIKISSA MITTAKAAVOISSA (omistaja 11.9.2026) ========
  *
- * *"tummennukset riittää tehdä siihen tasoon mitä peli antaa
- * normaalistikin pelaajan zoomata ulos sekä kaikki sitä lähemmät.
- * kehittäjätilassa kun zoomataan enemmän ulos, niin silloin
- * tummennuksia ei tarvita."*
+ * Kerroksella oli 31.8.2026 alkaen uloszoomausraja: *"tummennukset
+ * riittää tehdä siihen tasoon mitä peli antaa normaalistikin pelaajan
+ * zoomata ulos sekä kaikki sitä lähemmät. kehittäjätilassa kun
+ * zoomataan enemmän ulos, niin silloin tummennuksia ei tarvita."*
  *
- * Raja EI ole kovakoodattu mittakaava vaan pelin oma uloszoomauksen
- * pohja: js/kartta.js `pelaajanUloinSkaala()` laskee sen maan
- * ikkunasta samalla kaavalla kuin `fokusZoomMinimi` — sama laatikko,
- * sama ULOSZOOMAUS_KERROIN. Ääriviiva on päällä siitä mittakaavasta
- * ylöspäin. Kehittäjän maailmanäkymä ohittaa rajan kamerassa mutta ei
- * täällä: kun kartta on loitonnettu pelaajan rajaa kauemmas, viiva
- * jää pois.
+ * SE SÄÄNTÖ KOSKI PINTAA, EI VIIVAA. Kerroksesta on sittemmin jäljellä
+ * vain pelaajan maan kehä, ja omistajan sana 11.9.2026 on *"Peli voisi
+ * piirtää vahvemmalla AINA kyseisen valtion rajat jossa pelaaja on"* —
+ * myös kehittäjän maailmatilassa, jossa zoomataan pelaajan uloimman
+ * tason ulkopuolelle. Harso kauempaa oli ruma; ohut kehä ei ole, ja
+ * juuri kaukaa se kertoo parhaiten missä maassa ollaan. Rajaa ei siis
+ * enää ole; ainoa poikkeus on avauslento (ks. alempana).
  *
  * === ELEKÄYTÖS: KERROS EI VÄISTY LAINKAAN ==========================
  *
@@ -100,6 +100,9 @@
  * ilmoitusta. Sama koskee maata, jolle aineistossa ei ole polygonia.
  */
 
+import { kohteidenNykyinenIso } from './fokuskohteet.js';
+import { lataaMaapolygonit } from './maanaariviivat.js';
+
 const TUMMENNUS_NS = 'http://www.w3.org/2000/svg';
 
 /**
@@ -143,23 +146,15 @@ const TUMMENNUS_NS = 'http://www.w3.org/2000/svg';
  */
 const TUMMENNUS_VIIVA = 2;
 
-let polygoniLupaus = null;
-
-/**
- * Aineisto kerran per istunto; epäonnistunut haku palauttaa null ja
- * seuraava tarve yrittää uudestaan (siksi lupaus nollataan virheessä).
- * Sanasta sanaan sama malli kuin js/maakayrat.js lataaMaakayrat.
+/*
+ * AINEISTON HAKU MUUTTI js/maanaariviivat.js:ään 11.9.2026, kun
+ * pallolauta alkoi piirtää saman maan ääriviivan pinnalleen: kaksi
+ * lautaa lukee saman tiedoston, ja LUPAUS ON JAETTAVA — muuten
+ * pallolla ja kartalla olisi kaksi hakua samaan 1,4 megatavuun. Vienti
+ * jatkuu tästä, jotta vanhat kutsujat ja savukkeet näkevät sen
+ * entisessä osoitteessaan.
  */
-export function lataaMaapolygonit() {
-  polygoniLupaus ??= fetch('assets/data/maapolygonit.json')
-    .then((v) => (v.ok ? v.json() : null))
-    .catch(() => null)
-    .then((data) => {
-      if (!data?.maat) polygoniLupaus = null;
-      return data?.maat ? data : null;
-    });
-  return polygoniLupaus;
-}
+export { lataaMaapolygonit };
 
 /**
  * Yhden maan renkaat SVG-polun d-merkkijonoksi.
@@ -281,14 +276,36 @@ export function paivitaMaatummennus(ui) {
  * molemmissa tiloissa, eikä kytkintä ole enää olemassa.
  */
 function tunniste(ui) {
-  const iso = ui.fokuskarttaAvain;
+  /*
+   * MAA ON PELAAJAN MAA, EI MAALEHDEN IKKUNA (omistaja 11.9.2026:
+   * *"Peli voisi piirtää vahvemmalla aina kyseisen valtion rajat jossa
+   * pelaaja on"*).
+   *
+   * `fokuskarttaAvain` tulee maan ikkunataulusta (js/packs/fokus-grc.js
+   * FOKUS_POHJAT), jossa on vain Euroopan 39 maata — sen ulkopuolella
+   * kerros oli pimeänä, vaikka polygoni oli aineistossa (134 maata).
+   * Ikkuna on yhä ENSISIJAINEN, koska se on sama tieto jota kartan muut
+   * kerrokset käyttävät; puuttuessaan maa luetaan laudan omasta
+   * kaupunki–maa-taulusta samalla päättelyllä kuin kartan kohteet
+   * (js/fokuskohteet.js nykyinenIso).
+   *
+   * AVAUSLENTO EI SAA KOROSTUSTA: lento on kartan niukin hetki
+   * (js/kartta.js aloituslennonNiukkuus), eikä kohdemaan kehä saa
+   * ilmestyä harson läpi ennen laskeutumista.
+   */
+  if (ui.aloituslentoKesken) return null;
+  const iso = ui.fokuskarttaAvain || kohteidenNykyinenIso(ui);
   if (!iso) return null;
-  const raja = ui.kartta?.pelaajanUloinSkaala?.();
-  if (!(raja > 0)) return null;
-  const skaala = ui.nakyvaAlue?.()?.skaala;
-  if (!(skaala > 0)) return null;
-  // Pieni sietovara: pelaajan uloin taso itse kuuluu mukaan.
-  if (!(skaala >= raja * 0.999)) return null;
+  /*
+   * EI NÄKYVYYSRAJAA MISSÄÄN MITTAKAAVASSA. Kerros peri aikanaan
+   * uloszoomausrajan tummennuksilta (*"tummennukset riittää tehdä
+   * siihen tasoon mitä peli antaa normaalistikin pelaajan zoomata
+   * ulos"*, omistaja 31.8.2026), mutta se sääntö koski PINTAA, ei
+   * viivaa: harso kauempaa oli ruma, ohut kehä ei ole. Nyt kerroksen
+   * ainoa sisältö on pelaajan maan kehä, ja omistajan sana on *"aina"*
+   * (11.9.2026) — myös kehittäjän maailmatilassa, jossa zoomataan
+   * pelaajan uloimman tason ulkopuolelle.
+   */
   return { iso, avain: iso };
 }
 

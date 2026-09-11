@@ -587,6 +587,9 @@ const MODULES = [
   // Mallin B pilotit ennen ui.js:ää (ui tuo ne).
   'js/liput.js',
   'js/karttazoom.js',
+  // Maan ääriviivat ennen vertailua ja maatummennusta: molemmat tuovat
+  // aineiston haun ja renkaiden purun tästä moduulista.
+  'js/maanaariviivat.js',
   'js/vertailu.js',
   /*
    * Kuvagalleria ennen nähtävyyksiä (nahtavyydet.js tuo galleriaNapin

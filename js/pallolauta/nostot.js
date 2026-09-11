@@ -37,6 +37,7 @@
  */
 
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
+import { MAASTOKOHTEET_ARK } from '../packs/maastokohteet-ark.js';
 import { MAASTOKOHTEET_ATA } from '../packs/maastokohteet-ata.js';
 import {
   LEHDEN_VAHIN_OSUUS, avaaFokuskohde, kohdeMerkinLadonta, kohteidenNykyinenIso, maanKohdemerkit,
@@ -92,6 +93,25 @@ export const NOSTOJEN_KATTO = 40;
  * rykelmä eikä kartta.
  */
 export const ETELAMANNER_NAKYY_ASTETTA = 90;
+/*
+ * ══ POHJOISNAPA JA ARKTINEN ALUE: SAMA KAAVA ══════════════════════
+ *
+ * OMISTAJA 11.9.2026, sanatarkasti: *"tehdään sinne myös nostoja,
+ * varsinkin historialliset ja oikeastaan kaikki mahdolliset nostot,
+ * mitä sinne vain voi keksiä."*
+ *
+ * Pohjoisessa lauta loppuu 76,0° N:ään (js/fokusmitat.js
+ * laudaltaAsteiksi rivillä y = 0), eli napa, Huippuvuoret, Frans
+ * Josefin maa, Ellesmere ja jäädriftit ovat laudan ULKOPUOLELLA.
+ * Napakalotti (js/pallo.js NAPAKALOTIT) kattaa 80°–90° N ja sen alla
+ * ovat tavalliset laatat, joten pallolla koko alue on olemassa.
+ * Nostodata (js/packs/maastokohteet-ark.js) antaa paikan samalla
+ * `asteet`-kentällä kuin Etelämanner, ja tämä kerros lukee sen samalla
+ * funktiolla (napanostonRivi). Perustelut kokonaisuudessaan ovat
+ * paketin omassa alkukommentissa.
+ */
+/** Arktisen alueen nostot näkyvät samalla portilla kuin Etelämanner. */
+export const ARKTIS_NAKYY_ASTETTA = 90;
 /**
  * Merkin mitta ruudulla: kirjaston yksikkö → px niin, että nimiö on
  * kartan kohdenimiön kokoinen (js/karttanimet.js KOKO.kohde 8,5 px,
@@ -233,6 +253,40 @@ export function nostonLaatikko(p, d, {
 }
 
 /**
+ * NAPAKOHTEEN RIVI: nosto, jonka paikka on datassa asteina eikä laudan
+ * pisteenä (js/packs/maastokohteet-ata.js ja -ark.js). Sama tietue kuin
+ * tavallisella nostolla, mutta paikka luetaan kohteen omasta
+ * `asteet`-kentästä ja merkki on aina elävä: laattapyramidi on
+ * julisteen projektiota, josta napojen takaiset alueet puuttuvat,
+ * joten pallon laattaluettelossa ei voi olla näitä merkkejä.
+ *
+ * Palauttaa null, jos paikka puuttuu tai kohteen tyypille ei ole
+ * karttasymbolia (js/fokuskohteet.js KOHDE_TYYPPISYMBOLIT) — ilman
+ * symbolia merkkiä ei voi piirtää.
+ */
+export function napanostonRivi(ui, kohde, { avain }) {
+  const a = kohde.asteet;
+  if (!Number.isFinite(a?.lat) || !Number.isFinite(a?.lon)) return null;
+  const lado = kohdeMerkinLadonta(ui, kohde);
+  if (!lado.symboli) return null;
+  return {
+    avain,
+    id: kohde.id,
+    perhe: 'nosto',
+    lat: a.lat,
+    lng: a.lon,
+    nimi: lado.nimi ?? kohde.nimi,
+    nimioNakyy: Boolean(lado.nimi),
+    kategoria: lado.symboli,
+    symLaji: lado.laji,
+    puoli: 'oikea',
+    aihe: nostosymPaakategoria(lado.symboli),
+    poltettu: false,
+    avaa: (ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri }),
+  };
+}
+
+/**
  * Nostokerros pallolle. `ruudulla(lat, lng)` antaa ruutupisteen tai
  * null (pallon takana tai ulkona), `merkit` on merkkirekisteri (osa
  * `nostot`), `onPoltettu(tunnus, tiiviste)` pallon laattaluettelon
@@ -366,32 +420,21 @@ export function luoNostot({
       }
     }
     /*
-     * Etelämanner (ks. lohko tiedoston alussa): paikka luetaan
-     * kohteen omasta `asteet`-kentästä eikä laudalta. Merkki ei ole
-     * koskaan poltettu — laattapyramidi on julisteen projektiota,
-     * josta Etelämanner puuttuu — joten se on aina elävä H-merkki.
+     * Navat (ks. lohko tiedoston alussa): paikka luetaan kohteen omasta
+     * `asteet`-kentästä eikä laudalta. Merkki ei ole koskaan poltettu —
+     * laattapyramidi on julisteen projektiota, josta napojen takaiset
+     * alueet puuttuvat — joten se on aina elävä H-merkki.
      */
     if (asteita <= ETELAMANNER_NAKYY_ASTETTA && !liikkuu) {
       for (const kohde of MAASTOKOHTEET_ATA) {
-        const a = kohde.asteet;
-        if (!Number.isFinite(a?.lat) || !Number.isFinite(a?.lon)) continue;
-        const lado = kohdeMerkinLadonta(ui, kohde);
-        if (!lado.symboli) continue;
-        rivit.push({
-          avain: `ata:${kohde.id}`,
-          id: kohde.id,
-          perhe: 'nosto',
-          lat: a.lat,
-          lng: a.lon,
-          nimi: lado.nimi ?? kohde.nimi,
-          nimioNakyy: Boolean(lado.nimi),
-          kategoria: lado.symboli,
-          symLaji: lado.laji,
-          puoli: 'oikea',
-          aihe: nostosymPaakategoria(lado.symboli),
-          poltettu: false,
-          avaa: (ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri }),
-        });
+        const rivi = napanostonRivi(ui, kohde, { avain: `ata:${kohde.id}` });
+        if (rivi) rivit.push(rivi);
+      }
+    }
+    if (asteita <= ARKTIS_NAKYY_ASTETTA && !liikkuu) {
+      for (const kohde of MAASTOKOHTEET_ARK) {
+        const rivi = napanostonRivi(ui, kohde, { avain: `ark:${kohde.id}` });
+        if (rivi) rivit.push(rivi);
       }
     }
     // Kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js sääntö).

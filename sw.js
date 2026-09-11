@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1780';
+const CACHE = 'matkakirja-2026-08-09.1781';
 const SHELL = [
   './',
   './index.html',
@@ -152,6 +152,7 @@ const SHELL = [
   './js/geo.js',
   './js/saa.js',
   './js/maakayrat.js',
+  './js/maanaariviivat.js',
   './js/maatummennus.js',
   './js/uutiset.js',
   './js/packs/maailmankartta.js',
@@ -470,6 +471,7 @@ const SHELL = [
   './js/packs/maastokohteet-ago.js',
   './js/packs/maastokohteet-are.js',
   './js/packs/maastokohteet-arg.js',
+  './js/packs/maastokohteet-ark.js',
   './js/packs/maastokohteet-ata.js',
   './js/packs/maastokohteet-aus.js',
   './js/packs/maastokohteet-aut.js',

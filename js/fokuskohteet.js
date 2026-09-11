@@ -923,12 +923,24 @@ function varmistaKohdekerros(ui) {
  * toistaa yhdessäkään kutsujassa.
  */
 const KOHDE_TYYPPISYMBOLIT = {
-  // Luonto on yksi kategoria: vuoret, meret, saaret ja joet jakavat
-  // vuorenhuippu ja aalto -symbolin.
+  /*
+   * Luonto on yksi kategoria: vuoret, meret, saaret, joet ja järvet
+   * jakavat vuorenhuippu ja aalto -symbolin.
+   *
+   * JÄRVI PUUTTUI TAULUSTA 11.9.2026 ASTI. Ilman riviä
+   * `kohteenKategoria` palautti nullin, `kohdeMerkinLadonta` palautti
+   * `symboli: null` ja pallon nostokerros ohitti rivin hiljaa — eli
+   * kaksitoista järvinostoa (mm. Vostokin järvi Etelämantereella,
+   * Titicaca, Toba, Baikalin naapurit) ei piirtynyt kartalle lainkaan.
+   * Vika löytyi arktisia nostoja kirjoitettaessa. Testi
+   * `tests/nostomerkit.test.mjs` vartioi nyt, että jokainen aineistossa
+   * esiintyvä tyyppi on tässä taulussa.
+   */
   vuori: 'luonto',
   meri: 'luonto',
   saari: 'luonto',
   joki: 'luonto',
+  jarvi: 'luonto',
   multimedia: 'silma',
   historia: 'historia',
   ruoka: 'ruoka',

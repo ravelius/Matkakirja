@@ -201,6 +201,53 @@ export const RANTA_PEITTO = 0.58;
 /** Maiden raja: sama ruskea vaaleampana ja selvästi hennompana. */
 export const RAJA_MUSTE = '#6b5539';
 export const RAJA_PEITTO = 0.34;
+/*
+ * ======== PELAAJAN MAAN RAJA VAHVEMMALLA (omistaja 11.9.2026) ======
+ *
+ * Sanatarkasti: *"Peli voisi piirtää vahvemmalla aina kyseisen
+ * valtion rajat jossa pelaaja on"*.
+ *
+ * KOROSTUS ON SAMAA MUSTETTA, EI TOISTA VÄRIÄ. Kartta on vuoden 1873
+ * atlas, joten korostus tehdään niin kuin se tehtäisiin kaiverruksessa:
+ * sama ruskea muste tummempana ja paksumpana, ei toista väriä eikä
+ * hehkua. Sävy on rantaviivan musteen (#5a4330) ja poltetun rajan
+ * välistä tummemmasta päästä; peitto on kaksinkertainen tavalliseen
+ * rajaan (0,34) ja hitusen rantaviivan (0,58) yli, jotta oma maa
+ * erottuu myös naapurinsa rannikosta.
+ *
+ * LEVEYS ON SAMA SUHDE KUIN TASOKARTALLA. Tasokartan vahvistettu
+ * ääriviiva on 2 ruutupikseliä eli runsas puolitoista kertaa poltettu
+ * rantaviiva (js/maatummennus.js TUMMENNUS_VIIVA, omistajan mitoitus
+ * 1.9.2026 *"paksunna maan rajaa myös hieman"*). Pallolla sama suhde
+ * tarkoittaa noin 2,5-kertaista tavalliseen rajaan nähden — ja koska
+ * leveys liukuu ruudun tiheydessä kuten muillakin lajeilla, korostus
+ * ei paksune tolpaksi yleiskuvassa.
+ *
+ * VIIVA EI OLE KATKONAINEN. Poltettu ja vektoriraja ovat pisteviivaa
+ * (RAJA_KATKO_YKS); korostus on YHTENÄINEN, koska juuri ehjä kehä
+ * kertoo silmälle "tämä on yksi maa" — sama ero kuin tasokartalla,
+ * jossa vahvistettu ääriviiva on yhtenäinen ja poltettu raja pisteinä.
+ */
+export const KOROSTUS_MUSTE = '#4a3320';
+export const KOROSTUS_PEITTO = 0.68;
+/** Korostetun rajan leveys css-pikseleinä [kaukana, lähellä]. */
+export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [1.7, 2.5];
+/**
+ * Korostus piirtyy tavallisen rajan JÄLKEEN (läpinäkyvien jono),
+ * jotta hennompi pisteviiva jää sen alle eikä sekoita reunaa. Sama
+ * syvyyssiirto kuin muilla vektoreilla — nostoa ei käytetä
+ * (VEKTORIT_KORKEUS 0, parallaksi).
+ */
+export const VEKTORIT_KOROSTUS_RENDER_ORDER = -0.45;
+/**
+ * Lajin leveyspääte yhdessä taulussa: piirto, mittarit ja testit
+ * lukevat saman rivin, joten uusi laji ei tarvitse yhtään ehtolausetta.
+ */
+export const VEKTORIT_LEVEYDET = Object.freeze({
+  rannikko: VEKTORIT_LEVEYS_CSS,
+  rajat: VEKTORIT_RAJA_LEVEYS_CSS,
+  korostus: VEKTORIT_KOROSTUS_LEVEYS_CSS,
+});
 /**
  * Rajan pistekuvio maailmayksikköinä (piste, väli): poltettu raja on
  * 1,5 R piste ja 3 R väli, ja z7:llä R ≈ 1 px ≈ 0,00727 yksikköä.
@@ -523,10 +570,26 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     janojaSolua: 0,
     /** Onko varjostimen pehmennyspaikka mennyt läpi. */
     pehmennysPaikka: false,
+    /** Korostettu maa (ISO A3) tai null — pelaajan oma maa. */
+    korostus: null,
+    /** Korostuksen janat (0 = maata ei ole aineistossa). */
+    korostusJanoja: 0,
   };
   const pyydetyt = new Set();
   /** id (`<laji>/l<k>/<solu>`) → { laji, k, avain, lupaus, viivat, olio, janoja, tavua, kaytto } */
   const solut = new Map();
+  /*
+   * PELAAJAN MAAN KOROSTUS on soluton laji: renkaat annetaan valmiina
+   * asteina (js/maanaariviivat.js) eikä niitä haeta ämpäristä, koska
+   * korostettavia maita on kerrallaan yksi ja aineisto on pelissä jo
+   * (assets/data/maapolygonit.json). Olio on siksi yksi eikä ruudukko,
+   * mutta kaikki muu on sama kuin soluilla: sama säde, sama
+   * syvyyssiirto, sama selaimen harvennus ja sama häive — olio kelpaa
+   * sellaisenaan `haivyta`-apurille (kentät `laji` ja `olio`).
+   */
+  const korostus = {
+    laji: 'korostus', iso: null, renkaat: null, olio: null, janoja: 0, harvennus: -1,
+  };
   /** Häiveen ajaksi kloonatut materiaalit (ruutumitat päivitetään näihinkin). */
   const kloonit = new Set();
   let luettelo = null;
@@ -571,7 +634,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
   let pehmennysPaikka = false;
   /** Viivan YDIN css-pikseleinä (ilman pehmennysvyötä). */
   const ydinLeveys = (laji) => viivanLeveysCss(
-    tiheys, laji === 'rajat' ? VEKTORIT_RAJA_LEVEYS_CSS : VEKTORIT_LEVEYS_CSS,
+    tiheys, VEKTORIT_LEVEYDET[laji] ?? VEKTORIT_LEVEYS_CSS,
   );
   /** Pehmennysvyö css-pikseleinä kummallakin reunalla. */
   const pehmennysCss = () => (pehmennysPaikka ? VEKTORIT_PEHMENNYS_LAITEPX / pikselisuhde() : 0);
@@ -623,6 +686,8 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     if (purettu) return false;
     if (!luettelo?.lodit?.length || !luettelo.lajit) return luovuta('vektoriluetteloa ei saatu');
     materiaalit = teeMateriaalit();
+    // Maa on voitu pyytää jo ennen kuin luokat olivat valmiina.
+    if (korostus.renkaat) rakennaKorostus(true);
     /*
      * PÄIVITYS PIIRTOKOUKUSSA, EI TAPAHTUMASSA (vika v1649). Ennen tätä
      * kerros heräsi ohjainten `change`-tapahtumasta — eli pointermoven
@@ -640,10 +705,14 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
   })().catch((syy) => luovuta(String(syy?.message ?? syy)));
 
   /**
-   * Kaksi materiaalia, ei enempää: rantaviiva ja rajat. Leveys on
-   * ruutupikseleitä varjostimessa (worldUnits false), ei syvyyskirjoitusta,
-   * syvyystesti pallon pintaa vasten ja polygonOffset laattojen edelle
-   * (ks. tiedoston alun mittaukset).
+   * Kolme materiaalia, ei enempää: rantaviiva, rajat ja pelaajan maan
+   * korostus. Leveys on ruutupikseleitä varjostimessa (worldUnits
+   * false), ei syvyyskirjoitusta, syvyystesti pallon pintaa vasten ja
+   * polygonOffset laattojen edelle (ks. tiedoston alun mittaukset).
+   *
+   * Korostus on samaa mustetta tummempana ja YHTENÄISENÄ viivana
+   * (ks. KOROSTUS_MUSTE): se on sama kerros ja samat säännöt kuin
+   * muillakin vektoreilla, vain oma leveys ja peitto.
    */
   function teeMateriaalit() {
     const yhteiset = {
@@ -663,17 +732,22 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     });
     [raja.dashSize, raja.gapSize] = RAJA_KATKO_YKS;
     raja.dashScale = 1;
+    const korostusMateriaali = new luokat.LineMaterial({
+      ...yhteiset, color: KOROSTUS_MUSTE, opacity: KOROSTUS_PEITTO,
+    });
     /*
      * PEHMEÄ REUNA, EI PÄÄTYPYÖRYLÖITÄ (omistaja 7.9.2026). Paikka
      * tehdään ENNEN ensimmäistä käännöstä ja ennen leveyden asetusta:
      * jos varjostin ei ole odotetun näköinen, pehmennysvyö jää nollaan
      * ja viiva on entisellään.
      */
-    pehmennysPaikka = pehmennaLineMaterial(ranta) && pehmennaLineMaterial(raja);
+    pehmennysPaikka = pehmennaLineMaterial(ranta) && pehmennaLineMaterial(raja)
+      && pehmennaLineMaterial(korostusMateriaali);
     mittarit.pehmennysPaikka = pehmennysPaikka;
     ranta.linewidth = cssLeveys('rannikko');
     raja.linewidth = cssLeveys('rajat');
-    return { rannikko: ranta, rajat: raja };
+    korostusMateriaali.linewidth = cssLeveys('korostus');
+    return { rannikko: ranta, rajat: raja, korostus: korostusMateriaali };
   }
 
   /** Ruutumitat materiaaleihin: leveys laitepikseleinä, resoluutio css-pikseleinä. */
@@ -780,6 +854,56 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       paata();
     };
     ikkuna.requestAnimationFrame(askel);
+  }
+
+  /* ---------------- pelaajan maan korostus -------------------------- */
+
+  /**
+   * Korostuksen oma olio pois (materiaali on jaettu, ei vapauteta).
+   * Häiveen ajaksi kloonattu materiaali siivotaan samalla säännöllä
+   * kuin soluilla.
+   */
+  function vapautaKorostus() {
+    if (!korostus.olio) return;
+    korostus.olio.parent?.remove(korostus.olio);
+    korostus.olio.geometry?.dispose?.();
+    const m = korostus.olio.material;
+    if (m && !Object.values(materiaalit ?? {}).includes(m)) { kloonit.delete(m); m.dispose?.(); }
+    korostus.olio = null;
+    korostus.janoja = 0;
+    korostus.harvennus = -1;
+  }
+
+  /**
+   * Korostettu ääriviiva pallon pinnalle nykyisellä harvennusportaalla.
+   * `haivella` on tosi vain maanvaihdossa: portaan vaihtuessa viiva on
+   * jo ruudulla eikä sitä saa feidata uudelleen.
+   *
+   * Ilman renkaita (maata ei ole aineistossa, aineistoa ei saatu) tämä
+   * ei tee mitään — peli näyttää täsmälleen samalta kuin ennen.
+   */
+  function rakennaKorostus(haivella = false) {
+    if (purettu || !materiaalit || !luokat || !kolmi?.juuri) return;
+    vapautaKorostus();
+    const renkaat = korostus.renkaat;
+    if (!renkaat?.length) return;
+    const viivat = harvennaViivat(renkaat, harvennus);
+    const { paikat, janoja } = vektorijanat(viivat, sade());
+    korostus.janoja = janoja;
+    korostus.harvennus = harvennus;
+    mittarit.korostusJanoja = janoja;
+    if (!janoja) return;
+    const geometria = new luokat.LineSegmentsGeometry();
+    geometria.setPositions(paikat);
+    const olio = new luokat.LineSegments2(geometria, materiaalit.korostus);
+    olio.renderOrder = VEKTORIT_KOROSTUS_RENDER_ORDER;
+    olio.raycast = () => {};
+    olio.visible = true;
+    olio.userData.pallovektorit = { laji: 'korostus', iso: korostus.iso };
+    kolmi.juuri.add(olio);
+    korostus.olio = olio;
+    // KAIKKI LIIKE ANIMOIDAAN PEHMEASTI: uusi maa häipyy esiin kuten solu.
+    if (haivella) haivyta(korostus);
   }
 
   /** Solu muistista tai ämpäristä; palauttaa aina kirjanpito-olion. */
@@ -928,6 +1052,13 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     harvennus = harvennusPorras(tarve);
     mittarit.harvennus = harvennus;
     tahdista();
+    /*
+     * Korostus elää samassa harvennusportaassa kuin muut viivat, mutta
+     * se on yksi olio eikä ruudukko — ei kattoa, ei jonoa: portaan
+     * vaihtuessa se rakennetaan heti (Suomen renkaat ovat murto-osa
+     * yhdestä solusta) ja ilman häivettä, koska viiva on jo ruudulla.
+     */
+    if (korostus.renkaat && korostus.harvennus !== harvennus) rakennaKorostus();
     const k = vektoritaso(luettelo.lodit, tarve, VEKTORIT_TERAVYYS_PX);
     mittarit.lod = k;
     mittarit.tol = luettelo.lodit[k];
@@ -967,6 +1098,27 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
   return {
     valmis,
     paivita,
+    /**
+     * PELAAJAN MAAN RAJA VAHVEMMALLA (omistaja 11.9.2026). Kutsuja on
+     * js/maanaariviivat.js (pallolaudan `paivita`), joka antaa maan
+     * renkaat valmiiksi asteina — tämä kerros ei tunne pelitilaa eikä
+     * maatauluja, vain viivan.
+     *
+     * `iso` on mukana pelkkänä tunnisteena (mittarit, savukkeet).
+     * Tyhjä tai puuttuva rengaslista PYYHKII korostuksen: maa, jota
+     * aineistossa ei ole, jättää pallon täsmälleen entiselleen.
+     */
+    korostaMaa(iso, renkaat) {
+      const uusiIso = iso || null;
+      const uudet = Array.isArray(renkaat) && renkaat.length ? renkaat : null;
+      if (uusiIso === korostus.iso && uudet === korostus.renkaat) return false;
+      korostus.iso = uusiIso;
+      korostus.renkaat = uudet;
+      mittarit.korostus = uusiIso;
+      if (!uudet) { vapautaKorostus(); mittarit.korostusJanoja = 0; return true; }
+      rakennaKorostus(true);
+      return true;
+    },
     /** Mittarit savukkeille ja vartijalle (suunnitelman luku 5). */
     mittarit: () => ({ ...mittarit, pyydetyt: [...pyydetyt] }),
     pura() {
@@ -974,6 +1126,9 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       kehyspurku();
       kehyspurku = () => {};
       kehysmitat = null;
+      vapautaKorostus();
+      korostus.iso = null;
+      korostus.renkaat = null;
       for (const s of solut.values()) vapauta(s);
       solut.clear();
       nakyvat = new Set();

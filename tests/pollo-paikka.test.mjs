@@ -17,19 +17,26 @@ import { readFileSync } from 'node:fs';
 
 import {
   MERKIN_IKA_MS,
+  PAIKAN_LEVEYDET,
   PAIKAN_OLETUSLEVEYS,
+  ajonLeveys,
   etsiPaikka,
   kelpaakoAsteet,
+  kohdeNakymassa,
   kokoaHakemisto,
   lahtonakyma,
   nakymaPalasi,
+  naytaPaikka,
   nimiOsuu,
   normalisoiPaikannimi,
   onPaikkakysymys,
   paikanLeveys,
   paluuAjo,
   ratkaisePaikka,
+  tarvitaankoAjo,
 } from '../js/pulu-paikka.js';
+import { MAASTOKOHTEET } from '../js/packs/maastokohteet.js';
+import { KOHDE_MAAT } from '../js/fokuskohteet.js';
 import { paikkaKentta } from '../js/pollo.js';
 import { laudaltaAsteiksi } from '../js/fokusmitat.js';
 import { poimiPaikka } from '../tools/pollo/worker.js';
@@ -134,7 +141,84 @@ test('näkyvä leveys tulee kohteen tyypistä', () => {
   assert.ok(paikanLeveys('kaupunki') < paikanLeveys('vuori'));
   assert.ok(paikanLeveys('vuori') < paikanLeveys('joki'));
   assert.ok(paikanLeveys('joki') < paikanLeveys('maa'));
+  // Tuntematon tyyppi on pistemäinen oletus, ei alueoletus: Kernavė-vika
+  // 11.9.2026 syntyi juuri siitä, että tuntematon tyyppi zoomasi ULOS.
   assert.equal(paikanLeveys('tuntematon'), PAIKAN_OLETUSLEVEYS);
+  assert.ok(PAIKAN_OLETUSLEVEYS <= PAIKAN_LEVEYDET.kohde);
+});
+
+/*
+ * VARTIO: AINEISTON JOKAINEN NOSTOTYYPPI ON TAULUSSA.
+ *
+ * Omistajan havainto 11.9.2026 (iPad, Vilna): Kernavėn tyyppi on
+ * `historia`, jota PAIKAN_LEVEYDET ei tuntenut — kamera loitontui
+ * alueoletukseen (600 yks = 18°) keskellä Liettuaa. Tämä testi kaatuu,
+ * jos aineistoon ilmestyy tyyppi, jota taulu ei tunne.
+ */
+const AINEISTON_TYYPIT = (() => {
+  const ulos = new Set();
+  for (const taulu of [MAASTOKOHTEET, KOHDE_MAAT]) {
+    for (const kohteet of Object.values(taulu ?? {})) {
+      for (const kohde of kohteet ?? []) {
+        if (kohde?.tyyppi) ulos.add(String(kohde.tyyppi).toLowerCase());
+      }
+    }
+  }
+  return [...ulos].sort();
+})();
+
+/** Laajat muodot: vain nämä saavat olla kohteen lähikuvaa väljempiä. */
+const LAAJAT_TYYPIT = new Set(['vuori', 'jarvi', 'alue', 'joki', 'meri', 'vuoristo', 'maa']);
+
+test('jokainen aineiston nostotyyppi on leveystaulussa', () => {
+  assert.ok(AINEISTON_TYYPIT.length > 10, `tyyppejä vain ${AINEISTON_TYYPIT.length}`);
+  for (const tyyppi of AINEISTON_TYYPIT) {
+    assert.ok(Object.hasOwn(PAIKAN_LEVEYDET, tyyppi),
+      `tyyppi puuttuu PAIKAN_LEVEYDET-taulusta: ${tyyppi}`);
+  }
+});
+
+test('pistemäinen nosto saa kohteen lähikuvan eikä alueen väljyyttä', () => {
+  for (const tyyppi of AINEISTON_TYYPIT) {
+    if (LAAJAT_TYYPIT.has(tyyppi)) {
+      assert.ok(paikanLeveys(tyyppi) > PAIKAN_LEVEYDET.kohde, `laaja tyyppi liian tiukka: ${tyyppi}`);
+    } else {
+      assert.ok(paikanLeveys(tyyppi) <= PAIKAN_LEVEYDET.kohde,
+        `pistemäinen tyyppi zoomaa ulos: ${tyyppi} = ${paikanLeveys(tyyppi)}`);
+    }
+  }
+  // Kernavė (js/packs/maastokohteet-ltu.js) on tyypiltään historia.
+  assert.equal(paikanLeveys('historia'), PAIKAN_LEVEYDET.kohde);
+});
+
+test('ajo ei koskaan kasvata näkymän leveyttä', () => {
+  assert.equal(ajonLeveys(600, 240), 240, 'pyydetty väljempi kuin nykyinen → nykyinen');
+  assert.equal(ajonLeveys(240, 1200), 240, 'lähentää saa');
+  assert.equal(ajonLeveys(320, 320), 320);
+  // Puuttuva luku ei saa kaataa eikä keksiä loitonnusta.
+  assert.equal(ajonLeveys(0, 900), 900);
+  assert.equal(ajonLeveys(320, 0), 320);
+  for (const tyyppi of AINEISTON_TYYPIT) {
+    assert.ok(ajonLeveys(paikanLeveys(tyyppi), 240) <= 240, tyyppi);
+  }
+});
+
+test('jo näkyvissä oleva kohde ei tarvitse ajoa', () => {
+  const alue = {
+    x: 6000, y: 1800, w: 400, h: 300,
+  };
+  const keskus = { x: 6200, y: 1950 };
+  assert.ok(kohdeNakymassa(keskus, alue));
+  assert.equal(kohdeNakymassa({ x: 6390, y: 1950 }, alue), false, 'reunassa ei ole näkyvissä');
+  // Näkyvissä eikä lähennettävää → ajoa ei tarvita.
+  assert.equal(tarvitaankoAjo(keskus, alue, 400), false);
+  assert.equal(tarvitaankoAjo(keskus, alue, 1800), false, 'loitonnusta ei koskaan ajeta');
+  // Näkyvissä, mutta pyydetty on lähempänä → lähennetään.
+  assert.equal(tarvitaankoAjo(keskus, alue, 260), true);
+  // Ruudun ulkopuolella → ajetaan aina.
+  assert.equal(tarvitaankoAjo({ x: 9000, y: 1950 }, alue, 1800), true);
+  // Kiertävä lauta: päivämäärärajan takana oleva kohde on sama piste.
+  assert.ok(kohdeNakymassa({ x: 6200 - 12000, y: 1950 }, alue, 12000));
 });
 
 /* ================= 3. LÄHTÖNÄKYMÄ JA PALUU ================= */
@@ -312,4 +396,159 @@ test('merkki on väliaikainen ja tyylit ovat olemassa', () => {
   for (const luokka of ['.pulu-paikkamerkki', '.pulu-palaa', '.pollo-paikkarivi']) {
     assert.ok(css.includes(luokka), `tyyli puuttuu: ${luokka}`);
   }
+});
+
+/* ================= 6. KARTTA LENTÄÄ VAIN SIJAINTIKYSYMYKSISTÄ ================= */
+
+/*
+ * OMISTAJAN PÄÄTÖS 11.9.2026 (iPad, Vilna → Kernavė-nosto):
+ * *"Vain sijaintikysymyksistä."* Pelaaja napautti nostokortin
+ * valmiskysymystä *"Miksi Kernavėä sanotaan Liettuan Troijaksi?"* ja
+ * kartta lensi Rovaniemeltä Sofiaan. Nämä testit ajavat naytaPaikan
+ * läpi teko-DOMilla ja mittaavat, MONTAKO ajoa kamera sai.
+ */
+
+/** Riisuttu solmu: vain se, mitä js/pulu-paikka.js oikeasti käyttää. */
+class Solmu {
+  constructor(tag) {
+    this.tag = tag;
+    this.lapset = [];
+    this.style = {};
+    this.luokat = new Set();
+    this.kuuntelijat = [];
+    this.clientWidth = 800;
+    this.clientHeight = 600;
+    this.classList = {
+      add: (c) => this.luokat.add(c),
+      remove: (c) => this.luokat.delete(c),
+      toggle: (c, p) => (p ? this.luokat.add(c) : this.luokat.delete(c)),
+      contains: (c) => this.luokat.has(c),
+    };
+  }
+
+  set className(arvo) {
+    this.nimi = String(arvo);
+    for (const c of this.nimi.split(' ')) if (c) this.luokat.add(c);
+  }
+
+  get className() { return this.nimi ?? ''; }
+
+  set textContent(arvo) { this.teksti = String(arvo); }
+
+  get textContent() { return this.teksti ?? ''; }
+
+  appendChild(lapsi) {
+    this.lapset.push(lapsi);
+    lapsi.vanhempi = this;
+    return lapsi;
+  }
+
+  remove() {
+    if (this.vanhempi) this.vanhempi.lapset = this.vanhempi.lapset.filter((l) => l !== this);
+    this.vanhempi = null;
+  }
+
+  setAttribute() {}
+
+  addEventListener(nimi, fn) { this.kuuntelijat.push({ nimi, fn }); }
+
+  removeEventListener() {}
+}
+
+globalThis.document = { createElement: (tag) => new Solmu(tag) };
+globalThis.requestAnimationFrame = () => 0;
+globalThis.cancelAnimationFrame = () => {};
+// Merkin minuutin ajastin ei saa pitää testiprosessia hereillä.
+const oikeaSetTimeout = globalThis.setTimeout;
+globalThis.setTimeout = (fn, ms, ...loput) => {
+  const t = oikeaSetTimeout(fn, ms, ...loput);
+  t?.unref?.();
+  return t;
+};
+
+/** Peli teko-DOMilla: kamera-ajot talteen, näkymä laudan yksiköissä. */
+function tekoNaytto({ x = 6620, y = 1878, leveys = 240 } = {}) {
+  const tila = { x, y, leveys };
+  const ajot = [];
+  return {
+    ajot,
+    mapPane: new Solmu('div'),
+    contentBox: { w: 12000 },
+    game: TEKO_UI.game,
+    kamera: () => ({
+      ajaKamera: (kohde, asetukset) => {
+        ajot.push({ kohde, asetukset });
+        tila.x = kohde.x;
+        tila.y = kohde.y;
+        tila.leveys = kohde.leveys;
+        return Promise.resolve(true);
+      },
+    }),
+    nakyvaAlue: () => ({
+      x: tila.x - tila.leveys / 2,
+      y: tila.y - tila.leveys / 4,
+      w: tila.leveys,
+      h: tila.leveys / 2,
+      skaala: 800 / tila.leveys,
+    }),
+  };
+}
+
+test('muu kuin sijaintikysymys ei aja kameraa — merkki silti syttyy', async () => {
+  const ui = tekoNaytto({ x: 6620, y: 1878, leveys: 240 });
+  const nakyma = ui.nakyvaAlue();
+  const tulos = naytaPaikka({
+    ui,
+    kysymys: 'Miksi Kernavėä sanotaan Liettuan Troijaksi?',
+    vastaus: 'Kernavė oli Liettuan varhainen pääkaupunki.',
+    paikka: {
+      nimi: 'Kernavė', lat: 54.887, lon: 24.845, tarkkuus: 'kaupunki',
+    },
+  });
+  await Promise.resolve();
+  assert.equal(tulos?.nimi, 'Kernavė', 'paikka ratkeaa yhä');
+  assert.equal(ui.ajot.length, 0, 'kameraa ei saa liikuttaa');
+  assert.deepEqual(ui.nakyvaAlue(), nakyma, 'näkymä jää täsmälleen ennalleen');
+  // Merkki kartalle, Palaa-nappia ei tarvita kun mistään ei lähdetty.
+  const luokat = ui.mapPane.lapset.map((l) => l.className);
+  assert.deepEqual(luokat, ['pulu-paikkamerkki']);
+  assert.ok(ui.mapPane.lapset[0].luokat.has('esilla'), 'merkki syttyy heti');
+});
+
+test('sijaintikysymys ajaa kameran eikä koskaan zoomaa ulos', async () => {
+  const ui = tekoNaytto({ x: 6620, y: 1878, leveys: 240 });
+  const tulos = naytaPaikka({ ui, kysymys: 'Missä Lontoo on?' });
+  await Promise.resolve();
+  assert.equal(tulos?.nimi, 'Lontoo');
+  assert.equal(ui.ajot.length, 1);
+  // Kaupungin oma porras on 260, mutta pelaaja katsoo jo 240:tä.
+  assert.equal(ui.ajot[0].kohde.leveys, 240, 'ajo ei saa loitontaa');
+  assert.ok(Math.abs(ui.ajot[0].kohde.x - 5829.5) < 1);
+  // Palaa-nappi on olemassa, koska kamera oikeasti lähti.
+  assert.ok(ui.mapPane.lapset.some((l) => l.className === 'pulu-palaa'));
+});
+
+test('laaja tyyppi ei loitonna lähikuvasta', async () => {
+  const ui = tekoNaytto({ x: 6620, y: 1878, leveys: 200 });
+  naytaPaikka({
+    ui,
+    kysymys: 'Missä Niili virtaa?',
+    paikka: {
+      nimi: 'Niili', lat: 15.6, lon: 32.5, tarkkuus: 'alue',
+    },
+  });
+  await Promise.resolve();
+  assert.equal(ui.ajot.length, 1);
+  assert.ok(ui.ajot[0].kohde.leveys <= 200, `leveys ${ui.ajot[0].kohde.leveys}`);
+});
+
+test('jo näkyvissä oleva kohde ei laukaise ajoa lainkaan', async () => {
+  // Kamera on täsmälleen Ateenan päällä kaupungin omassa mittakaavassa.
+  const ui = tekoNaytto({ x: 6620.8, y: 1878.7, leveys: 260 });
+  const tulos = naytaPaikka({ ui, kysymys: 'Missä Ateena on?' });
+  await Promise.resolve();
+  assert.equal(tulos?.nimi, 'Ateena');
+  assert.equal(ui.ajot.length, 0, 'turhaa ajoa ei tehdä');
+  assert.ok(!ui.mapPane.lapset.some((l) => l.className === 'pulu-palaa'),
+    'ilman ajoa ei ole mitään mistä palata');
 });
