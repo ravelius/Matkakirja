@@ -137,6 +137,24 @@ test('puhe ja nostokortti palauttavat yhä soivan luennan kuuntelun',t=>{
  c.tilanne('narrationEnd',{tunnus:a});e.tick(40);assert.equal(e.raf.size,0);
 });
 
+test('kortin avausele valmistuu kerran ja avoimen kortin lukija saa sitten kuuntelun',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);
+ let kortit=[];e.doc.head=new e.El();e.doc.querySelectorAll=()=>kortit;
+ const win=new EventTarget();Object.assign(win,{innerHeight:844,innerWidth:390,getComputedStyle:()=>({visibility:'visible'})});
+ e.doc.defaultView=win;e.doc.documentElement={clientWidth:390};
+ e.button.getClientRects=()=>[{}];e.button.getBoundingClientRect=()=>({bottom:790,right:340});
+ c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const k=new e.El();k.classList={toggle(){},remove(){}};
+ k.style={getPropertyValue:()=>'',setProperty(){}};kortit=[k];e.notify(e.doc.body);
+ const a={},n={tunnus:a,ele:'lookUp',lahde:'lukija'};
+ assert.equal(c.tilanne('narration',n),false,'avauselettä ei katkaista');
+ e.tick(2500);assert.ok(e.raf.size,'kuuntelu alkaa heti avauseleen loputtua');
+ e.tick(5000);assert.equal(c.tilanne('narration',n),true,'avoin kortti ei estä omaa lukijaa');
+ const muu={};assert.equal(c.tilanne('narration',{tunnus:muu,ele:'lookUp',lahde:'linssiluenta'}),false,'muiden soittimien korttiportti säilyy');
+ c.tilanne('narrationEnd',{tunnus:muu});c.tilanne('narrationEnd',{tunnus:a});e.tick(40);
+ assert.equal(e.raf.size,0,'lopetettu lukija ei jää elejonoon');
+});
+
 test('Ihmisen matkan jakson tunne voittaa vain linssiluennan kuuntelun',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
  const a={},b={},speech={},n={tunnus:a,ele:'lookUp',lahde:'linssiluenta'};

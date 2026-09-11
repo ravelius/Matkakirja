@@ -106,6 +106,9 @@ export function asennaLivianKasvot(pollo) {
       if(['leaveRight','leaveDown','flyAway','walkRight'].includes(valmis.id))lepoTila=livianSvgAsento(valmis.id,1);
       if(valmis.nuku)lepoTila={...lepo(),frame:'sleep',y:3,tilt:1};
       if(valmis.jatko)jatkoAjastin=setTimeout(()=>toista(valmis.jatko,{hiljaa:valmis.hiljaa}),800);
+      // Kortti saa yhden avauseleen. Sen jälkeen yhä soiva lukija
+      // kuunnellaan myös kortin ollessa auki (rekisterin päällekkäisyys 7).
+      if(valmis.omistaja==='card')jatkaKuunteluaTaiOdotusta();
     }
   }
   if(nyt-viimePiirto>=32){piirraNyt(nyt);viimePiirto=nyt;}
@@ -163,7 +166,7 @@ export function asennaLivianKasvot(pollo) {
     !(jaksonTunne&&[...luennat.values()].every(x=>x.lahde==='linssiluenta')))return false;
   if(laji==='narration'&&tiedot.lahde==='linssiluenta'&&
     nykyinen?.omistaja==='emotion'&&nykyinen.lahde==='ihmisen-matka')return false;
-  if(laji==='narration'&&(puhe||pollo.auki||nostoTila?.onkoAuki()))return false;
+  if(laji==='narration'&&(puhe||pollo.auki||(nostoTila?.onkoAuki()&&tiedot.lahde!=='lukija')))return false;
   if(laji!=='card'&&nykyinen?.omistaja==='card')return false;
   if(!jaksonTunne&&!['card','narration','chatOpen','chatClose','microphone','answer','error'].includes(laji)&&nyt-viimeTilanne<2800)return false;
   if(puhe&&laji!=='photo')return false;
