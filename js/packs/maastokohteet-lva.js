@@ -425,4 +425,169 @@ export const MAASTOKOHTEET_LVA = [
       + 'hydrology", "Ecology" ja "Conservation and management" '
       + '(tarkistettu 2.9.2026).',
   },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — NELJÄ KOHDETTA LISÄÄ. Omistaja 11.9.2026:
+   * *"Agentit voisivat tarkastaa myös muut Euroopan maat että
+   * kaikissa tarpeeksi nostoja."* Tavoite on vähintään 20 pääkartan
+   * nostoa per Euroopan maa; Latvia oli 16:ssa.
+   *
+   * Riika on jätetty rauhaan kuten K2-erässäkin: lähin uusi kohde on
+   * Ventas rumba 73 lautayksikön päässä, joten kaikki neljä ovat
+   * pääkartan merkkejä. Kuvaton erä; faktat en-Wikipediasta kohde
+   * kerrallaan 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'ventas-rumba',
+    nimi: 'Ventas rumba',
+    tyyppi: 'ruoka',
+    kysymykset: [
+      'Miksi putous perääntyy hitaasti ylävirtaan?',
+      'Miten lohia pyydettiin ilmasta?',
+    ],
+    korostukset: ['dolomiitti|dolomiitti'],
+    nappi: 'Euroopan levein vesiputous',
+    // 21.9722 E / 56.9689 N — Kuldīga; en-Wikipedia "Venta Rapid"
+    laudat: {
+      maailmankartta: { x: 6565.7, y: 1073.3 },
+    },
+    teksti: 'Ventas rumba on Venta-joen vesiputous Kuldīgassa Länsi-Latviassa ja '
+      + 'Euroopan levein: 249 metriä, kevättulvien aikaan jopa 275. Korkeutta '
+      + 'sillä on veden korkeudesta riippuen vain 1,8–2,2 metriä. Putouksen '
+      + 'tekee devonikautinen dolomiitti, jonka alempi kerros rapautuu '
+      + 'nopeammin kuin ylempi: ylempi jää roikkumaan, kunnes lohkeaa jokeen. '
+      + 'Siksi putous perääntyy hitaasti ylävirtaan, ja koska virta on '
+      + 'keskellä voimakkain, keskikohta vetäytyy reunoja nopeammin.\n\n'
+      + 'Kaupunki syntyi juuri tähän, koska putous katkaisi keskiaikaisen '
+      + 'Ventan sisävesireitin. Kuurinmaan herttua Jacob Kettler yritti '
+      + '1600-luvun puolivälissä kaivattaa ohitusuoman oikealle rannalle, '
+      + 'mutta dolomiitti oli liian kovaa ja työ liian hidasta. Legendan mukaan '
+      + 'herttua käski sitten räjäyttää putouksen: ensimmäinen räjäytys vain '
+      + 'irrotti suuria lohkareita ja siirsi reunaviivaa, ja kun paine halkoi '
+      + 'läheisen palatsin seiniä, hanke jäi siihen.\n\n'
+      + 'Noin vuonna 1640 Kettler keksi toisenlaisen ratkaisun: hän tilasi sata '
+      + 'suurta pajukoria ja hakkautti kallioon kalapatoja. Kutuaikaan lohet ja '
+      + 'sammet yrittivät hypätä putouksen yli, ja epäonnistuneet huuhtoutuivat '
+      + 'virran mukana koreihin. Myöhemmin kalastajat vuokrasivat putouksesta '
+      + 'muutaman metrin, asettivat korinsa ja odottivat; tavallinen saalis oli '
+      + '80–100 kalaa ja hyvä lisä vuosituloihin. Kuldīgaa alettiin kutsua '
+      + 'kaupungiksi, jossa lohia voi pyydystää ilmasta.\n\n'
+      + 'Lohet ja sammet katosivat joesta aikoja sitten; viimeinen sampi saatiin '
+      + '1892. Nykyään pyydetään lähinnä vimpaa, ja kutuaikaan kalastus on '
+      + 'kielletty.',
+    lahde: 'en-Wikipedia "Venta Rapid", johdanto-osa sekä osiot "Geology", '
+      + '"History" ja "Fishing" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'kolkan-niemi',
+    nimi: 'Kolkan niemi',
+    tyyppi: 'merenkulku',
+    kysymykset: [
+      'Mikä salmi erottaa niemen Virosta?',
+      'Miksi dyynit ovat säilyneet niin luonnontilaisina?',
+    ],
+    korostukset: ['Irbensalmi|Irbensalmi'],
+    nappi: 'Kuurinmaan kärki Riianlahden suulla',
+    // 22.5947 E / 57.7539 N — en-Wikipedia "Cape Kolka"
+    laudat: {
+      maailmankartta: { x: 6586.5, y: 1035.7 },
+    },
+    teksti: 'Kolkan niemi, latviaksi Kolkasrags ja liiviksi Kūolka nanā, on '
+      + 'Kuurinmaan niemimaan kärki Itämeren rannalla Riianlahden suulla. Sitä '
+      + 'ympäröi Irbensalmi, joka on luonnollinen raja Viroon; itäpuolella '
+      + 'keskellä lahtea on virolainen Ruhnun saari. Niemi on Riianlahden '
+      + 'luoteisin piste. Lähellä ovat Kolkan majakka ja Kolkan kylä, ja rantaa '
+      + 'myöten jatkuu jono vanhoja liiviläiskyliä — Vaide, Saunags, Pitrags, '
+      + 'Košrags ja Sīkrags — jotka kuuluvat suojeltuun Liivinrannan '
+      + 'alueeseen.\n\n'
+      + 'Niemi on osa Slīteren kansallispuistoa. Rantaa reunustaa metsäisten '
+      + 'dyynien vyöhyke, jolla mänty kasvaa karulla ja vettä pidättämättömällä '
+      + 'hiekalla. Tuuli siirtää hiekkaa jatkuvasti, ja kovissa myrskyissä '
+      + 'puiden runkoja on hautautunut yli 60 senttimetrin syvyyteen. Suuret '
+      + 'hautautumisjaksot 1967–1969 ja tammikuussa 2005 näkyvät puiden '
+      + 'vuosilustoissa kapeina tai kokonaan puuttuvina renkaina, kunnes kasvu '
+      + 'on palautunut ennalleen.\n\n'
+      + 'Dyynimaisema on harjuja ja niiden välisiä painanteita, noin 4–10 '
+      + 'metriä merenpinnan yläpuolella. Neuvostoaikana alue oli suljettua '
+      + 'rajavyöhykettä, ja vähäinen ihmistoiminta on säilyttänyt dyynit '
+      + 'poikkeuksellisen luonnontilaisina.\n\n'
+      + 'Kolka on myös yli 700 kilometriä pitkän rannikkovirran päätepiste. '
+      + 'Kaliningradin rannoilta Pärnunlahdelle ulottuva kuljetus tuo niemelle '
+      + 'vuosittain 700 000–800 000 kuutiometriä hiekkaa, josta noin 90 '
+      + 'prosenttia kasautuu heti niemen pohjoispuolelle ja vain noin 50 000 '
+      + 'kuutiometriä jatkaa Riianlahdelle.',
+    lahde: 'en-Wikipedia "Cape Kolka", johdanto-osa ja osio "Coastal dune '
+      + 'ecology" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'aglona',
+    nimi: 'Aglonan basilika',
+    nimio: 'Aglona',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kuka perusti kirkon ja luostarin?',
+      'Miksi elokuun 15. päivä on Aglonassa erityinen?',
+    ],
+    korostukset: ['pyhiinvaeltaja|pyhiinvaeltajaa'],
+    nappi: 'Latgalen pyhiinvaelluskirkko kahden järven välissä',
+    // 27.0086 E / 56.1306 N — en-Wikipedia "Aglona"
+    laudat: {
+      maailmankartta: { x: 6733.6, y: 1113.0 },
+    },
+    teksti: 'Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista '
+      + 'koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien '
+      + 'välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, '
+      + 'Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, '
+      + 'Pirunjärvi ja Madelanun linnavuori.\n\n'
+      + 'Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen '
+      + 'puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen '
+      + 'alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on '
+      + 'Latvian tärkein katolinen kirkko.\n\n'
+      + 'Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina '
+      + 'paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia '
+      + 'on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää '
+      + 'tunneta.\n\n'
+      + 'Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali '
+      + 'II antoi sille basilica minor -arvon. Vuonna 1986 siellä vietettiin '
+      + 'Latvian kristinuskon 800-vuotisjuhlaa. Basilikaa ja sen ympäristöä '
+      + 'kunnostettiin vuodesta 1992 alkaen paavin vierailua varten: Johannes '
+      + 'Paavali II kävi Aglonassa syyskuussa 1993, ja paikalle kokoontui yli '
+      + '300 000 pyhiinvaeltajaa. Paavi Franciscus vieraili siellä syyskuussa '
+      + '2018.',
+    lahde: 'en-Wikipedia "Aglona", johdanto-osa ja osio "History" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'gluckin-raamattumuseo',
+    nimi: 'Glückin raamattumuseo',
+    nimio: 'Alūksne',
+    tyyppi: 'sana',
+    kysymykset: [
+      'Milloin Raamattu käännettiin ensi kerran latviaksi?',
+      'Kuka oli Glückin kasvattitytär?',
+    ],
+    korostukset: ['Marienburg|Marienburgissa'],
+    nappi: 'Talo, jossa latvia sai Raamattunsa',
+    // 27.0428 E / 57.4211 N — Alūksne, entinen Marienburg;
+    // en-Wikipedia "Ernst Glück"
+    laudat: {
+      maailmankartta: { x: 6734.8, y: 1051.7 },
+    },
+    teksti: 'Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja '
+      + 'luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian '
+      + 'alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin '
+      + 'latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, '
+      + 'retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja '
+      + 'latinaa.\n\n'
+      + 'Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi '
+      + 'vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on '
+      + 'nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin '
+      + 'raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset '
+      + 'latviankieliset koulut.\n\n'
+      + 'Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä '
+      + 'kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren '
+      + 'kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli '
+      + 'Venäjän keisarinna. Glück itse kuoli Moskovassa.',
+    lahde: 'en-Wikipedia "Ernst Glück", johdanto-osa sekä osiot "Early life and '
+      + 'career" ja "Personal life" (tarkistettu 11.9.2026).',
+  },
 ];

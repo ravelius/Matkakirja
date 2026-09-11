@@ -424,4 +424,134 @@ export const MAASTOKOHTEET_AUT = [
     lahde: 'en-Wikipedia "Eisriesenwelt", johdanto-osa sekä osiot "Geology" ja "History" '
       + '(tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — KOLME KOHDETTA LISÄÄ. Omistaja 11.9.2026:
+   * *"Agentit voisivat tarkastaa myös muut Euroopan maat että
+   * kaikissa tarpeeksi nostoja."* Tavoite on vähintään 20 pääkartan
+   * nostoa per Euroopan maa; Itävalta oli 17:ssä.
+   *
+   * Kaikki kolme ovat kaukana Wienin laatasta (lähinkin Erzberg 58
+   * lautayksikköä), joten ne ovat pääkartan merkkejä. Kuvaton erä;
+   * faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'erzberg',
+    nimi: 'Erzberg',
+    tyyppi: 'kauppa',
+    kysymykset: [
+      'Kuinka kauan vuorta on louhittu?',
+      'Miten malmi saatiin ennen laaksoon?',
+    ],
+    korostukset: ['sideriitti|sideriitti'],
+    nappi: 'Rautavuori, jota on louhittu yli 1 300 vuotta',
+    // 14.8878 E / 47.5333 N — Eisenerz, Steiermark;
+    // en-Wikipedia "Erzberg mine"
+    laudat: {
+      maailmankartta: { x: 6329.6, y: 1496.0 },
+    },
+    teksti: 'Erzberg on suuri avolouhos Eisenerzissä Steiermarkissa, '
+      + 'kuusikymmentä kilometriä Grazista luoteeseen. Se on Itävallan suurin '
+      + 'rautamalmiesiintymä: varantoja arvioidaan olevan 235 miljoonaa tonnia, '
+      + 'ja kaivos tuottaa noin 3,2 miljoonaa tonnia puhdasta rautamalmia '
+      + 'vuodessa. Malmin päämineraalit ovat sideriitti, ankeriitti ja '
+      + 'rautapitoinen dolomiitti, ja rautapitoisuus on keskimäärin 21 '
+      + 'prosenttia.\n\n'
+      + 'Rautaa on louhittu täällä yli 1 300 vuotta. Eisenerzin '
+      + 'Oswaldikirchessä oli asiakirja, jonka mukaan louhinta alkoi vuonna '
+      + '712, mutta tietoa ei ole vahvistettu. Aluksi malmia otettiin pinnasta: '
+      + '1100-luvulla louhittiin lähellä pintaa ollutta limoniittia, ja se '
+      + 'sulatettiin pienissä ahjoissa kuoppien vieressä. Kaivosmiesten '
+      + 'toimeentulo oli vaatimatonta.\n\n'
+      + 'Maanalainen louhinta alkoi 1500-luvulla keisarin käskystä, ja työ '
+      + 'tehtiin vasaralla ja hakulla. Yläosaa louhivat Vordernbergin ja '
+      + 'alaosaa Innerbergin — nykyisen Eisenerzin — asukkaat. Laaksoon '
+      + 'rakennettiin Radwerk-ahjoja, joissa vesirattaat käyttivät palkeita, ja '
+      + 'asutus kasvoi niiden ympärille. Vuorella kokeiltiin mustaa ruutia '
+      + '1720 ja dynamiittia 1870, ja vuodesta 1876 räjähdysnallit sytytettiin '
+      + 'sähköjohdoilla.\n\n'
+      + 'Malmi kannettiin aluksi käsin ja vedettiin laaksoon kelkoilla, joita '
+      + 'kutsuttiin nimellä Sackzug; naiset olivat työssä mukana, ennen kuin '
+      + 'hevosia ja kärryjä oli saatavilla. Vuosina 1810–1870 käytäviin tuli '
+      + 'kiskot ja kaivoskärryt, 1951 ensimmäiset kuorma-autot, ja 1963 '
+      + 'mennessä ne olivat korvanneet kiskot. Vuorella ajetaan nykyään myös '
+      + 'vuotuista Erzberg Rodeo -enduroajoa.',
+    lahde: 'en-Wikipedia "Erzberg mine", johdanto-osa sekä osiot "Geology" ja '
+      + '"History" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'bregenzin-jarvinayttamo',
+    nimi: 'Bregenzin järvinäyttämö',
+    nimio: 'Bregenz',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mistä ensimmäiset näyttämöt rakennettiin?',
+      'Mikä elokuva kuvattiin näyttämöllä 2008?',
+    ],
+    korostukset: ['proomu|proomuista'],
+    nappi: 'Oopperalava keskellä Bodenjärveä',
+    // 9.7333 E / 47.5069 N — Seebühne, Bregenz;
+    // en-Wikipedia "Bregenz Festival"
+    laudat: {
+      maailmankartta: { x: 6157.8, y: 1497.1 },
+    },
+    teksti: 'Bregenzer Festspiele on esittävän taiteen festivaali, joka '
+      + 'järjestetään joka heinä- ja elokuu Bregenzissä Vorarlbergissä. Sen '
+      + 'tunnus on suuri kelluva näyttämö Bodenjärvellä.\n\n'
+      + 'Kansainvälinen tapahtuma siitä tuli heti ensimmäisenä vuonna 1946, '
+      + 'vuosi toisen maailmansodan päättymisen jälkeen: väkeä tuli Saksasta, '
+      + 'Sveitsistä ja Ranskasta. Kaksi näyttämöä rakennettiin kelluvista '
+      + 'proomuista, toinen Wienin sinfoniaorkesterille ja toinen lavasteille. '
+      + 'Orkesteri on ollut festivaalin suurin tekijä ja esiintynyt siellä joka '
+      + 'vuosi alusta asti.\n\n'
+      + 'Vuonna 2001 ohjelmaan tuli nykytaiteen tapahtumia yhteistyössä '
+      + 'Kunsthaus Bregenzin kanssa, ja sen rinnalle on kasvanut lastenfestivaali '
+      + 'sekä ooppera- ja orkesterityöpajoja. Taiteellisena johtajana toimi '
+      + 'joulukuusta 2003 vuoteen 2014 David Pountney, ja 2015 hänen jälkeensä '
+      + 'aloitti Elisabeth Sobotka, joka perusti myös nuorille laulajille '
+      + 'tarkoitetun oopperastudion.\n\n'
+      + 'Näyttämö on näkynyt muuallakin kuin oopperayleisölle. Huhti–toukokuussa '
+      + '2008 siellä kuvattiin kohtauksia James Bond -elokuvaan Quantum of '
+      + 'Solace kesken Tosca-esityksen, ja saman vuoden kesäkuussa saksalainen '
+      + 'ZDF piti kelluvalla lavalla jalkapallon EM-kisojen lähetysstudiotaan. '
+      + 'Vuonna 2010 festivaalilla oli noin sata esitystä ja lähes 200 000 '
+      + 'katsojaa; vuoden 2015 kaudella yleisöä oli noin 257 000.',
+    lahde: 'en-Wikipedia "Bregenz Festival", johdanto-osa ja osio "History" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'krimmlin-vesiputoukset',
+    nimi: 'Krimmlin vesiputoukset',
+    nimio: 'Krimml',
+    tyyppi: 'muu',
+    kysymykset: [
+      'Kuinka paljon virtaama vaihtelee vuodenajan mukaan?',
+      'Minne putouksen vesi lopulta päätyy?',
+    ],
+    korostukset: ['sammal|sammalille'],
+    nappi: 'Itävallan korkein putous kolmessa portaassa',
+    // 12.1728 E / 47.2075 N — en-Wikipedia "Krimml Waterfalls"
+    laudat: {
+      maailmankartta: { x: 6239.1, y: 1509.8 },
+    },
+    teksti: 'Krimmlin vesiputoukset ovat kokonaiskorkeudeltaan 380 metriä ja '
+      + 'Itävallan korkeimmat. Ne ovat Krimmler Ache -joessa Krimmlin kylän '
+      + 'lähellä Korkean Tauernin kansallispuistossa Salzburgin osavaltiossa. '
+      + 'Vesi laskee kolmessa portaassa: ylin pudotus on 140 metriä, '
+      + 'keskimmäinen 100 ja alin 140. Putouksen korkein kohta on 1 470 metriä '
+      + 'merenpinnan yläpuolella.\n\n'
+      + 'Krimmler Ache on jäätikköpuro, ja sen virtaama vaihtelee rajusti '
+      + 'vuodenajan mukaan. Kesä- ja heinäkuussa se on 5,6 kuutiometriä '
+      + 'sekunnissa, helmikuussa vain 0,14. Suurin mitattu virtaama oli 25. '
+      + 'elokuuta 1987, jolloin se nousi 166,7 kuutiometriin sekunnissa. '
+      + 'Putousten jälkeen joki yhtyy Salzachiin, joka vie veden Inniin, sieltä '
+      + 'Tonavaan ja lopulta Mustaanmereen.\n\n'
+      + 'Jotta putouksen näkisi vaivatta, Ignaz von Kürsinger Mittersillistä '
+      + 'rakennutti polun sen yläosaan, ja Itävallan alppikerho paransi tietä '
+      + '1879 näköalojen vuoksi. Kävijöitä on noin 400 000 vuodessa.\n\n'
+      + 'Putouksen usva luo kasvuolot sadoille sammalille, jäkälille ja '
+      + 'saniaisille, ja ympäristössä elää 62 lintulajia. Pienelle kylälle '
+      + 'suosio on myös rasite: liikennettä on paljon ja tie kuluu.',
+    lahde: 'en-Wikipedia "Krimml Waterfalls", johdanto-osa sekä osiot "Falls", '
+      + '"Flow" ja "Tourism" (tarkistettu 11.9.2026).',
+  },
 ];

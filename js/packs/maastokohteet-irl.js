@@ -402,4 +402,104 @@ export const MAASTOKOHTEET_IRL = [
     lahde: 'en-Wikipedia "Kilkenny Castle", johdanto-osa sekä osiot "Early history" ja '
       + '"Butlers of Ormonde" (tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — KOLME KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Agentit voisivat tarkastaa myös muut
+   * Euroopan maat että kaikissa tarpeeksi nostoja."* Irlanti oli
+   * pääkartan inventaariossa Euroopan heikoimpia (17 merkkiä), ja
+   * päätoimittajan tavoite on vähintään kaksikymmentä. Kolme uutta
+   * kohdetta ovat kaikki yli yhdentoista lautayksikön päässä
+   * Dublinista, joten ne ovat pääkartan merkkejä eivätkä kuulu
+   * kohdekartalle. Kuvaton erä, kuten tiedoston muutkin kohteet.
+   * ============================================================== */
+  {
+    id: 'croagh-patrick',
+    nimi: 'Croagh Patrick',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Miksi vuorelle noustaan paljain jaloin?',
+      'Miksi vuoren kultaa ei kaivettu?',
+    ],
+    nappi: 'Pyhiinvaeltajien vuori',
+    // -9.6583 E / 53.7594 N — en-Wikipedia "Croagh Patrick"
+    laudat: {
+      maailmankartta: { x: 5511.4, y: 1222.8 },
+      europe: { x: 25.8, y: 479.7 },
+    },
+    teksti: 'Croagh Patrick on 764 metriä korkea vuori Mayon kreivikunnassa Murriskin kylän '
+      + 'takana, ja sen laelta avautuu näkymä Clew Baylle. Perimätiedon mukaan pyhä Patrick '
+      + 'paastosi huipulla neljäkymmentä päivää, ja vuori on siitä asti ollut Irlannin '
+      + 'tunnetuin pyhiinvaelluskohde.\n\n'
+      + 'Heinäkuun viimeisenä sunnuntaina eli Reek Sundayna huipulle nousee jopa '
+      + 'neljäkymmentätuhatta ihmistä vuodessa. Osa kiipeää paljain jaloin katumusharjoituksena, '
+      + 'ja huipun kappelissa pidetään messuja. Nykyinen pieni kappeli vihittiin 20. heinäkuuta '
+      + '1905, mutta kivinen rukoushuone on ollut laella jo 400-luvulta.\n\n'
+      + 'Arkeologinen kartoitus on löytänyt laen ympäriltä aitauksen jäänteet ja sen kylkeen '
+      + 'liittyviä pyöreitä majanpohjia, jotka ajoittuvat pronssikaudelle. Vuori on siis ollut '
+      + 'kokoontumispaikka kauan ennen kristinuskoa.\n\n'
+      + 'Vuoren ytimestä löytyi 1980-luvulla kultaa. Mayon kreivikunnanvaltuusto päätti olla '
+      + 'sallimatta kaivostoimintaa, kun Mayo Environmental Group vastusti hanketta Paddy '
+      + 'Hopkinsin johdolla.',
+    lahde: 'en-Wikipedia "Croagh Patrick" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'dun-aonghasa',
+    nimi: 'Dún Aonghasa',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mikä chevaux de frise on?',
+      'Miksi linnake on kallion reunalla?',
+    ],
+    nappi: 'Linnake jyrkänteen reunalla',
+    // -9.7681 E / 53.1258 N — en-Wikipedia "Dún Aonghasa"
+    laudat: {
+      maailmankartta: { x: 5507.7, y: 1251.6 },
+      europe: { x: 23.7, y: 496.4 },
+    },
+    teksti: 'Dún Aonghasa seisoo sadan metrin korkuisen jyrkänteen reunalla Inis Mórilla, '
+      + 'Aransaarten suurimmalla saarella Galwayn kreivikunnassa. Linnake on neljä '
+      + 'sisäkkäistä kuivamuurattua kivikehää, ja uloin niistä rajaa noin kuuden hehtaarin '
+      + 'alueen.\n\n'
+      + 'Kehien ulkopuolella on puolustusvyöhyke, jota kutsutaan nimellä chevaux de frise: '
+      + 'kalkkikiven rakoihin on pystytetty teräviä kivipaaluja pystyyn ja ulospäin '
+      + 'kallistuneina niin tiheään, ettei hyökkääjä pääse juoksemaan.\n\n'
+      + 'Paikkaa ei rakennettu kerralla. Ensimmäinen vaihe ajoittuu noin vuoteen 1100 eaa., '
+      + 'jolloin suurten pystykivien viereen kasattiin kiviaines ensimmäiseksi aitaukseksi. '
+      + 'Pronssin työstöstä on jälkiä noin vuodelta 900 eaa., ja kolminkertainen muuri '
+      + 'linnakkeen länsisivulla rakennettiin todennäköisesti noin 500 eaa.\n\n'
+      + 'Vuoden 1839 kaivauksissa löytyi varhaiselle rautakaudelle ajoittuva linnunpääsolki, '
+      + 'joka vahvistaa paikan olleen käytössä pronssikaudelta varhaiskeskiajalle asti.',
+    lahde: 'en-Wikipedia "Dún Aonghasa" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'glendalough',
+    nimi: 'Glendalough',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mitä nimi Gleann Dá Loch tarkoittaa?',
+      'Miksi pyöreä torni rakennettiin uudelleen?',
+    ],
+    nappi: 'Kahden järven laakso',
+    // -6.3275 E / 53.0103 N — en-Wikipedia "Glendalough"
+    laudat: {
+      maailmankartta: { x: 5622.4, y: 1256.8 },
+      europe: { x: 89.7, y: 499.4 },
+    },
+    teksti: 'Glendalough on luostarilaakso Wicklowin kreivikunnassa. Nimi tulee iirin sanoista '
+      + 'Gleann Dá Loch, kahden järven laakso: laakson pohjalla on kaksi järveä, jotka '
+      + 'Poulanass-joen tuoma suistokerrostuma erottaa toisistaan. Ympärillä kohoavat vuoret, '
+      + 'niiden joukossa 699-metrinen Camaderry.\n\n'
+      + 'Luostarin perusti 500-luvulla pyhä Kevin, joka kuoli noin vuonna 618 — perimätiedon '
+      + 'mukaan 3. kesäkuuta. Yhteisö kukoisti kuusi vuosisataa, kunnes sen hiippakunta '
+      + 'yhdistettiin Dublinin kanssa vuonna 1214 ja laakson asema alkoi heiketä.\n\n'
+      + 'Alueen tunnetuin rakennus on noin kolmekymmenmetrinen pyöreä torni. Se oli '
+      + 'romahtanut, ja vuonna 1876 se muurattiin uudelleen pystyyn sen omista, paikalta '
+      + 'kerätyistä kivistä.\n\n'
+      + 'Englantilaiset joukot tuhosivat luostariasutuksen vuonna 1398. Sen jälkeenkin '
+      + 'paikalla toimi paikallinen kirkko ja sinne tultiin pyhiinvaellukselle. Nykyään '
+      + 'laakso on suosittu retkeilykohde, jonka yhdeksän merkittyä polkua kulkevat '
+      + 'luostariraunioiden ohi.',
+    lahde: 'en-Wikipedia "Glendalough" (tarkistettu 11.9.2026).',
+  },
 ];

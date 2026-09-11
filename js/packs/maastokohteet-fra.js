@@ -399,5 +399,225 @@ export const MAASTOKOHTEET_FRA = [
       + 'uuneina, ja kiviä on viety teiden ja rakennusten aineeksi.',
     lahde: 'en-Wikipedia "Carnac stones", johdanto-osa (tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — VIISI KOHDETTA LISÄÄ. Omistaja 11.9.2026:
+   * *"Agentit voisivat tarkastaa myös muut Euroopan maat että
+   * kaikissa tarpeeksi nostoja."* Tavoite on vähintään 20 pääkartan
+   * nostoa per Euroopan maa; Ranska oli 15:ssä, koska suuri osa maan
+   * nostoista asuu Pariisin kohdekartalla.
+   *
+   * Kaikki viisi ovat kaukana laudan kaupungeista (lähinkin Avignonin
+   * paavinpalatsi 18 lautayksikköä Marseillesta, KAUPUNKIKATON_SADE
+   * on 8), joten ne ovat pääkartan merkkejä. Kuvaton erä; faktat
+   * en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'avignonin-paavinpalatsi',
+    nimi: 'Avignonin paavinpalatsi',
+    nimio: 'Avignon',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Montako konklaavia palatsissa pidettiin?',
+      'Miksi paavit halusivat takaisin Roomaan?',
+    ],
+    korostukset: ['konklaavi|konklaavia'],
+    nappi: 'Keskiajan suurin goottilainen rakennus',
+    // 4.8078 E / 43.9509 N — en-Wikipedia "Palais des Papes"
+    laudat: {
+      maailmankartta: { x: 5993.6, y: 1644.8 },
+    },
+    teksti: 'Palais des Papes Avignonissa on yksi Euroopan suurimmista ja '
+      + 'tärkeimmistä keskiaikaisista goottilaisista rakennuksista. Se oli '
+      + 'yhtä aikaa linnoitus ja palatsi ja 1300-luvulla läntisen kristikunnan '
+      + 'istuin. Palatsissa pidettiin kuusi konklaavia, joissa valittiin '
+      + 'Benedictus XII 1334, Klemens VI 1342, Innocentius VI 1352, Urbanus V '
+      + '1362, Gregorius XI 1370 ja Benedictus XIII 1394.\n\n'
+      + 'Rakennuksia on oikeastaan kaksi yhteen liitettynä: Benedictus XII:n '
+      + 'vanha palatsi Domsin kalliolla ja Klemens VI:n uusi palatsi. Yhdessä '
+      + 'ne muodostavat keskiajan suurimman goottilaisen rakennuksen. '
+      + 'Suunnittelusta vastasivat Pierre Peysson ja Jean de Louvres, '
+      + 'koristelusta sienalaisen koulukunnan Simone Martini ja Matteo '
+      + 'Giovanetti.\n\n'
+      + 'Palatsin kirjasto oli yli kahdellatuhannella niteellään aikansa suurin '
+      + 'Euroopassa, ja se veti puoleensa oppineita — heidän joukossaan '
+      + 'humanismin perustaja Petrarca. Suureen kappeliin tulivat säveltäjät ja '
+      + 'laulajat: siellä Klemens VI käytti Guillaume de Machaut\'n '
+      + 'Notre-Damen messua, siellä Philippe de Vitry esitteli Ars Novansa ja '
+      + 'siellä Johannes Ciconia opiskeli.\n\n'
+      + 'Koko muutti kirkon hallintoa. Kuurian väkimäärä oli 1200-luvun lopulla '
+      + 'kaksisataa, 1300-luvun alussa yli kolmesataa ja vuonna 1316 jo '
+      + 'viisisataa; lisäksi palatsissa työskenteli yli tuhat maallikkoa. '
+      + 'Palatsi jäi tarpeettomaksi, kun Urbanus V ja Gregorius XI veivät '
+      + 'paavinistuimen takaisin Roomaan Ranskan hovin ja kardinaalikollegion '
+      + 'vastustuksesta huolimatta: kumpikin oli vakuuttunut siitä, että '
+      + 'istuimen paikka voi olla vain Pietarin haudalla. Unescon '
+      + 'maailmanperintökohde palatsi on ollut vuodesta 1995.',
+    lahde: 'en-Wikipedia "Palais des Papes", johdanto-osa ja osio "Description" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'chambord',
+    nimi: 'Chambordin linna',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mihin Frans I rakennutti Chambordin?',
+      'Miksi linnan muurit ja vallihauta ovat koristeita?',
+    ],
+    korostukset: ['metsästysmaja|metsästysmajaksi'],
+    nappi: 'Metsästysmaja, jossa on 440 huonetta',
+    // 1.5170 E / 47.6161 N — en-Wikipedia "Château de Chambord"
+    laudat: {
+      maailmankartta: { x: 5883.9, y: 1492.5 },
+    },
+    teksti: 'Chambord on Loiren laakson suurin linna, ja sen sekoitus '
+      + 'keskiaikaisia ranskalaisia muotoja ja klassisia renessanssirakenteita '
+      + 'tekee siitä yhden maailman tunnistettavimmista. Frans I tilasi sen, ja '
+      + 'rakennustyö kesti vuodesta 1519 vuoteen 1547.\n\n'
+      + 'Linna rakennettiin metsästysmajaksi: kuninkaan varsinaiset asunnot '
+      + 'olivat Blois\'n ja Amboisen linnoissa. Alkuperäinen suunnitelma '
+      + 'katsotaan toscanalaisen Domenico da Cortonan työksi, ja Leonardo da '
+      + 'Vinci on saattanut vaikuttaa siihen. Kahdenkymmenenkahdeksan '
+      + 'rakennusvuoden aikana suunnitelmaa muutettiin paljon, ja työmaata '
+      + 'valvoi paikan päällä Pierre Neveu. Kun talo oli lähes valmis, Frans '
+      + 'esitteli vaurautensa ja valtansa merkkiä vanhalle vastustajalleen, '
+      + 'keisari Kaarle V:lle.\n\n'
+      + 'Rakennus on keskustornin ja neljän kulmatornin kokonaisuus, ja siinä '
+      + 'on 440 huonetta, 282 takkaa ja 84 porrasta. Koska linnaa ei koskaan '
+      + 'ollut tarkoitettu puolustukseen, muurit, tornit ja vallihaudan osa '
+      + 'ovat pelkkää koristetta ja olivat jo aikanaan vanhanaikaisia. Osa '
+      + 'italialaisesta renessanssista lainatuista piirteistä — avoimet '
+      + 'ikkunat, loggiat ja laaja kattotaso — sopi huonosti Pohjois-Ranskan '
+      + 'kylmään ja kosteaan ilmastoon.\n\n'
+      + 'Vuonna 1792 vallankumouksen jälkimainingeissa osa kalustosta myytiin ja '
+      + 'puutavaraa vietiin, ja talo jäi aikaa myöten autioksi; 1800-luvulla '
+      + 'sitä yritettiin korjata. Toisen maailmansodan aikana Chambordiin '
+      + 'siirrettiin taideteoksia Louvren ja Compiègnen kokoelmista. Kesäkuun '
+      + '2016 tulva vahingoitti puistoa mutta ei itse linnaa.',
+    lahde: 'en-Wikipedia "Château de Chambord", johdanto-osa ja osio '
+      + '"Architecture" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'douaumont',
+    nimi: 'Douaumontin luukammio',
+    nimio: 'Verdun',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuinka pienellä alueella Verdunin taistelu käytiin?',
+      'Kuka vihki hautausmaan 1923?',
+    ],
+    korostukset: ['Maginot|Maginot-linjan'],
+    nappi: 'Verdunin taistelukentän muistomerkki',
+    // 5.4214 E / 49.2108 N — en-Wikipedia "Douaumont ossuary"
+    laudat: {
+      maailmankartta: { x: 6014.0, y: 1424.4 },
+    },
+    teksti: 'Verdunin taistelu kesti 21. helmikuuta ja 19. joulukuuta 1916 '
+      + 'välisen ajan, kolmesataa päivää. Noin 300 000 miestä kuoli, ja '
+      + 'tappioita — kaatuneita, haavoittuneita ja kadonneita — oli yhteensä '
+      + 'noin 700 000. Taistelukenttä oli alle kaksikymmentä neliökilometriä. '
+      + 'Saksaksi sitä alettiin kutsua nimellä Die Hölle von Verdun ja '
+      + 'ranskaksi L\'Enfer de Verdun, Verdunin helvetti.\n\n'
+      + 'Luukammio rakennettiin Verdunin piispan Charles Ginistyn aloitteesta. '
+      + 'Sen pienistä ulkoikkunoista näkyvät vähintään 130 000 tunnistamattoman '
+      + 'ranskalaisen ja saksalaisen sotilaan luut. Sisällä kattoa ja seiniä '
+      + 'peittävät laatat, joissa on taistelussa kaatuneiden ranskalaisten '
+      + 'nimiä; laatan kustansi kunkin sotilaan perhe.\n\n'
+      + 'Rakennuksen edessä rinteessä on Ranskan suurin ensimmäisen '
+      + 'maailmansodan sotilashautausmaa, jossa on 16 142 hautaa. Se vihittiin '
+      + '1923, ja vihkijänä oli Verdunin veteraani André Maginot, joka '
+      + 'myöhemmin hyväksyi Maginot-linjan rakennustyöt. Itse luukammio '
+      + 'vihittiin virallisesti 7. elokuuta 1932 presidentti Albert Lebrunin '
+      + 'läsnä ollessa.\n\n'
+      + 'Arkkitehdit olivat Léon Azéma, Max Edrei ja Jacques Hardy, ja '
+      + 'lasimaalaukset suunnitteli George Desvallières. Torni on 46 metriä '
+      + 'korkea, ja siinä on yli kahden tonnin pronssinen kuolinkello, Bourdon '
+      + 'de la Victoire, joka soi virallisissa seremonioissa. Tornin huipulla '
+      + 'pyörii punavalkoinen kuolleiden lyhty, joka valaisee öisin '
+      + 'taistelukenttiä.',
+    lahde: 'en-Wikipedia "Douaumont ossuary", johdanto-osa sekä osiot "History", '
+      + '"Ossuary information" ja "Architecture" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'bayeux-seinavaate',
+    nimi: 'Bayeux\'n seinävaate',
+    nimio: 'Bayeux',
+    tyyppi: 'sana',
+    kysymykset: [
+      'Miksi teos ei ole oikeasti kuvakudos?',
+      'Kuka sen luultavasti tilasi ja miksi?',
+    ],
+    korostukset: ['kirjonta|kirjonta'],
+    nappi: 'Seitsemänkymmentä metriä vuotta 1066',
+    // -0.7 E / 49.2767 N — Bayeux, Normandia; en-Wikipedia "Bayeux Tapestry"
+    laudat: {
+      maailmankartta: { x: 5810.0, y: 1421.5 },
+    },
+    teksti: 'Bayeux\'n seinävaate on lähes seitsemänkymmentä metriä pitkä ja '
+      + 'viisikymmentä senttiä korkea kangas, joka kertoo Normandian herttuan '
+      + 'Vilhelmin Englannin-valloituksesta ja Hastingsin taistelusta vuonna '
+      + '1066. Nimestään huolimatta se ei ole kudottu kuvakudos vaan kirjonta: '
+      + 'kuvat on ommeltu villalangalla karkealle pellavalle neljällä '
+      + 'pistolajilla ja kymmenellä luonnonvärillä.\n\n'
+      + 'Kangas jakautuu 58 kohtaukseen, joilla kaikilla on keskiaikainen '
+      + 'latinankielinen teksti. Siinä on 623 ihmishahmoa, 994 eläintä, 438 '
+      + 'kasvia, 37 rakennusta ja linnoitusta sekä 41 laivaa ja venettä. '
+      + 'Kertomus alkaa Edvard Tunnustajan hallituskauden viimeisistä vuosista '
+      + '1064 ja päättyy Hastingsin taisteluun, jossa Vilhelm voitti Harold '
+      + 'Godwininpojan ja otti Englannin kruunun. Lähes puolet kohtauksista '
+      + 'käsittelee valloitusta edeltäneitä tapahtumia.\n\n'
+      + 'Tilaajaksi arvellaan yleensä Vilhelmin velipuolta, Bayeux\'n piispaa '
+      + 'Odoa, ja työ lienee tehty pian valloituksen jälkeen. Näkökulma on '
+      + 'Vilhelmille suopea, ja osa historioitsijoista lukee teoksen '
+      + 'propagandaksi, jonka tarkoitus oli oikeuttaa hänen valtansa ja voittaa '
+      + 'anglosaksinen ylimystö puolelleen. Silti se on korvaamaton lähde '
+      + '1000-luvun elämästä: vaatteista, linnoista, laivoista ja arjen '
+      + 'tavoista. Se on myös harvoja säilyneitä maallisen romaanisen taiteen '
+      + 'teoksia.\n\n'
+      + 'Kangasta säilytettiin Bayeux\'n katedraalin aarrekammiossa 1700-luvun '
+      + 'loppupuolelle, ja se säilyi täpärästi Ranskan vallankumouksen. '
+      + 'Oppineet löysivät sen uudelleen 1729, ja vuodesta 2007 se on ollut '
+      + 'Unescon Maailman muisti -rekisterissä.',
+    lahde: 'en-Wikipedia "Bayeux Tapestry", johdanto-osa (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'millaun-silta',
+    nimi: 'Millaun silta',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Miksi sillan rakentamiseen ryhdyttiin?',
+      'Kuinka korkea rakenne on?',
+    ],
+    korostukset: ['vinoköysisilta|vinoköysisilta'],
+    nappi: 'Yli kaksi vuosikymmentä maailman korkein silta',
+    // 3.0225 E / 44.0797 N — en-Wikipedia "Millau Viaduct"
+    laudat: {
+      maailmankartta: { x: 5934.1, y: 1639.5 },
+    },
+    teksti: 'Millaun silta on monijänteinen vinoköysisilta Tarn-joen rotkolaakson '
+      + 'yli Millaun länsipuolella Aveyronin departementissa Etelä-Ranskassa. '
+      + 'Suunnitteluryhmää johtivat insinööri Michel Virlogeux ja englantilainen '
+      + 'arkkitehti Norman Foster. Rakenteellinen korkeus on 343 metriä, ja yli '
+      + 'kahden vuosikymmenen ajan — vuoden 2025 loppuun asti — se oli maailman '
+      + 'korkein silta.\n\n'
+      + 'Silta kuuluu moottoritieakseliin A75–A71, joka vie Pariisista '
+      + 'Béziers\'iin ja Montpellier\'hen. Rakennuskustannukset olivat noin 394 '
+      + 'miljoonaa euroa. Työ kesti kolme vuotta; silta vihittiin 14. joulukuuta '
+      + '2004 ja avattiin liikenteelle kaksi päivää myöhemmin.\n\n'
+      + '1980-luvulla Millaun seudun tiet tukkeutuivat, kesäisin pahiten, koska '
+      + 'Pariisista Espanjaan matkaava lomaliikenne kulki siitä. Millaun '
+      + 'ohittamista oli pohdittu pitkään sekä matka-aikojen että kaupungin '
+      + 'oman saavutettavuuden takia. Ensimmäisiä siltasuunnitelmia käsiteltiin '
+      + '1987, ja lokakuussa 1991 päätettiin rakentaa Tarnin yli noin 2 500 '
+      + 'metriä pitkä korkea ylitys.\n\n'
+      + 'Vuosina 1993–1996 hallitus kuuli arkkitehteja ja rakennesuunnittelijoita, '
+      + 'ja tammikuussa 1995 julistettiin suunnittelukilpailu. Heinäkuussa 1996 '
+      + 'tuomaristo valitsi monijänteisen vinoköysiratkaisun, jota esitti '
+      + 'Virlogeux\'n, Fosterin ja Arcadisin yhteenliittymä. Eiffage perusti '
+      + 'maaliskuussa 2001 tytäryhtiön CEVM ja voitti urakkakilpailun saman '
+      + 'vuoden elokuussa. Silta sai 2006 kansainvälisen siltajärjestön IABSE:n '
+      + 'Outstanding Structure Award -palkinnon.',
+    lahde: 'en-Wikipedia "Millau Viaduct", johdanto-osa ja osio "History" '
+      + '(tarkistettu 11.9.2026).',
+  },
 ];
 

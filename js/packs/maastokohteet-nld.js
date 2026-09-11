@@ -352,5 +352,76 @@ export const MAASTOKOHTEET_NLD = [
     lahde: 'en-Wikipedia "Nijmegen", johdanto-osa sekä osiot "Antiquity" ja "Middle Ages" '
       + '(tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — KAKSI KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Agentit voisivat tarkastaa myös muut
+   * Euroopan maat että kaikissa tarpeeksi nostoja."* Alankomailla oli
+   * pääkartalla 18 merkkiä, ja tavoite on vähintään kaksikymmentä.
+   * Afsluitdijk on 33,7 ja Maastricht 72,9 lautayksikön päässä
+   * Amsterdamista, joten kumpikin on pääkartan merkki. Ensimmäinen
+   * ehdokas oli Kinderdijk, mutta sen nimiö osui Van Meegerenin
+   * skandaalinimiön päälle (tools/tarkista-nimiolimitys.mjs), ja
+   * tilalle valittiin Afsluitdijk. Kuvaton erä.
+   * ============================================================== */
+  {
+    id: 'afsluitdijk',
+    nimi: 'Afsluitdijk',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Mikä Zuiderzee oli?',
+      'Miksi pato rakennettiin vasta 1900-luvulla?',
+    ],
+    nappi: 'Kolmenkymmenen kilometrin pato',
+    // 5,2683 E / 53,0736 N — en-Wikipedia "Afsluitdijk", padon keskivaiheilta
+    laudat: {
+      maailmankartta: { x: 6008.9, y: 1253.9 },
+      europe: { x: 312.4, y: 497.8 },
+    },
+    teksti: 'Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin '
+      + 'välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan '
+      + 'yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 '
+      + 'tulvan jälkeen.\n\n'
+      + 'Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta '
+      + 'tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. '
+      + 'Sama rakennelma suojaa maata myrskytulvilta.\n\n'
+      + 'Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta '
+      + 'hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän '
+      + 'jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta '
+      + 'ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 '
+      + 'hinaajaa.\n\n'
+      + 'Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato '
+      + 'vihittiin käyttöön 25. syyskuuta 1933. Harjalla kulkee moottoritie A7, jolla ajaa '
+      + 'noin 20 000 ajoneuvoa vuorokaudessa.',
+    lahde: 'en-Wikipedia "Afsluitdijk" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'maastricht',
+    nimi: 'Maastricht',
+    tyyppi: 'kaupunki',
+    kysymykset: [
+      'Mitä Trajectum ad Mosam tarkoittaa?',
+      'Mikä Maastrichtin sopimus oli?',
+    ],
+    nappi: 'Kaupunki Maasin kahluupaikalla',
+    // 5.6833 E / 50.85 N — en-Wikipedia "Maastricht"
+    laudat: {
+      maailmankartta: { x: 6022.8, y: 1353 },
+      europe: { x: 320.3, y: 556.2 },
+    },
+    teksti: 'Maastricht on Limburgin maakunnan pääkaupunki Alankomaiden kaakkoiskulmassa, '
+      + 'siinä kohdassa jossa Jeker laskee Maasiin. Asukkaita on noin 120 000 (2021).\n\n'
+      + 'Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa. Sen '
+      + 'latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa, ja siitä on '
+      + 'kulunut myös kaupungin nykyinen nimi.\n\n'
+      + 'Perimätiedon mukaan pyhä Servatius kuoli täällä vuonna 384, ja noin vuonna 570 hänen '
+      + 'hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista '
+      + 'kristillisistä keskuksista. Maasin yli kulkeva Sint Servaasbrug on osin 1200-luvulta '
+      + 'ja maan vanhin silta. Keskiajalla kaupunki eli kaupasta, ja 1500—1700-luvuilla se '
+      + 'koki useita piirityksiä.\n\n'
+      + 'Kansainvälisesti Maastricht tunnetaan vuoden 1992 sopimuksesta, jolla Euroopan '
+      + 'unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, '
+      + 'enemmän kuin missään muualla Alankomaissa Amsterdamia lukuun ottamatta.',
+    lahde: 'en-Wikipedia "Maastricht" (tarkistettu 11.9.2026).',
+  },
 ];
-

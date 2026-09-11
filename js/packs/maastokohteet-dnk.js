@@ -385,4 +385,206 @@ export const MAASTOKOHTEET_DNK = [
     lahde: 'en-Wikipedia "Great Belt Bridge", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — VIISI KOHDETTA LISÄÄ. Omistaja 11.9.2026:
+   * *"Agentit voisivat tarkastaa myös muut Euroopan maat että
+   * kaikissa tarpeeksi nostoja."* Päätoimittajan mitta on vähintään
+   * 20 pääkartan nostoa per Euroopan maa; Tanska oli 15:ssä.
+   *
+   * Kaikki viisi ovat kaukana Kööpenhaminan laatasta (lähinkin Møns
+   * Klint 33 lautayksikköä, KAUPUNKIKATON_SADE on 8), joten yksikään
+   * ei kuulu kohdekartalle vaan kaikki ovat pääkartan merkkejä.
+   * Kuvaton erä kuten muutkin maastokohteet. Faktat en-Wikipediasta
+   * kohde kerrallaan 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'tollundin-mies',
+    nimi: 'Tollundin mies',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miksi löytäjät luulivat ruumista tuoreeksi murhan uhriksi?',
+      'Mitä suo säilytti ja mitä se liuotti?',
+    ],
+    korostukset: ['suoruumis|suoruumis'],
+    nappi: 'Rautakauden kasvot turpeen alta',
+    // 9.3936 E / 56.1683 N — Bjældskovdalin suo Silkeborgista länteen;
+    // en-Wikipedia "Tollund Man"
+    laudat: {
+      maailmankartta: { x: 6146.5, y: 1111.2 },
+    },
+    teksti: 'Turpeennostajat Viggo ja Emil Højgaard löysivät 8. toukokuuta 1950 '
+      + 'ruumiin turvekuopasta kaksitoista kilometriä Silkeborgista länteen; '
+      + 'ensimmäisenä sen huomasi Viggon vaimo Grethe Højgaard. Mies oli '
+      + 'säilynyt niin hyvin, että perhe luuli löytäneensä tuoreen murhan uhrin '
+      + 'ja soitti poliisille.\n\n'
+      + 'Poliisi kutsui paikalle Aarhusin yliopiston arkeologin Peter Vilhelm '
+      + 'Globin, joka arvioi ruumiin noin kahdentuhannen vuoden ikäiseksi. '
+      + 'Radiohiiliajoitus tarkensi kuolinajan vuosien 405 ja 380 eaa. väliin, '
+      + 'esiroomalaiselle rautakaudelle, ja iäksi arvioitiin noin neljäkymmentä '
+      + 'vuotta. Kaulassa oli tiukalla punottu nahkasilmukka, ja kuolinsyyksi on '
+      + 'oikeuslääketieteellisesti todettu hirttäminen. Oliko kyseessä uhri vai '
+      + 'rangaistus, ei tiedetä — todisteet eivät riitä kumpaankaan.\n\n'
+      + 'Suon hapan ja hapeton vesi liuotti suuren osan luustosta mutta säilytti '
+      + 'pehmytkudokset: sydämen, keuhkot ja maksan. Silmät ja suu olivat '
+      + 'rauhallisesti kiinni, ja ihon rypyt, ripset ja päivän sänki olivat '
+      + 'tallella. Hiukset oli leikattu niin lyhyiksi, että lampaannahkalakki '
+      + 'peitti ne lähes kokonaan. Vuonna 1976, kaksikymmentäkuusi vuotta '
+      + 'löydön jälkeen, Tanskan poliisi sai säilötystä peukalosta '
+      + 'käyttökelpoisen sormenjäljen.\n\n'
+      + 'Vatsan ja suoliston sisällöstä pääteltiin, että mies oli syönyt 12–24 '
+      + 'tuntia ennen kuolemaansa. Strontiumanalyysi reisiluusta ja hiuksista '
+      + 'kertoo, että hän pysyi viimeisen vuotensa nykyisen Tanskan alueella. '
+      + 'Kaksitoista vuotta ennen häntä samasta suosta oli löytynyt toinen '
+      + 'suoruumis, Ellingin nainen.',
+    lahde: 'en-Wikipedia "Tollund Man", johdanto-osa sekä osiot "Discovery", '
+      + '"Condition" ja "Scientific study" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'egeskov',
+    nimi: 'Egeskovin linna',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Miksi 1500-luvun aateliset linnoittivat kotinsa?',
+      'Mistä linnan nimi kertoo?',
+    ],
+    korostukset: ['nostosilta|nostosilta'],
+    nappi: 'Vesilinna tammipaalujen varassa',
+    // 10.4708 E / 55.1758 N — en-Wikipedia "Egeskov Castle"
+    laudat: {
+      maailmankartta: { x: 6182.4, y: 1157.6 },
+    },
+    teksti: 'Egeskov seisoo Kværndrupin lähellä Fynin saaren eteläosassa, ja se on '
+      + 'Tanskan parhaiten säilynyt renessanssin vesilinna. Paikka mainitaan '
+      + 'ensimmäisen kerran 1405, ja nykyisen rakennuksen pystytti Frands '
+      + 'Brockenhuus 1554.\n\n'
+      + 'Rakennusaika selittää muodon. Kreivin kapina, yleinen levottomuus ja '
+      + 'uskonpuhdistukseen johtanut sisällissota saivat useimmat Tanskan '
+      + 'aateliset linnoittamaan kotinsa. Egeskov nousi tammipaalujen varaan '
+      + 'pieneen järveen, jonka suurin syvyys on viisi metriä, ja alun perin '
+      + 'sinne pääsi vain nostosilta laskettuna.\n\n'
+      + 'Linna on kaksi pitkää rakennusta, jotka yhdistää yli metrin paksuinen '
+      + 'kaksoismuuri. Muurin sisällä on salaportaita ja kaivo, ja ajatus oli, '
+      + 'että puolustajat voivat luopua toisesta talosta ja jatkaa taistelua '
+      + 'toisesta. Kahdesta pyöreästä kulmatornista pystyi ampumaan hyökkääjää '
+      + 'sivusta, ja keskiaikaista puolustusta ovat myös tykkiaukot, '
+      + 'kaatoreiät ja nuoliraot. Ulkoa talo on myöhäisgotiikkaa, sisältä jo '
+      + 'renessanssia.\n\n'
+      + 'Legendan mukaan perustuksiin kului kokonainen tammimetsä — siitä nimi '
+      + 'Egeskov, tammimetsä. Bille-Brahen suku osti kartanon 1784 Brockenhuusin '
+      + 'suvun jälkeläisiltä, ja 1882 se siirtyi perintönä '
+      + 'Ahlefeldt-Laurvig-Bille-kreiveille, joiden hallussa se on yhä.',
+    lahde: 'en-Wikipedia "Egeskov Castle", johdanto-osa sekä osiot "History" ja '
+      + '"Castle architecture" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'mons-klint',
+    nimi: 'Møns Klint',
+    tyyppi: 'muu',
+    kysymykset: [
+      'Kuinka korkealle jyrkänne nousee merestä?',
+      'Milloin kalliot pääsivät maailmanperintöluetteloon?',
+    ],
+    korostukset: ['liitu|liitu'],
+    nappi: 'Kuuden kilometrin liitujyrkänne',
+    // 12.5486 E / 54.9711 N — en-Wikipedia "Møns Klint"
+    laudat: {
+      maailmankartta: { x: 6251.6, y: 1167.1 },
+    },
+    teksti: 'Møns Klint on kuuden kilometrin mittainen liitu- ja kalkkikivijyrkänne '
+      + 'Mønin saaren itärannikolla Itämeren äärellä. Osa kallioista putoaa '
+      + 'suoraan sata kaksikymmentä metriä mereen. Korkein niistä on '
+      + 'Dronningestolen, joka kohoaa 128 metriä merenpinnan yläpuolelle.\n\n'
+      + 'Jyrkänteen takana on metsää, laitumia, lampia ja jyrkkiä kukkuloita. '
+      + 'Yksi niistä on Aborrebjerg, joka 142 metrillään on Tanskan korkeimpia '
+      + 'kohtia. Kalliot ja niiden viereinen puistoalue on suojeltu '
+      + 'luonnonsuojelualueena.\n\n'
+      + 'Kävijöitä on noin 250 000 vuodessa. Alueella on selvästi merkityt '
+      + 'reitit kävelijöille, ratsastajille ja pyöräilijöille, ja jyrkänteen '
+      + 'harjaa myötäilevältä polulta pääsee useassa kohdassa portaita alas '
+      + 'rantaan. Kallionreunan tuntumassa avattiin 29. toukokuuta 2007 '
+      + 'GeoCenter Møns Klint, jonka piirsi kansainvälisen suunnittelukilpailun '
+      + 'voittanut arkkitehtitoimisto PLH Architects ja jonka avasi kuningatar '
+      + 'Margareeta.\n\n'
+      + 'Unescon maailmanperintöluetteloon Møns Klint hyväksyttiin 13. heinäkuuta '
+      + '2025.',
+    lahde: 'en-Wikipedia "Møns Klint", johdanto-osa (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'lindholm-hoje',
+    nimi: 'Lindholm Høje',
+    tyyppi: 'sana',
+    kysymykset: [
+      'Mitä haudan kiviladelman muoto kertoi vainajasta?',
+      'Miksi kylä hylättiin noin vuonna 1200?',
+    ],
+    korostukset: ['kivilaiva|kivilaiva'],
+    nappi: 'Seitsemänsataa hautaa Limfjordin yllä',
+    // 9.9127 E / 57.0794 N — en-Wikipedia "Lindholm Høje"
+    laudat: {
+      maailmankartta: { x: 6163.8, y: 1068.0 },
+    },
+    teksti: 'Lindholm Høje on viikinkiaikainen hautausmaa ja entinen asuinpaikka '
+      + 'Aalborgin pohjoispuolella, kaupungin yllä kohoavalla kummulla. '
+      + 'Eteläinen, alempi osa on ajalta 1000–1050 jaa., mutta pohjoinen ja '
+      + 'ylempi osa on paljon vanhempi: se ulottuu 400-luvulle pohjoismaiseen '
+      + 'rautakauteen. Ensimmäinen suuri kaivaus alkoi 1952 ja kattoi lopulta '
+      + '589 hautaa noin seitsemästäsadasta; pieniä kaivauksia oli tehty jo '
+      + '1889. Kiviä oli viety vuosisatojen ajan, ja 1800-luvulla niitä '
+      + 'rikottiin tienrakennukseen.\n\n'
+      + 'Kylä sijaitsi tärkeässä paikassa: Limfjordin, Jyllannin poikki '
+      + 'kulkevan vesireitin, ylityskohdassa. Viikinkiaikana salmen yli pääsi '
+      + 'vain tästä tai paljon lännempää Aggersundista, koska rantoja reunusti '
+      + 'suo. Asutus hylättiin noin vuonna 1200, luultavasti siksi, että '
+      + 'länsirannikon hiekka lähti liikkeelle laajojen metsänhakkuiden '
+      + 'jälkeen ja tuuli kantoi sen sisämaahan. Sama hiekka peitti paikan ja '
+      + 'säilytti sen.\n\n'
+      + 'Sijainti ja kulkuyhteydet tekivät kylästä kauppapaikan: haudoista on '
+      + 'löytynyt lasia, jalokiviä ja arabialaisia hopearahoja. Enimmäkseen '
+      + 'vainajat poltettiin, mutta osa haudattiin, ja tapa vaihteli kausittain. '
+      + 'Useimmat haudat on merkitty kivillä kolmioksi tai laivan muotoon. '
+      + 'Tällainen kivilaiva kertoi veden merkityksestä, ja ladelman koko '
+      + 'ilmeisesti vainajan asemasta. Lindholm Højen laivalatomukset ovat '
+      + 'suurin säilynyt kokoelma lajissaan. Vuonna 1992 paikan viereen avattiin '
+      + 'museo, jota laajennettiin 2008.',
+    lahde: 'en-Wikipedia "Lindholm Høje", johdanto-osa ja osio "About the area" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'billund',
+    nimi: 'Billund',
+    tyyppi: 'kauppa',
+    kysymykset: [
+      'Mistä sanasta nimi Lego tulee?',
+      'Miksi pikkukylään rakennettiin lentokenttä?',
+    ],
+    korostukset: ['leg godt|leg godt'],
+    nappi: 'Kylä, josta tuli maailman suurin lelutehdas',
+    // 9.1167 E / 55.7333 N — en-Wikipedia "The Lego Group", "Lego"
+    laudat: {
+      maailmankartta: { x: 6137.2, y: 1131.6 },
+    },
+    teksti: 'Puuseppä Ole Kirk Christiansen perusti yrityksensä Billundissa 1932, '
+      + 'kun lama oli vienyt taloustavaroiden valmistukselta pohjan. Aluksi '
+      + 'tehtaasta tuli puuleluja. Nimi Lego on lyhennys tanskan sanoista leg '
+      + 'godt, leiki hyvin; latinassa sama sana tarkoittaa muun muassa kokoan, '
+      + 'valitsen ja luen — merkitykset, jotka kävivät toteen vasta kun tehdas '
+      + 'alkoi tehdä nystyröityjä palikoita.\n\n'
+      + 'Muovituotanto alkoi Tanskassa 1947, ja kun puutyöosasto paloi, pojan '
+      + 'Godtfredin päätös oli lopettaa puulelut kokonaan ja keskittyä '
+      + 'palikkajärjestelmään. Lukkiutuvien palikoiden valmistus alkoi 1949. '
+      + 'Esikuvana olivat englantilaisen leluntekijän Hilary Pagen 1939 '
+      + 'keksimät palikat, joita valmisti hänen yhtiönsä Kiddicraft.\n\n'
+      + 'Vuonna 1961 Christiansen rakennutti Billundin lentokentän alun, jotta '
+      + 'leluja saisi maailmalle. Yhtiö on pysynyt perheen omistuksessa; '
+      + 'vuodesta 1995 sitä on hallinnoitu sijoitusyhtiö Kirkbin kautta. Vuoden '
+      + '2015 alkupuoliskolla Legosta tuli liikevaihdolla mitattuna maailman '
+      + 'suurin leluyhtiö: myyntiä 2,1 miljardia dollaria, kun Mattelilla oli '
+      + '1,9 miljardia.\n\n'
+      + 'Palikoita valmistetaan vuodessa noin 36 miljardia, eli suunnilleen '
+      + '1 140 osaa sekunnissa. Heinäkuuhun 2015 mennessä niitä oli tehty '
+      + 'kuusisataa miljardia. Brändin ympärille on rakennettu kymmenen '
+      + 'Legoland-huvipuistoa, elokuvia ja pelejä.',
+    lahde: 'en-Wikipedia "The Lego Group", johdanto-osa ja osio "History", sekä '
+      + '"Lego", johdanto-osa (tarkistettu 11.9.2026).',
+  },
 ];
