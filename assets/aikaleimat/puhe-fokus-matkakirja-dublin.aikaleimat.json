@@ -1,0 +1,215 @@
+{
+  "versio": 2,
+  "kaupunki": "dublin",
+  "teksti": "Guinnessin panimon vuokrasopimus on tehty yhdeksäksituhanneksi vuodeksi. Sellaisen allekirjoittamiseen tarvitaan uskoa joko olueen tai janoon. Portilla tuoksui lämmin mallas, ja kärryille vieritettiin tynnyreitä. Mies pyyhki otsaansa hihalla. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään. Olin unohtanut vuokrasopimuksen.",
+  "tekstiSha256": "32ba6eb6eba2f4991e307226a2957c4ea3c8defbe1e3e1649af4e241d88d0d1f",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-dublin.mp3",
+    "versio": 2,
+    "tavut": 496579,
+    "sha256": "e290a37e5b8e5361e60207349d0d7c0a4c5c0789676eb11f3209682077d6e369"
+  },
+  "kesto": 30920,
+  "sanat": [
+    {
+      "sana": "Guinnessin",
+      "alku": 159,
+      "loppu": 759
+    },
+    {
+      "sana": "panimon",
+      "alku": 779,
+      "loppu": 1220
+    },
+    {
+      "sana": "vuokrasopimus",
+      "alku": 1319,
+      "loppu": 2259
+    },
+    {
+      "sana": "on",
+      "alku": 2539,
+      "loppu": 2659
+    },
+    {
+      "sana": "tehty",
+      "alku": 2720,
+      "loppu": 3159
+    },
+    {
+      "sana": "yhdeksäksituhanneksi",
+      "alku": 3240,
+      "loppu": 4299
+    },
+    {
+      "sana": "vuodeksi",
+      "alku": 4420,
+      "loppu": 5000
+    },
+    {
+      "sana": "Sellaisen",
+      "alku": 6619,
+      "loppu": 7039
+    },
+    {
+      "sana": "allekirjoittamiseen",
+      "alku": 7139,
+      "loppu": 8199
+    },
+    {
+      "sana": "tarvitaan",
+      "alku": 8239,
+      "loppu": 8739
+    },
+    {
+      "sana": "uskoa",
+      "alku": 8819,
+      "loppu": 9219
+    },
+    {
+      "sana": "joko",
+      "alku": 9300,
+      "loppu": 9519
+    },
+    {
+      "sana": "olueen",
+      "alku": 9659,
+      "loppu": 10099
+    },
+    {
+      "sana": "tai",
+      "alku": 10539,
+      "loppu": 10659
+    },
+    {
+      "sana": "janoon",
+      "alku": 10739,
+      "loppu": 11179
+    },
+    {
+      "sana": "Portilla",
+      "alku": 13179,
+      "loppu": 13599
+    },
+    {
+      "sana": "tuoksui",
+      "alku": 13659,
+      "loppu": 14099
+    },
+    {
+      "sana": "lämmin",
+      "alku": 14159,
+      "loppu": 14480
+    },
+    {
+      "sana": "mallas",
+      "alku": 14579,
+      "loppu": 15059
+    },
+    {
+      "sana": "ja",
+      "alku": 15319,
+      "loppu": 15420
+    },
+    {
+      "sana": "kärryille",
+      "alku": 15479,
+      "loppu": 15960
+    },
+    {
+      "sana": "vieritettiin",
+      "alku": 16020,
+      "loppu": 16680
+    },
+    {
+      "sana": "tynnyreitä",
+      "alku": 16739,
+      "loppu": 17379
+    },
+    {
+      "sana": "Mies",
+      "alku": 18920,
+      "loppu": 19139
+    },
+    {
+      "sana": "pyyhki",
+      "alku": 19199,
+      "loppu": 19539
+    },
+    {
+      "sana": "otsaansa",
+      "alku": 19619,
+      "loppu": 20100
+    },
+    {
+      "sana": "hihalla",
+      "alku": 20159,
+      "loppu": 20619
+    },
+    {
+      "sana": "Kysyin",
+      "alku": 21939,
+      "loppu": 22360
+    },
+    {
+      "sana": "loppuuko",
+      "alku": 22579,
+      "loppu": 23079
+    },
+    {
+      "sana": "työ",
+      "alku": 23180,
+      "loppu": 23379
+    },
+    {
+      "sana": "koskaan",
+      "alku": 23439,
+      "loppu": 24039
+    },
+    {
+      "sana": "Hän",
+      "alku": 25519,
+      "loppu": 25619
+    },
+    {
+      "sana": "katsoi",
+      "alku": 25680,
+      "loppu": 26000
+    },
+    {
+      "sana": "minua",
+      "alku": 26039,
+      "loppu": 26279
+    },
+    {
+      "sana": "pitkään",
+      "alku": 26340,
+      "loppu": 26859
+    },
+    {
+      "sana": "Olin",
+      "alku": 28819,
+      "loppu": 29079
+    },
+    {
+      "sana": "unohtanut",
+      "alku": 29119,
+      "loppu": 29739
+    },
+    {
+      "sana": "vuokrasopimuksen",
+      "alku": 29859,
+      "loppu": 30920
+    }
+  ],
+  "lauseet": [
+    159,
+    6619,
+    13179,
+    18920,
+    21939,
+    25519,
+    28819
+  ],
+  "luotu": "2026-09-11T12:04:37.092Z"
+}

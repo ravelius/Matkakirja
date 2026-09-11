@@ -1,0 +1,254 @@
+{
+  "versio": 2,
+  "kaupunki": "bukarest",
+  "teksti": "Bukarestin Manucin majatalossa huoneet kiertävät pihaa puuparvien takana. Avasin oven ja kuulin yhtä aikaa kolmet eri kaupat. Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. Keittiöstä nousi tuoksu, jolle ei tarvittu tulkkia. Menin alas ennen kuin ehdin laskea parven pylväät. Huoneeni löysin illalla naapurini kuorsauksesta.",
+  "tekstiSha256": "7d211c61e74a16ec88c71b37d1f4f08a5994fb4d1780a2fcf2cc7bb3c7b63094",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-bukarest.mp3",
+    "versio": 2,
+    "tavut": 489892,
+    "sha256": "91769faafdc4eaf1a4221c1fcabcc68ed649146bca87f7a04c68eecbbb821765"
+  },
+  "kesto": 30520,
+  "sanat": [
+    {
+      "sana": "Bukarestin",
+      "alku": 179,
+      "loppu": 839
+    },
+    {
+      "sana": "Manucin",
+      "alku": 959,
+      "loppu": 1539
+    },
+    {
+      "sana": "majatalossa",
+      "alku": 1599,
+      "loppu": 2339
+    },
+    {
+      "sana": "huoneet",
+      "alku": 2639,
+      "loppu": 3059
+    },
+    {
+      "sana": "kiertävät",
+      "alku": 3159,
+      "loppu": 3679
+    },
+    {
+      "sana": "pihaa",
+      "alku": 3740,
+      "loppu": 4079
+    },
+    {
+      "sana": "puuparvien",
+      "alku": 4199,
+      "loppu": 4819
+    },
+    {
+      "sana": "takana",
+      "alku": 4900,
+      "loppu": 5319
+    },
+    {
+      "sana": "Avasin",
+      "alku": 6960,
+      "loppu": 7339
+    },
+    {
+      "sana": "oven",
+      "alku": 7419,
+      "loppu": 7699
+    },
+    {
+      "sana": "ja",
+      "alku": 7940,
+      "loppu": 8039
+    },
+    {
+      "sana": "kuulin",
+      "alku": 8099,
+      "loppu": 8399
+    },
+    {
+      "sana": "yhtä",
+      "alku": 8479,
+      "loppu": 8720
+    },
+    {
+      "sana": "aikaa",
+      "alku": 8819,
+      "loppu": 9179
+    },
+    {
+      "sana": "kolmet",
+      "alku": 9319,
+      "loppu": 9699
+    },
+    {
+      "sana": "eri",
+      "alku": 9760,
+      "loppu": 9859
+    },
+    {
+      "sana": "kaupat",
+      "alku": 9979,
+      "loppu": 10439
+    },
+    {
+      "sana": "Alhaalla",
+      "alku": 12179,
+      "loppu": 12579
+    },
+    {
+      "sana": "mies",
+      "alku": 12639,
+      "loppu": 12880
+    },
+    {
+      "sana": "nukkui",
+      "alku": 12979,
+      "loppu": 13340
+    },
+    {
+      "sana": "säkkinsä",
+      "alku": 13399,
+      "loppu": 13840
+    },
+    {
+      "sana": "päällä",
+      "alku": 14000,
+      "loppu": 14319
+    },
+    {
+      "sana": "kuin",
+      "alku": 14420,
+      "loppu": 14599
+    },
+    {
+      "sana": "pankki",
+      "alku": 14739,
+      "loppu": 15159
+    },
+    {
+      "sana": "omaisuutensa",
+      "alku": 15319,
+      "loppu": 16000
+    },
+    {
+      "sana": "vartijana",
+      "alku": 16059,
+      "loppu": 16600
+    },
+    {
+      "sana": "Keittiöstä",
+      "alku": 18279,
+      "loppu": 18799
+    },
+    {
+      "sana": "nousi",
+      "alku": 18859,
+      "loppu": 19119
+    },
+    {
+      "sana": "tuoksu",
+      "alku": 19180,
+      "loppu": 19600
+    },
+    {
+      "sana": "jolle",
+      "alku": 19979,
+      "loppu": 20180
+    },
+    {
+      "sana": "ei",
+      "alku": 20219,
+      "loppu": 20299
+    },
+    {
+      "sana": "tarvittu",
+      "alku": 20359,
+      "loppu": 20799
+    },
+    {
+      "sana": "tulkkia",
+      "alku": 20840,
+      "loppu": 21399
+    },
+    {
+      "sana": "Menin",
+      "alku": 23019,
+      "loppu": 23260
+    },
+    {
+      "sana": "alas",
+      "alku": 23340,
+      "loppu": 23600
+    },
+    {
+      "sana": "ennen",
+      "alku": 23699,
+      "loppu": 23899
+    },
+    {
+      "sana": "kuin",
+      "alku": 23959,
+      "loppu": 24180
+    },
+    {
+      "sana": "ehdin",
+      "alku": 24239,
+      "loppu": 24479
+    },
+    {
+      "sana": "laskea",
+      "alku": 24500,
+      "loppu": 24939
+    },
+    {
+      "sana": "parven",
+      "alku": 25000,
+      "loppu": 25319
+    },
+    {
+      "sana": "pylväät",
+      "alku": 25359,
+      "loppu": 25899
+    },
+    {
+      "sana": "Huoneeni",
+      "alku": 27819,
+      "loppu": 28279
+    },
+    {
+      "sana": "löysin",
+      "alku": 28359,
+      "loppu": 28680
+    },
+    {
+      "sana": "illalla",
+      "alku": 28760,
+      "loppu": 29099
+    },
+    {
+      "sana": "naapurini",
+      "alku": 29139,
+      "loppu": 29679
+    },
+    {
+      "sana": "kuorsauksesta",
+      "alku": 29719,
+      "loppu": 30520
+    }
+  ],
+  "lauseet": [
+    179,
+    6960,
+    12179,
+    18279,
+    23019,
+    27819
+  ],
+  "luotu": "2026-09-11T12:04:03.076Z"
+}

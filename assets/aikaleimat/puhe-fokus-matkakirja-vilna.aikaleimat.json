@@ -1,0 +1,214 @@
+{
+  "versio": 2,
+  "kaupunki": "vilna",
+  "teksti": "Vilnan observatoriossa näytettiin valokuvaa auringonpilkuista. Olin pitänyt aurinkoa virheettömänä valaisimena, mutta silläkin on tahroja. Ikkunan alla kirkontornit osoittivat taivaaseen kukin omalla tavallaan. Tutkija odotti pilvien väistymistä. Joimme teetä. On lohdullista, että taivaan tutkiminenkin vaatii toisinaan vain hyvän tuolin.",
+  "tekstiSha256": "59f75db4d66ac87c2439995b39493885b1bf8d6c2b3531177c32eecb1c774167",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-vilna.mp3",
+    "versio": 2,
+    "tavut": 443916,
+    "sha256": "7845302b973a1ba0dbb96a8166aa85afebab34034982357c9c23ace14302146d"
+  },
+  "kesto": 27659,
+  "sanat": [
+    {
+      "sana": "Vilnan",
+      "alku": 159,
+      "loppu": 519
+    },
+    {
+      "sana": "observatoriossa",
+      "alku": 620,
+      "loppu": 1539
+    },
+    {
+      "sana": "näytettiin",
+      "alku": 1620,
+      "loppu": 2099
+    },
+    {
+      "sana": "valokuvaa",
+      "alku": 2180,
+      "loppu": 2679
+    },
+    {
+      "sana": "auringonpilkuista",
+      "alku": 2759,
+      "loppu": 3879
+    },
+    {
+      "sana": "Olin",
+      "alku": 5219,
+      "loppu": 5400
+    },
+    {
+      "sana": "pitänyt",
+      "alku": 5440,
+      "loppu": 5799
+    },
+    {
+      "sana": "aurinkoa",
+      "alku": 5839,
+      "loppu": 6319
+    },
+    {
+      "sana": "virheettömänä",
+      "alku": 6379,
+      "loppu": 7099
+    },
+    {
+      "sana": "valaisimena",
+      "alku": 7139,
+      "loppu": 7759
+    },
+    {
+      "sana": "mutta",
+      "alku": 8319,
+      "loppu": 8500
+    },
+    {
+      "sana": "silläkin",
+      "alku": 8579,
+      "loppu": 9039
+    },
+    {
+      "sana": "on",
+      "alku": 9139,
+      "loppu": 9220
+    },
+    {
+      "sana": "tahroja",
+      "alku": 9300,
+      "loppu": 9839
+    },
+    {
+      "sana": "Ikkunan",
+      "alku": 11599,
+      "loppu": 12039
+    },
+    {
+      "sana": "alla",
+      "alku": 12139,
+      "loppu": 12359
+    },
+    {
+      "sana": "kirkontornit",
+      "alku": 12439,
+      "loppu": 13239
+    },
+    {
+      "sana": "osoittivat",
+      "alku": 13319,
+      "loppu": 13899
+    },
+    {
+      "sana": "taivaaseen",
+      "alku": 13960,
+      "loppu": 14639
+    },
+    {
+      "sana": "kukin",
+      "alku": 14759,
+      "loppu": 15119
+    },
+    {
+      "sana": "omalla",
+      "alku": 15199,
+      "loppu": 15460
+    },
+    {
+      "sana": "tavallaan",
+      "alku": 15539,
+      "loppu": 16099
+    },
+    {
+      "sana": "Tutkija",
+      "alku": 17579,
+      "loppu": 17979
+    },
+    {
+      "sana": "odotti",
+      "alku": 18039,
+      "loppu": 18359
+    },
+    {
+      "sana": "pilvien",
+      "alku": 18420,
+      "loppu": 18779
+    },
+    {
+      "sana": "väistymistä",
+      "alku": 18859,
+      "loppu": 19579
+    },
+    {
+      "sana": "Joimme",
+      "alku": 20699,
+      "loppu": 20959
+    },
+    {
+      "sana": "teetä",
+      "alku": 21039,
+      "loppu": 21399
+    },
+    {
+      "sana": "On",
+      "alku": 23439,
+      "loppu": 23539
+    },
+    {
+      "sana": "lohdullista",
+      "alku": 23600,
+      "loppu": 24180
+    },
+    {
+      "sana": "että",
+      "alku": 24239,
+      "loppu": 24420
+    },
+    {
+      "sana": "taivaan",
+      "alku": 24479,
+      "loppu": 24859
+    },
+    {
+      "sana": "tutkiminenkin",
+      "alku": 24920,
+      "loppu": 25679
+    },
+    {
+      "sana": "vaatii",
+      "alku": 25739,
+      "loppu": 26119
+    },
+    {
+      "sana": "toisinaan",
+      "alku": 26180,
+      "loppu": 26759
+    },
+    {
+      "sana": "vain",
+      "alku": 26799,
+      "loppu": 26979
+    },
+    {
+      "sana": "hyvän",
+      "alku": 27039,
+      "loppu": 27319
+    },
+    {
+      "sana": "tuolin",
+      "alku": 27399,
+      "loppu": 27659
+    }
+  ],
+  "lauseet": [
+    159,
+    5219,
+    11599,
+    17579,
+    20699,
+    23439
+  ],
+  "luotu": "2026-09-11T12:04:53.549Z"
+}

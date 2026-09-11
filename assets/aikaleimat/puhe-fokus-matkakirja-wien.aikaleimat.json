@@ -1,0 +1,240 @@
+{
+  "versio": 2,
+  "kaupunki": "wien",
+  "teksti": "Wienin maailmannäyttelyssä näin koneen painavan sanomalehteä silmieni edessä. Se ei tarvinnut edes aikaa ajatellakseen, mitä kirjoitti. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten pörssi romahti. Kahvilassa herra taitteli lehtensä hyvin pieneksi, mutta uutinen ei pienentynyt. Tilasin hänelle kahvin. Koneista ei ollut siihen apua.",
+  "tekstiSha256": "bd09c145b4d282205924423b6a07796f66cd0ca17be05cdd9baf919e6fe6c5d1",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-wien.mp3",
+    "versio": 2,
+    "tavut": 494071,
+    "sha256": "4a2dcea8476fe69dba65f32cba5be0104334136d5def38dde246f80a548dc383"
+  },
+  "kesto": 30739,
+  "sanat": [
+    {
+      "sana": "Wienin",
+      "alku": 219,
+      "loppu": 579
+    },
+    {
+      "sana": "maailmannäyttelyssä",
+      "alku": 659,
+      "loppu": 1659
+    },
+    {
+      "sana": "näin",
+      "alku": 1699,
+      "loppu": 1860
+    },
+    {
+      "sana": "koneen",
+      "alku": 1979,
+      "loppu": 2339
+    },
+    {
+      "sana": "painavan",
+      "alku": 2440,
+      "loppu": 2859
+    },
+    {
+      "sana": "sanomalehteä",
+      "alku": 2919,
+      "loppu": 3679
+    },
+    {
+      "sana": "silmieni",
+      "alku": 3720,
+      "loppu": 4219
+    },
+    {
+      "sana": "edessä",
+      "alku": 4259,
+      "loppu": 4819
+    },
+    {
+      "sana": "Se",
+      "alku": 6359,
+      "loppu": 6440
+    },
+    {
+      "sana": "ei",
+      "alku": 6480,
+      "loppu": 6579
+    },
+    {
+      "sana": "tarvinnut",
+      "alku": 6639,
+      "loppu": 7059
+    },
+    {
+      "sana": "edes",
+      "alku": 7079,
+      "loppu": 7319
+    },
+    {
+      "sana": "aikaa",
+      "alku": 7440,
+      "loppu": 7759
+    },
+    {
+      "sana": "ajatellakseen",
+      "alku": 7859,
+      "loppu": 8619
+    },
+    {
+      "sana": "mitä",
+      "alku": 8739,
+      "loppu": 8880
+    },
+    {
+      "sana": "kirjoitti",
+      "alku": 8979,
+      "loppu": 9599
+    },
+    {
+      "sana": "Rotunden",
+      "alku": 11099,
+      "loppu": 11639
+    },
+    {
+      "sana": "kupoli",
+      "alku": 11719,
+      "loppu": 12119
+    },
+    {
+      "sana": "peitti",
+      "alku": 12279,
+      "loppu": 12559
+    },
+    {
+      "sana": "taivaan",
+      "alku": 12619,
+      "loppu": 13139
+    },
+    {
+      "sana": "rautaisella",
+      "alku": 13239,
+      "loppu": 13839
+    },
+    {
+      "sana": "hatulla",
+      "alku": 13880,
+      "loppu": 14359
+    },
+    {
+      "sana": "Sitten",
+      "alku": 15880,
+      "loppu": 16219
+    },
+    {
+      "sana": "pörssi",
+      "alku": 16340,
+      "loppu": 16699
+    },
+    {
+      "sana": "romahti",
+      "alku": 16779,
+      "loppu": 17260
+    },
+    {
+      "sana": "Kahvilassa",
+      "alku": 18899,
+      "loppu": 19479
+    },
+    {
+      "sana": "herra",
+      "alku": 19539,
+      "loppu": 19819
+    },
+    {
+      "sana": "taitteli",
+      "alku": 19859,
+      "loppu": 20259
+    },
+    {
+      "sana": "lehtensä",
+      "alku": 20319,
+      "loppu": 20799
+    },
+    {
+      "sana": "hyvin",
+      "alku": 20859,
+      "loppu": 21139
+    },
+    {
+      "sana": "pieneksi",
+      "alku": 21199,
+      "loppu": 21739
+    },
+    {
+      "sana": "mutta",
+      "alku": 22579,
+      "loppu": 22779
+    },
+    {
+      "sana": "uutinen",
+      "alku": 22899,
+      "loppu": 23559
+    },
+    {
+      "sana": "ei",
+      "alku": 23659,
+      "loppu": 23799
+    },
+    {
+      "sana": "pienentynyt",
+      "alku": 23859,
+      "loppu": 24619
+    },
+    {
+      "sana": "Tilasin",
+      "alku": 26019,
+      "loppu": 26399
+    },
+    {
+      "sana": "hänelle",
+      "alku": 26459,
+      "loppu": 26779
+    },
+    {
+      "sana": "kahvin",
+      "alku": 26840,
+      "loppu": 27319
+    },
+    {
+      "sana": "Koneista",
+      "alku": 29099,
+      "loppu": 29639
+    },
+    {
+      "sana": "ei",
+      "alku": 29739,
+      "loppu": 29840
+    },
+    {
+      "sana": "ollut",
+      "alku": 29920,
+      "loppu": 30139
+    },
+    {
+      "sana": "siihen",
+      "alku": 30199,
+      "loppu": 30500
+    },
+    {
+      "sana": "apua",
+      "alku": 30559,
+      "loppu": 30739
+    }
+  ],
+  "lauseet": [
+    219,
+    6359,
+    11099,
+    15880,
+    18899,
+    26019,
+    29099
+  ],
+  "luotu": "2026-09-11T12:04:07.646Z"
+}

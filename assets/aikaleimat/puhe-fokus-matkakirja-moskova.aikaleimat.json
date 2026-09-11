@@ -1,0 +1,249 @@
+{
+  "versio": 2,
+  "kaupunki": "moskova",
+  "teksti": "Kremlissä seisoo valtava kello, joka ei ole soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala on minun huonettani suuremman oloinen. Vartija kertoi painon ylpeästi, aivan kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään. Sillä oli vähemmän mainetta mutta selvästi enemmän vaikutusvaltaa.",
+  "tekstiSha256": "978cc6c1e141562386fa3b857c3c43b81e39ec624fd002f29750ca632190bb5c",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-moskova.mp3",
+    "versio": 2,
+    "tavut": 456873,
+    "sha256": "ba1af2d1bcb31554157a7681e3c466bd0010748ce22f849facb027f3b30dde01"
+  },
+  "kesto": 28439,
+  "sanat": [
+    {
+      "sana": "Kremlissä",
+      "alku": 119,
+      "loppu": 579
+    },
+    {
+      "sana": "seisoo",
+      "alku": 639,
+      "loppu": 1000
+    },
+    {
+      "sana": "valtava",
+      "alku": 1039,
+      "loppu": 1439
+    },
+    {
+      "sana": "kello",
+      "alku": 1559,
+      "loppu": 1919
+    },
+    {
+      "sana": "joka",
+      "alku": 2220,
+      "loppu": 2440
+    },
+    {
+      "sana": "ei",
+      "alku": 2460,
+      "loppu": 2519
+    },
+    {
+      "sana": "ole",
+      "alku": 2559,
+      "loppu": 2720
+    },
+    {
+      "sana": "soinut",
+      "alku": 2759,
+      "loppu": 3139
+    },
+    {
+      "sana": "kertaakaan",
+      "alku": 3179,
+      "loppu": 4039
+    },
+    {
+      "sana": "Se",
+      "alku": 5460,
+      "loppu": 5559
+    },
+    {
+      "sana": "halkesi",
+      "alku": 5619,
+      "loppu": 6059
+    },
+    {
+      "sana": "ennen",
+      "alku": 6099,
+      "loppu": 6319
+    },
+    {
+      "sana": "ensimmäistä",
+      "alku": 6399,
+      "loppu": 6960
+    },
+    {
+      "sana": "lyöntiä",
+      "alku": 7019,
+      "loppu": 7559
+    },
+    {
+      "sana": "Irronnut",
+      "alku": 9260,
+      "loppu": 9719
+    },
+    {
+      "sana": "pala",
+      "alku": 9760,
+      "loppu": 10039
+    },
+    {
+      "sana": "on",
+      "alku": 10099,
+      "loppu": 10199
+    },
+    {
+      "sana": "minun",
+      "alku": 10260,
+      "loppu": 10519
+    },
+    {
+      "sana": "huonettani",
+      "alku": 10579,
+      "loppu": 11139
+    },
+    {
+      "sana": "suuremman",
+      "alku": 11199,
+      "loppu": 11639
+    },
+    {
+      "sana": "oloinen",
+      "alku": 11739,
+      "loppu": 12179
+    },
+    {
+      "sana": "Vartija",
+      "alku": 13599,
+      "loppu": 13939
+    },
+    {
+      "sana": "kertoi",
+      "alku": 14000,
+      "loppu": 14379
+    },
+    {
+      "sana": "painon",
+      "alku": 14439,
+      "loppu": 14779
+    },
+    {
+      "sana": "ylpeästi",
+      "alku": 14880,
+      "loppu": 15439
+    },
+    {
+      "sana": "aivan",
+      "alku": 16079,
+      "loppu": 16319
+    },
+    {
+      "sana": "kuin",
+      "alku": 16359,
+      "loppu": 16559
+    },
+    {
+      "sana": "hiljaisuus",
+      "alku": 16600,
+      "loppu": 17239
+    },
+    {
+      "sana": "olisi",
+      "alku": 17319,
+      "loppu": 17579
+    },
+    {
+      "sana": "sillä",
+      "alku": 17639,
+      "loppu": 17879
+    },
+    {
+      "sana": "voitettu",
+      "alku": 17920,
+      "loppu": 18520
+    },
+    {
+      "sana": "Illalla",
+      "alku": 20359,
+      "loppu": 20699
+    },
+    {
+      "sana": "pieni",
+      "alku": 20760,
+      "loppu": 20959
+    },
+    {
+      "sana": "käsikello",
+      "alku": 21059,
+      "loppu": 21579
+    },
+    {
+      "sana": "kutsui",
+      "alku": 21639,
+      "loppu": 21939
+    },
+    {
+      "sana": "minut",
+      "alku": 22000,
+      "loppu": 22219
+    },
+    {
+      "sana": "syömään",
+      "alku": 22279,
+      "loppu": 22739
+    },
+    {
+      "sana": "Sillä",
+      "alku": 24439,
+      "loppu": 24680
+    },
+    {
+      "sana": "oli",
+      "alku": 24719,
+      "loppu": 24819
+    },
+    {
+      "sana": "vähemmän",
+      "alku": 24899,
+      "loppu": 25339
+    },
+    {
+      "sana": "mainetta",
+      "alku": 25399,
+      "loppu": 25959
+    },
+    {
+      "sana": "mutta",
+      "alku": 26359,
+      "loppu": 26520
+    },
+    {
+      "sana": "selvästi",
+      "alku": 26599,
+      "loppu": 27039
+    },
+    {
+      "sana": "enemmän",
+      "alku": 27119,
+      "loppu": 27479
+    },
+    {
+      "sana": "vaikutusvaltaa",
+      "alku": 27539,
+      "loppu": 28439
+    }
+  ],
+  "lauseet": [
+    119,
+    5460,
+    9260,
+    13599,
+    20359,
+    24439
+  ],
+  "luotu": "2026-09-11T12:05:00.915Z"
+}

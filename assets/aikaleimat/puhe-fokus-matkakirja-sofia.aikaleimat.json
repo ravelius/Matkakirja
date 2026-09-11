@@ -1,0 +1,229 @@
+{
+  "versio": 2,
+  "kaupunki": "sofia",
+  "teksti": "Sofiassa maa tarjoaa kuumaa vettä pyytämättä halkoja. Lähteellä nainen täytti kannua ja odotti sen jäähtymistä. Minä olin maksanut majatalossa kylmästä pesuvedestä. Tällaisista epäjohdonmukaisuuksista matkailu muodostuu. Minareetin takana kohosi Vitoša. Vuori näytti nukkuvan, mutta sen kaupungin alla oli selvästi jo noustu keittämään.",
+  "tekstiSha256": "d34cdf4900863c50541a272a5ae56ed54848a3dc5c0ba9e243c4841627ae50fc",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-sofia.mp3",
+    "versio": 2,
+    "tavut": 453111,
+    "sha256": "78c92d6f61d975c060273c7bee1e79707180367a6a4f39eeabdd06449d8bb110"
+  },
+  "kesto": 28199,
+  "sanat": [
+    {
+      "sana": "Sofiassa",
+      "alku": 179,
+      "loppu": 799
+    },
+    {
+      "sana": "maa",
+      "alku": 839,
+      "loppu": 979
+    },
+    {
+      "sana": "tarjoaa",
+      "alku": 1079,
+      "loppu": 1559
+    },
+    {
+      "sana": "kuumaa",
+      "alku": 1599,
+      "loppu": 1979
+    },
+    {
+      "sana": "vettä",
+      "alku": 2019,
+      "loppu": 2379
+    },
+    {
+      "sana": "pyytämättä",
+      "alku": 2440,
+      "loppu": 3019
+    },
+    {
+      "sana": "halkoja",
+      "alku": 3059,
+      "loppu": 3639
+    },
+    {
+      "sana": "Lähteellä",
+      "alku": 4880,
+      "loppu": 5319
+    },
+    {
+      "sana": "nainen",
+      "alku": 5339,
+      "loppu": 5679
+    },
+    {
+      "sana": "täytti",
+      "alku": 5719,
+      "loppu": 6019
+    },
+    {
+      "sana": "kannua",
+      "alku": 6099,
+      "loppu": 6559
+    },
+    {
+      "sana": "ja",
+      "alku": 6819,
+      "loppu": 6859
+    },
+    {
+      "sana": "odotti",
+      "alku": 6940,
+      "loppu": 7219
+    },
+    {
+      "sana": "sen",
+      "alku": 7279,
+      "loppu": 7379
+    },
+    {
+      "sana": "jäähtymistä",
+      "alku": 7480,
+      "loppu": 8220
+    },
+    {
+      "sana": "Minä",
+      "alku": 9899,
+      "loppu": 10039
+    },
+    {
+      "sana": "olin",
+      "alku": 10079,
+      "loppu": 10239
+    },
+    {
+      "sana": "maksanut",
+      "alku": 10300,
+      "loppu": 10679
+    },
+    {
+      "sana": "majatalossa",
+      "alku": 10779,
+      "loppu": 11380
+    },
+    {
+      "sana": "kylmästä",
+      "alku": 11479,
+      "loppu": 11920
+    },
+    {
+      "sana": "pesuvedestä",
+      "alku": 11979,
+      "loppu": 12659
+    },
+    {
+      "sana": "Tällaisista",
+      "alku": 14439,
+      "loppu": 14979
+    },
+    {
+      "sana": "epäjohdonmukaisuuksista",
+      "alku": 15119,
+      "loppu": 16559
+    },
+    {
+      "sana": "matkailu",
+      "alku": 16659,
+      "loppu": 17119
+    },
+    {
+      "sana": "muodostuu",
+      "alku": 17180,
+      "loppu": 17819
+    },
+    {
+      "sana": "Minareetin",
+      "alku": 19479,
+      "loppu": 20020
+    },
+    {
+      "sana": "takana",
+      "alku": 20079,
+      "loppu": 20420
+    },
+    {
+      "sana": "kohosi",
+      "alku": 20520,
+      "loppu": 20939
+    },
+    {
+      "sana": "Vitoša",
+      "alku": 21100,
+      "loppu": 21659
+    },
+    {
+      "sana": "Vuori",
+      "alku": 23219,
+      "loppu": 23439
+    },
+    {
+      "sana": "näytti",
+      "alku": 23479,
+      "loppu": 23739
+    },
+    {
+      "sana": "nukkuvan",
+      "alku": 23799,
+      "loppu": 24299
+    },
+    {
+      "sana": "mutta",
+      "alku": 25019,
+      "loppu": 25219
+    },
+    {
+      "sana": "sen",
+      "alku": 25279,
+      "loppu": 25439
+    },
+    {
+      "sana": "kaupungin",
+      "alku": 25500,
+      "loppu": 26020
+    },
+    {
+      "sana": "alla",
+      "alku": 26079,
+      "loppu": 26299
+    },
+    {
+      "sana": "oli",
+      "alku": 26359,
+      "loppu": 26479
+    },
+    {
+      "sana": "selvästi",
+      "alku": 26539,
+      "loppu": 27019
+    },
+    {
+      "sana": "jo",
+      "alku": 27099,
+      "loppu": 27159
+    },
+    {
+      "sana": "noustu",
+      "alku": 27239,
+      "loppu": 27619
+    },
+    {
+      "sana": "keittämään",
+      "alku": 27680,
+      "loppu": 28199
+    }
+  ],
+  "lauseet": [
+    179,
+    4880,
+    9899,
+    14439,
+    19479,
+    23219
+  ],
+  "luotu": "2026-09-11T12:03:57.272Z"
+}

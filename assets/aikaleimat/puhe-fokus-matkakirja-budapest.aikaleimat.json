@@ -1,0 +1,258 @@
+{
+  "versio": 2,
+  "kaupunki": "budapest",
+  "teksti": "Buda, Pest ja Óbuda on tänä marraskuuna liitetty yhteen. Karttani vanheni kesken aamiaisen. Toisella rannalla kohoaa linna, toisella talot levittäytyvät tasamaalle; välissä Tonava pitää oman suuntansa. Menin Rudasin turkkilaiseen kylpylään miettimään uuden nimen sijoittelua. Kupolin alla oli niin lämmintä, että päätin antaa kaupunkien olla hetken ilman järjestystä.",
+  "tekstiSha256": "5e86387c4546aff246d6d880c43293f4ad08e185ae626246c98b9f47617091ef",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-budapest.mp3",
+    "versio": 2,
+    "tavut": 529598,
+    "sha256": "cfdb7c16e9c6b20ffad195b3fe24233034037b2566f87e2d84abc5d1c7f46c4c"
+  },
+  "kesto": 32979,
+  "sanat": [
+    {
+      "sana": "Buda",
+      "alku": 99,
+      "loppu": 2799
+    },
+    {
+      "sana": "Pest",
+      "alku": 2919,
+      "loppu": 3259
+    },
+    {
+      "sana": "ja",
+      "alku": 3359,
+      "loppu": 3419
+    },
+    {
+      "sana": "Óbuda",
+      "alku": 3519,
+      "loppu": 4039
+    },
+    {
+      "sana": "on",
+      "alku": 4279,
+      "loppu": 4380
+    },
+    {
+      "sana": "tänä",
+      "alku": 4460,
+      "loppu": 4679
+    },
+    {
+      "sana": "marraskuuna",
+      "alku": 4739,
+      "loppu": 5400
+    },
+    {
+      "sana": "liitetty",
+      "alku": 5460,
+      "loppu": 5879
+    },
+    {
+      "sana": "yhteen",
+      "alku": 5980,
+      "loppu": 6519
+    },
+    {
+      "sana": "Karttani",
+      "alku": 7879,
+      "loppu": 8340
+    },
+    {
+      "sana": "vanheni",
+      "alku": 8420,
+      "loppu": 8800
+    },
+    {
+      "sana": "kesken",
+      "alku": 8899,
+      "loppu": 9239
+    },
+    {
+      "sana": "aamiaisen",
+      "alku": 9319,
+      "loppu": 9960
+    },
+    {
+      "sana": "Toisella",
+      "alku": 11460,
+      "loppu": 11779
+    },
+    {
+      "sana": "rannalla",
+      "alku": 11880,
+      "loppu": 12199
+    },
+    {
+      "sana": "kohoaa",
+      "alku": 12319,
+      "loppu": 12679
+    },
+    {
+      "sana": "linna",
+      "alku": 12739,
+      "loppu": 13079
+    },
+    {
+      "sana": "toisella",
+      "alku": 13779,
+      "loppu": 14279
+    },
+    {
+      "sana": "talot",
+      "alku": 14519,
+      "loppu": 14799
+    },
+    {
+      "sana": "levittäytyvät",
+      "alku": 14859,
+      "loppu": 15619
+    },
+    {
+      "sana": "tasamaalle",
+      "alku": 15679,
+      "loppu": 16279
+    },
+    {
+      "sana": "välissä",
+      "alku": 17559,
+      "loppu": 17899
+    },
+    {
+      "sana": "Tonava",
+      "alku": 17979,
+      "loppu": 18319
+    },
+    {
+      "sana": "pitää",
+      "alku": 18420,
+      "loppu": 18699
+    },
+    {
+      "sana": "oman",
+      "alku": 18779,
+      "loppu": 18979
+    },
+    {
+      "sana": "suuntansa",
+      "alku": 19079,
+      "loppu": 19699
+    },
+    {
+      "sana": "Menin",
+      "alku": 21659,
+      "loppu": 21840
+    },
+    {
+      "sana": "Rudasin",
+      "alku": 21939,
+      "loppu": 22340
+    },
+    {
+      "sana": "turkkilaiseen",
+      "alku": 22399,
+      "loppu": 23119
+    },
+    {
+      "sana": "kylpylään",
+      "alku": 23180,
+      "loppu": 23799
+    },
+    {
+      "sana": "miettimään",
+      "alku": 23819,
+      "loppu": 24439
+    },
+    {
+      "sana": "uuden",
+      "alku": 24500,
+      "loppu": 24779
+    },
+    {
+      "sana": "nimen",
+      "alku": 24840,
+      "loppu": 25059
+    },
+    {
+      "sana": "sijoittelua",
+      "alku": 25199,
+      "loppu": 25879
+    },
+    {
+      "sana": "Kupolin",
+      "alku": 27619,
+      "loppu": 28079
+    },
+    {
+      "sana": "alla",
+      "alku": 28159,
+      "loppu": 28379
+    },
+    {
+      "sana": "oli",
+      "alku": 28439,
+      "loppu": 28579
+    },
+    {
+      "sana": "niin",
+      "alku": 28639,
+      "loppu": 28819
+    },
+    {
+      "sana": "lämmintä",
+      "alku": 28879,
+      "loppu": 29379
+    },
+    {
+      "sana": "että",
+      "alku": 29459,
+      "loppu": 29679
+    },
+    {
+      "sana": "päätin",
+      "alku": 29760,
+      "loppu": 30039
+    },
+    {
+      "sana": "antaa",
+      "alku": 30119,
+      "loppu": 30439
+    },
+    {
+      "sana": "kaupunkien",
+      "alku": 30519,
+      "loppu": 31119
+    },
+    {
+      "sana": "olla",
+      "alku": 31179,
+      "loppu": 31379
+    },
+    {
+      "sana": "hetken",
+      "alku": 31420,
+      "loppu": 31819
+    },
+    {
+      "sana": "ilman",
+      "alku": 31899,
+      "loppu": 32200
+    },
+    {
+      "sana": "järjestystä",
+      "alku": 32259,
+      "loppu": 32979
+    }
+  ],
+  "lauseet": [
+    99,
+    7879,
+    11460,
+    21659,
+    27619
+  ],
+  "luotu": "2026-09-11T12:04:15.380Z"
+}

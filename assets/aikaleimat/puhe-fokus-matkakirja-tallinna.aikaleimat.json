@@ -1,0 +1,234 @@
+{
+  "versio": 2,
+  "kaupunki": "tallinna",
+  "teksti": "Revalin torin apteekissa myytiin marsipaania sydänsuruihin. Kysyin, auttaako se myös silloin, kun ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Ikkunasta näkyi raatihuone ja sen vakava torni; sisällä tuoksui manteli. Söin lääkkeeni matkalla satamaan. Vaiva jäi, mutta hoitoon olin poikkeuksellisen tyytyväinen.",
+  "tekstiSha256": "5c1e67f0645b77c1db1fa28e4ecf6316cd7fbf6ce8946bdbcae5855cda5f8c78",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-tallinna.mp3",
+    "versio": 2,
+    "tavut": 500341,
+    "sha256": "65453e2920f7eb188b32a196883dc79c44d4e0829f7eabda8c2231ed9763c33b"
+  },
+  "kesto": 31180,
+  "sanat": [
+    {
+      "sana": "Revalin",
+      "alku": 219,
+      "loppu": 680
+    },
+    {
+      "sana": "torin",
+      "alku": 779,
+      "loppu": 1079
+    },
+    {
+      "sana": "apteekissa",
+      "alku": 1179,
+      "loppu": 1919
+    },
+    {
+      "sana": "myytiin",
+      "alku": 1959,
+      "loppu": 2419
+    },
+    {
+      "sana": "marsipaania",
+      "alku": 2480,
+      "loppu": 3319
+    },
+    {
+      "sana": "sydänsuruihin",
+      "alku": 3460,
+      "loppu": 4440
+    },
+    {
+      "sana": "Kysyin",
+      "alku": 6219,
+      "loppu": 6619
+    },
+    {
+      "sana": "auttaako",
+      "alku": 6779,
+      "loppu": 7239
+    },
+    {
+      "sana": "se",
+      "alku": 7279,
+      "loppu": 7379
+    },
+    {
+      "sana": "myös",
+      "alku": 7440,
+      "loppu": 7639
+    },
+    {
+      "sana": "silloin",
+      "alku": 7719,
+      "loppu": 8119
+    },
+    {
+      "sana": "kun",
+      "alku": 8260,
+      "loppu": 8359
+    },
+    {
+      "sana": "ei",
+      "alku": 8439,
+      "loppu": 8519
+    },
+    {
+      "sana": "vielä",
+      "alku": 8579,
+      "loppu": 8819
+    },
+    {
+      "sana": "tiedä",
+      "alku": 8859,
+      "loppu": 9119
+    },
+    {
+      "sana": "ketä",
+      "alku": 9239,
+      "loppu": 9460
+    },
+    {
+      "sana": "kaipaa",
+      "alku": 9539,
+      "loppu": 10079
+    },
+    {
+      "sana": "Apteekkari",
+      "alku": 12079,
+      "loppu": 12639
+    },
+    {
+      "sana": "leikkasi",
+      "alku": 12699,
+      "loppu": 13139
+    },
+    {
+      "sana": "suuremman",
+      "alku": 13199,
+      "loppu": 13659
+    },
+    {
+      "sana": "palan",
+      "alku": 13719,
+      "loppu": 14019
+    },
+    {
+      "sana": "Ikkunasta",
+      "alku": 15500,
+      "loppu": 15979
+    },
+    {
+      "sana": "näkyi",
+      "alku": 16039,
+      "loppu": 16340
+    },
+    {
+      "sana": "raatihuone",
+      "alku": 16440,
+      "loppu": 17119
+    },
+    {
+      "sana": "ja",
+      "alku": 17180,
+      "loppu": 17219
+    },
+    {
+      "sana": "sen",
+      "alku": 17319,
+      "loppu": 17440
+    },
+    {
+      "sana": "vakava",
+      "alku": 17539,
+      "loppu": 17840
+    },
+    {
+      "sana": "torni",
+      "alku": 17959,
+      "loppu": 18279
+    },
+    {
+      "sana": "sisällä",
+      "alku": 19459,
+      "loppu": 19819
+    },
+    {
+      "sana": "tuoksui",
+      "alku": 19899,
+      "loppu": 20399
+    },
+    {
+      "sana": "manteli",
+      "alku": 20439,
+      "loppu": 20979
+    },
+    {
+      "sana": "Söin",
+      "alku": 22959,
+      "loppu": 23199
+    },
+    {
+      "sana": "lääkkeeni",
+      "alku": 23260,
+      "loppu": 23879
+    },
+    {
+      "sana": "matkalla",
+      "alku": 23920,
+      "loppu": 24359
+    },
+    {
+      "sana": "satamaan",
+      "alku": 24420,
+      "loppu": 24939
+    },
+    {
+      "sana": "Vaiva",
+      "alku": 26859,
+      "loppu": 27239
+    },
+    {
+      "sana": "jäi",
+      "alku": 27299,
+      "loppu": 27539
+    },
+    {
+      "sana": "mutta",
+      "alku": 28340,
+      "loppu": 28579
+    },
+    {
+      "sana": "hoitoon",
+      "alku": 28619,
+      "loppu": 29199
+    },
+    {
+      "sana": "olin",
+      "alku": 29279,
+      "loppu": 29500
+    },
+    {
+      "sana": "poikkeuksellisen",
+      "alku": 29559,
+      "loppu": 30539
+    },
+    {
+      "sana": "tyytyväinen",
+      "alku": 30659,
+      "loppu": 31180
+    }
+  ],
+  "lauseet": [
+    219,
+    6219,
+    12079,
+    15500,
+    22959,
+    26859
+  ],
+  "luotu": "2026-09-11T12:04:29.725Z"
+}

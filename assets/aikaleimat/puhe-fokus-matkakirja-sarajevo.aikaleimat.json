@@ -1,0 +1,219 @@
+{
+  "versio": 2,
+  "kaupunki": "sarajevo",
+  "teksti": "Sarajevon kupariseppä naputti pannuun kuvioita niin pienellä vasaralla, että olisin hukannut sen liivintaskuun. Viereisessä puodissa kaadettiin kahvia samanlaiseen pannuun. Olin juonut siitä aamulla katsomatta. Nyt näin jokaisen jäljen. Basaarin kujilla kuului kilkutusta kaikkialta. Kaupunki oli tehnyt aamiaiseni astian käsin.",
+  "tekstiSha256": "0b868b79c2b4f797718c7df0e96672ecd103a398781ff21b95c199c54d0827af",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-sarajevo.mp3",
+    "versio": 2,
+    "tavut": 435139,
+    "sha256": "6bb98fad472983da5cca68a4fe2992ba83dc56f21206e6b211a2dbdccb13e5d0"
+  },
+  "kesto": 27079,
+  "sanat": [
+    {
+      "sana": "Sarajevon",
+      "alku": 219,
+      "loppu": 680
+    },
+    {
+      "sana": "kupariseppä",
+      "alku": 759,
+      "loppu": 1439
+    },
+    {
+      "sana": "naputti",
+      "alku": 1480,
+      "loppu": 1899
+    },
+    {
+      "sana": "pannuun",
+      "alku": 1939,
+      "loppu": 2440
+    },
+    {
+      "sana": "kuvioita",
+      "alku": 2500,
+      "loppu": 3079
+    },
+    {
+      "sana": "niin",
+      "alku": 3299,
+      "loppu": 3500
+    },
+    {
+      "sana": "pienellä",
+      "alku": 3539,
+      "loppu": 3959
+    },
+    {
+      "sana": "vasaralla",
+      "alku": 4019,
+      "loppu": 4559
+    },
+    {
+      "sana": "että",
+      "alku": 5059,
+      "loppu": 5239
+    },
+    {
+      "sana": "olisin",
+      "alku": 5299,
+      "loppu": 5579
+    },
+    {
+      "sana": "hukannut",
+      "alku": 5639,
+      "loppu": 6039
+    },
+    {
+      "sana": "sen",
+      "alku": 6099,
+      "loppu": 6239
+    },
+    {
+      "sana": "liivintaskuun",
+      "alku": 6279,
+      "loppu": 7199
+    },
+    {
+      "sana": "Viereisessä",
+      "alku": 9039,
+      "loppu": 9599
+    },
+    {
+      "sana": "puodissa",
+      "alku": 9639,
+      "loppu": 10019
+    },
+    {
+      "sana": "kaadettiin",
+      "alku": 10119,
+      "loppu": 10599
+    },
+    {
+      "sana": "kahvia",
+      "alku": 10679,
+      "loppu": 11099
+    },
+    {
+      "sana": "samanlaiseen",
+      "alku": 11159,
+      "loppu": 11759
+    },
+    {
+      "sana": "pannuun",
+      "alku": 11840,
+      "loppu": 12340
+    },
+    {
+      "sana": "Olin",
+      "alku": 13239,
+      "loppu": 13439
+    },
+    {
+      "sana": "juonut",
+      "alku": 13500,
+      "loppu": 13819
+    },
+    {
+      "sana": "siitä",
+      "alku": 13880,
+      "loppu": 14159
+    },
+    {
+      "sana": "aamulla",
+      "alku": 14259,
+      "loppu": 14599
+    },
+    {
+      "sana": "katsomatta",
+      "alku": 14659,
+      "loppu": 15379
+    },
+    {
+      "sana": "Nyt",
+      "alku": 16879,
+      "loppu": 17020
+    },
+    {
+      "sana": "näin",
+      "alku": 17079,
+      "loppu": 17239
+    },
+    {
+      "sana": "jokaisen",
+      "alku": 17299,
+      "loppu": 17799
+    },
+    {
+      "sana": "jäljen",
+      "alku": 17899,
+      "loppu": 18319
+    },
+    {
+      "sana": "Basaarin",
+      "alku": 19819,
+      "loppu": 20279
+    },
+    {
+      "sana": "kujilla",
+      "alku": 20379,
+      "loppu": 20859
+    },
+    {
+      "sana": "kuului",
+      "alku": 20920,
+      "loppu": 21279
+    },
+    {
+      "sana": "kilkutusta",
+      "alku": 21340,
+      "loppu": 21939
+    },
+    {
+      "sana": "kaikkialta",
+      "alku": 22000,
+      "loppu": 22699
+    },
+    {
+      "sana": "Kaupunki",
+      "alku": 24579,
+      "loppu": 24979
+    },
+    {
+      "sana": "oli",
+      "alku": 25019,
+      "loppu": 25139
+    },
+    {
+      "sana": "tehnyt",
+      "alku": 25199,
+      "loppu": 25479
+    },
+    {
+      "sana": "aamiaiseni",
+      "alku": 25579,
+      "loppu": 26219
+    },
+    {
+      "sana": "astian",
+      "alku": 26319,
+      "loppu": 26759
+    },
+    {
+      "sana": "käsin",
+      "alku": 26819,
+      "loppu": 27079
+    }
+  ],
+  "lauseet": [
+    219,
+    9039,
+    13239,
+    16879,
+    19819,
+    24579
+  ],
+  "luotu": "2026-09-11T12:04:04.541Z"
+}

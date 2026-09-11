@@ -1,0 +1,239 @@
+{
+  "versio": 2,
+  "kaupunki": "tukholma",
+  "teksti": "Tukholmassa kruunattiin Oskar, mutta minun kohdalleni osui lähinnä toisten hattuja. Pieni tyttö nousi isänsä hartioille ja selosti meille lopuille. Hän huomasi hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi lyhyelle maininnalle. Satamaan palatessa saarten välissä välkkyi vesi. Suosittelisin samaa selostajaa myös valtakunnan asioihin.",
+  "tekstiSha256": "248e18d320ba06e68d5914d1050ae0a032a0fe22fe9d3b7af1c97a5f91d39010",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-tukholma.mp3",
+    "versio": 2,
+    "tavut": 488638,
+    "sha256": "ce365b2fc9499a78a8505690bedbad12ea43425c4805df1b2dabb7a43d325ec5"
+  },
+  "kesto": 30379,
+  "sanat": [
+    {
+      "sana": "Tukholmassa",
+      "alku": 79,
+      "loppu": 680
+    },
+    {
+      "sana": "kruunattiin",
+      "alku": 719,
+      "loppu": 1319
+    },
+    {
+      "sana": "Oskar",
+      "alku": 1419,
+      "loppu": 1860
+    },
+    {
+      "sana": "mutta",
+      "alku": 2359,
+      "loppu": 2559
+    },
+    {
+      "sana": "minun",
+      "alku": 2619,
+      "loppu": 2839
+    },
+    {
+      "sana": "kohdalleni",
+      "alku": 2879,
+      "loppu": 3399
+    },
+    {
+      "sana": "osui",
+      "alku": 3480,
+      "loppu": 3699
+    },
+    {
+      "sana": "lähinnä",
+      "alku": 3740,
+      "loppu": 4119
+    },
+    {
+      "sana": "toisten",
+      "alku": 4179,
+      "loppu": 4539
+    },
+    {
+      "sana": "hattuja",
+      "alku": 4619,
+      "loppu": 5159
+    },
+    {
+      "sana": "Pieni",
+      "alku": 7039,
+      "loppu": 7299
+    },
+    {
+      "sana": "tyttö",
+      "alku": 7379,
+      "loppu": 7679
+    },
+    {
+      "sana": "nousi",
+      "alku": 7739,
+      "loppu": 8019
+    },
+    {
+      "sana": "isänsä",
+      "alku": 8079,
+      "loppu": 8399
+    },
+    {
+      "sana": "hartioille",
+      "alku": 8479,
+      "loppu": 9139
+    },
+    {
+      "sana": "ja",
+      "alku": 9300,
+      "loppu": 9380
+    },
+    {
+      "sana": "selosti",
+      "alku": 9420,
+      "loppu": 9819
+    },
+    {
+      "sana": "meille",
+      "alku": 9880,
+      "loppu": 10099
+    },
+    {
+      "sana": "lopuille",
+      "alku": 10159,
+      "loppu": 10739
+    },
+    {
+      "sana": "Hän",
+      "alku": 12059,
+      "loppu": 12179
+    },
+    {
+      "sana": "huomasi",
+      "alku": 12239,
+      "loppu": 12599
+    },
+    {
+      "sana": "hevoset",
+      "alku": 12679,
+      "loppu": 13199
+    },
+    {
+      "sana": "kukat",
+      "alku": 13739,
+      "loppu": 14179
+    },
+    {
+      "sana": "ja",
+      "alku": 14799,
+      "loppu": 14859
+    },
+    {
+      "sana": "yhden",
+      "alku": 14960,
+      "loppu": 15199
+    },
+    {
+      "sana": "kadonneen",
+      "alku": 15299,
+      "loppu": 15739
+    },
+    {
+      "sana": "kengän",
+      "alku": 15839,
+      "loppu": 16260
+    },
+    {
+      "sana": "Kuningas",
+      "alku": 17840,
+      "loppu": 18420
+    },
+    {
+      "sana": "jäi",
+      "alku": 18479,
+      "loppu": 18639
+    },
+    {
+      "sana": "lyhyelle",
+      "alku": 18719,
+      "loppu": 19100
+    },
+    {
+      "sana": "maininnalle",
+      "alku": 19199,
+      "loppu": 19859
+    },
+    {
+      "sana": "Satamaan",
+      "alku": 22000,
+      "loppu": 22479
+    },
+    {
+      "sana": "palatessa",
+      "alku": 22559,
+      "loppu": 23159
+    },
+    {
+      "sana": "saarten",
+      "alku": 23439,
+      "loppu": 23840
+    },
+    {
+      "sana": "välissä",
+      "alku": 23920,
+      "loppu": 24279
+    },
+    {
+      "sana": "välkkyi",
+      "alku": 24319,
+      "loppu": 24779
+    },
+    {
+      "sana": "vesi",
+      "alku": 24840,
+      "loppu": 25199
+    },
+    {
+      "sana": "Suosittelisin",
+      "alku": 27099,
+      "loppu": 27760
+    },
+    {
+      "sana": "samaa",
+      "alku": 27819,
+      "loppu": 28099
+    },
+    {
+      "sana": "selostajaa",
+      "alku": 28180,
+      "loppu": 28799
+    },
+    {
+      "sana": "myös",
+      "alku": 28879,
+      "loppu": 29079
+    },
+    {
+      "sana": "valtakunnan",
+      "alku": 29159,
+      "loppu": 29779
+    },
+    {
+      "sana": "asioihin",
+      "alku": 29859,
+      "loppu": 30379
+    }
+  ],
+  "lauseet": [
+    79,
+    7039,
+    12059,
+    17840,
+    22000,
+    27099
+  ],
+  "luotu": "2026-09-11T12:04:21.582Z"
+}

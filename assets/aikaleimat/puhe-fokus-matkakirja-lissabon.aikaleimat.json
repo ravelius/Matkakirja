@@ -1,0 +1,234 @@
+{
+  "versio": 2,
+  "kaupunki": "lissabon",
+  "teksti": "Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin hallitsijan jakaukseksi. Eksyin silti heti, kun poikkesin Alfamaan. Siellä portailla istuva nainen neuvoi ylöspäin. Ylhäällä toinen neuvoi alas. Kumpikin oli oikeassa: löysin meren molemmista suunnista, vain eri kattojen välistä. Kartta on täällä taskussa kulkeva lohdutus.",
+  "tekstiSha256": "33003bb69e5e3573c2c1de0a6bb3a5ec37684e8b73c3bc8f17c000d9c01a0838",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-lissabon.mp3",
+    "versio": 2,
+    "tavut": 464396,
+    "sha256": "f8e4897779d51afab695e0c1cb5a2da0c91d406c805f914d0e3fcd67a60ea2cc"
+  },
+  "kesto": 28920,
+  "sanat": [
+    {
+      "sana": "Baixan",
+      "alku": 119,
+      "loppu": 579
+    },
+    {
+      "sana": "kadut",
+      "alku": 620,
+      "loppu": 899
+    },
+    {
+      "sana": "vedettiin",
+      "alku": 939,
+      "loppu": 1419
+    },
+    {
+      "sana": "järistyksen",
+      "alku": 1500,
+      "loppu": 2099
+    },
+    {
+      "sana": "jälkeen",
+      "alku": 2180,
+      "loppu": 2599
+    },
+    {
+      "sana": "suoriksi",
+      "alku": 2720,
+      "loppu": 3259
+    },
+    {
+      "sana": "kuin",
+      "alku": 3419,
+      "loppu": 3639
+    },
+    {
+      "sana": "hallitsijan",
+      "alku": 3679,
+      "loppu": 4299
+    },
+    {
+      "sana": "jakaukseksi",
+      "alku": 4360,
+      "loppu": 5199
+    },
+    {
+      "sana": "Eksyin",
+      "alku": 6679,
+      "loppu": 7059
+    },
+    {
+      "sana": "silti",
+      "alku": 7099,
+      "loppu": 7439
+    },
+    {
+      "sana": "heti",
+      "alku": 7500,
+      "loppu": 7779
+    },
+    {
+      "sana": "kun",
+      "alku": 8019,
+      "loppu": 8199
+    },
+    {
+      "sana": "poikkesin",
+      "alku": 8260,
+      "loppu": 8760
+    },
+    {
+      "sana": "Alfamaan",
+      "alku": 8819,
+      "loppu": 9420
+    },
+    {
+      "sana": "Siellä",
+      "alku": 10719,
+      "loppu": 10960
+    },
+    {
+      "sana": "portailla",
+      "alku": 11059,
+      "loppu": 11500
+    },
+    {
+      "sana": "istuva",
+      "alku": 11559,
+      "loppu": 11880
+    },
+    {
+      "sana": "nainen",
+      "alku": 11920,
+      "loppu": 12299
+    },
+    {
+      "sana": "neuvoi",
+      "alku": 12420,
+      "loppu": 12779
+    },
+    {
+      "sana": "ylöspäin",
+      "alku": 12840,
+      "loppu": 13519
+    },
+    {
+      "sana": "Ylhäällä",
+      "alku": 14880,
+      "loppu": 15399
+    },
+    {
+      "sana": "toinen",
+      "alku": 15439,
+      "loppu": 15759
+    },
+    {
+      "sana": "neuvoi",
+      "alku": 15859,
+      "loppu": 16239
+    },
+    {
+      "sana": "alas",
+      "alku": 16299,
+      "loppu": 16699
+    },
+    {
+      "sana": "Kumpikin",
+      "alku": 18119,
+      "loppu": 18539
+    },
+    {
+      "sana": "oli",
+      "alku": 18579,
+      "loppu": 18699
+    },
+    {
+      "sana": "oikeassa",
+      "alku": 18799,
+      "loppu": 19379
+    },
+    {
+      "sana": "löysin",
+      "alku": 20479,
+      "loppu": 20760
+    },
+    {
+      "sana": "meren",
+      "alku": 20840,
+      "loppu": 21079
+    },
+    {
+      "sana": "molemmista",
+      "alku": 21159,
+      "loppu": 21600
+    },
+    {
+      "sana": "suunnista",
+      "alku": 21699,
+      "loppu": 22219
+    },
+    {
+      "sana": "vain",
+      "alku": 22840,
+      "loppu": 23079
+    },
+    {
+      "sana": "eri",
+      "alku": 23159,
+      "loppu": 23319
+    },
+    {
+      "sana": "kattojen",
+      "alku": 23420,
+      "loppu": 23859
+    },
+    {
+      "sana": "välistä",
+      "alku": 23939,
+      "loppu": 24420
+    },
+    {
+      "sana": "Kartta",
+      "alku": 26500,
+      "loppu": 26859
+    },
+    {
+      "sana": "on",
+      "alku": 26920,
+      "loppu": 27019
+    },
+    {
+      "sana": "täällä",
+      "alku": 27079,
+      "loppu": 27439
+    },
+    {
+      "sana": "taskussa",
+      "alku": 27500,
+      "loppu": 27979
+    },
+    {
+      "sana": "kulkeva",
+      "alku": 28039,
+      "loppu": 28420
+    },
+    {
+      "sana": "lohdutus",
+      "alku": 28500,
+      "loppu": 28920
+    }
+  ],
+  "lauseet": [
+    119,
+    6679,
+    10719,
+    14880,
+    18119,
+    26500
+  ],
+  "luotu": "2026-09-11T12:04:40.569Z"
+}

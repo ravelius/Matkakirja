@@ -1,0 +1,239 @@
+{
+  "versio": 2,
+  "kaupunki": "pietari",
+  "teksti": "Pietarissa kesäyö on vaalea kuin loppuun pesty lakana. Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. Rantakadulla nainen sulki päivänvarjonsa ja jäi silti kävelemään. Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän tapahtumat loppuun. Päivä itse ei suostunut lopettamaan, joten lisäsin vielä tämän.",
+  "tekstiSha256": "0541e4b0d3e541ac014d7e9d7f1f4d2b84a2bb7c6f63fc96fd012d337bd54f63",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-pietari.mp3",
+    "versio": 2,
+    "tavut": 464396,
+    "sha256": "1592081c99548a0e87e1081d927287d577a8c9d23c2b8e6283dba2caaf2e096f"
+  },
+  "kesto": 28920,
+  "sanat": [
+    {
+      "sana": "Pietarissa",
+      "alku": 159,
+      "loppu": 740
+    },
+    {
+      "sana": "kesäyö",
+      "alku": 819,
+      "loppu": 1379
+    },
+    {
+      "sana": "on",
+      "alku": 1419,
+      "loppu": 1559
+    },
+    {
+      "sana": "vaalea",
+      "alku": 1599,
+      "loppu": 2019
+    },
+    {
+      "sana": "kuin",
+      "alku": 2099,
+      "loppu": 2259
+    },
+    {
+      "sana": "loppuun",
+      "alku": 2319,
+      "loppu": 2720
+    },
+    {
+      "sana": "pesty",
+      "alku": 2759,
+      "loppu": 3019
+    },
+    {
+      "sana": "lakana",
+      "alku": 3119,
+      "loppu": 3579
+    },
+    {
+      "sana": "Kello",
+      "alku": 5119,
+      "loppu": 5359
+    },
+    {
+      "sana": "käski",
+      "alku": 5400,
+      "loppu": 5659
+    },
+    {
+      "sana": "nukkumaan",
+      "alku": 5739,
+      "loppu": 6299
+    },
+    {
+      "sana": "mutta",
+      "alku": 7019,
+      "loppu": 7239
+    },
+    {
+      "sana": "Neva",
+      "alku": 7319,
+      "loppu": 7659
+    },
+    {
+      "sana": "ei",
+      "alku": 7739,
+      "loppu": 7839
+    },
+    {
+      "sana": "näyttänyt",
+      "alku": 7899,
+      "loppu": 8380
+    },
+    {
+      "sana": "iltaa",
+      "alku": 8460,
+      "loppu": 8760
+    },
+    {
+      "sana": "vanhemmalta",
+      "alku": 8840,
+      "loppu": 9479
+    },
+    {
+      "sana": "Rantakadulla",
+      "alku": 11340,
+      "loppu": 12039
+    },
+    {
+      "sana": "nainen",
+      "alku": 12119,
+      "loppu": 12399
+    },
+    {
+      "sana": "sulki",
+      "alku": 12460,
+      "loppu": 12759
+    },
+    {
+      "sana": "päivänvarjonsa",
+      "alku": 12819,
+      "loppu": 13719
+    },
+    {
+      "sana": "ja",
+      "alku": 14019,
+      "loppu": 14079
+    },
+    {
+      "sana": "jäi",
+      "alku": 14139,
+      "loppu": 14279
+    },
+    {
+      "sana": "silti",
+      "alku": 14359,
+      "loppu": 14599
+    },
+    {
+      "sana": "kävelemään",
+      "alku": 14659,
+      "loppu": 15279
+    },
+    {
+      "sana": "Palatsien",
+      "alku": 16739,
+      "loppu": 17239
+    },
+    {
+      "sana": "ikkunat",
+      "alku": 17279,
+      "loppu": 17699
+    },
+    {
+      "sana": "hohtivat",
+      "alku": 17739,
+      "loppu": 18219
+    },
+    {
+      "sana": "ilman",
+      "alku": 18260,
+      "loppu": 18520
+    },
+    {
+      "sana": "kynttilöitä",
+      "alku": 18600,
+      "loppu": 19299
+    },
+    {
+      "sana": "Kirjoitin",
+      "alku": 21319,
+      "loppu": 21779
+    },
+    {
+      "sana": "päivän",
+      "alku": 21840,
+      "loppu": 22100
+    },
+    {
+      "sana": "tapahtumat",
+      "alku": 22180,
+      "loppu": 22719
+    },
+    {
+      "sana": "loppuun",
+      "alku": 22779,
+      "loppu": 23319
+    },
+    {
+      "sana": "Päivä",
+      "alku": 25059,
+      "loppu": 25359
+    },
+    {
+      "sana": "itse",
+      "alku": 25439,
+      "loppu": 25719
+    },
+    {
+      "sana": "ei",
+      "alku": 25779,
+      "loppu": 25899
+    },
+    {
+      "sana": "suostunut",
+      "alku": 25959,
+      "loppu": 26439
+    },
+    {
+      "sana": "lopettamaan",
+      "alku": 26500,
+      "loppu": 27159
+    },
+    {
+      "sana": "joten",
+      "alku": 27559,
+      "loppu": 27859
+    },
+    {
+      "sana": "lisäsin",
+      "alku": 27899,
+      "loppu": 28299
+    },
+    {
+      "sana": "vielä",
+      "alku": 28379,
+      "loppu": 28659
+    },
+    {
+      "sana": "tämän",
+      "alku": 28719,
+      "loppu": 28920
+    }
+  ],
+  "lauseet": [
+    159,
+    5119,
+    11340,
+    16739,
+    21319,
+    25059
+  ],
+  "luotu": "2026-09-11T12:05:06.637Z"
+}

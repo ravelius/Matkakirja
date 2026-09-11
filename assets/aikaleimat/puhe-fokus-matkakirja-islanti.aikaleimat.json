@@ -1,0 +1,254 @@
+{
+  "versio": 2,
+  "kaupunki": "islanti",
+  "teksti": "Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Höyry nousi maasta, ja tuuli yritti viedä sen merelle. Annoin pestäväksi paitani. Se oli ensimmäinen kerta, kun maa teki minulle palveluksen vaatimatta lapioimista. Paluumatkalla näin pienet talot ja niiden takana suuren tyhjyyden. Kaulukseni oli puhtaampi kuin käsitykseni tästä saaresta.",
+  "tekstiSha256": "694329080f3937da389ccdca6496ed2da13b60a5d06ec055955adf864771bef2",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-islanti.mp3",
+    "versio": 2,
+    "tavut": 492399,
+    "sha256": "f180b213414fd3001dd7ce636f584116b576768020dc89f661093f95b71f4887"
+  },
+  "kesto": 30679,
+  "sanat": [
+    {
+      "sana": "Reykjavikin",
+      "alku": 179,
+      "loppu": 759
+    },
+    {
+      "sana": "ulkopuolella",
+      "alku": 839,
+      "loppu": 1539
+    },
+    {
+      "sana": "naiset",
+      "alku": 1779,
+      "loppu": 2119
+    },
+    {
+      "sana": "pesivät",
+      "alku": 2139,
+      "loppu": 2559
+    },
+    {
+      "sana": "pyykkiä",
+      "alku": 2599,
+      "loppu": 3079
+    },
+    {
+      "sana": "kuumassa",
+      "alku": 3139,
+      "loppu": 3539
+    },
+    {
+      "sana": "lähteessä",
+      "alku": 3619,
+      "loppu": 4279
+    },
+    {
+      "sana": "Höyry",
+      "alku": 6019,
+      "loppu": 6359
+    },
+    {
+      "sana": "nousi",
+      "alku": 6399,
+      "loppu": 6679
+    },
+    {
+      "sana": "maasta",
+      "alku": 6759,
+      "loppu": 7159
+    },
+    {
+      "sana": "ja",
+      "alku": 7599,
+      "loppu": 7639
+    },
+    {
+      "sana": "tuuli",
+      "alku": 7759,
+      "loppu": 8019
+    },
+    {
+      "sana": "yritti",
+      "alku": 8079,
+      "loppu": 8380
+    },
+    {
+      "sana": "viedä",
+      "alku": 8439,
+      "loppu": 8699
+    },
+    {
+      "sana": "sen",
+      "alku": 8760,
+      "loppu": 8880
+    },
+    {
+      "sana": "merelle",
+      "alku": 8939,
+      "loppu": 9380
+    },
+    {
+      "sana": "Annoin",
+      "alku": 11099,
+      "loppu": 11359
+    },
+    {
+      "sana": "pestäväksi",
+      "alku": 11399,
+      "loppu": 11960
+    },
+    {
+      "sana": "paitani",
+      "alku": 12000,
+      "loppu": 12500
+    },
+    {
+      "sana": "Se",
+      "alku": 14179,
+      "loppu": 14219
+    },
+    {
+      "sana": "oli",
+      "alku": 14259,
+      "loppu": 14359
+    },
+    {
+      "sana": "ensimmäinen",
+      "alku": 14439,
+      "loppu": 14899
+    },
+    {
+      "sana": "kerta",
+      "alku": 15019,
+      "loppu": 15339
+    },
+    {
+      "sana": "kun",
+      "alku": 15659,
+      "loppu": 15779
+    },
+    {
+      "sana": "maa",
+      "alku": 15880,
+      "loppu": 16119
+    },
+    {
+      "sana": "teki",
+      "alku": 16159,
+      "loppu": 16379
+    },
+    {
+      "sana": "minulle",
+      "alku": 16440,
+      "loppu": 16779
+    },
+    {
+      "sana": "palveluksen",
+      "alku": 16840,
+      "loppu": 17459
+    },
+    {
+      "sana": "vaatimatta",
+      "alku": 17719,
+      "loppu": 18219
+    },
+    {
+      "sana": "lapioimista",
+      "alku": 18279,
+      "loppu": 19059
+    },
+    {
+      "sana": "Paluumatkalla",
+      "alku": 21279,
+      "loppu": 21939
+    },
+    {
+      "sana": "näin",
+      "alku": 22000,
+      "loppu": 22219
+    },
+    {
+      "sana": "pienet",
+      "alku": 22279,
+      "loppu": 22579
+    },
+    {
+      "sana": "talot",
+      "alku": 22680,
+      "loppu": 23019
+    },
+    {
+      "sana": "ja",
+      "alku": 23439,
+      "loppu": 23500
+    },
+    {
+      "sana": "niiden",
+      "alku": 23539,
+      "loppu": 23799
+    },
+    {
+      "sana": "takana",
+      "alku": 23840,
+      "loppu": 24180
+    },
+    {
+      "sana": "suuren",
+      "alku": 24299,
+      "loppu": 24639
+    },
+    {
+      "sana": "tyhjyyden",
+      "alku": 24760,
+      "loppu": 25379
+    },
+    {
+      "sana": "Kaulukseni",
+      "alku": 27479,
+      "loppu": 27959
+    },
+    {
+      "sana": "oli",
+      "alku": 28000,
+      "loppu": 28139
+    },
+    {
+      "sana": "puhtaampi",
+      "alku": 28199,
+      "loppu": 28719
+    },
+    {
+      "sana": "kuin",
+      "alku": 28799,
+      "loppu": 29099
+    },
+    {
+      "sana": "käsitykseni",
+      "alku": 29159,
+      "loppu": 29840
+    },
+    {
+      "sana": "tästä",
+      "alku": 29899,
+      "loppu": 30099
+    },
+    {
+      "sana": "saaresta",
+      "alku": 30219,
+      "loppu": 30679
+    }
+  ],
+  "lauseet": [
+    179,
+    6019,
+    11099,
+    14179,
+    21279,
+    27479
+  ],
+  "luotu": "2026-09-11T12:05:15.028Z"
+}

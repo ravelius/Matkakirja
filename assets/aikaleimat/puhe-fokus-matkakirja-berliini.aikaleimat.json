@@ -1,0 +1,223 @@
+{
+  "versio": 2,
+  "kaupunki": "berliini",
+  "teksti": "Berliinissä paljastettiin voitonpylväs, jonka koristeina on vallattuja tykinputkia. Niin korkealle nostettu tykki ei ainakaan osu ohikulkijaan. Pylvään juurella poika myi lehtiä, ja katsojat polkivat hänen pudonneen numeronsa mutaan. Ostin senkin. Suuret voitot painetaan paksuin kirjaimin; pieni tappio oli pojan kasvoilla.",
+  "tekstiSha256": "d07097a1843e028c427166f5f2166f66c0e57c00882550e59dee7f6b3e1e27b8",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-berliini.mp3",
+    "versio": 2,
+    "tavut": 441408,
+    "sha256": "9af43e57e6c6c7f33347f5589f9954d802bfcbf9cbdd91dc246ff5992153f525"
+  },
+  "kesto": 27479,
+  "sanat": [
+    {
+      "sana": "Berliinissä",
+      "alku": 219,
+      "loppu": 819
+    },
+    {
+      "sana": "paljastettiin",
+      "alku": 919,
+      "loppu": 1599
+    },
+    {
+      "sana": "voitonpylväs",
+      "alku": 1639,
+      "loppu": 2480
+    },
+    {
+      "sana": "jonka",
+      "alku": 2759,
+      "loppu": 2980
+    },
+    {
+      "sana": "koristeina",
+      "alku": 3019,
+      "loppu": 3619
+    },
+    {
+      "sana": "on",
+      "alku": 3659,
+      "loppu": 3779
+    },
+    {
+      "sana": "vallattuja",
+      "alku": 3839,
+      "loppu": 4400
+    },
+    {
+      "sana": "tykinputkia",
+      "alku": 4440,
+      "loppu": 5299
+    },
+    {
+      "sana": "Niin",
+      "alku": 6579,
+      "loppu": 6739
+    },
+    {
+      "sana": "korkealle",
+      "alku": 6839,
+      "loppu": 7299
+    },
+    {
+      "sana": "nostettu",
+      "alku": 7359,
+      "loppu": 7879
+    },
+    {
+      "sana": "tykki",
+      "alku": 7919,
+      "loppu": 8399
+    },
+    {
+      "sana": "ei",
+      "alku": 8479,
+      "loppu": 8579
+    },
+    {
+      "sana": "ainakaan",
+      "alku": 8659,
+      "loppu": 9079
+    },
+    {
+      "sana": "osu",
+      "alku": 9139,
+      "loppu": 9319
+    },
+    {
+      "sana": "ohikulkijaan",
+      "alku": 9399,
+      "loppu": 10219
+    },
+    {
+      "sana": "Pylvään",
+      "alku": 12019,
+      "loppu": 12399
+    },
+    {
+      "sana": "juurella",
+      "alku": 12479,
+      "loppu": 12880
+    },
+    {
+      "sana": "poika",
+      "alku": 13000,
+      "loppu": 13279
+    },
+    {
+      "sana": "myi",
+      "alku": 13340,
+      "loppu": 13500
+    },
+    {
+      "sana": "lehtiä",
+      "alku": 13559,
+      "loppu": 14039
+    },
+    {
+      "sana": "ja",
+      "alku": 14559,
+      "loppu": 14619
+    },
+    {
+      "sana": "katsojat",
+      "alku": 14679,
+      "loppu": 15139
+    },
+    {
+      "sana": "polkivat",
+      "alku": 15179,
+      "loppu": 15619
+    },
+    {
+      "sana": "hänen",
+      "alku": 15659,
+      "loppu": 15839
+    },
+    {
+      "sana": "pudonneen",
+      "alku": 15920,
+      "loppu": 16399
+    },
+    {
+      "sana": "numeronsa",
+      "alku": 16440,
+      "loppu": 16939
+    },
+    {
+      "sana": "mutaan",
+      "alku": 17020,
+      "loppu": 17479
+    },
+    {
+      "sana": "Ostin",
+      "alku": 18819,
+      "loppu": 19139
+    },
+    {
+      "sana": "senkin",
+      "alku": 19199,
+      "loppu": 19639
+    },
+    {
+      "sana": "Suuret",
+      "alku": 21699,
+      "loppu": 22059
+    },
+    {
+      "sana": "voitot",
+      "alku": 22139,
+      "loppu": 22539
+    },
+    {
+      "sana": "painetaan",
+      "alku": 22600,
+      "loppu": 23100
+    },
+    {
+      "sana": "paksuin",
+      "alku": 23219,
+      "loppu": 23699
+    },
+    {
+      "sana": "kirjaimin",
+      "alku": 23799,
+      "loppu": 24379
+    },
+    {
+      "sana": "pieni",
+      "alku": 25519,
+      "loppu": 25779
+    },
+    {
+      "sana": "tappio",
+      "alku": 25840,
+      "loppu": 26399
+    },
+    {
+      "sana": "oli",
+      "alku": 26479,
+      "loppu": 26680
+    },
+    {
+      "sana": "pojan",
+      "alku": 26719,
+      "loppu": 27019
+    },
+    {
+      "sana": "kasvoilla",
+      "alku": 27079,
+      "loppu": 27479
+    }
+  ],
+  "lauseet": [
+    219,
+    6579,
+    12019,
+    18819,
+    21699
+  ],
+  "luotu": "2026-09-11T12:04:11.746Z"
+}
