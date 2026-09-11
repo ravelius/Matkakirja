@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { asennaLivianKasvot } from '../js/livia-eleet.js';
+import { asennaLivianKasvot, valitseLivianTaustaEle } from '../js/livia-eleet.js';
 import { ilmoitaLivianKasvopuhe } from '../js/livia-puhetila.js';
 import { livianDialogikoti, seuraaLivianDialogeja } from '../js/livia-dialogitila.js';
 
@@ -93,6 +93,29 @@ test('pyyntöjen odotus reagoi ilman chattia ja kestää rinnakkaiset sekä pitk
  c.tilanne('waitingEnd',{tunnus:b});e.tick(5000);assert.equal(c.tilanne('photo'),true);
 });
 
+test('pitkä odotus reagoi kerran, ei herää päättyneenä eikä keskeytä luentaa',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const wait={};c.tilanne('waiting',{tunnus:wait});c.tilanne('waiting',{tunnus:wait});e.tick(5900);assert.equal(e.raf.size,0,'sama token ei saa toista ajastinta');
+ e.tick(200);assert.ok(e.raf.size,'6 sekunnin jälkeen tulee yksi rauhallinen vastaus');
+ e.tick(4000);assert.equal(e.raf.size,0);e.tick(7000);assert.equal(e.raf.size,0,'sama odotus ei vastaa uudelleen');
+ c.tilanne('waitingEnd',{tunnus:wait});
+ const stale={};c.tilanne('waiting',{tunnus:stale});c.tilanne('waitingEnd',{tunnus:stale});e.tick(7000);assert.equal(e.raf.size,0,'päättynyt odotus ei herää');
+ const hidden={};c.tilanne('waiting',{tunnus:hidden});e.tick(3000);e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));e.tick(10000);
+ assert.equal(e.raf.size,0,'piilotettu sivu ei esitä viivästynyttä elettä');e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));e.tick(3100);
+ assert.ok(e.raf.size,'aktiivisen odotuksen jäljellä oleva viive jatkuu palatessa');c.tilanne('waitingEnd',{tunnus:hidden});e.tick(3000);
+ const narration={};c.tilanne('narration',{tunnus:narration,ele:'lookUp'});const queued={};c.tilanne('waiting',{tunnus:queued});e.tick(7000);
+ assert.equal(e.raf.size,0,'pitkä odotus ei keskeytä luentaa');c.tilanne('narrationEnd',{tunnus:narration});assert.ok(e.raf.size,'odotus jatkuu luennan jälkeen');
+ c.tilanne('waitingEnd',{tunnus:queued});
+ c.tuhoa();assert.equal(e.timers.size,0,'odotus-, tausta- tai paluuajastimia ei vuoda purussa');c=null;
+});
+
+test('taustaeleet ovat neutraaleja eivätkä toistu heti',()=>{
+ const neutraalit=new Set(['blink','turn','preen','glance','tilt','lookUp','lookDown']);
+ for(const edellinen of neutraalit)for(const arpa of [0,.25,.5,.999]){
+  const ele=valitseLivianTaustaEle(edellinen,arpa);assert.ok(neutraalit.has(ele));assert.notEqual(ele,edellinen);
+ }
+});
+
 test('luenta säilyy odotuksen alun ja lopun yli sekä eleiden välissä',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
  const a={},b={},surface=e.doc.body.children[0].children[0];
@@ -104,6 +127,7 @@ test('luenta säilyy odotuksen alun ja lopun yli sekä eleiden välissä',t=>{
  assert.equal(c.tilanne('emotion',{ele:'grin',voimakkuus:.5}),false);
  c.tilanne('narrationEnd',{tunnus:a});assert.equal(c.tilanne('photo'),true);
 });
+
 test('matkakirjan katse pysyy koko luennan, palautuu sisääntulon ja peittymisen jälkeen ja loppuu taukoon',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);
  const canvas=e.doc.body.children[0].children[0],a={};

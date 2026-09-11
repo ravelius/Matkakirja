@@ -44,6 +44,7 @@ import {
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
+import { ilmoitaLivianTunne } from './livia-tilanteet.js';
 // Kehittäjän kohtaamislista (omistaja 5.9.2026): oma moduulinsa, joka
 // hoitaa lehden, hiekkalaatikon ja pelin kloonauksen kokonaan itse.
 import { avaaKohtaamistesti } from './kohtaamistesti.js';
@@ -2284,6 +2285,12 @@ export class UI {
       // laukun voi sulkea Escistä ja taustanapautuksesta, ja close
       // laukeaa niistä kaikista.
       asetaMusiikkitila('matkalaukku', false);
+      if (!this.dead) {
+        ilmoitaLivianTunne(
+          { tunne: 'lammin', voimakkuus: 0.3 },
+          { lahde: 'laukku', tunnus: 'laukku.kiinni' },
+        );
+      }
     });
 
     this.turnCard = document.getElementById('actions').closest('.turn-card');
@@ -16949,6 +16956,7 @@ export class UI {
    * linssi on siellä heti eikä vasta seuraavan piirron jälkeen.
    */
   openPassport() {
+    const avautuu = !this.passportDialog.open;
     // Uusi avaus alkaa puhtaalta pöydältä: selite kertoo päällä
     // olevasta linssistä, kunnes jotain ruutua napautetaan.
     this.linssiEsikatselu = undefined;
@@ -16957,7 +16965,13 @@ export class UI {
     this.renderFinds();
     this.renderJulisteet();
     void this.paivitaLinssit();
-    if (!this.passportDialog.open) this.passportDialog.showModal();
+    if (avautuu) {
+      this.passportDialog.showModal();
+      ilmoitaLivianTunne(
+        { tunne: 'utelias', voimakkuus: 0.4 },
+        { lahde: 'laukku', tunnus: 'laukku.auki' },
+      );
+    }
     // Laukulla on oma hiljainen raitansa (nahka ja messinki); se
     // väistyy paikan musiikin tieltä, kun laukku suljetaan. Ambienssia
     // laukku EI hiljennä — se ei ole lukunäkymä.
@@ -19061,6 +19075,12 @@ export class UI {
     if (this.reducedMotion) {
       pohja.classList.add('shown');
       kuvaEl?.classList.add('shown');
+      if (onAarre(type)) {
+        ilmoitaLivianTunne(
+          { tunne: 'ilo', voimakkuus: 0.8 },
+          { lahde: 'aarre', tunnus: `aarre.loyto:${cityId ?? 'tuntematon'}:${type}` },
+        );
+      }
       caption.classList.add('shown');
       leima?.classList.add('lyoty');
       // Kirkastuminen kuuluu vain diplomille: tumman mallin pääaarre
@@ -19078,6 +19098,12 @@ export class UI {
       await this.wait(420);
       pohja.classList.add('shown');
       kuvaEl?.classList.add('shown');
+      if (onAarre(type)) {
+        ilmoitaLivianTunne(
+          { tunne: 'ilo', voimakkuus: 0.8 },
+          { lahde: 'aarre', tunnus: `aarre.loyto:${cityId ?? 'tuntematon'}:${type}` },
+        );
+      }
       sfx.play(treasureSound(type));
       if (aihe) this.soitaAarreMusiikki(aihe);
       if (hihkaisu) this.soitaHihkaisu(hihkaisu);
@@ -21903,6 +21929,12 @@ export class UI {
     for (const event of events) {
       sfx.play(EVENT_SOUND[event.kind] ?? 'turn');
       const box = this.buildToast(event);
+      if (event.tilanne === 'peli.vararikko.pankkiapu') {
+        ilmoitaLivianTunne(
+          { tunne: 'lammin', voimakkuus: 0.5 },
+          { lahde: 'peli', tunnus: event.tilanne },
+        );
+      }
       await this.wait(this.reducedMotion ? 0 : TOAST_MS[event.kind] ?? TOAST_MS.default);
       await this.removeToast(box);
     }
