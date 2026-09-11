@@ -1,3 +1,19 @@
+## 2026-09-11 05:11 UTC — v1750–v1751 JULKAISTU: OMISTAJAN MARSEILLE-PALAUTE, OIKEA REUNA JA OMA CHAT
+
+Omistaja lähetti kaksi uutta iPhone-kuvaa: 1) Pulu lehdessä paljon enemmän oikeaan reunaan (Matkailijalle-osio); 2) Pulu ei reagoi hänelle esitettyyn chat-kysymykseen Notre-Dame de la Garden nähtävyysikkunassa ja chat saisi olla lähempänä Pulua. Toteutettu kahdessa rajatussa PR:ssä.
+
+**v1750 / PR #2224 / main `6b926284262b57d5e92f6a58633ac062a92a7db4`:** puhelimen (≤600 px) lehdessä suljetun chatin right `2,6rem + 48px` → `0,6rem + safe-area`, noin 80 CSS-pikseliä oikealle. Koko, lasit ja 48 px napautusalue säilyvät; kartta, tabletti ja avoimen chatin sijainti ennallaan. Tämä KORVAA aiemman omistajatoiveen 48 px vasemmalle siirrosta. Testit 34564153672 SUCCESS, julkaisu 34564312725 SUCCESS, neljän julkaistun tiedoston HTTP 200 + SHA-256 vastaavuus. Marseille 393×852, 430×932 ja 882×1280 paikallisesti ja julkisesti: reunamitta, napautus, chat auki/kiinni ja kartalle paluu PASS, kuvat katsottu.
+
+**v1751 / PR #2225 / main `069de8bb5fb782e96ec2e9b1c2cce1cbf0e0da56`:** T1:n artikkelin hiljaisuusportti esti myös pelaajan oman chatin odotus- ja puhe-eleet. Omistajan uusi täsmennys: aktiivinen oma chat saa reaktiot myös `nahtavyys-dialog`- ja `wiki-dialog`-ikkunoissa, joissa chat oli jo käytettävissä. Ilman avointa chattia nämä pysyvät hiljaisina. Asetukset/voitto/ilmoitukset sekä peittyvä Pulu pysyvät edelleen hiljaisina, poikkeus ei avaa uusia chat-koteja. Chatin tilavaraus huomioi pienennetyn Pulun todellisen 0,72 koon: 104 px täyden koon sijaan 74,88 px korkeus + 6 px väli. Paneeli noin 37 px lähemmäs Pulua, linnun koko ja 48 px napautusalue ennallaan. VisualViewport-, näppäimistö- ja safe-area-rajat säilyvät.
+
+V1751 Node22: **2590 testiä / 2577 PASS / 0 FAIL / 13 SKIP**, 32 kohdennettua PASS. Kaksoisavaimet, niputus, savukkeet ja standalone PASS. Testit 34564494968 SUCCESS, julkaisu 34564682455 SUCCESS. Julkiset sw.js, js/main.js, js/muutokset.js, js/livia-chat-tila.js, js/livia-dialogitila.js, js/livia-eleet.js ja css/styles.css: HTTP 200 ja SHA-256 täsmälleen testattua toimitusta vastaavat. Julkisessa v1751:ssä on myös v1750 reunasiirto.
+
+Paikallinen JA julkinen oikea Chrome: Marseille-lehti → kartan selitenappi → Notre-Dame de la Garde → Pulu → kirjoituskenttä → Lähetä kysymys. Testivastaus viivästetty 8 s vain testin muistissa, tuotannon generointipalvelin estetty. 393×852 ja 1280×800: odotussignaali heti ja useita näkyviä SVG-asentoja 750 ms aikana, vastaus vapauttaa odotuksen, chatin jalkatasoväli 81 px, ei päällekkäisyyttä, peruuttaminen vapauttaa odotuksen ja sulkeminen palauttaa artikkelin hiljaiseksi. Reduced-motion 393×852 pysyy tarkoituksella liikkumattomana. Kaikki PASS, kuvat katsottu. EI fyysistä iPhone-/näppäimistökoetta. QA työhuoneessa: output/pulu-oikea-reuna-20260911/qa.mjs ja output/pulu-chat-vastaus-20260911/qa.mjs (PULU_QA_URL).
+
+Fable: päivitä Raamattuun/rekisteriin omistajan oikean reunan täsmennys sekä T1:n hiljaisen artikkelin poikkeus pelaajan omalle chatille. Sisältötageihin, uusiin repliikkeihin tai äänituotantoon ei koskettu. Rekisterin B-erä ja >6 s erillinen tunnetagi eivät kuulu näihin korjauksiin; nykyinen odotusele alkaa heti ja jatkuu olemassa olevalla rytmillä. Seuranta pysyy tauolla. Tämä on toimitusraportti, ei vastaanottokuittauksen oletus.
+
+---
+
 ## 2026-09-11 04:39 UTC — v1749 JULKAISTU: T1 DIALOGINÄKYVYYS JA REAKTIOPORTTI VARMENNETTU
 
 V1748-päätöksesi luettu. T1 toimitettu PR #2223, main `c35716a212aea1ea5c8be47a76b7268e4ed875e1`, **v1749**. Lopullinen Testit 34562535367 SUCCESS; Julkaise peli 34562707011 SUCCESS. Julkiset sw.js, js/main.js, js/muutokset.js, js/pollo.js, js/livia-eleet.js, js/livia-dialogitila.js ja css/styles.css: HTTP 200 ja SHA-256 täsmälleen testatun toimituksen mukaiset.
