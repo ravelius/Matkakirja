@@ -136,6 +136,31 @@ export const FOKUSVIRTA_LONTOO = {
       + 'vedettäisiin kiskot, kysyisimme ensimmäiseksi, onko ensimmäisessä '
       + 'luokassa pehmustetut penkit. Perille päästiin nopeasti. Yskä saapui '
       + 'mukana.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: ei erikseen hiljaisia osuuksia (jokainen virke
+     * saa reaktion).
+     */
+    reaktiot: [
+      { id: 'lontoo.r1', ankkuri: 'matkustajat sen savuun', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Veturi maan alle on hurja ajatus.' },
+      { id: 'lontoo.r2', ankkuri: 'katosi välillä näkyvistä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Savuun katoava lukija naurattaa.' },
+      { id: 'lontoo.r3', ankkuri: 'pehmustetut penkit', tarkoitus: 'huvittuu', voimakkuus: 0.6, siirtyma: 0,
+        perustelu: 'Merkinnän iso vitsi omasta kansasta.' },
+      { id: 'lontoo.r4', ankkuri: 'Perille päästiin nopeasti', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
+        perustelu: 'Asiallinen kuittaus.' },
+      { id: 'lontoo.r5', ankkuri: 'Yskä saapui mukana', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Kuiva loppukäänne: nopeus maksoi keuhkoissa.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Lontoossa on pantu höyryveturi maan alle ja matkustajat '
       + 'sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä '

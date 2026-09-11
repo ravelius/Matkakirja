@@ -238,6 +238,29 @@ export const FOKUSVIRTA_GRANADA = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Altaassa näin palatsin toistamiseen" (havainto
+     * ennen kuvaa).
+     */
+    reaktiot: [
+      { id: 'granada.r1', ankkuri: 'hienoin rakennusaine on vesi', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Vesi rakennusaineena yllättää.' },
+      { id: 'granada.r2', ankkuri: 'että minäkin vaikenin', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Isoisä hiljenee veden mukana.' },
+      { id: 'granada.r3', ankkuri: 'kastoin sormeni veteen', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Kuva särkyy kosketuksesta.' },
+      { id: 'granada.r4', ankkuri: 'rakentui takaisin', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Kärsivällinen odotus palkitaan.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Alhambran palatsi kohoaa Granadan yllä, mutta sen '
       + 'hienoin rakennusaine on vesi. Kapeissa uomissa se kulkee pihalta '

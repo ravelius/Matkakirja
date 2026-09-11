@@ -125,6 +125,28 @@ export const FOKUSVIRTA_KOBENHAVN = {
       + 'ennen oikeaa. Olin tullut katsomaan huvituksia. En arvannut, että '
       + 'paras niistä olisi kaksi ihmistä, joilla ei ollut enää tarvetta pysyä '
       + 'tahdissa.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Olin tullut katsomaan huvituksia" (asetelma).
+     */
+    reaktiot: [
+      { id: 'kobenhavn.r1', ankkuri: 'orkesteri ehti edelle', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Hidas tanssi jää orkesterista jälkeen.' },
+      { id: 'kobenhavn.r2', ankkuri: 'lähteneet sen perään', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Pariskunta pitää oman tahtinsa.' },
+      { id: 'kobenhavn.r3', ankkuri: 'oman tähtitaivaansa', tarkoitus: 'hammastyy', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Lampi saa tähdet ennen taivasta.' },
+      { id: 'kobenhavn.r4', ankkuri: 'pysyä tahdissa', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Merkinnän hiljainen, lämmin päätös.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Kööpenhaminan Tivolissa näin vanhan pariskunnan '
       + 'tanssivan niin hitaasti, että orkesteri ehti edelle. He eivät '

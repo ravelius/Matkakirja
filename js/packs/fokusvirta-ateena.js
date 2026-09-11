@@ -131,6 +131,31 @@ export const FOKUSVIRTA_ATEENA = {
      * ennen seuraavaa julkaisua, tai kertoja lukee eri tekstin kuin
      * ruudulla lukee.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Kaivoin taskustani kolikon kahvia varten"
+     * (arkinen liike, pulu kuuntelee).
+     */
+    reaktiot: [
+      { id: 'ateena.r1', ankkuri: 'kuin jokainen olisi ollut kaivamassa', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Kaupunkilaiset puhuvat kuin omasta työstään: pulu epäilee.' },
+      { id: 'ateena.r2', ankkuri: 'nerona, asiakas varkaana', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Sama mies on kahdelle kuulijalle kaksi eri ihmistä.' },
+      { id: 'ateena.r3', ankkuri: 'Kummallakaan ei ollut kultaa', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Kiistan molemmat osapuolet ovat yhtä tyhjän päällä.' },
+      { id: 'ateena.r4', ankkuri: 'eivät tarvinneet enää mainosta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Akropolis vaikenee puheen yllä: hetki hiljenee.' },
+      { id: 'ateena.r5', ankkuri: 'isäntä ei kysynyt mitään', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Loppuvitsi: isoisän oman kolikon alkuperä jää kysymättä.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Ateenassa puhuttiin Troijasta löydetystä kullasta kuin '
       + 'jokainen olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia '

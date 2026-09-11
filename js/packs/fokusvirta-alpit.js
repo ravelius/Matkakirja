@@ -41,6 +41,33 @@ export const FOKUSVIRTA_ALPIT = {
       + 'pitkä rasahdus. Siirsin sekä kiven että itseni kauemmas. Alpeilla on '
       + 'syytä erottaa toisistaan hiljaisuus ja se, ettei vuori vielä puhu.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: ei erikseen hiljaisia osuuksia (jokainen virke
+     * saa reaktion).
+     */
+    reaktiot: [
+      { id: 'alpit.r1', ankkuri: 'ettei taivas ylettynyt', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Jään sinisyys on pohjatonta.' },
+      { id: 'alpit.r2', ankkuri: 'jään liikkuvan', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Isoisä ei usko oppaan väitettä heti.' },
+      { id: 'alpit.r3', ankkuri: 'suostunut todistajaksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Koe kivellä epäonnistuu koomisesti.' },
+      { id: 'alpit.r4', ankkuri: 'pitkä rasahdus', tarkoitus: 'vakavoituu', voimakkuus: 0.7, siirtyma: 0,
+        perustelu: 'Jäätikkö vastaa itse: hurja hetki.' },
+      { id: 'alpit.r5', ankkuri: 'itseni kauemmas', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Isoisä myöntää pelkonsa kuivasti.' },
+      { id: 'alpit.r6', ankkuri: 'ettei vuori vielä puhu', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
+        perustelu: 'Merkinnän vakava opetus.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Grindelwaldin jäätikössä oli sinistä niin syvällä, '
       + 'ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Panin kiven '

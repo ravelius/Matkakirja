@@ -195,6 +195,29 @@ export const FOKUSVIRTA_BUKAREST = {
       + 'Keittiöstä nousi tuoksu, jolle ei tarvittu tulkkia. Menin alas ennen '
       + 'kuin ehdin laskea parven pylväät. Huoneeni löysin illalla naapurini '
       + 'kuorsauksesta.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: majatalon parvien kuvaus ja "Menin alas ennen
+     * kuin ehdin laskea parven pylväät" (havainnot).
+     */
+    reaktiot: [
+      { id: 'bukarest.r1', ankkuri: 'kolmet eri kaupat', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Oven takaa kuuluu kolme kauppaa yhtä aikaa.' },
+      { id: 'bukarest.r2', ankkuri: 'kuin pankki omaisuutensa vartijana', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Säkkinsä päällä nukkuva mies on isoisän vertaus.' },
+      { id: 'bukarest.r3', ankkuri: 'ei tarvittu tulkkia', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Keittiön tuoksu ymmärretään ilman kieltä.' },
+      { id: 'bukarest.r4', ankkuri: 'naapurini kuorsauksesta', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Loppuvitsi: huone löytyy korvalla.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Bukarestin Manucin majatalossa huoneet kiertävät pihaa '
       + 'puuparvien takana. Avasin oven ja kuulin yhtä aikaa kolmet eri '

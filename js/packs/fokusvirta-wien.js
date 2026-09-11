@@ -129,6 +129,33 @@ export const FOKUSVIRTA_WIEN = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Rotunden kupoli peitti taivaan rautaisella
+     * hatulla" (kuva, pulu kuuntelee).
+     */
+    reaktiot: [
+      { id: 'wien.r1', ankkuri: 'koneen painavan sanomalehteä', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Painokone silmien edessä on aikakauden ihme.' },
+      { id: 'wien.r2', ankkuri: 'aikaa ajatellakseen', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Kuiva huomautus koneen ajattelemattomuudesta.' },
+      { id: 'wien.r3', ankkuri: 'pörssi romahti', tarkoitus: 'vakavoituu', voimakkuus: 0.7, siirtyma: 0,
+        perustelu: 'Hurja käänne kahdessa sanassa.' },
+      { id: 'wien.r4', ankkuri: 'uutinen ei pienentynyt', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Taiteltu lehti ei pienennä tappiota.' },
+      { id: 'wien.r5', ankkuri: 'Tilasin hänelle kahvin', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Pieni ele vieraalle: hiljainen nyökkäys.' },
+      { id: 'wien.r6', ankkuri: 'ei ollut siihen apua', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Merkinnän vakava päätös: koneet eivät lohduta.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Wienin maailmannäyttelyssä näin koneen painavan '
       + 'sanomalehteä silmieni edessä. Se ei tarvinnut edes aikaa '

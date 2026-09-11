@@ -225,6 +225,29 @@ export const FOKUSVIRTA_KRAKOVA = {
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Hän oli kuullut saman katkoksen koko ikänsä"
+     * (selittävä sivulause).
+     */
+    reaktiot: [
+      { id: 'krakova.r1', ankkuri: 'vaikeni kesken sävelmän', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Katkeava torvi hätkähdyttää.' },
+      { id: 'krakova.r2', ankkuri: 'torikauppias tarjosi tuolia', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Odotus kesti niin kauan, että se huomattiin.' },
+      { id: 'krakova.r3', ankkuri: 'jäin silti', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Isoisä ei suostu lähtemään.' },
+      { id: 'krakova.r4', ankkuri: 'korva ei tahdo lähteä', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Merkinnän vakava päätös kesken jääneestä.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Krakovan Marian kirkon tornista soi torvi ja vaikeni '
       + 'kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi '

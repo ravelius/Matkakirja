@@ -215,6 +215,29 @@ export const FOKUSVIRTA_BARCELONA = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Yhden tulevan kadun paikalla kasvoi vielä
+     * kaalia" (havainto ennen loppua).
+     */
+    reaktiot: [
+      { id: 'barcelona.r1', ankkuri: 'leikattu kulmat pois', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Korttelien viistetyt kulmat ihmetyttävät.' },
+      { id: 'barcelona.r2', ankkuri: 'epäilin muuraria', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Isoisä epäili ensin rakentajan taitoja.' },
+      { id: 'barcelona.r3', ankkuri: 'tilaa hengittää', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Kaupunkisuunnittelu saa hyväksynnän.' },
+      { id: 'barcelona.r4', ankkuri: 'muuttumassa liikenteeksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Loppuvitsi kaalimaan kohtalosta.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Barcelonan uusista kortteleista on leikattu kulmat '
       + 'pois. Ensin epäilin muuraria, sitten näin kahden kärryn mahtuvan '

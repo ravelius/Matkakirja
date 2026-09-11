@@ -218,6 +218,31 @@ export const FOKUSVIRTA_MOSKOVA = {
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Illalla pieni käsikello kutsui minut syömään"
+     * (siirtymä).
+     */
+    reaktiot: [
+      { id: 'moskova.r1', ankkuri: 'ei ole soinut kertaakaan', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Kello, joka ei ole koskaan soinut.' },
+      { id: 'moskova.r2', ankkuri: 'ennen ensimmäistä lyöntiä', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Halkeama ennen ensimmäistä ääntä.' },
+      { id: 'moskova.r3', ankkuri: 'huonettani suuremman oloinen', tarkoitus: 'hammastyy', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Pelkkä sirpale on huonetta suurempi.' },
+      { id: 'moskova.r4', ankkuri: 'hiljaisuus olisi sillä voitettu', tarkoitus: 'epailee', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Vartijan ylpeys ei vakuuta.' },
+      { id: 'moskova.r5', ankkuri: 'enemmän vaikutusvaltaa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Loppuvitsi: pieni kello voittaa suuren.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Kremlissä seisoo valtava kello, joka ei ole soinut '
       + 'kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala on '

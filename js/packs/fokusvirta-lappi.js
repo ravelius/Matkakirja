@@ -48,6 +48,29 @@ export const FOKUSVIRTA_LAPPI = {
       + 'olivat teitä. Veneeseen astuva nainen tiesi seuraavan talon savusta, '
       + 'ei kartasta. Lisäsin rannalle talon ja jätin savulle tilaa nousta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain neljä tunnetagia. */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Rannassa sidottiin kuormaa" ja "Olin piirtänyt
+     * joet rajoiksi" (havainto ja asetelma).
+     */
+    reaktiot: [
+      { id: 'lappi.r1', ankkuri: 'kuin matkustaja suurempaan veneeseen', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Joki esitellään matkustajana.' },
+      { id: 'lappi.r2', ankkuri: 'ne olivat teitä', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Rajat osoittautuivat teiksi.' },
+      { id: 'lappi.r3', ankkuri: 'savusta, ei kartasta', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Paikallinen tieto voittaa kartan.' },
+      { id: 'lappi.r4', ankkuri: 'tilaa nousta', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Isoisä korjaa karttaansa: hiljainen päätös.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Rovaniemellä Ounasjoki tuo vetensä Kemijokeen kuin '
       + 'matkustaja suurempaan veneeseen. Rannassa sidottiin kuormaa, ja '

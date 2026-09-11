@@ -159,6 +159,29 @@ export const FOKUSVIRTA_RIIKA = {
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: laulujuhlien taustatieto ja "Olin merkinnyt
+     * karttaan sataman ja kirkot" (selitys).
+     */
+    reaktiot: [
+      { id: 'riika.r1', ankkuri: 'saman hengenvedon', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Monesta kuorosta tulee yksi ääni.' },
+      { id: 'riika.r2', ankkuri: 'En ymmärtänyt sanoja', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
+        perustelu: 'Kielimuuri todetaan rauhallisesti.' },
+      { id: 'riika.r3', ankkuri: 'kyynel poskellaan', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
+        perustelu: 'Vieraan miehen kyynel on merkinnän vakavin hetki.' },
+      { id: 'riika.r4', ankkuri: 'tehty ihmisäänistä', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Päätöslause kantaa koko merkinnän.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Riikaan on tullut laulajia Latvian ensimmäisille '
       + 'suurille laulujuhlille. Luulin ensin kuulevani monta kuoroa, kunnes '

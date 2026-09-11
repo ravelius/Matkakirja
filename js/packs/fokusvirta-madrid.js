@@ -139,6 +139,29 @@ export const FOKUSVIRTA_MADRID = {
      * jälkeen repon polun ja vaikenee siististi (audion 'error' →
      * varareitti → catch), eikä mikään muu hajoa.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Madridin kahviloissa väitellään uudesta
+     * tasavallasta" (selittävä tausta).
+     */
+    reaktiot: [
+      { id: 'madrid.r1', ankkuri: 'makaa välittämättä siitä', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Koira on taulun ainoa, jota juhla ei liikuta.' },
+      { id: 'madrid.r2', ankkuri: 'katsoo suoraan minuun', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Maalarin katse yllättää kesken katselun.' },
+      { id: 'madrid.r3', ankkuri: 'saanut parhaan paikan', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Isoisä huomaa asemansa hiljaa, ei kersku.' },
+      { id: 'madrid.r4', ankkuri: 'ostamatta edes sanomalehteä', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Loppuvitsi: vallanvaihto tapahtuu taulun edessä.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Pradossa pysähdyin tauluun, jossa pieni prinsessa saa '
       + 'kaiken huomion ja suuri koira makaa välittämättä siitä. Maalari '

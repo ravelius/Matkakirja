@@ -217,6 +217,31 @@ export const FOKUSVIRTA_VARSOVA = {
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Karttaan voi vetää rajan yhdellä liikkeellä"
+     * (johdatus päätökseen).
+     */
+    reaktiot: [
+      { id: 'varsova.r1', ankkuri: 'kuuluu Venäjälle', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Kartan tieto on vallan tieto.' },
+      { id: 'varsova.r2', ankkuri: 'olevansa puolalainen', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Leipurin oma vastaus kartalle.' },
+      { id: 'varsova.r3', ankkuri: 'kuin kuuntelemassa', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Talot kuuntelevat: hetki hiljenee.' },
+      { id: 'varsova.r4', ankkuri: 'aamiaiseni sain puolaksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Kyltti ja aamiainen eri kielillä.' },
+      { id: 'varsova.r5', ankkuri: 'siirry kynän mukana', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
+        perustelu: 'Merkinnän painavin lause.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Kartassani Varsova kuuluu Venäjälle. Torin leipuri '
       + 'sanoi olevansa puolalainen ja kopautti leipää, jotta kuulisin sen '

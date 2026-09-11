@@ -142,6 +142,31 @@ export const FOKUSVIRTA_PRAHA = {
       + 'kuolemalle, mutta minun kellossani vain kiireelle. Ajuri löysi minut '
       + 'samasta paikasta puoli tuntia myöhemmin. Hänellä oli aivan '
       + 'toisenlainen käsitys hukkaan menneestä ajasta.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: ei erikseen hiljaisia osuuksia (jokainen virke
+     * saa reaktion).
+     */
+    reaktiot: [
+      { id: 'praha.r1', ankkuri: 'luuranko soittaa kelloa', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Kellon kuolemankuva hätkähdyttää.' },
+      { id: 'praha.r2', ankkuri: 'unohdin koko asian', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Taskukellon vertailu jää kesken.' },
+      { id: 'praha.r3', ankkuri: 'minun kellossani vain kiireelle', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Merkinnän vakava huomio ajasta.' },
+      { id: 'praha.r4', ankkuri: 'puoli tuntia myöhemmin', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Isoisä oli seissyt paikallaan puoli tuntia.' },
+      { id: 'praha.r5', ankkuri: 'hukkaan menneestä ajasta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Ajurin eriävä mielipide päättää merkinnän.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Prahan torin kellossa luuranko soittaa kelloa ja '
       + 'apostolit kulkevat ikkunan ohi. Aioin verrata sitä taskukellooni ja '

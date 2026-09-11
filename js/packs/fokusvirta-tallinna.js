@@ -114,6 +114,31 @@ export const FOKUSVIRTA_TALLINNA = {
       + 'Apteekkari leikkasi suuremman palan. Ikkunasta näkyi raatihuone ja '
       + 'sen vakava torni; sisällä tuoksui manteli. Söin lääkkeeni matkalla '
       + 'satamaan. Vaiva jäi, mutta hoitoon olin poikkeuksellisen tyytyväinen.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Ikkunasta näkyi raatihuone ja sen vakava
+     * torni" (havainto).
+     */
+    reaktiot: [
+      { id: 'tallinna.r1', ankkuri: 'marsipaania sydänsuruihin', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Makeinen lääkkeenä on outo ajatus.' },
+      { id: 'tallinna.r2', ankkuri: 'ketä kaipaa', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Kysymys osuu isoisän omaan yksinäisyyteen.' },
+      { id: 'tallinna.r3', ankkuri: 'suuremman palan', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Apteekkarin vastaus ilman sanoja.' },
+      { id: 'tallinna.r4', ankkuri: 'Söin lääkkeeni', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Ohje noudatetaan tunnollisesti.' },
+      { id: 'tallinna.r5', ankkuri: 'poikkeuksellisen tyytyväinen', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Loppuvitsi hoidon ja vaivan erosta.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Revalin torin apteekissa myytiin marsipaania '
       + 'sydänsuruihin. Kysyin, auttaako se myös silloin, kun ei vielä tiedä '

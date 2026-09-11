@@ -202,6 +202,29 @@ export const FOKUSVIRTA_SARAJEVO = {
       + 'aamulla katsomatta. Nyt näin jokaisen jäljen. Basaarin kujilla kuului '
       + 'kilkutusta kaikkialta. Kaupunki oli tehnyt aamiaiseni astian käsin.',
     /* Kaanon, kohta 1 — luenta ja äänitteen polku sellaisinaan. */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Viereisessä puodissa kaadettiin kahvia" ja
+     * "Basaarin kujilla kuului kilkutusta" (taustahavainnot).
+     */
+    reaktiot: [
+      { id: 'sarajevo.r1', ankkuri: 'hukannut sen liivintaskuun', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Naurettavan pieni vasara on merkinnän vitsi.' },
+      { id: 'sarajevo.r2', ankkuri: 'aamulla katsomatta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Isoisä huomaa ohittaneensa työn.' },
+      { id: 'sarajevo.r3', ankkuri: 'jokaisen jäljen', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Katse tarkentuu: hetki vakavoituu.' },
+      { id: 'sarajevo.r4', ankkuri: 'aamiaiseni astian käsin', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Hiljainen kunnianosoitus käsityölle.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Sarajevon kupariseppä naputti pannuun kuvioita niin '
       + 'pienellä vasaralla, että olisin hukannut sen liivintaskuun. '

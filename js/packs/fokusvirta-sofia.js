@@ -316,6 +316,29 @@ export const FOKUSVIRTA_SOFIA = {
      * ja on generoitava uudelleen tästä luennasta (sama tilanne kuin
      * Ateenassa) ennen kuin kertoja lukee saman kuin ruudulla lukee.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Lähteellä nainen täytti kannua" ja "Minareetin
+     * takana kohosi Vitoša" (havainnot, pulu kuuntelee).
+     */
+    reaktiot: [
+      { id: 'sofia.r1', ankkuri: 'pyytämättä halkoja', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Maasta nouseva kuuma vesi on ensimmäinen ihmettely.' },
+      { id: 'sofia.r2', ankkuri: 'kylmästä pesuvedestä', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Ilmaisen kuuman vieressä maksettu kylmä vesi naurattaa.' },
+      { id: 'sofia.r3', ankkuri: 'matkailu muodostuu', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Isoisän kuiva johtopäätös saa nyökkäyksen.' },
+      { id: 'sofia.r4', ankkuri: 'jo noustu keittämään', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Loppuvitsi: nukkuva vuori ja hereillä oleva kaupunki.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Sofiassa maa tarjoaa kuumaa vettä pyytämättä halkoja. '
       + 'Lähteellä nainen täytti kannua ja odotti sen jäähtymistä. Minä olin '

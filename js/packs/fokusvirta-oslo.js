@@ -182,6 +182,29 @@ export const FOKUSVIRTA_OSLO = {
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: lankkujen lastaus ja sataman miehen selitys
+     * sahoista (taustaa).
+     */
+    reaktiot: [
+      { id: 'oslo.r1', ankkuri: 'siististi pinottuna', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Metsä matkustaa kuin matkustaja.' },
+      { id: 'oslo.r2', ankkuri: 'ylpeiltä itsestään', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Kivitalot saavat kuivan huomautuksen.' },
+      { id: 'oslo.r3', ankkuri: 'Poimin vedestä lastun', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
+        perustelu: 'Pieni arkinen teko.' },
+      { id: 'oslo.r4', ankkuri: 'tuoksui yhä metsältä', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Lastu muistaa alkunsa: hiljainen päätös.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Christianian vuonolla lastattiin lankkuja laivaan. '
       + 'Metsä matkusti maailmalle siististi pinottuna. Sataman mies näytti '

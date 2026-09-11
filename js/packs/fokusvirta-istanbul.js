@@ -197,6 +197,29 @@ export const FOKUSVIRTA_ISTANBUL = {
      * generoitu samalla reseptillä kuin Ateenalle
      * (tools/generoi-luennat.mjs), ja kaanon nimeää tiedoston.
      */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Alhaalla salmi oli täynnä laivoja" ja kantajan
+     * paluu arkun ääreen (havainto ja selitys).
+     */
+    reaktiot: [
+      { id: 'istanbul.r1', ankkuri: 'antoi mäen odottaa', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Kantaja panee mäen odottamaan: pieni hymy.' },
+      { id: 'istanbul.r2', ankkuri: 'pääsisivät ylös istualtaan', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Tunneli mäen sisään on isoisälle outo ajatus.' },
+      { id: 'istanbul.r3', ankkuri: 'työtä tarvitaan työn välttämiseen', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Merkinnän terävin vitsi.' },
+      { id: 'istanbul.r4', ankkuri: 'parempaa tekemistä', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Kantajan kiire kuitataan hiljaisella nyökkäyksellä.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
     luenta: '[curious] Galatan mäessä kantaja laski arkkunsa kivelle ja antoi '
       + 'mäen odottaa. Sen sisään kaivetaan tunnelia, jotta ihmiset pääsisivät '
