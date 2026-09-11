@@ -1,3 +1,17 @@
+## 2026-09-11 — CODEX → FABLE: PR2269 READY — Pulu nokkii karttaa levossa
+
+Omistajan uusi pyyntö: Pulu voisi välillä nokkia kartan pintaa, kun mitään ei tapahdu. Toteutus: https://github.com/ravelius/Matkakirja/pull/2269, head aa5712e3681820abf27f84211681c0ac6c81d403, puu 2f47b76ce3f6b13b4bfb7a558aee4eb9599894bd (paikallinen ja fetchattu etäpuu yhtenevät). Base 0179c1bffade97267471a955124d5be5cb14c714.
+
+Rajaus: mapPeck 2500 ms, kaksi kartan pintaan ulottuvaa nokkaisua 675/1675 ms, jalat paikallaan. Yksi kahdeksasta levon eleestä, vähintään 30 s toimettomuutta, ei peräkkäistä toistoa. Pointerdown, näppäin, wheel sekä jatkuva drag/touch keskeyttävät; puhe, luenta, chat, dialogi, piilotus ja reduced motion voittavat. Ei ääniä, ruokaa, palkintoja tai tekstejä. Omistajan map-pan-hover-idea on erillinen eikä sisälly tähän.
+
+Todisteet: 2909 pass / 0 fail / 13 skip, 88/88 kohdennetut. Kaksoisavaimet, niputus, standalone, diff-check PASS. CI 34644605816 SUCCESS. Oikea pelikoodi matkakirja.app-originissa paikallisin ehdokastiedostoin: Chrome 834×1194, Ateenan kartta, aito 37041 ms lepo → nokkiminen, wheel keskeyttää, chat ottaa oman asentonsa; 0 JS-virhettä, kuvat tarkastettu. Ei julkaistun asennetun sovelluksen tai fyysisen iPad/Safarin readbackia.
+
+Seuraava siirto Fable: tarkista, yhdistä, nosta versio ja julkaise. Kirjaa nokkiminen Raamattuun. Ei Codexin versionostoa tai mergeä. Sol-agentti teki SVG:n/testit; pääsessio tarkasti ja viimeisteli geometrian ja elinkaaren.
+
+Luin erillisen 18:05 UTC saapumiskysymys-/kerran-tervehdys-toimeksiannon. Se ei ole tämän rajatun nokkimis-PR:n sivutyönä toteutettu; tarvitsee erillisen jatkoerän. Kuvatuotannon tilaukset kuuluvat kuvatoimitussessiolle.
+
+---
+
 ## 2026-09-11 — CODEX: PR #2264 READY, chatin pikapyrähdys + puistelu vastauksen aikana
 
 Käyttäjän uusi pyyntö: chatissa kysyttäessä Pulu salamana oikeasta reunasta pois, vauhtipilvi jäljessä, vielä nopeammin takaisin jotta vastaus ei ehdi ennen lintua. Lisätäsmennys sanatarkasti: "Paluuanimaation voisi pidentää niin, että kun pulu alkaa vastata kysymykseen, niin se puistelisi samalla pölyjä sulastaan." Toteutin nämä yhdessä: nopea lento takaisin ja pidempi puistelu vasta paikalla vastauksen rinnalla. Kirjaathan täsmennyksen Raamattuun omistuksesi mukaisesti.
