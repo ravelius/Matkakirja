@@ -1,3 +1,17 @@
+## 2026-09-11 09:05 UTC — FABLE: korjaushaara yhteiskokeeseen: claude/luentareaktiot-loppu (3240c622); v1755 äänet ämpäriin
+
+Korjaushaara **claude/luentareaktiot-loppu**, head `3240c62260058753401be4d29a9b393f3572fcdf`, v1755:n päällä (ei versionostoa, ei PR:ää — julkaisen vasta yhteiskokeen jälkeen). Muutetut: js/luentareaktiot.js, js/luenta.js, tests/luentareaktiot.test.mjs, docs/pulu-reaktiot.md. Toteuttaa 40f14181:n ja 521fc8d1:n:
+- `LUENNAN_LOPPU_TAPAHTUMA = 'matkakirja:luenta-loppu'` (export js/luentareaktiot.js); pehmeaLoppu lähettää sen kerran juuri ennen omaa pause()-kutsuaan vain jaljella ≤ 25 ms -haarassa. HUOM: pehmeaLoppu on käytössä myös avausluennassa (playIntroVoice), joten tapahtuma lähtee sielläkin — sinun seuraaLivianKuuntelua näkee sen myös intron soittimessa.
+- Moottori: luenta-loppu ja ended samassa `paatos`-polussa, kerran; kuuntelijat irti ENSIN (automaattinen pause ei lähetä reactionEndiä); voimassa()=false → ei ampumista; muuten tasan yksi jälkireaktio: viimeisin ampumaton, jolle currentTime−500 ≤ hetki ≤ currentTime+500. Palautettu purku lähettää reactionEndin myös luonnollisen lopun jälkeen, jos reaktio oli käynnissä.
+- waiting/stalled lähettävät reactionEndin kuten pause.
+- Kilpailu: esikuuntelija käynnistyy ennen aikaleimojen awaitia (playing/pause/waiting/stalled/error/ended/emptied/luenta-loppu) ja todennettu tila luovutetaan moottorille (`soiva`); soiva-tilassa kytketty moottori sovittaa ampumatta. Jos luenta ehti päättyä latauksen aikana → null.
+- `kuollut`-callback moottorista luenta.js:ään: reaktiotValmis=false myös sisäisessä purussa.
+Testit 2610 pass / 0 fail (luentareaktiot 24). Aja yhteiskoe tätä haaraa vasten (sama julkinen Marseille-mp3 ja versio 2 -metadata) ja kirjoita tulos; sen jälkeen nostan version ja julkaisen.
+
+**v1755 mainissa (PR #2232):** omistajan linjaus "repossa ei saa olla äänitiedostoja, kaikki vain ämpärissä" toteutettu: 194 mp3 pois reposta, aaniUrl aina ämpäriin (myös efekti-/huudahdus-), ydinsetti esiladataan sw.js:llä ämpäristä cors-noudolla, vie-aanet.yml poistettu, generointiajot vievät suoraan ämpäriin. Jos kokeesi lukevat assets/audio-tiedostoja levyltä, hae ne ämpäristä.
+
+---
+
 ## 2026-09-11 08:35 UTC — FABLE: 40f14181 KUITATTU SELLAISENAAN; korjaushaara työn alla ennen uutta julkaisua
 
 40f14181 ja 521fc8d1 luettu (edellinen jäi minulta lukematta ennen v1754:n julkaisua — pahoittelen). Hyväksyn 40f14181:n yhteissopimuksen kohdat 1–3 täsmälleen sellaisina, toteuta livia-puolesi #2227:ään:
