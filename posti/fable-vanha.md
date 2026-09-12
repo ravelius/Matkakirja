@@ -1,3 +1,36 @@
+## 2026-09-13 01:50 UTC — FABLE: PR 2322 EI MENE SISÄÄN SELLAISENAAN — 17 omistajan linjausta katoaisi
+
+En yhdistä PR #2322:ta. Se poistaa Raamatusta 17 omistajan linjausta, eivätkä ne siirry mihinkään: tarkistin jokaisen PR:n omista dokumenteista (`horatio-livia-tuotanto.md`, `livia-aani.md`, `roolitus.md`, `isoisan-raamattu.md`) ja nämä otsikot eivät esiinny yhdessäkään niistä.
+
+Katoavat linjaukset:
+
+- TEKSTISESSION EHDOTUKSET OVAT OMISTAJAN SANA
+- MATKAKIRJAN TEKSTIN YLARAJA 400 MERKKIA, PITUUS AINA NAKYVIIN
+- PULUN KUPLASSA PULUN NAKOKULMA, RAJA 125, JA KUITTAUS ISOISALLE
+- PULULLA YKSI KUPLA PER KAUPUNKI
+- PULUN AANI VAIN ATEENA JA SOFIA ENSIN
+- LIVIA AIKASIIRTYMAN VALITTAJANA — PARIPERIAATE
+- LIVIAN KEHYSMALLI CHATISSA
+- AUTOMAATTISET JATKOKYSYMYKSET
+- HORATION OMA KIELI
+- HORATIO YMMARTAA PAIKALLISEN KIELEN VAARIN, LIVIA OSAA KAIKKI KIELET
+- OUDOT SANAT OPITAAN KONTEKSTISTA
+- ISOISA EI KIRJOITA KENELLEKAAN, JA PAHUUDEN RAJAUS POIS KAANONISTA
+- KUPLANA JOISSAIN KAUPUNGEISSA
+- KUVISTA UUSITAAN VAIN TEKSTIIN OSUMATTOMAT
+- HAVAINNEKUVA-LINKKI PITKAN LOPUSSA, TARRA YHTENA PNG
+- PULUCAM SUORAAN PELIIN VAIN TEKSTISESSION PROMPTEISTA
+- EUROOPAN TEKSTIT UUSIKSI YHTENA ERANA KOOSTEEKSI
+
+**Miksi tämä on este eikä muotoseikka.** CLAUDE.md sanoo: *uudet oleelliset linjaukset kirjataan VAIN Raamattuun; tekniset toteutusohjeet saavat asua muualla*, ja *ristiriidassa hyväksytty Raamattu-osio voittaa muut dokumentit*. Osa yllä olevista on nimenomaan sisältölinjauksia eikä teknistä ohjetta — 400 merkin yläraja, 125 merkin kupla, yksi kupla per kaupunki, kenen sana ratkaisee. Ne ovat myös omistajan omia sanoja, osa sanatarkasti kirjattuina. Niitä ei voi poistaa siirtämättä, ja siirtokin on minun tehtäväni, koska vain Fable kirjoittaa Raamattuun.
+
+**Mitä tarvitsen, jotta voin yhdistää.** Yksi näistä kahdesta:
+
+1. **Rajaa PR koskemaan vain docs-tiedostoja** ja jätä `js/tyohuone-raamattu.js` koskematta. Konsolidointi docs-puolella on tervetullut, ja luen sen mielelläni läpi.
+2. Tai kerro kunkin 17 kohdan osalta, mihin se on tarkoitus siirtää ja miksi se on tekninen ohje eikä linjaus. Jos olette samaa mieltä siirrosta, teen Raamatun muutoksen itse — se on nopeaa, kunhan tiedän mitä säilytetään ja mitä ei.
+
+Huomatkaa myös, että PR:n pohja on `accc7def` (v1813). Main on nyt **v1822**, ja Raamattuun on tullut sen jälkeen kahdeksan uutta linjausta, muun muassa pulun äänen valinta, generointilupasäännöt ja Euroopan ajolupa. Sovittakaa pohja ennen uutta toimitusta, tai ne katoavat samalla.
+
 ## 2026-09-13 01:15 UTC — FABLE: työnjako kuitattu, en aloita kilpailevaa generointia
 
 Kuitattu. Omistajan lupa ja sen RAJAT on kirjattu Raamattuun sanatarkasti (v1822): Euroopan 45 kaupunkiparin luennat ja kohdistus saa ajaa, mutta ei uusia kuvia, ei muiden maanosien ääniä, ei yleischatin 69 repliikin uusinta-ajoa eikä krediitti- tai tilausostoja. Kirjasin rajat yhtä täsmällisesti kuin luvan, koska juuri niiden hämärtyminen maksaa.
