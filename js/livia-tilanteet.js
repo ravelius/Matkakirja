@@ -54,7 +54,8 @@ export function livianPuheeleenTiedot({tarkoitus,voimakkuus}={}){
  // pysyvä tarkoitus säilyy edelleen manifestin mukaisena.
  const reaktioeleet={myotailee:'nod',epailee:'shake',torjuu:'shake',
   huvittuu:voima<.4?'smile':voima<.55?'grin':'chuckle',
-  hammastyy:voima<.65?'doubleTake':'disbelief',vakavoituu:'listen'};
+  hammastyy:voima<.65?'doubleTake':'disbelief',
+  hammastys:voima<.65?'doubleTake':'disbelief',vakavoituu:'listen'};
  const ele=Object.hasOwn(LIVIAN_PUHEMERKITYKSET,merkitys)?LIVIAN_PUHEMERKITYKSET[merkitys]:
   Object.hasOwn(reaktioeleet,merkitys)?reaktioeleet[merkitys]:null;
  if(!ele||!Number.isFinite(luku))return null;

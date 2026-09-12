@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
-import { LIVIAN_PILOTTI_CUET } from '../js/livia-pilotti-cuet.js';
+import { LIVIAN_LUENTAKAUPUNGIT, LIVIAN_PILOTTI_CUET } from '../js/livia-pilotti-cuet.js';
 import {
   kokoaEledata, kuittirivit, livianKohdistustyo, lueLiput, ratkaiseCueAjat,
 } from '../tools/kohdista-pulu-eleet.mjs';
@@ -22,7 +23,23 @@ test('liput eivät vie ilman eksplisiittistä --vie-valintaa', () => {
     { kuiva: false, vie: true, kaupungit: ['marseille', 'ateena'], kuitti: null });
   assert.deepEqual(lueLiput(['--kuitti', 'valmis.json']),
     { kuiva: false, vie: false, kaupungit: [], kuitti: 'valmis.json' });
+  assert.deepEqual(lueLiput(['--kuitti', 'valmis.json', '--kaupungit', 'granada']),
+    { kuiva: false, vie: false, kaupungit: ['granada'], kuitti: 'valmis.json' });
   assert.throws(() => lueLiput(['--generoi']), /tuntematon lippu/);
+});
+
+test('workflow rajaa Granada-uusinnan exact granada-3-avaimesta ja vartioi kuittiosuman', () => {
+  const workflow = readFileSync(new URL('../.github/workflows/generoi-pulu.yml', import.meta.url), 'utf8');
+  const tyokalu = readFileSync(new URL('../tools/kohdista-pulu-eleet.mjs', import.meta.url), 'utf8');
+  const retryAvain = 'granada-3';
+  assert.match(retryAvain, /^[a-z0-9]+-3$/);
+  assert.equal(retryAvain.slice(0, -2), 'granada');
+  assert.match(workflow, /REPLIIKIT: \$\{\{ inputs\.repliikit \}\}/);
+  assert.match(workflow, /\^\[a-z0-9\]\+-3\$/);
+  assert.match(workflow, /kaupungit\+\=\("\$\{avain%-3\}"\)/);
+  assert.match(workflow, /liput\+\=\(--kaupungit "\$valitut"\)/);
+  assert.match(tyokalu, /liput\.kuitti && !kuitit\.has\(kaupunki\)/);
+  assert.match(tyokalu, /ei ole annetussa tuotantokuitissa/);
 });
 
 test('kohdistus hyväksyy vain valmiin versionoidun tuotantokuitin ja sen lukitun TTS-reseptin', async () => {
@@ -71,10 +88,12 @@ test('kirjoitettava data kantaa teksti- ja mp3-sidonnan ja kelpaa samalle runtim
   assert.equal(data.eleet.length, tyo.cuet.length);
 });
 
-test('koontimanifestin luentareaktiosemantiikka kelpaa runtimeportille', async () => {
-  const tyo = livianKohdistustyo('sofia');
-  const aanitavut = new TextEncoder().encode('lopullinen-sofia-mp3');
-  const data = await kokoaEledata(tyo, aanitavut, alignment(tyo.teksti));
-  assert.deepEqual(data.eleet.map(({ tarkoitus }) => tarkoitus),
-    ['myotailee', 'hammentynyt', 'huvittuu']);
+test('kaikkien 45 city-3-rivin alignment kelpaa exact runtimeportille', async () => {
+  assert.equal(LIVIAN_LUENTAKAUPUNGIT.length, 45);
+  for (const kaupunki of LIVIAN_LUENTAKAUPUNGIT) {
+    const tyo = livianKohdistustyo(kaupunki);
+    const aanitavut = new TextEncoder().encode(`lopullinen-${kaupunki}-mp3`);
+    const data = await kokoaEledata(tyo, aanitavut, alignment(tyo.teksti));
+    assert.equal(data.eleet.length, tyo.cuet.length, kaupunki);
+  }
 });

@@ -259,13 +259,32 @@ jobs:
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
           KUITTI: ${{ inputs.kuitti }}
+          REPLIIKIT: ${{ inputs.repliikit }}
         run: |
           set -euo pipefail
           case "$KUITTI" in https://media.matkakirja.app/aanet/pulu/kuitit/*.completed.json) ;; *)
             echo "::error::Kuitti ei ole Matkakirjan valmistunut Pulu-tuotantokuitti."
             exit 1
           esac
-          node tools/kohdista-pulu-eleet.mjs --kuitti "$KUITTI" --vie
+          liput=(--kuitti "$KUITTI" --vie)
+          if [ -n "$REPLIIKIT" ]; then
+            kaupungit=()
+            while IFS= read -r avain; do
+              [ -z "$avain" ] && continue
+              if [[ ! "$avain" =~ ^[a-z0-9]+-3$ ]]; then
+                echo "::error::Kohdistuksen repliikin pitää olla exact city-3-avain: $avain"
+                exit 1
+              fi
+              kaupungit+=("${avain%-3}")
+            done < <(printf '%s' "$REPLIIKIT" | tr ',[:space:]' '\n')
+            if [ "${#kaupungit[@]}" -eq 0 ]; then
+              echo "::error::Kohdistuksen repliikkirajaus on tyhjä."
+              exit 1
+            fi
+            valitut=$(IFS=,; printf '%s' "${kaupungit[*]}")
+            liput+=(--kaupungit "$valitut")
+          fi
+          node tools/kohdista-pulu-eleet.mjs "${liput[@]}"
 
       - name: Tallenna kohdistukset tarkastettavaksi
         if: ${{ inputs.toiminto == 'kohdista' }}
