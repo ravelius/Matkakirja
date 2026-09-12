@@ -775,6 +775,27 @@ export const kohtaamiskuvat = [
     hetki: 'Molemmat kädet ovat jääneet painokehyksen reunoille, kun Marios nostaa katseensa keskeneräisestä koevedoksesta.',
     vihje: 'Seripainokehys, lasta ja vaatimaton käsityöpiha kertovat Mariosin työstä; muurikehää tai bastionien lukumäärää ei näytetä.',
   },
+  /*
+   * KUVAPUTKEN TOIMITUS 12.9.2026: root katsoi ja hyväksyi Frejan
+   * Kööpenhaminan kaaren kohtaamiskuvaksi. Media on luettu takaisin
+   * R2:sta: SHA-256, MIME, CORS, mitat, sRGB ja täysi JPEG-purku täsmäävät.
+   */
+  {
+    id: 'kobenhavn-freja-07d795379e80',
+    kaupunki: 'Kööpenhamina',
+    kohde: 'kobenhavn',
+    maa: 'Tanska',
+    hahmo: 'Freja',
+    kansio: '20260912',
+    tiedosto: 'kobenhavn-freja-07d795379e80.jpg',
+    tila: 'tarkistettu',
+    alt: 'Freja sulkee Tivolin musiikkikarusellia ja pysähtyy kuuntelemaan matkaajan aarrekysymystä. Avain on portin lukossa ja viimeiset vieraat poistuvat karusellista.',
+    lyhyt: 'Freja pysähtyy kesken Tivolin musiikkikarusellin sulkemisen.',
+    kuvateksti: 'Freja sulkee Tivolin musiikkikarusellia ja pysähtyy kuuntelemaan matkaajan aarrekysymystä.',
+    hetki: 'Avain on yhä portin lukossa, kun Freja kääntyy matkaajan puoleen ja viimeiset vieraat poistuvat karusellista.',
+    vihje: 'Musiikkikaruselli, portti ja sulkemishetki vastaavat Kööpenhaminan Tivoliin sijoittuvaa kohtaamista paljastamatta kysymyksen vastausta.',
+  },
+
 ];
 
 /**
