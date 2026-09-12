@@ -31,6 +31,8 @@
  *   --ei-vientia     generoi ja viimeistele, mutta jätä levylle.
  *   --tempo <luku>   puheen nopeutus ffmpegillä (oletus TEMPO).
  *   --haku <nimi>    --aanet: listaa vain äänet, joiden nimessä on <nimi>.
+ *                    Jos arvo on voice_id (20 merkkiä), haetaan nimi
+ *                    suoraan tunnuksella.
  *
  * ------------------------------------------------------------------
  * MIKSI TEMPO TEHDÄÄN FFMPEGILLÄ
@@ -929,6 +931,24 @@ async function haeAanet(avain, haku = '') {
    */
   const nimiOsuu = (aani) => !haku
     || String(aani?.name ?? '').toLowerCase().includes(haku.toLowerCase());
+  /*
+   * HAKU TUNNUKSELLA (12.9.2026). Omistaja kysyi: *"minkä niminen uusin
+   * pulun ääni on?"* — hän oli antanut ajolle voice_id:n eikä nimeä, ja
+   * nimi jää silloin kirjaamatta mihinkään. Nimihaku ei auta, koska se
+   * etsii nimestä; tunnuksesta nimeen pääsee vain rajapinnan omalla
+   * osoitteella /v1/voices/<id>. Tunnus tunnistetaan muodosta: 20
+   * merkkiä kirjaimia ja numeroita ilman välilyöntejä.
+   */
+  if (/^[A-Za-z0-9]{20}$/.test(haku)) {
+    try {
+      const aani = await haeJson(`${API}/v1/voices/${haku}`, avain);
+      console.log(`TUNNUS ${haku}\n`);
+      tulostaAani(aani, osuvatPiirteet(aani));
+      return;
+    } catch (virhe) {
+      console.log(`Tunnuksella ${haku} ei löytynyt ääntä (${virhe.message}); haetaan nimellä.\n`);
+    }
+  }
   console.log(haku ? `HAKU NIMELLÄ "${haku}"\n` : 'OMAT ÄÄNET (/v1/voices)\n');
   const omat = await haeJson(`${API}/v1/voices`, avain);
   let omia = 0;
