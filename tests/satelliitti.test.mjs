@@ -229,10 +229,10 @@ test('kuva avautuu heti koko ruutuun — ei kaksivaiheista nostokuvaa', () => {
   assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*background: #040907/);
 });
 
-test('pikkukuvat, napit ja leima ovat KUVAN PÄÄLLÄ', () => {
+test('pikkukuvat, napit ja otsake ovat KUVAN PÄÄLLÄ', () => {
   // Alapalkki kelluu kuvan päällä (position: absolute), ei sen alla.
   assert.match(tyyli, /\.satelliitti-ala \{[\s\S]*position: absolute;[\s\S]*bottom: 0/);
-  assert.match(tyyli, /\.satelliitti-leima \{[\s\S]*position: absolute/);
+  assert.match(tyyli, /\.satelliitti-otsake \{[\s\S]*position: absolute/);
   // Nauha ja napit ovat alapalkin kaksi riviä.
   assert.match(lahde, /ala\.append\(nauha, napit\)/);
   assert.match(lahde, /katselu\.append\(lava, ala\)/);
@@ -296,7 +296,7 @@ test('pikkukuvanauha on lavan sisar — raja eleiden ja selauksen välillä', ()
    * Raja on elementtiraja: eleet ovat LAVAN kuuntelijoita eikä nauha ole
    * lavan sisällä, joten sama piste ei voi kuulua molemmille.
    */
-  assert.match(lahde, /lava\.append\(kuva, leima\)/);
+  assert.match(lahde, /lava\.append\(kuva, otsake\)/);
   assert.ok(!/lava\.append[^;]*nauha/.test(lahde), 'nauha ei saa olla lavan sisällä');
   assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*touch-action: pan-x/);
 });
@@ -416,12 +416,28 @@ test('galleriassa on laskuri, nuolet, pikkukuvat ja vertailu', () => {
 
 /* ═════════════ 6. ei live-väitettä, lähteet mukana ══════════════ */
 
-test('kuvan päällä lukee lähde — mitään live-kuvausta ei luvata', () => {
-  assert.match(lahde, /'Valokuva avaruudesta · NASA'/);
-  // Leima on KUVAN päällä ja jää sinne myös zoomatessa.
-  assert.match(lahde, /html\('span', 'satelliitti-leima', 'Valokuva avaruudesta · NASA'\)/);
-  assert.match(lahde, /lava\.append\(kuva, leima\)/);
-  assert.match(tyyli, /\.satelliitti-leima \{[\s\S]*position: absolute/);
+test('kuvan päällä lukee otsikko ja kuvauspäivä, ei enää arkistoleimaa', () => {
+  /*
+   * OMISTAJA 12.9.2026, sanatarkasti: *"Tuossa ylälaidassa oleva teksti
+   * pitää korvata kuvan otsikolla, eli mitä kuvassa on. Ja sen alle
+   * voisi lisätä kuvauspäivämäärän"*. NASA-maininta ei katoa vaan
+   * siirtyy info-napin taakse (kuvat ovat public domainia, joten
+   * lähdemerkintä ei ole lisenssin vaatimus kuvan päällä).
+   */
+  assert.ok(!/'Valokuva avaruudesta · NASA'/.test(lahde),
+    'vanha arkistoleima on yhä kuvan päällä');
+  assert.match(lahde, /html\('div', 'satelliitti-otsake'\)/);
+  assert.match(lahde, /html\('span', 'satelliitti-otsake-nimi', kohde\.nimi\)/);
+  assert.match(lahde, /html\('span', 'satelliitti-otsake-aika'\)/);
+  // Otsake on KUVAN päällä ja jää sinne myös zoomatessa.
+  assert.match(lahde, /lava\.append\(kuva, otsake\)/);
+  assert.match(tyyli, /\.satelliitti-otsake \{[\s\S]*position: absolute/);
+  // Päiväys vaihtuu otosta vaihdettaessa, nimi ei.
+  assert.match(lahde, /otsakeAika\.textContent = aikateksti\(h\.aika\)/);
+  assert.ok(!/otsakeNimi\.textContent =/.test(lahde), 'nimen ei pidä vaihtua otoksen mukana');
+  // NASA ja lisenssi ovat yhä popupissa.
+  assert.match(lahde, /teeRivi\('Aineisto'/);
+  assert.match(lahde, /teeRivi\('Lisenssi'/);
   // ICEYE-attribuutio poistui kokonaan: aineistoa ei enää käytetä.
   assert.ok(!/ICEYE · tutkakuva/.test(lahde), 'vanha tutkaleima on yhä kuvan päällä');
   assert.ok(!/iceye/i.test(JSON.stringify(SATELLIITTI_KOHTEET)), 'aineistossa on yhä ICEYE-jäämiä');
@@ -580,3 +596,140 @@ test('pelin omat nimikyltit piilotetaan linssin omassa tyylitiedostossa', () => 
   }
 });
 
+
+/* ═══ 8. NIMET JA PULU PIILOON VARMASTI (omistaja 12.9.2026) ═══════ */
+
+/*
+ * Omistaja: *"Kaikissa pisteissä ei tarvitse nimeä näkyä kuin vasta
+ * lähemmäs zoomattuna"* ja *"Pulun voisi piilottaa"* — MOLEMMAT oli jo
+ * korjattu kertaalleen, ja molemmat näkyivät silti pelaajalle. Nämä
+ * vartiot koskevat sitä, MIKSI korjaus ei kantanut: piilotus oli kahden
+ * ehdon ja yhden verkkolatauksen takana.
+ */
+
+test('kriittiset piilotukset ovat inline-tyylissä eivätkä verkon varassa', async () => {
+  const { KRIITTINEN_TYYLI, KRIITTISEN_TUNNUS, lataaSatelliittiTyyli } = await import('../js/linssit/satelliitti.js');
+  // Nimet ja pulu: molemmat piilotetaan ilman ulkoista tiedostoa.
+  assert.match(KRIITTINEN_TYYLI, /\.satelliitti-nimi \{ opacity: 0; \}/);
+  assert.match(KRIITTINEN_TYYLI, /body\.satelliitti-nimet \.satelliitti-nimi \{ opacity: 1; \}/);
+  for (const valitsin of ['.pollo-nappi', '.pollo-paneeli', '.pollo-kuplapino', '.livia-kasvot-pinta']) {
+    assert.ok(KRIITTINEN_TYYLI.includes(`body.aikajana-pulu-piilossa ${valitsin}`),
+      `${valitsin} puuttuu kriittisestä tyylistä`);
+  }
+  // Sama sääntö on myös varsinaisessa tyylitiedostossa: kopio ja
+  // alkuperä vartioidaan yhdessä.
+  assert.match(tyyli, /\n\.satelliitti-nimi \{\n  opacity: 0;/);
+  assert.match(tyyli, /body\.satelliitti-nimet \.satelliitti-nimi \{ opacity: 1; \}/);
+
+  /*
+   * VANHA VIKA: `lataaSatelliittiTyyli` palasi HILJAA tekemättä mitään,
+   * jos sivulla ei ollut linkkiä, jonka href sisältää "styles.css".
+   * Silloin koko tyyli jäi lataamatta — eikä nimillä ja pululla ollut
+   * yhtään piilottavaa sääntöä. Nyt kriittiset säännöt menevät sivulle
+   * joka tapauksessa.
+   */
+  const paat = [];
+  const doc = {
+    head: { appendChild: (el) => paat.push(el) },
+    getElementById: (id) => paat.find((el) => el.id === id) ?? null,
+    querySelector: () => null, // ei yhtään tyylilinkkiä
+    createElement: (tagi) => ({ tagi, id: '', textContent: '', rel: '', href: '' }),
+  };
+  const tulos = lataaSatelliittiTyyli(doc);
+  assert.equal(tulos.kriittinen, true, 'kriittinen tyyli jäi lisäämättä');
+  assert.ok(paat.some((el) => el.id === KRIITTISEN_TUNNUS && /satelliitti-nimi/.test(el.textContent)));
+  // Toinen kutsu ei kahdenna mitään.
+  const ennen = paat.length;
+  lataaSatelliittiTyyli(doc);
+  assert.equal(paat.length, ennen);
+});
+
+test('nimien piilotus ei ole avaruusluokan takana', () => {
+  /*
+   * `satelliitti-avaruus` kirjoitetaan VAIN jos avaruusnäkymä syntyi
+   * (js/linssit/satelliitti-avaruus.js palaa nullina, jos pallo ei ole
+   * valmis). Jos piilotus riippuisi siitä, epäonnistuminen näyttäisi
+   * kaikki 64 nimeä päällekkäin — juuri se, mitä pelaaja näki.
+   */
+  assert.ok(!/body\.satelliitti-avaruus \.satelliitti-nimi \{[^}]*opacity: 0/.test(tyyli),
+    'piilotus on yhä avaruusluokan takana');
+  assert.ok(!/body\.satelliitti-avaruus\.satelliitti-nimet/.test(tyyli),
+    'sytytys vaatii yhä avaruusluokan');
+});
+
+test('pulun kuplapino piilotetaan napin ja paneelin kanssa', () => {
+  for (const valitsin of ['.pollo-kuplapino', '.pollo-kuplapino-kehys']) {
+    assert.ok(tyyli.includes(`body.aikajana-pulu-piilossa ${valitsin}`),
+      `${valitsin} jää näkyviin linssiin`);
+  }
+});
+
+/* ═══ 9. MUUT ÄÄNET VAIKENEVAT (omistaja 12.9.2026) ════════════════ */
+
+test('linssi käyttää pelin omia äänifunktioita eikä koske voimakkuuksiin', async () => {
+  const { vaiennaAanet } = await import('../js/linssit/satelliitti.js');
+  assert.equal(typeof vaiennaAanet, 'function');
+  // Samat neljä kutsua kuin aikajanalinsseillä (js/aikajana.js).
+  for (const kutsu of ['hiljennaAmbienssi(LINSSIN_HILJENNYS)', 'stopPlaceStream()',
+    'stopDiaryVoice(ui)', 'pysaytaLukija()', 'palautaAmbienssi(LINSSIN_HILJENNYS)']) {
+    assert.ok(lahde.includes(kutsu), `${kutsu} puuttuu`);
+  }
+  // Hiljennyssyy on SAMA kuin aikajanalinsseillä, jotta kaksi linssiä
+  // peräkkäin ei jätä taustaa alas.
+  const siirtyma = lue('../js/siirtymamusiikki.js');
+  assert.match(siirtyma, /LINSSIN_HILJENNYS = 'linssi'/);
+  // Voimakkuuslogiikkaan ei kosketa (korjattiin v1815:ssä).
+  assert.ok(!/\.volume\s*=|gain\.|setValueAtTime/.test(lahde),
+    'linssi kirjoittaa äänenvoimakkuutta suoraan');
+  // Purku palauttaa maiseman PELIN tilasta eikä linssin muistista.
+  assert.match(lahde, /ui\?\.syncAmbience\?\.\(\)/);
+});
+
+test('vaiennaAanet purkautuu kerran eikä kahdesti', async () => {
+  const { vaiennaAanet } = await import('../js/linssit/satelliitti.js');
+  const kahva = vaiennaAanet(null);
+  assert.equal(kahva.hiljaa(), true);
+  kahva.pura();
+  assert.equal(kahva.hiljaa(), false);
+  kahva.pura();
+  assert.equal(kahva.hiljaa(), false);
+});
+
+/* ═══ 10. VAAKANÄKYMÄ (omistaja 12.9.2026: "Korjaa vaaka näkymä") ══ */
+
+test('kortin yläreuna luetaan palkin mitatusta alareunasta', () => {
+  /*
+   * CSS:n `top: var(--aikajana-palkki-korkeus)` on oikea KORKEUS mutta
+   * väärä PAIKKA: kortti on fixed (ikkuna) ja palkki absolute
+   * (karttaruutu), joka alkaa pelin kehyksen verran alempaa. Mitattu
+   * 844 × 390: kuva meni 11 px palkin alle.
+   */
+  assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*top: var\(--aikajana-palkki-korkeus, 0px\)/);
+  assert.match(lahde, /const asemoiYlareuna = \(\) => \{/);
+  assert.match(lahde, /palkki\?\.el\?\.getBoundingClientRect\?\.\(\)/);
+  assert.match(lahde, /katselu\.style\.top = `\$\{Math\.round\(r\.bottom\)\}px`/);
+  // Mittaus uusitaan, kun laite käännetään tai palkki muuttuu.
+  assert.match(lahde, /new ResizeObserver\(asemoiYlareuna\)/);
+  assert.match(lahde, /addEventListener\('orientationchange', asemoiYlareuna\)/);
+  // Ja puretaan sulkiessa: kuuntelijoita ei jää roikkumaan.
+  assert.match(lahde, /removeEventListener\('orientationchange', asemoiYlareuna\)/);
+});
+
+test('vaakaruudussa hallinta on yhtenä pystysarakkeena eikä neljässä nurkassa', () => {
+  const vaakalohko = tyyli.slice(tyyli.indexOf('@media (orientation: landscape) {'));
+  assert.ok(vaakalohko.length > 400, 'vaakanäkymän lohkoa ei ole');
+  // Kuva saa koko alan paitsi sarakkeen: se mahtuu kokonaan.
+  assert.match(vaakalohko, /\.satelliitti-lava \{ right: var\(--satelliitti-sarake/);
+  // Alapalkki muuttuu oikean laidan sarakkeeksi.
+  assert.match(vaakalohko, /\.satelliitti-ala \{[\s\S]*?left: auto;[\s\S]*?top: 0;[\s\S]*?bottom: 0;[\s\S]*?width: var\(--satelliitti-sarake/);
+  // Pikkukuvat pystyyn sarakkeen yläosaan, napit sen alaosaan.
+  assert.match(vaakalohko, /\.satelliitti-nauha \{[\s\S]*?flex-direction: column/);
+  assert.match(vaakalohko, /\.satelliitti-napit \{[\s\S]*?display: grid/);
+  /*
+   * SULKURISTI ALIMPANA JA ERILLÄÄN (omistajan vaatimus pysyy): se ei
+   * saa jäädä pikkukuvien alle eikä sitä saa painaa vahingossa otoksia
+   * selatessa. Sarakkeessa pikkukuvat ovat ylhäällä, ✕ alimpana oman
+   * erotusviivansa takana.
+   */
+  assert.match(vaakalohko, /\.satelliitti-sulku \{[\s\S]*?order: 3;[\s\S]*?grid-column: 1 \/ -1;[\s\S]*?border-top: 1px solid/);
+});

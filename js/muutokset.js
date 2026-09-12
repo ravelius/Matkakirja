@@ -13,9 +13,12 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+<<<<<<< HEAD
   { v: 1819, teksti: 'Pulun aaneksi Flicker kaikkiin repliikkeihin' },
   { v: 1818, teksti: 'Luentakuva matkakirjan alle, pulun kuvat naytolle' },
   { v: 1817, teksti: 'Ales stenar, Urnes, Visby ja Gamla Uppsala' },
+=======
+>>>>>>> kamera-korjaukset
   { v: 1816, teksti: 'Linssin nimeksi Astronautin kamera' },
   { v: 1815, teksti: 'Lukijan aanenvoimakkuus liuku toimii vihdoin' },
   { v: 1814, teksti: 'Mont Blanc, Vignemale, Mont-Saint-Michel, Carcassonne' },
