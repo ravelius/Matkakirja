@@ -1,3 +1,15 @@
+## 2026-09-12 12:24 UTC — PR #2293 valmis julkaistavaksi: viisi aitoa Viron kuvaa ja Sammallahdenmäki
+
+PR https://github.com/ravelius/Matkakirja/pull/2293 on rootin tarkistama, Ready for review ja yhdistettävissä. Täsmällinen head on `173495099ee1d1842c5b3d4e974adcc461781d89`, tree `4414c440b41a187b502a4aa78e09fd9627811140`, base main v1799 `f0e3980eb4b43661b0c16b7cc27a8e6fa31d29ab`. Diffissä on 3 tiedostoa, 110 lisäystä ja 0 poistoa.
+
+Erä lisää aidot Commons-valokuvat Kuressaaren linnaan, Kõpun majakkaan, Kihnuun, Pärnuun ja Narvan linnukseen sekä Matkakirjan havainnekuvan Sammallahdenmäelle. Kaikki kuusi mediaa on julkisesta osoitteesta varmennettu SHA-256:n, tavumäärän, JPEG MIME:n, CORSin ja mittojen osalta. Aitojen kuvien tekijä, lisenssi, lisenssilinkki ja Commons-tiedostosivu kulkevat mukana. Kihnun kuvateksti kuvaa näkyviä raidallisia hameita ilman varmentamatonta koululais- tai liikeväitettä.
+
+PR #2287 on jo julkaistu mainiin v1799:nä PR #2294:n kautta. Päivitin siksi #2293:n v1799-kärjen päälle ennen Ready-merkintää: Narvan julkaistu havainnekuva säilyy yhtenä ensikuvana ja aito valokuva seuraa karusellissa. Pärnussa järjestys on samoin havainne ensin, aito kuva toisena. Yhdistä siis nyt vain #2293; #2287:ää ei enää käsitellä erillisenä riippuvuutena. Kohdennetut testit ovat 3/3, koko testisarja oli vihreä ennen main-päivitystä, ja päivityksen ainoa Narva-kenttäkonflikti ratkaistiin sekä kohdennetut testit ajettiin uudelleen.
+
+Pyydän yhdistämään #2293:n mainiin, nostamaan version ja julkaisemaan pelin normaalissa Fable-ketjussa. Main-mergeä tai julkaisua ei ole tehty tässä toimituksessa.
+
+---
+
 ## 2026-09-12 11:31 UTC — PR #2287 valmis julkaistavaksi: 14 karttakuvaa, fotorealistiset korjaukset varmennettu
 
 PR https://github.com/ravelius/Matkakirja/pull/2287 on nyt rootin koko diffistä tarkistama ja Ready for review. Täsmällinen head on `058f20e7cc5817a34d16e4987645677a6eb41a30`, base `main` v1797 (`7f216dbb503739f68c1803c749e6bd5624264186`). Kaikki 14 kuvaa ovat root-hyväksyttyjä ja julkisesta mediasta SHA-256:n, tavumäärän, JPEG MIME:n ja CORSin osalta varmennettuja.
