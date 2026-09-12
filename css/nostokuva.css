@@ -199,3 +199,17 @@ button.nostokuva-nappi:focus-visible { background: transparent; }
 @media (prefers-reduced-motion: reduce) {
   .nostokuva-kortti { animation: none; transition: none; }
 }
+
+/*
+ * VAIHEESSA 1 EI SULKURISTIÄ EIKÄ LÄHDERIVIÄ (omistaja 12.9.2026:
+ * *"Ota yläkulman ruksi ja lähde merkintä pois kaikista nostoista.
+ * Riittää kun lähde näkyy jutussa."*).
+ *
+ * Kuva sulkeutuu kartan napautuksesta — se on sama sääntö, jonka
+ * omistaja antoi jo avausta tilatessaan, joten erillistä ruksia ei
+ * tarvita eikä se saa peittää kuvan kulmaa. Vaiheessa 2 kortti on
+ * tavallinen nostokortti ja sen oma sulku palaa näkyviin.
+ */
+.nostokuva-vaihe1 .fokusnosto-kortti-sulje,
+.nostokuva-vaihe1 .fokuskohde-sulje,
+.nostokuva-vaihe1 .nostokuva-lahde { display: none; }
