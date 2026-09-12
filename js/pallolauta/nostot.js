@@ -86,13 +86,58 @@ export const NOSTOJEN_KATTO = 40;
  * kuin kartan ulkopuolelle jäävät hetket aina. Ei riviä, ei merkkiä,
  * ei rikkinäistä kohtaa.
  */
-/**
- * Etelämantereen nostot näkyvät samalla portilla kuin eläintäyt:
- * vasta kun näkymä on kaventunut tähän pituusasteeseen, eli kun
- * manner täyttää ruudun. Yleiskuvassa kuusi merkkiä napalla olisi
- * rykelmä eikä kartta.
+/*
+ * ══ NAPA-ALUEEN PORTTI MITATAAN KORKEUDESTA, EI LEVEYDESTÄ ════════
+ *
+ * OMISTAJAN VIKAILMOITUS 12.9.2026 (kuvakaappaus, iPhone pystyssä,
+ * pelaaja Alice Springsissä, pallo lähes koko maailman mitassa):
+ * *"Tässä zoom tasossa kaupunkien pallot ei pitäisi enää edes näkyä.
+ * Jotain hajosi viimeisissä päivityksissä"* — kuvassa näkyivät myös
+ * arktiset nostot nimiöineen ("Saamelaiset", "Kuolan syväreikä").
+ *
+ * MIKSI PORTTI EI PITÄNYT. Portti luki näkymän LEVEYDEN asteina
+ * (`nakyva.w`) ja päästi läpi, kun se oli enintään 90°. Kameran
+ * pystykulma on kiinteä (fov 50°), joten näkymän KORKEUS asteina
+ * riippuu vain kameran korkeudesta — mutta LEVEYS riippuu myös ruudun
+ * kuvasuhteesta. Mitattu Chromiumilla 12.9.2026, sama kamerakorkeus
+ * 1,0 (koko pallo ruudulla):
+ *
+ *     390 × 844 (puhelin pystyssä)   leveys 25,8°   korkeus 53,4°
+ *     1440 × 900 (työpöytä)          leveys 92,4°   korkeus 53,4°
+ *
+ * Puhelimen pystyruudulla leveys ei yllä 90 asteeseen MILLÄÄN
+ * zoomilla (uloimmallakin korkeudella 2,5 se on 64,5°), joten portti
+ * oli puhelimessa aina auki ja työpöydällä kiinni — sama peli, eri
+ * kartta. Korkeus on sama molemmissa, koska se on kameran oma mitta.
+ *
+ * MIKÄ SÄÄNTÖ NYT. Sama ajatus kuin muilla nostoilla: ALUE TÄYTTÄÄ
+ * NÄKYMÄN (vrt. LEHDEN_VAHIN_OSUUS). Napa-alueen nostot kattavat
+ * leveysastekaistan 60°–90° eli NAPA_ALUEEN_ASTEET astetta, ja portti
+ * aukeaa, kun kaista täyttää vähintään NAPA_ALUEEN_VAHIN_OSUUS
+ * näkymän korkeudesta — eli kun näkymän korkeus on enintään
+ * NAPA_ALUEEN_ASTEET / NAPA_ALUEEN_VAHIN_OSUUS astetta.
+ *
+ * MIKSI OSUUS ON TIUKEMPI KUIN LEHDELLÄ (0,75 eikä 0,5): maan lehti on
+ * LAATIKKO keskellä ruutua, napa-alue on YMPYRÄ ruudun laidalla.
+ * Puolikkaan säännöllä (näkymän korkeus 60°) merkit olisivat vielä
+ * mukana koko pallon yleiskuvassa, joka on mitattuna 53,4° — juuri se
+ * näkymä, jota omistajan kuva koskee. Mitatut näkymän korkeudet
+ * (Chromium 12.9.2026, sama molemmilla ruuduilla): kamerakorkeus 0,2 →
+ * 10,7°, 0,37 (saapumisnäkymä) → 19,8°, 0,6 → 32,1°, 1,0 (koko pallo)
+ * → 53,4°. Raja 40° päästää läpi alue- ja saapumisnäkymät ja sulkee
+ * jokaisen yleiskuvan.
  */
-export const ETELAMANNER_NAKYY_ASTETTA = 90;
+/** Napa-alueen nostojen kattama leveysastekaista (60°–90°). */
+export const NAPA_ALUEEN_ASTEET = 30;
+/** Kuinka suuren osan näkymän korkeudesta kaistan on täytettävä. */
+export const NAPA_ALUEEN_VAHIN_OSUUS = 0.75;
+/**
+ * Etelämantereen nostot näkyvät samalla portilla kuin muut nostot:
+ * vasta kun alue täyttää vähintään puolet näkymästä, eli kun näkymän
+ * KORKEUS on enintään tämän verran asteita. Yleiskuvassa kuusi merkkiä
+ * navalla olisi rykelmä eikä kartta.
+ */
+export const ETELAMANNER_NAKYY_ASTETTA = NAPA_ALUEEN_ASTEET / NAPA_ALUEEN_VAHIN_OSUUS;
 /*
  * ══ POHJOISNAPA JA ARKTINEN ALUE: SAMA KAAVA ══════════════════════
  *
@@ -111,7 +156,18 @@ export const ETELAMANNER_NAKYY_ASTETTA = 90;
  * paketin omassa alkukommentissa.
  */
 /** Arktisen alueen nostot näkyvät samalla portilla kuin Etelämanner. */
-export const ARKTIS_NAKYY_ASTETTA = 90;
+export const ARKTIS_NAKYY_ASTETTA = ETELAMANNER_NAKYY_ASTETTA;
+/**
+ * Näkymän KORKEUS asteina (ks. NAPA-ALUEEN PORTTI MITATAAN
+ * KORKEUDESTA). Tuntematon näkymä on yleiskuva, eli portti on kiinni.
+ */
+export function nakymanKorkeusAsteina(nakyva) {
+  return nakyva?.h > 0 ? (nakyva.h * 360) / PALLOLAUDAN_LEVEYS : Infinity;
+}
+/** Näkyvätkö napa-alueen nostot tällä näkymällä? */
+export function napanostotNakyvat(nakyva, raja = ARKTIS_NAKYY_ASTETTA) {
+  return nakymanKorkeusAsteina(nakyva) <= raja;
+}
 /**
  * Merkin mitta ruudulla: kirjaston yksikkö → px niin, että nimiö on
  * kartan kohdenimiön kokoinen (js/karttanimet.js KOKO.kohde 8,5 px,
@@ -424,14 +480,18 @@ export function luoNostot({
      * `asteet`-kentästä eikä laudalta. Merkki ei ole koskaan poltettu —
      * laattapyramidi on julisteen projektiota, josta napojen takaiset
      * alueet puuttuvat — joten se on aina elävä H-merkki.
+     *
+     * PORTTI ON NÄKYMÄN KORKEUS, EI LEVEYS (ks. NAPA-ALUEEN PORTTI
+     * MITATAAN KORKEUDESTA): leveys riippuu ruudun kuvasuhteesta, joten
+     * leveysportti oli puhelimen pystyruudulla aina auki.
      */
-    if (asteita <= ETELAMANNER_NAKYY_ASTETTA && !liikkuu) {
+    if (napanostotNakyvat(nakyva, ETELAMANNER_NAKYY_ASTETTA) && !liikkuu) {
       for (const kohde of MAASTOKOHTEET_ATA) {
         const rivi = napanostonRivi(ui, kohde, { avain: `ata:${kohde.id}` });
         if (rivi) rivit.push(rivi);
       }
     }
-    if (asteita <= ARKTIS_NAKYY_ASTETTA && !liikkuu) {
+    if (napanostotNakyvat(nakyva, ARKTIS_NAKYY_ASTETTA) && !liikkuu) {
       for (const kohde of MAASTOKOHTEET_ARK) {
         const rivi = napanostonRivi(ui, kohde, { avain: `ark:${kohde.id}` });
         if (rivi) rivit.push(rivi);

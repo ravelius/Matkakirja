@@ -135,3 +135,54 @@ test('tasokartta ja pallo lukevat saman siirron: merkki ja osuma siirtyvät, dat
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /for \(const o of nostot\.osumat\(\)\) ehdokkaat\.push\(\{ laji: 'nosto', lat: o\.lat, lng: o\.lng, o \}\);/);
 });
+
+/* ---- pisteen paikka tulee piirrosta, ei tapahtumasta ---- */
+
+/*
+ * VARTIJA (omistajan vikailmoitus 12.9.2026, sanatarkasti: *"kaupunkien
+ * ja kohteiden pallot liikkuvat hieman panoroitaessa ja hyppäävät
+ * hieman kun kartan liike loppuu"*).
+ *
+ * Kaupunkipisteen levy siirretään katsesäteelle (LEVY KATSESÄTEELLE).
+ * Jos se tehdään OrbitControlsin `change`-tapahtumassa, paikka on
+ * oikea vain niillä kehyksillä, joilla `change` sattuu laukeamaan —
+ * kirjaston oma pistesiirtymä kirjoittaa paikan takaisin pinnalle
+ * JOKA kehyksellä, ja `pointOfView(pov, 0)` siirtää kameran kirjaston
+ * ohi. Sama vika, sama lääke kuin v1649:ssä laattakerroksella ja
+ * vektoriviivoilla: mitta tulee piirrosta (js/pallo.js
+ * kytkePallonKehys).
+ *
+ * Testi kaatuu, jos paikka palaa tapahtumaan TAI jos piirtokoukkuun
+ * lipsahtaa työtä, joka kasvaa merkkien mukana (ladonta, nostot,
+ * nimet, asettelun luenta) — kehysbudjetti ei saa riippua siitä,
+ * montako nostoa kartalla sattuu olemaan.
+ */
+test('kaupunkipisteiden paikka kirjoitetaan piirtokoukussa, ei change-tapahtumassa', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // 1. Koukku on kytketty ja puretaan laudan mukana.
+  assert.match(lauta, /const kehyspurku = kytkePallonKehys\(pallo, kotelo, pisteetKehyksessa\);/);
+  assert.match(lauta, /\n\s*kehyspurku\(\);/);
+  assert.match(lauta, /\n\s*kytkePallonKehys,\n/, 'kytkePallonKehys on tuotava js/pallo.js:stä');
+  // 2. Katsesäteen laskenta on koukun käyttämässä funktiossa.
+  const aseta = lauta.match(/const asetaPisteidenPaikat = \(kameranPaikka\) => \{[\s\S]*?\n {2}\};/);
+  assert.ok(aseta, 'asetaPisteidenPaikat puuttuu');
+  assert.match(aseta[0], /katsesateenPaikka\(/);
+  assert.match(aseta[0], /o\.position\.set\(/);
+  // 3. Tapahtumavetoinen tahdistaPisteidenKoko EI enää kirjoita paikkaa:
+  //    se on kokojen (scale) asia, ja koko saa maksaa tapahtuman verran.
+  const tahdista = lauta.match(/const tahdistaPisteidenKoko = \(\) => \{[\s\S]*?\n {2}\};/);
+  assert.ok(tahdista, 'tahdistaPisteidenKoko puuttuu');
+  assert.doesNotMatch(tahdista[0], /o\.position\.set\(/,
+    'paikka ei saa tulla change-tapahtumasta — se jää kehyksiä jälkeen kamerasta');
+  assert.doesNotMatch(tahdista[0], /katsesateenPaikka\(/);
+  // 4. Koukku pysyy halpana: ei ladontaa eikä asettelun luentaa kehyksessä.
+  const koukku = lauta.match(/const pisteetKehyksessa = \(\{[\s\S]*?\n {2}\};/);
+  assert.ok(koukku, 'pisteetKehyksessa puuttuu');
+  for (const kielletty of [
+    'ladoLevossa', 'nostot.paivita', 'nimet.lado', 'kohdekaupunki(',
+    'getBoundingClientRect', 'clientWidth', 'clientHeight', 'getScreenCoords',
+  ]) {
+    assert.ok(!koukku[0].includes(kielletty),
+      `piirtokoukku ei saa tehdä työtä, joka kasvaa merkkien mukana: ${kielletty}`);
+  }
+});

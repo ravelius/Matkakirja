@@ -64,6 +64,7 @@
 
 import {
   LAATU_LEPOVIIVE_MS, PALLO_LAATTATASO_MAX, PALLO_LAUTA, asennaPallonEleet, esilataaPallolaatat,
+  kytkePallonKehys,
   laatatSaatavilla, laattatasoMax, lataaPallokirjasto, pakotaPallonLaatu,
   laudanPisteenAvain, pallonKaupungit, pallonLepokerros, pallonNostoOnPoltettu,
   pallonOmatPisteet, pallonPiste, rakennaPallo, webglTuettu,
@@ -1910,6 +1911,80 @@ export async function avaaPallolauta(ui) {
   const pisteenSade = (d) => sadeRuudulta(
     kaupunkipisteenHalkaisijaPx(d, pelaajanKaupunki(), kohdekaupunki()),
   );
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * PISTEIDEN PAIKKA TULEE PIIRROSTA, EI TAPAHTUMASTA (omistajan
+   * vikailmoitus 12.9.2026, sanatarkasti: *"kaupunkien ja kohteiden
+   * pallot liikkuvat hieman panoroitaessa ja hyppäävät hieman kun
+   * kartan liike loppuu"*)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * SAMA VIKA, SAMA LÄÄKE KUIN v1649. Laattakerros ja vektoriviivat
+   * päivittyivät ennen omista tapahtumistaan ja olivat raahauksen
+   * aikana eri tahdissa kuin piirretty kuva; korjaus oli antaa
+   * molemmille SAMA kehys samasta koukusta (js/pallo.js
+   * kytkePallonKehys, `scene.onBeforeRender`). Kaupunkipisteiden
+   * parallaksinpoisto (ks. LEVY KATSESÄTEELLE) jäi silloin viimeiseksi
+   * tapahtumavetoiseksi kerrokseksi: paikka kirjoitettiin
+   * OrbitControlsin `change`-tapahtumasta, eikä `change` ole sama asia
+   * kuin kehys —
+   *
+   *   - kirjaston oma pistesiirtymä (pointsTransitionDuration 250 ms)
+   *     kirjoittaa olion paikan takaisin PINNALLE joka kehyksellä, myös
+   *     niillä kehyksillä, joilla `change` ei laukea; silloin levy on
+   *     parallaksissa siihen asti, kunnes seuraava `change` sattuu;
+   *   - `pointOfView(pov, 0)` (eleiden liuku, kamera-ajot) siirtää
+   *     kameran kirjaston ohi, jolloin `change` tulee vasta seuraavan
+   *     `controls.update()`-kierroksen kautta.
+   *
+   * MITATTU (Chromium 390 × 844 dpr 2, oikea veto pallon poikki,
+   * mitattuna piirron hetkellä): levyn ruutupaikan ero kaupunkinsa
+   * pinnan pisteestä oli tapahtumavetoisena p95 3,3 px ja suurimmillaan
+   * 5,9 px liikkeen aikana ja 0,4 px levossa — eli juuri se "hieman
+   * liikkuu, hyppää kun liike loppuu".
+   *
+   * TYÖ EI KASVA MERKKIEN MUKANA. Kehyksessä tehdään VAIN paikka
+   * (neliöjuuri ja kourallinen kertolaskuja pistettä kohti), ei kokoa
+   * eikä yhtään asettelun luentaa; koko ja kohdekaupungin mitat jäävät
+   * tapahtumaan (tahdistaPisteidenKoko). Kehys ohitetaan kokonaan, jos
+   * kamera ei ole liikkunut eikä kirjaston siirtymä ole käynnissä.
+   */
+  /** Viimeksi kehyksessä käytetty kameran paikka (parallaksin poisto). */
+  let kehyksenKamera = { x: NaN, y: NaN, z: NaN };
+  /** Kirjaston pistesiirtymä voi kirjoittaa paikkoja tähän hetkeen asti. */
+  let siirtymaAsti = 0;
+  /** Paikat katsesäteelle nykyisellä kameralla (ks. LEVY KATSESÄTEELLE). */
+  const asetaPisteidenPaikat = (kameranPaikka) => {
+    if (!kameranPaikka) return 0;
+    const pallonSade = pallo.getGlobeRadius?.() ?? 100;
+    let n = 0;
+    for (const d of pallo.pointsData()) {
+      const o = d.__threeObjPoint;
+      if (!o) continue;
+      /*
+       * Parallaksi pois JOKAISELTA pisteeltä — kaupungeilta, helmiltä ja
+       * aihevaloilta (ks. LEVY KATSESÄTEELLE). Paikka lasketaan aina
+       * datumin asteista, ei olion nykyisestä paikasta.
+       */
+      const paikka = katsesateenPaikka(
+        pallonPiste(d.lat, d.lon, pallonSade), kameranPaikka, o.scale.z,
+      );
+      if (paikka) o.position.set(paikka.x, paikka.y, paikka.z);
+      n += 1;
+    }
+    return n;
+  };
+  /** Piirtokoukku: sama kamera, sama kehys kuin kuvalla. */
+  const pisteetKehyksessa = ({ kamera: kam, aika }) => {
+    const p = kam?.position ?? null;
+    if (!p) return;
+    const liikkui = p.x !== kehyksenKamera.x || p.y !== kehyksenKamera.y || p.z !== kehyksenKamera.z;
+    if (!liikkui && aika > siirtymaAsti) return;
+    kehyksenKamera = { x: p.x, y: p.y, z: p.z };
+    asetaPisteidenPaikat(p);
+  };
+  const kehyspurku = kytkePallonKehys(pallo, kotelo, pisteetKehyksessa);
+
   const tahdistaPisteidenKoko = () => {
     const edellinen = asetettuSade;
     const edellinenKohde = asetettuKohdeSade;
@@ -1927,28 +2002,19 @@ export async function avaaPallolauta(ui) {
     /*
      * KIRJOITETAAN AINA, HERÄTETÄÄN VAIN MUUTOKSESTA. Kirjaston oma
      * siirtymä (pointsTransitionDuration) kirjoittaa uuden pisteen
-     * skaalan JA paikan kehys kerrallaan 250 ms:n ajan siitä arvosta,
-     * joka luvun hetkellä oli voimassa; jos zoomi osuu siihen ikkunaan,
-     * tämä kirjoitus jäisi sen alle. Ehdoton kirjoitus jokaisella
-     * kamera-tapahtumalla ja ladonnalla korjaa senkin.
+     * skaalan kehys kerrallaan 250 ms:n ajan siitä arvosta, joka luvun
+     * hetkellä oli voimassa; jos zoomi osuu siihen ikkunaan, tämä
+     * kirjoitus jäisi sen alle. Ehdoton kirjoitus jokaisella
+     * kamera-tapahtumalla ja ladonnalla korjaa senkin. PAIKKA ei ole
+     * enää täällä: se tulee piirtokoukusta (pisteetKehyksessa).
      */
+    siirtymaAsti = (globalThis.performance?.now?.() ?? Date.now()) + siirtyma + 50;
     const skaala = asetettuLinssi ? 0 : sade * PISTEEN_SKAALA;
     const kohdeSkaala = asetettuLinssi ? 0 : kohdeSade * PISTEEN_SKAALA;
     const oma = pelaajanKaupunki();
-    const kameranPaikka = pallo.camera()?.position ?? null;
-    const pallonSade = pallo.getGlobeRadius?.() ?? 100;
     for (const d of pallo.pointsData()) {
       const o = d.__threeObjPoint;
       if (!o) continue;
-      /*
-       * Parallaksi pois JOKAISELTA pisteeltä — kaupungeilta, helmiltä ja
-       * aihevaloilta (ks. LEVY KATSESÄTEELLE). Paikka lasketaan aina
-       * datumin asteista, ei olion nykyisestä paikasta.
-       */
-      const paikka = katsesateenPaikka(
-        pallonPiste(d.lat, d.lon, pallonSade), kameranPaikka, o.scale.z,
-      );
-      if (paikka) o.position.set(paikka.x, paikka.y, paikka.z);
       // Koko on kaupunkipisteen asia: helmellä ja valolla on omansa.
       if (d.laji === 'helmi' || d.laji === 'valo') continue;
       // Sama sääntö kuin pointRadius-luennassa, yhdestä paikasta: kaksi
@@ -1963,6 +2029,9 @@ export async function avaaPallolauta(ui) {
   };
   tahdistaSiirtymanJalkeen = () => {
     clearTimeout(siirtymaAjastin);
+    // Siirtymän ajan piirtokoukku kirjoittaa paikan joka kehyksellä,
+    // vaikka kamera seisoisi (ks. PISTEIDEN PAIKKA TULEE PIIRROSTA).
+    siirtymaAsti = (globalThis.performance?.now?.() ?? Date.now()) + siirtyma + 50;
     siirtymaAjastin = setTimeout(tahdistaPisteidenKoko, siirtyma + 50);
   };
 
@@ -2431,6 +2500,7 @@ export async function avaaPallolauta(ui) {
       document.removeEventListener('pointerdown', korttivahti, true);
       ohjaimet.removeEventListener('change', pyydaLadonta);
       ohjaimet.removeEventListener('change', tahdistaPisteidenKoko);
+      kehyspurku();
       // Omat pallopisteet ovat tämän laudan tilaa (ks. pallonAsteet).
       if (omatPisteet === laudanOmatPisteet) omatPisteet = new Map();
       valovahti.disconnect();
