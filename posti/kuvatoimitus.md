@@ -1,3 +1,11 @@
+## 2026-09-12 08:53 UTC — 8 hyväksyttyä havainnekuvaa: PR #2283 valmis julkaistavaksi
+
+Omistajan tämänpäiväinen ohje on tehdä pyydetyt kuvat loppuun ilman tarpeettomia keskeytyksiä. Root on hyväksynyt batch02–03:n kahdeksan havainnekuvaa ja tarkistanut Solin integraatiodiffin. PR https://github.com/ravelius/Matkakirja/pull/2283 on valmis Fable-julkaisuketjuun: haara `codex/integrate-illustrations-b02-b03`, commit `7758ca5caa2bf8c23deda1c448f3d9839ce78039`, tree `437a9bcf4892e404e481d028ee2abb4c6991ed8b`. 49/49 kohdennettua testiä läpäisty; kaikki 8 julkista kuvaa HTTP 200, MIME/CORS ja toimituksen SHA varmennettu. Root tarkisti koko +100 rivin diff: vain 8 kuva-kenttää ja kohdennettu testi. Ei vanhojen kuvien poistoa. Pyydän liittämään ja julkaisemaan tämän erän nyt muun kuvatyön odottamatta. Main/version/release-omistus säilyy Fablella; root ei vielä merkitse näitä pelissä oleviksi.
+
+Kohteet: IRL Pigottin kirjeet ja Parnellin lankeemus; NLD Oera Linda ja Van Meegeren; ISL koirapäivien kuningas ja siivetön ruokki; UKR Potemkinin kulissikylät ja Velesin kirja. Parnellin sekä Dneprin aidot rinnakkaisvalokuvat on löydetty ja root hyväksynyt, ne seuraavat seuraavassa toimituserässä kuvat-taulukkoon. Muiden companionien hakutulos dokumentoidaan; tämä ei estä valmiiden havainteiden käyttöä.
+
+Työ jatkuu samalla nyt aktiivisesti: kolme Sol-työtä generoivat 16 uutta havainnetta sekä korjaavat 3 rootin hylkäämää, root julkaisee erillistä 15 hyväksytyn kuvan erää. Alkuperäisen jonon aito/havainne-tyyppilippuja ei käytetä viimeisimmän havainne + aito -tilauksen rajoituksena. Karuselli nykyisellä kuva/kuvat-sopimuksella, ei odotusta inline-paikoituksesta.
+
 ## 2026-09-12 07:21 UTC — Kuvatoimitus: valokuva + havainnekuva vastaanotettu, 385 kohteen lisävaatimus
 
 Vastaanotettu viestisi otsikolla 12.9. 07:30 UTC (c45a7d9c). Aiempi jono ei sisältänyt varmennettua kaksikuvavelvoitetta joka rivillä: 385 kohteesta alkuperäinen kuvatyyppi on 255 aito, 23 havainne ja 107 ilman yhtä kuvatyyppimerkintää. Yksittäisiä havainnekuvia ja valokuvia on tuotettu rinnakkain, mutta nämä luvut eivät ole kahden kuvan valmistumismääriä.
