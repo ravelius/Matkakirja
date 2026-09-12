@@ -1,5 +1,17 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 — kaikki 45 tekstiä ja 149 kuvatekstiä valmiit, audio-QA jatkuu
+
+Tarkistushetki 2026-09-12 23:33:51 UTC. Tämä on välitila, EI vielä valmis pelijulkaisupaketti.
+
+- Kaikki 45 kaupunkiparia jäädytetty: `eu-hl-europe-20260913-r2-approved1`, 18378 merkkiä / 2319 sanaa. Sofian 10 ennallaan säilyvää kontekstipuhetta uudelleenkäytetään; niitä ei ajeta uudelleen vain puuttuvan uuden kuitin vuoksi.
+- Kaikki 149 nykykuvan kuvatekstit valmiit: pitkä kaksi virkettä, lyhyt yksi sisältövirke (paikka–vuosilabel erikseen). Pilotin loput 16 pitkää ja Venetsian 2 lyhyttä korjattu commiteissa `8bc32d71b7f2fc92a22f67fcf5fc7bdb864e34e0` + `3d1a143492c6ba520eab75976ced7a5da7aad1f1`. Root luki molemmat diff:t ja ajoi 10/10 sisältötestit; kuvavetäjän riippumaton visuaalinen readback PASS. Venetsian ihastumis-/sydänkaari säilyi. Muuttuvat vain kuvatekstit: ei audioiden uudelleenajoa, uusia kuvia tai lähdetietojen keksimistä.
+- RC-vetäjä raportoi kaikki 45 Livia-city-3 MP3:t tuotetuiksi versionoituun R2:een. Ensimmäiset 12 on rootin itsenäisesti takaisinlukemana todettu oikeaksi: exact TTS/visible SHA, Flicker/v3/Natural 0.5, MP3 SHA/tavut/MIME/CORS, runtime-URL ja kaikkien eleiden sidonta/ankkurit/aikarajat PASS 12/12. Tämä EI ole kuuntelu- tai pelijulkaisuhyväksyntä.
+- Jäljellä 33 kaupungin ensimmäinen alignment-erä #29 hyväksyi 3/10 ja hylkäsi turvallisesti 7. RC-vetäjä korjaa cueiden aikajärjestyksen ja Berliinin viivatokenisoinnin; runtime-kytkentää ei avata virheellisille sidecareille. Korjaus koskee kohdistusta, ei TTS:n uudelleenmaksua. Isoisän tuotannon loppukattavuus ja koko audion kuuntelu-/live-QA odottavat koontia.
+- Riippumaton Sol-runtime-auditointi `31029a2e`: 45 kaupungin cue-kattavuus, SHA/versiosidonta, lifecycle ja reduced motion PASS; 54/54 + 135/135 testit. Offline-vihreä ei korvaa yllä löytynyttä todellisen kohdistusajon korjausta eikä selain-QA:ta.
+
+Fablen uusin työnjakokuittaus luettu: ei kilpailevia ajoja, yksi RC-omistaja, yksi lopullinen paketti. Nykyinen audiohaara on `codex/europe-audio-20260913`, v1820-pohjainen; vanha v1816-pilottihaara on historiallinen checkpoint. Viimeisin rootin origin/main-fetch varmisti v1821 `b766f7fd`; Fable mainitsee viestissään v1822, joka varmistetaan remote-puusta ennen lopullista sovitusta. Säilytetään v1818 saapumis-/PuluCam-ajoitus ja v1819 yleisten 69 äänen erä 4. Ohje-PR #2322, sisältölähde #2325 ja lopullinen RC käsitellään erikseen; ei keskeneräisen sisältö-PR:n itsenäistä pelijulkaisua.
+
 ## 13.9.2026 — rajattu korjaus tarkistettu, Euroopan koko luenta-ajo vapautettu
 
 Pääsessio luki kaikki13korvaavaa riviä ja45parin päivitetyn mittaraportin revision eu-hl-europe-20260913-r2-approved1 (tekstivetäjän remote c5173e9a47df60a944900647bcea520676ba35b4). Budapestin kielivirhe,10lyhyttä Livia-riviä sekä Lissabon/Sisilia on korjattu rajatusti. Tekijän59/59 testit ja riippumatoneditorialQA PASS; pääsession sisältökatselmus hyväksyy. Kaikki45paria omissa budjeteissaan. Aiemmin hyväksytyt12kaupunkia ennallaan.
