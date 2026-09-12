@@ -184,6 +184,28 @@ export const MAASTOKOHTEET_UKR = [
   },
   {
     id: 'dnestr',
+    kuva: {
+      "osoite": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-dnestr-557002ba3fe0.jpg",
+      "lyhyt": "Dnesteriä Halyčin kohdalla, nykyinen jokimaisema.",
+      "selite": "Dnesteriä Halyčin kohdalla, nykyinen jokimaisema.",
+      "lahde": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+      "tekija": "OpenAI; referenssikuva Raimond Spekking",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dniester_River_in_Halych,_Ukraine-6111.jpg",
+      "lisenssi": "CC BY-SA 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    kuvat: [
+      {
+        "osoite": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-dnestr-2062a6593e4d.jpg",
+        "lyhyt": "Dnestr Halyčin kohdalla Länsi-Ukrainassa.",
+        "selite": "Dnestr Halyčin kohdalla Länsi-Ukrainassa; joki virtaa tästä Moldovan halki ja palaa Ukrainaan ennen Mustanmeren suistoa.",
+        "lahde": "Valokuva, Wikimedia Commons",
+        "tekija": "Raimond Spekking",
+        "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dniester_River_in_Halych,_Ukraine-6111.jpg",
+        "lisenssi": "CC BY-SA 4.0",
+        "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ],
     nimi: 'Dnestr',
     tyyppi: 'joki',
     kysymykset: [
@@ -216,6 +238,16 @@ export const MAASTOKOHTEET_UKR = [
    * ============================================================== */
   {
     id: 'kamjanets-podilskyin-linna',
+    kuva: {
+      "osoite": "https://media.matkakirja.app/karttanostot/20260912/ukr-kohde-kamjanets-podilskyin-linna-42a38ea06850.jpg",
+      "lyhyt": "Kamjanets-Podilskyin linna nykyisessä asussaan Smotrytš-joen kiertämällä kallioniemellä Podoliassa.",
+      "selite": "Kamjanets-Podilskyin linna nykyisessä asussaan Smotrytš-joen kiertämällä kallioniemellä Podoliassa.",
+      "lahde": "Valokuva, Wikimedia Commons",
+      "tekija": "Rbrechko",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:68-104-9007_Kamianets-Podilskyi_Fortress_RB_18_2.jpg",
+      "lisenssi": "CC BY-SA 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
     nimi: 'Kamjanets-Podilskyin linna',
     tyyppi: 'historia',
     kysymykset: [
@@ -250,6 +282,16 @@ export const MAASTOKOHTEET_UKR = [
   },
   {
     id: 'tsernobylin-ydinvoimala',
+    kuva: {
+      "osoite": "https://media.matkakirja.app/karttanostot/20260912/ukr-kohde-tsernobylin-ydinvoimala-0e9773afbd39.jpg",
+      "lyhyt": "Tšernobylin nelosreaktorin vanha suojarakennus vuonna 2013.",
+      "selite": "Tšernobylin ydinvoimalan vaurioitunut nelosreaktori vuonna 2013 ennen uuden suojarakennuksen siirtämistä sen päälle.",
+      "lahde": "Valokuva, Wikimedia Commons",
+      "tekija": "Paweł \"pbm\" Szubert / Wikipedia",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chernobyl_-_power_plant_-_reactor_4_02.jpg",
+      "lisenssi": "CC BY-SA 3.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
     nimi: 'Tšernobylin ydinvoimala',
     tyyppi: 'tekniikka',
     kysymykset: [
