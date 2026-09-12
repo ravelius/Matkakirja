@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1806, teksti: 'Kortti sulkeutuu vasta napautuksesta, ei vedosta' },
   { v: 1805, teksti: 'Granadan uusi kohtaamiskuva peliin, kolme galleriaan' },
   { v: 1804, teksti: 'Satelliittilinssi: astronauttien valokuvat Maasta' },
   { v: 1803, teksti: 'Nostokuvan vaihe 1: ei ruksia eika lahderivia' },

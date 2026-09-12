@@ -758,6 +758,115 @@ function polloVeto() {
 export const NAPAUTUKSEN_NIELU_MS = 500;
 export const NAPAUTUKSEN_NIELU_SADE = 32;
 
+/*
+ * VETO EI OLE NAPAUTUS — kortin saa sulkea vain napautus.
+ *
+ * Omistajan vikailmoitus 12.9.2026, sanatarkasti: *"Nosto häviää
+ * näkyvistä jos yrittää scrollata. Ilmeisesti peli tulkitsee että
+ * pelaaja painaa kuvan ulkopuolelta ja sulkee ikkunan vaikka nosto on
+ * jo rakentunut kuvan ympärille."*
+ *
+ * Juurisyy oli se, että kortit sulkeutuivat PELKÄSTÄ pointerdownista:
+ * sormi kortin ulkopuolella (kuva edellä -kortti täyttää lähes koko
+ * ruudun, joten reunan yli osuu helposti) sulki kortin heti, vaikka
+ * sormi oli vasta lähdössä pystyvetoon. Nyt sulkeminen odottaa, että
+ * ele osoittautuu napautukseksi: sormi nousee lähellä lähtöpistettä
+ * eikä välissä ole ylitetty vetokynnystä.
+ *
+ * KYNNYS ON SAMA LUKU KUIN KARTAN OMASSA RAAHAUSVAHDISSA (js/kartta.js
+ * pointermove, joka lukee tämän vakion): jos kartta pitää elettä
+ * raahauksena, kortinkin on pidettävä — kaksi eri kynnystä
+ * tarkoittaisi väliä, jolla kartta panoroi ja kortti silti sulkeutuu.
+ * Sama luku on myös saapumisasennon RAAHAUKSEN_KYNNYS_PX:llä; sitä ei
+ * tuoda tänne, koska js/saapumisasento.js on niputuslistalla vasta
+ * tämän tiedoston JÄLKEEN (tools/tarkista-niputus.mjs sääntö 3).
+ * tests/kortin-veto.test.mjs vahtii, että luvut pysyvät samoina.
+ */
+export const RAAHAUKSEN_KYNNYS = 6;
+/*
+ * Napautus on myös lyhyt. Pitkä painallus paikallaan on pelaajan
+ * mielessä jokin muu ele (tekstin valinta, kuvan pikavalikko) kuin
+ * kortin sulkeva napsautus, eikä sen purkautuminen saa viedä korttia.
+ */
+export const NAPAUTUKSEN_KESTO_MS = 700;
+
+/**
+ * Sulkeva napautus kortin ulkopuolelta — vetoa lukuun ottamatta.
+ *
+ * Kuuntelee `kohde`-elementin (tai dokumentin) pointerdownit. Jokainen
+ * alkava ele tarjotaan ensin `kelpaa`:lle, joka tekee kortin omat
+ * rajaukset (osuiko kortin sisään, pöllönappiin, suurennokseen…) ja
+ * kertoo, voisiko tästä tulla sulkeva napautus. Vasta kun sormi nousee
+ * kynnyksen sisällä ja ajoissa, kutsutaan `napautus` — ja sille
+ * annetaan ALKUPERÄINEN pointerdown, koska kortin rajaukset ja nielu
+ * (nielaiseSulkevaNapautus) puhuvat sen kohteesta ja koordinaateista.
+ *
+ * Liike, irrotus ja peruutus kuunnellaan dokumentista: sormi voi
+ * nousta aivan muualla kuin missä se laskeutui, ja kartta kaappaa
+ * osoittimen omaan raahaukseensa kesken eleen.
+ *
+ * @param {EventTarget} kohde elementti tai document, jolta ele alkaa.
+ * @param {object} p
+ * @param {(t: PointerEvent) => boolean} p.kelpaa voisiko tämä sulkea.
+ * @param {(t: PointerEvent) => void} p.napautus sulkeva napautus.
+ * @param {object} [asetukset]
+ * @returns {() => void} purku.
+ */
+export function kuunteleSulkevaNapautus(kohde, { kelpaa, napautus }, {
+  kaappaus = false,
+  kynnys = RAAHAUKSEN_KYNNYS,
+  kesto = NAPAUTUKSEN_KESTO_MS,
+  doc = typeof document === 'undefined' ? null : document,
+} = {}) {
+  if (!kohde?.addEventListener) return () => {};
+  let ele = null;
+  const unohda = () => {
+    if (!ele) return;
+    ele = null;
+    doc?.removeEventListener('pointermove', liike, true);
+    doc?.removeEventListener('pointerup', irti, true);
+    doc?.removeEventListener('pointercancel', peru, true);
+  };
+  function liike(tapahtuma) {
+    if (!ele || tapahtuma.pointerId !== ele.id) return;
+    // Kynnyksen ylitys tekee eleestä vedon — eikä veto enää palaa
+    // napautukseksi, vaikka sormi kääntyisi takaisin lähtöpisteeseen.
+    if (Math.hypot(tapahtuma.clientX - ele.x, tapahtuma.clientY - ele.y) >= kynnys) unohda();
+  }
+  function peru(tapahtuma) {
+    // Selain otti eleen itselleen (vieritys, iOS:n oma ele): ei sulje.
+    if (ele && tapahtuma.pointerId === ele.id) unohda();
+  }
+  function irti(tapahtuma) {
+    if (!ele || tapahtuma.pointerId !== ele.id) return;
+    const alku = ele.alku;
+    const matka = Math.hypot(tapahtuma.clientX - ele.x, tapahtuma.clientY - ele.y);
+    const kulunut = (tapahtuma.timeStamp || Date.now()) - ele.t;
+    unohda();
+    if (matka >= kynnys || kulunut > kesto) return;
+    napautus(alku);
+  }
+  const alkaa = (tapahtuma) => {
+    unohda();
+    if (!kelpaa(tapahtuma)) return;
+    ele = {
+      id: tapahtuma.pointerId,
+      x: tapahtuma.clientX,
+      y: tapahtuma.clientY,
+      t: tapahtuma.timeStamp || Date.now(),
+      alku: tapahtuma,
+    };
+    doc?.addEventListener('pointermove', liike, true);
+    doc?.addEventListener('pointerup', irti, true);
+    doc?.addEventListener('pointercancel', peru, true);
+  };
+  kohde.addEventListener('pointerdown', alkaa, kaappaus);
+  return () => {
+    unohda();
+    kohde.removeEventListener('pointerdown', alkaa, kaappaus);
+  };
+}
+
 /**
  * SULKEVA NAPAUTUS EI SAA VUOTAA KELLUVAN KUPLAN ALLE (omistajan
  * iPad-havainto 27.8.2026: *"kun klikkaa puhekuplaa sulkeakseen sen,

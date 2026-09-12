@@ -35,7 +35,9 @@ import { sfx } from './sound.js';
 // pallolaudan kamera tarvitsee sen ilman tätä moduulia.
 import { saapumisenKameranKohta } from './saapumisasento.js';
 import { sovitaAjonKesto } from './siirtokoreografia.js';
-import { fokusmoodiPaalla, kehittajaMaailmaPaalla, kehittajaTilaPaalla } from './ui-apurit.js';
+import {
+  fokusmoodiPaalla, kehittajaMaailmaPaalla, kehittajaTilaPaalla, RAAHAUKSEN_KYNNYS,
+} from './ui-apurit.js';
 
 // Kuinka paljon lautaa lasketaan yläreunasta aloitusnäkymässä.
 const INTRO_TOP = 0.05;
@@ -4184,8 +4186,10 @@ export class Kartta extends NukkuvaKartta {
       // vaakaan (panVaraY on siellä nolla).
       const dy = this.ui.panVaraY ? e.clientY - alku.y : 0;
       // Pieni kynnys: pelkkä napautus ei saa laskea raahaukseksi eikä
-      // sammuttaa sykähdyksiä turhaan.
-      if (!liikkui && Math.hypot(dx, dy) < 6) return;
+      // sammuttaa sykähdyksiä turhaan. SAMA LUKU kuin korttien
+      // sulkevalla napautuksella (ui-apurit RAAHAUKSEN_KYNNYS): jos
+      // kartta pitää elettä raahauksena, kortinkin on pidettävä.
+      if (!liikkui && Math.hypot(dx, dy) < RAAHAUKSEN_KYNNYS) return;
       if (!liikkui) {
         liikkui = true;
         this.ui.kartanRaahaus = true;
