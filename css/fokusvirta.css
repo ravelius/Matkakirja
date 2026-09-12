@@ -2462,8 +2462,9 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
    tavalla."*
 
    KOLME EROA kartan luentakuvaan:
-     - PAIKKA on ruudun keskus, ei laudan piste: sarja saa peittää
-       matkakirjakortin (Raamattu 11.9.), joka jää auki sen alle.
+     - PAIKKA on ruudun keskus, ei laudan piste. Kortin ALLE, ei päälle
+       (omistaja 12.9.2026, sanatarkasti: *"kuva saisi jäädä matkakirjan
+       alle"*) — tämä kumoaa 11.9. kirjatun "sarja saa peittää kortin".
      - KALLISTUSTA EI OLE. Vino valokuva on pöydälle jätetty kuva
        kartalla; keskellä ruutua se olisi virhe. Pakassa kallistus
        säilyy ennallaan.
@@ -2472,11 +2473,28 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
 
    NAPAUTUKSET LÄPI: päällys ei ota osoitintapahtumia, jotta kartan
    liike päättää sarjan (js/fokusvirta.js kytkeSarjanKartanLiike).
+
+   ── KERROS: KORTIN ALLE, KARTAN PÄÄLLE (omistaja 12.9.2026) ────────
+
+   Päällys oli `document.bodyn` lapsi z-indexillä 40. Matkakirjakortti
+   asuu `.railissa` (z-index 4) `.app`-kerroksen sisällä, ja `.app` on
+   `position: fixed` eli OMA PINONSA, jonka z-index on `auto`. Siksi
+   rungon tasolla oleva 40 voitti kortin riippumatta siitä, mitä lukua
+   kortille olisi annettu — mitattu 12.9.2026 Chromiumilla 1280 × 800:
+   kuva peitti kortista 53 % ja kortin tekstialasta jäi näkyviin 46 %.
+
+   Ratkaisu ei siis ole luku vaan PINO: päällys ladotaan `.stage`-solmun
+   lapseksi (js/fokusvirta.js isokuvanKoti), jolloin se kilpailee
+   samassa pinossa kuin kartta (`.map-pane`, z-index auto) ja kortti
+   (`.rail`, z-index 4). Luku 3 jää näiden väliin: kartan päälle, kortin
+   alle. Kuvaa EI pienennetä eikä piiloteta — ISOT luentakuvat ovat
+   omistajan tilaus ja se linjaus pysyy.
    =================================================================== */
 .fokusvirta-isokuva {
   position: fixed;
   inset: 0;
-  z-index: 40;
+  /* Kartan päälle (map-pane: auto), matkakirjakortin alle (.rail: 4). */
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;

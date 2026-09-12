@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1818, teksti: 'Luentakuva matkakirjan alle, pulun kuvat naytolle' },
   { v: 1817, teksti: 'Ales stenar, Urnes, Visby ja Gamla Uppsala' },
   { v: 1816, teksti: 'Linssin nimeksi Astronautin kamera' },
   { v: 1815, teksti: 'Lukijan aanenvoimakkuus liuku toimii vihdoin' },

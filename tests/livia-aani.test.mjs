@@ -312,8 +312,14 @@ test('kaupunkirepliikki mahtuu kuplaansa', () => {
 test('äänen osoite osoittaa ämpärin pulukansioon', () => {
   assert.equal(LIVIAN_AANIJUURI.endsWith('aanet/pulu/'), true);
   assert.equal(ampariKansio(), 'aanet/pulu');
+  /*
+   * ERÄ ON NYT JOKAISELLA AVAIMELLA (12.9.2026 ilta): omistaja päätti
+   * pulun ääneksi Flickerin, ja koko sarja äänitettiin uudelleen.
+   * Aiemmin erä oli vain koekuunneltujen repliikkien osoitteissa.
+   */
   assert.equal(livianAaniOsoite('mannerivihje', 0),
-    `${LIVIAN_AANIJUURI}livia-mannerivihje-1.mp3?v=${LIVIAN_AANITETYT['mannerivihje-1']}`);
+    `${LIVIAN_AANIJUURI}livia-mannerivihje-1.mp3?v=${LIVIAN_AANITETYT['mannerivihje-1']}`
+    + `-${LIVIAN_AANIERAT['mannerivihje-1']}`);
   assert.equal(livianAaniOsoite('kupla', 0), null);
 });
 
@@ -369,8 +375,9 @@ test('työkalu tuntee saapumisrepliikit, mutta peli soittaa aina kuivan', () => 
   // VERSIOKYSELY VAIHTUU TEKSTIN MUKANA (9.9.2026): vartioidun repliikin
   // osoitteessa on taulun tiiviste, jotta välimuisti ei soita vanhaa
   // äänitettä samannimisen tiedoston alta; vartioimaton on ilman kyselyä.
-  assert.match(livianAaniOsoite('lontoo', 2), /livia-lontoo-3\.mp3\?v=[0-9a-f]{8}$/);
-  assert.equal(LIVIAN_AANITETYT['lontoo-3'], livianAaniOsoite('lontoo', 2).split('?v=')[1]);
+  assert.match(livianAaniOsoite('lontoo', 2), /livia-lontoo-3\.mp3\?v=[0-9a-f]{8}-\d+$/);
+  assert.equal(`${LIVIAN_AANITETYT['lontoo-3']}-${LIVIAN_AANIERAT['lontoo-3']}`,
+    livianAaniOsoite('lontoo', 2).split('?v=')[1]);
 });
 
 /* ---------- vanhentunut äänite on hiljainen ---------- */
@@ -445,15 +452,16 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
 /* ---------- tagit ---------- */
 
 /*
- * V2-MALLILLA PUHE ON PUHDASTA TEKSTIÄ (omistaja 6.9.2026: "v2 versio
- * on parempi tälle äänelle, eli ei tule ollenkaan ohjausmerkkejä").
- * Tagit ovat yhä taulussa v3-kokeilua varten, mutta mallille lähtevä
- * teksti on täsmälleen kaanoni — hakasulku puheessa luettaisiin ääneen.
+ * V3-MALLILLE LÄHTEE TAGITETTU TEKSTI (omistajan päätös 12.9.2026:
+ * *"käytetään tätä jatkossa pulun ääneen: piI8Kku0DcvcL6TTSeQt …
+ * V3 moottori"*). Tämä kumoaa 6.9.2026 tehdyn v2-valinnan, jonka aikaan
+ * mallille lähti pelkkä kaanoni: silloin hakasulku olisi luettu ääneen,
+ * nyt se on ohjausmerkki. Kaanoni itse ei muutu — tagien poiston on yhä
+ * palautettava täsmälleen alkuperäinen teksti, ja juuri se vartioidaan
+ * alla.
  */
-test('v2-mallille lähtee kaanonin teksti ilman tageja; tagitaulu säilyy v3:lle', () => {
+test('v3-mallille lähtee tagitettu teksti ja tagien poisto palauttaa kaanonin', () => {
   for (const rivi of repliikit()) {
-    assert.equal(rivi.puhe, rivi.teksti, `${rivi.avain}: puhemuodossa on ohjausmerkkejä`);
-    assert.ok(!/\[[^\]]+\]/.test(rivi.puhe), `${rivi.avain}: hakasulkutagi puheessa`);
     /*
      * TAGITAULUA VAADITAAN VAIN js/livia.js:n LÄHTEILTÄ. Kaupunkien
      * repliikit (ateena, sofia) syntyivät v2-mallin aikaan, jolloin
