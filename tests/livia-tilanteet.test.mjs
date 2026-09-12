@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {LIVIAN_PITKAN_ODOTUKSEN_VIIVE,LIVIAN_TUNTEET,aloitaLivianOdotus,ilmoitaLivianTunne,livianAiheEle,livianTunnetaginTiedot,livianLuentareaktionTiedot,seuraaLivianKuuntelua,kuunteleLivianTilanteita} from '../js/livia-tilanteet.js';
+import {LIVIAN_PITKAN_ODOTUKSEN_VIIVE,LIVIAN_PUHEMERKITYKSET,LIVIAN_TUNTEET,aloitaLivianOdotus,ilmoitaLivianPuheEle,ilmoitaLivianTunne,livianAiheEle,livianPuheeleenTiedot,livianTunnetaginTiedot,livianLuentareaktionTiedot,seuraaLivianKuuntelua,kuunteleLivianTilanteita} from '../js/livia-tilanteet.js';
 import {livianNostoAsettelu} from '../js/livia-nostotila.js';
 test('pitkän odotuksen raja vastaa chatin kuuden sekunnin rajaa',()=>assert.equal(LIVIAN_PITKAN_ODOTUKSEN_VIIVE,6000));
 test('odotuksen lopetus paljastaa saman tokenin tuottajalle ja pysyy idempotenttina',t=>{
@@ -20,11 +20,21 @@ test('ulkoinen tunnetagi on vain tunne ja rajattu voimakkuus',t=>{
  assert.deepEqual(Object.keys(LIVIAN_TUNTEET),['utelias','lammin','ilo','hammastys','miettiva','vakava','ylpea','rakkaus','hammentynyt','jannitys']);
  assert.deepEqual(livianTunnetaginTiedot({tunne:' UTELIAS ',voimakkuus:1.4}),{tunne:'utelias',voimakkuus:1,ele:'lookUp'});
  assert.deepEqual(livianTunnetaginTiedot({tunne:'lammin'}),{tunne:'lammin',voimakkuus:.5,ele:'smile'});
+ assert.equal(livianTunnetaginTiedot({tunne:'selittaa',voimakkuus:.45}),null,'selittäminen ei ole tunne- tai TTS-tagi');
  assert.equal(livianTunnetaginTiedot({tunne:'tuntematon',voimakkuus:.4}),null);
  assert.equal(livianTunnetaginTiedot({tunne:'ilo',voimakkuus:'paljon'}),null);
  const calls=[],off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
  assert.deepEqual(ilmoitaLivianTunne({tunne:'ilo',voimakkuus:.7},{lahde:'koe',teksti:'ei kuulu tagiin'}),{tunne:'ilo',voimakkuus:.7,ele:'grin'});
  assert.equal(calls[0][0],'emotion');assert.equal(calls[0][1].lahde,'koe');assert.equal(calls[0][1].ele,'grin');
+});
+test('semanttinen puhemerkitys valitsee teknisen eleen erillään TTS-tageista',t=>{
+ assert.deepEqual(LIVIAN_PUHEMERKITYKSET,{selittaa:'cityExplain'});
+ assert.deepEqual(livianPuheeleenTiedot({tarkoitus:' SELITTAA ',voimakkuus:.45}),{tarkoitus:'selittaa',voimakkuus:.45,ele:'cityExplain'});
+ assert.equal(livianPuheeleenTiedot({tarkoitus:'[excited]',voimakkuus:.5}),null);
+ assert.equal(livianPuheeleenTiedot({tarkoitus:'toString',voimakkuus:.5}),null);
+ const calls=[],puheTunnus={};const off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
+ assert.deepEqual(ilmoitaLivianPuheEle({tarkoitus:'selittaa',voimakkuus:.6},{tunnus:'marseille.pulu.1',puheTunnus}),{tarkoitus:'selittaa',voimakkuus:.6,ele:'cityExplain'});
+ assert.equal(calls[0][0],'speechCue');assert.equal(calls[0][1].tunnus,'marseille.pulu.1');assert.equal(calls[0][1].puheTunnus,puheTunnus);
 });
 test('luentareaktion semantiikka ja voimakkuus erottavat hymyn, virneen ja naurun',()=>{
  for(const [tarkoitus,voimakkuus,ele]of [['myotailee',.3,'nod'],['epailee',.5,'shake'],['torjuu',.7,'shake'],['huvittuu',.35,'smile'],['huvittuu',.45,'grin'],['huvittuu',.6,'chuckle'],['hammastyy',.4,'doubleTake'],['hammastyy',.8,'disbelief'],['vakavoituu',.5,'listen']]){

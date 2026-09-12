@@ -1,4 +1,5 @@
 import { seuraaLivianKasvoAanitetta, lopetaLivianKasvoAanite } from './livia-puhetila.js';
+import { kytkeLivianPuheEleet } from './livia-puheleet.js';
 /*
  * LIVIAN ÄÄNI — pulu puhuu kuplansa ääneen.
  *
@@ -1042,10 +1043,12 @@ export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
  * @param {boolean} [asetukset.vaista] väistääkö tausta puheen ajaksi.
  *   VÄLIHUUTO EI VÄISTÄ (omistaja 7.9.2026): se soi kertojan PÄÄLLE,
  *   eikä kertoja saa hiljetä sen tieltä.
+ * @param {Array<object>} [asetukset.eleet] lopulliseen äänitteeseen
+ *   kohdistetut puhe-eleet millisekunteina; tyhjä lista ei animoi.
  * @returns {HTMLAudioElement|null} soittimen kahva tai null
  */
 export function soitaLivianAani(ui, lahde, indeksi,
-  { paikkaan = '', paikkaa = '', teksti = null, vaimennus = 1, vaista = true } = {}) {
+  { paikkaan = '', paikkaa = '', teksti = null, vaimennus = 1, vaista = true, eleet = [] } = {}) {
   pysaytaLivianAani(ui);
   if (!ui || ui.dead || typeof Audio === 'undefined') return null;
   // Sama kytkin kuin kertojalla: mykistetty peli on mykistetty myös
@@ -1098,6 +1101,7 @@ export function soitaLivianAani(ui, lahde, indeksi,
   soivaPulu = { audio, vaimennus };
   ui.liviaAani = audio;
   seuraaLivianKasvoAanitetta(audio, teksti);
+  kytkeLivianPuheEleet(audio, eleet, { voimassa: () => ui.liviaAani === audio });
   // Kirjanpito kaikkiin luentoihin: taustalle menevä peli hiljentää
   // myös tämän (js/luenta.js taustaHiljennaLuennat).
   (ui.luennat ??= new Set()).add(audio);
@@ -1147,13 +1151,15 @@ export function soitaLivianAani(ui, lahde, indeksi,
  * @param {string|null} [asetukset.teksti] kuplan teksti tiivisteportille
  * @param {number} [asetukset.vaimennus] voimakkuuden kerroin
  * @param {boolean} [asetukset.vaista] väistääkö tausta (välihuuto ei)
+ * @param {Array<object>} [asetukset.eleet] hash-varmistetun kohdistuksen
+ *   jo ratkaistut puhe-eleet; ilman niitä repliikki toimii kuten ennen.
  * @returns {HTMLAudioElement|null} soittimen kahva tai null
  */
 export function soitaLivianKaupunkiAani(ui, kaupunkiId, kentta,
-  { kupla = 0, teksti = null, vaimennus = 1, vaista = true } = {}) {
+  { kupla = 0, teksti = null, vaimennus = 1, vaista = true, eleet = [] } = {}) {
   const indeksi = livianKaupunkiIndeksi(kaupunkiId, kentta, kupla);
   if (indeksi === null) return null;
-  return soitaLivianAani(ui, kaupunkiId, indeksi, { teksti, vaimennus, vaista });
+  return soitaLivianAani(ui, kaupunkiId, indeksi, { teksti, vaimennus, vaista, eleet });
 }
 
 /**

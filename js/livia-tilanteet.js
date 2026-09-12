@@ -37,6 +37,22 @@ export function ilmoitaLivianTunne(tagi,tiedot={}){
  const tunne=livianTunnetaginTiedot(tagi);if(!tunne)return null;
  ilmoitaLivianTilanne('emotion',{...tiedot,...tunne});return tunne;
 }
+/**
+ * Oman puhevuoron sisältömerkitys. Tämä ei ole ElevenLabs-tagi:
+ * tuottaja kohdistaa pysyvän cue-id:n oikeaan, parhaillaan kuuluvaan
+ * puhetunnukseen. Tekninen SVG-ele valitaan vasta tässä rajapinnassa.
+ */
+export const LIVIAN_PUHEMERKITYKSET=Object.freeze({selittaa:'cityExplain'});
+export function livianPuheeleenTiedot({tarkoitus,voimakkuus}={}){
+ const merkitys=String(tarkoitus??'').trim().toLocaleLowerCase('fi-FI');
+ const ele=Object.hasOwn(LIVIAN_PUHEMERKITYKSET,merkitys)?LIVIAN_PUHEMERKITYKSET[merkitys]:null,luku=voimakkuus===undefined?.5:Number(voimakkuus);
+ if(!ele||!Number.isFinite(luku))return null;
+ return Object.freeze({tarkoitus:merkitys,voimakkuus:Math.max(0,Math.min(1,luku)),ele});
+}
+export function ilmoitaLivianPuheEle(cue,tiedot={}){
+ const ele=livianPuheeleenTiedot(cue);if(!ele)return null;
+ ilmoitaLivianTilanne('speechCue',{...tiedot,...ele});return ele;
+}
 /** Fablen tekstikohtainen tarkoitus; ei avainsana-arvontaa tai ääntä. */
 export function livianLuentareaktionTiedot({tarkoitus,voimakkuus}={}){
  if(typeof voimakkuus!=='number'||!Number.isFinite(voimakkuus)||voimakkuus<=0)return null;

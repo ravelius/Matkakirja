@@ -115,6 +115,7 @@ const SHELL = [
   './js/pollo.js',
   './js/livia-kasvot.js',
   './js/livia-puhetila.js',
+  './js/livia-puheleet.js',
   './js/livia-hoyhenet.js',
   './js/livia-pikselit.js',
   './js/livia-svg-paa.js',

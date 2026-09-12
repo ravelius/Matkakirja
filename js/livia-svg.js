@@ -10,6 +10,7 @@ export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
  Object.freeze({id:'chatDustOff',label:'Pölyt pois sulista',duration:1400,group:'Pelitilanne'}),
  Object.freeze({id:'mapPeck',label:'Kartan pinnan nokkiminen',duration:2500,group:'Pelitilanne'}),
  Object.freeze({id:'bunFeast',label:'Riemukas pullapalkinto',duration:4600,group:'Pelitilanne'}),
+ Object.freeze({id:'cityExplain',label:'Nykykaupungin selitys',duration:6200,group:'Puhe'}),
  ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['bookStudy','Tietäväinen kirjan selaus',4200],['scratch','Pään raapaisu',2600],['eyeRub','Lasit ylös ja silmien hieraisu',5200],['chuckle','Hiljainen naurunpyrskähdys',2500]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
 const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
 const lvEase=n=>{n=lvClamp(n);return n*n*(3-2*n);};
@@ -45,6 +46,15 @@ export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
   s.frame=amount>.08?'down':'rest';
   s.gazeDown=amount>.08;
   s.mapPeck={amount,peck:first>second?1:second>0?2:0};
+ }
+ if(id==='cityExplain'){
+  // Sisältöneutraali puhe-ele: pieni askellus vasemmalle, katse kaupungin
+  // suuntaan ja vasta paikallaan siipiselitys. Ilo kuuluu erilliseen cueen.
+  const out=lvEase(s.p/.20),back=1-lvEase((s.p-.80)/.18),amount=out*back;
+  const point=lvEase((s.p-.18)/.10)*(1-lvEase((s.p-.40)/.10));
+  const open=lvEase((s.p-.50)/.10)*(1-lvEase((s.p-.72)/.12));
+  s.frame=s.p<=0||s.p>=1?'rest':s.p<.42?'glance':s.p<.72?'front':'rest';
+  s.cityExplain={amount,point,open,gesture:Math.max(point,open),phase:s.p};
  }
  if(id==='glideIn')s.flight={kind:'opening',t:lvEase(p)};
  if(id==='trailerFlee')s.flight={kind:'trailerAway',t:lvEase(p)};
@@ -87,6 +97,18 @@ export function livianSvgMalli(s,{right=0}={}) {
   // Paa-moduulin vasemmalle osoittava nokka laskee negatiivisella kierrolla.
   // Huipussa nokankarki (19,68) osuu koko SVG:n maailmassa y~=300:aan.
   m.headY=16.1*amount;m.headAngle=-65*amount;m.bodyLean=4*amount;
+ }
+ if(id==='cityExplain'&&s.cityExplain){
+  const amount=lvClamp(s.cityExplain.amount),reach=s.compactExplain?28:52;
+  if(amount>0){
+   const stride=p<.5?p/.20:(1-p)/.20;
+   m.x=128-reach*amount;
+   m.walking=p<.20||p>.80;
+   m.step=Math.sin(lvClamp(stride)*Math.PI*2)*Math.min(1,amount*2);
+   const gesture=lvClamp(s.cityExplain.gesture);
+   m.headAngle=2*Math.sin(p*Math.PI*2)*gesture;
+   m.bodyLean=-1.5*gesture;
+  }
  }
  if(s.walk){const t=s.walk.direction===1?s.walk.t:1-s.walk.t;m.x=128+(right+96)*t;m.y=302-2*Math.sin(p*Math.PI*14);if(t>=1)m.visible=false;}
  if(['arrive','crash','owl','leaveRight'].includes(id)&&!s.flight&&!s.walk){const edge=id==='arrive'?1-lvEase((p-.08)/.46):id==='crash'?1-lvEase((p-.05)/.24):lvClamp((s.x||0)/24);m.x=128+(right+100)*edge;}
@@ -142,6 +164,11 @@ export function livianSvgMalli(s,{right=0}={}) {
   else if(s.frame==='shock')m.wing='spread';
   m.wingAmount=gate*(.25+.75*strength);
   if(['shade','cover','preen'].includes(m.wing))m.wingAmount=1;
+ }
+ if(id==='cityExplain'&&(s.cityExplain?.point>0||s.cityExplain?.open>0)){
+  const point=lvClamp(s.cityExplain.point),open=lvClamp(s.cityExplain.open);
+  m.wing=point>0?'point':'shrug';
+  m.wingAmount=Math.max(point,open)*(.45+.35*strength);
  }
  if(id==='chatDustOff'&&p>0&&p<1){
   const dustGate=lvEase(p/.12)*(1-lvEase((p-.82)/.18));

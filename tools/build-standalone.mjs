@@ -482,6 +482,7 @@ const MODULES = [
    */
   'js/livia-puhetila.js',
   'js/livia-tilanteet.js',
+  'js/livia-puheleet.js',
   'js/livia-lehtireaktiot.js',
   'js/puhe.js',
   'js/kehittajan-voimat.js',

@@ -3,12 +3,45 @@ import assert from 'node:assert/strict';
 import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva,livianSvgMalli,livianEleenVoima} from '../js/livia-svg.js';
 
 test('kaikki nykyiset eleet piirtyvät kokonaisella SVG-pululla ilman virheellisiä koordinaatteja',()=>{
- assert.equal(LIVIA_SVG_ELEET.length,69);
+ assert.equal(LIVIA_SVG_ELEET.length,70);
  for(const e of LIVIA_SVG_ELEET)for(const p of [0,.1,.25,.43,.6,.8,.95,1]){
   const s=livianSvgAsento(e.id,p),svg=livianSvgKuva(s,{right:42,prefix:'qa'});
   assert.match(svg,/^<svg /);assert.doesNotMatch(svg,/NaN|Infinity|undefined|<image|<canvas/);
   if(livianSvgMalli(s,{right:42}).visible)assert.match(svg,/data-part="whole-bird"/);
  }
+});
+test('lepo, puhe ja isoisän kuuntelu käyttävät lempeää perusilmettä',()=>{
+ for(const s of [livianSvgAsento('blink',0),{...livianSvgAsento('blink',0),mouth:'talk'},{...livianSvgAsento('blink',0),gazeUp:true}]){
+  const svg=livianSvgKuva(s,{prefix:'gentleqa'});
+  assert.match(svg,/data-expression="gentle"/);
+ }
+ assert.match(livianSvgKuva(livianSvgAsento('angry',.45)),/data-expression="active"/,'hetkellinen tunne säilyy erillisenä');
+ assert.doesNotMatch(livianSvgKuva(livianSvgAsento('cityExplain',.30)),/data-part="smile"/,'yleinen selitysele ei pakota hymyä');
+});
+test('rauhallinen räpäytys sulkee silmät kahdesti ja palautuu välissä',()=>{
+ assert.equal(LIVIA_SVG_ELEET.find(e=>e.id==='blink')?.duration,1600);
+ assert.equal(livianSvgAsento('blink',.30).frame,'blink');
+ assert.equal(livianSvgAsento('blink',.45).frame,'rest');
+ assert.equal(livianSvgAsento('blink',.55).frame,'blink');
+ assert.equal(livianSvgAsento('blink',.70).frame,'rest');
+});
+test('nykykaupungin selitys ottaa rajatun tilan vasemmalta ja palaa lepoankkuriin',()=>{
+ const start=livianSvgMalli(livianSvgAsento('cityExplain',0));
+ const desktop=livianSvgMalli(livianSvgAsento('cityExplain',.45));
+ const mobile=livianSvgMalli({...livianSvgAsento('cityExplain',.45),compactExplain:true});
+ const end=livianSvgMalli(livianSvgAsento('cityExplain',1));
+ assert.equal(LIVIA_SVG_ELEET.find(e=>e.id==='cityExplain')?.duration,6200);
+ assert.ok(desktop.x<start.x&&desktop.x>=76,'työpöytä käyttää nykyisen näyttämön vasenta puolta');
+ assert.ok(mobile.x<start.x&&mobile.x>desktop.x,'mobiilin kävelyalue on pienempi');
+ assert.equal(desktop.wing,'point');assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.65)).wing,'shrug');
+ assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.50)).wing,'fold','siipieleiden välissä on rauhallinen hengähdys');
+ assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.10)).walking,true,'vasemmalle otetaan pienet askeleet');
+ assert.equal(desktop.walking,false,'selitys tapahtuu tukevasti paikallaan');
+ assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.90)).walking,true,'lepoon palataan pienin askelin');
+ const visual=m=>({x:m.x,y:m.y,angle:m.angle,headY:m.headY,headAngle:m.headAngle,bodyLean:m.bodyLean,walking:m.walking,step:m.step,wing:m.wing,wingAmount:m.wingAmount,face:m.face});
+ assert.deepEqual(visual(end),visual(start));
+ assert.equal(livianSvgKuva(livianSvgAsento('cityExplain',1),{prefix:'restqa'}),
+  livianSvgKuva(livianSvgAsento('cityExplain',0),{prefix:'restqa'}),'loppukuvan jokainen näkyvä osa on lepoasennossa');
 });
 test('kartan pinnan nokkiminen tekee kaksi erillistä lempeää nokkaisua jalat paikallaan',()=>{
  const ele=LIVIA_SVG_ELEET.find(e=>e.id==='mapPeck');
@@ -132,7 +165,7 @@ test('kiireinen ensiliito jatkuu ilman laskuhyppyä ja ottaa kaksi haparoivaa as
 });
 test('yläviistoon katselu nostaa vasemmalle osoittavan nokan, lasit käyvät otsalla ja palaavat',()=>{
  const svg=livianSvgKuva({...livianSvgAsento('blink',0),gazeUp:true});
- assert.match(svg,/data-gaze="up-left" transform="rotate\(18 57 74\)"/);
+ assert.match(svg,/data-gaze="up-left"/);assert.match(svg,/transform="rotate\(18 57 74\)"/);
  assert.doesNotMatch(svg,/data-part="glasses"/);
  for(const p of [0,.2,.5,.8,1])assert.equal(livianSvgAsento('eyeRub',p).glasses,1);
  assert.equal(livianSvgAsento('eyeRub',0).glassesLift,0);
