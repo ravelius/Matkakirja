@@ -468,3 +468,27 @@ test('uudet tiedostot ovat palvelutyöntekijän SHELLissä ja niputuslistalla', 
   assert.ok(i < modules.indexOf("'js/fokuskohteet.js'"),
     'riippuvuuden on oltava listalla ennen tuojaansa');
 });
+
+test('kortti ei vierity sivusuunnassa', () => {
+  /*
+   * Omistaja 12.9.2026 (iPhone): pystyveto heilutti korttia myös
+   * sivusuunnassa. Juurisyy on css:n oma sääntö — kun toinen akseli on
+   * `auto`, toisen `visible` laskeutuu `auto`:ksi — eli pelkkä
+   * `overflow-y: auto` jättää vaakavierityksen päälle. Kuva mitoitetaan
+   * pikselilleen ja vierityspalkin kaista varataan erikseen, joten
+   * sisältö on ajoittain murto-osapikselin kotelon leveyttä leveämpi, ja
+   * se riittää iOS:n kumitukseen.
+   */
+  const css = lue('css/nostokuva.css');
+  const alku = css.indexOf('.nostokuva-kortti .fokusnosto-sisalto');
+  assert.ok(alku > 0, 'vierittävän kotelon sääntöä ei löytynyt');
+  const lohko = css.slice(alku, css.indexOf('}', alku));
+  assert.ok(lohko.includes('overflow-x: hidden'),
+    'vaaka-akselia ei ole suljettu — pystyveto heiluttaa korttia sivusuunnassa');
+  assert.ok(lohko.includes('touch-action: pan-y'),
+    'ele voi alkaa vaakaliikkeenä ennen kuin selain tietää akselin');
+  assert.ok(lohko.includes('.nostokuva-kortti .fokuskohde-sisalto')
+    || css.slice(alku - 120, alku + 200).includes('.nostokuva-kortti .fokuskohde-sisalto'),
+    'sääntö ei kata molempia vierittäviä koteloita');
+});
+
