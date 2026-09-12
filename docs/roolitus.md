@@ -34,8 +34,13 @@ projektien omistajuutta:
 - **Animaatiovetäjä:** omistaa Pulun perusilmeen, eleet, teknisen ohjaimen,
   synkronoinnin, keskeytykset ja animaation regressio-QA:n. Hän toteuttaa
   tekstivetäjän merkitysohjeet eikä kirjoita tarinaa tai tuota kuvia.
-- **Fable:** omistaa äänituotannon nykyisillä tuotantoluvilla, lopullisen
-  kaanonin tarkistuksen ja integraation, version, CI:n sekä julkaisun.
+  Hän on myös tekninen paketointivastaava: kokoaa hyväksytyt osatoimitukset
+  erilliseen julkaisuehdokashaaraan ja yhteiseen QA:han.
+- **Fable:** lopullinen kaanonin ja julkaisuehdokkaan tarkistus,
+  äänituotantolupien varmistaminen, integraatio, versio, CI ja julkaisu.
+  Tuotantovetäjät valmistelevat ja voimassa olevien lupien sekä työkalujen
+  puitteissa suorittavat ääniajot. Tavoite on yksi valmis yhteispaketti,
+  ei keskeneräisten osatoimitusten kokoaminen Fablen työksi.
 
 Claude-agenttien Opus/Sonnet-raja ja ChatGPT/Codex-sessioiden
 Sol/Terra/Luna-raja pidetään erillään tämän työn rooleista; kumpikaan

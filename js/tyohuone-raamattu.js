@@ -203,9 +203,11 @@ export const RAAMATTU = {
           + 'docs/moduulit/horatio-livia-tuotanto.md. Eurooppa viimeistellään '
           + 'ensin yhteisellä kaupunkiparilla ja sama tarkistettava ketju '
           + 'jatkuu sen jälkeen muiden mantereiden omat kaanonit ja portit '
-          + 'huomioiden. Fable omistaa lopullisen kaanonintegraation, äänen, '
+          + 'huomioiden. Animaatiovetaja kokoaa teknisena paketointivastaavana '
+          + 'yhden yhteistestatun julkaisuehdokkaan. Fable omistaa lopullisen '
+          + 'tarkistuksen, aanituotantolupien varmistamisen, kaanonintegraation, '
           + 'version, CI:n ja julkaisun; valmistunut julkaisu tarkistetaan '
-          + 'vielä oikeassa pelissä.',
+          + 'viela oikeassa pelissa. Paasessio hoitaa Fablen tiedotuksen.',
         'PAAHAHMO ON NIMETON PERILLINEN (omistajan paatos 28.8.2026 '
           + 'ilta, inventaarion jalkeen): pelaajan etunimea ja '
           + 'sukupuolta ei koskaan paljasteta - peli on samaistuttava '
