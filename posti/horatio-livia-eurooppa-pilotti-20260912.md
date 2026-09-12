@@ -1,5 +1,14 @@
 # Horatio–Livia Eurooppa-pilotti — koonti Fablelle 12.9.2026
 
+
+> **PÄIVITYS / EI TOIMENPYYNTÖÄ FABLELLE TÄSTÄ TIEDOSTOSTA.**
+> Tämä on tekstivetäjän osatoimitus, ei yhteinen julkaisuehdokas. Animaatiovetäjä
+> kokoaa tekstit, median, runtimen ja hyväksytyt audio/alignment-artefaktit
+> yhdeksi erilliseksi RC:ksi. Root toimittaa Fablelle vain sen yhteisen paketin.
+> PR #2325:n nykyinen head on `76a7eeff1183b35988761bbf87dbf43bf9fc93b6`;
+> täsmällinen koneellinen ääniaineisto on
+> `docs/raportit/horatio-livia-pilotti-tts-ajopaketti-20260912.json`.
+
 Luonnos-PR: https://github.com/ravelius/Matkakirja/pull/2325  
 Haara: `codex/europe-texts-20260912`  
 Commit: `aa3a61d7b5c422d132f6ef06c1c64dfd521ebcc2`  
