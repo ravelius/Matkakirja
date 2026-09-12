@@ -236,7 +236,7 @@ TTS-ehdokas, Livia:
 | `sarajevo.r3` | Horatio | r1 | `jokaisen jäljen` | 1 | vakavoituu / 0,40 | paino oivallukselle | kuuntelu | normaali | kuuntelee |
 | `sarajevo.r4` | Horatio | r1 | `aamiaiseni astian käsin` | 1 | myötäilee / 0,45 | lämmin loppu | nyökkäys | korkea loppucue | kuuntelee |
 | `sarajevo.livia.c1` | Livia | r1 | `basaarissa yhä` | 1 | selittää / 0,40 | lämmin | hillitty osoitus | normaali | jatkaa |
-| `sarajevo.livia.c2` | Livia | r1 | `oppinut katsomaan` | 1 | miettivä / 0,35 | pohtiva | pieni pään kallistus | normaali | jatkaa |
+| `sarajevo.livia.c2` | Livia | r1 | `oppi katsomaan` | 1 | miettivä / 0,35 | pohtiva | pieni pään kallistus | normaali | jatkaa |
 | `sarajevo.livia.c3` | Livia | r1 | `kuuntelisin vasaraa ennen kahvia` | 1 | lämmin / 0,40 | pehmeä | pysähtyy kuuntelemaan | normaali | lepo |
 
 **Kuvat:** nykyinen I1/I2/P1 toistaa pannua ja kahvia. P2-idea on basaarin

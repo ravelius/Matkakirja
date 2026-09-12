@@ -78,5 +78,13 @@ test('TTS-ajopaketti on sidottu pilotin sanoihin ja tiivisteisiin', () => {
     assert.equal(livia.textDigest, livianTiiviste(livia.visibleText), `${cityId}: Livia tiiviste`);
     assert.equal(livia.ttsTextSha256,
       createHash('sha256').update(livia.ttsText).digest('hex'), `${cityId}: Livia TTS hash`);
+    const cueIds = new Set();
+    for (const cue of livia.cueAnchors) {
+      assert.match(cue.cueId, new RegExp(`^${cityId}\\.livia\\.c\\d+$`), `${cityId}: Livia cueId`);
+      assert.ok(!cueIds.has(cue.cueId), `${cityId}: Livia cueId toistuu`);
+      cueIds.add(cue.cueId);
+      assert.equal(livia.visibleText.split(cue.anchor).length - 1, cue.occurrence,
+        `${cue.cueId}: ankkurin pitää esiintyä täsmälleen sovitun kerran`);
+    }
   }
 });
