@@ -38,9 +38,11 @@ import { laudaltaAsteiksi, projisoiLaudalle } from '../js/fokusmitat.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { NAPAKALOTTI, kalotinKuvapiste } from '../js/pallo.js';
 import {
-  ARKTIS_NAKYY_ASTETTA, ETELAMANNER_NAKYY_ASTETTA, NAPA_ALUEEN_ASTEET,
-  NAPA_ALUEEN_VAHIN_OSUUS, napanostotNakyvat,
+  ALUEEN_VAHIN_OSUUS, ARKTIS_NAKYY_ASTETTA, ELAINTAKY_MAANOSAN_ASTEET,
+  ELAINTAKY_NAKYY_KORKEUS, ETELAMANNER_NAKYY_ASTETTA, NAPA_ALUEEN_ASTEET,
+  alueenMerkitNakyvat,
 } from '../js/pallolauta/nostot.js';
+import { ELAINTAKY_NAKYY_ASTETTA } from '../js/elaintaky.js';
 import { PALLOLAUDAN_LEVEYS } from '../js/pallolauta/kamera.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
@@ -160,29 +162,74 @@ test('pallon nostokerros lukee asteet-kentän eikä lautapistettä', () => {
  * (Chromium 12.9.2026, 390 × 844 ja 1440 × 900 — kummallakin samat,
  * koska kameran pystykulma on kiinteä).
  */
+/** Näkymä laudan yksikköinä annetuista asteista (mitatut luvut alla). */
+const nakyva = (korkeusAst, leveysAst = 1) => ({
+  w: (leveysAst * PALLOLAUDAN_LEVEYS) / 360,
+  h: (korkeusAst * PALLOLAUDAN_LEVEYS) / 360,
+});
+
 test('napa-alueen portti mitataan näkymän korkeudesta eikä leveydestä', () => {
-  const nakyva = (korkeusAst, leveysAst = 1) => ({
-    w: (leveysAst * PALLOLAUDAN_LEVEYS) / 360,
-    h: (korkeusAst * PALLOLAUDAN_LEVEYS) / 360,
-  });
   // Raja on kaistan (60°–90°) osuus näkymän korkeudesta, ei 90 astetta.
   assert.equal(ARKTIS_NAKYY_ASTETTA, ETELAMANNER_NAKYY_ASTETTA);
-  assert.equal(ARKTIS_NAKYY_ASTETTA, NAPA_ALUEEN_ASTEET / NAPA_ALUEEN_VAHIN_OSUUS);
+  assert.equal(ARKTIS_NAKYY_ASTETTA, NAPA_ALUEEN_ASTEET / ALUEEN_VAHIN_OSUUS);
   assert.ok(ARKTIS_NAKYY_ASTETTA < 90, 'vanha 90 asteen raja ei koskaan sulkeutunut puhelimella');
   // Mitatut näkymät: kamerakorkeus 0,2 / 0,37 / 0,6 → merkit näkyvät.
   for (const korkeus of [10.7, 19.8, 32.1]) {
-    assert.equal(napanostotNakyvat(nakyva(korkeus)), true, `korkeus ${korkeus}°`);
+    assert.equal(alueenMerkitNakyvat(nakyva(korkeus), ARKTIS_NAKYY_ASTETTA), true, `korkeus ${korkeus}°`);
   }
   // Koko pallo ruudulla (kamerakorkeus 1,0) ja sitä laajempi: ei merkkejä.
   for (const korkeus of [53.4, 85.5, 133.6]) {
-    assert.equal(napanostotNakyvat(nakyva(korkeus)), false, `korkeus ${korkeus}°`);
+    assert.equal(alueenMerkitNakyvat(nakyva(korkeus), ARKTIS_NAKYY_ASTETTA), false, `korkeus ${korkeus}°`);
   }
   // LEVEYS ei saa avata porttia: puhelimen pystyruudun yleiskuva on
   // kapea (25,8°) mutta korkea (53,4°) — juuri omistajan kuva.
-  assert.equal(napanostotNakyvat(nakyva(53.4, 25.8)), false, 'puhelimen yleiskuva');
+  assert.equal(alueenMerkitNakyvat(nakyva(53.4, 25.8), ARKTIS_NAKYY_ASTETTA), false, 'puhelimen yleiskuva');
   // Tuntematon näkymä on yleiskuva: portti kiinni, ei kaadu.
-  assert.equal(napanostotNakyvat(null), false);
-  assert.equal(napanostotNakyvat({ w: 0, h: 0 }), false);
+  assert.equal(alueenMerkitNakyvat(null, ARKTIS_NAKYY_ASTETTA), false);
+  assert.equal(alueenMerkitNakyvat({ w: 0, h: 0 }, ARKTIS_NAKYY_ASTETTA), false);
+});
+
+/*
+ * ══ VARTIJA: ELÄINTÄKY EI NÄY YLEISKUVASSA PALLOLLA ═══════════════
+ *
+ * Sama vika kuin napa-alueella, eri kerroksessa: js/elaintaky.js:n oma
+ * raja on 90 PITUUSASTETTA, ja pallolla se luettiin näkymän
+ * leveydestä, joka puhelimen pystyruudulla ei yllä 90 asteeseen
+ * millään zoomilla. Saint Helenan tikkuri jäi siksi näkyviin
+ * maailmanyleiskuvaan asti.
+ *
+ * Pallon oma raja on johdettu mittaamalla (ks. nostot.js ELÄINTÄKY:
+ * SAMA ASIA, OMA LUKU PALLOLLE): maanosan (Eurooppa 34,4°
+ * leveysastetta, luettu pack.map.cityMannerista) on täytettävä
+ * vähintään ALUEEN_VAHIN_OSUUS näkymän korkeudesta.
+ */
+test('eläintäyn portti pallolla mitataan korkeudesta ja sulkeutuu yleiskuvassa', () => {
+  assert.equal(ELAINTAKY_NAKYY_KORKEUS, ELAINTAKY_MAANOSAN_ASTEET / ALUEEN_VAHIN_OSUUS);
+  // Tasokartan oma luku jää ennalleen: siellä leveysmittaus on oikein.
+  assert.equal(ELAINTAKY_NAKYY_ASTETTA, 90);
+  assert.ok(ELAINTAKY_NAKYY_KORKEUS < ELAINTAKY_NAKYY_ASTETTA,
+    'pallon raja ei voi olla tasokartan leveysraja: se ei sulkeudu puhelimella');
+  // Mitatut näkymän korkeudet (390 × 844, kamera Euroopan keskellä):
+  // maanosa täyttää ruudun korkeudesta 1,02 (32,1°) ja 0,83 (40,1°).
+  for (const korkeus of [10.7, 19.8, 32.1, 40.1]) {
+    assert.equal(alueenMerkitNakyvat(nakyva(korkeus), ELAINTAKY_NAKYY_KORKEUS), true, `maanosanäkymä ${korkeus}°`);
+  }
+  // Yleiskuvat: maanosa täyttää enää 0,70 (48,1°) ja 0,64 (53,4°).
+  for (const korkeus of [48.1, 53.4, 64.1, 85.5, 133.6]) {
+    assert.equal(alueenMerkitNakyvat(nakyva(korkeus), ELAINTAKY_NAKYY_KORKEUS), false, `yleiskuva ${korkeus}°`);
+  }
+  // Puhelimen kapea yleiskuva (25,8° × 53,4°) on juuri se, jonka vanha
+  // leveysmittaus päästi läpi: portin on pysyttävä kiinni.
+  assert.equal(alueenMerkitNakyvat(nakyva(53.4, 25.8), ELAINTAKY_NAKYY_KORKEUS), false, 'puhelimen yleiskuva');
+});
+
+test('pallon eläintäkyportti ei saa palata leveysmittaukseen', () => {
+  const kerros = lue('../js/pallolauta/nostot.js');
+  assert.match(kerros, /if \(alueenMerkitNakyvat\(nakyva, ELAINTAKY_NAKYY_KORKEUS\) && !liikkuu\) \{/);
+  // Näkymän korkeus (h), ei leveys (w), on portin ainoa lähde.
+  assert.match(kerros, /export function nakymanKorkeusAsteina\(nakyva\) \{\n\s*return nakyva\?\.h > 0/);
+  assert.ok(!kerros.includes('ELAINTAKY_NAKYY_ASTETTA,'),
+    'tasokartan leveysrajaa ei saa tuoda pallon kerrokseen');
 });
 
 test('palvelutyöntekijä tuntee paketin', () => {

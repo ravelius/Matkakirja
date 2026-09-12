@@ -43,7 +43,7 @@ import {
   LEHDEN_VAHIN_OSUUS, avaaFokuskohde, kohdeMerkinLadonta, kohteidenNykyinenIso, maanKohdemerkit,
   maanKohdetiedot, naapurienPoltetutMerkit, suljeFokuskohde,
 } from '../fokuskohteet.js';
-import { ELAINTAKY_NAKYY_ASTETTA, avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
+import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenSiirto } from '../fokuspiste.js';
 import { fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
@@ -113,9 +113,9 @@ export const NOSTOJEN_KATTO = 40;
  * MIKÄ SÄÄNTÖ NYT. Sama ajatus kuin muilla nostoilla: ALUE TÄYTTÄÄ
  * NÄKYMÄN (vrt. LEHDEN_VAHIN_OSUUS). Napa-alueen nostot kattavat
  * leveysastekaistan 60°–90° eli NAPA_ALUEEN_ASTEET astetta, ja portti
- * aukeaa, kun kaista täyttää vähintään NAPA_ALUEEN_VAHIN_OSUUS
- * näkymän korkeudesta — eli kun näkymän korkeus on enintään
- * NAPA_ALUEEN_ASTEET / NAPA_ALUEEN_VAHIN_OSUUS astetta.
+ * aukeaa, kun kaista täyttää vähintään ALUEEN_VAHIN_OSUUS näkymän
+ * korkeudesta — eli kun näkymän korkeus on enintään
+ * NAPA_ALUEEN_ASTEET / ALUEEN_VAHIN_OSUUS astetta.
  *
  * MIKSI OSUUS ON TIUKEMPI KUIN LEHDELLÄ (0,75 eikä 0,5): maan lehti on
  * LAATIKKO keskellä ruutua, napa-alue on YMPYRÄ ruudun laidalla.
@@ -129,15 +129,15 @@ export const NOSTOJEN_KATTO = 40;
  */
 /** Napa-alueen nostojen kattama leveysastekaista (60°–90°). */
 export const NAPA_ALUEEN_ASTEET = 30;
-/** Kuinka suuren osan näkymän korkeudesta kaistan on täytettävä. */
-export const NAPA_ALUEEN_VAHIN_OSUUS = 0.75;
+/** Kuinka suuren osan näkymän korkeudesta alueen on täytettävä. */
+export const ALUEEN_VAHIN_OSUUS = 0.75;
 /**
  * Etelämantereen nostot näkyvät samalla portilla kuin muut nostot:
- * vasta kun alue täyttää vähintään puolet näkymästä, eli kun näkymän
- * KORKEUS on enintään tämän verran asteita. Yleiskuvassa kuusi merkkiä
- * navalla olisi rykelmä eikä kartta.
+ * vasta kun alue täyttää näkymän, eli kun näkymän KORKEUS on enintään
+ * tämän verran asteita. Yleiskuvassa kuusi merkkiä navalla olisi
+ * rykelmä eikä kartta.
  */
-export const ETELAMANNER_NAKYY_ASTETTA = NAPA_ALUEEN_ASTEET / NAPA_ALUEEN_VAHIN_OSUUS;
+export const ETELAMANNER_NAKYY_ASTETTA = NAPA_ALUEEN_ASTEET / ALUEEN_VAHIN_OSUUS;
 /*
  * ══ POHJOISNAPA JA ARKTINEN ALUE: SAMA KAAVA ══════════════════════
  *
@@ -164,10 +164,65 @@ export const ARKTIS_NAKYY_ASTETTA = ETELAMANNER_NAKYY_ASTETTA;
 export function nakymanKorkeusAsteina(nakyva) {
   return nakyva?.h > 0 ? (nakyva.h * 360) / PALLOLAUDAN_LEVEYS : Infinity;
 }
-/** Näkyvätkö napa-alueen nostot tällä näkymällä? */
-export function napanostotNakyvat(nakyva, raja = ARKTIS_NAKYY_ASTETTA) {
+/**
+ * Näkyykö alueen merkkikerros tällä näkymällä: näkymän korkeus enintään
+ * `raja` astetta (ks. NAPA-ALUEEN PORTTI MITATAAN KORKEUDESTA).
+ */
+export function alueenMerkitNakyvat(nakyva, raja) {
   return nakymanKorkeusAsteina(nakyva) <= raja;
 }
+/*
+ * ══ ELÄINTÄKY: SAMA ASIA, OMA LUKU PALLOLLE ═══════════════════════
+ *
+ * Eläintäkymerkkien sääntö on kirjattu js/elaintaky.js:n alkuun
+ * ("MERKKI EI TÄYTÄ YLEISKUVAA"): merkit näkyvät vasta kun MAANOSA
+ * täyttää ruudun, koska yleiskuvassa 53 merkkiä olisi ryteikkö eikä
+ * kartta. Tasokartalla se on mitattu pituusasteina (29.8.2026, 1100 px
+ * leveä ruutu: yleiskuva 349° piilossa, neljä porrasta 70° näkyvissä,
+ * Euroopan lauta 80° näkyvissä) ja raja on ELAINTAKY_NAKYY_ASTETTA 90.
+ *
+ * MIKSI SAMA ASIA MITATAAN PALLOLLA ERI LUVULLA. Tasokartta on litteä
+ * kuva, jota katsotaan suoraan ylhäältä: ruudun leveys ja korkeus
+ * mittaavat samaa mittakaavaa, joten kumpi tahansa kelpaa, ja
+ * js/elaintaky.js:n leveysmittaus on siellä oikein. Pallolla kamera on
+ * perspektiivinen ja sen PYSTYKULMA on kiinteä (fov 50°): näkymän
+ * korkeus asteina riippuu vain kameran korkeudesta, mutta LEVEYS
+ * riippuu myös ruudun kuvasuhteesta. Mitattu 12.9.2026 samalla
+ * kameran korkeudella 1,0 (koko pallo ruudulla): 390 × 844 leveys
+ * 25,8° / korkeus 53,4°, ja 1440 × 900 leveys 92,4° / korkeus 53,4°.
+ * Luku 90 ei siis tarkoita pallolla sitä, mitä se tarkoittaa
+ * tasokartalla — puhelimen pystyruudulla leveys ei yllä siihen
+ * millään zoomilla (uloimmallakin 64,5°), joten portti oli aina auki
+ * ja Saint Helenan tikkuri näkyi maailmanyleiskuvassa asti.
+ *
+ * MISTÄ PALLON LUKU TULEE. Sama johto kuin napa-alueella, samalla
+ * osuudella (ALUEEN_VAHIN_OSUUS): maanosan on täytettävä näkymän
+ * korkeudesta vähintään kolme neljäsosaa. Maanosan korkeus luetaan
+ * PELIN OMASTA aineistosta (pack.map.cityManner, maanosan kaupunkien
+ * leveysastelaatikko) eikä arvata; mitattu 12.9.2026
+ * maailmankartta-paketista:
+ *
+ *     europe 34,4°   asia 68,2°   africa 70,8°   southamerica 66,4°
+ *     northamerica 52,4°   oceania 41,4°   middleeast 28,2°
+ *
+ * Mitta on EUROOPAN 34°, koska Eurooppa on eläintäkyjen tihein
+ * maanosa ja juuri se maanosa, jolla tasokartan raja 29.8.2026
+ * mitattiin — ja koska tiheimmän maanosan ryteikkö on se, jota sääntö
+ * estää. Mitattu pallolla (390 × 844, kamera Euroopan keskellä):
+ * Eurooppa täyttää ruudun korkeuden (1,02) näkymän korkeudella 32,1°
+ * ja vielä 0,83 korkeudella 40,1°; koko pallon yleiskuvassa (53,4°)
+ * enää 0,53. Raja 34 / 0,75 = 45,3° päästää siis läpi maanosanäkymän
+ * ja sulkee yleiskuvan.
+ *
+ * LEVEYTTÄ EI VOI KÄYTTÄÄ PALLOLLA LAINKAAN: Eurooppa on 59,5°
+ * pituusasteita leveä eikä mahdu puhelimen pystyruudulle vaakasuunnassa
+ * millään pelattavalla zoomilla (mitattu: mahtuu vasta korkeudella
+ * 2,5, jolloin koko maapallo on peukalonkynnen kokoinen).
+ */
+/** Maanosan korkeus leveysasteina — Eurooppa, mitattu (ks. yllä). */
+export const ELAINTAKY_MAANOSAN_ASTEET = 34;
+/** Eläintäkymerkit pallolla: näkymän korkeuden yläraja asteina. */
+export const ELAINTAKY_NAKYY_KORKEUS = ELAINTAKY_MAANOSAN_ASTEET / ALUEEN_VAHIN_OSUUS;
 /**
  * Merkin mitta ruudulla: kirjaston yksikkö → px niin, että nimiö on
  * kartan kohdenimiön kokoinen (js/karttanimet.js KOKO.kohde 8,5 px,
@@ -448,9 +503,13 @@ export function luoNostot({
         });
       }
     }
-    // Eläintäyt: koko laudalla, vasta kun näkymä on maanosan levyinen.
-    const asteita = nakyva?.w > 0 ? (nakyva.w * 360) / PALLOLAUDAN_LEVEYS : Infinity;
-    if (asteita <= ELAINTAKY_NAKYY_ASTETTA && !liikkuu) {
+    /*
+     * Eläintäyt: koko laudalla, vasta kun maanosa täyttää ruudun.
+     * PORTTI ON NÄKYMÄN KORKEUS, EI LEVEYS (ks. ELÄINTÄKY: SAMA ASIA,
+     * OMA LUKU PALLOLLE) — tasokartan oma 90 asteen leveysraja jäi
+     * puhelimen pystyruudulla auki joka zoomilla.
+     */
+    if (alueenMerkitNakyvat(nakyva, ELAINTAKY_NAKYY_KORKEUS) && !liikkuu) {
       for (const t of elaintakyLaudalla(ui)) {
         const a = asteet(t);
         if (!a) continue;
@@ -485,13 +544,13 @@ export function luoNostot({
      * MITATAAN KORKEUDESTA): leveys riippuu ruudun kuvasuhteesta, joten
      * leveysportti oli puhelimen pystyruudulla aina auki.
      */
-    if (napanostotNakyvat(nakyva, ETELAMANNER_NAKYY_ASTETTA) && !liikkuu) {
+    if (alueenMerkitNakyvat(nakyva, ETELAMANNER_NAKYY_ASTETTA) && !liikkuu) {
       for (const kohde of MAASTOKOHTEET_ATA) {
         const rivi = napanostonRivi(ui, kohde, { avain: `ata:${kohde.id}` });
         if (rivi) rivit.push(rivi);
       }
     }
-    if (napanostotNakyvat(nakyva, ARKTIS_NAKYY_ASTETTA) && !liikkuu) {
+    if (alueenMerkitNakyvat(nakyva, ARKTIS_NAKYY_ASTETTA) && !liikkuu) {
       for (const kohde of MAASTOKOHTEET_ARK) {
         const rivi = napanostonRivi(ui, kohde, { avain: `ark:${kohde.id}` });
         if (rivi) rivit.push(rivi);
