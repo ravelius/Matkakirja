@@ -167,17 +167,36 @@ const laheta = (cdp, viesti) => Promise.race([
   new Promise((ok) => { setTimeout(ok, 700); }),
 ]);
 
+/*
+ * ELEEN KELLO TULEE MEILTÄ, EI KONTIN KELLOSTA (mitattu 12.9.2026).
+ *
+ * Kontti renderöi SwiftShaderilla 2–3 fps, ja yksi
+ * `Input.dispatchTouchEvent` kuittaantuu vasta ~0,8 s kuluttua. Ilman
+ * omaa aikaleimaa napautuksen touchStart ja touchEnd saivat siis
+ * lähes sekunnin välin, ja peli luki eleen aivan oikein PITKÄKSI
+ * PAINALLUKSEKSI (js/ui-apurit.js NAPAUTUKSEN_KESTO_MS = 700) — kortti
+ * ei sulkeutunut, vaikka oikealla laitteella napautus kestää 60–120 ms.
+ * CDP:n `timestamp` (sekunteja epookista) päätyy tapahtuman
+ * timeStampiin, joten ele saa täällä saman keston kuin sormella.
+ */
+const CDP_ALKU = Date.now() / 1000;
+const hetki = (ms) => CDP_ALKU + ms / 1000;
+
 /** Pystyveto: kosketuksella CDP:llä, työpöydällä hiirellä. */
 async function veto(sivu, cdp, x, y, dy, { askeleet = 8, kesto = 30 } = {}) {
   if (cdp) {
-    await laheta(cdp, { type: 'touchStart', touchPoints: [{ x, y }] });
+    let ms = (Date.now() / 1000 - CDP_ALKU) * 1000;
+    await laheta(cdp, { type: 'touchStart', touchPoints: [{ x, y }], timestamp: hetki(ms) });
     for (let i = 1; i <= askeleet; i += 1) {
+      ms += kesto;
       await laheta(cdp, {
-        type: 'touchMove', touchPoints: [{ x, y: y + Math.round((dy * i) / askeleet) }],
+        type: 'touchMove',
+        touchPoints: [{ x, y: y + Math.round((dy * i) / askeleet) }],
+        timestamp: hetki(ms),
       });
       await new Promise((ok) => { setTimeout(ok, kesto); });
     }
-    await laheta(cdp, { type: 'touchEnd', touchPoints: [] });
+    await laheta(cdp, { type: 'touchEnd', touchPoints: [], timestamp: hetki(ms + kesto) });
   } else {
     await sivu.mouse.move(x, y);
     await sivu.mouse.down();
@@ -193,9 +212,10 @@ async function veto(sivu, cdp, x, y, dy, { askeleet = 8, kesto = 30 } = {}) {
 /** Lyhyt napautus: sama piste, sormi ylös heti. */
 async function napautus(sivu, cdp, x, y) {
   if (cdp) {
-    await laheta(cdp, { type: 'touchStart', touchPoints: [{ x, y }] });
-    await new Promise((ok) => { setTimeout(ok, 60); });
-    await laheta(cdp, { type: 'touchEnd', touchPoints: [] });
+    // Napautus on 60 ms pitkä — ELEEN omassa ajassa, ei kontin (ks. hetki).
+    const ms = (Date.now() / 1000 - CDP_ALKU) * 1000;
+    await laheta(cdp, { type: 'touchStart', touchPoints: [{ x, y }], timestamp: hetki(ms) });
+    await laheta(cdp, { type: 'touchEnd', touchPoints: [], timestamp: hetki(ms + 60) });
   } else {
     await sivu.mouse.click(x, y);
   }
@@ -228,30 +248,46 @@ const tila = (sivu) => sivu.evaluate((valitsin) => {
   };
 }, KORTIT);
 
-/** Kortin ULKOPUOLINEN piste, jonka osuma ei ole kortissa. */
-const ulkoPiste = (sivu) => sivu.evaluate((valitsin) => {
+/**
+ * Kortin ULKOPUOLINEN KARTTAPISTE, jonka osuma ei ole kortissa.
+ *
+ * KOSKETUKSEN OIKAISU ON OTETTAVA HUOMIOON (mitattu 12.9.2026): Chromium
+ * napsauttaa mobiilinäkymässä kosketuksen lähimpään napautettavaan
+ * kohteeseen parinkymmenen pikselin säteellä, joten kortin reunasta 6 px
+ * päässä oleva "ulkopuoli" osuikin korttiin — ja koe mittasi aivan muuta
+ * kuin luuli. Piste otetaan siksi vähintään KOSKETUSVARAn päästä kortin
+ * laatikosta ja sen on oltava kartalla (`#board`), joka on se pinta,
+ * josta omistajan sääntö 31.8.2026 puhuu. Jos kortti peittää koko
+ * kartan, pistettä ei ole — silloin kortista poistutaan ruksista, eikä
+ * tätä koetta voi tehdä.
+ */
+const KOSKETUSVARA = 24;
+const ulkoPiste = (sivu) => sivu.evaluate(([valitsin, vara]) => {
   const kortti = document.querySelector(valitsin);
   if (!kortti) return null;
   const r = kortti.getBoundingClientRect();
   const W = window.innerWidth;
   const H = window.innerHeight;
+  const kaukana = (p) => p.x < r.left - vara || p.x > r.right + vara
+    || p.y < r.top - vara || p.y > r.bottom + vara;
   const ehdokkaat = [
-    { x: Math.round(r.left + r.width / 2), y: Math.round(r.bottom + 30) },
-    { x: Math.round(r.left + r.width / 2), y: Math.round(r.top - 30) },
+    { x: Math.round(r.left + r.width / 2), y: Math.round(r.bottom + vara + 10) },
+    { x: Math.round(r.left + r.width / 2), y: Math.round(r.top - vara - 10) },
     { x: Math.round(r.left / 2), y: Math.round(r.top + r.height / 2) },
     { x: Math.round((r.right + W) / 2), y: Math.round(r.top + r.height / 2) },
     { x: Math.round(W / 2), y: H - 20 },
   ];
   for (const p of ehdokkaat) {
     if (p.x < 4 || p.y < 60 || p.x > W - 4 || p.y > H - 4) continue;
+    if (!kaukana(p)) continue;
     const e = document.elementFromPoint(p.x, p.y);
     if (!e || kortti.contains(e)) continue;
     // Pöllö ja suurennos ovat kortin työpareja, eivät "ulkopuolta".
     if (e.closest('.pollo-nappi, .pollo-paneeli, .fokuskohde-zoom')) continue;
-    return { ...p, nimi: e.nodeName };
+    return { ...p, nimi: e.nodeName, kartalla: Boolean(e.closest('#board')) };
   }
   return null;
-}, KORTIT);
+}, [KORTIT, KOSKETUSVARA]);
 
 /**
  * Kuvan, ylärivin, otsikon ja leipätekstin keskipisteet kortilta.
@@ -390,6 +426,10 @@ for (const n of NAKYMAT) {
 
     // eslint-disable-next-line no-await-in-loop
     const piste = (await tila(sivu)).auki ? await ulkoPiste(sivu) : null;
+    if (!piste) {
+      tieto(`${n.nimi} / ${korttinimi} / napautus`,
+        'kortti peittää kartan — ulkopuolista karttapistettä ei ole (sulku on ruksista)');
+    }
     if (piste) {
       // eslint-disable-next-line no-await-in-loop
       await napautus(sivu, cdp, piste.x, piste.y);
