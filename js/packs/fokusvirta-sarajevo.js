@@ -202,12 +202,14 @@ export const FOKUSVIRTA_SARAJEVO = {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä; '
       + 'puntari korkealla.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 328 merkkiä (yläraja 400). */
+    /* TEKSTIPILOTTI 12.9.2026: kuusi virkettä tiivistetty viiteen.
+     * Kuparisepän työ, Horation havahtuminen ja lämmin loppu säilyvät.
+     * Uusi luenta ja aikaleimat vaaditaan ennen julkaisua. */
     teksti: 'Sarajevon kupariseppä naputti pannuun kuvioita niin pienellä '
       + 'vasaralla, että olisin hukannut sen liivintaskuun. Viereisessä '
-      + 'puodissa kaadettiin kahvia samanlaiseen pannuun. Olin juonut siitä '
-      + 'aamulla katsomatta. Nyt näin jokaisen jäljen. Basaarin kujilla kuului '
-      + 'kilkutusta kaikkialta. Kaupunki oli tehnyt aamiaiseni astian käsin.',
+      + 'puodissa kaadettiin kahvia samanlaiseen pannuun, josta olin aamulla '
+      + 'juonut katsomatta. Nyt näin jokaisen jäljen. Basaarin kilkutus kuului '
+      + 'kaikkialla. Kaupunki oli tehnyt aamiaiseni astian käsin.',
     /* Kaanon, kohta 1 — luenta ja äänitteen polku sellaisinaan. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -219,25 +221,26 @@ export const FOKUSVIRTA_SARAJEVO = {
      * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
      * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
      * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
-     * Hiljaiset osuudet: "Viereisessä puodissa kaadettiin kahvia" ja
-     * "Basaarin kujilla kuului kilkutusta" (taustahavainnot).
+     * Hiljainen osuus: basaarin kilkutus jää taustahavainnoksi ilman
+     * omaa lisäreaktiota.
      */
     reaktiot: [
       { id: 'sarajevo.r1', ankkuri: 'hukannut sen liivintaskuun', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Naurettavan pieni vasara on merkinnän vitsi.' },
-      { id: 'sarajevo.r2', ankkuri: 'aamulla katsomatta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
+      { id: 'sarajevo.r2', ankkuri: 'aamulla juonut katsomatta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
         perustelu: 'Isoisä huomaa ohittaneensa työn.' },
       { id: 'sarajevo.r3', ankkuri: 'jokaisen jäljen', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Katse tarkentuu: hetki vakavoituu.' },
       { id: 'sarajevo.r4', ankkuri: 'aamiaiseni astian käsin', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Hiljainen kunnianosoitus käsityölle.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
     luenta: '[curious] Sarajevon kupariseppä naputti pannuun kuvioita niin '
       + 'pienellä vasaralla, että olisin hukannut sen liivintaskuun. '
-      + 'Viereisessä puodissa kaadettiin kahvia samanlaiseen pannuun. Olin '
-      + 'juonut siitä aamulla katsomatta. Nyt näin jokaisen jäljen. Basaarin '
-      + 'kujilla kuului kilkutusta kaikkialta. [softly] Kaupunki oli tehnyt '
+      + 'Viereisessä puodissa kaadettiin kahvia samanlaiseen pannuun, josta '
+      + 'olin aamulla juonut katsomatta. Nyt näin jokaisen jäljen. Basaarin '
+      + 'kilkutus kuului kaikkialla. [softly] Kaupunki oli tehnyt '
       + 'aamiaiseni astian käsin.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sarajevo.mp3',
     /*
@@ -343,9 +346,9 @@ export const FOKUSVIRTA_SARAJEVO = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* TEKSTIPILOTTI 12.9.2026: yksi sisältöön sidottu virke lisää. */
     kommentti: [
-      'Kupariseppiä on basaarissa yhä, ja kahvi tulee pienessä pannussa. Isoisä oppi katsomaan kuppiaan. Hyvä alku.',
+      'Kupariseppiä on basaarissa yhä. Isoisä oppi katsomaan kuppiaan. Minä kuuntelisin vasaraa ennen kahvia. Hyvä alku.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

@@ -748,7 +748,10 @@ test('uusi moduuli on niputus- ja esilatauslistoilla', () => {
   const build = lue('../tools/build-standalone.mjs');
   const sw = lue('../sw.js');
   assert.ok(build.includes("'js/liviapuhe.js'"), 'js/liviapuhe.js puuttuu MODULES-listalta');
+  assert.ok(build.includes("'js/livia-puheleet.js'"), 'js/livia-puheleet.js puuttuu MODULES-listalta');
   assert.ok(sw.includes("'./js/liviapuhe.js'"), 'js/liviapuhe.js puuttuu sw.js:n SHELL-listalta');
+  assert.ok(sw.includes("'./js/livia-puheleet.js'"), 'js/livia-puheleet.js puuttuu sw.js:n SHELL-listalta');
+  assert.ok(build.indexOf("'js/livia-puheleet.js'") < build.indexOf("'js/liviapuhe.js'"));
   // Riippuvuus ennen tuojaansa: liviapuhe ennen liviaa.
   assert.ok(build.indexOf("'js/liviapuhe.js'") < build.indexOf("'js/livia.js'"));
 });

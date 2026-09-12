@@ -118,13 +118,16 @@ export const FOKUSVIRTA_ATEENA = {
      * kullan") on kokonaan korvattu, ei muokattu.
      */
     paikkarivi: 'Ateena, heinäkuussa 1873. Seesteistä; ilmanpuntari korkealla.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
+    /* TEKSTIPILOTTI 12.9.2026: omistajan 9.9. hyväksymä merkintä
+     * tiivistetty kuudesta virkkeestä neljään. Faktat, aikataso,
+     * Akropolis ja kolikkoon päättyvä isku säilyvät. Uusi luenta ja
+     * aikaleimat vaaditaan ennen julkaisua. */
     teksti: 'Ateenassa puhuttiin Troijasta löydetystä kullasta kuin jokainen '
       + 'olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia nerona, '
-      + 'asiakas varkaana. Kummallakaan ei ollut kultaa näyttää. Akropoliin '
-      + 'pylväät kohosivat pölyn takaa; ne eivät tarvinneet enää mainosta. '
-      + 'Kaivoin taskustani kolikon kahvia varten. Sen alkuperästä isäntä ei '
-      + 'kysynyt mitään.',
+      + 'asiakas varkaana, vaikkei kummallakaan ollut kultaa näyttää. '
+      + 'Akropoliin pylväät kohosivat pölyn takaa eivätkä tarvinneet '
+      + 'mainosta. Kaivoin taskustani kolikon kahvia varten; sen alkuperästä '
+      + 'isäntä ei kysynyt.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia.
      *
@@ -154,22 +157,21 @@ export const FOKUSVIRTA_ATEENA = {
     reaktiot: [
       { id: 'ateena.r1', ankkuri: 'kuin jokainen olisi ollut kaivamassa', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Kaupunkilaiset puhuvat kuin omasta työstään: pulu epäilee.' },
-      { id: 'ateena.r2', ankkuri: 'nerona, asiakas varkaana', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Sama mies on kahdelle kuulijalle kaksi eri ihmistä.' },
-      { id: 'ateena.r3', ankkuri: 'Kummallakaan ei ollut kultaa', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'ateena.r3', ankkuri: 'kummallakaan ollut kultaa näyttää', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Kiistan molemmat osapuolet ovat yhtä tyhjän päällä.' },
-      { id: 'ateena.r4', ankkuri: 'eivät tarvinneet enää mainosta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
+      { id: 'ateena.r4', ankkuri: 'eivätkä tarvinneet mainosta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
         perustelu: 'Akropolis vaikenee puheen yllä: hetki hiljenee.' },
-      { id: 'ateena.r5', ankkuri: 'isäntä ei kysynyt mitään', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+      { id: 'ateena.r5', ankkuri: 'isäntä ei kysynyt', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
         perustelu: 'Loppuvitsi: isoisän oman kolikon alkuperä jää kysymättä.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
     luenta: '[curious] Ateenassa puhuttiin Troijasta löydetystä kullasta kuin '
       + 'jokainen olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia '
-      + 'nerona, asiakas varkaana. Kummallakaan ei ollut kultaa näyttää. '
-      + 'Akropoliin pylväät kohosivat pölyn takaa; ne eivät tarvinneet enää '
-      + 'mainosta. Kaivoin taskustani kolikon kahvia varten. [softly] Sen '
-      + 'alkuperästä isäntä ei kysynyt mitään.',
+      + 'nerona, asiakas varkaana, vaikkei kummallakaan ollut kultaa näyttää. '
+      + 'Akropoliin pylväät kohosivat pölyn takaa eivätkä tarvinneet '
+      + 'mainosta. Kaivoin taskustani kolikon kahvia varten; [softly] sen '
+      + 'alkuperästä isäntä ei kysynyt.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-ateena.mp3',
     /*
      * Fablen päätös 4: Sophia Schliemann koruineen. Commonsin
@@ -246,9 +248,9 @@ export const FOKUSVIRTA_ATEENA = {
      * js/fokusvirta.js SAAPUMISKUPLA_VAITI on tyhjä joukko, joten tämä
      * kupla näkyy samalla tavalla kuin muissa kaupungeissa.
      */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* TEKSTIPILOTTI 12.9.2026: nykyhavainto ja Pulun oma valinta. */
     kommentti: [
-      'Schliemannin myöhempi talo on nyt rahamuseo. Isoisä etsi aarretta; minä tarkistan ensin kahvilan pihan.',
+      'Schliemannin talo on nyt rahamuseo. Puutarhakahvilassa kolikot tekevät taas tavallista työtään. Minä tarkistan ensin varjon.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

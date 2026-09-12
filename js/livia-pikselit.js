@@ -19,7 +19,7 @@ const lprest=LIVIA_PIX_RUUDUT.rest;
 
 // Kesto sisältää tauot. Vain suuntakohtaiset tulo-/poistumisklipit eivät pääty lepoon.
 export const LIVIA_PIX_ELEET=Object.freeze([
- ['blink','Räpäytys',1500,'Pieni ele'],['glance','Mulkoilu',2300,'Pieni ele'],
+ ['blink','Rauhallinen kaksoisräpäytys',1600,'Pieni ele'],['glance','Sivusilmäys',2300,'Pieni ele'],
  ['turn','Pään kääntö',3000,'Pää'],['lookRight','Katse oikealle',2200,'Pää'],['lookUp','Katse ylös',2400,'Pää'],['lookDown','Katse alas',2200,'Pää'],['tilt','Mitä ihmettä?',2400,'Pää'],['nod','Kyllä kyllä',1800,'Pää'],['shake','Ei todellakaan',2100,'Pää'],['doubleTake','Hetkinen!',2600,'Pää'],
  ['shock','Kääk!',2400,'Ilme'],['embarrassed','Nolostuminen',3200,'Ilme'],['angry','Tuohtuminen',2800,'Ilme'],['bored','Kyllästyminen',3600,'Ilme'],['puff','Pieruposket',3100,'Ilme'],['manic','Maaninen pullan tuijotus',3300,'Ilme'],['expert','Arvokas tietäjä',3200,'Ilme'],['disbelief','Ei voi olla',3300,'Ilme'],['confused','Häh?',2800,'Ilme'],['happy','Vahingonilo',2500,'Ilme'],['love','Ihastus',3800,'Ilme'],['facepalm','Voi minua',3000,'Ilme'],
  ['talk','Puhe',1500,'Puhe'],['listen','Kuuntelen',2600,'Puhe'],['think','Ajatus jumissa',3400,'Puhe'],['reading','Pienellä painettu',3200,'Puhe'],
@@ -35,7 +35,7 @@ export function livianPikseliAsento(id,p=0) {
  const tulot=['arrive','crash','emerge','handoff','flyBack','clumsyLand','glassCrash','walkBack'],poistumiset=['leaveRight','leaveDown','flyAway','walkRight'];
  if(p===0&&!tulot.includes(id)||p===1&&!poistumiset.includes(id))return s;
  const seq=(stops)=>{s.frame=lpStep(p,[[0,'rest'],...stops,[.94,'rest']]);};
- if(id==='blink')seq([[.30,'blink'],[.43,'rest']]);
+ if(id==='blink')seq([[.28,'blink'],[.36,'rest'],[.52,'blink'],[.59,'rest']]);
  if(id==='glance')seq([[.15,'glance'],[.67,'blink'],[.74,'rest']]);
  if(id==='turn')seq([[.12,'front'],[.25,'left'],[.51,'front'],[.67,'right'],[.81,'front']]);
  if(id==='lookRight')seq([[.13,'front'],[.26,'right'],[.70,'front']]);

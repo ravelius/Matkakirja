@@ -181,13 +181,14 @@ export const FOKUSVIRTA_MARSEILLE = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Marseille, syyskuussa 1873. Mistral puhaltaa; puntari '
       + 'putoaa.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
+    /* TEKSTIPILOTTI 12.9.2026: kuusi virkettä tiivistetty viiteen.
+     * Satamatyön syy, hajut ja loppuisku säilyvät. Uusi luenta ja
+     * aikaleimat vaaditaan ennen julkaisua. */
     teksti: 'Marseillen satamassa myytiin saippuaa tiiliskivinä. Kauppias '
-      + 'vakuutti, että niillä pesisi vaikka koko maailman. Hänen kyntensä '
-      + 'olivat mustat, sillä hän oli juuri auttanut laivan köysissä. Ostin '
-      + 'palan. Terva, kala ja suolavesi seurasivat minua majataloon. Maailma '
-      + 'ei suostunut pesuun yhdellä yrittämällä, mutta käteni olivat jo '
-      + 'toista mieltä.',
+      + 'vakuutti, että niillä pesisi koko maailman. Hänen kyntensä olivat '
+      + 'mustat: hän oli auttanut laivan köysissä. Ostin palan, mutta terva, '
+      + 'kala ja suolavesi seurasivat majataloon. Maailma ei suostunut pesuun '
+      + 'yhdellä yrittämällä; käteni olivat jo toista mieltä.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -200,35 +201,32 @@ export const FOKUSVIRTA_MARSEILLE = {
      * äänitteen sanakohtaisista aikaleimoista (forced alignment), ei
      * merkkimäärästä. Tarkoitus: myotailee | epailee | torjuu | huvittuu |
      * hammastyy | vakavoituu. siirtyma = ms ankkurin viimeisen sanan
-     * lopusta. Hiljaiset osuudet: "sillä hän oli juuri auttanut laivan
-     * köysissä" (selitys, pulu kuuntelee).
+     * lopusta. Hiljainen osuus: köysityön syy kuunnellaan ilman omaa
+     * lisäreaktiota.
      */
     reaktiot: [
       { id: 'marseille.r1', ankkuri: 'saippuaa tiiliskivinä', tarkoitus: 'huvittuu', voimakkuus: 0.35, siirtyma: 0,
         perustelu: 'Saippua tiilinä on ensimmäinen pieni hymy, ei vielä nauru.' },
-      { id: 'marseille.r2', ankkuri: 'pesisi vaikka koko maailman', tarkoitus: 'epailee', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kauppiaan ylisana: pulu pudistaa päätään.' },
+      { id: 'marseille.r2', ankkuri: 'pesisi koko maailman', tarkoitus: 'epailee', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Kauppiaan ylisana: pulu epäilee lempeästi.' },
       { id: 'marseille.r3', ankkuri: 'kyntensä olivat mustat', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Ristiriita: saippuakauppiaan mustat kynnet.' },
-      { id: 'marseille.r4', ankkuri: 'Ostin palan.', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
-        perustelu: 'Lyhyt päätös, pieni nyökkäys.' },
-      { id: 'marseille.r5', ankkuri: 'Terva, kala ja suolavesi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'marseille.r5', ankkuri: 'terva, kala ja suolavesi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Hajuluettelo seuraa majataloon: pulu huvittuu.' },
       { id: 'marseille.r6', ankkuri: 'käteni olivat jo toista mieltä', tarkoitus: 'huvittuu', voimakkuus: 0.6, siirtyma: 0,
         /*
-         * Siirtymä 0, ei 120: viimeinen sana loppuu 29 239 ms ja äänite
-         * 29 280 ms, joten +120 ms olisi tiedoston lopun jälkeen
-         * (tekstisession mittaus 11.9.2026). Nauru saa silti valmistua
-         * äänitteen loputtua: luonnollisen lopun sääntö, docs/pulu-reaktiot.md.
+         * Siirtymä pysyy sisällössä nollana. Lopullinen hetki ja mahdollinen
+         * jälkireaktio ratkaistaan vasta uuden äänitteen kohdistuksesta.
          */
         perustelu: 'Loppuvitsi: nauru merkinnän päätteeksi.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
     luenta: '[curious] Marseillen satamassa myytiin saippuaa tiiliskivinä. '
-      + 'Kauppias vakuutti, että niillä pesisi vaikka koko maailman. Hänen '
-      + 'kyntensä olivat mustat, sillä hän oli juuri auttanut laivan köysissä. '
-      + 'Ostin palan. Terva, kala ja suolavesi seurasivat minua majataloon. '
-      + '[softly] Maailma ei suostunut pesuun yhdellä yrittämällä, mutta '
+      + 'Kauppias vakuutti, että niillä pesisi koko maailman. Hänen kyntensä '
+      + 'olivat mustat: hän oli auttanut laivan köysissä. Ostin palan, mutta '
+      + 'terva, kala ja suolavesi seurasivat majataloon. [softly] Maailma ei '
+      + 'suostunut pesuun yhdellä yrittämällä; '
       + 'käteni olivat jo toista mieltä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
     /*
@@ -293,11 +291,30 @@ export const FOKUSVIRTA_MARSEILLE = {
           'https://woody.cloudly.space/app/uploads/crt-paca/2021/06/thumbs/esplanade-vieux-port-marseille-exclu-mm-otcm-1920x960.jpg',
         ],
       },
+      {
+        /*
+         * PULUCAM P2 (eu-hl-pilot-20260912-r1, toimitus 12.9.2026).
+         * Mediareadback: 200, image/jpeg, 1536x1024, sRGB, full decode,
+         * CORS https://matkakirja.app. SHA-256:
+         * 5218c67d5b3868d83854107900a88da7acd1597efc8d035a52401255daf52464.
+         */
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/20260912/pulu-cam-marseille-02-v2-5218c67d5b38.jpg',
+        lyhyt: 'Marseille: veneiden vaaleat vanat halkovat Vieux-Portin sinistä väylää.',
+        selite: 'Veneiden perään jää vaaleita vanoja Vieux-Portin tummalle vedelle. '
+          + 'Ilmasta näkyy, kuinka pitkä satama-allas ulottuu keskelle Marseillea.',
+        lahde: 'Matkakirjan havainnekuva; OpenAI. Maantieteellinen lähdevalokuva: '
+          + 'Olivier Cleynen / Wikimedia Commons, CC BY-SA 4.0. Uusi generoitu '
+          + 'näkymä ja kuvitteellinen veneiden kulkuhetki.',
+        lahteet: [
+          'https://commons.wikimedia.org/wiki/File:Aerial_view_of_Marseille_04.jpg',
+          'https://www.marseille-tourisme.com/decouvrez-marseille/culture-et-patrimoine/sites-et-monuments/le-vieux-port/',
+        ],
+      },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* TEKSTIPILOTTI 12.9.2026: yksi sisältöön sidottu virke lisää. */
     kommentti: [
-      'Marseillen saippuaa tehdään yhä. Sataman lokit eivät ole kuulleetkaan puhtaasta pöydästä.',
+      'Marseillen saippuaa tehdään yhä. Lokit eivät tunne puhdasta pöytää. Minä erotan sataman jo äänestä ja suolasta höyhenissä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

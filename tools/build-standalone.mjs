@@ -482,6 +482,8 @@ const MODULES = [
    */
   'js/livia-puhetila.js',
   'js/livia-tilanteet.js',
+  'js/livia-pilotti-cuet.js',
+  'js/livia-puheleet.js',
   'js/livia-lehtireaktiot.js',
   'js/puhe.js',
   'js/kehittajan-voimat.js',
@@ -625,6 +627,9 @@ const MODULES = [
    */
   'js/lausejako.js',
   'js/luentareaktiot.js',
+  // Livian pilottieleiden loader käyttää luentareaktioiden SHA-apuria;
+  // muut riippuvuudet (media, cue-lähde, puhe-eleohjain) ovat jo yllä.
+  'js/livia-puheeleet-lataus.js',
   // M6: luenta ennen visaa (visa tuo kertojafunktiot).
   'js/luenta.js',
   /*
