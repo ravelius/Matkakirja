@@ -63,6 +63,15 @@
 export const MAASTOKOHTEET_EST = [
   {
     id: 'suurmunamagi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/est-maasto-suurmunamagi-0db7b30f17c6.jpg',
+      lyhyt: 'Suur Munamäen metsäinen laki ja näkötorni.',
+      selite: 'Suur Munamägi kohoaa Haanjan ylängöllä 318 metriin ja on Viron sekä koko Baltian korkein kohta.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://visitestonia.com/en/suur-munamagi',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Suur Munamägi',
     tyyppi: 'vuori',
     kysymykset: [
@@ -84,6 +93,15 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'itameri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/est-maasto-itameri-8c87cd382f39.jpg',
+      lyhyt: 'Itämeren murtovedessä säilynyt puuhylky.',
+      selite: 'Itämeren kylmässä murtovedessä puuhylyt voivat säilyä poikkeuksellisen hyvin, koska laivamato ei viihdy vähäsuolaisessa vedessä.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://www.helcom.fi/baltic-sea-trends/environment-fact-sheets/maritime-activities/underwater-cultural-heritage/',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Itämeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -113,6 +131,15 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'suomenlahti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/est-maasto-suomenlahti-ae72a2574132.jpg',
+      lyhyt: 'Aava Suomenlahti veneen keulasta nähtynä.',
+      selite: 'Suomenlahti on matala Itämeren itäinen haara Suomen ja Viron välissä; sen rannoilla sijaitsevat Helsinki, Tallinna ja Pietari.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://www.helcom.fi/baltic-sea-trends/environment-fact-sheets/',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Suomenlahti',
     tyyppi: 'meri',
     kysymykset: [
@@ -144,6 +171,15 @@ export const MAASTOKOHTEET_EST = [
    * ============================================================== */
   {
     id: 'tartu-ulikool',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/est-kohde-tartu-ulikool-09e4f04bb3d5.jpg',
+      lyhyt: 'Academia Gustavianan avajaiset Tartossa vuonna 1632.',
+      selite: 'Kustaa II Aadolf perusti Academia Dorpatensiksen vuonna 1632; yliopisto aloitti neljän tiedekunnan akatemiana Ruotsin valtakunnassa.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://ut.ee/en/content/history-university-tartu',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Tartun yliopisto',
     nimio: 'Tartu',
     tyyppi: 'sana',
@@ -181,6 +217,15 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'narvan-linnus',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/est-kohde-narvan-linnus-d83001009ce7.jpg',
+      lyhyt: 'Hermannin linna ja Ivangorod Narvajoen vastarannoilla.',
+      selite: 'Narvan Hermannin linna ja vuonna 1492 perustettu Ivangorodin linnoitus vartioivat vastakkaisia rantoja kapean Narvajoen yllä.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://narvamuuseum.ee/eng/narva-castle/',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Narvan linnus',
     nimio: 'Narva',
     tyyppi: 'historia',
