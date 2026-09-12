@@ -53,8 +53,8 @@ peräkkäin. R2 ei korvaa aiempaa r1-luonnosta, joka säilyy tiedostossa
 - Tuntuuko Livia elävältä omalta hahmoltaan eikä vain faktan kuittaajalta?
 - Onko Horatio–Livia-parin painotus kaupungille oikea: Marseille ja Ateena
   ovat Horation hallitsemia, Sarajevo ja Venetsia antavat Livialle enemmän tilaa?
-- Saako tämä sisältörevisio siirtyä tekniseen RC:hen ja rajattuun neljän
-  kaupungin ääniajoon?
+- Hyväksytäänkö sanat jatkotyöhön vai tarvitaanko muutoksia?
 
 Lopulliset sekunnit mitataan vasta hyväksytystä äänestä. Tässä vaiheessa ei
-ole tehty maksullisia TTS- tai forced-alignment-kutsuja.
+ole tehty maksullisia TTS- tai forced-alignment-kutsuja. Maksullinen
+äänigenerointi vaatii tämän lukupäätöksen jälkeen erillisen luvan.

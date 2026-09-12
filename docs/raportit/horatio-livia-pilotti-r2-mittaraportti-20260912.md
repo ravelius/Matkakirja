@@ -19,12 +19,12 @@ alignmentista.
 
 | Kaupunki | Lähtö Horatio | Lähtö Livia | Lähtö pari | r2 Horatio | r2 Livia | r2 pari | Muutos |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Marseille | 341 m / 45 s / ~24,4 s | 89 m / 11 s / ~6,4 s | 430 m / 56 s / ~30,7 s | 252 m / 31 s / ~18,0 s | 149 m / 19 s / ~10,6 s | 401 m / 50 s / ~28,6 s | −29 m / −6 s / −6,7 % merkeistä |
-| Ateena | 346 m / 43 s / ~24,7 s | 103 m / 14 s / ~7,4 s | 449 m / 57 s / ~32,1 s | 261 m / 32 s / ~18,6 s | 152 m / 21 s / ~10,9 s | 413 m / 53 s / ~29,5 s | −36 m / −4 s / −8,0 % merkeistä |
-| Sarajevo | 328 m / 39 s / ~23,4 s | 108 m / 15 s / ~7,7 s | 436 m / 54 s / ~31,1 s | 238 m / 27 s / ~17,0 s | 177 m / 25 s / ~12,6 s | 415 m / 52 s / ~29,6 s | −21 m / −2 s / −4,8 % merkeistä |
-| Venetsia | 348 m / 45 s / ~24,9 s | 106 m / 14 s / ~7,6 s | 454 m / 59 s / ~32,4 s | 227 m / 28 s / ~16,2 s | 215 m / 30 s / ~15,4 s | 442 m / 58 s / ~31,6 s | −12 m / −1 s / −2,6 % merkeistä |
+| Marseille | 341 m / 45 sanaa / ~24,4 s | 89 m / 11 sanaa / ~6,4 s | 430 m / 56 sanaa / ~30,7 s | 252 m / 31 sanaa / ~18,0 s | 149 m / 19 sanaa / ~10,6 s | 401 m / 50 sanaa / ~28,6 s | −29 m / −6 sanaa / −6,7 % merkeistä |
+| Ateena | 346 m / 43 sanaa / ~24,7 s | 103 m / 14 sanaa / ~7,4 s | 449 m / 57 sanaa / ~32,1 s | 261 m / 32 sanaa / ~18,6 s | 152 m / 21 sanaa / ~10,9 s | 413 m / 53 sanaa / ~29,5 s | −36 m / −4 sanaa / −8,0 % merkeistä |
+| Sarajevo | 328 m / 39 sanaa / ~23,4 s | 108 m / 15 sanaa / ~7,7 s | 436 m / 54 sanaa / ~31,1 s | 238 m / 27 sanaa / ~17,0 s | 177 m / 25 sanaa / ~12,6 s | 415 m / 52 sanaa / ~29,6 s | −21 m / −2 sanaa / −4,8 % merkeistä |
+| Venetsia | 348 m / 45 sanaa / ~24,9 s | 106 m / 14 sanaa / ~7,6 s | 454 m / 59 sanaa / ~32,4 s | 227 m / 28 sanaa / ~16,2 s | 215 m / 30 sanaa / ~15,4 s | 442 m / 58 sanaa / ~31,6 s | −12 m / −1 sana / −2,6 % merkeistä |
 
-Taulukossa `m` = merkkiä, `s` = sanaa. Kaikkien neljän parin sana- ja
+Taulukossa `m` = merkkiä ja `s` = sekuntia. Kaikkien neljän parin sana- ja
 merkkisumma pienenee. Lyhennys syntyy sanojen poistamisesta, ei pelkästä
 välimerkkien yhdistämisestä tai puheen nopeuttamisesta. Painotus vaihtelee:
 Sarajevo ja Venetsia siirtävät aikaa Livialle, Marseille ja Ateena pitävät
