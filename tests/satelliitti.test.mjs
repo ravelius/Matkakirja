@@ -4,18 +4,19 @@ import { readFileSync } from 'node:fs';
 
 /*
  * SATELLIITTILINSSI (omistajan tilaus 12.9.2026): hohtavat vihreät
- * havaintopisteet pallolla, koko yläpalkki linssin omaksi, pisteen
- * napautuksesta lähes koko ruudun havaintokuva ja sen sisällä
- * havaintogalleria.
+ * havaintopisteet pallolla, koko yläpalkki linssin omaksi ja pisteen
+ * napautuksesta havaintokuva HETI KOKO RUUTUUN.
  *
  * Tämä tiedosto vartioi vaatimukset yksi kerrallaan:
  *   1. pallo säilyy (linssi ei piirrä kerrosta eikä avaa linssikarttaa),
  *   2. hohtavat vihreät pisteet ilman jatkuvaa pulssia,
- *   3. koko yläpalkki vaihtuu ja palautuu,
- *   4. napautus avaa kuvan ensin, "Lisää" avaa koko havainnon,
+ *   3. koko yläpalkki vaihtuu ja palautuu — EIKÄ siinä ole vetolaatikkoa,
+ *   4. kuva koko ruutuun heti, pikkukuvat kuvan päälle, info-popup,
+ *      sulkuristi alaoikealle ja sormizoom,
  *   5. yksi piste per kohde + galleria (A/B/C-erottelu),
  *   6. ei live-väitettä; lisenssi, aika, alue ja lähde kulkevat mukana,
- *   7. linssin merkit eivät kuluta pelivuoroa.
+ *   7. linssin merkit eivät kuluta pelivuoroa EIKÄ linssin aikana voi
+ *      napauttaa mitään muuta kuin havaintopistettä.
  */
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
@@ -146,10 +147,10 @@ test('yläpalkki vaihtuu kokonaan ja palautuu täsmälleen', () => {
   assert.equal(mapPane.lapset.length, 1);
   assert.equal(mapPane.lapset[0].className, 'satelliittipalkki');
 
-  // Sisältö: nimi, kohteen valinta, ohje ja Sulje linssi.
+  // Sisältö: linssin nimi, kohteen nimi, ohje ja Sulje linssi.
   const osat = palkki.el.lapset.map((x) => x.className);
   assert.deepEqual(osat, [
-    'satelliittipalkki-nimi', 'satelliittipalkki-valinta',
+    'satelliittipalkki-nimi', 'satelliittipalkki-kohde',
     'satelliittipalkki-ohje', 'satelliittipalkki-sulje',
   ]);
   assert.equal(palkki.el.lapset[3].textContent, 'Sulje linssi');
@@ -163,21 +164,46 @@ test('yläpalkki vaihtuu kokonaan ja palautuu täsmälleen', () => {
   assert.equal(mapPane.lapset.length, 0, 'palkki poistuu karttaruudusta');
 });
 
-test('palkin kohdevalinta tarjoaa kaikki kohteet havaintomäärineen', () => {
+test('yläpalkissa EI ole vetolaatikkoa — omistaja poisti sen 12.9.2026', () => {
   const doc = teeDoc();
-  let lennetty = null;
+  const mapPane = doc.createElement('div');
   const palkki = rakennaPalkki({
-    ui: { mapPane: doc.createElement('div') },
+    ui: { mapPane },
     kohteet: SATELLIITTI_KOHTEET,
-    onValinta: (k) => { lennetty = k; },
+    onSulje: () => {},
     doc,
   });
-  const valinta = palkki.valinta;
-  assert.equal(valinta.lapset.length, SATELLIITTI_KOHTEET.length + 1, 'tyhjä rivi + kaikki kohteet');
-  assert.match(valinta.lapset[1].textContent, /\(\d+\)$/, 'havaintomäärä näkyy');
-  valinta.value = 'venetsia';
-  valinta.laukaise('change');
-  assert.equal(lennetty?.tunnus, 'venetsia');
+  // Ei <select>-elementtiä, ei valintalistaa, ei "Valitse kohde".
+  assert.ok(!palkki.el.lapset.some((x) => x.tag === 'select'), 'vetolaatikko on yhä palkissa');
+  assert.ok(!lahde.includes('createElement(\'select\')'), 'lähde rakentaa yhä select-elementin');
+  assert.ok(!lahde.includes('Valitse kohde'), 'palkissa lukee yhä "Valitse kohde"');
+  assert.ok(!tyyli.includes('.satelliittipalkki-valinta'), 'vetolaatikon tyyli on yhä jäljellä');
+  // Tilalle EI ole lisätty hakua eikä luetteloa: kohteet etsitään palloa
+  // pyörittämällä (omistajan valinta).
+  assert.ok(!/type = 'search'|createElement\('input'\)/.test(lahde));
+  palkki.pura();
+});
+
+test('kohteen nimi asuu vain yläpalkissa eikä muuta palkin korkeutta', () => {
+  const doc = teeDoc();
+  const mapPane = doc.createElement('div');
+  const palkki = rakennaPalkki({
+    ui: { mapPane }, kohteet: SATELLIITTI_KOHTEET, onSulje: () => {}, doc,
+  });
+  // Kenttä on palkissa jo tyhjänä: tila on varattu, joten nimen
+  // ilmestyminen ei kasvata palkkia eikä hyppäytä karttaa.
+  assert.equal(palkki.kohdenimi.className, 'satelliittipalkki-kohde');
+  assert.equal(palkki.kohdenimi.textContent, '');
+  palkki.nimeaKohde('Victorian putoukset');
+  assert.equal(palkki.kohdenimi.textContent, 'Victorian putoukset');
+  palkki.nimeaKohde(null);
+  assert.equal(palkki.kohdenimi.textContent, '');
+  // Korkeus tulee muuttujasta, ei sisällöstä, ja pitkä nimi katkeaa.
+  assert.match(tyyli, /\.satelliittipalkki \{[\s\S]*height: var\(--aikajana-palkki-korkeus/);
+  assert.match(tyyli, /\.satelliittipalkki-kohde \{[\s\S]*text-overflow: ellipsis/);
+  // Havaintoikkuna kirjoittaa nimen palkkiin ja pyyhkii sen sulkiessaan.
+  assert.match(lahde, /palkki\?\.nimeaKohde\?\.\(kohde\.nimi\)/);
+  assert.match(lahde, /palkki\?\.nimeaKohde\?\.\(null\)/);
   palkki.pura();
 });
 
@@ -185,19 +211,83 @@ test('mobiilissa palkki pysyy yhtenä tiiviinä rivinä', () => {
   assert.match(tyyli, /@media \(max-width: 620px\)[\s\S]*satelliittipalkki-ohje \{ display: none; \}/);
 });
 
-/* ═════════ 4. kuva ensin, sitten koko havainto (v1783–v1785) ════ */
+/* ═══════ 4. kuva koko ruutuun heti, kaikki muu sen päälle ═══════ */
 
-test('kortti käyttää jaettua nostokuva-apuria eikä omaa avausta', () => {
-  assert.match(lahde, /import \{ nostokuvaAloita \} from '\.\.\/nostokuva\.js'/);
-  assert.match(lahde, /nostokuvaAloita\(\{/);
-  // Kuva ei liiku havaintoa vaihdettaessa: vain src ja tekstit vaihtuvat.
-  assert.match(lahde, /kuvaElementti\.src = h\.kuva/);
-  // Kuvateksti seuraa kuvaa — väärä päiväys oikean kuvan alla olisi
-  // pahin mahdollinen virhe tässä linssissä.
-  assert.match(lahde, /kortti\.querySelector\('\.nostokuva-teksti'\)[\s\S]{0,120}teksti\.textContent = tiedot\.lyhyt/);
-  assert.ok(!/sisus\.replaceChildren\(\)\s*;\s*kuvaElementti = null/.test(lahde));
-  // Lukittu laatikko ei saa vääristää eri muotoisia havaintoja.
-  assert.match(tyyli, /\.satelliitti-kortti \.nostokuva-img \{ object-fit: contain/);
+test('kuva avautuu heti koko ruutuun — ei kaksivaiheista nostokuvaa', () => {
+  // Omistaja 12.9.2026: "Kuva pitää avautua heti koko ruudun peittäväksi."
+  assert.ok(!lahde.includes('nostokuvaAloita'), 'kaksivaiheinen nostokuva-avaus on yhä käytössä');
+  assert.ok(!/from '\.\.\/nostokuva\.js'/.test(lahde), 'linssi tuo yhä nostokuva-apurin');
+  assert.match(lahde, /html\('div', 'satelliitti-katselu'\)/);
+  assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*position: fixed;[\s\S]*inset: 0/);
+  // Oma kuvasuhde säilyy, loppu ruudusta tummaa.
+  assert.match(tyyli, /\.satelliitti-kuva \{[\s\S]*max-width: 100%;[\s\S]*max-height: 100%/);
+  assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*background: #040907/);
+});
+
+test('pikkukuvat, napit ja leima ovat KUVAN PÄÄLLÄ', () => {
+  // Alapalkki kelluu kuvan päällä (position: absolute), ei sen alla.
+  assert.match(tyyli, /\.satelliitti-ala \{[\s\S]*position: absolute;[\s\S]*bottom: 0/);
+  assert.match(tyyli, /\.satelliitti-leima \{[\s\S]*position: absolute/);
+  // Nauha ja napit ovat alapalkin kaksi riviä.
+  assert.match(lahde, /ala\.append\(nauha, napit\)/);
+  assert.match(lahde, /katselu\.append\(lava, ala\)/);
+  assert.match(tyyli, /\.satelliitti-ala \{[\s\S]*flex-direction: column/);
+});
+
+test('sulkuristi on alaoikealla, sormenkokoinen ja irti reunasta', () => {
+  // Omistaja 12.9.2026: "Oik. Oik alaeunaan x nappi josta ikkuna sulkeutuu".
+  assert.match(lahde, /nappi\('satelliitti-sulku', '×', 'Sulje havainto'\)/);
+  // Viimeisenä napparivillä = oikeassa reunassa; edellä joustava väli.
+  assert.match(lahde, /napit\.append\([\s\S]{0,200}sulku\)/);
+  assert.match(tyyli, /\.satelliitti-sulku \{[\s\S]*flex: 0 0 auto/);
+  assert.match(tyyli, /min-height: 44px;\n  min-width: 44px/);
+  // Turva-alue ja sisennys: ei kiinni ruudun reunassa.
+  assert.match(tyyli, /\.satelliitti-ala \{[\s\S]*padding: 8px 12px calc\(10px \+ env\(safe-area-inset-bottom/);
+  // Sulkeminen ei kosketa linssiin: vain ikkuna poistuu.
+  assert.match(lahde, /sulku\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); sulje\(\); \}\)/);
+});
+
+test('kaikki tekstitieto on info-napin popupissa, ei kuvan päällä', () => {
+  assert.match(lahde, /nappi\('satelliitti-info', 'i', 'Havainnon tiedot'\)/);
+  assert.match(lahde, /html\('div', 'satelliitti-popup'\)/);
+  for (const rivi of ['Aineisto', 'Kuvausaika', 'Alue', 'Kuvaustapa', 'Käsittely', 'Lisenssi']) {
+    assert.ok(lahde.includes(`teeRivi('${rivi}'`), `${rivi} puuttuu info-popupista`);
+  }
+  // Popup on pieni ikkuna, ei koko ruudun paneeli.
+  assert.match(tyyli, /\.satelliitti-popup \{[\s\S]*width: min\(380px/);
+  assert.match(tyyli, /\.satelliitti-popup \{[\s\S]*max-height: min\(52vh/);
+  // Sen saa suljettua helposti: oma risti ja Escape.
+  assert.match(lahde, /satelliitti-popup-sulku/);
+  assert.match(lahde, /if \(e\.key === 'Escape'\) \{ if \(popup\) \{ suljePopup\(\); return; \} sulje\(\); return; \}/);
+  // Kuvan päälle EI ladota kuvatekstiä eikä otsikkoa (nimi on palkissa).
+  assert.ok(!/lava\.append\([^)]*teksti/.test(lahde));
+});
+
+test('sormizoom: nipistys, panorointi, rulla ja kaksoisnapautus — ele ei vuoda pallolle', () => {
+  // Omistaja 12.9.2026: "Kuvaa pitää pystyä zoomaamaan sormi eleellä".
+  for (const tapahtuma of ['pointerdown', 'pointermove', 'pointerup', 'wheel', 'dblclick']) {
+    assert.ok(lahde.includes(`lava.addEventListener('${tapahtuma}'`), `${tapahtuma} puuttuu`);
+  }
+  // ELE EI VUODA PALLOLLE: jokainen käsittelijä pysäyttää kuplinnan ja
+  // lava on touch-action: none (selain ei vieritä eikä pallo saa elettä).
+  assert.match(tyyli, /\.satelliitti-lava \{[\s\S]*touch-action: none/);
+  assert.equal((lahde.match(/e\.stopPropagation\(\);/g) ?? []).length >= 5, true);
+  // Katto on kuvan oma tarkkuus, ei kiinteä kerroin.
+  assert.match(lahde, /kuva\.naturalWidth \/ kuva\.offsetWidth/);
+  // Zoom nollautuu otoksen vaihtuessa ja ikkunan avautuessa.
+  assert.match(lahde, /if \(vaihtui\) nollaaZoom\(\)/);
+  assert.match(lahde, /const nollaaZoom = \(\) => \{ skaala = 1; tx = 0; ty = 0; piirra\(\); \}/);
+});
+
+test('pikkukuvanauha on lavan sisar — raja eleiden ja selauksen välillä', () => {
+  /*
+   * Vaakaveto nauhassa selaa otoksia, sama veto kuvan päällä panoroi.
+   * Raja on elementtiraja: eleet ovat LAVAN kuuntelijoita eikä nauha ole
+   * lavan sisällä, joten sama piste ei voi kuulua molemmille.
+   */
+  assert.match(lahde, /lava\.append\(kuva, leima\)/);
+  assert.ok(!/lava\.append[^;]*nauha/.test(lahde), 'nauha ei saa olla lavan sisällä');
+  assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*touch-action: pan-x/);
 });
 
 /* ═══════════ 5. yksi piste per kohde, galleria sisällä ══════════ */
@@ -301,9 +391,9 @@ test('aikatekstit ja aluetekstit ovat suomalaisessa muodossa', () => {
 });
 
 test('galleriassa on laskuri, nuolet, pikkukuvat ja vertailu', () => {
-  assert.match(lahde, /Havainto \$\{indeksi \+ 1\} \/ \$\{havainnot\.length\}/);
-  assert.match(lahde, /'‹ Edellinen'/);
-  assert.match(lahde, /'Seuraava ›'/);
+  assert.match(lahde, /\$\{indeksi \+ 1\} \/ \$\{havainnot\.length\}/);
+  assert.match(lahde, /'satelliitti-nuoli satelliitti-edellinen', '‹'/);
+  assert.match(lahde, /'satelliitti-nuoli satelliitti-seuraava', '›'/);
   assert.match(lahde, /satelliitti-nauha/);
   assert.match(lahde, /satelliitti-vertaa/);
   // Rinnakkain, EI päällekkäistä pyyhkäisyliukuria (väärä muutoksen vaikutelma).
@@ -320,15 +410,16 @@ test('galleriassa on laskuri, nuolet, pikkukuvat ja vertailu', () => {
 
 test('kortissa lukee arkistohavainto — mitään live-kuvausta ei luvata', () => {
   assert.match(lahde, /'Arkistohavainto · ICEYE · tutkakuva'/);
-  // Leima on KUVAN päällä (nostokuvan koristele), jotta se näkyy
-  // molemmissa vaiheissa eikä vieri pois pitkässä kortissa.
-  assert.match(lahde, /koristele: \(nappi\) => \{[\s\S]{0,200}'satelliitti-leima'/);
+  // Leima on KUVAN päällä ja jää sinne myös zoomatessa: lisenssiehto,
+  // ei koriste. Sen pari on info-popupin "Lisenssi: CC BY 4.0".
+  assert.match(lahde, /html\('span', 'satelliitti-leima', 'Arkistohavainto · ICEYE · tutkakuva'\)/);
+  assert.match(lahde, /lava\.append\(kuva, leima\)/);
   assert.match(tyyli, /\.satelliitti-leima \{[\s\S]*position: absolute/);
   // Kuvaustilausta ei ole: linssi ei pyydä satelliitilta mitään eikä
   // tee yhtään verkkokutsua — kuvat ovat valmiita arkisto-osoitteita.
   assert.ok(!/\bfetch\(|XMLHttpRequest/.test(lahde), 'linssi ei saa pyytää uutta kuvausta');
   // Jokainen näytettävä kuva on aineiston arkistotietueesta.
-  assert.match(lahde, /img\.src = aloitus\.kuva/);
+  assert.match(lahde, /kuva\.src = h\.kuva/);
 });
 
 test('lisenssi ja attribuutio ovat CC BY 4.0 / ICEYE ja kulkevat kuvan mukana', () => {
@@ -385,6 +476,44 @@ test('linssin ajan matkustus ja lehdet ovat kiinni samasta portista', () => {
   assert.match(ui, /doMove\(key\) \{[\s\S]{0,400}if \(this\.linssikarttaEstaa\(\)\) return;/);
   // avaaTutkinta (kaupunkilehti) kysyi jo ennestään.
   assert.match(ui, /avaaTutkinta\(city[\s\S]{0,300}if \(this\.linssikarttaEstaa\(\)\) return;/);
+});
+
+test('LINSSIN AIKANA VAIN HAVAINTOPISTE ON NAPAUTETTAVA — yksi portti laudassa', () => {
+  /*
+   * OMISTAJA 12.9.2026, sanatarkasti: *"Ja kartalta ei saa voida
+   * klikata mitään muita kohteita kuin niitä vihreitä kohteita."*
+   *
+   * PIILOTTAMINEN EI RIITÄ (v1794:n virhe, mitattu 12.9.2026):
+   * näkymätön osumalaatikko otti napautuksen yhä vastaan — poltetun
+   * eläintäyn kortti aukesi tyhjältä kartalta linssin päällä, sama vika
+   * kuin v1789:ssä. Tämä testi kaatuu, jos portti katoaa tai jokin muu
+   * napautuspolku avataan uudestaan linssin ajaksi.
+   */
+  const lauta = lue('../js/pallolauta/lauta.js');
+
+  // 1. Pinnan napautus: linssin aikana vain linssimerkki, sitten return.
+  const portti = lauta.match(
+    /if \(linssiPaalla\(\)\) \{\s*const merkki = lahinLinssimerkki\(lat, lng\);[\s\S]{0,200}?\n {4}\}/,
+  );
+  assert.ok(portti, 'napautaPintaan ei sulje muita polkuja linssin ajaksi');
+  assert.match(portti[0], /if \(merkki\) \{ heraa\(\); merkki\.napautus\(merkki\); \}/);
+  assert.match(portti[0], /return;/);
+
+  // 2. Portti on ENNEN kohteita, kaupunkeja, nostoja ja nimimustetta:
+  //    yksikään niistä ei ehdi ratkaista napautusta linssin aikana.
+  const runko = lauta.slice(lauta.indexOf('const napautaPintaan ='));
+  const pPortti = runko.indexOf('if (linssiPaalla())');
+  for (const polku of ['lahinKohde(lat, lng)', 'lahinMerkki(lat, lng)']) {
+    const kohta = runko.indexOf(polku);
+    assert.ok(kohta > pPortti && pPortti >= 0, `${polku} ratkaistaan ennen linssiporttia`);
+  }
+
+  // 3. Pallon pisteiden oma napautus (onPointClick: kaupunkipiste ja
+  //    sen kamerasukellus) kulkee saman portin läpi.
+  assert.match(lauta, /if \(linssiPaalla\(\)\) \{ napautaPintaan\(d\.lat, d\.lon\); return; \}/);
+  const piste = lauta.slice(lauta.indexOf('.onPointClick('));
+  assert.ok(piste.indexOf('if (linssiPaalla())') < piste.indexOf('napautaKaupunki(d)'),
+    'kaupunkipisteen napautus ohittaa linssiportin');
 });
 
 test('linssi ei koske pelitilaan eikä tallennukseen', () => {

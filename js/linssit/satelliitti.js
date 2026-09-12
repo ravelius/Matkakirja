@@ -18,9 +18,10 @@
  * TÄMÄ EI OLE LIVE-NÄKYMÄ eikä kuvaustilaus. Jokainen kuva on
  * ARKISTOHAVAINTO ICEYEn avoimesta aineistosta, ja sen mukana kulkee
  * aina aineiston nimi, kuvausaika (UTC), alue, käsittelyselite,
- * lisenssi ja suora linkki lähdetietueeseen. Kortissa lukee
- * "Arkistohavainto · ICEYE · tutkakuva". Pelaajalle ei luvata, että
- * satelliitti kuvaisi juuri nyt.
+ * lisenssi ja suora linkki lähdetietueeseen. Kuvan päällä lukee
+ * "Arkistohavainto · ICEYE · tutkakuva", ja loput tiedot ovat
+ * info-napin popupissa. Pelaajalle ei luvata, että satelliitti kuvaisi
+ * juuri nyt.
  *
  * ── YKSI PISTE PER KOHDE, GALLERIA PISTEEN SISÄLLÄ ────────────────
  *
@@ -34,9 +35,10 @@
  *   (C) vierekkäiset eri kuvausalueet → ERI pisteet.
  *
  * Galleriassa oletuskuva on paras yleiskuva (parasHavainto alla), ei
- * automaattisesti uusin. Sen alla ovat päivämäärälliset pikkukuvat,
- * laskuri ja edellinen/seuraava. Saman päivän havainnot erottuvat
- * kellonajasta, ja aikavyöhyke (UTC) on näkyvissä.
+ * automaattisesti uusin. Päivämäärälliset pikkukuvat, laskuri ja
+ * edellinen/seuraava latotaan KUVAN PÄÄLLE alareunaan (omistaja
+ * 12.9.2026). Saman päivän havainnot erottuvat kellonajasta, ja
+ * aikavyöhyke (UTC) on näkyvissä.
  *
  * "Vertaa" avaa kaksi havaintoa RINNAKKAIN. Päällekkäistä
  * pyyhkäisyliukuria ei ole: se vaatisi, että alue ja geometrinen
@@ -55,6 +57,21 @@
  * Sulkeminen poistaa molemmat luokat ja palauttaa pelitilan
  * täsmälleen; tallennukseen ei kosketa lainkaan.
  *
+ * ── LINSSIN AIKANA VAIN VIHREÄ PISTE ON NAPAUTETTAVA ─────────────
+ *
+ * OMISTAJA 12.9.2026, sanatarkasti: *"Ja kartalta ei saa voida klikata
+ * mitään muita kohteita kuin niitä vihreitä kohteita."*
+ *
+ * PIILOTTAMINEN EI RIITÄ, ja se oli v1794:n virhe: CSS piilotti pelin
+ * omat lappuset, mutta näkymätön osumaLAATIKKO otti napautuksen yhä
+ * vastaan (mitattu 12.9.2026: poltetun eläintäyn kortti aukesi tyhjältä
+ * kartalta linssin päällä — sama vika kuin v1789:ssä). Portti on siksi
+ * YHDESSÄ paikassa, laudan napautuksenreitityksessä
+ * (js/pallolauta/lauta.js napautaPintaan ja onPointClick): kun bodyssa
+ * on luokka `aikajana-paalla`, napautus tarjotaan VAIN linssin omalle
+ * merkille ja kaikki muu — kohdemerkit, kaupunkipisteet ja niiden
+ * kamerasukellus, nostot, eläintäyt, nimimuste — on kiinni.
+ *
  * ── LINSSIN MERKIT EIVÄT KULUTA PELIVUOROA ────────────────────────
  *
  * Havaintopiste on `laji: 'linssi'` -merkki, jonka napautuksen laskee
@@ -66,7 +83,6 @@
  */
 
 import { html } from '../ui-apurit.js';
-import { nostokuvaAloita } from '../nostokuva.js';
 import { SATELLIITTI_KOHTEET, SATELLIITTI_LAHDE } from './satelliitti-data.js';
 
 /** Linssiosan nimi laudan linssiapurissa (lauta.linssit.merkit/pura). */
@@ -203,9 +219,9 @@ function merkkiElementti(kohde) {
 }
 
 /**
- * Kuvan mukana kulkeva kuvatieto (js/nostokuva.js lukee `lyhyt`,
- * `selite` ja `lahde`). Lähdetiedot ovat aina löydettävissä: lyhyt
- * teksti kertoo kohteen ja hetken, pitkä lisää aineiston ja lisenssin.
+ * Kuvan mukana kulkeva kuvatieto: `lyhyt` on kuvan vaihtoehtoinen
+ * teksti (kohde ja hetki), `selite` ja `lahde` kantavat aineiston ja
+ * lisenssin. Lähdetiedot ovat aina löydettävissä.
  */
 export function kuvatiedot(kohde, havainto) {
   return {
@@ -218,79 +234,142 @@ export function kuvatiedot(kohde, havainto) {
 }
 
 /**
- * Havaintokortti: kuva ensin, sitten koko havainto (v1783–v1785:n
- * kaksivaiheinen avaus, js/nostokuva.js).
+ * HAVAINTOIKKUNA — KUVA KOKO RUUTUUN HETI.
  *
- * KUVA EI LIIKU VAIHEENVAIHDOSSA eikä havaintoa vaihdettaessa: kuvan
- * laatikko jäädytetään vaiheessa 1 pikseleiksi, ja gallerian vaihto
- * kirjoittaa VAIN `src`:n ja tekstit — elementtiä ei rakenneta uudeksi.
- * Siksi kuva on `object-fit: contain` (css/satelliitti.css): eri
- * muotoiset havainnot mahtuvat samaan laatikkoon vääristymättä.
+ * OMISTAJA 12.9.2026, sanatarkasti: *"Kuva pitää avautua heti koko
+ * ruudun peittäväksi ja sen päälle ladotaan pienet kuvat muista
+ * otoksista. Sitten info nappi josta tulee mini popup tietoineen."*,
+ * *"Oik. Oik alaeunaan x nappi josta ikkuna sulkeutuu"*,
+ * *"Kuvaa pitää pystyä zoomaamaan sormi eleellä"* ja *"Kohteen nimi
+ * vain yläpalkkiin"*.
+ *
+ * Tämä KUMOAA aiemman kaksivaiheisen nostokuva-avauksen (kuva ensin,
+ * "Lisää" perässä) TÄSSÄ linssissä: se on kartan nostoja varten, joissa
+ * kuva on kortin kuvitusta. Tutkahavainto EI ole kuvitus vaan itse
+ * sisältö, ja sitä katsotaan kokonaisena.
+ *
+ * RUUDUN JAKO — kaikki muu paitsi kuva on kuvan PÄÄLLÄ:
+ *
+ *   • kuva keskellä, oma kuvasuhde säilyy (object-fit: contain),
+ *     loppu ruudusta tummaa,
+ *   • "Arkistohavainto · ICEYE · tutkakuva" -leima kuvan yläkulmassa —
+ *     lisenssiehto, ei koriste,
+ *   • alapalkki kahtena rivinä: pikkukuvat ylärivillä, napit
+ *     alarivillä. Kaksi riviä eikä yksi, jotta SULKURISTI ALHAALLA
+ *     OIKEALLA ei koskaan jää pikkukuvien alle eikä sitä paineta
+ *     vahingossa otoksia selatessa (omistajan vaatimus 12.9.2026),
+ *   • kaikki tekstitieto info-napin takana pienessä popupissa.
+ *
+ * KOHTEEN NIMI ON VAIN YLÄPALKISSA (`palkki.nimeaKohde`): kuvan päällä
+ * ei ole muuta tekstiä kuin arkistoleima ja pikkukuvien päiväykset.
  */
-function avaaHavaintokortti({ kohde, ui, onSuljettu }) {
+function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
   lataaSatelliittiTyyli();
-  const kortti = html('div', 'satelliitti-kortti');
-  kortti.setAttribute('role', 'dialog');
-  kortti.setAttribute('aria-label', `${kohde.nimi}: tutkahavainto`);
-  const sisus = html('div', 'satelliitti-sisus');
-  kortti.appendChild(sisus);
-  document.body.appendChild(kortti);
+  const katselu = html('div', 'satelliitti-katselu');
+  katselu.setAttribute('role', 'dialog');
+  katselu.setAttribute('aria-modal', 'true');
+  katselu.setAttribute('aria-label', `${kohde.nimi}: tutkahavainto`);
 
-  let indeksi = oletusIndeksi(kohde);
   const havainnot = kohde.havainnot ?? [];
-  let kuvaElementti = null;
-  let paivitaSisalto = () => {};
+  let indeksi = oletusIndeksi(kohde);
+  if (!havainnot[indeksi]) return null;
 
-  /*
-   * KUVA SULKEUTUU MISTÄ TAHANSA KARTAN KOHDASTA (v1783:n sääntö), ja
-   * SAMA painallus ei saa avata uutta pistettä. Lippu luetaan linssin
-   * omassa napautuskäsittelijässä (avaa-funktio alla).
-   */
-  const ulkopuoli = (e) => {
-    if (kortti.contains(e.target)) return;
-    sulje();
+  /* ---- kuva ja sen lava (eleet asuvat lavassa) --------------------- */
+  const lava = html('div', 'satelliitti-lava');
+  const kuva = document.createElement('img');
+  kuva.className = 'satelliitti-kuva';
+  kuva.decoding = 'async';
+  kuva.draggable = false;
+  const leima = html('span', 'satelliitti-leima', 'Arkistohavainto · ICEYE · tutkakuva');
+  lava.append(kuva, leima);
+
+  /* ---- alapalkki: pikkukuvat ylärivillä, napit alarivillä ---------- */
+  const ala = html('div', 'satelliitti-ala');
+  const nauha = html('div', 'satelliitti-nauha');
+  const napit = html('div', 'satelliitti-napit');
+  ala.append(nauha, napit);
+
+  const nappi = (luokka, teksti, otsikko) => {
+    const b = html('button', luokka, teksti);
+    b.type = 'button';
+    b.title = otsikko;
+    b.setAttribute('aria-label', otsikko);
+    return b;
   };
+  const infoNappi = nappi('satelliitti-info', 'i', 'Havainnon tiedot');
+  const vertaaNappi = nappi('satelliitti-vertaa', 'Vertaa', 'Näytä kaksi havaintoa rinnakkain');
+  const edellinen = nappi('satelliitti-nuoli satelliitti-edellinen', '‹', 'Edellinen havainto');
+  const seuraava = nappi('satelliitti-nuoli satelliitti-seuraava', '›', 'Seuraava havainto');
+  const laskuri = html('span', 'satelliitti-laskuri');
+  const sulku = nappi('satelliitti-sulku', '×', 'Sulje havainto');
+  napit.append(infoNappi, vertaaNappi, html('span', 'satelliitti-vali'),
+    edellinen, laskuri, seuraava, html('span', 'satelliitti-vali'), sulku);
+  katselu.append(lava, ala);
+  document.body.appendChild(katselu);
+
+  /* ---- sulkeminen -------------------------------------------------- */
+  let popup = null;
   const nappain = (e) => {
-    if (e.key === 'Escape') { sulje(); return; }
+    if (e.key === 'Escape') { if (popup) { suljePopup(); return; } sulje(); return; }
     if (e.key === 'ArrowRight') nayta(indeksi + 1);
     if (e.key === 'ArrowLeft') nayta(indeksi - 1);
   };
-
   function sulje() {
-    if (!kortti.isConnected) return;
-    kortti.nostokuvaPurku?.();
-    kortti.remove();
-    document.removeEventListener('pointerdown', ulkopuoli, true);
+    if (!katselu.isConnected) return;
+    katselu.remove();
     document.removeEventListener('keydown', nappain);
+    palkki?.nimeaKohde?.(null);
     onSuljettu?.();
   }
-  kortti.satelliittiSulje = sulje;
-  document.addEventListener('pointerdown', ulkopuoli, true);
+  katselu.satelliittiSulje = sulje;
+  sulku.addEventListener('click', (e) => { e.stopPropagation(); sulje(); });
   document.addEventListener('keydown', nappain);
+  palkki?.nimeaKohde?.(kohde.nimi);
 
-  const nayta = (uusi) => {
-    if (!havainnot.length) return;
-    indeksi = Math.max(0, Math.min(havainnot.length - 1, uusi));
-    const h = havainnot[indeksi];
-    const tiedot = kuvatiedot(kohde, h);
-    if (kuvaElementti && kuvaElementti.src !== h.kuva) {
-      kuvaElementti.src = h.kuva;
-      kuvaElementti.alt = tiedot.lyhyt;
-    }
-    /*
-     * KUVATEKSTI SEURAA KUVAA. Nostokuva-apuri latoo kuvatekstin kerran
-     * vaiheessa 1, eikä se tiedä galleriasta mitään — ilman tätä kuvan
-     * alla luki yhä ensimmäisen havainnon päiväys, vaikka ruudulla oli
-     * jo toinen kuvaus (kaappaus 12.9.2026, Krakova 3/5). Väärä
-     * päiväys oikean kuvan alla on pahin mahdollinen virhe tässä
-     * linssissä, joten teksti kirjoitetaan samassa vaiheessa kuin src.
-     */
-    const teksti = kortti.querySelector('.nostokuva-teksti');
-    if (teksti) teksti.textContent = tiedot.lyhyt;
-    paivitaSisalto();
+  /* ---- info-popup: kaikki tekstitieto yhden napin takana ----------- */
+  function suljePopup() {
+    popup?.remove();
+    popup = null;
+    infoNappi.setAttribute('aria-expanded', 'false');
+  }
+  const teeRivi = (nimi, arvo) => {
+    if (!arvo) return null;
+    const d = html('div');
+    d.append(html('b', null, `${nimi}: `), typeof arvo === 'string' ? document.createTextNode(arvo) : arvo);
+    return d;
   };
+  const avaaPopup = () => {
+    if (popup) { suljePopup(); return; }
+    const h = havainnot[indeksi] ?? {};
+    popup = html('div', 'satelliitti-popup');
+    popup.setAttribute('role', 'dialog');
+    popup.setAttribute('aria-label', `${kohde.nimi}: havainnon tiedot`);
+    const otsikko = html('div', 'satelliitti-popup-otsikko', kohde.nimi);
+    otsikko.appendChild(html('span', 'satelliitti-seutu', ` — ${kohde.seutu}`));
+    const kiinni = nappi('satelliitti-popup-sulku', '×', 'Sulje tiedot');
+    kiinni.addEventListener('click', suljePopup);
+    popup.append(otsikko, kiinni);
+    for (const rivi of [
+      teeRivi('Aineisto', `${SATELLIITTI_LAHDE.aineisto}, ${SATELLIITTI_LAHDE.tekija}`),
+      teeRivi('Kuvausaika', aikateksti(h.aika)),
+      teeRivi('Alue', alueteksti(h.alue)),
+      teeRivi('Kuvaustapa', [TILAN_NIMI[h.tila] ?? h.tila, h.satelliitti,
+        h.kaista ? `${h.kaista}-kaista` : null, h.polarisaatio,
+        Number.isFinite(h.katselukulma) ? `katselukulma ${String(h.katselukulma).replace('.', ',')}°` : null,
+      ].filter(Boolean).join(' · ')),
+      teeRivi('Käsittely', [h.kasittely, (h.tuotteet ?? []).length
+        ? `tuotteet ${h.tuotteet.join(', ')} (saman kuvauksen eri versiot)` : null].filter(Boolean).join(' · ')),
+      teeRivi('Lisenssi', SATELLIITTI_LAHDE.lisenssi),
+      h.stac ? teeRivi('Lähde', ulkolinkki('STAC-tietue', h.stac)) : null,
+      teeRivi('Dokumentaatio', ulkolinkki('ICEYE Open Data', SATELLIITTI_LAHDE.osoite)),
+    ]) if (rivi) popup.appendChild(rivi);
+    popup.appendChild(html('div', 'satelliitti-popup-selite', kohde.selite));
+    katselu.appendChild(popup);
+    infoNappi.setAttribute('aria-expanded', 'true');
+  };
+  infoNappi.addEventListener('click', (e) => { e.stopPropagation(); avaaPopup(); });
 
-  /** Vertailu: kaksi havaintoa rinnakkain, ei liukuria (ks. tiedoston alku). */
+  /* ---- vertailu: kaksi havaintoa rinnakkain, ei liukuria ----------- */
   const vertaa = () => {
     const toinen = havainnot[(indeksi + 1) % havainnot.length];
     const nyt = havainnot[indeksi];
@@ -314,116 +393,214 @@ function avaaHavaintokortti({ kohde, ui, onSuljettu }) {
     kerros.append(otsikko, parit, takaisin);
     document.body.appendChild(kerros);
   };
+  vertaaNappi.addEventListener('click', (e) => { e.stopPropagation(); vertaa(); });
 
-  /** Vaiheen 2 ladonta: kuvakehys paikalleen, tiedot sen ympärille. */
-  const latoNosto = (kotelo, kuvakehys) => {
-    const h = havainnot[indeksi] ?? {};
-    kotelo.replaceChildren();
-    const otsikko = html('h2', 'satelliitti-otsikko', kohde.nimi);
-    otsikko.appendChild(html('span', 'satelliitti-seutu', ` — ${kohde.seutu}`));
-    kotelo.append(otsikko);
-    if (kuvakehys) kotelo.appendChild(kuvakehys);
+  /* ════════════════ SORMIZOOM KUVAN PÄÄLLÄ ════════════════════════
+   *
+   * OMISTAJA 12.9.2026: *"Kuvaa pitää pystyä zoomaamaan sormi
+   * eleellä"*. Tutkakuvassa on kortteleita ja siltoja, ja koko pointti
+   * on päästä niitä lähemmäs.
+   *
+   * OMA TOTEUTUS, EI KIERRÄTYSTÄ. Pelin kuvasuurennos
+   * (js/fokuskohteet.js avaaKohdeSuurennos) kasvattaa kuvan
+   * ankkuristaan koko ruudun kokoiseksi, mutta siinä EI ole nipistys-
+   * eikä panorointielettä — se on avausanimaatio, ei katselin — ja
+   * js/karttazoom.js zoomaa tasokarttaa, ei <img>-elementtiä. Kolmatta
+   * toteutusta samasta asiasta ei siis synny: tätä ei ollut olemassa.
+   *
+   * ELE EI VUODA PALLOLLE. Kaikki eleet luetaan LAVAN omista
+   * pointer-tapahtumista, jokainen `stopPropagation` + `preventDefault`
+   * ja lavalla on `touch-action: none` — pallon oma elekuuntelija
+   * (js/pallo.js asennaPallonEleet) kuuntelee kangasta, joka on tämän
+   * kerroksen ALLA. Mitattu: kameran tila ei muutu eleen aikana.
+   *
+   * RAJA PIKKUKUVIIN ON YKSISELITTEINEN: eleet ovat LAVAN kuuntelijoita,
+   * ja pikkukuvanauha on lavan SISAR (kuvan päällä, ei sen sisällä).
+   * Sormi nauhan päällä ei siis koskaan ole kuvan päällä — vaakaveto
+   * nauhassa selaa otoksia, sama veto kuvan päällä panoroi.
+   *
+   * KATTO ON KUVAN OMA TARKKUUS: suurennus ei venytä lähdettä
+   * pikselipuuroksi, vaan pysähtyy siihen mitä kuvassa oikeasti on
+   * (naturalWidth / ruudulla oleva leveys, vähintään 1).
+   */
+  let skaala = 1;
+  let tx = 0;
+  let ty = 0;
+  const sormet = new Map();
+  let ele = null; // { etaisyys, skaala, keskiX, keskiY, tx, ty } | { yksi }
 
-    if (havainnot.length > 1) {
-      const selaus = html('div', 'satelliitti-selaus');
-      const edellinen = html('button', 'satelliitti-nuoli satelliitti-edellinen', '‹ Edellinen');
-      edellinen.type = 'button';
-      edellinen.disabled = indeksi <= 0;
-      edellinen.addEventListener('click', () => nayta(indeksi - 1));
-      const laskuri = html('span', 'satelliitti-laskuri',
-        `Havainto ${indeksi + 1} / ${havainnot.length}`);
-      const seuraava = html('button', 'satelliitti-nuoli satelliitti-seuraava', 'Seuraava ›');
-      seuraava.type = 'button';
-      seuraava.disabled = indeksi >= havainnot.length - 1;
-      seuraava.addEventListener('click', () => nayta(indeksi + 1));
-      const vertaaNappi = html('button', 'satelliitti-vertaa', 'Vertaa');
-      vertaaNappi.type = 'button';
-      vertaaNappi.title = 'Näytä kaksi havaintoa rinnakkain';
-      vertaaNappi.addEventListener('click', vertaa);
-      selaus.append(edellinen, laskuri, seuraava, vertaaNappi);
-      kotelo.appendChild(selaus);
+  /*
+   * MITTA LUETAAN ASETTELUSTA (offsetWidth), EI TRANSFORMOIDUSTA
+   * LAATIKOSTA: getBoundingClientRect kertoisi jo zoomatun koon, ja
+   * katto kasvaisi joka nipistyksellä. Kuva on `max-width/height: 100%`
+   * ilman object-fitiä, joten elementti on täsmälleen kuvan kokoinen.
+   */
+  const kattoSkaala = () => {
+    if (!kuva.offsetWidth || !kuva.naturalWidth) return 4;
+    return Math.max(1, Math.min(8, kuva.naturalWidth / kuva.offsetWidth));
+  };
+  const rajaa = () => {
+    // Kuva ei karkaa ruudulta: siirto rajataan siihen, paljonko
+    // suurennettu kuva ylittää oman laatikkonsa.
+    const rajaX = Math.max(0, (kuva.offsetWidth * skaala - lava.clientWidth) / 2);
+    const rajaY = Math.max(0, (kuva.offsetHeight * skaala - lava.clientHeight) / 2);
+    tx = Math.max(-rajaX, Math.min(rajaX, tx));
+    ty = Math.max(-rajaY, Math.min(rajaY, ty));
+  };
+  const piirra = () => {
+    rajaa();
+    kuva.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px) scale(${skaala.toFixed(3)})`;
+    katselu.classList.toggle('satelliitti-zoomattu', skaala > 1.01);
+  };
+  /** Zoom pois — uusi otos aukeaa aina kokonaisena. */
+  const nollaaZoom = () => { skaala = 1; tx = 0; ty = 0; piirra(); };
+  /** Zoomaa kohti ruudun pistettä (nipistyksen keskikohta tai kursori). */
+  const zoomaa = (uusi, keskiX, keskiY) => {
+    const katto = kattoSkaala();
+    const rajattu = Math.max(1, Math.min(katto, uusi));
+    const r = lava.getBoundingClientRect();
+    const kx = keskiX - (r.left + r.width / 2);
+    const ky = keskiY - (r.top + r.height / 2);
+    const suhde = rajattu / skaala;
+    tx = kx - (kx - tx) * suhde;
+    ty = ky - (ky - ty) * suhde;
+    skaala = rajattu;
+    piirra();
+  };
 
-      const nauha = html('div', 'satelliitti-nauha');
-      havainnot.forEach((toinen, i) => {
-        const nappi = html('button', `satelliitti-pikku${i === indeksi ? ' valittu' : ''}`);
-        nappi.type = 'button';
-        const pikku = document.createElement('img');
-        pikku.src = toinen.kuva;
-        pikku.loading = 'lazy';
-        pikku.decoding = 'async';
-        pikku.alt = '';
-        nappi.append(pikku, html('span', null, paivateksti(toinen.aika)));
-        nappi.title = aikateksti(toinen.aika);
-        nappi.setAttribute('aria-label', `${aikateksti(toinen.aika)} — näytä tämä havainto`);
-        nappi.addEventListener('click', () => nayta(i));
-        nauha.appendChild(nappi);
-      });
-      kotelo.appendChild(nauha);
+  const paikat = () => [...sormet.values()];
+  lava.addEventListener('pointerdown', (e) => {
+    e.stopPropagation();
+    sormet.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    // Kaappaus on hyödyllinen mutta ei pakollinen: synteettinen
+    // osoitin (savuke, testi) ei ole selaimen kirjoilla, ja heitetty
+    // NotFoundError keskeyttäisi koko eleen alkuunsa.
+    try { lava.setPointerCapture?.(e.pointerId); } catch { /* ei aktiivista osoitinta */ }
+    const p = paikat();
+    if (p.length === 2) {
+      ele = {
+        etaisyys: Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y),
+        skaala,
+        tx,
+        ty,
+        keskiX: (p[0].x + p[1].x) / 2,
+        keskiY: (p[0].y + p[1].y) / 2,
+      };
+    } else {
+      ele = { yksi: true, x: e.clientX, y: e.clientY, tx, ty };
     }
-
-    const tiedot = html('div', 'satelliitti-tiedot');
-    const rivi = (nimi, arvo) => {
-      if (!arvo) return;
-      const d = html('div');
-      d.append(html('b', null, `${nimi}: `), typeof arvo === 'string' ? document.createTextNode(arvo) : arvo);
-      tiedot.appendChild(d);
-    };
-    rivi('Aineisto', `${SATELLIITTI_LAHDE.aineisto}, ${SATELLIITTI_LAHDE.tekija}`);
-    rivi('Kuvausaika', aikateksti(h.aika));
-    rivi('Alue', alueteksti(h.alue));
-    rivi('Kuvaustapa', [TILAN_NIMI[h.tila] ?? h.tila, h.satelliitti,
-      h.kaista ? `${h.kaista}-kaista` : null, h.polarisaatio,
-      Number.isFinite(h.katselukulma) ? `katselukulma ${String(h.katselukulma).replace('.', ',')}°` : null,
-    ].filter(Boolean).join(' · '));
-    rivi('Käsittely', [h.kasittely, (h.tuotteet ?? []).length
-      ? `tuotteet ${h.tuotteet.join(', ')} (saman kuvauksen eri versiot)` : null].filter(Boolean).join(' · '));
-    rivi('Lisenssi', SATELLIITTI_LAHDE.lisenssi);
-    if (h.stac) rivi('Lähde', ulkolinkki('STAC-tietue', h.stac));
-    rivi('Dokumentaatio', ulkolinkki('ICEYE Open Data', SATELLIITTI_LAHDE.osoite));
-    tiedot.appendChild(html('div', null, `${kohde.selite}`));
-    kotelo.appendChild(tiedot);
-  };
-
-  const aloitus = havainnot[indeksi];
-  if (!aloitus) { sulje(); return null; }
-  const kahva = nostokuvaAloita({
-    kortti,
-    sisalto: sisus,
-    kuva: kuvatiedot(kohde, aloitus),
-    aseta: (img, _leveys, onVirhe) => {
-      kuvaElementti = img;
-      img.addEventListener('error', onVirhe, { once: true });
-      img.src = aloitus.kuva;
-    },
-    latoNosto,
-    /*
-     * ARKISTOLEIMA KUVAN PÄÄLLE, EI TEKSTIN SEKAAN. Kortti on kuvan
-     * korkuinen ja vierittyy, joten leipätekstin joukossa oleva leima
-     * valui ruudun ulkopuolelle heti kun "Lisää" avasi koko havainnon
-     * (kaappaus 12.9.2026). Kuvan kulmassa se on näkyvissä molemmissa
-     * vaiheissa — juuri siellä missä pelaaja katsoo — eikä pelaajalle
-     * voi jäädä käsitystä live-näkymästä.
-     */
-    koristele: (nappi) => {
-      nappi.appendChild(html('span', 'satelliitti-leima', 'Arkistohavainto · ICEYE · tutkakuva'));
-    },
-    onKuvatta: () => {
-      // Kuva jäi tulematta: kortti on jo ladottu tekstinä, eikä
-      // pelaajalle luvata kuvaa jota ei ole.
-      kortti.classList.add('satelliitti-kuvatta');
-    },
   });
-  paivitaSisalto = () => {
-    if (kahva?.vaihe() === 'nosto') latoNosto(sisus, kahva.kehys);
+  lava.addEventListener('pointermove', (e) => {
+    if (!sormet.has(e.pointerId)) return;
+    e.stopPropagation();
+    e.preventDefault();
+    sormet.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    const p = paikat();
+    if (p.length >= 2 && ele && ele.etaisyys) {
+      const etaisyys = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
+      const keskiX = (p[0].x + p[1].x) / 2;
+      const keskiY = (p[0].y + p[1].y) / 2;
+      tx = ele.tx;
+      ty = ele.ty;
+      const vanha = skaala;
+      skaala = ele.skaala;
+      zoomaa(ele.skaala * (etaisyys / ele.etaisyys), keskiX, keskiY);
+      if (!Number.isFinite(skaala)) skaala = vanha;
+    } else if (ele?.yksi && skaala > 1.01) {
+      tx = ele.tx + (e.clientX - ele.x);
+      ty = ele.ty + (e.clientY - ele.y);
+      piirra();
+    }
+  });
+  const sormiYlos = (e) => {
+    sormet.delete(e.pointerId);
+    if (sormet.size < 2) ele = sormet.size === 1 ? { yksi: true, x: paikat()[0].x, y: paikat()[0].y, tx, ty } : null;
   };
-  return kortti;
+  lava.addEventListener('pointerup', sormiYlos);
+  lava.addEventListener('pointercancel', sormiYlos);
+  // Työpöytä: rulla zoomaa kursorin kohdalta, veto panoroi (yllä).
+  lava.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    zoomaa(skaala * (e.deltaY < 0 ? 1.2 : 1 / 1.2), e.clientX, e.clientY);
+  }, { passive: false });
+  // Kaksoisnapautus: sisään ja takaisin.
+  lava.addEventListener('dblclick', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (skaala > 1.01) nollaaZoom();
+    else zoomaa(Math.min(2.5, kattoSkaala()), e.clientX, e.clientY);
+  });
+
+  /* ---- gallerian ladonta ------------------------------------------- */
+  const latoNauha = () => {
+    nauha.replaceChildren();
+    if (havainnot.length < 2) { ala.classList.add('satelliitti-yksi'); return; }
+    havainnot.forEach((toinen, i) => {
+      const b = html('button', `satelliitti-pikku${i === indeksi ? ' valittu' : ''}`);
+      b.type = 'button';
+      const pikku = document.createElement('img');
+      pikku.src = toinen.kuva;
+      pikku.loading = 'lazy';
+      pikku.decoding = 'async';
+      pikku.alt = '';
+      b.append(pikku, html('span', null, paivateksti(toinen.aika)));
+      b.title = aikateksti(toinen.aika);
+      b.setAttribute('aria-label', `${aikateksti(toinen.aika)} — näytä tämä havainto`);
+      b.addEventListener('click', (e) => { e.stopPropagation(); nayta(i); });
+      nauha.appendChild(b);
+    });
+  };
+  function nayta(uusi) {
+    if (!havainnot.length) return;
+    const rajattu = Math.max(0, Math.min(havainnot.length - 1, uusi));
+    const vaihtui = rajattu !== indeksi;
+    indeksi = rajattu;
+    const h = havainnot[indeksi];
+    if (kuva.src !== h.kuva) {
+      kuva.src = h.kuva;
+      kuva.alt = kuvatiedot(kohde, h).lyhyt;
+    }
+    // ZOOM NOLLAUTUU OTOSTA VAIHDETTAESSA (omistajan vaatimus).
+    if (vaihtui) nollaaZoom();
+    laskuri.textContent = havainnot.length > 1 ? `${indeksi + 1} / ${havainnot.length}` : '';
+    edellinen.disabled = indeksi <= 0;
+    seuraava.disabled = indeksi >= havainnot.length - 1;
+    latoNauha();
+    if (popup) { suljePopup(); avaaPopup(); }
+  }
+  edellinen.addEventListener('click', (e) => { e.stopPropagation(); nayta(indeksi - 1); });
+  seuraava.addEventListener('click', (e) => { e.stopPropagation(); nayta(indeksi + 1); });
+  if (havainnot.length < 2) {
+    for (const el of [edellinen, seuraava, vertaaNappi]) el.hidden = true;
+  }
+  kuva.addEventListener('error', () => katselu.classList.add('satelliitti-kuvatta'), { once: true });
+  kuva.addEventListener('load', () => piirra());
+  nayta(indeksi);
+  kuva.src = havainnot[indeksi].kuva;
+  kuva.alt = kuvatiedot(kohde, havainnot[indeksi]).lyhyt;
+  nollaaZoom();
+  return katselu;
 }
 
 /**
  * Linssin oma yläpalkki Matkakirjan palkin TILALLE (ks. tiedoston
- * alku). Palauttaa { el, pura }.
+ * alku). Palauttaa { el, nimeaKohde, pura }.
+ *
+ * EI VETOLAATIKKOA (omistaja 12.9.2026, sanatarkasti: *"Ota yläpalkin
+ * vetolaatikko pois"*). Palkissa on linssin nimi, auki olevan kohteen
+ * nimi ja Sulje linssi — ei mitään muuta. Kohteet (21 kpl) etsitään
+ * palloa pyörittämällä, mikä on omistajan valinta; tilalle EI lisätä
+ * hakua eikä luetteloa.
+ *
+ * KOHTEEN NIMI VAIN TÄNNE (omistaja 12.9.2026: *"Kohteen nimi vain
+ * yläpalkkiin"*): havaintoikkuna kirjoittaa nimen `nimeaKohde`-kutsulla
+ * ja pyyhkii sen sulkeutuessaan. Nimikenttä on palkissa AINA (tyhjänä
+ * kin), jotta palkin mitattu korkeus ei muutu nimen ilmestyessä —
+ * korkeus on sidottu Matkakirjan oman palkin mittaan, ja kartta
+ * hyppäisi jos se eläisi.
  */
-export function rakennaPalkki({ ui, kohteet, onValinta, onSulje, doc = document }) {
+export function rakennaPalkki({ ui, kohteet, onSulje, doc = document }) {
   const palkki = doc.createElement('div');
   palkki.className = 'satelliittipalkki';
   palkki.setAttribute('role', 'group');
@@ -433,24 +610,11 @@ export function rakennaPalkki({ ui, kohteet, onValinta, onSulje, doc = document 
   nimi.className = 'satelliittipalkki-nimi';
   nimi.textContent = 'Satelliittilinssi';
 
-  const valinta = doc.createElement('select');
-  valinta.className = 'satelliittipalkki-valinta';
-  valinta.setAttribute('aria-label', 'Valitse havaintokohde');
-  const tyhja = doc.createElement('option');
-  tyhja.value = '';
-  tyhja.textContent = `Valitse kohde (${kohteet.length})`;
-  valinta.appendChild(tyhja);
-  for (const kohde of kohteet) {
-    const o = doc.createElement('option');
-    o.value = kohde.tunnus;
-    const maara = kohde.havainnot?.length ?? 0;
-    o.textContent = `${kohde.nimi} — ${kohde.seutu} (${maara})`;
-    valinta.appendChild(o);
-  }
-  valinta.addEventListener('change', () => {
-    const kohde = kohteet.find((k) => k.tunnus === valinta.value);
-    if (kohde) onValinta?.(kohde);
-  });
+  // Auki olevan havainnon kohde — tyhjä, kun ikkunaa ei ole auki.
+  const kohdenimi = doc.createElement('span');
+  kohdenimi.className = 'satelliittipalkki-kohde';
+  kohdenimi.setAttribute('aria-live', 'polite');
+  kohdenimi.textContent = '';
 
   const ohje = doc.createElement('span');
   ohje.className = 'satelliittipalkki-ohje';
@@ -463,7 +627,7 @@ export function rakennaPalkki({ ui, kohteet, onValinta, onSulje, doc = document 
   sulje.title = 'Sulje linssi ja palaa peliin';
   sulje.addEventListener('click', () => onSulje?.());
 
-  palkki.append(nimi, valinta, ohje, sulje);
+  palkki.append(nimi, kohdenimi, ohje, sulje);
 
   /*
    * YLÄPALKIN KORKEUS MITATAAN ENNEN PIILOTUSTA — sama kaava kuin
@@ -480,7 +644,9 @@ export function rakennaPalkki({ ui, kohteet, onValinta, onSulje, doc = document 
 
   return {
     el: palkki,
-    valinta,
+    kohdenimi,
+    /** Kohteen nimi palkkiin (tai null pois). Korkeus ei muutu. */
+    nimeaKohde: (teksti) => { kohdenimi.textContent = teksti ?? ''; },
     pura: () => {
       palkki.remove();
       doc.body.classList.remove('aikajana-palkki-auki', 'aikajana-paalla');
@@ -505,17 +671,22 @@ function avaa(lauta, tila, ui) {
     vanha.satelliittiSulje?.();
   };
 
+  const palkki = rakennaPalkki({
+    ui,
+    kohteet,
+    onSulje: () => ui?.valitseLinssi?.(null),
+  });
+
   const avaaKohde = (kohde) => {
     /*
-     * SULKEVA NAPAUTUS EI AVAA UUTTA (v1783:n sääntö). Kortin oma
-     * ulkopuolikuuntelija sulki kortin jo pointerdownissa; ilman tätä
-     * lippua sama napautus avaisi clickissä seuraavan pisteen.
+     * SULKEVA NAPAUTUS EI AVAA UUTTA (v1783:n sääntö). Havaintoikkunan
+     * sulku merkitsee hetken, eikä sama painallus avaa seuraavaa.
      */
     if (Date.now() - suljettiin < 350) return;
     suljeKortti();
     kortti = avaaHavaintokortti({
       kohde,
-      ui,
+      palkki,
       onSuljettu: () => { suljettiin = Date.now(); kortti = null; },
     });
   };
@@ -528,17 +699,6 @@ function avaa(lauta, tila, ui) {
     napautus: () => avaaKohde(kohde),
   }));
   lauta?.linssit?.merkit?.(SATELLIITTI_OSA, merkit);
-
-  const palkki = rakennaPalkki({
-    ui,
-    kohteet,
-    onValinta: (kohde) => {
-      // Kamera kohteen ylle; kortti aukeaa vasta pisteen napautuksesta,
-      // jotta valinta ei peitä juuri sitä näkymää, johon lennettiin.
-      lauta?.kamera?.ajaKamera?.({ lat: kohde.lat, lng: kohde.lon, leveys: SATELLIITTI_LAHIKUVA }, {});
-    },
-    onSulje: () => ui?.valitseLinssi?.(null),
-  });
 
   return {
     kohteet,
@@ -557,7 +717,16 @@ function avaa(lauta, tila, ui) {
        * (mitattu 12.9.2026: 21 pistettä jäi yhä DOMiin).
        */
       lauta?.heraa?.();
+      /*
+       * KOLME HERÄTYSTÄ. Merkkikerros poistaa datumin vasta häivytyksen
+       * päätteeksi (js/pallolauta/merkit.js poista: setTimeout →
+       * tyonna), ja kirjasto irrottaa elementit vasta SEURAAVASSA
+       * piirrossa. Hitaalla laitteella 400 ms:n herätys ehti ennen
+       * tuota tyontoa, ja 21 hohtavaa pistettä jäi ruudulle linssin
+       * sulkemisen jälkeen (mitattu iPadilla ja puhelimella 12.9.2026).
+       */
       setTimeout(() => lauta?.heraa?.(), 400);
+      setTimeout(() => lauta?.heraa?.(), 1200);
     },
   };
 }
