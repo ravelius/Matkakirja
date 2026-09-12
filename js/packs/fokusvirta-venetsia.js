@@ -200,13 +200,14 @@ export const FOKUSVIRTA_VENETSIA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Venetsia, kesäkuussa 1873. Kosteaa; laguuni haisee laskuveden aikaan.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 348 merkkiä (yläraja 400). */
-    teksti: 'Venetsiassa oven takana saattaa olla meri. Astuin aamulla '
-      + 'majatalon portaille ja olin mennä kaupunkiin uimaan. Gondolieri tuli '
-      + 'hakemaan ja piti ilmeensä ihailtavan suorana. Kuljimme palatsien ohi '
-      + 'niin hiljaa, että kuulin lusikan osuvan kahvikuppiin yläkerrassa. '
-      + 'Täällä taloilla on hienot julkisivut, mutta vesi pääsee kuuntelemaan '
-      + 'niiden aamiaista.',
+    /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
+     * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
+     * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
+     * julkaisua. */
+    teksti: 'Venetsiassa majatalon ovi avautui veteen, ja olin astua uimaan. '
+      + 'Gondolieri piti ilmeensä suorana. Palatsien välissä kuulin lusikan '
+      + 'osuvan kahvikuppiin yläkerrassa. Taloilla oli hienot julkisivut; '
+      + 'vesi kuunteli niiden aamiaista.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
@@ -226,24 +227,23 @@ export const FOKUSVIRTA_VENETSIA = {
      * saa reaktion).
      */
     reaktiot: [
-      { id: 'venetsia.r1', ankkuri: 'saattaa olla meri', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+      { id: 'venetsia.r1', ankkuri: 'ovi avautui veteen', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Oven takana oleva meri on outo ajatus.' },
-      { id: 'venetsia.r2', ankkuri: 'mennä kaupunkiin uimaan', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+      { id: 'venetsia.r2', ankkuri: 'olin astua uimaan', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
         perustelu: 'Merkinnän paras vitsi.' },
-      { id: 'venetsia.r3', ankkuri: 'ihailtavan suorana', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'venetsia.r3', ankkuri: 'piti ilmeensä suorana', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Gondolieri ei naura ääneen, isoisä huomaa sen.' },
       { id: 'venetsia.r4', ankkuri: 'lusikan osuvan kahvikuppiin', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Hiljaisuus kantaa yläkerran aamiaisen.' },
-      { id: 'venetsia.r5', ankkuri: 'kuuntelemaan niiden aamiaista', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'venetsia.r5', ankkuri: 'vesi kuunteli niiden aamiaista', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Päätöslause saa hiljaisen nyökkäyksen.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Venetsiassa oven takana saattaa olla meri. Astuin '
-      + 'aamulla majatalon portaille ja olin mennä kaupunkiin uimaan. '
-      + 'Gondolieri tuli hakemaan ja piti ilmeensä ihailtavan suorana. '
-      + 'Kuljimme palatsien ohi niin hiljaa, että kuulin lusikan osuvan '
-      + 'kahvikuppiin yläkerrassa. [softly] Täällä taloilla on hienot '
-      + 'julkisivut, mutta vesi pääsee kuuntelemaan niiden aamiaista.',
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
+    luenta: '[curious] Venetsiassa majatalon ovi avautui veteen, ja olin '
+      + 'astua uimaan. Gondolieri piti ilmeensä suorana. Palatsien välissä '
+      + 'kuulin lusikan osuvan kahvikuppiin yläkerrassa. [softly] Taloilla '
+      + 'oli hienot julkisivut; vesi kuunteli niiden aamiaista.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-venetsia.mp3',
   },
 
@@ -340,14 +340,16 @@ export const FOKUSVIRTA_VENETSIA = {
       },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* TEKSTIPILOTTI 12.9.2026: nykyliikenteen yksi lause lisätty
+     * rikkomatta viiden kuvan romanssipoikkeusta. */
     kommentti: [
       // Tekstisession albumirepliikki (12:20; omistaja 9.9.: "hyväksyn kaiken
       // mitä se ehdottaa sinulle"). 106 merkkiä. Edellinen: 'Kanavilla kulkee
       // nyt vesibussejakin. Isoisä kuunteli aamiaista; minä olisin selvittänyt
       // sen ikkunan.'
-      'Tässä Venetsia. Hetkinen. Nuo ovat yksityisiä. Hän vain sattui '
-      + 'jokaiseen hyvään kuvakulmaan. Sulje albumi.',
+      'Venetsiassa kuljetaan yhä vesibusseilla. Minä lennän nykyään vähän pidempää reittiä. '
+      + 'Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen '
+      + 'hyvään kuvakulmaan. No, ehkä minä vähän odotin.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'rakkaus', voimakkuus: 0.8 },
