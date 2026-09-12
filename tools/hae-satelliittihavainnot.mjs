@@ -1,55 +1,62 @@
 /*
- * SATELLIITTILINSSIN AINEISTON HAKU — ICEYE Open Data (STAC) →
+ * SATELLIITTILINSSIN AINEISTON HAKU — NASAn astronauttien Maa-kuvat →
  * js/linssit/satelliitti-data.js.
  *
  *   NODE_USE_ENV_PROXY=1 node tools/hae-satelliittihavainnot.mjs
  *
  * Työkalu on AJETTAVA ERIKSEEN eikä osa pelin latausta: linssi lukee
- * valmiin aineistotiedoston, jotta peli ei tee 500 verkkopyyntöä
- * aukaistessaan linssin eikä ole kiinni siitä, vastaako S3 juuri nyt.
- * Kuvia EI tuoda repoon — aineistoon tallentuu vain osoite.
+ * valmiin aineistotiedoston, jotta peli ei tee kymmeniä verkkopyyntöjä
+ * linssin auetessa eikä ole kiinni siitä, vastaako NASAn palvelin juuri
+ * nyt. Kuvia EI tuoda repoon — aineistoon tallentuu vain osoite.
  *
- * ── MIKSI RYHMITTELY ON FOOTPRINTISTÄ EIKÄ NIMESTÄ ────────────────
+ * ── MIKSI AINEISTO VAIHTUI (omistaja 12.9.2026) ───────────────────
  *
- * Sama kohde kuvataan monta kertaa, ja katalogissa on kolme asiaa,
- * jotka menevät helposti sekaisin:
+ * Sanatarkasti: *"Uusi linssi toimii nyt hyvin, mutta valitettavasti
+ * itse materiaali on aika epäkiinnostavaa. Onko mitään muuta
+ * tietolähdettä, mitä voitaisiin käyttää samalla logiikalla ja korvata
+ * vain data johonkin toiseen?"* — ja kysymyskorttiin vastaus:
+ * *"Astronauttien Maa-kuvat"*.
  *
- *   (A) SAMA KOHDE ERI KUVAUSAIKOINA. Kaksi eri STAC-tietuetta, joiden
- *       jalanjäljet ovat käytännössä päällekkäin. Nämä kuuluvat YHTEEN
- *       pisteeseen ja ovat sen havaintogalleria.
- *   (B) SAMAN HAVAINNON ERI TUOTTEET (SLC, GRD, QLK, CSI, VID). Nämä
- *       ovat YHDEN STAC-tietueen assetteja, eivät neljä havaintoa.
- *       Luettelo kulkee mukana kenttänä `tuotteet`.
- *   (C) VIEREKKÄISET ERI KUVAUSALUEET. Esimerkiksi Panaman kanavan
- *       yhdeksän spotlight-ruutua samalta ylilennolta kuuden sekunnin
- *       välein: ne ovat eri alueita, eivät saman alueen toistoja, ja
- *       niistä tulee ERI pisteitä.
+ * Harmaa tutkakuva (ICEYE, v1794–v1801) ei kerro katsojalle mitään
+ * ilman selitystä. Värivalokuvassa näkee heti mitä katsoo: kaupungit
+ * yöllä, tulivuoret, atollit, jokisuistot, hiekkadyynit, hurrikaanit,
+ * revontulet. Linssin logiikka säilyi täsmälleen ennallaan — vain
+ * tämä työkalu ja sen tuottama aineisto vaihtuivat. Juuri se on
+ * linssin arvo: se on aineistosta riippumaton.
  *
- * Sääntö on siksi geometrinen eikä nimellinen: kaksi tietuetta ovat
- * samaa kohdetta, kun niiden jalanjälkien leikkaus kattaa vähintään
- * PEITTO_RAJA pienemmän jalanjäljen pinta-alasta JA jalanjäljet ovat
- * kokoluokaltaan vertailukelpoiset (KOKO_SUHDE). Kokoehto estää
- * ketjuuntumisen: yksi 300 km:n scan-kuva liimaisi muuten kymmenen
- * erillistä 6 km:n spotlight-kohdetta yhdeksi.
+ * ── MIKSI KOHTEET VALITAAN KÄSIN ──────────────────────────────────
  *
- * Kaupungin nimeä tai keskipisteiden läheisyyttä EI käytetä, eikä
- * luokittelua rakenneta tiedostonimeen (osa osoitteista sattuu
- * sisältämään paikannimen; sitä ei lueta).
+ * Tutka-aineistossa kohteet kelpasi ryhmitellä koneellisesti
+ * jalanjäljistä, koska jokaisella kuvauksella oli mitattu bbox.
+ * Astronautin ottamassa valokuvassa ei ole sellaista: kamera osoittaa
+ * minne astronautti sen käänsi, kuvassa on vinoja perspektiivejä,
+ * pilviä, ikkunankehyksiä ja avaruusaseman omia rakenteita. Kelvollista
+ * kuvaa EI voi valita metatiedosta — se pitää katsoa.
  *
- * ── OLETUSKUVAN VALINTA ───────────────────────────────────────────
+ * KOHTEET alla on siksi käsin katsottu ja hylätty luettelo: jokainen
+ * kuva on avattu ja arvioitu (rajaus, pilvet, terävyys, tunnistuuko
+ * kohde), ja jokaiselle on kirjoitettu oma suomenkielinen kuvateksti.
+ * Kuvateksti on linssissä ainoa teksti, jonka pelaaja näkee, joten se
+ * on sisältötyötä eikä metatiedon kopiointia.
  *
- * Oletus ei ole "uusin" vaan paras yleiskuva, ja sääntö on
- * kirjoitettu auki js/linssit/satelliitti.js:n funktioon
- * `parasHavainto` — täällä se vain tallennetaan kenttään `oletus`,
- * jotta aineisto on luettavissa ilman peliä. Sama järjestys
- * molemmissa; tests/satelliitti.test.mjs vartioi.
+ * Työkalu hakee koneellisesti sen, mikä on koneellisesti haettavissa:
+ * kuvaosoitteet, kuvausajan, retkikunnan ja kuvaajan NASAn omasta
+ * rajapinnasta — ja tarkistaa, että jokainen osoite vastaa.
  *
- * ── KOHTEIDEN VALINTA ─────────────────────────────────────────────
+ * ── YKSI PISTE PER PAIKKA, GALLERIA PISTEEN SISÄLLÄ ───────────────
  *
- * ANKKURIT alla on käsin valittu, tarkistettu luettelo: yksi rivi per
- * piste, ankkurina kohteen likimääräinen sijainti. Työkalu etsii sitä
- * lähimpänä olevan footprint-ryhmän ja ottaa sen KOKONAAN. Näin
- * kohteen lisääminen on yhden rivin muutos eikä uusi aineistotiedosto.
+ * Sama sääntö kuin ennen: saman paikan eri kuvauskerrat ovat yhden
+ * pisteen galleria (Etna 2002 ja 2006, Dubai päivällä ja yöllä), eri
+ * paikat ovat eri pisteitä. Saman paikan kuvat ovat eri päiviltä,
+ * jotta pikkukuvien päiväykset erottavat ne toisistaan.
+ *
+ * ── LISENSSI ──────────────────────────────────────────────────────
+ *
+ * NASAn kuvat ovat public domainia: käyttö ei vaadi lupaa eikä maksua,
+ * ja lähde mainitaan hyvän tavan mukaisesti. Kuvan päällä oleva leima
+ * "Valokuva avaruudesta · NASA" ja info-popupin lähdelinkki kertovat
+ * aina, mistä kuva on. ICEYE-attribuutio poistui, koska aineistoa ei
+ * enää käytetä.
  */
 
 import { writeFileSync } from 'node:fs';
@@ -58,197 +65,472 @@ import { fileURLToPath } from 'node:url';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-/** Kokoelman osoite (ICEYE Open Data, STAC 1.0). */
-export const KOKOELMA = 'https://iceye-open-data-catalog.s3.amazonaws.com/collections/iceye-sar.json';
+/** NASAn kuvakirjaston rajapinta (ei avainta, CORS *). */
+export const RAJAPINTA = 'https://images-api.nasa.gov';
+
+/** Kuvasivu ihmiselle — info-popupin lähdelinkki. */
+export const KUVASIVU = 'https://images.nasa.gov/details/';
 
 /**
- * Kokoelmassa on 500 varsinaista kuvausta ja yksi kooste
- * (`000-iceye-sar-collection-footprints`), joka ei ole havainto vaan
- * kaikkien jalanjälkien yhdiste. Rajaus on tunnuksen etuliite.
+ * KOHTEET — käsin katsottu luettelo.
+ *
+ *   tunnus  pisteen avain (pysyvä)
+ *   nimi    yläpalkkiin ja pisteen viereen
+ *   seutu   info-popupin paikkarivi
+ *   lat/lon pisteen paikka pallolla
+ *   selite  yhden virkkeen kuvaus kohteesta
+ *   oletus  gallerian ensimmäinen kuva (paras yleiskuva, ei uusin)
+ *   kuvat   [{ id, teksti }] — NASA-kuvatunnus ja sen oma kuvateksti
  */
-export const TIETUEEN_ETULIITE = 'ICEYE_';
-
-/** Jalanjälkien päällekkäisyys pienemmästä pinta-alasta (ks. yllä). */
-export const PEITTO_RAJA = 0.5;
-/** Suurin sallittu kokosuhde saman kohteen jalanjälkien välillä. */
-export const KOKO_SUHDE = 4;
-
-/**
- * Kohteet: tunnus, näytettävä nimi, seutu, ankkuri (lat, lon) ja
- * yhden virkkeen selite. Ankkuri on vain hakuavain — pisteen lopullinen
- * paikka lasketaan ryhmän jalanjäljistä.
- */
-export const ANKKURIT = [
+export const KOHTEET = [
   {
-    tunnus: 'venetsia', nimi: 'Venetsia', seutu: 'Italia', lat: 45.437, lon: 12.329,
-    selite: 'Laguunikaupunki tutkan silmin: kanavat ovat mustia, kivitalot valkoisia.',
+    tunnus: 'etna', nimi: 'Etna', seutu: 'Sisilia, Italia', lat: 37.751, lon: 14.994,
+    selite: 'Euroopan korkein toimiva tulivuori, joka purkautuu useammin kuin mikään muu.',
+    oletus: 'iss005e19024',
+    kuvat: [
+      {
+        id: 'iss005e19024',
+        teksti: 'Etnan purkaus lokakuussa 2002. Tumma tuhkapilvi kulkee kaakkoon Sisilian ylle, '
+          + 'ja sen vasemmalla puolella nousee vaaleampaa savua maastopaloista, jotka rinteitä '
+          + 'alas valunut laava sytytti. Miehistö sai purkauksen kuvaan sen alkuvaiheessa.',
+      },
+      {
+        id: 'iss013e62714',
+        teksti: 'Sama vuori neljä vuotta myöhemmin rauhallisempana: huippukraattereista nousee '
+          + 'höyryä ja hiukan tuhkaa. Mustat laavavirrat erottuvat vihreästä rinteestä kuin '
+          + 'maalitahrat — jokainen niistä on oma purkauksensa.',
+      },
+    ],
   },
   {
-    tunnus: 'krakova', nimi: 'Krakova', seutu: 'Puola', lat: 50.048, lon: 19.932,
-    selite: 'Veikselin mutka ja vanhankaupungin rengaspuisto erottuvat yhtenä silmukkana.',
+    tunnus: 'italia-yolla', nimi: 'Italian saapas yöllä', seutu: 'Italia', lat: 41.30, lon: 14.60,
+    selite: 'Koko niemimaa kerralla: kaupunkien valot piirtävät rannikon tarkemmin kuin kartta.',
+    oletus: 'iss037e018864',
+    kuvat: [
+      {
+        id: 'iss037e018864',
+        teksti: 'Italia ja Sisilia yön valoissa. Rooman ja Napolin kirkkaat läiskät ovat keskellä '
+          + 'kuvaa, Adrianmeri jää oikealle mustaksi. Rannikon ääriviiva syntyy pelkistä '
+          + 'katuvaloista: siellä missä ihmiset asuvat, maa hohtaa, ja vuoristo jää pimeäksi.',
+      },
+    ],
   },
   {
-    tunnus: 'loch-etive', nimi: 'Loch Etiven kapeikko', seutu: 'Skotlanti', lat: 56.456, lon: -5.389,
-    selite: 'Vuoroveden kapeikko, jota on kuvattu päivä toisensa jälkeen: virta piirtyy veteen.',
+    tunnus: 'istanbul', nimi: 'Istanbul', seutu: 'Turkki', lat: 41.02, lon: 28.98,
+    selite: 'Kaupunki kahdella mantereella, ja niiden välissä musta salmi.',
+    oletus: 'iss065e030820',
+    kuvat: [
+      {
+        id: 'iss065e030820',
+        teksti: 'Bosporinsalmi halkoo kultaisen kaupungin kahtia: vasemmalla Eurooppa, oikealla '
+          + 'Aasia. Salmi ja Kultainen sarvi jäävät valojen keskellä täysin mustiksi, ja niiden '
+          + 'yli kulkevat siltojen ohuet valojuovat. Kuvan otti Thomas Pesquet.',
+      },
+      {
+        id: 'iss032e017547',
+        teksti: 'Laajempi näkymä yhdeksän vuotta aiemmin. Kaupungin reuna erottuu yöllä '
+          + 'terävämmin kuin päivällä — siitä kohdasta valot yksinkertaisesti loppuvat.',
+      },
+    ],
   },
   {
-    tunnus: 'kastrup', nimi: 'Kastrup', seutu: 'Kööpenhamina, Tanska', lat: 55.587, lon: 12.784,
-    selite: 'Lentoaseman kiitoradat ja Juutinrauman ranta saman ruudun sisällä.',
+    tunnus: 'sarytsev', nimi: 'Sarytševin tulivuori', seutu: 'Kuriilit, Venäjä', lat: 48.09, lon: 153.20,
+    selite: 'Purkaus, joka osui kohdalle juuri oikealla hetkellä.',
+    oletus: 'iss020e009048',
+    kuvat: [
+      {
+        id: 'iss020e009048',
+        teksti: 'Purkaus kesken nousunsa: ruskea tuhkapatsas työntyy ylös ja sen huipulla lepää '
+          + 'sileä valkoinen pilvenhattu, joka tiivistyy kun ilma nousee pilven mukana. Pilvikatto '
+          + 'on auennut tulivuoren ympäriltä renkaaksi. Avaruusaseman rata sattui kulkemaan '
+          + 'kohdalta juuri tällä hetkellä.',
+      },
+    ],
   },
   {
-    tunnus: 'hoek-van-holland', nimi: 'Hoek van Holland', seutu: 'Alankomaat', lat: 51.950, lon: 4.145,
-    selite: 'Rotterdamin sataman suuaukko, jossa aallonmurtajat työntyvät mereen.',
+    tunnus: 'siveluts', nimi: 'Šiveluts', seutu: 'Kamtšatka, Venäjä', lat: 56.65, lon: 161.36,
+    selite: 'Kamtšatkan vilkkaimpia tulivuoria, lumen ja tuhkan kaksivärinen rinne.',
+    oletus: 'iss014e17165',
+    kuvat: [
+      {
+        id: 'iss014e17165',
+        teksti: 'Höyry- ja tuhkapilvi ajautuu länteen lumisen huipun yli. Vasemmalla rinne on '
+          + 'tuhkan peittämä ja ruskea, oikealla puhtaan valkoinen — tuuli on lajitellut vuoren '
+          + 'kahteen väriin. Purkausjakso oli alkanut muutamaa päivää aiemmin.',
+      },
+    ],
   },
   {
-    tunnus: 'faro', nimi: 'Faro', seutu: 'Portugali', lat: 37.004, lon: -7.916,
-    selite: 'Ria Formosan laguuni ja sen hiekkasärkät Algarven rannikolla.',
+    tunnus: 'popocatepetl', nimi: 'Popocatépetl', seutu: 'Meksiko', lat: 19.023, lon: -98.622,
+    selite: 'Toimiva tulivuori aivan Mexico Cityn kyljessä.',
+    oletus: 'iss064e026423',
+    kuvat: [
+      {
+        id: 'iss064e026423',
+        teksti: 'Yli 5 400 metriä korkean tulivuoren huipulta karkaa ohut höyrypilvi länteen. '
+          + 'Rinteen juurella näkyy peltojen ja teiden verkko: viisitoista miljoonaa ihmistä asuu '
+          + 'alle sadan kilometrin päässä kraatterista.',
+      },
+    ],
   },
   {
-    tunnus: 'teneriffa', nimi: 'Teneriffa', seutu: 'Kanariansaaret', lat: 28.241, lon: -16.673,
-    selite: 'Sama saari kuvattuna joka yö kolmen viikon ajan — tutkan aikasarja.',
+    tunnus: 'fuji', nimi: 'Fuji', seutu: 'Japani', lat: 35.361, lon: 138.727,
+    selite: 'Japanin korkein vuori, lähes täydellinen kartio.',
+    oletus: 'iss074e0459342',
+    kuvat: [
+      {
+        id: 'iss074e0459342',
+        teksti: 'Fuji melkein suoraan ylhäältä. Keskellä näkyy kraatteri mustana kuoppana, ja '
+          + 'lumi valuu siitä säteittäin alas kuin kaadettu maito. Vuori on yhä toimiva '
+          + 'tulivuori, vaikka viime purkauksesta on vuosi 1707.',
+      },
+      {
+        id: 'iss074e0044445',
+        teksti: 'Sama vuori yöllä. Lumihuippu häämöttää harmaana keskellä kaupunkien valoverkkoa: '
+          + 'Fuji-järvien seudulla ja sen ympäristössä asuu yli viisi miljoonaa ihmistä. Kuva on '
+          + 'otettu paikallista aikaa noin puoli viideltä aamulla.',
+      },
+    ],
   },
   {
-    tunnus: 'napolinlahti', nimi: 'Napolinlahti', seutu: 'Italia', lat: 40.649, lon: 14.492,
-    selite: 'Vesuviuksen rinteet ja Sorrenton niemi yhtenä kaistana.',
+    tunnus: 'tokio', nimi: 'Tokio', seutu: 'Japani', lat: 35.68, lon: 139.77,
+    selite: 'Maailman väkirikkain kaupunkiseutu yöllä.',
+    oletus: 'iss073e0918643',
+    kuvat: [
+      {
+        id: 'iss073e0918643',
+        teksti: 'Tokionlahden ympärillä asuu yli 39 miljoonaa ihmistä. Valojen seasta erottuvat '
+          + 'pääratojen linjat, joiden asemat hohtavat ketjuna kirkkaampia pisteitä. Kuva on '
+          + 'otettu paikallista aikaa noin neljältä aamulla.',
+      },
+    ],
   },
   {
-    tunnus: 'panama', nimi: 'Panaman kanavan suu', seutu: 'Panama', lat: 8.898, lon: -79.526,
-    selite: 'Laivat odottavat vuoroaan kanavalle: jokainen valkoinen täplä on alus.',
+    tunnus: 'korea', nimi: 'Korean niemimaa yöllä', seutu: 'Korea', lat: 38.30, lon: 127.20,
+    selite: 'Yökuva, jossa valtioiden raja näkyy pelkkänä pimeytenä.',
+    oletus: 'iss038e038300',
+    kuvat: [
+      {
+        id: 'iss038e038300',
+        teksti: 'Etelä-Korea loistaa alhaalla oikealla, ja sen keskellä on Soulin suuri '
+          + 'valoläiskä. Pohjoisessa on lähes täysin pimeää: ainoa kirkas piste on Pjongjang. '
+          + 'Yökuva mittaa sähkönkäyttöä, ja siksi raja erottuu tässä selvemmin kuin päiväkuvassa.',
+      },
+    ],
   },
   {
-    tunnus: 'niagara', nimi: 'Niagaran putoukset', seutu: 'Kanada ja Yhdysvallat', lat: 43.081, lon: -79.071,
-    selite: 'Putousten kaari ja kaksi kaupunkia joen molemmin puolin.',
+    tunnus: 'dubai', nimi: 'Dubai', seutu: 'Arabiemiirikunnat', lat: 25.13, lon: 55.13,
+    selite: 'Mereen rakennetut keinosaaret, jotka tunnistaa avaruudesta muodosta.',
+    oletus: 'iss073e0247372',
+    kuvat: [
+      {
+        id: 'iss073e0247372',
+        teksti: 'Persianlahden rannalle kasattu hiekka on muotoiltu palmuiksi ja saariryhmäksi: '
+          + 'vasemmalla Palm Jebel Ali, keskellä Palm Jumeirah ja oikealla The World -saaret. '
+          + 'Kaikki näkyvä ranta on ihmisen tekemää.',
+      },
+      {
+        id: 'iss072e447465',
+        teksti: 'Sama rannikko yöllä paikallista aikaa noin kymmeneltä illalla. Palm Jumeirahin '
+          + 'lehdet piirtyvät valoista, ja aavikolle vievät tiet erottuvat oransseina viivoina '
+          + 'kaupungin valkoista hehkua vasten.',
+      },
+    ],
   },
   {
-    tunnus: 'losangeles', nimi: 'Los Angelesin satama', seutu: 'Yhdysvallat', lat: 33.752, lon: -118.230,
-    selite: 'Konttiterminaalit ja nosturirivit, joiden metalli loistaa tutkassa.',
+    tunnus: 'niilin-suisto', nimi: 'Niilin suisto', seutu: 'Egypti', lat: 30.60, lon: 31.20,
+    selite: 'Joki ja sen suisto piirtyvät yöllä valoista, aavikko jää mustaksi.',
+    oletus: 'iss037e004654',
+    kuvat: [
+      {
+        id: 'iss037e004654',
+        teksti: 'Kairo on kirkas ryöppy keskellä kuvaa, ja siitä pohjoiseen avautuu Niilin '
+          + 'suiston valoviuhka. Joen varsi on asuttu kapeana nauhana, ja sen molemmin puolin '
+          + 'alkaa heti aavikon pimeys. Kuvan otti Karen Nyberg.',
+      },
+      {
+        id: 'iss025e009858',
+        teksti: 'Sama seutu avaruusaseman ikkunasta. Niili nousee alhaalta ylös kuin valoköysi, '
+          + 'ja sen päässä suisto levittäytyy Välimerelle; kaukana horisontissa hohtaa ilmakehän '
+          + 'oma vihertävä valo.',
+      },
+    ],
   },
   {
-    tunnus: 'fort-mcmurray', nimi: 'Fort McMurray', seutu: 'Alberta, Kanada', lat: 56.683, lon: -111.286,
-    selite: 'Kaksi viikkoa peräkkäisiä kuvauksia kevättulvan aikaan.',
+    tunnus: 'richat', nimi: 'Saharan silmä', seutu: 'Mauritania', lat: 21.124, lon: -11.401,
+    selite: 'Neljäkymmentä kilometriä leveä rengasrakenne keskellä aavikkoa.',
+    oletus: 'iss069e005471',
+    kuvat: [
+      {
+        id: 'iss069e005471',
+        teksti: 'Richat-rakenne eli Saharan silmä. Kyseessä ei ole törmäyskraatteri vaan '
+          + 'kohonnut kalliokupoli, jonka kerrokset tuuli ja vesi ovat kuluttaneet paljaiksi '
+          + 'renkaiksi. Kovat kerrokset jäivät harjanteiksi, pehmeät kuluivat kouruiksi.',
+      },
+      {
+        id: 'iss002e5693',
+        teksti: 'Sama kohde 22 vuotta aiemmin, kun hiekkapöly värjää ilman punertavaksi. '
+          + 'Astronautit ovat käyttäneet silmää maamerkkinä alusta asti: aavikolla ei ole '
+          + 'juuri muuta, mistä paikan tunnistaisi.',
+      },
+    ],
   },
   {
-    tunnus: 'fort-simpson', nimi: 'Fort Simpson', seutu: 'Luoteisterritoriot, Kanada', lat: 61.878, lon: -121.369,
-    selite: 'Kylä saarella Mackenzie- ja Liard-jokien yhtymäkohdassa, kuvattuna jäidenlähdön aikaan.',
+    tunnus: 'namib', nimi: 'Namibin dyynit', seutu: 'Namibia', lat: -25.00, lon: 16.00,
+    selite: 'Maailman korkeimpia hiekkadyynejä, ja niiden terävä reuna kalliomaata vasten.',
+    oletus: 'iss073e0511487',
+    kuvat: [
+      {
+        id: 'iss073e0511487',
+        teksti: 'Oikealla punainen dyynikenttä, vasemmalla paljas kalliomaa — ja niiden välissä '
+          + 'lähes viivasuora raja. Meren puolelta puhaltava tuuli kasaa hiekan aina samaan '
+          + 'kohtaan, eikä se pääse kallioiden yli.',
+      },
+      {
+        id: 'iss071e230722',
+        teksti: 'Dyynikenttä ylhäältä Atlantin rannikolla. Hiekka vaihtaa väriä vaaleasta '
+          + 'ruosteenpunaiseen sitä mukaa kuin rautapitoiset jyvät hapettuvat: mitä vanhempi '
+          + 'hiekka, sitä punaisempi dyyni.',
+      },
+    ],
   },
   {
-    tunnus: 'juneau', nimi: 'Juneau', seutu: 'Alaska, Yhdysvallat', lat: 58.295, lon: -134.424,
-    selite: 'Vuonon pohjukan kaupunki jäätiköiden ja jyrkkien rinteiden välissä.',
+    tunnus: 'betsiboka', nimi: 'Betsiboka', seutu: 'Madagaskar', lat: -16.00, lon: 46.55,
+    selite: 'Joki, joka kuljettaa punaisen maan mereen.',
+    oletus: 'iss071e218069',
+    kuvat: [
+      {
+        id: 'iss071e218069',
+        teksti: 'Betsiboka-joki tuo Bombetokanlahteen niin paljon rautapitoista maa-ainesta, '
+          + 'että vesi on ruosteenpunaista. Saarekkeet lahden suulla ovat kasvaneet siitä '
+          + 'maasta, jonka joki on huuhtonut metsänhakkuiden jäljiltä.',
+      },
+      {
+        id: 'iss018e025705',
+        teksti: 'Sama joki tulvillaan vuonna 2009, kun trooppinen myrsky Eric oli kastellut sen '
+          + 'valuma-alueen. Punaisen veden rinnalla näkyy vielä tummanvihreää metsää — juuri '
+          + 'sen katoaminen tekee joesta näin punaisen.',
+      },
+    ],
   },
   {
-    tunnus: 'ucayali', nimi: 'Ucayali', seutu: 'Peru', lat: -8.393, lon: -74.519,
-    selite: 'Amazonin latvajoen mutkat sademetsässä, jossa pilvet eivät haittaa tutkaa.',
+    tunnus: 'gibraltar', nimi: 'Gibraltarinsalmi', seutu: 'Espanja ja Marokko', lat: 35.95, lon: -5.60,
+    selite: 'Neljäntoista kilometrin kapeikko kahden mantereen ja kahden meren välissä.',
+    oletus: 'iss071e217183',
+    kuvat: [
+      {
+        id: 'iss071e217183',
+        teksti: 'Espanja vasemmalla, Marokko oikealla, ja niiden välissä salmi, joka yhdistää '
+          + 'Atlantin Välimereen. Oikeassa yläkulmassa näkyy avaruusaseman robottikäsi. Kuvan '
+          + 'otti astronautti Butch Wilmore.',
+      },
+      {
+        id: 'iss073e0686324',
+        teksti: 'Sama salmi yöllä. Molempien rannikoiden valot piirtävät kapeikon muodon, ja '
+          + 'horisontissa hohtaa ilmakehän oma vihreä valo. Paikallista aikaa oli puoli kaksi '
+          + 'yöllä.',
+      },
+    ],
   },
   {
-    tunnus: 'victorian-putoukset', nimi: 'Victorian putoukset', seutu: 'Sambia ja Zimbabwe', lat: -17.936, lon: 25.856,
-    selite: 'Sambesin kuilu ja putousten reuna; alapuolella siksakkaava rotko.',
+    tunnus: 'bahama', nimi: 'Bahaman matalikot', seutu: 'Bahama', lat: 24.00, lon: -77.50,
+    selite: 'Kirkas vesi matalan kalkkipohjan päällä — avaruuden näkyvin turkoosi.',
+    oletus: 'iss071e449837',
+    kuvat: [
+      {
+        id: 'iss071e449837',
+        teksti: 'Turkoosit alueet ovat vain muutaman metrin syvyisiä kalkkihiekkamatalikoita, '
+          + 'joista valo heijastuu takaisin; tummansininen on syvää merta. Ylhäällä kaartuu '
+          + 'Maan reuna ja sen yllä ohut ilmakehä.',
+      },
+      {
+        id: 'iss058e002206',
+        teksti: 'Sama matalikkoalue Kuuban suunnasta katsottuna. Kuvan vasemmassa reunassa näkyy '
+          + 'avaruusasemaan telakoitu Progress-rahtialus — muistutus siitä, mistä ikkunasta '
+          + 'kuvat otetaan.',
+      },
+    ],
   },
   {
-    tunnus: 'kaohsiung', nimi: 'Kaohsiung', seutu: 'Taiwan', lat: 22.594, lon: 120.994,
-    selite: 'Yksi maailman vilkkaimmista konttisatamista kahtena eri vuonna.',
+    tunnus: 'new-york', nimi: 'New York yöllä', seutu: 'Yhdysvallat', lat: 40.71, lon: -74.00,
+    selite: 'Katuverkko, jonka muodon tunnistaa pelkistä valoista.',
+    oletus: 'iss064e016772',
+    kuvat: [
+      {
+        id: 'iss064e016772',
+        teksti: 'Manhattanin ruutukaava erottuu vaaleana suikaleena, ja Central Park on sen '
+          + 'keskellä musta suorakulmio. Joet ja satama jäävät pimeiksi, sillat näkyvät ohuina '
+          + 'valojuovina niiden yli.',
+      },
+      {
+        id: 'iss053e239527',
+        teksti: 'Laajempi näkymä kaikkiin viiteen kaupunginosaan ja New Jerseyn puolelle. '
+          + 'Oranssit valot ovat vanhaa natriumvaloa, kylmän valkoiset uutta LED-valaistusta — '
+          + 'ero kertoo, missä katulamput on jo vaihdettu.',
+      },
+    ],
   },
   {
-    tunnus: 'zhengzhou', nimi: 'Zhengzhou', seutu: 'Kiina', lat: 34.748, lon: 113.782,
-    selite: 'Suurkaupungin ruutukaava, jonka korttelit erottuvat teräväreunaisina.',
+    tunnus: 'manicouagan', nimi: 'Manicouaganin kraatteri', seutu: 'Québec, Kanada', lat: 51.38, lon: -68.70,
+    selite: 'Rengasjärvi, joka on 214 miljoonaa vuotta vanhan törmäyksen jälki.',
+    oletus: 'iss034e052297',
+    kuvat: [
+      {
+        id: 'iss034e052297',
+        teksti: 'Jäätynyt rengasjärvi kiertää keskelle jäänyttä saarta. Kraatteri syntyi noin '
+          + '214 miljoonaa vuotta sitten asteroidin törmäyksestä, ja jääkaudet ovat sittemmin '
+          + 'hioneet sen reunat matalaksi. Se on avaruudesta katsottuna yksi Maan '
+          + 'tunnistettavimmista muodoista.',
+      },
+    ],
   },
   {
-    tunnus: 'port-klang', nimi: 'Port Klang', seutu: 'Malesia', lat: 2.688, lon: 101.289,
-    selite: 'Malakan salmen satama ja sen mutaiset rannikkovedet.',
+    tunnus: 'grand-canyon', nimi: 'Grand Canyon', seutu: 'Arizona, Yhdysvallat', lat: 36.10, lon: -112.10,
+    selite: 'Joen kaivama rotko, jonka haarat levittäytyvät kuin puun oksat.',
+    oletus: 'iss074e0208838',
+    kuvat: [
+      {
+        id: 'iss074e0208838',
+        teksti: 'Colorado-joki alkoi kaivaa rotkoa noin viisi miljoonaa vuotta sitten. '
+          + 'Talvikuvassa varjot ja lumi korostavat sivurotkojen haarautuvaa kuviota, ja '
+          + 'ylätasangot erottuvat vaaleina — ne ovat tuhat metriä rotkon pohjan yläpuolella.',
+      },
+    ],
   },
   {
-    tunnus: 'adelaide-river', nimi: 'Adelaide Riverin seutu', seutu: 'Pohjoisterritorio, Australia', lat: -13.784, lon: 130.713,
-    selite: 'Trooppinen tulvatasanko sadekauden lopulla, vesi mustana pensaikon seassa.',
+    tunnus: 'lago-argentino', nimi: 'Lago Argentino', seutu: 'Patagonia, Argentiina', lat: -50.30, lon: -72.80,
+    selite: 'Turkoosi jäätikköjärvi lumihuippujen keskellä.',
+    oletus: 'iss074e0573516',
+    kuvat: [
+      {
+        id: 'iss074e0573516',
+        teksti: 'Järven väri tulee jäätikköjauhosta: jäätiköt jauhavat kalliota hienoksi '
+          + 'jauheeksi, joka jää veteen leijumaan ja heijastaa valoa turkoosina. Järven '
+          + 'sormet työntyvät suoraan Andien lumisten vuorten väliin.',
+      },
+    ],
   },
   {
-    tunnus: 'thwaites', nimi: 'Thwaitesin jäätikkö', seutu: 'Antarktis', lat: -75.483, lon: -106.825,
-    selite: 'Jäätikön railokenttä ja kelluvan kielen reuna, kaksi vuotta peräkkäin.',
+    tunnus: 'ucayali', nimi: 'Ucayali', seutu: 'Peru', lat: -7.50, lon: -74.80,
+    selite: 'Amazonin latvajoki, joka vaihtaa uomaansa jatkuvasti.',
+    oletus: 'iss074e0492148',
+    kuvat: [
+      {
+        id: 'iss074e0492148',
+        teksti: 'Joki kiemurtelee sademetsän läpi niin jyrkissä mutkissa, että osa niistä on jo '
+          + 'kuroutunut umpeen: vanhat uomat näkyvät kaarevina järvinä joen vierellä. Ucayali on '
+          + 'Amazonin pääasiallinen latvahaara.',
+      },
+    ],
+  },
+  {
+    tunnus: 'taifuuni', nimi: 'Taifuunin silmä', seutu: 'Tyynimeri, Japanin eteläpuolella', lat: 26.00, lon: 139.00,
+    selite: 'Myrskyn silmä ylhäältä katsottuna — tyyni reikä keskellä pyörrettä.',
+    oletus: 'iss073e1044643',
+    kuvat: [
+      {
+        id: 'iss073e1044643',
+        teksti: 'Taifuuni Halong luokkaa neljä Japanin eteläpuolella. Keskellä on silmä, jossa '
+          + 'ilma laskeutuu ja pilvet hajoavat; sen ympärillä kiertää tiivis pilviseinä, jossa '
+          + 'tuuli on kovimmillaan. Kuvan reunoilla näkyvät avaruusaseman aurinkopaneeli ja '
+          + 'robottikäsi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'revontulet-etela', nimi: 'Etelän revontulet', seutu: 'Uuden-Seelannin kaakkoispuoli', lat: -48.00, lon: 179.00,
+    selite: 'Revontulet ylhäältä: valo on samalla korkeudella kuin katsoja.',
+    oletus: 'iss073e0256896',
+    kuvat: [
+      {
+        id: 'iss073e0256896',
+        teksti: 'Etelän revontulet pyörteilevät pilvien yllä Uuden-Seelannin kaakkoispuolella. '
+          + 'Vihreä väri syntyy hapesta noin sadan kilometrin korkeudessa ja punertava '
+          + 'sitä ylempää — avaruusasema kiertää noin 400 kilometrissä, eli valon yläpuolella.',
+      },
+    ],
+  },
+  {
+    tunnus: 'revontulet-pohjoinen', nimi: 'Pohjoisen revontulet', seutu: 'Saint Lawrencenlahti, Kanada', lat: 48.50, lon: -62.00,
+    selite: 'Punaista ja vihreää verhoa Kanadan yllä.',
+    oletus: 'iss072e451060',
+    kuvat: [
+      {
+        id: 'iss072e451060',
+        teksti: 'Revontuliverho seisoo pystyssä kuin valoaita: alaosa on vihreä, yläosa punainen. '
+          + 'Väri kertoo korkeuden, koska ohuessa yläilmakehässä happi ehtii hehkua punaisena. '
+          + 'Tähtiä näkyy verhon läpi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'himalaja', nimi: 'Himalaja', seutu: 'Nepal ja Kiina', lat: 28.30, lon: 85.50,
+    selite: 'Vuorijono, joka jakaa ilmaston kahtia.',
+    oletus: 'iss074e0603570',
+    kuvat: [
+      {
+        id: 'iss074e0603570',
+        teksti: 'Lumiset huiput erottavat Nepalin Tiibetistä. Vuoristo toimii patona: kostea '
+          + 'ilma pysähtyy etelärinteille, ja pohjoispuolen ylätasanko jää kuivaksi. Ero näkyy '
+          + 'kuvassa värinä — alhaalla vihreää, ylhäällä ruskeaa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'goidhoo', nimi: 'Goidhoon atolli', seutu: 'Malediivit', lat: 4.90, lon: 72.90,
+    selite: 'Rengasriutta, jonka sisään jää matala laguuni.',
+    oletus: 'iss010e12917',
+    kuvat: [
+      {
+        id: 'iss010e12917',
+        teksti: 'Atolli on vanhan tulivuoren ympärille kasvanut koralliriutta: vuori on painunut '
+          + 'mereen, riutta jäi. Vaalea vyöhyke on riutan matalikkoa, tummansininen ulkopuolella '
+          + 'on satojen metrien syvyistä. Kuva on osa sarjaa, joka otettiin vuoden 2004 '
+          + 'tsunamin jälkeen.',
+      },
+    ],
   },
 ];
 
-/** Jalanjäljen likimääräinen pinta-ala neliökilometreinä (bbox). */
-export function alaKm2(bbox) {
-  const keskilat = (bbox[1] + bbox[3]) / 2;
-  const leveys = (bbox[2] - bbox[0]) * 111.32 * Math.cos((keskilat * Math.PI) / 180);
-  const korkeus = (bbox[3] - bbox[1]) * 110.57;
-  return Math.max(0, leveys) * Math.max(0, korkeus);
+/**
+ * HTTPS PÄÄLLE. NASAn asset-rajapinta palauttaa osoitteet http-muodossa,
+ * ja selain estäisi ne peliin (sekasisältö) — kuva jäisi tyhjäksi. Sama
+ * palvelin vastaa https:llä, joten osoite korjataan tässä kerran, eikä
+ * pelin tarvitse tietää asiasta mitään.
+ */
+export function https(osoite) {
+  return String(osoite ?? '').replace(/^http:\/\//i, 'https://');
 }
 
-/** Kahden bboxin leikkauksen pinta-ala neliökilometreinä. */
-export function leikkausKm2(a, b) {
-  const x0 = Math.max(a[0], b[0]);
-  const x1 = Math.min(a[2], b[2]);
-  const y0 = Math.max(a[1], b[1]);
-  const y1 = Math.min(a[3], b[3]);
-  if (x1 <= x0 || y1 <= y0) return 0;
-  return alaKm2([x0, y0, x1, y1]);
+/** Kuvaustapa kuvatunnuksesta: iss074e… → avaruusasema. */
+export function kuvaustapa(id) {
+  if (/^iss\d+/i.test(id)) return 'Kansainväliseltä avaruusasemalta';
+  if (/^sts/i.test(id)) return 'Avaruussukkulasta';
+  if (/^sl\d/i.test(id)) return 'Skylab-avaruusasemalta';
+  return 'NASAn miehitetyltä lennolta';
 }
 
-/** Ovatko kaksi jalanjälkeä samaa kohdetta? (ks. sääntö yllä) */
-export function samaKohde(a, b) {
-  const aa = alaKm2(a);
-  const ab = alaKm2(b);
-  if (!(aa > 0) || !(ab > 0)) return false;
-  if (Math.max(aa, ab) / Math.min(aa, ab) > KOKO_SUHDE) return false;
-  return leikkausKm2(a, b) / Math.min(aa, ab) >= PEITTO_RAJA;
-}
-
-/** Yhdisteet: lista bboxeja → lista indeksijoukkoja. */
-export function ryhmita(bboxit) {
-  const isa = bboxit.map((_, i) => i);
-  const etsi = (a) => {
-    let x = a;
-    while (isa[x] !== x) { isa[x] = isa[isa[x]]; x = isa[x]; }
-    return x;
-  };
-  for (let i = 0; i < bboxit.length; i++) {
-    for (let j = i + 1; j < bboxit.length; j++) {
-      if (!samaKohde(bboxit[i], bboxit[j])) continue;
-      const ra = etsi(i);
-      const rb = etsi(j);
-      if (ra !== rb) isa[ra] = rb;
-    }
-  }
-  const ryhmat = new Map();
-  for (let i = 0; i < bboxit.length; i++) {
-    const juuri = etsi(i);
-    if (!ryhmat.has(juuri)) ryhmat.set(juuri, []);
-    ryhmat.get(juuri).push(i);
-  }
-  return [...ryhmat.values()];
-}
-
-/** Tietueen keskipiste: projektion keskiö tai bboxin keskikohta. */
-export function keskipiste(tietue) {
-  const c = tietue.properties?.['proj:centroid'];
-  if (c && Number.isFinite(c.lat) && Number.isFinite(c.lon)) return { lat: c.lat, lon: c.lon };
-  const b = tietue.bbox;
-  return { lat: (b[1] + b[3]) / 2, lon: (b[0] + b[2]) / 2 };
-}
-
-/** Pikkukuvan (THM) osoite tietueen linkeistä, tai null. */
-export function pikkukuva(tietue) {
-  for (const l of tietue.links ?? []) {
-    if (l.rel === 'thumbnail' && l.title === 'Thumbnail' && typeof l.href === 'string') return l.href;
-  }
-  return null;
-}
-
-/** Itselinkki (STAC-tietue) — lähdelinkki pelaajalle. */
-export function itselinkki(tietue) {
-  return (tietue.links ?? []).find((l) => l.rel === 'self')?.href ?? null;
+/** Retkikunta kuvatunnuksesta: iss074e0459342 → "Retkikunta 74". */
+export function retkikunta(id) {
+  const m = String(id).match(/^iss(\d{2,3})e/i);
+  return m ? `Retkikunta ${Number(m[1])}` : null;
 }
 
 /**
- * Saman havainnon tuotteet: asset-avaimista `slc-cog` → SLC.
- * Tämä on kohta (B): ne EIVÄT ole eri havaintoja.
+ * Kuvausaika siistittynä.
+ *
+ * NASAn `date_created` on näissä kuvissa lähes aina pelkkä päivä
+ * keskiyöksi merkittynä (…T00:00:00Z). Kellonaikaa EI keksitä: jos se
+ * on tasan keskiyö, tallennetaan pelkkä päivä, ja linssin `aikateksti`
+ * jättää kellonajan silloin pois. Jos aineistossa joskus on oikea
+ * kellonaika, se säilyy sellaisenaan.
  */
-export function tuotteet(tietue) {
-  const ulos = [];
-  for (const avain of Object.keys(tietue.assets ?? {})) {
-    const osa = avain.split('-')[0].toUpperCase();
-    if (osa && osa !== 'GRAPHIC' && !ulos.includes(osa)) ulos.push(osa);
-  }
-  return ulos.sort();
+export function siistiAika(iso) {
+  const t = String(iso ?? '');
+  const m = t.match(/^(\d{4}-\d{2}-\d{2})T(\d{2}):(\d{2}):(\d{2})/);
+  if (!m) return t.slice(0, 10);
+  if (m[2] === '00' && m[3] === '00' && m[4] === '00') return m[1];
+  return `${m[1]}T${m[2]}:${m[3]}:${m[4]}Z`;
 }
 
 async function haeJson(osoite) {
@@ -267,8 +549,8 @@ async function kuvaVastaa(osoite) {
   }
 }
 
-/** Rinnakkaishaku pienissä erissä, jotta S3 ei tukkeudu. */
-async function erissa(lista, tyo, koko = 16) {
+/** Rinnakkaishaku pienissä erissä, jottei rajapinta tukkeudu. */
+async function erissa(lista, tyo, koko = 8) {
   const ulos = [];
   for (let i = 0; i < lista.length; i += koko) {
     // eslint-disable-next-line no-await-in-loop
@@ -277,118 +559,86 @@ async function erissa(lista, tyo, koko = 16) {
   return ulos;
 }
 
-/** Havainnon järjestysavain — sama sääntö kuin pelissä (parasHavainto). */
-function laatuavain(h) {
-  const tilat = { spotlight: 3, dwell: 3, stripmap: 2, scan: 1 };
-  return [tilat[h.tila] ?? 0, -(h.katselukulma ?? 90), h.aika];
-}
-
-function parempi(a, b) {
-  const x = laatuavain(a);
-  const y = laatuavain(b);
-  for (let i = 0; i < x.length; i++) {
-    if (x[i] > y[i]) return true;
-    if (x[i] < y[i]) return false;
-  }
-  return false;
+/** Yhden kuvan tiedot NASAn rajapinnasta, tai null jos se ei kelpaa. */
+export async function haeKuva({ id, teksti }) {
+  const haku = await haeJson(`${RAJAPINTA}/search?nasa_id=${encodeURIComponent(id)}`);
+  const tietue = haku.collection?.items?.[0];
+  if (!tietue) return null;
+  const d = tietue.data?.[0] ?? {};
+  const linkit = await haeJson(`${RAJAPINTA}/asset/${encodeURIComponent(id)}`);
+  const osoitteet = (linkit.collection?.items ?? []).map((i) => https(i.href));
+  const kuva = osoitteet.find((h) => /~large\.jpg$/i.test(h));
+  const pikku = osoitteet.find((h) => /~small\.jpg$/i.test(h))
+    ?? osoitteet.find((h) => /~thumb\.jpg$/i.test(h));
+  if (!kuva || !pikku) return null;
+  if (!await kuvaVastaa(kuva) || !await kuvaVastaa(pikku)) return null;
+  const iso = (tietue.links ?? []).find((l) => /~large\.jpg$/i.test(l.href ?? ''));
+  return {
+    id,
+    aika: siistiAika(d.date_created),
+    teksti,
+    kuvaustapa: kuvaustapa(id),
+    retkikunta: retkikunta(id),
+    kuvaaja: d.photographer || null,
+    mitat: iso?.width && iso?.height ? [iso.width, iso.height] : null,
+    kuva: https(kuva),
+    pikku: https(pikku),
+    sivu: `${KUVASIVU}${id}`,
+  };
 }
 
 async function main() {
-  process.stdout.write(`Haetaan kokoelma: ${KOKOELMA}\n`);
-  const kokoelma = await haeJson(KOKOELMA);
-  const osoitteet = (kokoelma.links ?? []).filter((l) => l.rel === 'item').map((l) => l.href);
-  process.stdout.write(`  ${osoitteet.length} tietuelinkkiä\n`);
-
-  const kaikki = (await erissa(osoitteet, async (u) => {
-    try { return await haeJson(u); } catch { return null; }
-  })).filter((d) => d && typeof d.id === 'string' && d.id.startsWith(TIETUEEN_ETULIITE));
-  process.stdout.write(`  ${kaikki.length} varsinaista kuvausta (kooste rajattu pois)\n`);
-
-  const ryhmat = ryhmita(kaikki.map((d) => d.bbox));
-  process.stdout.write(`  ${ryhmat.length} footprint-ryhmää\n`);
-
+  process.stdout.write(`Haetaan NASAn kuvakirjastosta: ${RAJAPINTA}\n`);
   const kohteet = [];
-  for (const ankkuri of ANKKURIT) {
-    let paras = null;
-    let parasEtaisyys = Infinity;
-    for (const ryhma of ryhmat) {
-      for (const i of ryhma) {
-        const k = keskipiste(kaikki[i]);
-        const d = Math.hypot(k.lat - ankkuri.lat, k.lon - ankkuri.lon);
-        if (d < parasEtaisyys) { parasEtaisyys = d; paras = ryhma; }
+  for (const k of KOHTEET) {
+    // eslint-disable-next-line no-await-in-loop
+    const havainnot = (await erissa(k.kuvat, async (kuva) => {
+      try { return await haeKuva(kuva); } catch (e) {
+        process.stdout.write(`  !! ${kuva.id}: ${e.message}\n`);
+        return null;
       }
-    }
-    if (!paras) continue;
-    const havainnot = [];
-    for (const i of paras) {
-      const t = kaikki[i];
-      const kuva = pikkukuva(t);
-      if (!kuva) continue;
-      const p = t.properties ?? {};
-      havainnot.push({
-        id: t.id,
-        aika: p.datetime,
-        tila: p['sar:instrument_mode'] ?? null,
-        satelliitti: p.platform ?? null,
-        katselukulma: Number.isFinite(p['view:incidence_angle'])
-          ? Math.round(p['view:incidence_angle'] * 10) / 10 : null,
-        rata: p['sat:orbit_state'] ?? null,
-        katse: p['sar:observation_direction'] ?? null,
-        polarisaatio: (p['sar:polarizations'] ?? []).join('+') || null,
-        kaista: p['sar:frequency_band'] ?? null,
-        kasittely: p['processing:software']?.processor ?? null,
-        alue: t.bbox.map((x) => Math.round(x * 10000) / 10000),
-        tuotteet: tuotteet(t),
-        kuva,
-        stac: itselinkki(t),
-      });
-    }
-    havainnot.sort((a, b) => (a.aika < b.aika ? -1 : 1));
-    if (!havainnot.length) continue;
-
-    // Kuvaosoitteet tarkistetaan oikeasti: rikkinäinen rivi jää pois.
-    const kunnossa = await erissa(havainnot, async (h) => (await kuvaVastaa(h.kuva) ? h : null));
-    const kelpaavat = kunnossa.filter(Boolean);
-    if (!kelpaavat.length) {
-      process.stdout.write(`  !! ${ankkuri.tunnus}: yksikään kuva ei vastannut\n`);
+    })).filter(Boolean);
+    if (!havainnot.length) {
+      process.stdout.write(`  !! ${k.tunnus}: yksikään kuva ei vastannut\n`);
       continue;
     }
-    const lat = kelpaavat.reduce((s, h) => s + (h.alue[1] + h.alue[3]) / 2, 0) / kelpaavat.length;
-    const lon = kelpaavat.reduce((s, h) => s + (h.alue[0] + h.alue[2]) / 2, 0) / kelpaavat.length;
-    let oletus = kelpaavat[0];
-    for (const h of kelpaavat) if (parempi(h, oletus)) oletus = h;
+    havainnot.sort((a, b) => (a.aika < b.aika ? -1 : 1));
+    const oletus = havainnot.some((h) => h.id === k.oletus) ? k.oletus : havainnot[0].id;
     kohteet.push({
-      tunnus: ankkuri.tunnus,
-      nimi: ankkuri.nimi,
-      seutu: ankkuri.seutu,
-      selite: ankkuri.selite,
-      lat: Math.round(lat * 10000) / 10000,
-      lon: Math.round(lon * 10000) / 10000,
-      oletus: oletus.id,
-      havainnot: kelpaavat,
+      tunnus: k.tunnus,
+      nimi: k.nimi,
+      seutu: k.seutu,
+      selite: k.selite,
+      lat: k.lat,
+      lon: k.lon,
+      oletus,
+      havainnot,
     });
-    process.stdout.write(`  ${ankkuri.tunnus}: ${kelpaavat.length} havaintoa, oletus ${oletus.id}\n`);
+    process.stdout.write(`  ${k.tunnus}: ${havainnot.length} kuvaa, oletus ${oletus}\n`);
   }
 
   const paiva = new Date().toISOString().slice(0, 10);
-  const sisalto = `/*\n`
-    + ` * SATELLIITTILINSSIN HAVAINNOT — KONEELLISESTI TUOTETTU TIEDOSTO.\n`
-    + ` *\n`
-    + ` * Älä muokkaa käsin: aja tools/hae-satelliittihavainnot.mjs, joka\n`
-    + ` * lukee ICEYE Open Data -kokoelman STAC-katalogin, ryhmittelee\n`
-    + ` * kuvaukset jalanjäljen mukaan kohteiksi ja tarkistaa jokaisen\n`
-    + ` * kuvaosoitteen. Aineisto on CC BY 4.0, tekijä ICEYE; kuvat EIVÄT\n`
-    + ` * ole repossa vaan ladataan lähteen omasta ämpäristä.\n`
-    + ` *\n`
-    + ` * Haettu: ${paiva}. Kohteita ${kohteet.length}, havaintoja `
+  const sisalto = '/*\n'
+    + ' * SATELLIITTILINSSIN KUVAT — KONEELLISESTI TUOTETTU TIEDOSTO.\n'
+    + ' *\n'
+    + ' * Älä muokkaa käsin: aja tools/hae-satelliittihavainnot.mjs, joka\n'
+    + ' * lukee NASAn kuvakirjaston rajapinnasta astronauttien ottamien\n'
+    + ' * Maa-kuvien osoitteet ja kuvaustiedot ja tarkistaa jokaisen\n'
+    + ' * osoitteen. Kohteet ja suomenkieliset kuvatekstit ovat työkalun\n'
+    + ' * KOHTEET-luettelossa, ja ne on valittu kuvat katsomalla.\n'
+    + ' *\n'
+    + ' * NASAn kuvat ovat public domainia; kuvat EIVÄT ole repossa vaan\n'
+    + ' * ladataan NASAn omasta ämpäristä.\n'
+    + ' *\n'
+    + ` * Haettu: ${paiva}. Kohteita ${kohteet.length}, kuvia `
     + `${kohteet.reduce((s, k) => s + k.havainnot.length, 0)}.\n`
-    + ` */\n\n`
+    + ' */\n\n'
     + `export const SATELLIITTI_LAHDE = ${JSON.stringify({
-      aineisto: 'ICEYE Open Data (SAR)',
-      tekija: 'ICEYE',
-      lisenssi: 'CC BY 4.0',
-      osoite: 'https://sar.iceye.com/6.0.6/opendata/opendata/',
-      katalogi: KOKOELMA,
+      aineisto: 'Astronauttien Maa-kuvat',
+      tekija: 'NASA',
+      lisenssi: 'Public domain',
+      osoite: 'https://images.nasa.gov/',
+      katalogi: `${RAJAPINTA}/search?media_type=image`,
       haettu: paiva,
     }, null, 2)};\n\n`
     + `export const SATELLIITTI_KOHTEET = ${JSON.stringify(kohteet, null, 2)};\n`;

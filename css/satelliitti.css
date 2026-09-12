@@ -476,7 +476,19 @@ body.aikajana-palkki-auki .topbar {
   cursor: pointer;
 }
 
-.satelliitti-popup-selite { margin-top: 6px; color: rgba(223, 246, 232, 0.78); }
+/*
+ * KUVATEKSTI ON POPUPIN ENSIMMÄINEN RIVI (v1802): se on ainoa teksti,
+ * jonka pelaaja lukee, joten se erottuu lähdetiedoista hieman
+ * isompana ja saa oman erotusviivansa alleen.
+ */
+.satelliitti-popup-selite {
+  margin: 2px 0 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(93, 255, 168, 0.18);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: rgba(233, 250, 240, 0.92);
+}
 .satelliitti-otsikko {
   margin: 0 0 6px;
   font-family: var(--font-type, system-ui), system-ui, sans-serif;
