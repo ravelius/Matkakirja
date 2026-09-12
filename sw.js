@@ -283,6 +283,12 @@ const SHELL = [
   './js/linssit/radiosoitin.js',
   './js/linssit/viritin.js',
   './js/linssit/radio.js',
+  // Satelliittilinssi (12.9.2026): linssi, sen koneellisesti tuotettu
+  // havaintoaineisto ja oma tyylitiedosto. Kuvat EIVÄT ole repossa
+  // eivätkä SHELLissä — ne tulevat ICEYEn omasta ämpäristä pyydettäessä.
+  './js/linssit/satelliitti.js',
+  './js/linssit/satelliitti-data.js',
+  './css/satelliitti.css',
   './js/linssit/topografia.js',
   './js/linssit/vertailu.js',
   './js/linssit/maatiedot.js',
