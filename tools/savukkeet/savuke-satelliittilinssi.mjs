@@ -1,5 +1,5 @@
 /*
- * SELAINSAVUKE: SATELLIITTILINSSI (ICEYEn arkistotutkahavainnot).
+ * SELAINSAVUKE: SATELLIITTILINSSI (NASAn astronauttien Maa-kuvat).
  *
  *   NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-satelliittilinssi.mjs
  *
@@ -9,9 +9,11 @@
  * koskemattomana. Ne mitataan tässä oikealla pallolaudalla.
  *
  * VERKKO: kaikki muu ulkoinen liikenne katkaistaan, mutta ämpäri
- * (laatat, Globe.gl) ja ICEYEn avoin S3 tarjoillaan Noden fetchin
- * kautta — juuri niin kuin selain ne oikeassa pelissä hakee (aineiston
- * CORS-otsake on `*`, tarkistettu 12.9.2026).
+ * (laatat, Globe.gl) ja NASAn kuva-ämpäri tarjoillaan Noden fetchin
+ * kautta — juuri niin kuin selain ne oikeassa pelissä hakee. NASAn
+ * kuva-ämpäri EI lähetä CORS-otsaketta, mutta se ei haittaa: linssi
+ * näyttää kuvat tavallisina <img>-elementteinä eikä lue niitä
+ * canvasille tai fetchillä (tarkistettu 12.9.2026).
  *
  * VÄITTEET:
  *   1. Linssi syttyy laukusta pallolle: ui.pallolinssi === 'satelliitti',
@@ -30,7 +32,7 @@
  *      nimilappu ja tyhjä meri eivät avaa mitään eivätkä liikuta kameraa.
  *   5. Vihreän pisteen napautus avaa kuvan HETI KOKO RUUTUUN, oma
  *      kuvasuhde säilyy, eikä kuvan päällä ole muuta tekstiä kuin
- *      arkistoleima. Kohteen nimi on vain yläpalkissa.
+ *      lähdeleima. Kohteen nimi on vain yläpalkissa.
  *   6. Napit: sulkuristi alaoikealla (≥ 44 px, irti reunasta, ei
  *      minkään alla), pikkukuvat kuvan päällä alareunassa.
  *   7. Sormizoom: nipistys zoomaa kuvaa, pallon kamera EI liiku,
@@ -102,8 +104,8 @@ async function avaaSivu(nakyma, virheet) {
   const konteksti = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
   const sivu = await konteksti.newPage();
   await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
-  // Ämpäri ja ICEYEn avoin aineisto Noden kautta; muu verkko katki.
-  await sivu.route(/media\.matkakirja\.app|r2\.dev|iceye-open-data-catalog\.s3\.amazonaws\.com/,
+  // Ämpäri ja NASAn kuva-ämpäri Noden kautta; muu verkko katki.
+  await sivu.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/,
     async (route) => {
       const vastaus = await ulkohaku(route.request().url());
       if (!vastaus) { route.abort(); return; }
@@ -320,8 +322,8 @@ async function ajaNakyma(nakymanNimi) {
   /* --- 3. Hohtavat vihreät pisteet ---------------------------------- */
   await s.evaluate(async () => {
     const { ui } = window.matkakirja;
-    const venetsia = window.__satelliitti.find((k) => k.tunnus === 'venetsia');
-    await ui.pallolauta.kamera.ajaKamera({ lat: venetsia.lat, lng: venetsia.lon, leveys: 2600 }, { kesto: 0 });
+    const richat = window.__satelliitti.find((k) => k.tunnus === 'richat');
+    await ui.pallolauta.kamera.ajaKamera({ lat: richat.lat, lng: richat.lon, leveys: 2600 }, { kesto: 0 });
     await new Promise((r) => setTimeout(r, 1200));
   });
   await s.waitForTimeout(1500);
@@ -393,13 +395,16 @@ async function ajaNakyma(nakymanNimi) {
   const pelinOsumat = await s.evaluate(() => {
     const { ui } = window.matkakirja;
     const kotelo = document.querySelector('.pallo-kotelo, .pallo-kuori')?.getBoundingClientRect();
-    const ruudulla = (lat, lng) => {
+    const ruudullaRaaka = (lat, lng) => {
       const p = ui.pallonInstanssi?.getScreenCoords?.(lat, lng, 0);
       if (!p || !kotelo) return null;
-      const x = Math.round(kotelo.left + p.x);
-      const y = Math.round(kotelo.top + p.y);
-      if (x < 40 || y < 90 || x > window.innerWidth - 40 || y > window.innerHeight - 120) return null;
-      return { x, y };
+      return { x: Math.round(kotelo.left + p.x), y: Math.round(kotelo.top + p.y) };
+    };
+    const ruudulla = (lat, lng) => {
+      const p = ruudullaRaaka(lat, lng);
+      if (!p) return null;
+      if (p.x < 40 || p.y < 90 || p.x > window.innerWidth - 40 || p.y > window.innerHeight - 120) return null;
+      return p;
     };
     const ulos = [];
     // Tyhjä meri: Egeanmeren piste, jossa ei ole yhtään merkkiä.
@@ -420,11 +425,24 @@ async function ajaNakyma(nakymanNimi) {
     }
     return ulos;
   });
+  /*
+   * PELIN PINNAT, EI LINSSIN OMAA IKKUNAA. Aineiston vaihduttua
+   * (26 kohdetta) mittapiste voi osua vihreän pisteen päälle, jolloin
+   * kuva avautuu — se on nimenomaan OIKEA vastaus eikä rike. Väite
+   * pysyy silti tiukkana: yksikään PELIN oma pinta ei saa avautua eikä
+   * kamera liikkua. Linssin oma ikkuna suljetaan mittausten välissä.
+   */
+  const pelinPinnat = () => s.evaluate(() => {
+    const val = '.fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros,'
+      + ' .fokusnosto-kerros, .syvennys-kerros, .minipopup,'
+      + ' .arrival, .arrival-card, .saapumistraileri, .fokusvirta-isokuva, dialog[open]';
+    return [...document.querySelectorAll(val)].map((e) => e.className || e.tagName);
+  });
   let avautui = 0;
   const avautuneet = [];
   for (const kohta of pelinOsumat) {
     // eslint-disable-next-line no-await-in-loop
-    const ennenPinnat = await s.evaluate(PINNAT);
+    const ennenPinnat = await pelinPinnat();
     // eslint-disable-next-line no-await-in-loop
     const ennenKamera = await s.evaluate(KAMERA);
     // eslint-disable-next-line no-await-in-loop
@@ -432,13 +450,17 @@ async function ajaNakyma(nakymanNimi) {
     // eslint-disable-next-line no-await-in-loop
     await s.waitForTimeout(900);
     // eslint-disable-next-line no-await-in-loop
-    const jalkeenPinnat = await s.evaluate(PINNAT);
+    const jalkeenPinnat = await pelinPinnat();
     // eslint-disable-next-line no-await-in-loop
     const jalkeenKamera = await s.evaluate(KAMERA);
     if (jalkeenPinnat.length > ennenPinnat.length || jalkeenKamera !== ennenKamera) {
       avautui += 1;
       avautuneet.push(`${kohta.laji}: ${jalkeenPinnat.join(',') || 'kamera liikkui'}`);
     }
+    // eslint-disable-next-line no-await-in-loop
+    await s.evaluate(() => document.querySelector('.satelliitti-sulku')?.click());
+    // eslint-disable-next-line no-await-in-loop
+    await s.waitForTimeout(400);
   }
   vaadi(nimessa('linssin aikana pelin omat kohteet eivätkä tyhjä meri avaa mitään eivätkä liikuta kameraa'),
     avautui === 0 && pelinOsumat.length >= 3 && pelinOsumat.some((o) => o.laji === 'tyhjameri'),
@@ -497,20 +519,20 @@ async function ajaNakyma(nakymanNimi) {
     return paikka;
   };
   await s.evaluate(async () => {
-    const venetsia = window.__satelliitti.find((k) => k.tunnus === 'venetsia');
+    const richat = window.__satelliitti.find((k) => k.tunnus === 'richat');
     await window.matkakirja.ui.pallolauta.kamera.ajaKamera(
-      { lat: venetsia.lat, lng: venetsia.lon, leveys: 2600 }, { kesto: 0 },
+      { lat: richat.lat, lng: richat.lon, leveys: 2600 }, { kesto: 0 },
     );
     await new Promise((r) => setTimeout(r, 1200));
   });
   await s.waitForTimeout(1500);
-  const venetsiaPaikka = await napautaPistetta('venetsia');
+  const richatPaikka = await napautaPistetta('richat');
   const kokoruutu = await s.evaluate(() => {
     const katselu = document.querySelector('.satelliitti-katselu');
     const img = katselu?.querySelector('.satelliitti-kuva');
     const r = img?.getBoundingClientRect();
     const kr = katselu?.getBoundingClientRect();
-    // Kuvan päällä ei saa olla muuta tekstiä kuin arkistoleima ja
+    // Kuvan päällä ei saa olla muuta tekstiä kuin lähdeleima ja
     // pikkukuvien päiväykset: info-popup ei ole auki ennen nappia.
     const tekstit = [...(katselu?.querySelectorAll('*') ?? [])]
       .filter((el) => !el.closest('.satelliitti-ala') && el.children.length === 0 && el.textContent.trim())
@@ -540,15 +562,15 @@ async function ajaNakyma(nakymanNimi) {
       && kokoruutu.kuvaKorkeus <= kokoruutu.ruutu[1] + 1
       && kokoruutu.ruutu[0] === kokoruutu.ikkuna[0]
       && kokoruutu.ruutu[1] >= kokoruutu.ikkuna[1] - (kokoruutu.palkinKorkeus ?? 0) - 1
-      && /iceye-open-data-catalog/.test(kokoruutu.osoite ?? ''),
+      && /images-assets\.nasa\.gov/.test(kokoruutu.osoite ?? ''),
     JSON.stringify({ ...kokoruutu, tekstit: kokoruutu.tekstit.slice(0, 6), tayttoaste: Number(tayttoaste.toFixed(2)), lyhyempi }));
-  vaadi(nimessa('kuvan päällä ei ole tekstiä ennen info-nappia — vain arkistoleima'),
-    kokoruutu.leima === 'Arkistohavainto · ICEYE · tutkakuva'
+  vaadi(nimessa('kuvan päällä ei ole tekstiä ennen info-nappia — vain lähdeleima'),
+    kokoruutu.leima === 'Valokuva avaruudesta · NASA'
       && kokoruutu.popupeja === 0
-      && kokoruutu.tekstit.every((t) => t === 'Arkistohavainto · ICEYE · tutkakuva'),
+      && kokoruutu.tekstit.every((t) => t === 'Valokuva avaruudesta · NASA'),
     JSON.stringify(kokoruutu.tekstit));
   vaadi(nimessa('kohteen nimi on VAIN yläpalkissa eikä palkin korkeus muutu'),
-    kokoruutu.palkinKohde === 'Venetsia'
+    kokoruutu.palkinKohde === 'Saharan silmä'
       && Math.abs((kokoruutu.palkinKorkeus ?? 0) - (palkki.omaKorkeus ?? 0)) < 0.5,
     JSON.stringify({ kohde: kokoruutu.palkinKohde, korkeus: kokoruutu.palkinKorkeus, ennen: palkki.omaKorkeus }));
   await kaappaa('havainto');
@@ -629,7 +651,7 @@ async function ajaNakyma(nakymanNimi) {
   const kameraJalkeen = await s.evaluate(KAMERA);
   /*
    * ZOOMIN YLÄRAJA ON KUVAN OMA TARKKUUS, joten leveällä ruudulla
-   * suurennus jää pieneksi (arkistokuva on 976 px leveä). Vaaditaan
+   * suurennus jää pieneksi (NASAn kuva on 1920 px leveä). Vaaditaan
    * siis että nipistys vie kattoon asti — ei kiinteää kerrointa.
    */
   vaadi(nimessa('nipistys zoomaa kuvaa EIKÄ pallon kamera liiku'),
@@ -691,11 +713,16 @@ async function ajaNakyma(nakymanNimi) {
   const infoTeksti = (info.tekstit ?? []).join(' | ');
   vaadi(nimessa('info-nappi avaa pienen popupin, jossa koko lähdeketju'),
     info.auki && info.leveys < info.ikkuna[0] && info.korkeus < info.ikkuna[1] * 0.7
-      && /Aineisto:.*ICEYE/.test(infoTeksti) && /Kuvausaika:.*UTC/.test(infoTeksti)
-      && /Alue:.*°/.test(infoTeksti) && /Kuvaustapa:/.test(infoTeksti)
-      && /Lisenssi: CC BY 4\.0/.test(infoTeksti)
-      && info.linkkeja.some((u) => /stac-items/.test(u))
-      && info.linkkeja.some((u) => /sar\.iceye\.com/.test(u)) && info.sulku,
+      && /Aineisto:.*NASA/.test(infoTeksti) && /Kuvausaika: \d+\.\d+\.\d{4}/.test(infoTeksti)
+      && /Paikka:.*°/.test(infoTeksti) && /Kuvaustapa:.*avaruusasemalta/.test(infoTeksti)
+      && /Kuvatunnus: iss/.test(infoTeksti)
+      && /Lisenssi: Public domain \(NASA\)/.test(infoTeksti)
+      // Kuvateksti on popupin ensimmäinen rivi: se on ainoa teksti,
+      // jonka pelaaja lukee, eikä se saa jäädä lähdetietojen alle.
+      && /Saharan silmä/.test(info.tekstit?.[0] ?? '')
+      && (info.tekstit?.[1] ?? '').length > 80
+      && info.linkkeja.some((u) => /images\.nasa\.gov\/details\//.test(u))
+      && info.linkkeja.some((u) => /^https:\/\/images\.nasa\.gov\/$/.test(u)) && info.sulku,
     JSON.stringify({ ...info, tekstit: info.tekstit?.slice(0, 3) }));
   await kaappaa('info-popup');
   await s.evaluate(() => document.querySelector('.satelliitti-popup-sulku').click());
@@ -703,18 +730,18 @@ async function ajaNakyma(nakymanNimi) {
   const popupKiinni = await s.evaluate(() => document.querySelectorAll('.satelliitti-popup').length);
   vaadi(nimessa('info-popup sulkeutuu omasta rististään'), popupKiinni === 0, String(popupKiinni));
 
-  /* --- 9. Galleria kuvan päällä: Krakovan viisi havaintoa ----------- */
+  /* --- 9. Galleria kuvan päällä: Etnan kaksi purkausvuotta ---------- */
   await s.evaluate(() => document.querySelector('.satelliitti-sulku').click());
   await s.waitForTimeout(500);
   await s.evaluate(async () => {
-    const krakova = window.__satelliitti.find((k) => k.tunnus === 'krakova');
+    const etna = window.__satelliitti.find((k) => k.tunnus === 'etna');
     await window.matkakirja.ui.pallolauta.kamera.ajaKamera(
-      { lat: krakova.lat, lng: krakova.lon, leveys: 2600 }, { kesto: 0 },
+      { lat: etna.lat, lng: etna.lon, leveys: 2600 }, { kesto: 0 },
     );
     await new Promise((r) => setTimeout(r, 1400));
   });
   await s.waitForTimeout(3000);
-  await napautaPistetta('krakova');
+  await napautaPistetta('etna');
   const galleria = await s.evaluate(async () => {
     const katselu = document.querySelector('.satelliitti-katselu');
     if (!katselu) return { puuttuu: true };
@@ -746,18 +773,18 @@ async function ajaNakyma(nakymanNimi) {
       palkinKohde: document.querySelector('.satelliittipalkki-kohde')?.textContent ?? '',
     };
   });
-  const samanPaivan = (galleria.paivat ?? []).filter((p) => /4\.10\.25/.test(p));
-  vaadi(nimessa('galleria kuvan päällä: 5 päivämäärällistä pikkukuvaa, laskuri ja nuolet'),
-    galleria.pikkuja === 5 && galleria.laskuri === '2 / 5' && galleria.valittu === '17.9.25 12.42'
-      && galleria.laskuriJalkeen === '3 / 5' && galleria.srcVaihtui && galleria.vertaa
-      && galleria.palkinKohde === 'Krakova',
+  vaadi(nimessa('galleria kuvan päällä: 2 päivämäärällistä pikkukuvaa, laskuri ja nuolet'),
+    galleria.pikkuja === 2 && galleria.laskuri === '1 / 2' && galleria.valittu === '30.10.02'
+      && galleria.laskuriJalkeen === '2 / 2' && galleria.srcVaihtui && galleria.vertaa
+      && galleria.palkinKohde === 'Etna',
     JSON.stringify(galleria));
   vaadi(nimessa('zoom nollautuu otosta vaihdettaessa'),
     galleria.zoomEnnen !== 'none' && (galleria.zoomJalkeen === 'none' || /matrix\(1, 0, 0, 1, 0, 0\)/.test(galleria.zoomJalkeen)),
     JSON.stringify({ ennen: galleria.zoomEnnen, jalkeen: galleria.zoomJalkeen }));
-  vaadi(nimessa('saman päivän kolme havaintoa erottuvat kellonajasta'),
-    samanPaivan.length === 3 && new Set(samanPaivan).size === 3,
-    JSON.stringify(samanPaivan));
+  vaadi(nimessa('saman pisteen kuvat erottuvat toisistaan päiväyksestä'),
+    (galleria.paivat ?? []).length === 2
+      && new Set(galleria.paivat).size === (galleria.paivat ?? []).length,
+    JSON.stringify(galleria.paivat));
   await kaappaa('galleria');
 
   /* --- 9b. Vertailu: kaksi havaintoa RINNAKKAIN, ei liukuria -------- */
@@ -780,7 +807,10 @@ async function ajaNakyma(nakymanNimi) {
   vaadi(nimessa('Vertaa näyttää kaksi eri havaintoa rinnakkain omine päiväyksineen'),
     vertailu.auki && vertailu.kuvia === 2 && vertailu.eriLahteet === 2
       && vertailu.tekstit.length === 2 && new Set(vertailu.tekstit).size === 2
-      && vertailu.tekstit.every((t) => /UTC/.test(t)),
+      // Päiväys on kummankin kuvan alla. Kellonaikaa ei vaadita: NASA
+      // merkitsee astronauttikuvalle useimmiten pelkän päivän, eikä
+      // linssi keksi sille kelloa.
+      && vertailu.tekstit.every((t) => /^\d+\.\d+\.\d{4}$/.test(t.trim())),
     JSON.stringify(vertailu));
   await kaappaa('vertailu');
   await s.evaluate(() => {

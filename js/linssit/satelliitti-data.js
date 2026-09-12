@@ -1,3407 +1,710 @@
 /*
- * SATELLIITTILINSSIN HAVAINNOT — KONEELLISESTI TUOTETTU TIEDOSTO.
+ * SATELLIITTILINSSIN KUVAT — KONEELLISESTI TUOTETTU TIEDOSTO.
  *
  * Älä muokkaa käsin: aja tools/hae-satelliittihavainnot.mjs, joka
- * lukee ICEYE Open Data -kokoelman STAC-katalogin, ryhmittelee
- * kuvaukset jalanjäljen mukaan kohteiksi ja tarkistaa jokaisen
- * kuvaosoitteen. Aineisto on CC BY 4.0, tekijä ICEYE; kuvat EIVÄT
- * ole repossa vaan ladataan lähteen omasta ämpäristä.
+ * lukee NASAn kuvakirjaston rajapinnasta astronauttien ottamien
+ * Maa-kuvien osoitteet ja kuvaustiedot ja tarkistaa jokaisen
+ * osoitteen. Kohteet ja suomenkieliset kuvatekstit ovat työkalun
+ * KOHTEET-luettelossa, ja ne on valittu kuvat katsomalla.
  *
- * Haettu: 2026-09-12. Kohteita 21, havaintoja 136.
+ * NASAn kuvat ovat public domainia; kuvat EIVÄT ole repossa vaan
+ * ladataan NASAn omasta ämpäristä.
+ *
+ * Haettu: 2026-09-12. Kohteita 26, kuvia 37.
  */
 
 export const SATELLIITTI_LAHDE = {
-  "aineisto": "ICEYE Open Data (SAR)",
-  "tekija": "ICEYE",
-  "lisenssi": "CC BY 4.0",
-  "osoite": "https://sar.iceye.com/6.0.6/opendata/opendata/",
-  "katalogi": "https://iceye-open-data-catalog.s3.amazonaws.com/collections/iceye-sar.json",
+  "aineisto": "Astronauttien Maa-kuvat",
+  "tekija": "NASA",
+  "lisenssi": "Public domain",
+  "osoite": "https://images.nasa.gov/",
+  "katalogi": "https://images-api.nasa.gov/search?media_type=image",
   "haettu": "2026-09-12"
 };
 
 export const SATELLIITTI_KOHTEET = [
   {
-    "tunnus": "venetsia",
-    "nimi": "Venetsia",
+    "tunnus": "etna",
+    "nimi": "Etna",
+    "seutu": "Sisilia, Italia",
+    "selite": "Euroopan korkein toimiva tulivuori, joka purkautuu useammin kuin mikään muu.",
+    "lat": 37.751,
+    "lon": 14.994,
+    "oletus": "iss005e19024",
+    "havainnot": [
+      {
+        "id": "iss005e19024",
+        "aika": "2002-10-30",
+        "teksti": "Etnan purkaus lokakuussa 2002. Tumma tuhkapilvi kulkee kaakkoon Sisilian ylle, ja sen vasemmalla puolella nousee vaaleampaa savua maastopaloista, jotka rinteitä alas valunut laava sytytti. Miehistö sai purkauksen kuvaan sen alkuvaiheessa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 5",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss005e19024/iss005e19024~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss005e19024/iss005e19024~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss005e19024"
+      },
+      {
+        "id": "iss013e62714",
+        "aika": "2006-08-02",
+        "teksti": "Sama vuori neljä vuotta myöhemmin rauhallisempana: huippukraattereista nousee höyryä ja hiukan tuhkaa. Mustat laavavirrat erottuvat vihreästä rinteestä kuin maalitahrat — jokainen niistä on oma purkauksensa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 13",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss013e62714/iss013e62714~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss013e62714/iss013e62714~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss013e62714"
+      }
+    ]
+  },
+  {
+    "tunnus": "italia-yolla",
+    "nimi": "Italian saapas yöllä",
     "seutu": "Italia",
-    "selite": "Laguunikaupunki tutkan silmin: kanavat ovat mustia, kivitalot valkoisia.",
-    "lat": 45.4371,
-    "lon": 12.3285,
-    "oletus": "ICEYE_U20F2X_20260429T205611Z_9603856_X58_SLH",
+    "selite": "Koko niemimaa kerralla: kaupunkien valot piirtävät rannikon tarkemmin kuin kartta.",
+    "lat": 41.3,
+    "lon": 14.6,
+    "oletus": "iss037e018864",
     "havainnot": [
       {
-        "id": "ICEYE_U20F2R_20251104T222050Z_6901390_X50_SLEDF",
-        "aika": "2025-11-04T22:21:04.431Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X50",
-        "katselukulma": 31,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          12.2846,
-          45.4102,
-          12.3641,
-          45.4662
+        "id": "iss037e018864",
+        "aika": "2013-10-23",
+        "teksti": "Italia ja Sisilia yön valoissa. Rooman ja Napolin kirkkaat läiskät ovat keskellä kuvaa, Adrianmeri jää oikealle mustaksi. Rannikon ääriviiva syntyy pelkistä katuvaloista: siellä missä ihmiset asuvat, maa hohtaa, ja vuoristo jää pimeäksi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 37",
+        "kuvaaja": "Michael Hopkins",
+        "mitat": [
+          1920,
+          1277
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_U20F2R_20251104T222050Z_6901390_X50_SLEDF/ICEYE_U20F2R_20251104T222050Z_6901390_X50_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/11/ICEYE_U20F2R_20251104T222050Z_6901390_X50_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_U20F2X_20260429T205611Z_9603856_X58_SLH",
-        "aika": "2026-04-29T20:56:13.691Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X58",
-        "katselukulma": 21.8,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.17.5",
-        "alue": [
-          12.29,
-          45.4067,
-          12.3752,
-          45.4654
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot/ICEYE_U20F2X_20260429T205611Z_9603856_X58_SLH/ICEYE_U20F2X_20260429T205611Z_9603856_X58_SLH_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_U20F2X_20260429T205611Z_9603856_X58_SLH.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss037e018864/iss037e018864~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss037e018864/iss037e018864~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss037e018864"
       }
     ]
   },
   {
-    "tunnus": "krakova",
-    "nimi": "Krakova",
-    "seutu": "Puola",
-    "selite": "Veikselin mutka ja vanhankaupungin rengaspuisto erottuvat yhtenä silmukkana.",
-    "lat": 50.0478,
-    "lon": 19.9317,
-    "oletus": "ICEYE_U2YHTW_20250917T124245Z_6211708_X55_SLEDP",
+    "tunnus": "istanbul",
+    "nimi": "Istanbul",
+    "seutu": "Turkki",
+    "selite": "Kaupunki kahdella mantereella, ja niiden välissä musta salmi.",
+    "lat": 41.02,
+    "lon": 28.98,
+    "oletus": "iss065e030820",
     "havainnot": [
       {
-        "id": "ICEYE_U2YHTW_20250914T185614Z_6182312_X2_SLED",
-        "aika": "2025-09-14T18:56:26.625Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X2",
-        "katselukulma": 33.5,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          19.8881,
-          50.0199,
-          19.9757,
-          50.0764
+        "id": "iss032e017547",
+        "aika": "2012-08-09",
+        "teksti": "Laajempi näkymä yhdeksän vuotta aiemmin. Kaupungin reuna erottuu yöllä terävämmin kuin päivällä — siitä kohdasta valot yksinkertaisesti loppuvat.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 32",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_U2YHTW_20250914T185614Z_6182312_X2_SLED/ICEYE_U2YHTW_20250914T185614Z_6182312_X2_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/09/ICEYE_U2YHTW_20250914T185614Z_6182312_X2_SLED.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss032e017547/iss032e017547~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss032e017547/iss032e017547~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss032e017547"
       },
       {
-        "id": "ICEYE_U2YHTW_20250917T124245Z_6211708_X55_SLEDP",
-        "aika": "2025-09-17T12:42:56.777Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X55",
-        "katselukulma": 30.4,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          19.8879,
-          50.0198,
-          19.9758,
-          50.0765
+        "id": "iss065e030820",
+        "aika": "2021-05-10",
+        "teksti": "Bosporinsalmi halkoo kultaisen kaupungin kahtia: vasemmalla Eurooppa, oikealla Aasia. Salmi ja Kultainen sarvi jäävät valojen keskellä täysin mustiksi, ja niiden yli kulkevat siltojen ohuet valojuovat. Kuvan otti Thomas Pesquet.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 65",
+        "kuvaaja": "Thomas Pesquet",
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-precise/ICEYE_U2YHTW_20250917T124245Z_6211708_X55_SLEDP/ICEYE_U2YHTW_20250917T124245Z_6211708_X55_SLEDP_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/09/ICEYE_U2YHTW_20250917T124245Z_6211708_X55_SLEDP.json"
-      },
-      {
-        "id": "ICEYE_U2YHTW_20251004T200951Z_6407385_X31_SLEDF",
-        "aika": "2025-10-04T20:10:04.276Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X31",
-        "katselukulma": 37,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          19.8878,
-          50.0192,
-          19.9755,
-          50.0757
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_U2YHTW_20251004T200951Z_6407385_X31_SLEDF/ICEYE_U2YHTW_20251004T200951Z_6407385_X31_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/10/ICEYE_U2YHTW_20251004T200951Z_6407385_X31_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_U2YHTW_20251004T203013Z_6407295_X35_SLEDF",
-        "aika": "2025-10-04T20:30:24.031Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X35",
-        "katselukulma": 31.1,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          19.8882,
-          50.0195,
-          19.9751,
-          50.0755
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_U2YHTW_20251004T203013Z_6407295_X35_SLEDF/ICEYE_U2YHTW_20251004T203013Z_6407295_X35_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/10/ICEYE_U2YHTW_20251004T203013Z_6407295_X35_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_U2YHTW_20251004T220411Z_6407896_X50_SLEDP",
-        "aika": "2025-10-04T22:04:23.513Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X50",
-        "katselukulma": 38.7,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          19.8872,
-          50.0189,
-          19.976,
-          50.0761
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-precise/ICEYE_U2YHTW_20251004T220411Z_6407896_X50_SLEDP/ICEYE_U2YHTW_20251004T220411Z_6407896_X50_SLEDP_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/10/ICEYE_U2YHTW_20251004T220411Z_6407896_X50_SLEDP.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss065e030820/iss065e030820~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss065e030820/iss065e030820~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss065e030820"
       }
     ]
   },
   {
-    "tunnus": "loch-etive",
-    "nimi": "Loch Etiven kapeikko",
-    "seutu": "Skotlanti",
-    "selite": "Vuoroveden kapeikko, jota on kuvattu päivä toisensa jälkeen: virta piirtyy veteen.",
-    "lat": 56.4564,
-    "lon": -5.3893,
-    "oletus": "ICEYE_GFH1JM_20240506T102612Z_4059688_X2_SLED",
+    "tunnus": "sarytsev",
+    "nimi": "Sarytševin tulivuori",
+    "seutu": "Kuriilit, Venäjä",
+    "selite": "Purkaus, joka osui kohdalle juuri oikealla hetkellä.",
+    "lat": 48.09,
+    "lon": 153.2,
+    "oletus": "iss020e009048",
     "havainnot": [
       {
-        "id": "ICEYE_GFH1JM_20240504T154336Z_4057645_X13_SLED",
-        "aika": "2024-05-04T15:43:43.021Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X13",
-        "katselukulma": 21.6,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4437,
-          56.4295,
-          -5.3461,
-          56.4835
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240504T154336Z_4057645_X13_SLED/ICEYE_GFH1JM_20240504T154336Z_4057645_X13_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240504T154336Z_4057645_X13_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240504T162935Z_4057646_X11_SLED",
-        "aika": "2024-05-04T16:29:42.521Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X11",
-        "katselukulma": 25.2,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4407,
-          56.4271,
-          -5.3377,
-          56.4841
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240504T162935Z_4057646_X11_SLED/ICEYE_GFH1JM_20240504T162935Z_4057646_X11_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240504T162935Z_4057646_X11_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240504T212332Z_4057901_X2_SLED",
-        "aika": "2024-05-04T21:23:40.743Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X2",
-        "katselukulma": 33.9,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4374,
-          56.43,
-          -5.3423,
-          56.4827
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240504T212332Z_4057901_X2_SLED/ICEYE_GFH1JM_20240504T212332Z_4057901_X2_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240504T212332Z_4057901_X2_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240505T012421Z_4058088_X23_SLED",
-        "aika": "2024-05-05T01:24:28.939Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X23",
-        "katselukulma": 33.9,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4376,
-          56.4299,
-          -5.3421,
-          56.4828
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240505T012421Z_4058088_X23_SLED/ICEYE_GFH1JM_20240505T012421Z_4058088_X23_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240505T012421Z_4058088_X23_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240505T114612Z_4058373_X31_SLED",
-        "aika": "2024-05-05T11:46:19.043Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X31",
-        "katselukulma": 15.8,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4383,
-          56.4272,
-          -5.3367,
-          56.4835
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240505T114612Z_4058373_X31_SLED/ICEYE_GFH1JM_20240505T114612Z_4058373_X31_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240505T114612Z_4058373_X31_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240505T142004Z_4058439_X23_SLED",
-        "aika": "2024-05-05T14:20:12.085Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X23",
-        "katselukulma": 25.8,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4427,
-          56.4296,
-          -5.3459,
-          56.4832
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240505T142004Z_4058439_X23_SLED/ICEYE_GFH1JM_20240505T142004Z_4058439_X23_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240505T142004Z_4058439_X23_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240506T025517Z_4059149_X11_SLED",
-        "aika": "2024-05-06T02:55:24.343Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X11",
-        "katselukulma": 22.6,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4374,
-          56.4296,
-          -5.34,
-          56.4835
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240506T025517Z_4059149_X11_SLED/ICEYE_GFH1JM_20240506T025517Z_4059149_X11_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240506T025517Z_4059149_X11_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240506T102612Z_4059688_X2_SLED",
-        "aika": "2024-05-06T10:26:19.699Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X2",
-        "katselukulma": 11,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4473,
-          56.4297,
-          -5.3489,
-          56.4843
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240506T102612Z_4059688_X2_SLED/ICEYE_GFH1JM_20240506T102612Z_4059688_X2_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240506T102612Z_4059688_X2_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240506T103108Z_4059717_X8_SLED",
-        "aika": "2024-05-06T10:31:14.691Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X8",
-        "katselukulma": 23.2,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.44,
-          56.4273,
-          -5.3379,
-          56.4839
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240506T103108Z_4059717_X8_SLED/ICEYE_GFH1JM_20240506T103108Z_4059717_X8_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240506T103108Z_4059717_X8_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240507T023540Z_4060992_X11_SLED",
-        "aika": "2024-05-07T02:35:46.981Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X11",
-        "katselukulma": 11.4,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4486,
-          56.427,
-          -5.3475,
-          56.4831
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240507T023540Z_4060992_X11_SLED/ICEYE_GFH1JM_20240507T023540Z_4060992_X11_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240507T023540Z_4060992_X11_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240507T102412Z_4061319_X2_SLED",
-        "aika": "2024-05-07T10:24:20.022Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X2",
-        "katselukulma": 14.1,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4457,
-          56.4296,
-          -5.3477,
-          56.484
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240507T102412Z_4061319_X2_SLED/ICEYE_GFH1JM_20240507T102412Z_4061319_X2_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240507T102412Z_4061319_X2_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240507T161247Z_4061774_X13_SLED",
-        "aika": "2024-05-07T16:12:54.58Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X13",
-        "katselukulma": 27.8,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4411,
-          56.4271,
-          -5.3378,
-          56.4843
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240507T161247Z_4061774_X13_SLED/ICEYE_GFH1JM_20240507T161247Z_4061774_X13_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240507T161247Z_4061774_X13_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240507T211734Z_4061958_X2_SLED",
-        "aika": "2024-05-07T21:17:42.073Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X2",
-        "katselukulma": 26.2,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4374,
-          56.4297,
-          -5.3409,
-          56.4832
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240507T211734Z_4061958_X2_SLED/ICEYE_GFH1JM_20240507T211734Z_4061958_X2_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240507T211734Z_4061958_X2_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240508T003452Z_4062174_X25_SLED",
-        "aika": "2024-05-08T00:35:01.116Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X25",
-        "katselukulma": 38.8,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4378,
-          56.4311,
-          -5.3488,
-          56.4804
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240508T003452Z_4062174_X25_SLED/ICEYE_GFH1JM_20240508T003452Z_4062174_X25_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240508T003452Z_4062174_X25_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240508T003519Z_4062175_X25_SLED",
-        "aika": "2024-05-08T00:35:27.89Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X25",
-        "katselukulma": 38.7,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4498,
-          56.4245,
-          -5.337,
-          56.4871
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240508T003519Z_4062175_X25_SLED/ICEYE_GFH1JM_20240508T003519Z_4062175_X25_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240508T003519Z_4062175_X25_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240508T021602Z_4062452_X11_SLED",
-        "aika": "2024-05-08T02:16:10.994Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X11",
-        "katselukulma": 39.5,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4458,
-          56.4267,
-          -5.3408,
-          56.4848
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240508T021602Z_4062452_X11_SLED/ICEYE_GFH1JM_20240508T021602Z_4062452_X11_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240508T021602Z_4062452_X11_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240508T211533Z_4063482_X2_SLED",
-        "aika": "2024-05-08T21:15:41.345Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X2",
-        "katselukulma": 23.3,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4372,
-          56.4296,
-          -5.3403,
-          56.4833
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240508T211533Z_4063482_X2_SLED/ICEYE_GFH1JM_20240508T211533Z_4063482_X2_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240508T211533Z_4063482_X2_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240508T215510Z_4063547_X31_SLED",
-        "aika": "2024-05-08T21:55:17.211Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X31",
-        "katselukulma": 18.8,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4464,
-          56.4272,
-          -5.3445,
-          56.4837
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240508T215510Z_4063547_X31_SLED/ICEYE_GFH1JM_20240508T215510Z_4063547_X31_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240508T215510Z_4063547_X31_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240509T103942Z_4064348_X8_SLED",
-        "aika": "2024-05-09T10:39:50.358Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X8",
-        "katselukulma": 35.7,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4419,
-          56.4271,
-          -5.3382,
-          56.4845
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240509T103942Z_4064348_X8_SLED/ICEYE_GFH1JM_20240509T103942Z_4064348_X8_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240509T103942Z_4064348_X8_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240509T162511Z_4064702_X11_SLED",
-        "aika": "2024-05-09T16:25:17.847Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X11",
-        "katselukulma": 17.6,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4389,
-          56.4272,
-          -5.3369,
-          56.4837
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240509T162511Z_4064702_X11_SLED/ICEYE_GFH1JM_20240509T162511Z_4064702_X11_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240509T162511Z_4064702_X11_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240510T012539Z_4065165_X23_SLED",
-        "aika": "2024-05-10T01:25:47.504Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X23",
-        "katselukulma": 36.8,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4447,
-          56.426,
-          -5.3353,
-          56.4866
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240510T012539Z_4065165_X23_SLED/ICEYE_GFH1JM_20240510T012539Z_4065165_X23_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240510T012539Z_4065165_X23_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240510T012606Z_4065166_X23_SLED",
-        "aika": "2024-05-10T01:26:15.27Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X23",
-        "katselukulma": 36.8,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.434,
-          56.4319,
-          -5.3459,
-          56.4807
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240510T012606Z_4065166_X23_SLED/ICEYE_GFH1JM_20240510T012606Z_4065166_X23_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240510T012606Z_4065166_X23_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240510T013629Z_4065081_X19_SLED",
-        "aika": "2024-05-10T01:36:37.163Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X19",
-        "katselukulma": 32.1,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4377,
-          56.4298,
-          -5.3417,
-          56.4829
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240510T013629Z_4065081_X19_SLED/ICEYE_GFH1JM_20240510T013629Z_4065081_X19_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240510T013629Z_4065081_X19_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240510T101130Z_4065672_X8_SLED",
-        "aika": "2024-05-10T10:11:36.336Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X8",
-        "katselukulma": 13.1,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.446,
-          56.4297,
-          -5.3481,
-          56.484
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240510T101130Z_4065672_X8_SLED/ICEYE_GFH1JM_20240510T101130Z_4065672_X8_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240510T101130Z_4065672_X8_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240510T142705Z_4065750_X19_SLED",
-        "aika": "2024-05-10T14:27:13.43Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X19",
-        "katselukulma": 37.7,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4409,
-          56.4299,
-          -5.3458,
-          56.4826
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240510T142705Z_4065750_X19_SLED/ICEYE_GFH1JM_20240510T142705Z_4065750_X19_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240510T142705Z_4065750_X19_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240510T160528Z_4065958_X11_SLED",
-        "aika": "2024-05-10T16:05:34.846Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X11",
-        "katselukulma": 17.4,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4447,
-          56.4295,
-          -5.3467,
-          56.4838
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240510T160528Z_4065958_X11_SLED/ICEYE_GFH1JM_20240510T160528Z_4065958_X11_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240510T160528Z_4065958_X11_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240510T211130Z_4066324_X2_SLED",
-        "aika": "2024-05-10T21:11:37.795Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X2",
-        "katselukulma": 17.3,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4365,
-          56.4296,
-          -5.3388,
-          56.4837
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240510T211130Z_4066324_X2_SLED/ICEYE_GFH1JM_20240510T211130Z_4066324_X2_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240510T211130Z_4066324_X2_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240511T011945Z_4066366_X25_SLED",
-        "aika": "2024-05-11T01:19:53.365Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X25",
-        "katselukulma": 33.9,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.445,
-          56.4257,
-          -5.3344,
-          56.487
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240511T011945Z_4066366_X25_SLED/ICEYE_GFH1JM_20240511T011945Z_4066366_X25_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240511T011945Z_4066366_X25_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240511T012013Z_4066367_X25_SLED",
-        "aika": "2024-05-11T01:20:21.424Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X25",
-        "katselukulma": 33.9,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4347,
-          56.4315,
-          -5.3449,
-          56.4812
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240511T012013Z_4066367_X25_SLED/ICEYE_GFH1JM_20240511T012013Z_4066367_X25_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240511T012013Z_4066367_X25_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240511T025040Z_4066541_X11_SLED",
-        "aika": "2024-05-11T02:50:47.145Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X11",
-        "katselukulma": 14.2,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4359,
-          56.4296,
-          -5.3376,
-          56.4841
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240511T025040Z_4066541_X11_SLED/ICEYE_GFH1JM_20240511T025040Z_4066541_X11_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240511T025040Z_4066541_X11_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240511T101606Z_4067281_X2_SLED",
-        "aika": "2024-05-11T10:16:13.883Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X2",
-        "katselukulma": 25.9,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4426,
-          56.4297,
-          -5.3461,
-          56.4832
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240511T101606Z_4067281_X2_SLED/ICEYE_GFH1JM_20240511T101606Z_4067281_X2_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240511T101606Z_4067281_X2_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20240511T161957Z_4068088_X13_SLED",
-        "aika": "2024-05-11T16:20:05.772Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X13",
-        "katselukulma": 36.8,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4424,
-          56.4268,
-          -5.3379,
-          56.4847
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_GFH1JM_20240511T161957Z_4068088_X13_SLED/ICEYE_GFH1JM_20240511T161957Z_4068088_X13_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/05/ICEYE_GFH1JM_20240511T161957Z_4068088_X13_SLED.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260416T162219Z_9517115_X38_SLEDF",
-        "aika": "2026-04-16T16:22:26.942Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X38",
-        "katselukulma": 27.6,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.435,
-          56.4277,
-          -5.3312,
-          56.4852
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260416T162219Z_9517115_X38_SLEDF/ICEYE_GFH1JM_20260416T162219Z_9517115_X38_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260416T162219Z_9517115_X38_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260416T215517Z_9519609_X42_SLEDF",
-        "aika": "2026-04-16T21:55:26.6Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 33.4,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4397,
-          56.4275,
-          -5.3349,
-          56.4855
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260416T215517Z_9519609_X42_SLEDF/ICEYE_GFH1JM_20260416T215517Z_9519609_X42_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260416T215517Z_9519609_X42_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260416T221948Z_9519182_X31_SLEDF",
-        "aika": "2026-04-16T22:19:55.564Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X31",
-        "katselukulma": 22.9,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4309,
-          56.4304,
-          -5.3339,
-          56.4841
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260416T221948Z_9519182_X31_SLEDF/ICEYE_GFH1JM_20260416T221948Z_9519182_X31_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260416T221948Z_9519182_X31_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260417T093903Z_9523321_X50_SLEDF",
-        "aika": "2026-04-17T09:39:11.285Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X50",
-        "katselukulma": 22.9,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4399,
-          56.4277,
-          -5.3368,
-          56.4849
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260417T093903Z_9523321_X50_SLEDF/ICEYE_GFH1JM_20260417T093903Z_9523321_X50_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260417T093903Z_9523321_X50_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260417T144707Z_9525028_X55_SLEDF",
-        "aika": "2026-04-17T14:47:17.514Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X55",
-        "katselukulma": 39.6,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4368,
-          56.4273,
-          -5.3311,
-          56.4858
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260417T144707Z_9525028_X55_SLEDF/ICEYE_GFH1JM_20260417T144707Z_9525028_X55_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260417T144707Z_9525028_X55_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260417T215039Z_9527255_X31_SLEDF",
-        "aika": "2026-04-17T21:50:45.938Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X31",
-        "katselukulma": 29.6,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4391,
-          56.428,
-          -5.3361,
-          56.485
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260417T215039Z_9527255_X31_SLEDF/ICEYE_GFH1JM_20260417T215039Z_9527255_X31_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260417T215039Z_9527255_X31_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260417T220357Z_9526677_X42_SLEDF",
-        "aika": "2026-04-17T22:04:05.548Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 22.8,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.44,
-          56.4277,
-          -5.3367,
-          56.4849
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260417T220357Z_9526677_X42_SLEDF/ICEYE_GFH1JM_20260417T220357Z_9526677_X42_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260417T220357Z_9526677_X42_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260417T222715Z_9526883_X61_SLEDF",
-        "aika": "2026-04-17T22:27:23.689Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X61",
-        "katselukulma": 39,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.431,
-          56.4309,
-          -5.3366,
-          56.4832
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260417T222715Z_9526883_X61_SLEDF/ICEYE_GFH1JM_20260417T222715Z_9526883_X61_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260417T222715Z_9526883_X61_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260418T172225Z_9531593_X63_SLEDF",
-        "aika": "2026-04-18T17:22:34.673Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X63",
-        "katselukulma": 31.9,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4312,
-          56.4306,
-          -5.3355,
-          56.4836
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260418T172225Z_9531593_X63_SLEDF/ICEYE_GFH1JM_20260418T172225Z_9531593_X63_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260418T172225Z_9531593_X63_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260418T225320Z_9532957_X50_SLEDF",
-        "aika": "2026-04-18T22:53:30.602Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X50",
-        "katselukulma": 45.2,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.433,
-          56.4313,
-          -5.3403,
-          56.4827
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260418T225320Z_9532957_X50_SLEDF/ICEYE_GFH1JM_20260418T225320Z_9532957_X50_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260418T225320Z_9532957_X50_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260419T001428Z_9533317_X55_SLEDF",
-        "aika": "2026-04-19T00:14:37.897Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X55",
-        "katselukulma": 38.5,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4397,
-          56.4273,
-          -5.3341,
-          56.4858
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260419T001428Z_9533317_X55_SLEDF/ICEYE_GFH1JM_20260419T001428Z_9533317_X55_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260419T001428Z_9533317_X55_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260419T011547Z_9533591_X52_SLEDF",
-        "aika": "2026-04-19T01:15:57.876Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X52",
-        "katselukulma": 44.8,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4305,
-          56.4313,
-          -5.3377,
-          56.4827
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260419T011547Z_9533591_X52_SLEDF/ICEYE_GFH1JM_20260419T011547Z_9533591_X52_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260419T011547Z_9533591_X52_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260419T121302Z_9535731_X44_SLEDF",
-        "aika": "2026-04-19T12:13:10.362Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X44",
-        "katselukulma": 25.1,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4346,
-          56.4277,
-          -5.3311,
-          56.485
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260419T121302Z_9535731_X44_SLEDF/ICEYE_GFH1JM_20260419T121302Z_9535731_X44_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260419T121302Z_9535731_X44_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260419T225017Z_9537341_X35_SLEDF",
-        "aika": "2026-04-19T22:50:23.195Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X35",
-        "katselukulma": 26.9,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4313,
-          56.4304,
-          -5.3345,
-          56.484
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260419T225017Z_9537341_X35_SLEDF/ICEYE_GFH1JM_20260419T225017Z_9537341_X35_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260419T225017Z_9537341_X35_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260419T225856Z_9537645_X50_SLEDF",
-        "aika": "2026-04-19T22:59:06.276Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X50",
-        "katselukulma": 39.7,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4339,
-          56.431,
-          -5.3399,
-          56.4831
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260419T225856Z_9537645_X50_SLEDF/ICEYE_GFH1JM_20260419T225856Z_9537645_X50_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260419T225856Z_9537645_X50_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260420T002015Z_9537755_X55_SLEDF",
-        "aika": "2026-04-20T00:20:24.642Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X55",
-        "katselukulma": 32.3,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4397,
-          56.4275,
-          -5.335,
-          56.4854
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260420T002015Z_9537755_X55_SLEDF/ICEYE_GFH1JM_20260420T002015Z_9537755_X55_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260420T002015Z_9537755_X55_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260420T113145Z_9539986_X42_SLEDF",
-        "aika": "2026-04-20T11:31:54.264Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 31.3,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4353,
-          56.4306,
-          -5.3395,
-          56.4836
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260420T113145Z_9539986_X42_SLEDF/ICEYE_GFH1JM_20260420T113145Z_9539986_X42_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260420T113145Z_9539986_X42_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260420T121801Z_9540046_X44_SLEDF",
-        "aika": "2026-04-20T12:18:10.693Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X44",
-        "katselukulma": 31.4,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4356,
-          56.4276,
-          -5.3312,
-          56.4854
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260420T121801Z_9540046_X44_SLEDF/ICEYE_GFH1JM_20260420T121801Z_9540046_X44_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260420T121801Z_9540046_X44_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_GFH1JM_20260420T135127Z_9540172_X56_SLEDF",
-        "aika": "2026-04-20T13:51:36.845Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X56",
-        "katselukulma": 37.4,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -5.4343,
-          56.4308,
-          -5.3396,
-          56.4833
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_GFH1JM_20260420T135127Z_9540172_X56_SLEDF/ICEYE_GFH1JM_20260420T135127Z_9540172_X56_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_GFH1JM_20260420T135127Z_9540172_X56_SLEDF.json"
+        "id": "iss020e009048",
+        "aika": "2009-06-12",
+        "teksti": "Purkaus kesken nousunsa: ruskea tuhkapatsas työntyy ylös ja sen huipulla lepää sileä valkoinen pilvenhattu, joka tiivistyy kun ilma nousee pilven mukana. Pilvikatto on auennut tulivuoren ympäriltä renkaaksi. Avaruusaseman rata sattui kulkemaan kohdalta juuri tällä hetkellä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 20",
+        "kuvaaja": "Mike Barratt",
+        "mitat": [
+          1920,
+          1311
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss020e009048/iss020e009048~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss020e009048/iss020e009048~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss020e009048"
       }
     ]
   },
   {
-    "tunnus": "kastrup",
-    "nimi": "Kastrup",
-    "seutu": "Kööpenhamina, Tanska",
-    "selite": "Lentoaseman kiitoradat ja Juutinrauman ranta saman ruudun sisällä.",
-    "lat": 55.5868,
-    "lon": 12.7842,
-    "oletus": "ICEYE_U3CH4Z_20251105T204747Z_6914850_X42_SLF3L",
+    "tunnus": "siveluts",
+    "nimi": "Šiveluts",
+    "seutu": "Kamtšatka, Venäjä",
+    "selite": "Kamtšatkan vilkkaimpia tulivuoria, lumen ja tuhkan kaksivärinen rinne.",
+    "lat": 56.65,
+    "lon": 161.36,
+    "oletus": "iss014e17165",
     "havainnot": [
       {
-        "id": "ICEYE_U3CH4Z_20251024T224144Z_6733322_X50_SLF",
-        "aika": "2025-10-24T22:41:51.925Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X50",
-        "katselukulma": 37,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          12.7431,
-          55.5636,
-          12.8252,
-          55.6101
+        "id": "iss014e17165",
+        "aika": "2007-03-21",
+        "teksti": "Höyry- ja tuhkapilvi ajautuu länteen lumisen huipun yli. Vasemmalla rinne on tuhkan peittämä ja ruskea, oikealla puhtaan valkoinen — tuuli on lajitellut vuoren kahteen väriin. Purkausjakso oli alkanut muutamaa päivää aiemmin.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 14",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1286
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-fine/ICEYE_U3CH4Z_20251024T224144Z_6733322_X50_SLF/ICEYE_U3CH4Z_20251024T224144Z_6733322_X50_SLF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/10/ICEYE_U3CH4Z_20251024T224144Z_6733322_X50_SLF.json"
-      },
-      {
-        "id": "ICEYE_U3CH4Z_20251105T204747Z_6914850_X42_SLF3L",
-        "aika": "2025-11-05T20:47:51.562Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 32.9,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          12.7331,
-          55.5579,
-          12.8352,
-          55.6157
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-fine/ICEYE_U3CH4Z_20251105T204747Z_6914850_X42_SLF3L/ICEYE_U3CH4Z_20251105T204747Z_6914850_X42_SLF3L_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/11/ICEYE_U3CH4Z_20251105T204747Z_6914850_X42_SLF3L.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss014e17165/iss014e17165~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss014e17165/iss014e17165~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss014e17165"
       }
     ]
   },
   {
-    "tunnus": "hoek-van-holland",
-    "nimi": "Hoek van Holland",
-    "seutu": "Alankomaat",
-    "selite": "Rotterdamin sataman suuaukko, jossa aallonmurtajat työntyvät mereen.",
-    "lat": 51.9495,
-    "lon": 4.1457,
-    "oletus": "ICEYE_U14ZW3_20240904T003536Z_4228243_X38_SLEDP",
+    "tunnus": "popocatepetl",
+    "nimi": "Popocatépetl",
+    "seutu": "Meksiko",
+    "selite": "Toimiva tulivuori aivan Mexico Cityn kyljessä.",
+    "lat": 19.023,
+    "lon": -98.622,
+    "oletus": "iss064e026423",
     "havainnot": [
       {
-        "id": "ICEYE_U14ZW3_20240904T003536Z_4228243_X38_SLEDP",
-        "aika": "2024-09-04T00:35:46.824Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X38",
-        "katselukulma": 31.7,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          4.0992,
-          51.9211,
-          4.1914,
-          51.9781
+        "id": "iss064e026423",
+        "aika": "2021-01-25",
+        "teksti": "Yli 5 400 metriä korkean tulivuoren huipulta karkaa ohut höyrypilvi länteen. Rinteen juurella näkyy peltojen ja teiden verkko: viisitoista miljoonaa ihmistä asuu alle sadan kilometrin päässä kraatterista.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": "RSN",
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-precise/ICEYE_U14ZW3_20240904T003536Z_4228243_X38_SLEDP/ICEYE_U14ZW3_20240904T003536Z_4228243_X38_SLEDP_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/09/ICEYE_U14ZW3_20240904T003536Z_4228243_X38_SLEDP.json"
-      },
-      {
-        "id": "ICEYE_U14ZW3_20260817T110512Z_10328858_X61_SLEDP",
-        "aika": "2026-08-17T11:05:20.471Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X61",
-        "katselukulma": 35.5,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.18",
-        "alue": [
-          4.1002,
-          51.9211,
-          4.192,
-          51.9778
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-precise/ICEYE_U14ZW3_20260817T110512Z_10328858_X61_SLEDP/ICEYE_U14ZW3_20260817T110512Z_10328858_X61_SLEDP_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/08/ICEYE_U14ZW3_20260817T110512Z_10328858_X61_SLEDP.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss064e026423/iss064e026423~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e026423/iss064e026423~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e026423"
       }
     ]
   },
   {
-    "tunnus": "faro",
-    "nimi": "Faro",
-    "seutu": "Portugali",
-    "selite": "Ria Formosan laguuni ja sen hiekkasärkät Algarven rannikolla.",
-    "lat": 37.0035,
-    "lon": -7.9157,
-    "oletus": "ICEYE_EYD6EB_20251109T112335Z_6984583_X47_SLED",
+    "tunnus": "fuji",
+    "nimi": "Fuji",
+    "seutu": "Japani",
+    "selite": "Japanin korkein vuori, lähes täydellinen kartio.",
+    "lat": 35.361,
+    "lon": 138.727,
+    "oletus": "iss074e0459342",
     "havainnot": [
       {
-        "id": "ICEYE_EYD6EB_20251106T133425Z_6923995_X47_SLF3L",
-        "aika": "2025-11-06T13:34:29.827Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X47",
-        "katselukulma": 31.9,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          -7.9546,
-          36.9723,
-          -7.8768,
-          37.0347
+        "id": "iss074e0044445",
+        "aika": "2026-01-03",
+        "teksti": "Sama vuori yöllä. Lumihuippu häämöttää harmaana keskellä kaupunkien valoverkkoa: Fuji-järvien seudulla ja sen ympäristössä asuu yli viisi miljoonaa ihmistä. Kuva on otettu paikallista aikaa noin puoli viideltä aamulla.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-fine/ICEYE_EYD6EB_20251106T133425Z_6923995_X47_SLF3L/ICEYE_EYD6EB_20251106T133425Z_6923995_X47_SLF3L_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/11/ICEYE_EYD6EB_20251106T133425Z_6923995_X47_SLF3L.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0044445/iss074e0044445~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0044445/iss074e0044445~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0044445"
       },
       {
-        "id": "ICEYE_EYD6EB_20251109T112335Z_6984583_X47_SLED",
-        "aika": "2025-11-09T11:23:49.049Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X47",
-        "katselukulma": 30.5,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          -7.9529,
-          36.9737,
-          -7.8785,
-          37.0334
+        "id": "iss074e0459342",
+        "aika": "2026-04-10",
+        "teksti": "Fuji melkein suoraan ylhäältä. Keskellä näkyy kraatteri mustana kuoppana, ja lumi valuu siitä säteittäin alas kuin kaadettu maito. Vuori on yhä toimiva tulivuori, vaikka viime purkauksesta on vuosi 1707.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_EYD6EB_20251109T112335Z_6984583_X47_SLED/ICEYE_EYD6EB_20251109T112335Z_6984583_X47_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/11/ICEYE_EYD6EB_20251109T112335Z_6984583_X47_SLED.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0459342/iss074e0459342~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0459342/iss074e0459342~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0459342"
       }
     ]
   },
   {
-    "tunnus": "teneriffa",
-    "nimi": "Teneriffa",
-    "seutu": "Kanariansaaret",
-    "selite": "Sama saari kuvattuna joka yö kolmen viikon ajan — tutkan aikasarja.",
-    "lat": 28.2343,
-    "lon": -16.7097,
-    "oletus": "ICEYE_ETH0SK_20260226T021339Z_8992815_X53_SM",
+    "tunnus": "tokio",
+    "nimi": "Tokio",
+    "seutu": "Japani",
+    "selite": "Maailman väkirikkain kaupunkiseutu yöllä.",
+    "lat": 35.68,
+    "lon": 139.77,
+    "oletus": "iss073e0918643",
     "havainnot": [
       {
-        "id": "ICEYE_ETH0SV_20260211T021259Z_8798324_X53_SM",
-        "aika": "2026-02-11T02:13:04.543Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.9,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9644,
-          27.9057,
-          -16.4569,
-          28.5627
+        "id": "iss073e0918643",
+        "aika": "2025-10-18",
+        "teksti": "Tokionlahden ympärillä asuu yli 39 miljoonaa ihmistä. Valojen seasta erottuvat pääratojen linjat, joiden asemat hohtavat ketjuna kirkkaampia pisteitä. Kuva on otettu paikallista aikaa noin neljältä aamulla.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0SV_20260211T021259Z_8798324_X53_SM/ICEYE_ETH0SV_20260211T021259Z_8798324_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0SV_20260211T021259Z_8798324_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0SV_20260212T021302Z_8807573_X53_SM",
-        "aika": "2026-02-12T02:13:07.236Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.9,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.965,
-          27.9059,
-          -16.4573,
-          28.5629
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0SV_20260212T021302Z_8807573_X53_SM/ICEYE_ETH0SV_20260212T021302Z_8807573_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0SV_20260212T021302Z_8807573_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0ST_20260213T021305Z_8818363_X53_SM",
-        "aika": "2026-02-13T02:13:10.039Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.9,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9666,
-          27.9053,
-          -16.4589,
-          28.5617
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0ST_20260213T021305Z_8818363_X53_SM/ICEYE_ETH0ST_20260213T021305Z_8818363_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0ST_20260213T021305Z_8818363_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0ST_20260214T021307Z_8833917_X53_SM",
-        "aika": "2026-02-14T02:13:12.965Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.8,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9681,
-          27.9053,
-          -16.4603,
-          28.5621
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0ST_20260214T021307Z_8833917_X53_SM/ICEYE_ETH0ST_20260214T021307Z_8833917_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0ST_20260214T021307Z_8833917_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0ST_20260215T021311Z_8845141_X53_SM",
-        "aika": "2026-02-15T02:13:16.009Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.8,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9708,
-          27.9048,
-          -16.4628,
-          28.5614
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0ST_20260215T021311Z_8845141_X53_SM/ICEYE_ETH0ST_20260215T021311Z_8845141_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0ST_20260215T021311Z_8845141_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0SS_20260216T021313Z_8850410_X53_SM",
-        "aika": "2026-02-16T02:13:18.976Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.8,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9725,
-          27.9039,
-          -16.4645,
-          28.5603
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0SS_20260216T021313Z_8850410_X53_SM/ICEYE_ETH0SS_20260216T021313Z_8850410_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0SS_20260216T021313Z_8850410_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0ST_20260217T021316Z_8858968_X53_SM",
-        "aika": "2026-02-17T02:13:21.407Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.8,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9728,
-          27.9046,
-          -16.4645,
-          28.5617
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0ST_20260217T021316Z_8858968_X53_SM/ICEYE_ETH0ST_20260217T021316Z_8858968_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0ST_20260217T021316Z_8858968_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0ST_20260218T021319Z_8865667_X53_SM",
-        "aika": "2026-02-18T02:13:24.026Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.8,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9733,
-          27.9052,
-          -16.465,
-          28.562
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0ST_20260218T021319Z_8865667_X53_SM/ICEYE_ETH0ST_20260218T021319Z_8865667_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0ST_20260218T021319Z_8865667_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0SK_20260219T021322Z_8871777_X53_SM",
-        "aika": "2026-02-19T02:13:26.986Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.8,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9755,
-          27.9037,
-          -16.467,
-          28.5608
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0SK_20260219T021322Z_8871777_X53_SM/ICEYE_ETH0SK_20260219T021322Z_8871777_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0SK_20260219T021322Z_8871777_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0SK_20260220T021324Z_8887186_X53_SM",
-        "aika": "2026-02-20T02:13:29.537Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.8,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9756,
-          27.9043,
-          -16.467,
-          28.5612
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0SK_20260220T021324Z_8887186_X53_SM/ICEYE_ETH0SK_20260220T021324Z_8887186_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0SK_20260220T021324Z_8887186_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0SK_20260221T021326Z_8911540_X53_SM",
-        "aika": "2026-02-21T02:13:31.842Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.8,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9751,
-          27.9042,
-          -16.4663,
-          28.5611
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0SK_20260221T021326Z_8911540_X53_SM/ICEYE_ETH0SK_20260221T021326Z_8911540_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0SK_20260221T021326Z_8911540_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0SK_20260222T021329Z_8934050_X53_SM",
-        "aika": "2026-02-22T02:13:34.461Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.7,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9764,
-          27.9037,
-          -16.4674,
-          28.5609
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0SK_20260222T021329Z_8934050_X53_SM/ICEYE_ETH0SK_20260222T021329Z_8934050_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0SK_20260222T021329Z_8934050_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0SK_20260223T021332Z_8955624_X53_SM",
-        "aika": "2026-02-23T02:13:37.049Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.7,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.976,
-          27.9039,
-          -16.4695,
-          28.5603
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0SK_20260223T021332Z_8955624_X53_SM/ICEYE_ETH0SK_20260223T021332Z_8955624_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0SK_20260223T021332Z_8955624_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0SK_20260224T021333Z_8969467_X53_SM",
-        "aika": "2026-02-24T02:13:38.948Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.7,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9734,
-          27.9046,
-          -16.4671,
-          28.56
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0SK_20260224T021333Z_8969467_X53_SM/ICEYE_ETH0SK_20260224T021333Z_8969467_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0SK_20260224T021333Z_8969467_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0SS_20260225T021336Z_8980777_X53_SM",
-        "aika": "2026-02-25T02:13:41.052Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.7,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9721,
-          27.9036,
-          -16.4654,
-          28.5599
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0SS_20260225T021336Z_8980777_X53_SM/ICEYE_ETH0SS_20260225T021336Z_8980777_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0SS_20260225T021336Z_8980777_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0SK_20260226T021339Z_8992815_X53_SM",
-        "aika": "2026-02-26T02:13:44.762Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 25.7,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9786,
-          27.9034,
-          -16.4717,
-          28.5596
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0SK_20260226T021339Z_8992815_X53_SM/ICEYE_ETH0SK_20260226T021339Z_8992815_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0SK_20260226T021339Z_8992815_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0TW_20260227T021343Z_9004927_X53_SM",
-        "aika": "2026-02-27T02:13:48.198Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 26.3,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9159,
-          27.9142,
-          -16.4119,
-          28.5704
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0TW_20260227T021343Z_9004927_X53_SM/ICEYE_ETH0TW_20260227T021343Z_9004927_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0TW_20260227T021343Z_9004927_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0TW_20260228T021345Z_9024068_X53_SM",
-        "aika": "2026-02-28T02:13:50.924Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 26.3,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9167,
-          27.9139,
-          -16.4127,
-          28.5697
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0TW_20260228T021345Z_9024068_X53_SM/ICEYE_ETH0TW_20260228T021345Z_9024068_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_ETH0TW_20260228T021345Z_9024068_X53_SM.json"
-      },
-      {
-        "id": "ICEYE_ETH0TY_20260301T021347Z_9040941_X53_SM",
-        "aika": "2026-03-01T02:13:52.975Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 26.3,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.14.6",
-        "alue": [
-          -16.9147,
-          27.915,
-          -16.4107,
-          28.5708
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stacks/tenerife/ICEYE_ETH0TY_20260301T021347Z_9040941_X53_SM/ICEYE_ETH0TY_20260301T021347Z_9040941_X53_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/03/ICEYE_ETH0TY_20260301T021347Z_9040941_X53_SM.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0918643/iss073e0918643~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0918643/iss073e0918643~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0918643"
       }
     ]
   },
   {
-    "tunnus": "napolinlahti",
-    "nimi": "Napolinlahti",
-    "seutu": "Italia",
-    "selite": "Vesuviuksen rinteet ja Sorrenton niemi yhtenä kaistana.",
-    "lat": 40.6629,
-    "lon": 14.4977,
-    "oletus": "ICEYE_SR4R1X_20260818T102226Z_10335520_X49_SM",
+    "tunnus": "korea",
+    "nimi": "Korean niemimaa yöllä",
+    "seutu": "Korea",
+    "selite": "Yökuva, jossa valtioiden raja näkyy pelkkänä pimeytenä.",
+    "lat": 38.3,
+    "lon": 127.2,
+    "oletus": "iss038e038300",
     "havainnot": [
       {
-        "id": "ICEYE_SR4R1X_20260818T102226Z_10335520_X49_SM",
-        "aika": "2026-08-18T10:22:31.597Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X49",
-        "katselukulma": 27.3,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.17.5",
-        "alue": [
-          14.0791,
-          40.4321,
-          14.9162,
-          40.8938
+        "id": "iss038e038300",
+        "aika": "2014-01-30",
+        "teksti": "Etelä-Korea loistaa alhaalla oikealla, ja sen keskellä on Soulin suuri valoläiskä. Pohjoisessa on lähes täysin pimeää: ainoa kirkas piste on Pjongjang. Yökuva mittaa sähkönkäyttöä, ja siksi raja erottuu tässä selvemmin kuin päiväkuvassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 38",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
         ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stripmap/ICEYE_SR4R1X_20260818T102226Z_10335520_X49_SM/ICEYE_SR4R1X_20260818T102226Z_10335520_X49_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/08/ICEYE_SR4R1X_20260818T102226Z_10335520_X49_SM.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss038e038300/iss038e038300~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss038e038300/iss038e038300~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss038e038300"
       }
     ]
   },
   {
-    "tunnus": "panama",
-    "nimi": "Panaman kanavan suu",
-    "seutu": "Panama",
-    "selite": "Laivat odottavat vuoroaan kanavalle: jokainen valkoinen täplä on alus.",
-    "lat": 8.8975,
-    "lon": -79.5257,
-    "oletus": "ICEYE_D1X6W7_20251107T033325Z_6934720_X50_SLH",
+    "tunnus": "dubai",
+    "nimi": "Dubai",
+    "seutu": "Arabiemiirikunnat",
+    "selite": "Mereen rakennetut keinosaaret, jotka tunnistaa avaruudesta muodosta.",
+    "lat": 25.13,
+    "lon": 55.13,
+    "oletus": "iss073e0247372",
     "havainnot": [
       {
-        "id": "ICEYE_D1X6W7_20251107T033325Z_6934720_X50_SLH",
-        "aika": "2025-11-07T03:33:28.002Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X50",
-        "katselukulma": 32.6,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          -79.5533,
-          8.8702,
-          -79.4982,
-          8.9249
+        "id": "iss072e447465",
+        "aika": "2025-01-02",
+        "teksti": "Sama rannikko yöllä paikallista aikaa noin kymmeneltä illalla. Palm Jumeirahin lehdet piirtyvät valoista, ja aavikolle vievät tiet erottuvat oransseina viivoina kaupungin valkoista hehkua vasten.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot/ICEYE_D1X6W7_20251107T033325Z_6934720_X50_SLH/ICEYE_D1X6W7_20251107T033325Z_6934720_X50_SLH_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/11/ICEYE_D1X6W7_20251107T033325Z_6934720_X50_SLH.json"
-      }
-    ]
-  },
-  {
-    "tunnus": "niagara",
-    "nimi": "Niagaran putoukset",
-    "seutu": "Kanada ja Yhdysvallat",
-    "selite": "Putousten kaari ja kaksi kaupunkia joen molemmin puolin.",
-    "lat": 43.0809,
-    "lon": -79.0707,
-    "oletus": "ICEYE_DPXV0D_20241001T030331Z_4271578_X31_SLEDF",
-    "havainnot": [
-      {
-        "id": "ICEYE_DPXV0D_20241001T030331Z_4271578_X31_SLEDF",
-        "aika": "2024-10-01T03:03:39.446Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X31",
-        "katselukulma": 27.8,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.18",
-        "alue": [
-          -79.108,
-          43.0534,
-          -79.0327,
-          43.1085
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_DPXV0D_20241001T030331Z_4271578_X31_SLEDF/ICEYE_DPXV0D_20241001T030331Z_4271578_X31_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/10/ICEYE_DPXV0D_20241001T030331Z_4271578_X31_SLEDF.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss072e447465/iss072e447465~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e447465/iss072e447465~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e447465"
       },
       {
-        "id": "ICEYE_DPXV0D_20251104T133802Z_6893776_X49_SLEDF",
-        "aika": "2025-11-04T13:38:16.955Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X49",
-        "katselukulma": 35.7,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          -79.1118,
-          43.0509,
-          -79.0303,
-          43.1107
+        "id": "iss073e0247372",
+        "aika": "2025-06-10",
+        "teksti": "Persianlahden rannalle kasattu hiekka on muotoiltu palmuiksi ja saariryhmäksi: vasemmalla Palm Jebel Ali, keskellä Palm Jumeirah ja oikealla The World -saaret. Kaikki näkyvä ranta on ihmisen tekemää.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_DPXV0D_20251104T133802Z_6893776_X49_SLEDF/ICEYE_DPXV0D_20251104T133802Z_6893776_X49_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/11/ICEYE_DPXV0D_20251104T133802Z_6893776_X49_SLEDF.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0247372/iss073e0247372~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0247372/iss073e0247372~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0247372"
       }
     ]
   },
   {
-    "tunnus": "losangeles",
-    "nimi": "Los Angelesin satama",
+    "tunnus": "niilin-suisto",
+    "nimi": "Niilin suisto",
+    "seutu": "Egypti",
+    "selite": "Joki ja sen suisto piirtyvät yöllä valoista, aavikko jää mustaksi.",
+    "lat": 30.6,
+    "lon": 31.2,
+    "oletus": "iss037e004654",
+    "havainnot": [
+      {
+        "id": "iss025e009858",
+        "aika": "2010-10-28",
+        "teksti": "Sama seutu avaruusaseman ikkunasta. Niili nousee alhaalta ylös kuin valoköysi, ja sen päässä suisto levittäytyy Välimerelle; kaukana horisontissa hohtaa ilmakehän oma vihertävä valo.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 25",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1314
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss025e009858/iss025e009858~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss025e009858/iss025e009858~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss025e009858"
+      },
+      {
+        "id": "iss037e004654",
+        "aika": "2013-10-01",
+        "teksti": "Kairo on kirkas ryöppy keskellä kuvaa, ja siitä pohjoiseen avautuu Niilin suiston valoviuhka. Joen varsi on asuttu kapeana nauhana, ja sen molemmin puolin alkaa heti aavikon pimeys. Kuvan otti Karen Nyberg.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 37",
+        "kuvaaja": "Karen Nyberg",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss037e004654/iss037e004654~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss037e004654/iss037e004654~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss037e004654"
+      }
+    ]
+  },
+  {
+    "tunnus": "richat",
+    "nimi": "Saharan silmä",
+    "seutu": "Mauritania",
+    "selite": "Neljäkymmentä kilometriä leveä rengasrakenne keskellä aavikkoa.",
+    "lat": 21.124,
+    "lon": -11.401,
+    "oletus": "iss069e005471",
+    "havainnot": [
+      {
+        "id": "iss002e5693",
+        "aika": "2001-04-19",
+        "teksti": "Sama kohde 22 vuotta aiemmin, kun hiekkapöly värjää ilman punertavaksi. Astronautit ovat käyttäneet silmää maamerkkinä alusta asti: aavikolla ei ole juuri muuta, mistä paikan tunnistaisi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 2",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1312
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss002e5693/iss002e5693~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss002e5693/iss002e5693~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss002e5693"
+      },
+      {
+        "id": "iss069e005471",
+        "aika": "2023-04-26",
+        "teksti": "Richat-rakenne eli Saharan silmä. Kyseessä ei ole törmäyskraatteri vaan kohonnut kalliokupoli, jonka kerrokset tuuli ja vesi ovat kuluttaneet paljaiksi renkaiksi. Kovat kerrokset jäivät harjanteiksi, pehmeät kuluivat kouruiksi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 69",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss069e005471/iss069e005471~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss069e005471/iss069e005471~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss069e005471"
+      }
+    ]
+  },
+  {
+    "tunnus": "namib",
+    "nimi": "Namibin dyynit",
+    "seutu": "Namibia",
+    "selite": "Maailman korkeimpia hiekkadyynejä, ja niiden terävä reuna kalliomaata vasten.",
+    "lat": -25,
+    "lon": 16,
+    "oletus": "iss073e0511487",
+    "havainnot": [
+      {
+        "id": "iss071e230722",
+        "aika": "2024-06-27",
+        "teksti": "Dyynikenttä ylhäältä Atlantin rannikolla. Hiekka vaihtaa väriä vaaleasta ruosteenpunaiseen sitä mukaa kuin rautapitoiset jyvät hapettuvat: mitä vanhempi hiekka, sitä punaisempi dyyni.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e230722/iss071e230722~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e230722/iss071e230722~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e230722"
+      },
+      {
+        "id": "iss073e0511487",
+        "aika": "2025-08-20",
+        "teksti": "Oikealla punainen dyynikenttä, vasemmalla paljas kalliomaa — ja niiden välissä lähes viivasuora raja. Meren puolelta puhaltava tuuli kasaa hiekan aina samaan kohtaan, eikä se pääse kallioiden yli.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0511487/iss073e0511487~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0511487/iss073e0511487~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0511487"
+      }
+    ]
+  },
+  {
+    "tunnus": "betsiboka",
+    "nimi": "Betsiboka",
+    "seutu": "Madagaskar",
+    "selite": "Joki, joka kuljettaa punaisen maan mereen.",
+    "lat": -16,
+    "lon": 46.55,
+    "oletus": "iss071e218069",
+    "havainnot": [
+      {
+        "id": "iss018e025705",
+        "aika": "2009-01-30",
+        "teksti": "Sama joki tulvillaan vuonna 2009, kun trooppinen myrsky Eric oli kastellut sen valuma-alueen. Punaisen veden rinnalla näkyy vielä tummanvihreää metsää — juuri sen katoaminen tekee joesta näin punaisen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 18",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss018e025705/iss018e025705~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss018e025705/iss018e025705~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss018e025705"
+      },
+      {
+        "id": "iss071e218069",
+        "aika": "2024-06-26",
+        "teksti": "Betsiboka-joki tuo Bombetokanlahteen niin paljon rautapitoista maa-ainesta, että vesi on ruosteenpunaista. Saarekkeet lahden suulla ovat kasvaneet siitä maasta, jonka joki on huuhtonut metsänhakkuiden jäljiltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e218069/iss071e218069~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e218069/iss071e218069~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e218069"
+      }
+    ]
+  },
+  {
+    "tunnus": "gibraltar",
+    "nimi": "Gibraltarinsalmi",
+    "seutu": "Espanja ja Marokko",
+    "selite": "Neljäntoista kilometrin kapeikko kahden mantereen ja kahden meren välissä.",
+    "lat": 35.95,
+    "lon": -5.6,
+    "oletus": "iss071e217183",
+    "havainnot": [
+      {
+        "id": "iss071e217183",
+        "aika": "2024-06-25",
+        "teksti": "Espanja vasemmalla, Marokko oikealla, ja niiden välissä salmi, joka yhdistää Atlantin Välimereen. Oikeassa yläkulmassa näkyy avaruusaseman robottikäsi. Kuvan otti astronautti Butch Wilmore.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e217183/iss071e217183~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e217183/iss071e217183~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e217183"
+      },
+      {
+        "id": "iss073e0686324",
+        "aika": "2025-08-30",
+        "teksti": "Sama salmi yöllä. Molempien rannikoiden valot piirtävät kapeikon muodon, ja horisontissa hohtaa ilmakehän oma vihreä valo. Paikallista aikaa oli puoli kaksi yöllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0686324/iss073e0686324~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0686324/iss073e0686324~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0686324"
+      }
+    ]
+  },
+  {
+    "tunnus": "bahama",
+    "nimi": "Bahaman matalikot",
+    "seutu": "Bahama",
+    "selite": "Kirkas vesi matalan kalkkipohjan päällä — avaruuden näkyvin turkoosi.",
+    "lat": 24,
+    "lon": -77.5,
+    "oletus": "iss071e449837",
+    "havainnot": [
+      {
+        "id": "iss058e002206",
+        "aika": "2019-01-04",
+        "teksti": "Sama matalikkoalue Kuuban suunnasta katsottuna. Kuvan vasemmassa reunassa näkyy avaruusasemaan telakoitu Progress-rahtialus — muistutus siitä, mistä ikkunasta kuvat otetaan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 58",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss058e002206/iss058e002206~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss058e002206/iss058e002206~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss058e002206"
+      },
+      {
+        "id": "iss071e449837",
+        "aika": "2024-07-24",
+        "teksti": "Turkoosit alueet ovat vain muutaman metrin syvyisiä kalkkihiekkamatalikoita, joista valo heijastuu takaisin; tummansininen on syvää merta. Ylhäällä kaartuu Maan reuna ja sen yllä ohut ilmakehä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e449837/iss071e449837~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e449837/iss071e449837~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e449837"
+      }
+    ]
+  },
+  {
+    "tunnus": "new-york",
+    "nimi": "New York yöllä",
     "seutu": "Yhdysvallat",
-    "selite": "Konttiterminaalit ja nosturirivit, joiden metalli loistaa tutkassa.",
-    "lat": 33.7518,
-    "lon": -118.2302,
-    "oletus": "ICEYE_9Q5BJ8_20260827T082949Z_10397370_X52_SLEA",
+    "selite": "Katuverkko, jonka muodon tunnistaa pelkistä valoista.",
+    "lat": 40.71,
+    "lon": -74,
+    "oletus": "iss064e016772",
     "havainnot": [
       {
-        "id": "ICEYE_9Q5BJ8_20260827T082949Z_10397370_X52_SLEA",
-        "aika": "2026-08-27T08:29:55.918Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X52",
-        "katselukulma": 25.5,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.18.1",
-        "alue": [
-          -118.3373,
-          33.6645,
-          -118.1232,
-          33.8391
+        "id": "iss053e239527",
+        "aika": "2017-11-23",
+        "teksti": "Laajempi näkymä kaikkiin viiteen kaupunginosaan ja New Jerseyn puolelle. Oranssit valot ovat vanhaa natriumvaloa, kylmän valkoiset uutta LED-valaistusta — ero kertoo, missä katulamput on jo vaihdettu.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 53",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
+        "kuva": "https://images-assets.nasa.gov/image/iss053e239527/iss053e239527~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss053e239527/iss053e239527~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss053e239527"
+      },
+      {
+        "id": "iss064e016772",
+        "aika": "2020-12-30",
+        "teksti": "Manhattanin ruutukaava erottuu vaaleana suikaleena, ja Central Park on sen keskellä musta suorakulmio. Joet ja satama jäävät pimeiksi, sillat näkyvät ohuina valojuovina niiden yli.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_9Q5BJ8_20260827T082949Z_10397370_X52_SLEA/ICEYE_9Q5BJ8_20260827T082949Z_10397370_X52_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/08/ICEYE_9Q5BJ8_20260827T082949Z_10397370_X52_SLEA.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss064e016772/iss064e016772~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e016772/iss064e016772~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e016772"
       }
     ]
   },
   {
-    "tunnus": "fort-mcmurray",
-    "nimi": "Fort McMurray",
-    "seutu": "Alberta, Kanada",
-    "selite": "Kaksi viikkoa peräkkäisiä kuvauksia kevättulvan aikaan.",
-    "lat": 56.6825,
-    "lon": -111.2863,
-    "oletus": "ICEYE_CD0F7W_20260512T164356Z_9670317_X46_SLEA",
+    "tunnus": "manicouagan",
+    "nimi": "Manicouaganin kraatteri",
+    "seutu": "Québec, Kanada",
+    "selite": "Rengasjärvi, joka on 214 miljoonaa vuotta vanhan törmäyksen jälki.",
+    "lat": 51.38,
+    "lon": -68.7,
+    "oletus": "iss034e052297",
     "havainnot": [
       {
-        "id": "ICEYE_CD0F7W_20260429T045709Z_9597231_X31_SLEA",
-        "aika": "2026-04-29T04:57:15.768Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X31",
-        "katselukulma": 25.4,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.456,
-          56.5913,
-          -111.12,
-          56.773
+        "id": "iss034e052297",
+        "aika": "2013-02-21",
+        "teksti": "Jäätynyt rengasjärvi kiertää keskelle jäänyttä saarta. Kraatteri syntyi noin 214 miljoonaa vuotta sitten asteroidin törmäyksestä, ja jääkaudet ovat sittemmin hioneet sen reunat matalaksi. Se on avaruudesta katsottuna yksi Maan tunnistettavimmista muodoista.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 34",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
         ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260429T045709Z_9597231_X31_SLEA/ICEYE_CD0F7W_20260429T045709Z_9597231_X31_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_CD0F7W_20260429T045709Z_9597231_X31_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260429T061322Z_9598105_X46_SLEA",
-        "aika": "2026-04-29T06:13:28.823Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X46",
-        "katselukulma": 27.2,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4463,
-          56.5982,
-          -111.1288,
-          56.7674
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260429T061322Z_9598105_X46_SLEA/ICEYE_CD0F7W_20260429T061322Z_9598105_X46_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_CD0F7W_20260429T061322Z_9598105_X46_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260429T171147Z_9602100_X50_SLEA",
-        "aika": "2026-04-29T17:11:53.284Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X50",
-        "katselukulma": 22,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4431,
-          56.5976,
-          -111.1232,
-          56.7682
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260429T171147Z_9602100_X50_SLEA/ICEYE_CD0F7W_20260429T171147Z_9602100_X50_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_CD0F7W_20260429T171147Z_9602100_X50_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260429T210542Z_9603897_X56_SLEA",
-        "aika": "2026-04-29T21:05:48.255Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X56",
-        "katselukulma": 25,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4473,
-          56.5978,
-          -111.1282,
-          56.7679
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260429T210542Z_9603897_X56_SLEA/ICEYE_CD0F7W_20260429T210542Z_9603897_X56_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_CD0F7W_20260429T210542Z_9603897_X56_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260430T080228Z_9606649_X56_SLEA",
-        "aika": "2026-04-30T08:02:34.408Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X56",
-        "katselukulma": 23.3,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4431,
-          56.5975,
-          -111.1235,
-          56.7682
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260430T080228Z_9606649_X56_SLEA/ICEYE_CD0F7W_20260430T080228Z_9606649_X56_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_CD0F7W_20260430T080228Z_9606649_X56_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260430T192515Z_9609881_X42_SLEA",
-        "aika": "2026-04-30T19:25:21.055Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 37.3,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4573,
-          56.5882,
-          -111.1109,
-          56.7763
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260430T192515Z_9609881_X42_SLEA/ICEYE_CD0F7W_20260430T192515Z_9609881_X42_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_CD0F7W_20260430T192515Z_9609881_X42_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260501T053113Z_9613983_X31_SLEA",
-        "aika": "2026-05-01T05:31:19.373Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X31",
-        "katselukulma": 34.4,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4414,
-          56.5992,
-          -111.1272,
-          56.7662
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260501T053113Z_9613983_X31_SLEA/ICEYE_CD0F7W_20260501T053113Z_9613983_X31_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260501T053113Z_9613983_X31_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260501T135258Z_9616496_X63_SLEA",
-        "aika": "2026-05-01T13:53:04.467Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X63",
-        "katselukulma": 20.8,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4516,
-          56.5903,
-          -111.1136,
-          56.7737
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260501T135258Z_9616496_X63_SLEA/ICEYE_CD0F7W_20260501T135258Z_9616496_X63_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260501T135258Z_9616496_X63_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260501T205826Z_9619997_X55_SLEA",
-        "aika": "2026-05-01T20:58:32.165Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X55",
-        "katselukulma": 33.6,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4443,
-          56.5992,
-          -111.1298,
-          56.7663
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260501T205826Z_9619997_X55_SLEA/ICEYE_CD0F7W_20260501T205826Z_9619997_X55_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260501T205826Z_9619997_X55_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260501T215320Z_9620479_X53_SLEA",
-        "aika": "2026-05-01T21:53:26.147Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X53",
-        "katselukulma": 35.1,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4562,
-          56.5888,
-          -111.1117,
-          56.7757
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260501T215320Z_9620479_X53_SLEA/ICEYE_CD0F7W_20260501T215320Z_9620479_X53_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260501T215320Z_9620479_X53_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260502T210410Z_9627202_X55_SLEA",
-        "aika": "2026-05-02T21:04:16.095Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X55",
-        "katselukulma": 26.4,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4468,
-          56.598,
-          -111.1284,
-          56.7676
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260502T210410Z_9627202_X55_SLEA/ICEYE_CD0F7W_20260502T210410Z_9627202_X55_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260502T210410Z_9627202_X55_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260503T181649Z_9634622_X61_SLEA",
-        "aika": "2026-05-03T18:16:54.918Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X61",
-        "katselukulma": 31.7,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4447,
-          56.5989,
-          -111.1297,
-          56.7665
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260503T181649Z_9634622_X61_SLEA/ICEYE_CD0F7W_20260503T181649Z_9634622_X61_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260503T181649Z_9634622_X61_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260504T182452Z_9641532_X31_SLEA",
-        "aika": "2026-05-04T18:24:58.803Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X31",
-        "katselukulma": 30.4,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4454,
-          56.5985,
-          -111.1291,
-          56.767
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260504T182452Z_9641532_X31_SLEA/ICEYE_CD0F7W_20260504T182452Z_9641532_X31_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260504T182452Z_9641532_X31_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260505T183259Z_9650181_X42_SLEA",
-        "aika": "2026-05-05T18:33:05.446Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 34.2,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4438,
-          56.5994,
-          -111.1302,
-          56.766
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260505T183259Z_9650181_X42_SLEA/ICEYE_CD0F7W_20260505T183259Z_9650181_X42_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260505T183259Z_9650181_X42_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260506T184139Z_9653784_X42_SLEA",
-        "aika": "2026-05-06T18:41:45.883Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 23.3,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4477,
-          56.5976,
-          -111.1282,
-          56.7681
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260506T184139Z_9653784_X42_SLEA/ICEYE_CD0F7W_20260506T184139Z_9653784_X42_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260506T184139Z_9653784_X42_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260507T182844Z_9657327_X31_SLEA",
-        "aika": "2026-05-07T18:28:50.776Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X31",
-        "katselukulma": 24.5,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4471,
-          56.5979,
-          -111.1285,
-          56.7678
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260507T182844Z_9657327_X31_SLEA/ICEYE_CD0F7W_20260507T182844Z_9657327_X31_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260507T182844Z_9657327_X31_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260508T213818Z_9660703_X55_SLEA",
-        "aika": "2026-05-08T21:38:24.625Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X55",
-        "katselukulma": 24.2,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4527,
-          56.5902,
-          -111.1134,
-          56.774
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260508T213818Z_9660703_X55_SLEA/ICEYE_CD0F7W_20260508T213818Z_9660703_X55_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260508T213818Z_9660703_X55_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260509T162729Z_9662788_X46_SLEA",
-        "aika": "2026-05-09T16:27:35.69Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X46",
-        "katselukulma": 39.5,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4606,
-          56.5881,
-          -111.1135,
-          56.7765
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260509T162729Z_9662788_X46_SLEA/ICEYE_CD0F7W_20260509T162729Z_9662788_X46_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260509T162729Z_9662788_X46_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260510T163258Z_9664868_X46_SLEA",
-        "aika": "2026-05-10T16:33:04.554Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X46",
-        "katselukulma": 33.8,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4593,
-          56.589,
-          -111.1154,
-          56.7755
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260510T163258Z_9664868_X46_SLEA/ICEYE_CD0F7W_20260510T163258Z_9664868_X46_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260510T163258Z_9664868_X46_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260511T163827Z_9667475_X46_SLEA",
-        "aika": "2026-05-11T16:38:33.596Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X46",
-        "katselukulma": 27.2,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.4581,
-          56.5899,
-          -111.1176,
-          56.7744
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260511T163827Z_9667475_X46_SLEA/ICEYE_CD0F7W_20260511T163827Z_9667475_X46_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260511T163827Z_9667475_X46_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260512T164356Z_9670317_X46_SLEA",
-        "aika": "2026-05-12T16:44:02.781Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X46",
-        "katselukulma": 19.9,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.457,
-          56.5908,
-          -111.1204,
-          56.7732
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260512T164356Z_9670317_X46_SLEA/ICEYE_CD0F7W_20260512T164356Z_9670317_X46_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260512T164356Z_9670317_X46_SLEA.json"
-      },
-      {
-        "id": "ICEYE_CD0F7W_20260514T050511Z_9675855_X42_SLEA",
-        "aika": "2026-05-14T05:05:17.82Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 24.8,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.1.6",
-        "alue": [
-          -111.458,
-          56.59,
-          -111.1181,
-          56.7742
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-extended-area/ICEYE_CD0F7W_20260514T050511Z_9675855_X42_SLEA/ICEYE_CD0F7W_20260514T050511Z_9675855_X42_SLEA_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_CD0F7W_20260514T050511Z_9675855_X42_SLEA.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss034e052297/iss034e052297~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss034e052297/iss034e052297~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss034e052297"
       }
     ]
   },
   {
-    "tunnus": "fort-simpson",
-    "nimi": "Fort Simpson",
-    "seutu": "Luoteisterritoriot, Kanada",
-    "selite": "Kylä saarella Mackenzie- ja Liard-jokien yhtymäkohdassa, kuvattuna jäidenlähdön aikaan.",
-    "lat": 61.8782,
-    "lon": -121.3689,
-    "oletus": "ICEYE_C718N0_20260501T193300Z_9619633_X42_SLEDF",
+    "tunnus": "grand-canyon",
+    "nimi": "Grand Canyon",
+    "seutu": "Arizona, Yhdysvallat",
+    "selite": "Joen kaivama rotko, jonka haarat levittäytyvät kuin puun oksat.",
+    "lat": 36.1,
+    "lon": -112.1,
+    "oletus": "iss074e0208838",
     "havainnot": [
       {
-        "id": "ICEYE_C718N0_20260323T193105Z_9371887_X44_SLEDF",
-        "aika": "2026-03-23T19:31:13.479Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X44",
-        "katselukulma": 26.2,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -121.4265,
-          61.8511,
-          -121.3117,
-          61.9053
+        "id": "iss074e0208838",
+        "aika": "2026-01-26",
+        "teksti": "Colorado-joki alkoi kaivaa rotkoa noin viisi miljoonaa vuotta sitten. Talvikuvassa varjot ja lumi korostavat sivurotkojen haarautuvaa kuviota, ja ylätasangot erottuvat vaaleina — ne ovat tuhat metriä rotkon pohjan yläpuolella.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_C718N0_20260323T193105Z_9371887_X44_SLEDF/ICEYE_C718N0_20260323T193105Z_9371887_X44_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/03/ICEYE_C718N0_20260323T193105Z_9371887_X44_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_C718N0_20260501T193300Z_9619633_X42_SLEDF",
-        "aika": "2026-05-01T19:33:08.63Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 20.2,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -121.4273,
-          61.8508,
-          -121.3111,
-          61.9057
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_C718N0_20260501T193300Z_9619633_X42_SLEDF/ICEYE_C718N0_20260501T193300Z_9619633_X42_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_C718N0_20260501T193300Z_9619633_X42_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_C718N0_20260502T194742Z_9626902_X35_SLEDF",
-        "aika": "2026-05-02T19:47:48.98Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X35",
-        "katselukulma": 26.3,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -121.4267,
-          61.8511,
-          -121.3115,
-          61.9054
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_C718N0_20260502T194742Z_9626902_X35_SLEDF/ICEYE_C718N0_20260502T194742Z_9626902_X35_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_C718N0_20260502T194742Z_9626902_X35_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_C718N0_20260503T194952Z_9635031_X61_SLEDF",
-        "aika": "2026-05-03T19:49:59.772Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X61",
-        "katselukulma": 30.9,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -121.4308,
-          61.8489,
-          -121.3066,
-          61.9075
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_C718N0_20260503T194952Z_9635031_X61_SLEDF/ICEYE_C718N0_20260503T194952Z_9635031_X61_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_C718N0_20260503T194952Z_9635031_X61_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_C718N0_20260504T195148Z_9642215_X35_SLEDF",
-        "aika": "2026-05-04T19:51:54.47Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X35",
-        "katselukulma": 20.4,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -121.4273,
-          61.8508,
-          -121.3111,
-          61.9057
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_C718N0_20260504T195148Z_9642215_X35_SLEDF/ICEYE_C718N0_20260504T195148Z_9642215_X35_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_C718N0_20260504T195148Z_9642215_X35_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_C718N0_20260505T200739Z_9650182_X42_SLEDF",
-        "aika": "2026-05-05T20:07:48.26Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 23.4,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -121.4306,
-          61.8489,
-          -121.3066,
-          61.9075
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_C718N0_20260505T200739Z_9650182_X42_SLEDF/ICEYE_C718N0_20260505T200739Z_9650182_X42_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_C718N0_20260505T200739Z_9650182_X42_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_C718N0_20260506T190120Z_9653882_X61_SLEDF",
-        "aika": "2026-05-06T19:01:28.229Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X61",
-        "katselukulma": 35,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -121.4253,
-          61.8517,
-          -121.3127,
-          61.9048
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_C718N0_20260506T190120Z_9653882_X61_SLEDF/ICEYE_C718N0_20260506T190120Z_9653882_X61_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_C718N0_20260506T190120Z_9653882_X61_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_C718N0_20260507T175742Z_9657069_X50_SLEDF",
-        "aika": "2026-05-07T17:57:51.961Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X50",
-        "katselukulma": 37.2,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -121.4247,
-          61.8518,
-          -121.3129,
-          61.9046
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_C718N0_20260507T175742Z_9657069_X50_SLEDF/ICEYE_C718N0_20260507T175742Z_9657069_X50_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_C718N0_20260507T175742Z_9657069_X50_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_C718N0_20260508T175904Z_9660176_X46_SLEDF",
-        "aika": "2026-05-08T17:59:14.102Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X46",
-        "katselukulma": 38.5,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -121.4245,
-          61.8519,
-          -121.3131,
-          61.9045
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_C718N0_20260508T175904Z_9660176_X46_SLEDF/ICEYE_C718N0_20260508T175904Z_9660176_X46_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_C718N0_20260508T175904Z_9660176_X46_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_C718N0_20260509T194654Z_9663209_X61_SLEDF",
-        "aika": "2026-05-09T19:47:01.829Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X61",
-        "katselukulma": 27.6,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -121.4304,
-          61.849,
-          -121.3068,
-          61.9073
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_C718N0_20260509T194654Z_9663209_X61_SLEDF/ICEYE_C718N0_20260509T194654Z_9663209_X61_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_C718N0_20260509T194654Z_9663209_X61_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_C718N0_20260510T191524Z_9664929_X42_SLEDF",
-        "aika": "2026-05-10T19:15:33.756Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 38.5,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -121.4247,
-          61.8519,
-          -121.3133,
-          61.9045
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_C718N0_20260510T191524Z_9664929_X42_SLEDF/ICEYE_C718N0_20260510T191524Z_9664929_X42_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/05/ICEYE_C718N0_20260510T191524Z_9664929_X42_SLEDF.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0208838/iss074e0208838~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0208838/iss074e0208838~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0208838"
       }
     ]
   },
   {
-    "tunnus": "juneau",
-    "nimi": "Juneau",
-    "seutu": "Alaska, Yhdysvallat",
-    "selite": "Vuonon pohjukan kaupunki jäätiköiden ja jyrkkien rinteiden välissä.",
-    "lat": 58.295,
-    "lon": -134.4242,
-    "oletus": "ICEYE_C427TH_20251108T223806Z_6973216_X56_SLP3L",
+    "tunnus": "lago-argentino",
+    "nimi": "Lago Argentino",
+    "seutu": "Patagonia, Argentiina",
+    "selite": "Turkoosi jäätikköjärvi lumihuippujen keskellä.",
+    "lat": -50.3,
+    "lon": -72.8,
+    "oletus": "iss074e0573516",
     "havainnot": [
       {
-        "id": "ICEYE_C427TH_20251108T223806Z_6973216_X56_SLP3L",
-        "aika": "2025-11-08T22:38:14.691Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X56",
-        "katselukulma": 24.8,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          -134.4754,
-          58.268,
-          -134.373,
-          58.3219
+        "id": "iss074e0573516",
+        "aika": "2026-05-06",
+        "teksti": "Järven väri tulee jäätikköjauhosta: jäätiköt jauhavat kalliota hienoksi jauheeksi, joka jää veteen leijumaan ja heijastaa valoa turkoosina. Järven sormet työntyvät suoraan Andien lumisten vuorten väliin.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-precise/ICEYE_C427TH_20251108T223806Z_6973216_X56_SLP3L/ICEYE_C427TH_20251108T223806Z_6973216_X56_SLP3L_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/11/ICEYE_C427TH_20251108T223806Z_6973216_X56_SLP3L.json"
-      },
-      {
-        "id": "ICEYE_C427TH_20251111T175800Z_7033950_X50_SLED",
-        "aika": "2025-11-11T17:58:15.892Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X50",
-        "katselukulma": 39.3,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          -134.4802,
-          58.2655,
-          -134.3682,
-          58.3245
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_C427TH_20251111T175800Z_7033950_X50_SLED/ICEYE_C427TH_20251111T175800Z_7033950_X50_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/11/ICEYE_C427TH_20251111T175800Z_7033950_X50_SLED.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0573516/iss074e0573516~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0573516/iss074e0573516~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0573516"
       }
     ]
   },
@@ -3409,421 +712,155 @@ export const SATELLIITTI_KOHTEET = [
     "tunnus": "ucayali",
     "nimi": "Ucayali",
     "seutu": "Peru",
-    "selite": "Amazonin latvajoen mutkat sademetsässä, jossa pilvet eivät haittaa tutkaa.",
-    "lat": -8.3932,
-    "lon": -74.5193,
-    "oletus": "ICEYE_6QE022_20260401T152903Z_9431117_X42_SLEDF",
+    "selite": "Amazonin latvajoki, joka vaihtaa uomaansa jatkuvasti.",
+    "lat": -7.5,
+    "lon": -74.8,
+    "oletus": "iss074e0492148",
     "havainnot": [
       {
-        "id": "ICEYE_6QE022_20260331T033546Z_9417828_X44_SLEDF",
-        "aika": "2026-03-31T03:35:56.08Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X44",
-        "katselukulma": 37.5,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -74.5459,
-          -8.4197,
-          -74.4927,
-          -8.3667
+        "id": "iss074e0492148",
+        "aika": "2026-04-15",
+        "teksti": "Joki kiemurtelee sademetsän läpi niin jyrkissä mutkissa, että osa niistä on jo kuroutunut umpeen: vanhat uomat näkyvät kaarevina järvinä joen vierellä. Ucayali on Amazonin pääasiallinen latvahaara.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_6QE022_20260331T033546Z_9417828_X44_SLEDF/ICEYE_6QE022_20260331T033546Z_9417828_X44_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/03/ICEYE_6QE022_20260331T033546Z_9417828_X44_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_6QE022_20260401T152903Z_9431117_X42_SLEDF",
-        "aika": "2026-04-01T15:29:11.923Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X42",
-        "katselukulma": 26,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          -74.5463,
-          -8.4199,
-          -74.4925,
-          -8.3664
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_6QE022_20260401T152903Z_9431117_X42_SLEDF/ICEYE_6QE022_20260401T152903Z_9431117_X42_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_6QE022_20260401T152903Z_9431117_X42_SLEDF.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0492148/iss074e0492148~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0492148/iss074e0492148~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0492148"
       }
     ]
   },
   {
-    "tunnus": "victorian-putoukset",
-    "nimi": "Victorian putoukset",
-    "seutu": "Sambia ja Zimbabwe",
-    "selite": "Sambesin kuilu ja putousten reuna; alapuolella siksakkaava rotko.",
-    "lat": -17.9359,
-    "lon": 25.855,
-    "oletus": "ICEYE_KSF6H2_20230713T073705Z_2358875_X2_SLED",
+    "tunnus": "taifuuni",
+    "nimi": "Taifuunin silmä",
+    "seutu": "Tyynimeri, Japanin eteläpuolella",
+    "selite": "Myrskyn silmä ylhäältä katsottuna — tyyni reikä keskellä pyörrettä.",
+    "lat": 26,
+    "lon": 139,
+    "oletus": "iss073e1044643",
     "havainnot": [
       {
-        "id": "ICEYE_KSF6H2_20230713T073705Z_2358875_X2_SLED",
-        "aika": "2023-07-13T07:37:13.71Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X2",
-        "katselukulma": 24.7,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.18",
-        "alue": [
-          25.8265,
-          -17.9562,
-          25.8826,
-          -17.9025
+        "id": "iss073e1044643",
+        "aika": "2025-10-08",
+        "teksti": "Taifuuni Halong luokkaa neljä Japanin eteläpuolella. Keskellä on silmä, jossa ilma laskeutuu ja pilvet hajoavat; sen ympärillä kiertää tiivis pilviseinä, jossa tuuli on kovimmillaan. Kuvan reunoilla näkyvät avaruusaseman aurinkopaneeli ja robottikäsi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_KSF6H2_20230713T073705Z_2358875_X2_SLED/ICEYE_KSF6H2_20230713T073705Z_2358875_X2_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2023/07/ICEYE_KSF6H2_20230713T073705Z_2358875_X2_SLED.json"
-      },
-      {
-        "id": "ICEYE_KSF3UM_20260219T090116Z_8872314_X46_SLED",
-        "aika": "2026-02-19T09:01:25.97Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X46",
-        "katselukulma": 35.7,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          25.8272,
-          -17.9695,
-          25.8837,
-          -17.9154
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell/ICEYE_KSF3UM_20260219T090116Z_8872314_X46_SLED/ICEYE_KSF3UM_20260219T090116Z_8872314_X46_SLED_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_KSF3UM_20260219T090116Z_8872314_X46_SLED.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss073e1044643/iss073e1044643~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e1044643/iss073e1044643~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e1044643"
       }
     ]
   },
   {
-    "tunnus": "kaohsiung",
-    "nimi": "Kaohsiung",
-    "seutu": "Taiwan",
-    "selite": "Yksi maailman vilkkaimmista konttisatamista kahtena eri vuonna.",
-    "lat": 22.5937,
-    "lon": 120.9943,
-    "oletus": "ICEYE_WSN093_20241001T140426Z_4273768_X31_SLEDF",
+    "tunnus": "revontulet-etela",
+    "nimi": "Etelän revontulet",
+    "seutu": "Uuden-Seelannin kaakkoispuoli",
+    "selite": "Revontulet ylhäältä: valo on samalla korkeudella kuin katsoja.",
+    "lat": -48,
+    "lon": 179,
+    "oletus": "iss073e0256896",
     "havainnot": [
       {
-        "id": "ICEYE_WSN093_20241001T140426Z_4273768_X31_SLEDF",
-        "aika": "2024-10-01T14:04:37.667Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X31",
-        "katselukulma": 20.4,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          120.9654,
-          22.5669,
-          121.0232,
-          22.6205
+        "id": "iss073e0256896",
+        "aika": "2025-06-03",
+        "teksti": "Etelän revontulet pyörteilevät pilvien yllä Uuden-Seelannin kaakkoispuolella. Vihreä väri syntyy hapesta noin sadan kilometrin korkeudessa ja punertava sitä ylempää — avaruusasema kiertää noin 400 kilometrissä, eli valon yläpuolella.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_WSN093_20241001T140426Z_4273768_X31_SLEDF/ICEYE_WSN093_20241001T140426Z_4273768_X31_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/10/ICEYE_WSN093_20241001T140426Z_4273768_X31_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_WSN093_20251105T024036Z_6903389_X35_SLEDF",
-        "aika": "2025-11-05T02:40:47.456Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X35",
-        "katselukulma": 31.1,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          120.966,
-          22.5674,
-          121.0227,
-          22.62
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_WSN093_20251105T024036Z_6903389_X35_SLEDF/ICEYE_WSN093_20251105T024036Z_6903389_X35_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/11/ICEYE_WSN093_20251105T024036Z_6903389_X35_SLEDF.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0256896/iss073e0256896~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0256896/iss073e0256896~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0256896"
       }
     ]
   },
   {
-    "tunnus": "zhengzhou",
-    "nimi": "Zhengzhou",
-    "seutu": "Kiina",
-    "selite": "Suurkaupungin ruutukaava, jonka korttelit erottuvat teräväreunaisina.",
-    "lat": 34.7475,
-    "lon": 113.7818,
-    "oletus": "ICEYE_WW0VTJ_20251104T180912Z_6897043_X25_SLEDF",
+    "tunnus": "revontulet-pohjoinen",
+    "nimi": "Pohjoisen revontulet",
+    "seutu": "Saint Lawrencenlahti, Kanada",
+    "selite": "Punaista ja vihreää verhoa Kanadan yllä.",
+    "lat": 48.5,
+    "lon": -62,
+    "oletus": "iss072e451060",
     "havainnot": [
       {
-        "id": "ICEYE_WW0VTJ_20240727T144658Z_4171290_X35_SLEDF",
-        "aika": "2024-07-27T14:47:10.808Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X35",
-        "katselukulma": 33.7,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          113.75,
-          34.7213,
-          113.8134,
-          34.7737
+        "id": "iss072e451060",
+        "aika": "2025-01-04",
+        "teksti": "Revontuliverho seisoo pystyssä kuin valoaita: alaosa on vihreä, yläosa punainen. Väri kertoo korkeuden, koska ohuessa yläilmakehässä happi ehtii hehkua punaisena. Tähtiä näkyy verhon läpi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_WW0VTJ_20240727T144658Z_4171290_X35_SLEDF/ICEYE_WW0VTJ_20240727T144658Z_4171290_X35_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2024/07/ICEYE_WW0VTJ_20240727T144658Z_4171290_X35_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_WW0VTJ_20251104T180912Z_6897043_X25_SLEDF",
-        "aika": "2025-11-04T18:09:22.926Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X25",
-        "katselukulma": 31,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.4",
-        "alue": [
-          113.7488,
-          34.7203,
-          113.8148,
-          34.7748
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_WW0VTJ_20251104T180912Z_6897043_X25_SLEDF/ICEYE_WW0VTJ_20251104T180912Z_6897043_X25_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/11/ICEYE_WW0VTJ_20251104T180912Z_6897043_X25_SLEDF.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss072e451060/iss072e451060~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e451060/iss072e451060~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e451060"
       }
     ]
   },
   {
-    "tunnus": "port-klang",
-    "nimi": "Port Klang",
-    "seutu": "Malesia",
-    "selite": "Malakan salmen satama ja sen mutaiset rannikkovedet.",
-    "lat": 2.6882,
-    "lon": 101.2894,
-    "oletus": "ICEYE_W22P2C_20260204T041748Z_8730851_X44_SLF2L",
+    "tunnus": "himalaja",
+    "nimi": "Himalaja",
+    "seutu": "Nepal ja Kiina",
+    "selite": "Vuorijono, joka jakaa ilmaston kahtia.",
+    "lat": 28.3,
+    "lon": 85.5,
+    "oletus": "iss074e0603570",
     "havainnot": [
       {
-        "id": "ICEYE_W22P2C_20260204T041748Z_8730851_X44_SLF2L",
-        "aika": "2026-02-04T04:17:51.608Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X44",
-        "katselukulma": 34.7,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.1.5",
-        "alue": [
-          101.2654,
-          2.664,
-          101.3134,
-          2.7123
+        "id": "iss074e0603570",
+        "aika": "2026-05-20",
+        "teksti": "Lumiset huiput erottavat Nepalin Tiibetistä. Vuoristo toimii patona: kostea ilma pysähtyy etelärinteille, ja pohjoispuolen ylätasanko jää kuivaksi. Ero näkyy kuvassa värinä — alhaalla vihreää, ylhäällä ruskeaa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
         ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/spot-fine/ICEYE_W22P2C_20260204T041748Z_8730851_X44_SLF2L/ICEYE_W22P2C_20260204T041748Z_8730851_X44_SLF2L_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/02/ICEYE_W22P2C_20260204T041748Z_8730851_X44_SLF2L.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0603570/iss074e0603570~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0603570/iss074e0603570~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0603570"
       }
     ]
   },
   {
-    "tunnus": "adelaide-river",
-    "nimi": "Adelaide Riverin seutu",
-    "seutu": "Pohjoisterritorio, Australia",
-    "selite": "Trooppinen tulvatasanko sadekauden lopulla, vesi mustana pensaikon seassa.",
-    "lat": -13.7841,
-    "lon": 130.7125,
-    "oletus": "ICEYE_QVSCW6_20260320T232133Z_9353325_X49_SLEDF",
+    "tunnus": "goidhoo",
+    "nimi": "Goidhoon atolli",
+    "seutu": "Malediivit",
+    "selite": "Rengasriutta, jonka sisään jää matala laguuni.",
+    "lat": 4.9,
+    "lon": 72.9,
+    "oletus": "iss010e12917",
     "havainnot": [
       {
-        "id": "ICEYE_QVSCW6_20260320T232133Z_9353325_X49_SLEDF",
-        "aika": "2026-03-20T23:21:41.531Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X49",
-        "katselukulma": 21.1,
-        "rata": "descending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          130.6797,
-          -13.8164,
-          130.7451,
-          -13.7526
+        "id": "iss010e12917",
+        "aika": "2005-01-13",
+        "teksti": "Atolli on vanhan tulivuoren ympärille kasvanut koralliriutta: vuori on painunut mereen, riutta jäi. Vaalea vyöhyke on riutan matalikkoa, tummansininen ulkopuolella on satojen metrien syvyistä. Kuva on osa sarjaa, joka otettiin vuoden 2004 tsunamin jälkeen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 10",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
         ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_QVSCW6_20260320T232133Z_9353325_X49_SLEDF/ICEYE_QVSCW6_20260320T232133Z_9353325_X49_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/03/ICEYE_QVSCW6_20260320T232133Z_9353325_X49_SLEDF.json"
-      },
-      {
-        "id": "ICEYE_QVSCW6_20260325T180609Z_9384281_X38_SLEDF",
-        "aika": "2026-03-25T18:06:17.788Z",
-        "tila": "spotlight",
-        "satelliitti": "ICEYE-X38",
-        "katselukulma": 31.1,
-        "rata": "ascending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_I_1.5.12",
-        "alue": [
-          130.6854,
-          -13.8102,
-          130.7396,
-          -13.7572
-        ],
-        "tuotteet": [
-          "CSI",
-          "GRD",
-          "QLK",
-          "SLC",
-          "VID"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/dwell-fine/ICEYE_QVSCW6_20260325T180609Z_9384281_X38_SLEDF/ICEYE_QVSCW6_20260325T180609Z_9384281_X38_SLEDF_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/03/ICEYE_QVSCW6_20260325T180609Z_9384281_X38_SLEDF.json"
-      }
-    ]
-  },
-  {
-    "tunnus": "thwaites",
-    "nimi": "Thwaitesin jäätikkö",
-    "seutu": "Antarktis",
-    "selite": "Jäätikön railokenttä ja kelluvan kielen reuna, kaksi vuotta peräkkäin.",
-    "lat": -75.4823,
-    "lon": -106.8247,
-    "oletus": "ICEYE_1DS48U_20250106T083806Z_4441137_X6_SM",
-    "havainnot": [
-      {
-        "id": "ICEYE_1DS48U_20250106T083806Z_4441137_X6_SM",
-        "aika": "2025-01-06T08:38:11.499Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X6",
-        "katselukulma": 19.2,
-        "rata": "descending",
-        "katse": "left",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.17.5",
-        "alue": [
-          -108.1455,
-          -75.8256,
-          -105.6242,
-          -75.1152
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stripmap/ICEYE_1DS48U_20250106T083806Z_4441137_X6_SM/ICEYE_1DS48U_20250106T083806Z_4441137_X6_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/01/ICEYE_1DS48U_20250106T083806Z_4441137_X6_SM.json"
-      },
-      {
-        "id": "ICEYE_1DS4D2_20260722T090947Z_10174906_X35_SM",
-        "aika": "2026-07-22T09:09:52.172Z",
-        "tila": "stripmap",
-        "satelliitti": "ICEYE-X35",
-        "katselukulma": 34,
-        "rata": "ascending",
-        "katse": "right",
-        "polarisaatio": "VV",
-        "kaista": "X",
-        "kasittely": "ICEYE_P_1.17.5",
-        "alue": [
-          -107.9791,
-          -75.8088,
-          -105.5502,
-          -75.1795
-        ],
-        "tuotteet": [
-          "GRD",
-          "QLK",
-          "SLC"
-        ],
-        "kuva": "https://iceye-open-data-catalog.s3.amazonaws.com/data/stripmap/ICEYE_1DS4D2_20260722T090947Z_10174906_X35_SM/ICEYE_1DS4D2_20260722T090947Z_10174906_X35_SM_THM.png",
-        "stac": "https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/07/ICEYE_1DS4D2_20260722T090947Z_10174906_X35_SM.json"
+        "kuva": "https://images-assets.nasa.gov/image/iss010e12917/iss010e12917~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss010e12917/iss010e12917~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss010e12917"
       }
     ]
   }
