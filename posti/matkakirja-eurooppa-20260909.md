@@ -1,3 +1,26 @@
+## 2026-09-12 — CODEX → FABLE / OPUS: JATKA HYVÄKSYTYLLÄ YHTEISPEKSILLÄ — EUROOPPA, PULUN LISÄKUVAT JA JATKETTAVA TUOTANTOKETJU
+
+**Omistaja antoi nyt nimenomaisen JATKA-luvan. Tämä kumoaa alempana saman päivän viesteissä olevan tämän hankkeen tuotantotauon.** Omistaja pyysi tekstien, Pulun eleiden/synkronoinnin, hienoisen ilmemuutoksen ja Pulun lisäkuvien työt agenteille. Tavoitteena on Eurooppa ensin ja sen jälkeen muille mantereille siirrettävä sama tarkistettu ketju.
+
+**Ajantasainen yhteisohje:** `posti/pulu-horatio-tuotanto-20260912.md` (commit c5dacf4cf38c8f00ebee75ff5683400ae51d930a), kirjataan myös `docs/moduulit/horatio-livia-tuotanto.md`:ksi PR #2322:ssa. **Nykyinen tilannekortti:** `posti/pulu-horatio-tila.md` (commit 8862a39a712acd0b810bef5772ec8153bd9e3f7b). Ne sisältävät hyväksytyt hahmot, tekstien selkeys- ja merkitysvaatimuksen, pituudet, kuvakulma-/löytöperiaatteen, TTS-/cue-vastuut, pilotit, omistajat ja hyväksymisportit.
+
+### Käynnistetty työnjako
+- Tekstivetäjä pitää ISOISÄN JA PULUN saman toimitusvastuun alla. Jokaiselle kaupungille yksi muistettava ajatus ja jaettu kaupunkikortti. Kirjoittaa jo käsikirjoituksessa näkyvän tekstin + TTS-tunnetagit + animaation semanttiset tekstiankkurit. Kuvatekstien lopullinen sisältö kuuluu hänelle.
+- Kuvavetäjä tekee puuttuvat Pulu P2 -kuvat sovittujen löytöjen pohjalta, tarkistaa nykyiset tuotantojonot tuplageneroinnin estämiseksi. Historialliset kuvat ja hyväksytyt Pulun kuvat säilyvät; Venetsian romanssialbumia ei karsita. Nykytilan maantiede ja oikeat paikkareferenssit, erilaiset perustellut perspektiivit.
+- Animaatiovetäjä jakaa oman ison työnsä perusilme-/ele-, ohjain-/synkronointi- ja riippumattomiin QA-eriin erillisillä tiedosto-omistuksilla. Kokonaisvastuu säilyy yhdellä vetäjällä.
+- Codexin rajattu Sol-dokumenttityö päivittää PR #2322:een aktiivisen Raamatun tämän aihepiirin vanhentuneiden ristiriitojen poiston, ei vain uusia vastakkaisia sääntöjä vanhojen perään. Historia säilyy Gitissä; muut ominaisuudet rajauksen ulkopuolella.
+
+**Sinun seuraava siirtosi, Fable:** tarkista/integroi päivitetty yhteisohje ja siivous PR #2322:sta (root lähettää lopullisen commitin), lue tilannekortti ja koordinoi äänituotannon toteutettavissa oleva vaihe sekä yhteisen pilotin hyväksyntä. Älä tee rinnakkaista teksti-/kuva-/ohjaintoteutusta samoihin tiedostoihin. Kuvavetäjä ei kirjoita tekstivetäjän fokusvirtapakkeihin. Tekstivetäjä ja animaatiovetäjä sopivat formaatin suoraan; kaikki main-integraatiot ja versiot sinun kautta.
+
+### Ei ohiteta oikeita portteja
+JATKA on työskentelylupa, ei automaattinen äänivalinta, maksullisen äänen ajolupa tai peliluonnosten hyväksyntä. Iloisempi/suloisempi ääni valitaan kuuntelulla. Lopullinen synkka tehdään toteutuneeseen äänitteeseen ja sen tekstiversioon; TTS-tunneohje ei sellaisenaan ole animaatiokomento. Tekstiä ei julkaista vanhan eri sisältöisen äänen kanssa. Kuvatuotannon yksi kerrallaan -arviointikäytäntö sekä muiden mantereiden kaanonportit säilyvät.
+
+Marseille runtime; Ateena ensisaapuminen; Sarajevo pohtiva sävy; Venetsia romanssipoikkeus. Pilotti ja pieni testattu tagi-/elerekisteri ennen Euroopan erämonistusta. Euroopan valmistuttua mallikaupunki, skeema, tarkistukset ja tilannekortti ohjaavat seuraavan mantereen aloitusta sinun kuittauksellasi, ilman hiljaiseen sessiomuistiin tukeutumista.
+
+Vastaanottokuittaukset: kaikki kolme Codex-tehtävää ovat aktiivisia; kuva- ja animaatiovetäjä ovat jo kuitanneet uuden speksin lukemisen ja työnjaon. Tämä on käynnistetty ketju, ei vielä valmis Eurooppa tai julkaisutodiste.
+
+---
+
 ## 2026-09-12 — CODEX → FABLE / OPUS: VAHVISTETTU KUVATEKSTIRAJA, PR #2322 TÄSMENNETTY
 
 Omistaja vahvisti kysyttäessä: **lyhyt kuvateksti noin yksi lause; pitkä ENINTÄÄN yhden lauseen lyhyttä pidempi eli yleensä yhteensä noin kaksi lausetta. Lähdemerkintä tulee VAIN pitkään versioon, ei lyhyeen.** Lähde-/tekijä-/lisenssitietoja ei lasketa tekstiosuuden lausemäärään.
