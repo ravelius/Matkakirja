@@ -47,8 +47,30 @@
  * nyt yhtä leveä molemmissa vaiheissa, ja js/nostokuva.js laskee sen
  * kortin leveyteen.
  */
+/*
+ * VIERITYS VAIN PYSTYSUUNTAAN (omistaja 12.9.2026, iPhone-kaappaus
+ * Scheuchzerin skandaalikortista: *"iPhonella pitäisi estää vieritys
+ * sivusuunnassa. Nimittäin nyt kun sivua vierittää ylös-alas, niin se
+ * heiluu myös hieman sivuttaissuunnassa turhaan."*).
+ *
+ * Juurisyy on css:n oma sääntö: kun toinen akseli on `auto`, toisen
+ * `visible` laskeutuu `auto`:ksi. Kortissa oli vain `overflow-y: auto`,
+ * joten vaakavieritys oli päällä — ja koska kuva mitoitetaan
+ * pikselilleen ja vierityspalkin kaista varataan erikseen, sisältö on
+ * ajoittain murto-osapikselin leveämpi kuin kotelo. Se riittää iOS:n
+ * kumitukseen: pystyveto heiluttaa korttia sivusuunnassa.
+ *
+ * `overflow-x: hidden` sulkee akselin ja `touch-action: pan-y` kertoo
+ * sen selaimelle jo eleen alussa, jottei ele ehdi alkaa vaakaliikkeenä.
+ * Kortin oma `touch-action: pan-y` (css/fokusnosto.css) ei riitä, koska
+ * vierittävä elementti on sen sisällä.
+ */
 .nostokuva-kortti .fokusnosto-sisalto,
-.nostokuva-kortti .fokuskohde-sisalto { scrollbar-gutter: stable; }
+.nostokuva-kortti .fokuskohde-sisalto {
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+  touch-action: pan-y;
+}
 
 /*
  * VAIHEESSA 1 NÄKYY VAIN KUVA, KUVATEKSTI JA "LISÄÄ" — ja sulku.
