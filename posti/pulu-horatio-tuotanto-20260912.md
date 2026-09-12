@@ -73,8 +73,8 @@ pulupojan kanssa säilyy nykyisten repliikkien ja albumin pohjalta;
 uutta nimeä tai romanssin ratkaisua ei keksitä omin päin.
 
 Pulun repliikki kertoo hieman nykyistä enemmän kaupungin NYKYTILASTA:
-miten siellä eletään, kuljetaan ja kohdataan, mihin vanha paikka nyt
-palvelee, mitä on muuttunut ja mitä säilynyt. Yleensä yksi konkreettinen
+miten siellä eletään, kuljetaan ja kohdataan, mitä tarkoitusta vanha paikka
+nykyään palvelee, mitä on muuttunut ja mitä säilynyt. Yleensä yksi konkreettinen
 nykyhavainto ja Pulun oma reaktio riittävät. Ei historian kertauksen,
 pullavitsin tai isoisän oikaisun samaa kaavaa joka kaupunkiin.
 Puhe on ymmärrettävää ja rentoa; vakiintuneet minä/sinä-pronominit säilyvät.
