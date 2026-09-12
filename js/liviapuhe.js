@@ -647,8 +647,9 @@ export const LIVIAN_AANITETYT = {
  * vanhalla äänellä, joten niissä ei ole erää.
  *
  * ERÄ 3 (12.9.2026, samana iltapäivänä): omistaja löysi kolmannen
- * äänen ja tilasi sen samoihin kohtauksiin sekä kahteen kaupunkiin
- * lisää: *"Generoi samat kohtaukset kuin aiemmin sekä myös Sofia ja
+ * äänen — "Cherry Twinkle – Adorable Cartoon Girl"
+ * (XJ2fW4ybq7HouelYYGcL) — ja tilasi sen samoihin kohtauksiin sekä
+ * kahteen kaupunkiin lisää: *"Generoi samat kohtaukset kuin aiemmin sekä myös Sofia ja
  * Krakova. Tällä voisi ID:llä käytä samaa V3-mallia taggeineen.
  * XJ2fW4ybq7HouelYYGcL"* Sama malli ja sama vakaus kuin erässä 2
  * (eleven_v3, natural), joten erien ero on pelkkä ääni — juuri siksi
