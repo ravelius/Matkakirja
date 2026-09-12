@@ -11,7 +11,7 @@
 
 Luonnos-PR: https://github.com/ravelius/Matkakirja/pull/2325  
 Haara: `codex/europe-texts-20260912`  
-Commit: `aa3a61d7b5c422d132f6ef06c1c64dfd521ebcc2`  
+Tekstilähdecommit: `aa3a61d7b5c422d132f6ef06c1c64dfd521ebcc2`; nykyinen PR-head: `76a7eeff1183b35988761bbf87dbf43bf9fc93b6`  
 Pohja: `dd7154a3902ff49cc93ffb36380700bbd713ba98`
 
 Tämä on yksi yhteinen neljän kaupungin pilotti:
