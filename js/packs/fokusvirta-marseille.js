@@ -241,13 +241,7 @@ export const FOKUSVIRTA_MARSEILLE = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Marseille, 1873. Saippuaa merelle lähtevän kaupungin tarpeisiin.',
-      selite: 'Saippuaharkot oli ladottu pöydälle kuin pienet rakennuskivet. '
-        + 'Niiden lähellä odottivat köydet ja kala, joita vastaan palat oli '
-        + 'tarkoitettu, ainakin hajusta päätellen. Marseillen satamassa '
-        + 'tavara koskee tavaraan ennen kuin ehtii matkustajan laukkuun. '
-        + 'Kauppias jäi kuvan ajaksi paikoilleen ja laski kätensä pöydälle. '
-        + 'Mustat kynnet eivät heikentäneet myyntipuhetta: hän tunsi työn, '
-        + 'josta lika syntyy.',
+      selite: 'Saippuaharkot oli ladottu pöydälle köysien ja kalan viereen kuin pienet rakennuskivet. Kauppiaan tummat kynnet kertoivat sataman työstä paremmin kuin myyntipuhe.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://collections.musees.marseille.fr/',
@@ -257,7 +251,7 @@ export const FOKUSVIRTA_MARSEILLE = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-marseille-r20260911-paper2-v1.jpg",
       lyhyt: "Marseille, 1873. Sataman jäljet irtosivat käsistä vasta majatalossa.",
-      selite: "Majatalon pieni pesuvati sai vastustajikseen tervan, kalan ja suolaveden. Laskin uuden saippuapalan sen reunalle ja käärin hihat. Satamasta tuotu laukku ja köysi jäivät odottamaan tuolille, vaikka niiden haju ei näyttänyt aikovan odottaa. Maailma jäi pesemättä, mutta käsissä muutos näkyi jo.",
+      selite: 'Laskin uuden saippuapalan majatalon pesuvadin reunalle ja käärin hihat. Terva, kala ja suolavesi jäivät köyteen ja laukkuun, mutta käsissä muutos näkyi.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://collections.musees.marseille.fr/","https://www.musee-orsay.fr/sites/default/files/2021-10/feuilletage_cinema_2.pdf"],
     },
@@ -276,13 +270,7 @@ export const FOKUSVIRTA_MARSEILLE = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-marseille-01-r20260909-euv1-v2.jpg',
         lyhyt: 'Marseille: sataman lokki tarkasti myös pöydän alapuolen.',
-        selite: 'Vanhassa satamassa veneet ovat vaihtuneet moneen kertaan, mutta '
-          + 'niiden ympärillä tehdään yhä kauppaa ja syödään. Lokki on '
-          + 'järjestänyt itselleen oman tarkastuskierroksen. Katson sen kengän '
-          + 'ja tuolin väliin mahtuvaa reittiä ammatillisella kiinnostuksella. '
-          + 'Isoisä osti täällä saippuaa. Tälle pöydälle pitäisi ehkä hankkia '
-          + 'myös vartija. Olen käytettävissä, kunhan tehtävän tarjoilu '
-          + 'sovitaan ensin.',
+        selite: 'Vanhassa satamassa syödään ja käydään yhä kauppaa veneiden ympärillä. Lokki tarkasti pöydän alustan, kun seurasin sen reittiä kengän ja tuolin välistä.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/the-old-port/',

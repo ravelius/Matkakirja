@@ -42,7 +42,13 @@ export function normalisoiSana(sana) {
 }
 
 export function sanoiksi(teksti) {
-  return String(teksti ?? '').split(/\s+/).map(normalisoiSana).filter(Boolean);
+  // Käytä samaa sanan rajaa kuin jaksonJasennys. Pelkkä välilyöntijako
+  // yhdisti esimerkiksi `1938–1939`:n yhdeksi sanaksi, vaikka aikaleimojen
+  // jäsennys jakoi sen kahdeksi ja Berliinin täysin yksikäsitteinen ankkuri
+  // näytti siksi puuttuvan forced-alignment-vastauksesta.
+  const tekstiString = String(teksti ?? '');
+  return jaksonJasennys(tekstiString, { alku: 0, loppu: tekstiString.length })
+    .sanat.map(({ sana }) => normalisoiSana(sana)).filter(Boolean);
 }
 
 export function ankkurinOsumat(teksti, ankkuri) {
@@ -148,7 +154,9 @@ export function ratkaiseCueAjat(tyo, vastaus) {
   const kesto = Math.max(...loput.map(ms).filter(Number.isFinite));
   const alkurivit = tyo.cuet.map((cue) => {
     const osumat = ankkurinOsumat(sanat, cue.ankkuri);
-    if (osumat.length !== cue.esiintyma) throw new Error(`${cue.id}: ankkuri ei ole yksikäsitteinen aikaleimoissa`);
+    if (osumat.length !== cue.esiintyma) {
+      throw new Error(`${cue.id}: ankkuri osuu aikaleimoissa ${osumat.length} kertaa (odotus ${cue.esiintyma})`);
+    }
     const alkuIndeksi = osumat[cue.esiintyma - 1];
     const pituus = sanoiksi(cue.ankkuri).length;
     return { ...cue, alku: sanat[alkuIndeksi].alku, ankkuriLoppu: sanat[alkuIndeksi + pituus - 1].loppu };

@@ -54,6 +54,13 @@ test('forced alignment ratkaisee cue-alkujen sanapaikat eikä päästä cueita p
   for (let i = 1; i < eleet.length; i += 1) assert.ok(eleet[i - 1].loppu <= eleet[i].alku);
 });
 
+test('forced alignment käyttää ankkurissa ja aikaleimoissa samaa sanarajaa', () => {
+  const tyo = livianKohdistustyo('berliini');
+  const eleet = ratkaiseCueAjat(tyo, alignment(tyo.teksti));
+  assert.equal(eleet[0].id, 'berliini.livia.c1');
+  assert.ok(eleet.every((e) => e.loppu > e.alku));
+});
+
 test('kirjoitettava data kantaa teksti- ja mp3-sidonnan ja kelpaa samalle runtimeportille', async () => {
   const tyo = livianKohdistustyo('ateena');
   const aanitavut = new TextEncoder().encode('lopullinen-mp3');
@@ -62,4 +69,12 @@ test('kirjoitettava data kantaa teksti- ja mp3-sidonnan ja kelpaa samalle runtim
   assert.equal(data.aani.tavut, aanitavut.byteLength);
   assert.match(data.aani.sha256, /^[0-9a-f]{64}$/);
   assert.equal(data.eleet.length, tyo.cuet.length);
+});
+
+test('koontimanifestin luentareaktiosemantiikka kelpaa runtimeportille', async () => {
+  const tyo = livianKohdistustyo('sofia');
+  const aanitavut = new TextEncoder().encode('lopullinen-sofia-mp3');
+  const data = await kokoaEledata(tyo, aanitavut, alignment(tyo.teksti));
+  assert.deepEqual(data.eleet.map(({ tarkoitus }) => tarkoitus),
+    ['myotailee', 'hammentynyt', 'huvittuu']);
 });

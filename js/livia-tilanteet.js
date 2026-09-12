@@ -48,9 +48,17 @@ export const LIVIAN_PUHEMERKITYKSET=Object.freeze({
 });
 export function livianPuheeleenTiedot({tarkoitus,voimakkuus}={}){
  const merkitys=String(tarkoitus??'').trim().toLocaleLowerCase('fi-FI');
- const ele=Object.hasOwn(LIVIAN_PUHEMERKITYKSET,merkitys)?LIVIAN_PUHEMERKITYKSET[merkitys]:null,luku=voimakkuus===undefined?.5:Number(voimakkuus);
+ const luku=voimakkuus===undefined?.5:Number(voimakkuus),voima=Math.max(0,Math.min(1,luku));
+ // Euroopan koontimanifesti käyttää city-3-cueissa myös samaa semanttista
+ // sanastoa kuin luentareaktiot. Muunna se tässä tekniseksi eleeksi; cueen
+ // pysyvä tarkoitus säilyy edelleen manifestin mukaisena.
+ const reaktioeleet={myotailee:'nod',epailee:'shake',torjuu:'shake',
+  huvittuu:voima<.4?'smile':voima<.55?'grin':'chuckle',
+  hammastyy:voima<.65?'doubleTake':'disbelief',vakavoituu:'listen'};
+ const ele=Object.hasOwn(LIVIAN_PUHEMERKITYKSET,merkitys)?LIVIAN_PUHEMERKITYKSET[merkitys]:
+  Object.hasOwn(reaktioeleet,merkitys)?reaktioeleet[merkitys]:null;
  if(!ele||!Number.isFinite(luku))return null;
- return Object.freeze({tarkoitus:merkitys,voimakkuus:Math.max(0,Math.min(1,luku)),ele});
+ return Object.freeze({tarkoitus:merkitys,voimakkuus:voima,ele});
 }
 export function ilmoitaLivianPuheEle(cue,tiedot={}){
  const ele=livianPuheeleenTiedot(cue);if(!ele)return null;

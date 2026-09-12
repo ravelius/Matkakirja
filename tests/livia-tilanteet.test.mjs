@@ -31,6 +31,9 @@ test('semanttinen puhemerkitys valitsee teknisen eleen erillään TTS-tageista',
  assert.deepEqual(LIVIAN_PUHEMERKITYKSET,{selittaa:'cityExplain',utelias:'lookUp',lammin:'smile',ilo:'grin',miettiva:'think',rakkaus:'love',hammentynyt:'confused'});
  assert.deepEqual(livianPuheeleenTiedot({tarkoitus:' SELITTAA ',voimakkuus:.45}),{tarkoitus:'selittaa',voimakkuus:.45,ele:'cityExplain'});
  assert.deepEqual(livianPuheeleenTiedot({tarkoitus:'rakkaus',voimakkuus:.8}),{tarkoitus:'rakkaus',voimakkuus:.8,ele:'love'});
+ for(const [tarkoitus,voimakkuus,ele]of [['myotailee',.3,'nod'],['epailee',.5,'shake'],['torjuu',.7,'shake'],['huvittuu',.35,'smile'],['huvittuu',.45,'grin'],['huvittuu',.6,'chuckle'],['hammastyy',.4,'doubleTake'],['hammastyy',.8,'disbelief'],['vakavoituu',.5,'listen']]){
+  assert.deepEqual(livianPuheeleenTiedot({tarkoitus,voimakkuus}),{tarkoitus,voimakkuus,ele});
+ }
  assert.equal(livianPuheeleenTiedot({tarkoitus:'[excited]',voimakkuus:.5}),null);
  assert.equal(livianPuheeleenTiedot({tarkoitus:'toString',voimakkuus:.5}),null);
  const calls=[],puheTunnus={};const off=kuunteleLivianTilanteita((...x)=>calls.push(x));t.after(off);
