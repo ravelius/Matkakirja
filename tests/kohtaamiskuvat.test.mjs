@@ -3,7 +3,7 @@ import { readFile, stat } from 'node:fs/promises';
 import test from 'node:test';
 
 import {
-  KOHTAAMIS_R2_JUURI, KOHTAAMISKUVAT_KOHTEELLE, kohtaamiskuvaKohteelle, kohtaamiskuvat,
+  KOHTAAMIS_R2_JUURI, KOHTAAMISKUVAT_KOHTEELLE, kohtaamiskuvaKohteelle, kohtaamiskuvaOsoite, kohtaamiskuvat,
 } from '../js/kohtaamiskuvat-data.js';
 import { TARINAKAARI } from '../js/packs/tarinakaari.js';
 
@@ -18,7 +18,46 @@ test('kohtaamiskuvagalleria käyttää vain R2-mediaa', async () => {
      */
     assert.match(kohtaaminen.tiedosto, /^[a-z0-9-]+\.jpg$/);
     await assert.rejects(stat(new URL(`../${kohtaaminen.tiedosto}`, import.meta.url)));
+    /*
+     * Päiväkansio (12.9.2026 alkaen) on oma kenttänsä, jotta osoitteen
+     * kauttaviiva ei kulje encodeURIComponentin läpi. Yksi taso, samat
+     * merkit kuin tiedostonimessä — muuten osoite lakkaisi olemasta
+     * ennustettava.
+     */
+    if (kohtaaminen.kansio !== undefined) assert.match(kohtaaminen.kansio, /^[a-z0-9-]+$/);
+    const osoite = kohtaamiskuvaOsoite(kohtaaminen);
+    assert.equal(osoite, kohtaaminen.kansio
+      ? `${KOHTAAMIS_R2_JUURI}/${kohtaaminen.kansio}/${kohtaaminen.tiedosto}`
+      : `${KOHTAAMIS_R2_JUURI}/${kohtaaminen.tiedosto}`);
   }
+});
+
+/*
+ * KUVAPUTKEN 12.9.2026 TOIMITUKSEN NELJÄ RIVIÄ: Granada peliin, kolme
+ * muuta vain galleriaan. Oslon, Pietarin ja Sarajevon kuvissa on eri
+ * henkilö kuin kaaressa (Oskar, Matvei, Emir), joten `tarkistettu`
+ * kaataisi jo hahmovartion — tämä vartio sanoo saman syyn ääneen,
+ * jottei tilaa vaihdeta vahingossa ennen kuin kaari nimeää henkilön.
+ */
+test('12.9.2026 toimituksen neljä kuvaa ovat oikeissa tiloissa ja päiväkansiossa', () => {
+  const rivit = new Map(kohtaamiskuvat
+    .filter((kuva) => kuva.kansio === '20260912')
+    .map((kuva) => [kuva.id, kuva]));
+  assert.equal(rivit.size, 4);
+  for (const [id, tila, hahmo] of [
+    ['granada-ines-e4ab59a7e815', 'tarkistettu', 'Inés'],
+    ['oslo-liv-992a171d5df6', 'arkisto', 'Liv'],
+    ['pietari-polina-6188e4c488db', 'arkisto', 'Polina'],
+    ['sarajevo-adnan-8d19fb11c377', 'arkisto', 'Adnan'],
+  ]) {
+    const kuva = rivit.get(id);
+    assert.ok(kuva, `toimituksen rivi ${id} puuttuu katalogista`);
+    assert.equal(kuva.tila, tila);
+    assert.equal(kuva.hahmo, hahmo);
+    assert.equal(kuva.tiedosto, `${id}.jpg`);
+  }
+  assert.equal(kohtaamiskuvaKohteelle('granada')?.id, 'granada-ines-e4ab59a7e815');
+  for (const kohde of ['oslo', 'pietari', 'sarajevo']) assert.equal(kohtaamiskuvaKohteelle(kohde), null);
 });
 
 test('jokaisella kohtaamiskuvalla on kaupungin lisäksi tilanteen kuvateksti', () => {
