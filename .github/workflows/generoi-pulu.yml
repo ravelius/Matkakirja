@@ -276,7 +276,7 @@ jobs:
                 exit 1
               fi
               kaupungit+=("${avain%-3}")
-            done < <(printf '%s' "$REPLIIKIT" | tr ',[:space:]' '\n')
+            done < <(printf '%s\n' "$REPLIIKIT" | tr ',[:space:]' '\n')
             if [ "${#kaupungit[@]}" -eq 0 ]; then
               echo "::error::Kohdistuksen repliikkirajaus on tyhjä."
               exit 1
