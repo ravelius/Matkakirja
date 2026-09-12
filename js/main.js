@@ -35,7 +35,7 @@ import {
   asetaPulunVoima, asetaPuheVoima, asetaTehosteVoima,
   puheVoima, pulunVoima, tehosteVoima,
 } from './aani-ehdokkaat.js';
-import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
+import { paivitaLuentojenVoima, stopDiaryVoice, stopIntroVoice } from './luenta.js';
 // Pulun soiva repliikki seuraa pulun omaa liukua (js/liviapuhe.js).
 import { paivitaPulunVoima } from './liviapuhe.js';
 import { asennaPollo } from './pollo.js';
@@ -43,8 +43,8 @@ import { asennaPollo } from './pollo.js';
 import { kytkeSahke, nollaaSahke } from './sahke.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
-  asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset, puheenNopeus,
-  puheenVoima, tallennaPuheAsetukset,
+  asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset, paivitaLukijanVoima,
+  puheenNopeus, puheenVoima, tallennaPuheAsetukset,
 } from './puhe.js';
 import { lueAaneen, pysaytaLukija } from './lukija.js';
 import { PUHE_OLETUKSET } from './puhe-oletukset.js';
@@ -138,7 +138,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1814';
+const APP_VERSION = '2026-08-09.1815';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -691,10 +691,12 @@ for (const tiedot of AANIKYTKIMET) {
  *              tehosteet, äänitesiivut, pulun tehosteet ja äänimaisema.
  *   pulu       js/liviapuhe.js paivitaPulunVoima — soiva repliikki
  *              lasketaan uudestaan perustasosta ja vaimennuksesta.
- *   lukija     soivat luennat saavat uuden tason suoraan (kaikki muut
- *              paitsi pulun äänite asettavat volumen tasan puheVoimaan,
- *              ks. js/luenta.js, js/linssipuhe.js, js/ui.js); seuraavat
- *              luennat lukevat arvon itse.
+ *   lukija     js/luenta.js paivitaLuentojenVoima — JOKAINEN soiva
+ *              äänitteenä oleva luenta (avaus, matkakirja, linssiluenta,
+ *              hihkaisu) saa tason puhujakirjanpidosta — JA js/puhe.js
+ *              paivitaLukijanVoima, joka vie saman liu'un striimattuun
+ *              lukijaan (lehdet ja artikkelit); seuraavat luennat
+ *              lukevat arvon itse.
  */
 const AANIVOIMAT = [
   {
@@ -718,7 +720,9 @@ const AANIVOIMAT = [
     lue: puheVoima,
     aseta: (arvo) => {
       asetaPuheVoima(arvo);
-      paivitaSoivatLuennat();
+      paivitaLuentojenVoima();
+      // Striimattu lukija (lehdet, artikkelit) on saman liu'un takana.
+      paivitaLukijanVoima();
     },
   },
   /*
@@ -743,23 +747,6 @@ const AANIVOIMAT = [
     aseta: (arvo) => asetaKehittajanKerroin('tausta', arvo),
   },
 ];
-
-/**
- * Soivan luennan taso uusiksi ilman että kertoja katkeaa. Pulun oma
- * äänite ohitetaan: sillä on oma liukunsa ja oma kertoimensa.
- */
-function paivitaSoivatLuennat() {
-  const luennat = ui?.luennat;
-  if (!luennat) return;
-  for (const audio of luennat) {
-    if (audio === ui?.liviaAani) continue;
-    try {
-      audio.volume = puheVoima();
-    } catch {
-      /* selain ei kelpuuta arvoa — seuraava luenta lukee sen itse */
-    }
-  }
-}
 
 for (const voima of AANIVOIMAT) {
   const liuku = document.getElementById(`voima-${voima.avain}`);

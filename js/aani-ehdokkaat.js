@@ -1228,8 +1228,19 @@ function tallennaVoima(avain, arvo) {
   return rajattu;
 }
 
+/**
+ * Lukija-liu'un OLETUSASENTO (index.html #voima-lukija value="90").
+ *
+ * Vietiin vakioksi 12.9.2026, kun striimattu lukija (js/puhe.js)
+ * kytkettiin tähän liukuun: sen oma vahvistus on työhuoneen kerroin, ja
+ * liuku kertoo siihen SUHTEENSA oletusasentoon. Ilman tätä lukua
+ * kytkentä olisi muuttanut lukijan oletustason, ja juuri sitä ei saa
+ * tapahtua — liu'un piti alkaa toimia, ei pelin kuulostaa toiselta.
+ */
+export const PUHEVOIMA_OLETUS = 0.9;
+
 export function puheVoima() {
-  return lueVoima(PUHEVOIMA_AVAIN, 0.9);
+  return lueVoima(PUHEVOIMA_AVAIN, PUHEVOIMA_OLETUS);
 }
 
 export function asetaPuheVoima(arvo) {

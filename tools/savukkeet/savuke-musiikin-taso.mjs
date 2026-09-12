@@ -213,21 +213,33 @@ for (const r of musa) {
   }
 }
 
+/*
+ * SÄÄDIN ON MUSIIKIN OMA LIUKU, EI ENÄÄ KEHITTÄJÄN KERROIN.
+ *
+ * Tämä kohta kutsui `asetaKehittajanKerroin('musiikki', …)` — lajia,
+ * joka POISTETTIIN 9.9.2026 (js/kehittajan-voimat.js
+ * KEHITTAJAN_VOIMA_LAJIT on nyt pelkkä ['tausta'], ja tuntemattomalla
+ * lajilla asetin palauttaa ykkösen tekemättä mitään). Vartio siis mittasi
+ * kutsua, joka ei koskenut mihinkään, ja kaatui aina — se ei kertonut
+ * musiikin säätimestä enää mitään. Säädin on nyt 0–100:n liuku
+ * (index.html #kehittaja-musiikki-liuku, js/musiikkivalitsin.js), ja
+ * oletusasento on 35, joten 10 on selvästi alempi ja 100 selvästi ylempi.
+ */
 const saada = async (arvo) => {
   await sivu.evaluate(async (v) => {
-    const m = await import('/js/kehittajan-voimat.js');
-    m.asetaKehittajanKerroin('musiikki', v);
+    const m = await import('/js/musiikkivalitsin.js');
+    m.asetaMusiikinLiuku(v);
   }, arvo);
   await sivu.waitForTimeout(1000);
   return musiikki(await sivu.evaluate(() => window.__soivat()));
 };
 
-const hiljaa = await saada(0.5);
-const kovaa = await saada(2);
+const hiljaa = await saada(10);
+const kovaa = await saada(100);
 for (const ennen of musa) {
   const a = hiljaa.find((r) => r.nimi === ennen.nimi);
   const b = kovaa.find((r) => r.nimi === ennen.nimi);
-  tieto(`${ennen.nimi} kertoimilla 1 / 0,5 / 2`, `${ennen.taso} / ${a?.taso} / ${b?.taso}`);
+  tieto(`${ennen.nimi} liu'uilla 35 / 10 / 100`, `${ennen.taso} / ${a?.taso} / ${b?.taso}`);
   vaadi(`${ennen.nimi}: säädin alas hiljentää soivan raidan`, a && a.taso < ennen.taso * 0.9,
     `${ennen.taso} → ${a?.taso}`);
   vaadi(`${ennen.nimi}: säädin ylös kovemmalle`, b && b.taso > ennen.taso * 1.1,
