@@ -41,8 +41,82 @@ import {
 
 /** Nimiä pallolla enintään kerrallaan (karttapallo.md luku 6). */
 export const NIMIEN_KATTO = 40;
-/** Reunavara: nimi ladotaan, jos piste on tämän verran ruudun ulkopuolella (px). */
-export const NIMEN_REUNAVARA_PX = 40;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * NIMIBUDJETTI ZOOMTASON MUKAAN (omistaja 12.9.2026, sanatarkasti:
+ * *"Kaupunki tekstejä on liikaa näkyvillä uloimmilla zoom tasoilla
+ * koska ne joutuvat panoroitaessa väistelemään toisiaan ja silloin
+ * tekstit hyppivät eri paikkoihin"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJAN DIAGNOOSI ON JUURISYY, EI OIRE. Kun nimiöitä on enemmän
+ * kuin ruudulle mahtuu, ladonta joutuu väistämään, ja väistöpäätös
+ * riippuu siitä, missä kamera sattuu olemaan — sama nimi vaihtaa
+ * kylkeä panoroitaessa. Lääke ei ole tasoittaa hyppyä vaan latoa niin
+ * harvaan, ettei väistöä juuri tarvita.
+ *
+ * MITATTU (Chromium 390 × 844 dpr 2, neljä pientä panorointiaskelta,
+ * väistö = nimen kyljen tai siirron vaihtuminen; budjetti : nimiä /
+ * väistöjä):
+ *
+ *   näkymän korkeus  ehdokkaita   6     10    14    20    30    40
+ *   133,6°           139          2     4     4     5     10    14
+ *    85,5°            63          1     1     2     2     2      3
+ *    53,4°            21          0     0     0     1     1      1
+ *    32,1°            11          0     0     0     0     0      0
+ *
+ * Eli ladonta on vakaa, kun nimiä on enintään noin neljätoista, ja
+ * uloimmilla tasoilla vähemmän. Vanha kiinteä 40 oli lähikuvassa
+ * harmiton (ehdokkaita on vain kourallinen) mutta maailmanmitassa
+ * kolminkertainen siihen, mikä mahtuu.
+ *
+ * SÄÄNTÖ ON PORTAATON JA SAMAA MUOTOA KUIN PISTEEN KOKO: budjetti on
+ * kääntäen verrannollinen näkymän korkeuteen, eli nimiä on karkeasti
+ * VAKIO MÄÄRÄ KARTAN PINTA-ALAA KOHDEN. Vertailukorkeus on pelin oma
+ * saapumisnäkymä (mitattu 19,8°, pyöristettynä 20°), jossa budjetti on
+ * täysi 40 — siellä peliä pelataan, eikä siihen kosketa. Ulospäin:
+ *
+ *   32,1° → 25    53,4° → 15    85,5° →  9
+ *   40,1° → 20    64,1° → 12   133,6° →  6 (lattia)
+ *
+ * Lattia NIMIEN_VAHIN on kuusi: koko maailman mitassa ruudulla on yhä
+ * puolisen tusinaa suurinta kaupunkia, jotta kartta ei ole mykkä.
+ *
+ * NÄKYMÄN KORKEUS, EI LEVEYS — sama perustelu kuin nostojen porteilla
+ * (js/pallolauta/nostot.js): kameran pystykulma on kiinteä, joten
+ * korkeus asteina on sama luku puhelimella ja työpöydällä, kun taas
+ * leveys riippuu ruudun kuvasuhteesta.
+ */
+/** Näkymän korkeus asteina, jossa nimibudjetti on täysi (saapumisnäkymä). */
+export const NIMIBUDJETIN_KORKEUS = 20;
+/** Nimiä vähintään, vaikka koko maailma olisi ruudulla. */
+export const NIMIEN_VAHIN = 6;
+/**
+ * Nimibudjetti näkymän korkeudesta (asteina). Portaaton ja kasvava
+ * sisäänpäin zoomatessa; tuntematon näkymä saa lattian.
+ *
+ * @param {number} korkeusAst näkymän korkeus asteina
+ */
+export function nimibudjetti(korkeusAst) {
+  if (!(korkeusAst > 0)) return NIMIEN_VAHIN;
+  const luku = Math.round(NIMIEN_KATTO * (NIMIBUDJETIN_KORKEUS / korkeusAst));
+  return Math.min(NIMIEN_KATTO, Math.max(NIMIEN_VAHIN, luku));
+}
+/*
+ * NIMI EI SAA LEIKKAUTUA RUUDUN REUNASTA (sama vikailmoitus: kuvassa
+ * SHANGHAI, HONGKONG, MANILA, DARWIN ja ADELAIDE ovat puoliksi
+ * ruudun ulkopuolella).
+ *
+ * Reunavara oli +40 px eli nimi ladottiin, vaikka kaupungin piste oli
+ * neljäkymmentä pikseliä RUUDUN ULKOPUOLELLA — silloin teksti on
+ * väistämättä katkaistu. Nyt pisteen on oltava ruudulla (0), ja lisäksi
+ * ladottu nimi pudotetaan, jos sen laatikko ei mahdu kokonaan ruutuun
+ * (ks. lado). Jälkimmäinen on se tarkka sääntö: nimi piirtyy pisteen
+ * kyljelle, joten pelkkä pisteen sijainti ei kerro, mahtuuko teksti.
+ */
+export const NIMEN_REUNAVARA_PX = 0;
+/** Kuinka monta pikseliä nimi saa ylittää ruudun reunan ennen pudotusta. */
+export const NIMEN_REUNAN_SIETO_PX = 1;
 /** Pelaajan oma kaupunki voittaa kaikki muut ehdokkaat. */
 const OMAN_KAUPUNGIN_TARKEYS = 1000;
 
@@ -160,16 +234,38 @@ export function luoNimet({
         lat: k.lat,
         lng: k.lng,
         tarkeys: k.c.tarkeys + (k.c.id === oma ? OMAN_KAUPUNGIN_TARKEYS : 0),
-        etaisyys: Math.hypot(p.x - w / 2, p.y - h / 2),
       });
     }
-    // Tärkein ensin; tasapelissä lähin ruudun keskipistettä, sitten nimi.
+    /*
+     * VALINTA ON KAUPUNGIN OMA, EI KAMERAN (omistaja 12.9.2026, ks.
+     * NIMIBUDJETTI ZOOMTASON MUKAAN). Järjestys oli ennen `tarkeys`,
+     * sitten LÄHIN RUUDUN KESKIPISTETTÄ — ja koska `tarkeys` katkaisee
+     * reittiasteen kolmeen, tasapelijoukot ovat isoja ja budjetin
+     * leikkaus osui juuri niihin: sama kaupunki putosi ja palasi sen
+     * mukaan, mihin suuntaan karttaa liikutti. Nyt tasapelin ratkaisee
+     * kaupungin oma reittiaste ja viime kädessä nimi — kummallakaan ei
+     * ole mitään tekemistä kameran kanssa, joten sama näkymä antaa
+     * aina saman joukon riippumatta siitä, mistä suunnasta sinne
+     * tullaan.
+     */
     ehdokkaat.sort((a, b) => (b.tarkeys - a.tarkeys)
-      || (a.etaisyys - b.etaisyys)
+      || ((b.c.aste ?? 0) - (a.c.aste ?? 0))
       || (a.c.nimi < b.c.nimi ? -1 : 1));
     const ladottu = ladoRuutunimet(ehdokkaat, {
-      varaukset, pinot, katto, kokoKerroin, pisteSade,
+      varaukset, pinot, katto, kokoKerroin, pisteSade, ruutu: { w, h },
     });
+    /*
+     * REUNASTA LEIKKAUTUVA NIMI PUDOTETAAN (ks. NIMI EI SAA LEIKKAUTUA
+     * RUUDUN REUNASTA): nimi piirtyy pisteen kyljelle, joten vasta
+     * ladottu laatikko kertoo, mahtuuko teksti ruutuun.
+     */
+    const mahtuu = (r) => !r || (r.x0 >= -NIMEN_REUNAN_SIETO_PX
+      && r.y0 >= -NIMEN_REUNAN_SIETO_PX
+      && r.x1 <= w + NIMEN_REUNAN_SIETO_PX
+      && r.y1 <= h + NIMEN_REUNAN_SIETO_PX);
+    const reunalta = ladottu.nimiot.length;
+    ladottu.nimiot = ladottu.nimiot.filter((n) => mahtuu(n.r));
+    ladottu.pudotettu += reunalta - ladottu.nimiot.length;
     const datumit = ladottu.nimiot.map((n) => {
       const e = ehdokkaat.find((k) => k.c === n.c);
       /*

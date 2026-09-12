@@ -29,7 +29,9 @@ const {
   karttanimienKaupungit, ladoRuutunimet, karttanimienLadonta, KARTTANIMI_KOOT,
 } = await import('../js/karttanimet.js');
 const { MAAILMANKARTTA } = await import('../js/packs/maailmankartta.js');
-const { NIMIEN_KATTO } = await import('../js/pallolauta/nimet.js');
+const {
+  NIMIEN_KATTO, NIMIEN_VAHIN, NIMIBUDJETIN_KORKEUS, NIMEN_REUNAVARA_PX, nimibudjetti,
+} = await import('../js/pallolauta/nimet.js');
 const { PALLOLAUDAN_KERROKSET, HTML_MERKKIEN_KATTO } = await import('../js/pallolauta/lauta.js');
 const { NOSTOJEN_KATTO } = await import('../js/pallolauta/nostot.js');
 const { pallonNostotaso, lahdetaso } = await import('../tools/tee-pallolaatat.mjs');
@@ -131,7 +133,13 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   assert.equal(HTML_MERKKIEN_KATTO, 60);
   assert.equal(NIMIEN_KATTO, 40);
   assert.equal(NOSTOJEN_KATTO, 40);
-  assert.match(lauta, /Math\.min\(NIMIEN_KATTO, Math\.max\(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos\.maara\)\)/);
+  /*
+   * Nimibudjetti tulee nyt ZOOMTASOSTA (omistaja 12.9.2026, ks.
+   * js/pallolauta/nimet.js nimibudjetti); CSS2D-kerroksen oma katto on
+   * yhä sen yläraja. Budjettikäyrän vartija on alempana tässä
+   * tiedostossa.
+   */
+  assert.match(lauta, /Math\.min\(nimibudjetti\(korkeusAst\),\n\s*Math\.max\(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos\.maara\)\)/);
   // Avauslento rajaa ehdokkaat kahteen nimeen ja lähtövalinta LONTOOSEEN
   // (nimet.js `vain`, aalto 3A). Valittavan kaupungin nimi tulee sen
   // omasta kohdemerkistä, joten karttanimi jää siltä pois — muuten
@@ -358,4 +366,98 @@ test('lauta kysyy nimien osumat ja tekee niistä kaupungin napautuksen', () => {
   const nimet = lue('../js/pallolauta/nimet.js');
   assert.match(nimet, /osuma: suhde \? \(p\) => \(\{/);
   assert.match(nimet, /osumat: \(\) => osumat,/);
+});
+
+/* ================================================================== *
+ * NIMIBUDJETTI ZOOMTASON MUKAAN (omistaja 12.9.2026)
+ *
+ * *"Kaupunki tekstejä on liikaa näkyvillä uloimmilla zoom tasoilla
+ * koska ne joutuvat panoroitaessa väistelemään toisiaan ja silloin
+ * tekstit hyppivät eri paikkoihin"*
+ *
+ * MITATTU (Chromium 390 x 844 dpr 2, kahdeksan pientä panorointi-
+ * askelta; väistö = nimen kyljen tai siirron vaihtuminen):
+ *
+ *   näkymän korkeus   nimiä ennen  jälkeen   väistöjä ennen  jälkeen
+ *   133,6°            40           6         41              3
+ *    85,5°            40           9          9              3
+ *    64,1°            22–32        11–12     12              5
+ *    53,4°            19–20        11–12      8              3
+ *    40,1°            10–11        8–10       2              5
+ *    32,1°             7–10        5–6        2              0
+ *    19,8°             3–4         3          0              0
+ *
+ * Työpöydällä (1440 x 900) sama: 84,9° 2–40 nimeä ja 63 väistöä ->
+ * 9 nimeä ja 17 väistöä; 78° 35–40 / 45 -> 10 / 16.
+ * ================================================================== */
+
+test('nimibudjetti pienenee portaattomasti ulos zoomatessa, lattiaan asti', () => {
+  // Vertailukorkeus on saapumisnäkymä: siellä budjetti on täysi.
+  assert.equal(nimibudjetti(NIMIBUDJETIN_KORKEUS), NIMIEN_KATTO);
+  assert.equal(nimibudjetti(19.8), NIMIEN_KATTO);
+  // Mitatut zoomtasot: budjetti seuraa näkymän korkeutta.
+  const mitatut = [[32.1, 25], [40.1, 20], [53.4, 15], [64.1, 12], [85.5, 9], [133.6, 6]];
+  for (const [hAst, odotettu] of mitatut) {
+    assert.equal(nimibudjetti(hAst), odotettu, `korkeus ${hAst}`);
+  }
+  // Portaaton ja kasvava sisäänpäin: ei yhtään nousua ulospäin.
+  let edellinen = Infinity;
+  for (let h = 10; h <= 160; h += 0.5) {
+    const nyt = nimibudjetti(h);
+    assert.ok(nyt <= edellinen, `korkeus ${h}: budjetti kasvoi ulospäin`);
+    edellinen = nyt;
+  }
+  // Lattia ja katto pitävät, eivätkä rikkinäiset luvut kaada.
+  assert.equal(nimibudjetti(1000), NIMIEN_VAHIN);
+  assert.equal(nimibudjetti(1), NIMIEN_KATTO);
+  assert.equal(nimibudjetti(0), NIMIEN_VAHIN);
+  assert.equal(nimibudjetti(Infinity), NIMIEN_VAHIN);
+  assert.equal(nimibudjetti(NaN), NIMIEN_VAHIN);
+  assert.ok(NIMIEN_VAHIN >= 6, 'maailmanmitassa on yhä puolisen tusinaa nimeä');
+  // Lauta lukee budjetin näkymän KORKEUDESTA (ei leveydestä).
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /const korkeusAst = nakyva\?\.h > 0 \? \(nakyva\.h \* 360\) \/ PALLOLAUDAN_LEVEYS : Infinity;/);
+  assert.match(lauta, /Math\.min\(nimibudjetti\(korkeusAst\),/);
+});
+
+test('nimien valinta on kaupungin oma eikä kameran: ei etäisyyttä keskipisteeseen', () => {
+  const nimet = lue('../js/pallolauta/nimet.js');
+  // Tasapelin ratkaisee kaupungin reittiaste ja nimi, ei ruutupaikka.
+  assert.match(nimet, /\.sort\(\(a, b\) => \(b\.tarkeys - a\.tarkeys\)\n\s*\|\| \(\(b\.c\.aste \?\? 0\) - \(a\.c\.aste \?\? 0\)\)\n\s*\|\| \(a\.c\.nimi < b\.c\.nimi \? -1 : 1\)\);/);
+  assert.ok(!nimet.includes('etaisyys'),
+    'kameran etäisyys ei saa palata valintaan — se teki joukosta suunnasta riippuvan');
+  // Arvojärjestys on aineistossa ja pysyvä.
+  for (const c of karttanimienKaupungit(MAAILMANKARTTA)) {
+    assert.ok(Number.isFinite(c.aste) && c.aste >= 0, `${c.id}: aste puuttuu`);
+    assert.ok(Number.isFinite(c.tarkeys), `${c.id}: tarkeys puuttuu`);
+  }
+  // Sama näkymä antaa saman joukon riippumatta siitä, missä järjestyksessä
+  // ehdokkaat tulevat — eli valinta ei riipu kameran liikesuunnasta.
+  const jarjesta = (lista) => [...lista].sort((a, b) => (b.tarkeys - a.tarkeys)
+    || ((b.c.aste ?? 0) - (a.c.aste ?? 0))
+    || (a.c.nimi < b.c.nimi ? -1 : 1));
+  const pohja = ehdokkaat(834 / 12000, ateena, 834, 1112).map((e) => ({ ...e }));
+  const a = ladoRuutunimet(jarjesta(pohja), { katto: 12, ruutu: { w: 834, h: 1112 } });
+  const b = ladoRuutunimet(jarjesta([...pohja].reverse()), { katto: 12, ruutu: { w: 834, h: 1112 } });
+  assert.deepEqual(a.nimiot.map((n) => n.c.id), b.nimiot.map((n) => n.c.id),
+    'ehdokkaiden saapumisjärjestys ei saa vaikuttaa valintaan');
+});
+
+test('nimi ei leikkaudu ruudun reunasta: ulkopuoli on este', () => {
+  const nimet = lue('../js/pallolauta/nimet.js');
+  // Ehdokkaan pisteen on oltava ruudulla (ei enää +40 px ulkopuolelle).
+  assert.equal(NIMEN_REUNAVARA_PX, 0);
+  assert.match(nimet, /ruutu: \{ w, h \}/);
+  const w = 834;
+  const h = 1112;
+  const laidalla = ehdokkaat(834 / 12000, ateena, w, h);
+  const ilman = ladoRuutunimet(laidalla, { katto: 40 });
+  const kanssa = ladoRuutunimet(laidalla, { katto: 40, ruutu: { w, h } });
+  const yli = (tulos) => tulos.nimiot.filter((n) => n.r
+    && (n.r.x0 < -1 || n.r.y0 < -1 || n.r.x1 > w + 1 || n.r.y1 > h + 1)).length;
+  assert.ok(yli(ilman) > 0, 'mittaus ei toistu: reunan yli meneviä ei ollut ennenkään');
+  assert.equal(yli(kanssa), 0, 'nimi jäi yhä ruudun ulkopuolelle');
+  // Nimi ei katoa vaan siirtyy: valtaosa säilyy, kun reuna on este.
+  assert.ok(kanssa.nimiot.length >= ilman.nimiot.length - yli(ilman),
+    `nimiä ${kanssa.nimiot.length} vs ${ilman.nimiot.length}`);
 });

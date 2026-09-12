@@ -1011,6 +1011,20 @@ function keraaAineisto(pack) {
     ly: c.ly ?? 0,
     iso: Boolean(c.start || c.airport),
     tarkeys: (c.start ? 8 : 0) + (c.airport ? 4 : 0) + Math.min(3, aste.get(c.id) ?? 0),
+    /*
+     * REITTIASTE KATTAMATTOMANA — kaupungin oma, kameran suunnasta
+     * riippumaton arvojärjestys (omistaja 12.9.2026: nimien on
+     * pysyttävä paikallaan panoroitaessa). `tarkeys` katkaisee asteen
+     * kolmeen, joten sen sisällä on isoja tasapelijoukkoja; pallolla
+     * nimibudjetin leikkaus osuu juuri niihin (js/pallolauta/nimet.js),
+     * ja ilman hienompaa lukua valinta jäisi ratkaistavaksi sillä,
+     * mikä kaupunki sattuu olemaan lähinnä ruudun keskipistettä.
+     * Aineistossa aste on kaupungin solmuisuus reittiverkossa, eli
+     * paras saatavilla oleva "kuinka merkittävä" — väkilukua pakassa
+     * ei ole (pack.cities: id, name, wiki, ambience, x, y, start,
+     * airport, la, lx, ly).
+     */
+    aste: aste.get(c.id) ?? 0,
   }));
   const nimet = MAAILMANKARTAN_NIMET ?? {};
   /*
@@ -2740,9 +2754,27 @@ export function karttanimienKaupungit(pack) {
  *   `r` nimen laatikko ruudulla
  */
 export function ladoRuutunimet(ehdokkaat, {
-  varaukset = [], pinot = [], katto = 40, kokoKerroin = 1, pisteSade = 0,
+  varaukset = [], pinot = [], katto = 40, kokoKerroin = 1, pisteSade = 0, ruutu = null,
 } = {}) {
   const { este, varaa } = varausruudukko();
+  /*
+   * RUUDUN ULKOPUOLI ON ESTE (omistaja 12.9.2026: pallon nimistä osa
+   * oli puoliksi ruudun ulkopuolella — SHANGHAI, HONGKONG, MANILA,
+   * DARWIN, ADELAIDE). Kun laidat varataan, `sijoitaKaupunginNimi`
+   * kokeilee toista kylkeä samalla säännöllä kuin muidenkin esteiden
+   * kanssa — nimi ei siis katoa vaan siirtyy sisäänpäin, ja putoaa
+   * vasta jos yksikään paikka ei mahdu. Vyö on 400 px eli reilusti yli
+   * pisimmän nimiön, mutta äärellinen: varausruudukko käy laatikon
+   * ruudut läpi silmukassa.
+   */
+  if (ruutu?.w > 0 && ruutu?.h > 0) {
+    const { w: rw, h: rh } = ruutu;
+    const vyo = 400;
+    varaa({ x0: -vyo, y0: -vyo, x1: 0, y1: rh + vyo });
+    varaa({ x0: rw, y0: -vyo, x1: rw + vyo, y1: rh + vyo });
+    varaa({ x0: -vyo, y0: -vyo, x1: rw + vyo, y1: 0 });
+    varaa({ x0: -vyo, y0: rh, x1: rw + vyo, y1: rh + vyo });
+  }
   const kelpo = (r) => Number.isFinite(r?.x0) && Number.isFinite(r?.y0)
     && Number.isFinite(r?.x1) && Number.isFinite(r?.y1) && r.x1 > r.x0 && r.y1 > r.y0;
   const pinoLaatikot = pinot.filter(kelpo);
