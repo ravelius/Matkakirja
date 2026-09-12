@@ -358,8 +358,14 @@ test('työkalu tuntee saapumisrepliikit, mutta peli soittaa aina kuivan', () => 
    */
   assert.equal(livianAaniOsoite('avaus', 0),
     `${LIVIAN_AANIJUURI}livia-avaus-1.mp3?v=${LIVIAN_AANITETYT['avaus-1']}-${LIVIAN_AANIERAT['avaus-1']}`);
+  /*
+   * SOFIA ON ERÄSSÄ 3 (12.9.2026): omistaja tilasi kolmannen äänen
+   * samoihin kohtauksiin sekä Sofiaan ja Krakovaan. Sofian koko ketju
+   * äänitettiin, joten myös saapumisrepliikin osoitteessa on erä.
+   */
   assert.equal(livianAaniOsoite('sofia', 12),
-    `${LIVIAN_AANIJUURI}livia-sofia-13.mp3?v=${LIVIAN_AANITETYT['sofia-13']}`);
+    `${LIVIAN_AANIJUURI}livia-sofia-13.mp3?v=${LIVIAN_AANITETYT['sofia-13']}`
+    + `-${LIVIAN_AANIERAT['sofia-13']}`);
   // VERSIOKYSELY VAIHTUU TEKSTIN MUKANA (9.9.2026): vartioidun repliikin
   // osoitteessa on taulun tiiviste, jotta välimuisti ei soita vanhaa
   // äänitettä samannimisen tiedoston alta; vartioimaton on ilman kyselyä.
