@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
+import { TAGIT, puhemuoto } from '../tools/generoi-pulu.mjs';
 
 const batches = ['e1', 'e2', 'e3', 'e4b', 'e5', 'e6'];
 const correctionBatches = new Set(['e2', 'e3', 'e4b', 'e5']);
@@ -72,6 +73,8 @@ test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia'
       `${city.city}: koonti-H`);
     assert.equal(city.livia.visibleText, FOKUSVIRRAT[city.city].pollo.kommentti[0],
       `${city.city}: koonti-L`);
+    assert.equal(puhemuoto(city.livia.visibleText, TAGIT[`${city.city}-3`]), city.livia.ttsText,
+      `${city.city}: tuotantogeneraattorin exact TTS`);
     for (const speaker of ['horatio', 'livia']) {
       const item = city[speaker];
       assert.equal(stripTags(item.ttsText), item.visibleText, `${city.city}: koonti-${speaker}-TTS`);
