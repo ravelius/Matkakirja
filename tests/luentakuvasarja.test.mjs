@@ -429,6 +429,16 @@ test('ilman luentaa kello lähtee alkukatosta eikä kuva jää roikkumaan', (t) 
     const ui = tekoUi(KOEKAUPUNKI, { luenta: false });
     naytaLuentakuvasarja(ui, KOEKAUPUNKI);
     t.mock.timers.tick(60);
+    /*
+     * KAKSI ALKUKATTOA (12.9.2026). Kuva odottaa ensin luennan ALKUA
+     * (odotaLuennanAlku, 4 s) ja sitten sen LOPPUA (vahtiLuennanLoppua,
+     * 4 s) — ilman luentaa kumpikaan ei koskaan tapahdu, ja molemmat
+     * katot on kuljettava ennen kuin kuva pienenee. Ilman ensimmäistä
+     * kattoa mykistetty peli ei saisi kuvaa lainkaan.
+     */
+    // Alkuvahti kysyy 200 ms:n välein, joten kelaus samalla askeleella.
+    kelaa(t, 4200, 200);
+    assert.equal(paallys().length, 1, 'kuva tulee ilman luentaakin, alkukaton jälkeen');
     kelaa(t, 4000 + ISON_KUVAN_LOPPU_MS + 500);
     assert.equal(paneelit().length, 1, 'kuva pienenee myös ilman luentaa');
     siivoa(ui);
@@ -575,7 +585,11 @@ test('kartan liike vie sarjan loppuun heti pieneen pakkaan', (t) => {
 test('kaupungin vaihto siivoaa sarjan ajastimet eikä nosta pakkaa', (t) => {
   t.mock.timers.enable({ apis: ['setTimeout'] });
   let kaupunki = KOEKAUPUNKI;
-  const ui = { game: { pack: { id: 'maailmankartta' }, player: {}, cityOf: () => kaupunki } };
+  // Luenta soi: kuva tulee ruudulle heti (odotaLuennanAlku).
+  const ui = {
+    game: { pack: { id: 'maailmankartta' }, player: {}, cityOf: () => kaupunki },
+    luentaKesken: () => true,
+  };
   naytaLuentakuvasarja(ui, KOEKAUPUNKI);
   t.mock.timers.tick(60);
   assert.equal(paallys().length, 1);
@@ -644,4 +658,185 @@ test('kameran klik soi jokaiselle sarjan kuvalle', (t) => {
   assert.equal(tehosteet.filter((n) => n === 'pulu.kamera-klik').length, kuvia);
   siivoa(ui);
   t.mock.timers.reset();
+});
+
+/* ---------------------------------------------------------------- */
+/* 4. Omistajan vikailmoitukset 12.9.2026                            */
+/* ---------------------------------------------------------------- */
+
+/*
+ * VIKA 1: *"pulun kuvat eivät tule jostain syystä isoisän kuvien
+ * jälkeen näkyville"*.
+ *
+ * JUURISYY (mitattu Chromiumilla 12.9.2026, Venetsia työpöydällä):
+ * isoisän kuvalla on kello, joka päättää sarjan 6 s LUENNAN
+ * PÄÄTTYMISESTÄ, mutta pulun kommentti odottaa luennan loppua, 0,9 s
+ * taukoa ja mahdollista paljastussarjaa — kommentti nousi ruudulle
+ * 44,4 s kohdalla, kun sarja oli purkautunut jo 35,2 s kohdalla.
+ * Silloin `ui.luentakuvasarja` oli null ja aloitaPuluCamSarja palasi
+ * heti: PuluCam-kuvat eivät tulleet koskaan isoina. Yksikään vanha
+ * vartio ei nähnyt tätä, koska kaikki aloittivat kommentin SARJAN
+ * AIKANA — juuri siksi vika pääsi peliin.
+ */
+test('pulun kuvat tulevat isoina VAIKKA isoisän sarja on jo ehtinyt päättyä', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+
+  // Luenta loppuu ja isoisän kello vie sarjan loppuun ennen kommenttia.
+  ui.luentaaKesken = false;
+  kelaa(t, ISON_KUVAN_LOPPU_MS + 1000);
+  assert.equal(ui.luentakuvasarja, null, 'sarja on purkautunut ennen kommenttia');
+  assert.equal(paallys().length, 0, 'iso päällys on poissa');
+  assert.equal(paneelit().length, 1, 'kartalla on isoisän kuva');
+
+  // Kommentti tulee vasta nyt — ja pulun kuvat on silti nähtävä isoina.
+  assert.equal(pulunKommentti(ui), true, 'myöhästynyt kommentti aloittaa sarjan');
+  t.mock.timers.tick(60);
+  assert.equal(paallys().length, 1, 'pulun kuville avautuu oma päällys');
+  assert.equal(isot().length, 1, 'ensimmäinen pulun kuva keskellä ruutua');
+  assert.equal(isot().at(-1).querySelectorAll('.pulucam-merkki').length, 1,
+    'ja se on PULU-CAM-kuva');
+
+  // Sarja päättyy normaalisti pieneen pakkaan.
+  const pulunKuvia = PAKKI.pollo.kuvat.length;
+  for (let i = 1; i < pulunKuvia; i += 1) t.mock.timers.tick(ISON_KUVAN_VAIHTO_MS);
+  t.mock.timers.tick(ISON_KUVAN_LOPPU_MS);
+  assert.equal(paneelit().length, 1, 'kartalle jää yksi paneeli');
+  assert.equal(paneelit()[0].querySelectorAll('.pulucam-kortti').length, pulunKuvia,
+    'pakassa ovat kaikki pulun kuvat');
+
+  siivoa(ui);
+  t.mock.timers.reset();
+});
+
+test('pulun kuvien iso sarja ajetaan vain kerran kaupunkia kohti', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  ui.luentaaKesken = false;
+  assert.equal(pulunKommentti(ui), true);
+  // Sarja loppuun asti.
+  const pulunKuvia = PAKKI.pollo.kuvat.length;
+  for (let i = 1; i < pulunKuvia; i += 1) t.mock.timers.tick(ISON_KUVAN_VAIHTO_MS);
+  t.mock.timers.tick(ISON_KUVAN_LOPPU_MS);
+  // Päällyksen poisto on oma ajastimensa (700 ms), ja Noden valeajastin
+  // ajaa tickin aikana syntyneet vasta seuraavalla tickillä.
+  t.mock.timers.tick(1000);
+  assert.equal(paallys().length, 0);
+
+  // Toinen kutsu (paluukäynti kortille) ei saa aloittaa sarjaa uudestaan.
+  assert.equal(pulunKommentti(ui), false, 'sarja ei lähde toiselle kierrokselle');
+  t.mock.timers.tick(60);
+  assert.equal(paallys().length, 0, 'ruudulle ei tule uutta päällystä');
+
+  siivoa(ui);
+  t.mock.timers.reset();
+});
+
+test('pakka ei nouse kartalle ennen pulun kommenttia', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  ui.luentaaKesken = false;
+  kelaa(t, ISON_KUVAN_LOPPU_MS + 1000);
+  assert.equal(paneelit().length, 1, 'isoisän kuva jää kartalle');
+  /*
+   * PAKKA KUULUU PULUN HETKEEN (Raamattu): jos se nousisi jo tässä,
+   * pelaaja näkisi pulun kuvat pikkukuvina ennen niiden omaa sarjaa.
+   */
+  assert.equal(paneelit()[0].querySelectorAll('.pulucam-kortti').length, 0,
+    'pulun kortteja ei ole vielä');
+  siivoa(ui);
+  t.mock.timers.reset();
+});
+
+/*
+ * VIKA 2: *"kun tullaan ateenaan niin isoisän kuvat saisi tulla vasta
+ * kun isoisän luenta alkaa. nyt ne tulivat heti kun ateenaan oli
+ * saavuttu ja pulun aloituskommentit vasta alkoivat"*.
+ *
+ * Ensisaapumisella luenta on LYKKÄYKSESSÄ (`ui.luennanLykkays`) siihen
+ * asti, että pulun kaksi aloituskuplaa on sanottu (js/livia.js
+ * odotaLuenta → ui.aloitaLykattyLuenta). Kutsuhetki on siis eri asia
+ * kuin luennan alku, ja kuva kuuluu jälkimmäiseen.
+ */
+test('isoisän kuva odottaa lykätyn luennan alkua eikä tule kutsusta', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi(KOEKAUPUNKI, { luenta: false });
+  ui.luennanLykkays = true;
+  assert.equal(naytaLuentakuvasarja(ui, KOEKAUPUNKI), true);
+  t.mock.timers.tick(60);
+  assert.equal(paallys().length, 0, 'kuvaa ei ole ennen luentaa');
+
+  // Pulun aloituskuplat kestävät: kuva ei saa tulla alkukatossakaan.
+  kelaa(t, 20000, 200);
+  assert.equal(paallys().length, 0, 'lykkäys pitää kuvan poissa');
+
+  // Kuplat sanottu, luenta lähtee — nyt kuva.
+  ui.luennanLykkays = false;
+  ui.luentaaKesken = true;
+  kelaa(t, 400, 200);
+  assert.equal(paallys().length, 1, 'kuva tulee luennan alkaessa');
+
+  siivoa(ui);
+  t.mock.timers.reset();
+});
+
+test('kaupungista lähtö peruu myös odottavan kuvan', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi(KOEKAUPUNKI, { luenta: false });
+  ui.luennanLykkays = true;
+  naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  siivoa(ui);
+  // Luenta "alkaisi" vasta lähdön jälkeen: kuva ei saa ilmestyä.
+  ui.luennanLykkays = false;
+  ui.luentaaKesken = true;
+  kelaa(t, 2000, 200);
+  assert.equal(paallys().length, 0, 'odotus peruuntui kaupungin mukana');
+  t.mock.timers.reset();
+});
+
+/* ---------------------------------------------------------------- */
+/* 5. Kerrosjärjestys: kuva jää matkakirjakortin alle                */
+/* ---------------------------------------------------------------- */
+
+/*
+ * Omistaja 12.9.2026, sanatarkasti: *"kuva saisi jäädä matkakirjan
+ * alle"*. Kuvaa EI pienennetä eikä piiloteta — isot luentakuvat ovat
+ * omistajan tilaus ja se pysyy; ratkeaa PINOSTA.
+ *
+ * Matkakirjakortti asuu `.railissa` (z-index 4) `.app`-kerroksen
+ * sisällä, ja `.app` on `position: fixed` eli oma pinonsa. Rungon
+ * lapsena päällys olisi kortin päällä millä tahansa z-indexillä, joten
+ * sen on ladottava itsensä samaan pinoon: `.stage`-solmun lapseksi.
+ * Mitattu Chromiumilla 12.9.2026 (1280 × 800, Venetsia): ennen kuva
+ * peitti kortista 53 % ja kortin tekstialasta näkyi 46 %; jälkeen
+ * kortti maalautuu päälle ja tekstialasta näkyy 100 %.
+ */
+test('iso päällys ladotaan .stageen, ei rungon lapseksi', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const stage = new Elementti('main');
+  stage.className = 'stage';
+  asiakirja.body.appendChild(stage);
+  const vanha = asiakirja.querySelector;
+  asiakirja.querySelector = (valitsin) => (valitsin === '.stage' ? stage : null);
+  try {
+    const ui = tekoUi();
+    naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+    t.mock.timers.tick(60);
+    const kehys = asiakirja.body.querySelector('.fokusvirta-isokuva');
+    assert.ok(kehys, 'päällys syntyi');
+    assert.equal(kehys.parentNode, stage,
+      'päällys on .stagen lapsi — samassa pinossa kortin kanssa');
+    siivoa(ui);
+  } finally {
+    asiakirja.querySelector = vanha;
+    stage.remove();
+    t.mock.timers.reset();
+  }
 });

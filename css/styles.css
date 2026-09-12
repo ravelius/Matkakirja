@@ -11257,7 +11257,32 @@ body.katselu #newgame-btn { display: none; }
   background: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  justify-content: flex-end;
+  /*
+   * TEKSTI YLÄREUNAAN (omistaja 12.9.2026, sanatarkasti: *"lennon
+   * aikana teksti saisi olla yläreunassa"*).
+   *
+   * Syy on pelillinen eikä makuasia: alalaidassa rivi osui juuri
+   * siihen kohtaan, jossa reitin pää ja määränpääkaupunki ovat
+   * (mitattu 12.9.2026: Ateenan laatta jäi rivin alle työpöydällä), ja
+   * peitti sen mitä pelaaja katsoo. Reitti piirtyy ruudun keskiosaan,
+   * joten yläreuna on se kaista, jossa teksti ei ole minkään tiellä.
+   *
+   * YLÄPALKIN KORKEUS TULEE MITTAUSMUUTTUJASTA, EI PIKSELILUVUSTA.
+   * Aikajanapalkki asettuu kartan päälle ja js/aikajana.js kirjoittaa
+   * sen MITATUN korkeuden bodylle (--aikajana-palkki-korkeus). Ilman
+   * palkkia muuttujaa ei ole, ja varamitta on 0 — silloin riittää
+   * pelkkä oma ilmarako.
+   */
+  justify-content: flex-start;
+  padding-top: calc(var(--aikajana-palkki-korkeus, 0px) + clamp(0.6rem, 2.5vh, 1.6rem));
+  padding-bottom: clamp(0.5rem, 2.5vh, 1.6rem);
+}
+
+/* Rivi ei saa kasvaa ruudun yli matalalla vaakanäytöllä: pino vierii
+   tarvittaessa itse, eikä teksti valu yläpalkin alle. */
+.flight-overlay.kartalla .flight-alaosa {
+  margin-top: 0;
+  max-height: calc(100% - var(--aikajana-palkki-korkeus, 0px));
 }
 
 /*
