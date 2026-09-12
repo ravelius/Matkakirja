@@ -645,17 +645,40 @@ export const LIVIAN_AANITETYT = {
  * (voice ZF6FPAbjXT4488VcRRnw, eleven_v3, stability natural). Vain
  * avausketju ja Ateena äänitettiin; loput 60 repliikkiä ovat yhä
  * vanhalla äänellä, joten niissä ei ole erää.
+ *
+ * ERÄ 3 (12.9.2026, samana iltapäivänä): omistaja löysi kolmannen
+ * äänen ja tilasi sen samoihin kohtauksiin sekä kahteen kaupunkiin
+ * lisää: *"Generoi samat kohtaukset kuin aiemmin sekä myös Sofia ja
+ * Krakova. Tällä voisi ID:llä käytä samaa V3-mallia taggeineen.
+ * XJ2fW4ybq7HouelYYGcL"* Sama malli ja sama vakaus kuin erässä 2
+ * (eleven_v3, natural), joten erien ero on pelkkä ääni — juuri siksi
+ * eränumero on olemassa. Sofia äänitettiin kokonaan (kaksitoista
+ * repliikkiä), koska sen ketju on pisin ja kuuluu kaupungissa
+ * peräkkäin; se on paras näyte siitä, väsyttääkö ääni pitkässä
+ * pätkässä.
  */
 export const LIVIAN_AANIERAT = {
-  'avaus-1': 2,
-  'avaus-2': 2,
-  'avaus-3': 2,
-  'avaus-4': 2,
-  'avaus-5': 2,
-  'paljastus-1': 2,
-  'paljastus-2': 2,
-  'paljastus-3': 2,
-  'ateena-3': 2,
+  'avaus-1': 3,
+  'avaus-2': 3,
+  'avaus-3': 3,
+  'avaus-4': 3,
+  'avaus-5': 3,
+  'paljastus-1': 3,
+  'paljastus-2': 3,
+  'paljastus-3': 3,
+  'ateena-3': 3,
+  'sofia-3': 3,
+  'sofia-5': 3,
+  'sofia-6': 3,
+  'sofia-7': 3,
+  'sofia-8': 3,
+  'sofia-9': 3,
+  'sofia-10': 3,
+  'sofia-11': 3,
+  'sofia-12': 3,
+  'sofia-13': 3,
+  'sofia-14': 3,
+  'krakova-3': 3,
 };
 
 
