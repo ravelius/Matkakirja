@@ -186,8 +186,8 @@ export const MAASTOKOHTEET_UKR = [
     id: 'dnestr',
     kuva: {
       "osoite": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-dnestr-557002ba3fe0.jpg",
-      "lyhyt": "Matkakirjan havainnekuva Dnestristä Halyčin kohdalla nykyisessä jokimaisemassa.",
-      "selite": "Matkakirjan havainnekuva Dnestristä Halyčin kohdalla nykyisessä jokimaisemassa.",
+      "lyhyt": "Dnesteriä Halyčin kohdalla, nykyinen jokimaisema.",
+      "selite": "Dnesteriä Halyčin kohdalla, nykyinen jokimaisema.",
       "lahde": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
       "tekija": "OpenAI; referenssikuva Raimond Spekking",
       "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dniester_River_in_Halych,_Ukraine-6111.jpg",

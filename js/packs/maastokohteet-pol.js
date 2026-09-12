@@ -210,8 +210,8 @@ export const MAASTOKOHTEET_POL = [
     id: 'odra',
     kuva: {
       "osoite": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-odra-cffc05691432.jpg",
-      "lyhyt": "Matkakirjan havainnekuva rajamittauksesta Odran rannalla 1940-luvun lopulla.",
-      "selite": "Matkakirjan havainnekuva rajamittauksesta Odran rannalla 1940-luvun lopulla.",
+      "lyhyt": "Rajamittausta Odran rannalla 1940-luvun lopulla.",
+      "selite": "Rajamittausta Odran rannalla 1940-luvun lopulla.",
       "lahde": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
       "tekija": "OpenAI; referenssikuva Janfortytwo",
       "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oder_(river).jpg",
@@ -300,8 +300,8 @@ export const MAASTOKOHTEET_POL = [
     id: 'auschwitz',
     kuva: {
       "osoite": "https://media.matkakirja.app/karttanostot/20260912/pol-kohde-auschwitz-e695ff7c5e93.jpg",
-      "lyhyt": "Matkakirjan havainnekuva Auschwitz II-Birkenaun leirialueesta talvella 1945 ennen vapautusta.",
-      "selite": "Matkakirjan havainnekuva Auschwitz II-Birkenaun leirialueesta talvella 1945 ennen vapautusta.",
+      "lyhyt": "Auschwitz II-Birkenaun leirialue talvella 1945, ennen vapautusta.",
+      "selite": "Auschwitz II-Birkenaun leirialue talvella 1945, ennen vapautusta.",
       "lahde": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
       "tekija": "OpenAI; referenssikuva Jacek Daczyński",
       "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auschwitz_II_Birkenau.jpg",
