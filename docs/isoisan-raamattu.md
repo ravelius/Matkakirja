@@ -81,6 +81,60 @@ tunnistetaan:
   vain Livia osaa tulkata (pulun kupla). Sanasto ja käyttö: Raamattu
   "HORATION OMA KIELI" (kun hyväksytty).
 
+## Horatio ja Livia: kuuntelun rytmi (omistaja 12.9.2026)
+
+Omistaja: *"isoisän pohdinnat ja oivallukset olivat hyviä nykyisissä
+matkakirjan teksteissä"*. Ne säilytetään. Noin kahden lauseen tiivistys
+tehdään ensisijaisesti toistosta ja hyvän oivalluksen ympäriltä, ei
+poistamalla merkinnän omaa ajatusta. Lyhyttä tekstiä ei rikota
+mekaanisen lausekiintiön vuoksi. Horatio on edelleen tarkka, utelias,
+kohtelias ja kuivan humoristinen; rauhallinen luenta ei tee hänestä
+tunteetonta eikä pelkkää faktaluetteloa. Hän kirjoittaa itselleen.
+
+Lyhentämisen tarkoitus on kuuntelujaksaminen: ensin isoisän napakka
+kohtaus ja oivallus, sitten näkökulman ja äänen vaihto Puluun antaa
+uutta kiinnostusta. Pulun vastaukseen voi yleensä lisätä noin yhden
+luontevan lauseen. Yhteismittaa ei venytetä tarpeettomasti, eikä
+uusi lause saa olla täytettä. Pituus arvioidaan myös kuuntelemalla;
+muuttunut teksti edellyttää vastaavaa uutta luentaa ja kohdistusta.
+
+### Livia on kokenut mutta helposti innostuva matkakumppani
+
+Omistajan täsmennys 12.9.2026: Livia on tarkka ja helposti innostuva,
+niin innoissaan ettei meinaa pysyä nahoissaan. Hän lähtee helposti
+sivupolulle mutta löytää nopeasti takaisin oikealle kurssille.
+Kirjekyyhkynä hän on nähnyt todella paljon, "käytännössä kaiken".
+Hän pitää jännittävistä ja jopa pelottavista jutuista sekä pullasta.
+Hän kertoo mielellään kiinnostavia juoruja mutta ei ole koskaan
+pahantahtoinen. Puluksi kutsuminen herättää alemmuudentunnetta;
+hän kunnioittaa Viisasta Pöllöä ja on välillä epävarma. Asiantuntemus
+ja tarkkuus eivät katoa innostukseen, eikä komiikka perustu tyhmyyteen.
+
+Venetsian romanssi paikallisen pulupojan kanssa säilytetään nykyisten
+repliikkien ja albumin pohjalta. Hahmon kommentteihin lisätään hieman
+enemmän kaupungin nykytilaa hänen omasta näkökulmastaan. Hahmofiktio,
+juoru ja todennettava kaupunkitieto pidetään erotettavina; tieto ei
+vääristy persoonan vuoksi. Äänessä ja eleissä tavoitellaan lempeyttä
+ja sisältöön sopivaa monisävyisyyttä. Iloisempi ja suloisempi puheääni
+on vasta valintasuunnan kuvaus, ei lukittu ääni.
+
+### Kuvatekstit ovat lyhyitä huomioita, eivät toinen kertomus
+
+Euroopan jokaisessa kaupungissa tarkistetaan isoisän kaksi luentakuvaa
+ja Pulun kaksi nykykuvaa: kuvan ja tekstin vastaavuus, aikataso sekä
+kuvaparin erilaiset havainnot. Lyhyt näkyvä kuvateksti on noin yksi
+lyhyt lause (aiempi noin 100 merkin ohje tukee nopeaa luettavuutta),
+ei puhuttua kertomusta toistava selostus. Pitkä selite, lähteet ja
+lisenssit säilyvät suurennoksessa. Puuttuvat toiset kuvat ja yli kahden
+kuvan albumit raportoidaan; Venetsian romanssialbumia ei karsita.
+
+**Työ on edelleen tauolla:** uudet teksti- ja animaatiosessiot
+jatkavat vasta omistajan tai pääsession nimenomaisella JATKA-ohjeella
+yhteisen hahmospeksin valmistuttua. Tämä kirjaus ei käynnistä niitä
+eikä hyväksy keskeneräisiä peliluonnoksia julkaisuun. Avustajan uudet
+persoonallisuus- ja tekstiehdotukset käsitellään erikseen, eivätkä ne
+muutu kaanoniksi ilman omistajan hyväksyntää.
+
 ## Vastavoima: herra Grimshaw
 
 **Ezekiel Grimshaw**, antikvariaatinpitäjä Lontoosta. Osti Aarnin
