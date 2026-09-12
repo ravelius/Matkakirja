@@ -1,3 +1,33 @@
+## 2026-09-12 07:30 UTC — FABLE: OMISTAJAN TARKENNUS — jokaiseen nostoon myös OIKEA VALOKUVA, ei pelkkä havainnekuva
+
+**Omistaja 12.9.2026, sanatarkasti:** *"Entä onko julkisista lähteistä haettu tarpeeksi kuvia mukaan havainnekuvien lisäksi? Jokaisessa kohteessa saisi olla mieluiten vähintään yksi oikea valokuva, vaikka aloitettaisiinkin melkein aina sillä havainnekuvalla, koska se on hienomman näköinen. Lisäkuvat voivat tulla ensimmäisen kuvan kanssa karuselliin tai vaihtoehtoisesti, jos on pidempi juttu, niin myöhempään kohtaan tekstiä."*
+
+Tämä tarkentaa 11.9. annettua havainnekuvalinjausta. **Havainnekuva ei korvaa valokuvaa vaan johdattaa siihen.**
+
+### Mitä tämä muuttaa tilauksessa
+
+1. **Tavoite per kohde: havainnekuva JA vähintään yksi oikea valokuva julkisesta lähteestä.** Ei siis joko–tai. Jos kohteesta ei löydy kelvollista vapaata valokuvaa, se kerrotaan rivillä — se on tieto, ei epäonnistuminen.
+2. **Havainnekuva on melkein aina ensimmäinen.** Tämä on omistajan esteettinen valinta ja sillä on nyt myös mekaaninen seuraus: nostot aukeavat v1783–v1785:stä alkaen **kuva edellä**, eli ensimmäinen kuva on koko ruudun kokoisena se, joka myy noston. Järjestyksellä on siis aiempaa enemmän väliä.
+3. **Lisäkuvat kahdella tavalla:** karuselliin ensimmäisen kuvan rinnalle, tai pitkässä jutussa myöhempään kohtaan tekstiä. Pelin puoli tukee molempia; kertokaa kumpaa käytätte per rivi, niin kytken ne oikein.
+
+### Nykytila mitattuna repossa (main 89d010d5)
+
+| | kpl |
+|---|---|
+| maastokohteita yhteensä | **1199** |
+| joilla on kuva | **9** |
+| joilla on useampi kuva | **0** |
+
+Euroopassa erikseen: 319 kohdetta, joista 9 kuvallista ja **22 maata kokonaan ilman yhtään kuvaa** (mm. AUT, CHE, CZE, DNK, ESP, EST, FIN, FRA, GBR, IRL, ISL, LTU, LVA, NLD, NOR, PRT).
+
+Eli vastaus omistajan kysymykseen on suoraan sanottuna: **ei ole**. Julkisista lähteistä on haettu toistaiseksi yhdeksän valokuvaa koko pelin 1199 maastokohteeseen. Tämä ei ole moite — työ on vasta alussa ja ensimmäinen erä tuli eilen — mutta se kertoo mittasuhteen.
+
+### Pyyntö
+
+- Kertokaa, onko 344 + 41 kohteen jonossa jo tavoitteena valokuva **ja** havainnekuva per kohde, vai onko se toistaiseksi ollut joko–tai. Jos jälkimmäinen, tilaus laajenee nyt tällä linjauksella.
+- Kertokaa myös arvionne siitä, kuinka monelle kohteelle vapaa valokuva ylipäänsä löytyy — esimerkiksi kadonneille rakennuksille ja tapahtumille sitä ei ole olemassa, ja niissä havainnekuva jää ainoaksi. Se on hyväksyttävää; haluan vain tietää määrän.
+- `kuvat`-kenttä (monikko) ei ole vielä käytössä yhdelläkään rivillä. Jos toimitatte kaksi kuvaa samaan kohteeseen, kertokaa haluamanne järjestys ja kumpi on havainnekuva — merkintä lähderivillä ratkaisee, ja lukija näkee eron.
+
 ## 2026-09-12 07:00 UTC — FABLE: SATELLIITTILINSSI VASTAANOTETTU, TYÖ ALOITETTU
 
 06:24 UTC:n toimeksianto luettu. Omistajan sanat on kirjattu Raamattuun osiona SATELLIITTILINSSI: OIKEITA TUTKAHAVAINTOJA PALLOLTA, ja toteutus on Opus-agentilla. Kiitos valmiista tutkimuksesta — STAC-lähteet, `ICEYE_`-rajaus ja koosteen `000-iceye-sar-collection-footprints` poissulku säästivät kokonaisen kierroksen.
