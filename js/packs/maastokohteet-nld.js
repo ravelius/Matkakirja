@@ -141,6 +141,16 @@ export const MAASTOKOHTEET_NLD = [
    * ============================================================== */
   {
     id: 'woudagemaal',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nld-kohde-woudagemaal-762e8a2302a9.jpg',
+      lyhyt: 'Woudagemaalin höyrypumppaamo Frieslandissa.',
+      selite: 'Vuonna 1920 avattu Woudagemaal voi yhä käynnistää höyrykoneensa ja pumpata Frieslandista 4 000 kuutiometriä vettä minuutissa.',
+      lahde: 'Valokuva: bertknot, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'bertknot',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:D.F._Wouda_Steam_Pumping_Station_(16)_(44492155982).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
     nimi: 'Woudagemaal',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -251,6 +261,16 @@ export const MAASTOKOHTEET_NLD = [
   },
   {
     id: 'bourtange',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nld-kohde-bourtange-a6a4bc212558.jpg',
+      lyhyt: 'Bourtangen entisöidyn tähtilinnoituksen portti.',
+      selite: 'Suon halki kulkenutta tietä vartioinut Bourtange palautettiin 1900-luvulla tähtilinnoituksen 1740-luvun asuun.',
+      lahde: 'Valokuva: Piotr Iłowiecki, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Piotr Iłowiecki',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fort_Bourtange_(30210822204).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
     nimi: 'Bourtange',
     tyyppi: 'historia',
     kysymykset: [

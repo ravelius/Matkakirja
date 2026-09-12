@@ -133,6 +133,16 @@ export const MAASTOKOHTEET_IRL = [
    * ============================================================== */
   {
     id: 'newgrange',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/irl-kohde-newgrange-f3c1aafbd742.jpg',
+      lyhyt: 'Newgrangen sisäänkäynti ja koristeltu reunakivi.',
+      selite: 'Newgrangen valkokivinen julkisivu ja koristeltu sisäänkäyntikivi johtavat yli viisituhatta vuotta vanhaan käytävähautaan.',
+      lahde: 'Valokuva: CooKeeN, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'CooKeeN',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Newgrange_entrance.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
     nimi: 'Newgrange',
     tyyppi: 'historia',
     kysymykset: [

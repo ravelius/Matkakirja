@@ -161,6 +161,16 @@ export const MAASTOKOHTEET_PRT = [
    * ============================================================== */
   {
     id: 'sintra',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/prt-kohde-sintra-4eb7ba48b02d.jpg',
+      lyhyt: 'Penan kansallispalatsi Sintrassa.',
+      selite: 'Penan värikäs kansallispalatsi kohoaa Sintran metsäisillä rinteillä 1800-luvun romantiikan maamerkkinä.',
+      lahde: 'Valokuva: CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'CEphoto, Uwe Aranas',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sintra_Portugal_Pal%C3%A1cio_da_Pena-01.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
     nimi: 'Sintra',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -191,6 +201,16 @@ export const MAASTOKOHTEET_PRT = [
   },
   {
     id: 'batalha',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/prt-kohde-batalha-c003394c23c5.jpg',
+      lyhyt: 'Batalhan luostarin goottilainen julkisivu.',
+      selite: 'Batalhan luostarin runsas goottilainen julkisivu kuuluu yli vuosisadan kestäneen rakennustyön näkyvimpiin osiin.',
+      lahde: 'Valokuva: dynamosquito, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'dynamosquito',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:BatalhaMonasteryFacade1.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
     nimi: 'Batalhan luostari',
     tyyppi: 'historia',
     kysymykset: [
