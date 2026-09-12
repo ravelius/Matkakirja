@@ -102,21 +102,45 @@ test('galleriasivu kytkee katalogin ja R2-virheen varanäkymän', async () => {
 test('jokainen kohtaamiskuva osuu tarinakaaren kohteeseen ja sen hahmoon', () => {
   const kaikkiKaaret = new Map(KAARI_PAKETIT.kohteet.map((kaari) => [kaari.id, kaari]));
   for (const [kohde, kuva] of KOHTAAMISKUVAT_KOHTEELLE) {
-    // Nikosia on rajattu ennakkopoikkeus: kuva on katalogissa ja
-    // galleriassa, mutta luennat:false pitää kohtaamisen vielä pois
-    // varsinaisesta pelivirrasta. Muiden aktiivisten kuvien kaaren täytyy
-    // edelleen löytyä TARINAKAARI-taulusta.
-    const kaari = kohde === 'nikosia' ? kaikkiKaaret.get(kohde) : TARINAKAARI[kohde];
+    const kaari = TARINAKAARI[kohde];
     assert.ok(kaari, `kohtaamiskuvalle ${kuva.id} ei löydy kaaren kohdetta "${kohde}"`);
     // Sama henkilö kuvassa ja repliikissä: väärään kaupunkiin osunut
     // kuva näyttäisi eri ihmisen kuin se, joka kysymyksen esittää.
     assert.ok(`${kaari.henkilo} ${kaari.nimi ?? ''}`.includes(kuva.hahmo),
       `${kuva.id}: hahmo ${kuva.hahmo} ei esiinny kohteen ${kohde} henkilökuvauksessa`);
   }
+  /*
+   * NIKOSIA ON AUKI MUTTA MYKKÄ (omistajan päätös 12.9.2026: *"Avaa
+   * ilman ääntä (mykistettynä)"*). Kuvaputken ennakkopoikkeus poistui:
+   * kaupunki on nyt TARINAKAARI-taulussa kuten muutkin, joten sen
+   * kohtaamiskuva kulkee yllä olevan hahmovartion läpi eikä tarvitse
+   * omaa haaraansa.
+   *
+   * SEN SIJAAN VARTIOIDAAN HILJAISUUTTA: kaikki kolme osaa ovat
+   * mykistettyjen listalla, koska Lähi-idän luentoja ei ole generoitu
+   * (omistajan linjaus 9.8.2026 *"kirjoittaa saa, ei vielä
+   * generoida"*). Jos joku poistaisi mykistyksen generoimatta ääniä,
+   * saapumiskortti yrittäisi soittaa tiedostoa jota ei ole.
+   */
   const nikosia = kaikkiKaaret.get('nikosia');
-  assert.equal(nikosia?.luennat, false, 'Nikosian pelivirran esto ei ole enää luennat:false');
-  assert.equal(TARINAKAARI.nikosia, undefined,
-    'Nikosia aktivoitui TARINAKAARI-tauluun ilman erillistä peli- ja äänitarkistusta');
+  assert.ok(TARINAKAARI.nikosia, 'Nikosian pitää olla kaaressa, jotta Marioksen kuva näkyy');
+  assert.deepEqual([...(nikosia?.mykistetyt ?? [])].sort(),
+    ['aarre', 'kohtaaminen', 'saapuminen'],
+    'Nikosian osien on pysyttävä mykistettyinä, kunnes luennat on generoitu');
+  assert.equal(nikosia?.luennat, undefined,
+    'luennat-lippua ei tarvita enää Nikosian estoon');
+  /*
+   * MUU LÄHI-ITÄ PYSYY KIINNI. Yhden kaupungin avaaminen ei saa vuotaa
+   * koko sarjaan: muilla on yhä luennat:false, ja ne pysyvät poissa
+   * TARINAKAARI-taulusta.
+   */
+  const muutLahiIdanKiinni = KAARI_PAKETIT.kohteet
+    .filter((k) => k.lauta === 'middleeast' && k.id !== 'nikosia');
+  assert.ok(muutLahiIdanKiinni.length > 0, 'Lähi-idän kohteita pitäisi olla useampi');
+  for (const kaari of muutLahiIdanKiinni) {
+    assert.equal(kaari.luennat, false, `${kaari.id}: Lähi-idän kohde avautui vahingossa`);
+    assert.equal(TARINAKAARI[kaari.id], undefined, `${kaari.id}: päätyi kaareen ilman luentoja`);
+  }
 });
 
 test('vain tarkistettu aktiivinen kuva päätyy peliin, muut jäävät galleriaan', () => {

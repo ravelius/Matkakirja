@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1813, teksti: '24 maisemakuvaa, kahdeksan merikuvaa ja Nikosia auki' },
   { v: 1812, teksti: 'Satelliittilinssi avaruuteen: tahdet ja 64 kohdetta' },
   { v: 1811, teksti: 'Nosto ei sulkeudu vierittaessa; kortti alkaa ylareunasta' },
   { v: 1810, teksti: 'Rysyn, Sniezkan ja Hoverlan kuvat sekä nelja valokuvaa' },

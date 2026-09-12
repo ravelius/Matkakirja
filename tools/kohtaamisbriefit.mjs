@@ -146,7 +146,19 @@ function kaupunkiNimi(cityId) {
   return EUROPE.cities.find((c) => c.id === cityId)?.name ?? cityId;
 }
 
+/*
+ * KAAREN KAUPUNKI EUROOPAN LAUDAN ULKOPUOLELTA (12.9.2026). Maa tulee
+ * muuten Euroopan laudan omasta taulusta, mutta Nikosia on Lähi-idän
+ * laudalla eikä sitä siksi löydy sieltä. Kun omistaja avasi Nikosian
+ * mykistettynä, brieffityökalu jäi ilman maata. Tässä ovat ne kaaren
+ * kaupungit, joiden maa on nimettävä erikseen — lista pysyy lyhyenä,
+ * koska muu Lähi-itä on yhä kiinni (luennat: false).
+ */
+const LAUDAN_ULKOPUOLISET_MAAT = { nikosia: 'Kypros' };
+
 function maaNimi(cityId) {
+  const oma = LAUDAN_ULKOPUOLISET_MAAT[cityId];
+  if (oma) return oma;
   const iso = EUROPE_CITY_COUNTRY[cityId];
   return iso ? (MAANIMET[iso] ?? iso) : null;
 }
