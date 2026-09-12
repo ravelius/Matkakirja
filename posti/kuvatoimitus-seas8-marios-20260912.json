@@ -1,0 +1,509 @@
+{
+  "createdAt": "2026-09-12T17:07:03Z",
+  "type": "fable-game-delivery-request",
+  "publicationClaimed": false,
+  "pullRequests": [
+    {
+      "number": 2311,
+      "url": "https://github.com/ravelius/Matkakirja/pull/2311",
+      "status": "ready-root-diff-approved",
+      "head": "88d3188d6e362ed4035608de69b5b1d9606841f3",
+      "tree": "6300d6b9a148afac3e24e89b1d836b809dcff253",
+      "scope": "POL Veiksel ja Itämeri; UKR Mustameri ja Asovanmeri; 8 mediaa, havainne ensin ja aito rinnalla"
+    },
+    {
+      "number": 2312,
+      "url": "https://github.com/ravelius/Matkakirja/pull/2312",
+      "status": "ready-root-diff-approved",
+      "head": "5efbd9c702f4d59ff9a8c14046a23c9e1413ae87",
+      "tree": "cf76cd020a038b30863944f362835453734e1d97",
+      "scope": "Nikosia/Marios-kohtaamiskuva katalogiin; kuva generoitu, root-QA-hyväksytty ja media julkaistu"
+    }
+  ],
+  "media": {
+    "seas8": [
+      {
+        "key": "POL:maasto:veiksel",
+        "id": "pol-maasto-veiksel-7d5c82de93e4",
+        "fileName": "pol-maasto-veiksel-7d5c82de93e4.jpg",
+        "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-seas8-20260912/delivery/pol-maasto-veiksel-7d5c82de93e4.jpg",
+        "targetKey": "karttanostot/20260912/pol-maasto-veiksel-7d5c82de93e4.jpg",
+        "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-veiksel-7d5c82de93e4.jpg",
+        "sha256": "7d5c82de93e47db97de5bef1278e8edb2dea8a352b2d9bd274c0de0e9d02a9a5",
+        "bytes": 568787,
+        "dimensions": [
+          2560,
+          816
+        ],
+        "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-pol-river-sea2-20260912/references/veiksel-smiala-authentic.jpg",
+        "nativeSha256": "add9cba2d0a3f64e197a094338e1db2b3cbc8512989cea92447d1ffa9797a239",
+        "kind": "authentic-photograph",
+        "rootApproved": true,
+        "captionFi": "Rohkean Veikselin leveä suu-uoma kohtaa Itämeren Gdańskin itäpuolella.",
+        "source": {
+          "provider": "Wikimedia Commons",
+          "creator": "Andrzej Otrębski",
+          "filePage": "https://commons.wikimedia.org/wiki/File:Gdansk_Wisla_Smiala_1.jpg",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Gdansk_Wisla_Smiala_1.jpg"
+        },
+        "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-pol-river-sea2-20260912/manifest.json",
+        "gameIntegrated": false
+      },
+      {
+        "key": "POL:maasto:veiksel",
+        "id": "pol-maasto-veiksel-30c4f5e8b267",
+        "fileName": "pol-maasto-veiksel-30c4f5e8b267.jpg",
+        "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-seas8-20260912/delivery/pol-maasto-veiksel-30c4f5e8b267.jpg",
+        "targetKey": "karttanostot/20260912/pol-maasto-veiksel-30c4f5e8b267.jpg",
+        "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-veiksel-30c4f5e8b267.jpg",
+        "sha256": "30c4f5e8b267e5b10d86f863ec76cdd89ea96df0dad558ac7207dbcc4b466e45",
+        "bytes": 597055,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-pol-river-sea2-20260912/assets/veiksel-v1.png",
+        "nativeSha256": "554137e348411da860d204a347bae83a31fdbc4de136fc50499e2ad38c177dbb",
+        "kind": "generated-illustration",
+        "rootApproved": true,
+        "captionFi": "Rohkean Veikselin leveä suu-uoma kohtaa Itämeren Gdańskin itäpuolella.",
+        "source": {
+          "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+          "creator": "OpenAI; referenssikuva Andrzej Otrębski",
+          "filePage": "https://commons.wikimedia.org/wiki/File:Gdansk_Wisla_Smiala_1.jpg",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "referenceCreator": "Andrzej Otrębski",
+          "referenceSha256": "add9cba2d0a3f64e197a094338e1db2b3cbc8512989cea92447d1ffa9797a239",
+          "changes": "Uusi ImageGen-kuva luotiin referenssin maantieteen pohjalta; kuvakulma, sää, yksityiskohdat ja sommittelu muuttuivat.",
+          "carryForwardRequired": true
+        },
+        "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-pol-river-sea2-20260912/manifest.json",
+        "gameIntegrated": false
+      },
+      {
+        "key": "POL:maasto:itameri",
+        "id": "pol-maasto-itameri-89e455fc25a8",
+        "fileName": "pol-maasto-itameri-89e455fc25a8.jpg",
+        "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-seas8-20260912/delivery/pol-maasto-itameri-89e455fc25a8.jpg",
+        "targetKey": "karttanostot/20260912/pol-maasto-itameri-89e455fc25a8.jpg",
+        "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-itameri-89e455fc25a8.jpg",
+        "sha256": "89e455fc25a8c7e72eeb2601fd22789a70a6cec8d892906e09b0deb5444afcc5",
+        "bytes": 1516542,
+        "dimensions": [
+          2560,
+          1707
+        ],
+        "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-pol-river-sea2-20260912/references/itameri-hel-authentic.jpg",
+        "nativeSha256": "a53055f67bf6f897d46490a10306feda433d0b06cb229f017f3f291a6944779f",
+        "kind": "authentic-photograph",
+        "rootApproved": true,
+        "captionFi": "Helin kapea niemimaa erottaa avoimen Itämeren Gdańskinlahdesta Puolan rannikolla.",
+        "source": {
+          "provider": "Wikimedia Commons",
+          "creator": "Guntars Mednis",
+          "filePage": "https://commons.wikimedia.org/wiki/File:Mierzeja_Helska_i_Ku%C5%BAnica_z_samolotu.Hel_Peninsula_and_Kuznica_from_airplane._-_panoramio.jpg",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Mierzeja_Helska_i_Ku%C5%BAnica_z_samolotu.Hel_Peninsula_and_Kuznica_from_airplane._-_panoramio.jpg"
+        },
+        "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-pol-river-sea2-20260912/manifest.json",
+        "gameIntegrated": false
+      },
+      {
+        "key": "POL:maasto:itameri",
+        "id": "pol-maasto-itameri-478fe5caffe9",
+        "fileName": "pol-maasto-itameri-478fe5caffe9.jpg",
+        "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-seas8-20260912/delivery/pol-maasto-itameri-478fe5caffe9.jpg",
+        "targetKey": "karttanostot/20260912/pol-maasto-itameri-478fe5caffe9.jpg",
+        "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-itameri-478fe5caffe9.jpg",
+        "sha256": "478fe5caffe9a104cf0ee633c8a7ad7caad51a5826212fcc0889627d7d961fca",
+        "bytes": 565084,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-pol-river-sea2-20260912/assets/itameri-v1.png",
+        "nativeSha256": "589d52c6d4d40c2b579e7360d012fc131cadae2987e3143780f6e97b0d8ef035",
+        "kind": "generated-illustration",
+        "rootApproved": true,
+        "captionFi": "Helin kapea niemimaa erottaa avoimen Itämeren Gdańskinlahdesta Puolan rannikolla.",
+        "source": {
+          "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+          "creator": "OpenAI; referenssikuva Guntars Mednis",
+          "filePage": "https://commons.wikimedia.org/wiki/File:Mierzeja_Helska_i_Ku%C5%BAnica_z_samolotu.Hel_Peninsula_and_Kuznica_from_airplane._-_panoramio.jpg",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "referenceCreator": "Guntars Mednis",
+          "referenceSha256": "a53055f67bf6f897d46490a10306feda433d0b06cb229f017f3f291a6944779f",
+          "changes": "Uusi ImageGen-kuva luotiin referenssin maantieteen pohjalta; kuvakulma, sää, veden sävyt ja yksityiskohdat muuttuivat.",
+          "carryForwardRequired": true
+        },
+        "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-pol-river-sea2-20260912/manifest.json",
+        "gameIntegrated": false
+      },
+      {
+        "key": "UKR:maasto:mustameri",
+        "id": "ukr-maasto-mustameri-e9b34a7c286f",
+        "fileName": "ukr-maasto-mustameri-e9b34a7c286f.jpg",
+        "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-seas8-20260912/delivery/ukr-maasto-mustameri-e9b34a7c286f.jpg",
+        "targetKey": "karttanostot/20260912/ukr-maasto-mustameri-e9b34a7c286f.jpg",
+        "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-mustameri-e9b34a7c286f.jpg",
+        "sha256": "e9b34a7c286f5025e4911950201766847c85f63ed75fab360f8eaaaace2944cc",
+        "bytes": 1329139,
+        "dimensions": [
+          2560,
+          1493
+        ],
+        "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-ukr-seas2-20260912/mustameri-authentic-original.jpg",
+        "nativeSha256": "e5fc15e37c319c2383941c19ca8376bc79e348575dfe65c6e732d21b15073438",
+        "kind": "authentic-photograph",
+        "rootApproved": true,
+        "captionFi": "Odesan merikauppasatama avautuu Mustallemerelle; kuvassa näkyy nostureita, hinaajia ja rahtialus.",
+        "source": {
+          "provider": "Wikimedia Commons",
+          "creator": "George Chernilevsky",
+          "filePage": "https://commons.wikimedia.org/wiki/File:Port_of_Odessa_2016_G3.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Port_of_Odessa_2016_G3.jpg"
+        },
+        "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-ukr-seas2-20260912/manifest.json",
+        "gameIntegrated": false
+      },
+      {
+        "key": "UKR:maasto:mustameri",
+        "id": "ukr-maasto-mustameri-d9d62ef8f8bd",
+        "fileName": "ukr-maasto-mustameri-d9d62ef8f8bd.jpg",
+        "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-seas8-20260912/delivery/ukr-maasto-mustameri-d9d62ef8f8bd.jpg",
+        "targetKey": "karttanostot/20260912/ukr-maasto-mustameri-d9d62ef8f8bd.jpg",
+        "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-mustameri-d9d62ef8f8bd.jpg",
+        "sha256": "d9d62ef8f8bda78bcb8e7d1c2d56f570fd475e4fa272e3cd182b6d91a56f206b",
+        "bytes": 606898,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-ukr-seas2-20260912/mustameri-photographic-illustration-v1.png",
+        "nativeSha256": "47cce1b5c35bfb3daddb5cae0326d1c64f564aa7ecea98a5418d3c03a4296410",
+        "kind": "generated-illustration",
+        "rootApproved": true,
+        "captionFi": "Odesan työskentelevä satama Mustanmeren äärellä.",
+        "source": {
+          "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+          "creator": "OpenAI; referenssikuva George Chernilevsky",
+          "filePage": "https://commons.wikimedia.org/wiki/File:Port_of_Odessa_2016_G3.jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "referenceCreator": "George Chernilevsky",
+          "referenceSha256": "e5fc15e37c319c2383941c19ca8376bc79e348575dfe65c6e732d21b15073438",
+          "carryForwardRequired": true
+        },
+        "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-ukr-seas2-20260912/manifest.json",
+        "gameIntegrated": false
+      },
+      {
+        "key": "UKR:maasto:asovanmeri",
+        "id": "ukr-maasto-asovanmeri-e7912ccb63a8",
+        "fileName": "ukr-maasto-asovanmeri-e7912ccb63a8.jpg",
+        "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-seas8-20260912/delivery/ukr-maasto-asovanmeri-e7912ccb63a8.jpg",
+        "targetKey": "karttanostot/20260912/ukr-maasto-asovanmeri-e7912ccb63a8.jpg",
+        "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-asovanmeri-e7912ccb63a8.jpg",
+        "sha256": "e7912ccb63a83ff886f5bb8899cecac09554a9fd7c409901623bc4ca08dd9a51",
+        "bytes": 1644954,
+        "dimensions": [
+          2560,
+          1920
+        ],
+        "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-ukr-seas2-20260912/asovanmeri-authentic-original.jpg",
+        "nativeSha256": "37fab520b70a14fb495739112821deaca6e3dcc4161672c1af78715fd337c5f9",
+        "kind": "authentic-photograph",
+        "rootApproved": true,
+        "captionFi": "Asovanmeren rikkoutunutta talvijäätä Kamjansken edustalla Krimillä helmikuussa 2014.",
+        "source": {
+          "provider": "Wikimedia Commons",
+          "creator": "Vedomosti-dzha",
+          "filePage": "https://commons.wikimedia.org/wiki/File:Frozen_Sea_of_Azov_near_Kamianka_village_Crimea_Ukraine_(1).jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Frozen_Sea_of_Azov_near_Kamianka_village_Crimea_Ukraine_%281%29.jpg"
+        },
+        "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-ukr-seas2-20260912/manifest.json",
+        "gameIntegrated": false
+      },
+      {
+        "key": "UKR:maasto:asovanmeri",
+        "id": "ukr-maasto-asovanmeri-216f7d9b1a0d",
+        "fileName": "ukr-maasto-asovanmeri-216f7d9b1a0d.jpg",
+        "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-seas8-20260912/delivery/ukr-maasto-asovanmeri-216f7d9b1a0d.jpg",
+        "targetKey": "karttanostot/20260912/ukr-maasto-asovanmeri-216f7d9b1a0d.jpg",
+        "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-asovanmeri-216f7d9b1a0d.jpg",
+        "sha256": "216f7d9b1a0d6d8ff1b243aab9112423bfc3bec2249c1b945ce7bc9113976346",
+        "bytes": 705864,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-ukr-seas2-20260912/asovanmeri-photographic-illustration-v1.png",
+        "nativeSha256": "7df7948e6414a088dbccde4bc10baad480d7bcc2312d9fb95a4601a0ec90d956",
+        "kind": "generated-illustration",
+        "rootApproved": true,
+        "captionFi": "Asovanmeren matalaa rikkoutunutta talvijäätä Kamjansken lähellä.",
+        "source": {
+          "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+          "creator": "OpenAI; referenssikuva Vedomosti-dzha",
+          "filePage": "https://commons.wikimedia.org/wiki/File:Frozen_Sea_of_Azov_near_Kamianka_village_Crimea_Ukraine_(1).jpg",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "referenceCreator": "Vedomosti-dzha",
+          "referenceSha256": "37fab520b70a14fb495739112821deaca6e3dcc4161672c1af78715fd337c5f9",
+          "carryForwardRequired": true
+        },
+        "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-ukr-seas2-20260912/manifest.json",
+        "gameIntegrated": false
+      }
+    ],
+    "marios": [
+      {
+        "key": "nikosia:marios",
+        "id": "nikosia-marios-4ce1cb371ba3",
+        "fileName": "nikosia-marios-4ce1cb371ba3.jpg",
+        "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-corrections-20260912/nikosia-marios/delivery/nikosia-marios-4ce1cb371ba3.jpg",
+        "targetKey": "kohtaamiset/20260912/nikosia-marios-4ce1cb371ba3.jpg",
+        "url": "https://media.matkakirja.app/kohtaamiset/20260912/nikosia-marios-4ce1cb371ba3.jpg",
+        "sha256": "4ce1cb371ba37eb0a2dd96c6616206ad95f96145319d5dcc3c91f8120824b59e",
+        "bytes": 626080,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-corrections-20260912/nikosia-marios/nikosia-marios-v1.png",
+        "nativeSha256": "ce742bdf0e054588a28e5a3fdc9252c0498096b85c24b550023c8552cfbe99f5",
+        "kind": "generated-encounter",
+        "rootApproved": true,
+        "captionFi": "Marios pysäyttää painotyönsä ja arvioi aarteen kysyjää Nikosian käsityöpihalla.",
+        "source": {
+          "label": "Matkakirjan havainnekuva",
+          "sources": [
+            {
+              "label": "Visit Cyprus — courtyard architecture reference; fictional artist",
+              "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/chrysaliniotissa-crafts-centre/"
+            }
+          ],
+          "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+        },
+        "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-corrections-20260912/nikosia-marios/qa-v1.json",
+        "gameIntegrated": false
+      }
+    ]
+  },
+  "readback": {
+    "seas8": {
+      "items": [
+        {
+          "key": "POL:maasto:veiksel",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-veiksel-7d5c82de93e4.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "7d5c82de93e47db97de5bef1278e8edb2dea8a352b2d9bd274c0de0e9d02a9a5",
+          "bytes": 568787,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T16:53:23.680Z",
+          "dimensions": [
+            2560,
+            816
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "POL:maasto:veiksel",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-veiksel-30c4f5e8b267.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "30c4f5e8b267e5b10d86f863ec76cdd89ea96df0dad558ac7207dbcc4b466e45",
+          "bytes": 597055,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T16:53:25.526Z",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "POL:maasto:itameri",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-itameri-89e455fc25a8.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "89e455fc25a8c7e72eeb2601fd22789a70a6cec8d892906e09b0deb5444afcc5",
+          "bytes": 1516542,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T16:53:38.439Z",
+          "dimensions": [
+            2560,
+            1707
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "POL:maasto:itameri",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-itameri-478fe5caffe9.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "478fe5caffe9a104cf0ee633c8a7ad7caad51a5826212fcc0889627d7d961fca",
+          "bytes": 565084,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T16:53:40.318Z",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "UKR:maasto:mustameri",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-mustameri-e9b34a7c286f.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "e9b34a7c286f5025e4911950201766847c85f63ed75fab360f8eaaaace2944cc",
+          "bytes": 1329139,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T16:53:42.241Z",
+          "dimensions": [
+            2560,
+            1493
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "UKR:maasto:mustameri",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-mustameri-d9d62ef8f8bd.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "d9d62ef8f8bda78bcb8e7d1c2d56f570fd475e4fa272e3cd182b6d91a56f206b",
+          "bytes": 606898,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T16:53:44.337Z",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "UKR:maasto:asovanmeri",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-asovanmeri-e7912ccb63a8.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "e7912ccb63a83ff886f5bb8899cecac09554a9fd7c409901623bc4ca08dd9a51",
+          "bytes": 1644954,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T16:53:46.282Z",
+          "dimensions": [
+            2560,
+            1920
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "UKR:maasto:asovanmeri",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-asovanmeri-216f7d9b1a0d.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "216f7d9b1a0d6d8ff1b243aab9112423bfc3bec2249c1b945ce7bc9113976346",
+          "bytes": 705864,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T16:53:48.230Z",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        }
+      ],
+      "complete": true
+    },
+    "marios": {
+      "items": [
+        {
+          "key": "nikosia:marios",
+          "url": "https://media.matkakirja.app/kohtaamiset/20260912/nikosia-marios-4ce1cb371ba3.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "4ce1cb371ba37eb0a2dd96c6616206ad95f96145319d5dcc3c91f8120824b59e",
+          "bytes": 626080,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T16:57:28.127Z",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        }
+      ],
+      "complete": true
+    }
+  },
+  "currentReportedState": {
+    "main": "v1809",
+    "mainAudit": "PR2298, PR2302 ja PR2303: 25 mediaa sekä neljä kohtaamista varmennettu mainissa",
+    "siteReview": {
+      "version": 188,
+      "status": "published",
+      "content": "15 karttakuvaa ja Marios lisätty",
+      "recordReadback": "107/107"
+    },
+    "pr2309": {
+      "url": "https://github.com/ravelius/Matkakirja/pull/2309",
+      "status": "ready-and-still-requested-for-publication"
+    },
+    "gameVisibilityNotClaimed": true
+  },
+  "nicosia": {
+    "problem": "Kanonisen Nikosia-rivin luennat:false suodattaa kaupungin TARINAKAARI-taulusta, joten katalogissa oleva Marios ei vielä voi näkyä kohtaamiskortilla.",
+    "requestedAction": "Ratkaise Nikosian pelinäkyvyyden esto erillisenä muutoksena ja aja tarinakaari-, luenta-, kohtaamiskuva- ja julkaisu-QA.",
+    "guardPolicy": "Poikkeus saa koskea vain Nikosiaa. Kaikkien muiden aktiivisten kohtaamiskuvien on edelleen osuttava aktiiviseen TARINAKAARI-riviin ja samaan hahmoon.",
+    "storyCanon": "Älä muuta muuta tarinakaarikaanonia tämän teknisen eston yhteydessä."
+  },
+  "requestedActions": [
+    "Yhdistä PR2311 ja PR2312 normaalissa Fable-ketjussa.",
+    "Yhdistä edelleen odottava PR2309.",
+    "Nosta versio ja julkaise peli normaalien porttien jälkeen.",
+    "Ratkaise Nikosian luennat:false-esto erikseen yllä olevalla vain-Nikosia-poikkeuksella.",
+    "Kuittaa merge-commitit, julkaisuversio ja käytetyt media-URLit."
+  ],
+  "boundaries": [
+    "Mediajulkaisu, pelikytkentä ja julkaistussa pelissä näkyminen ovat eri tiloja.",
+    "Tämä viesti ei väitä PR2311:n tai PR2312:n olevan mainissa tai pelissä näkyvissä.",
+    "Site 188 on tarkistussivu, ei todiste pelin kohtaamiskortin näkyvyydestä."
+  ]
+}

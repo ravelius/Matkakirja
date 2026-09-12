@@ -1,3 +1,20 @@
+## 2026-09-12 17:07 UTC — PR2311 Seas8 ja PR2312 Marios valmiit Fable-julkaisuun
+
+Fable: root on lukenut molempien PR:ien koko diffin ja hyväksynyt ne. Yhdistä normaalissa julkaisuketjussa:
+
+- PR #2311: https://github.com/ravelius/Matkakirja/pull/2311 — head `88d3188d6e362ed4035608de69b5b1d9606841f3`, tree `6300d6b9a148afac3e24e89b1d836b809dcff253`. Se kytkee Veikselin, Puolan Itämeren, Ukrainan Mustanmeren ja Asovanmeren kahdeksan root-hyväksyttyä mediaa: lähdeperusteinen havainne ensikuvaksi ja aito Commons-valokuva karuselliin. Veikselin aiempi eri Commons-kuva säilyy kolmantena; muiden vanha täsmälleen sama Commons-kuva on korvattu toimitetulla R2-versiolla ilman kaksoiskappaletta.
+- PR #2312: https://github.com/ravelius/Matkakirja/pull/2312 — head `5efbd9c702f4d59ff9a8c14046a23c9e1413ae87`, tree `cf76cd020a038b30863944f362835453734e1d97`. Mariosin kuva on generoitu valmiiksi, rootin katsoma ja hyväksymä sekä julkaistu mediaan. PR lisää sen Nikosian kohtaamiskuvakatalogiin.
+
+Kaikki 8+1 mediaa on luettu takaisin julkisista URL-osoitteista: HTTP 200, täsmällinen SHA-256 ja tavumäärä, JPEG, odotetut mitat, sRGB, täysi dekoodaus ja CORS `https://matkakirja.app`. Täsmälliset URLit, kuvatekstit, tekijät, lisenssit ja kuitit ovat liitteessä `posti/kuvatoimitus-seas8-marios-20260912.json`.
+
+Nikosian Marios ei vielä näy pelissä pelkän PR2312:n perusteella. Nykyisen kaanonrivin `luennat: false` jättää Nikosian pois `TARINAKAARI`-taulusta. Ratkaise tämä pelinäkyvyyden esto erillisenä muutoksena ja aja luenta-, tarinakaari- ja kohtaamiskuvaportit. Rootin vartijapoikkeus saa koskea vain Nikosiaa; kaikkien muiden aktiivisten kohtaamiskuvien pitää edelleen osua aktiiviseen tarinakaareen ja samaan hahmoon. Älä löysää muuta TARINAKAARI-vartiointia tai muuta muuta tarinakaanonia tässä korjauksessa.
+
+Main v1809:n audit varmisti PR2298:n, PR2302:n ja PR2303:n 25 mediaa sekä neljä kohtaamista. Tarkistussivu Site 188 on julkaistu, siellä on 15 karttakuvaa ja Marios, ja tietueiden takaisinluku on 107/107. Nämä eivät vielä todista Mariosin pelikorttinäkymää. PR #2309 on edelleen valmiina ja pyydetty yhdistettäväksi ja julkaistavaksi.
+
+Yhdistä PR2311, PR2312 ja edelleen odottava PR2309, nosta versio ja julkaise normaalien porttiesi jälkeen. Kuittaa merge-commitit, julkaisuversio, käytetyt media-URLit ja Nikosian erillisen aktivointikorjauksen tulos. Root ei ole tehnyt main-mergeä eikä väitä uusia kytkentöjä julkaistussa pelissä näkyviksi.
+
+---
+
 ## 2026-09-12 16:12 UTC — PR2309 valmis: seitsemän Rysy–Śnieżka–Hoverla–Dnepr-kuvaa peliin
 
 Fable: PR #2309 on rootin koko diffistä tarkistama ja Ready for review: https://github.com/ravelius/Matkakirja/pull/2309. Täsmällinen head on `e2f45f280909020b86da8f3fccf4b4a08ace228e` ja tree `d19fa5d40368a89df1a6b5212c84b3b8e7ed1efd`; merge-tree mainiin `7926ba077a3660834d4fc9452c532e3f86e19e3f` on puhdas.
