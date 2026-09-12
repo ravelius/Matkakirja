@@ -141,9 +141,15 @@ tekstintekijä ja kuvantekijä varmistavat sen valmistuneesta kuvasta.
 - Animaatiosessio omistaa SVG/CSS-ilmeen, eleet, prioriteetit, ohjaimen ja
   synkronoinnin. Se sopii toteutettavan elevaihtoehtojen rekisterin tekijöiden
   kanssa. Se ei kirjoita tarinaa tai tuota kuvia uudelleen.
-- Fable omistaa lopullisen kaanonin tarkistuksen, ääni-/luenta-ajot nykyisillä
-  tuotantoluvilla, yhdistämisen, version, CI:n ja julkaisun. Uusi ääni valitaan
-  kuuntelemalla; iloisempi/suloisempi suunta ei ole vielä valittu voice_id.
+- Animaatiovetäjä vastaa myös teknisestä paketoinnista: hyväksytyt
+  osatoimitukset kootaan erilliseen julkaisuehdokashaaraan ja yhteiseen
+  testaukseen. Tämä ei siirrä tekstien tai kuvien sisältöomistusta hänelle.
+- Fable omistaa lopullisen kaanonin ja julkaisuehdokkaan tarkistuksen,
+  tarvittavien äänituotantolupien varmistamisen, yhdistämisen, version,
+  CI:n ja julkaisun. Tuotantovetäjät valmistelevat ja mahdollisuuksien
+  sekä voimassa olevien lupien mukaan suorittavat ääni-/luenta-ajot.
+  Uusi ääni valitaan kuuntelemalla; iloisempi/suloisempi suunta ei ole
+  vielä valittu voice_id.
 - Pääsessio koordinoi rajapinnat ja poikkeukset. Kevyemmät agentit saavat
   rajattuja inventointi-, ensiluonnos- ja QA-eriä, eivät kilpailevia kokonaisuuksia.
 
@@ -160,6 +166,25 @@ pilotin alussa nykyistä dataa hyödyntäen, ei uutta irrallista tietokantaa:
    tavoiteltu tunne ja voimakkuus, eletoive, prioriteetti ja palautuminen;
 6. lopullinen ääniversio ja tekstitiiviste, kohdistustulos sekä testien tila;
 7. seuraava siirto, tekijä ja mahdollinen este, jotta uusi sessio voi jatkaa.
+
+### Fablelle yksi valmis julkaisuehdokas
+
+Omistajan 12.9.2026 jatkotarkennus: Fablelle ei toimiteta kolmea
+keskeneräistä osaa koottavaksi. Osatoimitusten luonnos-PR:t saavat olla
+työviitteitä, mutta niiden perusteella ei pyydetä erillisiä julkaisuja.
+Tekninen paketointivastaava kokoaa yhden yhteisen toimituksen, jossa ovat
+hyväksytyt tekstit ja kuvatekstit, tunnetagit, julkaistujen kuvien
+tarkistetut osoitteet ja tiivisteet, vastaavat äänet ja kohdistukset,
+animaatiot sekä yhteistestit. Mukaan tulee lyhyt käyttöönotto-ohje,
+palautussuunnitelma ja mahdolliset aidot puutteet.
+
+Fablen tavoiteltu työ on lopputarkistus, yhdistäminen ja julkaisu.
+Puuttuvaa äänenvalintaa tai maksullisen ajon lupaa ei arvata tämän
+tavoitteen vuoksi: valmistellaan täsmällinen ajopaketti ja ilmoitetaan
+vain ratkaistava valinta tai tarvittava ajovaihe. Äänetön tai vanhalla
+äänellä varustettu keskeneräinen ehdokas ei ole valmis yhteispaketti.
+Pääsessio hoitaa Fablen tiedotuksen; omistajan ei tarvitse välittää
+samoja ohjeita käsin.
 
 ## Tunnetagit ja animaatio kirjoitetaan jo käsikirjoitukseen
 
