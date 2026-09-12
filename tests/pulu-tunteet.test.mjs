@@ -20,7 +20,7 @@ import { readFileSync } from 'node:fs';
 import { LIVIAN_TUNTEET, livianTunnetaginTiedot } from '../js/livia-tilanteet.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import {
-  livianAaniAjanTasalla, livianKaupunkiIndeksi, livianKentanKuplat,
+  LIVIAN_VERSIOIDUT_AANET, livianAaniAjanTasalla, livianKaupunkiIndeksi, livianKentanKuplat,
 } from '../js/liviapuhe.js';
 
 const KAUPUNGIT = Object.keys(FOKUSVIRRAT);
@@ -77,21 +77,7 @@ test('fokusvirta ilmoittaa tunnetagin kommenttikuplan alussa', () => {
  * jos tunnetagi vuotaisi tekstiin, jokainen 45 kaupungin äänite
  * vaikenisi kerralla. Tämä testi ajaa saman portin läpi kaikki kuplat.
  */
-test('tunnetagi ei muuta tekstiä eikä ohita pilotin ääni-HOLDia', () => {
-  const audioHold = new Set([
-    'ateena-3',
-    'helsinki-3',
-    'lappi-3',
-    'marseille-3',
-    'riika-3',
-    'sarajevo-3',
-    'tallinna-3',
-    'tampere-3',
-    'tromssa-3',
-    'tukholma-3',
-    'venetsia-3',
-    'vilna-3',
-  ]);
+test('tunnetagi ei muuta tekstiä eikä ohita versionoidun äänen porttia', () => {
   for (const id of KAUPUNGIT) {
     const kuplat = livianKentanKuplat(FOKUSVIRRAT[id], 'kommentti');
     assert.ok(kuplat.length, `${id}: kommenttikupla puuttuu`);
@@ -101,7 +87,7 @@ test('tunnetagi ei muuta tekstiä eikä ohita pilotin ääni-HOLDia', () => {
       const indeksi = livianKaupunkiIndeksi(id, 'kommentti', i);
       assert.notEqual(indeksi, null, `${id}: kuplalla ${i} ei ole äänitepaikkaa`);
       const avain = `${id}-${indeksi + 1}`;
-      assert.equal(livianAaniAjanTasalla(id, indeksi, teksti), !audioHold.has(avain),
+      assert.equal(livianAaniAjanTasalla(id, indeksi, teksti), Object.hasOwn(LIVIAN_VERSIOIDUT_AANET, avain),
         `${avain}: tagin ja hyväksytyn tekstin ääniportti on väärässä tilassa`);
     });
   }

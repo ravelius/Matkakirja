@@ -323,6 +323,12 @@ test('jokaisella fokuskaupungilla on Livian puheenvuoro isoisän merkintään', 
       'marseille', 'ateena', 'sarajevo', 'venetsia',
       'tukholma', 'helsinki', 'tampere', 'tallinna',
       'riika', 'vilna', 'tromssa', 'lappi',
+      'lontoo', 'dublin', 'edinburgh', 'amsterdam', 'pariisi',
+      'madrid', 'barcelona', 'sevilla', 'granada', 'lissabon',
+      'rooma', 'firenze', 'sisilia', 'alpit', 'wien', 'praha', 'berliini',
+      'bergen', 'oslo', 'kobenhavn', 'islanti',
+      'sofia', 'bukarest', 'budapest', 'istanbul', 'dubrovnik', 'kreeta',
+      'kiova', 'odessa', 'krakova', 'varsova', 'moskova', 'pietari',
     ]);
     for (const kupla of kommentti) {
       if (!paribudjettipilotit.has(kaupunki)) {

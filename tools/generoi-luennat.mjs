@@ -72,11 +72,11 @@ const LAUDAT = [
 ];
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const AANI = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
-const MALLI = 'eleven_v3';
-const STABILITY = 0.5;
-const OUTPUT_FORMAT = 'mp3_44100_128';
-const KUITIN_VERSIO = 1;
+export const AANI = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
+export const MALLI = 'eleven_v3';
+export const STABILITY = 0.5;
+export const OUTPUT_FORMAT = 'mp3_44100_128';
+export const KUITIN_VERSIO = 1;
 const ERAN_TURVARAJA = 10;
 /*
  * Lopputauko (omistajan havainto 8.8.2026: tiedosto leikkautuu heti
@@ -85,7 +85,7 @@ const ERAN_TURVARAJA = 10;
  * leikata pois rikkomatta puhetta. Tarkista ensimmäisestä ajosta
  * kuuntelemalla, että tauko todella syntyy — jos ei, kasvata aikaa.
  */
-const LOPPUTAUKO = ' <break time="1.0s" />';
+export const LOPPUTAUKO = ' <break time="1.0s" />';
 
 /**
  * Kaupungin luenta ja sen kohdetiedosto — fokusvirta ensin.

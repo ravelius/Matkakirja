@@ -750,7 +750,8 @@ test('kohdistustyökalun kuiva ajo kertoo osoitteet eikä tarvitse verkkoa', () 
   assert.match(loki, /KUIVA AJO/);
   assert.match(loki, /Tiedostomuoto: versio 2/);
   assert.match(loki, /--sido/);
-  assert.match(loki, /audio\/puhe-fokus-matkakirja-marseille\.mp3/);
+  assert.ok(loki.includes(aaniUrl('assets/audio/puhe-fokus-matkakirja-marseille.mp3')),
+    'kuiva ajo kertoo saman versionoidun äänen, jonka peli soittaa');
   assert.match(loki, /assets\/aikaleimat\/puhe-fokus-matkakirja-marseille\.aikaleimat\.json/);
   assert.match(loki, /marseille\.r6: ankkuri sanoissa/);
   assert.doesNotMatch(loki, /xi-api-key|ELEVEN_API_KEY=/, 'avainta ei tulosteta');

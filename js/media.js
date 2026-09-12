@@ -73,6 +73,29 @@ export const AANI_JUURI = R2_JUURI;
  */
 const AANI_ALIPOLKU = 'audio/';
 
+/*
+ * HYVÄKSYTYT VERSIONOIDUT HORATIO-LUENNAT (13.9.2026).
+ *
+ * Avaimet ovat valmistuneista tuotantokuiteista
+ * horatio-3aaeabde9b4f5c76a85d ja horatio-8270eb898650a10b5b52.
+ * Muut luennat jatkavat vanhalla audio/<nimi>-reitillä, kunnes niiden
+ * tekstit on hyväksytty ja oma muuttumaton tuotantokuitti on valmis.
+ */
+export const VERSIOIDUT_HORATIO_AANET = Object.freeze({
+  'puhe-fokus-matkakirja-ateena.mp3': 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-ateena.mp3',
+  'puhe-fokus-matkakirja-marseille.mp3': 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-marseille.mp3',
+  'puhe-fokus-matkakirja-sarajevo.mp3': 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-sarajevo.mp3',
+  'puhe-fokus-matkakirja-venetsia.mp3': 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-venetsia.mp3',
+  'puhe-fokus-matkakirja-tukholma.mp3': 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-tukholma.mp3',
+  'puhe-fokus-matkakirja-helsinki.mp3': 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-helsinki.mp3',
+  'puhe-fokus-matkakirja-tampere.mp3': 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-tampere.mp3',
+  'puhe-fokus-matkakirja-tallinna.mp3': 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-tallinna.mp3',
+  'puhe-fokus-matkakirja-riika.mp3': 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-riika.mp3',
+  'puhe-fokus-matkakirja-vilna.mp3': 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-vilna.mp3',
+  'puhe-fokus-matkakirja-tromssa.mp3': 'audio/versions/horatio/4ac41585d691/horatio-8270eb898650a10b5b52/puhe-fokus-matkakirja-tromssa.mp3',
+  'puhe-fokus-matkakirja-lappi.mp3': 'audio/versions/horatio/4ac41585d691/horatio-8270eb898650a10b5b52/puhe-fokus-matkakirja-lappi.mp3',
+});
+
 /**
  * Repon oman äänitiedoston nimi polusta, tai null jos polku ei osoita
  * assets/audio-kansioon.
@@ -105,6 +128,8 @@ export function omaAaniPolku(polku) {
 export function aaniUrl(polku) {
   const nimi = omaAaniPolku(polku);
   if (!nimi) return polku;
+  const versioituPolku = VERSIOIDUT_HORATIO_AANET[nimi];
+  if (versioituPolku) return `${AANI_JUURI}${versioituPolku}`;
   const versio = UUSITUT_AANET[nimi];
   return `${AANI_JUURI}${AANI_ALIPOLKU}${nimi}${versio ? `?v=${versio}` : ''}`;
 }

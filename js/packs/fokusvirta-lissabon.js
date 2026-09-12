@@ -150,12 +150,7 @@ export const FOKUSVIRTA_LISSABON = {
     paikkarivi: 'Lissabon, lokakuussa 1873. Tuulista; Tejolla valkoisia '
       + 'harjoja; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 330 merkkiä (yläraja 400). */
-    teksti: 'Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin '
-      + 'hallitsijan jakaukseksi. Eksyin silti heti, kun poikkesin Alfamaan. '
-      + 'Siellä portailla istuva nainen neuvoi ylöspäin. Ylhäällä toinen '
-      + 'neuvoi alas. Kumpikin oli oikeassa: löysin meren molemmista '
-      + 'suunnista, vain eri kattojen välistä. Kartta on täällä taskussa '
-      + 'kulkeva lohdutus.',
+    teksti: 'Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin hallitsijan jakaus. Alfamassa eksyin silti. Yksi nainen neuvoi ylös, toinen alas. Kumpikin oli oikeassa: meri löytyi eri kattojen välistä. Kartta oli täällä taskussa kulkeva lohdutus.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain tunnetagit lisätty
      * (docs/moduulit/tarinakaari.md, luku 7). Neljä tagia, alku ja loppu
@@ -175,24 +170,19 @@ export const FOKUSVIRTA_LISSABON = {
      * ylöspäin" (neuvon ensimmäinen puoli).
      */
     reaktiot: [
-      { id: 'lissabon.r1', ankkuri: 'kuin hallitsijan jakaukseksi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Suorat kadut vertautuvat hiustenjakaukseen.' },
-      { id: 'lissabon.r2', ankkuri: 'Eksyin silti heti', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Isoisä nauraa itselleen.' },
-      { id: 'lissabon.r3', ankkuri: 'toinen neuvoi alas', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Vastakkaiset neuvot ovat merkinnän vitsi.' },
-      { id: 'lissabon.r4', ankkuri: 'molemmista suunnista', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Molemmat olivat oikeassa: yllätys.' },
+      { id: 'lissabon.r1', ankkuri: 'kuin hallitsijan jakaus', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'lissabon.r2', ankkuri: 'Alfamassa eksyin silti', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'lissabon.r3', ankkuri: 'toinen alas', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'lissabon.r4', ankkuri: 'eri kattojen välistä', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'lissabon.r5', ankkuri: 'taskussa kulkeva lohdutus', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Hiljainen päätös kartasta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Baixan kadut vedettiin järistyksen jälkeen suoriksi '
-      + 'kuin hallitsijan jakaukseksi. Eksyin silti heti, kun poikkesin '
-      + 'Alfamaan. Siellä portailla istuva nainen neuvoi ylöspäin. Ylhäällä '
-      + 'toinen neuvoi alas. Kumpikin oli oikeassa: löysin meren molemmista '
-      + 'suunnista, vain eri kattojen välistä. [softly] Kartta on täällä '
-      + 'taskussa kulkeva lohdutus.',
+    luenta: '[curious] Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin hallitsijan jakaus. Alfamassa eksyin silti. Yksi nainen neuvoi ylös, toinen alas. Kumpikin oli oikeassa: meri löytyi eri kattojen välistä. [softly] Kartta oli täällä taskussa kulkeva lohdutus.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lissabon.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-lissabon-r20260909-paper-v4;
@@ -207,13 +197,7 @@ export const FOKUSVIRTA_LISSABON = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Lissabon, 1873. Naisen neuvo jatkui portaina.',
-      selite: 'Nainen osoitti ylöspäin niin varmasti, että annoin kamerankin '
-        + 'katsoa samaan suuntaan. Alfaman katot peittivät veden ja avasivat '
-        + 'sen taas seuraavassa raossa. Alempana Baixan uudelleen rakennetut '
-        + 'kadut tottelevat viivoitinta; tämä kaupunginosa näyttää ottaneen '
-        + 'käskyt rinteeltä. Portaalla seisojan ei tarvitse tietää koko '
-        + 'reittiä neuvoakseen seuraavan käännöksen. Minulle olisi riittänyt '
-        + 'aluksi sekin.',
+      selite: 'Nainen neuvoi minua ylös Alfaman portailla, missä katot peittivät Tejon ja avasivat sen taas seuraavassa raossa. Portaalla seisojan ei tarvitse tuntea koko reittiä näyttääkseen seuraavan käännöksen.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.patrimoniocultural.gov.pt/wp-content/uploads/2024/08/ER4.pdf',
@@ -223,7 +207,7 @@ export const FOKUSVIRTA_LISSABON = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lissabon-r20260911-paper2-v1.jpg",
       lyhyt: "Lissabon, 1873. Meri löytyi portaan ja kattojen välistä.",
-      selite: "Pysähdyin Alfaman porrastasanteelle kartta kädessä. Kattojen välistä näkyi Tejo, vaikka reitti oli jälleen epäselvä. Ylös ja alas annetut neuvot olivat molemmat toimineet. Kartta jäi lohdutukseksi.",
+      selite: 'Pysähdyin Alfaman porrastasanteelle kartta kädessä, kun Tejo löytyi kattojen välistä. Ylös ja alas annetut neuvot olivat molemmat toimineet; kartta jäi lohdutukseksi.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.patrimoniocultural.gov.pt/wp-content/uploads/2024/08/ER4.pdf","https://imovel2.patrimoniocultural.gov.pt/detalhes.php?code=19448470"],
     },
@@ -241,13 +225,8 @@ export const FOKUSVIRTA_LISSABON = {
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lissabon-01-r20260909-euv1-v2.jpg',
-        lyhyt: 'Lissabon: hissin yläpää. Siipiä myydään ilmeisesti pareittain.',
-        selite: 'Santa Justan hissi yhdistää Baixan alempia katuja Carmon '
-          + 'korkeuksiin. Yhdessä kaupungissa voi siis jäädä jonottamaan '
-          + 'pelkkää ylämäkeä. Minä saavuin viereiselle reunalle toisesta '
-          + 'suunnasta ja katselin, kuinka matkustajat astuivat ulos. Isoisä '
-          + 'löysi veden kattojen välistä. Tästä löytyvät ensin katot ja niiden '
-          + 'päältä taas ihmisiä, jotka yrittävät päästä vielä vähän ylemmäs.',
+        lyhyt: 'Lissabon: hissin yläpää, jossa siipiä myydään ilmeisesti pareittain.',
+        selite: 'Santa Justan hissi nostaa matkustajat Baixasta Carmon korkeuksiin, joten Lissabonissa voi jonottaa pelkkää ylämäkeä. Minä katselin ylhäältä, kuinka katot jatkuivat ja ihmiset pyrkivät vielä vähän ylemmäs.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.visitlisboa.com/pt-pt/locais/elevador-de-santa-justa',
@@ -258,7 +237,7 @@ export const FOKUSVIRTA_LISSABON = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Lissabonissa on nyt hissejä mäkiä varten. Ihmiset eivät saaneet siipiä, joten piti ryhtyä rakennustöihin.',
+      'Raitiovaunu 12 kulkee Alfaman mäkien kautta. Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. Kun löysin vaunun uudelleen, seurasin sitä päätepysäkille asti.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

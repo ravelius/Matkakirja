@@ -164,14 +164,14 @@ export const FOKUSVIRTA_OSLO = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-oslo-r20260909-paper-v4.jpg",
       lyhyt: "Christiania, 1873. Metsä valmistautui lähtemään laivalla.",
-      selite: "Lankut odottivat rannassa suorina pinoina, aivan kuin metsä olisi saanut ennen merimatkaa kunnollisen kasvatuksen. Sataman takana kohoavat talot näyttävät kiveltä, mutta niiden vauraus kulkee usein tätä kautta puuna. Kuvasin lastausta ennen kuin laiva peitti pinoja näkyvistä. Vedessä kellui pieni lastu. Se kertoi tuoksullaan lähtöpaikastaan tarkemmin kuin yksikään rahtipaperi, jonka olin nähnyt.",
+      selite: 'Christianian rannassa lankut odottavat suorina pinoina purjelaivan vieressä. Metsä on saanut merimatkaa varten siistimmän järjestyksen kuin moni matkustaja.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.oslobilder.no/search?page=10&query=%22havna%22"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-oslo-r20260911-paper2-v1.jpg",
       lyhyt: "Christiania, 1873. Vedestä nostettu lastu tuoksui yhä metsältä.",
-      selite: "Kumarruin laiturilta ja nostin vedestä pienen puulastun. Lankkupinot ja purjelaiva jäivät taustalle. Lastu oli jo satamassa, mutta sen pinta tuntui tuoreelta. Metsän matka oli alkanut.",
+      selite: 'Nostin laiturin vierestä pienen lastun, kun purjelaiva ja lankkupinot odottivat taustalla. Se oli jo satamassa, mutta tuoksui yhä metsältä.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.oslobilder.no/search?page=10&query=%22havna%22"],
     },
@@ -180,11 +180,7 @@ export const FOKUSVIRTA_OSLO = {
     paikkarivi: 'Kristiania, heinäkuussa 1873. Valoisaa myöhään; vuono tyyni; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 332 merkkiä (yläraja 400). */
-    teksti: 'Christianian vuonolla lastattiin lankkuja laivaan. Metsä matkusti '
-      + 'maailmalle siististi pinottuna. Sataman mies näytti rannan sahoja ja '
-      + 'sanoi kaupungin kasvavan puusta. Se oli omituista kuultavaa paikassa, '
-      + 'jossa kivitalot näyttivät niin ylpeiltä itsestään. Poimin vedestä '
-      + 'lastun. Se tuoksui yhä metsältä, vaikka matka oli jo alkanut.',
+    teksti: 'Christianian vuonolla lankut lähtivät maailmalle siisteinä pinoina. Kivitalojen sanottiin kasvavan puusta. Poimin vedestä lastun; se tuoksui yhä metsältä, vaikka matka oli jo alkanut.',
     /*
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
@@ -203,22 +199,15 @@ export const FOKUSVIRTA_OSLO = {
      * sahoista (taustaa).
      */
     reaktiot: [
-      { id: 'oslo.r1', ankkuri: 'siististi pinottuna', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Metsä matkustaa kuin matkustaja.' },
-      { id: 'oslo.r2', ankkuri: 'ylpeiltä itsestään', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kivitalot saavat kuivan huomautuksen.' },
+      { id: 'oslo.r1', ankkuri: 'siisteinä pinoina', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'oslo.r3', ankkuri: 'Poimin vedestä lastun', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
-        perustelu: 'Pieni arkinen teko.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'oslo.r4', ankkuri: 'tuoksui yhä metsältä', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Lastu muistaa alkunsa: hiljainen päätös.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Christianian vuonolla lastattiin lankkuja laivaan. '
-      + 'Metsä matkusti maailmalle siististi pinottuna. Sataman mies näytti '
-      + 'rannan sahoja ja sanoi kaupungin kasvavan puusta. Se oli omituista '
-      + 'kuultavaa paikassa, jossa kivitalot näyttivät niin ylpeiltä '
-      + 'itsestään. Poimin vedestä lastun. [softly] Se tuoksui yhä metsältä, '
-      + 'vaikka matka oli jo alkanut.',
+    luenta: '[curious] Christianian vuonolla lankut lähtivät maailmalle siisteinä pinoina. Kivitalojen sanottiin kasvavan puusta. [softly] Poimin vedestä lastun; se tuoksui yhä metsältä, vaikka matka oli jo alkanut.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-oslo.mp3',
   },
 
@@ -235,12 +224,7 @@ export const FOKUSVIRTA_OSLO = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-oslo-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Oslo: ihmisetkin ovat alkaneet käyttää kattoa kulkureittinä.',
-        selite: 'Oslon oopperan vinoa kattoa pitkin kävellään veden ääreltä '
-          + 'ylemmäs. Minä aloitin samasta kohdasta kuin ihmiset, lähinnä '
-          + 'vertailun vuoksi. Valkoinen pinta levitti päivän valon joka '
-          + 'suuntaan, ja kenkien varjot nousivat hitaasti rinnettä. Isoisä '
-          + 'näki rannassa maailmalle lähteviä lankkuja. Nyt täällä katsellaan, '
-          + 'miten kaupunki rakentaa itselleen yhteyttä vuonoon myös ylhäältä.',
+        selite: 'Oslon oopperan valkoinen katto toimii kulkureittinä aivan vuonon reunalla. Minä seurasin hetken kenkiä ja huomasin, että rakennukseen voi tutustua jo ennen ovea.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.operaen.no/',
@@ -249,13 +233,7 @@ export const FOKUSVIRTA_OSLO = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-oslo-02-r20260909-euv1-v3.jpg',
         lyhyt: 'Oslo: katon idea näkyi paremmin, kun nousin siitä irti.',
-        selite: 'Lennosta oopperan katto asettuu vuonon reunalle kuin kaupungin '
-          + 'jatkama kävelytie. Alempana ihmiset pysähtyvät katsomaan vettä; '
-          + 'ylempänä näkyy uusia rakennuksia. Samaa reunaa voi käyttää niin '
-          + 'monella tavalla, että siitä kannattaa ottaa toinenkin kuva. '
-          + 'Ensimmäisessä seurasin kenkiä. Tässä tarkistin, mihin ne ovat '
-          + 'menossa. Arvostan arkkitehtuuria, joka ei lopu ihmisen pään '
-          + 'korkeudelle.',
+        selite: 'Ilmasta oopperan katto näyttää kaupungin jatkamalta kävelytieltä vuonon ääreen. Ensimmäisessä kuvassa seurasin kenkiä; tässä näkyy, mihin ne ovat menossa.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.operaen.no/',
@@ -265,7 +243,7 @@ export const FOKUSVIRTA_OSLO = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Nimi on nyt Oslo, ja vuonon rannassa kävellään oopperan katolla. Siihen suuntaan kaupunkien pitäisi kasvaa.',
+      'Nimi on Oslo, ja oopperan katolla kävellään. Hämmästyin, kun ihmiset nousivat samalle katolle kuin minä. Kerrankin rakennus oli yhtä hyvä reitti jaloille ja siiville.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.45 },

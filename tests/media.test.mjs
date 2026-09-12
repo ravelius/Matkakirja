@@ -17,6 +17,7 @@ import {
   PEILI_JUURI, peiliKuvaPolku, peiliAaniPolku, aaniOsoite, aaniUrl, onPeilista,
   asetaKuva, peiliPetti, peiliKaytossa, nollaaPeili, peilinLaji, AANI_JUURI,
   KUVAN_YRITYKSET, nollaaKuvajono,
+  VERSIOIDUT_HORATIO_AANET,
 } from '../js/media.js';
 import { valokuvaUrl } from '../js/packs/africa-valokuvat.js';
 
@@ -131,6 +132,18 @@ test('YDINSETILLÄ EI OLE POIKKEUSTA: tehoste ja huudahdus tulevat ämpäristä'
   assert.equal(aaniUrl('assets/audio/efekti-klik.mp3'),
     `${AANI_JUURI}audio/efekti-klik.mp3`);
   nollaaPeili();
+});
+
+test('hyväksytyt 12 Horatio-luentaa käyttävät muuttumattomia tuotantoavaimia', () => {
+  assert.equal(Object.keys(VERSIOIDUT_HORATIO_AANET).length, 12);
+  for (const [nimi, polku] of Object.entries(VERSIOIDUT_HORATIO_AANET)) {
+    assert.equal(aaniUrl(`assets/audio/${nimi}`), `${AANI_JUURI}${polku}`, nimi);
+    assert.match(polku,
+      /^audio\/versions\/horatio\/[0-9a-f]{12}\/horatio-[0-9a-f]{20}\/puhe-fokus-matkakirja-.+\.mp3$/);
+    assert.doesNotMatch(aaniUrl(`assets/audio/${nimi}`), /\?v=/);
+  }
+  assert.match(aaniUrl('assets/audio/puhe-fokus-matkakirja-lontoo.mp3'),
+    /audio\/puhe-fokus-matkakirja-lontoo\.mp3\?v=2$/);
 });
 
 test('VARTIO: repossa ei ole yhtään äänitiedostoa', () => {

@@ -111,6 +111,29 @@ import { AANI_JUURI } from './media.js';
  */
 export const LIVIAN_AANIJUURI = `${AANI_JUURI}aanet/pulu/`;
 
+/*
+ * HYVÄKSYTYT VERSIONOIDUT KAUPUNKIÄÄNET (13.9.2026).
+ *
+ * Nämä avaimet tulevat suoraan kahdesta valmistuneesta tuotantokuitista:
+ * pulu-68f01fabb4a9d7ce6c2b ja pulu-c8223a43f6c9ab4c7102. Äänitteet
+ * ovat muuttumattomissa R2-avaimissa, joten peli ei enää riipu näiden
+ * repliikkien vanhasta ylikirjoitettavasta aanet/pulu/-avaimesta.
+ */
+export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
+  'ateena-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-ateena-3.mp3',
+  'sarajevo-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-sarajevo-3.mp3',
+  'helsinki-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-helsinki-3.mp3',
+  'tampere-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tampere-3.mp3',
+  'tallinna-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tallinna-3.mp3',
+  'riika-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-riika-3.mp3',
+  'vilna-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-vilna-3.mp3',
+  'marseille-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-marseille-3.mp3',
+  'venetsia-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-venetsia-3.mp3',
+  'tukholma-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tukholma-3.mp3',
+  'lappi-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-lappi-3.mp3',
+  'tromssa-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-tromssa-3.mp3',
+});
+
 /**
  * VARATTU NUMERO — POISTETUN REPLIIKIN PAIKKA (omistaja 8.9.2026,
  * sanatarkasti: *"ota kaikki pulun alustukset pois."*).
@@ -565,7 +588,7 @@ export const LIVIAN_AANITETYT = {
   'paljastus-3': '531008d4',
   'mannerivihje-1': '9b1a96f3',
   'lehtivinkki-1': '676644e9',
-  'ateena-3': '418f4055',
+  'ateena-3': '74451e14',
   'sofia-3': 'da74f265',
   'sofia-5': '1e64f9d0',
   'sofia-6': '2618c9dd',
@@ -579,7 +602,7 @@ export const LIVIAN_AANITETYT = {
   'sofia-14': 'ced3fd34',
   'istanbul-3': '756164a4',
   'bukarest-3': '597547ac',
-  'sarajevo-3': '006c3c2a',
+  'sarajevo-3': '92b480b3',
   'budapest-3': 'bc5ea301',
   'wien-3': '00047f56',
   'praha-3': 'b77679bd',
@@ -589,22 +612,22 @@ export const LIVIAN_AANITETYT = {
   'moskova-3': 'e0081a97',
   'kiova-3': '424e9548',
   'odessa-3': '26f74238',
-  'helsinki-3': '2ecdf730',
-  'tampere-3': 'fe83653c',
-  'tallinna-3': '67d40dc7',
-  'riika-3': '914988b0',
-  'vilna-3': '9a1a39a3',
+  'helsinki-3': '4341d0bf',
+  'tampere-3': '73690977',
+  'tallinna-3': '801b5b9b',
+  'riika-3': '39e6aa76',
+  'vilna-3': 'c399c5a5',
   'kreeta-3': 'b743530e',
   'sisilia-3': '08c3c066',
   'islanti-3': 'da30eaee',
   'alpit-3': '6e181c84',
-  'lappi-3': '8d9f73fb',
-  'tromssa-3': '76110386',
+  'lappi-3': '0ece225d',
+  'tromssa-3': 'd2fb66d9',
   'lontoo-3': '72a05ee9',
   'dublin-3': '0badc854',
   'edinburgh-3': 'ddaabb36',
   'pariisi-3': '8c2abb8d',
-  'marseille-3': 'bc17db80',
+  'marseille-3': '80abf18a',
   'lissabon-3': '0bcde086',
   'madrid-3': '8d2192d8',
   'barcelona-3': '53e543a2',
@@ -612,11 +635,11 @@ export const LIVIAN_AANITETYT = {
   'sevilla-3': '694115b4',
   'amsterdam-3': 'a46657ee',
   'berliini-3': 'f028954d',
-  'venetsia-3': '0aeef60b',
+  'venetsia-3': 'eb6f4836',
   'firenze-3': 'c0826d4c',
   'rooma-3': '6e805810',
   'dubrovnik-3': '9392e7f8',
-  'tukholma-3': '0dc306e4',
+  'tukholma-3': 'd4674ec7',
   'oslo-3': 'fb2b20a7',
   'bergen-3': 'c030ad82',
   'kobenhavn-3': '49453206',
@@ -876,6 +899,8 @@ export function livianAaniOsoite(lahde, indeksi, juuri = LIVIAN_AANIJUURI) {
   const nimi = livianSoitettava(lahde, indeksi);
   if (!nimi) return null;
   const avain = `${lahde}-${indeksi + 1}`;
+  const versioituPolku = LIVIAN_VERSIOIDUT_AANET[avain];
+  if (versioituPolku) return `${AANI_JUURI}${versioituPolku}`;
   const versio = LIVIAN_AANITETYT[avain];
   const era = LIVIAN_AANIERAT[avain];
   if (!versio) return `${juuri}${nimi}`;

@@ -19,7 +19,7 @@
  * ei käytetä: ilman aikaleimatiedostoa reaktioita ei ammuta lainkaan.
  *
  * TIEDOSTO JA SEN OSOITE:
- *   ämpärissä  audio/puhe-fokus-matkakirja-<id>.aikaleimat.json
+ *   ämpärissä  kuitin versionoidun MP3-avaimen .aikaleimat.json-sisar
  *   repossa    assets/aikaleimat/puhe-fokus-matkakirja-<id>.aikaleimat.json
  *
  * Peli laskee osoitteen äänitteen osoitteesta vaihtamalla päätteen
@@ -47,8 +47,7 @@
  * kirjoitusta ja vientiä.
  *
  * Käyttö:
- *   ELEVEN_API_KEY=... node tools/kohdista-luennat.mjs --kaupungit marseille
- *   ELEVEN_API_KEY=... node tools/kohdista-luennat.mjs --kaikki --vie
+ *   ELEVEN_API_KEY=... node tools/kohdista-luennat.mjs --kuitti <completed.json> --vie
  *   node tools/kohdista-luennat.mjs --kaupungit marseille --kuiva
  *   node tools/kohdista-luennat.mjs --sido --kaupungit marseille [--vie]
  *
@@ -78,11 +77,15 @@ import { fileURLToPath } from 'node:url';
 import {
   AIKALEIMOJEN_VERSIO, laskeSha256, tarkistaAikaleimat, tekstinSha256,
 } from '../js/luentareaktiot.js';
-import { UUSITUT_AANET, aaniUrl } from '../js/media.js';
+import { AANI_JUURI, UUSITUT_AANET, aaniUrl } from '../js/media.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import {
   PAKOTETUN_OSOITE, jaksonJasennys, karsiTagit, normalisoiAlignment, sovitaMerkit,
 } from './generoi-linssiluennat.mjs';
+import {
+  AANI, KUITIN_VERSIO, LOPPUTAUKO, MALLI, OUTPUT_FORMAT, STABILITY,
+  kohdeTiedosto, sha256, tuotantoEraId,
+} from './generoi-luennat.mjs';
 
 const TAMA = fileURLToPath(import.meta.url);
 const JUURI = resolve(dirname(TAMA), '..');
@@ -123,7 +126,7 @@ export const REAKTION_TARKOITUKSET = Object.freeze([
  * KARSITTUINA — pakotettu kohdistus saa juuri sen, mitä kertoja puhui,
  * eikä eleven_v3:n ilmaisutageja ([curious]) lueta sanoiksi.
  */
-export function kohdistusTyo(id) {
+export function kohdistusTyo(id, kuittirivi = null) {
   const merkinta = FOKUSVIRRAT[id]?.matkakirja;
   if (!merkinta?.luenta && !merkinta?.teksti) return null;
   const teksti = karsiTagit(merkinta.luenta ?? merkinta.teksti);
@@ -136,11 +139,80 @@ export function kohdistusTyo(id) {
     kentta: merkinta.aanite ?? null,
     aaniNimi: nimi,
     aaniPolku: `assets/audio/${nimi}`,
-    aaniOsoite: aaniUrl(`assets/audio/${nimi}`),
+    aaniOsoite: kuittirivi ? `${AANI_JUURI}${kuittirivi.objectKeys.final}`
+      : aaniUrl(`assets/audio/${nimi}`),
     kohde: `${AIKALEIMAKANSIO}/puhe-fokus-matkakirja-${id}.aikaleimat.json`,
-    ampariNimi: `puhe-fokus-matkakirja-${id}.aikaleimat.json`,
+    ampariNimi: kuittirivi
+      ? kuittirivi.objectKeys.final.replace(/\.mp3$/, '.aikaleimat.json')
+      : `audio/puhe-fokus-matkakirja-${id}.aikaleimat.json`,
+    kuittiAani: kuittirivi?.finalAudio ?? null,
     reaktiot: Array.isArray(merkinta.reaktiot) ? merkinta.reaktiot : [],
   };
+}
+
+/**
+ * Hyvaksy vain generointityokalun valmis, muuttumaton ja nykyiseen
+ * lahdesisaltoon sidottu Horatio-kuitti. Completed-URL on kuljetusportti;
+ * tama tarkistus sitoo jokaisen rivin tekstin, reseptin, MP3:n ja R2-avaimen.
+ */
+export async function kuittirivit(data) {
+  if (!data || data.schemaVersion !== KUITIN_VERSIO || !Array.isArray(data.cities)
+    || !data.cities.length) throw new Error('tuotantokuitti ei ole valmis schemaVersion 1 -kuitti');
+  const batchId = data.batch?.id;
+  const sourceCommit = data.batch?.sourceCommit;
+  if (!/^horatio-[0-9a-f]{20}$/.test(batchId ?? '') || !/^[0-9a-f]{40}$/.test(sourceCommit ?? '')) {
+    throw new Error('tuotantokuitin era- tai commit-tunnus ei kelpaa');
+  }
+  const tulos = new Map();
+  const eratyot = [];
+  for (const rivi of data.cities) {
+    const id = String(rivi?.cityId ?? '');
+    const lahde = kohdeTiedosto(id);
+    const tyo = kohdistusTyo(id);
+    const nimi = `puhe-fokus-matkakirja-${id}.mp3`;
+    const final = `audio/versions/horatio/${sourceCommit.slice(0, 12)}/${batchId}/${nimi}`;
+    const staging = `audio/staging/horatio/${batchId}/${nimi}`;
+    const visible = lahde?.nakyvaTeksti ?? '';
+    const tts = (lahde?.luenta ?? '') + LOPPUTAUKO;
+    if (!tyo || lahde?.lahde !== 'fokusvirta' || rivi.source !== 'fokusvirta'
+      || rivi.outputPath !== `assets/audio/${nimi}`
+      || rivi.visibleText?.text !== visible || rivi.visibleText?.sha256 !== sha256(visible)
+      || rivi.ttsText?.text !== tts || rivi.ttsText?.sha256 !== sha256(tts)
+      || rivi.synthesis?.voiceId !== AANI || rivi.synthesis?.model !== MALLI
+      || rivi.synthesis?.settings?.stability !== STABILITY
+      || rivi.synthesis?.outputFormat !== OUTPUT_FORMAT
+      || rivi.synthesis?.postprocess?.kind !== 'none'
+      || rivi.generation?.status !== 'success'
+      || !/^[0-9a-f]{64}$/.test(rivi.rawAudio?.sha256 ?? '')
+      || !Number.isInteger(rivi.rawAudio?.bytes) || rivi.rawAudio.bytes <= 0
+      || !(Number(rivi.rawAudio?.actualDurationSeconds) > 0)
+      || !/^[0-9a-f]{64}$/.test(rivi.finalAudio?.sha256 ?? '')
+      || !Number.isInteger(rivi.finalAudio?.bytes) || rivi.finalAudio.bytes <= 0
+      || !(Number(rivi.finalAudio?.actualDurationSeconds) > 0)
+      || rivi.rawAudio.sha256 !== rivi.finalAudio.sha256
+      || rivi.rawAudio.bytes !== rivi.finalAudio.bytes
+      || rivi.objectKeys?.staging !== staging || rivi.objectKeys?.final !== final
+      || rivi.objectKeys?.live !== null || tulos.has(id)) {
+      throw new Error(`tuotantokuitin rivi ei kelpaa kohdistukseen: ${id || '?'}`);
+    }
+    eratyot.push({ id, ...lahde });
+    tulos.set(id, rivi);
+  }
+  if (tuotantoEraId(eratyot, sourceCommit) !== batchId) {
+    throw new Error('tuotantokuitin eratunnus ei vastaa sisaltoa ja reseptia');
+  }
+  return tulos;
+}
+
+export async function lueKuitti(lahde) {
+  if (!lahde) return new Map();
+  let data;
+  if (/^https:\/\//.test(lahde)) {
+    const vastaus = await fetch(lahde, { signal: AbortSignal.timeout(120000) });
+    if (!vastaus.ok) throw new Error(`tuotantokuittia ei saatu (HTTP ${vastaus.status})`);
+    data = await vastaus.json();
+  } else data = JSON.parse(readFileSync(resolve(lahde), 'utf8'));
+  return kuittirivit(data);
 }
 
 /** Kaikki fokusvirtakaupungit, joilla on matkakirjaluenta. */
@@ -351,7 +423,7 @@ function vieAmpariin(polku, nimi) {
   ].filter(Boolean);
   if (puuttuu.length) throw new Error(`vienti ei onnistu, puuttuu: ${puuttuu.join(', ')}`);
   const ajo = spawnSync('aws', [
-    's3', 'cp', polku, `s3://${ampari}/${AMPARIN_KANSIO}/${nimi}`,
+    's3', 'cp', polku, `s3://${ampari}/${nimi}`,
     '--endpoint-url', `https://${tili}.r2.cloudflarestorage.com`,
     '--no-progress',
     '--content-type', 'application/json',
@@ -365,7 +437,7 @@ function vieAmpariin(polku, nimi) {
 /** Lippujen luku; kaupunkilista sietää pilkun ja välilyönnin. */
 export function lueLiput(argv) {
   const liput = {
-    kaupungit: [], kaikki: false, kuiva: false, vienti: false, sidonta: false,
+    kaupungit: [], kaikki: false, kuiva: false, vienti: false, sidonta: false, kuitti: null,
   };
   for (let i = 0; i < argv.length; i += 1) {
     const pala = argv[i];
@@ -373,6 +445,11 @@ export function lueLiput(argv) {
     else if (pala === '--kuiva') liput.kuiva = true;
     else if (pala === '--vie') liput.vienti = true;
     else if (pala === '--sido') liput.sidonta = true;
+    else if (pala === '--kuitti') {
+      const arvo = argv[++i];
+      if (!arvo || String(arvo).startsWith('--')) throw new Error('--kuitti ilman polkua tai URLia');
+      liput.kuitti = String(arvo);
+    }
     else if (pala === '--kaupungit') {
       i += 1;
       liput.kaupungit.push(...String(argv[i] ?? '').split(/[,\s]+/).filter(Boolean));
@@ -393,7 +470,17 @@ async function main() {
     console.error(virhe.message);
     process.exit(1);
   }
-  const pyydetyt = liput.kaikki ? kaikkiKaupungit() : liput.kaupungit;
+  let kuitit;
+  try { kuitit = await lueKuitti(liput.kuitti); } catch (virhe) {
+    console.error(virhe.message);
+    process.exit(1);
+  }
+  if (!liput.kuiva && !liput.sidonta && !liput.kuitti) {
+    console.error('Varsinainen kohdistus vaatii --kuitti-polun tai URLin versionoituun tuotantoeraan.');
+    process.exit(1);
+  }
+  const pyydetyt = liput.kaupungit.length ? liput.kaupungit
+    : liput.kaikki ? kaikkiKaupungit() : [...kuitit.keys()];
   if (!pyydetyt.length) {
     console.error('Anna kaupungit: node tools/kohdista-luennat.mjs --kaupungit marseille');
     console.error('Kaikki 45: --kaikki. Kuiva ajo ilman avainta ja verkkoa: --kuiva.');
@@ -404,9 +491,14 @@ async function main() {
   const tyot = [];
   let puuttuvia = 0;
   for (const id of pyydetyt) {
-    const tyo = kohdistusTyo(id);
+    const tyo = kohdistusTyo(id, kuitit.get(id));
     if (!tyo) {
       console.error(`${id}: fokusvirran matkakirjaluentaa ei löydy — ohitetaan.`);
+      puuttuvia += 1;
+      continue;
+    }
+    if (liput.kuitti && !kuitit.has(id)) {
+      console.error(`${id}: ei ole annetussa tuotantokuitissa — ohitetaan.`);
       puuttuvia += 1;
       continue;
     }
@@ -421,7 +513,7 @@ async function main() {
       const sanat = sanoiksi(tyo.teksti);
       console.log(`${tyo.id}: ${tyo.teksti.length} merkkiä, ${sanat.length} sanaa`);
       console.log(`  ääni  ${tyo.aaniOsoite}`);
-      console.log(`  ulos  ${tyo.kohde}  →  ${AMPARIN_KANSIO}/${tyo.ampariNimi}`);
+      console.log(`  ulos  ${tyo.kohde}  →  ${tyo.ampariNimi}`);
       if (tyo.kentta && tyo.kentta !== tyo.aaniPolku) {
         console.error(`  RISTIRIITA: pakan aanite on ${tyo.kentta}, työkalu kohdistaisi ${tyo.aaniPolku}.`);
         puuttuvia += 1;
@@ -467,6 +559,9 @@ async function main() {
     try {
       const aanidata = await haeAanite(tyo);
       const aani = await aanenTunnusluvut(tyo, aanidata);
+      if (tyo.kuittiAani && (aani.tavut !== tyo.kuittiAani.bytes || aani.sha256 !== tyo.kuittiAani.sha256)) {
+        throw new Error('versionoidun mp3:n tavumaara tai SHA-256 ei vastaa tuotantokuittia');
+      }
       const data = liput.sidonta
         ? await sidoAikaleimat(tyo, aani)
         : await aikaleimoiksi(tyo.teksti, await haeKohdistus(aanidata, tyo.teksti, avain),
@@ -495,7 +590,7 @@ async function main() {
       }
       if (liput.vienti) {
         vieAmpariin(polku, tyo.ampariNimi);
-        console.log(`  viety: ${AMPARIN_KANSIO}/${tyo.ampariNimi}`);
+        console.log(`  viety: ${tyo.ampariNimi}`);
       }
     } catch (virhe) {
       console.error(`${tyo.id}: ${virhe.message}`);

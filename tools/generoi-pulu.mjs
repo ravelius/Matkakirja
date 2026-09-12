@@ -464,9 +464,18 @@ export const TAGIT = {
    * pois."*). Numero on varattu (js/liviapuhe.js LIVIAN_VARATTU) eikä
    * sillä ole enää tekstiä, joten sillä ei ole tagejakaan.
    */
-  'sofia-3': { alku: '[brightly]' },
-  'istanbul-3': { alku: '[brightly]' },
-  'bukarest-3': { alku: '[brightly]' },
+  'sofia-3': {
+    alku: '[brightly]',
+    kohdat: [['Kurkistin', '[curious]'], ['Arvokkuus', '[mischievously]']],
+  },
+  'istanbul-3': {
+    alku: '[brightly]',
+    kohdat: [['Minä', '[mischievously]'], ['Kokeneen', '[warmly]']],
+  },
+  'bukarest-3': {
+    alku: '[brightly]',
+    kohdat: [['Etsin', '[curious]'], ['Muruset', '[mischievously]']],
+  },
   'sarajevo-3': {
     alku: '[softly]',
     kohdat: [
@@ -474,15 +483,24 @@ export const TAGIT = {
       ['Yritin naputtaa nokalla', '[mischievously]'],
     ],
   },
-  'budapest-3': { alku: '[brightly]' },
-  'wien-3': { alku: '[brightly]' },
-  'praha-3': { alku: '[brightly]' },
-  'krakova-3': { alku: '[brightly]' },
-  'varsova-3': { alku: '[brightly]' },
-  'pietari-3': { alku: '[brightly]' },
-  'moskova-3': { alku: '[brightly]' },
-  'kiova-3': { alku: '[brightly]' },
-  'odessa-3': { alku: '[brightly]' },
+  'budapest-3': {
+    alku: '[brightly]',
+    kohdat: [['Höyry', '[curious]'], ['Odotin', '[mischievously]']],
+  },
+  'wien-3': {
+    alku: '[softly]',
+    kohdat: [['Pujottelin', '[brightly]'], ['Isoisä', '[warmly]']],
+  },
+  'praha-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[brightly]'], ['Kun', '[mischievously]']],
+  },
+  'krakova-3': { alku: '[curious]', kohdat: [['Kirjekyyhky', '[brightly]']] },
+  'varsova-3': { alku: '[curious]', kohdat: [['Kaupunki', '[warmly]']] },
+  'pietari-3': { alku: '[curious]', kohdat: [['kirjekyyhky', '[mischievously]']] },
+  'moskova-3': { alku: '[curious]', kohdat: [['kuuluisuus', '[mischievously]']] },
+  'kiova-3': { alku: '[curious]', kohdat: [['Reittiinsä', '[softly]']] },
+  'odessa-3': { alku: '[softly]' },
   'helsinki-3': {
     alku: '[curious]',
     kohdat: [
@@ -547,10 +565,22 @@ export const TAGIT = {
       ['Siinä unohtui varjo hetkeksi', '[brightly]'],
     ],
   },
-  'kreeta-3': { alku: '[brightly]' },
-  'sisilia-3': { alku: '[brightly]' },
-  'islanti-3': { alku: '[brightly]' },
-  'alpit-3': { alku: '[brightly]' },
+  'kreeta-3': {
+    alku: '[brightly]',
+    kohdat: [['Väitin', '[mischievously]'], ['helpotuksesta', '[warmly]']],
+  },
+  'sisilia-3': {
+    alku: '[curious]',
+    kohdat: [['Kiersin', '[brightly]'], ['Katon', '[softly]']],
+  },
+  'islanti-3': {
+    alku: '[brightly]',
+    kohdat: [['Löysin', '[softly]'], ['Hetkeä', '[mischievously]']],
+  },
+  'alpit-3': {
+    alku: '[softly]',
+    kohdat: [['Lensin', '[curious]'], ['En', '[softly]']],
+  },
   'lappi-3': {
     alku: '[brightly]',
     kohdat: [
@@ -578,10 +608,22 @@ export const TAGIT = {
    * numerolla 4, ja nyt jokaisella on yksi kupla kuten muillakin. Numero
    * 4 ei siis ole enää yhdelläkään näistä kaupungeista.
    */
-  'lontoo-3': { alku: '[brightly]' },
-  'dublin-3': { alku: '[brightly]' },
-  'edinburgh-3': { alku: '[brightly]' },
-  'pariisi-3': { alku: '[brightly]' },
+  'lontoo-3': {
+    alku: '[curious]',
+    kohdat: [['Lensin', '[brightly]'], ['Ihmiset', '[softly]']],
+  },
+  'dublin-3': {
+    alku: '[curious]',
+    kohdat: [['Nousin', '[brightly]'], ['Minun', '[mischievously]']],
+  },
+  'edinburgh-3': {
+    alku: '[curious]',
+    kohdat: [['Lensin', '[brightly]'], ['Täällä', '[mischievously]']],
+  },
+  'pariisi-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[brightly]'], ['Sisälläkin', '[mischievously]']],
+  },
   'marseille-3': {
     alku: '[curious]',
     kohdat: [
@@ -590,13 +632,34 @@ export const TAGIT = {
       ['Minä vasta harjoittelen', '[softly]'],
     ],
   },
-  'lissabon-3': { alku: '[brightly]' },
-  'madrid-3': { alku: '[brightly]' },
-  'barcelona-3': { alku: '[brightly]' },
-  'granada-3': { alku: '[brightly]' },
-  'sevilla-3': { alku: '[brightly]' },
-  'amsterdam-3': { alku: '[brightly]' },
-  'berliini-3': { alku: '[brightly]' },
+  'lissabon-3': {
+    alku: '[brightly]',
+    kohdat: [['Seurasin', '[curious]'], ['Kun', '[mischievously]']],
+  },
+  'madrid-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[warmly]'], ['Se', '[mischievously]'], ['Velázquez', '[softly]']],
+  },
+  'barcelona-3': {
+    alku: '[curious]',
+    kohdat: [['Laskeuduin', '[brightly]'], ['Minulle', '[mischievously]'], ['Hyvin', '[softly]']],
+  },
+  'granada-3': {
+    alku: '[curious]',
+    kohdat: [['Laskeuduin', '[softly]'], ['Kerrankin', '[mischievously]']],
+  },
+  'sevilla-3': {
+    alku: '[curious]',
+    kohdat: [['Näin', '[brightly]'], ['Ne', '[softly]']],
+  },
+  'amsterdam-3': {
+    alku: '[curious]',
+    kohdat: [['Saavuin', '[brightly]'], ['En', '[mischievously]']],
+  },
+  'berliini-3': {
+    alku: '[curious]',
+    kohdat: [['Nousin', '[brightly]'], ['Alhaalla', '[softly]']],
+  },
   'venetsia-3': {
     alku: '[brightly]',
     kohdat: [
@@ -606,9 +669,18 @@ export const TAGIT = {
       ['No, ehkä minä vähän odotin', '[softly]'],
     ],
   },
-  'firenze-3': { alku: '[brightly]' },
-  'rooma-3': { alku: '[brightly]' },
-  'dubrovnik-3': { alku: '[brightly]' },
+  'firenze-3': {
+    alku: '[curious]',
+    kohdat: [['Kiersin', '[brightly]'], ['Se', '[mischievously]'], ['Minä', '[softly]']],
+  },
+  'rooma-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[brightly]'], ['Ihmiset', '[mischievously]']],
+  },
+  'dubrovnik-3': {
+    alku: '[brightly]',
+    kohdat: [['Kun', '[curious]'], ['Sitten', '[mischievously]']],
+  },
   'tukholma-3': {
     alku: '[curious]',
     kohdat: [
@@ -616,9 +688,15 @@ export const TAGIT = {
       ['Neljäntoista laskeminen', '[mischievously]'],
     ],
   },
-  'oslo-3': { alku: '[brightly]' },
-  'bergen-3': { alku: '[brightly]' },
-  'kobenhavn-3': { alku: '[brightly]' },
+  'oslo-3': {
+    alku: '[brightly]',
+    kohdat: [['Hämmästyin,', '[surprised]'], ['Kerrankin', '[warmly]']],
+  },
+  'bergen-3': {
+    alku: '[brightly]',
+    kohdat: [['Suojasin', '[curious]'], ['Kirje', '[mischievously]']],
+  },
+  'kobenhavn-3': { alku: '[brightly]', kohdat: [['Orkesterin', '[mischievously]']] },
 };
 
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */

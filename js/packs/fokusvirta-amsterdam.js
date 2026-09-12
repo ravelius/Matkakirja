@@ -139,14 +139,14 @@ export const FOKUSVIRTA_AMSTERDAM = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-amsterdam-r20260909-paper-v5.jpg",
       lyhyt: "Amsterdam, 1873. Tuoli saapui omasta ikkunastaan.",
-      selite: "Kattokoukku piti köyttä, köysi piti tuolia ja kaksi miestä piti tilanteesta huolta. Kapeassa kanavatalossa ikkuna oli saanut ulko-oven tehtävän. Tuoli pysähtyi hetkeksi nousunsa aikana, mikä sopi kameralleni paremmin kuin jatkuva liike. Miehet neuvoivat toisilleen suuntaa. Kaluste itse suhtautui kaikkeen hyvin arvokkaasti, niin kuin ei olisi odottanutkaan joutuvansa käyttämään portaita.",
+      selite: 'Kattokoukku ja kaksi miestä pitivät tuolin matkalla kohti yläikkunaa. Kaluste pysähtyi kuvaani arvokkaasti kesken nousun.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/hoisting-paintings"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-amsterdam-r20260911-paper2-v1.jpg",
       lyhyt: "Amsterdam, 1873. Tuoli pääsi sisään, portaat jäivät sivuun.",
-      selite: "Tuoli oli vedetty ikkunasta kolmanteen kerrokseen. Kaksi miestä ohjasi sen jaloilleen, ja köysi lepäsi lattialla. Kapea porras nousi aivan vieressä. Kaluste oli saapunut selkä edellä mutta arvokkaasti.",
+      selite: 'Kaksi miestä ohjasi tuolin ikkunasta sisään ja jaloilleen. Köysi lepäsi lattialla, kun kapea porras jäi aivan vieressä käyttämättä.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/hoisting-paintings","https://www.amsterdam.nl/stadsarchief/canon/windows/12/"],
     },
@@ -155,12 +155,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
     paikkarivi: 'Amsterdam, toukokuussa 1873. Tuulista; kanavat väreilevät; '
       + 'puntari putoaa.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
-    teksti: 'Amsterdamin kanavan varrella tuoli matkusti kolmanteen kerrokseen '
-      + 'talon ulkopuolta. Se riippui katon koukusta, ja kaksi miestä komensi '
-      + 'sitä köysillä. Portaat ovat kuulemma liian kapeat. Tuoli meni '
-      + 'ikkunasta sisään selkä edellä, arvokkaasti kuin piispa vaunuihin. '
-      + 'Näissä kapeissa taloissa täytyy harkita tarkkaan sekä kalustonsa että '
-      + 'riitansa.',
+    teksti: 'Amsterdamin kanavalla tuoli nousi kolmanteen kerrokseen talon ulkopuolella. Portaat olivat liian kapeat. Kaksi miestä ohjasi köysiä, ja tuoli meni ikkunasta sisään selkä edellä, arvokkaasti kuin piispa vaunuihin. Täällä täytyy harkita tarkkaan sekä kalustonsa että riitansa.',
     /*
      * LUENTA = sama teksti tunnetagein (Raamattu, luentaprosessi):
      * neljä tagia, alku ja loppu eri sävyssä, yksikään sana ei vaihdu.
@@ -178,22 +173,17 @@ export const FOKUSVIRTA_AMSTERDAM = {
      * Hiljaiset osuudet: "Se riippui katon koukusta" (tekninen selitys).
      */
     reaktiot: [
-      { id: 'amsterdam.r1', ankkuri: 'talon ulkopuolta', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Huonekalu nousee ulkokautta kolmanteen kerrokseen.' },
-      { id: 'amsterdam.r2', ankkuri: 'kuulemma liian kapeat', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Kuulopuhe portaista herättää epäilyn.' },
+      { id: 'amsterdam.r1', ankkuri: 'talon ulkopuolella', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'amsterdam.r2', ankkuri: 'Portaat olivat liian kapeat', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'amsterdam.r3', ankkuri: 'kuin piispa vaunuihin', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Merkinnän paras vertaus.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'amsterdam.r4', ankkuri: 'kalustonsa että riitansa', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi kapeiden talojen elämästä.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Amsterdamin kanavan varrella tuoli matkusti kolmanteen '
-      + 'kerrokseen talon ulkopuolta. Se riippui katon koukusta, ja kaksi '
-      + 'miestä komensi sitä köysillä. Portaat ovat kuulemma liian kapeat. '
-      + 'Tuoli meni ikkunasta sisään selkä edellä, arvokkaasti kuin piispa '
-      + 'vaunuihin. [softly] Näissä kapeissa taloissa täytyy harkita tarkkaan '
-      + 'sekä kalustonsa että riitansa.',
+    luenta: '[curious] Amsterdamin kanavalla tuoli nousi kolmanteen kerrokseen talon ulkopuolella. Portaat olivat liian kapeat. Kaksi miestä ohjasi köysiä, ja tuoli meni ikkunasta sisään selkä edellä, arvokkaasti kuin piispa vaunuihin. [softly] Täällä täytyy harkita tarkkaan sekä kalustonsa että riitansa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-amsterdam.mp3',
   },
 
@@ -210,12 +200,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-amsterdam-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Amsterdam: lentokoulun oppilas on tällä kertaa nojatuoli.',
-        selite: 'Amsterdamin kapeissa taloissa muutto saattaa alkaa kadulta ja '
-          + 'päättyä ikkunaan. Nostolaite hoitaa osuuden, johon portaat eivät '
-          + 'taivu. Minä seurasin nojatuolin ensimmäistä nousua. Sillä oli '
-          + 'lentoasento kohdallaan mutta suuntavaisto täysin köyden varassa. '
-          + 'Isoisä näki saman ongelman ratkaistuna kattokoukulla. Olette '
-          + 'edistyneet: nykyään tuolilla on matkallaan oma pieni lava.',
+        selite: 'Nostolava kuljettaa nojatuolia Amsterdamin kapean talon ikkunaan, kun portaat eivät taivu tehtävään. Seurasin oppilaan nousua: lentoasento kunnossa, suuntavaisto täysin nostimen varassa.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.iamsterdam.com/en/travel-stay/getting-around/why-a-canal-cruise-is-the-best-introduction-to-amsterdam',
@@ -227,13 +212,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-amsterdam-02-r20260909-euv1-v1.jpg',
         lyhyt: 'Amsterdam: saavuin ikkunalle ennen huonekaluja.',
-        selite: 'Ikkunan tasolla nostimen lava näyttää jo melkein '
-          + 'laskeutumispaikalta. Sisällä odottaa muuttaja, kadulla toinen '
-          + 'katsoo ylöspäin ja tuoli jatkaa heidän välissään. Minä pääsin '
-          + 'tänne yhdellä kaarroksella. En maininnut sitä ääneen. Kun joku '
-          + 'tekee vaivalla jotakin, minkä itse osaa helposti, pieni '
-          + 'hienotunteisuus tekee asiantuntijasta huomattavasti '
-          + 'siedettävämmän.',
+        selite: 'Saavuin ikkunalle ennen nojatuolia, joka lähestyi muuttajaa omalla pienellä lavallaan. En huomauttanut lentoreitistäni, sillä vaivalla tehty suoritus ansaitsee hienotunteisen asiantuntijan.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.iamsterdam.com/en/travel-stay/getting-around/why-a-canal-cruise-is-the-best-introduction-to-amsterdam',
@@ -246,7 +225,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Huonekaluja nostetaan ikkunoista edelleen. Lentotaidottomaksi lajiksi olette varsin kekseliäitä.',
+      'Nostoparruja on yhä julkisivuissa. Saavuin kolmannen kerroksen ikkunalle yhdellä kaarroksella. En huomauttanut siitä: lentotaito ei ole muuttajan vika.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.5 },

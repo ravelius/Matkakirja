@@ -186,12 +186,7 @@ export const FOKUSVIRTA_ISTANBUL = {
     paikkarivi: 'Konstantinopoli, syyskuussa 1873. Sumua salmella; puntari '
       + 'korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
-    teksti: 'Galatan mäessä kantaja laski arkkunsa kivelle ja antoi mäen '
-      + 'odottaa. Sen sisään kaivetaan tunnelia, jotta ihmiset pääsisivät ylös '
-      + 'istualtaan. Merkillistä, miten paljon työtä tarvitaan työn '
-      + 'välttämiseen. Alhaalla salmi oli täynnä laivoja. Kantaja nosti arkun '
-      + 'selkäänsä ennen kuin sain niiden mastot lasketuksi. Hänellä oli '
-      + 'parempaa tekemistä.',
+    teksti: 'Galatan mäessä kantaja laski arkkunsa kivelle ja antoi mäen odottaa. Mäkeen kaivettiin tunnelia, jotta ihmiset pääsisivät ylös istualtaan. Paljon työtä työn välttämiseksi. Kantajalla oli parempaa tekemistä.',
     /*
      * Luenta on kaanonin oma (kohta 1), tunnetageineen. Äänite on
      * generoitu samalla reseptillä kuin Ateenalle
@@ -212,21 +207,16 @@ export const FOKUSVIRTA_ISTANBUL = {
      */
     reaktiot: [
       { id: 'istanbul.r1', ankkuri: 'antoi mäen odottaa', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Kantaja panee mäen odottamaan: pieni hymy.' },
-      { id: 'istanbul.r2', ankkuri: 'pääsisivät ylös istualtaan', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Tunneli mäen sisään on isoisälle outo ajatus.' },
-      { id: 'istanbul.r3', ankkuri: 'työtä tarvitaan työn välttämiseen', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Merkinnän terävin vitsi.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'istanbul.r2', ankkuri: 'ylös istualtaan', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'istanbul.r3', ankkuri: 'työtä työn välttämiseksi', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'istanbul.r4', ankkuri: 'parempaa tekemistä', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Kantajan kiire kuitataan hiljaisella nyökkäyksellä.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Galatan mäessä kantaja laski arkkunsa kivelle ja antoi '
-      + 'mäen odottaa. Sen sisään kaivetaan tunnelia, jotta ihmiset pääsisivät '
-      + 'ylös istualtaan. Merkillistä, miten paljon työtä tarvitaan työn '
-      + 'välttämiseen. Alhaalla salmi oli täynnä laivoja. Kantaja nosti arkun '
-      + 'selkäänsä ennen kuin sain niiden mastot lasketuksi. [softly] Hänellä '
-      + 'oli parempaa tekemistä.',
+    luenta: '[curious] Galatan mäessä kantaja laski arkkunsa kivelle ja antoi mäen odottaa. Mäkeen kaivettiin tunnelia, jotta ihmiset pääsisivät ylös istualtaan. [mischievously] Paljon työtä työn välttämiseksi. [softly] Kantajalla oli parempaa tekemistä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-istanbul.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-istanbul-r20260909-paper-v4;
@@ -241,12 +231,7 @@ export const FOKUSVIRTA_ISTANBUL = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Konstantinopoli, 1873. Kantajan tauko ja mäen koko paino.',
-      selite: 'Arkun kahvat olivat hioutuneet sileiksi, mutta portaissa riitti '
-        + 'vielä kulutettavaa. Kantaja istui kuormansa viereen ja antoi minun '
-        + 'valmistella kameran. Galatan korkeuksilta näkyi alhaalla mastoja '
-        + 'ja liikettä; jokin osa niistäkin tavaroista oli kannettava tätä '
-        + 'mäkeä ylös. Tuleva tunneli lupaa ihmiselle istumapaikan matkaksi. '
-        + 'Toivoin, että myös tämän miehen arkulle varattaisiin sellainen.',
+      selite: 'Kantaja antoi Galatan mäen odottaa ja lepäsi arkkunsa vieressä, kun sataman mastot täyttivät näkymän alhaalla. Tuleva tunneli lupasi istumapaikan mäen läpi; toivoin sitä myös hänen kuormalleen.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.metmuseum.org/art/collection/search/263021',
@@ -256,7 +241,7 @@ export const FOKUSVIRTA_ISTANBUL = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-istanbul-r20260911-paper2-v1.jpg",
       lyhyt: "Konstantinopoli, 1873. Kantaja ehti matkaan ennen kuin mastot tulivat lasketuiksi.",
-      selite: "Galatan mäki avasi salmelle näkymän, jossa mastot sekoittuivat sumuun. Aloitin niiden laskemisen, mutta kantaja oli jo nostanut arkun selkäänsä. Hän katosi alas viettävälle kadulle ennen kuin pääsin varmaan lukuun. Satama jatkoi sillä välin oman määränsä kasvattamista.",
+      selite: 'Aloin laskea Galatan mäeltä näkyviä mastoja, mutta kantaja nosti arkun selkäänsä ja lähti. Hän ehti alas ennen varmaa lukua, ja satama kasvatti sillä välin omaansa.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.metmuseum.org/art/collection/search/263021","https://archives.saltresearch.org/handle/123456789/204674"],
     },
@@ -334,13 +319,7 @@ export const FOKUSVIRTA_ISTANBUL = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-istanbul-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Istanbul: mäen voi voittaa myös istumalla.',
-        selite: 'Galatan mäkeä kiivetään yhä ostosten, laukkujen ja päivän töiden '
-          + 'kanssa. Tünel kuljettaa ihmisiä ylöspäin maan sisällä, mutta '
-          + 'levähdyspaikka kelpaa sen valmistumisesta huolimatta. Minä '
-          + 'tunnistan hyvän pysähdyksen heti: seinä selän takana ja koko '
-          + 'kulkureitti näkyvissä. Isoisä laski alhaalla mastoja. Tässä olisi '
-          + 'ollut tilaisuus kysyä siltä istuvalta ihmiseltä, miten kaupunki '
-          + 'oikeasti kannetaan ylös.',
+        selite: 'Galatan mäkeä kiivetään yhä päivän kuormien kanssa, vaikka Tünel kuljettaa matkustajia maan alla. Lepäävä lähettikuljettaja tiesi saman kuin isoisän kantaja: välillä mäen on annettava odottaa.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.metro.istanbul/en/Hatlarimiz/HatDetay?hat=T1',
@@ -402,7 +381,7 @@ export const FOKUSVIRTA_ISTANBUL = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Tünelin vaunu vie nyt mäen ylös. Isoisä laski mastoja; kantajalta olisin kysynyt, missä saa levätä.',
+      'Tünel kulkee yhä mäen alla. Minä nousin mäen siivillä ja ehdin perille ennen vaunua. Kokeneen lentäjänkin on ilo, kun katu ja tunneli päätyvät samaan paikkaan.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

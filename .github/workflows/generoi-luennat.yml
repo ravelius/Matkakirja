@@ -29,16 +29,14 @@
 # assets/aikaleimat/puhe-fokus-matkakirja-<id>.aikaleimat.json. Peli
 # tarvitsee sen, jotta pulu voi reagoida luennan SISÄLLÄ oikeassa
 # sanassa (js/luentareaktiot.js; Raamattu PULU REAGOI TEKSTIN SISALLA).
-# Tiedosto viedään ämpäriin heti työkalusta oikealla sisältötyypillä
-# (application/json), ja se — toisin kuin mp3:t — committoidaan yhä
-# haaralle: aikaleimat ovat pelidataa, eivät äänitteitä.
+# Tiedosto viedään kuitin määräämään versionoituun sisaravaimeen heti
+# työkalusta oikealla sisältötyypillä (application/json). Repokopio jää
+# ajon tarkastusartefaktiin; workflow ei committoi eikä pushaa haaraa.
 #
-# SYÖTE ON YHÄ PELKKIÄ KAUPUNKIAVAIMIA ("madrid wien" tai
-# "madrid,wien" — työkalu erottelee kummallakin; pilkullinen lista
-# meni ennen läpi yhtenä avaimena ja ajo kaatui vasta commit-vaiheeseen
-# "Yhtään tiedostoa ei syntynyt eikä muuttunut"), mutta työkalu
-# valitsee lähteen itse — kaupungin ei siis tarvitse tietää, kummasta
-# pakasta sen merkintä tulee:
+# Generoinnin syöte on kaupunkiavainlista. Kohdistuksen syöte on julkinen
+# valmis tuotantokuitti, joka määrää kaupungit ja muuttumattomat MP3-avaimet.
+# Työkalu tarkistaa silti lähteen itse — kutsujan ei siis tarvitse tietää,
+# kummasta pakasta merkintä tulee:
 #   FOKUSVIRTA (js/packs/fokusvirta-<id>.js) VOITTAA, jos kaupungilla
 #     on fokusvirta → assets/audio/puhe-fokus-matkakirja-<id>.mp3.
 #     Sama sääntö kuin pelissä: fokusvirtakaupungin matkakirjakortin
@@ -55,11 +53,10 @@
 #
 # MP3:T MENEVÄT VERSIONOITUIHIN ÄMPÄRIAVAIMIIN, EIVÄT REPOON (omistajan linjaus
 # 11.9.2026: *"repossa ei saa olla äänitiedostoja, kaikki vain
-# ämpärissä"*). Ajo äänittää, vie tuotoksen ämpärin `audio/`-kansioon ja
+# ämpärissä"*). Ajo äänittää, vie tuotoksen versionoituihin `audio/`-avaimiin ja
 # liittää samat tiedostot ajon artefaktiksi — luennat KUUNNELLAAN siitä
 # artefaktista (generoi-avaus.mjs:n oma sääntö "Kuuntele molemmat ennen
-# julkaisua"), ei PR:stä. Aikaleimat (assets/aikaleimat) committoidaan
-# haaralle kuten ennenkin.
+# julkaisua"), ei PR:stä. Aikaleimat jäävät vastaavasti ajon artefaktiin.
 #
 # KUUNTELUSÄÄNTÖ. UUSI äänite ei kuulu pelissä ennen kuin pelidata
 # viittaa siihen (fokusvirran `aanite`-kenttä tai saapumisen luenta),
@@ -104,6 +101,12 @@ on:
         type: choice
         options: [generoi, kohdista, sido]
         default: generoi
+      kuitti:
+        description: >-
+          Vain kohdista-toiminnolle: versionoidun valmiin Horatio-tuotantokuitin
+          julkinen HTTPS-osoite. Kuitti määrää kaupungit ja MP3-avaimet.
+        required: false
+        default: ''
       kaaret:
         description: >-
           Tarinakaarien luennat (tools/generoi-kaari.mjs --mykistetyt):
@@ -114,7 +117,7 @@ on:
         default: ''
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: generoi-luennat
@@ -151,10 +154,37 @@ jobs:
           echo "Avain löytyy."
 
       - name: Tarkista että jotain on tilattu
-        if: ${{ inputs.kaupungit == '' && inputs.avaus == false && inputs.kaaret == '' }}
+        if: ${{ inputs.toiminto == 'generoi' && inputs.kaupungit == '' && inputs.avaus == false && inputs.kaaret == '' }}
         run: |
           echo "::error::Ei mitään generoitavaa — anna kaupungit ja/tai avaus."
           exit 1
+
+      - name: Tarkista kohdistuksen kuitti
+        if: ${{ inputs.toiminto == 'kohdista' && inputs.kuitti == '' }}
+        run: |
+          echo "::error::Kohdistus vaatii valmiin Horatio-tuotantokuitin HTTPS-osoitteen."
+          exit 1
+
+      # R2-portti ennen forced-alignment-kutsuja: valmista maksullista
+      # kohdistusta ei saa tehdä, jos sen versionoitua tulosta ei voi tallentaa.
+      - name: Tarkista kohdistuksen tallennusavaimet
+        if: ${{ inputs.toiminto == 'kohdista' }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${R2_ACCOUNT_ID:-}" ]         || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]             || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Kohdistuksen versionoitu R2-vienti puuttuu:$puuttuu"
+            exit 1
+          fi
 
       # Vain avaus-työkalu tarvitsee paketteja (hännän mittaus +
       # hiljaisuuspaddaus). Asennus ilman package.json-muutosta:
@@ -205,13 +235,24 @@ jobs:
         if: ${{ inputs.toiminto == 'kohdista' || inputs.toiminto == 'sido' }}
         env:
           KAUPUNGIT: ${{ inputs.kaupungit }}
-        run: node tools/kohdista-luennat.mjs --kuiva --kaupungit "$KAUPUNGIT"
+          KUITTI: ${{ inputs.kuitti }}
+        run: |
+          set -euo pipefail
+          if [ "${{ inputs.toiminto }}" = kohdista ]; then
+            case "$KUITTI" in https://media.matkakirja.app/audio/receipts/horatio/*.completed.json) ;; *)
+              echo "::error::Kuitti ei ole Matkakirjan valmistunut Horatio-tuotantokuitti."
+              exit 1
+            esac
+            node tools/kohdista-luennat.mjs --kuiva --kuitti "$KUITTI"
+          else
+            node tools/kohdista-luennat.mjs --kuiva --kaupungit "$KAUPUNGIT"
+          fi
 
       - name: Kohdista aikaleimat ja vie ämpäriin
         if: ${{ inputs.toiminto == 'kohdista' }}
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
-          KAUPUNGIT: ${{ inputs.kaupungit }}
+          KUITTI: ${{ inputs.kuitti }}
           # Samat nimet ja sama endpoint-tyyli kuin muissakin
           # ääniajoissa (generoi-tehosteet.yml, generoi-pulu.yml).
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
@@ -221,7 +262,7 @@ jobs:
           AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
-        run: node tools/kohdista-luennat.mjs --vie --kaupungit "$KAUPUNGIT"
+        run: node tools/kohdista-luennat.mjs --vie --kuitti "$KUITTI"
 
       # Sidonta ei kutsu ElevenLabsia, joten avainta ei anneta — mutta
       # R2-tunnukset ovat samat kuin kohdistuksella: tiedosto viedään
@@ -307,21 +348,14 @@ jobs:
             --cache-control "public, max-age=2592000"
           echo "Valmis. Luennat ovat versionoiduissa staging/final-avaimissa ja ajon artefaktissa; live-avainta ei muutettu."
 
-      # Aikaleimat ovat pelidataa eivätkä äänitteitä: ne committoidaan
-      # haaralle kuten ennenkin, ja mp3:t eivät koskaan.
-      - name: Committoi aikaleimat omalle haaralleen
+      # Versionoidut JSON-tiedostot ovat jo R2:ssa MP3:n sisaravaimissa.
+      # Repokopio annetaan tarkastettavaksi artefaktina; workflow ei kirjoita
+      # haaraa eikä tee automaattista julkaisupäätöstä.
+      - name: Tallenna aikaleimat tarkastettavaksi
         if: ${{ inputs.toiminto == 'kohdista' || inputs.toiminto == 'sido' }}
-        run: |
-          set -euo pipefail
-          git add assets/aikaleimat
-          if git diff --cached --quiet; then
-            echo "::error::Yhtään tiedostoa ei syntynyt eikä muuttunut."
-            exit 1
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          haara="claude/luennat-${{ github.run_number }}"
-          git checkout -b "$haara"
-          git commit -m "${{ inputs.toiminto == 'kohdista' && 'Aikaleimat: ' || 'Aikaleimat (sidonta): ' }}${{ inputs.kaupungit }}"
-          git push -u origin "$haara"
-          echo "Valmis. Haara: $haara — tee PR."
+        uses: actions/upload-artifact@v4
+        with:
+          name: horatio-aikaleimat-${{ github.run_id }}
+          path: assets/aikaleimat/puhe-fokus-matkakirja-*.aikaleimat.json
+          retention-days: 14
+          if-no-files-found: error

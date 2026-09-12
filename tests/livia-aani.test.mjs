@@ -32,7 +32,7 @@ import {
   livianKentanKuplat, livianKenttaPinoutuu, livianKorostetutKaupungit, livianKuplanAika,
   livianKuplanAjastin, livianKuplat, livianSaapumisrepliikki, LIVIAN_VARATTU,
   livianSoitettava, livianTiiviste, LIVIAN_KOROSTUS_KAYTOSSA, LIVIAN_PUHEEN_HANTA_MS,
-  LIVIAN_LINSSILAHTEET,
+  LIVIAN_LINSSILAHTEET, LIVIAN_VERSIOIDUT_AANET,
 } from '../js/liviapuhe.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
@@ -41,6 +41,7 @@ import { FOKUSVIRTA_PIETARI } from '../js/packs/fokusvirta-pietari.js';
 import { FOKUSVIRTA_VENETSIA } from '../js/packs/fokusvirta-venetsia.js';
 import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
 import { FOKUSVIRTA_VILNA } from '../js/packs/fokusvirta-vilna.js';
+import { AANI_JUURI } from '../js/media.js';
 import {
   TAGIT, aanitteenTila, ampariKansio, ilmanTageja, kaupunginRepliikit, kokoaManifesti,
   kokoaTuotantokuitti, kirjoitaTuotantokuitti,
@@ -325,6 +326,19 @@ test('äänen osoite osoittaa ämpärin pulukansioon', () => {
   assert.equal(livianAaniOsoite('kupla', 0), null);
 });
 
+test('hyväksytyt 12 kaupunkirepliikkiä käyttävät muuttumattomia tuotantoavaimia', () => {
+  assert.equal(Object.keys(LIVIAN_VERSIOIDUT_AANET).length, 12);
+  for (const [avain, polku] of Object.entries(LIVIAN_VERSIOIDUT_AANET)) {
+    const erotin = avain.lastIndexOf('-');
+    const lahde = avain.slice(0, erotin);
+    const indeksi = Number(avain.slice(erotin + 1)) - 1;
+    assert.equal(livianAaniOsoite(lahde, indeksi), `${AANI_JUURI}${polku}`, avain);
+    assert.match(polku, /^aanet\/pulu\/versiot\/[0-9a-f]{12}\/pulu-[0-9a-f]{20}\/livia-.+\.mp3$/);
+    assert.doesNotMatch(livianAaniOsoite(lahde, indeksi), /\?v=/);
+  }
+  assert.match(livianAaniOsoite('lontoo', 2), /aanet\/pulu\/livia-lontoo-3\.mp3\?v=/);
+});
+
 /* ---------- kaiku (poistettu pelistä 6.9.2026 ilta) ---------- */
 
 test('työkalu tuntee saapumisrepliikit, mutta peli soittaa aina kuivan', () => {
@@ -421,31 +435,25 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   assert.equal(tila('paljastus-3'), 'ajan tasalla');
   assert.equal(tila('lehtivinkki-1'), 'ajan tasalla');
   /*
-   * Kahdentoista kaupungin hyväksytyt r2- ja E4-tekstit odottavat tarkoituksella
-   * uutta ääniajoa. Muut 33 Euroopan kaupunkikuplaa vastaavat edelleen 9.9.2026
-   * generoitua rekisteriä. Tämä vartio estää sekä vanhan äänen soimisen
+   * Kahdentoista kaupungin hyväksytyt r2- ja E4-äänet on sidottu kuitteihin ja
+   * versionoituihin avaimiin. Muut 33 Euroopan kaupunkikuplaa odottavat vielä
+   * hyväksyttyä tuotantoajoa. Tämä vartio estää sekä vanhan äänen soimisen
    * uuden tekstin päällä että tahattoman laajemman vanhentumisen.
    */
   const odotetutMuuttuneet = [
-    'ateena-3',
-    'helsinki-3',
-    'lappi-3',
-    'marseille-3',
-    'riika-3',
-    'sarajevo-3',
-    'tallinna-3',
-    'tampere-3',
-    'tromssa-3',
-    'tukholma-3',
-    'venetsia-3',
-    'vilna-3',
-  ];
+    'sofia-3', 'istanbul-3', 'rooma-3', 'bukarest-3', 'madrid-3', 'wien-3',
+    'pariisi-3', 'berliini-3', 'lontoo-3', 'budapest-3', 'dubrovnik-3',
+    'praha-3', 'kobenhavn-3', 'sevilla-3', 'bergen-3', 'amsterdam-3',
+    'dublin-3', 'edinburgh-3', 'lissabon-3', 'barcelona-3', 'firenze-3',
+    'oslo-3', 'granada-3', 'kiova-3', 'krakova-3', 'moskova-3', 'odessa-3',
+    'pietari-3', 'varsova-3', 'kreeta-3', 'sisilia-3', 'islanti-3', 'alpit-3',
+  ].sort();
   assert.deepEqual(
     rivit.filter((rivi) => rivi.tila !== 'ajan tasalla').map((rivi) => rivi.avain).sort(),
     odotetutMuuttuneet,
   );
   for (const avain of odotetutMuuttuneet) assert.equal(tila(avain), 'muuttunut', avain);
-  for (const avain of ['kreeta-3', 'sofia-3', 'pietari-3', 'berliini-3', 'istanbul-3']) {
+  for (const avain of ['ateena-3', 'marseille-3', 'venetsia-3', 'lappi-3', 'tromssa-3']) {
     assert.equal(tila(avain), 'ajan tasalla', avain);
   }
   for (const rivi of rivit) assert.equal(rivi.tila, aanitteenTila(rivi));
