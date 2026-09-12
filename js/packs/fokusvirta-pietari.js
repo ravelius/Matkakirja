@@ -808,6 +808,15 @@ export const FOKUSVIRTA_PIETARI = {
    *
    * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
    *
+   * HAHMO VAIHDETTU TOISEN KERRAN 12.9.2026: huoltoteknikko Matvei →
+   * sellisti Polina (omistajan päätös kysymyskortissa: *"Vaihda
+   * kaanoniin uudet henkilöt"*, kun kuvaputki toimitti kuvan Vitebskin
+   * aseman hallista ja sellokoteloa kantavasta naisesta). Kortin oma
+   * esittely seuraa kuvaa: sama joki, sama kysymys, sama vastaus — vain
+   * se, kuka odottaa siltojen aukeamista, vaihtui sillan huoltajasta
+   * sen yli kiirehtiväksi. Perustelu kaanonin puolella on
+   * js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'pietari'.
+   *
    * HAHMO VAIHDETTU: sillanhoitaja Dmitri → huoltoteknikko Matvei
    * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 20:05 UTC).
    * Dmitrin kaanoninen repliikki sanoi isoisän *pyytäneen hänen sukuaan
@@ -820,17 +829,17 @@ export const FOKUSVIRTA_PIETARI = {
    * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'pietari'), joka
    * antaa hahmon JA sen kysymyksen, jonka game.actionQuiz esittää
    * laatalla (js/game.js kaariTilanne, js/packs/tarinakaari.js). Hahmo
-   * on siis huoltoteknikko Matvei, eikä tämä paketti kosketa hänen omaa
+   * on siis sellisti Polina, eikä tämä paketti kosketa hänen omaa
    * repliikkiään eikä kysymystä millään tavalla — sama suhde kuin
    * Ateenan Dafnilla, Sofian Nadialla ja Rooman Nicolla.
    *
    * ALLA OLEVA on siis kortin OMA ESITTELYTEKSTI, ei kaanonia. Se on
-   * kirjoitettu niin, ettei se kertaa Matvein omaa repliikkiä eikä
+   * kirjoitettu niin, ettei se kertaa Polinan omaa repliikkiä eikä
    * paljasta vastausta.
    *
    * EI PERITTYÄ TEHTÄVÄÄ EIKÄ SUURTA KÄSIKAMPEA (kuvaputken rajaus):
-   * Matvei on työvuorossa oleva ammattilainen, ei sukunsa jatkaja,
-   * eikä siltaa avata käsin. Varallisuussääntö pitää kaikessa: isoisä
+   * Polina on omalla asiallaan liikkuva ammattilainen, ei sukunsa
+   * jatkaja, eikä siltaa avata käsin. Varallisuussääntö pitää kaikessa: isoisä
    * ei maksa, tilaa eikä käske ketään, eikä kukaan odota perillistä.
    *
    * KUVAA EI OLE (omistajan linjaus): kohtaamiskortti rakennetaan ilman
@@ -838,13 +847,14 @@ export const FOKUSVIRTA_PIETARI = {
    * teksti. Kansiossa assets/kohtaamiset ei myöskään ole Pietarin
    * kuvaa, eikä tänne kirjoiteta polkua, jota ei ole.
    *
-   * ÄÄNIPROFIILI (tarinakaari, luku 3): ÄREÄ. Matvei on erän tuima
-   * ääni — hän aloittaa käskyllä ja pehmenee vasta piirroksen nähtyään.
+   * ÄÄNIPROFIILI (tarinakaari, luku 3): KIIREINEN JA HÄMMÄSTYNYT.
+   * Polina aloittaa kesken askeleen ja pysähtyy vasta piirroksen
+   * nähtyään; erän tuiman äänen hoitaa Sofian Nadia.
    */
   kohtaaminen: {
-    hahmo: 'Huoltoteknikko Matvei',
-    nappi: 'Tapaa Matvei',
-    varmistus: 'Haluatko varmasti tavata Matvein juuri nyt?',
+    hahmo: 'Sellisti Polina',
+    nappi: 'Tapaa Polina',
+    varmistus: 'Haluatko varmasti tavata Polinan juuri nyt?',
     /*
      * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13):
      * rivi kertoo, MISTÄ PÄIN LEHTEÄ ratkaisu löytyy, vastausta
@@ -855,16 +865,16 @@ export const FOKUSVIRTA_PIETARI = {
      * "Kaupunki rakennettiin suolle" — siis 'kaupunki'.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Matvei tulee sillan alle puoli tuntia ennen nostoa ja käy '
-      + 'saman tarkastuskierroksen kuin edellisenä yönä, vaikka tietää '
-      + 'rakenteen kunnon ulkoa. Työtä hän on tehnyt kolme vuotta ja '
-      + 'sanoo oppineensa siinä ajassa, että kaikki liikkuva pettää '
-      + 'jostakin kohdasta ennemmin tai myöhemmin. Vieraita hän ei '
-      + 'odota eikä kaipaa: kaiteen takana seisoo öisin väkeä '
-      + 'katsomassa, ja se riittää. Rakenteen viereen hän ei päästä '
-      + 'ketään ennen kuin tämä osaa vastata siihen, mitä hän itse '
-      + 'pitää kaupungin ainoana oikeana kysymyksenä: minkä varaan tämä '
-      + 'kaikki on ylipäätään pystytetty.',
+    teksti: 'Polina tulee Vitebskin asemalle puoli tuntia ennen junaansa '
+      + 'ja käy saman kierroksen kuin edelliselläkin kerralla: portaat '
+      + 'ylös, lasin alla seisahdus, sitten laiturille. Sellonsa kanssa '
+      + 'hän on kulkenut kaupungin halki kolme vuotta ja sanoo oppineensa '
+      + 'siinä ajassa, että ilta on aina joen mittainen — kello, jota '
+      + 'noudatetaan, on siltojen aukeaminen eikä konserttiohjelman. '
+      + 'Väärälle rannalle jäänyt soittaja ei ehdi mihinkään ennen aamua. '
+      + 'Vieraita hän ei odota eikä kaipaa, mutta kysyjän hän pysäyttää '
+      + 'siihen, mitä itse pitää kaupungin ainoana oikeana kysymyksenä: '
+      + 'minkä varaan tämä kaikki on ylipäätään pystytetty.',
   },
 
   /*
@@ -873,11 +883,18 @@ export const FOKUSVIRTA_PIETARI = {
    */
 
   /*
-   * KOHTAAMISPAIKKA: PALATSISILTA, Nevan ylitys Talvipalatsin kohdalla.
-   * PISTE EI SIIRRY HENKILÖNVAIHDOSSA 5.9.2026: Matvei huoltaa saman
-   * sillan teräsrakennetta, ja Palatsisilta on se nostosilta, jonka
-   * nousua kaanoninen Livian repliikki käy katsomassa.
+   * KOHTAAMISPAIKKA VAIHTUI 12.9.2026: PALATSISILLALTA VITEBSKIN
+   * ASEMALLE. Piste seurasi henkilöä: Polina on sellisti, joka kulkee
+   * kaupungin halki soittamaan, eikä hänen paikkansa ole sillan alla
+   * vaan asemahallissa — juuri siinä, minkä kuvaputken kuva näyttää.
+   * Vitebskin asema on myös Venäjän ensimmäisen rautatien pääteasema ja
+   * maan tunnetuin jugendasema, joten paikka kestää oman korttinsa.
+   * Silta ei katoa mihinkään: kysymys, vastaus ja kaaren repliikki
+   * puhuvat yhä siltojen aukeamisesta, ja Palatsisilta on kaupunkilehden
+   * oma nosto.
    *
+   * 59,920278 N / 30,329444 E — en-Wikipedia "Vitebsky railway station",
+   * prop=coordinates (haettu 12.9.2026). Vanha piste oli
    * 59,941149 N / 30,308105 E — en-Wikipedia "Palace Bridge",
    * prop=coordinates (haettu 30.8.2026). Muunnos on sama kaava ja samat
    * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö LEVEYS
@@ -886,28 +903,28 @@ export const FOKUSVIRTA_PIETARI = {
    * y = (72 − lat) × 26,3.
    *
    * LASKU:
-   *   maailmankartta  x = ((30,308105 − (−175)) mod 360) × (12000/360)
-   *                     = 205,308105 × 33,3333… = 6843,6
-   *                   y = (millerY(59,941149) − millerY(76)) × 12000/2π
-   *                     = 928,6
-   *   europe          x = (30,308105 + 11) × 19,2 = 793,1
-   *                   y = (72 − 59,941149) × 26,3 = 317,1
+   *   maailmankartta  x = ((30,329444 − (−175)) mod 360) × (12000/360)
+   *                     = 205,329444 × 33,3333… = 6844,3
+   *                   y = (millerY(59,920278) − millerY(76)) × 12000/2π
+   *                     = 929,7
+   *   europe          x = (30,329444 + 11) × 19,2 = 793,5
+   *                   y = (72 − 59,920278) × 26,3 = 317,7
    *
    * TARKISTUS PIETARIN LAATTAA VASTEN: laatta on Euroopan laudalla
    * 793 / 317 ja maailmankartalla 6843,4 / 928,4 (js/packs/europe.js ja
    * js/packs/maailmankartta.js) — eli laatta on omalla oikealla
    * paikallaan, ja kohtaamispiste osuu käytännössä sen päälle (ero alle
-   * 0,2 yksikköä). Se on oikein eikä virhe: silta on kaupungin
-   * keskustassa. Koska ero alittaa js/fokuspiste.js:n PISTE_ERO_MIN-rajan
+   * yhden yksikön). Se on oikein eikä virhe: asema on kaupungin
+   * keskustassa runsaan kahden kilometrin päässä laatasta. Koska ero alittaa js/fokuspiste.js:n PISTE_ERO_MIN-rajan
    * (14), peli siirtää PIIRRETYN merkin koilliseen laatan viereen, ja
    * molemmat näkyvät erikseen. Dataan ei kosketa (sama ratkaisu kuin
    * Tallinnassa).
    */
   kohtaamispiste: {
-    nimi: 'Palatsisilta',
+    nimi: 'Vitebskin asema',
     laudat: {
-      maailmankartta: { x: 6843.6, y: 928.6 },
-      europe: { x: 793.1, y: 317.1 },
+      maailmankartta: { x: 6844.3, y: 929.7 },
+      europe: { x: 793.5, y: 317.7 },
     },
   },
 

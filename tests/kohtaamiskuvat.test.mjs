@@ -33,11 +33,12 @@ test('kohtaamiskuvagalleria käyttää vain R2-mediaa', async () => {
 });
 
 /*
- * KUVAPUTKEN 12.9.2026 TOIMITUKSEN NELJÄ RIVIÄ: Granada peliin, kolme
- * muuta vain galleriaan. Oslon, Pietarin ja Sarajevon kuvissa on eri
- * henkilö kuin kaaressa (Oskar, Matvei, Emir), joten `tarkistettu`
- * kaataisi jo hahmovartion — tämä vartio sanoo saman syyn ääneen,
- * jottei tilaa vaihdeta vahingossa ennen kuin kaari nimeää henkilön.
+ * KUVAPUTKEN 12.9.2026 TOIMITUKSEN NELJÄ RIVIÄ, KAIKKI PELISSÄ. Oslo,
+ * Pietari ja Sarajevo odottivat ensin galleriassa, koska kuvan henkilö
+ * ei ollut kaaren henkilö; omistaja vaihtoi kaanoniin uudet henkilöt
+ * samana päivänä (Liv, Polina, Adnan — js/tyohuone-kehitys-data.js
+ * KAARI_PAKETIT). Tämä vartio pitää parit kiinni toisissaan: jos joku
+ * palauttaisi kaaren vanhan nimen, alla oleva hahmovartio kaatuu.
  */
 test('12.9.2026 toimituksen neljä kuvaa ovat oikeissa tiloissa ja päiväkansiossa', () => {
   const rivit = new Map(kohtaamiskuvat
@@ -46,9 +47,9 @@ test('12.9.2026 toimituksen neljä kuvaa ovat oikeissa tiloissa ja päiväkansio
   assert.equal(rivit.size, 4);
   for (const [id, tila, hahmo] of [
     ['granada-ines-e4ab59a7e815', 'tarkistettu', 'Inés'],
-    ['oslo-liv-992a171d5df6', 'arkisto', 'Liv'],
-    ['pietari-polina-6188e4c488db', 'arkisto', 'Polina'],
-    ['sarajevo-adnan-8d19fb11c377', 'arkisto', 'Adnan'],
+    ['oslo-liv-992a171d5df6', 'tarkistettu', 'Liv'],
+    ['pietari-polina-6188e4c488db', 'tarkistettu', 'Polina'],
+    ['sarajevo-adnan-8d19fb11c377', 'tarkistettu', 'Adnan'],
   ]) {
     const kuva = rivit.get(id);
     assert.ok(kuva, `toimituksen rivi ${id} puuttuu katalogista`);
@@ -56,8 +57,12 @@ test('12.9.2026 toimituksen neljä kuvaa ovat oikeissa tiloissa ja päiväkansio
     assert.equal(kuva.hahmo, hahmo);
     assert.equal(kuva.tiedosto, `${id}.jpg`);
   }
-  assert.equal(kohtaamiskuvaKohteelle('granada')?.id, 'granada-ines-e4ab59a7e815');
-  for (const kohde of ['oslo', 'pietari', 'sarajevo']) assert.equal(kohtaamiskuvaKohteelle(kohde), null);
+  for (const [kohde, id] of [
+    ['granada', 'granada-ines-e4ab59a7e815'],
+    ['oslo', 'oslo-liv-992a171d5df6'],
+    ['pietari', 'pietari-polina-6188e4c488db'],
+    ['sarajevo', 'sarajevo-adnan-8d19fb11c377'],
+  ]) assert.equal(kohtaamiskuvaKohteelle(kohde)?.id, id);
 });
 
 test('jokaisella kohtaamiskuvalla on kaupungin lisäksi tilanteen kuvateksti', () => {

@@ -811,6 +811,15 @@ export const FOKUSVIRTA_OSLO = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
+   * HENKILÖ VAIHTUI TOISEN KERRAN 12.9.2026: maanviljelijä Oskar →
+   * maisemakuvaaja Liv (omistajan päätös kysymyskortissa: *"Vaihda
+   * kaanoniin uudet henkilöt"*, kun kuvaputki toimitti kuvan, jossa
+   * seisoo harjulla kuvaaja kameroineen ja koirineen). Kortin oma
+   * esittely seuraa kuvaa: sama pelto, sama kumpu, sama aitan hirsi ja
+   * sama kysymys ulkoa — vain se, miksi hän on pellon laidassa, muuttui
+   * kynnöstä valon odottamiseen. Perustelu kaanonin puolella on
+   * js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'oslo'.
+   *
    * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ VAIHTUI: talonpoika
    * Sigrid → maanviljelijä Oskar (js/tyohuone-kehitys-data.js
    * KAARI_PAKETIT, 'oslo'; kuvaputken tarinaehdotus 5.9.2026, Fablen
@@ -823,7 +832,7 @@ export const FOKUSVIRTA_OSLO = {
    *
    * PERUSTELUT LUONNOKSELLE:
    *   - KAAVA TÄYTTYY ILMAN SUKUA: jatkumo on työn eikä perinnön (sama
-   *     pelto kynnetään joka kevät), epäusko säilyy (Oskar pitää
+   *     pelto kynnetään joka kevät), epäusko säilyy (Liv pitää
    *     kumpujuttuja naapurien puheena) ja portinvartijakysymys on
    *     hänen oma uteliaisuutensa, ei perittyä tehtävää.
    *   - VARALLISUUSSÄÄNTÖ PITÄÄ. Isoisä ei maksa mitään, ei käske
@@ -831,7 +840,7 @@ export const FOKUSVIRTA_OSLO = {
    *     perillistä. Aitan hirteen kirjoitettu päiväys on jäljelle
    *     jäänyt merkintä eikä sopimus.
    *   - ÄÄNIPROFIILI: puhelias ja huvittunut. Bergenin Solveig hoitaa
-   *     tämän erän epäuskoisen osuuden, joten Oskar saa olla se, joka
+   *     tämän erän epäuskoisen osuuden, joten Liv saa olla se, joka
    *     nauraa ensin ja vakavoituu vasta piirroksen kohdalla.
    *   - EI KUVAA. Tehtävänannon rajaus (aalto 4B): kohtaamiseen ei tule
    *     kuvaa, ja kuvat kuuluvat kaupunkilehteen.
@@ -845,32 +854,34 @@ export const FOKUSVIRTA_OSLO = {
    * löytyy, ei sitä mikä vastaus on.
    */
   kohtaaminen: {
-    hahmo: 'Maanviljelijä Oskar',
-    nappi: 'Tapaa Oskar',
+    hahmo: 'Maisemakuvaaja Liv',
+    nappi: 'Tapaa Liv',
     /*
      * VARMISTUSKYSYMYS (omistajan pelitestipalaute v1119). Lause on
      * datassa eikä koodissa, koska suomen genetiivi ei taivu koneellisesti
      * jokaisesta nimestä (js/fokusvirta.js varmistusLause).
      */
-    varmistus: 'Haluatko varmasti tavata Oskarin juuri nyt?',
+    varmistus: 'Haluatko varmasti tavata Livin juuri nyt?',
     vihjeOsio: 'laivat',
-    teksti: 'Oskarin pellon laidassa maa nousee loivaksi kummuksi, ja aura '
-      + 'kiertää sen joka kevät, koska niin on aina kierretty eikä '
-      + 'kukaan ole keksinyt syytä lopettaa. Naapureiden kumpujuttuja '
-      + 'hän pitää lähinnä huvittavina: kumpu on kumpu, ja mullassa on '
-      + 'kiviä niin kuin joka pellossa. Sen sijaan maastonmuodot hän '
-      + 'tuntee kuin oman kämmenensä — mikä notko vetää veden, mikä '
-      + 'rinne kuivuu ensin, missä kohtaa aura on aina noussut. Aitan '
-      + 'seinähirressä on päiväys kesältä 1873 ja sen alla kysymys '
-      + 'vieraalla käsialalla; kuka sen kirjoitti, sitä ei tiedä kukaan. '
-      + 'Oskar osaa kysymyksen ulkoa ja kysyy sen huvikseen jokaiselta, '
-      + 'joka pysähtyy pellon laitaan.',
+    teksti: 'Pellon laidassa, jota Liv on kuvannut kymmenen vuotta, maa '
+      + 'nousee loivaksi kummuksi, ja aura kiertää sen joka kevät, koska '
+      + 'niin on aina kierretty eikä kukaan ole keksinyt syytä lopettaa. '
+      + 'Naapureiden kumpujuttuja hän pitää lähinnä huvittavina: kumpu on '
+      + 'kumpu, ja mullassa on kiviä niin kuin joka pellossa. Sen sijaan '
+      + 'maastonmuodot hän tuntee kuin oman kämmenensä — mikä notko vetää '
+      + 'veden, mikä rinne kuivuu ensin, missä kohtaa aura on aina '
+      + 'noussut. Ne oppii, kun odottaa samalla harjulla valoa vuosi '
+      + 'vuoden jälkeen, koira jalassa kiinni. Aitan seinähirressä on '
+      + 'päiväys kesältä 1873 ja sen alla kysymys vieraalla käsialalla; '
+      + 'kuka sen kirjoitti, sitä ei tiedä kukaan. Liv osaa kysymyksen '
+      + 'ulkoa ja kysyy sen huvikseen jokaiselta, joka pysähtyy pellon '
+      + 'laitaan.',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: JELLHAUGEN, HALDEN. Kaari ei nimeä Oskarin
+   * KOHTAAMISPAIKKA: JELLHAUGEN, HALDEN. Kaari ei nimeä Livin
    * pitäjää, ja kaanonin aarremerkintä sanoo vain, että talonpojan
    * pitäjässä aura osui arkkuun ja että "maa on täällä vanhaa ja aurat
    * uusia". Jellhaugen on siihen tarkin oikea paikka Oslon lähellä:
@@ -878,7 +889,7 @@ export const FOKUSVIRTA_OSLO = {
    * maatutkalla viikinkilaiva, joka makasi puoli metriä kyntökerroksen
    * alla ja jota kyntäminen oli kuluttanut; laiva kaivettiin esiin
    * 2020–2022, mutta itse Jellhaugen — yksi maan suurimmista kummuista
-   * — seisoo yhä kaivamattomana. Oskarin kumpu on siis se, jota ei ole
+   * — seisoo yhä kaivamattomana. Livin kumpu on siis se, jota ei ole
    * avattu, ja naapuripellon tarina kertoo miksi lupaus on merkinnyt
    * jotakin. (en-Wikipedia "Gjellestad ship": löytö 2018 maatutkalla,
    * *"lies 50 centimetres below the topsoil due to years of plowing"*,
@@ -903,7 +914,7 @@ export const FOKUSVIRTA_OSLO = {
    * TARKISTUS LAATTAA VASTEN: Oslon laatta on Euroopan laudalla 418 /
    * 318 (js/packs/europe.js), ja piste jää siitä 22,0 yksikköä kaakkoon
    * — yli PISTE_ERO_MINin (14, js/fokuspiste.js), joten piste piirtyy
-   * omalle paikalleen eikä siirry. Niin pitääkin: Oskarin pelto ei ole
+   * omalle paikalleen eikä siirry. Niin pitääkin: Livin pelto ei ole
    * kaupungissa.
    *
    * HUOMIO FABLELLE: Bergenin Amundsen-täkynoston piste (Borge,
