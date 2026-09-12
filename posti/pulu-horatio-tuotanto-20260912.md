@@ -88,6 +88,14 @@ epävarmuudelle. Lisäajatus voi pidentää hänen osuuttaan hieman, kun se
 mahtuu parin yhteiseen mittaan. Myös rauhallinen, lämmin Pulu on sama
 helposti innostuva hahmo; joka kaupunkiin ei pakoteta samaa mininäytelmää.
 
+Omistajan 13.9.2026 katselmuksessa täsmentämä linnun näkökulma:
+Pululle ei kirjoiteta perustelematta ihmisen kahvinjuontia tai kahvikuppi
+mukana kiertelyä. Hän voi tarkkailla kahviloita ja ihmisiä, mutta oma
+kokemus syntyy esimerkiksi nokasta, siivistä, lentämisestä, lajitovereista
+ja löydöistä. Tämä ei ole yleinen kahviloiden kielto eikä kehotus tehdä
+joka kaupungista muruvitsiä. Ateenan ja Sarajevon pilotin nämä kohdat
+korjattiin; muut omistajan hyväksymät repliikit säilytettiin.
+
 ## Kuuntelun ja kuvatekstien pituus
 
 Omistajan täsmennys 12.9.2026: isoisän ja Pulun osuuksien pituus saa
@@ -205,6 +213,42 @@ tarvittava ajovaihe. Äänetön tai vanhalla
 äänellä varustettu keskeneräinen ehdokas ei ole valmis yhteispaketti.
 Pääsessio hoitaa Fablen tiedotuksen; omistajan ei tarvitse välittää
 samoja ohjeita käsin.
+
+### Euroopan viimeistelyn ajolupa 13.9.2026
+
+Omistajan nimenomainen jatko: ”menen nukkumaan. hyvältä näyttää. tehkää
+kaikki loppuun. voit generoida luennat sitten isoisälle ja pululle koko
+eurooppaan.” Tämä hyväksyy toimitetun E4-kahdeksikon ja valtuuttaa koko
+Euroopan kaupunkiparien viimeistelyn sovitulla linjalla sekä niiden
+lopulliset Horatio- ja Livia-luennat. Loppuerien sisältö voidaan jäädyttää
+pääsession ja riippumattoman QA:n tarkistuksella; jokaista erää ei jätetä
+odottamaan omistajan uutta katselmusta. Tämä rajattu lupa täyttää yllä
+vaaditun erillisen äänigenerointiluvan, ei kumoa yleistä lupasääntöä.
+
+Tekninen paketointivastaava on tämän työn AINOA maksullisten ääni- ja
+niiden kohdistusajojen omistaja. Tekstivetäjä, pääsessio ja Fable eivät
+käynnistä samoille repliikeille rinnakkaisia ajoja. Generointi alkaa
+vasta kunkin erän täsmäsisällön, tagien ja ankkurien QA-jäädytyksen jälkeen.
+Validit oikean sisällön/äänen/moottorin artefaktit käytetään uudelleen;
+ei koko kaanonin varmuuden vuoksi pakotettua uusinta-ajoa. Ajomanifesti
+kirjaa sisältöversion, näkyvän ja TTS-tekstin tiivisteet, voice/model/
+parametrit, tuotoksen tiivisteen, tavumäärän, todellisen keston sekä
+mahdollisen uuden yrityksen syyn. Epäselvässä API-vastauksessa tarkistetaan
+jo syntynyt tuotos ennen uutta veloitettavaa yritystä.
+
+Pulun yllä lukittu Flicker / eleven_v3 / Natural 0.5 säilyy; Horation
+nykyistä ääntä, moottoria ja parametreja ei vaihdeta. Maksullinen
+kohdistus ja tarvittava median vienti ovat luentojen normaalia viimeistelyä.
+Lupa ei kata uusien kuvien generointia, muiden maanosien ääniä,
+yleischatin repliikkien erillistä uusinta-ajoa tai palvelutilauksen/
+krediittipaketin ostamista. Puuttuvat kuvat kirjataan erikseen.
+
+Yksi yhteistestattu valmis paketti toimitetaan Fablelle normaalien
+lopputarkistus-, yhdistämis- ja julkaisuporttien kautta. Paikalliset
+testit, CI, mediajulkaisu, pelijulkaisu ja oikean sovellustilan tarkistus
+pysyvät erillisinä valmistumisen todisteina. Lupaa ei tulkita valmiiksi
+ääneksi tai julkaistuksi peliksi. Ajantasainen kattavuus, suoritetut ajot
+ja aidot puutteet kirjataan yhteiseen tilakorttiin.
 
 ## Tunnetagit ja animaatio kirjoitetaan jo käsikirjoitukseen
 
