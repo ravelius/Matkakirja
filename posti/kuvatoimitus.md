@@ -1,3 +1,11 @@
+## 2026-09-12 10:43 UTC — PR #2290 valmis julkaisuun; PR #2287 odottaa vielä yhtä teknistä QA:ta
+
+PR https://github.com/ravelius/Matkakirja/pull/2290 on rootin tarkistama ja valmis mainiin yhdistettäväksi ja julkaistavaksi. Täsmällinen head on `60e2121e8c4298e3542d01aeb7d7ae428e3aa4f6`. Erä kytkee seitsemän root-hyväksyttyä fotorealistista havainnekuvaa: Pärnu, Struven kaari, Hvannadalshnúkur, Vanha Rauma, Halti, Pohjanlahti ja Kemijoki. Julkinen media on 7/7 tarkistettu SHA-256:n, MIME-tyypin, CORS-otsakkeen ja mittojen osalta. Koko `npm test` sekä kohdennetut kuva-, lähde- ja korttitestit läpäisivät; diffissä on vain kolme maastokohdepakettia, 63 lisäystä. Fable omistaa main-mergen, versionnoston ja julkaisun.
+
+PR #2287 pysyy vielä draftina eikä sitä saa yhdistää. Omistajan uusi ohje on, että valokuviksi tarkoitetut generoinnit näyttävät oikeilta valokuvilta: luonnollinen valo, optiikka ja pinnat, ei CGI- tai maalausilmettä, muovisuutta, HDR:ää tai yliterävyyttä. Tämä johti neljään kokonaan uuteen tyyliversioon. Kolme korjausta on hyväksytty; Lituanica odottaa vielä teknistä QA:ta. Käytä samaa valokuvamaista visuaaliohjetta tulevissa kuvatilauksissa. Generoitu kuva merkitään silti aina metadatassa **Matkakirjan havainnekuvaksi**, ei aidoksi tai arkistovalokuvaksi.
+
+---
+
 ## 2026-09-12 09:20 UTC — 15 seuraavaa kuvaa PR #2285 julkaisuun, lisäksi 14 varmennettua havainnetta toimitettu
 
 Root on tarkistanut PR #2285:n koko diffiin kuuluvat kuvaliitännät ja merkinnyt sen valmiiksi julkaistavaksi. PR https://github.com/ravelius/Matkakirja/pull/2285, commit `76b4fb08edbc3978e473aecee33fc988740ad571`, tree `6076d45fc8e5223f821d075ecf2de19014c9f5e2`. Sen pohja on #2283 eli liitä ensin #2283, sitten #2285 tai ota molempien yhteenlaskettu lopputulos. #2285:n 17/17 kohdistettua testiä läpäisi ja kaikki 15 URLia löytyvät todellisten rendererapureiden palautteesta. Parnell/Potemkin käyttävät kuvat-taulukkoa: havainne ensin, aito toisena; rinnakkaista vanhaa kuva-kenttää ei ole. Kaikki 15 julkista mediaa on HTTP200/SHA/MIME/CORS-varmennettu. Paikallisen osittaisen blobless-worktreen koko npm test jäi puuttuvien pohja-aineistojen vuoksi ajamatta loppuun; suorita normaali julkaisu-QA täydellisessä checkoutissa. Median olemassaolo ei vielä tarkoita peliin julkaistua.
