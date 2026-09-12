@@ -4,7 +4,8 @@ import { readFileSync } from 'node:fs';
 import {
   LAATU_LEPOVIIVE_MS, LEPOKERROS_KORKEUSRAJA, LEPOKERROS_KOROTUS, LEPOKERROS_LAATTAKATTO_MAX,
   LEPOKERROS_LAATTAKATTO_MIN, LEPOKERROS_LEPOVIIVE_MS, LEPOKERROS_RUUDUKKO_AST, LEPOKERROS_RUUDUKKO_MAX,
-  LEPOKERROS_RUUDUKKO_MIN, LEPOKERROS_SYVYYSSIIRTO, LAATU_KAUKORAJA, NAPAKANNEN_KOROTUS, PALLO_LAUTA,
+  LEPOKERROS_RUUDUKKO_MIN, LEPOKERROS_SYVYYSSIIRTO, LAATU_KAUKORAJA, NAPAKANNEN_KOROTUS,
+  NAPAKANNEN_LEVEYS, PALLO_LAUTA, laatanPalloAlue,
   lepokerroksenAlue, lepokerroksenKerrokset, lepokerroksenLaatat, lepokerroksenLaattakatto,
   lepokerroksenSilmat, lepokerroksenSuunnitelma, lepokerroksenTaso, lepokerroksenTasoRiittaa,
   lepokerroksenUV, lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste, pyramidinKarttaAla,
@@ -440,4 +441,86 @@ test('kartta-ala ei ylitä napakansia', () => {
   const a = pyramidinKarttaAla({ pyramidi, yLat: YLAT, naparaja: 50 });
   assert.equal(a.latMax, 50);
   assert.equal(a.latMin, -50);
+});
+
+/*
+ * VARTIO: ARKIN KALUSTEET EIVÄT PÄÄDY PALLON PINNALLE MILLÄÄN
+ * LAATTATASOLLA (vika 12.9.2026, omistaja sanatarkasti: *"Pohjoisnapa
+ * kaukaa edelleen väärin"* — kuvakaappauksessa navan päällä oli
+ * julisteen KARTUSSI, pyöreä vaalea leima tekstillä MATKAKIRJA).
+ *
+ * Mitattu Chromiumissa 12.9.2026 (390 × 844, kamerakorkeudet 0,3 /
+ * 0,6 / 1,0 / 1,6 / 2,5): laattakerroksen rivin 0 verkon ylin
+ * leveysaste oli JOKA korkeudella 88,65° — arkin yläreuna, 4,65°
+ * kartan yläreunan (84°) ja 4,95° napakannen (83,7°) yli. Rajaus
+ * tehtiin vain siihen laatikkoon, jolta laatat VALITAAN; laatan oma
+ * verkko rakennettiin laatan koko pikselisuorakaiteesta, ja arkin
+ * ylämarginaali kartusseineen levisi pallolle kiekoksi. Kaukaa se
+ * voitti napakalotin (laatan polygonOffset on ikkunasyvyyttä).
+ *
+ * Tämä testi käy läpi pyramidin JOKAISEN tason ja rivin ja vaatii,
+ * ettei yksikään laattaverkko yllä arkin marginaaleihin.
+ */
+const MARGINAALIT = {
+  // Arkin yläreuna (kartussi) ja kartan yläreuna.
+  ylin: YLAT(ARKKI.y),
+  kartanYla: YLAT(RAJAUS.y),
+  // Kartan alareuna − alakehys (painajanrivi, kompassi) ja arkin alareuna.
+  kartanAla: YLAT(RAJAUS.y + RAJAUS.h - 240),
+  alin: YLAT(ARKKI.y + ARKKI.h),
+};
+
+const laatanAlueet = (ala) => {
+  const alueet = [];
+  for (const taso of TASOT) {
+    const ppu = taso.pikseliaPerYksikko;
+    const lonPx = (px) => ((px / ppu + ARKKI.x) / PROJEKTIO.leveys) * 360 + PROJEKTIO.lon0;
+    const latPx = (py) => YLAT(py / ppu + ARKKI.y);
+    for (let rivi = 0; rivi < taso.riveja; rivi += 1) {
+      for (const sarake of [0, Math.floor(taso.sarakkeita / 2), taso.sarakkeita - 1]) {
+        alueet.push({
+          taso: taso.z,
+          rivi,
+          sarake,
+          ...laatanPalloAlue({ taso, sarake, rivi, laatta: LAATTA, lonPx, latPx, karttaAla: ala }),
+        });
+      }
+    }
+  }
+  return alueet;
+};
+
+test('vartio: yksikään laattaverkko ei yllä arkin marginaaleihin millään tasolla', () => {
+  const pyramidi = { rajaus: RAJAUS, arkki: ARKKI, kehys: { yla: 232, ala: 240 } };
+  const ala = pyramidinKarttaAla({ pyramidi, yLat: YLAT, naparaja: NAPAKANNEN_LEVEYS });
+  // Pohjoisessa napakansi, etelässä alakehys — molemmat kartan sisällä.
+  assert.ok(Math.abs(ala.latMax - NAPAKANNEN_LEVEYS) < 1e-9, `latMax ${ala.latMax}`);
+  assert.ok(Math.abs(ala.latMin - MARGINAALIT.kartanAla) < 1e-9, `latMin ${ala.latMin}`);
+  for (const a of laatanAlueet(ala)) {
+    const missa = `z${a.taso} rivi ${a.rivi} sarake ${a.sarake}`;
+    assert.ok(a.lat1 <= ala.latMax + 1e-9, `${missa}: verkko yltää ${a.lat1}° (yli ${ala.latMax}°)`);
+    assert.ok(a.lat0 >= ala.latMin - 1e-9, `${missa}: verkko yltää ${a.lat0}° (alle ${ala.latMin}°)`);
+    // Kartussin kaista (84°…88,65°) ei saa leikata yhtäkään verkkoa.
+    assert.ok(!(a.lat1 > MARGINAALIT.kartanYla && a.lat1 > a.lat0),
+      `${missa}: kartussin kaista pallolla (${a.lat0}…${a.lat1})`);
+    assert.ok(!(a.lat0 < MARGINAALIT.kartanAla && a.lat1 > a.lat0),
+      `${missa}: painajanrivin kaista pallolla (${a.lat0}…${a.lat1})`);
+  }
+});
+
+test('vartio puree: ilman karttarajausta laatat yltäisivät arkin reunoihin', () => {
+  // Sama laskenta ilman rajausta: näin vika mitattiin selaimessa.
+  const rajaamatta = laatanAlueet(null);
+  const ylin = Math.max(...rajaamatta.map((a) => a.lat1));
+  const alin = Math.min(...rajaamatta.map((a) => a.lat0));
+  assert.ok(Math.abs(ylin - MARGINAALIT.ylin) < 0.01, `rajaamaton ylin ${ylin}`);
+  assert.ok(Math.abs(alin - MARGINAALIT.alin) < 0.01, `rajaamaton alin ${alin}`);
+  assert.ok(ylin > MARGINAALIT.kartanYla + 4, 'kartussin kaista jäisi pallolle');
+  assert.ok(alin < MARGINAALIT.kartanAla - 4, 'painajanrivin kaista jäisi pallolle');
+});
+
+test('laattakerros rajaa jokaisen laatan karttaAlaan', () => {
+  const laatat = lue('../js/pallolaatat.js');
+  assert.match(laatat, /laatanPalloAlue\(\{\n\s*taso: tasoOlio, sarake, rivi, laatta: koko, lonPx, latPx, karttaAla: karttaAla\(\),/);
+  assert.match(laatat, /karttaAlaMuisti = pyramidinKarttaAla\(\{ pyramidi, yLat, naparaja \}\)/);
 });
