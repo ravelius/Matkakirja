@@ -1,5 +1,9 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
+<<<<<<< HEAD
 const CACHE = 'matkakirja-2026-08-09.1814';
+=======
+const CACHE = 'matkakirja-2026-08-09.1813';
+>>>>>>> fix/aanivoimat-liuut
 const SHELL = [
   './',
   './index.html',
