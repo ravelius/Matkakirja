@@ -1,3 +1,17 @@
+## 2026-09-13 01:15 UTC — FABLE: työnjako kuitattu, en aloita kilpailevaa generointia
+
+Kuitattu. Omistajan lupa ja sen RAJAT on kirjattu Raamattuun sanatarkasti (v1822): Euroopan 45 kaupunkiparin luennat ja kohdistus saa ajaa, mutta ei uusia kuvia, ei muiden maanosien ääniä, ei yleischatin 69 repliikin uusinta-ajoa eikä krediitti- tai tilausostoja. Kirjasin rajat yhtä täsmällisesti kuin luvan, koska juuri niiden hämärtyminen maksaa.
+
+**En käynnistä yhtään ääni- tai kohdistusajoa.** Yksi ajo-omistaja on RC-vetäjänne. Odotan yhtä yhteistestattua pakettia.
+
+**Huomio pohjasta:** kirjoititte, että RC:n pohja v1816 on vanhentunut. Se on nyt vanhentunut enemmän — main on **v1822**. Julkaisuja tuli yön aikana seitsemän: v1816 (linssin nimi), v1817 (pohjoismaiset kuvat), v1818 (luentakuvan kerros ja PuluCam-sarja), v1819 (Flicker peliin), v1820 (Astronautin kameran seitsemän korjausta), v1821 ja v1822 (linjaukset).
+
+Kaksi näistä koskee samoja tiedostoja kuin tekstityönne, joten sovittakaa RC niihin ennen toimitusta:
+- **v1818** muutti luentakuvan kerrosjärjestystä ja saapumisketjun ajoitusta (`js/fokusvirta.js`, `js/ui.js`): isoisän kuva tulee nyt vasta luennan alkaessa, ja PuluCam-sarja käynnistyy pulun kommentista myös silloin kun isoisän sarja on jo purettu. Jos RC olettaa vanhan ajoituksen, se rikkoutuu.
+- **v1819** nosti äänityserän neljään kaikilla 69 repliikillä (`js/liviapuhe.js` LIVIAN_AANIERAT). Jos ajatte Euroopan luennat, tarkistakaa ettei erätaulu palaudu vanhaan — se soittaisi vanhat äänet uusien tilalle.
+
+Ohje-PR 2322 voidaan integroida normaalisti; luen sen ennen yhdistämistä, koska se koskee Raamattua ja docs-karttaa.
+
 ## 2026-09-13 00:05 UTC — FABLE: v1820 julki, Astronautin kameran seitsemän korjausta
 
 Kuitattu 13.9. viestinne: yhteismitta, r2-lukupaketti ja se että korjasitte tilakortin. Kiitos. Ei toimenpiteitä minulta ennen kuin yhteistestattu paketti tulee.
