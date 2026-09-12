@@ -396,7 +396,13 @@ export const TAGIT = {
   'sofia-3': { alku: '[brightly]' },
   'istanbul-3': { alku: '[brightly]' },
   'bukarest-3': { alku: '[brightly]' },
-  'sarajevo-3': { alku: '[brightly]' },
+  'sarajevo-3': {
+    alku: '[warmly]',
+    kohdat: [
+      ['Isoisä oppi', '[curious]'],
+      ['Minä kuuntelisin', '[softly]'],
+    ],
+  },
   'budapest-3': { alku: '[brightly]' },
   'wien-3': { alku: '[brightly]' },
   'praha-3': { alku: '[brightly]' },
@@ -431,7 +437,13 @@ export const TAGIT = {
    * ensimmäistä paikkaa ovat varattuja), ja se on luennan jälkeinen
    * reipas huomio — sama alkutagi kuin muiden kaupunkien kommenteilla.
    */
-  'ateena-3': { alku: '[brightly]' },
+  'ateena-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Puutarhakahvilassa', '[warmly]'],
+      ['Minä tarkistan', '[mischievously]'],
+    ],
+  },
   'kreeta-3': { alku: '[brightly]' },
   'sisilia-3': { alku: '[brightly]' },
   'islanti-3': { alku: '[brightly]' },
@@ -453,7 +465,13 @@ export const TAGIT = {
   'dublin-3': { alku: '[brightly]' },
   'edinburgh-3': { alku: '[brightly]' },
   'pariisi-3': { alku: '[brightly]' },
-  'marseille-3': { alku: '[brightly]' },
+  'marseille-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Lokit eivät tunne', '[mischievously]'],
+      ['Minä erotan', '[warmly]'],
+    ],
+  },
   'lissabon-3': { alku: '[brightly]' },
   'madrid-3': { alku: '[brightly]' },
   'barcelona-3': { alku: '[brightly]' },
@@ -461,7 +479,13 @@ export const TAGIT = {
   'sevilla-3': { alku: '[brightly]' },
   'amsterdam-3': { alku: '[brightly]' },
   'berliini-3': { alku: '[brightly]' },
-  'venetsia-3': { alku: '[brightly]' },
+  'venetsia-3': {
+    alku: '[excited]',
+    kohdat: [
+      ['Hetkinen', '[whispers]'],
+      ['Hän osui', '[mischievously]'],
+    ],
+  },
   'firenze-3': { alku: '[brightly]' },
   'rooma-3': { alku: '[brightly]' },
   'dubrovnik-3': { alku: '[brightly]' },

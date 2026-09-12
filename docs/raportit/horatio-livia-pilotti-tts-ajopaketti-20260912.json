@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "contentRevision": "eu-hl-pilot-20260912-r1",
+  "state": "hold-owner-voice-selection",
+  "sourceTextCommit": "aa3a61d7b5c422d132f6ef06c1c64dfd521ebcc2",
+  "cities": ["marseille", "ateena", "sarajevo", "venetsia"],
+  "invariants": {
+    "visibleAndSpokenWordsMustMatch": true,
+    "finalTimingsFromForcedAlignmentOnly": true,
+    "paidRunAuthorized": false,
+    "publishAuthorized": false
+  },
+  "horatio": {
+    "provider": "ElevenLabs",
+    "endpoint": "/v1/text-to-dialogue",
+    "model": "eleven_v3",
+    "voice": {"name": "Viisas Kertoja", "id": "Sz0tRTEpybtDJ9ru2kgD"},
+    "stability": 0.5,
+    "outputFormat": "mp3_44100_128",
+    "generationCommand": "ELEVEN_API_KEY=<secret> node tools/generoi-luennat.mjs marseille ateena sarajevo venetsia",
+    "alignmentCommand": "ELEVEN_API_KEY=<secret> node tools/kohdista-luennat.mjs --kaupungit marseille,ateena,sarajevo,venetsia --vie",
+    "items": [
+      {
+        "city": "marseille",
+        "visibleText": "Marseillen satamassa myytiin saippuaa tiiliskivinä. Kauppias vakuutti, että niillä pesisi koko maailman. Hänen kyntensä olivat mustat: hän oli auttanut laivan köysissä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. Maailma ei suostunut pesuun yhdellä yrittämällä; käteni olivat jo toista mieltä.",
+        "ttsText": "[curious] Marseillen satamassa myytiin saippuaa tiiliskivinä. Kauppias vakuutti, että niillä pesisi koko maailman. Hänen kyntensä olivat mustat: hän oli auttanut laivan köysissä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. [softly] Maailma ei suostunut pesuun yhdellä yrittämällä; käteni olivat jo toista mieltä.",
+        "visibleTextSha256": "3858aeb5ee6f31b73ceb54a83ba5734cc426ac328bee1cb0bfca78dd27070e1a",
+        "ttsTextSha256": "1c55283956a7eb142fe03470eaa21a87062e0de91051e5b3d4b7ac2c2fb908ea",
+        "audioPath": "assets/audio/puhe-fokus-matkakirja-marseille.mp3",
+        "requiredAudioVersion": 3,
+        "alignmentPath": "assets/aikaleimat/puhe-fokus-matkakirja-marseille.aikaleimat.json",
+        "supersedes": {"textSha256": "4320eece41e963124c42d50c41cf65b41875bdd5b646dfcccfb192900a696551", "audioSha256": "bfa7b605763b7b818489c1ce39d47e9f1497c5536cd64c9d7e7fb08914f08b63"}
+      },
+      {
+        "city": "ateena",
+        "visibleText": "Ateenassa puhuttiin Troijasta löydetystä kullasta kuin jokainen olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia nerona, asiakas varkaana, vaikkei kummallakaan ollut kultaa näyttää. Akropoliin pylväät kohosivat pölyn takaa eivätkä tarvinneet mainosta. Kaivoin taskustani kolikon kahvia varten; sen alkuperästä isäntä ei kysynyt.",
+        "ttsText": "[curious] Ateenassa puhuttiin Troijasta löydetystä kullasta kuin jokainen olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia nerona, asiakas varkaana, vaikkei kummallakaan ollut kultaa näyttää. Akropoliin pylväät kohosivat pölyn takaa eivätkä tarvinneet mainosta. Kaivoin taskustani kolikon kahvia varten; [softly] sen alkuperästä isäntä ei kysynyt.",
+        "visibleTextSha256": "45f6beecd07302240ad60a1622badf98095ddf48c94539d167f3d9945443d6a6",
+        "ttsTextSha256": "57d927b20e27a892e159d9d2a1c1bc2fabba798b0f4bc217be3ce2940e115a46",
+        "audioPath": "assets/audio/puhe-fokus-matkakirja-ateena.mp3",
+        "requiredAudioVersion": 3,
+        "alignmentPath": "assets/aikaleimat/puhe-fokus-matkakirja-ateena.aikaleimat.json",
+        "supersedes": {"textSha256": "07f3cb62fe8352d31c21bb873a16e97aa5fc1fa6b1f1b345d2e60df1aeb84aa2", "audioSha256": "bcb51b6caedd68a90d43045e9c1374b4a29e311b43c157b03b606f47261678ae"}
+      },
+      {
+        "city": "sarajevo",
+        "visibleText": "Sarajevon kupariseppä naputti pannuun kuvioita niin pienellä vasaralla, että olisin hukannut sen liivintaskuun. Viereisessä puodissa kaadettiin kahvia samanlaiseen pannuun, josta olin aamulla juonut katsomatta. Nyt näin jokaisen jäljen. Basaarin kilkutus kuului kaikkialla. Kaupunki oli tehnyt aamiaiseni astian käsin.",
+        "ttsText": "[curious] Sarajevon kupariseppä naputti pannuun kuvioita niin pienellä vasaralla, että olisin hukannut sen liivintaskuun. Viereisessä puodissa kaadettiin kahvia samanlaiseen pannuun, josta olin aamulla juonut katsomatta. Nyt näin jokaisen jäljen. Basaarin kilkutus kuului kaikkialla. [softly] Kaupunki oli tehnyt aamiaiseni astian käsin.",
+        "visibleTextSha256": "0c6a71b6ade086811c885c4f3f3bf189119e67f978c74bcea86871707ec46241",
+        "ttsTextSha256": "c53a7593774021d0003c86b636f632f3bda938b9df3252f10ab13fbc0c27a61f",
+        "audioPath": "assets/audio/puhe-fokus-matkakirja-sarajevo.mp3",
+        "requiredAudioVersion": 3,
+        "alignmentPath": "assets/aikaleimat/puhe-fokus-matkakirja-sarajevo.aikaleimat.json",
+        "supersedes": {"textSha256": "0b868b79c2b4f797718c7df0e96672ecd103a398781ff21b95c199c54d0827af", "audioSha256": "6bb98fad472983da5cca68a4fe2992ba83dc56f21206e6b211a2dbdccb13e5d0"}
+      },
+      {
+        "city": "venetsia",
+        "visibleText": "Venetsiassa oven takana saattaa olla meri: astuin aamulla majatalon portaille ja olin mennä kaupunkiin uimaan. Gondolieri tuli hakemaan ja piti ilmeensä ihailtavan suorana. Kuljimme palatsien ohi niin hiljaa, että kuulin lusikan osuvan kahvikuppiin yläkerrassa. Täällä taloilla on hienot julkisivut, mutta vesi pääsee kuuntelemaan niiden aamiaista.",
+        "ttsText": "[curious] Venetsiassa oven takana saattaa olla meri: astuin aamulla majatalon portaille ja olin mennä kaupunkiin uimaan. Gondolieri tuli hakemaan ja piti ilmeensä ihailtavan suorana. Kuljimme palatsien ohi niin hiljaa, että kuulin lusikan osuvan kahvikuppiin yläkerrassa. [softly] Täällä taloilla on hienot julkisivut, mutta vesi pääsee kuuntelemaan niiden aamiaista.",
+        "visibleTextSha256": "9d0b851ba58399bb069a7362c9cdd396e67269960f82b7fff3e6ac31676493df",
+        "ttsTextSha256": "65a5e9de5f10b9d3d561773f1b9f126ffc2b9b5ae6eee7bebf2af632a807b5e8",
+        "audioPath": "assets/audio/puhe-fokus-matkakirja-venetsia.mp3",
+        "requiredAudioVersion": 3,
+        "alignmentPath": "assets/aikaleimat/puhe-fokus-matkakirja-venetsia.aikaleimat.json",
+        "supersedes": {"textSha256": "b50296f2a8bf6eaa8062938585c72d82ce480098fa0371f095bcdae996052ab4", "audioSha256": "d6361c2c5337e68b4c3a792b49243bf0fea24c157d2ac8593d38a60f7d7fc459"}
+      }
+    ]
+  },
+  "livia": {
+    "provider": "ElevenLabs",
+    "model": "eleven_v3",
+    "voice": {"state": "owner-selection-pending", "id": null},
+    "stability": {"name": "natural", "value": 0.5},
+    "outputFormat": "mp3_44100_128",
+    "generationCommand": "PULU_MALLI=eleven_v3 PULU_VAKAUS=natural node tools/generoi-pulu.mjs --aani <owner_selected_voice_id> --pakota --repliikit marseille-3,ateena-3,sarajevo-3,venetsia-3",
+    "items": [
+      {"key": "marseille-3", "visibleText": "Marseillen saippuaa tehdään yhä. Lokit eivät tunne puhdasta pöytää. Minä erotan sataman jo äänestä ja suolasta höyhenissä.", "ttsText": "[curious] Marseillen saippuaa tehdään yhä. [mischievously] Lokit eivät tunne puhdasta pöytää. [warmly] Minä erotan sataman jo äänestä ja suolasta höyhenissä.", "textDigest": "f58cb5bc", "ttsTextSha256": "eeeba655325d18a895e6e5dee0481aa4acb03eee390ea767a9d036ad76cec11f", "supersedesTextDigest": "bc17db80", "audioObject": "aanet/pulu/livia-marseille-3.mp3"},
+      {"key": "ateena-3", "visibleText": "Schliemannin talo on nyt rahamuseo. Puutarhakahvilassa kolikot tekevät taas tavallista työtään. Minä tarkistan ensin varjon.", "ttsText": "[curious] Schliemannin talo on nyt rahamuseo. [warmly] Puutarhakahvilassa kolikot tekevät taas tavallista työtään. [mischievously] Minä tarkistan ensin varjon.", "textDigest": "13655811", "ttsTextSha256": "e93814ae74555d3f88bc632273fa29c209b748e50905390ce40d452d62d24bef", "supersedesTextDigest": "418f4055", "audioObject": "aanet/pulu/livia-ateena-3.mp3"},
+      {"key": "sarajevo-3", "visibleText": "Kupariseppiä on basaarissa yhä. Isoisä oppi katsomaan kuppiaan. Minä kuuntelisin vasaraa ennen kahvia. Hyvä alku.", "ttsText": "[warmly] Kupariseppiä on basaarissa yhä. [curious] Isoisä oppi katsomaan kuppiaan. [softly] Minä kuuntelisin vasaraa ennen kahvia. Hyvä alku.", "textDigest": "686ed18b", "ttsTextSha256": "125ad4fabe3f51f593306f142b40c40355fc831cc129cb4b4c9f7aac27cdcb9f", "supersedesTextDigest": "006c3c2a", "audioObject": "aanet/pulu/livia-sarajevo-3.mp3"},
+      {"key": "venetsia-3", "visibleText": "Tässä Venetsia. Vesibussit kulkevat yhä. Hetkinen. Nuo ovat yksityisiä. Hän osui jokaiseen hyvään kuvakulmaan. Sulje albumi.", "ttsText": "[excited] Tässä Venetsia. Vesibussit kulkevat yhä. [whispers] Hetkinen. Nuo ovat yksityisiä. [mischievously] Hän osui jokaiseen hyvään kuvakulmaan. Sulje albumi.", "textDigest": "1eeed7f2", "ttsTextSha256": "7dddd7c37c84f36b9722c1ca3736e5b093f114159f7038e17284aa5a5436a0fc", "supersedesTextDigest": "0aeef60b", "audioObject": "aanet/pulu/livia-venetsia-3.mp3"}
+    ]
+  },
+  "postRunRequired": [
+    "record produced audio SHA-256 and byte length for every item",
+    "update Horatio audio query versions from 2 to 3",
+    "replace Horatio alignment files with version 2 records bound to new text and audio SHA-256",
+    "update LIVIAN_AANITETYT with the four new textDigest values",
+    "bump Livian audio batch query values for all four files",
+    "listen to every produced file before release",
+    "run full suite, CI and published-origin city-state QA"
+  ]
+}
