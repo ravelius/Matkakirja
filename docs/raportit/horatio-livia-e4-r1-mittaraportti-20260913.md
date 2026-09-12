@@ -2,24 +2,28 @@
 
 Sisältörevisio: `eu-hl-e4-20260913-r1-candidate1`
 
+Julkaistu lähtörevisio: `origin/main`
+`079284e1cf09f650ed7e5f3d54f54c4e3da933b1` (v1819)
+
 Tila: tekninen katselmusaineisto lukukopion rinnalle. Ei pack-, audio-,
-alignment-, kuva- tai julkaisumuutoksia.
+alignment-, kuva- tai julkaisumuutoksia. Sisältö odottaa omistajan
+lukuhyväksyntää.
 
 ## Yhteinen kuuntelubudjetti
 
 Merkit ja sanat lasketaan näkyvistä teksteistä. Lopulliset sekunnit mitataan
 vasta mahdollisesti myöhemmin hyväksytystä äänestä.
 
-| Kaupunki | Lähtöpari | E4-ehdotus | Muutos |
-| --- | ---: | ---: | ---: |
-| Tukholma | 447 m / 57 sanaa | 411 m / 49 sanaa | −36 m / −8 sanaa |
-| Helsinki | 441 m / 52 sanaa | 428 m / 52 sanaa | −13 m / 0 sanaa |
-| Tampere | 441 m / 56 sanaa | 426 m / 56 sanaa | −15 m / 0 sanaa |
-| Tallinna | 411 m / 53 sanaa | 392 m / 49 sanaa | −19 m / −4 sanaa |
-| Riika | 445 m / 57 sanaa | 440 m / 56 sanaa | −5 m / −1 sana |
-| Vilna | 448 m / 52 sanaa | 443 m / 51 sanaa | −5 m / −1 sana |
-| Tromssa | 459 m / 59 sanaa | 437 m / 55 sanaa | −22 m / −4 sanaa |
-| Lappi | 439 m / 55 sanaa | 437 m / 54 sanaa | −2 m / −1 sana |
+| Kaupunki | Lähtö Horatio | Lähtö Livia | Lähtöpari | E4 Horatio | E4 Livia | E4-pari | Muutos |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Tukholma | 343 m / 43 sanaa | 104 m / 14 sanaa | 447 m / 57 sanaa | 229 m / 28 sanaa | 182 m / 21 sanaa | 411 m / 49 sanaa | −36 m / −8 sanaa |
+| Helsinki | 350 m / 42 sanaa | 91 m / 10 sanaa | 441 m / 52 sanaa | 258 m / 29 sanaa | 170 m / 23 sanaa | 428 m / 52 sanaa | −13 m / 0 sanaa |
+| Tampere | 341 m / 43 sanaa | 100 m / 13 sanaa | 441 m / 56 sanaa | 261 m / 34 sanaa | 165 m / 22 sanaa | 426 m / 56 sanaa | −15 m / 0 sanaa |
+| Tallinna | 329 m / 42 sanaa | 82 m / 11 sanaa | 411 m / 53 sanaa | 226 m / 27 sanaa | 166 m / 22 sanaa | 392 m / 49 sanaa | −19 m / −4 sanaa |
+| Riika | 346 m / 44 sanaa | 99 m / 13 sanaa | 445 m / 57 sanaa | 262 m / 33 sanaa | 178 m / 23 sanaa | 440 m / 56 sanaa | −5 m / −1 sana |
+| Vilna | 339 m / 38 sanaa | 109 m / 14 sanaa | 448 m / 52 sanaa | 239 m / 27 sanaa | 204 m / 24 sanaa | 443 m / 51 sanaa | −5 m / −1 sana |
+| Tromssa | 364 m / 46 sanaa | 95 m / 13 sanaa | 459 m / 59 sanaa | 260 m / 33 sanaa | 177 m / 22 sanaa | 437 m / 55 sanaa | −22 m / −4 sanaa |
+| Lappi | 334 m / 42 sanaa | 105 m / 13 sanaa | 439 m / 55 sanaa | 246 m / 32 sanaa | 191 m / 22 sanaa | 437 m / 54 sanaa | −2 m / −1 sana |
 
 Jokainen ehdotus alittaa lähtöparin merkkimäärän eikä ylitä sen sanamäärää.
 
