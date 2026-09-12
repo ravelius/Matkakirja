@@ -114,11 +114,12 @@ test('pallon nostokerros lukee asteet-kentän eikä lautapistettä', () => {
   assert.match(kerros, /avain: `ata:\$\{kohde\.id\}`/);
 });
 
-test('sisältö: lähde nimetty, ei kuvia, kysymykset ja teksti paikallaan', () => {
+test('sisältö: lähde nimetty, toimitetut kuvat, kysymykset ja teksti paikallaan', () => {
   for (const k of MAASTOKOHTEET_ATA) {
     assert.ok(k.nimi && k.nimi.length <= 40, `${k.id}: nimi`);
     assert.ok(k.tyyppi, `${k.id}: tyyppi puuttuu`);
-    assert.equal(k.kuva, undefined, `${k.id}: kuvakenttiä ei kirjoiteta käsin`);
+    assert.match(k.kuva?.osoite ?? '', /^https:\/\/media\.matkakirja\.app\/karttanostot\//, `${k.id}: varmennettu kuva`);
+    assert.ok(k.kuva.lyhyt && k.kuva.selite && k.kuva.lahde && k.kuva.lahdeUrl, `${k.id}: kuvan tekstit ja lähde`);
     assert.equal(k.kuvat, undefined, `${k.id}: kuvakenttiä ei kirjoiteta käsin`);
     assert.equal(k.kysymykset?.length, 2, `${k.id}: kaksi pöllön kysymystä`);
     assert.ok(Array.isArray(k.korostukset) && k.korostukset.length >= 1, `${k.id}: korostukset`);
