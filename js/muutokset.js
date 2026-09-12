@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1810, teksti: 'Rysyn, Sniezkan ja Hoverlan kuvat sekä nelja valokuvaa' },
   { v: 1809, teksti: 'Pululle kolmas koeaani: avaus, Ateena, Sofia, Krakova' },
   { v: 1808, teksti: 'Oslon Liv, Pietarin Polina ja Sarajevon Adnan kaanoniin' },
   { v: 1807, teksti: 'Puolan, Ukrainan ja Tsekin karttakuvat peliin' },

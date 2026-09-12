@@ -20,21 +20,42 @@ const odotetut = [
   ['UKR', 'asovanmeri'], ['UKR', 'dnepr'],
 ];
 
+/*
+ * AITO VALOKUVA EI ENÄÄ OLE VÄLTTÄMÄTTÄ KARUSELLIN ENSIMMÄINEN
+ * (12.9.2026). Omistajan linjaus JOKAISEEN NOSTOON MYOS OIKEA VALOKUVA
+ * sanoo, että havainnekuva saa avata noston ja aito valokuva tulee sen
+ * rinnalle karuselliin. Rysyllä, Śnieżkalla ja Hoverlalla kävi juuri
+ * niin: `kuva` on nyt havainne ja aito Commons-valokuva asuu
+ * `kuvat`-taulukossa.
+ *
+ * VARTIO EI SIIS ENÄÄ KATSO PAIKKAA VAAN SITÄ, ETTÄ TIETUEESSA ON
+ * EDELLEEN AITO VALOKUVA klikattavine lähdetietoineen. Aito tunnistuu
+ * siitä, ettei sen lähderivi ole havainnekuvamerkintä (HAVAINNEKUVA_RE,
+ * js/havainnekuva.js). Myös tiedoston paikka vapautui: aito kuva voi
+ * asua Commonsin tiedostonimellä tai pelin oman mediapalvelimen
+ * osoitteessa, ja molemmissa lähdelinkki osoittaa yhä Commonsiin.
+ */
 test('ensimmäisen kuvaerän yhdeksän tietuetta kantavat kuvan ja klikattavan lähdemetadatan', () => {
   const pakit = {
     POL: luePakki('js/packs/maastokohteet-pol.js', 'MAASTOKOHTEET_POL'),
     UKR: luePakki('js/packs/maastokohteet-ukr.js', 'MAASTOKOHTEET_UKR'),
   };
+  const havainne = /Matkakirjan\s+(?:havainnekuva|kuvitus)/iu;
   for (const [maa, id] of odotetut) {
-    const kuva = pakit[maa].find((x) => x.id === id)?.kuva;
-    assert.ok(kuva, `${maa}:${id}: kuva puuttuu`);
-    assert.ok(kuva.tiedosto, `${maa}:${id}: Commons-tiedostonimi puuttuu`);
-    assert.ok(kuva.selite, `${maa}:${id}: kuvateksti puuttuu`);
-    assert.ok(kuva.tekija, `${maa}:${id}: tekijä puuttuu`);
-    assert.ok(kuva.lahde.includes(kuva.tekija), `${maa}:${id}: tekijä ei näy lähderivillä`);
-    assert.match(kuva.lahdeUrl, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
-    assert.match(kuva.lisenssi, /^(?:CC BY(?:-SA)? [234]\.0|Public domain)$/);
-    assert.match(kuva.lisenssiUrl, /^https:\/\//);
+    const kohde = pakit[maa].find((x) => x.id === id);
+    assert.ok(kohde?.kuva, `${maa}:${id}: kuva puuttuu`);
+    const kaikki = [kohde.kuva, ...(kohde.kuvat ?? [])];
+    const aidot = kaikki.filter((k) => !havainne.test(k.lahde ?? ''));
+    assert.ok(aidot.length, `${maa}:${id}: yhtään aitoa valokuvaa ei ole`);
+    for (const kuva of aidot) {
+      assert.ok(kuva.tiedosto || kuva.osoite, `${maa}:${id}: kuvan lähde puuttuu`);
+      assert.ok(kuva.selite, `${maa}:${id}: kuvateksti puuttuu`);
+      assert.ok(kuva.tekija, `${maa}:${id}: tekijä puuttuu`);
+      assert.ok(kuva.lahde.includes(kuva.tekija), `${maa}:${id}: tekijä ei näy lähderivillä`);
+      assert.match(kuva.lahdeUrl, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+      assert.match(kuva.lisenssi, /^(?:CC BY(?:-SA)? [234]\.0|Public domain)$/);
+      assert.match(kuva.lisenssiUrl, /^https:\/\//);
+    }
   }
 });
 

@@ -75,6 +75,36 @@ export const NOSTOKUVA_MARGINAALI = 12;
 export const NOSTOKUVA_VAHIN_KORKEUS = 160;
 
 /**
+ * VAIHEEN 1 YLÄRAJA — KUVA AUKEAA JO VALMIIKSI YLEMMÄS.
+ *
+ * Omistaja 12.9.2026, sanatarkasti: *"Lisäksi noston kuvan saisi
+ * sijoittaa niin, että kun lisää nappia painetaan, niin noston
+ * yläpuolelle ei jää tyhjää tilaa, mistä kartta näkyy hieman... Eli
+ * kuva pitäisi aueta hieman ylemmäksi alun alkaen."*
+ *
+ * Vaiheessa 2 kortti siirtyy YLÖSPÄIN täsmälleen sen verran kuin kuvan
+ * yläpuolelle ilmestyy sisältöä (ylärivi + otsikko), koska kuva ei saa
+ * liikkua. Kortin lopullinen yläreuna on siis
+ *   vaiheen 1 yläreuna − ylätekstien korkeus.
+ * Mitattuna (tools/mittaa-nostokuva.mjs) ylätekstit ovat 50–230 px
+ * korttityypistä riippuen: skandaalilla ja galleriakorteilla ero on
+ * niin iso, että kortti nousee ruudun laitaan itsestään, mutta
+ * kohdekortilla, syvennyksellä ja eläintäyllä se on vain 50–67 px.
+ * Kun vaiheen 1 keskitys jätti kortin 160–260 px:n korkeudelle,
+ * vaiheen 2 kortin yläpuolelle jäi juuri se kartan kaistale, jonka
+ * omistaja näki.
+ *
+ * Tämä on vaiheen 1 yläreunan KATTO: kortti ei mene tätä alemmas,
+ * vaikka keskitys sen sinne asettaisi — ja pysyy keskitettynä silloin,
+ * kun iso kuva täyttää ruudun jo valmiiksi. Luku on mitoitettu ylös
+ * suurimman tavallisen ylätekstiparin mukaan, jotta vaiheen 2 kortti
+ * aloittaa yläpalkin kohdalta eikä kartalta, mutta vaiheen 1 kuva jää
+ * silti selvästi irti ruudun yläreunasta (ei liimaudu eikä valu
+ * yläpalkin alle).
+ */
+export const NOSTOKUVA_YLAVARA = 88;
+
+/**
  * Kuvan ympäriltä varattava tila: vaakasuunnassa kortin reunus ja
  * sisennys, pystysuunnassa kuvateksti, "Lisää"-nappi ja sama reunus.
  * Luvut ovat väljiä tarkoituksella — kuvan on mahduttava ruudulle myös
@@ -137,6 +167,29 @@ export function nostokuvanKorjaus({
   const puuttuu = Math.max(0, rajattu - tavoite);
   const vieritys = Math.min(puuttuu, Math.max(0, vierityskatto));
   return { ylin: tavoite + vieritys, vieritys, siirtyma: puuttuu - vieritys };
+}
+
+/**
+ * VAIHEEN 1 KORTIN YLÄREUNA RUUDULLA — puhdas funktio, jotta sääntö
+ * voidaan testata ilman selainta (tests/nostokuva.test.mjs).
+ *
+ * Kortti keskitetään pystysuunnassa kuten ennenkin, mutta se ei jää
+ * NOSTOKUVA_YLAVARAa alemmas: muuten vaiheen 2 kortin yläpuolelle jää
+ * kartan kaistale (ks. vakion selitys). Marginaali on aina vähin.
+ *
+ * @param {object} p
+ * @param {number} p.korkeus      kortin korkeus vaiheessa 1
+ * @param {number} p.ruutuKorkeus
+ * @param {number} [p.marginaali]
+ * @param {number} [p.ylavara]
+ * @returns {number} kortin `top` pikseleinä
+ */
+export function nostokuvanYlin({
+  korkeus, ruutuKorkeus, marginaali = NOSTOKUVA_MARGINAALI,
+  ylavara = NOSTOKUVA_YLAVARA,
+} = {}) {
+  const keskitetty = Math.round((ruutuKorkeus - korkeus) / 2);
+  return Math.max(marginaali, Math.min(keskitetty, marginaali + ylavara));
 }
 
 /** Oma tyylitiedosto sivulle, jos sitä ei vielä ole. */
@@ -316,14 +369,19 @@ export function nostokuvaAloita({
     kortti.style.width = `${Math.round(Math.min(kuvanLeveys + vara, enintaan))}px`;
   };
 
-  /** Kortti keskelle ruutua (vain vaihe 1). */
+  /**
+   * Kortti keskelle ruutua vaakasuunnassa, pystysuunnassa keskelle
+   * mutta enintään NOSTOKUVA_YLAVARAn päähän ruudun yläreunasta
+   * (ks. vakion selitys). Vain vaihe 1.
+   */
   const keskita = () => {
     const ruutu = nostokuvaRuutu();
     const laatikko = kortti.getBoundingClientRect();
     const vasen = Math.max(NOSTOKUVA_MARGINAALI, Math.round((ruutu.leveys - laatikko.width) / 2));
-    const ylin = Math.max(NOSTOKUVA_MARGINAALI, Math.round((ruutu.korkeus - laatikko.height) / 2));
     kortti.style.left = `${vasen}px`;
-    kortti.style.top = `${ylin}px`;
+    kortti.style.top = `${nostokuvanYlin({
+      korkeus: laatikko.height, ruutuKorkeus: ruutu.korkeus,
+    })}px`;
   };
 
   const asemoi = () => {

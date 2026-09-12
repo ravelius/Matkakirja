@@ -24,18 +24,40 @@
  * ilman liikettä irrotus luettiin napautukseksi. Nyt matka ja kesto
  * luetaan irrotuksesta samalla kynnyksellä.
  *
- * VARTIOT (kolme näyttömittaa x kolme korttityyppiä):
+ * KOLMAS TIE, JA SE OLI VAIHEEN 2 OMA (omistaja 12.9.2026 illalla,
+ * iPhone, Ioánninan kortti auki koko artikkelina, sanatarkasti:
+ * *"Nosto häviää edelleen näkyvistä, jos vieritän mistään muualta
+ * kohdasta kuin kuvaa painamalla."*). Kuva edellä -kortilla oli OMA
+ * haara js/fokuskohteet.js:n pointerdownissa, joka sulki kortin
+ * suoraan ilman mitään ele-ehtoa. Kuvan päältä alkava veto meni läpi
+ * vain siksi, että kuva on `button`; ylärivi, otsikko, leipäteksti ja
+ * lähderivi sulkivat kortin heti. Siksi tämä savuke vetää nyt myös
+ * YLÄRIVISTÄ JA OTSIKOSTA ja tarkistaa vaiheen erikseen.
+ *
+ * VARTIOT (kolme näyttömittaa x kolme korttityyppiä, kortti vaiheessa 2):
+ *   0. KORTTI ON VAIHEESSA 2 (koko artikkeli näkyvissä) — muuten
+ *      vetokokeet mittaisivat väärää korttia.
  *   1. PYSTYVETO KUVAN päällä ei sulje korttia.
- *   2. PYSTYVETO LEIPÄTEKSTIN päällä ei sulje korttia.
- *   3. PYSTYVETO KORTIN ULKOPUOLELTA (kartta/pallo kortin vieressä) ei
- *      sulje korttia — tämä on se vika, jonka omistaja näki.
- *   4. LYHYT NAPAUTUS kortin ulkopuolelle kartalle SULKEE kortin
+ *   2. PYSTYVETO YLÄRIVIN päällä ei sulje korttia.
+ *   3. PYSTYVETO OTSIKON päällä ei sulje korttia.
+ *   4. PYSTYVETO LEIPÄTEKSTIN päällä ei sulje korttia.
+ *   5. PYSTYVETO KORTIN ULKOPUOLELTA (kartta/pallo kortin vieressä) ei
+ *      sulje korttia — tämä on se vika, jonka omistaja näki ensin.
+ *   6. LYHYT NAPAUTUS kortin ulkopuolelle kartalle SULKEE kortin
  *      (omistajan linjaus 31.8.2026 pysyy voimassa).
- *   5. SAMA NAPAUTUS EI AVAA MITÄÄN UUTTA (31.8.2026) — nielu säilyy.
+ *   7. SAMA NAPAUTUS EI AVAA MITÄÄN UUTTA (31.8.2026) — nielu säilyy.
+ *
+ * Lisäksi kirjataan KORTIN YLÄREUNAN etäisyys ruudun yläreunasta
+ * vaiheessa 2 (omistaja 12.9.2026: *"noston yläpuolelle ei jää tyhjää
+ * tilaa, mistä kartta näkyy hieman"*) — katto on js/nostokuva.js
+ * NOSTOKUVA_YLAVARA, ja sama luku mitataan korttityypeittäin
+ * tools/mittaa-nostokuva.mjs:llä.
  *
  * Korjaus: js/ui-apurit.js kuunteleSulkevaNapautus (kynnys
  * RAAHAUKSEN_KYNNYS, sama luku kuin kartan raahausvahdissa
- * js/kartta.js). Selaimeton osa säännöstä: tests/kortin-veto.test.mjs.
+ * js/kartta.js) — sekä kortin ulkopuoliselle eleelle että kuva edellä
+ * -kortin OMALLE eleelle (js/fokuskohteet.js kuvanNapautus).
+ * Selaimeton osa säännöstä: tests/kortin-veto.test.mjs.
  *
  * Aja:  NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-kortin-veto.mjs [kuvakansio]
  */
@@ -45,6 +67,10 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { NOSTOKUVA_MARGINAALI, NOSTOKUVA_YLAVARA } from '../../js/nostokuva.js';
+
+/** Kortin yläreunan katto vaiheessa 2 (ks. tiedoston alku). */
+const YLAKATTO = NOSTOKUVA_MARGINAALI + NOSTOKUVA_YLAVARA;
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -186,6 +212,9 @@ const tila = (sivu) => sivu.evaluate((valitsin) => {
   const kotelo = kortti.querySelector('.fokuskohde-sisalto, .fokusnosto-sisalto');
   return {
     auki: true,
+    // Kuva edellä -kortin vaihe: 2 = koko artikkeli näkyvissä.
+    vaihe2: kortti.classList.contains('nostokuva-vaihe2'),
+    kuvaKortti: kortti.classList.contains('nostokuva-kortti'),
     laatikko: {
       x: Math.round(r.left), y: Math.round(r.top), w: Math.round(r.width), h: Math.round(r.height),
     },
@@ -224,16 +253,36 @@ const ulkoPiste = (sivu) => sivu.evaluate((valitsin) => {
   return null;
 }, KORTIT);
 
-/** Kuvan ja leipätekstin keskipisteet kortilta. */
+/**
+ * Kuvan, ylärivin, otsikon ja leipätekstin keskipisteet kortilta.
+ *
+ * YLÄRIVI JA OTSIKKO OVAT OMA KOKEENSA: ne ovat tavallisessa kortissa
+ * raahauskahva (css/fokuskohteet.css touch-action: none) ja kuva
+ * edellä -kortissa vierityspintaa, ja juuri niiden päältä omistajan
+ * vieritys sulki kortin.
+ */
 const sisapisteet = (sivu) => sivu.evaluate((valitsin) => {
   const kortti = document.querySelector(valitsin);
-  if (!kortti) return { kuva: null, teksti: null };
+  if (!kortti) return { kuva: null, ylarivi: null, otsikko: null, teksti: null };
   const keski = (r) => (r && r.height > 10 && r.top > 60 && r.bottom < window.innerHeight
     ? { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) } : null);
+  const ota = (...valitsimet) => valitsimet
+    .map((v) => keski(kortti.querySelector(v)?.getBoundingClientRect()))
+    .find(Boolean) ?? null;
   const kuva = kortti.querySelector('img')?.getBoundingClientRect();
-  const teksti = [...kortti.querySelectorAll('p')]
-    .map((p) => p.getBoundingClientRect()).map(keski).find(Boolean) ?? null;
-  return { kuva: keski(kuva), teksti };
+  const teksti = [...kortti.querySelectorAll('.fokuskohde-sisalto p, .fokusnosto-sisalto p')]
+    .map((p) => p.getBoundingClientRect())
+    .filter((r) => r.height > 24)
+    .map(keski)
+    .find(Boolean)
+    ?? [...kortti.querySelectorAll('p')].map((p) => p.getBoundingClientRect())
+      .map(keski).find(Boolean) ?? null;
+  return {
+    kuva: keski(kuva),
+    ylarivi: ota('.fokuskohde-ylarivi', '.fokusnosto-ylarivi', '.elaintaky-ylarivi'),
+    otsikko: ota('.fokuskohde-otsikko', '.fokusnosto-otsikko', '.elaintaky-otsikko', 'h3'),
+    teksti,
+  };
 }, KORTIT);
 
 /** Kortti auki: kohdekortti, täkynosto tai eläintäky — vaiheeseen 2. */
@@ -310,7 +359,21 @@ for (const n of NAKYMAT) {
     const sisalla = await sisapisteet(sivu);
     // eslint-disable-next-line no-await-in-loop
     const ulkona = await ulkoPiste(sivu);
-    const kokeet = [['kuva', sisalla.kuva], ['teksti', sisalla.teksti], ['ulkopuoli', ulkona]];
+    vaadi(`${n.nimi} / ${korttinimi}: kortti on vaiheessa 2 (koko artikkeli)`,
+      !alku.kuvaKortti || alku.vaihe2, 'Lisää-nappi ei vienyt vaiheeseen 2');
+    if (alku.kuvaKortti) {
+      /*
+       * KORTIN YLÄREUNA VAIHEESSA 2 (omistaja 12.9.2026). Katto on
+       * js/nostokuva.js NOSTOKUVA_MARGINAALI + NOSTOKUVA_YLAVARA: sitä
+       * korkeammalle jäävä kaistale näyttäisi karttaa kortin päältä.
+       */
+      vaadi(`${n.nimi} / ${korttinimi}: kortin yläreuna vaiheessa 2 enintään ${YLAKATTO} px`,
+        alku.laatikko.y <= YLAKATTO, `yläreuna ${alku.laatikko.y} px — kartta näkyy kortin päältä`);
+    }
+    const kokeet = [
+      ['kuva', sisalla.kuva], ['ylärivi', sisalla.ylarivi], ['otsikko', sisalla.otsikko],
+      ['teksti', sisalla.teksti], ['ulkopuoli', ulkona],
+    ];
     for (const [mista, piste] of kokeet) {
       if (!piste) { tieto(`${n.nimi} / ${korttinimi} / ${mista}`, 'ei mitattavaa pistettä'); continue; }
       // eslint-disable-next-line no-await-in-loop

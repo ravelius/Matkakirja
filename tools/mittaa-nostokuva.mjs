@@ -234,12 +234,16 @@ const MITTAA = async () => {
     return { x: r.x, y: r.y, width: r.width, height: r.height };
   };
   const ennen = laatikko(img);
+  const kortti1 = document.querySelector('.nostokuva-kortti');
+  const kortinYlaV1 = kortti1.getBoundingClientRect().top;
   lisaa.click();
   const jalkeen = laatikko(img);
   const kortti = document.querySelector('.nostokuva-kortti');
   return {
     ennen,
     jalkeen,
+    kortinYlaV1,
+    kortinYlaV2: kortti.getBoundingClientRect().top,
     sama: document.querySelector('.nostokuva-img') === img,
     nuolia: kortti.querySelectorAll('.skandaali-kuvanuoli, .hetki-kuvanuoli').length,
     pisteita: kortti.querySelectorAll('.elaintaky-karuselli-piste').length,
@@ -305,7 +309,7 @@ async function main() {
         const nolla = ero.every((d) => d === 0) && tulos.sama && tulos.vaihe2;
         if (!nolla) virheita += 1;
         const luku = (r) => `${r.x.toFixed(2)},${r.y.toFixed(2)} ${r.width.toFixed(2)}x${r.height.toFixed(2)}`;
-        console.log(`${nolla ? 'OK   ' : 'EI   '} ${otsake}  ennen ${luku(tulos.ennen)}  jälkeen ${luku(tulos.jalkeen)}  ero ${ero.join(',')}  nuolia ${tulos.nuolia} pisteitä ${tulos.pisteita}`);
+        console.log(`${nolla ? 'OK   ' : 'EI   '} ${otsake}  ennen ${luku(tulos.ennen)}  jälkeen ${luku(tulos.jalkeen)}  ero ${ero.join(',')}  nuolia ${tulos.nuolia} pisteitä ${tulos.pisteita}  kortinYla v1 ${tulos.kortinYlaV1.toFixed(1)} v2 ${tulos.kortinYlaV2.toFixed(1)} delta ${(tulos.kortinYlaV1 - tulos.kortinYlaV2).toFixed(1)}`);
       }
       await konteksti.close();
     }
