@@ -86,6 +86,23 @@ on:
           paljastus-1, mannerivihje-1). Tyhjä = kaikki kahdeksan.
         required: false
         default: ''
+      malli:
+        description: >-
+          ElevenLabsin malli. v2 on nykyinen pelissä kuuluva ääni ilman
+          tageja; v3 ymmärtää hakasulkutagit ([excited], [breathless])
+          ja on omistajan 12.9.2026 kokeilu.
+        required: true
+        type: choice
+        default: 'eleven_multilingual_v2'
+        options: ['eleven_multilingual_v2', 'eleven_v3']
+      vakaus:
+        description: >-
+          Vakaus samalla sanalla kuin ElevenLabsin sivulla. Tyhjä =
+          mallin oletus (0,5).
+        required: false
+        type: choice
+        default: ''
+        options: ['', 'creative', 'natural', 'robust']
       pakota:
         description: >-
           Generoi uudelleen, vaikka tiedosto on jo ämpärissä. Tarvitaan
@@ -199,6 +216,8 @@ jobs:
         if: ${{ inputs.toiminto != 'aanet' }}
         env:
           REPLIIKIT: ${{ inputs.repliikit }}
+          PULU_MALLI: ${{ inputs.malli }}
+          PULU_VAKAUS: ${{ inputs.vakaus }}
         run: |
           set -euo pipefail
           if [ -n "$REPLIIKIT" ]; then
@@ -214,6 +233,8 @@ jobs:
           AANI: ${{ inputs.aani }}
           REPLIIKIT: ${{ inputs.repliikit }}
           PAKOTA: ${{ inputs.pakota }}
+          PULU_MALLI: ${{ inputs.malli }}
+          PULU_VAKAUS: ${{ inputs.vakaus }}
         run: |
           set -euo pipefail
           liput=""

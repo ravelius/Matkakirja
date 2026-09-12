@@ -193,11 +193,32 @@ const PUHE_OSOITE = `${API}/v1/text-to-speech`;
  * ffmpeg-tempo on 1,0 (ks. MIKSI TEMPO TEHDÄÄN FFMPEGILLÄ — pätee vain
  * v3:lle, jolla ei ole speed-säädintä).
  */
-const MALLI = 'eleven_multilingual_v2';
+/*
+ * MALLI JA VAKAUS OVAT AJOKOHTAISIA (omistaja 12.9.2026: *"kokeillaan
+ * toista ääntä pululle … siinä täytyy käyttää v3 moottoria eleven
+ * labsissa. silloin siihen voi laittaa ne tunnelma tagit ja niitä
+ * samoja tageja voi sitten ohjata myös pulun animaatiolle. stability:
+ * natural."*).
+ *
+ * MIKSI YMPÄRISTÖSTÄ EIKÄ KOODIIN KOVAKOODATTUNA: 6.9.2026 tehty
+ * v2-valinta oli omistajan kuuntelupäätös, eikä sitä kumota ennen kuin
+ * uusi ääni on kuultu pelissä. Ajo voi siis vaihtaa mallin ja vakauden
+ * ilman että kumpikaan linjaus katoaa — oletus on yhä se, mikä pelissä
+ * nyt kuuluu. Kun omistaja valitsee, oletukset muutetaan tässä.
+ *
+ * VAKAUS ON NIMI EIKÄ LUKU. v3:n käyttöliittymässä säädin on
+ * Creative / Natural / Robust, ja rajapinta ottaa luvun — nimet
+ * käännetään VAKAUDET-taulussa, jotta ajon syöte on sama sana, jonka
+ * omistaja näkee ElevenLabsin sivulla.
+ */
+const VAKAUDET = Object.freeze({ creative: 0, natural: 0.5, robust: 1 });
+const MALLI = process.env.PULU_MALLI ?? 'eleven_multilingual_v2';
 /** "Dr. Von - Quirky, Mad Scientist" (omistajan valinta 6.9.2026, haettu --haku "Dr. Von"). */
 export const PULU_AANI_OLETUS = process.env.PULU_AANI ?? 'yjJ45q8TVCrtMhEKurxY';
 const TAGIT_KAYTOSSA = MALLI === 'eleven_v3';
-const STABILITY = 0.5;
+const STABILITY = process.env.PULU_VAKAUS
+  ? (VAKAUDET[process.env.PULU_VAKAUS] ?? Number(process.env.PULU_VAKAUS))
+  : 0.5;
 const SIMILARITY = 0.75;
 /** Tyylin voimakkuus: v2:lla nolla (omistajan säätö), v3:lla 0,6. */
 const STYLE = TAGIT_KAYTOSSA ? 0.6 : 0;

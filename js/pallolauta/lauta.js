@@ -1990,6 +1990,25 @@ export async function avaaPallolauta(ui) {
      */
     if (valikkoSulkeutuiNapautuksesta()) { korttiOliAuki = false; return; }
     if (korttiOliAuki) { korttiOliAuki = false; return; }
+    /*
+     * LINSSIN AIKANA VAIN LINSSIN OMA MERKKI AVAA MITÄÄN (omistaja
+     * 12.9.2026, sanatarkasti: *"Ja kartalta ei saa voida klikata
+     * mitään muita kohteita kuin niitä vihreitä kohteita"*).
+     *
+     * YKSI PORTTI, EI KYMMENTÄ CSS-SÄÄNTÖÄ. Linssin ajan pelin omat
+     * lappuset ovat piilossa (css/aikajana.css, css/satelliitti.css),
+     * mutta PIILOTTAMINEN EI SULJE OSUMAA: näkymätön osumalaatikko otti
+     * napautuksen yhä vastaan — mitattu 12.9.2026 satelliittilinssissä,
+     * jossa poltetun eläintäyn kortti aukesi tyhjältä kartalta, ja sama
+     * vika löytyi jo v1789:ssä. Kaikki muut polut (kohdemerkit,
+     * kaupungit ja niiden kamerasukellus, nostot, eläintäyt,
+     * kohtaamispiste, nimimuste) suljetaan siis tässä yhdessä kohdassa.
+     */
+    if (linssiPaalla()) {
+      const merkki = lahinLinssimerkki(lat, lng);
+      if (merkki) { heraa(); merkki.napautus(merkki); }
+      return;
+    }
     const kohde = lahinKohde(lat, lng);
     if (kohde) { napautaKohde(kohde); return; }
     const linssimerkki = lahinLinssimerkki(lat, lng);
@@ -2262,6 +2281,9 @@ export async function avaaPallolauta(ui) {
       if (eleet.sormet.nipistys) return;
       // Valikon sulku ei avaa kaupunkia (sama sääntö kuin pinnalla).
       if (valikkoSulkeutuiNapautuksesta()) { korttiOliAuki = false; return; }
+      // Linssin aikana pallon pisteetkin kulkevat pinnan portin kautta,
+      // joka päästää läpi vain linssin oman merkin (ks. napautaPintaan).
+      if (linssiPaalla()) { napautaPintaan(d.lat, d.lon); return; }
       // Askelhelmi ja valo ovat koristeita: napautus niistä menee pinnalle.
       if (d.laji === 'helmi' || d.laji === 'valo') napautaPintaan(d.lat, d.lon);
       else if (korttiOliAuki) korttiOliAuki = false;
