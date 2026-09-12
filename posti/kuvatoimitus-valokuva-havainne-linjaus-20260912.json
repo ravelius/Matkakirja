@@ -1,0 +1,3101 @@
+{
+  "receivedAt": "2026-09-12T07:21:13.355573+00:00",
+  "sourceCommit": "c45a7d9cdf216ad97debb65d3fe1a55c33ee5bd1",
+  "sourceFile": "posti/fable-vanha.md",
+  "sourceHeading": "2026-09-12 07:30 UTC — jokaiseen nostoon myös OIKEA VALOKUVA",
+  "count": 385,
+  "policy": {
+    "desired": "illustration plus at least one authentic public-source photo per target where suitable photo exists",
+    "defaultOrder": [
+      "illustration",
+      "authentic-photo"
+    ],
+    "defaultPlacement": "carousel",
+    "longStoryOption": "inline-later-with-explicit-placement",
+    "photoAuthenticity": "Label a present-day location or surviving object precisely; never imply it documents an old event",
+    "photoUnavailable": "Record searched sources and concrete reason; no fabricated photograph",
+    "preserveDeliveredAssets": true
+  },
+  "items": [
+    {
+      "key": "EST:maasto:suurmunamagi",
+      "name": "Suur Munamägi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:maasto:itameri",
+      "name": "Itämeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:maasto:suomenlahti",
+      "name": "Suomenlahti",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:tartu-ulikool",
+      "name": "Tartun yliopisto",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:narvan-linnus",
+      "name": "Narvan linnus",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:kuressaaren-linna",
+      "name": "Kuressaaren linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:kopu-tuletorn",
+      "name": "Kõpun majakka",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:kihnu",
+      "name": "Kihnu",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:parnu",
+      "name": "Pärnu",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:matsalu",
+      "name": "Matsalu",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:struven-kaari",
+      "name": "Struven kaari",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:skandaali:skandaali-koirapaivien-kuningas",
+      "name": "Koirapäiväkuningas",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:skandaali:skandaali-siivettoman-ruokin-loppu",
+      "name": "Eldey 1844",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:maasto:hvannadalshnukur",
+      "name": "Hvannadalshnúkur",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:maasto:gronlanninmeri",
+      "name": "Grönlanninmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:maasto:jorsa",
+      "name": "Þjórsá",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:thingvellir",
+      "name": "Þingvellir",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:reykholt",
+      "name": "Reykholt",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:geysir",
+      "name": "Geysir",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:eiriksstadir",
+      "name": "Eiríksstaðir",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:holar",
+      "name": "Hólar",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:heimaey",
+      "name": "Heimaey",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:latrabjarg",
+      "name": "Látrabjarg",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:lakagigar",
+      "name": "Lakagígar",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:maasto:snezka",
+      "name": "Sněžka",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:maasto:labe",
+      "name": "Labe",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:maasto:vltava",
+      "name": "Vltava",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:kutna-hora",
+      "name": "Kutná Hora",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:cesky-krumlov",
+      "name": "Český Krumlov",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:plzensky-prazdroj",
+      "name": "Plzeňský Prazdroj",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:mendelin-luostari",
+      "name": "Mendelin luostari",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:litomysl",
+      "name": "Litomyšl",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:konesprezna-draha",
+      "name": "Hevosrautatie",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:jablonec",
+      "name": "Jablonec nad Nisou",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:decin",
+      "name": "Děčín",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:maasto:halti",
+      "name": "Halti",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:maasto:pohjanlahti",
+      "name": "Pohjanlahti",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:maasto:suomenlahti",
+      "name": "Suomenlahti",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:maasto:kemijoki",
+      "name": "Kemijoki",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:olavinlinna",
+      "name": "Olavinlinna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:turunlinna",
+      "name": "Turun linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:vanharauma",
+      "name": "Vanha Rauma",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:verla",
+      "name": "Verla",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:petajavedenvanhakirkko",
+      "name": "Petäjäveden vanha kirkko",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:sammallahdenmaki",
+      "name": "Sammallahdenmäki",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:kerimaenkirkko",
+      "name": "Kerimäen kirkko",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:bomarsund",
+      "name": "Bomarsund",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:maasto:kebnekaise",
+      "name": "Kebnekaise",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:maasto:itameri",
+      "name": "Itämeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:maasto:pohjanlahti",
+      "name": "Pohjanlahti",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:maasto:gotaalv",
+      "name": "Göta älv",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:visby",
+      "name": "Visby",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:gamla-uppsala",
+      "name": "Gamla Uppsala",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:birka",
+      "name": "Birka",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:falunin-kaivos",
+      "name": "Falunin kaivos",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:gota-kanava",
+      "name": "Göta-kanava",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:vadstenan-luostari",
+      "name": "Vadstenan luostari",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:kiruna",
+      "name": "Kiruna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:ales-stenar",
+      "name": "Ales stenar",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:maasto:mllehj",
+      "name": "Møllehøj",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:maasto:pohjanmeri",
+      "name": "Pohjanmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:maasto:itameri",
+      "name": "Itämeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:roskilden-tuomiokirkko",
+      "name": "Roskilden tuomiokirkko",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:kronborg",
+      "name": "Kronborg",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:jellingin-kivet",
+      "name": "Jellingin kivet",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:ribe",
+      "name": "Ribe",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:trelleborg-slagelse",
+      "name": "Trelleborg",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:skagen",
+      "name": "Skagen",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:frederiksborgin-linna",
+      "name": "Frederiksborgin linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:storebaeltin-silta",
+      "name": "Storebæltin silta",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:maasto:montblanc",
+      "name": "Mont Blanc",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:maasto:vignemale",
+      "name": "Vignemale",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:maasto:valimeri",
+      "name": "Välimeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:maasto:biskajanlahti",
+      "name": "Biskajanlahti",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:maasto:loire",
+      "name": "Loire",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:maasto:rhone",
+      "name": "Rhône",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:kohde:mont-saint-michel",
+      "name": "Mont-Saint-Michel",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:kohde:carcassonnen-linnoituskaupunki",
+      "name": "Carcassonnen linnoituskaupunki",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:kohde:lascaux",
+      "name": "Lascaux",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:kohde:chartresin-katedraali",
+      "name": "Chartresin katedraali",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:kohde:pont-du-gard",
+      "name": "Pont du Gard",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:kohde:carnacin-kivirivit",
+      "name": "Carnacin kivirivit",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:skandaali:skandaali-thiess-ihmissusi",
+      "name": "Jumalan koira",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:maasto:gaizinkalns",
+      "name": "Gaiziņkalns",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:maasto:itameri",
+      "name": "Itämeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:maasto:vainajoki",
+      "name": "Väinäjoki",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:rundale",
+      "name": "Rundālen palatsi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:cesis",
+      "name": "Cēsisin linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:turaidan-ruusu",
+      "name": "Turaidan ruusu",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:liepaja",
+      "name": "Liepāja",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:sabile",
+      "name": "Sabile",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:jelgava",
+      "name": "Jelgava",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:daugavpilsin-linnoitus",
+      "name": "Daugavpilsin linnoitus",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:engure",
+      "name": "Enguren luontopuisto",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:maasto:groglockner",
+      "name": "Großglockner",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:maasto:wildspitze",
+      "name": "Wildspitze",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:maasto:tonava",
+      "name": "Tonava",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:maasto:inn",
+      "name": "Inn",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:kohde:hallstatt",
+      "name": "Hallstatt",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:kohde:melkin-luostari",
+      "name": "Melkin luostari",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:kohde:hohensalzburg",
+      "name": "Hohensalzburgin linnoitus",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:kohde:semmeringin-rata",
+      "name": "Semmeringin rata",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:kohde:mauthausen",
+      "name": "Mauthausen",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:kohde:durnstein",
+      "name": "Dürnstein",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:kohde:carnuntum",
+      "name": "Carnuntum",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:kohde:eisriesenwelt",
+      "name": "Eisriesenwelt",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:maasto:dufourspitze",
+      "name": "Dufourspitze",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:maasto:matterhorn",
+      "name": "Matterhorn",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:maasto:jungfrau",
+      "name": "Jungfrau",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:maasto:rein",
+      "name": "Rein",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:maasto:rhone",
+      "name": "Rhône",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:kohde:kapellbrucke",
+      "name": "Kapellbrücke",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:kohde:stiftsbibliothek",
+      "name": "Stiftsbibliothek",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:kohde:chillon",
+      "name": "Chillonin linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:kohde:gotthardin-tunneli",
+      "name": "Gotthardin tunneli",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:kohde:grand-st-bernard",
+      "name": "Suuren Pyhän Bernhardin hospitaali",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:kohde:zytglogge",
+      "name": "Zytglogge",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:kohde:la-chaux-de-fonds",
+      "name": "La Chaux-de-Fonds",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:kohde:gruyeres",
+      "name": "Gruyères",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:skandaali:skandaali-pigottin-vaarennetyt-kirjeet",
+      "name": "Pigottin kirjeet",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:skandaali:skandaali-parnellin-lankeemus",
+      "name": "Parnell",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:maasto:carrauntoohil",
+      "name": "Carrauntoohil",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:maasto:irlanninmeri",
+      "name": "Irlanninmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:maasto:shannon",
+      "name": "Shannon",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:kohde:newgrange",
+      "name": "Newgrange",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:kohde:taran-kukkula",
+      "name": "Tarán kukkula",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:kohde:clonmacnoise",
+      "name": "Clonmacnoise",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:kohde:rock-of-cashel",
+      "name": "Rock of Cashel",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:kohde:skellig-michael",
+      "name": "Skellig Michael",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:kohde:ceide-fields",
+      "name": "Céide Fields",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:kohde:moherin-kalliot",
+      "name": "Moherin kalliot",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:kohde:kilkennyn-linna",
+      "name": "Kilkennyn linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:skandaali:skandaali-lituanican-viimeinen-lento",
+      "name": "Lituanica",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:maasto:aukstojas",
+      "name": "Aukštojas",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:maasto:itameri",
+      "name": "Itämeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:maasto:nemunas",
+      "name": "Nemunas",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:kohde:trakain-saarilinna",
+      "name": "Trakain saarilinna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:kohde:kernave",
+      "name": "Kernavė",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:kohde:ristien-kukkula",
+      "name": "Ristien kukkula",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:kohde:kuurinkynnas",
+      "name": "Kuurinkynnäs",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:kohde:palangan-meripihkamuseo",
+      "name": "Palangan meripihkamuseo",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:kohde:rumsiskes",
+      "name": "Rumšiškės",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:kohde:grutas-puisto",
+      "name": "Grūtasin puisto",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:kohde:yhdeksas-fortti",
+      "name": "Yhdeksäs fortti",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "BIH:maasto:maglic",
+      "name": "Maglić",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "BIH:maasto:adrianmeri",
+      "name": "Adrianmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "BIH:elaintaky:elaintaky-BIH",
+      "name": "tornjak",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:skandaali:skandaali-oera-linda-kasikirjoitus",
+      "name": "Oera Linda",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:skandaali:skandaali-van-meegerenin-vermeerit",
+      "name": "Van Meegeren",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:skandaali:skandaali-naundorff-delftin-valekuningas",
+      "name": "Naundorff",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:maasto:vaalserberg",
+      "name": "Vaalserberg",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:maasto:pohjanmeri",
+      "name": "Pohjanmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:maasto:maas",
+      "name": "Maas",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:kohde:woudagemaal",
+      "name": "Woudagemaal",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:kohde:deltatyot",
+      "name": "Deltatyöt",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:kohde:vredespaleis",
+      "name": "Vredespaleis",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:kohde:domtoren",
+      "name": "Domtoren",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:kohde:bourtange",
+      "name": "Bourtange",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:kohde:giethoorn",
+      "name": "Giethoorn",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:kohde:krollermuller",
+      "name": "Kröller-Müllerin museo",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:kohde:nijmegen",
+      "name": "Nijmegen",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:skandaali:skandaali-portugalilaisen-nunnan-kirjeet",
+      "name": "Nunnan kirjeet",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:maasto:torre",
+      "name": "Torre",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:maasto:atlantti",
+      "name": "Atlantti",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:maasto:tejo",
+      "name": "Tejo",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:maasto:douro",
+      "name": "Douro",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:kohde:sintra",
+      "name": "Sintra",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:kohde:batalha",
+      "name": "Batalhan luostari",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:kohde:tomar",
+      "name": "Tomarin luostari",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:kohde:guimaraes",
+      "name": "Guimarães",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:kohde:almendres",
+      "name": "Almendresin kivikehä",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:kohde:saovicente",
+      "name": "São Vicenten niemi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:kohde:elvas",
+      "name": "Elvas",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:kohde:obidos",
+      "name": "Óbidos",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ROU:skandaali:skandaali-strousbergin-rautatieskandaali",
+      "name": "Strousberg",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ROU:maasto:negoiu",
+      "name": "Negoiu",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ROU:maasto:mustameri",
+      "name": "Mustameri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ROU:maasto:tonava",
+      "name": "Tonava",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GBR:kohde:crystal-palace",
+      "name": "Crystal Palace",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GBR:maasto:bennevis",
+      "name": "Ben Nevis",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GBR:maasto:snowdon",
+      "name": "Snowdon",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GBR:maasto:pohjanmeri",
+      "name": "Pohjanmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GBR:maasto:irlanninmeri",
+      "name": "Irlanninmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GBR:maasto:thames",
+      "name": "Thames",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GBR:kohde:stonehenge",
+      "name": "Stonehenge",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GBR:kohde:hadrianuksen-muuri",
+      "name": "Hadrianuksen muuri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GBR:kohde:skara-brae",
+      "name": "Skara Brae",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GBR:kohde:ironbridge",
+      "name": "Ironbridge",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GBR:kohde:bathin-roomalaiset-kylpylat",
+      "name": "Bathin roomalaiset kylpylät",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "HUN:skandaali:skandaali-pyhan-kruunun-varkaus-1440",
+      "name": "Kruunuvarkaus 1440",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:skandaali:skandaali-gjest-baardsen-mestarivaras",
+      "name": "Gjest Baardsen",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:maasto:galdhpiggen",
+      "name": "Galdhøpiggen",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:maasto:norjanmeri",
+      "name": "Norjanmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:maasto:barentsinmeri",
+      "name": "Barentsinmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:maasto:glomma",
+      "name": "Glomma",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:kohde:urnes",
+      "name": "Urnesin sauvakirkko",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:kohde:roros",
+      "name": "Røros",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:kohde:altankalliopiirrokset",
+      "name": "Altan kalliopiirrokset",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:kohde:nordkapp",
+      "name": "Nordkapp",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:kohde:nidaros",
+      "name": "Nidarosin tuomiokirkko",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:kohde:vemork",
+      "name": "Vemork",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:kohde:flamsbana",
+      "name": "Flåmsbana",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NOR:kohde:eidsvoll",
+      "name": "Eidsvollin rakennus",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:skandaali:skandaali-walbrzychin-kultajuna",
+      "name": "Kultajuna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:skandaali:skandaali-prokoszin-kronikka",
+      "name": "Prokoszin kronikka",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:maasto:rysy",
+      "name": "Rysy",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:maasto:sniezka",
+      "name": "Śnieżka",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:maasto:itameri",
+      "name": "Itämeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:maasto:veiksel",
+      "name": "Veiksel",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:maasto:odra",
+      "name": "Odra",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:kohde:malbork",
+      "name": "Malborkin linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:kohde:auschwitz",
+      "name": "Auschwitz-Birkenau",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:kohde:jasnagora",
+      "name": "Jasna Góra",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:kohde:zamosc",
+      "name": "Zamość",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:kohde:westerplatte",
+      "name": "Westerplatte",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:kohde:gniezno",
+      "name": "Gniezno",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:kohde:elblaginkanava",
+      "name": "Elblągin kanava",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "POL:kohde:krzemionki",
+      "name": "Krzemionki",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:skandaali:skandaali-potemkinin-kulissikylat",
+      "name": "Kulissikylät",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:skandaali:skandaali-saitafernesin-tiaara",
+      "name": "Tiaarahuijaus",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:skandaali:skandaali-velesin-kirja",
+      "name": "Velesin kirja",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:maasto:hoverla",
+      "name": "Hoverla",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:maasto:mustameri",
+      "name": "Mustameri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:maasto:asovanmeri",
+      "name": "Asovanmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:maasto:dnepr",
+      "name": "Dnepr",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:maasto:dnestr",
+      "name": "Dnestr",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:kohde:kamjanets-podilskyin-linna",
+      "name": "Kamjanets-Podilskyin linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:kohde:tsernobylin-ydinvoimala",
+      "name": "Tšernobylin ydinvoimala",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:kohde:hersonesos",
+      "name": "Hersonesos",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:kohde:lviv",
+      "name": "Lviv",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:kohde:hortytsja",
+      "name": "Hortytsja",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:kohde:poltavan-taistelu",
+      "name": "Poltavan taistelu",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:kohde:sofijivkan-puisto",
+      "name": "Sofijivkan puisto",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "UKR:kohde:derzhprom",
+      "name": "Derzhprom",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ITA:skandaali:skandaali-modiglianin-paat-1984",
+      "name": "Modiglianin päät",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ITA:skandaali:skandaali-cagliostro-san-leo",
+      "name": "Cagliostro",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ITA:maasto:adrianmeri",
+      "name": "Adrianmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ITA:maasto:tyrrhenanmeri",
+      "name": "Tyrrhenanmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ITA:maasto:ligurianmeri",
+      "name": "Ligurianmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:skandaali:skandaali-sonja-kultakasi",
+      "name": "Sonja Kultakäsi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:maasto:elbrus",
+      "name": "Elbrus",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:maasto:narodnaja",
+      "name": "Narodnaja",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:maasto:barentsinmeri",
+      "name": "Barentsinmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:maasto:jaameri",
+      "name": "Jäämeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:maasto:ohotanmeri",
+      "name": "Ohotanmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:maasto:beringinmeri",
+      "name": "Beringinmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:maasto:volga",
+      "name": "Volga",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:maasto:ob",
+      "name": "Ob",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:kohde:kizhin-pogosta",
+      "name": "Kizhin pogosta",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:kohde:solovetskin-luostari",
+      "name": "Solovetskin luostari",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:kohde:kazanin-kreml",
+      "name": "Kazanin kreml",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:kohde:veliki-novgorod",
+      "name": "Veliki Novgorod",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:kohde:kolan-syvareika",
+      "name": "Kolan syväreikä",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:kohde:tunguskan-rajahdys",
+      "name": "Tunguskan räjähdys",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:kohde:tobolskin-kreml",
+      "name": "Tobolskin kreml",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "RUS:kohde:jasnaja-poljana",
+      "name": "Jasnaja Poljana",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "HRV:skandaali:skandaali-zrinski-frankopan-salaliitto",
+      "name": "Zrinski-Frankopan",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:maasto:mulhacen",
+      "name": "Mulhacén",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:maasto:aneto",
+      "name": "Aneto",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:maasto:valimeri",
+      "name": "Välimeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:maasto:tajo",
+      "name": "Tajo",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:maasto:ebro",
+      "name": "Ebro",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:kohde:santiago-de-compostela",
+      "name": "Santiago de Compostela",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:kohde:segovian-akvedukti",
+      "name": "Segovian akvedukti",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:kohde:altamiran-luola",
+      "name": "Altamiran luola",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:kohde:toledo",
+      "name": "Toledo",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:kohde:cordoban-moskeijakatedraali",
+      "name": "Córdoban moskeijakatedraali",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:kohde:las-medulas",
+      "name": "Las Médulas",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:kohde:meridan-roomalainen-teatteri",
+      "name": "Méridan roomalainen teatteri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ESP:kohde:salamancan-yliopisto",
+      "name": "Salamancan yliopisto",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "TUR:skandaali:skandaali-karun-aarre",
+      "name": "Karun-aarre",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "TUR:kohde:halikarnassos",
+      "name": "Halikarnassoksen mausoleumi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "TUR:kohde:pergamonin-alttari",
+      "name": "Pergamonin alttari",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "TUR:maasto:marmaranmeri",
+      "name": "Marmaranmeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "TUR:maasto:valimeri",
+      "name": "Välimeri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "TUR:maasto:frat",
+      "name": "Fırat",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "TUR:elaintaky:elaintaky-TUR",
+      "name": "angoravuohi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "GRC:kohde:rodoksen-kolossi",
+      "name": "Rodoksen kolossi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:kohde:bregenzin-jarvinayttamo",
+      "name": "Bregenzin järvinäyttämö",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:kohde:erzberg",
+      "name": "Erzberg",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "AUT:kohde:krimmlin-vesiputoukset",
+      "name": "Krimmlin vesiputoukset",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "BGR:kohde:belogradtsik",
+      "name": "Belogradtšikin kalliot",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "BGR:kohde:nesebar",
+      "name": "Nesebar",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "BIH:kohde:blidinje",
+      "name": "Blidinjen puisto",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "BIH:kohde:bobovac",
+      "name": "Bobovac",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:kohde:landwasserin-viadukti",
+      "name": "Landwasserin viadukti",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:kohde:reininputous",
+      "name": "Reininputous",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CHE:kohde:rutli",
+      "name": "Rütlin niitty",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:boubin",
+      "name": "Boubín",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:jachymov",
+      "name": "Jáchymov",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:lednice",
+      "name": "Lednice ja Valtice",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:moravskykras",
+      "name": "Moravský kras",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:olomouc",
+      "name": "Olomoucin Kolminaisuus",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "CZE:kohde:tabor",
+      "name": "Tábor",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:billund",
+      "name": "Billund",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:egeskov",
+      "name": "Egeskovin linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:lindholm-hoje",
+      "name": "Lindholm Høje",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:mons-klint",
+      "name": "Møns Klint",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "DNK:kohde:tollundin-mies",
+      "name": "Tollundin mies",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:emajogi",
+      "name": "Emajoki",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:haapsalu",
+      "name": "Haapsalu",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:kaali",
+      "name": "Kaalin kraatterit",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:lahemaa",
+      "name": "Lahemaa",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:ontika",
+      "name": "Ontikan klintti",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:peipsi",
+      "name": "Peipsijärvi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "EST:kohde:rakvere",
+      "name": "Rakvere",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:hameenlinna",
+      "name": "Hämeen linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:koli",
+      "name": "Koli",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:kultala",
+      "name": "Kultala",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:ruotsinsalmi",
+      "name": "Ruotsinsalmi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:saimaa",
+      "name": "Saimaa",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FIN:kohde:saimaankanava",
+      "name": "Saimaan kanava",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:kohde:avignonin-paavinpalatsi",
+      "name": "Avignonin paavinpalatsi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:kohde:bayeux-seinavaate",
+      "name": "Bayeux'n seinävaate",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:kohde:chambord",
+      "name": "Chambordin linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:kohde:douaumont",
+      "name": "Douaumontin luukammio",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "FRA:kohde:millaun-silta",
+      "name": "Millaun silta",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:kohde:croagh-patrick",
+      "name": "Croagh Patrick",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:kohde:dun-aonghasa",
+      "name": "Dún Aonghasa",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "IRL:kohde:glendalough",
+      "name": "Glendalough",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:dettifoss",
+      "name": "Dettifoss",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:grimsey",
+      "name": "Grímsey",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:myvatn",
+      "name": "Mývatn",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:skalholt",
+      "name": "Skálholt",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:snaefellsjokull",
+      "name": "Snæfellsjökull",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:kohde:vatnajokull",
+      "name": "Vatnajökull",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ISL:skandaali:baskivainot-1615",
+      "name": "Shakkiturkkilainen — kone joka voitti Napoleonin",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:kohde:aukstaitija",
+      "name": "Aukštaitijan puisto",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:kohde:klaipeda",
+      "name": "Klaipėda",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LTU:kohde:puntukas",
+      "name": "Puntukas",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:aglona",
+      "name": "Aglonan basilika",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:gluckin-raamattumuseo",
+      "name": "Glückin raamattumuseo",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:kolkan-niemi",
+      "name": "Kolkan niemi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "LVA:kohde:ventas-rumba",
+      "name": "Ventas rumba",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:kohde:afsluitdijk",
+      "name": "Afsluitdijk",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "NLD:kohde:maastricht",
+      "name": "Maastricht",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "PRT:kohde:aveiro",
+      "name": "Aveiro",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ROU:kohde:voronet",
+      "name": "Voronețin luostari",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:kalmarinlinna",
+      "name": "Kalmarin linna",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:karlskrona",
+      "name": "Karlskrona",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:lundintuomiokirkko",
+      "name": "Lundin tuomiokirkko",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:salanhopeakaivos",
+      "name": "Salan hopeakaivos",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:tornionjoki",
+      "name": "Tornionjoki",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "SWE:kohde:vanern",
+      "name": "Vänern",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ATA:maasto:ata-etelanapa-asema",
+      "name": "Amundsen–Scottin asema",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ATA:maasto:ata-vostokin-jarvi",
+      "name": "Vostokin järvi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ATA:maasto:ata-kuivat-laaksot",
+      "name": "McMurdon kuivat laaksot",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ATA:maasto:ata-rossin-jaahylly",
+      "name": "Rossin jäähylly",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ATA:maasto:ata-deception-island",
+      "name": "Deception Island",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ATA:maasto:ata-vernadski",
+      "name": "Vernadskin asema",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-pohjoisnapa",
+      "name": "Pohjoisnapa",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-fram",
+      "name": "Fram jäässä",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-andree",
+      "name": "Andréen vetypallo",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-erebus-terror",
+      "name": "Erebus ja Terror",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-beechey",
+      "name": "Beechey Island",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-luoteisvayla",
+      "name": "Luoteisväylä",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-vega",
+      "name": "Vegan koillisväylä",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-maud",
+      "name": "Maud",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-italia",
+      "name": "Punainen teltta",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-ny-alesund",
+      "name": "Ny-Ålesund",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-cape-columbia",
+      "name": "Cape Columbia",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-papanin",
+      "name": "Jääasema SP-1",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-nautilus",
+      "name": "Nautilus navan alla",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-arktika",
+      "name": "Arktika",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-barneo",
+      "name": "Barneo",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-lomonosov",
+      "name": "Lomonosovin harju",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-huippuvuoret",
+      "name": "Huippuvuoret",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-siemenholvi",
+      "name": "Siemenholvi",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-pyramiden",
+      "name": "Pyramiden",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-novaja-zemlja",
+      "name": "Novaja Zemlja",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-frans-josefin-maa",
+      "name": "Frans Josefin maa",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-ellesmere",
+      "name": "Ellesmeresaari",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-alert",
+      "name": "Alert",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-gronlannin-jaatikko",
+      "name": "Grönlannin jäätikkö",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-camp-century",
+      "name": "Camp Century",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-ilulissat",
+      "name": "Ilulissatin jäävuono",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-merijaa",
+      "name": "Jäämeren merijää",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-thule",
+      "name": "Thulen kulttuuri",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-nenetsit",
+      "name": "Nenetsit",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-saamelaiset",
+      "name": "Saamelaiset",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-wrangel",
+      "name": "Wrangelin saari",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-kuolan-syvareika",
+      "name": "Kuolan syväreikä",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-norilsk",
+      "name": "Norilsk",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-magneettinen-napa",
+      "name": "Magneettinen napa",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    },
+    {
+      "key": "ARK:maasto:ark-utqiagvik",
+      "name": "Utqiaġvik",
+      "photo": "availability-to-verify",
+      "illustration": "check-existing-before-production",
+      "placement": "carousel",
+      "photoUnavailableReason": null
+    }
+  ]
+}

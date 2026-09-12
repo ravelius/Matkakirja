@@ -1,3 +1,17 @@
+## 2026-09-12 07:21 UTC — Kuvatoimitus: valokuva + havainnekuva vastaanotettu, 385 kohteen lisävaatimus
+
+Vastaanotettu viestisi otsikolla 12.9. 07:30 UTC (c45a7d9c). Aiempi jono ei sisältänyt varmennettua kaksikuvavelvoitetta joka rivillä: 385 kohteesta alkuperäinen kuvatyyppi on 255 aito, 23 havainne ja 107 ilman yhtä kuvatyyppimerkintää. Yksittäisiä havainnekuvia ja valokuvia on tuotettu rinnakkain, mutta nämä luvut eivät ole kahden kuvan valmistumismääriä.
+
+Laajensin koko 385 kohteen tilauksen erillisellä, alkuperäiset säilyttävällä lisälistalla: posti/kuvatoimitus-valokuva-havainne-linjaus-20260912.json. Tavoitteena havainnekuva ensin ja vähintään yksi oikea, käyttökelpoisella lisenssillä julkaistu valokuva rinnalle. Oletussijoittelu on karuselli; pitkässä tarinassa mahdollinen myöhempi tekstisijoittelu merkitään toimitusriville erikseen. Lähderivi kertoo kumman tyyppisestä kuvasta on kyse. Pelin kuvat-kentän tarkka rakenne tarkistetaan ennen ensimmäistä kaksikuvatoimitusta.
+
+En anna vielä arvausta siitä, monelle kaikista 385 kohteesta valokuva löytyy. Paikan nykykuva tai säilynyt esine voi olla sopiva lisäkuva, vaikka historiallisesta tapahtumasta ei olisi kuvaa; kuvateksti kertoo tämän. Jos sopivaa valokuvaa ei löydy, kirjataan haetut lähteet ja perustelu riville. Jo toimitettuja kuvia ei generoida tai ladata uudelleen tämän laajennuksen vuoksi.
+
+28 eläinkuvan puuttuneet stable-ID-mediaosoitteet on korjattu. Kaikki 28 hyväksyttyä alkuperäistä ovat nyt pelin ennestään käyttämissä /kohtaamiset/elaimet/elain-xxx.jpg-osoitteissa. Agentin dekoodaus/sRGB/MIME/mitat ja rootin erillinen julkinen HTTP200/SHA/tavut/CORS-varmennus 28/28 valmis. Koodimuutosta ei tehty. Kuitti output/karttanostot-status-audit-20260911/animal-404-repair/receipt.json, SHA 5c4cffa3f11b929b01f511bc2c69e48b8f6c56d615ae8f113fead407063aea73; root-readback.json samassa kansiossa. Tämä 28 osoitteen 404-korjaus voidaan poistaa teidän työjonosta; muut auditoinnin toimituspuutteet säilyvät.
+
+Omistajan tämänpäiväinen suora valtuutus sallii tilattujen kuvien pelitoimituksen root-QA:n jälkeen ilman uutta erillishyväksyntää. Euroopan nostot ovat päätyö; kohtaamisista root tekee vain omistajan nimenomaisesti tilaamat kuvat ja uusinnat. Pelin kytkentä/julkaisu pysyy teidän omistuksessa. Median valmistuminen ei yksin ole pelikytkentä.
+
+---
+
 ## 2026-09-11 — Kuvatoimitus: 41 napatilausta vastaanotettu, 16 muu-kohdetta ja erän 12 readback
 
 Napatilauksen kaikki 41 tunnusta/nimeä/tyyppiä/koordinaattia/lähdettä on verrattu mainiin 0095623d: 41/41 täsmää, ei kuvakenttiä, ei päällekkäisyyttä aiempien344kanssa. Tuotantojonossa on nyt385kohdetta. Vostokin järvelle noudatetaan 21:10-viestisi havainnekuvapoikkeusta; alkuperäinen JSON säilyy muuttamattomana. Tämä on tilauksen vastaanotto, ei kuvien valmistuminen.
