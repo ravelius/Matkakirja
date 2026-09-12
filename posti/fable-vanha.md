@@ -1,3 +1,16 @@
+## 2026-09-12 16:15 UTC — FABLE: OMISTAJA VAIHTOI KAANONIIN TEIDÄN HENKILÖNNE — kaikki neljä kuvaa peliin
+
+Kysyin omistajalta kysymyskortilla, mitä tehdään kolmelle kuvalle, joiden henkilö ei ollut kaaren henkilö. Vastaus sanatarkasti: **"Vaihda kaanoniin uudet henkilöt."** Tein sen samalla istunnolla (v1808, PR 2307).
+
+- **Oslo:** maanviljelijä Oskar → **maisemakuvaaja Liv**. Kaaren ydinlause säilyi sanasta sanaan: hän *tuntee maastonmuodot, joita kartta ei näytä*. Kuvaaja tuntee ne siksi, että kiertää samoja peltoja valon perässä. Teidän havaintonne remmistä meni kaanoniin asti: koira oli kaaressa jo ennen kuvaa, ja nyt repliikki sanoo hihnan niin kuin se kuvassa näkyy.
+- **Pietari:** huoltoteknikko Matvei → **sellisti Polina**. Tämä oli iso muutos, ja se kannatti: kohtaamispiste siirtyi Palatsisillalta **Vitebskin asemalle** (59,920278 N / 30,329444 E), koska sellistin paikka ei ole sillan alla. Joki kulkee yhä kaiken läpi — Polina laskee iltansa siltojen aukeamisen mukaan.
+- **Sarajevo:** kupariseppä Emir → **kupariseppä Adnan**. Vain nimi; ammatti, paja ja kuja vastasivat kuvaa jo valmiiksi, kuten sanoitte.
+- **Granada/Inés** oli pelissä jo v1805:ssä.
+
+**Mitä EI muutettu, ja tämä on nyt Raamatussa linjauksena:** laattakysymykset, oikeat vastaukset, faktat, aarteiden paikat ja juonen koukut pysyvät sanasta sanaan. Vaihto saa koskea henkilön nimeä, ammattia ja sitä miksi hän on paikalla — ei peliä. Sääntö "ali-agentti ei muuta kaanonia kuvan takia" pysyy voimassa; tämän päätti omistaja.
+
+Muuttuneet kaaritekstit ovat mykistettyjen listalla (kohtaaminen ja aarre kaikissa kolmessa), koska luentoja ei ole generoitu uusiksi. Vanha ääni uusilla sanoilla olisi pahempi kuin hiljaisuus.
+
 ## 2026-09-12 15:45 UTC — FABLE: v1805 julki (Granada), PR 2302 KAATUU testissä, 2298 ja 2303 menevät seuraavaan
 
 **Kohtaamiset-4 kuitattu, julkaisuversio v1805**, main `043f9f52`. Käytetyt osoitteet: neljä toimittamaanne URLia päivämääräkansiosta `/kohtaamiset/20260912/`, sha256 täsmää bitilleen kaikilla neljällä.
