@@ -86,11 +86,11 @@ import {
 import { KARTTANIMI_KOOT } from '../karttanimet.js';
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
 import {
-  PALLOKAMERAN_AJO_MS, PALLO_FOV, PALLO_KORKEUS_MAX, PALLON_SALLITTU_VENYTYS,
-  laattojenVenytys, luoPallokamera,
+  PALLOKAMERAN_AJO_MS, PALLOLAUDAN_LEVEYS, PALLO_FOV, PALLO_KORKEUS_MAX,
+  PALLON_SALLITTU_VENYTYS, laattojenVenytys, luoPallokamera,
 } from './kamera.js';
 import { MERKIN_KORKEUS, luoMerkit } from './merkit.js';
-import { NIMIEN_KATTO, luoNimet } from './nimet.js';
+import { luoNimet, nimibudjetti } from './nimet.js';
 import {
   KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, VALON_KORKEUS, VALON_SADE, luoNostot,
 } from './nostot.js';
@@ -2348,9 +2348,17 @@ export async function avaaPallolauta(ui) {
     // Niukka nimijoukko: avauslennolla kaksi päätä, lähtövalinnassa
     // Lontoo (aalto 3A) — muulloin koko lauta budjetilla.
     const vain = lento?.nimet ?? aloitusNimet();
+    /*
+     * NIMIBUDJETTI ZOOMTASOSTA (omistaja 12.9.2026: *"Kaupunki
+     * tekstejä on liikaa näkyvillä uloimmilla zoom tasoilla"*).
+     * Perustelu ja mitatut luvut ovat js/pallolauta/nimet.js:ssä;
+     * täällä se vain yhdistetään CSS2D-kerroksen omaan kattoon.
+     */
+    const korkeusAst = nakyva?.h > 0 ? (nakyva.h * 360) / PALLOLAUDAN_LEVEYS : Infinity;
     const katto = vain
       ? vain.size
-      : Math.min(NIMIEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos.maara));
+      : Math.min(nimibudjetti(korkeusAst),
+        Math.max(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos.maara));
     /*
      * KOHDEKAUPUNGIN LATTIA LADONTAAN (omistaja 8.9.2026): nimen koko
      * ja pisteen säde tulevat samasta laskusta kuin itse piste
