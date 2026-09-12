@@ -37,7 +37,7 @@ import {
   ASETTUMISEN_IKKUNA_MS, AVAUKSEN_MARGINAALI, AVARUUDEN_FOV, AVARUUDEN_TAUSTA,
   ILMAKEHAN_KORKEUS, ILMAKEHAN_VARI, JAAVYOHYKE, NIMIEN_KYNNYS,
   NIMIEN_KYNNYS_POIS, NIMIEN_LUOKKA, VALON_KOMPENSAATIO,
-  ZOOMIN_KAUIN, ZOOMIN_LAHIN, ZOOMIN_POHJA, reliefinAlfa, kompensoiValo, haivytaNavat,
+  ZOOMIN_KAUIN, ZOOMIN_LAHIN, ZOOMIN_POHJA, reliefinAlfa, valokerroin, liuunPysakit,
   avaaAvaruusnakyma, avausKorkeus, halkaisijaRuudulla, maapallonVarit, nimetNakyvat,
   pilvipaino, vyohykeVari, zoomirajat,
 } from '../js/linssit/satelliitti-avaruus.js';
@@ -529,4 +529,106 @@ test('satelliittilinssi avaa ja purkaa avaruusnäkymän', () => {
 test('avaruusnäkymä on huoltokartalla (sw.js)', () => {
   const sw = readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
   assert.ok(sw.includes("'./js/linssit/satelliitti-avaruus.js'"));
+});
+
+/* ══════ 10. pelin oma reliefi pallon pinnaksi (omistaja 12.9.2026) ══ */
+
+/*
+ * Sanatarkasti: *"Katsoitko topografia linssistä, joka on jo aiemmin
+ * luotu peliin? Se varmaan sopisi aika hyvin kartan pohjan
+ * rakentamiseksi pallolle."*
+ */
+
+test('reliefi tulee pelin omasta kuvasta eikä uudesta aineistosta', async () => {
+  const { RELIEFIN_OSOITE } = await import('../js/linssit/satelliitti-avaruus.js');
+  const { TOPOGRAFIA_PALLOKUVA } = await import('../js/packs/linssi-topografia-kuva.js');
+  assert.equal(RELIEFIN_OSOITE, TOPOGRAFIA_PALLOKUVA,
+    'linssi osoittaa eri kuvaan kuin topografia- ja vesistölinssit');
+  // Lisenssiviite säilyy siinä missä se on: paketin omassa otsikossa.
+  const pakkaus = readFileSync(new URL('../js/packs/linssi-topografia-kuva.js', import.meta.url), 'utf8');
+  assert.match(pakkaus, /ETOPO1/);
+  assert.match(pakkaus, /Public domain/);
+});
+
+test('valon vastakaava jakaa pohjoisen ja jättää etelän rauhaan', () => {
+  // Pohjoisnavalla valo on 1 + 0,6 = 1,6-kertainen → kerroin 1/1,6.
+  assert.ok(Math.abs(valokerroin(90) - 1 / 1.6) < 1e-9, String(valokerroin(90)));
+  // Päiväntasaajalla ja etelässä DirectionalLight ei paista: kerroin 1.
+  assert.equal(valokerroin(0), 1);
+  assert.equal(valokerroin(-45), 1);
+  assert.equal(valokerroin(-90), 1);
+  // Monotoninen pohjoiseen päin: ei portaita, jotka näkyisivät raitoina.
+  let edellinen = 1;
+  for (let lat = 0; lat <= 90; lat += 5) {
+    assert.ok(valokerroin(lat) <= edellinen + 1e-12, `kerroin nousi ${lat}°:ssa`);
+    edellinen = valokerroin(lat);
+  }
+  // Sama kaava kuin maapallonVarit-funktiossa polttaa tekstuuriin
+  // (VALON_KOMPENSAATIO): generoitu ja reliefi eivät saa erota.
+  assert.ok(Math.abs(valokerroin(30) - 1 / (1 + VALON_KOMPENSAATIO * Math.sin(Math.PI / 6))) < 1e-12);
+});
+
+test('liu\'un pysäkit kattavat navalta navalle eivätkä hyppää', () => {
+  const p = liuunPysakit(valokerroin);
+  assert.equal(p.length, 181);
+  assert.equal(p[0].t, 0);
+  assert.equal(p[0].lat, 90);
+  assert.equal(p[p.length - 1].t, 1);
+  assert.equal(p[p.length - 1].lat, -90);
+  // Yhden asteen välein, ja liu'un virhe pysäkkien VÄLISSÄ on pieni:
+  // suurin askel on päiväntasaajalla noin 0,01 eli 2,6/255 sävyä.
+  let suurin = 0;
+  for (let i = 1; i < p.length; i += 1) {
+    assert.ok(Math.abs(p[i].lat - p[i - 1].lat - -1) < 1e-9, 'pysäkkiväli ei ole 1°');
+    suurin = Math.max(suurin, Math.abs(p[i].arvo - p[i - 1].arvo));
+  }
+  assert.ok(suurin < 0.015, `liuku hyppää ${suurin}`);
+  // Napojen häivytyskaistalle (6°) osuu kuusi pysäkkiä, ei yhtä.
+  const kaistalla = liuunPysakit(reliefinAlfa).filter((x) => x.arvo > 0 && x.arvo < 1);
+  assert.ok(kaistalla.length >= 8, `häivytyskaistalla vain ${kaistalla.length} pysäkkiä`);
+});
+
+test('napojen häivytys vie reliefin nollaan ennen kuvan omaa reunaa', () => {
+  // Lauta ulottuu −58…76, ja häivytys alkaa ennen molempia reunoja.
+  assert.equal(reliefinAlfa(0), 1);
+  assert.equal(reliefinAlfa(69), 1);
+  assert.equal(reliefinAlfa(-51), 1);
+  assert.ok(reliefinAlfa(73) > 0 && reliefinAlfa(73) < 1, 'pohjoinen ei häivy pehmeästi');
+  assert.ok(reliefinAlfa(-55) > 0 && reliefinAlfa(-55) < 1, 'etelä ei häivy pehmeästi');
+  assert.equal(reliefinAlfa(76), 0);
+  assert.equal(reliefinAlfa(90), 0);
+  assert.equal(reliefinAlfa(-58), 0);
+  assert.equal(reliefinAlfa(-90), 0);
+  // Ja häivytys on monotoninen: ei kuoppia, jotka näkyisivät renkaina.
+  let edellinen = 1;
+  for (let lat = 69; lat <= 77; lat += 0.5) {
+    const nyt = reliefinAlfa(lat);
+    assert.ok(nyt <= edellinen + 1e-9, `häivytys kääntyi ylös ${lat}°:ssa`);
+    edellinen = nyt;
+  }
+});
+
+test('napojen häivytys tehdään alfaliu\'ulla eikä 33 Mt:n taulukolla', () => {
+  const lahde = readFileSync(new URL('../js/linssit/satelliitti-avaruus.js', import.meta.url), 'utf8');
+  /*
+   * 4096 × 2048 on 8,4 miljoonaa pikseliä: getImageData palauttaisi
+   * 33 Mt:n taulukon joka kerta, kun linssi avataan. Rivikohtainen
+   * arvo syntyy kahdella pystyliu'ulla, jotka selain piirtää
+   * näytönohjaimella — ja `destination-in` palauttaa alfan täsmälleen,
+   * koska `multiply` täyttäisi läpinäkyvät navat harmaalla.
+   */
+  assert.ok(!/getImageData\(0, 0, leveys, korkeus\)/.test(lahde),
+    'reliefi luetaan yhä pikseleinä');
+  assert.match(lahde, /globalCompositeOperation = 'multiply'/);
+  assert.match(lahde, /globalCompositeOperation = 'destination-in'/);
+  assert.match(lahde, /globalCompositeOperation = 'destination-out'/);
+  // Blob-osoite eikä base64: 4096 × 2048 -PNG olisi kymmeniä megatavuja.
+  assert.match(lahde, /createObjectURL\(blob\)/);
+  assert.match(lahde, /revokeObjectURL/);
+});
+
+test('reliefiTekstuuri palaa nullina ilman canvasia eikä kaadu', async () => {
+  const { reliefiTekstuuri } = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(await reliefiTekstuuri({}, null, {}), null);
+  assert.equal(await reliefiTekstuuri({}, { createElement: () => ({}) }, {}), null);
 });

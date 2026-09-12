@@ -31,7 +31,7 @@
  *     ikkunasta näkyy sininen pallo. Pinta vaihdetaan linssin ajaksi
  *     GENEROITUUN tekstuuriin (maapallonVarit alla), ilmakehän hehku
  *     kellanruskeasta taivaansiniseen ja taustaväri avaruuden mustaksi.
- *  4. KAPEA ZOOM. Pallo ei saa kadota ruudulta eikä pelaaja sukeltaa
+ *  4. ZOOM. Pallo ei saa kadota ruudulta eikä pelaaja sukeltaa
  *     pintaan: zoomiraja on avauskorkeuden ympärillä
  *     (ZOOMIN_LAHIN/-KAUIN). PYÖRITYS SÄILYY — kohteet etsitään palloa
  *     pyörittämällä, ja se on omistajan linjaus.
@@ -57,6 +57,29 @@
  * joten sen ulkopuoli on maskissa merta. Napajää maalataan siksi omana
  * kerroksenaan 66°:sta navalle, jolloin Etelämanner ja Jäämeren jää
  * tulevat esiin ilman erillistä aineistoa.
+ */
+
+/*
+ * ── KAKSI MUUTOSTA 12.9.2026 (omistajan havainnot 4 ja 5) ─────────
+ *
+ *  4. YKSI ZOOM-TASO LISÄÄ. Sanatarkasti: *"Lisäksi tarvitaan ainakin
+ *     yksi zoom-taso lisää, koska nyt pisteet ovat aivan liian lähellä
+ *     toisiaan."* Kaista 0,55…1,30 × avaus muuttui 0,12…1,30:ksi, ja
+ *     lähimmälle rajalle tuli absoluuttinen pohja (ZOOMIN_POHJA 0,1 ≈
+ *     640 km). Mitattu puhelimella: Etna ja Italian saapas olivat
+ *     11 px:n päässä toisistaan, nyt 102 px; Fuji ja Tokio 2 px, nyt
+ *     26 px. Ks. ZOOMIN_LAHIN.
+ *  5. PELIN OMA RELIEFI PALLON PINNAKSI. Sanatarkasti: *"Katsoitko
+ *     topografia linssistä, joka on jo aiemmin luotu peliin? Se
+ *     varmaan sopisi aika hyvin kartan pohjan rakentamiseksi
+ *     pallolle."* Sopii — ja kuva on jo repossa
+ *     (assets/linssit/topografia-pallo.webp, NOAA ETOPO1, public
+ *     domain). Generoitu vyöhykeväri-Maa EI katoa vaan jää pohjalle,
+ *     koska reliefin navat ovat läpinäkyviä. Ks. luku 2b.
+ *
+ * Nimien kynnys mitattiin samalla uudestaan: leveämmässä kaistassa
+ * 0,72 osui keskelle, ja nimet olisivat syttyneet heti pienestä
+ * nipistyksestä. Ks. NIMIEN_KYNNYS.
  */
 
 import { MAAMASKI } from './ihmisen-matka-maamaski.js';
@@ -515,8 +538,10 @@ export function maapallonTekstuuri(asetukset = {}, doc = globalThis.document) {
  *     maapallonVarit-funktiossa.
  *  3. LATAUS EI SAA VIIVYTTÄÄ AVAUSTA. Linssi avautuu generoituun
  *     Maahan heti, ja reliefi vaihtuu tilalle sitten kun se on ladattu.
- *     Jos lataus ei onnistu (offline, kuva puuttuu), näkymä jää
- *     generoituun Maahan eikä mitään rikkoudu.
+ *     Mitattu 12.9.2026 kontissa (SwiftShader, ohjelmistopiirto):
+ *     lataus + ladonta + blob 817 ms — ja koko sen ajan pallo on jo
+ *     ruudulla. Jos lataus ei onnistu (offline, kuva puuttuu), näkymä
+ *     jää generoituun Maahan eikä mitään rikkoudu.
  *
  * ILMAKEHÄ, TÄHDET JA KIILLON POISTO EIVÄT MUUTU: ne ovat pallon
  * asetuksia eivätkä tekstuurin.
@@ -526,37 +551,18 @@ export function maapallonTekstuuri(asetukset = {}, doc = globalThis.document) {
 export const RELIEFIN_OSOITE = 'assets/linssit/topografia-pallo.webp';
 
 /**
- * Yhdistetyn tekstuurin mitat. 2048 × 1024 on kaksi kertaa generoidun
- * (1024 × 512) tarkkuus ja puolet lähdekuvasta: pallo on ruudulla
- * enimmillään noin 2 500 px leveä, joten tätä tarkempi ei näy, ja
- * 8 Mt RGBA on puhelimelle kohtuullinen.
- */
-export const RELIEFIN_LEVEYS = 2048;
-export const RELIEFIN_KORKEUS = 1024;
-
-/**
- * Valon vastakaava reliefikuvan pikseleihin, rivi riviltä.
+ * Yhdistetyn tekstuurin mitat — LÄHDEKUVAN OMA TARKKUUS.
  *
- * PUHDAS FUNKTIO (tests/satelliitti-avaruus.test.mjs): saa ja palauttaa
- * RGBA-taulukon. Rivi y vastaa leveysastetta 90 − (y + 0,5) / H · 180
- * kuten kaikkialla muuallakin tässä tiedostossa.
+ * MITATTU 12.9.2026 (kaappaus puhelimelta lähimmässä zoomissa):
+ * 2048 px:n tekstuurilla Italia ja Etna olivat selvästi sumeat. Syy on
+ * suoraa laskentaa: lähimmällä sallitulla korkeudella pallon halkaisija
+ * on 1 518 px, joten sen kehä ruudulla on π · 1 518 ≈ 4 770 px 360
+ * asteelle. 2048 px:n tekstuuri venyy siinä 2,3-kertaiseksi; 4096 px:n
+ * venymä on 1,16 eli käytännössä pikselintarkka. Lähdekuva on juuri
+ * 4096 × 2048, joten tätä suuremmasta ei saisi lisää tietoa.
  */
-export function kompensoiValo(data, leveys, korkeus) {
-  const W = Math.max(1, Math.round(leveys));
-  const H = Math.max(1, Math.round(korkeus));
-  for (let y = 0; y < H; y += 1) {
-    const lat = 90 - ((y + 0.5) / H) * 180;
-    const valo = 1 + VALON_KOMPENSAATIO * Math.max(0, Math.sin((lat * Math.PI) / 180));
-    if (valo === 1) continue;
-    for (let x = 0; x < W; x += 1) {
-      const i = (y * W + x) * 4;
-      data[i] /= valo;
-      data[i + 1] /= valo;
-      data[i + 2] /= valo;
-    }
-  }
-  return data;
-}
+export const RELIEFIN_LEVEYS = 4096;
+export const RELIEFIN_KORKEUS = 2048;
 
 /*
  * NAPOJEN HÄIVYTYS — reliefin reuna ei saa olla viiva.
@@ -587,22 +593,72 @@ export function reliefinAlfa(lat) {
   return 1;
 }
 
-/** Häivytys kuvadataan rivi riviltä (ks. RELIEFIN_HAIVYTYS). */
-export function haivytaNavat(data, leveys, korkeus) {
-  const W = Math.max(1, Math.round(leveys));
-  const H = Math.max(1, Math.round(korkeus));
-  for (let y = 0; y < H; y += 1) {
-    const lat = 90 - ((y + 0.5) / H) * 180;
-    const kerroin = reliefinAlfa(lat);
-    if (kerroin >= 1) continue;
-    for (let x = 0; x < W; x += 1) data[(y * W + x) * 4 + 3] *= kerroin;
-  }
-  return data;
+/**
+ * Valon kerroin leveysasteella — VALON_KOMPENSAATIOn käänteisluku.
+ * Puhdas funktio; sekä liuku että testi lukevat tämän.
+ */
+export function valokerroin(lat) {
+  return 1 / (1 + VALON_KOMPENSAATIO * Math.max(0, Math.sin(((Number(lat) || 0) * Math.PI) / 180)));
 }
 
 /**
- * RELIEFI GENEROIDUN MAAN PÄÄLLE. Palauttaa lupauksen data-URLista tai
- * nullista (lataus ei onnistunut, canvasia ei ole).
+ * Liu'un pysäkit: 181 kappaletta eli YHDEN asteen välein navalta
+ * navalle. Yksi aste riittää molemmille liu'uille — valon käyrä on
+ * loiva, ja napojen häivytyskaista on 6° leveä, joten siihen osuu
+ * kuusi pysäkkiä. Puhdas funktio, jotta testi näkee saman taulukon
+ * kuin selain.
+ */
+export function liuunPysakit(arvo, maara = 180) {
+  const ulos = [];
+  for (let i = 0; i <= maara; i += 1) {
+    const t = i / maara;
+    const lat = 90 - t * 180;
+    ulos.push({ t, lat, arvo: arvo(lat) });
+  }
+  return ulos;
+}
+
+/*
+ * ── MIKSI LIUKU EIKÄ PIKSELISILMUKKA ─────────────────────────────
+ *
+ * Valon vastakaava ja napojen häivytys ovat molemmat RIVIKOHTAISIA:
+ * arvo riippuu vain leveysasteesta. 4096 × 2048 -kuvassa se olisi
+ * 8,4 miljoonaa pikseliä ja 33 Mt:n Uint8ClampedArray joka kerta, kun
+ * linssi avataan — puhelimella kohtuuton. Sama tulos syntyy kahdella
+ * pystyliu'ulla, jotka selain piirtää näytönohjaimella.
+ *
+ * MULTIPLY YKSIN EI RIITÄ: `multiply` yhdistää alfat source-overina,
+ * joten läpinäkyvät navat täyttyisivät harmaalla. Siksi kolmas askel
+ * `destination-in` piirtää alkuperäisen kuvan uudestaan ja palauttaa
+ * alfan täsmälleen; vasta sen jälkeen navat häivytetään.
+ */
+function valoLiuku(ctx, leveys, korkeus) {
+  const g = ctx.createLinearGradient(0, 0, 0, korkeus);
+  for (const p of liuunPysakit(valokerroin)) {
+    const v = Math.round(255 * p.arvo);
+    g.addColorStop(p.t, `rgb(${v},${v},${v})`);
+  }
+  ctx.globalCompositeOperation = 'multiply';
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, leveys, korkeus);
+  ctx.globalCompositeOperation = 'source-over';
+}
+
+function napaLiuku(ctx, leveys, korkeus) {
+  const g = ctx.createLinearGradient(0, 0, 0, korkeus);
+  for (const p of liuunPysakit(reliefinAlfa)) {
+    g.addColorStop(p.t, `rgba(0,0,0,${(1 - p.arvo).toFixed(4)})`);
+  }
+  ctx.globalCompositeOperation = 'destination-out';
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, leveys, korkeus);
+  ctx.globalCompositeOperation = 'source-over';
+}
+
+/**
+ * RELIEFI GENEROIDUN MAAN PÄÄLLE. Palauttaa lupauksen osoitteesta
+ * (blob- tai data-URL) tai nullista (lataus ei onnistunut, canvasia ei
+ * ole). Osoite vapautetaan linssin purkaessa (vapautaReliefi).
  *
  * @param {{ leveys?: number, korkeus?: number, osoite?: string }} asetukset
  */
@@ -614,9 +670,20 @@ export function reliefiTekstuuri({
   if (!ctx || !ikkuna?.Image) return Promise.resolve(null);
   kangas.width = leveys;
   kangas.height = korkeus;
-  /* 1. generoitu Maa pohjalle (napajää ja pilvet tulevat tästä) */
-  const perus = maapallonVarit({ leveys, korkeus });
-  ctx.putImageData(new ikkuna.ImageData(perus.data, perus.leveys, perus.korkeus), 0, 0);
+  /*
+   * 1. GENEROITU MAA POHJALLE. Se lasketaan omassa pienessä koossaan
+   * (1024 × 512) ja venytetään: pohja näkyy vain navoilla, joilla se on
+   * sileä jääliuku — venytys ei vie siitä mitään, ja täysikokoisena se
+   * olisi 8,4 miljoonaa pikseliä kohinafunktioita.
+   */
+  const perus = maapallonVarit({});
+  const pohja = doc.createElement('canvas');
+  pohja.width = perus.leveys;
+  pohja.height = perus.korkeus;
+  pohja.getContext('2d').putImageData(
+    new ikkuna.ImageData(perus.data, perus.leveys, perus.korkeus), 0, 0,
+  );
+  ctx.drawImage(pohja, 0, 0, leveys, korkeus);
   return new Promise((valmis) => {
     const kuva = new ikkuna.Image();
     kuva.decoding = 'async';
@@ -627,18 +694,33 @@ export function reliefiTekstuuri({
     kuva.addEventListener('error', () => valmis(null), { once: true });
     kuva.addEventListener('load', () => {
       try {
-        /* 2. reliefi omalle kankaalleen, valo kompensoitu */
+        /* 2. reliefi omalle kankaalleen, valo ja navat liu'uilla */
         const apu = doc.createElement('canvas');
         apu.width = leveys;
         apu.height = korkeus;
         const actx = apu.getContext('2d');
         actx.drawImage(kuva, 0, 0, leveys, korkeus);
-        const kuvadata = actx.getImageData(0, 0, leveys, korkeus);
-        kompensoiValo(kuvadata.data, leveys, korkeus);
-        haivytaNavat(kuvadata.data, leveys, korkeus);
-        actx.putImageData(kuvadata, 0, 0);
+        valoLiuku(actx, leveys, korkeus);
+        // Alfa takaisin täsmälleen: multiply täytti navat harmaalla.
+        actx.globalCompositeOperation = 'destination-in';
+        actx.drawImage(kuva, 0, 0, leveys, korkeus);
+        actx.globalCompositeOperation = 'source-over';
+        napaLiuku(actx, leveys, korkeus);
         /* 3. päälle — läpinäkyvät navat jättävät generoidun Maan näkyviin */
         ctx.drawImage(apu, 0, 0);
+        /*
+         * BLOB EIKÄ BASE64. 4096 × 2048 -PNG on base64-merkkijonona
+         * kymmeniä megatavuja, ja se kulkisi JS-muistin kautta;
+         * blob-osoite on muutama kymmenen merkkiä. toDataURL jää
+         * varareitiksi vanhoille selaimille.
+         */
+        if (typeof kangas.toBlob === 'function' && ikkuna.URL?.createObjectURL) {
+          kangas.toBlob((blob) => {
+            if (!blob) { valmis(kangas.toDataURL('image/png')); return; }
+            valmis(ikkuna.URL.createObjectURL(blob));
+          }, 'image/png');
+          return;
+        }
         valmis(kangas.toDataURL('image/png'));
       } catch {
         valmis(null);
@@ -815,9 +897,21 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
    * kirjoiteta — muuten reliefi ilmestyisi pelin omalle pallolle.
    */
   let reliefiPaalla = false;
+  let reliefinUrl = null;
+  /** Blob-osoite pois muistista (ks. reliefiTekstuuri). */
+  const vapautaReliefi = () => {
+    if (reliefinUrl?.startsWith?.('blob:')) {
+      try { ikkuna.URL?.revokeObjectURL?.(reliefinUrl); } catch { /* jo vapautettu */ }
+    }
+    reliefinUrl = null;
+  };
   reliefiTekstuuri({}, ikkuna.document, ikkuna)
     .then((url) => {
-      if (!url || purettu || !tekstuuri) return;
+      if (!url) return;
+      // Linssi ehti sulkeutua latauksen aikana: osoite pois heti,
+      // eikä pelin omalle pallolle kirjoiteta mitään.
+      if (purettu || !tekstuuri) { reliefinUrl = url; vapautaReliefi(); return; }
+      reliefinUrl = url;
       reliefiPaalla = true;
       pallo.globeImageUrl(url);
       lauta?.heraa?.();
@@ -987,6 +1081,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
         pallo.globeTileEngineUrl(lahto.laattaUrl ?? null);
         pallo.globeImageUrl(lahto.kuvaUrl ?? null);
       }
+      // Reliefin blob-osoite pois vasta kun pinta on jo vaihdettu.
+      vapautaReliefi();
       if (materiaali && kiiltoEnnen) {
         if (Number.isFinite(kiiltoEnnen.spec)) materiaali.specular?.setHex?.(kiiltoEnnen.spec);
         materiaali.shininess = kiiltoEnnen.shine;

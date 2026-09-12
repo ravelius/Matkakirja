@@ -124,6 +124,32 @@
  * muistiin satelliittilinssiä avattaessa. Vartio pitää merkkijonot
  * samoina (tests/satelliitti-avaruus.test.mjs).
  *
+ * ── KORJAUSERÄ 12.9.2026 (omistajan kuusi havaintoa) ──────────────
+ *
+ *  1+2. NIMET JA PULU NÄKYIVÄT PELAAJALLE, VAIKKA KORJAUS OLI KOODISSA
+ *     ja savuke raportoi 99/99 läpi. Kaksi syytä, molemmat samaa lajia:
+ *     piilotus oli EHDON takana (`body.satelliitti-avaruus`, jonka
+ *     kirjoittaa vain onnistunut avaruusnäkymä) ja VERKON takana
+ *     (css/satelliitti.css ladataan <link>-elementillä, ja vanha
+ *     `lataaSatelliittiTyyli` palasi hiljaa tekemättä mitään, jos
+ *     sivulta ei löytynyt linkkiä nimeltä "styles.css"). Nyt oletus on
+ *     piilossa ilman ehtoa, ja kriittiset säännöt menevät sivulle
+ *     inline-tyylinä (KRIITTINEN_TYYLI) ennen kuin mitään ladataan.
+ *     Savukkeen neljä mittarivikaa on kirjattu auki tiedostossa
+ *     tools/savukkeet/savuke-satelliitti-avaruus.mjs.
+ *  3. MUUT ÄÄNET VAIKENEVAT linssin ajaksi ja palaavat sulkiessa
+ *     (vaiennaAanet) — samat neljä kutsua kuin aikajanalinsseillä.
+ *  6. KUVAN PÄÄLLÄ LUKEE NYT KOHTEEN NIMI JA KUVAUSPÄIVÄ arkistoleiman
+ *     tilalla (ks. avaaHavaintokortti). NASA ja lisenssi ovat
+ *     info-napin takana; kuvat ovat public domainia, joten
+ *     lähdemerkintä ei ole lisenssin vaatimus kuvan päällä.
+ *  7. VAAKANÄKYMÄ. Kortin yläreuna luetaan palkin MITATUSTA
+ *     alareunasta (asemoiYlareuna) eikä pelkästä korkeusmuuttujasta,
+ *     ja vaakaruudussa hallinta on yhtenä pystysarakkeena oikeassa
+ *     laidassa (css/satelliitti.css), jolloin valokuva mahtuu
+ *     kokonaan. Kohdat 4 (zoom) ja 5 (reliefipinta) asuvat
+ *     js/linssit/satelliitti-avaruus.js:ssä.
+ *
  * Havaintopiste on `laji: 'linssi'` -merkki, jonka napautuksen laskee
  * pallon oma osumatesti (js/pallolauta/lauta.js lahinLinssimerkki) —
  * ja se hyväksyy vain kameran puolella olevat merkit, joten pallon
