@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1787, teksti: 'Ita-Timorin nimiolimitys pois, ei siedettyja limityksia' },
   { v: 1786, teksti: '202 nostoa oikeaan tyyppiin, 98 uutta karttamerkkia' },
   { v: 1785, teksti: 'Maan kartuutsi takaisin, saapumisrajaus, pulu leijuu' },
   { v: 1784, teksti: 'Kuva edella myos skandaaleissa, hetkissa ja elaimissa' },

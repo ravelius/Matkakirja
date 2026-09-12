@@ -232,9 +232,24 @@ export const MAASTOKOHTEET_TLS = [
     ],
     korostukset: ['Korallikolmiosta|Korallikolmiosta'],
     nappi: 'Maan ensimmäinen kansallispuisto',
-    // 127.33333 E / -8.45 N — en-Wikipedia "Nino Konis Santana National Park"
+    /*
+     * 127,33333 E / -8,45 N — en-Wikipedia "Nino Konis Santana National
+     * Park". MERKKI ON 1,8 LAUTAYKSIKKÖÄ ARTIKKELIN PISTETTÄ
+     * POHJOISEMPANA (y 3493,8 -> 3492,0), omistajan päätös 12.9.2026.
+     *
+     * Syy: kun `muu`-luokittelu toi tämän merkin kartalle, se vei
+     * eläintäyn oikean kyljen ja täky siirtyi yläkyljelle Baguian
+     * nimiön päälle. Lyhyempi nimiö ei auta — este on SYMBOLIN paikka,
+     * ei tekstin leveys ("Konis Santana" ja "Konis" mitattiin, 1 -> 1).
+     * Siirto mitattiin yksikkö kerrallaan: 1,8 on pienin joka riittää.
+     *
+     * Siirto ei valehtele. Artikkelin piste on puiston keskikohta, ja
+     * puisto on noin kaksikymmentä kilometriä korkea, joten 1,8
+     * yksikköä (noin kuusi kilometriä) pohjoiseen osuu yhä puiston
+     * sisään. Kohde on alue, ei rakennus.
+     */
     laudat: {
-      maailmankartta: { x: 10077.8, y: 3493.8 },
+      maailmankartta: { x: 10077.8, y: 3492.0 },
     },
     teksti: 'Nino Konis Santanan kansallispuisto on Itä-Timorin ensimmäinen '
       + 'kansallispuisto. Se perustettiin 15. elokuuta 2007, ja sen pinta-ala '
