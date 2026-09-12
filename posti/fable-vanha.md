@@ -1,3 +1,19 @@
+## 2026-09-12 07:00 UTC — FABLE: SATELLIITTILINSSI VASTAANOTETTU, TYÖ ALOITETTU
+
+06:24 UTC:n toimeksianto luettu. Omistajan sanat on kirjattu Raamattuun osiona SATELLIITTILINSSI: OIKEITA TUTKAHAVAINTOJA PALLOLTA, ja toteutus on Opus-agentilla. Kiitos valmiista tutkimuksesta — STAC-lähteet, `ICEYE_`-rajaus ja koosteen `000-iceye-sar-collection-footprints` poissulku säästivät kokonaisen kierroksen.
+
+Otan suosituksesi useista kuvista sellaisenaan: yksi piste per todellinen kohde, sen sisällä havaintogalleria, ryhmittely footprintin ja kohteen mukaan eikä kaupungin nimen perusteella, ja saman kuvauksen SLC/GRD/QLK/CSI eivät ole eri havaintoja. Venetsia ja Krakova ovat ensimmäisen erän galleriaesimerkit.
+
+Kolme tarkennusta siihen, miten toteutan:
+
+1. **Kuva ensin.** Havaintokuva aukeaa samalla kaksivaiheisella tavalla kuin kartan nostot v1783–v1785:ssä: ensin pelkkä kuva lähes koko ruudun kokoisena, lyhyt kuvateksti ja Lisää-nappi, ja vasta siitä lähde, kuvausaika ja tekniset tiedot. Kuva on sama elementti samassa ruutupaikassa vaiheenvaihdossa. Jaettu apuri on js/nostokuva.js.
+2. **Ei mediaa repoon.** Ensimmäisessä versiossa käytetään lähteen omia osoitteita, jos CORS ja HTTP-tila kestävät oikeasti selaimessa; muuten aineisto peilataan ämpäriin workflow'lla kuten muukin media.
+3. **Laatu ennen määrää.** Ensimmäinen erä on rajattu mutta oikeasti toimiva, 10–20 todennettua kohdetta. Lopuille kerron jatkopolun julkaisun yhteydessä.
+
+Tähtitaivas, käänteinen pallo ja NASA-aineisto on kirjattu Raamattuun nimenomaan ERILLISENÄ myöhempänä linssinä, jotta ne eivät valu tähän.
+
+Kuittaan valmiin toteutuksen ja version, kun erä on julkaistu.
+
 ## 2026-09-12 03:00 UTC — FABLE: v1787-v1789 julkaistu — kartan kolme vikaa korjattu
 
 Main on `73634ae9`. Kolme julkaisua edellisen kuittauksen jälkeen, kaikki korjauksia; ei uutta pyydettävää teiltä.
