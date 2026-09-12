@@ -2901,6 +2901,15 @@ export const SKANDAALIT = {
      */
     {
       id: 'zrinski-frankopan-salaliitto',
+      kuvat: [{
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/hrv-skandaali-skandaali-zrinski-frankopan-salaliitto-2d847b0598a9.jpg',
+        lyhyt: 'Zrinski ja Frankopan lähtevät Čakovecista Wieniin.',
+        selite: 'Petar Zrinski ja Fran Krsto Frankopan lähtivät vuonna 1670 Čakovecista Wieniin keisarin turvallisuuslupauksen turvin, mutta heidät vangittiin ja teloitettiin seuraavana vuonna.',
+        lahde: 'Matkakirjan havainnekuva',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://www.enciklopedija.hr/clanak/zrinsko-frankapanska-urota',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      }],
       otsikko: 'Zrinskin ja Frankopanin salaliitto',
       nimio: 'Zrinski-Frankopan',
       vuosi: '1664–1671',
@@ -2952,6 +2961,15 @@ export const SKANDAALIT = {
      */
     {
       id: 'pyhan-kruunun-varkaus-1440',
+      kuvat: [{
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/hun-skandaali-skandaali-pyhan-kruunun-varkaus-1440-b707a38f3934.jpg',
+        lyhyt: 'Helene Kottanner valmistautuu viemään kruunun Visegrádista.',
+        selite: 'Helene Kottanner piti vahtia Visegrádin linnassa helmikuussa 1440, kun Pyhän Tapanin kruunu haettiin lukitusta kammiosta ja valmisteltiin salakuljetettavaksi tyynyn sisällä.',
+        lahde: 'Matkakirjan havainnekuva',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://www.parlament.hu/documents/1779743/1846467/Korona_brosura_lapozo_EN.pdf/2826b7d3-c2f9-0b52-19e0-920c7474798f',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      }],
       otsikko: 'Hovinaisen kruunuvarkaus — Pyhän Tapanin kruunu tyynyn sisässä',
       nimio: 'Kruunuvarkaus 1440',
       vuosi: '1440',
@@ -3467,6 +3485,15 @@ export const SKANDAALIT = {
      */
     {
       id: 'modiglianin-paat-1984',
+      kuvat: [{
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/ita-skandaali-skandaali-modiglianin-paat-1984-4a42cbfbd878.jpg',
+        lyhyt: 'Livornon kanavasta nostettuja kivipäitä tutkitaan vuonna 1984.',
+        selite: 'Livornon Fosso Realesta nostetut kolme kivipäätä julistettiin kesällä 1984 Modiglianin kadonneiksi töiksi, kunnes opiskelijat näyttivät veistäneensä yhden niistä porakoneella.',
+        lahde: 'Matkakirjan havainnekuva',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://en.wikipedia.org/wiki/Amedeo_Modigliani',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      }],
       otsikko: 'Modiglianin väärennetyt päät',
       nimio: 'Modiglianin päät',
       vuosi: '1984',
@@ -3565,6 +3592,15 @@ export const SKANDAALIT = {
      */
     {
       id: 'cagliostro-san-leo',
+      kuvat: [{
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/ita-skandaali-skandaali-cagliostro-san-leo-74c109d225f8.jpg',
+        lyhyt: 'Cagliostro vankina San Leon pozzetto-sellissä.',
+        selite: 'Kreivi Cagliostrona tunnettu Giuseppe Balsamo päätyi inkvisition tuomitsemana San Leon linnoituksen pozzetto-selliin, jossa hän kuoli vuonna 1795.',
+        lahde: 'Matkakirjan havainnekuva',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://www.musei.emiliaromagna.beniculturali.it/musei/fortezza-di-san-leo',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      }],
       otsikko: 'Cagliostro, huijareiden kreivi',
       nimio: 'Cagliostro',
       vuosi: '1743–1795',
@@ -3665,6 +3701,15 @@ export const SKANDAALIT = {
      */
     {
       id: 'lituanican-viimeinen-lento',
+      kuvat: [{
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/ltu-skandaali-skandaali-lituanican-viimeinen-lento-b1c6a8fb61d7.jpg',
+        lyhyt: 'Lituanica lentää pimeässä kohti Kaunasia vuonna 1933.',
+        selite: 'Oranssi Lituanica oli ylittänyt Atlantin, kun huono sää ja pimeys saattoivat sen viimeiselle vaaralliselle osuudelle vain 650 kilometrin päässä Kaunasista.',
+        lahde: 'Matkakirjan havainnekuva',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://en.wikipedia.org/wiki/Lituanica',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      }],
       otsikko: 'Lituanican viimeinen lento',
       nimio: 'Lituanica',
       vuosi: '1933',
@@ -3767,6 +3812,15 @@ export const SKANDAALIT = {
      */
     {
       id: 'thiess-ihmissusi',
+      kuvat: [{
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/lva-skandaali-skandaali-thiess-ihmissusi-9d3e01f7a2b1.jpg',
+        lyhyt: 'Thiess puolustautuu Jürgensburgin oikeudessa vuonna 1692.',
+        selite: 'Thiess selitti Jürgensburgin tuomareille vuonna 1692 olevansa ”Jumalan koira”, joka taisteli noitia vastaan ja palautti kylälle varastetun sadon.',
+        lahde: 'Matkakirjan havainnekuva',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://en.wikipedia.org/wiki/Thiess_of_Kaltenbrun',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      }],
       otsikko: 'Jumalan koira — Liivinmaan ihmissusioikeudenkäynti',
       nimio: 'Jumalan koira',
       vuosi: '1692',
@@ -4039,6 +4093,15 @@ export const SKANDAALIT = {
      */
     {
       id: 'gjest-baardsen-mestarivaras',
+      kuvat: [{
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-skandaali-skandaali-gjest-baardsen-mestarivaras-eb233ecd0e32.jpg',
+        lyhyt: 'Gjest Baardsen kirjoittaa omaelämäkertaa Akershusissa.',
+        selite: 'Gjest Baardsen kirjoitti Akershusin elinkautisvankina omaelämäkertaa, jossa kuuluisa varas ja pakotaituri rakensi itsestään kansansankarin.',
+        lahde: 'Matkakirjan havainnekuva',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://en.wikipedia.org/wiki/Gjest_Baardsen',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      }],
       otsikko: 'Gjest Baardsen, mestarivaras ja pakotaituri',
       nimio: 'Gjest Baardsen',
       vuosi: '1791–1849',
@@ -4420,6 +4483,15 @@ export const SKANDAALIT = {
      */
     {
       id: 'portugalilaisen-nunnan-kirjeet',
+      kuvat: [{
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/prt-skandaali-skandaali-portugalilaisen-nunnan-kirjeet-dd99e0cd157d.jpg',
+        lyhyt: 'Portugalilaisen nunnan kirjeet leviävät Pariisissa vuonna 1669.',
+        selite: 'Pariisissa vuonna 1669 julkaistut viisi nimetöntä rakkauskirjettä herättivät sensaation, vaikka teosta pidetään nykyään ranskalaisena kirjallisena sepityksenä.',
+        lahde: 'Matkakirjan havainnekuva',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://en.wikipedia.org/wiki/Letters_of_a_Portuguese_Nun',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      }],
       otsikko: 'Portugalilaisen nunnan kirjeet',
       nimio: 'Nunnan kirjeet',
       vuosi: '1669',
@@ -5065,6 +5137,15 @@ export const SKANDAALIT = {
      */
     {
       id: 'karun-aarre',
+      kuvat: [{
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/tur-skandaali-skandaali-karun-aarre-00f4173b7aa5.jpg',
+        lyhyt: 'Ryöstäjät murtautuvat Toptepen lyydialaiseen hautaan.',
+        selite: 'Güren kylän ryöstäjät murtautuivat Toptepen lyydialaiseen hautaan vuonna 1966; aarteet salakuljetettiin ulkomaille ja palautettiin myöhemmin Turkkiin.',
+        lahde: 'Matkakirjan havainnekuva',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://en.wikipedia.org/wiki/Karun_Treasure',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      }],
       otsikko: 'Karun-aarteen pitkä kotimatka',
       nimio: 'Karun-aarre',
       vuosi: '1966–2006',
