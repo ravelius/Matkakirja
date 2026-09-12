@@ -492,3 +492,23 @@ test('kortti ei vierity sivusuunnassa', () => {
     'sääntö ei kata molempia vierittäviä koteloita');
 });
 
+test('vaiheessa 1 ei ole sulkuristiä eikä lähderiviä', () => {
+  /*
+   * Omistaja 12.9.2026: "Ota yläkulman ruksi ja lähde merkintä pois
+   * kaikista nostoista. Riittää kun lähde näkyy jutussa."
+   *
+   * Lähderivin ELEMENTTI jää DOMiin tarkoituksella: galleriakortit
+   * kirjoittavat siihen otosta vaihtaessaan, ja sen poistaminen kaatoi
+   * kaksitoista testiä. Piilotus on siksi tyylitiedostossa, ja tämä
+   * vartija lukee sen sieltä.
+   */
+  const css = lue('css/nostokuva.css');
+  const alku = css.indexOf('.nostokuva-vaihe1 .fokusnosto-kortti-sulje');
+  assert.ok(alku > 0, 'vaiheen 1 piilotussääntöä ei löytynyt');
+  const lohko = css.slice(alku, css.indexOf('}', alku));
+  for (const luokka of ['fokusnosto-kortti-sulje', 'fokuskohde-sulje', 'nostokuva-lahde']) {
+    assert.ok(lohko.includes(luokka), `vaiheessa 1 näkyy yhä ${luokka}`);
+  }
+  assert.ok(lohko.includes('display: none'), 'piilotus ei ole display: none');
+});
+

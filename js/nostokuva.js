@@ -55,8 +55,8 @@
  * NOSTOKUVA_/nostokuva-etuliitteellä.
  */
 import { html, suurennoksenMitat } from './ui-apurit.js';
-import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { taytaLahderivi } from './tekijakortti.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 
 /** Oman tyylitiedoston tunnus (sama kaava kuin muilla kelluvilla pinnoilla). */
 const NOSTOKUVA_TYYLIN_TUNNUS = 'nostokuva-tyyli';
@@ -226,9 +226,29 @@ export function nostokuvaAloita({
   koristele?.(nappi, kehys);
   kehys.appendChild(nappi);
 
+  /*
+   * VAIHEESSA 1 EI LÄHDERIVIÄ (omistaja 12.9.2026, sanatarkasti: *"Ota
+   * yläkulman ruksi ja lähde merkintä pois kaikista nostoista. Riittää
+   * kun lähde näkyy jutussa."*).
+   *
+   * Vaiheessa 1 näkyy vain kuva ja lyhyt kuvateksti — lähde, tekijä ja
+   * lisenssi ovat vaiheen 2 kortissa, jonka kuvateksti latoo ne kuten
+   * ennenkin. Lähde ei siis katoa mihinkään, se vain ei ole
+   * ensivaikutelmassa. Tämä ei ole lisenssiongelma: kuva ja sen
+   * lähdemerkintä ovat samassa näkymässä yhden napautuksen päässä, ja
+   * satelliittilinssin ICEYE-leima on eri asia — siellä lisenssi vaatii
+   * merkinnän kuvan päälle.
+   */
   const selite = html('figcaption', 'nostokuva-selite');
   selite.append(
     html('span', 'nostokuva-teksti', kuvatekstiLyhyt(kuva)),
+    /*
+     * LÄHDERIVI ON OLEMASSA MUTTA PIILOSSA VAIHEESSA 1. Se EI ole
+     * turha: galleriakortit (skandaali, historian hetki, eläintäky)
+     * kirjoittavat siihen valitun otoksen lähteen otosta vaihtaessaan,
+     * ja vaiheessa 2 se on näkyvissä. Jos elementin poistaa, ne
+     * kaatuvat — mitattu 12.9.2026, kaksitoista testiä.
+     */
     taytaLahderivi(html('span', 'nostokuva-lahde'), kuva.lahde ?? '', kuva),
   );
   kehys.appendChild(selite);
