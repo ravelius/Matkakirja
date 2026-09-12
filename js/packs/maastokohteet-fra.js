@@ -236,6 +236,26 @@ export const MAASTOKOHTEET_FRA = [
    * ============================================================== */
   {
     id: 'mont-saint-michel',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-kohde-mont-saint-michel-a312017d024b.jpg',
+      lyhyt: 'Mont-Saint-Michel kohoaa laskuveden paljastaman vuorovesitasangon keskellä.',
+      selite: 'Mont-Saint-Michel kohoaa laskuveden paljastaman vuorovesitasangon keskellä.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Lynx1211',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mont_St_Michel_during_low_tide.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-kohde-mont-saint-michel-66406eae047e.jpg',
+      lyhyt: 'Mont-Saint-Michel kohoaa laskuveden paljastaman vuorovesitasangon keskellä.',
+      selite: 'Mont-Saint-Michel kohoaa laskuveden paljastaman vuorovesitasangon keskellä.',
+      lahde: 'Valokuva: Lynx1211, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Lynx1211',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mont_St_Michel_during_low_tide.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Mont-Saint-Michel',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -269,6 +289,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'carcassonnen-linnoituskaupunki',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-kohde-carcassonnen-linnoituskaupunki-25ec0b1e82ce.jpg',
+      lyhyt: 'Carcassonnen kaksoismuurit ja pyöreät tornit ympäröivät kukkulan lakea.',
+      selite: 'Carcassonnen linnoituskaupungin kaksoismuurit ja pyöreät tornit ympäröivät kukkulan lakea.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Lesueur André',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Panorama_Cit%C3%A9_de_Carcassonne.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-kohde-carcassonnen-linnoituskaupunki-29c43cfd2d39.jpg',
+      lyhyt: 'Carcassonnen kaksoismuurit ja pyöreät tornit ympäröivät kukkulan lakea.',
+      selite: 'Carcassonnen linnoituskaupungin kaksoismuurit ja pyöreät tornit ympäröivät kukkulan lakea.',
+      lahde: 'Valokuva: Lesueur André, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Lesueur André',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Panorama_Cit%C3%A9_de_Carcassonne.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Carcassonnen linnoituskaupunki',
     tyyppi: 'historia',
     kysymykset: [
