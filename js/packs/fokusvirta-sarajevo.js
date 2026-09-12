@@ -126,7 +126,7 @@ import { bihFokuskohteet } from './fokuskohteet-bih.js';
  * MIKSI EI KUPARIKYSYMYSTÄ. Sarajevon laattakysymys (kohtaaminen, ks.
  * alempana) kysyy, mitä astiaa kaupungin kuparisepät takovat. Jos
  * lehden aarteen avaava tehtävä kysyisi kuparista tai kahvista,
- * aarrekysymys olisi ratkaistu ennen kuin Emiria on tavattu. Sivu 2 on
+ * aarrekysymys olisi ratkaistu ennen kuin Adnania on tavattu. Sivu 2 on
  * kokonaan toisesta vuosisadasta eikä pohjusta laattaa lainkaan.
  *
  * SIVUN OMA TEHTÄVÄ VÄISTYY. Aihesivulla 'urheilu' on jo
@@ -610,7 +610,7 @@ export const FOKUSVIRTA_SARAJEVO = {
    * pelissä käytössä: tarinakaaren paketti js/tyohuone-kehitys-data.js
    * (KAARI_PAKETIT, id 'sarajevo') antaa hahmon JA sen kysymyksen, jonka
    * game.actionQuiz esittää laatalla (js/game.js kaariTarina). Hahmo on
-   * siis Kupariseppä Emir, eikä tämä paketti kosketa kysymystä millään
+   * siis Kupariseppä Adnan, eikä tämä paketti kosketa kysymystä millään
    * tavalla — sama suhde kuin Ateenan Nikoksella ja Sofian Nadialla.
    *
    * KOHTAAMISKUVAA EI OLE. Sofian paketissa on
@@ -620,15 +620,15 @@ export const FOKUSVIRTA_SARAJEVO = {
    * merkitty päätoimittajalle.
    *
    * Esittely on tämän kortin omaa tekstiä ja kirjoitettu niin, ettei se
-   * kertaa Emirin omaa repliikkiä eikä paljasta vastausta.
+   * kertaa Adnanin omaa repliikkiä eikä paljasta vastausta.
    */
   kohtaaminen: {
-    hahmo: 'Kupariseppä Emir',
-    nappi: 'Tapaa Emir',
-    teksti: 'Emirin paja on Kazandžilukin kujalla, ja hänen sukunsa on '
+    hahmo: 'Kupariseppä Adnan',
+    nappi: 'Tapaa Adnan',
+    teksti: 'Adnanin paja on Kazandžilukin kujalla, ja hänen sukunsa on '
       + 'takonut saman oven takana kolmesataa vuotta. Hän tunnistaa '
       + 'tulijan askelista ennen kuin nostaa katseensa: kuka on tullut '
-      + 'ostamaan ja kuka katsomaan. Matkustajaa hän ei hoputa. Emir '
+      + 'ostamaan ja kuka katsomaan. Matkustajaa hän ei hoputa. Adnan '
       + 'laskee vasaransa vasta kun on varma, että vieras on ymmärtänyt, '
       + 'mitä näiden pöytien esineistä yksi merkitsee kaupungille '
       + 'enemmän kuin muut.',

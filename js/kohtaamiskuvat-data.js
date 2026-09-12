@@ -669,17 +669,14 @@ export const kohtaamiskuvat = [
    * versioita, eivät pelin kuvia. Mitään ei siis pudotettu kortilta
    * eikä arkistoitu: nämä ovat kaupunkiensa ensimmäiset rivit.
    *
-   * VAIN GRANADA MENEE PELIIN. Kolmen muun kuvan henkilö on eri kuin
-   * se, joka kysymyksen kaaressa esittää (js/tyohuone-kehitys-data.js,
-   * KAARI_PAKETIT): Oslo = maanviljelijä Oskar, Pietari =
-   * huoltoteknikko Matvei, Sarajevo = kupariseppä Emir. Liv, Polina ja
-   * Adnan ovat kuvaputken toisen kierroksen HENKILÖEHDOTUKSIA, jotka
-   * odottavat yhä omistajan ja Fablen päätöstä (docs/raportit/
-   * fable-tilanne-2026-09-06-aamu.md, kohta 2) — kaanonia ei muuteta
-   * kuvan perusteella. Sama ratkaisu kuin Amsterdamissa 5.9.2026: rivi
-   * jää galleriaan vertailukappaleeksi, mutta ei kortille, koska
-   * kortilla se näyttäisi eri ihmisen kuin kysyjä. Kun kaari nimeää
-   * henkilön, `tila` vaihtuu yhdellä sanalla.
+   * KAIKKI NELJÄ OVAT NYT PELISSÄ (12.9.2026). Kolme näistä odotti
+   * ensin galleriassa, koska kuvan henkilö ei ollut kaaren henkilö.
+   * Omistaja ratkaisi sen samana päivänä kysymyskortissa: *"Vaihda
+   * kaanoniin uudet henkilöt."* Kaari nimeää nyt Oslossa maisemakuvaaja
+   * Livin, Pietarissa sellisti Polinan ja Sarajevossa kupariseppä
+   * Adnanin (js/tyohuone-kehitys-data.js KAARI_PAKETIT), joten kortilla
+   * on sama ihminen, joka kysymyksen esittää — se oli koko ajan ainoa
+   * este.
    */
   {
     id: 'granada-ines-e4ab59a7e815',
@@ -702,8 +699,8 @@ export const kohtaamiskuvat = [
     hahmo: 'Liv',
     kansio: '20260912',
     tiedosto: 'oslo-liv-992a171d5df6.jpg',
-    // GALLERIAAN, EI KORTILLE: kaaren Oslo-henkilö on maanviljelijä Oskar.
-    tila: 'arkisto',
+    // PELIIN 12.9.2026: kaari nimeää Oslossa maisemakuvaaja Livin.
+    tila: 'tarkistettu',
     /*
      * REMMI ON KOIRAN TALUTUSHIHNA, EI KAMERAN HIHNA (kuvaputken
      * havainto ja toimituksen `osloAlignment`). Kuvassa ne ovat eri
@@ -711,7 +708,8 @@ export const kohtaamiskuvat = [
      * vasemmasta kädestä lähtevä musta hihna johtaa kalliolla seisovan
      * terrierin pantaan. Kuvateksti sanoo sen nyt niin kuin se näkyy,
      * eikä kaanoniin tarvittu mitään: koira ja hihna ovat uutta
-     * rekvisiittaa, eivät lupausta, sukua tai perillistä.
+     * rekvisiittaa, eivät lupausta, sukua tai perillistä. Kaaren oma
+     * kohtaamisrepliikki mainitsee nyt saman koiran ja saman hihnan.
      */
     alt: 'Liv pysähtyy aurinkoiselle polulle ja katsoo matkaajaa suoraan. Toisessa kädessä on koiran talutushihna, rinnalla omassa olkahihnassaan roikkuva kamera, ja alhaalla avautuu vuono kaupungin edessä.',
     lyhyt: 'Liv pysähtyy aurinkoiselle polulle ja katsoo matkaajaa suoraan.',
@@ -726,8 +724,8 @@ export const kohtaamiskuvat = [
     hahmo: 'Polina',
     kansio: '20260912',
     tiedosto: 'pietari-polina-6188e4c488db.jpg',
-    // GALLERIAAN, EI KORTILLE: kaaren Pietari-henkilö on huoltoteknikko Matvei.
-    tila: 'arkisto',
+    // PELIIN 12.9.2026: kaari nimeää Pietarissa sellisti Polinan.
+    tila: 'tarkistettu',
     alt: 'Polina kohtaa matkaajan katseen Vitebskin asemalla. Sellokotelo on yhä olalla ja toinen käsi nousee kysyvästi, kun aarrekysymys pysäyttää hänet kesken matkan.',
     lyhyt: 'Polina kohtaa matkaajan katseen Vitebskin asemalla.',
     kuvateksti: 'Polina kohtaa matkaajan katseen Vitebskin asemalla. Sellokotelo on yhä olalla ja toinen käsi nousee kysyvästi, kun aarrekysymys pysäyttää hänet kesken matkan.',
@@ -742,13 +740,11 @@ export const kohtaamiskuvat = [
     kansio: '20260912',
     tiedosto: 'sarajevo-adnan-8d19fb11c377.jpg',
     /*
-     * GALLERIAAN, EI KORTILLE: kaaren Sarajevo-henkilö on kupariseppä
-     * Emir. Ammatti, paja ja kuja vastaavat kaarta kohta kohdalta —
-     * vain nimi eroaa, eikä nimi näy kuvassa. Tämä on siis Fablelle
-     * yhden sanan päätös suuntaan tai toiseen; ali-agentti ei nimeä
-     * kuvaa uudelleen eikä nimeä kaarta uudelleen.
+     * PELIIN 12.9.2026. Ammatti, paja ja kuja vastasivat kaarta jo
+     * valmiiksi kohta kohdalta; vain nimi erosi, eikä nimi näy kuvassa.
+     * Omistajan päätöksellä kaaren kupariseppä on nyt Adnan.
      */
-    tila: 'arkisto',
+    tila: 'tarkistettu',
     alt: 'Adnan keskeyttää työnsä ja arvioi aarteen kysyjää tuiman epäilevästi. Vastatakottu kuparikannu on yhä pöydällä ja pitkä työkalu kädessä, kun katse nousee kujalle.',
     lyhyt: 'Adnan keskeyttää työnsä ja arvioi aarteen kysyjää tuiman epäilevästi.',
     kuvateksti: 'Adnan keskeyttää työnsä ja arvioi aarteen kysyjää tuiman epäilevästi. Vastatakottu kuparikannu on yhä pöydällä ja pitkä työkalu kädessä, kun katse nousee kujalle.',

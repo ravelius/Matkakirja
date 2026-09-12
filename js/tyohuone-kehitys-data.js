@@ -1485,13 +1485,21 @@ export const KAARI_PAKETIT = {
     {
       id: 'sarajevo',
       /*
+       * HENKILÖ VAIHTUI 12.9.2026: kupariseppä Emir -> kupariseppä Adnan.
+       * Omistajan päätös kysymyskortissa, kun kuvaputki toimitti kolme
+       * root-tarkistettua kohtaamiskuvaa, joissa henkilö ei ollut kaaren
+       * henkilö: *"Vaihda kaanoniin uudet henkilöt."* Sarajevossa muuttuu
+       * VAIN NIMI — ammatti, paja, kuja, kysymys ja aarre ovat ennallaan,
+       * koska kuva näyttää täsmälleen sen mitä kaari sanoo: kupariseppä
+       * työpöytänsä ääressä džezva kädessä Baščaršijan kujalla.
+       *
        * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
        * kohtaaminen: sodan varjossa oleva kaupunki (rekisteri E2).
        */
       tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.55 },
       tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       kuva: 'assets/kohtaamiset/kohtaaminen-sarajevo.jpg',
-      mykistetyt: [],
+      mykistetyt: ['kohtaaminen', 'aarre'],
       otsikko: 'Sarajevo — kaivo joka kutsuu takaisin',
       /*
        * QA-korjaus 9.8.2026 (Sonnet 1): torilla EI ollut kaivoa 1873 —
@@ -1507,9 +1515,9 @@ export const KAARI_PAKETIT = {
         + 'yhdellä, jota luulin osaavani. Seppä korjasi ääntämykseni '
         + 'nauramatta; kirjasin senkin. Kupin pohjassa oli kaksi '
         + 'kaiverrettua kirjainta, jotka tunnen: H. F.',
-      henkilo: 'Kupariseppä Emir takoo kannuja ja kuppeja kujalla, jolla '
+      henkilo: 'Kupariseppä Adnan takoo kannuja ja kuppeja kujalla, jolla '
         + 'hänen sukunsa paja on soinut kolmesataa vuotta.',
-      kohtaaminen: 'Pajan ovella Emir kääntelee kuparilevyä pihdeissään. '
+      kohtaaminen: 'Pajan ovella Adnan kääntelee kuparilevyä pihdeissään. '
         + '"Isoisäsi tilasi sukuni pajasta kaksi kuppia — toisen hän '
         + 'vei, toinen jäi odottamaan. Vastaa hänen kysymykseensä, niin '
         + 'haen sen hyllyltä."',
@@ -1528,7 +1536,7 @@ export const KAARI_PAKETIT = {
           + 'vaahtoineen. Baščaršijan seppäkujat ovat takoneet niitä '
           + 'vuosisatoja — kuparin kilke on kaupungin äänimaisema.',
       },
-      aarre: 'Kupin kaksoispohjan välistä löytyi litteä kätkö. Emir '
+      aarre: 'Kupin kaksoispohjan välistä löytyi litteä kätkö. Adnan '
         + 'piteli kuppia valossa: "Pohja on juotettu auki ja kiinni '
         + 'kahdesti — jälkimmäinen juotos ei ole sukuni kättä."',
     },
@@ -1819,7 +1827,7 @@ export const KAARI_PAKETIT = {
        */
       tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
-      mykistetyt: [],
+      mykistetyt: ['kohtaaminen', 'aarre'],
       otsikko: 'Pietari — yö väärällä rannalla',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -1836,6 +1844,21 @@ export const KAARI_PAKETIT = {
        * ja Edinburgh) oli jo täynnä. Kiintiöstä vapautuu tässä yksi
        * paikka; sitä ei käytetä tässä erässä.
        *
+       * HENKILÖ VAIHTUI 12.9.2026: huoltoteknikko Matvei -> sellisti
+       * Polina. Omistajan päätös kysymyskortissa: *"Vaihda kaanoniin uudet
+       * henkilöt."* Kuvaputken kuva näyttää Vitebskin aseman hallin ja
+       * sellokoteloa kantavan naisen — sillan alla seisova huoltoteknikko
+       * ei ole sama ihminen, ja kaanoni väistyi kuvan tieltä eikä
+       * päinvastoin.
+       *
+       * MIKÄ EI MUUTTUNUT: kysymys, vastaus ja fakta ovat samat (kaupunki
+       * paalujen varassa Nevan suiston soilla), aarteen paikka on sama
+       * rantamuurin kiinnitysrengas ja kevään vaha on sama koukku. Joki
+       * kulkee yhä kaiken läpi: Polina laskee iltansa siltojen aukeamisen
+       * mukaan samalla tavalla kuin Matvei laski yönostonsa.
+       *
+       * ALLA OLEVA PERUSTELU KOSKEE YHÄ VOIMASSA OLEVAA LINJAA
+       * (ei perittyä tehtävää), vaikka henkilö on vaihtunut:
        * MATVEI EI PERI MITÄÄN. Hän on huoltoteknikko, joka tarkastaa
        * teräsrakenteen ennen yönostoa, ei sukunsa jatkaja. Kuvaputken
        * rajaus toteutettu: ei suurta käsikampea eikä sillan avaamista
@@ -1869,15 +1892,17 @@ export const KAARI_PAKETIT = {
         + 'ja kirjasin ohi lipuvat laivat, kaksikymmentäyksi kappaletta. '
         + 'Aamulla painoin keppini rantapenkereeseen, ja se upposi '
         + 'kahdeksan tuumaa. Sen luvun pidin omana tietonani.',
-      henkilo: 'Huoltoteknikko Matvei tarkastaa nostosillan teräsrakenteet '
-        + 'ennen jokaista yönostoa.',
-      kohtaaminen: 'Sillan alla huoltoteknikko Matvei kääntää työvalon pois '
-        + 'silmistäsi. "Tänne ei kävellä. Mistä tuo kirja on?" Hän katsoo '
-        + 'piirrosta pitkään ja lyhentää sävyään. "Minä huollan sitä, mikä '
-        + 'liikkuu. Kerro sinä, minkä varaan tämä kaikki on pantu."',
+      henkilo: 'Sellisti Polina soittaa iltansa joen toisella rannalla ja '
+        + 'laskee aikataulunsa siltojen aukeamisen mukaan.',
+      kohtaaminen: 'Vitebskin aseman hallissa Polina siirtää sellokoteloa '
+        + 'olaltaan ja pysähtyy kesken askeleen. "Ehdin juuri ja juuri — '
+        + 'sillat aukeavat kohta. Mistä tuo kirja on?" Hän katsoo piirrosta '
+        + 'pitkään ja madaltaa ääntään. "Minä olen oppinut aikatauluni '
+        + 'joelta. Kerro sinä, minkä varaan tämä kaikki on pantu."',
       kysymys: {
-        q: 'Matvei huoltaa siltaa, joka väistyy öisin joen tieltä. '
-          + 'Millaiselle maalle koko kaupunki alun perin pystytettiin?',
+        q: 'Polina laskee iltansa sillan mukaan, joka väistyy öisin joen '
+          + 'tieltä. Millaiselle maalle koko kaupunki alun perin '
+          + 'pystytettiin?',
         vaihtoehdot: [
           'Graniittiharjulle, joka louhittiin tasaiseksi ennen '
             + 'rakentamista',
@@ -1893,8 +1918,9 @@ export const KAARI_PAKETIT = {
           + 'laivoille.',
       },
       aarre: 'Kätkö oli rantamuurin kiinnitysrenkaan alla, öljykankaaseen '
-        + 'käärittynä. Matvei valaisi kangasta: "Tämä on vahattu uudelleen, '
-        + 'ja vaha on tältä keväältä. Minulla on tänne ainoa avain."',
+        + 'käärittynä. Polina haistoi kangasta ennen kuin kosketti sitä: '
+        + '"Tämä on vahattu uudelleen, ja vaha on tältä keväältä. Sen '
+        + 'tuoksun tunnistan jousihartsin vierestä."',
     },
     {
       id: 'helsinki',
@@ -2128,13 +2154,27 @@ export const KAARI_PAKETIT = {
     {
       id: 'oslo',
       /*
+       * HENKILÖ VAIHTUI 12.9.2026: maanviljelijä Oskar -> maisemakuvaaja
+       * Liv. Omistajan päätös kysymyskortissa: *"Vaihda kaanoniin uudet
+       * henkilöt."* Kuvaputken kuva näyttää harjulla seisovan kuvaajan,
+       * jolla on kamera rinnalla ja pieni koira hihnassa, ja takana
+       * Oslonvuono — ei heinäpeltoa eikä paalikärryä.
+       *
+       * MIKÄ EI MUUTTUNUT: kysymys, vastaus ja fakta (Gjellestadin laivan
+       * kölistä jäljellä, koska peltoa on kuivatettu ja kynnetty), aarteen
+       * paikka rajapyykin juuressa ja pihlajan purjelankasolmu. Myös
+       * kaaren oma ydinlause säilyy sanasta sanaan: hän *tuntee
+       * maastonmuodot, joita kartta ei näytä* — kuvaaja tuntee ne siksi,
+       * että hän kiertää samoja peltoja valon perässä. Koira oli
+       * kaaressa jo ennen kuvaa.
+       *
        * Tunnetagi poikkeaa oletuksesta (docs/pulu-reaktiot.md E2):
-       * kohtaaminen: Oskar katsoo piirrosta "uudestaan, vakavana" — teksti
+       * kohtaaminen: Liv katsoo piirrosta "uudestaan, vakavana" — teksti
        * sanoo sävyn itse.
        */
       tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
-      mykistetyt: [],
+      mykistetyt: ['kohtaaminen', 'aarre'],
       otsikko: 'Oslo — laiva mullan alla',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -2199,11 +2239,11 @@ export const KAARI_PAKETIT = {
         + 'makeaa kuin siirappi; kirjasin sen ilmiönä ja pyysin '
         + 'lisää. Aamulla kummun laella, ainoan pihlajan oksassa, '
         + 'riippui purjelangasta punottu solmu. Tuore.',
-      henkilo: 'Maanviljelijä Oskar ajaa heinää Gjellestadin pelloilta ja '
-        + 'tuntee maastonmuodot, joita kartta ei näytä.',
-      kohtaaminen: 'Pellon laidalla maanviljelijä Oskar pudottaa heinäpaalin '
-        + 'kärryyn ja pyyhkii otsaansa. "Aarretta? Tuossa pellossa on jo '
-        + 'yksi." Koira vie hänen hanskansa. Sitten hän katsoo piirrosta '
+      henkilo: 'Maisemakuvaaja Liv kiertää Gjellestadin peltoja ja Oslon '
+        + 'harjuja ja tuntee maastonmuodot, joita kartta ei näytä.',
+      kohtaaminen: 'Pellon laidalla Liv laskee kameran rintaansa vasten ja '
+        + 'kiertää hihnan kädelleen. "Aarretta? Tuossa pellossa on jo '
+        + 'yksi." Koira nykäisee talutushihnaa. Sitten hän katsoo piirrosta '
         + 'uudestaan, vakavana. "Vastaa yksi kysymys, niin kävellään '
         + 'rajapyykille."',
       kysymys: {
@@ -2226,8 +2266,8 @@ export const KAARI_PAKETIT = {
       },
       aarre: 'Rajapyykin juuressa, kiviröykkiön alla, odotti rasia — '
         + 'kumpuun koskematta. Pihlaja seisoo yhä pellon laidassa, ja '
-        + 'oksassa on purjelangasta punottu solmu. Oskar katsoi sitä '
-        + 'pitkään. "Minä en ole sitonut tuota."',
+        + 'oksassa on purjelangasta punottu solmu. Liv katsoi sitä '
+        + 'pitkään eikä nostanut kameraa. "Minä en ole sitonut tuota."',
     },
     {
       id: 'kobenhavn',
