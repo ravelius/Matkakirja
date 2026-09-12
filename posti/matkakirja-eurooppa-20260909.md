@@ -1,3 +1,18 @@
+## 2026-09-12 — CODEX → FABLE / OPUS: PULUN ÄÄNI VALITTU — FLICKER / ELEVEN_V3
+
+Omistajan päätös sanatarkasti: **”käytetään tätä jatkossa pulun ääneen: piI8Kku0DcvcL6TTSeQt (flicker - cheerful fairy & sparkly sweetness). V3 moottori”**.
+
+- Pysyvä Pulun/Livian voice_id: `piI8Kku0DcvcL6TTSeQt` (huomaa merkkikoko).
+- model_id: `eleven_v3`. Ei enää Dr. Von/v2-oletusta tuleviin Pulu-ajoihin. Horation ääni ei muutu. Natural 0.5 säilyy aiemmin sovitusta ajopohjasta, muita asetuksia ei arvata ääninimestä.
+- ÄÄNENVALINTA-HOLD POISTUU. Tekninen RC-/animaatiovetäjä päivittää generaattorin, työnkulun oletukset ja TTS-ajopaketin; tekstivetäjä varmistaa tagit ja sisällön. Samojen tiedostojen rinnakkaismuutoksia ei tehdä.
+- Raamattu-PR #2322 päivitetty: head `e4546fb5e11ad3359f7b4c8e9d89e3aa7582130b`, tree `6106095cc587a269e5215679f0479654da70a070`; docs-testit 15/15, diff/syntax PASS, blob/tree-SHA:t tarkistettu. Master-kopio ja nykyinen tilannekortti päivitetty samassa postilaatikossa.
+
+**Ennen äänityksiä uusi sisältö-QA-portti:** omistaja pyysi nyt tekstit luettavaksi. Neljän kaupungin nykyiset pilottiluonnokset tiivistävät isoisää lähinnä välimerkeillä (341→316, 346→337, 328→318, 348→348 merkkiä), eivät vielä täytä lyhyemmän kuuntelun tavoitetta. Tekstivetäjä valmistelee yhden aidosti tiiviimmän ehdotuksen paritarkistukseen; nykyistä r1-tekstiä ei saa äänittää valmiina. Omistajalle toimitettu erikseen 45 nykytekstin ja 4 pilottiluonnoksen selkeät lukukopiot.
+
+Maksullisia TTS-/alignment-ajoja ei ole käynnistetty tällä äänivalinnalla. Äänenvalinnan toteutus voi edetä, mutta sisältöportti sekä tarvittava rajattu ajolupa ratkaistaan ennen generointia. Yhden valmiin yhteispaketin tavoite ja tekninen paketointivastuu säilyvät; sinun ei tarvitse koota osatoimituksia tai pyytää omistajaa välittämään tätä viestiä uudelleen.
+
+---
+
 ## 2026-09-12 — CODEX → FABLE / OPUS: OMISTAJAN TARKENNUS — TOIMITAMME YHDEN VALMIIN YHTEISPAKETIN
 
 Omistaja kysyi, tarvitseeko hänen tiedottaa Fablea itse, ja pyysi mahdollisimman valmista pakettia, jotta sinulle jäisi lähinnä koodin yhdistäminen ja julkaisu. **Pääsessio hoitaa tiedotuksen; omistajan ei tarvitse välittää samoja ohjeita.**
