@@ -442,6 +442,84 @@ export function kaupunkipisteenSade(korkeus, ruudunKorkeusPx, {
   return Math.min(PISTEEN_SADE_MAX, sade);
 }
 /*
+ * ══════════════════════════════════════════════════════════════════
+ * ULOS ZOOMATESSA PISTE PIENENEE KARTAN MUKANA (omistaja 12.9.2026:
+ * *"kaupunkien pisteiden koko oli minusta ennen sidottu kartan zoom
+ * tasoon niin että ne pienentyvät ulos zoomatessa kartan mukana"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJA MUISTAA OIKEIN, JA MUUTOS ON HÄNEN OMANSA. Ennen 7.9.2026
+ * `pointRadius` oli kiinteä 0,03 astetta eli puhtaasti KARTAN mitta:
+ * piste kasvoi ja pieneni kameran korkeuden mukana. Sinä päivänä
+ * omistaja ilmoitti iPadilta *"Tampereen kohdalla iso musta ympyrä"*,
+ * ja korjaus teki pisteestä RUUDUN vakion (KAUPUNKIPISTE ON RUUDUN
+ * VAKIO, EI KARTAN): sama 7 px joka korkeudella ja joka laitteella.
+ * Kaikki myöhemmät säädöt (8.9. kohdekaupungin lattia, 9.9. lähizoomin
+ * liuku) on rakennettu sen päälle. Piirtokoukku 12.9.2026 (PISTEIDEN
+ * PAIKKA TULEE PIIRROSTA) siirsi vain PAIKAN laskennan; kokoon se ei
+ * koskenut rivilläkään.
+ *
+ * MITÄ NYT TEHDÄÄN. Kartan mittakaava palaa SIIHEN SUUNTAAN, josta
+ * omistaja kirjoittaa — ulos zoomatessa — eikä siihen, josta hän
+ * valitti 7.9.: lähikuvassa koko on yhä ruudun mitta ja sen kasvun
+ * rajaavat 8.9. ja 9.9. säädetyt luvut, joten iPadin iso musta ympyrä
+ * ei voi palata.
+ *
+ *   korkeus <= KAUPUNKIPISTEEN_MITTAKAAVA_KORKEUS  piste on ruudun
+ *                                                  mitta, kuten nyt
+ *   korkeus >  sama                                halkaisija kerrotaan
+ *                                                  suhteella
+ *                                                  vertailu / korkeus
+ *
+ * Kerroin on TÄSMÄLLEEN kartan mittakaava: laatta, rantaviiva ja
+ * kaupungin piste pienenevät samassa suhteessa, koska ruudun pikseliä
+ * yhtä lautayksikköä kohden on kääntäen verrannollinen kameran
+ * korkeuteen (kaupunkipisteenSade yllä, sama kaava).
+ *
+ * VERTAILUKORKEUS ON PELIN OMA NÄKYMÄ. Saapumisajon jälkeinen näkymä
+ * on mitattu 12.9.2026 Chromiumilla (390 × 844 ja 1440 × 900): kameran
+ * korkeus 0,37, näkymän korkeus 19,8°. Siinä — ja kaikessa sitä
+ * lähempänä — piste on tavulleen entisensä, joten omistajan 7.9., 8.9.
+ * ja 9.9. mitoitukset säilyvät pikselilleen siellä, missä peliä
+ * pelataan.
+ *
+ * LATTIA: PISTE EI SAA KADOTA. Mitattuna vertailukorkeudesta (7 px):
+ * korkeus 0,6 → 4,3 px, 1,0 (koko pallo ruudulla) → 2,6 px, 2,5
+ * (uloin) → 1,0 px. Yhden pikselin täplä katoaa paperiin, joten lattia
+ * on KAUPUNKIPISTEEN_VAHIN_PX. Luku 3 px on valittu mitasta: se on
+ * vanhan 0,03-asteen pisteen koko juuri siinä näkymässä, jota se
+ * palveli (2,7 px korkeudella 0,35, laskettu kaavalla yllä ja kirjattu
+ * KAUPUNKIPISTE ON RUUDUN VAKIO -lohkoon), pyöristettynä ylöspäin
+ * kokonaiseen ruutupikseliin — eli täsmälleen se koko, jonka omistaja
+ * muistaa yleiskuvasta. Lattia puree vasta korkeudella 0,86, eli
+ * selvästi maanosanäkymän ulkopuolella.
+ *
+ * NAPAUTUS EI MUUTU: osuma on 44 px:n säde ruudulla
+ * (NAPAUTUKSEN_SADE_PX) eikä ole koskaan lukenut pisteen kokoa, joten
+ * pienempi piste on yhtä helppo osua kuin ennenkin. Piirretyn musteen
+ * oma osumasääntö (lahinMerkki) lukee saman kutistetun luvun kuin
+ * piirto, jotta muste ja osuma ovat samaa kokoa.
+ */
+/** Kameran korkeus, jossa piste on tarkalleen ruutumittansa kokoinen. */
+export const KAUPUNKIPISTEEN_MITTAKAAVA_KORKEUS = 0.37;
+/** Pienin halkaisija, johon ulos zoomaus saa pisteen kutistaa (px). */
+export const KAUPUNKIPISTEEN_VAHIN_PX = 3;
+/**
+ * Ruutuhalkaisija kartan mittakaavassa: ulos zoomatessa piste pienenee
+ * kartan mukana, lattiaan asti. Lähikuvassa (korkeus <= vertailu) luku
+ * palaa muuttumattomana.
+ *
+ * @param {number} halkaisijaPx ruudun mitta lähikuvassa
+ * @param {number} korkeus      kameran korkeus (pallonsäteinä)
+ */
+export function kartanMittakaavanHalkaisija(halkaisijaPx, korkeus, {
+  vertailu = KAUPUNKIPISTEEN_MITTAKAAVA_KORKEUS, vahin = KAUPUNKIPISTEEN_VAHIN_PX,
+} = {}) {
+  if (!(halkaisijaPx > 0) || !(korkeus > 0) || korkeus <= vertailu) return halkaisijaPx;
+  // Lattia ei saa KASVATTAA pistettä, joka on jo sitä pienempi.
+  return Math.max(Math.min(halkaisijaPx, vahin), halkaisijaPx * (vertailu / korkeus));
+}
+/*
  * PISTE ON LEVY, EI TAPPI (omistaja 6.9.2026 ilta, iPhone, sanatarkasti:
  * *"piste venyy kun karttaa panoroi"*). Globe.gl piirtää pointsDatan
  * LIERIÖNÄ pinnasta korkeuteen: kaupunkipiste on 0,3 yksikköä korkea
@@ -705,6 +783,65 @@ export function aloitusvalinnanKorkeus({
 export const HTML_MERKKIEN_KATTO = 60;
 /** Ladonnan lepoviive: sama hetki kuin laadun palautus (js/pallo.js). */
 export const LADONNAN_LEPOVIIVE_MS = LAATU_LEPOVIIVE_MS;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LADONTA KULKEE MUKANA, EI ODOTA LIIKKEEN LOPPUA (omistaja
+ * 12.9.2026: *"Pisteet pysyvät nyt paikallaan mutta kun panorointi
+ * loppuu kaikki liikkuvat hieman ja hakevat paikkansa uudestaan"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MIKÄ ODOTTI. `pyydaLadonta` oli puhdas VAIMENNUS (debounce): joka
+ * kameran muutos nollasi ajastimen, joten levon ladonta
+ * (`ladoLevossa` — nostojen valinta, nimien ladonta ja lappujen
+ * sovittelu) ei voinut ajautua kertaakaan kesken panoroinnin ja ajoi
+ * AINA täsmälleen kerran liikkeen päätyttyä. Koko vedon aikana
+ * kertynyt muutos purkautui siis yhtenä nykäyksenä: nimiä katosi ja
+ * ilmestyi, ja ne, jotka jäivät, liukuivat uusille paikoilleen
+ * css/styles.css:n siirtymillä (.pallolauta-nimi-siirto 250 ms,
+ * .pallolauta-nosto-siirto 200 ms) — juuri se "hakevat paikkansa
+ * uudestaan".
+ *
+ * MITATTU (Chromium 390 × 844 dpr 2, Ateena, kamera siirretty 600 px
+ * ruudulla ilman välissä ajettua ladontaa): levon ladonta vaihtoi
+ * kerralla 20 nimiötä ja pudotti 9 — ankkurit eivät liikkuneet
+ * lainkaan (0,00 px), joten liike oli ladonnan omaa eikä kameran.
+ *
+ * MIKSI SE ODOTTI. Ladonta lukee 261 nimen mitat, eikä sen pidä
+ * maksaa kehystä (karttapallo.md riski 4). Mitattu 12.9.2026 samassa
+ * selaimessa: yksi `ladoLevossa` on mediaani 3,4 ms ja enintään
+ * 5,2 ms. 60 kehyksen sekunnissa budjetti on 16,7 ms kehykseltä, joten
+ * yksi ladonta mahtuu kehykseen — mutta ei joka kehykseen.
+ *
+ * MITEN NYT: KURITUS (throttle) VAIMENNUKSEN TILALLA. Ladonta ajetaan
+ * liikkeen aikanakin, enintään kerran LADONNAN_TAHTI_MS:ssä, ja vielä
+ * kerran liikkeen jälkeen. Silloin ladonta on korkeintaan yhden tahdin
+ * verran vanha, ja liikkeen päättyessä viimeinen ajo ei enää löydä
+ * mitään siirrettävää. Tahti on mitoitettu kustannuksesta: 3,4 ms /
+ * 200 ms on 1,7 % ajasta, eli samaa luokkaa kuin kirjaston oma
+ * merkkisiirtymä, ja silti viisi ladontaa sekunnissa — nopeimmallakin
+ * vedolla nimiö ehtii liukua paikalleen matkan varrella eikä vasta
+ * perillä.
+ */
+export const LADONNAN_TAHTI_MS = 200;
+/**
+ * Ladonnan ajoitus yhdestä kameran muutoksesta: ajetaanko heti ja
+ * milloin seuraava perälauta-ajo (ks. LADONTA KULKEE MUKANA).
+ *
+ * `heti` on tosi, kun edellisestä ladonnasta on kulunut vähintään
+ * tahti — silloin ladonta kulkee liikkeen mukana. Muulloin ajo
+ * siirtyy tahdin päähän edellisestä. `viiveMs` on aina äärellinen,
+ * joten liikkeen viimeinen kehys saa ladontansa joka tapauksessa.
+ *
+ * @param {number} kulunut edellisestä ladonnasta (ms)
+ * @returns {{heti: boolean, viiveMs: number}}
+ */
+export function ladonnanAjoitus(kulunut, {
+  tahti = LADONNAN_TAHTI_MS, lepo = LADONNAN_LEPOVIIVE_MS,
+} = {}) {
+  if (!(kulunut >= 0)) return { heti: true, viiveMs: lepo };
+  if (kulunut >= tahti) return { heti: true, viiveMs: lepo };
+  return { heti: false, viiveMs: Math.max(0, tahti - kulunut) };
+}
 /**
  * Laattojen esilataus (vaihe 5c) käynnistetään vasta tämän jälkeen: ensin
  * pelaajan oma näkymä latautuu, sitten karkea maailma taustalle koriin.
@@ -1765,7 +1902,9 @@ export async function avaaPallolauta(ui) {
      * 7 px, omistaja 9.9.2026), yhdestä ja samasta lähteestä kuin piirto.
      */
     const pisteenPx = voittaja?.laji === 'kaupunki'
-      ? kaupunkipisteenHalkaisijaPx(voittaja.k, pelaajanKaupunki(), kohdekaupunki())
+      ? piirrettyHalkaisijaPx(
+        kaupunkipisteenHalkaisijaPx(voittaja.k, pelaajanKaupunki(), kohdekaupunki()),
+      )
       : 0;
     if (voittaja?.laji === 'kaupunki' && lahella(lat, lng, voittaja, pisteenPx / 2)) {
       return voittaja;
@@ -1898,10 +2037,18 @@ export async function avaaPallolauta(ui) {
     });
     return kaupunkiMitat;
   };
+  /**
+   * PIIRRETTY ruutuhalkaisija: lähikuvan mitta kartan mittakaavassa
+   * (ks. ULOS ZOOMATESSA PISTE PIENENEE KARTAN MUKANA). Sama luku
+   * palvelee piirtoa ja musteen osumatestiä, jotta ne ovat samaa kokoa.
+   */
+  const piirrettyHalkaisijaPx = (halkaisijaPx) => kartanMittakaavanHalkaisija(
+    halkaisijaPx, pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX,
+  );
   /** Säde (pointRadius-yksikköä), joka antaa halutun ruutuhalkaisijan nyt. */
   const sadeRuudulta = (halkaisijaPx) => kaupunkipisteenSade(
     pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX, kotelo.clientHeight,
-    { halkaisijaPx },
+    { halkaisijaPx: piirrettyHalkaisijaPx(halkaisijaPx) },
   );
   /**
    * YHDEN pisteen säde: lattia vain pelaajan kaupungille, kaikille
@@ -2109,6 +2256,8 @@ export async function avaaPallolauta(ui) {
 
   /* ---- ladonta levossa ---------------------------------------------- */
   let lepoAjastin = 0;
+  /** Milloin ladonta viimeksi ajettiin (kuritus, ks. LADONTA KULKEE MUKANA). */
+  let ladottuHetki = 0;
   /**
    * KOLME VAIHETTA YHDESSÄ LEVOSSA (Raamattu, KAUPUNGIN NIMI NOSTOJEN
    * PAALLA; docs/moduulit/karttapallo.md luku 14):
@@ -2127,6 +2276,9 @@ export async function avaaPallolauta(ui) {
    */
   const ladoLevossa = () => {
     lepoAjastin = 0;
+    // Kurituksen kello käy myös ohitetuista ajoista: piilossa oleva
+    // lauta ei saa kerryttää ladontavelkaa näkyviin palatessaan.
+    ladottuHetki = globalThis.performance?.now?.() ?? Date.now();
     if (ui.dead || kuori.hidden) return null;
     const nakyva = kamera.nakyvaAlue();
     const keskipiste = { x: kotelo.clientWidth / 2, y: kotelo.clientHeight / 2 };
@@ -2167,11 +2319,21 @@ export async function avaaPallolauta(ui) {
     if (ui.fokuskohdeAuki?.ankkuri) asemoiFokuskohde(ui);
     return { nostot: nostoTulos, nimet: nimiTulos, sovittelu };
   };
+  /**
+   * Kamera liikkui: ladonta ajetaan MYÖS liikkeen aikana, enintään
+   * kerran LADONNAN_TAHTI_MS:ssä, ja vielä kerran liikkeen jälkeen (ks.
+   * LADONTA KULKEE MUKANA, EI ODOTA LIIKKEEN LOPPUA). Peräkanttiin
+   * tuleva jono ei siis kerry yhdeksi nykäykseksi liikkeen loppuun.
+   */
   const pyydaLadonta = () => {
     clearTimeout(lepoAjastin);
-    lepoAjastin = setTimeout(ladoLevossa, LADONNAN_LEPOVIIVE_MS);
+    const nyt = globalThis.performance?.now?.() ?? Date.now();
+    const { heti, viiveMs } = ladonnanAjoitus(nyt - ladottuHetki);
+    if (heti) ladoLevossa();
+    // Perälauta: liikkeen VIIMEINEN muutos saa vielä oman ajonsa, jottei
+    // se jää kuritusikkunan sisään.
+    lepoAjastin = setTimeout(ladoLevossa, viiveMs);
   };
-  // Kamera liikkui (ele, ajo, liuku): ladonta vasta levossa.
   const ohjaimet = pallo.controls();
   ohjaimet.addEventListener('change', pyydaLadonta);
   // Zoomi muuttaa kaupunkipisteen säteen heti, ei vasta levossa.
