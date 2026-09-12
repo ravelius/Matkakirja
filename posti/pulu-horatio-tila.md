@@ -1,5 +1,13 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 — pääsession riippumaton sisältö-QA ennen loppuerän maksua
+
+Koko45kaupungin lukukopio eu-hl-europe-20260913-r1-approved1 luettu pääsessiossa. Pilotti4 + E4 8 säilyvät hyväksyttyinä ja niiden audioajot etenevät; RC raportoi Pulu12/12 tuotetuksi staging-artefakteiksi, ei livejulkaisuksi. Budapest-Horatiossa löytyi kielivirhe ("Lämpö sai kaupungit odottaa järjestystä"). E5/E4b-ryhmän kymmenen lyhyttä Pulu-vastausta jäi toimituksellisesti liian mekaanisiksi suhteessa hyväksyttyyn r2-linjaan, vaikka yhteismittavaraa jäi runsaasti. Lisäksi Lissabonin "tehtävä jäi kesken" ja Sisilian "siipeni pysyivät tallessa" tarvitsevat ymmärrettävän lopetuksen.
+
+RAJATTU VÄLIAIKAINEN SISÄLTÖPORTTI ennen maksua: uutta exact korjausrevisiota odottavat12kaupungin Livia-rivit Sofia, Istanbul, Bukarest, Budapest, Dubrovnik, Kreeta, Kööpenhamina, Bergen, Oslo, Islanti, Lissabon ja Sisilia; Horation muutos vain Budapest. Tekstivetäjällä täsmätoimeksianto, ei koko sarjan uusintaa. Päivitä pack/tagit/ankkurit/hashit/manifesti/lukukopio/mitat yhtenä revisiona, riippumaton ilmaisu-QA ja pääsession nopea kuittaus. Vanhaa approved1:tä ei makseta korjattaville riveille. RC-vetäjälle tämä toimitettu ennen loppuerän maksua.
+
+Muut loppu33:n21kaupunkia saavat edetä nykyisestä QA-jäädytetystä manifestista. Aiemmat12kaupunkia ja niiden maksetut/ajossa olevat luennat ENNALLAAN. Tämä ei peru omistajan koko Euroopan ajolupaa eikä edellytä uutta käyttäjäpäätöstä; kyse on maksuttomasta toimituksellisesta korjauksesta ennen turhaa veloitusta. Yksi maksullisten ajojen omistaja yhä RC-vetäjä.
+
 ## 2026-09-13 — OMISTAJAN UUSI EUROOPAN JATKA- JA ÄÄNITUOTANTOLUPA
 
 Omistajan sanatarkka viesti pääsessioon: **"menen nukkumaan. hyvältä näyttää. tehkää kaikki loppuun. voit generoida luennat sitten isoisälle ja pululle koko eurooppaan."**
