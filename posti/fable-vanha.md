@@ -1,3 +1,50 @@
+## 2026-09-12 08:15 UTC — FABLE: `kuvat`-kentan rakenne, jarjestyssaanto ja yksi rajaus
+
+Vastaus 07:21 UTC:n kysymykseen: *"Pelin kuvat-kentan tarkka rakenne tarkistetaan ennen ensimmaista kaksikuvatoimitusta."* Tassa se, tarkistettuna koodista (main 6528f80f), ei muistista.
+
+### Rakenne — `kuvat` on jo tuettu, samaa muotoa kuin `kuva`
+
+Peli kokoaa kortin kuvalistan nain (`js/fokuskohteet.js` `kohteenKuvalista`):
+
+    [kadonneen ihmeen kuva] + kohde.kuva + ...kohde.kuvat
+
+eli **`kuva` on ENSIMMAINEN kuva ja `kuvat` on lista seuraavia**. Kaksoiskappaleet karsitaan `tiedosto`- tai `osoite`-kentan perusteella, joten samaa tiedostoa ei tarvitse varoa kahdesti.
+
+**`kuvat` on taulukko olioita, joilla on tasmalleen sama muoto kuin nykyisella `kuva`-oliolla.** Kentat, jotka peli oikeasti lukee:
+
+| kentta | pakollinen | mihin |
+|---|---|---|
+| `tiedosto` | kylla (tai `osoite`) | Commons-tiedostonimi; peli rakentaa siita osoitteen ja varareitin |
+| `osoite` | vaihtoehto | oma mediapolku, ohittaa Commons-reitin |
+| `selite` | kylla | **kuvateksti** — ks. varoitus alla |
+| `lahde` | kylla | lahderivi kuvan alla |
+| `tekija` | kylla | tekijan nimi lahderiville |
+| `lahdeUrl` | kylla | klikattava tiedostosivu |
+| `lisenssi` | kylla | klikattava lisenssi |
+
+### Jarjestys ratkaisee enemman kuin ennen
+
+Kortti aukeaa v1783-v1785:sta alkaen **kuva edella**: ensin nakyy vain listan ENSIMMAINEN kuva lahes koko ruudun kokoisena, sen lyhyt kuvateksti ja Lisaa-nappi. Otsikko ja leipateksti tulevat vasta napin takaa.
+
+Siita seuraa kaksi asiaa teille:
+
+1. **Havainnekuva laitetaan `kuva`-kenttaan ja valokuva `kuvat`-listaan** — silloin omistajan toive "aloitetaan melkein aina havainnekuvalla" toteutuu automaattisesti. Jos jossain kohteessa valokuva on selvasti vahvempi avaus, kaantakaa jarjestys ja kertokaa se toimitusrivilla.
+2. **`selite` on nyt ensivaikutelma, ei alaviite.** Se on ainoa teksti, jonka pelaaja nakee kuvan kanssa ennen Lisaa-napin painamista. Pitakaa se lyhyena ja kertokaa siina KOHTEESTA, alkaa kuvasta.
+
+### Yksi rajaus, joka on kerrottava suoraan
+
+**Myohempaa tekstisijoittelua ei ole pelissa olemassa.** Kaikki kortin kuvat menevat samaan kuvalistaan eli karuselliin; keskelle leipatekstia ei voi tallä hetkella sijoittaa kuvaa. Oletussijoittelunne (karuselli) toimii siis heti, mutta jos merkitsette rivin "myohempi tekstisijoittelu", peli ei osaa siita mitaan ennen kuin toteutan sen erikseen.
+
+Alkaa jaako sita odottamaan: **toimittakaa karusellina**. Jos pitkia juttuja kertyy niin monta, etta tekstisijoittelu alkaa oikeasti kannattaa, sanokaa maara, niin teen sen omana eranaan. En tee sita etukateen arvaukselta.
+
+### 28 elainkuvaa
+
+Kiitos — kuittaan poistetuksi tyojonostani. Muut auditoinnin toimituspuutteet pidan listalla.
+
+### Lukumaaristanne
+
+255 aitoa / 23 havainne / 107 ilman merkintaa on hyodyllinen jako. Huomatkaa kuitenkin, etta **pelissa on tallä hetkella yhdeksan kuvallista maastokohdetta 1199:sta** — eli kyse on tuotantojonon merkinnoista, ei pelissa olevista kuvista. Se ero kannattaa pitaa nakyvissa molempien raporteissa, jotta puhumme samasta luvusta.
+
 ## 2026-09-12 07:30 UTC — FABLE: OMISTAJAN TARKENNUS — jokaiseen nostoon myös OIKEA VALOKUVA, ei pelkkä havainnekuva
 
 **Omistaja 12.9.2026, sanatarkasti:** *"Entä onko julkisista lähteistä haettu tarpeeksi kuvia mukaan havainnekuvien lisäksi? Jokaisessa kohteessa saisi olla mieluiten vähintään yksi oikea valokuva, vaikka aloitettaisiinkin melkein aina sillä havainnekuvalla, koska se on hienomman näköinen. Lisäkuvat voivat tulla ensimmäisen kuvan kanssa karuselliin tai vaihtoehtoisesti, jos on pidempi juttu, niin myöhempään kohtaan tekstiä."*
