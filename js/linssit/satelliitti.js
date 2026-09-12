@@ -671,11 +671,11 @@ export function rakennaPalkki({ ui, kohteet, onSulje, doc = document }) {
   const palkki = doc.createElement('div');
   palkki.className = 'satelliittipalkki';
   palkki.setAttribute('role', 'group');
-  palkki.setAttribute('aria-label', 'Satelliittilinssi');
+  palkki.setAttribute('aria-label', 'Astronautin kamera');
 
   const nimi = doc.createElement('span');
   nimi.className = 'satelliittipalkki-nimi';
-  nimi.textContent = 'Satelliittilinssi';
+  nimi.textContent = 'Astronautin kamera';
 
   // Auki olevan havainnon kohde — tyhjä, kun ikkunaa ei ole auki.
   const kohdenimi = doc.createElement('span');
@@ -824,9 +824,21 @@ export const LINSSI = {
   // Kerrokseton: linssi ei piirrä tasokartalle kerrosta vaan asuu
   // pallon pinnalla (pallolle alla), kuten radio ja aikajanalinssit.
   kerros: false,
-  nimi: 'Satelliittilinssi',
+  nimi: 'Astronautin kamera',
   lyhyt: 'Suuntaa kaukoputki Maahan ja katso valokuva, jonka astronautti otti ikkunasta.',
-  // Kaukoputki, jonka päässä hohtaa piste.
+  /*
+   * NIMI VAIHTUI 12.9.2026: "Satelliittilinssi" → "Astronautin kamera"
+   * (omistaja, sanatarkasti: *"muuta linssin nimeksi astronautin kamera
+   * ja generoi sille myös oma linssikuvake matkalaukkuun"*). Nimi
+   * kertoo nyt sen mitä linssi oikeasti näyttää: ihmisen ikkunasta
+   * ottamia valokuvia, ei satelliitin automaattista havaintoa. Tunnus
+   * (`satelliitti`) ei muutu — se on tallennusavain ja tiedostonimi,
+   * eikä sen vaihtaminen näy pelaajalle mutta rikkoisi polut.
+   *
+   * Piirretty kuvake jää varakuvaksi: matkalaukussa näkyy nyt oma
+   * maalattu varustekuva (assets/varusteet/varuste-satelliitti.jpg,
+   * tools/generoi-varustekuvat.mjs), kuten muillakin linsseillä.
+   */
   ikoni: '<path d="M3.6 15.1 8 6.4l10.9 4.2-3.3 6.5z"/>'
     + '<path d="M9.4 17.6 12 20.6M7.1 20.6h9.4"/>'
     + '<circle cx="19.6" cy="5.1" r="1.6"/>',
