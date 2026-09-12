@@ -24,7 +24,8 @@
  *   --kuiva          tulostaa repliikit, tagitetun puhemuodon,
  *                    kohdetiedostot ja arvioidut kestot. Ei APIa,
  *                    ei avainta, ei vientiä.
- *   --aani <id>      käytettävä ääni (tai ympäristö PULU_AANI).
+ *   --aani <id>      käytettävä ääni; ilman lippua käytetään omistajan
+ *                    lukitsemaa Pulun oletusääntä.
  *   --repliikit a,b  vain nämä avaimet (avaus-1, paljastus-2,
  *                    mannerivihje-1, ateena-1, sofia-7). Tyhjä = kaikki.
  *   --pakota         generoi vaikka tiedosto on jo ämpärissä.
@@ -43,7 +44,8 @@
  * NOPEAN puhujan, joten nopeutus tehdään viimeistelyketjussa
  * `atempo`-suodattimella: se on deterministinen, kuuluu samalta
  * jokaisessa ajossa eikä riipu siitä, mitä malli sattuu tekemään.
- * Elävyys tulee TAGEISTA ja stabiilisuuden Creative-asetuksesta.
+ * Elävyys tulee TAGEISTA; pysyvä vakausoletus on Natural 0,5. Muita
+ * parametreja ei päätellä äänen nimestä.
  *
  * ------------------------------------------------------------------
  * TAGIT EIVÄT SAA MUUTTAA KAANONIA
@@ -180,33 +182,16 @@ if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
 const API = 'https://api.elevenlabs.io';
 const PUHE_OSOITE = `${API}/v1/text-to-speech`;
 /*
- * MALLI ON V2 JA TAGIT POIS (omistaja 6.9.2026 iltapäivä, ElevenLabsin
- * sivulla kokeiltuaan: *"v2 versio on parempi tälle äänelle, eli ei
- * tule ollenkaan ohjausmerkkejä. käytä muutenkin noita säätöjä jotka
- * näkyvät kuvassa"*). Ääni on "Dr. Von - Quirky, Mad Scientist"
- * (PULU_AANI_OLETUS). eleven_multilingual_v2 ei ymmärrä v3:n
- * hakasulkutageja — ne luettaisiin ääneen — joten repliikki lähtee
- * puhtaana tekstinä. TAGIT-taulu jää talteen v3-kokeilua varten
- * (MALLI takaisin eleven_v3:een palauttaa ne käyttöön).
+ * PYSYVÄ OLETUS (omistajan valinta 12.9.2026): "flicker - cheerful
+ * fairy & sparkly sweetness", voice_id piI8Kku0DcvcL6TTSeQt,
+ * eleven_v3 ja Natural 0,5. V3:n hakasulkutagit ovat käytössä, mutta
+ * ne eivät koskaan kuulu pelaajan näkyvään tekstiin.
  *
- * Säätimet omistajan kuvakaappauksesta: Speed hieman keskeltä oikealle
- * (1,05), Stability keskellä (0,5), Similarity 0,75, Style Exaggeration
- * nolla, Speaker boost päällä. Nopeus tulee nyt mallista, joten
- * ffmpeg-tempo on 1,0 (ks. MIKSI TEMPO TEHDÄÄN FFMPEGILLÄ — pätee vain
- * v3:lle, jolla ei ole speed-säädintä).
- */
-/*
- * MALLI JA VAKAUS OVAT AJOKOHTAISIA (omistaja 12.9.2026: *"kokeillaan
- * toista ääntä pululle … siinä täytyy käyttää v3 moottoria eleven
- * labsissa. silloin siihen voi laittaa ne tunnelma tagit ja niitä
- * samoja tageja voi sitten ohjata myös pulun animaatiolle. stability:
- * natural."*).
- *
- * MIKSI YMPÄRISTÖSTÄ EIKÄ KOODIIN KOVAKOODATTUNA: 6.9.2026 tehty
- * v2-valinta oli omistajan kuuntelupäätös, eikä sitä kumota ennen kuin
- * uusi ääni on kuultu pelissä. Ajo voi siis vaihtaa mallin ja vakauden
- * ilman että kumpikaan linjaus katoaa — oletus on yhä se, mikä pelissä
- * nyt kuuluu. Kun omistaja valitsee, oletukset muutetaan tässä.
+ * Aiempi Dr. Von / eleven_multilingual_v2 säilyy vanhoissa
+ * tuotantometatiedoissa ja jo julkaistuissa äänissä. Se ei enää ole
+ * uuden ajon oletus. Ajokohtainen ympäristömuuttuja voi yhä tehdä
+ * tietoisen koestuksen, mutta workflow asettaa nämä uudet oletukset
+ * eksplisiittisesti eikä peri vanhaa valintaa.
  *
  * VAKAUS ON NIMI EIKÄ LUKU. v3:n käyttöliittymässä säädin on
  * Creative / Natural / Robust, ja rajapinta ottaa luvun — nimet
@@ -214,13 +199,14 @@ const PUHE_OSOITE = `${API}/v1/text-to-speech`;
  * omistaja näkee ElevenLabsin sivulla.
  */
 const VAKAUDET = Object.freeze({ creative: 0, natural: 0.5, robust: 1 });
-const MALLI = process.env.PULU_MALLI ?? 'eleven_multilingual_v2';
-/** "Dr. Von - Quirky, Mad Scientist" (omistajan valinta 6.9.2026, haettu --haku "Dr. Von"). */
-export const PULU_AANI_OLETUS = process.env.PULU_AANI ?? 'yjJ45q8TVCrtMhEKurxY';
+export const PULU_MALLI_OLETUS = 'eleven_v3';
+export const PULU_VAKAUS_OLETUS = 'natural';
+/** "flicker - cheerful fairy & sparkly sweetness" (omistajan valinta 12.9.2026). */
+export const PULU_AANI_OLETUS = 'piI8Kku0DcvcL6TTSeQt';
+const MALLI = process.env.PULU_MALLI ?? PULU_MALLI_OLETUS;
 const TAGIT_KAYTOSSA = MALLI === 'eleven_v3';
-const STABILITY = process.env.PULU_VAKAUS
-  ? (VAKAUDET[process.env.PULU_VAKAUS] ?? Number(process.env.PULU_VAKAUS))
-  : 0.5;
+const VAKAUS = process.env.PULU_VAKAUS ?? PULU_VAKAUS_OLETUS;
+const STABILITY = VAKAUDET[VAKAUS] ?? Number(VAKAUS);
 const SIMILARITY = 0.75;
 /** Tyylin voimakkuus: v2:lla nolla (omistajan säätö), v3:lla 0,6. */
 const STYLE = TAGIT_KAYTOSSA ? 0.6 : 0;
@@ -1272,7 +1258,7 @@ async function main() {
         console.log(`  ${tyo.avain.padEnd(16)} ${tyo.tila.toUpperCase().padEnd(10)} `
           + `~${tyo.arvioSekunteina} s  "${tyo.teksti}"`);
       }
-      console.log(`  aja: node tools/generoi-pulu.mjs --aani <voice_id> --pakota `
+      console.log(`  aja: node tools/generoi-pulu.mjs --aani ${liput.aani} --pakota `
         + `--repliikit ${ajettavat.map((tyo) => tyo.avain).join(',')}`);
     } else {
       console.log('\nKaikki vartioidut repliikit ovat ajan tasalla.');
@@ -1293,8 +1279,8 @@ async function main() {
     process.exit(1);
   }
   if (!liput.aani) {
-    console.error('Ääntä ei ole valittu. Aja ensin --aanet, kuuntele esikuuntelut ja '
-      + 'anna valittu tunnus lipulla --aani <voice_id> (tai ympäristössä PULU_AANI).');
+    console.error('Äänitunnus puuttuu. Käytä omistajan lukittua oletusta tai anna '
+      + 'tietoinen koestustunnus lipulla --aani <voice_id>.');
     process.exit(1);
   }
 

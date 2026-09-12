@@ -1,15 +1,20 @@
 {
   "schemaVersion": 1,
   "contentRevision": "eu-hl-pilot-20260912-r1",
-  "state": "hold-owner-voice-selection",
+  "state": "hold-content-review-and-paid-run-authorization",
   "sourceTextCommit": "aa3a61d7b5c422d132f6ef06c1c64dfd521ebcc2",
   "cities": ["marseille", "ateena", "sarajevo", "venetsia"],
   "invariants": {
     "visibleAndSpokenWordsMustMatch": true,
     "finalTimingsFromForcedAlignmentOnly": true,
+    "contentApprovedForAudio": false,
     "paidRunAuthorized": false,
     "publishAuthorized": false
   },
+  "preRunRequired": [
+    "approve genuinely shortened final Horatio texts and matching visible/TTS words",
+    "explicitly authorize the paid four-city Horatio and Livia generation run"
+  ],
   "horatio": {
     "provider": "ElevenLabs",
     "endpoint": "/v1/text-to-dialogue",
@@ -69,10 +74,11 @@
   "livia": {
     "provider": "ElevenLabs",
     "model": "eleven_v3",
-    "voice": {"state": "owner-selection-pending", "id": null},
+    "voice": {"state": "owner-locked", "name": "flicker - cheerful fairy & sparkly sweetness", "id": "piI8Kku0DcvcL6TTSeQt"},
     "stability": {"name": "natural", "value": 0.5},
     "outputFormat": "mp3_44100_128",
-    "generationCommand": "PULU_MALLI=eleven_v3 PULU_VAKAUS=natural node tools/generoi-pulu.mjs --aani <owner_selected_voice_id> --pakota --repliikit marseille-3,ateena-3,sarajevo-3,venetsia-3",
+    "generationCommand": "PULU_MALLI=eleven_v3 PULU_VAKAUS=natural node tools/generoi-pulu.mjs --aani piI8Kku0DcvcL6TTSeQt --pakota --repliikit marseille-3,ateena-3,sarajevo-3,venetsia-3",
+    "alignmentCommand": "ELEVEN_API_KEY=<secret> node tools/kohdista-pulu-eleet.mjs",
     "items": [
       {"key": "marseille-3", "visibleText": "Marseillen saippuaa tehdään yhä. Lokit eivät tunne puhdasta pöytää. Minä erotan sataman jo äänestä ja suolasta höyhenissä.", "ttsText": "[curious] Marseillen saippuaa tehdään yhä. [mischievously] Lokit eivät tunne puhdasta pöytää. [warmly] Minä erotan sataman jo äänestä ja suolasta höyhenissä.", "textDigest": "f58cb5bc", "ttsTextSha256": "eeeba655325d18a895e6e5dee0481aa4acb03eee390ea767a9d036ad76cec11f", "supersedesTextDigest": "bc17db80", "audioObject": "aanet/pulu/livia-marseille-3.mp3", "cueAnchors": [{"cueId": "marseille.livia.c1", "anchor": "Marseillen saippuaa tehdään yhä", "occurrence": 1}, {"cueId": "marseille.livia.c2", "anchor": "Lokit eivät tunne", "occurrence": 1}, {"cueId": "marseille.livia.c3", "anchor": "jo äänestä ja suolasta", "occurrence": 1}]},
       {"key": "ateena-3", "visibleText": "Schliemannin talo on nyt rahamuseo. Puutarhakahvilassa kolikot tekevät taas tavallista työtään. Minä tarkistan ensin varjon.", "ttsText": "[curious] Schliemannin talo on nyt rahamuseo. [warmly] Puutarhakahvilassa kolikot tekevät taas tavallista työtään. [mischievously] Minä tarkistan ensin varjon.", "textDigest": "13655811", "ttsTextSha256": "e93814ae74555d3f88bc632273fa29c209b748e50905390ce40d452d62d24bef", "supersedesTextDigest": "418f4055", "audioObject": "aanet/pulu/livia-ateena-3.mp3", "cueAnchors": [{"cueId": "ateena.livia.c1", "anchor": "nyt rahamuseo", "occurrence": 1}, {"cueId": "ateena.livia.c2", "anchor": "tavallista työtään", "occurrence": 1}, {"cueId": "ateena.livia.c3", "anchor": "tarkistan ensin varjon", "occurrence": 1}]},

@@ -23,7 +23,10 @@
 #   generoi  Generoi repliikit valitulla äänellä (syöte `aani`) ja vie
 #            ne ämpärin kansioon aanet/pulu/ manifesteineen.
 #
-# JÄRJESTYS: aanet → (kuuntele, valitse ääni) → kuiva → generoi.
+# PYSYVÄ OLETUS 12.9.2026: flicker / piI8Kku0DcvcL6TTSeQt,
+# eleven_v3, Natural 0,5. `aanet` säilyy tietoista myöhempää koestusta
+# varten; tavallinen järjestys on kuiva → erillinen maksullisen ajon lupa
+# → generoi.
 #
 # JO OLEMASSA OLEVAA EI GENEROIDA UUDELLEEN: ennen kutsua tehdään HEAD
 # julkiseen osoitteeseen, ja 200 ohittaa repliikin. `pakota` kirjoittaa
@@ -70,10 +73,10 @@ on:
         options: ['aanet', 'kuiva', 'generoi']
       aani:
         description: >-
-          Valitun äänen voice_id (ElevenLabs). Pakollinen toiminnolle
-          "generoi"; muissa jätetään tyhjäksi.
+          Pulun voice_id (ElevenLabs). Oletus on omistajan 12.9.2026
+          lukitsema flicker; muuta vain uudella nimenomaisella päätöksellä.
         required: false
-        default: ''
+        default: 'piI8Kku0DcvcL6TTSeQt'
       haku:
         description: >-
           aanet: listaa vain äänet, joiden nimessä tämä sana on
@@ -89,20 +92,19 @@ on:
         default: ''
       malli:
         description: >-
-          ElevenLabsin malli. v2 on nykyinen pelissä kuuluva ääni ilman
-          tageja; v3 ymmärtää hakasulkutagit ([excited], [breathless])
-          ja on omistajan 12.9.2026 kokeilu.
+          ElevenLabsin malli. Omistajan 12.9.2026 lukitsema oletus on v3,
+          joka ymmärtää hakasulkutagit ([excited], [breathless]).
         required: true
         type: choice
-        default: 'eleven_multilingual_v2'
+        default: 'eleven_v3'
         options: ['eleven_multilingual_v2', 'eleven_v3']
       vakaus:
         description: >-
-          Vakaus samalla sanalla kuin ElevenLabsin sivulla. Tyhjä =
-          mallin oletus (0,5).
+          Vakaus samalla sanalla kuin ElevenLabsin sivulla. Omistajan
+          lukitsema oletus on Natural (0,5).
         required: false
         type: choice
-        default: ''
+        default: 'natural'
         options: ['', 'creative', 'natural', 'robust']
       pakota:
         description: >-

@@ -445,32 +445,22 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
 /* ---------- tagit ---------- */
 
 /*
- * V2-MALLILLA PUHE ON PUHDASTA TEKSTIÄ (omistaja 6.9.2026: "v2 versio
- * on parempi tälle äänelle, eli ei tule ollenkaan ohjausmerkkejä").
- * Tagit ovat yhä taulussa v3-kokeilua varten, mutta mallille lähtevä
- * teksti on täsmälleen kaanoni — hakasulku puheessa luettaisiin ääneen.
+ * UUSI PYSYVÄ OLETUS ON V3 (omistajan valinta 12.9.2026). Mallille
+ * lähtevässä muodossa ovat vain TAGIT-taulun ohjausmerkit, ja niiden
+ * poiston pitää palauttaa pelaajan näkemä kaanoni merkilleen.
  */
-test('v2-mallille lähtee kaanonin teksti ilman tageja; tagitaulu säilyy v3:lle', () => {
+test('v3-oletus käyttää tageja mutta niiden poisto palauttaa kaanonin', () => {
   for (const rivi of repliikit()) {
-    assert.equal(rivi.puhe, rivi.teksti, `${rivi.avain}: puhemuodossa on ohjausmerkkejä`);
-    assert.ok(!/\[[^\]]+\]/.test(rivi.puhe), `${rivi.avain}: hakasulkutagi puheessa`);
-    /*
-     * TAGITAULUA VAADITAAN VAIN js/livia.js:n LÄHTEILTÄ. Kaupunkien
-     * repliikit (ateena, sofia) syntyivät v2-mallin aikaan, jolloin
-     * mallille ei lähetetä tageja lainkaan — taulua ei siis ole eikä
-     * sitä tarvita. Kolmelle vanhalle lähteelle tagitus on yhä
-     * kaanonia kunnioittava, jos v3 otetaan takaisin.
-     */
     if (LIVIA_LAHTEET.includes(rivi.lahde)) {
       assert.ok(TAGIT[rivi.avain], `${rivi.avain}: elävöitystagit puuttuvat taulusta`);
     }
-    // Tagitettu muoto on kaanonia + hakasulkuja: poisto palauttaa
-    // alkuperäisen. Ankkurit tarkistetaan myös kaupunkilähteiltä, jotta
-    // v3:een palaaminen ei kaadu vasta maksullisessa ajossa.
-    if (!TAGIT[rivi.avain]) continue;
-    const tagitettu = puhemuoto(rivi.teksti, TAGIT[rivi.avain]);
-    assert.notEqual(tagitettu, rivi.teksti);
-    assert.equal(ilmanTageja(tagitettu), rivi.teksti,
+    if (!TAGIT[rivi.avain]) {
+      assert.equal(rivi.puhe, rivi.teksti);
+      continue;
+    }
+    assert.equal(rivi.puhe, puhemuoto(rivi.teksti, TAGIT[rivi.avain]));
+    assert.match(rivi.puhe, /\[[^\]]+\]/, `${rivi.avain}: v3-tagi puuttuu`);
+    assert.equal(ilmanTageja(rivi.puhe), rivi.teksti,
       `${rivi.avain}: tagien poisto ei palauta kaanonista tekstiä`);
     // Kaiku on pois pulun alusta: alkutagi ei saa olla kaikutagi.
     assert.doesNotMatch(TAGIT[rivi.avain].alku ?? '', /echo|reverb|kaiku/i);
@@ -479,6 +469,9 @@ test('v2-mallille lähtee kaanonin teksti ilman tageja; tagitaulu säilyy v3:lle
   const avaimet = new Set(repliikit().map((rivi) => rivi.avain));
   for (const avain of Object.keys(TAGIT)) {
     assert.ok(avaimet.has(avain), `TAGIT: ${avain} ei ole yhdenkään repliikin avain`);
+  }
+  for (const avain of ['marseille-3', 'ateena-3', 'sarajevo-3', 'venetsia-3']) {
+    assert.ok(TAGIT[avain], `${avain}: pilotin v3-tagit puuttuvat`);
   }
 });
 

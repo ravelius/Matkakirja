@@ -5,6 +5,9 @@ import { readFileSync } from 'node:fs';
 
 import { livianTiiviste } from '../js/liviapuhe.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
+import {
+  PULU_AANI_OLETUS, PULU_MALLI_OLETUS, PULU_VAKAUS_OLETUS, tulkitseArgumentit,
+} from '../tools/generoi-pulu.mjs';
 
 const PILOTIT = ['marseille', 'ateena', 'sarajevo', 'venetsia'];
 
@@ -54,11 +57,24 @@ test('TTS-ajopaketti on sidottu pilotin sanoihin ja tiivisteisiin', () => {
     '../docs/raportit/horatio-livia-pilotti-tts-ajopaketti-20260912.json',
     import.meta.url,
   ), 'utf8'));
-  assert.equal(paketti.state, 'hold-owner-voice-selection');
+  assert.equal(paketti.state, 'hold-content-review-and-paid-run-authorization');
+  assert.equal(paketti.invariants.contentApprovedForAudio, false);
   assert.equal(paketti.invariants.paidRunAuthorized, false);
   assert.equal(paketti.invariants.publishAuthorized, false);
   assert.equal(paketti.horatio.items.length, PILOTIT.length);
   assert.equal(paketti.livia.items.length, PILOTIT.length);
+  assert.deepEqual(paketti.livia.voice, {
+    state: 'owner-locked',
+    name: 'flicker - cheerful fairy & sparkly sweetness',
+    id: 'piI8Kku0DcvcL6TTSeQt',
+  });
+  assert.equal(paketti.livia.model, 'eleven_v3');
+  assert.deepEqual(paketti.livia.stability, { name: 'natural', value: 0.5 });
+  assert.match(paketti.livia.generationCommand, /--aani piI8Kku0DcvcL6TTSeQt(?:\s|$)/);
+  assert.equal(PULU_AANI_OLETUS, paketti.livia.voice.id);
+  assert.equal(PULU_MALLI_OLETUS, paketti.livia.model);
+  assert.equal(PULU_VAKAUS_OLETUS, paketti.livia.stability.name);
+  assert.equal(tulkitseArgumentit([]).aani, paketti.livia.voice.id);
 
   for (const cityId of PILOTIT) {
     const virta = FOKUSVIRRAT[cityId];
@@ -87,4 +103,13 @@ test('TTS-ajopaketti on sidottu pilotin sanoihin ja tiivisteisiin', () => {
         `${cue.cueId}: ankkurin pitää esiintyä täsmälleen sovitun kerran`);
     }
   }
+});
+
+test('workflow ei palauta tulevia Pulu-ajoja vanhaan ääneen tai v2-malliin', () => {
+  const workflow = readFileSync(new URL('../.github/workflows/generoi-pulu.yml', import.meta.url), 'utf8');
+  assert.match(workflow, /default: 'piI8Kku0DcvcL6TTSeQt'/);
+  assert.match(workflow, /default: 'eleven_v3'/);
+  assert.match(workflow, /default: 'natural'/);
+  assert.doesNotMatch(workflow, /default: 'yjJ45q8TVCrtMhEKurxY'/);
+  assert.doesNotMatch(workflow, /default: 'eleven_multilingual_v2'/);
 });

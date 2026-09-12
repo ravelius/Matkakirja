@@ -2,9 +2,9 @@
 
 ## Tila
 
-**RC koottu, mutta audio- ja kohdistusportti on HOLD.** Tämä haara ei ole
-julkaisupyyntö. Maksullisia ääniajoja, R2-vientiä, mergeä tai julkaisua ei ole
-valtuutettu eikä tehty.
+**RC koottu ja Livian ääni lukittu, mutta sisältö- ja maksullisen audioajon
+portit ovat HOLD.** Tämä haara ei ole julkaisupyyntö. Maksullisia ääniajoja,
+R2-vientiä, mergeä tai julkaisua ei ole valtuutettu eikä tehty.
 
 - RC-haara: `codex/horatio-livia-rc-20260912`
 - pohja: `86038bcc` (`v1816`)
@@ -14,6 +14,19 @@ valtuutettu eikä tehty.
   Sarajevo-ankkurikorjaus `15b9f720`
 - ilme-, ele- ja ohjainlähde: `f2ee37b1`, koontipuun vastaava commit
   `7958bfb0`
+
+## Lukittu Livian/Pulun ääni
+
+- nimi: `flicker - cheerful fairy & sparkly sweetness`
+- ElevenLabs voice_id: `piI8Kku0DcvcL6TTSeQt`
+- model_id: `eleven_v3`
+- stability: Natural / `0.5`
+
+Nämä ovat `tools/generoi-pulu.mjs`-työkalun ja
+`.github/workflows/generoi-pulu.yml`-työn pysyvät oletukset. Aiempi Dr. Von /
+v2 säilyy historiassa ja vanhoissa tuotantoäänissä, mutta ei ohjaa uusia
+Pulu-ajoja. V3-tagit lisätään vain TTS-syötteeseen; näkyvät kuplatekstit eivät
+muutu.
 
 ## Mukana oleva kuva
 
@@ -44,8 +57,8 @@ node tools/kohdista-pulu-eleet.mjs --kuiva
 Odotus ennen ääntä: `4/4 kaupunkia kunnossa`. Kuiva ajo ei käytä verkkoa,
 avainta eikä kirjoita tiedostoja.
 
-Kun omistaja on erikseen valinnut Livian äänen ja valtuuttanut maksullisen
-ajon, TTS-ajopaketti antaa generointikomennon. Kohdistus tehdään vasta
+Kun tekstit on hyväksytty ja omistaja on erikseen valtuuttanut maksullisen
+ajon, TTS-ajopaketti antaa lukitun generointikomennon. Kohdistus tehdään vasta
 hyväksytyille lopullisille mp3-tiedostoille:
 
 ```sh
@@ -58,8 +71,11 @@ tallenneta repoon.
 
 ## Jäljellä olevat pakolliset portit
 
-1. Omistaja valitsee Livialle nykyisen äänen tai uuden ehdokkaan.
-2. Maksulliselle Horatio- ja Livia-ajolle pyydetään erillinen lupa.
+1. Horation neljän tekstin aito tiivistys hyväksytään; nykyinen
+   341→316, 346→337, 328→318 ja 348→348 merkin luonnos ei vielä läpäise
+   sisältöporttia.
+2. Rajatulle neljän kaupungin Horatio- ja Livia-ajolle pyydetään erillinen
+   maksullisen ajon lupa.
 3. Valmiit äänet kuunnellaan kokonaan; SHA-256 ja tavumäärä kirjataan.
 4. Horatio kohdistetaan uudelleen ja Livian neljä `.eleet.json`-tiedostoa
    tuotetaan lopullisista mp3-tiedostoista.
@@ -71,6 +87,11 @@ tallenneta repoon.
    kaupungin tarkka tila: puhe, pause/resume, seek, nopeus, loppu, ohitus,
    keskeytys, hiljainen fallback, chat, lehdet ja kartalle paluu. Safari/
    asennettu sovellus on omistajan lopullinen katselmuspinta.
+
+Rajatussa neljän kaupungin kuuntelussa tarkistetaan lisäksi, etteivät tagit
+kuulu sanoina, sanat vastaavat kuplaa, alkuun ei synny kaikua, Sarajevo pysyy
+hillittynä, Venetsian kuiskaus on ymmärrettävä, Marseille/Ateena eivät
+kiirehdi loppua ja jokainen tiedosto jää alle 20 sekunnin.
 
 ## Tämän RC:n tunnettu tarkoituksellinen punainen tila
 
