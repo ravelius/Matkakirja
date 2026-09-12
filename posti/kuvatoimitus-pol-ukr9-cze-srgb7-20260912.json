@@ -1,0 +1,343 @@
+{
+  "createdAt": "2026-09-12T14:59:40.625876+00:00",
+  "rootApproved": true,
+  "mediaReadbackVerified": true,
+  "gameIntegrated": false,
+  "polUkr9": [
+    {
+      "key": "POL:maasto:odra",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-odra-8df9830a8122.jpg",
+      "sha256": "8df9830a8122eb064aa2afe24840ebfa7f3b5dfaacadc97f98674ed184f0c065",
+      "bytes": 717686,
+      "dimensions": [
+        2560,
+        1448
+      ],
+      "kind": "authentic-photograph",
+      "captionFi": "Odra virtaa Frankfurtin ja Słubicen välissä Puolan ja Saksan rajajokena; sen pitkä alajuoksu jatkuu Szczecinin laguunin kautta Itämereen.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Janfortytwo",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Oder_(river).jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Oder_(river).jpg"
+      }
+    },
+    {
+      "key": "POL:maasto:odra",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-odra-cffc05691432.jpg",
+      "sha256": "cffc05691432ad600a1b69a8c4976ccb07d7fe2f367c36db9258ea3927eb2630",
+      "bytes": 546838,
+      "dimensions": [
+        1667,
+        943
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Matkakirjan havainnekuva rajamittauksesta Odran rannalla 1940-luvun lopulla.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "creator": "OpenAI; referenssikuva Janfortytwo",
+        "referenceCreator": "Janfortytwo",
+        "referenceFilePage": "https://commons.wikimedia.org/wiki/File:Oder_(river).jpg",
+        "referenceLicense": "CC BY-SA 3.0",
+        "referenceLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "referenceSha256": "a80c48b7dc0a29eb5b060ca4f7395fea6913ef39b86856dccf167df6289df884",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "adaptationNoticeFi": "Alkuperäistä valokuvaa on käytetty uuden generoidun havainnekuvan referenssinä; näkymää ja tapahtumaa on muokattu."
+      }
+    },
+    {
+      "key": "POL:kohde:auschwitz",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/pol-kohde-auschwitz-69491a8d2cae.jpg",
+      "sha256": "69491a8d2caed5e2f1630bcef25136ecd493f9018e69b14a9a127bf010982a4b",
+      "bytes": 1255422,
+      "dimensions": [
+        2560,
+        1920
+      ],
+      "kind": "authentic-photograph",
+      "captionFi": "Auschwitz II-Birkenaun piikkilanka-aita jatkuu sumuiseen maisemaan alueella, jossa natsi-Saksa murhasi valtaosan Auschwitzin uhreista.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Jacek Daczyński",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Auschwitz_II_Birkenau.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Auschwitz_II_Birkenau.jpg"
+      }
+    },
+    {
+      "key": "POL:kohde:auschwitz",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/pol-kohde-auschwitz-e695ff7c5e93.jpg",
+      "sha256": "e695ff7c5e93ec93eea560350171bb8200ada397a3c03f081b045af5c6fd82ee",
+      "bytes": 756676,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Matkakirjan havainnekuva Auschwitz II-Birkenaun leirialueesta talvella 1945 ennen vapautusta.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "creator": "OpenAI; referenssikuva Jacek Daczyński",
+        "referenceCreator": "Jacek Daczyński",
+        "referenceFilePage": "https://commons.wikimedia.org/wiki/File:Auschwitz_II_Birkenau.jpg",
+        "referenceLicense": "CC BY-SA 4.0",
+        "referenceLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "referenceSha256": "f4834956f499ea6e5a0243fd0966af9799675ae415626a76ff9fd58e54933649",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "adaptationNoticeFi": "Alkuperäistä valokuvaa on käytetty uuden generoidun havainnekuvan referenssinä; näkymää ja tapahtumaa on muokattu."
+      }
+    },
+    {
+      "key": "POL:kohde:jasnagora",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/pol-kohde-jasnagora-bf326ef07379.jpg",
+      "sha256": "bf326ef07379f20afffa908e2ea4e1c8d13102bc423679ee0eb2f0e361c4d9ed",
+      "bytes": 1934727,
+      "dimensions": [
+        2560,
+        1873
+      ],
+      "kind": "authentic-photograph",
+      "captionFi": "Jasna Góran luostari nykyisessä asussaan Częstochowassa; etualalla näkyy myös tapahtumarakenteita.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Fotoomnia",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Monastery_at_Jasna_G%C3%B3ra_Monastery,_Cz%C4%99stochowa.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Monastery_at_Jasna_G%C3%B3ra_Monastery%2C_Cz%C4%99stochowa.jpg"
+      }
+    },
+    {
+      "key": "UKR:maasto:dnestr",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-dnestr-2062a6593e4d.jpg",
+      "sha256": "2062a6593e4ddd15162c9b3c7a5fdd6338ff809471b6964e58d929e5816c775e",
+      "bytes": 925543,
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "kind": "authentic-photograph",
+      "captionFi": "Dnestr Halyčin kohdalla Länsi-Ukrainassa; joki virtaa tästä Moldovan halki ja palaa Ukrainaan ennen Mustanmeren suistoa.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Raimond Spekking",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Dniester_River_in_Halych,_Ukraine-6111.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Dniester_River_in_Halych%2C_Ukraine-6111.jpg"
+      }
+    },
+    {
+      "key": "UKR:maasto:dnestr",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-dnestr-557002ba3fe0.jpg",
+      "sha256": "557002ba3fe021f0bf5883f27d6bbe0d4228f3e1a4268c2c93507427c39e8c9a",
+      "bytes": 848097,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Matkakirjan havainnekuva Dnestristä Halyčin kohdalla nykyisessä jokimaisemassa.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "creator": "OpenAI; referenssikuva Raimond Spekking",
+        "referenceCreator": "Raimond Spekking",
+        "referenceFilePage": "https://commons.wikimedia.org/wiki/File:Dniester_River_in_Halych,_Ukraine-6111.jpg",
+        "referenceLicense": "CC BY-SA 4.0",
+        "referenceLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "referenceSha256": "93b2450d668dce73030692b667ed9412f5b73876561c580b13f1f5e445ecf49c",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "adaptationNoticeFi": "Alkuperäistä valokuvaa on käytetty uuden generoidun havainnekuvan referenssinä; näkymää ja tapahtumaa on muokattu."
+      }
+    },
+    {
+      "key": "UKR:kohde:kamjanets-podilskyin-linna",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-kohde-kamjanets-podilskyin-linna-42a38ea06850.jpg",
+      "sha256": "42a38ea0685036d00ef4e00bedc685b8530a0d484fb3baa62d56cd0aac0192d1",
+      "bytes": 1860927,
+      "dimensions": [
+        2560,
+        1707
+      ],
+      "kind": "authentic-photograph",
+      "captionFi": "Kamjanets-Podilskyin linna nykyisessä asussaan Smotrytš-joen kiertämällä kallioniemellä Podoliassa.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Rbrechko",
+        "filePage": "https://commons.wikimedia.org/wiki/File:68-104-9007_Kamianets-Podilskyi_Fortress_RB_18_2.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/68-104-9007_Kamianets-Podilskyi_Fortress_RB_18_2.jpg"
+      }
+    },
+    {
+      "key": "UKR:kohde:tsernobylin-ydinvoimala",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-kohde-tsernobylin-ydinvoimala-0e9773afbd39.jpg",
+      "sha256": "0e9773afbd39b70dc7ac67e8ee14682fc70ee2443c5a129987972d1679787a80",
+      "bytes": 2280327,
+      "dimensions": [
+        2560,
+        1703
+      ],
+      "kind": "authentic-photograph",
+      "captionFi": "Tšernobylin ydinvoimalan vaurioitunut nelosreaktori vuonna 2013 ennen uuden suojarakennuksen siirtämistä sen päälle.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Paweł \"pbm\" Szubert / Wikipedia",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Chernobyl_-_power_plant_-_reactor_4_02.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Chernobyl_-_power_plant_-_reactor_4_02.jpg"
+      }
+    }
+  ],
+  "czeSrgb7": [
+    {
+      "key": "CZE:maasto:snezka",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/cze-maasto-snezka-fd8fdae69415.jpg",
+      "sha256": "fd8fdae6941598fab1b2f6cf4e7417a51e70d3816918da8d250056ce4c93732f",
+      "bytes": 3193042,
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "captionFi": "Näkymä Sněžkalta Tšekin ja Puolan ystävyyspolkua kohti Pomezní Boudya.",
+      "source": {
+        "label": "Valokuva: Honza Groh (Jagro), Wikimedia Commons (CC BY-SA 3.0).",
+        "creator": "Honza Groh (Jagro)",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Sněžka,_pohled_na_cestu_česko-polského_přátelství.jpg",
+        "directOriginalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Sn%C4%9B%C5%BEka%2C_pohled_na_cestu_%C4%8Desko-polsk%C3%A9ho_p%C5%99%C3%A1telstv%C3%AD.jpg"
+      }
+    },
+    {
+      "key": "CZE:maasto:vltava",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/cze-maasto-vltava-8f6ff00782e2.jpg",
+      "sha256": "8f6ff00782e2731f0ac42f71242158b5d6fa0468a71000d0a7cfb0ab0a7d65ed",
+      "bytes": 3146825,
+      "dimensions": [
+        3264,
+        2448
+      ],
+      "captionFi": "Vltava ja Mrázkův mlýnin pato Český Krumlovissa.",
+      "source": {
+        "label": "Valokuva: Mark Ahsmann, Wikimedia Commons (CC BY-SA 3.0).",
+        "creator": "Mark Ahsmann",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Vltava_at_Český_Krumlov.JPG",
+        "directOriginalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Vltava_at_%C4%8Cesk%C3%BD_Krumlov.JPG"
+      }
+    },
+    {
+      "key": "CZE:kohde:kutna-hora",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/cze-kohde-kutna-hora-02c6c8b4acda.jpg",
+      "sha256": "02c6c8b4acdab4150110d3f1be07a480c6bc6fe1d5e08d9ad85332fe7be0a7a1",
+      "bytes": 3242394,
+      "dimensions": [
+        4080,
+        2296
+      ],
+      "captionFi": "Kutná Horan historiallinen keskusta, Pyhän Barbaran kirkko ja entinen jesuiittakollegio.",
+      "source": {
+        "label": "Valokuva: Pere prlpz, Wikimedia Commons (CC BY-SA 3.0).",
+        "creator": "Pere prlpz",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Kutná_Hora-_Historical_Town_Centre_with_the_Church_of_St._Barbara.jpg",
+        "directOriginalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Kutn%C3%A1_Hora-_Historical_Town_Centre_with_the_Church_of_St._Barbara.jpg"
+      }
+    },
+    {
+      "key": "CZE:kohde:cesky-krumlov",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/cze-kohde-cesky-krumlov-0504b4128cac.jpg",
+      "sha256": "0504b4128cace97e20e82f0ca2a6b9ca6db5c570a852a8aa4791ba98485a74fd",
+      "bytes": 1416430,
+      "dimensions": [
+        2288,
+        1712
+      ],
+      "captionFi": "Český Krumlovin linna kohoaa kallioiselta rinteeltä Vltavan mutkan yllä.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "fileName": "Cesky krumlov castle.JPG",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Cesky_krumlov_castle.JPG",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Cesky_krumlov_castle.JPG",
+        "creator": "Vincent de Groot",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "originalSourceReadBack": true
+      }
+    },
+    {
+      "key": "CZE:kohde:plzensky-prazdroj",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/cze-kohde-plzensky-prazdroj-3fa635c8f728.jpg",
+      "sha256": "3fa635c8f7280a9075731b68ea9ac9de12d1d1129643cb28e78ae35e1d724430",
+      "bytes": 3380243,
+      "dimensions": [
+        3456,
+        2592
+      ],
+      "captionFi": "Plzeňský Prazdroj -panimon historiallinen pääportti avautuu Plzeňin panimoalueelle.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "fileName": "Pilsner-Urquell-Main-Gate.jpg",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Pilsner-Urquell-Main-Gate.jpg",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Pilsner-Urquell-Main-Gate.jpg",
+        "creator": "David J. Fred (Dfred)",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "originalSourceReadBack": true
+      }
+    },
+    {
+      "key": "CZE:kohde:mendelin-luostari",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/cze-kohde-mendelin-luostari-59300d2a69c1.jpg",
+      "sha256": "59300d2a69c1db518424667dd227882421efc0313e125b96e8968a54f0d1a5e6",
+      "bytes": 216001,
+      "dimensions": [
+        477,
+        720
+      ],
+      "captionFi": "Gregor Mendelin patsas seisoo Brnon Pyhän Tuomaan luostarin edustalla.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "fileName": "MendelStatue.jpg",
+        "filePage": "https://commons.wikimedia.org/wiki/File:MendelStatue.jpg",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/MendelStatue.jpg",
+        "creator": "Billsofer",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "originalSourceReadBack": true
+      }
+    },
+    {
+      "key": "CZE:kohde:litomysl",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/cze-kohde-litomysl-3bc6ed892381.jpg",
+      "sha256": "3bc6ed892381eaa368014ee60866dc5a5b22af43135dbb6f9ace0d87998d533b",
+      "bytes": 1377652,
+      "dimensions": [
+        1536,
+        2048
+      ],
+      "captionFi": "Litomyšlin renessanssilinnan julkisivua peittää vaalea sgraffitokoristelu.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "fileName": "Litomysl castle.jpg",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Litomysl_castle.jpg",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Litomysl_castle.jpg",
+        "creator": "Twisp",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "originalSourceReadBack": true
+      }
+    }
+  ]
+}

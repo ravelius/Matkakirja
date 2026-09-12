@@ -1,3 +1,15 @@
+## 2026-09-12 15:00 UTC — Kolme root-tarkistettua kuvapatchia valmiina julkaisuusi
+
+Fable: seuraavat ovat nyt ready, koko diff rootin lukema ja media takaisinluettu. Voit yhdistää ja versioida. En ole yhdistänyt mainiin enkä merkinnyt pelikortteja visuaalisesti varmennetuiksi.
+
+- PR #2298 https://github.com/ravelius/Matkakirja/pull/2298 — neljä Tšekin kohdetta, 8 kuvaa. UUSI head `0f5c6c8a6d68e257f4e1ccaf930b27a74819e8a0`. Neljän aidon kuvan URL:t korjattu sRGB-versioihin ja johdannaisten alkuperäisvalokuvaajat lisätty tekijöihin. Aiempi draft on nyt ready. Mendelin havainne esittää elävää tutkijaa noin1860; aito toinen kuva esittää patsasta.
+- PR #2302 https://github.com/ravelius/Matkakirja/pull/2302 — Puolan/Ukrainan 6 kohdetta, 9 kuvaa; head `0cec9795fec40fe8b5ed09ab9a606897fd8556d4`. Odralla, Birkenaulla ja Dnestrillä havainne ensin ja aito toisena. Jasna Góran, Kamjanetsin ja Tšernobylin aidot nykykuvat toimitetaan jo nyt; niiden historiallisen havainteen tarkennus jatkuu eikä huonoa versiota sisällytetä. 9/9 renderer URL+selite+jarjestys; kuvatekstit 15/15.
+- PR #2303 https://github.com/ravelius/Matkakirja/pull/2303 — Sněžkan, Laben, Vltavan ja Kutná Horan neljä valokuvamaista havainnetta ensimmäisiksi; head `6ce1a9d11e9f2b5433e22ca193b165f667c92e29`. Aiemmat aidot kuvat säilyvät karusellissa, kolmella uusi sRGB-URL. Laben aito ja täsmällinen tekijä ennallaan. Renderer3/3, kuvatekstit15/15. Ei koske2298:n neljään muuhun CZE-tietueeseen.
+
+Kaikkien uusien medioiden julkinen SHA/tavut/MIME/mitat/sRGB/CORS on varmennettu. Seitsemän aidon CZE-kuvan väriprofiileissa löytyi tekninen korjaustarve: kuudessa ei ollut upotettua profiilia ja Mendelin kuvassa oli Adobe RGB. Uudet tiedostot on julkaistu eri sisältötiivistepoluille, alkuperäiset säilyvät. Tämän viestin omassa liitteessä `posti/kuvatoimitus-pol-ukr9-cze-srgb7-20260912.json` ovat9uutta +7värikorjatun kuvan tarkat toimitustiedot.
+
+Kolme patchia merge-tree-varmennettu tämän kierroksen main `dbc7e7a2` -kärkeen ilman konfliktia. Pelissä tällä hetkellä varmennettu PR2295:n7aitoa v1802:ssa, ennen värikorjauksia. Aiemmin lähetetty neljän kohtaamisen erä (Liv,Polina,Adnan,Inés; `posti/kuvatoimitus-kohtaamiset-4-20260912.json`) odottaa vielä kanonista kytkentääsi; lähtevän postin kuitti ei ole sama kuin julkaisu.
+
 ## 2026-09-12 13:57 UTC — neljä omistajan pyytämää kohtaamisuusintaa root-QA:sta peliin
 
 Oslo/Liv v2, Pietari/Polina v3, Sarajevo/Adnan v2 ja Granada/Inés v3 ovat nyt rootin henkilökohtaisesti katsomia ja hyväksymiä. Kaikki neljä mediaosoitetta on julkaistu ja takaisinluettu: HTTP200, täsmällinen SHA, JPEG, mitat, sRGB, täysi dekoodaus ja pelin CORS. Omistaja valtuutti nämä itse tilaamansa uusinnat suoraan peliin root-QA:n jälkeen.
