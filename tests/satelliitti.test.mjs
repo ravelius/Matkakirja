@@ -229,10 +229,10 @@ test('kuva avautuu heti koko ruutuun — ei kaksivaiheista nostokuvaa', () => {
   assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*background: #040907/);
 });
 
-test('pikkukuvat, napit ja leima ovat KUVAN PÄÄLLÄ', () => {
+test('pikkukuvat, napit ja otsake ovat KUVAN PÄÄLLÄ', () => {
   // Alapalkki kelluu kuvan päällä (position: absolute), ei sen alla.
   assert.match(tyyli, /\.satelliitti-ala \{[\s\S]*position: absolute;[\s\S]*bottom: 0/);
-  assert.match(tyyli, /\.satelliitti-leima \{[\s\S]*position: absolute/);
+  assert.match(tyyli, /\.satelliitti-otsake \{[\s\S]*position: absolute/);
   // Nauha ja napit ovat alapalkin kaksi riviä.
   assert.match(lahde, /ala\.append\(nauha, napit\)/);
   assert.match(lahde, /katselu\.append\(lava, ala\)/);
@@ -296,7 +296,7 @@ test('pikkukuvanauha on lavan sisar — raja eleiden ja selauksen välillä', ()
    * Raja on elementtiraja: eleet ovat LAVAN kuuntelijoita eikä nauha ole
    * lavan sisällä, joten sama piste ei voi kuulua molemmille.
    */
-  assert.match(lahde, /lava\.append\(kuva, leima\)/);
+  assert.match(lahde, /lava\.append\(kuva, otsake\)/);
   assert.ok(!/lava\.append[^;]*nauha/.test(lahde), 'nauha ei saa olla lavan sisällä');
   assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*touch-action: pan-x/);
 });
@@ -416,12 +416,28 @@ test('galleriassa on laskuri, nuolet, pikkukuvat ja vertailu', () => {
 
 /* ═════════════ 6. ei live-väitettä, lähteet mukana ══════════════ */
 
-test('kuvan päällä lukee lähde — mitään live-kuvausta ei luvata', () => {
-  assert.match(lahde, /'Valokuva avaruudesta · NASA'/);
-  // Leima on KUVAN päällä ja jää sinne myös zoomatessa.
-  assert.match(lahde, /html\('span', 'satelliitti-leima', 'Valokuva avaruudesta · NASA'\)/);
-  assert.match(lahde, /lava\.append\(kuva, leima\)/);
-  assert.match(tyyli, /\.satelliitti-leima \{[\s\S]*position: absolute/);
+test('kuvan päällä lukee otsikko ja kuvauspäivä, ei enää arkistoleimaa', () => {
+  /*
+   * OMISTAJA 12.9.2026, sanatarkasti: *"Tuossa ylälaidassa oleva teksti
+   * pitää korvata kuvan otsikolla, eli mitä kuvassa on. Ja sen alle
+   * voisi lisätä kuvauspäivämäärän"*. NASA-maininta ei katoa vaan
+   * siirtyy info-napin taakse (kuvat ovat public domainia, joten
+   * lähdemerkintä ei ole lisenssin vaatimus kuvan päällä).
+   */
+  assert.ok(!/'Valokuva avaruudesta · NASA'/.test(lahde),
+    'vanha arkistoleima on yhä kuvan päällä');
+  assert.match(lahde, /html\('div', 'satelliitti-otsake'\)/);
+  assert.match(lahde, /html\('span', 'satelliitti-otsake-nimi', kohde\.nimi\)/);
+  assert.match(lahde, /html\('span', 'satelliitti-otsake-aika'\)/);
+  // Otsake on KUVAN päällä ja jää sinne myös zoomatessa.
+  assert.match(lahde, /lava\.append\(kuva, otsake\)/);
+  assert.match(tyyli, /\.satelliitti-otsake \{[\s\S]*position: absolute/);
+  // Päiväys vaihtuu otosta vaihdettaessa, nimi ei.
+  assert.match(lahde, /otsakeAika\.textContent = aikateksti\(h\.aika\)/);
+  assert.ok(!/otsakeNimi\.textContent =/.test(lahde), 'nimen ei pidä vaihtua otoksen mukana');
+  // NASA ja lisenssi ovat yhä popupissa.
+  assert.match(lahde, /teeRivi\('Aineisto'/);
+  assert.match(lahde, /teeRivi\('Lisenssi'/);
   // ICEYE-attribuutio poistui kokonaan: aineistoa ei enää käytetä.
   assert.ok(!/ICEYE · tutkakuva/.test(lahde), 'vanha tutkaleima on yhä kuvan päällä');
   assert.ok(!/iceye/i.test(JSON.stringify(SATELLIITTI_KOHTEET)), 'aineistossa on yhä ICEYE-jäämiä');

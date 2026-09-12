@@ -656,11 +656,21 @@ body.aikajana-palkki-auki .topbar {
  * omalla rivillään erotusviivan takana. Otoksia selatessa sormi on
  * sarakkeen yläpäässä, sulku sen alapäässä.
  *
- * EHTO ON ORIENTAATIO JA KORKEUS, EI PELKKÄ LEVEYS: 834 px leveä iPad
- * PYSTYSSÄ saa pitää kaksirivisen alapalkkinsa — vika on matalassa
- * ruudussa, jossa pystysuunta on niukka.
+ * EHTO ON ORIENTAATIO EIKÄ LEVEYS: 834 px leveä iPad PYSTYSSÄ saa
+ * pitää kaksirivisen alapalkkinsa (omistajan alkuperäinen tilaus:
+ * *"kuvan päälle ladotaan pienet kuvat muista otoksista"* koskee
+ * pystyruutua, jossa kuvan ylä- ja alalaitaan jää tyhjää tummaa).
+ * Vaakaruudussa kuva täyttää korkeuden kokonaan, eikä sen päälle siis
+ * mahdu mitään ilman että jotain kuvasta jää piiloon — mitattu myös
+ * 1194 × 834:llä ja 1280 × 800:lla, joissa alapalkki peitti 138 px
+ * valokuvaa.
+ *
+ * SARAKKEEN LEVEYS SKAALAUTUU: 96 px kapealla puhelimen vaakaruudulla,
+ * 150 px työpöydällä, jossa napeille on tilaa.
  */
-@media (orientation: landscape) and (max-height: 560px) {
+@media (orientation: landscape) {
+  .satelliitti-katselu { --satelliitti-sarake: clamp(96px, 11vw, 150px); }
+
   /* Kuva: koko ala paitsi hallintasarake. */
   .satelliitti-lava { right: var(--satelliitti-sarake, 112px); }
 
@@ -734,9 +744,8 @@ body.aikajana-palkki-auki .topbar {
   .satelliitti-otsikko { font-size: 0.85rem; margin-bottom: 2px; }
 }
 
-/* Kapea vaakaruutu (esim. 740 × 360): sarake kapenee, napit tiivistyvät. */
+/* Kapea vaakaruutu (esim. 740 × 360): napit tiivistyvät, kuva ei kavennu. */
 @media (orientation: landscape) and (max-height: 400px) {
-  .satelliitti-katselu { --satelliitti-sarake: 96px; }
   .satelliitti-pikku { font-size: 0.55rem; }
   .satelliitti-pikku img { height: 36px; }
   .satelliitti-nuoli,

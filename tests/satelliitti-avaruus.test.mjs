@@ -37,7 +37,7 @@ import {
   ASETTUMISEN_IKKUNA_MS, AVAUKSEN_MARGINAALI, AVARUUDEN_FOV, AVARUUDEN_TAUSTA,
   ILMAKEHAN_KORKEUS, ILMAKEHAN_VARI, JAAVYOHYKE, NIMIEN_KYNNYS,
   NIMIEN_KYNNYS_POIS, NIMIEN_LUOKKA, VALON_KOMPENSAATIO,
-  ZOOMIN_KAUIN, ZOOMIN_LAHIN,
+  ZOOMIN_KAUIN, ZOOMIN_LAHIN, ZOOMIN_POHJA, reliefinAlfa, kompensoiValo, haivytaNavat,
   avaaAvaruusnakyma, avausKorkeus, halkaisijaRuudulla, maapallonVarit, nimetNakyvat,
   pilvipaino, vyohykeVari, zoomirajat,
 } from '../js/linssit/satelliitti-avaruus.js';
@@ -108,9 +108,14 @@ test('zoomiraja ei päästä pintaan eikä kadota palloa', () => {
     const alt = avausKorkeus(mitat);
     const { min, max } = zoomirajat(alt);
     assert.ok(min < alt && max > alt, `${nimi}: avaus ei ole rajojen sisällä`);
-    // Pintaan ei sukelleta: lähinkin raja on selvästi kaukana pinnasta
-    // (laudan oma lähin on 0,02–0,07).
-    assert.ok(min > 0.5, `${nimi}: lähin raja päästi pintaan (${min})`);
+    /*
+     * Pintaan ei sukelleta. Raja laski 0,55 × avauksesta 0,12 ×
+     * avaukseen (omistaja 12.9.2026: yksi zoom-taso lisää), ja pohjaksi
+     * jäi ABSOLUUTTINEN ZOOMIN_POHJA 0,1 — noin 640 km, matalan radan
+     * korkeus. Laudan oma lähin on 0,02–0,07, eli yhä selvästi alempana.
+     */
+    assert.ok(min >= ZOOMIN_POHJA, `${nimi}: lähin raja alitti pohjan (${min})`);
+    assert.ok(min < alt * 0.5, `${nimi}: lähin raja ei tuonut lisätasoa (${min} / ${alt})`);
     // Pallo ei katoa: kauimmillaankin se on yli kolmanneksen ruudusta.
     const pienin = halkaisijaRuudulla(max, { korkeus: mitat.korkeus });
     assert.ok(pienin > Math.min(mitat.leveys, mitat.korkeus) * 0.33,
@@ -118,11 +123,28 @@ test('zoomiraja ei päästä pintaan eikä kadota palloa', () => {
   }
 });
 
-test('zoomikaista on kapea — ei kartan täyttä skaalaa', () => {
-  assert.ok(ZOOMIN_LAHIN > 0.4 && ZOOMIN_LAHIN < 1);
+test('zoomikaistassa on yksi taso lisää mutta se on yhä pelin omaa kapeampi', () => {
+  // Yksi taso lisää (omistaja 12.9.2026): lähin raja on selvästi
+  // entisen 0,55:n alapuolella, mutta ei nollassa.
+  assert.ok(ZOOMIN_LAHIN > 0.05 && ZOOMIN_LAHIN < 0.3);
   assert.ok(ZOOMIN_KAUIN > 1 && ZOOMIN_KAUIN < 1.6);
-  // Koko kaista on alle kolminkertainen; laudalla suhde on yli satakertainen.
-  assert.ok(ZOOMIN_KAUIN / ZOOMIN_LAHIN < 3);
+  /*
+   * Kaista on noin kymmenkertainen. Laudan oma on yli satakertainen
+   * (0,02…2,5), joten linssi on yhä murto-osa pelin skaalasta — mutta
+   * nyt vierekkäiset kohteet erottuvat: puhelimella Etna ja Italian
+   * saapas olivat 11 px päässä ja ovat nyt 102 px (mitattu 12.9.2026).
+   */
+  assert.ok(ZOOMIN_KAUIN / ZOOMIN_LAHIN > 5 && ZOOMIN_KAUIN / ZOOMIN_LAHIN < 15);
+  // Pohja ei saa olla kaistan yläpuolella.
+  assert.ok(ZOOMIN_POHJA > 0 && ZOOMIN_POHJA < 0.5);
+});
+
+test('lähin raja ei koskaan alita pohjaa eikä ylitä katsoa', () => {
+  for (const alt of [0.05, 0.3, 1, 1.63, 4.49, 12]) {
+    const { min, max } = zoomirajat(alt);
+    assert.ok(min >= Math.min(ZOOMIN_POHJA, max * 0.95) - 1e-9, `min ${min} alle pohjan (alt ${alt})`);
+    assert.ok(min < max, `kaista kääntyi nurin (alt ${alt})`);
+  }
 });
 
 /* ───────────────────────── 4. maan värit ────────────────────────── */
@@ -255,12 +277,20 @@ test('rikkinäinen korkeus ei sytytä eikä sammuta nimiä', () => {
 
 test('nimet on häivytetty CSS:ssä eikä piilotettu asettelusta', () => {
   const css = readFileSync(new URL('../css/satelliitti.css', import.meta.url), 'utf8');
-  // Oletus avaruusnäkymässä: nimi läpinäkyvä; luokka sytyttää sen.
-  assert.match(css, /body\.satelliitti-avaruus \.satelliitti-nimi \{[^}]*opacity: 0;/);
-  assert.match(css, new RegExp(`body\\.satelliitti-avaruus\\.${NIMIEN_LUOKKA} \\.satelliitti-nimi \\{ opacity: 1; \\}`));
+  /*
+   * OLETUS ON PIILOSSA ILMAN EHTOA (12.9.2026). Sääntö oli aiemmin
+   * `body.satelliitti-avaruus`-luokan takana, ja kun avaruusnäkymä ei
+   * syntynyt (pallo ei valmis → avaaAvaruusnakyma palaa nullina),
+   * nimillä ei ollut yhtään piilottavaa sääntöä. Vartio vaatii nyt
+   * ehdottoman oletuksen: vika kaatuu piiloon eikä ruudulle.
+   */
+  assert.match(css, /\n\.satelliitti-nimi \{\n  opacity: 0;/);
+  assert.ok(!/body\.satelliitti-avaruus \.satelliitti-nimi \{[^}]*opacity: 0;/.test(css),
+    'piilotus on yhä avaruusluokan takana');
+  assert.match(css, new RegExp(`body\\.${NIMIEN_LUOKKA} \\.satelliitti-nimi \\{ opacity: 1; \\}`));
   // Häivytys, ei välähdys — ja liikkeenvähennyksellä ei siirtymää.
   assert.match(css, /transition: opacity 220ms ease;/);
-  assert.match(css, /prefers-reduced-motion: reduce[\s\S]*?satelliitti-nimi \{ transition: none; \}/);
+  assert.match(css, /prefers-reduced-motion: reduce[\s\S]*?\.satelliitti-nimi \{ transition: none; \}/);
   // Piste itse ei saa kadota: vain nimi.
   assert.ok(!/satelliitti-(hehku|rengas|ydin)[^}]*opacity: 0/.test(css));
 });

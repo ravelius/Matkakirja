@@ -82,46 +82,53 @@ export const AVARUUDEN_FOV = 50;
  * Sanatarkasti: *"Kaikissa pisteissä ei tarvitse nimeä näkyä kuin
  * vasta lähemmäs zoomattuna."*
  *
- * MITATTU (12.9.2026, 26 havaintokohdetta, kamera vuorollaan jokaisen
- * kohteen päällä, nimilaatikoiden limitys luettuna DOMista):
+ * MITATTU UUDESTAAN 12.9.2026, KUN ZOOMIKAISTA LEVENI (64 kohdetta,
+ * limittyvät nimilaatikot luettuna DOMista, nimet pakotettuna päälle
+ * joka korkeudella):
  *
  *   korkeus ×avaus │ puhelin 374 × 828 │ työpöytä 1259 × 779
- *   ───────────────┼───────────────────┼────────────────────
- *      1,30 (kauin)│ 179 paria, 24/26  │ 34 paria, 21/26
- *      1,00 (avaus)│ 120 paria, 24/26  │ 26 paria, 18/26
- *      0,90        │  95 paria, 24/26  │ 17 paria, 12/26
- *      0,80        │  71 paria, 24/26  │ 14 paria, 10/26
- *      0,70        │  60 paria, 24/26  │ 12 paria,  9/26
- *      0,60        │  38 paria, 22/26  │ 12 paria,  9/26
- *      0,55 (lähin)│  27 paria, 18/26  │ 11 paria,  9/26
+ *   ───────────────┼───────────────────┼─────────────────────
+ *      1,00 (avaus)│ 45 paria / 33 nimeä│ 17 paria / 31 nimeä
+ *      0,80        │ 38 / 33            │ 11 / 30
+ *      0,70        │ 30 / 33            │ 10 / 27
+ *      0,60        │ 25 / 32            │  8 / 24
+ *      0,50        │ 23 / 29            │  5 / 24
+ *      0,40        │ 16 / 27            │  3 / 22
+ *      0,30        │ 11 / 22            │  2 / 15
+ *      0,20        │  5 / 14            │  1 / 10
+ *      0,12 (lähin)│  2 / 10            │  0 /  9
  *
  * KYNNYS ON SUHDELUKU EIKÄ ASTELUKU: avauskorkeus lasketaan kotelosta
  * (avausKorkeus) ja on puhelimella 4,49 mutta työpöydällä 1,63, joten
  * absoluuttinen raja toimisi vain yhdellä ruudulla. Nimet syttyvät
- * korkeudella ≤ NIMIEN_KYNNYS × avaus. 0,72 on mittauksesta: siinä
- * limitys on pudonnut noin puoleen avausnäkymästä molemmilla ruuduilla
- * (puhelin 120 → ~58, työpöytä 26 → 12), ja se on selvästi zoomikaistan
- * [0,55 … 1,30] puolivälin (0,78) alapuolella — nimen näkeminen vaatii
+ * korkeudella ≤ NIMIEN_KYNNYS × avaus.
+ *
+ * MIKSI 0,72 VAIHTUI 0,25:EEN. Vanha luku oli mitattu kaistalle
+ * 0,55…1,30, jossa 0,72 oli kaistan alapuoliskossa. Uusi kaista on
+ * 0,12…1,30 (ks. ZOOMIN_LAHIN), ja 0,72 osuisi siinä keskelle: nimet
+ * syttyisivät heti pienestä nipistyksestä, ja taulukon mukaan niitä
+ * olisi silloin yhä 30 paria päällekkäin. 0,25 pudottaa limityksen
+ * puhelimella 45:stä noin kahdeksaan ja työpöydällä 17:stä yhteen tai
+ * kahteen, ja se on selvästi kaistan alapäässä — nimen näkeminen vaatii
  * siis oikeasti zoomaamista eikä tule vahingossa.
  *
  * LIMITYS EI KATOA KOKONAAN MILLÄÄN KORKEUDELLA, ja se sanotaan tässä
- * suoraan: lähimmälläkin sallitulla korkeudella puhelimella jää 27
- * limityparia 18 näkymässä 26:sta. Syy on aineiston tiheys, ei kynnys —
- * Fuji ja Tokio ovat 0,91° päässä toisistaan ja Etna ja Italian saapas
- * 3,56°, kun pelkkä nimilappu on levein 167 px eli lähimmälläkin
- * zoomilla noin 36 astetta leveä. Näiden erottaminen vaatisi nimien
- * VÄISTELYN (ladonta, joka siirtää päällekkäiset lapun toiselle
- * puolelle pistettä) — se on oma työnsä eikä kuulu tähän erään.
+ * suoraan: lähimmälläkin sallitulla korkeudella puhelimelle jää 2
+ * limityparia. Syy on aineiston tiheys, ei kynnys — Fuji ja Tokio ovat
+ * 0,91° päässä toisistaan, kun pelkkä nimilappu on levein 167 px.
+ * Näiden erottaminen vaatisi nimien VÄISTELYN (ladonta, joka siirtää
+ * päällekkäiset lapun toiselle puolelle pistettä) — se on oma työnsä
+ * eikä kuulu tähän erään.
  */
 /** Nimet syttyvät tällä osuudella avauskorkeudesta (mitattu, ks. yllä). */
-export const NIMIEN_KYNNYS = 0.72;
+export const NIMIEN_KYNNYS = 0.25;
 /**
- * Nimet sammuvat vasta tässä. Hystereesi (0,72 → 0,80, eli 11 %) estää
+ * Nimet sammuvat vasta tässä. Hystereesi (0,25 → 0,29, eli 16 %) estää
  * värähtelyn: ilman sitä yksi kynnyksellä värisevä pikseli sytyttäisi ja
  * sammuttaisi nimet joka kehyksellä. Siirtymä on lisäksi häivytys
  * (css/satelliitti.css), ei välähdys.
  */
-export const NIMIEN_KYNNYS_POIS = 0.80;
+export const NIMIEN_KYNNYS_POIS = 0.29;
 /** Body-luokka, joka sytyttää nimet (oletus: piilossa avaruusnäkymässä). */
 export const NIMIEN_LUOKKA = 'satelliitti-nimet';
 
@@ -551,6 +558,48 @@ export function kompensoiValo(data, leveys, korkeus) {
   return data;
 }
 
+/*
+ * NAPOJEN HÄIVYTYS — reliefin reuna ei saa olla viiva.
+ *
+ * MITATTU KAAPPAUKSESTA 12.9.2026 (puhelin, avausnäkymä): reliefin
+ * alfa loppuu KERRALLA 76°:ssa, ja generoitu napajää alkoi sen
+ * yläpuolella terävänä valkoisena soikiona. Raja näytti kuvan reunalta
+ * eikä jään reunalta.
+ *
+ * Reliefin alfa kerrotaan siksi liu'ulla, joka vie sen nollaan JO
+ * ENNEN kuvan omaa reunaa: pohjoisessa 70°…76°, etelässä −52°…−58°.
+ * Alla oleva generoitu Maa on samalla kaistalla jo osin jäätä
+ * (JAAVYOHYKE 64…78), joten reliefi sulaa jäähän eikä lopu siihen.
+ */
+/** Reliefin häivytyskaista pohjoisessa ja etelässä (asteina). */
+export const RELIEFIN_HAIVYTYS = { pohjoinen: [70, 76], etela: [-52, -58] };
+
+/**
+ * Reliefin alfan kerroin leveysasteella (1 = täysi, 0 = pois).
+ * Puhdas funktio (tests/satelliitti-avaruus.test.mjs).
+ */
+export function reliefinAlfa(lat) {
+  const [pa, pb] = RELIEFIN_HAIVYTYS.pohjoinen;
+  const [ea, eb] = RELIEFIN_HAIVYTYS.etela;
+  const l = Number(lat) || 0;
+  if (l >= pa) return 1 - pehmea(pa, pb, l);
+  if (l <= ea) return 1 - pehmea(-ea, -eb, -l);
+  return 1;
+}
+
+/** Häivytys kuvadataan rivi riviltä (ks. RELIEFIN_HAIVYTYS). */
+export function haivytaNavat(data, leveys, korkeus) {
+  const W = Math.max(1, Math.round(leveys));
+  const H = Math.max(1, Math.round(korkeus));
+  for (let y = 0; y < H; y += 1) {
+    const lat = 90 - ((y + 0.5) / H) * 180;
+    const kerroin = reliefinAlfa(lat);
+    if (kerroin >= 1) continue;
+    for (let x = 0; x < W; x += 1) data[(y * W + x) * 4 + 3] *= kerroin;
+  }
+  return data;
+}
+
 /**
  * RELIEFI GENEROIDUN MAAN PÄÄLLE. Palauttaa lupauksen data-URLista tai
  * nullista (lataus ei onnistunut, canvasia ei ole).
@@ -586,6 +635,7 @@ export function reliefiTekstuuri({
         actx.drawImage(kuva, 0, 0, leveys, korkeus);
         const kuvadata = actx.getImageData(0, 0, leveys, korkeus);
         kompensoiValo(kuvadata.data, leveys, korkeus);
+        haivytaNavat(kuvadata.data, leveys, korkeus);
         actx.putImageData(kuvadata, 0, 0);
         /* 3. päälle — läpinäkyvät navat jättävät generoidun Maan näkyviin */
         ctx.drawImage(apu, 0, 0);
