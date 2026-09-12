@@ -301,11 +301,10 @@ test('kaupunkirepliikki mahtuu kuplaansa', () => {
     assert.ok(rivi.kuplaSekunteina >= rivi.arvioSekunteina,
       `${rivi.avain}: puhe (${rivi.arvioSekunteina} s) ei mahdu kuplan `
       + `näkyvään aikaan (${rivi.kuplaSekunteina} s)`);
-    // Omistajan raja 8.9.2026 ilta: enintään 125 merkkiä kuplaa kohti
-    // (Raamattu, PULUN KUPLASSA PULUN NAKOKULMA, RAJA 125).
-    if (!rivi.pinoutuu) {
-      assert.ok(rivi.merkit <= 125, `${rivi.avain}: kupla on ${rivi.merkit} merkkiä`);
-    }
+    // Merkkikattoa ei ole: 12.9.2026 alkaen Horatio ja Pulu mitoitetaan
+    // kaupunkiparina (tests/horatio-livia-pilotti.test.mjs). Tässä
+    // vartioidaan todellista teknistä ehtoa, äänen mahtumista kuplan
+    // näkyvään aikaan.
   }
 });
 
