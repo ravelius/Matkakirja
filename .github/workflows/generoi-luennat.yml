@@ -53,7 +53,7 @@
 # `aanite`-kenttä ja työkalun kohdetiedosto eivät täsmää. Avainta ei
 # tarvita. Kannattaa ajaa ennen oikeaa ajoa, kun kaupunkilista on uusi.
 #
-# MP3:T MENEVÄT SUORAAN ÄMPÄRIIN, EIVÄT REPOON (omistajan linjaus
+# MP3:T MENEVÄT VERSIONOITUIHIN ÄMPÄRIAVAIMIIN, EIVÄT REPOON (omistajan linjaus
 # 11.9.2026: *"repossa ei saa olla äänitiedostoja, kaikki vain
 # ämpärissä"*). Ajo äänittää, vie tuotoksen ämpärin `audio/`-kansioon ja
 # liittää samat tiedostot ajon artefaktiksi — luennat KUUNNELLAAN siitä
@@ -131,6 +131,13 @@ jobs:
         with:
           node-version: 22
 
+      - name: Asenna kaupunkiluennan mittaustyökalu
+        if: ${{ inputs.kaupungit != '' && inputs.toiminto == 'generoi' }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffprobe -version | head -1
+
       - name: Tarkista että avain on tallessa
         env:
           AVAIN: ${{ secrets.ELEVEN_API_KEY }}
@@ -162,11 +169,35 @@ jobs:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
         run: node tools/generoi-avaus.mjs
 
+      - name: Varaa muuttumaton Horatio-erä ennen maksullista ajoa
+        if: ${{ inputs.kaupungit != '' && inputs.toiminto == 'generoi' }}
+        env:
+          KAUPUNGIT: ${{ inputs.kaupungit }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          node tools/generoi-luennat.mjs --plan-only --kaupungit "$KAUPUNGIT"
+          kuitti=assets/audio/luennat-tuotantokuitti.json
+          era=$(node -e 'console.log(require("./assets/audio/luennat-tuotantokuitti.json").batch.id)')
+          avain="audio/receipts/horatio/${era}.planned.json"
+          endpoint="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+          if aws s3api head-object --bucket "$R2_BUCKET" --key "$avain" --endpoint-url "$endpoint" >/dev/null 2>&1; then
+            echo "::error::Erä $era on jo aloitettu; maksullista ajoa ei uusita."
+            exit 1
+          fi
+          aws s3 cp "$kuitti" "s3://${R2_BUCKET}/${avain}" --endpoint-url "$endpoint" \
+            --no-progress --content-type application/json --cache-control "public, max-age=2592000"
+
       - name: Generoi kaupunkiluennat
         if: ${{ inputs.kaupungit != '' && inputs.toiminto == 'generoi' }}
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
-        run: node tools/generoi-luennat.mjs ${{ inputs.kaupungit }}
+          KAUPUNGIT: ${{ inputs.kaupungit }}
+        run: node tools/generoi-luennat.mjs --kaupungit "$KAUPUNGIT"
 
       # Kuiva ajo ensin: väärä kaupunkiavain tai ankkuri, jota ei löydy
       # luentatekstistä, paljastuu ilman yhtäkään API-kutsua.
@@ -216,17 +247,21 @@ jobs:
 
       # Kuuntelukopio ajon liitteenä. Tämä on ENNEN vientiä: jos vienti
       # kaatuu, luennat ovat silti kuunneltavissa eikä kallista
-      # äänitystä tarvitse toistaa.
+# äänitystä tarvitse toistaa. Generointiajo ei koskaan ylikirjoita
+# live-avainta `audio/puhe-fokus-...`: staging- ja final-avaimet tulevat
+# tuotantokuitista, ja julkaisu live-avaimeen on erillinen hyväksytty vaihe.
       - name: Liitä luennat ajoon kuuntelua varten
-        if: ${{ inputs.toiminto == 'generoi' }}
+        if: ${{ always() && inputs.toiminto == 'generoi' }}
         uses: actions/upload-artifact@v4
         with:
-          name: luennat-${{ github.run_number }}
-          path: assets/audio/*.mp3
+          name: luennat-${{ github.run_number }}-${{ github.run_attempt }}
+          path: |
+            assets/audio/*.mp3
+            assets/audio/luennat-tuotantokuitti.json
           retention-days: 14
-          if-no-files-found: error
+          if-no-files-found: warn
 
-      - name: Vie luennat ämpäriin
+      - name: Vie luennat versionoituihin staging- ja final-avaimiin
         if: ${{ inputs.toiminto == 'generoi' }}
         env:
           # Samat nimet ja sama endpoint-tyyli kuin muissakin
@@ -240,26 +275,37 @@ jobs:
           AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
         run: |
           set -euo pipefail
-          # Kansio on tyhjä checkoutissa (assets/audio ei ole repossa),
-          # joten jokainen täällä oleva mp3 on tämän ajon tuotos. Tyhjä
-          # kansio menisi sync-komennosta läpi vihreänä eikä veisi
-          # mitään — ja vihreä ajo, joka ei vienyt mitään, on pahempi
-          # kuin punainen.
-          maara=$(find assets/audio -type f -name '*.mp3' | wc -l)
-          echo "Vietäviä luentoja: $maara"
-          if [ "$maara" -eq 0 ]; then
-            echo "::error::Yhtään luentaa ei syntynyt — ei vietävää."
+          kuitti=assets/audio/luennat-tuotantokuitti.json
+          if [ ! -f "$kuitti" ]; then
+            echo "::error::Tuotantokuitti puuttuu — mitään ei viedä."
             exit 1
           fi
-          # SAMANNIMINEN LUENTA KORVAUTUU ÄMPÄRISSÄ HETI, ks. ajon alun
-          # kuuntelusääntö: uusi nimi on vaaraton, uusinta ei.
-          aws s3 sync assets/audio \
-            "s3://${{ secrets.R2_BUCKET }}/audio" \
+          node -e '
+            const k=require("./assets/audio/luennat-tuotantokuitti.json");
+            for(const r of k.cities){
+              if(r.generation.status!=="success")continue;
+              if(!r.objectKeys?.staging||!r.objectKeys?.final||r.objectKeys.live!==null)process.exit(2);
+              console.log([r.outputPath,r.objectKeys.staging,r.objectKeys.final].join("\t"));
+            }
+          ' > /tmp/horatio-vienti.tsv
+          test -s /tmp/horatio-vienti.tsv || { echo "::error::Kuitissa ei ole onnistuneita luentoja."; exit 1; }
+          while IFS=$'\t' read -r paikallinen staging final; do
+            # Ei koskaan kirjoiteta live-avaimeen audio/puhe-fokus-... .
+            aws s3 cp "$paikallinen" "s3://${{ secrets.R2_BUCKET }}/$staging" \
+              --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+              --no-progress --content-type audio/mpeg \
+              --cache-control "public, max-age=2592000"
+            aws s3 cp "$paikallinen" "s3://${{ secrets.R2_BUCKET }}/$final" \
+              --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+              --no-progress --content-type audio/mpeg \
+              --cache-control "public, max-age=2592000"
+          done < /tmp/horatio-vienti.tsv
+          era=$(node -e 'console.log(require("./assets/audio/luennat-tuotantokuitti.json").batch.id)')
+          aws s3 cp "$kuitti" "s3://${{ secrets.R2_BUCKET }}/audio/receipts/horatio/${era}.completed.json" \
             --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
-            --no-progress \
-            --content-type audio/mpeg \
+            --no-progress --content-type application/json \
             --cache-control "public, max-age=2592000"
-          echo "Valmis. Luennat ovat ämpärin audio/-kansiossa ja ajon artefaktissa."
+          echo "Valmis. Luennat ovat versionoiduissa staging/final-avaimissa ja ajon artefaktissa; live-avainta ei muutettu."
 
       # Aikaleimat ovat pelidataa eivätkä äänitteitä: ne committoidaan
       # haaralle kuten ennenkin, ja mp3:t eivät koskaan.

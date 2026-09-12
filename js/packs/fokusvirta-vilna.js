@@ -165,11 +165,10 @@ export const FOKUSVIRTA_VILNA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Vilna, kesäkuussa 1873. Poutaa; kirkonkellot kuuluvat '
       + 'kukkulalle; puntari korkealla.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 339 merkkiä (yläraja 400). */
-    teksti: 'Vilnan observatoriossa näytettiin valokuvaa auringonpilkuista. '
-      + 'Olin pitänyt aurinkoa virheettömänä valaisimena, mutta silläkin on '
-      + 'tahroja. Ikkunan alla kirkontornit osoittivat taivaaseen kukin omalla '
-      + 'tavallaan. Tutkija odotti pilvien väistymistä. Joimme teetä. On '
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
+    teksti: 'Vilnan observatoriossa näin valokuvan auringonpilkuista. Olin '
+      + 'pitänyt aurinkoa virheettömänä valaisimena; silläkin oli tahroja. '
+      + 'Pilviä odotellessa joimme teetä. On '
       + 'lohdullista, että taivaan tutkiminenkin vaatii toisinaan vain hyvän '
       + 'tuolin.',
     /*
@@ -191,21 +190,18 @@ export const FOKUSVIRTA_VILNA = {
      * väistymistä" (taustaa).
      */
     reaktiot: [
-      { id: 'vilna.r1', ankkuri: 'silläkin on tahroja', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+      { id: 'vilna.r1', ankkuri: 'silläkin oli tahroja', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
         perustelu: 'Aurinko ei olekaan virheetön.' },
-      { id: 'vilna.r2', ankkuri: 'kukin omalla tavallaan', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Tornit osoittavat taivaaseen eri suuntiin.' },
-      { id: 'vilna.r3', ankkuri: 'Joimme teetä', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
+      { id: 'vilna.r3', ankkuri: 'joimme teetä', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
         perustelu: 'Odotus kuluu rauhassa.' },
       { id: 'vilna.r4', ankkuri: 'vain hyvän tuolin', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
         perustelu: 'Loppuvitsi tieteen vaatimuksista.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Vilnan observatoriossa näytettiin valokuvaa '
-      + 'auringonpilkuista. Olin pitänyt aurinkoa virheettömänä valaisimena, '
-      + 'mutta silläkin on tahroja. Ikkunan alla kirkontornit osoittivat '
-      + 'taivaaseen kukin omalla tavallaan. Tutkija odotti pilvien '
-      + 'väistymistä. Joimme teetä. [softly] On lohdullista, että taivaan '
+    luenta: '[curious] Vilnan observatoriossa näin valokuvan '
+      + 'auringonpilkuista. Olin pitänyt aurinkoa virheettömänä valaisimena; '
+      + 'silläkin oli tahroja. Pilviä odotellessa joimme teetä. [softly] On '
+      + 'lohdullista, että taivaan '
       + 'tutkiminenkin vaatii toisinaan vain hyvän tuolin.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-vilna.mp3',
   },
@@ -280,9 +276,9 @@ export const FOKUSVIRTA_VILNA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
     kommentti: [
-      'Vanha observatorio on yhä yliopiston käytössä. Tähtiä tutkitaan kauempana kaupungin valoista. Tuoli ei riitä.',
+      'Vanha observatorio kuuluu yhä yliopistolle, mutta taivasta ei tutkita siellä enää. Nousin ikkunan korkeudelle; kaupungin valot voittivat tähdet. Tähtitieteilijät lähtivät kauemmas, minä jäin kierrokselle.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.45 },

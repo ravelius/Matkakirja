@@ -48,12 +48,11 @@ export const FOKUSVIRTA_LAPPI = {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Rovaniemi, syyskuussa 1873. Ensimmäinen ruska; yöllä '
       + 'revontulet; puntari korkealla.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 334 merkkiä (yläraja 400). */
-    teksti: 'Rovaniemellä Ounasjoki tuo vetensä Kemijokeen kuin matkustaja '
-      + 'suurempaan veneeseen. Rannassa sidottiin kuormaa, ja kauppapuodissa '
-      + 'puhuttiin yläjuoksun puista. Olin piirtänyt joet rajoiksi. Täällä ne '
-      + 'olivat teitä. Veneeseen astuva nainen tiesi seuraavan talon savusta, '
-      + 'ei kartasta. Lisäsin rannalle talon ja jätin savulle tilaa nousta.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
+    teksti: 'Rovaniemellä Ounasjoki liittyi Kemijokeen kuin matkustaja '
+      + 'suurempaan veneeseen. Olin piirtänyt joet rajoiksi; täällä ne olivat '
+      + 'teitä. Veneeseen astuva nainen löysi seuraavan talon savusta, ei '
+      + 'kartasta. Lisäsin talon ja jätin savulle tilaa nousta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain neljä tunnetagia. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -79,12 +78,11 @@ export const FOKUSVIRTA_LAPPI = {
         perustelu: 'Isoisä korjaa karttaansa: hiljainen päätös.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Rovaniemellä Ounasjoki tuo vetensä Kemijokeen kuin '
-      + 'matkustaja suurempaan veneeseen. Rannassa sidottiin kuormaa, ja '
-      + 'kauppapuodissa puhuttiin yläjuoksun puista. Olin piirtänyt joet '
-      + 'rajoiksi. Täällä ne olivat teitä. Veneeseen astuva nainen tiesi '
-      + 'seuraavan talon savusta, ei kartasta. [softly] Lisäsin rannalle talon '
-      + 'ja jätin savulle tilaa nousta.',
+    luenta: '[curious] Rovaniemellä Ounasjoki liittyi Kemijokeen kuin '
+      + 'matkustaja suurempaan veneeseen. Olin piirtänyt joet rajoiksi; täällä '
+      + 'ne olivat teitä. Veneeseen astuva nainen löysi seuraavan talon '
+      + 'savusta, ei kartasta. [softly] Lisäsin talon ja jätin savulle tilaa '
+      + 'nousta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lappi.mp3',
   },
 
@@ -116,9 +114,9 @@ export const FOKUSVIRTA_LAPPI = {
       },
     ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
     kommentti: [
-      'Rovaniemelle lennetään nyt joulupukin vuoksi. Joet kohtaavat yhä. Minusta niissäkin olisi matkan aihetta.',
+      'Rovaniemelle lennetään joulupukkiakin katsomaan. Seurasin Ounasjokea ilmasta ja luulin valojen jatkuvan veteen. Lähempänä ne olivat heijastuksia. Hyvä etten yrittänyt laskeutua niiden väliin.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },

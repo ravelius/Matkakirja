@@ -42,14 +42,11 @@ export const FOKUSVIRTA_TROMSSA = {
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Tromssa, heinäkuussa 1873. Aurinko ei laske; satamassa '
       + 'hylkeenpyytäjiä; puntari korkealla.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 364 merkkiä (yläraja 400). */
-    teksti: 'Tromssaan on perustettu museo. Satamasta tuodaan sinne pohjoisen '
-      + 'luita ja kiviä, asioita joista laivanvarustaja ei tavallisesti maksa. '
-      + 'Pöydällä makasi pieni simpukka ja sen vieressä luu, jonka eläimeen en '
-      + 'toivo törmääväni uimassa. Ikkunasta näkyi pyyntilaivojen mastoja. '
-      + 'Sama meri ruokkii täällä sekä vatsan että uteliaisuuden. Jälkimmäinen '
-      + 'vaikutti pohjattomalta.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
+    teksti: 'Tromssan uuteen museoon tuotiin pohjoisen luita ja kiviä, joista '
+      + 'laivanvarustaja ei tavallisesti maksa. Pienen simpukan vieressä oli '
+      + 'luu, jonka eläimeen en tahtonut törmätä uimassa. Sama meri ruokki '
+      + 'vatsan ja uteliaisuuden. Jälkimmäinen vaikutti pohjattomalta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -67,20 +64,19 @@ export const FOKUSVIRTA_TROMSSA = {
     reaktiot: [
       { id: 'tromssa.r1', ankkuri: 'ei tavallisesti maksa', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Luut ja kivet eivät kuulu rahtiin.' },
-      { id: 'tromssa.r2', ankkuri: 'törmääväni uimassa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+      { id: 'tromssa.r2', ankkuri: 'törmätä uimassa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
         perustelu: 'Merkinnän vitsi tuntemattomasta eläimestä.' },
-      { id: 'tromssa.r3', ankkuri: 'vatsan että uteliaisuuden', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'tromssa.r3', ankkuri: 'vatsan ja uteliaisuuden', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Meren kaksi antia todetaan tyytyväisenä.' },
       { id: 'tromssa.r4', ankkuri: 'vaikutti pohjattomalta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
         perustelu: 'Loppuvitsi uteliaisuuden määrästä.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Tromssaan on perustettu museo. Satamasta tuodaan sinne '
-      + 'pohjoisen luita ja kiviä, asioita joista laivanvarustaja ei '
-      + 'tavallisesti maksa. Pöydällä makasi pieni simpukka ja sen vieressä '
-      + 'luu, jonka eläimeen en toivo törmääväni uimassa. Ikkunasta näkyi '
-      + 'pyyntilaivojen mastoja. Sama meri ruokkii täällä sekä vatsan että '
-      + 'uteliaisuuden. [softly] Jälkimmäinen vaikutti pohjattomalta.',
+    luenta: '[curious] Tromssan uuteen museoon tuotiin pohjoisen luita ja '
+      + 'kiviä, joista laivanvarustaja ei tavallisesti maksa. Pienen simpukan '
+      + 'vieressä oli luu, jonka eläimeen en tahtonut törmätä uimassa. Sama '
+      + 'meri ruokki vatsan ja uteliaisuuden. [softly] Jälkimmäinen vaikutti '
+      + 'pohjattomalta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tromssa.mp3',
   },
 
@@ -115,9 +111,9 @@ export const FOKUSVIRTA_TROMSSA = {
       },
     ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
     kommentti: [
-      'Tromssassa on nyt yliopistokin. Isoisä osui oikeaan: pienestä simpukasta voi alkaa pitkä matka.',
+      'Tromssassa on nyt yliopisto ja Polaarimuseo vanhoissa tullirakennuksissa. Löysin laiturilta simpukankuoren ja kurkistin sisään. Tyhjä. Hetken mietin, kuka oli lähtenyt ja minne.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },

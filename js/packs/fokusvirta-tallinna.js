@@ -108,12 +108,11 @@ export const FOKUSVIRTA_TALLINNA = {
      */
     paikkarivi: 'Reval, syyskuussa 1873. Tuulista; satamassa lokit huutavat; '
       + 'puntari putoaa.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 329 merkkiä (yläraja 400). */
-    teksti: 'Revalin torin apteekissa myytiin marsipaania sydänsuruihin. '
-      + 'Kysyin, auttaako se myös silloin, kun ei vielä tiedä ketä kaipaa. '
-      + 'Apteekkari leikkasi suuremman palan. Ikkunasta näkyi raatihuone ja '
-      + 'sen vakava torni; sisällä tuoksui manteli. Söin lääkkeeni matkalla '
-      + 'satamaan. Vaiva jäi, mutta hoitoon olin poikkeuksellisen tyytyväinen.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1; audio/alignment tarvitaan. */
+    teksti: 'Revalin torin apteekissa kysyin, auttaisiko marsipaani '
+      + 'sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi '
+      + 'suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; '
+      + 'hoitoon olin poikkeuksellisen tyytyväinen.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -128,7 +127,7 @@ export const FOKUSVIRTA_TALLINNA = {
      * torni" (havainto).
      */
     reaktiot: [
-      { id: 'tallinna.r1', ankkuri: 'marsipaania sydänsuruihin', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+      { id: 'tallinna.r1', ankkuri: 'marsipaani sydänsuruihin', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Makeinen lääkkeenä on outo ajatus.' },
       { id: 'tallinna.r2', ankkuri: 'ketä kaipaa', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Kysymys osuu isoisän omaan yksinäisyyteen.' },
@@ -139,13 +138,10 @@ export const FOKUSVIRTA_TALLINNA = {
       { id: 'tallinna.r5', ankkuri: 'poikkeuksellisen tyytyväinen', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
         perustelu: 'Loppuvitsi hoidon ja vaivan erosta.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Revalin torin apteekissa myytiin marsipaania '
-      + 'sydänsuruihin. Kysyin, auttaako se myös silloin, kun ei vielä tiedä '
-      + 'ketä kaipaa. Apteekkari leikkasi suuremman palan. Ikkunasta näkyi '
-      + 'raatihuone ja sen vakava torni; sisällä tuoksui manteli. Söin '
-      + 'lääkkeeni matkalla satamaan. [softly] Vaiva jäi, mutta hoitoon olin '
-      + 'poikkeuksellisen tyytyväinen.',
+    luenta: '[curious] Revalin torin apteekissa kysyin, auttaisiko marsipaani '
+      + 'sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi '
+      + 'suuremman palan. Söin lääkkeeni satamaan mennessä. [softly] Vaiva '
+      + 'jäi; hoitoon olin poikkeuksellisen tyytyväinen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tallinna.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-tallinna-r20260909-story-v2.jpg;
@@ -247,7 +243,7 @@ export const FOKUSVIRTA_TALLINNA = {
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Raeapteekki myy yhä marsipaania. Suurempi pala? Se mies osasi kuunnella potilasta.',
+      'Raeapteekki myy marsipaania yhä. Minä odotin portaalla, että joku murentaisi annoksensa. Yksi lapsi jakoi palan ystävälleen. Ehkä isoisän lääkkeessä oli oikea ajatus.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.55 },

@@ -725,30 +725,22 @@ test('VARTIO: jokaisen pakin reaktioankkurit löytyvät sen omasta luentatekstis
   assert.ok(reaktioita >= 6, `reaktioita löytyi ${reaktioita}, pilotissa on kuusi`);
 });
 
-test('VARTIO: Marseillen aikaleimatiedosto on versio 2 ja sidottu ämpärin äänitteeseen', async (t) => {
+test('VARTIO: vanha Marseillen kohdistus ei kelpaa hyväksytylle r2-tekstille', async () => {
   const data = JSON.parse(lue('assets/aikaleimat/puhe-fokus-matkakirja-marseille.aikaleimat.json'));
   assert.equal(data.versio, AIKALEIMOJEN_VERSIO);
   assert.equal(data.kaupunki, 'marseille');
-  assert.equal(data.teksti, FOKUSVIRRAT.marseille.matkakirja.teksti);
   assert.equal(data.tekstiSha256, sha(Buffer.from(data.teksti, 'utf8')));
   assert.equal(data.aani.nimi, 'puhe-fokus-matkakirja-marseille.mp3');
   /*
-   * ÄÄNITE HAETAAN ÄMPÄRISTÄ, EI LEVYLTÄ (omistajan linjaus 11.9.2026:
-   * repossa ei ole äänitiedostoja). Sidonta on silti tarkistettava:
-   * väärään mp3:een sidotut ajat panisivat pulun nauramaan viereiselle
-   * lauseelle. Ilman verkkoa vertailua ei voi tehdä — silloin testi
-   * ohitetaan syy näkyvissä eikä kaadu hiljaa.
+   * Hyväksytty r2 muutti tekstin, mutta uutta maksullista ääni- ja
+   * kohdistusajoa ei ole valtuutettu. Vanha tiedosto saa jäädä talteen,
+   * mutta pelin tiukan tarkistuksen pitää hylätä se ennen käyttöä.
    */
-  const osoite = aaniUrl(`assets/audio/${data.aani.nimi}`);
-  const vastaus = await fetch(osoite, { signal: AbortSignal.timeout(60000) })
-    .catch((virhe) => ({ ok: false, status: String(virhe.message ?? virhe) }));
-  if (!vastaus.ok) {
-    t.skip(`äänitettä ei saatu ämpäristä (${vastaus.status}): ${osoite}`);
-    return;
-  }
-  const mp3 = Buffer.from(await vastaus.arrayBuffer());
-  assert.equal(data.aani.tavut, mp3.length, 'ämpärin äänite ja aikaleimat eivät ole sama pari');
-  assert.equal(data.aani.sha256, sha(mp3));
+  const uusiTeksti = FOKUSVIRRAT.marseille.matkakirja.teksti;
+  assert.notEqual(data.teksti, uusiTeksti);
+  const tulos = await tarkistaAikaleimat(data, { teksti: uusiTeksti });
+  assert.equal(tulos.ok, false);
+  assert.match(tulos.syy, /teksti ei ole sama/);
 });
 
 test('kohdistustyökalun kuiva ajo kertoo osoitteet eikä tarvitse verkkoa', () => {
