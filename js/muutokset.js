@@ -13,10 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-<<<<<<< HEAD
+  { v: 1815, teksti: 'Lukijan aanenvoimakkuus liuku toimii vihdoin' },
   { v: 1814, teksti: 'Mont Blanc, Vignemale, Mont-Saint-Michel, Carcassonne' },
-=======
->>>>>>> fix/aanivoimat-liuut
   { v: 1813, teksti: '24 maisemakuvaa, kahdeksan merikuvaa ja Nikosia auki' },
   { v: 1812, teksti: 'Satelliittilinssi avaruuteen: tahdet ja 64 kohdetta' },
   { v: 1811, teksti: 'Nosto ei sulkeudu vierittaessa; kortti alkaa ylareunasta' },

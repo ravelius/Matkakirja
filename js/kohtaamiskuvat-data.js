@@ -775,7 +775,6 @@ export const kohtaamiskuvat = [
     hetki: 'Molemmat kädet ovat jääneet painokehyksen reunoille, kun Marios nostaa katseensa keskeneräisestä koevedoksesta.',
     vihje: 'Seripainokehys, lasta ja vaatimaton käsityöpiha kertovat Mariosin työstä; muurikehää tai bastionien lukumäärää ei näytetä.',
   },
-<<<<<<< HEAD
   /*
    * KUVAPUTKEN TOIMITUS 12.9.2026: root katsoi ja hyväksyi Frejan
    * Kööpenhaminan kaaren kohtaamiskuvaksi. Media on luettu takaisin
@@ -797,8 +796,6 @@ export const kohtaamiskuvat = [
     vihje: 'Musiikkikaruselli, portti ja sulkemishetki vastaavat Kööpenhaminan Tivoliin sijoittuvaa kohtaamista paljastamatta kysymyksen vastausta.',
   },
 
-=======
->>>>>>> fix/aanivoimat-liuut
 ];
 
 /**

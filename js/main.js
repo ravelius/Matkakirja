@@ -138,11 +138,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-<<<<<<< HEAD
-const APP_VERSION = '2026-08-09.1814';
-=======
-const APP_VERSION = '2026-08-09.1813';
->>>>>>> fix/aanivoimat-liuut
+const APP_VERSION = '2026-08-09.1815';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
