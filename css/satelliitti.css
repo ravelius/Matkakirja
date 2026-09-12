@@ -405,9 +405,20 @@ body.aikajana-palkki-auki .topbar {
  * mutta katosi Namibin dyynien ja pilvipeitteen valkoiseen. Siksi
  * otsake on OMA UMPINAINEN LAATIKKONSA (peittävyys 0,82) eikä pelkkä
  * tekstivarjo: kontrasti tulee laatikosta ja on sama kuvasta
- * riippumatta. Mitattu 12.9.2026: valkoista dyynikuvaa vasten
- * kontrastisuhde 11,6:1, mustaa merikuvaa vasten 11,6:1 — sama luku,
- * koska tausta on otsakkeen oma.
+ * riippumatta.
+ *
+ * MITATTU 12.9.2026 (WCAG-suhde; otsakkeen tausta laskettuna
+ * 0,82-peittävyydellä kuvan ääripäiden päälle):
+ *
+ *   teksti                 valkoisen kuvan päällä   mustan päällä
+ *   ──────────────────────┼────────────────────────┼───────────────
+ *   otsikko  #eafff3       11,6 : 1                 19,3 : 1
+ *   päiväys  #5dffa8        7,6 : 1                 12,9 : 1
+ *
+ * Heikoinkin luku on yli WCAG AA:n 4,5:1, ja ero kuvien välillä on
+ * pieni juuri siksi, että tausta on otsakkeen oma eikä valokuvan.
+ * Kaappaus katsottu vaaleimmasta tapauksesta (Saharan silmä, hiekan
+ * sävy 0,86): otsikko ja päiväys erottuvat laatikostaan selvästi.
  *
  * OTSIKKO ON ISOMPI KUIN PÄIVÄYS: silmä lukee ensin sen, mitä kuvassa
  * on, ja vasta sitten milloin.
@@ -733,9 +744,14 @@ body.aikajana-palkki-auki .topbar {
 
   /* Otsake ja popup väistävät sarakkeen. */
   .satelliitti-otsake { max-width: calc(100% - var(--satelliitti-sarake, 112px) - 20px); }
+  /*
+   * Popup on MINI-popup myös vaakaruudulla: korkeintaan 60 % kortin
+   * korkeudesta, jotta valokuva jää näkyviin sen takaa (savuke vaatii
+   * alle 70 % ikkunan korkeudesta).
+   */
   .satelliitti-popup {
     bottom: 10px;
-    max-height: calc(100% - 20px);
+    max-height: min(60%, 320px);
     width: min(340px, calc(100vw - var(--satelliitti-sarake, 112px) - 24px));
   }
 
