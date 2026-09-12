@@ -63,6 +63,16 @@
 export const MAASTOKOHTEET_CZE = [
   {
     id: 'snezka',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/cze-maasto-snezka-13142fb9530f.jpg',
+      lyhyt: 'Näkymä Sněžkan rinteeltä kohti Pomezní Boudya.',
+      selite: 'Näkymä Sněžkalta Tšekin ja Puolan ystävyyspolkua kohti Pomezní Boudya.',
+      lahde: 'Valokuva: Honza Groh (Jagro), Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Honza Groh (Jagro)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sněžka,_pohled_na_cestu_česko-polského_přátelství.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
     nimi: 'Sněžka',
     tyyppi: 'vuori',
     kysymykset: [
@@ -84,6 +94,16 @@ export const MAASTOKOHTEET_CZE = [
   },
   {
     id: 'labe',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/cze-maasto-labe-787fd7b9f6a7.jpg',
+      lyhyt: 'Labe-joki Velké Zbožíssä Tšekissä.',
+      selite: 'Labe Velké Zbožíssä, Poděbradyn kaupunginosassa Tšekissä.',
+      lahde: 'Valokuva: Pavel Hrdlička (Packa), Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Pavel Hrdlička, Wikipedia',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Poděbrady,_Velké_Zboží,_Elbe_river.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
     nimi: 'Labe',
     tyyppi: 'joki',
     kysymykset: [
@@ -104,6 +124,16 @@ export const MAASTOKOHTEET_CZE = [
   },
   {
     id: 'vltava',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/cze-maasto-vltava-20c8bea20384.jpg',
+      lyhyt: 'Vltava ja pato Český Krumlovissa.',
+      selite: 'Vltava ja Mrázkův mlýnin pato Český Krumlovissa.',
+      lahde: 'Valokuva: Mark Ahsmann, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Mark Ahsmann',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vltava_at_Český_Krumlov.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
     nimi: 'Vltava',
     tyyppi: 'joki',
     kysymykset: [
@@ -143,6 +173,16 @@ export const MAASTOKOHTEET_CZE = [
    * ============================================================== */
   {
     id: 'kutna-hora',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/cze-kohde-kutna-hora-398dd5161ce6.jpg',
+      lyhyt: 'Kutná Horan historiallinen keskusta ja Pyhän Barbaran kirkko.',
+      selite: 'Kutná Horan historiallinen keskusta, Pyhän Barbaran kirkko ja entinen jesuiittakollegio.',
+      lahde: 'Valokuva: Pere prlpz, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Pere prlpz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kutná_Hora-_Historical_Town_Centre_with_the_Church_of_St._Barbara.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
     nimi: 'Kutná Hora',
     tyyppi: 'historia',
     kysymykset: [

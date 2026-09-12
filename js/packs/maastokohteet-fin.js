@@ -196,6 +196,16 @@ export const MAASTOKOHTEET_FIN = [
    * ============================================================== */
   {
     id: 'olavinlinna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fin-kohde-olavinlinna-e88c76b06013.jpg',
+      lyhyt: 'Olavinlinna Kyrönsalmen saarella nykyisessä asussaan.',
+      selite: 'Nykyinen Olavinlinna seisoo Kyrönsalmen saarella, ja sen kolme pyöreää tornia erottuvat epäsäännöllisestä linnakokonaisuudesta.',
+      lahde: 'Valokuva: Teemu Mökkönen / Museovirasto, CC BY 4.0.',
+      tekija: 'Teemu Mökkönen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Savonlinna_Olavinlinna_Olavinlinna_ja_Kyr%C3%B6nsalmi_kuvattuna_kohti_l%C3%A4ntt%C3%A4_Taustalla_Savonlinna_kaupungin_keskustaa_2025_(AKDG7576-3).jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    },
     nimi: 'Olavinlinna',
     tyyppi: 'historia',
     kysymykset: [
@@ -224,6 +234,16 @@ export const MAASTOKOHTEET_FIN = [
   },
   {
     id: 'turunlinna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fin-kohde-turunlinna-1f7e32294ce6.jpg',
+      lyhyt: 'Turun linnan päälinnan kivijulkisivu ja torni.',
+      selite: 'Turun linnan päälinnan kivijulkisivu ja torni nykyisessä asussaan.',
+      lahde: 'Valokuva: Christian David, CC BY-SA 4.0.',
+      tekija: 'Christian David',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Turku_Castle,_Turku,_Finland.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
     nimi: 'Turun linna',
     tyyppi: 'historia',
     kysymykset: [
@@ -315,6 +335,16 @@ export const MAASTOKOHTEET_FIN = [
   },
   {
     id: 'petajavedenvanhakirkko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fin-kohde-petajavedenvanhakirkko-eb06c20d1502.jpg',
+      lyhyt: 'Petäjäveden vanhan kirkon paanukatto ja hirsiseinät.',
+      selite: 'Nykyisessä Petäjäveden vanhassa kirkossa näkyvät jyrkkä paanukatto, tummuneet hirsiseinät ja pitkät moniruutuiset ikkunat.',
+      lahde: 'Valokuva: Tiia Monto, CC BY-SA 3.0.',
+      tekija: 'Tiia Monto',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pet%C3%A4j%C3%A4vesi_Old_Church_11.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
     nimi: 'Petäjäveden vanha kirkko',
     tyyppi: 'kulttuuri',
     kysymykset: [
