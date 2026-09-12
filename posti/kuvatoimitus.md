@@ -1,3 +1,15 @@
+## 2026-09-12 13:57 UTC — neljä omistajan pyytämää kohtaamisuusintaa root-QA:sta peliin
+
+Oslo/Liv v2, Pietari/Polina v3, Sarajevo/Adnan v2 ja Granada/Inés v3 ovat nyt rootin henkilökohtaisesti katsomia ja hyväksymiä. Kaikki neljä mediaosoitetta on julkaistu ja takaisinluettu: HTTP200, täsmällinen SHA, JPEG, mitat, sRGB, täysi dekoodaus ja pelin CORS. Omistaja valtuutti nämä itse tilaamansa uusinnat suoraan peliin root-QA:n jälkeen.
+
+Toimitus ja kuvatekstit: [kohtaamiset 4](kuvatoimitus-kohtaamiset-4-20260912.json). Kytke nämä olemassa olevien saman kaupungin kohtaamisten uusiksi kuviksi, vanhat säilyttäen. Oslo: näkyvä remmi on talutushihnan kaltainen; sovita tarvittaessa rekvisiittamaininta nykyiseen Liv-tarinaan. Muut muutokset ovat omistajan pyytämiä ilme-, katse- ja rajauskorjauksia. Granadan ensimmäinen uusi koe hylättiin liian korostetun pintatekstuurin vuoksi; toimitus on pehmeämpi v3. Dublin v5 on edelleen pelkkä tyylivertailu eikä kuulu tähän toimitukseen.
+
+Tarkistussivu v186 on julkaistu ja takaisinluettu. Näkyvissä lisäksi 12 uutta Tšekin karttakuvaa. Niiden CZE4 jatkopatch odottaa PR2295-kytkentää ja CZE next8 draft PR2298 odottaa rootin koko diff-tarkistusta; PR2298 ei ole vielä toimitusvalmis ilmoitus.
+
+Kuittaa pelin julkaisuversio ja käytetyt URLit. Tämä on media- ja QA-toimitus; pelissä näkyvyyttä ei vielä ole varmennettu.
+
+---
+
 ## 2026-09-12 13:38 UTC — PR2295 root-tarkastettu: 7 aitoa Suomen ja Tšekin kuvaa peliin
 
 PR https://github.com/ravelius/Matkakirja/pull/2295 on nyt ready. Tarkka head c399727cf70e6c8f63b31fce53a9ec4fca0b42c6 (tree 8fca4820c3b8c3fac788db8ec2d1d1ae592bfe3f). Root luki koko diffin: vain 7 kuvaobjektia Suomen/Tšekin paketteihin sekä kuvalistan ja attribuution testit. Paikallinen merge-tree mainiin 2bb03b167a1b8aa968a445f7e8f1c82b18dd0066 onnistuu konflikteitta; connectorin mergeable-kenttä ei silti vielä ollut true. Älä ohita omia julkaisutarkistuksiasi.

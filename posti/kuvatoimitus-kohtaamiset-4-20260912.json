@@ -1,0 +1,124 @@
+{
+  "deliveredAt": "2026-09-12T13:57:27.954507+00:00",
+  "ownerAuthorization": "Tilatut ja omistajan pyytämät kohtaamis-uusinnat saa viedä peliin root-QA:n jälkeen. Ei uusia tilaamattomia kohtaamisia.",
+  "items": [
+    {
+      "cityId": "oslo",
+      "character": "oslo-liv",
+      "url": "https://media.matkakirja.app/kohtaamiset/20260912/oslo-liv-992a171d5df6.jpg",
+      "sha256": "992a171d5df69a3bb39b29e5d813a35b50292e5e9296ce0f1582a0bb54210c5b",
+      "bytes": 845291,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "captionFi": "Liv pysähtyy aurinkoiselle polulle ja katsoo matkaajaa suoraan.",
+      "rootQa": {
+        "status": "root-approved",
+        "personallyInspected": true,
+        "ownerFeedback": "Tee lähempi rajaus. Tuo aurinkoa enemmän mukaan.",
+        "observations": "Closer framing, sunshine on cheek/jacket, unmistakable direct eye contact, natural photographic rendering. Dog, hands and camera readable. Strap appears connected to dog as a leash rather than a loose camera strap: retain this visible detail for Fable's narrative alignment; no treasure mechanics change.",
+        "supersedes": "oslo-liv-r20260907-v1",
+        "sitePublished": false,
+        "gamePublished": false,
+        "modelVersionVerified": false,
+        "generationTool": "built-in imagegen"
+      },
+      "generated": true,
+      "rootApproved": true,
+      "publicMediaVerified": true
+    },
+    {
+      "cityId": "pietari",
+      "character": "pietari-polina",
+      "url": "https://media.matkakirja.app/kohtaamiset/20260912/pietari-polina-6188e4c488db.jpg",
+      "sha256": "6188e4c488dbabe23106568c470c8df152fb9387ad3f1a560728a952dadf2307",
+      "bytes": 615108,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "captionFi": "Polina kohtaa matkaajan katseen Vitebskin asemalla.",
+      "rootQa": {
+        "status": "approved-root-qa",
+        "viewedBy": "root",
+        "reason": "Katse molemmilla silmillä kameraan, voimakas hämmästyksen ja arvioinnin sekoitus, oikea asemageometria ja luonnonvalo.",
+        "sha256": "b0f8746a2b110d701080622d3cbf406f9ce7f8e5e976723d10b57b519792e94c",
+        "supersedes": "pietari-polina-r20260907-v1",
+        "oldVariantsRetained": true,
+        "gameIntegrated": false,
+        "siteRegistered": false,
+        "modelMetadataExposed": false
+      },
+      "generated": true,
+      "rootApproved": true,
+      "publicMediaVerified": true
+    },
+    {
+      "cityId": "sarajevo",
+      "character": "sarajevo-adnan",
+      "url": "https://media.matkakirja.app/kohtaamiset/20260912/sarajevo-adnan-8d19fb11c377.jpg",
+      "sha256": "8d19fb11c377c2f2aa78d11e9291a198858c9bc1b605f2619ec7b4da56c622f3",
+      "bytes": 601433,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "captionFi": "Adnan keskeyttää työnsä ja arvioi aarteen kysyjää tuiman epäilevästi.",
+      "rootQa": {
+        "status": "root-approved",
+        "personallyInspected": true,
+        "reviewedAt": "2026-09-12T12:29:20.766600+00:00",
+        "sha256": "0b571f8da4cb68ca442bcbc97f8ff70338b5f69071f86f2998389768bacb2c47",
+        "originalFeedback": "muuta ilme tuiman epäileväksi",
+        "sourceImageId": "sarajevo-adnan-r20260907-v1",
+        "generationTool": "built-in imagegen",
+        "modelVersionVerified": false,
+        "notes": "Direct gaze and closed mouth, furrowed questioning brow satisfy stern suspicious expression. One person only. Complete hands and supported coffee pot/handle, plausible tools. Daylight exposure with dark shelves and restrained metal glints. Better expression and quieter rendering than original. Root visually inspected full native output.",
+        "sitePublished": false,
+        "gamePublished": false,
+        "preservePreviousVersions": true
+      },
+      "generated": true,
+      "rootApproved": true,
+      "publicMediaVerified": true
+    },
+    {
+      "cityId": "granada",
+      "character": "granada-ines",
+      "url": "https://media.matkakirja.app/kohtaamiset/20260912/granada-ines-e4ab59a7e815.jpg",
+      "sha256": "e4ab59a7e815abc6e86d9a9e2993688dc074aa7a24c7fec24d97cc91db0aad4c",
+      "bytes": 687901,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "captionFi": "Inés pysähtyy puutarhakärryn äärelle ja arvioi aarrekysymystä tuiman epäilevästi.",
+      "rootQa": {
+        "checkedAt": "2026-09-12T13:43:44.802054+00:00",
+        "status": "root-approved",
+        "personallyInspected": true,
+        "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-corrections-20260912/granada-ines-v3.png",
+        "sha256": "221a13f3068f558a1d31d53d4a261eaffe4ae2da6452a3fb81024f3fa8ad165b",
+        "promptPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-corrections-20260912/granada-ines-v3.prompt.txt",
+        "nativeGeneratorPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-c1704f86-6502-4fba-a682-4b0963978cfa.png",
+        "notesFi": "Root katsoi: tuima epäilevä suljettu suu, suora katse, aiempaa lähempi rauhallinen rajaus ja koko tukka tilan kanssa. Iho, denim ja käsien tuenta valokuvamaisempia kuin v2:ssa. Todellinen Generalifen galleriarakenne säilyy. V2 säilytetty vertailuun.",
+        "captionFi": "Inés pysähtyy puutarhakärryn äärelle ja arvioi aarrekysymystä tuiman epäilevästi.",
+        "canonCommit": "2bb03b167a1b8aa968a445f7e8f1c82b18dd0066",
+        "canonFile": "js/tyohuone-kehitys-data.js",
+        "feedbackId": "granada-ines-r20260907-v1:6e6bc3ae61afdf279db8ee42ecb8e3a128dec9c37470e76eaafd885cee66877d",
+        "sourceUrls": [
+          "https://www.alhambra-patronato.es/patio-de-la-acequia-del-generalife-ocho-siglos-en-un-jardin"
+        ],
+        "sitePublished": false,
+        "gamePublished": false
+      },
+      "generated": true,
+      "rootApproved": true,
+      "publicMediaVerified": true
+    }
+  ],
+  "reviewSiteVersion": 186,
+  "osloAlignment": "Kuvassa näkyvä remmi näyttää koiran talutushihnalta. Sovita yksittäinen rekvisiittamaininta tarvittaessa; valokuvaaja Liv, paikka ja aarrejuoni säilyvät.",
+  "gameIntegrated": false
+}
