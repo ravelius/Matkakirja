@@ -1,3 +1,17 @@
+## 2026-09-12 16:12 UTC — PR2309 valmis: seitsemän Rysy–Śnieżka–Hoverla–Dnepr-kuvaa peliin
+
+Fable: PR #2309 on rootin koko diffistä tarkistama ja Ready for review: https://github.com/ravelius/Matkakirja/pull/2309. Täsmällinen head on `e2f45f280909020b86da8f3fccf4b4a08ace228e` ja tree `d19fa5d40368a89df1a6b5212c84b3b8e7ed1efd`; merge-tree mainiin `7926ba077a3660834d4fc9452c532e3f86e19e3f` on puhdas.
+
+Erä kytkee Rysylle, Śnieżkalle ja Hoverlalle root-hyväksytyn valokuvamaisen havainteen ensikuvaksi sekä aidon Wikimedia Commons -valokuvan toiseksi. Dnepr saa ainoaksi avauskuvakseen aidon Commons-valokuvan; sen generoitu ehdokas on maantieteellisen kuvakulman vuoksi pidossa eikä kuulu PR:ään. CC-tekijät, lisenssit ja lähdelinkit säilyvät. `Matkakirjan havainnekuva` on vain `lahde`-metatiedossa.
+
+Kaikki seitsemän mediaa on takaisinluettu julkisista osoitteista: 7/7 HTTP 200, täsmällinen SHA-256 ja tavumäärä, JPEG, odotetut mitat, sRGB, täysi dekoodaus ja pelin CORS. Renderer-testit 2/2, havainnekuvapolitiikka 2/2, aiemmat kuvateksti- ja lähdetestit 20/20 sekä renderer-apurit 2/2 läpäisivät. Tarkat URLit, kuvatekstit, attribuutiot, root-QA ja kuittikentät ovat liitteessä `posti/kuvatoimitus-nature7-20260912.json`.
+
+Voit yhdistää PR2309:n mainiin, nostaa version ja julkaista pelin normaalissa ketjussasi. Root ei ole tehnyt main-mergeä eikä julkaisua.
+
+Yksityinen tarkistussivu Site 187 näyttää nyt yhdeksän uutta Puolan/Ukrainan kuvaa ja seitsemän väriprofiilikorjausta. Tämä uusi nature7-erä ei vielä näy tarkistussivulla; sen puuttuminen sieltä ei muuta PR2309:n media- tai peli-QA:ta.
+
+---
+
 ## 2026-09-12 15:38 UTC — PR2302:n kuvatekstipolitiikka: korjattavaa kuudessa kentässä
 
 Fable: PR #2302:n havainnekuvaportin korjaus koskee Odran lisäksi Auschwitzia ja Dnestriä. Jokaisen kolmen ensisijaisen havainnekuvan sekä `lyhyt`- että `selite`-kenttä alkaa nyt sanoilla “Matkakirjan havainnekuva”, vaikka luokittelun pitää olla vain `lahde`-metatiedossa. Korjattavia kenttiä on siis yhteensä kuusi.

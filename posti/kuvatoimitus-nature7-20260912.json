@@ -1,0 +1,352 @@
+{
+  "createdAt": "2026-09-12T16:12:00Z",
+  "pullRequest": {
+    "number": 2309,
+    "url": "https://github.com/ravelius/Matkakirja/pull/2309",
+    "head": "e2f45f280909020b86da8f3fccf4b4a08ace228e",
+    "tree": "d19fa5d40368a89df1a6b5212c84b3b8e7ed1efd",
+    "status": "ready",
+    "mainMergeReleaseOwner": "Fable"
+  },
+  "deliveryPacket": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nature7-20260912/delivery-packet.json",
+  "rootQA": {
+    "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nature7-20260912/root-qa.json",
+    "expectedCount": 7,
+    "publicationAuthorized": true,
+    "approvedCount": 7,
+    "holds": [
+      {
+        "key": "UKR:maasto:dnepr",
+        "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-ukr-nature2-20260912/dnepr-photographic-illustration-v1.png",
+        "sha256": "fcfa13dc82b79f70724fa8e9a1cc4bc3d11ad079c71a2f75d0f88715fb8b07a2",
+        "status": "hold-geography",
+        "personallyInspected": true,
+        "reason": "Photographic surface is good, but invented low-bank viewpoint changes bridge/city/river spatial relationship compared with aerial source; regenerate from source viewpoint."
+      }
+    ]
+  },
+  "mediaReceipt": {
+    "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nature7-20260912/runs/2026-09-12T15-55-59.430Z/receipt.json",
+    "complete": true,
+    "count": 7,
+    "allHttp200": true,
+    "allShaExact": true,
+    "allMimeJPEG": true,
+    "allDimensionsExact": true,
+    "allSRGB": true,
+    "allFullDecode": true,
+    "cors": "https://matkakirja.app"
+  },
+  "siteReview": {
+    "version": 187,
+    "visible": "9 new POL/UKR images and 7 color-profile corrections",
+    "nature7Visible": false,
+    "scope": "private review site; separate from game/R2 publication"
+  },
+  "items": [
+    {
+      "canonicalKey": "POL:maasto:rysy",
+      "id": "pol-maasto-rysy-024f6a6ea9a6",
+      "kind": "authentic-photograph",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-rysy-024f6a6ea9a6.jpg",
+      "captionFi": "Rysyn huipulta avautuu näkymä Czarny Staw pod Rysami- ja Morskie Oko -järville.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Milan Bališin",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Rysy_006.JPG",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Rysy_006.JPG"
+      },
+      "delivery": {
+        "sha256": "024f6a6ea9a61f650623c565c16c77be67f6325c43c9c6792848ac5697bc315d",
+        "bytes": 2280806,
+        "dimensions": [
+          2560,
+          1920
+        ]
+      },
+      "rootQA": {
+        "status": "approved",
+        "personallyInspected": true,
+        "nativeSha256": "a9da8999e0dcefbb041dcb3747ace66ff218d2a65fe1629bf978e33727f59d92",
+        "notes": "Root personally viewed authentic original, checked location and visible content. Preserve original; only color-managed web conversion authorized."
+      },
+      "publicReadback": {
+        "uploaded": true,
+        "httpStatus": 200,
+        "sha256": "024f6a6ea9a61f650623c565c16c77be67f6325c43c9c6792848ac5697bc315d",
+        "bytes": 2280806,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "dimensions": [
+          2560,
+          1920
+        ],
+        "space": "srgb",
+        "fullDecode": true
+      }
+    },
+    {
+      "canonicalKey": "POL:maasto:rysy",
+      "id": "pol-maasto-rysy-d416f9d31745",
+      "kind": "generated-illustration",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-rysy-d416f9d31745.jpg",
+      "captionFi": "Rysyn huipulta avautuu näkymä Czarny Staw pod Rysami- ja Morskie Oko -järville.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "creator": "OpenAI; referenssikuva Milan Bališin",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Rysy_006.JPG",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "referenceCreator": "Milan Bališin",
+        "referenceSha256": "a9da8999e0dcefbb041dcb3747ace66ff218d2a65fe1629bf978e33727f59d92"
+      },
+      "delivery": {
+        "sha256": "d416f9d31745302a06c6fa627bdeda3b36625941e9fbb8db5adf9c97e13a6e69",
+        "bytes": 821686,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      "rootQA": {
+        "status": "approved",
+        "personallyInspected": true,
+        "nativeSha256": "04b8b2c84f226d20546f187c46dd511ce08674786f74e8790921f2adca9650d0",
+        "notes": "Root viewed native alongside actual reference: landform, atmospheric depth, snow/vegetation and natural photographic optics are credible. Some foreground detail is crisp but lacks the earlier etched/CGI microcontrast. Approved as a disclosed generated derivative."
+      },
+      "publicReadback": {
+        "uploaded": true,
+        "httpStatus": 200,
+        "sha256": "d416f9d31745302a06c6fa627bdeda3b36625941e9fbb8db5adf9c97e13a6e69",
+        "bytes": 821686,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "space": "srgb",
+        "fullDecode": true
+      }
+    },
+    {
+      "canonicalKey": "POL:maasto:sniezka",
+      "id": "pol-maasto-sniezka-ae71dca3eea8",
+      "kind": "authentic-photograph",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-sniezka-ae71dca3eea8.jpg",
+      "captionFi": "Śnieżkan tuulinen talvihuippu kohoaa Puolan ja Tšekin rajalla.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Pudelek (Marcin Szala)",
+        "filePage": "https://commons.wikimedia.org/wiki/File:%C5%9Anie%C5%BCka_(Sn%C4%9B%C5%BEka,_Schneekoppe)_in_winter_2020,_Karkonosze_mountains_04.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/%C5%9Anie%C5%BCka_(Sn%C4%9B%C5%BEka%2C_Schneekoppe)_in_winter_2020%2C_Karkonosze_mountains_04.jpg"
+      },
+      "delivery": {
+        "sha256": "ae71dca3eea8a70a05fecce2f1deddee6e898167f6d3ce15b7ffe3887766c72f",
+        "bytes": 1282019,
+        "dimensions": [
+          2560,
+          1707
+        ]
+      },
+      "rootQA": {
+        "status": "approved",
+        "personallyInspected": true,
+        "nativeSha256": "ad9df97d5543c291739dd231c6b683eba2e06b61c4370a224003543a1f956457",
+        "notes": "Root personally viewed authentic original, checked location and visible content. Preserve original; only color-managed web conversion authorized."
+      },
+      "publicReadback": {
+        "uploaded": true,
+        "httpStatus": 200,
+        "sha256": "ae71dca3eea8a70a05fecce2f1deddee6e898167f6d3ce15b7ffe3887766c72f",
+        "bytes": 1282019,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "dimensions": [
+          2560,
+          1707
+        ],
+        "space": "srgb",
+        "fullDecode": true
+      }
+    },
+    {
+      "canonicalKey": "POL:maasto:sniezka",
+      "id": "pol-maasto-sniezka-d0a256c0ac10",
+      "kind": "generated-illustration",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-sniezka-d0a256c0ac10.jpg",
+      "captionFi": "Śnieżkan tuulinen talvihuippu kohoaa Puolan ja Tšekin rajalla.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "creator": "OpenAI; referenssikuva Pudelek (Marcin Szala)",
+        "filePage": "https://commons.wikimedia.org/wiki/File:%C5%9Anie%C5%BCka_(Sn%C4%9B%C5%BEka,_Schneekoppe)_in_winter_2020,_Karkonosze_mountains_04.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "referenceCreator": "Pudelek (Marcin Szala)",
+        "referenceSha256": "ad9df97d5543c291739dd231c6b683eba2e06b61c4370a224003543a1f956457"
+      },
+      "delivery": {
+        "sha256": "d0a256c0ac1044d50670a1ed9cb8ce91153c6a21af32164e11e2fc61b01a0742",
+        "bytes": 579093,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      "rootQA": {
+        "status": "approved",
+        "personallyInspected": true,
+        "nativeSha256": "4a46aa87963cfdb9e221d81f9e75f4c71a706c3d3c92d91956a4bcade1902d99",
+        "notes": "Root viewed native alongside actual reference: landform, atmospheric depth, snow/vegetation and natural photographic optics are credible. Some foreground detail is crisp but lacks the earlier etched/CGI microcontrast. Approved as a disclosed generated derivative."
+      },
+      "publicReadback": {
+        "uploaded": true,
+        "httpStatus": 200,
+        "sha256": "d0a256c0ac1044d50670a1ed9cb8ce91153c6a21af32164e11e2fc61b01a0742",
+        "bytes": 579093,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "space": "srgb",
+        "fullDecode": true
+      }
+    },
+    {
+      "canonicalKey": "UKR:maasto:hoverla",
+      "id": "ukr-maasto-hoverla-09745035da4f",
+      "kind": "authentic-photograph",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-hoverla-09745035da4f.jpg",
+      "captionFi": "Hoverlan kesäistä polonyna-rinnettä peittävät niityt ja matalat pensaat.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Dmytro Petishkin",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Views_of_Hoverla_02.jpg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Views_of_Hoverla_02.jpg"
+      },
+      "delivery": {
+        "sha256": "09745035da4f9127ac0eaa4e2bf9e27f3f538f9690033d23e24efebc3c7cc22d",
+        "bytes": 2878895,
+        "dimensions": [
+          2560,
+          1743
+        ]
+      },
+      "rootQA": {
+        "status": "approved",
+        "personallyInspected": true,
+        "nativeSha256": "aafaa6a25b42d1b3665fb0849cae98d1577fc6760cf968c9ef5baf091724802f",
+        "notes": "Root personally viewed authentic original, checked location and visible content. Preserve original; only color-managed web conversion authorized."
+      },
+      "publicReadback": {
+        "uploaded": true,
+        "httpStatus": 200,
+        "sha256": "09745035da4f9127ac0eaa4e2bf9e27f3f538f9690033d23e24efebc3c7cc22d",
+        "bytes": 2878895,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "dimensions": [
+          2560,
+          1743
+        ],
+        "space": "srgb",
+        "fullDecode": true
+      }
+    },
+    {
+      "canonicalKey": "UKR:maasto:hoverla",
+      "id": "ukr-maasto-hoverla-dfd136ce749c",
+      "kind": "generated-illustration",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-hoverla-dfd136ce749c.jpg",
+      "captionFi": "Hoverlan kesäistä polonyna-rinnettä peittävät niityt ja matalat pensaat.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "creator": "OpenAI; referenssikuva Dmytro Petishkin",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Views_of_Hoverla_02.jpg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "referenceCreator": "Dmytro Petishkin",
+        "referenceSha256": "aafaa6a25b42d1b3665fb0849cae98d1577fc6760cf968c9ef5baf091724802f"
+      },
+      "delivery": {
+        "sha256": "dfd136ce749c4915468d0698e000deb74aa710584828a9fda868bcb6cbbe3e31",
+        "bytes": 1000883,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      "rootQA": {
+        "status": "approved",
+        "personallyInspected": true,
+        "nativeSha256": "4a66a2b4110cda417cd710f38b552af17314982b098cf2f47464af9991a0ddc3",
+        "notes": "Root viewed native alongside actual reference: landform, atmospheric depth, snow/vegetation and natural photographic optics are credible. Some foreground detail is crisp but lacks the earlier etched/CGI microcontrast. Approved as a disclosed generated derivative."
+      },
+      "publicReadback": {
+        "uploaded": true,
+        "httpStatus": 200,
+        "sha256": "dfd136ce749c4915468d0698e000deb74aa710584828a9fda868bcb6cbbe3e31",
+        "bytes": 1000883,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "space": "srgb",
+        "fullDecode": true
+      }
+    },
+    {
+      "canonicalKey": "UKR:maasto:dnepr",
+      "id": "ukr-maasto-dnepr-f2350376bd1c",
+      "kind": "authentic-photograph",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-dnepr-f2350376bd1c.jpg",
+      "captionFi": "Dnepr ja Kiovan Podilin rantakaupunginosa ylhäältä nähtyinä.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Dmitry A. Mottl",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Dniepr_river_in_Kyiv.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Dniepr_river_in_Kyiv.jpg"
+      },
+      "delivery": {
+        "sha256": "f2350376bd1c3f532ab672280735210a84ab229f726c055b15cbd536d3ba9c89",
+        "bytes": 1903269,
+        "dimensions": [
+          2560,
+          1440
+        ]
+      },
+      "rootQA": {
+        "status": "approved",
+        "personallyInspected": true,
+        "nativeSha256": "f96ef41935643da21070fd046207b4737cb470b2a72116617d89ea6bf381ac7c",
+        "notes": "Root personally viewed authentic original, checked location and visible content. Preserve original; only color-managed web conversion authorized."
+      },
+      "publicReadback": {
+        "uploaded": true,
+        "httpStatus": 200,
+        "sha256": "f2350376bd1c3f532ab672280735210a84ab229f726c055b15cbd536d3ba9c89",
+        "bytes": 1903269,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "dimensions": [
+          2560,
+          1440
+        ],
+        "space": "srgb",
+        "fullDecode": true
+      }
+    }
+  ]
+}
