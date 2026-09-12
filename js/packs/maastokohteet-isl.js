@@ -63,6 +63,15 @@
 export const MAASTOKOHTEET_ISL = [
   {
     id: 'hvannadalshnukur',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/isl-maasto-hvannadalshnukur-3fe097e5bd85.jpg',
+      lyhyt: 'Hvannadalshnúkur ja Öræfajökullin jäätiköity vuorimassiivi.',
+      selite: 'Hvannadalshnúkur on Islannin korkein huippu ja kohoaa Öræfajökullin jäätiköityneen tulivuoren kraatterireunalla.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://adventures.is/iceland/day-tours/glacier-tours/glacier-tours-on-vatnajokull/glacier-wonders/',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Hvannadalshnúkur',
     tyyppi: 'vuori',
     kysymykset: [

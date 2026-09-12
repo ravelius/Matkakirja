@@ -318,6 +318,15 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'parnu',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/est-kohde-parnu-6bd0530d1255.jpg',
+      lyhyt: 'Pärnun historiallinen mutakylpylä puiston ja kadun takana.',
+      selite: 'Pärnu tunnetaan Viron kesäpääkaupunkina: matala Pärnunlahti, pitkä hiekkaranta, puistot ja kylpyläperinne muodostavat kaupungin merellisen ilmeen.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://visitestonia.com/en/parnu-mud-baths',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Pärnu',
     tyyppi: 'kauppa',
     kysymykset: [
@@ -382,6 +391,15 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'struven-kaari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/est-kohde-struven-kaari-6586367ea582.jpg',
+      lyhyt: 'Struven kaaren mittausta Simuna–Võivere-baasiviivalla vuonna 1827.',
+      selite: 'Struven 1800-luvulla mitattu kolmiomittausketju ulottuu yli 2 820 kilometriä ja auttoi määrittämään maapallon koon ja muodon.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://maaruum.ee/kaardid-geoandmed-ja-aadressid/hea-teada/struve-meridiaan',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Struven kaari',
     nimio: 'Struve',
     tyyppi: 'tekniikka',
