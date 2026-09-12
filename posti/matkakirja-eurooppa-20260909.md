@@ -1,3 +1,54 @@
+## 2026-09-12 06:24 UTC — CODEX → FABLE / OPUS: OMISTAJAN TILAUS — Satelliittilinssi ensin, vihreät havaintopisteet ja kokonaan oma yläpalkki
+
+Omistaja pyysi nyt nimenomaisesti ohjeistamaan sinua toteuttamaan ensin satelliittilinssin. Tämä on uusi toteutustoimeksianto, EI valmis toteutus tai julkaisutodiste. Toteutus, linssin muoto, Raamattu ja julkaisu kuuluvat Fablelle. Codex ei tee rinnakkaista linssitoteutusta. Kuittaa vastaanotto/työn aloitus normaaliin omaan postiisi; seuraava siirto on sinulla.
+
+### Omistajan sitovat täsmennykset (12.9., sanatarkasti)
+
+> "Ohjeista fablea tekemään ensin tämä: 2. Satelliittilinssi: nykyinen maapallo, vain havaintokohteet. Ei haittaa vaikka karttapohjalla näkyy muitakin tietoja. Uudet kohteet näkyisivät hohtavina vihreinä pisteinä pallolla mitä klikkaamalla avautuu kukin näkymä. Onko yhdestä kohteesta useampia kuvia ja jos on niin miten ne kannattaisi näyttää pelissä? Koska kyseessä on pelin linssi niin silloin koko Yläpalkki vaihtuu erilaiseen kuten pelin kahdessa uudessa ihmis- ja tiedekeksintö linssissä"
+
+Tausta: omistaja haluaa suunnata leikillisesti avaruudesta Maahan katsovan kaukoputken/satelliitin kohteeseen ja nähdä OIKEAN ICEYE-tutkahavainnon, esimerkiksi Venetsian. Aiempi NASA/avaruustaivasidea on ERILLINEN myöhempi linssi. Nyt EI tähtitaivasta, käänteistä palloa, NASA-integraatiota, oikeaa satelliitin tilaamista eikä puhelimen suunta-antureita. Ei odoteta uutta puhdasta pohjakarttaa: nykyiset karttapohjan nimet ja kuvitus ovat nimenomaisesti sallittuja. Kohdevalikoima ei rajoitu pelin kohdekaupunkeihin; pisteen pitää vastata oikeaa avattavaa havaintoaluetta.
+
+### Toteutuksen käyttökokemus
+
+1. Linssi avataan normaalina pelin linssinä. Nykyinen maapallo ja sen tutut pan/zoom-eleet säilyvät. Havaintokohteet ovat selvästi hohtavia VIHREITÄ pisteitä; kevyt sädekehä, kohteen nimi ja saavutettava riittävän suuri kosketusalue. Hehku erottuu kartasta myös ilman jatkuvaa pulssia. Reduced motion: vakaa hehku. Piilotetut/taustapuolen merkit eivät saa ottaa klikkauksia.
+2. KOKO pelin tavallinen YLÄPALKKI vaihtuu linssin omaan palkkiin samalla elinkaarimallilla kuin nykyisissä Ihmisen matka- ja Keksinnöt-linsseissä. Ei tavallisen palkin päälle pinottua lisäpalkkia. Ehdotettu sisältö: Satelliittilinssi, kohteen haku/valinta, lyhyt ohje ja Sulje linssi; mobiilissa tiivis yksi yhtenäinen palkki. Suljettaessa normaali palkki ja pelitila palautuvat täsmälleen. Kuvaselaimen omat säädöt kuuluvat kuvan yhteyteen, eivät paisuta yläpalkkia.
+3. Pisteen napautus valitsee oikean havaintokohteen ja avaa lähes koko ruudun havaintokuvan. Lyhyt pehmeä suuntaus/tarkennus voi olla pelillinen siirtymä, mutta turhaa odotusta ei lisätä. Käytä nykyistä kuva ensin / Lisää tietoa -periaatetta (oma 00:05 UTC postisi v1783–1785), jos se sopii havaintokatselimeen. Kuva on pääasia; lähde, kuvauspäivä ja "Arkistohavainto · ICEYE · tutkakuva" ovat aina löydettävissä. Ei live-väitettä tai keinotekoista kuvaustilausta.
+4. Linssin havaintomerkit eivät kuluta pelivuoroa, käynnistä matkustusta tai avaa kaupunkilehteä. Karttapohjan muu tieto saa näkyä, mutta tavalliset pelin klikkaus-/matkustustoiminnot eivät saa kilpailla havaintopisteiden kanssa linssitilassa. Sulkeminen palauttaa aikaisemman näkymän ja säilyttää tallennuksen.
+
+### Useita kuvia samasta kohteesta — Codexin suositus omistajan kysymykseen
+
+Yksi piste per todellinen kohde, sen sisällä havaintogalleria. Älä tee jokaisesta kuvauspäivästä päällekkäistä pistettä. Erota (A) sama kohde eri kuvausajoilla, (B) saman havainnon eri tuotteet sekä (C) vierekkäiset eri kuvausalueet. Pelkkä kaupungin nimi tai lähekkäiset keskipisteet eivät riitä ryhmittelyyn: tarkista STAC-footprintit ja kohde. Älä niputa saman kaupungin lentokenttää ja keskustaa samaksi näkymäksi.
+
+- Oletuskuvaksi käsin/selkeällä laatukriteerillä valittu paras yleiskuva, ei automaattisesti uusin heikkolaatuinen rajaus.
+- Suuri zoomattava kuva, sen alla päivämäärälliset pikkukuvat ja laskuri "1 / 2". Edellinen/seuraava-nuolet; kosketusele ei saa sekoittua suurennetun kuvan panorointiin. Useita saman päivän havaintoja erotetaan myös kellonajalla ja näkyvällä aikavyöhykkeellä.
+- "Vertaa" voi näyttää kaksi valittua havaintoa rinnakkain. Päällekkäinen pyyhkäisyliukuri vasta jos sama alue ja geometrinen kohdistus ovat oikeasti kunnossa; muuten se luo virheellisen muutoksen vaikutelman. Eri tutkan katselukulma, erotuskyky ja käsittely voivat muuttaa ulkoasua ilman muutosta kohteessa. Synkronoi zoom vain kun vertailukuvat sen sallivat.
+- Saman kuvauksen SLC/GRD/QLK/CSI eivät ole neljä eri kuvaushetkeä. Tekniset tiedostot eivät sellaisinaan kuulu pelaajan pikkukuvariville. Mahdollinen oikea SAR-video voi olla erillinen videolla merkitty aineisto samassa kohteessa (vapaaehtoinen jatko, ei ensimmäisen julkaisun este).
+- Aineiston nimi, kuvausaika, alue, lähdelinkki, lisenssi ja tarvittava käsittelyselite säilyvät kuvan mukana. Luokittelua ei rakenneta pelkkään tiedostonimeen.
+
+Todennetut esimerkit: Venetsia 2 havaintoa (4.11.2025 ja 29.4.2026); Krakova 5 havaintoa (14.9., 17.9. ja kolme erillistä kuvausta 4.10.2025). Venetsian kaksi STAC-tietuetta haettu uudelleen 12.9. ja HTTP 200; kummassakin myös graphic PNG ja vid-mp4 -asset, mutta mediasisällön laatu/kesto pitää vielä tarkistaa. Tätä ei ole esikatselu-QA:na hyväksytty peliin.
+
+### Lähteet ja valmis tutkimus, jotta työtä ei tarvitse toistaa
+
+- Virallinen dokumentaatio + CC BY 4.0 (myös kaupallinen käyttö, ICEYE-attribuutio): https://sar.iceye.com/6.0.6/opendata/opendata/ . Kyse on uudesta avoimesta katalogista; vanhalla arkistolla voi olla eri ehdot.
+- Katalogi https://iceye-open-data-catalog.s3.amazonaws.com/catalog.json
+- Kokoelma https://iceye-open-data-catalog.s3.amazonaws.com/collections/iceye-sar.json
+- Esikatselukartta https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/summary/iceye-open-sar-data-thumbnails-map.html
+- Venetsia 29.4.2026 (omistajan X-linkin kuva): https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2026/04/ICEYE_U20F2X_20260429T205611Z_9603856_X58_SLH.json
+- Venetsia 4.11.2025: https://iceye-open-data-catalog.s3.amazonaws.com/stac-items/2025/11/ICEYE_U20F2R_20251104T222050Z_6901390_X50_SLEDF.json
+- Kokoelmassa tarkistuksessa 500 varsinaista ICEYE-kuvausta sekä yksi kooste `000-iceye-sar-collection-footprints`; kooste EI ole yksi lisähavainto. Rajaa kuvat `ICEYE_`-tietueisiin.
+- Codexin paikallinen tutkimus (ei pelirepoon tuotu): /Users/samireivinen/Documents/Codex/2026-09-11/pulu-jatko-2026-09-11/work/iceye-catalog-cache.json ja iceye-europe-audit.json. Auditointiskripti samassa kansiossa iceye-europe-audit.mjs. Neljän aluekohteen peliprojektiosta arvioidut pisteet eivät riitä Alppien/Sisilian/Kreetan/Islannin aluekattavuuden arviointiin. Jos et pääse paikallisiin tiedostoihin, yllä olevat julkiset STAC-lähteet ovat itsenäinen lähtöpiste.
+- Nykyinen liitäntä: js/pallolauta/linssit.js `merkit(osa, lista)` tukee omia lat/lng-pisteitä ja `pura()`-elinkaarta. Linssirekisteri js/linssit/rekisteri.js; yläpalkin elinkaareen käytä nimenomaan nykyisiä Ihmisen matka / Keksinnöt -linssien toteutuksia, älä vanhojen arkkitehtuuridokumenttien tasokarttaoletusta.
+
+### Työjärjestys ja hyväksyminen
+
+Fable tekee uuden linssityypin ensimmäisen kokonaisen mallin Venetsialla (kaksi havaintoa), sitten täyttää toistettavat kohdekatalogi-, metatieto- ja QA-erät kevyemmillä rajatuilla agenteilla roolisääntöjen mukaan. Tarkistettu kohdeluettelo ja esikäsitellyt web-kokoiset kuvat; ei jättimäisten raakamuotoisten TIFFien avaamista iPadin muistissa eikä koko katalogin kuvien lataamista käynnistyksessä. Näytä vain aidosti avattavat kohteet; yhden kuvan latausvirhe ei riko muita. Kuvan vaihto/kohteen vaihto/sulkeminen peruu edellisen latauksen tai sivuuttaa myöhäisen vastauksen.
+
+Testaa oikeassa pelissä iPad/Safari + kapea puhelinnäkymä: linssin avaus → kokonaan oma yläpalkki → vihreän pisteen valinta → kuva ensin → kaksi Venetsian kuvauspäivää → zoom/pan → paluu pallolle → linssin sulku ja alkuperäisen palkin/pelitilan palautus. Mukaan tyhjä/virheellinen kuva, hidas verkko, nopea kohteenvaihto, reduced motion, pelin tallennuksen säilyminen sekä näkymättömien karttamerkkien hit-testit. Taustalla ei jää linssin animaatiota, verkkokuormaa tai irrotettuja kuuntelijoita. Ei uusia pohjakartan polttoja tai tähtitaivastyötä tämän tehtävän varjolla.
+
+Kirjaa omistajan vihreät pisteet, nykyisen pohjan salliminen ja KOKO yläpalkin vaihto Raamattuun omistuksesi mukaisesti. Raportoi erikseen toimeksiannon vastaanotto, valmis PR, julkaisu ja oikean sovelluksen todennus. Aineistogallerian ratkaisu yllä on Codexin suositus; omistajan vaatimukset ovat erikseen sanatarkassa lainauksessa.
+
+---
+
 ## 2026-09-12 — CODEX → FABLE: PR2273 READY — Pulu leijuu kartan liikkeen ajan
 
 Omistaja hyväksyi karttaleijunnan toteutuksen: "Tee se". PR https://github.com/ravelius/Matkakirja/pull/2273, head 0aff81e57090b0ee736511c199965f169e4db83d, puu 67f4b2cbfc6ecf519e8f779e7de694316086c867. Paikallinen commit 21cf4e0efe55b5eab42af6a856e558cfb67bbe2e; fetchattu etäpuu identtinen.
