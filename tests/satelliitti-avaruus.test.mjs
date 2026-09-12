@@ -35,11 +35,13 @@ import { readFileSync } from 'node:fs';
 
 import {
   ASETTUMISEN_IKKUNA_MS, AVAUKSEN_MARGINAALI, AVARUUDEN_FOV, AVARUUDEN_TAUSTA,
-  ILMAKEHAN_KORKEUS, ILMAKEHAN_VARI, JAAVYOHYKE, VALON_KOMPENSAATIO,
+  ILMAKEHAN_KORKEUS, ILMAKEHAN_VARI, JAAVYOHYKE, NIMIEN_KYNNYS,
+  NIMIEN_KYNNYS_POIS, NIMIEN_LUOKKA, VALON_KOMPENSAATIO,
   ZOOMIN_KAUIN, ZOOMIN_LAHIN,
-  avaaAvaruusnakyma, avausKorkeus, halkaisijaRuudulla, maapallonVarit, pilvipaino,
-  vyohykeVari, zoomirajat,
+  avaaAvaruusnakyma, avausKorkeus, halkaisijaRuudulla, maapallonVarit, nimetNakyvat,
+  pilvipaino, vyohykeVari, zoomirajat,
 } from '../js/linssit/satelliitti-avaruus.js';
+import { PULUN_PIILO_LUOKKA, piilotaPulu } from '../js/linssit/satelliitti.js';
 import { PALLO_FOV, PALLO_KORKEUS_MAX } from '../js/pallolauta/kamera.js';
 
 /** Omistajan kolme mitattua ruutua (kotelon mitat linssi auki). */
@@ -191,7 +193,132 @@ test('jäävyöhyke alkaa vasta napapiirin pohjoispuolelta', () => {
   assert.ok(JAAVYOHYKE[1] > JAAVYOHYKE[0]);
 });
 
-/* ───────────────────────── 5. purku ─────────────────────────────── */
+/* ──────────────── 5. nimet vasta läheltä ────────────────────────── */
+
+test('AVAUSNÄKYMÄSSÄ EI OLE NIMIÄ — vartio omistajan linjaukselle', () => {
+  // Omistaja 12.9.2026: *"Kaikissa pisteissä ei tarvitse nimeä näkyä
+  // kuin vasta lähemmäs zoomattuna."* Jos tämä kaatuu, nimet ovat
+  // palanneet avauskorkeudelle.
+  for (const mitat of Object.values(RUUDUT)) {
+    const avaus = avausKorkeus(mitat);
+    assert.equal(nimetNakyvat(avaus, avaus, false), false, 'nimet näkyivät avauskorkeudella');
+    // Myös silloin kun ne olivat juuri näkyvissä: ylös zoomatessa ne sammuvat.
+    assert.equal(nimetNakyvat(avaus, avaus, true), false, 'nimet jäivät päälle avauskorkeudelle');
+    // Ja kauimmalla sallitulla korkeudella sitäkin varmemmin.
+    const { max } = zoomirajat(avaus);
+    assert.equal(nimetNakyvat(max, avaus, true), false);
+  }
+});
+
+test('nimet syttyvät lähikuvassa ja kynnys on suhde, ei astelukua', () => {
+  for (const mitat of Object.values(RUUDUT)) {
+    const avaus = avausKorkeus(mitat);
+    const { min } = zoomirajat(avaus);
+    // Lähimmällä sallitulla korkeudella nimet ovat päällä joka ruudulla.
+    assert.equal(nimetNakyvat(min, avaus, false), true, 'nimet eivät syttyneet lähikuvassa');
+    assert.equal(nimetNakyvat(avaus * NIMIEN_KYNNYS, avaus, false), true);
+  }
+  // Kynnys on zoomikaistan sisällä ja sen puolivälin alapuolella:
+  // nimen näkeminen vaatii oikeasti zoomaamista.
+  assert.ok(NIMIEN_KYNNYS > ZOOMIN_LAHIN && NIMIEN_KYNNYS < 1);
+  assert.ok(NIMIEN_KYNNYS < (ZOOMIN_LAHIN + ZOOMIN_KAUIN) / 2);
+});
+
+test('hystereesi pitää siirtymän vakaana eikä värähtele', () => {
+  assert.ok(NIMIEN_KYNNYS_POIS > NIMIEN_KYNNYS, 'sammutuskynnys on syttymiskynnyksen yläpuolella');
+  const avaus = 4.487;
+  // Kynnysten VÄLISSÄ tila säilyy — kumpaan suuntaan tahansa.
+  const vali = avaus * (NIMIEN_KYNNYS + NIMIEN_KYNNYS_POIS) / 2;
+  assert.equal(nimetNakyvat(vali, avaus, true), true);
+  assert.equal(nimetNakyvat(vali, avaus, false), false);
+  /*
+   * VÄRÄHTELYTESTI: kamera nytkähtelee kynnyksen ympärillä pikselin
+   * verran. Ilman hystereesiä tila vaihtuisi joka askeleella; nyt se
+   * ei vaihdu kertaakaan.
+   */
+  let tila = false;
+  let vaihtoja = 0;
+  for (let i = 0; i < 200; i += 1) {
+    const korkeus = avaus * NIMIEN_KYNNYS_POIS - 0.0005 + (i % 2) * 0.001;
+    const uusi = nimetNakyvat(korkeus, avaus, tila);
+    if (uusi !== tila) vaihtoja += 1;
+    tila = uusi;
+  }
+  assert.equal(vaihtoja, 0, `nimet värähtelivät ${vaihtoja} kertaa kynnyksellä`);
+});
+
+test('rikkinäinen korkeus ei sytytä eikä sammuta nimiä', () => {
+  assert.equal(nimetNakyvat(NaN, 4, true), true);
+  assert.equal(nimetNakyvat(1, 0, false), false);
+  assert.equal(nimetNakyvat(undefined, 4, false), false);
+});
+
+test('nimet on häivytetty CSS:ssä eikä piilotettu asettelusta', () => {
+  const css = readFileSync(new URL('../css/satelliitti.css', import.meta.url), 'utf8');
+  // Oletus avaruusnäkymässä: nimi läpinäkyvä; luokka sytyttää sen.
+  assert.match(css, /body\.satelliitti-avaruus \.satelliitti-nimi \{[^}]*opacity: 0;/);
+  assert.match(css, new RegExp(`body\\.satelliitti-avaruus\\.${NIMIEN_LUOKKA} \\.satelliitti-nimi \\{ opacity: 1; \\}`));
+  // Häivytys, ei välähdys — ja liikkeenvähennyksellä ei siirtymää.
+  assert.match(css, /transition: opacity 220ms ease;/);
+  assert.match(css, /prefers-reduced-motion: reduce[\s\S]*?satelliitti-nimi \{ transition: none; \}/);
+  // Piste itse ei saa kadota: vain nimi.
+  assert.ok(!/satelliitti-(hehku|rengas|ydin)[^}]*opacity: 0/.test(css));
+});
+
+/* ──────────────── 6. pulu piilossa linssin ajan ─────────────────── */
+
+test('pulun piiloluokka on SAMA kuin Ihmisen matka -linssillä', () => {
+  const esitys = readFileSync(new URL('../js/linssit/ihmisen-matka-esitys.js', import.meta.url), 'utf8');
+  assert.match(esitys, new RegExp(`PULUN_PIILO_LUOKKA = '${PULUN_PIILO_LUOKKA}'`),
+    'satelliittilinssin kopio ja alkuperä erkanivat');
+  // Ja sääntö on kopioitu satelliitin omaan tyyliin, koska
+  // css/aikajana.css ei ole ladattu.
+  const css = readFileSync(new URL('../css/satelliitti.css', import.meta.url), 'utf8');
+  for (const valitsin of ['.pollo-nappi', '.pollo-paneeli', '.livia-kasvot-pinta']) {
+    assert.ok(css.includes(`body.${PULUN_PIILO_LUOKKA} ${valitsin}`), `${valitsin} puuttuu`);
+  }
+  assert.match(css, new RegExp(`body\\.${PULUN_PIILO_LUOKKA} \\.livia-kasvot-pinta \\{\\s*visibility: hidden;`));
+});
+
+test('pulu piiloutuu linssin ajaksi ja palaa täsmälleen', () => {
+  const luokat = new Set();
+  const doc = { body: { classList: {
+    add: (n) => luokat.add(n),
+    remove: (n) => luokat.delete(n),
+    contains: (n) => luokat.has(n),
+  } } };
+  const kahva = piilotaPulu(doc);
+  assert.ok(luokat.has(PULUN_PIILO_LUOKKA), 'pulua ei piilotettu');
+  assert.equal(kahva.piilossa(), true);
+  kahva.pura();
+  assert.ok(!luokat.has(PULUN_PIILO_LUOKKA), 'pulu jäi piiloon');
+  assert.equal(kahva.piilossa(), false);
+  // Toinen purku ei tee mitään.
+  kahva.pura();
+  assert.ok(!luokat.has(PULUN_PIILO_LUOKKA));
+});
+
+test('toisen linssin piilottamaa pulua ei paljasteta sulkiessa', () => {
+  const luokat = new Set([PULUN_PIILO_LUOKKA]);
+  const doc = { body: { classList: {
+    add: (n) => luokat.add(n),
+    remove: (n) => luokat.delete(n),
+    contains: (n) => luokat.has(n),
+  } } };
+  const kahva = piilotaPulu(doc);
+  kahva.pura();
+  assert.ok(luokat.has(PULUN_PIILO_LUOKKA), 'toisen linssin piilotus purkautui');
+});
+
+test('satelliittilinssi piilottaa pulun ja palauttaa sen', () => {
+  const lahde = readFileSync(new URL('../js/linssit/satelliitti.js', import.meta.url), 'utf8');
+  // Talon oma mekanismi, ei uutta: jono, kuplat ja piiloluokka.
+  assert.match(lahde, /polloLinssiAlkoi, polloLinssiPaattyi/);
+  assert.match(lahde, /const pulu = piilotaPulu\(\);/);
+  assert.match(lahde, /pulu\.pura\(\);/);
+});
+
+/* ───────────────────────── 7. purku ─────────────────────────────── */
 
 /** Valepallo: vain ne kutsut, joita avaruusnäkymä käyttää. */
 function valepallo() {
@@ -284,7 +411,14 @@ function valeikkuna() {
     luokat,
     document: {
       createElement: (nimi) => (nimi === 'canvas' ? kangas() : {}),
-      body: { classList: { add: (n) => luokat.add(n), remove: (n) => luokat.delete(n) } },
+      body: {
+        classList: {
+          add: (n) => luokat.add(n),
+          remove: (n) => luokat.delete(n),
+          contains: (n) => luokat.has(n),
+          toggle: (n, paalla) => (paalla ? luokat.add(n) : luokat.delete(n)),
+        },
+      },
     },
   };
 }
@@ -317,6 +451,7 @@ test('avaruusnäkymä asettuu ja purkautuu täsmälleen ennalleen', () => {
   assert.equal(lauta.rajat.length, 1);
   assert.ok(lauta.rajat[0].min > 0.5 && lauta.rajat[0].max > lauta.rajat[0].min);
   assert.ok(ikkuna.luokat.has('satelliitti-avaruus'), 'ruumiin luokka puuttuu');
+  assert.ok(!ikkuna.luokat.has(NIMIEN_LUOKKA), 'nimet olivat päällä heti avattaessa');
   // Pinta vaihtui oikeasti: laattamoottori kiinni, pohjapallolla oma kuva.
   assert.equal(pallo.tila.laatta, null, 'laattamoottori jäi päälle');
   assert.match(String(pallo.tila.kuva), /^data:image\/png/, 'generoitu Maa ei tullut pinnalle');
@@ -340,6 +475,7 @@ test('avaruusnäkymä asettuu ja purkautuu täsmälleen ennalleen', () => {
   assert.equal(pallo.materiaali.specular.getHex(), ennen.specular);
   assert.deepEqual(lauta.rajat.at(-1), null, 'zoomirajat jäivät syrjäytetyiksi');
   assert.ok(!ikkuna.luokat.has('satelliitti-avaruus'), 'ruumiin luokka jäi');
+  assert.ok(!ikkuna.luokat.has(NIMIEN_LUOKKA), 'nimiluokka jäi');
 });
 
 test('avaruusnäkymä ei synny ilman palloa', () => {

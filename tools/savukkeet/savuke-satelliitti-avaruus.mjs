@@ -28,9 +28,16 @@
  *   4. KAPEA ZOOM: OrbitControlsin min/max pitävät pallon ruudulla
  *      eivätkä päästä pintaan — ja PYÖRITYS TOIMII YHÄ (omistajan
  *      linjaus: kohteet etsitään palloa pyörittämällä).
- *   5. SULKEMINEN PALAUTTAA PALLON TÄSMÄLLEEN: kamera, pinta,
- *      laattamoottori, ilmakehä, tausta, zoomirajat, karttapinnat ja
- *      tähtien poistuminen — eikä pelitila muutu.
+ *   5. NIMET VASTA LÄHELTÄ (omistaja 12.9.2026: *"Kaikissa pisteissä
+ *      ei tarvitse nimeä näkyä kuin vasta lähemmäs zoomattuna"*):
+ *      avausnäkymässä yksikään nimikyltti ei ole näkyvissä, vihreät
+ *      pisteet ovat; lähimmässä sallitussa zoomissa nimet näkyvät.
+ *   6. PULU PIILOSSA (omistaja 12.9.2026: *"Pulun voisi piilottaa"*):
+ *      pöllön nappi, paneeli ja kasvokangas ovat piilossa linssin ajan
+ *      ja takaisin näkyvissä sen jälkeen.
+ *   7. SULKEMINEN PALAUTTAA PALLON TÄSMÄLLEEN: kamera, pinta,
+ *      laattamoottori, ilmakehä, tausta, zoomirajat, karttapinnat,
+ *      nimet, pulu ja tähtien poistuminen — eikä pelitila muutu.
  *
  * VERKKO: ämpäri (laatat, Globe.gl) Noden fetchin kautta, muu katki.
  */
@@ -129,7 +136,31 @@ const MITAT = () => {
     }
   });
   const ohj = pallo.controls();
+  /*
+   * NIMI ON NÄKYVISSÄ, JOS SEN PEITTÄVYYS ON YLI NOLLAN. Nimet
+   * häivytetään opacityllä eikä displaylla (css/satelliitti.css), joten
+   * laatikko on olemassa myös piilossa — pelkkä rect ei siis kelpaa.
+   */
+  let nimiaNakyvissa = 0;
+  let nimiaYhteensa = 0;
+  for (const el of document.querySelectorAll('.satelliitti-nimi')) {
+    const merkki = el.closest('.pallolauta-merkki');
+    if (merkki?.classList?.contains('pallolauta-takana')) continue;
+    nimiaYhteensa += 1;
+    if (Number(getComputedStyle(el).opacity) > 0.05) nimiaNakyvissa += 1;
+  }
+  const puluNakyy = (valitsin) => {
+    const el = document.querySelector(valitsin);
+    if (!el) return null;
+    const t = getComputedStyle(el);
+    return t.visibility !== 'hidden' && t.display !== 'none';
+  };
   return {
+    nimiaNakyvissa,
+    nimiaYhteensa,
+    puluNappi: puluNakyy('.pollo-nappi'),
+    puluKasvot: puluNakyy('.livia-kasvot-pinta'),
+    puluPiilossa: document.body.classList.contains('aikajana-pulu-piilossa'),
     korkeus: +pov.altitude.toFixed(3), lat: +pov.lat.toFixed(3), lng: +pov.lng.toFixed(3),
     leveys: Math.round(kotelo.width), rkorkeus: Math.round(kotelo.height),
     halkaisija: Math.round(halkaisija),
@@ -268,6 +299,53 @@ async function ajaNakyma(nimi) {
   vaadi(t('pintakerros on lukossa — uusia karttaverkkoja ei synny'),
     linssi.kerrosLukossa && !ennen.kerrosLukossa);
 
+  /* 5. nimet vasta läheltä */
+  vaadi(t('avausnäkymässä ei ole yhtään nimikylttiä'),
+    linssi.nimiaNakyvissa === 0 && linssi.nimiaYhteensa > 0,
+    `${linssi.nimiaNakyvissa}/${linssi.nimiaYhteensa} nimeä näkyvissä`);
+  vaadi(t('vihreät pisteet ovat silti ruudulla'), linssi.nimiaYhteensa >= 5,
+    `${linssi.nimiaYhteensa} pistettä kameran puolella`);
+
+  // Lähizoom: kamera linssin lähimpään sallittuun korkeuteen.
+  await s.evaluate(() => {
+    const { ui } = window.matkakirja;
+    const tila = ui.pallolinssi.kahva.avaruus.tila();
+    const pov = ui.pallonInstanssi.pointOfView();
+    ui.pallonInstanssi.pointOfView({ ...pov, altitude: tila.rajat.min }, 0);
+    ui.pallolauta.heraa();
+  });
+  await rauhoitu(s);
+  const lahella = await s.evaluate(MITAT);
+  await kaappaa('1b-lahizoomi');
+  vaadi(t('nimet syttyvät lähizoomissa'),
+    lahella.nimiaNakyvissa > 0,
+    `${lahella.nimiaNakyvissa}/${lahella.nimiaYhteensa} nimeä näkyvissä korkeudella ${lahella.korkeus}`);
+  vaadi(t('lähizoomissa kaikki kameran puolen nimet ovat esillä'),
+    lahella.nimiaNakyvissa === lahella.nimiaYhteensa,
+    `${lahella.nimiaNakyvissa}/${lahella.nimiaYhteensa}`);
+
+  // Takaisin avausnäkymään: nimet sammuvat uudestaan (hystereesi ei jumita).
+  await s.evaluate(() => {
+    const { ui } = window.matkakirja;
+    const tila = ui.pallolinssi.kahva.avaruus.tila();
+    const pov = ui.pallonInstanssi.pointOfView();
+    ui.pallonInstanssi.pointOfView({ ...pov, altitude: tila.avauskorkeus }, 0);
+    ui.pallolauta.heraa();
+  });
+  await rauhoitu(s);
+  const takaisin = await s.evaluate(MITAT);
+  vaadi(t('nimet sammuvat kun zoomataan takaisin ulos'),
+    takaisin.nimiaNakyvissa === 0,
+    `${takaisin.nimiaNakyvissa}/${takaisin.nimiaYhteensa}`);
+
+  /* 6. pulu piilossa */
+  vaadi(t('pulu on piilossa linssin ajan'),
+    linssi.puluPiilossa && linssi.puluNappi === false
+      && (linssi.puluKasvot === false || linssi.puluKasvot === null),
+    `luokka ${linssi.puluPiilossa}, nappi ${linssi.puluNappi}, kasvot ${linssi.puluKasvot}`);
+  vaadi(t('pulu näkyi ennen linssiä'), ennen.puluNappi === true,
+    `nappi ${ennen.puluNappi}`);
+
   /* 4. kapea zoom ja pyöritys */
   vaadi(t('zoom ei päästä pintaan'), linssi.minKorkeus > 0.5,
     `lähin korkeus ${linssi.minKorkeus}`);
@@ -318,6 +396,11 @@ async function ajaNakyma(nimi) {
     Math.abs(jalkeen.minKorkeus - ennen.minKorkeus) < 0.01
       && Math.abs(jalkeen.maxKorkeus - ennen.maxKorkeus) < 0.01,
     `${jalkeen.minKorkeus}…${jalkeen.maxKorkeus}`);
+  vaadi(t('pulu palasi ruudulle'),
+    jalkeen.puluNappi === ennen.puluNappi && !jalkeen.puluPiilossa,
+    `nappi ${jalkeen.puluNappi}, luokka ${jalkeen.puluPiilossa}`);
+  vaadi(t('nimiluokka ei jäänyt bodyyn'),
+    !(await s.evaluate(() => document.body.classList.contains('satelliitti-nimet'))));
   vaadi(t('pelitila ei muuttunut'), peliEnnen === peliJalkeen);
   vaadi(t('ei sivuvirheitä'), virheet.length === 0, virheet.slice(0, 2).join(' | '));
 

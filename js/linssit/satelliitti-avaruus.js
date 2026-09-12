@@ -76,6 +76,67 @@ export const AVAUKSEN_MARGINAALI = 0.12;
 /** Globe.gl:n kameran avauskulma pystysuunnassa (sama kuin PALLO_FOV). */
 export const AVARUUDEN_FOV = 50;
 
+/*
+ * ── NIMET VASTA LÄHELTÄ (omistaja 12.9.2026) ──────────────────────
+ *
+ * Sanatarkasti: *"Kaikissa pisteissä ei tarvitse nimeä näkyä kuin
+ * vasta lähemmäs zoomattuna."*
+ *
+ * MITATTU (12.9.2026, 26 havaintokohdetta, kamera vuorollaan jokaisen
+ * kohteen päällä, nimilaatikoiden limitys luettuna DOMista):
+ *
+ *   korkeus ×avaus │ puhelin 374 × 828 │ työpöytä 1259 × 779
+ *   ───────────────┼───────────────────┼────────────────────
+ *      1,30 (kauin)│ 179 paria, 24/26  │ 34 paria, 21/26
+ *      1,00 (avaus)│ 120 paria, 24/26  │ 26 paria, 18/26
+ *      0,90        │  95 paria, 24/26  │ 17 paria, 12/26
+ *      0,80        │  71 paria, 24/26  │ 14 paria, 10/26
+ *      0,70        │  60 paria, 24/26  │ 12 paria,  9/26
+ *      0,60        │  38 paria, 22/26  │ 12 paria,  9/26
+ *      0,55 (lähin)│  27 paria, 18/26  │ 11 paria,  9/26
+ *
+ * KYNNYS ON SUHDELUKU EIKÄ ASTELUKU: avauskorkeus lasketaan kotelosta
+ * (avausKorkeus) ja on puhelimella 4,49 mutta työpöydällä 1,63, joten
+ * absoluuttinen raja toimisi vain yhdellä ruudulla. Nimet syttyvät
+ * korkeudella ≤ NIMIEN_KYNNYS × avaus. 0,72 on mittauksesta: siinä
+ * limitys on pudonnut noin puoleen avausnäkymästä molemmilla ruuduilla
+ * (puhelin 120 → ~58, työpöytä 26 → 12), ja se on selvästi zoomikaistan
+ * [0,55 … 1,30] puolivälin (0,78) alapuolella — nimen näkeminen vaatii
+ * siis oikeasti zoomaamista eikä tule vahingossa.
+ *
+ * LIMITYS EI KATOA KOKONAAN MILLÄÄN KORKEUDELLA, ja se sanotaan tässä
+ * suoraan: lähimmälläkin sallitulla korkeudella puhelimella jää 27
+ * limityparia 18 näkymässä 26:sta. Syy on aineiston tiheys, ei kynnys —
+ * Fuji ja Tokio ovat 0,91° päässä toisistaan ja Etna ja Italian saapas
+ * 3,56°, kun pelkkä nimilappu on levein 167 px eli lähimmälläkin
+ * zoomilla noin 36 astetta leveä. Näiden erottaminen vaatisi nimien
+ * VÄISTELYN (ladonta, joka siirtää päällekkäiset lapun toiselle
+ * puolelle pistettä) — se on oma työnsä eikä kuulu tähän erään.
+ */
+/** Nimet syttyvät tällä osuudella avauskorkeudesta (mitattu, ks. yllä). */
+export const NIMIEN_KYNNYS = 0.72;
+/**
+ * Nimet sammuvat vasta tässä. Hystereesi (0,72 → 0,80, eli 11 %) estää
+ * värähtelyn: ilman sitä yksi kynnyksellä värisevä pikseli sytyttäisi ja
+ * sammuttaisi nimet joka kehyksellä. Siirtymä on lisäksi häivytys
+ * (css/satelliitti.css), ei välähdys.
+ */
+export const NIMIEN_KYNNYS_POIS = 0.80;
+/** Body-luokka, joka sytyttää nimet (oletus: piilossa avaruusnäkymässä). */
+export const NIMIEN_LUOKKA = 'satelliitti-nimet';
+
+/**
+ * NÄKYVÄTKÖ NIMET tällä korkeudella? Puhdas funktio hystereesillä:
+ * `nyt` on edellinen tila, ja kynnysten välissä se säilyy — siitä
+ * vakaus syntyy. (tests/satelliitti-avaruus.test.mjs)
+ */
+export function nimetNakyvat(korkeus, avaus, nyt = false) {
+  if (!(avaus > 0) || !Number.isFinite(korkeus)) return Boolean(nyt);
+  if (korkeus <= avaus * NIMIEN_KYNNYS) return true;
+  if (korkeus >= avaus * NIMIEN_KYNNYS_POIS) return false;
+  return Boolean(nyt);
+}
+
 /** Zoomin lähin raja avauskorkeudesta: pallo täyttää ruudun, ei enempää. */
 export const ZOOMIN_LAHIN = 0.55;
 /** Zoomin kauin raja avauskorkeudesta: pallo pienenee, ei katoa. */
@@ -564,9 +625,29 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
    */
   let kehys = 0;
   let edellinen = 0;
+  let nimetPaalla = false;
+  /*
+   * KORKEUS LUETAAN KAMERAN PAIKASTA eikä `pointOfView()`istä: kirjasto
+   * rakentaa joka kutsulla uuden olion, ja tämä ajetaan joka kehyksellä.
+   * Etäisyys = säde · (1 + korkeus), joten korkeus on suoraan
+   * |kamera| / säde − 1.
+   */
+  const kameranKorkeus = () => {
+    const sade = pallo.getGlobeRadius?.() ?? 0;
+    const p = pallo.camera?.()?.position;
+    if (sade > 0 && p?.length) return p.length() / sade - 1;
+    return pallo.pointOfView?.()?.altitude ?? NaN;
+  };
+  const tahdistaNimet = () => {
+    const nyt = nimetNakyvat(kameranKorkeus(), alt, nimetPaalla);
+    if (nyt === nimetPaalla) return;
+    nimetPaalla = nyt;
+    ikkuna.document?.body?.classList?.toggle?.(NIMIEN_LUOKKA, nyt);
+  };
   const askel = (t) => {
     kehys = ikkuna.requestAnimationFrame?.(askel) ?? 0;
     pinnat.pyyhkaise();
+    tahdistaNimet();
     if (!taivas) return;
     const dt = reduced || !edellinen ? 0 : (t - edellinen) / 1000;
     edellinen = t;
@@ -643,6 +724,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       tahtia: taivas?.tila?.()?.pisteita ?? 0,
       tahtikerroksia: taivas?.tila?.()?.kerroksia ?? 0,
       piilotettuja: pinnat.maara(),
+      nimetNakyvissa: nimetPaalla,
+      nimienKynnys: +(alt * NIMIEN_KYNNYS).toFixed(3),
       pyyhkaisyja: pinnat.kertoja(),
       tekstuuri: Boolean(tekstuuri),
     }),
@@ -653,6 +736,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       taivas?.pura?.();
       pinnat.pura();
       ikkuna.document?.body?.classList?.remove?.('satelliitti-avaruus');
+      ikkuna.document?.body?.classList?.remove?.(NIMIEN_LUOKKA);
+      nimetPaalla = false;
       lauta?.zoomirajat?.(null);
       if (tekstuuri) {
         /*

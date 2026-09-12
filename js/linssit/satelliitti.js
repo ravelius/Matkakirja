@@ -98,6 +98,32 @@
  * kuin ennen. Näkymä on linssin tilaa eikä pelin: `pura` kirjoittaa
  * pallon lähtötilan takaisin sellaisenaan.
  *
+ * ── PULU PIILOON LINSSIN AJAKSI (omistaja 12.9.2026) ──────────────
+ *
+ * Sanatarkasti: *"Pulun voisi piilottaa"*. Avaruudesta katsottuna
+ * ruudun oikeassa alalaidassa seisova kyyhky on väärästä tarinasta.
+ *
+ * SAMA MEKANISMI KUIN MUISSA LINSSEISSÄ, EI UUTTA:
+ *   • `polloLinssiAlkoi()` (js/pollo.js) panee pulun puheenvuorot
+ *     JONOON — ne sanotaan, kun linssi päättyy, eikä mitään menetetä;
+ *     `polloKuplatPois()` vie jo auki olevat kuplat pois. Tämä on
+ *     täsmälleen se, mitä js/aikajana.js suljeKelluvat tekee linssin
+ *     alkaessa.
+ *   • Body-luokka `aikajana-pulu-piilossa` (js/linssit/ihmisen-matka-
+ *     esitys.js PULUN_PIILO_LUOKKA) piilottaa napin, paneelin ja
+ *     kasvokankaan `visibility: hidden` -säännöllä. Juuri sen
+ *     livia-eleet lukee näkyvyystestissään (js/livia-eleet.js
+ *     nappiNakyy), joten piilotettu pulu ei jää elehtimään eikä
+ *     puhumaan näkymättömissä — se ei katkea kesken eleen vaan
+ *     lakkaa aloittamasta uusia.
+ *   • Sulkeminen poistaa luokan ja kutsuu `polloLinssiPaattyi()`, joka
+ *     päästää jonoon jääneet puheenvuorot ulos.
+ *
+ * LUOKKA ON KIRJOITETTU TÄHÄN MERKKIJONONA eikä tuotu Ihmisen matka
+ * -linssistä: tuonti vetäisi koko kertomusesityksen (2 200 riviä)
+ * muistiin satelliittilinssiä avattaessa. Vartio pitää merkkijonot
+ * samoina (tests/satelliitti-avaruus.test.mjs).
+ *
  * Havaintopiste on `laji: 'linssi'` -merkki, jonka napautuksen laskee
  * pallon oma osumatesti (js/pallolauta/lauta.js lahinLinssimerkki) —
  * ja se hyväksyy vain kameran puolella olevat merkit, joten pallon
@@ -107,11 +133,46 @@
  */
 
 import { html } from '../ui-apurit.js';
+import { polloKuplatPois, polloLinssiAlkoi, polloLinssiPaattyi } from '../pollo.js';
 import { SATELLIITTI_KOHTEET, SATELLIITTI_LAHDE } from './satelliitti-data.js';
 import { avaaAvaruusnakyma } from './satelliitti-avaruus.js';
 
 /** Linssiosan nimi laudan linssiapurissa (lauta.linssit.merkit/pura). */
 export const SATELLIITTI_OSA = 'satelliitti';
+
+/**
+ * Pulun piiloluokka. SAMA MERKKIJONO kuin
+ * js/linssit/ihmisen-matka-esitys.js PULUN_PIILO_LUOKKA — ks. tiedoston
+ * alku (PULU PIILOON LINSSIN AJAKSI) siitä, miksi se on kopio.
+ */
+export const PULUN_PIILO_LUOKKA = 'aikajana-pulu-piilossa';
+
+/**
+ * Pulu piiloon ja sen puheenvuorot jonoon. Palauttaa kahvan, jonka
+ * `pura` palauttaa pulun täsmälleen ennalleen ja päästää jonon ulos.
+ */
+export function piilotaPulu(doc = document) {
+  let purettu = false;
+  try { polloLinssiAlkoi(); } catch { /* pöllöä ei ole asennettu */ }
+  try { polloKuplatPois(); } catch { /* kuplia ei ollut */ }
+  const oliPiilossa = Boolean(doc?.body?.classList?.contains(PULUN_PIILO_LUOKKA));
+  if (!oliPiilossa) doc?.body?.classList?.add(PULUN_PIILO_LUOKKA);
+  return {
+    /** Mittari savukkeelle ja testeille. */
+    piilossa: () => !purettu && Boolean(doc?.body?.classList?.contains(PULUN_PIILO_LUOKKA)),
+    pura() {
+      if (purettu) return;
+      purettu = true;
+      /*
+       * LUOKKA POISTETAAN VAIN JOS TÄMÄ SEN LISÄSI: jos jokin toinen
+       * linssi piti pulua piilossa jo ennen satelliittilinssiä, sen
+       * piilotus ei saa purkautua tämän mukana.
+       */
+      if (!oliPiilossa) doc?.body?.classList?.remove(PULUN_PIILO_LUOKKA);
+      try { polloLinssiPaattyi(); } catch { /* pöllöä ei ole asennettu */ }
+    },
+  };
+}
 
 /** Oman tyylitiedoston tunnus (sama kaava kuin muilla kelluvilla pinnoilla). */
 const TYYLIN_TUNNUS = 'satelliitti-tyyli';
@@ -691,6 +752,9 @@ function avaa(lauta, tila, ui) {
    */
   const avaruus = avaaAvaruusnakyma(lauta, { ui });
 
+  // Pulu piiloon ja sen puheenvuorot jonoon (ks. tiedoston alku).
+  const pulu = piilotaPulu();
+
   const avaaKohde = (kohde) => {
     /*
      * SULKEVA NAPAUTUS EI AVAA UUTTA (v1783:n sääntö). Havaintoikkunan
@@ -719,11 +783,15 @@ function avaa(lauta, tila, ui) {
     palkki,
     /** Avaruusnäkymän mittarit savukkeelle (null, jos palloa ei ole). */
     avaruus,
+    /** Pulun piilotuksen kahva (savukkeet ja vartijat). */
+    pulu,
     pura: () => {
       suljeKortti();
       // Pallon lähtötila takaisin ENSIN: kamera, pinta, ilmakehä,
       // tähdet ja zoomirajat. Merkkien häivytys jatkuu tämän päälle.
       avaruus?.pura?.();
+      // Pulu takaisin ruudulle ja jonoon jääneet puheenvuorot ulos.
+      pulu.pura();
       document.querySelectorAll('.satelliitti-vertailu').forEach((el) => el.remove());
       palkki.pura();
       lauta?.linssit?.pura?.(SATELLIITTI_OSA);
