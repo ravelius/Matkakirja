@@ -699,6 +699,45 @@ export const TAGIT = {
   'kobenhavn-3': { alku: '[brightly]', kohdat: [['Orkesterin', '[mischievously]']] },
 };
 
+/**
+ * Muodostaa generaattorin ankkurireseptin hyväksytystä exact-TTS-rivistä.
+ * Näkyvät sanat eivät saa muuttua, ja jokaisen väliankkurin on oltava
+ * yksikäsitteinen. Näin tuotantogeneraattori ja 45 kaupungin hyväksytty
+ * luentamanifesti käyttävät varmasti samaa v3-syötettä.
+ */
+export function tagiresepti(nakyva, tts) {
+  const tagit = [];
+  let plain = '';
+  let cursor = 0;
+  for (const match of tts.matchAll(/\[[^\]]+\]\s*/g)) {
+    plain += tts.slice(cursor, match.index);
+    tagit.push({ tag: match[0].trim(), offset: plain.length });
+    cursor = match.index + match[0].length;
+  }
+  plain += tts.slice(cursor);
+  if (plain !== nakyva) throw new Error('exact-TTS muuttaa näkyviä sanoja');
+  const recipe = {};
+  const internal = tagit.filter(({ offset }) => offset > 0);
+  const first = tagit.find(({ offset }) => offset === 0);
+  if (first) recipe.alku = first.tag;
+  if (internal.length) recipe.kohdat = internal.map((item, index) => {
+    const end = internal[index + 1]?.offset ?? nakyva.length;
+    const anchor = nakyva.slice(item.offset, end).trim();
+    if (!anchor || nakyva.split(anchor).length - 1 !== 1) {
+      throw new Error(`exact-TTS-ankkuri ei ole yksikäsitteinen: ${anchor}`);
+    }
+    return [anchor, item.tag];
+  });
+  return recipe;
+}
+
+const EUROOPPA_TTS_MANIFESTI = JSON.parse(readFileSync(resolve(
+  JUURI, 'docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260913.json',
+), 'utf8'));
+for (const city of EUROOPPA_TTS_MANIFESTI.cities) {
+  TAGIT[`${city.city}-3`] = tagiresepti(city.livia.visibleText, city.livia.ttsText);
+}
+
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
 export function ilmanTageja(teksti) {
   return String(teksti ?? '').replace(/\[[^\]]+\]\s*/g, '').trim();

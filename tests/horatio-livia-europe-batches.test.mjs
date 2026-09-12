@@ -73,8 +73,8 @@ test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia'
       `${city.city}: koonti-H`);
     assert.equal(city.livia.visibleText, FOKUSVIRRAT[city.city].pollo.kommentti[0],
       `${city.city}: koonti-L`);
-    assert.equal(puhemuoto(city.livia.visibleText, TAGIT[city.livia.audioId]), city.livia.ttsText,
-      `${city.city}: tuotantogeneraattorin Livia TTS`);
+    assert.equal(puhemuoto(city.livia.visibleText, TAGIT[`${city.city}-3`]), city.livia.ttsText,
+      `${city.city}: tuotantogeneraattorin exact TTS`);
     for (const speaker of ['horatio', 'livia']) {
       const item = city[speaker];
       assert.equal(stripTags(item.ttsText), item.visibleText, `${city.city}: koonti-${speaker}-TTS`);
