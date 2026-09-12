@@ -751,6 +751,30 @@ export const kohtaamiskuvat = [
     hetki: 'Kuparia täynnä oleva hylly jää hämärään, ja päivänvalo tulee kujan suunnasta suoraan työpöydälle kesken taonnan.',
     vihje: 'Kuparipaja, nahkaesiliina ja mukulakivikuja kertovat Sarajevosta; kaivon tarinaa ei näytetä kuvassa.',
   },
+  /*
+   * KUVAPUTKEN TOIMITUS 12.9.2026 16:57 UTC: root-QA:ssa hyväksytty
+   * Marios on Nikosian ensimmäinen kohtaamiskuva. Kaaren henkilö on jo
+   * seripainotaiteilija Marios (js/tyohuone-kehitys-data.js), joten kuva
+   * voidaan ottaa katalogiin ja galleriaan ilman tarinamuutosta. Pelikortti
+   * odottaa vielä Fablelta kaaren aktivointia: Nikosian `luennat: false`
+   * suodattaa sen nykyisestä TARINAKAARI-taulusta. Toimitettu media
+   * tarkistettiin takaisin R2:sta: sha256, MIME, CORS, mitat ja täysi
+   * JPEG-purku täsmäävät toimituspakettiin.
+   */
+  {
+    id: 'nikosia-marios-4ce1cb371ba3',
+    kaupunki: 'Nikosia',
+    maa: 'Kypros',
+    hahmo: 'Marios',
+    kansio: '20260912',
+    tiedosto: 'nikosia-marios-4ce1cb371ba3.jpg',
+    tila: 'tarkistettu',
+    alt: 'Marios pysäyttää seripainotyönsä ja arvioi aarteen kysyjää suoraan Nikosian käsityöpihalla. Molemmat kädet lepäävät painokehyksen reunoilla.',
+    lyhyt: 'Marios pysäyttää painotyönsä ja arvioi aarteen kysyjää Nikosian käsityöpihalla.',
+    kuvateksti: 'Marios pysäyttää painotyönsä ja arvioi aarteen kysyjää Nikosian käsityöpihalla.',
+    hetki: 'Molemmat kädet ovat jääneet painokehyksen reunoille, kun Marios nostaa katseensa keskeneräisestä koevedoksesta.',
+    vihje: 'Seripainokehys, lasta ja vaatimaton käsityöpiha kertovat Mariosin työstä; muurikehää tai bastionien lukumäärää ei näytetä.',
+  },
 ];
 
 /**

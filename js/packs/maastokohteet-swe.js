@@ -63,6 +63,26 @@
 export const MAASTOKOHTEET_SWE = [
   {
     id: 'kebnekaise',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-maasto-kebnekaise-dd1df4d59bad.jpg',
+      lyhyt: 'Kebnekaisen kivinen tunturimassiivi, lumikentät ja etelähuipun jäätikkö.',
+      selite: 'Kebnekaisen leveä kivinen selänne kohoaa Ruotsin Lapissa lumikenttien ja matalan tunturikasvillisuuden ylle.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Antti Leppänen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-maasto-kebnekaise-cd98484728f3.jpg',
+      lyhyt: 'Kebnekaisen lumikentät ja etelähuipun jäätikköinen lakialue Vierramvarelta.',
+      selite: 'Kebnekaisen tummaa tunturimassiivia peittävät vielä keskikesälläkin laajat lumikentät; etelähuipun jäätikköinen lakialue erottuu Vierramvarelta.',
+      lahde: 'Valokuva: Antti Leppänen, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Antti Leppänen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    }],
     nimi: 'Kebnekaise',
     tyyppi: 'vuori',
     kysymykset: [
@@ -141,6 +161,26 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'gotaalv',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-maasto-gotaalv-6a7b7252d343.jpg',
+      lyhyt: 'Göta älv kuohuu Trollhättanin kalliorotkossa.',
+      selite: 'Trollhättanin tulvaluukuista vapautettu Göta älv kuohuu kalliosaarten välistä metsäiseen rotkoon.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; paikkareferenssi Tubaist',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-maasto-gotaalv-76c74fdd7683.jpg',
+      lyhyt: 'Göta älv ryöppyää Trollhättanin kalliorotkossa tulvaluukkujen avauksen aikana.',
+      selite: 'Göta älvin vesi ryöppyää Trollhättanin kalliorotkossa kesäisen tulvaluukkujen avauksen aikana.',
+      lahde: 'Valokuva: Tubaist, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Tubaist',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    }],
     nimi: 'Göta älv',
     tyyppi: 'joki',
     kysymykset: [

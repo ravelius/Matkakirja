@@ -3390,7 +3390,28 @@ export const KAARI_PAKETIT = {
       tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       lauta: 'middleeast',
-      luennat: false,
+      /*
+       * NIKOSIA AUKI MYKISTETTYNÄ (omistajan päätös kysymyskortissa
+       * 12.9.2026: *"Avaa ilman ääntä (mykistettynä)"*).
+       *
+       * Kuvaputki teki Nikosian Mariokselle kohtaamiskuvan, mutta
+       * kaupunki ei näkynyt pelissä lainkaan: `luennat: false` jätti sen
+       * kokonaan pois TARINAKAARI-taulusta (js/packs/tarinakaari.js), ja
+       * kuvaton kaupunki ei voi näyttää kohtaamiskuvaa.
+       *
+       * MIKSI EI GENEROITU ÄÄNIÄ: omistajan linjaus 9.8.2026 (*"kirjoittaa
+       * saa, ei vielä generoida"*) koskee koko Lähi-idän sarjaa, eikä sitä
+       * kumota yhden kaupungin takia. Mykistys on talon oma keino juuri
+       * tähän: `mykistetyt` kertoo, että TEKSTI on pelissä mutta luentaa
+       * ei ole, ja kaariLuentaSoi vaikenee. Vanha ääni väärillä sanoilla
+       * olisi pahempi kuin hiljaisuus — täällä ääntä ei ole lainkaan.
+       *
+       * MUUT LÄHI-IDÄN KAUPUNGIT PYSYVÄT KIINNI: niillä on yhä
+       * `luennat: false`, eikä tämä muutos koske niitä. Kun sarja
+       * avataan kokonaan, se tehdään omana eränään luentoineen ja tämä
+       * lohko poistuu.
+       */
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Nikosia — väärältä puolelta',
       saapuminen: 'Kävelin kaupungin muurien ulkopuolella ja yritin piirtää '
         + 'niiden muotoa. Tuuli käänsi sivun kesken viivan. Jatkoin piirrosta '
