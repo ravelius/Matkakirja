@@ -2,7 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import { LIVIAN_PILOTTI_CUET } from '../js/livia-pilotti-cuet.js';
-import { kokoaEledata, livianKohdistustyo, lueLiput, ratkaiseCueAjat } from '../tools/kohdista-pulu-eleet.mjs';
+import {
+  kokoaEledata, kuittirivit, livianKohdistustyo, lueLiput, ratkaiseCueAjat,
+} from '../tools/kohdista-pulu-eleet.mjs';
+import { TAGIT, kokoaTuotantokuitti, puhemuoto } from '../tools/generoi-pulu.mjs';
 
 function alignment(teksti) {
   const characters = [...teksti];
@@ -14,10 +17,33 @@ function alignment(teksti) {
 }
 
 test('liput eivät vie ilman eksplisiittistä --vie-valintaa', () => {
-  assert.deepEqual(lueLiput(['--kuiva']), { kuiva: true, vie: false, kaupungit: [] });
+  assert.deepEqual(lueLiput(['--kuiva']), { kuiva: true, vie: false, kaupungit: [], kuitti: null });
   assert.deepEqual(lueLiput(['--kaupungit', 'marseille,ateena', '--vie']),
-    { kuiva: false, vie: true, kaupungit: ['marseille', 'ateena'] });
+    { kuiva: false, vie: true, kaupungit: ['marseille', 'ateena'], kuitti: null });
+  assert.deepEqual(lueLiput(['--kuitti', 'valmis.json']),
+    { kuiva: false, vie: false, kaupungit: [], kuitti: 'valmis.json' });
   assert.throws(() => lueLiput(['--generoi']), /tuntematon lippu/);
+});
+
+test('kohdistus hyväksyy vain valmiin versionoidun tuotantokuitin ja sen lukitun TTS-reseptin', async () => {
+  const tyo = livianKohdistustyo('ateena');
+  const rivi = {
+    avain: tyo.avain, lahde: 'ateena', nimi: tyo.aaniNimi, teksti: tyo.teksti,
+    puhe: puhemuoto(tyo.teksti, TAGIT[tyo.avain]),
+  };
+  const tulokset = new Map([[tyo.avain, {
+    status: 'generated',
+    finalArtifact: { fileName: tyo.aaniNimi, sha256: 'a'.repeat(64), bytes: 1234, actualDurationSeconds: 8.5 },
+  }]]);
+  const kuitti = kokoaTuotantokuitti([rivi], {
+    sourceCommit: '0'.repeat(40), status: 'completed', tulokset, staged: true,
+  });
+  const valitut = await kuittirivit(kuitti);
+  assert.equal(valitut.get('ateena').finalObjectKey,
+    `aanet/pulu/versiot/${'0'.repeat(12)}/${kuitti.batchId}/livia-ateena-3.mp3`);
+  const muutettu = structuredClone(kuitti);
+  muutettu.utterances[0].ttsText = '[brightly] väärä';
+  await assert.rejects(() => kuittirivit(muutettu), /ei kelpaa kohdistukseen/);
 });
 
 test('forced alignment ratkaisee cue-alkujen sanapaikat eikä päästä cueita päällekkäin', () => {

@@ -9,7 +9,7 @@
  */
 
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -21,6 +21,9 @@ import { tarkistaLivianPilottiData } from '../js/livia-puheeleet-lataus.js';
 import {
   PAKOTETUN_OSOITE, jaksonJasennys, normalisoiAlignment, sovitaMerkit,
 } from './generoi-linssiluennat.mjs';
+import {
+  PULU_AANI_OLETUS, PULU_MALLI_OLETUS, TAGIT, puhemuoto,
+} from './generoi-pulu.mjs';
 
 const TAMA = fileURLToPath(import.meta.url);
 const JUURI = resolve(dirname(TAMA), '..');
@@ -53,14 +56,61 @@ export function ankkurinOsumat(teksti, ankkuri) {
 }
 
 /** Sama näkyvä kommentti, jonka peli antaa city-3-soittimelle. */
-export function livianKohdistustyo(kaupunki) {
+export function livianKohdistustyo(kaupunki, kuittirivi = null) {
   const sopimus = livianLuentatyo(kaupunki);
   if (!sopimus) return null;
   const raaka = FOKUSVIRRAT[kaupunki]?.pollo?.kommentti;
   const kuplat = Array.isArray(raaka) ? raaka : [raaka];
   const teksti = String(kuplat[0] ?? '').trim();
-  const aaniOsoite = `${AANI_JUURI}aanet/pulu/${sopimus.aaniNimi}`;
-  return { ...sopimus, teksti, aaniOsoite };
+  const aaniOsoite = kuittirivi
+    ? `${AANI_JUURI}${kuittirivi.finalObjectKey}`
+    : `${AANI_JUURI}aanet/pulu/${sopimus.aaniNimi}`;
+  const r2Kohde = kuittirivi
+    ? kuittirivi.finalObjectKey.replace(/\.mp3$/, '.eleet.json')
+    : sopimus.r2Kohde;
+  return { ...sopimus, teksti, aaniOsoite, r2Kohde, kuittiAani: kuittirivi?.finalArtifact ?? null };
+}
+
+/** Hyväksy vain valmistuneen tuotantokuitin muuttumaton, SHA-sidottu city-3-tulos. */
+export async function kuittirivit(data) {
+  if (!data || data.schemaVersion !== 1 || data.generationStatus !== 'completed'
+    || !Array.isArray(data.utterances)) throw new Error('tuotantokuitti ei ole valmis schemaVersion 1 -kuitti');
+  if (!/^pulu-[0-9a-f]{20}$/.test(data.batchId ?? '') || !/^[0-9a-f]{40}$/.test(data.sourceCommit ?? '')) {
+    throw new Error('tuotantokuitin erä- tai commit-tunnus ei kelpaa');
+  }
+  const tulos = new Map();
+  for (const rivi of data.utterances) {
+    const kaupunki = String(rivi?.cityId ?? '');
+    const sopimus = livianLuentatyo(kaupunki);
+    const artefakti = rivi?.finalArtifact;
+    const odotettuAvain = `aanet/pulu/versiot/${data.sourceCommit.slice(0, 12)}/${data.batchId}/${sopimus?.aaniNimi ?? ''}`;
+    const odotettuPuhe = sopimus ? puhemuoto(rivi.visibleText, TAGIT[sopimus.avain]) : '';
+    if (!sopimus || rivi.utteranceKey !== sopimus.avain || rivi.visibleTextSha256 !== sopimus.tekstiSha256
+      || await tekstinSha256(rivi.visibleText) !== sopimus.tekstiSha256
+      || rivi.ttsText !== odotettuPuhe || await tekstinSha256(rivi.ttsText) !== rivi.ttsTextSha256
+      || rivi.voiceId !== PULU_AANI_OLETUS || rivi.model !== PULU_MALLI_OLETUS
+      || rivi.settings?.stability !== 0.5 || rivi.settings?.similarityBoost !== 0.75
+      || rivi.settings?.style !== 0.6 || rivi.outputFormat !== 'mp3_44100_128'
+      || rivi.generationStatus !== 'generated' || !/^[0-9a-f]{64}$/.test(artefakti?.sha256 ?? '')
+      || !Number.isInteger(artefakti?.bytes) || artefakti.bytes <= 0
+      || !(Number(artefakti?.actualDurationSeconds) > 0) || artefakti.fileName !== sopimus.aaniNimi
+      || rivi.finalObjectKey !== odotettuAvain || tulos.has(kaupunki)) {
+      throw new Error(`tuotantokuitin rivi ei kelpaa kohdistukseen: ${rivi?.utteranceKey ?? '?'}`);
+    }
+    tulos.set(kaupunki, rivi);
+  }
+  return tulos;
+}
+
+async function lueKuitti(lahde) {
+  if (!lahde) return new Map();
+  let data;
+  if (/^https:\/\//.test(lahde)) {
+    const vastaus = await fetch(lahde, { signal: AbortSignal.timeout(120000) });
+    if (!vastaus.ok) throw new Error(`tuotantokuittia ei saatu (HTTP ${vastaus.status})`);
+    data = await vastaus.json();
+  } else data = JSON.parse(readFileSync(resolve(lahde), 'utf8'));
+  return kuittirivit(data);
 }
 
 /** Offline-portti: teksti-SHA ja jokainen ankkuri täsmälleen kerran. */
@@ -166,12 +216,17 @@ function vieR2(polku, kohde) {
 }
 
 export function lueLiput(argv) {
-  const liput = { kuiva: false, vie: false, kaupungit: [] };
+  const liput = { kuiva: false, vie: false, kaupungit: [], kuitti: null };
   for (let i = 0; i < argv.length; i += 1) {
     const pala = argv[i];
     if (pala === '--kuiva') liput.kuiva = true;
     else if (pala === '--vie') liput.vie = true;
     else if (pala === '--kaupungit') liput.kaupungit.push(...String(argv[++i] ?? '').split(/[\s,]+/).filter(Boolean));
+    else if (pala === '--kuitti') {
+      const arvo = argv[++i];
+      if (!arvo || String(arvo).startsWith('--')) throw new Error('--kuitti ilman polkua tai URLia');
+      liput.kuitti = String(arvo);
+    }
     else if (pala.startsWith('--')) throw new Error(`tuntematon lippu: ${pala}`);
     else liput.kaupungit.push(...pala.split(',').filter(Boolean));
   }
@@ -181,12 +236,22 @@ export function lueLiput(argv) {
 async function main() {
   let liput;
   try { liput = lueLiput(process.argv.slice(2)); } catch (virhe) { console.error(virhe.message); process.exit(1); }
-  const kaupungit = liput.kaupungit.length ? [...new Set(liput.kaupungit)] : LIVIAN_LUENTAKAUPUNGIT;
+  let kuitit;
+  try { kuitit = await lueKuitti(liput.kuitti); } catch (virhe) { console.error(virhe.message); process.exit(1); }
+  if (!liput.kuiva && !liput.kuitti) {
+    console.error('Varsinainen kohdistus vaatii --kuitti-polun tai URLin versionoituun tuotantoerään.');
+    process.exit(1);
+  }
+  const kaupungit = liput.kaupungit.length ? [...new Set(liput.kaupungit)]
+    : (kuitit.size ? [...kuitit.keys()] : LIVIAN_LUENTAKAUPUNGIT);
   let virheita = 0;
   const tyot = [];
   for (const kaupunki of kaupungit) {
-    const tyo = livianKohdistustyo(kaupunki);
+    const tyo = livianKohdistustyo(kaupunki, kuitit.get(kaupunki));
     if (!tyo) { console.error(`${kaupunki}: ei kuulu jäädytettyyn Livia-luentaerään`); virheita += 1; continue; }
+    if (liput.kuitti && !kuitit.has(kaupunki)) {
+      console.error(`${kaupunki}: ei ole annetussa tuotantokuitissa`); virheita += 1; continue;
+    }
     const tarkistus = await tarkistaKohdistustyo(tyo);
     if (!tarkistus.ok) { console.error(`${kaupunki}: ${tarkistus.syy}`); virheita += 1; continue; }
     tyot.push(tyo);
@@ -211,6 +276,10 @@ async function main() {
   for (const tyo of tyot) {
     try {
       const aanidata = await haeAanite(tyo);
+      const saatuSha = await laskeSha256(aanidata);
+      if (tyo.kuittiAani && (aanidata.byteLength !== tyo.kuittiAani.bytes || saatuSha !== tyo.kuittiAani.sha256)) {
+        throw new Error('versionoidun mp3:n tavumäärä tai SHA-256 ei vastaa tuotantokuittia');
+      }
       const data = await kokoaEledata(tyo, aanidata, await haeKohdistus(aanidata, tyo.teksti, avain));
       const polku = join(JUURI, tyo.kohde);
       mkdirSync(dirname(polku), { recursive: true });

@@ -66,11 +66,11 @@ on:
         description: >-
           aanet = hae ääniehdokkaat (aja ensin), kuiva = tulosta
           repliikit ja kestot ilman APIa, generoi = generoi ja vie
-          ämpäriin.
+          ämpäriin, kohdista = tee valmiin versionoidun erän cue-data.
         required: true
         type: choice
         default: 'aanet'
-        options: ['aanet', 'kuiva', 'generoi']
+        options: ['aanet', 'kuiva', 'generoi', 'kohdista']
       aani:
         description: >-
           Pulun voice_id (ElevenLabs). Oletus on omistajan 12.9.2026
@@ -95,6 +95,12 @@ on:
         description: >-
           Täytä vain hyväksytyssä uusinnassa. Perustelu muuttaa erätunnuksen,
           jotta aiemmin aloitettua maksullista erää ei veloiteta vahingossa uudelleen.
+        required: false
+        default: ''
+      kuitti:
+        description: >-
+          Vain kohdista-toiminnolle: versionoidun valmiin tuotantokuitin
+          julkinen HTTPS-osoite. Kuitti määrää kaupungit ja MP3-avaimet.
         required: false
         default: ''
       malli:
@@ -167,12 +173,18 @@ jobs:
           echo "::error::Generointi vaatii eksplisiittisen 1–10 repliikin listan."
           exit 1
 
+      - name: Tarkista kohdistuksen kuitti
+        if: ${{ inputs.toiminto == 'kohdista' && inputs.kuitti == '' }}
+        run: |
+          echo "::error::Kohdistus vaatii valmiin tuotantokuitin HTTPS-osoitteen."
+          exit 1
+
       # Puuttuva salaisuus tulisi muuten vastaan vasta ElevenLabsin
       # 401:nä tai aws-clin virheenä — pahimmassa järjestyksessä vasta
       # sen jälkeen, kun kutsut on jo maksettu. Arvoja ei tulosteta,
       # vain onko ne asetettu.
       - name: Tarkista että salaisuudet ovat tallessa
-        if: ${{ inputs.toiminto == 'generoi' }}
+        if: ${{ inputs.toiminto == 'generoi' || inputs.toiminto == 'kohdista' }}
         env:
           AVAIN: ${{ secrets.ELEVEN_API_KEY }}
         run: |
@@ -229,7 +241,7 @@ jobs:
       # ympäristömuuttujan kautta, ei ${{ }}-sijoituksena komentoriville
       # — käsin kirjoitettu kenttä ei saa päätyä shellin tulkittavaksi.
       - name: Kuiva ajo (repliikit ja kestot)
-        if: ${{ inputs.toiminto != 'aanet' }}
+        if: ${{ inputs.toiminto == 'kuiva' || inputs.toiminto == 'generoi' }}
         env:
           REPLIIKIT: ${{ inputs.repliikit }}
           PULU_MALLI: ${{ inputs.malli }}
@@ -241,6 +253,27 @@ jobs:
           else
             node tools/generoi-pulu.mjs --kuiva
           fi
+
+      - name: Kohdista valmiin erän puhe-eleet versionoitujen MP3-tiedostojen viereen
+        if: ${{ inputs.toiminto == 'kohdista' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          KUITTI: ${{ inputs.kuitti }}
+        run: |
+          set -euo pipefail
+          case "$KUITTI" in https://media.matkakirja.app/aanet/pulu/kuitit/*.completed.json) ;; *)
+            echo "::error::Kuitti ei ole Matkakirjan valmistunut Pulu-tuotantokuitti."
+            exit 1
+          esac
+          node tools/kohdista-pulu-eleet.mjs --kuitti "$KUITTI" --vie
+
+      - name: Tallenna kohdistukset tarkastettavaksi
+        if: ${{ inputs.toiminto == 'kohdista' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pulu-eleet-${{ github.run_id }}
+          path: assets/aikaleimat/livia-*.eleet.json
+          if-no-files-found: error
 
       - name: Generoi ja vie ämpäriin
         if: ${{ inputs.toiminto == 'generoi' }}
@@ -266,6 +299,7 @@ jobs:
 
       # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
       - name: Varmista ettei repoon jäänyt mitään
+        if: ${{ inputs.toiminto != 'kohdista' }}
         run: |
           set -euo pipefail
           if [ -n "$(git status --porcelain)" ]; then
