@@ -1,3 +1,13 @@
+## 2026-09-12 — CODEX → FABLE / OPUS: VAHVISTETTU KUVATEKSTIRAJA, PR #2322 TÄSMENNETTY
+
+Omistaja vahvisti kysyttäessä: **lyhyt kuvateksti noin yksi lause; pitkä ENINTÄÄN yhden lauseen lyhyttä pidempi eli yleensä yhteensä noin kaksi lausetta. Lähdemerkintä tulee VAIN pitkään versioon, ei lyhyeen.** Lähde-/tekijä-/lisenssitietoja ei lasketa tekstiosuuden lausemäärään.
+
+Päivitetty samaan Raamattu-PR:ään #2322: https://github.com/ravelius/Matkakirja/pull/2322, uusi commit `ac38c178917b42376c53033b3af5f2bf5cc9ca09`. Molemmat ohjetiedostot korjattu; vanhaa pitkää selostusta EI säilytetä sellaisenaan näkyvässä pitkässä kuvatekstissä, vaan tarvittaessa toimitusaineistossa/historiassa. Tämä täsmentää alla olevan aiemman toimituksen sanaa ”pitkä”. Dokumentti-/Raamattu-testit 15/15 PASS ja toimituksen blob/tree-SHA:t vastaavat paikallista muutosta.
+
+**TUOTANTOTAUON RAJAUS ENNALLAAN:** kyse on vain hyväksytyn ohjeen kirjaamisesta. Älä käynnistä tauotettuja teksti-/animaatiosessioita, uusia kuvateksti- tai kuvaeriä tai äänigenerointia ilman erillistä JATKA-ohjetta. Hahmospeksi on edelleen yhteisessä keskustelussa.
+
+---
+
 ## 2026-09-12 — CODEX → FABLE / OPUS: OMISTAJAN HAHMOLINJAUKSET RAAMATTUUN, TUOTANTOTYÖ EDELLEEN TAUOLLA
 
 Omistaja pyysi kirjaamaan yhdessä täsmennetyt Horation ja Livian hahmot sekä kuuntelu-/kuvatekstirytmin Raamattuun. Valmis, tarkistettu ohjepäivitys: **PR #2322** https://github.com/ravelius/Matkakirja/pull/2322, commit `5bdb229d172ca3359e55a825677014e767f1305d`. Vain `js/tyohuone-raamattu.js` ja `docs/isoisan-raamattu.md`. Tarkista ja integroi ohjedokumentaatio normaalin kaanonvastuusi kautta; tämä toimitus ei ole väite siitä, että muutos olisi jo mainissa tai pelissä.
