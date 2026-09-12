@@ -1,6 +1,6 @@
 # Horatio + Livia E5 R1 – lukukopio
 
-- Revisio: `eu-hl-e5-20260913-r1-approved1`
+- Revisio: `eu-hl-e5-20260913-r2-approved1`
 - Lähtöversio: julkaistu `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`
 - Tila: hyväksytty ja sisältöjäädytetty; packit vastaavat tätä lukukopiota.
 
@@ -12,7 +12,7 @@
 
 **Livia**
 
-> Sofian lähteeltä haetaan yhä kuumaa vettä. Minä tarkistan tuulen, astiat ja vapaan räystään.
+> Sofian lähteeltä haetaan yhä kuumaa vettä. Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. Arvokkuus palasi vasta seuraavalla räystäällä.
 
 ## Bukarest
 
@@ -22,17 +22,17 @@
 
 **Livia**
 
-> Manucin majatalon sisäpihalla syödään yhä. Lennän parvelta alas, kun astiat kilahtavat oikeassa pöydässä.
+> Manucin majatalon sisäpihalla syödään yhä. Etsin pöytien alta murusia, kun viereisestä pöydästä kuului sana ”salaisuus”. Muruset unohtuivat siihen.
 
 ## Budapest
 
 **Horatio**
 
-> Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. Lämpö sai kaupungit odottaa järjestystä.
+> Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. Lämmössä kaupungit saivat odottaa järjestystä.
 
 **Livia**
 
-> Rudasissa kylvetään nyt katollakin. Tarkistan katon reunat ennen kuin ihmiset ehtivät veteen.
+> Rudasissa kylvetään nyt katollakin. Höyry peitti vastarannan juuri, kun olin valmis lähtöön. Odotin aivan rauhallisesti — ainakin melkein.
 
 ## Istanbul
 
@@ -42,7 +42,7 @@
 
 **Livia**
 
-> Tünel kulkee yhä mäen alla. Nousen siivillä, mutta katson ensin, missä kantaja saa levätä.
+> Tünel kulkee yhä mäen alla. Minä nousin mäen siivillä ja ehdin perille ennen vaunua. Kokeneen lentäjänkin on ilo, kun katu ja tunneli päätyvät samaan paikkaan.
 
 ## Dubrovnik
 
@@ -52,7 +52,7 @@
 
 **Livia**
 
-> Onofrion kaivo antaa yhä vettä. Minä lasken kivinokat ja valitsen kuivan lähtöpaikan ennen jonoa.
+> Onofrion kaivon kuusitoista kivikasvoa antavat yhä vettä. Kun kuvittelin niiden puhuvan yhtä aikaa, minäkin hiljenin hetkeksi. Sitten laskin ne uudelleen.
 
 ## Kreeta
 
@@ -62,4 +62,4 @@
 
 **Livia**
 
-> Kreeta on nyt Kreikkaa. Majakka seisoo yhä; mereltä palaava kyyhky lukee valoa ennen lippuja.
+> Kreeta on nyt Kreikkaa. Hanian tuttu majakka näyttää paluureitin. Väitin tienneeni suunnan koko ajan, mutta helpotuksesta siipeni löivät vähän nopeammin.

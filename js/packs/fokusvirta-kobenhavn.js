@@ -180,7 +180,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Tivoli huvittaa yhä. Väistin tanssijoita matalalla; pitkällä reitillä oppii, milloin kiire kuuluu toisille.',
+      'Tivoli huvittaa yhä. Orkesterin sävel sai minut laskeutumaan tanssilattian reunalle. Otin kaksi pientä askelta ja poistuin ennen kuin kukaan ehti pyytää kolmatta.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

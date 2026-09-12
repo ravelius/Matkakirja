@@ -254,7 +254,7 @@ export const FOKUSVIRTA_OSLO = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Nimi on Oslo, ja oopperan katolla kävellään. Kirjekyyhkynä hyväksyn rakennuksen, jonka reitti jatkuu katon yli.',
+      'Nimi on Oslo, ja oopperan katolla kävellään. Hämmästyin, kun ihmiset nousivat samalle katolle kuin minä. Kerrankin rakennus oli yhtä hyvä reitti jaloille ja siiville.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.45 },

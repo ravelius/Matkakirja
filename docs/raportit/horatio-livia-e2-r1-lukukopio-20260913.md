@@ -1,6 +1,6 @@
 # Horatio–Livia E2 — Iberian lukukopio
 
-Sisältörevisio: `eu-hl-e2-20260913-r1-approved1`
+Sisältörevisio: `eu-hl-e2-20260913-r2-approved1`
 
 Lähdebaseline: julkaistu `origin/main`
 `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`
@@ -55,7 +55,7 @@ Tila: hyväksytty ja sisältöjäädytetty; packit vastaavat tätä lukukopiota.
 
 **Livia**
 
-> Raitiovaunu 12 kulkee Alfaman mäkien kautta. Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. Reitti jatkui — tehtävä vain jäi kesken.
+> Raitiovaunu 12 kulkee Alfaman mäkien kautta. Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. Kun löysin vaunun uudelleen, seurasin sitä päätepysäkille asti.
 
 ## Lukukatselmuksessa ratkaistaan
 

@@ -7,7 +7,7 @@ import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 const ROOT = new URL('../', import.meta.url);
 const REPORTS = new URL('docs/raportit/', ROOT);
 const BASELINE = '079284e1cf09f650ed7e5f3d54f54c4e3da933b1';
-const REVISION = 'eu-hl-europe-20260913-r1-approved1';
+const REVISION = 'eu-hl-europe-20260913-r2-approved1';
 const names = {
   marseille: 'Marseille', ateena: 'Ateena', sarajevo: 'Sarajevo', venetsia: 'Venetsia',
   tukholma: 'Tukholma', helsinki: 'Helsinki', tampere: 'Tampere', tallinna: 'Tallinna',
@@ -84,7 +84,7 @@ const combined = {
 };
 writeFileSync(new URL('horatio-livia-eurooppa-luentamanifesti-20260913.json', REPORTS), `${JSON.stringify(combined, null, 2)}\n`);
 
-let compilation = `# Eurooppa 1873 — Horatio ja Livia, koko lukukopio\n\nSisältörevisio: \`${REVISION}\`  \nJulkaistu lähtörevisio: \`${BASELINE}\`  \nTila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjälle.\n\n`;
+let compilation = `# Eurooppa 1873 — Horatio ja Livia, koko lukukopio\n\nSisältörevisio: \`${REVISION}\`\nJulkaistu lähtörevisio: \`${BASELINE}\`\nTila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjälle.\n\n`;
 for (const city of cities) compilation += `## ${names[city.city]}\n\n**Horatio**\n\n> ${city.horatio.visibleText}\n\n**Livia**\n\n> ${city.livia.visibleText}\n\n`;
 compilation += `## Sofia — muut 10 kaupunkiutteranssia\n\nNämä säilyvät julkaistusta baselinesta sanatarkasti; vain yllä oleva \`sofia-3\` muuttuu.\n\n`;
 for (const extra of extras) compilation += `- \`${extra.audioId}\` (\`${extra.context}\`, indeksi ${extra.index}): ${extra.visibleText}\n`;

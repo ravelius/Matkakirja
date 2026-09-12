@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentRevision": "eu-hl-e3-20260913-r1-approved1",
+  "contentRevision": "eu-hl-e3-20260913-r2-approved1",
   "state": "content-frozen-audio-authorized-rc-only",
   "publishedBaselineCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1",
   "invariants": {
@@ -215,10 +215,10 @@
       },
       "livia": {
         "audioId": "sisilia-3",
-        "visibleText": "Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. Kiersin pihan yllä, nokka kohti ikkunoita. Katon näin vain kuvassa; siipeni pysyivät tallessa.",
-        "visibleTextSha256": "b0f8383cb9d852bc043ccf75a46df57510e7173f1a76e0beeb29db17aa36b314",
-        "ttsText": "[curious] Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. [brightly] Kiersin pihan yllä, nokka kohti ikkunoita. [mischievously] Katon näin vain kuvassa; siipeni pysyivät tallessa.",
-        "ttsTextSha256": "b025a8d1203d9e7262f346066649c9af634ae009864b4229f2eafbfd50ddd9b4",
+        "visibleText": "Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. Kiersin pihan yllä, nokka kohti ikkunoita. Katon näin kuvassa, sillä sisälle en lentänyt.",
+        "visibleTextSha256": "ac331a83b4fcc669811a2f1c0ef75edbb32769cf76081771e675eb968783cd52",
+        "ttsText": "[curious] Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. [brightly] Kiersin pihan yllä, nokka kohti ikkunoita. [softly] Katon näin kuvassa, sillä sisälle en lentänyt.",
+        "ttsTextSha256": "002d538c86c8a40d897f997fcaad8f476420a8929d314512bcdcf7c09ff6ce38",
         "cues": [
           {
             "cueId": "sisilia.livia.c1",
@@ -236,16 +236,16 @@
           },
           {
             "cueId": "sisilia.livia.c3",
-            "anchor": "Katon näin vain kuvassa",
+            "anchor": "Katon näin kuvassa",
             "occurrence": 1,
             "intent": "hammentynyt",
             "strength": 0.5
           },
           {
             "cueId": "sisilia.livia.c4",
-            "anchor": "siipeni pysyivät tallessa",
+            "anchor": "sisälle en lentänyt",
             "occurrence": 1,
-            "intent": "ilo",
+            "intent": "miettiva",
             "strength": 0.5
           }
         ]

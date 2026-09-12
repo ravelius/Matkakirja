@@ -1,7 +1,7 @@
 # Eurooppa 1873 — Horatio ja Livia, koko lukukopio
 
-Sisältörevisio: `eu-hl-europe-20260913-r1-approved1`  
-Julkaistu lähtörevisio: `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`  
+Sisältörevisio: `eu-hl-europe-20260913-r2-approved1`
+Julkaistu lähtörevisio: `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`
 Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjälle.
 
 ## Ateena
@@ -22,7 +22,7 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Livia**
 
-> Sofian lähteeltä haetaan yhä kuumaa vettä. Minä tarkistan tuulen, astiat ja vapaan räystään.
+> Sofian lähteeltä haetaan yhä kuumaa vettä. Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. Arvokkuus palasi vasta seuraavalla räystäällä.
 
 ## Istanbul
 
@@ -32,7 +32,7 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Livia**
 
-> Tünel kulkee yhä mäen alla. Nousen siivillä, mutta katson ensin, missä kantaja saa levätä.
+> Tünel kulkee yhä mäen alla. Minä nousin mäen siivillä ja ehdin perille ennen vaunua. Kokeneen lentäjänkin on ilo, kun katu ja tunneli päätyvät samaan paikkaan.
 
 ## Rooma
 
@@ -52,7 +52,7 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Livia**
 
-> Manucin majatalon sisäpihalla syödään yhä. Lennän parvelta alas, kun astiat kilahtavat oikeassa pöydässä.
+> Manucin majatalon sisäpihalla syödään yhä. Etsin pöytien alta murusia, kun viereisestä pöydästä kuului sana ”salaisuus”. Muruset unohtuivat siihen.
 
 ## Sarajevo
 
@@ -118,11 +118,11 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Horatio**
 
-> Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. Lämpö sai kaupungit odottaa järjestystä.
+> Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. Lämmössä kaupungit saivat odottaa järjestystä.
 
 **Livia**
 
-> Rudasissa kylvetään nyt katollakin. Tarkistan katon reunat ennen kuin ihmiset ehtivät veteen.
+> Rudasissa kylvetään nyt katollakin. Höyry peitti vastarannan juuri, kun olin valmis lähtöön. Odotin aivan rauhallisesti — ainakin melkein.
 
 ## Dubrovnik
 
@@ -132,7 +132,7 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Livia**
 
-> Onofrion kaivo antaa yhä vettä. Minä lasken kivinokat ja valitsen kuivan lähtöpaikan ennen jonoa.
+> Onofrion kaivon kuusitoista kivikasvoa antavat yhä vettä. Kun kuvittelin niiden puhuvan yhtä aikaa, minäkin hiljenin hetkeksi. Sitten laskin ne uudelleen.
 
 ## Praha
 
@@ -162,7 +162,7 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Livia**
 
-> Tivoli huvittaa yhä. Väistin tanssijoita matalalla; pitkällä reitillä oppii, milloin kiire kuuluu toisille.
+> Tivoli huvittaa yhä. Orkesterin sävel sai minut laskeutumaan tanssilattian reunalle. Otin kaksi pientä askelta ja poistuin ennen kuin kukaan ehti pyytää kolmatta.
 
 ## Helsinki
 
@@ -202,7 +202,7 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Livia**
 
-> Bryggen on nyt maailmanperintöä. Lajittelin kirjeet räystään alla: kastuneet ensin, arvokkaimmat sisimmäksi.
+> Bryggen on nyt maailmanperintöä. Suojasin kirjeen räystään alla sateelta, kun viereinen lokki ravisteli vedet päälleni. Kirje säilyi kuivana. Minä vaihdoin räystästä.
 
 ## Amsterdam
 
@@ -242,7 +242,7 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Livia**
 
-> Raitiovaunu 12 kulkee Alfaman mäkien kautta. Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. Reitti jatkui — tehtävä vain jäi kesken.
+> Raitiovaunu 12 kulkee Alfaman mäkien kautta. Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. Kun löysin vaunun uudelleen, seurasin sitä päätepysäkille asti.
 
 ## Riika
 
@@ -302,7 +302,7 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Livia**
 
-> Nimi on Oslo, ja oopperan katolla kävellään. Kirjekyyhkynä hyväksyn rakennuksen, jonka reitti jatkuu katon yli.
+> Nimi on Oslo, ja oopperan katolla kävellään. Hämmästyin, kun ihmiset nousivat samalle katolle kuin minä. Kerrankin rakennus oli yhtä hyvä reitti jaloille ja siiville.
 
 ## Tampere
 
@@ -402,7 +402,7 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Livia**
 
-> Kreeta on nyt Kreikkaa. Majakka seisoo yhä; mereltä palaava kyyhky lukee valoa ennen lippuja.
+> Kreeta on nyt Kreikkaa. Hanian tuttu majakka näyttää paluureitin. Väitin tienneeni suunnan koko ajan, mutta helpotuksesta siipeni löivät vähän nopeammin.
 
 ## Sisilia
 
@@ -412,7 +412,7 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Livia**
 
-> Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. Kiersin pihan yllä, nokka kohti ikkunoita. Katon näin vain kuvassa; siipeni pysyivät tallessa.
+> Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. Kiersin pihan yllä, nokka kohti ikkunoita. Katon näin kuvassa, sillä sisälle en lentänyt.
 
 ## Islanti
 
@@ -422,7 +422,7 @@ Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjä
 
 **Livia**
 
-> Reykjavíkin talot lämpenevät yhä maan voimalla. Kirjekyyhkynä muistan kaupungin, jossa talvireitin päässä odottaa lämmin räystäs.
+> Reykjavíkin talot lämpenevät yhä maan voimalla. Löysin lämpimän räystään, lämmittelin varpaitani ja päätin levätä pitkään. Hetkeä myöhemmin olin jo ilmassa.
 
 ## Alpit
 

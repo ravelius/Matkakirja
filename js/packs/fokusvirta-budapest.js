@@ -132,7 +132,7 @@ export const FOKUSVIRTA_BUDAPEST = {
       + 'tuuli; puntari putoaa.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 367 merkkiä (yläraja 400). */
-    teksti: 'Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. Lämpö sai kaupungit odottaa järjestystä.',
+    teksti: 'Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. Lämmössä kaupungit saivat odottaa järjestystä.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -157,7 +157,7 @@ export const FOKUSVIRTA_BUDAPEST = {
         perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. [mischievously] Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. [softly] Lämpö sai kaupungit odottaa järjestystä.',
+    luenta: '[curious] Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. [mischievously] Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. [softly] Lämmössä kaupungit saivat odottaa järjestystä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-budapest.mp3',
   },
 
@@ -244,7 +244,7 @@ export const FOKUSVIRTA_BUDAPEST = {
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Rudasissa kylvetään nyt katollakin. Tarkistan katon reunat ennen kuin ihmiset ehtivät veteen.',
+      'Rudasissa kylvetään nyt katollakin. Höyry peitti vastarannan juuri, kun olin valmis lähtöön. Odotin aivan rauhallisesti — ainakin melkein.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentRevision": "eu-hl-e2-20260913-r1-approved1",
+  "contentRevision": "eu-hl-e2-20260913-r2-approved1",
   "state": "content-frozen-audio-authorized-rc-only",
   "publishedBaselineCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1",
   "invariants": {
@@ -346,10 +346,10 @@
       },
       "livia": {
         "audioId": "lissabon-3",
-        "visibleText": "Raitiovaunu 12 kulkee Alfaman mäkien kautta. Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. Reitti jatkui — tehtävä vain jäi kesken.",
-        "visibleTextSha256": "7baedac0e6cecf0739f1bf8e47754496ad25593b89c6223d105188ef8ec8ee50",
-        "ttsText": "[brightly] Raitiovaunu 12 kulkee Alfaman mäkien kautta. [curious] Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. [mischievously] Reitti jatkui — tehtävä vain jäi kesken.",
-        "ttsTextSha256": "4a16b3f585d37e87b7370c7a20fd00167027cd9f07c16b6fbd089a2a9fb3d02b",
+        "visibleText": "Raitiovaunu 12 kulkee Alfaman mäkien kautta. Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. Kun löysin vaunun uudelleen, seurasin sitä päätepysäkille asti.",
+        "visibleTextSha256": "281581a4e5e898c1f524318dffc7c650aba776a5d8f1aaca22de2b01f2602616",
+        "ttsText": "[brightly] Raitiovaunu 12 kulkee Alfaman mäkien kautta. [curious] Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. [mischievously] Kun löysin vaunun uudelleen, seurasin sitä päätepysäkille asti.",
+        "ttsTextSha256": "37ae70f8be30f51dac1f07b5c4417b07dd561ec154de210f6f6b20ca5279209a",
         "cues": [
           {
             "cueId": "lissabon.livia.c1",
@@ -367,7 +367,7 @@
           },
           {
             "cueId": "lissabon.livia.c3",
-            "anchor": "tehtävä vain jäi kesken",
+            "anchor": "päätepysäkille asti",
             "occurrence": 1,
             "intent": "huvittuu",
             "strength": 0.5

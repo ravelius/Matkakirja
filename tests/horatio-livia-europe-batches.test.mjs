@@ -6,6 +6,7 @@ import { readFileSync } from 'node:fs';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 
 const batches = ['e1', 'e2', 'e3', 'e4b', 'e5', 'e6'];
+const correctionBatches = new Set(['e2', 'e3', 'e4b', 'e5']);
 const sha = (text) => createHash('sha256').update(text).digest('hex');
 const stripTags = (text) => text.replace(/\[[^\]]+\]\s*/g, '').trim();
 
@@ -16,7 +17,8 @@ for (const batch of batches) {
   ), 'utf8'));
 
   test(`${batch}: manifesti ja runtime-packit ovat sisältöjäädytetyt`, () => {
-    assert.equal(manifest.contentRevision, `eu-hl-${batch}-20260913-r1-approved1`);
+    const revision = correctionBatches.has(batch) ? 'r2' : 'r1';
+    assert.equal(manifest.contentRevision, `eu-hl-${batch}-20260913-${revision}-approved1`);
     assert.equal(manifest.state, 'content-frozen-audio-authorized-rc-only');
     for (const city of manifest.cities) {
       const pack = FOKUSVIRRAT[city.city];
@@ -53,6 +55,7 @@ test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia'
     import.meta.url,
   ), 'utf8'));
   assert.equal(combined.cityCount, 45);
+  assert.equal(combined.contentRevision, 'eu-hl-europe-20260913-r2-approved1');
   assert.equal(combined.cities.length, 45);
   assert.equal(new Set(combined.cities.map((city) => city.city)).size, 45);
   assert.equal(combined.liviaCityUtteranceCount, 55);
@@ -82,5 +85,14 @@ test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia'
     assert.equal(item.visibleTextSha256, sha(item.visibleText), `${item.audioId}: näkyvä SHA`);
     assert.equal(item.ttsTextSha256, sha(item.ttsText), `${item.audioId}: TTS SHA`);
     assert.equal(item.unchangedFromBaseline, true, `${item.audioId}: baseline-säilytys`);
+  }
+});
+
+test('rajattu r2-korjaus sisältää täsmälleen sovitut merkityskorjaukset', () => {
+  assert.match(FOKUSVIRRAT.budapest.matkakirja.teksti, /Lämmössä kaupungit saivat odottaa järjestystä\.$/);
+  assert.match(FOKUSVIRRAT.lissabon.pollo.kommentti[0], /päätepysäkille asti\.$/);
+  assert.match(FOKUSVIRRAT.sisilia.pollo.kommentti[0], /sillä sisälle en lentänyt\.$/);
+  for (const city of ['sofia', 'istanbul', 'bukarest', 'budapest', 'dubrovnik', 'kreeta', 'kobenhavn', 'bergen', 'oslo', 'islanti']) {
+    assert.ok(FOKUSVIRRAT[city].pollo.kommentti[0].length >= 130, `${city}: Livia jäi liian ohueksi`);
   }
 });

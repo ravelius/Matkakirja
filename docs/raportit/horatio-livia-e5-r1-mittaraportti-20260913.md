@@ -1,6 +1,6 @@
 # Horatio + Livia E5 R1 – mittaraportti
 
-- Revisio: `eu-hl-e5-20260913-r1-approved1`
+- Revisio: `eu-hl-e5-20260913-r2-approved1`
 - Julkaistu lähtörevisio: `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`
 - Tila: hyväksytty ja sisältöjäädytetty; audioajo vain RC/animaatiovetäjälle.
 - Mittatapa: Unicode-merkit ja välilyönnein erotetut sanat; parissa ei lasketa erotinmerkkiä.
@@ -9,12 +9,12 @@
 
 | Kaupunki | Before H | After H | Before L | After L | Before pari | After pari | Tulos |
 |---|---:|---:|---:|---:|---:|---:|---|
-| Sofia | 336/41 | 250/31 | 105/15 | 92/13 | 441/56 | 342/44 | alittaa |
-| Bukarest | 350/46 | 224/26 | 105/13 | 105/13 | 455/59 | 329/39 | alittaa |
-| Budapest | 367/47 | 207/27 | 98/12 | 93/12 | 465/59 | 300/39 | alittaa |
-| Istanbul | 341/45 | 206/26 | 99/15 | 90/14 | 440/60 | 296/40 | alittaa |
-| Dubrovnik | 341/45 | 240/31 | 105/14 | 97/14 | 446/59 | 337/45 | alittaa |
-| Kreeta | 318/40 | 253/31 | 96/13 | 93/14 | 414/53 | 346/45 | alittaa |
+| Sofia | 336/41 | 250/31 | 105/15 | 154/19 | 441/56 | 404/50 | alittaa |
+| Bukarest | 350/46 | 224/26 | 105/13 | 147/18 | 455/59 | 371/44 | alittaa |
+| Budapest | 367/47 | 213/27 | 98/12 | 138/18 | 465/59 | 351/45 | alittaa |
+| Istanbul | 341/45 | 206/26 | 99/15 | 159/25 | 440/60 | 365/51 | alittaa |
+| Dubrovnik | 341/45 | 240/31 | 105/14 | 154/20 | 446/59 | 394/51 | alittaa |
+| Kreeta | 318/40 | 253/31 | 96/13 | 153/20 | 414/53 | 406/51 | alittaa |
 
 Jokainen pari alittaa julkaistun parin sekä merkki- että sanamäärän. Myös kumpikin puhuja pysyy omassa merkkirajassaan; Kreetan Livia käyttää yhden sanan enemmän mutta pari ja Livian merkkimäärä alittavat lähtömitan.
 
@@ -30,7 +30,7 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 
 **Livia TTS**
 
-> [brightly] Sofian lähteeltä haetaan yhä kuumaa vettä. [curious] Minä tarkistan tuulen, astiat ja vapaan räystään.
+> [brightly] Sofian lähteeltä haetaan yhä kuumaa vettä. [curious] Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. [mischievously] Arvokkuus palasi vasta seuraavalla räystäällä.
 
 | Cue-ID | Puhuja | Ankkuri | Tarkoitus | Voima |
 |---|---|---|---|---:|
@@ -39,8 +39,8 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 | `sofia.r3` | H | `epäjohdonmukaisuus oli valmis` | myotailee | 0.35 |
 | `sofia.r4` | H | `jo noustu keittämään` | huvittuu | 0.50 |
 | `sofia.livia.c1` | L | `haetaan yhä kuumaa vettä` | myotailee | 0.35 |
-| `sofia.livia.c2` | L | `tarkistan tuulen` | vakavoituu | 0.30 |
-| `sofia.livia.c3` | L | `vapaan räystään` | huvittuu | 0.35 |
+| `sofia.livia.c2` | L | `höyry pörrötti otsasulkani` | hammentynyt | 0.30 |
+| `sofia.livia.c3` | L | `Arvokkuus palasi` | huvittuu | 0.35 |
 
 ### Bukarest
 
@@ -50,7 +50,7 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 
 **Livia TTS**
 
-> [brightly] Manucin majatalon sisäpihalla syödään yhä. [mischievously] Lennän parvelta alas, kun astiat kilahtavat oikeassa pöydässä.
+> [brightly] Manucin majatalon sisäpihalla syödään yhä. [curious] Etsin pöytien alta murusia, kun viereisestä pöydästä kuului sana ”salaisuus”. [mischievously] Muruset unohtuivat siihen.
 
 | Cue-ID | Puhuja | Ankkuri | Tarkoitus | Voima |
 |---|---|---|---|---:|
@@ -58,18 +58,18 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 | `bukarest.r3` | H | `ei tarvittu tulkkia` | myotailee | 0.40 |
 | `bukarest.r4` | H | `naapurini kuorsauksesta` | huvittuu | 0.55 |
 | `bukarest.livia.c1` | L | `sisäpihalla syödään yhä` | myotailee | 0.35 |
-| `bukarest.livia.c2` | L | `Lennän parvelta alas` | huvittuu | 0.40 |
-| `bukarest.livia.c3` | L | `oikeassa pöydässä` | hammastyy | 0.35 |
+| `bukarest.livia.c2` | L | `sana ”salaisuus”` | hammastyy | 0.40 |
+| `bukarest.livia.c3` | L | `Muruset unohtuivat` | huvittuu | 0.35 |
 
 ### Budapest
 
 **Horatio TTS**
 
-> [curious] Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. [mischievously] Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. [softly] Lämpö sai kaupungit odottaa järjestystä.
+> [curious] Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. [mischievously] Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. [softly] Lämmössä kaupungit saivat odottaa järjestystä.
 
 **Livia TTS**
 
-> [brightly] Rudasissa kylvetään nyt katollakin. [curious] Tarkistan katon reunat ennen kuin ihmiset ehtivät veteen.
+> [brightly] Rudasissa kylvetään nyt katollakin. [curious] Höyry peitti vastarannan juuri, kun olin valmis lähtöön. [mischievously] Odotin aivan rauhallisesti — ainakin melkein.
 
 | Cue-ID | Puhuja | Ankkuri | Tarkoitus | Voima |
 |---|---|---|---|---:|
@@ -78,8 +78,8 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 | `budapest.r3` | H | `uutta nimeä` | huvittuu | 0.45 |
 | `budapest.r4` | H | `odottaa järjestystä` | myotailee | 0.40 |
 | `budapest.livia.c1` | L | `kylvetään nyt katollakin` | hammastyy | 0.40 |
-| `budapest.livia.c2` | L | `Tarkistan katon reunat` | vakavoituu | 0.30 |
-| `budapest.livia.c3` | L | `ehtivät veteen` | huvittuu | 0.35 |
+| `budapest.livia.c2` | L | `Höyry peitti vastarannan` | vakavoituu | 0.30 |
+| `budapest.livia.c3` | L | `ainakin melkein` | huvittuu | 0.35 |
 
 ### Istanbul
 
@@ -89,7 +89,7 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 
 **Livia TTS**
 
-> [brightly] Tünel kulkee yhä mäen alla. [softly] Nousen siivillä, mutta katson ensin, missä kantaja saa levätä.
+> [brightly] Tünel kulkee yhä mäen alla. [mischievously] Minä nousin mäen siivillä ja ehdin perille ennen vaunua. [warmly] Kokeneen lentäjänkin on ilo, kun katu ja tunneli päätyvät samaan paikkaan.
 
 | Cue-ID | Puhuja | Ankkuri | Tarkoitus | Voima |
 |---|---|---|---|---:|
@@ -98,8 +98,8 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 | `istanbul.r3` | H | `työtä työn välttämiseksi` | huvittuu | 0.55 |
 | `istanbul.r4` | H | `parempaa tekemistä` | myotailee | 0.35 |
 | `istanbul.livia.c1` | L | `Tünel kulkee yhä` | myotailee | 0.35 |
-| `istanbul.livia.c2` | L | `Nousen siivillä` | huvittuu | 0.30 |
-| `istanbul.livia.c3` | L | `kantaja saa levätä` | vakavoituu | 0.45 |
+| `istanbul.livia.c2` | L | `ehdin perille ennen vaunua` | huvittuu | 0.30 |
+| `istanbul.livia.c3` | L | `päätyvät samaan paikkaan` | myotailee | 0.45 |
 
 ### Dubrovnik
 
@@ -109,7 +109,7 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 
 **Livia TTS**
 
-> [brightly] Onofrion kaivo antaa yhä vettä. [curious] Minä lasken kivinokat ja valitsen kuivan lähtöpaikan ennen jonoa.
+> [brightly] Onofrion kaivon kuusitoista kivikasvoa antavat yhä vettä. [curious] Kun kuvittelin niiden puhuvan yhtä aikaa, minäkin hiljenin hetkeksi. [mischievously] Sitten laskin ne uudelleen.
 
 | Cue-ID | Puhuja | Ankkuri | Tarkoitus | Voima |
 |---|---|---|---|---:|
@@ -117,9 +117,9 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 | `dubrovnik.r2` | H | `eri mieltä mausta` | huvittuu | 0.45 |
 | `dubrovnik.r3` | H | `Sama vesi` | myotailee | 0.35 |
 | `dubrovnik.r4` | H | `ottamaan vielä kulauksen` | huvittuu | 0.50 |
-| `dubrovnik.livia.c1` | L | `antaa yhä vettä` | myotailee | 0.35 |
-| `dubrovnik.livia.c2` | L | `lasken kivinokat` | hammastyy | 0.35 |
-| `dubrovnik.livia.c3` | L | `kuivan lähtöpaikan` | huvittuu | 0.35 |
+| `dubrovnik.livia.c1` | L | `kuusitoista kivikasvoa` | myotailee | 0.35 |
+| `dubrovnik.livia.c2` | L | `minäkin hiljenin hetkeksi` | hammastyy | 0.35 |
+| `dubrovnik.livia.c3` | L | `laskin ne uudelleen` | huvittuu | 0.35 |
 
 ### Kreeta
 
@@ -129,7 +129,7 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 
 **Livia TTS**
 
-> [brightly] Kreeta on nyt Kreikkaa. Majakka seisoo yhä; [softly] mereltä palaava kyyhky lukee valoa ennen lippuja.
+> [brightly] Kreeta on nyt Kreikkaa. Hanian tuttu majakka näyttää paluureitin. [mischievously] Väitin tienneeni suunnan koko ajan, mutta [warmly] helpotuksesta siipeni löivät vähän nopeammin.
 
 | Cue-ID | Puhuja | Ankkuri | Tarkoitus | Voima |
 |---|---|---|---|---:|
@@ -138,8 +138,8 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 | `kreeta.r4` | H | `jotka tarvitsevat sitä` | vakavoituu | 0.55 |
 | `kreeta.r5` | H | `ilman valtakunnan väriä` | myotailee | 0.50 |
 | `kreeta.livia.c1` | L | `nyt Kreikkaa` | myotailee | 0.35 |
-| `kreeta.livia.c2` | L | `Majakka seisoo yhä` | vakavoituu | 0.35 |
-| `kreeta.livia.c3` | L | `lukee valoa ennen lippuja` | myotailee | 0.45 |
+| `kreeta.livia.c2` | L | `Väitin tienneeni suunnan` | huvittuu | 0.35 |
+| `kreeta.livia.c3` | L | `siipeni löivät vähän nopeammin` | myotailee | 0.45 |
 
 ## Sofian 11 Pulu-kaupunkiutteranssia ja kontekstia
 

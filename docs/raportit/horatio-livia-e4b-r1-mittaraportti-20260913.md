@@ -1,6 +1,6 @@
 # Horatio + Livia E4b R1 – mittaraportti
 
-- Revisio: `eu-hl-e4b-20260913-r1-approved1`
+- Revisio: `eu-hl-e4b-20260913-r2-approved1`
 - Julkaistu lähtörevisio: `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`
 - Tila: hyväksytty ja sisältöjäädytetty; audioajo vain RC/animaatiovetäjälle
 - Mittatapa: Unicode-merkit ja välilyönnein erotetut sanat; parissa ei lasketa erotinmerkkiä.
@@ -9,12 +9,12 @@
 
 | Kaupunki | Lähtö H | Hyväksytty H | Lähtö L | Hyväksytty L | Lähtö pari | Hyväksytty pari | Tulos |
 |---|---:|---:|---:|---:|---:|---:|---|
-| Bergen | 310/40 | 168/21 | 111/13 | 108/12 | 421/53 | 276/33 | alittaa |
-| Oslo | 332/43 | 183/23 | 107/15 | 111/15 | 439/58 | 294/38 | alittaa |
-| Kööpenhamina | 342/46 | 190/26 | 109/13 | 107/13 | 451/59 | 297/39 | alittaa |
-| Islanti | 357/46 | 194/22 | 107/14 | 129/15 | 464/60 | 323/37 | alittaa |
+| Bergen | 310/40 | 168/21 | 111/13 | 166/21 | 421/53 | 334/42 | alittaa |
+| Oslo | 332/43 | 183/23 | 107/15 | 166/24 | 439/58 | 349/47 | alittaa |
+| Kööpenhamina | 342/46 | 190/26 | 109/13 | 162/22 | 451/59 | 352/48 | alittaa |
+| Islanti | 357/46 | 194/22 | 107/14 | 156/20 | 464/60 | 350/42 | alittaa |
 
-Muoto on tarkoituksella kaupunkikohtainen: Bergenissä Livia lajittelee postia sateensuojassa, Oslossa hän arvioi katon lentoreittinä, Kööpenhaminassa hän lukee tanssijoiden rytmiä ilmasta ja Islannissa muistaa lämpimän talvireitin. Kahvia, automaattista pullaa tai kaikille toistuvaa rakennetta ei käytetä.
+Muoto on tarkoituksella kaupunkikohtainen: Bergenissä lokki kastelee sateelta suojautuneen Pulun, Oslossa ihmiset yllättävät samalla kattoreitillä, Kööpenhaminassa musiikki houkuttelee kahteen tanssiaskeleeseen ja Islannissa lämmin lepo vaihtuu nopeasti uuteen lentointoon. Kahvia, automaattista pullaa tai kaikille toistuvaa rakennetta ei käytetä.
 
 ## Exact ElevenLabs v3 -TTS ja cue-ankkurit
 
@@ -28,7 +28,7 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 
 **Livia TTS**
 
-> [brightly] Bryggen on nyt maailmanperintöä. [curious] Lajittelin kirjeet räystään alla: kastuneet ensin, arvokkaimmat sisimmäksi.
+> [brightly] Bryggen on nyt maailmanperintöä. [curious] Suojasin kirjeen räystään alla sateelta, kun viereinen lokki ravisteli vedet päälleni. [mischievously] Kirje säilyi kuivana. Minä vaihdoin räystästä.
 
 | Cue-ID | Puhuja | Ankkuri | Tarkoitus | Voima |
 |---|---|---|---|---:|
@@ -36,8 +36,8 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 | `bergen.r3` | H | `kala pysyi kuivana` | huvittuu | 0.55 |
 | `bergen.r4` | H | `ilman tulkkia` | myotailee | 0.40 |
 | `bergen.livia.c1` | L | `nyt maailmanperintöä` | vakavoituu | 0.35 |
-| `bergen.livia.c2` | L | `Lajittelin kirjeet` | myotailee | 0.35 |
-| `bergen.livia.c3` | L | `arvokkaimmat sisimmäksi` | huvittuu | 0.40 |
+| `bergen.livia.c2` | L | `viereinen lokki ravisteli` | hammastyy | 0.35 |
+| `bergen.livia.c3` | L | `Minä vaihdoin räystästä` | huvittuu | 0.40 |
 
 ### Oslo
 
@@ -47,7 +47,7 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 
 **Livia TTS**
 
-> [brightly] Nimi on Oslo, ja oopperan katolla kävellään. [warmly] Kirjekyyhkynä hyväksyn rakennuksen, jonka reitti jatkuu katon yli.
+> [brightly] Nimi on Oslo, ja oopperan katolla kävellään. [surprised] Hämmästyin, kun ihmiset nousivat samalle katolle kuin minä. [warmly] Kerrankin rakennus oli yhtä hyvä reitti jaloille ja siiville.
 
 | Cue-ID | Puhuja | Ankkuri | Tarkoitus | Voima |
 |---|---|---|---|---:|
@@ -55,8 +55,8 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 | `oslo.r3` | H | `Poimin vedestä lastun` | myotailee | 0.30 |
 | `oslo.r4` | H | `tuoksui yhä metsältä` | vakavoituu | 0.45 |
 | `oslo.livia.c1` | L | `Nimi on Oslo` | myotailee | 0.35 |
-| `oslo.livia.c2` | L | `oopperan katolla kävellään` | hammastyy | 0.35 |
-| `oslo.livia.c3` | L | `reitti jatkuu katon yli` | huvittuu | 0.40 |
+| `oslo.livia.c2` | L | `ihmiset nousivat samalle katolle` | hammentynyt | 0.35 |
+| `oslo.livia.c3` | L | `jaloille ja siiville` | huvittuu | 0.40 |
 
 ### Kööpenhamina
 
@@ -66,7 +66,7 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 
 **Livia TTS**
 
-> [brightly] Tivoli huvittaa yhä. [mischievously] Väistin tanssijoita matalalla; pitkällä reitillä oppii, milloin kiire kuuluu toisille.
+> [brightly] Tivoli huvittaa yhä. [mischievously] Orkesterin sävel sai minut laskeutumaan tanssilattian reunalle. Otin kaksi pientä askelta ja poistuin ennen kuin kukaan ehti pyytää kolmatta.
 
 | Cue-ID | Puhuja | Ankkuri | Tarkoitus | Voima |
 |---|---|---|---|---:|
@@ -74,8 +74,8 @@ Tagit ovat ääniohjeita eivätkä kuulu näkyvään tekstiin. Tagien poistamine
 | `kobenhavn.r2` | H | `lähteneet sen perään` | myotailee | 0.40 |
 | `kobenhavn.r4` | H | `muistin heidät` | vakavoituu | 0.50 |
 | `kobenhavn.livia.c1` | L | `Tivoli huvittaa yhä` | myotailee | 0.35 |
-| `kobenhavn.livia.c2` | L | `Väistin tanssijoita matalalla` | huvittuu | 0.40 |
-| `kobenhavn.livia.c3` | L | `kiire kuuluu toisille` | myotailee | 0.45 |
+| `kobenhavn.livia.c2` | L | `laskeutumaan tanssilattian reunalle` | huvittuu | 0.40 |
+| `kobenhavn.livia.c3` | L | `pyytää kolmatta` | myotailee | 0.45 |
 
 Nykyisen packin lampiankkuri `kobenhavn.r3` jää ehdokkaasta pois: Tivolin virallisen historian mukaan nykyinen Tivoli-järvi luotiin vasta 1887, joten sitä ei sidota vuoden 1873 kohtaukseen.
 
@@ -87,7 +87,7 @@ Nykyisen packin lampiankkuri `kobenhavn.r3` jää ehdokkaasta pois: Tivolin vira
 
 **Livia TTS**
 
-> [brightly] Reykjavíkin talot lämpenevät yhä maan voimalla. [softly] Kirjekyyhkynä muistan kaupungin, jossa talvireitin päässä odottaa lämmin räystäs.
+> [brightly] Reykjavíkin talot lämpenevät yhä maan voimalla. [softly] Löysin lämpimän räystään, lämmittelin varpaitani ja päätin levätä pitkään. [mischievously] Hetkeä myöhemmin olin jo ilmassa.
 
 | Cue-ID | Puhuja | Ankkuri | Tarkoitus | Voima |
 |---|---|---|---|---:|
@@ -96,8 +96,8 @@ Nykyisen packin lampiankkuri `kobenhavn.r3` jää ehdokkaasta pois: Tivolin vira
 | `islanti.r3` | H | `vaatimatta lapioimista` | huvittuu | 0.55 |
 | `islanti.r5` | H | `käsitykseni saaresta ei` | huvittuu | 0.50 |
 | `islanti.livia.c1` | L | `lämpenevät yhä maan voimalla` | hammastyy | 0.35 |
-| `islanti.livia.c2` | L | `Kirjekyyhkynä muistan kaupungin` | myotailee | 0.35 |
-| `islanti.livia.c3` | L | `lämmin räystäs` | vakavoituu | 0.40 |
+| `islanti.livia.c2` | L | `lämmittelin varpaitani` | myotailee | 0.35 |
+| `islanti.livia.c3` | L | `jo ilmassa` | huvittuu | 0.40 |
 
 ## Lähde-SHA:t
 

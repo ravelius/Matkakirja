@@ -1,6 +1,6 @@
 # Horatio–Livia E2 — parimitta, TTS, cuet ja kuvat
 
-Sisältörevisio: `eu-hl-e2-20260913-r1-approved1`
+Sisältörevisio: `eu-hl-e2-20260913-r2-approved1`
 
 Julkaistu lähtörevisio: `origin/main`
 `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`
@@ -18,7 +18,7 @@ välistä erotinmerkkiä. Lopulliset sekunnit mitataan vasta hyväksytystä ää
 | Barcelona | 317 m / 41 sanaa | 106 m / 15 sanaa | 423 m / 56 sanaa | 235 m / 30 sanaa | 188 m / 22 sanaa | 423 m / 52 sanaa | 0 m / −4 sanaa |
 | Sevilla | 342 m / 39 sanaa | 94 m / 12 sanaa | 436 m / 51 sanaa | 271 m / 31 sanaa | 152 m / 20 sanaa | 423 m / 51 sanaa | −13 m / 0 sanaa |
 | Granada | 315 m / 44 sanaa | 89 m / 12 sanaa | 404 m / 56 sanaa | 209 m / 30 sanaa | 183 m / 23 sanaa | 392 m / 53 sanaa | −12 m / −3 sanaa |
-| Lissabon | 330 m / 42 sanaa | 105 m / 14 sanaa | 435 m / 56 sanaa | 240 m / 32 sanaa | 150 m / 23 sanaa | 390 m / 55 sanaa | −45 m / −1 sana |
+| Lissabon | 330 m / 42 sanaa | 105 m / 14 sanaa | 435 m / 56 sanaa | 240 m / 32 sanaa | 173 m / 24 sanaa | 413 m / 56 sanaa | −22 m / 0 sanaa |
 
 Jokainen pari ei ylitä lähtöparin merkkimäärää eikä sen sanamäärää.
 
@@ -76,7 +76,7 @@ Horatio:
 
 Livia:
 
-> [brightly] Raitiovaunu 12 kulkee Alfaman mäkien kautta. [curious] Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. [mischievously] Reitti jatkui — tehtävä vain jäi kesken.
+> [brightly] Raitiovaunu 12 kulkee Alfaman mäkien kautta. [curious] Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. [mischievously] Kun löysin vaunun uudelleen, seurasin sitä päätepysäkille asti.
 
 ## Cue-ankkuriehdotus
 
@@ -121,7 +121,7 @@ Jokainen ankkuri on tarkoitettu yhteen osumaan.
 | Lissabon | Horatio | `lissabon.r5` | `taskussa kulkeva lohdutus` | `myotailee` | 0,40 |
 | Lissabon | Livia | `lissabon.livia.c1` | `Raitiovaunu 12 kulkee` | `selittaa` | 0,40 |
 | Lissabon | Livia | `lissabon.livia.c2` | `sen kelloa kattojen yllä` | `ilo` | 0,45 |
-| Lissabon | Livia | `lissabon.livia.c3` | `tehtävä vain jäi kesken` | `huvittuu` | 0,50 |
+| Lissabon | Livia | `lissabon.livia.c3` | `päätepysäkille asti` | `huvittuu` | 0,50 |
 
 ## Kuvainventaario ja rajaus
 

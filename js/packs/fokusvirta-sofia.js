@@ -479,7 +479,7 @@ export const FOKUSVIRTA_SOFIA = {
      */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Sofian lähteeltä haetaan yhä kuumaa vettä. Minä tarkistan tuulen, astiat ja vapaan räystään.',
+      'Sofian lähteeltä haetaan yhä kuumaa vettä. Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. Arvokkuus palasi vasta seuraavalla räystäällä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.45 },

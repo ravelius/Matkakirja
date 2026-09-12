@@ -133,7 +133,7 @@ export const FOKUSVIRTA_KREETA = {
      */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kreeta on nyt Kreikkaa. Majakka seisoo yhä; mereltä palaava kyyhky lukee valoa ennen lippuja.',
+      'Kreeta on nyt Kreikkaa. Hanian tuttu majakka näyttää paluureitin. Väitin tienneeni suunnan koko ajan, mutta helpotuksesta siipeni löivät vähän nopeammin.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

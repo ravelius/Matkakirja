@@ -338,7 +338,7 @@ export const FOKUSVIRTA_BUKAREST = {
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Manucin majatalon sisäpihalla syödään yhä. Lennän parvelta alas, kun astiat kilahtavat oikeassa pöydässä.',
+      'Manucin majatalon sisäpihalla syödään yhä. Etsin pöytien alta murusia, kun viereisestä pöydästä kuului sana ”salaisuus”. Muruset unohtuivat siihen.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.55 },

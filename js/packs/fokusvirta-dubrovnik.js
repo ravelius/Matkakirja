@@ -209,7 +209,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Onofrion kaivo antaa yhä vettä. Minä lasken kivinokat ja valitsen kuivan lähtöpaikan ennen jonoa.',
+      'Onofrion kaivon kuusitoista kivikasvoa antavat yhä vettä. Kun kuvittelin niiden puhuvan yhtä aikaa, minäkin hiljenin hetkeksi. Sitten laskin ne uudelleen.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'utelias', voimakkuus: 0.45 },

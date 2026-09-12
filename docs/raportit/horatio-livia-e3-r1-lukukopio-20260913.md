@@ -1,6 +1,6 @@
 # Horatio–Livia E3 — lukukopio
 
-Sisältörevisio: `eu-hl-e3-20260913-r1-approved1`
+Sisältörevisio: `eu-hl-e3-20260913-r2-approved1`
 
 Julkaistu lähtörevisio: `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`
 (v1819). Tila: hyväksytty ja sisältöjäädytetty; packit vastaavat tätä lukukopiota.
@@ -33,7 +33,7 @@ Julkaistu lähtörevisio: `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`
 
 **Livia**
 
-> Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. Kiersin pihan yllä, nokka kohti ikkunoita. Katon näin vain kuvassa; siipeni pysyivät tallessa.
+> Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. Kiersin pihan yllä, nokka kohti ikkunoita. Katon näin kuvassa, sillä sisälle en lentänyt.
 
 ## Alpit — Grindelwald
 

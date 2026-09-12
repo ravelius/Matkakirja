@@ -1,6 +1,6 @@
 # Horatio + Livia E4b R1 – lukukopio
 
-- Revisio: `eu-hl-e4b-20260913-r1-approved1`
+- Revisio: `eu-hl-e4b-20260913-r2-approved1`
 - Lähtöversio: julkaistu `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`
 - Tila: hyväksytty ja sisältöjäädytetty; packit vastaavat tätä lukukopiota.
 
@@ -12,7 +12,7 @@
 
 **Livia**
 
-> Bryggen on nyt maailmanperintöä. Lajittelin kirjeet räystään alla: kastuneet ensin, arvokkaimmat sisimmäksi.
+> Bryggen on nyt maailmanperintöä. Suojasin kirjeen räystään alla sateelta, kun viereinen lokki ravisteli vedet päälleni. Kirje säilyi kuivana. Minä vaihdoin räystästä.
 
 ## Oslo
 
@@ -22,7 +22,7 @@
 
 **Livia**
 
-> Nimi on Oslo, ja oopperan katolla kävellään. Kirjekyyhkynä hyväksyn rakennuksen, jonka reitti jatkuu katon yli.
+> Nimi on Oslo, ja oopperan katolla kävellään. Hämmästyin, kun ihmiset nousivat samalle katolle kuin minä. Kerrankin rakennus oli yhtä hyvä reitti jaloille ja siiville.
 
 ## Kööpenhamina
 
@@ -32,7 +32,7 @@
 
 **Livia**
 
-> Tivoli huvittaa yhä. Väistin tanssijoita matalalla; pitkällä reitillä oppii, milloin kiire kuuluu toisille.
+> Tivoli huvittaa yhä. Orkesterin sävel sai minut laskeutumaan tanssilattian reunalle. Otin kaksi pientä askelta ja poistuin ennen kuin kukaan ehti pyytää kolmatta.
 
 ## Islanti
 
@@ -42,4 +42,4 @@
 
 **Livia**
 
-> Reykjavíkin talot lämpenevät yhä maan voimalla. Kirjekyyhkynä muistan kaupungin, jossa talvireitin päässä odottaa lämmin räystäs.
+> Reykjavíkin talot lämpenevät yhä maan voimalla. Löysin lämpimän räystään, lämmittelin varpaitani ja päätin levätä pitkään. Hetkeä myöhemmin olin jo ilmassa.

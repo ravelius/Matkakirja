@@ -236,7 +236,7 @@ export const FOKUSVIRTA_BERGEN = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Bryggen on nyt maailmanperintöä. Lajittelin kirjeet räystään alla: kastuneet ensin, arvokkaimmat sisimmäksi.',
+      'Bryggen on nyt maailmanperintöä. Suojasin kirjeen räystään alla sateelta, kun viereinen lokki ravisteli vedet päälleni. Kirje säilyi kuivana. Minä vaihdoin räystästä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.45 },

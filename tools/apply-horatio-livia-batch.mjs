@@ -15,7 +15,8 @@ const configs = {
 
 const batch = process.argv[2];
 if (!configs[batch]) throw new Error(`Tuntematon erä: ${batch}`);
-const revision = `eu-hl-${batch}-20260913-r1-approved1`;
+const correctionBatches = new Set(['e2', 'e3', 'e4b', 'e5']);
+const revision = `eu-hl-${batch}-20260913-${correctionBatches.has(batch) ? 'r2' : 'r1'}-approved1`;
 const reportDir = new URL('docs/raportit/', ROOT);
 const read = (name) => readFileSync(new URL(name, reportDir), 'utf8');
 const copyPath = `horatio-livia-${batch}-r1-lukukopio-20260913.md`;

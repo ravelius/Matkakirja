@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentRevision": "eu-hl-e4b-20260913-r1-approved1",
+  "contentRevision": "eu-hl-e4b-20260913-r2-approved1",
   "state": "content-frozen-audio-authorized-rc-only",
   "publishedBaselineCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1",
   "invariants": {
@@ -56,10 +56,10 @@
       },
       "livia": {
         "audioId": "bergen-3",
-        "visibleText": "Bryggen on nyt maailmanperintöä. Lajittelin kirjeet räystään alla: kastuneet ensin, arvokkaimmat sisimmäksi.",
-        "visibleTextSha256": "248fea660bee6388f3b82f0f4cfd9942a0b37685373bccf716f78258e897f20c",
-        "ttsText": "[brightly] Bryggen on nyt maailmanperintöä. [curious] Lajittelin kirjeet räystään alla: kastuneet ensin, arvokkaimmat sisimmäksi.",
-        "ttsTextSha256": "31124a31c3fcc99cab1e51e0a399a7facd7f657e46245c74abc859667ad2fc85",
+        "visibleText": "Bryggen on nyt maailmanperintöä. Suojasin kirjeen räystään alla sateelta, kun viereinen lokki ravisteli vedet päälleni. Kirje säilyi kuivana. Minä vaihdoin räystästä.",
+        "visibleTextSha256": "fc90d06f97a6fa68525f14309db76ff3a905c24d0666ae75bb90ec42ea6edd76",
+        "ttsText": "[brightly] Bryggen on nyt maailmanperintöä. [curious] Suojasin kirjeen räystään alla sateelta, kun viereinen lokki ravisteli vedet päälleni. [mischievously] Kirje säilyi kuivana. Minä vaihdoin räystästä.",
+        "ttsTextSha256": "2e1e8a19645c319216f690653dd62756223b76661fd4ae4407b4de6bb5ae7192",
         "cues": [
           {
             "cueId": "bergen.livia.c1",
@@ -70,14 +70,14 @@
           },
           {
             "cueId": "bergen.livia.c2",
-            "anchor": "Lajittelin kirjeet",
+            "anchor": "viereinen lokki ravisteli",
             "occurrence": 1,
-            "intent": "myotailee",
+            "intent": "hammastyy",
             "strength": 0.35
           },
           {
             "cueId": "bergen.livia.c3",
-            "anchor": "arvokkaimmat sisimmäksi",
+            "anchor": "Minä vaihdoin räystästä",
             "occurrence": 1,
             "intent": "huvittuu",
             "strength": 0.4
@@ -118,10 +118,10 @@
       },
       "livia": {
         "audioId": "oslo-3",
-        "visibleText": "Nimi on Oslo, ja oopperan katolla kävellään. Kirjekyyhkynä hyväksyn rakennuksen, jonka reitti jatkuu katon yli.",
-        "visibleTextSha256": "6a4de345323f5c6017b03f522915db561f1e5603c4fa2f87f8e7f3d865d85368",
-        "ttsText": "[brightly] Nimi on Oslo, ja oopperan katolla kävellään. [warmly] Kirjekyyhkynä hyväksyn rakennuksen, jonka reitti jatkuu katon yli.",
-        "ttsTextSha256": "cd4d5440dd7fc630649c223525571c60967461b50802d54080c0c87c4cd1f3bd",
+        "visibleText": "Nimi on Oslo, ja oopperan katolla kävellään. Hämmästyin, kun ihmiset nousivat samalle katolle kuin minä. Kerrankin rakennus oli yhtä hyvä reitti jaloille ja siiville.",
+        "visibleTextSha256": "069828779d606f4f3c80ba4fe3f9019a8bd1cc582dad299d47b0ab7d1c21a622",
+        "ttsText": "[brightly] Nimi on Oslo, ja oopperan katolla kävellään. [surprised] Hämmästyin, kun ihmiset nousivat samalle katolle kuin minä. [warmly] Kerrankin rakennus oli yhtä hyvä reitti jaloille ja siiville.",
+        "ttsTextSha256": "eff18112796b6040e70671790d963889c621b39b6e52e756cc7ec06653cf7b28",
         "cues": [
           {
             "cueId": "oslo.livia.c1",
@@ -132,14 +132,14 @@
           },
           {
             "cueId": "oslo.livia.c2",
-            "anchor": "oopperan katolla kävellään",
+            "anchor": "ihmiset nousivat samalle katolle",
             "occurrence": 1,
-            "intent": "hammastyy",
+            "intent": "hammentynyt",
             "strength": 0.35
           },
           {
             "cueId": "oslo.livia.c3",
-            "anchor": "reitti jatkuu katon yli",
+            "anchor": "jaloille ja siiville",
             "occurrence": 1,
             "intent": "huvittuu",
             "strength": 0.4
@@ -180,10 +180,10 @@
       },
       "livia": {
         "audioId": "kobenhavn-3",
-        "visibleText": "Tivoli huvittaa yhä. Väistin tanssijoita matalalla; pitkällä reitillä oppii, milloin kiire kuuluu toisille.",
-        "visibleTextSha256": "fb85ce068fd0173d8abbb1558f0bc8ad74dbc935961cd375f392713fe6f3f4f5",
-        "ttsText": "[brightly] Tivoli huvittaa yhä. [mischievously] Väistin tanssijoita matalalla; pitkällä reitillä oppii, milloin kiire kuuluu toisille.",
-        "ttsTextSha256": "e5ac724cc7b1901a3ece6619d84c91422739e562a96b11e18ed359b0ba85de94",
+        "visibleText": "Tivoli huvittaa yhä. Orkesterin sävel sai minut laskeutumaan tanssilattian reunalle. Otin kaksi pientä askelta ja poistuin ennen kuin kukaan ehti pyytää kolmatta.",
+        "visibleTextSha256": "532a847728734e1af99697c578825f56975428f41baf16d557d7d78543a267bf",
+        "ttsText": "[brightly] Tivoli huvittaa yhä. [mischievously] Orkesterin sävel sai minut laskeutumaan tanssilattian reunalle. Otin kaksi pientä askelta ja poistuin ennen kuin kukaan ehti pyytää kolmatta.",
+        "ttsTextSha256": "a7cf5a579883fe13927eab18bedc823c998ac9f6fcd159eb1c3acd0846c7ba6c",
         "cues": [
           {
             "cueId": "kobenhavn.livia.c1",
@@ -194,14 +194,14 @@
           },
           {
             "cueId": "kobenhavn.livia.c2",
-            "anchor": "Väistin tanssijoita matalalla",
+            "anchor": "laskeutumaan tanssilattian reunalle",
             "occurrence": 1,
             "intent": "huvittuu",
             "strength": 0.4
           },
           {
             "cueId": "kobenhavn.livia.c3",
-            "anchor": "kiire kuuluu toisille",
+            "anchor": "pyytää kolmatta",
             "occurrence": 1,
             "intent": "myotailee",
             "strength": 0.45
@@ -249,10 +249,10 @@
       },
       "livia": {
         "audioId": "islanti-3",
-        "visibleText": "Reykjavíkin talot lämpenevät yhä maan voimalla. Kirjekyyhkynä muistan kaupungin, jossa talvireitin päässä odottaa lämmin räystäs.",
-        "visibleTextSha256": "2435eebd27f830b3a659d0ad90b3be9cf7e067dd23d0791935b423c40a2c2dd3",
-        "ttsText": "[brightly] Reykjavíkin talot lämpenevät yhä maan voimalla. [softly] Kirjekyyhkynä muistan kaupungin, jossa talvireitin päässä odottaa lämmin räystäs.",
-        "ttsTextSha256": "c6da361579886a795461f6c5593b53425415abc1884f9703c535585e70829b0f",
+        "visibleText": "Reykjavíkin talot lämpenevät yhä maan voimalla. Löysin lämpimän räystään, lämmittelin varpaitani ja päätin levätä pitkään. Hetkeä myöhemmin olin jo ilmassa.",
+        "visibleTextSha256": "edd43d46ddaa90ae568f83eb023e0e33679a03ee709c09de8fd6b146610ce336",
+        "ttsText": "[brightly] Reykjavíkin talot lämpenevät yhä maan voimalla. [softly] Löysin lämpimän räystään, lämmittelin varpaitani ja päätin levätä pitkään. [mischievously] Hetkeä myöhemmin olin jo ilmassa.",
+        "ttsTextSha256": "c08c252c228fe0fab821d691433f1ceab5d7d79c6f51aa24e007354a74009217",
         "cues": [
           {
             "cueId": "islanti.livia.c1",
@@ -263,16 +263,16 @@
           },
           {
             "cueId": "islanti.livia.c2",
-            "anchor": "Kirjekyyhkynä muistan kaupungin",
+            "anchor": "lämmittelin varpaitani",
             "occurrence": 1,
             "intent": "myotailee",
             "strength": 0.35
           },
           {
             "cueId": "islanti.livia.c3",
-            "anchor": "lämmin räystäs",
+            "anchor": "jo ilmassa",
             "occurrence": 1,
-            "intent": "vakavoituu",
+            "intent": "huvittuu",
             "strength": 0.4
           }
         ]
