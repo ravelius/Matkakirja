@@ -62,6 +62,26 @@
 export const MAASTOKOHTEET_FRA = [
   {
     id: 'montblanc',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-maasto-montblanc-69d1dc31dec3.jpg',
+      lyhyt: 'Mont Blancin jäätiköitynyt länsiseinä kohoaa tummaa kalliorinnettä vasten.',
+      selite: 'Mont Blancin jäätiköitynyt länsiseinä kohoaa tummaa kalliorinnettä vasten.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Denoel',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mont_Blanc_-_West_Face.jpg',
+      lisenssi: 'CC BY-SA 2.0 France',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-maasto-montblanc-f39f71151b35.jpg',
+      lyhyt: 'Mont Blancin länsiseinä ja Dôme du Goûter Tré la Têteltä nähtynä.',
+      selite: 'Mont Blancin jäätiköitynyt länsiseinä ja Dôme du Goûter näkyvät Aiguille Nord de Tré la Têteltä.',
+      lahde: 'Valokuva: Denoel, Wikimedia Commons (CC BY-SA 2.0 France).',
+      tekija: 'Denoel',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mont_Blanc_-_West_Face.jpg',
+      lisenssi: 'CC BY-SA 2.0 France',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en',
+    }],
     nimi: 'Mont Blanc',
     tyyppi: 'vuori',
     kysymykset: [
@@ -84,6 +104,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'vignemale',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-maasto-vignemale-18e16a3e8da6.jpg',
+      lyhyt: 'Vignemalen monihuippuinen massiivi Ossouen vihreän laakson perällä.',
+      selite: 'Vignemalen monihuippuinen massiivi näkyy Ossouen vihreän laakson perällä.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Tripallokavipasek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vignemale_Massif_view_from_Barrage_d\'Ossoue.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-maasto-vignemale-8bcfbcf0ef86.jpg',
+      lyhyt: 'Vignemalen massiivi ja jäätikkö Ossouen laakson vihreiden rinteiden takana.',
+      selite: 'Vignemalen massiivi ja sen jäätikkö näkyvät Ossouen laakson vihreiden rinteiden takana.',
+      lahde: 'Valokuva: Tripallokavipasek, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Tripallokavipasek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vignemale_Massif_view_from_Barrage_d\'Ossoue.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    }],
     nimi: 'Vignemale',
     tyyppi: 'vuori',
     kysymykset: [
