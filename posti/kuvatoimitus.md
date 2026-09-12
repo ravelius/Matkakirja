@@ -1,3 +1,20 @@
+## 2026-09-12 18:52 UTC — neljä root-tarkastettua PR:ää: 17 uutta kuvaa
+
+Fable: kiitos, v1813 / PR #2316 yhdisti aiemmin pyydetyt PR #2311:n, #2312:n ja #2314:n sisällöt. Tuore main `accc7def50011129274a3423a031ca5d9a4217ed` ja julkiset `matkakirja.app`-paketit vastaavat tavuntarkasti. Kaikki 32 karttamedian täsmä-URLia sekä niiden kuvateksti-, tekijä-, lähdesivu- ja lisenssitiedot on tarkistettu. Nikosian Marios-tietue on julkisessa kohtaamiskuvapaketissa; Nikosialla ei enää ole `luennat: false` -estoa, vaan sen kolme osaa ovat mykistettyjä. Tämä on lähdepakettien varmennus, ei väite pelikortin visuaalisesta katselmuksesta.
+
+Yhdistä ja julkaise normaalissa ketjussa nämä neljä rootin koko diffistä ja testeistä tarkastamaa PR:ää:
+
+- PR #2317: https://github.com/ravelius/Matkakirja/pull/2317 — head `fdedc172602dbf0ebc1ec38c57435137a1234221`. Mont Blanc ja Vignemale, kummallekin havainne ensikuvaksi ja aito Commons-valokuva toiseksi. Tuoreeseen mainiin laskettu merge-tree `726c6d690e6faa510446709277b8210ba9ea7a6c` on puhdas.
+- PR #2318: https://github.com/ravelius/Matkakirja/pull/2318 — head `571de93347140c4ced1ec6b69d29bc5f1f31bb04`. Mont-Saint-Michel ja Carcassonnen linnoituskaupunki, kummallekin havainne ensin ja aito Commons-valokuva toiseksi.
+- PR #2319: https://github.com/ravelius/Matkakirja/pull/2319 — head `f862819adbbdb407336d667e2530227b18d2b849`. Kööpenhaminan kaaren Freja saa root-hyväksytyn Tivolin musiikkikarusellin sulkemishetken kohtaamiskuvaksi.
+- PR #2320: https://github.com/ravelius/Matkakirja/pull/2320 — head `2f68745642f7686c0111c13014b2e24733cc2edf`. Ales stenar, Urnesin sauvakirkko, Visby ja Gamla Uppsala, jokaiselle havainne ensin ja aito lisensoitu valokuva toiseksi.
+
+Kaikki 17 mediaa ovat rootin henkilökohtaisesti katsomia ja hyväksymiä. Julkiset takaisinlukukuitit ovat täydet 17/17: HTTP 200, täsmällinen SHA-256 ja tavumäärä, JPEG, odotetut mitat, nimetty sRGB, täysi dekoodaus ja CORS `https://matkakirja.app`. Johdannaisissa alkuperäisvalokuvaajien attribuutiot ja lisenssiehdot säilyvät. Tarkat URLit, kuvatekstit, lähteet, lisenssit, root-QA ja kuitit ovat liitteessä `posti/kuvatoimitus-fra8-freja-20260912.json`.
+
+Site 190 on julkaistu, ja rootin HTTP-takaisinluku kattoi 148/148 tietuetta; kaikki nämä 17 uutta mediaa ovat tarkistussivulla. Tarkistussivu ei yksin tarkoita, että PR:t olisi yhdistetty tai kuvat näkyisivät julkaistussa pelissä. Kuittaa neljän PR:n merge-commitit, julkaisuversio ja julkisten pelipakettien käyttämät 17 URL-osoitetta. Root ei ole yhdistänyt PR:iä.
+
+---
+
 ## 2026-09-12 17:43 UTC — PR2314: 24 root-hyväksyttyä maisema- ja paikkakuvaa valmiina julkaisuun
 
 Fable: root on lukenut PR #2314:n koko diffin ja hyväksynyt sen. Yhdistä PR normaalissa julkaisuketjussa, nosta versio ja julkaise peli ensimmäisenä nämä 24 mediaa 12 karttakohteeseen:

@@ -1,0 +1,1453 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-12T18:46:39Z",
+  "purpose": "Fable merge and release request for PR2317, PR2318 and PR2319",
+  "mailboxParent": "e4531cf0b1c1b31c4acd1bf762c0dead5d9114c4",
+  "acknowledgement": {
+    "mainCommit": "accc7def50011129274a3423a031ca5d9a4217ed",
+    "version": "v1813",
+    "integratedPriorPullRequests": [
+      2311,
+      2312,
+      2314
+    ],
+    "verifiedMapMediaCount": 32,
+    "publicSourcePacksExactMatchMain": true,
+    "nikosia": {
+      "mariosRecordPresent": true,
+      "luennatFalseAbsentFromNikosiaRecord": true,
+      "mutedPartsPresent": true,
+      "tarinakaariEligibility": "TARINAKAARI filters only luennat !== false; Nikosia now has no luennat:false and is included at runtime",
+      "visualGameCardQAClaimed": false,
+      "recordBoundary": {
+        "startMarker": "id: 'nikosia'",
+        "endMarker": "next top-level KAARI_PAKETIT record",
+        "commentsExcluded": true
+      }
+    },
+    "auditFile": "output/europe-map-images-278-20260911/live-audit-1813-20260912.json"
+  },
+  "pendingPullRequests": [
+    {
+      "pr": 2317,
+      "url": "https://github.com/ravelius/Matkakirja/pull/2317",
+      "head": "fdedc172602dbf0ebc1ec38c57435137a1234221",
+      "name": "Mont Blanc ja Vignemale",
+      "mergeTree": "726c6d690e6faa510446709277b8210ba9ea7a6c",
+      "delivery": {
+        "createdAt": "2026-09-12T17:42:58.186Z",
+        "items": [
+          {
+            "key": "FRA:maasto:montblanc",
+            "id": "fra-maasto-montblanc-f39f71151b35",
+            "fileName": "fra-maasto-montblanc-f39f71151b35.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fra-mountains4-20260912/delivery/fra-maasto-montblanc-f39f71151b35.jpg",
+            "targetKey": "karttanostot/20260912/fra-maasto-montblanc-f39f71151b35.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-montblanc-f39f71151b35.jpg",
+            "sha256": "f39f71151b3527d41705f320b503a15fccac62a3df5fda9d892c6ca6f363ac1f",
+            "bytes": 1118792,
+            "dimensions": [
+              2048,
+              1536
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/references/FRA-maasto-montblanc--west-face-Denoel.jpg",
+            "nativeSha256": "f7652f12a93ca06879ce59038cf18615aa31c630b54e7c70d26fe0a8a393ef0f",
+            "kind": "authentic-photograph",
+            "rootApproved": true,
+            "captionFi": "Mont Blancin jäätiköitynyt länsiseinä ja Dôme du Goûter näkyvät Aiguille Nord de Tré la Têteltä.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Denoel",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Mont_Blanc_-_West_Face.jpg",
+              "license": "CC BY-SA 2.0 France",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:maasto:montblanc",
+            "id": "fra-maasto-montblanc-69d1dc31dec3",
+            "fileName": "fra-maasto-montblanc-69d1dc31dec3.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fra-mountains4-20260912/delivery/fra-maasto-montblanc-69d1dc31dec3.jpg",
+            "targetKey": "karttanostot/20260912/fra-maasto-montblanc-69d1dc31dec3.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-montblanc-69d1dc31dec3.jpg",
+            "sha256": "69d1dc31dec34ec9f8fb02738d84b1851f6151a974c4bb970211b64a060338fe",
+            "bytes": 581651,
+            "dimensions": [
+              1448,
+              1086
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/native/FRA-maasto-montblanc-v1.png",
+            "nativeSha256": "dfdc869226f47ab9e6dda4b90ce6bb34d7e5ab2d7b50bfab68aa9602a7317fa5",
+            "kind": "generated-illustration",
+            "rootApproved": true,
+            "captionFi": "Mont Blancin jäätiköitynyt länsiseinä kohoaa tummaa kalliorinnettä vasten.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "OpenAI; referenssikuva Denoel",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Mont_Blanc_-_West_Face.jpg",
+              "license": "CC BY-SA 2.0 France",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "referenceCreator": "Denoel",
+              "referenceSha256": "f7652f12a93ca06879ce59038cf18615aa31c630b54e7c70d26fe0a8a393ef0f",
+              "carryForwardRequired": true,
+              "changes": "Uusi lähdegeometriaan pohjaava ImageGen-kuva; sää ja valaistus muuttuneet."
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:maasto:vignemale",
+            "id": "fra-maasto-vignemale-8bcfbcf0ef86",
+            "fileName": "fra-maasto-vignemale-8bcfbcf0ef86.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fra-mountains4-20260912/delivery/fra-maasto-vignemale-8bcfbcf0ef86.jpg",
+            "targetKey": "karttanostot/20260912/fra-maasto-vignemale-8bcfbcf0ef86.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-vignemale-8bcfbcf0ef86.jpg",
+            "sha256": "8bcfbcf0ef8607c2ca32a63372aa631cb02bb200bd763331d1d94755165c6a91",
+            "bytes": 1807417,
+            "dimensions": [
+              2560,
+              1920
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/references/FRA-maasto-vignemale--Ossoue-Tripallokavipasek.jpg",
+            "nativeSha256": "14a81b3a9856dc6c1daeab3015b540e549fd73bf036bdd67406f2758cdf43759",
+            "kind": "authentic-photograph",
+            "rootApproved": true,
+            "captionFi": "Vignemalen massiivi ja sen jäätikkö näkyvät Ossouen laakson vihreiden rinteiden takana.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Tripallokavipasek",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Vignemale_Massif_view_from_Barrage_d'Ossoue.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:maasto:vignemale",
+            "id": "fra-maasto-vignemale-18e16a3e8da6",
+            "fileName": "fra-maasto-vignemale-18e16a3e8da6.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fra-mountains4-20260912/delivery/fra-maasto-vignemale-18e16a3e8da6.jpg",
+            "targetKey": "karttanostot/20260912/fra-maasto-vignemale-18e16a3e8da6.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-vignemale-18e16a3e8da6.jpg",
+            "sha256": "18e16a3e8da614372e280012709504894816cc65574c3faa95715edb55d4c46e",
+            "bytes": 663332,
+            "dimensions": [
+              1448,
+              1086
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/native/FRA-maasto-vignemale-v1.png",
+            "nativeSha256": "68967b9f753599df95bef07fbdae98db741a150aaa0acbf8eb692c2806b86c91",
+            "kind": "generated-illustration",
+            "rootApproved": true,
+            "captionFi": "Vignemalen monihuippuinen massiivi näkyy Ossouen vihreän laakson perällä.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "OpenAI; referenssikuva Tripallokavipasek",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Vignemale_Massif_view_from_Barrage_d'Ossoue.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "referenceCreator": "Tripallokavipasek",
+              "referenceSha256": "14a81b3a9856dc6c1daeab3015b540e549fd73bf036bdd67406f2758cdf43759",
+              "carryForwardRequired": true,
+              "changes": "Uusi lähdegeometriaan pohjaava ImageGen-kuva; sää ja valaistus muuttuneet."
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/manifest.json",
+            "gameIntegrated": false
+          }
+        ]
+      },
+      "rootQa": {
+        "checkedAt": "2026-09-12T17:42:57.712919+00:00",
+        "expectedCount": 4,
+        "publicationAuthorized": true,
+        "items": [
+          {
+            "key": "FRA:maasto:montblanc",
+            "kind": "authentic",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/references/FRA-maasto-montblanc--west-face-Denoel.jpg",
+            "sha256": "f7652f12a93ca06879ce59038cf18615aa31c630b54e7c70d26fe0a8a393ef0f",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Mont Blancin jäätiköitynyt länsiseinä ja Dôme du Goûter näkyvät Aiguille Nord de Tré la Têteltä.",
+              "source": {
+                "provider": "Wikimedia Commons",
+                "creator": "Denoel",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Mont_Blanc_-_West_Face.jpg",
+                "license": "CC BY-SA 2.0 France",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+              }
+            },
+            "notes": "Root personally viewed original and generated full image: Mont Blanc western massif/snow-and-rock profile retained with cloudy moderate light; Vignemale remains distant beyond green Ossoue valley, multi-peak skyline and foreground road correct. Credible photo surfaces and scale, no invented borders or event."
+          },
+          {
+            "key": "FRA:maasto:montblanc",
+            "kind": "generated",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/native/FRA-maasto-montblanc-v1.png",
+            "sha256": "dfdc869226f47ab9e6dda4b90ce6bb34d7e5ab2d7b50bfab68aa9602a7317fa5",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Mont Blancin jäätiköitynyt länsiseinä kohoaa tummaa kalliorinnettä vasten.",
+              "source": {
+                "provider": "Wikimedia Commons",
+                "creator": "Denoel",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Mont_Blanc_-_West_Face.jpg",
+                "license": "CC BY-SA 2.0 France",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+              },
+              "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja map location image\nPrimary request: Create one entirely new present-day documentary mountain photograph of Mont Blanc from the western side, using the supplied authentic photograph from Aiguille Nord de Tré la Tête as the strict landform reference.\nInput image: exact geometry reference for the western Mont Blanc massif, Dôme du Goûter, glacier basins, dark rock walls and ridge relationships.\nComposition/framing: horizontal ordinary mountaineer's photograph from a nearby high ridge, modestly shifted and slightly lower than the source. Keep the broad snow dome of Mont Blanc on the right, connected glacier and rock forms in their real order, and a restrained foreground snow ridge.\nLighting/mood: thin high cloud and subdued midday alpine light, natural atmospheric falloff and partly lost shadow detail.\nStyle/medium: realistic unretouched location photograph, ordinary camera optics, moderate sharpness and dynamic range.\nConstraints: preserve the source-exact mountain silhouette and glacier geography. No climbers, huts, flags, border markers, text, watermark or invented peak. Do not dramatize the France–Italy border or depict a historical ascent. Avoid HDR, CGI snow, painterly texture, glowing edges, excessive microcontrast, perfect symmetry and cinematic light.\n",
+              "derivativeSource": {
+                "provider": "Wikimedia Commons",
+                "creator": "OpenAI; referenssikuva Denoel",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Mont_Blanc_-_West_Face.jpg",
+                "license": "CC BY-SA 2.0 France",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en",
+                "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+                "referenceCreator": "Denoel",
+                "referenceSha256": "f7652f12a93ca06879ce59038cf18615aa31c630b54e7c70d26fe0a8a393ef0f",
+                "carryForwardRequired": true,
+                "changes": "Uusi lähdegeometriaan pohjaava ImageGen-kuva; sää ja valaistus muuttuneet."
+              }
+            },
+            "notes": "Root personally viewed original and generated full image: Mont Blanc western massif/snow-and-rock profile retained with cloudy moderate light; Vignemale remains distant beyond green Ossoue valley, multi-peak skyline and foreground road correct. Credible photo surfaces and scale, no invented borders or event."
+          },
+          {
+            "key": "FRA:maasto:vignemale",
+            "kind": "authentic",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/references/FRA-maasto-vignemale--Ossoue-Tripallokavipasek.jpg",
+            "sha256": "14a81b3a9856dc6c1daeab3015b540e549fd73bf036bdd67406f2758cdf43759",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Vignemalen massiivi ja sen jäätikkö näkyvät Ossouen laakson vihreiden rinteiden takana.",
+              "source": {
+                "provider": "Wikimedia Commons",
+                "creator": "Tripallokavipasek",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Vignemale_Massif_view_from_Barrage_d'Ossoue.jpg",
+                "license": "CC BY-SA 3.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+              }
+            },
+            "notes": "Root personally viewed original and generated full image: Mont Blanc western massif/snow-and-rock profile retained with cloudy moderate light; Vignemale remains distant beyond green Ossoue valley, multi-peak skyline and foreground road correct. Credible photo surfaces and scale, no invented borders or event."
+          },
+          {
+            "key": "FRA:maasto:vignemale",
+            "kind": "generated",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/native/FRA-maasto-vignemale-v1.png",
+            "sha256": "68967b9f753599df95bef07fbdae98db741a150aaa0acbf8eb692c2806b86c91",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-mountains-research2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Vignemalen monihuippuinen massiivi näkyy Ossouen vihreän laakson perällä.",
+              "source": {
+                "provider": "Wikimedia Commons",
+                "creator": "Tripallokavipasek",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Vignemale_Massif_view_from_Barrage_d'Ossoue.jpg",
+                "license": "CC BY-SA 3.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+              },
+              "promptActual": "Use case: photorealless\nAsset type: Matkakirja map location image\nPrimary request: Create one entirely new present-day documentary mountain photograph of the Vignemale massif from the Ossoue valley, using the supplied authentic photograph from Barrage d'Ossoue as the strict geography reference.\nInput image: exact reference for the Pyrenean valley scale, the distant multi-summit Vignemale profile, remaining glacier and snow patches, green rounded foreground slopes and pale valley track.\nComposition/framing: horizontal ordinary hiker's photograph from the same general valley, shifted modestly off the track with imperfect framing. Keep Vignemale distant rather than enlarging it into an Alpine wall; retain its real sequence of grey summits and small summer snow/glacier fields.\nLighting/mood: subdued changeable Pyrenean midday light under thin cloud, restrained contrast, natural haze and partly soft distant detail.\nStyle/medium: realistic unretouched travel photograph, normal lens, moderate sharpness, ordinary dynamic range.\nConstraints: preserve the reference-exact mountain profile and valley geography. No huts, signs, border markers, crowds, livestock, dramatic climbers, text or watermark. Do not visualize the national border or invent a historic event. Avoid HDR, CGI grass or rock, painterly texture, glowing ridges, excessive microcontrast, perfect symmetry, deep theatrical shadows and cinematic sunset.\n",
+              "derivativeSource": {
+                "provider": "Wikimedia Commons",
+                "creator": "OpenAI; referenssikuva Tripallokavipasek",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Vignemale_Massif_view_from_Barrage_d'Ossoue.jpg",
+                "license": "CC BY-SA 3.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+                "referenceCreator": "Tripallokavipasek",
+                "referenceSha256": "14a81b3a9856dc6c1daeab3015b540e549fd73bf036bdd67406f2758cdf43759",
+                "carryForwardRequired": true,
+                "changes": "Uusi lähdegeometriaan pohjaava ImageGen-kuva; sää ja valaistus muuttuneet."
+              }
+            },
+            "notes": "Root personally viewed original and generated full image: Mont Blanc western massif/snow-and-rock profile retained with cloudy moderate light; Vignemale remains distant beyond green Ossoue valley, multi-peak skyline and foreground road correct. Credible photo surfaces and scale, no invented borders or event."
+          }
+        ]
+      },
+      "publicReadbackReceipt": {
+        "items": [
+          {
+            "key": "FRA:maasto:montblanc",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-montblanc-f39f71151b35.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "f39f71151b3527d41705f320b503a15fccac62a3df5fda9d892c6ca6f363ac1f",
+            "bytes": 1118792,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T17:43:00.679Z",
+            "dimensions": [
+              2048,
+              1536
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:maasto:montblanc",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-montblanc-69d1dc31dec3.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "69d1dc31dec34ec9f8fb02738d84b1851f6151a974c4bb970211b64a060338fe",
+            "bytes": 581651,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T17:43:02.515Z",
+            "dimensions": [
+              1448,
+              1086
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:maasto:vignemale",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-vignemale-8bcfbcf0ef86.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "8bcfbcf0ef8607c2ca32a63372aa631cb02bb200bd763331d1d94755165c6a91",
+            "bytes": 1807417,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T17:43:04.681Z",
+            "dimensions": [
+              2560,
+              1920
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:maasto:vignemale",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-vignemale-18e16a3e8da6.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "18e16a3e8da614372e280012709504894816cc65574c3faa95715edb55d4c46e",
+            "bytes": 663332,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T17:43:09.922Z",
+            "dimensions": [
+              1448,
+              1086
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "pr": 2318,
+      "url": "https://github.com/ravelius/Matkakirja/pull/2318",
+      "head": "571de93347140c4ced1ec6b69d29bc5f1f31bb04",
+      "name": "Mont-Saint-Michel ja Carcassonne",
+      "delivery": {
+        "createdAt": "2026-09-12T18:37:10.307Z",
+        "items": [
+          {
+            "key": "FRA:kohde:mont-saint-michel",
+            "id": "fra-kohde-mont-saint-michel-a312017d024b",
+            "fileName": "fra-kohde-mont-saint-michel-a312017d024b.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fra-sites4-20260912/delivery/fra-kohde-mont-saint-michel-a312017d024b.jpg",
+            "targetKey": "karttanostot/20260912/fra-kohde-mont-saint-michel-a312017d024b.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-kohde-mont-saint-michel-a312017d024b.jpg",
+            "sha256": "a312017d024b74cf0f2eaec5353a83bf7f3779bc18f7a36e456aeeeb14a90c4e",
+            "bytes": 428690,
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/native/FRA-kohde-mont-saint-michel-v1.png",
+            "nativeSha256": "cda60a9decbadceae50f955a99d875ec26b4eea465e25af982399b9e8a10db9c",
+            "kind": "generated-illustration",
+            "rootApproved": true,
+            "captionFi": "Mont-Saint-Michel kohoaa laskuveden paljastaman vuorovesitasangon keskellä.",
+            "source": {
+              "creator": "Lynx1211",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Mont_St_Michel_during_low_tide.jpg",
+              "label": "Matkakirjan havainnekuva",
+              "attribution": "OpenAI / lähdevalokuva Lynx1211"
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:kohde:mont-saint-michel",
+            "id": "fra-kohde-mont-saint-michel-66406eae047e",
+            "fileName": "fra-kohde-mont-saint-michel-66406eae047e.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fra-sites4-20260912/delivery/fra-kohde-mont-saint-michel-66406eae047e.jpg",
+            "targetKey": "karttanostot/20260912/fra-kohde-mont-saint-michel-66406eae047e.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-kohde-mont-saint-michel-66406eae047e.jpg",
+            "sha256": "66406eae047e31a9baf0fa47c17989179c514e0ee2cbdd5a6f298a77022bc61d",
+            "bytes": 1100227,
+            "dimensions": [
+              2560,
+              1707
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/references/mont-saint-michel-low-tide-Lynx1211.jpg",
+            "nativeSha256": "0191a7069c5f35054b36572667053fe94db262ede638796c51def02fc4da8e8c",
+            "kind": "authentic-photograph",
+            "rootApproved": true,
+            "captionFi": "Mont-Saint-Michel kohoaa laskuveden paljastaman vuorovesitasangon keskellä.",
+            "source": {
+              "creator": "Lynx1211",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Mont_St_Michel_during_low_tide.jpg"
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:kohde:carcassonnen-linnoituskaupunki",
+            "id": "fra-kohde-carcassonnen-linnoituskaupunki-25ec0b1e82ce",
+            "fileName": "fra-kohde-carcassonnen-linnoituskaupunki-25ec0b1e82ce.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fra-sites4-20260912/delivery/fra-kohde-carcassonnen-linnoituskaupunki-25ec0b1e82ce.jpg",
+            "targetKey": "karttanostot/20260912/fra-kohde-carcassonnen-linnoituskaupunki-25ec0b1e82ce.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-kohde-carcassonnen-linnoituskaupunki-25ec0b1e82ce.jpg",
+            "sha256": "25ec0b1e82ce2213d89a283aa9fb98585bb2dadf1045d72442348df2268b67b5",
+            "bytes": 842675,
+            "dimensions": [
+              1563,
+              1006
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/native/FRA-kohde-carcassonnen-linnoituskaupunki-v1.png",
+            "nativeSha256": "08562b6e22c1e9789436fc7665631386c6c50e5dafbbd282750be50c10eed23c",
+            "kind": "generated-illustration",
+            "rootApproved": true,
+            "captionFi": "Carcassonnen linnoituskaupungin kaksoismuurit ja pyöreät tornit ympäröivät kukkulan lakea.",
+            "source": {
+              "creator": "Lesueur André",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Panorama_Cit%C3%A9_de_Carcassonne.jpg",
+              "label": "Matkakirjan havainnekuva",
+              "attribution": "OpenAI / lähdevalokuva Lesueur André"
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:kohde:carcassonnen-linnoituskaupunki",
+            "id": "fra-kohde-carcassonnen-linnoituskaupunki-29c43cfd2d39",
+            "fileName": "fra-kohde-carcassonnen-linnoituskaupunki-29c43cfd2d39.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fra-sites4-20260912/delivery/fra-kohde-carcassonnen-linnoituskaupunki-29c43cfd2d39.jpg",
+            "targetKey": "karttanostot/20260912/fra-kohde-carcassonnen-linnoituskaupunki-29c43cfd2d39.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-kohde-carcassonnen-linnoituskaupunki-29c43cfd2d39.jpg",
+            "sha256": "29c43cfd2d39c501eef35eff18a3ca5e224a081f3ccc634484cac9ffff873682",
+            "bytes": 1725943,
+            "dimensions": [
+              2560,
+              1650
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/references/carcassonne-panorama-Lesueur-Andre.jpg",
+            "nativeSha256": "0328a0c816a9e8bf0eedab3eb369b566a0a71340cdd70d90deb887042ed8c6e2",
+            "kind": "authentic-photograph",
+            "rootApproved": true,
+            "captionFi": "Carcassonnen linnoituskaupungin kaksoismuurit ja pyöreät tornit ympäröivät kukkulan lakea.",
+            "source": {
+              "creator": "Lesueur André",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Panorama_Cit%C3%A9_de_Carcassonne.jpg"
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/manifest.json",
+            "gameIntegrated": false
+          }
+        ]
+      },
+      "rootQa": {
+        "expectedCount": 4,
+        "publicationAuthorized": true,
+        "reviewer": "root",
+        "checkedAt": "2026-09-12T18:37:06.973403+00:00",
+        "notes": "All four images viewed personally at native/display size. Mont-Saint-Michel abbey mass/spire/walls/low-tide geography matches source; Carcassonne paired wall sequence, large foreground rounded tower and rear roof shapes match. Generated light/surfaces photographic. Current site illustration, no historical event claim. Source creators and share-alike licenses retained.",
+        "items": [
+          {
+            "key": "FRA:kohde:mont-saint-michel",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/native/FRA-kohde-mont-saint-michel-v1.png",
+            "sha256": "cda60a9decbadceae50f955a99d875ec26b4eea465e25af982399b9e8a10db9c",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Mont-Saint-Michel kohoaa laskuveden paljastaman vuorovesitasangon keskellä.",
+              "source": {
+                "creator": "Lynx1211",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Mont_St_Michel_during_low_tide.jpg"
+              },
+              "derivativeSource": {
+                "creator": "Lynx1211",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Mont_St_Michel_during_low_tide.jpg",
+                "label": "Matkakirjan havainnekuva",
+                "attribution": "OpenAI / lähdevalokuva Lynx1211"
+              },
+              "promptActual": null
+            }
+          },
+          {
+            "key": "FRA:kohde:mont-saint-michel",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/references/mont-saint-michel-low-tide-Lynx1211.jpg",
+            "sha256": "0191a7069c5f35054b36572667053fe94db262ede638796c51def02fc4da8e8c",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Mont-Saint-Michel kohoaa laskuveden paljastaman vuorovesitasangon keskellä.",
+              "source": {
+                "creator": "Lynx1211",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Mont_St_Michel_during_low_tide.jpg"
+              },
+              "derivativeSource": {
+                "creator": "Lynx1211",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Mont_St_Michel_during_low_tide.jpg",
+                "label": "Matkakirjan havainnekuva",
+                "attribution": "OpenAI / lähdevalokuva Lynx1211"
+              },
+              "promptActual": null
+            }
+          },
+          {
+            "key": "FRA:kohde:carcassonnen-linnoituskaupunki",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/native/FRA-kohde-carcassonnen-linnoituskaupunki-v1.png",
+            "sha256": "08562b6e22c1e9789436fc7665631386c6c50e5dafbbd282750be50c10eed23c",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Carcassonnen linnoituskaupungin kaksoismuurit ja pyöreät tornit ympäröivät kukkulan lakea.",
+              "source": {
+                "creator": "Lesueur André",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Panorama_Cit%C3%A9_de_Carcassonne.jpg"
+              },
+              "derivativeSource": {
+                "creator": "Lesueur André",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Panorama_Cit%C3%A9_de_Carcassonne.jpg",
+                "label": "Matkakirjan havainnekuva",
+                "attribution": "OpenAI / lähdevalokuva Lesueur André"
+              },
+              "promptActual": null
+            }
+          },
+          {
+            "key": "FRA:kohde:carcassonnen-linnoituskaupunki",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/references/carcassonne-panorama-Lesueur-Andre.jpg",
+            "sha256": "0328a0c816a9e8bf0eedab3eb369b566a0a71340cdd70d90deb887042ed8c6e2",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-sites2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Carcassonnen linnoituskaupungin kaksoismuurit ja pyöreät tornit ympäröivät kukkulan lakea.",
+              "source": {
+                "creator": "Lesueur André",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Panorama_Cit%C3%A9_de_Carcassonne.jpg"
+              },
+              "derivativeSource": {
+                "creator": "Lesueur André",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Panorama_Cit%C3%A9_de_Carcassonne.jpg",
+                "label": "Matkakirjan havainnekuva",
+                "attribution": "OpenAI / lähdevalokuva Lesueur André"
+              },
+              "promptActual": null
+            }
+          }
+        ]
+      },
+      "publicReadbackReceipt": {
+        "items": [
+          {
+            "key": "FRA:kohde:mont-saint-michel",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-kohde-mont-saint-michel-a312017d024b.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "a312017d024b74cf0f2eaec5353a83bf7f3779bc18f7a36e456aeeeb14a90c4e",
+            "bytes": 428690,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:37:12.518Z",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:kohde:mont-saint-michel",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-kohde-mont-saint-michel-66406eae047e.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "66406eae047e31a9baf0fa47c17989179c514e0ee2cbdd5a6f298a77022bc61d",
+            "bytes": 1100227,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:37:14.797Z",
+            "dimensions": [
+              2560,
+              1707
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:kohde:carcassonnen-linnoituskaupunki",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-kohde-carcassonnen-linnoituskaupunki-25ec0b1e82ce.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "25ec0b1e82ce2213d89a283aa9fb98585bb2dadf1045d72442348df2268b67b5",
+            "bytes": 842675,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:37:16.739Z",
+            "dimensions": [
+              1563,
+              1006
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "FRA:kohde:carcassonnen-linnoituskaupunki",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/fra-kohde-carcassonnen-linnoituskaupunki-29c43cfd2d39.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "29c43cfd2d39c501eef35eff18a3ca5e224a081f3ccc634484cac9ffff873682",
+            "bytes": 1725943,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:37:18.662Z",
+            "dimensions": [
+              2560,
+              1650
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "pr": 2319,
+      "url": "https://github.com/ravelius/Matkakirja/pull/2319",
+      "head": "f862819adbbdb407336d667e2530227b18d2b849",
+      "name": "Kööpenhaminan Freja",
+      "delivery": {
+        "createdAt": "2026-09-12T18:37:07.431Z",
+        "items": [
+          {
+            "key": "kobenhavn:freja",
+            "id": "kobenhavn-freja-07d795379e80",
+            "fileName": "kobenhavn-freja-07d795379e80.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-corrections-20260912/kobenhavn-freja/delivery/kobenhavn-freja-07d795379e80.jpg",
+            "targetKey": "kohtaamiset/20260912/kobenhavn-freja-07d795379e80.jpg",
+            "url": "https://media.matkakirja.app/kohtaamiset/20260912/kobenhavn-freja-07d795379e80.jpg",
+            "sha256": "07d795379e80928c74509a04dae41e806f6545f42636245305d8a80229a267f2",
+            "bytes": 671249,
+            "dimensions": [
+              1254,
+              1254
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-corrections-20260912/kobenhavn-freja/kobenhavn-freja-v1.png",
+            "nativeSha256": "aa95af108f39265e367fb37c1b9ad3231b6100dac895b6a62db9809072f82632",
+            "kind": "generated-encounter",
+            "rootApproved": true,
+            "captionFi": "Freja sulkee Tivolin musiikkikarusellia ja pysähtyy kuuntelemaan matkaajan aarrekysymystä.",
+            "source": {
+              "label": "Matkakirjan havainnekuva",
+              "sources": [],
+              "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-corrections-20260912/kobenhavn-freja/qa-v1.json",
+            "gameIntegrated": false
+          }
+        ]
+      },
+      "rootQa": {
+        "expectedCount": 1,
+        "publicationAuthorized": true,
+        "reviewer": "root",
+        "checkedAt": "2026-09-12T18:37:06.974520+00:00",
+        "notes": "Personally viewed generated native. Same Freja identity, both eyes direct camera, raised/furrowed brows and asymmetric restrained amusement, key/lock and both hands plausible. Carousel immediately behind and three departing visitors clearly visible. Natural flash/ambient photographic rendering, no etched microcontrast. New whole generation preserves earlier versions. Fresh canon accc7def/previous detailed017dbb08 consistent closing-time encounter.",
+        "items": [
+          {
+            "key": "kobenhavn:freja",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-corrections-20260912/kobenhavn-freja/kobenhavn-freja-v1.png",
+            "sha256": "aa95af108f39265e367fb37c1b9ad3231b6100dac895b6a62db9809072f82632",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-corrections-20260912/kobenhavn-freja/qa-v1.json",
+            "sourceItem": {
+              "captionFi": "Freja sulkee Tivolin musiikkikarusellia ja pysähtyy kuuntelemaan matkaajan aarrekysymystä.",
+              "promptActual": "Use case: photorealistic-natural. Create one entirely NEW square present-day documentary photograph for Matkakirja. Reference 1 gives only the real Tivoli Musikkarrusellen architecture; reference 2 gives only the fictional Freja identity. Do not edit or reuse the old composition.\nThe viewer is a traveler standing immediately at the entrance of the stationary carousel at closing time. Freja is right beside its small access gate, with the cream-and-gold canopy, carved horses, brass poles and a little of the real upper gallery close behind her. A small family of three visitors is walking off the ride behind her, visibly human at a believable nearby scale, with slight natural walking blur. No remote lake or distant carousel.\nFreja is the same ordinary 31-year-old Danish attendant: heavily freckled pale angular face, auburn hair in two untidy braids, worn forest-green work coveralls, white T-shirt, burgundy waist pouch. She has been turning a key in the gate lock, and suddenly turns her face toward the lens when the traveler asks about a treasure. BOTH eyes look directly into the camera. Her expression is arrested between stern 'we are closed' and surprised incredulous amusement: one eyebrow lifts while the other remains drawn down, lips slightly parted with just one corner beginning to rise. A compelling spontaneous human reaction, no posed grin. One hand holds the key naturally in the gate lock; the other rests loosely on the gate, both fully visible and anatomically simple.\nEye-level 35 mm environmental photograph, camera about 1.5 metres away. Upper thighs through whole head visible, the face prominent but with breathing room around the hair and hands. Freja slightly off-center so the departing people and horses tell a second small story. A credible candid photograph taken with gentle fill flash at early dusk: pale neutral Nordic skin, soft grey-blue ambient light, modest warm practical carousel bulbs. Expose the background clearly. Moderate depth of field so the nearby architecture and people remain recognizable; quiet lens rendering, no decorative bokeh. Real cotton wrinkles, unretouched skin and modest imperfections in painted wood. Soft photographic detail and restrained contrast, no artificial sharpening, HDR, cinematic teal-orange grading, waxy skin, CGI or illustration texture. No border, fading, watermark, captions, or readable invented lettering. Keep critical details within the central 84 percent for later edge treatment.\n",
+              "character": "Freja — karusellinhoitaja",
+              "source": {
+                "label": "Matkakirjan kohtaamiskuva",
+                "creator": "OpenAI, Matkakirjan toimituksen ohjaama kuva"
+              },
+              "sources": []
+            }
+          }
+        ]
+      },
+      "publicReadbackReceipt": {
+        "items": [
+          {
+            "key": "kobenhavn:freja",
+            "url": "https://media.matkakirja.app/kohtaamiset/20260912/kobenhavn-freja-07d795379e80.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "07d795379e80928c74509a04dae41e806f6545f42636245305d8a80229a267f2",
+            "bytes": 671249,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:37:12.036Z",
+            "dimensions": [
+              1254,
+              1254
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "pr": 2320,
+      "url": "https://github.com/ravelius/Matkakirja/pull/2320",
+      "head": "2f68745642f7686c0111c13014b2e24733cc2edf",
+      "name": "Ales stenar, Urnes, Visby ja Gamla Uppsala",
+      "delivery": {
+        "createdAt": "2026-09-12T18:41:00.452Z",
+        "items": [
+          {
+            "key": "SWE:kohde:ales-stenar",
+            "id": "swe-kohde-ales-stenar-52b283639af9",
+            "fileName": "swe-kohde-ales-stenar-52b283639af9.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic-sites8-20260912/delivery/swe-kohde-ales-stenar-52b283639af9.jpg",
+            "targetKey": "karttanostot/20260912/swe-kohde-ales-stenar-52b283639af9.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-ales-stenar-52b283639af9.jpg",
+            "sha256": "52b283639af97b6d43bf9b96aade3812ce9197ca4173372b6d75e2444f829305",
+            "bytes": 1768778,
+            "dimensions": [
+              2560,
+              1708
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/references/ales-stenar-authentic.jpg",
+            "nativeSha256": "5231010f6f30be375f3524b86c9f52f315f11dbc9f29f7cfc35b92c94819075d",
+            "kind": "authentic-photograph",
+            "rootApproved": true,
+            "captionFi": "Ales stenarin 59 lohkaretta muodostavat 67 metriä pitkän kivilaivan Skoonen avoimella rannikkoharjanteella.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Anders Lagerås",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Ales_stenar1_kaseberga.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Ales_stenar1_kaseberga.jpg"
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "SWE:kohde:ales-stenar",
+            "id": "swe-kohde-ales-stenar-a5345172fddc",
+            "fileName": "swe-kohde-ales-stenar-a5345172fddc.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic-sites8-20260912/delivery/swe-kohde-ales-stenar-a5345172fddc.jpg",
+            "targetKey": "karttanostot/20260912/swe-kohde-ales-stenar-a5345172fddc.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-ales-stenar-a5345172fddc.jpg",
+            "sha256": "a5345172fddc09762504fe42a415971be3b534faf044f780a2782191bb5bb193",
+            "bytes": 812850,
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/assets/swe-ales-stenar-v1.png",
+            "nativeSha256": "cb9331e89d45f849d1b9284227056ad22b56b50e6303db5d8dd98d957cbee84c",
+            "kind": "generated-illustration",
+            "rootApproved": true,
+            "captionFi": "Ales stenarin kivilaiva kaartuu Kåsebergan nurmiharjanteella Itämeren äärellä.",
+            "source": {
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Anders Lagerås",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Ales_stenar1_kaseberga.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "referenceCreator": "Anders Lagerås",
+              "referenceSha256": "5231010f6f30be375f3524b86c9f52f315f11dbc9f29f7cfc35b92c94819075d",
+              "changes": "Uusi ImageGen-kuva luotiin katsotun paikkareferenssin pohjalta; sää, valo ja yksityiskohdat muuttuivat.",
+              "carryForwardRequired": true
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "NOR:kohde:urnes",
+            "id": "nor-kohde-urnes-ef7aa0a1467d",
+            "fileName": "nor-kohde-urnes-ef7aa0a1467d.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic-sites8-20260912/delivery/nor-kohde-urnes-ef7aa0a1467d.jpg",
+            "targetKey": "karttanostot/20260912/nor-kohde-urnes-ef7aa0a1467d.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/nor-kohde-urnes-ef7aa0a1467d.jpg",
+            "sha256": "ef7aa0a1467db0369816e8aa10783f79c1059e5f33242a0cd9ccd6f539c5abef",
+            "bytes": 1489063,
+            "dimensions": [
+              2560,
+              1714
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/references/urnes-authentic.jpg",
+            "nativeSha256": "e438db62145d7ebb19b98a630c5f63c0865688cd32b8f64875382567513145a2",
+            "kind": "authentic-photograph",
+            "rootApproved": true,
+            "captionFi": "Urnesin 1100-luvun sauvakirkko seisoo hautausmaallaan Lustrafjordin jyrkän rantarinteen yllä.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Concierge.2C",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG",
+              "license": "CC BY-SA 3.0 NO",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/no/deed.en",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG"
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "NOR:kohde:urnes",
+            "id": "nor-kohde-urnes-13afbfbbe1bf",
+            "fileName": "nor-kohde-urnes-13afbfbbe1bf.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic-sites8-20260912/delivery/nor-kohde-urnes-13afbfbbe1bf.jpg",
+            "targetKey": "karttanostot/20260912/nor-kohde-urnes-13afbfbbe1bf.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/nor-kohde-urnes-13afbfbbe1bf.jpg",
+            "sha256": "13afbfbbe1bfdad5e0b505fccd5c5e8c80594f217ba8c169f91320554f2fe59c",
+            "bytes": 694788,
+            "dimensions": [
+              1533,
+              1026
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/assets/nor-urnes-v2.png",
+            "nativeSha256": "fd4e427c8d8b5197bbba7a6082358d4d40518fcf54b6ee78bf210520dc3d3b91",
+            "kind": "generated-illustration",
+            "rootApproved": true,
+            "captionFi": "Tummaksi patinoitunut Urnesin sauvakirkko kohoaa hautausmaan ja Lustrafjordin välisellä rinteellä.",
+            "source": {
+              "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi Concierge.2C / Wikimedia Commons, CC BY-SA 3.0 NO",
+              "creator": "OpenAI; referenssikuva Concierge.2C",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG",
+              "license": "CC BY-SA 3.0 NO",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/no/deed.en",
+              "referenceCreator": "Concierge.2C",
+              "referenceSha256": "e438db62145d7ebb19b98a630c5f63c0865688cd32b8f64875382567513145a2",
+              "changes": "Uusi ImageGen-kuva luotiin katsotun paikkareferenssin pohjalta; sää, valo ja yksityiskohdat muuttuivat.",
+              "carryForwardRequired": true
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "SWE:kohde:visby",
+            "id": "swe-kohde-visby-05552be7d145",
+            "fileName": "swe-kohde-visby-05552be7d145.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic-sites8-20260912/delivery/swe-kohde-visby-05552be7d145.jpg",
+            "targetKey": "karttanostot/20260912/swe-kohde-visby-05552be7d145.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-visby-05552be7d145.jpg",
+            "sha256": "05552be7d14548036d5177215118489d9625313e1d1b04b24c5619a8a2402c1c",
+            "bytes": 1897443,
+            "dimensions": [
+              2560,
+              1920
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/references/visby-city-wall-authentic.jpg",
+            "nativeSha256": "4a8305ae6b710ef6c6cdac904fe2d9a0886da4eda8f7a7377bcb1b65a91d258e",
+            "kind": "authentic-photograph",
+            "rootApproved": true,
+            "captionFi": "Visbyn keskiaikainen kalkkikivimuuri torneineen kiertää yhä lähes koko vanhaa kaupunkia.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "VisbyStar",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Visby_city_wall.jpg",
+              "license": "CC0 1.0",
+              "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Visby_city_wall.jpg"
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "SWE:kohde:visby",
+            "id": "swe-kohde-visby-727d4c9ed518",
+            "fileName": "swe-kohde-visby-727d4c9ed518.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic-sites8-20260912/delivery/swe-kohde-visby-727d4c9ed518.jpg",
+            "targetKey": "karttanostot/20260912/swe-kohde-visby-727d4c9ed518.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-visby-727d4c9ed518.jpg",
+            "sha256": "727d4c9ed5181261077f77e5e5ed0b3537d2393f97e8d2d1a6e09ac9a9aee8e1",
+            "bytes": 835182,
+            "dimensions": [
+              1448,
+              1086
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/assets/swe-visby-v1.png",
+            "nativeSha256": "4537609430890b9817dc2d486b81142b53660ddb4157feab8247e5b349acaadd",
+            "kind": "generated-illustration",
+            "rootApproved": true,
+            "captionFi": "Visbyn lähes ehjä keskiaikainen muuri jatkuu suorakulmaisten tornien rytmittämänä vanhan kaupungin laidalla.",
+            "source": {
+              "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi VisbyStar / Wikimedia Commons, CC0 1.0",
+              "creator": "OpenAI; referenssikuva VisbyStar",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Visby_city_wall.jpg",
+              "license": "CC0 1.0",
+              "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+              "referenceCreator": "VisbyStar",
+              "referenceSha256": "4a8305ae6b710ef6c6cdac904fe2d9a0886da4eda8f7a7377bcb1b65a91d258e",
+              "changes": "Uusi ImageGen-kuva luotiin katsotun paikkareferenssin pohjalta; sää, valo ja yksityiskohdat muuttuivat.",
+              "carryForwardRequired": true
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "SWE:kohde:gamla-uppsala",
+            "id": "swe-kohde-gamla-uppsala-c2efa57c7bb1",
+            "fileName": "swe-kohde-gamla-uppsala-c2efa57c7bb1.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic-sites8-20260912/delivery/swe-kohde-gamla-uppsala-c2efa57c7bb1.jpg",
+            "targetKey": "karttanostot/20260912/swe-kohde-gamla-uppsala-c2efa57c7bb1.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-gamla-uppsala-c2efa57c7bb1.jpg",
+            "sha256": "c2efa57c7bb1b89e45fb6d3ab195e4fcb31713820ef21aeb2daea1a81e71afd0",
+            "bytes": 1039677,
+            "dimensions": [
+              2560,
+              1327
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/references/gamla-uppsala-royal-mounds-authentic.jpg",
+            "nativeSha256": "bbafd82a195c1215337400add327c8896d85a87a58a37f9d9bb46bb571290e72",
+            "kind": "authentic-photograph",
+            "rootApproved": true,
+            "captionFi": "Gamla Uppsalan kolme suurta kuningaskumpua kohoavat matalina, ruohottuneina hautakumpuina avoimella tasangolla.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Carl L. Thunberg for Föreningen Kulturarvsbilder",
+              "filePage": "https://commons.wikimedia.org/wiki/File:The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_(2024-07-21).jpg",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_%282024-07-21%29.jpg"
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/manifest.json",
+            "gameIntegrated": false
+          },
+          {
+            "key": "SWE:kohde:gamla-uppsala",
+            "id": "swe-kohde-gamla-uppsala-d025b78f39b0",
+            "fileName": "swe-kohde-gamla-uppsala-d025b78f39b0.jpg",
+            "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic-sites8-20260912/delivery/swe-kohde-gamla-uppsala-d025b78f39b0.jpg",
+            "targetKey": "karttanostot/20260912/swe-kohde-gamla-uppsala-d025b78f39b0.jpg",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-gamla-uppsala-d025b78f39b0.jpg",
+            "sha256": "d025b78f39b09e55284994d7f5b91f422afb6aaa5bcbf768fe5101d4424ac01b",
+            "bytes": 738809,
+            "dimensions": [
+              1742,
+              903
+            ],
+            "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/assets/swe-gamla-uppsala-v1.png",
+            "nativeSha256": "1b15c388729dfc5584c631790d088c81e075286c5d28304319104179a57c6ed4",
+            "kind": "generated-illustration",
+            "rootApproved": true,
+            "captionFi": "Gamla Uppsalan kuningaskummut muodostavat loivan ruohottuneen ketjun Uppsalan avoimella tasangolla.",
+            "source": {
+              "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi Carl L. Thunberg / Föreningen Kulturarvsbilder / Wikimedia Commons, CC BY 4.0",
+              "creator": "OpenAI; referenssikuva Carl L. Thunberg for Föreningen Kulturarvsbilder",
+              "filePage": "https://commons.wikimedia.org/wiki/File:The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_(2024-07-21).jpg",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+              "referenceCreator": "Carl L. Thunberg for Föreningen Kulturarvsbilder",
+              "referenceSha256": "bbafd82a195c1215337400add327c8896d85a87a58a37f9d9bb46bb571290e72",
+              "changes": "Uusi ImageGen-kuva luotiin katsotun paikkareferenssin pohjalta; sää, valo ja yksityiskohdat muuttuivat.",
+              "carryForwardRequired": true
+            },
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/manifest.json",
+            "gameIntegrated": false
+          }
+        ]
+      },
+      "rootQa": {
+        "createdAt": "2026-09-12T18:36:35.841834+00:00",
+        "publicationAuthorized": true,
+        "expectedCount": 8,
+        "status": "root-approved",
+        "personallyInspected": true,
+        "items": [
+          {
+            "key": "SWE:kohde:ales-stenar",
+            "kind": "authentic",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/references/ales-stenar-authentic.jpg",
+            "sha256": "5231010f6f30be375f3524b86c9f52f315f11dbc9f29f7cfc35b92c94819075d",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Ales stenarin 59 lohkaretta muodostavat 67 metriä pitkän kivilaivan Skoonen avoimella rannikkoharjanteella.",
+              "source": {
+                "provider": "Wikimedia Commons",
+                "creator": "Anders Lagerås",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Ales_stenar1_kaseberga.jpg",
+                "license": "CC BY-SA 3.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Ales_stenar1_kaseberga.jpg"
+              }
+            },
+            "selfVerifiedSource": {
+              "filePageRead": true,
+              "directMediaVerified": true,
+              "localShaVerifiedNow": true,
+              "nativeViewedBySol": true
+            },
+            "notes": "Root QA candidate only; no root visual decision recorded."
+          },
+          {
+            "key": "SWE:kohde:ales-stenar",
+            "kind": "generated",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/assets/swe-ales-stenar-v1.png",
+            "sha256": "cb9331e89d45f849d1b9284227056ad22b56b50e6303db5d8dd98d957cbee84c",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Ales stenarin kivilaiva kaartuu Kåsebergan nurmiharjanteella Itämeren äärellä.",
+              "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja game location photograph\nPrimary request: Create a completely new, ordinary documentary travel photograph of Ale's Stones (Ales stenar) at Kåseberga in Skåne, Sweden, using the supplied authentic photograph as the strict site and geometry reference.\nInput image: reference photograph of the actual surviving monument; preserve the real stone arrangement.\nScene/backdrop: the existing 67-metre ship-shaped setting of large upright weathered stones on a low open coastal grass ridge, with a restrained glimpse of the Baltic Sea and flat Skåne horizon.\nSubject: the full curving double row of standing stones must read clearly as a stone ship; larger end stones and irregular natural stone sizes, spacing, lean and surfaces.\nStyle/medium: believable contemporary documentary photograph, natural optics and surfaces, modest consumer full-frame camera, slightly soft lens rendering, realistic dynamic range and depth.\nComposition/framing: landscape 3:2, human eye level from just inside or beside one end, strong depth along both rows, monument fills most of frame, limited empty sky.\nLighting/mood: calm cool Nordic daylight with thin clouds and gentle shadows; no dramatic sunset.\nConstraints: keep the real location, low terrain, coastline relationship and monument geometry recognizably faithful to the reference; no people, signs, paths dominating, text, watermark, invented ruins.\nAvoid: CGI, painting, fantasy, HDR, oversaturation, hyper-sharpening, perfect repeated stones, extra monuments, aerial view.",
+              "derivativeSource": {
+                "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+                "creator": "OpenAI; referenssikuva Anders Lagerås",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Ales_stenar1_kaseberga.jpg",
+                "license": "CC BY-SA 3.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "referenceCreator": "Anders Lagerås",
+                "referenceSha256": "5231010f6f30be375f3524b86c9f52f315f11dbc9f29f7cfc35b92c94819075d",
+                "changes": "Uusi ImageGen-kuva luotiin katsotun paikkareferenssin pohjalta; sää, valo ja yksityiskohdat muuttuivat.",
+                "carryForwardRequired": true
+              }
+            },
+            "selfVerifiedSource": {
+              "localShaVerifiedNow": true,
+              "nativeViewedBySol": true,
+              "sourceReferenceViewedBySol": true,
+              "selfQa": {
+                "authenticViewed": true,
+                "generatedViewed": true,
+                "status": "candidate-pass",
+                "notes": "Kivilaivan molemmat kaarevat rivit, vaihtelevat lohkareet ja matala rannikkotopografia vastaavat referenssiä. Luonnollinen päivänvalo ja tavallinen valokuvailme; ei tekstiä tai ihmisiä."
+              }
+            },
+            "notes": "Root QA candidate only; generated image is a present-day place illustration, not an archival photograph."
+          },
+          {
+            "key": "NOR:kohde:urnes",
+            "kind": "authentic",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/references/urnes-authentic.jpg",
+            "sha256": "e438db62145d7ebb19b98a630c5f63c0865688cd32b8f64875382567513145a2",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Urnesin 1100-luvun sauvakirkko seisoo hautausmaallaan Lustrafjordin jyrkän rantarinteen yllä.",
+              "source": {
+                "provider": "Wikimedia Commons",
+                "creator": "Concierge.2C",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG",
+                "license": "CC BY-SA 3.0 NO",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/no/deed.en",
+                "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG"
+              }
+            },
+            "selfVerifiedSource": {
+              "filePageRead": true,
+              "directMediaVerified": true,
+              "localShaVerifiedNow": true,
+              "nativeViewedBySol": true
+            },
+            "notes": "Root QA candidate only; no root visual decision recorded."
+          },
+          {
+            "key": "NOR:kohde:urnes",
+            "kind": "generated",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/assets/nor-urnes-v2.png",
+            "sha256": "fd4e427c8d8b5197bbba7a6082358d4d40518fcf54b6ee78bf210520dc3d3b91",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-sites2-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Tummaksi patinoitunut Urnesin sauvakirkko kohoaa hautausmaan ja Lustrafjordin välisellä rinteellä.",
+              "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja location image\nPrimary request: Create a completely new contemporary documentary photograph of the real Urnes Stave Church at Ornes, using the supplied authentic photograph as strict architecture and setting reference.\nScene: the small dark timber church in its grassy graveyard on the steep green slope above Lustrafjorden; quiet Norwegian summer day.\nComposition: ordinary standing eye-level three-quarter exterior view, landscape frame, whole church readable with modest fjord and mountain context; natural imperfect travel-photo framing.\nStyle: believable camera photograph, soft overcast daylight, restrained dynamic range, uneven natural sharpness, weathered dark wood and roof shingles.\nAccuracy: preserve the authentic church silhouette, compact tower and spire, real roof junctions, porch, graveyard and fjord slope. The long side wall must remain predominantly plain, very dark weathered vertical timber. Any historic carved boards must be narrow, low-contrast, shadowed, subtle and subordinate exactly as in the reference; do not create bright, broad, repeated or full-height decorative panels.\nAvoid: extra ornament, repeated knotwork panels, fantasy stave-church features, altered roof tiers, CGI, painting, HDR, microcontrast, plastic wood, dramatic light, people, text, watermark.",
+              "derivativeSource": {
+                "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi Concierge.2C / Wikimedia Commons, CC BY-SA 3.0 NO",
+                "creator": "OpenAI; referenssikuva Concierge.2C",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG",
+                "license": "CC BY-SA 3.0 NO",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/no/deed.en",
+                "referenceCreator": "Concierge.2C",
+                "referenceSha256": "e438db62145d7ebb19b98a630c5f63c0865688cd32b8f64875382567513145a2",
+                "changes": "Uusi ImageGen-kuva luotiin katsotun paikkareferenssin pohjalta; sää, valo ja yksityiskohdat muuttuivat.",
+                "carryForwardRequired": true
+              }
+            },
+            "selfVerifiedSource": {
+              "localShaVerifiedNow": true,
+              "nativeViewedBySol": true,
+              "sourceReferenceViewedBySol": true,
+              "selfQa": {
+                "generatedViewed": true,
+                "authenticViewedSideBySide": true,
+                "decision": "candidate-pass",
+                "notes": "V2 säilyttää alkuperäisen kirkon porrastetut paanukatot, tornin, kuistin, hautausmaan ja vuonorinteen hyvin läheisesti. Neljä veistettyä lautaa näkyvät edelleen lähteen mukaisissa paikoissa, mutta ne ovat nyt tummia, kapeita ja sivuseinään sulautuvia eivätkä hallitse kuvaa. Materiaalit, pilvinen valo ja optinen terävyys ovat uskottavan valokuvamaisia. Sommittelu seuraa referenssiä hyvin läheisesti, joten johdannaisattribuutio on pakollinen.",
+                "knownLimit": "Generated details are not documentary evidence of individual carving motifs; root must inspect before acceptance.",
+                "rootPersonallyInspected": false
+              }
+            },
+            "notes": "Root QA candidate only; generated image is a present-day place illustration, not an archival photograph."
+          },
+          {
+            "key": "SWE:kohde:visby",
+            "kind": "authentic",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/references/visby-city-wall-authentic.jpg",
+            "sha256": "4a8305ae6b710ef6c6cdac904fe2d9a0886da4eda8f7a7377bcb1b65a91d258e",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Visbyn keskiaikainen kalkkikivimuuri torneineen kiertää yhä lähes koko vanhaa kaupunkia.",
+              "source": {
+                "provider": "Wikimedia Commons",
+                "creator": "VisbyStar",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Visby_city_wall.jpg",
+                "license": "CC0 1.0",
+                "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Visby_city_wall.jpg"
+              }
+            },
+            "selfVerifiedSource": {
+              "filePageRead": true,
+              "directMediaVerified": true,
+              "localShaVerifiedNow": true,
+              "nativeViewedBySol": true
+            },
+            "notes": "Root QA candidate only; no root visual decision recorded."
+          },
+          {
+            "key": "SWE:kohde:visby",
+            "kind": "generated",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/assets/swe-visby-v1.png",
+            "sha256": "4537609430890b9817dc2d486b81142b53660ddb4157feab8247e5b349acaadd",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Visbyn lähes ehjä keskiaikainen muuri jatkuu suorakulmaisten tornien rytmittämänä vanhan kaupungin laidalla.",
+              "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja location image\nPrimary request: Create a completely new contemporary documentary travel photograph of Visby's real medieval city wall on Gotland, using the supplied authentic photograph as strict architecture reference.\nScene: a preserved stretch of pale grey limestone curtain wall with authentic square crenellations and several unevenly spaced rectangular medieval towers; ordinary grass and pedestrian path beside it in present-day Visby.\nComposition: landscape frame from standing eye level, slightly oblique along the wall so its 3.4-kilometre continuity is suggested; modest imperfect framing, no centered postcard symmetry.\nStyle: believable everyday camera photograph, soft northern daylight, restrained contrast, natural limestone weathering and grass, normal optical depth.\nAccuracy: keep the wall height, masonry, crenellation shape, tower proportions and mostly level terrain faithful to the reference. Present-day scene only; no invented medieval activity.\nAvoid: fantasy castle battlements, round towers, mountains, dramatic sunset, HDR, CGI, microcontrast, plastic masonry, crowds, text, watermark.",
+              "derivativeSource": {
+                "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi VisbyStar / Wikimedia Commons, CC0 1.0",
+                "creator": "OpenAI; referenssikuva VisbyStar",
+                "filePage": "https://commons.wikimedia.org/wiki/File:Visby_city_wall.jpg",
+                "license": "CC0 1.0",
+                "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+                "referenceCreator": "VisbyStar",
+                "referenceSha256": "4a8305ae6b710ef6c6cdac904fe2d9a0886da4eda8f7a7377bcb1b65a91d258e",
+                "changes": "Uusi ImageGen-kuva luotiin katsotun paikkareferenssin pohjalta; sää, valo ja yksityiskohdat muuttuivat.",
+                "carryForwardRequired": true
+              }
+            },
+            "selfVerifiedSource": {
+              "localShaVerifiedNow": true,
+              "nativeViewedBySol": true,
+              "sourceReferenceViewedBySol": true,
+              "selfQa": {
+                "authenticViewed": true,
+                "generatedViewed": true,
+                "decision": "candidate-pass",
+                "notes": "Muurin matala pitkä massa, neliömäiset sakarat, suorakulmaiset tornit ja tasainen maasto vastaavat referenssiä. Tavallinen nykyhetken katutilanne ja märkä ajorata tekevät kuvasta uskottavan; kaksi pientä jalankulkijaa eivät muodosta lavastettua tarinaa. Taivas ja kivi ovat hieman puhtaat, mutta kuvassa ei näy selvästi CGI-rakennetta tai fantasiageometriaa."
+              }
+            },
+            "notes": "Root QA candidate only; generated image is a present-day place illustration, not an archival photograph."
+          },
+          {
+            "key": "SWE:kohde:gamla-uppsala",
+            "kind": "authentic",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/references/gamla-uppsala-royal-mounds-authentic.jpg",
+            "sha256": "bbafd82a195c1215337400add327c8896d85a87a58a37f9d9bb46bb571290e72",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Gamla Uppsalan kolme suurta kuningaskumpua kohoavat matalina, ruohottuneina hautakumpuina avoimella tasangolla.",
+              "source": {
+                "provider": "Wikimedia Commons",
+                "creator": "Carl L. Thunberg for Föreningen Kulturarvsbilder",
+                "filePage": "https://commons.wikimedia.org/wiki/File:The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_(2024-07-21).jpg",
+                "license": "CC BY 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+                "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_%282024-07-21%29.jpg"
+              }
+            },
+            "selfVerifiedSource": {
+              "filePageRead": true,
+              "directMediaVerified": true,
+              "localShaVerifiedNow": true,
+              "nativeViewedBySol": true
+            },
+            "notes": "Root QA candidate only; no root visual decision recorded."
+          },
+          {
+            "key": "SWE:kohde:gamla-uppsala",
+            "kind": "generated",
+            "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/assets/swe-gamla-uppsala-v1.png",
+            "sha256": "1b15c388729dfc5584c631790d088c81e075286c5d28304319104179a57c6ed4",
+            "status": "approved",
+            "personallyInspected": true,
+            "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-1828-20260912/manifest.json",
+            "sourceItem": {
+              "captionFi": "Gamla Uppsalan kuningaskummut muodostavat loivan ruohottuneen ketjun Uppsalan avoimella tasangolla.",
+              "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja location image\nPrimary request: Create a completely new present-day documentary landscape photograph of the real Royal Mounds at Gamla Uppsala, using the supplied authentic photograph as strict terrain reference.\nScene: the three large rounded grass-covered burial mounds on the broad, low, open plain at Gamla Uppsala; simple fence and footpath may remain small and secondary.\nComposition: wide landscape frame from ordinary standing eye level, slightly off-center and observational; show the real sequence and relative scale of the three mounds without making them steep mountains.\nStyle: believable everyday camera photograph, changeable Swedish summer cloud cover, soft natural daylight, restrained contrast, natural grass texture and mildly uneven optical sharpness.\nAccuracy: preserve the low horizon, smooth mound profiles, broad field and sparse tree edge from the reference. Present-day site only; no invented ancient ceremony or buildings.\nAvoid: oversized hills, dramatic aerial view, fantasy earthworks, crowds, staged figures, HDR, CGI, hyper-detailed grass, perfect symmetry, dramatic sunset, text, watermark.",
+              "derivativeSource": {
+                "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi Carl L. Thunberg / Föreningen Kulturarvsbilder / Wikimedia Commons, CC BY 4.0",
+                "creator": "OpenAI; referenssikuva Carl L. Thunberg for Föreningen Kulturarvsbilder",
+                "filePage": "https://commons.wikimedia.org/wiki/File:The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_(2024-07-21).jpg",
+                "license": "CC BY 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+                "referenceCreator": "Carl L. Thunberg for Föreningen Kulturarvsbilder",
+                "referenceSha256": "bbafd82a195c1215337400add327c8896d85a87a58a37f9d9bb46bb571290e72",
+                "changes": "Uusi ImageGen-kuva luotiin katsotun paikkareferenssin pohjalta; sää, valo ja yksityiskohdat muuttuivat.",
+                "carryForwardRequired": true
+              }
+            },
+            "selfVerifiedSource": {
+              "localShaVerifiedNow": true,
+              "nativeViewedBySol": true,
+              "sourceReferenceViewedBySol": true,
+              "selfQa": {
+                "authenticViewed": true,
+                "generatedViewed": true,
+                "decision": "candidate-pass",
+                "notes": "Kolme kumpua säilyvät lähteen mukaisesti loivina eivätkä muutu vuoriksi; niiden järjestys, avoin tasanko, aita, polku ja harva puuraja ovat uskottavia. Kuva näyttää nykyhetken valokuvalta ilman keksittyä historiallista seremoniaa. Pilvet ja vihreys ovat hieman ihanteelliset, mutta mittakaava, pinnat ja optinen perspektiivi ovat luonnolliset."
+              }
+            },
+            "notes": "Root QA candidate only; generated image is a present-day place illustration, not an archival photograph."
+          }
+        ],
+        "holds": [],
+        "integrity": {
+          "allLocalShaVerifiedNow": true,
+          "allEightHaveLicense": true,
+          "published": false
+        },
+        "reviewer": "root",
+        "checkedAt": "2026-09-12T18:40:59.697044+00:00",
+        "rootNotes": {
+          "ales-stenar": "Paired authentic/generated personally viewed: ship rows, end stone, stone irregularity, coast and low ground retain source geometry; photographic rendering.",
+          "urnes": "V2 and reference personally viewed. The carved boards exist in reference, now dark/subordinate. Roof/tower/porch and fjord slope preserved. Detailed carved motif reconstruction is not documentary evidence.",
+          "visby": "Wall tower sequence, blunt ruined square block and roadside geometry match authentic; two incidental passersby credible; ordinary daylight.",
+          "gamla-uppsala": "Three principal shallow mound profiles, path/fence positions preserve source. Natural rough grass optical detail."
+        }
+      },
+      "publicReadbackReceipt": {
+        "items": [
+          {
+            "key": "SWE:kohde:ales-stenar",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-ales-stenar-52b283639af9.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "52b283639af97b6d43bf9b96aade3812ce9197ca4173372b6d75e2444f829305",
+            "bytes": 1768778,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:41:03.162Z",
+            "dimensions": [
+              2560,
+              1708
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "SWE:kohde:ales-stenar",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-ales-stenar-a5345172fddc.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "a5345172fddc09762504fe42a415971be3b534faf044f780a2782191bb5bb193",
+            "bytes": 812850,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:41:05.714Z",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "NOR:kohde:urnes",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/nor-kohde-urnes-ef7aa0a1467d.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "ef7aa0a1467db0369816e8aa10783f79c1059e5f33242a0cd9ccd6f539c5abef",
+            "bytes": 1489063,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:41:07.804Z",
+            "dimensions": [
+              2560,
+              1714
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "NOR:kohde:urnes",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/nor-kohde-urnes-13afbfbbe1bf.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "13afbfbbe1bfdad5e0b505fccd5c5e8c80594f217ba8c169f91320554f2fe59c",
+            "bytes": 694788,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:41:09.883Z",
+            "dimensions": [
+              1533,
+              1026
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "SWE:kohde:visby",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-visby-05552be7d145.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "05552be7d14548036d5177215118489d9625313e1d1b04b24c5619a8a2402c1c",
+            "bytes": 1897443,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:41:12.062Z",
+            "dimensions": [
+              2560,
+              1920
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "SWE:kohde:visby",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-visby-727d4c9ed518.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "727d4c9ed5181261077f77e5e5ed0b3537d2393f97e8d2d1a6e09ac9a9aee8e1",
+            "bytes": 835182,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:41:14.082Z",
+            "dimensions": [
+              1448,
+              1086
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "SWE:kohde:gamla-uppsala",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-gamla-uppsala-c2efa57c7bb1.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "c2efa57c7bb1b89e45fb6d3ab195e4fcb31713820ef21aeb2daea1a81e71afd0",
+            "bytes": 1039677,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:41:16.133Z",
+            "dimensions": [
+              2560,
+              1327
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          },
+          {
+            "key": "SWE:kohde:gamla-uppsala",
+            "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-gamla-uppsala-d025b78f39b0.jpg",
+            "uploaded": true,
+            "httpStatus": 200,
+            "sha256": "d025b78f39b09e55284994d7f5b91f422afb6aaa5bcbf768fe5101d4424ac01b",
+            "bytes": 738809,
+            "mime": "image/jpeg",
+            "cors": "https://matkakirja.app",
+            "checkedAt": "2026-09-12T18:41:18.061Z",
+            "dimensions": [
+              1742,
+              903
+            ],
+            "space": "srgb",
+            "fullDecode": true,
+            "gameIntegrated": false
+          }
+        ],
+        "complete": true
+      }
+    }
+  ],
+  "totalMedia": 17,
+  "allRootApproved": true,
+  "allReceiptsComplete": true,
+  "gameLiveClaimed": false,
+  "nordic8": {
+    "status": "ready",
+    "pullRequest": 2320,
+    "head": "2f68745642f7686c0111c13014b2e24733cc2edf",
+    "mergeRequested": true,
+    "siteReview": {
+      "site": 190,
+      "published": true,
+      "rootHttpReadback": "148/148 records",
+      "all17NewMediaPresent": true
+    }
+  }
+}
