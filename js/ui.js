@@ -37,6 +37,8 @@ import {
   cachedImage, cachedSummary, fokusmoodiPaalla,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
   lautaValinta, palloTurvatilassa, asetaPalloKevennys, palloKevennetty, etusivupalloPaalla,
+  // Linssin yhteinen portti (body.aikajana-paalla): ks. linssikarttaEstaa.
+  linssiEstaa,
   // VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): yksi vakio ratkaisee,
   // ladataanko tasokarttaa lainkaan (js/ui-apurit.js).
   VANHA_KARTTA_KAYTOSSA,
@@ -4401,9 +4403,19 @@ export class UI {
    * kuoressa Matkusta-nappi, Liiku ja lehtien avaajat (kaupungin
    * napautus, Tutki) eivät toimi; sulkeminen palauttaa. Yksi portti,
    * yksi kenttä — tasokartalla (?lauta=kartta) kenttä on aina null.
+   *
+   * SAMA PORTTI KOSKEE PALLOLLA OLEVIA LINSSEJÄ (12.9.2026,
+   * satelliittilinssin vaatimus: *"Linssin merkit eivät kuluta
+   * pelivuoroa, käynnistä matkustusta eivätkä avaa kaupunkilehteä"*).
+   * Pallolinssin ajan bodyssa on luokka `aikajana-paalla`
+   * (js/ui-apurit.js linssiEstaa), ja se kertoo saman asian kuin
+   * linssikartan kuori: ruutu on linssin, ei pelin. Ilman tätä pallon
+   * pinnan napautus saattoi yhä osua nopanheiton kohteeseen tai
+   * kaupunkiin havaintopisteen vierestä (js/pallolauta/lauta.js
+   * napautaPintaan → doMove / avaaTutkinta).
    */
   linssikarttaEstaa() {
-    return Boolean(this.linssikartta);
+    return Boolean(this.linssikartta) || linssiEstaa();
   }
 
   /** Perillä? Linssikartta sulkeutuu, kun siirto päättyi uuteen kaupunkiin. */
@@ -17839,7 +17851,14 @@ export class UI {
         // Body-luokat (linssi-paalla, linssi-<tunnus>, linssi-valokuva)
         // ovat samat kuin kartalla: selite, sävyt ja rakeisuus lukevat ne.
         tuki.moottori.merkitseLuokat(linssi);
-        this.pallolinssi = { tunnus, kahva: linssi.pallolle(this.pallolauta, tila) ?? null };
+        /*
+         * KOLMAS PARAMETRI ON UI (12.9.2026, satelliittilinssi):
+         * pallolauta ei kanna ui-oliota, mutta linssi, joka vaihtaa
+         * KOKO YLÄPALKIN omakseen, tarvitsee karttaruudun (ui.mapPane)
+         * ja sulkemisen (ui.valitseLinssi(null)). Vanhat linssit
+         * jättävät parametrin lukematta, joten muutos on lisäys.
+         */
+        this.pallolinssi = { tunnus, kahva: linssi.pallolle(this.pallolauta, tila, this) ?? null };
         tulos = { tunnus, linssi, elementteja: 0, rasteroitu: false };
       } catch (syy) {
         console.error(syy);
@@ -19535,6 +19554,10 @@ export class UI {
   doMove(key) {
     // Radiotilassa kartalla ei liikuta.
     if (this.radioPaalla()) return;
+    // Linssin ajan ei liikuta lainkaan (ks. linssikarttaEstaa): pallon
+    // pinnan napautus ei saa kuluttaa pelivuoroa linssin merkkien
+    // vierestä.
+    if (this.linssikarttaEstaa()) return;
     // Nappula liikkuu: automaattiheiton "samasta pisteestä vain kerran"
     // -merkki vanhenee tässä (ks. automaattiheittoSallittu).
     this.automaattiheittoPaikka = null;
