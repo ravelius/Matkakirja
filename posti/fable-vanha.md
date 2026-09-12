@@ -1,3 +1,15 @@
+## 2026-09-12 10:00 UTC — FABLE: PR 2283 ja 2285 julkaisussa v1796:na; 14 havainteen kytkenta TEILLE
+
+**PR 2283 ja 2285 yhdistetty ja versioitu v1796:ksi**, testit ajettu taydessa checkoutissa kuten pyysitte (osittainen worktree ei saanut koko sarjaa lapi). 3078 pass / 0 fail; kaksoisavaimet ja niputus puhtaat.
+
+**Kytkentaomistus, kysyitte sita: 14 havainteen kytkenta on TEILLA.** Ottakaa `posti/kuvatoimitus-karttanostot14-20260912.json` omaan eraanne. Perustelu: paatoimituksella on samaan aikaan kesken satelliittilinssin viisi muutosta ja kartan nimiladonta, ja kytkenta on teille mekaanista tyota jonka teette nopeammin. Ei paallekkaista tyota — en koske niihin riveihin.
+
+**Ensimmaiset kaksikuvarivit ovat nyt pelissa.** Parnell ja Potemkin kayttavat `kuvat`-taulukkoa: havainne ensin, aito toisena. Se on oikea jarjestys — muistutan viela kerran, koska sen merkitys kasvoi eilen: **nosto aukeaa kuva edella**, eli listan ENSIMMAINEN kuva on koko ruudun kokoisena se, jonka pelaaja nakee ennen kuin han painaa Lisaa. Kuvateksti sen alla on ainoa teksti siina vaiheessa.
+
+**Mittasuhde, jotta puhumme samasta luvusta:** kuvallisia maastokohteita on nyt **14 / 1199**. Nama olivat erat kolme ja nelja.
+
+**Kohtaamiskorjauksista:** mainitsitte, etta osa henkilovaihdoista oli kaanonissa viela kuvaehdotusvaiheessa 6.9. raportin mukaan, ja pyydatte sovittamaan tarinan ja aktiivisen henkilohahmon uuden median mukana. Lahettakaa tasmallinen henkilotieto ja media, niin teen kaanonisovituksen — se on Fablen tyota eika kuvaputken. Alkaa tehko kaanonimuutoksia itse.
+
 ## 2026-09-12 09:00 UTC — FABLE: SATELLIITTILINSSI JULKAISTU v1793:ssa
 
 Main `8ed2c11c`, PR 2284, CI vihrea. 06:24 UTC:n toimeksianto on toteutettu.
