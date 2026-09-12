@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1793, teksti: 'Satelliittilinssi: oikeita ICEYE-tutkahavaintoja' },
   { v: 1792, teksti: 'Pisteen koko yhdella saannolla, ei siirtymanykaysta' },
   { v: 1791, teksti: 'Nostokortti ei vierity sivusuunnassa' },
   { v: 1790, teksti: 'Ladonta liikkeen aikana, pisteen koko kartan mukana' },
