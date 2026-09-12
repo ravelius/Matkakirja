@@ -1,9 +1,9 @@
 # Horatio–Livia E4 — lukukopio
 
-Sisältörevisio: `eu-hl-e4-20260913-r1-candidate1`
+Sisältörevisio: `eu-hl-e4-20260913-r1-approved1`
 
-Tila: lukukatselmusehdotus. Tekstejä ei ole kirjoitettu kaupunkipakkeihin,
-äänitetty, kohdistettu tai julkaistu. Nykyiset kuvat säilyvät.
+Tila: omistajan hyväksymät sanat; pack-integraatio valmis. Tekstejä ei ole
+vielä äänitetty, kohdistettu tai julkaistu. Nykyiset kuvat säilyvät.
 
 ## Tukholma
 

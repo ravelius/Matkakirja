@@ -1,13 +1,12 @@
 # Horatio–Livia E4 — parimitta, TTS, cuet ja kuvat
 
-Sisältörevisio: `eu-hl-e4-20260913-r1-candidate1`
+Sisältörevisio: `eu-hl-e4-20260913-r1-approved1`
 
 Julkaistu lähtörevisio: `origin/main`
 `079284e1cf09f650ed7e5f3d54f54c4e3da933b1` (v1819)
 
-Tila: tekninen katselmusaineisto lukukopion rinnalle. Ei pack-, audio-,
-alignment-, kuva- tai julkaisumuutoksia. Sisältö odottaa omistajan
-lukuhyväksyntää.
+Tila: omistajan hyväksymä ja packeihin integroitu sisältö tekniseen
+jäädytykseen. Audio-, alignment-, kuva- tai julkaisumuutoksia ei ole tehty.
 
 ## Yhteinen kuuntelubudjetti
 

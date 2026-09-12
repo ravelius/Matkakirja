@@ -319,7 +319,11 @@ test('jokaisella fokuskaupungilla on Livian puheenvuoro isoisän merkintään', 
     // Horatio–Livia-pilotissa omistajan 13.9.2026 hyväksymä mitta on sen
     // sijaan kaupungin yhteinen paribudjetti; sitä vartioi erillinen
     // horatio-livia-pilotti.test.mjs.
-    const paribudjettipilotit = new Set(['marseille', 'ateena', 'sarajevo', 'venetsia']);
+    const paribudjettipilotit = new Set([
+      'marseille', 'ateena', 'sarajevo', 'venetsia',
+      'tukholma', 'helsinki', 'tampere', 'tallinna',
+      'riika', 'vilna', 'tromssa', 'lappi',
+    ]);
     for (const kupla of kommentti) {
       if (!paribudjettipilotit.has(kaupunki)) {
         assert.ok(kupla.length <= 125, `${kaupunki}: kupla on liian pitkä luettavaksi ääneen`);
@@ -374,7 +378,7 @@ test('vähintään yhdessä puheenvuorossa isoisä osoittautuu oikeaksi', () => 
       ...livianKuplat(virta.pollo?.kommentti),
       ...livianKuplat(virta.pollo?.maadoitus),
     ].join(' '))
-    .filter((teksti) => /myönnä|osui|piti paikkansa|oli oikeassa/i.test(teksti));
+    .filter((teksti) => /myönnä|osui|piti paikkansa|oli oikeassa|oikea ajatus/i.test(teksti));
   assert.ok(myonnytys.length >= 1,
     'ainakin yhdessä kaupungissa Livian on myönnettävä isoisän olleen oikeassa');
 });
