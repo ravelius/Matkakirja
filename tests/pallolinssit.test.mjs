@@ -183,8 +183,14 @@ test('ui: pallolaudalla pallolle-linssi piirtyy pallolle eikä avaa linssikartta
   // linssillä pallolle-funktio.
   assert.match(ui, /pallolinssiKelpaa\(tunnus, lista = this\.linssiTuki\?\.kaikki \?\? \[\]\) \{/);
   assert.match(ui, /typeof lista\.find\(\(l\) => l\.tunnus === tunnus\)\?\.pallolle === 'function'/);
-  // Sytytys kutsuu pallolle-funktiota laudalla ja tilalla.
-  assert.match(ui, /linssi\.pallolle\(this\.pallolauta, tila\)/);
+  /*
+   * Sytytys kutsuu pallolle-funktiota laudalla ja tilalla — ja
+   * 12.9.2026 alkaen KOLMANTENA ui-oliona: satelliittilinssi vaihtaa
+   * koko yläpalkin, ja siihen tarvitaan karttaruutu (ui.mapPane) ja
+   * sulkeminen (ui.valitseLinssi(null)), joita pallolauta ei kanna.
+   * Vanhat linssit jättävät parametrin lukematta.
+   */
+  assert.match(ui, /linssi\.pallolle\(this\.pallolauta, tila, this\)/);
   // Sammutus purkaa kahvan.
   assert.match(ui, /nyt\.kahva\?\.pura\?\.\(\);/);
   assert.match(ui, /this\.sammutaPallolinssi\(\);/);

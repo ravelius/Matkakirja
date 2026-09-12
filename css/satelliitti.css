@@ -1,0 +1,368 @@
+/*
+ * SATELLIITTILINSSI — hohtavat havaintopisteet pallolla, linssin oma
+ * yläpalkki ja havaintokortin galleria.
+ *
+ * Tyylitiedosto ladataan ajossa (js/linssit/satelliitti.js
+ * lataaSatelliittiTyyli), kuten muillakin kelluvilla pinnoilla.
+ *
+ * HEHKU ILMAN PULSSIA (omistajan tilaus 12.9.2026: *"Uudet kohteet
+ * näkyisivät hohtavina vihreinä pisteinä pallolla"* — ja linssin
+ * vaatimus, ettei hehku sykkisi jatkuvasti). Sykkivä elementti pakottaa
+ * pallon piirtymään uudelleen joka kehyksellä (js/linssit/kerros.js
+ * haivyta: 15 fps vastaan 60 fps), joten tässä on kolme PAIKALLAAN
+ * pysyvää kerrosta — sädekehä, rengas ja ydin — ja liike on vain
+ * kertaluonteinen ilmestyminen. Liikkeenvähennys nollaa senkin.
+ */
+
+.satelliitti-piste {
+  position: relative;
+  width: 0;
+  height: 0;
+  /* Napautus lasketaan pallon pinnasta (js/pallolauta/lauta.js R-malli),
+     joten elementti itse ei ota osumia — sama sääntö kuin kaikilla
+     pallolaudan merkeillä. */
+  pointer-events: none;
+  --satelliitti-vihrea: #5dffa8;
+  --satelliitti-tumma: rgba(12, 40, 26, 0.75);
+}
+
+.satelliitti-hehku,
+.satelliitti-rengas,
+.satelliitti-ydin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+/* Sädekehä: pehmeä, matala peittävyys — erottuu kartasta mutta ei peitä. */
+.satelliitti-hehku {
+  width: 46px;
+  height: 46px;
+  background: radial-gradient(circle,
+    rgba(93, 255, 168, 0.42) 0%,
+    rgba(93, 255, 168, 0.18) 42%,
+    rgba(93, 255, 168, 0) 72%);
+}
+
+.satelliitti-rengas {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--satelliitti-vihrea);
+  box-shadow: 0 0 8px rgba(93, 255, 168, 0.85), inset 0 0 4px rgba(93, 255, 168, 0.6);
+  background: rgba(10, 34, 22, 0.35);
+}
+
+.satelliitti-ydin {
+  width: 6px;
+  height: 6px;
+  background: #eafff3;
+  box-shadow: 0 0 6px rgba(93, 255, 168, 0.95);
+}
+
+.satelliitti-nimi {
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font-type, system-ui), system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #d8ffe9;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.95), 0 1px 2px rgba(0, 0, 0, 0.95);
+}
+
+/*
+ * Ilmestyminen kerran, ei toistoa. Merkkikerros lisää luokan
+ * `pallolauta-merkki` SAMAAN elementtiin (js/pallolauta/merkit.js
+ * elementti), joten tässä ei ole kääreettä — ja pallon takapuolen
+ * piilotus (`pallolauta-takana`) osuu samaan elementtiin.
+ */
+.satelliitti-piste { animation: satelliitti-saapuu 320ms ease-out 1; }
+
+@keyframes satelliitti-saapuu {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .satelliitti-piste { animation: none; }
+}
+
+/* ───────────────────────────────── yläpalkki ─────────────────────── */
+
+/*
+ * KOKO YLÄPALKKI VAIHTUU (omistaja 12.9.2026: *"koko Yläpalkki vaihtuu
+ * erilaiseen kuten pelin kahdessa uudessa ihmis- ja tiedekeksintö
+ * linssissä"*). Matkakirjan oman palkin piilottaa sama body-luokka kuin
+ * aikajanalinsseillä (css/aikajana.css `body.aikajana-palkki-auki
+ * .topbar`), ja tämä palkki saa SEN mitatun korkeuden
+ * (--aikajana-palkki-korkeus), jotta kartta ei hyppää.
+ */
+/*
+ * SAMA SÄÄNTÖ KUIN css/aikajana.css:ssä, omassa tiedostossa. Luokka
+ * `aikajana-palkki-auki` on jaettu sopimus (koko yläpalkki on linssin),
+ * mutta css/aikajana.css ladataan vasta aikajanalinssin mukana — ilman
+ * tätä kopiota Matkakirjan palkki jäi näkyviin satelliittilinssissä
+ * (mitattu 12.9.2026: topbar visibility visible, korkeus 57 px).
+ *
+ * Yläpalkki jää RUUDUKKOON nollan korkuisena (visibility, ei display):
+ * karttaruutu on grid-solu, ja display: none pudottaisi kartan
+ * riville 1 ja auto-korkeuteen.
+ */
+body.aikajana-palkki-auki .topbar {
+  visibility: hidden;
+  height: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.satelliittipalkki {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  box-sizing: border-box;
+  height: var(--aikajana-palkki-korkeus, 3.4rem);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 0.6rem 0 0.9rem;
+  border-bottom: 1px solid rgba(93, 255, 168, 0.35);
+  background: linear-gradient(180deg, #14261d, #0d1913);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  color: #dff6e8;
+  font-family: var(--font-luku, system-ui), system-ui, sans-serif;
+}
+
+.satelliittipalkki-nimi {
+  font-family: var(--font-type, system-ui), system-ui, sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--satelliitti-vihrea, #5dffa8);
+  white-space: nowrap;
+}
+
+.satelliittipalkki-valinta {
+  min-width: 0;
+  max-width: 14rem;
+  flex: 0 1 auto;
+  padding: 0.25rem 0.4rem;
+  border-radius: 6px;
+  border: 1px solid rgba(93, 255, 168, 0.4);
+  background: #0b1611;
+  color: #dff6e8;
+  font: inherit;
+  font-size: 0.86rem;
+}
+
+.satelliittipalkki-ohje {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 0.8rem;
+  color: rgba(223, 246, 232, 0.72);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.satelliittipalkki-sulje {
+  flex: 0 0 auto;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid rgba(93, 255, 168, 0.45);
+  background: rgba(93, 255, 168, 0.12);
+  color: #eafff3;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.satelliittipalkki-sulje:hover { background: rgba(93, 255, 168, 0.22); }
+
+/* Puhelin: yksi tiivis palkki — ohje väistyy ensimmäisenä. */
+@media (max-width: 620px) {
+  .satelliittipalkki { gap: 0.4rem; padding: 0 0.4rem 0 0.5rem; }
+  .satelliittipalkki-ohje { display: none; }
+  .satelliittipalkki-nimi { font-size: 0.62rem; letter-spacing: 0.06em; }
+  .satelliittipalkki-valinta { max-width: none; flex: 1 1 auto; font-size: 0.8rem; }
+  .satelliittipalkki-sulje { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+}
+
+/* ──────────────────────────────── havaintokortti ─────────────────── */
+
+.satelliitti-kortti {
+  position: fixed;
+  z-index: 47;
+  box-sizing: border-box;
+  max-width: calc(100vw - 24px);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(93, 255, 168, 0.35);
+  background: #0d1913;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  color: #dff6e8;
+  font-family: var(--font-luku, system-ui), system-ui, sans-serif;
+}
+
+.satelliitti-sisus {
+  overflow: auto;
+  scrollbar-gutter: stable;
+  max-height: inherit;
+}
+
+/* Kuva täyttää lukitun laatikkonsa vääristymättä: havainnot ovat eri
+   muotoisia, ja laatikko on jäädytetty vaiheessa 1 (js/nostokuva.js). */
+.satelliitti-kortti .nostokuva-img { object-fit: contain; background: #060d0a; }
+
+/*
+ * KUVATEKSTI JA LÄHDE LUETTAVIKSI TUMMALLA POHJALLA. css/nostokuva.css
+ * olettaa paperikortin (tummanruskea teksti vaalealla), ja tämä kortti
+ * on tumma — ilman näitä kuvateksti ja lähderivi katosivat taustaan
+ * (mitattu kaappauksesta 12.9.2026). Lähdetiedon on oltava aina
+ * löydettävissä, joten se ei saa jäädä näkymättömiin.
+ */
+.satelliitti-kortti .nostokuva-selite,
+.satelliitti-kortti .nostokuva-teksti { color: #eafff3; }
+.satelliitti-kortti .nostokuva-lahde { color: rgba(223, 246, 232, 0.78); }
+
+.satelliitti-otsikko {
+  margin: 0 0 6px;
+  font-family: var(--font-type, system-ui), system-ui, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  color: #eafff3;
+}
+
+.satelliitti-seutu { color: rgba(223, 246, 232, 0.7); font-size: 0.85rem; }
+
+/*
+ * Leima on kuvan kulmassa (js/linssit/satelliitti.js koristele), joten
+ * se näkyy molemmissa vaiheissa eikä vieri pois näkyvistä.
+ */
+.satelliitti-kortti .nostokuva-nappi { position: relative; }
+
+.satelliitti-leima {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  z-index: 2;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(93, 255, 168, 0.45);
+  background: rgba(6, 13, 10, 0.78);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: #5dffa8;
+  pointer-events: none;
+}
+
+.satelliitti-selaus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 8px 0 4px;
+}
+
+.satelliitti-nuoli,
+.satelliitti-vertaa {
+  white-space: nowrap;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(93, 255, 168, 0.4);
+  background: rgba(93, 255, 168, 0.1);
+  color: #eafff3;
+  font: inherit;
+  cursor: pointer;
+}
+
+.satelliitti-nuoli[disabled] { opacity: 0.35; cursor: default; }
+.satelliitti-laskuri { font-size: 0.85rem; color: rgba(223, 246, 232, 0.85); }
+
+.satelliitti-nauha {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 4px 0 6px;
+}
+
+.satelliitti-pikku {
+  flex: 0 0 auto;
+  width: 72px;
+  padding: 0;
+  border-radius: 6px;
+  border: 1px solid rgba(93, 255, 168, 0.25);
+  background: #060d0a;
+  color: rgba(223, 246, 232, 0.85);
+  font: inherit;
+  font-size: 0.62rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.satelliitti-pikku.valittu { border-color: var(--satelliitti-vihrea, #5dffa8); }
+.satelliitti-pikku img { display: block; width: 72px; height: 56px; object-fit: cover; }
+.satelliitti-pikku span { display: block; padding: 2px 2px 3px; }
+
+.satelliitti-tiedot { margin: 6px 0 0; font-size: 0.78rem; line-height: 1.45; }
+.satelliitti-tiedot div { color: rgba(223, 246, 232, 0.82); }
+.satelliitti-tiedot b { color: #eafff3; font-weight: 600; }
+.satelliitti-linkki { color: var(--satelliitti-vihrea, #5dffa8); }
+
+/* Vertailu: kaksi havaintoa rinnakkain, ei päällekkäistä liukuria. */
+.satelliitti-vertailu {
+  position: fixed;
+  inset: 0;
+  z-index: 48;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  /* Peittävä pohja: alla oleva havaintokortti ei saa kuultaa läpi
+     kuvatekstien kohdalta (kaappaus 12.9.2026). */
+  background: #060d0a;
+  color: #dff6e8;
+  font-family: var(--font-luku, system-ui), system-ui, sans-serif;
+}
+
+.satelliitti-vertailu-parit {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 10px;
+  min-height: 0;
+}
+
+.satelliitti-vertailu figure {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+}
+
+.satelliitti-vertailu img {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  object-fit: contain;
+}
+
+.satelliitti-vertailu figcaption { padding-top: 4px; font-size: 0.78rem; text-align: center; }
+
+@media (max-width: 620px) {
+  .satelliitti-vertailu-parit { flex-direction: column; }
+  /* Selausrivi mahtuu yhdelle riville myös 390 px:n ruudulla. */
+  .satelliitti-selaus { gap: 0.35rem; }
+  .satelliitti-nuoli,
+  .satelliitti-vertaa { padding: 0.25rem 0.4rem; font-size: 0.8rem; }
+  .satelliitti-laskuri { font-size: 0.75rem; white-space: nowrap; }
+}

@@ -218,8 +218,15 @@ test('kesken siirtoanimaation kuorta ei suljeta; avaus kesken sulkua ei jätä k
 
 test('Liiku ja lehdet estetty kuoressa; valinta null palauttaa pallon; pallon linssi ei ole laukussa (tekstivartijat)', () => {
   const ui = lue('../js/ui.js');
-  // Yksi portti, yksi kenttä.
-  assert.match(ui, /^  linssikarttaEstaa\(\) \{\n    return Boolean\(this\.linssikartta\);\n  \}/m);
+  /*
+   * Yksi portti. Kenttiä on 12.9.2026 alkaen kaksi: linssikartan kuori
+   * ja pallolla oleva linssi (body.aikajana-paalla → js/ui-apurit.js
+   * linssiEstaa). Satelliittilinssin vaatimus on, etteivät linssin
+   * merkit kuluta pelivuoroa eivätkä avaa kaupunkilehteä, ja se on
+   * täsmälleen sama portti kuin kuorella.
+   */
+  assert.match(ui, /^  linssikarttaEstaa\(\) \{\n    return Boolean\(this\.linssikartta\) \|\| linssiEstaa\(\);\n  \}/m);
+  assert.match(ui, /^  linssiEstaa,$/m, 'linssiEstaa on tuotava ui-apureista');
   const liiku = ui.match(/ {2}vaihdaLiuku\(\) \{[\s\S]*?\n {2}\}\n/)[0];
   assert.match(liiku, /if \(this\.linssikarttaEstaa\(\)\) return;/, 'Liiku ei ole kiinni kuoressa');
   // Allekirjoitus sai 9.9.2026 valinnaisen `ohitaLehtilukko`-lipun
