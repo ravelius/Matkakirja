@@ -300,8 +300,20 @@ const ulkoPiste = (sivu) => sivu.evaluate(([valitsin, vara]) => {
 const sisapisteet = (sivu) => sivu.evaluate((valitsin) => {
   const kortti = document.querySelector(valitsin);
   if (!kortti) return { kuva: null, ylarivi: null, otsikko: null, teksti: null };
-  const keski = (r) => (r && r.height > 10 && r.top > 60 && r.bottom < window.innerHeight
-    ? { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) } : null);
+  /*
+   * PISTE KELPAA, JOS SE OSUU KORTTIIN. Ennen tässä oli kiinteä
+   * `top > 60` yläpalkin väistöksi, mutta kuva edellä -kortti alkaa nyt
+   * ruudun yläreunasta (js/nostokuva.js NOSTOKUVA_YLAVARA) — ehto
+   * hylkäsi juuri ne ylärivin ja otsikon pisteet, joiden takia tämä
+   * savuke on olemassa. Osuma luetaan siksi ruudulta: jos jokin muu
+   * pinta (yläpalkki, kupla) peittää kohdan, piste ei kelpaa.
+   */
+  const keski = (r) => {
+    if (!r || r.height <= 10 || r.top < 0 || r.bottom > window.innerHeight) return null;
+    const p = { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) };
+    const e = document.elementFromPoint(p.x, p.y);
+    return e && kortti.contains(e) ? p : null;
+  };
   const ota = (...valitsimet) => valitsimet
     .map((v) => keski(kortti.querySelector(v)?.getBoundingClientRect()))
     .find(Boolean) ?? null;
