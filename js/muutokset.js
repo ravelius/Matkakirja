@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1821, teksti: 'Codexin pilottilupa Raamattuun' },
   { v: 1820, teksti: 'Astronautin kamera: nimet, pulu, aanet, zoom, reliefi' },
   { v: 1819, teksti: 'Pulun aaneksi Flicker kaikkiin repliikkeihin' },
   { v: 1818, teksti: 'Luentakuva matkakirjan alle, pulun kuvat naytolle' },
