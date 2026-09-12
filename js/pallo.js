@@ -72,7 +72,7 @@ export {
   LAATTAKERROS_RENDER_ORDER_POHJA,
   LAATTAKERROS_RINNAKKAIN, LAATTAKERROS_SILMAT_MAX, LAATTAKERROS_SILMAT_MIN,
   LAATTAKERROS_SYVYYSSIIRTO, LAATTAKERROS_TERAVYYS, LAATTAKERROS_TEKSTUUREJA_PER_KEHYS,
-  LAATTAKERROS_VARA_AST, LAATTAKERROS_VARA_OSUUS, laatanKartta, laattakerroksenLRU,
+  LAATTAKERROS_VARA_AST, LAATTAKERROS_VARA_OSUUS, laatanKartta, laatanPalloAlue, laattakerroksenLRU,
   laattakerroksenNakyvissa, laattakerroksenOsuma, laattakerroksenPeitto, laattakerroksenSilmat,
   laattakerroksenTaso, luoLaattakerros,
 } from './pallolaatat.js';
