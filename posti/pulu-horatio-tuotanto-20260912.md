@@ -148,8 +148,9 @@ tekstintekijä ja kuvantekijä varmistavat sen valmistuneesta kuvasta.
   tarvittavien äänituotantolupien varmistamisen, yhdistämisen, version,
   CI:n ja julkaisun. Tuotantovetäjät valmistelevat ja mahdollisuuksien
   sekä voimassa olevien lupien mukaan suorittavat ääni-/luenta-ajot.
-  Uusi ääni valitaan kuuntelemalla; iloisempi/suloisempi suunta ei ole
-  vielä valittu voice_id.
+  Pulun pysyvä ääni on omistajan 12.9.2026 valitsema Flicker —
+  cheerful fairy & sparkly sweetness, voice_id `piI8Kku0DcvcL6TTSeQt`,
+  moottori `eleven_v3`. Valinta koskee tulevia Pulun ääniä, ei Horatiota.
 - Pääsessio koordinoi rajapinnat ja poikkeukset. Kevyemmät agentit saavat
   rajattuja inventointi-, ensiluonnos- ja QA-eriä, eivät kilpailevia kokonaisuuksia.
 
@@ -179,9 +180,9 @@ animaatiot sekä yhteistestit. Mukaan tulee lyhyt käyttöönotto-ohje,
 palautussuunnitelma ja mahdolliset aidot puutteet.
 
 Fablen tavoiteltu työ on lopputarkistus, yhdistäminen ja julkaisu.
-Puuttuvaa äänenvalintaa tai maksullisen ajon lupaa ei arvata tämän
-tavoitteen vuoksi: valmistellaan täsmällinen ajopaketti ja ilmoitetaan
-vain ratkaistava valinta tai tarvittava ajovaihe. Äänetön tai vanhalla
+Pulun äänenvalinta on tehty; mahdollisesti puuttuvaa maksullisen ajon
+lupaa ei arvata tämän tavoitteen vuoksi. Valmistellaan täsmällinen
+ajopaketti ja ilmoitetaan vain tarvittava ajovaihe. Äänetön tai vanhalla
 äänellä varustettu keskeneräinen ehdokas ei ole valmis yhteispaketti.
 Pääsessio hoitaa Fablen tiedotuksen; omistajan ei tarvitse välittää
 samoja ohjeita käsin.
