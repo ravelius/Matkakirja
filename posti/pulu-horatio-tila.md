@@ -4,8 +4,8 @@ Päivitetty 12.9.2026. Omistajan JATKA-lupa kumoaa tämän hankkeen aiemman sama
 
 ## Yksi ohje
 - Hyväksytty yhteinen työohje: posti/pulu-horatio-tuotanto-20260912.md.
-- Sama ohje kirjataan docs/moduulit/horatio-livia-tuotanto.md:ksi Raamattu-PR:ään #2322.
-- Vanhojen ristiriitaisten aktiiviohjeiden rajattu siivous on käynnissä samassa PR:ssä. Ei koske muiden ominaisuuksien ohjeita.
+- Ohje ja ristiriitojen rajattu siivous ovat valmiit PR:ssä #2322: https://github.com/ravelius/Matkakirja/pull/2322 . Remote commit 347aaee90f0a06ab88e20d1625c8cc77827a1763, kaikki 5 tiedostoa ja tree takaisinlukemalla varmistettu.
+- Paikalliset tarkistukset PASS: Sol 106/106 ja viimeinen uusinta 82/82; pääsession riippumaton 67/67. GitHubin Testit käynnissä viimeisellä tarkistuksella. Fable vastaa integraatiosta; ei vielä main-/pelijulkaisu.
 - Eurooppa ensin; hyväksytty mallikaupunki, sanasto, kentät, testit ja tilat tekevät jatkon muille mantereille mahdolliseksi niiden kaanonporttien kautta.
 
 ## Omistajat
@@ -24,15 +24,17 @@ Tekstivetäjä omistaa fokusvirtapakkien sisältömuutokset omassa työhaarassaa
 - Ateena: ensisaapuminen, Sarajevo: pohdinta/rauhallisempi sävy, Venetsia: romanssialbumin poikkeus.
 - Inventaario: posti/pulu-horatio-kuvateksti-audit-20260912.md. 45 kaupunkia, Horatio 90 kuvaa, Pulu 58. Puuttuva Pulu P2 36 kaupungissa; tuore aineistotuotanto tarkistetaan ennen uuden generointia.
 - Kolme vetäjää saivat uudet täydet JATKA-tehtävät 12.9.2026. Tehtäväviestin toimitus ei yksin ole vastaanottajan työn valmistuminen.
-- Aiemmat kolmen kaupungin tekstiluonnokset ja 7 tiedoston animaatioluonnos olivat tauon alkaessa testaamatta. Ne arvioidaan uudestaan tätä speksiä vasten; eivät ole hyväksytty valmis erä.
+- Tekstivetäjän neljän kaupungin pilotti: paikallinen commit ef17029a, codex/europe-texts-20260912, pohja dd7154a3. Kortti docs/raportit/horatio-livia-pilottikortit-20260912.md. Tekijän raportoima oma pilottitesti 3/3 PASS, yhteisajo 109/111: kaksi vanhan äänen/ajoituksen porttihylkäystä. Ne estävät julkaisun; ei ohiteta testejä. Tekstivetäjä toimittaa GitHub-connectorilla oman luonnos-PR:n ja tarkan äänityötarpeen Fablelle.
+- Animaatiovetäjä jakoi työn perusilmeeseen, ohjaimeen/synkronointiin ja riippumattomaan QA:han. Semanttinen cue-sopimus sovittu tekstivetäjän kanssa. Animaatioparin nykyinen viite tekstivetäjältä ca091023; lopullinen audioalignment ja yhteinen pelitesti vielä tekemättä.
+- Marseille P2 v2: kuvavetäjän ja tekstivetäjän visuaalinen/paritarkistus valmis, mediajulkaisu takaisinluettu (kuvavetäjän kuitti). https://media.matkakirja.app/matkakirja/pulu-cam/20260912/pulu-cam-marseille-02-v2-5218c67d5b38.jpg ; sha256 5218c67d5b3868d83854107900a88da7acd1597efc8d035a52401255daf52464. Toimitus output/pulu-p2-europe-20260912/marseille/handoff.json kuvatehtävän työhakemistossa. P1 säilyy. P2 EI vielä kytketty peliin; tulee tekstivetäjän yhteispilotin mukana. 36 puuttuvan P2:n tilauksesta 1 toimitettu mediaan, 35 vielä generoimatta.
 - Pulun uusi iloisempi/suloisempi ääni: valintasuunnan kuvaus, voice_id ei lukittu. Ei uutta maksullista ääntä ilman tarvittavaa ajolupaa.
 
 ## Seuraavat siirrot
-1. Teksti- ja animaatiovetäjä sopivat minimaalisen kaupunkikortin sekä yhteisen tunnetagi-/elerekisterin.
-2. Tekstivetäjä lähettää Marseillen kuvan ajatuksen kuvavetäjälle; tämä tarkistaa nykyiset ja jonossa olevat kuvat sekä yhden kuvan arviointikäytännön.
-3. Tekstivetäjä tuottaa puhtaan tekstin, TTS-version ja semanttiset ankkurit samassa toimituksessa. Animaation millisekunnit syntyvät lopullisen äänen kohdistuksesta.
-4. Fable tarkistaa ja integroi ohjeen/siivouksen; koordinoi äänivaiheen ja pilotin hyväksynnän ennen laajaa monistusta.
-5. Jokainen valmis siirto päivittää kaupungin version, todisteen, puutteen ja seuraavan tekijän. Ei sokkoa kaupunki-/mannerkohtaista yhtäaikaista massatuotantoa.
+1. Tekstivetäjä lisää hyväksytyn Marseille P2:n ja lopulliset kuvatekstit yhteiseen kaupunkikorttiin; toimittaa oman tekstiluonnos-PR:n ja äänen muutostarpeet Fablelle. Äänipuutetta ei kierretä testien poistolla.
+2. Fable tarkistaa ohje-PR #2322:n ja integroi CI:n jälkeen. Pilotin ääni valitaan/äänitetään voimassa olevien lupien mukaisesti; uuden Pulu-äänen voice_id on yhä avoin.
+3. Animaatiovetäjä kohdistaa lopulliseen äänitteeseen, toteuttaa ilme-/elesopimuksen ja testaa elinkaaren. Yhteinen tekstin, kuvan, äänen ja eleen pilotti tarkistetaan oikeassa pelissä ennen laajaa monistusta.
+4. Kuvavetäjä odottaa seuraavaa sovittua pilotin kuvakohtaista briefiä, ei tee irrallista 35 kuvan massasarjaa. Hyväksytyt nykyiset kuvat ja Venetsian albumi säilyvät.
+5. Jokainen valmis siirto päivittää kaupungin version, todisteen, puutteen ja seuraavan tekijän. Eurooppa ensin, sitten sama koeteltu ketju seuraavan mantereen omien kaanonporttien kautta.
 
 ## Valmis tarkoittaa
 Sisältö ymmärrettävä ja omaleimainen, tiedot lähteistetty, oivallus säilynyt, kuva vastaa kuvausta; lyhyt noin 1 lause ilman lähdettä, pitkä enintään 1 lisälause + lähde. Tagit eivät vuoda näkyvään tekstiin. Ääniversio vastaa tekstiä ja kaikkia kohdistuksia. Tauko, kelaus, keskeytys, puhenopeus, äänetön tila, karttaliike ja mobiili testattu. CI, julkaisu ja oikeassa pelissä visuaalisesti tarkistettu erikseen. Tämä kortti ei vielä vahvista näitä toteutuneiksi.
