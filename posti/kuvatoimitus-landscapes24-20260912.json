@@ -1,0 +1,2211 @@
+{
+  "createdAt": "2026-09-12T17:43:03Z",
+  "purpose": "PR2314 24 median Fable-toimitus",
+  "pr": {
+    "url": "https://github.com/ravelius/Matkakirja/pull/2314",
+    "number": 2314,
+    "status": "READY",
+    "rootDiffReviewed": true,
+    "head": "10cce146e315bf1db2c079060b71da79c3f9925b",
+    "tree": "3f6d08083d77c462ef7eeffa412596aa734499fb",
+    "parent": "f6350292c08f52906811c043502ed60165c02978"
+  },
+  "scope": {
+    "records": 12,
+    "media": 24,
+    "countries": [
+      "FIN",
+      "SWE",
+      "NOR",
+      "FRA"
+    ],
+    "ordering": "generated illustration first, authentic photograph second",
+    "rhone": "approved generated v2 first; generated v1 remains excluded on geography hold"
+  },
+  "media": [
+    {
+      "key": "FIN:maasto:suomenlahti",
+      "id": "fin-maasto-suomenlahti-ed485e1c26dd",
+      "fileName": "fin-maasto-suomenlahti-ed485e1c26dd.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/fin-maasto-suomenlahti-ed485e1c26dd.jpg",
+      "targetKey": "karttanostot/20260912/fin-maasto-suomenlahti-ed485e1c26dd.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-maasto-suomenlahti-ed485e1c26dd.jpg",
+      "sha256": "ed485e1c26dd75d464861174eaabae8e8f8bc7748cb92faf0f7d43e46289773c",
+      "bytes": 2500885,
+      "dimensions": [
+        2560,
+        1920
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-authentic-next4-20260912/originals/FIN-maasto-suomenlahti--Skata-ledholmen.jpg",
+      "nativeSha256": "6a740954384083a6696730702040eccc852fc8649615946fe36a243a6da2a57e",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Suomenlahden kallioista rantaa ja matalaa saaristoa Sipoon edustalla.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "LPfi",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Skata-ledholmen.jpg",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Skata-ledholmen.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-authentic-next4-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FIN:maasto:suomenlahti",
+      "id": "fin-maasto-suomenlahti-36c903d047a6",
+      "fileName": "fin-maasto-suomenlahti-36c903d047a6.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/fin-maasto-suomenlahti-36c903d047a6.jpg",
+      "targetKey": "karttanostot/20260912/fin-maasto-suomenlahti-36c903d047a6.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-maasto-suomenlahti-36c903d047a6.jpg",
+      "sha256": "36c903d047a652fe72beb8bef9852c8503c70d7b4dccc768df987684e0a4ced0",
+      "bytes": 829166,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-photo-next2-20260912/native/FIN-maasto-suomenlahti-v1.png",
+      "nativeSha256": "3d53f42585ff9482450e034a3c0b6b5cdba79b3245d49579cfcd99193102671d",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Suomenlahden kallioista rantaa ja matalaa saaristoa Sipoon edustalla.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "creator": "OpenAI; referenssikuva LPfi",
+        "reference": {
+          "role": "primary place and geometry reference",
+          "localFile": "../sol-fin-authentic-next4-20260912/originals/FIN-maasto-suomenlahti--Skata-ledholmen.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Skata-ledholmen.jpg",
+          "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Skata-ledholmen.jpg",
+          "creator": "LPfi",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "referenceSha256": "6a740954384083a6696730702040eccc852fc8649615946fe36a243a6da2a57e",
+          "derivativeAttributionRequired": true,
+          "derivativeNote": "Generated composition closely follows the verified landscape arrangement and must retain LPfi / CC BY-SA 3.0 attribution as a reference-grounded derivative."
+        },
+        "carryForwardRequired": true,
+        "provider": "Wikimedia Commons",
+        "referenceCreator": "LPfi",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Skata-ledholmen.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-photo-next2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FIN:kohde:kerimaenkirkko",
+      "id": "fin-kohde-kerimaenkirkko-31cc93674675",
+      "fileName": "fin-kohde-kerimaenkirkko-31cc93674675.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/fin-kohde-kerimaenkirkko-31cc93674675.jpg",
+      "targetKey": "karttanostot/20260912/fin-kohde-kerimaenkirkko-31cc93674675.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-kerimaenkirkko-31cc93674675.jpg",
+      "sha256": "31cc93674675dd3e2f413d6f3438cb61c9427d5fc7e3d31a38e77825fe834d66",
+      "bytes": 1651184,
+      "dimensions": [
+        1707,
+        2560
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-authentic-next4-20260912/originals/FIN-kohde-kerimaenkirkko--Kerimaen-kirkko-kellotornista-2.JPG",
+      "nativeSha256": "cb65212aa52d4c596ca6035f879501ee6941fc7e0581bb88f4b9f6363e9df8f9",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Kerimäen puukirkon keltainen julkisivu kellotornista nähtynä.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "MKFI",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Kerim%C3%A4en_kirkko_kellotornista_2.JPG",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Kerim%C3%A4en_kirkko_kellotornista_2.JPG",
+        "license": "Public domain (PD-self)",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kerim%C3%A4en_kirkko_kellotornista_2.JPG"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-authentic-next4-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FIN:kohde:kerimaenkirkko",
+      "id": "fin-kohde-kerimaenkirkko-9da7b658baa0",
+      "fileName": "fin-kohde-kerimaenkirkko-9da7b658baa0.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/fin-kohde-kerimaenkirkko-9da7b658baa0.jpg",
+      "targetKey": "karttanostot/20260912/fin-kohde-kerimaenkirkko-9da7b658baa0.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-kerimaenkirkko-9da7b658baa0.jpg",
+      "sha256": "9da7b658baa0416146516f346e6db58fdbe2fb7acc22d4094f62b0060dc867be",
+      "bytes": 736701,
+      "dimensions": [
+        1505,
+        1045
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-photo-next2-20260912/native/FIN-kohde-kerimaenkirkko-v2.png",
+      "nativeSha256": "58fdddeebf0086f8aec050cc60e66ed3e46a535cd2b556393a6b8f52f34c641b",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Kerimäen suuresta puukirkosta ja sen erillisestä kellotapulista nykyisessä kirkkopuistossa.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "creator": "OpenAI; referenssikuva Teuvo Salmenjoki",
+        "reference": {
+          "required": true,
+          "basis": "Composition and visible building arrangement closely follow the wide Teuvo Salmenjoki reference.",
+          "creator": "Teuvo Salmenjoki",
+          "license": "CC BY-SA 4.0",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Kerim%C3%A4en_kirkko_ja_keppotapuli.jpg",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        "carryForwardRequired": true,
+        "provider": "Wikimedia Commons",
+        "referenceCreator": "Teuvo Salmenjoki",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Kerim%C3%A4en_kirkko_ja_keppotapuli.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-photo-next2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FIN:kohde:koli",
+      "id": "fin-kohde-koli-1a08b6e8ddc4",
+      "fileName": "fin-kohde-koli-1a08b6e8ddc4.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/fin-kohde-koli-1a08b6e8ddc4.jpg",
+      "targetKey": "karttanostot/20260912/fin-kohde-koli-1a08b6e8ddc4.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-koli-1a08b6e8ddc4.jpg",
+      "sha256": "1a08b6e8ddc4cfdada1b1e30db7745f2410ee1d1a908f68719faf904d29bc97d",
+      "bytes": 1280695,
+      "dimensions": [
+        2560,
+        1602
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/authentic/FIN-kohde-koli--Ukko-Koli-Pielinen-Arto-J.jpg",
+      "nativeSha256": "17640e74688347f24194ad6c1ea242d72ea6a3fe0f3078d0a06a14203b33a4c9",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Näkymä Ukko-Kolilta itään Pieliselle ja sen pitkille metsäisille saarille.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Arto J",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Lieksa_-_Ukko-Koli_-_View_of_Pielinen_lake_-_panoramio.jpg",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Lieksa_-_Ukko-Koli_-_View_of_Pielinen_lake_-_panoramio.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FIN:kohde:koli",
+      "id": "fin-kohde-koli-3b9c0577c279",
+      "fileName": "fin-kohde-koli-3b9c0577c279.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/fin-kohde-koli-3b9c0577c279.jpg",
+      "targetKey": "karttanostot/20260912/fin-kohde-koli-3b9c0577c279.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-koli-3b9c0577c279.jpg",
+      "sha256": "3b9c0577c2793d50e53a3b485696d1ccc32081d123305e1b833d45c292c3ff6f",
+      "bytes": 687792,
+      "dimensions": [
+        1585,
+        992
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/native/FIN-kohde-koli-v1.png",
+      "nativeSha256": "e5aecce9466a38308a072b9a6a2ef697245c70b3be042d07f78a20a934e09159",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Ukko-Kolilta itään avautuvasta Pielisen järvi- ja saarimaisemasta.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "referenceCreator": "Arto J",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Lieksa_-_Ukko-Koli_-_View_of_Pielinen_lake_-_panoramio.jpg",
+        "carryForwardRequired": true,
+        "provider": "Wikimedia Commons",
+        "creator": "OpenAI; referenssikuva Arto J",
+        "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FIN:kohde:saimaa",
+      "id": "fin-kohde-saimaa-1ab486b20a35",
+      "fileName": "fin-kohde-saimaa-1ab486b20a35.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/fin-kohde-saimaa-1ab486b20a35.jpg",
+      "targetKey": "karttanostot/20260912/fin-kohde-saimaa-1ab486b20a35.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-saimaa-1ab486b20a35.jpg",
+      "sha256": "1ab486b20a3559bc298eaeae0d6b8679ee1e9ba083c3a2716e2ef4edb4795439",
+      "bytes": 462235,
+      "dimensions": [
+        2560,
+        358
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/authentic/FIN-kohde-saimaa--Pihlajavesi-Kotasaari-Freiermensch.jpg",
+      "nativeSha256": "40486a87096e4d8d6bf6ece87496a9c6f9eb3436be3c540097b0c935fc587239",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Pihlajaveden selkiä ja metsäisiä saaria Kotasaaresta pohjoiseen katsottuna.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Freiermensch",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Saimaa.jpg",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Saimaa.jpg",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FIN:kohde:saimaa",
+      "id": "fin-kohde-saimaa-a116aac4f831",
+      "fileName": "fin-kohde-saimaa-a116aac4f831.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/fin-kohde-saimaa-a116aac4f831.jpg",
+      "targetKey": "karttanostot/20260912/fin-kohde-saimaa-a116aac4f831.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-saimaa-a116aac4f831.jpg",
+      "sha256": "a116aac4f831c29f8762fcafeba8cba4cb6116edd9aa18e6bc194759dd83c08c",
+      "bytes": 805567,
+      "dimensions": [
+        2173,
+        724
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/native/FIN-kohde-saimaa-v1.png",
+      "nativeSha256": "bebb8cf2bf2250d10c921db062409a1e673e9e957324fcfdf29ae0fbeb9e884e",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Saimaan Pihlajaveden matalista metsäisistä saarista ja niiden välisistä salmista.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "referenceCreator": "Freiermensch",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Saimaa.jpg",
+        "carryForwardRequired": true,
+        "provider": "Wikimedia Commons",
+        "creator": "OpenAI; referenssikuva Freiermensch",
+        "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "SWE:maasto:kebnekaise",
+      "id": "swe-maasto-kebnekaise-cd98484728f3",
+      "fileName": "swe-maasto-kebnekaise-cd98484728f3.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/swe-maasto-kebnekaise-cd98484728f3.jpg",
+      "targetKey": "karttanostot/20260912/swe-maasto-kebnekaise-cd98484728f3.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/swe-maasto-kebnekaise-cd98484728f3.jpg",
+      "sha256": "cd98484728f341538ec3a30fb23457091bd47d8e313150d1a52e3a0e591623ba",
+      "bytes": 1260849,
+      "dimensions": [
+        2560,
+        1707
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/references/kebnekaise-authentic-original.jpg",
+      "nativeSha256": "5659e789b76e70c411393c6b278e0b8c9cf61c3dbe59908f839e7ffd73da95f9",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Kebnekaisen tummaa tunturimassiivia peittävät vielä keskikesälläkin laajat lumikentät; etelähuipun jäätikköinen lakialue erottuu Vierramvarelta.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Antti Leppänen",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Kebnekaise_as_seen_from_Vierramvare.JPG",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "SWE:maasto:kebnekaise",
+      "id": "swe-maasto-kebnekaise-dd1df4d59bad",
+      "fileName": "swe-maasto-kebnekaise-dd1df4d59bad.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/swe-maasto-kebnekaise-dd1df4d59bad.jpg",
+      "targetKey": "karttanostot/20260912/swe-maasto-kebnekaise-dd1df4d59bad.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/swe-maasto-kebnekaise-dd1df4d59bad.jpg",
+      "sha256": "dd1df4d59bad341ba455fa7da8c6a19b001d64bd347659de97dea4c5bc136eb5",
+      "bytes": 773698,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/assets/swe-kebnekaise-photographic-v1.png",
+      "nativeSha256": "251b527a2d3755d2ff0dfc1ac2d7d522234de3f30cbeeb26c2fc95c10941597e",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Kebnekaisen leveä kivinen selänne kohoaa Ruotsin Lapissa lumikenttien ja matalan tunturikasvillisuuden ylle.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "creator": "OpenAI; referenssikuva Antti Leppänen",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "referenceFilePage": "https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG",
+        "referenceSha256": "5659e789b76e70c411393c6b278e0b8c9cf61c3dbe59908f839e7ffd73da95f9",
+        "carryForwardRequired": true,
+        "provider": "Wikimedia Commons",
+        "referenceCreator": "Antti Leppänen",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG",
+        "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "NOR:maasto:galdhpiggen",
+      "id": "nor-maasto-galdhpiggen-abed85b170a3",
+      "fileName": "nor-maasto-galdhpiggen-abed85b170a3.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/nor-maasto-galdhpiggen-abed85b170a3.jpg",
+      "targetKey": "karttanostot/20260912/nor-maasto-galdhpiggen-abed85b170a3.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/nor-maasto-galdhpiggen-abed85b170a3.jpg",
+      "sha256": "abed85b170a33d71b6e1efe7f04ce41696a9eb1f4af8056c9dc1c5159315fc1d",
+      "bytes": 849874,
+      "dimensions": [
+        2560,
+        893
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/references/galdhopiggen-authentic-original.jpg",
+      "nativeSha256": "1b365f8e32aa70c636a833d3ee49c9941598e9f355b4a26f0985acd04ada04eb",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Styggebreenin jäätikkö levittäytyy kivisten Jotunheimenin harjanteiden keskelle; Galdhøpiggen kohoaa näkymän oikeassa laidassa.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Sindre Skrede (Commons user SinWin)",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Galdh%C3%B8piggen_and_Styggebreen%2C_Norway.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "NOR:maasto:galdhpiggen",
+      "id": "nor-maasto-galdhpiggen-3570e4558290",
+      "fileName": "nor-maasto-galdhpiggen-3570e4558290.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/nor-maasto-galdhpiggen-3570e4558290.jpg",
+      "targetKey": "karttanostot/20260912/nor-maasto-galdhpiggen-3570e4558290.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/nor-maasto-galdhpiggen-3570e4558290.jpg",
+      "sha256": "3570e45582900f06f9c647fa93dcbccc0e898014bf42b51d1aeebdd0e4449ed6",
+      "bytes": 650959,
+      "dimensions": [
+        2123,
+        741
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/assets/nor-galdhopiggen-photographic-v1.png",
+      "nativeSha256": "262bb108809261fee5af76dcf43e1ae81c57b165eb9eb3bab11eb4acb7d15eb4",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Styggebreenin jäätikköallas avautuu Jotunheimenin kivisten huippujen keskellä, ja Galdhøpiggen nousee sen oikealla puolella.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "creator": "OpenAI; referenssikuva Sindre Skrede (Commons user SinWin)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "referenceFilePage": "https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg",
+        "referenceSha256": "1b365f8e32aa70c636a833d3ee49c9941598e9f355b4a26f0985acd04ada04eb",
+        "carryForwardRequired": true,
+        "provider": "Wikimedia Commons",
+        "referenceCreator": "Sindre Skrede (Commons user SinWin)",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg",
+        "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FRA:maasto:loire",
+      "id": "fra-maasto-loire-c38f7bfdd6e9",
+      "fileName": "fra-maasto-loire-c38f7bfdd6e9.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/fra-maasto-loire-c38f7bfdd6e9.jpg",
+      "targetKey": "karttanostot/20260912/fra-maasto-loire-c38f7bfdd6e9.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-loire-c38f7bfdd6e9.jpg",
+      "sha256": "c38f7bfdd6e93f6fe3ba2b19c9cd97c273bf7819af2db6a319b201d00f7ba3f1",
+      "bytes": 1580083,
+      "dimensions": [
+        2560,
+        1707
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/originals/FRA-maasto-loire--Orleans-Benjamin-Smith.jpg",
+      "nativeSha256": "630db901313134a173ddb0ebdda44c14015753b7b23ab0e2c787f4984c2fe570",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Puisia jokiveneitä Loiren rannassa Orléansissa.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Benjamin Smith (Commons user Benjism89)",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Orl%C3%A9ans_-_River_Loire_-_4.jpg",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Orl%C3%A9ans_-_River_Loire_-_4.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FRA:maasto:loire",
+      "id": "fra-maasto-loire-7d2bf0f03134",
+      "fileName": "fra-maasto-loire-7d2bf0f03134.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/fra-maasto-loire-7d2bf0f03134.jpg",
+      "targetKey": "karttanostot/20260912/fra-maasto-loire-7d2bf0f03134.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-loire-7d2bf0f03134.jpg",
+      "sha256": "7d2bf0f031341337e0e9059d270fda99b8b46492ba0fc2c491f6f7d63de26349",
+      "bytes": 731290,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/native/FRA-maasto-loire-v1.png",
+      "nativeSha256": "91e34bdd896145d8e2377b38f0e00c915ee63fe5fc762f80a9de049372b10027",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Loiren leveä uoma ja matalat puustoiset rannat.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "basedOnReference": true,
+        "note": "Reference supplied to image generation to ground river width, bank height, vegetation and water character; composition is distinct. Preserve CC BY-SA attribution with generated candidate.",
+        "creator": "OpenAI; referenssikuva Benjamin Smith (Commons user Benjism89)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Orl%C3%A9ans_-_River_Loire_-_4.jpg",
+        "carryForwardRequired": true,
+        "provider": "Wikimedia Commons",
+        "referenceCreator": "Benjamin Smith (Commons user Benjism89)",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Orl%C3%A9ans_-_River_Loire_-_4.jpg",
+        "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FRA:maasto:rhone",
+      "id": "fra-maasto-rhone-181bfd18e8e2",
+      "fileName": "fra-maasto-rhone-181bfd18e8e2.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery/fra-maasto-rhone-181bfd18e8e2.jpg",
+      "targetKey": "karttanostot/20260912/fra-maasto-rhone-181bfd18e8e2.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-rhone-181bfd18e8e2.jpg",
+      "sha256": "181bfd18e8e21703a3fb5c76d17472182d161c2585ca9d9d44671bfe3d497b8e",
+      "bytes": 1694830,
+      "dimensions": [
+        2560,
+        1707
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/originals/FRA-maasto-rhone--Saint-Vallier-Krzysztof-Golik.JPG",
+      "nativeSha256": "a50c33b55a8a0d222b2eea80f56c05ddaa39cc2a07300db00bff39b94c211238",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Rhône Saint-Vallierissa Drômen departementissa; kaupunki yhdellä rannalla sekä metsäisiä, pyöreitä laaksonrinteitä.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Krzysztof Golik",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+        "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FIN:kohde:bomarsund",
+      "id": "fin-kohde-bomarsund-300bf713e1f9",
+      "fileName": "fin-kohde-bomarsund-300bf713e1f9.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fin-castles4-20260912/delivery/fin-kohde-bomarsund-300bf713e1f9.jpg",
+      "targetKey": "karttanostot/20260912/fin-kohde-bomarsund-300bf713e1f9.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-bomarsund-300bf713e1f9.jpg",
+      "sha256": "300bf713e1f9b742bf75a0f6052eecf34c1c4da57d217f85f6ae971515689950",
+      "bytes": 1950760,
+      "dimensions": [
+        2560,
+        1928
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/references/fin-bomarsund-authentic-original.jpg",
+      "nativeSha256": "a9459205c320f294432be2b91040cf1018cf9e86502ad98247e56b467981cf94",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Bomarsundin linnoituksen punagraniittinen rauniomuuri on säilynyt Ahvenanmaan Sundissa.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "PatríciaR",
+        "filePage": "https://commons.wikimedia.org/wiki/File:BomarsundFortress01.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FIN:kohde:bomarsund",
+      "id": "fin-kohde-bomarsund-04e06ac99dc8",
+      "fileName": "fin-kohde-bomarsund-04e06ac99dc8.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fin-castles4-20260912/delivery/fin-kohde-bomarsund-04e06ac99dc8.jpg",
+      "targetKey": "karttanostot/20260912/fin-kohde-bomarsund-04e06ac99dc8.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-bomarsund-04e06ac99dc8.jpg",
+      "sha256": "04e06ac99dc8f3dece3257f6a49e9c861817ba49e7a28bb7c8f1c802366eb876",
+      "bytes": 899517,
+      "dimensions": [
+        1445,
+        1088
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/assets/fin-bomarsund-photographic-v1.png",
+      "nativeSha256": "ab79af69f350b4cc313357f142988d31416ec4ab8e35f36fdddb1d8692321127",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Bomarsundin matala punagraniittinen rauniomuuri seisoo syksyisellä linnoitusalueella Ahvenanmaalla.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "OpenAI; paikkareferenssi PatríciaR",
+        "filePage": "https://commons.wikimedia.org/wiki/File:BomarsundFortress01.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "referenceCreator": "PatríciaR",
+        "referenceSha256": "a9459205c320f294432be2b91040cf1018cf9e86502ad98247e56b467981cf94",
+        "changes": "Uusi ImageGen-kuva säilyneestä nykykohteesta, valaistus ja rajaus muuttuneet.",
+        "carryForwardRequired": true
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FIN:kohde:hameenlinna",
+      "id": "fin-kohde-hameenlinna-0fd4b80439c0",
+      "fileName": "fin-kohde-hameenlinna-0fd4b80439c0.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fin-castles4-20260912/delivery/fin-kohde-hameenlinna-0fd4b80439c0.jpg",
+      "targetKey": "karttanostot/20260912/fin-kohde-hameenlinna-0fd4b80439c0.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-hameenlinna-0fd4b80439c0.jpg",
+      "sha256": "0fd4b80439c0bdd7d35c14d7773be3c2be40b81edf1e40dbeacb8147ca5d17f4",
+      "bytes": 901682,
+      "dimensions": [
+        2451,
+        1313
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/references/fin-hameenlinna-authentic-original.jpg",
+      "nativeSha256": "4abc75529a864e359427f3bdeb84a4ce87b3be405727b6a53fdbd8d7415adbb4",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Hämeen linnan punatiilinen keskiosa ja harmaakiviset muurit kohoavat Linnansalmen rannalla.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Kanta-Hämeen kuvapankki; crop/rotation/color/sharpening Máel Milscothach",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Hame_Castle_2019-08.jpg",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FIN:kohde:hameenlinna",
+      "id": "fin-kohde-hameenlinna-902715e493f7",
+      "fileName": "fin-kohde-hameenlinna-902715e493f7.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fin-castles4-20260912/delivery/fin-kohde-hameenlinna-902715e493f7.jpg",
+      "targetKey": "karttanostot/20260912/fin-kohde-hameenlinna-902715e493f7.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-hameenlinna-902715e493f7.jpg",
+      "sha256": "902715e493f76829115bd3eb6c907248a6acdf20bed2d6e4fa5a25ecf585b947",
+      "bytes": 752422,
+      "dimensions": [
+        1713,
+        918
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/assets/fin-hameenlinna-photographic-v1.png",
+      "nativeSha256": "64a572a73a3506cce2ca155063bb98cb1996d7e6421ead8a3a1e0ab247d4f6df",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Hämeen linnan punatiilinen päärakennus ja harmaakiviset puolustusmuurit näkyvät Linnansalmen yli.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "OpenAI; paikkareferenssi Kanta-Hämeen kuvapankki",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Hame_Castle_2019-08.jpg",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "referenceCreator": "Kanta-Hämeen kuvapankki; crop/rotation/color/sharpening Máel Milscothach",
+        "referenceSha256": "4abc75529a864e359427f3bdeb84a4ce87b3be405727b6a53fdbd8d7415adbb4",
+        "changes": "Uusi ImageGen-kuva säilyneestä nykykohteesta, valaistus ja rajaus muuttuneet.",
+        "carryForwardRequired": false
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "SWE:maasto:gotaalv",
+      "id": "swe-maasto-gotaalv-76c74fdd7683",
+      "fileName": "swe-maasto-gotaalv-76c74fdd7683.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic4-20260912/delivery/swe-maasto-gotaalv-76c74fdd7683.jpg",
+      "targetKey": "karttanostot/20260912/swe-maasto-gotaalv-76c74fdd7683.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/swe-maasto-gotaalv-76c74fdd7683.jpg",
+      "sha256": "76c74fdd7683541446e9088061614cc14236e231c6ef8111a00082778296d311",
+      "bytes": 88689,
+      "dimensions": [
+        640,
+        480
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/references/swe-gotaalv-authentic-original.jpg",
+      "nativeSha256": "a8189dbcba5144e6226c5c0a894751ea9ce43a625cd9221607ffd31c8ec4f18e",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Göta älvin vesi ryöppyää Trollhättanin kalliorotkossa kesäisen tulvaluukkujen avauksen aikana.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Tubaist",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "SWE:maasto:gotaalv",
+      "id": "swe-maasto-gotaalv-6a7b7252d343",
+      "fileName": "swe-maasto-gotaalv-6a7b7252d343.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic4-20260912/delivery/swe-maasto-gotaalv-6a7b7252d343.jpg",
+      "targetKey": "karttanostot/20260912/swe-maasto-gotaalv-6a7b7252d343.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/swe-maasto-gotaalv-6a7b7252d343.jpg",
+      "sha256": "6a7b7252d34379a9cbd41e51adf4f1fa9bb70f51775010e066a71b05f444ec6d",
+      "bytes": 803463,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/assets/swe-gotaalv-photographic-v1.png",
+      "nativeSha256": "48461b461fd6c1bdfded05ea08d955ebb7f7ac16ae320725380df6130268b59c",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Trollhättanin tulvaluukuista vapautettu Göta älv kuohuu kalliosaarten välistä metsäiseen rotkoon.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "OpenAI; paikkareferenssi Tubaist",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "referenceCreator": "Tubaist",
+        "referenceSha256": "a8189dbcba5144e6226c5c0a894751ea9ce43a625cd9221607ffd31c8ec4f18e",
+        "carryForwardRequired": true,
+        "changes": "Uusi ImageGen-kuva referenssin perusteella; valaistus ja näkökulma muuttuneet."
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "NOR:maasto:glomma",
+      "id": "nor-maasto-glomma-abcd4279dea9",
+      "fileName": "nor-maasto-glomma-abcd4279dea9.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic4-20260912/delivery/nor-maasto-glomma-abcd4279dea9.jpg",
+      "targetKey": "karttanostot/20260912/nor-maasto-glomma-abcd4279dea9.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/nor-maasto-glomma-abcd4279dea9.jpg",
+      "sha256": "abcd4279dea9104fdc473278d4c05662714f1bccacb5eb141ec864bfbe658caa",
+      "bytes": 1749293,
+      "dimensions": [
+        2178,
+        2560
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/references/nor-glomma-authentic-original.jpg",
+      "nativeSha256": "5bf4c9788e017fc933ad4f6d11748c2abcbc3050a407685cc0716da12b5cffb5",
+      "kind": "authentic-photograph",
+      "rootApproved": true,
+      "captionFi": "Glomma mutkittelee Nesin metsäisten rantojen, peltojen ja Årnesin taajaman halki.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "Bjoertvedt",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "NOR:maasto:glomma",
+      "id": "nor-maasto-glomma-93f541979ec1",
+      "fileName": "nor-maasto-glomma-93f541979ec1.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic4-20260912/delivery/nor-maasto-glomma-93f541979ec1.jpg",
+      "targetKey": "karttanostot/20260912/nor-maasto-glomma-93f541979ec1.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/nor-maasto-glomma-93f541979ec1.jpg",
+      "sha256": "93f541979ec145e84fa8ef42bc224d811213bc90d3cfa77d05bfbfe5910bd51f",
+      "bytes": 820055,
+      "dimensions": [
+        1157,
+        1359
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/assets/nor-glomma-photographic-v1.png",
+      "nativeSha256": "fc3c92257e214a9ca4c03fbda484bf00c391061e5cc3498a8e87d0101d725a4f",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Glomman leveä uoma kaartaa Nesin peltojen ja metsäsaarekkeiden lomassa Itä-Norjassa.",
+      "source": {
+        "provider": "Wikimedia Commons",
+        "creator": "OpenAI; paikkareferenssi Bjoertvedt",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "referenceCreator": "Bjoertvedt",
+        "referenceSha256": "5bf4c9788e017fc933ad4f6d11748c2abcbc3050a407685cc0716da12b5cffb5",
+        "carryForwardRequired": true,
+        "changes": "Uusi ImageGen-kuva referenssin perusteella; valaistus ja näkökulma muuttuneet."
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/manifest.json",
+      "gameIntegrated": false
+    },
+    {
+      "key": "FRA:maasto:rhone",
+      "id": "fra-maasto-rhone-5c452abae760",
+      "fileName": "fra-maasto-rhone-5c452abae760.jpg",
+      "filePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-rhone1-20260912/delivery/fra-maasto-rhone-5c452abae760.jpg",
+      "targetKey": "karttanostot/20260912/fra-maasto-rhone-5c452abae760.jpg",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-rhone-5c452abae760.jpg",
+      "sha256": "5c452abae76081f2fb5ea7ed8c692662c3b8ca9340fbad990775b184bd643d67",
+      "bytes": 701250,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/native/FRA-maasto-rhone-v2.png",
+      "nativeSha256": "cfa7d060b9695f3f6ed565dc874621c8b5784a93581d3f333172be10a46c6db8",
+      "kind": "generated-illustration",
+      "rootApproved": true,
+      "captionFi": "Rhône virtaa Saint-Vallierin rantatalojen ja metsäisen rinteen ohitse.",
+      "source": {
+        "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+        "basedOnReference": true,
+        "note": "Reference supplied to image generation to ground channel scale, settlement placement and rounded wooded relief; viewpoint and scene are newly generated. Preserve CC BY-SA attribution with generated candidate.",
+        "creator": "OpenAI; referenssikuva Krzysztof Golik",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+        "carryForwardRequired": true,
+        "provider": "Wikimedia Commons",
+        "referenceCreator": "Krzysztof Golik",
+        "filePage": "https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+        "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+      },
+      "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/manifest.json",
+      "gameIntegrated": false
+    }
+  ],
+  "packetSources": [
+    {
+      "name": "root-landscapes16-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/delivery-packet.json",
+      "createdAt": "2026-09-12T17:33:21.598Z",
+      "count": 15
+    },
+    {
+      "name": "root-fin-castles4-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fin-castles4-20260912/delivery-packet.json",
+      "createdAt": "2026-09-12T17:31:48.274Z",
+      "count": 4
+    },
+    {
+      "name": "root-nordic4-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic4-20260912/delivery-packet.json",
+      "createdAt": "2026-09-12T17:34:51.794Z",
+      "count": 4
+    },
+    {
+      "name": "root-rhone1-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-rhone1-20260912/delivery-packet.json",
+      "createdAt": "2026-09-12T17:36:05.554Z",
+      "count": 1
+    }
+  ],
+  "rootQa": [
+    {
+      "name": "root-landscapes16-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/root-qa.json",
+      "publicationAuthorized": true,
+      "personallyInspected": true,
+      "items": [
+        {
+          "key": "FIN:maasto:suomenlahti",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-authentic-next4-20260912/originals/FIN-maasto-suomenlahti--Skata-ledholmen.jpg",
+          "sha256": "6a740954384083a6696730702040eccc852fc8649615946fe36a243a6da2a57e",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-authentic-next4-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Suomenlahden kallioista rantaa ja matalaa saaristoa Sipoon edustalla.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "LPfi",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Skata-ledholmen.jpg",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Skata-ledholmen.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": "PASS — kuva katsottu alkuperäisestä tiedostosta; etualalla luonnollinen kallio- ja lohkareranta, sen takana leveä meri ja matalia metsäisiä saaria. Kuva näyttää tunnistetusti Suomenlahden Suomen-puoleista saaristoa eikä väitä koko lahden vastarantoja samaan näkymään."
+          },
+          "notes": "Root viewed native and authentic original: low Sipoo granite shore, boulders and low wooded horizon; ordinary believable photographic light and scale."
+        },
+        {
+          "key": "FIN:maasto:suomenlahti",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-photo-next2-20260912/native/FIN-maasto-suomenlahti-v1.png",
+          "sha256": "3d53f42585ff9482450e034a3c0b6b5cdba79b3245d49579cfcd99193102671d",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-photo-next2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Suomenlahden kallioista rantaa ja matalaa saaristoa Sipoon edustalla.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva LPfi",
+              "referenceCreator": "LPfi",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Skata-ledholmen.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "carryForwardRequired": true
+            },
+            "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja map location image\nPrimary request: Create a new documentary-looking present-day photograph of the Gulf of Finland from the same verified Finnish setting as the reference: the low rocky Sipoo archipelago, viewed southward from Skata ledholmen. Keep the real landscape character and scale: broad but sheltered-looking water, low forested skerries on the horizon, rounded exposed Finnish coastal rock and a few natural boulders at the shore. This is specifically a view within the Gulf of Finland archipelago, not a claim to show the entire open gulf.\nStyle/medium: ordinary natural photograph from a handheld full-frame camera, realistic moderate lens, no illustration look.\nComposition/framing: landscape orientation, slightly imperfect eye-level shoreline framing; use a distinct composition from the reference while preserving its actual geography, with water occupying most of the middle distance and low islands only along the horizon.\nLighting/mood: ordinary soft summer daylight with thin cloud, restrained dynamic range, naturally lost detail in some shadows and highlights.\nMaterials/textures: believable uneven granite, calm lightly rippled brackish water, modest natural vegetation; subdued detail and moderate sharpness.\nConstraints: no people, boats, buildings, city skyline, distant opposite-country coast, mountains, dramatic waves, captions, text, logos, or watermark. Avoid HDR, CGI surfaces, hyperreal microcontrast, dramatic sunset, perfect symmetry, painterly treatment, and excessive saturation. Use the reference image only for accurate place geometry and landscape character.",
+            "derivativeSource": {
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva LPfi",
+              "reference": {
+                "role": "primary place and geometry reference",
+                "localFile": "../sol-fin-authentic-next4-20260912/originals/FIN-maasto-suomenlahti--Skata-ledholmen.jpg",
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Skata-ledholmen.jpg",
+                "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Skata-ledholmen.jpg",
+                "creator": "LPfi",
+                "license": "CC BY-SA 3.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "referenceSha256": "6a740954384083a6696730702040eccc852fc8649615946fe36a243a6da2a57e",
+                "derivativeAttributionRequired": true,
+                "derivativeNote": "Generated composition closely follows the verified landscape arrangement and must retain LPfi / CC BY-SA 3.0 attribution as a reference-grounded derivative."
+              },
+              "carryForwardRequired": true,
+              "provider": "Wikimedia Commons",
+              "referenceCreator": "LPfi",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Skata-ledholmen.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": {
+              "viewedNative": true,
+              "result": "PASS",
+              "notes": "Natural photographic appearance and restrained light. Rocky Finnish shoreline, calm water and low skerries agree with the viewed reference. No city, opposite coast or invented open-sea geography. The result remains compositionally close to the source, so derivative attribution is explicit."
+            }
+          },
+          "notes": "Root viewed native and authentic original: low Sipoo granite shore, boulders and low wooded horizon; ordinary believable photographic light and scale."
+        },
+        {
+          "key": "FIN:kohde:kerimaenkirkko",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-authentic-next4-20260912/originals/FIN-kohde-kerimaenkirkko--Kerimaen-kirkko-kellotornista-2.JPG",
+          "sha256": "cb65212aa52d4c596ca6035f879501ee6941fc7e0581bb88f4b9f6363e9df8f9",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-authentic-next4-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Kerimäen puukirkon keltainen julkisivu kellotornista nähtynä.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "MKFI",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Kerim%C3%A4en_kirkko_kellotornista_2.JPG",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Kerim%C3%A4en_kirkko_kellotornista_2.JPG",
+              "license": "Public domain (PD-self)",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kerim%C3%A4en_kirkko_kellotornista_2.JPG"
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": "PASS — kuva katsottu alkuperäisestä tiedostosta; pystysuuntainen lähikuva näyttää kirkon suuren kelta-valkoisen puujulkisivun, pääsisäänkäynnin ja ihmisen mittakaavana. Kuvakulma on tiedostosivun mukaan kirkon kellotornista."
+          },
+          "notes": "Root viewed authentic facade, generated v2 and broad Teuvo Salmenjoki church/belltower reference. Correct green dome/lantern and separate bell tower. Tip framing is also clipped in actual broad reference; minor framing limitation, not false architecture. Carry CC BY-SA4 on generated derivative."
+        },
+        {
+          "key": "FIN:kohde:kerimaenkirkko",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-photo-next2-20260912/native/FIN-kohde-kerimaenkirkko-v2.png",
+          "sha256": "58fdddeebf0086f8aec050cc60e66ed3e46a535cd2b556393a6b8f52f34c641b",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-photo-next2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Kerimäen suuresta puukirkosta ja sen erillisestä kellotapulista nykyisessä kirkkopuistossa.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Teuvo Salmenjoki",
+              "referenceCreator": "Teuvo Salmenjoki",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Kerim%C3%A4en_kirkko_ja_keppotapuli.jpg",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "carryForwardRequired": true
+            },
+            "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja map location image\nPrimary request: Make a new present-day documentary photograph of the real Kerimäki Church and its separate bell tower in Savonlinna. Reproduce the architecture from both verified reference photographs, especially the church's cruciform timber mass, yellow-and-white boarded façades, Gothic-pattern windows, broad dark pitched roofs, the tall rounded GREEN COPPER central dome with its small white lantern and cross, and the separate tall yellow-and-white bell tower with its dark stone lower section. The church and bell tower must remain separate buildings in their real relationship.\nComposition/framing: horizontal ordinary visitor photograph from the approach path, mildly asymmetrical. The church occupies the left and middle background; the detached bell tower is nearer on the right, as supported by reference 1. Show enough of the church behind it to communicate its large cross-shaped mass, but do not invent unseen wings.\nStyle/medium: natural unedited-looking architectural photograph from an everyday full-frame camera, moderate lens, normal optical perspective.\nLighting/mood: plain Finnish summer daylight with some light cloud, restrained contrast, ordinary shadow detail.\nMaterials/textures: believable painted timber with small age variation, real green oxidized copper dome, irregular stone masonry on bell tower base, ordinary grass and trees; moderate sharpness without microcontrast.\nConstraints: preserve the exact current architecture in the two references. The church central dome must be green copper, tall and rounded, not black, not a shallow mansard or onion dome. The detached bell tower must not merge into the church. No construction scene, historic costumes, crowds, scaffolding, text, logos or watermark. Avoid CGI-clean surfaces, HDR, painterly treatment, dramatic sky, perfect symmetry, oversaturation and invented architectural ornament.",
+            "derivativeSource": {
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Teuvo Salmenjoki",
+              "reference": {
+                "required": true,
+                "basis": "Composition and visible building arrangement closely follow the wide Teuvo Salmenjoki reference.",
+                "creator": "Teuvo Salmenjoki",
+                "license": "CC BY-SA 4.0",
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Kerim%C3%A4en_kirkko_ja_keppotapuli.jpg",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "carryForwardRequired": true,
+              "provider": "Wikimedia Commons",
+              "referenceCreator": "Teuvo Salmenjoki",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Kerim%C3%A4en_kirkko_ja_keppotapuli.jpg",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": {
+              "file": "native/FIN-kohde-kerimaenkirkko-v2.png",
+              "sha256": "58fdddeebf0086f8aec050cc60e66ed3e46a535cd2b556393a6b8f52f34c641b",
+              "result": "SELF_QA_PASS_ROOT_QA_REQUIRED",
+              "findings": [
+                "Tall green segmented copper dome, white lantern and cross now agree with both authentic church references.",
+                "Church and bell tower are visibly separate buildings in the same front/side relationship as the wide reference.",
+                "Bell tower yellow timber upper stages, paired pointed openings, dark stone base and projecting dark roof courses follow the viewed reference.",
+                "Church front gable, white diagonal trim fields and Gothic-pattern window groups follow the references.",
+                "Natural daylight and materials read as a photograph, though the composition is very close to Teuvo Salmenjoki’s reference and therefore must carry CC BY-SA 4.0 derivative attribution."
+              ]
+            }
+          },
+          "notes": "Root viewed authentic facade, generated v2 and broad Teuvo Salmenjoki church/belltower reference. Correct green dome/lantern and separate bell tower. Tip framing is also clipped in actual broad reference; minor framing limitation, not false architecture. Carry CC BY-SA4 on generated derivative."
+        },
+        {
+          "key": "FIN:kohde:koli",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/authentic/FIN-kohde-koli--Ukko-Koli-Pielinen-Arto-J.jpg",
+          "sha256": "17640e74688347f24194ad6c1ea242d72ea6a3fe0f3078d0a06a14203b33a4c9",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Näkymä Ukko-Kolilta itään Pieliselle ja sen pitkille metsäisille saarille.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Arto J",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Lieksa_-_Ukko-Koli_-_View_of_Pielinen_lake_-_panoramio.jpg",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Lieksa_-_Ukko-Koli_-_View_of_Pielinen_lake_-_panoramio.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": "PASS as source: exact coordinates at Ukko-Koli and Commons description identify the east-facing Pielinen view. Original contains the photographer signature/date in the lower right; preserve source unchanged, but generated candidate excludes text."
+          },
+          "notes": "Root viewed native and authentic Ukko-Koli/Pielinen: high rocky foreground, long low wooded islands and subdued cloudy light are credible."
+        },
+        {
+          "key": "FIN:kohde:koli",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/native/FIN-kohde-koli-v1.png",
+          "sha256": "e5aecce9466a38308a072b9a6a2ef697245c70b3be042d07f78a20a934e09159",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Ukko-Kolilta itään avautuvasta Pielisen järvi- ja saarimaisemasta.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Arto J",
+              "referenceCreator": "Arto J",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Lieksa_-_Ukko-Koli_-_View_of_Pielinen_lake_-_panoramio.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "carryForwardRequired": true
+            },
+            "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja map location image\nPrimary request: Create a new present-day documentary photograph from Ukko-Koli looking east over Lake Pielinen in North Karelia. Preserve the verified reference geography: a very high forested western shore viewpoint, the broad lake below, many long low forested islands aligned across the water, and a distant low eastern horizon. The image must be recognizably the classic Koli-to-Pielinen view.\nComposition/framing: horizontal ordinary visitor photograph, slightly lower camera and modestly tighter framing than the reference; a small strip of pale exposed quartzite rock and uneven spruce/birch foliage in the foreground, lake dominant in the middle distance. Do not change the view direction.\nStyle/medium: natural handheld landscape photograph, moderate normal-to-wide lens, restrained processing and ordinary optical perspective.\nLighting/mood: flat-to-soft Finnish summer daylight under broken grey cloud, realistic haze, no dramatic sunbeams.\nMaterials/textures: naturally uneven foliage and rock, calm dark-blue-grey water, moderate sharpness with less distant detail.\nConstraints: no people, structures, boats, text, signature, watermark or invented mountains. Keep islands low and forested and the horizon broad and low. Avoid HDR, CGI vegetation, painterly appearance, hyperreal microcontrast, oversaturation and perfect postcard symmetry. Use the reference for exact location, view direction and island scale.",
+            "derivativeSource": {
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "referenceCreator": "Arto J",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Lieksa_-_Ukko-Koli_-_View_of_Pielinen_lake_-_panoramio.jpg",
+              "carryForwardRequired": true,
+              "provider": "Wikimedia Commons",
+              "creator": "OpenAI; referenssikuva Arto J",
+              "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": "Viewed native. PASS: high western viewpoint, broad Pielinen, low elongated forest islands and low eastern horizon agree closely with source; ordinary overcast light and reduced distant detail read photographically. Composition is source-close, so derivative attribution is required."
+          },
+          "notes": "Root viewed native and authentic Ukko-Koli/Pielinen: high rocky foreground, long low wooded islands and subdued cloudy light are credible."
+        },
+        {
+          "key": "FIN:kohde:saimaa",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/authentic/FIN-kohde-saimaa--Pihlajavesi-Kotasaari-Freiermensch.jpg",
+          "sha256": "40486a87096e4d8d6bf6ece87496a9c6f9eb3436be3c540097b0c935fc587239",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Pihlajaveden selkiä ja metsäisiä saaria Kotasaaresta pohjoiseen katsottuna.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Freiermensch",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Saimaa.jpg",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Saimaa.jpg",
+              "license": "CC BY-SA 2.5",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/"
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": "PASS as source: Commons gives Kotasaari coordinates, north heading and Pihlajavesi classification. Very wide panorama is geographically useful but shallow for a map-card crop."
+          },
+          "notes": "Root viewed original and native panorama: low Pihlajavesi wooded islands and calm lake, no invented mountains. Full uncropped panorama required; actual game nostokuva/fokusnosto CSS uses object-fit:contain. Physical mobile card visual QA remains separate."
+        },
+        {
+          "key": "FIN:kohde:saimaa",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/native/FIN-kohde-saimaa-v1.png",
+          "sha256": "bebb8cf2bf2250d10c921db062409a1e673e9e957324fcfdf29ae0fbeb9e884e",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-lakes2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Saimaan Pihlajaveden matalista metsäisistä saarista ja niiden välisistä salmista.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Freiermensch",
+              "referenceCreator": "Freiermensch",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Saimaa.jpg",
+              "license": "CC BY-SA 2.5",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+              "carryForwardRequired": true
+            },
+            "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja map location image\nPrimary request: Create a new present-day documentary photograph of Pihlajavesi, part of Lake Saimaa, viewed north from the verified Kotasaari island setting near Savonlinna. Preserve the reference geography: a maze-like freshwater lake of open blue water, several low rocky pine-covered islands at different distances, narrow passages between them, and low forested mainland hills on the far horizon. Show the island-and-strait character described by the Saimaa canon, without claiming to show the whole lake.\nComposition/framing: horizontal ordinary lakeshore photograph at human eye height, a distinct closer framing from a low rocky shore; one pine trunk or branch may frame an edge, with water across most of the view and islands layered naturally. No elevated mountain viewpoint and no invented city.\nStyle/medium: natural handheld landscape photograph with a moderate lens, ordinary optics and restrained processing.\nLighting/mood: calm late-summer daylight with thin broken cloud, modest reflections, naturally uneven exposure and distant haze.\nMaterials/textures: believable dark-blue freshwater ripples, exposed pale granite, sparse shoreline pines, low forested islands; moderate sharpness and reduced detail with distance.\nConstraints: keep Pihlajavesi's low island geography and northward view character from the reference. No people, sailboat, houses, city skyline, seal, dramatic cliffs, mountains, text, logos or watermark. Avoid HDR, CGI vegetation, painterly rendering, hyperreal microcontrast, saturated postcard color and perfect symmetry. Use the source only as geographic and landscape reference; create a new composition.",
+            "derivativeSource": {
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "referenceCreator": "Freiermensch",
+              "license": "CC BY-SA 2.5",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Saimaa.jpg",
+              "carryForwardRequired": true,
+              "provider": "Wikimedia Commons",
+              "creator": "OpenAI; referenssikuva Freiermensch",
+              "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": "Viewed native. Geographic PASS: low rocky pine islands, layered straits, freshwater scale and low mainland horizon agree with the viewed Pihlajavesi reference. Natural light and water are plausible. Layout caveat: imagegen inherited an extra-wide panoramic ratio (about 3:1), which may be less useful for a tall map modal; root should judge crop suitability."
+          },
+          "notes": "Root viewed original and native panorama: low Pihlajavesi wooded islands and calm lake, no invented mountains. Full uncropped panorama required; actual game nostokuva/fokusnosto CSS uses object-fit:contain. Physical mobile card visual QA remains separate."
+        },
+        {
+          "key": "SWE:maasto:kebnekaise",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/references/kebnekaise-authentic-original.jpg",
+          "sha256": "5659e789b76e70c411393c6b278e0b8c9cf61c3dbe59908f839e7ffd73da95f9",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Kebnekaisen tummaa tunturimassiivia peittävät vielä keskikesälläkin laajat lumikentät; etelähuipun jäätikköinen lakialue erottuu Vierramvarelta.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Antti Leppänen",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Kebnekaise_as_seen_from_Vierramvare.JPG",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": {
+              "viewed": true,
+              "detail": "original",
+              "result": "pass",
+              "visibleEvidence": "Vierramvarelta avautuva näkymä näyttää Kebnekaisen leveän tumman kivimassiivin, yläselän lumi- ja jääpeitteen, hajanaiset lumikentät sekä oikean reunan jyrkän uurteen."
+            }
+          },
+          "notes": "Root viewed original and native: broad barren ridge, snow and right notch preserved; ordinary mountain photograph. Derivative attribution retained."
+        },
+        {
+          "key": "SWE:maasto:kebnekaise",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/assets/swe-kebnekaise-photographic-v1.png",
+          "sha256": "251b527a2d3755d2ff0dfc1ac2d7d522234de3f30cbeeb26c2fc95c10941597e",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Kebnekaisen leveä kivinen selänne kohoaa Ruotsin Lapissa lumikenttien ja matalan tunturikasvillisuuden ylle.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Antti Leppänen",
+              "referenceCreator": "Antti Leppänen",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+              "carryForwardRequired": true
+            },
+            "promptActual": "Use case: photorealistic natural landscape companion for a historical geography game.\n\nCreate a new landscape photograph of Kebnekaise in Swedish Lapland in late July, using the supplied authentic photograph from Vierramvare as the strict geographic and material reference. Preserve the recognizable broad dark-grey rocky massif, the rounded summit ridge, the snow-and-ice cap along the southern summit area, the scattered snowfields, and the steep darker cleft on the right side. Show a slightly closer, lower-oblique hiking viewpoint with sparse subarctic foreground stones and low vegetation, so the mountain remains the clear subject. Natural cool Scandinavian afternoon light through broken cloud, ordinary realistic atmospheric haze, restrained colors, real rock and snow texture, believable camera optics and depth. Documentary travel-photography appearance, quiet and credible.\n\nNo people, buildings, signs, text, borders, maps, fantasy peaks, exaggerated glaciers, sunset, aurora, HDR, CGI, painterly treatment, plastic surfaces, haloing, or excessive sharpening. Do not invent a sharp Alpine summit; retain the mountain's broad weathered form from the reference.\n",
+            "derivativeSource": {
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Antti Leppänen",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+              "referenceFilePage": "https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG",
+              "referenceSha256": "5659e789b76e70c411393c6b278e0b8c9cf61c3dbe59908f839e7ffd73da95f9",
+              "carryForwardRequired": true,
+              "provider": "Wikimedia Commons",
+              "referenceCreator": "Antti Leppänen",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG",
+              "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": {
+              "viewed": true,
+              "detail": "original",
+              "result": "pass-candidate",
+              "photographicAppearance": "Natural daylight, plausible camera depth, restrained rock and snow texture; no obvious painterly or CGI surface treatment.",
+              "geographicAssessment": "Broad weathered massif, summit snow cap, scattered snowfields and right-hand cliff remain consistent with the viewed reference. The generated closer viewpoint cannot itself prove exact camera location."
+            }
+          },
+          "notes": "Root viewed original and native: broad barren ridge, snow and right notch preserved; ordinary mountain photograph. Derivative attribution retained."
+        },
+        {
+          "key": "NOR:maasto:galdhpiggen",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/references/galdhopiggen-authentic-original.jpg",
+          "sha256": "1b365f8e32aa70c636a833d3ee49c9941598e9f355b4a26f0985acd04ada04eb",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Styggebreenin jäätikkö levittäytyy kivisten Jotunheimenin harjanteiden keskelle; Galdhøpiggen kohoaa näkymän oikeassa laidassa.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Sindre Skrede (Commons user SinWin)",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Galdh%C3%B8piggen_and_Styggebreen%2C_Norway.jpg",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": {
+              "viewed": true,
+              "detail": "original",
+              "result": "pass",
+              "visibleEvidence": "Korkealta kiviharjanteelta kuvattu panoraama näyttää Styggebreenin jäätikköaltaan keskellä ja oikealla, Galdhøpiggenin huipun oikeassa laidassa sekä Jotunheimenin kerrokselliset harjanteet matalan pilvipeitteen alla."
+            }
+          },
+          "notes": "Root viewed original and native: Styggebreen glacier, moraines and cliff masses match source. Retain uncropped panorama and attribution."
+        },
+        {
+          "key": "NOR:maasto:galdhpiggen",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/assets/nor-galdhopiggen-photographic-v1.png",
+          "sha256": "262bb108809261fee5af76dcf43e1ae81c57b165eb9eb3bab11eb4acb7d15eb4",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-scandinavia-nature2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Styggebreenin jäätikköallas avautuu Jotunheimenin kivisten huippujen keskellä, ja Galdhøpiggen nousee sen oikealla puolella.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Sindre Skrede (Commons user SinWin)",
+              "referenceCreator": "Sindre Skrede (Commons user SinWin)",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "carryForwardRequired": true
+            },
+            "promptActual": "Use case: photorealistic natural landscape companion for a historical geography game.\n\nCreate a new high-mountain landscape photograph of Galdhøpiggen and Styggebreen in Jotunheimen, Norway, using the supplied authentic panorama as the strict geographic and material reference. Preserve the glacier bowl and its natural grey-white crevassed surface, the dark broken-rock ridges, the layered Jotunheimen peaks, and Galdhøpiggen's recognizable summit rising at the far right of the glacier. Use a modestly changed but plausible viewpoint from a nearby rocky ridge, with foreground scree leading toward the glacier and summit. Natural overcast summer daylight with broken low cloud, muted Nordic color, realistic haze and camera optics, real granular rock and snow surfaces, restrained documentary travel-photography finish.\n\nNo people, huts, roads, signs, text, borders, fantasy peaks, enlarged glacier, sunset, aurora, HDR, CGI, painterly treatment, plastic surfaces, haloing, or excessive sharpening. Do not relocate Galdhøpiggen to the centre or alter the glacier-basin relationship shown by the reference.\n",
+            "derivativeSource": {
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Sindre Skrede (Commons user SinWin)",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "referenceFilePage": "https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg",
+              "referenceSha256": "1b365f8e32aa70c636a833d3ee49c9941598e9f355b4a26f0985acd04ada04eb",
+              "carryForwardRequired": true,
+              "provider": "Wikimedia Commons",
+              "referenceCreator": "Sindre Skrede (Commons user SinWin)",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg",
+              "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": {
+              "viewed": true,
+              "detail": "original",
+              "result": "pass-candidate",
+              "photographicAppearance": "Muted overcast light, credible panoramic optics and granular scree/glacier surfaces; no obvious HDR, painting or plastic CGI treatment.",
+              "geographicAssessment": "The glacier bowl, rocky enclosure, distant layered peaks and summit at far right follow the viewed reference relationship. Some internal glacier texture is generated and is not documentary evidence."
+            }
+          },
+          "notes": "Root viewed original and native: Styggebreen glacier, moraines and cliff masses match source. Retain uncropped panorama and attribution."
+        },
+        {
+          "key": "FRA:maasto:loire",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/originals/FRA-maasto-loire--Orleans-Benjamin-Smith.jpg",
+          "sha256": "630db901313134a173ddb0ebdda44c14015753b7b23ab0e2c787f4984c2fe570",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Puisia jokiveneitä Loiren rannassa Orléansissa.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Benjamin Smith (Commons user Benjism89)",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Orl%C3%A9ans_-_River_Loire_-_4.jpg",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Orl%C3%A9ans_-_River_Loire_-_4.jpg",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": {
+              "viewed": true,
+              "depicts": "Loirejoen ranta Orléansissa; leveä matala uoma, veneitä sekä matalia puustoisia rantoja."
+            }
+          },
+          "notes": "Root viewed both: authentic shows Orleans moored wooden boats; generated is a distinct generic wooded shallow Loire riverbank, not the exact boat/Orleans camera position. Approved as general Loire landscape only; caption must not assert exact photographed site."
+        },
+        {
+          "key": "FRA:maasto:loire",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/native/FRA-maasto-loire-v1.png",
+          "sha256": "91e34bdd896145d8e2377b38f0e00c915ee63fe5fc762f80a9de049372b10027",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Loiren leveä uoma ja matalat puustoiset rannat.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Benjamin Smith (Commons user Benjism89)",
+              "referenceCreator": "Benjamin Smith (Commons user Benjism89)",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Orl%C3%A9ans_-_River_Loire_-_4.jpg",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "carryForwardRequired": true
+            },
+            "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja map location image\nPrimary request: Create a new present-day documentary photograph of the Loire at Orléans, focused on the river itself. Preserve the verified local character from the reference: a broad, gently moving channel, low tree-covered banks and islands, pale silty-green water, and the flat Loire valley. Show a naturally shallow summer reach with a modest exposed gravel-and-sand margin, consistent with the canon's note about low summer water.\nComposition/framing: horizontal ordinary eye-level photograph from a quiet bank, looking diagonally across the river. Water fills most of the frame; low trees form an irregular far-bank horizon. A small natural gravel bar may enter one lower corner. Distinct composition from the source.\nStyle/medium: realistic unedited-looking modern river photograph, normal lens, ordinary optics, modest sharpness.\nLighting/mood: soft late-morning overcast daylight, restrained contrast and natural haze.\nMaterials/textures: believable slow river ripples, damp sand and gravel, varied deciduous foliage; detail falls off naturally with distance.\nConstraints: no castles, historic bridge, cathedral, skyline, boats, people, signs, text, logos or watermark. Do not invent monuments or dramatic terrain. Avoid HDR, CGI vegetation, painterly appearance, hyperreal texture, golden-hour drama and perfect symmetry. Use the reference only to ground the width, water character and low banks of the Loire at Orléans.\n",
+            "derivativeSource": {
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "basedOnReference": true,
+              "note": "Reference supplied to image generation to ground river width, bank height, vegetation and water character; composition is distinct. Preserve CC BY-SA attribution with generated candidate.",
+              "creator": "OpenAI; referenssikuva Benjamin Smith (Commons user Benjism89)",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Orl%C3%A9ans_-_River_Loire_-_4.jpg",
+              "carryForwardRequired": true,
+              "provider": "Wikimedia Commons",
+              "referenceCreator": "Benjamin Smith (Commons user Benjism89)",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Orl%C3%A9ans_-_River_Loire_-_4.jpg",
+              "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": "PASS candidate: luonnollinen pilvipäivän valo, uskottava loiva jokimaasto ja maltillinen optinen terävyys. Hiekkainen ja sorainen matalan veden reuna näkyy; kuvassa ei ole keksittyjä maamerkkejä. Kuva on paikkaluonnetta havainnollistava, ei täsmällisen kuvauspisteen dokumentti."
+          },
+          "notes": "Root viewed both: authentic shows Orleans moored wooden boats; generated is a distinct generic wooded shallow Loire riverbank, not the exact boat/Orleans camera position. Approved as general Loire landscape only; caption must not assert exact photographed site."
+        },
+        {
+          "key": "FRA:maasto:rhone",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/originals/FRA-maasto-rhone--Saint-Vallier-Krzysztof-Golik.JPG",
+          "sha256": "a50c33b55a8a0d222b2eea80f56c05ddaa39cc2a07300db00bff39b94c211238",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Rhône Saint-Vallierissa Drômen departementissa; kaupunki yhdellä rannalla sekä metsäisiä, pyöreitä laaksonrinteitä.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Krzysztof Golik",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+              "directMediaUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": {
+              "viewed": true,
+              "depicts": "Rhône Saint-Vallierissa Drômen departementissa; kaupunki yhdellä rannalla sekä metsäisiä, pyöreitä laaksonrinteitä."
+            }
+          },
+          "notes": "Root viewed authentic Saint-Vallier and generated. Authentic approved. Generated changes urban mass and adds a prominent left hillside not established by this viewpoint; hold pending new source-faithful generation."
+        },
+        {
+          "key": "FRA:maasto:rhone",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/native/FRA-maasto-rhone-v1.png",
+          "sha256": "9c10f1d702a39bfd51588d627a49a86f586fceb48a7ff5a5825bae90fea757b6",
+          "status": "hold-geography",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Rhônejoesta metsäisten laaksonrinteiden välissä Saint-Vallier’n seudulla.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Krzysztof Golik",
+              "referenceCreator": "Krzysztof Golik",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "carryForwardRequired": true
+            },
+            "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja map location image\nPrimary request: Create a new present-day documentary photograph of the Rhône in the Drôme valley near Saint-Vallier, north of Valence. Preserve the verified regional character in the reference: a broad strong-flowing river confined by low engineered banks, a compact town along one side, and steep but rounded wooded Rhône valley slopes behind it. Focus on the river as a major south-flowing channel.\nComposition/framing: horizontal ordinary eye-level photograph from the opposite low bank, looking diagonally upstream. The river occupies most of the lower and middle frame; one modest stretch of town lies along the left bank and one wooded slope rises behind. Use a distinct viewpoint from the reference and do not add a bridge.\nStyle/medium: natural current-day river photograph, moderate lens, ordinary optical perspective, restrained processing.\nLighting/mood: mild spring daylight under thin cloud, natural reflections, no dramatic atmosphere.\nMaterials/textures: credible moving grey-blue water, concrete or stone bank edge, irregular older town façades at distance, mixed deciduous hillside; moderate sharpness and normal atmospheric softness.\nConstraints: no bridge, dam, castle, cathedral, Alps, boats, people, signs, readable text, logos or watermark. No historical reconstruction. Do not widen the river into a lake or invent cliffs. Avoid HDR, CGI vegetation or buildings, painterly rendering, hyperreal microcontrast, perfect symmetry and dramatic golden light. Use the reference to ground river width, valley relief and settlement scale.\n",
+            "derivativeSource": {
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "basedOnReference": true,
+              "note": "Reference supplied to image generation to ground channel scale, settlement placement and rounded wooded relief; viewpoint and scene are newly generated. Preserve CC BY-SA attribution with generated candidate.",
+              "creator": "OpenAI; referenssikuva Krzysztof Golik",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+              "carryForwardRequired": true,
+              "provider": "Wikimedia Commons",
+              "referenceCreator": "Krzysztof Golik",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+              "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": "PASS candidate: virtaava leveä joki, matala penger, yhden rannan taajama ja pyöreät metsäiset rinteet vastaavat katsotun referenssin paikkaluonnetta. Valo, vesi ja etäisyyden pehmeneminen ovat valokuvamaisia; siltaa tai muuta arvaillun historiallista rakennetta ei ole. Rakennukset ovat havainteen osia, eivät tunnistettuja yksittäisiä kohteita."
+          },
+          "notes": "Root viewed authentic Saint-Vallier and generated. Authentic approved. Generated changes urban mass and adds a prominent left hillside not established by this viewpoint; hold pending new source-faithful generation."
+        }
+      ]
+    },
+    {
+      "name": "root-fin-castles4-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fin-castles4-20260912/root-qa.json",
+      "publicationAuthorized": true,
+      "personallyInspected": null,
+      "items": [
+        {
+          "key": "FIN:kohde:bomarsund",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/references/fin-bomarsund-authentic-original.jpg",
+          "sha256": "a9459205c320f294432be2b91040cf1018cf9e86502ad98247e56b467981cf94",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Bomarsundin linnoituksen punagraniittinen rauniomuuri on säilynyt Ahvenanmaan Sundissa.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "PatríciaR",
+              "filePage": "https://commons.wikimedia.org/wiki/File:BomarsundFortress01.JPG",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+            }
+          },
+          "notes": "Root viewed native and original full image. Correct present-day surviving geometry, believable natural photographic optics and light. No claim of historical reconstruction. Originals retained."
+        },
+        {
+          "key": "FIN:kohde:bomarsund",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/assets/fin-bomarsund-photographic-v1.png",
+          "sha256": "ab79af69f350b4cc313357f142988d31416ec4ab8e35f36fdddb1d8692321127",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Bomarsundin matala punagraniittinen rauniomuuri seisoo syksyisellä linnoitusalueella Ahvenanmaalla.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "PatríciaR",
+              "filePage": "https://commons.wikimedia.org/wiki/File:BomarsundFortress01.JPG",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+            },
+            "derivativeSource": {
+              "provider": "Wikimedia Commons",
+              "creator": "OpenAI; paikkareferenssi PatríciaR",
+              "filePage": "https://commons.wikimedia.org/wiki/File:BomarsundFortress01.JPG",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "referenceCreator": "PatríciaR",
+              "referenceSha256": "a9459205c320f294432be2b91040cf1018cf9e86502ad98247e56b467981cf94",
+              "changes": "Uusi ImageGen-kuva säilyneestä nykykohteesta, valaistus ja rajaus muuttuneet.",
+              "carryForwardRequired": true
+            }
+          },
+          "notes": "Root viewed native and original full image. Correct present-day surviving geometry, believable natural photographic optics and light. No claim of historical reconstruction. Originals retained."
+        },
+        {
+          "key": "FIN:kohde:hameenlinna",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/references/fin-hameenlinna-authentic-original.jpg",
+          "sha256": "4abc75529a864e359427f3bdeb84a4ce87b3be405727b6a53fdbd8d7415adbb4",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Hämeen linnan punatiilinen keskiosa ja harmaakiviset muurit kohoavat Linnansalmen rannalla.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Kanta-Hämeen kuvapankki; crop/rotation/color/sharpening Máel Milscothach",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Hame_Castle_2019-08.jpg",
+              "license": "CC0 1.0",
+              "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+            }
+          },
+          "notes": "Root viewed native and original full image. Correct present-day surviving geometry, believable natural photographic optics and light. No claim of historical reconstruction. Originals retained."
+        },
+        {
+          "key": "FIN:kohde:hameenlinna",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/assets/fin-hameenlinna-photographic-v1.png",
+          "sha256": "64a572a73a3506cce2ca155063bb98cb1996d7e6421ead8a3a1e0ab247d4f6df",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fin-castles2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Hämeen linnan punatiilinen päärakennus ja harmaakiviset puolustusmuurit näkyvät Linnansalmen yli.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Kanta-Hämeen kuvapankki; crop/rotation/color/sharpening Máel Milscothach",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Hame_Castle_2019-08.jpg",
+              "license": "CC0 1.0",
+              "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+            },
+            "derivativeSource": {
+              "provider": "Wikimedia Commons",
+              "creator": "OpenAI; paikkareferenssi Kanta-Hämeen kuvapankki",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Hame_Castle_2019-08.jpg",
+              "license": "CC0 1.0",
+              "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "referenceCreator": "Kanta-Hämeen kuvapankki; crop/rotation/color/sharpening Máel Milscothach",
+              "referenceSha256": "4abc75529a864e359427f3bdeb84a4ce87b3be405727b6a53fdbd8d7415adbb4",
+              "changes": "Uusi ImageGen-kuva säilyneestä nykykohteesta, valaistus ja rajaus muuttuneet.",
+              "carryForwardRequired": false
+            }
+          },
+          "notes": "Root viewed native and original full image. Correct present-day surviving geometry, believable natural photographic optics and light. No claim of historical reconstruction. Originals retained."
+        }
+      ]
+    },
+    {
+      "name": "root-nordic4-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic4-20260912/root-qa.json",
+      "publicationAuthorized": true,
+      "personallyInspected": null,
+      "items": [
+        {
+          "key": "SWE:maasto:gotaalv",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/references/swe-gotaalv-authentic-original.jpg",
+          "sha256": "a8189dbcba5144e6226c5c0a894751ea9ce43a625cd9221607ffd31c8ec4f18e",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Göta älvin vesi ryöppyää Trollhättanin kalliorotkossa kesäisen tulvaluukkujen avauksen aikana.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Tubaist",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+            }
+          },
+          "notes": "Root personally viewed original and native. Trollhättan: divided white-water channels, rock island and upstream floodgates match; plausible foamy water and damp forest. Glomma: actual sequence of broad bends, fields and low forested relief preserved; ordinary aerial photo. Authentic Trollhättan only640x480, do not upscale."
+        },
+        {
+          "key": "SWE:maasto:gotaalv",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/assets/swe-gotaalv-photographic-v1.png",
+          "sha256": "48461b461fd6c1bdfded05ea08d955ebb7f7ac16ae320725380df6130268b59c",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Trollhättanin tulvaluukuista vapautettu Göta älv kuohuu kalliosaarten välistä metsäiseen rotkoon.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Tubaist",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+            },
+            "derivativeSource": {
+              "provider": "Wikimedia Commons",
+              "creator": "OpenAI; paikkareferenssi Tubaist",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "referenceCreator": "Tubaist",
+              "referenceSha256": "a8189dbcba5144e6226c5c0a894751ea9ce43a625cd9221607ffd31c8ec4f18e",
+              "carryForwardRequired": true,
+              "changes": "Uusi ImageGen-kuva referenssin perusteella; valaistus ja näkökulma muuttuneet."
+            }
+          },
+          "notes": "Root personally viewed original and native. Trollhättan: divided white-water channels, rock island and upstream floodgates match; plausible foamy water and damp forest. Glomma: actual sequence of broad bends, fields and low forested relief preserved; ordinary aerial photo. Authentic Trollhättan only640x480, do not upscale."
+        },
+        {
+          "key": "NOR:maasto:glomma",
+          "kind": "authentic",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/references/nor-glomma-authentic-original.jpg",
+          "sha256": "5bf4c9788e017fc933ad4f6d11748c2abcbc3050a407685cc0716da12b5cffb5",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Glomma mutkittelee Nesin metsäisten rantojen, peltojen ja Årnesin taajaman halki.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Bjoertvedt",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+            }
+          },
+          "notes": "Root personally viewed original and native. Trollhättan: divided white-water channels, rock island and upstream floodgates match; plausible foamy water and damp forest. Glomma: actual sequence of broad bends, fields and low forested relief preserved; ordinary aerial photo. Authentic Trollhättan only640x480, do not upscale."
+        },
+        {
+          "key": "NOR:maasto:glomma",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/assets/nor-glomma-photographic-v1.png",
+          "sha256": "fc3c92257e214a9ca4c03fbda484bf00c391061e5cc3498a8e87d0101d725a4f",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-nordic-next2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Glomman leveä uoma kaartaa Nesin peltojen ja metsäsaarekkeiden lomassa Itä-Norjassa.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "creator": "Bjoertvedt",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+            },
+            "derivativeSource": {
+              "provider": "Wikimedia Commons",
+              "creator": "OpenAI; paikkareferenssi Bjoertvedt",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "referenceCreator": "Bjoertvedt",
+              "referenceSha256": "5bf4c9788e017fc933ad4f6d11748c2abcbc3050a407685cc0716da12b5cffb5",
+              "carryForwardRequired": true,
+              "changes": "Uusi ImageGen-kuva referenssin perusteella; valaistus ja näkökulma muuttuneet."
+            }
+          },
+          "notes": "Root personally viewed original and native. Trollhättan: divided white-water channels, rock island and upstream floodgates match; plausible foamy water and damp forest. Glomma: actual sequence of broad bends, fields and low forested relief preserved; ordinary aerial photo. Authentic Trollhättan only640x480, do not upscale."
+        }
+      ]
+    },
+    {
+      "name": "root-rhone1-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-rhone1-20260912/root-qa.json",
+      "publicationAuthorized": true,
+      "personallyInspected": null,
+      "items": [
+        {
+          "key": "FRA:maasto:rhone",
+          "kind": "generated",
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/native/FRA-maasto-rhone-v2.png",
+          "sha256": "cfa7d060b9695f3f6ed565dc874621c8b5784a93581d3f333172be10a46c6db8",
+          "status": "approved",
+          "personallyInspected": true,
+          "sourceManifest": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/sol-fra-rivers2-20260912/manifest.json",
+          "sourceItem": {
+            "captionFi": "Rhône virtaa Saint-Vallierin rantatalojen ja metsäisen rinteen ohitse.",
+            "source": {
+              "provider": "Wikimedia Commons",
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "creator": "OpenAI; referenssikuva Krzysztof Golik",
+              "referenceCreator": "Krzysztof Golik",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "carryForwardRequired": true
+            },
+            "promptActual": "Use case: photorealistic-natural\nAsset type: Matkakirja map location image\nPrimary request: Create a new present-day documentary photograph of the Rhône in the Drôme valley near Saint-Vallier, north of Valence. Preserve the verified regional character in the reference: a broad strong-flowing river confined by low engineered banks, a compact town along one side, and steep but rounded wooded Rhône valley slopes behind it. Focus on the river as a major south-flowing channel.\nComposition/framing: horizontal ordinary eye-level photograph from the opposite low bank, looking diagonally upstream. The river occupies most of the lower and middle frame; one modest stretch of town lies along the left bank and one wooded slope rises behind. Use a distinct viewpoint from the reference and do not add a bridge.\nStyle/medium: natural current-day river photograph, moderate lens, ordinary optical perspective, restrained processing.\nLighting/mood: mild spring daylight under thin cloud, natural reflections, no dramatic atmosphere.\nMaterials/textures: credible moving grey-blue water, concrete or stone bank edge, irregular older town façades at distance, mixed deciduous hillside; moderate sharpness and normal atmospheric softness.\nConstraints: no bridge, dam, castle, cathedral, Alps, boats, people, signs, readable text, logos or watermark. No historical reconstruction. Do not widen the river into a lake or invent cliffs. Avoid HDR, CGI vegetation or buildings, painterly rendering, hyperreal microcontrast, perfect symmetry and dramatic golden light. Use the reference to ground river width, valley relief and settlement scale.\n",
+            "derivativeSource": {
+              "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+              "basedOnReference": true,
+              "note": "Reference supplied to image generation to ground channel scale, settlement placement and rounded wooded relief; viewpoint and scene are newly generated. Preserve CC BY-SA attribution with generated candidate.",
+              "creator": "OpenAI; referenssikuva Krzysztof Golik",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+              "carryForwardRequired": true,
+              "provider": "Wikimedia Commons",
+              "referenceCreator": "Krzysztof Golik",
+              "filePage": "https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG",
+              "changes": "Uusi ImageGen-havainnekuva lähdepaikan perusteella; kuvakulma, valaistus ja yksityiskohdat voivat poiketa valokuvasta."
+            }
+          },
+          "selfVerifiedSource": {
+            "localShaVerifiedNow": true,
+            "nativeOrOriginalViewedBySol": true,
+            "sourceReferenceViewedBySol": true,
+            "sourceMetadataReadFromManifest": true,
+            "visualReviewFromSourceManifest": "PASS candidate: virtaava leveä joki, matala penger, yhden rannan taajama ja pyöreät metsäiset rinteet vastaavat katsotun referenssin paikkaluonnetta. Valo, vesi ja etäisyyden pehmeneminen ovat valokuvamaisia; siltaa tai muuta arvaillun historiallista rakennetta ei ole. Rakennukset ovat havainteen osia, eivät tunnistettuja yksittäisiä kohteita."
+          },
+          "notes": "Root viewed original and v2: original left bank town sequence restored, right hillside matches without invented left ridge, quay and river scale correct; credible ordinary photographic rendering. V1 retained geography hold."
+        }
+      ]
+    }
+  ],
+  "publicReadbackReceipts": [
+    {
+      "name": "root-landscapes16-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-landscapes16-20260912/runs/2026-09-12T17-33-21.600Z/receipt.json",
+      "complete": true,
+      "items": [
+        {
+          "key": "FIN:maasto:suomenlahti",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-maasto-suomenlahti-ed485e1c26dd.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "ed485e1c26dd75d464861174eaabae8e8f8bc7748cb92faf0f7d43e46289773c",
+          "bytes": 2500885,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:24.006Z",
+          "dimensions": [
+            2560,
+            1920
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FIN:maasto:suomenlahti",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-maasto-suomenlahti-36c903d047a6.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "36c903d047a652fe72beb8bef9852c8503c70d7b4dccc768df987684e0a4ced0",
+          "bytes": 829166,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:26.163Z",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FIN:kohde:kerimaenkirkko",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-kerimaenkirkko-31cc93674675.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "31cc93674675dd3e2f413d6f3438cb61c9427d5fc7e3d31a38e77825fe834d66",
+          "bytes": 1651184,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:28.372Z",
+          "dimensions": [
+            1707,
+            2560
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FIN:kohde:kerimaenkirkko",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-kerimaenkirkko-9da7b658baa0.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "9da7b658baa0416146516f346e6db58fdbe2fb7acc22d4094f62b0060dc867be",
+          "bytes": 736701,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:30.377Z",
+          "dimensions": [
+            1505,
+            1045
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FIN:kohde:koli",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-koli-1a08b6e8ddc4.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "1a08b6e8ddc4cfdada1b1e30db7745f2410ee1d1a908f68719faf904d29bc97d",
+          "bytes": 1280695,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:32.273Z",
+          "dimensions": [
+            2560,
+            1602
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FIN:kohde:koli",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-koli-3b9c0577c279.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "3b9c0577c2793d50e53a3b485696d1ccc32081d123305e1b833d45c292c3ff6f",
+          "bytes": 687792,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:34.160Z",
+          "dimensions": [
+            1585,
+            992
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FIN:kohde:saimaa",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-saimaa-1ab486b20a35.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "1ab486b20a3559bc298eaeae0d6b8679ee1e9ba083c3a2716e2ef4edb4795439",
+          "bytes": 462235,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:36.101Z",
+          "dimensions": [
+            2560,
+            358
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FIN:kohde:saimaa",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-saimaa-a116aac4f831.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "a116aac4f831c29f8762fcafeba8cba4cb6116edd9aa18e6bc194759dd83c08c",
+          "bytes": 805567,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:37.988Z",
+          "dimensions": [
+            2173,
+            724
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "SWE:maasto:kebnekaise",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/swe-maasto-kebnekaise-cd98484728f3.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "cd98484728f341538ec3a30fb23457091bd47d8e313150d1a52e3a0e591623ba",
+          "bytes": 1260849,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:40.033Z",
+          "dimensions": [
+            2560,
+            1707
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "SWE:maasto:kebnekaise",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/swe-maasto-kebnekaise-dd1df4d59bad.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "dd1df4d59bad341ba455fa7da8c6a19b001d64bd347659de97dea4c5bc136eb5",
+          "bytes": 773698,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:42.266Z",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "NOR:maasto:galdhpiggen",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/nor-maasto-galdhpiggen-abed85b170a3.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "abed85b170a33d71b6e1efe7f04ce41696a9eb1f4af8056c9dc1c5159315fc1d",
+          "bytes": 849874,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:44.235Z",
+          "dimensions": [
+            2560,
+            893
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "NOR:maasto:galdhpiggen",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/nor-maasto-galdhpiggen-3570e4558290.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "3570e45582900f06f9c647fa93dcbccc0e898014bf42b51d1aeebdd0e4449ed6",
+          "bytes": 650959,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:46.089Z",
+          "dimensions": [
+            2123,
+            741
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FRA:maasto:loire",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-loire-c38f7bfdd6e9.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "c38f7bfdd6e93f6fe3ba2b19c9cd97c273bf7819af2db6a319b201d00f7ba3f1",
+          "bytes": 1580083,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:48.165Z",
+          "dimensions": [
+            2560,
+            1707
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FRA:maasto:loire",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-loire-7d2bf0f03134.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "7d2bf0f031341337e0e9059d270fda99b8b46492ba0fc2c491f6f7d63de26349",
+          "bytes": 731290,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:50.133Z",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FRA:maasto:rhone",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-rhone-181bfd18e8e2.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "181bfd18e8e21703a3fb5c76d17472182d161c2585ca9d9d44671bfe3d497b8e",
+          "bytes": 1694830,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:33:52.450Z",
+          "dimensions": [
+            2560,
+            1707
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        }
+      ]
+    },
+    {
+      "name": "root-fin-castles4-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-fin-castles4-20260912/runs/2026-09-12T17-31-48.275Z/receipt.json",
+      "complete": true,
+      "items": [
+        {
+          "key": "FIN:kohde:bomarsund",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-bomarsund-300bf713e1f9.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "300bf713e1f9b742bf75a0f6052eecf34c1c4da57d217f85f6ae971515689950",
+          "bytes": 1950760,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:31:50.899Z",
+          "dimensions": [
+            2560,
+            1928
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FIN:kohde:bomarsund",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-bomarsund-04e06ac99dc8.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "04e06ac99dc8f3dece3257f6a49e9c861817ba49e7a28bb7c8f1c802366eb876",
+          "bytes": 899517,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:31:53.004Z",
+          "dimensions": [
+            1445,
+            1088
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FIN:kohde:hameenlinna",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-hameenlinna-0fd4b80439c0.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "0fd4b80439c0bdd7d35c14d7773be3c2be40b81edf1e40dbeacb8147ca5d17f4",
+          "bytes": 901682,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:31:54.906Z",
+          "dimensions": [
+            2451,
+            1313
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "FIN:kohde:hameenlinna",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fin-kohde-hameenlinna-902715e493f7.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "902715e493f76829115bd3eb6c907248a6acdf20bed2d6e4fa5a25ecf585b947",
+          "bytes": 752422,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:31:56.937Z",
+          "dimensions": [
+            1713,
+            918
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        }
+      ]
+    },
+    {
+      "name": "root-nordic4-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-nordic4-20260912/runs/2026-09-12T17-34-51.794Z/receipt.json",
+      "complete": true,
+      "items": [
+        {
+          "key": "SWE:maasto:gotaalv",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/swe-maasto-gotaalv-76c74fdd7683.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "76c74fdd7683541446e9088061614cc14236e231c6ef8111a00082778296d311",
+          "bytes": 88689,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:34:53.877Z",
+          "dimensions": [
+            640,
+            480
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "SWE:maasto:gotaalv",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/swe-maasto-gotaalv-6a7b7252d343.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "6a7b7252d34379a9cbd41e51adf4f1fa9bb70f51775010e066a71b05f444ec6d",
+          "bytes": 803463,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:34:55.866Z",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "NOR:maasto:glomma",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/nor-maasto-glomma-abcd4279dea9.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "abcd4279dea9104fdc473278d4c05662714f1bccacb5eb141ec864bfbe658caa",
+          "bytes": 1749293,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:34:58.048Z",
+          "dimensions": [
+            2178,
+            2560
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        },
+        {
+          "key": "NOR:maasto:glomma",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/nor-maasto-glomma-93f541979ec1.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "93f541979ec145e84fa8ef42bc224d811213bc90d3cfa77d05bfbfe5910bd51f",
+          "bytes": 820055,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:35:00.019Z",
+          "dimensions": [
+            1157,
+            1359
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        }
+      ]
+    },
+    {
+      "name": "root-rhone1-20260912",
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-map-images-278-20260911/root-rhone1-20260912/runs/2026-09-12T17-36-05.555Z/receipt.json",
+      "complete": true,
+      "items": [
+        {
+          "key": "FRA:maasto:rhone",
+          "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-rhone-5c452abae760.jpg",
+          "uploaded": true,
+          "httpStatus": 200,
+          "sha256": "5c452abae76081f2fb5ea7ed8c692662c3b8ca9340fbad990775b184bd643d67",
+          "bytes": 701250,
+          "mime": "image/jpeg",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-09-12T17:36:07.852Z",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "space": "srgb",
+          "fullDecode": true,
+          "gameIntegrated": false
+        }
+      ]
+    }
+  ],
+  "siteReview": {
+    "version": 189,
+    "completedAt": "2026-09-12T17:40:26",
+    "records": 131,
+    "mainRecords": 115,
+    "comparisonRecords": 16,
+    "meaning": "review-site evidence only; not proof of game merge or release"
+  },
+  "releaseState": {
+    "pr2309": "content verified in origin/main and public game packs at v1810",
+    "pr2311": "pending merge/release",
+    "pr2312": "pending merge/release",
+    "nicosia": "luennat false / TARINAKAARI activation remains separate"
+  }
+}

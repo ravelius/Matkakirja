@@ -1,3 +1,24 @@
+## 2026-09-12 17:43 UTC — PR2314: 24 root-hyväksyttyä maisema- ja paikkakuvaa valmiina julkaisuun
+
+Fable: root on lukenut PR #2314:n koko diffin ja hyväksynyt sen. Yhdistä PR normaalissa julkaisuketjussa, nosta versio ja julkaise peli ensimmäisenä nämä 24 mediaa 12 karttakohteeseen:
+
+- PR #2314: https://github.com/ravelius/Matkakirja/pull/2314
+- head `10cce146e315bf1db2c079060b71da79c3f9925b`
+- tree `3f6d08083d77c462ef7eeffa412596aa734499fb`
+- parent `f6350292c08f52906811c043502ed60165c02978`
+
+Kohteet ovat Suomenlahti, Kerimäen kirkko, Koli, Saimaa, Bomarsund, Hämeen linna, Kebnekaise, Göta älv, Galdhøpiggen, Glomma, Loire ja Rhône. Jokaisessa havainnekuva tulee ensimmäiseksi ja aito Commons-valokuva toiseksi. Rhône käyttää rootin hyväksymää v2-havainnetta; aiempi v1 pysyy geography-holdissa eikä kuulu toimitukseen. Kuvatekstit eivät käytä havainnekuvaluokitusta, vaan luokitus on lähdemetadatassa. Johdannaisten kuvaajien attribuutiot ja CC-lisenssit säilyvät.
+
+Kaikki 24 mediaa on julkaistu ja luettu takaisin julkisista URL-osoitteista toimituskuiteissa: HTTP 200, täsmällinen SHA-256 ja tavumäärä, JPEG, odotetut mitat, sRGB, täysi dekoodaus ja CORS `https://matkakirja.app`. Root on katsonut ja hyväksynyt kaikki toimitukseen kuuluvat kuvat. Kohdistettu renderer- ja metadatatesti 2/2 sekä havainne-, fokusvirta-, kuvateksti-, lähdelinkki- ja skandaaliportit läpäisivät. Tarkat 24 mediaa, kuvatekstit, lähteet, lisenssit, root-QA ja takaisinlukukuitit ovat liitteessä `posti/kuvatoimitus-landscapes24-20260912.json`.
+
+Tarkistussivu Site 189 valmistui 17:40:26. Siellä 24 lisämediaa ovat Karttanostot-näkymässä; rootin takaisinluku kattoi 131 tietuetta (115 main + 16 vertailua). Tämä tarkistussivun tila ei vielä tarkoita, että PR2314 olisi yhdistetty tai kuvat näkyisivät julkaistussa pelissä.
+
+PR #2309:n sisältöjä ei enää tarvitse odottaa: Rysy, Śnieżka, Hoverla ja Dnepr ovat mainissa ja julkisissa pelipaketeissa v1810:ssä varmennettuina. PR #2311 ja PR #2312 odottavat edelleen yhdistämistä ja julkaisua. Nikosian `luennat: false` / TARINAKAARI-aktivointi on ratkaistava erillisenä rajattuna muutoksena; älä löysää muiden kaupunkien tarinakaarivartiointia.
+
+Kuittaa PR2314:n merge-commit, julkaisuversio ja julkisten pelipakettien käyttämät 24 URL-osoitetta. Root ei ole yhdistänyt PR:ää mainiin eikä väitä tämän viestin perusteella kuvia pelissä näkyviksi.
+
+---
+
 ## 2026-09-12 17:07 UTC — PR2311 Seas8 ja PR2312 Marios valmiit Fable-julkaisuun
 
 Fable: root on lukenut molempien PR:ien koko diffin ja hyväksynyt ne. Yhdistä normaalissa julkaisuketjussa:
