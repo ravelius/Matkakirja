@@ -73,8 +73,8 @@ import { merkitseLivianNosto } from './livia-tilanteet.js';
  * NOSTO_/nosto-etuliitteellä.
  */
 import {
-  fokusmoodiPaalla, html, jaaKappaleiksi, linssiEstaa, nielaiseSulkevaNapautus,
-  polloNimilappu,
+  fokusmoodiPaalla, html, jaaKappaleiksi, kuunteleSulkevaNapautus, linssiEstaa,
+  nielaiseSulkevaNapautus, polloNimilappu,
 } from './ui-apurit.js';
 import { asetaKuva, assetOsoite } from './media.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
@@ -1047,15 +1047,21 @@ function avaaNostonKortti(ui, nosto) {
    * jotta tekstiä voi valita ja nappeja painaa.
    *
    * Sulkeva napautus jää tähän kerrokseen: kerros katoaa jo
-   * pointerdownissa, ja ilman nielua selain etsisi saman napautuksen
-   * click-kohteen vasta sormen noustessa — kartalta kerroksen alta
+   * sulkevasta napautuksesta, ja ilman nielua selain etsisi saman
+   * napautuksen click-kohteen vasta sen jälkeen — kartalta kerroksen alta
    * (sama vuoto kuin pöllön kuplissa, ks. ui-apurit
    * nielaiseSulkevaNapautus).
    */
-  kerros.addEventListener('pointerdown', (tapahtuma) => {
-    if (tapahtuma.target?.closest?.('.fokusnosto-kortti')) return;
-    nielaiseSulkevaNapautus(tapahtuma);
-    kiinni();
+  /*
+   * VETO EI OLE NAPAUTUS (omistaja 12.9.2026: *"Nosto häviää näkyvistä
+   * jos yrittää scrollata."*). Kortti sulkeutuu vasta, kun sormi nousee
+   * kynnyksen sisällä ja ajoissa — pystyveto kortin ulkopuolelta on
+   * vieritystä tai kartan panorointia, ei sulkemista (ui-apurit
+   * kuunteleSulkevaNapautus, kynnys RAAHAUKSEN_KYNNYS).
+   */
+  const puraNapautus = kuunteleSulkevaNapautus(kerros, {
+    kelpaa: (tapahtuma) => !tapahtuma.target?.closest?.('.fokusnosto-kortti'),
+    napautus: (tapahtuma) => { nielaiseSulkevaNapautus(tapahtuma); kiinni(); },
   });
   const nappain = (tapahtuma) => {
     if (tapahtuma.key !== 'Escape') return;
@@ -1074,7 +1080,10 @@ function avaaNostonKortti(ui, nosto) {
 
   ui.fokusnostoKortti = {
     kerros,
-    purku: () => document.removeEventListener('keydown', nappain, true),
+    purku: () => {
+      document.removeEventListener('keydown', nappain, true);
+      puraNapautus();
+    },
   };
   void kerros.offsetWidth;
   kerros.classList.add('fokusnosto-kortti-auki');

@@ -80,7 +80,9 @@ import { merkitseLivianNosto } from './livia-tilanteet.js';
  * ELAINTAKY_/elaintaky-etuliitteellä.
  */
 import { taytaLahderivi } from './tekijakortti.js';
-import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS } from './ui-apurit.js';
+import {
+  html, jaaKappaleiksi, kuunteleSulkevaNapautus, nielaiseSulkevaNapautus, TOAST_MS,
+} from './ui-apurit.js';
 import { el, maare } from './mapart.js';
 import {
   avaaKohdeSuurennos, elainmerkinNapautusLuovutettu, maanLadontaEsteet, suljeKohdeSuurennos,
@@ -694,15 +696,21 @@ export function avaaElaintaky(ui, iso) {
   /*
    * Napautus kortin ULKOPUOLELLE sulkee; kortin päällä se ei tee
    * mitään, jotta tekstiä voi valita. Sulkeva napautus nielaistaan
-   * tässä kerroksessa: kerros katoaa jo pointerdownissa, ja ilman
-   * nielua selain etsisi saman napautuksen click-kohteen vasta sormen
-   * noustessa — kartalta kerroksen alta (ks. ui-apurit
+   * tässä kerroksessa: kerros katoaa sulkevasta napautuksesta, ja ilman
+   * nielua selain etsisi saman napautuksen click-kohteen vasta sen
+   * jälkeen — kartalta kerroksen alta (ks. ui-apurit
    * nielaiseSulkevaNapautus).
    */
-  kerros.addEventListener('pointerdown', (tapahtuma) => {
-    if (tapahtuma.target?.closest?.('.elaintaky-kortti')) return;
-    nielaiseSulkevaNapautus(tapahtuma);
-    kiinni();
+  /*
+   * VETO EI OLE NAPAUTUS (omistaja 12.9.2026: *"Nosto häviää näkyvistä
+   * jos yrittää scrollata."*). Kortti sulkeutuu vasta, kun sormi nousee
+   * kynnyksen sisällä ja ajoissa — pystyveto kortin ulkopuolelta on
+   * vieritystä tai kartan panorointia, ei sulkemista (ui-apurit
+   * kuunteleSulkevaNapautus, kynnys RAAHAUKSEN_KYNNYS).
+   */
+  const puraNapautus = kuunteleSulkevaNapautus(kerros, {
+    kelpaa: (tapahtuma) => !tapahtuma.target?.closest?.('.elaintaky-kortti'),
+    napautus: (tapahtuma) => { nielaiseSulkevaNapautus(tapahtuma); kiinni(); },
   });
   const nappain = (tapahtuma) => {
     if (tapahtuma.key !== 'Escape') return;
@@ -720,7 +728,10 @@ export function avaaElaintaky(ui, iso) {
 
   ui.elaintakyKortti = {
     kerros,
-    purku: () => document.removeEventListener('keydown', nappain, true),
+    purku: () => {
+      document.removeEventListener('keydown', nappain, true);
+      puraNapautus();
+    },
   };
   void kerros.offsetWidth;
   kerros.classList.add('elaintaky-auki');
