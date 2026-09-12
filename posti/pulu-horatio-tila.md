@@ -4,7 +4,7 @@ Päivitetty 12.9.2026. Omistajan JATKA-lupa kumoaa tämän hankkeen aiemman sama
 
 ## Yksi ohje
 - Hyväksytty yhteinen työohje: posti/pulu-horatio-tuotanto-20260912.md.
-- Ohje ja ristiriitojen rajattu siivous ovat valmiit PR:ssä #2322: https://github.com/ravelius/Matkakirja/pull/2322 . Remote commit 486c609aee124b2fa2d22a6c317a1b70fb54d94e, kaikki 5 tiedostoa ja tree takaisinlukemalla varmistettu.
+- Ohje ja ristiriitojen rajattu siivous ovat valmiit PR:ssä #2322: https://github.com/ravelius/Matkakirja/pull/2322 . Remote commit e4546fb5e11ad3359f7b4c8e9d89e3aa7582130b, kaikki 5 tiedostoa ja tree takaisinlukemalla varmistettu.
 - Paikalliset tarkistukset PASS: Sol 106/106 ja viimeinen uusinta 82/82; pääsession riippumaton 67/67. GitHubin Testit käynnissä viimeisellä tarkistuksella. Fable vastaa integraatiosta; ei vielä main-/pelijulkaisu.
 - Eurooppa ensin; hyväksytty mallikaupunki, sanasto, kentät, testit ja tilat tekevät jatkon muille mantereille mahdolliseksi niiden kaanonporttien kautta.
 
@@ -27,11 +27,15 @@ Tekstivetäjä omistaa fokusvirtapakkien sisältömuutokset omassa työhaarassaa
 - Tekstivetäjän neljän kaupungin pilotti: remote luonnos-PR #2325 https://github.com/ravelius/Matkakirja/pull/2325 , commit aa3a61d7b5c422d132f6ef06c1c64dfd521ebcc2. Kortti docs/raportit/horatio-livia-pilottikortit-20260912.md. Marseille P2 liitetty pakkiin. Tekijän 45/45 pilot+fokus-PASS; laajempi 109/111: kaksi vanhan äänen/ajoituksen porttihylkäystä, joita ei ohiteta. Osatoimitus RC:n kokoajalle, EI erillinen julkaisupyyntö. Fable-liite posti/horatio-livia-eurooppa-pilotti-20260912.md.
 - Animaatiovetäjä KUITTASI teknisen paketointivastuun. Paikallinen animaatiocommit 032d60da; tekijän puhtaassa worktreessä raportoima 3167 PASS / 0 fail / 13 skip, standalone ja niputus vihreät. Remote-toimitus connectorilla valmistelussa. Kokoaa tekstipilotin, kuvahandoffin ja animaation erilliseen RC-haaraan; lopullinen ääni/alignment ja yhteinen selain-QA vielä tekemättä.
 - Marseille P2 v2: kuvavetäjän ja tekstivetäjän visuaalinen/paritarkistus valmis, mediajulkaisu takaisinluettu (kuvavetäjän kuitti). https://media.matkakirja.app/matkakirja/pulu-cam/20260912/pulu-cam-marseille-02-v2-5218c67d5b38.jpg ; sha256 5218c67d5b3868d83854107900a88da7acd1597efc8d035a52401255daf52464. Toimitus output/pulu-p2-europe-20260912/marseille/handoff.json kuvatehtävän työhakemistossa. P1 säilyy. P2 EI vielä kytketty peliin; tulee tekstivetäjän yhteispilotin mukana. 36 puuttuvan P2:n tilauksesta 1 toimitettu mediaan, 35 vielä generoimatta.
-- Pulun uusi iloisempi/suloisempi ääni: valintasuunnan kuvaus, voice_id ei lukittu. Ei uutta maksullista ääntä ilman tarvittavaa ajolupaa.
+- Pulun pysyvä ääni VALITTU 12.9.2026: Flicker — cheerful fairy & sparkly sweetness, voice_id piI8Kku0DcvcL6TTSeQt, moottori eleven_v3. Horation ääni ei vaihdu. Ajolupa ja julkaisu ovat edelleen erillisiä portteja.
+
+## Sisältö-QA ja lukukopiot
+
+Omistaja pyysi tekstit luettavaksi. Pääsessio teki puhtaan 45 nykytekstin kopion (main e34a1171) sekä erillisen neljän pilottiluonnoksen r1-kopion. Havainto: Horation tiivistys on toistaiseksi liian vähäinen (341→316, 346→337, 328→318, 348→348 merkkiä); moni virke on vain yhdistetty välimerkillä. Tekstivetäjää pyydetty valmistamaan yksi aidosti lyhyempi pari paritarkistukseen, ei hiljaista koko sarjan uudelleenkirjoitusta. Nykyistä r1-tekstiä EI vielä äänitetä. Tämä on äänenvalinnasta erillinen sisältöportti.
 
 ## Seuraavat siirrot
 1. Tekstivetäjä toimittaa hyväksytyn pilotin, kuvat/kuvatekstit ja täsmällisen TTS-ajopaketin/hashit/tagit/cue-ankkurit tekniselle paketointivastaavalle.
-2. Äänivalinta on kysytty omistajalta: uusi iloisempi/suloisempi ääni ensin vai nykyinen ääni pilottiin. Ei vastausta vielä. Valmistelevat työt jatkuvat; maksullisia ajoja vain voimassa olevilla luvilla. Mahdollinen puuttuva ajolupa ilmoitetaan yksilöitynä.
+2. Ääni valittu: piI8Kku0DcvcL6TTSeQt / eleven_v3. Animaatiovetäjä päivittää pysyvät tekniset oletukset ja TTS-ajopaketin RC-haaralle. Maksullisia ääni-/alignment-ajoja ei ole käynnistetty. Ensin korjataan alla oleva sisältö-QA-puute, sitten ratkaistaan rajattu ajolupa.
 3. Animaatiovetäjä kokoaa hyväksytyt toimitukset erilliseen RC-haaraan, kohdistaa lopulliseen ääneen ja tekee yhteistestit. Raporttiin teksti-/ääni-/kuvarevisiot, CI, selain/mobiili/reduced-motion/keskeytys-QA ja lyhyt käyttöönotto- sekä palautusohje.
 4. Pääsessio tiedottaa Fablea. Fable ei kokoa kolmea keskeneräistä osaa: yksi valmis julkaisuehdokas lopputarkistettavaksi, yhdistettäväksi ja julkaistavaksi. Ohje-PR #2322 voidaan integroida erikseen CI:n jälkeen. Tuotantoluonnoksia ei vielä julkaista.
 5. Kuvavetäjä odottaa seuraavaa sovittua pilotin briefiä. Euroopan laaja erä vasta yhteispilotin oppien jälkeen; seuraavat mantereet saman ketjun ja omien kaanonporttiensa kautta.
