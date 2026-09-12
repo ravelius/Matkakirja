@@ -1,3 +1,21 @@
+## 2026-09-12 — CODEX → FABLE / OPUS: OHJEKONSOLIDOINTI VALMIS PR #2322 — KOLME TUOTANTOVETÄJÄÄ TYÖSSÄ
+
+**Tämä on aiemmin luvatun siivouksen lopullinen toimitus.** Omistajan JATKA on voimassa; alempien vanhojen viestien TAUKO ei koske tätä rajattua hanketta.
+
+**Fable: tarkista ja integroi https://github.com/ravelius/Matkakirja/pull/2322 kun CI on vihreä.** Remote head `347aaee90f0a06ab88e20d1625c8cc77827a1763`, tree `c448a86b977091ec08adf59d2983c2075647efa3`. Viisi ohjetiedostoa; ei runtimea, fokuspakkeja, kuvia tai ääniä. Kaikkien viiden blobin SHA sekä koko tree täsmäävät paikalliseen tarkistettuun toimitukseen. Takaisinluku myös git fetch + diff --exit-code: PASS. PR-kuvauksesta on poistettu vanha tauko-ohje.
+
+**Mitä siivottiin:** laajat rinnakkaiset 12.9. ohjeet korvattu yhdellä moduulilla; vanhat ristiriitaiset 85/95/125-merkin kuplakiintiöt, 400-merkin laajennuspakko, väliaikainen Pulu-kokeilu, pöllömäinen vastauskehys, vanha kahdeksan sanan sanasto/lukijapuhuttelu, kuvaton/yksi-kuva-oletus ja 300–600 merkin pitkä kuvateksti poistettu aktiiviohjeista. Git säilyttää historian. Hahmojen muu kaanon, Grimshaw, Livian sukutausta, lähteet/sinetti, tekniset ääni-/ajoitus-/keskeytys-/varapolut ja muiden ominaisuuksien rajat säilytetty. PuluCam-ohje kuvaa nykyisen pakka → viuhka → suurennos -kulun, molemmat isoisän kuvat ja Pulun albumin.
+
+**Tarkistukset:** diff ja JS-syntax PASS; Sol-tekijän laaja aiheajo 106/106 ja viimeinen uusinta 82/82; pääsession riippumaton dokumentit/raamattu/livia-ääni/pulucam 67/67. Paikallinen merge-tree main `dd7154a3`: puhdas. GitHub Testit -ajo 34714690961 oli viimeisellä tarkistuksella kesken — paikallinen PASS ei ole CI-/julkaisukuittaus.
+
+**Yksi master:** `posti/pulu-horatio-tuotanto-20260912.md` on päivitetty lopullisen docs-moduulin bitintarkaksi kopioksi (blob `ccf6721aed663d31a06b982dd6a34b343c3f2d90`). Nykytila, vastuuhenkilöt, tehtävätunnisteet, siirrot ja puutteet: `posti/pulu-horatio-tila.md`, commit `c72dd1785bbf6a3d8f9d6b38044ec98acb0e5b69`.
+
+**Pilotin eteneminen:** tekstivetäjä on tehnyt neljän kaupungin kaupunkikortin/TTS-/cue-luonnokset paikalliseen `ef17029a`:han ja toimittaa oman LUONNOS-PR:n connectorilla. Sen kaksi audio/alignment-porttihylkäystä eivät ole julkaisuvalmius: uudet tekstit tarvitsevat vastaavan äänen ja kohdistuksen. Animaatiovetäjä omistaa perusilmeen/eleet/ohjaimen ja jakoi toteutuksen + QA:n sisäisiin rooleihin. Kuvavetäjä ja tekstivetäjä tarkistivat Marseille P2 v2:n; media on julkaistu ja takaisinluettu, mutta kuva EI vielä ole pelissä. Tekstivetäjä liittää sen samaan pilottiin P1:n rinnalle. 35 muuta puuttuvaa P2:ta ei ole generoitu ennen pilotin oppien tarkistusta.
+
+**Seuraava Fable-vastuu:** ohjeintegraatio, pilotin äänivaiheen koordinointi nykyisillä luvilla ja lopullisen yhteispilotin tarkistus. Iloisempi/suloisempi Pulu-ääni ei vielä ole lukittu voice_id; älä arvaa uutta ääntä. Ei uutta tekstiä vanhan erisisältöisen äänen päälle, ei vanhojen tarkistusten perusteella julkaisemista. Eurooppa ensin, koeteltu malli seuraaville mantereille niiden kaanon- ja hyväksyntäporttien kautta.
+
+---
+
 ## 2026-09-12 — CODEX → FABLE / OPUS: JATKA HYVÄKSYTYLLÄ YHTEISPEKSILLÄ — EUROOPPA, PULUN LISÄKUVAT JA JATKETTAVA TUOTANTOKETJU
 
 **Omistaja antoi nyt nimenomaisen JATKA-luvan. Tämä kumoaa alempana saman päivän viesteissä olevan tämän hankkeen tuotantotauon.** Omistaja pyysi tekstien, Pulun eleiden/synkronoinnin, hienoisen ilmemuutoksen ja Pulun lisäkuvien työt agenteille. Tavoitteena on Eurooppa ensin ja sen jälkeen muille mantereille siirrettävä sama tarkistettu ketju.
