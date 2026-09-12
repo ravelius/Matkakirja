@@ -214,9 +214,24 @@ const PUHE_OSOITE = `${API}/v1/text-to-speech`;
  * omistaja näkee ElevenLabsin sivulla.
  */
 const VAKAUDET = Object.freeze({ creative: 0, natural: 0.5, robust: 1 });
-const MALLI = process.env.PULU_MALLI ?? 'eleven_multilingual_v2';
-/** "Dr. Von - Quirky, Mad Scientist" (omistajan valinta 6.9.2026, haettu --haku "Dr. Von"). */
-export const PULU_AANI_OLETUS = process.env.PULU_AANI ?? 'yjJ45q8TVCrtMhEKurxY';
+/*
+ * MALLI ON NYT V3 (omistajan päätös 12.9.2026, sanatarkasti: *"käytetään
+ * tätä jatkossa pulun ääneen: piI8Kku0DcvcL6TTSeQt (flicker - cheerful
+ * fairy & sparkly sweetness). tallenna raamattuun. V3 moottori"*).
+ *
+ * V3 ei ole tekninen yksityiskohta vaan osa päätöstä: vain se ymmärtää
+ * hakasulkutagit, ja samoilla tageilla on tarkoitus myöhemmin ohjata
+ * pulun animaatiota. Ympäristömuuttuja jää, jotta vanhaan malliin voi
+ * palata yhdellä ajolla ilman koodimuutosta.
+ */
+const MALLI = process.env.PULU_MALLI ?? 'eleven_v3';
+/**
+ * "Flicker - cheerful fairy & sparkly sweetness" (omistajan päätös
+ * 12.9.2026). Kumoaa 6.9.2026 valitun Dr. Vonin
+ * (yjJ45q8TVCrtMhEKurxY) ja kaksi saman päivän koeääntä: Amelia
+ * (ZF6FPAbjXT4488VcRRnw) ja Cherry Twinkle (XJ2fW4ybq7HouelYYGcL).
+ */
+export const PULU_AANI_OLETUS = process.env.PULU_AANI ?? 'piI8Kku0DcvcL6TTSeQt';
 const TAGIT_KAYTOSSA = MALLI === 'eleven_v3';
 const STABILITY = process.env.PULU_VAKAUS
   ? (VAKAUDET[process.env.PULU_VAKAUS] ?? Number(process.env.PULU_VAKAUS))
