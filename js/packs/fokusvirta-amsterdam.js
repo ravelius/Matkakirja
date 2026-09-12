@@ -139,14 +139,14 @@ export const FOKUSVIRTA_AMSTERDAM = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-amsterdam-r20260909-paper-v5.jpg",
       lyhyt: "Amsterdam, 1873. Tuoli saapui omasta ikkunastaan.",
-      selite: "Kattokoukku piti köyttä, köysi piti tuolia ja kaksi miestä piti tilanteesta huolta. Kapeassa kanavatalossa ikkuna oli saanut ulko-oven tehtävän. Tuoli pysähtyi hetkeksi nousunsa aikana, mikä sopi kameralleni paremmin kuin jatkuva liike. Miehet neuvoivat toisilleen suuntaa. Kaluste itse suhtautui kaikkeen hyvin arvokkaasti, niin kuin ei olisi odottanutkaan joutuvansa käyttämään portaita.",
+      selite: 'Kattokoukku ja kaksi miestä pitivät tuolin matkalla kohti yläikkunaa. Kaluste pysähtyi kuvaani arvokkaasti kesken nousun.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/hoisting-paintings"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-amsterdam-r20260911-paper2-v1.jpg",
       lyhyt: "Amsterdam, 1873. Tuoli pääsi sisään, portaat jäivät sivuun.",
-      selite: "Tuoli oli vedetty ikkunasta kolmanteen kerrokseen. Kaksi miestä ohjasi sen jaloilleen, ja köysi lepäsi lattialla. Kapea porras nousi aivan vieressä. Kaluste oli saapunut selkä edellä mutta arvokkaasti.",
+      selite: 'Kaksi miestä ohjasi tuolin ikkunasta sisään ja jaloilleen. Köysi lepäsi lattialla, kun kapea porras jäi aivan vieressä käyttämättä.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/hoisting-paintings","https://www.amsterdam.nl/stadsarchief/canon/windows/12/"],
     },
@@ -200,12 +200,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-amsterdam-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Amsterdam: lentokoulun oppilas on tällä kertaa nojatuoli.',
-        selite: 'Amsterdamin kapeissa taloissa muutto saattaa alkaa kadulta ja '
-          + 'päättyä ikkunaan. Nostolaite hoitaa osuuden, johon portaat eivät '
-          + 'taivu. Minä seurasin nojatuolin ensimmäistä nousua. Sillä oli '
-          + 'lentoasento kohdallaan mutta suuntavaisto täysin köyden varassa. '
-          + 'Isoisä näki saman ongelman ratkaistuna kattokoukulla. Olette '
-          + 'edistyneet: nykyään tuolilla on matkallaan oma pieni lava.',
+        selite: 'Nostolava kuljettaa nojatuolia Amsterdamin kapean talon ikkunaan, kun portaat eivät taivu tehtävään. Seurasin oppilaan nousua: lentoasento kunnossa, suuntavaisto täysin nostimen varassa.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.iamsterdam.com/en/travel-stay/getting-around/why-a-canal-cruise-is-the-best-introduction-to-amsterdam',
@@ -217,13 +212,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-amsterdam-02-r20260909-euv1-v1.jpg',
         lyhyt: 'Amsterdam: saavuin ikkunalle ennen huonekaluja.',
-        selite: 'Ikkunan tasolla nostimen lava näyttää jo melkein '
-          + 'laskeutumispaikalta. Sisällä odottaa muuttaja, kadulla toinen '
-          + 'katsoo ylöspäin ja tuoli jatkaa heidän välissään. Minä pääsin '
-          + 'tänne yhdellä kaarroksella. En maininnut sitä ääneen. Kun joku '
-          + 'tekee vaivalla jotakin, minkä itse osaa helposti, pieni '
-          + 'hienotunteisuus tekee asiantuntijasta huomattavasti '
-          + 'siedettävämmän.',
+        selite: 'Saavuin ikkunalle ennen nojatuolia, joka lähestyi muuttajaa omalla pienellä lavallaan. En huomauttanut lentoreitistäni, sillä vaivalla tehty suoritus ansaitsee hienotunteisen asiantuntijan.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.iamsterdam.com/en/travel-stay/getting-around/why-a-canal-cruise-is-the-best-introduction-to-amsterdam',

@@ -173,12 +173,7 @@ export const FOKUSVIRTA_MADRID = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Madrid, 1873. Maalari huomasi katsojansa ensin.',
-      selite: 'Velázquezin maalauksen edessä huoneen järjestys tuntui vaihtuvan '
-        + 'katsomisen aikana. Kuvassa on hoviväkeä, peilissä kuningaspari ja '
-        + 'maalari itse työnsä ääressä. Koira makaa lattialla '
-        + 'velvollisuuksista erillään. Asetin kameran niin, että taulun ja '
-        + 'tämän salin väliin jäi tyhjää tilaa. Sitä katsellessa en ollut '
-        + 'varma, kummassa huoneessa vierailija oikeastaan seisoo.',
+      selite: 'Pradon salissa Las Meninas vaihtoi katsomisen järjestystä: hoviväki, kuningaspari, maalari ja lattialla lepäävä koira katsoivat eri suuntiin. Taulun edessä en ollut varma, kummassa huoneessa vierailija seisoi.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.museodelprado.es/en/learn/encyclopedia/voice/meninas-las-velazquez/296ac38f-8bf6-439d-b13c-ed22de8c39de',
@@ -188,7 +183,7 @@ export const FOKUSVIRTA_MADRID = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-madrid-r20260911-paper2-v1.jpg",
       lyhyt: "Madrid, 1873. Tasavalta sai kahvilassa enemmän puhetta kuin kahvi.",
-      selite: "Pradon hiljaisen salin jälkeen kahvila oli täynnä mielipiteitä. Kaksi herraa järjesti uutta tasavaltaa käsillään kupin yli. Kuuntelin pöydän laidalta ja annoin vallan vaihtua ilman sanomalehteä. Kahvi ehti jäähtyä ennen väittelyä.",
+      selite: 'Pradon hiljaisuuden jälkeen kaksi herraa järjesti kahvilassa tasavaltaa käsillään kahvikuppien yli. Annoin vallan vaihtua ilman sanomalehteä; kahvi ehti jäähtyä ennen väittelyä.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.museodelprado.es/en/museum/history-of-the-museum"],
     },
@@ -207,12 +202,7 @@ export const FOKUSVIRTA_MADRID = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-madrid-01-r20260909-euv1-v2.jpg',
         lyhyt: 'Madrid: Pradon taiteeseen johtaa myös varjoisa odotus.',
-        selite: 'Las Meninas odottaa Pradossa, mutta minä tarkastan ulkopuolen. '
-          + 'Puun varjossa lepäävä koira on löytänyt saman asennon kuin '
-          + 'maalauksen kuuluisa edeltäjänsä. Sen ihminen katsoo puhelinta, '
-          + 'museovieraat sisäänkäyntiä ja minä koko joukkoa. Madridissa on '
-          + 'tällä hetkellä ainakin kolme käsitystä siitä, mikä ansaitsee '
-          + 'huomion. Koira vaikuttaa ainoalta, joka ei aio perustella omaansa.',
+        selite: 'Las Meninas odottaa Pradossa, mutta puun varjossa lepäävä koira on valinnut saman rauhallisen asennon kuin maalauksen kuuluisa edeltäjä. Sen ihminen katsoo puhelinta, museovieraat sisäänkäyntiä, eikä koira aio perustella huomiotta jättämistään.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.museodelprado.es/en/visit/getting-here',

@@ -45,14 +45,14 @@ export const FOKUSVIRTA_KREETA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kreeta-r20260909-paper-v4.jpg",
       lyhyt: "Hania, 1873. Verkko vaati korjausta valtakunnasta riippumatta.",
-      selite: "Kalastajan sormet löysivät verkosta rikkinäisen kohdan nopeammin kuin silmäni. Sataman toisella puolella majakka seisoi venetsialaisten aloittamassa ja egyptiläisten muuttamassa hahmossaan. Kreeta on nyt sulttaanin aluetta, mutta veneen paluu riippuu valosta ja verkon kunto sen korjaajasta. Kuvasin nämä kaksi työtä samaan näkymään. Mies ei pitänyt kumpaakaan arvoituksena.",
+      selite: 'Kalastaja korjasi verkkoa Hanian satamassa, kun venetsialaisten aloittama ja egyptiläisten uudistama majakka seisoi veden takana. Hallitsijat vaihtuivat, mutta veneen paluu riippui valosta ja verkon kunto korjaajasta.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.chaniatourism.gr/monument/the-egyptian-lighthouse/","https://chaniahistory.gr/en/lighthouse/","https://www.chaniatourism.gr/neighborhood/venetian-harbor/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kreeta-r20260911-paper2-v1.jpg",
       lyhyt: "Hania, 1873. Karttaan piirtyi valo ilman valtakunnan väriä.",
-      selite: "Istuin satamakivelle ja avasin kartan polvelleni. Majakan pieni valo kuului merellä niille, jotka tarvitsivat sitä, vaikka torni oli vaihtanut hallitsijaa useammin kuin käyttötarkoitusta. Piirsin valon paikalleen ilman valtakunnan väriä. Veneet lepäsivät sen edessä hiljaisina.",
+      selite: 'Piirsin Hanian majakan kartalle ilman valtakunnan väriä, sillä sen valo kuului merellä kaikille sitä tarvitseville. Veneet lepäsivät hiljaa sen edessä.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://chaniahistory.gr/en/lighthouse/"],
     },
@@ -109,12 +109,7 @@ export const FOKUSVIRTA_KREETA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-kreeta-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Hania: majakkaa tarvitaan siltäkin puolelta, josta sitä ei kuvata.',
-        selite: 'Hanian majakka seisoo pitkän aallonmurtajan päässä. Sataman suulta '
-          + 'sen tehtävä on helppo ymmärtää: valon paikka kertoo, missä kova '
-          + 'reuna alkaa ja avoin vesi jatkuu. Lensin matalalta ohi juuri kun '
-          + 'pieni vene palasi suojaan. Isoisän kalastaja sanoi majakan '
-          + 'kuuluvan sitä tarvitseville. Kuvan alakulmaan jäi vene. Pidin sen '
-          + 'mukana, sillä siinä oli koko vastauksen syy.',
+        selite: 'Hanian majakka osoittaa pitkän aallonmurtajan päässä, missä kova reuna loppuu ja avoin vesi alkaa. Jätin satamaan palaavan veneen kuvaan, sillä siinä oli koko valon tarkoitus.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.chaniatourism.gr/monument/the-egyptian-lighthouse/',

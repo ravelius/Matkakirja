@@ -144,13 +144,7 @@ export const FOKUSVIRTA_PARIISI = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Pariisi, 1873. Ooppera harjoitteli juhlapukuaan.',
-      selite: 'Telineet pitivät vielä kiinni uudesta oopperasta, mutta koristeet '
-        + 'näyttivät jo odottavan yleisöä. Garnier\'n talossa arki '
-        + 'työskentelee parhaillaan juhlan hyväksi: kivipölyä, lautoja ja '
-        + 'paljon käsipareja, jotta joku myöhemmin voisi vain astua sisään '
-        + 'parhaassa takissaan. Odotin valon siirtymistä pylväälle. Se osasi '
-        + 'tehdä rakennukselle enemmän kuin lyhyt vierailuni '
-        + 'rakennusmestarina olisi saanut aikaan.',
+      selite: 'Uusi oopperatalo seisoo jo juhlapuvussaan, vaikka telineet, kivilohkot ja mutainen työmaa paljastavat harjoitusten jatkuvan. Arki tekee vielä töitä, jotta yleisö voisi myöhemmin vain astua sisään.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.parismuseescollections.paris.fr/en/node/490866',
@@ -160,7 +154,7 @@ export const FOKUSVIRTA_PARIISI = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260911-paper2-v1.jpg",
       lyhyt: "Pariisi, 1873. Leipä kainalossa kulki kadun paras esiintyjä.",
-      selite: "Oopperan rakennustyö jäi taakse ja sade kirkasti kadun. Mies kulki edellä leipä kainalossa ja vihellys huulillaan. Seurasin kaksi korttelia kuulematta pääsymaksusta sanaakaan. Hänelle olisi voinut antaa suuremmankin näyttämön.",
+      selite: 'Sade kiillotti kadun, ja mies kulki edellä leipä kainalossa. Seurasin häntä kaksi korttelia kuulematta pääsymaksusta sanaakaan.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-du-palais-garnier-actuel-opera-national-de-paris-9eme"],
     },
@@ -179,13 +173,7 @@ export const FOKUSVIRTA_PARIISI = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-pariisi-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Pariisi: oopperan paras aitiopaikka jäi ilman samettia.',
-        selite: 'Palais Garnier\'n yleisö katsoo tavallisesti lavalle tai ylöspäin '
-          + 'kohti koristeita. Minä aloitin koristeen vierestä. Katon reunalla '
-          + 'kullan rinnalla näkyvät saumat, sadejäljet ja tavallinen kivi: '
-          + 'juhla-asu tarvitsee huoltoa siinä missä sulatkin. Isoisä epäili, '
-          + 'riittäisikö talon sisään yhtä paljon katsottavaa. Näytän ensin '
-          + 'tämän puolen. Aitiopaikastani puuttuu tuoli, mutta siihen olen jo '
-          + 'tottunut.',
+        selite: 'Palais Garnierin katon reunalla kulta, saumat ja sadejäljet näkyvät samassa lähikuvassa. Juhla-asukin tarvitsee huoltoa, ja minun aitiopaikastani puuttui vain tuoli.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.operadeparis.fr/actualites/restauration-de-la-facade-principale-du-palais-garnier',

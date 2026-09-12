@@ -27,14 +27,14 @@ export const FOKUSVIRTA_ISLANTI = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-islanti-r20260909-paper-v4.jpg",
       lyhyt: "Reykjavik, 1873. Pyykkipäivä sai lämmön maasta.",
-      selite: "Naiset pitivät pyykin, saippuan ja oman työnsä järjestyksessä samalla kun maa lämmitti veden. Lähteen höyry liikkui tuulen mukana niin, että osa maisemasta katosi hetkeksi näkyvistä. Reykjavikin pienet talot jäivät kauemmas, ja pesupaikka näytti tavalliselta osalta niiden arkea. Asetin kameran sivuun roiskeista. Minulle tämä oli ihme; kuvassa oleville naisille se oli tehtävä, joka piti saada valmiiksi.",
+      selite: 'Naiset pesivät pyykkiä kuumassa lähteessä samalla kun höyry peitti hetkittäin avointa maisemaa. Minulle maan lämmittämä vesi oli ihme, heille työ joka piti saada valmiiksi.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://borgarsogusafn.is/en/exhibitions/the-washerwomen-s-walk-a-stroll-into-history"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-islanti-r20260911-paper2-v1.jpg",
       lyhyt: "Reykjavik, 1873. Paita palasi puhtaana, saari jäi suureksi kysymykseksi.",
-      selite: "Kuljin kuumilta lähteiltä takaisin kohti Reykjavikin pieniä taloja. Tuuli tarttui takkiin ja puhtaan paidan kaulukseen. Tien ympärillä maa avautui niin laajana, ettei mikään puu katkaissut näkymää. Kaulukseni oli selkeämpi kuin käsitykseni saaresta.",
+      selite: 'Kuljin kuumilta lähteiltä puhdas paita kädessä kohti Reykjavikin pieniä taloja. Kaulus oli selkeämpi kuin käsitykseni puuttomasta ja avarasta saaresta.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://borgarsogusafn.is/en/exhibitions/the-washerwomen-s-walk-a-stroll-into-history"],
     },
@@ -85,13 +85,7 @@ export const FOKUSVIRTA_ISLANTI = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-islanti-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Reykjavik: lämmin vesi on saanut ympärilleen kokonaisen arjen.',
-        selite: 'Laugardalurissa kuumia lähteitä käytettiin ennen pyykinpesuun. Nyt '
-          + 'laaksossa on myös suuri geotermisesti lämmitetty uimala, ja '
-          + 'kaupungin talot saavat lämpönsä samasta maanalaisesta voimasta. '
-          + 'Asetuin altaan ulkopuoliselle aidalle katsomaan höyryä. Isoisän '
-          + 'paita oli tämän tarinan pieni alku. Minä pidän kehityksen '
-          + 'suunnasta: ihmiset ovat löytäneet syyn istua ulkona silloinkin, '
-          + 'kun ilma ei sitä ehdota.',
+        selite: 'Laugardalurissa pyykkiä pestiin ennen kuumissa lähteissä; nyt samassa laaksossa uidaan geotermisesti lämmitetyssä altaassa. Isoisän paidasta alkanut tarina on kasvanut kokonaiseksi arjeksi, jossa ihmiset istuvat ulkona säästä huolimatta.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://visitreykjavik.is/laugardalur-valley',

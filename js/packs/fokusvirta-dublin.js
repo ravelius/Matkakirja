@@ -236,13 +236,7 @@ export const FOKUSVIRTA_DUBLIN = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Dublin, 1873. Tynnyrit lähtivät, työ jäi.',
-      selite: 'Panimon pihassa tynnyrin pyöreys osoittautui hyvin harkituksi '
-        + 'ominaisuudeksi. Mies saattoi vierittää kuorman kärryille, mutta '
-        + 'joutui nostamaan itsensä jokaisen perässä uudelleen töihin. Pyysin '
-        + 'häntä pysähtymään kuvan ajaksi. Hän pyyhki otsansa ja suostui. '
-        + 'Guinnessin yhdeksäntuhannen vuoden vuokra näyttää paperilla '
-        + 'huvittavalta; tämän pihan työpäivässä siitä näkyy vain pieni, '
-        + 'hikinen osa.',
+      selite: 'Panimon pihassa mies pysähtyi tynnyrikärryn viereen pyyhkimään otsaansa. Yhdeksäntuhannen vuoden vuokrasta näkyi tässä vain yksi hikinen työhetki.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.dublincity.ie/sites/default/files/2020-10/hoyd-volume-1.pdf',
@@ -252,7 +246,7 @@ export const FOKUSVIRTA_DUBLIN = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dublin-r20260911-paper2-v1.jpg",
       lyhyt: "Dublin, 1873. Kysymys pysäytti kärryt hetkeksi.",
-      selite: "Mies pysähtyi kärrynsä viereen panimon pihalla. Hän katsoi kysyjää pitkään, kun tynnyrit odottivat ympärillä. Työ ei näyttänyt loppuvan. Yhdeksäntuhannen vuoden vuokrasopimus teki vastauksesta tarpeettoman.",
+      selite: 'Kysymykseni pysäytti miehen tyhjien kärryjen viereen, kun tynnyrit odottivat ympärillä. Yhdeksäntuhannen vuoden vuokrasopimus teki pitkästä katseesta riittävän vastauksen.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.dublincity.ie/sites/default/files/2020-10/hoyd-volume-1.pdf","https://www.dublincity.ie/sites/default/files/media/file-uploads/2018-05/Liberties_LAP.pdf"],
     },
@@ -270,13 +264,8 @@ export const FOKUSVIRTA_DUBLIN = {
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dublin-01-r20260909-euv1-v1.jpg',
-        lyhyt: 'Dublin: vuokrasopimus on pitkä. Minun pysähdykseni ei.',
-        selite: 'St James\'s Gatella panimon portti on muuttunut myös matkalaisten '
-          + 'kuvauspaikaksi. Työ jatkuu portin takana, ja edessä säädetään '
-          + 'puhelimia sopivaan asentoon. Arthur Guinness uskalsi vuokrata '
-          + 'paikan yhdeksäksituhanneksi vuodeksi. Minä annoin tälle '
-          + 'reunakivelle yhden hetken ja otin kuvan ennen lähtöä. Pitkää '
-          + 'sopimusta lyhyempi reitti on joskus ihan hyvä suunnitelma.',
+        lyhyt: 'Dublin: vuokrasopimus kesti, minun pysähdykseni ei.',
+        selite: 'St James’s Gaten portista on tullut myös matkalaisten kuvauspaikka, ja puhelimet osoittavat harppumerkkiä kohti. Annoin märälle reunakivelle yhden hetken ennen kuin jatkoin matkalaukun rinnalla matkaa.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.visitdublin.com/see-do/details/guinness-storehouse',

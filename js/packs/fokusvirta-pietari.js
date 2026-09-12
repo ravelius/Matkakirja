@@ -196,14 +196,14 @@ export const FOKUSVIRTA_PIETARI = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pietari-r20260909-paper-v4.jpg",
       lyhyt: "Pietari, 1873. Neva ei näyttänyt kellonaikaa.",
-      selite: "Rantakadun penkillä olisi ollut tilaa istua loppuun koko ilta, jos illalla olisi ollut selvempi loppu. Vaalea taivas jäi palatsien ikkunoihin ja joen pintaan. Päivänvarjo näytti tässä valossa tarpeelliselta vielä silloinkin, kun kello neuvoi aivan muuta. Kuvasin kaupungin ilman varsinaista yötä. Kameralle sellainen järjestely sopii hyvin; minun seuraavan aamuni voinnista en ollut yhtä varma.",
+      selite: 'Vaalea taivas jäi Nevan pintaan ja palatsien ikkunoihin, vaikka penkki odotti jo illan istujaa. Kuvasin kaupungin ilman varsinaista yötä; kameralle järjestely sopi minua paremmin.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.loc.gov/pictures/resource/ppmsc.03878","https://hermitagemuseum.org/panorama/pano_37/?floorNum=1&lng=en"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pietari-r20260911-paper2-v1.jpg",
       lyhyt: "Pietari, 1873. Kello päätti päivän, valo ei.",
-      selite: "Kirjoitin päivän tapahtumat loppuun avoimen ikkunan ääressä. Kello oli jo pitkällä, mutta Neva ja vastarannan julkisivut säilyivät vaaleina. Kynttilälle ei ollut vielä työtä. Lisäsin muistikirjaan yhden rivin siitä, ettei päivä itse suostunut lopettamaan.",
+      selite: 'Kirjoitin päivän tapahtumat loppuun avoimen ikkunan ääressä, vaikka Neva ja palatsit pysyivät vaaleina. Kello oli jo pitkällä; päivä itse ei suostunut lopettamaan.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.loc.gov/pictures/resource/ppmsc.03878","https://hermitagemuseum.org/panorama/pano_37/?floorNum=1&lng=en"],
     },
@@ -258,14 +258,8 @@ export const FOKUSVIRTA_PIETARI = {
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-pietari-01-r20260909-euv1-v1.jpg',
-        lyhyt: 'Pietari: kello näyttää yötä, kaupunki esittää vastalauseen.',
-        selite: 'Nevan rannassa vaalea kesäyö tekee kellonajasta huonon '
-          + 'maisemaoppaan. Ihmiset pysähtyvät kaiteelle, vaikka päivän pitäisi '
-          + 'jo olla valmis. Istuin kivireunalla ja kuvasin tyhjän penkin, '
-          + 'jolle joku oli jättänyt tilaa toisellekin. Isoisä jatkoi '
-          + 'kirjoittamista. Minä otin vielä yhden ruudun. Tämän valon kanssa '
-          + 'ongelmana ei ole, ettei näkisi, vaan ettei tahdo lopettaa '
-          + 'katsomista.',
+        lyhyt: 'Pietari: vaalea kesäyö jätti Nevan rantaan tilaa vielä yhdelle kierrokselle.',
+        selite: 'Nevan rannassa kesäyö on niin vaalea, että tyhjä penkki näyttää odottavan seuraavaa katselijaa. Isoisä jatkoi kirjoittamista; minä otin vielä yhden ruudun.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.awaywithmaja.com/guide-st-petersburgs-white-nights/',

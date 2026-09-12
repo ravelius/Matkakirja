@@ -197,14 +197,14 @@ export const FOKUSVIRTA_VARSOVA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-varsova-r20260909-paper-v4.jpg",
       lyhyt: "Varsova, 1873. Leipuri piti kaupungin omalla kielellään.",
-      selite: "Torin talot seisovat lähekkäin, mutta aamun työ mahtuu niiden eteen. Leipurin pöydässä leivät ovat valmiina ennen kuin virastot ehtivät ryhtyä määräämään päivän asioita. Hän katsoi kameraa vain hetken ja palasi asiakkaansa puoleen. Varsovan karttamerkinnöissä minulla on keisarikunnan väri; tässä kuvassa tahdoin säilyttää myös sen, minkä ihmiset tekevät paikasta itse.",
+      selite: 'Torin talot seisovat lähekkäin, mutta aamun työ levittäytyy kojuina niiden eteen. Leipä valmistui ennen virastojen määräyksiä, ja juuri siksi tahdoin sen mukaan kuvaan.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://muzeumwarszawy.pl/en/old-town-new-town-in-warsaw/","https://muzeum.uw.edu.pl/en/the-old-town-square-1916-1918/","https://muzeumwarszawy.pl/obiekt/rzezba-syreny-fontanny-rynku-starego-miasta/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-varsova-r20260911-paper2-v1.jpg",
       lyhyt: "Varsova, 1873. Leipä kulki kadulla helpommin kuin raja kartalla.",
-      selite: "Lähdin torilta tuore leipä kainalossa ja kartta toisessa kädessä. Viraston ovella keisarillinen tunnus kertoi yhden tarinan kaupungista. Kadulla puhuttu kieli ja aamiaiseni kertoivat toisen. Ihmiset jatkoivat matkaa, vaikka kartan viiva pysyi paikallaan.",
+      selite: 'Lähdin torilta leipä kainalossa ja kartta kädessä, kun viraston kotka kertoi yhden tarinan kaupungista. Kadulla puhuttu kieli ja aamiaiseni kertoivat toisen.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://muzeumwarszawy.pl/en/old-town-new-town-in-warsaw/","https://muzeumwarszawy.pl/dzieje-kamienic/"],
     },
@@ -260,12 +260,7 @@ export const FOKUSVIRTA_VARSOVA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-varsova-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Varsova: tämän torin tunnistaminen on jonkun tekemää työtä.',
-        selite: 'Varsovan vanhankaupungin tori rakennettiin sodan jälkeen '
-          + 'uudelleen. Värit, mittasuhteet ja talojen omat kasvot palautettiin '
-          + 'osaksi kaupunkia, jossa taas asutaan ja käydään kauppaa. Kuvasin '
-          + 'talon juurelta ylöspäin: pieni kynnys edessä, kokonainen julkisivu '
-          + 'takana. Isoisä olisi etsinyt täältä leipuriaan. Minä katson, '
-          + 'kuinka paljon vaivaa tutun paikan säilyttäminen voi vaatia.',
+        selite: 'Varsovan vanhankaupungin värikkäät julkisivut rakennettiin sodan jälkeen uudelleen, jotta torille voitiin palata asumaan ja kulkemaan. Matalalta kuvattuna pieni oviaukko muistuttaa, että suuren jälleenrakennuksen päämäärä oli tavallinen elämä.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://whc.unesco.org/en/list/30/',
@@ -275,13 +270,7 @@ export const FOKUSVIRTA_VARSOVA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-varsova-02-r20260909-euv1-v2.jpg',
         lyhyt: 'Varsova: katolta näkyvät myös talojen välit.',
-        selite: 'Räystään tasolta tori muuttuu tilaksi, jonka talot muodostavat '
-          + 'yhdessä. Yhdessä ikkunassa on kukkia, toisessa verho ja '
-          + 'kolmannessa ihminen. Uudelleen rakentaminen ei palauttanut vain '
-          + 'ulkoseiniä vaan paikkoja aivan tavallisille päiville. Näytän tämän '
-          + 'toisen kuvan siksi, ettei ensimmäinen jäisi pelkäksi kauniiksi '
-          + 'julkisivuksi. Kaupunki tarvitsee myös sen, mitä ikkunoiden takana '
-          + 'tapahtuu.',
+        selite: 'Räystään tasolta tori näkyy talojen yhdessä muodostamana tilana, ja lähimmässä ikkunassa kastellaan kukkia. Uudelleen rakentaminen palautti julkisivujen lisäksi paikan aivan tavalliselle päivälle.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://whc.unesco.org/en/list/30/',

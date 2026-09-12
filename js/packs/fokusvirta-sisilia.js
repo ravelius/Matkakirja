@@ -27,14 +27,14 @@ export const FOKUSVIRTA_SISILIA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sisilia-r20260909-paper-v4.jpg",
       lyhyt: "Palermo, 1873. Katon tekijät puhuivat monella kädellä.",
-      selite: "Palatinakappelin katon syvennykset tarttuivat valoon eri kohdista, ja seinien mosaiikit vastasivat siihen kullalla. Normannikuninkaan tilaamassa tilassa kohtaavat eri seutujen käsityötaidot. Kamerani joutuu tekemään ilman väriä, mikä on tässä huoneessa selvä puute. Koetin saada puun pienet muodot näkyviin. Yhden katseen nostaminen ylös osoittautui helpoksi; sen palauttaminen alas kesti paljon kauemmin.",
+      selite: 'Palatinuskappelin veistetty puukatto kohoaa mosaiikkien ylle kuin kokonainen tumma luolasto. Kamerani joutui tekemään ilman väriä, mikä oli tässä huoneessa selvä puute.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.federicosecondo.org/cappella-palatina/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sisilia-r20260911-paper2-v1.jpg",
       lyhyt: "Palermo, 1873. Niska väsyi ennen kuin kysymykset loppuivat.",
-      selite: "Istuin hetkeksi, sillä pitkään ylöspäin katsominen tuntui jo niskassa. Mosaiikit, pylväät ja veistetty puu kertoivat monen käsityöperinteen kohtaamisesta. Kuninkaan nimi oli helppo kuulla. Niiden käsien nimiä, jotka tekivät työn, olisin kuunnellut kauemmin.",
+      selite: 'Istuin hetkeksi, sillä mosaiikkien, pylväiden ja veistetyn katon katsominen tuntui jo niskassa. Kuninkaan nimi tunnettiin; tekijöiden nimiä olisin kuunnellut kauemmin.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.federicosecondo.org/la-cappella-palatina/","https://www.federicosecondo.org/wp-content/uploads/2025/02/palatina_eng.pdf"],
     },
@@ -84,13 +84,8 @@ export const FOKUSVIRTA_SISILIA = {
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sisilia-01-r20260909-euv1-v1.jpg',
-        lyhyt: 'Palermo: tätä kattoa varten kannattaa nostaa nokkaa.',
-        selite: 'Palatinakappelin puukaton pienet syvennykset asettuvat päällekkäin '
-          + 'kuin huolellisesti rakennettu pesä, jonka tekijä ei ole halunnut '
-          + 'lopettaa. Mosaiikkien kulta tuo tilaan toisenlaista valoa. Isoisä '
-          + 'kyseli käsityöläisten nimiä. Minä katselin, kuinka monta erilaista '
-          + 'taitoa voi mahtua samaan huoneeseen. Palatsissa työskentelee nyt '
-          + 'myös Sisilian parlamentti. Katon puheenvuoro on kestänyt kauemmin.',
+        lyhyt: 'Palermo: tämän katon näin kuvasta, siipeni jäivät ulkopuolelle.',
+        selite: 'Palatinuskappelin sisäkuvassa tumma puukatto ja kultaiset mosaiikit kokoavat monta käsityöperinnettä samaan huoneeseen. Minä kiersin ulkona pihan yllä ja tutkin katon myöhemmin tästä kuvasta; sisälle en lentänyt.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.federicosecondo.org/la-cappella-palatina/',

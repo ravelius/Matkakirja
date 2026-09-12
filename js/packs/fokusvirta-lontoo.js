@@ -169,13 +169,7 @@ export const FOKUSVIRTA_LONTOO = {
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-story-v2.jpg',
       lyhyt: 'Lontoo, 1873. Vastapäinen herra pysyi lehden puolella savustakin.',
-      selite: 'Vaunun ikkuna antoi valoa sen verran, että näin lehden '
-        + 'liikahtavan. Lukija itse oli savussa epävarmempi tapaus. '
-        + 'Metropolitanin junaa veti höyryveturi, vaikka rata kulki maan '
-        + 'alla; uutuuden mukana matkusti siis vanha tuttu hiilensavu. Odotin '
-        + 'pysähdyksen ajan kameran takana. Herra odotti uutisten loppumista. '
-        + 'Kumpikaan meistä ei näyttänyt pitävän yskimistä syynä keskeyttää '
-        + 'työtään.',
+      selite: 'Metropolitanin maanalaista junaa veti höyryveturi, ja vastapäinen herra jatkoi lehtensä lukemista hiilensavussa. Kumpikaan meistä ei näyttänyt pitävän yskää syynä keskeyttää työtään.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
         'https://www.ltmuseum.co.uk/collections/stories/transport/metropolitan-line',
@@ -186,7 +180,7 @@ export const FOKUSVIRTA_LONTOO = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-r20260911-paper2-v1.jpg",
       lyhyt: "Lontoo, 1873. Perille päästiin nopeasti; yskä astui laiturille mukana.",
-      selite: "Metropolitanin juna jäi puhkumaan laiturin reunaan, vaikka matkustajat olivat jo nousseet pois. Savu seurasi meitä vaunusta ja teki kaasulampuista epävarmoja. Nostin nenäliinan suulle ennen kuin ehdin laskea laukkua kunnolla maahan. Matka oli nopea, mutta keuhkot näyttivät haluavan antaa oman lausuntonsa.",
+      selite: 'Metropolitanin höyryjuna jäi puhkumaan laiturille, ja savu seurasi matkustajia kaasulamppujen alle. Matka oli nopea, mutta keuhkot tahtoivat antaa oman lausuntonsa.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.ltmuseum.co.uk/collections/stories/transport/metropolitan-line","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/97","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/33362"],
     },
@@ -236,13 +230,8 @@ export const FOKUSVIRTA_LONTOO = {
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lontoo-01-r20260909-paikka-v2.jpg',
-        lyhyt: 'Lontoo: parlamentti jäi taustalle. Penkillä oli tärkeämpää.',
-        selite: 'Istuin Thamesin rantapenkin reunalle. Elizabeth Tower näkyy joen '
-          + 'toisella puolella parlamentin pohjoispäässä, mutta aivan nokan '
-          + 'edessä on muru. Sitä ei ole merkitty yhteenkään karttaan. '
-          + 'Westminsterin sillalla punainen bussi vie ihmisiä eteenpäin; minun '
-          + 'ei tarvitse lähteä vielä mihinkään. Isoisä valitsi maanalaisen '
-          + 'vaunun. Tällä penkillä on parempi ilmanvaihto ja oma tarjoilu.',
+        lyhyt: 'Lontoo: parlamentti jäi taustalle, sillä penkillä oli tärkeämpää.',
+        selite: 'Thamesin rantapenkiltä näkyvät parlamentti ja Elizabeth Tower, mutta nokkani edessä oleva muru ei löydy yhdeltäkään kartalta. Isoisä valitsi maanalaisen vaunun; tässä on parempi ilmanvaihto ja oma tarjoilu.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://southbank.london/see-and-do/queens-walk',

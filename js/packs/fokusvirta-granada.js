@@ -219,14 +219,14 @@ export const FOKUSVIRTA_GRANADA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-granada-r20260909-paper-v4.jpg",
       lyhyt: "Granada, 1873. Comaresin torni toisessa rakennusaineessa.",
-      selite: "Myrttipihan altaassa torni jatkui alaspäin, vaikka tiesin maan olevan siellä jo käytössä. Palatsin kaaret ja myrttipensaat asettuivat veteen tarkemmin kuin oma kynäni olisi niitä jäljentänyt. Odotin liikkeen laantumista ennen valotusta. Alhambrassa vesi kuljettaa viileyttä ja ääntä, mutta tällä pihalla se tekee lisäksi kopion koko rakennuksesta. Työ valmistuu aina uudestaan, maksutta.",
+      selite: 'Myrttipihan altaassa Comaresin torni, kaaret ja pensaat jatkuivat alaspäin valosta rakennettuna palatsina. Odotin veden tyyntymistä ennen valotusta; työ valmistui jälleen maksutta.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.alhambra-patronato.es/wp-content/uploads/2019/02/Conservacion_y_gestion_cultural.pdf"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-granada-r20260911-paper2-v1.jpg",
       lyhyt: "Granada, 1873. Sormi särki heijastuksen, vesi rakensi sen takaisin.",
-      selite: "Myrttipihan altaan pinta oli hetken toinen palatsi. Kosketin sitä sormenpäällä, ja kaaret hajosivat renkaiksi. Jäin odottamaan veden tyyntymistä altaan kivireunalle. Vähitellen valo rakensi julkisivun uudelleen ilman yhtäkään työmiestä.",
+      selite: 'Kosketin Myrttipihan allasta sormenpäällä, ja tornin sekä kaarten heijastus hajosi renkaiksi. Odotin kivireunalla, kunnes vesi rakensi palatsin uudelleen.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.alhambra-patronato.es/wp-content/uploads/2019/02/Conservacion_y_gestion_cultural.pdf","https://www.alhambra-patronato.es/en/recomendacion-lectura/la-acequia-real-de-la-alhambra"],
     },
@@ -282,12 +282,7 @@ export const FOKUSVIRTA_GRANADA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-granada-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Granada: palatsilla on toinen kerros veden alla.',
-        selite: 'Alhambran Myrttipihan pitkä allas kantaa Comaresin tornin '
-          + 'peilikuvaa. Tuuli ja pienikin veden liike muuttavat sitä, vaikka '
-          + 'rakennus pysyy paikallaan. Asetuin reunalle niin matalalle, että '
-          + 'melkein koko palatsi mahtui alapuolelleni. Isoisä rikkoi näkymän '
-          + 'sormellaan. Minä odotin hetken. Joskus hyvän kuvan tärkein taito '
-          + 'on pitää nokkansa erossa aiheesta.',
+        selite: 'Alhambran Myrttipihan allas kantaa Comaresin tornin peilikuvaa, jonka pienikin liike rikkoo ja rakentaa uudelleen. Odotin matalalla reunalla nokka kurissa, kunnes melkein koko palatsi mahtui alapuolelleni.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.alhambra-patronato.es/en/edificios-lugares/patio-de-los-arrayanes',

@@ -205,13 +205,7 @@ export const FOKUSVIRTA_EDINBURGH = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Edinburgh, 1873. Sukat olivat oppineet asumaan korkealla.',
-      selite: 'Asetin kameran kujan portaalle ja huomasin vasta sitten, että '
-        + 'ylempänä kulki vielä toinenkin reitti. Pyykit yhdistivät '
-        + 'vastakkaisia taloja, vaikka niiden asukkaat joutuivat käyttämään '
-        + 'portaita. Linnan kallio näkyi rakennusten lomasta kuin peruste, '
-        + 'jonka päälle kaikki nämä mutkat oli kirjoitettu. Kuvaan mahtui '
-        + 'enemmän korkeutta kuin olin saanut karttaan. Sukat osasivat asian '
-        + 'ilman mittaamista.',
+      selite: 'Porraskuja, sen yli kulkeva reitti ja korkealla riippuvat pyykit mahtuivat samaan kuvaan. Linnan kallio nousi mutkien taakse kuin perusteluksi sille, miksi kartta olisi tarvinnut toisen arkin.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://canmore.org.uk/site/52499/edinburgh-old-town',
@@ -221,7 +215,7 @@ export const FOKUSVIRTA_EDINBURGH = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-edinburgh-r20260911-paper2-v1.jpg",
       lyhyt: "Edinburgh, 1873. Sukat riippuivat kuilun yllä ilman huimausta.",
-      selite: "Pyykkinaru kulki kapean kujan yli. Sukat riippuivat korkealla, ja ikkunoita jatkui niiden alapuolella. Seisoin ylemmällä askelmalla ja katsoin alas. Kaupungin korkeudet eivät mahtuneet yhdelle kartta-arkille.",
+      selite: 'Sukat riippuivat korkealla kapean porraskujan yllä, kun ikkunat ja askelmat jatkuivat niiden alapuolelle. Seisoin ylempänä ja ymmärsin, etteivät kaupungin korkeudet mahdu yhdelle kartta-arkille.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://canmore.org.uk/site/52499/edinburgh-old-town"],
     },
@@ -240,12 +234,7 @@ export const FOKUSVIRTA_EDINBURGH = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-edinburgh-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Edinburgh: löysin kerroksen, jossa ei tarvitse kysyä tietä.',
-        selite: 'Edinburghin vanhakaupunki kasvaa sekä pitkin katua että sen '
-          + 'päälle. Elokuun festivaaleilla kellaritkin muuttuvat '
-          + 'esityspaikoiksi, ja ihmiset etsivät oikeaa ovea ohjelma kädessään. '
-          + 'Katolla ovia on vähemmän. Tästä erotan reitit, savupiiput ja sen, '
-          + 'kuka pysähtyy väärän talon kohdalle. Isoisän toinen kartta-arkki '
-          + 'oli hyvä ajatus. Minun versioni ei tarvitse paperia.',
+        selite: 'Kattojen, savupiippujen ja jyrkän linnakallion välistä erottui monta päällekkäistä reittiä. Laskeuduin väärälle katolle, mutta näköala vahvisti isoisän ajatuksen toisesta kartta-arkista.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.edinburgh.gov.uk/downloads/file/23848/c2a-camera-obscura-calton-hill',

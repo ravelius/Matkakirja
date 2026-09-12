@@ -102,14 +102,14 @@ export const FOKUSVIRTA_BERLIINI = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-berliini-r20260909-paper-v4.jpg",
       lyhyt: "Berliini, 1873. Pylväs katsoi voittoja, poika maahan.",
-      selite: "Voitonpylvään tykinputket olivat päätyneet koristeiksi korkealle, mutta sanomalehti pysyi tukevasti mudassa. Poika kumartui kokoamaan numeroitaan, kun aikuiset jatkoivat pylvään katsomista. Kameran näkökenttä oli tässä hyödyllinen: siihen mahtui sekä suuren juhlan kohde että pieni työ sen juurella. Jälkimmäinen vaati pojalta enemmän välitöntä rohkeutta kuin kukaan ohikulkijoista näytti huomaavan.",
+      selite: 'Voitonpylväs nousi korkealle, kun lehtipoika keräsi numeroitaan mudasta. Kameraan mahtuivat sekä suuri juhlan kohde että pieni työ sen juurella.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://search.smb.museum/object/obj-968409?involved=Anton+von+Werner&page=2","https://www.smb.museum/nachrichten/detail/schenkung-von-alicja-kwade-skulptur-goldelse-fuer-den-skulpturengarten-der-neuen-nationalgalerie/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-berliini-r20260911-paper2-v1.jpg",
       lyhyt: "Berliini, 1873. Mudasta noussut lehti vaihtui kolikkoon.",
-      selite: "Juhlavieraat olivat jo kulkeneet lehden yli. Poimin myyjältä mudan tahriman numeron ja annoin kolikon. Paksut voitonotsikot jäivät paperin toiselle puolelle. Tässä kaupassa tärkein uutinen mahtui kahden käden väliin.",
+      selite: 'Poika ojensi minulle mudan tahriman lehden, ja annoin kolikon. Suuret otsikot jäivät paperiin, mutta tärkein uutinen mahtui kahden käden väliin.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://search.smb.museum/object/obj-968409?involved=Anton+von+Werner&page=2"],
     },
@@ -175,13 +175,7 @@ export const FOKUSVIRTA_BERLIINI = {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-berliini-01-r20260909-euv1-v2.jpg',
         lyhyt: 'Berliini: siipien omistaja voi silti viettää koko päivän '
           + 'paikallaan.',
-        selite: 'Voitonpylvään kultainen Victoria katsoo nykyään Tiergartenin yli. '
-          + 'Pylväs siirrettiin tänne, mutta hahmo ei ole ottanut käyttöönsä '
-          + 'yhtäkään uutta lentoreittiä. Kiersin sen vierestä tarkistamassa '
-          + 'siiven rakennetta. Näyttävä työ. Oma höyhenpukuni on vähemmän '
-          + 'kultainen, mutta pääsen sillä takaisin alas ilman portaita. '
-          + 'Isoisän lehtipojasta tämä korkeus ei kerro mitään. Sen puutteen '
-          + 'huomaan minäkin.',
+        selite: 'Kultainen Victoria katsoo nykyään Tiergartenin ja liikenteen yli siivet levällään. Kiersin patsaan tasalla tarkistamassa siivet ja muistin alhaalla isoisän lehtipojan.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.visitberlin.de/en/siegessaule',

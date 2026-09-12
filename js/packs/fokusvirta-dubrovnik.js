@@ -102,14 +102,14 @@ export const FOKUSVIRTA_DUBROVNIK = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dubrovnik-r20260909-paper-v4.jpg",
       lyhyt: "Ragusa, 1873. Kivikasvot puhuivat vedellä.",
-      selite: "Suuren Onofrion kaivon sivuissa kasvot antavat veden ohikulkijan ulottuville. Kaupunki on johtanut juotavan veden muurien sisään, vaikka muuten se on nähnyt paljon vaivaa pitääkseen ulkopuolen ulkona. Asetin kameran yhden naamion eteen. Se pysyi vakavana koko valotuksen, mikä helpotti työtäni. Vesi ei pysynyt, mutta sen liike näyttää kuuluvan tähän kasvokuvaan.",
+      selite: 'Suuren Onofrion kaivon kivikasvot johtivat veden ohikulkijan ulottuville muurien sisällä. Rajasin yhden vakavan naaman kasvokuvaksi, vaikka vesi ei pysähtynyt valotuksen ajaksi.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://tzdubrovnik.hr/lang/en/get/spomenici/5535/onofrios_fountains.html"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dubrovnik-r20260911-paper2-v1.jpg",
       lyhyt: "Ragusa, 1873. Muuri piti meren ulkona ja näkyvissä.",
-      selite: "Muurin harjalta meri täytti melkein koko näkökentän. Kiveys pysyi jalkojen alla ja pieni purje kulki alhaalla rannikon suuntaan. Kaupunki oli rakentanut veden ulkopuolelleen huolellisesti. Katseelle se jätti portin auki.",
+      selite: 'Muurin harjalta meri täytti melkein koko näkökentän, ja pieni purjevene kulki alhaalla rannikon suuntaan. Kaupunki piti veden ulkopuolellaan, mutta jätti katseelle portin auki.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://tzdubrovnik.hr/lang/en/get/spomenici/5535/onofrios_fountains.html"],
     },
@@ -164,13 +164,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dubrovnik-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Dubrovnik: laskenta alkoi yhdestä märästä nenästä.',
-        selite: 'Suuren Onofrion suihkukaivon kivikasvot ovat janon asialla. '
-          + 'Ihmiset kumartuvat veden ääreen, mutta minulle sopiva '
-          + 'katselukorkeus on valmiiksi juuri tässä. Kuvasin yhden naamion '
-          + 'läheltä. Sen ilme oli vakava siihen nähden, että koko työpäivä '
-          + 'kuluu veden sylkemiseen. Isoisä vertaili makuja. Minä päätin ensin '
-          + 'selvittää, kuinka monta tällaista työtoveria rakennuksessa oikein '
-          + 'on.',
+        selite: 'Yksi Onofrion kivikasvoista täytti pullon ja piti ilmeensä vakavana. Aloitin märkien nenien laskennan siitä, joka oli valmiiksi juuri sopivalla korkeudella.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.historyhit.com/locations/large-onofrio-fountain/',
@@ -179,12 +173,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dubrovnik-02-r20260909-euv1-v1.jpg',
         lyhyt: 'Dubrovnik: sama vesi, lisää puheenvuoroja.',
-        selite: 'Siirryin seuraavan sivun kohdalle. Kivikasvojen jono jatkui kaivon '
-          + 'ympäri, ja jokaiselle saapui vuorollaan joku pullon kanssa. Yksi '
-          + 'rakennus järjestää kokonaisen aukion juomatauon. Aloin ymmärtää '
-          + 'isoisän kiinnostusta, vaikka pidän veden maistelun mielelläni '
-          + 'lyhyenä toimituksena. Laskennassa oli vielä kesken se tärkeä '
-          + 'kysymys, lasketaanko ihmisten nenät mukaan.',
+        selite: 'Kivikasvojen jono jatkui kaivon ympäri, ja kauempana joku pysähtyi veden ääreen pullon kanssa. Sama vesi sai monta puheenvuoroa; minä jatkoin laskemista kuivin jaloin.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.historyhit.com/locations/large-onofrio-fountain/',
@@ -192,14 +181,8 @@ export const FOKUSVIRTA_DUBROVNIK = {
       },
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dubrovnik-03-r20260909-euv1-v1.jpg',
-        lyhyt: 'Dubrovnik: kuusitoista suuta, yksi kaivo. Tarkastettu.',
-        selite: 'Lopuksi nousin kaivon yläpuolelle. Koko rakennus asettui '
-          + 'paikalleen portin lähellä, ja vedenhakijoiden reitit erkanivat '
-          + 'takaisin kujille. Kuusitoista sivua selvisi ilman, että minun '
-          + 'tarvitsi maistaa niistä jokaista. Otin vielä tämän kuvan '
-          + 'todistusaineistoksi. Isoisällä oli karttakynä; minulla on siivet '
-          + 'ja kohtuullinen käsitys siitä, milloin laskut kannattaa tarkistaa '
-          + 'ylhäältä.',
+        lyhyt: 'Dubrovnik: kuusitoista suuta yhden kaivon ympärillä.',
+        selite: 'Ylhäältä koko kaivo, sen monet kivisuut ja vedenhakijoiden reitit asettuivat samaan kuvaan. Kuusitoista sivua selvisi ilman, että maistoin jokaista.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.historyhit.com/locations/large-onofrio-fountain/',

@@ -168,14 +168,14 @@ export const FOKUSVIRTA_SEVILLA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sevilla-r20260909-paper-v4.jpg",
       lyhyt: "Sevilla, 1873. Palatsimainen tehdas odotti työväkeään.",
-      selite: "Portin koristeet eivät paljastaneet, kuinka monta aamua sen läpi kannettiin samalla tavoin pieni leipä. Nainen ehti istua ennen työhön palaamista. Pyysin luvan kuvaan ja odotin, että hän sai haukkunsa syödyksi. Tupakkatehtaan suuri rakennus jää varmasti matkakirjoihin. Tahdoin säilyttää myös tämän lyhyen tauon, sillä ilman sen jälkeen alkavaa työtä talo olisi pelkkä komea kuori.",
+      selite: 'Tupakkatehtaan suuri portti odottaa työväkeä, mutta etualan nainen on ehtinyt istua hetkeksi leipänsä kanssa. Tahdoin säilyttää myös tauon, sillä ilman sen jälkeen alkavaa työtä talo olisi pelkkä komea kuori.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://idus.us.es/bitstreams/c159e9ed-623c-49bb-af82-28de9d825634/download"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sevilla-r20260911-paper2-v1.jpg",
       lyhyt: "Sevilla, 1873. Huivi solmittiin ennen paluuta työn ääreen.",
-      selite: "Nainen sitoi huivinsa ja kulki tehtaan sisäpihalle. Työpöydät odottivat kaarien alla, ja appelsiinipuut täyttivät pihan. Pieni aamiainen oli jo syöty. Suuri rakennus käynnistyi monista tällaisista aamuista.",
+      selite: 'Nainen sitoo huivinsa ja palaa appelsiinipuiden läpi työpöytien ääreen. Suuri rakennus käynnistyy monista tällaisista aamuista.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://personales.us.es/alporu/fabricatabaco/cigarreras_sevilla.htm","https://idus.us.es/bitstreams/c159e9ed-623c-49bb-af82-28de9d825634/download"],
     },
@@ -231,13 +231,7 @@ export const FOKUSVIRTA_SEVILLA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sevilla-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Sevilla: sama portti, toisenlainen työpäivä.',
-        selite: 'Sevillan entiseen tupakkatehtaaseen tullaan nyt opiskelemaan. '
-          + 'Portin lähellä joku tasapainottaa leipää, puhelinta ja '
-          + 'muistikirjaa kahdessa kädessä. Korkeampi koulutus näyttää vaativan '
-          + 'kolmannen. Isoisän näkemä työntekijä ehti syödä ennen sisäänmenoa; '
-          + 'tämän opiskelijan suunnitelma on vielä kesken. Kuvasin hänet '
-          + 'kengänkorkeudelta. Sieltä huomaa ensimmäisenä, jos tärkeä osa '
-          + 'aamiaista putoaa.',
+        selite: 'Entisen tupakkatehtaan portista kuljetaan nyt yliopistoon, ja etualan opiskelija tasapainottaa leipää, puhelinta ja muistikirjaa. Korkeampi koulutus näyttää vaativan kolmannen käden.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.us.es/laUS/secretaria-general/patrimonio-historico-artistico/edificios/real-fabrica-de-tabacos',

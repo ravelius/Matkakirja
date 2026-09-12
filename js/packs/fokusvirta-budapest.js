@@ -111,14 +111,14 @@ export const FOKUSVIRTA_BUDAPEST = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-budapest-r20260909-paper-v4.jpg",
       lyhyt: "Budapest, 1873. Kupolin alla kartta sai odottaa.",
-      selite: "Rudasin kylpylän kupoli päästää päivänvalon pieninä kohtina sisään. Niiden alla vesi liikahtaa hitaasti, eikä kukaan näytä tarvitsevan siltä kiireisempää vastausta. Turkkilaisen kylpylän seinät ovat nähneet kaupunkien nimiä ennen tätä marraskuista yhdistämistäkin. Asetin kameran altaan ulkopuolelle. Höyry teki ääriviivoille saman kuin lämmin vesi ajatuksilleni: kumpikaan ei pysynyt aivan yhtä terävänä.",
+      selite: 'Rudasin kupolin pienet aukot sirottivat valoa altaaseen, jossa vesi liikkui hitaasti. Asetin kameran altaan ulkopuolelle ja annoin höyryn pehmentää ääriviivoja.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.rudasfurdo.hu/en/past-and-present","https://fortepan.hu/en/photos/?id=252393","https://fortepan.hu/en/photos/?id=82594"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-budapest-r20260911-paper2-v1.jpg",
       lyhyt: "Budapest, 1873. Kartan kolme nimeä joutuivat saman ympyrän sisään.",
-      selite: "Aamiaispöydässä vanha kartta jakoi kaupungin vielä kolmeen osaan. Ikkunan takana Tonava piti oman suuntansa ja Ketjusilta yhdisti rannat. Piirsin rajojen ympärille uutta järjestystä ilman sanoja. Marraskuu oli ehtinyt yhdistää kaupungin nopeammin kuin kartantekijä.",
+      selite: 'Vanha kartta jakoi kaupungin vielä kolmeen osaan, vaikka Tonava ja Ketjusilta näkyivät ikkunasta ennallaan. Piirsin rajojen ympärille uuden järjestyksen, jonka marraskuu oli ehtinyt tehdä kartantekijää nopeammin.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.rudasfurdo.hu/en/past-and-present","https://fortepan.hu/en/photos/?id=252393"],
     },
@@ -174,12 +174,7 @@ export const FOKUSVIRTA_BUDAPEST = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-budapest-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Budapest: kylpylällä on vihdoin lintujen kerros.',
-        selite: 'Rudasin kattokylpylässä lämmin vesi ja Tonava mahtuvat samaan '
-          + 'näkymään. Istuin altaan ulkopuolisella reunalla ja tarkistin, '
-          + 'oliko ylin kerros yhtä hyvä kuin olin kuullut. Oli. Isoisä pohti '
-          + 'kupolin alla kaupungin nimeä; nämä kylpijät pohtivat lähinnä, '
-          + 'tarvitseeko nousta vielä pois. Ihmiset ovat löytäneet kelvollisen '
-          + 'yhdistelmän: näköalapaikan, jossa saa samalla istua.',
+        selite: 'Rudasin katolla lämmin vesi ja Pestin näkymä mahtuvat samaan kuvaan. Tarkistin altaan reunan ja totesin, että ihmiset ovat löytäneet näköalapaikan, jossa saa samalla istua.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.rudasfurdo.hu/',
@@ -188,13 +183,8 @@ export const FOKUSVIRTA_BUDAPEST = {
       },
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-budapest-02-r20260909-euv1-v1.jpg',
-        lyhyt: 'Budapest: nimi yhdisti kaupungit. Joki jäi väliin.',
-        selite: 'Nousin altaan reunalta ja katsoin Tonavaa leveämmältä. Buda kohoaa '
-          + 'mäkeen, Pest levittäytyy vastarannalle, ja sillat pitävät '
-          + 'yhteyttä. Kartassa nimi peittää tämän kaiken yhdellä sanalla. '
-          + 'Lennossa erotan rannat, liikenteen ja joen oman reitin. Isoisän '
-          + 'kartta vanheni aamiaisen aikana. Minun kuvani kestää ainakin '
-          + 'siihen saakka, kunnes seuraava laiva ehtii sillan alta.',
+        lyhyt: 'Budapest: nimi yhdisti kaupungin, joki jäi näkyvästi väliin.',
+        selite: 'Katolta Tonava, Pestin ranta, sillat ja laivat erottuvat omina reitteinään. Yksi nimi yhdistää kaupungin kartassa, mutta joki jää kuvassa näkyvästi väliin.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.rudasfurdo.hu/',

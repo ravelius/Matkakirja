@@ -122,14 +122,14 @@ export const FOKUSVIRTA_PRAHA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-praha-r20260909-paper-v4.jpg",
       lyhyt: "Praha, 1873. Kiire jäi kellon eteen odottamaan.",
-      selite: "Torin kello ei tyydy numeroihin. Sen kehissä kulkevat taivaankappaleet, ja pienten hahmojen liike saa kokonaisen ihmisjoukon nostamaan päätään yhtä aikaa. Ajurin vaunut odottivat vähän syrjemmässä. Kuvani pysäyttää kellon, mutta ei kerro, kuinka pitkäksi hänen odotuksensa venyi. Minulla oli taskussa tarkempi ajanmittari. Se jäi sillä hetkellä paljon huonommaksi seuralaiseksi.",
+      selite: 'Astronominen kello sai torilla kokonaisen joukon katsomaan ylöspäin, kun ajuri odotti vaunuineen syrjemmällä. Taskukelloni oli tarkempi mutta sillä hetkellä paljon huonompi seuralainen.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://prague.eu/en/about-the-old-town-astronomical-clock/","https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-praha-r20260911-paper2-v1.jpg",
       lyhyt: "Praha, 1873. Ajurin kellossa puoli tuntia oli aivan tavallinen määrä.",
-      selite: "Torin koneisto oli vienyt huomioni ja taskukello unohtui. Ajuri odotti vaunujensa vieressä ja tarkisti omaansa. Hänen hevosensa suhtautui aikaan rauhallisemmin kuin hän. Palasin paikalle puoli tuntia eri käsitystä myöhemmin.",
+      selite: 'Ajuri tarkisti kelloaan vaunujen vieressä, kun torin koneisto piti muun yleisön vallassaan. Hänen hevosensa suhtautui puoleen tuntiin rauhallisemmin kuin hän.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://prague.eu/en/about-the-old-town-astronomical-clock/"],
     },
@@ -187,13 +187,7 @@ export const FOKUSVIRTA_PRAHA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-praha-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Praha: minua katsotaan harvoin näin yksimielisesti ylöspäin.',
-        selite: 'Prahan astronomisen kellon edessä ihmiset nostavat kasvonsa ja '
-          + 'puhelimensa samaan suuntaan. Minä istuin hetkeksi kellon '
-          + 'alapuoliselle kivireunalle. Oli miellyttävää saada näin suuri '
-          + 'yleisö, kunnes tajusin, ettei kukaan odottanut minun '
-          + 'esiintymistäni. Kellossa näkyvät taivaan kierrot ja pienet hahmot; '
-          + 'torilla näkyy, kuinka monta eri tapaa on yrittää kuvata sama '
-          + 'hetki.',
+        selite: 'Astronomisen kellon alla kokonainen yleisö nostaa kasvonsa ja puhelimensa samaan suuntaan. Hetken luulin heidän odottavan minua, mutta kellolla oli jälleen parempi ohjelmanumero.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/',

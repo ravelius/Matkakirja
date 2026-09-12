@@ -102,3 +102,34 @@ test('rajattu r2-korjaus sisältää täsmälleen sovitut merkityskorjaukset', (
     assert.ok(FOKUSVIRRAT[city].pollo.kommentti[0].length >= 130, `${city}: Livia jäi liian ohueksi`);
   }
 });
+
+test('jäljellä olleiden 33 kaupungin 106 nykykuvaa saivat kahden lauseen readbackit', () => {
+  const cities = [
+    'alpit', 'amsterdam', 'barcelona', 'bergen', 'berliini', 'budapest', 'bukarest',
+    'dublin', 'dubrovnik', 'edinburgh', 'firenze', 'granada', 'islanti', 'istanbul',
+    'kiova', 'kobenhavn', 'krakova', 'kreeta', 'lissabon', 'lontoo', 'madrid',
+    'moskova', 'odessa', 'oslo', 'pariisi', 'pietari', 'praha', 'rooma', 'sevilla',
+    'sisilia', 'sofia', 'varsova', 'wien',
+  ];
+  const images = cities.flatMap((city) => {
+    const pack = FOKUSVIRRAT[city];
+    return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])];
+  });
+  assert.equal(images.length, 106);
+  for (const image of images) {
+    assert.equal((image.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2, image.osoite);
+  }
+  const exactShorts = {
+    barcelona: ['P1', 'Barcelona: viistetty kulma avasi näkymään tilaa.'],
+    budapest: ['P2', 'Budapest: nimi yhdisti kaupungin, joki jäi näkyvästi väliin.'],
+    dublin: ['P1', 'Dublin: vuokrasopimus kesti, minun pysähdykseni ei.'],
+    dubrovnik: ['P3', 'Dubrovnik: kuusitoista suuta yhden kaivon ympärillä.'],
+    lissabon: ['P1', 'Lissabon: hissin yläpää, jossa siipiä myydään ilmeisesti pareittain.'],
+    lontoo: ['P1', 'Lontoo: parlamentti jäi taustalle, sillä penkillä oli tärkeämpää.'],
+    pietari: ['P1', 'Pietari: vaalea kesäyö jätti Nevan rantaan tilaa vielä yhdelle kierrokselle.'],
+    sisilia: ['P1', 'Palermo: tämän katon näin kuvasta, siipeni jäivät ulkopuolelle.'],
+  };
+  for (const [city, [slot, expected]] of Object.entries(exactShorts)) {
+    assert.equal(FOKUSVIRRAT[city].pollo.kuvat[Number(slot.slice(1)) - 1].lyhyt, expected);
+  }
+});

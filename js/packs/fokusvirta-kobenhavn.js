@@ -106,14 +106,14 @@ export const FOKUSVIRTA_KOBENHAVN = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kobenhavn-r20260909-paper-v4.jpg",
       lyhyt: "Kööpenhamina, 1873. Orkesteri sai odottaa omassa tahdissaan.",
-      selite: "Tivolin vanha pari liikkui vähän kerrallaan, niin että katsomiseen jäi aikaa. Puutarhan lamput syttyivät, ja niiden valo löysi lammesta toisen rivin. Pyysin heitä pysähtymään hetkeksi vedosta varten. Se ei näyttänyt muuttavan tanssia kovin paljon. Kaupungissa on paljon rakennettua huvitusta, mutta tähän riittivät kaksi kättä, tuttu askel ja haluttomuus kiirehtiä.",
+      selite: 'Tivolin vanha pari tanssi niin hitaasti, että puutarhan lamput ehtivät syttyä ja löytää vedestä toisen rivin. Rakennettujen huvitusten keskellä riittivät kaksi kättä, tuttu askel ja haluttomuus kiirehtiä.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kobenhavn-r20260911-paper2-v1.jpg",
       lyhyt: "Kööpenhamina, 1873. Lamput ehtivät veteen ennen tähtiä.",
-      selite: "Tivolin pienet öljylamput sytytettiin yksi kerrallaan, eikä ilta kiirehtinyt niiden edelle. Vallihaudan vesi kokosi liekeistä oman, katkonaisen tähtitaivaansa. Vanha pari jäi puiden alle niin pieneksi, että heidän askeleensa saattoi viimein unohtaa. Huvitusten joukossa katsoin pisimpään vettä, joka ei ollut maksanut pääsymaksua.",
+      selite: 'Tivolin öljylamput syttyivät yksi kerrallaan ja kokosivat vallihaudan veteen katkonaisen tähtitaivaan. Vanha pari jäi puiden alle pieneksi, mutta juuri heidät muistin.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens","https://www.tivoli.dk/haven/fyrvaerkeri"],
     },
@@ -165,12 +165,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-kobenhavn-01-r20260909-euv1-v2.jpg',
         lyhyt: 'Kööpenhamina: tanssin ajaksi vapautui hyvä tarkkailupaikka.',
-        selite: 'Tivolin puutarhassa musiikki saa osan ihmisistä nousemaan pöydästä '
-          + 'ja osan jäämään kuuntelemaan. Minä valitsin jälkimmäisen tavan. '
-          + 'Hitaasti liikkuva pari mahtui kuvaan pöydänjalkojen välistä, ja '
-          + 'veden pinnassa syttyivät iltavalot. Isoisä piti kiireettömästä '
-          + 'tanssista. Täytyy myöntää, että katsoin tällä kertaa itsekin '
-          + 'hetken muualle kuin tyhjälle lautaselle.',
+        selite: 'Tivolin iltavaloissa hitaasti tanssiva pari mahtui kuvaan kahvilapöytien välistä. Isoisä piti kiireettömästä tanssista, ja minäkin katsoin hetken muualle kuin tyhjälle lautaselle.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.tivoli.dk/en/',

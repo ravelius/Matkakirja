@@ -146,14 +146,14 @@ export const FOKUSVIRTA_BERGEN = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260909-paper-v4.jpg",
       lyhyt: "Bergen, 1873. Kuiva kala, märkä vierailija.",
-      selite: "Kauppias piti kapakalaa kädessään sellaisella varmuudella, jota näkee tavallisesti arvopaperien omistajilla. Bryggenin puuvarastot ovat kasvaneet tämän kaupan ympärille. Katon reuna suojasi kalaa ja myyjää, mutta kamerani jalat joutuivat sadeveden puolelle. Odotin hetken, että mies sai tavaransa hyvään asentoon. Kalalla ei näyttänyt olevan enää kiirettä mihinkään.",
+      selite: 'Kauppias nosti kapakalan esiin Bryggenin katoksen alla kuin arvotavaran. Kala ja myyjä pysyivät suojassa, kun sade kasteli laiturin ja kamerani jalat.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260911-paper2-v1.jpg",
       lyhyt: "Bergen, 1873. Katon alla kala pysyi kuivempana kuin vieras.",
-      selite: "Sade valui Bryggenin katoksen reunalta. Kapakalalla oli kuiva paikka puuseinän vieressä, mutta takkini kiilsi vedestä. Seisoin hetken kalan rinnalla ja ymmärsin kaupungin arvojärjestyksen. Kauppatavara oli suojassa.",
+      selite: 'Sade valui katoksen reunalta, mutta kapakalat pysyivät kuivina puuseinän vieressä. Takkini kiilsi vedestä, ja kaupungin arvojärjestys tuli selväksi.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"],
     },
@@ -205,13 +205,7 @@ export const FOKUSVIRTA_BERGEN = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Bergen: varastotalot saivat suojan, minä etsin oman.',
-        selite: 'Bryggenin vanhojen puutalojen väliset käytävät ovat kapeita, ja '
-          + 'sade tekee niiden pinnoista oman karttansa. Kauppiaiden '
-          + 'varastoissa toimii nyt myös pieniä liikkeitä ja työtiloja. Minä '
-          + 'pysähdyin ulkoneman alle. Isoisä huomasi, että kala pidettiin '
-          + 'kuivana ennen matkustajaa. Tämän kuvan perusteella kuiva paikka on '
-          + 'edelleen arvokas löytö, vaikka siitä ei tarvitsisi tehdä '
-          + 'maailmankauppaa.',
+        selite: 'Bryggenin kapean puukäytävän sade piirtää lautoihin oman karttansa. Pysähdyin kynnyksen suojaan ja totesin, että kuiva paikka on yhä arvokas löytö.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://en.visitbergen.com/things-to-do/bryggen-in-bergen-p878553',
@@ -220,13 +214,7 @@ export const FOKUSVIRTA_BERGEN = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-02-r20260909-euv1-v4.jpg',
         lyhyt: 'Bergen: ulkona satoi aivan samaa sadetta.',
-        selite: 'Käytävän suulta näkyy, kuinka Bryggenin talot seisovat sataman '
-          + 'reunassa rinnakkain. Sisäpuolella löysin puun hajun ja suojan, '
-          + 'ulkopuolella veden ja julkisivujen tutun rivin. Otin tämän toisen '
-          + 'kuvan nopeasti. Se todistaa, että kävin myös ulkona, mikä on '
-          + 'sateisena päivänä huomattavasti suurempi ansio kuin valmiista '
-          + 'kuvasta voisi päätellä. Palasin saman tien puolen siivenmitan '
-          + 'verran kuivemmalle.',
+        selite: 'Käytävän suulta näkyvät Bryggenin talorivi, märkä katu ja satama. Otin kuvan nopeasti ulkona ja palasin puolen siivenmitan kuivemmalle.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://en.visitbergen.com/things-to-do/bryggen-in-bergen-p878553',

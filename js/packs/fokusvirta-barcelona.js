@@ -196,14 +196,14 @@ export const FOKUSVIRTA_BARCELONA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-barcelona-r20260909-paper-v4.jpg",
       lyhyt: "Barcelona, 1873. Tuleva katu kasvoi vielä lehtiä.",
-      selite: "Uuden korttelin viisto kulma avasi kärryille tilaa kääntyä. Sen vieressä maa oli yhä käytössä paljon vanhemmalla tavalla: kaalirivit eivät ottaneet osaa insinöörin suunnitelmaan. Kamerassa mahtuivat samaan kuvaan valmiit seinät ja se, minkä niiden odotetaan syrjäyttävän. Cerdàn piirroksessa kaupunki hengittää väljästi. Toivoin, että työn edetessä muistettaisiin myös ne, joiden puutarha hengittää tässä nyt.",
+      selite: 'Uuden korttelin viisto kulma antoi kahdelle kärrylle tilaa kääntyä. Samassa kuvassa kaalirivit kasvavat vielä tulevan kadun paikalla.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/101603/1/bcn01engp.pdf"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-barcelona-r20260911-paper2-v1.jpg",
       lyhyt: "Barcelona, 1873. Kärryt kääntyivät, kaali jatkoi kasvuaan.",
-      selite: "Kaksi kärryä mahtui kääntymään uuden korttelin viistetyllä kulmalla. Etualalla kaalirivi kasvoi tulevan kadun paikalla. Piirsin kulman paperiin ja katsoin viljelystä. Kaupunki ja sato käyttivät hetken samaa maata.",
+      selite: 'Kaksi kärryä kääntyi viistetyn kulman molemmin puolin, kun kaali kasvoi vielä tulevan kadun paikalla. Istuin pellon reunalla piirtämässä hetkeä, jossa kaupunki ja sato käyttivät samaa maata.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/101603/1/bcn01engp.pdf"],
     },
@@ -258,14 +258,8 @@ export const FOKUSVIRTA_BARCELONA = {
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-barcelona-01-r20260909-euv1-v2.jpg',
-        lyhyt: 'Barcelona: kulma leikattiin pois. Näkymään tuli tilaa.',
-        selite: 'Eixamplen viistetyt korttelinkulmat avautuvat ilmasta selvästi: '
-          + 'talojen väliin syntyy tavallista leveämpi risteys. Cerdàn viiva ei '
-          + 'ole kadonnut liikenteen alle, vaikka kaalit ovat väistyneet. '
-          + 'Kuvasin juuri sen kohdan, jossa jalankulkija, pyöräilijä ja '
-          + 'autoilija kaikki katsovat eri suuntaan. Hyvässä kartassa riittää '
-          + 'tilaa heille jokaiselle. Minulla on varmuuden vuoksi vielä tämä '
-          + 'kerros.',
+        lyhyt: 'Barcelona: viistetty kulma avasi näkymään tilaa.',
+        selite: 'Eixamplen viistetyt kulmat avaavat liikenteelle tavallista leveämmän risteyksen. Jalankulkija, pyöräilijä ja autoilija saivat omat reittinsä; minulle jäi taivas.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.barcelona.cat/imatges/es/29/vistes-de-barcelona/7871/avenida-diagonal-cruce-con-la-calle/',

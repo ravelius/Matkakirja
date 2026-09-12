@@ -286,14 +286,14 @@ export const FOKUSVIRTA_SOFIA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sofia-r20260909-paper-v4.jpg",
       lyhyt: "Sofia, 1873. Maa oli ehtinyt lämmittää veden.",
-      selite: "Nainen piti kannua varovasti, sillä lähteen tarjoilussa ei ollut kylmää vaihtoehtoa. Minareetti ja Vitošan rinne asettuivat kuvan taakse, mutta arjen tärkein rakennelma oli veden ottopaikka. Majataloni pesuvesi oli ollut viileää. Täällä lämpö nousi maasta ilman, että kukaan kantoi paikalle halkoa. Pyysin naista jäämään kuvaan odottamaan kannunsa jäähtymistä. Siitä oli meille molemmille hyötyä.",
+      selite: 'Nainen täyttää kannua lämpimästä lähteestä, kun minareetti ja Vitošan rinne jäävät taakse. Majataloni kylmä pesuvesi oli maksanut enemmän, joten matkailun epäjohdonmukaisuus oli valmis.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://visitsofia.bg/catalog/en/discover_sofiaEN/Discover_SofiaEN.pdf"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sofia-r20260911-paper2-v1.jpg",
       lyhyt: "Sofia, 1873. Majatalon kylmä vesi sai vuoren näyttämään viisaammalta.",
-      selite: "Majatalossa maksettu pesuvesi ei ollut ehtinyt ottaa oppia kaupungin lähteestä. Kokeilin sitä kädellä ja katsoin ikkunasta Vitošan suuntaan. Kattojen takana lämmin höyry nousi ilman halkoja. Matkailu oli taas järjestänyt mukavuudet väärään osoitteeseen.",
+      selite: 'Kokeilin majatalon pesuvettä kädellä ja katsoin avoimesta ikkunasta Vitošan suuntaan. Kaupungin lämmin lähde oli jälleen järjestänyt mukavuudet väärään osoitteeseen.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://visitsofia.bg/catalog/en/discover_sofiaEN/Discover_SofiaEN.pdf"],
     },
@@ -381,13 +381,7 @@ export const FOKUSVIRTA_SOFIA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sofia-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Sofia: kuuma vesi, viileä harkinta.',
-        selite: 'Sofian lähteillä vesi lasketaan nykyäänkin mukana tuotuihin '
-          + 'astioihin. Muovipulloja on enemmän kuin isoisän kannuja, mutta '
-          + 'odottamisen asento näyttää tutulta. Seisoin viileällä kivellä '
-          + 'veden sivussa. En aikonut kokeilla lämpötilaa varpaalla, vaikka '
-          + 'eräs ihminen teki juuri niin sormellaan. Vitosan kaupungissa on '
-          + 'paljon nähtävää. Tällä kertaa katsoin, kuinka tavallinen päivä '
-          + 'alkaa maan antamasta vedestä.',
+        selite: 'Sofian lähteillä vettä lasketaan yhä mukana tuotuihin astioihin, vaikka muovipulloja on enemmän kuin isoisän kannuja. Minä pysyin viileällä kivellä ja jätin lämpötilan kokeilemisen ihmisille.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.sofiacityguide.com/visit-the-sofia-mineral-springs/',

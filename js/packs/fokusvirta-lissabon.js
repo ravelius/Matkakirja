@@ -197,13 +197,7 @@ export const FOKUSVIRTA_LISSABON = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Lissabon, 1873. Naisen neuvo jatkui portaina.',
-      selite: 'Nainen osoitti ylöspäin niin varmasti, että annoin kamerankin '
-        + 'katsoa samaan suuntaan. Alfaman katot peittivät veden ja avasivat '
-        + 'sen taas seuraavassa raossa. Alempana Baixan uudelleen rakennetut '
-        + 'kadut tottelevat viivoitinta; tämä kaupunginosa näyttää ottaneen '
-        + 'käskyt rinteeltä. Portaalla seisojan ei tarvitse tietää koko '
-        + 'reittiä neuvoakseen seuraavan käännöksen. Minulle olisi riittänyt '
-        + 'aluksi sekin.',
+      selite: 'Nainen neuvoi minua ylös Alfaman portailla, missä katot peittivät Tejon ja avasivat sen taas seuraavassa raossa. Portaalla seisojan ei tarvitse tuntea koko reittiä näyttääkseen seuraavan käännöksen.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.patrimoniocultural.gov.pt/wp-content/uploads/2024/08/ER4.pdf',
@@ -213,7 +207,7 @@ export const FOKUSVIRTA_LISSABON = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lissabon-r20260911-paper2-v1.jpg",
       lyhyt: "Lissabon, 1873. Meri löytyi portaan ja kattojen välistä.",
-      selite: "Pysähdyin Alfaman porrastasanteelle kartta kädessä. Kattojen välistä näkyi Tejo, vaikka reitti oli jälleen epäselvä. Ylös ja alas annetut neuvot olivat molemmat toimineet. Kartta jäi lohdutukseksi.",
+      selite: 'Pysähdyin Alfaman porrastasanteelle kartta kädessä, kun Tejo löytyi kattojen välistä. Ylös ja alas annetut neuvot olivat molemmat toimineet; kartta jäi lohdutukseksi.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.patrimoniocultural.gov.pt/wp-content/uploads/2024/08/ER4.pdf","https://imovel2.patrimoniocultural.gov.pt/detalhes.php?code=19448470"],
     },
@@ -231,13 +225,8 @@ export const FOKUSVIRTA_LISSABON = {
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lissabon-01-r20260909-euv1-v2.jpg',
-        lyhyt: 'Lissabon: hissin yläpää. Siipiä myydään ilmeisesti pareittain.',
-        selite: 'Santa Justan hissi yhdistää Baixan alempia katuja Carmon '
-          + 'korkeuksiin. Yhdessä kaupungissa voi siis jäädä jonottamaan '
-          + 'pelkkää ylämäkeä. Minä saavuin viereiselle reunalle toisesta '
-          + 'suunnasta ja katselin, kuinka matkustajat astuivat ulos. Isoisä '
-          + 'löysi veden kattojen välistä. Tästä löytyvät ensin katot ja niiden '
-          + 'päältä taas ihmisiä, jotka yrittävät päästä vielä vähän ylemmäs.',
+        lyhyt: 'Lissabon: hissin yläpää, jossa siipiä myydään ilmeisesti pareittain.',
+        selite: 'Santa Justan hissi nostaa matkustajat Baixasta Carmon korkeuksiin, joten Lissabonissa voi jonottaa pelkkää ylämäkeä. Minä katselin ylhäältä, kuinka katot jatkuivat ja ihmiset pyrkivät vielä vähän ylemmäs.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.visitlisboa.com/pt-pt/locais/elevador-de-santa-justa',

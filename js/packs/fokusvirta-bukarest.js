@@ -181,14 +181,14 @@ export const FOKUSVIRTA_BUKAREST = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bukarest-r20260909-paper-v4.jpg",
       lyhyt: "Bukarest, 1873. Majatalon pihassa tavara ja matkustaja lepäsivät yhdessä.",
-      selite: "Manucin majatalon parvilta näki pihalle ja toisille parville, joten yksinäisyyttä oli tarjolla lähinnä oven sulkemisen hinnalla. Alhaalla mies oli tehnyt säkeistään vuoteen ja vartioi niitä samalla nukkumalla. Keittiön suunnasta liikkui ruokaa ja tuoksua. Kuvasin ennen alas menemistä. Pylväiden laskeminen olisi voinut odottaa iltaan, mutta en luottanut siihen, että päivällinen tekisi samoin.",
+      selite: 'Manucin majatalon puuparvet kiersivät pihaa, jossa mies nukkui säkkinsä päällä. Kuvasin tavaran ja vartijan yhteisen levon ennen kuin keittiön tuoksu vei huomioni.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://muzeulbucurestiului.ro/expozitia-tematica-hanurile-uitate-ale-bucurestilor/","https://www.hanulluimanuc.ro/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bukarest-r20260911-paper2-v1.jpg",
       lyhyt: "Bukarest, 1873. Keittiön tuoksu voitti pylväiden laskemisen.",
-      selite: "Parven kaide johti katseen alas keittiön avoimelle ovelle. Kun padan kansi nousi, höyry ehti luokseni ennen ruokalajia. Jätin pylväät kesken ja lähdin portaita alas. Majatalossa oikea suunta löytyi tällä kertaa nenällä.",
+      selite: 'Parven kaide johti katseen avoimeen keittiöön, jossa padan kansi nousi ja höyry karkasi. Jätin pylväät laskematta ja lähdin portaita alas.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://muzeulbucurestiului.ro/expozitia-tematica-hanurile-uitate-ale-bucurestilor/","https://www.hanulluimanuc.ro/"],
     },
@@ -280,13 +280,7 @@ export const FOKUSVIRTA_BUKAREST = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bukarest-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Bukarest: parvelta löytyi suora yhteys lounaaseen.',
-        selite: 'Manucin majatalon pihalla pöydät ovat nykyään ravintolan käytössä. '
-          + 'Puiset parvet kehystävät aterioita kuten ennen matkustajien '
-          + 'kohtaamisia. Minä laskeuduin kaiteelle ja löysin tarjoilijan '
-          + 'reitin yhdellä silmäyksellä. Isoisä tunnisti huoneensa '
-          + 'kuorsauksesta. Täällä on edelleen monta ääntä päällekkäin, mutta '
-          + 'lautasen kevyt kilahdus erottuu yllättävän hyvin. Ammattitaito '
-          + 'auttaa myös ravintolassa.',
+        selite: 'Manucin majatalon puuparvet kehystävät nykyään ravintolan täyttä sisäpihaa. Etsin pöytien alta murusia, kun viereisestä pöydästä kuultu salaisuus vei huomioni.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://hanumanucrestaurant.ro/en/',

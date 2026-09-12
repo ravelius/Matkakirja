@@ -231,12 +231,7 @@ export const FOKUSVIRTA_ISTANBUL = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Konstantinopoli, 1873. Kantajan tauko ja mäen koko paino.',
-      selite: 'Arkun kahvat olivat hioutuneet sileiksi, mutta portaissa riitti '
-        + 'vielä kulutettavaa. Kantaja istui kuormansa viereen ja antoi minun '
-        + 'valmistella kameran. Galatan korkeuksilta näkyi alhaalla mastoja '
-        + 'ja liikettä; jokin osa niistäkin tavaroista oli kannettava tätä '
-        + 'mäkeä ylös. Tuleva tunneli lupaa ihmiselle istumapaikan matkaksi. '
-        + 'Toivoin, että myös tämän miehen arkulle varattaisiin sellainen.',
+      selite: 'Kantaja antoi Galatan mäen odottaa ja lepäsi arkkunsa vieressä, kun sataman mastot täyttivät näkymän alhaalla. Tuleva tunneli lupasi istumapaikan mäen läpi; toivoin sitä myös hänen kuormalleen.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.metmuseum.org/art/collection/search/263021',
@@ -246,7 +241,7 @@ export const FOKUSVIRTA_ISTANBUL = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-istanbul-r20260911-paper2-v1.jpg",
       lyhyt: "Konstantinopoli, 1873. Kantaja ehti matkaan ennen kuin mastot tulivat lasketuiksi.",
-      selite: "Galatan mäki avasi salmelle näkymän, jossa mastot sekoittuivat sumuun. Aloitin niiden laskemisen, mutta kantaja oli jo nostanut arkun selkäänsä. Hän katosi alas viettävälle kadulle ennen kuin pääsin varmaan lukuun. Satama jatkoi sillä välin oman määränsä kasvattamista.",
+      selite: 'Aloin laskea Galatan mäeltä näkyviä mastoja, mutta kantaja nosti arkun selkäänsä ja lähti. Hän ehti alas ennen varmaa lukua, ja satama kasvatti sillä välin omaansa.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.metmuseum.org/art/collection/search/263021","https://archives.saltresearch.org/handle/123456789/204674"],
     },
@@ -324,13 +319,7 @@ export const FOKUSVIRTA_ISTANBUL = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-istanbul-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Istanbul: mäen voi voittaa myös istumalla.',
-        selite: 'Galatan mäkeä kiivetään yhä ostosten, laukkujen ja päivän töiden '
-          + 'kanssa. Tünel kuljettaa ihmisiä ylöspäin maan sisällä, mutta '
-          + 'levähdyspaikka kelpaa sen valmistumisesta huolimatta. Minä '
-          + 'tunnistan hyvän pysähdyksen heti: seinä selän takana ja koko '
-          + 'kulkureitti näkyvissä. Isoisä laski alhaalla mastoja. Tässä olisi '
-          + 'ollut tilaisuus kysyä siltä istuvalta ihmiseltä, miten kaupunki '
-          + 'oikeasti kannetaan ylös.',
+        selite: 'Galatan mäkeä kiivetään yhä päivän kuormien kanssa, vaikka Tünel kuljettaa matkustajia maan alla. Lepäävä lähettikuljettaja tiesi saman kuin isoisän kantaja: välillä mäen on annettava odottaa.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.metro.istanbul/en/Hatlarimiz/HatDetay?hat=T1',

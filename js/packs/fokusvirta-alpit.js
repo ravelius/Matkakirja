@@ -27,14 +27,14 @@ export const FOKUSVIRTA_ALPIT = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-alpit-r20260909-paper-v4.jpg",
       lyhyt: "Grindelwald, 1873. Jään hiljaisuudessa oli halkeamia.",
-      selite: "Opas pysyi sivummalla ja antoi minun katsella jäätikön reunaa. Kallion ja jään raja ei ollut yhtä siisti kuin karttaan piirretty viiva: siinä oli kiviä, vettä ja syvyyksiä, joiden pohjaa en nähnyt. Panin kameran riittävän kauas. Jään sisältä kuuluva rasahdus ei tallennu vedokseen. Sen vuoksi kirjoitan tähän muistutuksen, että kuva oli hiljaisempi kuin paikka itse.",
+      selite: 'Opas pysyi sivummalla, kun katsoin jään halkeamia ja kivistä reunaa. Rasahdus ei tarttunut vedokseen, joten kuva jäi paikkaa hiljaisemmaksi.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.swissinfo.ch/eng/archive-science/scientists-paint-a-glacial-picture/33663410","https://www.swissinfo.ch/eng/archive-science/marking-glacial-change-on-grindelwald-s-trail/2185012"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-alpit-r20260911-paper2-v1.jpg",
       lyhyt: "Grindelwald, 1873. Rasahdus siirsi sekä kiven että miehen kauemmas.",
-      selite: "Olin pannut kiven jäätikön reunalle odottamaan liikettä. Pitkä rasahdus jään sisältä riitti todisteeksi, jota kivi ei ollut antanut. Nostin sen mukaani ja astuin nopeasti taaksepäin. Vuoren hiljaisuus ei enää tuntunut samalta kuin hetkeä aiemmin.",
+      selite: 'Nostin kiven mukaani aivan jäätikön halkeaman vierestä. Pitkä rasahdus sai minut astumaan nopeasti kauemmas.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.swissinfo.ch/eng/archive-science/scientists-paint-a-glacial-picture/33663410","https://www.swissinfo.ch/eng/archive-science/marking-glacial-change-on-grindelwald-s-trail/2185012"],
     },
@@ -89,12 +89,7 @@ export const FOKUSVIRTA_ALPIT = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-alpit-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Grindelwald: kuvasin paikan, josta jää on lähtenyt.',
-        selite: 'Grindelwaldin jäätikkörotkossa kävelyreitti kulkee kallioiden ja '
-          + 'veden vierellä. Isoisän suuri jää on vetäytynyt kauemmas; sen '
-          + 'jälkiä voi lukea myös paikasta, jossa ei enää seiso jääseinää. '
-          + 'Laskeuduin hetkeksi kaiteen viereen ja katsoin veden kulkua. Hänen '
-          + 'kivensä ei osannut vastata liikkeeseen. Tämä maisema kertoo '
-          + 'hitaasta muutoksesta, vaikka pysyy valokuvassa aivan paikallaan.',
+        selite: 'Grindelwaldin jäätikkörotkossa reitti kulkee kallion ja kuohuvan veden vierellä, mutta isoisän kuvaamaa jääseinää ei enää näy. Etsin hänen kiveään ja jouduin myöntämään, että kiviä oli liikaa ja jäätä liian vähän.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://grindelwald.swiss/en/map/detail/grindelwald-glacier-gorge-aaa98968-c9e4-4a2a-b871-8c25abefc234.html',

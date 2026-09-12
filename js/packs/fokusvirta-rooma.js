@@ -176,14 +176,14 @@ export const FOKUSVIRTA_ROOMA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260909-paper-v4.jpg",
       lyhyt: "Rooma, 1873. Katto antoi sateelle luvan.",
-      selite: "Pantheonin katon aukko on avoin taivaalle, ja sen alta lattia saa päivän sään suoraan nähtäväkseen. Seinien syvennyksissä valo pysyy toisenlaisena kuin keskellä salia. Asetin kameran kuivalle kohdalle ja odotin, että sade erottuisi lattian pinnassa. Roomassa rakennuksia on muutettu moneen tehtävään. Tämän talon kirkas pyöreä silmä katsoo edelleen ylöspäin, tehtävästä riippumatta.",
+      selite: 'Pantheonin avoimesta kattoaukosta sade putoaa suoraan marmorilattialle ja löytää tiensä viemäriin. Asetin kameran kuivalle kohdalle; näin vanhalle talolle en tohtinut huomauttaa katosta.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260911-paper2-v1.jpg",
       lyhyt: "Rooma, 1873. Uusi virkamies kulki vanhan keisarin ohi.",
-      selite: "Sateen kiillottamalla kadulla uusi virkamies kantoi paperinsa kuivina. Kivinen keisari seisoi seinäsyvennyksessä ilman asiakirjoja tai kiirettä. Rooma oli vaihtanut pääkaupungin tehtävään, mutta kaikki sen hallitsijat eivät olleet poistuneet. He vain hoitivat virkansa eri aineesta.",
+      selite: 'Uusi virkamies kantoi paperinsa kuivina vanhan keisarin ohi. Rooma oli vaihtanut tehtävää, mutta kaikki hallitsijat eivät olleet poistuneet — osa vain hoiti virkaansa kivestä.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
     },
@@ -265,13 +265,7 @@ export const FOKUSVIRTA_ROOMA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-rooma-01-r20260909-14mm-text1-v2.jpg',
         lyhyt: 'Rooma: isoisä katsoi aukosta ylös, minä katsoin alas.',
-        selite: 'Pantheonin kupolin keskellä oleva oculus on avoin taivaalle. '
-          + 'Aurinko kuljettaa valoa sen kautta sisään, ja sade pääsee '
-          + 'lattialle asti. Ylhäältä aukko näyttää valtavalta silmältä, jonka '
-          + 'takana ihmiset liikkuvat pieninä. Isoisä ihmetteli, miksei näin '
-          + 'vanhaa kattoa ollut paikattu. Minusta avoimuudessa on puolensa. '
-          + 'Lensin vain ohi ja kurkistin: vieraan kuuluu tietää, milloin hän '
-          + 'on toisen talon yllä.',
+        selite: 'Ylhäältä Pantheonin avoin kattoaukko näyttää valtavalta silmältä, jonka pohjalla lattian kuviot pienenevät. Isoisä katsoi siitä ylös; minä kurkistin varovasti alas.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.pantheonroma.com/en/pantheon-history/',

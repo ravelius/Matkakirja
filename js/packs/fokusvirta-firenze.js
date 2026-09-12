@@ -222,12 +222,7 @@ export const FOKUSVIRTA_FIRENZE = {
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-firenze-kasi-v6.jpg',
       lyhyt: 'Firenze, 1873. Kivinen käsi näytti osaavan jotakin, mitä omani ei.',
-      selite: 'Rajasin kuvaan Davidin suuren käden ja osan käsivarresta. Marmorin '
-        + 'rystysissä on niin tarkkaa lepoa, että odotin melkein sormien '
-        + 'liikkuvan. Michelangelon patsas seisoo vielä ulkona Palazzo '
-        + 'Vecchion edessä. Sen takana palatsin kivi näyttää kiveltä, mutta '
-        + 'tämän käden kohdalla asia ei ole yhtä yksinkertainen. Kamerani '
-        + 'pystyy ottamaan siitä kuvan. Veistäjän oli ensin saatava se esiin.',
+      selite: 'Rajasin kuvaan Davidin suuren käden, jonka rystyset näyttivät levossakin melkein liikkuvilta. Palatsin kivi pysyi selvästi kivenä, mutta marmorisessa kädessä asia ei tuntunut yhtä yksinkertaiselta.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
         'https://catalogo.beniculturali.it/detail/PhotographicHeritage/0800635892',
@@ -240,7 +235,7 @@ export const FOKUSVIRTA_FIRENZE = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-firenze-r20260911-paper2-v1.jpg",
       lyhyt: "Firenze, 1873. Illan hiljaisuudessa katsoin Davidin suuntaan.",
-      selite: "Palasin aukiolle illalla, kun väkeä oli vähemmän. Muutama ihminen kulki jo pois pitkien varjojen yli. Jäin katsomaan Davidin suuntaan kuvan ulkopuolelle. Hiljaisuudessa kivi vaikutti entistä enemmän ihmiseltä.",
+      selite: 'Palasin aukiolle illalla ja jäin katsomaan Davidin suuntaan kuvan ulkopuolelle. Vähäinen väki ja pitkät varjot tekivät kivestä mielessäni entistä enemmän ihmisen.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/","https://www.galleriaaccademiafirenze.it/la-galleria/"],
     },
@@ -259,13 +254,7 @@ export const FOKUSVIRTA_FIRENZE = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-firenze-01-r20260909-14mm-v4.jpg',
         lyhyt: 'Firenze: Davidin kopio osaa pitää ilmeensä myös lähikuvassa.',
-        selite: 'Piazza della Signorian David on kopio. Michelangelon alkuperäinen '
-          + 'veistos vietiin vuonna 1873 suojaan Galleria dell’Accademiaan. '
-          + 'Aukiolla patsas kuuluu yhä Palazzo Vecchion ympärille '
-          + 'levittäytyvään kivisten kertomusten joukkoon. Isoisä vertasi '
-          + 'Davidin kättä omaansa. Minä tutkin ilmettä: sama keskittynyt katse '
-          + 'joka suunnasta. Malli ei pyytänyt nähdä kuvaa eikä ehdottanut '
-          + 'uutta otosta. Arvostan sellaista ammattitaitoa.',
+        selite: 'Piazza della Signorian David on kopio, mutta lähikuvassa sen keskittynyt ilme pitää joka suunnasta. Malli ei räpäyttänyt eikä ehdottanut uutta otosta; arvostan sellaista ammattitaitoa.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/',

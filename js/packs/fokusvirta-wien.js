@@ -104,14 +104,14 @@ export const FOKUSVIRTA_WIEN = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-wien-r20260909-paper-v4.jpg",
       lyhyt: "Wien, 1873. Kone teki lehteä ilman mielipidettä.",
-      selite: "Painokoneen vierellä miehet tarkkailivat arkin kulkua niin kuin lääkärit potilaan hengitystä. Maailmannäyttelyn hallissa rauta kantoi sekä työkoneen että suuren katon painoa. Kuvasin hetken, jolloin kaikki näytti olevan järjestyksessä. Lehti valmistuu koneelta valmiina, mutta sen lukijan ajatukset eivät. Sen eron huomasin myöhemmin kahvilassa, en tämän koneen ääressä.",
+      selite: 'Maailmannäyttelyn hallissa mies valvoo painokonetta Rotunden rautapylväiden alla. Kone tekee lehteä ajattelematta sanaakaan; lukijan ajatukset jäävät myöhemmäksi.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://sammlung.wienmuseum.at/en/object/59815-weltausstellung-1873-rotunde-der-ring-vor-der-hebung-nr-3a/","https://www.technischesmuseum.at/presse/women_at_work","https://www.technischesmuseum.at/ausstellung/women_at_work"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-wien-r20260911-paper2-v1.jpg",
       lyhyt: "Wien, 1873. Lehti pieneni pöydällä, uutinen ei.",
-      selite: "Kahvilan herra taitteli lehden yhä pienemmäksi. Pörssin uutinen ei suostunut samaan temppuun. Laskin kahvin hänen eteensä ja odotin. Näyttelyn koneista ei ollut tässä pöydässä apua.",
+      selite: 'Kahvilan herra taitteli lehteä yhä pienemmäksi, kun kahvi laskettiin hänen eteensä. Pörssin uutinen ei suostunut samaan temppuun.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://sammlung.wienmuseum.at/en/object/59815-weltausstellung-1873-rotunde-der-ring-vor-der-hebung-nr-3a/"],
     },
@@ -176,12 +176,7 @@ export const FOKUSVIRTA_WIEN = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-wien-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Wien: kahvi saapui, vaikka uutinen ei parantunut.',
-        selite: 'Wieniläisessä kahvilassa lehti ja kahvi saavat viipyä samassa '
-          + 'pöydässä. Istuin terassin reunalla, kun tarjoilija laski kupin '
-          + 'yksin istuvan asiakkaan eteen. Lehti jäi hetkeksi alas. Isoisä '
-          + 'tilasi kerran kahvin toiselle ihmiselle, koska mikään hänen '
-          + 'näkemänsä kone ei osannut lohduttaa. Minä en tiedä, mitä tämän '
-          + 'lehden sivulla luki. Tuon pienen tauon osasin silti kuvata.',
+        selite: 'Wieniläisen kahvilan terassilla tarjoilija laskee kupin samaan pöytään sanomalehden kanssa. En tiedä, mitä sivulla luki, mutta kahvin tuoman pienen tauon osasin kuvata.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.wien.info/en/dine-drink/coffeehouses/top-traditional-coffee-houses-in-vienna-361666',

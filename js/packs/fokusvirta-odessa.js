@@ -234,14 +234,14 @@ export const FOKUSVIRTA_ODESSA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-odessa-r20260909-paper-v4.jpg",
       lyhyt: "Odessa, 1873. Portailla kuorma näytti todellisen painonsa.",
-      selite: "Alhaalta katsottuna portaat levittävät kaupunkia sataman ylle kuin näyttämöä. Vehnäsäkkien kantajat tekevät siinä työtä, jonka ylhäällä kävelevä herra voi sivuuttaa yhdellä katseella. Minä tarvitsin pysähdyksen puolivälissä, vaikka kannoin vain omia tavaroitani. Asetin kameran niin, että kuvaan jäivät sekä leveät askelmat että kuormat niiden lähellä. Pelkkä komeus olisi kertonut tästä paikasta liian vähän.",
+      selite: 'Leveät portaat nostivat kaupungin sataman ylle, mutta säkkien vieressä istuva mies näytti työn tauon. Jätin kuormat kuvaan, sillä pelkkä komeus olisi kertonut paikasta liian vähän.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://whc.unesco.org/document/196047","https://whc.unesco.org/en/list/1703"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-odessa-r20260911-paper2-v1.jpg",
       lyhyt: "Odessa, 1873. Merituuli nousi portaat ilman lepoa tai tullia.",
-      selite: "Ylhäällä puistokäytävällä herrat liikuttivat lähinnä kävelykeppejään. Portaat laskivat satamaan, jossa laivojen ja kuormien työ jatkui. Illan merituuli tarttui takinhelmoihin ja kulki koko matkan yhdellä hengenvedolla. Siltä ei kysytty papereita eikä lastin arvoa.",
+      selite: 'Kaksi herrasmiestä katsoo portaiden yläpäästä alas satamaan, jossa mastot ja laiturit täyttävät rannan. Merituuli saa kulkea tämän matkan ilman lepoa tai tullia.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://whc.unesco.org/en/list/1703","https://whc.unesco.org/document/196047"],
     },
@@ -299,12 +299,7 @@ export const FOKUSVIRTA_ODESSA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-odessa-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Odessa: portaat jatkuvat kuvan ulkopuolelle.',
-        selite: 'Odessan leveät portaat yhdistävät kaupungin ylätason sataman '
-          + 'suuntaan. Isoisä vertasi siellä tavaran kantajien työtä herrasväen '
-          + 'kevyempiin liikkeisiin. Minä katson nyt samoja kiviä kaupungissa, '
-          + 'jonka maailmanperintöä sota uhkaa. Tähän kuvaan ei tarvittu mitään '
-          + 'suurta tapahtumaa. Valo kulki askelman yli, eikä sen perässä '
-          + 'kuulunut kiirettä. Toivon, että tuollaisia hetkiä riittää.',
+        selite: 'Odessan leveät portaat nousevat niin pitkälle, että alimmalta askelmalta yläpää näyttää jo omalta kaupunginosaltaan. Kivipinta on kulunut, mutta valo kiipeää sen yli edelleen vaivatta.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://whc.unesco.org/en/list/1703/',
