@@ -20,7 +20,8 @@ import {
   LIVIAN_AVAUS, LIVIAN_LEHTIVINKKI, MANNERIVIHJE, livianPaljastus,
 } from '../js/livia.js';
 import {
-  LIVIAN_AANIJUURI, LIVIAN_AANILAHTEET, LIVIAN_AANITETTY_PALJASTUS, LIVIAN_AANITETYT,
+  LIVIAN_AANIERAT, LIVIAN_AANIJUURI, LIVIAN_AANILAHTEET, LIVIAN_AANITETTY_PALJASTUS,
+  LIVIAN_AANITETYT,
   LIVIAN_KAIKU, LIVIAN_KAUPUNKILAHTEET, LIVIAN_PERUSTASO, LIVIAN_SAAPUMISREPLIIKIT,
   LIVIAN_VALIHUOMION_VAIMENNUS, livianAaniAjanTasalla,
   livianAaniNimi,
@@ -348,8 +349,15 @@ test('työkalu tuntee saapumisrepliikit, mutta peli soittaa aina kuivan', () => 
   // Paluun ENSIMMÄINEN kupla (sofia-13) on se, jossa Livia tulee ilmasta.
   assert.deepEqual(LIVIAN_SAAPUMISREPLIIKIT, { avaus: [0], paljastus: [0], sofia: [12] });
   // Osoite seuraa samaa valintaa: kuiva tiedosto ämpärissä.
+  /*
+   * ÄÄNITYSERÄ NÄKYY OSOITTEESSA (12.9.2026). avaus-1 äänitettiin
+   * uudella äänellä ilman että teksti muuttui, joten pelkkä tekstin
+   * tiiviste olisi jättänyt osoitteen ennalleen ja äänikori olisi
+   * soittanut vanhan äänen. Erä tulee tiivisteen perään, joten tekstin
+   * tiiviste ja sen vartijat säilyvät koskemattomina.
+   */
   assert.equal(livianAaniOsoite('avaus', 0),
-    `${LIVIAN_AANIJUURI}livia-avaus-1.mp3?v=${LIVIAN_AANITETYT['avaus-1']}`);
+    `${LIVIAN_AANIJUURI}livia-avaus-1.mp3?v=${LIVIAN_AANITETYT['avaus-1']}-${LIVIAN_AANIERAT['avaus-1']}`);
   assert.equal(livianAaniOsoite('sofia', 12),
     `${LIVIAN_AANIJUURI}livia-sofia-13.mp3?v=${LIVIAN_AANITETYT['sofia-13']}`);
   // VERSIOKYSELY VAIHTUU TEKSTIN MUKANA (9.9.2026): vartioidun repliikin

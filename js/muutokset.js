@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1801, teksti: 'Viron valokuvat ja pulun uusi ääni kuuluviin' },
   { v: 1800, teksti: 'Satelliittilinssi: kuva koko ruutuun ja vain vihreat pisteet' },
   { v: 1799, teksti: '14 karttakuvaa, neljä tehty uusiksi valokuvamaisina' },
   { v: 1798, teksti: 'Julisteen marginaali pois pallon navoilta' },
