@@ -117,6 +117,7 @@ ajavat vain pallolla) sekä
 | savuke-maaselain | Maatiedot-tila: kirjanappi, pilleri, valinnan purku |
 | savuke-katselin-pollo | Kuvakatselimen napautukset + pöllön kiinnitys |
 | savuke-postikortti | Valokuvasuurennoksen sulkeutumissäännöt |
+| savuke-suurennoksen-pystytila | Kuvasuurennoksen pystytila ja lyhyen kuvatekstin linkki (omistajan vikailmoitus 12.9.2026: *"Näissä kuvissa on turhaan ylhäällä ja alhaalla pieni marginaali. Lisäksi tässä lyhyessä kuvatekstissä ei saa olla tuota havainnekuvalinkkiä."*). Avaa isoisän ja Pulun albumin karusellin Ateenassa ja mittaa kolmella ruudulla (390×844, 834×1194, 1280×800) sekä vaaka- että pystykuvalla, ettei `object-fit: contain` piirrä kirjekuorireunoja kuvaelementin sisään, että kehys on kiinni kuvassa ja kuvatekstissä, että kuvatekstipalkki on yhä luettava ja ettei lyhyeen kuvatekstiin tule Havainnekuva-linkkiä. Koekuvat piirretään ajossa PNG:ksi kahdessa tunnetussa kuvasuhteessa — repoon ei tuoda mediaa. Ämpäri Noden kautta (NODE_USE_ENV_PROXY=1), ajaa pallolaudalla |
 | savuke-vuosisaa | Vuosisääkortti (käyrä, sadepalkit, korostus) |
 | savuke-lehden-mitta | Arkin leveys (jumiutunut viewportti, resize) |
 | savuke-paivityspopup | Versionumeron päivitysnappi |
