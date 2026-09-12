@@ -344,6 +344,15 @@ export const MAASTOKOHTEET_FIN = [
   },
   {
     id: 'sammallahdenmaki',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fin-kohde-sammallahdenmaki-c35cb84efe24.jpg',
+      lyhyt: 'Sammallahdenmäen pronssikautisia graniittiröykkiöitä.',
+      selite: 'Sammallahdenmäen 33 graniittiröykkiötä kertovat länsisuomalaisesta pronssikauden hautausperinteestä.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://www.museovirasto.fi/en/about-us/international-activities/world-heritage-in-finland',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Sammallahdenmäki',
     tyyppi: 'historia',
     kysymykset: [
