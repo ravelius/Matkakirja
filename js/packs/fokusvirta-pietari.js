@@ -212,12 +212,7 @@ export const FOKUSVIRTA_PIETARI = {
     paikkarivi: 'Pietari, kesäkuussa 1873. Valkeat yöt; ei tule pimeää; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 333 merkkiä (yläraja 400). */
-    teksti: 'Pietarissa kesäyö on vaalea kuin loppuun pesty lakana. Kello '
-      + 'käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. '
-      + 'Rantakadulla nainen sulki päivänvarjonsa ja jäi silti kävelemään. '
-      + 'Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän '
-      + 'tapahtumat loppuun. Päivä itse ei suostunut lopettamaan, joten '
-      + 'lisäsin vielä tämän.',
+    teksti: 'Pietarin kesäyö oli vaalea kuin loppuun pesty lakana. Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän tapahtumat loppuun. Päivä itse ei suostunut lopettamaan, joten lisäsin vielä tämän.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -238,21 +233,16 @@ export const FOKUSVIRTA_PIETARI = {
      */
     reaktiot: [
       { id: 'pietari.r1', ankkuri: 'loppuun pesty lakana', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Valoisa yö saa outo vertauksen.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'pietari.r2', ankkuri: 'iltaa vanhemmalta', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kello ja joki ovat eri mieltä ajasta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'pietari.r3', ankkuri: 'ilman kynttilöitä', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Hiljainen havainto valosta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'pietari.r4', ankkuri: 'lisäsin vielä tämän', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi: päiväkirja jatkuu päivän mukana.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Pietarissa kesäyö on vaalea kuin loppuun pesty lakana. '
-      + 'Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. '
-      + 'Rantakadulla nainen sulki päivänvarjonsa ja jäi silti kävelemään. '
-      + 'Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän '
-      + 'tapahtumat loppuun. [softly] Päivä itse ei suostunut lopettamaan, '
-      + 'joten lisäsin vielä tämän.',
+    luenta: '[curious] Pietarin kesäyö oli vaalea kuin loppuun pesty lakana. Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän tapahtumat loppuun. [mischievously] Päivä itse ei suostunut lopettamaan, joten lisäsin vielä tämän.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-pietari.mp3',
   },
 
@@ -338,7 +328,7 @@ export const FOKUSVIRTA_PIETARI = {
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Pietari ehti olla Leningradkin. Kesäyö on yhä valoisa. Isoisän kellosta taisi loppua valta.',
+      'Valkoisena yönä Nevan sillat nousivat yksi toisensa jälkeen. Vaihdoin reittiä ennen laivojen tuloa — kirjekyyhky ei luota pelkkään kelloon.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.5 },

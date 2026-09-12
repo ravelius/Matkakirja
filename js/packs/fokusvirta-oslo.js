@@ -180,11 +180,7 @@ export const FOKUSVIRTA_OSLO = {
     paikkarivi: 'Kristiania, heinäkuussa 1873. Valoisaa myöhään; vuono tyyni; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 332 merkkiä (yläraja 400). */
-    teksti: 'Christianian vuonolla lastattiin lankkuja laivaan. Metsä matkusti '
-      + 'maailmalle siististi pinottuna. Sataman mies näytti rannan sahoja ja '
-      + 'sanoi kaupungin kasvavan puusta. Se oli omituista kuultavaa paikassa, '
-      + 'jossa kivitalot näyttivät niin ylpeiltä itsestään. Poimin vedestä '
-      + 'lastun. Se tuoksui yhä metsältä, vaikka matka oli jo alkanut.',
+    teksti: 'Christianian vuonolla lankut lähtivät maailmalle siisteinä pinoina. Kivitalojen sanottiin kasvavan puusta. Poimin vedestä lastun; se tuoksui yhä metsältä, vaikka matka oli jo alkanut.',
     /*
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
@@ -203,22 +199,15 @@ export const FOKUSVIRTA_OSLO = {
      * sahoista (taustaa).
      */
     reaktiot: [
-      { id: 'oslo.r1', ankkuri: 'siististi pinottuna', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Metsä matkustaa kuin matkustaja.' },
-      { id: 'oslo.r2', ankkuri: 'ylpeiltä itsestään', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kivitalot saavat kuivan huomautuksen.' },
+      { id: 'oslo.r1', ankkuri: 'siisteinä pinoina', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'oslo.r3', ankkuri: 'Poimin vedestä lastun', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
-        perustelu: 'Pieni arkinen teko.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'oslo.r4', ankkuri: 'tuoksui yhä metsältä', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Lastu muistaa alkunsa: hiljainen päätös.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Christianian vuonolla lastattiin lankkuja laivaan. '
-      + 'Metsä matkusti maailmalle siististi pinottuna. Sataman mies näytti '
-      + 'rannan sahoja ja sanoi kaupungin kasvavan puusta. Se oli omituista '
-      + 'kuultavaa paikassa, jossa kivitalot näyttivät niin ylpeiltä '
-      + 'itsestään. Poimin vedestä lastun. [softly] Se tuoksui yhä metsältä, '
-      + 'vaikka matka oli jo alkanut.',
+    luenta: '[curious] Christianian vuonolla lankut lähtivät maailmalle siisteinä pinoina. Kivitalojen sanottiin kasvavan puusta. [softly] Poimin vedestä lastun; se tuoksui yhä metsältä, vaikka matka oli jo alkanut.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-oslo.mp3',
   },
 
@@ -265,7 +254,7 @@ export const FOKUSVIRTA_OSLO = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Nimi on nyt Oslo, ja vuonon rannassa kävellään oopperan katolla. Siihen suuntaan kaupunkien pitäisi kasvaa.',
+      'Nimi on Oslo, ja oopperan katolla kävellään. Kirjekyyhkynä hyväksyn rakennuksen, jonka reitti jatkuu katon yli.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.45 },

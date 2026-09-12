@@ -187,11 +187,7 @@ export const FOKUSVIRTA_DUBLIN = {
     /* KAANON (Fable 29.8.2026) — paikkarivi sellaisenaan. */
     paikkarivi: 'Dublin, syyskuussa 1873. Tihkusadetta; puntari putoaa.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 331 merkkiä (yläraja 400). */
-    teksti: 'Guinnessin panimon vuokrasopimus on tehty yhdeksäksituhanneksi '
-      + 'vuodeksi. Sellaisen allekirjoittamiseen tarvitaan uskoa joko olueen '
-      + 'tai janoon. Portilla tuoksui lämmin mallas, ja kärryille vieritettiin '
-      + 'tynnyreitä. Mies pyyhki otsaansa hihalla. Kysyin, loppuuko työ '
-      + 'koskaan. Hän katsoi minua pitkään. Olin unohtanut vuokrasopimuksen.',
+    teksti: 'Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään. Olin unohtanut vuokrasopimuksen.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md
      * luku 7). Vain tunnetagit on lisätty, neljä kappaletta, alku ja
@@ -214,23 +210,18 @@ export const FOKUSVIRTA_DUBLIN = {
      */
     reaktiot: [
       { id: 'dublin.r1', ankkuri: 'yhdeksäksituhanneksi vuodeksi', tarkoitus: 'hammastyy', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Yhdeksäntuhatta vuotta on hurja luku.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'dublin.r2', ankkuri: 'olueen tai janoon', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Isoisän kuiva selitys sopimukselle.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'dublin.r3', ankkuri: 'loppuuko työ koskaan', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Kysymys esitetään hiljaa.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'dublin.r4', ankkuri: 'katsoi minua pitkään', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Vastaus tulee katseena.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'dublin.r5', ankkuri: 'Olin unohtanut vuokrasopimuksen', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Loppuvitsi: vastaus oli jo kerrottu.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Guinnessin panimon vuokrasopimus on tehty '
-      + 'yhdeksäksituhanneksi vuodeksi. Sellaisen allekirjoittamiseen '
-      + 'tarvitaan uskoa joko olueen tai janoon. Portilla tuoksui lämmin '
-      + 'mallas, ja kärryille vieritettiin tynnyreitä. Mies pyyhki otsaansa '
-      + 'hihalla. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään. '
-      + '[softly] Olin unohtanut vuokrasopimuksen.',
+    luenta: '[curious] Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. [mischievously] Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään. [softly] Olin unohtanut vuokrasopimuksen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-dublin.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-dublin-r20260909-paper-v4;
@@ -297,7 +288,7 @@ export const FOKUSVIRTA_DUBLIN = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Guinnessiä pannaan täällä yhä. Yhdeksäntuhatta vuotta? Minä en lupaisi edes istuvani samalla räystäällä.',
+      'St James’s Gaten vanhassa käymistalossa käy nyt vieraita seitsemässä kerroksessa. Nousin Gravity Barin tasolle ulkokautta. Minun kierrokseni oli lyhyempi, näköala sama.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'hammastys', voimakkuus: 0.5 },

@@ -139,14 +139,14 @@ export const FOKUSVIRTA_RIIKA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-riika-r20260909-paper-v4.jpg",
       lyhyt: "Riika, 1873. Kuoro hengitti kaupungin kokoiseksi.",
-      selite: "Laulajien kasvot olivat erilaisia, mutta heidän seuraava hengenvetonsa kuului yhteen. Riian laulujuhlat ovat tuoneet paikalle väkeä, joka ei olisi muuten ehkä seissyt saman äänen sisällä. Pyysin pientä joukkoa pysähtymään kuvaan. Vieressäni laulanut mies ei pyyhkinyt poskeaan, enkä pyytänyt häntä tekemään sitä. Kameralla saa talteen ilmeen; siitä lähtenyt ääni täytyy muistaa itse.",
+      selite: "Laulajien kasvot olivat erilaisia, mutta heidän seuraava hengenvetonsa kuului yhteen. Kuvasin pienen joukon ja miehen, joka jätti kyyneleen poskelleen.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.dziesmusvetki.lv/lv/zinas/pirmajiem-dziesmu-svetkiem-veltita-izstade-rlb/","https://www.dziesmusvetki.lv/en/about-the-celebration/the-song-and-dance-celebration/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-riika-r20260911-paper2-v1.jpg",
       lyhyt: "Riika, 1873. Yleisö kuuli kuoron yhteisen hengityksen.",
-      selite: "Seisoin yleisön keskellä, kun laulajat vetivät henkeä yhtä aikaa. Lava täyttyi ihmisistä ja seuraava ääni tuntui kaupungin kokoiselta. Vieressä mies kuunteli kyynel poskellaan. Hän ei pyyhkinyt sitä pois.",
+      selite: "Lava täyttyi laulajista, jotka vetivät henkeä yhtä aikaa ennen kaupungin kokoista ääntä. Yleisössä mies kuunteli kyynel poskellaan pyyhkimättä sitä pois.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.dziesmusvetki.lv/lv/zinas/pirmajiem-dziesmu-svetkiem-veltita-izstade-rlb/","https://www.dziesmusvetki.lv/en/about-the-celebration/the-song-and-dance-celebration/"],
     },
@@ -210,12 +210,9 @@ export const FOKUSVIRTA_RIIKA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-riika-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Riika: tämä pesä on rakennettu ihmisäänille.',
-        selite: 'Mežaparksin suuri laululava on tehty kuoroja varten, ja sen '
-          + 'rakenteet avautuvat ilmaan kuin oksisto. Isoisä kuuli Riian '
-          + 'laulujuhlilla suuren joukon hengittävän yhdessä. Minä katsoin '
-          + 'harjoitukseen asettuvia laulajia ja tyhjiä rivejä heidän edessään. '
-          + 'Vielä oli tilaa hiljaisuudelle. Kuvasin tämän hetken ennen '
-          + 'aloitusta, sillä laulun ajaksi sopi laskea kamera ja kuunnella.',
+        selite: 'Mežaparksin suuren laululavan rakenteet avautuvat ilmaan kuin '
+          + 'oksisto. Harjoitusryhmä asettuu lavalle tyhjien katsomorivien '
+          + 'eteen juuri ennen laulun alkua.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.liveriga.com/en/1168-grand-stage-at-mezaparks',

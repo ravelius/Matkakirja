@@ -150,12 +150,7 @@ export const FOKUSVIRTA_LISSABON = {
     paikkarivi: 'Lissabon, lokakuussa 1873. Tuulista; Tejolla valkoisia '
       + 'harjoja; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 330 merkkiä (yläraja 400). */
-    teksti: 'Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin '
-      + 'hallitsijan jakaukseksi. Eksyin silti heti, kun poikkesin Alfamaan. '
-      + 'Siellä portailla istuva nainen neuvoi ylöspäin. Ylhäällä toinen '
-      + 'neuvoi alas. Kumpikin oli oikeassa: löysin meren molemmista '
-      + 'suunnista, vain eri kattojen välistä. Kartta on täällä taskussa '
-      + 'kulkeva lohdutus.',
+    teksti: 'Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin hallitsijan jakaus. Alfamassa eksyin silti. Yksi nainen neuvoi ylös, toinen alas. Kumpikin oli oikeassa: meri löytyi eri kattojen välistä. Kartta oli täällä taskussa kulkeva lohdutus.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain tunnetagit lisätty
      * (docs/moduulit/tarinakaari.md, luku 7). Neljä tagia, alku ja loppu
@@ -175,24 +170,19 @@ export const FOKUSVIRTA_LISSABON = {
      * ylöspäin" (neuvon ensimmäinen puoli).
      */
     reaktiot: [
-      { id: 'lissabon.r1', ankkuri: 'kuin hallitsijan jakaukseksi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Suorat kadut vertautuvat hiustenjakaukseen.' },
-      { id: 'lissabon.r2', ankkuri: 'Eksyin silti heti', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Isoisä nauraa itselleen.' },
-      { id: 'lissabon.r3', ankkuri: 'toinen neuvoi alas', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Vastakkaiset neuvot ovat merkinnän vitsi.' },
-      { id: 'lissabon.r4', ankkuri: 'molemmista suunnista', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Molemmat olivat oikeassa: yllätys.' },
+      { id: 'lissabon.r1', ankkuri: 'kuin hallitsijan jakaus', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'lissabon.r2', ankkuri: 'Alfamassa eksyin silti', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'lissabon.r3', ankkuri: 'toinen alas', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'lissabon.r4', ankkuri: 'eri kattojen välistä', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'lissabon.r5', ankkuri: 'taskussa kulkeva lohdutus', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Hiljainen päätös kartasta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Baixan kadut vedettiin järistyksen jälkeen suoriksi '
-      + 'kuin hallitsijan jakaukseksi. Eksyin silti heti, kun poikkesin '
-      + 'Alfamaan. Siellä portailla istuva nainen neuvoi ylöspäin. Ylhäällä '
-      + 'toinen neuvoi alas. Kumpikin oli oikeassa: löysin meren molemmista '
-      + 'suunnista, vain eri kattojen välistä. [softly] Kartta on täällä '
-      + 'taskussa kulkeva lohdutus.',
+    luenta: '[curious] Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin hallitsijan jakaus. Alfamassa eksyin silti. Yksi nainen neuvoi ylös, toinen alas. Kumpikin oli oikeassa: meri löytyi eri kattojen välistä. [softly] Kartta oli täällä taskussa kulkeva lohdutus.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lissabon.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-lissabon-r20260909-paper-v4;
@@ -258,7 +248,7 @@ export const FOKUSVIRTA_LISSABON = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Lissabonissa on nyt hissejä mäkiä varten. Ihmiset eivät saaneet siipiä, joten piti ryhtyä rakennustöihin.',
+      'Raitiovaunu 12 kulkee Alfaman mäkien kautta. Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. Reitti jatkui — tehtävä vain jäi kesken.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

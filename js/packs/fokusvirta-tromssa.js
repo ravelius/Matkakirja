@@ -28,14 +28,14 @@ export const FOKUSVIRTA_TROMSSA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tromssa-r20260909-paper-v4.jpg",
       lyhyt: "Tromssa, 1873. Pieni simpukka ja suuri kysymys samassa huoneessa.",
-      selite: "Museon pöydällä simpukka ja luu saivat paikan vierekkäin ilman, että suurempi olisi vienyt pienemmältä arvoa. Tromssan satamasta tuodaan näytteitä pohjoisen meriltä; osa tavarasta alkaa tuottaa kysymyksiä siinä missä muu lasti rahaa. Ikkunan mastot muistuttivat, ettei keräämiseen tarvita pelkkää kaappia vaan myös matka. Kuvasin pöydän sellaisenaan. Sen järjestys oli minusta hyvä alku museolle.",
+      selite: "Museon pöydällä simpukka ja suuri luu lepäsivät vierekkäin pohjoisen meriltä tuotuina näytteinä. Ikkunasta näkyvät sataman mastot yhdistivät kokoelman sen matkaan.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://en.uit.no/om/historie","https://uit.no/ressurs/uit/mediebok/Labyrint0412/Labyrint_2012-04_web.pdf","https://uit.no/tmu/samlinger/samling?p_document_id=667875"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tromssa-r20260911-paper2-v1.jpg",
       lyhyt: "Tromssa, 1873. Sama meri toi satamaan saaliin ja museoon kysymykset.",
-      selite: "Museon ullakko oli vaatimaton, mutta ikkunasta näkyvä satama suuri. Pyyntilaivojen mastot nousivat vaaleaan kesäyöhön. Hyllyjen luut ja kivet olivat tulleet samalta mereltä, joka ruokki kaupunkia. Katsoin ulos ja ymmärsin, miksi uteliaisuudelle tarvitaan täällä kokonainen museo.",
+      selite: "Museon vaatimattoman ullakon ikkunasta näkyivät satama ja vaaleaan kesäyöhön nousevat mastot. Hyllyjen luut ja kivet olivat tulleet samalta mereltä kuin laivojen saalis.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://en.uit.no/om/historie","https://uit.no/ressurs/uit/mediebok/Labyrint0412/Labyrint_2012-04_web.pdf"],
     },
@@ -93,13 +93,9 @@ export const FOKUSVIRTA_TROMSSA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tromssa-01-r20260909-14mm-v3.jpg',
         lyhyt: 'Tromssa: yksi simpukankuori ja koko meri täynnä kysymyksiä.',
-        selite: 'Tromssan Polaarimuseo toimii vanhoissa tullirakennuksissa meren '
-          + 'äärellä. Se kertoo pyynnistä, retkikunnista ja arjesta '
-          + 'pohjoisessa. Museon laituri on rakennettu uudelleen vanhojen '
-          + 'valokuvien avulla. Laudalle jäänyt simpukankuori ei kuulu '
-          + 'näyttelyyn, mutta pysäytti minut silti. Isoisäkin huomasi, että '
-          + 'pienestä esineestä voi alkaa suuri uteliaisuus. Minä aloitin '
-          + 'tarkistamalla, oliko asunto jo vapaa.',
+        selite: 'Tromssan Polaarimuseon vanhat tullirakennukset seisovat meren '
+          + 'äärellä uudelleen rakennetun laiturin vieressä. Laiturin laudalle '
+          + 'jäänyt simpukankuori pysäytti minut tarkistamaan asuntoa.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://en.uit.no/tavla/artikkel?p_document_id=804921',

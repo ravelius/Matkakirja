@@ -132,12 +132,7 @@ export const FOKUSVIRTA_BUDAPEST = {
       + 'tuuli; puntari putoaa.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 367 merkkiä (yläraja 400). */
-    teksti: 'Buda, Pest ja Óbuda on tänä marraskuuna liitetty yhteen. Karttani '
-      + 'vanheni kesken aamiaisen. Toisella rannalla kohoaa linna, toisella '
-      + 'talot levittäytyvät tasamaalle; välissä Tonava pitää oman suuntansa. '
-      + 'Menin Rudasin turkkilaiseen kylpylään miettimään uuden nimen '
-      + 'sijoittelua. Kupolin alla oli niin lämmintä, että päätin antaa '
-      + 'kaupunkien olla hetken ilman järjestystä.',
+    teksti: 'Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. Lämpö sai kaupungit odottaa järjestystä.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -153,21 +148,16 @@ export const FOKUSVIRTA_BUDAPEST = {
      */
     reaktiot: [
       { id: 'budapest.r1', ankkuri: 'vanheni kesken aamiaisen', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kartan vanheneminen aamiaispöydässä on vitsi.' },
-      { id: 'budapest.r2', ankkuri: 'pitää oman suuntansa', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Tonava ei välitä hallinnosta: nyökkäys.' },
-      { id: 'budapest.r3', ankkuri: 'uuden nimen sijoittelua', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kylpylässä pohdittu karttatyö huvittaa.' },
-      { id: 'budapest.r4', ankkuri: 'ilman järjestystä', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Hiljainen päätös antaa asian olla.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'budapest.r2', ankkuri: 'Tonava piti suuntansa', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'budapest.r3', ankkuri: 'uutta nimeä', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'budapest.r4', ankkuri: 'odottaa järjestystä', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Buda, Pest ja Óbuda on tänä marraskuuna liitetty '
-      + 'yhteen. Karttani vanheni kesken aamiaisen. Toisella rannalla kohoaa '
-      + 'linna, toisella talot levittäytyvät tasamaalle; välissä Tonava pitää '
-      + 'oman suuntansa. Menin Rudasin turkkilaiseen kylpylään miettimään '
-      + 'uuden nimen sijoittelua. [softly] Kupolin alla oli niin lämmintä, '
-      + 'että päätin antaa kaupunkien olla hetken ilman järjestystä.',
+    luenta: '[curious] Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. [mischievously] Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. [softly] Lämpö sai kaupungit odottaa järjestystä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-budapest.mp3',
   },
 
@@ -254,7 +244,7 @@ export const FOKUSVIRTA_BUDAPEST = {
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Nimi mahtui karttaan. Nykyään Rudasissa kylvetään katollakin. Kerrankin ihmisillä on oikea kerros.',
+      'Rudasissa kylvetään nyt katollakin. Tarkistan katon reunat ennen kuin ihmiset ehtivät veteen.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

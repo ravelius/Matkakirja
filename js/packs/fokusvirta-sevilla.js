@@ -184,12 +184,7 @@ export const FOKUSVIRTA_SEVILLA = {
     paikkarivi: 'Sevilla, huhtikuussa 1873. Appelsiinipuut kukassa; puntari '
       + 'korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
-    teksti: 'Sevillan tupakkatehdas näyttää palatsilta, mutta sen portista '
-      + 'kulkee aamuisin kuningattarien sijasta työväkeä. Nainen sitoi '
-      + 'huivinsa, otti viimeisen haukun leivästä ja katosi sisään. Pihalta '
-      + 'tuli appelsiininkukkien tuoksu. Olin aikonut kirjoittaa suuresta '
-      + 'rakennuksesta. Kirjoitankin siitä, miten pienellä aamiaisella sitä '
-      + 'pidetään käynnissä.',
+    teksti: 'Sevillan tupakkatehdas näytti palatsilta, mutta portista kulki työväkeä. Nainen sitoi huivinsa, haukkasi leipää ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. Aioin kirjoittaa suuresta rakennuksesta; kirjoitinkin pienestä aamiaisesta, joka piti sitä käynnissä.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -209,22 +204,17 @@ export const FOKUSVIRTA_SEVILLA = {
      * rakennuksesta" (aikeen toteaminen).
      */
     reaktiot: [
-      { id: 'sevilla.r1', ankkuri: 'kuningattarien sijasta työväkeä', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Palatsin portista kulkee työväki.' },
-      { id: 'sevilla.r2', ankkuri: 'viimeisen haukun leivästä', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Pieni arkinen ele huomataan.' },
+      { id: 'sevilla.r1', ankkuri: 'portista kulki työväkeä', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'sevilla.r2', ankkuri: 'haukkasi leipää', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'sevilla.r3', ankkuri: 'appelsiininkukkien tuoksu', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
-        perustelu: 'Hetki hengähtää tuoksuun.' },
-      { id: 'sevilla.r4', ankkuri: 'pienellä aamiaisella', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Merkinnän kääntävä huomio: tehdas käy leivänpalasta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'sevilla.r4', ankkuri: 'pienestä aamiaisesta', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Sevillan tupakkatehdas näyttää palatsilta, mutta sen '
-      + 'portista kulkee aamuisin kuningattarien sijasta työväkeä. Nainen '
-      + 'sitoi huivinsa, otti viimeisen haukun leivästä ja katosi sisään. '
-      + 'Pihalta tuli appelsiininkukkien tuoksu. Olin aikonut kirjoittaa '
-      + 'suuresta rakennuksesta. [softly] Kirjoitankin siitä, miten pienellä '
-      + 'aamiaisella sitä pidetään käynnissä.',
+    luenta: '[curious] Sevillan tupakkatehdas näytti palatsilta, mutta portista kulki työväkeä. Nainen sitoi huivinsa, haukkasi leipää ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. [softly] Aioin kirjoittaa suuresta rakennuksesta; kirjoitinkin pienestä aamiaisesta, joka piti sitä käynnissä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sevilla.mp3',
   },
 
@@ -258,7 +248,7 @@ export const FOKUSVIRTA_SEVILLA = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Tupakkatehdas on nyt yliopisto. Portista mennään yhä leipä kädessä. Sivistys alkaa lupaavasti.',
+      'Entinen tupakkatehdas on nyt yliopisto. Näin opiskelijalla niin suuren paperipinon, että lähdin vaistosta perään. Ne eivät olleet kirjeitä. Hyvä yritys.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.55 },

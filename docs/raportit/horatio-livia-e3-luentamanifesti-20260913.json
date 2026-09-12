@@ -1,0 +1,615 @@
+{
+  "schemaVersion": 1,
+  "contentRevision": "eu-hl-e3-20260913-r1-approved1",
+  "state": "content-frozen-audio-authorized-rc-only",
+  "publishedBaselineCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1",
+  "invariants": {
+    "visibleAndSpokenWordsMustMatch": true,
+    "finalTimingsFromForcedAlignmentOnly": true,
+    "audioRunOwner": "RC/animaatiovetäjä",
+    "imageGenerationAuthorized": false,
+    "publishAuthorized": false
+  },
+  "voices": {
+    "horatio": {
+      "name": "Viisas Kertoja",
+      "model": "eleven_v3"
+    },
+    "livia": {
+      "name": "Flicker — cheerful fairy & sparkly sweetness",
+      "id": "piI8Kku0DcvcL6TTSeQt",
+      "model": "eleven_v3",
+      "stability": 0.5
+    }
+  },
+  "cities": [
+    {
+      "city": "rooma",
+      "horatio": {
+        "visibleText": "Rooman Pantheonin kattoaukosta satoi sisään. Sade löysi lattialta paikkansa, joten näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Uusia virkamiehiä kulki vanhojen keisarien ohi. Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
+        "visibleTextSha256": "b069edce55d9f992514740bb2096f31c10c6f2e2171d4155083655d379082481",
+        "ttsText": "[curious] Rooman Pantheonin kattoaukosta satoi sisään. Sade löysi lattialta paikkansa, joten näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Uusia virkamiehiä kulki vanhojen keisarien ohi. [softly] Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
+        "ttsTextSha256": "946c96e14c5a34dd1646e563c064f95deaf3327f890a0786660da81fd1cb11de",
+        "cues": [
+          {
+            "cueId": "rooma.r1",
+            "anchor": "kattoaukosta satoi sisään",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "rooma.r2",
+            "anchor": "Sade löysi lattialta paikkansa",
+            "intent": "vakavoituu",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "rooma.r3",
+            "anchor": "tohtinut huomauttaa katosta",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "rooma.r4",
+            "anchor": "kysymättä nimeä",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "rooma-3",
+        "visibleText": "Pantheoniin ostetaan nyt pääsylippu. Minä kiersin aukon yläpuolella ja vilkaisin alas. Ihmiset väistivät sadetta; minä väistin vain väärään suuntaan nousevaa ilmavirtaa.",
+        "visibleTextSha256": "bae1b78438e851c193bb414cd5a123da3a27b87a156d5c1e94f0e321cf05633a",
+        "ttsText": "[curious] Pantheoniin ostetaan nyt pääsylippu. [brightly] Minä kiersin aukon yläpuolella ja vilkaisin alas. [mischievously] Ihmiset väistivät sadetta; minä väistin vain väärään suuntaan nousevaa ilmavirtaa.",
+        "ttsTextSha256": "f33686f04fd09d1d24a9efde9eb2362ec0ea4f5427bb1a83b6d26b2b855413a7",
+        "cues": [
+          {
+            "cueId": "rooma.livia.c1",
+            "anchor": "ostetaan nyt pääsylippu",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "rooma.livia.c2",
+            "anchor": "kiersin aukon yläpuolella",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "rooma.livia.c3",
+            "anchor": "väärään suuntaan nousevaa ilmavirtaa",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.55
+          }
+        ]
+      }
+    },
+    {
+      "city": "firenze",
+      "horatio": {
+        "visibleText": "Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.",
+        "visibleTextSha256": "10bd55fca4a5e9cdb9bdcfd4d176f997e1982222b0696d506f413cea7331c63f",
+        "ttsText": "[curious] Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. [softly] Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.",
+        "ttsTextSha256": "2e48652d4ee6be369d336235e2d10b995ab5f53c91db8414abc079320a42aeb7",
+        "cues": [
+          {
+            "cueId": "firenze.r1",
+            "anchor": "minä hikoilin liivissä",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "firenze.r2",
+            "anchor": "siirtää sateelta suojaan",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "firenze.r3",
+            "anchor": "suurta kättä ja omaani",
+            "intent": "vakavoituu",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "firenze.r4",
+            "anchor": "piirtää käden",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "firenze.r5",
+            "anchor": "enemmän ihmiseltä",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "firenze-3",
+        "visibleText": "David on nyt sisällä ja aukiolla kopio. Kiersin museon katon kautta aukiolle ja tarkistin kopion ilmeen. Se ei räpäyttänyt. Minä taisin hävitä.",
+        "visibleTextSha256": "c667e8523678055133c79769ef456fa842796883a75a8afdbb53d634a95400bf",
+        "ttsText": "[curious] David on nyt sisällä ja aukiolla kopio. [brightly] Kiersin museon katon kautta aukiolle ja tarkistin kopion ilmeen. [mischievously] Se ei räpäyttänyt. [softly] Minä taisin hävitä.",
+        "ttsTextSha256": "bf821f4cbd4e28352d6ec3a4913f3bca523ef77af85194c6e4c54a4a5593d3f9",
+        "cues": [
+          {
+            "cueId": "firenze.livia.c1",
+            "anchor": "nyt sisällä ja aukiolla kopio",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "firenze.livia.c2",
+            "anchor": "Kiersin museon katon kautta",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "firenze.livia.c3",
+            "anchor": "Se ei räpäyttänyt",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.5
+          },
+          {
+            "cueId": "firenze.livia.c4",
+            "anchor": "taisin hävitä",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "city": "sisilia",
+      "horatio": {
+        "visibleText": "Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.",
+        "visibleTextSha256": "8e7360e13a20b28263af9c38dfa35b32849c1eae9832e35f6922fc282600d611",
+        "ttsText": "[curious] Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. [softly] Tekijöiden nimiä olisin kuunnellut kauemmin.",
+        "ttsTextSha256": "dcf213af56a477a33fea641090707a8936bd4f6f761e3c339b949cb7189f54b7",
+        "cues": [
+          {
+            "cueId": "sisilia.r1",
+            "anchor": "veistetyksi luolastoksi",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sisilia.r2",
+            "anchor": "kunnes niska väsyi",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sisilia.r3",
+            "anchor": "Kuninkaan nimi tunnettiin",
+            "intent": "epailee",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sisilia.r4",
+            "anchor": "olisin kuunnellut kauemmin",
+            "intent": "vakavoituu",
+            "strength": 0.55,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "sisilia-3",
+        "visibleText": "Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. Kiersin pihan yllä, nokka kohti ikkunoita. Katon näin vain kuvassa; siipeni pysyivät tallessa.",
+        "visibleTextSha256": "b0f8383cb9d852bc043ccf75a46df57510e7173f1a76e0beeb29db17aa36b314",
+        "ttsText": "[curious] Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. [brightly] Kiersin pihan yllä, nokka kohti ikkunoita. [mischievously] Katon näin vain kuvassa; siipeni pysyivät tallessa.",
+        "ttsTextSha256": "b025a8d1203d9e7262f346066649c9af634ae009864b4229f2eafbfd50ddd9b4",
+        "cues": [
+          {
+            "cueId": "sisilia.livia.c1",
+            "anchor": "kokoontuu Sisilian parlamentti",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "sisilia.livia.c2",
+            "anchor": "Kiersin pihan yllä",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "sisilia.livia.c3",
+            "anchor": "Katon näin vain kuvassa",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.5
+          },
+          {
+            "cueId": "sisilia.livia.c4",
+            "anchor": "siipeni pysyivät tallessa",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "city": "alpit",
+      "horatio": {
+        "visibleText": "Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.",
+        "visibleTextSha256": "53c582513ec17b7bb6db19b0fbc22bbcee6ff66aadb227e7547fe2eb66f91ac9",
+        "ttsText": "[curious] Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. [softly] Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.",
+        "ttsTextSha256": "0e7233b465d6a06d7d5d18c7ab9fc225a104e34eac399d98df5922279b3de9a0",
+        "cues": [
+          {
+            "cueId": "alpit.r1",
+            "anchor": "ettei taivas ylettynyt",
+            "intent": "hammastyy",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "alpit.r2",
+            "anchor": "jään liikkuvan",
+            "intent": "epailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "alpit.r3",
+            "anchor": "Kivi ei suostunut todistajaksi",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "alpit.r4",
+            "anchor": "pitkä rasahdus",
+            "intent": "vakavoituu",
+            "strength": 0.7,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "alpit.r5",
+            "anchor": "itseni kauemmas",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "alpit.r6",
+            "anchor": "vuori olisi vaiti",
+            "intent": "vakavoituu",
+            "strength": 0.6,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "alpit-3",
+        "visibleText": "Jäätikkö on vetäytynyt kauas isoisän päivistä. Lensin rotkon yllä ja etsin hänen kiveään. Kiviä oli liikaa, jäätä liian vähän. En väitä löytäneeni oikeaa.",
+        "visibleTextSha256": "5c15ee5104983529668e0cc23184ee38474e767e21e2bc61726f3acbf102b513",
+        "ttsText": "[softly] Jäätikkö on vetäytynyt kauas isoisän päivistä. [curious] Lensin rotkon yllä ja etsin hänen kiveään. Kiviä oli liikaa, jäätä liian vähän. [softly] En väitä löytäneeni oikeaa.",
+        "ttsTextSha256": "a09801e9fcfb023eadddebf4951bb7986a28108b0cffe65f89945706c5956d9a",
+        "cues": [
+          {
+            "cueId": "alpit.livia.c1",
+            "anchor": "vetäytynyt kauas",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.55
+          },
+          {
+            "cueId": "alpit.livia.c2",
+            "anchor": "Lensin rotkon yllä",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.4
+          },
+          {
+            "cueId": "alpit.livia.c3",
+            "anchor": "Kiviä oli liikaa",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.45
+          },
+          {
+            "cueId": "alpit.livia.c4",
+            "anchor": "En väitä löytäneeni oikeaa",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "city": "wien",
+      "horatio": {
+        "visibleText": "Wienin maailmannäyttelyssä kone painoi sanomalehteä ajattelematta sanaakaan. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten pörssi romahti. Kahvilassa mies taitteli lehtensä pieneksi, mutta uutinen ei pienentynyt. Tilasin hänelle kahvin; koneista ei ollut siihen apua.",
+        "visibleTextSha256": "003fcd23dfbf598d0e15e7f87883c47a986d9c5f2ed261d7649b4252a307269c",
+        "ttsText": "[curious] Wienin maailmannäyttelyssä kone painoi sanomalehteä ajattelematta sanaakaan. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten pörssi romahti. [softly] Kahvilassa mies taitteli lehtensä pieneksi, mutta uutinen ei pienentynyt. Tilasin hänelle kahvin; koneista ei ollut siihen apua.",
+        "ttsTextSha256": "f8e2e236769b80596db0e729bf6b396a0775298c7df1475157eb0cfc91bd54d1",
+        "cues": [
+          {
+            "cueId": "wien.r1",
+            "anchor": "kone painoi sanomalehteä",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "wien.r2",
+            "anchor": "ajattelematta sanaakaan",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "wien.r3",
+            "anchor": "pörssi romahti",
+            "intent": "vakavoituu",
+            "strength": 0.7,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "wien.r4",
+            "anchor": "uutinen ei pienentynyt",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "wien.r5",
+            "anchor": "Tilasin hänelle kahvin",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "wien.r6",
+            "anchor": "ei ollut siihen apua",
+            "intent": "vakavoituu",
+            "strength": 0.45,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "wien-3",
+        "visibleText": "Rotunde paloi myöhemmin; Wienin kahvilat jäivät. Pujottelin terassipöytien yllä ja pysähdyin taitellun lehden kohdalle. Isoisä ymmärsi siinä ihmistä paremmin kuin konetta.",
+        "visibleTextSha256": "e7e526eac0575bb4e7556c2d094f046e2965733d9ef824d967efaffc57d84b74",
+        "ttsText": "[softly] Rotunde paloi myöhemmin; Wienin kahvilat jäivät. [brightly] Pujottelin terassipöytien yllä ja pysähdyin taitellun lehden kohdalle. [warmly] Isoisä ymmärsi siinä ihmistä paremmin kuin konetta.",
+        "ttsTextSha256": "3f1c76ae2a4b1a4c58973d589546e14a694314d2690d05308ceab0bfd55f3616",
+        "cues": [
+          {
+            "cueId": "wien.livia.c1",
+            "anchor": "Rotunde paloi myöhemmin",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.45
+          },
+          {
+            "cueId": "wien.livia.c2",
+            "anchor": "Pujottelin terassipöytien yllä",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "wien.livia.c3",
+            "anchor": "taitellun lehden kohdalle",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.4
+          },
+          {
+            "cueId": "wien.livia.c4",
+            "anchor": "ihmistä paremmin kuin konetta",
+            "occurrence": 1,
+            "intent": "lammin",
+            "strength": 0.55
+          }
+        ]
+      }
+    },
+    {
+      "city": "praha",
+      "horatio": {
+        "visibleText": "Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.",
+        "visibleTextSha256": "8455337101aad970682a3e616570b750b3d64f55f61eb6e419e6e5398e06b5d0",
+        "ttsText": "[curious] Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. [softly] Hän piti aikaa hukattuna.",
+        "ttsTextSha256": "c151def8709ba2a4e6f9e47d800caea1993faf54c4f12607ddb89d208a0e3ccc",
+        "cues": [
+          {
+            "cueId": "praha.r1",
+            "anchor": "luuranko soitti",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "praha.r2",
+            "anchor": "unohdin verrata",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "praha.r3",
+            "anchor": "omassani vain kiireelle",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "praha.r4",
+            "anchor": "puoli tuntia myöhemmin",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "praha.r5",
+            "anchor": "piti aikaa hukattuna",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "praha-3",
+        "visibleText": "Kello kokoaa torille väkeä yhä. Minä istuin katon reunalla ja ihmettelin, miksi puhelintaan katsovat ihmiset nostivat yhtä aikaa päänsä. Kun luuranko liikahti, nostin minäkin.",
+        "visibleTextSha256": "ddeeef8a4b8ae574d2872df4f3fbd9c5127a10de0290e90a46d982eaac36bf62",
+        "ttsText": "[curious] Kello kokoaa torille väkeä yhä. [brightly] Minä istuin katon reunalla ja ihmettelin, miksi puhelintaan katsovat ihmiset nostivat yhtä aikaa päänsä. [mischievously] Kun luuranko liikahti, nostin minäkin.",
+        "ttsTextSha256": "edc6ace4a0f79eb06c7c8f035426cc022f05a962aebedfead21052405b8783d8",
+        "cues": [
+          {
+            "cueId": "praha.livia.c1",
+            "anchor": "kokoaa torille väkeä yhä",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "praha.livia.c2",
+            "anchor": "istuin katon reunalla",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.4
+          },
+          {
+            "cueId": "praha.livia.c3",
+            "anchor": "nostivat yhtä aikaa päänsä",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.45
+          },
+          {
+            "cueId": "praha.livia.c4",
+            "anchor": "luuranko liikahti",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.5
+          },
+          {
+            "cueId": "praha.livia.c5",
+            "anchor": "nostin minäkin",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "city": "berliini",
+      "horatio": {
+        "visibleText": "Berliinin voitonpylväs koristeltiin vallatuilla tykinputkilla. Korkealle nostettu tykki ei osunut ohikulkijaan. Katsojat polkivat lehtipojan numeron mutaan; ostin sen. Suuret voitot painettiin paksuin kirjaimin, pieni tappio näkyi pojan kasvoilla.",
+        "visibleTextSha256": "c304fa6e6b962d9c8a195d4f0bc7667e552931edb7d4f6ca8ea6b711ba3ffb66",
+        "ttsText": "[curious] Berliinin voitonpylväs koristeltiin vallatuilla tykinputkilla. Korkealle nostettu tykki ei osunut ohikulkijaan. Katsojat polkivat lehtipojan numeron mutaan; ostin sen. [softly] Suuret voitot painettiin paksuin kirjaimin, pieni tappio näkyi pojan kasvoilla.",
+        "ttsTextSha256": "58df2eedf3dfd76cf2adaf4388d3ffc7ea54c45547370c5e1f9b0fc142c9c312",
+        "cues": [
+          {
+            "cueId": "berliini.r1",
+            "anchor": "vallatuilla tykinputkilla",
+            "intent": "vakavoituu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "berliini.r2",
+            "anchor": "ei osunut ohikulkijaan",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "berliini.r3",
+            "anchor": "lehtipojan numeron mutaan",
+            "intent": "vakavoituu",
+            "strength": 0.6,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "berliini.r4",
+            "anchor": "ostin sen",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "berliini.r5",
+            "anchor": "pojan kasvoilla",
+            "intent": "vakavoituu",
+            "strength": 0.6,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "berliini-3",
+        "visibleText": "Pylväs siirrettiin 1938–1939 Großer Sternille. Nousin patsaan tasalle hetkeksi — tuuli ei arvostanut vertailua. Alhaalla ajattelin lehtipoikaa, kuten isoisäkin.",
+        "visibleTextSha256": "d4dcfab17290057b586c68e8944a02136a882b63d692125fae9df5354ca3c859",
+        "ttsText": "[curious] Pylväs siirrettiin 1938–1939 Großer Sternille. [brightly] Nousin patsaan tasalle hetkeksi — tuuli ei arvostanut vertailua. [softly] Alhaalla ajattelin lehtipoikaa, kuten isoisäkin.",
+        "ttsTextSha256": "8b46e71f70e3fa9cdddf40ccab6ba6c5ffd28d475ecdbdc2eb0fda0e43c4d46b",
+        "cues": [
+          {
+            "cueId": "berliini.livia.c1",
+            "anchor": "1938–1939 Großer Sternille",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "berliini.livia.c2",
+            "anchor": "Nousin patsaan tasalle",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "berliini.livia.c3",
+            "anchor": "tuuli ei arvostanut vertailua",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.5
+          },
+          {
+            "cueId": "berliini.livia.c4",
+            "anchor": "ajattelin lehtipoikaa",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.45
+          },
+          {
+            "cueId": "berliini.livia.c5",
+            "anchor": "kuten isoisäkin",
+            "occurrence": 1,
+            "intent": "lammin",
+            "strength": 0.5
+          }
+        ]
+      }
+    }
+  ]
+}

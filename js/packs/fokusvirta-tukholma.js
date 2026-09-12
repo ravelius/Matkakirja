@@ -284,14 +284,14 @@ export const FOKUSVIRTA_TUKHOLMA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tukholma-r20260909-paper-v4.jpg",
       lyhyt: "Tukholma, 1873. Selostaja sai kyydin parhaaseen katsomoon.",
-      selite: "Kruunajaisväen hatut muodostivat eteeni uuden kaupungin, jonka yli en nähnyt. Lapsi nousi aikuisen hartioille ja alkoi kertoa, mitä niiden takana tapahtui. Kuvasin tämän oman pienen katsomon sillä välin, kun kuningas sai varsinaisen huomion. Saarten kaupunki juhlii tänään Oskaria. Minun vedokseeni jäävät ne kaksi ihmistä, joiden avulla juhla tuli näkyväksi myös taaempana seisoville.",
+      selite: "Kruunajaisväen hattujen takana lapsi nousi aikuisen hartioille ja alkoi selostaa näkymää. Kuvasin tämän pienen katsomon, jonka avulla juhla näkyi myös taaempana seisoville.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.kungligaslotten.se/english/list-of-swedish-monarchs/oskar-ii.html","https://www.kungligaslotten.se/vara-besoksmal/kungliga-slottet/skattkammaren.html"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tukholma-r20260911-paper2-v1.jpg",
       lyhyt: "Tukholma, 1873. Satamassa vesi jatkoi juhlaa ilman selostajaa.",
-      selite: "Kruunajaiskadun tungos jäi taakse, kun palasin satamaan. Saarten välissä valo välkkyi, ja pienet alukset kulkivat omia reittejään. Ketjut ja veneet täyttivät hiljaisen laiturin. Tytön selostusta olisin silti kuunnellut mielelläni.",
+      selite: "Kruunajaiskadun tungos jäi taakse, kun palasin satamaan. Saarten välissä välkkyi valo, ja ketjut sekä pienet alukset täyttivät hiljaisen laiturin.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.kungligaslotten.se/english/list-of-swedish-monarchs/oskar-ii.html"],
     },
@@ -350,13 +350,9 @@ export const FOKUSVIRTA_TUKHOLMA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tukholma-01-r20260909-euv1-v2.jpg',
         lyhyt: 'Tukholma: hyvä näköalapaikka ei vaadi kruunua.',
-        selite: 'Monteliusvägenin kävelyreitiltä avautuu vettä, kattoja ja '
-          + 'Tukholman tuttuja siluetteja. Lapsi nousi aikuisen hartioille ja '
-          + 'osoitti jotakin kuvan laidassa. Aikuinen käänsi päätään vähän '
-          + 'hitaammin. Isoisä sai kruunajaisissa parhaat selostukset juuri '
-          + 'tästä katsomosta. Minä valitsin kaiteen vierestä oman paikkani. '
-          + 'Molemmissa menetelmissä on etunsa, mutta minun ei tarvitse '
-          + 'neuvotella kyydistä.',
+        selite: 'Monteliusvägeniltä avautuu vettä, kattoja ja Tukholman tuttuja '
+          + 'siluetteja, joita lapsi osoittaa aikuisen hartioilta. Minä valitsin '
+          + 'oman näköalapaikkani kaiteen vierestä ilman kyytineuvottelua.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.visitstockholm.com/o/monteliusvagen/',

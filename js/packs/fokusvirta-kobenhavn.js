@@ -126,12 +126,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
     paikkarivi: 'Kööpenhamina, kesäkuussa 1873. Valoisaa iltamyöhään; koko '
       + 'kaupunki ulkona; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
-    teksti: 'Kööpenhaminan Tivolissa näin vanhan pariskunnan tanssivan niin '
-      + 'hitaasti, että orkesteri ehti edelle. He eivät lähteneet sen perään. '
-      + 'Puistossa sytytettiin lamppuja, ja lampi sai oman tähtitaivaansa '
-      + 'ennen oikeaa. Olin tullut katsomaan huvituksia. En arvannut, että '
-      + 'paras niistä olisi kaksi ihmistä, joilla ei ollut enää tarvetta pysyä '
-      + 'tahdissa.',
+    teksti: 'Tivolissa vanha pari tanssi niin hitaasti, että orkesteri ehti edelle. He eivät lähteneet sen perään. Puiston lamput syttyivät ennen tähtiä. Olin tullut katsomaan huvituksia; muistin heidät.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -146,21 +141,14 @@ export const FOKUSVIRTA_KOBENHAVN = {
      */
     reaktiot: [
       { id: 'kobenhavn.r1', ankkuri: 'orkesteri ehti edelle', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Hidas tanssi jää orkesterista jälkeen.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kobenhavn.r2', ankkuri: 'lähteneet sen perään', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Pariskunta pitää oman tahtinsa.' },
-      { id: 'kobenhavn.r3', ankkuri: 'oman tähtitaivaansa', tarkoitus: 'hammastyy', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Lampi saa tähdet ennen taivasta.' },
-      { id: 'kobenhavn.r4', ankkuri: 'pysyä tahdissa', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Merkinnän hiljainen, lämmin päätös.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'kobenhavn.r4', ankkuri: 'muistin heidät', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Kööpenhaminan Tivolissa näin vanhan pariskunnan '
-      + 'tanssivan niin hitaasti, että orkesteri ehti edelle. He eivät '
-      + 'lähteneet sen perään. Puistossa sytytettiin lamppuja, ja lampi sai '
-      + 'oman tähtitaivaansa ennen oikeaa. Olin tullut katsomaan huvituksia. '
-      + '[softly] En arvannut, että paras niistä olisi kaksi ihmistä, joilla '
-      + 'ei ollut enää tarvetta pysyä tahdissa.',
+    luenta: '[curious] Tivolissa vanha pari tanssi niin hitaasti, että orkesteri ehti edelle. [mischievously] He eivät lähteneet sen perään. Puiston lamput syttyivät ennen tähtiä. [softly] Olin tullut katsomaan huvituksia; muistin heidät.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kobenhavn.mp3',
   },
 
@@ -192,7 +180,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Tivoli huvittaa Kööpenhaminaa yhä. Minäkin pidän hitaista tanssijoista. Heidän pöytänsä ovat pitkään vapaina.',
+      'Tivoli huvittaa yhä. Väistin tanssijoita matalalla; pitkällä reitillä oppii, milloin kiire kuuluu toisille.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

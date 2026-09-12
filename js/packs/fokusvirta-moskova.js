@@ -214,12 +214,7 @@ export const FOKUSVIRTA_MOSKOVA = {
     paikkarivi: 'Moskova, heinäkuussa 1873. Helteistä; kupolit häikäisevät; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
-    teksti: 'Kremlissä seisoo valtava kello, joka ei ole soinut kertaakaan. Se '
-      + 'halkesi ennen ensimmäistä lyöntiä. Irronnut pala on minun huonettani '
-      + 'suuremman oloinen. Vartija kertoi painon ylpeästi, aivan kuin '
-      + 'hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut '
-      + 'syömään. Sillä oli vähemmän mainetta mutta selvästi enemmän '
-      + 'vaikutusvaltaa.',
+    teksti: 'Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -239,24 +234,19 @@ export const FOKUSVIRTA_MOSKOVA = {
      * (siirtymä).
      */
     reaktiot: [
-      { id: 'moskova.r1', ankkuri: 'ei ole soinut kertaakaan', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kello, joka ei ole koskaan soinut.' },
+      { id: 'moskova.r1', ankkuri: 'ei ollut soinut kertaakaan', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'moskova.r2', ankkuri: 'ennen ensimmäistä lyöntiä', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Halkeama ennen ensimmäistä ääntä.' },
-      { id: 'moskova.r3', ankkuri: 'huonettani suuremman oloinen', tarkoitus: 'hammastyy', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Pelkkä sirpale on huonetta suurempi.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'moskova.r3', ankkuri: 'huonettani suuremmalta', tarkoitus: 'hammastyy', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'moskova.r4', ankkuri: 'hiljaisuus olisi sillä voitettu', tarkoitus: 'epailee', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Vartijan ylpeys ei vakuuta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'moskova.r5', ankkuri: 'enemmän vaikutusvaltaa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Loppuvitsi: pieni kello voittaa suuren.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Kremlissä seisoo valtava kello, joka ei ole soinut '
-      + 'kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala on '
-      + 'minun huonettani suuremman oloinen. Vartija kertoi painon ylpeästi, '
-      + 'aivan kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello '
-      + 'kutsui minut syömään. [softly] Sillä oli vähemmän mainetta mutta '
-      + 'selvästi enemmän vaikutusvaltaa.',
+    luenta: '[curious] Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. [mischievously] Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-moskova.mp3',
   },
 
@@ -343,7 +333,7 @@ export const FOKUSVIRTA_MOSKOVA = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Tsaarinkello vaikenee edelleen. Moskova on nyt pääkaupunki. Minäkin tulen syömään pienemmästä kutsusta.',
+      'Tsaarinkellon ympärillä puhelimet nousivat yhtä aikaa. Väistin kamerat ja laskeuduin muurin varjoon — kuuluisuus vie paljon ilmatilaa.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

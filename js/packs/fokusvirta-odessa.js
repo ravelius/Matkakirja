@@ -250,12 +250,7 @@ export const FOKUSVIRTA_ODESSA = {
     paikkarivi: 'Odessa, elokuussa 1873. Kuumaa; merituuli vasta illalla; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 353 merkkiä (yläraja 400). */
-    teksti: 'Odessan portaat on tehty niin leveiksi, että niitä pitkin voisi '
-      + 'saapua kokonainen valtakunta. Minä saavuin yksin ja jouduin silti '
-      + 'lepäämään puolivälissä. Satamassa vehnäsäkit siirtyivät selästä '
-      + 'laivaan, ja ylhäällä puistokäytävällä herrat siirsivät vain '
-      + 'kävelykeppiään. Merituuli kulki portaat yhdellä hengenvedolla. Sitä '
-      + 'ei kukaan pysäyttänyt tullissa.',
+    teksti: 'Odessan portaat olivat niin leveät, että niitä pitkin olisi voinut saapua valtakunta. Minä saavuin yksin ja lepäsin silti puolivälissä. Satamassa vehnäsäkit siirtyivät laivaan; ylhäällä herrat siirtelivät keppejään. Merituuli kulki portaat yhdellä hengenvedolla; sitä ei pysäytetty tullissa.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
@@ -275,24 +270,19 @@ export const FOKUSVIRTA_ODESSA = {
      * saa reaktion).
      */
     reaktiot: [
-      { id: 'odessa.r1', ankkuri: 'kokonainen valtakunta', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Portaiden mittakaava on liioitteleva.' },
-      { id: 'odessa.r2', ankkuri: 'lepäämään puolivälissä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Yksi matkustaja ei jaksa valtakunnan portaita.' },
-      { id: 'odessa.r3', ankkuri: 'vain kävelykeppiään', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Työn ja joutilaisuuden ero samassa kuvassa.' },
+      { id: 'odessa.r1', ankkuri: 'saapua valtakunta', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'odessa.r2', ankkuri: 'lepäsin silti puolivälissä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'odessa.r3', ankkuri: 'herrat siirtelivät keppejään', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'odessa.r4', ankkuri: 'yhdellä hengenvedolla', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Tuuli tekee sen, mikä ihmiseltä ei onnistu.' },
-      { id: 'odessa.r5', ankkuri: 'pysäyttänyt tullissa', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi tullin rajoista.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'odessa.r5', ankkuri: 'ei pysäytetty tullissa', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Odessan portaat on tehty niin leveiksi, että niitä '
-      + 'pitkin voisi saapua kokonainen valtakunta. Minä saavuin yksin ja '
-      + 'jouduin silti lepäämään puolivälissä. Satamassa vehnäsäkit siirtyivät '
-      + 'selästä laivaan, ja ylhäällä puistokäytävällä herrat siirsivät vain '
-      + 'kävelykeppiään. Merituuli kulki portaat yhdellä hengenvedolla. '
-      + '[softly] Sitä ei kukaan pysäyttänyt tullissa.',
+    luenta: '[curious] Odessan portaat olivat niin leveät, että niitä pitkin olisi voinut saapua valtakunta. [mischievously] Minä saavuin yksin ja lepäsin silti puolivälissä. Satamassa vehnäsäkit siirtyivät laivaan; ylhäällä herrat siirtelivät keppejään. Merituuli kulki portaat yhdellä hengenvedolla; sitä ei pysäytetty tullissa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-odessa.mp3',
   },
 
@@ -381,7 +371,7 @@ export const FOKUSVIRTA_ODESSA = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Odessan vanha keskusta on nyt sodan uhkaamaa maailmanperintöä. Näitä portaita katson tänään toisin.',
+      'Vanhakaupunki on yhä vaarantuneen maailmanperinnön luettelossa. Lensin portaiden yllä ja pidin vaurioituneisiin kattoihin tavallista enemmän väliä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.6 },

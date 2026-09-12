@@ -42,12 +42,7 @@ export const FOKUSVIRTA_ISLANTI = {
     paikkarivi: 'Reykjavik, elokuussa 1873. Tuulista; ei yhtään puuta; '
       + 'puntari matalalla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 357 merkkiä (yläraja 400). */
-    teksti: 'Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa '
-      + 'lähteessä. Höyry nousi maasta, ja tuuli yritti viedä sen merelle. '
-      + 'Annoin pestäväksi paitani. Se oli ensimmäinen kerta, kun maa teki '
-      + 'minulle palveluksen vaatimatta lapioimista. Paluumatkalla näin pienet '
-      + 'talot ja niiden takana suuren tyhjyyden. Kaulukseni oli puhtaampi '
-      + 'kuin käsitykseni tästä saaresta.',
+    teksti: 'Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -64,23 +59,16 @@ export const FOKUSVIRTA_ISLANTI = {
      */
     reaktiot: [
       { id: 'islanti.r1', ankkuri: 'kuumassa lähteessä', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Pyykki pestään maan omassa kuumassa vedessä.' },
-      { id: 'islanti.r2', ankkuri: 'Annoin pestäväksi paitani', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
-        perustelu: 'Isoisä luottaa paikalliseen tapaan.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'islanti.r2', ankkuri: 'Annoin paitani pestäväksi', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'islanti.r3', ankkuri: 'vaatimatta lapioimista', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Merkinnän vitsi maan palveluksista.' },
-      { id: 'islanti.r4', ankkuri: 'suuren tyhjyyden', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Maiseman mittakaava vakavoittaa.' },
-      { id: 'islanti.r5', ankkuri: 'käsitykseni tästä saaresta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi omasta ennakkoluulosta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'islanti.r5', ankkuri: 'käsitykseni saaresta ei', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Reykjavikin ulkopuolella naiset pesivät pyykkiä '
-      + 'kuumassa lähteessä. Höyry nousi maasta, ja tuuli yritti viedä sen '
-      + 'merelle. Annoin pestäväksi paitani. Se oli ensimmäinen kerta, kun maa '
-      + 'teki minulle palveluksen vaatimatta lapioimista. Paluumatkalla näin '
-      + 'pienet talot ja niiden takana suuren tyhjyyden. [softly] Kaulukseni '
-      + 'oli puhtaampi kuin käsitykseni tästä saaresta.',
+    luenta: '[curious] Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. [mischievously] Maa teki ensi kerran palveluksen vaatimatta lapioimista. [softly] Kaulus puhdistui; käsitykseni saaresta ei.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-islanti.mp3',
   },
 
@@ -114,7 +102,7 @@ export const FOKUSVIRTA_ISLANTI = {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Reykjavikin talotkin lämpiävät nyt maan lämmöllä. Paita oli lupaava alku. Minä arvostan lämmintä räystästä.',
+      'Reykjavíkin talot lämpenevät yhä maan voimalla. Kirjekyyhkynä muistan kaupungin, jossa talvireitin päässä odottaa lämmin räystäs.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

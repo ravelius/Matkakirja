@@ -153,12 +153,9 @@ export const FOKUSVIRTA_TALLINNA = {
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tallinna-r20260909-story-v2.jpg',
       lyhyt: 'Reval, 1873. Apteekkari määräsi suuremman palan.',
-      selite: 'Tiskillä oli vaaka, mutta tällä kertaa apteekkari luotti '
-        + 'silmämäärään. Veitsi siirtyi hieman kauemmas, ja lääkeannokseni '
-        + 'kasvoi. Raeapteekin hyllyillä seisoi vakavia astioita; mantelista '
-        + 'ja sokerista tehty marsipaani piti niiden seurassa varsin iloista '
-        + 'virkaa. Kuvasin leikatun palan ennen lähtöä. Se osoittautui '
-        + 'hyväksi päätökseksi, sillä satamassa jäljellä oli enää paperi.',
+      selite: 'Apteekissa oli vaaka, mutta apteekkari leikkasi marsipaanista '
+        + 'silmämäärällä tavallista suuremman palan. Kuvasin annoksen vakavien '
+        + 'apteekkiastioiden keskellä ennen lähtöä.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
         'https://raeapteek.ee/en/',
@@ -168,7 +165,7 @@ export const FOKUSVIRTA_TALLINNA = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tallinna-r20260911-paper2-v1.jpg",
       lyhyt: "Reval, 1873. Marsipaani kului, paperi siirtyi taskuun.",
-      selite: "Söin apteekkarin leikkaamaa marsipaania heti Raatihuoneentorilla. Pidin pientä palaa toisessa kädessä ja työnsin kääreen taskuun. Mantelin tuoksu seurasi ulos apteekista. Hoito maistui paremmalta kuin sen tulos.",
+      selite: "Söin apteekkarin leikkaamaa marsipaania Raatihuoneentorilla ja työnsin kääreen taskuun. Mantelin tuoksu seurasi ulos apteekista.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://raeapteek.ee/en/our-story/","https://raekoda.tallinn.ee/en/the-building/"],
     },
@@ -187,12 +184,9 @@ export const FOKUSVIRTA_TALLINNA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tallinna-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Tallinna: parempi annoskoko löytyi jo ennen reseptiä.',
-        selite: 'Raeapteekki toimii edelleen Raatihuoneentorilla, ja marsipaania '
-          + 'voi ostaa sen pitkästä historiasta kertovan vierailun lomassa. '
-          + 'Tässä paketissa oli minusta harkittu koko. Sen omistaja pysähtyi '
-          + 'portaalle jakamaan palan matkakumppanilleen. Isoisä piti suurempaa '
-          + 'annosta hyvänä hoitona. Minä pidän jakamista lupaavana '
-          + 'jatkotutkimuksena, vaikka en kuulu tämän seurueen potilaisiin.',
+        selite: 'Raeapteekki toimii yhä Raatihuoneentorilla, ja sen edessä '
+          + 'kuljetetaan marsipaanipakettia. Sen omistaja pysähtyi apteekin '
+          + 'eteen jakamaan palan matkakumppanilleen.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://raeapteek.ee/en/',

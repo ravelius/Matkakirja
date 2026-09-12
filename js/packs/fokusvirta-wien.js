@@ -122,12 +122,7 @@ export const FOKUSVIRTA_WIEN = {
      */
     paikkarivi: 'Wien, toukokuussa 1873. Sadekuuroja; puntari laskee aamusta.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
-    teksti: 'Wienin maailmannäyttelyssä näin koneen painavan sanomalehteä '
-      + 'silmieni edessä. Se ei tarvinnut edes aikaa ajatellakseen, mitä '
-      + 'kirjoitti. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten '
-      + 'pörssi romahti. Kahvilassa herra taitteli lehtensä hyvin pieneksi, '
-      + 'mutta uutinen ei pienentynyt. Tilasin hänelle kahvin. Koneista ei '
-      + 'ollut siihen apua.',
+    teksti: 'Wienin maailmannäyttelyssä kone painoi sanomalehteä ajattelematta sanaakaan. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten pörssi romahti. Kahvilassa mies taitteli lehtensä pieneksi, mutta uutinen ei pienentynyt. Tilasin hänelle kahvin; koneista ei ollut siihen apua.',
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -150,26 +145,21 @@ export const FOKUSVIRTA_WIEN = {
      * hatulla" (kuva, pulu kuuntelee).
      */
     reaktiot: [
-      { id: 'wien.r1', ankkuri: 'koneen painavan sanomalehteä', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Painokone silmien edessä on aikakauden ihme.' },
-      { id: 'wien.r2', ankkuri: 'aikaa ajatellakseen', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kuiva huomautus koneen ajattelemattomuudesta.' },
+      { id: 'wien.r1', ankkuri: 'kone painoi sanomalehteä', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'wien.r2', ankkuri: 'ajattelematta sanaakaan', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'wien.r3', ankkuri: 'pörssi romahti', tarkoitus: 'vakavoituu', voimakkuus: 0.7, siirtyma: 0,
-        perustelu: 'Hurja käänne kahdessa sanassa.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'wien.r4', ankkuri: 'uutinen ei pienentynyt', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Taiteltu lehti ei pienennä tappiota.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'wien.r5', ankkuri: 'Tilasin hänelle kahvin', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Pieni ele vieraalle: hiljainen nyökkäys.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'wien.r6', ankkuri: 'ei ollut siihen apua', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Merkinnän vakava päätös: koneet eivät lohduta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Wienin maailmannäyttelyssä näin koneen painavan '
-      + 'sanomalehteä silmieni edessä. Se ei tarvinnut edes aikaa '
-      + 'ajatellakseen, mitä kirjoitti. Rotunden kupoli peitti taivaan '
-      + 'rautaisella hatulla. Sitten pörssi romahti. Kahvilassa herra taitteli '
-      + 'lehtensä hyvin pieneksi, mutta uutinen ei pienentynyt. Tilasin '
-      + 'hänelle kahvin. [softly] Koneista ei ollut siihen apua.',
+    luenta: '[curious] Wienin maailmannäyttelyssä kone painoi sanomalehteä ajattelematta sanaakaan. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten pörssi romahti. [softly] Kahvilassa mies taitteli lehtensä pieneksi, mutta uutinen ei pienentynyt. Tilasin hänelle kahvin; koneista ei ollut siihen apua.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-wien.mp3',
   },
 
@@ -237,7 +227,7 @@ export const FOKUSVIRTA_WIEN = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Rotunde paloi myöhemmin. Wienin kahvilat jäivät. Isoisä ymmärsi koneita, mutta tuossa hän ymmärsi ihmistä.',
+      'Rotunde paloi myöhemmin; Wienin kahvilat jäivät. Pujottelin terassipöytien yllä ja pysähdyin taitellun lehden kohdalle. Isoisä ymmärsi siinä ihmistä paremmin kuin konetta.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.55 },

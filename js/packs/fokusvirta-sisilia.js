@@ -42,12 +42,7 @@ export const FOKUSVIRTA_SISILIA = {
     paikkarivi: 'Palermo, toukokuussa 1873. Kuumaa; Etna savuaa horisontissa; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
-    teksti: 'Palermon palatsikappelissa seinät hohtavat kultaa ja puukatto '
-      + 'näyttää puusta veistetyltä luolastolta. Normannien kuningas teetti '
-      + 'sen, mutta kädet tulivat monesta maailmasta: kreikkalaisia '
-      + 'mosaiikkeja, arabialaista veistotyötä. Katselin ylös, kunnes niska '
-      + 'väsyi. Kuninkaan nimi mainittiin monta kertaa. Tekijöiden nimiä '
-      + 'olisin kuunnellut kauemmin.',
+    teksti: 'Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -63,22 +58,17 @@ export const FOKUSVIRTA_SISILIA = {
      * tulivat monesta maailmasta..." (selittävä luettelo).
      */
     reaktiot: [
-      { id: 'sisilia.r1', ankkuri: 'veistetyltä luolastolta', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kultainen kappeli ja puinen luolasto samassa.' },
+      { id: 'sisilia.r1', ankkuri: 'veistetyksi luolastoksi', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'sisilia.r2', ankkuri: 'kunnes niska väsyi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Katseleminen käy työstä.' },
-      { id: 'sisilia.r3', ankkuri: 'mainittiin monta kertaa', tarkoitus: 'epailee', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kuninkaan nimi toistuu liikaa.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'sisilia.r3', ankkuri: 'Kuninkaan nimi tunnettiin', tarkoitus: 'epailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'sisilia.r4', ankkuri: 'olisin kuunnellut kauemmin', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Merkinnän päätös: tekijät jäivät nimettömiksi.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Palermon palatsikappelissa seinät hohtavat kultaa ja '
-      + 'puukatto näyttää puusta veistetyltä luolastolta. Normannien kuningas '
-      + 'teetti sen, mutta kädet tulivat monesta maailmasta: kreikkalaisia '
-      + 'mosaiikkeja, arabialaista veistotyötä. Katselin ylös, kunnes niska '
-      + 'väsyi. Kuninkaan nimi mainittiin monta kertaa. [softly] Tekijöiden '
-      + 'nimiä olisin kuunnellut kauemmin.',
+    luenta: '[curious] Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. [softly] Tekijöiden nimiä olisin kuunnellut kauemmin.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sisilia.mp3',
   },
 
@@ -111,7 +101,7 @@ export const FOKUSVIRTA_SISILIA = {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kappeli hohtaa yhä. Palermon palatsissa istuu nyt Sisilian parlamentti. Katto ansaitsee edelleen puheenvuoron.',
+      'Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. Kiersin pihan yllä, nokka kohti ikkunoita. Katon näin vain kuvassa; siipeni pysyivät tallessa.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.45 },

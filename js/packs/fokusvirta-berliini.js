@@ -122,11 +122,7 @@ export const FOKUSVIRTA_BERLIINI = {
     paikkarivi: 'Berliini, syyskuussa 1873. Pilvistä; laastin ja kivipölyn '
       + 'haju; puntari matalalla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 324 merkkiä (yläraja 400). */
-    teksti: 'Berliinissä paljastettiin voitonpylväs, jonka koristeina on '
-      + 'vallattuja tykinputkia. Niin korkealle nostettu tykki ei ainakaan osu '
-      + 'ohikulkijaan. Pylvään juurella poika myi lehtiä, ja katsojat polkivat '
-      + 'hänen pudonneen numeronsa mutaan. Ostin senkin. Suuret voitot '
-      + 'painetaan paksuin kirjaimin; pieni tappio oli pojan kasvoilla.',
+    teksti: 'Berliinin voitonpylväs koristeltiin vallatuilla tykinputkilla. Korkealle nostettu tykki ei osunut ohikulkijaan. Katsojat polkivat lehtipojan numeron mutaan; ostin sen. Suuret voitot painettiin paksuin kirjaimin, pieni tappio näkyi pojan kasvoilla.',
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -149,24 +145,19 @@ export const FOKUSVIRTA_BERLIINI = {
      * saa reaktion).
      */
     reaktiot: [
-      { id: 'berliini.r1', ankkuri: 'vallattuja tykinputkia', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Voitonpylvään aine on sodasta otettua.' },
-      { id: 'berliini.r2', ankkuri: 'osu ohikulkijaan', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Isoisän kuiva lohtu korkealle nostetusta tykistä.' },
-      { id: 'berliini.r3', ankkuri: 'pudonneen numeronsa mutaan', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Juhlan jalkoihin jää lehtipojan ansio.' },
-      { id: 'berliini.r4', ankkuri: 'Ostin senkin', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Pieni korjaava teko: nyökkäys.' },
+      { id: 'berliini.r1', ankkuri: 'vallatuilla tykinputkilla', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'berliini.r2', ankkuri: 'ei osunut ohikulkijaan', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'berliini.r3', ankkuri: 'lehtipojan numeron mutaan', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'berliini.r4', ankkuri: 'ostin sen', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'berliini.r5', ankkuri: 'pojan kasvoilla', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Merkinnän vakava päätös.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Berliinissä paljastettiin voitonpylväs, jonka '
-      + 'koristeina on vallattuja tykinputkia. Niin korkealle nostettu tykki '
-      + 'ei ainakaan osu ohikulkijaan. Pylvään juurella poika myi lehtiä, ja '
-      + 'katsojat polkivat hänen pudonneen numeronsa mutaan. Ostin senkin. '
-      + '[softly] Suuret voitot painetaan paksuin kirjaimin; pieni tappio oli '
-      + 'pojan kasvoilla.',
+    luenta: '[curious] Berliinin voitonpylväs koristeltiin vallatuilla tykinputkilla. Korkealle nostettu tykki ei osunut ohikulkijaan. Katsojat polkivat lehtipojan numeron mutaan; ostin sen. [softly] Suuret voitot painettiin paksuin kirjaimin, pieni tappio näkyi pojan kasvoilla.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-berliini.mp3',
   },
 
@@ -201,7 +192,7 @@ export const FOKUSVIRTA_BERLIINI = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Pylväs siirrettiin myöhemmin Tiergarteniin. Siivekäs huipulla sai paremman puiston. Poikaa mietin minäkin.',
+      'Pylväs siirrettiin 1938–1939 Großer Sternille. Nousin patsaan tasalle hetkeksi — tuuli ei arvostanut vertailua. Alhaalla ajattelin lehtipoikaa, kuten isoisäkin.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.5 },

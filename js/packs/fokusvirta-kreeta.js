@@ -61,11 +61,7 @@ export const FOKUSVIRTA_KREETA = {
     paikkarivi: 'Kreeta, huhtikuussa 1873. Lämmintä; vuorilla vielä lunta; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 318 merkkiä (yläraja 400). */
-    teksti: 'Hanian sataman majakan aloittivat venetsialaiset ja korjasivat '
-      + 'egyptiläiset. Nyt kaupunki kuuluu sulttaanille. Kalastaja selvitti '
-      + 'minulle kaikki kolme ja paikkasi samalla verkkoaan. Kun kysyin, kenen '
-      + 'majakka siis on, hän osoitti merelle. Niiden, jotka tarvitsevat sitä. '
-      + 'Piirsin karttaani valon ilman valtakunnan väriä.',
+    teksti: 'Hanian majakan aloittivat venetsialaiset ja rakensivat uudelleen egyptiläiset. Vuonna 1873 Kreeta kuului sulttaanille. Kun kysyin kalastajalta, kenen majakka on, hän osoitti merelle: niiden, jotka tarvitsevat sitä. Piirsin valon ilman valtakunnan väriä.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, sama maltillinen
@@ -86,24 +82,17 @@ export const FOKUSVIRTA_KREETA = {
      * tausta).
      */
     reaktiot: [
-      { id: 'kreeta.r1', ankkuri: 'kuuluu sulttaanille', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Kolmas valtakunta samalle majakalle.' },
-      { id: 'kreeta.r2', ankkuri: 'paikkasi samalla verkkoaan', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Historia kerrotaan työn ohessa.' },
+      { id: 'kreeta.r1', ankkuri: 'kuului sulttaanille', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kreeta.r3', ankkuri: 'hän osoitti merelle', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Vastaus ei ollut kartalla.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kreeta.r4', ankkuri: 'jotka tarvitsevat sitä', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Kalastajan vastaus on merkinnän ydin.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kreeta.r5', ankkuri: 'ilman valtakunnan väriä', tarkoitus: 'myotailee', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Isoisä merkitsee valon ilman lippua.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Hanian sataman majakan aloittivat venetsialaiset ja '
-      + 'korjasivat egyptiläiset. Nyt kaupunki kuuluu sulttaanille. Kalastaja '
-      + 'selvitti minulle kaikki kolme ja paikkasi samalla verkkoaan. Kun '
-      + 'kysyin, kenen majakka siis on, hän osoitti merelle. Niiden, jotka '
-      + 'tarvitsevat sitä. [softly] Piirsin karttaani valon ilman valtakunnan '
-      + 'väriä.',
+    luenta: '[curious] Hanian majakan aloittivat venetsialaiset ja rakensivat uudelleen egyptiläiset. Vuonna 1873 Kreeta kuului sulttaanille. Kun kysyin kalastajalta, kenen majakka on, hän osoitti merelle: [softly] niiden, jotka tarvitsevat sitä. Piirsin valon ilman valtakunnan väriä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kreeta.mp3',
   },
 
@@ -144,7 +133,7 @@ export const FOKUSVIRTA_KREETA = {
      */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kreeta kuuluu nyt Kreikkaan, majakka seisoo yhä. Kalastaja vastasi paremmin kuin isoisän kartta.',
+      'Kreeta on nyt Kreikkaa. Majakka seisoo yhä; mereltä palaava kyyhky lukee valoa ennen lippuja.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

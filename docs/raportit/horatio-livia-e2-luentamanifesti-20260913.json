@@ -1,0 +1,379 @@
+{
+  "schemaVersion": 1,
+  "contentRevision": "eu-hl-e2-20260913-r1-approved1",
+  "state": "content-frozen-audio-authorized-rc-only",
+  "publishedBaselineCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1",
+  "invariants": {
+    "visibleAndSpokenWordsMustMatch": true,
+    "finalTimingsFromForcedAlignmentOnly": true,
+    "audioRunOwner": "RC/animaatiovetäjä",
+    "imageGenerationAuthorized": false,
+    "publishAuthorized": false
+  },
+  "voices": {
+    "horatio": {
+      "name": "Viisas Kertoja",
+      "model": "eleven_v3"
+    },
+    "livia": {
+      "name": "Flicker — cheerful fairy & sparkly sweetness",
+      "id": "piI8Kku0DcvcL6TTSeQt",
+      "model": "eleven_v3",
+      "stability": 0.5
+    }
+  },
+  "cities": [
+    {
+      "city": "madrid",
+      "horatio": {
+        "visibleText": "Pradossa pieni prinsessa sai huomion, suuri koira ei välittänyt. Maalari katsoi minuun; peilissä seisoi kuningaspari. Minä olin saanut paikan heidän edestään. Kahviloissa väiteltiin tasavallasta. Taulussa valta vaihtui ilman sanomalehteä.",
+        "visibleTextSha256": "fe87562a5de1f13a42bfe99844d02955839dee8a12dda01f524d9a9655a9dae8",
+        "ttsText": "[curious] Pradossa pieni prinsessa sai huomion, suuri koira ei välittänyt. Maalari katsoi minuun; peilissä seisoi kuningaspari. Minä olin saanut paikan heidän edestään. Kahviloissa väiteltiin tasavallasta. [softly] Taulussa valta vaihtui ilman sanomalehteä.",
+        "ttsTextSha256": "a02e4a1873177f627075dd10b2c0182161c0decdb901902f0d387855a39f3815",
+        "cues": [
+          {
+            "cueId": "madrid.r1",
+            "anchor": "suuri koira ei välittänyt",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "madrid.r2",
+            "anchor": "Maalari katsoi minuun",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "madrid.r3",
+            "anchor": "paikan heidän edestään",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "madrid.r4",
+            "anchor": "ilman sanomalehteä",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "madrid-3",
+        "visibleText": "Las Meninas on yhä Pradon salissa 12. Minä tarkkailin jonon vieressä nukkuvaa koiraa. Se ei vilkaissut museoon päinkään. Velázquez olisi hyväksynyt asennon.",
+        "visibleTextSha256": "06c2bc6f02e0d6cfb2016c26916b4f9a6a007b88cccde18617f3ba085dc510f6",
+        "ttsText": "[curious] Las Meninas on yhä Pradon salissa 12. [warmly] Minä tarkkailin jonon vieressä nukkuvaa koiraa. [mischievously] Se ei vilkaissut museoon päinkään. [softly] Velázquez olisi hyväksynyt asennon.",
+        "ttsTextSha256": "2f83d5ec4e911ef8ba46308c562a7bf8bc4224357d8511f42b645815edf680d7",
+        "cues": [
+          {
+            "cueId": "madrid.livia.c1",
+            "anchor": "yhä Pradon salissa 12",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "madrid.livia.c2",
+            "anchor": "nukkuvaa koiraa",
+            "occurrence": 1,
+            "intent": "lammin",
+            "strength": 0.45
+          },
+          {
+            "cueId": "madrid.livia.c3",
+            "anchor": "ei vilkaissut museoon",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "city": "barcelona",
+      "horatio": {
+        "visibleText": "Barcelonan uusista kortteleista oli leikattu kulmat pois. Epäilin muuraria, kunnes kaksi kärryä mahtui kääntymään. Cerdà oli piirtänyt tilaa hengittää. Tulevan kadun paikalla kasvoi vielä kaalia; se ei tiennyt muuttuvansa liikenteeksi.",
+        "visibleTextSha256": "2b54905d43b5c8fabb9863d41c80b3662dae59febebbc0c1043600ffd3f61646",
+        "ttsText": "[curious] Barcelonan uusista kortteleista oli leikattu kulmat pois. Epäilin muuraria, kunnes kaksi kärryä mahtui kääntymään. Cerdà oli piirtänyt tilaa hengittää. [softly] Tulevan kadun paikalla kasvoi vielä kaalia; se ei tiennyt muuttuvansa liikenteeksi.",
+        "ttsTextSha256": "11864457fff46a4fd49016a23ebb857d8c18e7d51ab2e3e7cd68cc586ee2c2b8",
+        "cues": [
+          {
+            "cueId": "barcelona.r1",
+            "anchor": "leikattu kulmat pois",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "barcelona.r2",
+            "anchor": "Epäilin muuraria",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "barcelona.r3",
+            "anchor": "tilaa hengittää",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "barcelona.r4",
+            "anchor": "muuttuvansa liikenteeksi",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "barcelona-3",
+        "visibleText": "Cerdàn viistetyt kulmat näkyvät ilmasta yhä. Laskeuduin räystäälle tarkkailemaan risteystä: jalankulkijat, pyörät ja autot kulkivat kukin suuntaansa. Minulle jäi taivas. Hyvin suunniteltu.",
+        "visibleTextSha256": "55004b6bdb9b5f9c4df3abbe895b838ec4c6904d09f2ec74c297b824071849e3",
+        "ttsText": "[curious] Cerdàn viistetyt kulmat näkyvät ilmasta yhä. [brightly] Laskeuduin räystäälle tarkkailemaan risteystä: jalankulkijat, pyörät ja autot kulkivat kukin suuntaansa. [mischievously] Minulle jäi taivas. [softly] Hyvin suunniteltu.",
+        "ttsTextSha256": "2405ad06abc543c7d8a0865d3b5eeaaa5319db5e090f6899b749d54a5c9f960d",
+        "cues": [
+          {
+            "cueId": "barcelona.livia.c1",
+            "anchor": "näkyvät ilmasta yhä",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "barcelona.livia.c2",
+            "anchor": "Laskeuduin räystäälle",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "barcelona.livia.c3",
+            "anchor": "Minulle jäi taivas",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.55
+          }
+        ]
+      }
+    },
+    {
+      "city": "sevilla",
+      "horatio": {
+        "visibleText": "Sevillan tupakkatehdas näytti palatsilta, mutta portista kulki työväkeä. Nainen sitoi huivinsa, haukkasi leipää ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. Aioin kirjoittaa suuresta rakennuksesta; kirjoitinkin pienestä aamiaisesta, joka piti sitä käynnissä.",
+        "visibleTextSha256": "ea1f3638b5580a9aa4af448856e47a00c8de3290dd5743a467850e2e8cda58b8",
+        "ttsText": "[curious] Sevillan tupakkatehdas näytti palatsilta, mutta portista kulki työväkeä. Nainen sitoi huivinsa, haukkasi leipää ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. [softly] Aioin kirjoittaa suuresta rakennuksesta; kirjoitinkin pienestä aamiaisesta, joka piti sitä käynnissä.",
+        "ttsTextSha256": "fc777dee386650b339edaf3951ac632ba5c0a48b97be05b8a85c9dbd3535d3c3",
+        "cues": [
+          {
+            "cueId": "sevilla.r1",
+            "anchor": "portista kulki työväkeä",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sevilla.r2",
+            "anchor": "haukkasi leipää",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sevilla.r3",
+            "anchor": "appelsiininkukkien tuoksu",
+            "intent": "myotailee",
+            "strength": 0.3,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sevilla.r4",
+            "anchor": "pienestä aamiaisesta",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "sevilla-3",
+        "visibleText": "Entinen tupakkatehdas on nyt yliopisto. Näin opiskelijalla niin suuren paperipinon, että lähdin vaistosta perään. Ne eivät olleet kirjeitä. Hyvä yritys.",
+        "visibleTextSha256": "0fd228327bdfa562bce8aa7c51199dadcd17f0502e34abd7c39a6615bbb97fee",
+        "ttsText": "[curious] Entinen tupakkatehdas on nyt yliopisto. [brightly] Näin opiskelijalla niin suuren paperipinon, että lähdin vaistosta perään. [softly] Ne eivät olleet kirjeitä. Hyvä yritys.",
+        "ttsTextSha256": "82d7c1c7ce26dbbb131a621d65429a7d21967d293ad6809c0157f8b5d197e095",
+        "cues": [
+          {
+            "cueId": "sevilla.livia.c1",
+            "anchor": "nyt yliopisto",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "sevilla.livia.c2",
+            "anchor": "niin suuren paperipinon",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.55
+          },
+          {
+            "cueId": "sevilla.livia.c3",
+            "anchor": "eivät olleet kirjeitä",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "city": "granada",
+      "horatio": {
+        "visibleText": "Alhambran hienoin rakennusaine oli vesi. Se kulki kapeissa uomissa ja puhui niin hiljaa, että minäkin vaikenin. Altaassa palatsi oli tehty valosta. Särjin sen sormellani ja odotin, kunnes se rakentui takaisin.",
+        "visibleTextSha256": "15065d286ef22cb74d4801da95c191f9a0a339dddf3bc2278d46701825a3aebe",
+        "ttsText": "[curious] Alhambran hienoin rakennusaine oli vesi. Se kulki kapeissa uomissa ja puhui niin hiljaa, että minäkin vaikenin. Altaassa palatsi oli tehty valosta. [softly] Särjin sen sormellani ja odotin, kunnes se rakentui takaisin.",
+        "ttsTextSha256": "213ee9c403b9333e97fb02bdcc356019de31f607214893124e12397405937dea",
+        "cues": [
+          {
+            "cueId": "granada.r1",
+            "anchor": "hienoin rakennusaine oli vesi",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "granada.r2",
+            "anchor": "että minäkin vaikenin",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "granada.r3",
+            "anchor": "Särjin sen sormellani",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "granada.r4",
+            "anchor": "rakentui takaisin",
+            "intent": "myotailee",
+            "strength": 0.45,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "granada-3",
+        "visibleText": "Alhambran Myrttipihan allas peilaa tornia yhä. Laskeuduin reunalle saadakseni kuvan, mutta tuuli rikkoi palatsin ensin. Odotin aivan liikkumatta. Kerrankin nokkani ei ollut syyllinen.",
+        "visibleTextSha256": "62eb624ccd2ff45ace07709b2d288e1f3f7cfeee066d2244272850d0344a880b",
+        "ttsText": "[curious] Alhambran Myrttipihan allas peilaa tornia yhä. [softly] Laskeuduin reunalle saadakseni kuvan, mutta tuuli rikkoi palatsin ensin. Odotin aivan liikkumatta. [mischievously] Kerrankin nokkani ei ollut syyllinen.",
+        "ttsTextSha256": "c90c13ec3c492ffb0c682baf96fd9d5b2416992a87847939518e65d98ee2df7a",
+        "cues": [
+          {
+            "cueId": "granada.livia.c1",
+            "anchor": "allas peilaa tornia yhä",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "granada.livia.c2",
+            "anchor": "tuuli rikkoi palatsin ensin",
+            "occurrence": 1,
+            "intent": "hammastys",
+            "strength": 0.45
+          },
+          {
+            "cueId": "granada.livia.c3",
+            "anchor": "nokkani ei ollut syyllinen",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.55
+          }
+        ]
+      }
+    },
+    {
+      "city": "lissabon",
+      "horatio": {
+        "visibleText": "Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin hallitsijan jakaus. Alfamassa eksyin silti. Yksi nainen neuvoi ylös, toinen alas. Kumpikin oli oikeassa: meri löytyi eri kattojen välistä. Kartta oli täällä taskussa kulkeva lohdutus.",
+        "visibleTextSha256": "cdf46cf32f48916666059e33bd0acd91b1744e3484666871f3bc68dbe60e2f78",
+        "ttsText": "[curious] Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin hallitsijan jakaus. Alfamassa eksyin silti. Yksi nainen neuvoi ylös, toinen alas. Kumpikin oli oikeassa: meri löytyi eri kattojen välistä. [softly] Kartta oli täällä taskussa kulkeva lohdutus.",
+        "ttsTextSha256": "a1cb395998e8079bc22f8c7782891628c5c6d637c53970f16ca2466e32ad1345",
+        "cues": [
+          {
+            "cueId": "lissabon.r1",
+            "anchor": "kuin hallitsijan jakaus",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lissabon.r2",
+            "anchor": "Alfamassa eksyin silti",
+            "intent": "huvittuu",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lissabon.r3",
+            "anchor": "toinen alas",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lissabon.r4",
+            "anchor": "eri kattojen välistä",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lissabon.r5",
+            "anchor": "taskussa kulkeva lohdutus",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "lissabon-3",
+        "visibleText": "Raitiovaunu 12 kulkee Alfaman mäkien kautta. Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. Reitti jatkui — tehtävä vain jäi kesken.",
+        "visibleTextSha256": "7baedac0e6cecf0739f1bf8e47754496ad25593b89c6223d105188ef8ec8ee50",
+        "ttsText": "[brightly] Raitiovaunu 12 kulkee Alfaman mäkien kautta. [curious] Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. [mischievously] Reitti jatkui — tehtävä vain jäi kesken.",
+        "ttsTextSha256": "4a16b3f585d37e87b7370c7a20fd00167027cd9f07c16b6fbd089a2a9fb3d02b",
+        "cues": [
+          {
+            "cueId": "lissabon.livia.c1",
+            "anchor": "Raitiovaunu 12 kulkee",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "lissabon.livia.c2",
+            "anchor": "sen kelloa kattojen yllä",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "lissabon.livia.c3",
+            "anchor": "tehtävä vain jäi kesken",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.5
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -143,12 +143,7 @@ export const FOKUSVIRTA_PRAHA = {
       + 'halla; puntari korkealla.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 358 merkkiä (yläraja 400). */
-    teksti: 'Prahan torin kellossa luuranko soittaa kelloa ja apostolit '
-      + 'kulkevat ikkunan ohi. Aioin verrata sitä taskukellooni ja unohdin '
-      + 'koko asian. Tässä koneessa oli tilaa auringolle, kuulle ja '
-      + 'kuolemalle, mutta minun kellossani vain kiireelle. Ajuri löysi minut '
-      + 'samasta paikasta puoli tuntia myöhemmin. Hänellä oli aivan '
-      + 'toisenlainen käsitys hukkaan menneestä ajasta.',
+    teksti: 'Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -163,24 +158,19 @@ export const FOKUSVIRTA_PRAHA = {
      * saa reaktion).
      */
     reaktiot: [
-      { id: 'praha.r1', ankkuri: 'luuranko soittaa kelloa', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kellon kuolemankuva hätkähdyttää.' },
-      { id: 'praha.r2', ankkuri: 'unohdin koko asian', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Taskukellon vertailu jää kesken.' },
-      { id: 'praha.r3', ankkuri: 'minun kellossani vain kiireelle', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Merkinnän vakava huomio ajasta.' },
+      { id: 'praha.r1', ankkuri: 'luuranko soitti', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'praha.r2', ankkuri: 'unohdin verrata', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'praha.r3', ankkuri: 'omassani vain kiireelle', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'praha.r4', ankkuri: 'puoli tuntia myöhemmin', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Isoisä oli seissyt paikallaan puoli tuntia.' },
-      { id: 'praha.r5', ankkuri: 'hukkaan menneestä ajasta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Ajurin eriävä mielipide päättää merkinnän.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'praha.r5', ankkuri: 'piti aikaa hukattuna', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Prahan torin kellossa luuranko soittaa kelloa ja '
-      + 'apostolit kulkevat ikkunan ohi. Aioin verrata sitä taskukellooni ja '
-      + 'unohdin koko asian. Tässä koneessa oli tilaa auringolle, kuulle ja '
-      + 'kuolemalle, mutta minun kellossani vain kiireelle. Ajuri löysi minut '
-      + 'samasta paikasta puoli tuntia myöhemmin. [softly] Hänellä oli aivan '
-      + 'toisenlainen käsitys hukkaan menneestä ajasta.',
+    luenta: '[curious] Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. [softly] Hän piti aikaa hukattuna.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-praha.mp3',
   },
 
@@ -258,7 +248,7 @@ export const FOKUSVIRTA_PRAHA = {
     // Huudahdus poistettu 8.9.2026 (omistaja: ei tuo lisähyötyä).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kello kokoaa torille väkeä yhä. Nyt kaikilla on kello puhelimessa, ja silti he katsovat tuota. Ymmärrän.',
+      'Kello kokoaa torille väkeä yhä. Minä istuin katon reunalla ja ihmettelin, miksi puhelintaan katsovat ihmiset nostivat yhtä aikaa päänsä. Kun luuranko liikahti, nostin minäkin.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.5 },

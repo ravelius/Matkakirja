@@ -42,11 +42,7 @@ export const FOKUSVIRTA_ALPIT = {
     paikkarivi: 'Grindelwald, heinäkuussa 1873. Kylmää keskellä kesää; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 336 merkkiä (yläraja 400). */
-    teksti: 'Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas '
-      + 'ylettynyt siihen. Opas sanoi jään liikkuvan. Panin kiven reunalle ja '
-      + 'odotin, mutta kivi ei suostunut todistajaksi. Sitten sisältä kuului '
-      + 'pitkä rasahdus. Siirsin sekä kiven että itseni kauemmas. Alpeilla on '
-      + 'syytä erottaa toisistaan hiljaisuus ja se, ettei vuori vielä puhu.',
+    teksti: 'Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -63,25 +59,20 @@ export const FOKUSVIRTA_ALPIT = {
      */
     reaktiot: [
       { id: 'alpit.r1', ankkuri: 'ettei taivas ylettynyt', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Jään sinisyys on pohjatonta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'alpit.r2', ankkuri: 'jään liikkuvan', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Isoisä ei usko oppaan väitettä heti.' },
-      { id: 'alpit.r3', ankkuri: 'suostunut todistajaksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Koe kivellä epäonnistuu koomisesti.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'alpit.r3', ankkuri: 'Kivi ei suostunut todistajaksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'alpit.r4', ankkuri: 'pitkä rasahdus', tarkoitus: 'vakavoituu', voimakkuus: 0.7, siirtyma: 0,
-        perustelu: 'Jäätikkö vastaa itse: hurja hetki.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'alpit.r5', ankkuri: 'itseni kauemmas', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Isoisä myöntää pelkonsa kuivasti.' },
-      { id: 'alpit.r6', ankkuri: 'ettei vuori vielä puhu', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Merkinnän vakava opetus.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'alpit.r6', ankkuri: 'vuori olisi vaiti', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Grindelwaldin jäätikössä oli sinistä niin syvällä, '
-      + 'ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Panin kiven '
-      + 'reunalle ja odotin, mutta kivi ei suostunut todistajaksi. Sitten '
-      + 'sisältä kuului pitkä rasahdus. Siirsin sekä kiven että itseni '
-      + 'kauemmas. [softly] Alpeilla on syytä erottaa toisistaan hiljaisuus ja '
-      + 'se, ettei vuori vielä puhu.',
+    luenta: '[curious] Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. [softly] Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-alpit.mp3',
   },
 
@@ -114,7 +105,7 @@ export const FOKUSVIRTA_ALPIT = {
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Jäätikkö on vetäytynyt kauas isoisän päivistä. Hänen kivensä saattaa olla tallessa; jää sen alta on poissa.',
+      'Jäätikkö on vetäytynyt kauas isoisän päivistä. Lensin rotkon yllä ja etsin hänen kiveään. Kiviä oli liikaa, jäätä liian vähän. En väitä löytäneeni oikeaa.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.55 },

@@ -212,11 +212,7 @@ export const FOKUSVIRTA_BARCELONA = {
     paikkarivi: 'Barcelona, maaliskuussa 1873. Lämmintä jo; satamassa tervan '
       + 'haju; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 317 merkkiä (yläraja 400). */
-    teksti: 'Barcelonan uusista kortteleista on leikattu kulmat pois. Ensin '
-      + 'epäilin muuraria, sitten näin kahden kärryn mahtuvan kääntymään. '
-      + 'Insinööri Cerdà on piirtänyt kaupunkilaisille tilaa hengittää. Yhden '
-      + 'tulevan kadun paikalla kasvoi vielä kaalia. Toivoin sille hyvää '
-      + 'satoa: se ei tiennyt, että oli muuttumassa liikenteeksi.',
+    teksti: 'Barcelonan uusista kortteleista oli leikattu kulmat pois. Epäilin muuraria, kunnes kaksi kärryä mahtui kääntymään. Cerdà oli piirtänyt tilaa hengittää. Tulevan kadun paikalla kasvoi vielä kaalia; se ei tiennyt muuttuvansa liikenteeksi.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -237,21 +233,16 @@ export const FOKUSVIRTA_BARCELONA = {
      */
     reaktiot: [
       { id: 'barcelona.r1', ankkuri: 'leikattu kulmat pois', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Korttelien viistetyt kulmat ihmetyttävät.' },
-      { id: 'barcelona.r2', ankkuri: 'epäilin muuraria', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Isoisä epäili ensin rakentajan taitoja.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'barcelona.r2', ankkuri: 'Epäilin muuraria', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'barcelona.r3', ankkuri: 'tilaa hengittää', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Kaupunkisuunnittelu saa hyväksynnän.' },
-      { id: 'barcelona.r4', ankkuri: 'muuttumassa liikenteeksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi kaalimaan kohtalosta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'barcelona.r4', ankkuri: 'muuttuvansa liikenteeksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Barcelonan uusista kortteleista on leikattu kulmat '
-      + 'pois. Ensin epäilin muuraria, sitten näin kahden kärryn mahtuvan '
-      + 'kääntymään. Insinööri Cerdà on piirtänyt kaupunkilaisille tilaa '
-      + 'hengittää. Yhden tulevan kadun paikalla kasvoi vielä kaalia. [softly] '
-      + 'Toivoin sille hyvää satoa: se ei tiennyt, että oli muuttumassa '
-      + 'liikenteeksi.',
+    luenta: '[curious] Barcelonan uusista kortteleista oli leikattu kulmat pois. Epäilin muuraria, kunnes kaksi kärryä mahtui kääntymään. Cerdà oli piirtänyt tilaa hengittää. [softly] Tulevan kadun paikalla kasvoi vielä kaalia; se ei tiennyt muuttuvansa liikenteeksi.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-barcelona.mp3',
   },
 
@@ -286,7 +277,7 @@ export const FOKUSVIRTA_BARCELONA = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Cerdàn viistot kulmat ovat yhä paikallaan. Autoja tuli enemmän kuin kaalia. Minä olisin äänestänyt kaalia.',
+      'Cerdàn viistetyt kulmat näkyvät ilmasta yhä. Laskeuduin räystäälle tarkkailemaan risteystä: jalankulkijat, pyörät ja autot kulkivat kukin suuntaansa. Minulle jäi taivas. Hyvin suunniteltu.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

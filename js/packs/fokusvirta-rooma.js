@@ -191,12 +191,7 @@ export const FOKUSVIRTA_ROOMA = {
     paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät; '
       + 'puntari matalalla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 344 merkkiä (yläraja 400). */
-    teksti: 'Rooman Pantheonin katossa on pyöreä aukko, josta satoi sisään. '
-      + 'Seisoin kuivassa ja katselin, kuinka sade löysi paikkansa lattialla. '
-      + 'Näin vanhalle talolle ei kai enää tohdi huomauttaa katosta. Rooma on '
-      + 'nyt Italian pääkaupunki; kaduilla on uusia virkamiehiä ja vanhoja '
-      + 'keisareita kivisinä. Pantheon päästää yhä taivaan sisään kysymättä '
-      + 'sen nimeä.',
+    teksti: 'Rooman Pantheonin kattoaukosta satoi sisään. Sade löysi lattialta paikkansa, joten näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Uusia virkamiehiä kulki vanhojen keisarien ohi. Pantheon päästi yhä taivaan sisään kysymättä nimeä.',
     /*
      * Luenta ja äänite: kaanon, kohta 1. Teksti on sama kuin yllä —
      * vain tunnetagit on lisätty, samoin kuin Ateenassa ja Sofiassa.
@@ -223,22 +218,17 @@ export const FOKUSVIRTA_ROOMA = {
      * (selittävä sivulause, pulu kuuntelee).
      */
     reaktiot: [
-      { id: 'rooma.r1', ankkuri: 'josta satoi sisään', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Katto, jossa on reikä tarkoituksella.' },
-      { id: 'rooma.r2', ankkuri: 'sade löysi paikkansa', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Rauhallinen havainto hidastaa hetken.' },
-      { id: 'rooma.r3', ankkuri: 'tohdi huomauttaa katosta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kuivaa huumoria kaksituhatvuotiaan talon kustannuksella.' },
-      { id: 'rooma.r4', ankkuri: 'kysymättä sen nimeä', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Hiljainen päätös merkinnän lopuksi.' },
+      { id: 'rooma.r1', ankkuri: 'kattoaukosta satoi sisään', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'rooma.r2', ankkuri: 'Sade löysi lattialta paikkansa', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'rooma.r3', ankkuri: 'tohtinut huomauttaa katosta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'rooma.r4', ankkuri: 'kysymättä nimeä', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Rooman Pantheonin katossa on pyöreä aukko, josta satoi '
-      + 'sisään. Seisoin kuivassa ja katselin, kuinka sade löysi paikkansa '
-      + 'lattialla. Näin vanhalle talolle ei kai enää tohdi huomauttaa '
-      + 'katosta. Rooma on nyt Italian pääkaupunki; kaduilla on uusia '
-      + 'virkamiehiä ja vanhoja keisareita kivisinä. [softly] Pantheon päästää '
-      + 'yhä taivaan sisään kysymättä sen nimeä.',
+    luenta: '[curious] Rooman Pantheonin kattoaukosta satoi sisään. Sade löysi lattialta paikkansa, joten näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Uusia virkamiehiä kulki vanhojen keisarien ohi. [softly] Pantheon päästi yhä taivaan sisään kysymättä nimeä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-rooma.mp3',
     /*
      * KUVA: kaanonin ensisijainen valinta — Ludovico Tuminellon
@@ -296,7 +286,7 @@ export const FOKUSVIRTA_ROOMA = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Pantheoniin ostetaan nyt pääsylippu. Katon aukko on yhä avoin, mutta minäkin käyttäydyn siellä kuin vieras.',
+      'Pantheoniin ostetaan nyt pääsylippu. Minä kiersin aukon yläpuolella ja vilkaisin alas. Ihmiset väistivät sadetta; minä väistin vain väärään suuntaan nousevaa ilmavirtaa.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.45 },

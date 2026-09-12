@@ -150,14 +150,14 @@ export const FOKUSVIRTA_VILNA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-vilna-r20260909-paper-v4.jpg",
       lyhyt: "Vilna, 1873. Auringolla oli pilkkuja, tutkijalla teetä.",
-      selite: "Observatorion pöydällä valokuva auringonpilkuista näytti ensi silmäyksellä vialliselta vedokselta. Vika olikin huomattavasti kauempana, jos sitä viaksi sopii kutsua. Kaukoputki odotti, että pilvet väistyisivät, ja tuoli sai sillä välin tehdä osuutensa tutkimuksesta. Ikkunan takana Vilnan tornit osoittivat samaan suuntaan eri tarkoituksissa. Kuvasin pöydän, sillä se tuntui mukavalta paikalta aloittaa taivaan selvittäminen.",
+      selite: "Observatorion pöydällä auringonpilkkujen kuva näytti ensin vialliselta vedokselta. Kaukoputki odotti pilvien väistymistä, ja ikkunan takana Vilnan tornit osoittivat kohti taivasta.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.muziejus.vu.lt/en/departments/observatory-of-ideas","https://www.knygynas.vu.lt/kitos-knygos/vadovas-po-senaja-vu-astronomijos-observatorija"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-vilna-r20260911-paper2-v1.jpg",
       lyhyt: "Vilna, 1873. Pilvien väistyessä tuoli ehti palvella tiedettä.",
-      selite: "Tutkija jäi ikkunalle odottamaan pilvien väistymistä, mutta kaukoputki ei kiirehtinyt. Minä istuin teekuppi kädessä ja katselin Vilnan kirkontorneja, jotka osoittivat taivaalle kukin omalla tavallaan. Taivaan tutkiminen näytti sillä hetkellä vaativan ennen kaikkea kärsivällisyyttä. Hyvä tuoli osoittautui laitoksen hiljaiseksi apuvälineeksi.",
+      selite: "Tutkija odotti ikkunalla pilvien väistymistä kaukoputken äärellä. Istuin teekuppi kädessä ja katselin päivänvalossa Vilnan kirkontorneja.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.muziejus.vu.lt/en/departments/observatory-of-ideas"],
     },
@@ -219,13 +219,9 @@ export const FOKUSVIRTA_VILNA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-vilna-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Vilna: tähtitieteilijänkin ikkuna avautuu tavalliseen päivään.',
-        selite: 'Vilnan yliopiston vanhan observatorion pihalla katse nousee '
-          + 'väkisinkin ikkunoihin ja torneihin. Täällä taivasta tutkittiin '
-          + 'keskellä kaupunkia. Nyt tarkimmat pimeät yöt löytyvät kauempaa '
-          + 'valoista, mutta pihalla kuljetaan edelleen kirjojen ja laukkujen '
-          + 'kanssa. Isoisä joi teetä pilviä odotellessaan. Minä odotin '
-          + 'opiskelijan väistymistä kuvasta. Tutkimus vaatii selvästi yhä '
-          + 'kärsivällisyyttä.',
+        selite: 'Vilnan yliopiston vanhan observatorion pihalla ikkunat ja '
+          + 'tornit kohoavat päivänvalossa kulkijoiden ylle. Opiskelija '
+          + 'kulkee pihan poikki kirjat ja laukku mukanaan.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://biblioteka.vu.lt/e.parodos/kiemeliai/vu/observatorijoskiemas/infoen.html',

@@ -186,12 +186,7 @@ export const FOKUSVIRTA_ISTANBUL = {
     paikkarivi: 'Konstantinopoli, syyskuussa 1873. Sumua salmella; puntari '
       + 'korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
-    teksti: 'Galatan mäessä kantaja laski arkkunsa kivelle ja antoi mäen '
-      + 'odottaa. Sen sisään kaivetaan tunnelia, jotta ihmiset pääsisivät ylös '
-      + 'istualtaan. Merkillistä, miten paljon työtä tarvitaan työn '
-      + 'välttämiseen. Alhaalla salmi oli täynnä laivoja. Kantaja nosti arkun '
-      + 'selkäänsä ennen kuin sain niiden mastot lasketuksi. Hänellä oli '
-      + 'parempaa tekemistä.',
+    teksti: 'Galatan mäessä kantaja laski arkkunsa kivelle ja antoi mäen odottaa. Mäkeen kaivettiin tunnelia, jotta ihmiset pääsisivät ylös istualtaan. Paljon työtä työn välttämiseksi. Kantajalla oli parempaa tekemistä.',
     /*
      * Luenta on kaanonin oma (kohta 1), tunnetageineen. Äänite on
      * generoitu samalla reseptillä kuin Ateenalle
@@ -212,21 +207,16 @@ export const FOKUSVIRTA_ISTANBUL = {
      */
     reaktiot: [
       { id: 'istanbul.r1', ankkuri: 'antoi mäen odottaa', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Kantaja panee mäen odottamaan: pieni hymy.' },
-      { id: 'istanbul.r2', ankkuri: 'pääsisivät ylös istualtaan', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Tunneli mäen sisään on isoisälle outo ajatus.' },
-      { id: 'istanbul.r3', ankkuri: 'työtä tarvitaan työn välttämiseen', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Merkinnän terävin vitsi.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'istanbul.r2', ankkuri: 'ylös istualtaan', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'istanbul.r3', ankkuri: 'työtä työn välttämiseksi', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'istanbul.r4', ankkuri: 'parempaa tekemistä', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Kantajan kiire kuitataan hiljaisella nyökkäyksellä.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Galatan mäessä kantaja laski arkkunsa kivelle ja antoi '
-      + 'mäen odottaa. Sen sisään kaivetaan tunnelia, jotta ihmiset pääsisivät '
-      + 'ylös istualtaan. Merkillistä, miten paljon työtä tarvitaan työn '
-      + 'välttämiseen. Alhaalla salmi oli täynnä laivoja. Kantaja nosti arkun '
-      + 'selkäänsä ennen kuin sain niiden mastot lasketuksi. [softly] Hänellä '
-      + 'oli parempaa tekemistä.',
+    luenta: '[curious] Galatan mäessä kantaja laski arkkunsa kivelle ja antoi mäen odottaa. Mäkeen kaivettiin tunnelia, jotta ihmiset pääsisivät ylös istualtaan. [mischievously] Paljon työtä työn välttämiseksi. [softly] Kantajalla oli parempaa tekemistä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-istanbul.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-istanbul-r20260909-paper-v4;
@@ -402,7 +392,7 @@ export const FOKUSVIRTA_ISTANBUL = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Tünelin vaunu vie nyt mäen ylös. Isoisä laski mastoja; kantajalta olisin kysynyt, missä saa levätä.',
+      'Tünel kulkee yhä mäen alla. Nousen siivillä, mutta katson ensin, missä kantaja saa levätä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

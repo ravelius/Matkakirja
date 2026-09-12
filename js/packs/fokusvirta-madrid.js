@@ -120,12 +120,7 @@ export const FOKUSVIRTA_MADRID = {
     paikkarivi: 'Madrid, maaliskuussa 1873. Kirkasta; ylätasangon tuuli '
       + 'kylmä; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 353 merkkiä (yläraja 400). */
-    teksti: 'Pradossa pysähdyin tauluun, jossa pieni prinsessa saa kaiken '
-      + 'huomion ja suuri koira makaa välittämättä siitä. Maalari katsoo '
-      + 'suoraan minuun. Peilissä seisoo kuningaspari, mutta minä olen saanut '
-      + 'parhaan paikan, aivan heidän edestään. Madridin kahviloissa '
-      + 'väitellään uudesta tasavallasta. Tässä huoneessa vallanvaihto '
-      + 'onnistui ostamatta edes sanomalehteä.',
+    teksti: 'Pradossa pieni prinsessa sai huomion, suuri koira ei välittänyt. Maalari katsoi minuun; peilissä seisoi kuningaspari. Minä olin saanut paikan heidän edestään. Kahviloissa väiteltiin tasavallasta. Taulussa valta vaihtui ilman sanomalehteä.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu. Äänite
      * generoidaan tästä kentästä työnkulussa .github/workflows/
@@ -153,22 +148,17 @@ export const FOKUSVIRTA_MADRID = {
      * tasavallasta" (selittävä tausta).
      */
     reaktiot: [
-      { id: 'madrid.r1', ankkuri: 'makaa välittämättä siitä', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Koira on taulun ainoa, jota juhla ei liikuta.' },
-      { id: 'madrid.r2', ankkuri: 'katsoo suoraan minuun', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Maalarin katse yllättää kesken katselun.' },
-      { id: 'madrid.r3', ankkuri: 'saanut parhaan paikan', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Isoisä huomaa asemansa hiljaa, ei kersku.' },
-      { id: 'madrid.r4', ankkuri: 'ostamatta edes sanomalehteä', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Loppuvitsi: vallanvaihto tapahtuu taulun edessä.' },
+      { id: 'madrid.r1', ankkuri: 'suuri koira ei välittänyt', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'madrid.r2', ankkuri: 'Maalari katsoi minuun', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'madrid.r3', ankkuri: 'paikan heidän edestään', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'madrid.r4', ankkuri: 'ilman sanomalehteä', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Pradossa pysähdyin tauluun, jossa pieni prinsessa saa '
-      + 'kaiken huomion ja suuri koira makaa välittämättä siitä. Maalari '
-      + 'katsoo suoraan minuun. Peilissä seisoo kuningaspari, mutta minä olen '
-      + 'saanut parhaan paikan, aivan heidän edestään. Madridin kahviloissa '
-      + 'väitellään uudesta tasavallasta. [softly] Tässä huoneessa '
-      + 'vallanvaihto onnistui ostamatta edes sanomalehteä.',
+    luenta: '[curious] Pradossa pieni prinsessa sai huomion, suuri koira ei välittänyt. Maalari katsoi minuun; peilissä seisoi kuningaspari. Minä olin saanut paikan heidän edestään. Kahviloissa väiteltiin tasavallasta. [softly] Taulussa valta vaihtui ilman sanomalehteä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-madrid.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-madrid-r20260909-paper-v4;
@@ -233,7 +223,7 @@ export const FOKUSVIRTA_MADRID = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Las Meninas on yhä Pradossa. Isoisä huomasi vallanvaihdon, minä koiran. Se tiesi, milloin kannattaa maata.',
+      'Las Meninas on yhä Pradon salissa 12. Minä tarkkailin jonon vieressä nukkuvaa koiraa. Se ei vilkaissut museoon päinkään. Velázquez olisi hyväksynyt asennon.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

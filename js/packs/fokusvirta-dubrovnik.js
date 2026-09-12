@@ -122,12 +122,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
     paikkarivi: 'Dubrovnik, syyskuussa 1873. Poutaa; muurilla käy tuuli '
       + 'mereltä; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
-    teksti: 'Ragusan muureilta näkee, kuinka huolellisesti meri on pidetty '
-      + 'ulkona. Portin sisällä vesi kuitenkin tulee vastaan vanhan '
-      + 'suihkukaivon kivikasvoista. Join yhden suusta ja toisenkin, sillä ne '
-      + 'näyttivät olevan eri mieltä mausta. Sama vesi. Kaupunki on rakentanut '
-      + 'janolleen kuusitoista puhuvaa päätä, ja jokainen neuvoo ottamaan '
-      + 'vielä kulauksen.',
+    teksti: 'Ragusan muureilta katsottuna meri pysyi ulkopuolella. Portin sisällä vesi tuli vastaan Onofrion kaivon kivikasvoista. Join kahdesta suusta; ne näyttivät olevan eri mieltä mausta. Sama vesi. Kuusitoista päätä neuvoi ottamaan vielä kulauksen.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -142,22 +137,17 @@ export const FOKUSVIRTA_DUBROVNIK = {
      * vastaan..." (selittävä käänne).
      */
     reaktiot: [
-      { id: 'dubrovnik.r1', ankkuri: 'meri on pidetty ulkona', tarkoitus: 'hammastyy', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Muurit merta vastaan hämmästyttävät.' },
+      { id: 'dubrovnik.r1', ankkuri: 'meri pysyi ulkopuolella', tarkoitus: 'hammastyy', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'dubrovnik.r2', ankkuri: 'eri mieltä mausta', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kaksi kaivonsuuta eri mieltä samasta vedestä.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'dubrovnik.r3', ankkuri: 'Sama vesi', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Lyhyt toteamus, pieni nyökkäys.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'dubrovnik.r4', ankkuri: 'ottamaan vielä kulauksen', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi: kuusitoista päätä suostuttelee juomaan.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Ragusan muureilta näkee, kuinka huolellisesti meri on '
-      + 'pidetty ulkona. Portin sisällä vesi kuitenkin tulee vastaan vanhan '
-      + 'suihkukaivon kivikasvoista. Join yhden suusta ja toisenkin, sillä ne '
-      + 'näyttivät olevan eri mieltä mausta. Sama vesi. [softly] Kaupunki on '
-      + 'rakentanut janolleen kuusitoista puhuvaa päätä, ja jokainen neuvoo '
-      + 'ottamaan vielä kulauksen.',
+    luenta: '[curious] Ragusan muureilta katsottuna meri pysyi ulkopuolella. Portin sisällä vesi tuli vastaan Onofrion kaivon kivikasvoista. [mischievously] Join kahdesta suusta; ne näyttivät olevan eri mieltä mausta. Sama vesi. [softly] Kuusitoista päätä neuvoi ottamaan vielä kulauksen.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-dubrovnik.mp3',
   },
 
@@ -219,7 +209,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Onofrion suihkukaivo antaa vettä yhä. Isoisä maistoi kahdesti; minä olisin laskenut nokat ennen juomista.',
+      'Onofrion kaivo antaa yhä vettä. Minä lasken kivinokat ja valitsen kuivan lähtöpaikan ennen jonoa.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'utelias', voimakkuus: 0.45 },

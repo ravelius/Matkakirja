@@ -186,11 +186,7 @@ export const FOKUSVIRTA_KIOVA = {
     paikkarivi: 'Kiova, toukokuussa 1873. Lämmintä; kastanjat kukkivat; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 326 merkkiä (yläraja 400). */
-    teksti: 'Kiovan luostarin kupolit näkyvät kauas Dneprille, mutta '
-      + 'pyhiinvaeltajat menevät maan alle. Seurasin kynttilöitä luoliin. Kun '
-      + 'oma liekkini sammui, edellä kulkeva nainen sytytti sen omastaan '
-      + 'sanomatta mitään. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. '
-      + 'Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.',
+    teksti: 'Kiovan luostarin kupolit näkyivät Dneprille, mutta pyhiinvaeltajat menivät maan alle. Luolassa liekkini sammui. Edellä kulkeva nainen sytytti sen omastaan. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
@@ -209,24 +205,19 @@ export const FOKUSVIRTA_KIOVA = {
      * Hiljaiset osuudet: "Seurasin kynttilöitä luoliin" (siirtymä).
      */
     reaktiot: [
-      { id: 'kiova.r1', ankkuri: 'menevät maan alle', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Kupolit ylhäällä, pyhiinvaellus alhaalla.' },
+      { id: 'kiova.r1', ankkuri: 'menivät maan alle', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kiova.r2', ankkuri: 'sytytti sen omastaan', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Vieras jakaa liekkinsä sanattomasti.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kiova.r3', ankkuri: 'Kaksi liekkiä', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Jakaminen ei vähentänyt mitään.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kiova.r4', ankkuri: 'siirtää omaisuutta', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Pankkiiri-isoisä tunnistaa oman alansa.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kiova.r5', ankkuri: 'Tämän haluan muistaa', tarkoitus: 'myotailee', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Hiljainen päätös merkinnän lopuksi.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Kiovan luostarin kupolit näkyvät kauas Dneprille, mutta '
-      + 'pyhiinvaeltajat menevät maan alle. Seurasin kynttilöitä luoliin. Kun '
-      + 'oma liekkini sammui, edellä kulkeva nainen sytytti sen omastaan '
-      + 'sanomatta mitään. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. '
-      + 'Olen tutkinut monta tapaa siirtää omaisuutta. [softly] Tämän haluan '
-      + 'muistaa.',
+    luenta: '[curious] Kiovan luostarin kupolit näkyivät Dneprille, mutta pyhiinvaeltajat menivät maan alle. Luolassa liekkini sammui. [softly] Edellä kulkeva nainen sytytti sen omastaan. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kiova.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-kiova-r20260909-story-v1.jpg;
@@ -328,7 +319,7 @@ export const FOKUSVIRTA_KIOVA = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kiova on nyt Ukrainan pääkaupunki. Luostari on kärsinyt sodassa. Tätä isoisän sivua luen hiljaa.',
+      'Dneprin tuuli nosti minut Lavran muurin ylle, mutta luolasto jäi ihmisille. Reittiinsä luottava kirjekyyhky tietää myös, mihin ei lennä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.6 },

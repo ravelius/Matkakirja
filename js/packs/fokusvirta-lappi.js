@@ -34,14 +34,14 @@ export const FOKUSVIRTA_LAPPI = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lappi-r20260909-paper-v4.jpg",
       lyhyt: "Rovaniemi, 1873. Matkatavara sidottiin tien sijasta veneeseen.",
-      selite: "Veneen kuorma sidottiin matalaksi, jotta se kulkisi vakaasti joella. Rannassa odottava nainen katseli seuraavaa matkaa yläjuoksun suuntaan. Ounasjoen ja Kemijoen seudulla veden ääreen asettunut talo on samalla reitin varrella. Kuvasin veneen ennen lähtöä ja jätin talon savun mukaan. Se kertoi käytössä olevasta paikasta, mitä pelkkä pieni neliö kartassa ei osaa sanoa.",
+      selite: "Veneen kuorma sidottiin matalaksi vakaata jokimatkaa varten, kun rannassa odottava nainen katsoi yläjuoksulle. Kuvasin veneen ja päivänvalossa näkyvän rantatalon ennen lähtöä.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://historia.rovaniemi.fi/historia/roieng24-27.pdf","https://www.finna.fi/Record/museovirasto.56B7F05404DF17550CEC4C1D3FD888DD","https://lapinkavijat.rovaniemi.fi/lapinportti/concorde.htm"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lappi-r20260911-paper2-v1.jpg",
       lyhyt: "Rovaniemi, 1873. Seuraava talo löytyi savusta, ei kartasta.",
-      selite: "Nainen oli astunut veneeseen ja katsoi jo kohti seuraavaa taloa. Rannalta noussut savu kertoi hänelle reitin paremmin kuin oma karttani. Sidottu kuorma pysyi matalana keskellä venettä. Ounasjoen ja Kemijoen vesi ei ollut täällä raja vaan tie.",
+      selite: "Nainen istui veneessä matalaksi sidotun kuorman äärellä ja katsoi kohti seuraavaa taloa. Päiväinen jokimaisema osoitti, että vesi oli täällä tie eikä raja.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://historia.rovaniemi.fi/historia/roieng24-27.pdf","https://www.finna.fi/Record/museovirasto.56B7F05404DF17550CEC4C1D3FD888DD"],
     },
@@ -99,13 +99,9 @@ export const FOKUSVIRTA_LAPPI = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lappi-01-r20260909-euv1-v2.jpg',
         lyhyt: 'Rovaniemi: jokien risteyksessä ei ole liikennevaloja.',
-        selite: 'Ounasjoki liittyy Kemijokeen aivan Rovaniemen äärellä. Rannoilta '
-          + 'nähtynä veden leveys on maisema; ilmasta sen suunnat alkavat '
-          + 'muistuttaa reittejä. Lensin hetken veneen kulkusuunnan mukana ja '
-          + 'kuvasin, missä virrat liittyvät. Isoisä piirsi joet ensin '
-          + 'rajoiksi. Minä pidän hänen korjauksestaan. Kaupunkiin voi tulla '
-          + 'lentäen ja huomata silti, että vesi ehti yhdistää paikat paljon '
-          + 'aikaisemmin.',
+        selite: 'Päiväkuvassa Ounasjoki liittyy Kemijokeen aivan Rovaniemen '
+          + 'äärellä. Ilmasta virtojen suunnat näkyvät reitteinä, jotka '
+          + 'yhdistävät rannat toisiinsa.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.visitrovaniemi.fi/professionals/media/rovaniemi-facts/',

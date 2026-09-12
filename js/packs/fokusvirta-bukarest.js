@@ -196,12 +196,7 @@ export const FOKUSVIRTA_BUKAREST = {
     paikkarivi: 'Bukarest, lokakuussa 1873. Ensimmäinen halla; savu nousee '
       + 'suoraan; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 350 merkkiä (yläraja 400). */
-    teksti: 'Bukarestin Manucin majatalossa huoneet kiertävät pihaa puuparvien '
-      + 'takana. Avasin oven ja kuulin yhtä aikaa kolmet eri kaupat. Alhaalla '
-      + 'mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. '
-      + 'Keittiöstä nousi tuoksu, jolle ei tarvittu tulkkia. Menin alas ennen '
-      + 'kuin ehdin laskea parven pylväät. Huoneeni löysin illalla naapurini '
-      + 'kuorsauksesta.',
+    teksti: 'Manucin majatalossa huoneet kiersivät pihaa puuparvien takana. Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. Keittiön tuoksulle ei tarvittu tulkkia. Huoneeni löysin illalla naapurini kuorsauksesta.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -216,22 +211,15 @@ export const FOKUSVIRTA_BUKAREST = {
      * kuin ehdin laskea parven pylväät" (havainnot).
      */
     reaktiot: [
-      { id: 'bukarest.r1', ankkuri: 'kolmet eri kaupat', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Oven takaa kuuluu kolme kauppaa yhtä aikaa.' },
       { id: 'bukarest.r2', ankkuri: 'kuin pankki omaisuutensa vartijana', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Säkkinsä päällä nukkuva mies on isoisän vertaus.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'bukarest.r3', ankkuri: 'ei tarvittu tulkkia', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Keittiön tuoksu ymmärretään ilman kieltä.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'bukarest.r4', ankkuri: 'naapurini kuorsauksesta', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Loppuvitsi: huone löytyy korvalla.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Bukarestin Manucin majatalossa huoneet kiertävät pihaa '
-      + 'puuparvien takana. Avasin oven ja kuulin yhtä aikaa kolmet eri '
-      + 'kaupat. Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa '
-      + 'vartijana. Keittiöstä nousi tuoksu, jolle ei tarvittu tulkkia. Menin '
-      + 'alas ennen kuin ehdin laskea parven pylväät. [softly] Huoneeni löysin '
-      + 'illalla naapurini kuorsauksesta.',
+    luenta: '[curious] Manucin majatalossa huoneet kiersivät pihaa puuparvien takana. [mischievously] Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. Keittiön tuoksulle ei tarvittu tulkkia. [softly] Huoneeni löysin illalla naapurini kuorsauksesta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-bukarest.mp3',
     /*
      * KUVA: Carol Szathmarin valokuva Colțean tornista (kaanon, kohta 1).
@@ -350,7 +338,7 @@ export const FOKUSVIRTA_BUKAREST = {
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Manucin majatalon pihalla syödään edelleen. Isoisä löysi huoneensa korvalla. Minä löydän keittiön samoin.',
+      'Manucin majatalon sisäpihalla syödään yhä. Lennän parvelta alas, kun astiat kilahtavat oikeassa pöydässä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.55 },

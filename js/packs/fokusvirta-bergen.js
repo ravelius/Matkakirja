@@ -162,11 +162,7 @@ export const FOKUSVIRTA_BERGEN = {
     paikkarivi: 'Bergen, kesäkuussa 1873. Sadetta aamusta iltaan; puntari '
       + 'matalalla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 310 merkkiä (yläraja 400). */
-    teksti: 'Bergenin Bryggenissä puutalot seisovat kylki kyljessä, ja niiden '
-      + 'välissä tuoksuu kapakala. Kauppias näytti kuivattua turskaa kuin '
-      + 'hopeaharkkoa. Sillä on täällä maksettu paljon muutakin kuin '
-      + 'päivällinen. Sade rummutti kattoa, kala pysyi kuivana ja minä en. '
-      + 'Kaupungin arvojärjestys selvisi minulle ilman tulkkia.',
+    teksti: 'Bergenin Bryggenissä kauppias nosti kuivatun turskan kuin hopeaharkon. Sade rummutti kattoa; kala pysyi kuivana, minä en. Kaupungin arvojärjestys selvisi ilman tulkkia.',
     /*
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
@@ -184,21 +180,15 @@ export const FOKUSVIRTA_BERGEN = {
      * Hiljaiset osuudet: Bryggenin puutalojen kuvaus (asetelma).
      */
     reaktiot: [
-      { id: 'bergen.r1', ankkuri: 'kuin hopeaharkkoa', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kuivattu kala esitellään jalometallina.' },
-      { id: 'bergen.r2', ankkuri: 'muutakin kuin päivällinen', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Kala on ollut maksuväline.' },
+      { id: 'bergen.r1', ankkuri: 'kuin hopeaharkon', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'bergen.r3', ankkuri: 'kala pysyi kuivana', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Sateessa kala pärjää matkustajaa paremmin.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'bergen.r4', ankkuri: 'ilman tulkkia', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Arvojärjestys selviää ilman sanoja.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Bergenin Bryggenissä puutalot seisovat kylki kyljessä, '
-      + 'ja niiden välissä tuoksuu kapakala. Kauppias näytti kuivattua turskaa '
-      + 'kuin hopeaharkkoa. Sillä on täällä maksettu paljon muutakin kuin '
-      + 'päivällinen. Sade rummutti kattoa, kala pysyi kuivana ja minä en. '
-      + '[softly] Kaupungin arvojärjestys selvisi minulle ilman tulkkia.',
+    luenta: '[curious] Bergenin Bryggenissä kauppias nosti kuivatun turskan kuin hopeaharkon. [mischievously] Sade rummutti kattoa; kala pysyi kuivana, minä en. [softly] Kaupungin arvojärjestys selvisi ilman tulkkia.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-bergen.mp3',
   },
 
@@ -246,7 +236,7 @@ export const FOKUSVIRTA_BERGEN = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Bryggenin varastotalot ovat nyt maailmanperintöä. Kala päätyy yhä lautaselle. Kumman suojelu onnistui paremmin?',
+      'Bryggen on nyt maailmanperintöä. Lajittelin kirjeet räystään alla: kastuneet ensin, arvokkaimmat sisimmäksi.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.45 },

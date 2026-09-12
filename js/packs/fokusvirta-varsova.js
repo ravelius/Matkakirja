@@ -213,12 +213,7 @@ export const FOKUSVIRTA_VARSOVA = {
     paikkarivi: 'Varsova, syyskuussa 1873. Kirkasta; Veikselillä usvaa '
       + 'aamulla; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 340 merkkiä (yläraja 400). */
-    teksti: 'Kartassani Varsova kuuluu Venäjälle. Torin leipuri sanoi olevansa '
-      + 'puolalainen ja kopautti leipää, jotta kuulisin sen olevan tuoretta. '
-      + 'Talot olivat vieri vieressä kuin kuuntelemassa. Viraston kyltissä '
-      + 'kirjaimet olivat venäläisiä, mutta aamiaiseni sain puolaksi. Karttaan '
-      + 'voi vetää rajan yhdellä liikkeellä. Ihmiset eivät siirry kynän '
-      + 'mukana.',
+    teksti: 'Kartassani Varsova kuului Venäjälle. Torin leipuri sanoi olevansa puolalainen ja kopautti leipää: tuoretta. Viraston kyltissä kirjaimet olivat venäläisiä, mutta aamiaiseni sain puolaksi. Karttaan voi vetää rajan yhdellä liikkeellä. Ihmiset eivät siirry kynän mukana.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
@@ -238,24 +233,17 @@ export const FOKUSVIRTA_VARSOVA = {
      * (johdatus päätökseen).
      */
     reaktiot: [
-      { id: 'varsova.r1', ankkuri: 'kuuluu Venäjälle', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kartan tieto on vallan tieto.' },
+      { id: 'varsova.r1', ankkuri: 'kuului Venäjälle', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'varsova.r2', ankkuri: 'olevansa puolalainen', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Leipurin oma vastaus kartalle.' },
-      { id: 'varsova.r3', ankkuri: 'kuin kuuntelemassa', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Talot kuuntelevat: hetki hiljenee.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'varsova.r4', ankkuri: 'aamiaiseni sain puolaksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kyltti ja aamiainen eri kielillä.' },
-      { id: 'varsova.r5', ankkuri: 'siirry kynän mukana', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Merkinnän painavin lause.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'varsova.r5', ankkuri: 'eivät siirry kynän mukana', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Kartassani Varsova kuuluu Venäjälle. Torin leipuri '
-      + 'sanoi olevansa puolalainen ja kopautti leipää, jotta kuulisin sen '
-      + 'olevan tuoretta. Talot olivat vieri vieressä kuin kuuntelemassa. '
-      + 'Viraston kyltissä kirjaimet olivat venäläisiä, mutta aamiaiseni sain '
-      + 'puolaksi. Karttaan voi vetää rajan yhdellä liikkeellä. [softly] '
-      + 'Ihmiset eivät siirry kynän mukana.',
+    luenta: '[curious] Kartassani Varsova kuului Venäjälle. Torin leipuri sanoi olevansa puolalainen ja kopautti leipää: tuoretta. Viraston kyltissä kirjaimet olivat venäläisiä, mutta aamiaiseni sain puolaksi. [softly] Karttaan voi vetää rajan yhdellä liikkeellä. Ihmiset eivät siirry kynän mukana.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-varsova.mp3',
   },
 
@@ -357,7 +345,7 @@ export const FOKUSVIRTA_VARSOVA = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Vanhakaupunki rakennettiin sodan jälkeen uudelleen. Isoisä olisi tunnistanut torin. Se oli rakentajien tarkoitus.',
+      'Torin räystäältä huomaa, etteivät jälleenrakennetut talot ole lavasteita: ikkunoissa kuivuu pyykkiä. Kaupunki jatkaa elämäänsä julkisivujen takana.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.55 },

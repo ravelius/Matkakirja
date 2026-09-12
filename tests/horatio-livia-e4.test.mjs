@@ -120,3 +120,28 @@ test('E4-luentamanifesti on sidottu hyväksyttyihin sanoihin, tageihin ja cueihi
     }
   }
 });
+
+test('E4-kuvien pitkät selitteet ovat kahden lauseen readback ja täsmäkorjaukset säilyvät', () => {
+  let kuvia = 0;
+  for (const [id] of KAUPUNGIT) {
+    const virta = FOKUSVIRRAT[id];
+    const kuvat = [virta.matkakirja.luentakuva, virta.matkakirja.luentakuva2, ...(virta.pollo.kuvat ?? [])];
+    for (const kuva of kuvat) {
+      assert.ok(kuva?.osoite, `${id}: kuvaosoite puuttuu`);
+      assert.ok(kuva?.lahde, `${id}: lähde puuttuu`);
+      assert.equal((kuva.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2,
+        `${id}: pitkän selitteen pitää olla kaksi lausetta`);
+      kuvia++;
+    }
+  }
+  assert.equal(kuvia, 26);
+  assert.equal(FOKUSVIRRAT.tampere.pollo.kuvat[1].lyhyt,
+    'Tampere: puutarha katolla ja leipäkori reitillä on hyvä kaupunkisuunnitelma.');
+  assert.match(FOKUSVIRRAT.tallinna.matkakirja.luentakuva.selite, /^Apteekissa oli vaaka/);
+  assert.match(FOKUSVIRRAT.tallinna.pollo.kuvat[0].selite,
+    /pysähtyi apteekin eteen jakamaan palan matkakumppanilleen/);
+  assert.match(FOKUSVIRRAT.riika.matkakirja.luentakuva.selite, /kyyneleen/);
+  assert.match(FOKUSVIRRAT.riika.pollo.kuvat[0].selite, /Harjoitusryhmä/);
+  assert.doesNotMatch(FOKUSVIRRAT.vilna.pollo.kuvat[0].selite, /yövalo/i);
+  assert.doesNotMatch(FOKUSVIRRAT.lappi.pollo.kuvat[0].selite, /yövalo/i);
+});
