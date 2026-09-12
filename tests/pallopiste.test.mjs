@@ -19,9 +19,11 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
-  KAUPUNKIPISTEEN_HALKAISIJA_PX, KAUPUNKIPISTEEN_MITTAKAAVA_KORKEUS,
-  KAUPUNKIPISTEEN_VAHIN_PX, LADONNAN_LEPOVIIVE_MS, LADONNAN_TAHTI_MS,
-  PISTELEVYN_SIVUT, kartanMittakaavanHalkaisija, kaupunkipisteenSade,
+  KAUPUNKIPISTEEN_HALKAISIJA_PX, KAUPUNKIPISTEEN_KATTO_PX,
+  KAUPUNKIPISTEEN_MITTAKAAVA_KORKEUS, KAUPUNKIPISTEEN_VAHIN_PX,
+  LADONNAN_LEPOVIIVE_MS, LADONNAN_TAHTI_MS, OMAN_KAUPUNGIN_KERROIN,
+  PISTEIDEN_SIIRTYMA_MS, PISTELEVYN_SIVUT, kartanMittakaavanHalkaisija,
+  kaupunkipisteenHalkaisijaPx, kaupunkipisteenSade,
   ladonnanAjoitus, luoPisteidenLitistaja, pistelevyGeometria, pistelevynPuskurit,
 } from '../js/pallolauta/lauta.js';
 import { fokuspisteenSiirto } from '../js/fokuspiste.js';
@@ -237,63 +239,103 @@ test('ladonnan ajoitus on kuritus eikä vaimennus: liikkeen aikanakin ladotaan',
     `ladonta saa olla enintään tahdin verran vanha, nyt ${(kello - 16.7 - viimeisin).toFixed(0)} ms`);
 });
 
-/* ---- pisteen koko seuraa kartan mittakaavaa ulos zoomatessa ---- */
+
+/* ---- pisteen koko: yksi sääntö koko zoomialueelle ---- */
 
 /*
- * VARTIJA (omistaja 12.9.2026, sanatarkasti: *"kaupunkien pisteiden
- * koko oli minusta ennen sidottu kartan zoom tasoon niin että ne
- * pienentyvät ulos zoomatessa kartan mukana"*).
+ * VARTIJA (omistaja 12.9.2026, v1790 laitteella: *"Kaupunkien
+ * pistekoko muuttuu vielä lähemmillä zoom tasoilla"*; aiemmin samana
+ * päivänä: *"koko oli minusta ennen sidottu kartan zoom tasoon niin
+ * että ne pienentyvät ulos zoomatessa kartan mukana"*).
  *
- * Kaupunkipiste oli 7.9.2026 alkaen RUUDUN vakio joka korkeudella.
- * Nyt ulos zoomattaessa se pienenee kartan mukana lattiaan asti;
- * lähikuvassa mitta on yhä ruudun, joten 7.9. korjaus ("iso musta
- * ympyrä" iPadilla) ei voi palata.
+ * Sääntöjä oli neljä neljällä zoomivälillä: 7 px:n ruutuvakio (7.9.),
+ * lehden osuudesta liukuva lattia (8.9.), mittakaavasta liukuva
+ * lähizoomi (9.9.) ja kartan mittakaava vasta korkeudesta 0,37
+ * ulospäin (12.9. ensimmäinen yritys). Nyt sääntö on yksi: halkaisija
+ * on vakio-osuus kartan mittakaavasta, katon ja lattian välissä.
  *
  * Mitattu selaimessa (390 x 844 dpr 2, Ateena, muut kuin pelaajan
- * kaupunki) ennen ja jälkeen:
+ * kaupunki) ennen ja jälkeen — suhde kartan mittakaavaan suluissa:
  *
- *   korkeus 0,12  22,87 px -> 22,87 px   (lähikuva ennallaan)
- *   korkeus 0,37   7,00 px ->  7,00 px   (vertailunäkymä ennallaan)
- *   korkeus 0,60   7,00 px ->  4,32 px
- *   korkeus 1,00   7,00 px ->  3,00 px   (lattia)
- *   korkeus 2,00   7,00 px ->  3,00 px   (lattia)
+ *   korkeus 0,12  22,87 px (6,31) -> 21,58 px (5,95)
+ *   korkeus 0,20  22,87 px (10,51) -> 12,95 px (5,95)
+ *   korkeus 0,30  15,22 px (10,50) ->  8,63 px (5,95)
+ *   korkeus 0,37   7,00 px (5,95)  ->  7,00 px (5,95)
+ *   korkeus 0,60   7,00 px (9,66)  ->  4,32 px (5,96)
+ *   korkeus 1,00   7,00 px (16,09) ->  3,00 px (lattia)
+ *   korkeus 2,00   7,00 px (32,11) ->  3,00 px (lattia)
  *
- * Suhde kartan mittakaavaan (halkaisija / px per lautayksikkö) oli
- * ennen 6,31 -> 32,11 ja on nyt 6,31 -> 5,95 -> 5,96, eli vakio
- * lattiaan asti.
+ * Testi kaatuu, jos taitekohtia palaa (suhde ei ole enää vakio) tai
+ * jos koko palaa ruutuvakioksi.
  */
-test('pisteen koko seuraa kartan mittakaavaa ulos zoomatessa, lattiaan asti', () => {
+test('pisteen koko on sama osuus kartan mittakaavasta kaikilla zoomeilla', () => {
   const d = KAUPUNKIPISTEEN_HALKAISIJA_PX;
   const h0 = KAUPUNKIPISTEEN_MITTAKAAVA_KORKEUS;
-  // Lähikuva ja vertailunäkymä: ruudun mitta, ei pikseliäkään muutosta.
-  for (const korkeus of [0.05, 0.12, 0.2, h0]) {
-    assert.equal(kartanMittakaavanHalkaisija(d, korkeus), d, `korkeus ${korkeus}`);
+  // Kartan mittakaava on kääntäen verrannollinen korkeuteen, joten
+  // "halkaisija x korkeus" on vakio, kun sääntö on yksi.
+  const suhde = (korkeus) => kartanMittakaavanHalkaisija(d, korkeus) * korkeus;
+  const vertailu = suhde(h0);
+  // Katto puree korkeudella h0 x d / katto, lattia korkeudella h0 x d / vahin.
+  const kattoKorkeus = (h0 * d) / KAUPUNKIPISTEEN_KATTO_PX;
+  const lattiaKorkeus = (h0 * d) / KAUPUNKIPISTEEN_VAHIN_PX;
+  assert.ok(kattoKorkeus < 0.12 && lattiaKorkeus > 0.6,
+    `katto ${kattoKorkeus.toFixed(3)}, lattia ${lattiaKorkeus.toFixed(3)}`);
+  for (const korkeus of [0.12, 0.15, 0.2, 0.25, 0.3, h0, 0.45, 0.6, 0.8]) {
+    assert.ok(Math.abs(suhde(korkeus) - vertailu) < 1e-9,
+      `korkeus ${korkeus}: suhde ${suhde(korkeus)} != ${vertailu} — taitekohta palasi`);
   }
-  // Ulos zoomatessa PIENENEE — tämä kaatuu, jos koko palaa ruutuvakioksi.
-  const ulos = [0.5, 0.6, 0.8].map((k) => kartanMittakaavanHalkaisija(d, k));
-  assert.ok(ulos[0] < d && ulos[1] < ulos[0] && ulos[2] < ulos[1],
-    `pisteen on pienennyttävä ulos zoomatessa: ${ulos.join(', ')}`);
-  // Suhde on TÄSMÄLLEEN kartan mittakaava (kunnes lattia puree).
-  for (const korkeus of [0.5, 0.6, 0.75]) {
-    assert.ok(Math.abs(kartanMittakaavanHalkaisija(d, korkeus) - d * (h0 / korkeus)) < 1e-9,
-      `korkeus ${korkeus}: kerroin ei ole kartan mittakaava`);
+  // Yksikään kahdesta vierekkäisestä zoomista ei saa antaa samaa kokoa
+  // (ruutuvakio) katon ja lattian välissä.
+  let edellinen = Infinity;
+  for (const korkeus of [0.12, 0.2, 0.3, h0, 0.6, 0.8]) {
+    const nyt = kartanMittakaavanHalkaisija(d, korkeus);
+    assert.ok(nyt < edellinen, `korkeus ${korkeus}: ${nyt} ei ole pienempi kuin ${edellinen}`);
+    edellinen = nyt;
   }
-  // Lattia: piste ei katoa yleiskuvassa eikä uloimmalla zoomilla.
+  // Mitatut ruutuluvut.
+  const mitatut = [[0.12, 21.58], [0.2, 12.95], [0.3, 8.63], [h0, 7], [0.6, 4.32], [1, 3], [2, 3]];
+  for (const [korkeus, px] of mitatut) {
+    assert.ok(Math.abs(kartanMittakaavanHalkaisija(d, korkeus) - px) < 0.01,
+      `korkeus ${korkeus}: ${kartanMittakaavanHalkaisija(d, korkeus)} != ${px}`);
+  }
+});
+
+/*
+ * KATTO JA LATTIA — molemmat mitattuja, eivät arvauksia.
+ *
+ * Katto 22,87 px on 9.9.2026 mitattu lähizoomin tavoitekoko (kaksi
+ * kohdemerkin halkaisijaa) ja selvästi alle sen ~30 px:n, joka
+ * 7.9.2026 oli iPadilla *"iso musta ympyrä"*. Lattia 3 px on vanhan
+ * 0,03-asteen pisteen koko siinä näkymässä, jota se palveli (2,7 px),
+ * ylöspäin pyöristettynä.
+ */
+test('katto ja lattia: piste ei kasva iPadin mustaksi ympyräksi eikä katoa yleiskuvassa', () => {
+  const d = KAUPUNKIPISTEEN_HALKAISIJA_PX;
+  // 7.9.2026 liian iso oli noin 30 px; katon on jäätävä selvästi alle.
+  assert.ok(KAUPUNKIPISTEEN_KATTO_PX < 30 - 5, `katto ${KAUPUNKIPISTEEN_KATTO_PX}`);
+  // …ja nappulan (32 px) alle, kuten 9.9.2026 mitoitettiin.
+  assert.ok(KAUPUNKIPISTEEN_KATTO_PX < 32);
+  assert.ok(Math.abs(KAUPUNKIPISTEEN_KATTO_PX - 22.87) < 0.01, `katto ${KAUPUNKIPISTEEN_KATTO_PX}`);
+  // Syvimmillä zoomeilla katto pitää eikä sääntö karkaa.
+  for (const korkeus of [0.02, 0.05, 0.08, 0.11]) {
+    assert.equal(kartanMittakaavanHalkaisija(d, korkeus), KAUPUNKIPISTEEN_KATTO_PX, `korkeus ${korkeus}`);
+  }
+  // Pelaajan oma kaupunki on kertoimen verran suurempi — sama katto.
+  const oma = kaupunkipisteenHalkaisijaPx({ id: 'ateena' }, 'ateena');
+  assert.ok(Math.abs(oma - d * OMAN_KAUPUNGIN_KERROIN) < 1e-9);
+  assert.ok(Math.abs(oma - 17.16) < 0.02, `oma ${oma}`);
+  assert.equal(kaupunkipisteenHalkaisijaPx({ id: 'sofia' }, 'ateena'), d);
+  assert.equal(kaupunkipisteenHalkaisijaPx(null, 'ateena'), d);
+  assert.equal(kaupunkipisteenHalkaisijaPx({ laji: 'helmi' }, 'ateena'), d);
+  assert.equal(kartanMittakaavanHalkaisija(oma, 0.05), KAUPUNKIPISTEEN_KATTO_PX);
+  // Lattia: piste ei katoa uloimmassakaan zoomissa.
   for (const korkeus of [1, 2, 5]) {
     assert.equal(kartanMittakaavanHalkaisija(d, korkeus), KAUPUNKIPISTEEN_VAHIN_PX, `korkeus ${korkeus}`);
   }
-  // Lattia ei KASVATA jo pienempää pistettä.
+  // Lattia ei KASVATA jo pienempää pistettä; rikkinäiset luvut eivät kaada.
   assert.equal(kartanMittakaavanHalkaisija(2, 5), 2);
-  // Rikkinäiset luvut eivät kaada eivätkä muuta mitään.
   assert.equal(kartanMittakaavanHalkaisija(d, 0), d);
   assert.equal(kartanMittakaavanHalkaisija(0, 1), 0);
-  // Mitatut ruutuluvut (390 x 844): 0,60 -> 4,32 px ja 1,00 -> 3,00 px.
-  assert.ok(Math.abs(kartanMittakaavanHalkaisija(d, 0.6) - 4.32) < 0.01);
-  assert.equal(kartanMittakaavanHalkaisija(d, 1), 3);
-  // Säde luetaan samasta kutistetusta mitasta kuin piirto.
-  const lauta = lue('../js/pallolauta/lauta.js');
-  assert.match(lauta, /const piirrettyHalkaisijaPx = \(halkaisijaPx\) => kartanMittakaavanHalkaisija\(/);
-  assert.match(lauta, /\{ halkaisijaPx: piirrettyHalkaisijaPx\(halkaisijaPx\) \}/);
 });
 
 test('kutistuminen näkyy myös pallon yksiköissä: säde pienenee ulos zoomatessa', () => {
@@ -301,11 +343,42 @@ test('kutistuminen näkyy myös pallon yksiköissä: säde pienenee ulos zoomate
   const mitta = (korkeus) => kaupunkipisteenSade(korkeus, H, {
     halkaisijaPx: kartanMittakaavanHalkaisija(KAUPUNKIPISTEEN_HALKAISIJA_PX, korkeus),
   });
-  // Ruutuhalkaisija = säde x 2 x 2 pi R / 360 x (H / (2 R h tan(fov/2))):
-  // R supistuu, joten riittää verrata sädettä/korkeutta.
   // kaupunkipisteenSade kaanteisesti: d = sade x H / (h x tan(fov/2) x 180/pi)
   const px = (korkeus) => (mitta(korkeus) * H) / (korkeus * Math.tan((50 / 2) * Math.PI / 180) * (180 / Math.PI));
   assert.ok(Math.abs(px(0.37) - KAUPUNKIPISTEEN_HALKAISIJA_PX) < 0.01, `${px(0.37)}`);
-  assert.ok(px(1) < px(0.6) && px(0.6) < px(0.37), `${px(1)} < ${px(0.6)} < ${px(0.37)}`);
+  assert.ok(px(1) < px(0.6) && px(0.6) < px(0.37) && px(0.37) < px(0.2), `${px(1)} ${px(0.6)} ${px(0.37)} ${px(0.2)}`);
   assert.ok(Math.abs(px(1) - KAUPUNKIPISTEEN_VAHIN_PX) < 0.01, `${px(1)}`);
+});
+
+/* ---- pistejoukon uudelleenkirjoitus ei animoi paikkoja ---- */
+
+/*
+ * VARTIJA (omistaja 12.9.2026, v1790 laitteella: *"pisteet edelleen
+ * liikahtavat liikkeen loputtua (myös karttanostojen pisteet)"*).
+ *
+ * Globe.gl 2.46:n pistekerros panee datumin tweeniin, kun mikä tahansa
+ * sen arvoista (lat, lng, alt, r) muuttuu, ja tweenin `onUpdate`
+ * kirjoittaa `obj.position = polar2Cartesian(...)` eli PINNAN pisteen.
+ * Meidän pisteemme ovat katsesäteellä (LEVY KATSESÄTEELLE), joten
+ * jokainen tween siirtää ne parallaksiin siirtymän ajaksi. Mitattu
+ * ennen korjausta (390 x 844, kamera siirretty ja levon ladonta
+ * ajettu): yksi piste 3,53 px sivussa 423 ms liikkeen päättymisen
+ * jälkeen; korjauksen jälkeen 0,00 px joka otoksella (0/50/100/200/400
+ * /800/1400 ms).
+ *
+ * Testi kaatuu, jos pistekerrokselle palautetaan siirtymä tai jos
+ * paikkaa ei enää kirjoiteta heti datan vaihdon perään.
+ */
+test('pistekerroksen siirtymä on nolla eikä paikkaa animoida', () => {
+  assert.equal(PISTEIDEN_SIIRTYMA_MS, 0, 'kirjaston tween kirjoittaisi pinnan paikan');
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /\.pointsTransitionDuration\(PISTEIDEN_SIIRTYMA_MS\)/);
+  // Merkkien ja nimien oma siirtymä jää ennalleen — vain pisteet.
+  assert.match(lue('../js/pallolauta/merkit.js'), /\.htmlTransitionDuration\(siirtyma\)/);
+  // Paikka kirjoitetaan SAMASSA tehtävässä kuin pistejoukko, jotta
+  // yksikään kehys ei voi piirtää pinnan paikkaa.
+  assert.match(
+    lauta,
+    /pallo\.pointsData\(\[\.\.\.valot, \.\.\.nakyvat, \.\.\.helmet\]\);[\s\S]{0,600}?asetaPisteidenPaikat\(pallo\.camera\(\)\?\.position \?\? null\);/,
+  );
 });
