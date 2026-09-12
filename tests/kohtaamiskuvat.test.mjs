@@ -34,24 +34,25 @@ test('kohtaamiskuvagalleria käyttää vain R2-mediaa', async () => {
 });
 
 /*
- * KUVAPUTKEN 12.9.2026 PÄIVÄKANSION VIISI AKTIIVISTA RIVIÄ. Oslo,
+ * KUVAPUTKEN 12.9.2026 PÄIVÄKANSION KUUSI AKTIIVISTA RIVIÄ. Oslo,
  * Pietari ja Sarajevo odottivat ensin galleriassa, koska kuvan henkilö
  * ei ollut kaaren henkilö; omistaja vaihtoi kaanoniin uudet henkilöt
  * samana päivänä (Liv, Polina, Adnan — js/tyohuone-kehitys-data.js
  * KAARI_PAKETIT). Tämä vartio pitää parit kiinni toisissaan: jos joku
  * palauttaisi kaaren vanhan nimen, alla oleva hahmovartio kaatuu.
  */
-test('12.9.2026 päiväkansion viisi kuvaa ovat oikeissa tiloissa', () => {
+test('12.9.2026 päiväkansion kuusi kuvaa ovat oikeissa tiloissa', () => {
   const rivit = new Map(kohtaamiskuvat
     .filter((kuva) => kuva.kansio === '20260912')
     .map((kuva) => [kuva.id, kuva]));
-  assert.equal(rivit.size, 5);
+  assert.equal(rivit.size, 6);
   for (const [id, tila, hahmo] of [
     ['granada-ines-e4ab59a7e815', 'tarkistettu', 'Inés'],
     ['oslo-liv-992a171d5df6', 'tarkistettu', 'Liv'],
     ['pietari-polina-6188e4c488db', 'tarkistettu', 'Polina'],
     ['sarajevo-adnan-8d19fb11c377', 'tarkistettu', 'Adnan'],
     ['nikosia-marios-4ce1cb371ba3', 'tarkistettu', 'Marios'],
+    ['kobenhavn-freja-07d795379e80', 'tarkistettu', 'Freja'],
   ]) {
     const kuva = rivit.get(id);
     assert.ok(kuva, `toimituksen rivi ${id} puuttuu katalogista`);
@@ -65,6 +66,7 @@ test('12.9.2026 päiväkansion viisi kuvaa ovat oikeissa tiloissa', () => {
     ['pietari', 'pietari-polina-6188e4c488db'],
     ['sarajevo', 'sarajevo-adnan-8d19fb11c377'],
     ['nikosia', 'nikosia-marios-4ce1cb371ba3'],
+    ['kobenhavn', 'kobenhavn-freja-07d795379e80'],
   ]) assert.equal(kohtaamiskuvaKohteelle(kohde)?.id, id);
 });
 
