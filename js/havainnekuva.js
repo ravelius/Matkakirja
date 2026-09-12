@@ -274,10 +274,15 @@ export const HAVAINNEKUVA_LINKKI_TEKSTI = 'Havainnekuva';
  * (avaaHavainnekuvaSelite), joten pelaajalle ei synny kahta eri
  * tarinaa samasta asiasta.
  *
- * VAIN AVATUSSA KUVASSA. Kartalla näkyvä lyhyt kuvateksti ei koskaan
- * saa linkkiä (js/kuvatekstit.js: lyhyestä on nimenomaan poistettu
- * havainnekuvamaininta) — kutsupaikka on siksi yksi: suurennoksen
- * pitkä teksti (js/fokusvirta.js avaaSuurennos).
+ * VAIN PITKÄSSÄ KUVATEKSTISSÄ. Kartalla näkyvä lyhyt kuvateksti ei
+ * koskaan saa linkkiä (js/kuvatekstit.js: lyhyestä on nimenomaan
+ * poistettu havainnekuvamaininta) — eikä sitä saa myöskään
+ * suurennoksen lyhyt kuvateksti, jonka isoisän ja Pulun albumi
+ * näyttää (omistaja 12.9.2026, sanatarkasti: *"tässä lyhyessä
+ * kuvatekstissä ei saa olla tuota havainnekuvalinkkiä. Se näkyy vasta
+ * pidemmässä kuvatekstissä."*). Ehto ei siis ole "onko kuva avattu"
+ * vaan "kumpi kuvateksti on näkyvissä": linkki kuuluu pitkään
+ * (js/fokusvirta.js avaaSuurennos, `!lyhytTeksti`).
  *
  * LINKKI SYNTYY LÄHTEESTÄ EIKÄ KUVAN OMISTAJASTA: isoisän kuvien
  * lähde on käytännössä aina "Matkakirjan havainnekuva", joten ne

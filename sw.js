@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1811';
+const CACHE = 'matkakirja-2026-08-09.1812';
 const SHELL = [
   './',
   './index.html',
@@ -288,6 +288,7 @@ const SHELL = [
   // eivätkä SHELLissä — ne tulevat ICEYEn omasta ämpäristä pyydettäessä.
   './js/linssit/satelliitti.js',
   './js/linssit/satelliitti-data.js',
+  './js/linssit/satelliitti-avaruus.js',
   './css/satelliitti.css',
   './js/linssit/topografia.js',
   './js/linssit/vertailu.js',

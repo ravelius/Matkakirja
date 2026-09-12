@@ -1272,10 +1272,24 @@ export async function avaaPallolauta(ui) {
    * kirjaston oma katto pallon säteessä (etäisyys = säde · (1 + korkeus)).
    */
   const pallonSade = pallo.getGlobeRadius();
+  /*
+   * LINSSI SAA SYRJÄYTTÄÄ ZOOMIRAJAT (satelliittilinssin avaruusnäkymä,
+   * 12.9.2026). Laudan oma katto PALLO_KORKEUS_MAX 2,5 ei riitä, kun
+   * koko pallon on mahduttava PYSTYRUUDULLE: puhelimella (374 × 828)
+   * se vaatii korkeuden 4,5, koska Globe.gl:n fov on pystykulma ja
+   * leveys on kapeampi sivu. Syrjäytys on YKSI paikka ja se elää
+   * mitoituksen (ResizeObserver) yli — suoraan controlsiin kirjoitettu
+   * luku katoaisi seuraavassa mitoita-kutsussa. null = laudan omat rajat.
+   */
+  let zoomirajaSyrjaytys = null;
   const tahdistaZoomirajat = () => {
     const ohj = pallo.controls();
-    ohj.minDistance = pallonSade * (1 + kamera.korkeusMin());
-    ohj.maxDistance = pallonSade * (1 + PALLO_KORKEUS_MAX);
+    const min = Number.isFinite(zoomirajaSyrjaytys?.min)
+      ? zoomirajaSyrjaytys.min : kamera.korkeusMin();
+    const max = Number.isFinite(zoomirajaSyrjaytys?.max)
+      ? zoomirajaSyrjaytys.max : PALLO_KORKEUS_MAX;
+    ohj.minDistance = pallonSade * (1 + min);
+    ohj.maxDistance = pallonSade * (1 + max);
   };
   tahdistaZoomirajat();
 
@@ -2675,6 +2689,12 @@ export async function avaaPallolauta(ui) {
     ruutupiste,
     ruudulla,
     merkitseNappulanPaikka,
+    /**
+     * Zoomirajojen syrjäytys linssin ajaksi: `{ min, max }` korkeuksina
+     * pallonsäteinä, `null` palauttaa laudan omat rajat. Ainoa käyttäjä
+     * on satelliittilinssin avaruusnäkymä (js/linssit/satelliitti-avaruus.js).
+     */
+    zoomirajat: (rajat) => { zoomirajaSyrjaytys = rajat ?? null; tahdistaZoomirajat(); },
     /** Ladonta heti ilman lepoviivettä (savukkeet ja vartijat). */
     ladoHeti: () => { clearTimeout(lepoAjastin); return ladoLevossa(); },
     /**

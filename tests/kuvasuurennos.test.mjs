@@ -118,3 +118,31 @@ test('molemmat suurennokset laskevat mittansa samalla funktiolla', () => {
   assert.match(css, /\.fokuszoom-kehys \{[^}]*max-width: 100%/);
   assert.doesNotMatch(css, /max-height: min\(88vh, 94vmin\)/);
 });
+
+/*
+ * KEHYKSEN LEVEYS ON KUVAN LEVEYS (omistajan vikailmoitus 12.9.2026:
+ * *"Näissä kuvissa on turhaan ylhäällä ja alhaalla pieni
+ * marginaali."*).
+ *
+ * JS asettaa saman luvun sekä kehyksen että kuvan leveydeksi
+ * (js/fokusvirta.js avaaSuurennos mitoita). Sivuston yleinen nollaus
+ * asettaa kaikelle `box-sizing: border-box` (css/styles.css), ja sen alla
+ * kehyksen sisennys söi kuvasta 19,6 px LEVEYTTÄ mutta ei korkeutta:
+ * `object-fit: contain` piirsi eron kirjekuorireunoina kuvaelementin
+ * sisään (mitattu Chromiumilla 390 × 844: kuvaelementti 324,4 × 215,
+ * piirretty kuva 324,4 × 202,8 — 6,1 px turhaa tilaa ylle ja alle).
+ * Ilman tätä vartiota nollaus palaisi hiljaa seuraavassa siivouksessa.
+ */
+test('suurennoksen kehys on content-box: annettu leveys on kuvan leveys', () => {
+  const css = lue('css/fokusvirta.css');
+  // Kommentit pois: säännöstä luetaan vain se, mitä selain lukee.
+  const puhdas = css.replace(/\/\*[\s\S]*?\*\//g, '');
+  const lohko = puhdas.slice(puhdas.indexOf('.fokuszoom-kehys {'));
+  const kehys = lohko.slice(0, lohko.indexOf('}'));
+  assert.match(kehys, /box-sizing: content-box/,
+    'kehys palasi border-boxiin — kuvaan syntyy kirjekuorireunat');
+  assert.doesNotMatch(kehys, /box-sizing: border-box/);
+  // Kuva saa yhä mittansa JS:ltä eikä CSS venytä sitä.
+  const kuvalohko = puhdas.slice(puhdas.indexOf('.fokuszoom-kuva {'));
+  assert.match(kuvalohko.slice(0, kuvalohko.indexOf('}')), /object-fit: contain/);
+});
