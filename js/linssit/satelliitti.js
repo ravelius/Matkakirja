@@ -1,5 +1,5 @@
 /*
- * SATELLIITTILINSSI — oikeita tutkahavaintoja pallolta.
+ * SATELLIITTILINSSI — astronauttien ottamia valokuvia Maasta.
  *
  * OMISTAJAN TILAUS 12.9.2026, sanatarkasti: *"Satelliittilinssi:
  * nykyinen maapallo, vain havaintokohteet. Ei haittaa vaikka
@@ -11,40 +11,48 @@
  * uudessa ihmis- ja tiedekeksintö linssissä"*
  *
  * Pelaaja suuntaa leikillisesti avaruudesta Maahan katsovan
- * kaukoputken kohteeseen ja näkee oikean tutkahavainnon.
+ * kaukoputken kohteeseen ja näkee valokuvan, jonka astronautti on
+ * ottanut ikkunasta.
+ *
+ * ── AINEISTO VAIHTUI, LOGIIKKA EI (omistaja 12.9.2026) ────────────
+ *
+ * Sanatarkasti: *"Uusi linssi toimii nyt hyvin, mutta valitettavasti
+ * itse materiaali on aika epäkiinnostavaa. Onko mitään muuta
+ * tietolähdettä, mitä voitaisiin käyttää samalla logiikalla ja korvata
+ * vain data johonkin toiseen?"* — ja kysymyskorttiin vastaus:
+ * *"Astronauttien Maa-kuvat"*.
+ *
+ * Harmaa tutkakuva (ICEYE, v1794–v1801) ei kerro katsojalle mitään
+ * ilman selitystä; värivalokuvassa näkee heti mitä katsoo, ja juuri se
+ * on linssin idea. Vaihtoon menivät VAIN aineistotiedosto ja
+ * hakutyökalu — pisteet pallolla, galleria kohteen sisällä, info-nappi,
+ * kuva koko ruutuun ja nipistyszoom ovat samat kuin ennen. Linssi on
+ * tarkoituksella aineistosta riippumaton, ja se on sen arvo.
  *
  * ── MIKÄ TÄMÄ ON JA MIKÄ EI ───────────────────────────────────────
  *
  * TÄMÄ EI OLE LIVE-NÄKYMÄ eikä kuvaustilaus. Jokainen kuva on
- * ARKISTOHAVAINTO ICEYEn avoimesta aineistosta, ja sen mukana kulkee
- * aina aineiston nimi, kuvausaika (UTC), alue, käsittelyselite,
- * lisenssi ja suora linkki lähdetietueeseen. Kuvan päällä lukee
- * "Arkistohavainto · ICEYE · tutkakuva", ja loput tiedot ovat
- * info-napin popupissa. Pelaajalle ei luvata, että satelliitti kuvaisi
- * juuri nyt.
+ * ARKISTOKUVA NASAn kuvakirjastosta, ja sen mukana kulkee aina
+ * kuvausaika, paikka, kuvaustapa, NASAn kuvatunnus ja suora linkki
+ * lähteeseen. Kuvan päällä lukee "Valokuva avaruudesta · NASA", ja
+ * loput tiedot ovat info-napin popupissa. Pelaajalle ei luvata, että
+ * kuva otettaisiin juuri nyt.
  *
- * ── YKSI PISTE PER KOHDE, GALLERIA PISTEEN SISÄLLÄ ────────────────
+ * ── YKSI PISTE PER PAIKKA, GALLERIA PISTEEN SISÄLLÄ ───────────────
  *
- * Aineiston ryhmittely on tehty jalanjäljestä eikä nimestä
- * (tools/hae-satelliittihavainnot.mjs kertoo säännön auki). Kolme
- * asiaa pidetään erillään:
+ * Saman paikan eri kuvauskerrat ovat yhden pisteen galleria (Etna 2002
+ * ja 2006, Dubai päivällä ja yöllä), eri paikat ovat eri pisteitä.
+ * Galleriassa oletuskuva on kohteen paras yleiskuva — se on valittu
+ * käsin aineistoon kenttään `oletus` (tools/hae-satelliittihavainnot.mjs
+ * kertoo säännön auki), koska valokuvan laatua ei voi lukea
+ * metatiedosta: kuva pitää katsoa. Päivämäärälliset pikkukuvat, laskuri
+ * ja edellinen/seuraava ladotaan KUVAN PÄÄLLE alareunaan (omistaja
+ * 12.9.2026).
  *
- *   (A) sama kohde eri kuvausaikoina → saman pisteen galleria,
- *   (B) saman havainnon eri tuotteet (SLC, GRD, QLK, CSI) → EIVÄT ole
- *       neljä havaintoa, vaan yhden havainnon `tuotteet`-luettelo,
- *   (C) vierekkäiset eri kuvausalueet → ERI pisteet.
- *
- * Galleriassa oletuskuva on paras yleiskuva (parasHavainto alla), ei
- * automaattisesti uusin. Päivämäärälliset pikkukuvat, laskuri ja
- * edellinen/seuraava latotaan KUVAN PÄÄLLE alareunaan (omistaja
- * 12.9.2026). Saman päivän havainnot erottuvat kellonajasta, ja
- * aikavyöhyke (UTC) on näkyvissä.
- *
- * "Vertaa" avaa kaksi havaintoa RINNAKKAIN. Päällekkäistä
- * pyyhkäisyliukuria ei ole: se vaatisi, että alue ja geometrinen
- * kohdistus ovat oikeasti kunnossa, ja eri katselukulmista otetut
- * tutkakuvat eivät ole pikselintarkasti samassa ruudukossa — liukuri
- * loisi virheellisen vaikutelman muutoksesta.
+ * "Vertaa" avaa kaksi kuvaa RINNAKKAIN. Päällekkäistä
+ * pyyhkäisyliukuria ei ole: se vaatisi, että kuvat ovat samasta
+ * kohdasta samassa kulmassa, eivätkä astronautin käsin suuntaamat
+ * otokset ole — liukuri loisi virheellisen vaikutelman muutoksesta.
  *
  * ── YLÄPALKIN ELINKAARI ───────────────────────────────────────────
  *
@@ -94,53 +102,28 @@ const TYYLIN_TUNNUS = 'satelliitti-tyyli';
 /** Kameran lähikuva kohteeseen laudan yksiköinä (noin 900 km ruudulla). */
 export const SATELLIITTI_LAHIKUVA = 250;
 
-/** Kuvaustilan järjestys: tarkin ensin (spotlight ≈ dwell > stripmap > scan). */
-export const TILAN_TARKKUUS = {
-  spotlight: 3, dwell: 3, stripmap: 2, scan: 1,
-};
-
-/** Kuvaustilan suomenkielinen nimi. */
-export const TILAN_NIMI = {
-  spotlight: 'pistekuvaus (spotlight)',
-  dwell: 'pistekuvaus (dwell)',
-  stripmap: 'kaistakuvaus (stripmap)',
-  scan: 'laajakuvaus (scan)',
-};
-
 /**
  * PARAS YLEISKUVA — oletuskuvan valintasääntö, kirjoitettu auki.
  *
- * EI "uusin", koska uusin voi olla kapea, vino tai heikkolaatuinen
- * rajaus; pelaajan ensimmäisen silmäyksen pitää olla kohteen paras
- * yleiskuva. Järjestys on kolmiportainen ja kaikki portaat luetaan
- * havainnon omista mittausarvoista:
+ * Oletuskuva EI ole "uusin": pelaajan ensimmäisen silmäyksen pitää olla
+ * kohteen paras yleiskuva. Valokuvan laatua ei voi lukea metatiedosta —
+ * pilvet, vino rajaus, ikkunankehys ja sumu näkyvät vain katsomalla —
+ * joten paras kuva on valittu KÄSIN aineiston kenttään `oletus`
+ * (tools/hae-satelliittihavainnot.mjs KOHTEET).
  *
- *   1. TARKIN KUVAUSTILA (TILAN_TARKKUUS). Pistekuvaus erottaa metrin
- *      kokoiset kohteet, laajakuvaus kymmeniä metrejä.
- *   2. PIENIN KATSELUKULMA (view:incidence_angle). Mitä lähempänä
- *      kohtisuoraa, sitä vähemmän tutkavarjoja ja sitä
- *      karttamaisempi kuva.
- *   3. UUSIN — vasta tasatilanteessa.
- *
- * Puhdas funktio: sama sääntö pelissä, aineistotyökalussa ja testissä.
+ * Tämä funktio on se, mitä tehdään kun nimettyä oletusta ei ole:
+ * otetaan uusin kuva. Puhdas funktio, sama sääntö pelissä ja testissä.
  */
 export function parasHavainto(havainnot = []) {
   let paras = null;
   for (const h of havainnot) {
     if (!h) continue;
-    if (!paras) { paras = h; continue; }
-    const a = [TILAN_TARKKUUS[h.tila] ?? 0, -(h.katselukulma ?? 90), h.aika ?? ''];
-    const b = [TILAN_TARKKUUS[paras.tila] ?? 0, -(paras.katselukulma ?? 90), paras.aika ?? ''];
-    for (let i = 0; i < a.length; i++) {
-      if (a[i] === b[i]) continue;
-      if (a[i] > b[i]) paras = h;
-      break;
-    }
+    if (!paras || String(h.aika ?? '') > String(paras.aika ?? '')) paras = h;
   }
   return paras;
 }
 
-/** Oletushavainnon indeksi kohteessa (aineiston `oletus` tai laatusääntö). */
+/** Oletushavainnon indeksi kohteessa (aineiston `oletus` tai uusin). */
 export function oletusIndeksi(kohde) {
   const lista = kohde?.havainnot ?? [];
   const nimetty = lista.findIndex((h) => h.id === kohde?.oletus);
@@ -151,36 +134,40 @@ export function oletusIndeksi(kohde) {
 }
 
 /**
- * Kuvausaika ihmisen luettavaksi, aikavyöhyke NÄKYVISSÄ.
+ * Kuvausaika ihmisen luettavaksi.
  *
- * Saman päivän havainnot erottuvat vain kellonajasta (Krakovassa
- * 4.10.2025 on kolme eri kuvausta), joten kellonaika on aina mukana ja
- * vyöhyke sanotaan ääneen — muuten lukija olettaisi oman aikansa.
+ * KELLONAIKAA EI KEKSITÄ. NASAn kuvakirjasto merkitsee astronauttikuvan
+ * ajaksi useimmiten pelkän päivän, ja silloin aineistossa on pelkkä
+ * päivä ("2002-10-30") — teksti on silloin "30.10.2002". Jos aineistossa
+ * on oikea kellonaika, se näytetään ja aikavyöhyke sanotaan ääneen,
+ * jottei lukija oleta omaa aikaansa.
  */
 export function aikateksti(iso) {
   const t = String(iso ?? '');
-  const m = t.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
-  if (!m) return t;
-  const [, v, kk, pp, hh, mm] = m;
-  return `${Number(pp)}.${Number(kk)}.${v} klo ${hh}.${mm} UTC`;
+  const paiva = t.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!paiva) return t;
+  const [, v, kk, pp] = paiva;
+  const kello = t.match(/T(\d{2}):(\d{2})/);
+  const alku = `${Number(pp)}.${Number(kk)}.${v}`;
+  return kello ? `${alku} klo ${kello[1]}.${kello[2]} UTC` : alku;
 }
 
-/** Lyhyt päiväys pikkukuvan alle (sama kello mukana, sama syy). */
+/** Lyhyt päiväys pikkukuvan alle (kello mukana vain jos se on tiedossa). */
 export function paivateksti(iso) {
   const t = String(iso ?? '');
-  const m = t.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
-  if (!m) return t;
-  const [, v, kk, pp, hh, mm] = m;
-  return `${Number(pp)}.${Number(kk)}.${v.slice(2)} ${hh}.${mm}`;
+  const paiva = t.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!paiva) return t;
+  const [, v, kk, pp] = paiva;
+  const kello = t.match(/T(\d{2}):(\d{2})/);
+  const alku = `${Number(pp)}.${Number(kk)}.${v.slice(2)}`;
+  return kello ? `${alku} ${kello[1]}.${kello[2]}` : alku;
 }
 
-/** Alue asteina, esim. "45,41–45,47° N · 12,29–12,38° E". */
-export function alueteksti(alue) {
-  if (!Array.isArray(alue) || alue.length < 4) return '';
+/** Paikka asteina, esim. "37,75° N · 14,99° E". */
+export function paikkateksti(lat, lon) {
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return '';
   const luku = (x) => Math.abs(x).toFixed(2).replace('.', ',');
-  const lat = `${luku(alue[1])}–${luku(alue[3])}° ${alue[3] >= 0 ? 'N' : 'S'}`;
-  const lon = `${luku(alue[0])}–${luku(alue[2])}° ${alue[2] >= 0 ? 'E' : 'W'}`;
-  return `${lat} · ${lon}`;
+  return `${luku(lat)}° ${lat >= 0 ? 'N' : 'S'} · ${luku(lon)}° ${lon >= 0 ? 'E' : 'W'}`;
 }
 
 /** Oma tyylitiedosto sivulle, jos sitä ei vielä ole. */
@@ -227,7 +214,7 @@ export function kuvatiedot(kohde, havainto) {
   return {
     lyhyt: `${kohde.nimi} ${aikateksti(havainto.aika)}`,
     selite: `${kohde.nimi} (${kohde.seutu}) — ${SATELLIITTI_LAHDE.aineisto}, `
-      + `${aikateksti(havainto.aika)}. ${kohde.selite}`,
+      + `${aikateksti(havainto.aika)}. ${havainto.teksti ?? kohde.selite}`,
     lahde: `${SATELLIITTI_LAHDE.tekija}, ${SATELLIITTI_LAHDE.lisenssi}`,
     osoite: havainto.kuva,
   };
@@ -245,15 +232,15 @@ export function kuvatiedot(kohde, havainto) {
  *
  * Tämä KUMOAA aiemman kaksivaiheisen nostokuva-avauksen (kuva ensin,
  * "Lisää" perässä) TÄSSÄ linssissä: se on kartan nostoja varten, joissa
- * kuva on kortin kuvitusta. Tutkahavainto EI ole kuvitus vaan itse
- * sisältö, ja sitä katsotaan kokonaisena.
+ * kuva on kortin kuvitusta. Astronautin valokuva EI ole kuvitus vaan
+ * itse sisältö, ja sitä katsotaan kokonaisena.
  *
  * RUUDUN JAKO — kaikki muu paitsi kuva on kuvan PÄÄLLÄ:
  *
  *   • kuva keskellä, oma kuvasuhde säilyy (object-fit: contain),
  *     loppu ruudusta tummaa,
- *   • "Arkistohavainto · ICEYE · tutkakuva" -leima kuvan yläkulmassa —
- *     lisenssiehto, ei koriste,
+ *   • "Valokuva avaruudesta · NASA" -leima kuvan yläkulmassa — kuvan
+ *     lähde kulkee aina kuvan mukana, myös zoomatessa,
  *   • alapalkki kahtena rivinä: pikkukuvat ylärivillä, napit
  *     alarivillä. Kaksi riviä eikä yksi, jotta SULKURISTI ALHAALLA
  *     OIKEALLA ei koskaan jää pikkukuvien alle eikä sitä paineta
@@ -261,14 +248,14 @@ export function kuvatiedot(kohde, havainto) {
  *   • kaikki tekstitieto info-napin takana pienessä popupissa.
  *
  * KOHTEEN NIMI ON VAIN YLÄPALKISSA (`palkki.nimeaKohde`): kuvan päällä
- * ei ole muuta tekstiä kuin arkistoleima ja pikkukuvien päiväykset.
+ * ei ole muuta tekstiä kuin lähdeleima ja pikkukuvien päiväykset.
  */
 function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
   lataaSatelliittiTyyli();
   const katselu = html('div', 'satelliitti-katselu');
   katselu.setAttribute('role', 'dialog');
   katselu.setAttribute('aria-modal', 'true');
-  katselu.setAttribute('aria-label', `${kohde.nimi}: tutkahavainto`);
+  katselu.setAttribute('aria-label', `${kohde.nimi}: valokuva avaruudesta`);
 
   const havainnot = kohde.havainnot ?? [];
   let indeksi = oletusIndeksi(kohde);
@@ -280,7 +267,7 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
   kuva.className = 'satelliitti-kuva';
   kuva.decoding = 'async';
   kuva.draggable = false;
-  const leima = html('span', 'satelliitti-leima', 'Arkistohavainto · ICEYE · tutkakuva');
+  const leima = html('span', 'satelliitti-leima', 'Valokuva avaruudesta · NASA');
   lava.append(kuva, leima);
 
   /* ---- alapalkki: pikkukuvat ylärivillä, napit alarivillä ---------- */
@@ -349,21 +336,23 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
     const kiinni = nappi('satelliitti-popup-sulku', '×', 'Sulje tiedot');
     kiinni.addEventListener('click', suljePopup);
     popup.append(otsikko, kiinni);
+    /*
+     * KUVATEKSTI ENSIN. Se on ainoa teksti, jonka pelaaja lukee, ja
+     * sen tehtävä on kertoa mitä kuvassa näkyy — loput rivit ovat
+     * lähdetietoa, joka kuuluu sen alle eikä sen eteen.
+     */
+    popup.appendChild(html('div', 'satelliitti-popup-selite', h.teksti ?? kohde.selite));
     for (const rivi of [
       teeRivi('Aineisto', `${SATELLIITTI_LAHDE.aineisto}, ${SATELLIITTI_LAHDE.tekija}`),
       teeRivi('Kuvausaika', aikateksti(h.aika)),
-      teeRivi('Alue', alueteksti(h.alue)),
-      teeRivi('Kuvaustapa', [TILAN_NIMI[h.tila] ?? h.tila, h.satelliitti,
-        h.kaista ? `${h.kaista}-kaista` : null, h.polarisaatio,
-        Number.isFinite(h.katselukulma) ? `katselukulma ${String(h.katselukulma).replace('.', ',')}°` : null,
-      ].filter(Boolean).join(' · ')),
-      teeRivi('Käsittely', [h.kasittely, (h.tuotteet ?? []).length
-        ? `tuotteet ${h.tuotteet.join(', ')} (saman kuvauksen eri versiot)` : null].filter(Boolean).join(' · ')),
-      teeRivi('Lisenssi', SATELLIITTI_LAHDE.lisenssi),
-      h.stac ? teeRivi('Lähde', ulkolinkki('STAC-tietue', h.stac)) : null,
-      teeRivi('Dokumentaatio', ulkolinkki('ICEYE Open Data', SATELLIITTI_LAHDE.osoite)),
+      teeRivi('Paikka', [kohde.seutu, paikkateksti(kohde.lat, kohde.lon)].filter(Boolean).join(' · ')),
+      teeRivi('Kuvaustapa', [h.kuvaustapa, h.retkikunta,
+        h.kuvaaja ? `kuvaaja ${h.kuvaaja}` : null].filter(Boolean).join(' · ')),
+      teeRivi('Kuvatunnus', h.id),
+      teeRivi('Lisenssi', `${SATELLIITTI_LAHDE.lisenssi} (${SATELLIITTI_LAHDE.tekija})`),
+      h.sivu ? teeRivi('Lähde', ulkolinkki('NASAn kuvasivu', h.sivu)) : null,
+      teeRivi('Kuvakirjasto', ulkolinkki('NASA Image and Video Library', SATELLIITTI_LAHDE.osoite)),
     ]) if (rivi) popup.appendChild(rivi);
-    popup.appendChild(html('div', 'satelliitti-popup-selite', kohde.selite));
     katselu.appendChild(popup);
     infoNappi.setAttribute('aria-expanded', 'true');
   };
@@ -384,7 +373,7 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
       img.src = h.kuva;
       img.alt = `${kohde.nimi} ${aikateksti(h.aika)}`;
       img.decoding = 'async';
-      kuvio.append(img, html('figcaption', null, `${aikateksti(h.aika)} · ${TILAN_NIMI[h.tila] ?? h.tila}`));
+      kuvio.append(img, html('figcaption', null, aikateksti(h.aika)));
       parit.appendChild(kuvio);
     }
     const takaisin = html('button', 'satelliitti-nuoli', 'Sulje vertailu');
@@ -540,7 +529,7 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
       const b = html('button', `satelliitti-pikku${i === indeksi ? ' valittu' : ''}`);
       b.type = 'button';
       const pikku = document.createElement('img');
-      pikku.src = toinen.kuva;
+      pikku.src = toinen.pikku ?? toinen.kuva;
       pikku.loading = 'lazy';
       pikku.decoding = 'async';
       pikku.alt = '';
@@ -589,7 +578,7 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
  *
  * EI VETOLAATIKKOA (omistaja 12.9.2026, sanatarkasti: *"Ota yläpalkin
  * vetolaatikko pois"*). Palkissa on linssin nimi, auki olevan kohteen
- * nimi ja Sulje linssi — ei mitään muuta. Kohteet (21 kpl) etsitään
+ * nimi ja Sulje linssi — ei mitään muuta. Kohteet etsitään
  * palloa pyörittämällä, mikä on omistajan valinta; tilalle EI lisätä
  * hakua eikä luetteloa.
  *
@@ -618,7 +607,7 @@ export function rakennaPalkki({ ui, kohteet, onSulje, doc = document }) {
 
   const ohje = doc.createElement('span');
   ohje.className = 'satelliittipalkki-ohje';
-  ohje.textContent = 'Napauta hohtavaa vihreää pistettä: arkistohavainto avautuu.';
+  ohje.textContent = 'Napauta hohtavaa vihreää pistettä: valokuva avautuu.';
 
   const sulje = doc.createElement('button');
   sulje.type = 'button';
@@ -738,7 +727,7 @@ export const LINSSI = {
   // pallon pinnalla (pallolle alla), kuten radio ja aikajanalinssit.
   kerros: false,
   nimi: 'Satelliittilinssi',
-  lyhyt: 'Suuntaa tutkasatelliitin kaukoputki Maahan ja katso oikea arkistohavainto.',
+  lyhyt: 'Suuntaa kaukoputki Maahan ja katso valokuva, jonka astronautti otti ikkunasta.',
   // Kaukoputki, jonka päässä hohtaa piste.
   ikoni: '<path d="M3.6 15.1 8 6.4l10.9 4.2-3.3 6.5z"/>'
     + '<path d="M9.4 17.6 12 20.6M7.1 20.6h9.4"/>'

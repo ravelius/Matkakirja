@@ -5,7 +5,12 @@ import { readFileSync } from 'node:fs';
 /*
  * SATELLIITTILINSSI (omistajan tilaus 12.9.2026): hohtavat vihreät
  * havaintopisteet pallolla, koko yläpalkki linssin omaksi ja pisteen
- * napautuksesta havaintokuva HETI KOKO RUUTUUN.
+ * napautuksesta valokuva HETI KOKO RUUTUUN.
+ *
+ * AINEISTO VAIHTUI v1802:ssa ICEYEn tutkakuvista NASAn astronauttien
+ * Maa-kuviin (omistaja 12.9.2026). Linssin logiikka ei muuttunut, ja
+ * jokainen alla oleva vaatimus on sama kuin ennen — vain aineiston
+ * kentät ja lähdetiedot ovat uudet.
  *
  * Tämä tiedosto vartioi vaatimukset yksi kerrallaan:
  *   1. pallo säilyy (linssi ei piirrä kerrosta eikä avaa linssikarttaa),
@@ -22,8 +27,8 @@ import { readFileSync } from 'node:fs';
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
 const {
-  LINSSI, SATELLIITTI_OSA, TILAN_TARKKUUS, aikateksti, alueteksti, kuvatiedot,
-  oletusIndeksi, paivateksti, parasHavainto, rakennaPalkki,
+  LINSSI, SATELLIITTI_OSA, aikateksti, kuvatiedot, oletusIndeksi,
+  paikkateksti, paivateksti, parasHavainto, rakennaPalkki,
 } = await import('../js/linssit/satelliitti.js');
 const { SATELLIITTI_KOHTEET, SATELLIITTI_LAHDE } = await import('../js/linssit/satelliitti-data.js');
 const tyokalu = await import('../tools/hae-satelliittihavainnot.mjs');
@@ -59,7 +64,7 @@ test('linssisopimuksen pakolliset kentät ovat paikallaan', () => {
   }
   assert.ok(Array.isArray(LINSSI.laudat) && LINSSI.laudat.length);
   assert.equal(typeof LINSSI.lahde, 'object');
-  assert.match(LINSSI.lahde.lisenssi, /CC BY 4\.0/);
+  assert.match(LINSSI.lahde.lisenssi, /Public domain \(NASA\)/);
 });
 
 /* ═══════════════════ 2. hohtavat vihreät pisteet ════════════════ */
@@ -250,9 +255,15 @@ test('sulkuristi on alaoikealla, sormenkokoinen ja irti reunasta', () => {
 test('kaikki tekstitieto on info-napin popupissa, ei kuvan päällä', () => {
   assert.match(lahde, /nappi\('satelliitti-info', 'i', 'Havainnon tiedot'\)/);
   assert.match(lahde, /html\('div', 'satelliitti-popup'\)/);
-  for (const rivi of ['Aineisto', 'Kuvausaika', 'Alue', 'Kuvaustapa', 'Käsittely', 'Lisenssi']) {
+  for (const rivi of ['Aineisto', 'Kuvausaika', 'Paikka', 'Kuvaustapa', 'Kuvatunnus', 'Lisenssi']) {
     assert.ok(lahde.includes(`teeRivi('${rivi}'`), `${rivi} puuttuu info-popupista`);
   }
+  // Kuvateksti on popupin ENSIMMÄINEN rivi: se on ainoa teksti, jonka
+  // pelaaja lukee, eikä se saa jäädä lähdetietojen alle.
+  assert.match(lahde, /popup\.append\(otsikko, kiinni\);[\s\S]{0,500}?popup\.appendChild\(html\('div', 'satelliitti-popup-selite'[\s\S]{0,80}?\);\n {4}for \(const rivi of \[/);
+  assert.match(lahde, /satelliitti-popup-selite', h\.teksti \?\? kohde\.selite/);
+  // Lähdelinkki vie NASAn omaan kuvasivuun.
+  assert.match(lahde, /ulkolinkki\('NASAn kuvasivu', h\.sivu\)/);
   // Popup on pieni ikkuna, ei koko ruudun paneeli.
   assert.match(tyyli, /\.satelliitti-popup \{[\s\S]*width: min\(380px/);
   assert.match(tyyli, /\.satelliitti-popup \{[\s\S]*max-height: min\(52vh/);
@@ -290,51 +301,54 @@ test('pikkukuvanauha on lavan sisar — raja eleiden ja selauksen välillä', ()
   assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*touch-action: pan-x/);
 });
 
-/* ═══════════ 5. yksi piste per kohde, galleria sisällä ══════════ */
+/* ═══════════ 5. yksi piste per paikka, galleria sisällä ══════════ */
 
-test('aineistossa on vähintään kymmenen kohdetta, Venetsia ja Krakova mukana', () => {
-  assert.ok(SATELLIITTI_KOHTEET.length >= 10, `kohteita vain ${SATELLIITTI_KOHTEET.length}`);
+test('aineistossa on 20–30 kohdetta ja tunnukset ovat uniikkeja', () => {
+  // Omistajan tilaus 12.9.2026: 20–30 visuaalisesti vaikuttavaa kohdetta,
+  // maantieteellinen kattavuus laaja.
+  assert.ok(SATELLIITTI_KOHTEET.length >= 20 && SATELLIITTI_KOHTEET.length <= 30,
+    `kohteita ${SATELLIITTI_KOHTEET.length}`);
   const tunnukset = SATELLIITTI_KOHTEET.map((k) => k.tunnus);
-  assert.ok(tunnukset.includes('venetsia'));
-  assert.ok(tunnukset.includes('krakova'));
   assert.equal(new Set(tunnukset).size, tunnukset.length, 'tunnukset ovat uniikkeja');
+  for (const t of ['etna', 'richat', 'new-york', 'goidhoo']) {
+    assert.ok(tunnukset.includes(t), `${t} puuttuu aineistosta`);
+  }
+  // Kattavuus: kohteita molemmilta pallonpuoliskoilta ja joka suunnasta.
+  assert.ok(SATELLIITTI_KOHTEET.some((k) => k.lat < -10), 'eteläistä palloa ei ole edustettuna');
+  assert.ok(SATELLIITTI_KOHTEET.some((k) => k.lat > 45), 'pohjoista palloa ei ole edustettuna');
+  assert.ok(SATELLIITTI_KOHTEET.some((k) => k.lon < -60), 'Amerikkaa ei ole edustettuna');
+  assert.ok(SATELLIITTI_KOHTEET.some((k) => k.lon > 100), 'Itä-Aasiaa ei ole edustettuna');
 });
 
-test('todennetut galleriaesimerkit: Venetsia 2, Krakova 5 havaintoa', () => {
-  const venetsia = SATELLIITTI_KOHTEET.find((k) => k.tunnus === 'venetsia');
-  assert.equal(venetsia.havainnot.length, 2);
-  assert.deepEqual(venetsia.havainnot.map((h) => h.aika.slice(0, 10)), ['2025-11-04', '2026-04-29']);
+test('todennetut galleriaesimerkit: Etna 2, Dubai 2, taifuuni 1', () => {
+  const etna = SATELLIITTI_KOHTEET.find((k) => k.tunnus === 'etna');
+  assert.equal(etna.havainnot.length, 2);
+  assert.deepEqual(etna.havainnot.map((h) => h.aika.slice(0, 4)), ['2002', '2006']);
 
-  const krakova = SATELLIITTI_KOHTEET.find((k) => k.tunnus === 'krakova');
-  assert.equal(krakova.havainnot.length, 5);
-  assert.deepEqual(krakova.havainnot.map((h) => h.aika.slice(0, 10)),
-    ['2025-09-14', '2025-09-17', '2025-10-04', '2025-10-04', '2025-10-04']);
+  const dubai = SATELLIITTI_KOHTEET.find((k) => k.tunnus === 'dubai');
+  assert.equal(dubai.havainnot.length, 2, 'Dubaissa on päivä- ja yökuva');
+
+  const taifuuni = SATELLIITTI_KOHTEET.find((k) => k.tunnus === 'taifuuni');
+  assert.equal(taifuuni.havainnot.length, 1, 'yhden kuvan kohde on sallittu');
 });
 
-test('(B) saman kuvauksen SLC/GRD/QLK/CSI eivät ole neljä havaintoa', () => {
-  const venetsia = SATELLIITTI_KOHTEET.find((k) => k.tunnus === 'venetsia');
-  const uusin = venetsia.havainnot.at(-1);
-  // Yksi havainto kantaa monta tuotetta — ne eivät ole erillisiä rivejä.
-  assert.ok(uusin.tuotteet.length >= 4, 'tuotteet puuttuvat');
-  for (const t of ['SLC', 'GRD', 'QLK', 'CSI']) assert.ok(uusin.tuotteet.includes(t), `${t} puuttuu`);
-  const idt = venetsia.havainnot.map((h) => h.id);
-  assert.equal(new Set(idt).size, idt.length, 'jokainen havainto on oma STAC-tietueensa');
-});
-
-test('(A) sama kohde eri aikoina yhdistyy, (C) vierekkäinen alue ei', () => {
-  const { samaKohde, ryhmita } = tyokalu;
-  // (A) Venetsian kaksi jalanjälkeä ovat päällekkäin → sama kohde.
-  const a1 = [12.2846, 45.4102, 12.3641, 45.4662];
-  const a2 = [12.29, 45.4067, 12.3752, 45.4654];
-  assert.equal(samaKohde(a1, a2), true);
-  // (C) Sama kokoluokka mutta viereinen ruutu → eri kohde.
-  const c = [12.40, 45.4067, 12.4852, 45.4654];
-  assert.equal(samaKohde(a1, c), false);
-  // Kokoehto estää ketjuuntumisen: yksi laaja kuva ei liimaa erillisiä
-  // pikkukohteita yhdeksi.
-  const laaja = [11.5, 44.8, 13.5, 46.2];
-  assert.equal(samaKohde(a1, laaja), false);
-  assert.equal(ryhmita([a1, a2, c, laaja]).length, 3);
+test('saman pisteen kuvat ovat eri kuvauskerroilta, eri paikat eri pisteissä', () => {
+  /*
+   * (A) Sama paikka eri aikoina → saman pisteen galleria.
+   * (C) Eri paikka → oma piste. Pikkukuvien päiväysten pitää erottaa
+   *     saman pisteen kuvat toisistaan, joten samalta päivältä ei oteta
+   *     kahta kuvaa samaan pisteeseen.
+   */
+  for (const kohde of SATELLIITTI_KOHTEET) {
+    const paivat = kohde.havainnot.map((h) => paivateksti(h.aika));
+    assert.equal(new Set(paivat).size, paivat.length,
+      `${kohde.tunnus}: kaksi kuvaa samalta päivältä ei erotu pikkukuvanauhassa`);
+    const idt = kohde.havainnot.map((h) => h.id);
+    assert.equal(new Set(idt).size, idt.length, `${kohde.tunnus}: sama kuva kahdesti`);
+  }
+  // Sama kuva ei saa esiintyä kahdessa eri pisteessä.
+  const kaikki = SATELLIITTI_KOHTEET.flatMap((k) => k.havainnot.map((h) => h.id));
+  assert.equal(new Set(kaikki).size, kaikki.length, 'sama kuva on kahdessa pisteessä');
 });
 
 test('kohteiden pisteet eivät osu päällekkäin pallolla', () => {
@@ -348,46 +362,40 @@ test('kohteiden pisteet eivät osu päällekkäin pallolla', () => {
   }
 });
 
-test('oletuskuva on paras yleiskuva, ei automaattisesti uusin', () => {
-  // Sääntö: tarkin kuvaustila → pienin katselukulma → uusin.
-  const uusinMuttaKarkea = { id: 'u', tila: 'scan', katselukulma: 20, aika: '2026-09-01T00:00:00Z' };
-  const vanhaTarkka = { id: 'v', tila: 'spotlight', katselukulma: 30, aika: '2024-01-01T00:00:00Z' };
-  assert.equal(parasHavainto([uusinMuttaKarkea, vanhaTarkka]).id, 'v');
-  // Sama tila → pienempi katselukulma voittaa, vaikka olisi vanhempi.
-  const vino = { id: 'a', tila: 'spotlight', katselukulma: 39, aika: '2026-05-05T00:00:00Z' };
-  const suora = { id: 'b', tila: 'spotlight', katselukulma: 22, aika: '2025-05-05T00:00:00Z' };
-  assert.equal(parasHavainto([vino, suora]).id, 'b');
-  // Tasatilanteessa uusin.
-  const vanha = { id: 'c', tila: 'spotlight', katselukulma: 25, aika: '2025-01-01T00:00:00Z' };
-  const uusi = { id: 'd', tila: 'spotlight', katselukulma: 25, aika: '2026-01-01T00:00:00Z' };
-  assert.equal(parasHavainto([vanha, uusi]).id, 'd');
-  assert.ok(TILAN_TARKKUUS.spotlight > TILAN_TARKKUUS.stripmap);
-  assert.ok(TILAN_TARKKUUS.stripmap > TILAN_TARKKUUS.scan);
-});
-
-test('aineiston oletus ja pelin laatusääntö ovat samat kaikilla kohteilla', () => {
+test('oletuskuva on käsin valittu paras yleiskuva, ei automaattisesti uusin', () => {
+  /*
+   * Valokuvan laatua ei voi lukea metatiedosta — pilvet, vino rajaus ja
+   * ikkunankehys näkyvät vain katsomalla — joten paras kuva on valittu
+   * käsin kenttään `oletus`. Sen on osoitettava johonkin kohteen kuvista,
+   * ja `oletusIndeksi` on velvollinen tottelemaan sitä.
+   */
   for (const kohde of SATELLIITTI_KOHTEET) {
-    assert.equal(parasHavainto(kohde.havainnot).id, kohde.oletus, kohde.tunnus);
+    const idt = kohde.havainnot.map((h) => h.id);
+    assert.ok(idt.includes(kohde.oletus), `${kohde.tunnus}: oletus ei ole kohteen kuva`);
     assert.equal(kohde.havainnot[oletusIndeksi(kohde)].id, kohde.oletus, kohde.tunnus);
   }
+  // Oletus EI ole automaattisesti uusin: ainakin yhdessä kohteessa se on vanhempi.
+  assert.ok(SATELLIITTI_KOHTEET.some((k) => k.havainnot.at(-1).id !== k.oletus),
+    'jokainen oletus sattuu olemaan uusin — sääntö ei silloin mittaa mitään');
+  // Nimeämättömälle kohteelle jää varasääntö: uusin kuva.
+  assert.equal(parasHavainto([
+    { id: 'vanha', aika: '2002-10-30' }, { id: 'uusi', aika: '2026-04-10' },
+  ]).id, 'uusi');
+  assert.equal(oletusIndeksi({
+    havainnot: [{ id: 'a', aika: '2001-01-01' }, { id: 'b', aika: '2020-01-01' }],
+  }), 1);
 });
 
-test('Krakovan kolme saman päivän havaintoa erottuvat kellonajasta', () => {
-  const krakova = SATELLIITTI_KOHTEET.find((k) => k.tunnus === 'krakova');
-  const sama = krakova.havainnot.filter((h) => h.aika.startsWith('2025-10-04'));
-  assert.equal(sama.length, 3);
-  const tekstit = sama.map((h) => aikateksti(h.aika));
-  assert.equal(new Set(tekstit).size, 3, 'kellonaika erottaa saman päivän havainnot');
-  for (const t of tekstit) assert.match(t, /UTC$/, 'aikavyöhyke on näkyvissä');
-  // Myös pikkukuvan lyhyt päiväys kantaa kellonajan.
-  assert.equal(new Set(sama.map((h) => paivateksti(h.aika))).size, 3);
-});
-
-test('aikatekstit ja aluetekstit ovat suomalaisessa muodossa', () => {
+test('aikatekstit ja paikkatekstit ovat suomalaisessa muodossa', () => {
+  // KELLONAIKAA EI KEKSITÄ: NASA merkitsee astronauttikuvalle useimmiten
+  // pelkän päivän, ja silloin kellonaikaa ei näytetä.
+  assert.equal(aikateksti('2002-10-30'), '30.10.2002');
+  assert.equal(paivateksti('2002-10-30'), '30.10.02');
+  // Jos aineistossa on oikea kellonaika, vyöhyke sanotaan ääneen.
   assert.equal(aikateksti('2026-04-29T20:56:13.691Z'), '29.4.2026 klo 20.56 UTC');
   assert.equal(paivateksti('2026-04-29T20:56:13.691Z'), '29.4.26 20.56');
-  assert.equal(alueteksti([12.29, 45.4067, 12.3752, 45.4654]), '45,41–45,47° N · 12,29–12,38° E');
-  assert.equal(alueteksti([-79.1, -8.5, -79.0, -8.4]), '8,50–8,40° S · 79,10–79,00° W');
+  assert.equal(paikkateksti(37.751, 14.994), '37,75° N · 14,99° E');
+  assert.equal(paikkateksti(-50.3, -72.8), '50,30° S · 72,80° W');
 });
 
 test('galleriassa on laskuri, nuolet, pikkukuvat ja vertailu', () => {
@@ -396,11 +404,10 @@ test('galleriassa on laskuri, nuolet, pikkukuvat ja vertailu', () => {
   assert.match(lahde, /'satelliitti-nuoli satelliitti-seuraava', '›'/);
   assert.match(lahde, /satelliitti-nauha/);
   assert.match(lahde, /satelliitti-vertaa/);
+  // Pikkukuvanauha lataa pienen tiedoston, ei koko ruudun kuvaa uudestaan.
+  assert.match(lahde, /pikku\.src = toinen\.pikku \?\? toinen\.kuva/);
   // Rinnakkain, EI päällekkäistä pyyhkäisyliukuria (väärä muutoksen vaikutelma).
   assert.match(lahde, /kaksi havaintoa rinnakkain/);
-  // Vertailu on kaksi erillistä kuvaa vierekkäin; päällekkäistä
-  // pyyhkäisyliukuria ei rakenneta (ei clip-path-puolikasta eikä
-  // syötettä, joka siirtäisi toisen kuvan rajaa toisen päällä).
   assert.ok(!/clip-path/i.test(tyyli), 'päällekkäistä rajausta ei saa olla');
   assert.ok(!/type="range"|type = 'range'/.test(lahde), 'pyyhkäisyliukuria ei saa olla');
   assert.match(tyyli, /\.satelliitti-vertailu-parit \{[\s\S]*display: flex/);
@@ -408,57 +415,72 @@ test('galleriassa on laskuri, nuolet, pikkukuvat ja vertailu', () => {
 
 /* ═════════════ 6. ei live-väitettä, lähteet mukana ══════════════ */
 
-test('kortissa lukee arkistohavainto — mitään live-kuvausta ei luvata', () => {
-  assert.match(lahde, /'Arkistohavainto · ICEYE · tutkakuva'/);
-  // Leima on KUVAN päällä ja jää sinne myös zoomatessa: lisenssiehto,
-  // ei koriste. Sen pari on info-popupin "Lisenssi: CC BY 4.0".
-  assert.match(lahde, /html\('span', 'satelliitti-leima', 'Arkistohavainto · ICEYE · tutkakuva'\)/);
+test('kuvan päällä lukee lähde — mitään live-kuvausta ei luvata', () => {
+  assert.match(lahde, /'Valokuva avaruudesta · NASA'/);
+  // Leima on KUVAN päällä ja jää sinne myös zoomatessa.
+  assert.match(lahde, /html\('span', 'satelliitti-leima', 'Valokuva avaruudesta · NASA'\)/);
   assert.match(lahde, /lava\.append\(kuva, leima\)/);
   assert.match(tyyli, /\.satelliitti-leima \{[\s\S]*position: absolute/);
-  // Kuvaustilausta ei ole: linssi ei pyydä satelliitilta mitään eikä
-  // tee yhtään verkkokutsua — kuvat ovat valmiita arkisto-osoitteita.
-  assert.ok(!/\bfetch\(|XMLHttpRequest/.test(lahde), 'linssi ei saa pyytää uutta kuvausta');
-  // Jokainen näytettävä kuva on aineiston arkistotietueesta.
+  // ICEYE-attribuutio poistui kokonaan: aineistoa ei enää käytetä.
+  assert.ok(!/ICEYE · tutkakuva/.test(lahde), 'vanha tutkaleima on yhä kuvan päällä');
+  assert.ok(!/iceye/i.test(JSON.stringify(SATELLIITTI_KOHTEET)), 'aineistossa on yhä ICEYE-jäämiä');
+  // Kuvaustilausta ei ole: linssi ei pyydä mitään eikä tee verkkokutsuja.
+  assert.ok(!/\bfetch\(|XMLHttpRequest/.test(lahde), 'linssi ei saa pyytää uutta kuvaa');
   assert.match(lahde, /kuva\.src = h\.kuva/);
 });
 
-test('lisenssi ja attribuutio ovat CC BY 4.0 / ICEYE ja kulkevat kuvan mukana', () => {
-  assert.equal(SATELLIITTI_LAHDE.lisenssi, 'CC BY 4.0');
-  assert.equal(SATELLIITTI_LAHDE.tekija, 'ICEYE');
-  assert.match(SATELLIITTI_LAHDE.osoite, /^https:\/\/sar\.iceye\.com\//);
+test('lähde on NASA ja public domain, ja se kulkee kuvan mukana', () => {
+  assert.equal(SATELLIITTI_LAHDE.tekija, 'NASA');
+  assert.equal(SATELLIITTI_LAHDE.lisenssi, 'Public domain');
+  assert.match(SATELLIITTI_LAHDE.osoite, /^https:\/\/images\.nasa\.gov\//);
   const kohde = SATELLIITTI_KOHTEET[0];
   const tiedot = kuvatiedot(kohde, kohde.havainnot[0]);
-  assert.match(tiedot.lahde, /ICEYE, CC BY 4\.0/);
-  assert.match(tiedot.selite, /ICEYE Open Data/);
-  assert.match(tiedot.lyhyt, /UTC$/);
+  assert.match(tiedot.lahde, /NASA, Public domain/);
+  assert.match(tiedot.selite, /Astronauttien Maa-kuvat/);
+  // Kuvateksti kulkee kuvan selitteessä, ei pelkkä nimi.
+  assert.ok(tiedot.selite.includes(kohde.havainnot[0].teksti), 'kuvateksti puuttuu selitteestä');
 });
 
-test('jokaisella havainnolla on aika, alue, kuva ja lähdetietue', () => {
+test('jokaisella kuvalla on aika, kuvateksti, osoitteet ja lähdesivu', () => {
   for (const kohde of SATELLIITTI_KOHTEET) {
     assert.ok(kohde.havainnot.length >= 1, kohde.tunnus);
+    assert.ok(kohde.nimi && kohde.seutu && kohde.selite, kohde.tunnus);
+    assert.ok(Number.isFinite(kohde.lat) && Number.isFinite(kohde.lon), kohde.tunnus);
     for (const h of kohde.havainnot) {
-      assert.match(h.id, /^ICEYE_/, 'kooste ei ole havainto');
-      assert.match(h.aika, /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/);
-      assert.equal(h.alue.length, 4);
-      assert.match(h.kuva, /^https:\/\/iceye-open-data-catalog\.s3\.amazonaws\.com\/.*\.png$/);
-      assert.match(h.stac, /^https:\/\/iceye-open-data-catalog\.s3\.amazonaws\.com\/.*\.json$/);
-      assert.ok(h.tila && h.satelliitti, `${h.id}: kuvaustapa puuttuu`);
+      assert.match(h.id, /^[a-z0-9]+$/i, `${kohde.tunnus}: outo kuvatunnus`);
+      assert.match(h.aika, /^\d{4}-\d{2}-\d{2}/);
+      assert.match(h.kuva, /^https:\/\/images-assets\.nasa\.gov\/image\/.*~large\.jpg$/);
+      assert.match(h.pikku, /^https:\/\/images-assets\.nasa\.gov\/image\/.*~(small|thumb)\.jpg$/);
+      assert.match(h.sivu, /^https:\/\/images\.nasa\.gov\/details\//);
+      assert.ok(h.kuvaustapa, `${h.id}: kuvaustapa puuttuu`);
+      // KUVATEKSTI ON TÄRKEIN: se on ainoa teksti, jonka pelaaja näkee.
+      assert.ok(typeof h.teksti === 'string' && h.teksti.length >= 80,
+        `${h.id}: kuvateksti puuttuu tai on liian lyhyt`);
+      assert.ok(/[a-zäö]/.test(h.teksti) && h.teksti.trim().endsWith('.'),
+        `${h.id}: kuvateksti ei ole kokonainen virke`);
     }
   }
 });
 
-test('luokittelu ei nojaa tiedostonimeen', () => {
+test('kohteet ja kuvatekstit ovat työkalun käsin katsotussa luettelossa', () => {
   const tyokalunLahde = lue('../tools/hae-satelliittihavainnot.mjs');
-  // Ryhmittely lukee bboxeja; nimenpaloja ei poimita osoitteesta.
-  assert.match(tyokalunLahde, /export function samaKohde\(a, b\)/);
-  assert.ok(!/href\.(includes|match|split)\(/.test(tyokalunLahde),
-    'osoitteesta ei saa lukea paikannimeä');
-  // Kohteiden nimet tulevat käsin tarkistetusta ANKKURIT-luettelosta.
-  assert.ok(tyokalu.ANKKURIT.length >= 10);
-  for (const a of tyokalu.ANKKURIT) {
-    assert.ok(a.tunnus && a.nimi && a.seutu && a.selite);
-    assert.ok(Number.isFinite(a.lat) && Number.isFinite(a.lon));
+  assert.ok(tyokalu.KOHTEET.length >= 20);
+  for (const k of tyokalu.KOHTEET) {
+    assert.ok(k.tunnus && k.nimi && k.seutu && k.selite && k.oletus);
+    assert.ok(Number.isFinite(k.lat) && Number.isFinite(k.lon));
+    assert.ok(k.kuvat.length >= 1);
+    for (const kuva of k.kuvat) assert.ok(kuva.id && kuva.teksti, `${k.tunnus}: kuvateksti puuttuu`);
+    assert.ok(k.kuvat.some((kuva) => kuva.id === k.oletus), `${k.tunnus}: oletus ei ole luettelossa`);
   }
+  // Aineistotiedosto vastaa luetteloa: samat kohteet samassa järjestyksessä.
+  assert.deepEqual(SATELLIITTI_KOHTEET.map((k) => k.tunnus), tyokalu.KOHTEET.map((k) => k.tunnus));
+  // Kuvausaika luetaan NASAn tiedosta, mutta kellonaikaa ei keksitä.
+  assert.equal(tyokalu.siistiAika('2002-10-30T00:00:00Z'), '2002-10-30');
+  assert.equal(tyokalu.siistiAika('2013-10-23T18:42:00Z'), '2013-10-23T18:42:00Z');
+  assert.equal(tyokalu.kuvaustapa('iss074e0459342'), 'Kansainväliseltä avaruusasemalta');
+  assert.equal(tyokalu.retkikunta('iss005e19024'), 'Retkikunta 5');
+  // Työkalu tarkistaa jokaisen osoitteen eikä arvaa niitä.
+  assert.match(tyokalunLahde, /kuvaVastaa\(kuva\)/);
 });
 
 test('kuvat eivät tule repoon — vain osoitteet', () => {
