@@ -239,7 +239,12 @@ export function lepokerroksenAlue(naytteet, keskiLng, {
  *
  * Pohjoisessa vähennystä ei tehdä: siellä kartta ulottuu rajauksen
  * yläreunaan (84° N, Huippuvuoret ja Frans Joosefin maa) — sama
- * päättely kuin polttotyökalussa.
+ * päättely kuin polttotyökalussa. Pohjoisrajan tekee napakansi
+ * (naparaja 83,7°), ei arkki.
+ *
+ * TÄMÄ RAJA KOSKEE MYÖS JOKAISTA YKSITTÄISTÄ LAATTAA (12.9.2026):
+ * pelkkä valinta-alueen rajaus jätti arkin marginaalin laatan OMAAN
+ * verkkoon, ja kartussi päätyi pohjoisnavalle — ks. laatanPalloAlue.
  *
  * @param {object} p.pyramidi  pyramidi.json (rajaus/arkki, kehys)
  * @param {function} p.yLat    arkin y (lautayksikköä) → leveysaste
@@ -252,6 +257,58 @@ export function pyramidinKarttaAla({ pyramidi, yLat, naparaja = 90 }) {
   const latMax = Math.min(naparaja, yLat(rajaus.y));
   const latMin = Math.max(-naparaja, yLat(rajaus.y + rajaus.h - alakehys));
   return { latMin, latMax };
+}
+
+/*
+ * LAATAN OMA SUORAKAIDE PALLOLLA — RAJATTUNA KARTTA-ALAAN (vika
+ * 12.9.2026, omistaja sanatarkasti: *"Pohjoisnapa kaukaa edelleen
+ * väärin"*; kuvakaappauksessa navan päällä on julisteen KARTUSSI, se
+ * pyöreä vaalea leima, jossa lukee MATKAKIRJA).
+ *
+ * MITATTU SYY. `pyramidinKarttaAla` rajasi vain sen laatikon, jolta
+ * laatat VALITAAN — laatan oma verkko rakennettiin laatan koko
+ * pikselisuorakaiteesta. Pyramidin ylin laattarivi on ARKKIA eikä
+ * karttaa: arkin yläreuna on 88,65° N (laudaltaAsteiksi arkki.y:stä),
+ * kartan yläreuna 84,0° N ja napakansi alkaa 83,7°:sta. Väliin jää
+ * julisteen ylämarginaali, jossa on kartussi (MATKAKIRJA / Unohdettu
+ * aarre, tools/fokuskartta/maailmapiirto.js osio 9) — ja se piirtyi
+ * pallolle 84°–88,65° N:n kiekkona, jonka keskellä on reikä.
+ *
+ * MITTAUS (Chromium 390 × 844, 12.9.2026, kaikki viisi kamerakorkeutta
+ * 0,3 / 0,6 / 1,0 / 1,6 / 2,5): rivin 0 laattojen verkon ylin
+ * leveysaste oli JOKA korkeudella 88,65° eli 4,95° napakannen reunan
+ * yli. Etelässä sama vuoto oli −65,43°, vaikka karttaAla rajaa
+ * −61,47°:een (alakehys). Kalotti (js/pallo.js NAPAKALOTIT) peitti
+ * vuodon lähikuvassa, mutta EI KAUKAA: laatan materiaalissa on
+ * polygonOffsetUnits −8, ja se on ikkunasyvyyttä — mitä kauempana
+ * kamera on, sitä enemmän maailmayksikköjä sama askel tarkoittaa.
+ * Kaukana se ylittää kalotin korotuksen (säde × 0,0025) ja laatta
+ * piirtyy kalotin päälle. Siksi vika näkyi vain kaukaa.
+ *
+ * KORJAUS ON SISÄLLÖSSÄ EIKÄ JÄRJESTYKSESSÄ: arkin kalusteita ei
+ * piirretä pallolle lainkaan, millään tasolla eikä miltään
+ * etäisyydeltä. Laatan verkko leikataan karttaAlaan; jos laatasta ei
+ * jää karttaa lainkaan, verkkoa ei synny (lat1 ≤ lat0).
+ *
+ * @param {object} p.taso     pyramidin taso { z, leveys, korkeus, ... }
+ * @param {number} p.laatta   laatan sivu pikseleinä
+ * @param {function} p.lonPx  laatan pikselisarake → pituusaste
+ * @param {function} p.latPx  laatan pikselirivi → leveysaste
+ * @param {object} p.karttaAla { latMin, latMax } (pyramidinKarttaAla)
+ */
+export function laatanPalloAlue({ taso, sarake, rivi, laatta, lonPx, latPx, karttaAla }) {
+  const x0 = sarake * laatta;
+  const y0 = rivi * laatta;
+  const w = Math.min(laatta, taso.leveys - x0);
+  const h = Math.min(laatta, taso.korkeus - y0);
+  const latMax = Number.isFinite(karttaAla?.latMax) ? karttaAla.latMax : 90;
+  const latMin = Number.isFinite(karttaAla?.latMin) ? karttaAla.latMin : -90;
+  return {
+    lon0: lonPx(x0),
+    lon1: lonPx(x0 + w),
+    lat1: Math.min(latMax, latPx(y0)),
+    lat0: Math.max(latMin, latPx(y0 + h)),
+  };
 }
 
 /** Laattakatto ruudun laitepikseleistä (ks. LEPOKERROS_KATTOKERROIN). */
@@ -1077,6 +1134,18 @@ export function luoLaattakerros({
    */
   const aluemuisti = new Map();
   const ALUEMUISTIN_KATTO = 4096;
+  /*
+   * KARTTA-ALA KERRAN. Pyramidi haetaan kerran, joten arkin karttaraja
+   * (pyramidinKarttaAla) on vakio — ja sitä tarvitsee sekä laattojen
+   * valinta (suorita) että jokaisen laatan verkko (laatanPalloAlue).
+   */
+  let karttaAlaMuisti = null;
+  const karttaAla = () => {
+    if (!karttaAlaMuisti && pyramidi) {
+      karttaAlaMuisti = pyramidinKarttaAla({ pyramidi, yLat, naparaja });
+    }
+    return karttaAlaMuisti ?? { latMin: -naparaja, latMax: naparaja };
+  };
   const laatanAlue = (tasoOlio, sarake, rivi) => {
     const muistiavain = `${tasoOlio.z}/${sarake}/${rivi}`;
     const muistissa = aluemuisti.get(muistiavain);
@@ -1097,14 +1166,11 @@ export function luoLaattakerros({
       if (lat === undefined) { lat = yLat(py / ppu + arkki.y); rivimuisti.set(avain, lat); }
       return lat;
     };
-    const x0 = sarake * koko;
-    const y0 = rivi * koko;
-    const w = Math.min(koko, tasoOlio.leveys - x0);
-    const h = Math.min(koko, tasoOlio.korkeus - y0);
-    return {
-      lon0: lonPx(x0), lon1: lonPx(x0 + w),
-      lat1: latPx(y0), lat0: latPx(y0 + h),
-    };
+    // Arkin marginaalit (kartussi, kehys, painajanrivi) pois: ks.
+    // laatanPalloAlue.
+    return laatanPalloAlue({
+      taso: tasoOlio, sarake, rivi, laatta: koko, lonPx, latPx, karttaAla: karttaAla(),
+    });
   };
 
   const lataa = async (t) => {
@@ -1353,7 +1419,7 @@ export function luoLaattakerros({
     for (let j = 0; j < N; j += 1) {
       for (let i = 0; i < N; i += 1) naytteet.push(osuma((W * i) / (N - 1), (H * j) / (N - 1)));
     }
-    const { latMin, latMax } = pyramidinKarttaAla({ pyramidi, yLat, naparaja });
+    const { latMin, latMax } = karttaAla();
     const raaka = lepokerroksenAlue(naytteet, pov.lng, { latMin, latMax, vara: 0 });
     if (!raaka) return luovuta('ei näytteitä pallolla');
     /*
