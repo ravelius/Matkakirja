@@ -3533,13 +3533,24 @@ function avaaSuurennos(ui, lista, alku, ankkuri, { pulunKuvasta = -1, lyhytTekst
     // Muiden tietokorttien pitkien selitteiden sääntö ei muutu.
     selite.textContent = lyhytTeksti ? kuvatekstiLyhyt(kuva) : kuvatekstiPitka(kuva);
     /*
-     * Yksi Havainnekuva-linkki kuvatekstin perään (omistaja 10.9.).
-     * Jos lähderivillä on muutakin tietoa, linkitys hoidetaan siellä.
-     * Kuvanvaihto rakentaa tekstin ja linkin uudestaan; kartan pienessä
-     * kuvatekstissä linkkiä ei edelleenkään näytetä.
+     * HAVAINNEKUVA-LINKKI KUULUU VAIN PITKÄÄN KUVATEKSTIIN (omistaja
+     * 9.9.2026 kartan lapusta, sama sääntö ulotettu suurennokseen
+     * 12.9.2026, sanatarkasti: *"tässä lyhyessä kuvatekstissä ei saa
+     * olla tuota havainnekuvalinkkiä. Se näkyy vasta pidemmässä
+     * kuvatekstissä."*).
+     *
+     * Sääntö on siis yksi ja sama kaikkialla: lyhyt kuvateksti on
+     * kuvan OTSIKKO, pitkä on sen avattu muoto — ja selitys kuuluu
+     * avattuun muotoon. Albumin karuselli näyttää lyhyen tekstin
+     * (lyhytTeksti), joten linkkiä ei sinne rakenneta; muissa
+     * kutsupaikoissa teksti on pitkä ja linkki tulee entiseen tapaan.
+     *
+     * LÄHDERIVI EI KATOA: tekijä-, lisenssi- ja lähdetiedot
+     * kirjoitetaan yhä omalle rivilleen (taytaLahderivi) riippumatta
+     * siitä, kumpi kuvateksti on näkyvissä.
      */
     const pelkkaMerkinta = !kuva.tekijaId && /^\s*Matkakirjan\s+(?:havainnekuva|kuvitus)\s*[.]?\s*$/iu.test(kuva.lahde ?? '');
-    const linkki = pelkkaMerkinta ? havainnekuvaLinkki(kuva.lahde ?? '', kuva) : null;
+    const linkki = pelkkaMerkinta && !lyhytTeksti ? havainnekuvaLinkki(kuva.lahde ?? '', kuva) : null;
     if (linkki) {
       selite.appendChild(document.createTextNode(' '));
       selite.appendChild(linkki);

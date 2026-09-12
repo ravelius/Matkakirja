@@ -1789,6 +1789,38 @@
   flex-direction: column;
   align-items: stretch;
   gap: 0.45rem;
+  /*
+   * LEVEYS ON KUVAN LEVEYS, EI KORTIN ULKOMITTA (omistajan
+   * vikailmoitus 12.9.2026: *"Näissä kuvissa on turhaan ylhäällä ja
+   * alhaalla pieni marginaali."*).
+   *
+   * Sivuston yleinen nollaus asettaa kaikelle `box-sizing: border-box`
+   * (css/styles.css tähtivalitsin), ja se söi tästä kehyksestä sisennyksen verran
+   * sisätilaa: JS asettaa SEKÄ kehyksen leveydeksi että kuvan
+   * leveydeksi saman luvun (avaaSuurennos mitoita), joten border-box
+   * kutisti kuvan `max-width: 100%` -säännöllä 19,6 px kapeammaksi
+   * mutta JÄTTI sen korkeuden ennalleen. Kuvasuhde ei enää täsmännyt,
+   * ja `object-fit: contain` piirsi eron kirjekuorireunoina ITSE
+   * kuvaelementin sisään — mitattu Chromiumilla 12.9.2026: puhelimella
+   * (390 × 844) kuvaelementti 324,4 × 215 px, piirretty kuva
+   * 324,4 × 202,8 px eli 6,1 px turhaa tilaa sekä ylle että alle.
+   *
+   * `content-box` palauttaa alkuperäisen sopimuksen: annettu leveys on
+   * KUVAN leveys, ja kortti kasvaa siitä oman paperireunuksensa verran
+   * — juuri se tila, jonka JS on jo varannut (SUURENNOS_KEHYS_PX = 26,
+   * todellinen tarve 19,6). Paperireunus ja kuvatekstipalkki säilyvät
+   * ennallaan; vain kuvan sisäinen kirjekuori katoaa.
+   *
+   * SAMA VIKA ON JO KERRAN KORJATTU TOISAALLA toisella tavalla:
+   * kohdekortin suurennos (css/fokuskohteet.css .fokuskohde-zoomkuva,
+   * omistajan palaute 25.8.2026 *"nyt paperikehyksessä on isot tyhjät
+   * kaistat kuvan ylä- ja alapuolella"*) luopui kuvan omasta
+   * korkeudesta kokonaan ja jätti selaimen laskea sen `aspect-ratio`:sta.
+   * Täällä kuvan pikselimitta on pidettävä (PULU-CAM-sinetin kuori ja
+   * FLIP-animaation maalilaatikko lukevat sitä), joten ristiriita
+   * puretaan toisesta päästä: kehys saa saman mitan sisätilakseen.
+   */
+  box-sizing: content-box;
   /* JS antaa leveyden (mitoita); katto on vain vara, eikä se saa
      kaventaa yhteisen linjauksen mittaa (js/ui-apurit.js
      suurennoksenMitat, omistaja 8.9.2026). */

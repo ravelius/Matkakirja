@@ -962,7 +962,7 @@ test('lyhyt kuvateksti kertoo päällimmäisestä kuvasta, ei alle jääneestä'
   });
 });
 
-test('albumissa on lyhyt teksti ja yksi havainnekuvamerkintä, lähdetiedot säilyvät', () => {
+test('albumin lyhyessä kuvatekstissä EI ole havainnekuvalinkkiä, lähdetiedot säilyvät', () => {
   pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
@@ -978,25 +978,30 @@ test('albumissa on lyhyt teksti ja yksi havainnekuvamerkintä, lähdetiedot säi
     nappain('ArrowLeft');
 
     /*
-     * ISOISÄN KUVASSA LINKKI ON AINA (lähde "Matkakirjan havainnekuva"),
-     * ja se on nimenomaan PITKÄN TEKSTIN PERÄSSÄ — ei lähderivillä, joka
-     * säilyy omanaan.
+     * ISOISÄN KUVA: lähde on "Matkakirjan havainnekuva", mutta albumi
+     * näyttää LYHYEN kuvatekstin — eikä linkki kuulu lyhyeen tekstiin
+     * (omistaja 12.9.2026, sanatarkasti: *"tässä lyhyessä
+     * kuvatekstissä ei saa olla tuota havainnekuvalinkkiä. Se näkyy
+     * vasta pidemmässä kuvatekstissä."*). Sama sääntö oli jo kartan
+     * lapulla (omistaja 9.9.2026); tämä on sen toinen puoli.
      */
-    const linkki = havainnekuvanLinkki(kerros);
-    assert.ok(linkki, 'isoisän pitkästä kuvatekstistä puuttuu Havainnekuva-linkki');
-    assert.equal(linkki.textContent, HAVAINNEKUVA_LINKKI_TEKSTI);
-    assert.equal(linkki.nodeName, 'BUTTON');
-    // Perässä: linkki on selitteen viimeinen elementti.
-    const selite = kerros.querySelector('.fokuszoom-selite');
-    assert.equal(selite.childNodes[selite.childNodes.length - 1], linkki);
-    assert.equal(pitkaTeksti(kerros), POHJAKUVA.lyhyt, 'linkki söi lyhyen tekstin');
-    // Lähderivi säilyy ennallaan omanaan.
+    assert.equal(havainnekuvanLinkki(kerros), null,
+      'havainnekuvalinkki palasi albumin lyhyeen kuvatekstiin');
+    assert.equal(kerros.querySelectorAll('.havainnekuva-selite').length, 0,
+      'havainnekuvamerkintä ei kuulu lyhyeen kuvatekstiin');
+    assert.equal(kerros.querySelectorAll('.havainnekuva-linkki').length, 0);
+    // Lyhyt teksti on ehjä eikä siitä katosi mitään.
+    assert.equal(pitkaTeksti(kerros), POHJAKUVA.lyhyt);
+    assert.equal(kerros.querySelector('.fokuszoom-selite').textContent, POHJAKUVA.lyhyt,
+      'selitteeseen jäi muutakin kuin lyhyt kuvateksti');
+    // Pelkkä havainnekuvamerkintä pysyy piilossa omalla rivillään.
     assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, '');
     assert.equal(kerros.querySelector('.fokuszoom-lahde').hidden, true);
-    assert.equal(kerros.querySelectorAll('.havainnekuva-selite').length, 1,
-      'havainnekuvamerkintä kahdentui');
 
-    // PULUN KUVA ILMAN HAVAINNEKUVALÄHDETTÄ EI SAA LINKKIÄ.
+    /*
+     * LÄHDERIVI EI KATOA PELISTÄ: tekijä-, lisenssi- ja lähdetiedot
+     * kirjoitetaan yhä omalle rivilleen, aivan kuten ennenkin.
+     */
     nappain('ArrowRight');
     assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[0].lyhyt);
     assert.equal(havainnekuvanLinkki(kerros), null,
@@ -1004,20 +1009,41 @@ test('albumissa on lyhyt teksti ja yksi havainnekuvamerkintä, lähdetiedot säi
     assert.equal(kerros.querySelector('.fokuszoom-lahde').hidden, false);
     assert.equal(kerros.querySelector('.fokuszoom-lahde').textContent, PULUN_KUVAT[0].lahde);
 
-    // PULUN KUVA, JONKA LÄHDE SEN SANOO, SAA LINKIN.
+    // HAVAINNEKUVALÄHTEINEN PULUN KUVA EI SAA LINKKIÄ ALBUMISSA.
     nappain('ArrowRight');
     nappain('ArrowRight');
     assert.equal(pitkaTeksti(kerros), PULUN_KUVAT[2].lyhyt);
-    assert.ok(havainnekuvanLinkki(kerros),
-      'havainnekuvalähteinen pulun kuva jäi ilman linkkiä');
+    assert.equal(havainnekuvanLinkki(kerros), null,
+      'havainnekuvalähteinen pulun kuva sai linkin lyhyeen kuvatekstiin');
+    assert.equal(kerros.querySelector('.fokuszoom-lahde').hidden, true);
 
-    // Takaisin: vanha linkki ei saa jäädä roikkumaan väärän kuvan perään.
+    // Selaus edestakaisin ei saa synnyttää linkkiä kummallekaan kuvalle.
     nappain('ArrowLeft');
-    assert.equal(havainnekuvanLinkki(kerros), null, 'linkki jäi edellisestä kuvasta');
+    assert.equal(havainnekuvanLinkki(kerros), null);
+    assert.equal(asiakirja.querySelectorAll('.fokuszoom .havainnekuva-linkki').length, 0);
 
     suljeSuurennos(ui);
     piilotaLuentakuva(ui, { heti: true });
   });
+});
+
+/*
+ * LINKKI EI SAA KADOTA PELISTÄ — SE KUULUU PITKÄÄN KUVATEKSTIIN.
+ *
+ * Albumi on ainoa kutsupaikka, joka pyytää lyhyen tekstin
+ * (`lyhytTeksti: true`); kaikki muut suurennokset näyttävät pitkän
+ * kuvatekstin ja saavat linkin entiseen tapaan. Tämä vartio lukee
+ * lähteen, koska se on ainoa tapa todistaa, että ehto on juuri
+ * "pelkkä havainnekuvamerkintä JA pitkä teksti" eikä esimerkiksi
+ * koko linkinrakennus poistettu.
+ */
+test('havainnekuvalinkki rakennetaan yhä pitkään kuvatekstiin', () => {
+  const lahde = readFileSync(new URL('../js/fokusvirta.js', import.meta.url), 'utf8');
+  const kohta = lahde.slice(lahde.indexOf('function avaaSuurennos('));
+  assert.match(kohta, /pelkkaMerkinta && !lyhytTeksti \? havainnekuvaLinkki\(/,
+    'pitkän kuvatekstin havainnekuvalinkki katosi suurennoksesta');
+  assert.match(kohta, /taytaLahderivi\(lahde, pelkkaMerkinta \? '' : kuva\.lahde/,
+    'lähderivi ei enää kulje taytaLahderivin kautta');
 });
 
 /* ---------------------------------------------------------------- */
