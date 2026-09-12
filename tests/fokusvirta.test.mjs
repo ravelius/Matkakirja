@@ -315,13 +315,15 @@ test('jokaisella fokuskaupungilla on Livian puheenvuoro isoisän merkintään', 
       `${kaupunki}: Livian puheenvuoro puuttuu tai on liian lyhyt`);
     assert.notEqual(puhe, livianKuplat(virta.pollo?.teksti).join(' '),
       `${kaupunki}: puheenvuoro ei saa olla sama teksti kuin vaiheen huomio`);
-    // Kuplakohtaista merkkikattoa ei ole 12.9.2026 alkaen: Horatio ja
-    // Pulu mitoitetaan kaupunkiparina. Kentän pitää silti koostua
-    // oikeista, ei-tyhjistä kuplista; mobiilin ylivuotosopimusta vartioi
-    // tests/pollo.test.mjs.
+    // Vanha kuplakohtainen 125 merkin vartio säilyy muilla kaupungeilla.
+    // Horatio–Livia-pilotissa omistajan 13.9.2026 hyväksymä mitta on sen
+    // sijaan kaupungin yhteinen paribudjetti; sitä vartioi erillinen
+    // horatio-livia-pilotti.test.mjs.
+    const paribudjettipilotit = new Set(['marseille', 'ateena', 'sarajevo', 'venetsia']);
     for (const kupla of kommentti) {
-      assert.equal(typeof kupla, 'string', `${kaupunki}: kupla ei ole tekstiä`);
-      assert.ok(kupla.trim().length > 0, `${kaupunki}: kupla on tyhjä`);
+      if (!paribudjettipilotit.has(kaupunki)) {
+        assert.ok(kupla.length <= 125, `${kaupunki}: kupla on liian pitkä luettavaksi ääneen`);
+      }
     }
     if (!kommentti.length) {
       // Huutomerkkejä Livia ei käytä vanhassa maadoituksessa

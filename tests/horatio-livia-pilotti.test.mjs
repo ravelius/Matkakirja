@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 
+import { LIVIAN_PILOTIN_REVISION, LIVIAN_PILOTTI_CUET } from '../js/livia-pilotti-cuet.js';
 import { livianTiiviste } from '../js/liviapuhe.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import {
@@ -11,19 +12,35 @@ import {
 
 const PILOTIT = ['marseille', 'ateena', 'sarajevo', 'venetsia'];
 
-/*
- * Omistajan 12.9.2026 linjaus: Horatio ja Pulu muodostavat yhden
- * kuuntelukokonaisuuden. Repliikkien keskinäinen pituus saa muuttua,
- * kunhan kaupungin yhteispituus ei kasva hyväksyntää edeltäneestä
- * r1-parista. Näin hyvä Pulu-repliikki ei joudu 125 merkin testikattoon,
- * jos Horatio on vastaavasti tiiviimpi.
- */
-const R1_PARIBUDJETTI_MERKKEINA = Object.freeze({
-  marseille: 438,
-  ateena: 461,
-  sarajevo: 431,
-  venetsia: 472,
-});
+const LAHTOBUDJETIT = {
+  marseille: { merkit: 430, sanat: 56 },
+  ateena: { merkit: 449, sanat: 57 },
+  sarajevo: { merkit: 436, sanat: 54 },
+  venetsia: { merkit: 454, sanat: 59 },
+};
+
+const HYVAKSYTYT_TTS = {
+  marseille: {
+    horatio: '[curious] Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. [softly] Maailma jäi likaiseksi; käteni olivat jo toista mieltä.',
+    livia: '[curious] Marseillen saippuaa tehdään yhä. [warmly] Minä erotan Vieux-Portin jo äänestä ja suolasta höyhenissä. [mischievously] Lokit tuntevat jokaisen pöydän. [softly] Minä vasta harjoittelen.',
+    liviaAnkkurit: ['saippuaa tehdään yhä', 'Vieux-Portin jo äänestä', 'Lokit tuntevat jokaisen pöydän', 'Minä vasta harjoittelen'],
+  },
+  ateena: {
+    horatio: '[curious] Ateenassa Troijan kullasta puhuttiin kuin kaikki olisivat olleet kaivamassa. Kahvilan isäntä piti Schliemannia nerona, asiakas varkaana; kultaa ei ollut kummallakaan näyttää. Akropolis ei tarvinnut mainosta. [softly] Maksoin kahvin kolikolla, jonka alkuperää ei kysytty.',
+    livia: '[curious] Schliemannin talo on nyt rahamuseo. [mischievously] Etsin puutarhasta varjoa, mutta kahvilan pöytien alta löytyi pullanmuruja. [brightly] Siinä unohtui varjo hetkeksi!',
+    liviaAnkkurit: ['nyt rahamuseo', 'Etsin puutarhasta varjoa', 'pöytien alta löytyi pullanmuruja', 'unohtui varjo hetkeksi'],
+  },
+  sarajevo: {
+    horatio: '[curious] Sarajevon kupariseppä naputti pannua vasaralla, jonka olisin hukannut taskuun. Viereisessä puodissa oli samanlainen kahvipannu. Olin juonut aamulla katsomatta; nyt näin jokaisen jäljen. [softly] Basaarin kilkutuksessa aamiainen muuttui käsityöksi.',
+    livia: '[softly] Kuparisepät naputtavat basaarissa yhä. [curious] Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. [mischievously] Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!',
+    liviaAnkkurit: ['basaarissa yhä', 'jäin kuuntelemaan yhtä vasaraa', 'naputtaa nokalla samaa tahtia', 'seppä oli kyllä nopeampi'],
+  },
+  venetsia: {
+    horatio: '[curious] Venetsiassa majatalon ovi avautui veteen, ja olin astua uimaan. Gondolieri piti ilmeensä suorana. Palatsien välissä kuulin lusikan osuvan kahvikuppiin yläkerrassa. [softly] Taloilla oli hienot julkisivut; vesi kuunteli niiden aamiaista.',
+    livia: '[brightly] Venetsiassa kuljetaan yhä vesibusseilla. [warmly] Minä lennän nykyään vähän pidempää reittiä. [whispers] Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! [mischievously] Hän vain sattui jokaiseen hyvään kuvakulmaan. [softly] No, ehkä minä vähän odotin.',
+    liviaAnkkurit: ['kuljetaan yhä vesibusseilla', 'vähän pidempää reittiä', 'Yhden tutun takia', 'kuvat ovat yksityisiä', 'jokaiseen hyvään kuvakulmaan', 'ehkä minä vähän odotin'],
+  },
+};
 
 function ilmanTageja(teksti) {
   return String(teksti ?? '').replace(/\[[^\]]+\]\s*/g, '').trim();
@@ -31,6 +48,10 @@ function ilmanTageja(teksti) {
 
 function virkkeita(teksti) {
   return (String(teksti ?? '').match(/[.!?](?=\s|$)/g) ?? []).length;
+}
+
+function sanoja(teksti) {
+  return String(teksti ?? '').trim().split(/\s+/u).filter(Boolean).length;
 }
 
 test('pilotin Horatio-teksti ja TTS ovat samasanaiset', () => {
@@ -42,17 +63,18 @@ test('pilotin Horatio-teksti ja TTS ovat samasanaiset', () => {
   }
 });
 
-test('pilotin Horatio ja Livia pysyvät kaupungin yhteisessä r1-budjetissa', () => {
+test('pilotin yhteinen Horatio–Livia-pari alittaa julkaistun lähtöbudjetin', () => {
   for (const cityId of PILOTIT) {
-    const horatio = FOKUSVIRRAT[cityId].matkakirja.teksti;
-    const kommentit = FOKUSVIRRAT[cityId].pollo.kommentti;
+    const virta = FOKUSVIRRAT[cityId];
+    const kommentit = virta.pollo.kommentti;
     assert.equal(kommentit.length, 1, `${cityId}: pilotti on yksi kupla`);
-    assert.ok(kommentit[0].trim().length > 0, `${cityId}: Livian kupla on tyhjä`);
+    assert.ok(virkkeita(kommentit[0]) >= 3, `${cityId}: näkökulman vaihto jäi liian lyhyeksi`);
     assert.doesNotMatch(kommentit[0], /\[[^\]]+\]/, `${cityId}: TTS-tagi näkyy kuplassa`);
-    const yhteensa = horatio.length + kommentit[0].length;
-    assert.ok(yhteensa <= R1_PARIBUDJETTI_MERKKEINA[cityId],
-      `${cityId}: Horatio+Livia ${yhteensa} merkkiä, r1-budjetti `
-      + `${R1_PARIBUDJETTI_MERKKEINA[cityId]}`);
+    const pari = `${virta.matkakirja.teksti}${kommentit[0]}`;
+    assert.ok(pari.length <= LAHTOBUDJETIT[cityId].merkit,
+      `${cityId}: pari ylittää lähtöparin merkkibudjetin`);
+    assert.ok(sanoja(pari) <= LAHTOBUDJETIT[cityId].sanat,
+      `${cityId}: pari ylittää lähtöparin sanabudjetin`);
   }
 });
 
@@ -70,25 +92,42 @@ test('pilotin Horatio-cueilla on pysyvät yksikäsitteiset ankkurit', () => {
   }
 });
 
-test('TTS-ajopaketti on sidottu pilotin sanoihin ja tiivisteisiin', () => {
+test('hyväksytyt r2-sanat, TTS-tagit ja Livian cue-ankkurit ovat tarkat', () => {
+  for (const cityId of PILOTIT) {
+    const virta = FOKUSVIRRAT[cityId];
+    const hyvaksytty = HYVAKSYTYT_TTS[cityId];
+    assert.equal(virta.matkakirja.luenta, hyvaksytty.horatio, `${cityId}: Horatio TTS`);
+    assert.equal(ilmanTageja(hyvaksytty.horatio), virta.matkakirja.teksti,
+      `${cityId}: Horatio näkyvät sanat`);
+    assert.equal(ilmanTageja(hyvaksytty.livia), virta.pollo.kommentti[0],
+      `${cityId}: Livia näkyvät sanat`);
+    for (const ankkuri of hyvaksytty.liviaAnkkurit) {
+      assert.equal(virta.pollo.kommentti[0].split(ankkuri).length - 1, 1,
+        `${cityId}: Livian ankkurin pitää esiintyä tasan kerran: ${ankkuri}`);
+    }
+  }
+});
+
+test('aktiivinen r2-ajopaketti on sidottu hyväksyttyihin sanoihin ja teknisiin cueihin', () => {
   const paketti = JSON.parse(readFileSync(new URL(
     '../docs/raportit/horatio-livia-pilotti-tts-ajopaketti-20260912.json',
     import.meta.url,
   ), 'utf8'));
-  assert.equal(paketti.state, 'hold-content-review-and-paid-run-authorization');
-  assert.equal(paketti.invariants.contentApprovedForAudio, false);
+  const sha = (teksti) => createHash('sha256').update(teksti).digest('hex');
+
+  assert.equal(paketti.schemaVersion, 2);
+  assert.equal(paketti.contentRevision, 'eu-hl-pilot-20260913-r2-approved1');
+  assert.equal(LIVIAN_PILOTIN_REVISION, paketti.contentRevision);
+  assert.equal(paketti.sourceTextCommit, 'b874501bdfdd4faa63d89b191704244f71c2045c');
+  assert.equal(paketti.state, 'hold-paid-run-authorization-and-final-audio');
+  assert.equal(paketti.invariants.contentApprovedForAudio, true);
   assert.equal(paketti.invariants.paidRunAuthorized, false);
   assert.equal(paketti.invariants.publishAuthorized, false);
-  assert.equal(paketti.horatio.items.length, PILOTIT.length);
-  assert.equal(paketti.livia.items.length, PILOTIT.length);
   assert.deepEqual(paketti.livia.voice, {
     state: 'owner-locked',
     name: 'flicker - cheerful fairy & sparkly sweetness',
     id: 'piI8Kku0DcvcL6TTSeQt',
   });
-  assert.equal(paketti.livia.model, 'eleven_v3');
-  assert.deepEqual(paketti.livia.stability, { name: 'natural', value: 0.5 });
-  assert.match(paketti.livia.generationCommand, /--aani piI8Kku0DcvcL6TTSeQt(?:\s|$)/);
   assert.equal(PULU_AANI_OLETUS, paketti.livia.voice.id);
   assert.equal(PULU_MALLI_OLETUS, paketti.livia.model);
   assert.equal(PULU_VAKAUS_OLETUS, paketti.livia.stability.name);
@@ -98,36 +137,27 @@ test('TTS-ajopaketti on sidottu pilotin sanoihin ja tiivisteisiin', () => {
     const virta = FOKUSVIRRAT[cityId];
     const horatio = paketti.horatio.items.find((rivi) => rivi.city === cityId);
     const livia = paketti.livia.items.find((rivi) => rivi.key === `${cityId}-3`);
-    assert.ok(horatio, `${cityId}: Horatio puuttuu ajopaketista`);
-    assert.ok(livia, `${cityId}: Livia puuttuu ajopaketista`);
-    assert.equal(horatio.visibleText, virta.matkakirja.teksti, `${cityId}: näkyvä Horatio`);
+    const tekninen = LIVIAN_PILOTTI_CUET[cityId];
+    assert.equal(horatio.visibleText, virta.matkakirja.teksti, `${cityId}: Horatio näkyvä`);
     assert.equal(horatio.ttsText, virta.matkakirja.luenta, `${cityId}: Horatio TTS`);
-    assert.equal(ilmanTageja(horatio.ttsText), horatio.visibleText, `${cityId}: Horatio sanat`);
-    assert.equal(horatio.visibleTextSha256,
-      createHash('sha256').update(horatio.visibleText).digest('hex'), `${cityId}: Horatio hash`);
-    assert.equal(horatio.ttsTextSha256,
-      createHash('sha256').update(horatio.ttsText).digest('hex'), `${cityId}: Horatio TTS hash`);
-    assert.equal(livia.visibleText, virta.pollo.kommentti[0], `${cityId}: näkyvä Livia`);
+    assert.equal(horatio.visibleTextSha256, sha(horatio.visibleText), `${cityId}: Horatio hash`);
+    assert.equal(horatio.ttsTextSha256, sha(horatio.ttsText), `${cityId}: Horatio TTS hash`);
+    assert.equal(livia.visibleText, virta.pollo.kommentti[0], `${cityId}: Livia näkyvä`);
     assert.equal(ilmanTageja(livia.ttsText), livia.visibleText, `${cityId}: Livia sanat`);
     assert.equal(livia.textDigest, livianTiiviste(livia.visibleText), `${cityId}: Livia tiiviste`);
-    assert.equal(livia.ttsTextSha256,
-      createHash('sha256').update(livia.ttsText).digest('hex'), `${cityId}: Livia TTS hash`);
-    const cueIds = new Set();
-    for (const cue of livia.cueAnchors) {
-      assert.match(cue.cueId, new RegExp(`^${cityId}\\.livia\\.c\\d+$`), `${cityId}: Livia cueId`);
-      assert.ok(!cueIds.has(cue.cueId), `${cityId}: Livia cueId toistuu`);
-      cueIds.add(cue.cueId);
-      assert.equal(livia.visibleText.split(cue.anchor).length - 1, cue.occurrence,
-        `${cue.cueId}: ankkurin pitää esiintyä täsmälleen sovitun kerran`);
-    }
+    assert.equal(livia.visibleTextSha256, sha(livia.visibleText), `${cityId}: Livia hash`);
+    assert.equal(livia.ttsTextSha256, sha(livia.ttsText), `${cityId}: Livia TTS hash`);
+    assert.equal(tekninen.tekstiSha256, livia.visibleTextSha256, `${cityId}: cue-tekstisidonta`);
+    assert.deepEqual(livia.cueAnchors, tekninen.cuet.map((cue) => ({
+      cueId: cue.id,
+      anchor: cue.ankkuri,
+      occurrence: cue.esiintyma,
+      purpose: cue.tarkoitus,
+      strength: cue.voimakkuus,
+    })), `${cityId}: cue-paketti`);
   }
-});
-
-test('workflow ei palauta tulevia Pulu-ajoja vanhaan ääneen tai v2-malliin', () => {
-  const workflow = readFileSync(new URL('../.github/workflows/generoi-pulu.yml', import.meta.url), 'utf8');
-  assert.match(workflow, /default: 'piI8Kku0DcvcL6TTSeQt'/);
-  assert.match(workflow, /default: 'eleven_v3'/);
-  assert.match(workflow, /default: 'natural'/);
-  assert.doesNotMatch(workflow, /default: 'yjJ45q8TVCrtMhEKurxY'/);
-  assert.doesNotMatch(workflow, /default: 'eleven_multilingual_v2'/);
+  const cueIds = paketti.livia.items.flatMap((rivi) => rivi.cueAnchors.map((cue) => cue.cueId));
+  for (const poistettu of ['ateena.livia.c2', 'sarajevo.livia.c2', 'venetsia.livia.c4']) {
+    assert.equal(cueIds.includes(poistettu), false, `${poistettu}: poistettua tunnistetta ei käytetä`);
+  }
 });

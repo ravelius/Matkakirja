@@ -10,7 +10,7 @@ import {
 import { ankkurinOsumat, livianKohdistustyo, tarkistaKohdistustyo } from '../tools/kohdista-pulu-eleet.mjs';
 
 test('tekninen lähde kattaa neljä pysyvää city-3-pilottia', () => {
-  assert.equal(LIVIAN_PILOTIN_REVISION, 'eu-hl-pilot-20260912-r1');
+  assert.equal(LIVIAN_PILOTIN_REVISION, 'eu-hl-pilot-20260913-r2-approved1');
   assert.deepEqual(LIVIAN_PILOTTIKAUPUNGIT, ['marseille', 'ateena', 'sarajevo', 'venetsia']);
   for (const kaupunki of LIVIAN_PILOTTIKAUPUNGIT) {
     const tyo = livianPilottityo(kaupunki, 'kommentti', 0);
@@ -40,8 +40,11 @@ test('runtime-cuet vastaavat tekstinomistajan koneellista ajopakettia', () => {
     const rivi = paketti.livia.items.find((item) => item.key === `${kaupunki}-3`);
     assert.ok(rivi, `${kaupunki}: ajopaketin Livia-rivi puuttuu`);
     assert.deepEqual(
-      LIVIAN_PILOTTI_CUET[kaupunki].cuet.map(({ id, ankkuri, esiintyma }) => ({
+      LIVIAN_PILOTTI_CUET[kaupunki].cuet.map(({
+        id, ankkuri, esiintyma, tarkoitus, voimakkuus,
+      }) => ({
         cueId: id, anchor: ankkuri, occurrence: esiintyma,
+        purpose: tarkoitus, strength: voimakkuus,
       })),
       rivi.cueAnchors,
       `${kaupunki}: runtime ja ajopaketti ovat eriytyneet`,

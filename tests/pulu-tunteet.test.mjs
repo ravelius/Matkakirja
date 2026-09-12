@@ -77,7 +77,8 @@ test('fokusvirta ilmoittaa tunnetagin kommenttikuplan alussa', () => {
  * jos tunnetagi vuotaisi tekstiin, jokainen 45 kaupungin äänite
  * vaikenisi kerralla. Tämä testi ajaa saman portin läpi kaikki kuplat.
  */
-test('tunnetagi ei muuta pulun äänitteiden tiivisteitä', () => {
+test('tunnetagi ei muuta tekstiä eikä ohita pilotin ääni-HOLDia', () => {
+  const audioHold = new Set(['ateena-3', 'marseille-3', 'sarajevo-3', 'venetsia-3']);
   for (const id of KAUPUNGIT) {
     const kuplat = livianKentanKuplat(FOKUSVIRRAT[id], 'kommentti');
     assert.ok(kuplat.length, `${id}: kommenttikupla puuttuu`);
@@ -86,8 +87,9 @@ test('tunnetagi ei muuta pulun äänitteiden tiivisteitä', () => {
         || !/tunne|voimakkuus/.test(teksti), `${id}: tagi vuoti kuplan tekstiin`);
       const indeksi = livianKaupunkiIndeksi(id, 'kommentti', i);
       assert.notEqual(indeksi, null, `${id}: kuplalla ${i} ei ole äänitepaikkaa`);
-      assert.equal(livianAaniAjanTasalla(id, indeksi, teksti), true,
-        `${id}-${indeksi + 1}: äänite ei ole enää ajan tasalla`);
+      const avain = `${id}-${indeksi + 1}`;
+      assert.equal(livianAaniAjanTasalla(id, indeksi, teksti), !audioHold.has(avain),
+        `${avain}: tagin ja hyväksytyn tekstin ääniportti on väärässä tilassa`);
     });
   }
 });

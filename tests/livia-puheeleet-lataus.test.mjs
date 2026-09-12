@@ -2,20 +2,21 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import { laskeSha256 } from '../js/luentareaktiot.js';
-import { LIVIAN_PILOTTI_CUET } from '../js/livia-pilotti-cuet.js';
+import { LIVIAN_PILOTIN_REVISION, LIVIAN_PILOTTI_CUET } from '../js/livia-pilotti-cuet.js';
+import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import {
   kytkeLivianPilottiEleet, livianEleidenOsoite, lataaLivianPilottiEleet,
   tarkistaLivianPilottiData,
 } from '../js/livia-puheeleet-lataus.js';
 import { kuunteleLivianTilanteita } from '../js/livia-tilanteet.js';
 
-const teksti = 'Marseillen saippuaa tehdään yhä. Lokit eivät tunne puhdasta pöytää. Minä erotan sataman jo äänestä ja suolasta höyhenissä.';
+const teksti = FOKUSVIRRAT.marseille.pollo.kommentti[0];
 const aanitavut = new TextEncoder().encode('koe-mp3');
 
 async function kelpoData() {
   const tyo = LIVIAN_PILOTTI_CUET.marseille;
   return {
-    versio: 1, revision: 'eu-hl-pilot-20260912-r1', kaupunki: 'marseille', avain: 'marseille-3',
+    versio: 1, revision: LIVIAN_PILOTIN_REVISION, kaupunki: 'marseille', avain: 'marseille-3',
     teksti, tekstiSha256: tyo.tekstiSha256,
     aani: { nimi: tyo.aaniNimi, tavut: aanitavut.byteLength, sha256: await laskeSha256(aanitavut) },
     eleet: tyo.cuet.map((cue, i) => ({ ...cue, alku: i * 1000 + 100, loppu: i * 1000 + 900 })),

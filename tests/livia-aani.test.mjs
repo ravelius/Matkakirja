@@ -411,17 +411,20 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   assert.equal(tila('paljastus-3'), 'ajan tasalla');
   assert.equal(tila('lehtivinkki-1'), 'ajan tasalla');
   /*
-   * KAIKKI 45 EUROOPAN KAUPUNKIKUPLAT GENEROITIIN 9.9.2026 omistajan
-   * teksteistä (generoi-pulu.yml ajo 12, pakota), ja LIVIAN_AANITETYT
-   * päivitettiin samasta kuivan ajon taulusta — joten jokainen vartioitu
-   * repliikki on ajan tasalla. Taulun ja pakkien eriytyminen näkyisi
-   * tässä heti muuttuneena tilana.
+   * Neljän kaupungin hyväksytyt r2-tekstit odottavat tarkoituksella uutta
+   * ääniajoa. Muut 41 Euroopan kaupunkikuplaa vastaavat edelleen 9.9.2026
+   * generoitua rekisteriä. Tämä vartio estää sekä vanhan äänen soimisen
+   * uuden tekstin päällä että tahattoman laajemman vanhentumisen.
    */
-  for (const avain of ['ateena-3', 'kreeta-3', 'sofia-3', 'pietari-3', 'riika-3', 'istanbul-3']) {
+  const odotetutMuuttuneet = ['ateena-3', 'marseille-3', 'sarajevo-3', 'venetsia-3'];
+  assert.deepEqual(
+    rivit.filter((rivi) => rivi.tila !== 'ajan tasalla').map((rivi) => rivi.avain).sort(),
+    odotetutMuuttuneet,
+  );
+  for (const avain of odotetutMuuttuneet) assert.equal(tila(avain), 'muuttunut', avain);
+  for (const avain of ['kreeta-3', 'sofia-3', 'pietari-3', 'riika-3', 'istanbul-3']) {
     assert.equal(tila(avain), 'ajan tasalla', avain);
   }
-  assert.ok(rivit.every((rivi) => rivi.tila === 'ajan tasalla'),
-    `vanhentuneita: ${rivit.filter((r) => r.tila !== 'ajan tasalla').map((r) => r.avain).join(', ')}`);
   for (const rivi of rivit) assert.equal(rivi.tila, aanitteenTila(rivi));
   // Peli vaikenee juuri niissä, jotka odottavat ajoa.
   for (const rivi of rivit) {

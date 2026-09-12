@@ -385,10 +385,10 @@ export const TAGIT = {
   'istanbul-3': { alku: '[brightly]' },
   'bukarest-3': { alku: '[brightly]' },
   'sarajevo-3': {
-    alku: '[warmly]',
+    alku: '[softly]',
     kohdat: [
-      ['Isoisä oppi', '[curious]'],
-      ['Minä kuuntelisin', '[softly]'],
+      ['Minun piti vain piipahtaa', '[curious]'],
+      ['Yritin naputtaa nokalla', '[mischievously]'],
     ],
   },
   'budapest-3': { alku: '[brightly]' },
@@ -428,8 +428,8 @@ export const TAGIT = {
   'ateena-3': {
     alku: '[curious]',
     kohdat: [
-      ['Puutarhakahvilassa', '[warmly]'],
-      ['Minä tarkistan', '[mischievously]'],
+      ['Etsin puutarhasta varjoa', '[mischievously]'],
+      ['Siinä unohtui varjo hetkeksi', '[brightly]'],
     ],
   },
   'kreeta-3': { alku: '[brightly]' },
@@ -456,8 +456,9 @@ export const TAGIT = {
   'marseille-3': {
     alku: '[curious]',
     kohdat: [
-      ['Lokit eivät tunne', '[mischievously]'],
-      ['Minä erotan', '[warmly]'],
+      ['Minä erotan Vieux-Portin', '[warmly]'],
+      ['Lokit tuntevat jokaisen pöydän', '[mischievously]'],
+      ['Minä vasta harjoittelen', '[softly]'],
     ],
   },
   'lissabon-3': { alku: '[brightly]' },
@@ -468,10 +469,12 @@ export const TAGIT = {
   'amsterdam-3': { alku: '[brightly]' },
   'berliini-3': { alku: '[brightly]' },
   'venetsia-3': {
-    alku: '[excited]',
+    alku: '[brightly]',
     kohdat: [
-      ['Hetkinen', '[whispers]'],
-      ['Hän osui', '[mischievously]'],
+      ['Minä lennän nykyään', '[warmly]'],
+      ['Yhden tutun takia', '[whispers]'],
+      ['Hän vain sattui', '[mischievously]'],
+      ['No, ehkä minä vähän odotin', '[softly]'],
     ],
   },
   'firenze-3': { alku: '[brightly]' },

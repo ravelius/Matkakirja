@@ -7,7 +7,7 @@
  * Millisekunteja ei ole ennen lopullisen mp3:n forced alignmentia.
  */
 
-export const LIVIAN_PILOTIN_REVISION = 'eu-hl-pilot-20260912-r1';
+export const LIVIAN_PILOTIN_REVISION = 'eu-hl-pilot-20260913-r2-approved1';
 
 const pilotti = (kaupunki, tekstiSha256, cuet) => Object.freeze({
   kaupunki,
@@ -22,26 +22,31 @@ const pilotti = (kaupunki, tekstiSha256, cuet) => Object.freeze({
 });
 
 export const LIVIAN_PILOTTI_CUET = Object.freeze({
-  marseille: pilotti('marseille', '3b745a3a45bb4d9cdad66eeefb4bc2757149489b2cfb050232b2bcd42aa4d8c9', [
-    { id: 'marseille.livia.c1', ankkuri: 'Marseillen saippuaa tehdään yhä', tarkoitus: 'selittaa', voimakkuus: .45 },
-    { id: 'marseille.livia.c2', ankkuri: 'Lokit eivät tunne', tarkoitus: 'ilo', voimakkuus: .45 },
-    { id: 'marseille.livia.c3', ankkuri: 'jo äänestä ja suolasta', tarkoitus: 'lammin', voimakkuus: .45 },
+  marseille: pilotti('marseille', '2d597bd0fd42d4a1bc86e3fa0dd9ffdbcc55f49acffbdf9587d821db2ec2ca8b', [
+    { id: 'marseille.livia.c1', ankkuri: 'saippuaa tehdään yhä', tarkoitus: 'selittaa', voimakkuus: .40 },
+    { id: 'marseille.livia.c3', ankkuri: 'Vieux-Portin jo äänestä', tarkoitus: 'lammin', voimakkuus: .45 },
+    { id: 'marseille.livia.c2', ankkuri: 'Lokit tuntevat jokaisen pöydän', tarkoitus: 'ilo', voimakkuus: .45 },
+    { id: 'marseille.livia.c4', ankkuri: 'Minä vasta harjoittelen', tarkoitus: 'miettiva', voimakkuus: .35 },
   ]),
-  ateena: pilotti('ateena', 'dd2bb37d25ab5e717533a290ea423b6244dba6d5cf362ee906d2f48298eb456b', [
+  ateena: pilotti('ateena', 'e832aa94e48db059fa3a1acc25982e675212b6b48e0a00be711f2d46d37f7713', [
     { id: 'ateena.livia.c1', ankkuri: 'nyt rahamuseo', tarkoitus: 'selittaa', voimakkuus: .45 },
-    { id: 'ateena.livia.c2', ankkuri: 'tavallista työtään', tarkoitus: 'lammin', voimakkuus: .40 },
-    { id: 'ateena.livia.c3', ankkuri: 'tarkistan ensin varjon', tarkoitus: 'ilo', voimakkuus: .45 },
+    { id: 'ateena.livia.c3', ankkuri: 'Etsin puutarhasta varjoa', tarkoitus: 'ilo', voimakkuus: .35 },
+    { id: 'ateena.livia.c4', ankkuri: 'pöytien alta löytyi pullanmuruja', tarkoitus: 'ilo', voimakkuus: .55 },
+    { id: 'ateena.livia.c5', ankkuri: 'unohtui varjo hetkeksi', tarkoitus: 'ilo', voimakkuus: .45 },
   ]),
-  sarajevo: pilotti('sarajevo', '19d50f91aa864bcac600d5e20797de73747c208ee9d8d89bf6139908e78e2747', [
+  sarajevo: pilotti('sarajevo', '145fb8120049fc081ddd36ebe98f44369868e89bac35068d2981a3e14ce6da9d', [
     { id: 'sarajevo.livia.c1', ankkuri: 'basaarissa yhä', tarkoitus: 'selittaa', voimakkuus: .40 },
-    { id: 'sarajevo.livia.c2', ankkuri: 'oppi katsomaan', tarkoitus: 'miettiva', voimakkuus: .35 },
-    { id: 'sarajevo.livia.c3', ankkuri: 'kuuntelisin vasaraa ennen kahvia', tarkoitus: 'lammin', voimakkuus: .40 },
+    { id: 'sarajevo.livia.c3', ankkuri: 'jäin kuuntelemaan yhtä vasaraa', tarkoitus: 'lammin', voimakkuus: .45 },
+    { id: 'sarajevo.livia.c4', ankkuri: 'naputtaa nokalla samaa tahtia', tarkoitus: 'ilo', voimakkuus: .55 },
+    { id: 'sarajevo.livia.c5', ankkuri: 'seppä oli kyllä nopeampi', tarkoitus: 'ilo', voimakkuus: .50 },
   ]),
-  venetsia: pilotti('venetsia', '88bd58ac567bc89737ad1809e70b14cccdf3779efd0de3c2d297fa1239d6ea38', [
-    { id: 'venetsia.livia.c1', ankkuri: 'Vesibussit kulkevat yhä', tarkoitus: 'utelias', voimakkuus: .40 },
-    { id: 'venetsia.livia.c2', ankkuri: 'Nuo ovat yksityisiä', tarkoitus: 'hammentynyt', voimakkuus: .55 },
-    { id: 'venetsia.livia.c3', ankkuri: 'Hän osui jokaiseen', tarkoitus: 'rakkaus', voimakkuus: .80 },
-    { id: 'venetsia.livia.c4', ankkuri: 'Sulje albumi', tarkoitus: 'hammentynyt', voimakkuus: .60 },
+  venetsia: pilotti('venetsia', '2cbd024d573c4a3aee0900a057d2260ad0056570cbae2f1239cbf44410cf0601', [
+    { id: 'venetsia.livia.c1', ankkuri: 'kuljetaan yhä vesibusseilla', tarkoitus: 'selittaa', voimakkuus: .40 },
+    { id: 'venetsia.livia.c5', ankkuri: 'vähän pidempää reittiä', tarkoitus: 'lammin', voimakkuus: .45 },
+    { id: 'venetsia.livia.c6', ankkuri: 'Yhden tutun takia', tarkoitus: 'rakkaus', voimakkuus: .70 },
+    { id: 'venetsia.livia.c2', ankkuri: 'kuvat ovat yksityisiä', tarkoitus: 'hammentynyt', voimakkuus: .55 },
+    { id: 'venetsia.livia.c3', ankkuri: 'jokaiseen hyvään kuvakulmaan', tarkoitus: 'rakkaus', voimakkuus: .80 },
+    { id: 'venetsia.livia.c7', ankkuri: 'ehkä minä vähän odotin', tarkoitus: 'hammentynyt', voimakkuus: .60 },
   ]),
 });
 
