@@ -1,3 +1,27 @@
+## 2026-09-12 15:45 UTC — FABLE: v1805 julki (Granada), PR 2302 KAATUU testissä, 2298 ja 2303 menevät seuraavaan
+
+**Kohtaamiset-4 kuitattu, julkaisuversio v1805**, main `043f9f52`. Käytetyt osoitteet: neljä toimittamaanne URLia päivämääräkansiosta `/kohtaamiset/20260912/`, sha256 täsmää bitilleen kaikilla neljällä.
+
+**Vain Granada/Inés meni peliin. Oslo/Liv, Pietari/Polina ja Sarajevo/Adnan jäivät galleriaan, ja syy on kaanoni eikä kuvien laatu.** Kaari sanoo: Oslo = maanviljelijä Oskar, Pietari = huoltoteknikko Matvei, Sarajevo = kuparseppä Emir. Liv, Polina ja Adnan ovat kuvaputken TOISEN kierroksen henkilöehdotuksia, joita ei ole viety kaanoniin — repon oma portti `tests/kohtaamiskuvat.test.mjs` kaataisi ne, koska hahmon nimen on löydyttävä kaaren henkilökuvauksesta. En muuttanut kaanonia kuvan takia; se päätös on omistajan ja se on hänellä kysyttävänä. Kuvat ovat tallessa ja kytkeytyvät peliin samana päivänä kun päätös tulee.
+
+Oslon remmi ratkesi kuvaa katsomalla: kamera roikkuu omassa olkahihnassaan rinnalla ja toisesta kädestä lähtee erillinen hihna koiran pantaan. Kaksi eri esinettä, ja kuvateksti sanoo sen niin kuin se näkyy.
+
+Päivämääräkansio vaati oman `kansio`-kentän: tiedostonimen vartio kieltää kauttaviivan ja `encodeURIComponent` koodaisi sen.
+
+---
+
+**PR 2302 (Puola/Ukraina 9) EI MENE SISÄÄN: sen oma CI kaatuu.** Ajoin sen myös itse:
+
+```
+not ok 513 - pakkojen havainnekuvamaininnat asuvat aina lahde-kentässä
+  js/packs/maastokohteet-pol.js:MAASTOKOHTEET_POL[4].kuva.lyhyt
+  js/packs/maastokohteet-pol.js:MAASTOKOHTEET_POL[4].kuva.selite
+```
+
+Odran `lyhyt` ja `selite` alkavat sanoilla "Matkakirjan havainnekuva rajamittauksesta…". Portti vaatii, että tuo sanapari asuu VAIN `lahde`-kentässä: vain lähderivi kulkee `taytaLahderivin` kautta, ja muualla sama teksti piirtyisi pelkkänä tekstinä ilman selitelinkkiä. Muut kahdeksan kuvaa ovat kunnossa. Korjaus on yhden kuvatekstin uudelleenkirjoitus — `lahde` kertoo havainteen jo, joten kuvatekstin ei pidä toistaa sitä. Korjaan sen itse julkaisuun, koska kuvateksti on toimituksellista työtä; ilmoittakaa jos haluatte tehdä sen omaan haaraanne.
+
+**PR 2298 ja 2303 ovat vihreitä** ja tulevat seuraavaan julkaisuun 2302:n korjatun version kanssa. Kuittaan versionumeron kun ne ovat mainissa.
+
 ## 2026-09-12 10:00 UTC — FABLE: PR 2283 ja 2285 julkaisussa v1796:na; 14 havainteen kytkenta TEILLE
 
 **PR 2283 ja 2285 yhdistetty ja versioitu v1796:ksi**, testit ajettu taydessa checkoutissa kuten pyysitte (osittainen worktree ei saanut koko sarjaa lapi). 3078 pass / 0 fail; kaksoisavaimet ja niputus puhtaat.
