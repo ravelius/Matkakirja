@@ -3169,6 +3169,23 @@ export const SKANDAALIT = {
      */
     {
       id: 'parnellin-lankeemus',
+      kuvat: [{
+        osoite: 'https://media.matkakirja.app/skandaalit/20260911/skandaali-irl-parnellin-lankeemus-r20260911-v2.jpg',
+        lyhyt: 'Parnellin puolue jakautuu Westminsterissä joulukuussa 1890.',
+        selite: 'Joulukuussa 1890 Parnell kieltäytyi väistymästä puolueensa johdosta, ja Irlannin parlamenttipuolue repesi Westminsterin komiteahuoneessa 15.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Dictionary of Irish Biography — Charles Stewart Parnell.',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://www.dib.ie/biography/parnell-charles-stewart-a7199',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      }, {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/irl-skandaali-skandaali-parnellin-lankeemus-670aa64f25fa.jpg',
+        lyhyt: 'Charles Stewart Parnell historiallisessa muotokuvassa.',
+        selite: 'Charles Stewart Parnell oli Irlannin parlamenttipuolueen johtaja, jonka asema murtui joulukuun 1890 puolueriidassa.',
+        lahde: 'Valokuva: Mathew Benjamin Brady / Levin Corbin Handy, Wikimedia Commons (Public domain).',
+        tekija: 'Mathew Benjamin Brady / Levin Corbin Handy',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Charles_Stewart_Parnell_(Portrait).jpg',
+        lisenssi: 'Public domain',
+      }],
       otsikko: 'Parnellin lankeemus — skandaali joka jakoi Irlannin',
       nimio: 'Parnell',
       vuosi: '1890–1891',
@@ -3204,15 +3221,6 @@ export const SKANDAALIT = {
         + 'Hautakiveen, joka pystytettiin vasta 1940, ei kirjoitettu vuosilukuja eikä '
         + 'arvonimiä — siinä lukee vain Parnell.',
       lahde: 'en-Wikipedia "Charles Stewart Parnell". Tarkistettu 2.9.2026.',
-      kuva: {
-        osoite: 'https://media.matkakirja.app/skandaalit/20260911/skandaali-irl-parnellin-lankeemus-r20260911-v2.jpg',
-        lyhyt: 'Parnellin puolue jakautuu Westminsterissä joulukuussa 1890.',
-        selite: 'Joulukuussa 1890 Parnell kieltäytyi väistymästä puolueensa johdosta, ja Irlannin parlamenttipuolue repesi Westminsterin komiteahuoneessa 15.',
-        lahde: 'Matkakirjan havainnekuva. Faktat: Dictionary of Irish Biography — Charles Stewart Parnell.',
-        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
-        lahdeUrl: 'https://www.dib.ie/biography/parnell-charles-stewart-a7199',
-        lisenssi: 'Matkakirjan oma havainnekuva',
-      },
       visa: {
         kysymys: 'Mikä oli Parnellin vuoden 1890 skandaalin merkittävin poliittinen '
           + 'seuraus?',
@@ -4237,6 +4245,15 @@ export const SKANDAALIT = {
      */
     {
       id: 'walbrzychin-kultajuna',
+      kuva: {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/pol-skandaali-skandaali-walbrzychin-kultajuna-4424ac7c7361.jpg',
+        lyhyt: 'Kultajunan etsintä päättyi tavallisiin maakerroksiin vuonna 2016.',
+        selite: 'Wałbrzychin vuoden 2016 kaivauksissa etsittiin legendaarista kultajunaa Wrocław–Wałbrzych-radan varrelta, mutta maasta löytyi vain luonnollisia kerroksia.',
+        lahde: 'Matkakirjan havainnekuva',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://www.agh.edu.pl/en/university/news/detail/agh-experts-the-gold-train-does-not-exist',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      },
       otsikko: 'Wałbrzychin kultajuna — aarre jota ei ollut',
       nimio: 'Kultajuna',
       vuosi: '1945 (legenda), 2015–2016 (kaivaukset)',
@@ -4505,6 +4522,15 @@ export const SKANDAALIT = {
      */
     {
       id: 'strousbergin-rautatieskandaali',
+      kuva: {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/rou-skandaali-skandaali-strousbergin-rautatieskandaali-7f175fc46839.jpg',
+        lyhyt: 'Strousbergin rautatiehanke ajautui kriisiin Romaniassa vuonna 1871.',
+        selite: 'Romanian virkamiehet purkivat Strousbergin rautatiekonsession vuonna 1871, kun suuret lupaukset, kasvavat laskut ja keskeneräiset rataosuudet ajautuivat törmäykseen.',
+        lahde: 'Matkakirjan havainnekuva',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://ro.wikipedia.org/wiki/Afacerea_Strousberg',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      },
       otsikko: 'Strousbergin rautatieskandaali',
       nimio: 'Strousberg',
       vuosi: '1868–1872',
@@ -5090,6 +5116,24 @@ export const SKANDAALIT = {
      */
     {
       id: 'potemkinin-kulissikylat',
+      kuvat: [{
+        osoite: 'https://media.matkakirja.app/skandaalit/20260912/skandaali-ukr-potemkinin-kulissikylat-r20260912-v1.jpg',
+        lyhyt: 'Katariina II seuraa oikeiden kylien somistamista Dneprin-matkallaan vuonna 1787.',
+        selite: 'Katariina II:n Dneprin-matka vuonna 1787 synnytti myöhemmin kertomuksen Potjomkinin kulissikylistä; reitin oikeita kyliä somistettiin, mutta siirrettäviä lavastekyliä pidetään legendana.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Virtual Russian Museum — Katariina II:n matka Tauriaan vuonna 1787.',
+        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+        lahdeUrl: 'https://rusmuseumvrm.ru/data/collections/painting/17_19/zh-6745/index.php',
+        lisenssi: 'Matkakirjan oma havainnekuva',
+      }, {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260912/ukr-skandaali-skandaali-potemkinin-kulissikylat-a0d975cc718b.jpg',
+        lyhyt: 'Nykyajan Dnepr Hersonin kohdalla.',
+        selite: 'Dnepr virtaa Hersonin halki samalla seudulla, jota Katariina II:n näyttävä vuoden 1787 matka teki tunnetuksi.',
+        lahde: 'Valokuva: Visem, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Visem',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dnipro_river_in_Kherson_in_the_morning.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      }],
       otsikko: 'Potemkinin kulissikylät — huijaus, joka olikin liioittelua',
       nimio: 'Kulissikylät',
       vuosi: '1787',
@@ -5123,15 +5167,6 @@ export const SKANDAALIT = {
         + 'jäi silti kieleen, ja se tarkoittaa nyt mitä tahansa julkisivua, jonka '
         + 'taakse kätketään ikävä tilanne.',
       lahde: 'en-Wikipedia "Potemkin village". Tarkistettu 2.9.2026.',
-      kuva: {
-        osoite: 'https://media.matkakirja.app/skandaalit/20260912/skandaali-ukr-potemkinin-kulissikylat-r20260912-v1.jpg',
-        lyhyt: 'Katariina II seuraa oikeiden kylien somistamista Dneprin-matkallaan vuonna 1787.',
-        selite: 'Katariina II:n Dneprin-matka vuonna 1787 synnytti myöhemmin kertomuksen Potjomkinin kulissikylistä; reitin oikeita kyliä somistettiin, mutta siirrettäviä lavastekyliä pidetään legendana.',
-        lahde: 'Matkakirjan havainnekuva. Faktat: Virtual Russian Museum — Katariina II:n matka Tauriaan vuonna 1787.',
-        tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
-        lahdeUrl: 'https://rusmuseumvrm.ru/data/collections/painting/17_19/zh-6745/index.php',
-        lisenssi: 'Matkakirjan oma havainnekuva',
-      },
       visa: {
         kysymys: 'Mitä nykyhistorioitsijat sanovat Potemkinin kulissikylistä?',
         vaihtoehdot: [

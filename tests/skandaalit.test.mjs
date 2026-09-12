@@ -159,11 +159,15 @@ test('kuvat-lista on kelvollinen ja lähderivi kertoo tekijän', () => {
         `${kohta}: selite puuttuu`);
       assert.ok(typeof kuva.lahde === 'string' && kuva.lahde.trim(),
         `${kohta}: lähderivi puuttuu`);
-      if (kuva.osoite) {
+      // Julkinen osoite voi olla myös lisensoitu valokuva omalla mediapalvelimella.
+      if (/Matkakirjan havainnekuva/.test(kuva.lahde)) {
         assert.match(kuva.lahde, /Matkakirjan havainnekuva/,
           `${kohta}: pelin oma kuva ilman havainnekuvamerkintää (js/havainnekuva.js)`);
       } else {
         // CC ja PD vaativat molemmat tekijän ja lähteen näkyviin.
+        if (kuva.osoite) {
+          assert.ok(kuva.tekija && kuva.lisenssi && kuva.lahdeUrl, `${kohta}: valokuvan oikeustiedot`);
+        }
         assert.match(kuva.lahde, /Wikimedia Commons \(/,
           `${kohta}: Commons-kuvan lähderivistä puuttuu lisenssi`);
       }

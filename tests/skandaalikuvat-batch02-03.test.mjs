@@ -18,11 +18,13 @@ test('batch02–03:n kahdeksan havainnekuvaa on kytketty ensisijaisiksi', () => 
   for (const [iso, id, tiedosto] of ODOTETUT) {
     const kohde = SKANDAALIT[iso].find((s) => s.id === id);
     assert.ok(kohde, `${iso}/${id}: tietuetta ei löydy`);
-    assert.equal(kohde.kuva.osoite,
+    const ensimmainen = kohde.kuvat?.[0] ?? kohde.kuva;
+    assert.equal(ensimmainen.osoite,
       `https://media.matkakirja.app/skandaalit/${tiedosto.includes('20260912') ? '20260912' : '20260911'}/${tiedosto}`);
-    assert.match(kohde.kuva.lahde, /^Matkakirjan havainnekuva\. Faktat:/);
-    assert.ok(kohde.kuva.lyhyt && kohde.kuva.selite && kohde.kuva.lahdeUrl);
-    assert.equal(kohde.kuvat, undefined, `${iso}/${id}: odottamaton toinen kuvalista`);
+    assert.match(ensimmainen.lahde, /^Matkakirjan havainnekuva\. Faktat:/);
+    assert.ok(ensimmainen.lyhyt && ensimmainen.selite && ensimmainen.lahdeUrl);
+    for (const rinnakkainen of kohde.kuvat?.slice(1) ?? []) {
+      assert.notEqual(rinnakkainen.osoite, ensimmainen.osoite, `${iso}/${id}: sama kuva kahdesti`);
+    }
   }
 });
-

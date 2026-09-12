@@ -69,8 +69,8 @@
  * Kohderyhmä on 13 vuotta täyttäneet ja aikuiset. Faktat on tarkistettu
  * en-Wikipediasta kohde kerrallaan 11.9.2026, artikkeli on nimetty
  * `lahde`-kentässä ja rivin yläpuolisessa kommentissa, eikä yhtään
- * väitettä ole lisätty lähteen ulkopuolelta. Kuvakenttiä ei ole:
- * kuvat tilataan erikseen.
+ * väitettä ole lisätty lähteen ulkopuolelta. Kuvat lisättiin 12.9.2026:
+ * viisi lähdevalokuvaa ja Vostokin järven havainneleikkaus.
  *
  * Nämä kohteet ovat NYKYAJAN tutkimusta eivätkä isoisän matkan aikaa —
  * vuonna 1873 Etelämantereella ei ollut yhtäkään asemaa, ja se sanotaan
@@ -85,6 +85,16 @@ export const MAASTOKOHTEET_ATA = [
    */
   {
     id: 'ata-etelanapa-asema',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/ata-maasto-ata-etelanapa-asema-79c32f72a13f.jpg',
+      lyhyt: 'Amundsen–Scottin tutkimusasema etelänavalla.',
+      selite: 'Amundsen–Scottin tutkimusasema seisoo etelänavalla mannerjäätikön päällä.',
+      lahde: 'Valokuva: Bill Spindler, U.S. Antarctic Program, National Science Foundation, Wikimedia Commons (Public domain).',
+      tekija: 'Bill Spindler, U.S. Antarctic Program, National Science Foundation',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Amundsen-scott-south_pole_station_2007.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Public_domain',
+    },
     nimi: 'Amundsen–Scottin asema',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -116,6 +126,15 @@ export const MAASTOKOHTEET_ATA = [
    */
   {
     id: 'ata-vostokin-jarvi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/ata-maasto-ata-vostokin-jarvi-53b3ac9ab6c7.jpg',
+      lyhyt: 'Havainneleikkaus Vostokin järvestä neljän kilometrin jään alla.',
+      selite: 'Vostokin järvi on piilossa noin neljän kilometrin paksuisen mannerjään alla.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lake_Vostok_drill_2011.jpg',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Vostokin järvi',
     tyyppi: 'jarvi',
     kysymykset: [
@@ -147,6 +166,16 @@ export const MAASTOKOHTEET_ATA = [
    */
   {
     id: 'ata-kuivat-laaksot',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/ata-maasto-ata-kuivat-laaksot-66c828ccee37.jpg',
+      lyhyt: 'McMurdon kuivat laaksot ilmasta nähtynä.',
+      selite: 'McMurdon kuivat laaksot muodostavat poikkeuksellisen lumettoman erämaan Etelämantereella.',
+      lahde: 'Valokuva: Peter Rejcek, NSF, Wikimedia Commons (Public domain).',
+      tekija: 'Peter Rejcek, NSF',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aerial_view_of_Taylor_Valley_2014.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Public_domain',
+    },
     nimi: 'McMurdon kuivat laaksot',
     tyyppi: 'vuori',
     kysymykset: [
@@ -178,6 +207,16 @@ export const MAASTOKOHTEET_ATA = [
    */
   {
     id: 'ata-rossin-jaahylly',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/ata-maasto-ata-rossin-jaahylly-b0e2be7055e3.jpg',
+      lyhyt: 'Rossin jäähyllyn jyrkät jääseinämät.',
+      selite: 'Rossin jäähylly on valtava merellä kelluva jäälautta.',
+      lahde: 'Valokuva: lin padgham, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'lin padgham',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ross_Ice-Shelf.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
     nimi: 'Rossin jäähylly',
     tyyppi: 'meri',
     kysymykset: [
@@ -208,6 +247,16 @@ export const MAASTOKOHTEET_ATA = [
    */
   {
     id: 'ata-deception-island',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/ata-maasto-ata-deception-island-8fc15776f909.jpg',
+      lyhyt: 'Deception Islandin Whalers Bay ja tulivuorikalderan suu.',
+      selite: 'Deception Islandin tulivuorikalderan sisään johtaa kapea Neptunuksen palkeet -salmi.',
+      lahde: 'Valokuva: W. Bulach, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'W. Bulach',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:A_Deception_Island.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Deception Island',
     tyyppi: 'saari',
     kysymykset: [
@@ -240,6 +289,16 @@ export const MAASTOKOHTEET_ATA = [
    */
   {
     id: 'ata-vernadski',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/ata-maasto-ata-vernadski-06f0c68b7730.jpg',
+      lyhyt: 'Vernadskin tutkimusaseman rantarakennus.',
+      selite: 'Vernadskin asema jatkaa ympärivuotista tutkimusta Galindezin saarella.',
+      lahde: 'Valokuva: *christopher*, Wikimedia Commons (CC BY 2.0).',
+      tekija: '*christopher*',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vernadsky_Station.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
     nimi: 'Vernadskin asema',
     tyyppi: 'tekniikka',
     kysymykset: [
