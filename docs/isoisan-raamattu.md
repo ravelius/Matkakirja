@@ -9,7 +9,8 @@ sanomalehdestä tieto." Vapaat kädet raamattuun annettu samana päivänä.)*
 Tämä dokumentti LAAJENTAA `docs/tarina.md`:tä, ei korvaa sitä: Foggien
 nimistö, Aarnin luettelo, kaksi ääntä, sävysäännöt ja revitty viimeinen
 sivu pysyvät sitovina. Tähän on kirjattu se, mikä tekee merkinnöistä
-dekkarin.
+dekkarin. Horatio–Livia-kaupunkiparien ajantasainen hahmo-, teksti-, kuva-,
+ääni- ja animaatiolinja on `docs/moduulit/horatio-livia-tuotanto.md`.
 
 ## Työnjako (sitova)
 
@@ -67,84 +68,25 @@ tunnistetaan:
   ivaa paikallisia (tarina.md:n pääsääntö) — ironia osuu häneen
   itseensä ja hänen pelkoihinsa.
 - **Rakastaa arvoituksia, ei ratkaisuja.** "Hyvä kysymys on parempi
-  matkatoveri kuin vastaus." Hän jättää lukijalle langanpäitä, ei
+  matkatoveri kuin vastaus." Hän jättää kirjaansa langanpäitä, ei
   selityksiä.
-- **Ei kirjoita kenellekään.** POISTETTU 8.9.2026 (omistaja, sanatarkasti:
-  *"Tuo kirjoitan sinulle on vanha ja piinallinen jäänne joka pitää
-  poistaa. Isoisä ei koskaan Kirjoita kenellekkään."*). Vanha
-  "sinä, joka tätä luet" -puhuttelu on poistettu kaanonista: Horatio
-  kirjoittaa itselleen, ei oleta lukijaa eikä selitä kenellekään.
+- **Ei kirjoita kenellekään.** Horatio kirjoittaa itselleen, ei oleta
+  lukijaa eikä puhuttele tai selitä tälle.
   Tunneydin tulee siitä, että perillinen lukee yksityistä kirjaa,
   jota ei ollut tarkoitettu hänelle.
-- **Oma kieli (omistaja 8.9.2026).** Horatiolla on omia sanoja ja
-  lyhenteitä tavoilleen, jotka toistuvat kaupungista toiseen ja jotka
-  vain Livia osaa tulkata (pulun kupla). Sanasto ja käyttö: Raamattu
-  "HORATION OMA KIELI" (kun hyväksytty).
+- **Oma kieli.** Rajattu sanasto on peilaus, painolasti, K3, yövahti ja
+  lakkipiste. G. on Grimshawin nimilyhenne. Käyttö ja rajat kuvataan
+  Horatio–Livia-tuotantomoduulissa; sanastoa ei laajenneta omin päin.
 
 ## Horatio ja Livia: kuuntelun rytmi (omistaja 12.9.2026)
 
-Omistaja: *"isoisän pohdinnat ja oivallukset olivat hyviä nykyisissä
-matkakirjan teksteissä"*. Ne säilytetään. Noin kahden lauseen tiivistys
-tehdään ensisijaisesti toistosta ja hyvän oivalluksen ympäriltä, ei
-poistamalla merkinnän omaa ajatusta. Lyhyttä tekstiä ei rikota
-mekaanisen lausekiintiön vuoksi. Horatio on edelleen tarkka, utelias,
-kohtelias ja kuivan humoristinen; rauhallinen luenta ei tee hänestä
-tunteetonta eikä pelkkää faktaluetteloa. Hän kirjoittaa itselleen.
-
-Lyhentämisen tarkoitus on kuuntelujaksaminen: ensin isoisän napakka
-kohtaus ja oivallus, sitten näkökulman ja äänen vaihto Puluun antaa
-uutta kiinnostusta. Pulun vastaukseen voi yleensä lisätä noin yhden
-luontevan lauseen. Yhteismittaa ei venytetä tarpeettomasti, eikä
-uusi lause saa olla täytettä. Pituus arvioidaan myös kuuntelemalla;
-muuttunut teksti edellyttää vastaavaa uutta luentaa ja kohdistusta.
-
-### Livia on kokenut mutta helposti innostuva matkakumppani
-
-Omistajan täsmennys 12.9.2026: Livia on tarkka ja helposti innostuva,
-niin innoissaan ettei meinaa pysyä nahoissaan. Hän lähtee helposti
-sivupolulle mutta löytää nopeasti takaisin oikealle kurssille.
-Kirjekyyhkynä hän on nähnyt todella paljon, "käytännössä kaiken".
-Hän pitää jännittävistä ja jopa pelottavista jutuista sekä pullasta.
-Hän kertoo mielellään kiinnostavia juoruja mutta ei ole koskaan
-pahantahtoinen. Puluksi kutsuminen herättää alemmuudentunnetta;
-hän kunnioittaa Viisasta Pöllöä ja on välillä epävarma. Asiantuntemus
-ja tarkkuus eivät katoa innostukseen, eikä komiikka perustu tyhmyyteen.
-
-Venetsian romanssi paikallisen pulupojan kanssa säilytetään nykyisten
-repliikkien ja albumin pohjalta. Hahmon kommentteihin lisätään hieman
-enemmän kaupungin nykytilaa hänen omasta näkökulmastaan. Hahmofiktio,
-juoru ja todennettava kaupunkitieto pidetään erotettavina; tieto ei
-vääristy persoonan vuoksi. Äänessä ja eleissä tavoitellaan lempeyttä
-ja sisältöön sopivaa monisävyisyyttä. Iloisempi ja suloisempi puheääni
-on vasta valintasuunnan kuvaus, ei lukittu ääni.
-
-### Kuvatekstit ovat lyhyitä huomioita, eivät toinen kertomus
-
-Euroopan jokaisessa kaupungissa tarkistetaan isoisän kaksi luentakuvaa
-ja Pulun kaksi nykykuvaa: kuvan ja tekstin vastaavuus, aikataso sekä
-kuvaparin erilaiset havainnot. Lyhyt näkyvä kuvateksti on noin yksi
-lyhyt lause (aiempi noin 100 merkin ohje tukee nopeaa luettavuutta),
-ei puhuttua kertomusta toistava selostus.
-
-**Pitkän kuvatekstin täsmennys (omistajan vahvistus 12.9.2026):**
-pitkä saa olla enintään yhden lauseen lyhyttä pidempi, eli yleensä
-yhteensä noin kaksi lausetta. Lähdemerkintä tarvittavine tekijä- ja
-lisenssitietoineen tulee vain pitkään versioon; sitä ei näytetä
-lyhyessä eikä lasketa tekstiosuuden lausemäärään. Vanha pidempi
-selostus säilytetään tarvittaessa toimitusaineistossa tai historiassa,
-ei tämän rajan ylittävänä näkyvänä kuvatekstinä. Tämä korvaa näiden
-hahmokuvien osalta aiemman oletuksen pitkän selitteen säilyttämisestä
-sellaisenaan suurennoksessa.
-
-Puuttuvat toiset kuvat ja yli kahden
-kuvan albumit raportoidaan; Venetsian romanssialbumia ei karsita.
-
-**Työ on edelleen tauolla:** uudet teksti- ja animaatiosessiot
-jatkavat vasta omistajan tai pääsession nimenomaisella JATKA-ohjeella
-yhteisen hahmospeksin valmistuttua. Tämä kirjaus ei käynnistä niitä
-eikä hyväksy keskeneräisiä peliluonnoksia julkaisuun. Avustajan uudet
-persoonallisuus- ja tekstiehdotukset käsitellään erikseen, eivätkä ne
-muutu kaanoniksi ilman omistajan hyväksyntää.
+Voimassa oleva kokonaisohje on
+`docs/moduulit/horatio-livia-tuotanto.md`. Se määrittää Horatio–Livia-parin
+persoonat, toimituksellisen kuuntelurytmin, kuvaparit ja kuvatekstit,
+ääni- ja tunnetagit, animaation merkitysohjeet, työnjaon sekä etenemisen
+Euroopasta seuraaville mantereille. Omistajan 12.9.2026 JATKA-lupa on
+voimassa tämän rajatun työn osalta; kaanonin integraatio, CI, julkaisu ja
+oikean pelin tarkistus ovat edelleen omat porttinsa Fablen vastuulla.
 
 ## Vastavoima: herra Grimshaw
 
@@ -158,11 +100,8 @@ ja aina yhden laivavuoron myöhässä.
 **Grimshaw ei ole koskaan vaarallinen.** Hän on kilpailija, ei rosvo:
 mahtipontinen, pikkumainen, hieman surkuhupaisa. Jännitys tulee
 kilpajuoksusta ja siitä, ettei koskaan tiedä, kuinka lähellä hän on —
-ei uhasta. Euroopan laudan mitta oli *askeleet sumussa kyllä, vaara
-ei* — uusissa teksteissä sen korvaa "Imu aikuiselle" -osion linjaus
-(10.8.2026): vaara saa tuntua, mutta se tulee maailmasta ja
-kilpajuoksusta, ei ihmisten pahuudesta. Grimshaw itse pysyy
-kilpailijana, ei roistona.
+ei hänen aiheuttamastaan uhasta. Tämä rajaus koskee Grimshaw’ta:
+yleinen vaara saa tulla myös ihmisistä "Imu aikuiselle" -osion mukaan.
 
 Horation sävy Grimshawista kehittyy: ensin huvittunut, sitten
 varovainen, ja myöhäisissä merkinnöissä melkein haikea — *"Ilman herra
@@ -206,23 +145,14 @@ saa olla ketju. Säännöt:
 5. **Revitty viimeinen sivu pysyy pyhänä:** mitä Horatio löysi, ei
    paljasteta koskaan (tarina.md).
 
-## Mitat
+## Rytmi ja mitta
 
-*(Kiristetty 7.8.2026, omistajan palaute ensimmäisistä viidestä:
-"aivan liian pitkiä. Ottaisin alun kuvauksen pois kokonaan ja
-aloittaisin suoraan tarinasta. Ja loppukin kannattaa lyhentää.")*
-
-- **kuvaus:** 2–3 virkettä, enintään ~170 merkkiä. EI kuvailevaa
-  avausta ("Kaupunki seisoo...", "Kaupungissa tuoksui...") —
-  ensimmäinen virke on jo tarinassa: jotain tapahtuu, löytyy tai
-  ojennetaan.
-- **nosto:** Horation sitaatti + korkeintaan yksi lyhyt nuoren Foggin
-  virke, enintään ~160 merkkiä. Loppu on yksi isku, ei kahta.
-- tarina.md:n vaihtelusäännöt voimassa: korkeintaan kolmasosa
-  merkinnöistä alkaa isoisällä, aloitustapoja kierrätetään, sama
-  tehokeino ei toistu vierekkäisissä kaupungeissa. Sama koskee
-  dekkarimotiiveja: sateenvarjo, sähke ja liituristi eivät saa olla
-  joka kaupungissa — harvuus tekee niistä pelottavia.
+Horatio–Livia-kaupunkiparin mitta ratkaistaan toimituksellisesti ja
+kuuntelemalla `docs/moduulit/horatio-livia-tuotanto.md`:n mukaan, ei
+vanhoilla merkki- tai virkekiintiöillä. `docs/tarina.md`:n vaihtelu- ja
+motiivisäännöt säilyvät: aloitustapoja kierrätetään, eikä sama tehokeino
+toistu vierekkäisissä kaupungeissa. Sateenvarjon, sähkeen ja liituristin
+harvuus tekee niistä vaikuttavia.
 
 ## Luentaohjeet (ElevenLabs v3)
 
@@ -238,8 +168,8 @@ vaihteluarvoa kannattaa ottaa takaisinpäin, hyppii vähän liikaa".)
   SUURAAKKOSET pienennetään, ettei malli huuda niitä), mutta ei
   sanoissa.
 - Tagipaletti: `[whispers]` salaisuudet, liituristi, seuraaja;
-  `[excited]` vauhti ja oivallus; `[warmly]` muistot ja "sinä, joka
-  tätä luet"; `[softly]` Horation sitaattien oletus; `[curious]`
+  `[excited]` vauhti ja oivallus; `[warmly]` muistot;
+  `[softly]` Horation sitaattien oletus; `[curious]`
   ihmettely. Tauot rytmitetään ajatusviivalla ja kolmella pisteellä.
 - **2–5 tagia per luenta, ei joka virkkeeseen.** Tunnelmakaari: luennan
   alku ja loppu eri sävyssä (esim. utelias → kuiskaus, tai kuiskaus →
@@ -283,8 +213,9 @@ ei seuraa missään.
    kauppias. Isoisä jätti jälkeensä ystäviä, ei vain arvoituksia.
 4. **Huumori** — Horation kuivat huomiot, nuoren Foggin kömmähdykset,
    ajan patina (Horatio ei tiennyt tulevasta).
-5. **Haikeus** — paikat, jonne isoisä ei ehtinyt; "sinulle, joka
-   tätä luet". Tunnelmista arvokkain — säästetään oikeisiin kohtiin.
+5. **Haikeus** — paikat, jonne isoisä ei ehtinyt, ja yksityisen kirjan
+   jäljelle jääneet aukot. Tunnelmista arvokkain — säästetään oikeisiin
+   kohtiin.
 6. **Ihmetys** — matkan riemu: maisema, valo, mittakaava. Tämä oli
    vanhojen tekstien vahvuus — se EI katoa dekkarista.
 7. **Hengähdys** — rauhallinen merkintä ilman koukkua. Dekkari
@@ -624,15 +555,8 @@ Nämä ovat kaanonpäätöksiä, jotka tehdään OMISTAJAN KANSSA ennen kuin
 niitä koskevaa sisältöä kirjoitetaan. Uusi sessio: älä ratkaise näitä
 itse.
 
-1. **Matkakirjamerkintöjen tekstityyli.** Omistaja 14.8.2026:
-   *"tekstityyli on vielä määrittämättä"* — uusia saapumismerkintöjä
-   EI generoida ennen kuin tyyli on määritelty omistajan kanssa
-   (esim. 2–3 näytemerkintää Lähi-idän "Imu aikuiselle" -mitalla,
-   omistajan hyväksyntä, vasta sitten erät). Tämä kielto annettiin,
-   koska lehtisessio oli alkanut generoida merkintöjä ohi kaanontyön.
-   Merkinnät ovat päätoimittajasession (Fable) kaanontyötä.
-2. **Grimshaw'n sateenvarjon paljastus** maailmankartalla — päätetään
+1. **Grimshaw'n sateenvarjon paljastus** maailmankartalla — päätetään
    omistajan kanssa (kirjattu jo yllä maailmankartan kohdassa).
-3. **Lautakohtaiset kaupunkijakotaulut** (Lähi-itä ja siitä
+2. **Lautakohtaiset kaupunkijakotaulut** (Lähi-itä ja siitä
    eteenpäin) tehdään tähän dokumenttiin ENNEN merkintöjen
    kirjoittamista — ei siis myöskään näitä ilman omistajaa.

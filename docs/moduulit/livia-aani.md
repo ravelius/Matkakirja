@@ -1,12 +1,8 @@
 # Livian ääni (pulun puhe)
 
-> VALMIS SIIRRETTÄVÄKSI `docs/moduulit/livia-aani.md`:ksi. Tiedostoa EI
-> committoitu repoon, koska `tests/dokumentit.test.mjs` vaatii jokaiselle
-> `docs/`-ohjeelle rivin Raamatun ohjedokumenttikartalla, ja Raamattuun
-> kirjoittaa vain päätoimittaja. Fable: lisää kartalle rivi
-> `docs/moduulit/livia-aani.md — pulun ääni: ElevenLabs-resepti, tagit,
-> kaiku, manifesti ja repliikkien pituusraja.` ja siirrä tämä tiedosto
-> paikalleen — testi menee silloin läpi.
+Horatio–Livia-kaupunkiparien ajantasainen sisältö-, tagi-, kuva- ja
+tuotantoketju on `docs/moduulit/horatio-livia-tuotanto.md`. Tämä dokumentti
+säilyttää Livian äänen toteutuksen ja jo toimiviksi todetut parametrit.
 
 Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti:
 
@@ -14,10 +10,6 @@ Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti:
   puhumaan. Generoidaan kaikki valmiiksi kirjoitetut repliikit puheeksi.
   Pidetään vain huoli että ne ovat mahdollisimman lyhyitä. Pitää varmaan
   vielä lyhentää niitä."*
-- *"Voidaan käyttää myös pulun ääneen efektejä (kaiku alussa kun tulee ja
-  aloittaa jo huutelemaan viestiä ennenkuin on edes ehtinyt kokonaan
-  perille). Kaiku voidaan sitten feidata pois kun pulu 'perillä' ja
-  nostaa äänitasoa hieman."*
 - *"Tehdään pulusta hyvin vokaalinen ja elävä vastakohta kertojan
   monotoonisuuteen. Paljon elävöitystageja elevenin generointiin."*
 
@@ -51,17 +43,14 @@ Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti:
 Tagit lisätään ohjelmallisesti (`TAGIT`, `puhemuoto`) ankkurisanoihin,
 ja ajo kaatuu jos ankkuria ei ole tai tagien poisto ei palauta
 kaanonista tekstiä. Kaanonin sanajärjestys ei siis voi muuttua
-äänitteessä. Käytössä mm. `[excited] [amused] [proud] [curious]
-[quickly] [warmly] [sheepish] [brightly] [reassuring] [modestly]
-[squawks] [breathless] [sighs] [flatly] [mutters] [casually]
-[helpfully]`.
+äänitteessä. Kaupunkiparien pieni yhteinen tagisanasto tarkistetaan ja
+koestetaan Horatio–Livia-tuotantomoduulin mukaan; tukematonta tagia ei
+pidetä toimivana pelkän nimen perusteella.
 
 ## Kaupungin kulku: luenta — pulu (omistaja 7.9. ja 8.9.2026)
 
-Raamattu, KAUPUNGIN KULKU: EI KUVIA, PULU - LUENTA - PULU — ja sen
-kavennus 8.9.2026, sanatarkasti: *"ota kaikki pulun alustukset pois."*
-Saapuminen on kaksi pulun hetkeä, ja kumpikin lukee pakkauksen
-`pollo`-lohkosta:
+Kaupungin pulupuheessa ei ole yleistä alustuskuplaa. Saapuminen on kaksi
+mahdollista Pulun hetkeä, ja kumpikin lukee pakkauksen `pollo`-lohkosta:
 
 | Kenttä | Milloin | Mitta |
 | --- | --- | --- |
@@ -83,9 +72,9 @@ tasan kerran); ilman äänitettä varapolku on kirjoituskoneen eteneminen.
 Välihuuto soi kertojan **päälle** hiljempaa (0,7×) eikä kertoja väisty
 (`soitaLivianKaupunkiAani`-asetukset `vaimennus` ja `vaista`).
 
-Kuvia ei näytetä: uuden kulun kaupungin matkakirjakortti on pelkkää
-tekstiä, vaikka pakkauksessa olisi vanha `matkakirja.kuva`
-(`js/ui.js renderFact` → `fokusvirtaUusiKulku`).
+Matkakirjakortti on tekstikortti. Sen rinnalla kartalla käytettävät
+isoisän ja Pulun kuvat sekä niiden sisältötavoite määritellään
+Horatio–Livia-tuotantomoduulissa; toteutus kuvataan alla.
 
 ### Luentakuva kartan päällä (omistaja 9.9.2026)
 
@@ -248,13 +237,12 @@ pakassa on useampi kuva."* ja *"Sitten kun päällimmäistä kuvaa klikkaa,
 niin pääsee karuselliin, missä näkyy isoisän kuva isona sekä kaikki muut
 pulun kuvat."*
 
-**Tarkennus 9.9.2026 klo 18.50** (Raamattu, PULU-CAM: RAKKAUSKOHTAUS
-3-5 KUVAA, KAKSI KUVATEKSTIA MOLEMMILLE, HAVAINNEKUVA-LINKKI PITKAN
-LOPUSSA, TARRA YHTENA PNG:NA OMISTAJAN VALINNASTA): tavallinen kohde
-saa **1–3** kuvaa ja rakkauskohtaus **3–5** — pakassa on isoisän kuvan
-kanssa enintään kuusi kuvaa. PULU-CAM-merkki on nyt **yksi tarra-PNG**,
-jossa teksti on jo mukana, ja **kaksi kuvatekstiä** koskee sekä isoisän
-että pulun kuvia.
+Tuotannollinen tavoite on kaksi isoisän vuoden 1873 kuvaa ja vähintään
+kaksi Pulun nykykuvaa kaupunkia kohti. Dubrovnikin kolme kuvaa ja
+Venetsian viiden kuvan romanssialbumi säilyvät. Runtime tukee edelleen
+valinnaista 1–5 Pulun kuvan kenttää. PULU-CAM-merkki on yksi tarra-PNG,
+jossa teksti on jo mukana, ja kaksi kuvatekstiä koskee sekä isoisän että
+Pulun kuvia.
 
 Pakin **vapaaehtoinen** kenttä on `pollo.kuvat`
 (`js/packs/fokusvirta-<id>.js`), 1–5 kuvaa **toimituksen
@@ -266,7 +254,7 @@ pollo: {
     {
       osoite: 'https://media.matkakirja.app/pulucam/…jpg', // TAI ampari / tiedosto
       lyhyt: 'Yksi virke kartalle.',            // PAKOLLINEN: kartan teksti
-      selite: 'Pidempi kertova kuvateksti (300–600 merkkiä) karuselliin.',
+      selite: 'Noin kaksi lausetta ja tarvittava lähdemerkintä karuselliin.',
       lahde: 'Pulun kamera',
       lahteet: ['https://…'],   // toimituksen tausta-aineisto, ei näy pelaajalle
     },
@@ -305,8 +293,8 @@ kierrätystä: niiden kulmat ovat jyrkempiä ja siirtymät eri
 neljänneksiin, jottei viidenkään kuvan pakka sulkeudu yhdeksi
 suorakaiteeksi.
 
-**Ilman luentakuvaa** (kaupungilla on `pollo.kuvat` mutta ei
-`matkakirja.luentakuva`) pakka nousee samaan paikkaan ilman pohjakuvaa:
+**Tekninen varapolku ilman luentakuvaa** (kaupungilla on `pollo.kuvat`
+mutta ei `matkakirja.luentakuva`) nostaa pakan samaan paikkaan ilman pohjakuvaa:
 paneeli rakennetaan läpinäkyvällä pohjalaatikolla
 (`.pulucam-pohja`, `rakennaLuentakuvanPaneeli` kuvalla `null`), joten
 ankkuri, raahaus ja pienennys ovat täsmälleen samat. Kuvatekstilaatikko
@@ -351,35 +339,38 @@ ei ole koskaan.**
 
 #### PULU-CAM-tarra
 
-Merkki on **yksi RGBA-PNG**, jossa teksti PuluCam on jo mukana
-(omistaja 9.9.2026 klo 18.50) — erillistä HTML-tekstiä ja selfie-kuvaketta
-ei enää ole. Tarraa **ei polteta kuvaan**: se on yksi elementti kuvan
-oikeassa alakulmassa, ja sen leveys on **22 % kuvan leveydestä, katto
-160 px** (`PULUCAM_TARRA_OSUUS`, `PULUCAM_TARRA_KATTO_PX`; css
+Merkki on hyväksytty musteensininen **yksi RGBA-PNG**, jossa teksti
+PuluCam on jo mukana ja tausta on läpinäkyvä myös sinetin sisällä —
+erillistä HTML-tekstiä ja selfie-kuvaketta ei ole. Tarraa **ei polteta
+kuvaan**: se on yksi elementti kuvan oikeassa yläkulmassa, ja sen leveys
+on **22 % kuvan leveydestä, katto 160 px** (`PULUCAM_TARRA_OSUUS`,
+`PULUCAM_TARRA_KATTO_PX`; css
 `--pulucam-mitta` on kartalla `--luentakuva-leveys` ja suurennoksessa
 js:n laskema kuvan leveys).
 
-Osoite on vakiossa `PULU_CAM_TARRA_OSOITE` (`js/pulucam.js`) — **null**
-siihen asti kunnes omistaja valitsee vaihtoehdon A–F. **Null ei ole
-varakuvake vaan puhdas kuva**: siihen asti pulun kuvissa ei näy mitään
-merkkiä, ei pakassa eikä karusellissa (`puluCamMerkki` palauttaa
-`null`, eikä suurennoksen kuvatilan kuorta edes synny).
+Osoite on vakiossa `PULU_CAM_TARRA_OSOITE` (`js/pulucam.js`). Sama sinetti
+näkyy kartan pakassa ja karusellissa.
 
 #### Yhteinen karuselli
 
-Päällimmäisen kuvan napautus (ilman raahausta) avaa **nykyisestä
-`avaaSuurennos`-toiminnosta laajennetun** karusellin, ja sama karuselli
-avautuu isoisän luentakuvan napautuksesta, kun pakka on päällä.
-Järjestys on omistajan sanoma järjestys eikä napautuskohdan mukainen:
+Kuvien valinta etenee kolmessa vaiheessa: **pieni pakka → levitetty
+viuhka → koko ruudun suurennos**. Ensimmäinen napautus pieneen pakkaan
+avaa viuhkan; vasta viuhkasta valitun kortin napautus avaa
+`avaaSuurennos`-karusellin juuri valitusta kuvasta. Kartan liike kokoaa
+viuhkan takaisin pieneksi pakaksi.
 
-1. isoisän luentakuva,
-2. pulun kuvat toimituksen järjestyksessä.
+Karusellin kiinteä järjestys on:
+
+1. isoisän luentakuva 1,
+2. isoisän luentakuva 2,
+3. Pulun kuvat toimituksen järjestyksessä.
 
 Kuvat ovat **suorassa**, yksi kerrallaan kokonaisena; edellinen/seuraava
 -nuolinapit (`.fokuszoom-nuoli`), pyyhkäisy ja `js/galleria.js`:n
 kaistasääntö toimivat kuten muissakin gallerioissa. Jokaisella kuvalla on
-oma **pitkä kuvateksti** (`kuvatekstiPitka`, Havainnekuva-linkki
-perässä tarvittaessa) ja **lähderivi** (`taytaLahderivi`), ja kun tarra
+oma **pitkä kuvateksti** (`kuvatekstiPitka`, yleensä noin kaksi lausetta,
+Havainnekuva-linkki perässä tarvittaessa) ja **lähderivi**
+(`taytaLahderivi`), ja kun tarra
 on valittu, se näkyy pulun kuvissa myös suurennoksessa
 (`.fokuszoom-kuvatila` + `.pulucam-suuri`). Sulkeminen palauttaa kartan
 pakkoineen.
@@ -669,20 +660,10 @@ liitettäväksi — päivitä se ajon jälkeen, muuten peli pysyy hiljaa.
 
 ## Kaiku
 
-Saapumisrepliikit (`js/liviapuhe.js LIVIAN_SAAPUMISREPLIIKIT`) ovat
-`avaus-1` (Livia lennähtää mukaan), `paljastus-1` (tulee sähkeen
-kanssa) ja `sofia-7` (`paluu`: Livia palaa pöllön luota ja aloittaa
-raporttinsa jo ilmasta). Muut kaupunkirepliikit sanotaan pelaajan
-vieressä, joten niissä kaiulla ei olisi mitään kerrottavaa. Näistä
-kolmesta tehdään ffmpegillä oma `-kaiku.mp3`, jossa kaikuinen ja
-vaimennettu raita häipyy 1,5 sekunnissa pois ja kuiva raita nousee
-täyteen tasoon — pulu huutaa viestiä jo lentäessä ja on perillä reilun
-sekunnin kuluttua. Peli soittaa saapumisrepliikistä kaikuversion, muista
-kuivan.
-
-Efekti leivotaan tiedostoon eikä tehdä Web Audiolla: kuplaäänet soitetaan
-tavallisella `<audio>`-elementillä, ja konvolveri vaatisi koko soittotien
-vaihtamisen AudioContextiin kahden repliikin takia.
+Pulun repliikki alkaa kuivalla äänellä: peli ei valitse
+saapumisrepliikeille `-kaiku.mp3`-versiota. Mahdolliset vanhat
+kaikuversiot ja manifestimerkinnät ovat tuotantoaineistoa, eivät aktiivinen
+soittosääntö. Kuplaäänet soitetaan tavallisella `<audio>`-elementillä.
 
 ## Manifesti
 
@@ -708,7 +689,7 @@ toimii ilman ääntä kuten ennenkin.
 4. Kuuntele. Tekstin tai äänen muuttuessa: `pakota: kyllä` (tarvittaessa
    `repliikit: avaus-2,paljastus-1`).
 
-## Pituusraja — repliikit on lyhennettävä
+## Repliikkien pituus ja ajoitus
 
 Kuplien rytmi ohjaa ääntä (*"luenta seuraa kuplia"*): kupla vaihtuu
 `min(9500, max(3200, merkit × 78))` millisekunnin kuluttua, ja seuraavan
@@ -735,11 +716,13 @@ Nykytila ja ehdotukset (päätoimittaja päättää; kaanonia ei muuteta tääll
 | kaupunkien uusi kulku (95 kuplaa) | 5–93 | 0,4–6,6 | 3,2–7,3 | omistajan hyväksymät tekstit 7.9.2026, jokainen mahtuu kuplaansa |
 | mannerivihje-1 | 143 | 10,2 | 8,2 | "Kuule — jos tämä maa alkaa tuntua pitkältä, kerää rahaa lentoon. Isosta kaupungista pääsee toiselle mantereelle." (112, viimeinen kupla → saa puhua loppuun) |
 
-Nyrkkisääntö: **enintään noin 85 merkkiä** repliikkiä kohti (≈6 s).
-Kuiva ajo laskee jokaiselle repliikille ylityksen merkkeinä.
-
-Ylitys ei enää katkaise lausetta (kupla odottaa puheen loppuun), mutta
-se pidentää kuplan seisomista ruudulla — lyhyys on siis yhä tavoite.
+Taulukon merkkimäärät ja kestot ovat toteutuneen aineiston teknistä
+inventointia, eivät uusiin kaupunkipareihin sovellettava kiintiö.
+Horatio–Livia-tuotantomoduulin mukaan Pulun vastausta pidennetään yleensä
+noin yhdellä luontevalla lauseella ja yhteispituus arvioidaan kuuntelemalla.
+Kuiva ajo saa yhä raportoida merkkimäärät ja ajoitusriskit: pitkä kupla
+seisoo ruudulla pitkään, vaikka kupla odottaa puheen loppuun eikä katkaise
+lausetta.
 
 ## Muut Livian repliikkilähteet (ei vielä äänitetty)
 
