@@ -49,59 +49,69 @@ import { readFileSync } from 'node:fs';
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const {
   KAUPUNKIPISTEEN_HALKAISIJA_PX, KOHDEKAUPUNGIN_NIMI_SUHDE,
-  KOHDEKAUPUNGIN_PISTE_SUHDE, KOHDEKAUPUNGIN_TAYSI_OSUUS, katsesateenPaikka,
-  LAHIZOOMIN_PISTE_SUHDE, LAHIZOOMIN_SKAALA_ALKU, LAHIZOOMIN_SKAALA_TAYSI,
+  KOHDEKAUPUNGIN_PISTE_SUHDE, OMAN_KAUPUNGIN_KERROIN, katsesateenPaikka,
   kaupunkipisteenHalkaisijaPx, kaupunkipisteenSade,
-  kohdekaupunginMitat, lahizoominOsuus, poltetunMusteenSuurennus,
+  kohdekaupunginMitat, poltetunMusteenSuurennus,
 } = await import('../js/pallolauta/lauta.js');
 const { KOHDEMERKIN_RUUTU_PX } = await import('../js/pallolauta/nostot.js');
-const { LEHDEN_VAHIN_OSUUS } = await import('../js/fokuskohteet.js');
 const { KARTTANIMI_KOOT, ladoRuutunimet } = await import('../js/karttanimet.js');
 const { PALLON_SALLITTU_VENYTYS } = await import('../js/pallolauta/kamera.js');
 
 /* ================================================================== *
  * 1. PISTEEN LATTIA: >= 1,5 x KOHDEMERKKI
  * ================================================================== */
+/* ================================================================== *
+ * 1. YKSI SÄÄNTÖ: PISTE ON KARTAN MITASSA (omistaja 12.9.2026)
+ *
+ * *"Kaupunkien pistekoko muuttuu vielä lähemmillä zoom tasoilla"* ja
+ * aiemmin samana päivänä *"koko oli minusta ennen sidottu kartan zoom
+ * tasoon niin että ne pienentyvät ulos zoomatessa kartan mukana"*.
+ *
+ * Sääntöjä oli neljä neljällä zoomivälillä: 7 px:n ruutuvakio (7.9.),
+ * lehden osuudesta liukuva lattia (8.9.), kameran mittakaavasta
+ * liukuva lähizoomi (9.9.) ja kartan mittakaava vasta korkeudesta 0,37
+ * ulospäin (12.9. ensimmäinen yritys). Nyt niitä on yksi, ja tämän
+ * tiedoston 8.9. ja 9.9. mitoitukset elävät sen KATTONA ja
+ * KERTOIMENA — ks. tests/pallopiste.test.mjs, jossa säännön oma
+ * vartija on.
+ * ================================================================== */
 
-test('lähikuvassa kaupunkipiste on vähintään 1,5 x kohdemerkki', () => {
-  const { halkaisijaPx } = kohdekaupunginMitat({ osuus: 1, suurennus: 1 });
+test('pelaajan oma kaupunki on 8.9.2026 mitoituksen verran suurempi', () => {
   assert.ok(KOHDEKAUPUNGIN_PISTE_SUHDE >= 1.5,
     `suhde ${KOHDEKAUPUNGIN_PISTE_SUHDE} < 1,5`);
-  assert.ok(halkaisijaPx >= 1.5 * KOHDEMERKIN_RUUTU_PX,
-    `piste ${halkaisijaPx.toFixed(2)} px < 1,5 x ${KOHDEMERKIN_RUUTU_PX.toFixed(2)} px`);
-  // ...eikä koskaan kohdemerkkiä pienempi, missään portin asennossa.
-  for (let osuus = LEHDEN_VAHIN_OSUUS; osuus <= 3; osuus += 0.05) {
-    const m = kohdekaupunginMitat({ osuus, suurennus: 1 });
-    assert.ok(m.halkaisijaPx >= KAUPUNKIPISTEEN_HALKAISIJA_PX);
-    if (osuus >= KOHDEKAUPUNGIN_TAYSI_OSUUS) {
-      assert.ok(m.halkaisijaPx >= KOHDEMERKIN_RUUTU_PX,
-        `osuus ${osuus.toFixed(2)}: piste ${m.halkaisijaPx.toFixed(2)} < merkki`);
-    }
+  const oma = kaupunkipisteenHalkaisijaPx({ id: 'kiova' }, 'kiova');
+  // 8.9.2026 mitattu lattia 17,16 px on nyt kerroin, ei oma ruutumitta.
+  assert.ok(Math.abs(oma - KOHDEKAUPUNGIN_PISTE_SUHDE * KOHDEMERKIN_RUUTU_PX) < 1e-9,
+    `oma ${oma.toFixed(2)} != 1,5 x ${KOHDEMERKIN_RUUTU_PX.toFixed(2)}`);
+  assert.ok(oma >= KOHDEMERKIN_RUUTU_PX, 'oma kaupunki ei saa jäädä kohdemerkkiä pienemmäksi');
+  assert.ok(Math.abs(OMAN_KAUPUNGIN_KERROIN - oma / KAUPUNKIPISTEEN_HALKAISIJA_PX) < 1e-9);
+  // Jokainen muu on perusmitta, myös lähikuvassa — kerroin ei vuoda.
+  for (const id of ['venetsia', 'lontoo', 'ateena', 'berliini']) {
+    assert.equal(kaupunkipisteenHalkaisijaPx({ id }, 'kiova'), KAUPUNKIPISTEEN_HALKAISIJA_PX, id);
   }
+  // Pelaaja reitillä (ei kaupunkia) ja tunnukseton piste: perusmitta.
+  assert.equal(kaupunkipisteenHalkaisijaPx({ id: 'kiova' }, null), KAUPUNKIPISTEEN_HALKAISIJA_PX);
+  assert.equal(kaupunkipisteenHalkaisijaPx({ laji: 'helmi' }, 'kiova'), KAUPUNKIPISTEEN_HALKAISIJA_PX);
 });
 
-test('lattia kasvaa jatkuvasti eikä hyppää portilla', () => {
-  let edellinen = kohdekaupunginMitat({ osuus: 0 }).halkaisijaPx;
-  for (let osuus = 0; osuus <= 1.2; osuus += 0.01) {
-    const nyt = kohdekaupunginMitat({ osuus }).halkaisijaPx;
-    assert.ok(nyt >= edellinen - 1e-9, 'lattia ei saa pienetä lähennettäessä');
-    assert.ok(nyt - edellinen < 1.5, `hyppy ${(nyt - edellinen).toFixed(2)} px osuudella ${osuus}`);
-    edellinen = nyt;
-  }
+test('pelaajan siirtyessä korostus siirtyy uuteen kaupunkiin', () => {
+  const kiova = { id: 'kiova' };
+  const venetsia = { id: 'venetsia' };
+  const iso = KAUPUNKIPISTEEN_HALKAISIJA_PX * OMAN_KAUPUNGIN_KERROIN;
+  assert.equal(kaupunkipisteenHalkaisijaPx(kiova, 'kiova'), iso);
+  assert.equal(kaupunkipisteenHalkaisijaPx(venetsia, 'kiova'), KAUPUNKIPISTEEN_HALKAISIJA_PX);
+  // Sama piste, uusi pelaajan kaupunki: vanha palaa perusmittaan.
+  assert.equal(kaupunkipisteenHalkaisijaPx(kiova, 'venetsia'), KAUPUNKIPISTEEN_HALKAISIJA_PX);
+  assert.equal(kaupunkipisteenHalkaisijaPx(venetsia, 'venetsia'), iso);
 });
 
 /* ================================================================== *
- * 2. KAUKONÄKYMÄ EI MUUTU
+ * 2. KAUKONÄKYMÄ: NIMI EI MUUTU
  * ================================================================== */
 
-test('yleisnäkymässä piste ja nimi ovat entisellään', () => {
-  for (const osuus of [0, 0.1, 0.3, LEHDEN_VAHIN_OSUUS - 0.01]) {
-    const m = kohdekaupunginMitat({ osuus, suurennus: 1 });
-    assert.equal(m.halkaisijaPx, KAUPUNKIPISTEEN_HALKAISIJA_PX,
-      `osuus ${osuus}: piste ${m.halkaisijaPx}`);
-    assert.equal(m.nimiKerroin, 1, `osuus ${osuus}: nimi ${m.nimiKerroin}`);
-  }
-  // Omistajan 7.9.2026 mitta on yhä se, joka yleisnäkymästä luetaan.
+test('yleisnäkymässä nimi on entisellään ja 7 px on yhä perusmitta', () => {
+  assert.equal(kohdekaupunginMitat({ suurennus: 1 }).nimiKerroin, 1);
+  // Omistajan 7.9.2026 mitta on yhä se, josta sääntö lähtee.
   assert.equal(KAUPUNKIPISTEEN_HALKAISIJA_PX, 7);
 });
 
@@ -156,145 +166,39 @@ test('ladonta latoo nimen ja varaa pisteen lattian mitassa', () => {
   assert.equal(paallakkain, false, `nimi pisteen päällä: ${JSON.stringify(r)}`);
 });
 
-/* ================================================================== *
- * 4. KYTKENNÄT: LATTIA ON OIKEASSA POLUSSA
- * ================================================================== */
-
-test('piste ja ladonta lukevat saman lattian', () => {
-  const lauta = lue('../js/pallolauta/lauta.js');
-  assert.match(lauta, /const kohdekaupunki = \(\) => \{/);
-  // Piste lukee lattian PISTEKOHTAISESTI (8.9.2026 ilta): sama funktio
-  // sekä pointRadius-luennassa että skaalan tahdistuksessa.
-  assert.match(lauta, /kaupunkipisteenHalkaisijaPx\(d, pelaajanKaupunki\(\), kohdekaupunki\(\)\)/);
-  assert.match(lauta, /kaupunkipisteenHalkaisijaPx\(d, oma, mitat\)/);
-  assert.match(lauta, /return pisteenSade\(d\);/);
-  assert.match(lauta, /const pelaajanKaupunki = \(\) => ui\.game\?\.cityOf\?\.\(\)\?\.id \?\? null;/);
-  assert.match(lauta, /kokoKerroin: kaupunginMitat\.nimiKerroin/);
-  assert.match(lauta, /pisteSade: kaupunginMitat\.halkaisijaPx \/ 2/);
-  // Portti on sama luku kuin kohdemerkeillä itsellään.
-  assert.match(lauta, /nostot\.lehdenOsuus\(nakyva\)/);
-  const nostot = lue('../js/pallolauta/nostot.js');
-  assert.match(nostot, /lehdenOsuus\(pohja, nakyva, pack\.id\) >= LEHDEN_VAHIN_OSUUS/);
-  // …ja portti on myös pelitilan portti: ei merkkejä, ei lattiaa.
-  assert.match(nostot, /if \(!pack \|\| ui\.katselu \|\| game\.phase === 'pickstart' \|\| ui\.aloituslentoKesken\) return 0;/);
-  assert.match(nostot, /if \(ui\.movingPlayerId != null\) return 0;/);
-  // Osuma-alue ei ole sidottu pisteen kokoon (sormen 44 px).
-  assert.match(lauta, /NAPAUTUKSEN_SADE_PX = 44/);
-});
-
 test('pisteen säde noudattaa annettua ruutuhalkaisijaa', () => {
   const perus = kaupunkipisteenSade(0.08, 1210);
   const iso = kaupunkipisteenSade(0.08, 1210, { halkaisijaPx: 17.16 });
   assert.ok(Math.abs(iso / perus - 17.16 / KAUPUNKIPISTEEN_HALKAISIJA_PX) < 1e-6);
 });
 
-/* ================================================================== *
- * 5. LATTIA ON YHDEN PISTEEN SÄÄNTÖ (omistaja 8.9.2026 ilta)
- * ================================================================== */
-
-test('lattia koskee vain pelaajan kaupunkia — muut 7 px myös osuudella 1', () => {
-  const mitat = kohdekaupunginMitat({ osuus: 1, suurennus: 1 });
-  assert.ok(mitat.halkaisijaPx > KAUPUNKIPISTEEN_HALKAISIJA_PX, 'lattia on olemassa');
-  // Pelaajan oma kaupunki saa lattian…
-  assert.equal(kaupunkipisteenHalkaisijaPx({ id: 'kiova' }, 'kiova', mitat), mitat.halkaisijaPx);
-  // …ja jokainen muu on 7 px, vaikka lehti täyttäisi koko ruudun.
-  for (const id of ['venetsia', 'lontoo', 'ateena', 'berliini']) {
-    assert.equal(kaupunkipisteenHalkaisijaPx({ id }, 'kiova', mitat),
-      KAUPUNKIPISTEEN_HALKAISIJA_PX, `${id} kasvoi lattiaan`);
-  }
-  // Pelaaja reitillä (ei kaupunkia): kaikki ovat 7 px.
-  assert.equal(kaupunkipisteenHalkaisijaPx({ id: 'kiova' }, null, mitat),
-    KAUPUNKIPISTEEN_HALKAISIJA_PX);
-  // Piste ilman tunnusta (helmi, valo) ei koskaan lue lattiaa.
-  assert.equal(kaupunkipisteenHalkaisijaPx({ laji: 'helmi' }, 'kiova', mitat),
-    KAUPUNKIPISTEEN_HALKAISIJA_PX);
-  // Yleisnäkymässä lattia on 7 px, joten oma kaupunkikin on 7 px.
-  const kaukaa = kohdekaupunginMitat({ osuus: 0, suurennus: 1 });
-  assert.equal(kaupunkipisteenHalkaisijaPx({ id: 'kiova' }, 'kiova', kaukaa),
-    KAUPUNKIPISTEEN_HALKAISIJA_PX);
-});
-
-test('pelaajan siirtyessä lattia siirtyy uuteen kaupunkiin', () => {
-  const mitat = kohdekaupunginMitat({ osuus: 1, suurennus: 1 });
-  const kiova = { id: 'kiova' };
-  const venetsia = { id: 'venetsia' };
-  assert.equal(kaupunkipisteenHalkaisijaPx(kiova, 'kiova', mitat), mitat.halkaisijaPx);
-  assert.equal(kaupunkipisteenHalkaisijaPx(venetsia, 'kiova', mitat), KAUPUNKIPISTEEN_HALKAISIJA_PX);
-  // Sama piste, uusi pelaajan kaupunki: vanha palaa 7 px:ään, uusi kasvaa.
-  assert.equal(kaupunkipisteenHalkaisijaPx(kiova, 'venetsia', mitat), KAUPUNKIPISTEEN_HALKAISIJA_PX);
-  assert.equal(kaupunkipisteenHalkaisijaPx(venetsia, 'venetsia', mitat), mitat.halkaisijaPx);
-});
 
 /* ================================================================== *
- * 5b. LÄHIZOOMISSA JOKAINEN PELIKAUPUNKI EROTTUU (omistaja 9.9.2026)
- *
- * *"kohdekaupunkien pisteet saisivat puolestaan tässä zoom tasossa olla
- * isommalla, nyt niitä ei erota muista palloista."*
- *
- * MITATTU (Chromium 1419 x 821 css, kotelo 1398 x 742, Fogg Wienissä,
- * näkymä Venetsia–Istanbul kuten omistajan kaappauksessa; halkaisija
- * ruudun keskellä olevasta pisteestä):
- *
- *   korkeus  skaala  ENNEN            JÄLKEEN
- *   0,42     0,99    6,97 px          6,97 px   (8.9. sääntö säilyy)
- *   0,30     1,39    6,95 px         11,90 px
- *   0,22     1,89    6,88 px         22,49 px   (omistajan näkymä)
- *   0,16     2,60    6,84 px         22,35 px
- *
- * Kohdemerkki on 11,44 px, joten lähizoomissa piste on 1,97 x sen.
+ * 4. KYTKENNÄT: YKSI SÄÄNTÖ ON OIKEASSA POLUSSA
  * ================================================================== */
 
-test('lähizoomissa piste on ~2 x kohdemerkki, kaukaa yhä 7 px', () => {
-  assert.equal(LAHIZOOMIN_PISTE_SUHDE, 2);
-  // Omistajan 9.9. näkymä (skaala 1,89): selvästi yli 1,8 x kohdemerkki.
-  const lahella = kohdekaupunginMitat({ osuus: 0, skaala: 1.894 });
-  assert.ok(lahella.lahiHalkaisijaPx > 1.8 * KOHDEMERKIN_RUUTU_PX,
-    `lähizoomi ${lahella.lahiHalkaisijaPx.toFixed(2)} px <= 1,8 x ${KOHDEMERKIN_RUUTU_PX.toFixed(2)}`);
-  assert.ok(Math.abs(lahella.lahiHalkaisijaPx - 2 * KOHDEMERKIN_RUUTU_PX) < 1e-9);
-  // 8.9. näkymä (koko Eurooppa, skaala 0,99) on tavulleen entinen.
-  for (const skaala of [0, 0.694, 0.992, LAHIZOOMIN_SKAALA_ALKU]) {
-    const m = kohdekaupunginMitat({ osuus: 0, skaala });
-    assert.equal(m.lahiHalkaisijaPx, KAUPUNKIPISTEEN_HALKAISIJA_PX,
-      `skaala ${skaala}: ${m.lahiHalkaisijaPx} px`);
-  }
-  // Raja on 8.9. mitatun näkymän (0,99) yläpuolella, jottei se palaa.
-  assert.ok(LAHIZOOMIN_SKAALA_ALKU > 0.992);
-  assert.ok(LAHIZOOMIN_SKAALA_TAYSI <= 1.894, 'omistajan näkymässä täysi koko');
-});
-
-test('lähizoomin liuku on jatkuva eikä hyppää', () => {
-  assert.equal(lahizoominOsuus(0), 0);
-  assert.equal(lahizoominOsuus(LAHIZOOMIN_SKAALA_TAYSI), 1);
-  assert.equal(lahizoominOsuus(50), 1);
-  let edellinen = kohdekaupunginMitat({ osuus: 0, skaala: 0 }).lahiHalkaisijaPx;
-  for (let skaala = 0; skaala <= 6; skaala += 0.01) {
-    const nyt = kohdekaupunginMitat({ osuus: 0, skaala }).lahiHalkaisijaPx;
-    assert.ok(nyt >= edellinen - 1e-9, `piste pieneni skaalalla ${skaala.toFixed(2)}`);
-    assert.ok(nyt - edellinen < 0.5, `hyppy ${(nyt - edellinen).toFixed(2)} px skaalalla ${skaala.toFixed(2)}`);
-    edellinen = nyt;
-  }
-});
-
-test('lähizoomi koskee jokaista kaupunkia, pelaajan lattia säilyy', () => {
-  const lahi = kohdekaupunginMitat({ osuus: 1, skaala: 1.894 });
-  // Jokainen kaupunki saa lähizoomin koon…
-  for (const id of ['venetsia', 'sofia', 'istanbul']) {
-    assert.equal(kaupunkipisteenHalkaisijaPx({ id }, 'wien', lahi), lahi.lahiHalkaisijaPx);
-  }
-  // …ja pelaajan oma on vähintään sen verran, ei koskaan vähempää.
-  assert.ok(kaupunkipisteenHalkaisijaPx({ id: 'wien' }, 'wien', lahi) >= lahi.lahiHalkaisijaPx);
-  // Pelaajan 8.9. lattia (1,5 x kohdemerkki) on ennallaan siellä, missä
-  // lähizoomia ei ole: kaukonäkymä osuudella 1.
-  const kaukaa = kohdekaupunginMitat({ osuus: 1, skaala: 0.992 });
-  assert.ok(Math.abs(kaukaa.halkaisijaPx - KOHDEKAUPUNGIN_PISTE_SUHDE * KOHDEMERKIN_RUUTU_PX) < 1e-9);
-  assert.equal(kaukaa.lahiHalkaisijaPx, KAUPUNKIPISTEEN_HALKAISIJA_PX);
-});
-
-test('lähizoomin mitta luetaan kameran mittakaavasta, ei lehden osuudesta', () => {
+test('piste, ladonta ja osuma lukevat saman yhden säännön', () => {
   const lauta = lue('../js/pallolauta/lauta.js');
-  assert.match(lauta, /skaala: nakyva\?\.skaala \?\? 0,/);
-  // Sama funktio antaa yhä sekä pisteen että tahdistuksen koon.
-  assert.match(lauta, /const muidenPx = kaupunkipisteenHalkaisijaPx\(null, null, mitat\);/);
+  // Yksi funktio antaa piirretyn halkaisijan, ja kaikki lukevat sen.
+  assert.match(lauta, /const piirrettyHalkaisijaPx = \(d\) => kartanMittakaavanHalkaisija\(/);
+  assert.match(lauta, /const pisteenSade = \(d\) => sadeRuudulta\(piirrettyHalkaisijaPx\(d\)\);/);
+  assert.match(lauta, /return pisteenSade\(d\);/);
+  assert.match(lauta, /const pelaajanKaupunki = \(\) => ui\.game\?\.cityOf\?\.\(\)\?\.id \?\? null;/);
+  assert.match(lauta, /kokoKerroin: kaupunginMitat\.nimiKerroin/);
+  assert.match(lauta, /pisteSade: piirrettyHalkaisijaPx\(/);
+  assert.match(lauta, /const pisteenPx = voittaja\?\.laji === 'kaupunki' \? piirrettyHalkaisijaPx\(voittaja\.k\) : 0;/);
+  // Zoomiliukuja ei saa palata: pisteen koko ei lue lehden osuutta
+  // eikä kameran mittakaavaa, vain kameran korkeuden.
+  assert.ok(!lauta.includes('lahizoominOsuus'), 'lähizoomin liuku palasi');
+  assert.ok(!/kaupunkiMitat = kohdekaupunginMitat\(\{[\s\S]{0,200}osuus:/.test(lauta),
+    'lehden osuus palasi pisteen kokoon');
+  // Kohdemerkkien oma portti on yhä nostoilla, ei pisteellä.
+  const nostot = lue('../js/pallolauta/nostot.js');
+  assert.match(nostot, /lehdenOsuus\(pohja, nakyva, pack\.id\) >= LEHDEN_VAHIN_OSUUS/);
+  assert.match(nostot, /if \(!pack \|\| ui\.katselu \|\| game\.phase === 'pickstart' \|\| ui\.aloituslentoKesken\) return 0;/);
+  assert.match(nostot, /if \(ui\.movingPlayerId != null\) return 0;/);
+  // Osuma-alue ei ole sidottu pisteen kokoon (sormen 44 px).
+  assert.match(lauta, /NAPAUTUKSEN_SADE_PX = 44/);
 });
 
 /* ================================================================== *
@@ -389,6 +293,6 @@ test('katsesäde kirjoitetaan kameran liikkeestä, ladonnasta ja siirtymän jäl
   assert.match(lauta, /ohjaimet\.addEventListener\('change', tahdistaPisteidenKoko\)/);
   // Kirjaston siirtymä ja herätys korjataan jälkikäteen.
   assert.match(lauta, /tahdistaSiirtymanJalkeen = \(\) => \{/);
-  assert.match(lauta, /siirtymaAjastin = setTimeout\(tahdistaPisteidenKoko, siirtyma \+ 50\);/);
+  assert.match(lauta, /siirtymaAjastin = setTimeout\(tahdistaPisteidenKoko, PISTEIDEN_SIIRTYMA_MS \+ 50\);/);
   assert.match(lauta, /clearTimeout\(siirtymaAjastin\);/);
 });

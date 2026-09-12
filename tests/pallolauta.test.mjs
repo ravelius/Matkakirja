@@ -214,7 +214,13 @@ test('pallolla vain pelin merkit: sallitut kerrokset lueteltu, kartan kerrokset 
   // Kaikki liike animoitua, reduced motion kunnioitetaan.
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /const siirtyma = ui\.reducedMotion \? 0 : MERKKIEN_SIIRTYMA_MS;/);
-  assert.match(lauta, /\.pointsTransitionDuration\(siirtyma\)/);
+  /*
+   * PISTEKERROS ON POIKKEUS (omistaja 12.9.2026: *"pisteet edelleen
+   * liikahtavat liikkeen loputtua"*): kirjaston pistesiirtymä kirjoittaa
+   * PINNAN paikan, ja meidän pisteemme ovat katsesäteellä, joten sen
+   * siirtymä on nolla. Vartija on tests/pallopiste.test.mjs.
+   */
+  assert.match(lauta, /\.pointsTransitionDuration\(PISTEIDEN_SIIRTYMA_MS\)/);
   assert.match(lue('../js/pallolauta/merkit.js'), /\.htmlTransitionDuration\(siirtyma\)/);
   assert.match(lue('../js/pallolauta/reitit.js'), /\.pathTransitionDuration\(siirtyma\)/);
   assert.match(lue('../js/pallolauta/reitit.js'), /\.arcsTransitionDuration\(siirtyma\)/);

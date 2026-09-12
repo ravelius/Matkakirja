@@ -85,7 +85,6 @@ import {
 } from '../ui-apurit.js';
 import { KARTTANIMI_KOOT } from '../karttanimet.js';
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
-import { LEHDEN_VAHIN_OSUUS } from '../fokuskohteet.js';
 import {
   PALLOKAMERAN_AJO_MS, PALLO_FOV, PALLO_KORKEUS_MAX, PALLON_SALLITTU_VENYTYS,
   laattojenVenytys, luoPallokamera,
@@ -132,6 +131,11 @@ export const PALLOLAUDAN_KERROKSET = [
  * KAUPUNKIPISTE ON RUUDUN VAKIO, EI KARTAN (omistaja 7.9.2026, iPad:
  * Tampereen kohdalla iso musta ympyrä)
  * ══════════════════════════════════════════════════════════════════
+ *
+ * HISTORIAA — VOIMASSA OLEVA SÄÄNTÖ ON "YKSI SÄÄNTÖ: PISTE ON KARTAN
+ * MITASSA" (12.9.2026) ALEMPANA. Tämä ja kaksi seuraavaa lohkoa
+ * kertovat, mistä sen luvut (7 px, katto, oman kaupungin kerroin)
+ * tulevat ja miksi pelkkä paluu vanhaan ei kelvannut.
  *
  * Globe.gl:n `pointRadius` on ASTEMITTA: kirjasto skaalaa pisteen
  * `säde × 2π · R / 360` yksiköksi pallon pinnalle (mitattu kirjaston
@@ -303,34 +307,70 @@ export const KAUPUNKIPISTEEN_HALKAISIJA_PX = 7;
  * siis pienene mistään, eikä 8.9. mitattu 17,2 px muutu siellä, missä
  * lähizoomiliuku on vielä nolla.
  */
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * YKSI SÄÄNTÖ: PISTE ON KARTAN MITASSA JOKA ZOOMILLA (omistaja
+ * 12.9.2026, v1790 laitteella: *"Kaupunkien pistekoko muuttuu vielä
+ * lähemmillä zoom tasoilla"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja on sanonut asian kahdesti: piste on KARTAN mitassa ja
+ * pienenee kartan mukana. Yllä olevat 7.9., 8.9. ja 9.9. lohkot ovat
+ * siihen johtanutta historiaa — kukin niistä lisäsi oman ruutumittansa
+ * ja oman liukunsa, ja lopputulos oli neljä eri sääntöä neljällä eri
+ * zoomivälillä:
+ *
+ *   1. 7 px:n ruutuvakio                        (7.9.)
+ *   2. lehden osuudesta liukuva lattia 17,16 px (8.9., pelaajan kaupunki)
+ *   3. mittakaavasta liukuva 22,87 px           (9.9., lähizoomi)
+ *   4. kartan mittakaava korkeudesta 0,37 ulos  (12.9. ensimmäinen yritys)
+ *
+ * NYT SÄÄNTÖJÄ ON YKSI: halkaisija on vakio-osuus kartan mittakaavasta
+ * koko zoomialueella, katon ja lattian välissä. Ei taitekohtia, ei
+ * liukuja. Kohta 4:n taitekohta 0,37 jää pelkäksi VERTAILUKORKEUDEKSI
+ * eli siksi kohdaksi, jossa osuus on kirjattu pikseleinä — sääntö on
+ * sama sen molemmin puolin.
+ *
+ * OSUUS ON MITATTU: 7 px saapumisnäkymässä (kameran korkeus 0,37,
+ * mitattu Chromiumilla 12.9.2026), eli 5,95 ruutupikseliä yhtä
+ * "px / lautayksikkö" -mittakaavayksikköä kohden. Sama suhde pätee nyt
+ * jokaisella korkeudella, koska kumpikin — pisteen ruutukoko ja kartan
+ * mittakaava — on kääntäen verrannollinen kameran korkeuteen.
+ *
+ * ── KATTO: MIKÄ OLI "ISO MUSTA YMPYRÄ" ────────────────────────────
+ *
+ * 7.9.2026 omistaja kirjoitti iPadilta *"Tampereen kohdalla iso musta
+ * ympyrä"*. Silloin voimassa ollut kiinteä pointRadius 0,03 antoi
+ * (saman lohkon mittaus): puhelimella 2,7 px tavallisessa näkymässä,
+ * 13,7 px lähimmällä zoomilla ja iPadin korkeammalla ruudulla NOIN
+ * 30 px. Liian iso oli siis ~30 px.
+ *
+ * Katto on KAUPUNKIPISTEEN_KATTO_PX = LAHIZOOMIN_PISTE_SUHDE x
+ * KOHDEMERKIN_RUUTU_PX = 22,87 px. Se ei ole uusi arvaus vaan 9.9.2026
+ * MITATTU tavoitekoko (*"kohdekaupunkien pisteet saisivat olla
+ * isommalla, nyt niitä ei erota muista palloista"*): kaksi kohdemerkin
+ * halkaisijaa, ja nappulan 32 px:n alle jäävä. Se on selvästi alle sen
+ * ~30 px:n, joka 7.9. oli liian iso, joten iPadin ympyrä ei voi palata.
+ * Sääntö osuu kattoon korkeudella 0,37 x 7 / 22,87 = 0,113; mitattuna
+ * korkeudella 0,12 sääntö antaa 21,6 px eli käytännössä saman kuin
+ * 9.9. liuku antoi (22,87 px) — lähikuva ei siis muutu silmälle.
+ *
+ * ── PELAAJAN OMA KAUPUNKI ─────────────────────────────────────────
+ *
+ * 8.9.2026 tilaus (*"Miksi kohdekaupunki näkyy noin pienenä pallona?
+ * Se saisi olla selvästi suurempi."*) säilyy KERTOIMENA eikä omana
+ * ruutumittanaan: oma kaupunki on OMAN_KAUPUNGIN_KERROIN kertaa muiden
+ * piste, siis sama kartan mittakaava ja sama katto. Kerroin on
+ * täsmälleen se, mitä 8.9. mitattiin: 1,5 x kohdemerkki / 7 px = 2,45,
+ * eli vertailunäkymässä 17,16 px kuten ennenkin — nyt vain ilman
+ * lehden osuuden porttia, joka oli oma taitekohtansa.
+ */
 /** Piste lähikuvassa vähintään tämän verran kohdemerkin halkaisijasta. */
 export const KOHDEKAUPUNGIN_PISTE_SUHDE = 1.5;
-/** Lähizoomissa jokainen pelikaupunki on tämän verran kohdemerkistä. */
+/** Lähizoomin tavoitekoko kohdemerkin halkaisijoina (9.9.2026 mittaus). */
 export const LAHIZOOMIN_PISTE_SUHDE = 2;
-/** Mittakaava (px / lautayksikkö), jossa lähizoomin kasvu alkaa. */
-export const LAHIZOOMIN_SKAALA_ALKU = 1.2;
-/** Mittakaava, jossa lähizoomin koko on täysi. */
-export const LAHIZOOMIN_SKAALA_TAYSI = 1.8;
-/**
- * Lähizoomiliu'un asento 0…1 kameran mittakaavasta (ks. lohko yllä).
- * Jatkuva ja kasvava: ei hyppyä missään zoomin kohdassa.
- *
- * @param {number} skaala ruudun pikseliä lautayksikköä kohden
- */
-export function lahizoominOsuus(skaala) {
-  if (!(skaala > 0)) return 0;
-  const vali = LAHIZOOMIN_SKAALA_TAYSI - LAHIZOOMIN_SKAALA_ALKU;
-  if (!(vali > 0)) return Number(skaala >= LAHIZOOMIN_SKAALA_TAYSI);
-  return Math.min(1, Math.max(0, (skaala - LAHIZOOMIN_SKAALA_ALKU) / vali));
-}
 /** Nimi vähintään tämän verran kohdenimiön ruutukoosta. */
 export const KOHDEKAUPUNGIN_NIMI_SUHDE = 1.3;
-/**
- * Osuus, jolla pisteen lattia on täydessä mitassaan. Portti aukeaa
- * LEHDEN_VAHIN_OSUUS:ssa (0,5) ja tämä on liu'un yläpää: siihen asti
- * piste kasvaa 7 pikselistä lattiaansa, eikä koko hyppää portilla.
- */
-export const KOHDEKAUPUNGIN_TAYSI_OSUUS = 0.75;
 /**
  * POLTETUN MUSTEEN SUURENNUS RUUDULLA — montako kertaa suurempana
  * laattaan poltettu merkintä näkyy kuin se poltettiin.
@@ -359,54 +399,33 @@ export function poltetunMusteenSuurennus({
   return Math.min(katto, Math.max(1, suurennus));
 }
 /**
- * KOHDEKAUPUNGIN MITAT RUUDULLA: pisteen halkaisija ja nimen kerroin.
+ * KOHDEKAUPUNGIN NIMEN KERROIN. Piste ei ole enää täällä: sen mitta on
+ * yksi sääntö (kartanMittakaavanHalkaisija, ks. YKSI SÄÄNTÖ: PISTE ON
+ * KARTAN MITASSA), eikä se lue lehden osuutta eikä mittakaavaliukua.
  *
- * @param {number} osuus     maan lehden osuus näkymästä (nostot.js
- *   lehdenOsuus) — portti ja liuku, ks. lohko yllä
  * @param {number} suurennus poltetun musteen suurennus
  *   (poltetunMusteenSuurennus)
- * @param {number} skaala    kameran mittakaava (px / lautayksikkö,
- *   kamera.nakyvaAlue().skaala) — lähizoomiliuku, ks. LÄHIZOOMISSA
- *   JOKAINEN PELIKAUPUNKI EROTTUU
- * @returns {{halkaisijaPx: number, lahiHalkaisijaPx: number,
- *   nimiKerroin: number}} halkaisijaPx on PELAAJAN kaupungin piste,
- *   lahiHalkaisijaPx jokaisen muun
+ * @returns {{nimiKerroin: number}}
  */
-export function kohdekaupunginMitat({ osuus = 0, suurennus = 1, skaala = 0 } = {}) {
-  const vali = KOHDEKAUPUNGIN_TAYSI_OSUUS - LEHDEN_VAHIN_OSUUS;
-  const lahella = vali > 0
-    ? Math.min(1, Math.max(0, (osuus - LEHDEN_VAHIN_OSUUS) / vali))
-    : Number(osuus >= LEHDEN_VAHIN_OSUUS);
-  const lattia = KOHDEKAUPUNGIN_PISTE_SUHDE * KOHDEMERKIN_RUUTU_PX;
-  const omanLattia = KAUPUNKIPISTEEN_HALKAISIJA_PX
-    + lahella * Math.max(0, lattia - KAUPUNKIPISTEEN_HALKAISIJA_PX);
-  // Lähizoomi koskee JOKAISTA pelikaupunkia (omistaja 9.9.2026).
-  const lahizoomi = LAHIZOOMIN_PISTE_SUHDE * KOHDEMERKIN_RUUTU_PX;
-  const lahiHalkaisijaPx = KAUPUNKIPISTEEN_HALKAISIJA_PX
-    + lahizoominOsuus(skaala) * Math.max(0, lahizoomi - KAUPUNKIPISTEEN_HALKAISIJA_PX);
-  // Pelaajan piste on näiden kahden suurempi: kumpikaan ei pienennä.
-  const halkaisijaPx = Math.max(omanLattia, lahiHalkaisijaPx);
+export function kohdekaupunginMitat({ suurennus = 1 } = {}) {
   const nimiLattia = KOHDEKAUPUNGIN_NIMI_SUHDE * KARTTANIMI_KOOT.kohde
     * Math.max(1, suurennus);
   const nimiKerroin = Math.max(1, nimiLattia / KARTTANIMI_KOOT.kaupunki);
-  return { halkaisijaPx, lahiHalkaisijaPx, nimiKerroin };
+  return { nimiKerroin };
 }
 /**
- * YHDEN pisteen ruutuhalkaisija. Lehden osuudesta laskettu lattia
- * koskee vain pelaajan omaa kaupunkia (LATTIA ON YHDEN PISTEEN SÄÄNTÖ),
- * mutta LÄHIZOOMIN koko koskee jokaista pelikaupunkia (omistaja
- * 9.9.2026) — kaukaa katsottuna se on KAUPUNKIPISTEEN_HALKAISIJA_PX.
+ * YHDEN pisteen PERUSMITTA vertailukorkeudella: muut kaupungit
+ * KAUPUNKIPISTEEN_HALKAISIJA_PX, pelaajan oma sen kertaa
+ * OMAN_KAUPUNGIN_KERROIN (ks. YKSI SÄÄNTÖ: PISTE ON KARTAN MITASSA).
+ * Zoomi ei ole tässä lainkaan — sen hoitaa kartanMittakaavanHalkaisija.
  *
  * @param {object} d      pistedatum (kaupungilla on id)
  * @param {string|null} oma  pelaajan nykyisen kaupungin id
- * @param {{halkaisijaPx: number, lahiHalkaisijaPx: number}} mitat
- *   kohdekaupungin mitat juuri nyt
- * @returns {number} halkaisija ruudun pikseleinä
+ * @returns {number} halkaisija ruudun pikseleinä vertailukorkeudella
  */
-export function kaupunkipisteenHalkaisijaPx(d, oma, mitat) {
-  const lahi = Math.max(KAUPUNKIPISTEEN_HALKAISIJA_PX, mitat?.lahiHalkaisijaPx ?? 0);
-  if (!d?.id || !oma || d.id !== oma) return lahi;
-  return Math.max(lahi, mitat?.halkaisijaPx ?? 0);
+export function kaupunkipisteenHalkaisijaPx(d, oma) {
+  const omaKaupunki = Boolean(d?.id && oma && d.id === oma);
+  return KAUPUNKIPISTEEN_HALKAISIJA_PX * (omaKaupunki ? OMAN_KAUPUNGIN_KERROIN : 1);
 }
 /**
  * Kirjaston pistemitta: `pointRadius` → olion skaala pallon yksiköissä.
@@ -459,29 +478,24 @@ export function kaupunkipisteenSade(korkeus, ruudunKorkeusPx, {
  * PAIKKA TULEE PIIRROSTA) siirsi vain PAIKAN laskennan; kokoon se ei
  * koskenut rivilläkään.
  *
- * MITÄ NYT TEHDÄÄN. Kartan mittakaava palaa SIIHEN SUUNTAAN, josta
- * omistaja kirjoittaa — ulos zoomatessa — eikä siihen, josta hän
- * valitti 7.9.: lähikuvassa koko on yhä ruudun mitta ja sen kasvun
- * rajaavat 8.9. ja 9.9. säädetyt luvut, joten iPadin iso musta ympyrä
- * ei voi palata.
+ * MITÄ NYT TEHDÄÄN (12.9.2026 toinen kierros, ks. YKSI SÄÄNTÖ: PISTE
+ * ON KARTAN MITASSA). Ensimmäinen yritys sitoi koon kartan mittakaavaan
+ * vasta vertailukorkeudesta ULOSPÄIN ja jätti lähikuvaan 9.9. liu'un —
+ * omistaja näki sen heti laitteella (*"pistekoko muuttuu vielä
+ * lähemmillä zoom tasoilla"*). Nyt sääntö on sama koko zoomialueella:
  *
- *   korkeus <= KAUPUNKIPISTEEN_MITTAKAAVA_KORKEUS  piste on ruudun
- *                                                  mitta, kuten nyt
- *   korkeus >  sama                                halkaisija kerrotaan
- *                                                  suhteella
- *                                                  vertailu / korkeus
+ *   halkaisija = perusmitta x (vertailukorkeus / korkeus),
+ *                rajattuna välille [lattia, katto]
  *
  * Kerroin on TÄSMÄLLEEN kartan mittakaava: laatta, rantaviiva ja
  * kaupungin piste pienenevät samassa suhteessa, koska ruudun pikseliä
  * yhtä lautayksikköä kohden on kääntäen verrannollinen kameran
  * korkeuteen (kaupunkipisteenSade yllä, sama kaava).
  *
- * VERTAILUKORKEUS ON PELIN OMA NÄKYMÄ. Saapumisajon jälkeinen näkymä
- * on mitattu 12.9.2026 Chromiumilla (390 × 844 ja 1440 × 900): kameran
- * korkeus 0,37, näkymän korkeus 19,8°. Siinä — ja kaikessa sitä
- * lähempänä — piste on tavulleen entisensä, joten omistajan 7.9., 8.9.
- * ja 9.9. mitoitukset säilyvät pikselilleen siellä, missä peliä
- * pelataan.
+ * VERTAILUKORKEUS EI OLE TAITEKOHTA vaan se korkeus, jossa perusmitta
+ * on kirjattu pikseleinä. Saapumisajon jälkeinen näkymä on mitattu
+ * 12.9.2026 Chromiumilla (390 × 844 ja 1440 × 900): kameran korkeus
+ * 0,37, näkymän korkeus 19,8°. Sääntö on sama sen molemmin puolin.
  *
  * LATTIA: PISTE EI SAA KADOTA. Mitattuna vertailukorkeudesta (7 px):
  * korkeus 0,6 → 4,3 px, 1,0 (koko pallo ruudulla) → 2,6 px, 2,5
@@ -491,33 +505,47 @@ export function kaupunkipisteenSade(korkeus, ruudunKorkeusPx, {
  * palveli (2,7 px korkeudella 0,35, laskettu kaavalla yllä ja kirjattu
  * KAUPUNKIPISTE ON RUUDUN VAKIO -lohkoon), pyöristettynä ylöspäin
  * kokonaiseen ruutupikseliin — eli täsmälleen se koko, jonka omistaja
- * muistaa yleiskuvasta. Lattia puree vasta korkeudella 0,86, eli
- * selvästi maanosanäkymän ulkopuolella.
+ * muistaa yleiskuvasta. Lattia puree korkeudella 0,86.
+ *
+ * KATTO: KS. YKSI SÄÄNTÖ -lohko. 22,87 px on 9.9.2026 mitattu
+ * lähizoomin tavoitekoko (kaksi kohdemerkkiä) ja selvästi alle sen
+ * ~30 px:n, joka 7.9.2026 oli iPadilla *"iso musta ympyrä"*. Katto
+ * puree korkeudella 0,113.
  *
  * NAPAUTUS EI MUUTU: osuma on 44 px:n säde ruudulla
  * (NAPAUTUKSEN_SADE_PX) eikä ole koskaan lukenut pisteen kokoa, joten
  * pienempi piste on yhtä helppo osua kuin ennenkin. Piirretyn musteen
- * oma osumasääntö (lahinMerkki) lukee saman kutistetun luvun kuin
- * piirto, jotta muste ja osuma ovat samaa kokoa.
+ * oma osumasääntö (lahinMerkki) lukee saman luvun kuin piirto, jotta
+ * muste ja osuma ovat samaa kokoa.
  */
-/** Kameran korkeus, jossa piste on tarkalleen ruutumittansa kokoinen. */
+/** Kameran korkeus, jossa perusmitta on kirjattu (ei taitekohta). */
 export const KAUPUNKIPISTEEN_MITTAKAAVA_KORKEUS = 0.37;
 /** Pienin halkaisija, johon ulos zoomaus saa pisteen kutistaa (px). */
 export const KAUPUNKIPISTEEN_VAHIN_PX = 3;
+/** Suurin halkaisija, johon lähizoomi saa pisteen kasvattaa (px). */
+export const KAUPUNKIPISTEEN_KATTO_PX = LAHIZOOMIN_PISTE_SUHDE * KOHDEMERKIN_RUUTU_PX;
 /**
- * Ruutuhalkaisija kartan mittakaavassa: ulos zoomatessa piste pienenee
- * kartan mukana, lattiaan asti. Lähikuvassa (korkeus <= vertailu) luku
- * palaa muuttumattomana.
+ * Pelaajan oma kaupunki on tämän verran muiden pistettä suurempi
+ * (8.9.2026 mitoitus kertoimena, ks. YKSI SÄÄNTÖ -lohko).
+ */
+export const OMAN_KAUPUNGIN_KERROIN = (KOHDEKAUPUNGIN_PISTE_SUHDE * KOHDEMERKIN_RUUTU_PX)
+  / KAUPUNKIPISTEEN_HALKAISIJA_PX;
+/**
+ * Ruutuhalkaisija kartan mittakaavassa: sama osuus kartan mittakaavasta
+ * JOKA zoomilla, rajattuna lattian ja katon väliin. Ei taitekohtia.
  *
- * @param {number} halkaisijaPx ruudun mitta lähikuvassa
+ * @param {number} halkaisijaPx perusmitta vertailukorkeudella
  * @param {number} korkeus      kameran korkeus (pallonsäteinä)
  */
 export function kartanMittakaavanHalkaisija(halkaisijaPx, korkeus, {
-  vertailu = KAUPUNKIPISTEEN_MITTAKAAVA_KORKEUS, vahin = KAUPUNKIPISTEEN_VAHIN_PX,
+  vertailu = KAUPUNKIPISTEEN_MITTAKAAVA_KORKEUS,
+  vahin = KAUPUNKIPISTEEN_VAHIN_PX,
+  katto = KAUPUNKIPISTEEN_KATTO_PX,
 } = {}) {
-  if (!(halkaisijaPx > 0) || !(korkeus > 0) || korkeus <= vertailu) return halkaisijaPx;
-  // Lattia ei saa KASVATTAA pistettä, joka on jo sitä pienempi.
-  return Math.max(Math.min(halkaisijaPx, vahin), halkaisijaPx * (vertailu / korkeus));
+  if (!(halkaisijaPx > 0) || !(korkeus > 0)) return halkaisijaPx;
+  const mitta = halkaisijaPx * (vertailu / korkeus);
+  // Lattia ei saa KASVATTAA pistettä, joka on jo perusmittana pienempi.
+  return Math.min(katto, Math.max(Math.min(halkaisijaPx, vahin), mitta));
 }
 /*
  * PISTE ON LEVY, EI TAPPI (omistaja 6.9.2026 ilta, iPhone, sanatarkasti:
@@ -556,6 +584,12 @@ export function kartanMittakaavanHalkaisija(halkaisijaPx, korkeus, {
 export const PISTELEVYN_SIVUT = 24;
 /** Merkkien ilmestymisen ja paikanvaihdon kesto (ms). */
 export const MERKKIEN_SIIRTYMA_MS = 250;
+/**
+ * Pistekerroksen siirtymä on NOLLA: kirjaston tween kirjoittaisi
+ * pisteen PINNAN paikkaan, ja meidän pisteemme ovat katsesäteellä (ks.
+ * PISTEJOUKON UUDELLEENKIRJOITUS EI SAA ANIMOIDA PAIKKOJA).
+ */
+export const PISTEIDEN_SIIRTYMA_MS = 0;
 /** Napautuksen osuma ruudulla: lähin kaupunki tai kohde tämän säteen sisällä (px). */
 export const NAPAUTUKSEN_SADE_PX = 44;
 /*
@@ -1901,11 +1935,7 @@ export async function avaaPallolauta(ui) {
      * pisteen OMA ruutuhalkaisija juuri nyt (lähizoomissa suurempi kuin
      * 7 px, omistaja 9.9.2026), yhdestä ja samasta lähteestä kuin piirto.
      */
-    const pisteenPx = voittaja?.laji === 'kaupunki'
-      ? piirrettyHalkaisijaPx(
-        kaupunkipisteenHalkaisijaPx(voittaja.k, pelaajanKaupunki(), kohdekaupunki()),
-      )
-      : 0;
+    const pisteenPx = voittaja?.laji === 'kaupunki' ? piirrettyHalkaisijaPx(voittaja.k) : 0;
     if (voittaja?.laji === 'kaupunki' && lahella(lat, lng, voittaja, pisteenPx / 2)) {
       return voittaja;
     }
@@ -2025,10 +2055,6 @@ export async function avaaPallolauta(ui) {
     const nakyva = kamera.nakyvaAlue();
     kaupunkiAvain = avain;
     kaupunkiMitat = kohdekaupunginMitat({
-      osuus: nostot.lehdenOsuus(nakyva),
-      // Lähizoomin liuku on kameran oma mittakaava (px / lautayksikkö),
-      // ei lehden osuus (ks. MIKÄ ZOOMI ON "LÄHIZOOMI").
-      skaala: nakyva?.skaala ?? 0,
       suurennus: poltetunMusteenSuurennus({
         leveysPx,
         dpr: globalThis.devicePixelRatio || 1,
@@ -2038,26 +2064,21 @@ export async function avaaPallolauta(ui) {
     return kaupunkiMitat;
   };
   /**
-   * PIIRRETTY ruutuhalkaisija: lähikuvan mitta kartan mittakaavassa
-   * (ks. ULOS ZOOMATESSA PISTE PIENENEE KARTAN MUKANA). Sama luku
-   * palvelee piirtoa ja musteen osumatestiä, jotta ne ovat samaa kokoa.
+   * PIIRRETTY ruutuhalkaisija: yksi sääntö koko zoomialueelle (ks. YKSI
+   * SÄÄNTÖ: PISTE ON KARTAN MITASSA). Sama luku palvelee piirtoa,
+   * ladontaa ja musteen osumatestiä, jotta ne ovat samaa kokoa.
    */
-  const piirrettyHalkaisijaPx = (halkaisijaPx) => kartanMittakaavanHalkaisija(
-    halkaisijaPx, pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX,
+  const piirrettyHalkaisijaPx = (d) => kartanMittakaavanHalkaisija(
+    kaupunkipisteenHalkaisijaPx(d, pelaajanKaupunki()),
+    pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX,
   );
   /** Säde (pointRadius-yksikköä), joka antaa halutun ruutuhalkaisijan nyt. */
   const sadeRuudulta = (halkaisijaPx) => kaupunkipisteenSade(
     pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX, kotelo.clientHeight,
-    { halkaisijaPx: piirrettyHalkaisijaPx(halkaisijaPx) },
+    { halkaisijaPx },
   );
-  /**
-   * YHDEN pisteen säde: lattia vain pelaajan kaupungille, kaikille
-   * muille KAUPUNKIPISTEEN_HALKAISIJA_PX joka zoomilla (ks. LATTIA ON
-   * YHDEN PISTEEN SÄÄNTÖ).
-   */
-  const pisteenSade = (d) => sadeRuudulta(
-    kaupunkipisteenHalkaisijaPx(d, pelaajanKaupunki(), kohdekaupunki()),
-  );
+  /** YHDEN pisteen säde: perusmitta kartan mittakaavassa. */
+  const pisteenSade = (d) => sadeRuudulta(piirrettyHalkaisijaPx(d));
   /*
    * ══════════════════════════════════════════════════════════════════
    * PISTEIDEN PAIKKA TULEE PIIRROSTA, EI TAPAHTUMASTA (omistajan
@@ -2136,12 +2157,11 @@ export async function avaaPallolauta(ui) {
     const edellinen = asetettuSade;
     const edellinenKohde = asetettuKohdeSade;
     const edellinenLinssi = asetettuLinssi;
-    const mitat = kohdekaupunki();
     // Kaksi kokoa, samasta funktiosta kuin pointRadius-luennassa: muut
-    // kaupungit (lähizoomin liuku) ja pelaajan oma (myös lehden lattia).
-    const muidenPx = kaupunkipisteenHalkaisijaPx(null, null, mitat);
-    const sade = sadeRuudulta(muidenPx);
-    const kohdeSade = sadeRuudulta(mitat.halkaisijaPx);
+    // kaupungit ja pelaajan oma (OMAN_KAUPUNGIN_KERROIN).
+    const oma = pelaajanKaupunki();
+    const sade = sadeRuudulta(piirrettyHalkaisijaPx(null));
+    const kohdeSade = sadeRuudulta(piirrettyHalkaisijaPx(oma ? { id: oma } : null));
     if (!sade) return;
     asetettuSade = sade;
     asetettuKohdeSade = kohdeSade;
@@ -2155,19 +2175,16 @@ export async function avaaPallolauta(ui) {
      * kamera-tapahtumalla ja ladonnalla korjaa senkin. PAIKKA ei ole
      * enää täällä: se tulee piirtokoukusta (pisteetKehyksessa).
      */
-    siirtymaAsti = (globalThis.performance?.now?.() ?? Date.now()) + siirtyma + 50;
+    siirtymaAsti = (globalThis.performance?.now?.() ?? Date.now()) + PISTEIDEN_SIIRTYMA_MS + 50;
     const skaala = asetettuLinssi ? 0 : sade * PISTEEN_SKAALA;
     const kohdeSkaala = asetettuLinssi ? 0 : kohdeSade * PISTEEN_SKAALA;
-    const oma = pelaajanKaupunki();
     for (const d of pallo.pointsData()) {
       const o = d.__threeObjPoint;
       if (!o) continue;
       // Koko on kaupunkipisteen asia: helmellä ja valolla on omansa.
       if (d.laji === 'helmi' || d.laji === 'valo') continue;
-      // Sama sääntö kuin pointRadius-luennassa, yhdestä paikasta: kaksi
-      // valmista skaalaa, joista lehden lattia kuuluu vain pelaajan
-      // kaupungille (lähizoomin koko on jo molemmissa).
-      const s = kaupunkipisteenHalkaisijaPx(d, oma, mitat) > muidenPx ? kohdeSkaala : skaala;
+      // Sama sääntö kuin pointRadius-luennassa, yhdestä paikasta.
+      const s = d.id && oma && d.id === oma ? kohdeSkaala : skaala;
       o.scale.x = s;
       o.scale.y = s;
     }
@@ -2178,8 +2195,8 @@ export async function avaaPallolauta(ui) {
     clearTimeout(siirtymaAjastin);
     // Siirtymän ajan piirtokoukku kirjoittaa paikan joka kehyksellä,
     // vaikka kamera seisoisi (ks. PISTEIDEN PAIKKA TULEE PIIRROSTA).
-    siirtymaAsti = (globalThis.performance?.now?.() ?? Date.now()) + siirtyma + 50;
-    siirtymaAjastin = setTimeout(tahdistaPisteidenKoko, siirtyma + 50);
+    siirtymaAsti = (globalThis.performance?.now?.() ?? Date.now()) + PISTEIDEN_SIIRTYMA_MS + 50;
+    siirtymaAjastin = setTimeout(tahdistaPisteidenKoko, PISTEIDEN_SIIRTYMA_MS + 50);
   };
 
   const litistaja = luoPisteidenLitistaja();
@@ -2209,7 +2226,38 @@ export async function avaaPallolauta(ui) {
     })
     .pointResolution(16)
     .pointsMerge(false)
-    .pointsTransitionDuration(siirtyma)
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * PISTEJOUKON UUDELLEENKIRJOITUS EI SAA ANIMOIDA PAIKKOJA
+     * (omistaja 12.9.2026, v1790 laitteella: *"pisteet edelleen
+     * liikahtavat liikkeen loputtua (myös karttanostojen pisteet)"*)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Globe.gl 2.46 pistekerroksen `onUpdateObj` vertaa uusia arvoja
+     * (lat, lng, alt, r) edelliseen tavoitteeseen ja — jos yksikin
+     * eroaa — panee KOKO datumin tweeniin, jonka `onUpdate` kirjoittaa
+     * `obj.position = polar2Cartesian(lat, lng, alt)` eli PINNAN
+     * pisteen. Meidän pisteemme EIVÄT ole pinnassa vaan katsesäteellä
+     * (ks. LEVY KATSESÄTEELLE), joten jokainen tween kirjoittaa niiden
+     * paikan väärin siirtymän ajaksi. Piirtokoukku korjaa sen joka
+     * kehyksellä, mutta vain siirtymäikkunan ajan — ja kirjaston tween
+     * alkaa vasta seuraavalla animaatiokierroksella, joten ikkuna ja
+     * tween eivät osu kohdakkain. Mitattu (390 x 844, kamera siirretty
+     * ja levon ladonta ajettu): yksi piste 3,53 px sivussa 423 ms
+     * liikkeen päättymisen jälkeen, ja takaisin paikallaan 871 ms:ssä.
+     *
+     * Ladonta ajaa nyt myös kesken liikkeen (v1790, LADONTA KULKEE
+     * MUKANA), eli pistejoukko kirjoitetaan uudelleen viidesti
+     * sekunnissa — vika ei ole uusi, mutta se on nyt paljon useammin
+     * silmien edessä. Siksi se piti korjata juuresta.
+     *
+     * SIIRTYMÄ ON NOLLA: kirjasto kirjoittaa arvot kerralla eikä
+     * tweeniä synny lainkaan. Paikan omistaa piirtokoukku ja koon
+     * tahdistaPisteidenKoko — kummallakaan ei ole animoitavaa, ja
+     * "KAIKKI LIIKE ANIMOIDAAN" koskee merkkejä ja nimiä, joiden oma
+     * siirtymä (htmlTransitionDuration) jää ennalleen.
+     */
+    .pointsTransitionDuration(PISTEIDEN_SIIRTYMA_MS)
     .onPointClick((d) => {
       if (eleet.sormet.nipistys) return;
       // Valikon sulku ei avaa kaupunkia (sama sääntö kuin pinnalla).
@@ -2245,6 +2293,14 @@ export async function avaaPallolauta(ui) {
     pisteAvain = avain;
     heraa();
     pallo.pointsData([...valot, ...nakyvat, ...helmet]);
+    /*
+     * PAIKKA HETI, EI VASTA SEURAAVALLA KEHYKSELLÄ. Kirjasto kirjoitti
+     * juuri jokaisen pisteen PINNAN paikkaan (siirtymä on nolla, ks.
+     * PISTEJOUKON UUDELLEENKIRJOITUS EI SAA ANIMOIDA PAIKKOJA); levy
+     * siirretään katsesäteelle samassa tehtävässä, jotta yksikään
+     * kehys ei voi piirtää sitä väärässä kohdassa.
+     */
+    asetaPisteidenPaikat(pallo.camera()?.position ?? null);
     /*
      * Kirjaston siirtymä kirjoittaa olion paikan takaisin pinnalle joka
      * kehyksellä siirtymän ajan (ks. LEVY KATSESÄTEELLE), joten
@@ -2309,7 +2365,9 @@ export async function avaaPallolauta(ui) {
       katto,
       vain,
       kokoKerroin: kaupunginMitat.nimiKerroin,
-      pisteSade: kaupunginMitat.halkaisijaPx / 2,
+      // Ladonta varaa pelaajan pisteelle sen tilan, joka sillä ruudulla
+      // OIKEASTI on — sama yksi sääntö kuin piirrolla.
+      pisteSade: piirrettyHalkaisijaPx(pelaajanKaupunki() ? { id: pelaajanKaupunki() } : null) / 2,
     });
     const sovittelu = nostot.sovittele({ nimet: nimet.laatikot() });
     paivitaPisteet();
