@@ -67,6 +67,26 @@
 export const MAASTOKOHTEET_NOR = [
   {
     id: 'galdhpiggen',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-maasto-galdhpiggen-3570e4558290.jpg',
+      lyhyt: 'Styggebreenin jäätikkö ja Galdhøpiggen Jotunheimenin kivihuippujen keskellä.',
+      selite: 'Styggebreenin jäätikköallas avautuu Jotunheimenin kivisten huippujen keskellä, ja Galdhøpiggen nousee sen oikealla puolella.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Sindre Skrede (Commons user SinWin)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-maasto-galdhpiggen-abed85b170a3.jpg',
+      lyhyt: 'Styggebreenin jäätikkö ja Galdhøpiggen näkymän oikeassa laidassa.',
+      selite: 'Styggebreenin jäätikkö levittäytyy kivisten Jotunheimenin harjanteiden keskelle; Galdhøpiggen kohoaa näkymän oikeassa laidassa.',
+      lahde: 'Valokuva: Sindre Skrede (Commons user SinWin), Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Sindre Skrede (Commons user SinWin)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Galdhøpiggen',
     tyyppi: 'vuori',
     kysymykset: [
@@ -135,6 +155,26 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'glomma',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-maasto-glomma-93f541979ec1.jpg',
+      lyhyt: 'Glomma kaartaa Nesin peltojen ja metsäsaarekkeiden lomassa.',
+      selite: 'Glomman leveä uoma kaartaa Nesin peltojen ja metsäsaarekkeiden lomassa Itä-Norjassa.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; paikkareferenssi Bjoertvedt',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-maasto-glomma-abcd4279dea9.jpg',
+      lyhyt: 'Glomma mutkittelee Nesin metsäisten rantojen, peltojen ja Årnesin halki.',
+      selite: 'Glomma mutkittelee Nesin metsäisten rantojen, peltojen ja Årnesin taajaman halki.',
+      lahde: 'Valokuva: Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Bjoertvedt',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Glomma',
     tyyppi: 'joki',
     kysymykset: [
