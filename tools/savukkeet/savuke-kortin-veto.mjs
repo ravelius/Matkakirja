@@ -24,18 +24,40 @@
  * ilman liikettä irrotus luettiin napautukseksi. Nyt matka ja kesto
  * luetaan irrotuksesta samalla kynnyksellä.
  *
- * VARTIOT (kolme näyttömittaa x kolme korttityyppiä):
+ * KOLMAS TIE, JA SE OLI VAIHEEN 2 OMA (omistaja 12.9.2026 illalla,
+ * iPhone, Ioánninan kortti auki koko artikkelina, sanatarkasti:
+ * *"Nosto häviää edelleen näkyvistä, jos vieritän mistään muualta
+ * kohdasta kuin kuvaa painamalla."*). Kuva edellä -kortilla oli OMA
+ * haara js/fokuskohteet.js:n pointerdownissa, joka sulki kortin
+ * suoraan ilman mitään ele-ehtoa. Kuvan päältä alkava veto meni läpi
+ * vain siksi, että kuva on `button`; ylärivi, otsikko, leipäteksti ja
+ * lähderivi sulkivat kortin heti. Siksi tämä savuke vetää nyt myös
+ * YLÄRIVISTÄ JA OTSIKOSTA ja tarkistaa vaiheen erikseen.
+ *
+ * VARTIOT (kolme näyttömittaa x kolme korttityyppiä, kortti vaiheessa 2):
+ *   0. KORTTI ON VAIHEESSA 2 (koko artikkeli näkyvissä) — muuten
+ *      vetokokeet mittaisivat väärää korttia.
  *   1. PYSTYVETO KUVAN päällä ei sulje korttia.
- *   2. PYSTYVETO LEIPÄTEKSTIN päällä ei sulje korttia.
- *   3. PYSTYVETO KORTIN ULKOPUOLELTA (kartta/pallo kortin vieressä) ei
- *      sulje korttia — tämä on se vika, jonka omistaja näki.
- *   4. LYHYT NAPAUTUS kortin ulkopuolelle kartalle SULKEE kortin
+ *   2. PYSTYVETO YLÄRIVIN päällä ei sulje korttia.
+ *   3. PYSTYVETO OTSIKON päällä ei sulje korttia.
+ *   4. PYSTYVETO LEIPÄTEKSTIN päällä ei sulje korttia.
+ *   5. PYSTYVETO KORTIN ULKOPUOLELTA (kartta/pallo kortin vieressä) ei
+ *      sulje korttia — tämä on se vika, jonka omistaja näki ensin.
+ *   6. LYHYT NAPAUTUS kortin ulkopuolelle kartalle SULKEE kortin
  *      (omistajan linjaus 31.8.2026 pysyy voimassa).
- *   5. SAMA NAPAUTUS EI AVAA MITÄÄN UUTTA (31.8.2026) — nielu säilyy.
+ *   7. SAMA NAPAUTUS EI AVAA MITÄÄN UUTTA (31.8.2026) — nielu säilyy.
+ *
+ * Lisäksi kirjataan KORTIN YLÄREUNAN etäisyys ruudun yläreunasta
+ * vaiheessa 2 (omistaja 12.9.2026: *"noston yläpuolelle ei jää tyhjää
+ * tilaa, mistä kartta näkyy hieman"*) — katto on js/nostokuva.js
+ * NOSTOKUVA_YLAVARA, ja sama luku mitataan korttityypeittäin
+ * tools/mittaa-nostokuva.mjs:llä.
  *
  * Korjaus: js/ui-apurit.js kuunteleSulkevaNapautus (kynnys
  * RAAHAUKSEN_KYNNYS, sama luku kuin kartan raahausvahdissa
- * js/kartta.js). Selaimeton osa säännöstä: tests/kortin-veto.test.mjs.
+ * js/kartta.js) — sekä kortin ulkopuoliselle eleelle että kuva edellä
+ * -kortin OMALLE eleelle (js/fokuskohteet.js kuvanNapautus).
+ * Selaimeton osa säännöstä: tests/kortin-veto.test.mjs.
  *
  * Aja:  NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-kortin-veto.mjs [kuvakansio]
  */
@@ -45,6 +67,10 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { NOSTOKUVA_MARGINAALI, NOSTOKUVA_YLAVARA } from '../../js/nostokuva.js';
+
+/** Kortin yläreunan katto vaiheessa 2 (ks. tiedoston alku). */
+const YLAKATTO = NOSTOKUVA_MARGINAALI + NOSTOKUVA_YLAVARA;
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -141,17 +167,36 @@ const laheta = (cdp, viesti) => Promise.race([
   new Promise((ok) => { setTimeout(ok, 700); }),
 ]);
 
+/*
+ * ELEEN KELLO TULEE MEILTÄ, EI KONTIN KELLOSTA (mitattu 12.9.2026).
+ *
+ * Kontti renderöi SwiftShaderilla 2–3 fps, ja yksi
+ * `Input.dispatchTouchEvent` kuittaantuu vasta ~0,8 s kuluttua. Ilman
+ * omaa aikaleimaa napautuksen touchStart ja touchEnd saivat siis
+ * lähes sekunnin välin, ja peli luki eleen aivan oikein PITKÄKSI
+ * PAINALLUKSEKSI (js/ui-apurit.js NAPAUTUKSEN_KESTO_MS = 700) — kortti
+ * ei sulkeutunut, vaikka oikealla laitteella napautus kestää 60–120 ms.
+ * CDP:n `timestamp` (sekunteja epookista) päätyy tapahtuman
+ * timeStampiin, joten ele saa täällä saman keston kuin sormella.
+ */
+const CDP_ALKU = Date.now() / 1000;
+const hetki = (ms) => CDP_ALKU + ms / 1000;
+
 /** Pystyveto: kosketuksella CDP:llä, työpöydällä hiirellä. */
 async function veto(sivu, cdp, x, y, dy, { askeleet = 8, kesto = 30 } = {}) {
   if (cdp) {
-    await laheta(cdp, { type: 'touchStart', touchPoints: [{ x, y }] });
+    let ms = (Date.now() / 1000 - CDP_ALKU) * 1000;
+    await laheta(cdp, { type: 'touchStart', touchPoints: [{ x, y }], timestamp: hetki(ms) });
     for (let i = 1; i <= askeleet; i += 1) {
+      ms += kesto;
       await laheta(cdp, {
-        type: 'touchMove', touchPoints: [{ x, y: y + Math.round((dy * i) / askeleet) }],
+        type: 'touchMove',
+        touchPoints: [{ x, y: y + Math.round((dy * i) / askeleet) }],
+        timestamp: hetki(ms),
       });
       await new Promise((ok) => { setTimeout(ok, kesto); });
     }
-    await laheta(cdp, { type: 'touchEnd', touchPoints: [] });
+    await laheta(cdp, { type: 'touchEnd', touchPoints: [], timestamp: hetki(ms + kesto) });
   } else {
     await sivu.mouse.move(x, y);
     await sivu.mouse.down();
@@ -167,9 +212,10 @@ async function veto(sivu, cdp, x, y, dy, { askeleet = 8, kesto = 30 } = {}) {
 /** Lyhyt napautus: sama piste, sormi ylös heti. */
 async function napautus(sivu, cdp, x, y) {
   if (cdp) {
-    await laheta(cdp, { type: 'touchStart', touchPoints: [{ x, y }] });
-    await new Promise((ok) => { setTimeout(ok, 60); });
-    await laheta(cdp, { type: 'touchEnd', touchPoints: [] });
+    // Napautus on 60 ms pitkä — ELEEN omassa ajassa, ei kontin (ks. hetki).
+    const ms = (Date.now() / 1000 - CDP_ALKU) * 1000;
+    await laheta(cdp, { type: 'touchStart', touchPoints: [{ x, y }], timestamp: hetki(ms) });
+    await laheta(cdp, { type: 'touchEnd', touchPoints: [], timestamp: hetki(ms + 60) });
   } else {
     await sivu.mouse.click(x, y);
   }
@@ -186,6 +232,9 @@ const tila = (sivu) => sivu.evaluate((valitsin) => {
   const kotelo = kortti.querySelector('.fokuskohde-sisalto, .fokusnosto-sisalto');
   return {
     auki: true,
+    // Kuva edellä -kortin vaihe: 2 = koko artikkeli näkyvissä.
+    vaihe2: kortti.classList.contains('nostokuva-vaihe2'),
+    kuvaKortti: kortti.classList.contains('nostokuva-kortti'),
     laatikko: {
       x: Math.round(r.left), y: Math.round(r.top), w: Math.round(r.width), h: Math.round(r.height),
     },
@@ -199,41 +248,77 @@ const tila = (sivu) => sivu.evaluate((valitsin) => {
   };
 }, KORTIT);
 
-/** Kortin ULKOPUOLINEN piste, jonka osuma ei ole kortissa. */
-const ulkoPiste = (sivu) => sivu.evaluate((valitsin) => {
+/**
+ * Kortin ULKOPUOLINEN KARTTAPISTE, jonka osuma ei ole kortissa.
+ *
+ * KOSKETUKSEN OIKAISU ON OTETTAVA HUOMIOON (mitattu 12.9.2026): Chromium
+ * napsauttaa mobiilinäkymässä kosketuksen lähimpään napautettavaan
+ * kohteeseen parinkymmenen pikselin säteellä, joten kortin reunasta 6 px
+ * päässä oleva "ulkopuoli" osuikin korttiin — ja koe mittasi aivan muuta
+ * kuin luuli. Piste otetaan siksi vähintään KOSKETUSVARAn päästä kortin
+ * laatikosta ja sen on oltava kartalla (`#board`), joka on se pinta,
+ * josta omistajan sääntö 31.8.2026 puhuu. Jos kortti peittää koko
+ * kartan, pistettä ei ole — silloin kortista poistutaan ruksista, eikä
+ * tätä koetta voi tehdä.
+ */
+const KOSKETUSVARA = 24;
+const ulkoPiste = (sivu) => sivu.evaluate(([valitsin, vara]) => {
   const kortti = document.querySelector(valitsin);
   if (!kortti) return null;
   const r = kortti.getBoundingClientRect();
   const W = window.innerWidth;
   const H = window.innerHeight;
+  const kaukana = (p) => p.x < r.left - vara || p.x > r.right + vara
+    || p.y < r.top - vara || p.y > r.bottom + vara;
   const ehdokkaat = [
-    { x: Math.round(r.left + r.width / 2), y: Math.round(r.bottom + 30) },
-    { x: Math.round(r.left + r.width / 2), y: Math.round(r.top - 30) },
+    { x: Math.round(r.left + r.width / 2), y: Math.round(r.bottom + vara + 10) },
+    { x: Math.round(r.left + r.width / 2), y: Math.round(r.top - vara - 10) },
     { x: Math.round(r.left / 2), y: Math.round(r.top + r.height / 2) },
     { x: Math.round((r.right + W) / 2), y: Math.round(r.top + r.height / 2) },
     { x: Math.round(W / 2), y: H - 20 },
   ];
   for (const p of ehdokkaat) {
     if (p.x < 4 || p.y < 60 || p.x > W - 4 || p.y > H - 4) continue;
+    if (!kaukana(p)) continue;
     const e = document.elementFromPoint(p.x, p.y);
     if (!e || kortti.contains(e)) continue;
     // Pöllö ja suurennos ovat kortin työpareja, eivät "ulkopuolta".
     if (e.closest('.pollo-nappi, .pollo-paneeli, .fokuskohde-zoom')) continue;
-    return { ...p, nimi: e.nodeName };
+    return { ...p, nimi: e.nodeName, kartalla: Boolean(e.closest('#board')) };
   }
   return null;
-}, KORTIT);
+}, [KORTIT, KOSKETUSVARA]);
 
-/** Kuvan ja leipätekstin keskipisteet kortilta. */
+/**
+ * Kuvan, ylärivin, otsikon ja leipätekstin keskipisteet kortilta.
+ *
+ * YLÄRIVI JA OTSIKKO OVAT OMA KOKEENSA: ne ovat tavallisessa kortissa
+ * raahauskahva (css/fokuskohteet.css touch-action: none) ja kuva
+ * edellä -kortissa vierityspintaa, ja juuri niiden päältä omistajan
+ * vieritys sulki kortin.
+ */
 const sisapisteet = (sivu) => sivu.evaluate((valitsin) => {
   const kortti = document.querySelector(valitsin);
-  if (!kortti) return { kuva: null, teksti: null };
+  if (!kortti) return { kuva: null, ylarivi: null, otsikko: null, teksti: null };
   const keski = (r) => (r && r.height > 10 && r.top > 60 && r.bottom < window.innerHeight
     ? { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) } : null);
+  const ota = (...valitsimet) => valitsimet
+    .map((v) => keski(kortti.querySelector(v)?.getBoundingClientRect()))
+    .find(Boolean) ?? null;
   const kuva = kortti.querySelector('img')?.getBoundingClientRect();
-  const teksti = [...kortti.querySelectorAll('p')]
-    .map((p) => p.getBoundingClientRect()).map(keski).find(Boolean) ?? null;
-  return { kuva: keski(kuva), teksti };
+  const teksti = [...kortti.querySelectorAll('.fokuskohde-sisalto p, .fokusnosto-sisalto p')]
+    .map((p) => p.getBoundingClientRect())
+    .filter((r) => r.height > 24)
+    .map(keski)
+    .find(Boolean)
+    ?? [...kortti.querySelectorAll('p')].map((p) => p.getBoundingClientRect())
+      .map(keski).find(Boolean) ?? null;
+  return {
+    kuva: keski(kuva),
+    ylarivi: ota('.fokuskohde-ylarivi', '.fokusnosto-ylarivi', '.elaintaky-ylarivi'),
+    otsikko: ota('.fokuskohde-otsikko', '.fokusnosto-otsikko', '.elaintaky-otsikko', 'h3'),
+    teksti,
+  };
 }, KORTIT);
 
 /** Kortti auki: kohdekortti, täkynosto tai eläintäky — vaiheeseen 2. */
@@ -310,7 +395,21 @@ for (const n of NAKYMAT) {
     const sisalla = await sisapisteet(sivu);
     // eslint-disable-next-line no-await-in-loop
     const ulkona = await ulkoPiste(sivu);
-    const kokeet = [['kuva', sisalla.kuva], ['teksti', sisalla.teksti], ['ulkopuoli', ulkona]];
+    vaadi(`${n.nimi} / ${korttinimi}: kortti on vaiheessa 2 (koko artikkeli)`,
+      !alku.kuvaKortti || alku.vaihe2, 'Lisää-nappi ei vienyt vaiheeseen 2');
+    if (alku.kuvaKortti) {
+      /*
+       * KORTIN YLÄREUNA VAIHEESSA 2 (omistaja 12.9.2026). Katto on
+       * js/nostokuva.js NOSTOKUVA_MARGINAALI + NOSTOKUVA_YLAVARA: sitä
+       * korkeammalle jäävä kaistale näyttäisi karttaa kortin päältä.
+       */
+      vaadi(`${n.nimi} / ${korttinimi}: kortin yläreuna vaiheessa 2 enintään ${YLAKATTO} px`,
+        alku.laatikko.y <= YLAKATTO, `yläreuna ${alku.laatikko.y} px — kartta näkyy kortin päältä`);
+    }
+    const kokeet = [
+      ['kuva', sisalla.kuva], ['ylärivi', sisalla.ylarivi], ['otsikko', sisalla.otsikko],
+      ['teksti', sisalla.teksti], ['ulkopuoli', ulkona],
+    ];
     for (const [mista, piste] of kokeet) {
       if (!piste) { tieto(`${n.nimi} / ${korttinimi} / ${mista}`, 'ei mitattavaa pistettä'); continue; }
       // eslint-disable-next-line no-await-in-loop
@@ -327,6 +426,10 @@ for (const n of NAKYMAT) {
 
     // eslint-disable-next-line no-await-in-loop
     const piste = (await tila(sivu)).auki ? await ulkoPiste(sivu) : null;
+    if (!piste) {
+      tieto(`${n.nimi} / ${korttinimi} / napautus`,
+        'kortti peittää kartan — ulkopuolista karttapistettä ei ole (sulku on ruksista)');
+    }
     if (piste) {
       // eslint-disable-next-line no-await-in-loop
       await napautus(sivu, cdp, piste.x, piste.y);

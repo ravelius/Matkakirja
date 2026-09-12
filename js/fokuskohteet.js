@@ -5701,13 +5701,24 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
      * KUVA EDELLÄ -KORTTIA EI RAAHATA: kortti on kuvan kehys, ja
      * raahaus kirjoittaisi sen offsetLeft/offsetTop-paikan päälle
      * paikan, jonka js/nostokuva.js laskee ruudun koordinaateissa.
-     * Napautus kortin päällä sulkee yhä (sama sopimus kuin ennen).
+     *
+     * EIKÄ SE SULJE TÄSSÄ (omistajan vikailmoitus 12.9.2026,
+     * sanatarkasti: *"Nosto häviää edelleen näkyvistä, jos vieritän
+     * mistään muualta kohdasta kuin kuvaa painamalla."*). Tässä oli
+     * `suljeFokuskohde` suoraan pointerdownissa, ja se oli koko vian
+     * juuri: kuvan päältä alkava ele osuu NAPPIIN (ehto yllä palaa
+     * ennen tätä), mutta otsikon, leipätekstin, lähderivin tai
+     * pöllökysymysten päältä alkava vieritys osui tähän ja kortti
+     * katosi ennen kuin sormi oli liikkunut pikseliäkään. v1806:n
+     * napautusvahti korjasi vain kortin ULKOPUOLISEN eleen — tämä
+     * haara jäi silloin huomaamatta.
+     *
+     * Napautus kortin päällä sulkee yhä (sama sopimus kuin ennen),
+     * mutta se ratkeaa vasta sormen noustessa: vahti on
+     * `kuvanNapautus` (kuunteleKohdetta), sama kynnys ja sama
+     * napautusaika kuin muillakin korteilla.
      */
-    if (nostokuvaKortissa(popup)) {
-      sfx.play('paper');
-      suljeFokuskohde(ui);
-      return;
-    }
+    if (nostokuvaKortissa(popup)) return;
     raahausTaiSulku(ui, popup, tapahtuma);
   });
 
@@ -5894,6 +5905,31 @@ function kuunteleKohdetta(ui, popup) {
       }
     }
   });
+  /*
+   * KUVA EDELLÄ -KORTIN OMA NAPAUTUS (omistaja 12.9.2026: *"peli
+   * luulee, että edelleen, jos pelaaja klikkaa mistä tahansa muualta
+   * kuin kuvan päältä, niin artikkeli pitää sulkea, mikä on tietenkin
+   * virhe"*).
+   *
+   * Tavallista korttia hallitsee `raahausTaiSulku`, joka lukee eleen
+   * irrotuksesta. Kuva edellä -korttia ei raahata lainkaan, joten sen
+   * eleen lukee talon yhteinen napautusvahti: vieritys (matka yli
+   * kynnyksen, pitkä painallus tai selaimen oma vieritys, joka
+   * lähettää pointercancelin) EI sulje, napautus sulkee. Sama sääntö
+   * ja samat luvut kuin kortin ulkopuolisella napautuksella.
+   *
+   * Painikkeet ja linkit — kuvanappi, "Lisää", pöllökysymykset,
+   * lähderivin linkit, sulkuristi — eivät ole sulkuja: ne hoitavat
+   * oman tekonsa itse.
+   */
+  const kuvanNapautus = kuunteleSulkevaNapautus(popup, {
+    kelpaa: (tapahtuma) => nostokuvaKortissa(popup)
+      && !tapahtuma.target?.closest?.('button, a'),
+    napautus: () => {
+      sfx.play('paper');
+      suljeFokuskohde(ui);
+    },
+  });
   document.addEventListener('keydown', nappain, true);
   const puraNapautus = kuunteleSulkevaNapautus(
     document, { kelpaa: ulos, napautus: sulkeva }, { kaappaus: true },
@@ -5904,6 +5940,7 @@ function kuunteleKohdetta(ui, popup) {
   return () => {
     document.removeEventListener('keydown', nappain, true);
     puraNapautus();
+    kuvanNapautus();
     popup.puraEle?.();
     globalThis.removeEventListener?.('resize', asemoi);
     globalThis.removeEventListener?.('orientationchange', asemoi);

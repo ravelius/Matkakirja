@@ -73,6 +73,27 @@
 }
 
 /*
+ * YLÄRIVI JA OTSIKKO OVAT KUVA EDELLÄ -KORTISSA VIERITYSPINTAA, EIVÄT
+ * RAAHAUSKAHVAA (omistaja 12.9.2026: *"Nosto häviää edelleen
+ * näkyvistä, jos vieritän mistään muualta kohdasta kuin kuvaa
+ * painamalla."*).
+ *
+ * Tavallisessa tietoruudussa ylärivi ja otsikko ovat kahva
+ * (css/fokuskohteet.css: `touch-action: none`, `cursor: grab`), koska
+ * kortista saa vetää. Kuva edellä -korttia EI raahata — sen paikan
+ * omistaa js/nostokuva.js — joten `none` jätti otsikon eleen
+ * tyhjän päälle: selain ei vierittänyt eikä lähettänyt
+ * pointercancelia, ja ele jäi roikkumaan napautuksen ja vedon väliin.
+ * `pan-y` antaa otsikon päältä alkavan pystyvedon kortin omalle
+ * vieritykselle, kuten leipätekstin päältä.
+ */
+.nostokuva-kortti .fokuskohde-ylarivi,
+.nostokuva-kortti .fokuskohde-otsikko {
+  touch-action: pan-y;
+  cursor: default;
+}
+
+/*
  * VAIHEESSA 1 NÄKYY VAIN KUVA, KUVATEKSTI JA "LISÄÄ" — ja sulku.
  * Lukijan kaiutin (js/lukija.js) lisätään korttiin sisällön jälkeen,
  * eikä se ole vaiheen 1 hallintapainike.

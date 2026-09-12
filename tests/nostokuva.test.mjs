@@ -454,8 +454,51 @@ test('kuva edellä -kortti ei seuraa merkkiään eikä ole raahattava', () => {
   const src = lue('js/fokuskohteet.js');
   assert.ok(/if \(nostokuvaKortissa\(auki\.popup\)\) return;/.test(src),
     'automaattinen asemointi siirtäisi kuvaa');
-  assert.ok(/if \(nostokuvaKortissa\(popup\)\) \{/.test(src),
+  /*
+   * Raahaus kirjoittaisi kuvaesittelyn paikan päälle, joten kortin oma
+   * pointerdown-haara palaa heti. SE EI SAA SULKEA KORTTIA (omistaja
+   * 12.9.2026): sulku ratkeaa vasta napautusvahdissa, ks.
+   * tests/kortin-veto.test.mjs.
+   */
+  assert.ok(/if \(nostokuvaKortissa\(popup\)\) return;/.test(src),
     'raahaus kirjoittaisi kuvaesittelyn paikan päälle');
+});
+
+test('vaihe 1 aukeaa niin ylös, ettei vaiheen 2 päälle jää kartan kaistaletta', async () => {
+  /*
+   * Omistaja 12.9.2026, sanatarkasti: *"noston kuvan saisi sijoittaa
+   * niin, että kun lisää nappia painetaan, niin noston yläpuolelle ei
+   * jää tyhjää tilaa, mistä kartta näkyy hieman … Eli kuva pitäisi
+   * aueta hieman ylemmäksi alun alkaen."*
+   *
+   * Vaiheen 2 kortti alkaa aina vaiheen 1 yläreunasta miinus
+   * ylätekstien korkeus, joten vaiheen 1 katto ratkaisee koko asian.
+   */
+  const {
+    NOSTOKUVA_MARGINAALI, NOSTOKUVA_YLAVARA, nostokuvanYlin,
+  } = await import('../js/nostokuva.js');
+  const katto = NOSTOKUVA_MARGINAALI + NOSTOKUVA_YLAVARA;
+
+  // Pieni kuva isolla ruudulla: keskitys jättäisi kortin alas, katto ei.
+  assert.equal(nostokuvanYlin({ korkeus: 300, ruutuKorkeus: 1194 }), katto);
+  // Ruudun täyttävä kuva pysyy keskitettynä — kattoa ei käytetä alaspäin.
+  assert.ok(nostokuvanYlin({ korkeus: 760, ruutuKorkeus: 800 }) < katto);
+  // Kortti ei koskaan mene marginaalia ylemmäs.
+  assert.equal(nostokuvanYlin({ korkeus: 900, ruutuKorkeus: 800 }), NOSTOKUVA_MARGINAALI);
+  // Vaihe 1 ei myöskään liimaudu ruudun yläreunaan: katto on selvästi
+  // yläpalkin alapuolella.
+  assert.ok(NOSTOKUVA_YLAVARA >= 60, 'vaihe 1 nousisi yläpalkin alle');
+
+  // Sama sääntö ladotussa kortissa: vaiheen 1 yläreuna on enintään
+  // katossa, ja vaiheen 2 kortti alkaa sen yläpuolelta.
+  const { kortti, sisalto } = await avaaMallissa({
+    ruutuLeveys: 390, ruutuKorkeus: 844, kuvaLeveys: 1536, kuvaKorkeus: 1024,
+  });
+  const v1 = kortti.getBoundingClientRect();
+  assert.ok(v1.top <= katto, `vaihe 1 aukesi liian alas: ${v1.top} > ${katto}`);
+  sisalto.querySelector('.nostokuva-lisaa').napauta();
+  assert.ok(kortti.getBoundingClientRect().top <= v1.top,
+    'vaihe 2 ei saa laskeutua vaihetta 1 alemmas');
 });
 
 test('uudet tiedostot ovat palvelutyöntekijän SHELLissä ja niputuslistalla', () => {
