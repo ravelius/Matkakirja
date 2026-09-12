@@ -65,6 +65,15 @@
 export const MAASTOKOHTEET_FIN = [
   {
     id: 'halti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fin-maasto-halti-43501e8131d9.jpg',
+      lyhyt: 'Haltin kivinen tunturiylänkö ja rajapyykki 303B.',
+      selite: 'Haltin rajapyykki 303B sijaitsee tunturin rinteellä 1 324 metrissä ja merkitsee Suomen korkeinta kohtaa.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ridnitšohkka_from_Halti.JPG',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Halti',
     tyyppi: 'vuori',
     kysymykset: [
@@ -88,6 +97,15 @@ export const MAASTOKOHTEET_FIN = [
   },
   {
     id: 'pohjanlahti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fin-maasto-pohjanlahti-ba8ea23e3730.jpg',
+      lyhyt: 'Merenkurkun matalaa saaristoa ja maankohoamisrantaa.',
+      selite: 'Merenkurkun matalassa saaristossa maankohoaminen paljastaa jatkuvasti uutta rantaa Pohjanlahden vedestä.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Svedjehamn_from_Saltkaret.jpg',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Pohjanlahti',
     tyyppi: 'meri',
     kysymykset: [
@@ -135,6 +153,15 @@ export const MAASTOKOHTEET_FIN = [
   },
   {
     id: 'kemijoki',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fin-maasto-kemijoki-cdeceff60941.jpg',
+      lyhyt: 'Tukinuittoa Kemijoella 1800-luvun lopulla.',
+      selite: 'Kemijoen tukinuitto alkoi 1860-luvulla ja jatkui aina kesään 1991 saakka.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/Category:Timber_floating_in_Finland',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Kemijoki',
     tyyppi: 'joki',
     kysymykset: [
@@ -224,6 +251,15 @@ export const MAASTOKOHTEET_FIN = [
   },
   {
     id: 'vanharauma',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fin-kohde-vanharauma-86034079b44e.jpg',
+      lyhyt: 'Vanhan Rauman puutaloja keskiaikaisella katuverkolla.',
+      selite: 'Vanhan Rauman puutalot seuraavat keskiaikaista katuverkkoa, vaikka nykyinen rakennuskanta on pääosin 1700-luvulta ja myöhemmältä ajalta.',
+      lahde: 'Matkakirjan havainnekuva',
+      tekija: 'OpenAI, Matkakirjan toimituksen ohjaama havainnekuva',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wanhaa_Raumaa_Old_Rauma.JPG',
+      lisenssi: 'Matkakirjan oma havainnekuva',
+    },
     nimi: 'Vanha Rauma',
     tyyppi: 'kulttuuri',
     kysymykset: [
