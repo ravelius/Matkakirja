@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1789, teksti: 'Elaintayt pois maailmanyleiskuvasta' },
   { v: 1788, teksti: 'Pallot pysyvat maastossa, arktiset nostot pois yleiskuvasta' },
   { v: 1787, teksti: 'Ita-Timorin nimiolimitys pois, ei siedettyja limityksia' },
   { v: 1786, teksti: '202 nostoa oikeaan tyyppiin, 98 uutta karttamerkkia' },
