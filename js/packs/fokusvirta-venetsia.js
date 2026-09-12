@@ -200,8 +200,10 @@ export const FOKUSVIRTA_VENETSIA = {
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Venetsia, kesäkuussa 1873. Kosteaa; laguuni haisee laskuveden aikaan.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 348 merkkiä (yläraja 400). */
-    teksti: 'Venetsiassa oven takana saattaa olla meri. Astuin aamulla '
+    /* TEKSTIPILOTTI 12.9.2026: viisi virkettä tiivistetty neljään
+     * yhdistämällä avaus; Horation havainto, huumori ja aamiaiseen
+     * päättyvä oivallus säilyvät. Uusi luenta ja aikaleimat vaaditaan. */
+    teksti: 'Venetsiassa oven takana saattaa olla meri: astuin aamulla '
       + 'majatalon portaille ja olin mennä kaupunkiin uimaan. Gondolieri tuli '
       + 'hakemaan ja piti ilmeensä ihailtavan suorana. Kuljimme palatsien ohi '
       + 'niin hiljaa, että kuulin lusikan osuvan kahvikuppiin yläkerrassa. '
@@ -237,8 +239,9 @@ export const FOKUSVIRTA_VENETSIA = {
       { id: 'venetsia.r5', ankkuri: 'kuuntelemaan niiden aamiaista', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Päätöslause saa hiljaisen nyökkäyksen.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Venetsiassa oven takana saattaa olla meri. Astuin '
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
+    luenta: '[curious] Venetsiassa oven takana saattaa olla meri: astuin '
       + 'aamulla majatalon portaille ja olin mennä kaupunkiin uimaan. '
       + 'Gondolieri tuli hakemaan ja piti ilmeensä ihailtavan suorana. '
       + 'Kuljimme palatsien ohi niin hiljaa, että kuulin lusikan osuvan '
@@ -340,13 +343,14 @@ export const FOKUSVIRTA_VENETSIA = {
       },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* TEKSTIPILOTTI 12.9.2026: nykyliikenteen yksi lause lisätty
+     * rikkomatta viiden kuvan romanssipoikkeusta. */
     kommentti: [
       // Tekstisession albumirepliikki (12:20; omistaja 9.9.: "hyväksyn kaiken
       // mitä se ehdottaa sinulle"). 106 merkkiä. Edellinen: 'Kanavilla kulkee
       // nyt vesibussejakin. Isoisä kuunteli aamiaista; minä olisin selvittänyt
       // sen ikkunan.'
-      'Tässä Venetsia. Hetkinen. Nuo ovat yksityisiä. Hän vain sattui '
+      'Tässä Venetsia. Vesibussit kulkevat yhä. Hetkinen. Nuo ovat yksityisiä. Hän osui '
       + 'jokaiseen hyvään kuvakulmaan. Sulje albumi.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
