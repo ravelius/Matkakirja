@@ -1,5 +1,11 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 — rajattu korjaus tarkistettu, Euroopan koko luenta-ajo vapautettu
+
+Pääsessio luki kaikki13korvaavaa riviä ja45parin päivitetyn mittaraportin revision eu-hl-europe-20260913-r2-approved1 (tekstivetäjän remote c5173e9a47df60a944900647bcea520676ba35b4). Budapestin kielivirhe,10lyhyttä Livia-riviä sekä Lissabon/Sisilia on korjattu rajatusti. Tekijän59/59 testit ja riippumatoneditorialQA PASS; pääsession sisältökatselmus hyväksyy. Kaikki45paria omissa budjeteissaan. Aiemmin hyväksytyt12kaupunkia ennallaan.
+
+Alla kuvattu tilapäinen12kaupungin toimituksellinen maksu-stop on POISTETTU. RC-vetäjälle on toimitettu exact vapautus; vain uuden revision korvautuvia rivejä käytetään. Omistajan koko Euroopan maksullinen ajolupa on voimassa, yksi ajo-omistaja edelleen RC-vetäjä. Jo tehtyjä/ajossa olevia hyväksyttyjä luentoja ei uusita. Koko aineisto nyt18378merkkiä/2319sanaa vs lähtö19855/2539. Audiojen valmistuminen, kohdistus, vienti, testit ja julkaisu kirjataan edelleen erikseen; tämä on sisältöportin kuittaus, ei koko luenta-ajon valmistumistodiste.
+
 ## 13.9.2026 — pääsession riippumaton sisältö-QA ennen loppuerän maksua
 
 Koko45kaupungin lukukopio eu-hl-europe-20260913-r1-approved1 luettu pääsessiossa. Pilotti4 + E4 8 säilyvät hyväksyttyinä ja niiden audioajot etenevät; RC raportoi Pulu12/12 tuotetuksi staging-artefakteiksi, ei livejulkaisuksi. Budapest-Horatiossa löytyi kielivirhe ("Lämpö sai kaupungit odottaa järjestystä"). E5/E4b-ryhmän kymmenen lyhyttä Pulu-vastausta jäi toimituksellisesti liian mekaanisiksi suhteessa hyväksyttyyn r2-linjaan, vaikka yhteismittavaraa jäi runsaasti. Lisäksi Lissabonin "tehtävä jäi kesken" ja Sisilian "siipeni pysyivät tallessa" tarvitsevat ymmärrettävän lopetuksen.
