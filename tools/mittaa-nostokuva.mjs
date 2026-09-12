@@ -10,7 +10,10 @@
  * Tämä mittari avaa jokaisen KARTALTA AVAUTUVAN korttityypin oikeassa
  * Chromiumissa, lukee kuvan `getBoundingClientRect()`-laatikon ENNEN
  * "Lisää"-painallusta ja JÄLKEEN sen, ja vertaa lukuja. Ainoa
- * hyväksytty ero on nolla. Mitta otetaan kolmella näyttömitalla
+ * hyväksytty ero on nolla. Rivi kertoo lisäksi kortin yläreunan
+ * molemmissa vaiheissa ja niiden eron: se on ylätekstien korkeus, ja
+ * sen mukaan on mitoitettu vaiheen 1 avauskorkeuden katto
+ * (js/nostokuva.js NOSTOKUVA_YLAVARA). Mitta otetaan kolmella näyttömitalla
  * (iPad 834x1194 ja 1194x834, puhelin 390x844) ja kahdella
  * kuvasuhteella (vaaka 3:2, pysty 4:5).
  *
@@ -234,6 +237,14 @@ const MITTAA = async () => {
     return { x: r.x, y: r.y, width: r.width, height: r.height };
   };
   const ennen = laatikko(img);
+  /*
+   * KORTIN YLÄREUNA MOLEMMISSA VAIHEISSA (omistaja 12.9.2026:
+   * *"noston yläpuolelle ei jää tyhjää tilaa, mistä kartta näkyy
+   * hieman"*). Vaiheen 2 yläreuna on vaiheen 1 yläreuna miinus
+   * ylätekstien korkeus, koska kuva ei liiku — tämä mittaus kertoo
+   * korttityypeittäin, paljonko se ero on (js/nostokuva.js
+   * NOSTOKUVA_YLAVARA on mitoitettu näillä luvuilla).
+   */
   const kortti1 = document.querySelector('.nostokuva-kortti');
   const kortinYlaV1 = kortti1.getBoundingClientRect().top;
   lisaa.click();
