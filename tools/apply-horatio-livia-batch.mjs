@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
+import { TAGIT, puhemuoto } from './generoi-pulu.mjs';
 
 const ROOT = new URL('../', import.meta.url);
 const BASELINE = '079284e1cf09f650ed7e5f3d54f54c4e3da933b1';
@@ -156,8 +157,11 @@ if (batch === 'e5') {
     const m = line.match(/^\| `(sofia-(?:5|6|7|8|9|10|11|12|13|14))` \| `([^`]+)` \| ([^|]+) \| (.+) \|$/);
     if (!m) continue;
     const text = m[4].trim();
+    const ttsText = puhemuoto(text, TAGIT[m[1]]);
     extras.push({ audioId: m[1], context: m[2], index: m[3].trim(), visibleText: text,
-      visibleTextSha256: sha(text), ttsText: text, ttsTextSha256: sha(text), unchangedFromBaseline: true });
+      visibleTextSha256: sha(text), ttsText, ttsTextSha256: sha(ttsText), unchangedFromBaseline: true,
+      generationAction: 'reuse-existing',
+      ttsRecipeSource: { path: 'tools/generoi-pulu.mjs', export: 'TAGIT', verifiedAtCommit: BASELINE } });
   }
   if (extras.length !== 10) throw new Error(`Sofia: odotettiin 10 city-pairin ulkopuolista utteranssia, saatiin ${extras.length}`);
   manifest.sofiaSupplementalLiviaUtterances = extras;

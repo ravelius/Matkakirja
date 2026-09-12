@@ -82,9 +82,15 @@ test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia'
     }
   }
   for (const item of combined.sofiaSupplementalLiviaUtterances) {
+    assert.equal(stripTags(item.ttsText), item.visibleText, `${item.audioId}: exact TTS-sopimus`);
     assert.equal(item.visibleTextSha256, sha(item.visibleText), `${item.audioId}: näkyvä SHA`);
     assert.equal(item.ttsTextSha256, sha(item.ttsText), `${item.audioId}: TTS SHA`);
     assert.equal(item.unchangedFromBaseline, true, `${item.audioId}: baseline-säilytys`);
+    assert.equal(item.generationAction, 'reuse-existing', `${item.audioId}: ei uutta generointia`);
+    assert.deepEqual(item.ttsRecipeSource, {
+      path: 'tools/generoi-pulu.mjs', export: 'TAGIT',
+      verifiedAtCommit: '079284e1cf09f650ed7e5f3d54f54c4e3da933b1',
+    }, `${item.audioId}: varmennettu reseptilähde`);
   }
 });
 

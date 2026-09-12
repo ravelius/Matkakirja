@@ -438,9 +438,15 @@
       "index": "1",
       "visibleText": "Pöllö istuu kuopassa eikä kerro löytöään ennen tunnussanaa.",
       "visibleTextSha256": "1ba84c6a2de9a8841ebbbec2d28e780d1a95edae67d8156336f9a1d53a00e613",
-      "ttsText": "Pöllö istuu kuopassa eikä kerro löytöään ennen tunnussanaa.",
-      "ttsTextSha256": "1ba84c6a2de9a8841ebbbec2d28e780d1a95edae67d8156336f9a1d53a00e613",
-      "unchangedFromBaseline": true
+      "ttsText": "[helpfully] Pöllö istuu kuopassa eikä kerro löytöään ennen tunnussanaa.",
+      "ttsTextSha256": "fa2439cafcb7de9e38fba6865da556759d20948f60d6c8888e8f7c954edb1135",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
     },
     {
       "audioId": "sofia-6",
@@ -448,9 +454,15 @@
       "index": "2",
       "visibleText": "Vastaa kaksi aukkoa: kartan kohde Bulgariasta ja vuosiluku.",
       "visibleTextSha256": "a9eb925dc94574aa6d431cb9d3ca3525883fe188986c07092338d817f9254516",
-      "ttsText": "Vastaa kaksi aukkoa: kartan kohde Bulgariasta ja vuosiluku.",
-      "ttsTextSha256": "a9eb925dc94574aa6d431cb9d3ca3525883fe188986c07092338d817f9254516",
-      "unchangedFromBaseline": true
+      "ttsText": "[helpfully] Vastaa kaksi aukkoa: kartan kohde Bulgariasta ja vuosiluku.",
+      "ttsTextSha256": "6a68a2953fa7b237d2e6fb03b07e823896c4decbfed2169cbc158797335aaadd",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
     },
     {
       "audioId": "sofia-7",
@@ -458,9 +470,15 @@
       "index": "1",
       "visibleText": "Se kulta ei ole Sofiassa vaan Mustanmeren rannalla.",
       "visibleTextSha256": "d8629644984ffc15770246bef1c3d4a79c3be95031441c46ced09fc02eb86a09",
-      "ttsText": "Se kulta ei ole Sofiassa vaan Mustanmeren rannalla.",
-      "ttsTextSha256": "d8629644984ffc15770246bef1c3d4a79c3be95031441c46ced09fc02eb86a09",
-      "unchangedFromBaseline": true
+      "ttsText": "[helpfully] Se kulta ei ole Sofiassa vaan Mustanmeren rannalla.",
+      "ttsTextSha256": "ac334acdba993738e7d17f4a49834c683bb1a9c1407c4fe749fe35067288ad49",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
     },
     {
       "audioId": "sofia-8",
@@ -468,9 +486,15 @@
       "index": "2",
       "visibleText": "Katso rannikkokaupungin kortti. Vuosiluku on siinä, seitkytluvulla.",
       "visibleTextSha256": "8624f4a2be642bdda3e9a3685bc476bca1c785150826a2d049cae6d9c5f26a76",
-      "ttsText": "Katso rannikkokaupungin kortti. Vuosiluku on siinä, seitkytluvulla.",
-      "ttsTextSha256": "8624f4a2be642bdda3e9a3685bc476bca1c785150826a2d049cae6d9c5f26a76",
-      "unchangedFromBaseline": true
+      "ttsText": "[helpfully] Katso rannikkokaupungin kortti. [brightly] Vuosiluku on siinä, seitkytluvulla.",
+      "ttsTextSha256": "5273481cfea97ea86f49e6dec0789794528b5be5a2740e0ba2d74683eeed3426",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
     },
     {
       "audioId": "sofia-9",
@@ -478,9 +502,15 @@
       "index": "–",
       "visibleText": "No. Puolikas pulla, puolikas palvelus. Tossa on suora linkki, lue itse.",
       "visibleTextSha256": "506716e2bd3628988c0b608ae17d8268a3c11a41218cced661c9c1c6860470e1",
-      "ttsText": "No. Puolikas pulla, puolikas palvelus. Tossa on suora linkki, lue itse.",
-      "ttsTextSha256": "506716e2bd3628988c0b608ae17d8268a3c11a41218cced661c9c1c6860470e1",
-      "unchangedFromBaseline": true
+      "ttsText": "[amused] No. [quickly] Puolikas pulla, puolikas palvelus. Tossa on suora linkki, lue itse.",
+      "ttsTextSha256": "4b68f2a62d85cf4c6c416b73ff167a25f9d69986e172d406f69fb61e345c0aad",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
     },
     {
       "audioId": "sofia-10",
@@ -488,9 +518,15 @@
       "index": "1",
       "visibleText": "Se on se. Yli kolmetuhatta kultaesinettä, ennen kuin kukaan osasi kirjoittaa.",
       "visibleTextSha256": "bfc333881266bc3294e0b707be531fb4d64d27486b491baa8325949b24993358",
-      "ttsText": "Se on se. Yli kolmetuhatta kultaesinettä, ennen kuin kukaan osasi kirjoittaa.",
-      "ttsTextSha256": "bfc333881266bc3294e0b707be531fb4d64d27486b491baa8325949b24993358",
-      "unchangedFromBaseline": true
+      "ttsText": "[excited] Se on se. [awed] Yli kolmetuhatta kultaesinettä, ennen kuin kukaan osasi kirjoittaa.",
+      "ttsTextSha256": "6918a0606024b9fe65821294688718afa9c12b877eeef17612e671b8a43051d6",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
     },
     {
       "audioId": "sofia-11",
@@ -498,9 +534,15 @@
       "index": "2",
       "visibleText": "Minä vien tämän pöllölle. Palaan kyllä.",
       "visibleTextSha256": "5c34060a962e1e26c0f42b1f3aa3d5bef4d8fe92496da2f0c0a19fae42f1590e",
-      "ttsText": "Minä vien tämän pöllölle. Palaan kyllä.",
-      "ttsTextSha256": "5c34060a962e1e26c0f42b1f3aa3d5bef4d8fe92496da2f0c0a19fae42f1590e",
-      "unchangedFromBaseline": true
+      "ttsText": "[excited] Minä vien tämän pöllölle. [awed] Palaan kyllä.",
+      "ttsTextSha256": "cfb34ae3911f44e432c6151b7447afe26037b30d0f691ee7eeacba10342bb1f0",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
     },
     {
       "audioId": "sofia-12",
@@ -508,9 +550,15 @@
       "index": "–",
       "visibleText": "Livia on matkalla. Se palaa kun se palaa — sillä välin sinä saat tehdä mitä huvittaa.",
       "visibleTextSha256": "7fb4663e400dee1cfe05aa5433ba45f14445f891bad5798a5e2ef2485162a46d",
-      "ttsText": "Livia on matkalla. Se palaa kun se palaa — sillä välin sinä saat tehdä mitä huvittaa.",
-      "ttsTextSha256": "7fb4663e400dee1cfe05aa5433ba45f14445f891bad5798a5e2ef2485162a46d",
-      "unchangedFromBaseline": true
+      "ttsText": "[casually] Livia on matkalla. [amused] Se palaa kun se palaa — sillä välin sinä saat tehdä mitä huvittaa.",
+      "ttsTextSha256": "bbb385a11c25725368f78c4efe6931a55f5c9e2650ddfc868cdf35ab28d95ed9",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
     },
     {
       "audioId": "sofia-13",
@@ -518,9 +566,15 @@
       "index": "1",
       "visibleText": "Perillä oltiin. Pöllö oli kuopan pohjalla mullassa: lapio oli hyvä sijoitus.",
       "visibleTextSha256": "e5fa90746cb94f297f2e0edbe6400e6d632fca48cfb91d90bd6f0fe605803f43",
-      "ttsText": "Perillä oltiin. Pöllö oli kuopan pohjalla mullassa: lapio oli hyvä sijoitus.",
-      "ttsTextSha256": "e5fa90746cb94f297f2e0edbe6400e6d632fca48cfb91d90bd6f0fe605803f43",
-      "unchangedFromBaseline": true
+      "ttsText": "[breathless] Perillä oltiin. [amused] Pöllö oli kuopan pohjalla mullassa: lapio oli hyvä sijoitus.",
+      "ttsTextSha256": "34e02d4a86caa492b9e181e83957fa599d8b4ba8f816a8c269d7fc0b85cf15be",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
     },
     {
       "audioId": "sofia-14",
@@ -528,9 +582,15 @@
       "index": "2",
       "visibleText": "Sitten se kertoi paikan: se on tässä, jalkojesi alla. Katso alas.",
       "visibleTextSha256": "d542527d20680333e438408c08886163e1a3ff08f421a8d1e801739a359cde06",
-      "ttsText": "Sitten se kertoi paikan: se on tässä, jalkojesi alla. Katso alas.",
-      "ttsTextSha256": "d542527d20680333e438408c08886163e1a3ff08f421a8d1e801739a359cde06",
-      "unchangedFromBaseline": true
+      "ttsText": "[breathless] Sitten se kertoi paikan: se on tässä, jalkojesi alla. [amused] Katso alas.",
+      "ttsTextSha256": "a5869151ea402a3574cd0db7499c3c377fb1ecaca87e96f31e5d23abf96f2b94",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
     }
   ]
 }
