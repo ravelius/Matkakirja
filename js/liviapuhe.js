@@ -624,6 +624,41 @@ export const LIVIAN_AANITETYT = {
   'ihmisen-matka-4': 'dbfd92fe',
 };
 
+/*
+ * ÄÄNITYSERÄ — KUN SAMA TEKSTI ÄÄNITETÄÄN UUDELLA ÄÄNELLÄ.
+ *
+ * LIVIAN_AANITETYT on TEKSTIN tiiviste, ja se vaihtuu vain kun repliikin
+ * sanat muuttuvat. Ääni voi kuitenkin vaihtua ilman että sanat
+ * muuttuvat — ja silloin osoite pysyy samana, palvelutyöntekijän
+ * äänikori (sw.js AANICACHE) on välimuisti ensin, ja pelaaja kuulee
+ * vanhan äänen ikuisesti. Omistajan havainto 12.9.2026: *"Uudet luennot
+ * eivät kuulu pulun äänellä, vaikka päivitin versioni ja käynnistin
+ * sovelluksen monta kertaa uudestaan."* Tiedosto oli ämpärissä oikein
+ * (HTTP 200, uusi tavumäärä) — vika oli osoitteessa, ei aineistossa.
+ *
+ * Erä lisätään osoitteeseen tiivisteen perään (`?v=<tiiviste>-<erä>`),
+ * joten se ei riko tekstin tiivistettä eikä sen vartijoita. Ämpäri
+ * ohittaa kyselyn, joten uusi osoite hakee saman tiedoston — mutta
+ * selaimelle ja äänikorille se on uusi osoite.
+ *
+ * ERÄ 2 (12.9.2026): omistaja kokeilee pululle uutta ääntä
+ * (voice ZF6FPAbjXT4488VcRRnw, eleven_v3, stability natural). Vain
+ * avausketju ja Ateena äänitettiin; loput 60 repliikkiä ovat yhä
+ * vanhalla äänellä, joten niissä ei ole erää.
+ */
+export const LIVIAN_AANIERAT = {
+  'avaus-1': 2,
+  'avaus-2': 2,
+  'avaus-3': 2,
+  'avaus-4': 2,
+  'avaus-5': 2,
+  'paljastus-1': 2,
+  'paljastus-2': 2,
+  'paljastus-3': 2,
+  'ateena-3': 2,
+};
+
+
 /* ------------------------------------------------------------------ *
  * Tarkistettavat kaupungit kartalla
  * ------------------------------------------------------------------ */
@@ -753,8 +788,11 @@ export function livianSoitettava(lahde, indeksi) {
 export function livianAaniOsoite(lahde, indeksi, juuri = LIVIAN_AANIJUURI) {
   const nimi = livianSoitettava(lahde, indeksi);
   if (!nimi) return null;
-  const versio = LIVIAN_AANITETYT[`${lahde}-${indeksi + 1}`];
-  return `${juuri}${nimi}${versio ? `?v=${versio}` : ''}`;
+  const avain = `${lahde}-${indeksi + 1}`;
+  const versio = LIVIAN_AANITETYT[avain];
+  const era = LIVIAN_AANIERAT[avain];
+  if (!versio) return `${juuri}${nimi}`;
+  return `${juuri}${nimi}?v=${versio}${era ? `-${era}` : ''}`;
 }
 
 /**
