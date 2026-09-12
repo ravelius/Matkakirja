@@ -208,6 +208,28 @@ export const MAASTOKOHTEET_POL = [
   },
   {
     id: 'odra',
+    kuva: {
+      "osoite": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-odra-cffc05691432.jpg",
+      "lyhyt": "Matkakirjan havainnekuva rajamittauksesta Odran rannalla 1940-luvun lopulla.",
+      "selite": "Matkakirjan havainnekuva rajamittauksesta Odran rannalla 1940-luvun lopulla.",
+      "lahde": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+      "tekija": "OpenAI; referenssikuva Janfortytwo",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oder_(river).jpg",
+      "lisenssi": "CC BY-SA 3.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    kuvat: [
+      {
+        "osoite": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-odra-8df9830a8122.jpg",
+        "lyhyt": "Odra Frankfurtin ja Słubicen välissä Puolan ja Saksan rajalla.",
+        "selite": "Odra virtaa Frankfurtin ja Słubicen välissä Puolan ja Saksan rajajokena; sen pitkä alajuoksu jatkuu Szczecinin laguunin kautta Itämereen.",
+        "lahde": "Valokuva, Wikimedia Commons",
+        "tekija": "Janfortytwo",
+        "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oder_(river).jpg",
+        "lisenssi": "CC BY-SA 3.0",
+        "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     nimi: 'Odra',
     tyyppi: 'joki',
     kysymykset: [
@@ -276,6 +298,28 @@ export const MAASTOKOHTEET_POL = [
   },
   {
     id: 'auschwitz',
+    kuva: {
+      "osoite": "https://media.matkakirja.app/karttanostot/20260912/pol-kohde-auschwitz-e695ff7c5e93.jpg",
+      "lyhyt": "Matkakirjan havainnekuva Auschwitz II-Birkenaun leirialueesta talvella 1945 ennen vapautusta.",
+      "selite": "Matkakirjan havainnekuva Auschwitz II-Birkenaun leirialueesta talvella 1945 ennen vapautusta.",
+      "lahde": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+      "tekija": "OpenAI; referenssikuva Jacek Daczyński",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auschwitz_II_Birkenau.jpg",
+      "lisenssi": "CC BY-SA 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    kuvat: [
+      {
+        "osoite": "https://media.matkakirja.app/karttanostot/20260912/pol-kohde-auschwitz-69491a8d2cae.jpg",
+        "lyhyt": "Auschwitz II-Birkenaun muistopaikan piikkilanka-aita katoaa sumuun.",
+        "selite": "Auschwitz II-Birkenaun piikkilanka-aita jatkuu sumuiseen maisemaan alueella, jossa natsi-Saksa murhasi valtaosan Auschwitzin uhreista.",
+        "lahde": "Valokuva, Wikimedia Commons",
+        "tekija": "Jacek Daczyński",
+        "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auschwitz_II_Birkenau.jpg",
+        "lisenssi": "CC BY-SA 4.0",
+        "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ],
     nimi: 'Auschwitz-Birkenau',
     tyyppi: 'historia',
     kysymykset: [
@@ -307,6 +351,16 @@ export const MAASTOKOHTEET_POL = [
   },
   {
     id: 'jasnagora',
+    kuva: {
+      "osoite": "https://media.matkakirja.app/karttanostot/20260912/pol-kohde-jasnagora-bf326ef07379.jpg",
+      "lyhyt": "Jasna Góran luostari nykyisessä asussaan Częstochowassa; etualalla näkyy myös tapahtumarakenteita.",
+      "selite": "Jasna Góran luostari nykyisessä asussaan Częstochowassa; etualalla näkyy myös tapahtumarakenteita.",
+      "lahde": "Valokuva, Wikimedia Commons",
+      "tekija": "Fotoomnia",
+      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monastery_at_Jasna_G%C3%B3ra_Monastery,_Cz%C4%99stochowa.jpg",
+      "lisenssi": "CC BY-SA 4.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
     nimi: 'Jasna Góra',
     tyyppi: 'kulttuuri',
     kysymykset: [
