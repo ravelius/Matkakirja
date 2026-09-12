@@ -655,6 +655,107 @@ export const kohtaamiskuvat = [
     hetki: 'Inês on polvillaan telineen vieressä ja työntää laattaa hyllylle molemmin käsin, kun lehtien varjot kirjovat lattian ja käsivarren.',
     vihje: 'Sinivalkoinen azulejo-laatta ja pajan uuni kertovat Lissabonin laattaperinteestä; laatan kuvion merkitystä tai vastausta ei selitetä.',
   },
+  /*
+   * KUVAPUTKEN TOIMITUS 12.9.2026 13:57 UTC (posti/kuvatoimitus-
+   * kohtaamiset-4-20260912.json, haara claude/postilaatikko): neljä
+   * root-QA:n hyväksymää uusintaa. Jokaisen tiedoston sha256 on
+   * tarkistettu latauksessa toimitusta vastaan, ja kaikki neljä
+   * osoitetta vastasivat HTTP 200. Tiedostot ovat ämpärin
+   * päiväkansiossa `20260912/` (juuripolku palauttaa 404), joten
+   * riveillä on `kansio`-kenttä.
+   *
+   * TOIMITUS PUHUU UUSINNOISTA, MUTTA TÄSSÄ KATALOGISSA EI OLLUT
+   * YHTÄÄN RIVIÄ NÄILLE NELJÄLLE KAUPUNGILLE — toimituksen
+   * `supersedes`-tunnukset (…-r20260907-v1) ovat arviointisivun
+   * versioita, eivät pelin kuvia. Mitään ei siis pudotettu kortilta
+   * eikä arkistoitu: nämä ovat kaupunkiensa ensimmäiset rivit.
+   *
+   * VAIN GRANADA MENEE PELIIN. Kolmen muun kuvan henkilö on eri kuin
+   * se, joka kysymyksen kaaressa esittää (js/tyohuone-kehitys-data.js,
+   * KAARI_PAKETIT): Oslo = maanviljelijä Oskar, Pietari =
+   * huoltoteknikko Matvei, Sarajevo = kupariseppä Emir. Liv, Polina ja
+   * Adnan ovat kuvaputken toisen kierroksen HENKILÖEHDOTUKSIA, jotka
+   * odottavat yhä omistajan ja Fablen päätöstä (docs/raportit/
+   * fable-tilanne-2026-09-06-aamu.md, kohta 2) — kaanonia ei muuteta
+   * kuvan perusteella. Sama ratkaisu kuin Amsterdamissa 5.9.2026: rivi
+   * jää galleriaan vertailukappaleeksi, mutta ei kortille, koska
+   * kortilla se näyttäisi eri ihmisen kuin kysyjä. Kun kaari nimeää
+   * henkilön, `tila` vaihtuu yhdellä sanalla.
+   */
+  {
+    id: 'granada-ines-e4ab59a7e815',
+    kaupunki: 'Granada',
+    maa: 'Espanja',
+    hahmo: 'Inés',
+    kansio: '20260912',
+    tiedosto: 'granada-ines-e4ab59a7e815.jpg',
+    tila: 'tarkistettu',
+    alt: 'Inés pysähtyy puutarhakärryn äärelle ja arvioi aarrekysymystä tuiman epäilevästi. Leikatut oksat ovat vielä kärryssä, ja Generalifen kanava-allas suihkuineen jatkuu hänen takanaan.',
+    lyhyt: 'Inés pysähtyy puutarhakärryn äärelle ja arvioi aarrekysymystä tuiman epäilevästi.',
+    kuvateksti: 'Inés pysähtyy puutarhakärryn äärelle ja arvioi aarrekysymystä tuiman epäilevästi. Leikatut oksat ovat vielä kärryssä, ja Generalifen kanava-allas suihkuineen jatkuu hänen takanaan.',
+    hetki: 'Käsivarsi lepää kärryn laidalla ja työ on kesken: oksat odottavat kärryssä, kun katse kääntyy suoraan tulijaan.',
+    vihje: 'Generalifen kanava-allas, leikatut pensasaidat ja rinteen linnoitus kertovat Granadasta; linnoituksen nimen merkitystä ei paljasteta kuvassa.',
+  },
+  {
+    id: 'oslo-liv-992a171d5df6',
+    kaupunki: 'Oslo',
+    maa: 'Norja',
+    hahmo: 'Liv',
+    kansio: '20260912',
+    tiedosto: 'oslo-liv-992a171d5df6.jpg',
+    // GALLERIAAN, EI KORTILLE: kaaren Oslo-henkilö on maanviljelijä Oskar.
+    tila: 'arkisto',
+    /*
+     * REMMI ON KOIRAN TALUTUSHIHNA, EI KAMERAN HIHNA (kuvaputken
+     * havainto ja toimituksen `osloAlignment`). Kuvassa ne ovat eri
+     * esineitä: kamera roikkuu omassa olkahihnassaan rinnalla, ja
+     * vasemmasta kädestä lähtevä musta hihna johtaa kalliolla seisovan
+     * terrierin pantaan. Kuvateksti sanoo sen nyt niin kuin se näkyy,
+     * eikä kaanoniin tarvittu mitään: koira ja hihna ovat uutta
+     * rekvisiittaa, eivät lupausta, sukua tai perillistä.
+     */
+    alt: 'Liv pysähtyy aurinkoiselle polulle ja katsoo matkaajaa suoraan. Toisessa kädessä on koiran talutushihna, rinnalla omassa olkahihnassaan roikkuva kamera, ja alhaalla avautuu vuono kaupungin edessä.',
+    lyhyt: 'Liv pysähtyy aurinkoiselle polulle ja katsoo matkaajaa suoraan.',
+    kuvateksti: 'Liv pysähtyy aurinkoiselle polulle ja katsoo matkaajaa suoraan. Toisessa kädessä on koiran talutushihna, rinnalla omassa olkahihnassaan roikkuva kamera, ja alhaalla avautuu vuono kaupungin edessä.',
+    hetki: 'Hihna kulkee kädestä kalliolla seisovan koiran pantaan, ja koira kääntyy katsomaan ylös samalla kun kävely katkeaa kysymykseen.',
+    vihje: 'Vuonon takaa näkyvä kaupunki ja kallioinen metsäpolku kertovat Oslosta; kaaren peltoa ja kumpua ei näytetä kuvassa.',
+  },
+  {
+    id: 'pietari-polina-6188e4c488db',
+    kaupunki: 'Pietari',
+    maa: 'Venäjä',
+    hahmo: 'Polina',
+    kansio: '20260912',
+    tiedosto: 'pietari-polina-6188e4c488db.jpg',
+    // GALLERIAAN, EI KORTILLE: kaaren Pietari-henkilö on huoltoteknikko Matvei.
+    tila: 'arkisto',
+    alt: 'Polina kohtaa matkaajan katseen Vitebskin asemalla. Sellokotelo on yhä olalla ja toinen käsi nousee kysyvästi, kun aarrekysymys pysäyttää hänet kesken matkan.',
+    lyhyt: 'Polina kohtaa matkaajan katseen Vitebskin asemalla.',
+    kuvateksti: 'Polina kohtaa matkaajan katseen Vitebskin asemalla. Sellokotelo on yhä olalla ja toinen käsi nousee kysyvästi, kun aarrekysymys pysäyttää hänet kesken matkan.',
+    hetki: 'Hän seisoo keskellä ruutulattiaa kotelon hihna nyrkissä, ja muut matkustajat jatkavat portaita ylös hänen takanaan.',
+    vihje: 'Aseman jugendsali, lasimaalaukset ja matkalaukut kertovat Pietarista; kaaren nostosiltaa ja yötä ei näy kuvassa.',
+  },
+  {
+    id: 'sarajevo-adnan-8d19fb11c377',
+    kaupunki: 'Sarajevo',
+    maa: 'Bosnia ja Hertsegovina',
+    hahmo: 'Adnan',
+    kansio: '20260912',
+    tiedosto: 'sarajevo-adnan-8d19fb11c377.jpg',
+    /*
+     * GALLERIAAN, EI KORTILLE: kaaren Sarajevo-henkilö on kupariseppä
+     * Emir. Ammatti, paja ja kuja vastaavat kaarta kohta kohdalta —
+     * vain nimi eroaa, eikä nimi näy kuvassa. Tämä on siis Fablelle
+     * yhden sanan päätös suuntaan tai toiseen; ali-agentti ei nimeä
+     * kuvaa uudelleen eikä nimeä kaarta uudelleen.
+     */
+    tila: 'arkisto',
+    alt: 'Adnan keskeyttää työnsä ja arvioi aarteen kysyjää tuiman epäilevästi. Vastatakottu kuparikannu on yhä pöydällä ja pitkä työkalu kädessä, kun katse nousee kujalle.',
+    lyhyt: 'Adnan keskeyttää työnsä ja arvioi aarteen kysyjää tuiman epäilevästi.',
+    kuvateksti: 'Adnan keskeyttää työnsä ja arvioi aarteen kysyjää tuiman epäilevästi. Vastatakottu kuparikannu on yhä pöydällä ja pitkä työkalu kädessä, kun katse nousee kujalle.',
+    hetki: 'Kuparia täynnä oleva hylly jää hämärään, ja päivänvalo tulee kujan suunnasta suoraan työpöydälle kesken taonnan.',
+    vihje: 'Kuparipaja, nahkaesiliina ja mukulakivikuja kertovat Sarajevosta; kaivon tarinaa ei näytetä kuvassa.',
+  },
 ];
 
 /**
@@ -675,8 +776,21 @@ export const KOHTAAMISKUVAT_KOHTEELLE = new Map(
     .map((kuva) => [kuvaAvain(kuva.kohde ?? kuva.kaupunki), kuva]),
 );
 
-/** Kuvan täysi osoite R2-ämpärissä. */
-export const kohtaamiskuvaOsoite = (kuva) => `${KOHTAAMIS_R2_JUURI}/${encodeURIComponent(kuva.tiedosto)}`;
+/**
+ * Kuvan täysi osoite R2-ämpärissä.
+ *
+ * Vanhat erät ovat ämpärin juuressa (kohtaamiset/<tiedosto>), mutta
+ * 12.9.2026 alkaen kuvaputki vie erän omaan päiväkansioonsa
+ * (kohtaamiset/20260912/<tiedosto>). Kansio on siksi oma kenttänsä eikä
+ * osa tiedostonimeä: näin encodeURIComponent ei koodaa kauttaviivaa
+ * pois ja tiedostonimen vartija (tests/kohtaamiskuvat.test.mjs) pysyy
+ * yhtä tiukkana kuin ennenkin.
+ */
+export const kohtaamiskuvaOsoite = (kuva) => [
+  KOHTAAMIS_R2_JUURI,
+  ...(kuva.kansio ? [encodeURIComponent(kuva.kansio)] : []),
+  encodeURIComponent(kuva.tiedosto),
+].join('/');
 
 /**
  * Kaupungin kohtaamiskuva pelille, tai null jos tarkistettua kuvaa ei
