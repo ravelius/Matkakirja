@@ -6,6 +6,7 @@ import {
   KOHTAAMIS_R2_JUURI, KOHTAAMISKUVAT_KOHTEELLE, kohtaamiskuvaKohteelle, kohtaamiskuvaOsoite, kohtaamiskuvat,
 } from '../js/kohtaamiskuvat-data.js';
 import { TARINAKAARI } from '../js/packs/tarinakaari.js';
+import { KAARI_PAKETIT } from '../js/tyohuone-kehitys-data.js';
 
 test('kohtaamiskuvagalleria käyttää vain R2-mediaa', async () => {
   assert.match(KOHTAAMIS_R2_JUURI, /^https:\/\/(?:media\.matkakirja\.app|[^/]+\.r2\.dev)\/kohtaamiset$/);
@@ -33,23 +34,24 @@ test('kohtaamiskuvagalleria käyttää vain R2-mediaa', async () => {
 });
 
 /*
- * KUVAPUTKEN 12.9.2026 TOIMITUKSEN NELJÄ RIVIÄ, KAIKKI PELISSÄ. Oslo,
+ * KUVAPUTKEN 12.9.2026 PÄIVÄKANSION VIISI AKTIIVISTA RIVIÄ. Oslo,
  * Pietari ja Sarajevo odottivat ensin galleriassa, koska kuvan henkilö
  * ei ollut kaaren henkilö; omistaja vaihtoi kaanoniin uudet henkilöt
  * samana päivänä (Liv, Polina, Adnan — js/tyohuone-kehitys-data.js
  * KAARI_PAKETIT). Tämä vartio pitää parit kiinni toisissaan: jos joku
  * palauttaisi kaaren vanhan nimen, alla oleva hahmovartio kaatuu.
  */
-test('12.9.2026 toimituksen neljä kuvaa ovat oikeissa tiloissa ja päiväkansiossa', () => {
+test('12.9.2026 päiväkansion viisi kuvaa ovat oikeissa tiloissa', () => {
   const rivit = new Map(kohtaamiskuvat
     .filter((kuva) => kuva.kansio === '20260912')
     .map((kuva) => [kuva.id, kuva]));
-  assert.equal(rivit.size, 4);
+  assert.equal(rivit.size, 5);
   for (const [id, tila, hahmo] of [
     ['granada-ines-e4ab59a7e815', 'tarkistettu', 'Inés'],
     ['oslo-liv-992a171d5df6', 'tarkistettu', 'Liv'],
     ['pietari-polina-6188e4c488db', 'tarkistettu', 'Polina'],
     ['sarajevo-adnan-8d19fb11c377', 'tarkistettu', 'Adnan'],
+    ['nikosia-marios-4ce1cb371ba3', 'tarkistettu', 'Marios'],
   ]) {
     const kuva = rivit.get(id);
     assert.ok(kuva, `toimituksen rivi ${id} puuttuu katalogista`);
@@ -62,6 +64,7 @@ test('12.9.2026 toimituksen neljä kuvaa ovat oikeissa tiloissa ja päiväkansio
     ['oslo', 'oslo-liv-992a171d5df6'],
     ['pietari', 'pietari-polina-6188e4c488db'],
     ['sarajevo', 'sarajevo-adnan-8d19fb11c377'],
+    ['nikosia', 'nikosia-marios-4ce1cb371ba3'],
   ]) assert.equal(kohtaamiskuvaKohteelle(kohde)?.id, id);
 });
 
@@ -97,14 +100,23 @@ test('galleriasivu kytkee katalogin ja R2-virheen varanäkymän', async () => {
  * jättäisi kuvan hiljaa pois ruudulta — se kaatuu tässä.
  */
 test('jokainen kohtaamiskuva osuu tarinakaaren kohteeseen ja sen hahmoon', () => {
+  const kaikkiKaaret = new Map(KAARI_PAKETIT.kohteet.map((kaari) => [kaari.id, kaari]));
   for (const [kohde, kuva] of KOHTAAMISKUVAT_KOHTEELLE) {
-    const kaari = TARINAKAARI[kohde];
+    // Nikosia on rajattu ennakkopoikkeus: kuva on katalogissa ja
+    // galleriassa, mutta luennat:false pitää kohtaamisen vielä pois
+    // varsinaisesta pelivirrasta. Muiden aktiivisten kuvien kaaren täytyy
+    // edelleen löytyä TARINAKAARI-taulusta.
+    const kaari = kohde === 'nikosia' ? kaikkiKaaret.get(kohde) : TARINAKAARI[kohde];
     assert.ok(kaari, `kohtaamiskuvalle ${kuva.id} ei löydy kaaren kohdetta "${kohde}"`);
     // Sama henkilö kuvassa ja repliikissä: väärään kaupunkiin osunut
     // kuva näyttäisi eri ihmisen kuin se, joka kysymyksen esittää.
     assert.ok(`${kaari.henkilo} ${kaari.nimi ?? ''}`.includes(kuva.hahmo),
       `${kuva.id}: hahmo ${kuva.hahmo} ei esiinny kohteen ${kohde} henkilökuvauksessa`);
   }
+  const nikosia = kaikkiKaaret.get('nikosia');
+  assert.equal(nikosia?.luennat, false, 'Nikosian pelivirran esto ei ole enää luennat:false');
+  assert.equal(TARINAKAARI.nikosia, undefined,
+    'Nikosia aktivoitui TARINAKAARI-tauluun ilman erillistä peli- ja äänitarkistusta');
 });
 
 test('vain tarkistettu aktiivinen kuva päätyy peliin, muut jäävät galleriaan', () => {
