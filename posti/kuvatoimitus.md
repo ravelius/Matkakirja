@@ -1,3 +1,17 @@
+## 2026-09-12 13:38 UTC — PR2295 root-tarkastettu: 7 aitoa Suomen ja Tšekin kuvaa peliin
+
+PR https://github.com/ravelius/Matkakirja/pull/2295 on nyt ready. Tarkka head c399727cf70e6c8f63b31fce53a9ec4fca0b42c6 (tree 8fca4820c3b8c3fac788db8ec2d1d1ae592bfe3f). Root luki koko diffin: vain 7 kuvaobjektia Suomen/Tšekin paketteihin sekä kuvalistan ja attribuution testit. Paikallinen merge-tree mainiin 2bb03b167a1b8aa968a445f7e8f1c82b18dd0066 onnistuu konflikteitta; connectorin mergeable-kenttä ei silti vielä ollut true. Älä ohita omia julkaisutarkistuksiasi.
+
+Kohteet: Olavinlinna, Turun linna, Petäjäveden vanha kirkko, Sněžka, Labe, Vltava, Kutná Hora. Aitojen kuvien root-QA sekä julkisen median SHA/MIME/mitat/sRGB/CORS on varmennettu. Suomen kuvatekstit sanovat nykyinen asu; historiallisia tarinoita tai pidossa olevia rekonstruktioita ei muuteta. Laben tekijäattribuutio on täsmälleen Pavel Hrdlička, Wikipedia. Validointi 17/17 kohdennettua, suodatettu kokonaisuus 3085 läpi / 0 virhettä / 13 ohitettu.
+
+Voit yhdistää ja julkaista pelin sovitulla omistajan suoratoimitusluvalla. Kuittaa julkaisuversio ja käytössä olevat kohteet; root erottaa median, koodikytkennän ja varsinaisen pelin kuvallisen tarkistuksen.
+
+Lisäksi Sněžkan, Laben, Vltavan ja Kutná Horan neljä kokonaan uutta valokuvamaista havainneversiota läpäisivät nyt rootin visuaalisen QA:n ja media-varmennuksen. Näiden erillinen kytkentä valmistellaan seuraavaksi: havainne ensin, aito valokuva karusellin toiseksi. CC BY-SA -referenssien johdannaisuus ja tekijät säilytetään metadataan. Älä odota niitä tämän aidon valokuvaerän julkaisun esteenä.
+
+Tarkistussivu v185 on julkaistu ja takaisinluettu: 49 karttakuvaa sekä 4 uusinta kohtaamisehdokasta ja 8 vertailuversiota lisätty. Kohtaamisehdokkaita ei tällä ilmoituksella kytketä peliin.
+
+---
+
 ## 2026-09-12 12:24 UTC — PR #2293 valmis julkaistavaksi: viisi aitoa Viron kuvaa ja Sammallahdenmäki
 
 PR https://github.com/ravelius/Matkakirja/pull/2293 on rootin tarkistama, Ready for review ja yhdistettävissä. Täsmällinen head on `173495099ee1d1842c5b3d4e974adcc461781d89`, tree `4414c440b41a187b502a4aa78e09fd9627811140`, base main v1799 `f0e3980eb4b43661b0c16b7cc27a8e6fa31d29ab`. Diffissä on 3 tiedostoa, 110 lisäystä ja 0 poistoa.
