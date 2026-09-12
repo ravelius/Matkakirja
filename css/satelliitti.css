@@ -76,6 +76,56 @@
 }
 
 /*
+ * NIMET VASTA LÄHELTÄ (omistaja 12.9.2026, sanatarkasti: *"Kaikissa
+ * pisteissä ei tarvitse nimeä näkyä kuin vasta lähemmäs zoomattuna"*).
+ *
+ * Avaruusnäkymässä koko pallo on ruudussa ja pisteitä on kerralla
+ * kaksinkertainen määrä lähikuvaan nähden; mitattu 12.9.2026:
+ * avauskorkeudella 120 limittyvää nimiparia puhelimella 26 näkymän
+ * otoksessa. Nimi syttyy vasta, kun kamera on laskeutunut
+ * NIMIEN_KYNNYS × avauskorkeus -rajan alle
+ * (js/linssit/satelliitti-avaruus.js kirjoittaa luokan).
+ *
+ * OPACITY EIKÄ DISPLAY: lappu pysyy asettelussa, joten sytyttäminen ei
+ * siirrä mitään, ja häivytys on mahdollinen. Piste itse (hehku, rengas,
+ * ydin) näkyy koko ajan — vain nimi tulee myöhemmin.
+ */
+body.satelliitti-avaruus .satelliitti-nimi {
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+body.satelliitti-avaruus.satelliitti-nimet .satelliitti-nimi { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  body.satelliitti-avaruus .satelliitti-nimi { transition: none; }
+}
+
+/*
+ * PULU PIILOON LINSSIN AJAKSI (omistaja 12.9.2026, sanatarkasti:
+ * *"Pulun voisi piilottaa"*).
+ *
+ * SAMA MEKANISMI KUIN IHMISEN MATKA -LINSSISSÄ: body-luokka
+ * `aikajana-pulu-piilossa` ja `visibility: hidden` (ks.
+ * js/linssit/ihmisen-matka-esitys.js PULUN_PIILO_LUOKKA ja
+ * css/aikajana.css). Peittävyys ei riittäisi, koska kasvot piirtyvät
+ * napin ULKOPUOLELLA omalle kankaalleen — ja `visibility` on juuri se,
+ * jonka livia-eleet lukee näkyvyystestissään (js/livia-eleet.js
+ * nappiNakyy), joten piilossa oleva pulu ei elehdi eikä puhu kankaalle.
+ *
+ * SÄÄNTÖ ON KOPIO, KOSKA css/aikajana.css EI OLE LADATTU: satelliitti-
+ * linssi lataa vain oman tyylinsä, samoin kuin `aikajana-paalla`
+ * -säännöt alempana tässä tiedostossa. Kopio ja alkuperä vartioidaan
+ * yhdessä (tests/satelliitti-avaruus.test.mjs).
+ */
+body.aikajana-pulu-piilossa .pollo-nappi,
+body.aikajana-pulu-piilossa .pollo-paneeli,
+body.aikajana-pulu-piilossa .livia-kasvot-pinta {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+/*
  * Ilmestyminen kerran, ei toistoa. Merkkikerros lisää luokan
  * `pallolauta-merkki` SAMAAN elementtiin (js/pallolauta/merkit.js
  * elementti), joten tässä ei ole kääreettä — ja pallon takapuolen

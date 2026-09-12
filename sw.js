@@ -288,6 +288,7 @@ const SHELL = [
   // eivätkä SHELLissä — ne tulevat ICEYEn omasta ämpäristä pyydettäessä.
   './js/linssit/satelliitti.js',
   './js/linssit/satelliitti-data.js',
+  './js/linssit/satelliitti-avaruus.js',
   './css/satelliitti.css',
   './js/linssit/topografia.js',
   './js/linssit/vertailu.js',
