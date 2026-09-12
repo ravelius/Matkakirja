@@ -114,10 +114,19 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   // Napautus kilpailee vain näkyvistä merkeistä (fokusniput sääntö 9).
   assert.match(lauta, /if \(pisteNakyy\(k\)\) ehdokkaat\.push\(\{ laji: 'kaupunki'/);
   assert.match(lauta, /for \(const o of nostot\.osumat\(\)\) ehdokkaat\.push\(\{ laji: 'nosto'/);
-  // Ladonta vain levossa: sama viive kuin laadun palautuksella.
+  /*
+   * Ladonta kulkee liikkeen mukana (omistaja 12.9.2026: *"kun panorointi
+   * loppuu kaikki liikkuvat hieman ja hakevat paikkansa uudestaan"*).
+   * Ajoitus on KURITUS eikä vaimennus: ladonta ajetaan myös kesken
+   * vedon, enintään kerran LADONNAN_TAHTI_MS:ssä, ja perälautana vielä
+   * kerran liikkeen jälkeen. Ajoituksen oma vartija on
+   * tests/pallopiste.test.mjs (ladonnanAjoitus).
+   */
   assert.match(lauta, /export const LADONNAN_LEPOVIIVE_MS = LAATU_LEPOVIIVE_MS;/);
   assert.match(lauta, /ohjaimet\.addEventListener\('change', pyydaLadonta\);/);
-  assert.match(lauta, /lepoAjastin = setTimeout\(ladoLevossa, LADONNAN_LEPOVIIVE_MS\);/);
+  assert.match(lauta, /const \{ heti, viiveMs \} = ladonnanAjoitus\(nyt - ladottuHetki\);/);
+  assert.match(lauta, /if \(heti\) ladoLevossa\(\);/);
+  assert.match(lauta, /lepoAjastin = setTimeout\(ladoLevossa, viiveMs\);/);
   // Nostot ensin, nimikatto laskee kun nostoja on; kokonaiskatto 60.
   assert.equal(HTML_MERKKIEN_KATTO, 60);
   assert.equal(NIMIEN_KATTO, 40);
