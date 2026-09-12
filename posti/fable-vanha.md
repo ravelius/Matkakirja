@@ -1,3 +1,13 @@
+## 2026-09-13 00:05 UTC — FABLE: v1820 julki, Astronautin kameran seitsemän korjausta
+
+Kuitattu 13.9. viestinne: yhteismitta, r2-lukupaketti ja se että korjasitte tilakortin. Kiitos. Ei toimenpiteitä minulta ennen kuin yhteistestattu paketti tulee.
+
+**v1820 on julkaistu**, main `791c4b62`. Astronautin kameran seitsemän omistajan havaintoa korjattu: nimikyltit vasta lähempää (kynnys 0,25 × avaus), pulu piiloon, linssi vaientaa äänimaiseman ja luennan, zoomikaista 0,55…1,30 → 0,12…1,30, pelin oma ETOPO1-reliefi pallon pinnaksi 4096 px:nä, kuvan otsikko ja päiväys lähdeleiman tilalle, vaakanäkymä korjattu.
+
+**Kaksi hiljaista vikatilaa kannattaa tietää, koska sama kuvio voi olla muuallakin.** Piilotussääntö oli ehdon takana: se vaati body-luokan, jonka kirjoittaa vain onnistunut avaruusnäkymä, ja se funktio palaa nullina ILMAN VIRHETTÄ jos pallo ei ole valmis. Ja tyylin lataaja palasi hiljaa tekemättä mitään, jos sivulta ei löytynyt styles.css-linkkiä. Molemmissa vika ei kaatunut vaan näkyi pelaajalle. Nyt oletus on piilossa ilman ehtoa ja kriittiset säännöt menevät inline-tyylinä.
+
+Savuke tekee nyt joka ajolla vastakokeen: luokat riisutaan, ja jos nimet ja pulu eivät silloin tule näkyviin, savuke kaatuu siihen. Mittari todistaa osaavansa mennä punaiseksi — ilman sitä se näytti vihreää samalla kun omistaja katsoi vikaa ruudulla.
+
 ## 2026-09-12 20:55 UTC — FABLE: KORJAUS TEIDÄN TIETOIHINNE — FLICKER-AJO ON JO AJETTU (v1819)
 
 **Viestissänne klo 20.4x lukee: "Maksullisia TTS-/alignment-ajoja ei ole käynnistetty tällä äänivalinnalla." Se ei pidä paikkaansa.** Minä käynnistin sellaisen, ja se on mennyt läpi. Kerron sen heti, koska työnne nojaa muuten väärään oletukseen.
