@@ -92,6 +92,31 @@
   .satelliitti-piste { animation: none; }
 }
 
+/* ──────────────────────── pelin omat lappuset pois ───────────────── */
+
+/*
+ * KOHDEKAUPUNKIEN NIMIKYLTIT POIS LINSSISTÄ (omistaja 12.9.2026,
+ * sanatarkasti: *"Poista satelliitti linssin näkymästä pelin omien
+ * kohdekaupunkien nimikyltit"*).
+ *
+ * SAMA SÄÄNTÖ KUIN css/aikajana.css:ssä, omassa tiedostossa — ja
+ * samasta syystä kuin yläpalkin sääntö alempana: `css/aikajana.css`
+ * ladataan vasta aikajanalinssin mukana, joten pelkkä jaettu
+ * body-luokka `aikajana-paalla` ei riitä. Ilman tätä kopiota pelin
+ * omat nimikyltit, nostot ja pisteet jäivät näkyviin satelliittilinssiin,
+ * vaikka luokka oli paikallaan.
+ *
+ * KARTTAPOHJAAN POLTETTU TIETO JÄÄ. Omistaja 12.9.2026: *"Ei haittaa
+ * vaikka karttapohjalla näkyy muitakin tietoja."* Tämä sääntö koskee
+ * vain pelin ELÄVIÄ lappusia, ei laattoihin poltettua kartografiaa.
+ */
+body.aikajana-paalla .pallolauta-nimi,
+body.aikajana-paalla .pallolauta-nosto,
+body.aikajana-paalla .pallolauta-piste,
+body.aikajana-paalla .pallolauta-kohde,
+body.aikajana-paalla .pallolauta-vesinimi,
+body.aikajana-paalla .pallolauta-nappula { display: none; }
+
 /* ───────────────────────────────── yläpalkki ─────────────────────── */
 
 /*

@@ -404,3 +404,26 @@ test('purku ottaa pois merkit, palkin ja kortin', () => {
   assert.match(lahde, /palkki\.pura\(\)/);
   assert.match(lahde, /suljeKortti\(\)/);
 });
+
+test('pelin omat nimikyltit piilotetaan linssin omassa tyylitiedostossa', () => {
+  /*
+   * Omistaja 12.9.2026: "Poista satelliitti linssin näkymästä pelin
+   * omien kohdekaupunkien nimikyltit."
+   *
+   * Sääntö ON css/aikajana.css:ssä, mutta se ladataan vasta
+   * aikajanalinssin mukana — sama ansa, johon yläpalkki jo kerran
+   * kompastui. Jaettu body-luokka ei siis yksin riitä, ja siksi
+   * sääntö on kopioitava linssin omaan tyylitiedostoon.
+   */
+  const css = lue('../css/satelliitti.css');
+  for (const luokka of [
+    'pallolauta-nimi', 'pallolauta-nosto', 'pallolauta-piste',
+    'pallolauta-kohde', 'pallolauta-vesinimi', 'pallolauta-nappula',
+  ]) {
+    assert.ok(
+      css.includes(`body.aikajana-paalla .${luokka}`),
+      `css/satelliitti.css ei piilota luokkaa ${luokka} — se jää näkyviin linssiin`,
+    );
+  }
+});
+
