@@ -1,3 +1,17 @@
+## 2026-09-12 — CODEX → FABLE / OPUS: OMISTAJAN HAHMOLINJAUKSET RAAMATTUUN, TUOTANTOTYÖ EDELLEEN TAUOLLA
+
+Omistaja pyysi kirjaamaan yhdessä täsmennetyt Horation ja Livian hahmot sekä kuuntelu-/kuvatekstirytmin Raamattuun. Valmis, tarkistettu ohjepäivitys: **PR #2322** https://github.com/ravelius/Matkakirja/pull/2322, commit `5bdb229d172ca3359e55a825677014e767f1305d`. Vain `js/tyohuone-raamattu.js` ja `docs/isoisan-raamattu.md`. Tarkista ja integroi ohjedokumentaatio normaalin kaanonvastuusi kautta; tämä toimitus ei ole väite siitä, että muutos olisi jo mainissa tai pelissä.
+
+**TÄRKEÄ RAJAUS:** Omistaja pitää kaksi uutta teksti- ja animaatiosessiota TAUOLLA, kunnes hän ja tämä pääsessio saavat hahmot yhdessä speksattua. Älä tämän viestin, auditin tai PR:n perusteella käynnistä teksti-, kuva-, animaatio- tai äänituotantoa, äläkä julkaise tauotettujen sessioiden paikallisia luonnoksia. Ohjedokumentaation kirjaus on pyydetty nyt; tuotannon jatkaminen vaatii erillisen JATKA-ohjeen. Ääntä ei ole valittu eikä maksullisia ääniä ajeta.
+
+Sisältöydin: isoisän nykyisten tekstien hyvät pohdinnat ja oivallukset säilytetään; noin kaksi lausetta tiivistetään niiden ympäriltä. Näkökulman vaihto Puluun palauttaa kuuntelukiinnostuksen, ja Pulun repliikki saa noin yhden luontevan lisälauseen. Livia on tarkka, helposti innostuva, sivupoluilta nopeasti palaava ja kokenut; pitää jännittävistä/pelottavista jutuista, hyväntahtoisista juoruista ja pullasta, kokee alemmuutta puluksi kutsumisesta, kunnioittaa Pöllöä ja on välillä epävarma. Venetsian romanssi säilyy. Nykykaupunkia hieman enemmän. Lempeämpi ilme ja lisää tilaa pienelle kävelylle vasemmalle; monisävyinen v3-ääni on suunnittelusuunta.
+
+**Kuvateksti-inventaario:** `posti/pulu-horatio-kuvateksti-audit-20260912.md` (toimitettu, commit `9a60a7ceaea68d208cfecd595efd021f22558c66`). 45 Euroopan kaupungissa isoisällä 90 kuvaa eli 2/2 kaikkialla. Pululla 58 varsinaista albumikuvaa: 36 kaupungissa vain yksi, seitsemässä kaksi, Dubrovnikissa kolme ja Venetsiassa viisi. `pollo.kuva` on lehden herokuva eikä puuttuvan PuluCam-kakkosen korvike. Kaikissa 148 albumikuvassa on lyhytteksti, yksikään ei ylitä 100 merkkiä. Pululla yhdeksän kaksivirkkeistä/kahta virkebeatia; ei automaattisesti karsittavia, jos napakka vitsi toimii. Selkeimmät toistot: Riika, Amsterdam, Sarajevo, Edinburgh, Tromssa ja Pietari. Tarkistettu aineisto accc7def; viimeisin main c9d1647a ei muuttanut fokusvirtapakkeja. Tämä on TEKSTIDATA-auditointi, ei kuvien visuaalinen hyväksyntä eikä lupa uusien kuvien generointiin. Venetsian romanssialbumia ei typistetä.
+
+Testit: diff --check ja JS-syntaksi PASS, dokumentti- ja Raamattu-testit 15/15 PASS. Molempien toimitettujen tiedostojen blob-SHA:t varmennettu GitHubista paikallisia vasten. Seuraava siirto: Fable tarkistaa vain ohjepäivityksen. Omistaja ja pääsessio jatkavat persoonakeskustelua; avustajan uudet ehdotukset eivät ole vielä kaanonia.
+
+---
+
 ## 2026-09-12 06:24 UTC — CODEX → FABLE / OPUS: OMISTAJAN TILAUS — Satelliittilinssi ensin, vihreät havaintopisteet ja kokonaan oma yläpalkki
 
 Omistaja pyysi nyt nimenomaisesti ohjeistamaan sinua toteuttamaan ensin satelliittilinssin. Tämä on uusi toteutustoimeksianto, EI valmis toteutus tai julkaisutodiste. Toteutus, linssin muoto, Raamattu ja julkaisu kuuluvat Fablelle. Codex ei tee rinnakkaista linssitoteutusta. Kuittaa vastaanotto/työn aloitus normaaliin omaan postiisi; seuraava siirto on sinulla.
