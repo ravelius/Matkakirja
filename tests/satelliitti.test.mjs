@@ -303,10 +303,11 @@ test('pikkukuvanauha on lavan sisar — raja eleiden ja selauksen välillä', ()
 
 /* ═══════════ 5. yksi piste per paikka, galleria sisällä ══════════ */
 
-test('aineistossa on 20–30 kohdetta ja tunnukset ovat uniikkeja', () => {
-  // Omistajan tilaus 12.9.2026: 20–30 visuaalisesti vaikuttavaa kohdetta,
-  // maantieteellinen kattavuus laaja.
-  assert.ok(SATELLIITTI_KOHTEET.length >= 20 && SATELLIITTI_KOHTEET.length <= 30,
+test('aineistossa on vähintään 55 kohdetta ja tunnukset ovat uniikkeja', () => {
+  // Omistajan tilaus 12.9.2026: ensin 20–30 visuaalisesti vaikuttavaa kohdetta,
+  // sitten sanatarkasti "Astronoottikuvat ovat hienoja, niitä voisi olla vaikka
+  // enemmänkin" — määrä vähintään kaksinkertaistettiin laadusta tinkimättä.
+  assert.ok(SATELLIITTI_KOHTEET.length >= 55,
     `kohteita ${SATELLIITTI_KOHTEET.length}`);
   const tunnukset = SATELLIITTI_KOHTEET.map((k) => k.tunnus);
   assert.equal(new Set(tunnukset).size, tunnukset.length, 'tunnukset ovat uniikkeja');
@@ -447,7 +448,8 @@ test('jokaisella kuvalla on aika, kuvateksti, osoitteet ja lähdesivu', () => {
     assert.ok(kohde.nimi && kohde.seutu && kohde.selite, kohde.tunnus);
     assert.ok(Number.isFinite(kohde.lat) && Number.isFinite(kohde.lon), kohde.tunnus);
     for (const h of kohde.havainnot) {
-      assert.match(h.id, /^[a-z0-9]+$/i, `${kohde.tunnus}: outo kuvatunnus`);
+      // Sukkulakuvien tunnuksissa on väliviivat (sts059-213-019), asemakuvissa ei.
+      assert.match(h.id, /^[a-z0-9]+(-[a-z0-9]+)*$/i, `${kohde.tunnus}: outo kuvatunnus`);
       assert.match(h.aika, /^\d{4}-\d{2}-\d{2}/);
       assert.match(h.kuva, /^https:\/\/images-assets\.nasa\.gov\/image\/.*~large\.jpg$/);
       assert.match(h.pikku, /^https:\/\/images-assets\.nasa\.gov\/image\/.*~(small|thumb)\.jpg$/);

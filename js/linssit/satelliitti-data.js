@@ -10,7 +10,7 @@
  * NASAn kuvat ovat public domainia; kuvat EIVÄT ole repossa vaan
  * ladataan NASAn omasta ämpäristä.
  *
- * Haettu: 2026-09-12. Kohteita 26, kuvia 37.
+ * Haettu: 2026-09-12. Kohteita 64, kuvia 83.
  */
 
 export const SATELLIITTI_LAHDE = {
@@ -692,6 +692,21 @@ export const SATELLIITTI_KOHTEET = [
     "oletus": "iss074e0573516",
     "havainnot": [
       {
+        "id": "iss030e091253",
+        "aika": "2012-02-21",
+        "teksti": "Perito Morenon jäätikkö työntyy samaan järveen lännestä. Jäävirta tulee Patagonian mannerjäätiköstä ja päättyy jyrkkään reunaan veden rajassa; kieleke on välillä kasvanut kiinni vastarannan niemeen ja padonnut järven eteläisen haaran.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 30",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss030e091253/iss030e091253~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss030e091253/iss030e091253~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss030e091253"
+      },
+      {
         "id": "iss074e0573516",
         "aika": "2026-05-06",
         "teksti": "Järven väri tulee jäätikköjauhosta: jäätiköt jauhavat kalliota hienoksi jauheeksi, joka jää veteen leijumaan ja heijastaa valoa turkoosina. Järven sormet työntyvät suoraan Andien lumisten vuorten väliin.",
@@ -861,6 +876,1099 @@ export const SATELLIITTI_KOHTEET = [
         "kuva": "https://images-assets.nasa.gov/image/iss010e12917/iss010e12917~large.jpg",
         "pikku": "https://images-assets.nasa.gov/image/iss010e12917/iss010e12917~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss010e12917"
+      }
+    ]
+  },
+  {
+    "tunnus": "bermuda",
+    "nimi": "Bermuda",
+    "seutu": "Pohjois-Atlantti",
+    "selite": "Yksinäinen saariryhmä keskellä valtamerta, riutan reunustamana.",
+    "lat": 32.32,
+    "lon": -64.75,
+    "oletus": "iss071e206529",
+    "havainnot": [
+      {
+        "id": "iss071e206529",
+        "aika": "2024-06-19",
+        "teksti": "Bermudan koukkumainen saariketju on sammuneen tulivuoren huipulle kasvanut kalkkikivikansi. Vaaleansininen alue saaren ympärillä on matalaa riuttatasannetta, sen takana meri syvenee tuhansiin metreihin. Lähin manner on yli 1 000 kilometrin päässä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e206529/iss071e206529~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e206529/iss071e206529~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e206529"
+      }
+    ]
+  },
+  {
+    "tunnus": "bazaruto",
+    "nimi": "Bazaruton saaristo",
+    "seutu": "Mosambik",
+    "selite": "Hiekkasärkkiä ja vuorovesivirtoja, jotka piirtyvät veteen kuin suonisto.",
+    "lat": -21.6,
+    "lon": 35.45,
+    "oletus": "iss065e009427",
+    "havainnot": [
+      {
+        "id": "iss065e009427",
+        "aika": "2021-04-29",
+        "teksti": "Pitkä hiekkasaari erottaa matalan salmen avomerestä. Turkoosit juovat ovat vuoroveden kuljettamaa hiekkaa: vesi virtaa saaren ohi kahdesti päivässä sisään ja ulos, ja pohja järjestyy virran suuntaisiksi harjuiksi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 65",
+        "kuvaaja": "Shane Kimbrough",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss065e009427/iss065e009427~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss065e009427/iss065e009427~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss065e009427"
+      },
+      {
+        "id": "iss070e064005",
+        "aika": "2024-01-10",
+        "teksti": "Sama salmi lähempää. Vaaleat viuhkat ovat hiekkaa, tummemmat urat syvempiä väyliä. Kuvio muuttuu myrskyjen mukana, joten merikartat vanhenevat täällä nopeammin kuin kalliorannikolla.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 70",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss070e064005/iss070e064005~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss070e064005/iss070e064005~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss070e064005"
+      }
+    ]
+  },
+  {
+    "tunnus": "quirimbas",
+    "nimi": "Quirimbasin saaret",
+    "seutu": "Mosambik",
+    "selite": "Riuttasaarten ketju mantereen ja syvän meren rajalla.",
+    "lat": -12.3,
+    "lon": 40.6,
+    "oletus": "iss071e378497",
+    "havainnot": [
+      {
+        "id": "iss071e378497",
+        "aika": "2024-07-21",
+        "teksti": "Saaret ovat jonossa pitkin mannerjalustan reunaa. Jokaisen ympärillä näkyy vaalea riuttarengas, ja heti sen ulkopuolella vesi muuttuu yhtäkkiä tummansiniseksi — siinä pohja putoaa jyrkästi Intian valtamereen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e378497/iss071e378497~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e378497/iss071e378497~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e378497"
+      }
+    ]
+  },
+  {
+    "tunnus": "turks-caicos",
+    "nimi": "Turks- ja Caicossaaret",
+    "seutu": "Karibia",
+    "selite": "Matalikko, joka hohtaa vaaleana keskellä syvää merta.",
+    "lat": 21.75,
+    "lon": -71.75,
+    "oletus": "iss073e0118628",
+    "havainnot": [
+      {
+        "id": "iss073e0118628",
+        "aika": "2025-05-26",
+        "teksti": "Saaret ovat vain kapea reunus laajan kalkkimatalikon päällä. Vaaleanvihreä alue on muutaman metrin syvyistä vettä hiekkapohjan yllä; ympäröivä tummansininen on kilometrien syvyistä. Sama raja erottaa myös lämpimän ja kylmän veden.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0118628/iss073e0118628~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0118628/iss073e0118628~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0118628"
+      }
+    ]
+  },
+  {
+    "tunnus": "mayotte",
+    "nimi": "Mayotte",
+    "seutu": "Mosambikin kanaali",
+    "selite": "Saari, jonka ympärillä on yhtenäinen valliriutta.",
+    "lat": -12.8,
+    "lon": 45.15,
+    "oletus": "iss071e345427",
+    "havainnot": [
+      {
+        "id": "iss071e345427",
+        "aika": "2024-07-15",
+        "teksti": "Vanhan tulivuoren ympärille on kasvanut yhtenäinen valliriutta, ja saaren ja riutan väliin jää laguuni. Tulivuori painuu hitaasti mereen, riutta kasvaa ylöspäin samaa tahtia — kun saari lopulta katoaa, jäljelle jää pelkkä rengas eli atolli.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e345427/iss071e345427~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e345427/iss071e345427~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e345427"
+      }
+    ]
+  },
+  {
+    "tunnus": "galapagos",
+    "nimi": "Galápagossaaret",
+    "seutu": "Ecuador, Tyynimeri",
+    "selite": "Kuusi kilpitulivuorta merestä, jokaisella oma kraatteri.",
+    "lat": -0.4,
+    "lon": -91.1,
+    "oletus": "STS099-753-032",
+    "havainnot": [
+      {
+        "id": "sts059-213-019",
+        "aika": "1994-04-14",
+        "teksti": "Isabela on syntynyt useasta tulivuoresta, jotka ovat kasvaneet yhteen. Keskellä näkyy kraatterin romahtanut lakikattila, ja rinteiltä laskeutuu tummia laavavirtoja rantaan asti. Vihreä vyö erottaa sateiset ylärinteet kuivasta rannikosta.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts059-213-019/sts059-213-019~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts059-213-019/sts059-213-019~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts059-213-019"
+      },
+      {
+        "id": "STS099-753-032",
+        "aika": "2000-03-28",
+        "teksti": "Saariryhmä ylhäältä: jokaisessa saaressa erottuu pyöreä lakikattila. Tulivuoret nousevat kuumasta pisteestä merenpohjassa, ja maalevyn liikkuessa itään vanhimmat saaret jäävät kauemmas ja sammuvat. Charles Darwin kävi täällä 1835.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1901,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/STS099-753-032/STS099-753-032~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/STS099-753-032/STS099-753-032~small.jpg",
+        "sivu": "https://images.nasa.gov/details/STS099-753-032"
+      }
+    ]
+  },
+  {
+    "tunnus": "onekotan",
+    "nimi": "Onekotan",
+    "seutu": "Kuriilit, Venäjä",
+    "selite": "Kraatterijärvi, jonka keskellä kohoaa uusi tulivuorenkartio.",
+    "lat": 49.45,
+    "lon": 154.75,
+    "oletus": "iss071e046421",
+    "havainnot": [
+      {
+        "id": "iss026e016287",
+        "aika": "2011-01-09",
+        "teksti": "Asumattoman saaren molemmissa päissä on lakikattila. Saari on lumen peitossa, ja pyöreät kattilat erottuvat varjojensa ansiosta: reunat ovat jyrkät, pohja tasainen. Kuriilien ketju erottaa Ohotanmeren Tyynestämerestä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 26",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1311
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss026e016287/iss026e016287~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss026e016287/iss026e016287~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss026e016287"
+      },
+      {
+        "id": "iss071e046421",
+        "aika": "2024-04-29",
+        "teksti": "Tao-Rusyrin kattilan pohjalla on rengasmainen järvi, ja sen keskellä nousee Krenitsynin huippu — tulivuori järven sisällä. Kattila syntyi, kun vanha huippu romahti tyhjentyneen magmasäiliön päälle; uusi kartio kasvoi romahduksen jälkeen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e046421/iss071e046421~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e046421/iss071e046421~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e046421"
+      }
+    ]
+  },
+  {
+    "tunnus": "mataiva",
+    "nimi": "Mataivan atolli",
+    "seutu": "Tuamotu, Ranskan Polynesia",
+    "selite": "Atolli, jonka laguuni on jakautunut kymmeniksi altaiksi.",
+    "lat": -14.88,
+    "lon": -148.68,
+    "oletus": "iss024e011914",
+    "havainnot": [
+      {
+        "id": "iss024e011914",
+        "aika": "2010-08-13",
+        "teksti": "Laguunin pohjassa kulkee matalien harjanteiden verkko, joka jakaa sen noin seitsemäänkymmeneen altaaseen. Harjanteet ovat vanhan riutan runkoa, joka jäi pystyyn laguunin syvetessä. Saaren nimi tarkoittaa paikallisella kielellä yhdeksää silmää.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 24",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1311
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss024e011914/iss024e011914~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss024e011914/iss024e011914~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss024e011914"
+      }
+    ]
+  },
+  {
+    "tunnus": "seurasaaret",
+    "nimi": "Seurasaaret",
+    "seutu": "Ranskan Polynesia",
+    "selite": "Vuorisaaria valliriuttojen sisällä, eri ikäisiä vierekkäin.",
+    "lat": -16.5,
+    "lon": -151.75,
+    "oletus": "sts093-717-066",
+    "havainnot": [
+      {
+        "id": "sts093-717-066",
+        "aika": "1999-07-25",
+        "teksti": "Kolme saarta samassa kuvassa, kolme eri vaihetta samasta kehityksestä. Nuorimmassa vuori täyttää vielä riuttarenkaan, vanhemmassa vuoren ja riutan väliin on jäänyt leveä laguuni. Bora Bora on näistä pisimmälle kulunut.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1843
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts093-717-066/sts093-717-066~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts093-717-066/sts093-717-066~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts093-717-066"
+      }
+    ]
+  },
+  {
+    "tunnus": "al-wadj",
+    "nimi": "Al Wadjin riuttamatalikko",
+    "seutu": "Punainenmeri, Saudi-Arabia",
+    "selite": "Aavikko loppuu rantaan, ja vedessä jatkuu koralliriutta.",
+    "lat": 25.3,
+    "lon": 36.7,
+    "oletus": "iss016e019394",
+    "havainnot": [
+      {
+        "id": "iss016e019394",
+        "aika": "2008-05-02",
+        "teksti": "Hiekkasaarten ympärillä kiemurtelee turkoosi riuttamatalikko. Punainenmeri on kapea repeämä maankuoressa: Afrikka ja Arabia loittonevat toisistaan noin sentin vuodessa, ja riutat kasvavat repeämän reunoille.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 16",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss016e019394/iss016e019394~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss016e019394/iss016e019394~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss016e019394"
+      }
+    ]
+  },
+  {
+    "tunnus": "ganges",
+    "nimi": "Gangesin suisto",
+    "seutu": "Bangladesh ja Intia",
+    "selite": "Maailman laajin jokisuisto, jonka reunalla kasvaa mangrovemetsä.",
+    "lat": 22,
+    "lon": 89.2,
+    "oletus": "sts066-92-013",
+    "havainnot": [
+      {
+        "id": "sts066-92-013",
+        "aika": "1994-11-14",
+        "teksti": "Ganges ja Brahmaputra tuovat Himalajalta niin paljon lietettä, että suisto kasvaa yhä merelle päin. Vaalea alue rannan edustalla on veteen sekoittunutta savea. Suiston haarat vaihtavat paikkaa tulvien mukana, ja niiden mukana vaihtuvat kylienkin paikat.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1917
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts066-92-013/sts066-92-013~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts066-92-013/sts066-92-013~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts066-92-013"
+      },
+      {
+        "id": "iss070e005997",
+        "aika": "2023-10-19",
+        "teksti": "Sundarbansin mangrovemetsä suiston merenpuoleisella reunalla. Tummat saarekkeet ovat metsää, vaaleat haarat vuorovesiuomia. Metsä kasvaa suolaisessa vedessä ja vaimentaa myrskyjen aallot ennen kuin ne osuvat viljelysmaahan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 70",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss070e005997/iss070e005997~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss070e005997/iss070e005997~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss070e005997"
+      }
+    ]
+  },
+  {
+    "tunnus": "mississippi-suisto",
+    "nimi": "Mississippin suisto",
+    "seutu": "Louisiana, Yhdysvallat",
+    "selite": "Linnunjalka, jonka joki on työntänyt kauas merelle.",
+    "lat": 29.15,
+    "lon": -89.25,
+    "oletus": "STS062-85-021",
+    "havainnot": [
+      {
+        "id": "STS062-85-021",
+        "aika": "1994-03-05",
+        "teksti": "Joki on rakentanut omista lietteistään kapeat sormet, jotka jatkuvat kauas merelle — muoto on saanut nimen linnunjalka. Vaalea usva veden päällä on suistosta purkautuvaa savea. Ilman patoja joki olisi jo vaihtanut uomaansa lännemmäs.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1906,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/STS062-85-021/STS062-85-021~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/STS062-85-021/STS062-85-021~small.jpg",
+        "sivu": "https://images.nasa.gov/details/STS062-85-021"
+      }
+    ]
+  },
+  {
+    "tunnus": "zeeland",
+    "nimi": "Reinin suistosaaret",
+    "seutu": "Zeeland, Alankomaat",
+    "selite": "Suisto, jonka ihminen on rakentanut osittain uudelleen.",
+    "lat": 51.6,
+    "lon": 4,
+    "oletus": "iss071e488058",
+    "havainnot": [
+      {
+        "id": "iss071e488058",
+        "aika": "2024-08-11",
+        "teksti": "Rein, Maas ja Schelde laskevat mereen samassa suistossa. Saarten väliset lahdet on suljettu padoilla vuoden 1953 tulvakatastrofin jälkeen; osa suluista aukeaa yhä vuoroveden mukana, jotta suolainen vesi pitää luonnon ennallaan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e488058/iss071e488058~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e488058/iss071e488058~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e488058"
+      }
+    ]
+  },
+  {
+    "tunnus": "niger-suisto",
+    "nimi": "Nigerin sisämaan suisto",
+    "seutu": "Mali",
+    "selite": "Suisto keskellä mannerta: joki leviää eikä pääse mereen.",
+    "lat": 15,
+    "lon": -4.2,
+    "oletus": "iss070e030773",
+    "havainnot": [
+      {
+        "id": "iss070e030773",
+        "aika": "2023-11-26",
+        "teksti": "Niger hajoaa Malissa satojen uomien ja kausijärvien verkoksi, vaikka meri on yhä tuhannen kilometrin päässä. Sadekaudella alue täyttyy vedellä ja ruokkii kalastajat ja karjan; kuivalla kaudella jäljelle jäävät vaaleat suolareunaiset altaat.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 70",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss070e030773/iss070e030773~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss070e030773/iss070e030773~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss070e030773"
+      }
+    ]
+  },
+  {
+    "tunnus": "uyuni",
+    "nimi": "Uyunin suolatasanko",
+    "seutu": "Bolivia",
+    "selite": "Maailman laajin suolatasanko ja sen reunalla sammunut tulivuori.",
+    "lat": -19.9,
+    "lon": -67.6,
+    "oletus": "iss012e06456",
+    "havainnot": [
+      {
+        "id": "iss012e06456",
+        "aika": "2005-11-03",
+        "teksti": "Tumma Tunupan tulivuori työntyy valkoiselle suola-aavikolle. Tasanko on kuivuneen järven pohja: suolakuori on paikoin metrien paksuinen ja niin tasainen, että satelliitit käyttävät sitä korkeusmittariensa tarkistamiseen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 12",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss012e06456/iss012e06456~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss012e06456/iss012e06456~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss012e06456"
+      }
+    ]
+  },
+  {
+    "tunnus": "araljarvi",
+    "nimi": "Araljärvi",
+    "seutu": "Kazakstan ja Uzbekistan",
+    "selite": "Järvi, joka kuivui, kun sen joet ohjattiin pelloille.",
+    "lat": 45,
+    "lon": 59.5,
+    "oletus": "sts059-l22-140",
+    "havainnot": [
+      {
+        "id": "sts059-l22-140",
+        "aika": "1994-04-14",
+        "teksti": "Aral oli 1960-luvulla maailman neljänneksi suurin järvi. Kun sen kaksi jokea ohjattiin puuvillapelloille, vesi väheni vuosi vuodelta; tässä vuoden 1994 kuvassa jäljellä on enää osa entisestä, ja vaalea reunus on paljastunutta suolapohjaa.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1919,
+          1515
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts059-l22-140/sts059-l22-140~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts059-l22-140/sts059-l22-140~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts059-l22-140"
+      }
+    ]
+  },
+  {
+    "tunnus": "baikal",
+    "nimi": "Baikal jäässä",
+    "seutu": "Siperia, Venäjä",
+    "selite": "Maailman syvin järvi talvisen jään peitossa.",
+    "lat": 53.5,
+    "lon": 108,
+    "oletus": "sts059-90-098",
+    "havainnot": [
+      {
+        "id": "sts059-90-098",
+        "aika": "1994-04-16",
+        "teksti": "Baikal on yli 1 600 metriä syvä ja sisältää noin viidenneksen maapallon jäätymättömästä makeasta vedestä. Talvella pinta jäätyy metrin paksuiseksi kanneksi, jonka yli on ennen kuljettu hevosilla ja jopa rautateitse.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1896,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts059-90-098/sts059-90-098~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts059-90-098/sts059-90-098~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts059-90-098"
+      }
+    ]
+  },
+  {
+    "tunnus": "suolajarvi-utah",
+    "nimi": "Iso Suolajärvi",
+    "seutu": "Utah, Yhdysvallat",
+    "selite": "Yksi järvi, kaksi väriä — pengertie jakaa veden kahtia.",
+    "lat": 41.2,
+    "lon": -112.5,
+    "oletus": "iss073e0865636",
+    "havainnot": [
+      {
+        "id": "iss073e0865636",
+        "aika": "2025-10-07",
+        "teksti": "Järven halki kulkeva rautatiepenger estää veden sekoittumisen, ja puoliskoista on tullut eri suolaisia. Suolaisemmassa puolessa viihtyvät punaista väriainetta tuottavat mikrobit, joten sama järvi näkyy toisaalta sinisenä ja toisaalta punaisena.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0865636/iss073e0865636~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0865636/iss073e0865636~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0865636"
+      }
+    ]
+  },
+  {
+    "tunnus": "carnegie",
+    "nimi": "Carnegiejärvi",
+    "seutu": "Länsi-Australia",
+    "selite": "Järvi, joka on useimmiten pelkkä kuiva suomutka.",
+    "lat": -26.1,
+    "lon": 122.5,
+    "oletus": "iss071e615200",
+    "havainnot": [
+      {
+        "id": "iss071e615200",
+        "aika": "2024-09-09",
+        "teksti": "Carnegie täyttyy vedellä vain harvoina sadevuosina; muulloin se on mutaa, suolaa ja kasvillisuuslaikkuja. Vaaleat rannat ovat suolakuorta, ruskeat läikät matalaa vettä. Kuvio on pikemminkin soiden kuin järven muotoinen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e615200/iss071e615200~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e615200/iss071e615200~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e615200"
+      }
+    ]
+  },
+  {
+    "tunnus": "riftin-jarvet",
+    "nimi": "Riftin järvet",
+    "seutu": "Etiopia",
+    "selite": "Järvijono repeämälaaksossa, jokaisella oma väri.",
+    "lat": 7.6,
+    "lon": 38.75,
+    "oletus": "iss071e132461",
+    "havainnot": [
+      {
+        "id": "iss071e132461",
+        "aika": "2024-05-27",
+        "teksti": "Itä-Afrikan hautavajoama repeää auki, ja laakson pohjalle on jäänyt järviä. Tummansininen on syvä ja kirkas, ruskea matala ja lietteinen; väriero kertoo syvyydestä ja siitä, mitä jokia kuhunkin laskee.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e132461/iss071e132461~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e132461/iss071e132461~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e132461"
+      }
+    ]
+  },
+  {
+    "tunnus": "kanadan-palot",
+    "nimi": "Kanadan metsäpalot",
+    "seutu": "Manitoba ja Saskatchewan, Kanada",
+    "selite": "Rinnakkaisia savuvanoja, jokainen omasta palosta.",
+    "lat": 55,
+    "lon": -101,
+    "oletus": "iss073e0420617",
+    "havainnot": [
+      {
+        "id": "iss073e0420617",
+        "aika": "2025-08-03",
+        "teksti": "Havumetsävyöhykkeellä palaa kymmenkunta erillistä paloa yhtä aikaa, ja tuuli venyttää jokaisen savun samansuuntaiseksi vanaksi. Savu nousee niin korkealle, että se kulkeutuu mantereen yli asti ja sumentaa taivaan tuhansien kilometrien päässä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0420617/iss073e0420617~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0420617/iss073e0420617~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0420617"
+      }
+    ]
+  },
+  {
+    "tunnus": "mount-hood",
+    "nimi": "Mount Hood",
+    "seutu": "Oregon, Yhdysvallat",
+    "selite": "Lumihuippu ja sen vieressä palava metsä.",
+    "lat": 45.37,
+    "lon": -121.7,
+    "oletus": "iss075e0001471",
+    "havainnot": [
+      {
+        "id": "iss075e0001471",
+        "aika": "2026-07-31",
+        "teksti": "Vasemmalla kohoaa Mount Hood, jäätiköiden peittämä tulivuori; oikealla Grasshopper-palo työntää paksua savua itään. Kesän kuivuus ja vuoriston tuulet tekevät samasta rinteestä vuorotellen jäätikkömaisemaa ja paloaluetta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 75",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss075e0001471/iss075e0001471~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss075e0001471/iss075e0001471~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss075e0001471"
+      }
+    ]
+  },
+  {
+    "tunnus": "nasser",
+    "nimi": "Nasser-järvi",
+    "seutu": "Egypti",
+    "selite": "Tekojärvi, joka täytti Niilin laakson sivuhaarat.",
+    "lat": 22.8,
+    "lon": 31.8,
+    "oletus": "iss073e0879542",
+    "havainnot": [
+      {
+        "id": "iss058e010623",
+        "aika": "2019-02-04",
+        "teksti": "Järven länsipuolella aavikkoon on merkitty tummia kasteluruutuja: vesi pumpataan järvestä pelloille. Ilman pumppuja ero on jyrkkä — viljelys loppuu siihen, mihin putki yltää.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 58",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss058e010623/iss058e010623~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss058e010623/iss058e010623~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss058e010623"
+      },
+      {
+        "id": "iss073e0879542",
+        "aika": "2025-10-13",
+        "teksti": "Assuanin padon taakse noussut vesi täytti Niilin laakson sivukuivat uomat, ja rannasta tuli puumainen haarasto. Pato sitoo tulvat ja lietteen; alajuoksulla pellot saavat nyt vetensä säännöstellysti mutta jäävät ilman entistä lannoittavaa mutaa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": "Zena Cardman",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0879542/iss073e0879542~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0879542/iss073e0879542~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0879542"
+      }
+    ]
+  },
+  {
+    "tunnus": "kasteluympyrat",
+    "nimi": "Kasteluympyrät",
+    "seutu": "Saudi-Arabia",
+    "selite": "Aavikolle piirretyt ympyrät, joista jokainen on pelto.",
+    "lat": 30.6,
+    "lon": 38.2,
+    "oletus": "sts083-747-033",
+    "havainnot": [
+      {
+        "id": "sts083-747-033",
+        "aika": "2016-08-12",
+        "teksti": "Jokainen tumma ympyrä on pelto, jota kastelee keskipisteen ympäri kiertävä putkivarsi. Vesi nousee syvältä pohjavesikerroksesta, joka täyttyi viimeisen jääkauden sateista — sitä kuluu nopeammin kuin se uusiutuu.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1889,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts083-747-033/sts083-747-033~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts083-747-033/sts083-747-033~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts083-747-033"
+      }
+    ]
+  },
+  {
+    "tunnus": "khufrah",
+    "nimi": "Al Khufrahin keidas",
+    "seutu": "Libya",
+    "selite": "Sahara ja sen keskellä täydellisiä ympyröitä.",
+    "lat": 24.18,
+    "lon": 23.29,
+    "oletus": "iss010e05266",
+    "havainnot": [
+      {
+        "id": "iss010e05266",
+        "aika": "2004-10-28",
+        "teksti": "Vanhan keitaan viereen on pumpattu pohjavedellä satoja pyöreitä peltoja. Vaalea hiekka ympärillä on täysin kuivaa, eikä sadetta juuri tule: ympyrät pysyvät vihreinä vain niin kauan kuin pumput käyvät.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 10",
+        "kuvaaja": null,
+        "mitat": [
+          1271,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss010e05266/iss010e05266~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss010e05266/iss010e05266~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss010e05266"
+      }
+    ]
+  },
+  {
+    "tunnus": "lake-powell",
+    "nimi": "Powell-järvi",
+    "seutu": "Utah ja Arizona, Yhdysvallat",
+    "selite": "Tekojärvi, joka seuraa vanhan kanjonin mutkia.",
+    "lat": 37.3,
+    "lon": -110.85,
+    "oletus": "STS100-716-176",
+    "havainnot": [
+      {
+        "id": "STS100-716-176",
+        "aika": "2001-04-30",
+        "teksti": "Colorado on uurtanut itsensä syvälle tasangon sisään, ja pato on täyttänyt uoman vedellä. Järvi ei siksi ole leveä allas vaan kapea, haarautuva kiemura — se noudattaa tarkasti sitä muotoa, jonka joki ehti kaivertaa.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/STS100-716-176/STS100-716-176~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/STS100-716-176/STS100-716-176~small.jpg",
+        "sivu": "https://images.nasa.gov/details/STS100-716-176"
+      },
+      {
+        "id": "iss031e006398",
+        "aika": "2012-04-30",
+        "teksti": "Kuvan keskellä on Rincon: umpeen kuroutunut joenmutka, jonka joki hylkäsi ja jätti kuivaksi renkaaksi kallion päälle. Samanlaisia mutkia näkyy ympärillä yhä vedellä täytettyinä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 31",
+        "kuvaaja": "Andre Kuipers",
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss031e006398/iss031e006398~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss031e006398/iss031e006398~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss031e006398"
+      }
+    ]
+  },
+  {
+    "tunnus": "issaouane",
+    "nimi": "Issaouanen hiekkameri",
+    "seutu": "Algeria",
+    "selite": "Dyynikenttä, jossa on kahden eri tuulen jälki.",
+    "lat": 26.5,
+    "lon": 8.5,
+    "oletus": "iss013e65526",
+    "havainnot": [
+      {
+        "id": "iss013e65526",
+        "aika": "2006-08-08",
+        "teksti": "Isojen dyyniharjanteiden päälle on kasvanut pienempiä, eri suuntaan kulkevia kaarteita. Ne kertovat kahdesta tuulesta: vallitseva tuuli rakentaa suuret muodot hitaasti, kausituuli muokkaa pintaa nopeasti.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 13",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss013e65526/iss013e65526~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss013e65526/iss013e65526~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss013e65526"
+      }
+    ]
+  },
+  {
+    "tunnus": "white-sands",
+    "nimi": "White Sands",
+    "seutu": "New Mexico, Yhdysvallat",
+    "selite": "Lumivalkoiset dyynit, jotka eivät ole hiekkaa vaan kipsiä.",
+    "lat": 32.85,
+    "lon": -106.3,
+    "oletus": "sts060-83-016",
+    "havainnot": [
+      {
+        "id": "sts060-83-016",
+        "aika": "1994-02-09",
+        "teksti": "Dyynien aines on kipsiä, joka liukenee vedessä eikä siksi yleensä säily hiekkana. Täällä se voi: laakso on umpinainen, vesi ei pääse pois vaan haihtuu, ja jäljelle jäävät kiteet tuuli kasaa valkoisiksi kummuiksi.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1888,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts060-83-016/sts060-83-016~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts060-83-016/sts060-83-016~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts060-83-016"
+      }
+    ]
+  },
+  {
+    "tunnus": "merijaa",
+    "nimi": "Merijää Newfoundlandin edustalla",
+    "seutu": "Pohjois-Atlantti, Kanada",
+    "selite": "Jäälauttoja, jotka merivirta on kiertänyt pyörteiksi.",
+    "lat": 49.5,
+    "lon": -53,
+    "oletus": "iss071e046021",
+    "havainnot": [
+      {
+        "id": "iss071e046021",
+        "aika": "2024-04-27",
+        "teksti": "Labradorinvirta tuo pohjoisesta talven aikana syntynyttä jäätä, ja virtauksen pyörteet piirtävät siitä valkoisia kiertoja tummaan veteen. Sama virta kuljettaa tänne myös Grönlannista irronneita jäävuoria.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e046021/iss071e046021~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e046021/iss071e046021~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e046021"
+      }
+    ]
+  },
+  {
+    "tunnus": "suez",
+    "nimi": "Suezin kanava",
+    "seutu": "Egypti",
+    "selite": "Suora viiva aavikon halki kahden meren välillä.",
+    "lat": 30.4,
+    "lon": 32.35,
+    "oletus": "iss070e034694",
+    "havainnot": [
+      {
+        "id": "iss013e44847",
+        "aika": "2006-06-30",
+        "teksti": "Kanavan pohjoinen suu Port Saidissa. Väylät jatkuvat merelle aallonmurtajien välissä, ja odottavat laivat näkyvät pieninä tummina viivoina. Kanava avattiin vuonna 1869 — neljä vuotta ennen isoisän matkaa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 13",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss013e44847/iss013e44847~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss013e44847/iss013e44847~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss013e44847"
+      },
+      {
+        "id": "iss070e034694",
+        "aika": "2023-11-30",
+        "teksti": "Kanavan eteläpää laskee Suezinlahteen. Vesi kulkee ilman sulkuja, koska Välimeri ja Punainenmeri ovat suunnilleen samalla korkeudella; kanavan varren vihreä nauha on sen tuomaa kastelua keskellä aavikkoa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 70",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss070e034694/iss070e034694~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss070e034694/iss070e034694~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss070e034694"
+      }
+    ]
+  },
+  {
+    "tunnus": "tiran",
+    "nimi": "Tiranin salmi",
+    "seutu": "Punainenmeri",
+    "selite": "Kapea, riuttojen ahtama portti Akabanlahdelle.",
+    "lat": 27.95,
+    "lon": 34.55,
+    "oletus": "iss036e010628",
+    "havainnot": [
+      {
+        "id": "iss036e010628",
+        "aika": "2013-06-23",
+        "teksti": "Saarten ja riuttojen väliin jää vain muutaman sadan metrin levyinen syvä väylä. Vaaleat alueet ovat matalaa riuttaa, jonka yli laiva ei kulje. Salmi on ainoa reitti Akabanlahden satamiin, mikä on tehnyt siitä toistuvan kiistakohteen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 36",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss036e010628/iss036e010628~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss036e010628/iss036e010628~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss036e010628"
+      }
+    ]
+  },
+  {
+    "tunnus": "tunis",
+    "nimi": "Tunis yöllä",
+    "seutu": "Tunisia",
+    "selite": "Kaupungin valot piirtävät lahden ja laguunin muodon.",
+    "lat": 36.8,
+    "lon": 10.18,
+    "oletus": "iss073e0078538",
+    "havainnot": [
+      {
+        "id": "iss073e0078538",
+        "aika": "2025-05-17",
+        "teksti": "Mustat aukot valojen keskellä ovat vettä: matala laguuni kaupungin ja meren välissä sekä suolajärvi lounaassa. Oranssit alueet ovat vanhempaa natriumvaloa, valkoiset uudempaa led-valoa — kaupungin ikä näkyy värissä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0078538/iss073e0078538~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0078538/iss073e0078538~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0078538"
+      }
+    ]
+  },
+  {
+    "tunnus": "kairo-yolla",
+    "nimi": "Kairo yöllä",
+    "seutu": "Egypti",
+    "selite": "Niili halkaisee valomeren ja jatkuu suistoon.",
+    "lat": 30.05,
+    "lon": 31.25,
+    "oletus": "iss074e0043697",
+    "havainnot": [
+      {
+        "id": "iss074e0043697",
+        "aika": "2026-01-03",
+        "teksti": "Joki näkyy mustana nauhana keskellä kaupunkia, ja pohjoisessa valot haarautuvat suiston suuntaan. Aavikko jää ympärillä täysin pimeäksi: lähes koko Egyptin väestö asuu tällä kapealla, kastellulla kaistalla.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0043697/iss074e0043697~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0043697/iss074e0043697~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0043697"
+      }
+    ]
+  },
+  {
+    "tunnus": "bingham",
+    "nimi": "Binghamin avolouhos",
+    "seutu": "Utah, Yhdysvallat",
+    "selite": "Ihmisen kaivama kuoppa, joka näkyy avaruuteen asti.",
+    "lat": 40.52,
+    "lon": -112.15,
+    "oletus": "iss015e29867",
+    "havainnot": [
+      {
+        "id": "iss015e29867",
+        "aika": "2007-09-20",
+        "teksti": "Kuparikaivos on louhittu vuoren sisään terassi kerrallaan; kierteinen kuvio on ajoteitä, joita pitkin kuorma-autot nousevat pohjalta. Kuoppa on lähes neljä kilometriä leveä ja yli kilometrin syvä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 15",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss015e29867/iss015e29867~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss015e29867/iss015e29867~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss015e29867"
+      }
+    ]
+  },
+  {
+    "tunnus": "faiyum",
+    "nimi": "Faiyumin keidas",
+    "seutu": "Egypti",
+    "selite": "Vihreä lehti aavikossa, kiinni Niilissä kuin varressa.",
+    "lat": 29.45,
+    "lon": 30.6,
+    "oletus": "iss061e004613",
+    "havainnot": [
+      {
+        "id": "iss061e004613",
+        "aika": "2019-10-09",
+        "teksti": "Painanne aavikossa täyttyy Niilistä johdetusta vedestä, ja sen ympärille on kasvanut viljelysalue. Kanava on kaivettu jo faaraoiden aikana; altaan pohjalla oleva Qarun-järvi on suolainen, koska vesi haihtuu eikä pääse pois.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 61",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss061e004613/iss061e004613~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss061e004613/iss061e004613~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss061e004613"
+      }
+    ]
+  },
+  {
+    "tunnus": "ulawun",
+    "nimi": "Ulawun",
+    "seutu": "Uusi-Britannia, Papua-Uusi-Guinea",
+    "selite": "Tuhkapatsas, jonka tuuli taittaa merelle.",
+    "lat": -5.05,
+    "lon": 151.33,
+    "oletus": "iss034e005496",
+    "havainnot": [
+      {
+        "id": "iss034e005496",
+        "aika": "2012-11-30",
+        "teksti": "Purkaus nousee saaren korkeimmalta huipulta, ja tuuli kääntää tuhkan harmaaksi vanaksi merelle. Ulawun on yksi Tyynenmeren tulirenkaan aktiivisimmista tulivuorista, ja sen juurella asuu tuhansia ihmisiä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 34",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss034e005496/iss034e005496~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss034e005496/iss034e005496~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss034e005496"
+      }
+    ]
+  },
+  {
+    "tunnus": "jaavuori",
+    "nimi": "Pöytäjäävuori",
+    "seutu": "Eteläinen Atlantti",
+    "selite": "Litteä jäälautta, joka on irronnut mannerjäätiköstä.",
+    "lat": -55,
+    "lon": -40,
+    "oletus": "sts048-73-000q",
+    "havainnot": [
+      {
+        "id": "sts048-73-000q",
+        "aika": "1991-09-18",
+        "teksti": "Etelämantereen jäähyllystä irronnut jäävuori on tasakantinen, koska se on lohjennut kelluvan jäälautan reunasta. Yhdeksän kymmenesosaa jäästä on pinnan alla. Merivirrat kuljettavat tällaisia lauttoja vuosia pohjoiseen, kunnes ne sulavat.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1906,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts048-73-000q/sts048-73-000q~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts048-73-000q/sts048-73-000q~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts048-73-000q"
+      }
+    ]
+  },
+  {
+    "tunnus": "heard",
+    "nimi": "Heardin saari",
+    "seutu": "Eteläinen Intian valtameri",
+    "selite": "Jäätikköinen tulivuori keskellä myrskyisää merta.",
+    "lat": -53.1,
+    "lon": 73.51,
+    "oletus": "iss018e038182",
+    "havainnot": [
+      {
+        "id": "iss018e038182",
+        "aika": "2009-02-28",
+        "teksti": "Mawsonin huippu on jäätiköiden peittämä toimiva tulivuori: jäävirrat laskevat sen rinteiltä suoraan mereen. Saarella ei ole pysyvää asutusta, ja sinne pääsee vain laivalla tuhansien kilometrien päästä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 18",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1311
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss018e038182/iss018e038182~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss018e038182/iss018e038182~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss018e038182"
       }
     ]
   }
