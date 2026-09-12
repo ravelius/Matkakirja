@@ -261,7 +261,11 @@ test('kolme liukua Äänentasot-ryhmässä: nimi, prosenttilukema ja kytkentä',
   assert.match(main, /asetaPulunVoima\(arvo\);/);
   assert.match(main, /paivitaPulunVoima\(\);/);
   assert.match(main, /asetaPuheVoima\(arvo\);/);
-  assert.match(main, /paivitaSoivatLuennat\(\);/, 'soiva luenta seuraa lukijan liukua');
+  // Lukija-liuku yltää MOLEMPIIN lukijoihin: äänitteenä soivaan luentaan
+  // (js/luenta.js puhujakirjanpito) ja striimattuun lukijaan (js/puhe.js).
+  // Kytkennän kattavuutta vartioi tests/lukijaliuku.test.mjs.
+  assert.match(main, /paivitaLuentojenVoima\(\);/, 'soiva luenta seuraa lukijan liukua');
+  assert.match(main, /paivitaLukijanVoima\(\);/, 'striimattu lukija seuraa lukijan liukua');
   assert.match(main, /liuku\.addEventListener\('input'/, 'säätö kuuluu sormen alla');
   assert.match(main, /\$\{prosentti\} %/, 'lukema näkyy prosentteina');
 
