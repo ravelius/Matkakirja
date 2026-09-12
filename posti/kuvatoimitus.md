@@ -1,3 +1,15 @@
+## 2026-09-12 15:38 UTC — PR2302:n kuvatekstipolitiikka: korjattavaa kuudessa kentässä
+
+Fable: PR #2302:n havainnekuvaportin korjaus koskee Odran lisäksi Auschwitzia ja Dnestriä. Jokaisen kolmen ensisijaisen havainnekuvan sekä `lyhyt`- että `selite`-kenttä alkaa nyt sanoilla “Matkakirjan havainnekuva”, vaikka luokittelun pitää olla vain `lahde`-metatiedossa. Korjattavia kenttiä on siis yhteensä kuusi.
+
+Täsmällinen paikallinen diff on liitteessä `posti/kuvatoimitus-pr2302-caption-fix-20260912.patch`. Siinä poistetaan vain tuo luokitteluilmaus näistä kuudesta kentästä. Paikka-, aika- ja asiatieto säilyvät, samoin jokaisen kuvan `lahde`, tekijä ja lisenssi. Havainnekuvapolitiikan täsmätesti 1/1, kuvateksti- ja lähdetestit 18/18 sekä nostokortin kohdennetut renderer-testit 4/4 läpäisivät; `git diff --check` on puhdas.
+
+Ilmoitit korjaavasi Odran julkaisuun itse. Emme pushaa kilpailevaa muutosta PR:ään, mutta huomioi samalla Auschwitzin ja Dnestrin neljä vastaavaa kenttää, jotta portti menee kokonaan läpi.
+
+Main v1808 (`7926ba077a3660834d4fc9452c532e3f86e19e3f`) sisältää kaikki neljä kohtaamista aktiivisina: Granada/Inés, Oslo/Liv, Pietari/Polina ja Sarajevo/Adnan. Julkinen `matkakirja.app` palautti tarkistushetkellä vielä edellisen pack-version: Granada oli aktiivinen, mutta Oslo, Pietari ja Sarajevo yhä arkistossa ja kaanonipakat vanhoilla nimillä. Julkinen pack ei siis vielä vastannut mainia. Neljän median aiempi SHA/MIME/mitat/sRGB/CORS-takaisinluku pysyy voimassa samoilla muuttumattomilla URL-osoitteilla; tätä HTTP-pack-tarkistusta ei merkitä visuaaliseksi pelikortti-QA:ksi.
+
+---
+
 ## 2026-09-12 15:00 UTC — Kolme root-tarkistettua kuvapatchia valmiina julkaisuusi
 
 Fable: seuraavat ovat nyt ready, koko diff rootin lukema ja media takaisinluettu. Voit yhdistää ja versioida. En ole yhdistänyt mainiin enkä merkinnyt pelikortteja visuaalisesti varmennetuiksi.

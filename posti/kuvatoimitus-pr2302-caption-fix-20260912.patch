@@ -1,0 +1,41 @@
+diff --git a/js/packs/maastokohteet-pol.js b/js/packs/maastokohteet-pol.js
+index 02ee2ece..7f04f647 100644
+--- a/js/packs/maastokohteet-pol.js
++++ b/js/packs/maastokohteet-pol.js
+@@ -210,8 +210,8 @@ export const MAASTOKOHTEET_POL = [
+     id: 'odra',
+     kuva: {
+       "osoite": "https://media.matkakirja.app/karttanostot/20260912/pol-maasto-odra-cffc05691432.jpg",
+-      "lyhyt": "Matkakirjan havainnekuva rajamittauksesta Odran rannalla 1940-luvun lopulla.",
+-      "selite": "Matkakirjan havainnekuva rajamittauksesta Odran rannalla 1940-luvun lopulla.",
++      "lyhyt": "Rajamittaus Odran rannalla 1940-luvun lopulla.",
++      "selite": "Rajamittaus Odran rannalla 1940-luvun lopulla.",
+       "lahde": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+       "tekija": "OpenAI; referenssikuva Janfortytwo",
+       "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oder_(river).jpg",
+@@ -300,8 +300,8 @@ export const MAASTOKOHTEET_POL = [
+     id: 'auschwitz',
+     kuva: {
+       "osoite": "https://media.matkakirja.app/karttanostot/20260912/pol-kohde-auschwitz-e695ff7c5e93.jpg",
+-      "lyhyt": "Matkakirjan havainnekuva Auschwitz II-Birkenaun leirialueesta talvella 1945 ennen vapautusta.",
+-      "selite": "Matkakirjan havainnekuva Auschwitz II-Birkenaun leirialueesta talvella 1945 ennen vapautusta.",
++      "lyhyt": "Auschwitz II-Birkenaun leirialue talvella 1945 ennen vapautusta.",
++      "selite": "Auschwitz II-Birkenaun leirialue talvella 1945 ennen vapautusta.",
+       "lahde": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+       "tekija": "OpenAI; referenssikuva Jacek Daczyński",
+       "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auschwitz_II_Birkenau.jpg",
+diff --git a/js/packs/maastokohteet-ukr.js b/js/packs/maastokohteet-ukr.js
+index 80ff403e..b2ae8e29 100644
+--- a/js/packs/maastokohteet-ukr.js
++++ b/js/packs/maastokohteet-ukr.js
+@@ -186,8 +186,8 @@ export const MAASTOKOHTEET_UKR = [
+     id: 'dnestr',
+     kuva: {
+       "osoite": "https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-dnestr-557002ba3fe0.jpg",
+-      "lyhyt": "Matkakirjan havainnekuva Dnestristä Halyčin kohdalla nykyisessä jokimaisemassa.",
+-      "selite": "Matkakirjan havainnekuva Dnestristä Halyčin kohdalla nykyisessä jokimaisemassa.",
++      "lyhyt": "Dnestr Halyčin kohdalla nykyisessä jokimaisemassa.",
++      "selite": "Dnestr Halyčin kohdalla nykyisessä jokimaisemassa.",
+       "lahde": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+       "tekija": "OpenAI; referenssikuva Raimond Spekking",
+       "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dniester_River_in_Halych,_Ukraine-6111.jpg",

@@ -1,0 +1,75 @@
+{
+  "auditedAt": "2026-09-12T15:38:00Z",
+  "main": {
+    "commit": "7926ba077a3660834d4fc9452c532e3f86e19e3f",
+    "version": "v1808",
+    "allFourActive": true,
+    "evidence": [
+      "js/kohtaamiskuvat-data.js",
+      "tests/kohtaamiskuvat.test.mjs",
+      "js/packs/fokusvirta-oslo.js",
+      "js/packs/fokusvirta-pietari.js",
+      "js/packs/fokusvirta-sarajevo.js"
+    ]
+  },
+  "encounters": [
+    {
+      "key": "granada:ines",
+      "mainActive": true,
+      "publicActive": true
+    },
+    {
+      "key": "oslo:liv",
+      "mainActive": true,
+      "publicActive": false
+    },
+    {
+      "key": "pietari:polina",
+      "mainActive": true,
+      "publicActive": false
+    },
+    {
+      "key": "sarajevo:adnan",
+      "mainActive": true,
+      "publicActive": false
+    }
+  ],
+  "public": {
+    "baseUrl": "https://matkakirja.app/",
+    "cacheBustAlsoChecked": "?v=1808",
+    "matchesMain": false,
+    "finding": "Published JS remained at the prior revision: Granada active; Oslo, Pietari and Sarajevo archive, with the prior canon names in their packs.",
+    "sha256": {
+      "js/kohtaamiskuvat-data.js": {
+        "main": "4ecc78d82ca9f30d7af678e80f79aa202eeffde23893cdc16b0c6edaac142781",
+        "public": "a37749e29922f3705e562ee67f41c4c55952a083961bb331268414506b125beb"
+      },
+      "js/packs/fokusvirta-oslo.js": {
+        "main": "097d0477173c6a9865ef754e3f048b95564286690e27ee153d30a946ad3dbb29",
+        "public": "26d1439a1b23602d71ed4ff84cbd788e5cfca65a6ebd4e0388d0b0034a6f55ec"
+      },
+      "js/packs/fokusvirta-pietari.js": {
+        "main": "287518e07b9b9a0a8ae52c7b49fd08e42d689a01212aff72b00132e4f6a1fc17",
+        "public": "1dbe43da27d73386038e9842a4abb2a4bfed1dec37c0a135350e3823cdf71b5f"
+      },
+      "js/packs/fokusvirta-sarajevo.js": {
+        "main": "9d627a2c37ebc9b463daeda1328da3396c4ea141ccdeed86cf0374b1ec6cdf3e",
+        "public": "0f35d77fa2646164dc4f58a566f91024692644aff05282366eec02e49adbdedc"
+      }
+    }
+  },
+  "mediaReadback": {
+    "reusedEvidence": "output/encounter-corrections-20260912/root-delivery4/runs/2026-09-12T13-52-20.140Z/receipt.json",
+    "sameUrlsAndSha": true,
+    "count": 4,
+    "httpStatus": 200,
+    "mime": "image/jpeg",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "namedSRGB": true,
+    "cors": "https://matkakirja.app"
+  },
+  "actualLiveGameVisualQA": false
+}
