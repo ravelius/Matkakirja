@@ -188,14 +188,14 @@ export const FOKUSVIRTA_SARAJEVO = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sarajevo-r20260909-paper-v4.jpg",
       lyhyt: "Sarajevo, 1873. Vasara sai levätä kuvan ajan.",
-      selite: "Pyysin kupariseppää odottamaan hetken. Hänen vasaransa jäi käteen, ja puoliksi valmistuneessa astiassa näkyi, kuinka sileästä pinnasta tulee kuvioitua yksi lyönti kerrallaan. Basaarin muiden puotien kilkutus jatkui sillä välin. Olin aamulla juonut samanlaisen pannun kahvia katsomatta pannua lainkaan. Tähän kuvaan annoin astioille niin paljon tilaa kuin pöytä ja kamerani sallivat.",
+      selite: 'Kupariseppä pysäytti vasaransa puoliksi kuvioidun astian yllä. Basaarin kilkutus jatkui ympärillä, kun annoin astioille kamerassani koko pöydän verran tilaa.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://arhiva.visitsarajevo.ba/2018/04/sarajevo-coppersmiths-masters-of-an-old-craft/?lang=en"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sarajevo-r20260911-paper2-v1.jpg",
       lyhyt: "Sarajevo, 1873. Aamukahvin pannussa näkyi nyt jokainen vasaranjälki.",
-      selite: "Viereisessä puodissa kahvi kaadettiin pannusta, jonka pinta oli täynnä pieniä iskuja. Aamulla olin huomannut vain juoman. Nyt näin, kuinka sepän vasara oli jäänyt astiaan kuviona. Basaarin kilkutus jatkui kupin takana.",
+      selite: 'Kahvipannun pinta oli täynnä sepän pieniä vasaranjälkiä. Aamulla olin huomannut vain juoman, mutta nyt työ näkyi jokaisessa kuviossa.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://arhiva.visitsarajevo.ba/2018/04/sarajevo-coppersmiths-masters-of-an-old-craft/?lang=en"],
     },
@@ -292,12 +292,7 @@ export const FOKUSVIRTA_SARAJEVO = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sarajevo-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Sarajevo: pannun kylki kertoo, kuka teki aamukahvin mahdolliseksi.',
-        selite: 'Kazandžilukin kujalla kupariastiat heijastavat kapean kadun valoa. '
-          + 'Yhden pannun pinta on sileä, toiseen kasvaa tekijän naputtama '
-          + 'kuvio. Näin läheltä ero näyttää kokonaiselta maisemalta. Isoisä '
-          + 'huomasi käsityön vasta juotuaan kahvinsa. Minä tulin katsomaan '
-          + 'ensin. Seppä laski vasaran hetkeksi alas, ja työpöytä hiljeni. '
-          + 'Siinä oli hyvä hetki ottaa kuva ja pitää oma nokka kiinni.',
+        selite: 'Kazandžilukin kupariastiat heijastavat kapean kujan valoa, ja tekijän naputus erottaa kuvioidun pinnan sileästä. Odotin vasaran hiljenemistä ja kuvasin pannun ennen kuin oma nokkani ehti mukaan työhön.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://visitbih.ba/en/one-of-the-oldest-streets-of-sarajevo-kazandziluk-500-years-long-tradition/',

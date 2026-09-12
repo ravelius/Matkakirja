@@ -97,14 +97,14 @@ export const FOKUSVIRTA_ATEENA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-ateena-r20260909-paper-v4.jpg",
       lyhyt: "Ateena, 1873. Kultakeskustelu jatkui ilman kultaa.",
-      selite: "Kahvilan pöydän ääressä kädet tekivät suurempia liikkeitä kuin kupit. Schliemannin Troijan löydöt olivat antaneet kaupunkiin uuden puheenaiheen, ja kumpikin keskustelija vaikutti tuntevan asian päästä päähän. Pyysin heitä pysähtymään hetkeksi kuvaan. Akropolis ei tarvinnut pyyntöä. Otin mukaan myös sen, jotta näkyisi, kuinka lähellä kahvipöytää täällä on jo valmiiksi vanhaa maailmaa.",
+      selite: 'Kahvilapöydän kaksi keskustelijaa elehti Troijan löydöistä, kun kupit pysyivät pieninä heidän välissään. Akropolis nousi pölyn takana muistuttamassa, kuinka lähellä kahvipöytää vanha maailma täällä on.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.theacropolismuseum.gr/en"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-ateena-r20260911-paper2-v1.jpg",
       lyhyt: "Ateena, 1873. Kahviraha kelpasi ilman kertomusta alkuperästään.",
-      selite: "Keskustelu Troijan kullasta jatkui pöydän toisessa päässä, mutta oma osuuteni supistui yhteen kolikkoon. Laskin sen kupin viereen, ja isäntä ojensi kätensä kysymättä löydön historiaa. Pölyn takana Akropolis piti arvonsa ilman selitystä. Kahvi osoittautui helpommaksi kaupaksi kuin muinaisuus.",
+      selite: 'Laskin kolikon kupin viereen, ja isäntä ojensi kätensä kysymättä sen historiaa. Pölyn takana Akropolis piti arvonsa ilman selitystä.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.theacropolismuseum.gr/en"],
     },
@@ -210,12 +210,7 @@ export const FOKUSVIRTA_ATEENA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-ateena-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Ateena: kultaa sisällä, hyvä varjo puutarhassa.',
-        selite: 'Schliemannin myöhempi kotitalo Ateenassa toimii rahamuseona. '
-          + 'Puutarhakahvilassa kolikot ovat saaneet tavallisen tehtävänsä '
-          + 'takaisin: niillä maksetaan kahvi. Istuin tuolin alla, kun pöydällä '
-          + 'vaihdettiin kuppi ja pieni lautanen eri kohtiin. Isoisä kuuli '
-          + 'täällä väittelyä aarteesta. Minä löysin paikan, jossa kukaan ei '
-          + 'väitellyt varjon arvosta. Se kelpasi kaikille.',
+        selite: 'Schliemannin myöhempi kotitalo toimii nyt rahamuseona, jonka puutarhakahvilassa kolikoilla maksetaan taas kahvia. Löysin tuolin alta varjon, jonka arvosta kukaan ei väitellyt.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.nummus.gr/en/refreshment-room-cafe/',

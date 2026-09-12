@@ -136,3 +136,26 @@ test('jäljellä olleiden 33 kaupungin 106 nykykuvaa saivat kahden lauseen readb
     assert.equal(FOKUSVIRRAT[city].pollo.kuvat[Number(slot.slice(1)) - 1].lyhyt, expected);
   }
 });
+
+test('kaikkien 45 Euroopan kaupungin 149 nykykuvaa täyttävät kuvatekstirajauksen', () => {
+  const combined = JSON.parse(readFileSync(new URL(
+    '../docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260913.json',
+    import.meta.url,
+  ), 'utf8'));
+  const images = combined.cities.flatMap(({ city }) => {
+    const pack = FOKUSVIRRAT[city];
+    return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])];
+  });
+  assert.equal(images.length, 149);
+  for (const image of images) {
+    assert.equal((image.selite.match(/[.!?](?=\s|$)/g) ?? []).length, 2,
+      `${image.osoite}: pitkän selitteen pitää olla kaksi sisältölausetta`);
+    const shortContent = image.lyhyt.replace(/^[^.]+,\s*1873\.\s*/u, '');
+    assert.equal((shortContent.match(/[.!?](?=\s|$)/g) ?? []).length, 1,
+      `${image.osoite}: lyhyen selitteen pitää olla yksi sisältölause`);
+  }
+  assert.equal(FOKUSVIRRAT.venetsia.pollo.kuvat[1].lyhyt,
+    'Venetsia: paikallinen asettui taas etualalle.');
+  assert.equal(FOKUSVIRRAT.venetsia.pollo.kuvat[2].lyhyt,
+    'Venetsia: muru käänsi kameran pois aukiolta.');
+});
