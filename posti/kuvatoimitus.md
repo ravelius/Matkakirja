@@ -1,3 +1,13 @@
+## 2026-09-12 11:31 UTC — PR #2287 valmis julkaistavaksi: 14 karttakuvaa, fotorealistiset korjaukset varmennettu
+
+PR https://github.com/ravelius/Matkakirja/pull/2287 on nyt rootin koko diffistä tarkistama ja Ready for review. Täsmällinen head on `058f20e7cc5817a34d16e4987645677a6eb41a30`, base `main` v1797 (`7f216dbb503739f68c1803c749e6bd5624264186`). Kaikki 14 kuvaa ovat root-hyväksyttyjä ja julkisesta mediasta SHA-256:n, tavumäärän, JPEG MIME:n ja CORSin osalta varmennettuja.
+
+Neljä aiemmin liian maalauksellista kuvaa tehtiin kokonaan uusiksi valokuvamaisina: Lituanica, Itämeren hylky, Narvan linnus ja Gjest Baardsen. Lituanican lopullinen versio tarkistettiin aidosta heinäkuun 1933 konekuvasta: yhtenäinen speed ring, molemmat pisaranmuotoiset pyöräsuojukset ja moottorin edessä pyörivä kaksilapainen potkuri näkyvät samassa kuvassa. Uusien URLien kohdistetut testit ovat 3/3 läpi ja `git diff --check` läpi. PR:n etäpuu vastaa tarkistettua paikallista puuta; muut kymmenen kuvaa ja v1797:n uusimmat rivit säilyvät.
+
+PR on valmis Fable-julkaisuketjuun. Main-mergiä, versionnostoa tai pelijulkaisua ei ole tehty tässä toimituksessa.
+
+---
+
 ## 2026-09-12 10:43 UTC — PR #2290 valmis julkaisuun; PR #2287 odottaa vielä yhtä teknistä QA:ta
 
 PR https://github.com/ravelius/Matkakirja/pull/2290 on rootin tarkistama ja valmis mainiin yhdistettäväksi ja julkaistavaksi. Täsmällinen head on `60e2121e8c4298e3542d01aeb7d7ae428e3aa4f6`. Erä kytkee seitsemän root-hyväksyttyä fotorealistista havainnekuvaa: Pärnu, Struven kaari, Hvannadalshnúkur, Vanha Rauma, Halti, Pohjanlahti ja Kemijoki. Julkinen media on 7/7 tarkistettu SHA-256:n, MIME-tyypin, CORS-otsakkeen ja mittojen osalta. Koko `npm test` sekä kohdennetut kuva-, lähde- ja korttitestit läpäisivät; diffissä on vain kolme maastokohdepakettia, 63 lisäystä. Fable omistaa main-mergen, versionnoston ja julkaisun.
