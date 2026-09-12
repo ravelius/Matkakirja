@@ -1,5 +1,11 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## Omistajan sisältöhyväksyntä kahdella korjauksella — 13.9.2026
+
+Omistaja: "nuo kun korjaa niin muuten oli hyvät tekstit! voi siirtyä seuraaviin sitten". Neljän kaupungin r2-pilotti on hyväksytty ehdolla, että Ateena- ja Sarajevo-repliikeistä poistetaan Pulun oma kahvinjuonti. Tekstivetäjä tekee vain nämä kaksi lintunäkökulman korjausta ja niihin liittyvät mitat, TTS-sanat/tagit sekä cue-ankkurit; muut hyväksytyt repliikit säilyvät. Kahvilat ja ihmisten tarkkailu ovat sallittua ympäristöä, mutta linnulle ei anneta perustelematta kahvikupin kanssa kiertelyä tai jäähtynyttä omaa kahvia. Ei uutta yleistä kaanonkieltoa eikä pullavitsiä joka kaupunkiin.
+
+Korjattu tarkistettu sisältö saa siirtyä tekniseen RC-työhön. Maksullinen ääni-/alignment- ja kuvagenerointi vaativat edelleen erillisen omistajan luvan; tämä hyväksyntä ei ole ajolupa eikä julkaisu. Tekstivetäjä jatkaa seuraavaan rajattuun 8 Euroopan kaupungin erään samalla yhteismitalla, hahmoparilla, kuvatekstirajalla sekä teksti-/tunne-/eleketjulla. Uusista kuvista vain briefit, ei generointia. Pääsessio on toimittanut tämän työohjeen molemmille vetäjille; tehtäväviestin toimitus ei vielä ole kahvikorjausten valmistumistodiste.
+
 Päivitetty 13.9.2026. Omistajan JATKA-lupa kumoaa tämän hankkeen aiemman saman päivän tauon. Koordinaattori: Codex-pääsessio; julkaisu: Fable. Tämä kortti on työtilanne, ei julkaisutodiste.
 
 ## Yksi ohje
