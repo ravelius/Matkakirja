@@ -67,26 +67,21 @@ const onPoltettu = (tunnus, tiiviste) => luettelo[tunnus] === tiiviste;
  * tässä, ja SEN PITÄÄ LYHENTYÄ: jokainen muu pari kaataa testin yhä.
  */
 /*
- * YKSI TIEDOSSA OLEVA LIMITYS, MITATTU EIKÄ SIEDETTY VAHINGOSSA.
+ * EI YHTÄÄN SIEDETTYÄ LIMITYSTÄ.
  *
  * `muu`-tyypin luokittelu (11.9.2026) toi kartalle 98 merkkiä, jotka
  * olivat siihen asti pudonneet pois hiljaa. Kaksi maailman ahtainta
- * ryvästä joutui siitä viimeiseen olkeensa. Singapore ratkesi
- * lyhentämällä Pulau Ubinin nimiön saaren arkinimeen "Ubin"
- * (js/packs/maastokohteet-sgp.js) — limityksiä 1 → 0.
+ * ryvästä joutui siitä viimeiseen olkeensa, ja molemmat on ratkaistu:
+ * Singaporessa Pulau Ubinin nimiö lyhennettiin saaren arkinimeen
+ * "Ubin", ja Itä-Timorissa kansallispuiston merkki siirrettiin 1,8
+ * lautayksikköä pohjoiseen puiston sisällä (omistajan päätös
+ * 12.9.2026; perustelu ja mittaus js/packs/maastokohteet-tls.js).
  *
- * ITÄ-TIMORIA EI RATKAISE NIMIÖN PITUUS. Kansallispuiston merkki vie
- * eläintäyn oikean kyljen, joten täky siirtyy yläkyljelle Baguian
- * päälle; este on SYMBOLIN paikka eikä tekstin leveys, ja lyhyempi
- * nimiö mitattiin ("Konis Santana" ja "Konis") tuloksella 1 → 1.
- * Loput keinot — merkin siirto pois oikeasta paikastaan tai noston
- * poisto — ovat huonompia kuin yksi limitys. Kaikki muut parit
- * kaatavat tämän testin yhä.
+ * Lista on tyhjä tarkoituksella: jokainen nimiö–nimiö-limitys kaataa
+ * testin. Jos tänne joskus lisätään rivi, sen viereen kirjoitetaan
+ * mittaus siitä, mitä kokeiltiin ja miksi se ei riittänyt.
  */
-const ODOTTAVAT_LIMITYKSET = new Set([
-  '[eläintäky] TLS/baguia + TLS/elaintaky-TLS',
-]);
-
+const ODOTTAVAT_LIMITYKSET = new Set([]);
 test('yksikään poltettava nimiö ei ole toisen nimiön päällä', () => {
   const { rivit, nimioNimio } = laskeNimiolimitykset(merkit);
   assert.ok(rivit.length > 400, `poltettavia merkkejä vain ${rivit.length} — testin oletus vanhentui`);
