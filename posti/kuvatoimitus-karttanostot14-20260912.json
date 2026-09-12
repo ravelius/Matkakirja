@@ -1,0 +1,306 @@
+{
+  "createdAt": "2026-09-12T09:17:45.655891+00:00",
+  "status": "media-verified-ready-for-game-integration",
+  "ownerApprovalRequired": false,
+  "rootVisualQA": true,
+  "items": [
+    {
+      "key": "PRT:skandaali:skandaali-portugalilaisen-nunnan-kirjeet",
+      "id": "prt-skandaali-skandaali-portugalilaisen-nunnan-kirjeet-dd99e0cd157d",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/prt-skandaali-skandaali-portugalilaisen-nunnan-kirjeet-dd99e0cd157d.jpg",
+      "sha256": "dd99e0cd157d6de51d21d1971339b7d0d856bd82055e5af49af8cb11ecc2cf0f",
+      "bytes": 644549,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Pariisissa vuonna 1669 julkaistut viisi nimetöntä rakkauskirjettä herättivät sensaation, vaikka teosta pidetään nykyään ranskalaisena kirjallisena sepityksenä.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Letters_of_a_Portuguese_Nun",
+            "purpose": "Kaanonin nimeämä julkaisu-, ajoitus- ja tekijyyskeskustelun lähde."
+          }
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "LVA:skandaali:skandaali-thiess-ihmissusi",
+      "id": "lva-skandaali-skandaali-thiess-ihmissusi-9d3e01f7a2b1",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/lva-skandaali-skandaali-thiess-ihmissusi-9d3e01f7a2b1.jpg",
+      "sha256": "9d3e01f7a2b1695e85b963be2a81265485310708f6e5713afce8784aa4d6f281",
+      "bytes": 594394,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Thiess selitti Jürgensburgin tuomareille vuonna 1692 olevansa ”Jumalan koira”, joka taisteli noitia vastaan ja palautti kylälle varastetun sadon.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Thiess_of_Kaltenbrun",
+            "purpose": "Kaanonin nimeämä oikeudenkäynnin, väitteiden ja ajoituksen lähde."
+          }
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "HUN:skandaali:skandaali-pyhan-kruunun-varkaus-1440",
+      "id": "hun-skandaali-skandaali-pyhan-kruunun-varkaus-1440-b707a38f3934",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/hun-skandaali-skandaali-pyhan-kruunun-varkaus-1440-b707a38f3934.jpg",
+      "sha256": "b707a38f3934780e82e53fe093335e02fa4034f5b5f376aa96176ad0f972c289",
+      "bytes": 740096,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Helene Kottanner piti vahtia Visegrádin linnassa helmikuussa 1440, kun Pyhän Tapanin kruunu haettiin lukitusta kammiosta ja valmisteltiin salakuljetettavaksi tyynyn sisällä.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Helene_Kottanner",
+            "purpose": "Kaanonin nimeämä varkauden, osapuolten, tyynyyn kätkemisen ja ajoituksen lähde."
+          },
+          {
+            "url": "https://www.parlament.hu/documents/1779743/1846467/Korona_brosura_lapozo_EN.pdf/2826b7d3-c2f9-0b52-19e0-920c7474798f",
+            "purpose": "Unkarin parlamentin virallinen kruunuesite: säilyneen keskiaikaisen kruunun rakenne, emalikuva-aiheet ja tunnistettava ulkomuoto."
+          },
+          {
+            "url": "https://mnm.hu/en/exhibitions/history-hungary-part-i/king-sigismund-and-hunyadis",
+            "purpose": "Unkarin kansallismuseon Sigismund–Hunyadi-kauden näyttelysivu vuoden 1440 vaatetus- ja hovikontekstin rajaukseen."
+          }
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "LTU:skandaali:skandaali-lituanican-viimeinen-lento",
+      "id": "ltu-skandaali-skandaali-lituanican-viimeinen-lento-362df18af3f0",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/ltu-skandaali-skandaali-lituanican-viimeinen-lento-362df18af3f0.jpg",
+      "sha256": "362df18af3f0cad48698378d3b84cfa7175751d6eaae1c3c801d22a4ac826a40",
+      "bytes": 558712,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Oranssi Lituanica oli ylittänyt Atlantin, kun huono sää ja pimeys saattoivat sen viimeiselle vaaralliselle osuudelle vain 650 kilometrin päässä Kaunasista.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lituanica",
+            "purpose": "Kaanonin nimeämä koneen, reitin, onnettomuuden ja ajoituksen lähde."
+          }
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "ITA:skandaali:skandaali-cagliostro-san-leo",
+      "id": "ita-skandaali-skandaali-cagliostro-san-leo-74c109d225f8",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/ita-skandaali-skandaali-cagliostro-san-leo-74c109d225f8.jpg",
+      "sha256": "74c109d225f80320b2069238bb9fbd39c0b7b8fbe9b9f045d3673b459ff12eb7",
+      "bytes": 569525,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Kreivi Cagliostrona tunnettu Giuseppe Balsamo päätyi inkvisition tuomitsemana San Leon linnoituksen pozzetto-selliin, jossa hän kuoli vuonna 1795.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://www.musei.emiliaromagna.beniculturali.it/musei/fortezza-di-san-leo",
+          "https://www.treccani.it/enciclopedia/balsamo-giuseppe-alias-alessandro-cagliostro_%28Dizionario-Biografico%29/"
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "HRV:skandaali:skandaali-zrinski-frankopan-salaliitto",
+      "id": "hrv-skandaali-skandaali-zrinski-frankopan-salaliitto-2d847b0598a9",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/hrv-skandaali-skandaali-zrinski-frankopan-salaliitto-2d847b0598a9.jpg",
+      "sha256": "2d847b0598a9bb2f2407aa4c223d0cece98ee144597fb78e7c82352c5b235df1",
+      "bytes": 716082,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Petar Zrinski ja Fran Krsto Frankopan lähtivät vuonna 1670 Čakovecista Wieniin keisarin turvallisuuslupauksen turvin, mutta heidät vangittiin ja teloitettiin seuraavana vuonna.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://www.enciklopedija.hr/clanak/zrinsko-frankapanska-urota",
+          "https://www.hismus.hr/hr/izlozbe/virtualne-izlozbe/navik-zivi-ki-zgine-posteno/"
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "TUR:skandaali:skandaali-karun-aarre",
+      "id": "tur-skandaali-skandaali-karun-aarre-00f4173b7aa5",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/tur-skandaali-skandaali-karun-aarre-00f4173b7aa5.jpg",
+      "sha256": "00f4173b7aa58624b0c7950218b792e301952ee484d739e91ba06ccd5ed418cb",
+      "bytes": 614547,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Güren kylän ryöstäjät murtautuivat Toptepen lyydialaiseen hautaan vuonna 1966; aarteet salakuljetettiin ulkomaille ja palautettiin myöhemmin Turkkiin.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Karun_Treasure"
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "EST:maasto:suurmunamagi",
+      "id": "est-maasto-suurmunamagi-0db7b30f17c6",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/est-maasto-suurmunamagi-0db7b30f17c6.jpg",
+      "sha256": "0db7b30f17c6bad72f6bda54909c3d0644cde2f3ffe73a8890aa1cf5bdbed92b",
+      "bytes": 1201697,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Suur Munamägi kohoaa Haanjan ylängöllä 318 metriin ja on Viron sekä koko Baltian korkein kohta.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://visitestonia.com/en/suur-munamagi"
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "EST:maasto:itameri",
+      "id": "est-maasto-itameri-8bf34d19e0a5",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/est-maasto-itameri-8bf34d19e0a5.jpg",
+      "sha256": "8bf34d19e0a50aa8ab0fb7e5ccf5dae61dd7a53ae88da6f17b5cfeb19f507c70",
+      "bytes": 637351,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Itämeren kylmässä murtovedessä puuhylyt voivat säilyä poikkeuksellisen hyvin, koska laivamato ei viihdy vähäsuolaisessa vedessä.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://www.helcom.fi/baltic-sea-trends/environment-fact-sheets/maritime-activities/underwater-cultural-heritage/"
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "EST:maasto:suomenlahti",
+      "id": "est-maasto-suomenlahti-ae72a2574132",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/est-maasto-suomenlahti-ae72a2574132.jpg",
+      "sha256": "ae72a25741322abb55246d4a2252a207697fa1a4b6a6404685fc0d3daa1926fe",
+      "bytes": 542940,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Suomenlahti on matala Itämeren itäinen haara Suomen ja Viron välissä; sen rannoilla sijaitsevat Helsinki, Tallinna ja Pietari.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://www.helcom.fi/baltic-sea-trends/environment-fact-sheets/"
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "EST:kohde:tartu-ulikool",
+      "id": "est-kohde-tartu-ulikool-09e4f04bb3d5",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/est-kohde-tartu-ulikool-09e4f04bb3d5.jpg",
+      "sha256": "09e4f04bb3d5a4977abb91403f9ba336c26d025eaedfea7d728d41f2e7548f8c",
+      "bytes": 501693,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Kustaa II Aadolf perusti Academia Dorpatensiksen vuonna 1632; yliopisto aloitti neljän tiedekunnan akatemiana Ruotsin valtakunnassa.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://ut.ee/en/content/history-university-tartu"
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "EST:kohde:narvan-linnus",
+      "id": "est-kohde-narvan-linnus-0a83aad56289",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/est-kohde-narvan-linnus-0a83aad56289.jpg",
+      "sha256": "0a83aad562899bbe057a052962cbd25c935d3bd234d0a63636de1219f2f5902c",
+      "bytes": 763462,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Narvan Hermannin linna ja vuonna 1492 perustettu Ivangorodin linnoitus vartioivat vastakkaisia rantoja kapean Narvajoen yllä.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://narvamuuseum.ee/eng/narva-castle/"
+        ],
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "NOR:skandaali:skandaali-gjest-baardsen-mestarivaras",
+      "id": "nor-skandaali-skandaali-gjest-baardsen-mestarivaras-0a9b0c4f2782",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/nor-skandaali-skandaali-gjest-baardsen-mestarivaras-0a9b0c4f2782.jpg",
+      "sha256": "0a9b0c4f27824db706cfc1dfa94e5a1803bb6deea3e7daca894761b5cbf28c90",
+      "bytes": 716504,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Gjest Baardsen kirjoitti Akershusin elinkautisvankina omaelämäkertaa, jossa kuuluisa varas ja pakotaituri rakensi itsestään kansansankarin.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": {},
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    },
+    {
+      "key": "ITA:skandaali:skandaali-modiglianin-paat-1984",
+      "id": "ita-skandaali-skandaali-modiglianin-paat-1984-4a42cbfbd878",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/ita-skandaali-skandaali-modiglianin-paat-1984-4a42cbfbd878.jpg",
+      "sha256": "4a42cbfbd8787fa178e4b8bd38706f63d00c5139f99a6a746918e16dadf87055",
+      "bytes": 688597,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "kind": "generated-illustration",
+      "captionFi": "Livornon Fosso Realesta nostetut kolme kivipäätä julistettiin kesällä 1984 Modiglianin kadonneiksi töiksi, kunnes opiskelijat näyttivät veistäneensä yhden niistä porakoneella.",
+      "source": {
+        "label": "Matkakirjan havainnekuva",
+        "sources": {},
+        "creator": "OpenAI, Matkakirjan toimituksen ohjaama havainnekuva"
+      }
+    }
+  ]
+}
