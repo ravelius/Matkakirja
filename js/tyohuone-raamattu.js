@@ -207,7 +207,10 @@ export const RAAMATTU = {
           + 'yhden yhteistestatun julkaisuehdokkaan. Fable omistaa lopullisen '
           + 'tarkistuksen, aanituotantolupien varmistamisen, kaanonintegraation, '
           + 'version, CI:n ja julkaisun; valmistunut julkaisu tarkistetaan '
-          + 'viela oikeassa pelissa. Paasessio hoitaa Fablen tiedotuksen.',
+          + 'viela oikeassa pelissa. Paasessio hoitaa Fablen tiedotuksen. '
+          + 'Pulun pysyva aanivalinta 12.9.2026: Flicker - cheerful fairy & '
+          + 'sparkly sweetness, voice_id piI8Kku0DcvcL6TTSeQt, moottori '
+          + 'eleven_v3. Horation aani ei muutu.',
         'PAAHAHMO ON NIMETON PERILLINEN (omistajan paatos 28.8.2026 '
           + 'ilta, inventaarion jalkeen): pelaajan etunimea ja '
           + 'sukupuolta ei koskaan paljasteta - peli on samaistuttava '
@@ -3888,8 +3891,8 @@ export const RAAMATTU = {
           + '"Pululle ja muuallekin tarvitaan aaniefekteja: linnun siivet '
           + 'lentaessa, tomahdyksia, hassuja tayteaania, oven lamahdys, '
           + 'viuhahdusefekteja. Naita ei generoida."): Livian repliikit luetaan '
-          + 'omalla ElevenLabs-aanella (kahea, nopea; valinta kuuntelemalla '
-          + 'generoi-pulu.yml aanet-listasta), eleven_v3 ja koestettu pieni '
+          + 'omistajan 12.9.2026 valitsemalla Flicker-aanella '
+          + '(piI8Kku0DcvcL6TTSeQt), eleven_v3 ja koestettu pieni '
           + 'tagisanasto; kupla odottaa puheen loppuun. Tama KUMOAA '
           + 'pulun osalta 25.8.2026 rivin "POLLON repliikkeja EI lueta" '
           + '(pollo pysyy lukemattomana). Tehosteet haetaan Freesoundista '

@@ -4,14 +4,13 @@ Horatio–Livia-kaupunkiparien ajantasainen sisältö-, tagi-, kuva- ja
 tuotantoketju on `docs/moduulit/horatio-livia-tuotanto.md`. Tämä dokumentti
 säilyttää Livian äänen toteutuksen ja jo toimiviksi todetut parametrit.
 
-Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti:
-
-- *"Pululle täytyy etsiä eleveniltä oma ääni joka vähän käheä ja nopea
-  puhumaan. Generoidaan kaikki valmiiksi kirjoitetut repliikit puheeksi.
-  Pidetään vain huoli että ne ovat mahdollisimman lyhyitä. Pitää varmaan
-  vielä lyhentää niitä."*
-- *"Tehdään pulusta hyvin vokaalinen ja elävä vastakohta kertojan
-  monotoonisuuteen. Paljon elävöitystageja elevenin generointiin."*
+Omistajan pysyvä äänivalinta 12.9.2026: **Flicker — cheerful fairy &
+sparkly sweetness**, `voice_id: piI8Kku0DcvcL6TTSeQt`, moottori
+`eleven_v3`. Tämä korvaa vanhan käheän/nopean äänen etsinnän ja
+Dr. Von / v2 -tuotanto-oletuksen tulevissa Pulun äänissä. Horation
+ääni ei muutu. Vanhat äänitteet ja niiden todelliset metatiedot
+säilytetään; uutta ääntä ei merkitä tuotantoon ennen oikeaa generointia
+ja kuuntelutarkistusta.
 
 ## Osat
 
@@ -27,16 +26,19 @@ Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti:
 
 ## Ääni
 
-- Malli `eleven_v3` (`/v1/text-to-speech/{voice_id}`), `mp3_44100_128`.
-- `stability 0.0` (Creative — tottelee tageja; kertoja on 0.5),
+- Ääni `piI8Kku0DcvcL6TTSeQt`, malli `eleven_v3`
+  (`/v1/text-to-speech/{voice_id}`), `mp3_44100_128`.
+- `stability 0.5` (Natural, nykyinen hyväksytty ajopohja),
   `similarity_boost 0.75`, `style 0.6`, `use_speaker_boost true`.
 - Nopeus tehdään ffmpegillä (`atempo`, oletus 1.08): eleven_v3:ssa ei ole
   nopeussäädintä, ja ffmpeg on deterministinen. Lippu `--tempo`.
 - Taso −17 LUFS, sama perhe kuin kertojan luennoilla.
-- Ääntä EI ole vielä valittu. Työnkulun toiminto `aanet` listaa ehdokkaat
-  (omat `/v1/voices` + jaetut `/v1/shared-voices`) piirteillä
-  raspy · hoarse · gravelly · husky · rough · energetic · fast · quick ·
-  lively · quirky · excited · animated. Valinta on kuuntelupäätös.
+- Äänenvalinta on tehty. `aanet`-toiminto säilyy teknisenä työkaluna,
+  ei avoimena valintatehtävänä. Tarkista ennen ajoa, että työnkulku tai
+  ympäristömuuttuja ei ohita valittua ääntä tai palauta v2-moottoria.
+  Muiden parametrien toimivuus kuunnellaan rajatussa pilotissa;
+  niitä ei muuteta pelkän ääninimen perusteella. Maksullisen ajon lupa
+  ja julkaisukelpoisuus ovat äänenvalinnasta erillisiä portteja.
 
 ## Tagit
 
@@ -683,9 +685,11 @@ toimii ilman ääntä kuten ennenkin.
 
 ## Ajojärjestys
 
-1. `toiminto: aanet` → kuuntele esikuuntelut, valitse `voice_id`.
+1. Käytä valittua ääntä `piI8Kku0DcvcL6TTSeQt` ja mallia `eleven_v3`;
+   varmista tarvittava ajolupa sekä rajattu pilottiaineisto.
 2. `toiminto: kuiva` → tarkista tekstit, tagit ja kestot.
-3. `toiminto: generoi`, `aani: <voice_id>` → generoi ja vie ämpäriin.
+3. `toiminto: generoi`, `aani: piI8Kku0DcvcL6TTSeQt`, `malli: eleven_v3`
+   → luvallinen rajattu ajo ja vienti ämpäriin.
 4. Kuuntele. Tekstin tai äänen muuttuessa: `pakota: kyllä` (tarvittaessa
    `repliikit: avaus-2,paljastus-1`).
 
