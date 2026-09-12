@@ -234,6 +234,15 @@ const tila = (sivu) => sivu.evaluate((valitsin) => {
     auki: true,
     // Kuva edellä -kortin vaihe: 2 = koko artikkeli näkyvissä.
     vaihe2: kortti.classList.contains('nostokuva-vaihe2'),
+    /*
+     * KORTIN HENKILÖLLISYYS — ILMAN TÄTÄ VARTIO EI NÄE VIKAA.
+     * Vanha sulku tapahtui pointerdownissa, ja SAMA ele avasi kartalta
+     * uuden kortin sormen alle. Pelkkä "onko jokin kortti auki" näki
+     * silloin vihreää, vaikka omistajan kortti oli juuri kadonnut
+     * (mitattu 12.9.2026). Nimi luetaan kortin omasta otsikosta.
+     */
+    nimi: kortti.getAttribute('aria-label')
+      ?? kortti.querySelector('h3')?.textContent ?? '',
     kuvaKortti: kortti.classList.contains('nostokuva-kortti'),
     laatikko: {
       x: Math.round(r.left), y: Math.round(r.top), w: Math.round(r.width), h: Math.round(r.height),
@@ -300,8 +309,20 @@ const ulkoPiste = (sivu) => sivu.evaluate(([valitsin, vara]) => {
 const sisapisteet = (sivu) => sivu.evaluate((valitsin) => {
   const kortti = document.querySelector(valitsin);
   if (!kortti) return { kuva: null, ylarivi: null, otsikko: null, teksti: null };
-  const keski = (r) => (r && r.height > 10 && r.top > 60 && r.bottom < window.innerHeight
-    ? { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) } : null);
+  /*
+   * PISTE KELPAA, JOS SE OSUU KORTTIIN. Ennen tässä oli kiinteä
+   * `top > 60` yläpalkin väistöksi, mutta kuva edellä -kortti alkaa nyt
+   * ruudun yläreunasta (js/nostokuva.js NOSTOKUVA_YLAVARA) — ehto
+   * hylkäsi juuri ne ylärivin ja otsikon pisteet, joiden takia tämä
+   * savuke on olemassa. Osuma luetaan siksi ruudulta: jos jokin muu
+   * pinta (yläpalkki, kupla) peittää kohdan, piste ei kelpaa.
+   */
+  const keski = (r) => {
+    if (!r || r.height <= 10 || r.top < 0 || r.bottom > window.innerHeight) return null;
+    const p = { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) };
+    const e = document.elementFromPoint(p.x, p.y);
+    return e && kortti.contains(e) ? p : null;
+  };
   const ota = (...valitsimet) => valitsimet
     .map((v) => keski(kortti.querySelector(v)?.getBoundingClientRect()))
     .find(Boolean) ?? null;
@@ -346,7 +367,16 @@ async function avaaKortti(sivu, tyyppi) {
         const kohde = nosto?.kohde ? tiedot?.get(nosto.kohde) : null;
         if (!kohde) continue;
         avaaFokuskohde(ui, kohde);
-        await new Promise((ok) => { setTimeout(ok, 300); });
+        await new Promise((ok) => { setTimeout(ok, 400); });
+        /*
+         * KOHTEEN KORTTI ON ITSEKIN KUVA EDELLÄ (js/nostokuva.js):
+         * Livian leikekirja -nappi latoutuu vasta VAIHEESSA 2, joten
+         * kuvaesittely on avattava ennen kuin nappia voi etsiä. Ilman
+         * tätä täkynosto ei auennut lainkaan — savuke raportoi kolme
+         * kertaa "korttia ei saatu auki" (mitattu 12.9.2026).
+         */
+        document.querySelector('.fokuskohde-popup .nostokuva-lisaa')?.click();
+        await new Promise((ok) => { setTimeout(ok, 400); });
         const nappi = document.querySelector('.fokuskohde-leikekirja');
         if (nappi) { nappi.click(); break; }
         suljeFokuskohde(ui);
@@ -354,12 +384,19 @@ async function avaaKortti(sivu, tyyppi) {
     }
   }, tyyppi);
   await sivu.waitForTimeout(1500);
-  // KUVA EDELLÄ (js/nostokuva.js): vaihe 2 on se, jossa omistaja
-  // yritti vierittää — kuva, otsikko, leipäteksti ja pöllön kysymykset.
-  await sivu.evaluate(() => {
-    [...document.querySelectorAll('button')]
-      .find((b) => /lisää/i.test(b.textContent ?? ''))?.click();
-  });
+  /*
+   * KUVA EDELLÄ (js/nostokuva.js): vaihe 2 on se, jossa omistaja yritti
+   * vierittää — kuva, ylärivi, otsikko, leipäteksti ja pöllön
+   * kysymykset. Nappi haetaan KORTIN OMASTA luokasta eikä tekstihaulla
+   * koko dokumentista: tekstihaku osui ajoittain aivan muuhun "Lisää"-
+   * alkuiseen painikkeeseen, ja kortti jäi vaiheeseen 1.
+   */
+  await sivu.evaluate((valitsin) => {
+    const kortti = document.querySelector(valitsin);
+    const lisaa = kortti?.querySelector('.nostokuva-lisaa')
+      ?? document.querySelector('.nostokuva-lisaa');
+    lisaa?.click();
+  }, KORTIT);
   await sivu.waitForTimeout(1500);
 }
 
@@ -417,8 +454,9 @@ for (const n of NAKYMAT) {
       // eslint-disable-next-line no-await-in-loop
       const j = await tila(sivu);
       vaadi(`${n.nimi} / ${korttinimi}: pystyveto ${mista} (${piste.x},${piste.y}) EI sulje korttia`,
-        j.auki, 'kortti katosi vedosta');
-      if (!j.auki) {
+        j.auki && j.nimi === alku.nimi,
+        j.auki ? `kortti vaihtui: "${alku.nimi}" → "${j.nimi}"` : 'kortti katosi vedosta');
+      if (!j.auki || j.nimi !== alku.nimi) {
         // eslint-disable-next-line no-await-in-loop
         await avaaKortti(sivu, tyyppi);
       }
