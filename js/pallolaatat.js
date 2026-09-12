@@ -1299,10 +1299,37 @@ export function luoLaattakerros({
     mittarit.ladattavia = ladattavia;
   };
 
+  /*
+   * ── LUKKO: KERROS SEIS LINSSIN AJAKSI (12.9.2026) ────────────────
+   *
+   * Satelliittilinssi vaihtaa pallon pinnan Maaksi avaruudesta
+   * (js/linssit/satelliitti-avaruus.js). Linssi piilottaa kerroksen
+   * verkot piirtokerroksista, mutta se EI riitä: kerros rakentaa uusia
+   * verkkoja aina kun laatan kuva saapuu verkosta, ja juuri saapunut
+   * laatta ehtii yhden kehyksen ajan ruudulle ennen kuin linssin oma
+   * kehyssilmukka sulkee sen (mitattu 12.9.2026: yksi karttapinta jäi
+   * näkyviin kolmella näytöllä kolmesta ajosta). Lukko sulkee
+   * PÄIVITYKSEN, jolloin uusia verkkoja ei synny lainkaan — ja samalla
+   * peli lakkaa hakemasta laattoja, joita pelaaja ei voi nähdä.
+   *
+   * LUKKO EI PURA MITÄÄN: valmiit verkot jäävät paikoilleen ja tulevat
+   * takaisin sellaisinaan, kun lukko avataan. Vain päivitys pysähtyy.
+   */
+  let lukittu = false;
+
   /* ---------------- tekstuurien vienti (≤ 2 / kehys) ---------------- */
 
   const ajaVienti = () => {
-    if (purettu || vientiRaf || !vientijono.length) return;
+    /*
+     * LUKKO PYSÄYTTÄÄ MYÖS VIENNIN. Päivityksen pysäyttäminen ei yksin
+     * riitä: jono voi olla täynnä laattoja, jotka latautuivat ennen
+     * lukkoa, ja vienti lisäisi ne sceneen kaksi kehystä kohti vielä
+     * pitkään lukon jälkeen (mitattu 12.9.2026: satelliittilinssin
+     * avaruusnäkymässä yksi karttapinta ilmestyi joka kehyksellä).
+     * Jono SÄILYY ja valuu sceneen, kun lukko avataan (lukitse kutsuu
+     * ajaVientiä uudestaan) — mitään ei siis hukata.
+     */
+    if (purettu || lukittu || vientiRaf || !vientijono.length) return;
     vientiRaf = ikkuna.requestAnimationFrame(() => {
       vientiRaf = 0;
       let n = 0;
@@ -1680,7 +1707,7 @@ export function luoLaattakerros({
    * luetaan kuten ennen. Kutsuja EI enää ole tapahtumakäsittelijä.
    */
   const paivita = (kehys, liikkeessa = false) => {
-    if (purettu) return false;
+    if (purettu || lukittu) return false;
     const nyt = kehys?.aika ?? aika();
     if (liikkeessa && nyt - viimePaivitys < LAATTAKERROS_PAIVITYSVALI_LIIKE_MS) return false;
     viimePaivitys = nyt;
@@ -1694,6 +1721,17 @@ export function luoLaattakerros({
     /** Lepokerroksen rajapinta: kerros päivittyy, se ei kokoa eikä piiloudu. */
     levossa: () => paivita(null, false),
     piilota: () => false,
+    /**
+     * Päivitys seis (true) tai taas käyntiin (false). Ks. LUKKO yllä.
+     * Palauttaa lukon tilan, jotta kutsuja voi mitata sen.
+     */
+    lukitse: (paalla) => {
+      lukittu = Boolean(paalla);
+      if (!lukittu) ajaVienti();
+      return lukittu;
+    },
+    /** Onko kerros lukossa (savukkeet ja vartijat). */
+    lukossa: () => lukittu,
     /*
      * TILA JA SYY ILMAN VARAUSTA (7.9.2026). `mittarit()` kopioi koko
      * mittaritaulun JA pyydettyjen osoitteiden joukon taulukoksi —

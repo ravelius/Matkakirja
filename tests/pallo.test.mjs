@@ -527,7 +527,16 @@ test('lähin näkyvä leveys on vakio 60 yksikköä, ei laattatarkkuus (v1649)',
   // Lauta johtaa tason laattaluettelosta ja putoaa Z7:ään ilman luetteloa.
   const lauta = readFileSync(new URL('../js/pallolauta/lauta.js', import.meta.url), 'utf8');
   assert.match(lauta, /const laattataso = laatat \? laattatasoMax\(laatat\) : PALLO_LAATTATASO_MAX - 1;/);
-  assert.match(lauta, /ohj\.minDistance = pallonSade \* \(1 \+ kamera\.korkeusMin\(\)\);/);
+  /*
+   * LAUDAN OMA LÄHIN RAJA TULEE YHÄ KAMERALTA. Satelliittilinssin
+   * avaruusnäkymä sai 12.9.2026 syrjäyttää zoomirajat linssin ajaksi
+   * (js/linssit/satelliitti-avaruus.js), joten luku kulkee nyt
+   * `zoomirajaSyrjaytys`in kautta — mutta OLETUS on edelleen
+   * kamera.korkeusMin(), ja juuri se on tämän vartion asia.
+   */
+  assert.match(lauta, /\? zoomirajaSyrjaytys\.min : kamera\.korkeusMin\(\);/);
+  assert.match(lauta, /ohj\.minDistance = pallonSade \* \(1 \+ min\);/);
+  assert.match(lauta, /\? zoomirajaSyrjaytys\.max : PALLO_KORKEUS_MAX;/);
 });
 
 /*

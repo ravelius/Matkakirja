@@ -76,6 +76,23 @@
 }
 
 /*
+ * AVARUUSNÄKYMÄSSÄ NIMET PIENEMMÄLLÄ (12.9.2026).
+ *
+ * Kun linssi avautuu koko pallon näkymään, ruudulla on kerralla noin
+ * kaksi kertaa enemmän pisteitä kuin lähikuvassa — puhelimella 16
+ * nimeä 374 pikselin levyisellä pallolla. Mitattu: 11 pikselin nimistä
+ * kahdeksan meni päällekkäin. Pienempi kirjasin ja tiiviimpi harvennus
+ * eivät poista päällekkäisyyttä kokonaan (se on aineiston tiheys eikä
+ * typografia), mutta vähentävät sen mitatusti. Luokka on linssin oma:
+ * lähikuvassa ja muualla pelissä nimi on entinen.
+ */
+body.satelliitti-avaruus .satelliitti-nimi {
+  font-size: 9px;
+  letter-spacing: 0.03em;
+  top: 14px;
+}
+
+/*
  * Ilmestyminen kerran, ei toistoa. Merkkikerros lisää luokan
  * `pallolauta-merkki` SAMAAN elementtiin (js/pallolauta/merkit.js
  * elementti), joten tässä ei ole kääreettä — ja pallon takapuolen

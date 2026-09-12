@@ -82,6 +82,22 @@
  *
  * ── LINSSIN MERKIT EIVÄT KULUTA PELIVUOROA ────────────────────────
  *
+ * ── LINSSI AVAUTUU AVARUUTEEN (omistaja 12.9.2026) ────────────────
+ *
+ * Sanatarkasti: *"Astronoottikuvat ovat hienoja, niitä voisi olla
+ * vaikka enemmänkin. Saisiko maapallosta tehtyä sen näköistä, miltä se
+ * näyttää avaruudestakin? Ja laittaisi vielä tähtiä taustalle. Linssi
+ * voisi alkaa niin, että maapallon reunat näkyvät ja taustalla on
+ * tähtiä. Maapallonhan ei tarvitse olla kovin tarkka. Eli zoomaustasoja
+ * ei tarvitse olla juurikaan."*
+ *
+ * Näkymä asuu omassa moduulissaan (js/linssit/satelliitti-avaruus.js):
+ * avauskorkeus, tähtitaivas, generoitu Maa-tekstuuri ja kapea zoom.
+ * TÄMÄ TIEDOSTO EI MUUTU MUUTEN: vihreät pisteet, galleria, info-nappi,
+ * kuva koko ruutuun, nipistyszoom ja yläpalkin elinkaari ovat samat
+ * kuin ennen. Näkymä on linssin tilaa eikä pelin: `pura` kirjoittaa
+ * pallon lähtötilan takaisin sellaisenaan.
+ *
  * Havaintopiste on `laji: 'linssi'` -merkki, jonka napautuksen laskee
  * pallon oma osumatesti (js/pallolauta/lauta.js lahinLinssimerkki) —
  * ja se hyväksyy vain kameran puolella olevat merkit, joten pallon
@@ -92,6 +108,7 @@
 
 import { html } from '../ui-apurit.js';
 import { SATELLIITTI_KOHTEET, SATELLIITTI_LAHDE } from './satelliitti-data.js';
+import { avaaAvaruusnakyma } from './satelliitti-avaruus.js';
 
 /** Linssiosan nimi laudan linssiapurissa (lauta.linssit.merkit/pura). */
 export const SATELLIITTI_OSA = 'satelliitti';
@@ -666,6 +683,14 @@ function avaa(lauta, tila, ui) {
     onSulje: () => ui?.valitseLinssi?.(null),
   });
 
+  /*
+   * AVARUUSNÄKYMÄ PÄÄLLE ENNEN MERKKEJÄ: kamera nousee niin, että koko
+   * pallo reunoineen on ruudulla, ja merkkien ruutupaikat lasketaan
+   * vasta sen jälkeen. Näkymä on vapaaehtoinen — jos pallo puuttuu
+   * (tasokartta, kaatunut WebGL), linssi toimii kuten ennen.
+   */
+  const avaruus = avaaAvaruusnakyma(lauta, { ui });
+
   const avaaKohde = (kohde) => {
     /*
      * SULKEVA NAPAUTUS EI AVAA UUTTA (v1783:n sääntö). Havaintoikkunan
@@ -692,8 +717,13 @@ function avaa(lauta, tila, ui) {
   return {
     kohteet,
     palkki,
+    /** Avaruusnäkymän mittarit savukkeelle (null, jos palloa ei ole). */
+    avaruus,
     pura: () => {
       suljeKortti();
+      // Pallon lähtötila takaisin ENSIN: kamera, pinta, ilmakehä,
+      // tähdet ja zoomirajat. Merkkien häivytys jatkuu tämän päälle.
+      avaruus?.pura?.();
       document.querySelectorAll('.satelliitti-vertailu').forEach((el) => el.remove());
       palkki.pura();
       lauta?.linssit?.pura?.(SATELLIITTI_OSA);
