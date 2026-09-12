@@ -37,6 +37,11 @@ import { MAASTOKOHTEET } from '../js/packs/maastokohteet.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from '../js/fokusmitat.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { NAPAKALOTTI, kalotinKuvapiste } from '../js/pallo.js';
+import {
+  ARKTIS_NAKYY_ASTETTA, ETELAMANNER_NAKYY_ASTETTA, NAPA_ALUEEN_ASTEET,
+  NAPA_ALUEEN_VAHIN_OSUUS, napanostotNakyvat,
+} from '../js/pallolauta/nostot.js';
+import { PALLOLAUDAN_LEVEYS } from '../js/pallolauta/kamera.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 /** Napapiiri: eteläisin leveysaste, jolle arktinen nosto saa osua. */
@@ -139,6 +144,45 @@ test('pallon nostokerros lukee asteet-kentän eikä lautapistettä', () => {
   assert.match(kerros, /ARKTIS_NAKYY_ASTETTA/);
   // Merkki ei ole koskaan poltettu: laattapyramidissa ei ole napa-alueita.
   assert.match(kerros, /avain: `ark:\$\{kohde\.id\}`/);
+});
+
+/*
+ * ══ VARTIJA: NAPA-ALUEEN NOSTOT EIVÄT NÄY YLEISKUVASSA ════════════
+ *
+ * Omistajan vikailmoitus 12.9.2026 (iPhone pystyssä, pallo lähes koko
+ * maailman mitassa): arktiset nostot nimiöineen näkyivät yleiskuvassa.
+ * Portti luki näkymän LEVEYDEN, joka riippuu ruudun kuvasuhteesta —
+ * puhelimen pystyruudulla se ei yltänyt vanhaan 90 asteen rajaan
+ * millään zoomilla (uloimmallakin 64,5°), joten portti oli aina auki.
+ *
+ * Tämä testi kaatuu, jos portti palaa leveyteen tai jos raja päästää
+ * läpi koko pallon yleiskuvan. Näkymän korkeudet ovat mitattuja
+ * (Chromium 12.9.2026, 390 × 844 ja 1440 × 900 — kummallakin samat,
+ * koska kameran pystykulma on kiinteä).
+ */
+test('napa-alueen portti mitataan näkymän korkeudesta eikä leveydestä', () => {
+  const nakyva = (korkeusAst, leveysAst = 1) => ({
+    w: (leveysAst * PALLOLAUDAN_LEVEYS) / 360,
+    h: (korkeusAst * PALLOLAUDAN_LEVEYS) / 360,
+  });
+  // Raja on kaistan (60°–90°) osuus näkymän korkeudesta, ei 90 astetta.
+  assert.equal(ARKTIS_NAKYY_ASTETTA, ETELAMANNER_NAKYY_ASTETTA);
+  assert.equal(ARKTIS_NAKYY_ASTETTA, NAPA_ALUEEN_ASTEET / NAPA_ALUEEN_VAHIN_OSUUS);
+  assert.ok(ARKTIS_NAKYY_ASTETTA < 90, 'vanha 90 asteen raja ei koskaan sulkeutunut puhelimella');
+  // Mitatut näkymät: kamerakorkeus 0,2 / 0,37 / 0,6 → merkit näkyvät.
+  for (const korkeus of [10.7, 19.8, 32.1]) {
+    assert.equal(napanostotNakyvat(nakyva(korkeus)), true, `korkeus ${korkeus}°`);
+  }
+  // Koko pallo ruudulla (kamerakorkeus 1,0) ja sitä laajempi: ei merkkejä.
+  for (const korkeus of [53.4, 85.5, 133.6]) {
+    assert.equal(napanostotNakyvat(nakyva(korkeus)), false, `korkeus ${korkeus}°`);
+  }
+  // LEVEYS ei saa avata porttia: puhelimen pystyruudun yleiskuva on
+  // kapea (25,8°) mutta korkea (53,4°) — juuri omistajan kuva.
+  assert.equal(napanostotNakyvat(nakyva(53.4, 25.8)), false, 'puhelimen yleiskuva');
+  // Tuntematon näkymä on yleiskuva: portti kiinni, ei kaadu.
+  assert.equal(napanostotNakyvat(null), false);
+  assert.equal(napanostotNakyvat({ w: 0, h: 0 }), false);
 });
 
 test('palvelutyöntekijä tuntee paketin', () => {
